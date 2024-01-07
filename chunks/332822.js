@@ -1,8 +1,8 @@
-function(t, e, i) {
+function(e, t, i) {
     "use strict";
-    i("918437")("Uint8", function(t) {
-        return function(e, i, n) {
-            return t(this, e, i, n)
+    i("918437")("Uint8", function(e) {
+        return function(t, i, n) {
+            return e(this, t, i, n)
         }
     }, !0)
 }

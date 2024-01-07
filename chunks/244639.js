@@ -1,9 +1,9 @@
-function(t, e, i) {
+function(e, t, i) {
     "use strict";
-    let n, r, a, s, o, l, u, c, h;
-    i.r(e), i.d(e, {
+    let n, r, s, a, o, l, u, h, c;
+    i.r(t), i.d(t, {
         initialize: function() {
-            return g
+            return I
         },
         default: function() {
             return f
@@ -13,33 +13,33 @@ function(t, e, i) {
         m = i.n(d),
         v = i("739942");
     let p = 409600,
-        g = (0, v.createQueuedAsyncInitializer)(async () => {
-            let t = await i.el("227332").then(i.bind(i, "227332")),
-                e = await t.default();
-            a = e.cwrap("lottie_create", "number", ["string"]), s = e._lottie_destroy, o = e._lottie_draw_into_bgra, l = e._lottie_draw_into_rgba, u = e._lottie_frame_count, c = e._lottie_frame_rate, h = e._memory_create, n = e, r = h(p)
+        I = (0, v.createQueuedAsyncInitializer)(async () => {
+            let e = await i.el("227332").then(i.bind(i, "227332")),
+                t = await e.default();
+            s = t.cwrap("lottie_create", "number", ["string"]), a = t._lottie_destroy, o = t._lottie_draw_into_bgra, l = t._lottie_draw_into_rgba, u = t._lottie_frame_count, h = t._lottie_frame_rate, c = t._memory_create, n = t, r = c(p)
         });
 
-    function x(t, e) {
-        return new Uint8ClampedArray(n.HEAPU8.buffer, r, t * e * 4)
+    function g(e, t) {
+        return new Uint8ClampedArray(n.HEAPU8.buffer, r, e * t * 4)
     }
     f = class {
         get fps() {
-            return c(this.native)
+            return h(this.native)
         }
         get frames() {
             return u(this.native)
         }
-        get_bgra(t, e, i) {
-            return m(e <= 320, "width exceeds static allocation."), m(i <= 320, "height exceeds static allocation."), o(this.native, r, t, e, i), x(e, i)
+        get_bgra(e, t, i) {
+            return m(t <= 320, "width exceeds static allocation."), m(i <= 320, "height exceeds static allocation."), o(this.native, r, e, t, i), g(t, i)
         }
-        get_rgba(t, e, i) {
-            return m(e <= 320, "width exceeds static allocation."), m(i <= 320, "height exceeds static allocation."), l(this.native, r, t, e, i), x(e, i)
+        get_rgba(e, t, i) {
+            return m(t <= 320, "width exceeds static allocation."), m(i <= 320, "height exceeds static allocation."), l(this.native, r, e, t, i), g(t, i)
         }
         drop() {
-            s(this.native)
+            a(this.native)
         }
-        constructor(t) {
-            if (this.native = a(t), 0 === this.native) throw Error("couldn't create wasm lottie. potentially bad json.")
+        constructor(e) {
+            if (this.native = s(e), 0 === this.native) throw Error("couldn't create wasm lottie. potentially bad json.")
         }
     }
 }

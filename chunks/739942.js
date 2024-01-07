@@ -1,25 +1,25 @@
-function(e, i, s) {
+function(e, t, i) {
     "use strict";
-    var t, n;
+    var n, r;
 
-    function r(e) {
-        let i = 0,
-            s = [];
+    function s(e) {
+        let t = 0,
+            i = [];
         return async function() {
-            if (2 !== i) {
-                if (1 === i) return new Promise(e => {
-                    s.push(e)
+            if (2 !== t) {
+                if (1 === t) return new Promise(e => {
+                    i.push(e)
                 });
-                for (i = 1, await e(), i = 2; s.length > 0;) {
-                    var t;
-                    null === (t = s.shift()) || void 0 === t || t()
+                for (t = 1, await e(), t = 2; i.length > 0;) {
+                    var n;
+                    null === (n = i.shift()) || void 0 === n || n()
                 }
             }
         }
     }
-    s.r(i), s.d(i, {
+    i.r(t), i.d(t, {
         createQueuedAsyncInitializer: function() {
-            return r
+            return s
         }
-    }), s("424973"), (n = t || (t = {}))[n.UNINITIALIZED = 0] = "UNINITIALIZED", n[n.INITIALIZING = 1] = "INITIALIZING", n[n.READY = 2] = "READY"
+    }), i("424973"), (r = n || (n = {}))[r.UNINITIALIZED = 0] = "UNINITIALIZED", r[r.INITIALIZING = 1] = "INITIALIZING", r[r.READY = 2] = "READY"
 }
