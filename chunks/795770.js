@@ -1,9 +1,7 @@
-function(t, r, n) {
-    "use strict";
-    n("714919")({
-        target: "Array",
-        stat: !0
-    }, {
-        isArray: n("234779")
-    })
-}
+            "use strict";
+            n("714919")({
+                target: "Array",
+                stat: !0
+            }, {
+                isArray: n("234779")
+            })

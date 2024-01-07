@@ -1,4 +1,2 @@
-function(t, r, n) {
-    "use strict";
-    n("157104")("observable")
-}
+            "use strict";
+            n("157104")("observable")

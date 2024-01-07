@@ -1,10 +1,8 @@
-function(e, t, n) {
-    "use strict";
+            "use strict";
 
-    function a(e) {}
-    n.r(t), n.d(t, {
-        default: function() {
-            return a
-        }
-    })
-}
+            function a(e) {}
+            n.r(t), n.d(t, {
+                default: function() {
+                    return a
+                }
+            })

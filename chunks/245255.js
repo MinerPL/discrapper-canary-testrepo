@@ -1,11 +1,9 @@
-function(t, r, n) {
-    "use strict";
-    var e = String;
-    t.exports = function(t) {
-        try {
-            return e(t)
-        } catch (t) {
-            return "Object"
-        }
-    }
-}
+            "use strict";
+            var e = String;
+            t.exports = function(t) {
+                try {
+                    return e(t)
+                } catch (t) {
+                    return "Object"
+                }
+            }

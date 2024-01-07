@@ -1,5 +1,3 @@
-function(e, t, A) {
-    e.exports = function(e) {
-        return null != e && "object" == typeof e
-    }
-}
+            e.exports = function(e) {
+                return null != e && "object" == typeof e
+            }

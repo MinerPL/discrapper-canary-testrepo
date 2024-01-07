@@ -1,5 +1,3 @@
-function(e, t, n) {
-    "use strict";
-    var r = n("872015");
-    e.exports = r
-}
+            "use strict";
+            var r = n("872015");
+            e.exports = r

@@ -1,4 +1,2 @@
-function(L, e, a) {
-    "use strict";
-    L.exports = a.p + "ded03ccf044a3f253886.svg"
-}
+            "use strict";
+            L.exports = a.p + "ded03ccf044a3f253886.svg"

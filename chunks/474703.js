@@ -1,4 +1,2 @@
-function(e, t, n) {
-    "use strict";
-    e.exports = n("469902")
-}
+            "use strict";
+            e.exports = n("469902")

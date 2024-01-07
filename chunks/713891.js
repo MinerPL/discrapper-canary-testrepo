@@ -1,3 +1,1 @@
-function(t, r, n) {
-    t.exports = n("269335")
-}
+            t.exports = n("269335")

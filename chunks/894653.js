@@ -1,4 +1,2 @@
-function(e, t, n) {
-    "use strict";
-    e.exports = n.p + "9bb7b5e7d71c1fcbb69b.mp3"
-}
+            "use strict";
+            e.exports = n.p + "9bb7b5e7d71c1fcbb69b.mp3"

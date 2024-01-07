@@ -1,4 +1,2 @@
-function(e, t, n) {
-    "use strict";
-    n.r(t)
-}
+            "use strict";
+            n.r(t)

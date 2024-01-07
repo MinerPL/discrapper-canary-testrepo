@@ -1,5 +1,3 @@
-function(t, r, e) {
-    t.exports = function() {
-        return []
-    }
-}
+            t.exports = function() {
+                return []
+            }

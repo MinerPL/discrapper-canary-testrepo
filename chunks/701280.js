@@ -1,12 +1,10 @@
-function(e, t, r) {
-    "use strict";
-    r.r(t), r.d(t, {
-        default: function() {
-            return o
-        }
-    });
-    var n = r("308253"),
-        o = function(e) {
-            return (0, n.default)(this, e).get(e)
-        }
-}
+            "use strict";
+            r.r(t), r.d(t, {
+                default: function() {
+                    return o
+                }
+            });
+            var n = r("308253"),
+                o = function(e) {
+                    return (0, n.default)(this, e).get(e)
+                }

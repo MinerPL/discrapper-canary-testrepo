@@ -1,7 +1,5 @@
-function(t, r, n) {
-    "use strict";
-    var e = n("522552");
-    t.exports = !e(function() {
-        return Object.isExtensible(Object.preventExtensions({}))
-    })
-}
+            "use strict";
+            var e = n("522552");
+            t.exports = !e(function() {
+                return Object.isExtensible(Object.preventExtensions({}))
+            })

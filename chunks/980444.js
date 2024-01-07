@@ -1,6 +1,4 @@
-function(e, t, n) {
-    "use strict";
-    n("651833");
-    var r = n("239757");
-    e.exports = r.Reflect.get
-}
+            "use strict";
+            n("651833");
+            var r = n("239757");
+            e.exports = r.Reflect.get

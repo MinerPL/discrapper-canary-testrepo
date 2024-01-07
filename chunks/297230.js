@@ -1,4 +1,2 @@
-function(t, r, n) {
-    "use strict";
-    t.exports = {}
-}
+            "use strict";
+            t.exports = {}

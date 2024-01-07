@@ -1,4 +1,2 @@
-function(e, t, s) {
-    "use strict";
-    e.exports = s.p + "5dacee8566b3fa5d05e7.png"
-}
+            "use strict";
+            e.exports = s.p + "5dacee8566b3fa5d05e7.png"

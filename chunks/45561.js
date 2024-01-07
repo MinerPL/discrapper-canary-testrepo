@@ -1,4 +1,2 @@
-function(e, t, n) {
-    "use strict";
-    n("377910")
-}
+            "use strict";
+            n("377910")
