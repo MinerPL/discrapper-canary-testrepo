@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return A
+                    return m
                 }
             }), n("222007");
             var i = n("917351"),
@@ -73,7 +73,7 @@
                 }
             }
             g.displayName = "ThreadMembersStore";
-            var A = new g(s.default, {
+            var m = new g(s.default, {
                 CONNECTION_OPEN: function(e) {
                     o = {}, e.guilds.forEach(c)
                 },

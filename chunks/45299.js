@@ -11,8 +11,8 @@
                 s = A("77078"),
                 o = A("659500"),
                 i = A("49111"),
-                d = A("782340"),
-                u = A("317404"),
+                u = A("782340"),
+                d = A("317404"),
                 c = function(e) {
                     var t;
                     let {
@@ -56,28 +56,28 @@
                         }),
                         q = (0, s.useToken)(r.default.colors.TEXT_DANGER).hex();
                     return (0, a.jsx)(n.animated.div, {
-                        className: u.container,
+                        className: d.container,
                         style: {
                             backgroundColor: N
                         },
                         children: (0, a.jsx)("div", {
-                            className: u.flexContainer,
+                            className: d.flexContainer,
                             ref: I,
                             children: (0, a.jsxs)(s.FocusRingScope, {
                                 containerRef: I,
                                 children: [(0, a.jsx)("div", {
-                                    className: u.shrinkingContainer,
+                                    className: d.shrinkingContainer,
                                     children: (0, a.jsx)(n.animated.div, {
-                                        className: u.message,
+                                        className: d.message,
                                         style: {
                                             color: null != c ? q : x
                                         },
-                                        children: null !== (t = null != c ? c : A) && void 0 !== t ? t : d.default.Messages.SETTINGS_NOTICE_MESSAGE
+                                        children: null !== (t = null != c ? c : A) && void 0 !== t ? t : u.default.Messages.SETTINGS_NOTICE_MESSAGE
                                     })
                                 }), (0, a.jsxs)("div", {
-                                    className: u.actions,
+                                    className: d.actions,
                                     children: [null != C && (0, a.jsx)(s.Button, {
-                                        className: u.resetButton,
+                                        className: d.resetButton,
                                         size: s.Button.Sizes.SMALL,
                                         color: s.Button.Colors.PRIMARY,
                                         look: s.Button.Looks.LINK,
@@ -86,7 +86,7 @@
                                             style: {
                                                 color: x
                                             },
-                                            children: null != T ? T : d.default.Messages.RESET
+                                            children: null != T ? T : u.default.Messages.RESET
                                         })
                                     }), null != g ? (0, a.jsx)(s.Tooltip, {
                                         text: U,
@@ -97,7 +97,7 @@
                                             disabled: p,
                                             onClick: g,
                                             ...e,
-                                            children: null != h ? h : d.default.Messages.SAVE_CHANGES
+                                            children: null != h ? h : u.default.Messages.SAVE_CHANGES
                                         })
                                     }) : null]
                                 })]

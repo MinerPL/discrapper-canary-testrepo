@@ -1,11 +1,11 @@
             "use strict";
 
-            function i(e) {
+            function r(e) {
                 let {} = e;
                 return !1
             }
 
-            function r(e, t) {
+            function i(e, t) {
                 return !1
             }
 
@@ -17,24 +17,24 @@
                 return !1
             }
 
-            function a() {
+            function s() {
                 return !1
             }
 
-            function u(e) {
+            function a(e) {
                 let {} = e;
                 return !1
             }
 
-            function s(e, t) {
+            function u(e, t) {
                 return !1
             }
 
-            function d() {
+            function c() {
                 return !1
             }
 
-            function c(e) {}
+            function d(e) {}
 
             function f(e) {}
 
@@ -45,10 +45,10 @@
             }
             n.r(t), n.d(t, {
                 navigateToChannel: function() {
-                    return i
+                    return r
                 },
                 navigateToMemberVerification: function() {
-                    return r
+                    return i
                 },
                 navigateToRootTab: function() {
                     return l
@@ -57,19 +57,19 @@
                     return o
                 },
                 resetToPanelsUI: function() {
-                    return a
-                },
-                pushModal: function() {
-                    return u
-                },
-                popModal: function() {
                     return s
                 },
+                pushModal: function() {
+                    return a
+                },
+                popModal: function() {
+                    return u
+                },
                 popAllModals: function() {
-                    return d
+                    return c
                 },
                 coerceChannelRoute: function() {
-                    return c
+                    return d
                 },
                 coerceGuildsRoute: function() {
                     return f

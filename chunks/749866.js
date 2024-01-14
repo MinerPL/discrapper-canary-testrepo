@@ -1,72 +1,72 @@
             "use strict";
             n.r(t), n.d(t, {
                 isSupported: function() {
-                    return s
+                    return r
                 },
                 setEnabled: function() {
-                    return a
-                },
-                setLearnedWords: function() {
                     return o
                 },
-                isMisspelled: function() {
-                    return E
-                },
-                getCorrections: function() {
-                    return d
-                },
-                replaceWithCorrection: function() {
+                setLearnedWords: function() {
                     return c
                 },
+                isMisspelled: function() {
+                    return d
+                },
+                getCorrections: function() {
+                    return g
+                },
+                replaceWithCorrection: function() {
+                    return h
+                },
                 setAppLocale: function() {
-                    return I
+                    return f
                 },
                 addResultListener: function() {
-                    return N
+                    return p
                 }
             });
             var i = n("49671"),
                 l = n("852046"),
-                u = n("773336");
+                s = n("773336");
 
-            function r() {
+            function a() {
                 return (null === i.default || void 0 === i.default ? void 0 : i.default.spellCheck) != null
             }
 
-            function s() {
-                return (0, u.isDesktop)() && r()
+            function r() {
+                return (0, s.isDesktop)() && a()
             }
-            let _ = s() ? (0, l.install)() : null;
-            async function a(e) {
-                let t = await _;
+            let u = r() ? (0, l.install)() : null;
+            async function o(e) {
+                let t = await u;
                 null != t && (t.enabled = e)
             }
-            async function o(e) {
-                let t = await _;
+            async function c(e) {
+                let t = await u;
                 null != t && t.setLearnedWords(e)
-            }
-            async function E(e) {
-                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                    n = await _;
-                return null != n && n.isMisspelled(e, t)
             }
             async function d(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                    n = await u;
+                return null != n && n.isMisspelled(e, t)
+            }
+            async function g(e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                     n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 5,
-                    i = await _;
+                    i = await u;
                 return null == i ? [] : i.getCorrectionsForMisspelling(e, t).slice(0, n)
             }
-            async function c(e) {
-                let t = await _;
+            async function h(e) {
+                let t = await u;
                 null != t && t.replaceMisspelling(e)
             }
-            async function I(e) {
-                let t = await _;
+            async function f(e) {
+                let t = await u;
                 null != t && t.setAppLocale(e)
             }
 
-            function N(e) {
-                if (!r()) return () => {};
+            function p(e) {
+                if (!a()) return () => {};
                 let t = i.default.spellCheck.on("spellcheck-result", e);
                 return null != t ? t : () => {}
             }

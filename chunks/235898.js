@@ -1,15 +1,15 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
                     return u
                 }
-            }), l("222007");
-            var a = l("884691"),
-                s = l("65597"),
-                r = l("875212"),
-                n = l("21526"),
-                o = l("853987"),
-                i = l("775416");
+            }), a("222007");
+            var l = a("884691"),
+                s = a("65597"),
+                r = a("875212"),
+                n = a("21526"),
+                o = a("853987"),
+                i = a("775416");
 
             function u() {
                 var e;
@@ -22,7 +22,7 @@
                     autoTrackExposure: !1
                 });
                 let {
-                    isFetching: l,
+                    isFetching: a,
                     categories: u,
                     error: c
                 } = function() {
@@ -34,23 +34,23 @@
                         location: e + " auto off",
                         autoTrackExposure: !1
                     });
-                    let [t, l, i, u] = (0, s.useStateFromStoresArray)([o.default], () => {
+                    let [t, a, i, u] = (0, s.useStateFromStoresArray)([o.default], () => {
                         var e;
                         return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
                     });
-                    return (0, a.useEffect)(() => {
-                        !(t || l || Date.now() - i < 6e5) && (0, n.fetchCollectiblesCategories)()
-                    }, [t, i, l]), {
+                    return (0, l.useEffect)(() => {
+                        !(t || a || Date.now() - i < 6e5) && (0, n.fetchCollectiblesCategories)()
+                    }, [t, i, a]), {
                         isFetching: t,
                         categories: u,
-                        error: l
+                        error: a
                     }
                 }(), {
                     isClaiming: d,
                     fetchError: f,
                     claimError: C,
-                    isFetching: m,
-                    purchases: E
+                    isFetching: E,
+                    purchases: m
                 } = function() {
                     let e = "useFetchPurchases";
                     (0, r.useTriggerDebuggingAA)({
@@ -60,11 +60,11 @@
                         location: e + " auto off",
                         autoTrackExposure: !1
                     });
-                    let [t, l, o, u, c] = (0, s.useStateFromStoresArray)([i.default], () => [i.default.isFetching, i.default.isClaiming, i.default.fetchError, i.default.claimError, i.default.purchases]);
-                    return (0, a.useEffect)(() => {
+                    let [t, a, o, u, c] = (0, s.useStateFromStoresArray)([i.default], () => [i.default.isFetching, i.default.isClaiming, i.default.fetchError, i.default.claimError, i.default.purchases]);
+                    return (0, l.useEffect)(() => {
                         (0, n.fetchCollectiblesPurchases)()
                     }, []), {
-                        isClaiming: l,
+                        isClaiming: a,
                         fetchError: o,
                         claimError: u,
                         isFetching: t,
@@ -72,12 +72,12 @@
                     }
                 }(), p = null !== (e = null != c ? c : f) && void 0 !== e ? e : C;
                 return {
-                    isFetching: l || m,
-                    isFetchingCategories: l,
-                    isFetchingPurchases: m,
+                    isFetching: a || E,
+                    isFetchingCategories: a,
+                    isFetchingPurchases: E,
                     isClaiming: d,
                     categories: u,
-                    purchases: E,
+                    purchases: m,
                     error: p
                 }
             }

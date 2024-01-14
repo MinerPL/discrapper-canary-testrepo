@@ -2,7 +2,7 @@
             let a;
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             });
             var s = n("913144"),
@@ -62,7 +62,7 @@
                     })), null === (t = _.default.getRTCConnection()) || void 0 === t || t.setPipOpen(!0), a = e
                 }(e))
             }
-            class m extends l.default {
+            class p extends l.default {
                 _initialize() {
                     h.default.addChangeListener(A), C.default.addChangeListener(A), _.default.addChangeListener(A), T.default.addChangeListener(A), c.default.addChangeListener(A), u.default.addChangeListener(A), o.default.addChangeListener(A), E.default.addChangeListener(A), r.default.addChangeListener(A)
                 }
@@ -70,4 +70,4 @@
                     h.default.removeChangeListener(A), C.default.removeChangeListener(A), _.default.removeChangeListener(A), T.default.removeChangeListener(A), c.default.removeChangeListener(A), u.default.removeChangeListener(A), o.default.removeChangeListener(A), E.default.removeChangeListener(A), r.default.removeChangeListener(A)
                 }
             }
-            var p = new m
+            var m = new p

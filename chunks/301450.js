@@ -22,9 +22,9 @@
                 g = n("782340"),
                 S = n("686084"),
                 D = n("926622");
-            let I = (0, _.uid)(),
-                O = (0, _.uid)(),
-                T = (0, _.uid)();
+            let T = (0, _.uid)(),
+                I = (0, _.uid)(),
+                O = (0, _.uid)();
             class A extends i.PureComponent {
                 handleValueRender(e) {
                     return "".concat((-((100 - e) * 1)).toFixed(0), "dB")
@@ -116,12 +116,12 @@
                         outputDeviceId: v,
                         outputDevices: b,
                         outputVolume: N,
-                        speaking: x = !1
+                        speaking: C = !1
                     } = e,
-                    C = u.first(_),
-                    M = null != C && C.disabled,
-                    R = u.first(b),
-                    U = null != R && R.disabled,
+                    x = u.first(_),
+                    M = null != x && x.disabled,
+                    U = u.first(b),
+                    R = null != U && U.disabled,
                     y = [{
                         value: h.InputModes.VOICE_ACTIVITY,
                         name: g.default.Messages.INPUT_MODE_VAD
@@ -142,7 +142,7 @@
                     }), (0, s.jsxs)(d.FormItem, {
                         className: D.marginBottom8,
                         children: [(0, s.jsx)(d.FormTitle, {
-                            id: I,
+                            id: T,
                             children: g.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
                         }), (0, s.jsx)(d.Slider, {
                             initialValue: c,
@@ -151,11 +151,11 @@
                             }, n),
                             onValueRender: e => e >= 1e3 ? (e /= 1e3, "".concat(e.toFixed(2), "s")) : "".concat(e.toFixed(0), "ms"),
                             maxValue: h.MAX_PTT_RELEASE_DELAY,
-                            "aria-labelledby": I
+                            "aria-labelledby": T
                         })]
                     })]
                 }) : (0, s.jsx)(A, {
-                    speaking: x,
+                    speaking: C,
                     inputMode: a,
                     threshold: p,
                     autoThreshold: f,
@@ -185,12 +185,12 @@
                     }), (0, s.jsxs)(d.FormItem, {
                         className: D.marginBottom20,
                         children: [(0, s.jsx)(d.FormTitle, {
-                            id: O,
+                            id: I,
                             children: g.default.Messages.FORM_LABEL_INPUT_VOLUME
                         }), (0, s.jsx)(d.Slider, {
                             initialValue: (0, m.amplitudeToPerceptual)(S),
                             asValueChanges: e => r.default.setInputVolume((0, m.perceptualToAmplitude)(e)),
-                            "aria-labelledby": O
+                            "aria-labelledby": I
                         })]
                     }), (0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_OUTPUT_DEVICE,
@@ -208,18 +208,18 @@
                                     label: n
                                 }
                             }),
-                            isDisabled: U
+                            isDisabled: R
                         })
                     }), (0, s.jsxs)(d.FormItem, {
                         className: D.marginBottom20,
                         children: [(0, s.jsx)(d.FormTitle, {
-                            id: T,
+                            id: O,
                             children: g.default.Messages.FORM_LABEL_OUTPUT_VOLUME
                         }), (0, s.jsx)(d.Slider, {
                             initialValue: (0, m.amplitudeToPerceptual)(N),
                             maxValue: 200,
                             asValueChanges: e => r.default.setOutputVolume((0, m.perceptualToAmplitude)(e)),
-                            "aria-labelledby": T
+                            "aria-labelledby": O
                         })]
                     }), (0, s.jsx)(d.FormItem, {
                         title: g.default.Messages.FORM_LABEL_INPUT_MODE,

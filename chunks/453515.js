@@ -58,11 +58,11 @@
                 for (let t of Object.keys(C)) !n.has(t) && S(C[t], e)
             }
 
-            function m() {
+            function p() {
                 for (let e of Object.keys(C)) S(C[e]);
                 I = !1
             }
-            class p extends s.default.Store {
+            class m extends s.default.Store {
                 initialize() {
                     this.waitFor(f.default, u.default, E.default), this.syncWith([u.default], A)
                 }
@@ -70,7 +70,7 @@
                     return C
                 }
             }
-            p.displayName = "ActivityTrackingStore", new p(r.default, {
+            m.displayName = "ActivityTrackingStore", new m(r.default, {
                 RUNNING_GAMES_CHANGE: () => A(),
                 CONNECTION_OPEN: function() {
                     if (I) return !1;
@@ -81,9 +81,9 @@
                     let {
                         code: t
                     } = e;
-                    4004 === t && m()
+                    4004 === t && p()
                 },
-                LOGOUT: m,
+                LOGOUT: p,
                 ACTIVITY_UPDATE_SUCCESS: function(e) {
                     let {
                         applicationId: t,

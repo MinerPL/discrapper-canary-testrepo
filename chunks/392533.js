@@ -39,7 +39,7 @@
                     location: "0e35b9_1"
                 }, {
                     autoTrackExposure: !1
-                }), m = () => {
+                }), p = () => {
                     (0, l.closeContextMenu)(), null == C || C()
                 };
                 return (0, a.jsxs)(i.Menu, {
@@ -52,7 +52,7 @@
                             id: "report-guild-discovery-listing",
                             label: _.default.Messages.REPORT_SERVER_NO_NAME,
                             action: () => {
-                                (0, o.showReportModalForDiscoverableGuild)(t), m()
+                                (0, o.showReportModalForDiscoverableGuild)(t), p()
                             },
                             icon: c.default,
                             color: "danger"

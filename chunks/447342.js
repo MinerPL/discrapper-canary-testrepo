@@ -23,8 +23,8 @@
                 S = n("775032"),
                 N = n("25132"),
                 A = n("453479"),
-                m = n("975344"),
-                p = n("57"),
+                p = n("975344"),
+                m = n("57"),
                 g = n("863972"),
                 R = n("884706"),
                 O = n("424373"),
@@ -74,11 +74,11 @@
                         let {
                             row: t
                         } = e, n = r[t];
-                        return (0, _.isUserAction)(n) ? (0, a.jsx)(p.default, {
+                        return (0, _.isUserAction)(n) ? (0, a.jsx)(m.default, {
                             userId: n.entity_id,
                             timestamp: E.default.extractTimestamp(n.event_id),
                             timestampFormatter: f.timestampFormatter
-                        }, n.event_id) : (0, _.isGuildAction)(n) ? (0, a.jsx)(m.default, {
+                        }, n.event_id) : (0, _.isGuildAction)(n) ? (0, a.jsx)(p.default, {
                             guildId: n.entity_id
                         }, n.event_id) : void 0
                     }, [r, f.timestampFormatter]),

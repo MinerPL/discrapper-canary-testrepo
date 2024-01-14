@@ -33,7 +33,7 @@
                     let {
                         activeSubscription: S
                     } = (0, r.default)(null == I ? void 0 : I.id), N = (0, i.useSubscriptionsSettings)(T.id), A = null == N ? void 0 : N.description, {
-                        editStateIds: m
+                        editStateIds: p
                     } = l.useEditStateIds(null !== (t = null == I ? void 0 : I.id) && void 0 !== t ? t : null, T.id);
                     return (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsxs)(f.default, {
@@ -53,7 +53,7 @@
                         }), (0, a.jsx)(s.HeadingLevel, {
                             children: (0, a.jsx)(c.default, {
                                 guildId: T.id,
-                                children: m.map(e => {
+                                children: p.map(e => {
                                     var t;
                                     return (0, a.jsx)(E.default, {
                                         guildId: T.id,

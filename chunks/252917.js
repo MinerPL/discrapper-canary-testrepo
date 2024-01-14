@@ -23,8 +23,8 @@
                 S = n("73749"),
                 N = n("191145"),
                 A = n("533466"),
-                m = n("837844"),
-                p = n("171984"),
+                p = n("837844"),
+                m = n("171984"),
                 g = n("551254"),
                 R = n("893399"),
                 O = n("353681"),
@@ -187,7 +187,7 @@
                     }, e) : (0, a.jsx)(es.default, {})
                 });
 
-            function em(e) {
+            function ep(e) {
                 let t = (0, W.default)(e => {
                     let {
                         guildId: t
@@ -199,7 +199,7 @@
                     guildId: t
                 })
             }
-            let ep = e => (0, a.jsx)(eN, {
+            let em = e => (0, a.jsx)(eN, {
                     ...e
                 }),
                 eg = e => {
@@ -232,7 +232,7 @@
                 eM = function() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                     return function(t) {
-                        return (0, a.jsx)(p.default, {
+                        return (0, a.jsx)(m.default, {
                             isFullScreen: e,
                             ...t
                         })
@@ -311,7 +311,7 @@
                         "aria-label": ec.default.Messages.ACCOUNT_A11Y_LABEL,
                         children: [(0, a.jsx)(B.default, {}), (0, a.jsx)(ei.default, {
                             section: eo.AnalyticsSections.ACTIVITY_PANEL,
-                            children: (0, a.jsx)(em, {
+                            children: (0, a.jsx)(ep, {
                                 className: eE.activityPanel
                             })
                         }), (0, a.jsx)(ei.default, {
@@ -367,7 +367,7 @@
                                 className: eE.base,
                                 children: [c.isMobile ? null : (0, a.jsx)(ea.default, {}), (0, a.jsxs)("div", {
                                     className: eE.content,
-                                    children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(eG, {
+                                    children: [(0, a.jsx)(p.default, {}), (0, a.jsx)(eG, {
                                         hasNotice: t,
                                         sidebarTheme: n,
                                         hideSidebar: i || l || d || f || T || !_
@@ -438,7 +438,7 @@
                                                 disableTrack: !0
                                             }), (0, a.jsx)(S.default, {
                                                 path: [eo.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eo.Routes.CHANNEL(eo.ME, ":channelId"), eo.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")],
-                                                render: ep,
+                                                render: em,
                                                 impressionName: u.ImpressionNames.GUILD_CHANNEL,
                                                 disableTrack: !0
                                             }), (0, a.jsx)(S.default, {

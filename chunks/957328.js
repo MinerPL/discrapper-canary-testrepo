@@ -23,8 +23,8 @@
                 S = n("50647"),
                 N = n("15435"),
                 A = n("637888"),
-                m = n("773336"),
-                p = n("709681"),
+                p = n("773336"),
+                m = n("709681"),
                 g = n("50885"),
                 R = n("49111"),
                 O = n("782340"),
@@ -33,7 +33,7 @@
                 createSound() {
                     let {
                         soundpack: e
-                    } = this.props, t = (0, p.createSoundForPack)("discodo", e);
+                    } = this.props, t = (0, m.createSoundForPack)("discodo", e);
                     return t.volume = 1, t
                 }
                 componentDidMount() {
@@ -211,7 +211,7 @@
                     }(), this.handleReady = () => {
                         this.setState({
                             ready: !0
-                        }), (0, m.isDesktop)() && (g.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), g.default.send("UPDATE_OPEN_ON_STARTUP"))
+                        }), (0, p.isDesktop)() && (g.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), g.default.send("UPDATE_OPEN_ON_STARTUP"))
                     }, this.setVideoRef = e => {
                         this.videoRef = e
                     }, this.setProblemsTimeout = () => {

@@ -15,11 +15,11 @@
             function d() {
                 var e, t, s, n, d, u;
                 let c = window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    S = (e = "f0c9a0bf3bcfaba24d6b7315bedf6702169d3fe7", e.substring(0, 7)),
+                    S = (e = "1032a2458b90adcbb92c9dfe132efa80d715457a", e.substring(0, 7)),
                     E = null === r.default || void 0 === r.default ? void 0 : r.default.remoteApp.getVersion(),
                     f = null === r.default || void 0 === r.default ? void 0 : null === (t = (s = r.default.remoteApp).getBuildNumber) || void 0 === t ? void 0 : t.call(s),
-                    m = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
-                    T = null == l ? void 0 : null === (u = l.os) || void 0 === u ? void 0 : u.toString(),
+                    T = null === r.default || void 0 === r.default ? void 0 : null === (n = (d = r.default.remoteApp).getAppArch) || void 0 === n ? void 0 : n.call(d),
+                    m = null == l ? void 0 : null === (u = l.os) || void 0 === u ? void 0 : u.toString(),
                     _ = null != r.default ? "(".concat(r.default.os.release, ")") : null;
                 return (0, a.jsxs)("div", {
                     className: o.info,
@@ -28,7 +28,7 @@
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [c, " ", "257704", " ", (0, a.jsxs)("span", {
+                        children: [c, " ", "259091", " ", (0, a.jsxs)("span", {
                             className: o.versionHash,
                             children: ["(", S, ")"]
                         })]
@@ -38,19 +38,19 @@
                             className: o.line,
                             variant: "text-xs/normal",
                             color: "text-muted",
-                            children: ["Host ", E, " ", null != m ? (0, a.jsxs)("span", {
+                            children: ["Host ", E, " ", null != T ? (0, a.jsxs)("span", {
                                 className: o.appArch,
-                                children: [m.toLowerCase(), " "]
+                                children: [T.toLowerCase(), " "]
                             }) : null, null != f ? (0, a.jsxs)("span", {
                                 children: ["(", f, ")"]
                             }) : null]
                         }), " "]
-                    }) : null, null != T ? (0, a.jsxs)(i.Text, {
+                    }) : null, null != m ? (0, a.jsxs)(i.Text, {
                         tag: "span",
                         className: o.line,
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: [T, " ", _]
+                        children: [m, " ", _]
                     }) : null]
                 })
             }

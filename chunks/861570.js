@@ -52,13 +52,14 @@
                         let e = (0, f.collectThreadMetadata)(g.default.getChannel(j.id), !0);
                         (0, c.trackWithMetadata)(N.AnalyticEvents.CHANNEL_OPENED, {
                             ...e,
+                            ...(0, c.getChannelOpenedMetadata)(j.id),
                             channel_id: j.id,
                             guild_id: j.guild_id,
                             parent_id: j.parent_id,
                             channel_view: R
                         })
                     }, [j, R]), null == j || null == L) return null;
-                let b = (0, a.jsx)(v.default, {
+                let P = (0, a.jsx)(v.default, {
                     channel: j,
                     baseChannelId: s
                 });
@@ -67,7 +68,7 @@
                         channel: j,
                         draftType: S.DraftType.ChannelMessage
                     }), (0, a.jsx)(T.default, {
-                        toolbar: b,
+                        toolbar: P,
                         "aria-label": A.default.Messages.THREAD_HEADER_BAR_A11Y_LABEL,
                         children: (0, E.renderTitle)({
                             channel: j,

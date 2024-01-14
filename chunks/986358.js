@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return U
                 }
             });
             var a = n("37983");
@@ -31,39 +31,44 @@
                 A = n("306160"),
                 M = n("387111"),
                 R = n("158998"),
-                j = n("49111"),
-                L = n("782340"),
-                O = n("298028");
+                j = n("763225"),
+                L = n("49111"),
+                O = n("782340"),
+                y = n("298028");
 
-            function y(e) {
+            function P(e) {
                 let {
                     user: t,
-                    guildId: n,
-                    onClose: l
-                } = e, s = t.id, o = (0, i.default)([g.default, C.default, h.default], () => s === h.default.getId() ? g.default.getStatus() : C.default.getStatus(s, n), [s, n]);
+                    backgroundColor: n,
+                    guildId: l,
+                    onClose: s
+                } = e, o = t.id, u = (0, i.default)([g.default, C.default, h.default], () => o === h.default.getId() ? g.default.getStatus() : C.default.getStatus(o, l), [o, l]);
                 return (0, a.jsxs)("div", {
-                    className: O.topRow,
+                    className: y.topRow,
+                    style: {
+                        backgroundColor: n
+                    },
                     children: [(0, a.jsxs)("div", {
-                        className: O.memberNameContainer,
+                        className: y.memberNameContainer,
                         children: [(0, a.jsx)("div", {
-                            className: O.memberAvatar,
+                            className: y.memberAvatar,
                             children: (0, a.jsx)(r.Avatar, {
-                                src: t.getAvatarURL(n, 48),
+                                src: t.getAvatarURL(l, 48),
                                 "aria-label": t.username,
                                 size: r.AvatarSizes.SIZE_48,
-                                status: o
+                                status: u
                             })
                         }), (0, a.jsx)("div", {
-                            className: O.memberName,
+                            className: y.memberName,
                             children: (0, a.jsx)(r.Text, {
                                 variant: "text-lg/medium",
                                 children: (0, a.jsx)(r.NameWithRole, {
-                                    name: M.default.getName(n, null, t),
+                                    name: M.default.getName(l, null, t),
                                     color: r.tokens.colors.HEADER_PRIMARY.css
                                 })
                             })
                         }), (0, a.jsx)("div", {
-                            className: O.memberGlobalName,
+                            className: y.memberGlobalName,
                             children: (0, a.jsx)(r.Text, {
                                 variant: "text-md/medium",
                                 color: "text-normal",
@@ -71,13 +76,13 @@
                             })
                         })]
                     }), (0, a.jsx)("div", {
-                        className: O.close,
+                        className: y.close,
                         children: (0, a.jsx)(r.Text, {
                             variant: "text-md/medium",
                             color: "text-normal",
                             children: (0, a.jsx)(r.Clickable, {
-                                className: O.closeAction,
-                                onClick: l,
+                                className: y.closeAction,
+                                onClick: s,
                                 children: (0, a.jsx)(v.default, {})
                             })
                         })
@@ -96,38 +101,45 @@
                 return (0, a.jsx)(r.Clickable, {
                     ...o,
                     tag: t,
-                    className: s(O.bottomRowAction, {
-                        [O.bottomRowActionDisabled]: n
+                    className: s(y.bottomRowAction, {
+                        [y.bottomRowActionDisabled]: n
                     }),
                     onClick: n ? void 0 : i,
-                    children: l
+                    children: (0, a.jsx)("div", {
+                        className: y.innerBottomRowAction,
+                        children: l
+                    })
                 })
             }
 
-            function P(e) {
+            function D(e) {
                 let {
-                    user: t,
-                    member: l,
-                    guildId: s,
-                    location: h
-                } = e, p = (0, i.default)([m.default], () => m.default.getGuild(s)), {
-                    canKickUser: C,
-                    canBanUser: g,
-                    canModerateMembers: v
+                    backgroundColor: t,
+                    user: l,
+                    member: s,
+                    guildId: h,
+                    location: p
+                } = e, C = (0, i.default)([m.default], () => m.default.getGuild(h)), {
+                    canKickUser: g,
+                    canBanUser: v,
+                    canModerateMembers: M
                 } = (0, i.useStateFromStoresObject)([E.default, S.default, m.default], () => ({
-                    canKickUser: null != p && E.default.canManageUser(j.Permissions.KICK_MEMBERS, t, p),
-                    canBanUser: null != p && E.default.canManageUser(j.Permissions.BAN_MEMBERS, t, p),
-                    canModerateMembers: null != p && (0, c.canToggleCommunicationDisableOnUser)(p.id, t.id, [S.default, m.default, E.default])
-                }), [t, p]), M = (0, u.isMemberCommunicationDisabled)(l), R = null != h ? [h] : [], y = (0, f.useTrackModerationAction)(s, {
-                    targetUserId: t.id,
-                    location: h
+                    canKickUser: null != C && E.default.canManageUser(L.Permissions.KICK_MEMBERS, l, C),
+                    canBanUser: null != C && E.default.canManageUser(L.Permissions.BAN_MEMBERS, l, C),
+                    canModerateMembers: null != C && (0, c.canToggleCommunicationDisableOnUser)(C.id, l.id, [S.default, m.default, E.default])
+                }), [l, C]), R = (0, u.isMemberCommunicationDisabled)(s), j = null != p ? [p] : [], P = (0, f.useTrackModerationAction)(h, {
+                    targetUserId: l.id,
+                    location: p
                 });
                 return (0, a.jsxs)("div", {
-                    className: O.bottomRow,
+                    className: y.bottomRow,
                     children: [(0, a.jsxs)(b, {
-                        "aria-label": L.default.Messages.SEND_DM,
+                        "aria-label": O.default.Messages.SEND_DM,
+                        style: {
+                            backgroundColor: t
+                        },
                         onClick: () => {
-                            o.default.openPrivateChannel(t.id)
+                            o.default.openPrivateChannel(l.id)
                         },
                         children: [(0, a.jsx)(I.default, {
                             width: 22,
@@ -135,21 +147,24 @@
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            children: L.default.Messages.SEND_DM
+                            children: O.default.Messages.SEND_DM
                         })]
                     }), (0, a.jsxs)(b, {
-                        disabled: !C,
-                        "aria-label": L.default.Messages.KICK,
+                        disabled: !g,
+                        "aria-label": O.default.Messages.KICK,
+                        style: {
+                            backgroundColor: t
+                        },
                         onClick: () => {
                             (0, r.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("125104").then(n.bind(n, "125104"));
-                                return n => (0, a.jsx)(e, {
-                                    ...n,
-                                    location: h,
-                                    guildId: s,
-                                    user: t
+                                return t => (0, a.jsx)(e, {
+                                    ...t,
+                                    location: p,
+                                    guildId: h,
+                                    user: l
                                 })
                             })
                         },
@@ -160,21 +175,24 @@
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            children: L.default.Messages.KICK
+                            children: O.default.Messages.KICK
                         })]
                     }), (0, a.jsxs)(b, {
-                        disabled: !g,
-                        "aria-label": L.default.Messages.BAN,
+                        disabled: !v,
+                        "aria-label": O.default.Messages.BAN,
+                        style: {
+                            backgroundColor: t
+                        },
                         onClick: () => {
                             (0, r.openModalLazy)(async () => {
                                 let {
                                     default: e
                                 } = await n.el("743506").then(n.bind(n, "743506"));
-                                return n => (0, a.jsx)(e, {
-                                    ...n,
-                                    location: h,
-                                    guildId: s,
-                                    user: t
+                                return t => (0, a.jsx)(e, {
+                                    ...t,
+                                    location: p,
+                                    guildId: h,
+                                    user: l
                                 })
                             })
                         },
@@ -185,13 +203,16 @@
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            children: L.default.Messages.BAN
+                            children: O.default.Messages.BAN
                         })]
                     }), (0, a.jsxs)(b, {
-                        disabled: !v,
-                        "aria-label": L.default.Messages.TIMEOUT_USER,
+                        disabled: !M,
+                        "aria-label": O.default.Messages.TIMEOUT_USER,
+                        style: {
+                            backgroundColor: t
+                        },
                         onClick: () => {
-                            M ? (0, d.openEnableCommunication)(l.guildId, l.userId, R) : (0, d.openDisableCommunication)(l.guildId, l.userId, R)
+                            R ? (0, d.openEnableCommunication)(s.guildId, s.userId, j) : (0, d.openDisableCommunication)(s.guildId, s.userId, j)
                         },
                         children: [(0, a.jsx)(T.default, {
                             width: 22,
@@ -200,12 +221,15 @@
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            children: M ? L.default.Messages.REMOVE_TIME_OUT : L.default.Messages.TIMEOUT_USER
+                            children: R ? O.default.Messages.REMOVE_TIME_OUT : O.default.Messages.TIMEOUT_USER
                         })]
                     }), (0, a.jsxs)(b, {
-                        "aria-label": L.default.Messages.COPY_ID,
+                        "aria-label": O.default.Messages.COPY_ID,
+                        style: {
+                            backgroundColor: t
+                        },
                         onClick: () => {
-                            y(f.ModerationActionType.COPY_ID), (0, A.copy)(t.id)
+                            P(f.ModerationActionType.COPY_ID), (0, A.copy)(l.id)
                         },
                         disabled: !A.SUPPORTS_COPY,
                         children: [(0, a.jsx)(x.default, {
@@ -215,29 +239,31 @@
                         }), (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "none",
-                            children: L.default.Messages.COPY_ID
+                            children: O.default.Messages.COPY_ID
                         })]
                     })]
                 })
             }
 
-            function D(e) {
+            function U(e) {
                 let {
                     userId: t,
                     guildId: n,
                     onClose: l
-                } = e, s = (0, i.default)([S.default], () => S.default.getUser(t), [t]), r = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]);
-                return null == s || null == r ? null : (0, a.jsxs)("div", {
-                    className: O.container,
-                    children: [(0, a.jsx)(y, {
+                } = e, s = (0, i.default)([S.default], () => S.default.getUser(t), [t]), o = (0, i.default)([p.default], () => p.default.getMember(n, t), [n, t]), u = (0, j.useProfileThemedPanelBackground)(t, n, .8, r.tokens.colors.BACKGROUND_PRIMARY);
+                return null == s || null == o ? null : (0, a.jsxs)("div", {
+                    className: y.container,
+                    children: [(0, a.jsx)(P, {
                         user: s,
                         guildId: n,
-                        onClose: l
-                    }), (0, a.jsx)(P, {
+                        onClose: l,
+                        backgroundColor: u
+                    }), (0, a.jsx)(D, {
                         user: s,
-                        member: r,
+                        member: o,
                         guildId: n,
-                        location: location
+                        location: location,
+                        backgroundColor: u
                     })]
                 })
             }

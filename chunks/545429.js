@@ -128,8 +128,8 @@
                     this._rows = e
                 }
             }
-            let m = !0,
-                p = !1,
+            let p = !0,
+                m = !1,
                 g = C.FriendsSections.ONLINE,
                 R = new A,
                 O = !0,
@@ -137,11 +137,11 @@
 
             function v() {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                m && (e || g !== C.FriendsSections.ONLINE && g !== C.FriendsSections.ADD_FRIEND) && !p && (m = !1, p = !0, r.default.fetchRelationships())
+                p && (e || g !== C.FriendsSections.ONLINE && g !== C.FriendsSections.ADD_FRIEND) && !m && (p = !1, m = !0, r.default.fetchRelationships())
             }
 
             function M() {
-                if (m = !0, O ? p = !1 : v(), R = R.reset(), L) return;
+                if (p = !0, O ? m = !1 : v(), R = R.reset(), L) return;
                 let e = R.getRelationshipCounts();
                 g = 0 === e[C.RelationshipTypes.FRIEND] ? 0 !== e[C.RelationshipTypes.PENDING_INCOMING] ? C.FriendsSections.PENDING : C.FriendsSections.ADD_FRIEND : C.FriendsSections.ONLINE
             }
@@ -161,7 +161,7 @@
                 }
                 getState() {
                     return {
-                        fetching: p,
+                        fetching: m,
                         section: g,
                         pendingCount: _.default.getPendingCount(),
                         rows: R
@@ -183,10 +183,10 @@
                     return O = null != t, P(), !O
                 },
                 LOAD_RELATIONSHIPS_SUCCESS: function() {
-                    p = !1
+                    m = !1
                 },
                 LOAD_RELATIONSHIPS_FAILURE: function() {
-                    m = !0, p = !0
+                    p = !0, m = !0
                 },
                 DRAWER_SELECT_TAB: function(e) {
                     let {

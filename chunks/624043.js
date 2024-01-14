@@ -33,19 +33,19 @@
                     let n = o.default.getChannelId();
                     return null != n && !0
                 },
-                m = () => {
+                p = () => {
                     if (0 === T.length || !A() || C) return;
                     C = !0;
                     let [e, t] = T[T.length - 1];
-                    (0, d.playSound)(e, t), I = setTimeout(p, 1e3)
+                    (0, d.playSound)(e, t), I = setTimeout(m, 1e3)
                 },
-                p = () => {
-                    T.pop(), C = !1, m()
+                m = () => {
+                    T.pop(), C = !1, p()
                 },
                 g = function(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
                         n = r.default.isConnected();
-                    T.push([e, t * (n ? .1 : 1)]), m()
+                    T.push([e, t * (n ? .1 : 1)]), p()
                 };
             class R extends s.default {
                 _initialize() {

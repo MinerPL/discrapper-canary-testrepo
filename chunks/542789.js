@@ -23,8 +23,8 @@
                 var t, i, l, T;
                 let I, S, N, {
                         userId: A,
-                        section: m,
-                        guildId: p = _.ME,
+                        section: p,
+                        guildId: m = _.ME,
                         channelId: g,
                         friendToken: R,
                         autoFocusNote: O,
@@ -46,14 +46,14 @@
                         ...t,
                         user: v,
                         autoFocusNote: O,
-                        guildId: p,
+                        guildId: m,
                         friendToken: R,
-                        initialSection: m,
+                        initialSection: p,
                         channelId: g
                     })
                 }), E.default.track(_.AnalyticEvents.OPEN_MODAL, {
                     type: "Profile Modal",
-                    guild_id: p !== _.ME ? p : null,
+                    guild_id: m !== _.ME ? m : null,
                     channel_id: g,
                     other_user_id: A,
                     application_id: null !== (i = null == P ? void 0 : P.application_id) && void 0 !== i ? i : null,

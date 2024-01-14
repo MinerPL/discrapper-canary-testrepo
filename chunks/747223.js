@@ -23,8 +23,8 @@
                 S = n("970366"),
                 N = n("161778"),
                 A = n("545429"),
-                m = n("476765"),
-                p = n("564875"),
+                p = n("476765"),
+                m = n("564875"),
                 g = n("956089"),
                 R = n("439932"),
                 O = n("161011"),
@@ -65,8 +65,8 @@
                         pendingCount: b
                     } = (0, u.useStateFromStoresObject)([A.default], () => A.default.getState()),
                     U = (0, u.useStateFromStoresObject)([h.default], () => h.default.getSuggestionCount()),
-                    G = (0, m.useUID)(),
-                    j = (0, m.useUID)();
+                    G = (0, p.useUID)(),
+                    j = (0, p.useUID)();
                 return (0, a.jsxs)("main", {
                     className: D.container,
                     "aria-label": P.default.Messages.FRIENDS,
@@ -79,7 +79,7 @@
                         role: "navigation",
                         "aria-labelledby": G,
                         children: [(0, a.jsx)(C.default.Icon, {
-                            icon: p.default,
+                            icon: m.default,
                             "aria-hidden": !0
                         }), (0, a.jsx)(C.default.Title, {
                             id: G,

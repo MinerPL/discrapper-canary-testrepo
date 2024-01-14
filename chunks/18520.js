@@ -31,18 +31,18 @@
                     guild_id: S,
                     channel_id: N,
                     prompt: A,
-                    disable_guild_select: m
+                    disable_guild_select: p
                 } = e;
                 if (null == i) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "No Client ID provided");
                 if (null != r) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "Redirect URI cannot be used in the RPC OAuth2 Authorization flow");
-                let p = [];
-                "string" == typeof T ? p = T.split(" ").filter(e => e.length > 0) : Array.isArray(T) && (p = T);
+                let m = [];
+                "string" == typeof T ? m = T.split(" ").filter(e => e.length > 0) : Array.isArray(T) && (m = T);
                 let g = c.default.getCurrentUser();
                 if (null == g) throw new f.default(_.RPCErrors.OAUTH2_ERROR, "Client is not logged in");
                 try {
                     a = await (0, u.fetchAuthorization)({
                         clientId: i,
-                        scopes: p,
+                        scopes: m,
                         responseType: l,
                         redirectUri: r,
                         codeChallenge: o,
@@ -59,7 +59,7 @@
                     let e = await (0, u.authorize)({
                         authorize: !0,
                         clientId: i,
-                        scopes: p,
+                        scopes: m,
                         responseType: l,
                         redirectUri: r,
                         codeChallenge: o,
@@ -78,7 +78,7 @@
                 try {
                     R = s.default.deserialize(null != I ? I : 0)
                 } catch (e) {}
-                return t(i, a, p, R, l, r, o, h, C, S, N, A, m)
+                return t(i, a, m, R, l, r, o, h, C, S, N, A, p)
             }
 
             function I(e, t) {

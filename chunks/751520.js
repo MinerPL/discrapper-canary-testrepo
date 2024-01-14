@@ -10,16 +10,16 @@
                     return f
                 },
                 getSelectionScope: function() {
-                    return h
-                },
-                getAutocompleteMode: function() {
                     return S
                 },
+                getAutocompleteMode: function() {
+                    return h
+                },
                 getFlattenedStringArray: function() {
-                    return p
+                    return R
                 },
                 getTotalResults: function() {
-                    return R
+                    return p
                 },
                 getQueryFromTokens: function() {
                     return A
@@ -28,10 +28,10 @@
                     return N
                 },
                 clearTokenCache: function() {
-                    return m
+                    return I
                 },
                 showDatePicker: function() {
-                    return I
+                    return m
                 },
                 filterHasAnswer: function() {
                     return y
@@ -41,12 +41,12 @@
                 }
             }), n("222007"), n("808653");
             var l = n("917351"),
-                r = n.n(l),
-                a = n("76385"),
-                o = n("955513"),
-                u = n("247013"),
-                i = n("697218"),
-                s = n("299039"),
+                a = n.n(l),
+                r = n("76385"),
+                u = n("955513"),
+                o = n("247013"),
+                s = n("697218"),
+                i = n("299039"),
                 c = n("49111"),
                 E = n("782340");
 
@@ -79,8 +79,8 @@
             };
 
             function T(e, t) {
-                if (u.default.didAgree(t)) {
-                    let t = i.default.getCurrentUser();
+                if (o.default.didAgree(t)) {
+                    let t = s.default.getCurrentUser();
                     null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed)
                 }
             }
@@ -97,61 +97,61 @@
                             case c.SearchTokenTypes.ANSWER_ON:
                             case c.SearchTokenTypes.ANSWER_AFTER:
                                 let l = e.getData("start"),
-                                    r = e.getData("end");
-                                l && (t.min_id = s.default.fromTimestamp(l)), r && (t.max_id = s.default.fromTimestamp(r));
+                                    a = e.getData("end");
+                                l && (t.min_id = i.default.fromTimestamp(l)), a && (t.max_id = i.default.fromTimestamp(a));
                                 return
                         }
-                        let a = function(e) {
-                            let t = o.default[e],
+                        let r = function(e) {
+                            let t = u.default[e],
                                 n = null != t ? t.queryKey : null;
                             return null == n && (n = "content"), n
                         }(n);
-                        null == t[a] && (t[a] = new Set);
-                        let u = t[a];
+                        null == t[r] && (t[r] = new Set);
+                        let o = t[r];
                         switch (n) {
                             case c.SearchTokenTypes.ANSWER_USERNAME_FROM:
                             case c.SearchTokenTypes.ANSWER_USERNAME_MENTIONS:
-                                u.add(e.getData("userId"));
+                                o.add(e.getData("userId"));
                                 break;
                             case c.SearchTokenTypes.ANSWER_FILE_TYPE:
                             case c.SearchTokenTypes.ANSWER_FILE_NAME:
-                                u.add(e.getMatch(1));
+                                o.add(e.getMatch(1));
                                 break;
                             case c.SearchTokenTypes.ANSWER_IN:
-                                u.add(e.getData("channel").id);
+                                o.add(e.getData("channel").id);
                                 break;
                             case c.SearchTokenTypes.ANSWER_HAS:
-                                u.add(e.getData("has"));
+                                o.add(e.getData("has"));
                                 break;
                             case c.SearchTokenTypes.ANSWER_PINNED:
-                                u.add(e.getData("pinned"));
+                                o.add(e.getData("pinned"));
                                 break;
                             default:
-                                u.add(e.getFullMatch().trim())
+                                o.add(e.getFullMatch().trim())
                         }
                     }), Object.entries(t))) l instanceof Set && (t[n] = Array.from(l));
                 return t.content && (t.content = t.content.join(" ").trim(), !t.content && delete t.content), t
             }
 
-            function h(e, t, n) {
-                let l, r;
-                let a = e.find((a, o) => t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[o + 1] && (r = e[o + 1]), !0) : (l = a, !1));
-                return null == a ? null : {
+            function S(e, t, n) {
+                let l, a;
+                let r = e.find((r, u) => t >= r.start && t <= r.end && n >= r.start && n <= r.end ? (null != e[u + 1] && (a = e[u + 1]), !0) : (l = r, !1));
+                return null == r ? null : {
                     previousToken: l,
-                    currentToken: a,
-                    nextToken: r,
+                    currentToken: r,
+                    nextToken: a,
                     focusOffset: t,
                     anchorOffset: n
                 }
             }
 
-            function S(e, t) {
+            function h(e, t) {
                 let n;
                 e = null != e ? e : {};
                 let {
                     currentToken: l,
-                    nextToken: r,
-                    previousToken: o
+                    nextToken: a,
+                    previousToken: u
                 } = e;
                 if (0 === t.length) return {
                     type: c.SearchPopoutModes.EMPTY,
@@ -164,39 +164,39 @@
                     token: null
                 };
                 if (c.IS_SEARCH_FILTER_TOKEN.test(l.type)) {
-                    if (null == r || r.type === a.default.NON_TOKEN_TYPE) return {
+                    if (null == a || a.type === r.default.NON_TOKEN_TYPE) return {
                         type: c.SearchPopoutModes.FILTER,
                         filter: l.type,
-                        token: r
+                        token: a
                     };
-                    if (null != r && !c.IS_SEARCH_ANSWER_TOKEN.test(r.type)) return {
+                    if (null != a && !c.IS_SEARCH_ANSWER_TOKEN.test(a.type)) return {
                         type: c.SearchPopoutModes.FILTER,
                         filter: l.type,
                         token: null
                     }
                 }
-                return l.type === a.default.NON_TOKEN_TYPE && null != o && c.IS_SEARCH_FILTER_TOKEN.test(o.type) ? {
+                return l.type === r.default.NON_TOKEN_TYPE && null != u && c.IS_SEARCH_FILTER_TOKEN.test(u.type) ? {
                     type: c.SearchPopoutModes.FILTER,
-                    filter: o.type,
+                    filter: u.type,
                     token: l
-                } : (l.type === a.default.NON_TOKEN_TYPE && (n = l), {
+                } : (l.type === r.default.NON_TOKEN_TYPE && (n = l), {
                     type: c.SearchPopoutModes.FILTER_ALL,
                     filter: null,
                     token: n
                 })
             }
 
-            function p(e, t) {
+            function R(e, t) {
                 let n = [];
-                return r(e).forEach(e => {
+                return a(e).forEach(e => {
                     if (null == e || 0 === e.results.length) return;
                     let l = e.group;
                     n = n.concat(e.results.map(e => {
                         let n = e.text;
                         if (t === c.SearchPopoutModes.FILTER_ALL) {
-                            var r;
-                            l = null !== (r = e.group) && void 0 !== r ? r : l;
-                            let t = o.default[l];
+                            var a;
+                            l = null !== (a = e.group) && void 0 !== a ? a : l;
+                            let t = u.default[l];
                             (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== "" && (n = "".concat(t.key, " ").concat(n))
                         }
                         return n
@@ -204,24 +204,24 @@
                 }), n.filter(e => e)
             }
 
-            function R(e) {
+            function p(e) {
                 return e.reduce((e, t) => null == t ? e : t.results.length + e, 0)
             }
 
             function A(e) {
                 return null == e ? "" : e.map(e => e.getFullMatch()).join("")
             }
-            let g = new a.default;
+            let g = new r.default;
 
             function N(e) {
                 return g.tokenize(e)
             }
 
-            function m() {
+            function I() {
                 return g.clearCache()
             }
 
-            function I(e) {
+            function m(e) {
                 return null != e ? _[e] : null
             }
 
@@ -231,7 +231,7 @@
             }
 
             function C() {
-                (0, o.refreshSearchTokens)(), g.reset(), r(o.default).forOwn((e, t) => g.addRule({
+                (0, u.refreshSearchTokens)(), g.reset(), a(u.default).forOwn((e, t) => g.addRule({
                     type: t,
                     ...e
                 }))

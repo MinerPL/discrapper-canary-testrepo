@@ -81,18 +81,18 @@
                             party: S,
                             secrets: N,
                             timestamps: A,
-                            buttons: m,
-                            type: p
+                            buttons: p,
+                            type: m
                         } = _;
-                        if ((null == p || p !== E.ActivityTypes.PLAYING && !C) && (_.type = E.ActivityTypes.PLAYING), null != N) {
+                        if ((null == m || m !== E.ActivityTypes.PLAYING && !C) && (_.type = E.ActivityTypes.PLAYING), null != N) {
                             let e = s.values(N).filter(e => !!e);
                             if (null != S && s.intersection(e, [S.id]).length > 0 && !f.includes(a.application.id)) throw new o.default(c.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot match the party id");
                             if (s.uniq(e).length < e.length) throw new o.default(c.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets must be unique");
-                            if (null != m) throw new o.default(c.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot currently be sent with buttons")
+                            if (null != p) throw new o.default(c.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot currently be sent with buttons")
                         }
-                        if (null != m && (_.metadata = {
-                                button_urls: m.map(e => e.url)
-                            }, _.buttons = m.map(e => e.label)), null != A)
+                        if (null != p && (_.metadata = {
+                                button_urls: p.map(e => e.url)
+                            }, _.buttons = p.map(e => e.label)), null != A)
                             for (let e of Object.keys(A)) Date.now().toString().length - A[e].toString().length > 2 && (A[e] = Math.floor(1e3 * A[e]));
                         if (null == I) n = Promise.resolve([]);
                         else {

@@ -2,7 +2,7 @@
             let a;
             n.r(t), n.d(t, {
                 default: function() {
-                    return m
+                    return p
                 }
             });
             var s = n("913144"),
@@ -33,7 +33,7 @@
                     null != e && d.default.isOpen(e) && (s.default.wait(() => i.close(e)), a = null)
                 }();
                 {
-                    let e = (0, T.default)(t, n.application_id);
+                    let e = (0, T.default)(t, n.applicationId);
                     return function(e, t) {
                         if (d.default.isOpen(t)) return !1;
                         s.default.wait(() => i.open(t, I.PictureInPictureComponents.EMBED_IFRAME, {
@@ -62,4 +62,4 @@
                     E.default.removeChangeListener(S), f.default.removeChangeListener(S), c.default.removeChangeListener(S), _.default.removeChangeListener(S), r.default.removeChangeListener(S), h.default.removeChangeListener(S), u.default.removeChangeListener(N)
                 }
             }
-            var m = new A
+            var p = new A

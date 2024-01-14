@@ -10,7 +10,7 @@
                 i = n("151426"),
                 r = n("551042"),
                 o = n("77078"),
-                u = n("509802"),
+                u = n("384997"),
                 d = n("619443"),
                 c = n("162771"),
                 f = n("994428");
@@ -24,7 +24,7 @@
                             let e = (0, s.default)([d.default], () => d.default.isConnected());
                             return e ? [] : []
                         }(),
-                        [t, p] = (0, u.useDismissibleContentGroup)(e, f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL),
+                        [t, p] = (0, u.useSelectedDismissibleContent)(e, f.DismissibleContentGroupName.GUILD_TAKEOVER_MODAL),
                         m = (0, r.useHasAnyModalOpen)(),
                         E = l.useRef(null);
                     l.useEffect(() => {

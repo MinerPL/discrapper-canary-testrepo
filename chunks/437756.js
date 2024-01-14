@@ -1,10 +1,10 @@
             "use strict";
             n.r(t), n.d(t, {
                 useChannelPresetSettings: function() {
-                    return _
+                    return c
                 },
                 useChannelPresetInheritance: function() {
-                    return c
+                    return N
                 },
                 updateChannelPreset: function() {
                     return f
@@ -20,74 +20,74 @@
                 }
             }), n("222007");
             var i = n("65597"),
-                s = n("519705"),
-                a = n("42203"),
-                o = n("282109"),
-                l = n("34676"),
-                S = n("47495"),
+                a = n("519705"),
+                s = n("42203"),
+                l = n("282109"),
+                o = n("34676"),
+                d = n("47495"),
                 r = n("277796"),
-                d = n("507313"),
-                u = n("49111"),
+                u = n("507313"),
+                S = n("49111"),
                 g = n("133335"),
-                N = n("397336");
+                _ = n("397336");
 
-            function _(e) {
-                let t = (0, i.default)([o.default], () => o.default.resolveUnreadSetting(e)),
-                    n = (0, i.default)([o.default], () => o.default.resolvedMessageNotifications(e));
+            function c(e) {
+                let t = (0, i.default)([l.default], () => l.default.resolveUnreadSetting(e)),
+                    n = (0, i.default)([l.default], () => l.default.resolvedMessageNotifications(e));
                 return {
                     unread: t,
                     notification: n,
-                    preset: (0, d.presetFromSettings)(t, n)
+                    preset: (0, u.presetFromSettings)(t, n)
                 }
             }
 
-            function c(e) {
-                let t = (0, i.useStateFromStoresArray)([o.default], () => (0, S.filterOverrides)(o.default.getChannelOverrides(e.guild_id), {
+            function N(e) {
+                let t = (0, i.useStateFromStoresArray)([l.default], () => (0, d.filterOverrides)(l.default.getChannelOverrides(e.guild_id), {
                         ignoreMute: !0,
                         ignoreUnreadSetting: !1,
                         ignoreNotificationSetting: !1
                     })),
-                    [n, s] = (0, i.useStateFromStoresArray)([o.default, a.default], () => {
-                        let n = a.default.getChannel(e.parent_id);
-                        return null != n && t.includes(n.id) ? ["parent", (0, d.presetName)((0, d.presetFromSettings)(o.default.resolveUnreadSetting(n), o.default.resolvedMessageNotifications(n)))] : ["guild", (0, d.presetName)((0, d.presetFromSettings)(o.default.getGuildUnreadSetting(e.guild_id), o.default.getMessageNotifications(e.guild_id)))]
+                    [n, a] = (0, i.useStateFromStoresArray)([l.default, s.default], () => {
+                        let n = s.default.getChannel(e.parent_id);
+                        return null != n && t.includes(n.id) ? ["parent", (0, u.presetName)((0, u.presetFromSettings)(l.default.resolveUnreadSetting(n), l.default.resolvedMessageNotifications(n)))] : ["guild", (0, u.presetName)((0, u.presetFromSettings)(l.default.getGuildUnreadSetting(e.guild_id), l.default.getMessageNotifications(e.guild_id)))]
                     }, [e.guild_id, e.parent_id, t]);
                 return {
                     inherited: !t.includes(e.id),
                     inheritedFrom: n,
-                    inheritedPreset: s
+                    inheritedPreset: a
                 }
             }
 
             function f(e, t, n) {
-                let i = o.default.getChannelIdFlags(e, t);
-                n === d.Presets.ALL_MESSAGES ? s.default.updateChannelOverrideSettings(e, t, {
-                    message_notifications: u.UserNotificationSettings.ALL_MESSAGES,
-                    flags: (0, r.withChannelUnreadFlags)(i, N.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES)
-                }, l.NotificationLabels.PresetAll) : n === d.Presets.MENTIONS ? s.default.updateChannelOverrideSettings(e, t, {
-                    message_notifications: u.UserNotificationSettings.ONLY_MENTIONS,
-                    flags: (0, r.withChannelUnreadFlags)(i, N.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-                }, l.NotificationLabels.PresetMentions) : n === d.Presets.NOTHING && s.default.updateChannelOverrideSettings(e, t, {
-                    message_notifications: u.UserNotificationSettings.NO_MESSAGES,
-                    flags: (0, r.withChannelUnreadFlags)(i, N.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-                }, l.NotificationLabels.PresetNothing)
+                let i = l.default.getChannelIdFlags(e, t);
+                n === u.Presets.ALL_MESSAGES ? a.default.updateChannelOverrideSettings(e, t, {
+                    message_notifications: S.UserNotificationSettings.ALL_MESSAGES,
+                    flags: (0, r.withChannelUnreadFlags)(i, _.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES)
+                }, o.NotificationLabels.PresetAll) : n === u.Presets.MENTIONS ? a.default.updateChannelOverrideSettings(e, t, {
+                    message_notifications: S.UserNotificationSettings.ONLY_MENTIONS,
+                    flags: (0, r.withChannelUnreadFlags)(i, _.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+                }, o.NotificationLabels.PresetMentions) : n === u.Presets.NOTHING && a.default.updateChannelOverrideSettings(e, t, {
+                    message_notifications: S.UserNotificationSettings.NO_MESSAGES,
+                    flags: (0, r.withChannelUnreadFlags)(i, _.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+                }, o.NotificationLabels.PresetNothing)
             }
 
             function E(e, t) {
-                s.default.updateChannelOverrideSettings(e, t, {
-                    message_notifications: u.UserNotificationSettings.NULL,
-                    flags: (0, r.resetChannelUnreadFlags)(o.default.getChannelIdFlags(e, t))
-                }, l.NotificationLabels.PresetDefault)
+                a.default.updateChannelOverrideSettings(e, t, {
+                    message_notifications: S.UserNotificationSettings.NULL,
+                    flags: (0, r.resetChannelUnreadFlags)(l.default.getChannelIdFlags(e, t))
+                }, o.NotificationLabels.PresetDefault)
             }
 
             function M(e, t, n) {
-                let i = o.default.getChannelIdFlags(e, t);
-                s.default.updateChannelOverrideSettings(e, t, {
-                    flags: (0, r.withChannelUnreadFlags)(i, n === g.UnreadSetting.ALL_MESSAGES ? N.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES : N.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
-                }, l.NotificationLabel.unreads(n))
+                let i = l.default.getChannelIdFlags(e, t);
+                a.default.updateChannelOverrideSettings(e, t, {
+                    flags: (0, r.withChannelUnreadFlags)(i, n === g.UnreadSetting.ALL_MESSAGES ? _.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES : _.ChannelNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+                }, o.NotificationLabel.unreads(n))
             }
 
             function h(e, t, n) {
-                s.default.updateChannelOverrideSettings(e, t, {
+                a.default.updateChannelOverrideSettings(e, t, {
                     message_notifications: n
-                }, l.NotificationLabel.notifications(n))
+                }, o.NotificationLabel.notifications(n))
             }

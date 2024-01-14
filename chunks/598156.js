@@ -22,9 +22,9 @@
                 I = n("442174"),
                 S = n("69927"),
                 N = n("10641"),
-                A = n("509802"),
-                m = n("539938"),
-                p = n("155084"),
+                A = n("384997"),
+                p = n("539938"),
+                m = n("155084"),
                 g = n("393414"),
                 R = n("582713"),
                 O = n("970366"),
@@ -116,7 +116,7 @@
                             })]
                         }) : null]
                     }, "title"), [t, T, u]);
-                return (n.length !== t && p.default.increment({
+                return (n.length !== t && m.default.increment({
                     name: o.MetricEvents.MESSAGE_REQUEST_COUNT_DRIFT
                 }), 0 === n.length) ? (0, a.jsx)(W.default, {
                     section: q.MessageRequestSections.REQUESTS
@@ -239,7 +239,7 @@
                 s.useEffect(() => {
                     E.setHomeLink(Q.Routes.MESSAGE_REQUESTS), (0, O.trackAppUIViewed)("message-requests"), b.default.track(Q.AnalyticEvents.MESSAGE_REQUESTS_VIEWED, {
                         num_message_requests: n
-                    }), p.default.increment({
+                    }), m.default.increment({
                         name: o.MetricEvents.MESSAGE_REQUEST_VIEW
                     })
                 }, []);
@@ -259,17 +259,17 @@
                             [$.threadSidebarOpen]: _,
                             [$.threadSidebarFloating]: _ && d
                         }),
-                        children: [(0, a.jsxs)(m.default, {
+                        children: [(0, a.jsxs)(p.default, {
                             className: (0, U.getThemeClass)(i),
                             toolbar: !0,
-                            children: [(0, a.jsx)(m.default.Icon, {
+                            children: [(0, a.jsx)(p.default.Icon, {
                                 icon: y.default,
                                 "aria-hidden": !0
                             }), (0, a.jsx)(ea, {
-                                children: (0, a.jsx)(m.default.Title, {
+                                children: (0, a.jsx)(p.default.Title, {
                                     children: X.default.Messages.MESSAGE_REQUESTS
                                 })
-                            }), (0, a.jsx)(m.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
+                            }), (0, a.jsx)(p.default.Divider, {}), (0, a.jsxs)(c.TabBar, {
                                 "aria-label": X.default.Messages.MESSAGE_REQUESTS,
                                 selectedItem: h,
                                 type: "top-pill",

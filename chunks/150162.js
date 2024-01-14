@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return E
+                    return m
                 }
             }), l("222007");
             var a = l("37983"),
@@ -24,42 +24,42 @@
                     clamp: !0
                 };
 
-            function E(e) {
+            function m(e) {
                 let {
                     value: t,
                     children: l,
                     equalityFn: s = i,
                     style: d,
-                    ...E
-                } = e, m = (0, u.default)(t), [{
+                    ...m
+                } = e, E = (0, u.default)(t), [{
                     spring: M
-                }, T] = (0, o.useSpring)(() => ({
+                }, h] = (0, o.useSpring)(() => ({
                     spring: 0
-                })), h = (0, r.useToken)(C.default.colors.BACKGROUND_PRIMARY).hex(), x = (0, r.useToken)(C.default.colors.CONTROL_BRAND_FOREGROUND).hex(), _ = n.useCallback(() => {
-                    T({
+                })), T = (0, r.useToken)(C.default.colors.BACKGROUND_PRIMARY).hex(), x = (0, r.useToken)(C.default.colors.CONTROL_BRAND_FOREGROUND).hex(), H = n.useCallback(() => {
+                    h({
                         spring: 1,
                         config: c
-                    }), T({
+                    }), h({
                         spring: 0,
                         config: f,
                         delay: 300
                     })
-                }, [T]);
+                }, [h]);
                 n.useEffect(() => {
-                    if (null != t && null != m) !s(t, m) && _()
-                }, [_, t, m, s]);
-                let H = null == M ? void 0 : M.to({
+                    if (null != t && null != E) !s(t, E) && H()
+                }, [H, t, E, s]);
+                let _ = null == M ? void 0 : M.to({
                         range: [0, 1],
-                        output: ["".concat(h, "00"), "".concat(x, "27")]
+                        output: ["".concat(T, "00"), "".concat(x, "27")]
                     }),
                     A = null != d ? {
                         ...d,
-                        backgroundColor: H
+                        backgroundColor: _
                     } : {
-                        backgroundColor: H
+                        backgroundColor: _
                     };
                 return (0, a.jsx)(o.animated.tr, {
-                    ...E,
+                    ...m,
                     style: A,
                     children: l
                 })

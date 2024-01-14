@@ -26,8 +26,8 @@
                 S = n("642400"),
                 N = n("668596"),
                 A = n("892313"),
-                m = n("126667"),
-                p = n("601745"),
+                p = n("126667"),
+                m = n("601745"),
                 g = n("49111"),
                 R = n("482931"),
                 O = n("782340");
@@ -50,7 +50,7 @@
                     }
                 }, {}, [n.toString()]);
                 let D = () => {
-                    (0, c.accountDetailsInit)(), (0, o.openModal)(e => (0, a.jsx)(m.default, {
+                    (0, c.accountDetailsInit)(), (0, o.openModal)(e => (0, a.jsx)(p.default, {
                         ...e
                     }), {
                         modalKey: L,
@@ -86,7 +86,7 @@
                     },
                     theme: t,
                     onClick: e => {
-                        e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? D() : (0, o.openModal)(e => (0, a.jsx)(p.default, {
+                        e === g.VerificationTypes.EMAIL_OR_PHONE || e === g.VerificationTypes.EMAIL || e === g.VerificationTypes.REVERIFY_EMAIL ? D() : (0, o.openModal)(e => (0, a.jsx)(m.default, {
                             reason: C.ChangePhoneReason.USER_ACTION_REQUIRED,
                             ...e
                         }), {

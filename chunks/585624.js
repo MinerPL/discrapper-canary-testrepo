@@ -1,7 +1,7 @@
             "use strict";
             s.r(t), s.d(t, {
                 default: function() {
-                    return b
+                    return j
                 }
             }), s("222007");
             var a = s("37983");
@@ -36,7 +36,7 @@
                 v = s("816571"),
                 U = s("114244"),
                 D = s("991119");
-            let j = new Map([
+            let b = new Map([
                 ["BG", l],
                 ["CZ", o],
                 ["HU", S],
@@ -69,13 +69,13 @@
                 ["HR", f]
             ]);
 
-            function b(e) {
+            function j(e) {
                 let {
                     className: t,
                     countryCode: s
                 } = e;
-                if (null == s || !j.has(s)) return null;
-                let n = j.get(s);
+                if (null == s || !b.has(s)) return null;
+                let n = b.get(s);
                 return (0, a.jsx)("img", {
                     className: t,
                     "aria-hidden": !0,

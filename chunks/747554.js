@@ -27,11 +27,11 @@
                     var e, t;
                     let s = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
                         A = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(s), [s]),
-                        m = (0, o.useStateFromStores)([h.default], () => null != s ? h.default.getRequest(s) : null, [s]),
-                        p = (0, r.useLocation)(),
-                        g = (null === (e = (0, l.matchPath)(p.pathname, C.Routes.CHANNEL(null == A ? void 0 : A.id, T.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+                        p = (0, o.useStateFromStores)([h.default], () => null != s ? h.default.getRequest(s) : null, [s]),
+                        m = (0, r.useLocation)(),
+                        g = (null === (e = (0, l.matchPath)(m.pathname, C.Routes.CHANNEL(null == A ? void 0 : A.id, T.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
                     if (null == A || !A.hasVerificationGate() || g) return null;
-                    let R = null !== (t = null == m ? void 0 : m.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
+                    let R = null !== (t = null == p ? void 0 : p.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
                         O = null,
                         L = null,
                         v = null,

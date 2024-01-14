@@ -1,13 +1,13 @@
             "use strict";
             l.r(t), l.d(t, {
                 MENU_DATE_FORMAT: function() {
-                    return m
+                    return E
                 },
                 DATE_OPTION: function() {
                     return a
                 },
                 default: function() {
-                    return h
+                    return T
                 }
             }), l("222007");
             var a, n, s = l("37983"),
@@ -19,16 +19,16 @@
                 u = l("980428"),
                 c = l("49111"),
                 f = l("782340"),
-                E = l("165258");
-            let m = "MMM Do, YYYY",
+                m = l("165258");
+            let E = "MMM Do, YYYY",
                 M = d("2015-05-15").local(),
-                T = (0, C.makeLazy)({
+                h = (0, C.makeLazy)({
                     createPromise: () => l.el("201959").then(l.bind(l, "201959")),
                     webpackId: "201959"
                 });
             (n = a || (a = {}))[n.ALL = 0] = "ALL", n[n["1_HOUR"] = 1] = "1_HOUR", n[n["24_HOURS"] = 2] = "24_HOURS", n[n["7_DAYS"] = 3] = "7_DAYS", n[n["2_WEEKS"] = 4] = "2_WEEKS", n[n["4_WEEKS"] = 5] = "4_WEEKS", n[n["3_MONTHS"] = 6] = "3_MONTHS", n[n.CUSTOM = 7] = "CUSTOM";
 
-            function h(e) {
+            function T(e) {
                 let {
                     startDateLabel: t,
                     endDateLabel: l,
@@ -36,14 +36,14 @@
                     beforeDate: n,
                     selectedOption: o,
                     isCustomDateRange: C,
-                    shouldShowCustomDateSubtext: m,
-                    menuName: h,
+                    shouldShowCustomDateSubtext: E,
+                    menuName: T,
                     onClose: x,
-                    onSelectDateOption: _,
-                    onToggleCustomDateRange: H,
+                    onSelectDateOption: H,
+                    onToggleCustomDateRange: _,
                     onSelectStartDate: A,
-                    onSelectEndDate: N
-                } = e, p = [{
+                    onSelectEndDate: L
+                } = e, g = [{
                     id: 0,
                     option: null,
                     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_ALL
@@ -89,26 +89,26 @@
                         unit: "M"
                     },
                     label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_3_MONTHS
-                }], [g, S] = i.useState(!1), L = i.useCallback(() => {
-                    S(!0), H()
-                }, [H]), I = i.useCallback(e => {
+                }], [N, p] = i.useState(!1), S = i.useCallback(() => {
+                    p(!0), _()
+                }, [_]), v = i.useCallback(e => {
                     A(e)
-                }, [A]), v = i.useCallback(e => {
-                    N(e)
-                }, [N]);
+                }, [A]), R = i.useCallback(e => {
+                    L(e)
+                }, [L]);
                 return (0, s.jsx)(r.Menu, {
-                    navId: "member-safety-guild-member-".concat(h, "-menu"),
+                    navId: "member-safety-guild-member-".concat(T, "-menu"),
                     onClose: x,
                     "aria-label": f.default.Messages.MEMBER_SAFETY_TABLE_FLAGS_POPOUT_TITLE,
                     onSelect: c.NOOP,
                     children: (0, s.jsx)(r.MenuGroup, {
-                        children: g ? (0, s.jsxs)(s.Fragment, {
+                        children: N ? (0, s.jsxs)(s.Fragment, {
                             children: [(0, s.jsx)(r.MenuItem, {
                                 id: "back",
-                                action: () => S(!1),
+                                action: () => p(!1),
                                 render: e => (0, s.jsxs)("span", {
                                     ...e,
-                                    className: E.nagivateBackContainer,
+                                    className: m.nagivateBackContainer,
                                     children: [(0, s.jsx)(u.default, {
                                         width: 16,
                                         height: 16
@@ -122,14 +122,14 @@
                                 id: "after-date-menu-item",
                                 label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_AFTER,
                                 subtext: t,
-                                subMenuClassName: E.calendarContainer,
+                                subMenuClassName: m.calendarContainer,
                                 children: (0, s.jsx)(r.MenuItem, {
                                     id: "after-date-picker",
-                                    render: e => (0, s.jsx)(T, {
+                                    render: e => (0, s.jsx)(h, {
                                         ...e,
-                                        calendarClassName: E.calendar,
+                                        calendarClassName: m.calendar,
                                         value: C && null != a ? d(a) : void 0,
-                                        onSelect: I,
+                                        onSelect: v,
                                         maxDate: d().local(),
                                         minDate: M
                                     })
@@ -138,39 +138,39 @@
                                 id: "before-date-menu-item",
                                 label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_BEFORE,
                                 subtext: l,
-                                subMenuClassName: E.calendarContainer,
+                                subMenuClassName: m.calendarContainer,
                                 children: (0, s.jsx)(r.MenuItem, {
                                     id: "before-date-picker",
-                                    render: e => (0, s.jsx)(T, {
+                                    render: e => (0, s.jsx)(h, {
                                         ...e,
-                                        calendarClassName: E.calendar,
+                                        calendarClassName: m.calendar,
                                         value: C && null != n ? d(n) : void 0,
-                                        onSelect: v,
+                                        onSelect: R,
                                         maxDate: d().local(),
                                         minDate: C && null != a ? d(a) : M
                                     })
                                 })
                             })]
                         }) : (0, s.jsxs)(s.Fragment, {
-                            children: [p.map(e => {
+                            children: [g.map(e => {
                                 let {
                                     id: t,
                                     option: l,
                                     label: a
                                 } = e;
                                 return (0, s.jsx)(r.MenuRadioItem, {
-                                    group: "member-safety-guild-member-".concat(h, "-menu"),
-                                    id: "guild-member-".concat(h, "-option-").concat(t),
+                                    group: "member-safety-guild-member-".concat(T, "-menu"),
+                                    id: "guild-member-".concat(T, "-option-").concat(t),
                                     label: a,
-                                    action: () => _(t, l),
+                                    action: () => H(t, l),
                                     checked: t === o
                                 }, "option-".concat(t))
                             }), (0, s.jsx)(r.MenuSeparator, {}), (0, s.jsx)(r.MenuRadioItem, {
-                                group: "member-safety-guild-member-".concat(h, "-menu"),
-                                id: "guild-member-".concat(h, "-custom-option}"),
+                                group: "member-safety-guild-member-".concat(T, "-menu"),
+                                id: "guild-member-".concat(T, "-custom-option}"),
                                 label: f.default.Messages.MEMBER_SAFETY_DATE_OPTION_LABEL_CUSTOM,
-                                subtext: m ? "".concat(t, " - ").concat(l) : void 0,
-                                action: L,
+                                subtext: E ? "".concat(t, " - ").concat(l) : void 0,
+                                action: S,
                                 checked: 7 === o
                             }, "option-".concat(7))]
                         })

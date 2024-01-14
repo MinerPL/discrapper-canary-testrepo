@@ -28,14 +28,14 @@
                         autoTrackExposure: !0
                     }), N = (0, r.useAnalyticsContext)(), {
                         analyticsLocations: A
-                    } = (0, o.default)(), m = c.default.getCurrentUser(), p = (0, f.isPremium)(m);
+                    } = (0, o.default)(), p = c.default.getCurrentUser(), m = (0, f.isPremium)(p);
                     return s.useEffect(() => {
-                        n && !p && E.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+                        n && !m && E.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
                             type: T.PremiumUpsellTypes.CLIPS_GUILD_SIDEBAR_COACHMARK_PREMIUM_EARLY_ACCESS_UPSELL,
                             location: N.location,
                             location_stack: A
                         })
-                    }, [n, p, N.location, A]), n ? (0, a.jsx)(u.default, {
+                    }, [n, m, N.location, A]), n ? (0, a.jsx)(u.default, {
                         dismissibleContent: i.DismissibleContent.CLIPS_GUILD_PANEL_PREMIUM_EARLY_ACCESS_COACHMARK,
                         contentClassName: S.container,
                         isPremiumEarlyAccess: !0,
@@ -50,8 +50,8 @@
                             color: "always-white",
                             children: I.default.Messages.CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_BODY
                         }),
-                        tryItText: p ? void 0 : I.default.Messages.CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_CTA_NON_SUBS,
-                        onTryFeature: p ? void 0 : () => {
+                        tryItText: m ? void 0 : I.default.Messages.CLIPS_NITRO_EA_ANNOUNCEMENT_COACHMARK_CTA_NON_SUBS,
+                        onTryFeature: m ? void 0 : () => {
                             (0, d.default)({
                                 subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
                                 analyticsLocations: A

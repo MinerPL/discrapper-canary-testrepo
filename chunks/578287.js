@@ -70,8 +70,8 @@
                 S = n("377253"),
                 N = n("824563"),
                 A = n("697218"),
-                m = n("800762"),
-                p = n("387111"),
+                p = n("800762"),
+                m = n("387111"),
                 g = n("655518"),
                 R = n("861309"),
                 O = n("694352"),
@@ -113,7 +113,7 @@
                     var n;
                     let s = !e.isNSFW() || (null === (n = A.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
                         i = s && t ? S.default.getMessages(e.id).toArray().map(j) : [],
-                        l = Object.values(m.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
+                        l = Object.values(p.default.getVoiceStatesForChannel(e.id)).map(t => k(a, e.id, t));
                     return {
                         id: e.id,
                         name: e.name,
@@ -168,7 +168,7 @@
                 } = n, u = A.default.getUser(o);
                 if (null == u) throw Error("Invalid user id: ".concat(o));
                 return {
-                    nick: p.default.getName(e, t, u),
+                    nick: m.default.getName(e, t, u),
                     mute: I.default.isLocalMute(u.id),
                     volume: I.default.getLocalVolume(u.id),
                     pan: I.default.getLocalPan(u.id),

@@ -1,7 +1,7 @@
             "use strict";
             l.r(t), l.d(t, {
                 default: function() {
-                    return _
+                    return H
                 }
             });
             var a = l("37983"),
@@ -15,24 +15,24 @@
                 u = l("812204"),
                 c = l("781896"),
                 f = l("493910"),
-                E = l("466818"),
-                m = l("178406"),
+                m = l("466818"),
+                E = l("178406"),
                 M = l("645266"),
-                T = l("782340"),
-                h = l("236807"),
+                h = l("782340"),
+                T = l("236807"),
                 x = l("821118");
 
-            function _(e) {
+            function H(e) {
                 let {
                     guild: t,
                     onSubmit: s
-                } = e, o = (0, C.default)([m.default], () => m.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), _ = (0, C.default)([m.default], () => {
-                    let e = m.default.getNewMemberTimestamp(t.id);
+                } = e, o = (0, C.default)([E.default], () => E.default.getMembersCountByGuildId(t.id, f.MemberSafetySecondaryIndex.NEW_GUILD_MEMBER), [t.id]), H = (0, C.default)([E.default], () => {
+                    let e = E.default.getNewMemberTimestamp(t.id);
                     return d(e).format("h:mm A")
-                }, [t.id]), H = (0, C.default)([m.default], () => m.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
+                }, [t.id]), _ = (0, C.default)([E.default], () => E.default.hasDefaultSearchStateByGuildId(t.id), [t.id]), A = n.useCallback(() => {
                     (0, M.refreshMemberSafetyTimestamp)(t.id), null == s || s()
-                }, [t.id, s]), N = n.useCallback(() => {
-                    H ? A() : (0, r.openModalLazy)(async () => {
+                }, [t.id, s]), L = n.useCallback(() => {
+                    _ ? A() : (0, r.openModalLazy)(async () => {
                         let {
                             default: e
                         } = await l.el("756912").then(l.bind(l, "756912"));
@@ -41,26 +41,26 @@
                             onConfirm: A
                         })
                     })
-                }, [A, H]), p = new Intl.NumberFormat(T.default.getLocale()).format(o), g = (0, E.useCanAccessInviteCodeFeature)(t.id), S = (0, E.useCanAccessBulkBanningFeature)(t.id, u.default.MEMBER_SAFETY_PAGE), L = n.useMemo(() => 1 + (g ? 1 : 0) + (S ? 1 : 0), [g, S]);
+                }, [A, _]), g = new Intl.NumberFormat(h.default.getLocale()).format(o), N = (0, m.useCanAccessInviteCodeFeature)(t.id), p = (0, m.useCanAccessBulkBanningFeature)(t.id, u.default.MEMBER_SAFETY_PAGE), S = n.useMemo(() => 1 + (N ? 1 : 0) + (p ? 1 : 0), [N, p]);
                 return 0 === o ? null : (0, a.jsxs)("tr", {
                     className: i(x.newMembersNotice),
-                    onClick: N,
+                    onClick: L,
                     children: [(0, a.jsx)("td", {
                         colSpan: 3,
                         children: (0, a.jsx)(r.Text, {
                             variant: "text-sm/normal",
                             color: "always-white",
-                            children: T.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
-                                count: p,
-                                date: _
+                            children: h.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_LABEL.format({
+                                count: g,
+                                date: H
                             })
                         })
                     }), (0, a.jsx)("td", {
-                        colSpan: L
+                        colSpan: S
                     }), (0, a.jsx)("td", {
                         colSpan: 2,
                         children: (0, a.jsx)("div", {
-                            className: i(h.actionCell),
+                            className: i(T.actionCell),
                             children: (0, a.jsx)(r.Button, {
                                 size: r.Button.Sizes.SMALL,
                                 color: r.Button.Colors.TRANSPARENT,
@@ -71,7 +71,7 @@
                                     color: "always-white",
                                     className: i(x.memberNoticeAction),
                                     children: [(0, a.jsx)("div", {
-                                        children: T.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
+                                        children: h.default.Messages.MEMBER_SAFETY_TABLE_NEW_MEMBER_NOTICE_ACTION
                                     }), (0, a.jsx)(c.default, {
                                         width: 20,
                                         height: 20,

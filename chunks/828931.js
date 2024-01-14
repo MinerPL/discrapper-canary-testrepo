@@ -12,7 +12,7 @@
                 o = n("685665"),
                 u = n("593094"),
                 d = n("951169"),
-                c = n("509802"),
+                c = n("384997"),
                 E = n("379532"),
                 f = n("526843"),
                 _ = n("442619"),
@@ -23,8 +23,8 @@
                 S = n("79798"),
                 N = n("599110"),
                 A = n("427459"),
-                m = n("701909"),
-                p = n("246351"),
+                p = n("701909"),
+                m = n("246351"),
                 g = n("49111"),
                 R = n("988268"),
                 O = n("994428"),
@@ -100,7 +100,7 @@
                         },
                         location_stack: E
                     })
-                }, H = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useDismissibleContentGroup)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
+                }, H = (0, l.isThemeDark)(n) ? x : b, [V, Y] = (0, c.useSelectedDismissibleContent)(t, O.DismissibleContentGroupName.GUILD_HEADER_TOOLTIPS);
                 return (0, a.jsx)(a.Fragment, {
                     children: (() => {
                         switch (V) {
@@ -226,7 +226,7 @@
                                             className: P.clydeTooltipAsset
                                         }),
                                         content: M.default.Messages.CLYDE_GUILD_TOOLTIP_DETAILS.format({
-                                            learnMoreURL: m.default.getArticleURL(g.HelpdeskArticles.CLYDE_AI)
+                                            learnMoreURL: p.default.getArticleURL(g.HelpdeskArticles.CLYDE_AI)
                                         }),
                                         buttonCTA: M.default.Messages.ENABLE,
                                         onClick: () => {
@@ -274,7 +274,7 @@
                                 });
                             case i.DismissibleContent.INVENTORY_GUILD_SETTINGS_MODMIN_COACHMARK_ROLLBACK:
                                 return (0, a.jsx)(F, {
-                                    renderPopout: (0, a.jsx)(p.default, {
+                                    renderPopout: (0, a.jsx)(m.default, {
                                         guild: s,
                                         markAsDismissed: Y
                                     }),

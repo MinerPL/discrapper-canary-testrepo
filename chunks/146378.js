@@ -23,8 +23,8 @@
                 S = n("224978"),
                 N = n("83916"),
                 A = n("559541"),
-                m = n("49111"),
-                p = n("353927"),
+                p = n("49111"),
+                m = n("353927"),
                 g = n("782340"),
                 R = n("889195");
 
@@ -36,7 +36,7 @@
                     c.default.removeFriend(t.id, {
                         location: "Friends"
                     })
-                }, i = (0, r.useStateFromStores)([_.default], () => _.default.supports(p.Features.VIDEO));
+                }, i = (0, r.useStateFromStores)([_.default], () => _.default.supports(m.Features.VIDEO));
                 return (0, a.jsxs)(o.Menu, {
                     navId: "friend-row",
                     "aria-label": g.default.Messages.USER_ACTIONS_MENU_LABEL,
@@ -143,8 +143,8 @@
                             user: t
                         } = this.props;
                         e.stopPropagation();
-                        let n = l.find(f.default.getMutablePrivateChannels(), e => e.type === m.ChannelTypes.DM && e.getRecipientId() === t.id);
-                        null != n ? (0, E.transitionTo)(m.Routes.CHANNEL(m.ME, n.id)) : u.default.openPrivateChannel(t.id)
+                        let n = l.find(f.default.getMutablePrivateChannels(), e => e.type === p.ChannelTypes.DM && e.getRecipientId() === t.id);
+                        null != n ? (0, E.transitionTo)(p.Routes.CHANNEL(p.ME, n.id)) : u.default.openPrivateChannel(t.id)
                     }, this.handleOpenActionsMenu = e => {
                         let {
                             user: t

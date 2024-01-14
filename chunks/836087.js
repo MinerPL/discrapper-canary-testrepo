@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return y
                 }
             }), n("70102"), n("222007");
             var a = n("37983"),
@@ -104,7 +104,7 @@
             }
             let N = [];
 
-            function D(e) {
+            function y(e) {
                 let {
                     channelId: t,
                     guildId: s,
@@ -113,14 +113,14 @@
                     compact: _ = !1,
                     disableInteraction: m = !1,
                     maxVisibleUsers: I = 3
-                } = e, [v, D] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => D(!1))), y = (0, o.useStateFromStoresArray)([h.default, p.default], () => {
+                } = e, [v, y] = r.useState(!1), L = r.useRef(new d.DelayedCall(150, () => y(!1))), D = (0, o.useStateFromStoresArray)([h.default, p.default], () => {
                     if (l.type === g.ParticipantTypes.STREAM) {
                         let e = h.default.getViewerIds(l.id);
                         return e.length > 0 ? e.map(e => p.default.getUser(e)).filter(C.isNotNullish) : N
                     }
                     return l.type === g.ParticipantTypes.ACTIVITY ? l.participants.size > 0 ? Array.from(l.participants).map(e => p.default.getUser(e)).filter(C.isNotNullish) : N : N
                 }, [l]), R = r.useCallback(() => {
-                    L.current.cancel(), D(!0)
+                    L.current.cancel(), y(!0)
                 }, []), x = r.useCallback(() => {
                     L.current.delay()
                 }, []), P = r.useCallback((e, t) => {
@@ -136,24 +136,24 @@
                         onClose: x
                     })
                 }, [x, R]);
-                if (0 === y.length) return null;
+                if (0 === D.length) return null;
                 if (_) return (0, a.jsx)(O, {
                     maxVisibleUsers: I,
-                    users: y,
+                    users: D,
                     guildId: s,
                     channelId: t,
                     className: S,
                     participantType: l.type
                 });
-                let b = u(y).take(I).map(e => (0, a.jsx)(c.Avatar, {
+                let b = u(D).take(I).map(e => (0, a.jsx)(c.Avatar, {
                     src: e.getAvatarURL(s, 24),
                     "aria-label": e.username,
                     size: c.AvatarSizes.SIZE_24,
                     className: A.viewer
                 }, e.id)).value();
-                return y.length > I && (b[b.length - 1] = (0, a.jsxs)("div", {
+                return D.length > I && (b[b.length - 1] = (0, a.jsxs)("div", {
                     className: A.overflow,
-                    children: ["+", y.length - I + 1]
+                    children: ["+", D.length - I + 1]
                 }, "overflow")), (0, a.jsx)(E.default, {
                     section: T.AnalyticsSections.STREAM_VIEWER_POPOUT,
                     children: (0, a.jsx)("div", {
@@ -165,7 +165,7 @@
                                 handleUserContextMenu: P,
                                 guildId: s,
                                 channelId: t,
-                                users: y,
+                                users: D,
                                 disableInteraction: m
                             }),
                             shouldShow: v,

@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
             var s = n("913144"),
@@ -33,21 +33,26 @@
             }
             let m = {
                 isNotSupported: () => !1,
-                enable: e => Promise.resolve(!0)
+                enable: e => Promise.resolve(!0),
+                trackToggleSelfMute(e) {}
             };
             m = n("412905");
             let {
                 enable: h,
-                isNotSupported: E
+                isNotSupported: E,
+                trackToggleSelfMute: g
             } = m;
-            var g = {
+            var S = {
                 enable: h,
                 toggleSelfMute() {
                     let {
                         context: e = p.MediaEngineContextTypes.DEFAULT,
-                        syncRemote: t = !0
+                        syncRemote: t = !0,
+                        usedKeybind: n = !1
                     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                    return E() ? Promise.resolve() : o.default.isEnabled() ? s.default.dispatch({
+                    return E() ? Promise.resolve() : (g({
+                        usedKeybind: n
+                    }), o.default.isEnabled()) ? s.default.dispatch({
                         type: "AUDIO_TOGGLE_SELF_MUTE",
                         context: e,
                         syncRemote: t

@@ -23,8 +23,8 @@
                 S = n("637824"),
                 N = n("146378"),
                 A = n("709410"),
-                m = n("411676"),
-                p = n("86959"),
+                p = n("411676"),
+                m = n("86959"),
                 g = n("748753"),
                 R = n("144521"),
                 O = n("59678"),
@@ -118,7 +118,7 @@
                             children: (0, a.jsx)(A.default, {
                                 type: A.FriendsSearchStatus.SECTION_NO_RESULTS
                             }, P)
-                        }) : (0, a.jsx)(p.default, {
+                        }) : (0, a.jsx)(m.default, {
                             relationshipCount: y,
                             statusSections: [k],
                             renderRow: function(e) {
@@ -129,7 +129,7 @@
                                             isFocused: D
                                         });
                                     case L.FriendsSections.PENDING:
-                                        return (0, a.jsx)(m.default, {
+                                        return (0, a.jsx)(p.default, {
                                             ...e,
                                             isFocused: D
                                         });

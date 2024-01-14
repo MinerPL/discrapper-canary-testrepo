@@ -23,8 +23,8 @@
                 S = n("638779"),
                 N = n("459736"),
                 A = n("967251"),
-                m = n("663831"),
-                p = n("170185"),
+                p = n("663831"),
+                m = n("170185"),
                 g = n("277860"),
                 R = n("724210"),
                 O = n("782340"),
@@ -47,8 +47,8 @@
                     }, []), s.useEffect(() => {
                         G && !i.isMobile && (0, c.handleInaccessiblePage)(t, R.StaticChannelRoute.ROLE_SUBSCRIPTIONS)
                     }, [t, G]), i.isMobile && G) {
-                    let e = null == n ? m.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : m.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
-                    return (0, a.jsx)(m.GuildRoleSubscriptionsOverviewErrorPage, {
+                    let e = null == n ? p.GuildRoleSubscriptionsOverviewErrorType.NOT_GUILD_MEMBER : p.GuildRoleSubscriptionsOverviewErrorType.GUILD_NOT_ELIGIBLE;
+                    return (0, a.jsx)(p.GuildRoleSubscriptionsOverviewErrorPage, {
                         errorType: e
                     })
                 }
@@ -75,7 +75,7 @@
                                     guild: n
                                 })
                             })
-                        }) : (0, a.jsx)(p.default, {})
+                        }) : (0, a.jsx)(m.default, {})
                     })]
                 })
             }

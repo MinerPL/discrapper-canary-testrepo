@@ -13,19 +13,19 @@
                     return g
                 },
                 updateApplicationGuildCommandPermissions: function() {
-                    return A
+                    return m
                 },
                 querySearchManager: function() {
-                    return m
+                    return A
                 },
                 performAutocomplete: function() {
                     return T
                 },
                 fetchCommand: function() {
-                    return S
+                    return p
                 },
                 fetchCommands: function() {
-                    return p
+                    return S
                 },
                 fetchCommandsForApplication: function() {
                     return M
@@ -93,7 +93,7 @@
                 E(e, n)
             }
 
-            function A(e, t, n, i) {
+            function m(e, t, n, i) {
                 return l.default.put({
                     body: {
                         permissions: i
@@ -101,7 +101,7 @@
                     url: _.Endpoints.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n)
                 })
             }
-            let m = (e, t, n, i, a) => {
+            let A = (e, t, n, i, a) => {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_SEARCH_STORE_QUERY",
                     context: e,
@@ -145,7 +145,7 @@
                 })
             }
 
-            function S(e, t, n) {
+            function p(e, t, n) {
                 s.default.dispatch({
                     type: "APPLICATION_COMMAND_FETCH",
                     channelId: t,
@@ -154,7 +154,7 @@
                 })
             }
 
-            function p(e, t, n) {
+            function S(e, t, n) {
                 s.default.dispatch({
                     type: "APPLICATION_COMMANDS_FETCH",
                     channelId: t,

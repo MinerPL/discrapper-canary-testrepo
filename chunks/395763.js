@@ -4,7 +4,7 @@
                     return O
                 },
                 default: function() {
-                    return b
+                    return P
                 }
             }), n("222007");
             var a, l, s = n("37983");
@@ -74,14 +74,13 @@
                     width: C
                 } = e;
                 let S = (a = C) > 400 ? 2 : a > 300 ? 1 : 0;
-                let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.application_id === p.id)), {
+                let [_] = (l = C) > 400 ? [u.AvatarSizes.SIZE_56, 56] : l > 300 ? [u.AvatarSizes.SIZE_32, 32] : [u.AvatarSizes.SIZE_24, 24], T = (0, o.useStateFromStoresArray)([x.default, v.default], () => Array.from(i).map(e => v.default.getId() === e ? null : x.default.getUser(e)).filter(A.isNotNullish)), N = (0, o.useStateFromStores)([c.default], () => c.default.getEmbeddedActivitiesForChannel(E.id).find(e => e.applicationId === p.id)), {
                     analyticsLocations: L
-                } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), b = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), P = (0, h.useEmbeddedActivityJoinability)({
+                } = (0, I.default)(), y = (0, d.useAnalyticsContext)(), P = M.default.getName(E.getGuildId(), E.id, null == T ? void 0 : T[0]), b = (0, h.useEmbeddedActivityJoinability)({
                     userId: null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id,
-                    activity: N,
                     channelId: E.id,
                     application: p
-                }), D = P === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
+                }), D = b === h.EmbeddedActivityJoinability.CAN_JOIN, U = null !== (n = E.getGuildId()) && void 0 !== n ? n : void 0;
                 return (0, s.jsxs)("div", {
                     className: j.splash,
                     children: [(0, s.jsx)(O, {
@@ -96,10 +95,10 @@
                         }),
                         variant: "text-sm/normal",
                         children: T.length > 1 ? R.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
-                            username: b,
+                            username: P,
                             count: T.length - 1
                         }) : R.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
-                            username: b
+                            username: P
                         })
                     }), (0, s.jsx)(u.Text, {
                         className: r(j.header, {
@@ -113,7 +112,7 @@
                         children: D ? (0, s.jsx)(u.Button, {
                             onClick: function(e) {
                                 e.stopPropagation(), null != N && (0, f.default)({
-                                    activity: N,
+                                    applicationId: N.applicationId,
                                     currentEmbeddedApplication: m,
                                     activityChannelId: E.id,
                                     locationObject: y.location,
@@ -139,7 +138,7 @@
                 })
             }
 
-            function b(e) {
+            function P(e) {
                 let {
                     participant: t,
                     width: n,
@@ -150,7 +149,7 @@
                     AnalyticsLocationProvider: r
                 } = (0, I.default)(_.default.ACTIVITY_TILE), {
                     id: o
-                } = t, u = (0, p.default)(), d = (null == u ? void 0 : u.channelId) === i.id && u.application_id === o, c = (0, m.default)(), [f] = (0, T.default)([o]), {
+                } = t, u = (0, p.default)(), d = (null == u ? void 0 : u.channelId) === i.id && u.applicationId === o, c = (0, m.default)(), [f] = (0, T.default)([o]), {
                     url: h
                 } = (0, E.default)({
                     applicationId: o,

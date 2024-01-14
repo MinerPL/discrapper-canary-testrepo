@@ -24,15 +24,15 @@
                     selectedJoinDateOption: i
                 } = n, {
                     afterDate: f,
-                    beforeDate: E,
-                    optionId: m
-                } = i, M = m === u.DATE_OPTION.CUSTOM, T = M && null != f ? o(f).format(u.MENU_DATE_FORMAT) : c.default.Messages.NONE, h = M && null != E ? o(E).format(u.MENU_DATE_FORMAT) : c.default.Messages.NONE, x = M && null != f && null != E;
+                    beforeDate: m,
+                    optionId: E
+                } = i, M = E === u.DATE_OPTION.CUSTOM, h = M && null != f ? o(f).format(u.MENU_DATE_FORMAT) : c.default.Messages.NONE, T = M && null != m ? o(m).format(u.MENU_DATE_FORMAT) : c.default.Messages.NONE, x = M && null != f && null != m;
                 return (0, a.jsx)(u.default, {
-                    startDateLabel: T,
-                    endDateLabel: h,
+                    startDateLabel: h,
+                    endDateLabel: T,
                     afterDate: f,
-                    beforeDate: E,
-                    selectedOption: m,
+                    beforeDate: m,
+                    selectedOption: E,
                     isCustomDateRange: M,
                     shouldShowCustomDateSubtext: x,
                     menuName: "joined-date",
@@ -55,7 +55,7 @@
                             selectedJoinDateOption: {
                                 optionId: u.DATE_OPTION.CUSTOM,
                                 afterDate: M ? f : null,
-                                beforeDate: M ? E : null
+                                beforeDate: M ? m : null
                             }
                         })
                     },
@@ -65,7 +65,7 @@
                             selectedJoinDateOption: {
                                 optionId: u.DATE_OPTION.CUSTOM,
                                 afterDate: e.valueOf(),
-                                beforeDate: E
+                                beforeDate: m
                             }
                         })
                     },

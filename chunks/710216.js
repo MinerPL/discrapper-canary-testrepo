@@ -6,26 +6,30 @@
             });
             var s = n("37983"),
                 a = n("884691"),
-                l = n("277420"),
-                i = n("396856"),
-                r = n("549077"),
-                o = n("809168"),
-                u = n("724210"),
+                l = n("66945"),
+                i = n("247982"),
+                r = n("396856"),
+                o = n("549077"),
+                u = n("809168"),
                 d = a.memo(function(e) {
                     let {
                         channel: t,
                         narrow: n
-                    } = e, a = (0, i.default)(t), d = !t.isPrivate() && t.hasFlag(u.ChannelFlags.CLYDE_AI);
-                    return t.isArchivedLockedThread() ? (0, s.jsx)(o.ArchivedLockedThreadNotice, {
+                    } = e, a = (0, r.default)(t), {
+                        canRenderNotice: d,
+                        recordNoticeRender: c
+                    } = (0, l.default)(t);
+                    return t.isArchivedLockedThread() ? (0, s.jsx)(u.ArchivedLockedThreadNotice, {
                         channel: t,
                         narrow: n
-                    }) : t.isLockedThread() ? (0, s.jsx)(o.LockedThreadNotice, {
+                    }) : t.isLockedThread() ? (0, s.jsx)(u.LockedThreadNotice, {
                         channel: t,
                         narrow: n
-                    }) : d ? (0, s.jsx)(l.ClydeNotice, {
-                        narrow: n
-                    }) : a ? (0, s.jsx)(r.default, {
+                    }) : a ? (0, s.jsx)(o.default, {
                         channel: t,
                         narrow: n
+                    }) : d ? (0, s.jsx)(i.default, {
+                        channel: t,
+                        onChannelChange: c
                     }) : null
                 })

@@ -7,78 +7,78 @@
                     return _
                 },
                 resetPendingProfileChanges: function() {
-                    return p
-                },
-                setPendingBanner: function() {
                     return S
                 },
-                setPendingBio: function() {
+                setPendingBanner: function() {
                     return T
                 },
+                setPendingBio: function() {
+                    return p
+                },
                 setPendingPronouns: function() {
-                    return h
-                },
-                setPendingAccentColor: function() {
-                    return I
-                },
-                setPendingThemeColors: function() {
                     return A
                 },
-                setTryItOutAvatar: function() {
+                setPendingAccentColor: function() {
                     return g
+                },
+                setPendingThemeColors: function() {
+                    return C
+                },
+                setTryItOutAvatar: function() {
+                    return I
                 },
                 setTryItOutAvatarDecoration: function() {
                     return N
                 },
                 setTryItOutBanner: function() {
-                    return C
+                    return U
                 },
                 setTryItOutThemeColors: function() {
-                    return m
+                    return O
                 }
             });
             var i = n("872717"),
-                r = n("913144"),
-                l = n("448993"),
+                l = n("913144"),
+                u = n("448993"),
                 o = n("884351"),
                 a = n("845579"),
-                u = n("697218"),
-                s = n("599110"),
-                d = n("49111"),
+                r = n("697218"),
+                d = n("599110"),
+                s = n("49111"),
                 c = n("646718");
 
             function f(e) {
-                s.default.track(d.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
+                d.default.track(s.AnalyticEvents.PREMIUM_FEATURE_TRY_OUT, {
                     feature_name: e,
                     feature_tier: c.AnalyticsPremiumFeatureTiers.PREMIUM_STANDARD
                 })
             }
             async function E(e, t) {
-                var n, s;
-                let c = null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+                var n, d;
+                let c = null === (n = r.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
                 if (null == c) return;
                 let f = a.UseLegacyChatInput.getSetting();
                 null != e.bio && f && (e.bio = o.default.parse(void 0, e.bio).content);
                 try {
-                    r.default.dispatch({
+                    l.default.dispatch({
                         type: "USER_PROFILE_UPDATE_START",
                         userId: c
                     });
                     let n = await i.default.patch({
-                        url: null != t ? d.Endpoints.GUILD_PROFILE(t, d.ME) : d.Endpoints.USER_PROFILE(d.ME),
+                        url: null != t ? s.Endpoints.GUILD_PROFILE(t, s.ME) : s.Endpoints.USER_PROFILE(s.ME),
                         body: e
                     });
                     if (n.ok) {
-                        let e = null === (s = n.body.profile_effect) || void 0 === s ? void 0 : s.id;
-                        r.default.dispatch({
+                        let e = null === (d = n.body.profile_effect) || void 0 === d ? void 0 : d.id;
+                        l.default.dispatch({
                             type: "USER_PROFILE_UPDATE_SUCCESS",
                             userId: c,
                             profileEffectId: e,
                             ...n.body
                         })
                     } else {
-                        let e = new l.APIError(n);
-                        r.default.dispatch({
+                        let e = new u.APIError(n);
+                        l.default.dispatch({
                             type: "USER_PROFILE_UPDATE_FAILURE",
                             errors: n.body,
                             apiError: e
@@ -86,8 +86,8 @@
                     }
                     return n
                 } catch (t) {
-                    let e = new l.APIError(t);
-                    r.default.dispatch({
+                    let e = new u.APIError(t);
+                    l.default.dispatch({
                         type: "USER_PROFILE_UPDATE_FAILURE",
                         errors: {},
                         apiError: e
@@ -96,75 +96,75 @@
             }
 
             function _() {
-                r.default.dispatch({
+                l.default.dispatch({
                     type: "USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED"
                 })
             }
 
-            function p() {
-                r.default.dispatch({
+            function S() {
+                l.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES"
                 })
             }
 
-            function S(e) {
-                r.default.dispatch({
+            function T(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER",
                     banner: e
                 })
             }
 
-            function T(e) {
-                r.default.dispatch({
+            function p(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_BIO",
                     bio: e
                 })
             }
 
-            function h(e) {
-                r.default.dispatch({
+            function A(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS",
                     pronouns: e
                 })
             }
 
-            function I(e) {
-                r.default.dispatch({
+            function g(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR",
                     color: e
                 })
             }
 
-            function A(e) {
-                r.default.dispatch({
+            function C(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS",
                     themeColors: e
                 })
             }
 
-            function g(e) {
-                r.default.dispatch({
+            function I(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR",
                     avatar: e
                 }), f(c.AnalyticsPremiumFeatureNames.ANIMATED_AVATAR)
             }
 
             function N(e) {
-                r.default.dispatch({
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION",
                     avatarDecoration: e
                 }), f(c.AnalyticsPremiumFeatureNames.AVATAR_DECORATION)
             }
 
-            function C(e) {
-                r.default.dispatch({
+            function U(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER",
                     banner: e
                 }), f(c.AnalyticsPremiumFeatureNames.PROFILE_BANNER)
             }
 
-            function m(e) {
-                r.default.dispatch({
+            function O(e) {
+                l.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS",
                     themeColors: e
                 }), f(c.AnalyticsPremiumFeatureNames.PROFILE_THEME_COLOR)

@@ -4,36 +4,56 @@
                     return l
                 },
                 unsubscribeMembers: function() {
+                    return r
+                },
+                subscribeToMemberUpdates: function() {
+                    return s
+                },
+                unsubscribeFromMemberUpdates: function() {
                     return u
                 },
                 subscribeChannel: function() {
                     return o
                 },
                 subscribeChannelDimensions: function() {
-                    return a
+                    return d
                 }
             }), n("424973");
-            var r = n("913144"),
-                i = n("696605");
+            var i = n("913144"),
+                a = n("696605");
 
             function l(e, t) {
-                r.default.dispatch({
+                i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
                     guildId: e,
                     userIds: t
                 })
             }
 
-            function u(e, t) {
-                r.default.dispatch({
+            function r(e, t) {
+                i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
                     guildId: e,
                     userIds: t
                 })
             }
 
+            function s(e) {
+                i.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
+            function u(e) {
+                i.default.dispatch({
+                    type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
+                    guildId: e
+                })
+            }
+
             function o(e, t, n) {
-                r.default.dispatch({
+                i.default.dispatch({
                     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
                     guildId: e,
                     channelId: t,
@@ -41,28 +61,28 @@
                 })
             }
 
-            function a(e) {
+            function d(e) {
                 let {
                     guildId: t,
                     channelId: n,
-                    y: r,
+                    y: i,
                     height: l,
-                    rowHeight: u
+                    rowHeight: r
                 } = e;
 
-                function a(e) {
+                function s(e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-                    return Math.max(0, Math.ceil(Math.ceil(e / u)) + t)
+                    return Math.max(0, Math.ceil(Math.ceil(e / r)) + t)
                 }
-                let s = [];
+                let u = [];
 
-                function c(e) {
-                    let t = e + (i.MINIMUM_RANGE - 1);
-                    return s.push([e, t]), t + 1
+                function d(e) {
+                    let t = e + (a.MINIMUM_RANGE - 1);
+                    return u.push([e, t]), t + 1
                 }
-                let d = a(.5 * l),
-                    f = a(r, -d),
-                    E = a(r + l, d);
-                for (f > 0 && (f = Math.max(c(0), f)), f = Math.floor(f / i.MINIMUM_RANGE) * i.MINIMUM_RANGE; f <= E;) f = c(f);
-                o(t, n, s)
+                let c = s(.5 * l),
+                    E = s(i, -c),
+                    _ = s(i + l, c);
+                for (E > 0 && (E = Math.max(d(0), E)), E = Math.floor(E / a.MINIMUM_RANGE) * a.MINIMUM_RANGE; E <= _;) E = d(E);
+                o(t, n, u)
             }

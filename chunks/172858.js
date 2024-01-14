@@ -16,7 +16,7 @@
                     return i
                 },
                 COMMON_CONFETTI_ENVIRONMENT: function() {
-                    return d
+                    return u
                 }
             });
             var a = A("516555"),
@@ -53,4 +53,4 @@
                         maxValue: o
                     }
                 },
-                d = new a.Environment
+                u = new a.Environment

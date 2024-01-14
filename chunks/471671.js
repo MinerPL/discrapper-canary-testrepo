@@ -5,8 +5,8 @@
                 }
             }), n("222007");
             var i = n("627445"),
-                r = n.n(i),
-                l = n("446674"),
+                l = n.n(i),
+                r = n("446674"),
                 o = n("913144"),
                 a = n("816454");
             let u = new Map;
@@ -22,7 +22,7 @@
                     }
                 }) : t
             }
-            class d extends l.default.Store {
+            class c extends r.default.Store {
                 isFocused() {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.getMainWindowId)();
                     return s(e).focused
@@ -42,15 +42,15 @@
                     return s(e).windowSize
                 }
             }
-            d.displayName = "WindowStore";
-            let c = new d(o.default, {
+            c.displayName = "WindowStore";
+            let d = new c(o.default, {
                 WINDOW_INIT: function(e) {
-                    r(!u.has(e.windowId), "Window initialized multiple times");
+                    l(!u.has(e.windowId), "Window initialized multiple times");
                     let {
                         width: t,
                         height: n,
                         isElementFullscreen: i,
-                        focused: l
+                        focused: r
                     } = e;
                     return u.set(e.windowId, {
                         windowSize: {
@@ -58,7 +58,7 @@
                             height: n
                         },
                         isElementFullscreen: i,
-                        focused: l
+                        focused: r
                     }), !0
                 },
                 WINDOW_FULLSCREEN_CHANGE: function(e) {
@@ -94,7 +94,7 @@
                     addExtraAnalyticsDecorator: t
                 } = e;
                 t(e => {
-                    e.client_app_state = c.isFocused() ? "focused" : "unfocused"
+                    e.client_app_state = d.isFocused() ? "focused" : "unfocused"
                 })
             });
-            var f = c
+            var f = d

@@ -1,99 +1,99 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 fetchVideoFilterAssets: function() {
                     return _
                 },
                 uploadVideoFilterAsset: function() {
-                    return f
+                    return c
                 },
                 deleteVideoFilterAsset: function() {
-                    return E
+                    return g
                 },
                 saveLastUsedBackgroundOption: function() {
-                    return p
+                    return m
                 },
                 applyMediaFilterSettings: function() {
-                    return A
+                    return h
                 },
                 startApplyMediaFilterSettings: function() {
-                    return O
+                    return v
                 },
                 errorApplyingMediaFilterSettings: function() {
-                    return g
+                    return E
                 }
             });
-            var i = n("872717"),
-                u = n("913144"),
+            var s = n("872717"),
+                i = n("913144"),
                 r = n("872173"),
-                o = n("42887"),
-                a = n("697218"),
-                s = n("659558"),
-                d = n("239448"),
+                a = n("42887"),
+                o = n("697218"),
+                d = n("659558"),
+                u = n("239448"),
                 l = n("284231"),
-                c = n("49111");
+                f = n("49111");
             async function _() {
-                let t = await i.default.get(c.Endpoints.VIDEO_FILTER_ASSETS);
-                return u.default.dispatch({
+                let e = await s.default.get(f.Endpoints.VIDEO_FILTER_ASSETS);
+                return i.default.dispatch({
                     type: "VIDEO_FILTER_ASSETS_FETCH_SUCCESS",
-                    assets: t.body
-                }), t
+                    assets: e.body
+                }), e
             }
-            async function f(t, e, n) {
+            async function c(e, t, n) {
                 try {
-                    let r = await i.default.post({
-                        url: c.Endpoints.VIDEO_FILTER_ASSETS,
+                    let r = await s.default.post({
+                        url: f.Endpoints.VIDEO_FILTER_ASSETS,
                         body: {
-                            type: e,
-                            asset: t,
+                            type: t,
+                            asset: e,
                             last_used: null == n ? void 0 : n.toISOString()
                         }
                     });
-                    return u.default.dispatch({
+                    return i.default.dispatch({
                         type: "VIDEO_FILTER_ASSET_UPLOAD_SUCCESS",
                         videoFilterAsset: r.body
                     }), r.body
-                } catch (t) {
-                    throw new l.default(t)
+                } catch (e) {
+                    throw new l.default(e)
                 }
             }
-            async function E(t) {
-                await i.default.delete(c.Endpoints.VIDEO_FILTER_ASSET(t.id));
-                let e = (0, s.getLastUsedVideoBackgroundOption)(a.default.getCurrentUser());
-                (0, d.isCustomBackgroundOption)(e) && e.id === t.id && p(null), u.default.dispatch({
+            async function g(e) {
+                await s.default.delete(f.Endpoints.VIDEO_FILTER_ASSET(e.id));
+                let t = (0, d.getLastUsedVideoBackgroundOption)(o.default.getCurrentUser());
+                (0, u.isCustomBackgroundOption)(t) && t.id === e.id && m(null), i.default.dispatch({
                     type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS",
-                    videoFilterAsset: t
+                    videoFilterAsset: e
                 })
             }
-            async function p(t) {
-                if (await r.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", e => {
-                        e.videoBackgroundFilterDesktop = (0, d.getVideoBackgroundProtoFromOption)(t)
-                    }, r.UserSettingsDelay.FREQUENT_USER_ACTION), (0, d.isCustomBackgroundOption)(t)) {
-                    let e = await i.default.post(c.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(t.id));
-                    u.default.dispatch({
+            async function m(e) {
+                if (await r.PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", t => {
+                        t.videoBackgroundFilterDesktop = (0, u.getVideoBackgroundProtoFromOption)(e)
+                    }, r.UserSettingsDelay.FREQUENT_USER_ACTION), (0, u.isCustomBackgroundOption)(e)) {
+                    let t = await s.default.post(f.Endpoints.VIDEO_FILTER_ASSET_LAST_USED(e.id));
+                    i.default.dispatch({
                         type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
-                        backgroundOption: e.body
+                        backgroundOption: t.body
                     })
-                } else u.default.dispatch({
+                } else i.default.dispatch({
                     type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION",
-                    backgroundOption: t
+                    backgroundOption: e
                 })
             }
 
-            function A(t) {
-                o.default.isSupported() && u.default.dispatch({
+            function h(e) {
+                a.default.isSupported() && i.default.dispatch({
                     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS",
-                    settings: t
+                    settings: e
                 })
             }
 
-            function O() {
-                o.default.isSupported() && u.default.dispatch({
+            function v() {
+                a.default.isSupported() && i.default.dispatch({
                     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START"
                 })
             }
 
-            function g() {
-                u.default.dispatch({
+            function E() {
+                i.default.dispatch({
                     type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR"
                 })
             }

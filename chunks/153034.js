@@ -23,8 +23,8 @@
                 S = n("145131"),
                 N = n("953109"),
                 A = n("280174"),
-                m = n("158352"),
-                p = n("867544"),
+                p = n("158352"),
+                m = n("867544"),
                 g = n("216422"),
                 R = n("688342"),
                 O = n("599110"),
@@ -130,7 +130,7 @@
                                 children: [(0, a.jsx)(G, {
                                     flag: P.LibraryApplicationFlags.PRIVATE,
                                     item: e,
-                                    icon: p.default,
+                                    icon: m.default,
                                     tooltip: D.default.Messages.GAME_LIBRARY_PRIVATE_TOOLTIP
                                 }), (0, a.jsx)(G, {
                                     flag: P.LibraryApplicationFlags.OVERLAY_DISABLED,
@@ -316,7 +316,7 @@
                         highlightedApplicationKey: o
                     } = this.state;
                     return (0, a.jsxs)(s.Fragment, {
-                        children: [n.length > 0 ? (0, a.jsx)(m.default, {
+                        children: [n.length > 0 ? (0, a.jsx)(p.default, {
                             columns: j,
                             data: n,
                             sortData: !1,

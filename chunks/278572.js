@@ -23,8 +23,8 @@
                 S = n("648911"),
                 N = n("999180"),
                 A = n("289180"),
-                m = n("19065"),
-                p = n("981913"),
+                p = n("19065"),
+                m = n("981913"),
                 g = n("742683"),
                 R = n("116439"),
                 O = n("42887"),
@@ -93,7 +93,7 @@
                 } = (0, N.default)(), o = (0, A.default)(n);
                 return (0, a.jsxs)("div", {
                     className: j.actions,
-                    children: [(0, a.jsx)(p.CenterControlButton, {
+                    children: [(0, a.jsx)(m.CenterControlButton, {
                         iconComponent: M.default,
                         color: "red",
                         className: j.actionButton,
@@ -128,7 +128,7 @@
                                 onPopoutClick: s > 1 ? l : null,
                                 className: j.actionButton,
                                 popoutOpen: u,
-                                onCameraUnavailable: m.default,
+                                onCameraUnavailable: p.default,
                                 onChange: () => {
                                     E.default.selectVoiceChannel(n.id, !0), (0, C.transitionToGuild)(b.ME, n.id)
                                 }
@@ -150,7 +150,7 @@
                     y: n,
                     x: i,
                     channel: E
-                } = e, [C, T] = s.useState(!1), I = (0, _.getChannelIconURL)(E), S = (0, h.default)(E), [N, A] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), m = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), p = (0, o.useStateFromStores)([y.default], () => y.default.getMode(E.id)), g = s.useCallback(e => {
+                } = e, [C, T] = s.useState(!1), I = (0, _.getChannelIconURL)(E), S = (0, h.default)(E), [N, A] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.supports(U.Features.VIDEO), Object.keys(O.default.getVideoDevices()).length]), p = (0, o.useStateFromStores)([v.default], () => v.default.isFocused()), m = (0, o.useStateFromStores)([y.default], () => y.default.getMode(E.id)), g = s.useCallback(e => {
                     null != e.top && null != e.left && c.default.move(e.left, e.top)
                 }, []), R = (0, r.useSpring)({
                     value: C ? 1 : 0,
@@ -165,11 +165,11 @@
                     };
                     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
                 }, [E]);
-                let L = p === b.ChannelModes.VIDEO && N && A > 0,
+                let L = m === b.ChannelModes.VIDEO && N && A > 0,
                     M = (0, a.jsxs)(a.Fragment, {
                         children: [(0, a.jsx)(P.default, {
                             className: j.icon,
-                            ringing: m,
+                            ringing: p,
                             src: null != I ? I : "",
                             ringingType: P.default.RingingType.INCOMING,
                             size: C ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80
@@ -184,7 +184,7 @@
                                 color: "header-secondary",
                                 className: j.subtitle,
                                 variant: C ? "text-sm/normal" : "text-md/normal",
-                                children: p === b.ChannelModes.VOICE ? G.default.Messages.INCOMING_CALL_ELLIPSIS : G.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
+                                children: m === b.ChannelModes.VOICE ? G.default.Messages.INCOMING_CALL_ELLIPSIS : G.default.Messages.INCOMING_VIDEO_CALL_ELLIPSIS
                             })]
                         })]
                     }),

@@ -1,84 +1,84 @@
             "use strict";
             n.r(t), n.d(t, {
                 accountDetailsInit: function() {
-                    return p
-                },
-                accountDetailsClose: function() {
                     return S
                 },
-                disableAccount: function() {
+                accountDetailsClose: function() {
                     return T
                 },
+                disableAccount: function() {
+                    return p
+                },
                 saveAccountRequest: function() {
-                    return h
-                },
-                saveAccountChanges: function() {
-                    return I
-                },
-                getHarvestStatus: function() {
                     return A
                 },
-                requestHarvest: function() {
+                saveAccountChanges: function() {
                     return g
+                },
+                getHarvestStatus: function() {
+                    return C
+                },
+                requestHarvest: function() {
+                    return I
                 },
                 setPendingAvatar: function() {
                     return N
                 },
                 setPendingGlobalNameName: function() {
-                    return C
+                    return U
                 },
                 setPendingAvatarDecoration: function() {
-                    return m
+                    return O
                 },
                 setPendingProfileEffectId: function() {
-                    return v
+                    return h
                 },
                 clearErrors: function() {
                     return R
                 },
                 resetPendingAccountChanges: function() {
-                    return O
+                    return v
                 },
                 resetAllPending: function() {
-                    return U
+                    return m
                 },
                 resetAndCloseUserProfileForm: function() {
-                    return y
+                    return P
                 },
                 setDisableSubmit: function() {
-                    return D
+                    return y
                 }
             });
             var i = n("872717"),
-                r = n("95410"),
-                l = n("819855"),
+                l = n("95410"),
+                u = n("819855"),
                 o = n("913144"),
                 a = n("393414"),
-                u = n("599110"),
-                s = n("315102"),
-                d = n("730622"),
+                r = n("599110"),
+                d = n("315102"),
+                s = n("730622"),
                 c = n("437822"),
                 f = n("49111"),
                 E = n("191349"),
                 _ = n("782340");
 
-            function p() {
+            function S() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_INIT"
                 })
             }
 
-            function S() {
+            function T() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_CLOSE"
                 })
             }
 
-            function T(e, t) {
+            function p(e, t) {
                 let n = t ? _.default.Messages.DELETE_ACCOUNT : _.default.Messages.DISABLE_ACCOUNT,
-                    r = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
-                return (0, d.default)(t => i.default.post({
-                    url: r,
+                    l = t ? f.Endpoints.DELETE_ACCOUNT : f.Endpoints.DISABLE_ACCOUNT;
+                return (0, s.default)(t => i.default.post({
+                    url: l,
                     body: {
                         password: e,
                         ...t
@@ -93,7 +93,7 @@
                     c.default.logoutInternal(), (0, a.transitionTo)(f.Routes.DEFAULT_LOGGED_OUT)
                 })
             }
-            async function h(e) {
+            async function A(e) {
                 let t = await i.default.patch({
                         url: f.Endpoints.ME,
                         oldFormErrors: !0,
@@ -117,38 +117,38 @@
                 }), t
             }
 
-            function I(e) {
+            function g(e) {
                 let {
                     username: t,
                     discriminator: n,
                     email: i,
-                    emailToken: l,
+                    emailToken: u,
                     password: a,
                     avatar: c,
-                    avatarDecoration: p,
-                    newPassword: S,
-                    globalName: T
+                    avatarDecoration: S,
+                    newPassword: T,
+                    globalName: p
                 } = e;
                 return o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SUBMIT"
-                }), (0, d.default)(e => {
+                }), (0, s.default)(e => {
                     let o = {
                         username: t,
                         email: i,
-                        email_token: l,
+                        email_token: u,
                         password: a,
                         avatar: c,
                         discriminator: n,
-                        global_name: T,
-                        new_password: S,
+                        global_name: p,
+                        new_password: T,
                         ...e
                     };
-                    null === p && (o.avatar_decoration_id = null), null != p && (o.avatar_decoration_id = p.id, o.avatar_decoration_sku_id = p.skuId);
-                    let u = r.default.get(f.DEVICE_TOKEN),
-                        s = (0, E.getDevicePushProvider)();
-                    null != s && null != u && (o.push_provider = s, o.push_token = u);
-                    let d = r.default.get(f.DEVICE_VOIP_TOKEN);
-                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != d && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = d), h(o)
+                    null === S && (o.avatar_decoration_id = null), null != S && (o.avatar_decoration_id = S.id, o.avatar_decoration_sku_id = S.skuId);
+                    let r = l.default.get(f.DEVICE_TOKEN),
+                        d = (0, E.getDevicePushProvider)();
+                    null != d && null != r && (o.push_provider = d, o.push_token = r);
+                    let s = l.default.get(f.DEVICE_VOIP_TOKEN);
+                    return null != E.DEVICE_PUSH_VOIP_PROVIDER && null != s && (o.push_voip_provider = E.DEVICE_PUSH_VOIP_PROVIDER, o.push_voip_token = s), A(o)
                 }, {
                     checkEnabled: !1,
                     modalProps: {
@@ -162,8 +162,8 @@
                     }
                 }).then(e => {
                     let t = e.body;
-                    return u.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
-                        animated: (0, s.isAnimatedIconHash)(t.avatar)
+                    return r.default.track(f.AnalyticEvents.USER_AVATAR_UPDATED, {
+                        animated: (0, d.isAnimatedIconHash)(t.avatar)
                     }), o.default.dispatch({
                         type: "USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS"
                     }), e
@@ -173,14 +173,14 @@
                 }), e))
             }
 
-            function A() {
+            function C() {
                 return i.default.get({
                     url: f.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
                 })
             }
 
-            function g() {
+            function I() {
                 return i.default.post({
                     url: f.Endpoints.USER_HARVEST,
                     oldFormErrors: !0
@@ -191,24 +191,24 @@
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR",
                     avatar: e
-                }), null == e ? l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : l.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
+                }), null == e ? u.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_NONE) : u.AccessibilityAnnouncer.announce(_.default.Messages.A11Y_ANNOUNCEMENT_AVATAR_CHANGED)
             }
 
-            function C(e) {
+            function U(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME",
                     globalName: e
                 })
             }
 
-            function m(e) {
+            function O(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION",
                     avatarDecoration: e
                 })
             }
 
-            function v(e) {
+            function h(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID",
                     profileEffectId: e
@@ -221,25 +221,25 @@
                 })
             }
 
-            function O() {
+            function v() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES"
                 })
             }
 
-            function U() {
+            function m() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_RESET_ALL_PENDING"
                 })
             }
 
-            function y() {
+            function P() {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM"
                 })
             }
 
-            function D(e) {
+            function y(e) {
                 o.default.dispatch({
                     type: "USER_SETTINGS_ACCOUNT_SET_DISABLE_SUBMIT",
                     disable: e

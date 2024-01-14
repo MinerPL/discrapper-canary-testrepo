@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 initSessionHeartbeatScheduler: function() {
-                    return m
+                    return p
                 }
             }), n("70102");
             var a = n("976255"),
@@ -81,13 +81,13 @@
                 }), (0, a.setSessionExtendingEnabled)(!1), T())
             }
 
-            function m() {
+            function p() {
                 u.default.addBreadcrumb({
                     message: "Initializing SessionHeartbeatScheduler"
-                }), l.default.addChangeListener(g), i.default.subscribe("WINDOW_FOCUS", R), i.default.subscribe("APP_STATE_UPDATE", O), i.default.subscribe("LOGIN_SUCCESS", p), A()
+                }), l.default.addChangeListener(g), i.default.subscribe("WINDOW_FOCUS", R), i.default.subscribe("APP_STATE_UPDATE", O), i.default.subscribe("LOGIN_SUCCESS", m), A()
             }
 
-            function p() {
+            function m() {
                 I()
             }
 

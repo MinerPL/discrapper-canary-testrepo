@@ -1,67 +1,67 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return E
+                    return g
                 }
             });
-            var i = n("917219"),
-                u = n("533613"),
+            var s = n("917219"),
+                i = n("533613"),
                 r = n("782340"),
-                o = n("27562"),
-                a = n("851703"),
-                s = n("902577"),
-                d = n("351288"),
+                a = n("27562"),
+                o = n("851703"),
+                d = n("902577"),
+                u = n("351288"),
                 l = n("595726"),
-                c = n("462641"),
+                f = n("462641"),
                 _ = n("95937"),
-                f = n("929461"),
-                E = () => ({
-                    [i.DefaultVideoBackground.OPTION_1]: {
-                        id: i.DefaultVideoBackground.OPTION_1,
-                        source: s,
+                c = n("929461"),
+                g = () => ({
+                    [s.DefaultVideoBackground.OPTION_1]: {
+                        id: s.DefaultVideoBackground.OPTION_1,
+                        source: d,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_1
                     },
-                    [i.DefaultVideoBackground.OPTION_2]: {
-                        id: i.DefaultVideoBackground.OPTION_2,
+                    [s.DefaultVideoBackground.OPTION_2]: {
+                        id: s.DefaultVideoBackground.OPTION_2,
                         source: l,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_2
                     },
-                    [i.DefaultVideoBackground.OPTION_3]: {
-                        id: i.DefaultVideoBackground.OPTION_3,
-                        source: c,
+                    [s.DefaultVideoBackground.OPTION_3]: {
+                        id: s.DefaultVideoBackground.OPTION_3,
+                        source: f,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_3
                     },
-                    [i.DefaultVideoBackground.OPTION_4]: {
-                        id: i.DefaultVideoBackground.OPTION_4,
+                    [s.DefaultVideoBackground.OPTION_4]: {
+                        id: s.DefaultVideoBackground.OPTION_4,
                         source: _,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_4
                     },
-                    [i.DefaultVideoBackground.OPTION_7]: {
-                        id: i.DefaultVideoBackground.OPTION_7,
-                        source: o,
+                    [s.DefaultVideoBackground.OPTION_7]: {
+                        id: s.DefaultVideoBackground.OPTION_7,
+                        source: a,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_7,
                         isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW
+                        hotspotLocation: i.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_DAY_NEW
                     },
-                    [i.DefaultVideoBackground.OPTION_8]: {
-                        id: i.DefaultVideoBackground.OPTION_8,
-                        source: a,
+                    [s.DefaultVideoBackground.OPTION_8]: {
+                        id: s.DefaultVideoBackground.OPTION_8,
+                        source: o,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_8,
                         isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW
+                        hotspotLocation: i.HotspotLocations.ANIMATED_VIDEO_BG_CAPERNITE_NIGHT_NEW
                     },
-                    [i.DefaultVideoBackground.OPTION_9]: {
-                        id: i.DefaultVideoBackground.OPTION_9,
-                        source: d,
+                    [s.DefaultVideoBackground.OPTION_9]: {
+                        id: s.DefaultVideoBackground.OPTION_9,
+                        source: u,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_9,
                         isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_HACKER_DEN_NEW
+                        hotspotLocation: i.HotspotLocations.ANIMATED_VIDEO_BG_HACKER_DEN_NEW
                     },
-                    [i.DefaultVideoBackground.OPTION_10]: {
-                        id: i.DefaultVideoBackground.OPTION_10,
-                        source: f,
+                    [s.DefaultVideoBackground.OPTION_10]: {
+                        id: s.DefaultVideoBackground.OPTION_10,
+                        source: c,
                         name: r.default.Messages.VIDEO_BACKGROUND_DEFAULT_BACKGROUND_NAME_10,
                         isVideo: !0,
-                        hotspotLocation: u.HotspotLocations.ANIMATED_VIDEO_BG_WUMPICE_NEW
+                        hotspotLocation: i.HotspotLocations.ANIMATED_VIDEO_BG_WUMPICE_NEW
                     }
                 })

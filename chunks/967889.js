@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return D
+                    return y
                 }
             }), n("222007");
             var a = n("37983"),
@@ -128,4 +128,4 @@
                     }, this.discordErrorsSet = !1
                 }
             }
-            var D = N
+            var y = N

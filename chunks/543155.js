@@ -219,12 +219,12 @@
                             })) return;
                         T = !0;
                         let {
-                            clientWidth: m,
-                            clientHeight: p
+                            clientWidth: p,
+                            clientHeight: m
                         } = a, g = n - this._offsetY, R = t - this._offsetX, O = C(f({
                             top: g,
                             left: R
-                        }, s, i, m, p));
+                        }, s, i, p, m));
                         if (c) {
                             O = h(O);
                             let e = _(O);
@@ -233,7 +233,7 @@
                             top: O.top,
                             left: O.left
                         };
-                        2 === r && N !== this.state.horizontalOrientation && (this._offsetX = m - this._offsetX, A = !0), 2 === l && S !== this.state.verticalOrientation && (this._offsetY = p - this._offsetY, A = !0), this.setDOMPositions(O), !I && (null == o || o(O, a)), null == u || u(O, a), A && (null == d || d([S, N])), this.setState({
+                        2 === r && N !== this.state.horizontalOrientation && (this._offsetX = p - this._offsetX, A = !0), 2 === l && S !== this.state.verticalOrientation && (this._offsetY = m - this._offsetY, A = !0), this.setDOMPositions(O), !I && (null == o || o(O, a)), null == u || u(O, a), A && (null == d || d([S, N])), this.setState({
                             dragging: T,
                             verticalOrientation: S,
                             horizontalOrientation: N,

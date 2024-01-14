@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             });
             var a = n("37983"),
@@ -23,10 +23,10 @@
                 S = n("49111"),
                 N = n("724210"),
                 A = n("782340"),
-                m = n("17629");
+                p = n("17629");
 
-            function p(e) {
-                var t, p;
+            function m(e) {
+                var t, m;
                 let {
                     onDismiss: g
                 } = e, R = (0, i.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, i.useStateFromStores)([d.default], () => null != R ? d.default.getChannelId(R) : null, [R]), L = null != R ? R : null, v = (0, i.useStateFromStores)([u.default], () => null != L ? u.default.getGuild(L) : null, [L]), {
@@ -58,23 +58,23 @@
                         })
                     },
                     U = (0, a.jsx)(E.default, {
-                        className: m.guildIcon,
+                        className: p.guildIcon,
                         guild: v,
                         size: E.default.Sizes.MINI
                     }),
                     G = (0, I.getSecurityActionDetailsString)(P, v.name),
-                    j = null !== (p = P.dmsDisabledUntil) && void 0 !== p ? p : P.invitesDisabledUntil;
+                    j = null !== (m = P.dmsDisabledUntil) && void 0 !== m ? m : P.invitesDisabledUntil;
                 if (null != j && D) return (0, a.jsxs)(_.default, {
-                    className: m.notice,
+                    className: p.notice,
                     color: _.NoticeColors.NEUTRAL,
                     children: [(0, a.jsx)(_.NoticeCloseButton, {
                         onClick: g,
                         noticeType: S.NoticeTypes.GUILD_RAID_NOTIFICATION
                     }), U, G, (0, a.jsx)(_.NoticeButton, {
-                        className: m.actionButton,
+                        className: p.actionButton,
                         onClick: () => b(!1),
                         children: (0, a.jsxs)("div", {
-                            className: m.actionButtonInner,
+                            className: p.actionButtonInner,
                             children: [(0, a.jsx)(f.default, {
                                 width: 16,
                                 height: 16
@@ -93,16 +93,16 @@
                     }),
                     w = y && O === N.StaticChannelRoute.MEMBER_SAFETY;
                 return (0, a.jsxs)(_.default, {
-                    className: m.notice,
+                    className: p.notice,
                     color: _.NoticeColors.WARNING,
                     children: [(0, a.jsx)(_.NoticeCloseButton, {
                         onClick: g,
                         noticeType: S.NoticeTypes.GUILD_RAID_NOTIFICATION
                     }), U, k, !w && (0, a.jsx)(_.NoticeButton, {
-                        className: m.actionButton,
+                        className: p.actionButton,
                         onClick: () => b(!0),
                         children: (0, a.jsx)("div", {
-                            className: m.actionButtonInner,
+                            className: p.actionButtonInner,
                             children: (0, a.jsx)("span", {
                                 children: A.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
                             })

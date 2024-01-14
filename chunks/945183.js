@@ -23,8 +23,8 @@
                 S = n("42887"),
                 N = n("385649"),
                 A = n("945956"),
-                m = n("18494"),
-                p = n("280168"),
+                p = n("18494"),
+                m = n("280168"),
                 g = n("800762"),
                 R = n("316133"),
                 O = n("449008"),
@@ -44,8 +44,8 @@
             }
 
             function P() {
-                return M([S.default, m.default], () => ({
-                    inVoiceChannel: null != m.default.getVoiceChannelId(),
+                return M([S.default, p.default], () => ({
+                    inVoiceChannel: null != p.default.getVoiceChannelId(),
                     selfMute: S.default.isSelfMute(),
                     selfDeaf: S.default.isSelfDeaf(),
                     audioPermissionReady: S.default.isNativeAudioPermissionReady()
@@ -61,8 +61,8 @@
             }
 
             function D() {
-                return M([T.default, A.default, m.default, d.default], () => {
-                    let e = T.default.getChannel(m.default.getVoiceChannelId()),
+                return M([T.default, A.default, p.default, d.default], () => {
+                    let e = T.default.getChannel(p.default.getVoiceChannelId()),
                         t = null == e ? void 0 : e.type,
                         n = null == e ? void 0 : e.getGuildId(),
                         a = A.default.getWasEverRtcConnected(),
@@ -95,7 +95,7 @@
             }
 
             function y() {
-                return M([p.default], () => p.default.isCurrentUserSpeaking(), (e, t) => {
+                return M([m.default], () => m.default.isCurrentUserSpeaking(), (e, t) => {
                     if (e !== t) {
                         let e = S.default.isSelfMute(),
                             n = S.default.getMode();
@@ -121,8 +121,8 @@
             }
 
             function U() {
-                return M([m.default, g.default], () => {
-                    let e = m.default.getVoiceChannelId();
+                return M([p.default, g.default], () => {
+                    let e = p.default.getVoiceChannelId();
                     if (null == e) return f.RequestToSpeakStates.NONE;
                     let t = g.default.getVoiceStateForChannel(e);
                     return (0, f.getAudienceRequestToSpeakState)(t)
@@ -132,9 +132,9 @@
             }
 
             function G() {
-                return M([m.default, h.default, C.default, g.default, T.default], () => {
+                return M([p.default, h.default, C.default, g.default, T.default], () => {
                     let e, t;
-                    let n = m.default.getVoiceChannelId(),
+                    let n = p.default.getVoiceChannelId(),
                         a = C.default.getId();
                     let s = [],
                         i = null,
@@ -187,8 +187,8 @@
             }
 
             function j() {
-                return M([m.default, u.default, C.default], () => {
-                    let e = m.default.getVoiceChannelId(),
+                return M([p.default, u.default, C.default], () => {
+                    let e = p.default.getVoiceChannelId(),
                         t = C.default.getId(),
                         n = (0, O.isNotNullish)(e) ? u.default.getEmbeddedActivitiesForChannel(e) : u.NO_ACTIVITIES;
                     return {
@@ -211,19 +211,19 @@
                         autoTrackExposure: !1
                     }), r = !1;
                     e.channelActivities.length < i.length && (n = "activity_launch", r = !0);
-                    let u = e.channelActivities.find(e => e.connections.has(s)),
-                        d = i.find(e => e.connections.has(s));
-                    if (void 0 === d && (0, O.isNotNullish)(u) && (n = "activity_end", r = !0), void 0 === u && (0, O.isNotNullish)(d) && d.connections.size > 1 && (n = "activity_user_join", r = !0), (0, O.isNotNullish)(d) && (0, O.isNotNullish)(u) && (d.connections.size > u.connections.size && (n = "activity_user_join", r = !0), d.connections.size < u.connections.size && (n = "activity_user_left", r = !0)), r && o.ActivitiesSoundsExperiment.trackExposure({
+                    let u = e.channelActivities.find(e => e.userIds.has(s)),
+                        d = i.find(e => e.userIds.has(s));
+                    if (void 0 === d && (0, O.isNotNullish)(u) && (n = "activity_end", r = !0), void 0 === u && (0, O.isNotNullish)(d) && d.userIds.size > 1 && (n = "activity_user_join", r = !0), (0, O.isNotNullish)(d) && (0, O.isNotNullish)(u) && (d.userIds.size > u.userIds.size && (n = "activity_user_join", r = !0), d.userIds.size < u.userIds.size && (n = "activity_user_left", r = !0)), r && o.ActivitiesSoundsExperiment.trackExposure({
                             location: "5ef733_2"
                         }), l) return n
                 }), null
             }
 
             function k() {
-                return M([E.default, m.default], () => ({
+                return M([E.default, p.default], () => ({
                     hangStatus: E.default.getCurrentHangStatus(),
                     customHangStatus: E.default.getCustomHangStatus(),
-                    inVoice: null != m.default.getVoiceChannelId()
+                    inVoice: null != p.default.getVoiceChannelId()
                 }), (e, t) => {
                     var n, a;
                     let {

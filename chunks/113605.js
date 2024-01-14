@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 extractDisplayName: function() {
-                    return m
+                    return p
                 },
                 default: function() {
                     return R
@@ -33,7 +33,7 @@
                 },
                 A = /\(([^)]+)\)/;
 
-            function m(e) {
+            function p(e) {
                 if ((0, u.getPlatform)() === u.PlatformTypes.WINDOWS) {
                     let t = e.name.match(A);
                     if (null != t) return t[1]
@@ -41,7 +41,7 @@
                 return e.name
             }
 
-            function p(e, t, n) {
+            function m(e, t, n) {
                 return null == e || e.displayName !== t ? {
                     displayName: t,
                     type: n
@@ -84,7 +84,7 @@
                         outputDevices: n
                     } = e, a = {};
                     S.justChanged = !1, t.forEach(e => {
-                        if (a[m(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
+                        if (a[p(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
                             var t;
                             let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                             n !== S.id && (S.justChanged = !0), S.id = n
@@ -92,7 +92,7 @@
                     });
                     let i = {};
                     if (N.justChanged = !1, n.forEach(e => {
-                            if (i[m(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
+                            if (i[p(e)] = e.id, e.id === E.DEFAULT_DEVICE_ID) {
                                 var t;
                                 let n = null !== (t = e.originalId) && void 0 !== t ? t : e.originalName;
                                 n !== N.id && (N.justChanged = !0), N.id = n
@@ -111,11 +111,11 @@
                     else {
                         let e = s.difference(r, l);
                         e.forEach(e => {
-                            I[e] = p(I[e], e, c.ConnectedDeviceType.INPUT)
+                            I[e] = m(I[e], e, c.ConnectedDeviceType.INPUT)
                         });
                         let t = s.difference(u, o);
                         t.forEach(e => {
-                            I[e] = p(I[e], e, c.ConnectedDeviceType.OUTPUT)
+                            I[e] = m(I[e], e, c.ConnectedDeviceType.OUTPUT)
                         })
                     }
                     return !(s.isEqual(l, r) && s.isEqual(o, u)) && (C = a, T = i, !0)

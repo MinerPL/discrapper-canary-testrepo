@@ -36,15 +36,15 @@
                     theme: S,
                     onViewGuild: N,
                     fetchGuilds: A,
-                    onGuildCardSeen: m,
-                    currentCategoryId: p,
+                    onGuildCardSeen: p,
+                    currentCategoryId: m,
                     loadId: g,
                     onTagClick: R,
                     showMoreCards: O = !1
                 } = e;
                 s.useEffect(() => {
                     l.default.wait(() => A())
-                }, [p]);
+                }, [m]);
                 let L = (0, c.default)(O ? h : _),
                     {
                         analyticsLocations: v
@@ -80,7 +80,7 @@
                     guild: e,
                     onView: y,
                     theme: S,
-                    onGuildCardSeen: m,
+                    onGuildCardSeen: p,
                     onTagClick: R
                 }, e.id));
                 return (0, a.jsx)("section", {

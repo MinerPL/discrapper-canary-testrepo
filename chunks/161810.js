@@ -21,9 +21,9 @@
                 S = h.FormStates.CLOSED,
                 N = {},
                 A = !1,
-                m = null;
+                p = null;
 
-            function p() {
+            function m() {
                 if (a = null != (s = c.default.getChannel()) ? E.default.getGuild(s.guild_id) : null, C = null != s && null != a && f.default.can(h.Permissions.MANAGE_WEBHOOKS, s) ? _.default.getWebhooksForChannel(a.id, s.id) : [], null != T) {
                     let e = R(T.id);
                     null != e && (T = e)
@@ -70,7 +70,7 @@
                         webhooks: C,
                         editedWebhook: T,
                         section: i,
-                        sectionId: m,
+                        sectionId: p,
                         hasChanges: this.hasChanges(),
                         isFetching: I,
                         errors: N
@@ -79,8 +79,8 @@
             }
             O.displayName = "ChannelSettingsIntegrationsStore";
             let L = new O(u.default, __OVERLAY__ ? {} : {
-                INTEGRATION_SETTINGS_INIT: p,
-                INTEGRATION_SETTINGS_SAVE_SUCCESS: p,
+                INTEGRATION_SETTINGS_INIT: m,
+                INTEGRATION_SETTINGS_SAVE_SUCCESS: m,
                 CHANNEL_SETTINGS_SET_SECTION: function(e) {
                     let {
                         section: t
@@ -89,7 +89,7 @@
                     if (i = h.IntegrationSettingsSections.OVERVIEW, null == a) {
                         let e = c.default.getChannel(),
                             t = null == e ? void 0 : e.getGuildId();
-                        null != e && null != t && (d.default.fetchForChannel(t, e.id), I = !0), p()
+                        null != e && null != t && (d.default.fetchForChannel(t, e.id), I = !0), m()
                     }
                 },
                 INTEGRATION_SETTINGS_SET_SECTION: function(e) {
@@ -97,7 +97,7 @@
                         section: t,
                         sectionId: n
                     } = e;
-                    i = t, m = n
+                    i = t, p = n
                 },
                 INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
                     let {

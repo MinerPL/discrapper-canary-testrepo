@@ -4,19 +4,19 @@
                     return g
                 },
                 trackForumSearched: function() {
-                    return A
+                    return m
                 },
                 trackForumSearchCleared: function() {
-                    return m
+                    return A
                 },
                 trackForumTagFilterClicked: function() {
                     return T
                 },
                 trackForumCreateNewPostClick: function() {
-                    return S
+                    return p
                 },
                 trackForumCreateNewPostKeybindUsed: function() {
-                    return p
+                    return S
                 },
                 maybeTrackForumNewPostDraftCreated: function() {
                     return M
@@ -25,10 +25,10 @@
                     return v
                 },
                 trackForumPostCreated: function() {
-                    return C
+                    return N
                 },
                 trackForumScrolled: function() {
-                    return N
+                    return C
                 },
                 trackForumMorePostsLoaded: function() {
                     return O
@@ -40,10 +40,10 @@
                     return I
                 },
                 trackForumLayoutUpdated: function() {
-                    return D
+                    return b
                 },
                 trackForumPostLinkCopied: function() {
-                    return b
+                    return D
                 },
                 trackForumOnboardingClicked: function() {
                     return y
@@ -52,10 +52,10 @@
                     return L
                 },
                 trackForumAddMediaToOriginalPostClicked: function() {
-                    return F
+                    return P
                 },
                 trackForumHelperCardClicked: function() {
-                    return P
+                    return F
                 },
                 trackForumChannelMediaUploaderClicked: function() {
                     return U
@@ -110,7 +110,7 @@
                 })
             }
 
-            function A(e) {
+            function m(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -126,7 +126,7 @@
                 })
             }
 
-            function m(e) {
+            function A(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -162,7 +162,7 @@
                 })
             }
 
-            function S(e) {
+            function p(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -176,7 +176,7 @@
                 })
             }
 
-            function p(e) {
+            function S(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -201,9 +201,9 @@
                     _ = null === (t = o.template) || void 0 === t ? void 0 : t.trim(),
                     f = r.default.getDraft(d, r.DraftType.FirstThreadMessage),
                     g = null == f || 0 === f.length || (null == f ? void 0 : f.trim()) === _,
-                    A = (null == c ? void 0 : c.appliedTags) == null || (null == c ? void 0 : null === (n = c.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
-                    m = (null == c ? void 0 : c.name) == null || (null == c ? void 0 : null === (l = c.name) || void 0 === l ? void 0 : null === (i = l.trim()) || void 0 === i ? void 0 : i.length) === 0;
-                (!g || !A || !m) && a.default.trackWithMetadata(E.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+                    m = (null == c ? void 0 : c.appliedTags) == null || (null == c ? void 0 : null === (n = c.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
+                    A = (null == c ? void 0 : c.name) == null || (null == c ? void 0 : null === (l = c.name) || void 0 === l ? void 0 : null === (i = l.trim()) || void 0 === i ? void 0 : i.length) === 0;
+                (!g || !m || !A) && a.default.trackWithMetadata(E.AnalyticEvents.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
                     ...(0, h.collectForumAnalyticsMetadata)({
                         channelId: d
                     }),
@@ -228,7 +228,7 @@
                 })
             }
 
-            function C(e) {
+            function N(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -251,7 +251,7 @@
                 }) : l()
             }
 
-            function N(e) {
+            function C(e) {
                 let {
                     guildId: t,
                     channelId: n
@@ -326,7 +326,7 @@
                 })
             }
 
-            function D(e) {
+            function b(e) {
                 let {
                     guildId: t,
                     channelId: n,
@@ -342,7 +342,7 @@
                 })
             }
 
-            function b(e) {
+            function D(e) {
                 let {
                     postId: t,
                     location: n
@@ -371,7 +371,7 @@
                 })
             }
 
-            function F(e) {
+            function P(e) {
                 let {
                     added: t
                 } = e;
@@ -380,7 +380,7 @@
                 })
             }
 
-            function P(e) {
+            function F(e) {
                 let {
                     readGuideCta: t
                 } = e;
@@ -411,6 +411,7 @@
                     ...(0, a.collectGuildAnalyticsMetadata)(e.guild_id),
                     ...(0, a.collectChannelAnalyticsMetadata)(e),
                     ...(0, l.collectThreadMetadata)(e, !0),
+                    ...(0, a.getChannelOpenedMetadata)(e.id),
                     channel_id: e.id,
                     guild_id: e.guild_id,
                     parent_id: e.parent_id,

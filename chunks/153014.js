@@ -30,8 +30,8 @@
                 S = n("957255"),
                 N = n("316133"),
                 A = n("660279"),
-                m = n("943232"),
-                p = n("36694"),
+                p = n("943232"),
+                m = n("36694"),
                 g = n("945330"),
                 R = n("272339"),
                 O = n("718550"),
@@ -170,7 +170,7 @@
                     look: s ? o.Button.Looks.OUTLINED : o.Button.Looks.FILLED,
                     color: s ? o.Button.Colors.TRANSPARENT : o.Button.Colors.GREEN,
                     size: o.Button.Sizes.SMALL,
-                    children: [s ? (0, i.jsx)(p.default, {
+                    children: [s ? (0, i.jsx)(m.default, {
                         width: 16,
                         height: 16,
                         className: z.buttonIcon
@@ -235,7 +235,7 @@
                         })]
                     }), (0, i.jsxs)("div", {
                         className: z.textBlock,
-                        children: [(0, i.jsx)(m.default, {
+                        children: [(0, i.jsx)(p.default, {
                             className: z.stageIcon,
                             width: 16,
                             height: 16

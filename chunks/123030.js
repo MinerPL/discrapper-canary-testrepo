@@ -1,87 +1,90 @@
             "use strict";
-            l.r(t), l.d(t, {
+            n.r(t), n.d(t, {
                 default: function() {
-                    return g
+                    return S
                 }
             });
-            var n = l("37983");
-            l("884691");
-            var s = l("414456"),
-                u = l.n(s),
-                i = l("446674"),
-                a = l("77078"),
-                o = l("272030"),
-                r = l("42203"),
-                d = l("305961"),
-                c = l("433487"),
-                E = l("398604"),
-                f = l("397680"),
-                h = l("393745"),
-                C = l("745049"),
-                N = l("782340"),
-                v = l("157624");
+            var l = n("37983");
+            n("884691");
+            var s = n("414456"),
+                u = n.n(s),
+                i = n("446674"),
+                a = n("77078"),
+                o = n("272030"),
+                r = n("42203"),
+                d = n("305961"),
+                c = n("433487"),
+                f = n("398604"),
+                E = n("397680"),
+                h = n("822516"),
+                C = n("393745"),
+                v = n("745049"),
+                N = n("782340"),
+                g = n("157624");
 
-            function g(e) {
+            function S(e) {
                 let {
                     recurrenceId: t,
                     originalScheduledStartTime: s,
-                    guildEventId: g,
-                    onClick: S,
+                    guildEventId: S,
+                    onClick: I,
                     isActive: L
-                } = e, I = (0, i.useStateFromStores)([E.default], () => E.default.getGuildScheduledEvent(g)), _ = (0, f.default)(t, null == I ? void 0 : I.id), m = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(null == I ? void 0 : I.guild_id)), x = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(null == I ? void 0 : I.channel_id));
-                if (null == I) return null;
+                } = e, _ = (0, i.useStateFromStores)([f.default], () => f.default.getGuildScheduledEvent(S)), m = (0, E.default)(t, null == _ ? void 0 : _.id), x = (0, i.useStateFromStores)([d.default], () => d.default.getGuild(null == _ ? void 0 : _.guild_id)), T = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(null == _ ? void 0 : _.channel_id));
+                if (null == _) return null;
                 let {
-                    is_canceled: T = !1
-                } = null != _ ? _ : {}, M = (null == _ ? void 0 : _.scheduled_start_time) != null ? new Date(null == _ ? void 0 : _.scheduled_start_time) : s, p = e => {
-                    e.stopPropagation(), null != m && (0, o.openContextMenuLazy)(e, async () => {
+                    is_canceled: p = !1
+                } = null != m ? m : {}, R = (null == m ? void 0 : m.scheduled_start_time) != null ? new Date(null == m ? void 0 : m.scheduled_start_time) : s, M = (0, h.getNextRecurrenceIdInEvent)(_), B = p ? v.GuildScheduledEventStatus.CANCELED : v.GuildScheduledEventStatus.SCHEDULED;
+                M === t && (B = _.status);
+                let G = e => {
+                    e.stopPropagation(), null != x && (0, o.openContextMenuLazy)(e, async () => {
                         let {
                             default: e
-                        } = await l.el("110374").then(l.bind(l, "110374"));
-                        return l => (0, n.jsx)(e, {
-                            guildEventId: I.id,
+                        } = await n.el("110374").then(n.bind(n, "110374"));
+                        return n => (0, l.jsx)(e, {
+                            guildEventId: _.id,
                             recurrenceId: t,
-                            channel: x,
-                            guild: m,
+                            channel: T,
+                            guild: x,
                             isRecurrenceItem: !0,
-                            ...l
+                            ...n
                         })
                     })
                 };
-                return (0, n.jsxs)(a.ClickableContainer, {
-                    className: u(v.container, {
-                        [v.canceled]: T,
-                        [v.clickable]: null != S,
-                        [v.active]: L
+                return (0, l.jsxs)(a.ClickableContainer, {
+                    className: u(g.container, {
+                        [g.canceled]: p,
+                        [g.clickable]: null != I,
+                        [g.active]: L
                     }),
                     onClick: e => {
-                        e.stopPropagation(), !T && (null == S || S(t))
+                        e.stopPropagation(), !p && (null == I || I(t))
                     },
-                    onContextMenu: p,
+                    onContextMenu: G,
                     "aria-label": "",
-                    children: [(0, n.jsx)(h.GuildEventTimeStatus, {
-                        startTime: M.toISOString(),
-                        status: T ? C.GuildScheduledEventStatus.CANCELED : C.GuildScheduledEventStatus.SCHEDULED,
-                        eventType: I.entity_type,
-                        guildEventId: I.id,
+                    children: [(0, l.jsx)(C.GuildEventTimeStatus, {
+                        startTime: R.toISOString(),
+                        status: B,
+                        eventType: _.entity_type,
+                        guildEventId: _.id,
                         recurrenceId: t,
-                        className: v.timeStatus
-                    }), T && (0, n.jsx)(a.Text, {
+                        className: g.timeStatus
+                    }), p && (0, l.jsx)(a.Text, {
                         variant: "text-sm/semibold",
                         color: "text-danger",
-                        className: v.canceledStatus,
+                        className: g.canceledStatus,
                         children: N.default.Messages.EVENT_CANCELED
-                    }), (0, n.jsx)(a.Tooltip, {
+                    }), (0, l.jsx)(a.Tooltip, {
                         text: N.default.Messages.MORE,
                         position: "top",
                         "aria-label": N.default.Messages.EDIT,
-                        children: e => (0, n.jsx)(a.Clickable, {
+                        children: e => (0, l.jsx)(a.Clickable, {
                             ...e,
-                            onClick: p,
-                            className: v.iconButton,
-                            children: (0, n.jsx)(c.default, {
+                            onClick: G,
+                            className: g.iconButton,
+                            children: (0, l.jsx)(c.default, {
                                 width: 20,
                                 height: 20,
-                                className: v.icon
+                                className: g.icon
                             })
                         })
                     })]

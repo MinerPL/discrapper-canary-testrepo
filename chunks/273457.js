@@ -30,18 +30,18 @@
                     s.useEffect(() => {
                         null != A && (0, r.transitionTo)(f.Routes.CHANNEL(t))
                     }, [A, t]);
-                    let m = s.useCallback(e => {
+                    let p = s.useCallback(e => {
                             T(t => Math.max(t, e))
                         }, []),
-                        p = (0, c.getArtForPath)();
+                        m = (0, c.getArtForPath)();
                     return (0, a.jsx)("div", {
                         className: h.page,
                         children: (0, a.jsxs)(d.default, {
                             embedded: !0,
-                            splash: p,
+                            splash: m,
                             waveState: C,
                             showLogo: !1,
-                            updateWaveState: m,
+                            updateWaveState: p,
                             children: [(0, a.jsx)("div", {
                                 className: h.dragRegion
                             }), (0, a.jsx)("div", {

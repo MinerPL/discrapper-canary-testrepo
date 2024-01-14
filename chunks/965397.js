@@ -11,11 +11,11 @@
                 s = A("458960"),
                 o = A("77078"),
                 i = A("866893");
-            let d = {
+            let u = {
                 friction: 7,
                 tension: 60
             };
-            class u extends l.Component {
+            class d extends l.Component {
                 componentWillAppear(e) {
                     this.animateTo(1).start(e)
                 }
@@ -30,7 +30,7 @@
                 }
                 animateTo(e) {
                     return s.default.spring(this.animation, {
-                        ...d,
+                        ...u,
                         toValue: e
                     })
                 }
@@ -63,5 +63,5 @@
                     super(...e), this.animation = new s.default.Value(0)
                 }
             }
-            u.contextType = o.AccessibilityPreferencesContext;
-            var c = u
+            d.contextType = o.AccessibilityPreferencesContext;
+            var c = d

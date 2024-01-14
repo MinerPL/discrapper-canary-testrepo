@@ -7,8 +7,8 @@
             var l = n("37983"),
                 i = n("884691"),
                 r = n("414456"),
-                s = n.n(r),
-                a = n("77078"),
+                a = n.n(r),
+                s = n("77078"),
                 o = n("374665");
 
             function u(e) {
@@ -18,7 +18,7 @@
                     className: r,
                     position: u
                 } = e, d = i.useRef(null), c = null != n ? n : "string" == typeof t && t;
-                return (0, l.jsx)(a.Tooltip, {
+                return (0, l.jsx)(s.Tooltip, {
                     position: null != u ? u : "top",
                     delay: 500,
                     text: t,
@@ -26,10 +26,10 @@
                     children: n => {
                         let {
                             onMouseEnter: i,
-                            onMouseLeave: a
+                            onMouseLeave: s
                         } = n;
                         return (0, l.jsx)("div", {
-                            className: s(r, o.overflow),
+                            className: a(r, o.overflow),
                             ref: d,
                             "aria-hidden": e["aria-hidden"],
                             onMouseEnter: () => {
@@ -38,7 +38,7 @@
                                 } = d;
                                 null != e && e.offsetWidth < e.scrollWidth && (null == i || i())
                             },
-                            onMouseLeave: a,
+                            onMouseLeave: s,
                             children: t
                         })
                     }

@@ -50,8 +50,8 @@
                     options: r,
                     onFileUpload: L,
                     onClose: v,
-                    onSelect: x,
-                    draftType: R,
+                    onSelect: R,
+                    draftType: x,
                     editorTextContent: y,
                     setValue: D,
                     openClips: O
@@ -80,7 +80,7 @@
                     O()
                 }
 
-                function H() {
+                function U() {
                     (0, i.openModalLazy)(async () => {
                         let {
                             default: e
@@ -94,19 +94,19 @@
                     })
                 }
 
-                function U() {
+                function H() {
                     let e = y,
                         n = "txt",
                         s = "",
                         a = y.match(N);
                     null != a && (s = a[1], n = a[2], e = a[3], s += a[4]), (0, E.promptToUpload)([(0, m.makeFile)(new Blob([e], {
                         type: "text/plain"
-                    }), "message.".concat(n))], t, R), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
+                    }), "message.".concat(n))], t, x), p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.CLEAR_TEXT), "" !== s && p.ComponentDispatch.dispatchToLastSubscribed(_.ComponentActions.INSERT_TEXT, {
                         plainText: s
                     })
                 }
                 return (0, s.jsx)(i.Menu, {
-                    onSelect: x,
+                    onSelect: R,
                     navId: "channel-attach",
                     onClose: v,
                     "aria-label": T.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
@@ -148,7 +148,7 @@
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "upload-text-as-file",
                                     label: a,
-                                    action: U
+                                    action: H
                                 }, "upload-text-as-file");
                             case S.AttachmentTypes.CLIPS:
                                 return (0, s.jsx)(i.MenuItem, {
@@ -160,7 +160,7 @@
                                 return (0, s.jsx)(i.MenuItem, {
                                     id: "poll",
                                     label: a,
-                                    action: H
+                                    action: U
                                 }, "poll");
                             case S.AttachmentTypes.INVITE_TO_PLAY_GAME:
                                 return (0, s.jsx)(i.MenuItem, {

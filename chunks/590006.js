@@ -20,8 +20,8 @@
                 E = n("590456"),
                 A = n("49111"),
                 _ = n("782340"),
-                m = n("730684"),
-                S = n("696246");
+                S = n("730684"),
+                m = n("696246");
 
             function C(e) {
                 let {
@@ -32,30 +32,30 @@
                     shrinkToSize: i,
                     isTryItOutFlow: C,
                     size: N = 0
-                } = e, g = (0, T.default)(t.id, n), p = (0, f.default)(g).map(e => ({
+                } = e, g = (0, T.default)(t.id, n), v = (0, f.default)(g).map(e => ({
                     ...e,
                     src: (0, E.getBadgeAsset)(e.icon)
-                })), v = (0, c.useWindowDispatch)();
+                })), p = (0, c.useWindowDispatch)();
                 if (t.isClyde()) return (0, s.jsx)("div", {
-                    className: r(a, m.container, m.clydeBadgeList),
+                    className: r(a, S.container, S.clydeBadgeList),
                     "aria-label": _.default.Messages.PROFILE_USER_BADGES,
                     role: "group",
                     children: (0, s.jsx)(d.default, {})
                 });
-                C && null == p.find(e => "premium" === e.id) && p.push({
+                C && null == v.find(e => "premium" === e.id) && v.push({
                     id: "premium",
-                    icon: S,
-                    src: S,
+                    icon: m,
+                    src: m,
                     description: _.default.Messages.PREMIUM_BADGE_TOOLTIP.format({
                         date: new Date
                     })
                 });
-                let I = null != l && null != i && p.length > l ? i : N;
+                let I = null != l && null != i && v.length > l ? i : N;
                 return (0, s.jsx)("div", {
-                    className: r(a, p.length > 0 ? m.containerWithContent : m.container),
+                    className: r(a, v.length > 0 ? S.containerWithContent : S.container),
                     "aria-label": _.default.Messages.PROFILE_USER_BADGES,
                     role: "group",
-                    children: p.map(e => (0, s.jsx)(u.Tooltip, {
+                    children: v.map(e => (0, s.jsx)(u.Tooltip, {
                         position: "top",
                         text: e.description,
                         spacing: 12,
@@ -65,7 +65,7 @@
                                 var a;
                                 null === (a = t.onClick) || void 0 === a || a.call(t);
                                 let l = null != e.link ? (0, o.default)(e.link) : null;
-                                if (null != l) return v.dispatch(A.ComponentActions.POPOUT_CLOSE), l(n)
+                                if (null != l) return p.dispatch(A.ComponentActions.POPOUT_CLOSE), l(n)
                             },
                             href: e.link,
                             children: (0, s.jsx)("img", {
@@ -73,9 +73,9 @@
                                 "aria-hidden": !0,
                                 src: e.src,
                                 className: r({
-                                    [m.profileBadge24]: 0 === I,
-                                    [m.profileBadge22]: 1 === I,
-                                    [m.profileBadge18]: 2 === I
+                                    [S.profileBadge24]: 0 === I,
+                                    [S.profileBadge22]: 1 === I,
+                                    [S.profileBadge18]: 2 === I
                                 })
                             })
                         })

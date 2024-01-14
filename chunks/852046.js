@@ -1,37 +1,37 @@
             "use strict";
             n.r(t), n.d(t, {
                 install: function() {
-                    return D
+                    return b
                 }
             }), n("781738"), n("222007");
             var i = n("78349"),
                 l = n("917351"),
-                u = n.n(l),
-                r = n("118810"),
-                s = n("49671"),
-                _ = n("605250"),
-                a = n("915639"),
-                o = n("449008"),
-                E = n("851234"),
-                d = n("648610");
-            let c = new _.default("Spellchecker"),
-                I = null === s.default || void 0 === s.default ? void 0 : s.default.spellCheck;
+                s = n.n(l),
+                a = n("118810"),
+                r = n("49671"),
+                u = n("605250"),
+                o = n("915639"),
+                c = n("449008"),
+                d = n("851234"),
+                g = n("648610");
+            let h = new u.default("Spellchecker"),
+                f = null === r.default || void 0 === r.default ? void 0 : r.default.spellCheck;
 
-            function N(e) {
+            function p(e) {
                 var t;
-                e = null !== (t = d.default[e]) && void 0 !== t ? t : e;
+                e = null !== (t = g.default[e]) && void 0 !== t ? t : e;
                 let n = (0, i.parse)(e.replace(/[_-]/g, "-"));
                 if (null == n || null == n.langtag.language || null == n.langtag.region) {
-                    c.error("".concat(e, " is not a valid locale."));
+                    h.error("".concat(e, " is not a valid locale."));
                     return
                 }
                 let {
                     language: l,
-                    region: u
+                    region: s
                 } = n.langtag;
-                return "".concat(l.language.toLowerCase(), "-").concat(u.toUpperCase())
+                return "".concat(l.language.toLowerCase(), "-").concat(s.toUpperCase())
             }
-            class T {
+            class m {
                 get enabled() {
                     return this._enabled
                 }
@@ -39,12 +39,12 @@
                     this._enabled = e
                 }
                 setLearnedWords(e) {
-                    I.setLearnedWords(e)
+                    f.setLearnedWords(e)
                 }
                 setLocale(e) {
                     var t;
-                    null === (t = I.setLocale(e)) || void 0 === t || t.then(t => {
-                        c.info("Switching to ".concat(e), t ? "(available)" : "(unavailable)")
+                    null === (t = f.setLocale(e)) || void 0 === t || t.then(t => {
+                        h.info("Switching to ".concat(e), t ? "(available)" : "(unavailable)")
                     })
                 }
                 setAppLocale(e) {
@@ -68,36 +68,36 @@
                     return this.isMisspelled(e, t) ? this.corrections : []
                 }
                 replaceMisspelling(e) {
-                    I.replaceMisspelling(e)
+                    f.replaceMisspelling(e)
                 }
                 constructor(e) {
                     this._enabled = !0, this.misspelledWord = "", this.corrections = [];
-                    let [t, n] = a.default.locale.split("-");
+                    let [t, n] = o.default.locale.split("-");
                     this.regionPreference = n;
                     let i = this.getAvailableLanguages(e);
-                    this.languageDetector = new E.default(t, n => {
+                    this.languageDetector = new d.default(t, n => {
                         let l = "".concat(n, "-").concat(this.regionPreference);
                         if (-1 !== e.indexOf(l)) this.setLocale(l);
                         else {
-                            var u;
-                            let e = null !== (u = i[n]) && void 0 !== u ? u : d.default[t];
+                            var s;
+                            let e = null !== (s = i[n]) && void 0 !== s ? s : g.default[t];
                             null != e && this.setLocale(e)
                         }
-                    }), I.on("spellcheck-result", (e, t) => {
+                    }), f.on("spellcheck-result", (e, t) => {
                         this.misspelledWord = null != e ? e : "", this.corrections = null != t ? t : []
                     })
                 }
             }
-            let A = u.debounce((e, t) => {
+            let v = s.debounce((e, t) => {
                 let n = function(e) {
-                    return null == e ? null : (0, r.isElement)(e, HTMLInputElement) || (0, r.isElement)(e, HTMLTextAreaElement) ? e.value : (0, r.isElement)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
+                    return null == e ? null : (0, a.isElement)(e, HTMLInputElement) || (0, a.isElement)(e, HTMLTextAreaElement) ? e.value : (0, a.isElement)(e) && e.hasAttribute("contenteditable") ? e.textContent : void 0
                 }(t);
                 null != n && e.detectLanguage(n)
             }, 250);
-            async function D() {
+            async function b() {
                 var e, t;
-                let n = null !== (e = await I.getAvailableDictionaries()) && void 0 !== e ? e : [],
-                    i = n.map(N).filter(o.isNotNullish),
-                    l = new T(i);
-                return t = l, null != document.body && document.body.addEventListener("beforeinput", e => A(t, e.target), !0), l
+                let n = null !== (e = await f.getAvailableDictionaries()) && void 0 !== e ? e : [],
+                    i = n.map(p).filter(c.isNotNullish),
+                    l = new m(i);
+                return t = l, null != document.body && document.body.addEventListener("beforeinput", e => v(t, e.target), !0), l
             }

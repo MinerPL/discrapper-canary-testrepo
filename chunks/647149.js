@@ -1,11 +1,11 @@
             "use strict";
             n.r(t), n.d(t, {
                 useIsInappAppealIngestionEnabled: function() {
-                    return l
+                    return r
                 }
             });
             var i = n("862205");
-            let r = (0, i.createExperiment)({
+            let l = (0, i.createExperiment)({
                 kind: "user",
                 id: "2023-11_safety_hub_inapp_appeal_ingestion",
                 label: "In-app Appeal Ingestion",
@@ -14,15 +14,21 @@
                 },
                 treatments: [{
                     id: 1,
-                    label: "Enabled",
+                    label: "EU user",
+                    config: {
+                        enabled: !0
+                    }
+                }, {
+                    id: 2,
+                    label: "DSA E2E testing user",
                     config: {
                         enabled: !0
                     }
                 }]
             });
 
-            function l() {
-                return !!r.useExperiment({
+            function r() {
+                return !!l.useExperiment({
                     location: "appeal-ingestion-link"
                 }, {
                     autoTrackExposure: !0

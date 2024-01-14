@@ -28,6 +28,9 @@
                 isSubscribed(e, t) {
                     return null != this._subscriptions[e] && null != this._subscriptions[e][t]
                 }
+                isSubscribedToAnyMember(e) {
+                    return this.get(e).length > 0
+                }
                 unsubscribe(e, t) {
                     var n, i;
                     if (!this.isSubscribed(e, t)) return;

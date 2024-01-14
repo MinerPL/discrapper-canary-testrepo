@@ -23,7 +23,7 @@
                     party: t,
                     close: n,
                     onSelect: C
-                } = e, T = (0, u.default)(t), I = (0, E.default)(t), S = (0, c.default)(t), N = (0, d.default)(t), A = (0, r.default)(t), m = (0, o.default)(t);
+                } = e, T = (0, u.default)(t), I = (0, E.default)(t), S = (0, c.default)(t), N = (0, d.default)(t), A = (0, r.default)(t), p = (0, o.default)(t);
                 return s.useEffect(() => {
                     let e = t.currentActivities.filter(e => {
                         var t, n;
@@ -44,6 +44,6 @@
                         children: N
                     }), (0, a.jsx)(i.MenuGroup, {
                         children: A
-                    }), m]
+                    }), p]
                 })
             }

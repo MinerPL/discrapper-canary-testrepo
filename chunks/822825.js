@@ -15,7 +15,7 @@
             let c = null,
                 E = null,
                 f = {},
-                _ = p(),
+                _ = m(),
                 h = g(),
                 C = null,
                 T = function() {
@@ -26,9 +26,9 @@
                 S = !1,
                 N = null,
                 A = null,
-                m = {};
+                p = {};
 
-            function p() {
+            function m() {
                 return {
                     [d.TeenActionDisplayType.USER_ADD]: {},
                     [d.TeenActionDisplayType.GUILD_ADD]: {},
@@ -62,7 +62,7 @@
             }
 
             function L(e, t) {
-                let n = t ? _ : p();
+                let n = t ? _ : m();
                 return _ = e.reduce((e, t) => {
                     let a = t.display_type;
                     return void 0 !== n[a] && void 0 === n[a][t.event_id] && (e[a][t.event_id] = t), e
@@ -70,10 +70,10 @@
             }
 
             function v(e) {
-                m = e.reduce((e, t) => ({
+                p = e.reduce((e, t) => ({
                     ...e,
                     [t.id]: new o.FamilyCenterGuild(t)
-                }), m)
+                }), p)
             }
 
             function M() {
@@ -185,7 +185,7 @@
             }
 
             function B() {
-                c = null, E = null, f = {}, _ = p(), h = g(), m = {}, S = !1, N = null
+                c = null, E = null, f = {}, _ = m(), h = g(), p = {}, S = !1, N = null
             }
             class H extends i.default {
                 takeSnapshot() {
@@ -204,7 +204,7 @@
                                     e.push(...Object.values(a))
                                 }), e
                             }(),
-                            guilds: Object.values(m)
+                            guilds: Object.values(p)
                         }
                     }
                 }
@@ -232,7 +232,7 @@
                     return C
                 }
                 getGuild(e) {
-                    return m[e]
+                    return p[e]
                 }
                 getSelectedTab() {
                     return T

@@ -8,14 +8,14 @@
                 }
             });
             var l, i, r = n("450911"),
-                s = n("819689"),
-                a = n("605250"),
+                a = n("819689"),
+                s = n("605250"),
                 o = n("42203"),
                 u = n("231987");
             (l = i || (i = {}))[l.GROUP_DM = 0] = "GROUP_DM", l[l.USER = 1] = "USER", l[l.CHANNEL = 2] = "CHANNEL";
             class d extends u.default {
                 _sendInvite(e, t, n, l, i) {
-                    s.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
+                    a.default.sendInvite(e.id, t, n, l).then(() => i(null, !0), () => i(null, !1))
                 }
                 drain(e, t) {
                     let {
@@ -35,7 +35,7 @@
                     }
                 }
                 constructor() {
-                    super(new a.default("InviteQueue"), 1010)
+                    super(new s.default("InviteQueue"), 1010)
                 }
             }
             var c = new d

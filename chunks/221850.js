@@ -24,8 +24,8 @@
                 S = n("471671"),
                 N = n("568734"),
                 A = n("449008"),
-                m = n("253981"),
-                p = n("563680"),
+                p = n("253981"),
+                m = n("563680"),
                 g = n("861309"),
                 R = n("578287"),
                 O = n("716724"),
@@ -158,7 +158,7 @@
                         } = (0, v.validateOpenInviteDialog)(), r = h.default.getWindow(D.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
                         (null == r ? void 0 : r.closed) && (r = null);
                         let o = null != r ? D.AppContext.POPOUT : D.AppContext.APP;
-                        (0, p.exitFullScreen)({}, null == r ? void 0 : r.document), (0, i.openModalLazy)(async () => {
+                        (0, m.exitFullScreen)({}, null == r ? void 0 : r.document), (0, i.openModalLazy)(async () => {
                             let {
                                 default: e
                             } = await n.el("310688").then(n.bind(n, "310688"));
@@ -235,7 +235,7 @@
                         if (!i) throw new g.default(P.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
                         let l = (0, L.default)();
                         if (null == l) throw new g.default(P.RPCErrors.INVALID_COMMAND, "No channel found");
-                        if (!m.default.isDiscordCdnUrl(a)) throw new g.default(P.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
+                        if (!p.default.isDiscordCdnUrl(a)) throw new g.default(P.RPCErrors.INVALID_PAYLOAD, "mediaUrl must be a Discord CDN url");
                         (0, _.openActivityShareMomentModal)({
                             applicationId: s,
                             channelId: l.id,

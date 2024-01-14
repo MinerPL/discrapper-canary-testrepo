@@ -25,12 +25,12 @@
                         isActive: T,
                         onOtherHover: I,
                         className: S
-                    } = e, [N, A] = s.useState(!1), [m, p] = s.useState(!1), g = () => {
-                        A(!0), C && !T && !m && (null == I || I())
+                    } = e, [N, A] = s.useState(!1), [p, m] = s.useState(!1), g = () => {
+                        A(!0), C && !T && !p && (null == I || I())
                     }, R = () => {
                         A(!1)
                     }, O = (e, t) => {
-                        null != t && (p(!0), (0, d.openContextMenuLazy)(e, async () => {
+                        null != t && (m(!0), (0, d.openContextMenuLazy)(e, async () => {
                             let {
                                 default: e
                             } = await n.el("406784").then(n.bind(n, "406784"));
@@ -40,7 +40,7 @@
                             })
                         }, {
                             onClose: () => {
-                                p(!1)
+                                m(!1)
                             }
                         }))
                     };
@@ -53,7 +53,7 @@
                             },
                             children: (0, a.jsx)(r.default.div, {
                                 className: l(E.messageRequestItem, S, {
-                                    [E.active]: T || m,
+                                    [E.active]: T || p,
                                     [E.firstItem]: 0 === t
                                 }),
                                 onContextMenu: e => O(e, f),
@@ -65,7 +65,7 @@
                                     opacity: 1
                                 },
                                 ...e,
-                                children: i(N || T || m)
+                                children: i(N || T || p)
                             })
                         })
                     })

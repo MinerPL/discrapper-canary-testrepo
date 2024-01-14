@@ -23,7 +23,7 @@
                 S = n("778117"),
                 N = n("195180"),
                 A = n("357147");
-            let m = {
+            let p = {
                     ...i.crossPlatformCommands,
                     ...d.default,
                     ...c.default,
@@ -37,15 +37,15 @@
                     ...E.default,
                     ...T.default
                 },
-                p = {
+                m = {
                     ...l.default,
                     ...o.overlayEventHandlers,
                     ...u.voiceSettingsEventHandlers
                 };
             var g = {
                 server: r.default,
-                commands: m,
-                events: p,
+                commands: p,
+                events: m,
                 stores: [a.default],
                 transports: [A.default],
                 registerTransportsForEmbeddedPlatform: function() {

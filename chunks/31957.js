@@ -1,7 +1,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return p
+                    return m
                 }
             }), n("222007");
             var a = n("446674"),
@@ -59,7 +59,7 @@
             function A() {
                 I = o.default.getStatus() === u.StatusTypes.DND
             }
-            class m extends a.default.Store {
+            class p extends a.default.Store {
                 initialize() {
                     this.waitFor(r.default, o.default), this.syncWith([o.default], A)
                 }
@@ -76,8 +76,8 @@
                     return !I && h.size > 0
                 }
             }
-            m.displayName = "IncomingCallStore";
-            var p = new m(i.default, {
+            p.displayName = "IncomingCallStore";
+            var m = new p(i.default, {
                 CALL_CREATE: N,
                 CALL_UPDATE: N,
                 CALL_DELETE: function(e) {

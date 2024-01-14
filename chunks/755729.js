@@ -23,8 +23,8 @@
                 S = n("77078"),
                 N = n("850068"),
                 A = n("272030"),
-                m = n("79112"),
-                p = n("146350"),
+                p = n("79112"),
+                m = n("146350"),
                 g = n("901582"),
                 R = n("415929"),
                 O = n("687531"),
@@ -41,7 +41,7 @@
                 j = n("225772"),
                 k = n("775377"),
                 w = n("10641"),
-                F = n("509802"),
+                F = n("384997"),
                 B = n("243632"),
                 H = n("180273"),
                 V = n("579565"),
@@ -77,8 +77,8 @@
                 eS = n("697218"),
                 eN = n("521012"),
                 eA = n("145131"),
-                em = n("398288"),
-                ep = n("837899"),
+                ep = n("398288"),
+                em = n("837899"),
                 eg = n("425190"),
                 eR = n("474571"),
                 eO = n("272339"),
@@ -144,7 +144,7 @@
                     let r = ew.default.getName(i),
                         o = null != l && l !== eB.StatusTypes.UNKNOWN,
                         u = null != n;
-                    return (u || o && i.isPomelo()) && (e = (0, a.jsx)(em.default, {
+                    return (u || o && i.isPomelo()) && (e = (0, a.jsx)(ep.default, {
                         hoverText: s,
                         forceHover: t,
                         children: u ? (0, a.jsx)(k.default, {
@@ -256,7 +256,7 @@
                                     }),
                                     children: r ? (0, a.jsx)(eD.default, {
                                         tooltipText: null,
-                                        icon: d.isShown ? ep.default : eg.default,
+                                        icon: d.isShown ? em.default : eg.default,
                                         role: "switch",
                                         "aria-label": eV.default.Messages.SET_STATUS
                                     }) : this.renderNameTag()
@@ -465,7 +465,7 @@
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : eB.UserSettingsSections.ACCOUNT,
                             t = arguments.length > 1 ? arguments[1] : void 0,
                             n = arguments.length > 2 ? arguments[2] : void 0;
-                        m.default.open(e, t, n)
+                        p.default.open(e, t, n)
                     }, this.handleOpenSettingsContextMenu = e => {
                         let {
                             currentUser: t
@@ -595,7 +595,7 @@
                                 })
                             })
                         }
-                        return (0, a.jsx)(p.default, {
+                        return (0, a.jsx)(m.default, {
                             onClose: () => {
                                 this.handleMouseLeave(), null == t || t()
                             }
@@ -642,11 +642,11 @@
                         selfDeaf: I,
                         deaf: A
                     } = (0, ed.default)(_),
-                    m = (0, r.useStateFromStores)([P.default], () => {
+                    p = (0, r.useStateFromStores)([P.default], () => {
                         var e;
                         return (0, D.probablyHasBuildOverride)() ? null === (e = P.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
                     }),
-                    p = (0, r.useStateFromStores)([eN.default], () => eN.default.getPremiumTypeSubscription()),
+                    m = (0, r.useStateFromStores)([eN.default], () => eN.default.getPremiumTypeSubscription()),
                     g = (0, r.useStateFromStores)([eh.default], () => eh.default.getEverSpeakingWhileMuted()),
                     M = (0, r.useStateFromStores)([e_.default], () => e_.default.hasLayers()),
                     y = (0, S.useModalsStore)(S.hasAnyModalOpenSelector),
@@ -716,8 +716,8 @@
                     };
                 if (!x) {
                     if (eu && eA.settings.push(o.DismissibleContent.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), t) {
-                        var em;
-                        eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (em = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === em ? void 0 : em.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
+                        var ep;
+                        eA.settings.push(o.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP), Y && W === (null === (ep = (0, V.getDrop)(eH.PartnerGame.FORTNITE)) || void 0 === ep ? void 0 : ep.title) && eA.settings.push(o.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP)
                     }
                     Q && $ && eA.settings.push(o.DismissibleContent.USER_SAFETY_SAFE_DIRECT_MESSAGING), en && (1 === ea ? eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), er && eA.settings.push(o.DismissibleContent.SOUNDBOARD_VOLUME_EDUCATION), es && eA.settings.push(o.DismissibleContent.USER_SAFETY_CONSUMER_EDUCATION_REPORTING)
                 }
@@ -728,7 +728,7 @@
                     userTag: E,
                     hidePrivateData: f,
                     occluded: x,
-                    premiumSubscription: p,
+                    premiumSubscription: m,
                     selfDeaf: I,
                     selfMute: C,
                     serverDeaf: A,
@@ -741,7 +741,7 @@
                     status: d,
                     streaming: u,
                     suppress: T,
-                    webBuildOverride: m,
+                    webBuildOverride: p,
                     awaitingRemote: U,
                     isEligibleForPomelo: b
                 })

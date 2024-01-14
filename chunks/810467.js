@@ -21,8 +21,8 @@
                 S = n("593897"),
                 N = n("534222"),
                 A = n("841363"),
-                m = n("822516"),
-                p = n("393414"),
+                p = n("822516"),
+                m = n("393414"),
                 g = n("716214"),
                 R = n("488464"),
                 O = n("998716"),
@@ -95,7 +95,7 @@
                         isEventNoticeHidden: d,
                         isStageNoticeHidden: E,
                         isStudyRoomNotice: _
-                    } = e, T = null != n && null != a && !E, S = null != t ? (0, m.getNextRecurrenceIdInEvent)(t) : null;
+                    } = e, T = null != n && null != a && !E, S = null != t ? (0, p.getNextRecurrenceIdInEvent)(t) : null;
                     if (_ && null != a) {
                         let e = (0, f.getChannelIconComponent)(a);
                         return {
@@ -320,7 +320,7 @@
                         size: c.Button.Sizes.SMALL,
                         color: c.Button.Colors.GREEN,
                         onClick: () => {
-                            if (en) null != a && null != a.getGuildId() && ((0, g.connectAndOpen)(a), (0, p.transitionToGuild)(a.getGuildId(), a.id));
+                            if (en) null != a && null != a.getGuildId() && ((0, g.connectAndOpen)(a), (0, m.transitionToGuild)(a.getGuildId(), a.id));
                             else {
                                 if (null == s) return;
                                 (0, _.openGuildEventDetails)({

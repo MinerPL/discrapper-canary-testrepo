@@ -1,19 +1,19 @@
             "use strict";
-            n.r(e), n.d(e, {
+            n.r(t), n.d(t, {
                 getLastUsedVideoBackgroundOption: function() {
-                    return o
+                    return a
                 }
             }), n("884691"), n("446674");
-            var i = n("374363");
+            var s = n("374363");
             n("697218");
-            var u = n("719923"),
+            var i = n("719923"),
                 r = n("239448");
 
-            function o(t) {
-                var e;
-                let n = i.default.settings;
-                return function(t, e) {
-                    let n = (0, r.getVideoBackgroundOptionFromProto)(t, e.id);
-                    return (0, r.isCustomBackgroundOption)(n) && !u.default.canUseCustomBackgrounds(e) ? null : "number" != typeof n || (0, r.isDefaultBackgroundOption)(n) ? n : null
-                }(null === (e = n.voiceAndVideo) || void 0 === e ? void 0 : e.videoBackgroundFilterDesktop, t)
+            function a(e) {
+                var t;
+                let n = s.default.settings;
+                return function(e, t) {
+                    let n = (0, r.getVideoBackgroundOptionFromProto)(e, t.id);
+                    return (0, r.isCustomBackgroundOption)(n) && !i.default.canUseCustomBackgrounds(t) ? null : "number" != typeof n || (0, r.isDefaultBackgroundOption)(n) ? n : null
+                }(null === (t = n.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, e)
             }

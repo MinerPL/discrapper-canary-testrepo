@@ -1,129 +1,120 @@
             "use strict";
-            s.r(t), s.d(t, {
+            a.r(s), a.d(s, {
                 default: function() {
-                    return f
+                    return j
                 }
-            }), s("222007"), s("781738");
-            var a = s("37983"),
-                l = s("884691"),
-                i = s("77078"),
-                d = s("367376"),
-                r = s("531470"),
-                n = s("538137"),
-                o = s("660279"),
-                c = s("36694"),
-                u = s("578706"),
-                T = s("306160"),
-                x = s("439932"),
-                m = s("699668"),
-                h = s("471536"),
-                I = s("71941"),
-                M = s("49111"),
-                g = s("782340"),
-                N = s("650287");
+            }), a("222007");
+            var t = a("37983"),
+                l = a("884691"),
+                i = a("77078"),
+                n = a("531470"),
+                d = a("538137"),
+                c = a("36694"),
+                r = a("599110"),
+                o = a("439932"),
+                h = a("699668"),
+                x = a("203657"),
+                u = a("397516"),
+                m = a("71941"),
+                N = a("276345"),
+                I = a("380353"),
+                T = a("49111"),
+                v = a("782340"),
+                f = a("650287");
 
-            function f(e) {
+            function j(e) {
                 let {
-                    onClose: t,
-                    transitionState: s
-                } = e, [d, o] = l.useState(I.Tab.Intro), {
-                    submitted: u,
-                    submitting: T,
-                    saveSettings: h
-                } = (0, m.useSaveSettings)(), {
-                    guildPlans: f,
-                    overrideGuild: v,
-                    getDebug: C,
-                    showWarning: b
-                } = (0, m.useGuildMigrationSteps)();
-                return b ? (0, a.jsx)("div", {
-                    className: (0, x.getThemeClass)(M.ThemeTypes.DARK),
-                    children: (0, a.jsxs)(i.ModalRoot, {
-                        className: N.modal,
-                        transitionState: s,
-                        "aria-label": g.default.Messages.NOTIFICATIONS,
-                        size: i.ModalSize.DYNAMIC,
-                        children: [(0, a.jsx)(i.Text, {
-                            style: {
-                                maxWidth: 400,
-                                padding: 16
-                            },
-                            variant: "text-sm/semibold",
-                            color: "interactive-normal",
-                            children: g.default.Messages.NOTIF_MIGRATION_WARNING.format()
-                        }), (0, a.jsx)(i.ModalFooter, {
-                            className: N.buttons,
-                            children: (0, a.jsx)("div", {
-                                className: N.left,
-                                children: (0, a.jsx)(i.Clickable, {
-                                    className: N.dismiss,
-                                    onClick: t,
-                                    children: (0, a.jsx)(i.Text, {
-                                        variant: "text-sm/semibold",
-                                        color: "interactive-normal",
-                                        children: d === I.Tab.Intro ? g.default.Messages.DISMISS : g.default.Messages.CANCEL
-                                    })
-                                })
-                            })
-                        })]
+                    onClose: s,
+                    transitionState: a,
+                    dismissable: x,
+                    guildPain: j,
+                    myUsage: g
+                } = e, [O, M] = l.useState(m.Tab.Intro), {
+                    submitted: C,
+                    submitting: R,
+                    saveSettings: A
+                } = (0, h.useSaveSettings)(s), {
+                    guildPlans: p,
+                    overrideGuild: E,
+                    getDebug: w
+                } = (0, h.useGuildMigrationSteps)(j, g);
+                return l.useEffect(() => {
+                    r.default.track(T.AnalyticEvents.OPEN_MODAL, {
+                        type: "notification_migration_modal"
                     })
-                }) : (0, a.jsx)("div", {
-                    className: (0, x.getThemeClass)(M.ThemeTypes.DARK),
-                    children: (0, a.jsxs)(i.ModalRoot, {
-                        className: N.modal,
-                        transitionState: s,
-                        "aria-label": g.default.Messages.NOTIFICATIONS,
+                }, []), (0, t.jsx)("div", {
+                    className: (0, o.getThemeClass)(T.ThemeTypes.DARK),
+                    children: (0, t.jsxs)(i.ModalRoot, {
+                        className: f.modal,
+                        transitionState: a,
+                        "aria-label": v.default.Messages.NOTIFICATIONS,
                         size: i.ModalSize.DYNAMIC,
-                        children: [(0, a.jsx)(I.default, {
-                            selectedTab: d,
-                            onClick: o,
-                            submitted: u
-                        }), d === I.Tab.Intro ? (0, a.jsx)(_, {}) : d === I.Tab.Customize ? (0, a.jsx)(O, {
-                            guildPlans: f,
-                            overrideGuild: v,
-                            getDebug: C
-                        }) : (0, a.jsx)(j, {
-                            guildPlans: f
-                        }), (0, a.jsxs)(i.ModalFooter, {
-                            className: N.buttons,
-                            children: [(0, a.jsx)("div", {
-                                className: N.left,
-                                children: (0, a.jsx)(i.Clickable, {
-                                    className: N.dismiss,
-                                    onClick: t,
-                                    children: (0, a.jsx)(i.Text, {
+                        children: [(0, t.jsx)(m.default, {
+                            selectedTab: O,
+                            onClick: M,
+                            submitted: C
+                        }), O === m.Tab.Intro ? (0, t.jsx)(u.default, {}) : O === m.Tab.Customize ? (0, t.jsx)(_, {
+                            guildPlans: p,
+                            overrideGuild: E,
+                            getDebug: w
+                        }) : (0, t.jsx)(N.default, {
+                            count: Object.values(p).filter(e => {
+                                var s;
+                                return (null !== (s = e.overrideMode) && void 0 !== s ? s : e.mode) === I.Mode.UseGreyDot
+                            }).length
+                        }), (0, t.jsxs)(i.ModalFooter, {
+                            className: f.buttons,
+                            children: [(0, t.jsxs)("div", {
+                                className: f.left,
+                                children: [x && O === m.Tab.Intro ? (0, t.jsx)(i.Clickable, {
+                                    className: f.dismiss,
+                                    onClick: s,
+                                    children: (0, t.jsx)(i.Text, {
                                         variant: "text-sm/semibold",
                                         color: "interactive-normal",
-                                        children: d === I.Tab.Intro ? g.default.Messages.DISMISS : g.default.Messages.CANCEL
+                                        children: v.default.Messages.DISMISS
                                     })
-                                })
-                            }), (0, a.jsxs)("div", {
-                                className: N.right,
-                                children: [d !== I.Tab.Customize || u ? null : (0, a.jsxs)(i.Button, {
-                                    onClick: () => o(I.Tab.Intro),
+                                }) : null, x && O === m.Tab.Customize ? (0, t.jsx)(i.Clickable, {
+                                    className: f.dismiss,
+                                    onClick: s,
+                                    children: (0, t.jsx)(i.Text, {
+                                        variant: "text-sm/semibold",
+                                        color: "interactive-normal",
+                                        children: v.default.Messages.CANCEL
+                                    })
+                                }) : null]
+                            }), (0, t.jsxs)("div", {
+                                className: f.right,
+                                children: [O === m.Tab.Customize ? (0, t.jsx)(i.Text, {
+                                    className: f.warning,
+                                    variant: "text-xs/medium",
+                                    color: "text-muted",
+                                    children: v.default.Messages.NOTIF_MIGRATION_BACKUP
+                                }) : null, O !== m.Tab.Customize || C ? null : (0, t.jsxs)(i.Button, {
+                                    onClick: () => M(m.Tab.Intro),
                                     color: i.Button.Colors.TRANSPARENT,
-                                    children: [(0, a.jsx)(r.default, {
+                                    children: [(0, t.jsx)(n.default, {
                                         width: 16,
                                         height: 16
-                                    }), " ", g.default.Messages.BACK]
-                                }), d === I.Tab.Intro ? (0, a.jsxs)(i.Button, {
-                                    onClick: () => o(I.Tab.Customize),
-                                    children: [g.default.Messages.TRY_IT_OUT, " ", (0, a.jsx)(n.default, {
+                                    }), " ", v.default.Messages.BACK]
+                                }), O === m.Tab.Intro ? (0, t.jsxs)(i.Button, {
+                                    onClick: () => M(m.Tab.Customize),
+                                    children: [v.default.Messages.TRY_IT_OUT, " ", (0, t.jsx)(d.default, {
                                         width: 16,
                                         height: 16
                                     })]
-                                }) : d === I.Tab.Customize ? (0, a.jsxs)(i.Button, {
+                                }) : O === m.Tab.Customize ? (0, t.jsxs)(i.Button, {
                                     onClick: () => {
-                                        o(I.Tab.Review), h(f)
+                                        M(m.Tab.Tips), A(p)
                                     },
-                                    children: [g.default.Messages.SAVE, " ", (0, a.jsx)(c.default, {
+                                    children: [v.default.Messages.APPLY, " ", (0, t.jsx)(c.default, {
                                         width: 16,
                                         height: 16
                                     })]
-                                }) : (0, a.jsx)(i.Button, {
-                                    submitting: T,
-                                    onClick: t,
-                                    children: g.default.Messages.CLOSE
+                                }) : (0, t.jsx)(i.Button, {
+                                    submitting: R,
+                                    onClick: s,
+                                    children: v.default.Messages.CLOSE
                                 })]
                             })]
                         })]
@@ -131,146 +122,28 @@
                 })
             }
 
-            function _() {
-                return (0, a.jsxs)("div", {
-                    className: N.content,
-                    children: [(0, a.jsxs)("div", {
-                        className: N.header,
-                        children: [(0, a.jsx)(o.default, {
-                            width: 40,
-                            height: 40,
-                            className: N.introIcon
-                        }), (0, a.jsx)(i.Heading, {
-                            variant: "heading-xl/bold",
-                            color: "header-primary",
-                            children: g.default.Messages.NOTIF_MIGRATION_INTRO_TITLE
-                        }), (0, a.jsx)(i.Text, {
-                            className: N.subtitle,
-                            variant: "text-md/medium",
-                            color: "header-secondary",
-                            children: g.default.Messages.NOTIF_MIGRATION_INTRO_SUB_TITLE
-                        })]
-                    }), (0, a.jsx)("img", {
-                        width: 954,
-                        src: s("943659"),
-                        alt: "yo"
-                    })]
-                })
-            }
-
-            function O(e) {
+            function _(e) {
                 let {
-                    guildPlans: t,
-                    overrideGuild: s,
-                    getDebug: r
-                } = e, [n, o] = l.useState(!1);
-                return (0, a.jsxs)("div", {
-                    className: N.content,
-                    children: [(0, a.jsxs)("div", {
-                        className: N.header,
-                        onDoubleClick: e => e.shiftKey && o(e => !e),
-                        children: [(0, a.jsx)(i.Heading, {
+                    guildPlans: s,
+                    overrideGuild: a
+                } = e;
+                return (0, t.jsxs)("div", {
+                    className: f.content,
+                    children: [(0, t.jsxs)("div", {
+                        className: f.header,
+                        children: [(0, t.jsx)(i.Heading, {
                             variant: "heading-xl/bold",
                             color: "header-primary",
-                            children: g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
-                        }), (0, a.jsxs)(i.Text, {
-                            className: N.subtitle,
+                            children: v.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
+                        }), (0, t.jsx)(i.Text, {
+                            className: f.subtitle,
                             variant: "text-md/medium",
                             color: "header-secondary",
-                            children: [g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE_1, (0, a.jsx)("br", {}), g.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_SUB_TITLE_2, " (RIGHT CLICK FOR NOW)"]
+                            children: v.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TITLE
                         })]
-                    }), n ? (0, a.jsxs)(a.Fragment, {
-                        children: [(0, a.jsx)(i.Button, {
-                            onClick: () => (0, T.copy)(r()),
-                            children: "Copy"
-                        }), (0, a.jsx)("div", {
-                            style: {
-                                whiteSpace: "pre",
-                                overflow: "auto",
-                                textAlign: "left",
-                                height: 450
-                            },
-                            children: function(e) {
-                                return e.split("\n").map((e, t) => e.startsWith("### ") ? (0, a.jsx)(i.Heading, {
-                                    variant: "heading-md/medium",
-                                    style: {
-                                        marginTop: 16
-                                    },
-                                    children: e.replace("### ", "")
-                                }, t) : e.startsWith("# ") ? (0, a.jsx)(i.Heading, {
-                                    variant: "heading-lg/medium",
-                                    style: {
-                                        marginTop: 80
-                                    },
-                                    children: e.replace("# ", "")
-                                }, t) : e.startsWith("    - ") ? (0, a.jsx)("li", {
-                                    style: {
-                                        color: "var(--text-normal)",
-                                        marginLeft: 48
-                                    },
-                                    children: (0, a.jsx)(i.Text, {
-                                        variant: "text-sm/normal",
-                                        color: "text-muted",
-                                        style: {
-                                            display: "inline"
-                                        },
-                                        children: d.default.parseTopic(e.replace("    - ", ""))
-                                    })
-                                }, t) : e.startsWith("- ") ? (0, a.jsx)("li", {
-                                    style: {
-                                        color: "var(--text-normal)",
-                                        marginLeft: 16
-                                    },
-                                    children: (0, a.jsx)(i.Text, {
-                                        variant: "text-sm/normal",
-                                        color: "text-muted",
-                                        style: {
-                                            display: "inline"
-                                        },
-                                        children: d.default.parseTopic(e.replace("- ", ""))
-                                    })
-                                }, t) : (0, a.jsx)(i.Text, {
-                                    variant: "text-sm/normal",
-                                    color: "text-muted",
-                                    children: d.default.parseTopic(e)
-                                }, t))
-                            }(r())
-                        })]
-                    }) : (0, a.jsx)(h.default, {
-                        guildPlans: t,
-                        overrideGuild: s
-                    })]
-                })
-            }
-
-            function j(e) {
-                return (0, a.jsxs)("div", {
-                    className: N.content,
-                    children: [(0, a.jsxs)("div", {
-                        className: N.header,
-                        children: [(0, a.jsx)(u.default, {
-                            width: 40,
-                            height: 40,
-                            className: N.reviewIcon
-                        }), (0, a.jsx)(i.Heading, {
-                            variant: "heading-xl/bold",
-                            color: "header-primary",
-                            children: g.default.Messages.NOTIF_MIGRATION_REVIEW_TITLE
-                        }), (0, a.jsx)(i.Text, {
-                            className: N.subtitle,
-                            variant: "text-md/medium",
-                            color: "header-secondary",
-                            children: g.default.Messages.NOTIF_MIGRATION_REVIEW_SUB_TITLE_1
-                        })]
-                    }), (0, a.jsx)(i.Text, {
-                        className: N.helpfulTips,
-                        variant: "text-sm/semibold",
-                        color: "text-muted",
-                        children: g.default.Messages.NOTIF_MIGRATION_REVIEW_SUB_TITLE_2
-                    }), (0, a.jsx)("img", {
-                        width: 942.5,
-                        src: s("402718"),
-                        alt: "yo"
+                    }), (0, t.jsx)(x.default, {
+                        guildPlans: s,
+                        overrideGuild: a
                     })]
                 })
             }

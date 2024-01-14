@@ -1,54 +1,54 @@
             "use strict";
             n.r(t), n.d(t, {
                 default: function() {
-                    return I
+                    return g
                 }
             }), n("222007");
             var i = n("37983"),
-                r = n("884691"),
-                l = n("77078"),
-                s = n("132755"),
+                l = n("884691"),
+                s = n("77078"),
+                r = n("132755"),
                 a = n("78404"),
                 o = n("520497"),
                 u = n("812809"),
                 d = n("129722"),
                 c = n("859971"),
-                E = n("477633"),
-                f = n("782340"),
-                _ = n("803336"),
-                I = r.memo(function(e) {
+                f = n("477633"),
+                m = n("782340"),
+                h = n("803336"),
+                g = l.memo(function(e) {
                     let {
                         sound: t,
                         volume: n,
-                        disabled: I
-                    } = e, [h, m] = r.useState(!1), A = r.useRef(null), {
-                        file: N,
-                        audio: S,
-                        loadAudioFromFile: g
-                    } = (0, d.useAudioTrimmerStore)(), p = r.useMemo(() => (0, o.default)(t.soundId), [t]);
-                    return r.useEffect(() => {
-                        null == A.current && (A.current = (0, c.loadAudioFileFromUrl)(p, t.name).then(g))
-                    }, [p, g, t.name]), (0, i.jsxs)("div", {
-                        className: _.previewContainer,
-                        children: [(0, i.jsx)(l.Clickable, {
-                            onClick: I ? void 0 : function() {
-                                null != S && (S.paused ? (S.volume = (0, u.default)(n), S.currentTime = 0, S.play(), m(!0), S.addEventListener("ended", () => m(!1), {
+                        disabled: g
+                    } = e, [E, S] = l.useState(!1), p = l.useRef(null), {
+                        file: v,
+                        audio: _,
+                        loadAudioFromFile: N
+                    } = (0, d.useAudioTrimmerStore)(), C = l.useMemo(() => (0, o.default)(t.soundId), [t]);
+                    return l.useEffect(() => {
+                        null == p.current && (p.current = (0, c.loadAudioFileFromUrl)(C, t.name).then(N))
+                    }, [C, N, t.name]), (0, i.jsxs)("div", {
+                        className: h.previewContainer,
+                        children: [(0, i.jsx)(s.Clickable, {
+                            onClick: g ? void 0 : function() {
+                                null != _ && (_.paused ? (_.volume = (0, u.default)(n), _.currentTime = 0, _.play(), S(!0), _.addEventListener("ended", () => S(!1), {
                                     once: !0
-                                })) : (S.pause(), m(!1)))
+                                })) : (_.pause(), S(!1)))
                             },
-                            className: _.playButton,
-                            "aria-label": h ? f.default.Messages.STOP : f.default.Messages.PLAY,
-                            children: h ? (0, i.jsx)(a.default, {
-                                className: _.playIcon
-                            }) : (0, i.jsx)(s.default, {
-                                className: _.playIcon
+                            className: h.playButton,
+                            "aria-label": E ? m.default.Messages.STOP : m.default.Messages.PLAY,
+                            children: E ? (0, i.jsx)(a.default, {
+                                className: h.playIcon
+                            }) : (0, i.jsx)(r.default, {
+                                className: h.playIcon
                             })
                         }), (0, i.jsx)("div", {
-                            className: _.waveformContainer,
-                            children: (0, i.jsx)(E.default, {
-                                className: _.waveform,
-                                file: N,
-                                audio: S
+                            className: h.waveformContainer,
+                            children: (0, i.jsx)(f.default, {
+                                className: h.waveform,
+                                file: v,
+                                audio: _
                             })
                         })]
                     })

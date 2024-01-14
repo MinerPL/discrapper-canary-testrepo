@@ -37,16 +37,16 @@
                         isEasterEggTriggered: v,
                         onHover: U,
                         onUnhover: D
-                    } = (0, S.default)(5), j = (0, i.debounce)(() => {
+                    } = (0, S.default)(5), b = (0, i.debounce)(() => {
                         _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
                             card_type: (0, i.snakeCase)(t)
                         })
                     }, 800);
                     e = {
-                        onMouseEnter: j,
+                        onMouseEnter: b,
                         ...e
                     };
-                    let b = L !== r || null == r || p;
+                    let j = L !== r || null == r || p;
                     return (n.useEffect(() => {
                         I && T && (m(!0), _.default.track(N.AnalyticEvents.PREMIUM_MARKETING_PERK_CARD_FLIPPED, {
                             card_type: t
@@ -80,7 +80,7 @@
                                 })
                             })]
                         })
-                    }) : b ? (0, a.jsx)("div", {
+                    }) : j ? (0, a.jsx)("div", {
                         className: l(P.noFlipCardContainer, {
                             [P.forceShadow]: E,
                             [P.reducedMotion]: I

@@ -1,30 +1,30 @@
             "use strict";
             n.r(t), n.d(t, {
                 useMemberVerificationFormNoticeStore: function() {
-                    return a
+                    return o
                 },
                 setHasUnsubmittedChanges: function() {
-                    return u
+                    return d
                 },
                 setShowWarning: function() {
-                    return s
+                    return u
                 }
             });
-            var i = n("308503"),
-                r = n("659500"),
-                l = n("49111");
-            let o = Object.freeze({
+            var s = n("308503"),
+                i = n("659500"),
+                r = n("49111");
+            let a = Object.freeze({
                     hasUnsubmittedChanges: !1,
                     shouldShowWarning: !1
                 }),
-                a = (0, i.default)(e => o),
-                u = e => {
-                    a.setState({
+                o = (0, s.default)(e => a),
+                d = e => {
+                    o.setState({
                         hasUnsubmittedChanges: e
                     })
                 },
-                s = e => {
-                    a.setState({
+                u = e => {
+                    o.setState({
                         shouldShowWarning: e
-                    }), e && r.ComponentDispatch.dispatch(l.ComponentActions.EMPHASIZE_NOTICE)
+                    }), e && i.ComponentDispatch.dispatch(r.ComponentActions.EMPHASIZE_NOTICE)
                 }

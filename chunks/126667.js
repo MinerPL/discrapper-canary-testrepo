@@ -25,7 +25,7 @@
                     } = e, i = (0, r.useStateFromStores)([E.default], () => E.default.getErrors()), T = (0, r.useStateFromStores)([E.default], () => E.default.getFormState()), I = (0, r.useStateFromStores)([f.default], () => {
                         let e = f.default.getCurrentUser();
                         return l(null != e, "EmailVerificationModal: user cannot be undefined"), e
-                    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), N = !h.default.isEmailReverification(S), A = null != I.email, [m, p] = s.useState(!0), g = T === C.FormStates.SUBMITTING;
+                    }), S = (0, r.useStateFromStores)([c.default], () => c.default.getAction()), N = !h.default.isEmailReverification(S), A = null != I.email, [p, m] = s.useState(!0), g = T === C.FormStates.SUBMITTING;
 
                     function R(e) {
                         var t, n;
@@ -39,10 +39,10 @@
                         emailError: O,
                         passwordError: L,
                         submitting: g,
-                        canResend: m && !g && A && 0 === O.length && 0 === L.length,
+                        canResend: p && !g && A && 0 === O.length && 0 === L.length,
                         canChange: N,
                         onChangeEmailClick: function() {
-                            p(!1)
+                            m(!1)
                         },
                         onVerify: function(e, t) {
                             (0, u.saveAccountChanges)({
@@ -51,7 +51,7 @@
                             }).then(e => {
                                 var t;
                                 !(null == e ? void 0 : e.ok) && (null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.username) != null && (0, d.showInvalidUsernameToast)()
-                            }), p(!0)
+                            }), m(!0)
                         },
                         onResend: function() {
                             o.default.verifyResend()

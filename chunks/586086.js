@@ -26,13 +26,13 @@
                 S = n("782340"),
                 N = n("492898");
             let A = 12,
-                m = () => {
+                p = () => {
                     let e = (0, c.getHistory)(),
                         t = e.location.search,
                         n = null != t && t.length > 0 && t.startsWith("?");
                     return n ? r.parse(t) : {}
                 },
-                p = e => {
+                m = e => {
                     let {
                         categoryId: t,
                         categoryName: n,
@@ -91,7 +91,7 @@
                     total: k
                 } = n, [w, F] = s.useState(!1), {
                     tag: B
-                } = m(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([E.default], () => E.default.hasSearchError()), W = (e, t, n) => {
+                } = p(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([E.default], () => E.default.hasSearchError()), W = (e, t, n) => {
                     d.doAlgoliaSearch(i, {
                         categoryId: n ? I.DISCOVERY_ALL_CATEGORIES_ID : M,
                         preferredLocale: r.code,
@@ -110,7 +110,7 @@
                     let {
                         offset: e,
                         tag: t
-                    } = m(), n = null != e ? Math.floor(parseInt(e, 10) / A) + 1 : 1;
+                    } = p(), n = null != e ? Math.floor(parseInt(e, 10) / A) + 1 : 1;
                     V(!!t), 1 === n && F(!0)
                 }, [i]);
                 let z = M === I.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
@@ -150,7 +150,7 @@
                         isSearchPage: !0,
                         currentCategoryId: M,
                         isTagSearch: H
-                    }), Y ? (0, a.jsx)(g, {}) : k <= 0 ? (0, a.jsx)(p, {
+                    }), Y ? (0, a.jsx)(g, {}) : k <= 0 ? (0, a.jsx)(m, {
                         categoryId: M,
                         categoryName: P,
                         onClick: () => {

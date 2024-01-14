@@ -23,12 +23,12 @@
                 S = n("685665"),
                 N = n("9759"),
                 A = n("754493"),
-                m = n("813531"),
-                p = n("21526"),
+                p = n("813531"),
+                m = n("21526"),
                 g = n("252551"),
                 R = n("232374"),
                 O = n("20606"),
-                L = n("509802"),
+                L = n("384997"),
                 v = n("785770"),
                 M = n("260488"),
                 P = n("639547"),
@@ -77,7 +77,7 @@
                     let {
                         selected: t,
                         ...n
-                    } = e, s = (0, o.useListItem)("friends"), i = (0, d.useStateFromStores)([q.default], () => q.default.getPendingCount()), l = (0, m.default)(), {
+                    } = e, s = (0, o.useListItem)("friends"), i = (0, d.useStateFromStores)([q.default], () => q.default.getPendingCount()), l = (0, p.default)(), {
                         canViewBroadcasts: r
                     } = N.default.useExperiment({
                         location: "friends_tab_no_track"
@@ -199,7 +199,7 @@
                         }) : null
                     })
                 },
-                em = e => {
+                ep = e => {
                     let {
                         selected: t
                     } = e, n = (0, M.useMessageRequestsCount)(), s = (0, o.useListItem)("messageRequests"), {
@@ -219,7 +219,7 @@
                         }) : null
                     })
                 },
-                ep = e => {
+                em = e => {
                     let {
                         selected: t,
                         locationState: n
@@ -231,7 +231,7 @@
                         icon: en.default,
                         text: eC.default.Messages.COLLECTIBLES_SHOP,
                         onClick: () => {
-                            (0, p.openCollectiblesShop)({
+                            (0, m.openCollectiblesShop)({
                                 openInLayer: !1,
                                 analyticsSource: i,
                                 analyticsLocations: l
@@ -388,9 +388,9 @@
                                     object: eh.AnalyticsObjects.NAVIGATION_LINK
                                 }
                             }
-                        }, "activities") : null, (0, a.jsx)(em, {
+                        }, "activities") : null, (0, a.jsx)(ep, {
                             selected: null == c ? null != s && s.startsWith(eh.Routes.MESSAGE_REQUESTS) : c === eh.Routes.MESSAGE_REQUESTS
-                        }, "message-requests"), (0, a.jsx)(ep, {
+                        }, "message-requests"), (0, a.jsx)(em, {
                             selected: c === eh.Routes.COLLECTIBLES_SHOP || (null == s ? void 0 : s.startsWith(eh.Routes.COLLECTIBLES_SHOP)),
                             locationState: {
                                 analyticsSource: {

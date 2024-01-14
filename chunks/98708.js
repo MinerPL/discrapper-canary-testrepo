@@ -28,8 +28,8 @@
                     channel: n,
                     otherUser: f,
                     active: S
-                } = e, N = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), A = (0, s.useStateFromStores)([c.default], () => null == f ? null : c.default.getNickname(f.id)), m = (0, _.useMessageRequestRelativeTimestampText)(n), {
-                    avatarDecorationSrc: p
+                } = e, N = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), A = (0, s.useStateFromStores)([c.default], () => null == f ? null : c.default.getNickname(f.id)), p = (0, _.useMessageRequestRelativeTimestampText)(n), {
+                    avatarDecorationSrc: m
                 } = (0, u.default)({
                     user: f,
                     size: (0, o.getDecorationSizeForAvatarSize)(i.AvatarSizes.SIZE_40),
@@ -39,7 +39,7 @@
                     children: [(0, a.jsx)(I, {
                         className: T.avatar,
                         src: (0, d.getChannelIconURL)(n, 40, !N && S),
-                        avatarDecoration: p,
+                        avatarDecoration: m,
                         size: i.AvatarSizes.SIZE_40,
                         "aria-label": null !== (t = null == f ? void 0 : f.username) && void 0 !== t ? t : C.default.Messages.UNKNOWN_USER
                     }), (0, a.jsxs)("div", {
@@ -57,7 +57,7 @@
                                 className: T.timestampWithPreview,
                                 color: "text-muted",
                                 variant: "text-xs/normal",
-                                children: m
+                                children: p
                             })]
                         }), (0, a.jsx)("div", {
                             className: T.messagePreview,

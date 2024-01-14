@@ -1,118 +1,118 @@
             "use strict";
             n.r(t), n.d(t, {
                 startImpersonating: function() {
-                    return h
+                    return E
                 },
                 updateImpersonating: function() {
-                    return I
+                    return p
                 },
                 stopImpersonating: function() {
-                    return A
+                    return y
                 },
                 updateImpersonatedChannels: function() {
-                    return N
-                },
-                updateImpersonatedRoles: function() {
                     return C
                 },
+                updateImpersonatedRoles: function() {
+                    return S
+                },
                 updateImpersonatedData: function() {
-                    return m
+                    return I
                 }
             }), n("222007");
-            var i = n("913144"),
-                r = n("716241"),
-                l = n("393414"),
-                o = n("42203"),
-                a = n("923959"),
-                u = n("26989"),
-                s = n("305961"),
-                d = n("957255"),
-                c = n("18494"),
-                f = n("282109"),
-                E = n("599110"),
-                _ = n("38654"),
-                p = n("507950"),
-                S = n("49111"),
-                T = n("724210");
+            var s = n("913144"),
+                i = n("716241"),
+                r = n("393414"),
+                a = n("42203"),
+                o = n("923959"),
+                d = n("26989"),
+                u = n("305961"),
+                l = n("957255"),
+                f = n("18494"),
+                _ = n("282109"),
+                c = n("599110"),
+                g = n("38654"),
+                m = n("507950"),
+                h = n("49111"),
+                v = n("724210");
 
-            function h(e, t) {
-                E.default.track(S.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+            function E(e, t) {
+                c.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(t.roles).length,
-                    ...(0, r.collectGuildAnalyticsMetadata)(e),
-                    is_viewing_as_member: t.type === p.ImpersonateType.NEW_MEMBER
-                }), i.default.dispatch({
+                    ...(0, i.collectGuildAnalyticsMetadata)(e),
+                    is_viewing_as_member: t.type === m.ImpersonateType.NEW_MEMBER
+                }), s.default.dispatch({
                     type: "IMPERSONATE_UPDATE",
                     guildId: e,
                     data: t
-                }), g(e)
+                }), T(e)
             }
 
-            function I(e, t) {
-                let n = _.default.getData(e);
-                null != n && n.type === t.type && (E.default.track(S.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
+            function p(e, t) {
+                let n = g.default.getData(e);
+                null != n && n.type === t.type && (c.default.track(h.AnalyticEvents.VIEW_AS_ROLES_SELECTED, {
                     num_roles: Object.keys(n.roles).length,
-                    ...(0, r.collectGuildAnalyticsMetadata)(e),
-                    is_viewing_as_member: n.type === p.ImpersonateType.NEW_MEMBER
-                }), i.default.dispatch({
+                    ...(0, i.collectGuildAnalyticsMetadata)(e),
+                    is_viewing_as_member: n.type === m.ImpersonateType.NEW_MEMBER
+                }), s.default.dispatch({
                     type: "IMPERSONATE_UPDATE",
                     guildId: e,
                     data: {
                         ...n,
                         ...t
                     }
-                }), g(e))
+                }), T(e))
             }
 
-            function A(e) {
-                i.default.dispatch({
+            function y(e) {
+                s.default.dispatch({
                     type: "IMPERSONATE_STOP",
                     guildId: e
                 })
             }
 
-            function g(e) {
-                let t = c.default.getChannelId(e),
-                    n = o.default.getChannel(t),
-                    i = null != t && (0, T.isStaticChannelRoute)(t);
-                if (!i && !d.default.can(S.Permissions.VIEW_CHANNEL, n)) {
-                    let t = a.default.getDefaultChannel(e);
-                    null != t && (0, l.transitionTo)(S.Routes.CHANNEL(e, t.id))
+            function T(e) {
+                let t = f.default.getChannelId(e),
+                    n = a.default.getChannel(t),
+                    s = null != t && (0, v.isStaticChannelRoute)(t);
+                if (!s && !l.default.can(h.Permissions.VIEW_CHANNEL, n)) {
+                    let t = o.default.getDefaultChannel(e);
+                    null != t && (0, r.transitionTo)(h.Routes.CHANNEL(e, t.id))
                 }
             }
 
-            function N(e, t, n) {
-                let i = new Set(f.default.getOptedInChannels(e));
-                t.forEach(e => i.add(e)), n.forEach(e => i.delete(e)), I(e, {
-                    type: p.ImpersonateType.NEW_MEMBER,
-                    optInChannels: i
+            function C(e, t, n) {
+                let s = new Set(_.default.getOptedInChannels(e));
+                t.forEach(e => s.add(e)), n.forEach(e => s.delete(e)), p(e, {
+                    type: m.ImpersonateType.NEW_MEMBER,
+                    optInChannels: s
                 })
             }
 
-            function C(e, t) {
-                let n = s.default.getGuild(e);
+            function S(e, t) {
+                let n = u.default.getGuild(e);
                 if (null == n) return;
                 ! function(e, t) {
-                    let n = [...a.default.getSelectableChannelIds(e), ...a.default.getVocalChannelIds(e)],
-                        i = Array.from(t);
-                    a.default.addConditionalChangeListener(() => {
-                        let t = u.default.getSelfMember(e);
+                    let n = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)],
+                        s = Array.from(t);
+                    o.default.addConditionalChangeListener(() => {
+                        let t = d.default.getSelfMember(e);
                         if (null == t) return !1;
-                        if (i.some(e => !t.roles.includes(e))) return !0;
-                        let r = [...a.default.getSelectableChannelIds(e), ...a.default.getVocalChannelIds(e)],
-                            l = r.filter(e => !n.includes(e));
-                        return l.length > 0 && N(e, l, []), !1
+                        if (s.some(e => !t.roles.includes(e))) return !0;
+                        let i = [...o.default.getSelectableChannelIds(e), ...o.default.getVocalChannelIds(e)],
+                            r = i.filter(e => !n.includes(e));
+                        return r.length > 0 && C(e, r, []), !1
                     })
                 }(e, t);
-                let i = {};
-                t.forEach(e => i[e] = n.roles[e]), I(e, {
-                    type: p.ImpersonateType.NEW_MEMBER,
-                    roles: i
+                let s = {};
+                t.forEach(e => s[e] = n.roles[e]), p(e, {
+                    type: m.ImpersonateType.NEW_MEMBER,
+                    roles: s
                 })
             }
 
-            function m(e, t) {
-                I(e, {
-                    type: p.ImpersonateType.NEW_MEMBER,
+            function I(e, t) {
+                p(e, {
+                    type: m.ImpersonateType.NEW_MEMBER,
                     ...t
                 })
             }

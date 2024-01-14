@@ -1541,7 +1541,6 @@
             e.exports = {
                 categoryHeader: "categoryHeader__46769",
                 headerBar: "headerBar_afb1ac",
-                home: "home_d6d172",
                 homeBody: "homeBody__413be",
                 homeTile: "homeTile_e56701",
                 homeWrapper: "homeWrapper__59a03",
@@ -1549,7 +1548,6 @@
                 marketingWrapper: "marketingWrapper_c87a52 homeWrapper__59a03",
                 premiumApplicationsHeader: "premiumApplicationsHeader_e2dd83",
                 premiumContainer: "premiumContainer__2ebd0",
-                scroller: "scroller__244e5",
                 spinner: "spinner__6bfe4",
                 viewAllGames: "viewAllGames__9b81c",
                 viewAllGamesButton: "viewAllGamesButton__6eb3d",
@@ -3903,12 +3901,13 @@
             e.exports = {
                 channelIcon: "channelIcon__801cb",
                 channelLabel: "channelLabel__6345a",
-                channelRowLabel: "channelRowLabel__5940b",
+                channelSpine: "channelSpine_e83bee",
                 hasParent: "hasParent_df45f2",
+                helperText: "helperText__8a721",
                 noIndent: "noIndent__90a43",
                 resultsList: "resultsList_bec6cd",
+                resultsListContainer: "resultsListContainer__4ec00",
                 resultsListParent: "resultsListParent_b72c41",
-                roleLabel: "roleLabel_cf92a0",
                 roleTag: "roleTag_cba5b8",
                 roleTagContainer: "roleTagContainer__353b8",
                 roleTagIcon: "roleTagIcon_b47995",
@@ -3919,6 +3918,7 @@
                 searchBar: "searchBar_e9a65c",
                 searchBox: "searchBox__74225",
                 searchContainer: "searchContainer_bffd9f",
+                searchRowLabel: "searchRowLabel_b64d40",
                 sectionFooter: "sectionFooter__8f8ea",
                 sectionHeight: "sectionHeight_c85c9e",
                 sectionTitle: "sectionTitle__71387",
@@ -5210,6 +5210,14 @@
                 keyRecorder: "keyRecorder__37fd0"
             }
         },
+        669309: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                buttonContainer: "buttonContainer__1fca6",
+                reminderTooltip: "reminderTooltip__4289a",
+                tooltipContent: "tooltipContent__0a653"
+            }
+        },
         577199: function(e, t, o) {
             "use strict";
             e.exports = {
@@ -5451,14 +5459,6 @@
                 username: "username__64a88"
             }
         },
-        455841: function(e, t, o) {
-            "use strict";
-            e.exports = {
-                chatHeaderBar: "chatHeaderBar__452bd",
-                chatHeaderBarText: "chatHeaderBarText__14b8a",
-                narrow: "narrow__0fde3"
-            }
-        },
         25170: function(e, t, o) {
             "use strict";
             e.exports = {
@@ -5479,14 +5479,6 @@
                 emojiThumbsUp: "emojiThumbsUp__2690c emoji__932f7",
                 ratingsSelector: "ratingsSelector_a87d71",
                 selected: "selected__5b0ab"
-            }
-        },
-        445930: function(e, t, o) {
-            "use strict";
-            e.exports = {
-                button: "button__7fb6c",
-                title: "title__339ed",
-                titleContainer: "titleContainer_e7fbe2"
             }
         },
         400496: function(e, t, o) {
@@ -5784,7 +5776,6 @@
                 premiumBadge: "premiumBadge_d4fb0d",
                 premiumBadgeText: "premiumBadgeText__2492a",
                 premiumBadgeWrapper: "premiumBadgeWrapper__58187",
-                shopForAllHeroBanner: "shopForAllHeroBanner__734b9",
                 smallLeftSparkle: "smallLeftSparkle__78868",
                 smallRightSparkle: "smallRightSparkle_a14288",
                 smallSparkle: "smallSparkle__84935",
@@ -5917,6 +5908,7 @@
             e.exports = {
                 art: "art__23b36",
                 artContainer: "artContainer_fc2857",
+                artJan2024: "artJan2024_a7d694",
                 container: "container_d6bff4",
                 ctaButton: "ctaButton__7d20c",
                 mainColumn: "mainColumn_f44fc2",
@@ -7564,6 +7556,22 @@
                 name: "name__59b76"
             }
         },
+        968982: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                categoryRow: "categoryRow__56206",
+                channelIcon: "channelIcon__081cb",
+                channelIconContainer: "channelIconContainer__965ac",
+                channelName: "channelName_d417c3",
+                channelRow: "channelRow__97b12",
+                goBackButton: "goBackButton__03acf",
+                guildSelector: "guildSelector_e2953b",
+                modalContent: "modalContent__32131",
+                modalFooter: "modalFooter__6a2d6",
+                modalHeader: "modalHeader__105b5",
+                modalHeaderTitle: "modalHeaderTitle__69789"
+            }
+        },
         274372: function(e, t, o) {
             "use strict";
             e.exports = {
@@ -7575,14 +7583,16 @@
         45912: function(e, t, o) {
             "use strict";
             e.exports = {
-                ring: "ring__452c3"
+                tooltipText: "tooltipText__03fc1"
             }
         },
         308611: function(e, t, o) {
             "use strict";
             e.exports = {
                 favoriteIcon: "favoriteIcon_adf80e",
-                pill: "pill_f4ac2f"
+                pill: "pill_f4ac2f",
+                ring: "ring__349e5",
+                ringActive: "ringActive_bb4059"
             }
         },
         171684: function(e, t, o) {
@@ -8598,7 +8608,8 @@
                 selectorTextSelected: "selectorTextSelected_d7d560 selectorText_b1d64c",
                 settingsGroup: "settingsGroup__8c3f8",
                 toolTipTextContainer: "toolTipTextContainer__3b924",
-                tooltip: "tooltip_c91c10"
+                tooltip: "tooltip_c91c10",
+                upsellText: "upsellText__80136"
             }
         },
         139191: function(e, t, o) {
@@ -10144,9 +10155,6 @@
             "use strict";
             e.exports = {
                 backButton: "backButton__2f3b7",
-                container: "container_b3957f",
-                header: "header_dfa38f",
-                headerTitle: "headerTitle__60ae2",
                 innerContainer: "innerContainer__68aae",
                 keyComboContainer: "keyComboContainer_c48c31",
                 keyComboInner: "keyComboInner_a00a38"
@@ -10160,6 +10168,7 @@
                 bottomRowActionDisabled: "bottomRowActionDisabled__413d8",
                 closeAction: "closeAction__06c6c",
                 container: "container__8316e",
+                innerBottomRowAction: "innerBottomRowAction_ccb714",
                 memberAvatar: "memberAvatar__5f01a",
                 memberName: "memberName_be9f8d",
                 memberNameContainer: "memberNameContainer__7f3f1",
@@ -10521,6 +10530,7 @@
                 "display-md": "display-md_f8c780",
                 "display-sm": "display-sm__3450e",
                 eyebrow: "eyebrow__42dd7",
+                fontScaling: "fontScaling_dae118",
                 "heading-deprecated-12/bold": "heading-deprecated-12-bold__3c198",
                 "heading-deprecated-12/extrabold": "heading-deprecated-12-extrabold_d42f9e",
                 "heading-deprecated-12/medium": "heading-deprecated-12-medium__2741b",
@@ -10600,6 +10610,7 @@
                 "display-md": "display-md_ea7064",
                 "display-sm": "display-sm_e7cbfd",
                 eyebrow: "eyebrow__41622",
+                fontScaling: "fontScaling_dcc428",
                 "heading-deprecated-12/bold": "heading-deprecated-12-bold_fc78fa",
                 "heading-deprecated-12/extrabold": "heading-deprecated-12-extrabold__567fe",
                 "heading-deprecated-12/medium": "heading-deprecated-12-medium_fbc93e",
@@ -10734,6 +10745,7 @@
                 "display-sm": "display-sm_fa627c",
                 eyebrow: "eyebrow__35262",
                 flagContainer: "flagContainer__5347a",
+                fontScaling: "fontScaling__7cc68",
                 "heading-deprecated-12/bold": "heading-deprecated-12-bold__44d4f",
                 "heading-deprecated-12/extrabold": "heading-deprecated-12-extrabold__0fce1",
                 "heading-deprecated-12/medium": "heading-deprecated-12-medium_b65871",
@@ -13264,7 +13276,8 @@
                 removeButton: "removeButton_aba08a",
                 rightButtons: "rightButtons__17ac2",
                 rolesHeader: "rolesHeader__9fae7",
-                rolesInputHelp: "rolesInputHelp__54299"
+                rolesInputHelp: "rolesInputHelp__54299",
+                searchInput: "searchInput__5294a"
             }
         },
         965979: function(e, t, o) {
@@ -13378,34 +13391,6 @@
                 uploadButton: "uploadButton__6add7",
                 upsellButton: "upsellButton__2e068",
                 upsellButtonInner: "upsellButtonInner__4692d"
-            }
-        },
-        470514: function(e, t, o) {
-            "use strict";
-            e.exports = {
-                channelAndRoleContainer: "channelAndRoleContainer_d5a1e0",
-                channelIcon: "channelIcon__9cdc6",
-                channelLabel: "channelLabel_e08f1f",
-                channelRowLabel: "channelRowLabel__9c6c0",
-                hasParent: "hasParent__7a03a",
-                helperText: "helperText_bd3964",
-                noIndent: "noIndent__66ac5",
-                resultsList: "resultsList_ccad0b",
-                resultsListParent: "resultsListParent__4f138",
-                roleLabel: "roleLabel_f4e248",
-                roleTag: "roleTag_a2eb5a",
-                roleTagContainer: "roleTagContainer_b04b38",
-                roleTagIcon: "roleTagIcon__3575e",
-                roleTagLabel: "roleTagLabel_a5e85e",
-                rowContainer: "rowContainer__9e828",
-                rowHeight: "rowHeight_c85f5a",
-                rowLabel: "rowLabel__99f19",
-                searchBar: "searchBar__5175c",
-                searchBox: "searchBox__49097",
-                searchContainer: "searchContainer__0faa9",
-                sectionHeight: "sectionHeight_f27667",
-                sectionTitle: "sectionTitle__84928",
-                selectableSearchRow: "selectableSearchRow__1c74e"
             }
         },
         48887: function(e, t, o) {
@@ -14737,6 +14722,7 @@
                 unread: "unread__48cf4",
                 unreadImportant: "unreadImportant_c775b3",
                 unreadWithHangStatus: "unreadWithHangStatus_bbb809",
+                withGuildIcon: "withGuildIcon_cd7a25",
                 wrapper: "wrapper__7bcde"
             }
         },
@@ -14756,7 +14742,6 @@
                 scroller: "scroller_f0f183",
                 sectionDivider: "sectionDivider__68d2a",
                 sectionDividerWithBottom: "sectionDividerWithBottom__9b53a sectionDivider__68d2a",
-                threadListWithGuildIcon: "threadListWithGuildIcon__81019",
                 unread: "unread__11823 " + o("100252").container,
                 unreadBar: "unreadBar__6ecda",
                 unreadBottom: "unreadBottom__6be9f unread__11823 " + o("100252").container,
@@ -14888,7 +14873,9 @@
             e.exports = {
                 container: "container_f87d43",
                 spine: "spine__88e6d",
-                spineBorder: "spineBorder_bdec8b"
+                spineBorder: "spineBorder_bdec8b",
+                spineBorderWithGuildIcon: "spineBorderWithGuildIcon_a5c9e8 spineBorder_bdec8b",
+                spineWithGuildIcon: "spineWithGuildIcon_bad76a spine__88e6d"
             }
         },
         477635: function(e, t, o) {
@@ -15192,6 +15179,13 @@
                 hover: "hover__043de",
                 miniPlaceholder: "miniPlaceholder__62f9d",
                 wrapper: "wrapper_ed1dea"
+            }
+        },
+        246507: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                circleIconButton: "circleIconButton_aea38e",
+                geoRestrictedBadge: "geoRestrictedBadge_c8de97"
             }
         },
         789978: function(e, t, o) {
@@ -15920,7 +15914,8 @@
             e.exports = {
                 childButton: "childButton__832dc",
                 childIcon: "childIcon__5f8da",
-                childText: "childText__5bb60"
+                childText: "childText__5bb60",
+                externalLinkWrapper: "externalLinkWrapper__51e09"
             }
         },
         846937: function(e, t, o) {
@@ -17547,22 +17542,43 @@
                 spinner: "spinner__62006"
             }
         },
-        471665: function(e, t, o) {
+        327461: function(e, t, o) {
             "use strict";
             e.exports = {
-                column: "column__04851",
-                columnTooltip: "columnTooltip__15feb",
-                container: "container__3d8ce",
-                essentials: "essentials__05db9",
-                everything: "everything__3aef9",
-                guilds: "guilds__108bc",
-                header: "header__7facf",
-                headerLeft: "headerLeft__2d213",
-                headerRight: "headerRight_e35cff",
-                none: "none__5721d",
-                showAllCheckbox: "showAllCheckbox_be0771",
-                showAllCheckboxContainer: "showAllCheckboxContainer__32ee0",
-                tooltip: "tooltip__68b59"
+                checkmark: "checkmark__850c4",
+                container: "container__959b8",
+                divider: "divider__68ef6",
+                guild: "guild__96e35",
+                guildIcon: "guildIcon__79a4d",
+                guilds: "guilds__7d7c4",
+                guildsContainer: "guildsContainer__1afef",
+                header: "header__28029",
+                scroller: "scroller__80ae4",
+                selected: "selected_d6fc30",
+                tooltip: "tooltip_d81865",
+                tooltipRow: "tooltipRow__423ff"
+            }
+        },
+        647181: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                arrow: "arrow__3c8e6",
+                before: "before__8cd65",
+                beforeTitle: "beforeTitle__89d91",
+                channel: "channel_a85a76",
+                channelIcon: "channelIcon__37f81",
+                channels: "channels__5a924",
+                column: "column_aeca2e",
+                columns: "columns__4b5ef",
+                dot: "dot__62e0c",
+                grey: "grey_b5eb31",
+                guilds: "guilds_b69610",
+                mention: "mention_cb8698",
+                previewContainer: "previewContainer__692b2",
+                previewInner: "previewInner_b25324",
+                pulse: "pulse_d595c0",
+                tip: "tip__4b4c1",
+                unreadGuild: "unreadGuild__80d5d"
             }
         },
         650287: function(e, t, o) {
@@ -17571,11 +17587,13 @@
                 buttons: "buttons_fac1ba",
                 content: "content__9acd0",
                 dismiss: "dismiss_c7051e",
+                hackyText: "hackyText__0c5d6",
+                hackyTip: "hackyTip__2b788",
+                hackyTips: "hackyTips__120c6",
                 header: "header__2953d",
                 helpfulTips: "helpfulTips__3819f",
-                introIcon: "introIcon__0e3e1",
-                reviewIcon: "reviewIcon__7d092",
-                right: "right__48241"
+                right: "right__48241",
+                warning: "warning_c173b6"
             }
         },
         805986: function(e, t, o) {
@@ -17585,6 +17603,28 @@
                 progressBar: "progressBar_c34f6a",
                 tab: "tab_b7e38d",
                 tabs: "tabs__8ef81"
+            }
+        },
+        492489: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                active: "active__5a05c",
+                bigMenu: "bigMenu__16e1a",
+                bigMenuHeader: "bigMenuHeader__08e39",
+                caret: "caret_ba0700",
+                channel: "channel_b19404",
+                channelPreviewInner: "channelPreviewInner__9feaa",
+                column: "column__43e96",
+                columns: "columns_efd1e6",
+                divider: "divider__15315",
+                header: "header__0606d",
+                icon: "icon_f415da",
+                leftMenu: "leftMenu__48a5d",
+                menu: "menu_f8dd68",
+                menuItem: "menuItem__530f6",
+                previewContainer: "previewContainer_f1ccf8",
+                previewInner: "previewInner__38693",
+                rightMenu: "rightMenu__771fd"
             }
         },
         775247: function(e, t, o) {
@@ -17657,6 +17697,16 @@
                 settingLabel: "settingLabel_c60961",
                 unread: "unread__94014",
                 unreadMuted: "unreadMuted_e9b847"
+            }
+        },
+        60490: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                button: "button_e2e738",
+                buttonInner: "buttonInner_d034a5",
+                buttons: "buttons_d1f537",
+                info: "info_b9d68d",
+                notice: "notice__6934b"
             }
         },
         232425: function(e, t, o) {
@@ -18283,13 +18333,11 @@
             "use strict";
             e.exports = {
                 actionButtons: "actionButtons_b58cbb",
-                active: "active__29381",
                 beta: "beta__59fad",
                 button: "button__66e8c",
                 buttonActive: "buttonActive__407a7",
                 buttonColor: "buttonColor_a6eb73",
                 buttonContents: "buttonContents__387ff",
-                buttonDeveloperActivityShelf: "buttonDeveloperActivityShelf__94e0d",
                 buttonIcon: "buttonIcon__80d32",
                 channel: "channel_d7d412",
                 connection: "connection__5bb32",
@@ -18512,6 +18560,7 @@
                 "display-sm": "display-sm_a5f72d",
                 error: "error_f74f70",
                 eyebrow: "eyebrow__7b0c0",
+                fontScaling: "fontScaling__5cbf7",
                 footer: "footer__4b7b8",
                 header: "header__7bc02",
                 headerText: "headerText__8d8f5",
@@ -18628,6 +18677,7 @@
                 "display-md": "display-md_c2f984",
                 "display-sm": "display-sm__7cfd1",
                 eyebrow: "eyebrow__003da",
+                fontScaling: "fontScaling_e79102",
                 "heading-deprecated-12/bold": "heading-deprecated-12-bold__5c878",
                 "heading-deprecated-12/extrabold": "heading-deprecated-12-extrabold__873c9",
                 "heading-deprecated-12/medium": "heading-deprecated-12-medium_a13de0",
@@ -19368,6 +19418,7 @@
             "use strict";
             e.exports = {
                 attachmentImage: "attachmentImage__468d1",
+                checkmarkCircle: "checkmarkCircle__88bcc",
                 enabled: "enabled__75d0c",
                 listItemButton: "listItemButton_a98837"
             }
@@ -19438,6 +19489,7 @@
                 eyebrow: "eyebrow__4498b",
                 fetchText: "fetchText_faa37c",
                 finishTitle: "finishTitle_aed0f9",
+                fontScaling: "fontScaling__8fa49",
                 formMessage: "formMessage__7dd30",
                 formMessageNegative: "formMessageNegative_cfa9d9",
                 formMessagePositive: "formMessagePositive__3efd9",
@@ -20507,7 +20559,6 @@
                 accountCreditTitle: "accountCreditTitle_e0b7b3",
                 applicationStoreHomeWrapper: "applicationStoreHomeWrapper_ac145c",
                 background: "background__7bde6",
-                bottomOfPageVisibilitySensor: "bottomOfPageVisibilitySensor_ca9280",
                 container: "container__9ecba",
                 content: "content__25fc5",
                 loading: "loading__053e3",
@@ -20807,6 +20858,7 @@
             e.exports = {
                 bannerFullScreenNegativeMargin: "bannerFullScreenNegativeMargin__1a304",
                 bottomIllustration: "bottomIllustration__5d164",
+                bottomOfPageVisibilitySensor: "bottomOfPageVisibilitySensor__201a9",
                 container: "container__74da1",
                 existingSubscriberSpacing: "existingSubscriberSpacing__3dfec",
                 footerSpacing: "footerSpacing__9d9e4",
@@ -20826,6 +20878,8 @@
                 premiumTierCardsContainer: "premiumTierCardsContainer_e3c13b",
                 premiumTierCardsContainerFullscreen: "premiumTierCardsContainerFullscreen__90547 premiumTierCardsContainer_e3c13b",
                 premiumTierCardsContainerSettings: "premiumTierCardsContainerSettings_f346a8 premiumTierCardsContainer_e3c13b",
+                scroller: "scroller_a1aadd",
+                settingsContainer: "settingsContainer_b14e24",
                 settingsHeroBogoHeight: "settingsHeroBogoHeight__39203",
                 settingsHeroBogoMarginFullscreen: "settingsHeroBogoMarginFullscreen__9f6a6",
                 settingsHeroNoBackground: "settingsHeroNoBackground__0cfbe",
@@ -20840,10 +20894,12 @@
             "use strict";
             e.exports = {
                 bottomIllustration: "bottomIllustration__8dcea",
+                bottomOfPageVisibilitySensor: "bottomOfPageVisibilitySensor_ab7f4d",
                 container: "container__6eaa3",
                 footerSpacing: "footerSpacing_e43335",
                 giftNitro: "giftNitro__7b37a",
                 heroHeading: "heroHeading_a17887",
+                mainPageScroller: "mainPageScroller__12afb",
                 manageMembership: "manageMembership__63c2c",
                 perksCards: "perksCards_e83187",
                 perksDiscoverability: "perksDiscoverability__4242c",
@@ -21543,6 +21599,25 @@
             e.exports = {
                 header: "header__24f04",
                 video: "video__32142"
+            }
+        },
+        701098: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                container: "container__3e2aa"
+            }
+        },
+        434848: function(e, t, o) {
+            "use strict";
+            e.exports = {
+                closeButton: "closeButton__40b1b",
+                header: "header__61553",
+                learnMore: "learnMore__8d996",
+                modalContent: "modalContent__7e5de",
+                optionHeader: "optionHeader__02759",
+                policyContainer: "policyContainer__9d7f3",
+                subtitle: "subtitle__49882",
+                title: "title__76203"
             }
         },
         383496: function(e, t, o) {
@@ -25138,7 +25213,6 @@
                 gameNightActivityIsActive: "gameNightActivityIsActive__66108",
                 gameNightButton: "gameNightButton__71f00",
                 gameNightButtonInner: "gameNightButtonInner_a72ec4",
-                gameNightDeveloperActivityShelf: "gameNightDeveloperActivityShelf__0babf",
                 gameNightRocket: "gameNightRocket_f91b21"
             }
         },
@@ -25486,6 +25560,7 @@
                 "display-md": "display-md__392fd",
                 "display-sm": "display-sm_fc3bbf",
                 eyebrow: "eyebrow_f53856",
+                fontScaling: "fontScaling__5000d",
                 "heading-deprecated-12/bold": "heading-deprecated-12-bold__16ae6",
                 "heading-deprecated-12/extrabold": "heading-deprecated-12-extrabold__172c1",
                 "heading-deprecated-12/medium": "heading-deprecated-12-medium__80948",

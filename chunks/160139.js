@@ -65,7 +65,7 @@
                         })]
                     })
                 },
-                D = e => {
+                y = e => {
                     let {
                         focused: t,
                         windowKey: n,
@@ -134,7 +134,7 @@
                             hasOpenLayer: E
                         });
                     case m.PlatformTypes.OSX:
-                        return (0, a.jsx)(D, {
+                        return (0, a.jsx)(y, {
                             focused: t,
                             windowKey: r,
                             frame: s,

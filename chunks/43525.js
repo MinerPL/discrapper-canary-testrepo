@@ -1,96 +1,80 @@
             "use strict";
-            l.r(t), l.d(t, {
+            a.r(t), a.d(t, {
                 default: function() {
-                    return g
+                    return C
                 }
             });
-            var a = l("37983");
-            l("884691");
-            var s = l("414456"),
-                r = l.n(s),
-                n = l("65597"),
-                o = l("77078"),
-                i = l("697218"),
-                u = l("216422"),
-                c = l("719923"),
-                d = l("782340"),
-                f = l("98881"),
-                C = l("247329"),
-                m = l("333838"),
-                E = l("399637"),
-                p = l("976076"),
-                g = function(e) {
+            var l = a("37983");
+            a("884691");
+            var s = a("414456"),
+                r = a.n(s),
+                n = a("77078"),
+                o = a("782340"),
+                i = a("98881"),
+                u = a("247329"),
+                c = a("333838"),
+                d = a("399637"),
+                f = a("976076"),
+                C = function(e) {
                     let {
                         isFullScreen: t
-                    } = e, l = (0, n.default)([i.default], () => i.default.getCurrentUser()), s = c.default.canUseCollectibles(l);
-                    return (0, a.jsxs)("div", {
-                        className: r(f.heroBanner, {
-                            [f.shopForAllHeroBanner]: !s
-                        }),
-                        children: [(0, a.jsxs)("div", {
-                            className: r(f.heroDescription, {
-                                [f.heroDescriptionWithSidebar]: !t
+                    } = e;
+                    return (0, l.jsxs)("div", {
+                        className: i.heroBanner,
+                        children: [(0, l.jsxs)("div", {
+                            className: r(i.heroDescription, {
+                                [i.heroDescriptionWithSidebar]: !t
                             }),
-                            children: [s && (0, a.jsxs)(o.Text, {
-                                color: "always-white",
-                                variant: "eyebrow",
-                                className: f.premiumBadgeWrapper,
-                                children: [(0, a.jsx)(u.default, {
-                                    className: f.premiumBadge
-                                }), (0, a.jsx)("span", {
-                                    className: f.premiumBadgeText,
-                                    children: d.default.Messages.REMIXING_TOOLTIP_NITRO_EARLY_ACCESS
-                                })]
-                            }), (0, a.jsx)(o.Heading, {
-                                className: f.bannerTitle,
+                            children: [(0, l.jsx)(n.Heading, {
+                                className: i.bannerTitle,
                                 color: "always-white",
                                 variant: "display-lg",
-                                children: d.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
-                            }), (0, a.jsx)(o.Text, {
-                                className: f.heroSubtitle,
+                                children: o.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
+                            }), (0, l.jsx)(n.Text, {
+                                className: i.heroSubtitle,
                                 color: "always-white",
                                 variant: "text-lg/normal",
-                                children: d.default.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE
+                                children: o.default.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE
                             })]
-                        }), (0, a.jsx)("div", {
-                            className: f.bannerBackgroundWrapper,
-                            children: (0, a.jsx)("img", {
-                                className: f.bannerBackground,
+                        }), (0, l.jsx)("div", {
+                            className: i.bannerBackgroundWrapper,
+                            children: (0, l.jsx)("img", {
+                                className: i.bannerBackground,
                                 alt: "",
-                                src: C
+                                src: u
                             })
-                        }), (0, a.jsx)("img", {
-                            className: f.bannerForeground,
+                        }), (0, l.jsx)("img", {
+                            className: i.bannerForeground,
                             alt: "",
-                            src: m
-                        }), (0, a.jsx)("img", {
-                            className: f.bannerHand,
+                            src: c
+                        }), (0, l.jsx)("img", {
+                            className: i.bannerHand,
                             alt: "",
-                            src: E
-                        }), (0, a.jsx)("img", {
-                            className: r(f.largeSparkle, f.largeTopSparkle),
+                            src: d
+                        }), (0, l.jsx)("img", {
+                            className: r(i.largeSparkle, i.largeTopSparkle),
                             alt: "",
-                            src: p
-                        }), (0, a.jsx)("img", {
-                            className: r(f.smallSparkle, f.smallTopSparkle),
+                            src: f
+                        }), (0, l.jsx)("img", {
+                            className: r(i.smallSparkle, i.smallTopSparkle),
                             alt: "",
-                            src: p
-                        }), (0, a.jsx)("img", {
-                            className: r(f.largeSparkle, f.largeLeftSparkle),
+                            src: f
+                        }), (0, l.jsx)("img", {
+                            className: r(i.largeSparkle, i.largeLeftSparkle),
                             alt: "",
-                            src: p
-                        }), (0, a.jsx)("img", {
-                            className: r(f.smallSparkle, f.smallLeftSparkle),
+                            src: f
+                        }), (0, l.jsx)("img", {
+                            className: r(i.smallSparkle, i.smallLeftSparkle),
                             alt: "",
-                            src: p
-                        }), (0, a.jsx)("img", {
-                            className: r(f.largeSparkle, f.largeRightSparkle),
+                            src: f
+                        }), (0, l.jsx)("img", {
+                            className: r(i.largeSparkle, i.largeRightSparkle),
                             alt: "",
-                            src: p
-                        }), (0, a.jsx)("img", {
-                            className: r(f.smallSparkle, f.smallRightSparkle),
+                            src: f
+                        }), (0, l.jsx)("img", {
+                            className: r(i.smallSparkle, i.smallRightSparkle),
                             alt: "",
-                            src: p
+                            src: f
                         })]
                     })
                 }

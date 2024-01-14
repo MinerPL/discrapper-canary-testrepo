@@ -21,8 +21,8 @@
                 S = n("429928"),
                 N = n("502651"),
                 A = n("29088"),
-                m = n("698372"),
-                p = n("141962"),
+                p = n("698372"),
+                m = n("141962"),
                 g = n("685665"),
                 R = n("299285"),
                 O = n("679653"),
@@ -446,71 +446,71 @@
                     }), t]
                 })
             }, es.ApplicationStreamingSection = e => {
-                var t;
+                var t, n;
                 let {
-                    activity: n,
-                    user: a,
-                    applicationStream: s,
-                    onPreviewClick: l,
-                    guildId: r
-                } = e, o = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(s.channelId)), [d, E] = (0, L.useCanWatchStream)(o), f = (0, i.jsx)(x.default, {
+                    activity: a,
+                    user: s,
+                    applicationStream: l,
+                    onPreviewClick: r,
+                    guildId: o
+                } = e, d = (0, u.useStateFromStores)([D.default], () => D.default.getChannel(l.channelId)), [E, f] = (0, L.useCanWatchStream)(d), _ = (0, i.jsx)(x.default, {
                     className: q.applicationStreamingPreviewWrapper,
                     aspectRatio: 16 / 9,
                     children: (0, i.jsxs)(c.Clickable, {
-                        onClick: d ? l : void 0,
+                        onClick: E ? r : void 0,
                         className: q.applicationStreamingPreviewSize,
                         children: [(0, i.jsx)(v.default, {
-                            stream: s,
+                            stream: l,
                             className: q.applicationStreamingPreviewSize
                         }), (0, i.jsx)("div", {
                             className: q.applicationStreamingHoverWrapper,
                             children: (0, i.jsx)("div", {
                                 className: q.applicationStreamingHoverText,
-                                children: (0, L.getStreamCTAString)(E)
+                                children: (0, L.getStreamCTAString)(f)
                             })
                         })]
                     })
-                }), _ = null !== (t = (0, A.default)(n, s)) && void 0 !== t ? t : z.default.Messages.SHARING_SCREEN;
+                }), h = null !== (n = null === (t = (0, A.default)(a, l)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
                 return (0, i.jsxs)(ee, {
                     children: [(0, i.jsxs)("div", {
                         className: q.applicationStreamingSection,
                         children: [(0, i.jsx)(c.Avatar, {
                             size: c.AvatarSizes.SIZE_32,
-                            src: a.getAvatarURL(r, 32),
-                            "aria-label": a.username,
+                            src: s.getAvatarURL(o, 32),
+                            "aria-label": s.username,
                             className: q.applicationStreamingAvatar
                         }), (0, i.jsxs)("div", {
-                            children: [X(Y.default.getName(a)), J(_)]
+                            children: [X(Y.default.getName(s)), J(h)]
                         }), (0, i.jsx)(B.default, {
                             size: B.default.Sizes.SMALL
                         })]
-                    }), f]
+                    }), _]
                 })
             }, es.EmbeddedActivitySection = e => {
-                var t;
                 let {
-                    activity: n,
-                    channel: a,
-                    guildId: s,
-                    participants: r
-                } = e, o = (0, m.default)(), [d, E] = l.useState(null);
+                    activity: t,
+                    channel: n,
+                    guildId: a,
+                    participants: s
+                } = e, r = (0, p.default)(), [o, d] = l.useState(null), E = t.application_id;
                 l.useEffect(() => {
-                    null != n.application_id && (0, H.fetchAssetIds)(n.application_id, ["embedded_background"]).then(e => {
+                    null != E && (0, H.fetchAssetIds)(E, ["embedded_background"]).then(e => {
                         let [t] = e;
-                        return E(t)
+                        return d(t)
                     })
-                }, [n.application_id]);
-                let _ = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(r).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
+                }, [E]);
+                let _ = (0, u.useStateFromStoresArray)([y.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : y.default.getUser(e)).filter(V.isNotNullish)),
                     C = (0, f.useAnalyticsContext)(),
                     {
                         analyticsLocations: T
-                    } = (0, g.default)(),
-                    I = R.default.getApplication(null !== (t = null == n ? void 0 : n.application_id) && void 0 !== t ? t : "");
+                    } = (0, g.default)();
+                if (null == E) return null;
+                let I = R.default.getApplication(E);
                 if (null == I) return null;
-                let S = null != n.created_at && n.created_at > 0 ? {
-                        start: n.created_at
+                let S = null != t.created_at && t.created_at > 0 ? {
+                        start: t.created_at
                     } : void 0,
-                    N = (0, H.getAssetImage)(I.id, d, 300);
+                    N = (0, H.getAssetImage)(I.id, o, 300);
                 return (0, i.jsxs)(ee, {
                     children: [(0, i.jsxs)("div", {
                         className: q.embeddedActivityTopRow,
@@ -546,19 +546,19 @@
                                 className: q.embeddedActivityImageOverlay,
                                 children: [(0, i.jsx)(M.Avatars, {
                                     users: _,
-                                    guildId: s,
-                                    channelId: a.id
+                                    guildId: a,
+                                    channelId: n.id
                                 }), (0, i.jsx)("div", {
                                     className: q.embeddedActivityJoinWrapper,
                                     children: (0, i.jsx)(c.Button, {
                                         size: c.Button.Sizes.SMALL,
                                         onClick: e => {
                                             e.stopPropagation(), (0, h.default)({
-                                                activity: n,
-                                                currentEmbeddedApplication: o,
-                                                activityChannelId: a.id,
+                                                applicationId: E,
+                                                currentEmbeddedApplication: r,
+                                                activityChannelId: n.id,
                                                 locationObject: C.location,
-                                                embeddedActivitiesManager: p.default,
+                                                embeddedActivitiesManager: m.default,
                                                 analyticsLocations: T
                                             })
                                         },

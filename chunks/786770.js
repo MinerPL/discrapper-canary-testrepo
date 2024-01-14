@@ -44,8 +44,8 @@
                     expirationExternallyManaged: !1,
                     type: 0
                 }),
-                H = [],
-                F = (e, t, n) => {
+                F = [],
+                H = (e, t, n) => {
                     let i = t ? P.OverlayNotificationStatus.TIMED_OUT : P.OverlayNotificationStatus.DISMISSED;
                     return setTimeout(() => f.default.updateNotificationStatus(e, i), null != n ? n : 5e3)
                 };
@@ -53,22 +53,22 @@
             function G(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : P.OverlayNotificationStatus.DISMISSED;
                 if (null == e) return !1;
-                let n = H.findIndex(t => t.id === e);
+                let n = F.findIndex(t => t.id === e);
                 if (-1 === n) return !1;
-                let i = H[n];
-                clearTimeout(i.timerId), H = [...H], t === P.OverlayNotificationStatus.DISMISSED ? H.splice(n, 1) : H[n] = {
+                let i = F[n];
+                clearTimeout(i.timerId), F = [...F], t === P.OverlayNotificationStatus.DISMISSED ? F.splice(n, 1) : F[n] = {
                     ...i,
                     status: t
                 }
             }
 
             function W(e) {
-                let t = H.length;
-                return (H = H.filter(t => 1 !== t.type || t.channelId !== e || !1)).length !== t
+                let t = F.length;
+                return (F = F.filter(t => 1 !== t.type || t.channelId !== e || !1)).length !== t
             }
 
             function Y(e) {
-                let t = H.find(t => 2 === t.type && t.channelId === e);
+                let t = F.find(t => 2 === t.type && t.channelId === e);
                 return null != t ? t.id : null
             }
 
@@ -82,14 +82,14 @@
                     a = {
                         id: i,
                         status: P.OverlayNotificationStatus.ACTIVE,
-                        timerId: F(i, n.expirationExternallyManaged, n.duration),
+                        timerId: H(i, n.expirationExternallyManaged, n.duration),
                         props: e,
                         ...n
                     };
-                H = [...H];
-                let l = H.findIndex(e => e.priority <= n.priority);
-                if (-1 === l ? H.push(a) : H.splice(l, 0, a), H.length > 10) {
-                    let e = H.pop();
+                F = [...F];
+                let l = F.findIndex(e => e.priority <= n.priority);
+                if (-1 === l ? F.push(a) : F.splice(l, 0, a), F.length > 10) {
+                    let e = F.pop();
                     clearTimeout(e.timerId)
                 }
                 return i
@@ -104,7 +104,7 @@
                 if (null != i) return !1;
                 let l = I.default.getChannel(t);
                 if (null == l || !l.isPrivate() || R.default.getStatus() === P.StatusTypes.DND) return !1;
-                let s = H.find(e => 1 === e.type && e.channelId === t && e.messageType === P.MessageTypes.CALL);
+                let s = F.find(e => 1 === e.type && e.channelId === t && e.messageType === P.MessageTypes.CALL);
                 null != s && G(s.id), z((0, m.default)(l), {
                     priority: 1,
                     expirationExternallyManaged: !0,
@@ -117,7 +117,7 @@
                     this.waitFor(I.default, L.default)
                 }
                 getNotifications() {
-                    return H
+                    return F
                 }
             }
             Z.displayName = "OverlayNotificationsStore";
@@ -156,9 +156,9 @@
                         locked: t
                     } = e;
                     if (t) return !1;
-                    H = H.map(e => e.status === P.OverlayNotificationStatus.ACTIVE ? (clearTimeout(e.timerId), {
+                    F = F.map(e => e.status === P.OverlayNotificationStatus.ACTIVE ? (clearTimeout(e.timerId), {
                         ...e,
-                        timerId: F(e.id, e.expirationExternallyManaged)
+                        timerId: H(e.id, e.expirationExternallyManaged)
                     }) : e)
                 },
                 MESSAGE_CREATE: function(e) {
@@ -190,7 +190,7 @@
                                 expirationExternallyManaged: !0,
                                 channelId: e.id
                             });
-                            return null != s && F(s, !1, 3e4), !0
+                            return null != s && H(s, !1, 3e4), !0
                         }(s, l, o);
                         if (!1 !== e) return e
                     }

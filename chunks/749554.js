@@ -61,14 +61,14 @@
                         partiedMembers: d,
                         voiceChannels: C,
                         currentActivities: T
-                    } = e, I = s.length, S = d.length - I, N = T[0], A = null == N ? void 0 : N.activity, m = null == N ? void 0 : N.startedPlayingTime, p = {
+                    } = e, I = s.length, S = d.length - I, N = T[0], A = null == N ? void 0 : N.activity, p = null == N ? void 0 : N.startedPlayingTime, m = {
                         name: null !== (t = null == A ? void 0 : A.name) && void 0 !== t ? t : ""
                     };
                     if ((0, l.default)(A) && null != A) return {
                         subtitle: (0, a.jsx)(u.default, {
-                            start: m,
+                            start: p,
                             location: u.default.Locations.ACTIVITY_FEED_NEW,
-                            messageProps: p
+                            messageProps: m
                         }),
                         icon: null
                     };
@@ -92,9 +92,9 @@
                                 };
                                 return {
                                     subtitle: (0, a.jsx)(u.default, {
-                                        start: m,
+                                        start: p,
                                         location: u.default.Locations.ACTIVITY_FEED_NEW,
-                                        messageProps: p
+                                        messageProps: m
                                     }), icon: null != e ? (0, a.jsx)(E.default.Header.Icon, {
                                         src: null != e.getIconURL(f.ICON_SIZE) ? e.getIconURL(f.ICON_SIZE) : n("992739")
                                     }) : null
@@ -167,7 +167,7 @@
                             subtitle: (0, a.jsx)(u.default, {
                                 start: s,
                                 location: u.default.Locations.ACTIVITY_FEED_NEW,
-                                messageProps: p
+                                messageProps: m
                             }),
                             icon: null != n && null != n.getIconURL(f.ICON_SIZE) ? (0, a.jsx)(E.default.Header.Icon, {
                                 src: n.getIconURL(f.ICON_SIZE)

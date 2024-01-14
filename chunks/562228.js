@@ -3,10 +3,10 @@
                 generateEmptyPollAnswer: function() {
                     return o
                 },
-                generateUploadId: function() {
+                filterOutUUID: function() {
                     return c
                 },
-                filterOutUUID: function() {
+                hasNonVoteReactions: function() {
                     return E
                 },
                 useCanPostPollsInChannel: function() {
@@ -21,7 +21,7 @@
                 createPollServerDataFromCreateRequest: function() {
                     return h
                 }
-            }), n("781738");
+            }), n("781738"), n("222007");
             var a = n("748820"),
                 l = n("446674"),
                 s = n("418009"),
@@ -34,16 +34,20 @@
                 return {
                     text: void 0,
                     image: void 0,
-                    uploadId: c()
+                    localCreationAnswerId: function() {
+                        return (0, a.v4)()
+                    }()
                 }
             }
 
-            function c() {
-                return (0, a.v4)()
+            function c(e) {
+                return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
             }
 
             function E(e) {
-                return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
+                for (let t of e.reactions)
+                    if (null == t.me_vote) return !0;
+                return !1
             }
 
             function f(e) {
