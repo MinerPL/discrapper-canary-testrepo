@@ -721,6 +721,8 @@
                 EMBEDDED_ACTIVITIES_SELECT_VOICE_CHANNEL: "Select Voice Channel",
                 EMBEDDED_ACTIVITIES_LAUNCH: "Launch",
                 EMBEDDED_ACTIVITIES_JOIN: "Join",
+                EMBEDDED_ACTIVITIES_JOINED: "Joined",
+                EMBEDDED_ACTIVITIES_ENDED: "Ended",
                 EMBEDDED_ACTIVITIES_RETURN_TO_ACTIVITY: "Return to Activity",
                 EMBEDDED_ACTIVITIES_PEOPLE_ARE_IN_AN_ACTIVITY: "{n, plural, one {1 person is} other {{n} people are}} in an Activity",
                 EMBEDDED_ACTIVITIES_SUPPORTED_PLATFORMS_MOBILE: "Mobile",
@@ -2341,8 +2343,6 @@
                 CLYDE_NUX_CHANNEL_NOTICE_LEARN_MORE: "Learn More",
                 CLYDE_NUX_USER_CHANNEL_NOTICE_TITLE: "Chat with Clyde",
                 CLYDE_NUX_USER_CHANNEL_NOTICE_MESSAGE: "Mention @Clyde to talk to our new AI chatbot.",
-                CLYDE_USER_RATING_TOOLTIP_GOOD: "Helpful",
-                CLYDE_USER_RATING_TOOLTIP_BAD: "Not Helpful",
                 CLYDE_SEND_MESSAGE: "Message",
                 CLYDE_PROFILE_EMBED_HEADER: "Apply personality to server",
                 CLYDE_PROFILE_APPLY: "Apply",
@@ -2365,16 +2365,6 @@
                 CLYDE_GENERATE_PERSONALITY_HINT: "Generate a more detailed personality",
                 CLYDE_GENERATE_PERSONALITY_UNDO: "Undo generated personality",
                 CLYDE_EDIT_NAME_LABEL: "Name",
-                CLYDE_USER_RATING_THANKS_1: "Clyde's neurons are buzzing \uD83E\uDDE0",
-                CLYDE_USER_RATING_THANKS_2: "Your feedback is the secret sauce \uD83C\uDF1F",
-                CLYDE_USER_RATING_THANKS_3: "You're helping Clyde evolve one byte at a time \uD83D\uDE4C",
-                CLYDE_USER_RATING_THANKS_4: "Your insights are the nuts and bolts of Clyde's growth \uD83D\uDD27",
-                CLYDE_USER_RATING_THANKS_5: "Your feedback keeps Clyde's gears turning smoothly ⚙️",
-                CLYDE_USER_RATING_THANKS_6: "Thanks for helping Clyde level up!",
-                CLYDE_USER_RATING_THANKS_7: "We've relayed your feedback to Clyde's supervisor",
-                CLYDE_USER_RATING_THANKS_8: "Your feedback has been delivered to the command center",
-                CLYDE_USER_RATING_THANKS_9: "We've dispatched your insights to the top brass.",
-                CLYDE_USER_RATING_THANKS_10: "Clyde's circuits have been informed of your opinion",
                 MODERATION: "Moderation",
                 SAFETY_SETUP: "Safety Setup",
                 WEBHOOKS: "Webhooks",
@@ -5487,15 +5477,6 @@
                 SUMMARIES_NOTIFICATIONS_FOOTER: "Change this in [server settings](notifSettingsHook) at any time.",
                 GENERIC_FEEDBACK_THANKS: "Thanks for your feedback!",
                 SUMMARIES_DELETE_SUMMARY: "Delete Summary",
-                CLYDE_FEEDBACK_MENU_ITEM_LABEL: "Give feedback",
-                CLYDE_FEEDBACK_HEADER: "How was this response?",
-                CLYDE_FEEDBACK_BODY: "Let us know so we can improve responses.",
-                CLYDE_FEEDBACK_PROBLEM_TITLE: "What was your main issue?",
-                CLYDE_FEEDBACK_OPTION_INACCURATE: "Wrong or incorrect information",
-                CLYDE_FEEDBACK_OPTION_HARMFUL: "Harmful or unsafe",
-                CLYDE_FEEDBACK_OPTION_NOT_HELPFUL: "Not helpful",
-                CLYDE_FEEDBACK_OPTION_INAPPROPRIATE: "Inappropriate",
-                CLYDE_FEEDBACK_OPTION_OTHER: "Other",
                 INVITE_URL: "Invite URL",
                 VANITY_URL_USES: "{uses, plural, =0 {0 uses} one {1 use} other {{uses} uses}}",
                 REMOVE_VANITY_URL: "Remove Custom Invite Link",
@@ -16383,8 +16364,9 @@
                 APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS: "Edit details",
                 APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER: "Your request will be sent to our team. Violations will stay on your account until they expire or are removed after review.",
                 APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER: "Here's a summary of your request.",
-                APPEAL_INGESTION_ADD_DETAILS_ACTION_SHEET_SUBHEADER: "You can add context or anything else that might be helpful for us to know.",
-                APPEAL_INGESTION_ADD_DETAILS_ACTION_SHEET_PLACEHOLDER: "What would you like us to know?",
+                APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_SUBHEADER: "You can add context or anything else that might be helpful for us to know.",
+                APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER: "What would you like us to know?",
+                APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_FOOTER: "Your note will be shared with Discord. Please be advised that abusive language may count as another violation.",
                 APPEAL_INGESTION_MODAL_HEADER: "Request a review",
                 APPEAL_INGESTION_MODAL_REQUEST_SENT_HEADER: "Request sent",
                 APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER: "Thank you for your submission. We will let you know the outcome of this review.",
@@ -16393,6 +16375,7 @@
                 APPEAL_INGESTION_MODAL_REQUEST_SENT_RULES_LINK: "Learn about how we enforce rules",
                 APPEAL_INGESTION_MODAL_THANKS_HEADER: "Thanks for letting us know.",
                 APPEAL_INGESTION_MODAL_SPAM_HEADER: "This request is for spam.",
+                APPEAL_INGESTION_MODAL_SPAM_LINK: "Contact Discord Support",
                 APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER: "Did we make a mistake? Let us know.",
                 APPEAL_INGESTION_MODAL_SPEED_BUMP_ACTIVITY_HEADER: "YOUR ACTIVITY",
                 APPEAL_INGESTION_MODAL_SPEED_BUMP_ACTIVITY_SUBHEADER: "We determined this content violates our policy",
@@ -18130,7 +18113,7 @@
                 L = E("782340");
             (0, a.setUpdateRules)(s.default), (0, n.default)(L.default, o.default, T.default), i.default.Emitter.injectBatchEmitChanges(r.batchUpdates), i.default.PersistedStore.disableWrites = __OVERLAY__, i.default.initialize();
             let u = window.GLOBAL_ENV.RELEASE_CHANNEL;
-            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("259091", ", Version Hash: ").concat("1032a2458b90adcbb92c9dfe132efa80d715457a")), t.default.setTags({
+            new(0, A.default)().log("[BUILD INFO] Release Channel: ".concat(u, ", Build Number: ").concat("259240", ", Version Hash: ").concat("4d449ae39fb67297e310cd1e93fc2f62197a8eb0")), t.default.setTags({
                 appContext: l.CURRENT_APP_CONTEXT
             }), S.default.initBasic(), N.default.init(), I.FocusRingManager.init(), O.init(), (0, R.cleanupTempFiles)()
         },
@@ -20404,8 +20387,8 @@
 
             function o() {
                 var e;
-                let _ = parseInt((e = "259091", "259091"));
-                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("259091")), _ = 0), _
+                let _ = parseInt((e = "259240", "259240"));
+                return Number.isNaN(_) && (t.default.captureMessage("Trying to open a changelog for an invalid build number ".concat("259240")), _ = 0), _
             }
         },
         990629: function(e, _, E) {
@@ -25101,19 +25084,20 @@
             "use strict";
             E.r(_), E.d(_, {
                 default: function() {
-                    return a
+                    return I
                 }
             }), E("222007");
             var t = E("689988"),
                 o = E("537325"),
                 n = E("894887"),
-                r = E("49111");
-            class i extends t.default {
+                r = E("760797"),
+                i = E("49111");
+            class a extends t.default {
                 async handleChannelCreate(e) {
                     let {
                         channel: _
                     } = e;
-                    (0, n.shouldRedirectToMidjourneyDM)(_) && await (0, o.default)(r.Routes.CHANNEL(null, _.id))
+                    (0, n.isEligibleForMidjourneyRedirect)(_) && (await (0, n.hasRedirectedToGuild)(r.MIDJOURNEY_GUILD_ID), (0, o.default)(i.Routes.CHANNEL(null, _.id)))
                 }
                 constructor(...e) {
                     super(...e), this.actions = {
@@ -25121,7 +25105,7 @@
                     }
                 }
             }
-            var a = new i
+            var I = new a
         },
         583374: function(e, _, E) {
             "use strict";
