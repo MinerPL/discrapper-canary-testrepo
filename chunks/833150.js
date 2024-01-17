@@ -8,7 +8,7 @@ var l = n("37983"),
   a = n("884691"),
   s = n("866227"),
   i = n.n(s),
-  r = n("304983"),
+  r = n("47693"),
   o = n("77078"),
   u = n("446674"),
   d = n("252744"),
@@ -17,10 +17,10 @@ var l = n("37983"),
   E = n("362189"),
   h = n("697218"),
   _ = n("211248"),
-  S = n("228220"),
+  S = n("266926"),
   T = n("888400"),
-  p = n("782340"),
-  N = n("72317");
+  N = n("782340"),
+  p = n("72317");
 
 function I(e) {
   let {
@@ -33,132 +33,126 @@ function I(e) {
   return a.useEffect(() => {
     !n && (0, E.updateInviteStatus)(t)
   }, [t, n]), (0, l.jsxs)("div", {
-    className: N.container,
+    className: p.container,
     ref: f,
     children: [(0, l.jsxs)("div", {
-      className: N.primaryRow,
+      className: p.primaryRow,
       children: [(0, l.jsx)("img", {
-        className: N.inviteImage,
+        className: p.inviteImage,
         src: t.application_asset,
         alt: "Game Invite"
       }), (0, l.jsx)(o.Text, {
-        className: N.title,
+        className: p.title,
         variant: "text-md/semibold",
         color: "interactive-active",
-        children: p.default.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
+        children: N.default.Messages.GAME_INVITES_SENT_YOU_AN_INVITE.format({
           username: s
         })
-      }), S && !n && (0, l.jsx)(m, {
-        invite: t
-      }), (0, l.jsx)(o.Popout, {
-        renderPopout: e => (0, l.jsx)(A, {
-          ...e,
-          invite: t
-        }),
-        position: "bottom",
-        align: "right",
-        animation: o.Popout.Animation.NONE,
-        children: e => {
-          let {
-            onClick: t
-          } = e;
-          return (0, l.jsx)(_.default, {
-            className: N.secondaryButton,
-            tooltip: p.default.Messages.MORE,
-            color: _.CircleIconButtonColors.TERTIARY,
-            icon: (0, l.jsx)(r.MoreHorizontalIcon, {
-              width: 16,
-              height: 16
-            }),
-            onClick: e => {
-              e.stopPropagation(), t(e)
-            }
-          })
-        }
+      }), (0, l.jsxs)("div", {
+        className: p.buttonContainer,
+        children: [(0, l.jsx)(m, {
+          expired: n,
+          invite: t,
+          isHoveringInvite: S
+        }), (0, l.jsx)(_.default, {
+          className: p.deleteButton,
+          tooltip: N.default.Messages.DELETE,
+          color: _.CircleIconButtonColors.SECONDARY,
+          icon: (0, l.jsx)(r.TrashIcon, {
+            width: 16,
+            height: 16
+          }),
+          onClick: () => {
+            (0, E.deleteInvite)(t)
+          }
+        })]
       })]
     }), (0, l.jsx)("div", {
-      className: N.divider
-    }), (0, l.jsx)("div", {
-      className: N.secondaryRow,
-      children: (0, l.jsxs)(o.Text, {
+      className: p.divider
+    }), (0, l.jsxs)("div", {
+      className: p.secondaryRow,
+      children: [(0, l.jsxs)(o.Text, {
         variant: "text-xs/medium",
-        className: N.subtitle,
+        className: p.subtitle,
         color: "text-muted",
         children: [t.application_name, " \xb7 ", c]
-      })
+      }), n && (0, l.jsx)("div", {
+        className: p.metaContainer,
+        children: (0, l.jsx)(o.Text, {
+          variant: "text-xxs/semibold",
+          className: p.metaText,
+          color: "text-muted",
+          children: N.default.Messages.GAME_INVITES_EXPIRED
+        })
+      })]
     })]
   })
 }
 
 function m(e) {
   let {
-    invite: t
-  } = e, n = (0, u.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(t)), s = (0, u.useStateFromStores)([f.default], () => f.default.isInviteJoinable(t)), [i, r] = a.useState(!1), d = a.useCallback(async () => {
-    r(!0);
+    expired: t,
+    invite: n,
+    isHoveringInvite: s
+  } = e, i = (0, u.useStateFromStores)([f.default], () => f.default.isInviteGameInstalled(n)), r = (0, u.useStateFromStores)([f.default], () => f.default.isInviteJoinable(n)), [d, h] = a.useState(!1), _ = a.useCallback(async () => {
+    h(!0);
     try {
-      await (0, E.launchInviteGame)(t)
+      await (0, E.launchInviteGame)(n)
     } catch {}
-    r(!1)
-  }, [t]), h = a.useCallback(async () => {
-    r(!0);
+    h(!1)
+  }, [n]), T = a.useCallback(async () => {
+    h(!0);
     try {
-      await (0, E.acceptInvite)(t)
+      await (0, E.acceptInvite)(n)
     } catch {}
-    r(!1)
-  }, [t]);
-  if (n) {
-    if (!s) return (0, l.jsx)(o.Button, {
-      className: N.primaryButton,
-      disabled: i,
-      size: o.ButtonSizes.SMALL,
-      onClick: d,
-      children: p.default.Messages.GAME_INVITES_LAUNCH_GAME
-    });
-    else return (0, l.jsx)(o.Button, {
-      className: N.primaryButton,
-      disabled: i,
-      size: o.ButtonSizes.SMALL,
-      onClick: h,
-      children: p.default.Messages.GAME_INVITES_JOIN_GAME
-    })
-  }
-  return null == t.fallback_url ? (0, l.jsx)("div", {
-    className: N.infoBox,
-    children: (0, l.jsx)(o.Text, {
-      variant: "text-xxs/medium",
-      color: "text-muted",
-      children: p.default.Messages.GAME_INVITES_LAUNCH_GAME_OUTSIDE_OF_DISCORD
-    })
-  }) : (0, l.jsx)(o.Button, {
-    className: N.primaryButton,
-    disabled: i,
+    h(!1)
+  }, [n]);
+  if (t) return i && s ? (0, l.jsx)(o.Button, {
+    className: p.primaryButton,
+    color: o.ButtonColors.TRANSPARENT,
+    disabled: d,
+    size: o.ButtonSizes.SMALL,
+    onClick: _,
+    children: N.default.Messages.GAME_INVITES_LAUNCH_GAME
+  }) : null;
+  return i && r ? (0, l.jsx)(o.Button, {
+    className: p.primaryButton,
+    color: o.ButtonColors.GREEN,
+    disabled: d,
+    size: o.ButtonSizes.SMALL,
+    onClick: T,
+    children: N.default.Messages.GAME_INVITES_JOIN_GAME
+  }) : null != n.fallback_url ? (0, l.jsx)(o.Button, {
+    className: p.primaryButton,
+    disabled: d,
     size: o.ButtonSizes.SMALL,
     color: o.ButtonColors.TRANSPARENT,
-    onClick: () => (0, c.default)(t.fallback_url),
-    children: p.default.Messages.GAME_INVITES_INSTALL_GAME
-  })
-}
-
-function A(e) {
-  let {
-    invite: t,
-    closePopout: n
-  } = e;
-  return (0, l.jsx)(o.Menu, {
-    navId: "game-invite-context-menu",
-    onClose: n,
-    onSelect: n,
-    "aria-label": p.default.Messages.GAME_INVITE_ACTIONS_MENU_LABEL,
-    children: (0, l.jsx)(o.MenuGroup, {
-      children: (0, l.jsx)(o.MenuItem, {
-        id: "invite-actions-delete",
-        label: p.default.Messages.DELETE,
-        action: async () => {
-          await (0, E.deleteInvite)(t)
-        },
-        icon: S.default,
-        showIconFirst: !0
-      }, "invite-actions-delete")
-    }, "invite-actions")
+    onClick: () => (0, c.default)(n.fallback_url),
+    children: N.default.Messages.GAME_INVITES_INSTALL_GAME
+  }) : (0, l.jsx)(o.Tooltip, {
+    text: N.default.Messages.GAME_INVITES_NOT_DETECTED_TOOLTIP.format({
+      gameTitle: n.application_name
+    }),
+    children: e => (0, l.jsx)(o.Button, {
+      ...e,
+      className: p.primaryButton,
+      disabled: !0,
+      size: o.ButtonSizes.SMALL,
+      color: o.ButtonColors.TRANSPARENT,
+      onClick: () => (0, c.default)(n.fallback_url),
+      children: (0, l.jsxs)("div", {
+        className: p.launchToJoinContainer,
+        children: [(0, l.jsx)(o.Text, {
+          variant: "text-xxs/medium",
+          className: p.launchToJoinText,
+          color: "text-muted",
+          children: N.default.Messages.GAME_INVITES_LAUNCH_TO_JOIN
+        }), (0, l.jsx)(S.default, {
+          color: o.tokens.colors.TEXT_MUTED.css,
+          width: 12,
+          height: 12
+        })]
+      })
+    })
   })
 }
