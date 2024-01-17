@@ -183,7 +183,7 @@ function er(e) {
     } = (0, u.useStateFromStoresObject)([R.default], () => ({
       canAddNewReactions: I && R.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), D = (0, _.useCanReplyToMessage)(t, n), O = (0, A.useCanStartPublicThread)(t, n), j = (0, A.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (x || U) && h && n.type in et.MessageTypesDeletable;
+    }), [t, I]), D = (0, _.useCanReplyToMessage)(t, n), O = (0, A.useCanStartPublicThread)(t, n), j = (0, A.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (x || U) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && x);
     let H = (0, K.canReportMessage)(n),
       k = (0, q.default)(n, t, x),
