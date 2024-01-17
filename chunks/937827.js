@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return T
+    return O
   }
 }), E("222007");
 var t = E("920842"),
@@ -9,9 +9,12 @@ var t = E("920842"),
   n = E("605250"),
   r = E("42887"),
   i = E("590401"),
-  a = E("773336");
-let I = new n.default("RTCLatencyTestManager");
-class s extends o.default {
+  a = E("718517"),
+  I = E("773336");
+let s = 1 * a.default.Millis.SECOND,
+  T = 30 * a.default.Millis.SECOND,
+  S = new n.default("RTCLatencyTestManager");
+class N extends o.default {
   _terminate() {
     null != this.refetchTimeout && clearTimeout(this.refetchTimeout)
   }
@@ -23,14 +26,14 @@ class s extends o.default {
       if (i.default.shouldPerformLatencyTest(_)) {
         let E = r.default.getMediaEngine();
         E.rankRtcRegions(e).then(e => {
-          I.verbose("RTC region latency test completed: ", e), (0, t.completeRTCLatencyTest)(e, _)
-        }).catch(e => I.warn(e))
-      } else I.verbose("RTC cached preferred region is ".concat(i.default.getPreferredRegion()))
+          S.verbose("RTC region latency test completed: ", e), (0, t.completeRTCLatencyTest)(e, _)
+        }).catch(e => S.warn(e))
+      } else S.verbose("RTC cached preferred region is ".concat(i.default.getPreferredRegion()))
     }, this._fetchAndScheduleRefetch = () => {
-      (0, t.fetchRTCLatencyTestRegions)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => I.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 216e5)
+      (0, t.fetchRTCLatencyTestRegions)().then(e => this._handleTestRegionsResponse(e.body)).catch(e => S.warn(e)), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * a.default.Millis.MINUTE)
     }, this._handleConnectionOpen = () => {
-      a.isPlatformEmbedded && !__OVERLAY__ && (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, Math.floor(1e3 + 3e4 * Math.random())))
+      I.isPlatformEmbedded && !__OVERLAY__ && (null != this.refetchTimeout && clearTimeout(this.refetchTimeout), this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, Math.floor(s + Math.random() * T)))
     }
   }
 }
-var T = new s
+var O = new N

@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return _
+    return C
   }
 }), a("222007"), a("70102");
 var n = a("37983"),
@@ -20,93 +20,94 @@ a("153727"), a("650484");
 var m = a("454589"),
   A = a("978679"),
   T = a("745279"),
-  y = a("49111"),
-  P = a("782340"),
-  f = a("129429");
-let N = new Set([E.Step.SKU_SELECT, E.Step.AWAITING_AUTHENTICATION, E.Step.AWAITING_PURCHASE_TOKEN_AUTH, E.Step.CONFIRM]);
+  y = a("718517"),
+  P = a("49111"),
+  f = a("782340"),
+  N = a("129429");
+let _ = new Set([E.Step.SKU_SELECT, E.Step.AWAITING_AUTHENTICATION, E.Step.AWAITING_PURCHASE_TOKEN_AUTH, E.Step.CONFIRM]);
 
-function _(e) {
+function C(e) {
   let {
     steps: t,
     currentStep: a,
     body: l,
-    paymentError: _,
-    header: C,
-    footer: h,
-    isGift: M = !1,
-    giftMessage: I = P.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
-    hideBreadcrumbs: g = !1,
-    isLoading: b = !1,
-    purchaseError: R,
-    purchaseErrorBlockRef: O,
-    planError: v,
-    onScroll: x,
-    scrollerClassName: D,
-    hasCurrencies: Y = !1
-  } = e, k = null;
-  null != _ && null == (0, E.errorToStep)(_) ? k = _ : null != R ? k = R : null != v && (k = v);
-  let j = null != k ? k.message : "";
-  null != k && k instanceof d.BillingError && (k.code === p.ErrorCodes.CARD_DECLINED && Y && (j += " ".concat(P.default.Messages.BILLING_ERROR_TRY_ANOTHER)), k.code === p.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (j = P.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), k.code === y.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (j = P.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
+    paymentError: C,
+    header: h,
+    footer: M,
+    isGift: I = !1,
+    giftMessage: g = f.default.Messages.PREMIUM_PAYMENT_IS_GIFT,
+    hideBreadcrumbs: b = !1,
+    isLoading: R = !1,
+    purchaseError: O,
+    purchaseErrorBlockRef: v,
+    planError: x,
+    onScroll: D,
+    scrollerClassName: Y,
+    hasCurrencies: k = !1
+  } = e, j = null;
+  null != C && null == (0, E.errorToStep)(C) ? j = C : null != O ? j = O : null != x && (j = x);
+  let L = null != j ? j.message : "";
+  null != j && j instanceof d.BillingError && (j.code === p.ErrorCodes.CARD_DECLINED && k && (L += " ".concat(f.default.Messages.BILLING_ERROR_TRY_ANOTHER)), j.code === p.ErrorCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (L = f.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT), j.code === P.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (L = f.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID));
   let {
-    stripe: L
+    stripe: w
   } = (0, S.usePaymentContext)();
-  b = b || null == L;
-  let w = r.useRef(new i.Timeout);
+  R = R || null == w;
+  let F = r.useRef(new i.Timeout);
   r.useEffect(() => {
-    let e = w.current;
-    return null != L || e.isStarted() ? null != L && e.stop() : e.start(1e4, () => {
+    let e = F.current;
+    return null != w || e.isStarted() ? null != w && e.stop() : e.start(10 * y.default.Millis.SECOND, () => {
       let e = Error("Stripe took too long to load");
       (0, T.captureBillingException)(e)
     }), () => {
       e.stop()
     }
-  }, [L]);
-  let F = t.includes(E.Step.PAYMENT_TYPE) ? E.Step.PAYMENT_TYPE : E.Step.ADD_PAYMENT_STEPS;
+  }, [w]);
+  let B = t.includes(E.Step.PAYMENT_TYPE) ? E.Step.PAYMENT_TYPE : E.Step.ADD_PAYMENT_STEPS;
   return (0, n.jsxs)(s.Elements, {
-    options: y.StripeElementsOptions,
-    stripe: L,
-    children: [C, (0, n.jsxs)("div", {
-      className: o("paymentModalContent", f.content),
-      children: [M && a !== E.Step.CONFIRM ? (0, n.jsx)(c.default, {
-        className: f.paymentNote,
+    options: P.StripeElementsOptions,
+    stripe: w,
+    children: [h, (0, n.jsxs)("div", {
+      className: o("paymentModalContent", N.content),
+      children: [I && a !== E.Step.CONFIRM ? (0, n.jsx)(c.default, {
+        className: N.paymentNote,
         iconSize: c.default.Sizes.SMALL,
         icon: A.default,
-        color: null == I ? c.default.Colors.PRIMARY : c.default.Colors.SECONDARY,
-        children: I
-      }) : null, g ? null : (0, n.jsx)("div", {
-        className: f.breadcrumbsWrapper,
+        color: null == g ? c.default.Colors.PRIMARY : c.default.Colors.SECONDARY,
+        children: g
+      }) : null, b ? null : (0, n.jsx)("div", {
+        className: N.breadcrumbsWrapper,
         children: (0, n.jsx)(m.default, {
-          activeId: E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(a) ? F : a,
-          breadcrumbs: t.filter(e => !E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !N.has(e)).map(e => ({
+          activeId: E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(a) ? B : a,
+          breadcrumbs: t.filter(e => !E.COLLAPSED_PAYMENT_BREADCRUMB_STEPS.has(e) && !_.has(e)).map(e => ({
             id: e,
             label: (0, E.getLabelForStep)(e)
           }))
         })
       }), (0, n.jsxs)("div", {
-        className: f.bodyWrapper,
-        children: [null == k ? null : (0, n.jsx)("div", {
-          className: f.errorBlockWrapper,
+        className: N.bodyWrapper,
+        children: [null == j ? null : (0, n.jsx)("div", {
+          className: N.errorBlockWrapper,
           children: (0, n.jsx)(u.FormErrorBlock, {
-            ref: O,
-            children: j
+            ref: v,
+            children: L
           })
-        }), b ? (0, n.jsx)(u.Spinner, {
-          className: f.loadingBlock
+        }), R ? (0, n.jsx)(u.Spinner, {
+          className: N.loadingBlock
         }) : (0, n.jsx)(u.Sequencer, {
-          className: f.sequencer,
-          staticClassName: f.sequencerStatic,
-          animatedNodeClassName: f.sequencerAnimatedNode,
+          className: N.sequencer,
+          staticClassName: N.sequencerStatic,
+          animatedNodeClassName: N.sequencerAnimatedNode,
           fillParent: !0,
           step: a,
           steps: t,
           sideMargin: 20,
           children: (0, n.jsx)(u.AdvancedScrollerThin, {
-            onScroll: x,
-            className: o(f.scroller, D),
+            onScroll: D,
+            className: o(N.scroller, Y),
             children: l
           })
         })]
       })]
-    }), h]
+    }), M]
   })
 }

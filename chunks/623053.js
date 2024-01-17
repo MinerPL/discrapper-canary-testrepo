@@ -7,7 +7,9 @@ n.r(t), n.d(t, {
 var i, l = n("917351"),
   a = n.n(l),
   s = n("862337"),
-  r = n("605250");
+  r = n("605250"),
+  u = n("718517");
+let d = 1 * u.default.Millis.MINUTE;
 i = class {
   reset() {
     this._subscriptions = {}, this._unsubscriptions = {}, this._unsubscribe.cancel()
@@ -54,6 +56,6 @@ i = class {
     }), this._unsubscriptions = {})
   }
   constructor(e) {
-    this._subscriptions = {}, this._unsubscriptions = {}, this._unsubscribe = new s.DelayedCall(6e4, () => this.flushUnsubscriptions()), this._onChange = e
+    this._subscriptions = {}, this._unsubscriptions = {}, this._unsubscribe = new s.DelayedCall(d, () => this.flushUnsubscriptions()), this._onChange = e
   }
 }

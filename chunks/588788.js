@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return R
+    return L
   }
 }), E("222007");
 var t = E("862337"),
@@ -14,9 +14,11 @@ var t = E("862337"),
   s = E("101125"),
   T = E("280168"),
   S = E("316133"),
-  N = E("716241"),
-  O = E("49111");
-class A extends o.default {
+  N = E("718517"),
+  O = E("716241"),
+  A = E("49111");
+let R = 1 * N.default.Millis.MINUTE;
+class l extends o.default {
   _initialize() {
     __OVERLAY__ ? this.stores = new Map : (this.stores = new Map().set(T.default, () => this._handleSpeakingStoreChanged()).set(a.default, () => this._handleRTCConnectionStoreChanged()), this._reset())
   }
@@ -29,7 +31,7 @@ class A extends o.default {
         _ = a.default.getGuildId(),
         E = r.default.getChannel(e),
         t = null == E ? void 0 : E.isBroadcastChannel();
-      (0, N.trackWithMetadata)(O.AnalyticEvents.START_SPEAKING, {
+      (0, O.trackWithMetadata)(A.AnalyticEvents.START_SPEAKING, {
         mode: i.default.getMode(),
         priority: T.default.isCurrentUserPrioritySpeaking(),
         channel: e,
@@ -51,7 +53,7 @@ class A extends o.default {
       _ = a.default.getGuildId(),
       E = r.default.getChannel(e),
       t = null == E ? void 0 : E.isBroadcastChannel();
-    (0, N.trackWithMetadata)(O.AnalyticEvents.START_LISTENING, {
+    (0, O.trackWithMetadata)(A.AnalyticEvents.START_LISTENING, {
       mute: i.default.isMute(),
       anyone_priority: T.default.isAnyonePrioritySpeaking(),
       channel: e,
@@ -69,7 +71,7 @@ class A extends o.default {
     this._reset(), T.default.removeChangeListener(this._handleSpeakingStoreChanged), a.default.removeChangeListener(this._handleRTCConnectionStoreChanged)
   }
   getGameMetadata() {
-    let e = s.default.findActivity(e => e.type === O.ActivityTypes.PLAYING),
+    let e = s.default.findActivity(e => e.type === A.ActivityTypes.PLAYING),
       _ = I.default.getCurrentGameForAnalytics();
     return {
       game_platform: (0, n.default)(e),
@@ -86,7 +88,7 @@ class A extends o.default {
           this._reset();
           return
         }
-        null == this._reportInterval && (this._reportInterval = new t.Interval, this._reportInterval.start(6e4, () => {
+        null == this._reportInterval && (this._reportInterval = new t.Interval, this._reportInterval.start(R, () => {
           this._trackStartSpeaking(), this._trackStartListening()
         }))
       }
@@ -98,4 +100,4 @@ class A extends o.default {
     }
   }
 }
-var R = new A
+var L = new l
