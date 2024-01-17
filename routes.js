@@ -1613,8 +1613,6 @@
                     CONNECTION_LINK_AUTHORIZE: _ => "/connections/".concat(_, "/link-authorize"),
                     CONNECTIONS: _ => "/connections/".concat(_),
                     CONNECT_AUTHORIZE: "/connect/authorize",
-                    OAUTH2_AUTHORIZE: "/oauth2/authorize",
-                    OAUTH2_AUTHORIZED: "/oauth2/authorized",
                     OAUTH2_ERROR: "/oauth2/error",
                     SETTINGS: (_, E) => "/settings/".concat(_).concat(null != E ? "/".concat(E) : ""),
                     SNOWSGIVING: "/snowsgiving",
