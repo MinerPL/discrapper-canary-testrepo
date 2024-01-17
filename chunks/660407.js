@@ -15,8 +15,8 @@ var l = n("37983"),
   c = n("267363"),
   f = n("716241"),
   E = n("739034"),
-  _ = n("393414"),
-  h = n("42203"),
+  h = n("393414"),
+  _ = n("42203"),
   S = n("211248"),
   T = n("461380"),
   p = n("36694"),
@@ -77,7 +77,7 @@ let v = a.memo(function(e) {
     onJump: n,
     deleteChannel: s,
     toggle: i
-  } = e, r = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId));
+  } = e, r = (0, o.useStateFromStores)([_.default], () => _.default.getChannel(t.channelId));
   if (a.useEffect(() => {
       null != r && t.isFullyLoaded && !t.hasError && !t.collapsed && "messages" === t.type && 0 === t.messages.length && d.default.wait(() => {
         (0, c.ack)(t.channelId, !0), s(t.channelId)
@@ -89,7 +89,7 @@ let v = a.memo(function(e) {
       guild_id: t.guildId
     });
     let a = null != l ? l : t.oldestUnreadMessageId;
-    (0, _.transitionTo)(C.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
+    (0, h.transitionTo)(C.Routes.CHANNEL(t.guildId, t.channelId, "forum" === t.type ? null : a)), n(e)
   };
   return (0, l.jsx)("div", {
     className: M.channel,

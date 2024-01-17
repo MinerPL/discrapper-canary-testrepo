@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
     return L
   }
 }), n("222007");
-var a = n("917351"),
-  l = n.n(a),
+var l = n("917351"),
+  a = n.n(l),
   s = n("335710"),
   r = n("249654"),
   u = n("446674"),
@@ -44,9 +44,9 @@ function I() {
   let e = !p,
     t = f.default.getChannel(N[N.length - 1]),
     n = null == t ? null : R(t, v);
-  N = l(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
-    var a;
-    if (0 !== i.size && (null === (a = t.appliedTags) || void 0 === a ? void 0 : a.some(e => i.has(e))) !== !0) return !1;
+  N = a(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
+    var l;
+    if (0 !== i.size && (null === (l = t.appliedTags) || void 0 === l ? void 0 : l.some(e => i.has(e))) !== !0) return !1;
     if (e || null == n) return !0;
     {
       let e = null == t ? null : R(t, v);
