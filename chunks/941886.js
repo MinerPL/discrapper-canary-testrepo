@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   EmptyStateImage: function() {
-    return v
+    return S
   },
   EmptyStateText: function() {
-    return I
+    return T
   },
   default: function() {
     return i
   }
 });
 var l, i, r = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  o = n.n(s),
+  s = n("884691"),
+  a = n("414456"),
+  o = n.n(a),
   u = n("819855"),
   d = n("77078"),
   c = n("145131"),
   f = n("49111"),
-  h = n("430098"),
-  g = n("926622");
+  E = n("430098"),
+  _ = n("926622");
 let {
   Provider: p,
-  Consumer: m
-} = a.createContext(f.ThemeTypes.DARK);
-class v extends a.PureComponent {
+  Consumer: h
+} = s.createContext(f.ThemeTypes.DARK);
+class S extends s.PureComponent {
   render() {
     let {
       lightSrc: e,
@@ -32,47 +32,47 @@ class v extends a.PureComponent {
       width: n,
       height: l,
       offsetX: i,
-      offsetY: a,
-      style: s
+      offsetY: s,
+      style: a
     } = this.props;
-    return (0, r.jsx)(m, {
+    return (0, r.jsx)(h, {
       children: d => (0, r.jsx)(c.default.Child, {
         grow: 0,
-        className: o(h.image, g.marginBottom40),
+        className: o(E.image, _.marginBottom40),
         style: {
-          ...s,
+          ...a,
           width: n,
           height: l,
           marginLeft: i,
-          marginTop: a,
+          marginTop: s,
           backgroundImage: "url(".concat((0, u.isThemeDark)(d) ? t : e, ")")
         }
       })
     })
   }
 }
-let I = e => {
+let T = e => {
   let {
     children: t,
     className: n,
     noteClassName: l,
     note: i,
-    style: a
+    style: s
   } = e;
   return (0, r.jsxs)(c.default.Child, {
     grow: 0,
     direction: c.default.Direction.VERTICAL,
-    style: a,
+    style: s,
     children: [null != t && (0, r.jsx)(d.H, {
-      className: o(n, h.title),
+      className: o(n, E.title),
       children: t
     }), null != i ? (0, r.jsx)("div", {
-      className: o(l, h.text, g.marginTop8),
+      className: o(l, E.text, _.marginTop8),
       children: i
     }) : null]
   })
 };
-(l = class extends a.PureComponent {
+(l = class extends s.PureComponent {
   render() {
     let {
       children: e,
@@ -86,10 +86,10 @@ let I = e => {
         direction: c.default.Direction.VERTICAL,
         align: c.default.Align.CENTER,
         justify: c.default.Justify.CENTER,
-        className: o(h.wrapper, n),
+        className: o(E.wrapper, n),
         style: l,
         children: e
       })
     })
   }
-}).Text = I, l.Image = v, i = l
+}).Text = T, l.Image = S, i = l
