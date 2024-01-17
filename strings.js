@@ -16449,6 +16449,8 @@ e.exports = Object.freeze({
   WAVED_AT_YOU: "\uD83D\uDC4B !!{username}!! waved at you",
   YOU_ARE_IN_CHANNEL: "You are in $[](channelHook)",
   THEY_ARE_IN_CHANNEL: "They're hanging out in $[](channelHook)",
+  YOU_ARE_IN_CHANNEL_NAME: "You are in #!!{channelName}!!",
+  THEY_ARE_IN_CHANNEL_NAME: "They're hanging out in #!!{channelName}!!",
   HANGOUT_OVER_SENDER: "The hangout is over, want to start it again?",
   HANGOUT_OVER_RECEIVER: "You missed the hangout :(",
   WAVE_AGAIN: "Wave again",
