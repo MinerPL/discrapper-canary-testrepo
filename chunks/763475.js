@@ -63,9 +63,6 @@ class s {
   getManySyncUnsafe(e, t) {
     return this.table.getManySyncUnsafe([e], t)
   }
-  getKvEntriesSyncUnsafe() {
-    return this.table.getKvEntriesSyncUnsafe()
-  }
   getMapEntriesSyncUnsafe() {
     return this.table.getMapEntriesSyncUnsafe()
   }
@@ -74,9 +71,6 @@ class s {
   }
   getGuildIdsSyncUnsafe() {
     return this.table.getChildIdsSyncUnsafe([])
-  }
-  getGuildIdSyncUnsafe(e) {
-    return this.table.getParentIdSyncUnsafe([null, e])
   }
   static cell(e, t, n) {
     return {

@@ -111,7 +111,7 @@ function D(e) {
   _getEmbeddedActivities() {
     let e = u.default.getEmbeddedActivitiesForChannel(this.channelId),
       t = u.default.getSelfEmbeddedActivityForChannel(this.channelId);
-    return null == t ? e : (0, a.uniqBy)([...e, t], "application_id")
+    return null == t ? e : (0, a.uniqBy)([...e, t], e => e.applicationId)
   }
   _getParticipantsForEmbeddedActivities() {
     return this._getEmbeddedActivities().map((e, t) => {

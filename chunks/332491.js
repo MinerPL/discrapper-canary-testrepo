@@ -34,10 +34,14 @@ class A extends I.default {
       t = (E.clipsEnabled || E.decoupledClipsEnabled) && _;
     r.default.getMediaEngine().setClipBufferLength(t ? E.clipsLength / 1e3 : 0), ((null == e ? void 0 : e.settings.decoupledClipsEnabled) || (null == e ? void 0 : e.settings.clipsQuality) != null) && this.fireClipsInitEvent()
   }
-  fireClipsInitEventHelper(e) {
+  handleClipsInitOnToggleDetection(e) {
+    let _ = i.default.getVisibleGame();
+    null != _ && _.id === e.game.id && this.fireClipsInitEvent()
+  }
+  handleClipsInitOnGamesChange(e) {
     let _ = i.default.getVisibleGame();
     if (null == _) return;
-    let E = !!e.added.find(e => e.pid === (null == _ ? void 0 : _.pid));
+    let E = !!e.added.find(e => e.pid === _.pid);
     E ? setTimeout(() => this.fireClipsInitEvent(), N.CLIPS_RUNNING_GAME_CHANGE_CLIPS_INIT_DELAY) : this.fireClipsInitEvent()
   }
   fireClipsInitEvent() {

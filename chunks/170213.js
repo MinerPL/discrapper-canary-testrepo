@@ -24,20 +24,23 @@ n.r(t), n.d(t, {
   AppealIngestionSignal: function() {
     return E
   },
-  DEFAULT_MEDIA_MAX_WIDTH: function() {
+  AppealIngestionSignalOrder: function() {
     return p
   },
-  DEFAULT_MEDIA_MAX_HEIGHT: function() {
+  DEFAULT_MEDIA_MAX_WIDTH: function() {
     return S
+  },
+  DEFAULT_MEDIA_MAX_HEIGHT: function() {
+    return A
   },
   AppealIngestionSlideTypes: function() {
     return _
   },
   SlidesOrderDsaEligible: function() {
-    return A
+    return C
   },
   SlidesOrderNonDsaEligible: function() {
-    return C
+    return h
   }
 });
 var s, l, a, i, r, o, u, d, c, f, E, _, T = n("49111");
@@ -55,10 +58,11 @@ N.ICON_TYPE = "icon_type", N.HEADER = "header", N.BODY = "body", N.CTAS = "ctas"
   THANKS: T.AnalyticsSections.APPEAL_INGESTION_THANKS,
   SPAM: T.AnalyticsSections.APPEAL_INGESTION_SPAM
 }), (r = E || (E = {}))[r.DIDNT_VIOLATE_POLICY = 0] = "DIDNT_VIOLATE_POLICY", r[r.TOO_STRICT_UNFAIR = 1] = "TOO_STRICT_UNFAIR", r[r.DONT_AGREE_PENALTY = 2] = "DONT_AGREE_PENALTY", r[r.SOMETHING_ELSE = 3] = "SOMETHING_ELSE";
-let p = 372,
-  S = 279;
+let p = [0, 1, 2, 3],
+  S = 372,
+  A = 279;
 (o = _ || (_ = {})).SPEED_BUMP = "speed-bump", o.COLLECT_SIGNAL = "collect-signal", o.CONFIRM_SUBMISSION = "confirm-submission", o.REQUEST_SENT = "request-sent", o.THANKS = "thanks";
-let A = {
+let C = {
     "speed-bump": {
       next: "collect-signal",
       prev: null
@@ -76,7 +80,7 @@ let A = {
       prev: null
     }
   },
-  C = {
+  h = {
     "collect-signal": {
       next: "thanks",
       prev: null

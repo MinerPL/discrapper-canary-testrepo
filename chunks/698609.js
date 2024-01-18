@@ -8,6 +8,9 @@ n.r(t), n.d(t, {
   },
   useExpiredSafetyHubClassifications: function() {
     return f
+  },
+  useSafetyHubAppealSignal: function() {
+    return E
   }
 });
 var i = n("884691"),
@@ -47,4 +50,9 @@ function f() {
   let e = u(),
     t = new Date;
   return e.filter(e => new Date(e.max_expiration_time) <= t)
+}
+
+function E() {
+  let e = (0, l.useStateFromStores)([s.default], () => s.default.getAppealSignal());
+  return e
 }

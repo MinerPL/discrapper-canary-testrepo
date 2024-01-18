@@ -170,7 +170,7 @@ function M(e, t) {
         r.default.Emitter.batched(() => {
           t = c.default.hydrateReady.measure(() => N.hydrateReadyPayloadPrioritized(t, b.socket.identifyStartTime));
           let e = t.private_channels.map(e => (0, m.createChannelRecordFromServer)(e)),
-            n = t.guilds.filter(e => e.unavailable || null != e.geo_restricted && !1 === e.geo_restricted).map(e => e.id),
+            n = t.guilds.filter(e => !0 === e.unavailable && !0 !== e.geo_restricted).map(e => e.id),
             s = t.guilds.filter(e => !0 !== e.unavailable),
             i = t.guilds.filter(e => !0 === e.geo_restricted);
           s.forEach(e => {

@@ -58,9 +58,9 @@ class d extends i.default.Store {
     let n = this.getViewingChannels(e);
     return null != n && n.has(t)
   }
-  isViewingSubscriptionRoles(e) {
+  isViewingServerShop(e) {
     var t;
-    return null != e && (null === (t = c[e]) || void 0 === t ? void 0 : t.type) === o.ImpersonateType.ROLE_SUBSCRIPTION
+    return null != e && (null === (t = c[e]) || void 0 === t ? void 0 : t.type) === o.ImpersonateType.SERVER_SHOP
   }
   getImpersonateType(e) {
     if (null == e) return null;
@@ -73,9 +73,8 @@ class d extends i.default.Store {
     if (null == t) return l.GuildSettingsSections.ROLES;
     switch (t.type) {
       case o.ImpersonateType.ROLES:
+      case o.ImpersonateType.SERVER_SHOP:
         return t.returnToSection;
-      case o.ImpersonateType.ROLE_SUBSCRIPTION:
-        return l.GuildSettingsSections.ROLE_SUBSCRIPTIONS;
       case o.ImpersonateType.NEW_MEMBER:
         return l.GuildSettingsSections.ONBOARDING;
       default:

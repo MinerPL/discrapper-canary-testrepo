@@ -25,7 +25,7 @@ function f(e) {
   let i = (0, r.isCreatorMonetizationEnabledGuild)(s),
     a = s.hasFeature(l.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
   if (i && a) return !0;
-  let u = n.isViewingSubscriptionRoles(e);
+  let u = n.isViewingServerShop(e);
   return !!u || !1
 }
 

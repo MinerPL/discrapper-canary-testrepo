@@ -18,8 +18,8 @@ var s = n("305961"),
 function o(e) {
   let {
     guildStore: t
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = null != t ? t : s.default;
-  return 1 === n.getGuildCount() && null != n.getGuild(a.MIDJOURNEY_GUILD_ID) && (0, r.isEligibleForMidjourneyOnboarding)(e)
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, n = null != t ? t : s.default, i = n.getGuild(a.MIDJOURNEY_GUILD_ID), o = (null == i ? void 0 : i.joinedAt) instanceof Date && Date.now() - i.joinedAt.getTime() <= 36e5;
+  return 1 === n.getGuildCount() && o && (0, r.isEligibleForMidjourneyOnboarding)(e)
 }
 
 function d(e) {

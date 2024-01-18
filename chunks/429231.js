@@ -161,14 +161,6 @@ class o {
       limit: null == t ? void 0 : t.limit
     })
   }
-  getKvEntriesSyncUnsafe() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    return this.database.executeSync({
-      type: "kv.get_kv_entries",
-      table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
-    })
-  }
   getMapEntriesSyncUnsafe() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return this.database.executeSync({
@@ -181,22 +173,6 @@ class o {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return this.database.executeSync({
       type: "kv.get_child_ids",
-      table: this.tableId,
-      key: (0, r.combineKeyPrefix)(this.prefix, e)
-    })
-  }
-  getParentIdSyncUnsafe() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    return this.database.executeSync({
-      type: "kv.get_parent_id",
-      table: this.tableId,
-      key: (0, r.combineKey)(this.prefix, e)
-    })
-  }
-  deleteSyncUnsafe() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    return this.database.executeSync({
-      type: "kv.delete_many",
       table: this.tableId,
       key: (0, r.combineKeyPrefix)(this.prefix, e)
     })

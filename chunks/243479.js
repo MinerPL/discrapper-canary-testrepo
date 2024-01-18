@@ -71,9 +71,6 @@ class s {
   getManySyncUnsafe(e, t) {
     return this.table.getManySyncUnsafe([e], t)
   }
-  getKvEntriesSyncUnsafe() {
-    return this.table.getKvEntriesSyncUnsafe()
-  }
   getMapEntriesSyncUnsafe() {
     return this.table.getMapEntriesSyncUnsafe()
   }
@@ -82,9 +79,6 @@ class s {
   }
   getGuildIdsSyncUnsafe() {
     return this.table.getChildIdsSyncUnsafe([])
-  }
-  getGuildIdSyncUnsafe(e) {
-    return this.table.getParentIdSyncUnsafe([null, e])
   }
   constructor(e, t, n) {
     this.table = new r.Table([e], t, n)

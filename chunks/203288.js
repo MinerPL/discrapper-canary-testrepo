@@ -39,7 +39,7 @@ function g(e) {
 
 function I(e, t) {
   if (!t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE) && !t.hasFeature(S.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)) return !1;
-  let n = f.default.isViewingSubscriptionRoles(t.id);
+  let n = f.default.isViewingServerShop(t.id);
   for (let i of Object.keys(e.permissionOverwrites)) {
     let r = t.getRole(i);
     if (!g({
