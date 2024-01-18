@@ -26,8 +26,8 @@ function w(e) {
     onClose: a,
     onComplete: w,
     uploadType: y,
-    showUpsellHeader: x,
-    analyticsPage: S
+    showUpsellHeader: S,
+    analyticsPage: x
   } = e, [A, E] = i.useState(!1), b = (0, s.useModalContext)(), L = (0, d.useUID)(), {
     AnalyticsLocationProvider: R
   } = (0, c.default)(o.default.GIF_PICKER);
@@ -51,7 +51,7 @@ function w(e) {
         }),
         onCrop: w,
         uploadType: y,
-        showUpsellHeader: x,
+        showUpsellHeader: S,
         ...t
       })
     }, {
@@ -62,18 +62,18 @@ function w(e) {
     f.default.track(p.AnalyticEvents.OPEN_MODAL, {
       type: p.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
       location: {
-        page: S
+        page: x
       }
     })
-  }, [S]), (0, r.jsx)(R, {
+  }, [x]), (0, r.jsx)(R, {
     children: (0, r.jsxs)(s.ModalRoot, {
       className: g.gifPickerCroppingModal,
       "aria-labelledby": L,
       transitionState: t,
       size: s.ModalSize.SMALL,
-      children: [x ? (0, r.jsx)(h.default, {
+      children: [S ? (0, r.jsx)(h.default, {
         type: y,
-        analyticsPage: S,
+        analyticsPage: x,
         analyticsSection: p.AnalyticsSections.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
         isGIF: !0
       }) : null, (0, r.jsxs)(s.ModalHeader, {

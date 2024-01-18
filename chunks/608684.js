@@ -86,7 +86,7 @@ class h extends a.PureComponent {
         size: E.AVATAR_SIZE
       })
     }));
-    let V = null !== (e = null != U ? U : u) && void 0 !== e ? e : f.default.Messages.CHANGE_AVATAR;
+    let j = null !== (e = null != U ? U : u) && void 0 !== e ? e : f.default.Messages.CHANGE_AVATAR;
     return (0, l.jsxs)("div", {
       className: i(_.imageUploader, g),
       children: [(0, l.jsx)(o.FocusRing, {
@@ -104,13 +104,13 @@ class h extends a.PureComponent {
               children: a
             }), null != y ? (0, l.jsx)(o.Clickable, {
               className: _.imageUploaderFileInput,
-              "aria-label": V,
+              "aria-label": j,
               onClick: y
             }) : (0, l.jsx)(c.default, {
               ref: this.inputRef,
               onChange: v,
               className: _.imageUploaderFileInput,
-              "aria-label": V,
+              "aria-label": j,
               tabIndex: 0,
               maxFileSizeBytes: M,
               onFileSizeError: D

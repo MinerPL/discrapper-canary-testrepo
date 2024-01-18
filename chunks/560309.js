@@ -80,7 +80,7 @@ let D = e => e === A.GuildScheduledEventEntityTypes.EXTERNAL,
     })
   };
 
-function V(e, t, n, l) {
+function j(e, t, n, l) {
   return t ? {
     disabled: !0,
     tooltipText: L.default.Messages.GUILD_EVENT_LOCATION_DISABLED_CANNOT_EDIT
@@ -95,7 +95,7 @@ function V(e, t, n, l) {
     tooltipText: L.default.Messages.GUILD_EVENT_LOCATION_DISABLED_NO_PERMISSION
   }
 }
-let j = e => t => {
+let V = e => t => {
     e({
       entityMetadata: {
         location: t
@@ -139,7 +139,7 @@ function H(e) {
       null === (e = f.current) || void 0 === e || e.focus()
     }
   }, [i, o]);
-  let _ = j(s),
+  let _ = V(s),
     I = P(s),
     h = (0, x.getLocationFromEventData)(n),
     T = (0, x.getChannelTypeFromEntity)(o),
@@ -177,20 +177,20 @@ function b(e) {
       value: A.GuildScheduledEventEntityTypes.VOICE,
       desc: L.default.Messages.GUILD_EVENT_LOCATION_OPTION_VOICE_HINT,
       icon: h.default,
-      ...V(A.GuildScheduledEventEntityTypes.VOICE, v, d, f.length)
+      ...j(A.GuildScheduledEventEntityTypes.VOICE, v, d, f.length)
     }, {
       name: L.default.Messages.GUILD_EVENT_LOCATION_EXTERNAL,
       value: A.GuildScheduledEventEntityTypes.EXTERNAL,
       desc: L.default.Messages.GUILD_EVENT_LOCATION_OPTION_ELSEWHERE_HINT,
       icon: I.default,
-      ...V(A.GuildScheduledEventEntityTypes.EXTERNAL, v, o, 0)
+      ...j(A.GuildScheduledEventEntityTypes.EXTERNAL, v, o, 0)
     }];
     return T ? [{
       name: L.default.Messages.STAGE_CHANNEL,
       value: A.GuildScheduledEventEntityTypes.STAGE_INSTANCE,
       desc: L.default.Messages.GUILD_EVENT_LOCATION_OPTION_STAGE_HINT,
       icon: N.default,
-      ...V(A.GuildScheduledEventEntityTypes.STAGE_INSTANCE, v, E, _.length)
+      ...j(A.GuildScheduledEventEntityTypes.STAGE_INSTANCE, v, E, _.length)
     }, ...e] : e
   }, [o, d, E, T, f.length, _.length, v]);
   return (0, l.jsx)(u.RadioGroup, {

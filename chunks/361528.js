@@ -25,20 +25,20 @@ var s = n("37983"),
       imageSrc: E,
       animationSrc: g,
       secondaryButtonText: S,
-      onSecondaryButtonClick: _,
-      children: A,
+      onSecondaryButtonClick: A,
+      children: _,
       useReducedMotion: T = !1
     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
     if (l.isMobile && M) return null;
     if (null == t) return (0, s.jsx)(s.Fragment, {
-      children: a.Children.only(A)
+      children: a.Children.only(_)
     });
-    let I = null;
-    return null != E ? I = (0, s.jsx)("img", {
+    let N = null;
+    return null != E ? N = (0, s.jsx)("img", {
       alt: "",
       src: E,
       className: c.image
-    }) : null != g && (I = (0, s.jsx)(d.default, {
+    }) : null != g && (N = (0, s.jsx)(d.default, {
       importData: g,
       shouldAnimate: !T,
       className: c.animation
@@ -46,7 +46,7 @@ var s = n("37983"),
       className: c.wrapper,
       children: [(0, s.jsxs)("div", {
         className: c.content,
-        children: [I, (0, s.jsxs)("div", {
+        children: [N, (0, s.jsxs)("div", {
           className: c.text,
           children: [(0, s.jsx)(r.Heading, {
             variant: "heading-md/semibold",
@@ -63,7 +63,7 @@ var s = n("37983"),
         children: [null != S && (0, s.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: _,
+          onClick: A,
           look: r.Button.Looks.LINK,
           color: r.Button.Colors.PRIMARY,
           submitting: p,

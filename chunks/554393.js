@@ -21,16 +21,16 @@ var s = n("37983"),
   E = n("92981"),
   g = n("592707"),
   S = n("350134"),
-  _ = n("755624"),
-  A = n("263024"),
+  A = n("755624"),
+  _ = n("263024"),
   T = n("42203"),
   M = n("660279"),
-  I = n("36694"),
-  N = n("83900"),
-  L = n("404008"),
-  v = n("680986"),
-  R = n("612278"),
-  x = n("867965"),
+  N = n("36694"),
+  I = n("83900"),
+  v = n("404008"),
+  L = n("680986"),
+  x = n("612278"),
+  R = n("867965"),
   y = n("688169"),
   D = n("49111"),
   O = n("782340"),
@@ -44,17 +44,17 @@ function b(e) {
     isLastItem: l = !1,
     parentChannelId: b
   } = e, {
-    ref: U,
+    ref: H,
     width: F
-  } = (0, d.default)(), [H, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
+  } = (0, d.default)(), [U, k] = a.useState(3), [G, w] = a.useState(!n), [B, V] = (0, c.default)(!1, 2e3), W = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(t), [t]), {
     firstMessage: Z
-  } = (0, R.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([_.default], () => _.default.hasJoined(t)), {
+  } = (0, x.useFirstForumPostMessage)(W), z = (0, o.useStateFromStores)([A.default], () => A.default.hasJoined(t)), {
     disableReactionUpdates: K,
     disableReactionCreates: Y,
     isLurking: q,
     isGuest: X,
     isPendingMember: J
-  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(b)), ee = (0, v.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
+  } = (0, p.default)(W), Q = (0, y.useForumActivityExperiment)(null == W ? void 0 : W.guild_id), $ = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(b)), ee = (0, L.useDefaultReactionEmoji)($), et = (0, o.useStateFromStores)([f.default], () => f.default.shouldDisplayPrompt(t) && !0 === n, [t, n]), en = a.useCallback(e => {
     let t = e[0];
     if (null != t && n) {
       let e = t.intersectionRect,
@@ -64,7 +64,7 @@ function b(e) {
     }
   }, [n]);
   a.useLayoutEffect(() => {
-    let e = U.current;
+    let e = H.current;
     if (null == e || !n) return;
     let t = new IntersectionObserver(en, {
       threshold: 1
@@ -79,23 +79,23 @@ function b(e) {
     }, [F]), null == W || null == Z) return null;
   let el = Z.reactions.length > 0,
     ei = () => {
-      z ? A.default.leaveThread(W, "Forum Toolbar") : A.default.joinThread(W, "Forum Toolbar")
+      z ? _.default.leaveThread(W, "Forum Toolbar") : _.default.joinThread(W, "Forum Toolbar")
     },
     er = () => {
-      (0, x.trackForumPostLinkCopied)({
+      (0, R.trackForumPostLinkCopied)({
         postId: W.id,
         location: {
           section: D.AnalyticsSections.CHANNEL_HEADER
         }
-      }), (0, r.copy)((0, L.getChannelLinkToCopy)(W, $)), V(!0)
+      }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
     },
-    eo = z ? I.default : M.default;
+    eo = z ? N.default : M.default;
   return (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
       className: i(j.container, {
         [j.header]: G
       }),
-      ref: U,
+      ref: H,
       children: [(0, s.jsxs)("div", {
         className: i(j.reactButtons, {
           [j.loading]: es
@@ -125,7 +125,7 @@ function b(e) {
           isLurking: q,
           isGuest: X,
           isPendingMember: J,
-          maxReactions: H,
+          maxReactions: U,
           className: j.reactions,
           useChatFontScaling: !1,
           isForumToolbar: !0,
@@ -166,10 +166,10 @@ function b(e) {
             onClick: er,
             className: j.button,
             innerClassName: j.buttonInner,
-            children: [B ? (0, s.jsx)(I.default, {
+            children: [B ? (0, s.jsx)(N.default, {
               width: 16,
               height: 16
-            }) : (0, s.jsx)(N.default, {
+            }) : (0, s.jsx)(I.default, {
               width: 16,
               height: 16
             }), B ? O.default.Messages.COPIED : null]

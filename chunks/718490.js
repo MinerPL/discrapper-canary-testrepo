@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var s = n("37983"),
@@ -21,12 +21,12 @@ var s = n("37983"),
   E = n("664336"),
   g = n("811305"),
   S = n("117362"),
-  _ = n("449008"),
-  A = n("49111"),
+  A = n("449008"),
+  _ = n("49111"),
   T = n("590456"),
   M = n("782340"),
-  I = n("961282");
-class N {
+  N = n("961282");
+class I {
   updateData(e, t) {
     this.userId = e, this.user = t
   }
@@ -41,7 +41,7 @@ class N {
         children: n
       });
       return l.length > 0 && (i = (0, s.jsx)(o.TooltipContainer, {
-        className: I.tooltip,
+        className: N.tooltip,
         text: l.join(", "),
         position: "bottom",
         children: i
@@ -58,17 +58,17 @@ class N {
         return [t, n.map(e => {
           var t;
           return null === (t = f.default.getGuild(e)) || void 0 === t ? void 0 : t.name
-        }).filter(_.isNotNullish)]
+        }).filter(A.isNotNullish)]
       }).value();
       return n
     }), this.renderMoreAvatars = () => (0, s.jsx)(o.TooltipContainer, {
       text: M.default.Messages.AKA_MORE_AVATARS_OVERFLOW,
       position: "bottom",
       children: (0, s.jsx)(o.Clickable, {
-        className: I.moreAvatars,
+        className: N.moreAvatars,
         onClick: this.handleClick,
         children: (0, s.jsx)(p.default, {
-          className: I.plusIcon
+          className: N.plusIcon
         })
       })
     }, "more-avatars"), this.handleClick = () => {
@@ -76,28 +76,28 @@ class N {
         userId: this.userId,
         section: T.UserProfileSections.MUTUAL_GUILDS,
         analyticsLocation: {
-          section: A.AnalyticsSections.CHANNEL_HEADER
+          section: _.AnalyticsSections.CHANNEL_HEADER
         }
       })
     }, this.userId = e, this.user = t
   }
 }
 
-function L(e) {
+function v(e) {
   let {
     channel: t
   } = e, n = t.getRecipientId(), l = (0, u.useAvatarsWithGuilds)(n), i = Array(l.length).fill(null), d = function(e) {
     let t = (0, r.useStateFromStores)([h.default], () => h.default.getUser(e), [e]),
-      [n] = a.useState(() => new N(e, null != t ? t : void 0));
+      [n] = a.useState(() => new I(e, null != t ? t : void 0));
     return n.updateData(e, null != t ? t : void 0), n
   }(n);
   return 0 === d.getNicknameGuildPairs().length && 0 === l.length ? (0, s.jsx)("div", {
-    className: I.spacer
+    className: N.spacer
   }) : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(E.Divider, {}), (0, s.jsx)(m.TextBadge, {
       text: M.default.Messages.AKA,
       disableColor: !0,
-      className: I.akaBadge
+      className: N.akaBadge
     }), l.length > 0 ? (0, s.jsx)(g.default, {
       size: 16,
       users: i,
@@ -111,7 +111,7 @@ function L(e) {
           position: "bottom",
           children: (0, s.jsx)("img", {
             alt: "",
-            className: I.avatar,
+            className: N.avatar,
             onClick: d.handleClick,
             src: i.getAvatarURL(r, 16),
             "aria-hidden": !0
@@ -121,10 +121,10 @@ function L(e) {
       renderMoreUsers: d.renderMoreAvatars,
       guildId: void 0,
       max: 3,
-      className: I.avatars
+      className: N.avatars
     }) : null, d.getNicknameGuildPairs().length > 0 ? (0, s.jsx)(C.default, {
       position: "bottom",
-      className: I.nicknames,
+      className: N.nicknames,
       children: d.renderNicknamePairs()
     }) : null]
   })

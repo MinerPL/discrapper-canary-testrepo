@@ -47,21 +47,21 @@ function x(e) {
     autoTrackExposure: D
   }), {
     channel_id: U,
-    id: V
-  } = null != A ? A : {}, j = (0, a.useStateFromStores)([f.default], () => {
+    id: j
+  } = null != A ? A : {}, V = (0, a.useStateFromStores)([f.default], () => {
     let e = null != U ? U : L;
     return null == e ? null : f.default.getInvite(e)
   }, [U, L]);
   if (null == A) return R(), null;
-  let P = y && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == j ? void 0 : j.code,
+  let P = y && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == V ? void 0 : V.code,
     G = null != P ? (0, i.generateInviteKeyFromExtraData)({
       baseCode: P,
-      guildScheduledEventId: V
+      guildScheduledEventId: j
     }) : null,
-    H = null == G || null == j,
+    H = null == G || null == V,
     b = (0, u.default)(null != G ? G : ""),
-    B = null !== (n = null == j ? void 0 : j.maxAge) && void 0 !== n ? n : C.value,
-    F = null !== (x = null == j ? void 0 : j.maxUses) && void 0 !== x ? x : p.value;
+    B = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : C.value,
+    F = null !== (x = null == V ? void 0 : V.maxUses) && void 0 !== x ? x : p.value;
   return (0, l.jsxs)("div", {
     className: g.container,
     children: [(0, l.jsx)(s.Clickable, {
@@ -101,7 +101,7 @@ function x(e) {
             channel: U,
             channel_type: t,
             location: m.InstantInviteSources.GUILD_EVENTS,
-            code: j.code,
+            code: V.code,
             guild_scheduled_event_id: null == A ? void 0 : A.id
           })
         }

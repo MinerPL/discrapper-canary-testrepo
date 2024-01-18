@@ -22,8 +22,8 @@ var s = n("917351"),
   E = n("647374"),
   p = n("693078"),
   y = n("290689"),
-  T = n("839462"),
-  C = n("646630"),
+  C = n("839462"),
+  T = n("646630"),
   S = n("788554"),
   I = n("49111"),
   A = n("317041"),
@@ -32,9 +32,9 @@ var s = n("917351"),
 let O = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/,
   b = /^$|\n *$/,
   P = /^ *>>> ?/,
-  R = /^ *> ?/gm;
+  k = /^ *> ?/gm;
 
-function V(e) {
+function R(e) {
   let t = (0, E.punycodeLink)(e[1]);
   if (null == t) return {
     type: "text",
@@ -54,11 +54,11 @@ function V(e) {
     title: void 0
   }
 }
-let k = e => {
+let V = e => {
     let t = l.default.getChannel(e);
     return null == t ? void 0 : t.getGuildId()
   },
-  M = e => null != e.guildId ? f.default.getGuild(e.guildId) : null != e.channelId ? f.default.getGuild(k(e.channelId)) : null,
+  M = e => null != e.guildId ? f.default.getGuild(e.guildId) : null != e.channelId ? f.default.getGuild(V(e.channelId)) : null,
   w = {
     newline: a.defaultRules.newline,
     paragraph: a.defaultRules.paragraph,
@@ -83,7 +83,7 @@ let k = e => {
       parse(e, t, n) {
         let s = e[0],
           i = !!P.exec(s),
-          r = s.replace(i ? P : R, ""),
+          r = s.replace(i ? P : k, ""),
           a = n.inQuote || !1,
           o = n.inline || !1;
         n.inQuote = !0, !i && (n.inline = !0);
@@ -100,7 +100,7 @@ let k = e => {
     link: E.default,
     autolink: {
       ...a.defaultRules.autolink,
-      parse: V
+      parse: R
     },
     url: {
       ...a.defaultRules.url,
@@ -123,7 +123,7 @@ let k = e => {
         }
         return n
       },
-      parse: V
+      parse: R
     },
     strong: a.defaultRules.strong,
     em: a.defaultRules.em,
@@ -301,9 +301,9 @@ let k = e => {
     timestamp: {
       order: y.default.order - 1,
       requiredFirstCharacters: ["<"],
-      match: e => C.TIMESTAMP_REGEX.exec(e),
+      match: e => T.TIMESTAMP_REGEX.exec(e),
       parse(e) {
-        let [t, n, s] = e, i = (0, C.parseTimestamp)(n, s);
+        let [t, n, s] = e, i = (0, T.parseTimestamp)(n, s);
         return null == i ? {
           type: "text",
           content: t
@@ -342,7 +342,7 @@ let k = e => {
             content: s[e[1]]
           }],
           channelId: e[1],
-          guildId: k(n.channelId),
+          guildId: V(n.channelId),
           id: e[1]
         }
       }
@@ -350,7 +350,7 @@ let k = e => {
     heading: v.default,
     list: p.default
   },
-  L = (0, S.default)([w, T.default]),
+  L = (0, S.default)([w, C.default]),
   U = i.omit(L, ["inlineCode", "codeBlock", "br", "blockQuote"]),
   G = i.omit(L, ["inlineCode", "codeBlock", "br", "blockQuote", "url", "attachmentLink", "mention", "roleMention", "channelMention", "channelOrMessageUrl", "mediaPostLink"]),
   F = i.omit(L, ["codeBlock", "br", "mention", "channel", "roleMention", "attachmentLink"]),

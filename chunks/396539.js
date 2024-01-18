@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   useDesktopNotificationCenterItemsLoader: function() {
-    return E
+    return h
   }
 }), n("222007");
-var l = n("884691"),
-  a = n("446674"),
+var a = n("884691"),
+  l = n("446674"),
   s = n("267363"),
   i = n("756166"),
   r = n("138217"),
@@ -18,16 +18,16 @@ let f = e => {
       isFocused: t,
       navigatedAway: n,
       isDesktop: f,
-      withMentions: E = !1,
-      initialPageSize: h
-    } = e, _ = (0, a.useStateFromStores)([d.default], () => d.default.shouldReload()), S = l.useRef(!1), [T, p] = l.useState(!1), {
+      withMentions: h = !1,
+      initialPageSize: E
+    } = e, m = (0, l.useStateFromStores)([d.default], () => d.default.shouldReload()), p = a.useRef(!1), [S, g] = a.useState(!1), {
       initialized: N,
-      loading: I,
-      items: m,
-      hasMore: A,
-      cursor: g,
-      errored: C
-    } = (0, a.useStateFromStoresObject)([u.default], () => ({
+      loading: _,
+      items: T,
+      hasMore: I,
+      cursor: C,
+      errored: A
+    } = (0, l.useStateFromStoresObject)([u.default], () => ({
       initialized: u.default.initialized,
       loading: u.default.loading,
       items: u.default.items,
@@ -35,58 +35,58 @@ let f = e => {
       cursor: u.default.cursor,
       errored: u.default.errored
     })), {
-      roleFilter: R,
-      everyoneFilter: M
-    } = (0, a.useStateFromStoresObject)([r.default], () => ({
+      roleFilter: M,
+      everyoneFilter: v
+    } = (0, l.useStateFromStoresObject)([r.default], () => ({
       everyoneFilter: r.default.everyoneFilter,
       roleFilter: r.default.roleFilter
     }));
-    l.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), l.useEffect(() => {
+    a.useEffect(() => ((0, o.setNotificationCenterActive)(!0), () => (0, o.setNotificationCenterActive)(!1)), []), a.useEffect(() => {
       N && t && (0, s.ackUserFeature)(c.ReadStateTypes.NOTIFICATION_CENTER)
     }, [t, N]);
-    let O = (0, i.default)();
-    l.useEffect(() => () => {
-      f ? !O() && (C || m.length > 100) && (0, o.resetNotificationCenter)() : n && m.length > 100 && (0, o.resetNotificationCenter)()
-    }, [n, m, f, O, C]), l.useEffect(() => {
-      let e = _ && t;
+    let x = (0, i.default)();
+    a.useEffect(() => () => {
+      f ? !x() && (A || T.length > 100) && (0, o.resetNotificationCenter)() : n && T.length > 100 && (0, o.resetNotificationCenter)()
+    }, [n, T, f, x, A]), a.useEffect(() => {
+      let e = m && t;
       (!N || e) && (0, o.fetchNotificationCenterItems)({
-        limit: null != h ? h : E ? 8 : 20,
-        with_mentions: E,
-        roles_filter: R,
-        everyone_filter: M
+        limit: null != E ? E : h ? 8 : 20,
+        with_mentions: h,
+        roles_filter: M,
+        everyone_filter: v
       })
-    }, [N, _, t, E, R, M, h]);
-    let L = l.useCallback(async e => {
-      !S.current && N && A && null != g && (e || !C) && (S.current = !0, p(!0), await (0, o.fetchNotificationCenterItems)({
-        after: g,
-        with_mentions: E,
-        roles_filter: R,
-        everyone_filter: M,
-        limit: E ? 8 : 20
+    }, [N, m, t, h, M, v, E]);
+    let R = a.useCallback(async e => {
+      !p.current && N && I && null != C && (e || !A) && (p.current = !0, g(!0), await (0, o.fetchNotificationCenterItems)({
+        after: C,
+        with_mentions: h,
+        roles_filter: M,
+        everyone_filter: v,
+        limit: h ? 8 : 20
       }, () => {
-        S.current = !1
-      }), p(!1))
-    }, [N, A, g, C, E, R, M]);
+        p.current = !1
+      }), g(!1))
+    }, [N, I, C, A, h, M, v]);
     return {
       initialized: N,
-      loading: I,
-      items: m,
-      hasMore: A,
-      loadMore: L,
-      loadingMore: T,
+      loading: _,
+      items: T,
+      hasMore: I,
+      loadMore: R,
+      loadingMore: S,
       setReadNotifItemToAcked: e => {
         !e.acked && (e.acked = !0)
       },
-      errored: C
+      errored: A
     }
   },
-  E = () => {
+  h = () => {
     let {
       initialized: e,
       loading: t,
       items: n,
-      hasMore: l,
-      loadMore: a
+      hasMore: a,
+      loadMore: l
     } = f({
       isFocused: !0,
       isDesktop: !0
@@ -95,7 +95,7 @@ let f = e => {
       initialized: e,
       loading: t,
       items: n.filter(e => "notification-center-item" === e.kind),
-      hasMore: l,
-      loadMore: a
+      hasMore: a,
+      loadMore: l
     }
   }

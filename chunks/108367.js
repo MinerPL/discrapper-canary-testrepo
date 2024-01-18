@@ -1,56 +1,56 @@
 "use strict";
 n.r(t), n.d(t, {
   FOR_YOU_ICONS: function() {
-    return g
+    return C
   },
   getIcon: function() {
-    return R
-  },
-  getIconByName: function() {
     return M
   },
+  getIconByName: function() {
+    return v
+  },
   getMask: function() {
-    return O
+    return x
   },
   getBackground: function() {
-    return L
+    return R
   }
 });
-var l, a, s, i, r = n("669491"),
+var a, l, s, i, r = n("669491"),
   o = n("360191"),
   u = n("777204"),
   d = n("505406"),
   c = n("92440"),
   f = n("608108"),
-  E = n("804621"),
-  h = n("578299"),
-  _ = n("522420"),
-  S = n("371031"),
-  T = n("674517"),
-  p = n("989306"),
+  h = n("804621"),
+  E = n("578299"),
+  m = n("522420"),
+  p = n("371031"),
+  S = n("674517"),
+  g = n("989306"),
   N = n("695449"),
-  I = n("816428"),
-  m = n("710672");
-(l = s || (s = {})).CHECKED = "CHECKED", l.FRIENDS = "FRIENDS", l.SHARE_SCREEN = "SHARE_SCREEN", l.NEW_MESSAGE = "NEW_MESSAGE";
-let A = {
+  _ = n("816428"),
+  T = n("710672");
+(a = s || (s = {})).CHECKED = "CHECKED", a.FRIENDS = "FRIENDS", a.SHARE_SCREEN = "SHARE_SCREEN", a.NEW_MESSAGE = "NEW_MESSAGE";
+let I = {
   CHECKED: f,
-  FRIENDS: h,
-  SHARE_SCREEN: I,
-  NEW_MESSAGE: p
+  FRIENDS: E,
+  SHARE_SCREEN: _,
+  NEW_MESSAGE: g
 };
-(a = i || (i = {})).MISSED_MESSAGES = "MISSED_MESSAGES", a.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", a.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", a.TOP_MESSAGES = "TOP_MESSAGES", a.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", a.UPDATE_PROFILE = "UPDATE_PROFILE", a.FIND_FRIENDS = "FIND_FRIENDS", a.ADD_FRIEND = "ADD_FRIEND", a.FIRST_MESSAGE = "FIRST_MESSAGE";
-let g = {
-    MISSED_MESSAGES: T,
-    FRIEND_REQUEST_REMINDER: _,
-    SCHEDULED_GUILD_EVENT: E,
-    TOP_MESSAGES: S,
+(l = i || (i = {})).MISSED_MESSAGES = "MISSED_MESSAGES", l.FRIEND_REQUEST_REMINDER = "FRIEND_REQUEST_REMINDER", l.SCHEDULED_GUILD_EVENT = "SCHEDULED_GUILD_EVENT", l.TOP_MESSAGES = "TOP_MESSAGES", l.NOTIFICATION_CENTER = "NOTIFICATION_CENTER", l.UPDATE_PROFILE = "UPDATE_PROFILE", l.FIND_FRIENDS = "FIND_FRIENDS", l.ADD_FRIEND = "ADD_FRIEND", l.FIRST_MESSAGE = "FIRST_MESSAGE";
+let C = {
+    MISSED_MESSAGES: S,
+    FRIEND_REQUEST_REMINDER: m,
+    SCHEDULED_GUILD_EVENT: h,
+    TOP_MESSAGES: p,
     NOTIFICATION_CENTER: c,
-    UPDATE_PROFILE: m,
+    UPDATE_PROFILE: T,
     FIND_FRIENDS: d,
     ADD_FRIEND: d,
     FIRST_MESSAGE: N
   },
-  C = e => {
+  A = e => {
     switch (e.item_enum) {
       case o.ItemEnum.ADD_FRIEND:
         return "ADD_FRIEND";
@@ -64,10 +64,10 @@ let g = {
         return "NOTIFICATION_CENTER"
     }
   },
-  R = e => {
+  M = e => {
     switch (e.type) {
       case "lifecycle_item":
-        return C(e);
+        return A(e);
       case "missed_messages":
         return "MISSED_MESSAGES";
       case "friend_request_reminder":
@@ -80,39 +80,39 @@ let g = {
         return "NOTIFICATION_CENTER"
     }
   },
-  M = e => {
+  v = e => {
     if ("icHighlight" === e) return "TOP_MESSAGES";
     return "NOTIFICATION_CENTER"
   },
-  O = e => {
+  x = e => {
     switch (e) {
       case o.NotificationCenterItems.GO_LIVE_PUSH:
         return {
-          icon: A.SHARE_SCREEN, color: r.default.colors.BACKGROUND_ACCENT
+          icon: I.SHARE_SCREEN, color: r.default.colors.BACKGROUND_ACCENT
         };
       case o.NotificationCenterItems.FRIEND_REQUEST_ACCEPTED:
         return {
-          icon: A.CHECKED, color: r.default.colors.STATUS_POSITIVE_BACKGROUND
+          icon: I.CHECKED, color: r.default.colors.STATUS_POSITIVE_BACKGROUND
         };
       case o.NotificationCenterItems.FRIEND_REQUEST_PENDING:
       case o.NotificationCenterItems.FRIEND_SUGGESTION_CREATED:
         return {
-          icon: A.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
+          icon: I.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
         };
       case o.NotificationCenterItems.DM_FRIEND_NUDGE:
         return {
-          icon: A.NEW_MESSAGE, color: r.default.colors.BACKGROUND_ACCENT
+          icon: I.NEW_MESSAGE, color: r.default.colors.BACKGROUND_ACCENT
         };
       case o.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS:
       case o.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED:
         return {
-          icon: A.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
+          icon: I.FRIENDS, color: r.default.colors.BACKGROUND_ACCENT
         };
       default:
         return null
     }
   },
-  L = e => {
+  R = e => {
     switch (e.item_enum) {
       case o.ItemEnum.UPDATE_PROFILE:
         return u.PROFILE_BACKGROUND;

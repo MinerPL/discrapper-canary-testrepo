@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return N
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("917351"),
   i = n.n(s),
   r = n("249654"),
@@ -14,19 +14,19 @@ var l = n("37983"),
   d = n("267363"),
   c = n("152637"),
   f = n("578198"),
-  E = n("689275"),
-  h = n("967241"),
-  _ = n("42203"),
-  S = n("449008"),
-  T = n("648564"),
-  p = n("419309");
+  h = n("689275"),
+  E = n("967241"),
+  m = n("42203"),
+  p = n("449008"),
+  S = n("648564"),
+  g = n("419309");
 
 function N(e) {
   let {
     channel: t,
     channelRecord: n,
     deleteChannel: s
-  } = e, N = (0, o.useStateFromStoresArray)([E.default, _.default], () => i(E.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
+  } = e, N = (0, o.useStateFromStoresArray)([h.default, m.default], () => i(h.default.getThreadsForParent(n.guild_id, n.id)).values().filter(e => {
     let {
       id: n
     } = e;
@@ -35,22 +35,22 @@ function N(e) {
     let {
       id: t
     } = e;
-    return _.default.getChannel(t)
-  }).filter(S.isNotNullish).sort((e, t) => r.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), I = a.useCallback((e, t) => {
-    (0, h.openThreadSidebarForViewing)(e, t, T.OpenThreadAnalyticsLocations.INBOX)
+    return m.default.getChannel(t)
+  }).filter(p.isNotNullish).sort((e, t) => r.default.compare(e.id, t.id)).value(), [t.oldestReadMessageId, n.guild_id, n.id]), _ = l.useCallback((e, t) => {
+    (0, E.openThreadSidebarForViewing)(e, t, S.OpenThreadAnalyticsLocations.INBOX)
   }, []);
-  return a.useEffect(() => {
+  return l.useEffect(() => {
     null != n && t.isFullyLoaded && !t.hasError && !t.collapsed && 0 === N.length && u.default.wait(() => {
       (0, d.ack)(t.channelId, !0), s(t.channelId)
     })
-  }), (0, l.jsx)("div", {
-    className: p.container,
-    children: N.map(e => (0, l.jsx)(f.ForumPostComposerStoreProvider, {
+  }), (0, a.jsx)("div", {
+    className: g.container,
+    children: N.map(e => (0, a.jsx)(f.ForumPostComposerStoreProvider, {
       createStore: () => (0, f.createForumPostComposerStore)(n),
-      children: (0, l.jsx)(c.default, {
-        className: p.forumPost,
+      children: (0, a.jsx)(c.default, {
+        className: g.forumPost,
         threadId: e.id,
-        goToThread: I
+        goToThread: _
       })
     }, e.id))
   })

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   activityInviteKey: function() {
-    return N
+    return I
   },
   default: function() {
-    return v
+    return L
   }
 }), n("222007");
 var s = n("37983"),
@@ -24,13 +24,13 @@ var s = n("37983"),
   E = n("681060"),
   g = n("884351"),
   S = n("671071"),
-  _ = n("401848"),
-  A = n("718422"),
+  A = n("401848"),
+  _ = n("718422"),
   T = n("49111"),
   M = n("782340"),
-  I = n("216220");
-let N = "ActivityInvite";
-class L extends a.PureComponent {
+  N = n("216220");
+let I = "ActivityInvite";
+class v extends a.PureComponent {
   componentDidMount() {
     this.fetchApplication()
   }
@@ -75,7 +75,7 @@ class L extends a.PureComponent {
       application: C,
       transitionState: m,
       onClose: g
-    } = this.props, S = h > 0, _ = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+    } = this.props, S = h > 0, A = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
     return (0, s.jsxs)(o.ModalRoot, {
@@ -90,18 +90,18 @@ class L extends a.PureComponent {
         })
       }), (0, s.jsxs)(o.ModalContent, {
         children: [(0, s.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.MESSAGE_PREVIEW
         }), (0, s.jsx)(d.default, {
           activityActionType: f,
           activity: l,
-          className: I.preview,
+          className: N.preview,
           application: C,
           partyId: null != l.party ? l.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, s.jsx)("div", {
-          className: I.subHeader,
+          className: N.subHeader,
           children: M.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, s.jsx)(o.Popout, {
           position: "top",
@@ -122,7 +122,7 @@ class L extends a.PureComponent {
             })
           },
           children: () => (0, s.jsx)(E.default, {
-            className: I.textArea,
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -130,12 +130,12 @@ class L extends a.PureComponent {
             onChange: this.handleTextChange,
             onSubmit: this.handleShare,
             type: p.ChatInputTypes.FORM,
-            parentModalKey: N
+            parentModalKey: I
           })
         })]
       }), (0, s.jsxs)(o.ModalFooter, {
         children: [(0, s.jsx)(o.Tooltip, {
-          text: _,
+          text: A,
           children: e => (0, s.jsx)("div", {
             ...e,
             children: (0, s.jsx)(o.Button, {
@@ -216,7 +216,7 @@ class L extends a.PureComponent {
       }).then(e => this.trackInvite(e)), a(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !0
-      })) : (0, A.applyChatRestrictions)({
+      })) : (0, _.applyChatRestrictions)({
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
@@ -240,13 +240,13 @@ class L extends a.PureComponent {
     }
   }
 }
-var v = r.default.connectStores([_.default, C.default], e => {
+var L = r.default.connectStores([A.default, C.default], e => {
   let {
     channel: t,
     activity: n
   } = e;
   return {
-    cooldown: _.default.getSlowmodeCooldownGuess(t.id),
+    cooldown: A.default.getSlowmodeCooldownGuess(t.id),
     application: null != n.application_id ? C.default.getApplication(n.application_id) : S.SpotifyApplication
   }
-})(L)
+})(v)

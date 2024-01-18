@@ -74,7 +74,7 @@ function S(e, t) {
       can_send_message: S,
       ...M
     } = l,
-    v = {
+    N = {
       ...M,
       channel_id: e.id,
       guild_id: a,
@@ -90,7 +90,7 @@ function S(e, t) {
       old_thread_muted_until: p,
       new_thread_muted_until: null != t.mute_config ? (0, _.muteConfigToTimestamp)(t.mute_config) : p
     };
-  o.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, v)
+  o.default.track(m.AnalyticEvents.THREAD_NOTIFICATION_SETTINGS_UPDATED, N)
 }
 n("782340");
 let M = e => {

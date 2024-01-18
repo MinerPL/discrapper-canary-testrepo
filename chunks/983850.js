@@ -28,8 +28,8 @@ var s = n("345570"),
   E = n("457971"),
   p = n("447435"),
   y = n("574933"),
-  T = n("49111"),
-  C = n("397336");
+  C = n("49111"),
+  T = n("397336");
 let S = 3e3,
   I = 800,
   A = {};
@@ -131,14 +131,14 @@ function P(e, t) {
     b(t, i)
   }, Math.random() * I) : b(e, i)
 }
-let R = e => null == e.content_scan_version || e.content_scan_version < 1,
-  V = e => {
+let k = e => null == e.content_scan_version || e.content_scan_version < 1,
+  R = e => {
     var t, n, s, i, r, a, o, d;
     let u = null != (d = e).content_scan_version ? d.content_scan_version : null != d.contentScanVersion ? d.contentScanVersion : null;
     return !((null === (t = e.video) || void 0 === t ? void 0 : t.width) === 0 && (null === (n = e.video) || void 0 === n ? void 0 : n.height) === 0 || (null === (s = e.thumbnail) || void 0 === s ? void 0 : s.width) === 0 && (null === (i = e.thumbnail) || void 0 === i ? void 0 : i.height) === 0 || (null === (r = e.image) || void 0 === r ? void 0 : r.width) === 0 && (null === (a = e.image) || void 0 === a ? void 0 : a.height) === 0 || "images" in e && (null === (o = e.images) || void 0 === o ? void 0 : o.some(e => 0 === e.width && 0 === e.height))) && (null == u || u < 1)
   };
 
-function k(e) {
+function V(e) {
   let {
     attachmentIds: t,
     embedIds: n
@@ -156,7 +156,7 @@ function M(e) {
       numOfEmbedsPendingScan: 0
     });
     let l = e[t.channel_id];
-    return l.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, l.numOfEmbeds += null !== (o = null === (s = t.embeds) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0, l.numOfAttachmentsPendingScan += null !== (d = null === (i = t.attachments) || void 0 === i ? void 0 : i.filter(R).length) && void 0 !== d ? d : 0, l.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(V).length) && void 0 !== u ? u : 0, {
+    return l.numOfAttachments += null !== (a = null === (n = t.attachments) || void 0 === n ? void 0 : n.length) && void 0 !== a ? a : 0, l.numOfEmbeds += null !== (o = null === (s = t.embeds) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0, l.numOfAttachmentsPendingScan += null !== (d = null === (i = t.attachments) || void 0 === i ? void 0 : i.filter(k).length) && void 0 !== d ? d : 0, l.numOfEmbedsPendingScan += null !== (u = null == t ? void 0 : null === (r = t.embeds) || void 0 === r ? void 0 : r.filter(R).length) && void 0 !== u ? u : 0, {
       ...e,
       [t.channel_id]: l
     }
@@ -176,8 +176,8 @@ function L(e) {
     attachmentIds: [],
     embedIds: []
   };
-  let f = null !== (o = null == e ? void 0 : null === (s = e.attachments) || void 0 === s ? void 0 : s.filter(R)) && void 0 !== o ? o : [],
-    _ = null !== (d = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(V)) && void 0 !== d ? d : [];
+  let f = null !== (o = null == e ? void 0 : null === (s = e.attachments) || void 0 === s ? void 0 : s.filter(k)) && void 0 !== o ? o : [],
+    _ = null !== (d = null == e ? void 0 : null === (i = e.embeds) || void 0 === i ? void 0 : i.filter(R)) && void 0 !== d ? d : [];
   return {
     attachmentIds: f.map(e => e.id).filter(Boolean),
     embedIds: _.map((e, t) => "embed_".concat(t)).filter(Boolean)
@@ -197,7 +197,7 @@ function U(e, t) {
       });
     n.length > 0 && (t = [...t, ...n]);
     let s = a(t, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
-      i = s.filter(e => k(e));
+      i = s.filter(e => V(e));
     return {
       messagesPendingScan: i,
       attributesByChannelId: M(s)
@@ -221,9 +221,9 @@ function G(e) {
     message: r
   } = e;
   if (!(0, E.isEligibleForExplicitMediaRedaction)() || null == r.channel_id || null == r.id || (null === (t = r.author) || void 0 === t ? void 0 : t.id) === f.default.getId() || null == r.embeds && null == r.attachments) return !1;
-  if (!k(r)) {
+  if (!V(r)) {
     let e = null !== (i = null !== (s = g.default.getMessage(r.channel_id, r.id)) && void 0 !== s ? s : y.default.getMessage(r.id, r.channel_id)) && void 0 !== i ? i : null === (n = l.default.getMessage(r.channel_id, r.id)) || void 0 === n ? void 0 : n.message;
-    null != e && !k((0, u.updateMessageRecord)(e, r)) && O(e, p.TimeoutCancelSource.UPDATE)
+    null != e && !V((0, u.updateMessageRecord)(e, r)) && O(e, p.TimeoutCancelSource.UPDATE)
   }
   let a = m.default.getChannelId(),
     o = _.default.getCurrentSidebarChannelId(a),
@@ -314,7 +314,7 @@ function K(e) {
     settings: t,
     local: n
   } = e;
-  if (!(0, E.isEligibleForExplicitMediaRedaction)() || !n || t.type !== C.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
+  if (!(0, E.isEligibleForExplicitMediaRedaction)() || !n || t.type !== T.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
   let s = m.default.getChannelId();
   return null != s && z(s)
 }
@@ -336,7 +336,7 @@ function z(e) {
     } = function(e) {
       let t = e.filter(e => w(e) && (0, p.shouldRedactExplicitContent)(e)),
         n = e.map(e => {
-          if (T.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
+          if (C.MessageTypesWithLazyLoadedReferences.has(e.type) && null != e.messageReference) {
             let t = l.default.getMessageByReference(e.messageReference);
             if (t.state === l.ReferencedMessageState.LOADED && null != t.message && w(t.message)) return t.message
           }
@@ -345,7 +345,7 @@ function z(e) {
         });
       n.length > 0 && (t = [...t, ...n]);
       let s = a(t, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
-        i = s.filter(e => k(e));
+        i = s.filter(e => V(e));
       return {
         messagesPendingScan: i,
         attributesByChannelId: M(s)

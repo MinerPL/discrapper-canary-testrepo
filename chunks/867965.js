@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return M
   },
   trackForumNewPostCleared: function() {
-    return v
+    return N
   },
   trackForumPostCreated: function() {
-    return N
+    return v
   },
   trackForumScrolled: function() {
     return C
@@ -55,10 +55,10 @@ n.r(t), n.d(t, {
     return P
   },
   trackForumHelperCardClicked: function() {
-    return F
+    return U
   },
   trackForumChannelMediaUploaderClicked: function() {
-    return U
+    return F
   },
   trackForumEnableAutomodClicked: function() {
     return H
@@ -214,7 +214,7 @@ function M(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   let {
     guildId: t,
     channelId: n
@@ -228,7 +228,7 @@ function v(e) {
   })
 }
 
-function N(e) {
+function v(e) {
   let {
     guildId: t,
     channelId: n,
@@ -380,7 +380,7 @@ function P(e) {
   })
 }
 
-function F(e) {
+function U(e) {
   let {
     readGuideCta: t
   } = e;
@@ -389,7 +389,7 @@ function F(e) {
   })
 }
 
-function U(e) {
+function F(e) {
   let {
     isMobile: t
   } = e;

@@ -37,7 +37,7 @@ var l, a, s = n("37983"),
   y = n("782340"),
   U = n("955614");
 
-function V(e) {
+function j(e) {
   let {
     channel: t,
     onClick: n
@@ -73,7 +73,7 @@ function V(e) {
   })
 }
 
-function j(e) {
+function V(e) {
   let {
     guild: t,
     channel: n,
@@ -96,7 +96,7 @@ function j(e) {
       children: null == t ? void 0 : t.name
     })]
   });
-  return null != n ? (0, s.jsx)(V, {
+  return null != n ? (0, s.jsx)(j, {
     channel: n,
     onClick: l
   }) : (0, s.jsxs)(d.Clickable, {
@@ -131,7 +131,7 @@ function P(e) {
     isJoined: S = !1,
     isMember: D = !1,
     isHub: y = !1,
-    speakers: V,
+    speakers: j,
     speakerCount: P,
     rsvped: G,
     canInvite: H,
@@ -192,16 +192,16 @@ function P(e) {
         guildEventId: J,
         eventPreview: Q,
         recurrenceId: ee
-      }), T && null != l && null != V && P > 0 && (0, s.jsx)(L.default, {
+      }), T && null != l && null != j && P > 0 && (0, s.jsx)(L.default, {
         guild: l,
-        speakers: V,
+        speakers: j,
         speakerCount: P,
         className: U.spacing
       }), (0, s.jsx)("hr", {
         className: U.divider
       }), (0, s.jsxs)("div", {
         className: u(U.inline, U.footer),
-        children: [(0, s.jsx)(j, {
+        children: [(0, s.jsx)(V, {
           guild: l,
           channel: a,
           onJoinClick: w,

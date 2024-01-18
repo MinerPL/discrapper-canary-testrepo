@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return I
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
+var a = n("37983"),
+  l = n("884691"),
   s = n("249654"),
   i = n("446674"),
   r = n("151426"),
@@ -14,65 +14,65 @@ var l = n("37983"),
   d = n("342176"),
   c = n("396539"),
   f = n("673699"),
-  E = n("845579"),
-  h = n("211248"),
-  _ = n("11539"),
-  S = n("599110"),
-  T = n("64318"),
-  p = n("49111"),
+  h = n("845579"),
+  E = n("211248"),
+  m = n("11539"),
+  p = n("599110"),
+  S = n("64318"),
+  g = n("49111"),
   N = n("782340"),
-  I = n("358468");
+  _ = n("358468");
 
-function m(e) {
+function T(e) {
   let {
     onClick: t
   } = e;
-  return (0, l.jsx)(h.default, {
+  return (0, a.jsx)(E.default, {
     tooltip: N.default.Messages.MARK_ALL_AS_READ,
-    color: h.CircleIconButtonColors.SECONDARY,
-    icon: (0, l.jsx)(_.default, {}),
+    color: E.CircleIconButtonColors.SECONDARY,
+    icon: (0, a.jsx)(m.default, {}),
     onClick: t
   })
 }
 
-function A(e) {
+function I(e) {
   let {
     setTab: t,
     badgeState: n,
-    closePopout: h
+    closePopout: E
   } = e, {
-    initialized: _,
+    initialized: m,
     items: N,
-    loading: A,
-    loadMore: g
-  } = (0, c.useDesktopNotificationCenterItemsLoader)(), C = (0, i.useStateFromStores)([o.default], () => o.default.localItems), R = a.useMemo(() => [...[...N, ...C].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, C]), M = N.length > 0 ? N[0] : null, O = E.NotificationCenterAckedBeforeId.useSetting(), L = a.useMemo(() => {
-    let e = null != M && 0 >= s.default.compare(M.id, O);
+    loading: I,
+    loadMore: C
+  } = (0, c.useDesktopNotificationCenterItemsLoader)(), A = (0, i.useStateFromStores)([o.default], () => o.default.localItems), M = l.useMemo(() => [...[...N, ...A].sort((e, t) => -1 * s.default.compare(e.id, t.id))], [N, A]), v = N.length > 0 ? N[0] : null, x = h.NotificationCenterAckedBeforeId.useSetting(), R = l.useMemo(() => {
+    let e = null != v && 0 >= s.default.compare(v.id, x);
     if (e) return !1;
-    for (let e of R) {
-      if (0 >= s.default.compare(e.id, O)) break;
-      if (!(0, d.isRemoteAcked)(e, O)) return !0
+    for (let e of M) {
+      if (0 >= s.default.compare(e.id, x)) break;
+      if (!(0, d.isRemoteAcked)(e, x)) return !0
     }
     return !1
-  }, [M, O, R]);
-  return (0, l.jsxs)("div", {
-    className: I.container,
-    children: [(0, l.jsx)(T.default, {
+  }, [v, x, M]);
+  return (0, a.jsxs)("div", {
+    className: _.container,
+    children: [(0, a.jsx)(S.default, {
       tab: r.InboxTab.FOR_YOU,
       setTab: t,
       badgeState: n,
-      closePopout: h,
-      children: L ? (0, l.jsx)(m, {
+      closePopout: E,
+      children: R ? (0, a.jsx)(T, {
         onClick: () => {
-          null != M && (E.NotificationCenterAckedBeforeId.updateSetting(M.id), S.default.track(p.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != v && (h.NotificationCenterAckedBeforeId.updateSetting(v.id), p.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: u.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }
       }) : null
-    }), (0, l.jsx)(f.default, {
-      initialized: _,
-      items: R,
-      loading: A,
-      loadMore: g
+    }), (0, a.jsx)(f.default, {
+      initialized: m,
+      items: M,
+      loading: I,
+      loadMore: C
     })]
   })
 }

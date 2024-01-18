@@ -83,15 +83,15 @@ function C(e) {
     description: D,
     name: y,
     image: U,
-    scheduledEndTime: V,
-    scheduledStartTime: j,
+    scheduledEndTime: j,
+    scheduledStartTime: V,
     recurrenceRule: P
   } = t, G = (0, d.useStageBlockedUsersCount)(M), H = null != t && (0, E.isGuildScheduledEventActive)(t), b = a.useMemo(() => {
     let e = (0, _.getScheduleFromEventData)(t);
     return null != e ? e : {
-      startDate: i(j)
+      startDate: i(V)
     }
-  }, [t, j]), [B, F] = a.useState(null), w = a.useRef(null);
+  }, [t, V]), [B, F] = a.useState(null), w = a.useRef(null);
   a.useEffect(() => {
     if (O) {
       var e;
@@ -161,7 +161,7 @@ function C(e) {
             scheduledStartTime: null == t ? void 0 : t.toISOString(),
             scheduledEndTime: null == n ? void 0 : n.toISOString()
           };
-          null != t && null != V && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (l.recurrenceRule = (0, _.recurrenceOptionToRecurrenceRule)(B, t)), A(l)
+          null != t && null != j && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (l.recurrenceRule = (0, _.recurrenceOptionToRecurrenceRule)(B, t)), A(l)
         },
         onRecurrenceChange: e => {
           let t = b.startDate;

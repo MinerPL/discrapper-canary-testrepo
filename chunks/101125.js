@@ -21,8 +21,8 @@ var r = n("714617"),
   E = n("271938"),
   p = n("546463"),
   y = n("603699"),
-  T = n("686470"),
-  C = n("52028"),
+  C = n("686470"),
+  T = n("52028"),
   S = n("824563"),
   I = n("235660"),
   A = n("49111");
@@ -31,13 +31,13 @@ let D = !1,
   O = A.StatusTypes.UNKNOWN,
   b = 0,
   P = [],
-  R = !1,
-  V = !0,
-  k = Object.freeze([]),
+  k = !1,
+  R = !0,
+  V = Object.freeze([]),
   M = [];
 
 function w(e) {
-  return (0, v.shouldShareApplicationActivity)(e, T.default)
+  return (0, v.shouldShareApplicationActivity)(e, C.default)
 }
 
 function L(e) {
@@ -60,15 +60,15 @@ function L(e) {
 
 function U() {
   var e;
-  b = null !== (e = y.default.getIdleSince()) && void 0 !== e ? e : 0, R = y.default.isAFK(), V ? (N = O, G()) : N = D ? A.StatusTypes.INVISIBLE : g.StatusSetting.getSetting(), N === A.StatusTypes.ONLINE && b > 0 && (N = A.StatusTypes.IDLE);
+  b = null !== (e = y.default.getIdleSince()) && void 0 !== e ? e : 0, k = y.default.isAFK(), R ? (N = O, G()) : N = D ? A.StatusTypes.INVISIBLE : g.StatusSetting.getSetting(), N === A.StatusTypes.ONLINE && b > 0 && (N = A.StatusTypes.IDLE);
   let t = !1,
-    n = V || N === A.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(L);
+    n = R || N === A.StatusTypes.INVISIBLE ? [] : T.default.getActivities().filter(L);
   !a(P, n) && (P = n, t = !0);
   let s = I.default.getRemoteActivities();
-  if (k !== s && (k = s, t = !0), t) {
+  if (V !== s && (V = s, t = !0), t) {
     let e = P.find(e => e.type === A.ActivityTypes.CUSTOM_STATUS),
       t = P.filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS);
-    M = t.length > 0 ? P : null != e ? [e, ...d(k).filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d.uniqBy(k, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    M = t.length > 0 ? P : null != e ? [e, ...d(V).filter(e => e.type !== A.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : d.uniqBy(V, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
@@ -77,18 +77,18 @@ function G() {
 }
 
 function F() {
-  V = !1, O = A.StatusTypes.UNKNOWN, U(), S.default.setCurrentUserOnConnectionOpen(N, M)
+  R = !1, O = A.StatusTypes.UNKNOWN, U(), S.default.setCurrentUserOnConnectionOpen(N, M)
 }
 class x extends u.default.Store {
   initialize() {
-    this.waitFor(y.default, m.default, C.default, I.default, T.default, p.default), this.syncWith([C.default], U)
+    this.waitFor(y.default, m.default, T.default, I.default, C.default, p.default), this.syncWith([T.default], U)
   }
   getLocalPresence() {
     return {
       status: N,
       since: b,
       activities: P,
-      afk: R,
+      afk: k,
       broadcast: i
     }
   }
@@ -136,7 +136,7 @@ var B = new x(l.default, {
   LIBRARY_FETCH_SUCCESS: U,
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
   LOGOUT: function() {
-    V = !0, O = N, U()
+    R = !0, O = N, U()
   },
   EMBEDDED_ACTIVITY_CLOSE: U,
   EMBEDDED_ACTIVITY_OPEN: U,

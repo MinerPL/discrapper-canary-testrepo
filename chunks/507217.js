@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return M
   },
   updateRegistry: function() {
-    return v
+    return N
   }
 }), n("222007");
 var i = n("627445"),
@@ -177,7 +177,7 @@ function M(e) {
   })
 }
 
-function v(e, t, n) {
+function N(e, t, n) {
   s.default.dispatch({
     type: "APPLICATION_COMMAND_REGISTRY_UPDATE",
     applications: t,

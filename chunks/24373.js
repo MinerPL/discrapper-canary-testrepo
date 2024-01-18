@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getStickerPackPreviewSticker: function() {
-    return C
+    return T
   },
   getStickerFormatTypeFromFileType: function() {
     return I
@@ -25,13 +25,13 @@ n.r(t), n.d(t, {
     return P
   },
   shouldAnimateSticker: function() {
-    return R
+    return k
   },
   shouldAttachSticker: function() {
-    return V
+    return R
   },
   isGuildSticker: function() {
-    return k
+    return V
   },
   isStandardSticker: function() {
     return M
@@ -59,7 +59,7 @@ let {
   PROJECT_ENV: m,
   ASSET_ENDPOINT: h,
   CDN_HOST: v
-} = window.GLOBAL_ENV, E = Object.values(l.StickerExtensions), p = decodeURIComponent(_.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(E.join("|"), ")"))), y = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(g, ")(").concat(p, ")"), "ig"), T = RegExp("".concat(location.protocol).concat(c, "(").concat(p, ")"), "ig"), C = e => {
+} = window.GLOBAL_ENV, E = Object.values(l.StickerExtensions), p = decodeURIComponent(_.Endpoints.STICKER_ASSET("[\\d]+", "(".concat(E.join("|"), ")"))), y = RegExp("(".concat(location.protocol).concat(h, "|").concat(location.protocol).concat(g, ")(").concat(p, ")"), "ig"), C = RegExp("".concat(location.protocol).concat(c, "(").concat(p, ")"), "ig"), T = e => {
   if (null != e.cover_sticker_id) {
     let t = e.stickers.find(t => t.id === e.cover_sticker_id);
     if (null != t) return t
@@ -112,7 +112,7 @@ let {
   if (null == s) return null;
   let r = o.SUPPORTS_WEBP ? "webp" : "png";
   return n = null != v ? "".concat(location.protocol, "//").concat(v, "/app-assets/").concat(f.STICKER_APPLICATION_ID, "/store/").concat(s, ".").concat(r) : "".concat(location.protocol).concat(c).concat(_.Endpoints.STORE_ASSET(f.STICKER_APPLICATION_ID, s, r)), null != t && (n += "?size=".concat((0, i.getBestMediaProxySize)(t))), n
-}, O = e => e.match("development" !== m ? y : T), b = e => e.stickers.some(e => {
+}, O = e => e.match("development" !== m ? y : C), b = e => e.stickers.some(e => {
   let {
     format_type: t
   } = e;
@@ -122,8 +122,8 @@ let {
   id: e.id,
   name: e.name,
   stickers: e.stickers,
-  previewSticker: C(e)
-}), R = (e, t) => e === f.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== f.StickerAnimationSettings.NEVER_ANIMATE, V = (e, t, n, i) => {
+  previewSticker: T(e)
+}), k = (e, t) => e === f.StickerAnimationSettings.ANIMATE_ON_INTERACTION ? t : e !== f.StickerAnimationSettings.NEVER_ANIMATE, R = (e, t, n, i) => {
   let r = a.default.getUploadCount(n, i);
   if (r > 0) return !0;
   let o = u.default.getStickerPreview(n, i),
@@ -138,7 +138,7 @@ let {
     default:
       return !1
   }
-}, k = e => e.type === l.MetaStickerType.GUILD, M = e => e.type === l.MetaStickerType.STANDARD, w = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], L = e => {
+}, V = e => e.type === l.MetaStickerType.GUILD, M = e => e.type === l.MetaStickerType.STANDARD, w = e => e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : [], L = e => {
   if (null === e) return !1;
   let t = e.guild_id;
   return void 0 !== r.default.getGuild(t)

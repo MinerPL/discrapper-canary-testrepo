@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("222007");
-var r = n("37983"),
-  i = n("884691"),
+var i = n("37983"),
+  r = n("884691"),
   s = n("414456"),
   l = n.n(s),
   a = n("77078"),
@@ -14,13 +14,13 @@ var r = n("37983"),
   c = n("49111"),
   d = n("782340"),
   f = n("519409");
-class p extends i.Component {
+class p extends r.Component {
   render() {
-    return (0, r.jsxs)("div", {
+    return (0, i.jsxs)("div", {
       className: f.streamerModeEnabled,
-      children: [(0, r.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: f.streamerModeEnabledImage
-      }), (0, r.jsx)(a.Clickable, {
+      }), (0, i.jsx)(a.Clickable, {
         className: l(f.streamerModeEnabledBtn, {
           [f.disabled]: this.props.disableButton
         }),

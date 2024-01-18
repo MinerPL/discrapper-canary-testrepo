@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return y
   },
   updateServerMessage: function() {
-    return T
+    return C
   },
   updateMessageRecord: function() {
-    return C
+    return T
   },
   canEditMessageWithStickers: function() {
     return N
@@ -39,12 +39,12 @@ let p = new l.default({
 });
 
 function y(e) {
-  var t, n, s, o, g, v, y, T, C;
+  var t, n, s, o, g, v, y, C, T;
   let {
     reactions: N,
     interactionData: O
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, b = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (g = e.mention_roles) && void 0 !== g ? g : [], R = null !== (v = e.mention_channels) && void 0 !== v ? v : [], V = e.message_reference, k = i(new Date(e.timestamp)), M = e.type === E.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
-  let w = null == (T = e).author ? p : null != T.webhook_id ? new l.default(T.author) : null !== (C = c.default.getUser(T.author.id)) && void 0 !== C ? C : new l.default(T.author),
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, b = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (g = e.mention_roles) && void 0 !== g ? g : [], k = null !== (v = e.mention_channels) && void 0 !== v ? v : [], R = e.message_reference, V = i(new Date(e.timestamp)), M = e.type === E.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
+  let w = null == (C = e).author ? p : null != C.webhook_id ? new l.default(C.author) : null !== (T = c.default.getUser(C.author.id)) && void 0 !== T ? T : new l.default(C.author),
     L = null == e ? void 0 : e.gift_info,
     U = null != e.interaction ? d.default.createFromServer(e.interaction) : null,
     G = e.type === E.MessageTypes.THREAD_STARTER_MESSAGE ? null === (s = e.referenced_message) || void 0 === s ? void 0 : null === (n = s.author) || void 0 === n ? void 0 : n.id : void 0,
@@ -55,13 +55,13 @@ function y(e) {
     author: w,
     webhookId: e.webhook_id,
     blocked: _.default.isBlocked(w.id) || null != G && _.default.isBlocked(G),
-    timestamp: k,
+    timestamp: V,
     editedTimestamp: null != e.edited_timestamp ? i(new Date(e.edited_timestamp)) : null,
     mentionEveryone: e.mention_everyone,
     mentions: b,
     mentionRoles: P,
-    mentionChannels: R,
-    messageReference: V,
+    mentionChannels: k,
+    messageReference: R,
     mentioned: (0, h.isMentioned)({
       userId: f.default.getId(),
       channelId: e.channel_id,
@@ -75,7 +75,7 @@ function y(e) {
     giftCodes: (0, m.isGiftCodeEmbed)(e) ? (0, m.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url) : (0, m.findGiftCodes)(e.content),
     content: x,
     referralTrialOfferId: F,
-    call: I(e.call, k),
+    call: I(e.call, V),
     reactions: D(null != N ? N : e.reactions),
     interaction: U,
     interactionData: null != O ? O : e.interaction_data,
@@ -86,7 +86,7 @@ function y(e) {
   })
 }
 
-function T(e, t) {
+function C(e, t) {
   return null != t.edited_timestamp ? {
     ...t,
     reactions: e.reactions,
@@ -97,7 +97,7 @@ function T(e, t) {
   }
 }
 
-function C(e, t) {
+function T(e, t) {
   if (null != t.edited_timestamp) return y(t, {
     reactions: e.reactions,
     interactionData: e.interactionData

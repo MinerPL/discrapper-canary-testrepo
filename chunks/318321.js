@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return M
   },
   getForumPostDraftAppliedTagIds: function() {
-    return v
+    return N
   },
   getNumActiveThreads: function() {
-    return N
+    return v
   },
   collectForumAnalyticsMetadata: function() {
     return O
@@ -59,7 +59,7 @@ function M(e) {
   return _.default.getUploads(e, o.DraftType.FirstThreadMessage).length
 }
 
-function v(e) {
+function N(e) {
   var t, n;
   let i = d.default.getChannel(e);
   if (null == i) return [];
@@ -71,7 +71,7 @@ function v(e) {
   return Array.from(s).filter(e => r.has(e))
 }
 
-function N(e, t) {
+function v(e, t) {
   return Object.keys(a.default.getThreadsForParent(e, t)).length
 }
 

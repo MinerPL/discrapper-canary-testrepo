@@ -57,7 +57,7 @@ function M(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   if (null != e && !(e.id in m)) {
     let t = _.default.getChannel(e.id);
     if (null != t) return M(t), !0
@@ -65,7 +65,7 @@ function v(e) {
   return !1
 }
 
-function N(e) {
+function v(e) {
   let {
     channel: t
   } = e;
@@ -76,7 +76,7 @@ function C(e) {
   let {
     threads: t
   } = e;
-  t.forEach(v)
+  t.forEach(N)
 }
 class O extends a.default.Store {
   initialize() {
@@ -133,8 +133,8 @@ var R = new O(s.default, {
       return n && delete A[e.parentId], n
     })
   },
-  THREAD_CREATE: N,
-  THREAD_UPDATE: N,
+  THREAD_CREATE: v,
+  THREAD_UPDATE: v,
   THREAD_LIST_SYNC: function(e) {
     let {
       threads: t,
@@ -155,8 +155,8 @@ var R = new O(s.default, {
       threads: n
     } = e;
     for (let e of t)
-      for (let t of e) v(t.thread);
-    n.forEach(v)
+      for (let t of e) N(t.thread);
+    n.forEach(N)
   },
   THREAD_DELETE: function(e) {
     let {
@@ -230,7 +230,7 @@ var R = new O(s.default, {
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = v(n.thread) || t;
+    for (let n of e.messages) t = N(n.thread) || t;
     if (e.isAfter || e.isBefore || e.hasMoreAfter) return t;
     let n = _.default.getChannel(e.channelId);
     if (null == n || !d.THREAD_CHANNEL_TYPES.has(n.type)) return t;
@@ -247,7 +247,7 @@ var R = new O(s.default, {
     let {
       data: t
     } = e, n = !1;
-    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = v(e) || n;
+    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = N(e) || n;
     return n
   }
 })

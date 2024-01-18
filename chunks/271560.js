@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return b
   },
   getSocialRecommendationReasons: function() {
-    return R
+    return k
   },
   getNonSocialRecommendationReasons: function() {
-    return k
+    return V
   }
 }), n("424973"), n("462568"), n("222007"), n("70102"), n("702976");
 var s = n("917351"),
@@ -46,9 +46,9 @@ var s = n("917351"),
   E = n("449008"),
   p = n("773336"),
   y = n("49111"),
-  T = n("782340");
+  C = n("782340");
 d.shim();
-let C = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
+let T = !u.isMobile && !u.isTablet && -1 !== (0, h.getChromeVersion)();
 
 function S(e, t) {
   let {
@@ -99,7 +99,7 @@ function A(e, t, n, s) {
     default:
       s = "webp"
   }
-  "webp" === s && !C && (s = "png");
+  "webp" === s && !T && (s = "png");
   let o = (i = "https:", "https:");
   return r = null != a ? "".concat(o, "//").concat(a, "/app-assets/").concat(e, "/store/").concat(t.id, ".").concat(s) : "".concat(o).concat(window.GLOBAL_ENV.API_ENDPOINT).concat(y.Endpoints.STORE_ASSET(e, t.id, s)), null != n && (r += "?size=".concat((0, _.getBestMediaProxySize)(n * (0, _.getDevicePixelRatio)()))), r
 }
@@ -156,11 +156,11 @@ function N(e) {
 function O(e) {
   switch (e) {
     case y.OperatingSystems.WINDOWS:
-      return T.default.Messages.WINDOWS;
+      return C.default.Messages.WINDOWS;
     case y.OperatingSystems.MACOS:
-      return T.default.Messages.MACOS;
+      return C.default.Messages.MACOS;
     case y.OperatingSystems.LINUX:
-      return T.default.Messages.LINUX
+      return C.default.Messages.LINUX
   }
   throw Error("Unknown operating system value: ".concat(e))
 }
@@ -171,7 +171,7 @@ function b(e, t, n) {
 }
 let P = [];
 
-function R(e, t, n, s, r) {
+function k(e, t, n, s, r) {
   let a = t.get(e);
   if (null == a) return P;
   let o = a.applicationId,
@@ -223,12 +223,12 @@ function R(e, t, n, s, r) {
   }
   return d
 }
-let V = [];
+let R = [];
 
-function k(e, t, n) {
+function V(e, t, n) {
   let s = t.get(e),
     i = n.getForSKU(e);
-  if (null == s || null == i) return V;
+  if (null == s || null == i) return R;
   let r = [];
   (0, v.hasFlag)(s.flags, y.SKUFlags.HAS_FREE_PREMIUM_CONTENT) && r.push({
     type: y.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT

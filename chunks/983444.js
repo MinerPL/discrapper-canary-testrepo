@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return S
   },
   useCompletedStates: function() {
-    return _
+    return A
   }
 }), n("222007");
 var s = n("884691"),
@@ -33,7 +33,7 @@ function S(e, t) {
   }), [t, e])
 }
 
-function _(e) {
+function A(e) {
   var t;
   return {
     guildPopulated: function(e) {

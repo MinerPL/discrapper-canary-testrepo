@@ -34,7 +34,7 @@ function m(e) {
     name: A,
     image: O,
     description: L
-  } = x, M = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(R), [R]), D = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(S), [S]), y = (0, _.getLocationFromEvent)(x), U = (0, s.useStateFromStores)([c.default], () => null != g.creatorId ? c.default.getUser(g.creatorId) : c.default.getCurrentUser(), [g.creatorId]), V = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(S), [S]), j = (0, r.getChannelIconComponent)(M, D);
+  } = x, M = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(R), [R]), D = (0, s.useStateFromStores)([d.default], () => d.default.getGuild(S), [S]), y = (0, _.getLocationFromEvent)(x), U = (0, s.useStateFromStores)([c.default], () => null != g.creatorId ? c.default.getUser(g.creatorId) : c.default.getCurrentUser(), [g.creatorId]), j = (0, s.useStateFromStores)([u.default], () => u.default.isLurking(S), [S]), V = (0, r.getChannelIconComponent)(M, D);
   return (0, l.jsxs)("div", {
     className: v.content,
     children: [(0, l.jsx)(h.default, {
@@ -47,7 +47,7 @@ function m(e) {
       description: L,
       imageSource: (n = (0, f.convertToFakeGuildEvent)(g, S, C), null == (m = O) && null == n.image ? null : null != m && /^data:/.test(m) ? m : (0, I.default)(n)),
       isActive: !1,
-      isUserLurking: V,
+      isUserLurking: j,
       speakers: [],
       speakerCount: 0,
       rsvped: !0,
@@ -68,7 +68,7 @@ function m(e) {
             var e;
             return (0, l.jsxs)("div", {
               className: v.channelName,
-              children: [null != j ? (0, l.jsx)(j, {
+              children: [null != V ? (0, l.jsx)(V, {
                 width: 20,
                 height: 20,
                 className: v.icon

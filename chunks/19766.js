@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EVERYONE_ID: function() {
-    return N
+    return v
   },
   EVERYONE_CHANNEL_ID: function() {
     return C
@@ -31,8 +31,8 @@ var i, l, a = n("917351"),
   p = n("101125"),
   S = n("697218"),
   M = n("49111"),
-  v = n("782340");
-let N = "everyone",
+  N = n("782340");
+let v = "everyone",
   C = 0;
 
 function O(e, t, n, i) {
@@ -44,11 +44,11 @@ function O(e, t, n, i) {
         type: "GROUP", key: t, id: t, get title() {
           switch (t) {
             case M.StatusTypes.ONLINE:
-              return v.default.Messages.STATUS_ONLINE;
+              return N.default.Messages.STATUS_ONLINE;
             case M.StatusTypes.OFFLINE:
-              return v.default.Messages.STATUS_OFFLINE;
+              return N.default.Messages.STATUS_OFFLINE;
             default:
-              return v.default.Messages.STATUS_UNKNOWN
+              return N.default.Messages.STATUS_UNKNOWN
           }
         }, count: n, index: i
       };
@@ -82,8 +82,8 @@ function R(e, t, n) {
 
 function I(e) {
   let t = E.default.getChannel(e);
-  return null == t ? N : null == t.memberListId ? function(e) {
-    return _.default.canEveryone(M.Permissions.VIEW_CHANNEL, e) ? N : u.v3(s(e.permissionOverwrites).reduce((e, t) => {
+  return null == t ? v : null == t.memberListId ? function(e) {
+    return _.default.canEveryone(M.Permissions.VIEW_CHANNEL, e) ? v : u.v3(s(e.permissionOverwrites).reduce((e, t) => {
       let {
         id: n,
         allow: i,
@@ -208,13 +208,13 @@ function P() {
   })
 }
 
-function F() {
+function U() {
   let e = h.default.getId();
   D.forEach(null, t => t.rebuildMember(e))
 }
-class U extends o.default.Store {
+class F extends o.default.Store {
   initialize() {
-    this.waitFor(S.default, A.default, E.default, m.default, T.default, p.default, h.default, g.default, f.default), this.syncWith([p.default], F), this.syncWith([f.default], P)
+    this.waitFor(S.default, A.default, E.default, m.default, T.default, p.default, h.default, g.default, f.default), this.syncWith([p.default], U), this.syncWith([f.default], P)
   }
   getProps(e, t) {
     let n = D.get(e, I(t));
@@ -230,8 +230,8 @@ class U extends o.default.Store {
     return n.rows
   }
 }
-U.displayName = "ChannelMemberStore";
-var H = new U(c.default, {
+F.displayName = "ChannelMemberStore";
+var H = new F(c.default, {
   CONNECTION_OPEN: y,
   OVERLAY_INITIALIZE: y,
   GUILD_MEMBER_LIST_UPDATE: function(e) {

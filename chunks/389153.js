@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   buildCommand: function() {
-    return C
+    return T
   },
   buildApplicationCommands: function() {
     return S
@@ -28,10 +28,10 @@ n.r(t), n.d(t, {
     return P
   },
   getCommandAttachmentDraftType: function() {
-    return V
+    return R
   },
   getCommandTriggerSection: function() {
-    return k
+    return V
   },
   getApplicationCommandSection: function() {
     return M
@@ -67,9 +67,9 @@ var s = n("552442"),
   E = n("696415"),
   p = n("317041"),
   y = n("49111"),
-  T = n("843455");
+  C = n("843455");
 
-function C(e) {
+function T(e) {
   var t, n, s;
   let i, {
     rootCommand: r,
@@ -153,14 +153,14 @@ function S(e, t) {
       useKeyedPermissions: d
     } = t;
     if (r.hasOwnProperty("id")) {
-      if (null == r.options || 0 === r.options.length) return [C({
+      if (null == r.options || 0 === r.options.length) return [T({
         rootCommand: i,
         command: r,
         applicationId: a,
         subCommandPath: o,
         useKeyedPermissions: d
       })]
-    } else if (r.type !== l.ApplicationCommandOptionType.SUB_COMMAND && r.type !== l.ApplicationCommandOptionType.SUB_COMMAND_GROUP && (null == r.options || 0 === r.options.length)) return [C({
+    } else if (r.type !== l.ApplicationCommandOptionType.SUB_COMMAND && r.type !== l.ApplicationCommandOptionType.SUB_COMMAND_GROUP && (null == r.options || 0 === r.options.length)) return [T({
       rootCommand: i,
       command: r,
       applicationId: a,
@@ -182,7 +182,7 @@ function S(e, t) {
       useKeyedPermissions: d
     }));
     let _ = r.options.filter(e => e.type === l.ApplicationCommandOptionType.SUB_COMMAND);
-    for (let e = 0; e < _.length; e++) u.push(C({
+    for (let e = 0; e < _.length; e++) u.push(T({
       rootCommand: i,
       command: _[e],
       applicationId: a,
@@ -193,7 +193,7 @@ function S(e, t) {
       }]),
       useKeyedPermissions: d
     }));
-    return 0 === f.length && 0 === _.length && u.push(C({
+    return 0 === f.length && 0 === _.length && u.push(T({
       rootCommand: i,
       command: r,
       applicationId: a,
@@ -252,7 +252,7 @@ function O(e, t, n, s) {
   }, {
     autoTrackExposure: !1
   }) || t.getIntegrations(s.id).length > 0);
-  return s.isArchivedLockedThread() ? e.can(u.default.combine(T.Permissions.USE_APPLICATION_COMMANDS, T.Permissions.MANAGE_THREADS), s) : !!(0, c.isReadableType)(s.type) && e.can(u.default.combine(T.Permissions.USE_APPLICATION_COMMANDS, T.Permissions.SEND_MESSAGES), s)
+  return s.isArchivedLockedThread() ? e.can(u.default.combine(C.Permissions.USE_APPLICATION_COMMANDS, C.Permissions.MANAGE_THREADS), s) : !!(0, c.isReadableType)(s.type) && e.can(u.default.combine(C.Permissions.USE_APPLICATION_COMMANDS, C.Permissions.SEND_MESSAGES), s)
 }
 let b = u.default.deserialize(0);
 
@@ -265,17 +265,17 @@ function P(e) {
     commandLevelPermissions: r,
     defaultMemberPermissions: a
   } = e;
-  if (n.ownerId === s.userId || t.can(T.Permissions.ADMINISTRATOR, n)) return !0;
+  if (n.ownerId === s.userId || t.can(C.Permissions.ADMINISTRATOR, n)) return !0;
   let o = n.id;
   if (null != r) {
-    let e = R(s, o, r);
+    let e = k(s, o, r);
     if ("boolean" == typeof e) return e
   }
-  let d = R(s, o, i);
+  let d = k(s, o, i);
   return ("boolean" != typeof d || !!d) && (null == a || !u.default.equals(a, b) && t.can(a, n))
 }
 
-function R(e, t, n) {
+function k(e, t, n) {
   let s = n[(0, _.toPermissionKey)(e.userId, h.ApplicationCommandPermissionType.USER)];
   if (null != s) return s.permission;
   let i = !1;
@@ -288,7 +288,7 @@ function R(e, t, n) {
   return null != r ? r.permission : null
 }
 
-function V(e) {
+function R(e) {
   switch (e) {
     case h.CommandOrigin.CHAT:
       return g.DraftType.SlashCommand;
@@ -297,7 +297,7 @@ function V(e) {
   }
 }
 
-function k(e) {
+function V(e) {
   if (null != e) {
     if (e.id === p.BuiltInSectionId.BUILT_IN) return h.ApplicationCommandTriggerSections.BUILT_IN;
     else if (e.id === p.BuiltInSectionId.FRECENCY) return h.ApplicationCommandTriggerSections.FRECENCY;

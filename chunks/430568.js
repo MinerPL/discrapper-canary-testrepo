@@ -20,7 +20,7 @@ var i = n("37983"),
   I = n("402671"),
   E = n("866190"),
   v = n("115279");
-class _ extends s.PureComponent {
+class g extends s.PureComponent {
   componentWillUnmount() {
     var e;
     null === (e = this.cancelLoadImage) || void 0 === e || e.call(this)
@@ -119,10 +119,10 @@ class _ extends s.PureComponent {
     }
   }
 }
-_.defaultProps = {
+g.defaultProps = {
   isInteracting: !1
 };
-let g = function(e) {
+let _ = function(e) {
   if (null == window.IntersectionObserver) return function(t) {
     return (0, i.jsx)(e, {
       ...t,
@@ -196,7 +196,7 @@ let g = function(e) {
       })
     }
   }
-}(_);
+}(g);
 
 function S(e) {
   let t = h.AnimateEmoji.useSetting(),
@@ -205,7 +205,7 @@ function S(e) {
       allowAnimatedEmoji: t
     },
     s = __OVERLAY__ ? (0, d.useStateFromStores)([f.default], () => f.default.isInstanceFocused()) : (0, E.useIsWindowFocused)();
-  return (0, i.jsx)(g, {
+  return (0, i.jsx)(_, {
     ...e,
     ...n,
     isFocused: s

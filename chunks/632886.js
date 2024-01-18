@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return k
+    return V
   }
 });
 var s = n("132710"),
@@ -22,12 +22,12 @@ var s = n("132710"),
   E = n("290689"),
   p = n("49111"),
   y = n("782340");
-let T = e => {
+let C = e => {
   let t = u.default.getChannel(e);
   return null == t ? void 0 : t.getGuildId()
 };
 
-function C(e) {
+function T(e) {
   return {
     type: "guild",
     guildId: e.id,
@@ -126,7 +126,7 @@ function O(e, t, n, s, i) {
     channelId: t,
     messageId: n,
     originalLink: i,
-    inContent: null == r || a ? null : [C(r)],
+    inContent: null == r || a ? null : [T(r)],
     content: [S({
       name: y.default.Messages.UNKNOWN_CHANNEL,
       type: p.ChannelTypes.UNKNOWN,
@@ -175,7 +175,7 @@ function b(e, t, n, s) {
   return {
     ...i,
     ... function(e, t, n, s) {
-      let i = C(e),
+      let i = T(e),
         r = S(t),
         a = I(t.isForumPost);
       if (n && s) {
@@ -224,10 +224,10 @@ let P = {
         id: s
       };
       let i = A(s, n.mentionChannels);
-      return null == i ? O(null, s, null, T(n.channelId)) : b(i, null, T(n.channelId))
+      return null == i ? O(null, s, null, C(n.channelId)) : b(i, null, C(n.channelId))
     }
   },
-  R = {
+  k = {
     order: i.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match(e) {
@@ -241,10 +241,10 @@ let P = {
         a = e[3];
       if (null == r) return D(s);
       let o = A(r, null);
-      return null == o ? O(i, r, a, T(n.channelId), s) : b(o, a, T(n.channelId), s)
+      return null == o ? O(i, r, a, C(n.channelId), s) : b(o, a, C(n.channelId), s)
     }
   },
-  V = {
+  R = {
     order: i.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match: e => d.MEDIA_POST_URL_RE.exec(e),
@@ -256,13 +256,13 @@ let P = {
         o = e[4];
       if (null == r || null == a) return D(s);
       let d = A(a, null);
-      if (null != d) return b(d, o, T(n.channelId), s);
+      if (null != d) return b(d, o, C(n.channelId), s);
       let u = A(r, null);
-      return null != u ? b(u, o, T(n.channelId), s) : O(i, r, o, T(n.channelId), s)
+      return null != u ? b(u, o, C(n.channelId), s) : O(i, r, o, C(n.channelId), s)
     }
   };
-var k = {
+var V = {
   channelMention: P,
-  channelOrMessageUrl: R,
-  mediaPostLink: V
+  channelOrMessageUrl: k,
+  mediaPostLink: R
 }

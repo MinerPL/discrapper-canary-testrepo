@@ -33,8 +33,8 @@ var l, a, s = n("37983"),
   D = n("27754"),
   y = n("745049"),
   U = n("49111"),
-  V = n("782340"),
-  j = n("738021");
+  j = n("782340"),
+  V = n("738021");
 let {
   INVITE_OPTIONS_7_DAYS: P,
   INVITE_OPTIONS_UNLIMITED: G
@@ -117,17 +117,17 @@ function b(e) {
     createdEvent: C
   } = e, p = (0, T.useUID)(), x = i.useRef(n), D = !(0, r.isEqual)(x.current, n), y = i.useMemo(() => [{
     slideId: 0,
-    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
+    label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_1,
     valid: null == f.entity,
     userErrorMessage: f.entity
   }, {
     slideId: 1,
-    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
+    label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_2,
     valid: null == f.schedule && null == f.topic && (!E || D),
     userErrorMessage: f.schedule
   }, {
     slideId: 2,
-    label: V.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
+    label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
     valid: !0
   }], [f, E, D]), U = Object.keys(l).length, P = (0, m.isGuildScheduledEventActive)(n), G = e => Math.max(0, Math.min(e, U - 1)), [b, B] = i.useState(P ? 1 : 0), [F, w] = i.useState(!1), k = i.useMemo(() => y.slice(0, b + 1).map(e => e.valid).every(Boolean), [y, b]), Y = b >= y.length ? 3 : y[G(b)].slideId, z = 3 === Y, Z = (0, R.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
   Z(z);
@@ -147,8 +147,8 @@ function b(e) {
     J = () => {
       W(b - 1)
     },
-    Q = V.default.Messages.NEXT;
-  return 2 === Y && (Q = E ? V.default.Messages.SAVE_EVENT : V.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
+    Q = j.default.Messages.NEXT;
+  return 2 === Y && (Q = E ? j.default.Messages.SAVE_EVENT : j.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
     children: (0, s.jsxs)(o.ModalRoot, {
       transitionState: _,
       "aria-labelledby": p,
@@ -156,7 +156,7 @@ function b(e) {
       children: [!K && z ? (0, s.jsx)(H, {
         modal: X.current
       }) : null, (0, s.jsxs)(o.ModalContent, {
-        className: j.content,
+        className: V.content,
         scrollerRef: X,
         children: [!z && (0, s.jsx)(h.default, {
           steps: y.map(e => e.label),
@@ -208,17 +208,17 @@ function b(e) {
           })]
         })]
       }), !z && (0, s.jsxs)(o.ModalFooter, {
-        className: j.footer,
+        className: V.footer,
         children: [(0, s.jsxs)("div", {
-          className: j.inline,
+          className: V.inline,
           children: [(0, s.jsx)(o.Button, {
             color: o.Button.Colors.PRIMARY,
             onClick: g,
-            children: V.default.Messages.CANCEL
+            children: j.default.Messages.CANCEL
           }), (0, s.jsx)(o.Button, {
             onClick: q,
             disabled: !k,
-            className: j.button,
+            className: V.button,
             submitting: I,
             children: Q
           })]
@@ -227,7 +227,7 @@ function b(e) {
           size: o.Button.Sizes.MIN,
           onClick: J,
           color: o.Button.Colors.LINK,
-          children: V.default.Messages.BACK
+          children: j.default.Messages.BACK
         })]
       })]
     })
@@ -240,7 +240,7 @@ function B(e) {
     guildScheduledEventId: l,
     transitionState: a,
     onClose: c
-  } = e, E = (0, u.useStateFromStores)([I.default], () => I.default.getGuild(t)), h = (0, u.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(l), [l]), T = (0, u.useStateFromStores)([_.default], () => _.default.getDefaultChannel(t), [t]), N = (0, p.getInitialGuildEventData)(h, T), [R, A] = i.useState(N), [O] = i.useState((0, p.isEditingEvent)(h)), [L, M] = i.useState(null), j = e => {
+  } = e, E = (0, u.useStateFromStores)([I.default], () => I.default.getGuild(t)), h = (0, u.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(l), [l]), T = (0, u.useStateFromStores)([_.default], () => _.default.getDefaultChannel(t), [t]), N = (0, p.getInitialGuildEventData)(h, T), [R, A] = i.useState(N), [O] = i.useState((0, p.isEditingEvent)(h)), [L, M] = i.useState(null), V = e => {
     var t;
     let n = (0, g.isGuildEventInvitable)(e),
       l = null !== (t = e.channel_id) && void 0 !== t ? t : null == T ? void 0 : T.id;
@@ -258,7 +258,7 @@ function B(e) {
     };
     if (O && null != l) return await S.default.saveEvent(l, R, t, e), c();
     let n = await S.default.createGuildEvent(R, t, e);
-    return j(n.body), n
+    return V(n.body), n
   }), k = i.useMemo(() => (0, D.default)(R, O), [R, O]);
   return (0, s.jsx)(b, {
     guildId: t,
@@ -290,16 +290,16 @@ function B(e) {
         } = await n.el("77078").then(n.bind(n, "77078"));
         return t => (0, s.jsxs)(e, {
           ...t,
-          header: V.default.Messages.EDIT_ALL_EVENTS,
-          confirmText: V.default.Messages.SAVE_EVENT,
-          cancelText: V.default.Messages.NEVERMIND,
+          header: j.default.Messages.EDIT_ALL_EVENTS,
+          confirmText: j.default.Messages.SAVE_EVENT,
+          cancelText: j.default.Messages.NEVERMIND,
           onConfirm: B,
           children: [(0, s.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: V.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
+            children: j.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_CONFIRM
           }), (0, s.jsx)("br", {}), (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: V.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
+            children: j.default.Messages.GUILD_EVENT_EDIT_CONFIRM_BODY_EDIT_ALL_HINT.format()
           })]
         })
       }) : B()

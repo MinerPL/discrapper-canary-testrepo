@@ -21,25 +21,25 @@ var s = n("37983"),
   E = n("166257"),
   g = n("432173"),
   S = n("219013"),
-  _ = n("625149"),
-  A = n("300322"),
+  A = n("625149"),
+  _ = n("300322"),
   T = n("845579"),
   M = n("271938"),
-  I = n("836417"),
-  N = n("26989"),
-  L = n("305961"),
-  v = n("88093"),
-  R = n("957255"),
-  x = n("886074"),
+  N = n("836417"),
+  I = n("26989"),
+  v = n("305961"),
+  L = n("88093"),
+  x = n("957255"),
+  R = n("886074"),
   y = n("36562"),
   D = n("662255"),
   O = n("85175"),
   j = n("83900"),
   P = n("993477"),
   b = n("733160"),
-  U = n("100300"),
+  H = n("100300"),
   F = n("433487"),
-  H = n("987772"),
+  U = n("987772"),
   k = n("566998"),
   G = n("516358"),
   w = n("550515"),
@@ -135,7 +135,7 @@ function ei(e) {
           children: [(0, s.jsx)(i, {
             className: es.icon,
             ...r
-          }), m && (0, s.jsx)(x.default, {})]
+          }), m && (0, s.jsx)(R.default, {})]
         }), p && (0, s.jsx)(W.Separator, {})]
       })
     }
@@ -155,8 +155,8 @@ function er(e) {
     canReact: E,
     canConfigureJoin: g,
     canReply: S,
-    canStartThread: I,
-    canViewThread: x,
+    canStartThread: N,
+    canViewThread: R,
     isExpanded: w,
     showMoreUtilities: W,
     showEmojiPicker: $,
@@ -177,31 +177,31 @@ function er(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, d = (0, u.useStateFromStores)([L.default], () => L.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, A.useIsActiveChannelOrUnarchivableThread)(t), E = (0, A.useIsNonModInLockedThread)(t), g = T.RenderReactions.useSetting(), S = T.DeveloperMode.useSetting(), I = (0, u.useStateFromStores)([v.default], () => null == t.guild_id || v.default.canChatInGuild(t.guild_id), [t]), {
-      canManageMessages: x,
+    } = n, d = (0, u.useStateFromStores)([v.default], () => v.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([M.default], () => M.default.getId()), h = (0, _.useIsActiveChannelOrUnarchivableThread)(t), E = (0, _.useIsNonModInLockedThread)(t), g = T.RenderReactions.useSetting(), S = T.DeveloperMode.useSetting(), N = (0, u.useStateFromStores)([L.default], () => null == t.guild_id || L.default.canChatInGuild(t.guild_id), [t]), {
+      canManageMessages: R,
       canAddNewReactions: y
-    } = (0, u.useStateFromStoresObject)([R.default], () => ({
-      canAddNewReactions: I && R.default.can(et.Permissions.ADD_REACTIONS, t),
-      canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, I]), D = (0, _.useCanReplyToMessage)(t, n), O = (0, A.useCanStartPublicThread)(t, n), j = (0, A.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (x || U) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
-    n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && x);
-    let H = (0, K.canReportMessage)(n),
-      k = (0, q.default)(n, t, x),
+    } = (0, u.useStateFromStoresObject)([x.default], () => ({
+      canAddNewReactions: N && x.default.can(et.Permissions.ADD_REACTIONS, t),
+      canManageMessages: x.default.can(et.Permissions.MANAGE_MESSAGES, t)
+    }), [t, N]), D = (0, A.useCanReplyToMessage)(t, n), O = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
+    let U = (0, K.canReportMessage)(n),
+      k = (0, q.default)(n, t, R),
       G = !t.isSystemDM() && (0, Y.default)(n, f) && h && !E,
       {
         disableReactionCreates: w
       } = (0, X.default)({
         channel: t,
-        canChat: I,
+        canChat: N,
         renderReactions: g,
         canAddNewReactions: y,
         isLurking: P,
         isGuest: b,
         isActiveChannelOrUnarchivableThread: h
       }),
-      B = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (U || x) && n.type === et.MessageTypes.DEFAULT,
+      B = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (H || R) && n.type === et.MessageTypes.DEFAULT,
       V = t.getGuildId(),
-      W = null != V && (n.type === et.MessageTypes.USER_JOIN || n.type === et.MessageTypes.GUILD_INVITE_REMINDER) && R.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
+      W = null != V && (n.type === et.MessageTypes.USER_JOIN || n.type === et.MessageTypes.GUILD_INVITE_REMINDER) && x.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
         guildId: V
       }),
       {
@@ -220,7 +220,7 @@ function er(e) {
       canPin: k,
       canEdit: G,
       canDelete: F,
-      canReport: H,
+      canReport: U,
       canReply: D,
       canStartThread: O,
       canViewThread: j,
@@ -250,7 +250,7 @@ function er(e) {
     er({
       emojiPicker: !$
     })
-  }, [$, er]), eC = (0, A.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
+  }, [$, er]), eC = (0, _.useIsActiveChannelOrUnarchivableThread)(t), ep = n.hasFlag(et.MessageFlags.CROSSPOSTED);
   return (0, s.jsxs)(s.Fragment, {
     children: [w ? (0, s.jsxs)(s.Fragment, {
       children: [l && eo ? ei({
@@ -279,7 +279,7 @@ function er(e) {
         channel: t,
         message: n,
         label: ea ? en.default.Messages.MESSAGE_REMINDERS_MARK_AS_DONE : en.default.Messages.MESSAGE_REMINDERS_MARK_AS_TODO,
-        icon: ea ? y.default : U.default,
+        icon: ea ? y.default : H.default,
         onClick: ea ? J.markMessageRemindersAsComplete : J.markMessageAsReminder
       }) : null, eC ? ei({
         key: "mark-unread",
@@ -322,16 +322,16 @@ function er(e) {
       channel: t,
       message: n,
       label: en.default.Messages.EDIT,
-      icon: H.default,
+      icon: U.default,
       onClick: J.editMessage
-    }) : null, I ? ei({
+    }) : null, N ? ei({
       key: "thread",
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
       icon: B.default,
       onClick: J.createThread
-    }) : null, !I && x ? ei({
+    }) : null, !N && R ? ei({
       key: "view-thread",
       channel: t,
       message: n,
@@ -451,7 +451,7 @@ var ed = a.memo(function(e) {
     channel: t,
     message: n,
     isHeader: a
-  } = e, l = (0, u.useStateFromStores)([I.default], () => I.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+  } = e, l = (0, u.useStateFromStores)([N.default], () => N.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
     let {
       channel: t,
       message: n

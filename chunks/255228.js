@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("866227"),
-  s = n.n(a),
+var l = n("866227"),
+  s = n.n(l),
   i = n("446674"),
   r = n("77078"),
   o = n("319165"),
@@ -16,31 +16,31 @@ var a = n("866227"),
   c = n("531674"),
   f = n("782340");
 
-function E(e) {
-  let [t, n, a] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.isMuted(e.id), u.default.getMuteConfig(e.id), u.default.hasJoined(e.id)]), E = (0, o.useMutedUntilText)(n);
+function h(e) {
+  let [t, n, l] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.isMuted(e.id), u.default.getMuteConfig(e.id), u.default.hasJoined(e.id)]), h = (0, o.useMutedUntilText)(n);
 
-  function h(t) {
+  function E(t) {
     d.default.setNotificationSettings(e, {
       muted: t
     })
   }
-  return a ? t ? (0, l.jsx)(r.MenuItem, {
+  return l ? t ? (0, a.jsx)(r.MenuItem, {
     id: "unmute-channel",
     label: e.isForumPost() ? f.default.Messages.UNMUTE_FORUM_POST : f.default.Messages.UNMUTE_THREAD,
-    subtext: E,
-    action: () => h(!1)
-  }) : (0, l.jsx)(r.MenuItem, {
+    subtext: h,
+    action: () => E(!1)
+  }) : (0, a.jsx)(r.MenuItem, {
     id: "mute-channel",
     label: e.isForumPost() ? f.default.Messages.MUTE_FORUM_POST : f.default.Messages.MUTE_THREAD,
-    action: () => h(!0),
+    action: () => E(!0),
     children: (0, c.getMuteTimes)().map(t => {
       let {
         value: n,
-        label: a
+        label: l
       } = t;
-      return (0, l.jsx)(r.MenuItem, {
+      return (0, a.jsx)(r.MenuItem, {
         id: "".concat(n),
-        label: a,
+        label: l,
         action: () => (function(t) {
           let n = t > 0 ? s().add(t, "second").toISOString() : null;
           d.default.setNotificationSettings(e, {
@@ -53,7 +53,7 @@ function E(e) {
         })(n)
       }, n)
     })
-  }) : (0, l.jsx)(r.MenuItem, {
+  }) : (0, a.jsx)(r.MenuItem, {
     id: "mute-disabled",
     label: e.isForumPost() ? f.default.Messages.MUTE_FORUM_POST : f.default.Messages.MUTE_THREAD,
     disabled: !0

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), n("702976"), n("222007");
 var s = n("37983"),
@@ -21,9 +21,9 @@ var s = n("37983"),
   E = n("568734"),
   g = n("718422"),
   S = n("49111"),
-  _ = n("877671");
+  A = n("877671");
 
-function A(e) {
+function _(e) {
   let {
     value: t,
     channel: n
@@ -45,37 +45,37 @@ function T(e) {
     id: o
   } = t, {
     id: u
-  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), I = g && T, {
-    editingMessage: N,
-    editingTextValue: L,
-    editingRichValue: v
+  } = n, C = t.getGuildId(), m = (0, l.useStateFromStores)([f.default], () => f.default.getGuild(C), [C]), g = t.type === S.ChannelTypes.GUILD_ANNOUNCEMENT, T = null != m && m.hasFeature(S.GuildFeatures.NEWS), N = g && T, {
+    editingMessage: I,
+    editingTextValue: v,
+    editingRichValue: L
   } = (0, l.useStateFromStoresObject)([c.default], () => ({
     editingMessage: c.default.getEditingMessage(o),
     editingTextValue: c.default.getEditingTextValue(o),
     editingRichValue: c.default.getEditingRichValue(o)
-  }), [o]), R = (0, l.useStateFromStores)([d.default], () => d.default.getId()), x = a.useCallback((e, n, s) => {
+  }), [o]), x = (0, l.useStateFromStores)([d.default], () => d.default.getId()), R = a.useCallback((e, n, s) => {
     let {
       content: a
-    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != N && null != N.author ? N.author.id : null, u = I && (o === R || l);
-    return u && null != N && (0, E.hasFlag)(N.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
+    } = s, l = h.default.can(S.Permissions.MANAGE_MESSAGES, t), o = null != I && null != I.author ? I.author.id : null, u = N && (o === x || l);
+    return u && null != I && (0, E.hasFlag)(I.flags, S.MessageFlags.CROSSPOSTED) ? r.default.confirmEdit(e, n, a) : i.default.editMessage(e, n, {
       content: a
     }), Promise.resolve()
-  }, [N, I, R, t]), y = a.useCallback(e => (0, a.createElement)(M, {
+  }, [I, N, x, t]), y = a.useCallback(e => (0, a.createElement)(M, {
     ...e,
-    className: _.channelTextArea,
+    className: A.channelTextArea,
     key: u
   }), [u]);
-  return null != L && null != v ? (0, s.jsx)(p.default, {
+  return null != v && null != L ? (0, s.jsx)(p.default, {
     ref: void 0,
     channel: t,
     message: n,
-    textValue: L,
-    richValue: v,
+    textValue: v,
+    richValue: L,
     onCancel: i.default.endEditMessage,
     onChange: i.default.updateEditMessage,
     onConfirmDelete: r.default.confirmDelete,
-    saveMessage: x,
-    validateEdit: A,
+    saveMessage: R,
+    validateEdit: _,
     children: y
   }) : null
 }
@@ -93,7 +93,7 @@ function M(e) {
   return a.useEffect(() => (m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.subscribe(S.ComponentActions.TEXTAREA_BLUR, p), () => {
     m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_FOCUS, C), m.ComponentDispatch.unsubscribe(S.ComponentActions.TEXTAREA_BLUR, p)
   }), [C, p]), (0, s.jsx)(u.default, {
-    className: _.channelTextArea,
+    className: A.channelTextArea,
     textValue: t,
     richValue: n,
     channel: i,
@@ -112,7 +112,7 @@ function M(e) {
   }, l.id)
 }
 
-function I(e, t, n) {
+function N(e, t, n) {
   let {
     message: a,
     channel: l

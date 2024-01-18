@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return v
   }
 }), n("702976");
 var i = n("843117"),
@@ -37,7 +37,7 @@ function M(e, t) {
   }), t))
 }
 
-function v(e, t) {
+function N(e, t) {
   a.default.dispatch({
     type: "THREAD_MEMBER_LOCAL_UPDATE",
     id: e.id,
@@ -46,7 +46,7 @@ function v(e, t) {
     isJoining: t
   })
 }
-var N = {
+var v = {
   archiveThread(e, t) {
     let n = {
       archived: !0
@@ -102,7 +102,7 @@ var N = {
     invitable: t
   }),
   async joinThread(e, t) {
-    e.isForumPost() && v(e, !0);
+    e.isForumPost() && N(e, !0);
     try {
       return await l.default.post({
         url: T.Endpoints.THREAD_MEMBER(e.id),
@@ -122,7 +122,7 @@ var N = {
         title: S.default.Messages.ERROR,
         body: S.default.Messages.ERROR_OCCURRED_TRY_AGAIN
       });
-      e.isForumPost() && v(e, !1)
+      e.isForumPost() && N(e, !1)
     }
   },
   async addMember(e, t, n) {
@@ -147,7 +147,7 @@ var N = {
       })
     }
   },
-  leaveThread: (e, t) => (e.isForumPost() && v(e, !1), l.default.delete({
+  leaveThread: (e, t) => (e.isForumPost() && N(e, !1), l.default.delete({
     url: T.Endpoints.THREAD_MEMBER(e.id),
     query: {
       location: t

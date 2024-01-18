@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelNotificationRadioItems: function() {
-    return E
+    return h
   },
   default: function() {
-    return h
+    return E
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
+var l = n("446674"),
   s = n("77078"),
   i = n("519705"),
   r = n("721281"),
@@ -19,12 +19,12 @@ var a = n("446674"),
   c = n("782340");
 
 function f(e) {
-  var t, n, l;
-  let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  var t, n, a;
+  let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   switch (e.type) {
     case d.ChannelTypes.GUILD_VOICE:
       ;
-      return a ? (t = e, [{
+      return l ? (t = e, [{
         setting: d.UserNotificationSettings.NULL,
         label: null != t.parent_id ? c.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : c.default.Messages.FORM_LABEL_DEFAULT
       }, {
@@ -51,9 +51,9 @@ function f(e) {
       }];
     default:
       ;
-      return l = e, [{
+      return a = e, [{
         setting: d.UserNotificationSettings.NULL,
-        label: null != l.parent_id ? c.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : c.default.Messages.FORM_LABEL_DEFAULT
+        label: null != a.parent_id ? c.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : c.default.Messages.FORM_LABEL_DEFAULT
       }, {
         setting: d.UserNotificationSettings.ALL_MESSAGES,
         label: c.default.Messages.FORM_LABEL_ALL_MESSAGES
@@ -67,32 +67,32 @@ function f(e) {
   }
 }
 
-function E(e) {
+function h(e) {
   let t = e.getGuildId(),
     n = e.id,
-    E = (0, a.useStateFromStores)([o.default], () => {
+    h = (0, l.useStateFromStores)([o.default], () => {
       let n = d.UserNotificationSettings.NULL;
       return null != e.parent_id && (n = o.default.getChannelMessageNotifications(t, e.parent_id)), n !== d.UserNotificationSettings.NULL ? n : o.default.getMessageNotifications(t)
     }, [t, e.parent_id]),
-    h = (0, a.useStateFromStores)([o.default], () => o.default.getNewForumThreadsCreated(e)),
-    _ = (0, a.useStateFromStores)([o.default], () => o.default.getChannelOverrides(t)[n], [t, n]),
-    S = null == _ ? d.UserNotificationSettings.NULL : _.message_notifications,
-    T = (0, r.useVoiceActivityNotificationSettingsExperiment)(e),
-    p = f(e, T);
-  return null == p ? null : (0, l.jsxs)(l.Fragment, {
-    children: [e.isForumLikeChannel() ? (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(s.MenuCheckboxItem, {
+    E = (0, l.useStateFromStores)([o.default], () => o.default.getNewForumThreadsCreated(e)),
+    m = (0, l.useStateFromStores)([o.default], () => o.default.getChannelOverrides(t)[n], [t, n]),
+    p = null == m ? d.UserNotificationSettings.NULL : m.message_notifications,
+    S = (0, r.useVoiceActivityNotificationSettingsExperiment)(e),
+    g = f(e, S);
+  return null == g ? null : (0, a.jsxs)(a.Fragment, {
+    children: [e.isForumLikeChannel() ? (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(s.MenuCheckboxItem, {
         id: "new-forum-threads-created",
         label: c.default.Messages.FORUM_NEW_POSTS_CREATED,
-        checked: h,
-        action: () => i.default.setForumThreadsCreated(e, !h)
-      }), (0, l.jsx)(s.MenuSeparator, {})]
-    }) : null, p.map(a => {
+        checked: E,
+        action: () => i.default.setForumThreadsCreated(e, !E)
+      }), (0, a.jsx)(s.MenuSeparator, {})]
+    }) : null, g.map(l => {
       let {
         setting: r,
         label: o
-      } = a;
-      return (0, l.jsx)(s.MenuRadioItem, {
+      } = l;
+      return (0, a.jsx)(s.MenuRadioItem, {
         group: "channel-notifications",
         id: "".concat(r),
         label: o,
@@ -109,36 +109,36 @@ function E(e) {
             default:
               return
           }
-        }(E, e, T) : void 0,
+        }(h, e, S) : void 0,
         action: () => {
           var e;
           return e = r, void(null != t && i.default.updateChannelOverrideSettings(t, n, {
             message_notifications: e
           }, u.NotificationLabel.notifications(e)))
         },
-        checked: r === S
+        checked: r === p
       }, r)
     })]
   })
 }
 
-function h(e) {
+function E(e) {
   var t, n;
-  let i = E(e),
-    u = (0, a.useStateFromStores)([o.default], () => o.default.resolvedMessageNotifications(e), [e]),
-    h = (0, a.useStateFromStores)([o.default], () => o.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
-    _ = null == h ? d.UserNotificationSettings.NULL : h.message_notifications,
-    S = (0, r.useVoiceActivityNotificationSettingsExperiment)(e),
-    T = _ === d.UserNotificationSettings.NULL && e.isGuildStageVoice() ? c.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = f(e, S)) || void 0 === n ? void 0 : null === (t = n.find(e => {
+  let i = h(e),
+    u = (0, l.useStateFromStores)([o.default], () => o.default.resolvedMessageNotifications(e), [e]),
+    E = (0, l.useStateFromStores)([o.default], () => o.default.getChannelOverrides(e.guild_id)[e.id], [e.guild_id, e.id]),
+    m = null == E ? d.UserNotificationSettings.NULL : E.message_notifications,
+    p = (0, r.useVoiceActivityNotificationSettingsExperiment)(e),
+    S = m === d.UserNotificationSettings.NULL && e.isGuildStageVoice() ? c.default.Messages.FORM_LABEL_ONLY_MENTIONS.format() : null === (n = f(e, p)) || void 0 === n ? void 0 : null === (t = n.find(e => {
       let {
         setting: t
       } = e;
       return t === u
     })) || void 0 === t ? void 0 : t.label;
-  return null != i ? (0, l.jsx)(s.MenuItem, {
+  return null != i ? (0, a.jsx)(s.MenuItem, {
     id: "channel-notifications",
     label: c.default.Messages.NOTIFICATION_SETTINGS,
-    subtext: T,
+    subtext: S,
     children: i
   }) : null
 }

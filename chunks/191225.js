@@ -31,8 +31,8 @@ let E = {
   },
   p = [],
   y = new Map,
-  T = new Map,
   C = new Map,
+  T = new Map,
   S = !1,
   I = new Map,
   A = new Map,
@@ -41,10 +41,10 @@ let E = {
   O = new Map,
   b = new Map,
   P = new Map;
-let R = h.ActivityPanelModes.ACTION_BAR,
-  V = h.FocusedActivityLayouts.NO_CHAT;
+let k = h.ActivityPanelModes.ACTION_BAR,
+  R = h.FocusedActivityLayouts.NO_CHAT;
 
-function k(e) {
+function V(e) {
   return null != e ? e : "0"
 }
 
@@ -84,12 +84,12 @@ function M(e) {
     channelId: i,
     instanceId: l
   }));
-  let A = null !== (t = C.get(i)) && void 0 !== t ? t : [],
+  let A = null !== (t = T.get(i)) && void 0 !== t ? t : [],
     D = A.filter(e => e.applicationId !== a),
-    N = k(s),
-    O = null !== (n = T.get(N)) && void 0 !== n ? n : [],
+    N = V(s),
+    O = null !== (n = C.get(N)) && void 0 !== n ? n : [],
     b = O.filter(e => !(e.applicationId === a && e.channelId === i));
-  0 !== f.length && (D.push(p), b.push(p)), C.set(i, D), T.set(N, b)
+  0 !== f.length && (D.push(p), b.push(p)), T.set(i, D), C.set(N, b)
 }
 
 function w(e) {
@@ -151,14 +151,14 @@ class G extends i.default.PersistedStore {
   }
   getEmbeddedActivitiesForGuild(e) {
     var t;
-    return null !== (t = T.get(e)) && void 0 !== t ? t : p
+    return null !== (t = C.get(e)) && void 0 !== t ? t : p
   }
   getEmbeddedActivitiesForChannel(e) {
     var t;
-    return null !== (t = C.get(e)) && void 0 !== t ? t : p
+    return null !== (t = T.get(e)) && void 0 !== t ? t : p
   }
   getEmbeddedActivitiesByChannel() {
-    return C
+    return T
   }
   getEmbeddedActivityDurationMs(e, t) {
     let n = P.get(U(e, t));
@@ -169,16 +169,16 @@ class G extends i.default.PersistedStore {
   }
   getShelfActivities(e) {
     var t;
-    let n = k(e);
+    let n = V(e);
     return null !== (t = I.get(n)) && void 0 !== t ? t : []
   }
   getShelfFetchStatus(e) {
-    let t = k(e);
+    let t = V(e);
     return A.get(t)
   }
   shouldFetchShelf(e) {
     var t, n;
-    let s = k(e),
+    let s = V(e),
       i = null !== (t = A.get(s)) && void 0 !== t ? t : {
         isFetching: !1
       },
@@ -209,10 +209,10 @@ class G extends i.default.PersistedStore {
     return s
   }
   getActivityPanelMode() {
-    return R
+    return k
   }
   getFocusedLayout() {
-    return V
+    return R
   }
   getCurrentEmbeddedActivity() {
     var e;
@@ -253,7 +253,7 @@ let F = new G(r.default, {
     let {
       guilds: t
     } = e;
-    C.clear(), T.clear(), t.forEach(e => w(e))
+    T.clear(), C.clear(), t.forEach(e => w(e))
   },
   GUILD_CREATE: function(e) {
     let {
@@ -287,14 +287,14 @@ let F = new G(r.default, {
     let {
       channel: t
     } = e;
-    C.set(t.id, []);
+    T.set(t.id, []);
     let n = t.guild_id;
     if (null != n) {
       var s;
-      let e = k(n),
-        i = null !== (s = T.get(e)) && void 0 !== s ? s : [],
+      let e = V(n),
+        i = null !== (s = C.get(e)) && void 0 !== s ? s : [],
         r = i.filter(e => e.channelId !== t.id);
-      T.set(e, r)
+      C.set(e, r)
     }
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
@@ -320,7 +320,7 @@ let F = new G(r.default, {
       url: a,
       userIds: new Set([v.id]),
       connectedSince: Date.now()
-    }), R = s !== l.default.getChannelId() || (0, m.default)(i) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, P.set(U(i, r), Date.now())
+    }), k = s !== l.default.getChannelId() || (0, m.default)(i) ? h.ActivityPanelModes.PIP : h.ActivityPanelModes.PANEL, P.set(U(i, r), Date.now())
   },
   EMBEDDED_ACTIVITY_CLOSE: function(e) {
     let {
@@ -386,7 +386,7 @@ let F = new G(r.default, {
   EMBEDDED_ACTIVITY_FETCH_SHELF: function(e) {
     let {
       guildId: t
-    } = e, n = k(t), s = A.get(n);
+    } = e, n = V(t), s = A.get(n);
     A.set(n, {
       isFetching: !0,
       lastFetchTimestampMs: null == s ? void 0 : s.lastFetchTimestampMs
@@ -396,7 +396,7 @@ let F = new G(r.default, {
     let {
       guildId: t,
       activities: n
-    } = e, s = k(t);
+    } = e, s = V(t);
     I.set(s, n);
     let i = Date.now();
     ! function(e) {
@@ -430,7 +430,7 @@ let F = new G(r.default, {
   EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function(e) {
     let {
       guildId: t
-    } = e, n = k(t), s = A.get(n);
+    } = e, n = V(t), s = A.get(n);
     A.set(n, {
       isFetching: !1,
       lastFetchTimestampMs: null == s ? void 0 : s.lastFetchTimestampMs
@@ -452,19 +452,19 @@ let F = new G(r.default, {
     let {
       activityPanelMode: t
     } = e;
-    R = t
+    k = t
   },
   EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function(e) {
     let {
       focusedActivityLayout: t
     } = e;
-    V = t
+    R = t
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    s !== t && R === h.ActivityPanelModes.PANEL && (R = h.ActivityPanelModes.PIP)
+    s !== t && k === h.ActivityPanelModes.PANEL && (k = h.ActivityPanelModes.PIP)
   }
 });
 var x = F
