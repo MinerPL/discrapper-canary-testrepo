@@ -33,8 +33,8 @@ var s, i, r, a = n("627445"),
   b = n("340115"),
   P = n("289362"),
   k = n("571420"),
-  R = n("797785"),
-  V = n("49111");
+  V = n("797785"),
+  R = n("49111");
 let M = new h.default("GatewaySocket"),
   w = new N.default;
 
@@ -144,7 +144,7 @@ i = class extends b.default {
           }), u = d.state.open, l = d.state.identify, f = d.state.messages, _ = d.state.clientState
         }
       }
-      null == t && ((t = (0, R.default)(n)).binaryType = "arraybuffer"), s(t), u && i(l, _), null != f && f.forEach(r), t.onopen = () => i(l, _), t.onmessage = r, t.onclose = o, t.onerror = a
+      null == t && ((t = (0, V.default)(n)).binaryType = "arraybuffer"), s(t), u && i(l, _), null != f && f.forEach(r), t.onopen = () => i(l, _), t.onmessage = r, t.onclose = o, t.onerror = a
     }({
       gatewayURL: o.toString(),
       newCallback: e => {
@@ -287,15 +287,15 @@ i = class extends b.default {
         code: t,
         reason: n
       }), 4004 === t) return this.connectionState = "CLOSED", M.warn("[WS CLOSED] because of authentication failure, marking as closed."), this._reset(e, t, n);
-    if (this._tryDetectInvalidIOSToken(t, n, e), this.connectionState = "WILL_RECONNECT", this.nextReconnectIsImmediate) M.warn("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")), this._connect();
+    if (this._tryDetectInvalidIOSToken(t, n, e), this.connectionState = "WILL_RECONNECT", this.nextReconnectIsImmediate) M.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying immediately.")), this._connect();
     else {
       let s = this.gatewayBackoff.fail(() => this._connect());
-      M.warn("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying in ").concat((s / 1e3).toFixed(2), " seconds.")), this.gatewayBackoff.fails > 4 && this._reset(e, t, n)
+      M.info("[WS CLOSED] (".concat(e.toString(), ", ").concat(t, ", ").concat(n, ") retrying in ").concat((s / 1e3).toFixed(2), " seconds.")), this.gatewayBackoff.fails > 4 && this._reset(e, t, n)
     }
   }
   _tryDetectInvalidIOSToken(e, t, n) {
     (0, S.isIOS)() && null != this.token && 1001 === e && "Stream end encountered" === t && (this.iosGoingAwayEventCount += 1, 3 === this.iosGoingAwayEventCount && c.default.get({
-      url: V.Endpoints.ME,
+      url: R.Endpoints.ME,
       headers: {
         authorization: this.token
       }
@@ -303,14 +303,14 @@ i = class extends b.default {
       let {
         status: t
       } = e;
-      y.default.track(V.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      y.default.track(R.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }, e => {
       let {
         status: t
       } = e;
-      401 === t && (this.connectionState = "CLOSED", M.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), y.default.track(V.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
+      401 === t && (this.connectionState = "CLOSED", M.warn("[WS CLOSED] because of manual authentication failure, marking as closed."), this._reset(n, 4004, "invalid token manually detected")), y.default.track(R.AnalyticEvents.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, {
         api_status_code: t
       })
     }))
@@ -353,30 +353,37 @@ i = class extends b.default {
       seq: this.seq
     }, !1)
   }
-  _doIdentify() {
+  async _doIdentify() {
     this.seq = 0, this.sessionId = null;
     let e = this.handleIdentify();
     if (null === e) {
       this._handleClose(!0, 4004, "No connection info provided");
       return
     }
-    this.connectionState = "IDENTIFYING", this.identifyStartTime = Date.now();
+    this.connectionState = "IDENTIFYING";
+    let t = Date.now();
+    this.identifyStartTime = t;
+    let n = await m.default.getClientState();
+    if ("IDENTIFYING" !== this.connectionState || this.identifyStartTime !== t) {
+      M.warn("Skipping identify because connectionState or identifyStartTime has changed");
+      return
+    }
     let {
-      token: t,
-      properties: n = {},
-      presence: s
+      token: s,
+      properties: i = {},
+      presence: r
     } = e;
-    this.token = t, M.verbose("[IDENTIFY]");
-    let i = {
-        token: t,
+    this.token = s, M.verbose("[IDENTIFY]");
+    let a = {
+        token: s,
         capabilities: A.default,
-        properties: n,
-        presence: s,
+        properties: i,
+        presence: r,
         compress: this.compressionHandler.usesLegacyCompression(),
-        client_state: (0, P.toGatewayClientState)(m.default.getClientState())
+        client_state: (0, P.toGatewayClientState)(n)
       },
-      r = JSON.stringify(i);
-    this.identifyUncompressedByteSize = r.length, this.identifyCompressedByteSize = d.deflate(r).length, this.lastIdentifyClientState = i.client_state, this.identifyCount += 1, this.send(b.Opcode.IDENTIFY, i, !1)
+      o = JSON.stringify(a);
+    this.identifyUncompressedByteSize = o.length, this.identifyCompressedByteSize = d.deflate(o).length, this.lastIdentifyClientState = a.client_state, this.identifyCount += 1, this.send(b.Opcode.IDENTIFY, a, !1)
   }
   _doFastConnectIdentify() {
     this.seq = 0, this.sessionId = null;

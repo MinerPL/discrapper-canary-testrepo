@@ -896,6 +896,7 @@ e.exports = Object.freeze({
   EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY: "In Development",
   EMBEDDED_ACTIVITIES_INTERACTION_EMBED_ENDED: "Activity has ended.",
   EMBEDDED_ACTIVITIES_INTERACTION_EMBED_NO_PRESENCE: "Activity has started.",
+  EMBEDDED_ACTIVITIES_LAUNCH_FAIL_GUILD_SIZE: "You cannot launch this activity in a server with more than 25 members",
   EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED: "Activity has ended",
   EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE: "Activity has started",
   EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION: "You do not have permissions to join this Voice Channel.",
@@ -16515,5 +16516,10 @@ e.exports = Object.freeze({
   QUESTS_ACCEPT_TOOLTIP: "Accept the quest and complete the task to unlock the reward",
   QUESTS_IN_PROGRESS_TOOLTIP: "Complete the task to unlock the reward",
   QUESTS_STREAM_TASK: "Stream for {minutes} minutes",
-  QUEST_REWARD: "Win {reward}"
+  QUEST_REWARD: "Win {reward}",
+  FORM_HELP_SYSTEM_CHANNEL_DEADCHAT_PROMPT_MESSAGE: "Prompt members to chat after this channel has been inactive for a while.",
+  PROMPT_CAMERA_LOADING_TITLE: "What are you looking at?",
+  PROMPT_CAMERA_ERROR: "There was an issue taking a photo, try again",
+  DEADCHAT_ACTION_CAMERA: "My View",
+  DEADCHAT_ACTION_STICKER: "Surprise Me"
 })

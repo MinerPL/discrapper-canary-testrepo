@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return V
+    return R
   }
 }), n("222007");
 var s, i, r = n("446674"),
@@ -37,7 +37,7 @@ function P(e) {
 function k() {
   C = "0", T = 0, S = -1, D = "0", m.clear(), A = 0, N.clear()
 }
-class R extends r.default.Store {
+class V extends r.default.Store {
   initialize() {
     this.waitFor(f.default), this.syncWith([c.default], () => {
       if (!b) return !1;
@@ -62,9 +62,8 @@ class R extends r.default.Store {
   clear() {
     k()
   }
-  getClientState() {
-    let e = y && (0, h.isCacheEnabled)() ? Object.fromEntries(d.default.getCommittedVersions()) : {},
-      t = y && (0, h.isCacheEnabled)() ? Object.fromEntries(u.default.getCommittedVersions()) : {};
+  async getClientState() {
+    let [e, t] = await Promise.all([y && (0, h.isCacheEnabled)() ? d.default.getCommittedVersionsAsync() : Promise.resolve({}), y && (0, h.isCacheEnabled)() ? u.default.getCommittedVersions() : Promise.resolve({})]);
     return {
       knownGuildVersions: e,
       highestLastMessageId: C,
@@ -83,8 +82,8 @@ class R extends r.default.Store {
     return p
   }
 }
-R.displayName = "ClientStateStore";
-var V = new R(o.default, {
+V.displayName = "ClientStateStore";
+var R = new V(o.default, {
   BACKGROUND_SYNC: function(e) {
     for (let t of e.guilds) "partial" === t.data_mode && t.unableToSyncDeletes && N.add(t.id);
     null != e.apiCodeVersion && (A = e.apiCodeVersion)

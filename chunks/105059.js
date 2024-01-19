@@ -18,6 +18,16 @@ var o = new class e {
       return a.warn("couldn't load guild versions", e), new Map
     }
   }
+  async getCommittedVersionsAsync() {
+    try {
+      let e = r.default.guildVersions();
+      if (null == e) return {};
+      let t = (await e.getMany()).map(e => [e.id, e.version]);
+      return Object.fromEntries(null != t ? t : [])
+    } catch (e) {
+      return a.warn("couldn't load guild versions", e), {}
+    }
+  }
   remove(e, t) {
     this.deleteWith(e), this.commit(t)
   }

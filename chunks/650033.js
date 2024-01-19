@@ -26,16 +26,14 @@ let s = {
     enable_server_discovery: "Enable Server Discovery Search on mobile",
     messages_badge_num_channels: "Messages tab badge counts # of unread channels instead of # of unread messages",
     main_tab_launchpad: "Enable LaunchPad in Main Tab",
-    new_panels: "Use panels for chat",
-    panels_split_messages_tab: "Split messages tab for panels",
     redesign_individual_feature_you_tab: "Enable You tab in the old UI",
     disable_theme_key: "Disable reloading the entire app when the theme changes",
     theme_setting_in_account_sheet: "Show theme settings in the Account action sheet",
-    panels_navigator: "Use panels navigator",
     cozy_header: "Cozy header",
     enable_channel_emojis: "Enables channel emoji UI components",
     mobile_profile_effect_debug_controls: "mobile_profile_effect_debug_controls",
-    enable_new_search_filters: "Enables new search filters behavior"
+    enable_new_search_filters: "Enables new search filters behavior",
+    force_channel_list_v2: "Force channel list V2"
   },
   a = {};
 class o extends i.default.DeviceSettingsStore {
