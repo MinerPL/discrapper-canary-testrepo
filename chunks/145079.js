@@ -10,8 +10,8 @@ var s = n("414456"),
   l = n.n(s),
   r = n("446674"),
   a = n("77078"),
-  u = n("102985"),
-  o = n("79798"),
+  o = n("102985"),
+  u = n("79798"),
   d = n("754474"),
   c = n("158998"),
   h = n("782340"),
@@ -29,7 +29,7 @@ let p = e => {
     secondary: n,
     botType: s,
     botVerified: r,
-    discriminatorClass: u,
+    discriminatorClass: o,
     className: d,
     usernameClass: c,
     color: m,
@@ -41,6 +41,7 @@ let p = e => {
     children: [(0, i.jsx)(a.Tooltip, {
       text: h.default.Messages.STREAMER_MODE_ENABLED,
       shouldShow: I,
+      "aria-label": !!I && void 0,
       children: e => (0, i.jsx)("span", {
         ...e,
         className: l(f.username, c),
@@ -50,9 +51,9 @@ let p = e => {
         children: t
       })
     }), null != n ? (0, i.jsx)("span", {
-      className: l(f.infoSpacing, u),
+      className: l(f.infoSpacing, o),
       children: n
-    }) : void 0, null != s && (0, i.jsx)(o.default, {
+    }) : void 0, null != s && (0, i.jsx)(u.default, {
       type: s,
       className: l(f.infoSpacing, p),
       verified: r
@@ -66,10 +67,10 @@ var I = e => {
     nick: s,
     forceUsername: l,
     showAccountIdentifier: a,
-    overrideDiscriminator: o,
+    overrideDiscriminator: u,
     forcePomelo: h,
     ...f
-  } = e, I = (0, r.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), E = I || t || n.isNonUserBot(), v = n.toString(), g = c.default.getName(n), _ = l ? v : null != s ? s : g, S = n.isPomelo() || h;
+  } = e, I = (0, r.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), E = I || t || n.isNonUserBot(), v = n.toString(), g = c.default.getName(n), _ = l ? v : null != s ? s : g, S = n.isPomelo() || h;
   if (S || _ !== v) {
     let e = _ === v && S && l ? c.default.getUserTag(n, {
         forcePomelo: h
@@ -88,7 +89,7 @@ var I = e => {
     name: _,
     botType: m(n),
     botVerified: n.isVerifiedBot(),
-    discriminator: E || _ !== v ? null : null != o ? o : n.discriminator,
+    discriminator: E || _ !== v ? null : null != u ? u : n.discriminator,
     ...f
   })
 }

@@ -1641,178 +1641,6 @@
     margin-left: 10px
 }
 
-.focus-rings-ring {
-    position: absolute;
-    display: block;
-    pointer-events: none;
-    background: none;
-    margin: 0;
-    padding: 0;
-    border-radius: 4px;
-    border-radius: var(--__adaptive-focus-ring-radius, 4px);
-    box-shadow: 0 0 0 4px#00b0f4;
-    box-shadow: 0 0 0 4px var(--__adaptive-focus-ring-color, var(--focus-primary, #00b0f4))
-}
-
-.paypalLogo_d5b251 {
-    background-image: url(/assets/7a6a74bce00532de3748.svg)
-}
-
-.sofortLogo__40894 {
-    background-image: url(/assets/bb2df9b4fe177b88f5cb.svg)
-}
-
-.paysafeCardLogo__036a3 {
-    background-image: url(/assets/1f5c70f7ae2fa7ca6f55.svg)
-}
-
-.gcashLogo__79636 {
-    background-image: url(/assets/08d19f5d231757b14468.svg)
-}
-
-.grabPayLogo__27a10 {
-    background-image: url(/assets/5b309e3bda0a954ae67e.svg)
-}
-
-.momoLogo_f6b282 {
-    background-image: url(/assets/022b6f08ce8cd06e7d2e.svg)
-}
-
-.kakaopayLogo__9e5dd {
-    background-image: url(/assets/74cc3a7d069e7bde4642.svg)
-}
-
-.goPayLogo_a4342b {
-    background-image: url(/assets/a0e2e13b1edb66b440fe.svg)
-}
-
-.bancontactLogo__0b133 {
-    background-image: url(/assets/d3d02d383054f64091d5.svg)
-}
-
-.epsLogo__95976 {
-    background-image: url(/assets/dd293574a2092f9d4555.svg)
-}
-
-.idealLogo__7cddf {
-    background-image: url(/assets/a6a8e98a210bf8b02da7.svg)
-}
-
-.p24Logo__81ad5 {
-    background-image: url(/assets/b8ead81360c33e0de3f5.svg)
-}
-
-.giropayLogo__9aae5 {
-    background-image: url(/assets/66d99a14180b6e5da1a3.svg)
-}
-
-.message_a18a8a {
-    font-size: 24px;
-    text-align: center
-}
-
-.gamepadButtonText__77d59 {
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--white-500);
-    margin-right: 30px
-}
-
-.gamepadButtonContainer_a682a6 {
-    display: flex;
-    flex-direction: row;
-    align-items: center
-}
-
-.header__94364 {
-    padding: 24px 16px 0;
-    flex-grow: 0;
-    overflow: hidden
-}
-
-.subtitle__0d3af {
-    margin-top: 8px
-}
-
-.closeButton__2e9ef {
-    z-index: 1000;
-    position: absolute;
-    top: 12px;
-    right: 12px
-}
-
-.content__3d6e7 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 24px;
-    padding-top: 0;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 24px
-}
-
-.smsInputContainer_dfd2d0 {
-    display: flex;
-    gap: 8px
-}
-
-.smsInput__8c42b {
-    flex-grow: 1
-}
-
-.error__95c4e {
-    margin-top: 8px
-}
-
-.footer__72fb4 {
-    justify-content: space-between;
-    padding-left: 8px
-}
-
-.listItemContainer_cb9db1 {
-    border-radius: 8px;
-    border: 1px solid var(--background-modifier-accent);
-    background-color: var(--background-primary);
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    width: 100%;
-    padding: 0;
-    padding-left: 8px
-}
-
-.listItemContainer_cb9db1:hover {
-    background-color: var(--background-modifier-hover)
-}
-
-.keyboard-mode .listItemContainer_cb9db1:focus {
-    background-color: var(--background-modifier-selected)
-}
-
-.listItemContainer_cb9db1:active {
-    background-color: var(--background-modifier-active)
-}
-
-.listItemIcon_e5a0ae {
-    filter: saturate(1);
-    filter: saturate(var(--saturation-factor, 1));
-    margin: 8px 8px 8px 16px
-}
-
-.listItemText_d903ca {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-left: 8px
-}
-
-.listItemArrow__8205e {
-    margin-left: auto;
-    margin-right: 16px;
-    height: 50px;
-    color: var(--interactive-normal)
-}
-
 .applicationDetails__6d654 {
     padding: 24px 0
 }
@@ -2178,6 +2006,103 @@
     padding-bottom: 8px
 }
 
+.header__94364 {
+    padding: 24px 16px 0;
+    flex-grow: 0;
+    overflow: hidden
+}
+
+.subtitle__0d3af {
+    margin-top: 8px
+}
+
+.closeButton__2e9ef {
+    z-index: 1000;
+    position: absolute;
+    top: 12px;
+    right: 12px
+}
+
+.content__3d6e7 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    padding-top: 0;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px
+}
+
+.smsInputContainer_dfd2d0 {
+    display: flex;
+    gap: 8px
+}
+
+.smsInput__8c42b {
+    flex-grow: 1
+}
+
+.error__95c4e {
+    margin-top: 8px
+}
+
+.footer__72fb4 {
+    justify-content: space-between;
+    padding-left: 8px
+}
+
+.listItemContainer_cb9db1 {
+    border-radius: 8px;
+    border: 1px solid var(--background-modifier-accent);
+    background-color: var(--background-primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 0;
+    padding-left: 8px
+}
+
+.listItemContainer_cb9db1:hover {
+    background-color: var(--background-modifier-hover)
+}
+
+.keyboard-mode .listItemContainer_cb9db1:focus {
+    background-color: var(--background-modifier-selected)
+}
+
+.listItemContainer_cb9db1:active {
+    background-color: var(--background-modifier-active)
+}
+
+.listItemIcon_e5a0ae {
+    filter: saturate(1);
+    filter: saturate(var(--saturation-factor, 1));
+    margin: 8px 8px 8px 16px
+}
+
+.listItemText_d903ca {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 8px
+}
+
+.listItemArrow__8205e {
+    margin-left: auto;
+    margin-right: 16px;
+    height: 50px;
+    color: var(--interactive-normal)
+}
+
+.errorCodeMessage__0cd84 {
+    margin-top: 16px
+}
+
+.title__09d1c {
+    text-transform: capitalize
+}
+
 .spacing_a2cee4 {
     margin-bottom: 20px
 }
@@ -2194,12 +2119,87 @@
     color: var(--white-500)
 }
 
-.errorCodeMessage__0cd84 {
-    margin-top: 16px
+.focus-rings-ring {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    border-radius: var(--__adaptive-focus-ring-radius, 4px);
+    box-shadow: 0 0 0 4px#00b0f4;
+    box-shadow: 0 0 0 4px var(--__adaptive-focus-ring-color, var(--focus-primary, #00b0f4))
 }
 
-.title__09d1c {
-    text-transform: capitalize
+.paypalLogo_d5b251 {
+    background-image: url(/assets/7a6a74bce00532de3748.svg)
+}
+
+.sofortLogo__40894 {
+    background-image: url(/assets/bb2df9b4fe177b88f5cb.svg)
+}
+
+.paysafeCardLogo__036a3 {
+    background-image: url(/assets/1f5c70f7ae2fa7ca6f55.svg)
+}
+
+.gcashLogo__79636 {
+    background-image: url(/assets/08d19f5d231757b14468.svg)
+}
+
+.grabPayLogo__27a10 {
+    background-image: url(/assets/5b309e3bda0a954ae67e.svg)
+}
+
+.momoLogo_f6b282 {
+    background-image: url(/assets/022b6f08ce8cd06e7d2e.svg)
+}
+
+.kakaopayLogo__9e5dd {
+    background-image: url(/assets/74cc3a7d069e7bde4642.svg)
+}
+
+.goPayLogo_a4342b {
+    background-image: url(/assets/a0e2e13b1edb66b440fe.svg)
+}
+
+.bancontactLogo__0b133 {
+    background-image: url(/assets/d3d02d383054f64091d5.svg)
+}
+
+.epsLogo__95976 {
+    background-image: url(/assets/dd293574a2092f9d4555.svg)
+}
+
+.idealLogo__7cddf {
+    background-image: url(/assets/a6a8e98a210bf8b02da7.svg)
+}
+
+.p24Logo__81ad5 {
+    background-image: url(/assets/b8ead81360c33e0de3f5.svg)
+}
+
+.giropayLogo__9aae5 {
+    background-image: url(/assets/66d99a14180b6e5da1a3.svg)
+}
+
+.message_a18a8a {
+    font-size: 24px;
+    text-align: center
+}
+
+.gamepadButtonText__77d59 {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-500);
+    margin-right: 30px
+}
+
+.gamepadButtonContainer_a682a6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center
 }
 
 .widthForAddPack__4a53e {
@@ -7491,19 +7491,6 @@
     background-color: var(--background-secondary)
 }
 
-.actionButton_dac582 {
-    min-height: 32px
-}
-
-.actionRightButton__8ac12 {
-    margin-left: 10px
-}
-
-.pendingIncoming_c83b56 {
-    display: flex;
-    flex-grow: 0
-}
-
 .divider__2bbbc {
     margin-top: 12px;
     height: 1px;
@@ -8696,14 +8683,6 @@
     padding-right: 8px;
     width: 16px;
     height: 16px
-}
-
-.addFriendSection__413d3 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 16px
 }
 
 .referencePosition__76f5a {
@@ -20407,6 +20386,55 @@ html .progress__4ef76 {
     z-index: 100
 }
 
+.clickContainer__3050a {
+    padding: 20px
+}
+
+.clickable__84aa1 {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 2px dashed var(--header-secondary);
+    border-radius: 8px
+}
+
+.clickableActive_b9faa6 {
+    border-color: var(--brand-500)
+}
+
+.tag_d12d27 {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 3px 6px;
+    background-color: var(--background-tertiary);
+    border-radius: 4px;
+    color: var(--text-normal)
+}
+
+.tagActive_f1a7b8 {
+    color: var(--brand-500)
+}
+
+.uploadContainer__50c3a {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.description__5cc07 {
+    text-align: center
+}
+
+.fileInput__00b6c {
+    display: none
+}
+
+.addFileButtonIcon__5ebf4 {
+    background-image: url(/assets/5f5e1a58ecf11d0d8d15.svg)
+}
+
 .wrapper_a5cbb9 {
     display: grid;
     grid-template-rows: 1fr auto;
@@ -26872,8 +26900,8 @@ html .progress__4ef76 {
 
 .message__13e98 {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden
@@ -33244,6 +33272,11 @@ html .progress__4ef76 {
     margin-right: .25rem;
     height: 18px;
     width: 18px
+}
+
+.ctaButtonContainer_e46fb9 {
+    margin-top: 6px;
+    margin-bottom: 6px
 }
 
 .ticketIcon_dbbf9d {
@@ -40688,6 +40721,11 @@ html .progress__4ef76 {
     padding-bottom: 8px
 }
 
+.list__02208.withGuildIcon__8cc53 {
+    padding-left: 48px;
+    padding-bottom: 8px
+}
+
 .collapsed__66e36 {
     padding-right: 8px;
     padding-left: 48px
@@ -45676,6 +45714,10 @@ html .progress__4ef76 {
     margin-left: 26px
 }
 
+.linkBottom_bac113.withGuildIcon_cd7a25 {
+    margin-left: 38px
+}
+
 .name__8d1ec {
     font-size: 16px;
     line-height: 20px;
@@ -45756,7 +45798,8 @@ html .progress__4ef76 {
 
 .modeSelected__487d6 .acronym_fbdc79,
 .modeSelected__487d6:hover .acronym_fbdc79 {
-    background: var(--brand-experiment)
+    background: var(--brand-experiment);
+    color: var(--white)
 }
 
 .modeSelected__487d6 .link__95dc0,
@@ -83973,8 +84016,8 @@ html .tabBadge__002b3 {
 
 .bodyText__923f7 {
     color: var(--interactive-normal);
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     font-weight: 500;
     margin-bottom: 16px
 }
@@ -84021,8 +84064,8 @@ html .tabBadge__002b3 {
 }
 
 .trialCheckboxLabel__0297c {
-    font-size: 14px;
-    line-height: 18px
+    font-size: .875rem;
+    line-height: 1.125rem
 }
 
 .loader_acb69b {
@@ -90377,7 +90420,7 @@ html .tabBadge__002b3 {
 }
 
 .categoryRow__56206 {
-    margin-bottom: 8px
+    margin-bottom: 12px
 }
 
 .channelRow__97b12 {
@@ -90385,7 +90428,7 @@ html .tabBadge__002b3 {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin-bottom: 8px
+    margin-bottom: 12px
 }
 
 .channelRow__97b12+.categoryRow__56206 {
@@ -93482,14 +93525,6 @@ html .tabBadge__002b3 {
     line-height: 20px
 }
 
-.keybindHint_f547ed {
-    color: var(--text-normal);
-    text-align: center;
-    font-size: 13px;
-    line-height: 18px;
-    margin: 8px 0
-}
-
 .mainCheckboxContainer__777cd {
     display: flex;
     align-items: stretch;
@@ -94265,7 +94300,7 @@ html .invoiceCancelRow_a8669b {
     color: var(--white-500)
 }
 
-.radioLabelContainer__35456 {
+.labelWithIconContainer__9db6a {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -94281,7 +94316,7 @@ html .invoiceCancelRow_a8669b {
     margin-right: 4px
 }
 
-.nagivateBackContainer__0421b {
+.customLabelContainer_e315af {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -94291,7 +94326,7 @@ html .invoiceCancelRow_a8669b {
     cursor: pointer
 }
 
-.nagivateBackContainer__0421b:hover {
+.customLabelContainer_e315af:hover {
     background-color: var(--brand-experiment-560);
     color: var(--white-500)
 }
@@ -94306,6 +94341,12 @@ html .invoiceCancelRow_a8669b {
 
 .selectedOption__07ef3 {
     margin-top: 4px
+}
+
+.containerWithRightCaret__9d3c6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center
 }
 
 .rolePopout_da0123 {
@@ -120843,6 +120884,19 @@ div.nagbar_c731ff {
 .infoScroller__6ec79 {
     padding: 0 12px;
     height: 100%
+}
+
+.actionButton_dac582 {
+    min-height: 32px
+}
+
+.actionRightButton__8ac12 {
+    margin-left: 10px
+}
+
+.pendingIncoming_c83b56 {
+    display: flex;
+    flex-grow: 0
 }
 
 .header__7da4f {

@@ -1,14 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   Dao: function() {
-    return s
+    return r
   }
 });
 var i = n("999673"),
-  r = n("429231");
-class s {
+  s = n("429231");
+class r {
   get prefix() {
     return this.table.prefix
+  }
+  withoutLogging() {
+    return new r(this.originalPrefix, this.table.tableId, this.table.database, !1)
   }
   get(e) {
     return this.table.get([e])
@@ -42,8 +45,8 @@ class s {
   delete(e) {
     return 0 == arguments.length ? this.table.delete() : this.table.delete([e])
   }
-  transaction(e) {
-    return this.table.transaction(t => e(new a(t)))
+  transaction(e, t) {
+    return this.table.transaction(t => e(new a(t)), t)
   }
   upgradeTransaction(e) {
     return new a(this.table.upgradeTransaction(e))
@@ -60,13 +63,13 @@ class s {
   getIdsSyncUnsafe() {
     return this.table.getChildIdsSyncUnsafe([])
   }
-  constructor(e, t, n) {
-    this.table = new r.Table([e], t, n)
+  constructor(e, t, n, i = !0) {
+    this.originalPrefix = e, this.table = new s.Table([e], t, n, i)
   }
 }
 class a {
   static fromDatabaseTransaction(e, t, n) {
-    return new a(new r.TableTransaction(e, t, n))
+    return new a(new s.TableTransaction(e, t, n))
   }
   put(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.ConflictOptions.Replace;

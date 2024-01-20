@@ -144,9 +144,8 @@ function G() {
       let a = I.default.getChannel(n);
       null != a && (e = a.type, t = R.default.countVoiceStatesForChannel(a.id) - (N.default.isInChannel(a.id) ? 1 : 0), s = h.default.getAllApplicationStreamsForChannel(a.id).map(e => e.ownerId))
     }
-    let o = h.default.getStreamerActiveStreamMetadata(),
-      u = null;
-    return (null == (u = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : u.state) === v.ApplicationStreamStates.CONNECTING && (u = null), null != u && (i = (0, c.encodeStreamKey)(u), l = h.default.getViewerIds(i).filter(e => e !== a).length), {
+    let o = null;
+    return (null == (o = 1 === r.length ? r[0] : h.default.getCurrentUserActiveStream()) ? void 0 : o.state) === v.ApplicationStreamStates.CONNECTING && (o = null), null != o && (i = (0, c.encodeStreamKey)(o), l = h.default.getViewerIds(i).filter(e => e !== a).length), {
       channelType: e,
       voiceChannelId: n,
       voiceChannelUserCount: t,
@@ -154,8 +153,7 @@ function G() {
       singleActiveStreamKey: i,
       singleActiveStreamViewerCount: l,
       currentUserId: a,
-      allActiveStreams: r,
-      currentUserStream: o
+      allActiveStreams: r
     }
   }, (e, t) => {
     let {
@@ -165,8 +163,7 @@ function G() {
       streamingUserIds: i,
       singleActiveStreamKey: l,
       singleActiveStreamViewerCount: r,
-      currentUserId: o,
-      currentUserStream: u
+      currentUserId: o
     } = t;
     if (e.voiceChannelId !== a || null == a || function(e) {
         let t = I.default.getChannel(e);
@@ -176,17 +173,16 @@ function G() {
         let a = T.default.getGuild(n);
         return null != a && a.afkChannelId === t.id
       }(a) || null != n && _.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n)) return;
-    let d = null != l && e.singleActiveStreamKey === l,
-      c = i.some(t => !e.streamingUserIds.includes(t)),
-      f = e.allActiveStreams.map(e => e.ownerId),
-      E = e.streamingUserIds.some(e => !i.includes(e) && (e === o || f.includes(e)));
-    if (c) return "stream_started";
-    if (null !== u && null !== e.currentUserStream && u !== e.currentUserStream) return "stream_started";
-    if (E) return "stream_ended";
-    else if (e.singleActiveStreamViewerCount <= 25 && d && r > e.singleActiveStreamViewerCount) return "stream_user_joined";
+    let u = null != l && e.singleActiveStreamKey === l,
+      d = i.some(t => !e.streamingUserIds.includes(t)),
+      c = e.allActiveStreams.map(e => e.ownerId),
+      f = e.streamingUserIds.some(e => !i.includes(e) && (e === o || c.includes(e)));
+    if (d) return "stream_started";
+    if (f) return "stream_ended";
+    if (e.singleActiveStreamViewerCount <= 25 && u && r > e.singleActiveStreamViewerCount) return "stream_user_joined";
     else if (null != e.voiceChannelUserCount && null != s && e.voiceChannelUserCount <= 25 && s > e.voiceChannelUserCount) return "user_join";
     else if (null != e.voiceChannelUserCount && null != s && e.voiceChannelUserCount <= 25 && s < e.voiceChannelUserCount) return "user_leave";
-    else if (e.singleActiveStreamViewerCount <= 25 && d && r < e.singleActiveStreamViewerCount) return "stream_user_left"
+    else if (e.singleActiveStreamViewerCount <= 25 && u && r < e.singleActiveStreamViewerCount) return "stream_user_left"
   }), null
 }
 

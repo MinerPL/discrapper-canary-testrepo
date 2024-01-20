@@ -199,8 +199,6 @@ let B = [function() {
   return x(y.GlobalKeybindActions.SOUNDBOARD_HOLD, p.DEFAULT_KEYBIND, !1)
 }, function() {
   return x(y.GlobalKeybindActions.SAVE_CLIP, D.DEFAULT_KEYBIND)
-}, function() {
-  return x(y.GlobalKeybindActions.TOGGLE_GO_LIVE_STREAMING, "mod+shift+l")
 }];
 
 function X() {

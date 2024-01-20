@@ -1,72 +1,75 @@
 "use strict";
-l.r(a), l.d(a, {
+a.r(t), a.d(t, {
   default: function() {
-    return N
+    return S
   }
 });
-var t = l("37983");
-l("884691");
-var s = l("414456"),
-  n = l.n(s),
-  i = l("269096"),
-  o = l("77078"),
-  d = l("145131"),
-  r = l("795010"),
-  c = l("170213"),
-  u = l("782340"),
-  E = l("669223"),
-  _ = l("434848");
+var l = a("37983");
+a("884691");
+var s = a("414456"),
+  n = a.n(s),
+  i = a("269096"),
+  o = a("77078"),
+  d = a("145131"),
+  r = a("228408"),
+  c = a("795010"),
+  u = a("170213"),
+  E = a("782340"),
+  A = a("669223"),
+  _ = a("434848");
 
-function N(e) {
+function S(e) {
   let {
-    className: a,
-    onNext: l,
+    className: t,
+    onNext: a,
     onClose: s
-  } = e;
-  return (0, t.jsxs)(t.Fragment, {
-    children: [(0, t.jsxs)(o.ModalHeader, {
+  } = e, S = (0, r.useEmitAppealIngestionEvent)();
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)(o.ModalHeader, {
       direction: d.default.Direction.VERTICAL,
       className: _.header,
       separator: !1,
-      children: [(0, t.jsx)("div", {
-        className: E.iconContainer,
-        children: (0, t.jsx)(i.CheckmarkLargeIcon, {
+      children: [(0, l.jsx)("div", {
+        className: A.iconContainer,
+        children: (0, l.jsx)(i.CheckmarkLargeIcon, {
           color: o.tokens.colors.INTERACTIVE_ACTIVE,
-          className: E.icon
+          className: A.icon
         })
-      }), (0, t.jsx)(o.Heading, {
+      }), (0, l.jsx)(o.Heading, {
         className: _.title,
         variant: "heading-xl/semibold",
-        children: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_HEADER
-      }), (0, t.jsx)(o.Heading, {
+        children: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_HEADER
+      }), (0, l.jsx)(o.Heading, {
         className: _.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER
-      }), null != s && (0, t.jsx)(o.ModalCloseButton, {
+        children: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_SUBHEADER
+      }), null != s && (0, l.jsx)(o.ModalCloseButton, {
         className: _.closeButton,
         onClick: s
       })]
-    }), (0, t.jsxs)(o.ModalContent, {
-      className: n(_.templatesList, E.modalContent, a),
+    }), (0, l.jsxs)(o.ModalContent, {
+      className: n(_.templatesList, A.modalContent, t),
       paddingFix: !1,
-      children: [(0, t.jsx)(o.Heading, {
+      children: [(0, l.jsx)(o.Heading, {
         variant: "heading-md/bold",
         color: "header-primary",
-        className: E.actionsHeader,
-        children: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_ACTIONS_HEADER
-      }), (0, t.jsx)(r.default, {
-        text: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_GUIDELINES_LINK,
-        url: c.SafetyHubLinks.COMMUNITY_GUIDELINES
-      }), (0, t.jsx)(r.default, {
-        text: u.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_RULES_LINK,
-        url: c.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK
+        className: A.actionsHeader,
+        children: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_ACTIONS_HEADER
+      }), (0, l.jsx)(c.default, {
+        text: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_GUIDELINES_LINK,
+        url: u.SafetyHubLinks.COMMUNITY_GUIDELINES,
+        onClick: () => S(u.SafetyHubAnalyticsActions.ClickCommunityGuidelinesLink)
+      }), (0, l.jsx)(c.default, {
+        text: E.default.Messages.APPEAL_INGESTION_MODAL_REQUEST_SENT_RULES_LINK,
+        url: u.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
+        onClick: () => S(u.SafetyHubAnalyticsActions.ClickWarningSystemHelpcenterLink)
       })]
-    }), (0, t.jsx)(o.ModalFooter, {
-      children: (0, t.jsx)(o.Button, {
-        onClick: l,
+    }), (0, l.jsx)(o.ModalFooter, {
+      children: (0, l.jsx)(o.Button, {
+        onClick: a,
         color: o.Button.Colors.BRAND,
-        children: u.default.Messages.DONE
+        children: E.default.Messages.DONE
       })
     })]
   })
