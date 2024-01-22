@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   open: function() {
-    return s
+    return r
   },
   close: function() {
     return a
@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return u
   },
   chooseReplayPath: function() {
-    return c
+    return d
   }
 });
 var i = n("913144"),
-  r = n("49671");
+  s = n("49671");
 
-function s(e) {
+function r(e) {
   i.default.dispatch({
     type: "RTC_DEBUG_MODAL_OPEN",
     section: e
@@ -57,8 +57,8 @@ function u(e) {
   })
 }
 
-function c() {
-  r.default.fileManager.showOpenDialog({
+function d() {
+  s.default.fileManager.showOpenDialog({
     filters: [{
       name: "All Files",
       extensions: ["*"]

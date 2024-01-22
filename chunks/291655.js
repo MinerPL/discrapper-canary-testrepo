@@ -9,8 +9,8 @@ var l = n("37983"),
   r = n("414456"),
   s = n.n(r),
   o = n("193865"),
-  a = n("780571"),
-  u = n("39331"),
+  u = n("780571"),
+  a = n("39331"),
   c = n("596368"),
   d = n("227439"),
   f = n("877671"),
@@ -23,17 +23,17 @@ var l = n("37983"),
       className: h,
       isGroupStart: p,
       hideSimpleEmbedContent: S = !0,
-      disableInteraction: M
-    } = e, T = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), m = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
-      content: C
-    } = (0, u.default)(r, {
+      disableInteraction: m
+    } = e, M = (0, o.useShowImprovedMarkdownUserExperimentConfig)((null !== (t = r.editedTimestamp) && void 0 !== t ? t : r.timestamp).valueOf()), T = (0, o.useShowImprovedMarkdownGuildExperimentConfig)(null !== (n = null == E ? void 0 : E.guild_id) && void 0 !== n ? n : "", (null !== (i = r.editedTimestamp) && void 0 !== i ? i : r.timestamp).valueOf()), {
+      content: v
+    } = (0, a.default)(r, {
       hideSimpleEmbedContent: S,
-      allowList: T.showListsAndHeaders || m.showListsAndHeaders,
-      allowHeading: T.showListsAndHeaders || m.showListsAndHeaders,
-      allowLinks: T.showMaskedLinks || m.showMaskedLinks,
-      previewLinkTarget: T.showMaskedLinks || m.showMaskedLinks
+      allowList: M.showListsAndHeaders || T.showListsAndHeaders,
+      allowHeading: M.showListsAndHeaders || T.showListsAndHeaders,
+      allowLinks: M.showMaskedLinks || T.showMaskedLinks,
+      previewLinkTarget: M.showMaskedLinks || T.showMaskedLinks
     });
-    return (0, l.jsx)(a.default, {
+    return (0, l.jsx)(u.default, {
       compact: _,
       className: s(h, {
         [f.message]: !0,
@@ -45,7 +45,7 @@ var l = n("37983"),
         channel: E,
         guildId: void 0
       }),
-      childrenMessageContent: (0, c.default)(e, C),
-      disableInteraction: M
+      childrenMessageContent: (0, c.default)(e, v),
+      disableInteraction: m
     })
   })

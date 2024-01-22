@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("446674"),
-  r = n("913144");
-let s = n("49111").VideoQualityMode.AUTO;
+  s = n("913144");
+let r = n("49111").VideoQualityMode.AUTO;
 class a extends i.default.Store {
   get mode() {
-    return s
+    return r
   }
 }
 a.displayName = "VideoQualityModeStore";
-var o = new a(r.default, {
+var o = new a(s.default, {
   SET_CHANNEL_VIDEO_QUALITY_MODE: function(e) {
-    s = e.mode
+    r = e.mode
   }
 })

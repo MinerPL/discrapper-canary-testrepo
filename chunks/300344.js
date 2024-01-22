@@ -1,4 +1,4 @@
 "use strict";
-t.exports = function(t) {
-  return "string" == typeof t || "symbol" == typeof t
+e.exports = function(e) {
+  return "string" == typeof e || "symbol" == typeof e
 }

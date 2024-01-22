@@ -1,27 +1,27 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return i
   }
 });
-var s = a("884691"),
-  n = a("471671"),
-  l = a("816454"),
-  r = a("250850"),
+var a = s("884691"),
+  n = s("471671"),
+  l = s("816454"),
+  r = s("250850"),
   i = {
     useForumChannelSeenManager: function(e) {
       let {
         guildId: t,
-        channelId: a
-      } = e, i = s.useRef(null), o = (0, l.getMainWindowId)(), d = !n.default.isFocused(o);
-      return s.useLayoutEffect(() => (null == i.current && (i.current = new r.default({
+        channelId: s
+      } = e, i = a.useRef(null), o = (0, l.getMainWindowId)(), u = !n.default.isFocused(o);
+      return a.useLayoutEffect(() => (null == i.current && (i.current = new r.default({
         guildId: t,
-        channelId: a,
-        isPaused: d,
+        channelId: s,
+        isPaused: u,
         windowId: o
       }), i.current.initialize()), () => {
         var e;
         null === (e = i.current) || void 0 === e || e.terminate(), i.current = null
-      }), [a, t, d, o]), i.current
+      }), [s, t, u, o]), i.current
     }
   }

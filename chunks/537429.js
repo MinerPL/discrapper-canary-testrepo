@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var r = n("353927");
+var i = n("353927");
 
-function i(e) {
-  return e.supportsInApp(r.Features.VIDEO)
+function s(e) {
+  return e.supportsInApp(i.Features.VIDEO)
 }

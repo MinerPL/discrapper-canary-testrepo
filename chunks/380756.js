@@ -1,18 +1,18 @@
 "use strict";
 n("424973"), n("808653"), n("781738");
 var r = n("280973"),
-  o = Object.prototype.hasOwnProperty,
-  a = Array.isArray,
-  i = function() {
+  i = Object.prototype.hasOwnProperty,
+  o = Array.isArray,
+  s = function() {
     for (var e = [], t = 0; t < 256; ++t) e.push("%" + ((t < 16 ? "0" : "") + t.toString(16)).toUpperCase());
     return e
   }(),
-  s = function(e) {
+  a = function(e) {
     for (; e.length > 1;) {
       var t = e.pop(),
         n = t.obj[t.prop];
-      if (a(n)) {
-        for (var r = [], o = 0; o < n.length; ++o) void 0 !== n[o] && r.push(n[o]);
+      if (o(n)) {
+        for (var r = [], i = 0; i < n.length; ++i) void 0 !== n[i] && r.push(n[i]);
         t.obj[t.prop] = r
       }
     }
@@ -38,16 +38,16 @@ e.exports = {
         },
         prop: "o"
       }], n = [], r = 0; r < t.length; ++r) {
-      for (var o = t[r], a = o.obj[o.prop], i = Object.keys(a), c = 0; c < i.length; ++c) {
-        var l = i[c],
-          u = a[l];
-        "object" == typeof u && null !== u && -1 === n.indexOf(u) && (t.push({
-          obj: a,
-          prop: l
-        }), n.push(u))
+      for (var i = t[r], o = i.obj[i.prop], s = Object.keys(o), c = 0; c < s.length; ++c) {
+        var u = s[c],
+          d = o[u];
+        "object" == typeof d && null !== d && -1 === n.indexOf(d) && (t.push({
+          obj: o,
+          prop: u
+        }), n.push(d))
       }
     }
-    return s(t), e
+    return a(t), e
   },
   decode: function(e, t, n) {
     var r = e.replace(/\+/g, " ");
@@ -58,31 +58,31 @@ e.exports = {
       return r
     }
   },
-  encode: function(e, t, n, o, a) {
+  encode: function(e, t, n, i, o) {
     if (0 === e.length) return e;
-    var s = e;
-    if ("symbol" == typeof e ? s = Symbol.prototype.toString.call(e) : "string" != typeof e && (s = String(e)), "iso-8859-1" === n) return escape(s).replace(/%u[0-9a-f]{4}/gi, function(e) {
+    var a = e;
+    if ("symbol" == typeof e ? a = Symbol.prototype.toString.call(e) : "string" != typeof e && (a = String(e)), "iso-8859-1" === n) return escape(a).replace(/%u[0-9a-f]{4}/gi, function(e) {
       return "%26%23" + parseInt(e.slice(2), 16) + "%3B"
     });
-    for (var c = "", l = 0; l < s.length; ++l) {
-      var u = s.charCodeAt(l);
-      if (45 === u || 46 === u || 95 === u || 126 === u || u >= 48 && u <= 57 || u >= 65 && u <= 90 || u >= 97 && u <= 122 || a === r.RFC1738 && (40 === u || 41 === u)) {
-        c += s.charAt(l);
+    for (var c = "", u = 0; u < a.length; ++u) {
+      var d = a.charCodeAt(u);
+      if (45 === d || 46 === d || 95 === d || 126 === d || d >= 48 && d <= 57 || d >= 65 && d <= 90 || d >= 97 && d <= 122 || o === r.RFC1738 && (40 === d || 41 === d)) {
+        c += a.charAt(u);
         continue
       }
-      if (u < 128) {
-        c += i[u];
+      if (d < 128) {
+        c += s[d];
         continue
       }
-      if (u < 2048) {
-        c += i[192 | u >> 6] + i[128 | 63 & u];
+      if (d < 2048) {
+        c += s[192 | d >> 6] + s[128 | 63 & d];
         continue
       }
-      if (u < 55296 || u >= 57344) {
-        c += i[224 | u >> 12] + i[128 | u >> 6 & 63] + i[128 | 63 & u];
+      if (d < 55296 || d >= 57344) {
+        c += s[224 | d >> 12] + s[128 | d >> 6 & 63] + s[128 | 63 & d];
         continue
       }
-      l += 1, c += i[240 | (u = 65536 + ((1023 & u) << 10 | 1023 & s.charCodeAt(l))) >> 18] + i[128 | u >> 12 & 63] + i[128 | u >> 6 & 63] + i[128 | 63 & u]
+      u += 1, c += s[240 | (d = 65536 + ((1023 & d) << 10 | 1023 & a.charCodeAt(u))) >> 18] + s[128 | d >> 12 & 63] + s[128 | d >> 6 & 63] + s[128 | 63 & d]
     }
     return c
   },
@@ -93,7 +93,7 @@ e.exports = {
     return "[object RegExp]" === Object.prototype.toString.call(e)
   },
   maybeMap: function(e, t) {
-    if (a(e)) {
+    if (o(e)) {
       for (var n = [], r = 0; r < e.length; r += 1) n.push(t(e[r]));
       return n
     }
@@ -102,23 +102,23 @@ e.exports = {
   merge: function e(t, n, r) {
     if (!n) return t;
     if ("object" != typeof n) {
-      if (a(t)) t.push(n);
+      if (o(t)) t.push(n);
       else {
         if (!t || "object" != typeof t) return [t, n];
-        (r && (r.plainObjects || r.allowPrototypes) || !o.call(Object.prototype, n)) && (t[n] = !0)
+        (r && (r.plainObjects || r.allowPrototypes) || !i.call(Object.prototype, n)) && (t[n] = !0)
       }
       return t
     }
     if (!t || "object" != typeof t) return [t].concat(n);
-    var i = t;
-    return (a(t) && !a(n) && (i = c(t, r)), a(t) && a(n)) ? (n.forEach(function(n, a) {
-      if (o.call(t, a)) {
-        var i = t[a];
-        i && "object" == typeof i && n && "object" == typeof n ? t[a] = e(i, n, r) : t.push(n)
-      } else t[a] = n
-    }), t) : Object.keys(n).reduce(function(t, a) {
-      var i = n[a];
-      return o.call(t, a) ? t[a] = e(t[a], i, r) : t[a] = i, t
-    }, i)
+    var s = t;
+    return (o(t) && !o(n) && (s = c(t, r)), o(t) && o(n)) ? (n.forEach(function(n, o) {
+      if (i.call(t, o)) {
+        var s = t[o];
+        s && "object" == typeof s && n && "object" == typeof n ? t[o] = e(s, n, r) : t.push(n)
+      } else t[o] = n
+    }), t) : Object.keys(n).reduce(function(t, o) {
+      var s = n[o];
+      return i.call(t, o) ? t[o] = e(t[o], s, r) : t[o] = s, t
+    }, s)
   }
 }

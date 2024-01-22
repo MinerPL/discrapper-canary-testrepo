@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return o
   },
   resetWelcomeScreen: function() {
-    return a
+    return u
   },
   clearWelcomeScreenSettings: function() {
-    return u
+    return a
   },
   updateSettings: function() {
     return c
@@ -49,11 +49,11 @@ let s = function(e) {
         type: "WELCOME_SCREEN_FETCH_FAIL"
       })
     }
-  }, a = () => {
+  }, u = () => {
     i.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_RESET"
     })
-  }, u = () => {
+  }, a = () => {
     i.default.dispatch({
       type: "WELCOME_SCREEN_SETTINGS_CLEAR"
     })

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return E
   }
 });
-var a = s("37983"),
-  l = s("884691"),
-  r = s("446674"),
-  i = s("77078"),
+var l = s("37983"),
+  a = s("884691"),
+  i = s("446674"),
+  r = s("77078"),
   o = s("463848"),
   n = s("373469"),
   u = s("824563"),
@@ -17,33 +17,33 @@ var a = s("37983"),
   S = s("260787"),
   m = s("568719");
 
-function x(e) {
+function E(e) {
   let {
     user: t
-  } = e, s = (0, r.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), x = (0, r.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), T = l.useMemo(() => x.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS), [x]), p = l.useMemo(() => s ? T.find(e => e.type === f.ActivityTypes.PLAYING) : null, [T, s]), v = l.useMemo(() => T.filter(e => e !== p), [p, T]), h = (0, c.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), A = null != h && !s, {
-    showVoiceActivityInProfile: E
+  } = e, s = (0, i.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), E = (0, i.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), T = a.useMemo(() => E.filter(e => e.type !== f.ActivityTypes.CUSTOM_STATUS), [E]), x = a.useMemo(() => s ? T.find(e => e.type === f.ActivityTypes.PLAYING) : null, [T, s]), N = a.useMemo(() => T.filter(e => e !== x), [x, T]), p = (0, c.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), h = null != p && !s, {
+    showVoiceActivityInProfile: v
   } = d.VoiceActivityProfileExperiment.useExperiment({
     location: "user profile modal"
   }, {
-    autoTrackExposure: A
+    autoTrackExposure: h
   });
-  return (0, a.jsxs)(i.ScrollerThin, {
+  return (0, l.jsxs)(r.ScrollerThin, {
     className: m.listScroller,
     fade: !0,
-    children: [E && A ? (0, a.jsx)("div", {
+    children: [v && h ? (0, l.jsx)("div", {
       className: S.voiceActivity,
-      children: (0, a.jsx)(c.default, {
-        ...h,
+      children: (0, l.jsx)(c.default, {
+        ...p,
         color: S.actionColor
       })
-    }) : null, s ? (0, a.jsx)(o.default, {
+    }) : null, s ? (0, l.jsx)(o.default, {
       type: o.UserActivityTypes.PROFILE_V2,
       user: t,
       source: "Profile Modal",
       className: S.userProfileActivity,
-      activity: p,
+      activity: x,
       actionColor: S.actionColor
-    }) : null, v.map(e => (0, a.jsx)(o.default, {
+    }) : null, N.map(e => (0, l.jsx)(o.default, {
       type: o.UserActivityTypes.PROFILE_V2,
       activity: e,
       user: t,

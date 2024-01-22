@@ -1,4 +1,4 @@
 "use strict";
-t.exports = function(t, e) {
-  return !!e && "object" == typeof e && "[[Enumerable]]" in e && "[[Configurable]]" in e && (t.IsAccessorDescriptor(e) || t.IsDataDescriptor(e))
+e.exports = function(e, t) {
+  return !!t && "object" == typeof t && "[[Enumerable]]" in t && "[[Configurable]]" in t && (e.IsAccessorDescriptor(t) || e.IsDataDescriptor(t))
 }

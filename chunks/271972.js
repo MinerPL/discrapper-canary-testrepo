@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return s
   },
   default: function() {
-    return M
+    return v
   }
 });
 var l, s, n = a("37983"),
@@ -19,46 +19,46 @@ var l, s, n = a("37983"),
   p = a("645406"),
   f = a("49111"),
   g = a("782340"),
-  v = a("864147");
+  E = a("864147");
 
-function x(e) {
+function M(e) {
   e.stopPropagation()
 }(l = s || (s = {}))[l.SMALL = 0] = "SMALL", l[l.MEDIUM = 1] = "MEDIUM";
-var M = i.forwardRef(function(e, t) {
+var v = i.forwardRef(function(e, t) {
   let {
     id: a,
     channelId: l,
     className: s,
     children: i,
     actions: r,
-    handleEditModal: M,
-    keyboardModeEnabled: E,
-    onKeyDown: j,
-    draftType: A,
-    size: L = 1
+    handleEditModal: v,
+    keyboardModeEnabled: x,
+    onKeyDown: T,
+    draftType: L,
+    size: j = 1
   } = e, {
-    onFocus: N,
-    ...S
+    onFocus: A,
+    ...I
   } = (0, d.useListItem)(a), {
-    handleFocus: T,
-    handleBlur: I
-  } = (0, p.useFocusInside)(N), C = 0 === L, b = null != r;
+    handleFocus: S,
+    handleBlur: N
+  } = (0, p.useFocusInside)(A), C = 0 === j, _ = null != r;
   return (0, n.jsx)(u.FocusRing, {
     children: (0, n.jsx)("li", {
-      ...S,
-      onFocus: T,
-      onBlur: I,
+      ...I,
+      onFocus: S,
+      onBlur: N,
       onKeyDown: e => {
-        if (E) {
+        if (x) {
           switch (e.which) {
             case f.KeyboardKeys.D:
-              e.preventDefault(), c.default.remove(l, a, A);
+              e.preventDefault(), c.default.remove(l, a, L);
               return;
             case f.KeyboardKeys.E:
-              null != M && (e.preventDefault(), M(e));
+              null != v && (e.preventDefault(), v(e));
               return;
             case f.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, A)) : (e.preventDefault(), c.default.remove(l, a, A));
+              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(l, L)) : (e.preventDefault(), c.default.remove(l, a, L));
               return;
             case f.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
@@ -67,24 +67,24 @@ var M = i.forwardRef(function(e, t) {
                 atEnd: !0
               })
           }
-          null == j || j(e)
+          null == T || T(e)
         }
       },
-      className: o(v.upload, s),
+      className: o(E.upload, s),
       ref: t,
       children: (0, n.jsxs)("div", {
-        className: v.uploadContainer,
-        children: [i, b ? (0, n.jsx)("div", {
-          className: v.actionBarContainer,
+        className: E.uploadContainer,
+        children: [i, _ ? (0, n.jsx)("div", {
+          className: E.actionBarContainer,
           children: (0, n.jsx)("div", {
-            className: o(v.actionBar, {
-              [v.smallActionBar]: C
+            className: o(E.actionBar, {
+              [E.smallActionBar]: C
             }),
-            onContextMenu: x,
+            onContextMenu: M,
             "aria-label": g.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, n.jsx)(m.default, {
               className: o({
-                [v.miniPopover]: C
+                [E.miniPopover]: C
               }),
               children: r
             })

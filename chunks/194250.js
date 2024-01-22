@@ -86,7 +86,7 @@ function C(e) {
     scheduledEndTime: j,
     scheduledStartTime: V,
     recurrenceRule: P
-  } = t, G = (0, d.useStageBlockedUsersCount)(M), H = null != t && (0, E.isGuildScheduledEventActive)(t), b = a.useMemo(() => {
+  } = t, G = (0, d.useStageBlockedUsersCount)(M), b = null != t && (0, E.isGuildScheduledEventActive)(t), H = a.useMemo(() => {
     let e = (0, _.getScheduleFromEventData)(t);
     return null != e ? e : {
       startDate: i(V)
@@ -124,7 +124,7 @@ function C(e) {
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)("div", {
       className: S.blockedUsersContainer,
-      children: null != M && !H && G > 0 && (0, l.jsx)(c.BlockedUsersNotice, {
+      children: null != M && !b && G > 0 && (0, l.jsx)(c.BlockedUsersNotice, {
         channelId: M
       })
     }), (0, l.jsxs)("div", {
@@ -164,18 +164,18 @@ function C(e) {
           null != t && null != j && (null == n ? void 0 : n.isBefore(t)) && (l.scheduledEndTime = t.add(1, "hour").toISOString()), null != t && null != B && (l.recurrenceRule = (0, _.recurrenceOptionToRecurrenceRule)(B, t)), A(l)
         },
         onRecurrenceChange: e => {
-          let t = b.startDate;
+          let t = H.startDate;
           if (null == t) return;
           let n = (0, _.recurrenceOptionToRecurrenceRule)(e, t);
           A({
             recurrenceRule: n
           }), F(e)
         },
-        schedule: b,
+        schedule: H,
         recurrenceRule: P,
         showEndDate: L === T.GuildScheduledEventEntityTypes.EXTERNAL,
         requireEndDate: L === T.GuildScheduledEventEntityTypes.EXTERNAL,
-        disableStartDateTime: H,
+        disableStartDateTime: b,
         guildId: C
       }), null != R ? (0, l.jsx)(r.Text, {
         color: "text-danger",

@@ -19,9 +19,9 @@ var s = n("37983"),
   _ = n("697218"),
   p = n("461380"),
   h = n("593195"),
-  N = n("368121"),
+  m = n("368121"),
   T = n("767517"),
-  m = n("5487"),
+  N = n("5487"),
   g = n("932180"),
   A = n("473759"),
   S = n("49111"),
@@ -33,7 +33,7 @@ function x(e) {
     [n, l] = a.useState(""),
     [i, r] = a.useState(null),
     [u, o] = a.useState(null),
-    d = (0, m.default)(e.code);
+    d = (0, N.default)(e.code);
   a.useEffect(() => {
     (async function e() {
       let e = _.default.getCurrentUser();
@@ -76,7 +76,7 @@ function x(e) {
       })]
     }),
     h = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name),
-    N = (0, s.jsxs)(s.Fragment, {
+    m = (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: v.divider
       }), (0, s.jsxs)(c.FormItem, {
@@ -105,7 +105,7 @@ function x(e) {
     });
   return {
     form: p,
-    preview: N,
+    preview: m,
     handleSubmit: () => T.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
   }
 }
@@ -118,7 +118,7 @@ function R(e) {
       let {
         type: t
       } = e;
-      return t === S.ChannelTypes.GUILD_VOICE ? N.default : t === S.ChannelTypes.GUILD_CATEGORY ? p.default : h.default
+      return t === S.ChannelTypes.GUILD_VOICE ? m.default : t === S.ChannelTypes.GUILD_CATEGORY ? p.default : h.default
     }(e);
     return (0, s.jsxs)("div", {
       className: i(v.channel, {

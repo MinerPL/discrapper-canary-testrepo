@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   n = s("884691"),
   l = s("55620"),
-  i = s("294135");
-class r extends n.Component {
+  r = s("294135");
+class i extends n.Component {
   componentDidMount() {
     this.fetchStoreListing()
   }
@@ -19,15 +19,15 @@ class r extends n.Component {
       slug: s,
       storeListingId: n,
       pageSize: l,
-      location: r
+      location: i
     } = this.props;
-    return (0, a.jsx)(i.default, {
+    return (0, a.jsx)(r.default, {
       inputSkuId: e,
       applicationId: t,
       fetchStoreListing: this.fetchStoreListing,
       slug: s,
       storeListingId: n,
-      location: r,
+      location: i,
       pageSize: l
     })
   }
@@ -44,4 +44,4 @@ class r extends n.Component {
     }
   }
 }
-var u = r
+var u = i

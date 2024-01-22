@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
-var r = n("308503"),
-  i = n("95410"),
-  l = n("605250"),
-  o = n("599110"),
-  u = n("149806"),
-  a = n("49111");
-let s = "UserFlowAnalyticsStore_current",
+var n = l("308503"),
+  r = l("95410"),
+  a = l("605250"),
+  s = l("599110"),
+  i = l("149806"),
+  o = l("49111");
+let u = "UserFlowAnalyticsStore_current",
   c = "UserFlowAnalyticsStore";
 
 function d(e) {
-  if (e === u.FlowType.UNKNOWN) return null;
-  let t = i.default.get("".concat(c, "-").concat(e));
+  if (e === i.FlowType.UNKNOWN) return null;
+  let t = r.default.get("".concat(c, "-").concat(e));
   if (null == t) return null;
   let {
-    version: n,
-    ...r
+    version: l,
+    ...n
   } = t;
-  return 1 !== n ? null : r
+  return 1 !== l ? null : n
 }
-new l.default("UserFlowAnalytics");
-let f = (0, r.default)((e, t) => ({
+new a.default("UserFlowAnalytics");
+let f = (0, n.default)((e, t) => ({
   flows: {},
   currentFlow: null,
   activeFlow: () => {
     var e;
-    let n = null !== (e = t().currentFlow) && void 0 !== e ? e : i.default.get(s);
-    if (null == n) return null;
+    let l = null !== (e = t().currentFlow) && void 0 !== e ? e : r.default.get(u);
+    if (null == l) return null;
     let {
-      [n]: r
-    } = t().flows, l = null != r ? r : d(n);
-    return (null == l ? void 0 : l.currentStep) != null ? n : null
+      [l]: n
+    } = t().flows, a = null != n ? n : d(l);
+    return (null == a ? void 0 : a.currentStep) != null ? l : null
   }
 }));
 
-function h(e, t) {
+function I(e, t) {
   let {
-    [e]: n, ...r
-  } = f.getState().flows, i = null != n ? n : d(e);
-  if ((null == i ? void 0 : i.currentStep) == null || i.currentStep !== t) f.setState({
+    [e]: l, ...n
+  } = f.getState().flows, r = null != l ? l : d(e);
+  if ((null == r ? void 0 : r.currentStep) == null || r.currentStep !== t) f.setState({
     flows: {
-      ...r,
+      ...n,
       [e]: {
         type: e,
         lastStep: null,
@@ -58,41 +58,41 @@ function h(e, t) {
   })
 }
 
-function p(e, t) {
-  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    r = e;
-  if (e === u.FlowType.ANY) {
-    var i;
-    r = null !== (i = f.getState().activeFlow()) && void 0 !== i ? i : u.FlowType.UNKNOWN
+function E(e, t) {
+  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    n = e;
+  if (e === i.FlowType.ANY) {
+    var r;
+    n = null !== (r = f.getState().activeFlow()) && void 0 !== r ? r : i.FlowType.UNKNOWN
   }
   let {
-    [r]: l, ...o
-  } = f.getState().flows, a = null != l ? l : d(r);
-  if (null != a && null != a.currentStep) a.currentStep !== t && f.setState({
+    [n]: a, ...s
+  } = f.getState().flows, o = null != a ? a : d(n);
+  if (null != o && null != o.currentStep) o.currentStep !== t && f.setState({
     flows: {
-      ...o,
-      [r]: {
-        ...a,
-        lastStep: a.currentStep,
-        lastTimestamp: a.currentTimestamp,
+      ...s,
+      [n]: {
+        ...o,
+        lastStep: o.currentStep,
+        lastTimestamp: o.currentTimestamp,
         currentStep: t,
         currentTimestamp: new Date,
-        ended: n
+        ended: l
       }
     },
-    currentFlow: r
+    currentFlow: n
   })
 }
 f.subscribe(e => {
   var t;
   if (null != e && (! function(e) {
-      if (e.type === u.FlowType.UNKNOWN) return;
+      if (e.type === i.FlowType.UNKNOWN) return;
       let t = "".concat(c, "-").concat(e.type);
-      e.ended ? (i.default.remove(t), i.default.remove(s)) : (i.default.set("".concat(c, "-").concat(e.type), {
+      e.ended ? (r.default.remove(t), r.default.remove(u)) : (r.default.set("".concat(c, "-").concat(e.type), {
         ...e,
         version: 1
-      }), i.default.set(s, e.type))
-    }(e), o.default.track(a.AnalyticEvents.NUO_TRANSITION, {
+      }), r.default.set(u, e.type))
+    }(e), s.default.track(o.AnalyticEvents.NUO_TRANSITION, {
       flow_type: e.type,
       from_step: e.lastStep,
       to_step: e.currentStep,
@@ -110,14 +110,14 @@ f.subscribe(e => {
   }
 }, e => null != e.currentFlow ? e.flows[e.currentFlow] : void 0);
 
-function I() {
+function _() {
   return null != f.getState().activeFlow()
 }
-var m = {
-  flowStart: h,
+var p = {
+  flowStart: I,
   flowStepOrStart: function(e, t) {
-    I() ? p(e, t) : h(e, t)
+    _() ? E(e, t) : I(e, t)
   },
-  flowStep: p,
-  hasActiveFlow: I
+  flowStep: E,
+  hasActiveFlow: _
 }

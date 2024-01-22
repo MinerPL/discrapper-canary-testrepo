@@ -1,51 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
-var r = n("37983"),
-  u = n("884691"),
+var l = n("37983"),
+  r = n("884691"),
   a = n("446674"),
-  l = n("77078"),
+  u = n("77078"),
   o = n("133457"),
-  i = n("784736"),
+  d = n("784736"),
   c = n("145131"),
   s = n("9074"),
-  d = n("782340"),
+  i = n("782340"),
   f = n("639420");
 
-function p(e) {
+function h(e) {
   var t;
   let {
     eulaId: n,
-    transitionState: p,
-    onClose: h
-  } = e, g = (0, a.useStateFromStores)([i.default], () => i.default.getEULA(n));
-  u.useEffect(() => {
+    transitionState: h,
+    onClose: p
+  } = e, m = (0, a.useStateFromStores)([d.default], () => d.default.getEULA(n));
+  r.useEffect(() => {
     (0, o.fetchEULA)(n)
   }, [n]);
-  let m = null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : d.default.Messages.LOADING,
-    v = null != g ? (0, r.jsx)(s.default, {
-      children: g.content,
+  let g = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : i.default.Messages.LOADING,
+    y = null != m ? (0, l.jsx)(s.default, {
+      children: m.content,
       className: f.markdown
-    }) : (0, r.jsx)(l.Spinner, {
+    }) : (0, l.jsx)(u.Spinner, {
       className: f.spinner
     });
-  return (0, r.jsxs)(l.ModalRoot, {
-    transitionState: p,
-    size: l.ModalSize.SMALL,
-    "aria-label": m,
-    children: [(0, r.jsxs)(l.ModalHeader, {
+  return (0, l.jsxs)(u.ModalRoot, {
+    transitionState: h,
+    size: u.ModalSize.SMALL,
+    "aria-label": g,
+    children: [(0, l.jsxs)(u.ModalHeader, {
       justify: c.default.Justify.BETWEEN,
-      children: [(0, r.jsx)(l.Heading, {
+      children: [(0, l.jsx)(u.Heading, {
         variant: "heading-lg/semibold",
-        children: m
-      }), (0, r.jsx)(l.ModalCloseButton, {
-        onClick: h
+        children: g
+      }), (0, l.jsx)(u.ModalCloseButton, {
+        onClick: p
       })]
-    }), (0, r.jsx)(l.ModalContent, {
-      children: v
+    }), (0, l.jsx)(u.ModalContent, {
+      children: y
     })]
   })
 }

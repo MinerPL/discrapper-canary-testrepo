@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var i, r = n("405665"),
-  s = n("414456"),
-  a = n.n(s),
+var i, s = n("405665"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("211009"),
   l = n("517614");
-let u = (0, o.createManagedReactiveScroller)(a(l.auto, l.disableScrollAnchor), null !== (i = window.ResizeObserver) && void 0 !== i ? i : r.ResizeObserver)
+let u = (0, o.createManagedReactiveScroller)(a(l.auto, l.disableScrollAnchor), null !== (i = window.ResizeObserver) && void 0 !== i ? i : s.ResizeObserver)

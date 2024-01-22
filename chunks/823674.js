@@ -32,8 +32,8 @@ var s = n("37983"),
   x = n("957255"),
   R = n("886074"),
   y = n("36562"),
-  D = n("662255"),
-  O = n("85175"),
+  O = n("662255"),
+  D = n("85175"),
   j = n("83900"),
   P = n("993477"),
   b = n("733160"),
@@ -183,7 +183,7 @@ function er(e) {
     } = (0, u.useStateFromStoresObject)([x.default], () => ({
       canAddNewReactions: N && x.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: x.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, N]), D = (0, A.useCanReplyToMessage)(t, n), O = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, N]), O = (0, A.useCanReplyToMessage)(t, n), D = (0, _.useCanStartPublicThread)(t, n), j = (0, _.useCanViewThreadForMessage)(n), P = (0, u.useStateFromStores)([C.default], () => null != t.guild_id && C.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([I.default], () => null != t.guild_id && I.default.isCurrentUserGuest(t.guild_id), [t]), H = o.id === f, F = (R || H) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && R);
     let U = (0, K.canReportMessage)(n),
       k = (0, q.default)(n, t, R),
@@ -221,8 +221,8 @@ function er(e) {
       canEdit: G,
       canDelete: F,
       canReport: U,
-      canReply: D,
-      canStartThread: O,
+      canReply: O,
+      canStartThread: D,
       canViewThread: j,
       canCopy: z.SUPPORTS_COPY,
       hasDeveloperMode: S,
@@ -258,7 +258,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.COPY_ID_MESSAGE,
-        icon: D.default,
+        icon: O.default,
         onClick: J.copyId
       }) : null, l && !ed ? ei({
         key: "copy-link",
@@ -272,7 +272,7 @@ function er(e) {
         channel: t,
         message: n,
         label: en.default.Messages.CONFIGURE,
-        icon: O.default,
+        icon: D.default,
         onClick: J.configureJoin
       }) : null, es ? ei({
         key: "mark-reminder",

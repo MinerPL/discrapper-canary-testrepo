@@ -1,74 +1,74 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return E
   }
 });
 var i = n("446674"),
-  r = n("913144"),
-  s = n("982527");
+  s = n("913144"),
+  r = n("982527");
 n("21121");
 var a = n("393414"),
   o = n("271938"),
   l = n("305961"),
   u = n("49111");
-let c = null,
-  d = null,
+let d = null,
+  c = null,
   f = {};
 
-function E() {
-  null != c && null == l.default.getGuild(c) && null == s.default.getRequest(c) && (c = null), null != d && null == l.default.getGuild(d) && null == s.default.getRequest(d) && (d = null), h(c)
+function _() {
+  null != d && null == l.default.getGuild(d) && null == r.default.getRequest(d) && (d = null), null != c && null == l.default.getGuild(c) && null == r.default.getRequest(c) && (c = null), h(d)
 }
 
 function h(e) {
   null != e && (f[e] = Date.now())
 }
 
-function p(e) {
+function g(e) {
   let t = !1;
-  return delete f[e], d === e && (d = null, t = !0), c === e && (Object.values(l.default.getGuilds()).find(t => t.id !== e), c = null, (0, a.replaceWith)(u.Routes.ME), t = !0), t
+  return delete f[e], c === e && (c = null, t = !0), d === e && (Object.values(l.default.getGuilds()).find(t => t.id !== e), d = null, (0, a.replaceWith)(u.Routes.ME), t = !0), t
 }
-class _ extends i.default.PersistedStore {
+class m extends i.default.PersistedStore {
   initialize(e) {
     var t, n, i;
-    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(l.default, o.default), f = null !== (t = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== t ? t : {}, c = null !== (n = null == e ? void 0 : e.selectedGuildId) && void 0 !== n ? n : null, d = null !== (i = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== i ? i : null
+    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type), this.waitFor(l.default, o.default), f = null !== (t = null == e ? void 0 : e.selectedGuildTimestampMillis) && void 0 !== t ? t : {}, d = null !== (n = null == e ? void 0 : e.selectedGuildId) && void 0 !== n ? n : null, c = null !== (i = null == e ? void 0 : e.lastSelectedGuildId) && void 0 !== i ? i : null
   }
   getState() {
     return {
       selectedGuildTimestampMillis: f,
-      selectedGuildId: c,
-      lastSelectedGuildId: d
+      selectedGuildId: d,
+      lastSelectedGuildId: c
     }
   }
   getGuildId() {
-    return c
-  }
-  getLastSelectedGuildId() {
     return d
   }
+  getLastSelectedGuildId() {
+    return c
+  }
   getLastSelectedTimestamp(e) {
-    return c === e ? -1 : f[e]
+    return d === e ? -1 : f[e]
   }
 }
-_.displayName = "SelectedGuildStore", _.persistKey = "SelectedGuildStore";
-var S = new _(r.default, {
-  CONNECTION_OPEN: E,
+m.displayName = "SelectedGuildStore", m.persistKey = "SelectedGuildStore";
+var E = new m(s.default, {
+  CONNECTION_OPEN: _,
   OVERLAY_INITIALIZE: function(e) {
-    c = e.selectedGuildId, d = void 0, E()
+    d = e.selectedGuildId, c = void 0, _()
   },
   CHANNEL_SELECT: function(e) {
     let {
       guildId: t
     } = e;
-    if (c === t) return !1;
-    h(c), h(t), null != t && (d = t), c = t
+    if (d === t) return !1;
+    h(d), h(t), null != t && (c = t), d = t
   },
   GUILD_MEMBER_REMOVE: function(e) {
     let {
       guildId: t,
       user: n
     } = e;
-    return n.id === o.default.getId() && p(t)
+    return n.id === o.default.getId() && g(t)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -77,9 +77,9 @@ var S = new _(r.default, {
         unavailable: n
       }
     } = e;
-    return !0 !== n && p(t)
+    return !0 !== n && g(t)
   },
   LOGOUT: function() {
-    c = null, d = null
+    d = null, c = null
   }
 })

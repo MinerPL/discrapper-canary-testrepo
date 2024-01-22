@@ -38,8 +38,8 @@ var s = n("37983"),
   x = n("865343"),
   R = n("380986"),
   y = n("85470"),
-  D = n("969706"),
-  O = n("39331"),
+  O = n("969706"),
+  D = n("39331"),
   j = n("68480"),
   P = n("115859"),
   b = n("922177"),
@@ -75,7 +75,7 @@ function K(e) {
   } = (0, u.useListItem)(null !== (t = e.id) && void 0 !== t ? t : ""), h = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(l)), {
     popouts: C,
     setPopout: p
-  } = (0, D.default)(a.id, B.DEFAULT_POPOUTS), m = (0, v.default)(a), g = (0, x.getMessageAriaLabelledBy)(a), S = (0, x.getMessageAriaDescribedBy)(a);
+  } = (0, O.default)(a.id, B.DEFAULT_POPOUTS), m = (0, v.default)(a), g = (0, x.getMessageAriaLabelledBy)(a), S = (0, x.getMessageAriaDescribedBy)(a);
   return a.type === V.MessageTypes.THREAD_STARTER_MESSAGE && null != h && h.state === E.ReferencedMessageState.LOADED ? (0, s.jsx)(Y, {
     ...e,
     message: h.message,
@@ -131,14 +131,14 @@ function Y(e) {
     popouts: X,
     selected: J,
     setPopout: Q
-  } = (0, D.default)(m.id, B.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(H)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = m.editedTimestamp) && void 0 !== l ? l : m.timestamp).valueOf()), es = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = m.editedTimestamp) && void 0 !== o ? o : m.timestamp).valueOf()), {
+  } = (0, O.default)(m.id, B.DEFAULT_POPOUTS), $ = S.InlineEmbedMedia.useSetting(), ee = S.RenderEmbeds.useSetting(), et = (0, d.useStateFromStores)([E.default], () => E.default.getMessageByReference(H)), en = (0, h.useShowImprovedMarkdownUserExperimentConfig)((null !== (l = m.editedTimestamp) && void 0 !== l ? l : m.timestamp).valueOf()), es = (0, h.useShowImprovedMarkdownGuildExperimentConfig)(null !== (r = null === (t = e.channel) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : "", (null !== (o = m.editedTimestamp) && void 0 !== o ? o : m.timestamp).valueOf()), {
     handleMouseEnter: ea,
     handleMouseLeave: el,
     isHovered: ei
   } = (0, R.useHoveredMessage)(b, m.author.id, J), er = (0, d.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), eo = J || er && K, eu = eo || ei, {
     content: ed,
     hasSpoilerEmbeds: ec
-  } = (0, O.default)(m, {
+  } = (0, D.default)(m, {
     hideSimpleEmbedContent: $ && ee,
     isInteracting: eu,
     formatInline: !1,
@@ -234,7 +234,7 @@ var q = a.memo(function(e) {
       popouts: ei,
       selected: er,
       setPopout: eo
-    } = (0, D.default)(N.id, B.DEFAULT_POPOUTS),
+    } = (0, O.default)(N.id, B.DEFAULT_POPOUTS),
     eu = (0, R.useContextMenuMessage)(N, K, eo),
     ed = (0, R.useClickMessage)(N, K),
     {
@@ -260,7 +260,7 @@ var q = a.memo(function(e) {
     {
       content: eL,
       hasSpoilerEmbeds: ex
-    } = (0, O.default)(N, {
+    } = (0, D.default)(N, {
       hideSimpleEmbedContent: es && ea,
       isInteracting: eT,
       formatInline: !1,
@@ -271,8 +271,8 @@ var q = a.memo(function(e) {
     }),
     eR = (0, y.default)(z, Y, eA),
     ey = (0, v.default)(N),
-    eD = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
-    eO = function(e) {
+    eO = (0, d.useStateFromStores)([m.default], () => m.default.getPendingReply(Y)),
+    eD = function(e) {
       let t = a.useRef(e);
       return a.useEffect(() => void(t.current = null != e ? e : t.current)), null != e ? e : t.current
     }(J),
@@ -320,7 +320,7 @@ var q = a.memo(function(e) {
             [Z.systemMessage]: (0, I.default)(N),
             [Z.groupStart]: !$ && (ek || N.type === V.MessageTypes.REPLY),
             [Z.selected]: e_,
-            [Z.replying]: (null == eD ? void 0 : eD.message.id) === N.id,
+            [Z.replying]: (null == eO ? void 0 : eO.message.id) === N.id,
             [Z.interactionSending]: N.isCommandType() && N.state === V.MessageStates.SENDING,
             [Z.automodMessage]: eU
           }),
@@ -360,8 +360,8 @@ var q = a.memo(function(e) {
         })
       })
     });
-  return null != eO ? (0, s.jsx)(L.default, {
-    flashKey: eO,
+  return null != eD ? (0, s.jsx)(L.default, {
+    flashKey: eD,
     className: i({
       [Z.backgroundFlash]: !0,
       [Z.groupStart]: !q && N.id === Q

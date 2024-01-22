@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   shortenAndLocalizeNumber: function() {
-    return r
+    return s
   },
   humanizeValue: function() {
-    return s
+    return r
   },
   parseInteger: function() {
     return a
@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 });
 var i = n("782340");
 
-function r(e) {
+function s(e) {
   if (e < 1e6) return i.default.Messages.NUMBER_ABBREVIATION_FULL.format({
     value: e
   });
@@ -22,7 +22,7 @@ function r(e) {
   })
 }
 
-function s(e, t) {
+function r(e, t) {
   if (e < 1e3) return i.default.Messages.NUMBER_ABBREVIATION_FULL.format({
     value: Math.floor(e)
   });

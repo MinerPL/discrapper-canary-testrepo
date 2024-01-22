@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
 });
-var s = n("446674"),
-  o = n("913144");
-let l = !1,
+var i = n("446674"),
+  s = n("913144");
+let r = !1,
   a = !1,
-  i = {},
-  r = null;
-class d extends s.default.Store {
+  o = {},
+  l = null;
+class u extends i.default.Store {
   hasConsented(e) {
-    return null != i[e] && i[e].consented
+    return null != o[e] && o[e].consented
   }
   get fetchedConsents() {
-    return l
+    return r
   }
   get receivedConsentsInConnectionOpen() {
     return a
   }
   getAuthenticationConsentRequired() {
-    return r
+    return l
   }
 }
-d.displayName = "ConsentStore";
-var u = new d(o.default, {
+u.displayName = "ConsentStore";
+var d = new u(s.default, {
   CONNECTION_OPEN: function(e) {
     let {
       consents: t
     } = e;
-    null != t && (i = {
-      ...i,
+    null != t && (o = {
+      ...o,
       ...t
     }, a = !0)
   },
@@ -39,14 +39,14 @@ var u = new d(o.default, {
     let {
       consents: t
     } = e;
-    i = {
+    o = {
       ...t
-    }, l = !0
+    }, r = !0
   },
   SET_CONSENT_REQUIRED: function(e) {
-    r = e.consentRequired
+    l = e.consentRequired
   },
   LOGOUT: function() {
-    r = null
+    l = null
   }
 })

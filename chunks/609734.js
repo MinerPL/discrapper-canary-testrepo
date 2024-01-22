@@ -17,8 +17,8 @@ var a = l("414456"),
   f = l("18494"),
   m = l("191814"),
   p = l("758710"),
-  E = l("351825"),
-  T = l("306160"),
+  T = l("351825"),
+  E = l("306160"),
   _ = l("253981"),
   S = l("613676"),
   h = l("49111"),
@@ -42,7 +42,7 @@ function g(e) {
     color: i.Button.Colors.PRIMARY,
     look: i.Button.Looks.FILLED,
     size: i.Button.Sizes.SMALL,
-    onContextMenu: T.SUPPORTS_COPY ? e => {
+    onContextMenu: E.SUPPORTS_COPY ? e => {
       var t, a;
       let s = (0, o.getApplicationInstallURL)({
         id: l.id,
@@ -59,7 +59,7 @@ function g(e) {
           children: (0, n.jsx)(i.MenuItem, {
             id: "copy",
             label: I.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS_COPY,
-            action: () => (0, T.copy)(s)
+            action: () => (0, E.copy)(s)
           })
         })
       }))
@@ -79,7 +79,7 @@ function g(e) {
     className: s(A.applicationInstallButton, a),
     children: (0, n.jsxs)("div", {
       className: A.applicationInstallButtonContent,
-      children: [(0, n.jsx)(E.default, {
+      children: [(0, n.jsx)(T.default, {
         width: 16,
         height: 16
       }), (0, n.jsx)(m.default, {

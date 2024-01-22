@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   setPromoEmailConsentState: function() {
-    return l
+    return r
   },
   setPromoEmailConsentChecked: function() {
     return a
   },
   usePromoEmailConsentStore: function() {
-    return i
+    return o
   }
 });
-var s = n("308503");
-let o = (0, s.default)(() => ({
+var i = n("308503");
+let s = (0, i.default)(() => ({
     required: !1,
     checked: !1,
     preChecked: !1
   })),
-  l = e => {
-    o.setState(e)
+  r = e => {
+    s.setState(e)
   },
   a = e => {
-    o.setState({
+    s.setState({
       checked: e
     })
   },
-  i = o
+  o = s

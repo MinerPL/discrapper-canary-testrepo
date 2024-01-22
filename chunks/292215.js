@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var r = n("357957"),
-  l = n("85336"),
-  i = n("262683"),
+  i = n("85336"),
+  l = n("262683"),
   a = n("946359"),
   u = n("724269"),
   o = n("7127"),
@@ -33,15 +33,15 @@ let f = {
     })
   },
   p = {
-    key: l.Step.ADD_PAYMENT_STEPS,
+    key: i.Step.ADD_PAYMENT_STEPS,
     renderStep: e => (0, s.jsx)(s.Fragment, {
-      children: (0, s.jsx)(i.PaymentModalAddPaymentStep, {
+      children: (0, s.jsx)(l.PaymentModalAddPaymentStep, {
         ...e,
-        breadcrumbSteps: [l.Step.ADD_PAYMENT_STEPS, l.Step.REVIEW, l.Step.CONFIRM],
+        breadcrumbSteps: [i.Step.ADD_PAYMENT_STEPS, i.Step.REVIEW, i.Step.CONFIRM],
         onReturn: () => {
           let t = r.default.paymentSources;
-          0 === Object.keys(t).length ? e.handleClose() : e.handleStepChange(l.Step.REVIEW, {
-            trackedFromStep: l.Step.ADD_PAYMENT_STEPS
+          0 === Object.keys(t).length ? e.handleClose() : e.handleStepChange(i.Step.REVIEW, {
+            trackedFromStep: i.Step.ADD_PAYMENT_STEPS
           })
         }
       })
@@ -51,21 +51,21 @@ let f = {
     }
   },
   E = {
-    key: l.Step.AWAITING_PURCHASE_TOKEN_AUTH,
+    key: i.Step.AWAITING_PURCHASE_TOKEN_AUTH,
     renderStep: () => (0, s.jsx)(u.default, {})
   },
   S = {
-    key: l.Step.AWAITING_AUTHENTICATION,
+    key: i.Step.AWAITING_AUTHENTICATION,
     renderStep: () => (0, s.jsx)(a.default, {})
   },
   h = {
-    key: l.Step.REVIEW,
+    key: i.Step.REVIEW,
     renderStep: e => (0, s.jsx)(d.PaymentModalReviewStep, {
       ...e
     })
   },
   m = {
-    key: l.Step.CONFIRM,
+    key: i.Step.CONFIRM,
     renderStep: e => (0, s.jsx)(o.PaymentModalConfirmStep, {
       ...e
     })

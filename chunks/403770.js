@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   SecureFramesUserExperiment: function() {
-    return r
+    return s
   },
   SecureFramesGuildExperiment: function() {
-    return s
+    return r
   }
 });
 var i = n("862205");
-let r = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
     kind: "user",
     id: "2023-08_secure_frames_encryption",
     label: "Allowing testing secure frames for voice/video",
@@ -32,7 +32,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  r = (0, i.createExperiment)({
     kind: "guild",
     id: "2023-11_secure_frames_encryption_guilds",
     label: "Allowing testing secure frames for voice/video (Guilds)",

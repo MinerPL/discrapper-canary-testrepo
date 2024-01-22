@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return C
+    return m
   }
 });
 var l = a("37983");
@@ -9,53 +9,53 @@ a("884691");
 var s = a("414456"),
   r = a.n(s),
   n = a("77078"),
-  o = a("782340"),
-  i = a("60109"),
-  u = a("200406"),
-  c = a("283045"),
+  i = a("782340"),
+  o = a("60109"),
+  c = a("200406"),
+  u = a("283045"),
   d = a("718297"),
   f = a("929880"),
-  C = function(e) {
+  m = function(e) {
     let {
       isFullScreen: t
     } = e;
     return (0, l.jsxs)("div", {
-      className: r(i.heroBanner, t ? i.heroBannerFullScreen : i.heroBannerWithSidebar),
+      className: r(o.heroBanner, t ? o.heroBannerFullScreen : o.heroBannerWithSidebar),
       children: [(0, l.jsxs)("div", {
-        className: i.heroDescription,
+        className: o.heroDescription,
         children: [(0, l.jsx)(n.Heading, {
-          className: i.bannerTitle,
+          className: o.bannerTitle,
           color: "always-white",
           variant: "display-lg",
-          children: o.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
+          children: i.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
         }), (0, l.jsx)(n.Text, {
-          className: i.heroSubtitle,
+          className: o.heroSubtitle,
           color: "always-white",
           variant: "text-lg/normal",
-          children: o.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE_ALT
+          children: i.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE_ALT
         })]
       }), (0, l.jsxs)("div", {
-        className: i.bannerArt,
+        className: o.bannerArt,
         children: [(0, l.jsx)("img", {
-          className: i.bannerGrid,
+          className: o.bannerGrid,
           alt: "",
-          src: u,
+          src: c,
           width: "484",
           height: "402"
         }), (0, l.jsx)("img", {
-          className: i.bannerGridSmol,
+          className: o.bannerGridSmol,
           alt: "",
           src: d,
           width: "85",
           height: "60"
         }), (0, l.jsx)("img", {
-          className: i.bannerGridMedium,
+          className: o.bannerGridMedium,
           alt: "",
-          src: c,
+          src: u,
           width: "178",
           height: "106"
         }), (0, l.jsx)("img", {
-          className: i.bannerHand,
+          className: o.bannerHand,
           alt: "",
           src: f,
           width: "265",

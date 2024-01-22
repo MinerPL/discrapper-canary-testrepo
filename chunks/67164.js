@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return p
   }
 }), n("808653"), n("70102");
 var a = n("884691"),
@@ -12,13 +12,13 @@ function i(e, t) {
     return e.__proto__ = t, e
   })(e, t)
 }
-var s = function(e) {
+var c = function(e) {
     var t = document.createElement("script");
     t.async = !0, t.defer = !0, t.src = e, document.head && document.head.appendChild(t)
   },
-  c = /(http|https):\/\/(www)?.+\/recaptcha/,
-  o = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
-  d = function(e) {
+  o = /(http|https):\/\/(www)?.+\/recaptcha/,
+  s = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
+  p = function(e) {
     function t() {
       for (var t, n = arguments.length, a = Array(n), i = 0; i < n; i++) a[i] = arguments[i];
       return (t = e.call.apply(e, [this].concat(a)) || this).container = void 0, t.timer = void 0, t.state = {
@@ -31,9 +31,9 @@ var s = function(e) {
         return !!(null == (e = window.grecaptcha) ? void 0 : e.ready)
       }, t._inject = function() {
         var e;
-        t.props.inject && (e = c, !Array.from(document.scripts).reduce(function(t, n) {
+        t.props.inject && (e = o, !Array.from(document.scripts).reduce(function(t, n) {
           return t || e.test(n.src)
-        }, !1)) && s("https://recaptcha.net/recaptcha/api.js?render=explicit" + (t.props.hl ? "&hl=" + t.props.hl : ""))
+        }, !1)) && c("https://recaptcha.net/recaptcha/api.js?render=explicit" + (t.props.hl ? "&hl=" + t.props.hl : ""))
       }, t._prepare = function() {
         var e = t.props,
           n = e.explicit,
@@ -129,7 +129,7 @@ var s = function(e) {
       } : null
     }, t.prototype.componentDidUpdate = function(e) {
       var t = this;
-      o.reduce(function(n, a) {
+      s.reduce(function(n, a) {
         return t.props[a] !== e[a] ? [].concat(n, [a]) : n
       }, []).length > 0 && this.setState({
         instanceKey: Date.now(),
@@ -139,7 +139,7 @@ var s = function(e) {
       })
     }, t
   }(a.Component);
-d.defaultProps = {
+p.defaultProps = {
   id: "",
   className: "g-recaptcha",
   theme: "light",

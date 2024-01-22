@@ -42,12 +42,12 @@ function g(e) {
       rawName: t
     } = e;
     return "channel_id" === t
-  })) || void 0 === g ? void 0 : g.rawValue, j = (0, i.useStateFromStores)([T.default], () => T.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), G = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == G ? void 0 : G.id)), F = null === (R = x.recipients) || void 0 === R ? void 0 : R.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([I.default], () => null != F ? I.default.getUser(F) : null), w = (0, c.default)(D), H = (0, S.useName)(x.getGuildId(), x.id, k), V = (0, i.useStateFromStoresArray)([m.default], () => null != b ? m.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), K = null === (P = D.embeds[0]) || void 0 === P ? void 0 : null === (v = P.fields) || void 0 === v ? void 0 : null === (L = v.find(e => {
+  })) || void 0 === g ? void 0 : g.rawValue, j = (0, i.useStateFromStores)([T.default], () => T.default.getGuild(y)), b = (0, i.useStateFromStores)([_.default], () => _.default.getChannel(U)), G = (0, i.useStateFromStores)([I.default], () => I.default.getCurrentUser()), B = (0, i.useStateFromStores)([], () => D.author.id === (null == G ? void 0 : G.id)), F = null === (R = x.recipients) || void 0 === R ? void 0 : R.find(e => e !== D.author.id), k = (0, i.useStateFromStores)([I.default], () => null != F ? I.default.getUser(F) : null), w = (0, c.default)(D), H = (0, S.useName)(x.getGuildId(), x.id, k), V = (0, i.useStateFromStoresArray)([m.default], () => null != b ? m.default.getVoiceStatesForChannel(b) : [], [b]), Y = V.some(e => e.user.id === (null == G ? void 0 : G.id)), W = null === (P = D.embeds[0]) || void 0 === P ? void 0 : null === (v = P.fields) || void 0 === v ? void 0 : null === (L = v.find(e => {
     let {
       rawName: t
     } = e;
     return "voice_user_ids" === t
-  })) || void 0 === L ? void 0 : L.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([I.default], () => W.map(e => I.default.getUser(e)).filter(Boolean)), Z = B && null != k ? C.default.Messages.WAVED_AT_USER.format({
+  })) || void 0 === L ? void 0 : L.rawValue, K = null != W ? W.split(",") : [], z = (0, i.useStateFromStoresArray)([I.default], () => K.map(e => I.default.getUser(e)).filter(Boolean)), Z = B && null != k ? C.default.Messages.WAVED_AT_USER.format({
     username: H
   }) : C.default.Messages.WAVED_AT_YOU.format({
     username: w.nick
@@ -91,8 +91,8 @@ function g(e) {
           guildId: y,
           partySize: {
             knownSize: z.length,
-            unknownSize: W.length - z.length,
-            totalSize: W.length
+            unknownSize: K.length - z.length,
+            totalSize: K.length
           },
           members: z,
           maxAvatarsShown: 5

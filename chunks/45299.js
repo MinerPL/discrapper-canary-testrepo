@@ -25,8 +25,8 @@ var a = A("37983"),
       onResetText: T,
       onSaveButtonColor: m,
       disabled: p,
-      saveButtonTooltip: U
-    } = e, I = l.useRef(null), [{
+      saveButtonTooltip: I
+    } = e, U = l.useRef(null), [{
       spring: v
     }, E] = (0, n.useSpring)(() => ({
       spring: 0
@@ -62,9 +62,9 @@ var a = A("37983"),
       },
       children: (0, a.jsx)("div", {
         className: d.flexContainer,
-        ref: I,
+        ref: U,
         children: (0, a.jsxs)(s.FocusRingScope, {
-          containerRef: I,
+          containerRef: U,
           children: [(0, a.jsx)("div", {
             className: d.shrinkingContainer,
             children: (0, a.jsx)(n.animated.div, {
@@ -89,7 +89,7 @@ var a = A("37983"),
                 children: null != T ? T : u.default.Messages.RESET
               })
             }), null != g ? (0, a.jsx)(s.Tooltip, {
-              text: U,
+              text: I,
               children: e => (0, a.jsx)(s.Button, {
                 size: s.Button.Sizes.SMALL,
                 color: null != m ? m : s.Button.Colors.GREEN,

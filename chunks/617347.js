@@ -134,8 +134,8 @@ function P(e) {
     speakers: j,
     speakerCount: P,
     rsvped: G,
-    canInvite: H,
-    location: b,
+    canInvite: b,
+    location: H,
     truncate: B,
     onContextMenu: F,
     onJoinClick: w,
@@ -206,7 +206,7 @@ function P(e) {
           channel: a,
           onJoinClick: w,
           handleLocationClick: en ? e => e.stopPropagation() : void 0,
-          location: b,
+          location: H,
           isExternal: en,
           isHub: y
         }), y ? (0, s.jsx)(O.default, {
@@ -218,7 +218,7 @@ function P(e) {
           onJoinGuildClick: k,
           onGoToGuildClick: Y,
           guildName: null == l ? void 0 : l.name,
-          canInvite: H,
+          canInvite: b,
           isChannelPublic: et,
           onInviteClick: K
         }) : (0, s.jsx)(p.default, {
@@ -227,7 +227,7 @@ function P(e) {
           isActive: T,
           isUserLurking: N,
           rsvped: G,
-          canInvite: H,
+          canInvite: b,
           isChannelPublic: et,
           onContextMenu: F,
           onJoinClick: w,

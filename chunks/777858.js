@@ -22,16 +22,16 @@ function p(e) {
   let {
     location: t
   } = e, [p, h] = a.useState(!1), {
-    verifySuccess: N,
+    verifySuccess: m,
     verifyErrors: T,
-    redirectGuildId: m
+    redirectGuildId: N
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
     let e = (0, r.default)(t);
     i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
   let g = () => {
-    (0, f.default)(m), h(!0)
+    (0, f.default)(N), h(!0)
   };
   return p ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
@@ -42,10 +42,10 @@ function p(e) {
       children: I.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
       className: _.spacedButton,
-      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(m)),
+      onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(N)),
       children: I.default.Messages.CONTINUE_TO_WEBAPP
     })]
-  }) : N ? (0, s.jsxs)(d.default, {
+  }) : m ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
       className: _.image,
       src: n("176872")

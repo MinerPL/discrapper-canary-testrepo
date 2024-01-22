@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return n
   },
   closeCollectiblesShopProductDetailsModal: function() {
-    return o
+    return i
   }
 });
 var l = a("37983");
@@ -15,9 +15,9 @@ let r = "collectibles shop product details modal",
     let {
       product: t,
       category: n,
-      analyticsSource: o,
-      analyticsLocations: i,
-      returnRef: u
+      analyticsSource: i,
+      analyticsLocations: o,
+      returnRef: c
     } = e;
     (0, s.openModalLazy)(async () => {
       let {
@@ -27,14 +27,14 @@ let r = "collectibles shop product details modal",
         ...a,
         product: t,
         category: n,
-        analyticsSource: o,
-        analyticsLocations: i,
-        returnRef: u
+        analyticsSource: i,
+        analyticsLocations: o,
+        returnRef: c
       })
     }, {
       modalKey: r
     })
   },
-  o = () => {
+  i = () => {
     (0, s.closeModal)(r)
   }

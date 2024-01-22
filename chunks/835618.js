@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("414456"),
   l = s.n(n),
-  i = s("77078"),
-  r = s("812204"),
+  r = s("77078"),
+  i = s("812204"),
   u = s("685665"),
   o = s("53253"),
   d = s("635956"),
@@ -17,40 +17,40 @@ var n = s("414456"),
   _ = s("903610"),
   E = s("35257"),
   I = s("871938"),
-  T = e => {
+  f = e => {
     let {
       className: t
     } = e, {
       AnalyticsLocationProvider: s
-    } = (0, u.default)(r.default.PREMIUM_MARKETING_GIFT_SECTION), n = (0, o.useIsSeasonalGiftingActive)(), {
-      enabled: T
+    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), n = (0, o.useIsSeasonalGiftingActive)(), {
+      enabled: f
     } = o.SeasonalGiftingMarketingExperiment.useExperiment({
       location: "GiftNitro"
     }, {
       autoTrackExposure: n
-    }), f = T && n;
+    }), T = f && n;
     return (0, a.jsx)(s, {
       children: (0, a.jsx)("div", {
         className: l(_.container, t),
         style: {
-          backgroundImage: "url(".concat(f ? I : E, ")")
+          backgroundImage: "url(".concat(T ? I : E, ")")
         },
         children: (0, a.jsxs)("div", {
           className: _.textContainer,
-          children: [(0, a.jsx)(i.Heading, {
+          children: [(0, a.jsx)(r.Heading, {
             variant: "heading-lg/extrabold",
             className: _.heading,
-            children: f ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
-          }), (0, a.jsx)(i.Text, {
+            children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
+          }), (0, a.jsx)(r.Text, {
             variant: "text-sm/medium",
-            children: f ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+            children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
           }), (0, a.jsx)(d.default, {
             isGift: !0,
             className: _.giftCardButton,
-            look: i.Button.Looks.OUTLINED,
+            look: r.Button.Looks.OUTLINED,
             buttonText: c.default.Messages.GIFT_NITRO,
             buttonTextClassName: _.giftButtonCTA,
-            color: i.Button.Colors.CUSTOM
+            color: r.Button.Colors.CUSTOM
           })]
         })
       })

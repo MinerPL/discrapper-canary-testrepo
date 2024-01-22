@@ -145,8 +145,8 @@ function M(e, t, n) {
     reactions: H,
     selectedAnswerIds: V,
     submitting: Y,
-    tapShouldOpenVotersModal: K
-  } = D, W = H.reduce((e, t) => {
+    tapShouldOpenVotersModal: W
+  } = D, K = H.reduce((e, t) => {
     var n, s;
     return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
   }, 0), z = Math.max(...v.map(e => {
@@ -207,7 +207,7 @@ function M(e, t, n) {
       didSelfVote: T,
       style: I,
       shouldAnimateTransition: Y,
-      votesPercentage: Math.round(100 * (0 === W ? 0 : f / W)),
+      votesPercentage: Math.round(100 * (0 === K ? 0 : f / K)),
       votes: (0, s.match)(P).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(f), ")")).otherwise(() => p.default.Messages.POLL_VOTES_COUNT.format({
         count: String(f)
       }))
@@ -269,7 +269,7 @@ function M(e, t, n) {
     question: M.question,
     answers: Z,
     answersInteraction: (0, s.match)({
-      tapShouldOpenVotersModal: K,
+      tapShouldOpenVotersModal: W,
       canTapAnswers: x,
       canSelectMultipleAnswers: q
     }).with({
@@ -282,7 +282,7 @@ function M(e, t, n) {
       canSelectMultipleAnswers: !0
     }, () => _.PollChatAnswerInteractionType.CHECKBOXES).exhaustive(),
     answerTapAccessibilityLabel: (0, s.match)({
-      tapShouldOpenVotersModal: K,
+      tapShouldOpenVotersModal: W,
       platform: (0, f.getNativePlatform)()
     }).with({
       tapShouldOpenVotersModal: !0,

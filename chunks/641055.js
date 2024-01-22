@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("10641"),
   m = l("874419"),
   p = l("430312"),
-  E = l("590456"),
-  T = l("393036");
+  T = l("590456"),
+  E = l("393036");
 let _ = () => {
   let e = (0, f.useIsDismissibleContentDismissed)(i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
     t = (0, s.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
@@ -33,7 +33,7 @@ var S = e => {
     onTooltipClose: t
   } = e, {
     profileType: l
-  } = a.useContext(p.UserProfileContext), s = l === E.UserProfileTypes.POPOUT, i = _(), [r, u] = a.useState(!s && i);
+  } = a.useContext(p.UserProfileContext), s = l === T.UserProfileTypes.POPOUT, i = _(), [r, u] = a.useState(!s && i);
   return (0, d.default)(() => u(i), s ? 300 : null), (0, n.jsx)(o.Popout, {
     shouldShow: r,
     position: "left",
@@ -53,7 +53,7 @@ var S = e => {
       })
     },
     children: () => (0, n.jsx)("span", {
-      className: T.hidden
+      className: E.hidden
     })
   })
 }

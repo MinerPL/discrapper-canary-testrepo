@@ -17,8 +17,8 @@ i.r(t), i.d(t, {
   }
 }), i("808653"), i("424973"), i("222007");
 var r, n, s = i("525065"),
-  a = i("26989"),
-  u = i("490931");
+  u = i("26989"),
+  a = i("490931");
 let l = [12, 25, 50, 100],
   h = 7;
 
@@ -60,14 +60,14 @@ class m {
   calculateNewContinuationToken(e) {
     var t, i, r;
     let n = null !== (t = s.default.getMemberCount(this.guildId)) && void 0 !== t ? t : this._sortedMemberIds.length,
-      a = this._sortedMemberIds.length - 1,
-      u = this._sortedMemberIds[a],
-      l = Math.min(o(this._paginationState), a);
+      u = this._sortedMemberIds.length - 1,
+      a = this._sortedMemberIds[u],
+      l = Math.min(o(this._paginationState), u);
     let h = null != (r = e).totalResultsCount ? r.totalResultsCount : r.currentPage * r.pageSize,
-      d = null !== (i = this._sortedMemberIds[h - 1]) && void 0 !== i ? i : u;
+      d = null !== (i = this._sortedMemberIds[h - 1]) && void 0 !== i ? i : a;
     if (null == this._paginationState.continuationToken) return h < l ? this._paginationState.continuationToken : d;
     let m = this._sortedMemberIds.findIndex(e => e === this._paginationState.continuationToken);
-    return -1 === m ? d : h > n ? u : m - h >= 0 ? this._paginationState.continuationToken : Math.ceil(h / l) > Math.ceil(m / l) ? d : this._paginationState.continuationToken
+    return -1 === m ? d : h > n ? a : m - h >= 0 ? this._paginationState.continuationToken : Math.ceil(h / l) > Math.ceil(m / l) ? d : this._paginationState.continuationToken
   }
   getPaginationState() {
     return this._paginationState
@@ -109,10 +109,10 @@ class m {
       i = e;
     i < this._sortedMemberIds.length && (i = this._sortedMemberIds.length - 1), i < 0 && (i = 0);
     let r = this._sortedMemberIds[e],
-      n = a.default.getMember(this.guildId, r);
+      n = u.default.getMember(this.guildId, r);
     for (; null == n && !((e += t) < 0) && !(e >= this._sortedMemberIds.length);) {
       ;
-      r = this._sortedMemberIds[e], (null == (n = a.default.getMember(this.guildId, r)) ? void 0 : n.joinedAt) == null && (n = null)
+      r = this._sortedMemberIds[e], (null == (n = u.default.getMember(this.guildId, r)) ? void 0 : n.joinedAt) == null && (n = null)
     }
     return n
   }
@@ -123,8 +123,8 @@ class m {
     } = this._paginationState, i = o(this._paginationState), r = Math.min((Math.floor(e * t / i) + 1) * (i - 1), this._sortedMemberIds.length - 1), n = this._findMember(r, -1), s = this._findMember(Math.max(r - i, 0), 1);
     return {
       limit: i,
-      after: (0, u.createMemberSearchCursor)(n),
-      before: (0, u.createMemberSearchCursor)(s)
+      after: (0, a.createMemberSearchCursor)(n),
+      before: (0, a.createMemberSearchCursor)(s)
     }
   }
   get paginatedMembers() {

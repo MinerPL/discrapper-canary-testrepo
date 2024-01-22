@@ -8,16 +8,16 @@ var a = s("37983");
 s("884691");
 var n = s("414456"),
   l = s.n(n),
-  i = s("956089"),
-  r = s("782340"),
+  r = s("956089"),
+  i = s("782340"),
   u = s("171684");
 
 function o(e) {
   let {
     className: t
   } = e;
-  return (0, a.jsx)(i.TextBadge, {
+  return (0, a.jsx)(r.TextBadge, {
     className: l(u.tag, t),
-    text: r.default.Messages.EARLY_ACCESS
+    text: i.default.Messages.EARLY_ACCESS
   })
 }

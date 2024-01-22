@@ -7,14 +7,14 @@ s.r(t), s.d(t, {
     return I
   },
   default: function() {
-    return T
+    return f
   }
 }), s("222007");
 var a = s("884691"),
   n = s("65597"),
   l = s("151426"),
-  i = s("619935"),
-  r = s("10641"),
+  r = s("619935"),
+  i = s("10641"),
   u = s("235145"),
   o = s("374363"),
   d = s("184684"),
@@ -29,10 +29,10 @@ let _ = [
     } = s.getCurrentConfig({
       location: "useShouldShowNewBadge"
     });
-    return !!n && !(0, r.isDismissibleContentDismissed)(t)
+    return !!n && !(0, i.isDismissibleContentDismissed)(t)
   }),
   I = () => {
-    let e = (0, i.useBlockedPaymentsConfig)(),
+    let e = (0, r.useBlockedPaymentsConfig)(),
       t = _.map(e => {
         let [t, s] = e, {
           flipped: a
@@ -43,25 +43,25 @@ let _ = [
       }).filter(e => null != e),
       [s] = (0, u.useGetDismissibleContent)(e ? [] : t),
       a = null != s && t.includes(s) && !e;
-    a && (0, r.markDismissibleContentAsDismissed)(s)
+    a && (0, i.markDismissibleContentAsDismissed)(s)
   };
-var T = () => {
-  let e = (0, i.useBlockedPaymentsConfig)(),
+var f = () => {
+  let e = (0, r.useBlockedPaymentsConfig)(),
     t = (0, n.default)([o.default], () => o.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
     s = _.map(e => {
       let [t, s, a] = e, {
         flipped: n
       } = s.getCurrentConfig({
         location: "useShouldShowNewBadge"
-      }), l = null != a && (0, r.isDismissibleContentDismissed)(a);
+      }), l = null != a && (0, i.isDismissibleContentDismissed)(a);
       return n && !l ? t : null
     }).filter(e => null != e);
   a.useEffect(() => {
     t && _.forEach(e => {
       let [t, s, a] = e;
       if (null == a) return;
-      let n = (0, r.isDismissibleContentDismissed)(a);
-      n && (0, r.markDismissibleContentAsDismissed)(t)
+      let n = (0, i.isDismissibleContentDismissed)(a);
+      n && (0, i.markDismissibleContentAsDismissed)(t)
     })
   }, [s, t]);
   let [l] = (0, u.useGetDismissibleContent)(e ? [] : s), d = null != l && s.includes(l);

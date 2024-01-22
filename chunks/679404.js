@@ -8,8 +8,8 @@ var t = E("917351"),
   o = E.n(t),
   n = E("713349"),
   r = E("95410"),
-  i = E("689988"),
-  a = E("342564"),
+  a = E("689988"),
+  i = E("342564"),
   I = E("605393"),
   s = E("385976"),
   T = E("469607"),
@@ -25,7 +25,7 @@ let u = "lastFrecencySavedTime",
   D = 1 * O.default.Millis.DAY + Math.floor(Math.random() * (1 * O.default.Millis.HOUR)),
   c = null,
   d = Date.now();
-class U extends i.default {
+class U extends a.default {
   _initialize() {
     A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
       hasChanges: () => !1,
@@ -48,9 +48,9 @@ class U extends i.default {
         if (!!T.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && !o.isEmpty(T.default.playedSoundHistory) && (e.playedSoundFrecency = n.PlayedSoundFrecency.create(), e.playedSoundFrecency.playedSounds = (0, l.serializeUsageHistory)(T.default.playedSoundHistory, 100))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
-      hasChanges: () => a.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
+      hasChanges: () => i.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
       processProto: e => {
-        if (!!a.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationCommandFrecency = n.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, l.serializeUsageHistory)(a.default.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500))
+        if (!!i.default.hasPendingUsage()) R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (e.applicationCommandFrecency = n.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, l.serializeUsageHistory)(i.default.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500))
       }
     }), A.FrecencyUserSettingsActionCreators.beforeSendCallbacks.push({
       hasChanges: () => I.default.hasPendingUsage() && R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS),
@@ -82,7 +82,7 @@ function h() {
   clearTimeout(c), c = null
 }
 async function P() {
-  d = Date.now(), m(!0), !R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (S.default.hasPendingUsage() || s.default.hasPendingUsage() || a.default.hasPendingUsage() || I.default.hasPendingUsage() || N.default.hasPendingUsage()) && await A.FrecencyUserSettingsActionCreators.loadIfNecessary(), o.forEach(A.UserSettingsActionCreatorsByType, e => {
+  d = Date.now(), m(!0), !R.default.hasLoaded(L.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (S.default.hasPendingUsage() || s.default.hasPendingUsage() || i.default.hasPendingUsage() || I.default.hasPendingUsage() || N.default.hasPendingUsage()) && await A.FrecencyUserSettingsActionCreators.loadIfNecessary(), o.forEach(A.UserSettingsActionCreatorsByType, e => {
     e.markDirtyIfHasPendingChange()
   })
 }

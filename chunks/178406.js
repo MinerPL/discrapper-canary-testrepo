@@ -7,8 +7,8 @@ i.r(t), i.d(t, {
 var r = i("446674"),
   n = i("913144"),
   s = i("271938"),
-  a = i("26989"),
-  u = i("305961"),
+  u = i("26989"),
+  a = i("305961"),
   l = i("697218"),
   h = i("637240"),
   d = i("159132"),
@@ -57,7 +57,7 @@ function S(e) {
 }
 class p extends r.default.Store {
   initialize() {
-    this.waitFor(s.default, a.default, l.default)
+    this.waitFor(s.default, u.default, l.default)
   }
   isInitialized(e) {
     let t = _(e);
@@ -143,7 +143,7 @@ let I = new p(n.default, {
       guildId: t,
       members: i
     } = e;
-    if (null == t || null == u.default.getGuild(t)) return !1;
+    if (null == t || null == a.default.getGuild(t)) return !1;
     m = !0;
     let r = _(t),
       n = [];
@@ -329,16 +329,16 @@ let I = new p(n.default, {
       total_result_count: r
     } = e, n = _(t), {
       memberIds: s,
-      memberSupplementals: a
+      memberSupplementals: u
     } = i.reduce((e, t) => {
       let {
         member: i,
         source_invite_code: r,
         join_source_type: n,
         inviter_id: s
-      } = t, a = i.user;
-      return e.memberIds.push(a.id), e.memberSupplementals.push({
-        userId: a.id,
+      } = t, u = i.user;
+      return e.memberIds.push(u.id), e.memberSupplementals.push({
+        userId: u.id,
         sourceInviteCode: r,
         joinSourceType: n,
         inviterId: s
@@ -346,13 +346,13 @@ let I = new p(n.default, {
     }, {
       memberIds: [],
       memberSupplementals: []
-    }), u = (0, d.syncMemberSupplemental)(t, a);
+    }), a = (0, d.syncMemberSupplemental)(t, u);
     (0, o.registerFetchedSupplementals)(t, s);
     let l = n.updateSearchedMembersByMemberIds(s),
       [h] = n.updatePaginationState({
         totalResultsCount: r
       }, !1);
-    return u || l || h
+    return a || l || h
   },
   MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function(e) {
     let {

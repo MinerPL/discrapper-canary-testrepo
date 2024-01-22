@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("385976"),
   n = E("42203"),
   r = E("315102"),
-  i = E("402671"),
-  a = E("115279");
+  a = E("402671"),
+  i = E("115279");
 let I = new Worker(new URL(E.p + E.u("68638"), E.b));
 class s extends t.default {
   handleChannelPreload(e) {
@@ -25,15 +25,15 @@ class s extends t.default {
           _.push(r.default.getEmojiURL({
             id: E.emojiId,
             animated: null !== (n = null === (t = o.default.getUsableCustomEmojiById(E.emojiId)) || void 0 === t ? void 0 : t.animated) && void 0 !== n && n,
-            size: a.EMOJI_SIZE_MAP.reaction
+            size: i.EMOJI_SIZE_MAP.reaction
           }))
-        } else(null == E ? void 0 : E.emojiName) != null && _.push(i.default.getURL(E.emojiName));
+        } else(null == E ? void 0 : E.emojiName) != null && _.push(a.default.getURL(E.emojiName));
         return e.availableTags.forEach(e => {
           null != e.emojiId ? _.push(r.default.getEmojiURL({
             id: e.emojiId,
             animated: !1,
-            size: a.EMOJI_SIZE_MAP.reaction
-          })) : null != e.emojiName && _.push(i.default.getURL(e.emojiName))
+            size: i.EMOJI_SIZE_MAP.reaction
+          })) : null != e.emojiName && _.push(a.default.getURL(e.emojiName))
         }), _
       }(E);
       e.forEach(e => {

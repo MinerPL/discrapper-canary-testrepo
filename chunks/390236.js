@@ -1,9 +1,9 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return l
   }
 });
-var s = a("884691");
-let r = s.createContext(void 0);
-var n = r
+var i = n("884691");
+let r = i.createContext(void 0);
+var l = r

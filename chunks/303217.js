@@ -8,8 +8,8 @@ var t = E("872717"),
   o = E("102053"),
   n = E("913144"),
   r = E("605250"),
-  i = E("618421"),
-  a = E("352266");
+  a = E("618421"),
+  i = E("352266");
 let {
   WEBAPP_ENDPOINT: I
 } = window.GLOBAL_ENV, s = "https:".concat(I, "/bad-hash-delta"), T = new r.default("FetchBlockedDomain");
@@ -22,7 +22,7 @@ async function N() {
   try {
     let e;
     let _ = parseInt((await t.default.get("https://cdn.discordapp.com/bad-domains/current_revision.txt")).text),
-      E = a.default.getCurrentRevision();
+      E = i.default.getCurrentRevision();
     if (T.verbose("Server revision: ".concat(_, ", Client revision: ").concat(E)), null === E || E !== _) {
       try {
         if (null === E || E > _) {
@@ -41,7 +41,7 @@ async function N() {
           return
         }
         T.verbose("Retrieved delta, domains added: ".concat(n.ADDED.length, ", domains removed: ").concat(n.REMOVED.length));
-        let r = await o.default.timeAsync("\uD83D\uDCBE", "getBlockedDomainList", () => a.default.getBlockedDomainList());
+        let r = await o.default.timeAsync("\uD83D\uDCBE", "getBlockedDomainList", () => i.default.getBlockedDomainList());
         if (null === r) throw Error("Blocked domain list is null");
         T.verbose("Blocked domains list length: ".concat(r.size, " before update")), n.ADDED.forEach(e => {
           if (r.has(e)) throw Error("Unable to add domain which is already in the blockedDomains set: ".concat(e));
@@ -51,7 +51,7 @@ async function N() {
           r.delete(e)
         }), e = Array.from(r), T.verbose("Delta applied successfully")
       } catch (_) {
-        if (T.verbose("Unable to process domain list delta: ".concat(_.message)), (0, i.isSlowNetwork)()) {
+        if (T.verbose("Unable to process domain list delta: ".concat(_.message)), (0, a.isSlowNetwork)()) {
           T.verbose("Slow network detected, not downloading full list");
           return
         }

@@ -15,7 +15,7 @@ t = class {
       code: o,
       retryAfter: n,
       fields: r,
-      status: i
+      status: a
     } = function(e, _) {
       if ("string" == typeof e) return {
         message: e,
@@ -40,6 +40,6 @@ t = class {
       }
       return {}
     }(e, _);
-    this.message = t || E, this.retryAfter = n, this.code = o || -1, this.fields = r || {}, this.status = i, this.error = Error(t)
+    this.message = t || E, this.retryAfter = n, this.code = o || -1, this.fields = r || {}, this.status = a, this.error = Error(t)
   }
 }

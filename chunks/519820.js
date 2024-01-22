@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("446674"),
-  r = n("913144"),
-  s = n("665618");
+  s = n("913144"),
+  r = n("665618");
 let a = {};
 class o extends i.default.Store {
   getGuild(e) {
@@ -14,12 +14,12 @@ class o extends i.default.Store {
   }
 }
 o.displayName = "AuthInviteStore";
-var l = new o(r.default, {
+var l = new o(s.default, {
   AUTH_INVITE_UPDATE: function(e) {
     let {
       invite: t
     } = e, n = t.guild;
     if (null == n) return !1;
-    a[n.id] = (0, s.fromInviteGuild)(n)
+    a[n.id] = (0, r.fromInviteGuild)(n)
   }
 })

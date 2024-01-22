@@ -8,8 +8,8 @@ var t = E("862337"),
   o = E("819689"),
   n = E("987317"),
   r = E("689988"),
-  i = E("191225"),
-  a = E("42203"),
+  a = E("191225"),
+  i = E("42203"),
   I = E("101125"),
   s = E("800762"),
   T = E("316133"),
@@ -19,13 +19,13 @@ let N = 18e4;
 function O() {
   let e = s.default.getCurrentClientVoiceChannelId(null);
   if (null == e) return !1;
-  let _ = a.default.getChannel(e);
+  let _ = i.default.getChannel(e);
   if (null == _ || !_.isPrivate()) return !1;
   let E = _.recipients.length;
   if (E > 1) return !1;
   let t = T.default.countVoiceStatesForChannel(e);
   if (t > 1) return !1;
-  let o = i.default.getSelfEmbeddedActivityForChannel(e);
+  let o = a.default.getSelfEmbeddedActivityForChannel(e);
   if (null != o) return !1;
   let n = null != I.default.getBroadcast();
   return !n && !0

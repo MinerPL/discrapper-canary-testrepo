@@ -1,35 +1,35 @@
 "use strict";
-o.r(t), o.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
-}), o("222007");
-var r = o("37983"),
-  n = o("884691"),
-  a = o("516555"),
-  l = o("172858"),
-  s = function(e) {
+}), n("222007");
+var r = n("37983"),
+  o = n("884691"),
+  a = n("516555"),
+  l = n("172858"),
+  i = function(e) {
     let {
       confettiTarget: t,
-      confettiCanvas: o,
-      sprites: s,
-      colors: i
-    } = e, [u, c] = n.useState(null), d = (0, a.useConfettiCannon)(o, u), [C, f] = n.useState(!1);
-    return n.useEffect(() => {
+      confettiCanvas: n,
+      sprites: i,
+      colors: s
+    } = e, [c, u] = o.useState(null), d = (0, a.useConfettiCannon)(n, c), [f, C] = o.useState(!1);
+    return o.useEffect(() => {
       let e = Array(10).fill(0);
-      return null != t && d.isReady && !C && (e = e.map((o, r) => setTimeout(() => {
-        var o;
-        r === e.length - 1 && f(!0), d.createMultipleConfetti((o = t.getBoundingClientRect(), {
+      return null != t && d.isReady && !f && (e = e.map((n, r) => setTimeout(() => {
+        var n;
+        r === e.length - 1 && C(!0), d.createMultipleConfetti((n = t.getBoundingClientRect(), {
           ...l.COMMON_CONFETTI_BASE_CONFIG,
           position: {
             type: "static-random",
             minValue: {
-              x: o.x,
-              y: o.y
+              x: n.x,
+              y: n.y
             },
             maxValue: {
-              x: o.x + o.width,
-              y: o.y + o.height / 2
+              x: n.x + n.width,
+              y: n.y + n.height / 2
             }
           },
           velocity: {
@@ -51,10 +51,10 @@ var r = o("37983"),
       }, 100 * r))), () => {
         for (let t of e) clearTimeout(t)
       }
-    }, [d, t, C]), (0, r.jsx)(a.SpriteCanvas, {
-      ref: c,
-      sprites: null != s ? s : l.COMMON_CONFETTI_SPRITES,
-      colors: null != i ? i : l.COMMON_CONFETTI_COLORS,
+    }, [d, t, f]), (0, r.jsx)(a.SpriteCanvas, {
+      ref: u,
+      sprites: null != i ? i : l.COMMON_CONFETTI_SPRITES,
+      colors: null != s ? s : l.COMMON_CONFETTI_COLORS,
       spriteWidth: l.COMMON_CONFETTI_MAX_SPRITE_SIZE,
       spriteHeight: l.COMMON_CONFETTI_MAX_SPRITE_SIZE
     })

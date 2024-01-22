@@ -20,7 +20,7 @@ let f = e => {
       isDesktop: f,
       withMentions: h = !1,
       initialPageSize: E
-    } = e, m = (0, l.useStateFromStores)([d.default], () => d.default.shouldReload()), p = a.useRef(!1), [S, g] = a.useState(!1), {
+    } = e, m = (0, l.useStateFromStores)([d.default], () => d.default.shouldReload()), p = a.useRef(!1), [g, S] = a.useState(!1), {
       initialized: N,
       loading: _,
       items: T,
@@ -57,7 +57,7 @@ let f = e => {
       })
     }, [N, m, t, h, M, v, E]);
     let R = a.useCallback(async e => {
-      !p.current && N && I && null != C && (e || !A) && (p.current = !0, g(!0), await (0, o.fetchNotificationCenterItems)({
+      !p.current && N && I && null != C && (e || !A) && (p.current = !0, S(!0), await (0, o.fetchNotificationCenterItems)({
         after: C,
         with_mentions: h,
         roles_filter: M,
@@ -65,7 +65,7 @@ let f = e => {
         limit: h ? 8 : 20
       }, () => {
         p.current = !1
-      }), g(!1))
+      }), S(!1))
     }, [N, I, C, A, h, M, v]);
     return {
       initialized: N,
@@ -73,7 +73,7 @@ let f = e => {
       items: T,
       hasMore: I,
       loadMore: R,
-      loadingMore: S,
+      loadingMore: g,
       setReadNotifItemToAcked: e => {
         !e.acked && (e.acked = !0)
       },

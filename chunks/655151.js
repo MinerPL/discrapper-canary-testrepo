@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   ExperimentDevelopersGetDeveloperShelf: function() {
-    return i
+    return s
   }
 });
-var s = n("862205");
-let i = (0, s.createExperiment)({
+var i = n("862205");
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2024-01_developers_get_developer_shelf",
   label: "Developers Get Developer Shelf",

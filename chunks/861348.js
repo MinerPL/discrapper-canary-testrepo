@@ -16,8 +16,8 @@ var n = a("37983"),
   _ = a("333781"),
   S = a("422671"),
   f = a("792105"),
-  T = a("133479"),
-  E = a("966677"),
+  E = a("133479"),
+  T = a("966677"),
   A = a("49111"),
   I = a("782340"),
   g = a("302713");
@@ -46,6 +46,6 @@ function N() {
     })]
   }) : (0, n.jsxs)("div", {
     className: g.container,
-    children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(E.ConnectedSafetyHubViolationsContainer, {})]
+    children: [(0, n.jsx)(E.default, {}), (0, n.jsx)(T.ConnectedSafetyHubViolationsContainer, {})]
   })
 }

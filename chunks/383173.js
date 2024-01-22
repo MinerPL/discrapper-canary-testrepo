@@ -1,53 +1,53 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
-}), l("222007");
-var d = l("446674"),
-  a = l("913144"),
-  r = l("374363");
-let n = new Set;
-class o extends d.default.PersistedStore {
+}), n("222007");
+var i = n("446674"),
+  s = n("913144"),
+  r = n("374363");
+let a = new Set;
+class o extends i.default.PersistedStore {
   initialize(e) {
-    null != e && (n = new Set(e.expandedFolders)), this.waitFor(r.default)
+    null != e && (a = new Set(e.expandedFolders)), this.waitFor(r.default)
   }
   getState() {
     return {
-      expandedFolders: Array.from(n)
+      expandedFolders: Array.from(a)
     }
   }
   getExpandedFolders() {
-    return n
+    return a
   }
   isFolderExpanded(e) {
-    return n.has(e)
+    return a.has(e)
   }
 }
 o.displayName = "ExpandedGuildFolderStore", o.persistKey = "ExpandedGuildFolderStore";
-var i = new o(a.default, {
+var l = new o(s.default, {
   TOGGLE_GUILD_FOLDER_EXPAND: function(e) {
     let {
       folderId: t
     } = e;
-    (n = new Set(n)).has(t) ? n.delete(t) : n.add(t)
+    (a = new Set(a)).has(t) ? a.delete(t) : a.add(t)
   },
   SET_GUILD_FOLDER_EXPANDED: function(e) {
     let {
       folderId: t,
-      expanded: l
+      expanded: n
     } = e;
-    n = new Set(n), l ? n.add(t) : n.has(t) && n.delete(t)
+    a = new Set(a), n ? a.add(t) : a.has(t) && a.delete(t)
   },
   USER_SETTINGS_PROTO_UPDATE: function() {
     let e = r.default.getGuildFolders();
     if (null == e) return !1;
     let t = !1;
-    for (let l of n) !e.some(e => e.folderId === l) && ((n = new Set(n)).delete(l), t = !0);
+    for (let n of a) !e.some(e => e.folderId === n) && ((a = new Set(a)).delete(n), t = !0);
     return t
   },
   GUILD_FOLDER_COLLAPSE: function() {
-    if (0 === n.size) return !1;
-    n = new Set
+    if (0 === a.size) return !1;
+    a = new Set
   }
 })

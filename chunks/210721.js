@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
 var i, r, l = n("627445"),
   a = n.n(l),
   s = n("450911"),
-  u = n("819689"),
-  o = n("884351"),
-  d = n("42203"),
-  c = n("659632"),
+  o = n("819689"),
+  u = n("884351"),
+  c = n("42203"),
+  d = n("659632"),
   f = n("78345");
 (r = i || (i = {})).ACTION = "action", r.LOOP = "loop", r.IDLE = "idle";
 let p = (e, t) => {
@@ -271,12 +271,12 @@ let p = (e, t) => {
     if (null == t) throw Error("giftCode must be defined");
     if (null == e) throw Error("Recipient must be defined");
     let n = await s.default.openPrivateChannel(e.id).then(e => {
-        let t = d.default.getChannel(e);
+        let t = c.default.getChannel(e);
         if (a(null != t, "PrivateChannel is null"), null == t) throw Error("Channel must be defined");
         return t
       }),
-      i = (0, c.getGiftCodeURL)(t);
-    return u.default.sendMessage(n.id, o.default.parse(n, i), void 0, {
+      i = (0, d.getGiftCodeURL)(t);
+    return o.default.sendMessage(n.id, u.default.parse(n, i), void 0, {
       isGiftLinkSentOnBehalfOfUser: !0
     })
   }

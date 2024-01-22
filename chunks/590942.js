@@ -40,7 +40,7 @@ let {
   INVITE_OPTIONS_UNLIMITED: G
 } = N.default;
 
-function H(e) {
+function b(e) {
   let {
     modal: t
   } = e, {
@@ -100,7 +100,7 @@ function H(e) {
   }, [n, t]), null
 }
 
-function b(e) {
+function H(e) {
   let {
     guildId: t,
     guildEvent: n,
@@ -129,7 +129,7 @@ function b(e) {
     slideId: 2,
     label: j.default.Messages.GUILD_EVENT_MODAL_PROGRESS_BAR_STEP_3,
     valid: !0
-  }], [f, E, D]), U = Object.keys(l).length, P = (0, m.isGuildScheduledEventActive)(n), G = e => Math.max(0, Math.min(e, U - 1)), [b, B] = i.useState(P ? 1 : 0), [F, w] = i.useState(!1), k = i.useMemo(() => y.slice(0, b + 1).map(e => e.valid).every(Boolean), [y, b]), Y = b >= y.length ? 3 : y[G(b)].slideId, z = 3 === Y, Z = (0, R.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
+  }], [f, E, D]), U = Object.keys(l).length, P = (0, m.isGuildScheduledEventActive)(n), G = e => Math.max(0, Math.min(e, U - 1)), [H, B] = i.useState(P ? 1 : 0), [F, w] = i.useState(!1), k = i.useMemo(() => y.slice(0, H + 1).map(e => e.valid).every(Boolean), [y, H]), Y = H >= y.length ? 3 : y[G(H)].slideId, z = 3 === Y, Z = (0, R.useGuildEventModalStore)(e => e.onUpdateCanCloseModal);
   Z(z);
   let K = (0, u.useStateFromStores)([c.default], () => c.default.useReducedMotion),
     X = i.useRef(null),
@@ -142,10 +142,10 @@ function b(e) {
   let q = () => {
       if (!k) return;
       let e = 2 === Y;
-      e ? S() : z ? g() : W(b + 1)
+      e ? S() : z ? g() : W(H + 1)
     },
     J = () => {
-      W(b - 1)
+      W(H - 1)
     },
     Q = j.default.Messages.NEXT;
   return 2 === Y && (Q = E ? j.default.Messages.SAVE_EVENT : j.default.Messages.SCHEDULE_EVENT), (0, s.jsx)(s.Fragment, {
@@ -153,16 +153,16 @@ function b(e) {
       transitionState: _,
       "aria-labelledby": p,
       size: o.ModalSize.DYNAMIC,
-      children: [!K && z ? (0, s.jsx)(H, {
+      children: [!K && z ? (0, s.jsx)(b, {
         modal: X.current
       }) : null, (0, s.jsxs)(o.ModalContent, {
         className: V.content,
         scrollerRef: X,
         children: [!z && (0, s.jsx)(h.default, {
           steps: y.map(e => e.label),
-          stepIndex: b,
+          stepIndex: H,
           onClick: e => {
-            e < b ? J() : e > b && q()
+            e < H ? J() : e > H && q()
           }
         }), (0, s.jsxs)(o.Slides, {
           activeSlide: Y,
@@ -248,23 +248,23 @@ function B(e) {
       max_age: P.value,
       max_uses: G.value
     }, U.InstantInviteSources.GUILD_EVENTS), n ? M(e) : c()
-  }, H = (0, f.default)(E, null == h ? void 0 : h.id, R), [B, {
+  }, b = (0, f.default)(E, null == h ? void 0 : h.id, R), [B, {
     loading: F,
     error: w
   }] = (0, v.default)(async () => {
     if (null != L) return;
     let e = {
-      broadcastToDirectoryChannels: H.broadcastToDirectoryChannels
+      broadcastToDirectoryChannels: b.broadcastToDirectoryChannels
     };
     if (O && null != l) return await S.default.saveEvent(l, R, t, e), c();
     let n = await S.default.createGuildEvent(R, t, e);
     return V(n.body), n
   }), k = i.useMemo(() => (0, D.default)(R, O), [R, O]);
-  return (0, s.jsx)(b, {
+  return (0, s.jsx)(H, {
     guildId: t,
     guildEvent: R,
     guildEventId: l,
-    editBroadcastInfoData: H,
+    editBroadcastInfoData: b,
     isEdit: O,
     formErrors: k,
     transitionState: a,

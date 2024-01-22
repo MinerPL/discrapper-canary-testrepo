@@ -11,9 +11,9 @@ var t = E("917351"),
   o = E.n(t),
   n = E("446674"),
   r = E("913144"),
-  i = E("42203");
+  a = E("42203");
 E("162771");
-var a = E("299039"),
+var i = E("299039"),
   I = E("724210");
 let s = 26,
   T = {},
@@ -24,8 +24,8 @@ let s = 26,
 function A(e) {
   let _ = S[e];
   if (null == _) return;
-  let E = a.default.fromTimestamp(Date.now() - 9e5),
-    t = o.findIndex(_, e => a.default.compare(e.id, E) > 0);
+  let E = i.default.fromTimestamp(Date.now() - 9e5),
+    t = o.findIndex(_, e => i.default.compare(e.id, E) > 0);
   if (-1 === t) S[e] = [];
   else {
     let E = Math.max(t, _.length - s);
@@ -93,11 +93,11 @@ var u = new L(r.default, {
       isPushNotification: n
     } = e;
     if (o || n) return !1;
-    let r = i.default.getChannel(E);
+    let r = a.default.getChannel(E);
     if (null == r) return !1;
-    let a = r.guild_id;
-    if (null == a || null == T[a]) return !1;
-    R(a, E, t.id, null === (_ = t.author) || void 0 === _ ? void 0 : _.id)
+    let i = r.guild_id;
+    if (null == i || null == T[i]) return !1;
+    R(i, E, t.id, null === (_ = t.author) || void 0 === _ ? void 0 : _.id)
   },
   GUILD_DELETE: function(e) {
     let {

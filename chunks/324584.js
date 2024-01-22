@@ -5,15 +5,15 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var r = n("37983"),
-  s = n("884691"),
+var s = n("37983"),
+  r = n("884691"),
   a = n("414456"),
   o = n.n(a),
   l = n("111749"),
   u = n("718776"),
-  c = n("862839");
-let d = ["letter-spacing", "line-height", "padding-top", "padding-bottom", "font-family", "font-weight", "font-size", "text-transform", "width", "padding-left", "padding-right", "border-width", "box-sizing"];
-class f extends s.PureComponent {
+  d = n("180615");
+let c = ["letter-spacing", "line-height", "padding-top", "padding-bottom", "font-family", "font-weight", "font-size", "text-transform", "width", "padding-left", "padding-right", "border-width", "box-sizing"];
+class f extends r.PureComponent {
   componentDidMount() {
     Promise.resolve().then(() => this.calculateSize())
   }
@@ -32,9 +32,9 @@ class f extends s.PureComponent {
     if (null == t) return;
     let {
       fontWidthEstimate: n,
-      rows: r
-    } = this.props, s = null !== (e = this.props.value) && void 0 !== e ? e : t.value;
-    if (null != n && -1 === s.indexOf("\n") && s.length * n < .8 * t.offsetWidth) {
+      rows: s
+    } = this.props, r = null !== (e = this.props.value) && void 0 !== e ? e : t.value;
+    if (null != n && -1 === r.indexOf("\n") && r.length * n < .8 * t.offsetWidth) {
       this.setState({
         height: void 0
       });
@@ -47,22 +47,22 @@ class f extends s.PureComponent {
       boxSizing: l,
       sizingStyle: u
     } = this.calculateNodeStyling(t);
-    i.setAttribute("style", u + ";\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n"), i.value = s, null != r ? i.setAttribute("rows", "".concat(r)) : i.removeAttribute("rows");
-    let c = i.scrollHeight;
-    "border-box" === l ? c += o : "content-box" === l && (c -= a), this.setState({
-      height: c
+    i.setAttribute("style", u + ";\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n"), i.value = r, null != s ? i.setAttribute("rows", "".concat(s)) : i.removeAttribute("rows");
+    let d = i.scrollHeight;
+    "border-box" === l ? d += o : "content-box" === l && (d -= a), this.setState({
+      height: d
     })
   }
   calculateNodeStyling(e) {
     let t = window.getComputedStyle(e),
       n = (0, l.getFirstTruthyValue)(t.getPropertyValue("box-sizing"), t.getPropertyValue("-moz-box-sizing"), t.getPropertyValue("-webkit-box-sizing")),
       i = parseFloat(t.getPropertyValue("padding-bottom")) + parseFloat(t.getPropertyValue("padding-top")),
-      r = parseFloat(t.getPropertyValue("border-bottom-width")) + parseFloat(t.getPropertyValue("border-top-width")),
-      s = d.map(e => "".concat(e, ":").concat(t.getPropertyValue(e))).join(";");
+      s = parseFloat(t.getPropertyValue("border-bottom-width")) + parseFloat(t.getPropertyValue("border-top-width")),
+      r = c.map(e => "".concat(e, ":").concat(t.getPropertyValue(e))).join(";");
     return {
-      sizingStyle: s,
+      sizingStyle: r,
       paddingSize: i,
-      borderSize: r,
+      borderSize: s,
       boxSizing: n
     }
   }
@@ -107,10 +107,10 @@ class f extends s.PureComponent {
       ...this.state,
       ...e
     };
-    return (0, r.jsx)(u.FocusRing, {
-      children: (0, r.jsx)("textarea", {
+    return (0, s.jsx)(u.FocusRing, {
+      children: (0, s.jsx)("textarea", {
         ...n,
-        className: o(t, c.scrollbarGhostHairline),
+        className: o(t, d.scrollbarGhostHairline),
         ref: this.handleSetRef,
         style: i,
         onChange: this.handleChange

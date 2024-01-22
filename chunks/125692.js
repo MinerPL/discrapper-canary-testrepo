@@ -8,32 +8,32 @@ function r(e) {
   })(e)
 }
 
-function o(e, t, n) {
+function i(e, t, n) {
   return t.split(".").reduce(function(e, t) {
     return e && e[t] ? e[t] : n || null
   }, e)
 }
 
-function a(e, t) {
+function o(e, t) {
   return e.filter(function(e) {
     return e !== t
   })
 }
 
-function i(e) {
+function s(e) {
   return "object" === r(e)
 }
 
-function s(e, t) {
+function a(e, t) {
   var n = new Map,
     r = function(e) {
       n.set(e, n.has(e) ? n.get(e) + 1 : 1)
     };
   e.forEach(r), t.forEach(r);
-  var o = [];
+  var i = [];
   return n.forEach(function(e, t) {
-    1 === e && o.push(t)
-  }), o
+    1 === e && i.push(t)
+  }), i
 }
 
 function c(e, t) {
@@ -43,16 +43,16 @@ function c(e, t) {
 }
 n.r(t), n.d(t, {
   get: function() {
-    return o
-  },
-  without: function() {
-    return a
-  },
-  isObject: function() {
     return i
   },
-  xor: function() {
+  without: function() {
+    return o
+  },
+  isObject: function() {
     return s
+  },
+  xor: function() {
+    return a
   },
   intersection: function() {
     return c

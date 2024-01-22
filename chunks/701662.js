@@ -17,9 +17,9 @@ var s, a, l = n("37983"),
   _ = n("271938"),
   p = n("337543"),
   h = n("124969"),
-  N = n("599110"),
+  m = n("599110"),
   T = n("315102"),
-  m = n("449008"),
+  N = n("449008"),
   g = n("9294"),
   A = n("800118"),
   S = n("243961"),
@@ -53,7 +53,7 @@ let O = e => {
     case v.InviteStates.RESOLVING:
       return 0;
     default:
-      (0, m.assertNever)(n)
+      (0, N.assertNever)(n)
   }
 };
 
@@ -204,7 +204,7 @@ function G(e) {
   return i.useEffect(() => {
     (0, I.trackAppUIViewed)("invite_mobile")
   }, []), i.useEffect(() => {
-    null != s && s.state === v.InviteStates.RESOLVED && N.default.track(v.AnalyticEvents.INVITE_VIEWED, {
+    null != s && s.state === v.InviteStates.RESOLVED && m.default.track(v.AnalyticEvents.INVITE_VIEWED, {
       invite_code: t,
       friends_count: null == s ? void 0 : s.friends_count
     }, {
@@ -215,7 +215,7 @@ function G(e) {
     onAcceptInvite: e => {
       ! function(e, t, n) {
         var s, a, l;
-        null == e || e.preventDefault(), N.default.track(v.AnalyticEvents.INVITE_APP_OPENED, {
+        null == e || e.preventDefault(), m.default.track(v.AnalyticEvents.INVITE_APP_OPENED, {
           invite_code: (0, g.parseInviteCodeFromInviteKey)(t),
           guild_id: null == n ? void 0 : null === (s = n.guild) || void 0 === s ? void 0 : s.id,
           channel_id: null == n ? void 0 : null === (a = n.channel) || void 0 === a ? void 0 : a.id,

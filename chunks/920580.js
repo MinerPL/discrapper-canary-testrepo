@@ -9,17 +9,17 @@ a("884691");
 var s = a("414456"),
   r = a.n(s),
   n = a("65597"),
-  o = a("755854"),
-  i = a("77078"),
-  u = a("161778"),
-  c = a("697218"),
+  i = a("755854"),
+  o = a("77078"),
+  c = a("161778"),
+  u = a("697218"),
   d = a("216422"),
   f = a("719923"),
-  C = a("491232"),
-  E = a("791309"),
-  m = a("49111"),
-  p = a("782340"),
-  g = a("173046");
+  m = a("491232"),
+  C = a("791309"),
+  p = a("49111"),
+  g = a("782340"),
+  E = a("173046");
 
 function h(e) {
   let {
@@ -27,34 +27,34 @@ function h(e) {
     className: a,
     disableTooltipPointerEvents: s,
     alwaysWhiteText: h = !0
-  } = e, T = (0, n.default)([c.default], () => c.default.getCurrentUser()), b = (0, n.default)([u.default], () => (0, o.isThemeDark)(u.default.theme)), x = (0, C.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.DEFAULT);
+  } = e, b = (0, n.default)([u.default], () => u.default.getCurrentUser()), T = (0, n.default)([c.default], () => (0, i.isThemeDark)(c.default.theme)), x = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == x) return null;
   if (x.amount <= 0) return (0, l.jsx)("div", {
-    className: r(g.priceTagsContainer, a),
-    children: (0, l.jsx)(E.default, {
+    className: r(E.priceTagsContainer, a),
+    children: (0, l.jsx)(C.default, {
       alwaysWhiteText: h,
       price: x
     })
   });
-  let L = (0, C.extractPriceByPurchaseTypes)(t, m.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
-    S = !f.default.canUseCollectibles(T);
+  let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
+    S = !f.default.canUseCollectibles(b);
   return (0, l.jsxs)("div", {
-    className: r(g.priceTagsContainer, a),
-    children: [(0, l.jsx)(E.default, {
+    className: r(E.priceTagsContainer, a),
+    children: [(0, l.jsx)(C.default, {
       alwaysWhiteText: h,
       price: x,
-      className: S ? void 0 : g.strikedPrice
-    }), null != L && (0, l.jsx)(E.default, {
+      className: S ? void 0 : E.strikedPrice
+    }), null != L && (0, l.jsx)(C.default, {
       price: L,
       alwaysWhiteText: h,
-      renderPrice: S ? e => p.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
+      renderPrice: S ? e => g.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
-      className: S ? g.fullPrice : void 0,
+      className: S ? E.fullPrice : void 0,
       variant: S ? "text-xs/semibold" : void 0,
-      icon: (0, l.jsx)(i.Tooltip, {
-        text: p.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
-        "aria-label": p.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
+      icon: (0, l.jsx)(o.Tooltip, {
+        text: g.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
+        "aria-label": g.default.Messages.COLLECTIBLES_NITRO_EXCLUSIVE,
         disableTooltipPointerEvents: s,
         children: e => {
           let {
@@ -62,10 +62,10 @@ function h(e) {
           } = e;
           return (0, l.jsx)(d.default, {
             ...t,
-            className: r(g.premiumIcon, {
-              [g.fullPrice]: S
+            className: r(E.premiumIcon, {
+              [E.fullPrice]: S
             }),
-            color: h || b ? "white" : "black"
+            color: h || T ? "white" : "black"
           })
         }
       })

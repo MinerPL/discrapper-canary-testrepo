@@ -9,21 +9,21 @@ a("884691");
 var s = a("748820"),
   r = a("77078"),
   n = a("112679"),
-  o = a("55689"),
-  i = a("21526"),
-  u = a("599110"),
-  c = a("49111");
+  i = a("55689"),
+  o = a("21526"),
+  c = a("599110"),
+  u = a("49111");
 
 function d(e) {
   let {
     skuId: t,
     isGift: d = !1,
     giftMessage: f,
-    onClose: C,
-    onComplete: E,
-    analyticsLocations: m,
-    analyticsObject: p
-  } = e, g = !1, h = (0, s.v4)();
+    onClose: m,
+    onComplete: C,
+    analyticsLocations: p,
+    analyticsObject: g
+  } = e, E = !1, h = (0, s.v4)();
   (0, r.openModalLazy)(async () => {
     let {
       default: e
@@ -40,26 +40,26 @@ function d(e) {
         skuId: t,
         isGift: d,
         giftMessage: f,
-        analyticsLocations: m,
+        analyticsLocations: p,
         onClose: e => {
-          s(), null == C || C(e)
+          s(), null == m || m(e)
         },
         onComplete: () => {
-          g = !0, null == E || E()
+          E = !0, null == C || C()
         },
         returnRef: r
       })
     }
   }, {
     onCloseCallback: () => {
-      !g && u.default.track(c.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+      !E && c.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
         load_id: h,
-        payment_type: c.PurchaseTypeToAnalyticsPaymentType[c.PurchaseTypes.ONE_TIME],
-        location: p,
+        payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
+        location: g,
         is_gift: !1,
-        location_stack: m
-      }), (0, n.clearError)(), (0, o.clearPurchaseTokenAuthState)(), null == C || C(g), g && (0, i.fetchCollectiblesPurchases)()
+        location_stack: p
+      }), (0, n.clearError)(), (0, i.clearPurchaseTokenAuthState)(), null == m || m(E), E && (0, o.fetchCollectiblesPurchases)()
     },
-    onCloseRequest: c.NOOP
+    onCloseRequest: u.NOOP
   })
 }

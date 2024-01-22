@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("414456"),
   l = s.n(n),
-  i = s("722440"),
-  r = e => {
+  r = s("722440"),
+  i = e => {
     let {
       lifted: t = !1
     } = e;
@@ -20,8 +20,8 @@ var n = s("414456"),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
       preserveAspectRatio: "none",
-      className: l(i.root, {
-        [i.lifted]: t
+      className: l(r.root, {
+        [r.lifted]: t
       }),
       children: [(0, a.jsx)("path", {
         d: "M1175.02 650.847C567.943 650.847 449.538 793 0 793V0H2338V529.841C1912.54 529.841 1705.84 650.847 1175.02 650.847Z",
@@ -35,19 +35,19 @@ var n = s("414456"),
           y2: "975.136",
           gradientUnits: "userSpaceOnUse",
           children: [(0, a.jsx)("stop", {
-            className: i.stop1
+            className: r.stop1
           }), (0, a.jsx)("stop", {
             offset: "0.339235",
-            className: i.stop2
+            className: r.stop2
           }), (0, a.jsx)("stop", {
             offset: "0.492065",
-            className: i.stop3
+            className: r.stop3
           }), (0, a.jsx)("stop", {
             offset: "0.823236",
-            className: i.stop4
+            className: r.stop4
           }), (0, a.jsx)("stop", {
             offset: "0.899558",
-            className: i.stop5
+            className: r.stop5
           })]
         })
       })]

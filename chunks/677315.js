@@ -1,58 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildHomeExperiment: function() {
-    return _
+    return f
   },
   canSeeGuildHome: function() {
-    return c
+    return _
   },
   GuildFeedRenderSelectorExperiment: function() {
-    return g
-  },
-  GuildFeedRefreshButtonExperiment: function() {
-    return m
-  },
-  GuildHomeBadgeExperiment: function() {
     return h
   },
+  GuildFeedRefreshButtonExperiment: function() {
+    return g
+  },
+  GuildHomeBadgeExperiment: function() {
+    return m
+  },
   GuildHomeFeedbackExperiment: function() {
-    return v
+    return E
   },
   GuildHomeDeprecationExperiment: function() {
-    return E
+    return p
   }
 });
-var s = n("446674"),
-  i = n("203288"),
+var i = n("446674"),
+  s = n("203288"),
   r = n("862205"),
   a = n("21121"),
   o = n("934306"),
-  d = n("923959"),
+  l = n("923959"),
   u = n("305961"),
-  l = n("49111");
+  d = n("49111");
 
-function f(e, t, n) {
-  let s = t.getChannels(e)[d.GUILD_SELECTABLE_CHANNELS_KEY].filter(t => {
+function c(e, t, n) {
+  let i = t.getChannels(e)[l.GUILD_SELECTABLE_CHANNELS_KEY].filter(t => {
     let {
-      channel: s
+      channel: i
     } = t;
-    return !n.isChannelGated(e, s.id)
+    return !n.isChannelGated(e, i.id)
   });
-  return s.length > 5
+  return i.length > 5
+}
+
+function f(e) {
+  arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+  let t = (0, i.useStateFromStores)([l.default, s.default], () => null != e && c(e.id, l.default, s.default));
+  return !__OVERLAY__ && !!t && null != e && e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
 }
 
 function _(e) {
-  arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let t = (0, s.useStateFromStores)([d.default, i.default], () => null != e && f(e.id, d.default, i.default));
-  return !__OVERLAY__ && !!t && null != e && e.hasFeature(l.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
-}
-
-function c(e) {
-  if (__OVERLAY__ || e === l.ME || e === l.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
+  if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
   let t = u.default.getGuild(e);
-  return !!(null != t && f(e, d.default, i.default)) && t.hasFeature(l.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
+  return !!(null != t && c(e, l.default, s.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
 }
-let g = (0, r.createExperiment)({
+let h = (0, r.createExperiment)({
     kind: "user",
     id: "2022-01_home_feed_toggle",
     label: "Show Guild Feed Sorting Selector",
@@ -67,7 +67,7 @@ let g = (0, r.createExperiment)({
       }
     }]
   }),
-  m = (0, r.createExperiment)({
+  g = (0, r.createExperiment)({
     kind: "user",
     id: "2022-06_home_refresh_button",
     label: "Show refresh button",
@@ -82,7 +82,7 @@ let g = (0, r.createExperiment)({
       }
     }]
   }),
-  h = (0, r.createExperiment)({
+  m = (0, r.createExperiment)({
     kind: "user",
     id: "2022-08_home_badge",
     label: "Show badge on home channel",
@@ -162,7 +162,7 @@ let g = (0, r.createExperiment)({
     }
   }]
 });
-let v = (0, r.createExperiment)({
+let E = (0, r.createExperiment)({
     kind: "user",
     id: "2022-12_home_feedback_ux",
     label: "Show post feedback for home",
@@ -177,7 +177,7 @@ let v = (0, r.createExperiment)({
       }
     }]
   }),
-  E = (0, r.createExperiment)({
+  p = (0, r.createExperiment)({
     kind: "guild",
     id: "2023-03_home_deprecation",
     label: "Home Deprecation",

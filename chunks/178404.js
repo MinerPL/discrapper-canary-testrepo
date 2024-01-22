@@ -1,6 +1,6 @@
 "use strict";
-var r = s("865435"),
+var r = n("865435"),
   i = Math.floor;
-t.exports = function(t) {
-  return "BigInt" === r(t) ? t : i(t)
+e.exports = function(e) {
+  return "BigInt" === r(e) ? e : i(e)
 }

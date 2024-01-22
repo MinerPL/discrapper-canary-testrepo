@@ -62,12 +62,12 @@ let L = e => {
     avatarDecorationOverride: (null == w ? void 0 : w.type) === f.CollectiblesItemType.AVATAR_DECORATION ? w : null,
     size: (0, E.getDecorationSizeForAvatarSize)(d.AvatarSizes.SIZE_120)
   }), D = o.useRef(null), {
-    analyticsLocations: z,
-    AnalyticsLocationProvider: P
+    analyticsLocations: P,
+    AnalyticsLocationProvider: z
   } = (0, b.default)([...s, g.default.COLLECTIBLES_COLLECTED_MODAL]), V = (0, m.default)({
-    analyticsLocations: z
+    analyticsLocations: P
   });
-  return (0, r.jsxs)(P, {
+  return (0, r.jsxs)(z, {
     children: [(0, r.jsxs)("div", {
       className: _.modalInner,
       ref: D,
@@ -115,12 +115,12 @@ let L = e => {
             if (n(), (0, C.popLayer)(), V(), (null == w ? void 0 : w.type) === f.CollectiblesItemType.AVATAR_DECORATION) {
               (0, E.openAvatarDecorationModal)({
                 initialSelectedDecoration: w,
-                analyticsLocations: z
+                analyticsLocations: P
               });
               return
             }(null == w ? void 0 : w.type) === f.CollectiblesItemType.PROFILE_EFFECT && (0, T.openProfileEffectModal)({
               initialSelectedEffectId: w.id,
-              analyticsLocations: z
+              analyticsLocations: P
             })
           },
           style: R,

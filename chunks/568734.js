@@ -4,11 +4,11 @@ function i(e, t) {
   return (e & t) === t
 }
 
-function r(e, t) {
+function s(e, t) {
   return e | t
 }
 
-function s(e, t) {
+function r(e, t) {
   return e & ~t
 }
 
@@ -31,10 +31,10 @@ n.r(t), n.d(t, {
     return i
   },
   addFlag: function() {
-    return r
+    return s
   },
   removeFlag: function() {
-    return s
+    return r
   },
   removeFlags: function() {
     return a

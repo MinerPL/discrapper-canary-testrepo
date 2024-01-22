@@ -32,8 +32,8 @@ var s = n("37983"),
   x = n("70845"),
   R = n("51714"),
   y = n("88243"),
-  D = n("31511"),
-  O = n("120379"),
+  O = n("31511"),
+  D = n("120379"),
   j = n("221068"),
   P = n("49111"),
   b = n("782340"),
@@ -71,7 +71,7 @@ let F = a.memo(function(e) {
     attachments: 8,
     fontSize: I,
     groupSpacing: c
-  }), [S, I, c]), G = (0, O.default)({
+  }), [S, I, c]), G = (0, D.default)({
     messages: m,
     channel: C,
     compact: S,
@@ -81,7 +81,7 @@ let F = a.memo(function(e) {
     canLoadMore: null == x,
     handleScrollToBottom: a.useCallback(() => U(!0), [U]),
     handleScrollFromBottom: a.useCallback(() => U(!1), [U])
-  }), w = (0, D.default)({
+  }), w = (0, O.default)({
     scrollerRef: G.ref,
     isEditing: null != N,
     keyboardModeEnabled: v,
@@ -225,8 +225,8 @@ var U = a.memo(function(e) {
   }(t), {
     messageGroupSpacing: L,
     fontSize: y,
-    messageDisplayCompact: D,
-    renderSpoilers: O,
+    messageDisplayCompact: O,
+    renderSpoilers: D,
     keyboardModeEnabled: j
   } = function() {
     let e = E.MessageDisplayCompact.useSetting(),
@@ -301,13 +301,13 @@ var U = a.memo(function(e) {
     }
   }(t);
   return (0, s.jsx)(v.ObscuredDisplayContext.Provider, {
-    value: (0, x.default)(O, u),
+    value: (0, x.default)(D, u),
     children: (0, s.jsx)(F, {
       ...r,
       messageGroupSpacing: L,
       showNewMessagesBar: !0,
       channel: t,
-      messageDisplayCompact: !i && (l || D),
+      messageDisplayCompact: !i && (l || O),
       messages: b,
       channelStream: H,
       permissionVersion: d,

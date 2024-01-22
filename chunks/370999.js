@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("702976");
-var i, r = n("866227"),
-  s = n.n(r),
+var i, s = n("866227"),
+  r = n.n(s),
   a = n("666038"),
   o = n("299285"),
   l = n("568734"),
   u = n("984273"),
-  c = n("49111");
+  d = n("49111");
 i = class e extends a.default {
   static createFromServer(t) {
     return new e({
@@ -24,7 +24,7 @@ i = class e extends a.default {
         id: t.sku.id,
         type: t.sku.type,
         premium: t.sku.premium,
-        preorderReleaseAt: null != t.sku.preorder_release_at ? s(t.sku.preorder_release_at) : null,
+        preorderReleaseAt: null != t.sku.preorder_release_at ? r(t.sku.preorder_release_at) : null,
         preorderApproximateReleaseDate: null != t.sku.preorder_approximate_release_date ? t.sku.preorder_approximate_release_date : null
       }
     })
@@ -35,11 +35,11 @@ i = class e extends a.default {
       entitlements: [],
       branchId: t.branch.id,
       branch: t.branch,
-      flags: c.LibraryApplicationFlags.ENTITLED,
+      flags: d.LibraryApplicationFlags.ENTITLED,
       createdAt: t.branch.created_at,
       sku: {
         id: t.skuId,
-        type: c.SKUTypes.DURABLE_PRIMARY,
+        type: d.SKUTypes.DURABLE_PRIMARY,
         premium: !1
       },
       isTestMode: !0
@@ -52,10 +52,10 @@ i = class e extends a.default {
     return l.hasFlag(this.flags, e)
   }
   isHidden() {
-    return this.hasFlag(c.LibraryApplicationFlags.HIDDEN)
+    return this.hasFlag(d.LibraryApplicationFlags.HIDDEN)
   }
   isOverlayEnabled() {
-    return !this.hasFlag(c.LibraryApplicationFlags.OVERLAY_DISABLED)
+    return !this.hasFlag(d.LibraryApplicationFlags.OVERLAY_DISABLED)
   }
   isMasterBranch() {
     return this.branchId === this.id
@@ -70,7 +70,7 @@ i = class e extends a.default {
     return null != this.sku.preorderReleaseAt || null != this.sku.preorderApproximateReleaseDate
   }
   getDistributor() {
-    return c.Distributors.DISCORD
+    return d.Distributors.DISCORD
   }
   getBranchName() {
     return null != this.branch ? this.branch.name : "master"

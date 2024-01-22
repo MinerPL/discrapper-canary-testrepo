@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var r = n("37983");
@@ -11,7 +11,7 @@ var i = n("414456"),
   a = n("918352"),
   l = n("929694");
 
-function u(e) {
+function o(e) {
   let {
     copy: t,
     className: n

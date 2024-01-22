@@ -53,18 +53,18 @@ function d(e) {
     }), t = x);
     let R = E[E.length - 1],
       y = null,
-      D = (0, o.isSpam)(e);
-    g = g || D;
-    let O = function(e, t, n) {
+      O = (0, o.isSpam)(e);
+    g = g || O;
+    let D = function(e, t, n) {
       if (s.MessageTypesSets.NON_COLLAPSIBLE.has(t.type));
       else if (t.blocked) return u.ChannelStreamTypes.MESSAGE_GROUP_BLOCKED;
       else if ((0, o.isSpamSupported)(e) && n) return u.ChannelStreamTypes.MESSAGE_GROUP_SPAMMER;
       return null
-    }(c, e, D && C);
-    if (null !== O) {
+    }(c, e, O && C);
+    if (null !== D) {
       ;
       let t, n;
-      [y, R] = (_ = E, T = e, M = O, n = N = R, null == N || N.type !== M ? (t = {
+      [y, R] = (_ = E, T = e, M = D, n = N = R, null == N || N.type !== M ? (t = {
         type: M,
         content: [],
         key: T.id

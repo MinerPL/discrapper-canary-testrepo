@@ -4,33 +4,33 @@ n.r(t), n.d(t, {
     return i
   },
   Encoders: function() {
-    return r
+    return s
   },
   VideoStoppedReasons: function() {
     return a
   },
   parseEncoder: function() {
-    return g
+    return S
   },
   RawVideoStats: function() {
-    return C
+    return I
   },
   InboundStats: function() {
-    return v
+    return C
   },
   OutboundStats: function() {
     return A
   }
 }), n("222007"), n("424973");
-var i, r, s, a, o, l, u, c, d = n("398183"),
+var i, s, r, a, o, l, u, d, c = n("398183"),
   f = n("872507"),
-  E = n("226445");
+  _ = n("226445");
 let h = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
-  p = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
-  _ = [720, 480, 360],
-  S = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "keyframes"];
-(o = i || (i = {})).H264 = "H264", o.H265 = "H265", o.VP8 = "VP8", o.VP9 = "VP9", o.AV1 = "AV1", o.UNKNOWN = "UNKNOWN", (l = r || (r = {})).NVIDIA_CUDA = "nvidia_cuda", l.NVIDIA_DIRECT_3D = "nvidia_direct_3d", l.OPENH264 = "openh264", l.VIDEOTOOLBOX = "videotoolbox", l.AMD_DIRECT_3D = "amd_direct_3d", l.INTEL = "intel", l.INTEL_DIRECT_3D = "intel_direct_3d", l.VP8_LIBVPX = "vp8_libvpx", l.UNCATEGORIZED = "uncategorized", l.UNKNOWN = "unknown", (u = s || (s = {})).NVIDIA_DIRECT_3D = "nvidia_direct_3d", u.OPENH264 = "openh264", u.VIDEOTOOLBOX = "videotoolbox", u.AMD_DIRECT_3D = "amd_direct_3d", u.INTEL = "intel", u.INTEL_DIRECT_3D = "intel_direct_3d", u.VP8_LIBVPX = "vp8_libvpx", u.UNCATEGORIZED = "uncategorized", u.UNKNOWN = "unknown";
-let m = Object.freeze({
+  g = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60],
+  m = [720, 480, 360],
+  E = ["framesCodec", "framesNetwork", "packets", "packetsLost", "framesDropped", "framesCodecError", "bytes", "nackCount", "pliCount", "qpSum", "freezeCount", "pauseCount", "totalFreezesDuration", "totalPausesDuration", "totalFramesDuration", "keyframes"];
+(o = i || (i = {})).H264 = "H264", o.H265 = "H265", o.VP8 = "VP8", o.VP9 = "VP9", o.AV1 = "AV1", o.UNKNOWN = "UNKNOWN", (l = s || (s = {})).NVIDIA_CUDA = "nvidia_cuda", l.NVIDIA_DIRECT_3D = "nvidia_direct_3d", l.OPENH264 = "openh264", l.VIDEOTOOLBOX = "videotoolbox", l.AMD_DIRECT_3D = "amd_direct_3d", l.INTEL = "intel", l.INTEL_DIRECT_3D = "intel_direct_3d", l.VP8_LIBVPX = "vp8_libvpx", l.UNCATEGORIZED = "uncategorized", l.UNKNOWN = "unknown", (u = r || (r = {})).NVIDIA_DIRECT_3D = "nvidia_direct_3d", u.OPENH264 = "openh264", u.VIDEOTOOLBOX = "videotoolbox", u.AMD_DIRECT_3D = "amd_direct_3d", u.INTEL = "intel", u.INTEL_DIRECT_3D = "intel_direct_3d", u.VP8_LIBVPX = "vp8_libvpx", u.UNCATEGORIZED = "uncategorized", u.UNKNOWN = "unknown";
+let p = Object.freeze({
     "nvidia: cuda": "nvidia_cuda",
     "nvidia: direct3d": "nvidia_direct_3d",
     "amd: direct3d": "amd_direct_3d",
@@ -40,7 +40,7 @@ let m = Object.freeze({
     OpenH264: "openh264",
     libvpx: "vp8_libvpx"
   }),
-  T = Object.freeze({
+  v = Object.freeze({
     "nvidia: direct3d": "nvidia_direct_3d",
     "amd: direct3d": "amd_direct_3d",
     "intel: direct3d": "intel_direct_3d",
@@ -50,14 +50,14 @@ let m = Object.freeze({
     libvpx: "vp8_libvpx"
   });
 
-function g(e) {
+function S(e) {
   if (null == e) return "unknown";
-  for (let t of Object.keys(m))
-    if (e.includes(t)) return m[t];
+  for (let t of Object.keys(p))
+    if (e.includes(t)) return p[t];
   return "uncategorized"
-}(c = a || (a = {}))[c.None = 0] = "None", c[c.ClientSideDisableVideo = 1] = "ClientSideDisableVideo", c[c.SenderStopped = 2] = "SenderStopped";
+}(d = a || (a = {}))[d.None = 0] = "None", d[d.ClientSideDisableVideo = 1] = "ClientSideDisableVideo", d[d.SenderStopped = 2] = "SenderStopped";
 
-function I(e) {
+function T(e) {
   if (null == e) return "UNKNOWN";
   if ("H264" === (e = e.toUpperCase())) return "H264";
   if ("H265" === e) return "H265";
@@ -66,21 +66,21 @@ function I(e) {
   else if ("AV1" === e || "AV1X" === e) return "AV1";
   else return "UNKNOWN"
 }
-class C {
+class I {
   static parseInboundStats(e, t) {
     var n, i;
-    let r = new C;
-    return null == e ? r : (r.bytes = e.bytesReceived, r.framesCodec = e.framesDecoded, r.framesCodecError = null !== (n = e.framesDecodeErrors) && void 0 !== n ? n : null, r.framesNetwork = e.framesReceived, r.packets = e.packetsReceived, r.packetsLost = e.packetsLost, r.framesDropped = e.framesDropped, r.resolution = null != e.resolution ? e.resolution.height : 0, r.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0, r.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0, r.timestamp = t, r.nackCount = e.nackCount, r.pliCount = e.pliCount, r.decoder = function(e) {
+    let s = new I;
+    return null == e ? s : (s.bytes = e.bytesReceived, s.framesCodec = e.framesDecoded, s.framesCodecError = null !== (n = e.framesDecodeErrors) && void 0 !== n ? n : null, s.framesNetwork = e.framesReceived, s.packets = e.packetsReceived, s.packetsLost = e.packetsLost, s.framesDropped = e.framesDropped, s.resolution = null != e.resolution ? e.resolution.height : 0, s.minorResolution = null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0, s.majorResolution = null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0, s.timestamp = t, s.nackCount = e.nackCount, s.pliCount = e.pliCount, s.decoder = function(e) {
       if (null == e) return "unknown";
-      for (let t of Object.keys(T))
-        if (e.includes(t)) return T[t];
+      for (let t of Object.keys(v))
+        if (e.includes(t)) return v[t];
       return "uncategorized"
-    }(e.decoderImplementationName), r.codecType = I(e.codec.name), r.qpSum = 0, r.freezeCount = e.freezeCount, r.pauseCount = e.pauseCount, r.totalFreezesDuration = e.totalFreezesDuration, r.totalPausesDuration = e.totalPausesDuration, r.totalFramesDuration = e.totalFramesDuration, r.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, r)
+    }(e.decoderImplementationName), s.codecType = T(e.codec.name), s.qpSum = 0, s.freezeCount = e.freezeCount, s.pauseCount = e.pauseCount, s.totalFreezesDuration = e.totalFreezesDuration, s.totalPausesDuration = e.totalPausesDuration, s.totalFramesDuration = e.totalFramesDuration, s.keyframes = null !== (i = e.keyFramesDecoded) && void 0 !== i ? i : null, s)
   }
   static parseOutboundStats(e, t) {
-    var n, i, r, s, a, o, l, u, c;
-    let d = new C;
-    return null == e ? d : {
+    var n, i, s, r, a, o, l, u, d;
+    let c = new I;
+    return null == e ? c : {
       bytes: e.bytesSent,
       framesCodec: e.framesEncoded,
       framesCodecError: null,
@@ -92,9 +92,9 @@ class C {
       minorResolution: null != e.resolution ? Math.min(e.resolution.height, e.resolution.width) : 0,
       majorResolution: null != e.resolution ? Math.max(e.resolution.height, e.resolution.width) : 0,
       timestamp: t,
-      encoder: g(e.encoderImplementationName),
+      encoder: S(e.encoderImplementationName),
       decoder: null,
-      codecType: I(e.codec.name),
+      codecType: T(e.codec.name),
       nackCount: e.nackCount,
       pliCount: e.pliCount,
       qpSum: e.qpSum,
@@ -103,20 +103,20 @@ class C {
       totalFreezesDuration: 0,
       totalPausesDuration: 0,
       totalFramesDuration: 0,
-      outboundSinkWant: null !== (r = e.sinkWantAsInt) && void 0 !== r ? r : null,
-      vmafScore: null !== (s = e.encoderQualityVmaf) && void 0 !== s ? s : null,
+      outboundSinkWant: null !== (s = e.sinkWantAsInt) && void 0 !== s ? s : null,
+      vmafScore: null !== (r = e.encoderQualityVmaf) && void 0 !== r ? r : null,
       psnrDb: null !== (a = e.encoderQualityPsnr) && void 0 !== a ? a : null,
       keyframes: null !== (o = e.keyFramesEncoded) && void 0 !== o ? o : null,
       framesDroppedRateLimiter: null !== (l = e.framesDroppedRateLimiter) && void 0 !== l ? l : null,
       framesDroppedEncoderQueue: null !== (u = e.framesDroppedEncoderQueue) && void 0 !== u ? u : null,
-      framesDroppedCongestionWindow: null !== (c = e.framesDroppedCongestionWindow) && void 0 !== c ? c : null
+      framesDroppedCongestionWindow: null !== (d = e.framesDroppedCongestionWindow) && void 0 !== d ? d : null
     }
   }
   constructor() {
     this.bytes = 0, this.framesCodec = 0, this.framesCodecError = null, this.framesNetwork = 0, this.resolution = 0, this.minorResolution = 0, this.majorResolution = 0, this.timestamp = 0, this.packets = 0, this.packetsLost = 0, this.framesDropped = 0, this.nackCount = 0, this.pliCount = 0, this.encoder = null, this.decoder = null, this.codecType = null, this.qpSum = 0, this.freezeCount = 0, this.pauseCount = 0, this.totalFreezesDuration = 0, this.totalPausesDuration = 0, this.totalFramesDuration = 0, this.vmafScore = null, this.psnrDb = null, this.outboundSinkWant = null, this.keyframes = null, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null
   }
 }
-class v {
+class C {
   get isVideoStopped() {
     return 0 !== this.videoStoppedReason
   }
@@ -124,12 +124,12 @@ class v {
     return this.videoStoppedWatch.elapsed()
   }
   collectAggregationStats(e, t) {
-    for (let i of S) {
+    for (let i of E) {
       var n;
-      let r = e[i];
-      if (null === r) continue;
-      let s = null !== (n = t[i]) && void 0 !== n ? n : 0;
-      s > r ? this.aggregatedProperties[i] += r : this.aggregatedProperties[i] += r - s
+      let s = e[i];
+      if (null === s) continue;
+      let r = null !== (n = t[i]) && void 0 !== n ? n : 0;
+      r > s ? this.aggregatedProperties[i] += s : this.aggregatedProperties[i] += s - r
     }
     this.aggregationDuration += e.timestamp - t.timestamp
   }
@@ -148,34 +148,34 @@ class v {
     this.collectAggregationStats(t, n);
     let {
       bytes: i,
-      framesCodec: r,
-      timestamp: s,
+      framesCodec: s,
+      timestamp: r,
       resolution: a,
       minorResolution: o,
       majorResolution: l,
       encoder: u,
-      decoder: c,
-      codecType: d
+      decoder: d,
+      codecType: c
     } = t, {
       timestamp: f
-    } = n, E = (s - f) / 1e3;
-    if (this.intervalTotal += E, this.resolutionTotal += a * E, this.minorResolutionTotal += o * E, this.majorResolutionTotal += l * E, null != u && null != d && "encoderBuckets" in this && (this.encoderBuckets[u] += E, this.codecBuckets[d] += E, null != t.codecType && "UNKNOWN" !== t.codecType && (this.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && (this.vmafScoreNum += 1, this.vmafScoreSum += e.vmafScore, this.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && (this.psnrDbNum += 1, this.psnrDbSum += e.psnrDb, this.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && (this.outboundSinkWantNum += 1, this.outboundSinkWantSum += e.outboundSinkWant)), null != c && null != d && "decoderBuckets" in this && (this.decoderBuckets[c] += E, this.codecBuckets[d] += E, null != t.codecType && "UNKNOWN" !== t.codecType && (this.decoderCodec = t.codecType)), this.statsWindow.length < 6) return;
+    } = n, _ = (r - f) / 1e3;
+    if (this.intervalTotal += _, this.resolutionTotal += a * _, this.minorResolutionTotal += o * _, this.majorResolutionTotal += l * _, null != u && null != c && "encoderBuckets" in this && (this.encoderBuckets[u] += _, this.codecBuckets[c] += _, null != t.codecType && "UNKNOWN" !== t.codecType && (this.encoderCodec = t.codecType), null != e.vmafScore && e.vmafScore >= 0 && (this.vmafScoreNum += 1, this.vmafScoreSum += e.vmafScore, this.vmafHistogram.addSample(e.vmafScore)), null != e.psnrDb && (this.psnrDbNum += 1, this.psnrDbSum += e.psnrDb, this.psnrHistogram.addSample(e.psnrDb)), null != e.outboundSinkWant && 0 !== e.outboundSinkWant && (this.outboundSinkWantNum += 1, this.outboundSinkWantSum += e.outboundSinkWant)), null != d && null != c && "decoderBuckets" in this && (this.decoderBuckets[d] += _, this.codecBuckets[c] += _, null != t.codecType && "UNKNOWN" !== t.codecType && (this.decoderCodec = t.codecType)), this.statsWindow.length < 6) return;
     let {
-      bytes: S,
-      framesCodec: m,
-      timestamp: T
+      bytes: E,
+      framesCodec: p,
+      timestamp: v
     } = this.statsWindow[this.statsWindow.length - 3];
-    _.forEach(e => {
-      a <= e && (this.resolutionBuckets[e] += E)
+    m.forEach(e => {
+      a <= e && (this.resolutionBuckets[e] += _)
     });
-    let g = (s - T) / 1e3,
-      I = (i - S) * 8 / g,
-      C = (r - m) / g;
+    let S = (r - v) / 1e3,
+      T = (i - E) * 8 / S,
+      I = (s - p) / S;
     h.forEach(e => {
-      I <= e && (this.bitrateBuckets[e] += E)
-    }), p.forEach(e => {
-      C <= e && (this.fpsBuckets[e] += E)
-    }), this.resolutionHistogram.addSample(a), this.bitrateHistogram.addSample(I), this.fpsHistogram.addSample(C), this.statsWindow.shift()
+      T <= e && (this.bitrateBuckets[e] += _)
+    }), g.forEach(e => {
+      I <= e && (this.fpsBuckets[e] += _)
+    }), this.resolutionHistogram.addSample(a), this.bitrateHistogram.addSample(T), this.fpsHistogram.addSample(I), this.statsWindow.shift()
   }
   addSystemResources() {
     let e = f.default.getCurrentCPUUsagePercent(),
@@ -205,7 +205,7 @@ class v {
       VP9: 0,
       AV1: 0,
       UNKNOWN: 0
-    }, this.statsWindow = [], this.cpuHistogram = new E.Histogram, this.memoryHistogram = new E.Histogram, this.fpsHistogram = new E.Histogram, this.bitrateHistogram = new E.Histogram, this.resolutionHistogram = new E.Histogram, this.decoderCodec = "UNKNOWN", this.aggregatedProperties = {
+    }, this.statsWindow = [], this.cpuHistogram = new _.Histogram, this.memoryHistogram = new _.Histogram, this.fpsHistogram = new _.Histogram, this.bitrateHistogram = new _.Histogram, this.resolutionHistogram = new _.Histogram, this.decoderCodec = "UNKNOWN", this.aggregatedProperties = {
       framesCodec: 0,
       framesNetwork: 0,
       packets: 0,
@@ -222,16 +222,16 @@ class v {
       totalPausesDuration: 0,
       totalFramesDuration: 0,
       keyframes: 0
-    }, this.aggregationDuration = 0, this.bitrateBuckets = {}, this.fpsBuckets = {}, this.resolutionBuckets = {}, this.resolutionTotal = 0, this.minorResolutionTotal = 0, this.majorResolutionTotal = 0, this.intervalTotal = 0, this.videoStoppedReason = 0, this.startTime = e.now(), this.videoStoppedWatch = new d.StopWatch(e), h.forEach(e => {
+    }, this.aggregationDuration = 0, this.bitrateBuckets = {}, this.fpsBuckets = {}, this.resolutionBuckets = {}, this.resolutionTotal = 0, this.minorResolutionTotal = 0, this.majorResolutionTotal = 0, this.intervalTotal = 0, this.videoStoppedReason = 0, this.startTime = e.now(), this.videoStoppedWatch = new c.StopWatch(e), h.forEach(e => {
       this.bitrateBuckets[e] = 0
-    }), p.forEach(e => {
+    }), g.forEach(e => {
       this.fpsBuckets[e] = 0
-    }), _.forEach(e => {
+    }), m.forEach(e => {
       this.resolutionBuckets[e] = 0
     })
   }
 }
-class A extends v {
+class A extends C {
   appendTargetRates(e, t, n) {
     if (this.statsWindow.length < 2) return;
     e = null != e ? e : 0, t = null != t ? t : 0, n = null != n ? n : 0;
@@ -250,6 +250,6 @@ class A extends v {
       vp8_libvpx: 0,
       uncategorized: 0,
       unknown: 0
-    }, this.encoderCodec = "UNKNOWN", this.targetFrames = 0, this.targetBytesMax = 0, this.targetBytesNetwork = 0, this.targetBitrateHistogram = new E.Histogram, this.averageEncodeTime = 0, this.vmafScoreSum = 0, this.vmafScoreNum = 0, this.vmafHistogram = new E.Histogram, this.psnrDbSum = 0, this.psnrDbNum = 0, this.psnrHistogram = new E.Histogram, this.outboundSinkWantSum = 0, this.outboundSinkWantNum = 0, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null
+    }, this.encoderCodec = "UNKNOWN", this.targetFrames = 0, this.targetBytesMax = 0, this.targetBytesNetwork = 0, this.targetBitrateHistogram = new _.Histogram, this.averageEncodeTime = 0, this.vmafScoreSum = 0, this.vmafScoreNum = 0, this.vmafHistogram = new _.Histogram, this.psnrDbSum = 0, this.psnrDbNum = 0, this.psnrHistogram = new _.Histogram, this.outboundSinkWantSum = 0, this.outboundSinkWantNum = 0, this.framesDroppedRateLimiter = null, this.framesDroppedEncoderQueue = null, this.framesDroppedCongestionWindow = null
   }
 }

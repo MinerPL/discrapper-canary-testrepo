@@ -8,17 +8,17 @@ var t = E("913144"),
   o = E("689988"),
   n = E("525065"),
   r = E("178406");
-let i = {},
-  a = {},
+let a = {},
+  i = {},
   I = null;
 async function s(e, _) {
-  null == i[e] && (i[e] = new Set), i[e].add(_), null == a[e] && (a[e] = Date.now()), S(e) && await T(e)
+  null == a[e] && (a[e] = new Set), a[e].add(_), null == i[e] && (i[e] = Date.now()), S(e) && await T(e)
 }
 
 function T(e) {
-  if (null == i[e]) return;
-  let _ = Array.from(i[e]);
-  i[e] = new Set, a[e] = Date.now(), requestAnimationFrame(async () => {
+  if (null == a[e]) return;
+  let _ = Array.from(a[e]);
+  a[e] = new Set, i[e] = Date.now(), requestAnimationFrame(async () => {
     await t.default.dispatch({
       type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH",
       guildId: e,
@@ -28,14 +28,14 @@ function T(e) {
 }
 
 function S(e) {
-  let _ = i[e];
+  let _ = a[e];
   if (null == _) return !1;
   let E = _.size >= function(e) {
       var _;
       let E = null !== (_ = n.default.getMemberCount(e)) && void 0 !== _ ? _ : 0;
       return E >= 75e3 ? 10 : 2
     }(e),
-    t = a[e];
+    t = i[e];
   if (E) return !0;
   if (null == t) return !1;
   let o = Date.now() - t,
@@ -48,12 +48,12 @@ function S(e) {
 }
 
 function N(e) {
-  i[e] = new Set, a[e] = null
+  a[e] = new Set, i[e] = null
 }
 class O extends o.default {
   handleInitialize() {
     null == I && null == I && (I = setInterval(() => {
-      for (let e in i) S(e) && T(e)
+      for (let e in a) S(e) && T(e)
     }, 1e4))
   }
   handleGuildMemberUpdate(e, _) {

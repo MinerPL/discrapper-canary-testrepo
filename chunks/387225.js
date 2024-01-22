@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return h
   }
-}), n("222007");
-var r = n("37983"),
-  o = n("884691"),
-  i = n("627445"),
-  a = n.n(i),
-  u = n("446674"),
-  s = n("77078"),
-  l = n("437822"),
-  c = n("135230"),
-  d = n("697218"),
-  f = n("782340");
-class p extends o.Component {
+}), s("222007");
+var n = s("37983"),
+  o = s("884691"),
+  i = s("627445"),
+  a = s.n(i),
+  l = s("446674"),
+  r = s("77078"),
+  d = s("437822"),
+  u = s("135230"),
+  c = s("697218"),
+  f = s("782340");
+class I extends o.Component {
   render() {
     let {
       color: e,
       look: t,
-      size: n
+      size: s
     } = this.props;
-    return (0, r.jsx)(s.Button, {
+    return (0, n.jsx)(r.Button, {
       look: t,
-      size: n,
+      size: s,
       color: e,
       disabled: this.state.isSendingVerificationEmail,
       onClick: this.handleResendVerification,
@@ -41,12 +41,12 @@ class p extends o.Component {
       null == t || t(), this.setState({
         isSendingVerificationEmail: !0
       }, () => {
-        l.default.verifyResend().then(() => (0, s.openModal)(t => (0, r.jsx)(s.ConfirmModal, {
+        d.default.verifyResend().then(() => (0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
           header: f.default.Messages.VERIFICATION_EMAIL_TITLE,
           confirmText: f.default.Messages.OKAY,
-          confirmButtonColor: s.Button.Colors.BRAND,
+          confirmButtonColor: r.Button.Colors.BRAND,
           ...t,
-          children: (0, r.jsx)(s.Text, {
+          children: (0, n.jsx)(r.Text, {
             variant: "text-md/normal",
             children: f.default.Messages.VERIFICATION_EMAIL_BODY.format({
               email: e.email
@@ -55,10 +55,10 @@ class p extends o.Component {
         }))).catch(e => {
           let {
             body: t
-          } = e, n = f.default.Messages.VERIFICATION_EMAIL_ERROR_BODY;
-          null != t && t.email && (n = t.email), (0, s.openModal)(e => (0, r.jsx)(c.default, {
+          } = e, s = f.default.Messages.VERIFICATION_EMAIL_ERROR_BODY;
+          null != t && t.email && (s = t.email), (0, r.openModal)(e => (0, n.jsx)(u.default, {
             title: f.default.Messages.VERIFICATION_EMAIL_ERROR_TITLE,
-            body: n,
+            body: s,
             ...e
           }))
         }).then(() => this.setState({
@@ -68,13 +68,13 @@ class p extends o.Component {
     }
   }
 }
-p.defaultProps = {
-  size: s.Button.Sizes.MEDIUM,
-  color: s.Button.Colors.BRAND
+I.defaultProps = {
+  size: r.Button.Sizes.MEDIUM,
+  color: r.Button.Colors.BRAND
 };
-var h = u.default.connectStores([d.default], () => {
-  let e = d.default.getCurrentUser();
+var h = l.default.connectStores([c.default], () => {
+  let e = c.default.getCurrentUser();
   return a(null != e, "ResendEmailVerificationButton: currentUser cannot be undefined"), {
     currentUser: e
   }
-})(p)
+})(I)

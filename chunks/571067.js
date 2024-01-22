@@ -27,16 +27,16 @@ function d(e) {
     onChange: n,
     placeholder: s,
     disableEveryoneRole: d,
-    helperText: C,
-    className: r
-  } = e, u = o(t, l, d);
+    helperText: r,
+    className: u
+  } = e, C = o(t, l, d);
   return (0, a.jsx)(i.default, {
-    roleRows: u,
+    roleRows: C,
     guildId: t,
     selectedRoleIds: l,
     onChange: (e, t) => n(t),
     placeholder: s,
-    helperText: C,
-    className: r
+    helperText: r,
+    className: u
   })
 }

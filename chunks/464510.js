@@ -1,18 +1,18 @@
 "use strict";
-var r = s("37549"),
+var r = n("37549"),
   i = r("%Symbol.species%", !0),
-  n = r("%TypeError%"),
-  c = s("900651"),
-  o = s("640107"),
-  f = s("81109"),
-  u = s("749578"),
-  a = s("865435"),
-  d = s("778841");
-t.exports = function(t, e) {
-  if (!d(e) || e < 0) throw new n("Assertion failed: length must be an integer >= 0");
-  if (!f(t)) return c(e);
-  var s = o(t, "constructor");
-  if (i && "Object" === a(s) && null === (s = o(s, i)) && (s = void 0), void 0 === s) return c(e);
-  if (!u(s)) throw new n("C must be a constructor");
-  return new s(e)
+  o = r("%TypeError%"),
+  s = n("900651"),
+  a = n("640107"),
+  c = n("81109"),
+  u = n("749578"),
+  d = n("865435"),
+  l = n("778841");
+e.exports = function(e, t) {
+  if (!l(t) || t < 0) throw new o("Assertion failed: length must be an integer >= 0");
+  if (!c(e)) return s(t);
+  var n = a(e, "constructor");
+  if (i && "Object" === d(n) && null === (n = a(n, i)) && (n = void 0), void 0 === n) return s(t);
+  if (!u(n)) throw new o("C must be a constructor");
+  return new n(t)
 }

@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var r = n("862205");
-let i = (0, r.createExperiment)({
+var n = l("862205");
+let r = (0, n.createExperiment)({
   kind: "user",
   id: "2023-12_create_guild_modal_themeing",
   label: "Create Guild Modal Force Light Theme",
@@ -20,16 +20,16 @@ let i = (0, r.createExperiment)({
     }
   }]
 });
-var l = e => {
+var a = e => {
   let {
     location: t,
-    autoTrackExposure: n = !0,
-    trackExposureOptions: r = {}
+    autoTrackExposure: l = !0,
+    trackExposureOptions: n = {}
   } = e;
-  return i.useExperiment({
+  return r.useExperiment({
     location: t
   }, {
-    autoTrackExposure: n,
-    trackExposureOptions: r
+    autoTrackExposure: l,
+    trackExposureOptions: n
   })
 }

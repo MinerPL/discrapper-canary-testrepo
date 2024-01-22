@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("54239"),
   m = l("819689"),
   p = l("850391"),
-  E = l("884351"),
-  T = l("42203"),
+  T = l("884351"),
+  E = l("42203"),
   _ = l("27618"),
   S = l("158998"),
   h = l("718422"),
@@ -45,8 +45,8 @@ function v(e) {
           valid: n
         } = e;
         n && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
-          let t = T.default.getChannel(e);
-          o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, E.default.parse(t, l)), (0, f.popLayer)()
+          let t = E.default.getChannel(e);
+          o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, T.default.parse(t, l)), (0, f.popLayer)()
         }), null == s || s())
       }), !0
     }

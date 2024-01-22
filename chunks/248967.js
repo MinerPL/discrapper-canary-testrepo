@@ -1,36 +1,36 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   stopLurkingAll: function() {
     return u
   },
   stopLurking: function() {
-    return s
+    return d
   }
-}), l("222007");
-var d = l("872717"),
-  a = l("913144"),
-  r = l("945956"),
-  n = l("449008"),
-  o = l("267567"),
-  i = l("49111");
+}), n("222007");
+var i = n("872717"),
+  s = n("913144"),
+  r = n("945956"),
+  a = n("449008"),
+  o = n("267567"),
+  l = n("49111");
 async function u(e) {
   let t = o.default.lurkingGuildIds(),
-    l = t.filter(t => !e.includes(t));
-  0 !== l.length && (a.default.dispatch({
+    n = t.filter(t => !e.includes(t));
+  0 !== n.length && (s.default.dispatch({
     type: "GUILD_STOP_LURKING",
     ignoredGuildIds: e
-  }), await Promise.all(l.map(async e => {
+  }), await Promise.all(n.map(async e => {
     let t = o.default.getLurkingSource();
     try {
-      await d.default.delete({
-        url: i.Endpoints.GUILD_LEAVE(e),
+      await i.default.delete({
+        url: l.Endpoints.GUILD_LEAVE(e),
         body: {
           lurking: !0
         },
         oldFormErrors: !0
       })
-    } catch (l) {
-      a.default.dispatch({
+    } catch (n) {
+      s.default.dispatch({
         type: "GUILD_STOP_LURKING_FAILURE",
         lurkingGuildId: e,
         lurkingSource: t
@@ -38,13 +38,13 @@ async function u(e) {
     }
   })))
 }
-async function s() {
+async function d() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
     t = o.default.lurkingGuildIds();
   if (0 === t.length) return;
-  let l = null == e || !t.includes(e);
-  if (!l) return;
-  let d = r.default.getGuildId(),
-    a = [e, d].filter(n.isNotNullish);
-  await u(a)
+  let n = null == e || !t.includes(e);
+  if (!n) return;
+  let i = r.default.getGuildId(),
+    s = [e, i].filter(a.isNotNullish);
+  await u(s)
 }

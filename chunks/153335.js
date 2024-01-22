@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return C
   }
 });
 var i = n("37983"),
@@ -9,10 +9,10 @@ var i = n("37983"),
   l = n("627445"),
   a = n.n(l),
   s = n("446674"),
-  u = n("913144"),
-  o = n("775433"),
-  d = n("685665"),
-  c = n("598981"),
+  o = n("913144"),
+  u = n("775433"),
+  c = n("685665"),
+  d = n("598981"),
   f = n("846286"),
   p = n("697218"),
   h = n("10514"),
@@ -21,54 +21,54 @@ var i = n("37983"),
   _ = n("333955"),
   I = n("599733"),
   E = n("49111"),
-  C = n("782340"),
-  T = e => {
+  T = n("782340"),
+  C = e => {
     var t;
     let n, {
         listing: l,
-        guildId: T,
+        guildId: C,
         groupListingId: g,
         analyticsLocation: A,
         showBenefitsFirst: N,
-        onComplete: v,
-        forcesTransitionToGuild: b
+        onComplete: b,
+        forcesTransitionToGuild: v
       } = e,
       L = null == l ? void 0 : l.subscription_plans[0],
-      P = null == l ? void 0 : l.application_id,
-      O = null == L ? void 0 : L.id,
-      F = (null == l ? void 0 : l.published) === !0,
-      x = null == L ? void 0 : L.sku_id,
-      R = (0, s.useStateFromStores)([h.default], () => null != O ? h.default.get(O) : null),
-      y = (0, S.useApplication)(P),
+      O = null == l ? void 0 : l.application_id,
+      P = null == L ? void 0 : L.id,
+      x = (null == l ? void 0 : l.published) === !0,
+      F = null == L ? void 0 : L.sku_id,
+      R = (0, s.useStateFromStores)([h.default], () => null != P ? h.default.get(P) : null),
+      y = (0, S.useApplication)(O),
       k = (0, S.useSubscriptionListingsForGroup)(g, {
         includeSoftDeleted: !0
       }),
       G = k.map(e => e.subscription_plans[0].id),
       {
         analyticsLocations: H
-      } = (0, d.default)(),
+      } = (0, c.default)(),
       {
         activeSubscription: M,
-        activeEntitlement: w
-      } = (0, S.useActiveSubscriptionListingForApplication)(P, T),
-      D = (0, S.useEligibleApplicationSubscriptionGuilds)(P, T),
-      U = (0, c.default)(),
-      j = null != l && (0, m.isApplicationUserSubscription)(l.sku_flags),
-      B = null != w && w.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-      V = null == w || B,
-      K = null == w || G.length > 1,
-      W = null != T || D.length > 0,
-      z = j && B,
-      Z = null != R && null != y && V && K && (W || j) && !z;
-    V ? W ? z && null != R && (n = C.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
+        activeEntitlement: j
+      } = (0, S.useActiveSubscriptionListingForApplication)(O, C),
+      w = (0, S.useEligibleApplicationSubscriptionGuilds)(O, C),
+      D = (0, d.default)(),
+      U = null != l && (0, m.isApplicationUserSubscription)(l.sku_flags),
+      B = null != j && j.userId === (null === (t = p.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+      V = null == j || B,
+      K = null == j || G.length > 1,
+      W = null != C || w.length > 0,
+      z = U && B,
+      Z = null != R && null != y && V && K && (W || U) && !z;
+    V ? W ? z && null != R && (n = T.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
       tierName: R.name
-    })) : n = C.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = C.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
-      F && null != x && U && u.default.wait(() => {
-        (0, o.fetchSubscriptionPlansForSKU)(x)
+    })) : n = T.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = T.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
+      x && null != F && D && o.default.wait(() => {
+        (0, u.fetchSubscriptionPlansForSKU)(F)
       })
-    }, [F, x, U]);
+    }, [x, F, D]);
     let Q = r.useCallback(() => {
-      a(null != l, "No subscription listing"), a(null != y, "No application"), a(null != L, "No subscription plan"), a(F, "Cannot purchase this unpublished plan");
+      a(null != l, "No subscription listing"), a(null != y, "No application"), a(null != L, "No subscription plan"), a(x, "Cannot purchase this unpublished plan");
       let e = () => {
         (0, f.openApplicationSubscriptionPaymentModal)({
           activeSubscription: M,
@@ -81,22 +81,22 @@ var i = n("37983"),
           }),
           initialPlanId: L.id,
           skuId: L.sku_id,
-          guildId: T,
-          eligibleApplicationSubscriptionGuilds: D,
+          guildId: C,
+          eligibleApplicationSubscriptionGuilds: w,
           planGroup: G,
           listing: l,
           application: y,
           showBenefitsFirst: N,
-          onComplete: v,
-          forcesTransitionToGuild: b
+          onComplete: b,
+          forcesTransitionToGuild: v
         })
       };
-      !W && j ? (0, I.confirmNoSharedServerSubscribeWarningModal)({
+      !W && U ? (0, I.confirmNoSharedServerSubscribeWarningModal)({
         application: y,
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [F, l, L, G, y, T, W, j, H, A, M, N, D, v, b]);
+    }, [x, l, L, G, y, C, W, U, H, A, M, N, w, b, v]);
     return {
       openModal: Q,
       canOpenModal: Z,

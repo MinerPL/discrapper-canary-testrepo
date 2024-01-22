@@ -32,8 +32,8 @@ var s = n("37983"),
   x = n("916565"),
   R = n("850391"),
   y = n("149022"),
-  D = n("159492"),
-  O = n("998415"),
+  O = n("159492"),
+  D = n("998415"),
   j = n("228800"),
   P = n("681060"),
   b = n("939563"),
@@ -101,7 +101,7 @@ function ey(e) {
     ...n
   })
 }
-class eD extends a.PureComponent {
+class eO extends a.PureComponent {
   componentDidMount() {
     el.default.addChangeListener(this.draftDidChange)
   }
@@ -417,7 +417,7 @@ class eD extends a.PureComponent {
       editorTextContent: this.state.textValue,
       setValue: this.handleSetValue,
       canOnlyUseTextCommands: e
-    }), this.renderAppLauncherButton = () => (0, s.jsx)(D.default, {}), this.renderApplicationCommandIcon = (e, t, n) => (0, s.jsx)(O.default, {
+    }), this.renderAppLauncherButton = () => (0, s.jsx)(O.default, {}), this.renderApplicationCommandIcon = (e, t, n) => (0, s.jsx)(D.default, {
       className: n,
       command: e,
       section: t,
@@ -425,7 +425,7 @@ class eD extends a.PureComponent {
     })
   }
 }
-class eO extends a.PureComponent {
+class eD extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       channel: n
@@ -474,7 +474,7 @@ class eO extends a.PureComponent {
       tutorialId: "writing-messages",
       position: "left",
       offsetX: 75,
-      children: (0, s.jsx)(eD, {
+      children: (0, s.jsx)(eO, {
         focused: T,
         highlighted: M,
         channel: n,
@@ -665,7 +665,7 @@ var ej = a.memo(function(e) {
     var e, t, s;
     return null != h && null !== (s = null === (e = er.default.getMember(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "", null == h ? void 0 : h.id)) || void 0 === e ? void 0 : e.isPending) && void 0 !== s && s
   }), p = (0, d.useStateFromStores)([Y.default], () => Y.default.isEnabled()), m = (0, J.default)(t.id), E = (0, B.default)(t.id);
-  return (0, s.jsx)(eO, {
+  return (0, s.jsx)(eD, {
     channel: t,
     isEditing: null != (0, d.useStateFromStores)([ei.default], () => ei.default.getEditingMessageId(t.id)),
     hasModalOpen: (0, c.useModalsStore)(c.hasAnyModalOpenSelector),

@@ -1,13 +1,13 @@
 n("781738");
-var e = n("559494"),
-  o = n("43332"),
-  i = n("285162"),
-  u = n("6906"),
+var r = n("559494"),
+  i = n("43332"),
+  o = n("285162"),
+  s = n("6906"),
   a = /^\[object .+?Constructor\]$/,
   c = Object.prototype,
-  s = Function.prototype.toString,
-  f = c.hasOwnProperty,
-  p = RegExp("^" + s.call(f).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
-t.exports = function(t) {
-  return !(!i(t) || o(t)) && (e(t) ? p : a).test(u(t))
+  u = Function.prototype.toString,
+  d = c.hasOwnProperty,
+  l = RegExp("^" + u.call(d).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$");
+e.exports = function(e) {
+  return !(!o(e) || i(e)) && (r(e) ? l : a).test(s(e))
 }

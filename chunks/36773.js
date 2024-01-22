@@ -8,8 +8,8 @@ var t = E("37983"),
   o = E("884691"),
   n = E("516555"),
   r = E("526887"),
-  i = E("172858"),
-  a = E("807181");
+  a = E("172858"),
+  i = E("807181");
 
 function I(e) {
   let {
@@ -23,21 +23,21 @@ function I(e) {
     children: [(0, t.jsx)(r.ConfettiCannonContextProvider, {
       confettiCanvas: s,
       spriteCanvas: E,
-      baseConfig: i.COMMON_CONFETTI_BASE_CONFIG,
+      baseConfig: a.COMMON_CONFETTI_BASE_CONFIG,
       addClickListener: R,
       removeClickListener: A,
       children: _
     }), (0, t.jsx)(n.ConfettiCanvas, {
       ref: T,
-      className: a.canvas,
-      environment: i.COMMON_CONFETTI_ENVIRONMENT,
+      className: i.canvas,
+      environment: a.COMMON_CONFETTI_ENVIRONMENT,
       onClick: N ? l : void 0
     }), (0, t.jsx)(n.SpriteCanvas, {
       ref: I,
-      colors: i.COMMON_CONFETTI_COLORS,
-      sprites: i.COMMON_CONFETTI_SPRITES,
-      spriteWidth: i.COMMON_CONFETTI_MAX_SPRITE_SIZE,
-      spriteHeight: i.COMMON_CONFETTI_MAX_SPRITE_SIZE
+      colors: a.COMMON_CONFETTI_COLORS,
+      sprites: a.COMMON_CONFETTI_SPRITES,
+      spriteWidth: a.COMMON_CONFETTI_MAX_SPRITE_SIZE,
+      spriteHeight: a.COMMON_CONFETTI_MAX_SPRITE_SIZE
     })]
   })
 }

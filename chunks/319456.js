@@ -1,9 +1,9 @@
-t.exports = function(t) {
-  return function(r, n, e) {
-    for (var o = -1, i = Object(r), u = e(r), a = u.length; a--;) {
-      var c = u[t ? a : ++o];
-      if (!1 === n(i[c], c, i)) break
+e.exports = function(e) {
+  return function(t, n, r) {
+    for (var i = -1, o = Object(t), s = r(t), a = s.length; a--;) {
+      var c = s[e ? a : ++i];
+      if (!1 === n(o[c], c, o)) break
     }
-    return r
+    return t
   }
 }

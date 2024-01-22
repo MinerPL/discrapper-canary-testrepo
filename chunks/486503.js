@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 }), n("222007");
-var s = n("42203"),
-  i = n("455079");
+var i = n("42203"),
+  s = n("455079");
 let r = new Set,
   a = new Set,
   o = !1;
 
-function d(e) {
+function l(e) {
   return e.isSpam
 }
 
@@ -22,43 +22,43 @@ function u(e) {
   return t
 }
 
-function l() {
-  r.clear(), a.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
+function d() {
+  r.clear(), a.clear(), Object.values(i.default.getMutablePrivateChannels()).forEach(e => {
     u(e)
   }), o = !0
 }
 
-function f(e) {
+function c(e) {
   let {
     channelId: t
   } = e;
   a.add(t)
 }
 
-function _(e) {
+function f(e) {
   let {
     channel: t
   } = e;
   return u(t)
 }
 
-function c(e) {
+function _(e) {
   let {
     channels: t
   } = e;
   for (let e of t) u(e)
 }
 
-function g(e) {
+function h(e) {
   let {
     channel: t
   } = e, n = !1;
   return r.has(t.id) && (r.delete(t.id), n = !0), n
 }
-class m extends i.default {
+class g extends s.default {
   takeSnapshot() {
     return {
-      version: m.LATEST_SNAPSHOT_VERSION,
+      version: g.LATEST_SNAPSHOT_VERSION,
       data: Array.from(r)
     }
   }
@@ -79,18 +79,18 @@ class m extends i.default {
   }
   constructor() {
     super(), this.loadCache = () => {
-      let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
       null != e && (r = new Set(e))
     }, this.registerActionHandlers({
-      CONNECTION_OPEN: l,
-      CONNECTION_OPEN_SUPPLEMENTAL: l,
+      CONNECTION_OPEN: d,
+      CONNECTION_OPEN_SUPPLEMENTAL: d,
       CACHE_LOADED_LAZY: this.loadCache,
-      CHANNEL_CREATE: _,
-      CHANNEL_UPDATES: c,
-      CHANNEL_DELETE: g,
-      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: f
-    }), this.waitFor(s.default)
+      CHANNEL_CREATE: f,
+      CHANNEL_UPDATES: _,
+      CHANNEL_DELETE: h,
+      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
+    }), this.waitFor(i.default)
   }
 }
-m.displayName = "SpamMessageRequestStore", m.LATEST_SNAPSHOT_VERSION = 1;
-var h = new m
+g.displayName = "SpamMessageRequestStore", g.LATEST_SNAPSHOT_VERSION = 1;
+var m = new g

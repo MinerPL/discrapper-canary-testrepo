@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var r = n("884691"),
-  o = n("275370"),
-  a = n.n(o),
-  i = {};
+  i = n("275370"),
+  o = n.n(i),
+  s = {};
 
-function s(e, t) {
-  void 0 === t && (t = a);
-  var n = (0, r.useRef)(i),
-    o = n.current;
+function a(e, t) {
+  void 0 === t && (t = o);
+  var n = (0, r.useRef)(s),
+    i = n.current;
   return (0, r.useEffect)(function() {
-    n.current = o
-  }), n.current !== i && t(e, n.current) || (o = e), o
+    n.current = i
+  }), n.current !== s && t(e, n.current) || (i = e), i
 }

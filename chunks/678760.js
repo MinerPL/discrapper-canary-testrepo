@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   useVisuallyHidden: function() {
-    return s
+    return a
   },
   VisuallyHidden: function() {
     return c
   }
 }), n("222007");
 var r = n("290895"),
-  o = n("884691"),
-  a = n("495912");
-let i = {
+  i = n("884691"),
+  o = n("495912");
+let s = {
   border: 0,
   clip: "rect(0 0 0 0)",
   clipPath: "inset(50%)",
@@ -23,27 +23,27 @@ let i = {
   whiteSpace: "nowrap"
 };
 
-function s() {
+function a() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
     {
       style: t,
       isFocusable: n
     } = e,
-    [r, s] = (0, o.useState)(!1),
+    [r, a] = (0, i.useState)(!1),
     {
       focusWithinProps: c
-    } = (0, a.useFocusWithin)({
+    } = (0, o.useFocusWithin)({
       isDisabled: !n,
-      onFocusWithinChange: e => s(e)
+      onFocusWithinChange: e => a(e)
     }),
-    l = (0, o.useMemo)(() => r ? t : t ? {
-      ...i,
+    u = (0, i.useMemo)(() => r ? t : t ? {
+      ...s,
       ...t
-    } : i, [r]);
+    } : s, [r]);
   return {
     visuallyHiddenProps: {
       ...c,
-      style: l
+      style: u
     }
   }
 }
@@ -53,10 +53,10 @@ function c(e) {
     children: t,
     elementType: Element = "div",
     isFocusable: n,
-    style: a,
-    ...i
+    style: o,
+    ...s
   } = e, {
     visuallyHiddenProps: c
-  } = s(e);
-  return o.createElement(Element, (0, r.mergeProps)(i, c), t)
+  } = a(e);
+  return i.createElement(Element, (0, r.mergeProps)(s, c), t)
 }

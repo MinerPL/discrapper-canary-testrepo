@@ -11,8 +11,8 @@ let a = {
     guildNoticeDismissed: []
   },
   l = new Map,
-  u = new Set;
-class o extends i.default.PersistedStore {
+  o = new Set;
+class u extends i.default.PersistedStore {
   initialize() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
     r = e
@@ -29,11 +29,11 @@ class o extends i.default.PersistedStore {
     return (null === (n = l.get(e)) || void 0 === n ? void 0 : n.has(t)) === !0
   }
   canShowToggleTooltip(e) {
-    return u.has(e)
+    return o.has(e)
   }
 }
-o.displayName = "CommandsMigrationStore", o.persistKey = "CommandsMigrationStore";
-var c = new o(s.default, {
+u.displayName = "CommandsMigrationStore", u.persistKey = "CommandsMigrationStore";
+var c = new u(s.default, {
   COMMANDS_MIGRATION_UPDATE_SUCCESS: function(e) {
     let {
       guildId: t,
@@ -53,12 +53,12 @@ var c = new o(s.default, {
       guildId: n,
       integrationId: r
     } = e;
-    null === (t = l.get(n)) || void 0 === t || t.clear(), u.add(r)
+    null === (t = l.get(n)) || void 0 === t || t.clear(), o.add(r)
   },
   COMMANDS_MIGRATION_TOGGLE_TOOLTIP_DISMISSED: function(e) {
     let {
       integrationId: t
     } = e;
-    u.delete(t)
+    o.delete(t)
   }
 })

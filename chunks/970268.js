@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return B
   },
   default: function() {
-    return Q
+    return W
   }
 }), n("424973"), n("222007");
 var a, l, s, i, r = n("884691"),
@@ -23,8 +23,8 @@ var a, l, s, i, r = n("884691"),
   E = n("819689"),
   m = n("267363"),
   p = n("206230"),
-  S = n("379881"),
-  g = n("542827"),
+  g = n("379881"),
+  S = n("542827"),
   N = n("615387"),
   _ = n("401690"),
   T = n("689275"),
@@ -177,7 +177,7 @@ class H extends o.EventEmitter {
         }))
       }), p.default.useReducedMotion && this.deleteChannel(t), this.maybeLoadMore()
     }, this.markGuildRead = e => {
-      h.default.wait(() => (0, g.default)([e], w.AnalyticsSections.INBOX)), this.setState({
+      h.default.wait(() => (0, S.default)([e], w.AnalyticsSections.INBOX)), this.setState({
         channels: this.state.channels.filter(t => t.guildId !== e)
       }), this.maybeLoadMore()
     }, this.deleteChannel = e => {
@@ -336,12 +336,12 @@ function z(e, t, n, a) {
     mentionCount: u,
     sortOrder: function(e, t, n) {
       let a = x.default.getChannel(t);
-      if (S.default.isFavorite(t)) return 0;
+      if (g.default.isFavorite(t)) return 0;
       if (a.isPrivate()) return 1;
       if (j.default.getMentionCount(t) > 0) return 2;
       if (null != n) {
         let e = P.default.extractTimestamp(n);
-        if (Date.now() - e > W) return 7;
+        if (Date.now() - e > Q) return 7;
         if (Date.now() - e > K) return 5
       }
       if (a.isThread()) {
@@ -367,9 +367,9 @@ function z(e, t, n, a) {
   })
 }
 let K = 2 * U.default.Millis.DAY,
-  W = 10 * U.default.Millis.DAY;
+  Q = 10 * U.default.Millis.DAY;
 
-function Q(e) {
+function W(e) {
   let [t, n] = r.useState(() => new H(Y(), e)), [a, l] = r.useState(!1), s = r.useRef(Date.now()), [i, o] = r.useState(() => Y());
   return r.useEffect(() => {
     let e = e => o(e);

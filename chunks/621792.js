@@ -1,4 +1,4 @@
 var r = {}.toString;
-t.exports = Array.isArray || function(t) {
-  return "[object Array]" == r.call(t)
+e.exports = Array.isArray || function(e) {
+  return "[object Array]" == r.call(e)
 }

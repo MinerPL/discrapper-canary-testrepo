@@ -17,7 +17,7 @@ let h = 1 * u.default.Millis.HOUR,
   E = 7 * u.default.Millis.DAY,
   m = 1 * u.default.Millis.DAY,
   p = s.default.get("lastNonRequiredUpdateShown", Date.now()),
-  S = new o.default("AutoUpdateManager");
+  g = new o.default("AutoUpdateManager");
 a = class {
   destroy() {
     clearInterval(this._checkInterval)
@@ -27,7 +27,7 @@ a = class {
   }
   async _requestNewUpdaterBootstrap() {
     let e;
-    S.log("Bootstrapping new updater host...");
+    g.log("Bootstrapping new updater host...");
     try {
       await f.default.ensureModule("discord_updater_bootstrap"), e = f.default.requireModule("discord_updater_bootstrap"), this._bootstrapper = e
     } catch (e) {
@@ -37,7 +37,7 @@ a = class {
     try {
       this._handleCheckingForUpdates(), await e.bootstrap(f.default.releaseChannel, "win"), this.updateAvailable = !0, this.hasNativeUpdate = !0, this._handleUpdateDownloaded(!0)
     } catch (e) {
-      S.log("Failed to bootstrap new updater:", e), this._handleNativeUpdateNotAvailable(), c.default.captureException(e)
+      g.log("Failed to bootstrap new updater:", e), this._handleNativeUpdateNotAvailable(), c.default.captureException(e)
     }
   }
   _emitCallbacks() {
@@ -68,7 +68,7 @@ a = class {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "b85d8e40a405122188573d95144b62805baac385" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "2e55c69fd5262dd899bf447f430e36856c1eb155" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : m;
         if (Date.now() - p > t) return s.default.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)

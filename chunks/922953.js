@@ -21,9 +21,9 @@ var a = n("37983"),
 function p() {
   let e = (0, s.useStateFromStores)([u.default], () => u.default.devToolsEnabled),
     [t, p] = l.useState(!1),
-    [S, g] = l.useState(0),
+    [g, S] = l.useState(0),
     N = e => {
-      clearTimeout(S), g(setTimeout(() => {
+      clearTimeout(g), S(setTimeout(() => {
         p(e)
       }, 100))
     };

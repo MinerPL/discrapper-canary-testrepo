@@ -8,10 +8,10 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("834022"), n("881410"), n("424973");
 var i = n("611221"),
-  r = n("449008");
+  s = n("449008");
 
-function s(e) {
-  let t = e.children.map(e => s(e));
+function r(e) {
+  let t = e.children.map(e => r(e));
   return [e.messages.map(e => e.message), ...t].flat()
 }
 
@@ -24,11 +24,11 @@ function a(e) {
       case i.GuildFeedItemTypes.MESSAGE_BUNDLE:
         return e.messages.map(e => e.message);
       case i.GuildFeedItemTypes.CONVERSATION:
-        return s(e.root);
+        return r(e.root);
       default:
-        (0, r.assertNever)(e)
+        (0, s.assertNever)(e)
     }
-  }).filter(r.isNotNullish)
+  }).filter(s.isNotNullish)
 }
 
 function o(e) {
@@ -45,11 +45,11 @@ function o(e) {
         t.push(...e.messages.map(e => e.message.thread));
         break;
       case i.GuildFeedItemTypes.CONVERSATION:
-        t.push(...s(e.root).map(e => e.thread));
+        t.push(...r(e.root).map(e => e.thread));
         break;
       default:
-        (0, r.assertNever)(e)
+        (0, s.assertNever)(e)
     }
     return t
-  }).filter(r.isNotNullish)
+  }).filter(s.isNotNullish)
 }

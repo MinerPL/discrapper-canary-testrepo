@@ -1,7 +1,7 @@
 "use strict";
 var r = Object.prototype.toString;
-t.exports = function(t) {
-  var e = r.call(t),
-    s = "[object Arguments]" === e;
-  return !s && (s = "[object Array]" !== e && null !== t && "object" == typeof t && "number" == typeof t.length && t.length >= 0 && "[object Function]" === r.call(t.callee)), s
+e.exports = function(e) {
+  var t = r.call(e),
+    n = "[object Arguments]" === t;
+  return !n && (n = "[object Array]" !== t && null !== e && "object" == typeof e && "number" == typeof e.length && e.length >= 0 && "[object Function]" === r.call(e.callee)), n
 }

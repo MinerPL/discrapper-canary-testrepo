@@ -1,65 +1,65 @@
 "use strict";
 n.r(t), n.d(t, {
   useGridState: function() {
-    return i
+    return s
   },
   GridCollection: function() {
-    return s
+    return a
   }
 }), n("222007"), n("424973");
 var r = n("872834"),
-  o = n("884691"),
-  a = n("919740");
+  i = n("884691"),
+  o = n("919740");
 
-function i(e) {
+function s(e) {
   let {
     collection: t,
     focusMode: n
-  } = e, i = (0, a.useMultipleSelectionState)(e), s = (0, o.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), c = i.setFocusedKey;
-  i.setFocusedKey = (e, o) => {
+  } = e, s = (0, o.useMultipleSelectionState)(e), a = (0, i.useMemo)(() => e.disabledKeys ? new Set(e.disabledKeys) : new Set, [e.disabledKeys]), c = s.setFocusedKey;
+  s.setFocusedKey = (e, i) => {
     if ("cell" === n && null != e) {
       let n = t.getItem(e);
       if ((null == n ? void 0 : n.type) === "item") {
-        var a, i;
-        let s = (0, r.getChildNodes)(n, t);
-        e = "last" === o ? null === (a = (0, r.getLastItem)(s)) || void 0 === a ? void 0 : a.key : null === (i = (0, r.getFirstItem)(s)) || void 0 === i ? void 0 : i.key
+        var o, s;
+        let a = (0, r.getChildNodes)(n, t);
+        e = "last" === i ? null === (o = (0, r.getLastItem)(a)) || void 0 === o ? void 0 : o.key : null === (s = (0, r.getFirstItem)(a)) || void 0 === s ? void 0 : s.key
       }
     }
-    c(e, o)
+    c(e, i)
   };
-  let l = (0, o.useMemo)(() => new a.SelectionManager(t, i), [t, i]),
-    u = (0, o.useRef)(null);
-  return (0, o.useEffect)(() => {
-    if (null != i.focusedKey && !t.getItem(i.focusedKey)) {
+  let u = (0, i.useMemo)(() => new o.SelectionManager(t, s), [t, s]),
+    d = (0, i.useRef)(null);
+  return (0, i.useEffect)(() => {
+    if (null != s.focusedKey && !t.getItem(s.focusedKey)) {
       let e;
-      let n = u.current.getItem(i.focusedKey),
-        o = null != n.parentKey && ("cell" === n.type || "rowheader" === n.type || "column" === n.type) ? u.current.getItem(n.parentKey) : n,
-        a = u.current.rows,
-        s = t.rows,
-        c = a.length - s.length,
-        d = Math.min(c > 1 ? Math.max(o.index - c + 1, 0) : o.index, s.length - 1);
-      for (; d >= 0;) {
-        if (!l.isDisabled(s[d].key) && "headerrow" !== s[d].type) {
-          e = s[d];
+      let n = d.current.getItem(s.focusedKey),
+        i = null != n.parentKey && ("cell" === n.type || "rowheader" === n.type || "column" === n.type) ? d.current.getItem(n.parentKey) : n,
+        o = d.current.rows,
+        a = t.rows,
+        c = o.length - a.length,
+        l = Math.min(c > 1 ? Math.max(i.index - c + 1, 0) : i.index, a.length - 1);
+      for (; l >= 0;) {
+        if (!u.isDisabled(a[l].key) && "headerrow" !== a[l].type) {
+          e = a[l];
           break
         }
-        d < s.length - 1 ? d++ : (d > o.index && (d = o.index), d--)
+        l < a.length - 1 ? l++ : (l > i.index && (l = i.index), l--)
       }
       if (e) {
-        let a = e.hasChildNodes ? [...(0, r.getChildNodes)(e, t)] : [],
-          s = e.hasChildNodes && o !== n && n.index < a.length ? a[n.index].key : e.key;
-        i.setFocusedKey(s)
-      } else i.setFocusedKey(null)
+        let o = e.hasChildNodes ? [...(0, r.getChildNodes)(e, t)] : [],
+          a = e.hasChildNodes && i !== n && n.index < o.length ? o[n.index].key : e.key;
+        s.setFocusedKey(a)
+      } else s.setFocusedKey(null)
     }
-    u.current = t
-  }, [t, l, i, i.focusedKey]), {
+    d.current = t
+  }, [t, u, s, s.focusedKey]), {
     collection: t,
-    disabledKeys: s,
+    disabledKeys: a,
     isKeyboardNavigationDisabled: !1,
-    selectionManager: l
+    selectionManager: u
   }
 }
-class s {
+class a {
   *[Symbol.iterator]() {
     yield*[...this.rows]
   }
@@ -101,18 +101,18 @@ class s {
     let t;
     this.keyMap = new Map, this.keyMap = new Map, this.columnCount = null == e ? void 0 : e.columnCount, this.rows = [];
     let n = t => {
-        let o, a = this.keyMap.get(t.key);
+        let i, o = this.keyMap.get(t.key);
         e.visitNode && (t = e.visitNode(t)), this.keyMap.set(t.key, t);
-        let i = new Set;
-        for (let e of t.childNodes) "cell" === e.type && null == e.parentKey && (e.parentKey = t.key), i.add(e.key), o ? (o.nextKey = e.key, e.prevKey = o.key) : e.prevKey = null, n(e), o = e;
-        if (o && (o.nextKey = null), a)
-          for (let e of a.childNodes) !i.has(e.key) && r(e)
+        let s = new Set;
+        for (let e of t.childNodes) "cell" === e.type && null == e.parentKey && (e.parentKey = t.key), s.add(e.key), i ? (i.nextKey = e.key, e.prevKey = i.key) : e.prevKey = null, n(e), i = e;
+        if (i && (i.nextKey = null), o)
+          for (let e of o.childNodes) !s.has(e.key) && r(e)
       },
       r = e => {
         for (let t of (this.keyMap.delete(e.key), e.childNodes)) this.keyMap.get(t.key) === t && r(t)
       };
     e.items.forEach((e, r) => {
-      let o = {
+      let i = {
         level: 0,
         key: "row-" + r,
         type: "row",
@@ -123,7 +123,7 @@ class s {
         textValue: void 0,
         ...e
       };
-      t ? (t.nextKey = o.key, o.prevKey = t.key) : o.prevKey = null, this.rows.push(o), n(o), t = o
+      t ? (t.nextKey = i.key, i.prevKey = t.key) : i.prevKey = null, this.rows.push(i), n(i), t = i
     }), t && (t.nextKey = null)
   }
 }

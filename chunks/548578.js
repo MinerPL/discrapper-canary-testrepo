@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_CACHE_AGE_MS: function() {
-    return i
+    return s
   },
   CACHE_VERSION: function() {
     return r
@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var s = n("718517");
-let i = 30 * s.default.Millis.DAY,
+var i = n("718517");
+let s = 30 * i.default.Millis.DAY,
   r = "stable-50";
 
 function a() {

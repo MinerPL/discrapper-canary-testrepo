@@ -1,57 +1,57 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return v
   }
 }), n("222007");
-var s = n("446674"),
-  i = n("913144"),
+var i = n("446674"),
+  s = n("913144"),
   r = n("619340"),
   a = n("376556"),
   o = n("450205"),
-  d = n("813006"),
+  l = n("813006"),
   u = n("49111");
-let l = new Set([u.PlatformTypes.CONTACTS]),
-  f = !0,
+let d = new Set([u.PlatformTypes.CONTACTS]),
+  c = !0,
+  f = [],
   _ = [],
-  c = [],
+  h = {},
   g = {},
   m = {},
-  h = {},
-  v = e => {
-    _ = e.filter(e => !l.has(e.type) && a.default.isSupported(e.type)), c = e.filter(e => l.has(e.type)), f = !1
+  E = e => {
+    f = e.filter(e => !d.has(e.type) && a.default.isSupported(e.type)), _ = e.filter(e => d.has(e.type)), c = !1
   };
-class E extends s.default.Store {
+class p extends i.default.Store {
   isJoining(e) {
-    return g[e] || !1
+    return h[e] || !1
   }
   joinErrorMessage(e) {
-    return h[e]
+    return m[e]
   }
   isFetching() {
-    return f
-  }
-  getAccounts() {
-    return _
-  }
-  getLocalAccounts() {
     return c
   }
+  getAccounts() {
+    return f
+  }
+  getLocalAccounts() {
+    return _
+  }
   getAccount(e, t) {
-    return _.find(n => (null == e || n.id === e) && n.type === t)
+    return f.find(n => (null == e || n.id === e) && n.type === t)
   }
   getLocalAccount(e) {
-    return c.find(t => t.type === e)
+    return _.find(t => t.type === e)
   }
   isSuggestedAccountType(e) {
-    return m[e] || !1
+    return g[e] || !1
   }
 }
-E.displayName = "ConnectedAccountsStore";
-var p = new E(i.default, {
+p.displayName = "ConnectedAccountsStore";
+var v = new p(s.default, {
   CONNECTION_OPEN: function(e) {
     let t = e.connectedAccounts.map(e => new o.default(e));
-    v(t)
+    E(t)
   },
   USER_CONNECTIONS_UPDATE: function(e) {
     if (e.local && null != e.accounts) {
@@ -59,26 +59,26 @@ var p = new E(i.default, {
         ...e,
         integrations: e.integrations.map(e => ({
           ...e,
-          guild: new d.default(e.guild)
+          guild: new l.default(e.guild)
         }))
       }));
-      v(t)
+      E(t)
     } else r.default.fetch()
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function(e) {
-    g[e.integrationId] = e.joining
+    h[e.integrationId] = e.joining
   },
   USER_CONNECTION_UPDATE: function(e) {
     let {
       platformType: t,
       id: n,
-      revoked: s,
-      accessToken: i
-    } = e, r = _.find(e => e.id === n && e.type === t);
+      revoked: i,
+      accessToken: s
+    } = e, r = f.find(e => e.id === n && e.type === t);
     if (null == r) return !1;
-    null != s && (r.revoked = s), null != i && (r.accessToken = i)
+    null != i && (r.revoked = i), null != s && (r.accessToken = s)
   },
   USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function(e) {
-    h[e.integrationId] = void 0 !== e.error ? e.error : ""
+    m[e.integrationId] = void 0 !== e.error ? e.error : ""
   }
 })

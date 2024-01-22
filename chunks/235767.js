@@ -22,8 +22,8 @@ function p(e) {
     userId: t,
     guildId: l,
     className: a
-  } = e, p = (0, i.useStateFromStores)([c.default], () => c.default.getSettings(l)), E = (0, i.useStateFromStores)([o.default], () => o.default.getUser(null != t ? t : null == p ? void 0 : p.last_edited_by));
-  return null == E ? null : (0, n.jsxs)("div", {
+  } = e, p = (0, i.useStateFromStores)([c.default], () => c.default.getSettings(l)), T = (0, i.useStateFromStores)([o.default], () => o.default.getUser(null != t ? t : null == p ? void 0 : p.last_edited_by));
+  return null == T ? null : (0, n.jsxs)("div", {
     className: s(a, m.container),
     children: [(0, n.jsx)(u.default, {
       color: "var(--interactive-active)",
@@ -33,7 +33,7 @@ function p(e) {
       color: "text-normal",
       variant: "text-xs/medium",
       children: f.default.Messages.CLYDE_LAST_EDITED_BY_TAG.format({
-        username: d.default.getUserTag(E, {
+        username: d.default.getUserTag(T, {
           decoration: "auto"
         })
       })

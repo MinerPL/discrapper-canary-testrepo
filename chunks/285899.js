@@ -1,7 +1,7 @@
 "use strict";
-r.r(e), r.d(e, {
+e.r(n), e.d(n, {
   GUILD_LIMITED_ACCESS_HC_LINK: function() {
-    return n
+    return r
   }
 });
-let n = "https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ"
+let r = "https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ"

@@ -1,17 +1,17 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return u
+    return c
   }
 }), a("222007");
 var l = a("884691"),
   s = a("65597"),
   r = a("875212"),
   n = a("21526"),
-  o = a("853987"),
-  i = a("775416");
+  i = a("853987"),
+  o = a("775416");
 
-function u() {
+function c() {
   var e;
   let t = "useFetchCollectiblesCategoriesAndPurchases";
   (0, r.useTriggerDebuggingAA)({
@@ -23,8 +23,8 @@ function u() {
   });
   let {
     isFetching: a,
-    categories: u,
-    error: c
+    categories: c,
+    error: u
   } = function() {
     let e = "useMaybeFetchCollectiblesCategories";
     (0, r.useTriggerDebuggingAA)({
@@ -34,23 +34,23 @@ function u() {
       location: e + " auto off",
       autoTrackExposure: !1
     });
-    let [t, a, i, u] = (0, s.useStateFromStoresArray)([o.default], () => {
+    let [t, a, o, c] = (0, s.useStateFromStoresArray)([i.default], () => {
       var e;
-      return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
+      return [i.default.isFetching, i.default.error, null !== (e = i.default.lastFetched) && void 0 !== e ? e : 0, i.default.categories]
     });
     return (0, l.useEffect)(() => {
-      !(t || a || Date.now() - i < 6e5) && (0, n.fetchCollectiblesCategories)()
-    }, [t, i, a]), {
+      !(t || a || Date.now() - o < 6e5) && (0, n.fetchCollectiblesCategories)()
+    }, [t, o, a]), {
       isFetching: t,
-      categories: u,
+      categories: c,
       error: a
     }
   }(), {
     isClaiming: d,
     fetchError: f,
-    claimError: C,
-    isFetching: E,
-    purchases: m
+    claimError: m,
+    isFetching: C,
+    purchases: p
   } = function() {
     let e = "useFetchPurchases";
     (0, r.useTriggerDebuggingAA)({
@@ -60,24 +60,24 @@ function u() {
       location: e + " auto off",
       autoTrackExposure: !1
     });
-    let [t, a, o, u, c] = (0, s.useStateFromStoresArray)([i.default], () => [i.default.isFetching, i.default.isClaiming, i.default.fetchError, i.default.claimError, i.default.purchases]);
+    let [t, a, i, c, u] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.isFetching, o.default.isClaiming, o.default.fetchError, o.default.claimError, o.default.purchases]);
     return (0, l.useEffect)(() => {
       (0, n.fetchCollectiblesPurchases)()
     }, []), {
       isClaiming: a,
-      fetchError: o,
-      claimError: u,
+      fetchError: i,
+      claimError: c,
       isFetching: t,
-      purchases: c
+      purchases: u
     }
-  }(), p = null !== (e = null != c ? c : f) && void 0 !== e ? e : C;
+  }(), g = null !== (e = null != u ? u : f) && void 0 !== e ? e : m;
   return {
-    isFetching: a || E,
+    isFetching: a || C,
     isFetchingCategories: a,
-    isFetchingPurchases: E,
+    isFetchingPurchases: C,
     isClaiming: d,
-    categories: u,
-    purchases: m,
-    error: p
+    categories: c,
+    purchases: p,
+    error: g
   }
 }

@@ -29,11 +29,11 @@ var t = E("37983"),
   o = E("884691"),
   n = E("659500"),
   r = E("816454"),
-  i = E("421804"),
-  a = E("49111");
+  a = E("421804"),
+  i = E("49111");
 let I = new n.ComponentDispatcher,
   s = o.createContext({
-    appContext: a.AppContext.APP,
+    appContext: i.AppContext.APP,
     renderWindow: window,
     windowDispatch: I,
     windowId: (0, r.getMainWindowId)()
@@ -55,7 +55,7 @@ function N(e) {
 function O() {
   let e = function() {
     var e;
-    let _ = (0, i.getCurrentlyInteractingWindowId)();
+    let _ = (0, a.getCurrentlyInteractingWindowId)();
     return null == _ ? null : null !== (e = T.get(_)) && void 0 !== e ? e : null
   }();
   return null != e ? e.appContext : null
@@ -66,7 +66,7 @@ function A(e) {
     appContext: _,
     renderWindow: E,
     children: o
-  } = e, i = function(e, _) {
+  } = e, a = function(e, _) {
     let E = (0, r.getWindowId)(_),
       t = T.get(E);
     if (null == t) {
@@ -83,7 +83,7 @@ function A(e) {
     return t
   }(_, E);
   return (0, t.jsx)(s.Provider, {
-    value: i,
+    value: a,
     children: o
   })
 }

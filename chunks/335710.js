@@ -1,7 +1,7 @@
 "use strict";
-var i, r;
+var i, s;
 n.r(t), n.d(t, {
   ThreadSortOrder: function() {
     return i
   }
-}), n("222007"), (r = i || (i = {}))[r.LATEST_ACTIVITY = 0] = "LATEST_ACTIVITY", r[r.CREATION_DATE = 1] = "CREATION_DATE"
+}), n("222007"), (s = i || (i = {}))[s.LATEST_ACTIVITY = 0] = "LATEST_ACTIVITY", s[s.CREATION_DATE = 1] = "CREATION_DATE"

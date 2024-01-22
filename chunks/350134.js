@@ -41,9 +41,9 @@ var a = i("37983"),
   P = i("785621"),
   L = i("635956"),
   y = i("85589"),
-  j = i("166257"),
-  x = i("432173"),
-  M = i("845579"),
+  x = i("166257"),
+  M = i("432173"),
+  j = i("845579"),
   U = i("42203"),
   b = i("305961"),
   D = i("486996"),
@@ -134,14 +134,14 @@ class eu extends l.PureComponent {
         scale: this.scale
       }],
       opacity: this.opacity
-    }, j = s ? l : i;
+    }, x = s ? l : i;
     if (s && null != n) {
-      var M;
+      var j;
       let {
         accentColor: i,
         backgroundColor: a,
         opacity: l
-      } = n, o = null !== (M = (0, u.hex2rgb)(null != a ? a : "", l)) && void 0 !== M ? M : "";
+      } = n, o = null !== (j = (0, u.hex2rgb)(null != a ? a : "", l)) && void 0 !== j ? j : "";
       this.isMe() && (y.borderColor = a), y.background = o, e = i, t = i
     }
     let U = null == N ? void 0 : N.getBoundingClientRect(),
@@ -175,7 +175,7 @@ class eu extends l.PureComponent {
                 className: L.reactionInner,
                 onClick: this.handleClick,
                 "aria-disabled": p,
-                "aria-label": (0, x.getAccessibleEmojiDisplayName)(this.isMe(), j, c, s),
+                "aria-label": (0, M.getAccessibleEmojiDisplayName)(this.isMe(), x, c, s),
                 "aria-pressed": this.isMe(),
                 children: [(0, a.jsx)("div", {
                   className: o({
@@ -210,11 +210,11 @@ class eu extends l.PureComponent {
                   })]
                 }), d ? null : (0, a.jsx)(V.default, {
                   className: L.reactionCount,
-                  value: j,
+                  value: x,
                   color: e,
                   digitWidth: eo
                 }), (0, a.jsx)(P.default, {
-                  count: j,
+                  count: x,
                   reactionRef: N
                 })]
               })
@@ -253,21 +253,21 @@ class eu extends l.PureComponent {
         return
       }
       let p = t.getChannelId(),
-        h = r ? j.ReactionLocations.FORUM_TOOLBAR : j.ReactionLocations.MESSAGE;
+        h = r ? x.ReactionLocations.FORUM_TOOLBAR : x.ReactionLocations.MESSAGE;
       if (l && !this.userCanBurstReact()) {
         (0, y.openBurstReactionsUpsellModal)({
           analytics: {
             type: ee.PremiumUpsellTypes.BURST_REACTION_UPSELL,
             page: (null == u ? void 0 : u.getGuildId()) != null ? $.AnalyticsPages.GUILD_CHANNEL : $.AnalyticsPages.DM_CHANNEL,
-            section: null != u ? (0, x.getBurstAnalyticsSection)(u) : void 0,
+            section: null != u ? (0, M.getBurstAnalyticsSection)(u) : void 0,
             object: $.AnalyticsObjects.EMOJI_REACTION_UPSELL
           }
         });
         return
       }
-      n ? this.handleShowVerificationGate() : !a && (this.isMe() ? (0, j.removeReaction)(p, t.id, i, void 0, h, {
+      n ? this.handleShowVerificationGate() : !a && (this.isMe() ? (0, x.removeReaction)(p, t.id, i, void 0, h, {
         burst: l
-      }) : (0, j.addReaction)(p, t.id, i, h, {
+      }) : (0, x.addReaction)(p, t.id, i, h, {
         burst: l
       }))
     }, this.handleEnter = e => {
@@ -279,7 +279,7 @@ class eu extends l.PureComponent {
         animateEmoji: n,
         autoUnfurlReactionTooltip: o
       } = this.props, s = a === z.ReactionTypes.BURST;
-      s && !this.isReactionEventActive && !l && n && (0, j.playBurstReaction)({
+      s && !this.isReactionEventActive && !l && n && (0, x.playBurstReaction)({
         channelId: i.getChannelId(),
         messageId: i.id,
         emoji: t,
@@ -477,7 +477,7 @@ class eu extends l.PureComponent {
         type: ee.PremiumUpsellTypes.BURST_REACTION_UPSELL,
         location: {
           page: (null == l ? void 0 : l.getGuildId()) != null ? $.AnalyticsPages.GUILD_CHANNEL : $.AnalyticsPages.DM_CHANNEL,
-          section: (0, x.getBurstAnalyticsSection)(l),
+          section: (0, M.getBurstAnalyticsSection)(l),
           object: $.AnalyticsObjects.EMOJI_REACTION_TOOLTIP_UPSELL
         }
       })
@@ -497,7 +497,7 @@ let ed = l.memo(e => {
       autoUnfurlReactionTooltip: s
     } = (0, v.useInventoryGuildPacksUserExperiment)({
       autoTrackExposure: !1
-    }), r = (0, I.useEmojiColorPalette)(o && null != i ? i : []), u = (0, d.useStateFromStores)([J.default], () => void 0 !== J.default.getEffectForEmojiId(l.getChannelId(), l.id, n)), c = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), p = M.AnimateEmoji.useSetting(), h = k.default.getCurrentUser(), f = (0, W.isPremium)(h), T = (0, d.useStateFromStores)([J.default], () => J.default.getReactionPickerAnimation(l.id, n.name, n.id)), E = o && (u || null != T);
+    }), r = (0, I.useEmojiColorPalette)(o && null != i ? i : []), u = (0, d.useStateFromStores)([J.default], () => void 0 !== J.default.getEffectForEmojiId(l.getChannelId(), l.id, n)), c = (0, d.useStateFromStores)([m.default], () => m.default.useReducedMotion), p = j.AnimateEmoji.useSetting(), h = k.default.getCurrentUser(), f = (0, W.isPremium)(h), T = (0, d.useStateFromStores)([J.default], () => J.default.getReactionPickerAnimation(l.id, n.name, n.id)), E = o && (u || null != T);
     return (0, a.jsx)(eu, {
       ...e,
       colors: r,
@@ -596,15 +596,15 @@ let ed = l.memo(e => {
       };
       a()
     }, [i, v, f, g, n]);
-    let j = !O.viewAndUseEnabled || C;
-    if (j) return null;
-    let x = () => {
+    let x = !O.viewAndUseEnabled || C;
+    if (x) return null;
+    let M = () => {
         T(!f)
       },
-      M = () => {
+      j = () => {
         let e = et.default.Messages.INVENTORY_EMOJI_DETAILS_V2;
         return (0, a.jsxs)(h.Clickable, {
-          onClick: x,
+          onClick: M,
           className: ei.reactionEmojiDetailsClickable,
           children: [(0, a.jsx)(h.Text, {
             variant: "text-sm/normal",
@@ -644,7 +644,7 @@ let ed = l.memo(e => {
         nonce: r
       })]
     }) : (0, a.jsxs)("div", {
-      children: [U ? D() : M(), m ? (0, a.jsx)(Z.PopoutLoadingAnimation, {
+      children: [U ? D() : j(), m ? (0, a.jsx)(Z.PopoutLoadingAnimation, {
         className: ei.emojiDetailsLoader
       }) : U && (0, a.jsx)(ec, {
         emojiId: i,

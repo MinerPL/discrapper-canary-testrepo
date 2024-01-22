@@ -1,6 +1,6 @@
 "use strict";
 var r = Math.floor;
-t.exports = function(t, e) {
-  var s = t % e;
-  return r(s >= 0 ? s : s + e)
+e.exports = function(e, t) {
+  var n = e % t;
+  return r(n >= 0 ? n : n + t)
 }

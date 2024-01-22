@@ -9,8 +9,8 @@ var r = n("884691"),
   s = n("872717"),
   a = n("913144"),
   l = n("716241"),
-  u = n("305961"),
-  o = n("957255"),
+  o = n("305961"),
+  u = n("957255"),
   c = n("599110"),
   d = n("718517"),
   f = n("15639"),
@@ -19,9 +19,9 @@ let _ = 1 * d.default.Millis.DAY,
   m = new Map;
 var E = {
   useShouldShowChannelNotice(e) {
-    let t = (0, i.default)([u.default, o.default], () => {
-      let t = u.default.getGuild(e);
-      return null != t && o.default.can(p.Permissions.ADMINISTRATOR, t)
+    let t = (0, i.default)([o.default, u.default], () => {
+      let t = o.default.getGuild(e);
+      return null != t && u.default.can(p.Permissions.ADMINISTRATOR, t)
     });
     r.useEffect(() => {
       t && ! function(e) {

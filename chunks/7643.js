@@ -37,7 +37,7 @@ function E(e) {
         A(!1)
       }
     }
-  }, [R, n, E]), D = s.useCallback(async e => {
+  }, [R, n, E]), O = s.useCallback(async e => {
     if (!R) {
       T(!0);
       try {
@@ -49,7 +49,7 @@ function E(e) {
         T(!1)
       }
     }
-  }, [R, a, E]), O = s.useCallback(async e => {
+  }, [R, a, E]), D = s.useCallback(async e => {
     if (R) return;
     T(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
@@ -122,8 +122,8 @@ function E(e) {
   }, [y]);
   return {
     acceptMessageRequest: g ? j : y,
-    rejectMessageRequest: D,
-    rejectAll: O,
+    rejectMessageRequest: O,
+    rejectAll: D,
     markAsNotSpam: P,
     isAcceptLoading: S,
     isRejectLoading: _,

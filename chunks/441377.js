@@ -1,11 +1,11 @@
-s("860677"), s("70102");
-var r, i, n = s("912065").Buffer,
-  c = s("463316"),
-  o = s("408475"),
-  f = s("58492"),
-  u = s("127368"),
-  a = s.g.crypto && s.g.crypto.subtle,
-  d = {
+n("860677"), n("70102");
+var r, i, o = n("912065").Buffer,
+  s = n("463316"),
+  a = n("408475"),
+  c = n("58492"),
+  u = n("127368"),
+  d = n.g.crypto && n.g.crypto.subtle,
+  l = {
     sha: "SHA-1",
     "sha-1": "SHA-1",
     sha1: "SHA-1",
@@ -16,64 +16,64 @@ var r, i, n = s("912065").Buffer,
     "sha-512": "SHA-512",
     sha512: "SHA-512"
   },
-  p = [];
+  f = [];
 
-function b() {
-  return i ? i : i = s.g.process && s.g.process.nextTick ? s.g.process.nextTick : s.g.queueMicrotask ? s.g.queueMicrotask : s.g.setImmediate ? s.g.setImmediate : s.g.setTimeout
+function p() {
+  return i ? i : i = n.g.process && n.g.process.nextTick ? n.g.process.nextTick : n.g.queueMicrotask ? n.g.queueMicrotask : n.g.setImmediate ? n.g.setImmediate : n.g.setTimeout
 }
 
-function h(t, e, s, r, i) {
-  return a.importKey("raw", t, {
+function h(e, t, n, r, i) {
+  return d.importKey("raw", e, {
     name: "PBKDF2"
-  }, !1, ["deriveBits"]).then(function(t) {
-    return a.deriveBits({
+  }, !1, ["deriveBits"]).then(function(e) {
+    return d.deriveBits({
       name: "PBKDF2",
-      salt: e,
-      iterations: s,
+      salt: t,
+      iterations: n,
       hash: {
         name: i
       }
-    }, t, r << 3)
-  }).then(function(t) {
-    return n.from(t)
+    }, e, r << 3)
+  }).then(function(e) {
+    return o.from(e)
   })
 }
-t.exports = function(t, e, i, l, g, v) {
-  "function" == typeof g && (v = g, g = void 0);
-  var x = d[(g = g || "sha1").toLowerCase()];
-  if (!x || "function" != typeof s.g.Promise) {
-    b()(function() {
-      var s;
+e.exports = function(e, t, i, g, b, v) {
+  "function" == typeof b && (v = b, b = void 0);
+  var m = l[(b = b || "sha1").toLowerCase()];
+  if (!m || "function" != typeof n.g.Promise) {
+    p()(function() {
+      var n;
       try {
-        s = f(t, e, i, l, g)
-      } catch (t) {
-        return v(t)
+        n = c(e, t, i, g, b)
+      } catch (e) {
+        return v(e)
       }
-      v(null, s)
+      v(null, n)
     });
     return
   }
-  if (c(i, l), t = u(t, o, "Password"), e = u(e, o, "Salt"), "function" != typeof v) throw Error("No callback provided to pbkdf2");
-  ! function(t, e) {
-    t.then(function(t) {
-      b()(function() {
-        e(null, t)
+  if (s(i, g), e = u(e, a, "Password"), t = u(t, a, "Salt"), "function" != typeof v) throw Error("No callback provided to pbkdf2");
+  ! function(e, t) {
+    e.then(function(e) {
+      p()(function() {
+        t(null, e)
       })
-    }, function(t) {
-      b()(function() {
-        e(t)
+    }, function(e) {
+      p()(function() {
+        t(e)
       })
     })
-  }((function(t) {
-    if (s.g.process && !s.g.process.browser || !a || !a.importKey || !a.deriveBits) return Promise.resolve(!1);
-    if (void 0 !== p[t]) return p[t];
-    var e = h(r = r || n.alloc(8), r, 10, 128, t).then(function() {
+  }((function(e) {
+    if (n.g.process && !n.g.process.browser || !d || !d.importKey || !d.deriveBits) return Promise.resolve(!1);
+    if (void 0 !== f[e]) return f[e];
+    var t = h(r = r || o.alloc(8), r, 10, 128, e).then(function() {
       return !0
     }).catch(function() {
       return !1
     });
-    return p[t] = e, e
-  })(x).then(function(s) {
-    return s ? h(t, e, i, l, x) : f(t, e, i, l, g)
+    return f[e] = t, t
+  })(m).then(function(n) {
+    return n ? h(e, t, i, g, m) : c(e, t, i, g, b)
   }), v)
 }

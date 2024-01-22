@@ -7,8 +7,8 @@ E.r(_), E.d(_, {
 }), E("808653");
 var n = E("446674"),
   r = E("95410"),
-  i = E("913144"),
-  a = E("42203"),
+  a = E("913144"),
+  i = E("42203"),
   I = E("305961");
 let s = "hideSuppressWarning",
   T = !1,
@@ -19,18 +19,18 @@ class O extends n.default.Store {
     N = r.default.get(s) || N
   }
   isAFKChannel() {
-    let e = a.default.getChannel(o);
+    let e = i.default.getChannel(o);
     if (null == e) return !1;
     let _ = I.default.getGuild(e.getGuildId());
     return null != _ && e.id === _.afkChannelId
   }
   shouldShowWarning() {
     var e;
-    return !(null === (e = a.default.getChannel(o)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !S
+    return !(null === (e = i.default.getChannel(o)) || void 0 === e ? void 0 : e.isGuildStageVoice()) && !S
   }
 }
 O.displayName = "PermissionSpeakStore";
-var A = new O(i.default, {
+var A = new O(a.default, {
   CONNECTION_OPEN: function(e) {
     t = e.sessionId, T = !1
   },

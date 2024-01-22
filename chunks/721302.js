@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return A
+    return g
   }
 }), l("222007");
 var a = l("37983"),
@@ -10,9 +10,9 @@ var a = l("37983"),
   i = l.n(s),
   o = l("483366"),
   d = l.n(o),
-  C = l("969176"),
-  r = l.n(C),
-  u = l("65597"),
+  r = l("969176"),
+  u = l.n(r),
+  C = l("65597"),
   c = l("77078"),
   f = l("957255"),
   m = l("810567"),
@@ -21,12 +21,12 @@ var a = l("37983"),
   h = l("645266"),
   T = l("843455"),
   x = l("782340"),
-  H = l("863879");
-let _ = n.forwardRef(function(e, t) {
+  _ = l("863879");
+let H = n.forwardRef(function(e, t) {
   let {
     guild: s
-  } = e, o = (0, u.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), C = (0, u.default)([f.default], () => f.default.can(T.Permissions.KICK_MEMBERS, s)), _ = n.useCallback(() => {
-    null != s && C && (0, c.openModalLazy)(async () => {
+  } = e, o = (0, C.default)([M.default], () => M.default.hasDefaultSearchStateByGuildId(s.id), [s.id]), r = (0, C.default)([f.default], () => f.default.can(T.Permissions.KICK_MEMBERS, s)), H = n.useCallback(() => {
+    null != s && r && (0, c.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("494440").then(l.bind(l, "494440"));
@@ -35,24 +35,24 @@ let _ = n.forwardRef(function(e, t) {
         guild: s
       })
     })
-  }, [s, C]), A = (0, u.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], r), L = (0, E.useTrackMemberSearchUsed)(s.id), [g, N] = n.useState(A.query), S = n.useCallback(e => {
+  }, [s, r]), g = (0, C.default)([M.default], () => M.default.getSearchStateByGuildId(s.id), [s.id], u), A = (0, E.useTrackMemberSearchUsed)(s.id), [p, S] = n.useState(g.query), L = n.useCallback(e => {
     let t = e.trim();
-    t.length > 0 && L(), (0, h.updateSearchState)(s.id, {
+    t.length > 0 && A(), (0, h.updateSearchState)(s.id, {
       query: t
     })
-  }, [s.id, L]), p = n.useCallback(d(S, 300), [S]), v = n.useCallback(e => {
-    N(e), p(e)
-  }, [p]), R = n.useCallback(() => {
-    N(""), S("")
-  }, [S]);
+  }, [s.id, A]), N = n.useCallback(d(L, 300), [L]), I = n.useCallback(e => {
+    S(e), N(e)
+  }, [N]), v = n.useCallback(() => {
+    S(""), L("")
+  }, [L]);
   return n.useImperativeHandle(t, () => ({
     resetSearchText() {
-      N("")
+      S("")
     }
   })), (0, a.jsxs)("div", {
-    className: i(H.searchHeaderContainer),
+    className: i(_.searchHeaderContainer),
     children: [(0, a.jsx)("div", {
-      className: i(H.searchHeader),
+      className: i(_.searchHeader),
       children: o ? (0, a.jsx)(c.Heading, {
         variant: "heading-md/medium",
         children: x.default.Messages.MEMBER_SAFETY_TABLE_TITLE
@@ -61,15 +61,15 @@ let _ = n.forwardRef(function(e, t) {
         children: x.default.Messages.MEMBER_SAFETY_TABLE_TITLE_SEARCH
       })
     }), (0, a.jsx)("div", {
-      className: i(H.searchInput),
+      className: i(_.searchInput),
       children: (0, a.jsx)("div", {
-        className: i(H.searchHeader),
+        className: i(_.searchHeader),
         children: (0, a.jsx)(m.default, {
-          className: H.searchBar,
-          query: g,
+          className: _.searchBar,
+          query: p,
           placeholder: x.default.Messages.MEMBER_SAFETY_TABLE_SEARCH_PLACEHOLDER,
-          onChange: v,
-          onClear: R,
+          onChange: I,
+          onClear: v,
           autoComplete: "off",
           inputProps: {
             autoCapitalize: "none",
@@ -79,10 +79,10 @@ let _ = n.forwardRef(function(e, t) {
         })
       })
     }), (0, a.jsx)("div", {
-      className: i(H.tableOptions),
-      children: C && (0, a.jsx)(c.Button, {
-        className: i(H.pruneButton),
-        onClick: _,
+      className: i(_.tableOptions),
+      children: r && (0, a.jsx)(c.Button, {
+        className: i(_.pruneButton),
+        onClick: H,
         "aria-label": x.default.Messages.PRUNE_MEMBERS,
         color: c.Button.Colors.RED,
         look: c.Button.Looks.OUTLINED,
@@ -92,4 +92,4 @@ let _ = n.forwardRef(function(e, t) {
     })]
   })
 });
-var A = _
+var g = H

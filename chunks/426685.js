@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var i = n("599110"),
-  r = n("489269"),
-  s = n("581892"),
+  s = n("489269"),
+  r = n("581892"),
   a = n("180524"),
   o = n("49111"),
   l = n("782340");
@@ -16,9 +16,9 @@ class u {
     i.default.track(o.AnalyticEvents.PERMISSIONS_REQUESTED, {
       type: e
     });
-    let s = await t() === a.NativePermissionStatus.AUTHORIZED,
-      l = s ? a.NativePermissionStates.ACCEPTED : a.NativePermissionStates.DENIED;
-    return r.default.setPermission(e, l), !s && n.showAuthorizationError && this.showAlert(e), s
+    let r = await t() === a.NativePermissionStatus.AUTHORIZED,
+      l = r ? a.NativePermissionStates.ACCEPTED : a.NativePermissionStates.DENIED;
+    return s.default.setPermission(e, l), !r && n.showAuthorizationError && this.showAlert(e), r
   }
   requestPermission(e, t) {
     let n = u.defaultNativePermissionsRequestOptions(t);
@@ -55,6 +55,6 @@ class u {
     }
   }
   constructor() {
-    this.storage = new s.default
+    this.storage = new r.default
   }
 }

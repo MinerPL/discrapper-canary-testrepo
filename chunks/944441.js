@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return o
+    return i
   }
 });
 var l = a("37983");
@@ -9,16 +9,16 @@ a("884691");
 var s = a("469563"),
   r = a("237020"),
   n = a("75196"),
-  o = (0, s.replaceIcon)(function(e) {
+  i = (0, s.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: a = 24,
       color: s = "currentColor",
       foreground: r,
-      ...o
+      ...i
     } = e;
     return (0, l.jsx)("svg", {
-      ...(0, n.default)(o),
+      ...(0, n.default)(i),
       width: t,
       height: a,
       viewBox: "0 0 24 24",

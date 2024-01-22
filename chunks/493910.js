@@ -8,8 +8,8 @@ i.r(t), i.d(t, {
   }
 }), i("424973"), i("222007");
 var r, n, s = i("969176"),
-  a = i.n(s),
-  u = i("407846"),
+  u = i.n(s),
+  a = i("407846"),
   l = i("654017"),
   h = i("26989"),
   d = i("697218"),
@@ -28,7 +28,7 @@ function M(e) {
 }
 
 function g() {
-  return new u.default(_, M)
+  return new a.default(_, M)
 }(n = r || (r = {})).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER", n.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER", n.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS";
 class b {
   reset() {
@@ -49,8 +49,8 @@ class b {
         hasUnusualDmActivity: r,
         hasUnusualAccountActivity: n,
         sourceInviteCode: s,
-        joinSourceType: a,
-        inviterId: u,
+        joinSourceType: u,
+        inviterId: a,
         integrationType: l
       } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
       h = d.default.getUser(e.userId),
@@ -58,8 +58,8 @@ class b {
         hasUnusualDmActivity: r,
         hasUnusualAccountActivity: n,
         sourceInviteCode: s,
-        joinSourceType: a,
-        inviterId: u,
+        joinSourceType: u,
+        inviterId: a,
         integrationType: l,
         ...e,
         isCurrentGuildMemberByTimestamp: i <= this.newMemberTimestamp,
@@ -76,14 +76,14 @@ class b {
       {
         sourceInviteCode: n,
         joinSourceType: s,
-        inviterId: a,
-        integrationType: u
+        inviterId: u,
+        integrationType: a
       } = null !== (i = r[e]) && void 0 !== i ? i : {};
     return {
       sourceInviteCode: null != n ? n : null,
       joinSourceType: null != s ? s : null,
-      inviterId: null != a ? a : null,
-      integrationType: null != u ? u : null,
+      inviterId: null != u ? u : null,
+      integrationType: null != a ? a : null,
       hasUnusualDmActivity: function(e) {
         if (null == e) return !1;
         let t = new Date(e).getTime();
@@ -106,17 +106,17 @@ class b {
       },
       s = !1,
       {
-        sourceInviteCode: u,
+        sourceInviteCode: a,
         hasUnusualDmActivity: l,
         hasUnusualAccountActivity: h,
         joinSourceType: d,
         inviterId: o,
         integrationType: m
       } = this._computeMemberSupplementals(r.userId, null !== (i = n.unusualDMActivityUntil) && void 0 !== i ? i : r.unusualDMActivityUntil);
-    for (let e in r.sourceInviteCode !== u && (n.sourceInviteCode = u), r.hasUnusualDmActivity !== l && (n.hasUnusualDmActivity = l), r.hasUnusualAccountActivity !== h && (n.hasUnusualAccountActivity = h), r.joinSourceType !== d && (n.joinSourceType = d), r.inviterId !== o && (n.inviterId = o), r.integrationType !== m && (n.integrationType = m), n) {
+    for (let e in r.sourceInviteCode !== a && (n.sourceInviteCode = a), r.hasUnusualDmActivity !== l && (n.hasUnusualDmActivity = l), r.hasUnusualAccountActivity !== h && (n.hasUnusualAccountActivity = h), r.joinSourceType !== d && (n.joinSourceType = d), r.inviterId !== o && (n.inviterId = o), r.integrationType !== m && (n.integrationType = m), n) {
       let t = n[e],
         i = r[e];
-      !a(t, i) && (r[e] = t, s = !0)
+      !u(t, i) && (r[e] = t, s = !0)
     }
     return this._membersMap.set(r.userId, r) || s
   }

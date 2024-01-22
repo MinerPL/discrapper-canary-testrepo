@@ -19,9 +19,9 @@ var s = n("37983"),
   _ = n("106885"),
   p = n("178116"),
   h = n("759315"),
-  N = n("569808"),
+  m = n("569808"),
   T = n("913645"),
-  m = n("777858"),
+  N = n("777858"),
   g = n("9294"),
   A = n("701662"),
   S = n("271938"),
@@ -69,12 +69,12 @@ let $ = (0, j.default)(H.default),
   ed = (0, j.default)(Z.default),
   ec = (0, j.default)(y.default),
   ef = (0, j.default)(p.default),
-  eE = (0, j.default)(m.default),
+  eE = (0, j.default)(N.default),
   eI = (0, j.default)(B.default),
   e_ = (0, j.default)(W.default),
   ep = (0, j.default)(X.default),
   eh = (0, j.default)(z.default);
-class eN extends a.PureComponent {
+class em extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     var n;
     let {
@@ -342,7 +342,7 @@ class eN extends a.PureComponent {
     }
   }
 }
-var eT = u.default.connectStores([S.default, x.default, v.default, C.default, N.default], e => {
+var eT = u.default.connectStores([S.default, x.default, v.default, C.default, m.default], e => {
   var t, n, s;
   let {
     match: a,
@@ -355,7 +355,7 @@ var eT = u.default.connectStores([S.default, x.default, v.default, C.default, N.
     guildTemplateCode: d,
     gift: null != o ? v.default.get(o) : null,
     invite: null != u ? x.default.getInvite(u) : null,
-    guildTemplate: null != d ? N.default.getGuildTemplate(d) : null,
+    guildTemplate: null != d ? m.default.getGuildTemplate(d) : null,
     hasLoadedExperiments: C.default.hasLoadedExperiments
   }
-})(eN)
+})(em)

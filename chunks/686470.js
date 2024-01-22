@@ -1,151 +1,151 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return D
   }
 }), n("222007"), n("702976"), n("860677");
 var i = n("917351"),
-  r = n.n(i),
-  s = n("446674"),
+  s = n.n(i),
+  r = n("446674"),
   a = n("95410"),
   o = n("913144"),
   l = n("370999"),
   u = n("568734"),
-  c = n("964889"),
-  d = n("271938"),
+  d = n("964889"),
+  c = n("271938"),
   f = n("49111");
-let E = "LibraryApplicationStore";
+let _ = "LibraryApplicationStore";
 
 function h() {
   var e;
-  return null !== (e = a.default.get(E)) && void 0 !== e ? e : {}
+  return null !== (e = a.default.get(_)) && void 0 !== e ? e : {}
 }
-let p = !1,
-  _ = {},
+let g = !1,
+  m = {},
+  E = {},
+  p = new Set,
+  v = {},
   S = {},
-  m = new Set,
-  T = {},
-  g = {},
-  I = !1;
+  T = !1;
 
-function C() {
-  a.default.set(E, {
+function I() {
+  a.default.set(_, {
     ...h(),
-    activeLaunchOptionIds: g
+    activeLaunchOptionIds: S
   })
 }
 
-function v() {
-  a.default.set(E, {
+function C() {
+  a.default.set(_, {
     ...h(),
-    activeLibraryApplicationBranchIds: T
+    activeLibraryApplicationBranchIds: v
   })
 }
 
 function A(e) {
   for (let t of e) {
     let e = l.default.createFromServer(t),
-      n = (0, c.getComboId)(e.id, e.branchId);
-    _[n] = e
+      n = (0, d.getComboId)(e.id, e.branchId);
+    m[n] = e
   }
 }
 
-function R(e) {
+function y(e) {
   let {
     libraryApplication: t
-  } = e, n = l.default.createFromServer(t), i = (0, c.getComboId)(n.id, n.branchId);
-  _[i] = n, m.delete(i)
+  } = e, n = l.default.createFromServer(t), i = (0, d.getComboId)(n.id, n.branchId);
+  m[i] = n, p.delete(i)
 }
 
 function N(e, t) {
   var n;
-  let i = (0, c.getComboId)(e, t);
-  return null !== (n = _[i]) && void 0 !== n ? n : S[i]
+  let i = (0, d.getComboId)(e, t);
+  return null !== (n = m[i]) && void 0 !== n ? n : E[i]
 }
 
-function O() {
+function R() {
   return {
-    ...S,
-    ..._
+    ...E,
+    ...m
   }
 }
-class D extends s.default.Store {
+class O extends r.default.Store {
   initialize() {
-    this.waitFor(d.default);
-    let e = a.default.get(E);
-    null != e && (null == e.activeLaunchOptionIds ? C() : g = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? v() : T = e.activeLibraryApplicationBranchIds)
+    this.waitFor(c.default);
+    let e = a.default.get(_);
+    null != e && (null == e.activeLaunchOptionIds ? I() : S = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? C() : v = e.activeLibraryApplicationBranchIds)
   }
   get libraryApplications() {
     return function(e) {
-      let t = O();
+      let t = R();
       return Object.keys(t).forEach(n => {
         !e(t[n]) && delete t[n]
       }), t
     }(e => !e.isHidden())
   }
   getAllLibraryApplications() {
-    return O()
+    return R()
   }
   hasLibraryApplication() {
-    return Object.keys(O()).length > 0
+    return Object.keys(R()).length > 0
   }
   hasApplication(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       i = N(e, t);
-    return !(null == i || !n && i.isHidden()) && (0, c.isUserEntitledToLibraryApplication)(i)
+    return !(null == i || !n && i.isHidden()) && (0, d.isUserEntitledToLibraryApplication)(i)
   }
   getLibraryApplication(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       i = N(e, t);
-    return n && null != i ? (0, c.isUserEntitledToLibraryApplication)(i) ? i : null : i
+    return n && null != i ? (0, d.isUserEntitledToLibraryApplication)(i) ? i : null : i
   }
   getActiveLibraryApplication(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      n = T[e];
+      n = v[e];
     if (null != n) {
       var i;
-      let r = (0, c.getComboId)(e, n),
-        s = null !== (i = _[r]) && void 0 !== i ? i : S[r];
-      if (null != s && (0, c.isUserEntitledToLibraryApplication)(s) && (t || !s.isHidden())) return s
+      let s = (0, d.getComboId)(e, n),
+        r = null !== (i = m[s]) && void 0 !== i ? i : E[s];
+      if (null != r && (0, d.isUserEntitledToLibraryApplication)(r) && (t || !r.isHidden())) return r
     }
-    let r = O();
-    for (let n in r)
-      if (r[n].id === e) {
-        let e = r[n];
-        if ((0, c.isUserEntitledToLibraryApplication)(e) && (t || !e.isHidden())) return e
+    let s = R();
+    for (let n in s)
+      if (s[n].id === e) {
+        let e = s[n];
+        if ((0, d.isUserEntitledToLibraryApplication)(e) && (t || !e.isHidden())) return e
       }
   }
   isUpdatingFlags(e, t) {
-    return m.has((0, c.getComboId)(e, t))
+    return p.has((0, d.getComboId)(e, t))
   }
   getActiveLaunchOptionId(e, t) {
-    return g[(0, c.getComboId)(e, t)]
+    return S[(0, d.getComboId)(e, t)]
   }
   get fetched() {
-    return p
+    return g
   }
   get entitledBranchIds() {
-    return r(O()).values().filter(e => (0, c.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
+    return s(R()).values().filter(e => (0, d.isUserEntitledToLibraryApplication)(e)).map(e => e.branchId).value()
   }
   get hasRemovedLibraryApplicationThisSession() {
-    return I
+    return T
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
-      if (p) return setImmediate(e), !1
+      if (g) return setImmediate(e), !1
     })
   }
 }
-D.displayName = "LibraryApplicationStore";
-var y = new D(o.default, {
+O.displayName = "LibraryApplicationStore";
+var D = new O(o.default, {
   LOGOUT: function() {
-    p = !1
+    g = !1
   },
   LIBRARY_FETCH_SUCCESS: function(e) {
     let {
       libraryApplications: t
     } = e;
-    _ = {}, A(t), p = !0
+    m = {}, A(t), g = !0
   },
   SKU_PURCHASE_SUCCESS: function(e) {
     let {
@@ -158,37 +158,37 @@ var y = new D(o.default, {
       applicationId: t,
       branchId: n,
       flags: i
-    } = e, r = (0, c.getComboId)(t, n), s = N(t, n);
-    null != s && !s.isHidden() && u.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (I = !0), m.add(r)
+    } = e, s = (0, d.getComboId)(t, n), r = N(t, n);
+    null != r && !r.isHidden() && u.hasFlag(i, f.LibraryApplicationFlags.HIDDEN) && (T = !0), p.add(s)
   },
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: R,
-  LIBRARY_APPLICATION_UPDATE: R,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: y,
+  LIBRARY_APPLICATION_UPDATE: y,
   LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function(e) {
     let {
       applicationId: t,
       branchId: n,
       launchOptionId: i
     } = e;
-    g[(0, c.getComboId)(t, n)] = i, C()
+    S[(0, d.getComboId)(t, n)] = i, I()
   },
   LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function(e) {
     let {
       applicationId: t,
       branchId: n
     } = e;
-    if (T[t] === n) return !1;
-    T[t] = n, v()
+    if (v[t] === n) return !1;
+    v[t] = n, C()
   },
   LIBRARY_APPLICATIONS_TEST_MODE_ENABLED: function(e) {
     let {
       libraryApplications: t
     } = e;
     for (let e of t) {
-      let t = (0, c.getComboId)(e.id, e.branchId);
-      S[t] = e
+      let t = (0, d.getComboId)(e.id, e.branchId);
+      E[t] = e
     }
   },
   DEVELOPER_TEST_MODE_RESET: function() {
-    S = {}
+    E = {}
   }
 })

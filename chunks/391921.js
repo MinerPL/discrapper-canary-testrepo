@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   useSearchFieldState: function() {
-    return o
+    return i
   }
 }), n("222007");
 var r = n("679750");
 
-function o(e) {
-  let [t, n] = (0, r.useControlledState)(a(e.value), a(e.defaultValue) || "", e.onChange);
+function i(e) {
+  let [t, n] = (0, r.useControlledState)(o(e.value), o(e.defaultValue) || "", e.onChange);
   return {
     value: t,
     setValue: n
   }
 }
 
-function a(e) {
+function o(e) {
   if (null != e) return e.toString()
 }

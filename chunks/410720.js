@@ -1,5 +1,5 @@
-s("854508"), e.encrypt = function(t, e) {
-  return t._cipher.encryptBlock(e)
-}, e.decrypt = function(t, e) {
-  return t._cipher.decryptBlock(e)
+n("854508"), t.encrypt = function(e, t) {
+  return e._cipher.encryptBlock(t)
+}, t.decrypt = function(e, t) {
+  return e._cipher.decryptBlock(t)
 }

@@ -20,12 +20,12 @@ var l = a("37983"),
   g = a("491232"),
   E = a("716120"),
   h = a("342676"),
-  T = a("408381"),
-  b = a("177586"),
+  b = a("408381"),
+  T = a("177586"),
   x = a("646718"),
   L = a("782340"),
   S = a("927694");
-let v = (0, T.getLogoSize)(96),
+let v = (0, b.getLogoSize)(96),
   I = e => {
     let {
       category: t
@@ -64,12 +64,12 @@ function N(e) {
     className: a
   } = e, {
     backgroundColors: s
-  } = (0, b.default)(t.styles);
+  } = (0, T.default)(t.styles);
   return (0, l.jsxs)(E.default, {
     asset: t.banner,
     className: n(S.shopBanner, a),
     style: null != s ? {
-      background: "".concat((0, T.getBackgroundGradient)(s), " border-box border-box"),
+      background: "".concat((0, b.getBackgroundGradient)(s), " border-box border-box"),
       outlineColor: s.border.toHslString()
     } : void 0,
     children: [(0, l.jsxs)("div", {

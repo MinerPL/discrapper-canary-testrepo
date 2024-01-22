@@ -17,8 +17,8 @@ var a = l("414456"),
   f = l("376556"),
   m = l("118033"),
   p = l("42203"),
-  E = l("697218"),
-  T = l("800762"),
+  T = l("697218"),
+  E = l("800762"),
   _ = l("145131"),
   S = l("313873"),
   h = l("429928"),
@@ -52,8 +52,8 @@ var a = l("414456"),
         isEmbedded: B = !1
       } = e,
       Y = (0, A.default)(),
-      V = (0, u.useStateFromStores)([E.default], () => {
-        let e = E.default.getCurrentUser();
+      V = (0, u.useStateFromStores)([T.default], () => {
+        let e = T.default.getCurrentUser();
         return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
       }),
       H = G === S.Types.PROFILE || G === S.Types.PROFILE_V2,
@@ -63,9 +63,9 @@ var a = l("414456"),
       Z = H ? _.default.Align.END : _.default.Align.STRETCH,
       X = z || W ? _.default.Direction.HORIZONTAL : _.default.Direction.VERTICAL,
       J = (null == l ? void 0 : l.type) === P.ActivityTypes.HANG_STATUS,
-      Q = (0, u.useStateFromStores)([T.default, p.default], () => {
+      Q = (0, u.useStateFromStores)([E.default, p.default], () => {
         var e;
-        return J ? p.default.getChannel(null === (e = T.default.getVoiceStateForUser(a.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return J ? p.default.getChannel(null === (e = E.default.getVoiceStateForUser(a.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
     if ((0, I.default)(l)) t = [(0, n.jsx)(g.default, {
       look: w,

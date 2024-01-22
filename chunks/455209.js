@@ -4,8 +4,8 @@ var t = E("872717"),
   o = E("821316"),
   n = E("129966"),
   r = E("583340"),
-  i = E("823348"),
-  a = E("35468");
+  a = E("823348"),
+  i = E("35468");
 E("773336");
 var I = E("286235"),
   s = E("900673"),
@@ -22,16 +22,16 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     } = E("313915"), {
       default: r
     } = E("915639"), {
-      default: i
-    } = E("697218"), {
       default: a
+    } = E("697218"), {
+      default: i
     } = E("599110"), {
       isPlatformEmbedded: s
     } = E("773336");
     if ("/" === e.url[0]) {
       var T, A;
       e.url = t.default.getAPIBaseURL() + e.url, !("Authorization" in e.header) && !("authorization" in e.header) && e.set("Authorization", _.getToken());
-      let E = a.getSuperPropertiesBase64();
+      let E = i.getSuperPropertiesBase64();
       null != E && e.set("X-Super-Properties", E);
       let o = _.getFingerprint();
       if (null != o && "" !== o && e.set("X-Fingerprint", o), s) {
@@ -55,7 +55,7 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
       null != I && e.set("X-Discord-Timezone", I);
       let S = n.getDebugOptionsHeaderValue();
       if (null != S && "" !== S && e.set("X-Debug-Options", S), n.isTracingRequests) {
-        let _ = i.getCurrentUser(),
+        let _ = a.getCurrentUser(),
           E = N.generate(null !== (A = null == _ ? void 0 : _.id) && void 0 !== A ? A : "0");
         e.set("x-client-trace-id", E);
         try {
@@ -98,7 +98,7 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     })
   },
   interceptResponse(e, _, t) {
-    var o, a, I, s, S;
+    var o, i, I, s, S;
     return 400 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.captcha_key) ? (Promise.all([E.el("417814").then(E.bind(E, "417814")), E.el("507445").then(E.bind(E, "507445"))]).then(_ => {
       let [{
         default: E
@@ -114,12 +114,12 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
         "X-Captcha-Key": E
       };
       null != t && (o["X-Captcha-Rqtoken"] = t), _(o)
-    }).catch(t), !0) : 401 === e.statusCode && (null === (a = e.body) || void 0 === a ? void 0 : a.code) === T.AbortCodes.MFA_REQUIRED && (null === (I = e.body) || void 0 === I ? void 0 : I.mfa) ? (E.el("776502").then(E.bind(E, "776502")).then(E => {
+    }).catch(t), !0) : 401 === e.statusCode && (null === (i = e.body) || void 0 === i ? void 0 : i.code) === T.AbortCodes.MFA_REQUIRED && (null === (I = e.body) || void 0 === I ? void 0 : I.mfa) ? (E.el("776502").then(E.bind(E, "776502")).then(E => {
       let {
         openMFAModal: o
       } = E;
       o(e.body.mfa, _, t)
-    }).catch(t), !0) : (0, i.isLimitedAccessErrorCode)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
+    }).catch(t), !0) : (0, a.isLimitedAccessErrorCode)(e.statusCode, null === (s = e.body) || void 0 === s ? void 0 : s.code) ? (E.el("258158").then(E.bind(E, "258158")).then(e => {
       let {
         default: _
       } = e;
@@ -138,5 +138,5 @@ let S = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://
     }), !1)
   }
 }), (0, t.setAwaitOnline)(async e => {
-  if (o.report("Network", "Request to ".concat(e, " failed, will retry.")), !a.default.isOnline()) await a.default.awaitOnline(), o.report("Network", "Network detected online, retrying ".concat(e))
+  if (o.report("Network", "Request to ".concat(e, " failed, will retry.")), !i.default.isOnline()) await i.default.awaitOnline(), o.report("Network", "Network detected online, retrying ".concat(e))
 })

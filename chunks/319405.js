@@ -8,15 +8,15 @@ var t = E("689988"),
   o = E("374014"),
   n = E("373469"),
   r = E("271938"),
-  i = E("568307"),
-  a = E("718517"),
+  a = E("568307"),
+  i = E("718517"),
   I = E("448881"),
   s = E("374023"),
   T = E("2973"),
   S = E("227231");
-let N = 5 * a.default.Millis.SECOND,
-  O = 12 * a.default.Millis.HOUR,
-  A = 1 * a.default.Millis.MINUTE;
+let N = 5 * i.default.Millis.SECOND,
+  O = 12 * i.default.Millis.HOUR,
+  A = 1 * i.default.Millis.MINUTE;
 class R extends t.default {
   maybeFetchCurrentQuests() {
     s.default.getCurrentConfig({
@@ -50,13 +50,13 @@ class R extends t.default {
         }
       } = e, E = n.default.getStreamerActiveStreamMetadata();
       if (null == E || null == E.pid) return;
-      let t = i.default.getGameForPID(E.pid);
+      let t = a.default.getGameForPID(E.pid);
       if (null == t || null == t.id) return;
       let r = (0, S.getQuestByApplicationId)(t.id);
       if (null == r || r.id !== _) return;
-      let a = n.default.getCurrentUserActiveStream();
-      null != a && this.initiateHeartbeat({
-        streamKey: (0, o.encodeStreamKey)(a),
+      let i = n.default.getCurrentUserActiveStream();
+      null != i && this.initiateHeartbeat({
+        streamKey: (0, o.encodeStreamKey)(i),
         applicationId: r.config.applicationId,
         questId: r.id
       })
@@ -75,16 +75,16 @@ class R extends t.default {
       let {
         streamType: t,
         guildId: n,
-        channelId: a,
+        channelId: i,
         pid: I
-      } = e, s = null != I ? i.default.getGameForPID(I) : null;
+      } = e, s = null != I ? a.default.getGameForPID(I) : null;
       if (null == s) return;
       let T = null != s.id ? (0, S.getQuestByApplicationId)(s.id) : null;
       if ((null == T ? void 0 : null === (_ = T.userStatus) || void 0 === _ ? void 0 : _.enrolledAt) != null && (null == T ? void 0 : null === (E = T.userStatus) || void 0 === E ? void 0 : E.completedAt) == null) !(0, S.isQuestExpired)(T) && this.initiateHeartbeat({
         streamKey: (0, o.encodeStreamKey)({
           streamType: t,
           guildId: n,
-          channelId: a,
+          channelId: i,
           ownerId: r.default.getId()
         }),
         applicationId: T.config.applicationId,

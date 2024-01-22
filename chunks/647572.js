@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return r
   },
   LocalizedStringFormatter: function() {
-    return i
+    return s
   }
 }), n("70102"), n("222007");
 class r {
@@ -31,9 +31,9 @@ class r {
     }, this.defaultLocale = t
   }
 }
-let o = new Map,
-  a = new Map;
-class i {
+let i = new Map,
+  o = new Map;
+class s {
   format(e, t) {
     let n = this.strings.getStringForLocale(e, this.locale);
     return "function" == typeof n ? n(t, this) : n
@@ -42,15 +42,15 @@ class i {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "cardinal",
       r = t["=" + e];
     if (r) return "function" == typeof r ? r() : r;
-    let a = this.locale + ":" + n,
-      i = o.get(a);
-    return !i && (i = new Intl.PluralRules(this.locale, {
+    let o = this.locale + ":" + n,
+      s = i.get(o);
+    return !s && (s = new Intl.PluralRules(this.locale, {
       type: n
-    }), o.set(a, i)), "function" == typeof(r = t[i.select(e)] || t.other) ? r() : r
+    }), i.set(o, s)), "function" == typeof(r = t[s.select(e)] || t.other) ? r() : r
   }
   number(e) {
-    let t = a.get(this.locale);
-    return !t && (t = new Intl.NumberFormat(this.locale), a.set(this.locale, t)), t.format(e)
+    let t = o.get(this.locale);
+    return !t && (t = new Intl.NumberFormat(this.locale), o.set(this.locale, t)), t.format(e)
   }
   select(e, t) {
     let n = e[t] || e.other;

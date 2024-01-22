@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   isCustomGiftEnabled: function() {
-    return M
+    return U
   },
   GiftExperience: function() {
-    return s
+    return i
   },
   GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING: function() {
-    return w
+    return k
   },
   GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD: function() {
-    return L
+    return w
   },
   getGiftExperience: function() {
-    return U
+    return V
   },
   shouldShowCustomGiftExperience: function() {
     return G
@@ -34,10 +34,10 @@ n.r(t), n.d(t, {
     return j
   },
   resolveGiftCode: function() {
-    return K
+    return W
   },
   trackGiftCodeCopy: function() {
-    return W
+    return K
   },
   getStep: function() {
     return z
@@ -64,40 +64,40 @@ n.r(t), n.d(t, {
     return ee
   }
 }), n("222007"), n("781738"), n("794252");
-var s, i, r = n("506838"),
+var i, s, r = n("506838"),
   a = n("446674"),
   o = n("333805"),
-  d = n("791160"),
+  l = n("791160"),
   u = n("977591"),
-  l = n("353365"),
-  f = n("697218"),
-  _ = n("599110"),
-  c = n("449008"),
-  g = n("773336"),
-  m = n("719923"),
-  h = n("655518"),
-  v = n("271560"),
-  E = n("49111"),
-  p = n("646718"),
-  y = n("782340");
-let C = h.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
-  T = ["discordapp.com/gifts", "discord.com/gifts"].map(e => h.default.escape(e)),
-  S = [C, ...T].join("|"),
-  I = RegExp("(?: |^|https?://)(?:".concat(S, ")/([a-z0-9-]+)"), "gi"),
-  A = ["discord.com/billing/promotions", "promos.discord.gg"].map(e => h.default.escape(e)),
-  D = [...A].join("|"),
-  N = RegExp("(?: |^|https?://)(?:".concat(D, ")/([a-z0-9-]+)"), "gi"),
+  d = n("353365"),
+  c = n("697218"),
+  f = n("599110"),
+  _ = n("449008"),
+  h = n("773336"),
+  g = n("719923"),
+  m = n("655518"),
+  E = n("271560"),
+  p = n("49111"),
+  v = n("646718"),
+  S = n("782340");
+let T = m.default.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
+  I = ["discordapp.com/gifts", "discord.com/gifts"].map(e => m.default.escape(e)),
+  C = [T, ...I].join("|"),
+  A = RegExp("(?: |^|https?://)(?:".concat(C, ")/([a-z0-9-]+)"), "gi"),
+  y = ["discord.com/billing/promotions", "promos.discord.gg"].map(e => m.default.escape(e)),
+  N = [...y].join("|"),
+  R = RegExp("(?: |^|https?://)(?:".concat(N, ")/([a-z0-9-]+)"), "gi"),
   O = (e, t) => Array(t).fill(void 0).map(() => "[".concat("abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789", "]{").concat(e, "}")).join("-?"),
-  b = O(4, 4),
+  D = O(4, 4),
   P = O(4, 6),
-  k = O(5, 3),
-  R = [b, P, k, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-  V = new RegExp("^(".concat("WUMP-?", ")?(").concat(R, ")$")),
-  M = e => null != e && !0;
-(i = s || (s = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", i[i.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", i[i.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";
-let w = new Set([2, 3]),
-  L = new Set([3]),
-  U = function(e) {
+  b = O(5, 3),
+  L = [D, P, b, "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+  M = new RegExp("^(".concat("WUMP-?", ")?(").concat(L, ")$")),
+  U = e => null != e && !0;
+(s = i || (i = {}))[s.DEFAULT = 0] = "DEFAULT", s[s.CUSTOM_STYLE = 1] = "CUSTOM_STYLE", s[s.CUSTOM_MESSAGE = 2] = "CUSTOM_MESSAGE", s[s.EMOJI_SOUNDBOARD = 3] = "EMOJI_SOUNDBOARD";
+let k = new Set([2, 3]),
+  w = new Set([3]),
+  V = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "getGiftExperience";
     return null != e ? 3 : u.ExpandedGiftingRevampExperiment.getCurrentConfig({
@@ -109,7 +109,7 @@ let w = new Set([2, 3]),
   G = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "shouldShowCustomGiftExperience";
-    return 0 !== U(e, t, n)
+    return 0 !== V(e, t, n)
   };
 
 function F(e) {
@@ -119,106 +119,106 @@ function F(e) {
 }
 
 function x(e) {
-  let [t, n, s] = e.split(":");
+  let [t, n, i] = e.split(":");
   return {
     skuId: t,
     subscriptionPlanId: "" === n ? null : n,
-    giftStyle: "" !== s && null != s ? Number.parseInt(s) : void 0
+    giftStyle: "" !== i && null != i ? Number.parseInt(i) : void 0
   }
 }
 
 function B(e) {
   return e.replace(/[^A-Za-z0-9]/g, "")
 }
-let H = e => (null == e ? void 0 : e.type) === E.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === E.MessageEmbedTypes.GIFT,
+let H = e => (null == e ? void 0 : e.type) === p.MessageTypes.CUSTOM_GIFT && (null == e ? void 0 : e.embeds.length) === 1 && (null == e ? void 0 : e.embeds[0].type) === p.MessageEmbedTypes.GIFT,
   Y = e => {
     let t;
     if (null == e) return [];
     let n = new Set;
-    for (; null != (t = I.exec(e)) && n.size < 3;) n.add(B(t[1]));
-    for (; null != (t = N.exec(e)) && n.size < 3;) n.add(B(t[1]));
+    for (; null != (t = A.exec(e)) && n.size < 3;) n.add(B(t[1]));
+    for (; null != (t = R.exec(e)) && n.size < 3;) n.add(B(t[1]));
     return Array.from(n)
   };
 
 function j() {
   let e, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
     n = window.GLOBAL_ENV.GIFT_CODE_HOST;
-  return null == n || (0, g.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
+  return null == n || (0, h.isAndroid)() ? (n = location.host, e = "/gifts/".concat(t)) : e = "/".concat(t), "".concat(location.protocol, "//").concat(n).concat(e)
 }
-async function K(e) {
+async function W(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   try {
-    let s = await (0, v.httpGetWithCountryCodeQuery)({
-        url: E.Endpoints.GIFT_CODE_RESOLVE(e),
+    let i = await (0, E.httpGetWithCountryCodeQuery)({
+        url: p.Endpoints.GIFT_CODE_RESOLVE(e),
         query: {
           with_application: t,
           with_subscription_plan: n
         },
         oldFormErrors: !0
       }),
-      i = s.body;
-    return _.default.track(E.AnalyticEvents.GIFT_CODE_RESOLVED, {
+      s = i.body;
+    return f.default.track(p.AnalyticEvents.GIFT_CODE_RESOLVED, {
       resolved: !0,
-      gift_code: i.code,
-      gift_code_max_uses: i.max_uses,
-      sku_id: i.store_listing.sku.id,
-      sku_type: i.store_listing.sku.type,
-      application_id: i.store_listing.sku.application_id,
-      store_title: i.store_listing.sku.name
+      gift_code: s.code,
+      gift_code_max_uses: s.max_uses,
+      sku_id: s.store_listing.sku.id,
+      sku_type: s.store_listing.sku.type,
+      application_id: s.store_listing.sku.application_id,
+      store_title: s.store_listing.sku.name
     }, {
       flush: !0
-    }), i
+    }), s
   } catch (t) {
-    throw _.default.track(E.AnalyticEvents.GIFT_CODE_RESOLVED, {
+    throw f.default.track(p.AnalyticEvents.GIFT_CODE_RESOLVED, {
       resolved: !1,
       gift_code: e
     }), new o.default(t)
   }
 }
 
-function W(e, t) {
-  _.default.track(E.AnalyticEvents.GIFT_CODE_COPIED, {
-    ...(0, d.default)(t, !1, !1),
+function K(e, t) {
+  f.default.track(p.AnalyticEvents.GIFT_CODE_COPIED, {
+    ...(0, l.default)(t, !1, !1),
     ...e.analyticsData
   })
 }
 
-function z(e, t, n, s, i, r, a) {
-  return null == n && (s || i || null == e) ? !a || r || s || i ? s && (t.isSubscription || null != e) ? E.GiftCodeModalStates.SUCCESS : E.GiftCodeModalStates.CONFIRM : E.GiftCodeModalStates.OPEN : E.GiftCodeModalStates.ERROR
+function z(e, t, n, i, s, r, a) {
+  return null == n && (i || s || null == e) ? !a || r || i || s ? i && (t.isSubscription || null != e) ? p.GiftCodeModalStates.SUCCESS : p.GiftCodeModalStates.CONFIRM : p.GiftCodeModalStates.OPEN : p.GiftCodeModalStates.ERROR
 }
 
 function q(e, t, n) {
   switch (e) {
-    case E.GiftCodeModalStates.ERROR:
-      return y.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
-    case E.GiftCodeModalStates.SUCCESS:
-      return t.isSubscription ? y.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
+    case p.GiftCodeModalStates.ERROR:
+      return S.default.Messages.GIFT_CONFIRMATION_HEADER_FAIL;
+    case p.GiftCodeModalStates.SUCCESS:
+      return t.isSubscription ? S.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS_NITRO.format({
         skuName: n.name
-      }) : y.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
-    case E.GiftCodeModalStates.CONFIRM:
+      }) : S.default.Messages.GIFT_CONFIRMATION_HEADER_SUCCESS;
+    case p.GiftCodeModalStates.CONFIRM:
     default:
-      return t.isSubscription ? y.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
+      return t.isSubscription ? S.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM_NITRO.format({
         skuName: n.name
-      }) : y.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
+      }) : S.default.Messages.GIFT_CONFIRMATION_HEADER_CONFIRM
   }
 }
 
 function X(e, t, n) {
   switch (e) {
-    case E.GiftCodeModalStates.ERROR:
-      return y.default.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
-    case E.GiftCodeModalStates.SUCCESS:
-      if (__OVERLAY__) return y.default.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
-      if (t.isSubscription) return y.default.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
-      return y.default.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
-    case E.GiftCodeModalStates.OPEN:
-      return y.default.Messages.GIFT_OPEN_PROMPT;
-    case E.GiftCodeModalStates.CONFIRM:
+    case p.GiftCodeModalStates.ERROR:
+      return S.default.Messages.GIFT_CONFIRMATION_BUTTON_FAIL;
+    case p.GiftCodeModalStates.SUCCESS:
+      if (__OVERLAY__) return S.default.Messages.GIFT_CONFIRMATION_BUTTON_NOICE;
+      if (t.isSubscription) return S.default.Messages.GIFT_CONFIRMATION_BUTTON_SUBSCRIPTION_SUCCESS;
+      return S.default.Messages.GIFT_CONFIRMATION_BUTTON_GO_TO_LIBRARY;
+    case p.GiftCodeModalStates.OPEN:
+      return S.default.Messages.GIFT_OPEN_PROMPT;
+    case p.GiftCodeModalStates.CONFIRM:
     default:
-      if (null != n && n) return y.default.Messages.GIFT_CODE_AUTH_ACCEPT;
-      if (null != t.giftStyle) return t.isClaimed ? y.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : y.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
-      return t.isSubscription ? y.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : y.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
+      if (null != n && n) return S.default.Messages.GIFT_CODE_AUTH_ACCEPT;
+      if (null != t.giftStyle) return t.isClaimed ? S.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM : S.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_MOBILE;
+      return t.isSubscription ? S.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM_SUBSCRIPTION : S.default.Messages.GIFT_CONFIRMATION_BUTTON_CONFIRM
   }
 }
 
@@ -226,110 +226,110 @@ function Q(e) {
   let {
     step: t,
     sku: n,
-    libraryApplication: s,
-    error: i,
+    libraryApplication: i,
+    error: s,
     accepted: a,
     accepting: o,
-    onGoToLibrary: d,
+    onGoToLibrary: l,
     subscriptionPlan: u = null
   } = e;
   switch (t) {
-    case E.GiftCodeModalStates.ERROR:
-      return Z(s, i, a, o, d);
-    case E.GiftCodeModalStates.SUCCESS:
+    case p.GiftCodeModalStates.ERROR:
+      return Z(i, s, a, o, l);
+    case p.GiftCodeModalStates.SUCCESS:
       if (null != u) {
-        var l;
-        return l = u, (0, r.match)(l).with({
-          interval: p.SubscriptionIntervalTypes.MONTH,
-          premiumSubscriptionType: p.PremiumTypes.TIER_2
-        }, () => y.default.Messages.PREMIUM_FEATURES_TIER_2.format({
-          timeInterval: y.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
+        var d;
+        return d = u, (0, r.match)(d).with({
+          interval: v.SubscriptionIntervalTypes.MONTH,
+          premiumSubscriptionType: v.PremiumTypes.TIER_2
+        }, () => S.default.Messages.PREMIUM_FEATURES_TIER_2.format({
+          timeInterval: S.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_MONTH
         })).with({
-          interval: p.SubscriptionIntervalTypes.YEAR,
-          premiumSubscriptionType: p.PremiumTypes.TIER_2
-        }, () => y.default.Messages.PREMIUM_FEATURES_TIER_2.format({
-          timeInterval: y.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
+          interval: v.SubscriptionIntervalTypes.YEAR,
+          premiumSubscriptionType: v.PremiumTypes.TIER_2
+        }, () => S.default.Messages.PREMIUM_FEATURES_TIER_2.format({
+          timeInterval: S.default.Messages.PREMIUM_SUBSCRIPTION_INTERVAL_YEAR
         })).with({
-          interval: p.SubscriptionIntervalTypes.MONTH,
-          premiumSubscriptionType: p.PremiumTypes.TIER_1
-        }, () => y.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
-          intervalCount: l.intervalCount
+          interval: v.SubscriptionIntervalTypes.MONTH,
+          premiumSubscriptionType: v.PremiumTypes.TIER_1
+        }, () => S.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_MONTHLY.format({
+          intervalCount: d.intervalCount
         })).with({
-          interval: p.SubscriptionIntervalTypes.YEAR,
-          premiumSubscriptionType: p.PremiumTypes.TIER_1
-        }, () => y.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
-          intervalCount: l.intervalCount
-        })).otherwise(() => y.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
+          interval: v.SubscriptionIntervalTypes.YEAR,
+          premiumSubscriptionType: v.PremiumTypes.TIER_1
+        }, () => S.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_PREMIUM_TIER_1_YEARLY.format({
+          intervalCount: d.intervalCount
+        })).otherwise(() => S.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS_GENERIC)
       }
-      return y.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
+      return S.default.Messages.GIFT_CONFIRMATION_BODY_SUCCESS.format({
         skuName: n.name
       });
-    case E.GiftCodeModalStates.CONFIRM:
+    case p.GiftCodeModalStates.CONFIRM:
     default:
       if (null != u) {
-        let e = u.interval === p.SubscriptionIntervalTypes.MONTH ? y.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : y.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM;
+        let e = u.interval === v.SubscriptionIntervalTypes.MONTH ? S.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_MONTHLY_CONFIRM : S.default.Messages.GIFT_CONFIRMATION_BODY_SUBSCRIPTION_YEARLY_CONFIRM;
         return e.format({
           skuName: n.name,
           intervalCount: u.intervalCount
         })
       }
-      return y.default.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
+      return S.default.Messages.GIFT_CONFIRMATION_BODY_CONFIRM.format({
         skuName: n.name
       })
   }
 }
 
-function Z(e, t, n, s, i) {
-  let r = y.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
-    onGoToLibrary: i
+function Z(e, t, n, i, s) {
+  let r = S.default.Messages.GIFT_CONFIRMATION_BODY_OWNED.format({
+    onGoToLibrary: s
   });
-  if (null != (n || s ? void 0 : e)) return r;
+  if (null != (n || i ? void 0 : e)) return r;
   if (null == t) return null;
-  let a = f.default.getCurrentUser();
+  let a = c.default.getCurrentUser();
   return function(e, t) {
     switch (e.code) {
-      case E.AbortCodes.INVALID_GIFT_SELF_REDEMPTION:
-        return y.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
-      case E.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED:
-        return y.default.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
-      case E.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED:
-        return y.default.Messages.GIFT_ERROR_OWNED;
-      case E.AbortCodes.UNKNOWN_GIFT_CODE:
-        return y.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
-      case E.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
-        return y.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
-          planName: (0, m.isPremiumExactly)(t, p.PremiumTypes.TIER_2) ? y.default.Messages.PREMIUM_TIER_2 : y.default.Messages.PREMIUM_TIER_1
+      case p.AbortCodes.INVALID_GIFT_SELF_REDEMPTION:
+        return S.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT;
+      case p.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+        return S.default.Messages.GIFT_CONFIRMATION_BODY_CLAIMED;
+      case p.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED:
+        return S.default.Messages.GIFT_ERROR_OWNED;
+      case p.AbortCodes.UNKNOWN_GIFT_CODE:
+        return S.default.Messages.GIFT_CONFIRMATION_BODY_INVALID;
+      case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
+        return S.default.Messages.GIFT_EMBED_BODY_SUBSCRIPTION_MISMATCH.format({
+          planName: (0, g.isPremiumExactly)(t, v.PremiumTypes.TIER_2) ? S.default.Messages.PREMIUM_TIER_2 : S.default.Messages.PREMIUM_TIER_1
         });
-      case E.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
-        return y.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
-      case E.AbortCodes.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
-        return y.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
-      case E.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
-        return y.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
-      case E.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
-        return y.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
+      case p.AbortCodes.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
+        return S.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_SUBSCRIPTION_MANAGED;
+      case p.AbortCodes.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
+        return S.default.Messages.GIFT_CONFIRMATION_BODY_ERROR_INVOICE_OPEN;
+      case p.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
+        return S.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT;
+      case p.AbortCodes.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
+        return S.default.Messages.GIFT_CODE_PAYMENT_SOURCE_INVALID;
       default:
-        return y.default.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
+        return S.default.Messages.GIFT_CONFIRMATION_BODY_UNKNOWN_ERROR
     }
   }(t, a)
 }
 
 function J(e, t, n) {
-  let s = t.applicationId,
-    i = e.length > 0 ? e : [s],
-    r = i.map(e => n.getLibraryApplication(s, e, !0)).filter(c.isNotNullish);
-  return r.length === i.length ? r[0] : null
+  let i = t.applicationId,
+    s = e.length > 0 ? e : [i],
+    r = s.map(e => n.getLibraryApplication(i, e, !0)).filter(_.isNotNullish);
+  return r.length === s.length ? r[0] : null
 }
 
 function $(e) {
   let t = e.trim().split("/").pop(),
-    n = t.match(V);
+    n = t.match(M);
   if (null == n) return null;
-  let [s, i, r] = n;
+  let [i, s, r] = n;
   return null == r ? null : r.replace(/-/g, "")
 }
-let ee = (e, t) => (0, a.useStateFromStores)([l.default], () => {
+let ee = (e, t) => (0, a.useStateFromStores)([d.default], () => {
   if (null == e || !t) return null;
-  let n = l.default.getGiftCode(e);
+  let n = d.default.getGiftCode(e);
   return null == n || "" === n ? null : n
 })

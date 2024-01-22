@@ -19,8 +19,8 @@ var n = l("37983"),
   f = l("769791"),
   m = l("373469"),
   p = l("42203"),
-  E = l("305961"),
-  T = l("957255"),
+  T = l("305961"),
+  E = l("957255"),
   _ = l("800762"),
   S = l("313873"),
   h = l("599110"),
@@ -73,10 +73,10 @@ var N = function(e) {
   } = c.HangStatusExperiment.useExperiment({
     guildId: null == g ? void 0 : g.guild_id,
     location: "UserActivityContainer"
-  }), N = (0, s.useStateFromStores)([m.default], () => i ? m.default.getAnyStreamForUser(l.id) : null), y = C && T.default.can(A.Permissions.CONNECT, g), O = (null == t ? void 0 : t.type) === A.ActivityTypes.HANG_STATUS && y ? g : null, M = (0, s.useStateFromStores)([E.default, _.default, p.default], () => {
+  }), N = (0, s.useStateFromStores)([m.default], () => i ? m.default.getAnyStreamForUser(l.id) : null), y = C && E.default.can(A.Permissions.CONNECT, g), O = (null == t ? void 0 : t.type) === A.ActivityTypes.HANG_STATUS && y ? g : null, M = (0, s.useStateFromStores)([T.default, _.default, p.default], () => {
     var e, n;
-    return (0, r.default)(t, A.ActivityFlags.EMBEDDED) ? E.default.getGuild(null === (e = p.default.getChannel(null === (n = _.default.getVoiceStateForSession(l.id, null == t ? void 0 : t.session_id)) || void 0 === n ? void 0 : n.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != O ? E.default.getGuild(O.getGuildId()) : null
-  }), x = (0, s.useStateFromStores)([E.default], () => null != N ? E.default.getGuild(N.guildId) : null), R = (0, s.useStateFromStores)([d.default], () => {
+    return (0, r.default)(t, A.ActivityFlags.EMBEDDED) ? T.default.getGuild(null === (e = p.default.getChannel(null === (n = _.default.getVoiceStateForSession(l.id, null == t ? void 0 : t.session_id)) || void 0 === n ? void 0 : n.channelId)) || void 0 === e ? void 0 : e.getGuildId()) : null != O ? T.default.getGuild(O.getGuildId()) : null
+  }), x = (0, s.useStateFromStores)([T.default], () => null != N ? T.default.getGuild(N.guildId) : null), R = (0, s.useStateFromStores)([d.default], () => {
     if (null != t) return null != t.application_id ? d.default.getApplication(t.application_id) : d.default.getApplicationByName(t.name);
     return null
   });

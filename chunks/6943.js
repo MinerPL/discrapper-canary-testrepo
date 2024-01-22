@@ -1,6 +1,6 @@
 "use strict";
-var r = s("303571");
-t.exports = function(t, e) {
-  if (t === e) return 0 !== t || 1 / t == 1 / e;
-  return r(t) && r(e)
+var r = n("303571");
+e.exports = function(e, t) {
+  if (e === t) return 0 !== e || 1 / e == 1 / t;
+  return r(e) && r(t)
 }

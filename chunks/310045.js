@@ -11,8 +11,8 @@ var t = E("689988"),
   o = E("928609"),
   n = E("325861"),
   r = E("808422"),
-  i = E("628454"),
-  a = E("271938"),
+  a = E("628454"),
+  i = E("271938"),
   I = E("42203"),
   s = E("42887"),
   T = E("945956"),
@@ -51,7 +51,7 @@ class L extends t.default {
         channelId: E
       } = e;
       if (null == E) return;
-      let t = a.default.getId() === _;
+      let t = i.default.getId() === _;
       if (!t || null == T.default.getRTCConnectionId() || A === E) return;
       let o = l(_, E);
       if (o) {
@@ -62,7 +62,7 @@ class L extends t.default {
         let _ = (0, r.getAudienceRequestToSpeakState)(e),
           E = _ === r.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         return E
-      }(new i.default(e));
+      }(new a.default(e));
       n && (A = E, R())
     })
   }

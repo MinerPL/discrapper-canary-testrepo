@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   FetchState: function() {
-    return s
+    return i
   },
   default: function() {
-    return _
+    return f
   }
 }), n("222007");
-var s, i, r = n("446674"),
+var i, s, r = n("446674"),
   a = n("913144");
-(i = s || (s = {}))[i.FETCHING = 0] = "FETCHING", i[i.FETCHED = 1] = "FETCHED", i[i.ERROR = 2] = "ERROR";
+(s = i || (i = {}))[s.FETCHING = 0] = "FETCHING", s[s.FETCHED = 1] = "FETCHED", s[s.ERROR = 2] = "ERROR";
 let o = {},
-  d = {},
+  l = {},
   u = new Set,
-  l = {};
-class f extends r.default.Store {
+  d = {};
+class c extends r.default.Store {
   getApplication(e) {
     if (null != e) return o[e]
   }
@@ -22,10 +22,10 @@ class f extends r.default.Store {
     return o
   }
   getApplicationFetchState(e) {
-    if (null != e) return d[e]
+    if (null != e) return l[e]
   }
   getApplicationFetchStates() {
-    return d
+    return l
   }
   isInvalidApplication(e) {
     return null != e && u.has(e)
@@ -37,17 +37,17 @@ class f extends r.default.Store {
     return 0 === this.getApplicationFetchState(e)
   }
   getApplicationLastFetchTime(e) {
-    if (null != e) return l[e]
+    if (null != e) return d[e]
   }
 }
-f.displayName = "ApplicationDirectoryApplicationsStore";
-var _ = new f(a.default, {
+c.displayName = "ApplicationDirectoryApplicationsStore";
+var f = new c(a.default, {
   APPLICATION_DIRECTORY_FETCH_APPLICATION: function(e) {
     let {
       applicationId: t
     } = e;
-    d = {
-      ...d,
+    l = {
+      ...l,
       [t]: 0
     }
   },
@@ -58,13 +58,13 @@ var _ = new f(a.default, {
     o = {
       ...o,
       [t.id]: t
-    }, d = {
-      ...d,
+    }, l = {
+      ...l,
       [t.id]: 1
     };
     let n = Date.now();
-    l = {
-      ...l,
+    d = {
+      ...d,
       [t.id]: n
     }, u.has(t.id) && (u.delete(t.id), u = new Set(u))
   },
@@ -73,8 +73,8 @@ var _ = new f(a.default, {
       applicationId: t,
       isInvalidApplication: n
     } = e;
-    d = {
-      ...d,
+    l = {
+      ...l,
       [t]: 2
     }, n && (u.add(t), u = new Set(u))
   }

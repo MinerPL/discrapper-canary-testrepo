@@ -20,8 +20,8 @@ var a = l("446674"),
   f = l("476263"),
   m = l("368121"),
   p = l("777003"),
-  E = l("49111"),
-  T = l("782340"),
+  T = l("49111"),
+  E = l("782340"),
   _ = l("814076"),
   S = l("293773");
 
@@ -32,8 +32,8 @@ function h(e, t) {
     }, [t, e]),
     n = (0, a.useStateFromStores)([r.default], () => null != l && null != l.channelId ? r.default.getChannel(l.channelId) : null, [l]),
     s = (0, a.useStateFromStores)([o.default], () => null != n ? o.default.getGuild(n.guild_id) : null, [n]),
-    i = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(E.Permissions.VIEW_CHANNEL, n), [n]),
-    d = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(E.Permissions.CONNECT, n), [n]);
+    i = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(T.Permissions.VIEW_CHANNEL, n), [n]),
+    d = (0, a.useStateFromStores)([u.default], () => null != n && u.default.can(T.Permissions.CONNECT, n), [n]);
   return i && d && null != n && null != s ? {
     voiceGuild: s,
     voiceChannel: n
@@ -46,12 +46,12 @@ function I(e) {
     voiceChannel: l,
     onClose: r,
     color: o
-  } = e, u = (0, a.useStateFromStores)([d.default], () => d.default.getChannelId() === l.id), c = u ? T.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : l.isGuildStageVoice() ? T.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : T.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
+  } = e, u = (0, a.useStateFromStores)([d.default], () => d.default.getChannelId() === l.id), c = u ? E.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : l.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : E.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
   return (0, n.jsxs)(p.default, {
     children: [(0, n.jsx)(s.Heading, {
       variant: "eyebrow",
       className: _.title,
-      children: T.default.Messages.PROFILE_IN_VOICE_CALL
+      children: E.default.Messages.PROFILE_IN_VOICE_CALL
     }), (0, n.jsxs)("div", {
       className: S.voiceDisplayContainer,
       children: [(0, n.jsxs)("div", {

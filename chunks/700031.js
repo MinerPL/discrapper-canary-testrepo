@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var i = n("862205");
-let r = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2022-09_free_file_upload_limit",
   label: "Free File Upload Limit Increase",
@@ -20,4 +20,4 @@ let r = (0, i.createExperiment)({
     }
   }]
 });
-var s = r
+var r = s

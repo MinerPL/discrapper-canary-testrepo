@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("102985"),
   m = l("461380"),
   p = l("713135"),
-  E = l("824140"),
-  T = l("401642"),
+  T = l("824140"),
+  E = l("401642"),
   _ = l("777003"),
   S = l("590456"),
   h = l("49111"),
@@ -55,7 +55,7 @@ function v(e) {
     }, [null == y ? void 0 : y.id, null == R ? void 0 : R.id]), U || null == R) return null;
   let w = Array.from(L).map(e => {
     let t = D.find(t => t.type === e);
-    return null == t ? null : (0, n.jsx)(E.ConnectedUserAccount, {
+    return null == t ? null : (0, n.jsx)(T.ConnectedUserAccount, {
       connectedAccount: t,
       theme: O,
       locale: F,
@@ -71,7 +71,7 @@ function v(e) {
       className: i(A.connectionsContainer, x),
       children: [w, (0, n.jsxs)(o.Clickable, {
         onClick: function() {
-          (0, T.openUserProfileModal)({
+          (0, E.openUserProfileModal)({
             userId: C,
             guildId: null == y ? void 0 : y.id,
             channelId: N,
@@ -100,7 +100,7 @@ function v(e) {
       children: I.default.Messages.APPS
     }), (0, n.jsx)("div", {
       className: i(A.connectionsContainer, x),
-      children: j.map(e => (0, n.jsx)(E.ConnectedApplicationUserRoleAccount, {
+      children: j.map(e => (0, n.jsx)(T.ConnectedApplicationUserRoleAccount, {
         applicationRoleConnection: e,
         locale: F
       }, e.application.id))

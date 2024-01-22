@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return C
+    return m
   }
 });
 var l = a("37983");
@@ -9,70 +9,70 @@ a("884691");
 var s = a("414456"),
   r = a.n(s),
   n = a("77078"),
-  o = a("782340"),
-  i = a("98881"),
-  u = a("247329"),
-  c = a("333838"),
+  i = a("782340"),
+  o = a("98881"),
+  c = a("247329"),
+  u = a("333838"),
   d = a("399637"),
   f = a("976076"),
-  C = function(e) {
+  m = function(e) {
     let {
       isFullScreen: t
     } = e;
     return (0, l.jsxs)("div", {
-      className: i.heroBanner,
+      className: o.heroBanner,
       children: [(0, l.jsxs)("div", {
-        className: r(i.heroDescription, {
-          [i.heroDescriptionWithSidebar]: !t
+        className: r(o.heroDescription, {
+          [o.heroDescriptionWithSidebar]: !t
         }),
         children: [(0, l.jsx)(n.Heading, {
-          className: i.bannerTitle,
+          className: o.bannerTitle,
           color: "always-white",
           variant: "display-lg",
-          children: o.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
+          children: i.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
         }), (0, l.jsx)(n.Text, {
-          className: i.heroSubtitle,
+          className: o.heroSubtitle,
           color: "always-white",
           variant: "text-lg/normal",
-          children: o.default.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE
+          children: i.default.Messages.COLLECTIBLES_SFA_HERO_BANNER_SUBTITLE
         })]
       }), (0, l.jsx)("div", {
-        className: i.bannerBackgroundWrapper,
+        className: o.bannerBackgroundWrapper,
         children: (0, l.jsx)("img", {
-          className: i.bannerBackground,
+          className: o.bannerBackground,
           alt: "",
-          src: u
+          src: c
         })
       }), (0, l.jsx)("img", {
-        className: i.bannerForeground,
+        className: o.bannerForeground,
         alt: "",
-        src: c
+        src: u
       }), (0, l.jsx)("img", {
-        className: i.bannerHand,
+        className: o.bannerHand,
         alt: "",
         src: d
       }), (0, l.jsx)("img", {
-        className: r(i.largeSparkle, i.largeTopSparkle),
+        className: r(o.largeSparkle, o.largeTopSparkle),
         alt: "",
         src: f
       }), (0, l.jsx)("img", {
-        className: r(i.smallSparkle, i.smallTopSparkle),
+        className: r(o.smallSparkle, o.smallTopSparkle),
         alt: "",
         src: f
       }), (0, l.jsx)("img", {
-        className: r(i.largeSparkle, i.largeLeftSparkle),
+        className: r(o.largeSparkle, o.largeLeftSparkle),
         alt: "",
         src: f
       }), (0, l.jsx)("img", {
-        className: r(i.smallSparkle, i.smallLeftSparkle),
+        className: r(o.smallSparkle, o.smallLeftSparkle),
         alt: "",
         src: f
       }), (0, l.jsx)("img", {
-        className: r(i.largeSparkle, i.largeRightSparkle),
+        className: r(o.largeSparkle, o.largeRightSparkle),
         alt: "",
         src: f
       }), (0, l.jsx)("img", {
-        className: r(i.smallSparkle, i.smallRightSparkle),
+        className: r(o.smallSparkle, o.smallRightSparkle),
         alt: "",
         src: f
       })]

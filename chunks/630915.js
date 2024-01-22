@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   isOOPExperimentEnabled: function() {
-    return s
+    return r
   }
 });
 var i = n("296892");
-let r = (0, i.default)({
+let s = (0, i.default)({
   kind: "user",
   id: "2023-08_overlay3_out_of_process_enablement",
   label: "Overlay3 - Out of Process Enablement",
@@ -21,8 +21,8 @@ let r = (0, i.default)({
   }]
 });
 
-function s() {
-  let e = r.getCurrentConfig({
+function r() {
+  let e = s.getCurrentConfig({
     location: "isOOPExperimentEnabled"
   }, {
     autoTrackExposure: !0

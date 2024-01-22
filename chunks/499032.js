@@ -3,11 +3,11 @@ function r(e) {
     var t = e.which || e.keyCode || e.charCode;
     t && (e = t)
   }
-  if ("number" == typeof e) return s[e];
+  if ("number" == typeof e) return a[e];
   var n = String(e),
-    r = o[n.toLowerCase()];
+    r = i[n.toLowerCase()];
   if (r) return r;
-  var r = a[n.toLowerCase()];
+  var r = o[n.toLowerCase()];
   return r ? r : 1 === n.length ? n.charCodeAt(0) : void 0
 }
 r.isEventKey = function(e, t) {
@@ -15,15 +15,15 @@ r.isEventKey = function(e, t) {
     var n = e.which || e.keyCode || e.charCode;
     if (null == n) return !1;
     if ("string" == typeof t) {
-      var r = o[t.toLowerCase()];
+      var r = i[t.toLowerCase()];
       if (r) return r === n;
-      var r = a[t.toLowerCase()];
+      var r = o[t.toLowerCase()];
       if (r) return r === n
     } else if ("number" == typeof t) return t === n;
     return !1
   }
 };
-var o = (t = e.exports = r).code = t.codes = {
+var i = (t = e.exports = r).code = t.codes = {
     backspace: 8,
     tab: 9,
     enter: 13,
@@ -68,7 +68,7 @@ var o = (t = e.exports = r).code = t.codes = {
     "]": 221,
     "'": 222
   },
-  a = t.aliases = {
+  o = t.aliases = {
     windows: 91,
     "⇧": 16,
     "⌥": 18,
@@ -90,10 +90,10 @@ var o = (t = e.exports = r).code = t.codes = {
     del: 46,
     cmd: 91
   };
-for (i = 97; i < 123; i++) o[String.fromCharCode(i)] = i - 32;
-for (var i = 48; i < 58; i++) o[i - 48] = i;
-for (i = 1; i < 13; i++) o["f" + i] = i + 111;
-for (i = 0; i < 10; i++) o["numpad " + i] = i + 96;
-var s = t.names = t.title = {};
-for (i in o) s[o[i]] = i;
-for (var c in a) o[c] = a[c]
+for (s = 97; s < 123; s++) i[String.fromCharCode(s)] = s - 32;
+for (var s = 48; s < 58; s++) i[s - 48] = s;
+for (s = 1; s < 13; s++) i["f" + s] = s + 111;
+for (s = 0; s < 10; s++) i["numpad " + s] = s + 96;
+var a = t.names = t.title = {};
+for (s in i) a[i[s]] = s;
+for (var c in o) i[c] = o[c]

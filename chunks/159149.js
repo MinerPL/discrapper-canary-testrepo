@@ -25,9 +25,9 @@ let f = e => {
     primaryType: f,
     primaryText: E,
     primaryTooltip: _,
-    primaryDisabled: p,
-    primarySubmitting: C,
-    onPrimary: I,
+    primaryDisabled: C,
+    primarySubmitting: I,
+    onPrimary: p,
     secondaryText: A,
     onSecondary: T
   } = e;
@@ -40,10 +40,10 @@ let f = e => {
         t = {
           innerClassName: d.button,
           type: f,
-          disabled: p,
-          submitting: C,
+          disabled: C,
+          submitting: I,
           color: 0 === i ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
-          onClick: I
+          onClick: p
         };
       return null != _ ? (0, l.jsx)(o.Tooltip, {
         text: _,

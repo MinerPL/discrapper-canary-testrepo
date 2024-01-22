@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, r = n("782340");
+var i, s = n("782340");
 i = class {
   announce(e, t, n) {
     this.announcer.announce(e, t, n)
@@ -12,7 +12,7 @@ i = class {
   announceDrag(e, t) {
     if (null == e) return;
     let n = this.getName(e, t);
-    this.announce(r.default.Messages.DND_ITEM_PICKED_UP.format({
+    this.announce(s.default.Messages.DND_ITEM_PICKED_UP.format({
       itemName: n
     }))
   }
@@ -20,10 +20,10 @@ i = class {
     null != e && this.announce(this.getName(e, t))
   }
   announceDrop() {
-    this.announce(r.default.Messages.DND_ITEM_DROPPED)
+    this.announce(s.default.Messages.DND_ITEM_DROPPED)
   }
   announceCancel() {
-    this.announce(r.default.Messages.DND_DRAG_CANCELED)
+    this.announce(s.default.Messages.DND_DRAG_CANCELED)
   }
   clear() {
     this.announcer.clearAnnouncements()

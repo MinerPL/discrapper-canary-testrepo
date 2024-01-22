@@ -1,7 +1,7 @@
 "use strict";
 A.r(t), A.d(t, {
   getInitialNewRoleParams: function() {
-    return U
+    return I
   },
   WarningIcon: function() {
     return v
@@ -29,14 +29,14 @@ var l = A("627445"),
   m = A("782340"),
   p = A("60957");
 
-function U() {
+function I() {
   return {
     name: "",
     color: T.DEFAULT_ROLE_COLOR
   }
 }
 
-function I(e) {
+function U(e) {
   let t, {
     onRemove: A,
     role: l
@@ -173,7 +173,7 @@ function x(e) {
       size: 8
     }), (0, a.jsxs)("div", {
       className: p.reattachRoleRow,
-      children: [(0, a.jsx)(I, {
+      children: [(0, a.jsx)(U, {
         role: g,
         onRemove: void 0
       }), (0, a.jsx)(u.default, {
@@ -209,7 +209,7 @@ function x(e) {
       children: m.default.Messages.GUILD_PRODUCT_SETTINGS_ATTACHED_ROLE_DESCRIPTION
     }), (0, a.jsx)(u.default, {
       size: 8
-    }), (0, a.jsx)(I, {
+    }), (0, a.jsx)(U, {
       role: g,
       onRemove: () => {
         n(null != d, "productId cannot be null"), n(null != g, "no role attached"), ! function(e) {

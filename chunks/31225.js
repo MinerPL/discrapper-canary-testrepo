@@ -1,25 +1,25 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("469563"),
   l = s("2662"),
-  i = (0, n.replaceIcon)(function(e) {
+  r = (0, n.replaceIcon)(function(e) {
     let {
       width: t = 18,
       height: s = 18,
       color: n = "currentColor",
       foreground: l,
-      className: i
+      className: r
     } = e;
     return (0, a.jsx)("svg", {
       width: t,
       height: s,
-      className: i,
+      className: r,
       viewBox: "0 0 18 18",
       children: (0, a.jsx)("g", {
         stroke: "none",

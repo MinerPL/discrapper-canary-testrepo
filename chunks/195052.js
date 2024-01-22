@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("95410"),
+var s = n("95410"),
   r = n("77078"),
   a = n("773336"),
   o = {
@@ -15,7 +15,7 @@ var i = n("95410"),
         let {
           default: t
         } = await n.el("745705").then(n.bind(n, "745705"));
-        return n => (0, s.jsx)(t, {
+        return n => (0, i.jsx)(t, {
           ...n,
           url: e
         })
@@ -23,12 +23,12 @@ var i = n("95410"),
     },
     getBlockedDomains() {
       if ((0, a.isDesktop)()) {
-        let e = i.default.get("BlockedDomainsV2");
+        let e = s.default.get("BlockedDomainsV2");
         return Promise.resolve(null == e ? [] : e.split("\n"))
       }
       return Promise.resolve([])
     },
     saveBlockedDomains(e) {
-      (0, a.isDesktop)() && i.default.set("BlockedDomainsV2", e.join("\n"))
+      (0, a.isDesktop)() && s.default.set("BlockedDomainsV2", e.join("\n"))
     }
   }

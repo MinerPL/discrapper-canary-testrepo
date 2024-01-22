@@ -1,7 +1,7 @@
 "use strict";
 A.r(t), A.d(t, {
   default: function() {
-    return I
+    return U
   }
 }), A("222007");
 var a = A("37983"),
@@ -33,7 +33,7 @@ function p() {
   })
 }
 
-function U(e) {
+function I(e) {
   var t;
   let {
     hasError: A,
@@ -49,7 +49,7 @@ function U(e) {
   })
 }
 
-function I(e) {
+function U(e) {
   var t;
   let {
     "aria-labelledby": A,
@@ -58,7 +58,7 @@ function I(e) {
     autoFocus: d,
     maxLength: f,
     onChange: h,
-    onSubmit: I,
+    onSubmit: U,
     showCharacterCount: v = !1,
     placeholder: E,
     required: x,
@@ -108,11 +108,11 @@ function I(e) {
       P.current = !0
     },
     focused: P.current,
-    onSubmit: null != I ? I : p,
+    onSubmit: null != U ? U : p,
     disableThemedBackground: !q,
     parentModalKey: O,
     emojiPickerCloseOnModalOuterClick: !0,
-    children: [!0 === v && (0, a.jsx)(U, {
+    children: [!0 === v && (0, a.jsx)(I, {
       hasError: null != R.error || null != f && N.length > f,
       text: N,
       maxLength: f

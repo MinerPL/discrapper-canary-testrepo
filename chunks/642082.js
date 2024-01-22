@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
   doubles: {
     step: 4,
     points: [

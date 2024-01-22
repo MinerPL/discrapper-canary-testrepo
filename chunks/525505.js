@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   n = s("884691"),
   l = s("414456"),
-  i = s.n(l),
-  r = s("446674"),
+  r = s.n(l),
+  i = s("446674"),
   u = s("819855"),
   o = s("77078"),
   d = s("875212"),
@@ -16,15 +16,15 @@ var a = s("37983"),
   _ = s("812204"),
   E = s("685665"),
   I = s("308592"),
-  T = s("915639"),
-  f = s("697218"),
+  f = s("915639"),
+  T = s("697218"),
   S = s("521012"),
   R = s("36694"),
   m = s("945330"),
   p = s("719923"),
   N = s("153160"),
-  A = s("324878"),
-  g = s("917247"),
+  g = s("324878"),
+  A = s("917247"),
   P = s("641078"),
   C = s("400307"),
   O = s("218435"),
@@ -33,9 +33,9 @@ var a = s("37983"),
   L = s("49111"),
   x = s("782340"),
   v = s("992250"),
-  U = s("640754"),
+  j = s("640754"),
   b = s("510407"),
-  j = s("657890"),
+  U = s("657890"),
   D = s("823986");
 let G = e => {
     let {
@@ -60,7 +60,7 @@ let G = e => {
         premiumType: s
       } = e,
       n = (0, c.default)();
-    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? U : b : (0, u.isThemeDark)(n) ? j : D;
+    t = s === h.PremiumTypes.TIER_0 ? (0, u.isThemeDark)(n) ? j : b : (0, u.isThemeDark)(n) ? U : D;
     let l = (0, p.getPremiumTypeDisplayName)(s);
     return (0, a.jsx)("img", {
       src: t,
@@ -116,7 +116,7 @@ let G = e => {
       column2: n
     } = e;
     return (0, a.jsxs)("tr", {
-      className: i(v.headerRow, v.rowBottomBorder, v.topBorderRadius),
+      className: r(v.headerRow, v.rowBottomBorder, v.topBorderRadius),
       children: [(0, a.jsx)("th", {
         scope: "col",
         className: v.headerLabelCell,
@@ -127,7 +127,7 @@ let G = e => {
         children: s
       }), (0, a.jsx)("th", {
         scope: "col",
-        className: i(v.headerCell, v.topBorderRadius),
+        className: r(v.headerCell, v.topBorderRadius),
         children: n
       })]
     })
@@ -138,15 +138,15 @@ let G = e => {
       column1: s,
       column2: n,
       withBottomBorder: l = !0,
-      withTopBorderRadius: r = !1,
+      withTopBorderRadius: i = !1,
       withBottomBorderRadius: u = !1,
       buttonsRow: o = !1,
       shortRow: d = !1
     } = e;
     return (0, a.jsxs)("tr", {
-      className: i(v.row, {
+      className: r(v.row, {
         [v.wideRow]: o,
-        [v.topBorderRadius]: r,
+        [v.topBorderRadius]: i,
         [v.bottomBorderRadius]: u,
         [v.rowBottomBorder]: l,
         [v.shortRow]: d
@@ -156,13 +156,13 @@ let G = e => {
         className: v.labelCell,
         children: t
       }), (0, a.jsx)("td", {
-        className: i(v.cell, {
+        className: r(v.cell, {
           [v.buttonsCell]: o
         }),
         children: s
       }), (0, a.jsx)("td", {
-        className: i(v.cell, {
-          [v.topBorderRadius]: r,
+        className: r(v.cell, {
+          [v.topBorderRadius]: i,
           [v.bottomBorderRadius]: u,
           [v.buttonsCell]: o
         }),
@@ -176,14 +176,14 @@ var w = e => {
       className: l,
       hideCTAs: R = !1,
       headingOverride: m,
-      hidePill: U = !1,
+      hidePill: j = !1,
       selectedPlanColumnClassName: b,
-      selectedPlanTier: j = h.PremiumTypes.TIER_2
+      selectedPlanTier: U = h.PremiumTypes.TIER_2
     } = e,
     {
       AnalyticsLocationProvider: D
     } = (0, E.default)(_.default.PREMIUM_MARKETING_PLAN_COMPARISON),
-    w = (0, r.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
+    w = (0, i.useStateFromStores)([S.default], () => S.default.hasFetchedSubscriptions()),
     V = (0, I.useSubscriptionPlansLoaded)(),
     Y = "PlanComparisonTable";
   (0, d.useTriggerDebuggingAA)({
@@ -195,11 +195,11 @@ var w = e => {
   });
   let z = (0, c.default)(),
     X = (0, u.isThemeLight)(z),
-    Q = (0, r.useStateFromStores)([f.default], () => f.default.getCurrentUser()),
+    Q = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
     Z = (0, p.isPremiumExactly)(Q, h.PremiumTypes.TIER_2),
-    J = (0, g.usePremiumTrialOffer)(),
+    J = (0, A.usePremiumTrialOffer)(),
     q = null == J ? void 0 : null === (t = J.subscription_trial) || void 0 === t ? void 0 : t.sku_id,
-    $ = (0, A.useCurrentPremiumTrialTier)(),
+    $ = (0, g.useCurrentPremiumTrialTier)(),
     ee = (0, P.useIsEligibleForBogoPromotion)();
   if (!w || !V) return null;
   let et = p.default.getDefaultPrice(h.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
@@ -295,7 +295,7 @@ var w = e => {
       label: (0, a.jsx)(k, {
         text: x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_ROW_LABEL_BOOSTS.format({
           numBoosts: h.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-          percentageOff: (0, N.formatPercent)(T.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+          percentageOff: (0, N.formatPercent)(f.default.locale, h.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
         })
       }),
       column1: (0, a.jsx)(H, {
@@ -455,7 +455,7 @@ var w = e => {
     withBottomBorder: !1,
     withBottomBorderRadius: !0,
     buttonsRow: null == q
-  }), s = U ? null : null != q || null != $ ? (0, a.jsx)(C.PremiumPillWithSparkles, {
+  }), s = j ? null : null != q || null != $ ? (0, a.jsx)(C.PremiumPillWithSparkles, {
     text: null != q ? x.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_PLAN_ACTIVATED_PILL,
     className: v.freeTrialPillWithSparkles,
     colorOptions: q === h.PremiumSubscriptionSKUs.TIER_0 ? X ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_0_WHITE_FILL : X ? Z ? C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_OLD_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_NEW_GRADIENT_FILL : C.PremiumPillAndSparklesColorOptions.PREMIUM_TIER_2_WHITE_FILL
@@ -463,16 +463,16 @@ var w = e => {
     isLightTheme: X
   }) : (0, a.jsx)(B, {}), (0, a.jsx)(D, {
     children: (0, a.jsxs)("div", {
-      className: i(v.root, l),
+      className: r(v.root, l),
       "data-testid": "v2-marketing-page-comparison-table",
       children: [(0, a.jsx)(o.Heading, {
-        className: i(v.titleText, v.textColor),
+        className: r(v.titleText, v.textColor),
         variant: "heading-xxl/extrabold",
         children: null != m ? m : x.default.Messages.PREMIUM_TIER_0_DESKTOP_MARKETING_COMPARISON_TABLE_TITLE
       }), (0, a.jsxs)("div", {
         className: v.tableWrapper,
         children: [(0, a.jsx)("div", {
-          className: q === h.PremiumSubscriptionSKUs.TIER_0 || $ === h.PremiumTypes.TIER_0 || j === h.PremiumTypes.TIER_0 ? i(b, v.tier0ColumnOuter) : i(b, v.tier2ColumnOuter),
+          className: q === h.PremiumSubscriptionSKUs.TIER_0 || $ === h.PremiumTypes.TIER_0 || U === h.PremiumTypes.TIER_0 ? r(b, v.tier0ColumnOuter) : r(b, v.tier2ColumnOuter),
           children: s
         }), (0, a.jsxs)("table", {
           className: v.table,

@@ -13,7 +13,7 @@ E.r(_), E.d(_, {
 }), E("222007");
 let r = 50035;
 
-function i(e) {
+function a(e) {
   return e.map(e => ({
     code: "UNKNOWN",
     message: e
@@ -54,7 +54,7 @@ o = class {
       message: t,
       code: o,
       retryAfter: n,
-      errors: a,
+      errors: i,
       status: I,
       captchaFields: s
     } = function(e, _) {
@@ -78,11 +78,11 @@ o = class {
           let _ = {};
           for (let [E, t] of Object.entries(e)) {
             if ("_misc" === E) {
-              _._errors = i(t);
+              _._errors = a(t);
               continue
             }
             let e = {};
-            e._errors = i(t), _[E] = e
+            e._errors = a(t), _[E] = e
           }
           return _
         }(E)
@@ -94,6 +94,6 @@ o = class {
         status: e.status
       }
     }(e, _);
-    this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = a, this.status = I, this.captchaFields = null != s ? s : {}
+    this.message = null != t ? t : E, this.code = null != o ? o : -1, this.retryAfter = n, this.errors = i, this.status = I, this.captchaFields = null != s ? s : {}
   }
 }

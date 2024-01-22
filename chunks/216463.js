@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   InstantInviteGuestPage: function() {
-    return p
+    return I
   }
 }), n("808653");
 var l = n("37983"),
   i = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
-  s = n("77078"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("77078"),
   o = n("155996"),
   u = n("41594"),
   d = n("652453"),
   c = n("782340"),
   f = n("435808"),
-  h = n("926622");
-let g = e => {
+  g = n("926622");
+let h = e => {
     let {
       guild: t,
       inviteChannel: n,
-      setInviteChannel: r
-    } = e, a = (0, o.default)(t.id), d = i.useMemo(() => a.reduce((e, t) => ({
+      setInviteChannel: a
+    } = e, s = (0, o.default)(t.id), d = i.useMemo(() => s.reduce((e, t) => ({
       ...e,
       [t.id]: t
-    }), {}), [a]), f = i.useMemo(() => Object.values(d).map(e => ({
+    }), {}), [s]), f = i.useMemo(() => Object.values(d).map(e => ({
       value: e.id,
       label: e.name
     })), [d]);
-    return (0, l.jsx)(s.SearchableSelect, {
+    return (0, l.jsx)(r.SearchableSelect, {
       options: f,
       value: null == n ? void 0 : n.id,
       onChange: e => {
-        r(d[e])
+        a(d[e])
       },
       placeholder: c.default.Messages.INVITE_A_GUEST_SELECT_VOICE_CHANNEL,
       renderOptionPrefix: e => {
@@ -45,49 +45,49 @@ let g = e => {
       }
     })
   },
-  p = e => {
+  I = e => {
     let {
       handleDone: t,
       headerId: n,
       inviteChannel: i,
-      copyValue: r
+      copyValue: a
     } = e;
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsxs)(s.ModalHeader, {
-        children: [(0, l.jsx)(s.ModalCloseButton, {
+      children: [(0, l.jsxs)(r.ModalHeader, {
+        children: [(0, l.jsx)(r.ModalCloseButton, {
           className: f.closeButton,
           onClick: t
         }), (0, l.jsx)("div", {
           className: f.headerContainer,
-          children: (0, l.jsx)(s.FormTitle, {
+          children: (0, l.jsx)(r.FormTitle, {
             id: n,
             tag: "h2",
-            className: a(h.marginReset, f.headerCloseButtonSpacing, f.headerText),
+            className: s(g.marginReset, f.headerCloseButtonSpacing, f.headerText),
             children: c.default.Messages.INVITE_A_GUEST_VOICE_ONLY
           })
         })]
-      }), (0, l.jsx)(s.ModalContent, {
+      }), (0, l.jsx)(r.ModalContent, {
         className: f.noScroll,
         children: (0, l.jsxs)("div", {
           className: f.guestBody,
-          children: [(0, l.jsx)(s.Text, {
+          children: [(0, l.jsx)(r.Text, {
             tag: "div",
             variant: "heading-sm/normal",
             color: "header-secondary",
             children: c.default.Messages.INVITE_A_GUEST_EXPLANATION
-          }), (0, l.jsx)(s.FormTitle, {
+          }), (0, l.jsx)(r.FormTitle, {
             tag: "h5",
             className: f.guestSelectChannelHeader,
             children: c.default.Messages.INVITE_A_GUEST_STEP_1
-          }), (0, l.jsx)(g, {
+          }), (0, l.jsx)(h, {
             ...e
-          }), (0, l.jsx)(s.FormTitle, {
+          }), (0, l.jsx)(r.FormTitle, {
             tag: "h5",
             className: f.guestSendInviteLinkHeader,
             children: c.default.Messages.INVITE_A_GUEST_STEP_2
           }), (0, l.jsx)(d.InviteCopyInput, {
             ...e,
-            copyValue: null == i ? "" : r,
+            copyValue: null == i ? "" : a,
             disabled: null == i
           })]
         })

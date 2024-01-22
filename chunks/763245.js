@@ -1,11 +1,11 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   useIsForumPostPreviewEnabled: function() {
     return l
   }
 });
-var s = a("862205");
-let n = (0, s.createExperiment)({
+var a = s("862205");
+let n = (0, a.createExperiment)({
   kind: "user",
   id: "2023-10_forum_post_preview",
   label: "Enable preview of Forum post content before creation",

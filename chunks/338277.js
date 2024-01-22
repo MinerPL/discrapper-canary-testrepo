@@ -1,193 +1,193 @@
 "use strict";
 n.r(t), n.d(t, {
   useSearchField: function() {
-    return V
+    return K
   }
 });
 var r = n("290895"),
-  o = n("181551"),
-  a = n("536571"),
-  i = {},
+  i = n("181551"),
+  o = n("536571"),
   s = {},
+  a = {},
   c = {},
-  l = {},
   u = {},
   d = {},
-  p = {},
+  l = {},
   f = {},
-  m = {},
+  p = {},
   h = {},
   g = {},
-  v = {},
-  y = {},
   b = {},
+  v = {},
+  m = {},
+  y = {},
   x = {},
-  S = {},
   w = {},
+  S = {},
+  k = {},
+  _ = {},
+  E = {},
+  M = {},
   D = {},
   C = {},
   P = {},
-  k = {},
-  E = {},
   T = {},
-  R = {},
-  M = {},
-  O = {},
-  I = {},
   A = {},
+  R = {},
+  I = {},
+  O = {},
+  j = {},
   N = {},
   L = {},
-  j = {},
   F = {},
-  K = {},
-  _ = {},
+  B = {},
   z = {};
 
-function V(e, t, n) {
-  var s;
-  let c = (0, o.useLocalizedStringFormatter)((s = i) && s.__esModule ? s.default : s),
+function K(e, t, n) {
+  var a;
+  let c = (0, i.useLocalizedStringFormatter)((a = s) && a.__esModule ? a.default : a),
     {
-      isDisabled: l,
-      isReadOnly: u,
-      onSubmit: d = () => {},
-      onClear: p,
-      type: f = "search"
+      isDisabled: u,
+      isReadOnly: d,
+      onSubmit: l = () => {},
+      onClear: f,
+      type: p = "search"
     } = e,
     {
-      labelProps: m,
-      inputProps: h,
-      descriptionProps: g,
+      labelProps: h,
+      inputProps: g,
+      descriptionProps: b,
       errorMessageProps: v
-    } = (0, a.useTextField)({
+    } = (0, o.useTextField)({
       ...e,
       value: t.value,
       onChange: t.setValue,
       onKeyDown: (0, r.chain)(e => {
         let n = e.key;
-        ("Enter" === n || "Escape" === n) && e.preventDefault(), !l && !u && ("Enter" === n && d(t.value), "Escape" === n && (t.setValue(""), p && p()))
+        ("Enter" === n || "Escape" === n) && e.preventDefault(), !u && !d && ("Enter" === n && l(t.value), "Escape" === n && (t.setValue(""), f && f()))
       }, e.onKeyDown),
-      type: f
+      type: p
     }, n);
   return {
-    labelProps: m,
+    labelProps: h,
     inputProps: {
-      ...h,
+      ...g,
       defaultValue: void 0
     },
     clearButtonProps: {
       "aria-label": c.format("Clear search"),
       excludeFromTabOrder: !0,
       preventFocusOnPress: !0,
-      isDisabled: l || u,
+      isDisabled: u || d,
       onPress: () => {
-        t.setValue(""), p && p()
+        t.setValue(""), f && f()
       },
       onPressStart: () => {
         n.current.focus()
       }
     },
-    descriptionProps: g,
+    descriptionProps: b,
     errorMessageProps: v
   }
 }
-i = {
-  "ar-AE": s = {
+s = {
+  "ar-AE": a = {
     "Clear search": "مسح البحث"
   },
   "bg-BG": c = {
     "Clear search": "Изчистване на търсене"
   },
-  "cs-CZ": l = {
+  "cs-CZ": u = {
     "Clear search": "Vymazat hled\xe1n\xed"
   },
-  "da-DK": u = {
+  "da-DK": d = {
     "Clear search": "Ryd s\xf8gning"
   },
-  "de-DE": d = {
+  "de-DE": l = {
     "Clear search": "Suche zur\xfccksetzen"
   },
-  "el-GR": p = {
+  "el-GR": f = {
     "Clear search": "Απαλοιφή αναζήτησης"
   },
-  "en-US": f = {
+  "en-US": p = {
     "Clear search": "Clear search"
   },
-  "es-ES": m = {
+  "es-ES": h = {
     "Clear search": "Borrar b\xfasqueda"
   },
-  "et-EE": h = {
+  "et-EE": g = {
     "Clear search": "T\xfchjenda otsing"
   },
-  "fi-FI": g = {
+  "fi-FI": b = {
     "Clear search": "Tyhjenn\xe4 haku"
   },
   "fr-FR": v = {
     "Clear search": "Effacer la recherche"
   },
-  "he-IL": y = {
+  "he-IL": m = {
     "Clear search": "נקה חיפוש"
   },
-  "hr-HR": b = {
+  "hr-HR": y = {
     "Clear search": "Obriši pretragu"
   },
   "hu-HU": x = {
     "Clear search": "Keres\xe9s t\xf6rl\xe9se"
   },
-  "it-IT": S = {
+  "it-IT": w = {
     "Clear search": "Cancella ricerca"
   },
-  "ja-JP": w = {
+  "ja-JP": S = {
     "Clear search": "検索をクリア"
   },
-  "ko-KR": D = {
+  "ko-KR": k = {
     "Clear search": "검색 지우기"
   },
-  "lt-LT": C = {
+  "lt-LT": _ = {
     "Clear search": "Išvalyti iešką"
   },
-  "lv-LV": P = {
+  "lv-LV": E = {
     "Clear search": "Notīrīt meklēšanu"
   },
-  "nb-NO": k = {
+  "nb-NO": M = {
     "Clear search": "T\xf8m s\xf8k"
   },
-  "nl-NL": E = {
+  "nl-NL": D = {
     "Clear search": "Zoekactie wissen"
   },
-  "pl-PL": T = {
+  "pl-PL": C = {
     "Clear search": "Wyczyść zawartość wyszukiwania"
   },
-  "pt-BR": R = {
+  "pt-BR": P = {
     "Clear search": "Limpar pesquisa"
   },
-  "pt-PT": M = {
+  "pt-PT": T = {
     "Clear search": "Limpar pesquisa"
   },
-  "ro-RO": O = {
+  "ro-RO": A = {
     "Clear search": "Ştergeţi căutarea"
   },
-  "ru-RU": I = {
+  "ru-RU": R = {
     "Clear search": "Очистить поиск"
   },
-  "sk-SK": A = {
+  "sk-SK": I = {
     "Clear search": "Vymazať vyhľad\xe1vanie"
   },
-  "sl-SI": N = {
+  "sl-SI": O = {
     "Clear search": "Počisti iskanje"
   },
-  "sr-SP": L = {
+  "sr-SP": j = {
     "Clear search": "Obriši pretragu"
   },
-  "sv-SE": j = {
+  "sv-SE": N = {
     "Clear search": "Rensa s\xf6kning"
   },
-  "tr-TR": F = {
+  "tr-TR": L = {
     "Clear search": "Aramayı temizle"
   },
-  "uk-UA": K = {
+  "uk-UA": F = {
     "Clear search": "Очистити пошук"
   },
-  "zh-CN": _ = {
+  "zh-CN": B = {
     "Clear search": "清除搜索"
   },
   "zh-TW": z = {

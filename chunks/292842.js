@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  s = n("627445"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("627445"),
+  a = n.n(r),
   o = n("917351"),
   l = n.n(o);
-class u extends r.Component {
+class u extends s.Component {
   getDefaultAnimProps(e, t) {
     let n = Date.now();
     return {
@@ -52,7 +52,7 @@ class u extends r.Component {
     })
   }
   constructor(e) {
-    super(e), this.ref = r.createRef(), this._animate = () => {
+    super(e), this.ref = s.createRef(), this._animate = () => {
       let {
         animProps: e
       } = this;

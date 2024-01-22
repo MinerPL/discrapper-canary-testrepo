@@ -1,37 +1,37 @@
 "use strict";
-l.r(a), l.d(a, {
+a.r(t), a.d(t, {
   default: function() {
-    return x
+    return I
   }
-}), l("222007");
-var t = l("37983"),
-  s = l("884691"),
-  n = l("414456"),
-  i = l.n(n),
-  o = l("446674"),
-  d = l("77078"),
-  r = l("913144"),
-  c = l("145131"),
-  u = l("646356"),
-  E = l("736393"),
-  _ = l("698609"),
-  N = l("170213"),
-  S = l("782340"),
-  A = l("434848");
+}), a("222007");
+var l = a("37983"),
+  s = a("884691"),
+  n = a("414456"),
+  i = a.n(n),
+  o = a("446674"),
+  d = a("77078"),
+  r = a("913144"),
+  c = a("145131"),
+  u = a("646356"),
+  E = a("736393"),
+  A = a("698609"),
+  _ = a("170213"),
+  S = a("782340"),
+  N = a("434848");
 
-function x(e) {
+function I(e) {
   let {
-    isDsaEligible: a = !1,
-    className: l,
+    isDsaEligible: t = !1,
+    className: a,
     onClose: n,
-    onNext: x,
-    onBack: I
-  } = e, T = (0, _.useSafetyHubAppealSignal)(), f = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [g, h] = s.useState(""), [p, L] = s.useState(!1);
+    onNext: I,
+    onBack: x
+  } = e, f = (0, A.useSafetyHubAppealSignal)(), T = (0, o.useStateFromStores)([u.default], () => u.default.getFreeTextAppealReason()), [g, p] = s.useState(""), [C, m] = s.useState(!1);
   s.useEffect(() => {
-    h(null != f ? f : ""), L(T === N.AppealIngestionSignal.SOMETHING_ELSE)
-  }, [f, T]);
-  let m = e => {
-      L(e === N.AppealIngestionSignal.SOMETHING_ELSE), e !== N.AppealIngestionSignal.SOMETHING_ELSE && (h(""), r.default.dispatch({
+    p(null != T ? T : ""), m(f === _.AppealIngestionSignal.SOMETHING_ELSE)
+  }, [T, f]);
+  let h = e => {
+      m(e === _.AppealIngestionSignal.SOMETHING_ELSE), e !== _.AppealIngestionSignal.SOMETHING_ELSE && (p(""), r.default.dispatch({
         type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
         userInput: ""
       })), r.default.dispatch({
@@ -39,73 +39,73 @@ function x(e) {
         signal: e
       })
     },
-    C = N.AppealIngestionSignalOrder.map(e => ({
+    L = _.AppealIngestionSignalOrder.map(e => ({
       value: e,
       name: (0, E.getAppealSignalDisplayText)(e)
     }));
-  return (0, t.jsxs)(t.Fragment, {
-    children: [(0, t.jsxs)(d.ModalHeader, {
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)(d.ModalHeader, {
       direction: c.default.Direction.VERTICAL,
-      className: A.header,
+      className: N.header,
       separator: !1,
-      children: [(0, t.jsx)(d.Heading, {
-        className: A.title,
+      children: [(0, l.jsx)(d.Heading, {
+        className: N.title,
         variant: "heading-xl/semibold",
         children: S.default.Messages.APPEAL_INGESTION_MODAL_HEADER
-      }), (0, t.jsx)(d.Text, {
-        className: A.subtitle,
+      }), (0, l.jsx)(d.Text, {
+        className: N.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
         children: S.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SUBHEADER
-      }), null != n && (0, t.jsx)(d.ModalCloseButton, {
-        className: A.closeButton,
+      }), null != n && (0, l.jsx)(d.ModalCloseButton, {
+        className: N.closeButton,
         onClick: n
       })]
-    }), (0, t.jsxs)(d.ModalContent, {
-      className: i(A.templatesList, l),
+    }), (0, l.jsxs)(d.ModalContent, {
+      className: i(N.templatesList, a),
       paddingFix: !1,
-      children: [(0, t.jsx)(d.RadioGroup, {
+      children: [(0, l.jsx)(d.RadioGroup, {
         radioPosition: "right",
-        radioItemClassName: A.radioItem,
+        radioItemClassName: N.radioItem,
         size: d.RadioGroup.Sizes.NOT_SET,
-        value: T,
-        options: C,
+        value: f,
+        options: L,
         onChange: e => {
           let {
-            value: a
+            value: t
           } = e;
-          return m(a)
+          return h(t)
         }
-      }), p && (0, t.jsxs)(t.Fragment, {
-        children: [(0, t.jsx)(d.TextArea, {
+      }), C && (0, l.jsxs)(l.Fragment, {
+        children: [(0, l.jsx)(d.TextArea, {
           rows: 4,
           maxLength: 1024,
           placeholder: S.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_PLACEHOLDER,
           value: g,
-          onChange: h,
+          onChange: p,
           autoFocus: !0
-        }), (0, t.jsx)(d.Text, {
+        }), (0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: "header-muted",
           children: S.default.Messages.APPEAL_INGESTION_FREE_TEXT_REASON_ACTION_SHEET_FOOTER
         })]
       })]
-    }), (0, t.jsxs)(d.ModalFooter, {
-      children: [(0, t.jsx)(d.Button, {
-        onClick: () => {
-          r.default.dispatch({
-            type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-            userInput: g
-          }), null == x || x()
-        },
-        color: d.Button.Colors.BRAND,
-        children: S.default.Messages.NEXT
-      }), a && (0, t.jsx)(d.Button, {
+    }), (0, l.jsxs)(d.ModalFooter, {
+      children: [(0, l.jsx)(d.Button, {
         onClick: () => {
           r.default.dispatch({
             type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
             userInput: g
           }), null == I || I()
+        },
+        color: d.Button.Colors.BRAND,
+        children: S.default.Messages.NEXT
+      }), t && (0, l.jsx)(d.Button, {
+        onClick: () => {
+          r.default.dispatch({
+            type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+            userInput: g
+          }), null == x || x()
         },
         color: d.Button.Colors.PRIMARY,
         look: d.Button.Looks.LINK,

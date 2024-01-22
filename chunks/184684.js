@@ -7,10 +7,10 @@ s.r(t), s.d(t, {
     return l
   },
   WhatsNewProfileFXRollout: function() {
-    return i
+    return r
   },
   useWhatsNewProfileFXRollout: function() {
-    return r
+    return i
   }
 });
 var a = s("862205");
@@ -32,7 +32,7 @@ let n = (0, a.createExperiment)({
   l = () => n.useExperiment({
     location: "experiment_hook"
   }),
-  i = (0, a.createExperiment)({
+  r = (0, a.createExperiment)({
     kind: "user",
     id: "2023-09_whats_new_drop_2_flip",
     label: "What's New Drop 2",
@@ -47,6 +47,6 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  r = () => i.useExperiment({
+  i = () => r.useExperiment({
     location: "experiment_hook"
   })

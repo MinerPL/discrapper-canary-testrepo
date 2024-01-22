@@ -19,8 +19,8 @@ var n = l("37983"),
   f = l("446674"),
   m = l("669491"),
   p = l("77078"),
-  E = l("272030"),
-  T = l("851387"),
+  T = l("272030"),
+  E = l("851387"),
   _ = l("737960"),
   S = l("206230"),
   h = l("339023"),
@@ -83,7 +83,7 @@ let w = a.forwardRef(function(e, t) {
   var s, r, o;
   let u;
   let {
-    canRemove: T,
+    canRemove: E,
     className: _,
     role: A,
     onRemove: g,
@@ -98,7 +98,7 @@ let w = a.forwardRef(function(e, t) {
     size: 16,
     guildId: v
   }), L = (0, f.useStateFromStores)([S.default], () => S.default.roleStyle), P = (null === (s = A.tags) || void 0 === s ? void 0 : s.guild_connections) === null, b = a.useCallback(e => {
-    (0, E.openContextMenuLazy)(e, async () => {
+    (0, T.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await l.el("443070").then(l.bind(l, "443070"));
@@ -111,7 +111,7 @@ let w = a.forwardRef(function(e, t) {
   }, [A.id]), U = (0, p.useToken)(m.default.unsafe_rawColors.PRIMARY_300).hsl(), F = null !== (r = A.colorString) && void 0 !== r ? r : U, w = null !== (o = (0, c.hex2rgb)(F, .6)) && void 0 !== o ? o : void 0, G = m.default.unsafe_rawColors.WHITE_500.css, k = (0, c.hex2int)(F);
   null != k && .3 > (0, c.getDarkness)(k) && (G = m.default.unsafe_rawColors.PRIMARY_630.css), u = P ? (0, n.jsx)(h.default, {
     className: j.roleFlowerStar,
-    iconClassName: T ? j.roleVerifiedIcon : void 0,
+    iconClassName: E ? j.roleVerifiedIcon : void 0,
     color: F,
     size: 14
   }) : "dot" === L ? (0, n.jsx)(p.RoleDot, {
@@ -141,16 +141,16 @@ let w = a.forwardRef(function(e, t) {
       ...M,
       children: [(0, n.jsxs)(p.Clickable, {
         className: j.roleRemoveButton,
-        onClick: T ? g : void 0,
-        tabIndex: T ? y : -1,
+        onClick: E ? g : void 0,
+        tabIndex: E ? y : -1,
         focusProps: {
           focusClassName: j.roleRemoveIconFocused
         },
-        "aria-hidden": !T,
+        "aria-hidden": !E,
         "aria-label": D.default.Messages.GUILD_SETTINGS_MEMBERS_REMOVE_ROLE.format({
           roleName: A.name
         }),
-        children: [u, T ? (0, n.jsx)(O.default, {
+        children: [u, E ? (0, n.jsx)(O.default, {
           color: G,
           className: j.roleRemoveIcon,
           "aria-hidden": !0
@@ -249,12 +249,12 @@ function B(e) {
     width: f,
     className: m,
     readOnly: p,
-    roleClassName: E,
+    roleClassName: T,
     disableBorderColor: _
   } = e, S = a.useRef({}), h = a.useCallback(e => {
     var t;
     let n = r.filter(t => t !== e.id);
-    (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? T.default.unassignGuildRoleConnection(s.id, e.id) : A.default.updateMemberRoles(s.id, l.id, n, [], [e.id])
+    (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? E.default.unassignGuildRoleConnection(s.id, e.id) : A.default.updateMemberRoles(s.id, l.id, n, [], [e.id])
   }, [r, s.id, l.id]), I = a.useCallback(e => {
     let t = r; - 1 === t.indexOf(e) && (t = t.concat([e])), A.default.updateMemberRoles(s.id, l.id, t, [e], [])
   }, [r, s.id, l.id]), [g, N] = a.useState(null), y = a.useMemo(() => {
@@ -297,7 +297,7 @@ function B(e) {
     B = y.map(e => {
       var t;
       return (0, n.jsx)(w, {
-        className: E,
+        className: T,
         role: e,
         canRemove: x && L.default.isRoleHigher(s, M.id, R, e) || (null === (t = e.tags) || void 0 === t ? void 0 : t.guild_connections) === null && l.id === M.id,
         onRemove: () => h(e),

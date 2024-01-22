@@ -10,8 +10,8 @@ var i = n("77078"),
   r = n("139375"),
   s = n("419830"),
   o = n("990745"),
-  a = n("449008"),
-  u = n("432153"),
+  u = n("449008"),
+  a = n("432153"),
   c = n("677795"),
   d = n("782340"),
   f = n("856972");
@@ -19,11 +19,11 @@ var i = n("77078"),
 function E(e) {
   let {
     channelId: t
-  } = e, n = (0, u.useChannelWithTemplateFallback)(t);
+  } = e, n = (0, a.useChannelWithTemplateFallback)(t);
   if (null == n) return (0, l.jsx)(l.Fragment, {
     children: "[".concat(d.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_TIER_DELETED_CHANNEL_LABEL, "]")
   });
-  let a = n.isMediaChannel() ? o.default : (0, s.getSimpleChannelIconComponent)(n.type);
+  let u = n.isMediaChannel() ? o.default : (0, s.getSimpleChannelIconComponent)(n.type);
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsx)(i.HiddenVisually, {
       children: (0, r.default)({
@@ -31,7 +31,7 @@ function E(e) {
       })
     }), (0, l.jsxs)("div", {
       "aria-hidden": !0,
-      children: [null != a && (0, l.jsx)(a, {
+      children: [null != u && (0, l.jsx)(u, {
         className: f.icon,
         "aria-hidden": !0
       }), n.name]
@@ -48,6 +48,6 @@ function _(e) {
     case c.GuildRoleSubscriptionBenefitTypes.INTANGIBLE:
       return e.name;
     default:
-      (0, a.assertNever)(e)
+      (0, u.assertNever)(e)
   }
 }

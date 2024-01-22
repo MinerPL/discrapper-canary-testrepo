@@ -5,160 +5,160 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("290895"),
-  o = n("181551"),
-  a = {},
-  i = {},
+  i = n("181551"),
+  o = {},
   s = {},
+  a = {},
   c = {},
-  l = {},
   u = {},
   d = {},
-  p = {},
+  l = {},
   f = {},
-  m = {},
+  p = {},
   h = {},
   g = {},
-  v = {},
-  y = {},
   b = {},
+  v = {},
+  m = {},
+  y = {},
   x = {},
-  S = {},
   w = {},
+  S = {},
+  k = {},
+  _ = {},
+  E = {},
+  M = {},
   D = {},
   C = {},
   P = {},
-  k = {},
-  E = {},
   T = {},
-  R = {},
-  M = {},
-  O = {},
-  I = {},
   A = {},
+  R = {},
+  I = {},
+  O = {},
+  j = {},
   N = {},
   L = {},
-  j = {},
   F = {},
-  K = {},
-  _ = {};
+  B = {};
 
 function z(e) {
   var t;
   let {
     "aria-label": n,
-    ...i
+    ...s
   } = e;
-  let s = (0, o.useLocalizedStringFormatter)((t = a) && t.__esModule ? t.default : t);
+  let a = (0, i.useLocalizedStringFormatter)((t = o) && t.__esModule ? t.default : t);
   return {
     navProps: {
-      ...(0, r.filterDOMProps)(i, {
+      ...(0, r.filterDOMProps)(s, {
         labelable: !0
       }),
-      "aria-label": n || s.format("breadcrumbs")
+      "aria-label": n || a.format("breadcrumbs")
     }
   }
 }
-a = {
-  "ar-AE": i = {
+o = {
+  "ar-AE": s = {
     breadcrumbs: "عناصر الواجهة"
   },
-  "bg-BG": s = {
+  "bg-BG": a = {
     breadcrumbs: "Трохи хляб"
   },
   "cs-CZ": c = {
     breadcrumbs: "Popis cesty"
   },
-  "da-DK": l = {
+  "da-DK": u = {
     breadcrumbs: "Br\xf8dkrummer"
   },
-  "de-DE": u = {
+  "de-DE": d = {
     breadcrumbs: "Breadcrumbs"
   },
-  "el-GR": d = {
+  "el-GR": l = {
     breadcrumbs: "Πλοηγήσεις breadcrumb"
   },
-  "en-US": p = {
+  "en-US": f = {
     breadcrumbs: "Breadcrumbs"
   },
-  "es-ES": f = {
+  "es-ES": p = {
     breadcrumbs: "Migas de pan"
   },
-  "et-EE": m = {
+  "et-EE": h = {
     breadcrumbs: "Lingiread"
   },
-  "fi-FI": h = {
+  "fi-FI": g = {
     breadcrumbs: "Navigointilinkit"
   },
-  "fr-FR": g = {
+  "fr-FR": b = {
     breadcrumbs: "Chemin de navigation"
   },
   "he-IL": v = {
     breadcrumbs: "שבילי ניווט"
   },
-  "hr-HR": y = {
+  "hr-HR": m = {
     breadcrumbs: "Navigacijski putovi"
   },
-  "hu-HU": b = {
+  "hu-HU": y = {
     breadcrumbs: "Morzsamen\xfc"
   },
   "it-IT": x = {
     breadcrumbs: "Breadcrumb"
   },
-  "ja-JP": S = {
+  "ja-JP": w = {
     breadcrumbs: "パンくずリスト"
   },
-  "ko-KR": w = {
+  "ko-KR": S = {
     breadcrumbs: "탐색 표시"
   },
-  "lt-LT": D = {
+  "lt-LT": k = {
     breadcrumbs: "Naršymo kelias"
   },
-  "lv-LV": C = {
+  "lv-LV": _ = {
     breadcrumbs: "Atpakaļceļi"
   },
-  "nb-NO": P = {
+  "nb-NO": E = {
     breadcrumbs: "Navigasjonsstier"
   },
-  "nl-NL": k = {
+  "nl-NL": M = {
     breadcrumbs: "Broodkruimels"
   },
-  "pl-PL": E = {
+  "pl-PL": D = {
     breadcrumbs: "Struktura nawigacyjna"
   },
-  "pt-BR": T = {
+  "pt-BR": C = {
     breadcrumbs: "Caminho detalhado"
   },
-  "pt-PT": R = {
+  "pt-PT": P = {
     breadcrumbs: "Categorias"
   },
-  "ro-RO": M = {
+  "ro-RO": T = {
     breadcrumbs: "Miez de p\xe2ine"
   },
-  "ru-RU": O = {
+  "ru-RU": A = {
     breadcrumbs: "Навигация"
   },
-  "sk-SK": I = {
+  "sk-SK": R = {
     breadcrumbs: "Navigačn\xe9 prvky Breadcrumbs"
   },
-  "sl-SI": A = {
+  "sl-SI": I = {
     breadcrumbs: "Drobtine"
   },
-  "sr-SP": N = {
+  "sr-SP": O = {
     breadcrumbs: "Putanje navigacije"
   },
-  "sv-SE": L = {
+  "sv-SE": j = {
     breadcrumbs: "S\xf6kv\xe4gar"
   },
-  "tr-TR": j = {
+  "tr-TR": N = {
     breadcrumbs: "İ\xe7erik haritaları"
   },
-  "uk-UA": F = {
+  "uk-UA": L = {
     breadcrumbs: "Навігаційна стежка"
   },
-  "zh-CN": K = {
+  "zh-CN": F = {
     breadcrumbs: "导航栏"
   },
-  "zh-TW": _ = {
+  "zh-TW": B = {
     breadcrumbs: "導覽列"
   }
 }

@@ -33,9 +33,9 @@ var u = r("872717"),
   n = r("54239"),
   i = r("448993"),
   s = r("514296"),
-  a = r("407788"),
-  c = r("489134"),
-  o = r("49111");
+  o = r("407788"),
+  a = r("489134"),
+  c = r("49111");
 r("853987"), r("426497"), r("775416"), r("216719");
 let d = e => {
     let {
@@ -45,7 +45,7 @@ let d = e => {
     l.default.dispatch({
       type: "COLLECTIBLES_SHOP_OPEN",
       ...r
-    }), t && (0, n.pushLayer)(o.Layers.COLLECTIBLES_SHOP)
+    }), t && (0, n.pushLayer)(c.Layers.COLLECTIBLES_SHOP)
   },
   E = () => {
     l.default.dispatch({
@@ -64,7 +64,7 @@ let d = e => {
     });
     try {
       let t = await u.default.get({
-        url: o.Endpoints.COLLECTIBLES_CATEGORIES,
+        url: c.Endpoints.COLLECTIBLES_CATEGORIES,
         query: null != e ? {
           country_code: e
         } : {}
@@ -84,10 +84,10 @@ let d = e => {
       type: "COLLECTIBLES_PURCHASES_FETCH"
     });
     try {
-      let e = await u.default.get(o.Endpoints.COLLECTIBLES_PURCHASES);
+      let e = await u.default.get(c.Endpoints.COLLECTIBLES_PURCHASES);
       l.default.dispatch({
         type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS",
-        purchases: e.body.map(c.default.fromServer)
+        purchases: e.body.map(a.default.fromServer)
       })
     } catch (e) {
       throw l.default.dispatch({
@@ -101,14 +101,14 @@ let d = e => {
     });
     try {
       let r = await u.default.get({
-        url: o.Endpoints.COLLECTIBLES_PRODUCTS(e),
+        url: c.Endpoints.COLLECTIBLES_PRODUCTS(e),
         query: null != t ? {
           country_code: t
         } : {}
       });
       l.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-        product: a.default.fromServer(r.body)
+        product: o.default.fromServer(r.body)
       })
     } catch (e) {
       throw l.default.dispatch({
@@ -124,7 +124,7 @@ let d = e => {
     try {
       var t;
       let r = await u.default.put({
-        url: o.Endpoints.COLLECTIBLES_CLAIM,
+        url: c.Endpoints.COLLECTIBLES_CLAIM,
         body: {
           sku_id: e
         }
@@ -132,7 +132,7 @@ let d = e => {
       l.default.dispatch({
         type: "COLLECTIBLES_CLAIM_SUCCESS",
         skuId: e,
-        purchases: null === (t = r.body) || void 0 === t ? void 0 : t.map(c.default.fromServer)
+        purchases: null === (t = r.body) || void 0 === t ? void 0 : t.map(a.default.fromServer)
       })
     } catch (t) {
       throw l.default.dispatch({
@@ -144,7 +144,7 @@ let d = e => {
   }, f = async (e, t) => {
     try {
       let r = await u.default.get({
-        url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+        url: c.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
         query: {
           sku_id: t,
           recipient_id: e

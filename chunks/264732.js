@@ -28,10 +28,10 @@ var s = n("37983"),
       style: n,
       channel: _,
       draftType: T
-    } = e, [M, N] = a.useState(!0), I = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), v = (0, l.useStateFromStores)([f.default], () => null != _ && f.default.can(S.Permissions.ATTACH_FILES, _), [_]), L = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(_.id)), x = null != L, R = _.getGuildId(), y = T === o.DraftType.FirstThreadMessage, D = (0, l.useStateFromStores)([C.default], () => {
+    } = e, [M, N] = a.useState(!0), I = (0, l.useStateFromStores)([c.default], () => c.default.hasLayers()), v = (0, l.useStateFromStores)([f.default], () => null != _ && f.default.can(S.Permissions.ATTACH_FILES, _), [_]), L = (0, l.useStateFromStores)([i.default], () => i.default.getActiveCommand(_.id)), x = null != L, R = _.getGuildId(), y = T === o.DraftType.FirstThreadMessage, O = (0, l.useStateFromStores)([C.default], () => {
       var e;
       return !0 == !(null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed)
-    }), O = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(R)), j = O && !D, P = a.useMemo(() => !I && (_.isPrivate() && !_.isManaged() || null != R && (!_.isNSFW() || j) && v && d.default.canChatInGuild(R)), [v, j, _, R, I]), b = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(_.type) ? A.default.Messages.UPLOAD_TO_NEW_POST : A.default.Messages.UPLOAD_TO_NEW_THREAD : M ? A.default.Messages.UPLOAD_TO.format({
+    }), D = (0, l.useStateFromStores)([u.default], () => u.default.didAgree(R)), j = D && !O, P = a.useMemo(() => !I && (_.isPrivate() && !_.isManaged() || null != R && (!_.isNSFW() || j) && v && d.default.canChatInGuild(R)), [v, j, _, R, I]), b = y ? S.ChannelTypesSets.GUILD_THREADS_ONLY.has(_.type) ? A.default.Messages.UPLOAD_TO_NEW_POST : A.default.Messages.UPLOAD_TO_NEW_THREAD : M ? A.default.Messages.UPLOAD_TO.format({
       destination: (0, r.computeChannelName)(_, C.default, h.default, !0)
     }) : A.default.Messages.UPLOAD_AREA_TITLE_NO_CONFIRMATION;
     return x || !P ? null : (0, s.jsx)(E.default, {

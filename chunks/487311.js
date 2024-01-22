@@ -23,7 +23,7 @@ var a = l("448105"),
       roleFilter: i,
       onSelect: m,
       onClose: p
-    } = e, E = e => r(l.roles).filter(i).filter(t => s(e.toLowerCase(), t.name.toLowerCase())).value();
+    } = e, T = e => r(l.roles).filter(i).filter(t => s(e.toLowerCase(), t.name.toLowerCase())).value();
     return (0, n.jsx)(u.ComboboxPopout, {
       className: t,
       value: new Set,
@@ -31,7 +31,7 @@ var a = l("448105"),
       placeholder: c.default.Messages.ADD_ROLE_PLACEHOLDER,
       "aria-label": c.default.Messages.ADD_ROLE_A11Y_LABEL,
       onClose: p,
-      children: e => E(e).map(e => {
+      children: e => T(e).map(e => {
         var t, l;
         return (0, n.jsxs)(u.ComboboxItem, {
           value: e.id,

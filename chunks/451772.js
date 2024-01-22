@@ -8,8 +8,8 @@ var t = E("862337"),
   o = E("913144"),
   n = E("990766"),
   r = E("373469"),
-  i = E("271938"),
-  a = E("42203"),
+  a = E("271938"),
+  i = E("42203"),
   I = E("590401"),
   s = E("18494"),
   T = E("205817"),
@@ -24,14 +24,14 @@ let A = new t.Timeout,
 
 function C(e, _) {
   if (s.default.getVoiceChannelId() !== e) return !1;
-  let E = a.default.getChannel(e);
+  let E = i.default.getChannel(e);
   if (null == E || !E.isDM() && !E.isGuildStageVoice()) return !1;
   let t = r.default.getActiveStreamForUser(_, E.getGuildId());
   if (null != t) return !1;
   let o = r.default.getStreamForUser(_, E.getGuildId());
   if (null == o) return !1;
-  let i = (0, N.encodeStreamKey)(o);
-  return i !== u && (u = i, (0, n.watchStream)(o, {
+  let a = (0, N.encodeStreamKey)(o);
+  return a !== u && (u = a, (0, n.watchStream)(o, {
     noFocus: !0
   }), !0)
 }
@@ -55,19 +55,19 @@ var c = {
         streamKey: E
       } = _, {
         channelId: t
-      } = (0, N.decodeStreamKey)(E), o = a.default.getChannel(t);
+      } = (0, N.decodeStreamKey)(E), o = i.default.getChannel(t);
       e(E, null == o ? void 0 : o.isGuildStageVoice())
     }), o.default.subscribe("STREAM_START", _ => {
       let {
         streamType: E,
         guildId: t,
         channelId: o
-      } = _, n = a.default.getChannel(o);
+      } = _, n = i.default.getChannel(o);
       e((0, N.encodeStreamKey)({
         streamType: E,
         guildId: t,
         channelId: o,
-        ownerId: i.default.getId()
+        ownerId: a.default.getId()
       }), null == n ? void 0 : n.isGuildStageVoice())
     }), o.default.subscribe("STREAM_CREATE", () => {
       R.stop()
@@ -87,7 +87,7 @@ var c = {
         let {
           ownerId: _
         } = e;
-        return _ !== i.default.getId()
+        return _ !== a.default.getId()
       })[0];
       null != E && C(_, E.ownerId)
     }), o.default.subscribe("VOICE_STATE_UPDATES", e => {
@@ -101,7 +101,7 @@ var c = {
           guildId: t,
           selfStream: o
         } = e;
-        if (_ !== i.default.getId() && null != E) {
+        if (_ !== a.default.getId() && null != E) {
           if (o && C(E, _)) return;
           let e = r.default.getActiveStreamForUser(_, t);
           if (null != e && e.channelId === E && (!o && e.state !== O.ApplicationStreamStates.ENDED && A.start(18e4, () => (0, n.closeStream)((0, N.encodeStreamKey)(e), !1)), o && e.state === O.ApplicationStreamStates.ENDED)) {

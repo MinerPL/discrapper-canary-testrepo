@@ -5,60 +5,60 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("907002"),
   l = n("446674"),
   u = n("731898"),
-  c = n("206230"),
-  d = n("236685");
+  d = n("206230"),
+  c = n("236685");
 
 function f(e) {
   let {
     children: t,
     className: n,
-    collapsibleContent: s,
+    collapsibleContent: r,
     isExpanded: f
-  } = e, [E, h] = r.useState(!1), p = (0, l.useStateFromStores)([c.default], () => c.default.useReducedMotion), [_, S] = r.useState(!0), [m, T] = r.useState(!1), g = null != f ? f : E, {
-    ref: I,
-    height: C = 0
+  } = e, [_, h] = s.useState(!1), g = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion), [m, E] = s.useState(!0), [p, v] = s.useState(!1), S = null != f ? f : _, {
+    ref: T,
+    height: I = 0
   } = (0, u.default)(), {
-    ref: v,
+    ref: C,
     height: A = 0
-  } = (0, u.default)(), R = (0, o.useSpring)({
-    height: g ? C + A : A,
-    immediate: _ || p,
+  } = (0, u.default)(), y = (0, o.useSpring)({
+    height: S ? I + A : A,
+    immediate: m || g,
     config: o.config.stiff,
-    onRest: () => T(!0)
-  }), N = r.useCallback(() => {
-    h(!E)
-  }, [E, h]);
-  return r.useLayoutEffect(() => {
+    onRest: () => v(!0)
+  }), N = s.useCallback(() => {
+    h(!_)
+  }, [_, h]);
+  return s.useLayoutEffect(() => {
     let e = setTimeout(() => {
-      S(!1)
+      E(!1)
     }, 100);
     return () => clearTimeout(e)
   }, []), (0, i.jsx)("div", {
-    className: a(d.collapseable, {
-      [d.toggled]: g
+    className: a(c.collapseable, {
+      [c.toggled]: S
     }, n),
     children: (0, i.jsxs)(o.animated.div, {
-      className: a(d.contentExpandContainer, {
-        [d.showOverflow]: g && m
+      className: a(c.contentExpandContainer, {
+        [c.showOverflow]: S && p
       }),
-      style: R,
+      style: y,
       children: [(0, i.jsx)("div", {
-        ref: v,
-        className: a(d.header, {
-          [d.toggled]: g
+        ref: C,
+        className: a(c.header, {
+          [c.toggled]: S
         }),
         children: t({
           onClick: N
         })
       }), (0, i.jsx)("div", {
-        ref: I,
-        children: s
+        ref: T,
+        children: r
       })]
     })
   })

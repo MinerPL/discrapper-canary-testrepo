@@ -8,8 +8,8 @@ var r = n("37983"),
   i = n("884691"),
   l = n("627445"),
   s = n.n(l),
-  u = n("77078"),
-  a = n("612039"),
+  a = n("77078"),
+  u = n("612039"),
   o = n("90592"),
   c = n("527866"),
   d = n("642906"),
@@ -62,7 +62,7 @@ function h(e) {
   } = (0, d.usePaymentContext)();
   s(null != w, "Expected plan to be selected"), s(null != Z, "Step should be set");
   let Q = i.useRef(null),
-    [J, $] = (0, a.default)(!1, 500),
+    [J, $] = (0, u.default)(!1, 500),
     [ee, et] = i.useState(null == W ? void 0 : W.guild_id),
     en = (0, o.isApplicationUserSubscription)(U.sku_flags);
   i.useEffect(() => {
@@ -86,11 +86,11 @@ function h(e) {
     }), (0, r.jsxs)(T.PaymentPortalBody, {
       children: [(0, r.jsx)(N.default, {}), en && (0, r.jsxs)("div", {
         className: C.userSubscriptionDetailsContainer,
-        children: [(0, r.jsx)(u.Text, {
+        children: [(0, r.jsx)(a.Text, {
           variant: "eyebrow",
           color: "header-secondary",
           children: m.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_TITLE
-        }), (0, r.jsx)(u.Text, {
+        }), (0, r.jsx)(a.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
           children: m.default.Messages.APPLICATION_USER_SUBSCRIPTION_PURCHASE_SUBTITLE.format({
@@ -99,11 +99,11 @@ function h(e) {
         })]
       }), h && !en && (0, r.jsxs)("div", {
         className: C.guildPickerContainer,
-        children: [(0, r.jsx)(u.FormTitle, {
-          tag: u.FormTitleTags.H5,
+        children: [(0, r.jsx)(a.FormTitle, {
+          tag: a.FormTitleTags.H5,
           children: m.default.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_TITLE
-        }), (0, r.jsx)(u.FormText, {
-          type: u.FormText.Types.DESCRIPTION,
+        }), (0, r.jsx)(a.FormText, {
+          type: a.FormText.Types.DESCRIPTION,
           className: C.guildPickerDescription,
           children: m.default.Messages.APPLICATION_SUBSCRIPTION_PAYMENT_CHOOSE_SERVER_SUBTITLE
         }), (0, r.jsx)(p.GuildPickerDropdown, {

@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   DropTargetMonitorImpl: function() {
-    return s
+    return a
   }
 }), n("70102");
 var r = n("900255");
 
-function o(e, t) {
+function i(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function a(e, t, n) {
+function o(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -21,16 +21,16 @@ function a(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var i = !1,
-  s = function() {
+var s = !1,
+  a = function() {
     var e, t, n;
 
-    function s(e) {
+    function a(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-      }(this, s), a(this, "internalMonitor", void 0), a(this, "targetId", null), this.internalMonitor = e.getMonitor()
+      }(this, a), o(this, "internalMonitor", void 0), o(this, "targetId", null), this.internalMonitor = e.getMonitor()
     }
-    return e = s, t = [{
+    return e = a, t = [{
       key: "receiveHandlerId",
       value: function(e) {
         this.targetId = e
@@ -49,11 +49,11 @@ var i = !1,
       key: "canDrop",
       value: function() {
         if (!this.targetId) return !1;
-        (0, r.invariant)(!i, "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor");
+        (0, r.invariant)(!s, "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor");
         try {
-          return i = !0, this.internalMonitor.canDropOnTarget(this.targetId)
+          return s = !0, this.internalMonitor.canDropOnTarget(this.targetId)
         } finally {
-          i = !1
+          s = !1
         }
       }
     }, {
@@ -106,5 +106,5 @@ var i = !1,
       value: function() {
         return this.internalMonitor.getDifferenceFromInitialOffset()
       }
-    }], o(e.prototype, t), n && o(e, n), s
+    }], i(e.prototype, t), n && i(e, n), a
   }()

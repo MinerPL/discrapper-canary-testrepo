@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var s = n("862205");
-let i = (0, s.createExperiment)({
+var i = n("862205");
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2024-01_chunked_message_attachment_uploads",
   label: "Use chunked uploads for message attachments",
@@ -22,4 +22,4 @@ let i = (0, s.createExperiment)({
     }
   }]
 });
-var r = i
+var r = s

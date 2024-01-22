@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 }), n("424973");
-var i, r, s = n("627445"),
-  a = n.n(s),
+var i, s, r = n("627445"),
+  a = n.n(r),
   o = n("446674"),
   l = n("95410"),
   u = n("913144");
@@ -39,4 +39,4 @@ var i, r, s = n("627445"),
   constructor() {
     super(u.default, null), a(null != this.getClass().displayName, "Snapshot stores need a display name"), e.allStores.push(this)
   }
-}).allStores = [], r = i
+}).allStores = [], s = i

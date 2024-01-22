@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 }), n("222007");
 var i = n("37983"),
@@ -107,4 +107,4 @@ class p extends l.Component {
 p.defaultProps = {
   disablePopout: !1
 };
-var I = (0, u.default)(p)
+var S = (0, u.default)(p)

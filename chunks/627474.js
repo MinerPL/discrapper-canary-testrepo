@@ -8,17 +8,17 @@ s.r(t), s.d(t, {
   }
 });
 var a, n, l = s("37983"),
-  i = s("884691"),
-  r = s("414456"),
-  u = s.n(r),
+  r = s("884691"),
+  i = s("414456"),
+  u = s.n(i),
   o = s("65597"),
   d = s("77078"),
   c = s("411691"),
   _ = s("521012"),
   E = s("719923"),
   I = s("367226"),
-  T = s("628550"),
-  f = s("558566"),
+  f = s("628550"),
+  T = s("558566"),
   S = s("646718"),
   R = s("782340"),
   m = s("650734");
@@ -46,11 +46,11 @@ var N = e => {
     variant: s = "perks_discoverability",
     noBackground: a = !1,
     leftAlignHeaders: n = !1
-  } = e, r = i.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), _ = (0, c.default)("perks-discoverability");
+  } = e, i = r.useRef(null), o = (0, I.useShouldScrollToWhatsNew)(), _ = (0, c.default)("perks-discoverability");
   (0, I.useClearNewBadge)();
   let E = "whats_new" === s;
-  i.useEffect(() => {
-    let e = r.current;
+  r.useEffect(() => {
+    let e = i.current;
     if (null == e || !o || !E) return;
     let t = requestAnimationFrame(() => {
       e.scrollIntoView({
@@ -58,8 +58,8 @@ var N = e => {
       })
     });
     return () => cancelAnimationFrame(t)
-  }, [r, o, E]);
-  let S = (0, T.default)(),
+  }, [i, o, E]);
+  let S = (0, f.default)(),
     R = p(E),
     N = [];
   switch (s) {
@@ -69,9 +69,9 @@ var N = e => {
     case "whats_new":
       N = [S.earlyAccess, _ !== c.CollectiblesShopMarketingVariants.DEFAULT ? S.specialShopPerks : S.specialMemberPricing, S.unlimitedSuperReactions]
   }
-  let A = N.some(e => null != e.pillText);
+  let g = N.some(e => null != e.pillText);
   return (0, l.jsxs)("div", {
-    ref: r,
+    ref: i,
     className: u(m.section, {
       [m.centerAlignSection]: !n,
       [m.leftAlignSection]: n
@@ -86,14 +86,14 @@ var N = e => {
       color: "header-primary",
       className: u(m.subtitle, {
         [m.fullWidth]: E || n,
-        [m.moreSubtitleMargin]: A,
+        [m.moreSubtitleMargin]: g,
         [m.leftAlignSubtitle]: n,
         [m.centerAlignSubtitle]: !n
       }),
       children: R.subtitle
     }), (0, l.jsx)("div", {
       className: m.cardContainer,
-      children: N.map((e, t) => (0, l.jsx)(f.default, {
+      children: N.map((e, t) => (0, l.jsx)(T.default, {
         ...e,
         forceShadow: a
       }, "".concat(e.name, "_").concat(t)))

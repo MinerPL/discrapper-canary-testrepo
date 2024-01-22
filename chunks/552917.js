@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var r = n("862205");
-let i = (0, r.createExperiment)({
+var i = n("862205");
+let r = (0, i.createExperiment)({
   kind: "user",
   id: "2022-12_premium_targeted_upsells",
   label: "Premium Targeted Upsells",
@@ -30,4 +30,4 @@ let i = (0, r.createExperiment)({
     }
   }]
 });
-var l = i
+var l = r

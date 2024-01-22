@@ -1,105 +1,105 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return S
   }
 }), n("222007");
-var s = n("37983"),
-  o = n("884691"),
-  r = n("446674"),
-  l = n("77078"),
-  a = n("152584"),
+var o = n("37983"),
+  s = n("884691"),
+  a = n("446674"),
+  r = n("77078"),
+  l = n("152584"),
   i = n("790618"),
-  u = n("258078"),
-  d = n("648661"),
-  E = n("782340"),
-  _ = n("679012");
+  E = n("258078"),
+  _ = n("648661"),
+  u = n("782340"),
+  T = n("679012");
 
-function c(e) {
+function S(e) {
   var t, n;
   let {
-    emailToken: c,
-    isSlideReady: T,
-    onClose: S,
-    onBack: N
-  } = e, [C, f] = o.useState(""), [A, I] = o.useState(""), [R, h] = o.useState(!1), p = (0, r.useStateFromStores)([i.default], () => i.default.getErrors()), U = o.useRef(null);
-  async function O(e) {
-    e.preventDefault(), h(!0);
-    let t = await (0, a.saveAccountChanges)({
+    emailToken: S,
+    isSlideReady: d,
+    onClose: N,
+    onBack: c
+  } = e, [C, A] = s.useState(""), [I, f] = s.useState(""), [R, U] = s.useState(!1), O = (0, a.useStateFromStores)([i.default], () => i.default.getErrors()), m = s.useRef(null);
+  async function p(e) {
+    e.preventDefault(), U(!0);
+    let t = await (0, l.saveAccountChanges)({
       email: C,
-      emailToken: c,
-      password: A
+      emailToken: S,
+      password: I
     });
-    if (h(!1), null == t ? void 0 : t.ok) S();
+    if (U(!1), null == t ? void 0 : t.ok) N();
     else {
-      var n, s;
-      (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null ? (0, d.showInvalidUsernameToast)() : (null == t ? void 0 : null === (s = t.body) || void 0 === s ? void 0 : s.email_token) != null && (null == N || N())
+      var n, o;
+      (null == t ? void 0 : null === (n = t.body) || void 0 === n ? void 0 : n.username) != null ? (0, _.showInvalidUsernameToast)() : (null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.email_token) != null && (null == c || c())
     }
   }
-  return o.useEffect(() => {
-    if (T) {
+  return s.useEffect(() => {
+    if (d) {
       var e;
-      null === (e = U.current) || void 0 === e || e.focus()
+      null === (e = m.current) || void 0 === e || e.focus()
     }
-  }, [T]), (0, s.jsxs)("form", {
-    onSubmit: O,
-    children: [(0, s.jsxs)(l.ModalHeader, {
+  }, [d]), (0, o.jsxs)("form", {
+    onSubmit: p,
+    children: [(0, o.jsxs)(r.ModalHeader, {
       separator: !1,
-      className: _.header,
-      children: [(0, s.jsx)(u.default, {
-        color: u.default.Colors.HEADER_PRIMARY,
-        size: u.default.Sizes.SIZE_24,
-        className: _.title,
-        children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
-      }), (0, s.jsx)(l.Text, {
+      className: T.header,
+      children: [(0, o.jsx)(E.default, {
+        color: E.default.Colors.HEADER_PRIMARY,
+        size: E.default.Sizes.SIZE_24,
+        className: T.title,
+        children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_TITLE_DESKTOP
+      }), (0, o.jsx)(r.Text, {
         color: "header-secondary",
         variant: "text-md/normal",
-        className: _.subtitle,
-        children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
-      }), (0, s.jsx)(l.ModalCloseButton, {
-        onClick: S,
-        className: _.modalCloseButton
+        className: T.subtitle,
+        children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_PROMPT_DESKTOP
+      }), (0, o.jsx)(r.ModalCloseButton, {
+        onClick: N,
+        className: T.modalCloseButton
       })]
-    }), (0, s.jsxs)(l.ModalContent, {
-      className: _.content,
-      children: [(0, s.jsx)(l.FormItem, {
-        title: E.default.Messages.EMAIL,
-        error: null == p ? void 0 : null === (t = p.email) || void 0 === t ? void 0 : t[0],
-        children: (0, s.jsx)(l.TextInput, {
+    }), (0, o.jsxs)(r.ModalContent, {
+      className: T.content,
+      children: [(0, o.jsx)(r.FormItem, {
+        title: u.default.Messages.EMAIL,
+        error: null == O ? void 0 : null === (t = O.email) || void 0 === t ? void 0 : t[0],
+        children: (0, o.jsx)(r.TextInput, {
           type: "email",
           value: C,
-          onChange: f,
-          inputRef: U
+          onChange: A,
+          inputRef: m
         })
-      }), (0, s.jsx)(l.FormItem, {
-        className: _.password,
-        title: E.default.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
-        error: null == p ? void 0 : null === (n = p.password) || void 0 === n ? void 0 : n[0],
-        children: (0, s.jsx)(l.TextInput, {
+      }), (0, o.jsx)(r.FormItem, {
+        className: T.password,
+        title: u.default.Messages.USER_SETTINGS_LABEL_CURRENT_PASSWORD,
+        error: null == O ? void 0 : null === (n = O.password) || void 0 === n ? void 0 : n[0],
+        children: (0, o.jsx)(r.TextInput, {
           type: "password",
-          value: A,
-          onChange: I
+          value: I,
+          onChange: f
         })
       })]
-    }), (0, s.jsxs)(l.ModalFooter, {
-      children: [(0, s.jsx)(l.Button, {
+    }), (0, o.jsxs)(r.ModalFooter, {
+      children: [(0, o.jsx)(r.Button, {
         type: "submit",
-        color: l.Button.Colors.BRAND,
-        size: l.Button.Sizes.MEDIUM,
+        color: r.Button.Colors.BRAND,
+        size: r.Button.Sizes.MEDIUM,
         submitting: R,
-        children: E.default.Messages.DONE
-      }), null != N ? (0, s.jsx)(l.Button, {
-        className: _.cancel,
-        look: l.Button.Looks.LINK,
-        color: l.Button.Colors.PRIMARY,
+        children: u.default.Messages.DONE
+      }), null != c ? (0, o.jsx)(r.Button, {
+        className: T.cancel,
+        look: r.Button.Looks.LINK,
+        color: r.Button.Colors.PRIMARY,
+        onClick: c,
+        children: u.default.Messages.BACK
+      }) : (0, o.jsx)(r.Button, {
+        className: T.cancel,
+        look: r.Button.Looks.LINK,
+        color: r.Button.Colors.PRIMARY,
         onClick: N,
-        children: E.default.Messages.BACK
-      }) : (0, s.jsx)(l.Button, {
-        className: _.cancel,
-        look: l.Button.Looks.LINK,
-        color: l.Button.Colors.PRIMARY,
-        onClick: S,
-        children: E.default.Messages.CANCEL
+        children: u.default.Messages.CANCEL
       })]
     })]
   })

@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("211248"),
   m = n("11539"),
   p = n("599110"),
-  S = n("64318"),
-  g = n("49111"),
+  g = n("64318"),
+  S = n("49111"),
   N = n("782340"),
   _ = n("358468");
 
@@ -56,14 +56,14 @@ function I(e) {
   }, [v, x, M]);
   return (0, a.jsxs)("div", {
     className: _.container,
-    children: [(0, a.jsx)(S.default, {
+    children: [(0, a.jsx)(g.default, {
       tab: r.InboxTab.FOR_YOU,
       setTab: t,
       badgeState: n,
       closePopout: E,
       children: R ? (0, a.jsx)(T, {
         onClick: () => {
-          null != v && (h.NotificationCenterAckedBeforeId.updateSetting(v.id), p.default.track(g.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
+          null != v && (h.NotificationCenterAckedBeforeId.updateSetting(v.id), p.default.track(S.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
             action_type: u.NotificationCenterActionTypes.MARK_ALL_READ
           }))
         }

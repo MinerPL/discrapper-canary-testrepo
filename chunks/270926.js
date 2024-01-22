@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s = n("132710"),
-  i = n.n(s);
+var i = n("132710"),
+  s = n.n(i);
 let r = /\n$/,
   a = {
-    ...i.defaultRules.heading,
+    ...s.defaultRules.heading,
     requiredFirstCharacters: [" ", "#"],
-    match: (e, t, n) => t.allowHeading ? null == n || "" === n || null != n.match(r) ? (0, s.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null : null
+    match: (e, t, n) => t.allowHeading ? null == n || "" === n || null != n.match(r) ? (0, i.anyScopeRegex)(/^ *(#{1,3})(?:\s+)((?![#]+)[^\n]+?)#*\s*(?:\n|$)/)(e, t, n) : null : null
   };
 var o = a

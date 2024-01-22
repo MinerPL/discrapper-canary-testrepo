@@ -150,7 +150,7 @@ var I = a.memo(function(e) {
   }, [x]);
   let {
     multiplier: y,
-    value: D
+    value: O
   } = a.useMemo(() => ({
     value: v ? x.value : R.current.value,
     multiplier: v ? x.multiplier : R.current.multiplier
@@ -164,7 +164,7 @@ var I = a.memo(function(e) {
       className: T.combo,
       style: L,
       children: (0, s.jsx)(N, {
-        value: D,
+        value: O,
         multiplier: y
       })
     })]

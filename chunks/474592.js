@@ -1,68 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   InstantInviteSettingsPage: function() {
-    return h
+    return g
   }
 });
 var l = n("37983");
 n("884691");
 var i = n("414456"),
-  r = n.n(i),
-  a = n("77078"),
-  s = n("841098"),
+  a = n.n(i),
+  s = n("77078"),
+  r = n("841098"),
   o = n("825691"),
   u = n("339485"),
   d = n("782340"),
   c = n("435808"),
   f = n("926622");
-let h = e => {
+let g = e => {
   let {
     handleDone: t,
     headerId: n,
     modalState: i,
-    shouldHideTemporaryInviteToggle: h,
-    onGenerateNewLink: g,
-    onToggleTemporary: p,
+    shouldHideTemporaryInviteToggle: g,
+    onGenerateNewLink: h,
+    onToggleTemporary: I,
     onSelectMaxAge: m,
-    onSelectMaxUses: v,
-    guild: I
-  } = e, E = (0, s.default)(), {
+    onSelectMaxUses: E,
+    guild: p
+  } = e, v = (0, r.default)(), {
     maxAge: _,
     maxUses: T,
     temporary: N
   } = i;
   return (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsxs)(a.ModalHeader, {
-      children: [(0, l.jsx)(a.ModalCloseButton, {
+    children: [(0, l.jsxs)(s.ModalHeader, {
+      children: [(0, l.jsx)(s.ModalCloseButton, {
         className: c.closeButton,
         onClick: t
       }), (0, l.jsx)("div", {
         className: c.headerContainer,
-        children: (0, l.jsx)(a.FormTitle, {
+        children: (0, l.jsx)(s.FormTitle, {
           id: n,
           tag: "h2",
-          className: r(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
+          className: a(f.marginReset, c.headerCloseButtonSpacing, c.headerText),
           children: d.default.Messages.INVITE_SETTINGS_TITLE
         })
       })]
     }), (0, l.jsx)(o.default, {
-      guildId: I.id,
-      shouldHideTemporaryInviteToggle: h,
+      guildId: p.id,
+      shouldHideTemporaryInviteToggle: g,
       maxAge: _,
       maxUses: T,
       temporary: N,
-      onToggleTemporary: p,
+      onToggleTemporary: I,
       onSelectMaxAge: m,
-      onSelectMaxUses: v,
-      onGenerateNewLink: g
-    }), (0, l.jsx)(a.ModalFooter, {
+      onSelectMaxUses: E,
+      onGenerateNewLink: h
+    }), (0, l.jsx)(s.ModalFooter, {
       className: c.settingsFooter,
       children: (0, l.jsx)(u.default, {
-        guildId: null == I ? void 0 : I.id,
+        guildId: null == p ? void 0 : p.id,
         maxAge: _,
-        theme: E,
+        theme: v,
         onConfirm: () => {
-          g(), t()
+          h(), t()
         },
         onDismiss: t
       })

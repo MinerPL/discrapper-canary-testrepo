@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  s = n("714617"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("714617"),
+  a = n.n(r),
   o = n("917351"),
   l = n.n(o);
-let u = r.createContext([]);
+let u = s.createContext([]);
 
-function c(e) {
+function d(e) {
   let {
     children: t,
     currentContext: n
@@ -23,31 +23,31 @@ function c(e) {
   })
 }
 
-function d(e, t) {
+function c(e, t) {
   if (0 === t.length) return e;
   let n = l.flatten(t);
   return [...e, ...n]
 }
 
 function f() {
-  for (var e, t = arguments.length, n = Array(t), s = 0; s < t; s++) n[s] = arguments[s];
-  let [o, l] = r.useState(n), f = r.useContext(u), E = r.useMemo(() => d(f, o), [o, f]), h = r.useMemo(() => d(f, o.slice(0, o.length - 1)), [o, f]);
-  r.useEffect(() => {
+  for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
+  let [o, l] = s.useState(n), f = s.useContext(u), _ = s.useMemo(() => c(f, o), [o, f]), h = s.useMemo(() => c(f, o.slice(0, o.length - 1)), [o, f]);
+  s.useEffect(() => {
     !a(n, o) && l(n)
   }, [n]);
-  let p = r.useCallback(e => {
+  let g = s.useCallback(e => {
     let {
       children: t
     } = e;
-    return (0, i.jsx)(c, {
-      currentContext: E,
+    return (0, i.jsx)(d, {
+      currentContext: _,
       children: t
     })
-  }, [E]);
+  }, [_]);
   return {
-    AnalyticsLocationProvider: p,
-    analyticsLocations: E,
+    AnalyticsLocationProvider: g,
+    analyticsLocations: _,
     sourceAnalyticsLocations: h,
-    newestAnalyticsLocation: null !== (e = E[E.length - 1]) && void 0 !== e ? e : null
+    newestAnalyticsLocation: null !== (e = _[_.length - 1]) && void 0 !== e ? e : null
   }
 }

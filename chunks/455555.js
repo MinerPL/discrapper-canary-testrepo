@@ -49,8 +49,8 @@ var s = n("37983"),
   H = n("538620"),
   V = n("703537"),
   Y = n("55282"),
-  K = n("42203"),
-  W = n("305961"),
+  W = n("42203"),
+  K = n("305961"),
   z = n("42887"),
   Z = n("945956"),
   J = n("162771"),
@@ -107,7 +107,7 @@ let em = l.memo(function() {
   let i = (0, o.useStateFromStores)([Q.default], () => Q.default.getCurrentUser()),
     _ = (0, o.useStateFromStores)([J.default], () => J.default.getGuildId()),
     g = (0, o.useStateFromStores)([$.default], () => $.default.getNotice()),
-    er = (0, o.useStateFromStores)([W.default], () => W.default.getGuild(_)),
+    er = (0, o.useStateFromStores)([K.default], () => K.default.getGuild(_)),
     {
       analyticsLocations: em
     } = (0, M.default)(),
@@ -197,7 +197,7 @@ let em = l.memo(function() {
           onClick: () => {
             let e = Z.default.getRemoteDisconnectVoiceChannelId();
             if (null != e) {
-              let t = K.default.getChannel(e);
+              let t = W.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
             }
           },
@@ -217,7 +217,7 @@ let em = l.memo(function() {
           onClick: () => {
             let e = Z.default.getLastSessionVoiceChannelId();
             if (null != e) {
-              let t = K.default.getChannel(e);
+              let t = W.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
             }
           },

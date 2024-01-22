@@ -16,8 +16,8 @@ var n = l("37983"),
   f = l("62843"),
   m = l("837899"),
   p = l("425190"),
-  E = l("701909"),
-  T = l("49111"),
+  T = l("701909"),
+  E = l("49111"),
   _ = l("782340"),
   S = l("474963"),
   h = l("632215");
@@ -75,7 +75,7 @@ function I(e) {
         color: "var(--text-link)",
         className: S.linkIcon
       }), (0, n.jsx)(c.default, {
-        onClick: () => (0, u.default)(E.default.getArticleURL(T.HelpdeskArticles.CLYDE_AI), !0),
+        onClick: () => (0, u.default)(T.default.getArticleURL(E.HelpdeskArticles.CLYDE_AI), !0),
         children: _.default.Messages.MORE_INFO_HELP_CENTER
       })]
     })]

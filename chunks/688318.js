@@ -19,29 +19,29 @@ var n = r("884691"),
       animateOnHover: E = !1,
       showPending: s = !1,
       showTryItOut: _ = !1,
-      avatarDecorationOverride: S
-    } = t, [d, C] = n.useState(!1), I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), A = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), f = (0, i.useStateFromStores)([l.default], () => {
+      avatarDecorationOverride: d
+    } = t, [S, C] = n.useState(!1), I = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), f = (0, i.useStateFromStores)([a.default], () => a.default.isFocused()), A = (0, i.useStateFromStores)([l.default], () => {
       var t;
       return null === (t = l.default.getCurrentUser()) || void 0 === t ? void 0 : t.id
     }), v = (0, i.useStateFromStores)([l.default], () => {
       var t;
       return null === (t = l.default.getUser(null == e ? void 0 : e.id)) || void 0 === t ? void 0 : t.avatarDecoration
     }), {
-      pendingAvatarDecoration: O
+      pendingAvatarDecoration: N
     } = (0, u.default)({
       isTryItOut: _
-    }), N = A && (d || !I && !E), R = s && void 0 !== O && void 0 !== f && f === (null == e ? void 0 : e.id) ? O : null != v ? v : null == e ? void 0 : e.avatarDecoration, P = n.useMemo(() => (0, T.getAvatarDecorationURL)({
-      avatarDecoration: void 0 !== S ? S : R,
-      canAnimate: N,
+    }), O = f && (S || !I && !E), R = s && void 0 !== N && void 0 !== A && A === (null == e ? void 0 : e.id) ? N : null != v ? v : null == e ? void 0 : e.avatarDecoration, P = n.useMemo(() => (0, T.getAvatarDecorationURL)({
+      avatarDecoration: void 0 !== d ? d : R,
+      canAnimate: O,
       size: r
-    }), [R, N, r, S]), g = n.useCallback(() => C(!0), []), U = n.useCallback(() => C(!1), []);
+    }), [R, O, r, d]), U = n.useCallback(() => C(!0), []), g = n.useCallback(() => C(!1), []);
     return {
       avatarPlaceholderSrc: c,
       avatarDecorationSrc: P,
-      isAvatarDecorationAnimating: N,
+      isAvatarDecorationAnimating: O,
       eventHandlers: {
-        onMouseEnter: g,
-        onMouseLeave: U
+        onMouseEnter: U,
+        onMouseLeave: g
       }
     }
   }

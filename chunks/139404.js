@@ -4,7 +4,7 @@ function i() {
   return !1
 }
 
-function r() {
+function s() {
   return !1
 }
 n.r(t), n.d(t, {
@@ -12,6 +12,6 @@ n.r(t), n.d(t, {
     return i
   },
   isMobileRedesignDisabled: function() {
-    return r
+    return s
   }
 })

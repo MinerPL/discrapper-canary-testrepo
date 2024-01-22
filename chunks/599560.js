@@ -1,21 +1,21 @@
 "use strict";
 s.r(t), s.d(t, {
   fetchStatisticsForApplication: function() {
-    return r
+    return i
   }
 });
 var a = s("872717"),
   n = s("913144"),
   l = s("333805"),
-  i = s("49111");
-async function r(e) {
+  r = s("49111");
+async function i(e) {
   n.default.dispatch({
     type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_START",
     applicationId: e
   });
   try {
     let t = await a.default.get({
-        url: i.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
+        url: r.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
         oldFormErrors: !0
       }),
       s = t.body;

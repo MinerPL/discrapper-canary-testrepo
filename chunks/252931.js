@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   getInventoryGuildPacksUserExperimentConfig: function() {
-    return c
+    return s
   },
   useInventoryGuildPacksUserExperiment: function() {
-    return d
+    return c
   },
   useInventoryGuildSettingsExperiment: function() {
     return E
   }
 });
-var r = n("65597"),
+var l = n("65597"),
   i = n("862205"),
-  l = n("697218"),
-  o = n("719923"),
-  s = n("782340");
-let a = (0, i.createExperiment)({
+  a = n("697218"),
+  u = n("719923"),
+  o = n("782340");
+let d = (0, i.createExperiment)({
     kind: "user",
     id: "2023-05_inventory_guild_packs",
     label: "Inventory Guild Packs Experiment",
@@ -108,25 +108,25 @@ let a = (0, i.createExperiment)({
       }
     }]
   }),
-  u = e => {
+  r = e => {
     let {
       user: t,
       config: n
     } = e, {
-      desktopViewAndUseAndCollectEnabled: r,
+      desktopViewAndUseAndCollectEnabled: l,
       mobileViewAndUseEnabled: i,
-      mobileAndFreemiumCollectEnabled: l,
-      autoUnfurlReactionTooltip: s,
-      collectOffOverride: a
-    } = n, u = o.default.isPremium(t);
+      mobileAndFreemiumCollectEnabled: a,
+      autoUnfurlReactionTooltip: o,
+      collectOffOverride: d
+    } = n, r = u.default.isPremium(t);
     return {
-      viewAndUseEnabled: r,
-      showTryPacksModalAndV2Copy: l,
-      collectEnabled: !a && (u ? r : l),
-      autoUnfurlReactionTooltip: s
+      viewAndUseEnabled: l,
+      showTryPacksModalAndV2Copy: a,
+      collectEnabled: !d && (r ? l : a),
+      autoUnfurlReactionTooltip: o
     }
   },
-  c = e => {
+  s = e => {
     let {
       user: t,
       autoTrackExposure: n = !0
@@ -136,16 +136,16 @@ let a = (0, i.createExperiment)({
       showTryPacksModalAndV2Copy: !1,
       collectEnabled: !1,
       autoUnfurlReactionTooltip: !1
-    } : u({
+    } : r({
       user: t,
-      config: a.getCurrentConfig({
+      config: d.getCurrentConfig({
         location: "inventory_guild_packs_experiment"
       }, {
         autoTrackExposure: n
       })
     })
   },
-  d = function() {
+  c = function() {
     var e;
     let {
       expressionSourceGuild: t,
@@ -153,23 +153,23 @@ let a = (0, i.createExperiment)({
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
       expressionSourceGuild: void 0,
       autoTrackExposure: !0
-    }, i = (0, r.default)([l.default], () => l.default.getCurrentUser()), o = a.useExperiment({
+    }, i = (0, l.default)([a.default], () => a.default.getCurrentUser()), u = d.useExperiment({
       location: "inventory_guild_setting_experiment"
     }, {
       autoTrackExposure: n
     }), {
-      viewAndUseEnabled: s,
-      showTryPacksModalAndV2Copy: c,
-      collectEnabled: d,
+      viewAndUseEnabled: o,
+      showTryPacksModalAndV2Copy: s,
+      collectEnabled: c,
       autoUnfurlReactionTooltip: f
-    } = u({
+    } = r({
       user: i,
-      config: o
-    }), E = s && d && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
+      config: u
+    }), E = o && c && null != t && (null == t ? void 0 : null === (e = t.inventorySettings) || void 0 === e ? void 0 : e.isEmojiPackCollectible) !== !1;
     return {
-      viewAndUseEnabled: s,
+      viewAndUseEnabled: o,
       collectEnabled: E,
-      showTryPacksModalAndV2Copy: c,
+      showTryPacksModalAndV2Copy: s,
       autoUnfurlReactionTooltip: f
     }
   },
@@ -216,8 +216,8 @@ let a = (0, i.createExperiment)({
       config: {
         showSettingsToggle: !0,
         allowCollection: !0,
-        getNewSettingsDescriptionLine1: () => s.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
-        getNewSettingsDescriptionLine2: () => s.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
+        getNewSettingsDescriptionLine1: () => o.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_1,
+        getNewSettingsDescriptionLine2: () => o.default.Messages.INVENTORY_NEW_SETTING_ROLLBACK_DESCRIPTION_LINE_2
       }
     }]
   }),

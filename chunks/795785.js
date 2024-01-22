@@ -56,8 +56,8 @@ function h(e) {
     onChange: T,
     uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
     radioGroupAriaLabel: p = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
-    disabled: U = !1
-  } = e, I = n === C, [v, E] = l.useState(I ? A : null), [x, N] = l.useState(null), q = l.useRef(null), O = l.useRef(null);
+    disabled: I = !1
+  } = e, U = n === C, [v, E] = l.useState(U ? A : null), [x, N] = l.useState(null), q = l.useRef(null), O = l.useRef(null);
   l.useEffect(() => {
     h !== C && (E(null), N(null))
   }, [h]);
@@ -66,7 +66,7 @@ function h(e) {
     }) : c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
     L = (0, s.useRadioGroup)({
       orientation: "horizontal",
-      isDisabled: U
+      isDisabled: I
     }),
     D = () => {
       var e;
@@ -76,20 +76,20 @@ function h(e) {
       n === C && T(t[0].data, t[0].name), E(null), N(null)
     };
   return l.useEffect(() => {
-    if (I && null != x) {
+    if (U && null != x) {
       var e, t;
       null === (t = O.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()
     }
-  }, [I, x]), (0, a.jsxs)("div", {
+  }, [U, x]), (0, a.jsxs)("div", {
     className: f.imageSelectionContainer,
     children: [(0, a.jsx)(s.FocusRing, {
       within: !0,
       children: (0, a.jsxs)("div", {
         className: r(f.uploadButton, {
-          [f.disabled]: U,
+          [f.disabled]: I,
           [f.hidden]: null != v
         }),
-        "aria-disabled": U,
+        "aria-disabled": I,
         children: [(0, a.jsx)(i.default, {
           width: 16,
           height: 16,
@@ -148,14 +148,14 @@ function h(e) {
         ref: O,
         selectedImageName: n,
         onChange: T,
-        disabled: U,
+        disabled: I,
         name: C,
         alt: R,
         data: v
       }), t.map(e => (0, a.jsx)(g, {
         selectedImageName: n,
         onChange: T,
-        disabled: U,
+        disabled: I,
         ...e
       }, e.name))]
     })]

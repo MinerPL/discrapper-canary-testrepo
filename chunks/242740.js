@@ -30,9 +30,9 @@ var l = i("77078"),
       } = e;
       t.isThread() && (await o.default.unarchiveThreadIfNecessary(t.id), !d.default.hasJoined(t.id) && await o.default.joinThread(t, "Join Voice"));
       let N = u.default.getRemoteSessionId(),
-        h = f.default.getVoiceStateForSession(s.default.getId(), N),
-        p = (null == h ? void 0 : h.channelId) === t.id,
-        y = p || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(t.guild_id);
+        D = f.default.getVoiceStateForSession(s.default.getId(), N),
+        h = (null == D ? void 0 : D.channelId) === t.id,
+        p = h || c.default.getChannelId() === f.default.getCurrentClientVoiceChannelId(t.guild_id);
       return !v && !T && (0, _.shouldShowVoiceChannelChangeConfirmation)(t) ? new Promise(e => {
         (0, l.openModalLazy)(async () => {
           let {
@@ -51,7 +51,7 @@ var l = i("77078"),
             ...i
           })
         })
-      }) : (!T && !I && a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (I || y || A || C) && ! function(e) {
+      }) : (!T && !I && a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (I || p || A || C) && ! function(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
           i = e.getGuildId();
         if (null == i && !t) throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");

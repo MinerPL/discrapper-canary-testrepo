@@ -16,15 +16,15 @@ var n = l("37983"),
   f = l("158998"),
   m = l("777003"),
   p = l("782340"),
-  E = l("242379"),
-  T = l("107680"),
+  T = l("242379"),
+  E = l("107680"),
   _ = l("379539"),
   S = l("714073"),
   h = l("980923"),
   I = l("779585"),
   A = l("900143"),
   g = l("923337");
-let v = [g, T, h, S, I, _, A];
+let v = [g, E, h, S, I, _, A];
 
 function C(e) {
   let {
@@ -33,13 +33,13 @@ function C(e) {
   return a.useLayoutEffect(() => {
     !l && s(!0)
   }, [l]), (0, n.jsx)("div", {
-    className: E.wumpusWrapper,
+    className: T.wumpusWrapper,
     children: (0, n.jsxs)("div", {
-      className: i(E.wumpus, {
-        [E.wumpusShown]: l
+      className: i(T.wumpus, {
+        [T.wumpusShown]: l
       }),
       children: [(0, n.jsx)("img", {
-        className: E.wumpusImage,
+        className: T.wumpusImage,
         alt: p.default.Messages.IMG_ALT_ICON.format({
           name: p.default.Messages.WUMPUS
         }),
@@ -48,7 +48,7 @@ function C(e) {
           return v[e % v.length]
         }()
       }), (0, n.jsx)("span", {
-        className: E.wumpusTooltip,
+        className: T.wumpusTooltip,
         children: p.default.Messages.USER_POPOUT_WUMPUS_TOOLTIP
       })]
     })
@@ -64,15 +64,15 @@ function N(e) {
     inClydeProfilesExperiment: i = !1
   } = e;
   if (t.isNonUserBot() && !t.isClyde() || t.isClyde() && i || !a) return null;
-  let T = a && (0, f.isNewUser)(t) && !t.bot;
+  let E = a && (0, f.isNewUser)(t) && !t.bot;
   return (0, n.jsxs)(m.default, {
-    className: E.section,
+    className: T.section,
     lastSection: !0,
-    children: [T && a ? (0, n.jsx)(C, {
+    children: [E && a ? (0, n.jsx)(C, {
       userId: t.id
     }) : null, a && t.isClyde() ? (0, n.jsxs)(o.Button, {
-      className: E.messageClydeButton,
-      innerClassName: E.messageClydeButtonInner,
+      className: T.messageClydeButton,
+      innerClassName: T.messageClydeButtonInner,
       onClick: () => {
         u.default.openPrivateChannel(t.id)
       },
@@ -81,11 +81,11 @@ function N(e) {
       children: [(0, n.jsx)(c.default, {
         width: 16,
         height: 16,
-        className: E.messageClydeButtonIcon
+        className: T.messageClydeButtonIcon
       }), p.default.Messages.CLYDE_SEND_MESSAGE]
     }) : null, a && !t.isClyde() ? (0, n.jsx)(d.default, {
-      className: E.messageInputContainer,
-      inputClassName: E.messageInput,
+      className: T.messageInputContainer,
+      inputClassName: T.messageInput,
       user: t,
       onClose: () => null == s ? void 0 : s(),
       autoFocus: !r.isMobile && !l

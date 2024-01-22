@@ -1,6 +1,6 @@
-var e = n("74590");
-t.exports = function(t, r) {
-  var n = e(this, t),
-    o = n.size;
-  return n.set(t, r), this.size += n.size == o ? 0 : 1, this
+var r = n("74590");
+e.exports = function(e, t) {
+  var n = r(this, e),
+    i = n.size;
+  return n.set(e, t), this.size += n.size == i ? 0 : 1, this
 }

@@ -1,108 +1,108 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   DEFAULT_INCREASED_ACTIVITY_FORUM_POST_HEIGHT: function() {
     return ev
   },
   default: function() {
     return eR
   }
-}), a("222007");
-var s = a("37983"),
-  n = a("884691"),
-  l = a("414456"),
-  r = a.n(l),
-  i = a("627445"),
-  o = a.n(i),
-  d = a("866227"),
-  u = a.n(d),
-  c = a("974667"),
-  m = a("335710"),
-  h = a("249654"),
-  f = a("446674"),
-  g = a("669491"),
-  x = a("77078"),
-  C = a("125667"),
-  T = a("731898"),
-  _ = a("419135"),
-  S = a("206230"),
-  p = a("651693"),
-  E = a("605160"),
-  N = a("875978"),
-  M = a("70845"),
-  A = a("913491"),
-  v = a("95045"),
-  I = a("574073"),
-  j = a("359132"),
-  R = a("836943"),
-  O = a("933629"),
-  F = a("592707"),
-  b = a("350134"),
-  L = a("232259"),
-  P = a("144491"),
-  y = a("208021"),
-  D = a("582713"),
-  w = a("300322"),
-  U = a("845579"),
-  k = a("982108"),
-  H = a("42203"),
-  B = a("957255"),
-  G = a("660478"),
-  V = a("27618"),
-  z = a("471671"),
-  W = a("738107"),
-  K = a("952368"),
-  Y = a("491605"),
-  X = a("505684"),
-  Z = a("109264"),
-  q = a("566998"),
-  Q = a("93427"),
-  J = a("956089"),
-  $ = a("888400"),
-  ee = a("700097"),
-  et = a("670902"),
-  ea = a("339792"),
-  es = a("680986"),
-  en = a("612278"),
-  el = a("791234"),
-  er = a("994810"),
-  ei = a("867965"),
-  eo = a("43836"),
-  ed = a("512630"),
-  eu = a("152637"),
-  ec = a("578198"),
-  em = a("968462"),
-  eh = a("136460"),
-  ef = a("601016"),
-  eg = a("810758"),
-  ex = a("390083"),
-  eC = a("49111"),
-  eT = a("724210"),
-  e_ = a("648564"),
-  eS = a("719347"),
-  ep = a("782340"),
-  eE = a("552175"),
-  eN = a("590787"),
-  eM = a("632215");
+}), s("222007");
+var a = s("37983"),
+  n = s("884691"),
+  l = s("414456"),
+  r = s.n(l),
+  i = s("627445"),
+  o = s.n(i),
+  u = s("866227"),
+  d = s.n(u),
+  c = s("974667"),
+  m = s("335710"),
+  h = s("249654"),
+  f = s("446674"),
+  g = s("669491"),
+  x = s("77078"),
+  C = s("125667"),
+  T = s("731898"),
+  _ = s("419135"),
+  S = s("206230"),
+  p = s("651693"),
+  E = s("605160"),
+  N = s("875978"),
+  M = s("70845"),
+  A = s("913491"),
+  v = s("95045"),
+  I = s("574073"),
+  j = s("359132"),
+  R = s("836943"),
+  O = s("933629"),
+  F = s("592707"),
+  L = s("350134"),
+  b = s("232259"),
+  P = s("144491"),
+  y = s("208021"),
+  D = s("582713"),
+  w = s("300322"),
+  U = s("845579"),
+  k = s("982108"),
+  H = s("42203"),
+  B = s("957255"),
+  G = s("660478"),
+  V = s("27618"),
+  z = s("471671"),
+  W = s("738107"),
+  K = s("952368"),
+  Y = s("491605"),
+  X = s("505684"),
+  Z = s("109264"),
+  q = s("566998"),
+  Q = s("93427"),
+  J = s("956089"),
+  $ = s("888400"),
+  ee = s("700097"),
+  et = s("670902"),
+  es = s("339792"),
+  ea = s("680986"),
+  en = s("612278"),
+  el = s("791234"),
+  er = s("994810"),
+  ei = s("867965"),
+  eo = s("43836"),
+  eu = s("512630"),
+  ed = s("152637"),
+  ec = s("578198"),
+  em = s("968462"),
+  eh = s("136460"),
+  ef = s("601016"),
+  eg = s("810758"),
+  ex = s("390083"),
+  eC = s("49111"),
+  eT = s("724210"),
+  e_ = s("648564"),
+  eS = s("719347"),
+  ep = s("782340"),
+  eE = s("552175"),
+  eN = s("590787"),
+  eM = s("632215");
 let eA = 26,
   ev = 162 + eA,
   eI = async () => {
     let {
       default: e
-    } = await a.el("170206").then(a.t.bind(a, "170206", 19));
+    } = await s.el("170206").then(s.t.bind(s, "170206", 19));
     return e
   };
 
 function ej(e) {
   let {
     shouldAnimate: t = !1
-  } = e, a = (0, f.useStateFromStores)([S.default], () => S.default.useReducedMotion);
-  return (0, s.jsxs)("div", {
+  } = e, s = (0, f.useStateFromStores)([S.default], () => S.default.useReducedMotion);
+  return (0, a.jsxs)("div", {
     className: eE.startTheConversation,
-    children: [(0, s.jsx)(Y.default, {
+    children: [(0, a.jsx)(Y.default, {
       importData: eI,
-      shouldAnimate: t && !a,
+      shouldAnimate: t && !s,
       className: eE.wavingHand
-    }), (0, s.jsx)(x.Text, {
+    }), (0, a.jsx)(x.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
       children: ep.default.Messages.FORUM_START_THE_CONVERSATION_HEADER
@@ -112,11 +112,11 @@ function ej(e) {
 var eR = n.memo(function(e) {
   let {
     className: t,
-    threadId: a,
+    threadId: s,
     goToThread: l,
     observePostVisibilityAnalytics: i
-  } = e, d = n.useRef(null), {
-    channel: u,
+  } = e, u = n.useRef(null), {
+    channel: d,
     isOpen: m,
     messageCount: h,
     unreadCount: g,
@@ -127,46 +127,46 @@ var eR = n.memo(function(e) {
   } = function(e) {
     let {
       threadId: t
-    } = e, a = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(t));
-    o(null != a, "the thread should not be null here, a store must have missed an update");
-    let s = (0, f.useStateFromStores)([k.default], () => k.default.getCurrentSidebarChannelId(a.parent_id) === a.id),
+    } = e, s = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(t));
+    o(null != s, "the thread should not be null here, a store must have missed an update");
+    let a = (0, f.useStateFromStores)([k.default], () => k.default.getCurrentSidebarChannelId(s.parent_id) === s.id),
       {
         loaded: n,
         firstMessage: l
-      } = (0, en.useFirstForumPostMessage)(a),
+      } = (0, en.useFirstForumPostMessage)(s),
       {
         content: r,
         firstMedia: i,
-        firstMediaIsEmbed: d
-      } = (0, es.useForumPostFirstMessageMarkup)({
+        firstMediaIsEmbed: u
+      } = (0, ea.useForumPostFirstMessageMarkup)({
         firstMessage: l
       }),
       {
-        messageCount: u,
+        messageCount: d,
         unreadCount: c
-      } = (0, es.useMessageCount)(a);
+      } = (0, ea.useMessageCount)(s);
     return {
-      channel: a,
-      isOpen: s,
-      messageCount: u,
+      channel: s,
+      isOpen: a,
+      messageCount: d,
       unreadCount: c,
       firstMessage: l,
       firstMessageLoaded: n,
       firstMedia: i,
-      firstMediaIsEmbed: d,
+      firstMediaIsEmbed: u,
       content: r
     }
   }({
-    threadId: a
-  }), E = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(u.parent_id)), {
+    threadId: s
+  }), E = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(d.parent_id)), {
     ref: N,
     height: M
   } = (0, T.default)(), A = (0, ec.useForumPostComposerStore)(e => e.setCardHeight), [v, I] = n.useState(162);
   n.useEffect(() => {
-    null != M && (A(a, M + eA), I(M))
-  }, [N, M, A, a, I, _]), n.useEffect(() => {
-    null == i || i(d.current, a)
-  }, [i, a, _]);
+    null != M && (A(s, M + eA), I(M))
+  }, [N, M, A, s, I, _]), n.useEffect(() => {
+    null == i || i(u.current, s)
+  }, [i, s, _]);
   let j = n.useRef(null),
     {
       handleLeftClick: R,
@@ -174,60 +174,60 @@ var eR = n.memo(function(e) {
     } = (0, ex.default)({
       facepileRef: j,
       goToThread: l,
-      channel: u
+      channel: d
     }),
     {
       role: F,
-      onFocus: b,
-      ...L
-    } = (0, c.useListItem)(a),
+      onFocus: L,
+      ...b
+    } = (0, c.useListItem)(s),
     {
       handleFocus: P,
       handleBlur: y
-    } = (0, eg.default)(b);
-  return (0, s.jsxs)("div", {
-    ref: d,
-    "data-item-id": a,
+    } = (0, eg.default)(L);
+  return (0, a.jsxs)("div", {
+    ref: u,
+    "data-item-id": s,
     onClick: R,
     onContextMenu: O,
     className: r(eE.container, t, {
       [eE.isOpen]: m
     }),
-    children: [(0, s.jsx)(x.Clickable, {
+    children: [(0, a.jsx)(x.Clickable, {
       onClick: R,
       focusProps: {
-        ringTarget: d
+        ringTarget: u
       },
       onContextMenu: O,
       "aria-label": ep.default.Messages.FORUM_POST_ARIA_LABEL.format({
-        title: u.name,
+        title: d.name,
         count: h
       }),
       className: eE.focusTarget,
       onFocus: P,
       onBlur: y,
-      ...L
-    }), (0, s.jsxs)("div", {
+      ...b
+    }), (0, a.jsxs)("div", {
       className: eE.body,
-      children: [(0, s.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         ref: N,
         className: eE.contentContainer,
-        children: _ ? (0, s.jsx)(eO, {
+        children: _ ? (0, a.jsx)(eO, {
           parentChannel: E,
-          channel: u,
+          channel: d,
           firstMessage: C,
           messageCount: h,
           unreadCount: g,
           facepileRef: j,
           onClick: R
-        }) : (0, s.jsx)(em.ForumPostContentPlaceholder, {})
-      }), _ ? (null == C ? void 0 : C.blocked) || null == S ? null : (0, s.jsx)(eH, {
-        channel: u,
+        }) : (0, a.jsx)(em.ForumPostContentPlaceholder, {})
+      }), _ ? (null == C ? void 0 : C.blocked) || null == S ? null : (0, a.jsx)(eH, {
+        channel: d,
         firstMedia: S,
         firstMessage: C,
         isEmbed: p,
         contentHeight: v
-      }) : (0, s.jsx)(em.ForumPostMediaPreviewPlaceholder, {})]
+      }) : (0, a.jsx)(em.ForumPostMediaPreviewPlaceholder, {})]
     })]
   })
 });
@@ -235,51 +235,51 @@ var eR = n.memo(function(e) {
 function eO(e) {
   let {
     parentChannel: t,
-    channel: a,
+    channel: s,
     firstMessage: n,
     messageCount: l,
     unreadCount: r,
     facepileRef: i,
     onClick: o
   } = e, {
-    isNew: d
-  } = (0, es.useForumPostReadStates)(a), {
-    forumPostContainsTags: u
+    isNew: u
+  } = (0, ea.useForumPostReadStates)(s), {
+    forumPostContainsTags: d
   } = (0, ef.useTagsRowHooks)({
-    channel: a,
-    isNew: d
+    channel: s,
+    isNew: u
   });
-  return (0, s.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: eE.content,
-    children: [(0, s.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: eE.titleAndMessage,
-      children: [u && (0, s.jsx)(ef.IncreasedActivityTagsRow, {
-        channel: a,
+      children: [d && (0, a.jsx)(ef.IncreasedActivityTagsRow, {
+        channel: s,
         className: eE.tagsRow,
         tagsClassName: eE.tags
-      }), u && (0, s.jsx)("hr", {
+      }), d && (0, a.jsx)("hr", {
         className: eE.separator
-      }), (0, s.jsx)(ek, {
-        channel: a,
+      }), (0, a.jsx)(ek, {
+        channel: s,
         firstMessage: n,
-        isNew: d,
-        containsTags: u
-      }), (0, s.jsx)(x.HeadingLevel, {
-        children: (0, s.jsx)(eP, {
-          channel: a,
+        isNew: u,
+        containsTags: d
+      }), (0, a.jsx)(x.HeadingLevel, {
+        children: (0, a.jsx)(eP, {
+          channel: s,
           onClick: o
         })
-      }), null != n && (0, s.jsx)(eF, {
+      }), null != n && (0, a.jsx)(eF, {
         firstMessage: n
       })]
-    }), (0, s.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: eE.engagement,
-      children: [null != n && (0, s.jsx)(eD, {
-        channel: a,
+      children: [null != n && (0, a.jsx)(eD, {
+        channel: s,
         firstMessage: n
-      }), (0, s.jsx)(eb, {
+      }), (0, a.jsx)(eL, {
         parentChannel: t,
-        channel: a,
+        channel: s,
         messageCount: l,
         unreadCount: r,
         facepileRef: i
@@ -291,7 +291,7 @@ function eO(e) {
 function eF(e) {
   let {
     firstMessage: t
-  } = e, a = (0, f.useStateFromStores)([V.default], () => null != t && V.default.isBlocked(t.author.id)), {
+  } = e, s = (0, f.useStateFromStores)([V.default], () => null != t && V.default.isBlocked(t.author.id)), {
     content: l
   } = n.useMemo(() => (null == t ? void 0 : t.content) != null && "" !== t.content ? (0, v.default)(t, {
     formatInline: !0,
@@ -301,108 +301,108 @@ function eF(e) {
   }) : {
     content: null
   }, [t]);
-  return (0, s.jsx)(x.FocusBlock, {
+  return (0, a.jsx)(x.FocusBlock, {
     "aria-hidden": !0,
     className: eE.firstMessageContent,
-    children: a ? ep.default.Messages.FORUM_POST_BLOCKED_FIRST_MESSAGE : null == l ? ep.default.Messages.REPLY_QUOTE_MESSAGE_DELETED : l
+    children: s ? ep.default.Messages.FORUM_POST_BLOCKED_FIRST_MESSAGE : null == l ? ep.default.Messages.REPLY_QUOTE_MESSAGE_DELETED : l
   })
 }
 
-function eb(e) {
+function eL(e) {
   let {
     parentChannel: t,
-    channel: a,
+    channel: s,
     messageCount: n,
     unreadCount: l,
     facepileRef: i
-  } = e, o = (0, es.useTypingUserIds)(a), {
-    mostRecentMessage: d
-  } = (0, en.useMostRecentForumMessage)(t, a), u = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.SEND_MESSAGES_IN_THREADS, a)), {
+  } = e, o = (0, ea.useTypingUserIds)(s), {
+    mostRecentMessage: u
+  } = (0, en.useMostRecentForumMessage)(t, s), d = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.SEND_MESSAGES_IN_THREADS, s)), {
     hasUnreads: c
-  } = (0, es.useForumPostReadStates)(a), m = (0, f.useStateFromStores)([et.default], () => et.default.getFirstNoReplyThreadId()), h = (0, w.useIsNonModInLockedThread)(a), g = (0, I.useNullableMessageAuthor)(d);
+  } = (0, ea.useForumPostReadStates)(s), m = (0, f.useStateFromStores)([et.default], () => et.default.getFirstNoReplyThreadId()), h = (0, w.useIsNonModInLockedThread)(s), g = (0, I.useNullableMessageAuthor)(u);
   if (n > 0) {
     var C, T;
-    return (0, s.jsxs)(x.Clickable, {
+    return (0, a.jsxs)(x.Clickable, {
       onClick: e => {
-        null != d && null != a.parent_id && (e.stopPropagation(), (0, ei.trackForumPostClicked)({
-          guildId: a.guild_id,
-          channelId: a.parent_id,
-          postId: a.id,
+        null != u && null != s.parent_id && (e.stopPropagation(), (0, ei.trackForumPostClicked)({
+          guildId: s.guild_id,
+          channelId: s.parent_id,
+          postId: s.id,
           location: {
             page: eC.AnalyticsPages.GUILD_CHANNEL,
             section: eC.AnalyticsSections.FORUM_CHANNEL_POST
           }
-        }), e.shiftKey ? (0, P.transitionToThreadMessage)(a, d.id, e_.OpenThreadAnalyticsLocations.BROWSER) : y.default.openThreadAsSidebar({
-          guildId: a.guild_id,
-          channelId: a.id,
-          baseChannelId: a.parent_id,
+        }), e.shiftKey ? (0, P.transitionToThreadMessage)(s, u.id, e_.OpenThreadAnalyticsLocations.BROWSER) : y.default.openThreadAsSidebar({
+          guildId: s.guild_id,
+          channelId: s.id,
+          baseChannelId: s.parent_id,
           flash: !0,
           details: {
             type: D.SidebarOpenDetailsType.THREAD,
-            initialMessageId: d.id
+            initialMessageId: u.id
           }
         }))
       },
-      children: [(0, s.jsxs)(x.HiddenVisually, {
-        children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : ep.default.Messages.UNKNOWN_USER : null, " ", null == (T = null == d ? void 0 : d.content) ? "" : T.length > 120 ? "".concat(T.substring(0, 120), "...") : T]
-      }), (0, s.jsxs)(x.FocusBlock, {
+      children: [(0, a.jsxs)(x.HiddenVisually, {
+        children: ["Latest message:", null != g ? null !== (C = g.nick) && void 0 !== C ? C : ep.default.Messages.UNKNOWN_USER : null, " ", null == (T = null == u ? void 0 : u.content) ? "" : T.length > 120 ? "".concat(T.substring(0, 120), "...") : T]
+      }), (0, a.jsxs)(x.FocusBlock, {
         className: eE.replies,
-        children: [(0, s.jsx)(ew, {
+        children: [(0, a.jsx)(ew, {
           messageCount: n,
           unreadCount: l,
           iconSize: 16
-        }), o.length > 0 ? (0, s.jsx)(eL, {
-          channel: a,
+        }), o.length > 0 ? (0, a.jsx)(eb, {
+          channel: s,
           typingUserIds: o,
           facepileRef: i
-        }) : (0, s.jsx)(ey, {
-          channel: a,
-          mostRecentMessage: d,
+        }) : (0, a.jsx)(ey, {
+          channel: s,
+          mostRecentMessage: u,
           hasUnreads: c
         })]
       })]
     })
   }
-  return h ? (0, s.jsx)("div", {
+  return h ? (0, a.jsx)("div", {
     className: eE.replies,
-    children: (0, s.jsx)(x.Text, {
+    children: (0, a.jsx)(x.Text, {
       variant: "text-sm/semibold",
       color: "text-muted",
       className: r(eE.mostRecentMessageContent, eE.nonUserMessage, eE.lockedMessage),
       children: ep.default.Messages.THREAD_HEADER_NOTICE_ACTIVE_LOCKED
     })
-  }) : u && 0 === n ? (0, s.jsx)(x.FocusBlock, {
+  }) : d && 0 === n ? (0, a.jsx)(x.FocusBlock, {
     "aria-hidden": !0,
     className: eE.replies,
-    children: o.length > 0 ? (0, s.jsx)(eL, {
-      channel: a,
+    children: o.length > 0 ? (0, a.jsx)(eb, {
+      channel: s,
       typingUserIds: o,
       facepileRef: i
-    }) : (0, s.jsx)(ej, {
-      shouldAnimate: m === a.id
+    }) : (0, a.jsx)(ej, {
+      shouldAnimate: m === s.id
     })
   }) : null
 }
 
-function eL(e) {
+function eb(e) {
   let {
     channel: t,
-    typingUserIds: a,
+    typingUserIds: s,
     facepileRef: n
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: eE.typing,
-    children: [(0, s.jsx)(eu.Facepile, {
+    children: [(0, a.jsx)(ed.Facepile, {
       channel: t,
-      userIds: a,
+      userIds: s,
       facepileRef: n
-    }), (0, s.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: eE.dots,
-      children: (0, s.jsx)(x.Dots, {
+      children: (0, a.jsx)(x.Dots, {
         themed: !0,
         dotRadius: 2
       })
-    }), (0, s.jsx)(C.default, {
+    }), (0, a.jsx)(C.default, {
       channel: t,
       className: eE.typingUsers,
       renderDots: !1
@@ -413,27 +413,27 @@ function eL(e) {
 function eP(e) {
   let {
     channel: t,
-    onClick: a
+    onClick: s
   } = e, {
     hasUnreads: l
-  } = (0, es.useForumPostReadStates)(t), r = function(e) {
+  } = (0, ea.useForumPostReadStates)(t), r = function(e) {
     let t = (0, f.useStateFromStores)([er.default], () => er.default.getHasSearchResults(e.parent_id)),
-      a = (0, f.useStateFromStores)([er.default], () => er.default.getSearchQuery(e.parent_id)),
-      s = n.useMemo(() => (0, _.createASTHighlighter)(t && null != a ? a : ""), [t, a]),
+      s = (0, f.useStateFromStores)([er.default], () => er.default.getSearchQuery(e.parent_id)),
+      a = n.useMemo(() => (0, _.createASTHighlighter)(t && null != s ? s : ""), [t, s]),
       l = n.useMemo(() => (0, v.default)({
         content: e.name,
         embeds: []
       }, {
-        postProcessor: s
-      }).content, [e.name, s]);
+        postProcessor: a
+      }).content, [e.name, a]);
     return l
   }(t);
-  return (0, s.jsx)(x.Heading, {
+  return (0, a.jsx)(x.Heading, {
     variant: "heading-lg/semibold",
     color: l ? "header-primary" : "text-muted",
     className: eE.title,
-    children: (0, s.jsx)(x.Clickable, {
-      onClick: a,
+    children: (0, a.jsx)(x.Clickable, {
+      onClick: s,
       children: r
     })
   })
@@ -441,10 +441,10 @@ function eP(e) {
 let ey = n.memo(function(e) {
   var t;
   let {
-    channel: a,
+    channel: s,
     mostRecentMessage: l,
     hasUnreads: i
-  } = e, o = (0, I.useNullableMessageAuthor)(l), d = (0, f.useStateFromStores)([V.default], () => null != l && V.default.isBlocked(l.author.id)), u = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.MANAGE_MESSAGES, a)), c = U.RenderSpoilers.useSetting(), m = (0, eo.useIsRecentMessageDeleted)(a), {
+  } = e, o = (0, I.useNullableMessageAuthor)(l), u = (0, f.useStateFromStores)([V.default], () => null != l && V.default.isBlocked(l.author.id)), d = (0, f.useStateFromStores)([B.default], () => B.default.can(eC.Permissions.MANAGE_MESSAGES, s)), c = U.RenderSpoilers.useSetting(), m = (0, eo.useIsRecentMessageDeleted)(s), {
     content: h
   } = n.useMemo(() => (null == l ? void 0 : l.content) != null && "" !== l.content ? (0, v.default)(l, {
     formatInline: !0,
@@ -452,7 +452,7 @@ let ey = n.memo(function(e) {
   }) : {
     content: null
   }, [l]), g = null != l && (0, A.default)(l), C = null;
-  if (d) C = (0, s.jsx)(x.Text, {
+  if (u) C = (0, a.jsx)(x.Text, {
     className: eE.nonUserMessage,
     variant: "text-sm/medium",
     color: "text-muted",
@@ -467,22 +467,22 @@ let ey = n.memo(function(e) {
       renderedContent: null
     } : g ? {
       contentPlaceholder: null,
-      renderedContent: ee.default.stringify(l, a)
-    } : (0, Q.renderSingleLineMessage)(l, h, d, r(eE.mostRecentMessageContent, eM.inlineFormat, eM.smallFontSize), {
+      renderedContent: ee.default.stringify(l, s)
+    } : (0, Q.renderSingleLineMessage)(l, h, u, r(eE.mostRecentMessageContent, eM.inlineFormat, eM.smallFontSize), {
       iconClass: eE.messageContentIcon,
       iconSize: eS.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
     });
-    C = null != t ? (0, s.jsx)(x.Text, {
+    C = null != t ? (0, a.jsx)(x.Text, {
       variant: "text-sm/semibold",
       color: i ? "header-secondary" : "text-muted",
       className: eE.mostRecentMessageContent,
       children: t
-    }) : null != e ? (0, s.jsx)(x.Text, {
+    }) : null != e ? (0, a.jsx)(x.Text, {
       variant: "text-sm/semibold",
       color: i ? "header-secondary" : "text-muted",
       className: eE.mostRecentMessageContent,
       children: e
-    }) : m ? (0, s.jsx)(x.Text, {
+    }) : m ? (0, a.jsx)(x.Text, {
       variant: "text-sm/semibold",
       color: i ? "header-secondary" : "text-muted",
       className: r(eE.mostRecentMessageContent, eE.nonUserMessage),
@@ -490,21 +490,21 @@ let ey = n.memo(function(e) {
     }) : null
   }
   let T = null != o ? null !== (t = o.nick) && void 0 !== t ? t : ep.default.Messages.UNKNOWN_USER : null,
-    _ = (0, L.useUsernameHook)(null == l ? void 0 : l.author, a.id, a.guild_id, !0)(null != o ? o : void 0)((0, s.jsxs)(s.Fragment, {
+    _ = (0, b.useUsernameHook)(null == l ? void 0 : l.author, s.id, s.guild_id, !0)(null != o ? o : void 0)((0, a.jsxs)(a.Fragment, {
       children: [null != T ? T : "", null != l ? ":" : ""]
-    }), a.id);
-  return (0, s.jsx)(X.ObscuredDisplayContext.Provider, {
-    value: (0, M.default)(c, u),
-    children: (0, s.jsxs)("div", {
+    }), s.id);
+  return (0, a.jsx)(X.ObscuredDisplayContext.Provider, {
+    value: (0, M.default)(c, d),
+    children: (0, a.jsxs)("div", {
       className: eE.mostRecentMessage,
-      children: [null == T || g ? null : (0, s.jsx)("div", {
+      children: [null == T || g ? null : (0, a.jsx)("div", {
         className: eE.mostRecentMessageAuthor,
-        children: (0, s.jsx)(x.Text, {
+        children: (0, a.jsx)(x.Text, {
           tag: "span",
           variant: "text-sm/semibold",
           children: _
         })
-      }), (0, s.jsx)(x.FocusBlock, {
+      }), (0, a.jsx)(x.FocusBlock, {
         children: C
       })]
     })
@@ -514,29 +514,29 @@ let ey = n.memo(function(e) {
 function eD(e) {
   let {
     channel: t,
-    firstMessage: a
-  } = e, l = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(t.parent_id)), i = (0, es.useDefaultReactionEmoji)(l), {
+    firstMessage: s
+  } = e, l = (0, f.useStateFromStores)([H.default], () => H.default.getChannel(t.parent_id)), i = (0, ea.useDefaultReactionEmoji)(l), {
     disableReactionUpdates: o,
-    disableReactionCreates: d,
-    isLurking: u,
+    disableReactionCreates: u,
+    isLurking: d,
     isPendingMember: c
-  } = (0, j.default)(t), m = (0, F.findReactionIndex)(a.reactions, i) >= 0, h = !m && !d, {
+  } = (0, j.default)(t), m = (0, F.findReactionIndex)(s.reactions, i) >= 0, h = !m && !u, {
     ref: g,
     width: x
   } = (0, T.default)(), [C, _] = n.useState(10), [S, p] = n.useState(!0);
   return n.useEffect(() => {
     if (null != x) _(Math.floor((x - 78) / 66)), p(!1)
-  }, [x, a.reactions, i]), (0, s.jsxs)("div", {
+  }, [x, s.reactions, i]), (0, a.jsxs)("div", {
     className: r(eE.reactionRow, {
       [eE.loading]: S
     }),
     ref: g,
-    children: [h && null != i ? (0, s.jsx)(b.Reaction, {
+    children: [h && null != i ? (0, a.jsx)(L.Reaction, {
       className: eE.defaultReaction,
-      message: a,
+      message: s,
       readOnly: !1,
       useChatFontScaling: !0,
-      isLurking: u,
+      isLurking: d,
       isPendingMember: c,
       emoji: i,
       type: N.ReactionTypes.NORMAL,
@@ -545,10 +545,10 @@ function eD(e) {
       me: !1,
       burst_count: 0,
       me_burst: !1
-    }) : null, (0, s.jsx)(F.default, {
-      message: a,
+    }) : null, (0, a.jsx)(F.default, {
+      message: s,
       channel: t,
-      disableReactionCreates: d,
+      disableReactionCreates: u,
       disableReactionUpdates: o,
       useChatFontScaling: !0,
       className: eE.messageReactions,
@@ -556,11 +556,11 @@ function eD(e) {
       hoistReaction: i,
       forceHideReactionCreates: !0,
       maxReactions: C
-    }), (0, s.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: eE.addReactionContainer,
-      children: !d && (0, s.jsx)(R.ButtonAddReaction, {
+      children: !u && (0, a.jsx)(R.ButtonAddReaction, {
         type: N.ReactionTypes.NORMAL,
-        message: a,
+        message: s,
         channel: t,
         useChatFontScaling: !0,
         className: eE.addReactButton,
@@ -573,29 +573,29 @@ function eD(e) {
 function ew(e) {
   let {
     messageCount: t,
-    unreadCount: a,
+    unreadCount: s,
     iconSize: n
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: eE.messageCountBox,
-    children: [(0, s.jsx)("span", {
+    children: [(0, a.jsx)("span", {
       className: eE.messageCountIcon,
-      children: (0, s.jsx)(Z.default, {
+      children: (0, a.jsx)(Z.default, {
         width: n,
         height: n
       })
-    }), "number" == typeof t ? (0, s.jsx)(W.default, {
+    }), "number" == typeof t ? (0, a.jsx)(W.default, {
       value: t,
       className: eE.messageCountText
-    }) : (0, s.jsx)("div", {
+    }) : (0, a.jsx)("div", {
       className: eE.messageCountText,
       children: t
-    }), null == a ? null : (0, s.jsx)(x.Text, {
+    }), null == s ? null : (0, a.jsx)(x.Text, {
       className: eE.unreadMessagesCount,
       variant: "text-sm/semibold",
       color: "text-brand",
       children: ep.default.Messages.FORUM_POST_MESSAGE_COUNT_SHORT_PARENTHETICAL.format({
-        count: a
+        count: s
       })
     })]
   })
@@ -604,23 +604,23 @@ function ew(e) {
 function eU(e) {
   var t;
   let {
-    channel: a
+    channel: s
   } = e, {
     sortOrder: n
-  } = (0, ea.useForumChannelStore)(a.parent_id), l = (0, es.useLastActiveTimestamp)(a, n), r = (0, f.useStateFromStores)([G.default], () => G.default.lastMessageId(a.id)), i = null != r ? h.default.extractTimestamp(r) : null, o = null === (t = a.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp, d = null == l ? null : n === m.ThreadSortOrder.CREATION_DATE ? ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
+  } = (0, es.useForumChannelStore)(s.parent_id), l = (0, ea.useLastActiveTimestamp)(s, n), r = (0, f.useStateFromStores)([G.default], () => G.default.lastMessageId(s.id)), i = null != r ? h.default.extractTimestamp(r) : null, o = null === (t = s.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp, u = null == l ? null : n === m.ThreadSortOrder.CREATION_DATE ? ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
     timestamp: l
   }) : l, c = n === m.ThreadSortOrder.CREATION_DATE && null != o ? ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP.format({
-    timestamp: (0, $.dateFormat)(u(o), "LLLL")
-  }) : null != i ? (0, $.dateFormat)(u(i), "LLLL") : null;
-  return null == c || null == d ? null : (0, s.jsx)(x.Tooltip, {
+    timestamp: (0, $.dateFormat)(d(o), "LLLL")
+  }) : null != i ? (0, $.dateFormat)(d(i), "LLLL") : null;
+  return null == c || null == u ? null : (0, a.jsx)(x.Tooltip, {
     text: c,
     tooltipClassName: eE.timestampTooltip,
     "aria-label": ep.default.Messages.FORUM_POST_CREATED_AT_TOOLTIP_LABEL,
-    children: e => (0, s.jsx)(x.Text, {
+    children: e => (0, a.jsx)(x.Text, {
       variant: "text-xs/medium",
       color: "header-secondary",
       ...e,
-      children: d
+      children: u
     })
   })
 }
@@ -628,29 +628,29 @@ function eU(e) {
 function ek(e) {
   let {
     channel: t,
-    firstMessage: a,
+    firstMessage: s,
     isNew: n,
     containsTags: l
-  } = e, r = t.hasFlag(eT.ChannelFlags.PINNED), i = (0, f.useStateFromStores)([V.default], () => null != a && V.default.isBlocked(a.author.id));
-  return (0, s.jsxs)("div", {
+  } = e, r = t.hasFlag(eT.ChannelFlags.PINNED), i = (0, f.useStateFromStores)([V.default], () => null != s && V.default.isBlocked(s.author.id));
+  return (0, a.jsxs)("div", {
     className: eE.header,
-    children: [!l && r && (0, s.jsx)("div", {
+    children: [!l && r && (0, a.jsx)("div", {
       className: eE.pinIcon,
-      children: (0, s.jsx)(x.Tooltip, {
+      children: (0, a.jsx)(x.Tooltip, {
         text: ep.default.Messages.PINNED_POST,
-        children: e => (0, s.jsx)(q.default, {
+        children: e => (0, a.jsx)(q.default, {
           ...e,
           width: ef.PIN_ICON_SIZE,
           height: ef.PIN_ICON_SIZE,
           color: "white"
         })
       })
-    }), !i && (0, s.jsx)(eh.default, {
+    }), !i && (0, a.jsx)(eh.default, {
       channel: t,
-      message: a
-    }), (0, s.jsx)(eU, {
+      message: s
+    }), (0, a.jsx)(eU, {
       channel: t
-    }), n && (0, s.jsx)(J.TextBadge, {
+    }), n && (0, a.jsx)(J.TextBadge, {
       className: eE.newBadge,
       color: g.default.unsafe_rawColors.BRAND_260.css,
       text: ep.default.Messages.NEW
@@ -661,22 +661,22 @@ function ek(e) {
 function eH(e) {
   let {
     channel: t,
-    firstMedia: a,
+    firstMedia: s,
     firstMessage: n,
     isEmbed: l,
     contentHeight: i
-  } = e, o = (0, f.useStateFromStores)([z.default], () => z.default.isFocused()), d = (0, p.isAnimatedImageUrl)(a.src), u = U.GifAutoPlay.useSetting(), {
+  } = e, o = (0, f.useStateFromStores)([z.default], () => z.default.isFocused()), u = (0, p.isAnimatedImageUrl)(s.src), d = U.GifAutoPlay.useSetting(), {
     src: c,
     width: m,
     height: h,
     alt: g
-  } = a, [C, T] = (0, E.useShouldObscure)({
-    media: a,
+  } = s, [C, T] = (0, E.useShouldObscure)({
+    media: s,
     channel: t
   }), _ = (0, E.getObscuredAlt)(T);
-  return (0, s.jsx)(x.FocusBlock, {
+  return (0, a.jsx)(x.FocusBlock, {
     enabled: !0,
-    children: (0, s.jsxs)("div", {
+    children: (0, a.jsxs)("div", {
       className: r(eE.bodyMedia, {
         [eN.embedFull]: l
       }),
@@ -685,7 +685,7 @@ function eH(e) {
         borderColor: (0, el.getEmbedColor)(n, C)
       },
       onClick: e => e.stopPropagation(),
-      children: [c.startsWith("data:") ? (0, s.jsx)(K.default, {
+      children: [c.startsWith("data:") ? (0, a.jsx)(K.default, {
         src: c,
         width: m,
         height: h,
@@ -704,12 +704,12 @@ function eH(e) {
         minHeight: i,
         maxHeight: i,
         alt: null != g && C ? _ : g,
-        autoPlay: u,
-        animated: d && !C && o,
+        autoPlay: d,
+        animated: u && !C && o,
         imageContainerClassName: r({
           [eE.obscured]: C
         })
-      }), C && (0, s.jsx)(ed.default, {
+      }), C && (0, a.jsx)(eu.default, {
         iconClassname: eE.obscuredTag,
         obscureReason: T
       })]

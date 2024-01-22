@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var r = n("446674"),
-  u = n("913144");
+var l = n("446674"),
+  r = n("913144");
 let a = {};
-class l extends r.default.Store {
+class u extends l.default.Store {
   getEULA(e) {
     return a[e]
   }
 }
-l.displayName = "EULAStore";
-var o = new l(u.default, {
+u.displayName = "EULAStore";
+var o = new u(r.default, {
   EULA_FETCH_SUCCESS: function(e) {
     let {
       eula: t

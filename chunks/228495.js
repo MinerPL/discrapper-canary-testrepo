@@ -8,8 +8,8 @@ var t = E("249654"),
   o = E("913144"),
   n = E("776156"),
   r = E("689988"),
-  i = E("915639"),
-  a = E("34966"),
+  a = E("915639"),
+  i = E("34966"),
   I = E("473006"),
   s = E("788434");
 class T extends r.default {
@@ -33,15 +33,15 @@ class T extends r.default {
           config: _.body,
           latestChangelogId: T
         }), null == T || !0 !== E[T].show_on_startup) return;
-      let S = a.default.lastSeenChangelogId(),
-        N = a.default.lastSeenChangelogDate();
+      let S = i.default.lastSeenChangelogId(),
+        N = i.default.lastSeenChangelogDate();
       if (null != S && 0 >= t.default.compare(T, S)) return;
-      let O = await n.default.fetchChangelog(T, i.default.locale);
+      let O = await n.default.fetchChangelog(T, a.default.locale);
       if (null != O) {
-        if (null == N || null == a.default.lastSeenChangelogDate()) {
+        if (null == N || null == i.default.lastSeenChangelogDate()) {
           n.default.markChangelogAsSeen(T, O.date);
           return
-        }!a.default.isLocked() && new Date(O.date) > new Date(N) && (0, s.openChangelog)()
+        }!i.default.isLocked() && new Date(O.date) > new Date(N) && (0, s.openChangelog)()
       }
     }
   }

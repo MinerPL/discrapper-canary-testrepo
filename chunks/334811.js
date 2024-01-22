@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
 var l = n("862205");
-let i = (0, l.createExperiment)({
+let s = (0, l.createExperiment)({
   kind: "user",
   id: "2023-04_guild_boosting_settings_redesign",
   label: "Guild Boosting Settings Redesign",
@@ -26,4 +26,4 @@ let i = (0, l.createExperiment)({
     }
   }]
 });
-var r = i
+var i = s

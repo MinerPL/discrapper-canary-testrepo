@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 }), s("70102");
 var a, n, l = s("37983");
 s("884691");
-var i = s("414456"),
-  r = s.n(i),
+var r = s("414456"),
+  i = s.n(r),
   u = s("446674"),
   o = s("77078"),
   d = s("87657"),
@@ -24,7 +24,7 @@ let I = u.default.connectStores([c.default], () => ({
       animate: a
     } = e;
     return (0, l.jsxs)("div", {
-      className: r(E.staffReviewHeader, s),
+      className: i(E.staffReviewHeader, s),
       children: [(0, l.jsx)(d.default, {
         size: o.AvatarSizes.SIZE_32,
         user: t,
@@ -41,7 +41,7 @@ let I = u.default.connectStores([c.default], () => ({
       })]
     })
   }),
-  T = e => {
+  f = e => {
     let {
       data: t,
       className: s
@@ -65,5 +65,5 @@ let I = u.default.connectStores([c.default], () => ({
     }
     throw Error("Unknown type")
   };
-T.Types = a;
-var f = T
+f.Types = a;
+var T = f

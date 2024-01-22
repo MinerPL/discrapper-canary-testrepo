@@ -19,10 +19,10 @@ u.r(e), u.d(e, {
     return P
   }
 });
-var r = u("37983");
+var n = u("37983");
 u("884691");
-var n = u("414456"),
-  i = u.n(n),
+var r = u("414456"),
+  i = u.n(r),
   l = u("394846"),
   o = u("77078"),
   c = u("945330"),
@@ -50,13 +50,13 @@ function E(t) {
   let {
     children: e,
     className: u,
-    minor: n = !1,
+    minor: r = !1,
     ...l
   } = t;
-  return (0, r.jsx)(o.FocusRing, {
-    children: (0, r.jsx)("button", {
+  return (0, n.jsx)(o.FocusRing, {
+    children: (0, n.jsx)("button", {
       className: i(f.button, u, {
-        [f.buttonMinor]: n
+        [f.buttonMinor]: r
       }),
       ...l,
       children: e
@@ -68,16 +68,16 @@ function C(t) {
   let {
     children: e,
     noticeType: u,
-    additionalTrackingProps: n,
+    additionalTrackingProps: r,
     ...i
   } = t;
-  return (0, r.jsx)(E, {
+  return (0, n.jsx)(E, {
     ...i,
     onClick: t => {
-      var e, r;
-      null != i.onClick && i.onClick(t), e = u, r = n, null != e && a.default.track(d.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+      var e, n;
+      null != i.onClick && i.onClick(t), e = u, n = r, null != e && a.default.track(d.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
         notice_type: e,
-        ...r
+        ...n
       })
     },
     children: e
@@ -88,10 +88,10 @@ function T(t) {
   let {
     children: e,
     href: u,
-    ...n
+    ...r
   } = t;
-  return (0, r.jsx)(o.Anchor, {
-    ...n,
+  return (0, n.jsx)(o.Anchor, {
+    ...r,
     className: f.button,
     href: u,
     children: e
@@ -103,7 +103,7 @@ function D(t) {
     onClick: e,
     noticeType: u
   } = t;
-  return (0, r.jsx)(o.Clickable, {
+  return (0, n.jsx)(o.Clickable, {
     focusProps: {
       offset: 6
     },
@@ -115,7 +115,7 @@ function D(t) {
       })
     },
     "aria-label": s.default.Messages.DISMISS,
-    children: (0, r.jsx)(c.default, {
+    children: (0, n.jsx)(c.default, {
       className: f.closeIcon,
       width: 18,
       height: 18
@@ -127,14 +127,14 @@ function P(t) {
   let {
     color: e = _.DEFAULT,
     className: u,
-    style: n,
+    style: r,
     children: o
   } = t;
-  return (0, r.jsx)("div", {
+  return (0, n.jsx)("div", {
     className: i(f.notice, {
       [f.isMobile]: l.isMobile
     }, u, e),
-    style: null != n ? n : void 0,
+    style: null != r ? r : void 0,
     children: o
   })
 }

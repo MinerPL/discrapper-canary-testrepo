@@ -17,8 +17,8 @@ var a = l("446674"),
   f = l("999203"),
   m = l("609734"),
   p = l("777003"),
-  E = l("49111"),
-  T = l("782340"),
+  T = l("49111"),
+  E = l("782340"),
   _ = l("431375");
 
 function S(e) {
@@ -41,7 +41,7 @@ function S(e) {
     guildId: l,
     groupListingId: null == A ? void 0 : A.id,
     showBenefitsFirst: !0,
-    analyticsLocation: E.AnalyticsLocations.BOT_PROFILE_POPOUT
+    analyticsLocation: T.AnalyticsLocations.BOT_PROFILE_POPOUT
   });
   return h || I ? (0, n.jsx)(p.default, {
     children: (0, n.jsxs)("div", {
@@ -60,7 +60,7 @@ function S(e) {
           }), (0, n.jsx)(o.default, {
             size: 4,
             horizontal: !0
-          }), T.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+          }), E.default.Messages.BOT_PROFILE_UPGRADE_CTA]
         })
       })]
     })

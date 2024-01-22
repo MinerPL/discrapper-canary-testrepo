@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var InputEvent, InputEvent, i, r = n("595275"),
-  s = n("657869"),
+var InputEvent, InputEvent, i, s = n("595275"),
+  r = n("657869"),
   a = n("555013");
-(InputEvent = InputEvent || (InputEvent = {})).Stream = "stream", InputEvent.Video = "video", InputEvent.Mute = "mute", InputEvent.VoiceActivity = "voiceactivity", InputEvent.DesktopSourceEnd = "desktopsourceend", InputEvent.Speaking = "speaking", InputEvent.AudioPermission = "audio-permission", InputEvent.VideoPermission = "video-permission", InputEvent.AddVideoTrack = "add-video-track", i = class extends r.default {
+(InputEvent = InputEvent || (InputEvent = {})).Stream = "stream", InputEvent.Video = "video", InputEvent.Mute = "mute", InputEvent.VoiceActivity = "voiceactivity", InputEvent.DesktopSourceEnd = "desktopsourceend", InputEvent.Speaking = "speaking", InputEvent.AudioPermission = "audio-permission", InputEvent.VideoPermission = "video-permission", InputEvent.AddVideoTrack = "add-video-track", i = class extends s.default {
   destroy() {
     this.removeAllListeners(), this.destroyStreams()
   }
@@ -88,6 +88,6 @@ var InputEvent, InputEvent, i, r = n("595275"),
       this.emit("audio-permission", e)
     }, this.handleVideoPermission = e => {
       this.emit("video-permission", e)
-    }, this.audio = new s.default(e), this.audio.addListener("voiceactivity", this.handleVoiceActivity), this.audio.addListener("speaking", this.handleSpeaking), this.audio.addListener("stream", this.mergeStreams), this.audio.addListener("permission", this.handleAudioPermission), this.video.addListener("stream", this.mergeStreams), this.video.addListener("permission", this.handleVideoPermission), this.video.addListener("add-video-track", e => this.emit("add-video-track", e))
+    }, this.audio = new r.default(e), this.audio.addListener("voiceactivity", this.handleVoiceActivity), this.audio.addListener("speaking", this.handleSpeaking), this.audio.addListener("stream", this.mergeStreams), this.audio.addListener("permission", this.handleAudioPermission), this.video.addListener("stream", this.mergeStreams), this.video.addListener("permission", this.handleVideoPermission), this.video.addListener("add-video-track", e => this.emit("add-video-track", e))
   }
 }

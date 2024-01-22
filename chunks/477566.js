@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("37983");
 n("884691");
-var r = n("551042"),
-  s = n("135230"),
+var s = n("551042"),
+  r = n("135230"),
   a = {
     show(e) {
       let {
@@ -17,14 +17,14 @@ var r = n("551042"),
         confirmText: o,
         cancelText: l,
         onConfirm: u,
-        onCancel: c,
-        onCloseCallback: d,
+        onCancel: d,
+        onCloseCallback: c,
         secondaryConfirmText: f,
-        onConfirmSecondary: E,
+        onConfirmSecondary: _,
         className: h,
-        titleClassName: p
+        titleClassName: g
       } = e;
-      (0, r.openModal)(e => (0, i.jsx)(s.default, {
+      (0, s.openModal)(e => (0, i.jsx)(r.default, {
         ...e,
         title: t,
         body: n,
@@ -32,13 +32,13 @@ var r = n("551042"),
         confirmText: o,
         cancelText: l,
         onConfirm: u,
-        onCancel: c,
+        onCancel: d,
         secondaryConfirmText: f,
-        onConfirmSecondary: E,
+        onConfirmSecondary: _,
         className: h,
-        titleClassName: p
+        titleClassName: g
       }), {
-        onCloseCallback: d
+        onCloseCallback: c
       })
     },
     close() {}

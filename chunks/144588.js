@@ -28,8 +28,8 @@ var l = s("37983"),
   P = s("10589"),
   R = s("208713"),
   m = s("803692"),
-  O = s("90324"),
-  j = s("624416"),
+  j = s("90324"),
+  O = s("624416"),
   v = s("3081"),
   G = s("907038"),
   D = s("874146"),
@@ -67,7 +67,7 @@ function V(e) {
         className: w.tabContainer,
         children: [(0, l.jsx)(x.default, {
           size: 32
-        }), c && (0, l.jsx)(O.default, {
+        }), c && (0, l.jsx)(j.default, {
           guildId: s
         }), u === T.GuildShopTab.GUILD_PRODUCTS && (0, l.jsx)(P.GuildProductCardGrid, {
           guildId: s,
@@ -112,7 +112,7 @@ function b(e) {
         color: c.default.INTERACTIVE_ACTIVE
       }), (0, l.jsx)(L.default.Title, {
         children: M.default.Messages.GUILD_SHOP_CHANNEL_LABEL
-      }), (0, l.jsx)(j.default, {})]
+      }), (0, l.jsx)(O.default, {})]
     }), (0, l.jsx)(o.ScrollerNone, {
       className: w.content,
       children: r ? (0, l.jsx)(V, {

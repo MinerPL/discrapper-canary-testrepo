@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return l
   }
 }), n("70102"), n("222007");
-var i = n("884691");
-let r = (0, i.createContext)(null),
-  s = {
+var r = n("884691");
+let a = (0, r.createContext)(null),
+  i = {
     didCatch: !1,
     error: null
   };
-class l extends i.Component {
+class l extends r.Component {
   static getDerivedStateFromError(e) {
     return {
       didCatch: !0,
@@ -22,34 +22,34 @@ class l extends i.Component {
       error: e
     } = this.state;
     if (null !== e) {
-      for (var t, n, i = arguments.length, r = Array(i), l = 0; l < i; l++) r[l] = arguments[l];
+      for (var t, n, r = arguments.length, a = Array(r), l = 0; l < r; l++) a[l] = arguments[l];
       null === (t = (n = this.props).onReset) || void 0 === t || t.call(n, {
-        args: r,
+        args: a,
         reason: "imperative-api"
-      }), this.setState(s)
+      }), this.setState(i)
     }
   }
   componentDidCatch(e, t) {
-    var n, i;
-    null === (n = (i = this.props).onError) || void 0 === n || n.call(i, e, t)
+    var n, r;
+    null === (n = (r = this.props).onError) || void 0 === n || n.call(r, e, t)
   }
   componentDidUpdate(e, t) {
     let {
       didCatch: n
     } = this.state, {
-      resetKeys: i
+      resetKeys: r
     } = this.props;
     if (n && null !== t.error && function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
           t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
         return e.length !== t.length || e.some((e, n) => !Object.is(e, t[n]))
-      }(e.resetKeys, i)) {
-      var r, l;
-      null === (r = (l = this.props).onReset) || void 0 === r || r.call(l, {
-        next: i,
+      }(e.resetKeys, r)) {
+      var a, l;
+      null === (a = (l = this.props).onReset) || void 0 === a || a.call(l, {
+        next: r,
         prev: e.resetKeys,
         reason: "keys"
-      }), this.setState(s)
+      }), this.setState(i)
     }
   }
   render() {
@@ -57,30 +57,30 @@ class l extends i.Component {
       children: e,
       fallbackRender: t,
       FallbackComponent: n,
-      fallback: s
+      fallback: i
     } = this.props, {
       didCatch: l,
-      error: a
-    } = this.state, o = e;
+      error: o
+    } = this.state, u = e;
     if (l) {
       let e = {
-        error: a,
+        error: o,
         resetErrorBoundary: this.resetErrorBoundary
       };
-      if ((0, i.isValidElement)(s)) o = s;
-      else if ("function" == typeof t) o = t(e);
-      else if (n) o = (0, i.createElement)(n, e);
-      else throw a
+      if ((0, r.isValidElement)(i)) u = i;
+      else if ("function" == typeof t) u = t(e);
+      else if (n) u = (0, r.createElement)(n, e);
+      else throw o
     }
-    return (0, i.createElement)(r.Provider, {
+    return (0, r.createElement)(a.Provider, {
       value: {
         didCatch: l,
-        error: a,
+        error: o,
         resetErrorBoundary: this.resetErrorBoundary
       }
-    }, o)
+    }, u)
   }
   constructor(e) {
-    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = s
+    super(e), this.resetErrorBoundary = this.resetErrorBoundary.bind(this), this.state = i
   }
 }

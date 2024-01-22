@@ -7,18 +7,18 @@ n.r(t), n.d(t, {
     return u
   },
   useEnableClips: function() {
-    return c
+    return d
   },
   useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock: function() {
-    return d
+    return c
   },
   useShouldSeeClipsPremiumEarlyAccessAnnouncementCoachmark: function() {
     return f
   }
 });
 var i = n("862205"),
-  r = n("584687"),
-  s = n("42887"),
+  s = n("584687"),
+  r = n("42887"),
   a = n("18346");
 let o = (0, i.createExperiment)({
     kind: "user",
@@ -84,7 +84,7 @@ let o = (0, i.createExperiment)({
   });
 
 function u() {
-  if (!(0, a.default)(s.default)) return !1;
+  if (!(0, a.default)(r.default)) return !1;
   let {
     enableClips: e
   } = l.getCurrentConfig({
@@ -99,7 +99,7 @@ function u() {
     autoTrackExposure: !1
   }), {
     enableDecoupledGameClipping: n
-  } = r.default.getCurrentConfig({
+  } = s.default.getCurrentConfig({
     location: "areClipsEnabled"
   }, {
     autoTrackExposure: !1
@@ -107,8 +107,8 @@ function u() {
   return e || t || n
 }
 
-function c() {
-  let e = (0, a.default)(s.default),
+function d() {
+  let e = (0, a.default)(r.default),
     {
       enableClips: t
     } = l.useExperiment({
@@ -125,17 +125,17 @@ function c() {
     }),
     {
       enableDecoupledGameClipping: i
-    } = r.default.useExperiment({
+    } = s.default.useExperiment({
       location: "useEnableClips"
     }, {
       autoTrackExposure: !1
     });
   return (n || t || i) && e
 }
-let d = e => {
+let c = e => {
     let {
       autoTrackExposure: t
-    } = e, n = (0, a.default)(s.default), {
+    } = e, n = (0, a.default)(r.default), {
       enablePremiumEarlyAccessGoLiveRoadblock: i
     } = l.useExperiment({
       location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"
@@ -147,7 +147,7 @@ let d = e => {
   f = e => {
     let {
       autoTrackExposure: t
-    } = e, n = (0, a.default)(s.default), {
+    } = e, n = (0, a.default)(r.default), {
       enablePremiumEarlyAccessAnnouncementCoachmark: i
     } = l.useExperiment({
       location: "useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock"

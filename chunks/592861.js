@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 });
-var s = [{
+var i = [{
   name: "Afghanistan",
   alpha2: "AF",
   phoneCountryCode: "+93",

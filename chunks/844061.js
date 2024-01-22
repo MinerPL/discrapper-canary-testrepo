@@ -46,8 +46,8 @@ var s = n("37983"),
   H = n("944662"),
   V = n("748880"),
   Y = n("888393"),
-  K = n("548703"),
-  W = n("859316"),
+  W = n("548703"),
+  K = n("859316"),
   z = n("427655"),
   Z = n("161225"),
   J = n("41163"),
@@ -200,7 +200,7 @@ let eM = Object.freeze({
     } = e, {
       author: a
     } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)(a, i, l.guild_id);
-    return (0, s.jsx)(W.default, {
+    return (0, s.jsx)(K.default, {
       compact: n,
       message: t,
       usernameHook: r,
@@ -215,7 +215,7 @@ let eM = Object.freeze({
     } = e, {
       author: a
     } = t, i = t.getChannelId(), r = (0, eN.useUsernameHook)(a, i, l.guild_id);
-    return (0, s.jsx)(K.default, {
+    return (0, s.jsx)(W.default, {
       compact: n,
       message: t,
       usernameHook: r

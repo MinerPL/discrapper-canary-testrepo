@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   handoffBegin: function() {
-    return r
+    return s
   },
   handoffEnd: function() {
-    return s
+    return r
   },
   handoffFromApp: function() {
     return a
@@ -18,7 +18,7 @@ n.r(t), n.d(t, {
 });
 var i = n("913144");
 
-function r() {
+function s() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e4;
   i.default.dispatch({
     type: "BROWSER_HANDOFF_BEGIN",
@@ -26,7 +26,7 @@ function r() {
   })
 }
 
-function s(e, t) {
+function r(e, t) {
   i.default.dispatch({
     type: "BROWSER_HANDOFF_END",
     handoffToken: e,
@@ -38,15 +38,15 @@ function a(e) {
   let {
     handoffKey: t,
     handoffToken: n,
-    handoffSource: r,
-    timeout: s = 1e4
+    handoffSource: s,
+    timeout: r = 1e4
   } = e;
   i.default.dispatch({
     type: "BROWSER_HANDOFF_FROM_APP",
     handoffKey: t,
     handoffToken: n,
-    handoffSource: r,
-    timeout: s
+    handoffSource: s,
+    timeout: r
   })
 }
 

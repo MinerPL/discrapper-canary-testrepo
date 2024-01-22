@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var i, r = n("44170"),
-  s = n("657869"),
+var i, s = n("44170"),
+  r = n("657869"),
   a = n("324304"),
   o = n("353927");
 let l = {
@@ -14,7 +14,7 @@ let l = {
   offerToReceiveVideo: !1,
   iceRestart: !1
 };
-i = class extends r.EventEmitter {
+i = class extends s.EventEmitter {
   stop() {
     for (let e of (this.pc1.close(), this.pc2.close(), this.input.destroy(), Object.keys(this.outputs))) this.destroyOutput(e)
   }
@@ -70,6 +70,6 @@ i = class extends r.EventEmitter {
       null != e.candidate && this.pc2.addIceCandidate(e.candidate)
     }, this.pc2 = new RTCPeerConnection, this.pc2.onicecandidate = e => {
       null != e.candidate && this.pc1.addIceCandidate(e.candidate)
-    }, this.pc2.ontrack = this.handleTrack, this.input = new s.default(e), this.input.setSource(t), this.input.on("stream", this.handleStream), this.input.enable(), this.audioContext = e
+    }, this.pc2.ontrack = this.handleTrack, this.input = new r.default(e), this.input.setSource(t), this.input.on("stream", this.handleStream), this.input.enable(), this.audioContext = e
   }
 }

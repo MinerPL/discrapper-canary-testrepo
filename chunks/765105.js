@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
-var s = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("90915"),
-  a = n("73749"),
+var s = n("90915"),
+  r = n("73749"),
   l = n("468560"),
-  r = n("271081"),
+  a = n("271081"),
   u = n("298557"),
   o = n("176162"),
   c = n("750947"),
@@ -19,25 +19,25 @@ let f = function(e) {
     match: t
   } = e, {
     applicationId: n,
-    section: i
-  } = t.params, a = (0, l.default)(c.ApplicationDirectoryProfileSections, i);
-  return (0, s.jsx)(u.default, {
+    section: s
+  } = t.params, r = (0, l.default)(c.ApplicationDirectoryProfileSections, s);
+  return (0, i.jsx)(u.default, {
     applicationId: n,
-    initialSection: a
+    initialSection: r
   })
 };
 
-function p() {
-  return (0, s.jsxs)(i.Switch, {
-    children: [(0, s.jsx)(a.default, {
+function h() {
+  return (0, i.jsxs)(s.Switch, {
+    children: [(0, i.jsx)(r.default, {
       path: d.Routes.APPLICATION_DIRECTORY_SEARCH,
       component: o.default
-    }), (0, s.jsx)(a.default, {
+    }), (0, i.jsx)(r.default, {
       path: d.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"),
       render: f
-    }), (0, s.jsx)(a.default, {
+    }), (0, i.jsx)(r.default, {
       path: d.Routes.APPLICATION_DIRECTORY,
-      component: r.default
+      component: a.default
     })]
   })
 }

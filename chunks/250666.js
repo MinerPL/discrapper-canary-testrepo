@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s = n("446674"),
-  i = n("305961"),
+var i = n("446674"),
+  s = n("305961"),
   r = n("49111");
 
 function a(e) {
@@ -16,8 +16,8 @@ function a(e) {
 }
 
 function o(e) {
-  return (0, s.useStateFromStores)([i.default], () => {
-    let t = i.default.getGuild(e);
+  return (0, i.useStateFromStores)([s.default], () => {
+    let t = s.default.getGuild(e);
     return null != t && a(t)
   })
 }

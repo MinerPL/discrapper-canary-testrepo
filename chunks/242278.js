@@ -16,8 +16,8 @@ u.r(e), u.d(e, {
     return s
   }
 });
-var r = u("872717"),
-  n = u("448993"),
+var n = u("872717"),
+  r = u("448993"),
   i = u("271560"),
   l = u("49111");
 let o = async (t, e, u) => {
@@ -29,7 +29,7 @@ let o = async (t, e, u) => {
     ...d
   } = u;
   try {
-    let u = await r.default.patch({
+    let u = await n.default.patch({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
       body: {
         ...d,
@@ -41,15 +41,15 @@ let o = async (t, e, u) => {
     });
     return u.body
   } catch (t) {
-    throw new n.APIError(t)
+    throw new r.APIError(t)
   }
 }, c = async (t, e) => {
   try {
-    await r.default.delete({
+    await n.default.delete({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e)
     })
   } catch (t) {
-    throw new n.APIError(t)
+    throw new r.APIError(t)
   }
 }, a = async t => {
   try {
@@ -58,7 +58,7 @@ let o = async (t, e, u) => {
     });
     return e.body.listings
   } catch (t) {
-    throw new n.APIError(t)
+    throw new r.APIError(t)
   }
 }, d = async (t, e) => {
   try {
@@ -67,7 +67,7 @@ let o = async (t, e, u) => {
     });
     return u.body
   } catch (t) {
-    throw new n.APIError(t)
+    throw new r.APIError(t)
   }
 }, s = async t => {
   let {
@@ -76,11 +76,11 @@ let o = async (t, e, u) => {
     attachmentId: i
   } = t;
   try {
-    let t = await r.default.post({
+    let t = await n.default.post({
       url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, u, i)
     });
     return t.body
   } catch (t) {
-    throw new n.APIError(t)
+    throw new r.APIError(t)
   }
 }

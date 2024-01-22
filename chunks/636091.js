@@ -2,33 +2,33 @@ n("424973"), n("808653");
 var r = function(e) {
     return String(Number(e)) === e ? Number(e) : e
   },
-  o = function(e, t, n, o) {
-    if (o && !n) t[o] = r(e[1]);
+  i = function(e, t, n, i) {
+    if (i && !n) t[i] = r(e[1]);
     else
-      for (var a = 0; a < n.length; a += 1) null != e[a + 1] && (t[n[a]] = r(e[a + 1]))
+      for (var o = 0; o < n.length; o += 1) null != e[o + 1] && (t[n[o]] = r(e[o + 1]))
   },
-  a = function(e, t, n) {
+  o = function(e, t, n) {
     var r = e.name && e.names;
     e.push && !t[e.push] ? t[e.push] = [] : r && !t[e.name] && (t[e.name] = {});
-    var a = e.push ? {} : r ? t[e.name] : t;
-    o(n.match(e.reg), a, e.names, e.name), e.push && t[e.push].push(a)
+    var o = e.push ? {} : r ? t[e.name] : t;
+    i(n.match(e.reg), o, e.names, e.name), e.push && t[e.push].push(o)
   },
-  i = n("258169"),
-  s = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
+  s = n("258169"),
+  a = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 t.parse = function(e) {
   var t = {},
     n = [],
     r = t;
-  return e.split(/(\r\n|\r|\n)/).filter(s).forEach(function(e) {
+  return e.split(/(\r\n|\r|\n)/).filter(a).forEach(function(e) {
     var t = e[0],
-      o = e.slice(2);
+      i = e.slice(2);
     "m" === t && (n.push({
       rtp: [],
       fmtp: []
     }), r = n[n.length - 1]);
-    for (var s = 0; s < (i[t] || []).length; s += 1) {
-      var c = i[t][s];
-      if (c.reg.test(o)) return a(c, r, o)
+    for (var a = 0; a < (s[t] || []).length; a += 1) {
+      var c = s[t][a];
+      if (c.reg.test(i)) return o(c, r, i)
     }
   }), t.media = n, t
 };
@@ -41,10 +41,10 @@ t.parseParams = function(e) {
 }, t.parseFmtpConfig = t.parseParams, t.parsePayloads = function(e) {
   return e.split(" ").map(Number)
 }, t.parseRemoteCandidates = function(e) {
-  for (var t = [], n = e.split(" ").map(r), o = 0; o < n.length; o += 3) t.push({
-    component: n[o],
-    ip: n[o + 1],
-    port: n[o + 2]
+  for (var t = [], n = e.split(" ").map(r), i = 0; i < n.length; i += 3) t.push({
+    component: n[i],
+    ip: n[i + 1],
+    port: n[i + 2]
   });
   return t
 }, t.parseImageAttributes = function(e) {

@@ -8,16 +8,16 @@ var t = E("37983"),
   o = E("884691"),
   n = E("446674"),
   r = E("77078"),
-  i = E("363658"),
-  a = E("135230"),
+  a = E("363658"),
+  i = E("135230"),
   I = E("723872"),
   s = E("130473"),
   T = E("782340");
 let S = () => {
-    i.default.clearSuppressWarning()
+    a.default.clearSuppressWarning()
   },
   N = () => {
-    i.default.clearSuppressWarning(!0)
+    a.default.clearSuppressWarning(!0)
   };
 var O = () => {
   let e = o.useRef(null);
@@ -25,10 +25,10 @@ var O = () => {
   function _() {
     null !== e.current && ((0, r.closeModal)(e.current), e.current = null)
   }
-  let [i, O] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), A = o.useCallback(() => {
+  let [a, O] = (0, n.useStateFromStoresArray)([s.default], () => [s.default.shouldShowWarning(), s.default.isAFKChannel()], []), A = o.useCallback(() => {
     let _ = "",
       E = "";
-    O ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(a.default, {
+    O ? (_ = T.default.Messages.SUPPRESSED_AFK_TITLE, E = T.default.Messages.SUPPRESSED_AFK_BODY) : (_ = T.default.Messages.SUPPRESSED, E = T.default.Messages.SUPPRESSED_PERMISSION_BODY), e.current = (0, r.openModal)(e => (0, t.jsx)(i.default, {
       title: _,
       body: E,
       onConfirm: S,
@@ -50,7 +50,7 @@ var O = () => {
       null != _ && (e.current = _)
     })
   }, []);
-  return o.useEffect(() => (i && (0, I.isRTCConnectedInHub)() ? R() : i ? A() : _(), () => {
+  return o.useEffect(() => (a && (0, I.isRTCConnectedInHub)() ? R() : a ? A() : _(), () => {
     _()
-  }), [i, A, R]), null
+  }), [a, A, R]), null
 }

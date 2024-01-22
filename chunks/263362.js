@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("659500"),
   m = n("981024"),
   p = n("519540"),
-  S = n("80649"),
-  g = n("385730"),
+  g = n("80649"),
+  S = n("385730"),
   N = n("788072"),
   _ = n("49111"),
   T = n("782340");
@@ -101,7 +101,7 @@ function I(e) {
           setTab: L,
           badgeState: C,
           closePopout: y
-        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(S.default, {
+        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(g.default, {
           setTab: L,
           onJump: P,
           badgeState: C,
@@ -115,12 +115,12 @@ function I(e) {
           onJump: P,
           closePopout: y
         }) : (0, a.jsx)(s.ErrorBoundary, {
-          fallback: (0, a.jsx)(g.UnreadsCrashed, {
+          fallback: (0, a.jsx)(S.UnreadsCrashed, {
             setTab: L,
             closePopout: y,
             badgeState: C
           }),
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(S.default, {
             setTab: L,
             onJump: P,
             showTutorial: O,

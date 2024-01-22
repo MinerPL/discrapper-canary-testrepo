@@ -10,11 +10,11 @@ n.r(t), n.d(t, {
     return o
   },
   setAlwaysOnTop: function() {
-    return d
+    return l
   }
 });
-var s = n("913144");
-let i = {
+var i = n("913144");
+let s = {
   menubar: !1,
   toolbar: !1,
   location: !1,
@@ -22,11 +22,11 @@ let i = {
 };
 
 function r(e, t, n) {
-  return s.default.dispatch({
+  return i.default.dispatch({
     type: "POPOUT_WINDOW_OPEN",
     key: e,
     features: {
-      ...i,
+      ...s,
       ...n
     },
     render: t
@@ -34,21 +34,21 @@ function r(e, t, n) {
 }
 
 function a(e) {
-  return s.default.dispatch({
+  return i.default.dispatch({
     type: "CHANNEL_CALL_POPOUT_WINDOW_OPEN",
     channel: e
   })
 }
 
 function o(e) {
-  return s.default.dispatch({
+  return i.default.dispatch({
     type: "POPOUT_WINDOW_CLOSE",
     key: e
   })
 }
 
-function d(e, t) {
-  return s.default.dispatch({
+function l(e, t) {
+  return i.default.dispatch({
     type: "POPOUT_WINDOW_SET_ALWAYS_ON_TOP",
     alwaysOnTop: t,
     key: e

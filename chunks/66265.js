@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
 var i = n("913144"),
-  r = n("316272"),
-  s = n("773336"),
+  s = n("316272"),
+  r = n("773336"),
   a = n("197881"),
   o = n("180524"),
   l = n("49111");
-class u extends r.default {
+class u extends s.default {
   isEnabled() {
-    return (0, s.isDesktop)() && (0, s.isMac)() && !a.ProcessArgs.isDiscordTestSet()
+    return (0, r.isDesktop)() && (0, r.isMac)() && !a.ProcessArgs.isDiscordTestSet()
   }
   _initialize() {
     this.isEnabled() && i.default.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode)
@@ -30,4 +30,4 @@ class u extends r.default {
     }
   }
 }
-var c = new u
+var d = new u

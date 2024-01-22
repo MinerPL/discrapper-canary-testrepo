@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var i = n("884691"),
-  r = n("561744");
+  s = n("561744");
 
-function s(e) {
-  let t = (0, r.default)(e);
+function r(e) {
+  let t = (0, s.default)(e);
   (0, i.useEffect)(() => {
     let e = requestAnimationFrame(function n() {
       var i;

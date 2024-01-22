@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 });
 var i = n("913144"),
-  r = {
+  s = {
     clearVADWarning() {
       i.default.dispatch({
         type: "PERMISSION_CLEAR_VAD_WARNING"

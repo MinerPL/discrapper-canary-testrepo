@@ -22,8 +22,8 @@ n.r(t), n.d(t, {
 var l, i, r = n("884691"),
   s = n("65597"),
   o = n("685665"),
-  a = n("401642"),
-  u = n("305961"),
+  u = n("401642"),
+  a = n("305961"),
   c = n("697218"),
   d = n("441823"),
   f = n("49111");
@@ -32,7 +32,7 @@ let E = e => {
     guildId: t,
     userId: n
   } = e;
-  (0, a.openUserProfileModal)({
+  (0, u.openUserProfileModal)({
     userId: n,
     guildId: t,
     analyticsLocation: {
@@ -75,10 +75,10 @@ function h(e, t, n) {
 }
 
 function p(e) {
-  return (0, s.default)([u.default], () => {
+  return (0, s.default)([a.default], () => {
     var t;
     if (null == e) return null;
-    let n = u.default.getGuild(e.guildId);
+    let n = a.default.getGuild(e.guildId);
     return null == n || null == e.highestRoleId ? null : null !== (t = n.roles[e.highestRoleId]) && void 0 !== t ? t : null
   }, [e])
 }

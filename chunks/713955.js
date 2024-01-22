@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   getAllRolesRows: function() {
     return i
   },
@@ -7,18 +7,18 @@ a.r(t), a.d(t, {
     return o
   }
 });
-var s = a("316693"),
-  n = a("454273"),
-  l = a("991170");
-let r = (e, t, a) => {
+var a = s("316693"),
+  n = s("454273"),
+  l = s("991170");
+let r = (e, t, s) => {
     if (null == e.id) return !1;
     let n = l.default.computePermissionsForRoles({
       forceRoles: {
         [e.id]: e
       },
-      context: a
+      context: s
     });
-    return s.default.has(n, t)
+    return a.default.has(n, t)
   },
   i = e => null == e.roles ? [] : Object.values(e.roles).sort(n.sortRoles).map(e => (0, n.getRoleRowData)(e)),
-  o = (e, t, a) => Object.values(e.roles).filter(e => (0, n.isAdmin)(e) || r(e, a, t))
+  o = (e, t, s) => Object.values(e.roles).filter(e => (0, n.isAdmin)(e) || r(e, s, t))

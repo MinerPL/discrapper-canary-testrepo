@@ -1,106 +1,106 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return S
   }
 }), n("222007");
-var s = n("37983"),
-  o = n("884691"),
-  r = n("446674"),
-  l = n("77078"),
-  a = n("599417"),
+var o = n("37983"),
+  s = n("884691"),
+  a = n("446674"),
+  r = n("77078"),
+  l = n("599417"),
   i = n("734990"),
-  u = n("790618"),
-  d = n("258078"),
-  E = n("782340"),
-  _ = n("679012");
+  E = n("790618"),
+  _ = n("258078"),
+  u = n("782340"),
+  T = n("679012");
 
-function c(e) {
+function S(e) {
   var t;
   let {
     isSlideReady: n,
-    error: c,
-    setEmailToken: T,
-    setError: S,
-    onNext: N,
+    error: S,
+    setEmailToken: d,
+    setError: N,
+    onNext: c,
     onClose: C
-  } = e, [f, A] = o.useState(!1), [I, R] = o.useState(""), [h, p] = o.useState(!1), U = (0, r.useStateFromStores)([u.default], () => u.default.getErrors()), O = o.useRef(null);
-  o.useEffect(() => {
+  } = e, [A, I] = s.useState(!1), [f, R] = s.useState(""), [U, O] = s.useState(!1), m = (0, a.useStateFromStores)([E.default], () => E.default.getErrors()), p = s.useRef(null);
+  s.useEffect(() => {
     if (n) {
       var e;
-      null === (e = O.current) || void 0 === e || e.focus()
+      null === (e = p.current) || void 0 === e || e.focus()
     }
   }, [n]);
-  let m = async e => {
-    e.preventDefault(), S(null), A(!0);
+  let v = async e => {
+    e.preventDefault(), N(null), I(!0);
     try {
       let {
         token: e
-      } = await (0, i.confirmEmailChange)(I);
-      T(e), N()
+      } = await (0, i.confirmEmailChange)(f);
+      d(e), c()
     } catch (t) {
-      let e = new a.default(t);
-      S(e.getAnyErrorMessage())
+      let e = new l.default(t);
+      N(e.getAnyErrorMessage())
     } finally {
-      A(!1)
+      I(!1)
     }
-  }, v = async () => {
-    if (!h) {
-      p(!0);
+  }, M = async () => {
+    if (!U) {
+      O(!0);
       try {
-        await (0, i.sendConfirmationCode)(!0), (0, l.showToast)((0, l.createToast)(E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, l.ToastType.SUCCESS))
+        await (0, i.sendConfirmationCode)(!0), (0, r.showToast)((0, r.createToast)(u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT, r.ToastType.SUCCESS))
       } catch (n) {
-        let e = new a.default(n),
+        let e = new l.default(n),
           t = e.getAnyErrorMessage();
-        null != t && (0, l.showToast)((0, l.createToast)(t, l.ToastType.FAILURE))
+        null != t && (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE))
       } finally {
-        p(!1)
+        O(!1)
       }
     }
   };
-  return (0, s.jsxs)("form", {
-    onSubmit: m,
-    children: [(0, s.jsxs)(l.ModalHeader, {
+  return (0, o.jsxs)("form", {
+    onSubmit: v,
+    children: [(0, o.jsxs)(r.ModalHeader, {
       separator: !1,
-      className: _.header,
-      children: [(0, s.jsx)(d.default, {
-        color: d.default.Colors.HEADER_PRIMARY,
-        size: d.default.Sizes.SIZE_24,
-        className: _.title,
-        children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
-      }), (0, s.jsx)(l.Text, {
+      className: T.header,
+      children: [(0, o.jsx)(_.default, {
+        color: _.default.Colors.HEADER_PRIMARY,
+        size: _.default.Sizes.SIZE_24,
+        className: T.title,
+        children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_TITLE_DESKTOP
+      }), (0, o.jsx)(r.Text, {
         color: "header-secondary",
         variant: "text-md/normal",
-        className: _.subtitle,
-        children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
-      }), (0, s.jsx)(l.ModalCloseButton, {
+        className: T.subtitle,
+        children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_SUBTITLE
+      }), (0, o.jsx)(r.ModalCloseButton, {
         onClick: C,
-        className: _.modalCloseButton
+        className: T.modalCloseButton
       })]
-    }), (0, s.jsxs)(l.ModalContent, {
-      className: _.content,
-      children: [(0, s.jsx)(l.FormItem, {
-        title: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-        error: null != c ? c : null == U ? void 0 : null === (t = U.email_token) || void 0 === t ? void 0 : t[0],
-        children: (0, s.jsx)(l.TextInput, {
-          value: I,
+    }), (0, o.jsxs)(r.ModalContent, {
+      className: T.content,
+      children: [(0, o.jsx)(r.FormItem, {
+        title: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
+        error: null != S ? S : null == m ? void 0 : null === (t = m.email_token) || void 0 === t ? void 0 : t[0],
+        children: (0, o.jsx)(r.TextInput, {
+          value: f,
           onChange: R,
-          inputRef: O
+          inputRef: p
         })
-      }), (0, s.jsx)(l.Text, {
-        className: _.help,
+      }), (0, o.jsx)(r.Text, {
+        className: T.help,
         variant: "text-sm/normal",
-        children: E.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
-          onResend: v
+        children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
+          onResend: M
         })
       })]
-    }), (0, s.jsx)(l.ModalFooter, {
-      children: (0, s.jsx)(l.Button, {
+    }), (0, o.jsx)(r.ModalFooter, {
+      children: (0, o.jsx)(r.Button, {
         type: "submit",
-        color: l.Button.Colors.BRAND,
-        size: l.Button.Sizes.MEDIUM,
-        submitting: f,
-        children: E.default.Messages.NEXT
+        color: r.Button.Colors.BRAND,
+        size: r.Button.Sizes.MEDIUM,
+        submitting: A,
+        children: u.default.Messages.NEXT
       })
     })]
   })

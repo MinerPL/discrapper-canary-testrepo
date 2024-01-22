@@ -1,76 +1,76 @@
 "use strict";
 n.r(t), n.d(t, {
   canStreamInChannel: function() {
-    return T
+    return m
   },
   getStreamCTAString: function() {
-    return f
+    return E
   },
   canWatchStream: function() {
     return p
   },
   useCanWatchStream: function() {
-    return N
+    return v
   },
   getStreamEligibleChannels: function() {
-    return C
+    return S
   }
 }), n("424973"), n("222007");
-var r, i, l = n("316693"),
-  u = n("446674"),
-  a = n("76393"),
-  o = n("923959"),
-  d = n("305961"),
-  s = n("957255"),
-  E = n("800762"),
-  _ = n("404008"),
-  c = n("49111"),
-  I = n("782340");
-let S = (e, t) => e.isPrivate() || t.can(l.default.combine(c.Permissions.CONNECT, c.Permissions.VIEW_CHANNEL), e);
+var i, s, r = n("316693"),
+  a = n("446674"),
+  o = n("76393"),
+  l = n("923959"),
+  u = n("305961"),
+  d = n("957255"),
+  c = n("800762"),
+  f = n("404008"),
+  _ = n("49111"),
+  h = n("782340");
+let g = (e, t) => e.isPrivate() || t.can(r.default.combine(_.Permissions.CONNECT, _.Permissions.VIEW_CHANNEL), e);
 
-function T(e, t, n) {
-  var r;
-  let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+function m(e, t, n) {
+  var i;
+  let s = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
   if (e.isPrivate()) return !0;
-  let l = t.getGuild(e.getGuildId()),
-    u = null !== (r = null == l ? void 0 : l.maxStageVideoChannelUsers) && void 0 !== r ? r : 0;
-  return (!e.isGuildStageVoice() || !(u <= 0)) && (!i || !!S(e, n)) && !!n.can(c.Permissions.STREAM, e) && null != l && l.afkChannelId !== e.id && !0
+  let r = t.getGuild(e.getGuildId()),
+    a = null !== (i = null == r ? void 0 : r.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
+  return (!e.isGuildStageVoice() || !(a <= 0)) && (!s || !!g(e, n)) && !!n.can(_.Permissions.STREAM, e) && null != r && r.afkChannelId !== e.id && !0
 }
 
-function f(e) {
+function E(e) {
   switch (e) {
     case 0:
-      return I.default.Messages.CONSOLE_STREAM_UNAVAILABLE;
+      return h.default.Messages.CONSOLE_STREAM_UNAVAILABLE;
     case 1:
-      return I.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER;
+      return h.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL_MODAL_HEADER;
     case 2:
-      return I.default.Messages.STREAM_NO_PERMISSION_CTA;
+      return h.default.Messages.STREAM_NO_PERMISSION_CTA;
     default:
-      return I.default.Messages.WATCH_STREAM
+      return h.default.Messages.WATCH_STREAM
   }
 }
 
-function p(e, t, n, r, i) {
-  let l;
+function p(e, t, n, i, s) {
+  let r;
   if (null == e) return [!1, 2];
-  let u = t.isInChannel(e.id),
-    a = (0, _.isChannelFull)(e, t, n),
-    o = S(e, r),
-    d = null != i.getAwaitingRemoteSessionInfo() || null != i.getRemoteSessionId();
-  d ? l = 0 : o || u ? a && !u && (l = 1) : l = 2;
-  let s = !__OVERLAY__ && !d && (u || o && !a);
-  return [s, l]
+  let a = t.isInChannel(e.id),
+    o = (0, f.isChannelFull)(e, t, n),
+    l = g(e, i),
+    u = null != s.getAwaitingRemoteSessionInfo() || null != s.getRemoteSessionId();
+  u ? r = 0 : l || a ? o && !a && (r = 1) : r = 2;
+  let d = !__OVERLAY__ && !u && (a || l && !o);
+  return [d, r]
 }
 
-function N(e) {
-  return (0, u.useStateFromStoresArray)([E.default, d.default, s.default, a.default], () => p(e, E.default, d.default, s.default, a.default))
+function v(e) {
+  return (0, a.useStateFromStoresArray)([c.default, u.default, d.default, o.default], () => p(e, c.default, u.default, d.default, o.default))
 }
 
-function C(e, t, n) {
-  let r = [];
+function S(e, t, n) {
+  let i = [];
   for (let {
-      channel: i
+      channel: s
     }
-    of e[o.GUILD_VOCAL_CHANNELS_KEY]) T(i, t, n) && r.push(i);
-  return r
-}(i = r || (r = {}))[i.REMOTE_MODE = 0] = "REMOTE_MODE", i[i.CHANNEL_FULL = 1] = "CHANNEL_FULL", i[i.NO_PERMISSION = 2] = "NO_PERMISSION"
+    of e[l.GUILD_VOCAL_CHANNELS_KEY]) m(s, t, n) && i.push(s);
+  return i
+}(s = i || (i = {}))[s.REMOTE_MODE = 0] = "REMOTE_MODE", s[s.CHANNEL_FULL = 1] = "CHANNEL_FULL", s[s.NO_PERMISSION = 2] = "NO_PERMISSION"

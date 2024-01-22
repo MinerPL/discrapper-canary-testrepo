@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("269936"),
-  r = n("648030");
-let s = async () => {
+  s = n("648030");
+let r = async () => {
   let {
     default: e
   } = await (0, i.importWithRetry)({
@@ -15,4 +15,4 @@ let s = async () => {
   });
   return e
 };
-var a = new r.default(s)
+var a = new s.default(r)

@@ -4,34 +4,34 @@ n.r(t), n.d(t, {
     return h
   },
   LayerProvider: function() {
-    return p
+    return g
   },
   LayerContainer: function() {
-    return _
-  },
-  getParentLayerContainer: function() {
-    return S
-  },
-  Layer: function() {
     return m
   },
+  getParentLayerContainer: function() {
+    return E
+  },
+  Layer: function() {
+    return p
+  },
   createLayer: function() {
-    return T
+    return v
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("627445"),
   l = n.n(o),
   u = n("817736"),
-  c = n.n(u),
-  d = n("117362"),
+  d = n.n(u),
+  c = n("117362"),
   f = n("411093"),
-  E = n("260921");
-let h = E.layerContainer;
-class p extends r.Component {
+  _ = n("260921");
+let h = _.layerContainer;
+class g extends s.Component {
   componentWillUnmount() {
     this.state.layerContainerElement = null
   }
@@ -54,25 +54,25 @@ class p extends r.Component {
       this.setState({
         layerContainerElement: e
       })
-    }, this.getContextValue = (0, d.cachedFunction)(e => [e, this.setLayerContainerElement])
+    }, this.getContextValue = (0, c.cachedFunction)(e => [e, this.setLayerContainerElement])
   }
 }
-let _ = e => {
+let m = e => {
   let {
     layerContext: t,
     className: n
-  } = e, [, s] = r.useContext(t);
+  } = e, [, r] = s.useContext(t);
   return (0, i.jsx)("div", {
     className: a(h, n),
-    ref: s
+    ref: r
   })
 };
 
-function S(e) {
-  let t = (0, f.default)(e, E.layerContainer);
+function E(e) {
+  let t = (0, f.default)(e, _.layerContainer);
   return l(null != t, "Unexpected missing parent container"), t
 }
-let m = e => {
+let p = e => {
   let {
     layerContext: t,
     children: n
@@ -80,23 +80,23 @@ let m = e => {
   return (0, i.jsx)(t.Consumer, {
     children: e => (function(e, t) {
       let [n] = e;
-      return null == n ? null : c.createPortal(r.Children.only(t), n)
+      return null == n ? null : d.createPortal(s.Children.only(t), n)
     })(e, n)
   })
 };
 
-function T(e) {
-  let t = r.createContext([null, () => {}]),
+function v(e) {
+  let t = s.createContext([null, () => {}]),
     n = {
-      LayerProvider: e => (0, i.jsx)(p, {
+      LayerProvider: e => (0, i.jsx)(g, {
         layerContext: t,
         ...e
       }),
-      LayerContainer: e => (0, i.jsx)(_, {
+      LayerContainer: e => (0, i.jsx)(m, {
         layerContext: t,
         ...e
       }),
-      Layer: e => (0, i.jsx)(m, {
+      Layer: e => (0, i.jsx)(p, {
         layerContext: t,
         ...e
       }),

@@ -20,7 +20,7 @@ var s = n("37983"),
   p = n("782340"),
   h = n("926622");
 i.default.initialize();
-class N extends a.PureComponent {
+class m extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
@@ -147,9 +147,9 @@ class N extends a.PureComponent {
     }
   }
 }
-N.defaultProps = {
+m.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
 var T = i.default.connectStores([f.default], () => ({
   defaultRoute: f.default.defaultRoute
-}))(N)
+}))(m)

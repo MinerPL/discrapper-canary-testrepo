@@ -58,8 +58,8 @@ function x(e) {
       baseCode: P,
       guildScheduledEventId: j
     }) : null,
-    H = null == G || null == V,
-    b = (0, u.default)(null != G ? G : ""),
+    b = null == G || null == V,
+    H = (0, u.default)(null != G ? G : ""),
     B = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : C.value,
     F = null !== (x = null == V ? void 0 : V.maxUses) && void 0 !== x ? x : p.value;
   return (0, l.jsxs)("div", {
@@ -90,10 +90,10 @@ function x(e) {
     }), (0, l.jsxs)("div", {
       className: g.invite,
       children: [(0, l.jsx)(o.RawInviteCopyInputConnected, {
-        value: b,
+        value: H,
         autoFocus: !1,
         onCopy: e => {
-          if (H) return;
+          if (b) return;
           (0, T.copy)(e);
           let t = (0, v.getChannelTypeFromEntity)(A.entity_type);
           h.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {

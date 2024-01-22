@@ -1,7 +1,7 @@
-var e = n("523119"),
-  o = Array.prototype.splice;
-t.exports = function(t) {
-  var r = this.__data__,
-    n = e(r, t);
-  return !(n < 0) && (n == r.length - 1 ? r.pop() : o.call(r, n, 1), --this.size, !0)
+var r = n("523119"),
+  i = Array.prototype.splice;
+e.exports = function(e) {
+  var t = this.__data__,
+    n = r(t, e);
+  return !(n < 0) && (n == t.length - 1 ? t.pop() : i.call(t, n, 1), --this.size, !0)
 }

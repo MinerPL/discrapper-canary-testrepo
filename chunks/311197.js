@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("263362"),
   m = n("470965"),
   p = n("133335"),
-  S = n("782340"),
-  g = n("759956");
+  g = n("782340"),
+  S = n("759956");
 
 function N(e) {
   let {
@@ -43,7 +43,7 @@ function N(e) {
     popoutAlign: "right",
     children: (e, t, n) => (0, a.jsxs)("div", {
       ref: I,
-      className: g.recentsIcon,
+      className: S.recentsIcon,
       children: [A && (0, a.jsx)(m.default, {
         inboxIconRef: I,
         recentsPopoutShown: t
@@ -52,12 +52,12 @@ function N(e) {
         className: N,
         onClick: e,
         icon: c.default,
-        "aria-label": S.default.Messages.INBOX,
-        tooltip: t ? null : S.default.Messages.INBOX,
+        "aria-label": g.default.Messages.INBOX,
+        tooltip: t ? null : g.default.Messages.INBOX,
         selected: t,
         showBadge: C || M,
         children: (0, a.jsx)(h.default, {
-          className: g.todoBadge
+          className: S.todoBadge
         })
       })]
     })

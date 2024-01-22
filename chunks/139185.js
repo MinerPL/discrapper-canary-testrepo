@@ -158,7 +158,7 @@ let k = e => {
         section: D.AnalyticsSections.STICKER_POPOUT
       }), [a.guild_id]),
       {
-        current: K
+        current: W
       } = l.useRef({
         guild_id: a.getGuildId(),
         ...(0, d.collectChannelAnalyticsMetadata)(a)
@@ -174,11 +174,11 @@ let k = e => {
       };
       e()
     }, [n.id, G]);
-    let W = n.guild_id === a.getGuildId(),
+    let K = n.guild_id === a.getGuildId(),
       z = null != m,
       Z = !1,
       J = "Custom Sticker Popout";
-    P ? t = G ? W ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (W ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+    P ? t = G ? K ? y.default.Messages.STICKER_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : z ? y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : y.default.Messages.STICKER_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : G ? (K ? t = y.default.Messages.STICKER_POPOUT_CURRENT_GUILD_DESCRIPTION : t = y.default.Messages.STICKER_POPOUT_JOINED_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : z ? (t = y.default.Messages.STICKER_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION, Z = !0, J = "Custom Sticker Popout (Upsell)") : (t = y.default.Messages.STICKER_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
       openPremiumSettings: () => {
         B(a), T()
       }
@@ -189,7 +189,7 @@ let k = e => {
     }, [O, m]), l.useEffect(() => {
       g.default.track(D.AnalyticEvents.OPEN_POPOUT, {
         type: J,
-        ...K
+        ...W
       })
     }, []), O) ? (0, s.jsxs)(_.MessagePopoutContent, {
       className: j.popoutContent,

@@ -11,12 +11,12 @@ var t = E("450911"),
   o = E("630086"),
   n = E("193990"),
   r = E("393414"),
-  i = E("315102"),
-  a = E("49111"),
+  a = E("315102"),
+  i = E("49111"),
   I = E("782340");
 
 function s(e, _, E) {
-  n.default.showNotification(i.default.getUserAvatarURL(e), e.username, _, {}, {
+  n.default.showNotification(a.default.getUserAvatarURL(e), e.username, _, {}, {
     omitViewTracking: !0,
     omitClickTracking: !0,
     tag: e.id,
@@ -33,7 +33,7 @@ function T(e) {
       _({
         userId: e.id
       })
-    }(0, r.transitionTo)(a.Routes.FRIENDS), o.default.setSection(a.FriendsSections.PENDING)
+    }(0, r.transitionTo)(i.Routes.FRIENDS), o.default.setSection(i.FriendsSections.PENDING)
   })
 }
 

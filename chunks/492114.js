@@ -28,7 +28,7 @@ let T = m.FormStates.CLOSED,
 
 function g(B) {
   let e = f.default.getChannel(B.channelId);
-  if (null == e) return U();
+  if (null == e) return y();
   T = m.FormStates.OPEN, t = l = e, p = "location" in B && null != B.location ? B.location : null, n = "subsection" in B ? B.subsection : null, null != t && (t = t.set("nsfw", t.isNSFW())), F = f.default.getChannel(t.parent_id), i = t.getGuildId(), h = {}, O({
     type: "CHANNEL_SETTINGS_SET_SECTION",
     section: null != C ? C : m.ChannelSettingsSections.OVERVIEW,
@@ -48,10 +48,10 @@ function O(B) {
   }, () => S = !1))
 }
 
-function U() {
+function y() {
   I = !1, T = m.FormStates.CLOSED, C = null, t = l = null, F = null, v = {}
 }
-let y = a.debounce(() => {
+let U = a.debounce(() => {
   if (null == t || null == l) return !1;
   let B = t.toJS(),
     e = l.toJS(),
@@ -138,7 +138,7 @@ let G = new M(s.default, {
       return (0, u.isArray)(C) ? e[E] = C.join("\n") : e[E] = C, e
     }, {})
   },
-  CHANNEL_SETTINGS_CLOSE: U,
+  CHANNEL_SETTINGS_CLOSE: y,
   CHANNEL_SETTINGS_OVERWRITE_SELECT: function(B) {
     let {
       overwriteId: e
@@ -180,7 +180,7 @@ let G = new M(s.default, {
     })), null != D && (t = t.set("threadMetadata", {
       ...t.threadMetadata,
       invitable: D
-    })), null != d && (t = t.set("defaultAutoArchiveDuration", d)), null != s && (t = t.set("template", s)), null != E && (t = t.set("type", E)), void 0 !== c && (t = t.set("rtcRegion", c)), null != _ && (t = t.set("videoQualityMode", _)), void 0 !== A && (t = t.set("defaultReactionEmoji", A)), null != N && (t = t.set("availableTags", N)), null != f && (t = t.set("defaultSortOrder", f)), null != m && (t = t.set("defaultForumLayout", m)), void 0 !== T && (t = t.set("iconEmoji", T)), null != h && (t = t.set("themeColor", h)), y()
+    })), null != d && (t = t.set("defaultAutoArchiveDuration", d)), null != s && (t = t.set("template", s)), null != E && (t = t.set("type", E)), void 0 !== c && (t = t.set("rtcRegion", c)), null != _ && (t = t.set("videoQualityMode", _)), void 0 !== A && (t = t.set("defaultReactionEmoji", A)), null != N && (t = t.set("availableTags", N)), null != f && (t = t.set("defaultSortOrder", f)), null != m && (t = t.set("defaultForumLayout", m)), void 0 !== T && (t = t.set("iconEmoji", T)), null != h && (t = t.set("themeColor", h)), U()
   },
   CHANNEL_SETTINGS_SET_SECTION: O,
   CHANNEL_SETTINGS_LOADED_INVITES: function(B) {

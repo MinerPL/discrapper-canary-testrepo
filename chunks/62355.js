@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return a
+    return i
   }
 });
 var t = E("37983");
@@ -9,11 +9,11 @@ E("884691");
 var o = E("77078"),
   n = E("913144"),
   r = E("42203"),
-  i = E("988878");
-async function a(e) {
+  a = E("988878");
+async function i(e) {
   let _ = r.default.getChannel(e.channelId),
-    a = null == _ ? void 0 : _.guild_id;
-  if ((0, i.default)(a)) {
+    i = null == _ ? void 0 : _.guild_id;
+  if ((0, a.default)(i)) {
     let _ = await (0, o.openModalLazy)(async () => {
       let {
         default: _

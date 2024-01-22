@@ -1,51 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   useLink: function() {
-    return i
+    return s
   }
 });
 var r = n("290895"),
-  o = n("780095"),
-  a = n("495912");
+  i = n("780095"),
+  o = n("495912");
 
-function i(e, t) {
+function s(e, t) {
   let {
     elementType: n = "a",
-    onPress: i,
-    onPressStart: s,
+    onPress: s,
+    onPressStart: a,
     onPressEnd: c,
-    onClick: l,
-    isDisabled: u,
-    ...d
-  } = e, p = {};
-  "a" !== n && (p = {
+    onClick: u,
+    isDisabled: d,
+    ...l
+  } = e, f = {};
+  "a" !== n && (f = {
     role: "link",
-    tabIndex: u ? void 0 : 0
+    tabIndex: d ? void 0 : 0
   });
   let {
-    focusableProps: f
-  } = (0, o.useFocusable)(e, t), {
-    pressProps: m,
-    isPressed: h
-  } = (0, a.usePress)({
-    onPress: i,
-    onPressStart: s,
+    focusableProps: p
+  } = (0, i.useFocusable)(e, t), {
+    pressProps: h,
+    isPressed: g
+  } = (0, o.usePress)({
+    onPress: s,
+    onPressStart: a,
     onPressEnd: c,
-    isDisabled: u,
+    isDisabled: d,
     ref: t
-  }), g = (0, r.filterDOMProps)(d, {
+  }), b = (0, r.filterDOMProps)(l, {
     labelable: !0
-  }), v = (0, r.mergeProps)(f, m);
+  }), v = (0, r.mergeProps)(p, h);
   return {
-    isPressed: h,
-    linkProps: (0, r.mergeProps)(g, {
+    isPressed: g,
+    linkProps: (0, r.mergeProps)(b, {
       ...v,
-      ...p,
-      "aria-disabled": u || void 0,
+      ...f,
+      "aria-disabled": d || void 0,
       "aria-current": e["aria-current"],
       onClick: e => {
         var t;
-        null === (t = m.onClick) || void 0 === t || t.call(m, e), l && (l(e), console.warn("onClick is deprecated, please use onPress"))
+        null === (t = h.onClick) || void 0 === t || t.call(h, e), u && (u(e), console.warn("onClick is deprecated, please use onPress"))
       }
     })
   }

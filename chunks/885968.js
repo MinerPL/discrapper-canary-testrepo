@@ -72,11 +72,11 @@ function R(e) {
       let t = null == B ? void 0 : B.userIds.values().next().value;
       return null == t ? null : null === (e = S.default.findActivity(t.user_id, e => e.application_id === a.id)) || void 0 === e ? void 0 : e.details
     }),
-    K = l.useMemo(() => {
+    W = l.useMemo(() => {
       let e = new N.default(a);
       return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = g.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
     }, [a]),
-    W = function(e, t, n) {
+    K = function(e, t, n) {
       let s = (0, o.useStateFromStores)([d.default], () => {
           var n;
           return (null === (n = d.default.getSelfEmbeddedActivityForChannel(t)) || void 0 === n ? void 0 : n.applicationId) === e.id
@@ -127,7 +127,7 @@ function R(e) {
             tooltip: M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
           }
       }
-    }(K, L, B),
+    }(W, L, B),
     z = async () => {
       if (null != B) {
         D(!0);
@@ -171,12 +171,12 @@ function R(e) {
           }), (0, s.jsx)(r.Text, {
             variant: "text-md/medium",
             lineClamp: j ? 3 : 1,
-            children: null !== (n = null !== (t = null == W ? void 0 : W.status) && void 0 !== t ? t : Y) && void 0 !== n ? n : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
+            children: null !== (n = null !== (t = null == K ? void 0 : K.status) && void 0 !== t ? t : Y) && void 0 !== n ? n : M.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
           })]
         }), (0, s.jsxs)("div", {
           className: O.cta,
           children: [(0, s.jsx)(r.Tooltip, {
-            text: null == W ? void 0 : W.tooltip,
+            text: null == K ? void 0 : K.tooltip,
             children: e => {
               let {
                 onClick: t,

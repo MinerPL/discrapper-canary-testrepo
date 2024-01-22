@@ -6,5 +6,5 @@ e.exports = {
   mobileWave: "mobileWave__394f7",
   nonEmbeddedLeftSplit: "nonEmbeddedLeftSplit__582ec",
   rightSplit: "rightSplit__46a42",
-  wrapper: "wrapper_eebc2d " + a("862839").scrollbarGhost
+  wrapper: "wrapper_eebc2d " + a("180615").scrollbarGhost
 }

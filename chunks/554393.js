@@ -32,8 +32,8 @@ var s = n("37983"),
   x = n("612278"),
   R = n("867965"),
   y = n("688169"),
-  D = n("49111"),
-  O = n("782340"),
+  O = n("49111"),
+  D = n("782340"),
   j = n("827152"),
   P = n("550244");
 
@@ -85,7 +85,7 @@ function b(e) {
       (0, R.trackForumPostLinkCopied)({
         postId: W.id,
         location: {
-          section: D.AnalyticsSections.CHANNEL_HEADER
+          section: O.AnalyticsSections.CHANNEL_HEADER
         }
       }), (0, r.copy)((0, v.getChannelLinkToCopy)(W, $)), V(!0)
     },
@@ -137,12 +137,12 @@ function b(e) {
           useChatFontScaling: !1,
           className: j.addReactButton,
           isForumToolbar: !0,
-          children: !el && O.default.Messages.FORUM_REACT_TO_POST
+          children: !el && D.default.Messages.FORUM_REACT_TO_POST
         })]
       }), (0, s.jsxs)("div", {
         className: j.buttons,
         children: [(0, s.jsx)(u.Tooltip, {
-          text: O.default.Messages.FORUM_FOLLOW_TOOLTIP,
+          text: D.default.Messages.FORUM_FOLLOW_TOOLTIP,
           children: e => (0, s.jsxs)(u.Button, {
             ...e,
             look: u.Button.Looks.BLANK,
@@ -155,10 +155,10 @@ function b(e) {
             children: [(0, s.jsx)(eo, {
               width: 16,
               height: 16
-            }), z ? O.default.Messages.FORUM_FOLLOWING_POST : O.default.Messages.FOLLOW]
+            }), z ? D.default.Messages.FORUM_FOLLOWING_POST : D.default.Messages.FOLLOW]
           })
         }), (0, s.jsx)(u.Tooltip, {
-          text: O.default.Messages.COPY_LINK,
+          text: D.default.Messages.COPY_LINK,
           children: e => (0, s.jsxs)(u.Button, {
             ...e,
             look: u.Button.Looks.BLANK,
@@ -172,7 +172,7 @@ function b(e) {
             }) : (0, s.jsx)(I.default, {
               width: 16,
               height: 16
-            }), B ? O.default.Messages.COPIED : null]
+            }), B ? D.default.Messages.COPIED : null]
           })
         })]
       })]

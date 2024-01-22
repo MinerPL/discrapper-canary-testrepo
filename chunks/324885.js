@@ -1,5 +1,5 @@
 "use strict";
-var r = s("537778");
-t.exports = function(t) {
-  return r(t, "[[StartIndex]]") && r(t, "[[EndIndex]]") && t["[[StartIndex]]"] >= 0 && t["[[EndIndex]]"] >= t["[[StartIndex]]"] && String(parseInt(t["[[StartIndex]]"], 10)) === String(t["[[StartIndex]]"]) && String(parseInt(t["[[EndIndex]]"], 10)) === String(t["[[EndIndex]]"])
+var r = n("537778");
+e.exports = function(e) {
+  return r(e, "[[StartIndex]]") && r(e, "[[EndIndex]]") && e["[[StartIndex]]"] >= 0 && e["[[EndIndex]]"] >= e["[[StartIndex]]"] && String(parseInt(e["[[StartIndex]]"], 10)) === String(e["[[StartIndex]]"]) && String(parseInt(e["[[EndIndex]]"], 10)) === String(e["[[EndIndex]]"])
 }

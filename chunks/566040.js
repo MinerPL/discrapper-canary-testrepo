@@ -1,9 +1,9 @@
 var r = n("561662"),
-  o = n("603108"),
-  a = n("476540"),
-  i = n("285162");
+  i = n("603108"),
+  o = n("476540"),
+  s = n("285162");
 e.exports = function(e, t, n) {
-  if (!i(n)) return !1;
-  var s = typeof t;
-  return ("number" == s ? !!(o(n) && a(t, n.length)) : "string" == s && t in n) && r(n[t], e)
+  if (!s(n)) return !1;
+  var a = typeof t;
+  return ("number" == a ? !!(i(n) && o(t, n.length)) : "string" == a && t in n) && r(n[t], e)
 }

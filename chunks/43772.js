@@ -19,9 +19,9 @@ var s = n("37983"),
   _ = n("378020"),
   p = n("534438"),
   h = n("208620"),
-  N = n("129040"),
+  m = n("129040"),
   T = n("9294"),
-  m = n("165926"),
+  N = n("165926"),
   g = n("393414"),
   A = n("970366"),
   S = n("271938"),
@@ -105,7 +105,7 @@ class Y extends a.PureComponent {
       let {
         channel: e
       } = t;
-      null != e && ((0, m.setNewUser)(B.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(G.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
+      null != e && ((0, N.setNewUser)(B.NewUserTypes.INVITE_UNCLAIMED), null != t.guild ? a(G.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : c.default.transitionToInvite(t, a))
     }
   }
   getInviteKey() {
@@ -252,7 +252,7 @@ class Y extends a.PureComponent {
         return this.renderSpinner(F.default.Messages.APP_OPENING);
       case G.InviteStates.RESOLVED:
         var i;
-        if (n && (0, L.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.default.set(N.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(G.Routes.APP));
+        if (n && (0, L.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.default.set(m.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(G.Routes.APP));
         if (n || !y.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         else if (this.getMode() === k.LOGIN) return (0, s.jsx)(j.default, {
           invite: e,

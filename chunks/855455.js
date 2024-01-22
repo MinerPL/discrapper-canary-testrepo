@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   MOSAIC_MIN_INDEX: function() {
     return r
   },
@@ -16,86 +16,86 @@ a.r(t), a.d(t, {
     return f
   }
 });
-var s = a("884691"),
-  n = a("693566"),
-  l = a.n(n);
+var a = s("884691"),
+  n = s("693566"),
+  l = s.n(n);
 let r = 0,
   i = 4,
   o = 4,
-  d = "absolute",
-  u = (e, t, a, s) => {
-    if (0 === a) return [];
-    if (1 === a) return [{
+  u = "absolute",
+  d = (e, t, s, a) => {
+    if (0 === s) return [];
+    if (1 === s) return [{
       width: e,
       height: t,
       top: 0,
       left: 0,
-      position: d
+      position: u
     }];
-    if (2 === a) {
-      let a = Math.ceil((e - s) / 2);
+    if (2 === s) {
+      let s = Math.ceil((e - a) / 2);
       return [{
         top: 0,
         left: 0,
-        position: d,
-        width: a,
+        position: u,
+        width: s,
         height: t
       }, {
         top: 0,
-        left: a + s,
-        position: d,
-        width: a,
+        left: s + a,
+        position: u,
+        width: s,
         height: t
       }]
     }
-    if (3 === a) {
-      let a = Math.ceil((e - s) / 2),
-        n = Math.ceil((t - s) / 2);
+    if (3 === s) {
+      let s = Math.ceil((e - a) / 2),
+        n = Math.ceil((t - a) / 2);
       return [{
         top: 0,
         left: 0,
-        position: d,
-        width: a,
+        position: u,
+        width: s,
         height: t
       }, {
         top: 0,
-        left: a + s,
-        position: d,
-        width: a,
+        left: s + a,
+        position: u,
+        width: s,
         height: n
       }, {
-        top: n + s,
-        left: a + s,
-        position: d,
-        width: a,
+        top: n + a,
+        left: s + a,
+        position: u,
+        width: s,
         height: n
       }]
     } else {
-      let a = Math.ceil((e - s) / 2),
-        n = Math.ceil((t - s) / 2);
+      let s = Math.ceil((e - a) / 2),
+        n = Math.ceil((t - a) / 2);
       return [{
         top: 0,
         left: 0,
-        position: d,
-        width: a,
+        position: u,
+        width: s,
         height: n
       }, {
-        top: n + s,
+        top: n + a,
         left: 0,
-        position: d,
-        width: a,
+        position: u,
+        width: s,
         height: n
       }, {
         top: 0,
-        left: a + s,
-        position: d,
-        width: a,
+        left: s + a,
+        position: u,
+        width: s,
         height: n
       }, {
-        top: n + s,
-        left: a + s,
-        position: d,
-        width: a,
+        top: n + a,
+        left: s + a,
+        position: u,
+        width: s,
         height: n
       }]
     }
@@ -107,44 +107,44 @@ let r = 0,
 function m(e) {
   let {
     numAttachments: t,
-    containerWidth: a,
+    containerWidth: s,
     containerHeight: n
   } = e;
-  return s.useMemo(() => (function(e) {
-    var t, a, s;
+  return a.useMemo(() => (function(e) {
+    var t, s, a;
     let {
       numAttachments: n,
       containerWidth: l,
       containerHeight: r
     } = e;
-    let i = (t = n, a = l, s = r, "".concat(t, "-").concat(a, "-").concat(s)),
+    let i = (t = n, s = l, a = r, "".concat(t, "-").concat(s, "-").concat(a)),
       o = c.get(i);
     if (null != o) return o;
     {
-      let e = u(l, r, n, 4);
+      let e = d(l, r, n, 4);
       return c.set(i, e), e
     }
   })({
     numAttachments: t,
-    containerWidth: a,
+    containerWidth: s,
     containerHeight: n
-  }), [t, a, n])
+  }), [t, s, n])
 }
 
 function h(e) {
-  return e.map((t, a) => ({
-    minWidth: 2 * e[a].width,
-    minHeight: 2 * e[a].height,
-    maxWidth: 2 * e[a].width,
-    maxHeight: 2 * e[a].height
+  return e.map((t, s) => ({
+    minWidth: 2 * e[s].width,
+    minHeight: 2 * e[s].height,
+    maxWidth: 2 * e[s].width,
+    maxHeight: 2 * e[s].height
   }))
 }
 
 function f(e) {
   let {
     imageContainerStyles: t,
-    containerWidth: a,
+    containerWidth: s,
     containerHeight: n
-  } = e, l = s.useRef(h(t)), r = s.useRef(a), i = s.useRef(n), o = a > r.current + 100, d = n > i.current + 100;
-  return (o || d) && (l.current = h(t)), l.current
+  } = e, l = a.useRef(h(t)), r = a.useRef(s), i = a.useRef(n), o = s > r.current + 100, u = n > i.current + 100;
+  return (o || u) && (l.current = h(t)), l.current
 }

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, r = n("666038"),
-  s = n("643619");
-i = class e extends r.default {
+var i, s = n("666038"),
+  r = n("643619");
+i = class e extends s.default {
   static createInvoiceFromServer(t) {
     return new e({
       id: t.id,
-      invoiceItems: t.invoice_items.map(s.createInvoiceItemFromServer),
+      invoiceItems: t.invoice_items.map(r.createInvoiceItemFromServer),
       total: t.total,
       subtotal: t.subtotal,
       currency: t.currency,

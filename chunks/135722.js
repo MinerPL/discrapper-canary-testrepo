@@ -1,54 +1,54 @@
 "use strict";
-r.r(e), r.d(e, {
+e.r(n), e.d(n, {
   default: function() {
-    return l
+    return c
   }
 });
-var n = r("37983");
-r("884691");
-var u = r("77078"),
-  i = r("305961"),
-  o = r("476765"),
-  s = r("285899"),
-  a = r("782340"),
-  c = r("334931"),
-  l = t => {
+var r = e("37983");
+e("884691");
+var i = e("77078"),
+  a = e("305961"),
+  s = e("476765"),
+  o = e("285899"),
+  u = e("782340"),
+  l = e("334931"),
+  c = t => {
     let {
-      onClose: e,
-      guildId: r
-    } = t, l = (0, o.useUID)(), f = a.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({
-      helpdeskArticle: s.GUILD_LIMITED_ACCESS_HC_LINK
-    }), d = i.default.getGuild(r);
-    return null != d && (f = a.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION.format({
+      onClose: n,
+      guildId: e
+    } = t, c = (0, s.useUID)(), f = u.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_FALLBACK.format({
+      helpdeskArticle: o.GUILD_LIMITED_ACCESS_HC_LINK
+    }), d = a.default.getGuild(e);
+    return null != d && (f = u.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_DESCRIPTION.format({
       guildName: d.name,
-      helpdeskArticle: s.GUILD_LIMITED_ACCESS_HC_LINK
-    })), (0, n.jsxs)(u.ModalRoot, {
+      helpdeskArticle: o.GUILD_LIMITED_ACCESS_HC_LINK
+    })), (0, r.jsxs)(i.ModalRoot, {
       ...t,
-      "aria-labelledby": l,
-      children: [(0, n.jsxs)(u.ModalHeader, {
+      "aria-labelledby": c,
+      children: [(0, r.jsxs)(i.ModalHeader, {
         separator: !1,
-        className: c.modalHeader,
-        children: [(0, n.jsx)(u.Heading, {
-          id: l,
+        className: l.modalHeader,
+        children: [(0, r.jsx)(i.Heading, {
+          id: c,
           variant: "heading-xl/extrabold",
-          children: a.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING
-        }), (0, n.jsx)(u.ModalCloseButton, {
-          className: c.closeButton,
-          onClick: e
+          children: u.default.Messages.GUILD_LIMITED_ACCESS_INFO_MODAL_HEADING
+        }), (0, r.jsx)(i.ModalCloseButton, {
+          className: l.closeButton,
+          onClick: n
         })]
-      }), (0, n.jsx)(u.ModalContent, {
-        className: c.modalContent,
-        children: (0, n.jsx)(u.Text, {
+      }), (0, r.jsx)(i.ModalContent, {
+        className: l.modalContent,
+        children: (0, r.jsx)(i.Text, {
           variant: "text-md/normal",
-          className: c.contentText,
+          className: l.contentText,
           children: f
         })
-      }), (0, n.jsx)(u.ModalFooter, {
-        children: (0, n.jsx)(u.Button, {
-          className: c.button,
-          size: u.Button.Sizes.MIN,
-          onClick: e,
-          children: a.default.Messages.OKAY
+      }), (0, r.jsx)(i.ModalFooter, {
+        children: (0, r.jsx)(i.Button, {
+          className: l.button,
+          size: i.Button.Sizes.MIN,
+          onClick: n,
+          children: u.default.Messages.OKAY
         })
       })]
     })

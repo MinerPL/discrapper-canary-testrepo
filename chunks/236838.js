@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
 var s = n("37983");
@@ -16,15 +16,15 @@ var a = n("907002"),
   c = n("393414"),
   _ = n("49111"),
   f = n("782340"),
-  E = n("526380"),
-  I = n("34125"),
-  m = e => {
+  I = n("526380"),
+  E = n("34125"),
+  S = e => {
     let {
       onClose: t
     } = e, {
       analyticsLocations: n
-    } = (0, o.default)(), m = (0, l.default)([i.default], () => i.default.useReducedMotion), S = (0, a.useSpring)({
-      immediate: m,
+    } = (0, o.default)(), S = (0, l.default)([i.default], () => i.default.useReducedMotion), m = (0, a.useSpring)({
+      immediate: S,
       delay: 800,
       from: {
         transform: "translate(0, -100%)"
@@ -32,7 +32,7 @@ var a = n("907002"),
       to: {
         transform: "translate(0, 0)"
       }
-    }), p = () => {
+    }), P = () => {
       t(), (0, c.transitionTo)(_.Routes.COLLECTIBLES_SHOP), (0, d.openCollectiblesShop)({
         openInLayer: !1,
         analyticsSource: u.default.PREMIUM_PAYMENT_MODAL,
@@ -40,19 +40,19 @@ var a = n("907002"),
       })
     };
     return (0, s.jsxs)(a.animated.div, {
-      style: S,
-      className: E.container,
+      style: m,
+      className: I.container,
       children: [(0, s.jsx)("img", {
-        className: E.image,
-        src: I,
+        className: I.image,
+        src: E,
         alt: ""
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-primary",
         children: f.default.Messages.COLLECTIBLES_GIFT_CODE_MODAL_UPSELL.format({
           checkItOut: e => (0, s.jsx)(r.Clickable, {
-            className: E.link,
-            onClick: p,
+            className: I.link,
+            onClick: P,
             children: e
           }, "COLLECTIBLES_GIFT_CODE_MODAL_UPSELL")
         })

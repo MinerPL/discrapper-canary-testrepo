@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var s = n("298386"),
-  i = n("42203"),
+var i = n("298386"),
+  s = n("42203"),
   r = n("427953");
 
 function a(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.default,
     n = t.getChannel(e),
     a = (0, r.isActivitiesInTextEnabled)(n, "isVoiceActivityChannel");
-  return null != n && (n.type === s.ChannelTypes.GUILD_VOICE || n.isPrivate() && !a)
+  return null != n && (n.type === i.ChannelTypes.GUILD_VOICE || n.isPrivate() && !a)
 }

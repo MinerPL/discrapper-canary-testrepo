@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("424973"), n("222007"), n("70102");
 var i = n("811022"),
-  r = n("350798"),
-  s = n("390493");
-let a = "1" === s.env.KV_STORAGE_LOGGING,
+  s = n("350798"),
+  r = n("390493");
+let a = "1" === r.env.KV_STORAGE_LOGGING,
   o = new i.default("Runtime");
 class l {
   static nextId() {
@@ -15,9 +15,9 @@ class l {
   }
   static executeAsync(e, t) {
     return this.initialize(), new Promise((n, i) => {
-      let r = this.nextId();
-      t(r), this.pending.set(r, {
-        id: r,
+      let s = this.nextId();
+      t(s), this.pending.set(s, {
+        id: s,
         tag: e,
         started: performance.now(),
         resolve: n,
@@ -67,7 +67,7 @@ class l {
     }
   }
   static initialize() {
-    !this.initialized && (r.KV_RAW.setCallbacks({
+    !this.initialized && (s.KV_RAW.setCallbacks({
       status: e => this.onStatus(e),
       response: (e, t) => this.onResponse(e, t)
     }), a && (this.addCompletionCallback(e => {

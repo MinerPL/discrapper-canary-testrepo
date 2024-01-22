@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 });
 var a = n("37983");
@@ -20,7 +20,7 @@ var l = n("446674"),
   m = n("782340"),
   p = n("805122");
 
-function S(e) {
+function g(e) {
   let {
     closePopout: t
   } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getPendingCount());

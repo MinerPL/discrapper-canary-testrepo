@@ -7,15 +7,15 @@ E.r(_), E.d(_, {
 }), E("222007");
 var n = E("446674"),
   r = E("95410"),
-  i = E("913144"),
-  a = E("49111");
+  a = E("913144"),
+  i = E("49111");
 let I = "PictureInPictureLocation",
   s = new Map,
-  T = a.PictureInPicturePositions.BOTTOM_RIGHT,
+  T = i.PictureInPicturePositions.BOTTOM_RIGHT,
   S = {};
 class N extends n.default.Store {
   initialize() {
-    T = r.default.get(I, a.PictureInPicturePositions.BOTTOM_RIGHT)
+    T = r.default.get(I, i.PictureInPicturePositions.BOTTOM_RIGHT)
   }
   get pipWindow() {
     var e;
@@ -41,23 +41,23 @@ class N extends n.default.Store {
   }
 }
 N.displayName = "PictureInPictureStore";
-var O = new N(i.default, {
+var O = new N(a.default, {
   PICTURE_IN_PICTURE_OPEN: function(e) {
     var _, E;
     let {
       id: n,
       component: r,
-      props: i
+      props: a
     } = e, I = s.get(n);
     if (null != I) return;
     let S = {
       id: n,
       component: r,
-      position: null !== (_ = i.position) && void 0 !== _ ? _ : T,
-      props: i,
-      docked: null !== (E = i.docked) && void 0 !== E && E
+      position: null !== (_ = a.position) && void 0 !== _ ? _ : T,
+      props: a,
+      docked: null !== (E = a.docked) && void 0 !== E && E
     };
-    s.set(n, S), r === a.PictureInPictureComponents.VIDEO ? null == t && (t = n) : r === a.PictureInPictureComponents.EMBED_IFRAME && null == o && (o = n)
+    s.set(n, S), r === i.PictureInPictureComponents.VIDEO ? null == t && (t = n) : r === i.PictureInPictureComponents.EMBED_IFRAME && null == o && (o = n)
   },
   PICTURE_IN_PICTURE_CLOSE: function(e) {
     let {
@@ -69,10 +69,10 @@ var O = new N(i.default, {
       let e = Array.from(s.keys());
       t === _ ? t = e.find(e => {
         let _ = s.get(e);
-        return null != _ && _.component === a.PictureInPictureComponents.VIDEO
+        return null != _ && _.component === i.PictureInPictureComponents.VIDEO
       }) : o === _ && (o = e.find(e => {
         let _ = s.get(e);
-        return null != _ && _.component === a.PictureInPictureComponents.EMBED_IFRAME
+        return null != _ && _.component === i.PictureInPictureComponents.EMBED_IFRAME
       }))
     }
   },
@@ -131,7 +131,7 @@ var O = new N(i.default, {
     let {
       id: _
     } = e, E = s.get(_);
-    null != E && (E.component === a.PictureInPictureComponents.VIDEO ? t = _ : E.component === a.PictureInPictureComponents.EMBED_IFRAME && (o = _))
+    null != E && (E.component === i.PictureInPictureComponents.VIDEO ? t = _ : E.component === i.PictureInPictureComponents.EMBED_IFRAME && (o = _))
   },
   LOGOUT: function() {
     t = null, o = null, s = new Map

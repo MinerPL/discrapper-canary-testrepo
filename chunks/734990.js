@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   sendConfirmationCode: function() {
-    return l
+    return r
   },
   confirmEmailChange: function() {
-    return a
+    return l
   }
 });
-var s = n("759843"),
-  o = n("840707"),
-  r = n("49111");
+var o = n("759843"),
+  s = n("840707"),
+  a = n("49111");
 
-function l() {
+function r() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return o.default.put({
-    url: r.Endpoints.USER_EMAIL,
+  return s.default.put({
+    url: a.Endpoints.USER_EMAIL,
     trackedActionData: {
-      event: s.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
+      event: o.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
       properties: {
         is_resend: e
       }
     }
   })
 }
-async function a(e) {
-  let t = await o.default.post({
-    url: r.Endpoints.USER_EMAIL_VERIFY_CODE,
+async function l(e) {
+  let t = await s.default.post({
+    url: a.Endpoints.USER_EMAIL_VERIFY_CODE,
     body: {
       code: e
     },
     trackedActionData: {
-      event: s.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE
+      event: o.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_VERIFY_CODE
     }
   });
   return t.body

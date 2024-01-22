@@ -16,8 +16,8 @@ var n = a("37983"),
   _ = a("697218"),
   S = a("908539"),
   f = a("132206"),
-  T = a("260883"),
-  E = a("170213"),
+  E = a("260883"),
+  T = a("170213"),
   A = a("782340"),
   I = a("122698");
 
@@ -48,8 +48,8 @@ function g() {
       [S.AccountStandingState.ALL_GOOD]: {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-          termsOfService: E.SafetyHubLinks.TOS_LINK,
-          communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
+          termsOfService: T.SafetyHubLinks.TOS_LINK,
+          communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
         }),
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
         Icon: u.CircleCheckIcon,
@@ -79,8 +79,8 @@ function g() {
       [S.AccountStandingState.SUSPENDED]: {
         title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-          termsOfService: E.SafetyHubLinks.TOS_LINK,
-          communityGuidelines: E.SafetyHubLinks.COMMUNITY_GUIDELINES
+          termsOfService: T.SafetyHubLinks.TOS_LINK,
+          communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
         }),
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
         Icon: o.CircleXIcon,
@@ -88,18 +88,18 @@ function g() {
       }
     },
     {
-      title: x,
-      description: p,
+      title: p,
+      description: x,
       color: h,
-      Icon: O
+      Icon: U
     } = m[t.state],
-    H = Object.keys(m).length;
+    O = Object.keys(m).length;
   return (0, n.jsxs)(d.Card, {
     className: I.container,
     outline: !1,
     children: [(0, n.jsx)("div", {
       className: I.profile,
-      children: (0, n.jsx)(T.default, {
+      children: (0, n.jsx)(E.default, {
         user: e,
         size: d.AvatarSizes.SIZE_80
       })
@@ -110,7 +110,7 @@ function g() {
         children: [(0, n.jsx)(d.Heading, {
           color: "header-primary",
           variant: "heading-lg/normal",
-          children: x.format({
+          children: p.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
                 color: h.css
@@ -123,7 +123,7 @@ function g() {
         }), (0, n.jsx)(d.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
-          children: p
+          children: x
         })]
       }), (0, n.jsxs)("div", {
         className: I.health,
@@ -137,14 +137,14 @@ function g() {
           return (0, n.jsxs)("div", {
             className: I.statusOption,
             ref: t => N.current[parseInt(i)] = t,
-            children: [l ? (0, n.jsx)(O, {
+            children: [l ? (0, n.jsx)(U, {
               className: I.marker,
               color: s.color
             }) : (0, n.jsx)("div", {
               className: I.marker,
               style: {
                 marginLeft: 0 === a ? -6 : 0,
-                marginRight: a === H - 1 ? -6 : 0
+                marginRight: a === O - 1 ? -6 : 0
               },
               children: (0, n.jsx)("div", {
                 className: I.empty

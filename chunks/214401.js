@@ -1,28 +1,28 @@
 "use strict";
 var r = n("459078"),
-  o = n("911718"),
-  a = n("589746"),
-  i = o("%TypeError%"),
-  s = o("%Function.prototype.apply%"),
-  c = o("%Function.prototype.call%"),
-  l = o("%Reflect.apply%", !0) || r.call(c, s),
-  u = o("%Object.defineProperty%", !0),
-  d = o("%Math.max%");
-if (u) try {
-  u({}, "a", {
+  i = n("911718"),
+  o = n("589746"),
+  s = i("%TypeError%"),
+  a = i("%Function.prototype.apply%"),
+  c = i("%Function.prototype.call%"),
+  u = i("%Reflect.apply%", !0) || r.call(c, a),
+  d = i("%Object.defineProperty%", !0),
+  l = i("%Math.max%");
+if (d) try {
+  d({}, "a", {
     value: 1
   })
 } catch (e) {
-  u = null
+  d = null
 }
 e.exports = function(e) {
-  if ("function" != typeof e) throw new i("a function is required");
-  var t = l(r, c, arguments);
-  return a(t, 1 + d(0, e.length - (arguments.length - 1)), !0)
+  if ("function" != typeof e) throw new s("a function is required");
+  var t = u(r, c, arguments);
+  return o(t, 1 + l(0, e.length - (arguments.length - 1)), !0)
 };
-var p = function() {
-  return l(r, s, arguments)
+var f = function() {
+  return u(r, a, arguments)
 };
-u ? u(e.exports, "apply", {
-  value: p
-}) : e.exports.apply = p
+d ? d(e.exports, "apply", {
+  value: f
+}) : e.exports.apply = f

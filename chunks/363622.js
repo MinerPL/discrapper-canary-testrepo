@@ -1,5 +1,5 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   GRID_POST_CONTROLS_MARGIN: function() {
     return r
   },
@@ -10,17 +10,17 @@ a.r(t), a.d(t, {
     return o
   },
   getFrameDimensions: function() {
-    return d
+    return u
   },
   IMAGE_PADDING: function() {
-    return u
+    return d
   },
   getGridPostHeight: function() {
     return c
   }
 });
-var s = a("627445"),
-  n = a.n(s);
+var a = s("627445"),
+  n = s.n(a);
 let l = 2 / 3,
   r = 12;
 class i {
@@ -33,29 +33,29 @@ class i {
       columnWidth: this.minWidth
     };
     let t = e / this.maxWidth,
-      a = e / this.minWidth,
-      s = Math.max(Math.floor(t + (a - t) / 2), 1),
-      n = this.gap * (s - 1);
+      s = e / this.minWidth,
+      a = Math.max(Math.floor(t + (s - t) / 2), 1),
+      n = this.gap * (a - 1);
     return {
-      columns: s,
-      columnWidth: (e - n) / s
+      columns: a,
+      columnWidth: (e - n) / a
     }
   }
   constructor({
     minWidth: e,
     maxWidth: t,
-    gap: a
+    gap: s
   }) {
-    n(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = a
+    n(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = s
   }
 }
 let o = {
     columns: 1,
     columnWidth: 450
   },
-  d = e => {
+  u = e => {
     let t = e - 2;
     return [t, Math.ceil(t * l)]
   },
-  u = 12,
-  c = e => 60 + d(e - 2 * u)[1] + 24 + 3 * r
+  d = 12,
+  c = e => 60 + u(e - 2 * d)[1] + 24 + 3 * r

@@ -1,11 +1,11 @@
 "use strict";
-a.r(l), a.d(l, {
+n.r(t), n.d(t, {
   WELCOME_SCREEN_TYPE: function() {
-    return t
+    return i
   },
   WELCOME_EMOJI_TOOLTIP_STORAGE_KEY: function() {
-    return n
+    return r
   }
 });
-let t = "Guild Welcome Screen",
-  n = "hasClickedWelcomeEmojiPicker"
+let i = "Guild Welcome Screen",
+  r = "hasClickedWelcomeEmojiPicker"

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("446674"),
   n = s("913144"),
   l = s("177589"),
-  i = s("824563"),
-  r = s("843823"),
+  r = s("824563"),
+  i = s("843823"),
   u = s("697218"),
   o = s("49111");
 let d = !1,
@@ -18,7 +18,7 @@ let d = !1,
 function E(e) {
   let t = !1;
   return e.forEach(e => {
-    t = !1 !== T(e) || t
+    t = !1 !== f(e) || t
   }), t
 }
 
@@ -33,24 +33,24 @@ function I(e) {
   }, delete _[e], !0
 }
 
-function T(e) {
+function f(e) {
   var t, s, a, n;
   let {
-    user: i,
+    user: r,
     activities: u
   } = e;
-  if (null == i || !r.default.getUserAffinitiesUserIds().has(i.id)) return !1;
+  if (null == r || !i.default.getUserAffinitiesUserIds().has(r.id)) return !1;
   let d = u.find(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
-  if (null == d) return I(i.id);
+  if (null == d) return I(r.id);
   let E = (0, l.default)(d);
-  if (null == E) return I(i.id);
-  let T = _[i.id];
-  null != T && T.gameId !== E && I(i.id);
-  let f = null !== (s = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== s ? s : Date.now(),
+  if (null == E) return I(r.id);
+  let f = _[r.id];
+  null != f && f.gameId !== E && I(r.id);
+  let T = null !== (s = null === (t = d.timestamps) || void 0 === t ? void 0 : t.start) && void 0 !== s ? s : Date.now(),
     S = {
-      userId: i.id,
+      userId: r.id,
       activity: d,
-      startedPlaying: f
+      startedPlaying: T
     };
   return a = E, n = S, c = {
     ...c,
@@ -67,23 +67,23 @@ function T(e) {
   }, !0
 }
 
-function f() {
+function T() {
   let e = !1;
-  if (!r.default.needsRefresh() && !d) {
+  if (!i.default.needsRefresh() && !d) {
     let t;
-    c = {}, _ = {}, t = !1, i.default.getUserIds().forEach(e => {
+    c = {}, _ = {}, t = !1, r.default.getUserIds().forEach(e => {
       let s = u.default.getUser(e);
-      null != s && (t = T({
+      null != s && (t = f({
         user: s,
-        activities: i.default.getActivities(e)
+        activities: r.default.getActivities(e)
       }) || t)
     }), e = t
   }
-  return d = !r.default.needsRefresh(), e
+  return d = !i.default.needsRefresh(), e
 }
 class S extends a.default.Store {
   initialize() {
-    this.waitFor(r.default), this.syncWith([r.default], f)
+    this.waitFor(i.default), this.syncWith([i.default], T)
   }
   get games() {
     return c
@@ -119,7 +119,7 @@ var R = new S(n.default, {
     let {
       updates: t
     } = e;
-    return t.map(e => T(e)).some(e => e)
+    return t.map(e => f(e)).some(e => e)
   },
   PRESENCES_REPLACE: function(e) {
     let {

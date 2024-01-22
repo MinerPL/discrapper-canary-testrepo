@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var s = n("446674"),
-  i = n("913144");
+var i = n("446674"),
+  s = n("913144");
 let r = {
     topEmojisByGuildId: {}
   },
   a = r,
   o = {};
-class d extends s.default.PersistedStore {
+class l extends i.default.PersistedStore {
   initialize(e) {
     a = null != e ? e : r
   }
@@ -25,8 +25,8 @@ class d extends s.default.PersistedStore {
     return o[e]
   }
 }
-d.displayName = "TopEmojiStore", d.persistKey = "TopEmojiStore";
-var u = new d(i.default, {
+l.displayName = "TopEmojiStore", l.persistKey = "TopEmojiStore";
+var u = new l(s.default, {
   LOGOUT: function() {
     a = r, o = {}
   },

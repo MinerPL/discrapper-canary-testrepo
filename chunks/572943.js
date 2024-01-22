@@ -24,10 +24,10 @@ var n = l("884691"),
 let p = {
     [f.PlatformTypes.INSTAGRAM]: ["1036753656588017764"]
   },
-  E = new Map([
+  T = new Map([
     [f.PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()]
   ]),
-  T = 30 * c.default.Millis.DAY;
+  E = 30 * c.default.Millis.DAY;
 
 function _(e) {
   let {
@@ -54,7 +54,7 @@ function S() {
     }, [e]);
   return s.sortBy(r.default.filter(t), [e => {
     var t;
-    return !(E.has(e.type) && Date.now() < (null !== (t = E.get(e.type)) && void 0 !== t ? t : 0) + T)
+    return !(T.has(e.type) && Date.now() < (null !== (t = T.get(e.type)) && void 0 !== t ? t : 0) + E)
   }, e => l.has(e.type), e => e.hasMetadata, e => !f.ACTIVITY_PLATFORM_TYPES.has(e.type), e => e.name])
 }
 

@@ -53,8 +53,8 @@ function v(e) {
     onSelect: x,
     draftType: R,
     editorTextContent: y,
-    setValue: D,
-    openClips: O
+    setValue: O,
+    openClips: D
   } = e;
   (0, u.useMaybeFetchPremiumLikelihood)(d.default);
   let {
@@ -73,11 +73,11 @@ function v(e) {
   }
 
   function b() {
-    C.default.track(A.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), D("/", (0, g.toRichValue)("/"))
+    C.default.track(A.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), O("/", (0, g.toRichValue)("/"))
   }
 
   function H() {
-    O()
+    D()
   }
 
   function F() {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return g
   }
 }), n("222007");
 var a = n("37983");
@@ -20,7 +20,7 @@ var l = n("446674"),
   m = n("782340");
 let p = new Set(["ko", "ja"]);
 
-function S() {
+function g() {
   let e = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
     t = (0, l.useStateFromStores)([r.default], () => r.default.locale),
     n = (0, h.isNewUser)(e);

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return K
+    return W
   }
 }), n("222007");
 var s = n("37983"),
@@ -363,7 +363,7 @@ class V extends l.Component {
   }
 }
 let Y = (0, _.default)((0, E.default)(V));
-var K = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, A.default, T.default], e => {
+var W = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, A.default, T.default], e => {
   let {
     code: t,
     author: n,

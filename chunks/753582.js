@@ -1,14 +1,14 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   useShowAnimation: function() {
     return l
   }
-}), a("222007");
-var s = a("884691"),
-  n = a("907002");
+}), s("222007");
+var a = s("884691"),
+  n = s("907002");
 
 function l(e) {
-  let [t, a] = s.useState(!0), l = (0, n.useTransition)(t, {
+  let [t, s] = a.useState(!0), l = (0, n.useTransition)(t, {
     keys: e => e ? "shown" : "hidden",
     config: r,
     from: {
@@ -25,7 +25,7 @@ function l(e) {
   });
   return {
     transitions: l,
-    setVisible: a
+    setVisible: s
   }
 }
 let r = {

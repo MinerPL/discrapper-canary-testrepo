@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 });
 var a, n, l = s("37983");
 s("884691");
-var i = s("819855"),
-  r = s("841098");
+var r = s("819855"),
+  i = s("841098");
 (a = n || (n = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM";
 let u = "premium_tier_2_gradient",
   o = "premium_tier_2_fill",
@@ -83,7 +83,7 @@ let u = "premium_tier_2_gradient",
   I = (0, l.jsxs)("defs", {
     children: [c, _, E]
   }),
-  T = e => {
+  f = e => {
     let {
       className: t,
       fill: s,
@@ -112,7 +112,7 @@ let u = "premium_tier_2_gradient",
       }), I]
     })
   },
-  f = e => {
+  T = e => {
     let {
       className: t,
       fill: s,
@@ -145,16 +145,16 @@ var S = e => {
   let {
     className: t,
     variant: s
-  } = e, a = (0, r.default)(), n = (0, i.isThemeDark)(a) ? d : u, c = (0, i.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
+  } = e, a = (0, i.default)(), n = (0, r.isThemeDark)(a) ? d : u, c = (0, r.isThemeDark)(a) ? "#F2F3F5" : "url(#".concat(o, ")");
   switch (s) {
     case 0:
-      return (0, l.jsx)(f, {
+      return (0, l.jsx)(T, {
         className: t,
         fill: c,
         gradient: n
       });
     case 1:
-      return (0, l.jsx)(T, {
+      return (0, l.jsx)(f, {
         className: t,
         fill: c,
         gradient: n

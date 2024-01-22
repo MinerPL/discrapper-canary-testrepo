@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return T
   }
 }), n("222007");
 var s = n("37983"),
   r = n("884691"),
-  l = n("516555"),
-  i = n("812204"),
+  i = n("516555"),
+  l = n("812204"),
   a = n("685665"),
   u = n("635357"),
   o = n("642906"),
@@ -21,13 +21,13 @@ var s = n("37983"),
   m = n("337978"),
   I = n("49111"),
   _ = n("843455"),
-  T = n("322859");
+  C = n("322859");
 
-function C(e) {
+function T(e) {
   let {
     onClose: t,
     onComplete: n,
-    transitionState: C,
+    transitionState: T,
     loadId: x,
     skuId: g,
     isGift: v = !1,
@@ -38,7 +38,7 @@ function C(e) {
   } = e, {
     analyticsLocations: L,
     AnalyticsLocationProvider: M
-  } = (0, a.default)([...P, i.default.COLLECTIBLES_PAYMENT_MODAL]), R = r.useRef(new l.Environment), [j, y] = r.useState(null), F = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, h.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+  } = (0, a.default)([...P, l.default.COLLECTIBLES_PAYMENT_MODAL]), R = r.useRef(new i.Environment), [j, y] = r.useState(null), F = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, h.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
     renderStep: e => (0, s.jsx)(S.CollectiblesPaymentModalConfirmStep, {
       ...e,
@@ -46,14 +46,14 @@ function C(e) {
       analyticsLocations: L
     }),
     options: {
-      bodyClassName: T.modalOverrideBody,
-      sliderBodyClassName: T.modalOverrideSliderBody
+      bodyClassName: C.modalOverrideBody,
+      sliderBodyClassName: C.modalOverrideSliderBody
     }
   }];
   return (0, s.jsxs)(M, {
-    children: [(0, s.jsx)(l.ConfettiCanvas, {
+    children: [(0, s.jsx)(i.ConfettiCanvas, {
       ref: y,
-      className: T.confettiCanvas,
+      className: C.confettiCanvas,
       environment: R.current
     }), (0, s.jsx)(o.PaymentContextProvider, {
       stepConfigs: F,
@@ -74,7 +74,7 @@ function C(e) {
           skuId: g,
           initialPlanId: null,
           analyticsLocations: L,
-          transitionState: C,
+          transitionState: T,
           renderHeader: (e, t, n) => v ? (0, s.jsx)(p.default, {
             step: n,
             onClose: () => t(!1)

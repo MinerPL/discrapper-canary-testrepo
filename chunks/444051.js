@@ -302,5 +302,6 @@ e.exports = Object.freeze({
   FORM_LABEL_OVERLAY_SHOW_MUTE_DEAFEN_KEYBINDS: "Show mute and deafen keybinds",
   KEYBIND_NOTIFICATION_DESCRIPTION: "Now you can see your keybind for toggling mute in the overlay.",
   PROBLEMATIC_GPU_DRIVER_DETECTED: "There is currently a known issue with your GPU driver version which may affect the Go Live quality. If you experience this issue, learn more about how to fix it [here]({helpCenterLink}).",
-  MANAGE_AUTHORIZED_APP: "Manage Authorized App"
+  MANAGE_AUTHORIZED_APP: "Manage Authorized App",
+  MFA_REQUIRED_FOR_STAFF: "Multi-factor authentication is required for staff."
 })

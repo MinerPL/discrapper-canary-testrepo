@@ -1,6 +1,6 @@
 "use strict";
 
-function s(e) {
+function i(e) {
   return {
     id: e.id,
     userId: e.user_id,
@@ -12,6 +12,6 @@ function s(e) {
 }
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 }), n("702976")

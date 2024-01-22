@@ -1,29 +1,29 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return u
   }
-}), a("222007");
-var s = a("884691"),
-  n = a("405665"),
-  l = a("77078");
+}), s("222007");
+var a = s("884691"),
+  n = s("405665"),
+  l = s("77078");
 let r = "undefined" == typeof ResizeObserver ? n.ResizeObserver : ResizeObserver,
   i = new Map,
   o = new r(e => {
     e.forEach(e => {
       var t;
       let {
-        target: a
+        target: s
       } = e;
-      null === (t = i.get(a)) || void 0 === t || t(e)
+      null === (t = i.get(s)) || void 0 === t || t(e)
     })
   });
-var d = () => {
-  let e = s.useRef(null),
-    [t, a] = s.useState(400),
-    n = s.useCallback(() => {
-      null !== e.current && a(e.current.clientWidth)
-    }, [a, e]);
+var u = () => {
+  let e = a.useRef(null),
+    [t, s] = a.useState(400),
+    n = a.useCallback(() => {
+      null !== e.current && s(e.current.clientWidth)
+    }, [s, e]);
   return (0, l.useResizeObserverSubscription)({
     ref: e,
     key: "forum-container",

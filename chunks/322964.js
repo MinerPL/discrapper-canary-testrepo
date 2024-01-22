@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("599110"),
   m = n("253981"),
   p = n("352273"),
-  S = n("360191"),
-  g = n("342176"),
+  g = n("360191"),
+  S = n("342176"),
   N = n("183030"),
   _ = n("899779"),
   T = n("778597"),
@@ -96,7 +96,7 @@ let b = l.memo(function(e) {
       item: r,
       ackedBeforeId: c
     } = e, f = (0, N.useNotificationCenterItemAcked)(r, c), h = l.useCallback(async () => {
-      if (!f && (0, p.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === S.ItemEnum.FIND_FRIENDS) {
+      if (!f && (0, p.markNotificationCenterItemAcked)(r), null != r.item_enum && r.item_enum === g.ItemEnum.FIND_FRIENDS) {
         (0, i.openModalLazy)(async () => {
           let {
             default: e
@@ -124,14 +124,14 @@ let b = l.memo(function(e) {
           }) : await (0, o.default)(n)
         }
         E.default.track(C.AnalyticEvents.NOTIFICATION_CENTER_ACTION, {
-          action_type: S.NotificationCenterActionTypes.CLICKED,
+          action_type: g.NotificationCenterActionTypes.CLICKED,
           notification_center_id: r.id,
           item_type: r.type,
           acked: f
         })
       }
     }, [r, f]), A = null;
-    r.type === S.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(T.default, {
+    r.type === g.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != r.other_user && (A = (0, a.jsx)(T.default, {
       userId: r.other_user.id
     }));
     let v = null != r.local_id;
@@ -163,7 +163,7 @@ let b = l.memo(function(e) {
           }) : null, (0, a.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: f ? "text-muted" : "header-secondary",
-            children: (0, g.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
+            children: (0, S.getRelativeTimestamp)(s.default.extractTimestamp(r.id))
           }), A]
         })]
       }), v ? null : (0, a.jsx)(I.MoreButton, {

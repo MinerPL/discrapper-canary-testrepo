@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildShopStorefrontExperiment: function() {
-    return i
+    return s
   },
   ShowGuildRoleSubInGuildShopExperiment: function() {
     return r
@@ -10,8 +10,8 @@ n.r(t), n.d(t, {
     return a
   }
 });
-var s = n("862205");
-let i = (0, s.createExperiment)({
+var i = n("862205");
+let s = (0, i.createExperiment)({
     kind: "user",
     id: "2023-08_server_shop_storefront",
     label: "Server Shop Storefront",
@@ -26,7 +26,7 @@ let i = (0, s.createExperiment)({
       }
     }]
   }),
-  r = (0, s.createExperiment)({
+  r = (0, i.createExperiment)({
     kind: "user",
     id: "2023-09_show_server_sub_in_server_shop",
     label: "Show server sub in server shop",
@@ -41,7 +41,7 @@ let i = (0, s.createExperiment)({
       }
     }]
   }),
-  a = (0, s.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "user",
     id: "2023-09_server_shop_phantom_preview",
     label: "Server Shop Phantom Preview",

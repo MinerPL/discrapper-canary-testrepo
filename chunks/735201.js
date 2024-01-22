@@ -5,23 +5,23 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var l = n("446674"),
-  i = n("913144");
-let r = {},
-  s = null,
+  s = n("913144");
+let i = {},
+  r = null,
   a = [],
   o = !1,
   u = null,
-  c = null;
+  d = null;
 
-function d() {
+function c() {
   o = !0
 }
 class f extends l.default.Store {
   getAppliedGuildBoostsForGuild(e) {
-    return null != r[e] ? r[e].subscriptions : null
+    return null != i[e] ? i[e].subscriptions : null
   }
   getLastFetchedAtForGuild(e) {
-    return null != r[e] ? r[e].lastFetchedAt : null
+    return null != i[e] ? i[e].lastFetchedAt : null
   }
   getCurrentUserAppliedBoosts() {
     return a
@@ -36,20 +36,20 @@ class f extends l.default.Store {
     return u
   }
   get unapplyBoostError() {
-    return c
+    return d
   }
   get cooldownEndsAt() {
-    return s
+    return r
   }
 }
 f.displayName = "AppliedGuildBoostStore";
-var p = new f(i.default, {
+var p = new f(s.default, {
   GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       appliedBoosts: n
     } = e;
-    r[t] = {
+    i[t] = {
       subscriptions: n,
       lastFetchedAt: Date.now()
     }
@@ -64,10 +64,10 @@ var p = new f(i.default, {
     let {
       endsAt: t
     } = e;
-    s = t
+    r = t
   },
-  GUILD_UNAPPLY_BOOST_START: d,
-  GUILD_APPLY_BOOST_START: d,
+  GUILD_UNAPPLY_BOOST_START: c,
+  GUILD_APPLY_BOOST_START: c,
   GUILD_APPLY_BOOST_SUCCESS: function(e) {
     let {
       appliedGuildBoost: t
@@ -90,6 +90,6 @@ var p = new f(i.default, {
     let {
       error: t
     } = e;
-    o = !1, c = t
+    o = !1, d = t
   }
 })

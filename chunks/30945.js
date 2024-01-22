@@ -1,7 +1,7 @@
 "use strict";
-var s;
+var i;
 n.r(t), n.d(t, {
   ConsoleCommands: function() {
-    return s
+    return i
   }
-}), n("222007"), (s || (s = {})).CONNECT_VOICE = "connect_voice"
+}), n("222007"), (i || (i = {})).CONNECT_VOICE = "connect_voice"

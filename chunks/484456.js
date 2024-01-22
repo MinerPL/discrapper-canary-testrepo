@@ -10,8 +10,8 @@ var i = n("414456"),
   r = n.n(i),
   s = n("430568"),
   o = n("20606"),
-  a = n("629126"),
-  u = n("915675"),
+  u = n("629126"),
+  a = n("915675"),
   c = n("6914");
 
 function d(e) {
@@ -21,13 +21,13 @@ function d(e) {
     emojiId: i,
     emojiName: d,
     className: f
-  } = e, E = (0, a.default)(n, i), _ = null != E || null != d;
+  } = e, E = (0, u.default)(n, i), _ = null != E || null != d;
   return _ ? (0, l.jsx)(s.default, {
     emojiId: null == E ? void 0 : E.id,
     emojiName: null != d ? d : null == E ? void 0 : E.name,
     animated: null !== (t = null == E ? void 0 : E.animated) && void 0 !== t && t,
     className: r(c.emojiIcon, f)
-  }) : (0, l.jsx)(u.default, {
+  }) : (0, l.jsx)(a.default, {
     className: r(c.emojiIcon, f),
     color: o.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
   })

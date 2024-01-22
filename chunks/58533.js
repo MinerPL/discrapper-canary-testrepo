@@ -54,7 +54,7 @@ function E(e) {
       } = e;
       C(t)
     }
-  }), j = (0, o.useSpring)({
+  }), x = (0, o.useSpring)({
     from: {
       x: E.x,
       scale: 1,
@@ -105,8 +105,8 @@ function E(e) {
         className: T.emojiContainer,
         children: (0, a.jsx)(o.animated.div, {
           style: {
-            ...j,
-            opacity: j.opacity
+            ...x,
+            opacity: x.opacity
           },
           children: (0, a.jsx)(r.default, {
             className: T.emoji,

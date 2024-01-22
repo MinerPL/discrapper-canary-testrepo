@@ -1,367 +1,367 @@
 "use strict";
-s.r(e), s.d(e, {
+n.r(t), n.d(t, {
   P: function() {
-    return G
+    return Z
   },
   match: function() {
     return X
   }
-}), s("222007"), s("424973"), s("70102"), s("808653");
+}), n("222007"), n("424973"), n("70102"), n("808653");
 let r = Symbol.for("@ts-pattern/matcher"),
   i = Symbol.for("@ts-pattern/isVariadic"),
-  n = "@ts-pattern/anonymous-select-key",
-  c = t => !!(t && "object" == typeof t),
-  o = t => t && !!t[r],
-  f = (t, e, s) => {
-    if (o(t)) {
-      let i = t[r](),
+  o = "@ts-pattern/anonymous-select-key",
+  s = e => !!(e && "object" == typeof e),
+  a = e => e && !!e[r],
+  c = (e, t, n) => {
+    if (a(e)) {
+      let i = e[r](),
         {
-          matched: n,
-          selections: c
-        } = i.match(e);
-      return n && c && Object.keys(c).forEach(t => s(t, c[t])), n
+          matched: o,
+          selections: s
+        } = i.match(t);
+      return o && s && Object.keys(s).forEach(e => n(e, s[e])), o
     }
-    if (c(t)) {
-      if (!c(e)) return !1;
-      if (Array.isArray(t)) {
-        if (!Array.isArray(e)) return !1;
+    if (s(e)) {
+      if (!s(t)) return !1;
+      if (Array.isArray(e)) {
+        if (!Array.isArray(t)) return !1;
         let r = [],
-          n = [],
-          c = [];
-        for (let e of t.keys()) {
-          let s = t[e];
-          o(s) && s[i] ? c.push(s) : c.length ? n.push(s) : r.push(s)
+          o = [],
+          s = [];
+        for (let t of e.keys()) {
+          let n = e[t];
+          a(n) && n[i] ? s.push(n) : s.length ? o.push(n) : r.push(n)
         }
-        if (c.length) {
-          if (c.length > 1) throw Error("Pattern error: Using `...P.array(...)` several times in a single pattern is not allowed.");
-          if (e.length < r.length + n.length) return !1;
-          let t = e.slice(0, r.length),
-            i = 0 === n.length ? [] : e.slice(-n.length),
-            o = e.slice(r.length, 0 === n.length ? 1 / 0 : -n.length);
-          return r.every((e, r) => f(e, t[r], s)) && n.every((t, e) => f(t, i[e], s)) && (0 === c.length || f(c[0], o, s))
+        if (s.length) {
+          if (s.length > 1) throw Error("Pattern error: Using `...P.array(...)` several times in a single pattern is not allowed.");
+          if (t.length < r.length + o.length) return !1;
+          let e = t.slice(0, r.length),
+            i = 0 === o.length ? [] : t.slice(-o.length),
+            a = t.slice(r.length, 0 === o.length ? 1 / 0 : -o.length);
+          return r.every((t, r) => c(t, e[r], n)) && o.every((e, t) => c(e, i[t], n)) && (0 === s.length || c(s[0], a, n))
         }
-        return t.length === e.length && t.every((t, r) => f(t, e[r], s))
+        return e.length === t.length && e.every((e, r) => c(e, t[r], n))
       }
-      return Object.keys(t).every(i => {
-        let n = t[i];
-        return (i in e || o(n) && "optional" === n[r]().matcherType) && f(n, e[i], s)
+      return Object.keys(e).every(i => {
+        let o = e[i];
+        return (i in t || a(o) && "optional" === o[r]().matcherType) && c(o, t[i], n)
       })
     }
-    return Object.is(e, t)
+    return Object.is(t, e)
   },
-  u = t => {
-    var e, s, i;
-    return c(t) ? o(t) ? null != (e = null == (s = (i = t[r]()).getSelectionKeys) ? void 0 : s.call(i)) ? e : [] : Array.isArray(t) ? a(t, u) : a(Object.values(t), u) : []
+  u = e => {
+    var t, n, i;
+    return s(e) ? a(e) ? null != (t = null == (n = (i = e[r]()).getSelectionKeys) ? void 0 : n.call(i)) ? t : [] : Array.isArray(e) ? d(e, u) : d(Object.values(e), u) : []
   },
-  a = (t, e) => t.reduce((t, s) => t.concat(e(s)), []);
+  d = (e, t) => e.reduce((e, n) => e.concat(t(n)), []);
 
-function d(t) {
-  return Object.assign(t, {
-    optional: () => p(t),
-    and: e => l(t, e),
-    or: e => g(t, e),
-    select: e => void 0 === e ? x(t) : x(e, t)
+function l(e) {
+  return Object.assign(e, {
+    optional: () => f(e),
+    and: t => g(e, t),
+    or: t => b(e, t),
+    select: t => void 0 === t ? m(e) : m(t, e)
   })
 }
 
-function p(t) {
-  return d({
+function f(e) {
+  return l({
     [r]: () => ({
-      match: e => {
-        let s = {},
-          r = (t, e) => {
-            s[t] = e
+      match: t => {
+        let n = {},
+          r = (e, t) => {
+            n[e] = t
           };
-        return void 0 === e ? (u(t).forEach(t => r(t, void 0)), {
+        return void 0 === t ? (u(e).forEach(e => r(e, void 0)), {
           matched: !0,
-          selections: s
+          selections: n
         }) : {
-          matched: f(t, e, r),
-          selections: s
+          matched: c(e, t, r),
+          selections: n
         }
       },
-      getSelectionKeys: () => u(t),
+      getSelectionKeys: () => u(e),
       matcherType: "optional"
     })
   })
 }
-let b = (t, e) => {
-    for (let s of t)
-      if (!e(s)) return !1;
+let p = (e, t) => {
+    for (let n of e)
+      if (!t(n)) return !1;
     return !0
   },
-  h = (t, e) => {
-    for (let [s, r] of t.entries())
-      if (!e(r, s)) return !1;
+  h = (e, t) => {
+    for (let [n, r] of e.entries())
+      if (!t(r, n)) return !1;
     return !0
   };
 
-function l() {
-  for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-  return d({
+function g() {
+  for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+  return l({
     [r]: () => ({
-      match: t => {
-        let s = {},
-          r = (t, e) => {
-            s[t] = e
+      match: e => {
+        let n = {},
+          r = (e, t) => {
+            n[e] = t
           };
         return {
-          matched: e.every(e => f(e, t, r)),
-          selections: s
+          matched: t.every(t => c(t, e, r)),
+          selections: n
         }
       },
-      getSelectionKeys: () => a(e, u),
+      getSelectionKeys: () => d(t, u),
       matcherType: "and"
     })
   })
 }
 
-function g() {
-  for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-  return d({
+function b() {
+  for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+  return l({
     [r]: () => ({
-      match: t => {
-        let s = {},
-          r = (t, e) => {
-            s[t] = e
+      match: e => {
+        let n = {},
+          r = (e, t) => {
+            n[e] = t
           };
-        return a(e, u).forEach(t => r(t, void 0)), {
-          matched: e.some(e => f(e, t, r)),
-          selections: s
+        return d(t, u).forEach(e => r(e, void 0)), {
+          matched: t.some(t => c(t, e, r)),
+          selections: n
         }
       },
-      getSelectionKeys: () => a(e, u),
+      getSelectionKeys: () => d(t, u),
       matcherType: "or"
     })
   })
 }
 
-function v(t) {
+function v(e) {
   return {
     [r]: () => ({
-      match: e => ({
-        matched: !!t(e)
+      match: t => ({
+        matched: !!e(t)
       })
     })
   }
 }
 
-function x() {
-  for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-  let i = "string" == typeof e[0] ? e[0] : void 0,
-    c = 2 === e.length ? e[1] : "string" == typeof e[0] ? void 0 : e[0];
-  return d({
+function m() {
+  for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+  let i = "string" == typeof t[0] ? t[0] : void 0,
+    s = 2 === t.length ? t[1] : "string" == typeof t[0] ? void 0 : t[0];
+  return l({
     [r]: () => ({
-      match: t => {
-        let e = {
-          [null != i ? i : n]: t
+      match: e => {
+        let t = {
+          [null != i ? i : o]: e
         };
         return {
-          matched: void 0 === c || f(c, t, (t, s) => {
-            e[t] = s
+          matched: void 0 === s || c(s, e, (e, n) => {
+            t[e] = n
           }),
-          selections: e
+          selections: t
         }
       },
-      getSelectionKeys: () => [null != i ? i : n].concat(void 0 === c ? [] : u(c))
+      getSelectionKeys: () => [null != i ? i : o].concat(void 0 === s ? [] : u(s))
     })
   })
 }
 
-function m(t) {
-  return "number" == typeof t
+function y(e) {
+  return "number" == typeof e
 }
 
-function y(t) {
-  return "string" == typeof t
+function x(e) {
+  return "string" == typeof e
 }
 
-function _(t) {
-  return "bigint" == typeof t
+function w(e) {
+  return "bigint" == typeof e
 }
-let w = d(v(function(t) {
+let S = l(v(function(e) {
     return !0
   })),
-  M = t => Object.assign(d(t), {
-    startsWith: e => M(l(t, v(t => y(t) && t.startsWith(e)))),
-    endsWith: e => M(l(t, v(t => y(t) && t.endsWith(e)))),
-    minLength: e => {
-      var s;
-      return M(l(t, (s = e, v(t => y(t) && t.length >= s))))
+  k = e => Object.assign(l(e), {
+    startsWith: t => k(g(e, v(e => x(e) && e.startsWith(t)))),
+    endsWith: t => k(g(e, v(e => x(e) && e.endsWith(t)))),
+    minLength: t => {
+      var n;
+      return k(g(e, (n = t, v(e => x(e) && e.length >= n))))
     },
-    maxLength: e => {
-      var s;
-      return M(l(t, (s = e, v(t => y(t) && t.length <= s))))
+    maxLength: t => {
+      var n;
+      return k(g(e, (n = t, v(e => x(e) && e.length <= n))))
     },
-    includes: e => M(l(t, v(t => y(t) && t.includes(e)))),
-    regex: e => M(l(t, v(t => y(t) && !!t.match(e))))
+    includes: t => k(g(e, v(e => x(e) && e.includes(t)))),
+    regex: t => k(g(e, v(e => x(e) && !!e.match(t))))
   }),
-  S = M(v(y)),
-  k = (t, e) => v(s => m(s) && t <= s && e >= s),
-  E = t => v(e => m(e) && e < t),
-  A = t => v(e => m(e) && e > t),
-  B = t => v(e => m(e) && e <= t),
-  I = t => v(e => m(e) && e >= t),
-  R = () => v(t => m(t) && Number.isInteger(t)),
-  j = () => v(t => m(t) && Number.isFinite(t)),
-  C = () => v(t => m(t) && t > 0),
-  O = () => v(t => m(t) && t < 0),
-  P = t => Object.assign(d(t), {
-    between: (e, s) => P(l(t, k(e, s))),
-    lt: e => P(l(t, E(e))),
-    gt: e => P(l(t, A(e))),
-    lte: e => P(l(t, B(e))),
-    gte: e => P(l(t, I(e))),
-    int: () => P(l(t, R())),
-    finite: () => P(l(t, j())),
-    positive: () => P(l(t, C())),
-    negative: () => P(l(t, O()))
+  _ = k(v(x)),
+  E = (e, t) => v(n => y(n) && e <= n && t >= n),
+  M = e => v(t => y(t) && t < e),
+  D = e => v(t => y(t) && t > e),
+  C = e => v(t => y(t) && t <= e),
+  P = e => v(t => y(t) && t >= e),
+  T = () => v(e => y(e) && Number.isInteger(e)),
+  A = () => v(e => y(e) && Number.isFinite(e)),
+  R = () => v(e => y(e) && e > 0),
+  I = () => v(e => y(e) && e < 0),
+  O = e => Object.assign(l(e), {
+    between: (t, n) => O(g(e, E(t, n))),
+    lt: t => O(g(e, M(t))),
+    gt: t => O(g(e, D(t))),
+    lte: t => O(g(e, C(t))),
+    gte: t => O(g(e, P(t))),
+    int: () => O(g(e, T())),
+    finite: () => O(g(e, A())),
+    positive: () => O(g(e, R())),
+    negative: () => O(g(e, I()))
   }),
-  T = P(v(m)),
-  D = (t, e) => v(s => _(s) && t <= s && e >= s),
-  z = t => v(e => _(e) && e < t),
-  L = t => v(e => _(e) && e > t),
-  N = t => v(e => _(e) && e <= t),
-  q = t => v(e => _(e) && e >= t),
-  U = () => v(t => _(t) && t > 0),
-  F = () => v(t => _(t) && t < 0),
-  K = t => Object.assign(d(t), {
-    between: (e, s) => K(l(t, D(e, s))),
-    lt: e => K(l(t, z(e))),
-    gt: e => K(l(t, L(e))),
-    lte: e => K(l(t, N(e))),
-    gte: e => K(l(t, q(e))),
-    positive: () => K(l(t, U())),
-    negative: () => K(l(t, F()))
+  j = O(v(y)),
+  N = (e, t) => v(n => w(n) && e <= n && t >= n),
+  L = e => v(t => w(t) && t < e),
+  F = e => v(t => w(t) && t > e),
+  B = e => v(t => w(t) && t <= e),
+  z = e => v(t => w(t) && t >= e),
+  K = () => v(e => w(e) && e > 0),
+  V = () => v(e => w(e) && e < 0),
+  U = e => Object.assign(l(e), {
+    between: (t, n) => U(g(e, N(t, n))),
+    lt: t => U(g(e, L(t))),
+    gt: t => U(g(e, F(t))),
+    lte: t => U(g(e, B(t))),
+    gte: t => U(g(e, z(t))),
+    positive: () => U(g(e, K())),
+    negative: () => U(g(e, V()))
   }),
-  H = K(v(_)),
-  W = d(v(function(t) {
-    return "boolean" == typeof t
+  q = U(v(w)),
+  H = l(v(function(e) {
+    return "boolean" == typeof e
   })),
-  V = d(v(function(t) {
-    return "symbol" == typeof t
+  G = l(v(function(e) {
+    return "symbol" == typeof e
   })),
-  Z = d(v(function(t) {
-    return null == t
+  W = l(v(function(e) {
+    return null == e
   }));
-var G = {
+var Z = {
   __proto__: null,
   matcher: r,
-  optional: p,
+  optional: f,
   array: function() {
-    for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-    return function t(e) {
-      var s;
-      return Object.assign((s = e, Object.assign(s, {
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    return function e(t) {
+      var n;
+      return Object.assign((n = t, Object.assign(n, {
         *[Symbol.iterator]() {
-          yield Object.assign(s, {
+          yield Object.assign(n, {
             [i]: !0
           })
         }
       })), {
-        optional: () => t(p(e)),
-        select: s => t(void 0 === s ? x(e) : x(s, e))
+        optional: () => e(f(t)),
+        select: n => e(void 0 === n ? m(t) : m(n, t))
       })
     }({
       [r]: () => ({
-        match: t => {
-          if (!Array.isArray(t)) return {
+        match: e => {
+          if (!Array.isArray(e)) return {
             matched: !1
           };
-          if (0 === e.length) return {
+          if (0 === t.length) return {
             matched: !0
           };
-          let s = e[0],
+          let n = t[0],
             r = {};
-          if (0 === t.length) return u(s).forEach(t => {
-            r[t] = []
+          if (0 === e.length) return u(n).forEach(e => {
+            r[e] = []
           }), {
             matched: !0,
             selections: r
           };
-          let i = (t, e) => {
-            r[t] = (r[t] || []).concat([e])
+          let i = (e, t) => {
+            r[e] = (r[e] || []).concat([t])
           };
           return {
-            matched: t.every(t => f(s, t, i)),
+            matched: e.every(e => c(n, e, i)),
             selections: r
           }
         },
-        getSelectionKeys: () => 0 === e.length ? [] : u(e[0])
+        getSelectionKeys: () => 0 === t.length ? [] : u(t[0])
       })
     })
   },
   set: function() {
-    for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-    return d({
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    return l({
       [r]: () => ({
-        match: t => {
-          if (!(t instanceof Set)) return {
+        match: e => {
+          if (!(e instanceof Set)) return {
             matched: !1
           };
-          let s = {};
-          if (0 === t.size) return {
+          let n = {};
+          if (0 === e.size) return {
             matched: !0,
-            selections: s
+            selections: n
           };
-          if (0 === e.length) return {
+          if (0 === t.length) return {
             matched: !0
           };
-          let r = (t, e) => {
-              s[t] = (s[t] || []).concat([e])
+          let r = (e, t) => {
+              n[e] = (n[e] || []).concat([t])
             },
-            i = e[0];
+            i = t[0];
           return {
-            matched: b(t, t => f(i, t, r)),
-            selections: s
+            matched: p(e, e => c(i, e, r)),
+            selections: n
           }
         },
-        getSelectionKeys: () => 0 === e.length ? [] : u(e[0])
+        getSelectionKeys: () => 0 === t.length ? [] : u(t[0])
       })
     })
   },
   map: function() {
-    for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-    return d({
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    return l({
       [r]: () => ({
-        match: t => {
-          var s;
-          if (!(t instanceof Map)) return {
+        match: e => {
+          var n;
+          if (!(e instanceof Map)) return {
             matched: !1
           };
           let r = {};
-          if (0 === t.size) return {
+          if (0 === e.size) return {
             matched: !0,
             selections: r
           };
-          let i = (t, e) => {
-            r[t] = (r[t] || []).concat([e])
+          let i = (e, t) => {
+            r[e] = (r[e] || []).concat([t])
           };
-          if (0 === e.length) return {
+          if (0 === t.length) return {
             matched: !0
           };
-          if (1 === e.length) throw Error("`P.map` wasn't given enough arguments. Expected (key, value), received ".concat(null == (s = e[0]) ? void 0 : s.toString()));
-          let [n, c] = e;
+          if (1 === t.length) throw Error("`P.map` wasn't given enough arguments. Expected (key, value), received ".concat(null == (n = t[0]) ? void 0 : n.toString()));
+          let [o, s] = t;
           return {
-            matched: h(t, (t, e) => {
-              let s = f(n, e, i),
-                r = f(c, t, i);
-              return s && r
+            matched: h(e, (e, t) => {
+              let n = c(o, t, i),
+                r = c(s, e, i);
+              return n && r
             }),
             selections: r
           }
         },
-        getSelectionKeys: () => 0 === e.length ? [] : [...u(e[0]), ...u(e[1])]
+        getSelectionKeys: () => 0 === t.length ? [] : [...u(t[0]), ...u(t[1])]
       })
     })
   },
-  intersection: l,
-  union: g,
-  not: function(t) {
-    return d({
+  intersection: g,
+  union: b,
+  not: function(e) {
+    return l({
       [r]: () => ({
-        match: e => ({
-          matched: !f(t, e, () => {})
+        match: t => ({
+          matched: !c(e, t, () => {})
         }),
         getSelectionKeys: () => [],
         matcherType: "not"
@@ -369,105 +369,105 @@ var G = {
     })
   },
   when: v,
-  select: x,
-  any: w,
-  _: w,
-  string: S,
-  between: k,
-  lt: E,
-  gt: A,
-  lte: B,
-  gte: I,
-  int: R,
-  finite: j,
-  positive: C,
-  negative: O,
-  number: T,
-  betweenBigInt: D,
-  ltBigInt: z,
-  gtBigInt: L,
-  lteBigInt: N,
-  gteBigInt: q,
-  positiveBigInt: U,
-  negativeBigInt: F,
-  bigint: H,
-  boolean: W,
-  symbol: V,
-  nullish: Z,
-  instanceOf: function(t) {
-    var e;
-    return d(v((e = t, t => t instanceof e)))
+  select: m,
+  any: S,
+  _: S,
+  string: _,
+  between: E,
+  lt: M,
+  gt: D,
+  lte: C,
+  gte: P,
+  int: T,
+  finite: A,
+  positive: R,
+  negative: I,
+  number: j,
+  betweenBigInt: N,
+  ltBigInt: L,
+  gtBigInt: F,
+  lteBigInt: B,
+  gteBigInt: z,
+  positiveBigInt: K,
+  negativeBigInt: V,
+  bigint: q,
+  boolean: H,
+  symbol: G,
+  nullish: W,
+  instanceOf: function(e) {
+    var t;
+    return l(v((t = e, e => e instanceof t)))
   },
-  shape: function(t) {
-    return d(v(function() {
-      for (var t = arguments.length, e = Array(t), s = 0; s < t; s++) e[s] = arguments[s];
-      if (1 === e.length) {
-        let [t] = e;
-        return e => f(t, e, () => {})
+  shape: function(e) {
+    return l(v(function() {
+      for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+      if (1 === t.length) {
+        let [e] = t;
+        return t => c(e, t, () => {})
       }
-      if (2 === e.length) {
-        let [t, s] = e;
-        return f(t, s, () => {})
+      if (2 === t.length) {
+        let [e, n] = t;
+        return c(e, n, () => {})
       }
-      throw Error("isMatching wasn't given the right number of arguments: expected 1 or 2, received ".concat(e.length, "."))
-    }(t)))
+      throw Error("isMatching wasn't given the right number of arguments: expected 1 or 2, received ".concat(t.length, "."))
+    }(e)))
   }
 };
-let $ = {
+let Y = {
   matched: !1,
   value: void 0
 };
 
-function X(t) {
-  return new Y(t, $)
+function X(e) {
+  return new $(e, Y)
 }
-class Y {
+class $ {
   with() {
-    let t;
-    for (var e = arguments.length, s = Array(e), r = 0; r < e; r++) s[r] = arguments[r];
+    let e;
+    for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
     if (this.state.matched) return this;
-    let i = s[s.length - 1],
-      c = [s[0]];
-    3 === s.length && "function" == typeof s[1] ? (c.push(s[0]), t = s[1]) : s.length > 2 && c.push(...s.slice(1, s.length - 1));
-    let o = !1,
+    let i = n[n.length - 1],
+      s = [n[0]];
+    3 === n.length && "function" == typeof n[1] ? (s.push(n[0]), e = n[1]) : n.length > 2 && s.push(...n.slice(1, n.length - 1));
+    let a = !1,
       u = {},
-      a = (t, e) => {
-        o = !0, u[t] = e
+      d = (e, t) => {
+        a = !0, u[e] = t
       },
-      d = c.some(t => f(t, this.input, a)) && (!t || t(this.input)) ? {
+      l = s.some(e => c(e, this.input, d)) && (!e || e(this.input)) ? {
         matched: !0,
-        value: i(o ? n in u ? u[n] : u : this.input, this.input)
-      } : $;
-    return new Y(this.input, d)
+        value: i(a ? o in u ? u[o] : u : this.input, this.input)
+      } : Y;
+    return new $(this.input, l)
   }
-  when(t, e) {
+  when(e, t) {
     if (this.state.matched) return this;
-    let s = !!t(this.input);
-    return new Y(this.input, s ? {
+    let n = !!e(this.input);
+    return new $(this.input, n ? {
       matched: !0,
-      value: e(this.input, this.input)
-    } : $)
+      value: t(this.input, this.input)
+    } : Y)
   }
-  otherwise(t) {
-    return this.state.matched ? this.state.value : t(this.input)
+  otherwise(e) {
+    return this.state.matched ? this.state.value : e(this.input)
   }
   exhaustive() {
     return this.run()
   }
   run() {
-    let t;
+    let e;
     if (this.state.matched) return this.state.value;
     try {
-      t = JSON.stringify(this.input)
-    } catch (e) {
-      t = this.input
+      e = JSON.stringify(this.input)
+    } catch (t) {
+      e = this.input
     }
-    throw Error("Pattern matching error: no pattern matches value ".concat(t))
+    throw Error("Pattern matching error: no pattern matches value ".concat(e))
   }
   returnType() {
     return this
   }
-  constructor(t, e) {
-    this.input = void 0, this.state = void 0, this.input = t, this.state = e
+  constructor(e, t) {
+    this.input = void 0, this.state = void 0, this.input = e, this.state = t
   }
 }

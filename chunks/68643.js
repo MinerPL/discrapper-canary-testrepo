@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  s = n("917351"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("917351"),
+  a = n.n(r),
   o = n("206230");
-class l extends r.Component {
+class l extends s.Component {
   componentDidMount() {
     this.props.isShaking && this.startShaking()
   }
@@ -39,7 +39,7 @@ class l extends r.Component {
     })
   }
   constructor(...e) {
-    super(...e), this.ref = r.createRef(), this.shouldRenderFrame = !0, this.animate = () => {
+    super(...e), this.ref = s.createRef(), this.shouldRenderFrame = !0, this.animate = () => {
       let {
         intensity: e,
         isShaking: t

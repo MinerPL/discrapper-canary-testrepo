@@ -12,8 +12,8 @@ var r = n("917351"),
   s = n("446674"),
   a = n("913144"),
   l = n("449008"),
-  u = n("447621"),
-  o = n("782340");
+  o = n("447621"),
+  u = n("782340");
 
 function c(e, t) {
   return i.isEqual(e.map(e => [e.categoryId, e.name]), t.map(e => [e.categoryId, e.name]))
@@ -27,11 +27,11 @@ class m extends s.default.Store {
     return f
   }
   getDiscoveryCategories() {
-    let e = u.DISCOVERY_SIDEBAR_CATEGORIES.slice(1),
+    let e = o.DISCOVERY_SIDEBAR_CATEGORIES.slice(1),
       t = e.map(e => p.find(t => t.categoryId === e.categoryId)).filter(l.isNotNullish);
     return [{
-      categoryId: u.DISCOVERY_ALL_CATEGORIES_ID,
-      name: o.default.Messages.HOME
+      categoryId: o.DISCOVERY_ALL_CATEGORIES_ID,
+      name: u.default.Messages.HOME
     }, ...t]
   }
   getAllCategories() {
@@ -41,7 +41,7 @@ class m extends s.default.Store {
     return d
   }
   getCategoryName(e) {
-    return e === u.DISCOVERY_ALL_CATEGORIES_ID ? o.default.Messages.HOME : _[e]
+    return e === o.DISCOVERY_ALL_CATEGORIES_ID ? u.default.Messages.HOME : _[e]
   }
 }
 m.displayName = "GuildDiscoveryCategoryStore";
@@ -60,8 +60,8 @@ var E = new m(a.default, {
           name: r,
           is_primary: a
         } = e;
-        if (n !== u.DEFAULT_DISCOVERY_CATEGORY_ID) {
-          if (n === u.OTHER_DISCOVERY_CATEGORY_ID) {
+        if (n !== o.DEFAULT_DISCOVERY_CATEGORY_ID) {
+          if (n === o.OTHER_DISCOVERY_CATEGORY_ID) {
             t = {
               categoryId: n,
               name: r

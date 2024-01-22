@@ -7,31 +7,31 @@ n.r(t), n.d(t, {
 var a = n("446873"),
   r = n("728983"),
   i = n("884691"),
-  s = n("634849"),
-  c = "hcaptcha-api-script-id",
-  o = "hcaptchaOnLoad",
-  d = [],
-  p = function(e) {
+  c = n("634849"),
+  o = "hcaptcha-api-script-id",
+  s = "hcaptchaOnLoad",
+  p = [],
+  d = function(e) {
     void 0 === e && (e = {});
-    var t = (0, s.getMountElement)(e.scriptLocation);
+    var t = (0, c.getMountElement)(e.scriptLocation);
     delete e.scriptLocation;
-    var n = (0, s.getFrame)(t),
-      a = d.find(function(e) {
+    var n = (0, c.getFrame)(t),
+      a = p.find(function(e) {
         return e.scope === n.window
       });
-    if (n.document.getElementById(c) && a) return a.promise;
+    if (n.document.getElementById(o) && a) return a.promise;
     var r = new Promise(function(a, r) {
-      n.window[o] = a;
+      n.window[s] = a;
       var i = e.apihost || "https://js.hcaptcha.com";
       delete e.apihost;
-      var d = n.document.createElement("script");
-      d.id = c, d.src = i + "/1/api.js?render=explicit&onload=" + o, d.async = void 0 === e.loadAsync || e.loadAsync, delete e.loadAsync, d.onerror = function(e) {
+      var p = n.document.createElement("script");
+      p.id = o, p.src = i + "/1/api.js?render=explicit&onload=" + s, p.async = void 0 === e.loadAsync || e.loadAsync, delete e.loadAsync, p.onerror = function(e) {
         return r("script-error")
       };
-      var p = (0, s.generateQuery)(e);
-      d.src += "" !== p ? "&" + p : "", t.appendChild(d)
+      var d = (0, c.generateQuery)(e);
+      p.src += "" !== d ? "&" + d : "", t.appendChild(p)
     });
-    return d.push({
+    return p.push({
       promise: r,
       scope: n.window
     }), r
@@ -49,8 +49,8 @@ var a = n("446873"),
     var n = t.prototype;
     return n.componentDidMount = function() {
       var e = this,
-        t = (0, s.getMountElement)(this.props.scriptLocation),
-        n = (0, s.getFrame)(t);
+        t = (0, c.getMountElement)(this.props.scriptLocation),
+        n = (0, c.getFrame)(t);
       if (this._hcaptcha = n.window.hcaptcha || void 0, void 0 !== this._hcaptcha) {
         this.setState({
           isApiReady: !0
@@ -81,23 +81,23 @@ var a = n("446873"),
           a = e.endpoint,
           r = e.host,
           i = e.imghost,
-          s = e.languageOverride,
-          c = e.reCaptchaCompat,
-          o = e.reportapi,
-          d = e.sentry,
+          c = e.languageOverride,
+          o = e.reCaptchaCompat,
+          s = e.reportapi,
+          p = e.sentry,
           l = e.custom,
           u = e.loadAsync,
           h = e.scriptLocation;
-        p({
+        d({
           apihost: t,
           assethost: n,
           endpoint: a,
-          hl: s,
+          hl: c,
           host: r,
           imghost: i,
-          recaptchacompat: !1 === c ? "off" : null,
-          reportapi: o,
-          sentry: d,
+          recaptchacompat: !1 === o ? "off" : null,
+          reportapi: s,
+          sentry: p,
           custom: l,
           loadAsync: u,
           scriptLocation: h
@@ -141,8 +141,8 @@ var a = n("446873"),
       this.setState({
         isApiReady: !0
       }, function() {
-        var t = (0, s.getMountElement)(e.props.scriptLocation),
-          n = (0, s.getFrame)(t);
+        var t = (0, c.getMountElement)(e.props.scriptLocation),
+          n = (0, c.getFrame)(t);
         e._hcaptcha = n.window.hcaptcha, e.renderCaptcha(function() {
           var t = e.props.onLoad;
           t && t()
@@ -155,9 +155,9 @@ var a = n("446873"),
         r = n.captchaId,
         i = this._hcaptcha;
       if (void 0 !== i && !a) {
-        var s = i.getResponse(r),
-          c = i.getRespKey(r);
-        t && t(s, c)
+        var c = i.getResponse(r),
+          o = i.getRespKey(r);
+        t && t(c, o)
       }
     }, n.handleExpire = function() {
       var e = this.props.onExpire,

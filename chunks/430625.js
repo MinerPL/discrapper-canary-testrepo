@@ -137,19 +137,19 @@ function F(e) {
   o(F === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
   let w = l.useRef(null),
     [H, V] = l.useState(!1),
-    [Y, K] = l.useState(!1);
+    [Y, W] = l.useState(!1);
   l.useEffect(() => {
     let e = new ResizeObserver(() => (function() {
         var e;
         let t = null === (e = w.current) || void 0 === e ? void 0 : e.offsetWidth;
-        null != t && (V(t < b + j), K(t <= 2 * U))
+        null != t && (V(t < b + j), W(t <= 2 * U))
       })()),
       t = w.current;
     return null != t && e.observe(t), () => {
       e.disconnect()
     }
-  }, [w, V, K]);
-  let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
+  }, [w, V, W]);
+  let K = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
     z = (0, N.default)([k.id])[0],
     Z = (0, u.useStateFromStores)([E.default], () => {
       var e;
@@ -177,10 +177,10 @@ function F(e) {
     ee = (0, u.useStateFromStoresArray)([E.default], () => null != Q ? E.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
-    es = null != W;
-  if (null == W) {
+    es = null != K;
+  if (null == K) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
-    W = new S.default(d.guild)
+    K = new S.default(d.guild)
   }
   let el = es && !X || es && Z,
     ea = () => {
@@ -225,7 +225,7 @@ function F(e) {
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
           channel: Q,
-          guild: W,
+          guild: K,
           isStacked: Y,
           hasEnded: !J
         })]
@@ -252,10 +252,10 @@ function F(e) {
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
-          children: [null != W && J ? (0, s.jsx)("div", {
+          children: [null != K && J ? (0, s.jsx)("div", {
             className: y.avatars,
             children: (0, s.jsx)(R.default, {
-              guildId: W.id,
+              guildId: K.id,
               users: et,
               max: 4
             })

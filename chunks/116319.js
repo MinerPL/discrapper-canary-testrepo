@@ -1,7 +1,7 @@
 "use strict";
-var i, r;
+var i, s;
 n.r(t), n.d(t, {
   SystemThemeState: function() {
     return i
   }
-}), (r = i || (i = {}))[r.UNSET = 0] = "UNSET", r[r.OFF = 1] = "OFF", r[r.ON = 2] = "ON", r[r.UNAVAILABLE = 3] = "UNAVAILABLE"
+}), (s = i || (i = {}))[s.UNSET = 0] = "UNSET", s[s.OFF = 1] = "OFF", s[s.ON = 2] = "ON", s[s.UNAVAILABLE = 3] = "UNAVAILABLE"

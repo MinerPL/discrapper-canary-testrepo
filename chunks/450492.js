@@ -69,15 +69,15 @@ var g = e => {
     onSuccess: g,
     tooltipDelay: E,
     isGiftEasterEggEnabled: h,
-    disableCustomColor: T = !1
+    disableCustomColor: b = !1
   } = e, {
-    analyticsLocations: b
+    analyticsLocations: T
   } = (0, i.default)(), x = s.useRef(null), L = (0, n.default)(x), {
     buttonColors: S
-  } = (0, d.default)(t.styles), v = null == S || T ? void 0 : {
+  } = (0, d.default)(t.styles), v = null == S || b ? void 0 : {
     background: S.secondary.toHslString(),
     color: S.text.toHslString()
-  }, I = T || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+  }, I = b || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: E,
@@ -86,7 +86,7 @@ var g = e => {
       buttonRef: x,
       style: v,
       className: C.giftButton,
-      color: T ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
       innerClassName: C.giftButtonInner,
@@ -95,7 +95,7 @@ var g = e => {
         e.stopPropagation(), (0, c.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: b,
+          analyticsLocations: T,
           returnRef: a,
           onClose: null != g ? e => {
             e && g()

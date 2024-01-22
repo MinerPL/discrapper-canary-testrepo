@@ -15,8 +15,8 @@ var i = n("37983"),
   s = n("446674"),
   l = n("77078"),
   o = n("519705"),
-  r = n("437756"),
-  d = n("277796"),
+  d = n("437756"),
+  r = n("277796"),
   u = n("507313"),
   S = n("282109"),
   g = n("34676"),
@@ -26,24 +26,24 @@ var i = n("37983"),
   f = n("782340");
 
 function E(e) {
-  return (0, i.jsx)(l.MenuItem, {
+  let t = h(e);
+  return e.type === _.ChannelTypes.GUILD_VOICE ? null : (0, i.jsx)(l.MenuItem, {
     id: "channel_notification_settings",
     label: f.default.Messages.NOTIFICATIONS,
-    children: h(e)
+    children: t
   })
 }
 
 function h(e) {
-  let t = (0, r.useChannelPresetSettings)(e),
-    n = (0, r.useChannelPresetInheritance)(e),
-    d = t.preset === u.Presets.CUSTOM && !n.inherited,
-    [g, c] = a.useState(d),
+  let t = (0, d.useChannelPresetSettings)(e),
+    n = (0, d.useChannelPresetInheritance)(e),
+    r = t.preset === u.Presets.CUSTOM && !n.inherited,
+    [g, c] = a.useState(r),
     [N, E] = a.useState(!1),
     h = N ? u.Presets.CUSTOM : t.preset,
     O = M(e, () => E(!1)),
-    I = (0, s.useStateFromStores)([S.default], () => S.default.getNewForumThreadsCreated(e));
-  if (e.type === _.ChannelTypes.GUILD_VOICE) return null;
-  let T = "parent" === n.inheritedFrom ? f.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : f.default.Messages.FORM_LABEL_DEFAULT;
+    I = (0, s.useStateFromStores)([S.default], () => S.default.getNewForumThreadsCreated(e)),
+    T = "parent" === n.inheritedFrom ? f.default.Messages.FORM_LABEL_DEFAULT_CATEGORY : f.default.Messages.FORM_LABEL_DEFAULT;
   return e.type === _.ChannelTypes.GUILD_STAGE_VOICE ? (0, i.jsxs)(l.MenuGroup, {
     children: [(0, i.jsx)(l.MenuRadioItem, {
       id: "cns_default",
@@ -51,19 +51,19 @@ function h(e) {
       checked: n.inherited,
       group: "channel_notification_settings",
       subtext: t.notification === _.UserNotificationSettings.NO_MESSAGES ? f.default.Messages.FORM_LABEL_NOTHING : f.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
-      action: () => (0, r.updateChannelToGuildDefault)(e.guild_id, e.id)
+      action: () => (0, d.updateChannelToGuildDefault)(e.guild_id, e.id)
     }), (0, i.jsx)(l.MenuRadioItem, {
       id: "cns_only_mention",
       group: "channel_notification_settings",
       checked: !n.inherited && t.notification !== _.UserNotificationSettings.NO_MESSAGES,
       label: f.default.Messages.FORM_LABEL_LIVE_STAGES_ONLY,
-      action: () => (0, r.updateChannelNotificationSetting)(e.guild_id, e.id, _.UserNotificationSettings.ONLY_MENTIONS)
+      action: () => (0, d.updateChannelNotificationSetting)(e.guild_id, e.id, _.UserNotificationSettings.ONLY_MENTIONS)
     }), (0, i.jsx)(l.MenuRadioItem, {
       id: "cns_no_message",
       group: "channel_notification_settings",
       label: f.default.Messages.FORM_LABEL_NOTHING,
       checked: !n.inherited && t.notification === _.UserNotificationSettings.NO_MESSAGES,
-      action: () => (0, r.updateChannelNotificationSetting)(e.guild_id, e.id, _.UserNotificationSettings.NO_MESSAGES)
+      action: () => (0, d.updateChannelNotificationSetting)(e.guild_id, e.id, _.UserNotificationSettings.NO_MESSAGES)
     })]
   }) : (0, i.jsxs)(i.Fragment, {
     children: [e.isForumLikeChannel() ? (0, i.jsxs)(i.Fragment, {
@@ -80,25 +80,25 @@ function h(e) {
         group: "channel_notification_settings",
         checked: n.inherited && !N,
         subtext: n.inheritedPreset,
-        action: () => ((0, r.updateChannelToGuildDefault)(e.guild_id, e.id), E(!1))
+        action: () => ((0, d.updateChannelToGuildDefault)(e.guild_id, e.id), E(!1))
       }), (0, i.jsx)(l.MenuRadioItem, {
         id: "cns_everything",
         group: "channel_notification_settings",
         label: f.default.Messages.NOTIFICATION_PRESET_1,
         checked: !n.inherited && h === u.Presets.ALL_MESSAGES,
-        action: () => ((0, r.updateChannelPreset)(e.guild_id, e.id, u.Presets.ALL_MESSAGES), E(!1))
+        action: () => ((0, d.updateChannelPreset)(e.guild_id, e.id, u.Presets.ALL_MESSAGES), E(!1))
       }), (0, i.jsx)(l.MenuRadioItem, {
         id: "cns_essentials",
         group: "channel_notification_settings",
         label: f.default.Messages.NOTIFICATION_PRESET_2,
         checked: !n.inherited && h === u.Presets.MENTIONS,
-        action: () => ((0, r.updateChannelPreset)(e.guild_id, e.id, u.Presets.MENTIONS), E(!1))
+        action: () => ((0, d.updateChannelPreset)(e.guild_id, e.id, u.Presets.MENTIONS), E(!1))
       }), (0, i.jsx)(l.MenuRadioItem, {
         id: "cns_nothing",
         group: "channel_notification_settings",
         label: f.default.Messages.NOTIFICATION_PRESET_3,
         checked: !n.inherited && h === u.Presets.NOTHING,
-        action: () => ((0, r.updateChannelPreset)(e.guild_id, e.id, u.Presets.NOTHING), E(!1))
+        action: () => ((0, d.updateChannelPreset)(e.guild_id, e.id, u.Presets.NOTHING), E(!1))
       }), (0, i.jsx)(l.MenuRadioItem, {
         id: "cns_custom",
         group: "channel_notification_settings",
@@ -106,7 +106,7 @@ function h(e) {
         checked: N || !n.inherited && h === u.Presets.CUSTOM,
         action: () => (c(!0), E(!0))
       })]
-    }), (g || d) && O]
+    }), (g || r) && O]
   })
 }
 
@@ -114,13 +114,13 @@ function M(e, t) {
   let {
     notification: n,
     unread: a
-  } = (0, r.useChannelPresetSettings)(e), s = e => {
+  } = (0, d.useChannelPresetSettings)(e), s = e => {
     e(), t()
   }, u = t => {
     let n = {
       message_notifications: t
     };
-    t === _.UserNotificationSettings.ALL_MESSAGES && a !== c.UnreadSetting.ALL_MESSAGES && (n.flags = (0, d.withChannelUnreadFlags)(S.default.getChannelIdFlags(e.guild_id, e.id), N.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), o.default.updateChannelOverrideSettings(e.guild_id, e.id, n, g.NotificationLabel.notifications(t))
+    t === _.UserNotificationSettings.ALL_MESSAGES && a !== c.UnreadSetting.ALL_MESSAGES && (n.flags = (0, r.withChannelUnreadFlags)(S.default.getChannelIdFlags(e.guild_id, e.id), N.ChannelNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), o.default.updateChannelOverrideSettings(e.guild_id, e.id, n, g.NotificationLabel.notifications(t))
   };
   return (0, i.jsxs)(l.MenuGroup, {
     children: [(0, i.jsxs)(l.MenuItem, {
@@ -131,7 +131,7 @@ function M(e, t) {
         group: "unread_setting",
         checked: a === c.UnreadSetting.ALL_MESSAGES,
         label: f.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-        action: () => s(() => (0, r.updateChannelUnreadSetting)(e.guild_id, e.id, c.UnreadSetting.ALL_MESSAGES))
+        action: () => s(() => (0, d.updateChannelUnreadSetting)(e.guild_id, e.id, c.UnreadSetting.ALL_MESSAGES))
       }), (0, i.jsx)(l.MenuRadioItem, {
         id: "unread_setting_mention_only",
         group: "unread_setting",
@@ -139,7 +139,7 @@ function M(e, t) {
         label: f.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
         disabled: a !== c.UnreadSetting.ONLY_MENTIONS && n === _.UserNotificationSettings.ALL_MESSAGES,
         subtext: a !== c.UnreadSetting.ONLY_MENTIONS && n === _.UserNotificationSettings.ALL_MESSAGES ? f.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0,
-        action: () => s(() => (0, r.updateChannelUnreadSetting)(e.guild_id, e.id, c.UnreadSetting.ONLY_MENTIONS))
+        action: () => s(() => (0, d.updateChannelUnreadSetting)(e.guild_id, e.id, c.UnreadSetting.ONLY_MENTIONS))
       })]
     }, "unread_setting"), (0, i.jsxs)(l.MenuItem, {
       id: "push_settings",

@@ -9,8 +9,8 @@ n("884691");
 var i = n("85336"),
   l = n("262683"),
   s = n("946359"),
-  u = n("724269"),
-  a = n("559362"),
+  a = n("724269"),
+  u = n("559362"),
   o = n("671672"),
   c = n("101432"),
   d = n("458985"),
@@ -32,7 +32,7 @@ function I(e) {
     })
   }, {
     key: i.Step.BENEFITS,
-    renderStep: e => (0, r.jsx)(a.default, {
+    renderStep: e => (0, r.jsx)(u.default, {
       application: I,
       listing: _,
       ...e
@@ -53,7 +53,7 @@ function I(e) {
     }
   }, {
     key: i.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-    renderStep: () => (0, r.jsx)(u.default, {})
+    renderStep: () => (0, r.jsx)(a.default, {})
   }, {
     key: i.Step.AWAITING_AUTHENTICATION,
     renderStep: () => (0, r.jsx)(s.default, {})

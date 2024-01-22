@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return a
   }
 }), E("222007");
 var t = E("689988"),
@@ -21,4 +21,4 @@ class r extends t.default {
     super(...e), this.stores = new Map().set(n.default, this.handleFocusParticipant)
   }
 }
-var i = new r
+var a = new r

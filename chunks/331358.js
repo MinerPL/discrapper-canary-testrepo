@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("65597"),
   n = s("819855"),
   l = s("79112"),
-  i = s("841098"),
-  r = s("697218"),
+  r = s("841098"),
+  i = s("697218"),
   u = s("719923"),
   o = s("49111"),
   d = s("397336"),
@@ -16,15 +16,15 @@ var a = s("65597"),
   _ = s("737117"),
   E = s("550722"),
   I = s("113705"),
-  T = s("743437"),
-  f = s("404875"),
+  f = s("743437"),
+  T = s("404875"),
   S = s("118536"),
   R = s("411389"),
   m = s("840456"),
   p = s("720917"),
   N = s("982784"),
-  A = s("19530"),
-  g = s("215541"),
+  g = s("19530"),
+  A = s("215541"),
   P = s("663411"),
   C = s("126304"),
   O = s("674065"),
@@ -33,17 +33,17 @@ var a = s("65597"),
   L = s("578770"),
   x = s("761708"),
   v = s("224456"),
-  U = s("656564"),
+  j = s("656564"),
   b = s("124989"),
-  j = s("14528"),
+  U = s("14528"),
   D = s("443817"),
   G = s("759308");
 let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
   y = e => {
     let {
       styles: t
-    } = e, s = (0, i.default)(), n = (0, a.default)([r.default], () => {
-      let e = r.default.getCurrentUser();
+    } = e, s = (0, r.default)(), n = (0, a.default)([i.default], () => {
+      let e = i.default.getCurrentUser();
       return u.default.canUsePremiumProfileCustomization(e)
     }), y = c.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, k = {
       badge: {
@@ -92,19 +92,19 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
             onTryItOutClick: t
           })
         },
-        imageSource: f,
+        imageSource: T,
         imageClassName: t.perGuildProfilesImage
       },
       longerMessages: {
         title: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: B(s, v, U),
+        imageSource: B(s, v, j),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {
         title: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_MORE_GUILDS_PERK_DESCRIPTION,
-        imageSource: B(s, T, b),
+        imageSource: B(s, f, b),
         imageClassName: t.moreGuildsImage
       },
       moreGuildsAlt: {
@@ -123,25 +123,25 @@ let B = (e, t, s) => (0, n.isThemeDark)(e) ? t : s,
       soundboard: {
         title: c.default.Messages.SOUND_BOARD_MARKETING_USE_CUSTOM_SOUNDS,
         description: c.default.Messages.SOUNDBOARD_MARKETING_REACT_WITH_SOUNDBOARD,
-        imageSource: B(s, N, A),
+        imageSource: B(s, N, g),
         imageClassName: t.soundboardImage
       },
       stickers: {
         title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE_OLD,
         description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: B(s, g, j),
+        imageSource: B(s, A, U),
         imageClassName: t.stickersImage
       },
       stickersBurst: {
         title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_DESCRIPTION,
-        imageSource: B(s, g, j),
+        imageSource: B(s, A, U),
         imageClassName: t.stickersImage
       },
       stickersPerkDiscoverability: {
         title: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
         description: c.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-        imageSource: B(s, g, j),
+        imageSource: B(s, A, U),
         imageClassName: t.stickersImage
       },
       streaming: {

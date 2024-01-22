@@ -24,8 +24,8 @@ function c(e) {
     label: f,
     tooltip: m,
     loading: p,
-    disabled: E,
-    onClick: T
+    disabled: T,
+    onClick: E
   } = (0, u.useSpotifyPlayAction)(t, l, a);
   return (0, n.jsx)(i.Tooltip, {
     text: m,
@@ -36,10 +36,10 @@ function c(e) {
       } = e;
       return (0, n.jsx)(i.Button, {
         ...s(c, ["channelId", "guildId"]),
-        onClick: T,
+        onClick: E,
         onMouseEnter: t,
         onMouseLeave: l,
-        disabled: E,
+        disabled: T,
         submitting: p,
         children: (0, n.jsxs)(r.default, {
           align: r.default.Align.CENTER,

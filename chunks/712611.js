@@ -18,8 +18,8 @@ var a = n("446674"),
   E = n("102985"),
   m = n("697218"),
   p = n("49111");
-let S = {},
-  g = {};
+let g = {},
+  S = {};
 
 function N(e) {
   let {
@@ -29,11 +29,11 @@ function N(e) {
     tokens: l,
     cursorScope: s,
     autocompletes: r
-  } = e, o = g[t];
+  } = e, o = S[t];
   return null == o && (o = {
     results: [],
     context: i.default.getSearchContext(_.bind(null, t))
-  }, g[t] = o), {
+  }, S[t] = o), {
     query: null != n ? n : "",
     mode: null != a ? a : {
       type: p.SearchPopoutModes.EMPTY,
@@ -49,7 +49,7 @@ function N(e) {
 function _(e, t) {
   let {
     results: n
-  } = t, a = g[e], l = S[e];
+  } = t, a = S[e], l = g[e];
   if (null == a || null == l) return;
   let {
     type: s,
@@ -76,7 +76,7 @@ function _(e, t) {
   } = l, {
     autocompletes: h
   } = l;
-  h = C(e, u), S[e] = N({
+  h = C(e, u), g[e] = N({
     searchId: e,
     query: o,
     mode: u,
@@ -91,7 +91,7 @@ function T(e, t, n) {
   if (null == e || "" === e) return null;
   let i = h.default.getSearchType(n);
   if (i === p.SearchTypes.GUILD && (e === p.SearchTokenTypes.FILTER_FROM || e === p.SearchTokenTypes.FILTER_MENTIONS)) {
-    let e = g[n];
+    let e = S[n];
     null == e ? a = null : ((null == t || 0 === t.getFullMatch().trim().length) && (e.results = o.default.getRecentlyTalked(n, 10).map(e => {
       let {
         record: t
@@ -187,7 +187,7 @@ function A() {
 }
 
 function M(e) {
-  let t = S[e];
+  let t = g[e];
   if (null == t) return;
   let {
     query: n,
@@ -196,7 +196,7 @@ function M(e) {
     cursorScope: s,
     autocompletes: i
   } = t;
-  S[e] = N({
+  g[e] = N({
     searchId: e,
     query: n,
     mode: a,
@@ -208,14 +208,14 @@ function M(e) {
 
 function v() {
   let e = h.default.getCurrentSearchId();
-  if (null == e || null == S[e]) return;
+  if (null == e || null == g[e]) return;
   let {
     query: t,
     mode: n,
     tokens: a,
     cursorScope: l
-  } = S[e];
-  S[e] = N({
+  } = g[e];
+  g[e] = N({
     searchId: e,
     query: t,
     mode: n,
@@ -230,7 +230,7 @@ class x extends a.default.Store {
   }
   getState(e) {
     var t;
-    return null !== (t = S[e]) && void 0 !== t ? t : N({
+    return null !== (t = g[e]) && void 0 !== t ? t : N({
       searchId: e
     })
   }
@@ -246,8 +246,8 @@ let R = new x(l.default, {
       } = e,
       i = (0, d.getQueryFromTokens)(l),
       r = (0, d.getAutocompleteMode)(s, l),
-      o = null !== (t = S[a]) && void 0 !== t ? t : {},
-      c = g[a],
+      o = null !== (t = g[a]) && void 0 !== t ? t : {},
+      c = S[a],
       f = !0;
     if (i === o.query && (null == o.mode || o.mode.filter === r.filter)) n = o.autocompletes, f = !1;
     else if (r.type === p.SearchPopoutModes.EMPTY || r.type === p.SearchPopoutModes.FILTER && r.filter !== p.SearchTokenTypes.FILTER_FROM && r.filter !== p.SearchTokenTypes.FILTER_MENTIONS) null != c && (c.context.clearQuery(), c.results = []), n = C(a, r);
@@ -259,7 +259,7 @@ let R = new x(l.default, {
         guild: a
       }), n = o.autocompletes, f = !1) : (c.context.clearQuery(), n = C(a, r))
     }
-    return S[a] = N({
+    return g[a] = N({
       searchId: a,
       query: i,
       mode: r,
@@ -271,8 +271,8 @@ let R = new x(l.default, {
   SEARCH_EDITOR_STATE_CLEAR: function(e) {
     let {
       searchId: t
-    } = e, n = g[t];
-    null != n && (n.context.destroy(), n.results = [], delete g[t]), delete S[t]
+    } = e, n = S[t];
+    null != n && (n.context.destroy(), n.results = [], delete S[t]), delete g[t]
   },
   CHANNEL_CREATE: A,
   CHANNEL_DELETE: A,
@@ -283,10 +283,10 @@ let R = new x(l.default, {
     let {
       searchId: t
     } = e;
-    null != t ? M(t) : Object.keys(S).forEach(M)
+    null != t ? M(t) : Object.keys(g).forEach(M)
   },
   LOGOUT: function() {
-    Object.keys(S).forEach(M)
+    Object.keys(g).forEach(M)
   }
 });
 var L = R

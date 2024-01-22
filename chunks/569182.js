@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   openStageChannelAudienceNoticeModal: function() {
-    return i
+    return s
   }
 });
-var s = n("751661");
+var i = n("751661");
 
-function i(e) {
-  s.openStageChannelAudienceNoticeModal(e)
+function s(e) {
+  i.openStageChannelAudienceNoticeModal(e)
 }

@@ -1,6 +1,6 @@
 "use strict";
 
-function s(e) {
+function i(e) {
   {
     let t = n("801373").default;
     t(e)
@@ -8,6 +8,6 @@ function s(e) {
 }
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 })

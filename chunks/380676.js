@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ClassificationEvidence: function() {
-    return R
+    return y
   }
 }), n("222007"), n("506083");
 var i = n("37983"),
@@ -19,13 +19,13 @@ var i = n("37983"),
   p = n("227439"),
   S = n("697218"),
   I = n("170113"),
-  h = n("780571"),
-  T = n("377502"),
+  T = n("780571"),
+  h = n("377502"),
   C = n("103603"),
   g = n("736393"),
-  m = n("170213"),
+  A = n("170213"),
   v = n("49111"),
-  A = n("719347"),
+  m = n("719347"),
   N = n("782340"),
   L = n("161730");
 let U = (e, t) => {
@@ -40,8 +40,8 @@ let U = (e, t) => {
       if (!(0, u.isImageFile)(e.filename)) return a;
       return {
         ...a,
-        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : m.DEFAULT_MEDIA_MAX_WIDTH,
-        height: null !== (r = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== r ? r : m.DEFAULT_MEDIA_MAX_HEIGHT
+        width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : A.DEFAULT_MEDIA_MAX_WIDTH,
+        height: null !== (r = null === (i = t[e.id]) || void 0 === i ? void 0 : i.height) && void 0 !== r ? r : A.DEFAULT_MEDIA_MAX_HEIGHT
       }
     });
     return (0, c.createMessageRecord)({
@@ -56,7 +56,7 @@ let U = (e, t) => {
       state: v.MessageStates.SENT
     })
   },
-  y = e => {
+  R = e => {
     let {
       message: t
     } = e, {
@@ -64,16 +64,16 @@ let U = (e, t) => {
     } = t;
     if (0 === n.length) return null;
     let l = (e, t, n) => {
-        let l = m.DEFAULT_MEDIA_MAX_WIDTH,
-          a = m.DEFAULT_MEDIA_MAX_HEIGHT;
+        let l = A.DEFAULT_MEDIA_MAX_WIDTH,
+          a = A.DEFAULT_MEDIA_MAX_HEIGHT;
         if (null != t.width && null != t.height) {
           let e = (0, C.getRatio)({
             width: t.width,
             height: t.height,
-            maxWidth: m.DEFAULT_MEDIA_MAX_WIDTH,
-            maxHeight: m.DEFAULT_MEDIA_MAX_HEIGHT
+            maxWidth: A.DEFAULT_MEDIA_MAX_WIDTH,
+            maxHeight: A.DEFAULT_MEDIA_MAX_HEIGHT
           });
-          l = (0, r.clamp)(Math.round(t.width * e), 0, m.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, m.DEFAULT_MEDIA_MAX_HEIGHT)
+          l = (0, r.clamp)(Math.round(t.width * e), 0, A.DEFAULT_MEDIA_MAX_WIDTH), a = (0, r.clamp)(Math.round(t.height * e), 0, A.DEFAULT_MEDIA_MAX_HEIGHT)
         }
         return (0, i.jsx)("div", {
           style: {
@@ -108,12 +108,12 @@ let U = (e, t) => {
       a = 1 === n.length;
     return (0, i.jsx)("div", {
       className: L.classificationEvidenceMessageAttachment,
-      children: (0, i.jsx)(T.default, {
+      children: (0, i.jsx)(h.default, {
         attachments: n.map(e => ({
           attachment: e,
           spoiler: !0,
           message: t,
-          mediaLayoutType: A.MediaLayoutType.MOSAIC,
+          mediaLayoutType: m.MediaLayoutType.MOSAIC,
           autoPlayGif: !1,
           inlineMedia: !0,
           canRemoveAttachment: !1,
@@ -133,11 +133,11 @@ let U = (e, t) => {
       })
     })
   },
-  R = e => {
+  y = e => {
     var t;
     let {
       flaggedContent: n
-    } = e, r = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [a, u] = l.useState({}), [c, d] = l.useState(!0), f = n[0], I = U(f, a), T = (0, E.default)(I, {
+    } = e, r = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [a, u] = l.useState({}), [c, d] = l.useState(!0), f = n[0], I = U(f, a), h = (0, E.default)(I, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -167,7 +167,7 @@ let U = (e, t) => {
         children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
       }), c ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)("div", {
         className: L.classificationEvidenceCard,
-        children: (0, i.jsx)(h.default, {
+        children: (0, i.jsx)(T.default, {
           compact: !1,
           childrenHeader: (0, p.default)({
             author: {
@@ -184,12 +184,12 @@ let U = (e, t) => {
             roleIcon: void 0,
             hideTimestamp: !1
           }),
-          childrenAccessories: (0, i.jsx)(y, {
+          childrenAccessories: (0, i.jsx)(R, {
             message: I
           }),
           childrenMessageContent: (0, _.default)({
             message: I
-          }, T.content),
+          }, h.content),
           hasThread: !1,
           hasReply: !1
         })

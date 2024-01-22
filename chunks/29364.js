@@ -2,11 +2,11 @@
 var r = {
     foo: {}
   },
-  o = Object;
+  i = Object;
 e.exports = function() {
   return ({
     __proto__: r
   }).foo === r.foo && !(({
     __proto__: null
-  }) instanceof o)
+  }) instanceof i)
 }

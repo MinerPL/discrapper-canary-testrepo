@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   },
   MEMBER_JOIN_DATE_TOOLTIP_CONFIG: function() {
-    return a
+    return u
   },
   MembersTableDateFormats: function() {
     return i
@@ -22,7 +22,7 @@ let o = {
     hour: "numeric",
     minute: "2-digit"
   },
-  a = {
+  u = {
     month: "short",
     day: "numeric",
     year: "numeric",
@@ -30,7 +30,7 @@ let o = {
     minute: "2-digit"
   };
 (l = i || (i = {}))[l.JOINED_AT = 0] = "JOINED_AT", l[l.ACCOUNT_AGE = 1] = "ACCOUNT_AGE";
-let u = () => ({
+let a = () => ({
     seconds: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_SECONDS,
     minutes: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_MINUTES,
     hours: s.default.Messages.MEMBERS_TABLE_JOINED_AT_TIMESTAMP_HOURS,
@@ -46,6 +46,6 @@ let u = () => ({
   }),
   d = (e, t) => {
     var n;
-    let l = 0 === (n = t) ? u : 1 === n ? c : void 0;
+    let l = 0 === (n = t) ? a : 1 === n ? c : void 0;
     return (0, r.default)(e, l, !1)
   }

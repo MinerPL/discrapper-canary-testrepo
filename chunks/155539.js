@@ -21,8 +21,8 @@ var a = A("37983"),
   T = A("949435"),
   m = A("757515"),
   p = A("527382"),
-  U = A("500307"),
-  I = A("782340"),
+  I = A("500307"),
+  U = A("782340"),
   v = A("245793");
 let E = (0, c.uid)();
 
@@ -56,7 +56,7 @@ function x(e) {
         className: v.attachedFileCardSpinner,
         type: s.Spinner.Type.SPINNING_CIRCLE
       }), h && null != o && (0, a.jsx)(s.Button, {
-        "aria-label": I.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
+        "aria-label": U.default.Messages.GUILD_PRODUCT_DELETE_ATTACHMENT.format({
           attachment: T
         }),
         className: v.deleteButton,
@@ -101,8 +101,8 @@ function N(e) {
     className: v.container,
     children: [(0, a.jsx)(o.default, {
       className: v.uploadArea,
-      title: I.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
-      description: I.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
+      title: U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_TITLE,
+      description: U.default.Messages.GUILD_PRODUCT_UPLOAD_AREA_INSTRUCTIONS,
       icons: p.DEFAULT_FILE_UPLOAD_ICONS,
       onDrop: m
     }), (0, a.jsxs)(f.default, {
@@ -110,7 +110,7 @@ function N(e) {
       innerClassName: v.addFileButton,
       color: s.Button.Colors.CUSTOM,
       disabled: !n,
-      "aria-label": I.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
+      "aria-label": U.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON,
       "aria-describedby": E,
       multiple: !0,
       onChange: function(e) {
@@ -125,7 +125,7 @@ function N(e) {
       }), (0, a.jsx)(s.Text, {
         variant: "text-sm/medium",
         color: "always-white",
-        children: I.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
+        children: U.default.Messages.GUILD_PRODUCT_UPLOAD_FILE_BUTTON
       })]
     }), (0, a.jsx)(d.default, {
       size: 12
@@ -133,17 +133,17 @@ function N(e) {
       id: E,
       color: "text-muted",
       variant: "text-xs/normal",
-      children: r ? I.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
-        fileUploadLimit: U.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
-      }) : I.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
-        fileUploadLimit: U.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
+      children: r ? U.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS_ARCHIVES_ALLOWED.format({
+        fileUploadLimit: I.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
+      }) : U.default.Messages.GUILD_PRODUCT_UPLOAD_ATTACHMENT_INSTRUCTIONS.format({
+        fileUploadLimit: I.GUILD_PRODUCT_MAX_TOTAL_ATTACHMENT_SIZE
       })
     }), A.length > 0 && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
         className: v.separator
       }), (0, a.jsx)("ul", {
         className: v.attachedFilesContainer,
-        "aria-label": I.default.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
+        "aria-label": U.default.Messages.GUILD_PRODUCT_ATTACHED_FILES_SECTION_LABEL,
         children: A.map(e => (0, a.jsx)("li", {
           children: (0, a.jsx)(x, {
             upload: e,

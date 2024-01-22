@@ -9,28 +9,28 @@ var u = r("635058"),
   n = r("446674"),
   i = r("913144"),
   s = r("853987");
-let a = new Date(2023, 8, 25),
-  c = new Date(2023, 9, 5),
-  o = () => ({
+let o = new Date(2023, 8, 25),
+  a = new Date(2023, 9, 5),
+  c = () => ({
     categoryItemViews: {
       [u.CollectiblesCategorySkuId.FANTASY]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: c
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o,
+        [l.CollectiblesItemType.PROFILE_EFFECT]: a
       },
       [u.CollectiblesCategorySkuId.ANIME]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: c
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o,
+        [l.CollectiblesItemType.PROFILE_EFFECT]: a
       },
       [u.CollectiblesCategorySkuId.BREAKFAST]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a,
-        [l.CollectiblesItemType.PROFILE_EFFECT]: c
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o,
+        [l.CollectiblesItemType.PROFILE_EFFECT]: a
       },
       [u.CollectiblesCategorySkuId.DISXCORE]: {
-        [l.CollectiblesItemType.AVATAR_DECORATION]: a
+        [l.CollectiblesItemType.AVATAR_DECORATION]: o
       }
     }
   }),
-  d = o();
+  d = c();
 class E extends n.default.PersistedStore {
   initialize(e) {
     null != e && (d = e)
@@ -44,7 +44,7 @@ class E extends n.default.PersistedStore {
     return null != u && (null === (r = d.categoryItemViews[u]) || void 0 === r ? void 0 : r[e.type]) != null
   }
   reset() {
-    d = o()
+    d = c()
   }
 }
 E.displayName = "CollectiblesPersistedStore", E.persistKey = "CollectiblesPersistedStoreV2";

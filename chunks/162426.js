@@ -4,17 +4,17 @@ u.r(e), u.d(e, {
     return l
   }
 }), u("222007");
-var r = u("884691"),
-  n = u("599417"),
+var n = u("884691"),
+  r = u("599417"),
   i = u("782340");
 
 function l(t) {
-  let [e, u] = r.useState(!1), [l, o] = r.useState(null), c = r.useCallback(async function() {
-    for (var e = arguments.length, r = Array(e), l = 0; l < e; l++) r[l] = arguments[l];
+  let [e, u] = n.useState(!1), [l, o] = n.useState(null), c = n.useCallback(async function() {
+    for (var e = arguments.length, n = Array(e), l = 0; l < e; l++) n[l] = arguments[l];
     try {
-      return o(null), u(!0), await t(...r)
+      return o(null), u(!0), await t(...n)
     } catch (t) {
-      t.message !== i.default.Messages.MFA_V2_CANCELED && o(t instanceof n.default ? t : new n.default(t))
+      t.message !== i.default.Messages.MFA_V2_CANCELED && o(t instanceof r.default ? t : new r.default(t))
     } finally {
       u(!1)
     }

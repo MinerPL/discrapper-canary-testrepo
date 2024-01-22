@@ -8,11 +8,11 @@ function r(e) {
   })(e)
 }
 
-function o(e) {
+function i(e) {
   return null !== e && "object" === r(e) && Object.prototype.hasOwnProperty.call(e, "current")
 }
 n.r(t), n.d(t, {
   isRef: function() {
-    return o
+    return i
   }
 }), n("222007")

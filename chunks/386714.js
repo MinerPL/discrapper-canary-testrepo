@@ -17,6 +17,6 @@ function l(e, t) {
       size: 480
     });
   if (null == s) return;
-  let u = new Image;
-  u.src = s
+  let a = new Image;
+  a.src = s
 }

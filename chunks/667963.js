@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(e), a.d(e, {
   useIsSafetyHubDisplayGuildViolationsEnabled: function() {
-    return r
+    return s
   }
 });
-var i = n("862205");
-let l = (0, i.createExperiment)({
+var n = a("862205");
+let i = (0, n.createExperiment)({
   kind: "user",
   id: "2024-01_safety_hub_display_guild_violations",
   label: "Safety Hub Display Guild Violations",
@@ -21,9 +21,9 @@ let l = (0, i.createExperiment)({
   }]
 });
 
-function r(e) {
-  return !!l.useExperiment({
-    location: e
+function s(t) {
+  return !!i.useExperiment({
+    location: t
   }, {
     autoTrackExposure: !0
   }).enabled

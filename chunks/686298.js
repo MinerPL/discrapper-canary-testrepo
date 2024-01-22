@@ -7,39 +7,39 @@ n.r(t), n.d(t, {
     return f
   },
   ApplicationStreamFPS: function() {
-    return r
-  },
-  ApplicationStreamPresets: function() {
     return s
   },
+  ApplicationStreamPresets: function() {
+    return r
+  },
   getApplicationFramerate: function() {
-    return E
+    return _
   },
   ApplicationStreamPresetValues: function() {
     return h
   },
   ApplicationStreamSettingRequirements: function() {
-    return p
-  },
-  ApplicationStreamResolutionButtons: function() {
-    return S
-  },
-  GoLiveDeviceResolutionButtons: function() {
-    return m
-  },
-  ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
     return g
   },
+  ApplicationStreamResolutionButtons: function() {
+    return E
+  },
+  GoLiveDeviceResolutionButtons: function() {
+    return p
+  },
+  ApplicationStreamResolutionButtonsWithSuffixLabel: function() {
+    return S
+  },
   ApplicationStreamFPSButtons: function() {
-    return I
+    return T
   },
   ApplicationStreamFPSButtonsWithSuffixLabel: function() {
-    return C
+    return I
   }
 }), n("70102");
-var i, r, s, a, o, l, u = n("49111"),
-  c = n("646718"),
-  d = n("782340");
+var i, s, r, a, o, l, u = n("49111"),
+  d = n("646718"),
+  c = n("782340");
 
 function f(e) {
   switch (e) {
@@ -56,7 +56,7 @@ function f(e) {
   }
 }
 
-function E(e) {
+function _(e) {
   switch (e) {
     case 5:
       return 5;
@@ -69,7 +69,7 @@ function E(e) {
     default:
       throw Error("Unknown frame rate: ".concat(e))
   }
-}(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = r || (r = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = s || (s = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
+}(a = i || (i = {}))[a.RESOLUTION_480 = 480] = "RESOLUTION_480", a[a.RESOLUTION_720 = 720] = "RESOLUTION_720", a[a.RESOLUTION_1080 = 1080] = "RESOLUTION_1080", a[a.RESOLUTION_1440 = 1440] = "RESOLUTION_1440", a[a.RESOLUTION_SOURCE = 0] = "RESOLUTION_SOURCE", (o = s || (s = {}))[o.FPS_5 = 5] = "FPS_5", o[o.FPS_15 = 15] = "FPS_15", o[o.FPS_30 = 30] = "FPS_30", o[o.FPS_60 = 60] = "FPS_60", (l = r || (r = {}))[l.PRESET_VIDEO = 1] = "PRESET_VIDEO", l[l.PRESET_DOCUMENTS = 2] = "PRESET_DOCUMENTS", l[l.PRESET_CUSTOM = 3] = "PRESET_CUSTOM";
 let h = {
     2: [{
       resolution: 0,
@@ -93,18 +93,18 @@ let h = {
     }],
     3: []
   },
-  p = [{
+  g = [{
     resolution: 0,
     fps: 60,
-    quality: c.StreamQualities.HIGH_STREAMING_QUALITY
+    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
   }, {
     resolution: 0,
     fps: 30,
-    quality: c.StreamQualities.HIGH_STREAMING_QUALITY
+    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
   }, {
     resolution: 0,
     fps: 15,
-    quality: c.StreamQualities.HIGH_STREAMING_QUALITY
+    quality: d.StreamQualities.HIGH_STREAMING_QUALITY
   }, {
     resolution: 0,
     fps: 5,
@@ -113,37 +113,37 @@ let h = {
     resolution: 1440,
     fps: 60,
     guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 1440,
     fps: 30,
     guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 1440,
     fps: 15,
     guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 1080,
     fps: 60,
     guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 1080,
     fps: 30,
     guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 1080,
     fps: 15,
     guildPremiumTier: u.BoostedGuildTiers.TIER_2,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 720,
     fps: 60,
     guildPremiumTier: u.BoostedGuildTiers.TIER_1,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 720,
     fps: 30
@@ -157,7 +157,7 @@ let h = {
     resolution: 480,
     fps: 60,
     guildPremiumTier: u.BoostedGuildTiers.TIER_1,
-    quality: c.StreamQualities.MID_STREAMING_QUALITY
+    quality: d.StreamQualities.MID_STREAMING_QUALITY
   }, {
     resolution: 480,
     fps: 30
@@ -169,7 +169,7 @@ let h = {
     fps: 5
   }];
 
-function _(e, t) {
+function m(e, t) {
   return {
     value: e,
     get label() {
@@ -177,15 +177,15 @@ function _(e, t) {
     }
   }
 }
-let S = [_(720), _(1080), _(1440), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
-  m = [_(720), _(1080), _(1440)],
-  T = e => "".concat(e, "p"),
-  g = [_(480, () => T(480)), _(720, () => T(720)), _(1080, () => T(1080)), _(1440, () => T(1440)), _(0, () => d.default.Messages.SCREENSHARE_SOURCE)],
-  I = [_(15), _(30), _(60)],
-  C = [_(15, () => d.default.Messages.STREAM_FPS_OPTION.format({
+let E = [m(720), m(1080), m(1440), m(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+  p = [m(720), m(1080), m(1440)],
+  v = e => "".concat(e, "p"),
+  S = [m(480, () => v(480)), m(720, () => v(720)), m(1080, () => v(1080)), m(1440, () => v(1440)), m(0, () => c.default.Messages.SCREENSHARE_SOURCE)],
+  T = [m(15), m(30), m(60)],
+  I = [m(15, () => c.default.Messages.STREAM_FPS_OPTION.format({
     value: 15
-  })), _(30, () => d.default.Messages.STREAM_FPS_OPTION.format({
+  })), m(30, () => c.default.Messages.STREAM_FPS_OPTION.format({
     value: 30
-  })), _(60, () => d.default.Messages.STREAM_FPS_OPTION.format({
+  })), m(60, () => c.default.Messages.STREAM_FPS_OPTION.format({
     value: 60
   }))]

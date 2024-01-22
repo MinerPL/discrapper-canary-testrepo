@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   OutputEvent: function() {
-    return r
+    return s
   },
   default: function() {
-    return s
+    return r
   }
 });
-var i, r, s, a = n("811022"),
+var i, s, r, a = n("811022"),
   o = n("595275"),
   l = n("861001"),
   u = n("441822"),
-  c = n("353927");
-let d = new a.default("Output");
-(i = r || (r = {})).InteractionRequired = "interactionrequired", i.Speaking = "speaking", i.Video = "video", s = class extends o.default {
+  d = n("353927");
+let c = new a.default("Output");
+(i = s || (s = {})).InteractionRequired = "interactionrequired", i.Speaking = "speaking", i.Video = "video", r = class extends o.default {
   play() {
     var e;
     null === (e = this.audioElement) || void 0 === e || e.play()
   }
   destroy() {
     var e;
-    null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, u.unregisterVideoStream)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), this.streamSourceNode = null), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage("close"), this.levelNode = null), this.setSpeakingFlags(c.SpeakingFlags.NONE), this.removeAllListeners()
+    null === (e = this.audioElement) || void 0 === e || e.pause(), null != this.videoStreamId && (0, u.unregisterVideoStream)(this.videoStreamId), null != this.streamSourceNode && (this.streamSourceNode.disconnect(), this.streamSourceNode = null), null != this.levelNode && (this.levelNode.disconnect(), this.levelNode.port.postMessage("close"), this.levelNode = null), this.setSpeakingFlags(d.SpeakingFlags.NONE), this.removeAllListeners()
   }
   addTrack(e) {
     if (this.stream.getTracks().includes(e)) return this.stream.getTracks().length;
@@ -37,7 +37,7 @@ let d = new a.default("Output");
           this.emit("speaking", e.data)
         }, null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode)
       } catch (e) {
-        d.warn("Output#Failed to setup speaking indicator: ".concat(e))
+        c.warn("Output#Failed to setup speaking indicator: ".concat(e))
       }
     }
     if ("video" === e.kind) {
@@ -68,13 +68,13 @@ let d = new a.default("Output");
     this._mute = e || !1, this.updateAudioElement()
   }
   get priority() {
-    return (this._speakingFlags & c.SpeakingFlags.PRIORITY) === c.SpeakingFlags.PRIORITY
+    return (this._speakingFlags & d.SpeakingFlags.PRIORITY) === d.SpeakingFlags.PRIORITY
   }
   get volume() {
     return this._volume
   }
   set volume(e) {
-    this._volume = Math.max(0, Math.min(Math.round(e), c.DEFAULT_VOLUME)), this.updateAudioElement()
+    this._volume = Math.max(0, Math.min(Math.round(e), d.DEFAULT_VOLUME)), this.updateAudioElement()
   }
   get speakingFlags() {
     return this._speakingFlags
@@ -91,6 +91,6 @@ let d = new a.default("Output");
     }
   }
   constructor(e, t) {
-    super(), this._speakingFlags = c.SpeakingFlags.NONE, this._mute = !1, this._volume = c.DEFAULT_VOLUME, this.sinkId = null, this.audioElement = null, this.stream = new MediaStream, this.videoStreamId = null, this.levelNode = null, this.streamSourceNode = null, this.id = e, this.audioContext = t
+    super(), this._speakingFlags = d.SpeakingFlags.NONE, this._mute = !1, this._volume = d.DEFAULT_VOLUME, this.sinkId = null, this.audioElement = null, this.stream = new MediaStream, this.videoStreamId = null, this.levelNode = null, this.streamSourceNode = null, this.id = e, this.audioContext = t
   }
 }

@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s = n("446674"),
-  i = n("913144");
+var i = n("446674"),
+  s = n("913144");
 let r = !1;
-class a extends s.default.Store {
+class a extends i.default.Store {
   isProtocolRegistered() {
     return r
   }
 }
 a.displayName = "SpotifyProtocolStore";
-var o = new a(i.default, {
+var o = new a(s.default, {
   SPOTIFY_SET_PROTOCOL_REGISTERED: function(e) {
     let {
       isRegistered: t

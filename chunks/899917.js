@@ -1,79 +1,79 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return f
   }
 });
-var r = n("37983");
-n("884691");
-var o = n("446674"),
-  i = n("77078"),
-  a = n("387225"),
-  u = n("697218"),
-  s = n("145131"),
-  l = n("782340"),
-  c = n("557573");
+var n = s("37983");
+s("884691");
+var o = s("446674"),
+  i = s("77078"),
+  a = s("387225"),
+  l = s("697218"),
+  r = s("145131"),
+  d = s("782340"),
+  u = s("557573");
 
-function d(e) {
+function c(e) {
   let {
     onClose: t
-  } = e, s = (0, o.useStateFromStores)([u.default], () => u.default.getCurrentUser());
+  } = e, r = (0, o.useStateFromStores)([l.default], () => l.default.getCurrentUser());
 
-  function c() {
+  function u() {
     null == t || t()
   }
 
-  function d() {
-    c(), (0, i.openModalLazy)(async () => {
+  function c() {
+    u(), (0, i.openModalLazy)(async () => {
       let {
         default: e
-      } = await n.el("867693").then(n.bind(n, "867693"));
-      return t => (0, r.jsx)(e, {
+      } = await s.el("867693").then(s.bind(s, "867693"));
+      return t => (0, n.jsx)(e, {
         ...t
       })
     })
   }
-  return (null == s ? void 0 : s.email) == null ? (0, r.jsx)(i.Button, {
-    onClick: d,
+  return (null == r ? void 0 : r.email) == null ? (0, n.jsx)(i.Button, {
+    onClick: c,
     color: i.Button.Colors.BRAND,
     look: i.Button.Looks.FILLED,
-    children: l.default.Messages.ADD_EMAIL_SHORT
-  }) : (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(i.Button, {
-      onClick: d,
+    children: d.default.Messages.ADD_EMAIL_SHORT
+  }) : (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(i.Button, {
+      onClick: c,
       color: i.Button.Colors.PRIMARY,
       look: i.Button.Looks.LINK,
-      children: l.default.Messages.CHANGE_EMAIL_SHORT
-    }), (0, r.jsx)(a.default, {
+      children: d.default.Messages.CHANGE_EMAIL_SHORT
+    }), (0, n.jsx)(a.default, {
       color: i.Button.Colors.BRAND,
-      onClick: c
+      onClick: u
     })]
   })
 }
 var f = function(e) {
   let {
     onClose: t,
-    transitionState: n
+    transitionState: s
   } = e;
-  return (0, r.jsxs)(i.ModalRoot, {
-    transitionState: n,
-    children: [(0, r.jsx)(i.ModalHeader, {
-      children: (0, r.jsx)(i.FormTitle, {
+  return (0, n.jsxs)(i.ModalRoot, {
+    transitionState: s,
+    children: [(0, n.jsx)(i.ModalHeader, {
+      children: (0, n.jsx)(i.FormTitle, {
         tag: i.FormTitleTags.H4,
-        children: l.default.Messages.PREMIUM_NOT_VERIFIED
+        children: d.default.Messages.PREMIUM_NOT_VERIFIED
       })
-    }), (0, r.jsxs)(i.ModalContent, {
-      children: [(0, r.jsx)("div", {
-        className: c.imageUnverified
-      }), (0, r.jsx)(i.Text, {
+    }), (0, n.jsxs)(i.ModalContent, {
+      children: [(0, n.jsx)("div", {
+        className: u.imageUnverified
+      }), (0, n.jsx)(i.Text, {
         variant: "text-md/normal",
-        className: c.message,
-        children: l.default.Messages.PREMIUM_NOT_VERIFIED_BODY
+        className: u.message,
+        children: d.default.Messages.PREMIUM_NOT_VERIFIED_BODY
       })]
-    }), (0, r.jsx)(i.ModalFooter, {
-      children: (0, r.jsx)(s.default, {
-        justify: s.default.Justify.END,
-        children: (0, r.jsx)(d, {
+    }), (0, n.jsx)(i.ModalFooter, {
+      children: (0, n.jsx)(r.default, {
+        justify: r.default.Justify.END,
+        children: (0, n.jsx)(c, {
           onClose: t
         })
       })

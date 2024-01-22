@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
     return u
   },
   createGuildNode: function() {
-    return c
+    return d
   },
   createFolderNode: function() {
-    return d
+    return c
   }
 }), n("222007"), n("834022");
-var i, r, s = n("627445"),
-  a = n.n(s),
+var i, s, r = n("627445"),
+  a = n.n(r),
   o = n("917351");
 
 function l() {
   return Math.floor(4294967296 * Math.random())
-}(r = i || (i = {})).ROOT = "root", r.FOLDER = "folder", r.GUILD = "guild";
+}(s = i || (i = {})).ROOT = "root", s.FOLDER = "folder", s.GUILD = "guild";
 class u {
   getSnapshot() {
     return {
@@ -34,8 +34,8 @@ class u {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     this._pluckNode(e);
     let i = null != t.parentId ? this.nodes[t.parentId] : this.root,
-      r = i.children.indexOf(t);
-    return a(!("folder" === e.type && "folder" === i.type), "[GUILDS TREE] Tried moving a folder (".concat(e.id, ") inside of another folder (").concat(i.id, ")")), a(r >= 0, "[GUILDS TREE] target node (".concat(t.id, ") did not exist within its specified parent (").concat(t.parentId, ")")), i.children = [...i.children], i.children.splice(r + (n ? 1 : 0), 0, e), e.parentId = i.id, this.version++, this
+      s = i.children.indexOf(t);
+    return a(!("folder" === e.type && "folder" === i.type), "[GUILDS TREE] Tried moving a folder (".concat(e.id, ") inside of another folder (").concat(i.id, ")")), a(s >= 0, "[GUILDS TREE] target node (".concat(t.id, ") did not exist within its specified parent (").concat(t.parentId, ")")), i.children = [...i.children], i.children.splice(s + (n ? 1 : 0), 0, e), e.parentId = i.id, this.version++, this
   }
   moveInto(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -102,7 +102,7 @@ class u {
   }
 }
 
-function c(e, t) {
+function d(e, t) {
   return {
     type: "guild",
     id: e,
@@ -112,15 +112,15 @@ function c(e, t) {
   }
 }
 
-function d(e, t) {
-  var n, i, r;
+function c(e, t) {
+  var n, i, s;
   return {
     type: "folder",
     id: e.folderId,
     parentId: t,
     name: null !== (n = e.folderName) && void 0 !== n ? n : void 0,
     color: null !== (i = e.folderColor) && void 0 !== i ? i : void 0,
-    expanded: null !== (r = e.expanded) && void 0 !== r && r,
+    expanded: null !== (s = e.expanded) && void 0 !== s && s,
     children: []
   }
 }

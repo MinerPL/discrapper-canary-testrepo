@@ -29,9 +29,9 @@ n.r(t), n.d(t, {
   }
   update(t, n, i) {
     null == i && (i = n, n = void 0);
-    let r = this[t];
-    return r instanceof e || (r instanceof Array ? r = [...r] : r instanceof Object && (r = {
-      ...r
-    })), void 0 === r && (r = n), this.set(t, i(r))
+    let s = this[t];
+    return s instanceof e || (s instanceof Array ? s = [...s] : s instanceof Object && (s = {
+      ...s
+    })), void 0 === s && (s = n), this.set(t, i(s))
   }
 }

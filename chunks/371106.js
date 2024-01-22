@@ -1,5 +1,5 @@
 "use strict";
-t.exports = {
+e.exports = {
   Z_NO_FLUSH: 0,
   Z_PARTIAL_FLUSH: 1,
   Z_SYNC_FLUSH: 2,

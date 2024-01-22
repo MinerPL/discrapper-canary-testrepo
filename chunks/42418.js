@@ -1,34 +1,34 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return u
   }
-}), a("881410"), a("222007"), a("424973"), a("511434"), a("313619"), a("654714"), a("287168"), a("956660");
-var s = a("884691"),
-  n = a("65597"),
-  l = a("850391"),
-  r = a("585722"),
-  i = a("856220"),
-  o = a("891475");
+}), s("881410"), s("222007"), s("424973"), s("511434"), s("313619"), s("654714"), s("287168"), s("956660");
+var a = s("884691"),
+  n = s("65597"),
+  l = s("850391"),
+  r = s("585722"),
+  i = s("856220"),
+  o = s("891475");
 
-function d(e, t) {
-  var a, d;
+function u(e, t) {
+  var s, u;
   let {
-    mediaAttachments: u,
+    mediaAttachments: d,
     hasThumbnail: c
   } = function(e) {
-    let [t, a] = s.useState(null), o = (0, n.useStateFromStoresArray)([r.default], () => {
+    let [t, s] = a.useState(null), o = (0, n.useStateFromStoresArray)([r.default], () => {
       let t = r.default.getUploads(e.id, l.ChatInputTypes.CREATE_FORUM_POST.drafts.type),
-        a = t.find(e => e.isThumbnail);
-      return null != a ? [a] : t.filter(e => e.isVideo || e.isImage)
-    }), d = s.useMemo(() => o.some(e => e.isThumbnail), [o]);
-    return s.useEffect(() => {
+        s = t.find(e => e.isThumbnail);
+      return null != s ? [s] : t.filter(e => e.isVideo || e.isImage)
+    }), u = a.useMemo(() => o.some(e => e.isThumbnail), [o]);
+    return a.useEffect(() => {
       let e = [],
         t = o.slice(0, i.MAX_THUMBNAIL_COUNT).flatMap(t => {
-          var a;
-          let s = null == t ? void 0 : null === (a = t.item) || void 0 === a ? void 0 : a.file;
-          if (null == s) return [];
-          let n = URL.createObjectURL(s);
+          var s;
+          let a = null == t ? void 0 : null === (s = t.item) || void 0 === s ? void 0 : s.file;
+          if (null == a) return [];
+          let n = URL.createObjectURL(a);
           return e.push(n), {
             id: t.id,
             src: n,
@@ -39,16 +39,16 @@ function d(e, t) {
             isVideo: t.isVideo
           }
         });
-      return a(t), () => {
-        a(null), e.forEach(e => URL.revokeObjectURL(e))
+      return s(t), () => {
+        s(null), e.forEach(e => URL.revokeObjectURL(e))
       }
     }, [o]), {
       mediaAttachments: t,
-      hasThumbnail: d
+      hasThumbnail: u
     }
-  }(e), m = Math.max(i.MAX_THUMBNAIL_COUNT - (null !== (a = null == u ? void 0 : u.length) && void 0 !== a ? a : 0), 0), {
+  }(e), m = Math.max(i.MAX_THUMBNAIL_COUNT - (null !== (s = null == d ? void 0 : d.length) && void 0 !== s ? s : 0), 0), {
     embeds: h
-  } = (0, o.useExtractEmbedPreview)(c, m, t), f = s.useMemo(() => null == h ? void 0 : h.flatMap(e => {
+  } = (0, o.useExtractEmbedPreview)(c, m, t), f = a.useMemo(() => null == h ? void 0 : h.flatMap(e => {
     let t = (0, i.getEmbedPreviewImageUrl)(e);
     return null == t ? [] : {
       id: t,
@@ -56,6 +56,6 @@ function d(e, t) {
       spoiler: !1,
       alt: e.title
     }
-  }), [h]), g = [...null != u ? u : []];
-  return !c && m > 0 && g.push(...null !== (d = null == f ? void 0 : f.slice(0, m)) && void 0 !== d ? d : []), g
+  }), [h]), g = [...null != d ? d : []];
+  return !c && m > 0 && g.push(...null !== (u = null == f ? void 0 : f.slice(0, m)) && void 0 !== u ? u : []), g
 }

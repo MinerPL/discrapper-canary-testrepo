@@ -12,8 +12,8 @@ var r = n("37983"),
   s = n("414456"),
   a = n.n(s),
   l = n("77078"),
-  u = n("174727"),
-  o = n("93393"),
+  o = n("174727"),
+  u = n("93393"),
   c = n("888400"),
   d = n("719923"),
   f = n("917247"),
@@ -26,7 +26,7 @@ function E(e) {
     isTabSelected: t,
     expiresAt: n,
     trialDuration: s
-  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, u.default)(d, 6e4);
+  } = e, d = i.useMemo(() => Date.parse(n), [n]), f = (0, o.default)(d, 6e4);
   return Object.values(f).every(e => 0 === e) ? null : (0, r.jsx)(l.Tooltip, {
     text: (0, c.unitsAsStrings)(f, {
       days: _.default.Messages.PREMIUM_TRIAL_REMAINING_AVAILABILITY_DAYS,
@@ -38,7 +38,7 @@ function E(e) {
       className: a(m.premiumTrialBadge, m.premiumTrialAcknowledgedBadge, {
         [m.premiumTrialBadgeSelected]: t
       }),
-      children: [(0, r.jsx)(o.default, {
+      children: [(0, r.jsx)(u.default, {
         className: m.premiumTrialBadgeIcon
       }), s]
     })
@@ -54,7 +54,7 @@ function I(e) {
     intervalType: null == s ? void 0 : s.interval,
     intervalCount: null == s ? void 0 : s.interval_count
   });
-  return (0, r.jsx)(C, {
+  return (0, r.jsx)(T, {
     isTabSelected: n,
     badgeCopy: a,
     offerExpiresAt: i.expires_at,
@@ -70,7 +70,7 @@ function h(e) {
   } = e, s = _.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
     percent: n.discount.amount
   });
-  return (0, r.jsx)(C, {
+  return (0, r.jsx)(T, {
     isTabSelected: t,
     badgeCopy: i ? s : _.default.Messages.PREMIUM_DISCOUNT_BADGE,
     offerExpiresAt: n.expires_at,
@@ -78,7 +78,7 @@ function h(e) {
   })
 }
 
-function C(e) {
+function T(e) {
   let {
     isTabSelected: t,
     badgeCopy: n,

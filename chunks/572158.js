@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 }), s("424973"), s("222007");
 var a = s("37983"),
   n = s("884691"),
   l = s("446674"),
-  i = s("465527"),
-  r = s("86621"),
+  r = s("465527"),
+  i = s("86621"),
   u = s("299285"),
   o = s("539938"),
   d = s("393414"),
@@ -16,14 +16,14 @@ var a = s("37983"),
   _ = s("454589"),
   E = s("49111"),
   I = s("870103");
-class T extends n.PureComponent {
+class f extends n.PureComponent {
   componentDidMount() {
     let {
       sku: e,
       primarySkuId: t,
       isFetchingPrimarySku: s
     } = this.props;
-    null != t && !s && null != e && (0, i.fetchSKU)(e.applicationId, t)
+    null != t && !s && null != e && (0, r.fetchSKU)(e.applicationId, t)
   }
   render() {
     let {
@@ -68,7 +68,7 @@ class T extends n.PureComponent {
     })
   }
 }
-var f = (0, r.default)(l.default.connectStores([u.default, c.default], e => {
+var T = (0, i.default)(l.default.connectStores([u.default, c.default], e => {
   let {
     sku: t
   } = e, s = null != t ? u.default.getApplication(t.applicationId) : null, a = null != s && null != s.primarySkuId && s.primarySkuId !== t.id ? s.primarySkuId : null;
@@ -77,4 +77,4 @@ var f = (0, r.default)(l.default.connectStores([u.default, c.default], e => {
     isFetchingPrimarySku: null != a && c.default.isFetching(a),
     primarySku: null != a ? c.default.get(a) : null
   }
-})(T))
+})(f))

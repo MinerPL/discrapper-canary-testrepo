@@ -1,7 +1,7 @@
 "use strict";
-var s, i;
+var i, s;
 n.r(t), n.d(t, {
   OAuth2Prompts: function() {
-    return s
+    return i
   }
-}), (i = s || (s = {})).NONE = "none", i.CONSENT = "consent"
+}), (s = i || (i = {})).NONE = "none", s.CONSENT = "consent"

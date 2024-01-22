@@ -2,42 +2,42 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("222007");
-var r = n("917351"),
-  s = n.n(r),
+var s = n("917351"),
+  r = n.n(s),
   a = n("446674"),
   o = n("913144"),
   l = n("813006"),
   u = n("665618"),
-  c = n("605136"),
-  d = n("271938"),
+  d = n("605136"),
+  c = n("271938"),
   f = n("49111"),
-  E = n("695838");
+  _ = n("695838");
 let h = {},
-  p = !1,
-  _ = [];
+  g = !1,
+  m = [];
 
-function S(e) {
-  h = {}, i = 0, null != e.guilds && s.forEach(e.guilds, e => {
+function E(e) {
+  h = {}, i = 0, null != e.guilds && r.forEach(e.guilds, e => {
     i++, h[e.id] = u.fromSerializedGuildRecord(e)
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     guildId: t,
     role: n
   } = e, i = h[t];
   null != i && (h = {
     ...h,
-    [i.id]: i.upsertRole(c.fromServerRole(n))
+    [i.id]: i.upsertRole(d.fromServerRole(n))
   })
 }
-class T extends a.default.Store {
+class v extends a.default.Store {
   getGuild(e) {
-    if (null != e) return e === f.FAVORITES ? E.FAVORITES_GUILD_RECORD : h[e]
+    if (null != e) return e === f.FAVORITES ? _.FAVORITES_GUILD_RECORD : h[e]
   }
   getGuilds() {
     return h
@@ -49,14 +49,14 @@ class T extends a.default.Store {
     return i
   }
   isLoaded() {
-    return p
+    return g
   }
   getGeoRestrictedGuilds() {
-    return _
+    return m
   }
 }
-T.displayName = "GuildStore";
-var g = new T(o.default, {
+v.displayName = "GuildStore";
+var S = new v(o.default, {
   BACKGROUND_SYNC: function(e) {
     for (let t of e.guilds) {
       let e = h[t.id];
@@ -66,9 +66,9 @@ var g = new T(o.default, {
     i = Object.keys(h).length
   },
   CONNECTION_OPEN: function(e) {
-    p = !0, h = {}, i = 0, e.guilds.forEach(e => {
+    g = !0, h = {}, i = 0, e.guilds.forEach(e => {
       i++, h[e.id] = u.fromServer(e)
-    }), _ = e.geoRestrictedGuilds
+    }), m = e.geoRestrictedGuilds
   },
   OVERLAY_INITIALIZE: function(e) {
     var t;
@@ -76,8 +76,8 @@ var g = new T(o.default, {
       i++, h[e.id] = new l.default(e)
     })
   },
-  CACHE_LOADED: S,
-  CACHE_LOADED_LAZY: S,
+  CACHE_LOADED: E,
+  CACHE_LOADED_LAZY: E,
   GUILD_CREATE: function(e) {
     let t = u.fromServer(e.guild, h[e.guild.id]);
     null == h[t.id] && i++, h = {
@@ -95,9 +95,9 @@ var g = new T(o.default, {
   GUILD_DELETE: function(e) {
     let {
       guild: t
-    } = e, n = _.findIndex(e => e.id === t.id);
+    } = e, n = m.findIndex(e => e.id === t.id);
     if (-1 !== n) {
-      _.splice(n, 1), _ = [..._];
+      m.splice(n, 1), m = [...m];
       return
     }
     if (null == h[t.id] || t.unavailable) return !1;
@@ -105,8 +105,8 @@ var g = new T(o.default, {
       ...h
     }, delete h[t.id], i--
   },
-  GUILD_ROLE_CREATE: m,
-  GUILD_ROLE_UPDATE: m,
+  GUILD_ROLE_CREATE: p,
+  GUILD_ROLE_UPDATE: p,
   GUILD_ROLE_DELETE: function(e) {
     let {
       guildId: t,
@@ -122,20 +122,20 @@ var g = new T(o.default, {
       guildId: t,
       joinedAt: n,
       user: i
-    } = e, r = d.default.getId(), s = h[t];
-    if (r !== i.id || null == s) return !1;
+    } = e, s = c.default.getId(), r = h[t];
+    if (s !== i.id || null == r) return !1;
     let a = "string" == typeof n ? new Date(n) : n;
-    if (a === s.joinedAt || null == a) return !1;
+    if (a === r.joinedAt || null == a) return !1;
     h = {
       ...h,
-      [t]: s.updateJoinedAt(a)
+      [t]: r.updateJoinedAt(a)
     }
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function() {
     return !0
   },
   GUILD_GEO_RESTRICTED: function(e) {
-    _ = [..._, {
+    m = [...m, {
       id: e.guildId,
       name: e.name,
       icon: e.icon,

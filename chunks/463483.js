@@ -1,6 +1,6 @@
-function r(t, e) {
-  if (!t) throw Error(e || "Assertion failed")
+function r(e, t) {
+  if (!e) throw Error(t || "Assertion failed")
 }
-s("70102"), t.exports = r, r.equal = function(t, e, s) {
-  if (t != e) throw Error(s || "Assertion failed: " + t + " != " + e)
+n("70102"), e.exports = r, r.equal = function(e, t, n) {
+  if (e != t) throw Error(n || "Assertion failed: " + e + " != " + t)
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return D
   }
 });
 var s = n("37983"),
@@ -33,7 +33,7 @@ var s = n("37983"),
   R = n("782340"),
   y = n("926622");
 
-function D(e) {
+function O(e) {
   let {
     canManageRoles: t,
     channel: n
@@ -56,7 +56,7 @@ function D(e) {
   })
 }
 
-function O(e) {
+function D(e) {
   var t;
   let {
     channel: n,
@@ -116,7 +116,7 @@ function O(e) {
       name: d
     })
   });
-  return I ? (0, s.jsx)(D, {
+  return I ? (0, s.jsx)(O, {
     channel: n,
     canManageRoles: M
   }) : (0, s.jsx)(A.default, {

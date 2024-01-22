@@ -1,24 +1,24 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return l
   }
 });
-var s = a("884691"),
-  n = a("974667");
+var a = s("884691"),
+  n = s("974667");
 
 function l(e) {
   let {
     listRef: t,
-    padding: a,
+    padding: s,
     channel: l,
     isEnabled: r
-  } = e, i = s.useCallback(e => {
-    let s = t.current,
+  } = e, i = a.useCallback(e => {
+    let a = t.current,
       n = document.querySelector(e);
-    null != n && (null == s || s.scrollIntoViewNode({
+    null != n && (null == a || a.scrollIntoViewNode({
       node: n,
-      padding: a,
+      padding: s,
       callback: () => {
         var t;
         null === (t = document.querySelector(e)) || void 0 === t || t.focus({
@@ -26,14 +26,14 @@ function l(e) {
         })
       }
     }))
-  }, [a]), o = s.useCallback(() => new Promise(e => {
-    let a = t.current;
-    null == a || a.scrollToTop({
+  }, [s]), o = a.useCallback(() => new Promise(e => {
+    let s = t.current;
+    null == s || s.scrollToTop({
       callback: () => requestAnimationFrame(e)
     })
-  }), []), d = s.useCallback(() => new Promise(e => {
-    let a = t.current;
-    null == a || a.scrollToBottom({
+  }), []), u = a.useCallback(() => new Promise(e => {
+    let s = t.current;
+    null == s || s.scrollToBottom({
       callback: () => requestAnimationFrame(e)
     })
   }), []);
@@ -41,7 +41,7 @@ function l(e) {
     id: "forum-channel-list-".concat(l.id),
     isEnabled: r,
     scrollToStart: o,
-    scrollToEnd: d,
+    scrollToEnd: u,
     setFocus: i
   })
 }

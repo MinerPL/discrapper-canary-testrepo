@@ -19,8 +19,8 @@ var l = n("414456"),
   E = n("520899"),
   m = n("913796"),
   p = n("826267"),
-  S = n("956089"),
-  g = n("124031"),
+  g = n("956089"),
+  S = n("124031"),
   N = n("782340"),
   _ = n("804220");
 
@@ -61,7 +61,7 @@ function I(e) {
         className: _.inboxTitle,
         variant: "text-lg/semibold",
         children: N.default.Messages.INBOX
-      }), (0, a.jsx)(g.default, {
+      }), (0, a.jsx)(S.default, {
         closePopout: T
       })]
     }), (0, a.jsxs)("div", {
@@ -76,7 +76,7 @@ function I(e) {
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.FOR_YOU
           }),
-          children: [N.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, a.jsx)(S.CircleBadge, {
+          children: [N.default.Messages.FOR_YOU, (null == m ? void 0 : m.badgeForYou) ? (0, a.jsx)(g.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]
@@ -99,7 +99,7 @@ function I(e) {
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.GAME_INVITES
           }),
-          children: [N.default.Messages.GAME_INVITES, A > 0 ? (0, a.jsx)(S.CircleBadge, {
+          children: [N.default.Messages.GAME_INVITES, A > 0 ? (0, a.jsx)(g.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]
@@ -109,7 +109,7 @@ function I(e) {
           className: s(_.tab, _.expanded, {
             [_.active]: t === r.InboxTab.TODOS
           }),
-          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, v > 0 ? (0, a.jsx)(S.CircleBadge, {
+          children: [N.default.Messages.MESSAGE_REMINDERS_HEADER, v > 0 ? (0, a.jsx)(g.CircleBadge, {
             color: d.default.STATUS_DANGER,
             className: s(_.iconBadge)
           }) : null]

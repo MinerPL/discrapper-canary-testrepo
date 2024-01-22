@@ -17,7 +17,7 @@ var n, a, s, i, r, o, u = l("37983"),
   m = l("862337"),
   p = l("782340");
 (i = n || (n = {})).ACTIVITY_FEED = "ACTIVITY_FEED", i.ACTIVITY_FEED_NEW = "ACTIVITY_FEED_NEW", i.USER_ACTIVITY = "USER_ACTIVITY", i.GAME_LIBRARY_TIME_PLAYED = "GAME_LIBRARY_TIME_PLAYED", i.GAME_LIBRARY_LAST_PLAYED = "GAME_LIBRARY_LAST_PLAYED", (r = a || (a = {})).NONE = "NONE", r.SECONDS = "SECONDS", r.MINUTES = "MINUTES", r.HOURS = "HOURS", r.DAYS = "DAYS", r.WEEKS = "WEEKS", r.MONTHS = "MONTHS", r.YEARS = "YEARS", (o = s || (s = {})).START = "START", o.END = "END", o.TIME = "TIME";
-let E = {
+let T = {
     NONE: e => 0,
     SECONDS: e => 60 * e,
     MINUTES: e => e,
@@ -27,7 +27,7 @@ let E = {
     MONTHS: e => e / 60 / 24 / 31,
     YEARS: e => e / 60 / 24 / 365
   },
-  T = [{
+  E = [{
     unit: "NONE",
     max: 0
   }, {
@@ -184,21 +184,21 @@ let E = {
   };
 
 function h(e, t) {
-  let l = T.findIndex(t => {
+  let l = E.findIndex(t => {
       let {
         max: l,
         unit: n
       } = t;
       return "NONE" === n && e === l || e < l
     }),
-    n = f.findLast(T, e => {
+    n = f.findLast(E, e => {
       let {
         unit: l
       } = e;
       return t(l)
     }, l);
   if (null != n) return n.unit;
-  let a = T.find(e => {
+  let a = E.find(e => {
     let {
       unit: l
     } = e;
@@ -209,7 +209,7 @@ function h(e, t) {
 
 function I(e, t) {
   let l = null != e ? h(e, e => t.includes(e)) : "NONE",
-    n = null != l ? E[l] : null;
+    n = null != l ? T[l] : null;
   return {
     unit: l,
     time: null != e && null != n ? Math.floor(n(e)) : null
@@ -268,7 +268,7 @@ function A(e) {
       return null
     }
     transformTime(e, t) {
-      return E[e](t)
+      return T[e](t)
     }
     render() {
       let {

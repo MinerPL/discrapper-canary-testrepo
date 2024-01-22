@@ -1,20 +1,20 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return i
+    return a
   }
 }), E("222007"), E("70102");
 var t = E("37983"),
   o = E("884691"),
   n = E("233736"),
   r = E("995113"),
-  i = function(e, _, E) {
+  a = function(e, _, E) {
     return null != E && E.forwardRef ? function(e, _) {
       return E => {
-        let i = "FluxContainer(".concat(a(E), ")");
+        let a = "FluxContainer(".concat(i(E), ")");
         class s extends o.Component {
           componentDidMount() {
-            this.listener.attach(i)
+            this.listener.attach(a)
           }
           componentWillUnmount() {
             this.listener.detach(), this.memoizedGetStateFromStores.clear()
@@ -37,19 +37,19 @@ var t = E("37983"),
             })
           }
         }
-        s.displayName = i;
+        s.displayName = a;
         let T = o.forwardRef((e, _) => (0, t.jsx)(s, {
           childProps: e,
           forwardedConnectStoresRef: _
         }));
-        return T.displayName = "ForwardRef(".concat(i, ")"), T
+        return T.displayName = "ForwardRef(".concat(a, ")"), T
       }
     }(e, _) : function(e, _) {
       return E => {
-        let i = "FluxContainer(".concat(a(E), ")");
+        let a = "FluxContainer(".concat(i(E), ")");
         class s extends o.Component {
           componentDidMount() {
-            this.listener.attach(i)
+            this.listener.attach(a)
           }
           componentWillUnmount() {
             this.listener.detach(), this.memoizedGetStateFromStores.clear()
@@ -68,12 +68,12 @@ var t = E("37983"),
             })
           }
         }
-        return s.displayName = i, s
+        return s.displayName = a, s
       }
     }(e, _)
   };
 
-function a(e) {
+function i(e) {
   var _, E;
   return null !== (E = null !== (_ = e.displayName) && void 0 !== _ ? _ : e.name) && void 0 !== E ? E : "<Unknown>"
 }

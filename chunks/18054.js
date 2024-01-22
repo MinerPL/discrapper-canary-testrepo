@@ -130,8 +130,8 @@ async function d(B, e) {
     defaultSortOrder: L,
     defaultForumLayout: g,
     iconEmoji: O,
-    themeColor: U
-  } = e, y = F.default.getChannel(B);
+    themeColor: y
+  } = e, U = F.default.getChannel(B);
   return n.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT"
   }), await t.default.unarchiveThreadIfNecessary(B), C.default.patch({
@@ -172,7 +172,7 @@ async function d(B, e) {
         id: O.id,
         name: O.name
       } : null === O ? null : void 0,
-      theme_color: U
+      theme_color: y
     },
     oldFormErrors: !0
   }).then(e => {
@@ -180,8 +180,8 @@ async function d(B, e) {
       type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS",
       channelId: B
     });
-    let E = null == y ? void 0 : y.getGuildId();
-    return null != E && !(null == y ? void 0 : y.isThread()) && l.default.checkGuildTemplateDirty(E), e
+    let E = null == U ? void 0 : U.getGuildId();
+    return null != E && !(null == U ? void 0 : U.isThread()) && l.default.checkGuildTemplateDirty(E), e
   }, B => (n.default.dispatch({
     type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
     errors: B.body

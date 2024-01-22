@@ -1,7 +1,7 @@
 "use strict";
 A.r(t), A.d(t, {
   default: function() {
-    return I
+    return U
   }
 }), A("70102"), A("222007");
 var a = A("884691"),
@@ -21,7 +21,7 @@ var a = A("884691"),
   T = A("49111"),
   m = A("782340");
 let p = new c.default("ProductAttachmentManager");
-class U {
+class I {
   addAttachment(e, t) {
     let A = this.target.getMaxAttachmentsCount();
     if (this.uploads.length >= A) throw n.AccessibilityAnnouncer.announce(m.default.Messages.GUILD_PRODUCT_A11Y_TOO_MANY_ATTACHMENTS.format({
@@ -130,7 +130,7 @@ class U {
   }
 }
 
-function I(e, t) {
+function U(e, t) {
   var A;
   let {
     editSkuId: n,
@@ -138,27 +138,27 @@ function I(e, t) {
   } = t, o = (0, l.default)([f.default], () => f.default.getGuild(e)), [i, u] = a.useState({
     editSkuId: n,
     onFileSizeError: r
-  }), d = a.useMemo(() => new U({
+  }), d = a.useMemo(() => new I({
     guildId: e,
     ...i
   }), [e, i]), [c, C] = a.useState(d.generateInitialProgresses), [, g] = a.useState(null);
   a.useLayoutEffect(() => {
     C(d.generateInitialProgresses())
   }, [d]);
-  let [h, m] = a.useState(), [p, I] = a.useState(), v = a.useCallback(e => {
+  let [h, m] = a.useState(), [p, U] = a.useState(), v = a.useCallback(e => {
     d.deleteAttachment(e) && g({})
   }, [d]), E = a.useCallback(e => {
     d.addAttachment(e, C), g({})
   }, [d]), x = a.useCallback(async e => {
     try {
-      m(e), I(void 0);
+      m(e), U(void 0);
       let t = await d.saveProductWithAttachments(e);
       return null != t && u({
         editSkuId: t.id,
         onFileSizeError: r
       }), g({}), t
     } catch (e) {
-      I(e instanceof s.APIError ? e : new s.APIError({
+      U(e instanceof s.APIError ? e : new s.APIError({
         status: 400,
         body: {
           attachments: [e.message]

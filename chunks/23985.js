@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   n = s("884691"),
   l = s("414456"),
-  i = s.n(l),
-  r = s("446674"),
+  r = s.n(l),
+  i = s("446674"),
   u = s("1017"),
   o = s("102985"),
   d = s("697218"),
@@ -16,8 +16,8 @@ var a = s("37983"),
   _ = s("552712"),
   E = s("698041"),
   I = s("764206"),
-  T = s("271560"),
-  f = s("760936"),
+  f = s("271560"),
+  T = s("760936"),
   S = s("697092"),
   R = s("782340"),
   m = s("825704");
@@ -29,7 +29,7 @@ class p extends n.Component {
         className: m.sectionContent,
         children: [e.map(e => (0, a.jsx)("div", {
           className: m.unit,
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(T.default, {
             reason: e,
             hidePersonalInformation: s
           })
@@ -60,26 +60,26 @@ class p extends n.Component {
       className: l
     } = this.props;
     if (0 === e.length && 0 === t.length && null == s.staffNotes) return null;
-    let r = this.getReviewToRender();
+    let i = this.getReviewToRender();
     return (0, a.jsxs)("div", {
-      className: i(m.root, l),
+      className: r(m.root, l),
       children: [(0, a.jsx)("div", {
         className: m.header,
         children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, n), null != r ? (0, a.jsx)(S.default, {
-        data: r,
+      }), this.renderReasons(e, t, n), null != i ? (0, a.jsx)(S.default, {
+        data: i,
         className: m.review
       }) : null]
     })
   }
 }
-var N = r.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
+var N = i.default.connectStores([_.default, d.default, E.default, u.default, c.default, o.default], e => {
   let {
     sku: t
   } = e;
   return {
-    socialReasons: (0, T.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
-    nonSocialReasons: (0, T.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
+    socialReasons: (0, f.getSocialRecommendationReasons)(t.id, _.default, d.default, u.default, c.default),
+    nonSocialReasons: (0, f.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: o.default.hidePersonalInformation
   }
 })(p)

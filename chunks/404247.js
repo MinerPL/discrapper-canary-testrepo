@@ -10,8 +10,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   n = s("884691"),
   l = s("730290"),
-  i = s("90915"),
-  r = s("446674"),
+  r = s("90915"),
+  i = s("446674"),
   u = s("971178"),
   o = s("850068"),
   d = s("901582"),
@@ -19,34 +19,34 @@ var a = s("37983"),
   _ = s("737960"),
   E = s("667247"),
   I = s("493765"),
-  T = s("485328"),
-  f = s("269936"),
+  f = s("485328"),
+  T = s("269936"),
   S = s("967889"),
   R = s("393414"),
   m = s("970366"),
   p = s("592433"),
   N = s("489749"),
-  A = s("75576"),
-  g = s("49111"),
+  g = s("75576"),
+  A = s("49111"),
   P = s("782340"),
   C = s("128403");
-let O = (0, f.makeLazy)({
+let O = (0, T.makeLazy)({
   createPromise: () => s.el("972119").then(s.bind(s, "972119")),
   webpackId: "972119"
 });
 
 function M(e) {
-  return e < A.PAGE_WIDTH_THRESHOLD ? A.PageSizes.SMALL : A.PageSizes.LARGE
+  return e < g.PAGE_WIDTH_THRESHOLD ? g.PageSizes.SMALL : g.PageSizes.LARGE
 }
-r.default.initialize();
+i.default.initialize();
 class h extends n.PureComponent {
   componentDidMount() {
     (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
-      e.pathname.startsWith(g.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
-    }), this.props.isAuthenticated && (0, o.fetchPaymentSources)(), T.default.disable(), T.default.setLayout(E.APPLICATION_STORE_LAYOUT), T.default.enable(), (0, m.trackAppUIViewed)("application_store")
+      e.pathname.startsWith(A.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
+    }), this.props.isAuthenticated && (0, o.fetchPaymentSources)(), f.default.disable(), f.default.setLayout(E.APPLICATION_STORE_LAYOUT), f.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }
   componentWillUnmount() {
-    null != this.stopListeningToHistory && this.stopListeningToHistory(), T.default.disable(), T.default.setLayout(I.DEFAULT_LAYOUT), T.default.enable()
+    null != this.stopListeningToHistory && this.stopListeningToHistory(), f.default.disable(), f.default.setLayout(I.DEFAULT_LAYOUT), f.default.enable()
   }
   renderCustomErrorMessage() {
     return (0, a.jsxs)("div", {
@@ -84,47 +84,47 @@ class h extends n.PureComponent {
             slug: n
           }
         },
-        location: i
+        location: r
       } = e, {
-        width: r
-      } = this.props, u = (0, l.parse)(i.search);
+        width: i
+      } = this.props, u = (0, l.parse)(r.search);
       return (0, a.jsx)(d.default, {
-        page: g.AnalyticsPages.STORE_LISTING,
+        page: A.AnalyticsPages.STORE_LISTING,
         root: !0,
         children: (0, a.jsx)(N.default, {
           skuId: t,
           applicationId: s,
           slug: n,
-          location: i,
+          location: r,
           storeListingId: u.store_listing_id,
-          pageSize: M(r)
+          pageSize: M(i)
         })
       })
-    }, this.renderContent = () => (0, a.jsxs)(i.Switch, {
-      children: [(0, a.jsx)(i.Route, {
-        path: g.Routes.APPLICATION_STORE,
+    }, this.renderContent = () => (0, a.jsxs)(r.Switch, {
+      children: [(0, a.jsx)(r.Route, {
+        path: A.Routes.APPLICATION_STORE,
         exact: !0,
         render: () => (0, a.jsx)(d.default, {
-          page: g.AnalyticsPages.STORE_DIRECTORY_HOME,
+          page: A.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
           children: (0, a.jsx)(p.default, {})
         })
-      }), (0, a.jsx)(i.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+      }), (0, a.jsx)(r.Route, {
+        path: A.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+      }), (0, a.jsx)(r.Route, {
+        path: A.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+      }), (0, a.jsx)(r.Route, {
+        path: A.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Route, {
-        path: g.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
+      }), (0, a.jsx)(r.Route, {
+        path: A.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(i.Redirect, {
-        to: g.Routes.APP
+      }), (0, a.jsx)(r.Redirect, {
+        to: A.Routes.APP
       })]
     })
   }
 }
-var L = (0, i.withRouter)((0, c.default)((0, _.default)(h)))
+var L = (0, r.withRouter)((0, c.default)((0, _.default)(h)))

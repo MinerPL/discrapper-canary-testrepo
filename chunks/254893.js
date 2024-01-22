@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983"),
   n = s("884691"),
   l = s("456015"),
-  i = s("982457"),
-  r = s("781084"),
+  r = s("982457"),
+  i = s("781084"),
   u = s("154889"),
   o = s("917247"),
   d = s("143476"),
@@ -21,12 +21,12 @@ var a = s("37983"),
       if (null != s || null != _) {
         let {
           enabled: e
-        } = r.default.getCurrentConfig({
+        } = i.default.getCurrentConfig({
           location: "PremiumMarketing"
         }, {
           autoTrackExposure: !1
         });
-        e ? (0, l.acknowledgeUserOffer)(s, _) : null != s && i.default.acknowledgeUserTrialOffer(s)
+        e ? (0, l.acknowledgeUserOffer)(s, _) : null != s && r.default.acknowledgeUserTrialOffer(s)
       }
     }, [s, _]), (0, a.jsx)(d.default, {
       isFullscreen: E

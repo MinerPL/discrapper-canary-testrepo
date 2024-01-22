@@ -17,8 +17,8 @@ var n, a, s = l("37983"),
   f = l("77078"),
   m = l("832627"),
   p = l("841098"),
-  E = l("376556"),
-  T = l("609030"),
+  T = l("376556"),
+  E = l("609030"),
   _ = l("309570"),
   S = l("985677"),
   h = l("429928"),
@@ -71,7 +71,7 @@ function H(e) {
     } = e,
     n = (0, p.default)();
   if ((0, h.default)(l) && (t = F.PlatformTypes.SPOTIFY), null != l.platform && [F.ActivityGamePlatforms.PS4, F.ActivityGamePlatforms.PS5].includes(l.platform) && (t = F.PlatformTypes.PLAYSTATION), null == t) return null;
-  let a = E.default.get(t);
+  let a = T.default.get(t);
   return (0, s.jsx)("img", {
     alt: "",
     src: (0, c.isThemeLight)(n) ? a.icon.lightSVG : a.icon.darkSVG,
@@ -114,7 +114,7 @@ class W extends i.PureComponent {
     switch (u.type) {
       case F.ActivityTypes.STREAMING:
         t = G.default.Messages.USER_ACTIVITY_HEADER_LIVE_ON_PLATFORM.format({
-          platform: [F.PlatformTypes.TWITCH, F.PlatformTypes.YOUTUBE].includes(d.toLowerCase()) ? d : E.default.get(F.PlatformTypes.TWITCH).name
+          platform: [F.PlatformTypes.TWITCH, F.PlatformTypes.YOUTUBE].includes(d.toLowerCase()) ? d : T.default.get(F.PlatformTypes.TWITCH).name
         });
         break;
       case F.ActivityTypes.LISTENING:
@@ -128,7 +128,7 @@ class W extends i.PureComponent {
         });
         break;
       case F.ActivityTypes.PLAYING:
-        t = (0, T.default)(u);
+        t = (0, E.default)(u);
         break;
       case F.ActivityTypes.COMPETING:
         t = G.default.Messages.USER_ACTIVITY_HEADER_COMPETING.format({
@@ -165,7 +165,7 @@ class W extends i.PureComponent {
       className: k.assets,
       children: (0, s.jsx)("img", {
         alt: "",
-        src: E.default.get(F.PlatformTypes.XBOX).icon.customPNG,
+        src: T.default.get(F.PlatformTypes.XBOX).icon.customPNG,
         className: o(this.getTypeClass("assetsLargeImage", "Xbox"))
       })
     })
@@ -441,18 +441,18 @@ class W extends i.PureComponent {
     (0, I.default)(i) ? (e = this.renderXboxImage(), f = !0) : null == (e = this.renderImage(i)) && (f = null != (e = this.renderGameImage(i)));
     let m = this.renderName(i),
       p = this.renderDetails(i),
-      E = this.renderState(i, a),
-      T = this.renderTimePlayed(i),
+      T = this.renderState(i, a),
+      E = this.renderTimePlayed(i),
       _ = null != l ? l() : null,
       S = this.renderTimeBar(i),
-      h = ![e, m, p, E, T, S, _].some(e => null != e);
+      h = ![e, m, p, T, E, S, _].some(e => null != e);
     return (0, s.jsxs)("div", {
       className: o(this.getTypeClass("activity"), n),
       children: [this.renderHeader(h), (0, s.jsxs)("div", {
         className: f ? k.bodyAlignCenter : k.bodyNormal,
         children: [e, this.isStreamerOnTypeActivityFeed() ? null : (0, s.jsxs)(L.default.Child, {
           className: o((0, x.getClass)(k, "content", f ? "GameImage" : null != e ? "Images" : "NoImages", t)),
-          children: [m, p, E, T, r || c ? null : S, d ? _ : null]
+          children: [m, p, T, E, r || c ? null : S, d ? _ : null]
         }), u ? _ : null]
       }), r ? S : null, r || c ? _ : null, (0, s.jsx)(H, {
         activity: i

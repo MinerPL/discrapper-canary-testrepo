@@ -2,24 +2,24 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
-var r, s = n("446674"),
+var s, r = n("446674"),
   a = n("95410"),
   o = n("913144"),
   l = n("845579"),
   u = n("653047"),
-  c = n("773336");
-let d = "GameStoreReportedGames",
+  d = n("773336");
+let c = "GameStoreReportedGames",
   f = {},
-  E = {},
+  _ = {},
   h = {},
-  p = null !== (r = a.default.get(d)) && void 0 !== r ? r : {},
-  _ = "";
-let S = null;
+  g = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
+  m = "";
+let E = null;
 
-function m(e) {
+function p(e) {
   return {
     id: e.id,
     name: e.name,
@@ -33,20 +33,20 @@ function m(e) {
   }
 }
 
-function T(e) {
-  let t = e instanceof u.default ? m(e) : e;
-  for (let n of (f[e.id] = t, E[e.name.toLowerCase()] = t, e.aliases)) E[n.toLowerCase()] = t;
-  if ((0, c.isDesktop)())
+function v(e) {
+  let t = e instanceof u.default ? p(e) : e;
+  for (let n of (f[e.id] = t, _[e.name.toLowerCase()] = t, e.aliases)) _[n.toLowerCase()] = t;
+  if ((0, d.isDesktop)())
     for (let n of e.executables) h[n.name] = t
 }
-class g extends s.default.PersistedStore {
+class S extends r.default.PersistedStore {
   initialize(e) {
     var t;
-    null != e && (null != e.detectableGamesEtag && (_ = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => T(e)))
+    null != e && (null != e.detectableGamesEtag && (m = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => v(e)))
   }
   getState() {
     return {
-      detectableGamesEtag: _,
+      detectableGamesEtag: m,
       detectableGames: Object.values(f)
     }
   }
@@ -59,16 +59,16 @@ class g extends s.default.PersistedStore {
   getGameByName(e) {
     if (null == e) return null;
     let t = e.toLowerCase();
-    return Object.prototype.hasOwnProperty.call(E, t) ? E[t] : null
+    return Object.prototype.hasOwnProperty.call(_, t) ? _[t] : null
   }
   get fetching() {
     return !0 === i
   }
   get detectableGamesEtag() {
-    return _
+    return m
   }
   get lastFetched() {
-    return S
+    return E
   }
   getGameByExecutable(e) {
     return h[e]
@@ -77,26 +77,26 @@ class g extends s.default.PersistedStore {
     var t, n;
     let i;
     if (null == e.exePath) return null;
-    let r = e.exePath.split("/").pop(),
-      s = e.exePath.split("/").slice(-2).join("/");
+    let s = e.exePath.split("/").pop(),
+      r = e.exePath.split("/").slice(-2).join("/");
     if (null != e.name) {
       if (null != (i = this.getGameByName(e.name)) && null != i.executables) {
         let e = i.executables.map(e => e.name);
-        if (e.includes(r) || e.includes(s)) return i
+        if (e.includes(s) || e.includes(r)) return i
       } else if (null != i) return null
     }
-    return null !== (n = null !== (t = this.getGameByExecutable(r)) && void 0 !== t ? t : this.getGameByExecutable(s)) && void 0 !== n ? n : i
+    return null !== (n = null !== (t = this.getGameByExecutable(s)) && void 0 !== t ? t : this.getGameByExecutable(r)) && void 0 !== n ? n : i
   }
   shouldReport(e) {
     let t = null != this.getGameByName(e),
-      n = null != p[e];
+      n = null != g[e];
     return l.ShowCurrentGame.getSetting() && !i && !(t || n)
   }
   markGameReported(e) {
-    p[e] = !0, a.default.set(d, p)
+    g[e] = !0, a.default.set(c, g)
   }
 }
-g.displayName = "GameStore", g.persistKey = "GameStore", g.migrations = [e => {
+S.displayName = "GameStore", S.persistKey = "GameStore", S.migrations = [e => {
   var t, n;
   if (null == e) return {
     detectableGamesEtag: "",
@@ -104,15 +104,15 @@ g.displayName = "GameStore", g.persistKey = "GameStore", g.migrations = [e => {
   };
   return {
     detectableGamesEtag: e.detectableGamesEtag,
-    detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => m(new u.default(e)))) && void 0 !== n ? n : []
+    detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => p(new u.default(e)))) && void 0 !== n ? n : []
   }
 }];
-var I = new g(o.default, {
+var T = new S(o.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       detectableApplications: t
     } = e;
-    for (let e of t) T(e)
+    for (let e of t) v(e)
   },
   GAMES_DATABASE_FETCH: function() {
     i = !0
@@ -125,20 +125,20 @@ var I = new g(o.default, {
       games: t,
       etag: n
     } = e;
-    for (let e of (null != n && _ !== n && (_ = n), t)) T(function(e) {
-      var t, n, i, r, s, a;
+    for (let e of (null != n && m !== n && (m = n), t)) v(function(e) {
+      var t, n, i, s, r, a;
       return {
         id: e.id,
         name: e.name,
         executables: (null !== (t = e.executables) && void 0 !== t ? t : []).map(u.createExecutable),
         overlay: null !== (n = e.overlay) && void 0 !== n && n,
         overlayWarn: null !== (i = e.overlay_warn) && void 0 !== i && i,
-        overlayCompatibilityHook: null !== (r = e.overlay_compatibility_hook) && void 0 !== r && r,
-        hook: null === (s = e.hook) || void 0 === s || s,
+        overlayCompatibilityHook: null !== (s = e.overlay_compatibility_hook) && void 0 !== s && s,
+        hook: null === (r = e.hook) || void 0 === r || r,
         aliases: null !== (a = e.aliases) && void 0 !== a ? a : [],
         supportsOutOfProcessOverlay: u.default.supportsOutOfProcessOverlay(e.overlay_methods)
       }
     }(e));
-    i = void 0, S = Date.now()
+    i = void 0, E = Date.now()
   }
 })

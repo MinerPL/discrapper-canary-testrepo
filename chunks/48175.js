@@ -22,8 +22,8 @@ var a, l, n = A("37983"),
   T = A("206230"),
   m = A("228100"),
   p = A("741515"),
-  U = A("435032"),
-  I = A("465869"),
+  I = A("435032"),
+  U = A("465869"),
   v = A("424960"),
   E = A("845579"),
   x = A("305961"),
@@ -37,8 +37,8 @@ var a, l, n = A("37983"),
   V = A("866190"),
   j = A("949435"),
   b = A("565559"),
-  S = A("757515"),
-  M = A("740259"),
+  M = A("757515"),
+  S = A("740259"),
   F = A("492724"),
   _ = A("155539"),
   G = A("959875"),
@@ -131,20 +131,20 @@ function eA(e) {
     onClose: el
   } = e, [en, er] = r.useState(ee), es = (0, c.default)([b.default], () => null == en ? null : b.default.getGuildProduct(en), [en]), eo = (null == es ? void 0 : es.published) === !0, {
     application: ei
-  } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = M.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
+  } = (0, m.default)(R, Z.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), eu = S.PRODUCT_IMAGE_PRESETS[0], ed = (0, c.default)([T.default], () => T.default.useReducedMotion), ec = E.GifAutoPlay.useSetting(), ef = (0, V.useIsWindowFocused)(), eC = r.useCallback(() => {
     var e;
     return (null == es ? void 0 : null === (e = es.image_asset) || void 0 === e ? void 0 : e.application_id) == null ? eu.data : (0, P.getAssetURL)(es.image_asset.application_id, es.image_asset, 600, ef && ec ? void 0 : "webp")
   }, [eu, es, ef, ec]), {
     shouldRestrictUpdatingCreatorMonetizationSettings: eg
-  } = (0, I.useShouldRestrictUpdatingCreatorMonetizationSettings)(R);
+  } = (0, U.useShouldRestrictUpdatingCreatorMonetizationSettings)(R);
   r.useEffect(() => {
     eg && (el(), (0, K.openErrorDialog)(H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_TITLE, H.default.Messages.CREATOR_MONETIZATION_RESTRICTED_GUILD_CANNOT_EDIT_PRODUCT_BODY))
   }, [eg, el]);
-  let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eU, eI] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : eu.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eU ? (0, D.formatPrice)(eU, Q.CurrencyCodes.USD) : void 0, [eU]), [eP, eV] = r.useState(!0), {
+  let [eh, eT] = r.useState(null !== (l = null == es ? void 0 : es.name) && void 0 !== l ? l : ""), [em, ep] = r.useState(null !== (s = null == es ? void 0 : es.description) && void 0 !== s ? s : ""), [eI, eU] = r.useState(null !== (o = null == es ? void 0 : es.price_tier) && void 0 !== o ? o : void 0), [ev, eE] = r.useState(eC), [ex, eN] = r.useState(null !== (i = null == es ? void 0 : null === (t = es.image_asset) || void 0 === t ? void 0 : t.filename) && void 0 !== i ? i : eu.name), [eq, eO] = r.useState(!1), [eR, eL] = r.useState(), eD = r.useMemo(() => null != eI ? (0, D.formatPrice)(eI, Q.CurrencyCodes.USD) : void 0, [eI]), [eP, eV] = r.useState(!0), {
     changesSaving: ej,
     saveError: eb,
-    saveProductWithAttachments: eS,
-    hasUnsavedAttachmentChanges: eM,
+    saveProductWithAttachments: eM,
+    hasUnsavedAttachmentChanges: eS,
     cancelUnusedUploads: eF
   } = (0, j.useGuildProductAttachmentManagerContext)(), e_ = (null == es ? void 0 : es.attachments) != null && (null == es ? void 0 : es.attachments.length) > 0, eG = null != eb ? eb : eR, eK = null != ej && "published" in ej, eB = null != ej && !eK, eW = null !== (p = null == es ? void 0 : es.role_id) && void 0 !== p ? p : null, [eX, ez] = r.useState(), ey = null != eX || null != eW, eQ = (0, c.default)([x.default], () => {
     if (null != eW && null !== eX) {
@@ -164,18 +164,18 @@ function eA(e) {
       canSaveForDraft: e$,
       canSaveForPublished: e0,
       canPublishOrUnpublish: e1
-    } = r.useMemo(() => (0, S.computeProductChanges)({
+    } = r.useMemo(() => (0, M.computeProductChanges)({
       guildProductListing: es,
       name: eh,
-      priceTier: eU,
+      priceTier: eI,
       description: em,
       image: ev,
       imageName: ex,
       isImageChanged: eq,
       newRoleParams: eX,
       hasSavedAttachments: e_,
-      hasUnsavedAttachmentChanges: eM
-    }), [es, eh, eU, em, ev, ex, eq, eX, e_, eM]),
+      hasUnsavedAttachmentChanges: eS
+    }), [es, eh, eI, em, ev, ex, eq, eX, e_, eS]),
     e6 = r.useMemo(() => eJ || null == ew || "publish" === ew || null != eG ? null : (0, n.jsx)(q.default, {
       className: w.successNotice,
       children: (0, n.jsx)(h.default, {
@@ -212,11 +212,11 @@ function eA(e) {
     }), e3)
   }, [R, e3, en]);
   let e9 = async e => {
-    let t = (0, S.describeProductChangeValidation)({
+    let t = (0, M.describeProductChangeValidation)({
       newRoleParams: eX
     });
     if (eL(t), null != t) return;
-    let A = await eS(e);
+    let A = await eM(e);
     if (eO(!1), null != A) {
       if (null != e.name && eT(A.name), null != e.description && ep(A.description), null != eX) {
         let e = A.role_id;
@@ -288,7 +288,7 @@ function eA(e) {
             tag: "label",
             error: null == eG ? void 0 : eG.getFirstFieldErrorMessage("description"),
             htmlFor: J,
-            children: (0, n.jsx)(U.default, {
+            children: (0, n.jsx)(I.default, {
               id: J,
               className: w.descriptionArea,
               value: em,
@@ -305,8 +305,8 @@ function eA(e) {
             error: null == eG ? void 0 : eG.getFirstFieldErrorMessage("price_tier"),
             children: (0, n.jsx)(et, {
               guildId: R,
-              selectedPriceTier: eU,
-              setPriceTier: eI
+              selectedPriceTier: eI,
+              setPriceTier: eU
             })
           }), (0, n.jsxs)(C.FormItem, {
             title: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_LABEL,
@@ -320,7 +320,7 @@ function eA(e) {
             }), (0, n.jsx)(O.default, {
               size: 10
             }), (0, n.jsx)(W.default, {
-              presetImages: M.PRODUCT_IMAGE_PRESETS,
+              presetImages: S.PRODUCT_IMAGE_PRESETS,
               radioGroupAriaLabel: H.default.Messages.GUILD_PRODUCT_EDIT_MODAL_THUMBNAIL_RADIO_GROUP_ARIA_LABEL,
               image: ev,
               imageName: ex,
@@ -345,7 +345,7 @@ function eA(e) {
               }
             })
           }) : null, ey ? (0, n.jsx)(z.default, {
-            error: null !== (v = null == eG ? void 0 : eG.getFirstFieldErrorMessage(S.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
+            error: null !== (v = null == eG ? void 0 : eG.getFirstFieldErrorMessage(M.ROLE_FIELD_NAME)) && void 0 !== v ? v : void 0,
             newRoleParams: eX,
             setNewRoleParams: ez,
             guildId: R,
@@ -419,7 +419,7 @@ function eA(e) {
             text: H.default.Messages.GUILD_PRODUCT_SETTINGS_INCLUDE_ATTACHMENTS_TOGGLE_LABEL,
             value: eP,
             onChange: e => {
-              e ? eV(!0) : eM ? (0, C.openModalLazy)(async () => {
+              e ? eV(!0) : eS ? (0, C.openModalLazy)(async () => {
                 let {
                   ConfirmModal: e
                 } = await A.el("77078").then(A.bind(A, "77078"));

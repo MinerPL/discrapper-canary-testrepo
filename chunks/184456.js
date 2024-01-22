@@ -4,56 +4,56 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var i, r, s = n("37983"),
+var i, s, r = n("37983"),
   a = n("884691"),
   o = n("414456"),
   l = n.n(o),
   u = n("669491"),
-  c = n("647204");
-(i = r || (r = {})).XSMALL = "xsmall", i.SMALL = "small", i.LARGE = "large";
-let d = "indeterminate";
+  d = n("647204");
+(i = s || (s = {})).XSMALL = "xsmall", i.SMALL = "small", i.LARGE = "large";
+let c = "indeterminate";
 
 function f(e) {
   let t, {
       className: n,
       percent: i,
-      size: r = "small",
+      size: s = "small",
       foregroundColor: o = u.default.unsafe_rawColors.BRAND_500.css,
       backgroundColor: f = "var(--background-modifier-active)",
-      foregroundGradientColor: E,
+      foregroundGradientColor: _,
       animate: h = !0
     } = e,
-    p = null != i ? i : 0;
-  return t = null != E ? {
-    background: "linear-gradient(to right, ".concat(E[0], ", ").concat(E[1], ")")
+    g = null != i ? i : 0;
+  return t = null != _ ? {
+    background: "linear-gradient(to right, ".concat(_[0], ", ").concat(_[1], ")")
   } : {
     backgroundColor: o
-  }, (0, s.jsx)("div", {
-    className: l(n, c.progress, c[r]),
+  }, (0, r.jsx)("div", {
+    className: l(n, d.progress, d[s]),
     style: {
       backgroundColor: f
     },
-    children: p !== d && "number" == typeof p ? (0, s.jsx)("div", {
-      className: l(c.progressBar, c[r], {
-        [c.animating]: h
+    children: g !== c && "number" == typeof g ? (0, r.jsx)("div", {
+      className: l(d.progressBar, d[s], {
+        [d.animating]: h
       }),
       style: {
-        transform: "translate3d(".concat(Math.min(Math.max(0, p), 100) - 100, "%, 0, 0)"),
+        transform: "translate3d(".concat(Math.min(Math.max(0, g), 100) - 100, "%, 0, 0)"),
         ...t
       }
-    }) : (0, s.jsxs)(a.Fragment, {
-      children: [(0, s.jsx)("div", {
-        className: l(c.indeterminateBar1, c[r], {
-          [c.animating]: h
+    }) : (0, r.jsxs)(a.Fragment, {
+      children: [(0, r.jsx)("div", {
+        className: l(d.indeterminateBar1, d[s], {
+          [d.animating]: h
         }),
         style: t
-      }), (0, s.jsx)("div", {
-        className: l(c.indeterminateBar2, c[r], {
-          [c.animating]: h
+      }), (0, r.jsx)("div", {
+        className: l(d.indeterminateBar2, d[s], {
+          [d.animating]: h
         }),
         style: t
       })]
     })
   })
 }
-f.Sizes = r, f.INDETERMINATE = d
+f.Sizes = s, f.INDETERMINATE = c

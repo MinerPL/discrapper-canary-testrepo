@@ -9,9 +9,9 @@ var l = n("37983"),
   r = n("597755"),
   s = n.n(r),
   o = n("458960"),
-  a = n("904160");
+  u = n("904160");
 
-function u(e) {
+function a(e) {
   let t = e => e.interpolate({
     inputRange: [0, 1],
     outputRange: ["0px", "1px"]
@@ -54,11 +54,11 @@ class c extends i.Component {
   }
   render() {
     return (0, l.jsxs)("div", {
-      className: a.searchIndexAnimation,
+      className: u.searchIndexAnimation,
       children: [(0, l.jsx)("div", {
-        className: a.searchIndexBackground
+        className: u.searchIndexBackground
       }), (0, l.jsxs)("svg", {
-        className: a.searchIndexForeground,
+        className: u.searchIndexForeground,
         width: "320",
         height: "280",
         children: [(0, l.jsx)("defs", {
@@ -77,8 +77,8 @@ class c extends i.Component {
               id: "search-index-foreground-mask-b",
               fill: "#fff",
               children: (0, l.jsx)(o.default.use, {
-                style: u(this.state),
-                className: a.mask,
+                style: a(this.state),
+                className: u.mask,
                 xlinkHref: "#search-index-foreground-mask-a"
               })
             }), (0, l.jsxs)("g", {
@@ -341,8 +341,8 @@ class c extends i.Component {
               })]
             })]
           }), (0, l.jsxs)(o.default.g, {
-            className: a.magnifyingGlass,
-            style: u(this.state),
+            className: u.magnifyingGlass,
+            style: a(this.state),
             children: [(0, l.jsx)("path", {
               fill: "#C9D2F0",
               d: "M89.8311 190.9259c-2.441-2.441-2.441-6.4 0-8.841l36.771-36.771 8.841 8.841-36.771 36.771c-2.441 2.441-6.4 2.441-8.841 0"

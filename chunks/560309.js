@@ -123,7 +123,7 @@ let V = e => t => {
     e(a)
   };
 
-function H(e) {
+function b(e) {
   let {
     guildId: t,
     guildEvent: n,
@@ -166,7 +166,7 @@ function H(e) {
   })
 }
 
-function b(e) {
+function H(e) {
   let {
     guildId: t,
     guildEvent: n,
@@ -222,11 +222,11 @@ function B(e) {
       className: M.text,
       variant: "text-sm/normal",
       children: L.default.Messages.GUILD_EVENT_LOCATION_SUBTITLE
-    }), (0, l.jsx)(b, {
+    }), (0, l.jsx)(H, {
       guildId: t,
       guildEvent: a,
       onChange: i
-    }), (0, l.jsx)(H, {
+    }), (0, l.jsx)(b, {
       guildId: t,
       guildEvent: a,
       isFocusReady: o,

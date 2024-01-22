@@ -1,78 +1,78 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return V
   }
-}), a("222007");
-var s = a("37983"),
-  n = a("884691"),
-  l = a("414456"),
-  r = a.n(l),
-  i = a("335710"),
-  o = a("446674"),
-  d = a("669491"),
-  u = a("77078"),
-  c = a("125667"),
-  m = a("955735"),
-  h = a("963119"),
-  f = a("651693"),
-  g = a("605160"),
-  x = a("70845"),
-  C = a("933629"),
-  T = a("845579"),
-  _ = a("982108"),
-  S = a("42203"),
-  p = a("957255"),
-  E = a("594098"),
-  N = a("887718"),
-  M = a("95689"),
-  A = a("132755"),
-  v = a("497880"),
-  I = a("956089"),
-  j = a("680986"),
-  R = a("612278"),
-  O = a("791234"),
-  F = a("512630"),
-  b = a("152637"),
-  L = a("363622"),
-  P = a("855455"),
-  y = a("136460"),
-  D = a("601016"),
-  w = a("485055"),
-  U = a("390083"),
-  k = a("953371"),
-  H = a("49111"),
-  B = a("782340"),
-  G = a("507134"),
+}), s("222007");
+var a = s("37983"),
+  n = s("884691"),
+  l = s("414456"),
+  r = s.n(l),
+  i = s("335710"),
+  o = s("446674"),
+  u = s("669491"),
+  d = s("77078"),
+  c = s("125667"),
+  m = s("955735"),
+  h = s("963119"),
+  f = s("651693"),
+  g = s("605160"),
+  x = s("70845"),
+  C = s("933629"),
+  T = s("845579"),
+  _ = s("982108"),
+  S = s("42203"),
+  p = s("957255"),
+  E = s("594098"),
+  N = s("887718"),
+  M = s("95689"),
+  A = s("132755"),
+  v = s("497880"),
+  I = s("956089"),
+  j = s("680986"),
+  R = s("612278"),
+  O = s("791234"),
+  F = s("512630"),
+  L = s("152637"),
+  b = s("363622"),
+  P = s("855455"),
+  y = s("136460"),
+  D = s("601016"),
+  w = s("485055"),
+  U = s("390083"),
+  k = s("953371"),
+  H = s("49111"),
+  B = s("782340"),
+  G = s("507134"),
   V = n.memo(function(e) {
     let {
       id: t,
-      threadId: a,
+      threadId: s,
       goToThread: n,
       overrideMedia: l,
       className: r,
       coords: i,
-      gridCoords: d,
-      gridSectionBoundaries: u,
+      gridCoords: u,
+      gridSectionBoundaries: d,
       observePostVisibilityAnalytics: c
-    } = e, m = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(a));
-    return null == m ? null : (0, s.jsx)(z, {
+    } = e, m = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(s));
+    return null == m ? null : (0, a.jsx)(z, {
       id: t,
       channel: m,
       goToThread: n,
       overrideMedia: l,
       className: r,
       coords: i,
-      gridCoords: d,
+      gridCoords: u,
       observePostVisibilityAnalytics: c,
-      gridSectionBoundaries: u
+      gridSectionBoundaries: d
     })
   });
 
 function z(e) {
   let {
     id: t,
-    channel: a,
+    channel: s,
     goToThread: l,
     overrideMedia: c,
     className: m,
@@ -80,10 +80,10 @@ function z(e) {
     gridCoords: f,
     gridSectionBoundaries: g,
     observePostVisibilityAnalytics: C
-  } = e, E = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(a.parent_id)), N = a.id, M = n.useRef(null), A = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentSidebarChannelId(a.parent_id) === a.id), {
+  } = e, E = (0, o.useStateFromStores)([S.default], () => S.default.getChannel(s.parent_id)), N = s.id, M = n.useRef(null), A = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentSidebarChannelId(s.parent_id) === s.id), {
     firstMessage: v,
     loaded: F
-  } = (0, R.useFirstForumPostMessage)(a), {
+  } = (0, R.useFirstForumPostMessage)(s), {
     firstMedia: P
   } = (0, j.useForumPostFirstMessageMarkup)({
     firstMessage: v,
@@ -91,32 +91,32 @@ function z(e) {
     noStyleAndInteraction: !1
   }), {
     messageCountText: V
-  } = (0, j.useMessageCount)(a), {
+  } = (0, j.useMessageCount)(s), {
     isNew: z,
     hasUnreads: K
-  } = (0, j.useForumPostReadStates)(a), Y = n.useRef(null), {
+  } = (0, j.useForumPostReadStates)(s), Y = n.useRef(null), {
     handleLeftClick: Z,
     handleRightClick: Q
   } = (0, U.default)({
     facepileRef: Y,
     goToThread: l,
-    channel: a
+    channel: s
   });
   n.useEffect(() => {
     null == C || C(M.current, N)
   }, [C, N]);
-  let J = (0, o.useStateFromStores)([p.default], () => p.default.can(H.Permissions.MANAGE_MESSAGES, a)),
+  let J = (0, o.useStateFromStores)([p.default], () => p.default.can(H.Permissions.MANAGE_MESSAGES, s)),
     $ = T.GifAutoPlay.useSetting(),
     ee = T.RenderSpoilers.useSetting(),
     et = (0, x.default)(ee, J),
-    ea = (0, O.useForumPostMediaThumbnail)(v, E, !1),
-    [es, en] = (0, L.getFrameDimensions)(h.width - 2 * L.IMAGE_PADDING),
-    el = (0, j.useLastActiveTimestamp)(a, i.ThreadSortOrder.CREATION_DATE, k.ForumTimestampFormats.POSTED_DURATION_AGO),
-    er = (0, b.useHighlightedChannelName)(a),
+    es = (0, O.useForumPostMediaThumbnail)(v, E, !1),
+    [ea, en] = (0, b.getFrameDimensions)(h.width - 2 * b.IMAGE_PADDING),
+    el = (0, j.useLastActiveTimestamp)(s, i.ThreadSortOrder.CREATION_DATE, k.ForumTimestampFormats.POSTED_DURATION_AGO),
+    er = (0, L.useHighlightedChannelName)(s),
     ei = (null == v ? void 0 : v.blocked) || null == (null != c ? c : P),
     {
       onFocus: eo,
-      ...ed
+      ...eu
     } = (0, w.useForumGridItem)({
       id: t,
       row: f.row,
@@ -124,8 +124,8 @@ function z(e) {
       section: f.section,
       boundaries: g
     }),
-    eu = a.isMediaPost();
-  return (0, s.jsxs)("li", {
+    ed = s.isMediaPost();
+  return (0, a.jsxs)("li", {
     ref: M,
     onClick: Z,
     onFocus: eo,
@@ -136,80 +136,80 @@ function z(e) {
     style: {
       ...h
     },
-    children: [(0, s.jsx)(u.Clickable, {
+    children: [(0, a.jsx)(d.Clickable, {
       onClick: Z,
       focusProps: {
         ringTarget: M
       },
       onContextMenu: Q,
       "aria-label": B.default.Messages.FORUM_POST_ARIA_LABEL.format({
-        title: a.name,
+        title: s.name,
         count: V
       }),
       className: G.focusTarget,
-      ...ed
-    }), (0, s.jsxs)("div", {
+      ...eu
+    }), (0, a.jsxs)("div", {
       className: G.header,
-      children: [(0, s.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: G.authorRow,
-        children: [(0, s.jsxs)("div", {
+        children: [(0, a.jsxs)("div", {
           className: G.rowGroup,
-          children: [(0, s.jsx)(y.default, {
-            channel: a,
+          children: [(0, a.jsx)(y.default, {
+            channel: s,
             message: v
-          }), (0, s.jsx)(u.Text, {
+          }), (0, a.jsx)(d.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             className: G.postCreationTimestamp,
             children: el
           })]
-        }), z ? (0, s.jsx)(I.TextBadge, {
+        }), z ? (0, a.jsx)(I.TextBadge, {
           className: r(G.newBadge),
-          color: d.default.unsafe_rawColors.BRAND_260.css,
+          color: u.default.unsafe_rawColors.BRAND_260.css,
           text: B.default.Messages.NEW
         }) : null]
-      }), (0, s.jsx)(u.HeadingLevel, {
-        children: (0, s.jsx)(u.Heading, {
+      }), (0, a.jsx)(d.HeadingLevel, {
+        children: (0, a.jsx)(d.Heading, {
           variant: "heading-md/extrabold",
           className: G.title,
           color: K ? "header-primary" : "text-muted",
           style: {
-            width: "".concat(h.width - 2 * L.GRID_POST_CONTROLS_MARGIN, "px")
+            width: "".concat(h.width - 2 * b.GRID_POST_CONTROLS_MARGIN, "px")
           },
           children: er
         })
       })]
-    }), (0, s.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: G.postBody,
-      children: (0, s.jsx)(u.FocusBlock, {
-        children: ei ? (0, s.jsx)(q, {
-          channel: a,
+      children: (0, a.jsx)(d.FocusBlock, {
+        children: ei ? (0, a.jsx)(q, {
+          channel: s,
           firstMessage: v,
           isFirstMessageLoaded: F,
           containerWidth: h.width,
           hasUnreads: K
-        }) : (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(X, {
-            mediaAttachments: ea,
+        }) : (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(X, {
+            mediaAttachments: es,
             globalSpoilerRenderSetting: et,
-            containerWidth: es,
-            containerHeight: eu ? es * (9 / 16) : en,
+            containerWidth: ea,
+            containerHeight: ed ? ea * (9 / 16) : en,
             canAutoPlay: $,
-            shouldMaintainAspectRatio: eu
-          }), (0, s.jsx)("div", {
+            shouldMaintainAspectRatio: ed
+          }), (0, a.jsx)("div", {
             className: G.tagsRow,
-            children: (0, s.jsx)(D.default, {
-              channel: a,
+            children: (0, a.jsx)(D.default, {
+              channel: s,
               tagsClassName: G.tagPill
             })
           })]
         })
       })
-    }), (0, s.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: G.footer,
-      children: (0, s.jsx)(u.FocusBlock, {
-        children: (0, s.jsx)(W, {
-          channel: a,
+      children: (0, a.jsx)(d.FocusBlock, {
+        children: (0, a.jsx)(W, {
+          channel: s,
           firstMessage: v,
           facepileRef: Y
         })
@@ -221,49 +221,49 @@ function z(e) {
 function W(e) {
   let {
     channel: t,
-    facepileRef: a,
+    facepileRef: s,
     firstMessage: n
   } = e, l = (0, j.useTypingUserIds)(t), r = (null == n ? void 0 : n.reactions) != null && n.reactions.length > 0;
-  return (0, s.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: G.forumPostControls,
-    children: [(0, s.jsxs)("div", {
+    children: [(0, a.jsxs)("div", {
       className: G.controlsGroup,
-      children: [(0, s.jsx)("div", {
+      children: [(0, a.jsx)("div", {
         className: G.messageCountContainer,
-        children: (0, s.jsx)(b.MessageCount, {
+        children: (0, a.jsx)(L.MessageCount, {
           channel: t,
           iconSize: 16,
           showReadState: !0
         })
-      }), l.length > 0 ? (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)("span", {
+      }), l.length > 0 ? (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)("span", {
           className: G.bullet,
           children: "•"
-        }), (0, s.jsxs)("div", {
+        }), (0, a.jsxs)("div", {
           className: G.typing,
-          children: [(0, s.jsx)(b.Facepile, {
+          children: [(0, a.jsx)(L.Facepile, {
             channel: t,
             userIds: l,
-            facepileRef: a
-          }), (0, s.jsx)("div", {
+            facepileRef: s
+          }), (0, a.jsx)("div", {
             className: G.dots,
-            children: (0, s.jsx)(u.Dots, {
+            children: (0, a.jsx)(d.Dots, {
               themed: !0,
               dotRadius: 2
             })
-          }), (0, s.jsx)(c.default, {
+          }), (0, a.jsx)(c.default, {
             channel: t,
             className: G.typingUsers,
             renderDots: !1
           })]
         })]
       }) : null]
-    }), (0, s.jsxs)("div", {
+    }), (0, a.jsxs)("div", {
       className: G.controlsGroup,
-      children: [r || null == n ? null : (0, s.jsx)(b.DefaultReaction, {
+      children: [r || null == n ? null : (0, a.jsx)(L.DefaultReaction, {
         firstMessage: n,
         channel: t
-      }), null == n ? null : (0, s.jsx)(b.MostUsedReaction, {
+      }), null == n ? null : (0, a.jsx)(L.MostUsedReaction, {
         firstMessage: n,
         channel: t
       })]
@@ -272,20 +272,20 @@ function W(e) {
 }
 let K = e => e.preventDefault(),
   Y = n.memo(function(e) {
-    return (0, s.jsx)(s.Fragment, {
+    return (0, a.jsx)(a.Fragment, {
       children: (0, C.renderImageComponent)(e)
     })
   }),
   X = n.memo(function(e) {
     let {
       mediaAttachments: t,
-      globalSpoilerRenderSetting: a,
+      globalSpoilerRenderSetting: s,
       containerWidth: l,
       containerHeight: i,
       canAutoPlay: o,
-      shouldMaintainAspectRatio: d = !1
+      shouldMaintainAspectRatio: u = !1
     } = e, {
-      containsVideo: u,
+      containsVideo: d,
       containsGif: c
     } = n.useMemo(() => (0, O.messageContainsGifOrVideo)(t), [t]), x = n.useMemo(() => t.slice(P.MOSAIC_MIN_INDEX, P.MOSAIC_MAX_INDEX), [t]), C = (0, P.useImageContainerStyles)({
       numAttachments: x.length,
@@ -297,19 +297,19 @@ let K = e => e.preventDefault(),
       containerHeight: i
     }), _ = (0, h.useShouldRedactExplicitContentForForum)(), S = n.useMemo(() => x.map((e, t) => {
       var n;
-      let [l, i] = (0, g.getForumPostShouldObscure)(e, !a, _), h = (0, g.getObscuredAlt)(i), x = {
+      let [l, i] = (0, g.getForumPostShouldObscure)(e, !s, _), h = (0, g.getObscuredAlt)(i), x = {
         ...T[t],
         src: e.src,
         width: e.width,
         height: e.height,
         alt: null != e.alt && l ? h : e.alt,
         onClick: K,
-        shouldRenderAccessory: !c && !u
+        shouldRenderAccessory: !c && !d
       }, S = (0, f.isAnimatedImageUrl)(e.src) ? "".concat(e.src, "?format=png") : e.src, p = o && !l ? e.src : S;
-      return (0, s.jsxs)("div", {
+      return (0, a.jsxs)("div", {
         className: G.bodyMediaFrame,
         style: C[t],
-        children: [d ? (0, s.jsx)(m.default, {
+        children: [u ? (0, a.jsx)(m.default, {
           ...x,
           src: p,
           backgroundSrc: S,
@@ -319,13 +319,13 @@ let K = e => e.preventDefault(),
             [G.obscured]: l
           }),
           imageChildClassName: G.mediaPostThumbnail
-        }) : e.src.startsWith("data:") ? (0, s.jsx)(E.default, {
+        }) : e.src.startsWith("data:") ? (0, a.jsx)(E.default, {
           ...x,
           className: G.mediaContainer,
           imageClassName: r(G.thumbnailOverride, {
             [G.obscured]: l
           })
-        }) : (0, s.jsx)(Y, {
+        }) : (0, a.jsx)(Y, {
           ...x,
           autoPlay: o && !l,
           containerClassName: G.mosaicMediaContainer,
@@ -333,33 +333,33 @@ let K = e => e.preventDefault(),
             [G.obscured]: l
           }),
           responsive: !0
-        }), l && (0, s.jsx)("div", {
+        }), l && (0, a.jsx)("div", {
           className: G.obscuredTagContainer,
-          children: (0, s.jsx)(F.default, {
+          children: (0, a.jsx)(F.default, {
             obscureReason: i,
             iconClassname: G.obscuredTag
           })
         })]
       }, e.src)
-    }), [o, c, u, a, C, T, x, d, _]);
-    return (0, s.jsxs)("div", {
+    }), [o, c, d, s, C, T, x, u, _]);
+    return (0, a.jsxs)("div", {
       className: G.bodyMedia,
       style: {
         width: l,
         height: i
       },
-      children: [(0, s.jsx)(s.Fragment, {
+      children: [(0, a.jsx)(a.Fragment, {
         children: S
-      }), (c || u) && (0, s.jsxs)("div", {
+      }), (c || d) && (0, a.jsxs)("div", {
         className: G.mediaIconsRow,
-        children: [u && (0, s.jsx)(A.default, {
+        children: [d && (0, a.jsx)(A.default, {
           width: "22px",
           height: "22px",
           className: G.mediaIcon
-        }), c && (0, s.jsx)(N.default, {
+        }), c && (0, a.jsx)(N.default, {
           className: G.mediaIcon
         })]
-      }), t.length > P.MOSAIC_MAX_IMAGE_COUNT && (0, s.jsx)(Z, {
+      }), t.length > P.MOSAIC_MAX_IMAGE_COUNT && (0, a.jsx)(Z, {
         text: (t.length - (0, P.MOSAIC_MAX_IMAGE_COUNT)).toString(),
         icon: M.default,
         pillClassName: G.moreImagesPill,
@@ -372,16 +372,16 @@ let K = e => e.preventDefault(),
 function Z(e) {
   let {
     text: t,
-    icon: a,
+    icon: s,
     pillClassName: n,
     iconClassName: l,
     textClassName: r
   } = e;
-  return (0, s.jsxs)("div", {
+  return (0, a.jsxs)("div", {
     className: n,
-    children: [(0, s.jsx)(a, {
+    children: [(0, a.jsx)(s, {
       className: l
-    }), (0, s.jsxs)(u.Text, {
+    }), (0, a.jsxs)(d.Text, {
       variant: "text-xs/medium",
       className: r,
       children: ["+", t]
@@ -392,14 +392,14 @@ function Z(e) {
 function q(e) {
   let {
     channel: t,
-    firstMessage: a,
+    firstMessage: s,
     isFirstMessageLoaded: l,
     containerWidth: i,
     hasUnreads: o
-  } = e, [d, c] = (0, L.getFrameDimensions)(i - 2 * L.IMAGE_PADDING), {
+  } = e, [u, c] = (0, b.getFrameDimensions)(i - 2 * b.IMAGE_PADDING), {
     content: m
   } = (0, j.useForumPostFirstMessageMarkup)({
-    firstMessage: a,
+    firstMessage: s,
     formatInline: !1,
     noStyleAndInteraction: !0
   }), {
@@ -408,29 +408,29 @@ function q(e) {
     channel: t,
     isNew: !1
   }), f = n.useMemo(() => ({
-    width: d,
+    width: u,
     height: c
-  }), [d, c]), g = o ? G.textContentUnread : G.textContentRead;
-  return (0, s.jsx)(s.Fragment, {
-    children: (0, s.jsxs)("div", {
+  }), [u, c]), g = o ? G.textContentUnread : G.textContentRead;
+  return (0, a.jsx)(a.Fragment, {
+    children: (0, a.jsxs)("div", {
       className: G.contentPreview,
       style: f,
-      children: [(0, s.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: G.content,
-        children: [l && null == a && (0, s.jsx)(u.Text, {
+        children: [l && null == s && (0, a.jsx)(d.Text, {
           variant: "text-sm/normal",
           color: o ? "header-secondary" : "text-muted",
           children: B.default.Messages.REPLY_QUOTE_MESSAGE_DELETED
-        }), l && null != a && (0, s.jsx)(v.default, {
-          message: a,
+        }), l && null != s && (0, a.jsx)(v.default, {
+          message: s,
           content: m,
           className: g
         })]
-      }), (0, s.jsx)("div", {
+      }), (0, a.jsx)("div", {
         className: r(G.textContentFooter, {
           [G.noTags]: !h
         }),
-        children: h ? (0, s.jsx)(D.default, {
+        children: h ? (0, a.jsx)(D.default, {
           channel: t,
           tagsClassName: G.tagPill,
           className: G.row

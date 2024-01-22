@@ -19,9 +19,9 @@ var s = n("37983"),
   _ = n("473759"),
   p = n("165926"),
   h = n("970366"),
-  N = n("42963"),
+  m = n("42963"),
   T = n("271938"),
-  m = n("476108"),
+  N = n("476108"),
   g = n("124969"),
   A = n("65300"),
   S = n("291850"),
@@ -128,7 +128,7 @@ class U extends a.PureComponent {
           transitionTo: a,
           location: l,
           onRegister: () => {
-            (0, p.setNewUser)(L.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), N.default.flowStart(O.FlowType.ORGANIC_GUILD_TEMPLATES, O.RegistrationSteps.NUF_STARTED)
+            (0, p.setNewUser)(L.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), m.default.flowStart(O.FlowType.ORGANIC_GUILD_TEMPLATES, O.RegistrationSteps.NUF_STARTED)
           }
         });
       case R.GuildTemplateStates.EXPIRED:
@@ -153,7 +153,7 @@ function G(e) {
     guildTemplate: (0, o.useStateFromStores)([c.default], () => c.default.getGuildTemplate(e.code)),
     nativeAppState: (0, o.useStateFromStores)([d.default], () => d.default.getState(e.code)),
     authenticated: (0, o.useStateFromStores)([T.default], () => T.default.isAuthenticated()),
-    defaultRoute: (0, o.useStateFromStores)([m.default], () => m.default.defaultRoute)
+    defaultRoute: (0, o.useStateFromStores)([N.default], () => N.default.defaultRoute)
   };
   return (0, s.jsx)(U, {
     ...e,
@@ -168,7 +168,7 @@ function b(e) {
     form: n,
     handleSubmit: a
   } = (0, f.default)(t, !1);
-  N.default.flowStep(O.FlowType.ORGANIC_GUILD_TEMPLATES, O.CreateGuildSteps.GUILD_CREATE);
+  m.default.flowStep(O.FlowType.ORGANIC_GUILD_TEMPLATES, O.CreateGuildSteps.GUILD_CREATE);
   let l = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(g.Title, {
       className: P.header,

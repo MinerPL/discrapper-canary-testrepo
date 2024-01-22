@@ -22,12 +22,12 @@ function m(e) {
       size: a,
       forcedIconColor: m,
       className: p,
-      iconClassName: E
+      iconClassName: T
     } = e,
-    [T, _] = (0, r.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
+    [E, _] = (0, r.useStateFromStoresArray)([d.default], () => [d.default.desaturateUserColors, d.default.saturation]),
     S = (0, u.useToken)(o.default.unsafe_rawColors.PRIMARY_300).hex(),
     h = (0, i.hex2int)(null != l ? l : S),
-    I = (0, i.int2hsl)(h, !1, T ? _ : null);
+    I = (0, i.int2hsl)(h, !1, E ? _ : null);
   t = null != m ? m : .3 > (0, i.getDarkness)(h) ? o.default.unsafe_rawColors.PRIMARY_630.css : o.default.unsafe_rawColors.WHITE_500.css;
   let A = a / 8;
   return (0, n.jsx)("div", {
@@ -41,7 +41,7 @@ function m(e) {
     className: p,
     children: (0, n.jsx)(c.default, {
       color: t,
-      className: s(f.linkIcon, E),
+      className: s(f.linkIcon, T),
       width: a - 2 * A,
       height: a - 2 * A,
       style: {

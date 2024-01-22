@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return N
   }
 }), n("222007");
 var s = n("37983"),
@@ -19,7 +19,7 @@ var s = n("37983"),
   _ = n("49111"),
   p = n("782340"),
   h = n("956874"),
-  N = n("926622");
+  m = n("926622");
 r.default.initialize();
 class T extends a.PureComponent {
   componentDidMount() {
@@ -29,12 +29,12 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("768025"),
-        className: i(h.image, N.marginBottom20)
+        className: i(h.image, m.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: N.marginBottom8,
+        className: m.marginBottom8,
         children: p.default.Messages.VERFICATION_EXPIRED
       }), (0, s.jsx)(E.SubTitle, {
-        className: N.marginBottom40,
+        className: m.marginBottom40,
         children: p.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleLogin,
@@ -46,9 +46,9 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("176872"),
-        className: i(h.image, N.marginBottom20)
+        className: i(h.image, m.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: N.marginBottom40,
+        className: m.marginBottom40,
         children: p.default.Messages.VERIFICATION_VERIFIED
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleOpenApp,
@@ -60,12 +60,12 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("951536"),
-        className: i(h.image, N.marginBottom20)
+        className: i(h.image, m.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: N.marginBottom8,
+        className: m.marginBottom8,
         children: p.default.Messages.VERIFICATION_VERIFYING
       }), (0, s.jsx)(E.SubTitle, {
-        className: N.marginBottom40,
+        className: m.marginBottom40,
         children: p.default.Messages.ACTION_MAY_TAKE_A_MOMENT
       }), (0, s.jsx)(E.Button, {
         submitting: !0,
@@ -102,7 +102,7 @@ class T extends a.PureComponent {
 T.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var m = r.default.connectStores([f.default], () => ({
+var N = r.default.connectStores([f.default], () => ({
   verifyFailed: f.default.didVerifyFail(),
   verifyErrors: f.default.getVerifyErrors(),
   verifySucceeded: f.default.didVerifySucceed(),

@@ -1,17 +1,17 @@
 e.exports = function(e, t, n, r) {
-  var o = n ? n.call(r, e, t) : void 0;
-  if (void 0 !== o) return !!o;
+  var i = n ? n.call(r, e, t) : void 0;
+  if (void 0 !== i) return !!i;
   if (e === t) return !0;
   if ("object" != typeof e || !e || "object" != typeof t || !t) return !1;
-  var a = Object.keys(e),
-    i = Object.keys(t);
-  if (a.length !== i.length) return !1;
-  for (var s = Object.prototype.hasOwnProperty.bind(t), c = 0; c < a.length; c++) {
-    var l = a[c];
-    if (!s(l)) return !1;
-    var u = e[l],
-      d = t[l];
-    if (!1 === (o = n ? n.call(r, u, d, l) : void 0) || void 0 === o && u !== d) return !1
+  var o = Object.keys(e),
+    s = Object.keys(t);
+  if (o.length !== s.length) return !1;
+  for (var a = Object.prototype.hasOwnProperty.bind(t), c = 0; c < o.length; c++) {
+    var u = o[c];
+    if (!a(u)) return !1;
+    var d = e[u],
+      l = t[u];
+    if (!1 === (i = n ? n.call(r, d, l, u) : void 0) || void 0 === i && d !== l) return !1
   }
   return !0
 }

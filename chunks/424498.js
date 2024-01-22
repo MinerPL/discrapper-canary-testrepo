@@ -1,8 +1,8 @@
-var e = n("367753"),
-  o = function() {
+var r = n("367753"),
+  i = function() {
     try {
-      var t = e(Object, "defineProperty");
-      return t({}, "", {}), t
-    } catch (t) {}
+      var e = r(Object, "defineProperty");
+      return e({}, "", {}), e
+    } catch (e) {}
   }();
-t.exports = o
+e.exports = i

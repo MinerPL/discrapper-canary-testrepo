@@ -7,10 +7,10 @@ a.r(t), a.d(t, {
 var l, s, r = a("37983");
 a("884691");
 var n = a("414456"),
-  o = a.n(n),
-  i = a("506838"),
-  u = a("956089"),
-  c = a("782340"),
+  i = a.n(n),
+  o = a("506838"),
+  c = a("956089"),
+  u = a("782340"),
   d = a("224609");
 (s = l || (l = {})).BANNER = "banner", s.MODAL = "modal", s.CARD = "card";
 var f = e => {
@@ -28,24 +28,24 @@ var f = e => {
   }(t.unpublishedAt);
 
   function n(e) {
-    return (0, r.jsx)(u.TextBadge, {
+    return (0, r.jsx)(c.TextBadge, {
       disableColor: !0,
       text: e,
-      className: o(d.badge, l)
+      className: i(d.badge, l)
     })
   }
-  return (0, i.match)([a, s > 1]).with(["card", !0], () => null).with(["banner", !0], () => {
-    let e = c.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
+  return (0, o.match)([a, s > 1]).with(["card", !0], () => null).with(["banner", !0], () => {
+    let e = u.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
       days: s
     });
     return n(e)
   }).with(["modal", !0], () => {
-    let e = c.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
+    let e = u.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
       days: s
     });
     return n(e)
   }).otherwise(() => {
-    let e = c.default.Messages.COLLECTIBLES_LAST_DAY;
+    let e = u.default.Messages.COLLECTIBLES_LAST_DAY;
     return n(e)
   })
 }

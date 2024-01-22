@@ -22,8 +22,8 @@ var l = n("414456"),
   E = n("664336"),
   m = n("773336"),
   p = n("50885"),
-  S = n("836056"),
-  g = n("922953"),
+  g = n("836056"),
+  S = n("922953"),
   N = n("879035"),
   _ = n("49111"),
   T = n("724210"),
@@ -64,7 +64,7 @@ function A(e) {
           className: I.search
         }, null != s ? s : l) : null, x && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
           canShowReminder: !0
-        }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(S.default, {})]
+        }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(S.default, {}) : (0, a.jsx)(g.default, {})]
       })
     }(),
     transparent: u,

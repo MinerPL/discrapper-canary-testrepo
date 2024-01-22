@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   GuildShopCategorySelector: function() {
-    return j
+    return O
   }
 });
 var l = s("37983");
@@ -30,7 +30,7 @@ var i = s("414456"),
   R = s("782340"),
   m = s("28521");
 
-function O(e) {
+function j(e) {
   let {
     icon: t,
     title: s,
@@ -82,7 +82,7 @@ function O(e) {
   })
 }
 
-function j(e) {
+function O(e) {
   let {
     guild: t
   } = e, s = (0, L.useIsEligibleForSubscriptionsInGuildShop)(t.id, "guild_shop_category_selector"), {
@@ -90,10 +90,10 @@ function j(e) {
     setSelectedTab: r,
     categoryTabs: _,
     handlePreviewDismiss: h
-  } = (0, S.useGuildShopDisplayContext)(), j = "false" === n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"), v = (0, a.default)([o.default], () => o.default.useReducedMotion), G = _.map(e => {
+  } = (0, S.useGuildShopDisplayContext)(), O = "false" === n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"), v = (0, a.default)([o.default], () => o.default.useReducedMotion), G = _.map(e => {
     switch (e) {
       case x.GuildShopTab.GUILD_PRODUCTS:
-        return (0, l.jsx)(O, {
+        return (0, l.jsx)(j, {
           icon: (0, l.jsx)(I.default, {
             width: 20,
             height: 20
@@ -104,7 +104,7 @@ function j(e) {
           onClick: () => r(x.GuildShopTab.GUILD_PRODUCTS)
         }, e);
       case x.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS:
-        return (0, l.jsx)(O, {
+        return (0, l.jsx)(j, {
           icon: (0, l.jsx)(p.default, {
             width: 20,
             height: 20
@@ -118,8 +118,8 @@ function j(e) {
           onClick: () => r(x.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS)
         }, e);
       case x.GuildShopTab.GUILD_PRODUCTS_PREVIEW:
-        return (0, l.jsx)(O, {
-          icon: j ? (0, l.jsx)("img", {
+        return (0, l.jsx)(j, {
+          icon: O ? (0, l.jsx)("img", {
             src: v ? (0, u.getAssetCDNUrl)("server_products/storefront/question-mark.png") : (0, u.getAssetCDNUrl)("server_products/storefront/question-mark.gif"),
             className: m.questionMark,
             alt: ""
@@ -134,7 +134,7 @@ function j(e) {
             r(x.GuildShopTab.GUILD_PRODUCTS_PREVIEW), n.default.set(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "true")
           },
           onPreviewDismiss: h,
-          isNew: j
+          isNew: O
         }, e);
       default:
         return null

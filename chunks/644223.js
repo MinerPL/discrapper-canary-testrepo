@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var s = n("913144");
+var i = n("913144");
 
-function i(e, t, n, i) {
-  s.default.dispatch({
+function s(e, t, n, s) {
+  i.default.dispatch({
     type: "EMBEDDED_ACTIVITY_DEFERRED_OPEN",
     channelId: e,
     applicationId: t,
-    intent: i,
+    intent: s,
     analyticsLocations: n
   })
 }

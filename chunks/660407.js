@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("393414"),
   m = n("42203"),
   p = n("211248"),
-  S = n("461380"),
-  g = n("36694"),
+  g = n("461380"),
+  S = n("36694"),
   N = n("11539"),
   _ = n("815978"),
   T = n("814744"),
@@ -135,7 +135,7 @@ function O(e) {
     icon: r ? (0, a.jsx)(N.default, {
       width: 16,
       height: 16
-    }) : (0, a.jsx)(g.default, {
+    }) : (0, a.jsx)(S.default, {
       width: 16,
       height: 16
     }),
@@ -173,7 +173,7 @@ function b(e) {
         [v.collapsed]: t.collapsed
       }),
       onClick: s,
-      children: (0, a.jsx)(S.default, {
+      children: (0, a.jsx)(g.default, {
         width: 16,
         height: 16
       })

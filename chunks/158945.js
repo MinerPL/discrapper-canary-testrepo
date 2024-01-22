@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return o
   }
 });
 var a = n("884691"),
   r = n("599110"),
   i = n("507445"),
-  s = n("49111");
+  c = n("49111");
 
-function c(e) {
+function o(e) {
   let t = a.useRef(!0);
   return a.useEffect(() => () => {
     t.current && (null == e || e(i.CaptchaError.CANCEL))
-  }, []), a.useEffect(() => (r.default.track(s.AnalyticEvents.OPEN_MODAL, {
+  }, []), a.useEffect(() => (r.default.track(c.AnalyticEvents.OPEN_MODAL, {
     type: "Guild Join Captcha"
   }), () => {
-    t.current && r.default.track(s.AnalyticEvents.MODAL_DISMISSED, {
+    t.current && r.default.track(c.AnalyticEvents.MODAL_DISMISSED, {
       type: "Guild Join Captcha"
     })
   }), [t]), () => {

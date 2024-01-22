@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
 var i = n("862205");
-let r = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2024-01_auto_disable_video_mobile_v2",
   label: "Mobile performance: VideoHealthManager (v2)",
@@ -58,10 +58,10 @@ let r = (0, i.createExperiment)({
     }
   }]
 });
-var s = {
+var r = {
   isFeatureSupportedOnPlatform: () => !1,
   getConfig(e) {
-    let t = r.getCurrentConfig({
+    let t = s.getCurrentConfig({
       location: "508d6c_1"
     }, {
       autoTrackExposure: e

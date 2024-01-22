@@ -5,55 +5,55 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("227645"),
   l = n("199285"),
   u = n("697917"),
-  c = n("904276"),
-  d = n("875436"),
+  d = n("904276"),
+  c = n("875436"),
   f = n("389802"),
-  E = n("946032");
+  _ = n("946032");
 
 function h(e) {
   let {
     color: t = "default",
     label: n,
-    checked: s,
+    checked: r,
     subtext: h,
-    disabled: p,
-    isFocused: _,
-    menuItemProps: S,
-    action: m
-  } = e, T = r.useRef(null);
-  return r.useEffect(() => {
-    _ && (0, u.ensureItemVisible)(T)
-  }, [_]), (0, i.jsxs)(o.Clickable, {
-    innerRef: T,
-    className: a(E.item, E.labelContainer, f.MENU_ITEM_COLORS[t], {
-      [E.disabled]: p,
-      [E.focused]: _
+    disabled: g,
+    isFocused: m,
+    menuItemProps: E,
+    action: p
+  } = e, v = s.useRef(null);
+  return s.useEffect(() => {
+    m && (0, u.ensureItemVisible)(v)
+  }, [m]), (0, i.jsxs)(o.Clickable, {
+    innerRef: v,
+    className: a(_.item, _.labelContainer, f.MENU_ITEM_COLORS[t], {
+      [_.disabled]: g,
+      [_.focused]: m
     }),
-    onClick: p ? void 0 : m,
-    ...S,
-    "aria-checked": s,
-    "aria-disabled": p,
+    onClick: g ? void 0 : p,
+    ...E,
+    "aria-checked": r,
+    "aria-disabled": g,
     children: [(0, i.jsxs)("div", {
-      className: E.label,
+      className: _.label,
       children: [(0, l.renderSubnode)(n, e), null != h && (0, i.jsx)("div", {
-        className: E.subtext,
+        className: _.subtext,
         children: h
       })]
     }), (0, i.jsx)("div", {
-      className: E.iconContainer,
-      children: s ? (0, i.jsx)(d.default, {
-        className: E.icon,
-        background: E.radio,
-        foreground: E.radioSelection
-      }) : (0, i.jsx)(c.default, {
-        className: E.icon,
-        foreground: E.radio
+      className: _.iconContainer,
+      children: r ? (0, i.jsx)(c.default, {
+        className: _.icon,
+        background: _.radio,
+        foreground: _.radioSelection
+      }) : (0, i.jsx)(d.default, {
+        className: _.icon,
+        foreground: _.radio
       })
     })]
   })

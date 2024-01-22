@@ -32,8 +32,8 @@ var s = n("37983"),
   x = n("738602"),
   R = n("430025"),
   y = n("659500"),
-  D = n("773336"),
-  O = n("412861"),
+  O = n("773336"),
+  D = n("412861"),
   j = n("79254"),
   P = n("64096"),
   b = n("49111"),
@@ -75,7 +75,7 @@ var s = n("37983"),
       eu = (0, c.default)(X);
     (null == eu ? void 0 : eu.newClipIds.length) !== (null == X ? void 0 : X.newClipIds.length) && (null !== (t = null == X ? void 0 : X.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ea && ee && Q && !et && !$ && !en && el("recentClips");
     let ed = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, O.showUploadFileSizeExceededError)(w, []) : (0, O.promptToUpload)(e, w, B, {
+      null != t && "ETOOLARGE" === t.code ? (0, D.showUploadFileSizeExceededError)(w, []) : (0, D.promptToUpload)(e, w, B, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       }), y.ComponentDispatch.dispatchToLastSubscribed(b.ComponentActions.TEXTAREA_FOCUS)
@@ -105,7 +105,7 @@ var s = n("37983"),
     });
     let ef = (0, _.useCanStartPublicThread)(w),
       eh = (0, _.useCanStartPrivateThread)(w),
-      eC = !T.UseLegacyChatInput.useSetting() && !(0, D.isAndroidWeb)() && null != window.ResizeObserver,
+      eC = !T.UseLegacyChatInput.useSetting() && !(0, O.isAndroidWeb)() && null != window.ResizeObserver,
       ep = (0, r.useStateFromStores)([I.default, A.default], () => (0, C.canUseApplicationCommands)(I.default, A.default, Z, w)),
       em = (0, S.useCanPostPollsInChannel)(null != w ? w : void 0),
       eE = (0, u.useRedesignIconContext)().enabled,

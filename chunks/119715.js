@@ -60,7 +60,7 @@ function V(e) {
   switch (l) {
     case A.IS_BACKWARDS_COMPAT_RAID_TYPE:
     case d.AutomodNotificationEmbedTypeKeys.RAID:
-      return (0, s.jsx)(W, {
+      return (0, s.jsx)(K, {
         message: t,
         compact: n
       });
@@ -70,7 +70,7 @@ function V(e) {
         compact: n
       });
     case d.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED:
-      return (0, s.jsx)(K, {
+      return (0, s.jsx)(W, {
         message: t,
         compact: n
       });
@@ -106,7 +106,7 @@ function Y(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   var t;
   let {
     message: n,
@@ -187,7 +187,7 @@ function K(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   var t;
   let {
     message: a,

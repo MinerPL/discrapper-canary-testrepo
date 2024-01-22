@@ -1,37 +1,37 @@
 n("424973");
-var e = n("488063"),
-  o = n("862167"),
-  i = n("430272");
-t.exports = function(t, r, n, u, a, c) {
-  var s = 1 & n,
-    f = t.length,
-    p = r.length;
-  if (f != p && !(s && p > f)) return !1;
-  var l = c.get(t);
-  if (l && c.get(r)) return l == r;
-  var v = -1,
+var r = n("488063"),
+  i = n("862167"),
+  o = n("430272");
+e.exports = function(e, t, n, s, a, c) {
+  var u = 1 & n,
+    d = e.length,
+    l = t.length;
+  if (d != l && !(u && l > d)) return !1;
+  var f = c.get(e);
+  if (f && c.get(t)) return f == t;
+  var p = -1,
     h = !0,
-    _ = 2 & n ? new e : void 0;
-  for (c.set(t, r), c.set(r, t); ++v < f;) {
-    var d = t[v],
-      y = r[v];
-    if (u) var b = s ? u(y, d, v, r, t, c) : u(d, y, v, t, r, c);
-    if (void 0 !== b) {
-      if (b) continue;
+    g = 2 & n ? new r : void 0;
+  for (c.set(e, t), c.set(t, e); ++p < d;) {
+    var b = e[p],
+      v = t[p];
+    if (s) var m = u ? s(v, b, p, t, e, c) : s(b, v, p, e, t, c);
+    if (void 0 !== m) {
+      if (m) continue;
       h = !1;
       break
     }
-    if (_) {
-      if (!o(r, function(t, r) {
-          if (!i(_, r) && (d === t || a(d, t, n, u, c))) return _.push(r)
+    if (g) {
+      if (!i(t, function(e, t) {
+          if (!o(g, t) && (b === e || a(b, e, n, s, c))) return g.push(t)
         })) {
         h = !1;
         break
       }
-    } else if (!(d === y || a(d, y, n, u, c))) {
+    } else if (!(b === v || a(b, v, n, s, c))) {
       h = !1;
       break
     }
   }
-  return c.delete(t), c.delete(r), h
+  return c.delete(e), c.delete(t), h
 }

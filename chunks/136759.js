@@ -1,128 +1,128 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(e), r.d(e, {
   persist: function() {
-    return d
+    return s
   }
-}), n("222007");
+}), r("222007");
 Object.prototype.hasOwnProperty, Object.prototype.propertyIsEnumerable;
-var i = Object.defineProperty,
-  s = Object.getOwnPropertySymbols,
-  l = Object.prototype.hasOwnProperty,
-  r = Object.prototype.propertyIsEnumerable,
-  a = (e, t, n) => t in e ? i(e, t, {
+var n = Object.defineProperty,
+  i = Object.getOwnPropertySymbols,
+  o = Object.prototype.hasOwnProperty,
+  a = Object.prototype.propertyIsEnumerable,
+  c = (t, e, r) => e in t ? n(t, e, {
     enumerable: !0,
     configurable: !0,
     writable: !0,
-    value: n
-  }) : e[t] = n,
-  u = (e, t) => {
-    for (var n in t || (t = {})) l.call(t, n) && a(e, n, t[n]);
-    if (s)
-      for (var n of s(t)) r.call(t, n) && a(e, n, t[n]);
-    return e
+    value: r
+  }) : t[e] = r,
+  l = (t, e) => {
+    for (var r in e || (e = {})) o.call(e, r) && c(t, r, e[r]);
+    if (i)
+      for (var r of i(e)) a.call(e, r) && c(t, r, e[r]);
+    return t
   };
-let o = e => t => {
+let u = t => e => {
     try {
-      let n = e(t);
-      if (n instanceof Promise) return n;
+      let r = t(e);
+      if (r instanceof Promise) return r;
       return {
-        then: e => o(e)(n),
-        catch (e) {
+        then: t => u(t)(r),
+        catch (t) {
           return this
         }
       }
-    } catch (e) {
+    } catch (t) {
       return {
-        then(e) {
+        then(t) {
           return this
         },
-        catch: t => o(t)(e)
+        catch: e => u(e)(t)
       }
     }
   },
-  d = (e, t) => (n, i, s) => {
-    let l, r, a = u({
+  s = (t, e) => (r, n, i) => {
+    let o, a, c = l({
       getStorage: () => localStorage,
       serialize: JSON.stringify,
       deserialize: JSON.parse,
-      partialize: e => e,
+      partialize: t => t,
       version: 0,
-      merge: (e, t) => u(u({}, t), e)
-    }, t);
-    (a.blacklist || a.whitelist) && console.warn("The ".concat(a.blacklist ? "blacklist" : "whitelist", " option is deprecated and will be removed in the next version. Please use the 'partialize' option instead."));
-    let d = !1,
-      c = new Set,
-      h = new Set;
+      merge: (t, e) => l(l({}, e), t)
+    }, e);
+    (c.blacklist || c.whitelist) && console.warn("The ".concat(c.blacklist ? "blacklist" : "whitelist", " option is deprecated and will be removed in the next version. Please use the 'partialize' option instead."));
+    let s = !1,
+      f = new Set,
+      p = new Set;
     try {
-      l = a.getStorage()
-    } catch (e) {}
-    if (!l) return e(function() {
-      for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
-      console.warn("[zustand persist middleware] Unable to update item '".concat(a.name, "', the given storage is currently unavailable.")), n(...t)
-    }, i, s);
-    !l.removeItem && console.warn("[zustand persist middleware] The given storage for item '".concat(a.name, "' does not contain a 'removeItem' method, which will be required in v4."));
-    let f = o(a.serialize),
-      m = () => {
-        let e;
-        let t = a.partialize(u({}, i()));
-        a.whitelist && Object.keys(t).forEach(e => {
-          var n;
-          (null == (n = a.whitelist) ? void 0 : n.includes(e)) || delete t[e]
-        }), a.blacklist && a.blacklist.forEach(e => delete t[e]);
-        let n = f({
-          state: t,
-          version: a.version
-        }).then(e => l.setItem(a.name, e)).catch(t => {
-          e = t
+      o = c.getStorage()
+    } catch (t) {}
+    if (!o) return t(function() {
+      for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
+      console.warn("[zustand persist middleware] Unable to update item '".concat(c.name, "', the given storage is currently unavailable.")), r(...e)
+    }, n, i);
+    !o.removeItem && console.warn("[zustand persist middleware] The given storage for item '".concat(c.name, "' does not contain a 'removeItem' method, which will be required in v4."));
+    let d = u(c.serialize),
+      v = () => {
+        let t;
+        let e = c.partialize(l({}, n()));
+        c.whitelist && Object.keys(e).forEach(t => {
+          var r;
+          (null == (r = c.whitelist) ? void 0 : r.includes(t)) || delete e[t]
+        }), c.blacklist && c.blacklist.forEach(t => delete e[t]);
+        let r = d({
+          state: e,
+          version: c.version
+        }).then(t => o.setItem(c.name, t)).catch(e => {
+          t = e
         });
-        if (e) throw e;
-        return n
+        if (t) throw t;
+        return r
       },
-      p = s.setState;
-    s.setState = (e, t) => {
-      p(e, t), m()
+      h = i.setState;
+    i.setState = (t, e) => {
+      h(t, e), v()
     };
-    let I = e(function() {
-        for (var e = arguments.length, t = Array(e), i = 0; i < e; i++) t[i] = arguments[i];
-        n(...t), m()
-      }, i, s),
-      E = () => {
-        var e;
-        if (!l) return;
-        d = !1, c.forEach(e => e(i()));
-        let t = (null == (e = a.onRehydrateStorage) ? void 0 : e.call(a, i())) || void 0;
-        return o(l.getItem.bind(l))(a.name).then(e => {
-          if (e) return a.deserialize(e)
-        }).then(e => {
-          if (e) {
-            if ("number" != typeof e.version || e.version === a.version) return e.state;
-            if (a.migrate) return a.migrate(e.state, e.version);
+    let g = t(function() {
+        for (var t = arguments.length, e = Array(t), n = 0; n < t; n++) e[n] = arguments[n];
+        r(...e), v()
+      }, n, i),
+      m = () => {
+        var t;
+        if (!o) return;
+        s = !1, f.forEach(t => t(n()));
+        let e = (null == (t = c.onRehydrateStorage) ? void 0 : t.call(c, n())) || void 0;
+        return u(o.getItem.bind(o))(c.name).then(t => {
+          if (t) return c.deserialize(t)
+        }).then(t => {
+          if (t) {
+            if ("number" != typeof t.version || t.version === c.version) return t.state;
+            if (c.migrate) return c.migrate(t.state, t.version);
             console.error("State loaded from storage couldn't be migrated since no migrate function was provided")
           }
-        }).then(e => {
-          var t;
-          return n(r = a.merge(e, null != (t = i()) ? t : I), !0), m()
+        }).then(t => {
+          var e;
+          return r(a = c.merge(t, null != (e = n()) ? e : g), !0), v()
         }).then(() => {
-          null == t || t(r, void 0), d = !0, h.forEach(e => e(r))
-        }).catch(e => {
-          null == t || t(void 0, e)
+          null == e || e(a, void 0), s = !0, p.forEach(t => t(a))
+        }).catch(t => {
+          null == e || e(void 0, t)
         })
       };
-    return s.persist = {
-      setOptions: e => {
-        a = u(u({}, a), e), e.getStorage && (l = e.getStorage())
+    return i.persist = {
+      setOptions: t => {
+        c = l(l({}, c), t), t.getStorage && (o = t.getStorage())
       },
       clearStorage: () => {
-        var e;
-        null == (e = null == l ? void 0 : l.removeItem) || e.call(l, a.name)
+        var t;
+        null == (t = null == o ? void 0 : o.removeItem) || t.call(o, c.name)
       },
-      rehydrate: () => E(),
-      hasHydrated: () => d,
-      onHydrate: e => (c.add(e), () => {
-        c.delete(e)
+      rehydrate: () => m(),
+      hasHydrated: () => s,
+      onHydrate: t => (f.add(t), () => {
+        f.delete(t)
       }),
-      onFinishHydration: e => (h.add(e), () => {
-        h.delete(e)
+      onFinishHydration: t => (p.add(t), () => {
+        p.delete(t)
       })
-    }, E(), r || I
+    }, m(), a || g
   }

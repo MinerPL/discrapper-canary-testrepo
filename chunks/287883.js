@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildEligibleForGuildProducts: function() {
-    return i
+    return s
   },
   isGuildEligibleForGuildProducts: function() {
     return r
   }
 });
-var s = n("60705");
+var i = n("60705");
 
-function i(e, t) {
+function s(e, t) {
   let {
     enabled: n
-  } = s.GuildProductsExperiment.useExperiment({
+  } = i.GuildProductsExperiment.useExperiment({
     guildId: null != e ? e : "",
     location: t
   });
@@ -22,7 +22,7 @@ function i(e, t) {
 function r(e, t) {
   let {
     enabled: n
-  } = s.GuildProductsExperiment.getCurrentConfig({
+  } = i.GuildProductsExperiment.getCurrentConfig({
     guildId: null != e ? e : "",
     location: t
   });

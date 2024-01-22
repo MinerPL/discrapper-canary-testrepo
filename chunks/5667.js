@@ -28,15 +28,15 @@ function p(e) {
     buttonCTA: i,
     secondaryButtonCTA: u,
     onClick: p,
-    onSecondaryClick: E,
-    onComponentMount: T,
+    onSecondaryClick: T,
+    onComponentMount: E,
     asset: _,
     markAsDismissed: S,
     caretPosition: h = "caretTopCenter",
     buttonLayout: I = 0
   } = e;
   o.useEffect(() => {
-    null == T || T()
+    null == E || E()
   }, []);
   let A = null != u;
   return (0, r.jsxs)("div", {
@@ -58,7 +58,7 @@ function p(e) {
       children: [A ? (0, r.jsx)(c.Button, {
         color: c.Button.Colors.BRAND,
         onClick: () => {
-          null == E || E(), null == S || S(f.ContentDismissActionType.SECONDARY)
+          null == T || T(), null == S || S(f.ContentDismissActionType.SECONDARY)
         },
         children: u
       }) : null, null == i ? null : (0, r.jsx)(c.Button, {

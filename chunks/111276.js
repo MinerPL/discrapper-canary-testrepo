@@ -8,8 +8,8 @@ var t = E("689988"),
   o = E("305961"),
   n = E("718517"),
   r = E("388142"),
-  i = E("711454"),
-  a = E("578899");
+  a = E("711454"),
+  i = E("578899");
 let I = 0;
 class s extends t.default {
   constructor(...e) {
@@ -22,7 +22,7 @@ class s extends t.default {
       Date.now() - I > n.default.Millis.HOUR && this._attemptDeadchatPrompt()
     }, this._attemptDeadchatPrompt = () => {
       let e = o.default.getGuilds(),
-        _ = Object.keys(e).filter(e => a.SimpleDeadchatPromptExperiment.getCurrentConfig({
+        _ = Object.keys(e).filter(e => i.SimpleDeadchatPromptExperiment.getCurrentConfig({
           guildId: e,
           location: "manager"
         }).triggerDeadchat);
@@ -30,7 +30,7 @@ class s extends t.default {
     }, this._triggerGamingStatsSetupExperiment = () => {
       let e = o.default.getGuilds();
       Object.keys(e).forEach(e => {
-        i.GamingStatsSetupExperiment.trackExposure({
+        a.GamingStatsSetupExperiment.trackExposure({
           guildId: e,
           location: "manager"
         })
