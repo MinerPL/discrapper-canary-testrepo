@@ -86,6 +86,7 @@ function R(e) {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
   }) : null != D && D && (0, g.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(_.default, {
-    embeddedApps: F
+    embeddedApps: F,
+    muted: U
   }) : null
 }

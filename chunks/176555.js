@@ -14,14 +14,14 @@ var s = n("151426"),
   u = n("21526"),
   d = n("49111"),
   c = n("782340"),
-  f = n("608284"),
-  E = n("811982"),
+  f = n("906861"),
+  E = n("273626"),
   _ = () => {
     let {
       analyticsLocations: e
     } = (0, l.default)(i.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP);
     return (0, a.jsx)(r.default, {
-      dismissibleContent: s.DismissibleContent.COLLECTIBLES_GIFTING_COACHMARK,
+      dismissibleContent: s.DismissibleContent.COLLECTIBLES_SHOP_CYBERPUNK_COACHMARK,
       inlineArt: !0,
       tryItText: c.default.Messages.CHECK_IT_OUT,
       onTryFeature: () => {
@@ -31,8 +31,8 @@ var s = n("151426"),
           analyticsSource: i.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
         })
       },
-      header: c.default.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING,
-      body: c.default.Messages.COLLECTIBLES_GIFT_COACHMARK_DESC,
+      header: c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_HEADER,
+      body: c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_DESC,
       dismissText: c.default.Messages.EDUCATION_NEW_FEATURE_DISMISS,
       position: "right",
       align: "top",

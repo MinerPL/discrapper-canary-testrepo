@@ -15,20 +15,21 @@ var a = n("414456"),
 function u(e) {
   let {
     className: t,
-    embeddedApps: n
+    embeddedApps: n,
+    muted: a
   } = e;
   if (n.length <= 0) return null;
   {
     if (1 === n.length) return (0, l.jsx)("div", {
-      className: s(o.container, t),
+      className: s(o.container, t, a && o.modeMuted),
       children: (0, l.jsx)(r.default, {
         game: n[0].application,
-        className: o.icon24px
+        className: o.icon20px
       })
     });
     let e = n.length - 1;
     return (0, l.jsxs)("div", {
-      className: s(o.container, t),
+      className: s(o.container, t, a && o.modeMuted),
       children: [(0, l.jsx)(r.default, {
         game: n[0].application,
         className: o.icon20px
