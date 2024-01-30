@@ -17,8 +17,8 @@ var l = n("77078"),
   f = n("540692"),
   E = n("456015"),
   _ = n("982457"),
-  T = n("781084"),
-  I = n("1607"),
+  T = n("1607"),
+  I = n("157829"),
   m = n("646718");
 class N extends i.default {
   _initialize() {
@@ -76,20 +76,14 @@ class N extends i.default {
     super(...e), this._premiumPaymentModalCloseResolve = null, this._premiumPaymentModalCloseReject = null, this._maybeFetchPremiumOffer = () => {
       let e = u.default.getCurrentUser();
       if (null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer()) {
-        let {
-          enabled: e
-        } = T.default.getCurrentConfig({
-          location: "PremiumManager"
-        }, {
-          autoTrackExposure: !1
-        });
+        let e = (0, I.shouldHitUserOfferEndPoints)("PremiumManager");
         e ? (0, E.fetchUserOffer)() : _.default.fetchUserTrialOffer()
       }
     }, this._maybeFetchReferralsRemaining = () => {
       let e = u.default.getCurrentUser(),
         {
           enabled: t
-        } = I.default.getCurrentConfig({
+        } = T.default.getCurrentConfig({
           location: "16261f_1"
         }, {
           autoTrackExposure: !1

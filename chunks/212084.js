@@ -8,6 +8,12 @@ var i = n("605250"),
   s = n("802493");
 let r = new i.default("GuildStickers");
 var a = new class e {
+  async getAsync(e) {
+    let t = performance.now(),
+      n = await s.default.stickers(e).getMapEntries(),
+      i = performance.now();
+    return r.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
+  }
   getSync(e) {
     let t = performance.now(),
       n = s.default.stickers(e).getMapEntriesSyncUnsafe(),

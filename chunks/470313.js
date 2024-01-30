@@ -19,6 +19,8 @@ a = class {
         id: null,
         name: null,
         icon: null
-      }, null == t || t > r.RPC_VERSION || t < 1) throw new l.default(r.RPCCloseCodes.INVALID_VERSION, "Invalid Version: ".concat(t))
+      }, null == t || t > r.RPC_VERSION || t < 1) throw new l.default({
+      closeCode: r.RPCCloseCodes.INVALID_VERSION
+    }, "Invalid Version: ".concat(t))
   }
 }

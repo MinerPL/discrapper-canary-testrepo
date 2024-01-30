@@ -37,7 +37,7 @@ let U = (e, t) => {
         size: 0,
         proxy_url: e.url
       };
-      if (!(0, u.isImageFile)(e.filename)) return a;
+      if (!((0, u.isImageFile)(e.filename) || (0, u.isVideoFile)(e.filename))) return a;
       return {
         ...a,
         width: null !== (l = null === (n = t[e.id]) || void 0 === n ? void 0 : n.width) && void 0 !== l ? l : A.DEFAULT_MEDIA_MAX_WIDTH,
@@ -137,7 +137,7 @@ let U = (e, t) => {
     var t;
     let {
       flaggedContent: n
-    } = e, r = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [a, u] = l.useState({}), [c, d] = l.useState(!0), f = n[0], I = U(f, a), h = (0, E.default)(I, {
+    } = e, r = (0, o.useStateFromStores)([S.default], () => S.default.getCurrentUser()), [a, c] = l.useState({}), [d, f] = l.useState(!0), I = n[0], h = U(I, a), C = (0, E.default)(h, {
       hideSimpleEmbedContent: !1,
       allowList: !1,
       allowHeading: !1,
@@ -145,27 +145,49 @@ let U = (e, t) => {
       previewLinkTarget: !1
     });
     return (l.useEffect(() => {
-      Promise.all(f.attachments.map(e => {
+      Promise.all(I.attachments.filter(e => {
+        let {
+          filename: t
+        } = e;
+        return (0, u.isImageFile)(t) || (0, u.isVideoFile)(t)
+      }).map(e => {
         var t;
         return (t = e, new Promise((e, n) => {
-          let i = new Image;
-          i.src = t.url, i.onload = () => {
-            e(i)
-          }, i.onerror = () => {
-            n()
-          }
-        })).then(t => u(n => ({
+          if ((0, u.isImageFile)(t.filename)) {
+            let i = new Image;
+            i.src = t.url, i.onload = () => {
+              e(i)
+            }, i.onerror = () => {
+              n()
+            }
+          } else if ((0, u.isVideoFile)(t.filename)) {
+            let i = document.createElement("video");
+            i.src = t.url, i.onloadedmetadata = () => {
+              let t = i.videoWidth,
+                n = i.videoHeight;
+              e({
+                width: t,
+                height: n
+              })
+            }, i.onerror = () => {
+              n()
+            }
+          } else e({
+            width: 0,
+            height: 0
+          })
+        })).then(t => c(n => ({
           ...n,
           [e.id]: t
         })))
-      })).finally(() => d(!1))
-    }, [f.attachments]), "" === I.content && 0 === I.attachments.length) ? null : (0, i.jsxs)("div", {
+      })).finally(() => f(!1))
+    }, [I.attachments]), "" === h.content && 0 === h.attachments.length) ? null : (0, i.jsxs)("div", {
       className: L.classificationEvidenceContainer,
       children: [(0, i.jsx)(s.Text, {
         variant: "eyebrow",
         color: "text-muted",
         children: N.default.Messages.SAFETY_HUB_CLASSIFICATION_DETAIL_EVIDENCE_HEADER
-      }), c ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)("div", {
+      }), d ? (0, i.jsx)(s.Spinner, {}) : (0, i.jsx)("div", {
         className: L.classificationEvidenceCard,
         children: (0, i.jsx)(T.default, {
           compact: !1,
@@ -175,7 +197,7 @@ let U = (e, t) => {
               colorString: "",
               nick: null !== (t = null == r ? void 0 : r.username) && void 0 !== t ? t : ""
             },
-            message: I,
+            message: h,
             channel: void 0,
             guildId: void 0,
             compact: !1,
@@ -185,11 +207,11 @@ let U = (e, t) => {
             hideTimestamp: !1
           }),
           childrenAccessories: (0, i.jsx)(R, {
-            message: I
+            message: h
           }),
           childrenMessageContent: (0, _.default)({
-            message: I
-          }, h.content),
+            message: h
+          }, C.content),
           hasThread: !1,
           hasReply: !1
         })

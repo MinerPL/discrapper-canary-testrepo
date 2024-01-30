@@ -1,14 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
 var i = n("37983");
 n("884691");
 var s = n("551042"),
   r = n("135230"),
-  a = {
+  a = n("782340"),
+  o = {
     show(e) {
       let {
         title: t,
@@ -41,5 +42,19 @@ var s = n("551042"),
         onCloseCallback: c
       })
     },
-    close() {}
+    close() {},
+    confirm(e) {
+      return new Promise(t => {
+        this.show({
+          onConfirm() {
+            t(!0)
+          },
+          cancelText: a.default.Messages.CANCEL,
+          onCancel() {
+            t(!1)
+          },
+          ...e
+        })
+      })
+    }
   }

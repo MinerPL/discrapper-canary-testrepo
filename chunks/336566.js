@@ -15,17 +15,29 @@ var s = n("260320"),
 function u(e) {
   if (e instanceof s.LobbyError) switch (e.code) {
     case o.LobbyErrors.FULL:
-      throw new i.default(r.RPCErrors.LOBBY_FULL, "Lobby is full.");
+      throw new i.default({
+        errorCode: o.RPCErrors.LOBBY_FULL
+      }, "Lobby is full.");
     case o.LobbyErrors.INVALID_SECRET:
-      throw new i.default(r.RPCErrors.INVALID_LOBBY_SECRET, "Lobby secret is invalid.");
+      throw new i.default({
+        errorCode: o.RPCErrors.INVALID_LOBBY_SECRET
+      }, "Lobby secret is invalid.");
     case o.LobbyErrors.NOT_FOUND:
-      throw new i.default(r.RPCErrors.INVALID_LOBBY, "Lobby does not exist.");
+      throw new i.default({
+        errorCode: o.RPCErrors.INVALID_LOBBY
+      }, "Lobby does not exist.");
     case o.LobbyErrors.SERVICE_UNAVAILABLE:
-      throw new i.default(r.RPCErrors.SERVICE_UNAVAILABLE, "Lobby service is unavailable.");
+      throw new i.default({
+        errorCode: o.RPCErrors.SERVICE_UNAVAILABLE
+      }, "Lobby service is unavailable.");
     case o.LobbyErrors.ALREADY_CONNECTING:
-      throw new i.default(r.RPCErrors.INVALID_COMMAND, "Already connecting to lobby.");
+      throw new i.default({
+        errorCode: o.RPCErrors.INVALID_COMMAND
+      }, "Already connecting to lobby.");
     default:
-      throw new i.default(r.RPCErrors.UNKNOWN_ERROR, "Unknown error has occured.")
+      throw new i.default({
+        errorCode: o.RPCErrors.UNKNOWN_ERROR
+      }, "Unknown error has occured.")
   }
   throw e
 }
@@ -47,15 +59,17 @@ var d = {
           type: n,
           capacity: s,
           locked: l,
-          metadata: o
+          metadata: r
         }
       } = e;
-      if (null == t.application.id) throw new i.default(r.RPCErrors.INVALID_COMMAND, "No application.");
+      if (null == t.application.id) throw new i.default({
+        errorCode: o.RPCErrors.INVALID_COMMAND
+      }, "No application.");
       return (0, a.createLobby)(t.id, t.application.id, {
         type: n,
         capacity: s,
         locked: l,
-        metadata: o
+        metadata: r
       }).catch(u)
     }
   },

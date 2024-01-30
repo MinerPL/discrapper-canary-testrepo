@@ -103,7 +103,7 @@ function T(e) {
         onClose: async () => {
           await a.onClose(), D(!1)
         },
-        onDelete: async () => {
+        onAfterDelete: async () => {
           await a.onClose(), y(), D(!1)
         }
       })

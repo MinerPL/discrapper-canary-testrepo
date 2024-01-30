@@ -52,7 +52,9 @@ async function _(e) {
   } = e;
   (0, d.validateTransportType)(t.transport);
   let n = t.application.id;
-  if (null == n) throw new u.default(c.RPCErrors.INVALID_COMMAND, "No application.");
+  if (null == n) throw new u.default({
+    errorCode: f.RPCErrors.INVALID_COMMAND
+  }, "No application.");
   if (o.default.inTestModeForApplication(n) || l.default.inDevModeForApplication(n)) {
     let e = await s.fetchSKUsForApplication(n, !1),
       t = await E(n, e);
@@ -60,8 +62,8 @@ async function _(e) {
   }
   let a = await i.fetchAllStoreListingsForApplication(n),
     r = a.filter(e => e.sku.type !== f.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price),
-    _ = await E(n, a.map(e => e.sku));
-  return [...r, ..._]
+    c = await E(n, a.map(e => e.sku));
+  return [...r, ...c]
 }
 
 function h(e) {
@@ -70,7 +72,9 @@ function h(e) {
   } = e;
   (0, d.validateTransportType)(t.transport);
   let n = t.application.id;
-  if (null == n) throw new u.default(c.RPCErrors.INVALID_COMMAND, "No application.");
+  if (null == n) throw new u.default({
+    errorCode: f.RPCErrors.INVALID_COMMAND
+  }, "No application.");
   return a.fetchUserEntitlementsForApplication(n)
 }
 var C = {

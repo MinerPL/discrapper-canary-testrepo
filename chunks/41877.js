@@ -48,7 +48,8 @@ var l = n("446674"),
             }
             return (0, a.jsx)(o.default, {
               message: t,
-              content: v
+              content: v,
+              asPartialPreview: !0
             })
           })(),
           childrenHeader: (0, a.jsx)(c.default, {

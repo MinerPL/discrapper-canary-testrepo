@@ -30,8 +30,12 @@ a = class extends l.default {
     postClose: u,
     onSendingToRPCClient: d
   }) {
-    if (super(r.TransportTypes.POST_MESSAGE, a, i), -1 === ["etf", "json"].indexOf(i)) throw new s.default(o.RPCCloseCodes.INVALID_ENCODING, "Invalid Encoding: ".concat(i));
-    if ("etf" === i) throw new s.default(o.RPCCloseCodes.INVALID_ENCODING, "Erlpack cannot be used on this client");
+    if (super(r.TransportTypes.POST_MESSAGE, a, i), -1 === ["etf", "json"].indexOf(i)) throw new s.default({
+      closeCode: o.RPCCloseCodes.INVALID_ENCODING
+    }, "Invalid Encoding: ".concat(i));
+    if ("etf" === i) throw new s.default({
+      closeCode: o.RPCCloseCodes.INVALID_ENCODING
+    }, "Erlpack cannot be used on this client");
     this.origin = e, this.postMessageToRPCClient = t, this.frameId = n, this.logger = l, this.postClose = u, this.onSendingToRPCClient = d, this.closed = !1
   }
 }

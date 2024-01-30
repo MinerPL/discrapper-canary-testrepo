@@ -65,8 +65,12 @@ var h = {
         },
         isSocketConnected: C
       } = e;
-      if (![f.TransportTypes.IPC, f.TransportTypes.WEBSOCKET, f.TransportTypes.POST_MESSAGE].includes(a.transport)) throw new u.default(f.RPCErrors.INVALID_COMMAND, 'command not available from "'.concat(a.transport, '" transport'));
-      if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default(f.RPCErrors.INVALID_COMMAND, "nonzero pid required");
+      if (![f.TransportTypes.IPC, f.TransportTypes.WEBSOCKET, f.TransportTypes.POST_MESSAGE].includes(a.transport)) throw new u.default({
+        errorCode: E.RPCErrors.INVALID_COMMAND
+      }, 'command not available from "'.concat(a.transport, '" transport'));
+      if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default({
+        errorCode: E.RPCErrors.INVALID_COMMAND
+      }, "nonzero pid required");
       if (null == h) return i.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
         socketId: a.id,
@@ -79,17 +83,23 @@ var h = {
       T > 0 && (h.flags = T), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
       let {
         assets: S,
-        party: m,
-        secrets: p,
+        party: p,
+        secrets: m,
         timestamps: A,
         buttons: g,
         type: N
       } = h;
-      if ((null == N || N !== E.ActivityTypes.PLAYING && !I) && (h.type = E.ActivityTypes.PLAYING), null != p) {
-        let e = s.values(p).filter(e => !!e);
-        if (null != m && s.intersection(e, [m.id]).length > 0 && !_.includes(a.application.id)) throw new u.default(f.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot match the party id");
-        if (s.uniq(e).length < e.length) throw new u.default(f.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets must be unique");
-        if (null != g) throw new u.default(f.RPCErrors.INVALID_ACTIVITY_SECRET, "secrets cannot currently be sent with buttons")
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !I) && (h.type = E.ActivityTypes.PLAYING), null != m) {
+        let e = s.values(m).filter(e => !!e);
+        if (null != p && s.intersection(e, [p.id]).length > 0 && !_.includes(a.application.id)) throw new u.default({
+          errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
+        }, "secrets cannot match the party id");
+        if (s.uniq(e).length < e.length) throw new u.default({
+          errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
+        }, "secrets must be unique");
+        if (null != g) throw new u.default({
+          errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
+        }, "secrets cannot currently be sent with buttons")
       }
       if (null != g && (h.metadata = {
           button_urls: g.map(e => e.url)

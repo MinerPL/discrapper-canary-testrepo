@@ -20,7 +20,7 @@ var i = n("44170"),
   I = n("56245"),
   T = n("492249"),
   S = n("49111"),
-  m = n("446825").Buffer;
+  p = n("446825").Buffer;
 try {
   a = E.default.requireModule("discord_erlpack")
 } catch (e) {
@@ -28,7 +28,7 @@ try {
     a = E.default.requireModule("erlpack")
   } catch (e) {}
 }
-let p = E.default.requireModule("discord_rpc").RPCWebSocket,
+let m = E.default.requireModule("discord_rpc").RPCWebSocket,
   A = window.GLOBAL_ENV.MARKETING_ENDPOINT,
   g = new c.default("RPCServer:WSS"),
   N = [];
@@ -59,7 +59,7 @@ function L(e, t, n) {
       "Access-Control-Allow-Methods": "POST, GET, PUT, PATCH, DELETE",
       "Access-Control-Allow-Headers": "Content-Type, Authorization"
     } : {};
-  n = n ? JSON.stringify(n) : "", a = 200 === a && 0 === n.length ? 204 : a, t.setHeader("Content-Length", m.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(a, {
+  n = n ? JSON.stringify(n) : "", a = 200 === a && 0 === n.length ? 204 : a, t.setHeader("Content-Length", p.byteLength(n).toString()), t.setHeader("Content-Type", "application/json"), t.writeHead(a, {
     ...s,
     ...i
   }), t.end(n)
@@ -82,8 +82,12 @@ class WebSocket extends C.default {
     this._socket.close(e, t)
   }
   constructor(e, t, n) {
-    if (super("ws", t, n), -1 === ["etf", "json"].indexOf(n)) throw new _.default(S.RPCCloseCodes.INVALID_ENCODING, "Invalid Encoding: ".concat(n));
-    if ("etf" === n && null == a) throw new _.default(S.RPCCloseCodes.INVALID_ENCODING, "Erlpack cannot be used on this client");
+    if (super("ws", t, n), -1 === ["etf", "json"].indexOf(n)) throw new _.default({
+      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    }, "Invalid Encoding: ".concat(n));
+    if ("etf" === n && null == a) throw new _.default({
+      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    }, "Erlpack cannot be used on this client");
     this._socket = e
   }
 }
@@ -95,7 +99,9 @@ class M extends C.default {
     this._closeCallback(t, e)
   }
   constructor(e, t, n, a) {
-    if (super("http", n, a), "json" !== a) throw new _.default(S.RPCCloseCodes.INVALID_ENCODING, "Invalid Encoding: ".concat(a));
+    if (super("http", n, a), "json" !== a) throw new _.default({
+      closeCode: S.RPCCloseCodes.INVALID_ENCODING
+    }, "Invalid Encoding: ".concat(a));
     this._sendCallback = e, this._closeCallback = t
   }
 }
@@ -177,14 +183,14 @@ class P extends i.EventEmitter {
     var e;
     super();
     let t = 0;
-    (s = p.http.createServer()).on("error", e => {
+    (s = m.http.createServer()).on("error", e => {
       g.error("Error: ".concat(e.message)), ("EADDRINUSE" === e.code || e.message.includes("EADDRINUSE")) && setTimeout(() => O(++t), 1e3)
     }), s.on("request", this.handleRequest.bind(this)), O(t);
     let n = {
       instanceId: null !== (e = s.instanceId) && void 0 !== e ? e : 0,
       server: s
     };
-    new p.ws.Server(n).on("connection", e => this.handleConnection(e))
+    new m.ws.Server(n).on("connection", e => this.handleConnection(e))
   }
 }
 var D = new P

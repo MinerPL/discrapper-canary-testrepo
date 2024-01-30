@@ -34,31 +34,54 @@ class f extends l.PureComponent {
       navId: n,
       focusedIndex: l,
       onSelectQuery: s,
-      onHighlightQuery: d,
-      hideQuery: f
+      onSelectSearchEverywhere: d,
+      onHighlightQuery: f,
+      hideQuery: h,
+      searchFavorites: E
     } = this.props;
-    if (e || f) return null;
-    let h = -1 === l;
-    return (0, a.jsxs)(r.Clickable, {
-      className: i(u.queryContainer, {
-        [u.focused]: h
-      }),
-      ...c(n, -1, h),
-      onMouseEnter: d,
-      onClick: s,
-      children: [(0, a.jsx)("div", {
-        className: u.queryText,
-        children: o.default.Messages.SEARCH_FOR_VALUE.format({
-          value: t
-        })
-      }), (0, a.jsx)("div", {
-        className: u.queryShortcut,
-        "aria-hidden": !0,
-        children: (0, a.jsx)(r.KeyCombo, {
-          shortcut: "return",
-          dim: !0,
-          className: u.keyCombo
-        })
+    if (e || h) return null;
+    let m = -1 === l;
+    return (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsxs)(r.Clickable, {
+        className: i(u.queryContainer, {
+          [u.focused]: m
+        }),
+        ...c(n, -1, m),
+        onMouseEnter: f,
+        onClick: s,
+        children: [(0, a.jsx)("div", {
+          className: u.queryText,
+          children: E ? o.default.Messages.SEARCH_FAVORITES : o.default.Messages.SEARCH_FOR_VALUE.format({
+            value: t
+          })
+        }), (0, a.jsx)("div", {
+          className: u.queryShortcut,
+          "aria-hidden": !0,
+          children: (0, a.jsx)(r.KeyCombo, {
+            shortcut: "return",
+            dim: !0,
+            className: u.keyCombo
+          })
+        })]
+      }), E && (0, a.jsxs)(r.Clickable, {
+        className: i(u.queryContainer, {
+          [u.focused]: m
+        }),
+        ...c(n, -1, m),
+        onMouseEnter: f,
+        onClick: d,
+        children: [(0, a.jsx)("div", {
+          className: u.queryText,
+          children: o.default.Messages.SEARCH_EVERYWHERE
+        }), (0, a.jsx)("div", {
+          className: u.queryShortcut,
+          "aria-hidden": !0,
+          children: (0, a.jsx)(r.KeyCombo, {
+            shortcut: "shift+return",
+            dim: !0,
+            className: u.keyCombo
+          })
+        })]
       })]
     })
   }

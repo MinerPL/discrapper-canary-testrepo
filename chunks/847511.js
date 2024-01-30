@@ -21,8 +21,8 @@ var s = n("627445"),
   m = n("377253"),
   N = n("585722"),
   p = n("239013"),
-  S = n("914271"),
-  A = n("690714"),
+  A = n("914271"),
+  S = n("690714"),
   C = n("641126"),
   h = n("905206"),
   g = n("782340");
@@ -125,7 +125,7 @@ async function v(e) {
       ...e,
       submitting: !0,
       editing: !1
-    })), await A.submitPollVote({
+    })), await S.submitPollVote({
       channelId: t,
       messageId: n,
       answerIds: e
@@ -268,7 +268,7 @@ var D = {
       if (null != o && o.length > 0) {
         var _;
         let e = null !== (_ = T.default.getToken()) && void 0 !== _ ? _ : "";
-        await S.sendPollMessageWithAttachments({
+        await A.sendPollMessageWithAttachments({
           channel: t,
           items: o,
           token: e,
@@ -286,5 +286,18 @@ var D = {
       };
       throw t
     }
+  },
+  endPollEarly: async function e(e) {
+    let {
+      channelId: t,
+      messageId: n
+    } = e, s = await u.default.confirm({
+      title: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TITLE,
+      body: g.default.Messages.POLL_END_EARLY_CONFIRMATION_TEXT
+    });
+    s && await S.endPollEarly({
+      channelId: t,
+      messageId: n
+    })
   }
 }

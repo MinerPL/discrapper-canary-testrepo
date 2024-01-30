@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return R
+    return A
   }
 }), a("222007");
 var s = a("37983"),
@@ -19,176 +19,180 @@ var s = a("37983"),
   S = a("945330"),
   _ = a("599110"),
   I = a("158998"),
-  h = a("255403"),
-  N = a("2581"),
+  N = a("255403"),
+  h = a("2581"),
   M = a("415133"),
-  T = a("22658"),
-  g = a("998957"),
-  O = a("426149"),
-  L = a("767282"),
-  x = a("935583"),
-  C = a("15881"),
-  P = a("49111"),
+  T = a("42060"),
+  g = a("22658"),
+  O = a("998957"),
+  L = a("426149"),
+  x = a("767282"),
+  C = a("935583"),
+  P = a("15881"),
+  R = a("49111"),
   p = a("782340"),
   v = a("968414");
 
-function R(e) {
+function A(e) {
   let t, {
       source: a,
       transitionState: i,
-      onClose: R,
-      oneClickFlow: j = !1
+      onClose: A,
+      oneClickFlow: y = !1
     } = e,
-    [y, D] = l.useState(j ? C.PomeloModalSlides.SUGGESTIONS : C.PomeloModalSlides.INFO),
-    [U, G] = l.useState(!1),
-    [F, w] = l.useState(null),
-    [B, b] = l.useState(j ? x.EditState.SUGGESTION : x.EditState.NONE),
-    [k, H] = l.useState(!1),
-    [W, V] = l.useState(!1),
-    X = l.useRef(null),
-    z = (0, o.default)([N.default], () => N.default.isCurrentUsernameInvalid()),
-    Y = (0, o.default)([m.default], () => {
+    [U, D] = l.useState(y ? P.PomeloModalSlides.SUGGESTIONS : P.PomeloModalSlides.INFO),
+    [G, F] = l.useState(!1),
+    [B, w] = l.useState(null),
+    [b, k] = l.useState(y ? C.EditState.SUGGESTION : C.EditState.NONE),
+    [W, H] = l.useState(!1),
+    [V, X] = l.useState(!1),
+    z = l.useRef(null),
+    Y = (0, o.default)([h.default], () => h.default.isCurrentUsernameInvalid()),
+    Z = (0, o.default)([m.default], () => {
       let e = m.default.getCurrentUser();
       return n(null != e, "PomeloModal: user cannot be undefined"), e
     }),
+    K = (0, T.useForceMigration)(),
     {
-      usernameSuggestion: Z,
-      usernameSuggestionLoading: K
-    } = (0, T.useUsernameSuggestion)(j ? x.TIMEOUT_TIME : void 0);
+      usernameSuggestion: Q,
+      usernameSuggestionLoading: q
+    } = (0, g.useUsernameSuggestion)(y ? C.TIMEOUT_TIME : void 0);
   l.useEffect(() => {
-    B === x.EditState.EDIT_USERNAME && V(!0), _.default.track(P.AnalyticEvents.POMELO_EDIT_STEP_VIEWED, {
+    b === C.EditState.EDIT_USERNAME && X(!0), _.default.track(R.AnalyticEvents.POMELO_EDIT_STEP_VIEWED, {
       source: a,
-      step: B
+      step: b
     })
-  }, [B, a]), l.useEffect(() => {
-    !W && !k && null != Z && Z.length > 0 && q(e => ({
+  }, [b, a]), l.useEffect(() => {
+    !V && !W && null != Q && Q.length > 0 && $(e => ({
       ...e,
-      username: Z
+      username: Q
     }))
-  }, [Z, W, k]);
-  let [Q, q] = l.useState({
-    username: (0, M.getDefaultPomelo)(Y),
-    globalName: I.default.getName(Y)
-  }), J = e => {
-    w(null), null != e.username && H(!0), q(t => ({
+  }, [Q, V, W]);
+  let [J, $] = l.useState({
+    username: (0, M.getDefaultPomelo)(Z),
+    globalName: I.default.getName(Z)
+  }), ee = e => {
+    w(null), null != e.username && H(!0), $(t => ({
       ...t,
       ...e
     }))
-  }, $ = l.useMemo(() => [{
-    slideId: C.PomeloModalSlides.INFO,
-    next: C.PomeloModalSlides.EDIT_SCREEN,
+  }, et = l.useMemo(() => [{
+    slideId: P.PomeloModalSlides.INFO,
+    next: P.PomeloModalSlides.EDIT_SCREEN,
     footerButtons: ["REMIND_ME_LATER", "GET_STARTED"]
   }, {
-    slideId: C.PomeloModalSlides.EDIT_SCREEN,
-    next: C.PomeloModalSlides.FINISH_LATER,
-    back: C.PomeloModalSlides.INFO,
-    footerButtons: [B === x.EditState.PREVIEW ? "GOT_IT" : "BACK", B === x.EditState.PREVIEW ? "GOT_IT" : B === x.EditState.EDIT_USERNAME ? "SUBMIT" : "NEXT"]
+    slideId: P.PomeloModalSlides.EDIT_SCREEN,
+    next: P.PomeloModalSlides.FINISH_LATER,
+    back: P.PomeloModalSlides.INFO,
+    footerButtons: [b === C.EditState.PREVIEW ? "GOT_IT" : "BACK", b === C.EditState.PREVIEW ? "GOT_IT" : b === C.EditState.EDIT_USERNAME ? "SUBMIT" : "NEXT"]
   }, {
-    slideId: C.PomeloModalSlides.FINISH_LATER,
-    back: C.PomeloModalSlides.EDIT_SCREEN
+    slideId: P.PomeloModalSlides.FINISH_LATER,
+    back: P.PomeloModalSlides.EDIT_SCREEN
   }, {
-    slideId: C.PomeloModalSlides.SUGGESTIONS,
-    footerButtons: [B === x.EditState.PREVIEW ? "GOT_IT" : "UPDATE"]
+    slideId: P.PomeloModalSlides.SUGGESTIONS,
+    footerButtons: [b === C.EditState.PREVIEW ? "GOT_IT" : "UPDATE"]
   }, {
-    slideId: C.PomeloModalSlides.FINISH_LATER
-  }], [B]), ee = $.length, et = l.useCallback(async () => {
-    if (Q.globalName.length <= 0) {
+    slideId: P.PomeloModalSlides.FINISH_LATER
+  }], [b]), ea = et.length, es = l.useCallback(async () => {
+    if (J.globalName.length <= 0) {
       let e = p.default.Messages.POMELO_EXISTING_FLOW_ERROR_LIMIT.format({
         minNum: 1,
         maxNum: 32
       });
-      w(e), _.default.track(P.AnalyticEvents.POMELO_ERRORS, {
+      w(e), _.default.track(R.AnalyticEvents.POMELO_ERRORS, {
         reason: e,
         display_name_error: !0,
         location: "modal"
       });
       return
     }
-    if (I.default.getGlobalName(Y) === Q.globalName) {
-      b(x.EditState.EDIT_USERNAME);
+    if (I.default.getGlobalName(Z) === J.globalName) {
+      k(C.EditState.EDIT_USERNAME);
       return
     }
     try {
-      w(null), G(!0), await (0, c.saveAccountRequest)({
-        global_name: Q.globalName
-      }), b(x.EditState.EDIT_USERNAME)
+      w(null), F(!0), await (0, c.saveAccountRequest)({
+        global_name: J.globalName
+      }), k(C.EditState.EDIT_USERNAME)
     } catch (a) {
       let e = new E.default(a),
         t = e.getAnyErrorMessage();
-      _.default.track(P.AnalyticEvents.POMELO_ERRORS, {
+      _.default.track(R.AnalyticEvents.POMELO_ERRORS, {
         reason: t,
         display_name_error: !0,
         location: "modal"
       }), w(t)
     } finally {
-      G(!1)
+      F(!1)
     }
-  }, [Y, Q]), ea = l.useCallback(async () => {
+  }, [Z, J]), el = l.useCallback(async () => {
     try {
-      w(null), G(!0), await h.default.createPomelo({
-        username: (0, M.formatPomeloForEditing)(Q.username)
-      }, j), await (0, u.fetchProfile)(Y.id), b(x.EditState.PREVIEW)
+      w(null), F(!0), await N.default.createPomelo({
+        username: (0, M.formatPomeloForEditing)(J.username)
+      }, y), await (0, u.fetchProfile)(Z.id), k(C.EditState.PREVIEW)
     } catch (a) {
       let e = new E.default(a),
         t = (null == e ? void 0 : e.status) != null && e.status >= 400 && e.status < 500 ? e.getAnyErrorMessage() : p.default.Messages.ERROR_GENERIC_TITLE;
-      w(t), _.default.track(P.AnalyticEvents.POMELO_ERRORS, {
+      w(t), _.default.track(R.AnalyticEvents.POMELO_ERRORS, {
         reason: t,
         username_error: !0,
         location: "modal",
-        one_click_flow: j
+        one_click_flow: y
       })
     } finally {
-      G(!1)
+      F(!1)
     }
-  }, [Q, Y.id, j]), es = z || (0, M.shouldSkipToEditUsername)(Y), el = l.useCallback(() => {
-    b(es ? x.EditState.EDIT_USERNAME : x.EditState.EDIT_DISPLAY_NAME), D($[Math.min(ee - 1, y + 1)].slideId)
-  }, [y, $, ee, es]), ei = l.useCallback(() => {
-    w(null), y === C.PomeloModalSlides.EDIT_SCREEN ? B === x.EditState.EDIT_USERNAME ? es ? (b(x.EditState.NONE), D($[Math.max(0, y - 1)].slideId)) : b(x.EditState.EDIT_DISPLAY_NAME) : B === x.EditState.EDIT_DISPLAY_NAME ? (b(x.EditState.NONE), D($[Math.max(0, y - 1)].slideId)) : B === x.EditState.PREVIEW && b(x.EditState.EDIT_USERNAME) : D($[Math.max(0, y - 1)].slideId)
-  }, [$, y, B, es]), en = l.useCallback(() => {
-    D(C.PomeloModalSlides.FINISH_LATER)
-  }, []), er = l.useMemo(() => {
-    if (y === C.PomeloModalSlides.EDIT_SCREEN && B === x.EditState.EDIT_DISPLAY_NAME) return et;
-    if (y === C.PomeloModalSlides.EDIT_SCREEN && B === x.EditState.EDIT_USERNAME) return ea;
-    if (y === C.PomeloModalSlides.SUGGESTIONS && B === x.EditState.SUGGESTION) return ea;
-    else return el
-  }, [y, B, et, ea, el]), eo = l.useMemo(() => {
+  }, [J, Z.id, y]), ei = Y || (0, M.shouldSkipToEditUsername)(Z), en = l.useCallback(() => {
+    k(ei ? C.EditState.EDIT_USERNAME : C.EditState.EDIT_DISPLAY_NAME), D(et[Math.min(ea - 1, U + 1)].slideId)
+  }, [U, et, ea, ei]), er = l.useCallback(() => {
+    w(null), U === P.PomeloModalSlides.EDIT_SCREEN ? b === C.EditState.EDIT_USERNAME ? ei ? (k(C.EditState.NONE), D(et[Math.max(0, U - 1)].slideId)) : k(C.EditState.EDIT_DISPLAY_NAME) : b === C.EditState.EDIT_DISPLAY_NAME ? (k(C.EditState.NONE), D(et[Math.max(0, U - 1)].slideId)) : b === C.EditState.PREVIEW && k(C.EditState.EDIT_USERNAME) : D(et[Math.max(0, U - 1)].slideId)
+  }, [et, U, b, ei]), eo = l.useCallback(() => {
+    D(P.PomeloModalSlides.FINISH_LATER)
+  }, []), ed = l.useMemo(() => {
+    if (U === P.PomeloModalSlides.EDIT_SCREEN && b === C.EditState.EDIT_DISPLAY_NAME) return es;
+    if (U === P.PomeloModalSlides.EDIT_SCREEN && b === C.EditState.EDIT_USERNAME) return el;
+    if (U === P.PomeloModalSlides.SUGGESTIONS && b === C.EditState.SUGGESTION) return el;
+    else return en
+  }, [U, b, es, el, en]), eu = l.useMemo(() => {
     var e, t;
-    return A(null !== (t = null === (e = $.find(e => e.slideId === y)) || void 0 === e ? void 0 : e.footerButtons) && void 0 !== t ? t : [], {
-      handleNext: er,
-      handleBack: ei,
-      handleRemindMeLater: en,
-      onClose: R
-    }, U, K, k)
-  }, [ei, en, er, R, $, y, U, K, k]), ed = l.useMemo(() => (0, M.getUserAvatarURLForPomelo)(Y), [Y]);
+    return j(null !== (t = null === (e = et.find(e => e.slideId === U)) || void 0 === e ? void 0 : e.footerButtons) && void 0 !== t ? t : [], {
+      handleNext: ed,
+      handleBack: er,
+      handleRemindMeLater: eo,
+      onClose: A
+    }, G, q, W)
+  }, [er, eo, ed, A, et, U, G, q, W]), ec = l.useMemo(() => (0, M.getUserAvatarURLForPomelo)(Z), [Z]);
   l.useLayoutEffect(() => {
-    (0, f.default)(Y.id, ed)
-  }, [Y, ed]), l.useEffect(() => {
+    (0, f.default)(Z.id, ec)
+  }, [Z, ec]), l.useEffect(() => {
     var e, t;
-    switch (B) {
-      case x.EditState.EDIT_DISPLAY_NAME:
-        null === (e = X.current) || void 0 === e || e.focusDisplayName();
+    switch (b) {
+      case C.EditState.EDIT_DISPLAY_NAME:
+        null === (e = z.current) || void 0 === e || e.focusDisplayName();
         break;
-      case x.EditState.EDIT_USERNAME:
-      case x.EditState.SUGGESTION:
-        null === (t = X.current) || void 0 === t || t.focusUsername()
+      case C.EditState.EDIT_USERNAME:
+      case C.EditState.SUGGESTION:
+        null === (t = z.current) || void 0 === t || t.focusUsername()
     }
-  }, [B]);
-  return !k && null == F && (B === x.EditState.EDIT_USERNAME ? t = p.default.Messages.POMELO_SUGGESTION_ORIGIN_NOTICE.format({
-    source: Y.username
-  }) : B === x.EditState.SUGGESTION && (K || null != Z) && (t = p.default.Messages.POMELO_SUGGESTIONS_OCF)), (0, s.jsxs)(d.ModalRoot, {
+  }, [b]);
+  return !W && null == B && (b === C.EditState.EDIT_USERNAME ? t = p.default.Messages.POMELO_SUGGESTION_ORIGIN_NOTICE.format({
+    source: Z.username
+  }) : b === C.EditState.SUGGESTION && (q || null != Q) && (t = p.default.Messages.POMELO_SUGGESTIONS_OCF)), (0, s.jsxs)(d.ModalRoot, {
     className: v.modalRoot,
     impression: {
       impressionName: r.ImpressionNames.POMELO_LANDING,
       impressionProperties: {
         source: a,
         impression_group: r.ImpressionGroups.POMELO_FLOW,
-        one_click_flow: j
+        one_click_flow: y
       }
     },
     transitionState: i,
     size: d.ModalSize.DYNAMIC,
     children: [(0, s.jsx)(d.Button, {
-      onClick: R,
+      onClick: () => {
+        K && (U === P.PomeloModalSlides.SUGGESTIONS || U === P.PomeloModalSlides.EDIT_SCREEN) ? D(P.PomeloModalSlides.FINISH_LATER) : A()
+      },
       size: d.Button.Sizes.MIN,
       look: d.Button.Looks.BLANK,
       className: v.closeContainer,
@@ -201,54 +205,54 @@ function R(e) {
     }), (0, s.jsx)(d.ModalContent, {
       className: v.contentContainer,
       children: (0, s.jsxs)(d.Slides, {
-        activeSlide: y,
+        activeSlide: U,
         width: 480,
         children: [(0, s.jsx)(d.Slide, {
-          id: C.PomeloModalSlides.INFO,
-          children: (0, s.jsx)(L.default, {
-            user: Y
+          id: P.PomeloModalSlides.INFO,
+          children: (0, s.jsx)(x.default, {
+            user: Z
           })
         }), (0, s.jsx)(d.Slide, {
-          id: C.PomeloModalSlides.EDIT_SCREEN,
-          children: (0, s.jsx)(g.default, {
-            user: Y,
-            error: F,
-            editState: B,
-            userRef: X,
-            formValues: Q,
-            footerNotice: t,
-            onChangeFormValue: J,
-            onFocusUsername: () => b(x.EditState.EDIT_USERNAME),
-            onFocusDisplayName: () => b(x.EditState.EDIT_DISPLAY_NAME),
-            onClose: R
-          })
-        }), (0, s.jsx)(d.Slide, {
-          id: C.PomeloModalSlides.FINISH_LATER,
+          id: P.PomeloModalSlides.EDIT_SCREEN,
           children: (0, s.jsx)(O.default, {
-            onClose: R
+            user: Z,
+            error: B,
+            editState: b,
+            userRef: z,
+            formValues: J,
+            footerNotice: t,
+            onChangeFormValue: ee,
+            onFocusUsername: () => k(C.EditState.EDIT_USERNAME),
+            onFocusDisplayName: () => k(C.EditState.EDIT_DISPLAY_NAME),
+            onClose: A
           })
         }), (0, s.jsx)(d.Slide, {
-          id: C.PomeloModalSlides.SUGGESTIONS,
-          children: (0, s.jsx)(g.default, {
-            user: Y,
-            error: F,
-            editState: B,
-            userRef: X,
-            formValues: Q,
+          id: P.PomeloModalSlides.FINISH_LATER,
+          children: (0, s.jsx)(L.default, {
+            onClose: A
+          })
+        }), (0, s.jsx)(d.Slide, {
+          id: P.PomeloModalSlides.SUGGESTIONS,
+          children: (0, s.jsx)(O.default, {
+            user: Z,
+            error: B,
+            editState: b,
+            userRef: z,
+            formValues: J,
             footerNotice: t,
-            onChangeFormValue: J,
-            onFocusUsername: () => b(x.EditState.SUGGESTION),
-            onFocusDisplayName: () => b(x.EditState.EDIT_DISPLAY_NAME),
-            onClose: R,
-            usernameSuggestionLoading: K,
-            oneClickFlow: j
+            onChangeFormValue: ee,
+            onFocusUsername: () => k(C.EditState.SUGGESTION),
+            onFocusDisplayName: () => k(C.EditState.EDIT_DISPLAY_NAME),
+            onClose: A,
+            usernameSuggestionLoading: q,
+            oneClickFlow: y
           })
         })]
       })
-    }), eo]
+    }), eu]
   })
 }
-let A = (e, t, a, l, i) => 0 === e.length ? null : (0, s.jsxs)(d.ModalFooter, {
+let j = (e, t, a, l, i) => 0 === e.length ? null : (0, s.jsxs)(d.ModalFooter, {
   className: v.footer,
   children: [(0, s.jsxs)("div", {
     className: v.inline,

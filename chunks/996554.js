@@ -10,13 +10,25 @@ var l = n("862205");
   id: "2023-06_app_launcher_mobile",
   label: "App Launcher - Mobile",
   defaultConfig: {
-    enabled: !1
+    entrypointEnabled: !1,
+    appLauncherEnabled: !1,
+    entrypointToSlashUIEnabled: !1
   },
   treatments: [{
     id: 1,
     label: "Enable the app launcher feature on mobile",
     config: {
-      enabled: !0
+      entrypointEnabled: !0,
+      appLauncherEnabled: !0,
+      entrypointToSlashUIEnabled: !1
+    }
+  }, {
+    id: 2,
+    label: 'Enable "Apps" button opening existing slash command UI',
+    config: {
+      entrypointEnabled: !0,
+      appLauncherEnabled: !1,
+      entrypointToSlashUIEnabled: !0
     }
   }]
 });

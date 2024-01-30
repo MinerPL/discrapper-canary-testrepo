@@ -34,15 +34,19 @@ var a = n("872717"),
         (0, d.validatePostMessageTransport)(n.transport), (0, d.validateApplication)(n.application);
         let l = n.application.id,
           c = (0, f.default)(),
-          h = null == c ? void 0 : c.getGuildId();
-        if (null == c) throw new u.default(E.RPCErrors.INVALID_COMMAND, "Invalid channel");
-        let C = i.default.getApplication(l),
-          I = (0, o.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
-        if (!I) throw new u.default(E.RPCErrors.INVALID_COMMAND, "This application cannot access this API");
+          E = null == c ? void 0 : c.getGuildId();
+        if (null == c) throw new u.default({
+          errorCode: _.RPCErrors.INVALID_COMMAND
+        }, "Invalid channel");
+        let h = i.default.getApplication(l),
+          C = (0, o.hasFlag)(null !== (t = null == h ? void 0 : h.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
+        if (!C) throw new u.default({
+          errorCode: _.RPCErrors.INVALID_COMMAND
+        }, "This application cannot access this API");
         r.default.track(a, {
           ...s,
           activity_application_id: l,
-          activity_guild_id: h
+          activity_guild_id: E
         })
       }
     },
@@ -52,7 +56,9 @@ var a = n("872717"),
         let {
           socket: t
         } = e, n = t.application.id;
-        if (null == n) throw new u.default(E.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == n) throw new u.default({
+          errorCode: _.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         return a.default.post({
           url: _.Endpoints.APPLICATION_TICKET(n),
           body: {

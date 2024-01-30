@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("65597");
 var a = n("862205");
-n("47319"), n("697218"), n("773336"), n("49111");
+n("47319"), n("697218"), n("49111");
 (0, a.createExperiment)({
   kind: "user",
   id: "2023-10_friend_finder_launch",
@@ -72,48 +72,6 @@ n("47319"), n("697218"), n("773336"), n("49111");
   treatments: [{
     id: 1,
     label: "Enable iMessage Overlay",
-    config: {
-      enabled: !0
-    }
-  }]
-}), (0, a.createExperiment)({
-  kind: "user",
-  id: "2023-08_friendfinderincentivizedexistingusers",
-  label: "Friend Finder Incentivized Invites for Existing Users",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable Incentivized Invites",
-    config: {
-      enabled: !0
-    }
-  }]
-}), (0, a.createExperiment)({
-  kind: "user",
-  id: "2023-08_friendfinderincentivizednewusers",
-  label: "Friend Finder Incentivized Invites for New Users",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable Incentivized Invites",
-    config: {
-      enabled: !0
-    }
-  }]
-}), (0, a.createExperiment)({
-  kind: "user",
-  id: "2023-08_friend_finder_incentivized_west_virginia",
-  label: "Friend Finder Incentivized Invites for West Virginia",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable Incentivized Invites",
     config: {
       enabled: !0
     }

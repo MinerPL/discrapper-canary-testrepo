@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return W
+    return X
   }
 }), n("222007");
 var a = n("37983"),
@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("446674"),
   m = n("77078"),
   p = n("378438"),
-  g = n("425773"),
-  S = n("76385"),
+  S = n("425773"),
+  g = n("76385"),
   N = n("955513"),
   _ = n("679653"),
   T = n("419830"),
@@ -27,26 +27,27 @@ var a = n("37983"),
   C = n("26989"),
   A = n("27618"),
   M = n("712611"),
-  v = n("18494"),
-  x = n("162771"),
+  x = n("18494"),
+  v = n("162771"),
   R = n("102985"),
   L = n("697218"),
   O = n("834179"),
   b = n("689476"),
   y = n("228220"),
   j = n("659500"),
-  D = n("701909"),
-  F = n("751520"),
+  F = n("701909"),
+  D = n("751520"),
   U = n("158998"),
-  k = n("49111"),
-  P = n("782340"),
-  w = n("813069");
-let G = f("2015-05-15").local(),
-  B = (0, h.makeLazy)({
+  k = n("200745"),
+  P = n("49111"),
+  w = n("782340"),
+  G = n("813069");
+let B = f("2015-05-15").local(),
+  H = (0, h.makeLazy)({
     createPromise: () => n.el("201959").then(n.bind(n, "201959")),
     webpackId: "201959"
   }),
-  H = (e, t, n) => {
+  V = (e, t, n) => {
     var l, s, i;
     let {
       user: r,
@@ -62,19 +63,19 @@ let G = f("2015-05-15").local(),
       h = null !== (i = null == u ? void 0 : u.getAvatarURL(e, 20)) && void 0 !== i ? i : r.getAvatarURL(null == d ? void 0 : d.guild_id, 20);
     return [(0, a.jsx)("img", {
       alt: "",
-      className: w.displayAvatar,
+      className: G.displayAvatar,
       src: h
     }, "avatar-".concat(t, "-").concat(r.id)), (0, a.jsx)("span", {
-      className: w.displayedNick,
+      className: G.displayedNick,
       children: f
     }, "display-nick-".concat(t, "-").concat(r.id)), (0, a.jsx)("span", {
-      className: w.displayUsername,
+      className: G.displayUsername,
       children: U.default.getUserTag(r, {
         identifiable: R.default.enabled && R.default.hidePersonalInformation ? "never" : "always"
       })
     }, "display-username-".concat(t, "-").concat(r.id))]
   },
-  V = (e, t, n) => {
+  Y = (e, t, n) => {
     let {
       channel: l,
       text: s
@@ -85,18 +86,18 @@ let G = f("2015-05-15").local(),
     let i = I.default.getChannel(l.parent_id),
       r = (0, T.getChannelIconComponent)(l);
     return (0, a.jsxs)("div", {
-      className: w.resultChannel,
+      className: G.resultChannel,
       children: [null != r ? (0, a.jsx)(r, {
-        className: w.searchResultChannelIcon
+        className: G.searchResultChannelIcon
       }) : null, (0, a.jsx)("strong", {
         children: (0, _.computeChannelName)(l, L.default, A.default)
       }), null != i ? (0, a.jsx)("span", {
-        className: w.searchResultChannelCategory,
+        className: G.searchResultChannelCategory,
         children: (0, _.computeChannelName)(i, L.default, A.default)
       }) : null]
     })
   },
-  Y = e => {
+  K = e => {
     let t, n, {
       id: l,
       searchId: s,
@@ -109,20 +110,20 @@ let G = f("2015-05-15").local(),
       onSelect: h,
       onFocus: E,
       showFilter: p,
-      renderResult: g
+      renderResult: S
     } = e;
     if (p) {
-      var S, _;
+      var g, _;
       t = (0, a.jsx)("span", {
-        className: w.filter,
-        children: null !== (_ = null === (S = N.default[o]) || void 0 === S ? void 0 : S.key) && void 0 !== _ ? _ : "addme:"
+        className: G.filter,
+        children: null !== (_ = null === (g = N.default[o]) || void 0 === g ? void 0 : g.key) && void 0 !== _ ? _ : "addme:"
       })
     }
-    return n = null != g ? g(s, o, r) : (0, a.jsx)("strong", {
+    return n = null != S ? S(s, o, r) : (0, a.jsx)("strong", {
       children: r.text
     }), (0, a.jsxs)(m.Clickable, {
       tag: "li",
-      className: i(w.option, u),
+      className: i(G.option, u),
       onClick: h,
       onFocus: E,
       id: l,
@@ -130,48 +131,48 @@ let G = f("2015-05-15").local(),
       tabIndex: c,
       "aria-selected": f,
       children: [t, n, (0, a.jsx)(b.default, {
-        className: w.plusIcon
+        className: G.plusIcon
       })]
     })
   },
-  z = e => (0, a.jsx)(Y, {
+  z = e => (0, a.jsx)(K, {
     ...e,
-    className: w.user,
-    renderResult: H
+    className: G.user,
+    renderResult: V
   }),
-  K = {
-    [k.SearchTokenTypes.FILTER_FROM]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_FROM,
+  Q = {
+    [P.SearchTokenTypes.FILTER_FROM]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_FROM,
       component: z
     },
-    [k.SearchTokenTypes.FILTER_MENTIONS]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_MENTIONS,
+    [P.SearchTokenTypes.FILTER_MENTIONS]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_MENTIONS,
       component: z
     },
-    [k.SearchTokenTypes.FILTER_HAS]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_HAS
+    [P.SearchTokenTypes.FILTER_HAS]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_HAS
     },
-    [k.SearchTokenTypes.FILTER_FILE_TYPE]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_FILE_TYPE
+    [P.SearchTokenTypes.FILTER_FILE_TYPE]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_FILE_TYPE
     },
-    [k.SearchTokenTypes.FILTER_IN]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_CHANNELS,
-      component: e => (0, a.jsx)(Y, {
+    [P.SearchTokenTypes.FILTER_IN]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_CHANNELS,
+      component: e => (0, a.jsx)(K, {
         ...e,
-        renderResult: V
+        renderResult: Y
       })
     },
-    [k.SearchAutocompleteGroups.DATES]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_DATES
+    [P.SearchAutocompleteGroups.DATES]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_DATES
     },
-    [k.SearchAutocompleteGroups.HISTORY]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_HISTORY,
+    [P.SearchAutocompleteGroups.HISTORY]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_HISTORY,
       groupTip(e) {
         let {
           searchId: t
         } = e;
         return (0, a.jsx)(m.Tooltip, {
-          text: P.default.Messages.SEARCH_CLEAR_HISTORY,
+          text: w.default.Messages.SEARCH_CLEAR_HISTORY,
           position: "left",
           children: e => {
             let {
@@ -182,9 +183,9 @@ let G = f("2015-05-15").local(),
               onClick: () => (0, p.clearHistory)(t),
               onMouseEnter: n,
               onMouseLeave: l,
-              className: w.searchClearHistory,
-              title: P.default.Messages.SEARCH_CLEAR_HISTORY,
-              "aria-label": P.default.Messages.SEARCH_CLEAR_HISTORY,
+              className: G.searchClearHistory,
+              title: w.default.Messages.SEARCH_CLEAR_HISTORY,
+              "aria-label": w.default.Messages.SEARCH_CLEAR_HISTORY,
               children: (0, a.jsx)(y.default, {})
             })
           }
@@ -201,47 +202,47 @@ let G = f("2015-05-15").local(),
           group: d,
           ...c
         } = e, f = "", h = l.useMemo(() => (function(e) {
-          let t = F.tokenizeQuery(e).map((e, t, n) => F.filterHasAnswer(e, n[t + 1]) ? e : new S.Token(e.getFullMatch(), S.NON_TOKEN_TYPE));
+          let t = D.tokenizeQuery(e).map((e, t, n) => D.filterHasAnswer(e, n[t + 1]) ? e : new g.Token(e.getFullMatch(), g.NON_TOKEN_TYPE));
           return t
         })(s.text), [s.text]), E = h.map(e => {
           let t = e.getFullMatch();
           if ("" === t.trim()) return null;
-          let n = k.IS_SEARCH_FILTER_TOKEN.test(e.type),
-            l = k.IS_SEARCH_ANSWER_TOKEN.test(e.type);
+          let n = P.IS_SEARCH_FILTER_TOKEN.test(e.type),
+            l = P.IS_SEARCH_ANSWER_TOKEN.test(e.type);
           return f += t, (0, a.jsx)("span", {
             className: i({
-              [w.filter]: n,
-              [w.answer]: l,
-              [w.nonText]: !n && !l
+              [G.filter]: n,
+              [G.answer]: l,
+              [G.nonText]: !n && !l
             }),
             children: t
           }, e.type + t)
         });
         return (0, a.jsxs)(m.Clickable, {
-          className: i(w.option, w.history),
+          className: i(G.option, G.history),
           onClick: t,
           onFocus: n,
           ...c,
-          "aria-label": P.default.Messages.SEARCH_FROM_SUGGESTIONS.format({
+          "aria-label": w.default.Messages.SEARCH_FROM_SUGGESTIONS.format({
             suggestion: f
           }),
           children: [E, (0, a.jsx)(b.default, {
-            className: w.plusIcon
+            className: G.plusIcon
           })]
         })
       }
     },
-    [k.SearchAutocompleteGroups.SEARCH_OPTIONS]: {
-      titleText: () => P.default.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
+    [P.SearchAutocompleteGroups.SEARCH_OPTIONS]: {
+      titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
       groupTip: () => (0, a.jsx)(m.Tooltip, {
-        text: P.default.Messages.LEARN_MORE,
+        text: w.default.Messages.LEARN_MORE,
         position: "left",
         children: e => (0, a.jsx)("div", {
-          className: w.searchLearnMore,
+          className: G.searchLearnMore,
           ...e,
           children: (0, a.jsx)(m.Anchor, {
-            href: D.default.getArticleURL(k.HelpdeskArticles.USING_SEARCH),
-            title: P.default.Messages.LEARN_MORE,
+            href: F.default.getArticleURL(P.HelpdeskArticles.USING_SEARCH),
+            title: w.default.Messages.LEARN_MORE,
             children: (0, a.jsx)(O.default, {})
           })
         })
@@ -255,28 +256,28 @@ let G = f("2015-05-15").local(),
           showFilter: r,
           searchId: o,
           ...u
-        } = e, d = F.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
+        } = e, d = D.getSearchOptionAnswer(null !== (t = n.token) && void 0 !== t ? t : "");
         return (0, a.jsxs)(m.Clickable, {
-          className: i(w.option, w.searchOption),
+          className: i(G.option, G.searchOption),
           onClick: l,
           onFocus: s,
           ...u,
           children: [(0, a.jsx)("span", {
-            className: w.filter,
+            className: G.filter,
             children: n.text
           }), (0, a.jsx)("span", {
             className: i({
-              [w.answer]: d
+              [G.answer]: d
             }),
             children: d
           }), (0, a.jsx)(b.default, {
-            className: w.plusIcon
+            className: G.plusIcon
           })]
         })
       }
     }
   };
-class Q extends l.PureComponent {
+class W extends l.PureComponent {
   componentDidUpdate(e, t) {
     let {
       resultsState: n,
@@ -286,7 +287,7 @@ class Q extends l.PureComponent {
     } = n, {
       resultsState: s
     } = e;
-    null != l.filter && null == s.mode.filter && a > 0 ? this.setSelectedIndex(0) : l.type === k.SearchPopoutModes.FILTER_ALL && s.mode.type !== l.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t)
+    null != l.filter && null == s.mode.filter && a > 0 ? this.setSelectedIndex(0) : l.type === P.SearchPopoutModes.FILTER_ALL && s.mode.type !== l.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t)
   }
   setSelectedIndex(e) {
     this.setState({
@@ -299,9 +300,10 @@ class Q extends l.PureComponent {
     } = this.state, {
       navId: t,
       resultsState: n,
-      totalResults: l
+      totalResults: l,
+      searchId: s
     } = this.props;
-    return (0, a.jsx)(g.default, {
+    return (0, a.jsx)(S.default, {
       numResults: l,
       query: n.query,
       navId: t,
@@ -311,7 +313,11 @@ class Q extends l.PureComponent {
       renderInitialState: this.renderAutocompletes,
       onHighlightQuery: () => this.focusOption(-1),
       onSelectQuery: this.performSearch,
-      renderNoResults: () => null
+      onSelectSearchEverywhere: () => this.performSearch({
+        searchEverywhere: !0
+      }),
+      renderNoResults: () => null,
+      searchFavorites: s === P.FAVORITES && (0, k.isFavoriteSearchEnabled)()
     })
   }
   constructor(...e) {
@@ -320,7 +326,7 @@ class Q extends l.PureComponent {
       dateHint: (0, N.getRandomDateShortcut)(),
       selectedIndex: -1
     }, this.handleDateChange = e => {
-      this.setSearchQuery(e.format(k.SEARCH_DATE_FORMAT) + " ", !0)
+      this.setSearchQuery(e.format(P.SEARCH_DATE_FORMAT) + " ", !0)
     }, this.keepCurrentOptionSelected = (e, t) => {
       let {
         selectedIndex: n
@@ -335,9 +341,9 @@ class Q extends l.PureComponent {
       } = e;
       if (s.type !== r.mode.type) this.setSelectedIndex(-1);
       else if (t.selectedIndex >= 0 && (t.selectedIndex === n || r.autocompletes.length !== i.length)) {
-        let e = F.getFlattenedStringArray(r.autocompletes, r.mode.type),
+        let e = D.getFlattenedStringArray(r.autocompletes, r.mode.type),
           n = e[t.selectedIndex - 1],
-          a = F.getFlattenedStringArray(i, s.type),
+          a = D.getFlattenedStringArray(i, s.type),
           o = a.indexOf(n); - 1 !== o ? this.setSelectedIndex(o) : t.selectedIndex >= l && this.setSelectedIndex(l - 1)
       }
     }, this.focusNextOption = () => {
@@ -350,14 +356,14 @@ class Q extends l.PureComponent {
       } = this.state, {
         resultsState: n
       } = this.props;
-      !F.showDatePicker(n.mode.filter) && this.focusOption(t + e)
+      !D.showDatePicker(n.mode.filter) && this.focusOption(t + e)
     }, this.focusOption = e => {
       let t = e,
         {
           autocompletes: n
         } = this.props.resultsState,
         a = this.shouldShowSearchQuery();
-      t < -1 || !a && t < 0 ? t = F.getTotalResults(n) - 1 : a && t >= F.getTotalResults(n) ? t = -1 : !a && t >= F.getTotalResults(n) && (t = 0), this.setSelectedIndex(t)
+      t < -1 || !a && t < 0 ? t = D.getTotalResults(n) - 1 : a && t >= D.getTotalResults(n) ? t = -1 : !a && t >= D.getTotalResults(n) && (t = 0), this.setSelectedIndex(t)
     }, this.selectOption = e => {
       let t = e;
       if (null == t && (t = this.state.selectedIndex), t < 0) return !1;
@@ -365,8 +371,8 @@ class Q extends l.PureComponent {
         autocompletes: n,
         mode: a
       } = this.props.resultsState;
-      if (F.showDatePicker(a.filter)) return;
-      let l = F.getFlattenedStringArray(n, a.type);
+      if (D.showDatePicker(a.filter)) return;
+      let l = D.getFlattenedStringArray(n, a.type);
       if (t >= l.length) return !1;
       let s = l[t],
         i = function(e) {
@@ -386,7 +392,7 @@ class Q extends l.PureComponent {
         s = 0;
       null != a.token ? s = a.token.start : (null == l ? void 0 : l.currentToken) != null && (s = l.currentToken.end);
       let i = null != a.token ? a.token.end : s;
-      j.ComponentDispatch.dispatch(k.ComponentActions.SET_SEARCH_QUERY, {
+      j.ComponentDispatch.dispatch(P.ComponentActions.SET_SEARCH_QUERY, {
         query: e,
         anchor: s,
         focus: i,
@@ -396,29 +402,29 @@ class Q extends l.PureComponent {
       let {
         mode: e
       } = this.props.resultsState;
-      return e.type !== k.SearchPopoutModes.FILTER && e.type !== k.SearchPopoutModes.EMPTY && !F.showDatePicker(e.filter)
+      return e.type !== P.SearchPopoutModes.FILTER && e.type !== P.SearchPopoutModes.EMPTY && !D.showDatePicker(e.filter)
     }, this.renderDatePicker = () => (0, a.jsxs)("div", {
-      className: w.datePicker,
-      children: [(0, a.jsx)(B, {
+      className: G.datePicker,
+      children: [(0, a.jsx)(H, {
         onSelect: this.handleDateChange,
         maxDate: f().local(),
-        minDate: G
+        minDate: B
       }), (0, a.jsxs)("div", {
-        className: w.datePickerHint,
+        className: G.datePickerHint,
         children: [(0, a.jsxs)("span", {
-          className: w.hint,
-          children: [P.default.Messages.SEARCH_DATE_PICKER_HINT, "\xa0"]
+          className: G.hint,
+          children: [w.default.Messages.SEARCH_DATE_PICKER_HINT, "\xa0"]
         }), (0, a.jsx)(m.Clickable, {
           tag: "span",
-          className: w.hintValue,
+          className: G.hintValue,
           onClick: this.handleHintClick,
           children: this.state.dateHint
         })]
       })]
     }), this.handleHintClick = () => {
       this.setSearchQuery(this.state.dateHint, !0)
-    }, this.performSearch = () => {
-      j.ComponentDispatch.dispatch(k.ComponentActions.PERFORM_SEARCH)
+    }, this.performSearch = e => {
+      j.ComponentDispatch.dispatch(P.ComponentActions.PERFORM_SEARCH, null != e ? e : {})
     }, this.renderAutocompletes = () => {
       let {
         selectedIndex: e
@@ -429,28 +435,28 @@ class Q extends l.PureComponent {
         autocompletes: l,
         mode: s
       } = this.props.resultsState;
-      if (F.showDatePicker(s.filter)) return this.renderDatePicker();
+      if (D.showDatePicker(s.filter)) return this.renderDatePicker();
       let i = -1;
       return l.map(l => {
         var r, o, u;
         let d, c;
         if (null == l || 0 === l.results.length) return null;
-        let f = null !== (r = K[l.group]) && void 0 !== r ? r : {};
+        let f = null !== (r = Q[l.group]) && void 0 !== r ? r : {};
         null != f.titleText && (c = "".concat(l.group, "-header"), d = (0, a.jsx)("div", {
           id: c,
-          className: w.header,
+          className: G.header,
           children: f.titleText()
         }));
         let h = null !== (o = f.groupTip) && void 0 !== o ? o : null,
           E = null != h ? (0, a.jsx)(h, {
             searchId: n
           }) : null,
-          m = null !== (u = f.component) && void 0 !== u ? u : Y,
-          p = s.type === k.SearchPopoutModes.FILTER_ALL;
+          m = null !== (u = f.component) && void 0 !== u ? u : K,
+          p = s.type === P.SearchPopoutModes.FILTER_ALL;
         return (0, a.jsxs)("ul", {
           role: "group",
           "aria-labelledby": c,
-          className: w.resultsGroup,
+          className: G.resultsGroup,
           children: [d, E, l.results.map(s => {
             var r, o;
             if (null == s || null == l) return null;
@@ -463,7 +469,7 @@ class Q extends l.PureComponent {
               showFilter: p,
               onSelect: this.selectOption.bind(null, i),
               onFocus: this.focusOption.bind(null, i),
-              ...(0, g.getListboxOptionProps)(t, i, u)
+              ...(0, S.getListboxOptionProps)(t, i, u)
             }, "".concat(l.group, "-").concat(s.text, "-").concat(null !== (o = s.key) && void 0 !== o ? o : ""))
           })]
         }, l.group)
@@ -471,17 +477,17 @@ class Q extends l.PureComponent {
     }
   }
 }
-var W = l.forwardRef((e, t) => {
-  let [n, l, s] = (0, E.useStateFromStoresArray)([x.default, v.default, M.default], () => {
-    let e = x.default.getGuildId(),
-      t = v.default.getChannelId(),
+var X = l.forwardRef((e, t) => {
+  let [n, l, s] = (0, E.useStateFromStoresArray)([v.default, x.default, M.default], () => {
+    let e = v.default.getGuildId(),
+      t = x.default.getChannelId(),
       n = null != e ? e : t;
     o(null != n, "SearchPopout.getStateFromStores - invalid searchId");
     let a = M.default.getState(n),
-      l = F.getTotalResults(a.autocompletes);
+      l = D.getTotalResults(a.autocompletes);
     return [n, a, l]
   });
-  return (0, a.jsx)(Q, {
+  return (0, a.jsx)(W, {
     ...e,
     searchId: n,
     resultsState: l,

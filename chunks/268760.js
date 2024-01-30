@@ -55,7 +55,7 @@ function x(e) {
 }
 
 function R(e) {
-  return e.isGuildStageVoice() ? d.default.getMutableParticipants(e.id, c.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : g.default.getVoiceStatesForChannel(e).length > 0
+  return !E.default.isChannelMuted(e.guild_id, e.id) && (e.isGuildStageVoice() ? d.default.getMutableParticipants(e.id, c.StageChannelParticipantNamedIndex.SPEAKER).length > 0 : g.default.getVoiceStatesForChannel(e).length > 0)
 }
 
 function M(e) {

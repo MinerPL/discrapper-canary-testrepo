@@ -18,26 +18,29 @@ n.r(t), n.d(t, {
   HEIGHT_CHANNEL: function() {
     return o
   },
-  HEIGHT_CHANNEL_SUBTITLE: function() {
+  HEIGHT_CHANNEL_FAVORITES: function() {
     return u
   },
-  HEIGHT_USER: function() {
+  HEIGHT_CHANNEL_SUBTITLE: function() {
     return d
   },
-  HEIGHT_USER_PADDING: function() {
+  HEIGHT_USER: function() {
     return c
   },
-  SERVER_BANNER_PADDING: function() {
+  HEIGHT_USER_PADDING: function() {
     return f
   },
-  SERVER_COMMUNITY_INFO_PADDING: function() {
+  SERVER_BANNER_PADDING: function() {
     return h
   },
-  COLLAPSED_USERS_PER_ROW: function() {
+  SERVER_COMMUNITY_INFO_PADDING: function() {
     return C
   },
-  TUTORIAL_INLINE_SPECS: function() {
+  COLLAPSED_USERS_PER_ROW: function() {
     return p
+  },
+  TUTORIAL_INLINE_SPECS: function() {
+    return m
   }
 });
 let l = 8,
@@ -46,13 +49,14 @@ let l = 8,
   i = 12,
   r = 12,
   o = 34,
-  u = 16,
-  d = 32,
-  c = 8,
-  f = 84,
-  h = 16,
-  C = 5,
-  p = {
+  u = 41.5,
+  d = 16,
+  c = 32,
+  f = 8,
+  h = 84,
+  C = 16,
+  p = 5,
+  m = {
     origin: {
       x: -36,
       y: 7

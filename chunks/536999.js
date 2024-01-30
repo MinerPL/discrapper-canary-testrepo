@@ -5,6 +5,9 @@ l.r(t), l.d(t, {
   },
   isInMembersTablesAdditionalFilteringExperiment: function() {
     return o
+  },
+  useIsInMembersTablesAdditionalFilteringExperiment: function() {
+    return d
   }
 });
 var a = l("862205");
@@ -62,6 +65,22 @@ let n = (0, a.createExperiment)({
     } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
       enabled: n
     } = s.getCurrentConfig({
+      guildId: e,
+      location: a
+    }, {
+      autoTrackExposure: t,
+      disable: l
+    });
+    return n
+  },
+  d = function(e) {
+    let {
+      autoTrackExposure: t = !1,
+      disable: l = !1,
+      location: a = "f03bed_10"
+    } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, {
+      enabled: n
+    } = s.useExperiment({
       guildId: e,
       location: a
     }, {

@@ -25,8 +25,8 @@ var a = n("37983"),
   m = n("845038"),
   E = n("374014"),
   C = n("223913"),
-  g = n("709463"),
-  S = n("264429"),
+  S = n("709463"),
+  g = n("264429"),
   _ = n("930291"),
   I = n("506885"),
   T = n("981601"),
@@ -117,7 +117,8 @@ class U extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), this.domElementRef = l.createRef(), this.state = {
-      userPopoutOpen: !1
+      userPopoutOpen: !1,
+      isHoveringOwnHangStatus: !1
     }, this.handleClickUser = () => {
       this.setState({
         userPopoutOpen: !this.state.userPopoutOpen
@@ -142,6 +143,10 @@ class U extends l.PureComponent {
         showHangStatus: a
       } = this.props;
       (n || a) && (null == t || t(e.id))
+    }, this.handleHoverOwnHangStatus = e => {
+      this.setState({
+        isHoveringOwnHangStatus: e
+      })
     }, this.handleWatchStream = () => {
       let {
         user: e,
@@ -156,7 +161,7 @@ class U extends l.PureComponent {
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, g.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
@@ -200,7 +205,7 @@ class U extends l.PureComponent {
         previewIsOpen: n,
         location: l
       } = this.props;
-      return (0, a.jsx)(S.default, {
+      return (0, a.jsx)(g.default, {
         user: e,
         channel: t,
         onWatch: this.handleWatchStream,
@@ -235,8 +240,8 @@ class U extends l.PureComponent {
         priority: p,
         collapsed: E,
         isStreaming: C,
-        isGuest: g,
-        nick: S,
+        isGuest: S,
+        nick: g,
         video: _,
         serverMute: I,
         serverDeaf: T,
@@ -245,21 +250,23 @@ class U extends l.PureComponent {
         channel: N,
         hangStatusActivity: A,
         showHangStatus: M,
-        isSelf: j
+        isSelf: j,
+        application: O
       } = this.props, {
-        userPopoutOpen: O
-      } = this.state, b = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), D = {
+        userPopoutOpen: b,
+        isHoveringOwnHangStatus: D
+      } = this.state, U = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), w = {
         user: f,
         speaking: c,
         mute: r,
         localMute: u,
         localVideoDisabled: d,
         isStreaming: C,
-        isGuest: g,
+        isGuest: S,
         video: _,
         priority: p,
         deaf: h,
-        nick: S,
+        nick: g,
         collapsed: E,
         overlap: E,
         serverMute: I,
@@ -271,20 +278,22 @@ class U extends l.PureComponent {
         avatarContainerClass: i({
           [P.userAvatar]: !0
         }),
-        disabled: t && !b,
-        selected: O,
-        onClick: b ? void 0 : this.handleClickUser,
+        disabled: t && !U,
+        selected: b,
+        onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
         guildId: N.guild_id,
         hangStatusActivity: A,
         showHangStatus: M,
-        isSelf: j
+        isSelf: j,
+        application: O,
+        channelId: N.id
       };
       if (t) {
-        var U;
+        var F;
         return (0, a.jsx)(o.Tooltip, {
-          text: null !== (U = (0, m.default)(n)) && void 0 !== U ? U : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+          text: null !== (F = (0, m.default)(n)) && void 0 !== F ? F : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
@@ -292,7 +301,7 @@ class U extends l.PureComponent {
               ...l
             } = e;
             return (0, a.jsx)(R.default, {
-              ...D,
+              ...w,
               ...l
             })
           }
@@ -300,14 +309,15 @@ class U extends l.PureComponent {
       }
       return (0, a.jsx)(o.Popout, {
         position: "right",
-        renderPopout: C ? this.renderStreamPopout : this.renderHangStatusPopout,
-        shouldShow: s && !O,
+        renderPopout: M && j && D || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
+        shouldShow: s && !b,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
         children: () => (0, a.jsx)(R.default, {
-          ...D,
+          ...w,
           onMouseDown: e.onMouseDown,
-          onKeyDown: e.onKeyDown
+          onKeyDown: e.onKeyDown,
+          handleHoverOwnHangStatus: this.handleHoverOwnHangStatus
         })
       })
     }

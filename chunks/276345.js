@@ -1,498 +1,451 @@
 "use strict";
-a.r(s), a.d(s, {
+t.r(s), t.d(s, {
   default: function() {
-    return M
+    return R
   }
-});
-var t = a("37983");
-a("884691");
-var l = a("414456"),
-  i = a.n(l),
-  n = a("77078"),
-  d = a("446674"),
-  c = a("305961"),
-  r = a("677099"),
-  o = a("660279"),
-  h = a("70025"),
-  x = a("461380"),
-  u = a("593195"),
-  m = a("578706"),
-  N = a("945330"),
-  I = a("474571"),
-  T = a("76539"),
-  v = a("975743"),
-  f = a("904276"),
-  j = a("875436"),
-  _ = a("782340"),
-  g = a("650287"),
-  O = a("492489");
+}), t("222007");
+var a = t("37983"),
+  l = t("884691"),
+  i = t("414456"),
+  n = t.n(i),
+  d = t("77078"),
+  r = t("446674"),
+  c = t("305961"),
+  o = t("677099"),
+  u = t("116320"),
+  h = t("660279"),
+  x = t("998650"),
+  N = t("70025"),
+  I = t("461380"),
+  T = t("593195"),
+  f = t("578706"),
+  m = t("945330"),
+  v = t("474571"),
+  j = t("76539"),
+  _ = t("975743"),
+  g = t("904276"),
+  M = t("875436"),
+  O = t("782340"),
+  C = t("650287"),
+  A = t("492489");
 
-function M(e) {
+function R(e) {
   let {
     count: s
-  } = e, a = (0, d.useStateFromStores)([c.default, r.default], () => {
-    var e;
-    return null === (e = c.default.getGuild(r.default.getFlattenedGuildIds()[0])) || void 0 === e ? void 0 : e.name
-  });
-  return (0, t.jsxs)("div", {
-    className: g.content,
-    children: [(0, t.jsxs)("div", {
-      className: i(g.header, O.header),
-      children: [(0, t.jsx)(m.default, {
+  } = e, [t, i] = l.useState("server");
+  return (0, a.jsxs)("div", {
+    className: C.content,
+    children: [(0, a.jsxs)("div", {
+      className: n(C.header, A.header),
+      children: [(0, a.jsx)(f.default, {
         width: 40,
         height: 40
-      }), (0, t.jsx)(n.Heading, {
+      }), (0, a.jsx)(d.Heading, {
         variant: "heading-xl/bold",
         color: "header-primary",
-        children: _.default.Messages.NOTIF_MIGRATION_TIPS_TITLE.format({
+        children: O.default.Messages.NOTIF_MIGRATION_TIPS_TITLE.format({
           count: s
         })
-      }), (0, t.jsx)(n.Text, {
-        className: g.subtitle,
+      }), (0, a.jsx)(d.Text, {
+        className: C.subtitle,
         variant: "text-md/medium",
         color: "header-secondary",
-        children: _.default.Messages.NOTIF_MIGRATION_TIPS_SUB_TITLE
+        children: O.default.Messages.NOTIF_MIGRATION_TIPS_SUB_TITLE
       })]
-    }), (0, t.jsxs)("div", {
-      className: O.columns,
-      children: [(0, t.jsxs)("div", {
-        className: O.column,
-        children: [(0, t.jsx)("div", {
-          className: O.previewContainer,
-          children: (0, t.jsxs)("div", {
-            className: O.previewInner,
-            children: [(0, t.jsxs)("div", {
-              className: O.bigMenuHeader,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                lineClamp: 1,
-                children: null != a ? a : "Keyboard Nerds"
-              }), (0, t.jsx)(N.default, {
-                className: O.icon,
-                width: 24,
-                height: 24
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.bigMenu,
-              children: [(0, t.jsxs)("div", {
-                className: O.menuItem,
-                children: [(0, t.jsx)(n.Text, {
-                  variant: "text-sm/normal",
-                  color: "interactive-normal",
-                  children: _.default.Messages.INVITE_PEOPLE
-                }), (0, t.jsx)(T.default, {
-                  className: O.icon,
-                  width: 18,
-                  height: 18
-                })]
-              }), (0, t.jsx)("div", {
-                className: O.divider
-              }), (0, t.jsxs)("div", {
-                className: i(O.menuItem, O.active),
-                children: [(0, t.jsx)(n.Text, {
-                  variant: "text-sm/normal",
-                  color: "always-white",
-                  children: _.default.Messages.NOTIFICATION_SETTINGS
-                }), (0, t.jsx)(o.default, {
-                  className: O.icon,
-                  width: 18,
-                  height: 18
-                })]
-              }), (0, t.jsxs)("div", {
-                className: O.menuItem,
-                children: [(0, t.jsx)(n.Text, {
-                  variant: "text-sm/normal",
-                  color: "interactive-normal",
-                  children: _.default.Messages.PRIVACY_SETTINGS
-                }), (0, t.jsx)(v.default, {
-                  className: O.icon,
-                  width: 18,
-                  height: 18
-                })]
-              }), (0, t.jsxs)("div", {
-                className: O.menuItem,
-                children: [(0, t.jsx)(n.Text, {
-                  variant: "text-sm/normal",
-                  color: "interactive-normal",
-                  children: _.default.Messages.SERVER_SETTINGS
-                }), (0, t.jsx)(I.default, {
-                  className: O.icon,
-                  width: 18,
-                  height: 18
-                })]
-              }), (0, t.jsxs)("div", {
-                className: O.menuItem,
-                children: [(0, t.jsx)(n.Text, {
-                  variant: "text-sm/normal",
-                  color: "interactive-normal",
-                  children: _.default.Messages.CREATE_EVENTS
-                }), (0, t.jsx)(h.default, {
-                  className: O.icon,
-                  width: 18,
-                  height: 18
-                })]
-              })]
-            })]
-          })
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-md/medium",
-          color: "header-primary",
-          children: _.default.Messages.NOTIF_MIGRATION_TIPS_1_TITLE
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-sm/normal",
-          color: "header-secondary",
-          children: _.default.Messages.NOTIF_MIGRATION_TIPS_1_SUBTITLE
-        })]
-      }), (0, t.jsxs)("div", {
-        className: O.column,
-        children: [(0, t.jsxs)("div", {
-          className: O.previewContainer,
-          children: [(0, t.jsxs)("div", {
-            className: i(O.previewInner, O.channelPreviewInner),
-            children: [(0, t.jsxs)("div", {
-              className: i(O.channel, O.active),
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
-              })]
-            })]
-          }), (0, t.jsxs)("div", {
-            className: i(O.menu, O.leftMenu),
-            children: [(0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.MUTE
-              }), (0, t.jsx)(x.default, {
-                className: O.caret,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: i(O.menuItem, O.active),
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-active",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATIONS
-              }), (0, t.jsx)(x.default, {
-                className: O.caret,
-                width: 12,
-                height: 12
-              })]
-            })]
-          }), (0, t.jsxs)("div", {
-            className: i(O.menu, O.rightMenu),
-            children: [(0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_1
-              }), (0, t.jsx)(f.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: i(O.menuItem, O.active),
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-active",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_2
-              }), (0, t.jsx)(j.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_3
-              }), (0, t.jsx)(f.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
-              }), (0, t.jsx)(f.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            })]
-          })]
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-md/medium",
-          color: "header-primary",
-          children: _.default.Messages.NOTIF_MIGRATION_TIPS_2_TITLE
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-sm/normal",
-          color: "header-secondary",
-          children: _.default.Messages.NOTIF_MIGRATION_TIPS_2_SUBTITLE
-        })]
-      }), (0, t.jsxs)("div", {
-        className: O.column,
-        children: [(0, t.jsxs)("div", {
-          className: O.previewContainer,
-          children: [(0, t.jsxs)("div", {
-            className: i(O.previewInner, O.channelPreviewInner),
-            children: [(0, t.jsxs)("div", {
-              className: i(O.channel, O.active),
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.channel,
-              children: [(0, t.jsx)(u.default, {
-                className: O.channelIcon,
-                width: 16,
-                height: 16
-              }), (0, t.jsx)(n.Text, {
-                variant: "text-md/medium",
-                color: "interactive-active",
-                children: _.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
-              })]
-            })]
-          }), (0, t.jsxs)("div", {
-            className: i(O.menu, O.leftMenu),
-            children: [(0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.MUTE
-              }), (0, t.jsx)(x.default, {
-                className: O.caret,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: i(O.menuItem, O.active),
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-active",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATIONS
-              }), (0, t.jsx)(x.default, {
-                className: O.caret,
-                width: 12,
-                height: 12
-              })]
-            })]
-          }), (0, t.jsxs)("div", {
-            className: i(O.menu, O.rightMenu),
-            children: [(0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_1
-              }), (0, t.jsx)(f.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_2
-              }), (0, t.jsx)(f.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_3
-              }), (0, t.jsx)(f.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: i(O.menuItem, O.active),
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-active",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
-              }), (0, t.jsx)(j.default, {
-                className: O.icon,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsx)("div", {
-              className: O.divider
-            }), (0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_UNREAD_TITLE
-              }), (0, t.jsx)(x.default, {
-                className: O.caret,
-                width: 12,
-                height: 12
-              })]
-            }), (0, t.jsxs)("div", {
-              className: O.menuItem,
-              children: [(0, t.jsx)(n.Text, {
-                variant: "text-xs/normal",
-                color: "interactive-normal",
-                lineClamp: 1,
-                children: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NOTIFICATION_TITLE
-              }), (0, t.jsx)(x.default, {
-                className: O.caret,
-                width: 12,
-                height: 12
-              })]
-            })]
-          })]
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-md/medium",
-          color: "header-primary",
-          children: _.default.Messages.NOTIF_MIGRATION_TIPS_3_TITLE
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-sm/normal",
-          color: "header-secondary",
-          children: _.default.Messages.NOTIF_MIGRATION_TIPS_3_SUBTITLE
-        })]
+    }), (0, a.jsxs)("div", {
+      className: A.tabs,
+      children: [(0, a.jsx)("div", {
+        className: A.tabBackground,
+        style: {
+          left: "server" === t ? 0 : "50%"
+        }
+      }), (0, a.jsx)(d.Clickable, {
+        className: A.tab,
+        onClick: () => i("server"),
+        children: (0, a.jsx)(d.Text, {
+          variant: "text-sm/medium",
+          color: "server" === t ? "header-primary" : "text-muted",
+          children: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB1
+        })
+      }), (0, a.jsx)(d.Clickable, {
+        className: A.tab,
+        onClick: () => i("channel"),
+        children: (0, a.jsx)(d.Text, {
+          variant: "text-sm/medium",
+          color: "channel" === t ? "header-primary" : "text-muted",
+          children: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB2
+        })
+      })]
+    }), (0, a.jsxs)("div", {
+      className: A.container,
+      children: [(0, a.jsx)(p, {
+        hidden: "channel" === t
+      }), (0, a.jsx)(E, {
+        hidden: "server" === t
       })]
     })]
+  })
+}
+
+function p(e) {
+  let {
+    hidden: s
+  } = e, t = (0, r.useStateFromStores)([c.default, o.default], () => {
+    var e;
+    return null === (e = c.default.getGuild(o.default.getFlattenedGuildIds()[0])) || void 0 === e ? void 0 : e.name
+  }), [i, T] = l.useState(0);
+  return l.useEffect(() => {
+    if (s) return;
+    let e = 0,
+      t = [1500, 1e3, 1e3, 500].map((s, t) => setTimeout(() => T(t + 1), e += s));
+    return () => {
+      t.forEach(e => clearTimeout(e)), setTimeout(() => T(0), 150)
+    }
+  }, [s]), (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)("div", {
+      className: A.containerInner,
+      children: (0, a.jsxs)("div", {
+        className: n(A.serversSection, {
+          [A.hidden]: s,
+          [A.showBigMenu]: i >= 1,
+          [A.fadeChannels]: i >= 1,
+          [A.showModal]: i >= 3
+        }),
+        children: [(0, a.jsxs)("div", {
+          className: A.channels,
+          children: [(0, a.jsxs)("div", {
+            className: A.guildName,
+            children: [(0, a.jsx)(d.Text, {
+              variant: "text-md/medium",
+              color: "interactive-active",
+              lineClamp: 1,
+              children: null != t ? t : "Keyboard Nerds"
+            }), i >= 1 ? (0, a.jsx)(m.default, {
+              className: A.icon,
+              width: 24,
+              height: 24
+            }) : (0, a.jsx)(I.default, {
+              className: n(A.downCaret, A.icon),
+              width: 24,
+              height: 24
+            })]
+          }), (0, a.jsx)(b, {
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
+          }), (0, a.jsx)(b, {
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
+          }), (0, a.jsx)(b, {
+            grey: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+          }), (0, a.jsx)(b, {
+            grey: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+          }), (0, a.jsx)(b, {
+            grey: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
+          }), (0, a.jsx)(b, {
+            nodot: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
+          }), (0, a.jsx)(b, {
+            nodot: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
+          })]
+        }), (0, a.jsxs)("div", {
+          className: A.bigMenu,
+          children: [(0, a.jsx)(L, {
+            text: O.default.Messages.INVITE_PEOPLE,
+            icon: (0, a.jsx)(j.default, {
+              className: A.icon,
+              width: 18,
+              height: 18
+            })
+          }), (0, a.jsx)("div", {
+            className: A.divider
+          }), (0, a.jsx)(L, {
+            active: i >= 2,
+            text: O.default.Messages.NOTIFICATION_SETTINGS,
+            icon: (0, a.jsx)(h.default, {
+              className: A.icon,
+              width: 18,
+              height: 18
+            })
+          }), (0, a.jsx)(L, {
+            text: O.default.Messages.PRIVACY_SETTINGS,
+            icon: (0, a.jsx)(_.default, {
+              className: A.icon,
+              width: 18,
+              height: 18
+            })
+          }), (0, a.jsx)(L, {
+            text: O.default.Messages.SERVER_SETTINGS,
+            icon: (0, a.jsx)(v.default, {
+              className: A.icon,
+              width: 18,
+              height: 18
+            })
+          }), (0, a.jsx)(L, {
+            text: O.default.Messages.CREATE_EVENTS,
+            icon: (0, a.jsx)(N.default, {
+              className: A.icon,
+              width: 18,
+              height: 18
+            })
+          })]
+        }), (0, a.jsxs)("div", {
+          className: A.notifModal,
+          children: [(0, a.jsx)(d.Text, {
+            className: A.modalHeader,
+            variant: "text-md/medium",
+            color: "interactive-active",
+            children: O.default.Messages.NOTIFICATION_SETTINGS
+          }), (0, a.jsxs)("div", {
+            className: A.notifTabs,
+            children: [(0, a.jsxs)("div", {
+              className: A.notifTab,
+              children: [(0, a.jsx)(f.default, {
+                width: 24,
+                height: 24
+              }), (0, a.jsx)(d.Text, {
+                variant: "text-xs/medium",
+                color: "text-muted",
+                lineClamp: 1,
+                children: O.default.Messages.NOTIFICATION_PRESET_1
+              })]
+            }), (0, a.jsxs)("div", {
+              className: A.activeNotifTab,
+              children: [(0, a.jsx)(u.default, {
+                width: 24,
+                height: 24
+              }), (0, a.jsx)(d.Text, {
+                variant: "text-xs/medium",
+                color: "interactive-active",
+                lineClamp: 1,
+                children: O.default.Messages.NOTIFICATION_PRESET_2
+              })]
+            }), (0, a.jsxs)("div", {
+              className: A.notifTab,
+              children: [(0, a.jsx)(x.default, {
+                width: 24,
+                height: 24
+              }), (0, a.jsx)(d.Text, {
+                variant: "text-xs/medium",
+                color: "text-muted",
+                lineClamp: 1,
+                children: O.default.Messages.NOTIFICATION_PRESET_3
+              })]
+            })]
+          }), (0, a.jsxs)("div", {
+            className: A.controls,
+            children: [(0, a.jsxs)("div", {
+              className: A.control,
+              children: [(0, a.jsx)("div", {
+                className: A.controlPlaceholder
+              }), (0, a.jsx)("div", {
+                className: A.switchOn
+              })]
+            }), (0, a.jsxs)("div", {
+              className: A.control,
+              children: [(0, a.jsx)("div", {
+                className: A.controlPlaceholder
+              }), (0, a.jsx)("div", {
+                className: A.switchOff
+              })]
+            })]
+          })]
+        })]
+      })
+    }), (0, a.jsx)(w, {
+      text: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB1_TIP2,
+      className: A.tipServers2,
+      hidden: s || i < 4
+    })]
+  })
+}
+
+function E(e) {
+  let {
+    hidden: s
+  } = e, [t, i] = l.useState(0);
+  return l.useEffect(() => {
+    if (s) return;
+    let e = 0,
+      t = [1e3, 1e3, 1e3, 800, 800].map((s, t) => setTimeout(() => i(t + 1), e += s));
+    return () => {
+      t.forEach(e => clearTimeout(e)), setTimeout(() => i(0), 150)
+    }
+  }, [s]), (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)("div", {
+      className: A.containerInner,
+      children: (0, a.jsxs)("div", {
+        className: n(A.channelsSection, {
+          [A.hidden]: s,
+          [A.fadeOtherChannels]: t >= 2,
+          [A.showLeftMenu]: t >= 2,
+          [A.showRightMenu]: t >= 3
+        }),
+        children: [(0, a.jsxs)("div", {
+          className: A.channels,
+          children: [(0, a.jsx)(b, {
+            selected: t >= 1,
+            grey: t >= 5,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
+          }), (0, a.jsx)(b, {
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
+          }), (0, a.jsx)(b, {
+            grey: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
+          }), (0, a.jsx)(b, {
+            grey: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
+          }), (0, a.jsx)(b, {
+            grey: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
+          }), (0, a.jsx)(b, {
+            nodot: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
+          }), (0, a.jsx)(b, {
+            nodot: !0,
+            name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
+          })]
+        }), (0, a.jsxs)("div", {
+          className: n(A.menu, A.leftMenu),
+          children: [(0, a.jsx)(L, {
+            small: !0,
+            text: O.default.Messages.MUTE,
+            icon: (0, a.jsx)(I.default, {
+              className: A.caret,
+              width: 12,
+              height: 12
+            })
+          }), (0, a.jsx)(L, {
+            small: !0,
+            text: O.default.Messages.NOTIFICATIONS,
+            active: t >= 3,
+            icon: (0, a.jsx)(I.default, {
+              className: A.caret,
+              width: 12,
+              height: 12
+            })
+          })]
+        }), (0, a.jsxs)("div", {
+          className: n(A.menu, A.rightMenu),
+          children: [(0, a.jsx)(L, {
+            small: !0,
+            text: O.default.Messages.NOTIFICATION_PRESET_1,
+            icon: t <= 4 ? (0, a.jsx)(M.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            }) : (0, a.jsx)(g.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            }),
+            active: t <= 4
+          }), (0, a.jsx)(L, {
+            small: !0,
+            text: O.default.Messages.NOTIFICATION_PRESET_2,
+            icon: t >= 5 ? (0, a.jsx)(M.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            }) : (0, a.jsx)(g.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            }),
+            active: t >= 5
+          }), (0, a.jsx)(L, {
+            small: !0,
+            text: O.default.Messages.NOTIFICATION_PRESET_3,
+            icon: (0, a.jsx)(g.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            })
+          }), (0, a.jsx)(L, {
+            small: !0,
+            text: O.default.Messages.NOTIFICATION_PRESET_CUSTOM,
+            icon: (0, a.jsx)(g.default, {
+              className: A.icon,
+              width: 12,
+              height: 12
+            })
+          })]
+        })]
+      })
+    }), (0, a.jsx)(w, {
+      text: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB2_TIP1,
+      className: A.tipChannels1,
+      hidden: s || t < 4
+    }), (0, a.jsx)(w, {
+      text: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB2_TIP2,
+      className: A.tipChannels2,
+      hidden: s || t < 4
+    })]
+  })
+}
+
+function w(e) {
+  let {
+    text: s,
+    className: t,
+    hidden: l
+  } = e;
+  return (0, a.jsxs)("div", {
+    className: n(t, A.tip, {
+      [A.hidden]: l
+    }),
+    children: [(0, a.jsx)(d.Text, {
+      className: A.tipText,
+      variant: "text-sm/normal",
+      color: "text-secondary",
+      children: s
+    }), (0, a.jsx)("div", {
+      className: A.tipLine
+    })]
+  })
+}
+
+function b(e) {
+  let {
+    grey: s,
+    nodot: t,
+    selected: l,
+    name: i
+  } = e;
+  return (0, a.jsxs)("div", {
+    className: n(A.channel, {
+      [A.grey]: s || t,
+      [A.nodot]: t,
+      [A.selected]: l
+    }),
+    children: [(0, a.jsx)(T.default, {
+      className: A.channelIcon,
+      width: 16,
+      height: 16
+    }), (0, a.jsx)(d.Text, {
+      variant: "text-md/medium",
+      className: A.channelName,
+      children: i
+    })]
+  })
+}
+
+function L(e) {
+  let {
+    text: s,
+    active: t,
+    small: l,
+    icon: i
+  } = e;
+  return (0, a.jsxs)("div", {
+    className: n(A.menuItem, {
+      [A.active]: t
+    }),
+    children: [(0, a.jsx)(d.Text, {
+      variant: l ? "text-xs/normal" : "text-sm/normal",
+      color: t ? "always-white" : "interactive-normal",
+      children: s
+    }), i]
   })
 }

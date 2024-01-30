@@ -24,11 +24,12 @@ function d(e) {
     description: t,
     name: n,
     icon: l,
-    onNavigate: d
+    onNavigate: d,
+    className: c
   } = e;
   return (0, a.jsxs)(r.Clickable, {
     onClick: d,
-    className: s(o.modInfoItem, null != d && o.modInfoAction),
+    className: s(o.modInfoItem, null != d && o.modInfoAction, c),
     children: [null != l && (0, a.jsx)("div", {
       className: s(o.modInfoItemIcon),
       children: l

@@ -278,5 +278,14 @@ var y = new A(s.default, {
     } = e;
     m.notifCenterItems = m.notifCenterItems.map(e => e.id === t.id ? t : e).filter(E)
   },
-  SET_RECENT_MENTIONS_FILTER: p
+  SET_RECENT_MENTIONS_FILTER: p,
+  MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function(e) {
+    let {
+      newBuild: t
+    } = e;
+    if (null !== t) {
+      let e = (0, _.mobileNativeUpdateAvailableLocalItem)(t);
+      void 0 === m.notifCenterLocalItems.find(t => t.local_id === e.local_id) && (m.notifCenterLocalItems = [...m.notifCenterLocalItems.filter(t => t.kind !== e.kind), e])
+    }
+  }
 })

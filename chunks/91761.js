@@ -16,14 +16,12 @@ function u(e) {
     isWatchTogetherPromoEnabled: i = !1,
     disableFilter: u = !1
   } = e, {
-    enableDeveloperActivityShelf: o,
-    filter: c
+    filter: o
   } = (0, l.useStateFromStoresObject)([a.default], () => ({
-    enableDeveloperActivityShelf: a.default.getIsEnabled(),
     filter: a.default.getFilter()
-  })), s = (0, d.default)(t, i), f = (0, n.default)(s), p = (0, r.useDeveloperActivityShelfItems)();
-  return [...p, ...f].map(e => {
+  })), c = (0, d.default)(t, i), s = (0, n.default)(c), f = (0, r.useDeveloperActivityShelfItems)();
+  return [...f, ...s].map(e => {
     let [t, i] = e;
-    return [t, i.filter(e => u || !o || "" === c || e.application.name.toLocaleLowerCase().includes(c.toLocaleLowerCase()))]
+    return [t, i.filter(e => u || "" === o || e.application.name.toLocaleLowerCase().includes(o.toLocaleLowerCase()))]
   })
 }

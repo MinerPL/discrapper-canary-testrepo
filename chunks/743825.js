@@ -31,20 +31,20 @@ var l, i = n("37983"),
   R = n("32647"),
   O = n("970153"),
   M = n("49111"),
-  k = n("782340"),
-  b = n("537461");
+  b = n("782340"),
+  k = n("537461");
 new T.default("ChannelEditor.tsx");
 let P = function() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n]
   },
   L = {
-    12: b.fontSize12Padding,
-    14: b.fontSize14Padding,
-    15: b.fontSize15Padding,
-    16: b.fontSize16Padding,
-    18: b.fontSize18Padding,
-    20: b.fontSize20Padding,
-    24: b.fontSize24Padding
+    12: k.fontSize12Padding,
+    14: k.fontSize14Padding,
+    15: k.fontSize15Padding,
+    16: k.fontSize16Padding,
+    18: k.fontSize18Padding,
+    20: k.fontSize20Padding,
+    24: k.fontSize24Padding
   };
 l = class extends r.Component {
   componentDidMount() {
@@ -155,7 +155,7 @@ l = class extends r.Component {
       placeholder: t,
       isPreviewing: n
     } = this.props;
-    return e && !n ? k.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+    return e && !n ? b.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
   }
   render() {
     var e, t, n, l, r, o;
@@ -176,7 +176,7 @@ l = class extends r.Component {
       canOnlyUseTextCommands: x,
       className: _,
       id: O,
-      required: k,
+      required: b,
       maxCharacterCount: P,
       allowNewLines: U,
       "aria-describedby": j,
@@ -187,13 +187,13 @@ l = class extends r.Component {
       popup: H
     } = this.state, F = {
       channel: E,
-      className: s(_, b.textArea, {
-        [b.textAreaSlate]: C,
-        [b.textAreaDisabled]: d || B
+      className: s(_, k.textArea, {
+        [k.textAreaSlate]: C,
+        [k.textAreaDisabled]: d || B
       }),
       id: O,
       placeholder: this.getPlaceholder(),
-      required: k,
+      required: b,
       accessibilityLabel: w,
       disabled: d || !1,
       submitting: B,
@@ -212,9 +212,9 @@ l = class extends r.Component {
       onKeyDown: f,
       onSubmit: h,
       textAreaPaddingClassName: s(L[g], {
-        [b.textAreaWithoutAttachmentButton]: S !== I.ChatInputTypes.NORMAL && S !== I.ChatInputTypes.OVERLAY && S !== I.ChatInputTypes.THREAD_CREATION && S !== I.ChatInputTypes.SIDEBAR,
-        [b.textAreaForPostCreation]: S === I.ChatInputTypes.CREATE_FORUM_POST,
-        [b.textAreaCustomGift]: S === I.ChatInputTypes.CUSTOM_GIFT
+        [k.textAreaWithoutAttachmentButton]: S !== I.ChatInputTypes.NORMAL && S !== I.ChatInputTypes.OVERLAY && S !== I.ChatInputTypes.THREAD_CREATION && S !== I.ChatInputTypes.SIDEBAR,
+        [k.textAreaForPostCreation]: S === I.ChatInputTypes.CREATE_FORUM_POST,
+        [k.textAreaCustomGift]: S === I.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: T,
       useNewSlashCommands: v,
@@ -404,19 +404,23 @@ l = class extends r.Component {
           }
         }
       })), 0 !== s.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
-        var l;
-        let r = C.default.getActiveCommand(t.id);
-        if (null == r) return i(e, t, o.drafts.type, {
+        var l, r;
+        let s = C.default.getActiveCommand(t.id);
+        if (null == s) return i(e, t, o.drafts.type, {
           requireConfirm: !0,
           showLargeMessageDialog: void 0
         });
-        let s = null === (l = r.options) || void 0 === l ? void 0 : l.find(e => e.type === S.ApplicationCommandOptionType.ATTACHMENT && null == v.default.getUpload(t.id, e.name, o.drafts.type));
-        null != s && E.default.setFile({
+        let a = null !== (l = o.drafts.commandType) && void 0 !== l ? l : o.drafts.type,
+          u = null,
+          d = C.default.getActiveOption(t.id);
+        null != (u = (null == d ? void 0 : d.type) === S.ApplicationCommandOptionType.ATTACHMENT ? d : null === (r = s.options) || void 0 === r ? void 0 : r.find(e => {
+          if (e.type === S.ApplicationCommandOptionType.ATTACHMENT) return null == v.default.getUpload(t.id, e.name, a)
+        })) && E.default.setFile({
           channelId: t.id,
-          id: s.name,
-          draftType: o.drafts.type,
+          id: u.name,
+          draftType: a,
           file: {
-            id: s.name,
+            id: u.name,
             platform: g.UploadPlatform.WEB,
             file: e[0]
           }

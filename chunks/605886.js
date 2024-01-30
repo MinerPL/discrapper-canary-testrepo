@@ -10,8 +10,8 @@ var s = n("627445"),
   l = n("850068"),
   i = n("112679"),
   u = n("596523"),
-  c = n("465527"),
-  o = n("388290"),
+  o = n("465527"),
+  c = n("388290"),
   d = n("599110"),
   f = n("745279"),
   m = n("659632"),
@@ -64,7 +64,7 @@ async function S(e) {
     let a = (0, m.getGiftExperience)(Y),
       i = m.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has(a),
       S = m.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(a);
-    if (k === I.PurchaseTypes.ONE_TIME) r(null != B, "SKU must exist and be fetched."), r(null != F, "SKUPricePreview must exist."), e = await (0, c.purchaseSKU)(B.applicationId, B.id, {
+    if (k === I.PurchaseTypes.ONE_TIME) r(null != B, "SKU must exist and be fetched."), r(null != F, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(B.applicationId, B.id, {
       expectedAmount: F.amount,
       expectedCurrency: F.currency,
       isGift: C,
@@ -89,7 +89,7 @@ async function S(e) {
           }
         })
       }
-      e = await (0, c.purchaseSKU)(p.PREMIUM_SUBSCRIPTION_APPLICATION, M.skuId, {
+      e = await (0, o.purchaseSKU)(p.PREMIUM_SUBSCRIPTION_APPLICATION, M.skuId, {
         expectedAmount: t.amount,
         expectedCurrency: t.currency,
         paymentSource: y,
@@ -105,11 +105,11 @@ async function S(e) {
     } else e = b && null != j && null != y && null != G ? I.PREPAID_PAYMENT_SOURCES.has(y.type) ? await (0, l.payInvoiceManually)(G, j, y, L.currency) : await (0, l.updateSubscription)(G, {
       paymentSource: y,
       currency: L.currency
-    }, R, h) : null != G ? await (0, l.updateSubscription)(G, {
+    }, R, h, H) : null != G ? await (0, l.updateSubscription)(G, {
       items: (0, _.getItemsWithUpsertedPlanIdForGroup)(G, M.id, 1, new Set(v)),
       paymentSource: y,
       currency: L.currency
-    }, R, h) : await (0, u.subscribe)({
+    }, R, h, H) : await (0, u.subscribe)({
       planId: M.id,
       currency: L.currency,
       paymentSource: y,
@@ -127,7 +127,7 @@ async function S(e) {
       duration_ms: Date.now() - g,
       payment_source_type: null == y ? void 0 : y.type
     };
-    C && (i && (z.is_custom_message_edited = W !== N.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE), S && (z.is_custom_emoji_sound_available = !0, null != Z && (z.emoji_name = Z.surrogates), null != K && (z.sound_id = K.soundId))), t(E.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? o.default.createFromServer(e.subscription) : null : "entitlements" in e && (s = null != e.entitlements ? e.entitlements : void 0), D(n, s)
+    C && (i && (z.is_custom_message_edited = W !== N.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE), S && (z.is_custom_emoji_sound_available = !0, null != Z && (z.emoji_name = Z.surrogates), null != K && (z.sound_id = K.soundId))), t(E.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (s = null != e.entitlements ? e.entitlements : void 0), D(n, s)
   } catch (e) {
     t(E.PurchaseState.FAIL), S(e), d.default.track(I.AnalyticEvents.PAYMENT_FLOW_FAILED, {
       ...O,

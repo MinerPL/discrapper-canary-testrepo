@@ -50,7 +50,8 @@ var i = s("37983"),
           resetOnHover: !0,
           isHovering: s,
           introDelay: p,
-          useOpacityOnHover: !1
+          useOpacityOnHover: !1,
+          shopPreview: !0
         })
       })]
     }) : null

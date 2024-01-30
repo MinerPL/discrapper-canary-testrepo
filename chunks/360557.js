@@ -52,7 +52,7 @@ class I extends t.default {
           (0, n.updateHangStatus)(T.status);
           return
         }
-      }(0, n.updateHangStatus)(i.HangStatusTypes.CHILLING)
+      }
     }, this.handleDisconnectFromVoiceChannel = () => {
       (0, n.clearHangStatus)()
     }, this.handleLogout = () => {

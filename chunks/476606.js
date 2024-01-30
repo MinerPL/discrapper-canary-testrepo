@@ -24,6 +24,10 @@ function s(e) {
       alphabeticalSortedCommands: t
     } = e;
     return l.useMemo(() => {
+      if (t.length <= 1) return {
+        popularSortedCommands: t,
+        canSort: !1
+      };
       let e = !1,
         n = t.map((t, n) => (e = e || null != t.global_popularity_rank, {
           command: t,

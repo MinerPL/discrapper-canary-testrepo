@@ -21,8 +21,8 @@ var s = n("37983"),
   m = n("927632"),
   N = n("195483"),
   p = n("49111"),
-  S = n("406291"),
-  A = n("782340"),
+  A = n("406291"),
+  S = n("782340"),
   C = n("741566");
 
 function h(e) {
@@ -78,7 +78,7 @@ function g(e) {
           onUserContextMenu: E,
           onPopoutRequestClose: _
         } = e;
-        if (a || o) return (0, s.jsx)("div", {
+        if (a && null == l.activityInstance || o) return (0, s.jsx)("div", {
           className: C.replyBadge,
           children: (0, s.jsx)(h, {
             className: C.commandIcon
@@ -155,9 +155,9 @@ function g(e) {
       children: [t, n]
     }, "user")
   };
-  return n = (null == a ? void 0 : a.activityInstance) !== null ? A.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+  return n = (null == a ? void 0 : a.activityInstance) !== null ? S.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
     userHook: L
-  }) : A.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+  }) : S.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
     userHook: L,
     commandHook: () => {
       let t = function(e, t) {
@@ -186,7 +186,7 @@ function g(e) {
               onClick: a,
               children: (0, s.jsx)("div", {
                 className: i(C.commandName, C.clickable),
-                children: S.COMMAND_SENTINEL + o
+                children: A.COMMAND_SENTINEL + o
               })
             }) : (0, s.jsx)("div", {
               className: C.commandName,

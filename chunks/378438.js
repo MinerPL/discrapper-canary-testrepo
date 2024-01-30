@@ -22,10 +22,10 @@ n.r(t), n.d(t, {
     return p
   },
   clearSearchState: function() {
-    return g
+    return S
   },
   updateAutocompleteQuery: function() {
-    return S
+    return g
   },
   setShowBlockedResults: function() {
     return N
@@ -37,14 +37,14 @@ var a = n("913144"),
   i = n("751520"),
   r = n("49111");
 
-function o(e, t, n) {
-  (0, i.setIncludeNSFW)(t, e);
-  let o = Object.keys(t);
+function o(e, t, n, o) {
+  (0, i.setIncludeNSFW)(t, e), o && (t.search_everywhere = !0);
+  let u = Object.keys(t);
   l.default.trackWithMetadata(r.AnalyticEvents.SEARCH_STARTED, {
     search_type: s.default.getSearchType(),
     prev_search_id: s.default.getAnalyticsId(e),
-    num_modifiers: o.length,
-    modifiers: o.reduce((e, n) => {
+    num_modifiers: u.length,
+    modifiers: u.reduce((e, n) => {
       let a = t[n];
       return e[n] = Array.isArray(a) ? a.length : 1, e
     }, {})
@@ -52,7 +52,8 @@ function o(e, t, n) {
     type: "SEARCH_START",
     query: t,
     searchId: e,
-    queryString: n
+    queryString: n,
+    searchEverywhere: o
   })
 }
 
@@ -125,7 +126,7 @@ function p(e, t) {
   })
 }
 
-function g(e) {
+function S(e) {
   l.default.trackWithMetadata(r.AnalyticEvents.SEARCH_CLOSED, {
     search_id: s.default.getAnalyticsId(e)
   }), a.default.wait(() => a.default.dispatch({
@@ -134,7 +135,7 @@ function g(e) {
   }))
 }
 
-function S(e, t, n) {
+function g(e, t, n) {
   null != e && a.default.dispatch({
     type: "SEARCH_AUTOCOMPLETE_QUERY_UPDATE",
     searchId: e,

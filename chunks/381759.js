@@ -25,21 +25,31 @@ var a = n("831314"),
             achievement_id: n,
             percent_complete: i
           }
-        } = e, o = t.application.id;
-        if (null == o) throw new s.default(l.RPCErrors.INVALID_COMMAND, "No application.");
-        return a.default.setUserAchievement(o, n, i).catch(e => {
+        } = e, l = t.application.id;
+        if (null == l) throw new s.default({
+          errorCode: r.RPCErrors.INVALID_COMMAND
+        }, "No application.");
+        return a.default.setUserAchievement(l, n, i).catch(e => {
           let {
             status: t,
             body: n
           } = e;
           switch (t) {
             case 429:
-              throw new s.default(l.RPCErrors.RATE_LIMITED, "You are being rate limited.");
+              throw new s.default({
+                errorCode: r.RPCErrors.RATE_LIMITED
+              }, "You are being rate limited.");
             case 403:
-              if (null != n && n.code === r.AbortCodes.USER_NOT_AUTHORIZED_FOR_APPLICATION) throw new s.default(l.RPCErrors.UNAUTHORIZED_FOR_ACHIEVEMENT, "Not authorized to update this achievement.");
-              throw new s.default(l.RPCErrors.UNKNOWN_ERROR, "Unknown error from API. status=".concat(t, "."));
+              if (null != n && n.code === r.AbortCodes.USER_NOT_AUTHORIZED_FOR_APPLICATION) throw new s.default({
+                errorCode: r.RPCErrors.UNAUTHORIZED_FOR_ACHIEVEMENT
+              }, "Not authorized to update this achievement.");
+              throw new s.default({
+                errorCode: r.RPCErrors.UNKNOWN_ERROR
+              }, "Unknown error from API. status=".concat(t, "."));
             default:
-              throw new s.default(l.RPCErrors.UNKNOWN_ERROR, "Unknown error from API. status=".concat(t, "."))
+              throw new s.default({
+                errorCode: r.RPCErrors.UNKNOWN_ERROR
+              }, "Unknown error from API. status=".concat(t, "."))
           }
         }).then(() => null)
       }
@@ -52,7 +62,9 @@ var a = n("831314"),
         let {
           socket: t
         } = e, n = t.application.id;
-        if (null == n) throw new s.default(l.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == n) throw new s.default({
+          errorCode: r.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         return a.default.fetchForApplication(n).then(e => e || [])
       }
     }

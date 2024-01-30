@@ -34,8 +34,10 @@ var a = n("629109"),
             volume: r,
             mute: o
           }
-        } = e, d = i.default.getCurrentUser();
-        if (null == i.default.getUser(t) || (null == d ? void 0 : d.id) === t) throw new l.default(u.RPCErrors.INVALID_USER, "Invalid user id: ".concat(t));
+        } = e, u = i.default.getCurrentUser();
+        if (null == i.default.getUser(t) || (null == u ? void 0 : u.id) === t) throw new l.default({
+          errorCode: d.RPCErrors.INVALID_USER
+        }, "Invalid user id: ".concat(t));
         if (null != n && a.default.setLocalPan(t, n.left, n.right), null != r && a.default.setLocalVolume(t, r), null != o) {
           let e = s.default.isLocalMute(t);
           (e && !o || !e && o) && a.default.toggleLocalMute(t)

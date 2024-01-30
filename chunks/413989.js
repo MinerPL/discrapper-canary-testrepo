@@ -19,70 +19,68 @@ var a = l("37983"),
   E = l("571067"),
   M = l("130037"),
   h = l("178406"),
-  T = l("645266"),
-  x = l("412013"),
-  _ = l("782340"),
-  H = l("554490"),
-  g = l("236807");
-let A = new Set;
+  _ = l("645266"),
+  T = l("412013"),
+  x = l("782340"),
+  S = l("554490"),
+  A = l("236807");
+let g = new Set;
 
 function p(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), p = (0, E.useRoleRows)(t, A, !0), S = (e, l) => {
+  } = e, s = (0, M.useTrackMemberFilterRolesUsed)(t), o = (0, f.default)([h.default], () => h.default.getSearchStateByGuildId(t), [t], c), [r, C] = n.useState(o.selectedRoleIds), p = (0, E.useRoleRows)(t, g, !0), H = (e, l) => {
     let {
       record: n
     } = e;
     return (0, a.jsx)(m.ComboboxItem, {
       value: n.id,
       children: (0, a.jsxs)("div", {
-        className: i(H.roleNameContainer),
+        className: i(S.roleNameContainer),
         children: [(0, a.jsxs)("div", {
-          className: i(H.roleLabel),
+          className: i(S.roleLabel),
           children: [(0, a.jsx)("div", {
-            className: i(H.labelBackground, l && H.selected)
+            className: i(S.labelBackground, l && S.selected)
           }), (0, a.jsx)(m.ComboboxItem.Label, {
-            children: (0, a.jsx)(x.default, {
-              className: i(g.roleTooltipItem),
+            children: (0, a.jsx)(T.default, {
+              className: i(A.roleTooltipItem),
               role: n,
               guildId: t
             }, n.id)
           })]
         }), (0, a.jsx)("div", {
-          className: H.spacer
-        }), (0, a.jsx)("div", {
-          className: H.checkboxContainer,
+          className: S.checkboxContainer,
           children: (0, a.jsx)(m.ComboboxItem.Checkbox, {
             checked: l
           })
         })]
       })
     }, n.id)
-  }, L = (e, t) => p.reduce((l, a) => {
+  }, N = (e, t) => p.reduce((l, a) => {
     let {
       record: n
     } = a, s = e.has(n.id);
-    return d(t.toLowerCase(), n.name.toLowerCase()) ? l.push(S(a, s)) : s && l.push(S(a, s)), l
-  }, []), N = n.useCallback(e => {
-    (0, T.updateSearchState)(t, {
+    return d(t.toLowerCase(), n.name.toLowerCase()) ? l.push(H(a, s)) : s && l.push(H(a, s)), l
+  }, []), L = n.useCallback(e => {
+    (0, _.updateSearchState)(t, {
       selectedRoleIds: e
     }), s(e)
-  }, [t, s]), I = n.useCallback(u(N, 300), [N]), v = n.useCallback(e => {
+  }, [t, s]), I = n.useCallback(u(L, 300), [L]), R = n.useCallback(e => {
     let t;
     C(t = r.has(e) ? new Set([...r].filter(t => t !== e)) : new Set([...r, e])), I(t)
   }, [r, I]);
   return (0, a.jsx)(m.ComboboxPopout, {
-    className: i(H.rolePopout),
-    placeholder: _.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
+    className: i(S.rolePopout),
+    placeholder: x.default.Messages.MEMBERS_TABLE_ROLE_SELECTION_PLACEHOLDER,
     value: r,
-    onChange: v,
+    onChange: R,
     onClose: () => {
       l()
     },
     multiSelect: !0,
     showScrollbar: !0,
     autoFocus: !0,
-    children: e => L(r, e)
+    children: e => N(r, e)
   })
 }

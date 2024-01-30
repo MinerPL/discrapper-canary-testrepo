@@ -24,5 +24,8 @@ l.displayName = "OverlayRunningGameStore";
 var u = new l(r.default, {
   OVERLAY_INITIALIZE: function(e) {
     i = e.currentGame
+  },
+  OVERLAY_SET_ASSOCIATED_GAME: function(e) {
+    i = e.associatedGame
   }
 })

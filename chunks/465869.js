@@ -57,11 +57,11 @@ let c = e => {
         restrictions: i,
         restrictionsLoading: r
       } = c(n),
-      a = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_DISABLED),
-      o = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING),
-      f = a || o || (r ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(i));
+      a = r ? null === (t = null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.isRestrictedFromUpdatingCreatorMonetizationSettings)(i),
+      o = !!(null == n ? void 0 : n.hasFeature(d.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
     return {
-      shouldRestrictUpdatingCreatorMonetizationSettings: f,
+      shouldRestrictUpdatingCreatorMonetizationSettings: a || o,
+      allowSelfRemoveMonetization: !a,
       restrictionsLoading: r
     }
   },

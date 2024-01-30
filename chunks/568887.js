@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var a = n("922932"),
@@ -11,8 +11,12 @@ var a = n("922932"),
   r = n("578287"),
   o = n("716724"),
   u = n("492249"),
-  d = {
-    [n("49111").RPCCommands.OPEN_EXTERNAL_LINK]: {
+  d = n("49111"),
+  c = {
+    [d.RPCCommands.OPEN_EXTERNAL_LINK]: {
+      scope: {
+        [u.RPC_SCOPE_CONFIG.ANY]: [u.RPC_AUTHENTICATED_SCOPE]
+      },
       validation: e => (0, o.default)(e).required().keys({
         url: e.string().required()
       }),
@@ -30,7 +34,9 @@ var a = n("922932"),
             href: e.toString()
           })
         } catch (e) {
-          throw new l.default(u.RPCErrors.INVALID_COMMAND, "Invalid URL: ".concat(n))
+          throw new l.default({
+            errorCode: d.RPCErrors.INVALID_COMMAND
+          }, "Invalid URL: ".concat(n))
         }
       }
     }

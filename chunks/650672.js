@@ -24,22 +24,22 @@ function h(e) {
     confirmButtonText: f,
     confirmButtonColor: A,
     impressionName: m
-  } = e, [x, C] = n.useState(!1), [g, j] = n.useState(""), [R, B] = n.useState(null), E = n.useRef(null);
+  } = e, [x, C] = n.useState(!1), [R, g] = n.useState(""), [j, B] = n.useState(null), E = n.useRef(null);
   (0, u.default)({
     type: o.ImpressionTypes.MODAL,
     name: m
   });
   let I = async e => {
-    if (e.preventDefault(), B(null), C(!0), !1 === c.test(g)) {
+    if (e.preventDefault(), B(null), C(!0), !1 === c.test(R)) {
       B(i.default.Messages.EMAIL_ENTER_MODAL_INPUT_ERROR), C(!1);
       return
     }
     try {
-      let e = null != l ? await l(g) : void 0;
+      let e = null != l ? await l(R) : void 0;
       null != h && (null != e ? h({
         response: e,
-        email: g
-      }) : h(g)), p()
+        email: R
+      }) : h(R)), p()
     } catch (t) {
       let e = new r.default(t);
       B(e.getAnyErrorMessage())
@@ -64,11 +64,11 @@ function h(e) {
         })]
       }), (0, s.jsx)(a.ModalContent, {
         children: (0, s.jsx)(a.FormItem, {
-          title: i.default.Messages.EMAIL,
-          error: R,
+          title: i.default.Messages.YOUR_EMAIL,
+          error: j,
           children: (0, s.jsx)(a.TextInput, {
-            value: g,
-            onChange: j,
+            value: R,
+            onChange: g,
             inputRef: E
           })
         })

@@ -40,28 +40,29 @@ var i = n("37983"),
       moderationAlertId: v,
       analyticsLocation: P,
       analyticsLocations: M,
-      onCloseContextMenu: y
+      onCloseContextMenu: y,
+      showTransferOwnershipItem: G
     } = e, {
-      analyticsLocations: G
-    } = (0, E.default)(c.default.CONTEXT_MENU), L = (0, d.useAnalyticsContext)(), b = null !== (t = null == M ? void 0 : M[0]) && void 0 !== t ? t : G[0], w = (0, T.useTrackModerationAction)(a, {
-      location: b,
+      analyticsLocations: L
+    } = (0, E.default)(c.default.CONTEXT_MENU), b = (0, d.useAnalyticsContext)(), w = null !== (t = null == M ? void 0 : M[0]) && void 0 !== t ? t : L[0], F = (0, T.useTrackModerationAction)(a, {
+      location: w,
       targetUserId: n.id
-    }), F = (0, u.useStateFromStores)([I.default], () => {
+    }), k = (0, u.useStateFromStores)([I.default], () => {
       var e;
       return null !== (e = I.default.getUserVoiceChannelId(a, n.id)) && void 0 !== e ? e : void 0
-    }, [a, n.id]), k = l.useCallback(() => {
-      w(T.ModerationActionType.COPY_ID)
-    }, [w]), B = (0, u.useStateFromStores)([S.default], () => S.default.isMember(a, n.id), [a, n.id]), x = (0, D.default)(n.id, a), V = (0, p.default)(n.id, R), Y = (0, _.default)({
+    }, [a, n.id]), B = l.useCallback(() => {
+      F(T.ModerationActionType.COPY_ID)
+    }, [F]), x = (0, u.useStateFromStores)([S.default], () => S.default.isMember(a, n.id), [a, n.id]), V = (0, D.default)(n.id, a), Y = (0, p.default)(n.id, R), H = (0, _.default)({
       guildId: a,
       userId: n.id,
-      analyticsLocation: null != P ? P : L.location,
-      analyticsLocations: [b],
+      analyticsLocation: null != P ? P : b.location,
+      analyticsLocations: [w],
       context: R
-    }), H = (0, A.default)(n, b), j = (0, N.default)(n, a, null != s ? s : F, b), K = (0, U.default)(s, v), W = (0, C.default)(n, a), Z = (0, m.default)(n.id, a, !1, b), q = (0, f.default)({
+    }), j = (0, A.default)(n, w), K = (0, N.default)(n, a, null != s ? s : k, w), W = (0, U.default)(s, v), Z = (0, C.default)(n, a), q = (0, m.default)(n.id, a, !1, w), z = (0, f.default)({
       id: n.id,
       label: O.default.Messages.COPY_ID_USER,
-      onSuccess: k
-    }), z = (0, g.default)(n, a), X = !!(null == n ? void 0 : n.isNonUserBot());
+      onSuccess: B
+    }), X = (0, g.default)(n, a), Q = !!(null == n ? void 0 : n.isNonUserBot());
     return (0, i.jsxs)(o.Menu, {
       navId: "user-context",
       onClose: () => {
@@ -69,22 +70,22 @@ var i = n("37983"),
       },
       "aria-label": O.default.Messages.USER_ACTIONS_MENU_LABEL,
       onSelect: h,
-      children: [!X && (0, i.jsxs)(i.Fragment, {
+      children: [!Q && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsxs)(o.MenuGroup, {
-          children: [x, V]
+          children: [V, Y]
         }), (0, i.jsxs)(o.MenuGroup, {
-          children: [Y, H]
-        }), B && (0, i.jsxs)(i.Fragment, {
+          children: [H, j]
+        }), x && (0, i.jsxs)(i.Fragment, {
           children: [(0, i.jsx)(o.MenuGroup, {
-            children: j
+            children: K
           }), (0, i.jsxs)(o.MenuGroup, {
-            children: [Z, z]
+            children: [q, X]
           })]
-        }), null != v ? K : null, null != W ? (0, i.jsx)(o.MenuGroup, {
-          children: W
+        }), null != v ? W : null, G && null != Z ? (0, i.jsx)(o.MenuGroup, {
+          children: Z
         }) : null]
       }), (0, i.jsx)(o.MenuGroup, {
-        children: q
+        children: z
       })]
     })
   }, {

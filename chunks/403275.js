@@ -5,9 +5,11 @@ n.r(t), n.d(t, {
   }
 });
 var a = n("861309"),
-  s = n("492249");
+  s = n("49111");
 let i = {
   handler(e) {
-    throw new a.default(s.RPCErrors.INVALID_COMMAND, "Deprecated command: ".concat(e.cmd))
+    throw new a.default({
+      errorCode: s.RPCErrors.INVALID_COMMAND
+    }, "Deprecated command: ".concat(e.cmd))
   }
 }

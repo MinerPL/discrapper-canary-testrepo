@@ -1085,7 +1085,7 @@ let eX = new eq(h.default, {
       userId: l.id,
       suppressEveryone: J.default.isSuppressEveryoneEnabled(o.guildId),
       suppressRoles: J.default.isSuppressRolesEnabled(o.guildId)
-    }) || eA(H.default.getChannel(s))) && o.mentionCount++
+    }) || eA(H.default.getChannel(s)) || J.default.mentionOnAllMessages) && o.mentionCount++
   },
   MESSAGE_DELETE: eG,
   MESSAGE_DELETE_BULK: eG,

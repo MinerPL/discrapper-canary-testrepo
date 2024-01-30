@@ -47,11 +47,17 @@ i = class {
   }
   handleRequest(e, t) {
     new Promise(n => {
-      if (null == t.nonce || "" === t.nonce) throw new c.default(h.RPCErrors.INVALID_PAYLOAD, "Payload requires a nonce");
+      if (null == t.nonce || "" === t.nonce) throw new c.default({
+        errorCode: g.RPCErrors.INVALID_PAYLOAD
+      }, "Payload requires a nonce");
       let i = t.cmd,
         s = this.commands[i];
-      if (null == s) throw new c.default(h.RPCErrors.INVALID_COMMAND, "Invalid command: ".concat(t.cmd));
-      if (!(0, _.default)(e.authorization.scopes, s.scope)) throw new c.default(h.RPCErrors.INVALID_PERMISSIONS, "Not authenticated or invalid scope");
+      if (null == s) throw new c.default({
+        errorCode: g.RPCErrors.INVALID_COMMAND
+      }, "Invalid command: ".concat(t.cmd));
+      if (!(0, _.default)(e.authorization.scopes, s.scope)) throw new c.default({
+        errorCode: g.RPCErrors.INVALID_PERMISSIONS
+      }, "Not authenticated or invalid scope");
       d.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({
         location: "RPCServer"
       }).enabled && l.default.track(g.AnalyticEvents.RPC_COMMAND_SENT, {
@@ -66,7 +72,9 @@ i = class {
           convert: !1
         }, t => {
           if (null != t) {
-            i(new c.default(h.RPCErrors.INVALID_PAYLOAD, t.message));
+            i(new c.default({
+              errorCode: g.RPCErrors.INVALID_PAYLOAD
+            }, t.message));
             return
           }
           n(e)
@@ -112,7 +120,7 @@ i = class {
   error(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
       n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.RPCCommands.DISPATCH,
-      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.RPCErrors.UNKNOWN_ERROR,
+      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : g.RPCErrors.UNKNOWN_ERROR,
       s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "Unknown Error";
     l.default.track(g.AnalyticEvents.RPC_SERVER_ERROR_CAUGHT, {
       command: n,

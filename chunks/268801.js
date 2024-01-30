@@ -41,7 +41,9 @@ var a = n("17434"),
             devices: n
           }
         } = e;
-        if (null == t.application.id) throw new s.default(l.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == t.application.id) throw new s.default({
+          errorCode: r.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         (0, a.setCertifiedDevices)(t.application.id, n.map(e => ({
           type: e.type,
           id: e.id,

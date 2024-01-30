@@ -130,6 +130,10 @@ class p extends u.default.DeviceSettingsStore {
     var e;
     return null === (e = E.saveCameraUploadsToDevice) || void 0 === e || e
   }
+  get swipeToReply() {
+    var e;
+    return null !== (e = E.swipeToReply) && void 0 !== e && e
+  }
 }
 p.displayName = "UnsyncedUserSettingsStore", p.persistKey = "UnsyncedUserSettingsStore", p.migrations = [() => {
   let e = d.default.get("UserSettingsStore");

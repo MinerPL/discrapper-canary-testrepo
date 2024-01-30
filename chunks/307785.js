@@ -11,9 +11,13 @@ n.r(t), n.d(t, {
   },
   MAX_ATTACHMENT_UPLOAD_COUNT: function() {
     return a
+  },
+  MAX_PUBLISHED_GUILD_PRODUCT_LISTINGS: function() {
+    return o
   }
 });
 let i = "guild-product-edit-modal",
   s = 1073741824,
   r = 1073741824,
-  a = 10
+  a = 10,
+  o = 30

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return u
   }
 }), n("222007");
 var a = n("917351"),
@@ -9,11 +9,10 @@ var a = n("917351"),
   i = n("305961"),
   l = n("861309"),
   r = n("716724"),
-  o = n("492249"),
-  u = n("49111"),
-  d = {
-    [u.RPCCommands.GET_GUILD]: {
-      scope: u.OAuth2Scopes.RPC,
+  o = n("49111"),
+  u = {
+    [o.RPCCommands.GET_GUILD]: {
+      scope: o.OAuth2Scopes.RPC,
       validation: e => (0, r.default)(e).required().keys({
         guild_id: e.string(),
         timeout: e.number().min(0).max(60)
@@ -28,10 +27,14 @@ var a = n("917351"),
           }
         } = e;
         return n.storeWait(t, () => i.default.getGuild(a), s).catch(() => {
-          throw new l.default(o.RPCErrors.GET_GUILD_TIMED_OUT, "Request to get guild timed out.")
+          throw new l.default({
+            errorCode: o.RPCErrors.GET_GUILD_TIMED_OUT
+          }, "Request to get guild timed out.")
         }).then(e => {
           var t;
-          if (null == e) throw new l.default(o.RPCErrors.INVALID_GUILD, "Invalid guild id: ".concat(a));
+          if (null == e) throw new l.default({
+            errorCode: o.RPCErrors.INVALID_GUILD
+          }, "Invalid guild id: ".concat(a));
           return {
             id: e.id,
             name: e.name,
@@ -42,8 +45,8 @@ var a = n("917351"),
         })
       }
     },
-    [u.RPCCommands.GET_GUILDS]: {
-      scope: u.OAuth2Scopes.RPC,
+    [o.RPCCommands.GET_GUILDS]: {
+      scope: o.OAuth2Scopes.RPC,
       handler() {
         let e = i.default.getGuilds();
         return {

@@ -1,7 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
-  useIsEligibleForExplicitMediaSenderFalsePositive: function() {
+  getExplicitMediaSenderFalsePositiveExpirationOverride: function() {
     return a
+  },
+  useIsEligibleForExplicitMediaSenderFalsePositive: function() {
+    return i
   }
 });
 var s = n("862205");
@@ -18,10 +21,28 @@ let l = (0, s.createExperiment)({
     config: {
       enabled: !0
     }
+  }, {
+    id: 2,
+    label: "Enable explicit media sender false positive experience with 3 second submit report expiration window",
+    config: {
+      enabled: !0,
+      expirationOverride: 3e3
+    }
   }]
 });
 
-function a(e) {
+function a() {
+  let {
+    expirationOverride: e
+  } = l.getCurrentConfig({
+    location: ""
+  }, {
+    autoTrackExposure: !1
+  });
+  return e
+}
+
+function i(e) {
   return l.useExperiment({
     location: e
   }, {

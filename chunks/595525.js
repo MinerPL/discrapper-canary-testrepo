@@ -5,6 +5,9 @@ n.r(t), n.d(t, {
   },
   tryLoadOrResetCacheGateway: function() {
     return l
+  },
+  tryLoadOrResetCacheGatewayAsync: function() {
+    return u
   }
 });
 var i = n("913144"),
@@ -22,6 +25,16 @@ async function o(e) {
 function l(e, t) {
   try {
     return t()
+  } catch (t) {
+    return a.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), r.default.replaceDisableAllDatabases("tryLoadOrResetCacheGateway (".concat(e, ")")), i.default.dispatch({
+      type: "RESET_CONNECTION",
+      badCache: !0
+    }), null
+  }
+}
+async function u(e, t) {
+  try {
+    return await t()
   } catch (t) {
     return a.log("".concat(e, ": exception thrown, resetting socket."), t, t.stack), r.default.replaceDisableAllDatabases("tryLoadOrResetCacheGateway (".concat(e, ")")), i.default.dispatch({
       type: "RESET_CONNECTION",

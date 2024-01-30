@@ -8,8 +8,8 @@ var r = n("37983"),
   i = n("884691"),
   l = n("627445"),
   s = n.n(l),
-  a = n("252438"),
-  u = n("834897"),
+  u = n("252438"),
+  a = n("834897"),
   o = n("206230"),
   c = n("90592"),
   d = n("333955"),
@@ -33,13 +33,13 @@ function C(e) {
     } = e,
     {
       selectedPlan: A,
-      selectedSkuId: v,
-      step: R,
-      updatedSubscription: g,
+      selectedSkuId: R,
+      step: g,
+      updatedSubscription: v,
       readySlideId: O
     } = (0, _.usePaymentContext)();
-  s(null != A, "Expected plan to selected"), s(null != v, "Expected selectedSkuId"), s(null != R, "Step should be set");
-  let M = (0, u.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
+  s(null != A, "Expected plan to selected"), s(null != R, "Expected selectedSkuId"), s(null != g, "Step should be set");
+  let M = (0, a.default)(p.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY),
     {
       createMultipleConfettiAt: U
     } = i.useContext(I.ConfettiCannonContext),
@@ -48,10 +48,10 @@ function C(e) {
     },
     D = O === E.Step.CONFIRM,
     y = (0, c.isApplicationUserSubscription)(h.sku_flags),
-    B = i.useMemo(() => {
+    b = i.useMemo(() => {
       let e = 0,
         t = 0;
-      for (let n of h.sku_benefits.benefits) n.ref_type === a.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === a.SKUBenefitTypes.INTANGIBLE && (t += 1);
+      for (let n of h.sku_benefits.benefits) n.ref_type === u.SKUBenefitTypes.APPLICATION_PREMIUM_COMMAND ? e += 1 : n.ref_type === u.SKUBenefitTypes.INTANGIBLE && (t += 1);
       let n = [];
       return 0 !== e && n.push(m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_EXCLUSIVE_CHANNELS_SUBTITLE.format({
         commandCount: e
@@ -63,13 +63,15 @@ function C(e) {
     title: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_TITLE_V2.format({
       tierName: h.name
     }),
-    subtitle: B.length > 0 ? m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
-      benefits: new Intl.ListFormat(m.default.getLocale()).format(B)
+    subtitle: b.length > 0 ? m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_SUBTITLE.format({
+      benefits: new Intl.ListFormat(m.default.getLocale()).format(b)
     }) : null,
     onConfirm: x,
     confirmCta: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_LITE_DONE_BUTTON
   }) : (t = (0, r.jsx)(d.BenefitsConfirmation, {
-    listing: h,
+    icon: h.image_asset,
+    storeListingBenefits: h.store_listing_benefits,
+    skuBenefits: h.sku_benefits.benefits,
     application: C,
     title: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_TITLE_V2.format({
       tier: h.name
@@ -85,13 +87,13 @@ function C(e) {
     primaryCTA: S.CTAType.CONTINUE,
     primaryText: m.default.Messages.APPLICATION_SUBSCRIPTION_PURCHASE_MODAL_CONFIRMATION_DONE_BUTTON
   })) : t = M ? (0, r.jsx)(f.PurchaseConfirmationLite, {
-    listing: h,
+    tierName: h.name,
     onConfirm: x,
-    subscription: g
+    subscription: v
   }) : (0, r.jsx)(d.PurchaseConfirmation, {
-    listing: h,
+    tierName: h.name,
     onConfirm: x,
-    subscription: g
+    subscription: v
   }), i.useEffect(() => {
     o.default.useReducedMotion && D && U(window.innerWidth / 2, window.innerHeight / 2)
   }, [U, D]), (0, r.jsxs)(r.Fragment, {

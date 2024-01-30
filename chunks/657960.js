@@ -96,52 +96,51 @@ function G(e) {
 }
 var x = e => {
   let {
-    guild: t,
-    hideDisableSection: s = !1
-  } = e, d = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), N = t.isOwner(d), g = (0, o.useIsExpeditedOnboardingGuild)(t), f = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
-    teams: m,
-    loading: O
+    guild: t
+  } = e, s = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), d = t.isOwner(s), N = (0, o.useIsExpeditedOnboardingGuild)(t), g = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
+    teams: f,
+    loading: m
   } = (0, E.default)({
-    refreshOnDepChange: f
-  }), x = n.useMemo(() => m.filter(e => {
+    refreshOnDepChange: g
+  }), O = n.useMemo(() => f.filter(e => {
     var t;
-    return e.payout_account_status !== h.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == d ? void 0 : d.id) && void 0 !== t ? t : "", e)
-  }), [m, d]), p = x.length > 0, U = n.useCallback(async () => {
+    return e.payout_account_status !== h.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "", e)
+  }), [f, s]), x = O.length > 0, p = n.useCallback(async () => {
     S.default.track(C.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
-      is_onboarding_v2: g,
-      has_eligible_team: p,
+      is_onboarding_v2: N,
+      has_eligible_team: x,
       guild_id: t.id,
-      is_owner: N
+      is_owner: d
     });
     let e = await (0, u.generateDeveloperPortalLink)(C.RelativeMarketingURLs.DEVELOPER_PORTAL_TEAMS);
     (0, r.default)(e)
-  }, [t, N, g, p]), v = n.useCallback(e => N ? (0, a.jsx)(I.default, {
-    onClick: U,
+  }, [t, d, N, x]), U = n.useCallback(e => d ? (0, a.jsx)(I.default, {
+    onClick: p,
     children: e
-  }) : e, [U, N]);
-  return O ? (0, a.jsx)(i.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
-    children: [!N && (0, a.jsx)(A.default, {
+  }) : e, [p, d]);
+  return m ? (0, a.jsx)(i.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
+    children: [!d && (0, a.jsx)(A.default, {
       className: D.nonOwnerNotice,
       children: R.default.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
     }), (0, a.jsxs)(i.FormSection, {
       title: R.default.Messages.GUILD_MONETIZATION_ENABLE_HEADER,
-      disabled: !N,
+      disabled: !d,
       children: [(0, a.jsx)(i.FormText, {
         type: i.FormText.Types.DESCRIPTION,
         className: D.description,
-        disabled: !N,
+        disabled: !d,
         children: R.default.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({
-          onCreateTeamHook: v
+          onCreateTeamHook: U
         })
-      }), p ? (0, a.jsx)(G, {
+      }), x ? (0, a.jsx)(G, {
         guild: t,
-        eligibleTeams: x,
-        isGuildOwner: N
+        eligibleTeams: O,
+        isGuildOwner: d
       }) : (0, a.jsx)(M, {
-        onCreateTeamClick: U,
-        isGuildOwner: N
+        onCreateTeamClick: p,
+        isGuildOwner: d
       })]
-    }), !s && (0, a.jsx)(i.FormSection, {
+    }), (0, a.jsx)(i.FormSection, {
       title: R.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
       className: D.selfDemonetization,
       children: (0, a.jsx)(L.default, {

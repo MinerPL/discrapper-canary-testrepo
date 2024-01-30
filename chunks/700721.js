@@ -29,21 +29,31 @@ var S = {
         socket: t
       } = e, s = t.application.id;
       try {
-        if (null == s) throw new h.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new h.default({
+          errorCode: I.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         let e = u.default.getApplication(s);
-        if (null == e) throw new h.default(C.RPCErrors.INVALID_ENTITLEMENT, "SKU does not exist.");
+        if (null == e) throw new h.default({
+          errorCode: I.RPCErrors.INVALID_ENTITLEMENT
+        }, "SKU does not exist.");
         let t = e.primarySkuId;
-        if (null == t) throw new h.default(C.RPCErrors.INVALID_ENTITLEMENT, "SKU does not exist.");
+        if (null == t) throw new h.default({
+          errorCode: I.RPCErrors.INVALID_ENTITLEMENT
+        }, "SKU does not exist.");
         return Promise.race([(function(e, t) {
           let n = c.default.isEntitledToSku(d.default.getCurrentUser(), e, t);
           return null != n ? Promise.resolve(n) : (0, r.fetchUserEntitlementsForApplication)(t).then(() => !0 === c.default.isEntitledToSku(d.default.getCurrentUser(), e, t))
         })(t, e.id).then(e => {
-          if (!e) throw new h.default(C.RPCErrors.INVALID_ENTITLEMENT, "User does not have entitlement.")
+          if (!e) throw new h.default({
+            errorCode: I.RPCErrors.INVALID_ENTITLEMENT
+          }, "User does not have entitlement.")
         }), (0, i.timeoutPromise)(T).then(() => {
-          throw new h.default(C.RPCErrors.INVALID_ENTITLEMENT, "Timed out fetching entitlement.")
+          throw new h.default({
+            errorCode: I.RPCErrors.INVALID_ENTITLEMENT
+          }, "Timed out fetching entitlement.")
         })])
       } catch (e) {
-        throw e.code === C.RPCErrors.INVALID_ENTITLEMENT && (_.default.focus(null, !0), (0, l.openModalLazy)(async () => {
+        throw e.code === I.RPCErrors.INVALID_ENTITLEMENT && (_.default.focus(null, !0), (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("43264").then(n.bind(n, "43264"));
@@ -61,7 +71,9 @@ var S = {
       let {
         socket: t
       } = e, i = t.application.id;
-      if (null == i) throw new h.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+      if (null == i) throw new h.default({
+        errorCode: I.RPCErrors.INVALID_COMMAND
+      }, "No application.");
       return s.default.post({
         url: I.Endpoints.ENTITLEMENT_TICKET(i),
         body: {

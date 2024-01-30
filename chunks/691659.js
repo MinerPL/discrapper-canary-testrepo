@@ -37,8 +37,7 @@ function A(e) {
     guildId: I
   } = e, A = (0, S.default)(I), L = (0, i.useCreatorMonetizationSettingsDisabled)(), m = (0, n.default)([T.default], () => T.default.getGuild());
   return A.loading || null == m ? (0, a.jsx)(l.Spinner, {}) : null == A.application ? (0, a.jsx)(c.default, {
-    guild: m,
-    hideDisableSection: !0
+    guild: m
   }) : (0, a.jsxs)(u.default, {
     children: [(0, a.jsx)(d.default, {
       revenue: A.metrics.revenue,

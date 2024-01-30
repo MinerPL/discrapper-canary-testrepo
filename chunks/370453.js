@@ -21,7 +21,9 @@ let d = {
         },
         socket: n
       } = e;
-      if ("number" != typeof t || t < 10) throw new r.default(o.RPCErrors.INVALID_EVENT, "Invalid pid");
+      if ("number" != typeof t || t < 10) throw new r.default({
+        errorCode: u.RPCErrors.INVALID_EVENT
+      }, "Invalid pid");
       return e => {
         let {
           prevState: a,

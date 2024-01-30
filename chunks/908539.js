@@ -4,6 +4,9 @@ n.r(t), n.d(t, {
   ContentIdType: function() {
     return s
   },
+  AppealStatusType: function() {
+    return l
+  },
   AccountStandingState: function() {
     return r
   },

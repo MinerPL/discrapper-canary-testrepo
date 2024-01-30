@@ -15,7 +15,9 @@ var a = n("629109"),
 
 function c(e) {
   let t = e.application.id;
-  if (null == t) throw new l.default(o.RPCErrors.INVALID_COMMAND, "No application.");
+  if (null == t) throw new l.default({
+    errorCode: u.RPCErrors.INVALID_COMMAND
+  }, "No application.");
   return t
 }
 var f = {

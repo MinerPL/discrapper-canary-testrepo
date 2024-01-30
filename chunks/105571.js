@@ -39,7 +39,7 @@ function A(e) {
       channelId: t.id,
       command: n,
       section: r,
-      location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_COMMAND_LIST
+      location: c.ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW
     }), g.ComponentDispatch.dispatch(y.ComponentActions.FOCUS_CHANNEL_TEXT_AREA, {
       channelId: t.id
     })
@@ -91,8 +91,8 @@ function R(e) {
       C.dismissAppDetail()
     }, []),
     M = (0, s.useToken)(s.tokens.colors.BG_BASE_PRIMARY).hex(),
-    k = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
-    b = (0, f.getIconComponent)(u),
+    b = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
+    k = (0, f.getIconComponent)(u),
     P = i.useMemo(() => {
       var e, t;
       return (0, m.parseBioReact)(null !== (t = null === (e = u.application) || void 0 === e ? void 0 : e.description) && void 0 !== t ? t : "")
@@ -103,7 +103,7 @@ function R(e) {
     children: [(0, l.jsx)("div", {
       className: N.headerWhenSideCard,
       style: {
-        backgroundColor: k
+        backgroundColor: b
       },
       children: (0, l.jsx)(s.Clickable, {
         "aria-label": I.default.Messages.CLOSE,
@@ -115,7 +115,7 @@ function R(e) {
       className: N.contentContainer,
       children: [(0, l.jsxs)("div", {
         className: N.appIcon,
-        children: [(0, l.jsx)(b, {
+        children: [(0, l.jsx)(k, {
           channel: r,
           section: u,
           width: 72,

@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return l
   },
   openModerateUserContextMenu: function() {
-    return u
+    return s
   },
   openModerateRoleContextMenu: function() {
-    return o
+    return u
   },
   openModerationRaidContextMenu: function() {
-    return s
+    return o
   }
 }), n("70102");
 var i = n("37983");
@@ -59,39 +59,37 @@ function l(e, t, l) {
   })
 }
 
-function u(e, t) {
+function s(e, t) {
   let {
     user: l,
-    channel: u,
-    moderationAlertId: o,
-    guildId: s,
-    analyticsLocations: a,
-    onCloseContextMenu: d
+    channel: s,
+    moderationAlertId: u,
+    guildId: o,
+    ...a
   } = t;
-  if ((null == u ? void 0 : u.isGroupDM()) || (null == u ? void 0 : u.isDM())) throw Error("Cannot moderate user in DM or group DM");
-  let c = null != s ? s : null == u ? void 0 : u.getGuildId();
-  null != c && (0, r.openContextMenuLazy)(e, async () => {
+  if ((null == s ? void 0 : s.isGroupDM()) || (null == s ? void 0 : s.isDM())) throw Error("Cannot moderate user in DM or group DM");
+  let d = null != o ? o : null == s ? void 0 : s.getGuildId();
+  null != d && (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e
     } = await n.el("467940").then(n.bind(n, "467940"));
     return t => (0, i.jsx)(e, {
       ...t,
       user: l,
-      channelId: null == u ? void 0 : u.id,
-      guildId: c,
-      moderationAlertId: o,
-      analyticsLocations: a,
-      onCloseContextMenu: d
+      channelId: null == s ? void 0 : s.id,
+      guildId: d,
+      moderationAlertId: u,
+      ...a
     })
   })
 }
 
-function o(e, t) {
+function u(e, t) {
   let {
     user: l,
-    guildId: u,
-    analyticsLocations: o,
-    onCloseContextMenu: s
+    guildId: s,
+    analyticsLocations: u,
+    onCloseContextMenu: o
   } = t;
   (0, r.openContextMenuLazy)(e, async () => {
     let {
@@ -100,14 +98,14 @@ function o(e, t) {
     return t => (0, i.jsx)(e, {
       ...t,
       user: l,
-      guildId: u,
-      analyticsLocations: o,
-      onCloseContextMenu: s
+      guildId: s,
+      analyticsLocations: u,
+      onCloseContextMenu: o
     })
   })
 }
 
-function s(e, t, l) {
+function o(e, t, l) {
   null != l && (0, r.openContextMenuLazy)(e, async () => {
     let {
       default: e

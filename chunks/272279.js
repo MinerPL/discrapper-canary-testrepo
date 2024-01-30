@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007");
 var a = n("327037"),
@@ -9,8 +9,9 @@ var a = n("327037"),
   i = n("716724"),
   l = n("694352"),
   r = n("492249"),
-  o = {
-    [n("49111").RPCCommands.GET_USER]: {
+  o = n("49111"),
+  u = {
+    [o.RPCCommands.GET_USER]: {
       scope: r.RPC_LOCAL_SCOPE,
       validation: e => (0, i.default)(e).required().keys({
         id: e.string().required()
@@ -22,7 +23,9 @@ var a = n("327037"),
           }
         } = e;
         return (0, a.getUser)(t).then(l.default).catch(() => {
-          throw new s.default(r.RPCErrors.INVALID_USER, "Invalid user id: ".concat(t))
+          throw new s.default({
+            errorCode: o.RPCErrors.INVALID_USER
+          }, "Invalid user id: ".concat(t))
         })
       }
     }

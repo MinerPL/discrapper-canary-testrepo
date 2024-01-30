@@ -28,13 +28,13 @@ var i = n("37983"),
   C = n("380186"),
   b = n("809071"),
   _ = n("883662"),
-  N = n("991329"),
-  g = n("623003"),
+  g = n("991329"),
+  N = n("623003"),
   L = n("570727"),
   A = n("146163"),
   j = n("49111"),
-  R = n("782340"),
-  M = n("709626"),
+  M = n("782340"),
+  R = n("709626"),
   w = n("615689");
 
 function F(e) {
@@ -44,9 +44,9 @@ function F(e) {
       paymentSources: f,
       priceOptions: S,
       onPaymentSourceChange: b,
-      onPaymentSourceAdd: N,
+      onPaymentSourceAdd: g,
       planId: A,
-      setHasAcceptedTerms: M,
+      setHasAcceptedTerms: R,
       legalTermsNodeRef: F,
       hasLegalTermsFlash: B,
       onInvoiceError: W,
@@ -70,7 +70,7 @@ function F(e) {
     ee = (0, u.useStateFromStores)([T.default], () => T.default.get(A));
   l(null != ee, "Missing newPlan");
   let et = (0, u.useStateFromStores)([E.default], () => E.default.hidePersonalInformation);
-  n = z ? R.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, x.isPremiumSubscriptionPlan)(A) ? (0, x.getBillingReviewSubheader)(r, ee) : R.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
+  n = z ? M.default.Messages.BILLING_PURCHASE_DETAILS_HEADER : (0, x.isPremiumSubscriptionPlan)(A) ? (0, x.getBillingReviewSubheader)(r, ee) : M.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
     planName: ee.name
   });
   let en = s.CountryCodesSets.EEA_COUNTRIES.has(y.default.ipCountryCodeWithFallback),
@@ -95,6 +95,7 @@ function F(e) {
     className: w.stepBody,
     children: [ea && (0, i.jsxs)("div", {
       children: [(0, i.jsx)(_.PremiumInvoiceTableDivider, {
+        negativeMarginBottom: !0,
         negativeMarginTop: !0
       }), (0, i.jsx)(L.PremiumSwitchPlanSelectBody, {
         planOptions: er,
@@ -128,12 +129,12 @@ function F(e) {
       className: w.paymentSourceWrapper,
       children: [(0, i.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        children: R.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
+        children: M.default.Messages.PAYMENT_SOURCE_PAYMENT_REQUEST_INFO_TITLE
       }), (0, i.jsx)(p.default, {
         paymentSources: Object.values(f),
         selectedPaymentSourceId: $,
         onChange: b,
-        onPaymentSourceAdd: N,
+        onPaymentSourceAdd: g,
         hidePersonalInformation: et,
         disabled: ei
       })]
@@ -142,14 +143,14 @@ function F(e) {
       className: w.currencyWrapper,
       children: [(0, i.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
-        children: R.default.Messages.PAYMENT_CURRENCY
+        children: M.default.Messages.PAYMENT_CURRENCY
       }), (0, i.jsx)(c.default, {
         selectedCurrency: S.currency,
         currencies: H,
         onChange: V,
         disabled: ei
       })]
-    }), (0, i.jsx)(g.default, {
+    }), (0, i.jsx)(N.default, {
       isActive: B,
       ref: F,
       children: null != r && (0, C.subscriptionCanSwitchImmediately)(r, A, k) ? (0, i.jsx)(G, {
@@ -162,9 +163,9 @@ function F(e) {
         disabled: ei,
         isEEA: en,
         paymentSources: f,
-        setHasAcceptedTerms: M
+        setHasAcceptedTerms: R
       }) : (0, i.jsx)(m.default, {
-        onChange: M,
+        onChange: R,
         finePrint: (0, i.jsx)(d.default, {
           subscriptionPlan: ee,
           paymentSourceType: null === (t = f[null != $ ? $ : ""]) || void 0 === t ? void 0 : t.type,
@@ -199,7 +200,7 @@ function O(e) {
   }, [n, u]);
   let c = (0, x.isPrepaidPaymentSource)(r.paymentSourceId);
   return null != s ? (0, i.jsxs)(_.PremiumInvoiceTable, {
-    className: M.invoice,
+    className: R.invoice,
     children: [(0, i.jsx)(A.PremiumSubscriptionCurrentInvoiceRows, {
       invoice: s,
       isPrepaidPaymentSource: c
@@ -246,19 +247,19 @@ function U(e) {
     preventFetch: u,
     analyticsLocations: m,
     analyticsLocation: f.default.BILLING_SWITCH_PLAN_IMMEDIATE_RENEWAL_INVOICE_PREVIEW
-  }), N = null != y ? y : C;
+  }), g = null != y ? y : C;
   if (a.useEffect(() => {
-      r(N)
-    }, [r, N]), null != N) return (0, i.jsx)(o.FormErrorBlock, {
-    children: N.message
+      r(g)
+    }, [r, g]), null != g) return (0, i.jsx)(o.FormErrorBlock, {
+    children: g.message
   });
-  let g = (0, v.inOneStepSubscriptionCheckout)({
+  let N = (0, v.inOneStepSubscriptionCheckout)({
       isTrial: !1,
       isGift: p,
       selectedSkuId: c,
       startedPaymentFlowWithPaymentSources: d.current
     }),
-    L = (0, v.planSwitchLoadingShowSpinner)(g, E, n);
+    L = (0, v.planSwitchLoadingShowSpinner)(N, E, n);
   if (null == E || null == T || L) return (0, i.jsx)(o.Spinner, {
     className: w.spinner
   });
@@ -270,7 +271,7 @@ function U(e) {
     }), (0, i.jsxs)(_.PremiumInvoiceTable, {
       className: w.invoice,
       children: [(0, i.jsx)(_.PremiumInvoiceTableHeader, {
-        children: R.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
+        children: M.default.Messages.BILLING_SWITCH_PLAN_PURCHASE_DETAILS
       }), (0, i.jsx)(A.PremiumSubscriptionChangePlanInvoiceRows, {
         invoice: E,
         newPlan: n,
@@ -375,18 +376,18 @@ function D(e) {
   return (0, i.jsxs)("div", {
     className: w.bodyText,
     children: [(0, i.jsx)("div", {
-      className: M.renewalInvoiceDate,
-      children: R.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({
+      className: R.renewalInvoiceDate,
+      children: M.default.Messages.BILLING_SWITCH_PLAN_CHANGE_DATE.format({
         renewalDate: c.subscriptionPeriodStart
       })
     }), (0, i.jsxs)(_.PremiumInvoiceTable, {
       className: w.invoice,
       children: [(0, i.jsx)(_.PremiumInvoiceTableHeader, {
-        children: R.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
+        children: M.default.Messages.PREMIUM_SUBSCRIPTION_UPDATES
       }), (0, i.jsx)(_.PremiumInvoiceTableRow, {
         label: t,
         value: (0, x.getFormattedRateForPlan)(a, l, !0)
-      }), (0, i.jsx)(N.default, {
+      }), (0, i.jsx)(g.default, {
         invoice: c
       }), (0, i.jsx)(_.PremiumInvoiceTableDivider, {}), (0, i.jsx)(A.SubscriptionInvoiceFooter, {
         premiumSubscription: n,

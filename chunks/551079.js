@@ -185,6 +185,9 @@ i = class extends o.default {
     }
   }
   setClipsSource(e) {}
+  setClipsQualitySettings(e, t, n) {
+    return !1
+  }
   setSoundshareSource(e, t, n) {}
   setAudioSubsystem(e) {}
   getAudioSubsystem() {

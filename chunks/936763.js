@@ -1,20 +1,20 @@
 "use strict";
-i.r(t), i.d(t, {
+r.r(t), r.d(t, {
   getDefaultSearchState: function() {
     return o
   },
   GuildMemberSafetySearch: function() {
-    return _
+    return c
   }
-}), i("222007");
-var r = i("448105"),
-  n = i.n(r),
-  s = i("969176"),
-  u = i.n(s),
-  a = i("249654"),
-  l = i("681937"),
-  h = i("509"),
-  d = i("770115");
+}), r("222007");
+var i = r("448105"),
+  n = r.n(i),
+  s = r("969176"),
+  u = r.n(s),
+  a = r("249654"),
+  l = r("681937"),
+  d = r("509"),
+  h = r("770115");
 
 function o() {
   return {
@@ -35,15 +35,16 @@ function o() {
       beforeDate: null
     },
     selectedJoinSourceType: void 0,
-    selectedSourceInviteCode: void 0
+    selectedSourceInviteCode: void 0,
+    selectedSort: void 0
   }
 }
 let m = Object.freeze(o());
 
-function c(e, t) {
+function _(e, t) {
   return null != e && (!!(e.toLowerCase().includes(t.toLowerCase()) || n(e.toLowerCase(), t.toLowerCase())) || !1)
 }
-class _ {
+class c {
   get requiresUsernameMatch() {
     return this._searchState.query.trim().length > 0
   }
@@ -65,40 +66,40 @@ class _ {
   isMemberIncludedInSearchResults(e) {
     let {
       query: t,
-      requireUnusualDmActivity: i,
-      requireCommunicationDisabled: r,
+      requireUnusualDmActivity: r,
+      requireCommunicationDisabled: i,
       requireUnusualAccountActivity: n,
       requireUsernameQuarantined: s,
       selectedRoleIds: u,
       selectedJoinDateOption: o,
       selectedAccountAgeOption: m,
-      selectedSourceInviteCode: _,
+      selectedSourceInviteCode: c,
       selectedJoinSourceType: M
     } = this._searchState;
     if (t.length > 0 && ! function(e, t) {
         if ("" === t.trim()) return !1;
-        let [i, r] = (0, d.splitQuery)(t);
-        for (let t of r)
-          if (e.userId === t) return !0;
+        let [r, i] = (0, h.splitQuery)(t);
         for (let t of i)
-          if (c(e.nick, t)) return !0;
+          if (e.userId === t) return !0;
+        for (let t of r)
+          if (_(e.nick, t)) return !0;
         if (null == e.user) return !1;
         let {
           globalName: n,
           username: s
         } = e.user;
-        for (let e of i)
-          if (c(s, e)) return !0;
-        for (let e of i)
-          if (c(n, e)) return !0;
+        for (let e of r)
+          if (_(s, e)) return !0;
+        for (let e of r)
+          if (_(n, e)) return !0;
         return !1
       }(e, t)) return !1;
     if (u.size > 0) {
-      var g, b;
-      if (g = e, !(0 !== (b = u).size && Array.from(b).every(e => g.roles.includes(e)))) return !1
+      var S, I;
+      if (S = e, !(0 !== (I = u).size && Array.from(I).every(e => S.roles.includes(e)))) return !1
     }
-    if (null != o.afterDate && e.joinedAtTimestamp < o.afterDate || null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate || null != m.afterDate && a.default.extractTimestamp(e.userId) < m.afterDate || null != m.beforeDate && a.default.extractTimestamp(e.userId) > m.beforeDate || null != _ && e.sourceInviteCode !== _ || null != M && e.joinSourceType !== M) return !1;
-    if (i || r || n || s) return !!(i && e.hasUnusualDmActivity || r && (0, h.isMemberCommunicationDisabled)(e) || n && e.hasUnusualAccountActivity || s && (0, l.hasAutomodQuarantinedProfile)(e)) || !1;
+    if (null != o.afterDate && e.joinedAtTimestamp < o.afterDate || null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate || null != m.afterDate && a.default.extractTimestamp(e.userId) < m.afterDate || null != m.beforeDate && a.default.extractTimestamp(e.userId) > m.beforeDate || null != c && e.sourceInviteCode !== c || null != M && e.joinSourceType !== M) return !1;
+    if (r || i || n || s) return !!(r && e.hasUnusualDmActivity || i && (0, d.isMemberCommunicationDisabled)(e) || n && e.hasUnusualAccountActivity || s && (0, l.hasAutomodQuarantinedProfile)(e)) || !1;
     return !0
   }
   constructor(e) {

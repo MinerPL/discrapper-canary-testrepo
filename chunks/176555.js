@@ -31,8 +31,8 @@ var s = n("151426"),
           analyticsSource: i.default.COLLECTIBLES_FEATURE_EDUCATION_TOOLTIP
         })
       },
-      header: c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_HEADER,
-      body: c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_DESC,
+      header: c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_TITLE,
+      body: c.default.Messages.COLLECTIBLES_CYBERPUNK_COACHMARK_DESCRIPTION,
       dismissText: c.default.Messages.EDUCATION_NEW_FEATURE_DISMISS,
       position: "right",
       align: "top",

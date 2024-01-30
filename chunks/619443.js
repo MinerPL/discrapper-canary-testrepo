@@ -23,14 +23,14 @@ var i = n("917351"),
   v = n("18494"),
   S = n("101125"),
   T = n("205817"),
-  I = n("447214"),
+  I = n("41642"),
   C = n("518916"),
   A = n("571420"),
   y = n("399010"),
   N = n("49111"),
   R = n("397336");
 let O = window.DiscordNative;
-(0, C.setDispatchSocketMessageFunction)(y.default);
+C.socket.dispatcher.dispatchSocketMessage = y.default;
 let D = new u.default("ConnectionStore"),
   P = 0,
   b = null,
@@ -106,7 +106,7 @@ var x = new F(a.default, {
     e.isSwitchingAccount && C.localPresenceState.handleAccountSwitch(), D.verbose("Closing socket because of logout"), C.socket.close()
   },
   CLEAR_CACHES: function(e) {
-    return C.socket.close(), C.socket.clearDispatchQueue(), C.socket.connect(), !1
+    return C.socket.close(), C.socket.dispatcher.clear(), C.socket.connect(), !1
   },
   CONNECTION_OPEN: e => {
     M(e)
@@ -302,7 +302,7 @@ var x = new F(a.default, {
     return C.socket.isSessionEstablished() && C.socket.remoteCommand(t, n), !1
   },
   RESET_CONNECTION: function(e) {
-    C.socket.connectionState !== I.ConnectionState.WILL_RECONNECT && (e.badCache ? (l.default.replaceDisableAllDatabases("RESET_CONNECTION"), C.socket.resetSocketOnError(Error("Guild data was missing from store (via RESET_CONNECTION)"), "RESET_CONNECTION_DATA_MISSING")) : C.socket.resetSocketOnError(Error("Connection reset requested (via RESET_CONNECTION)"), "RESET_CONNECTION"))
+    C.socket.connectionState !== I.default.WILL_RECONNECT && (e.badCache ? (l.default.replaceDisableAllDatabases("RESET_CONNECTION"), C.socket.resetSocketOnError(Error("Guild data was missing from store (via RESET_CONNECTION)"), "RESET_CONNECTION_DATA_MISSING")) : C.socket.resetSocketOnError(Error("Connection reset requested (via RESET_CONNECTION)"), "RESET_CONNECTION"))
   },
   RTC_SPEED_TEST_START_TEST: function() {
     return C.socket.isSessionEstablished() && C.socket.speedTestCreate(p.default.getPreferredRegion()), !1

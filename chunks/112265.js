@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return w
   }
 });
 var l = n("37983"),
@@ -21,10 +21,10 @@ var l = n("37983"),
   x = n("401642"),
   E = n("982108"),
   T = n("42203"),
-  C = n("923959"),
-  p = n("305961"),
-  I = n("18494"),
-  M = n("98292"),
+  p = n("923959"),
+  C = n("305961"),
+  M = n("18494"),
+  I = n("98292"),
   A = n("155207"),
   N = n("466818"),
   b = n("485810"),
@@ -33,27 +33,28 @@ var l = n("37983"),
   R = n("565556"),
   _ = n("891222"),
   B = n("49111"),
-  k = n("724210"),
-  G = n("782340"),
-  L = n("973033"),
-  F = n("305794");
+  G = n("724210"),
+  k = n("789150"),
+  L = n("782340"),
+  F = n("973033"),
+  y = n("305794");
 
-function y(e) {
+function P(e) {
   let {
     guild: t,
     previousChannel: n
-  } = e, a = G.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE, i = G.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE;
+  } = e, a = L.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE, i = L.default.Messages.MEMBER_SAFETY_CHANNEL_TITLE;
   return (0, c.usePageTitle)({
     location: t.name,
     subsection: a
   }), (0, l.jsxs)(S.default, {
-    className: L.header,
-    innerClassname: L.innerHeader,
-    channelId: k.StaticChannelRoute.MEMBER_SAFETY,
+    className: F.header,
+    innerClassname: F.innerHeader,
+    channelId: G.StaticChannelRoute.MEMBER_SAFETY,
     guildId: t.id,
     hideSearch: !0,
     toolbar: null != n ? (0, l.jsx)(r.Button, {
-      className: L.returnButton,
+      className: F.returnButton,
       size: r.Button.Sizes.SMALL,
       look: r.Button.Looks.OUTLINED,
       color: r.Button.Colors.PRIMARY,
@@ -61,16 +62,16 @@ function y(e) {
         null != n && (0, g.transitionToGuild)(t.id, n.id)
       },
       children: (0, l.jsx)(r.Text, {
-        className: L.returnButtonText,
+        className: F.returnButtonText,
         variant: "text-xs/medium",
         color: "none",
-        children: G.default.Messages.RETURN_TO_CHANNEL.format({
+        children: L.default.Messages.RETURN_TO_CHANNEL.format({
           channelNameHook: () => null == n ? null : (0, l.jsxs)(s.Fragment, {
             children: [(0, l.jsx)(m.ChannelItemIcon, {
-              className: L.returnIcon,
+              className: F.returnIcon,
               guild: t,
               channel: n
-            }), (0, l.jsx)(M.default, {
+            }), (0, l.jsx)(I.default, {
               children: (0, l.jsx)(r.Text, {
                 variant: "text-xs/medium",
                 color: "none",
@@ -90,48 +91,51 @@ function y(e) {
   })
 }
 
-function P(e) {
+function w(e) {
   let {
     guildId: t
-  } = e, n = (0, u.useStateFromStores)([p.default], () => p.default.getGuild(t)), {
+  } = e, n = (0, u.useStateFromStores)([C.default], () => C.default.getGuild(t)), {
     AnalyticsLocationProvider: a
-  } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t, c), S = (0, u.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)), M = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), A = s.useRef(null);
+  } = (0, d.default)(o.default.MEMBER_SAFETY_PAGE), c = (0, N.useCanAccessMemberSafetyPage)(t), m = (0, h.useCanAccessGuildMemberModView)(t, c), S = (0, u.useStateFromStores)([M.default], () => M.default.getLastSelectedChannelId(t)), I = (0, u.useStateFromStores)([T.default], () => T.default.getChannel(S)), A = s.useRef(null);
   (0, b.useSubscribeToGuildMemberUpdates)(t), s.useEffect(() => {
     if (!c && null != n) {
       var e;
-      let t = null === (e = C.default.getDefaultChannel(n.id)) || void 0 === e ? void 0 : e.id;
+      let t = null === (e = p.default.getDefaultChannel(n.id)) || void 0 === e ? void 0 : e.id;
       (0, g.transitionToGuild)(n.id, t)
     }
   }, [n, c]);
-  let G = (0, u.useStateFromStores)([E.default], () => null != E.default.getGuildSidebarState(t), [t]),
-    P = s.useCallback(e => {
-      m ? (0, f.openGuildMemberModViewSidebar)(e.guildId, e.userId, k.StaticChannelRoute.MEMBER_SAFETY) : (0, x.openUserProfileModal)({
+  let L = (0, u.useStateFromStores)([E.default], () => null != E.default.getGuildSidebarState(t), [t]),
+    w = s.useCallback(e => {
+      let t = (0, h.canAccessGuildMemberModViewWithExperiment)(e.guildId, !0);
+      t ? (0, f.openGuildMemberModViewSidebar)(e.guildId, e.userId, G.StaticChannelRoute.MEMBER_SAFETY, {
+        modViewPanel: k.ModViewPanel.INFO
+      }) : (0, x.openUserProfileModal)({
         userId: e.userId,
         guildId: e.guildId,
         analyticsLocation: {
           section: B.AnalyticsSections.MEMBER_SAFETY_PAGE
         }
       })
-    }, [m]);
+    }, []);
   return null != n && c ? (0, l.jsxs)(a, {
     children: [(0, l.jsxs)("div", {
-      className: i(F.chat, L.page, {
-        [F.threadSidebarOpen]: G
+      className: i(y.chat, F.page, {
+        [y.threadSidebarOpen]: L
       }),
-      children: [(0, l.jsx)(y, {
+      children: [(0, l.jsx)(P, {
         guild: n,
-        previousChannel: M
+        previousChannel: I
       }), (0, l.jsx)(r.AdvancedScroller, {
-        className: i(L.scroller),
+        className: i(F.scroller),
         ref: A,
         orientation: "vertical",
         children: (0, l.jsxs)("div", {
-          className: i(F.content, L.container),
+          className: i(y.content, F.container),
           children: [(0, l.jsx)(j.default, {
             guild: n
           }), (0, l.jsx)(_.default, {
             guild: n,
-            onMemberSelect: P
+            onMemberSelect: w
           })]
         })
       }), (0, l.jsx)(R.default, {

@@ -1,48 +1,51 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return _
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("65597"),
   l = s("77078"),
-  i = s("442379"),
-  r = s("305961"),
-  o = s("191814"),
-  d = s("837008"),
-  u = s("397056"),
-  c = s("782340");
+  i = s("465869"),
+  r = s("442379"),
+  o = s("305961"),
+  d = s("191814"),
+  u = s("837008"),
+  c = s("397056"),
+  E = s("782340");
 
-function E(e) {
+function _(e) {
   let {
     guildId: t,
-    allPeriods: E
-  } = e, _ = (0, n.default)([r.default], () => r.default.getGuild(t)), T = (0, d.useSubscriptionListingsForGuild)(t, {
+    allPeriods: _
+  } = e, T = (0, n.default)([o.default], () => o.default.getGuild(t)), I = (0, u.useSubscriptionListingsForGuild)(t, {
     includeSoftDeleted: !0
-  }), I = (0, i.useGuildProductsForGuild)(t, {
+  }), S = (0, r.useGuildProductsForGuild)(t, {
     publishedOnly: !1
-  }), S = E.filter(e => {
+  }), {
+    allowSelfRemoveMonetization: N
+  } = (0, i.useShouldRestrictUpdatingCreatorMonetizationSettings)(t), g = _.filter(e => {
     var t;
     let s = Object.values(null !== (t = e.ppgs) && void 0 !== t ? t : {})[0];
-    return (null == s ? void 0 : s.status) === u.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === u.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
-  }), N = T.length > 0, g = I.length > 0, f = S.length > 0;
-  return null == _ ? null : (0, a.jsxs)("div", {
+    return (null == s ? void 0 : s.status) === c.PaymentPayoutGroupStatuses.OPEN || (null == s ? void 0 : s.status) === c.PaymentPayoutGroupStatuses.PAYOUT_DEFERRED
+  }), f = I.length > 0, A = S.length > 0, L = g.length > 0;
+  return null == T ? null : (0, a.jsxs)("div", {
     children: [(0, a.jsx)(l.FormText, {
       type: l.FormText.Types.DESCRIPTION,
-      children: c.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({
-        guildName: _.toString()
+      children: E.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_DESCRIPTION.format({
+        guildName: T.toString()
       })
-    }), (0, a.jsx)(o.default, {
+    }), (0, a.jsx)(d.default, {
       size: 16
     }), (0, a.jsx)(l.Button, {
-      disabled: N || g || f,
+      disabled: !N || f || A || L,
       look: l.Button.Looks.FILLED,
       color: l.Button.Colors.RED,
       onClick: () => {
         var e;
-        return e = _, void(0, l.openModalLazy)(async () => {
+        return e = T, void(0, l.openModalLazy)(async () => {
           let {
             default: t
           } = await s.el("264514").then(s.bind(s, "264514"));
@@ -52,7 +55,7 @@ function E(e) {
           })
         })
       },
-      children: c.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_CTA
+      children: E.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_CTA
     })]
   })
 }

@@ -9,11 +9,14 @@ n.r(t), n.d(t, {
   incomingFriendRequestLocalItem: function() {
     return c
   },
-  isMentionItem: function() {
+  mobileNativeUpdateAvailableLocalItem: function() {
     return f
   },
-  inNotificationCenterEnabled: function() {
+  isMentionItem: function() {
     return _
+  },
+  inNotificationCenterEnabled: function() {
+    return h
   }
 });
 var i = n("249654"),
@@ -48,8 +51,22 @@ function c(e, t) {
     })
   }
 }
-let f = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
 
-function _() {
+function f(e) {
+  let t = i.default.fromTimestamp(new Date().getTime());
+  return {
+    acked: !1,
+    enableBadge: !0,
+    body: "Update to build ".concat(e.build, " available!"),
+    id: t,
+    kind: "notification-center-item",
+    local_id: "mobile_update_available_".concat(e.build),
+    type: a.NotificationCenterLocalItems.MOBILE_NATIVE_UPDATE_AVAILABLE,
+    deeplink: e.urls.install.toString()
+  }
+}
+let _ = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
+
+function h() {
   return (0, r.inDesktopNotificationCenterExperiment)()
 }

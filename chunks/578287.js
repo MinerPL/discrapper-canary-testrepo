@@ -68,8 +68,8 @@ var a, s = n("746379"),
   I = n("305961"),
   T = n("42887"),
   S = n("377253"),
-  m = n("824563"),
-  p = n("697218"),
+  p = n("824563"),
+  m = n("697218"),
   A = n("800762"),
   g = n("718517"),
   N = n("387111"),
@@ -113,7 +113,7 @@ function w(e, t) {
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = !e.isNSFW() || (null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
+    let s = !e.isNSFW() || (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
       i = s && t ? S.default.getMessages(e.id).toArray().map(k) : [],
       l = Object.values(A.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
     return {
@@ -167,7 +167,7 @@ function F(e, t, n) {
     selfDeaf: l,
     suppress: r,
     userId: o
-  } = n, u = p.default.getUser(o);
+  } = n, u = m.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: N.default.getName(e, t, u),
@@ -186,13 +186,13 @@ function F(e, t, n) {
 }
 
 function H(e, t, n) {
-  let a = p.default.getUser(t);
+  let a = m.default.getUser(t);
   return {
     type: e,
     user: null != a ? (0, L.default)(a) : null,
     presence: {
-      status: m.default.getStatus(t),
-      activity: null != n ? m.default.getApplicationActivity(t, n) : m.default.getPrimaryActivity(t)
+      status: p.default.getStatus(t),
+      activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
     }
   }
 }
@@ -262,8 +262,12 @@ function z(e, t, n) {
     if ("string" == typeof n) {
       if (e.transport === v.TransportTypes.POST_MESSAGE) {
         let e = (0, d.default)(t);
-        if (null == e || !j(n, [e])) throw new O.default(M.RPCCloseCodes.INVALID_ORIGIN, "Invalid Origin")
-      } else if (!j(n, s)) throw new O.default(M.RPCCloseCodes.INVALID_ORIGIN, "Invalid Origin")
+        if (null == e || !j(n, [e])) throw new O.default({
+          closeCode: M.RPCCloseCodes.INVALID_ORIGIN
+        }, "Invalid Origin")
+      } else if (!j(n, s)) throw new O.default({
+        closeCode: M.RPCCloseCodes.INVALID_ORIGIN
+      }, "Invalid Origin")
     }
     e.application = {
       id: i,
@@ -273,7 +277,9 @@ function z(e, t, n) {
       flags: u
     }
   }, () => {
-    throw new O.default(M.RPCCloseCodes.INVALID_CLIENTID, "Invalid Client ID")
+    throw new O.default({
+      closeCode: M.RPCCloseCodes.INVALID_CLIENTID
+    }, "Invalid Client ID")
   })
 }
 async function q(e, t) {
@@ -336,9 +342,13 @@ function X(e, t) {
 }
 
 function J(e) {
-  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default(v.RPCErrors.INVALID_COMMAND, 'command not available from "'.concat(e, " transport"))
+  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
+    errorCode: M.RPCErrors.INVALID_COMMAND
+  }, 'command not available from "'.concat(e, " transport"))
 }
 
 function $(e) {
-  if (null == e.id) throw new O.default(v.RPCErrors.INVALID_COMMAND, "Invalid application")
+  if (null == e.id) throw new O.default({
+    errorCode: M.RPCErrors.INVALID_COMMAND
+  }, "Invalid application")
 }

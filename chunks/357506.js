@@ -282,9 +282,11 @@ class eh extends l.Component {
     })
   }
   constructor(e) {
-    super(e), this.handleWindowResize = c(() => {
-      this.forceUpdate()
-    }, 500), this.activeKeyEventShapes = [], this.lockEventShape = (0, Z.toBrowserEvents)(this.props.keybindKeyCodes), this.getActiveKeyEventIndex = e => this.activeKeyEventShapes.findIndex(t => h(t, e)), this.onKeyDownGlobal = e => {
+    super(e), this.handleWindowResize = () => {
+      (0, X.isOutOfProcess)() ? this.forceUpdate(): c(() => {
+        this.forceUpdate()
+      }, 500)
+    }, this.activeKeyEventShapes = [], this.lockEventShape = (0, Z.toBrowserEvents)(this.props.keybindKeyCodes), this.getActiveKeyEventIndex = e => this.activeKeyEventShapes.findIndex(t => h(t, e)), this.onKeyDownGlobal = e => {
       let t = ef(e),
         n = this.getActiveKeyEventIndex(t) > -1,
         i = [16, 17, 18, 91].includes(e.keyCode);

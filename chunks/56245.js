@@ -39,7 +39,9 @@ function f(e) {
 }
 let E = async (e, t, n) => {
   if ((0, o.validateOriginAndUpdateSocket)(e, t), (null == n || "" === n) && (0, o.isMatchingOrigin)(t)) return e.authorization.scopes = [u.RPC_PRIVATE_SCOPE, u.RPC_PRIVATE_LIMITED_SCOPE], Promise.resolve();
-  if (null == n || "" === n) return Promise.reject(new r.default(d.RPCCloseCodes.INVALID_CLIENTID, "No Client ID Specified"));
+  if (null == n || "" === n) return Promise.reject(new r.default({
+    closeCode: d.RPCCloseCodes.INVALID_CLIENTID
+  }, "No Client ID Specified"));
   let a = i.default.releaseChannel !== d.PublicReleaseChannels.CANARY && !c.includes(n) && e.transport !== u.TransportTypes.POST_MESSAGE;
   return await (0, o.processSocketThrottlers)(n, a), (0, o.fetchApplicationsRPC)(e, n, t)
 }, _ = () => (0, o.getDeprecatedVoiceSettingsWithShortcut)(e => {

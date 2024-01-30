@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   openIAPPurchaseModal: function() {
-    return P
+    return v
   },
   openSKUPaymentModal: function() {
-    return x
+    return D
   }
 }), n("70102");
 var s = n("37983");
@@ -23,18 +23,17 @@ var l = n("627445"),
   T = n("333955"),
   I = n("308592"),
   m = n("846286"),
-  N = n("314058"),
-  p = n("509167"),
-  S = n("292687"),
+  N = n("509167"),
+  p = n("292687"),
   A = n("929479"),
-  C = n("697218"),
-  h = n("357957"),
-  g = n("521012"),
-  M = n("552712"),
-  O = n("719923"),
-  R = n("49111");
+  S = n("697218"),
+  C = n("357957"),
+  h = n("521012"),
+  g = n("552712"),
+  M = n("719923"),
+  O = n("49111");
 
-function L(e, t) {
+function R(e, t) {
   let {
     applicationId: n,
     id: s
@@ -49,12 +48,12 @@ function L(e, t) {
   })
 }
 
-function v() {
-  let e = S.default.getWindow(R.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
+function L() {
+  let e = p.default.getWindow(O.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     t = null != e && !e.closed;
   return t ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
 }
-async function P(e) {
+async function v(e) {
   let {
     applicationId: t,
     skuId: n,
@@ -63,31 +62,26 @@ async function P(e) {
     analyticsLocations: r,
     analyticsLocationObject: o,
     context: d
-  } = e, c = M.default.get(n);
+  } = e, c = g.default.get(n);
   if (null == c) {
     let e = await (0, f.fetchAllStoreListingsForApplication)(t),
       s = e.find(e => e.sku.id === n);
-    a(null != s, "Could not find store listing for sku"), s.sku.type === R.SKUTypes.SUBSCRIPTION_GROUP && await (0, _.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
-  }(null == (c = null != c ? c : M.default.get(n)) ? void 0 : c.type) === R.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, E.fetchSubscriptionPlansForSKU)(c.id);
-  let {
-    enabled: S
-  } = N.default.getCurrentConfig({
-    location: "ccd2f5_1"
-  }, {
-    autoTrackExposure: !0
-  }), h = v(), P = C.default.getCurrentUser();
+    a(null != s, "Could not find store listing for sku"), s.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, _.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
+  }(null == (c = null != c ? c : g.default.get(n)) ? void 0 : c.type) === O.SKUTypes.SUBSCRIPTION && !(0, I.getSubscriptionPlansLoaded)([c.id]) && await (0, E.fetchSubscriptionPlansForSKU)(c.id);
+  let p = L(),
+    C = S.default.getCurrentUser();
   if (null != c && c.premium) {
-    if (O.default.canInstallPremiumApplications(P)) return L(c, d);
+    if (M.default.canInstallPremiumApplications(C)) return R(c, d);
     await u.openModal(d), await
 
     function(e, t, n, s, l) {
-      let a = g.default.getPremiumSubscription(),
+      let a = h.default.getPremiumSubscription(),
         i = {
           id: e.id,
           applicationId: e.applicationId
         };
       if (null != a) {
-        let e = O.default.getClosestUpgrade(a.planId);
+        let e = M.default.getClosestUpgrade(a.planId);
         if (null == e) return Promise.reject(Error("Could not find premium upgrade."));
         let t = {
           initialPlanId: e,
@@ -96,72 +90,70 @@ async function P(e) {
           analyticsObject: n
         };
         switch (l) {
-          case R.AppContext.APP:
+          case O.AppContext.APP:
             return A.default.openPremiumPaymentModalInApp(t);
-          case R.AppContext.OVERLAY:
+          case O.AppContext.OVERLAY:
             return A.default.openPremiumPaymentModalInOverlay(t);
           default:
             throw Error("Unexpected app context: ".concat(l))
         }
       }
       return t()
-    }(c, i, o, r, d), await L(c, d)
-  } else if (null != c && c.type === R.SKUTypes.SUBSCRIPTION) await
-
-  function(e, t, n, l, a) {
-    return (0, m.openActivityApplicationPaymentModal)({
-      applicationId: e,
-      skuId: t,
-      initialPlanId: n,
-      analyticsLocationObject: l,
-      analyticsLocations: a,
-      renderHeader: (e, t, n) => (0, s.jsx)(T.PurchaseHeader, {
-        step: n,
-        onClose: () => t(!1)
+    }(c, i, o, r, d), await R(c, d)
+  } else {
+    if (null == c || c.type !== O.SKUTypes.SUBSCRIPTION) return new Promise(async (e, s) => {
+      await (0, N.default)({
+        applicationId: t,
+        skuId: n,
+        analyticsLocationObject: o,
+        analyticsLocations: r,
+        contextKey: p,
+        onComplete: t => {
+          var n;
+          e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : [])
+        },
+        onClose: e => {
+          !e && s()
+        }
       })
-    })
-  }(t, n, l, o, r);
-  else if (S) return new Promise(async (e, s) => {
-    await (0, p.default)({
-      applicationId: t,
-      skuId: n,
-      analyticsLocationObject: o,
-      analyticsLocations: r,
-      contextKey: h,
-      onComplete: t => {
-        var n;
-        e(null !== (n = null == t ? void 0 : t.entitlements) && void 0 !== n ? n : [])
-      },
-      onClose: e => {
-        !e && s()
-      }
-    })
-  });
-  else return x(t, n, o, {
-    isIAP: !0,
-    context: d
-  })
+    });
+    await
+
+    function(e, t, n, l, a) {
+      return (0, m.openActivityApplicationPaymentModal)({
+        applicationId: e,
+        skuId: t,
+        initialPlanId: n,
+        analyticsLocationObject: l,
+        analyticsLocations: a,
+        renderHeader: (e, t, n) => (0, s.jsx)(T.PurchaseHeader, {
+          step: n,
+          onClose: () => t(!1)
+        })
+      })
+    }(t, n, l, o, r)
+  }
 }
-let D = {
+let P = {
   isIAP: !1,
-  context: R.AppContext.APP,
+  context: O.AppContext.APP,
   promotionId: null,
   isGift: !1
 };
 
-function x(e, t, l) {
+function D(e, t, l) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
     u = Promise.resolve();
-  !h.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
+  !C.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
   let {
     isIAP: d,
     context: c,
     promotionId: f,
     isGift: E
   } = {
-    ...D,
+    ...P,
     ...a
-  }, _ = v();
+  }, _ = L();
   return u.then(() => new Promise((a, o) => {
     r.default.dispatch({
       type: "SKU_PURCHASE_MODAL_OPEN",

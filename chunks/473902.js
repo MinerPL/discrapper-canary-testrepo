@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
 var a = n("913144"),
   s = n("861309"),
   i = n("716724"),
-  l = n("492249"),
-  r = n("954016"),
+  l = n("954016"),
+  r = n("843455"),
   o = {
-    [n("843455").RPCCommands.SET_ORIENTATION_LOCK_STATE]: {
+    [r.RPCCommands.SET_ORIENTATION_LOCK_STATE]: {
       validation: e => (0, i.default)(e).required().keys({
-        lock_state: e.number().valid(r.OrientationLockState.UNLOCKED, r.OrientationLockState.PORTRAIT, r.OrientationLockState.LANDSCAPE).required(),
-        picture_in_picture_lock_state: e.number().valid(r.OrientationLockState.UNLOCKED, r.OrientationLockState.PORTRAIT, r.OrientationLockState.LANDSCAPE).allow(null).optional(),
-        grid_lock_state: e.number().valid(r.OrientationLockState.UNLOCKED, r.OrientationLockState.PORTRAIT, r.OrientationLockState.LANDSCAPE).allow(null).optional()
+        lock_state: e.number().valid(l.OrientationLockState.UNLOCKED, l.OrientationLockState.PORTRAIT, l.OrientationLockState.LANDSCAPE).required(),
+        picture_in_picture_lock_state: e.number().valid(l.OrientationLockState.UNLOCKED, l.OrientationLockState.PORTRAIT, l.OrientationLockState.LANDSCAPE).allow(null).optional(),
+        grid_lock_state: e.number().valid(l.OrientationLockState.UNLOCKED, l.OrientationLockState.PORTRAIT, l.OrientationLockState.LANDSCAPE).allow(null).optional()
       }),
       handler(e) {
         let {
@@ -22,7 +22,7 @@ var a = n("913144"),
           args: {
             lock_state: n,
             picture_in_picture_lock_state: i,
-            grid_lock_state: r
+            grid_lock_state: l
           }
         } = e, o = t.application.id;
         if (null != o) a.default.dispatch({
@@ -30,9 +30,11 @@ var a = n("913144"),
           applicationId: o,
           lockState: n,
           pictureInPictureLockState: i,
-          gridLockState: r
+          gridLockState: l
         });
-        else throw new s.default(l.RPCErrors.INVALID_COMMAND, "No application.")
+        else throw new s.default({
+          errorCode: r.RPCErrors.INVALID_COMMAND
+        }, "No application.")
       }
     }
   }

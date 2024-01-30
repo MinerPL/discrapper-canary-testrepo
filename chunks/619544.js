@@ -52,7 +52,8 @@ function f(e) {
       media: t.pollMedia,
       fallback: (0, s.jsx)("div", {
         className: a(d.attachment, d.mediaMissing)
-      })
+      }),
+      alt: t.pollMedia.text
     }), u && (0, s.jsx)(o.PollAnswerSelectedIcon, {
       size: 40,
       className: d.selectedIcon
@@ -78,11 +79,13 @@ function E(e) {
     isExpired: t,
     hasVoted: n,
     myAvatarUrl: l,
-    ...a
+    ...i
   } = e;
   return (0, s.jsx)(o.PollAnswers, {
     className: d.answersContainer,
-    answerClassName: d.answer,
+    answerClassName: a(d.answer, {
+      [d.currentlyVoting]: !n && !t
+    }),
     myAvatarUrl: l,
     renderAnswerContent: e => (0, s.jsx)(f, {
       answer: e,
@@ -90,6 +93,6 @@ function E(e) {
       hasVoted: n,
       myAvatarUrl: l
     }),
-    ...a
+    ...i
   })
 }

@@ -4,8 +4,8 @@
         return h
       }
     }), t("222007"), t("70102");
-    var d = t("147369"),
-      s = t("803182"),
+    var s = t("147369"),
+      d = t("803182"),
       n = t("619443"),
       c = t("21121"),
       i = t("693051"),
@@ -27,8 +27,8 @@
         convertRouteToNavigation(e, a) {
           let {
             pathname: t
-          } = e, d = (0, i.getRootNavigationRef)(), n = (0, c.isInMainTabsExperiment)();
-          if (null != d && d.isReady()) {
+          } = e, s = (0, i.getRootNavigationRef)(), n = (0, c.isInMainTabsExperiment)();
+          if (null != s && s.isReady()) {
             if (n && (0, f.isSplitMessagesTab)() && t === b.Routes.ME) {
               (0, o.navigateToRootTab)({
                 screen: "messages",
@@ -44,15 +44,15 @@
               return
             }
             if (t.startsWith("/channels/")) {
-              let a = (0, s.matchPath)(t, {
+              let a = (0, d.matchPath)(t, {
                   path: b.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?")
                 }),
-                c = (0, s.matchPath)(t, {
+                c = (0, d.matchPath)(t, {
                   path: "".concat(b.Routes.CHANNEL(":guildId", ":channelId?")).concat(b.Routes.VOICE_CHAT_CHANNEL_PARTIAL(":voiceGuildId", ":voiceChannelId", ":voiceMessageId?"))
                 });
               if (!n) {
                 var u, p;
-                let e = d.getRootState();
+                let e = s.getRootState();
                 (null == e ? void 0 : null === (p = e.routes) || void 0 === p ? void 0 : null === (u = p[0]) || void 0 === u ? void 0 : u.name) !== "panels" && (0, o.resetToPanelsUI)();
                 return
               }
@@ -60,12 +60,12 @@
                 let {
                   voiceGuildId: a,
                   voiceChannelId: t,
-                  voiceMessageId: d
+                  voiceMessageId: s
                 } = c.params;
                 (0, l.isOldVoiceUIEnabled)() && (0, o.navigateToChannel)({
                   channelId: t,
                   guildId: a,
-                  messageId: d,
+                  messageId: s,
                   replaceChannelAndFixRoot: e.navigationReplace
                 });
                 return
@@ -73,32 +73,32 @@
               if (null != a) {
                 let {
                   channelId: t,
-                  guildId: s,
+                  guildId: d,
                   messageId: n
                 } = a.params;
                 if (!(0, f.isSplitMessagesTab)()) {
                   (0, o.navigateToRootTab)({
                     screen: "guilds",
-                    guildId: s,
+                    guildId: d,
                     resetRoot: e.navigationReplace
                   });
                   return
                 }
                 if ((0, f.isOnNewPanels)()) {
-                  let [e, a] = (0, r.default)(d.getCurrentRoute());
-                  if (e === s && a === t) return
+                  let [e, a] = (0, r.default)(s.getCurrentRoute());
+                  if (e === d && a === t) return
                 }
-                null == t || (0, f.shouldHandleNewPanelsRoute)(s) && !1 !== e.navigationReplace ? s === b.ME ? (0, o.navigateToRootTab)({
+                null == t || (0, f.shouldHandleNewPanelsRoute)(d) && !1 !== e.navigationReplace ? d === b.ME ? (0, o.navigateToRootTab)({
                   screen: "messages",
                   resetRoot: e.navigationReplace
                 }) : (0, o.navigateToRootTab)({
                   screen: "guilds",
-                  guildId: s,
+                  guildId: d,
                   channelId: (0, f.isOnNewPanels)() ? t : void 0,
                   resetRoot: e.navigationReplace
-                }) : null != s && (0, o.navigateToChannel)({
+                }) : null != d && (0, o.navigateToChannel)({
                   channelId: t,
-                  guildId: s,
+                  guildId: d,
                   messageId: n,
                   replaceChannelAndFixRoot: e.navigationReplace
                 })
@@ -106,7 +106,7 @@
               return
             }
             if (t.startsWith("/member-verification/")) {
-              let e = (0, s.matchPath)(t, {
+              let e = (0, d.matchPath)(t, {
                 path: b.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?")
               });
               null != e && (0, o.navigateToMemberVerification)(e.params.guildId, e.params.inviteCode);
@@ -114,6 +114,13 @@
             }
             if (t.startsWith("/login") || t.startsWith("/register")) {
               (0, o.resetToAuthRoute)();
+              return
+            }
+            if (t.startsWith("/account-standing")) {
+              s.navigate({
+                name: "account-standing",
+                params: void 0
+              });
               return
             }
             n && (0, o.navigateToRootTab)({
@@ -125,13 +132,13 @@
         executeRouteRewrites(e, a) {
           if (this.routeChangeCount += 1, this.routeChangeCount < 10)
             for (let t of this.rewrites) {
-              let s = (0, p.getHistory)().location.pathname,
+              let d = (0, p.getHistory)().location.pathname,
                 n = t(e, a);
-              if (null != n) return (0, d.addBreadcrumb)({
+              if (null != n) return (0, s.addBreadcrumb)({
                 message: "RouteManager.handleRouteChange: A route rewrite is replacing the current route",
                 data: {
                   replacePath: n.path,
-                  previousPath: s
+                  previousPath: d
                 }
               }), (0, p.replaceWith)(n.path, n.state), !0
             } else throw Error("RouteManager: Something has gone horribly wrong with rewrites");
@@ -168,8 +175,8 @@
           }, this.handleRouteChange = (e, a) => {
             if (this.executeRouteRewrites(e, a)) return;
             let t = u.default.getState();
-            for (let d of (t.basePath !== e.pathname && t.resetPath(e.pathname), this.listeners)) try {
-              d(e, a)
+            for (let s of (t.basePath !== e.pathname && t.resetPath(e.pathname), this.listeners)) try {
+              s(e, a)
             } catch (e) {
               console.warn("RouteManager.listen: A route listener has caused an error", e.message)
             }

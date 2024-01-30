@@ -12,6 +12,7 @@ e.exports = {
   eyebrow: "eyebrow__4498b",
   fetchText: "fetchText_faa37c",
   finishTitle: "finishTitle_aed0f9",
+  finishTitlePadding: "finishTitlePadding__855e9",
   fontScaling: "fontScaling__8fa49",
   formMessage: "formMessage__7dd30",
   formMessageNegative: "formMessageNegative_cfa9d9",

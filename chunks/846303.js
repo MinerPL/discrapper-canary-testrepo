@@ -13,6 +13,10 @@ var a = (0, r("237436").defineColorTokens)({
     dark: "primary.530",
     light: "white.500"
   },
+  "polls-normal-image-background": {
+    dark: "primary.660",
+    light: "white.500"
+  },
   "polls-normal-label": {
     dark: "white.500",
     light: "primary.600"
@@ -20,6 +24,10 @@ var a = (0, r("237436").defineColorTokens)({
   "polls-normal-confetti": {
     dark: "brand.500",
     light: "brand.500"
+  },
+  "polls-normal-fill-hover": {
+    dark: "primary.600",
+    light: "primary.230"
   },
   "polls-victor-border": {
     dark: "yellow.300",

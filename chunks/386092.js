@@ -7,8 +7,8 @@ a.r(t), a.d(t, {
 var s = a("37983");
 a("884691");
 var l = a("77078"),
-  o = a("599110"),
-  n = a("803725"),
+  n = a("599110"),
+  o = a("803725"),
   d = a("49111"),
   i = a("782340"),
   r = a("458554");
@@ -17,8 +17,9 @@ function c(e) {
   let {
     transitionState: t,
     onClose: a,
-    onDelete: c,
-    clip: u
+    onBeforeDelete: c,
+    onAfterDelete: u,
+    clip: E
   } = e;
   return (0, s.jsxs)(l.ModalRoot, {
     size: l.ModalSize.SMALL,
@@ -46,7 +47,7 @@ function c(e) {
       children: (0, s.jsx)(l.Button, {
         color: l.Button.Colors.RED,
         onClick: function() {
-          n.deleteClip(u.filepath), c(), o.default.track(d.AnalyticEvents.CLIP_DELETED)
+          null == c || c(), o.deleteClip(E.filepath), u(), n.default.track(d.AnalyticEvents.CLIP_DELETED)
         },
         children: i.default.Messages.CLIPS_DELETE_CLIP
       })

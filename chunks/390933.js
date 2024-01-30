@@ -40,6 +40,8 @@ i = class extends u {
     switch (this.searchType) {
       case l.SearchTypes.DMS:
         return l.Endpoints.SEARCH_DMS;
+      case l.SearchTypes.FAVORITES:
+        return l.Endpoints.SEARCH_FAVORITES;
       case l.SearchTypes.GUILD:
         if (null == this.searchId || "" === this.searchId) return;
         return l.Endpoints.SEARCH_GUILD(this.searchId);

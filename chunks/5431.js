@@ -97,10 +97,17 @@ var d = l.forwardRef(function(e, t) {
       className: m ? u.hidden : u.displayVideo,
       ref: M,
       src: a,
-      muted: !c,
-      onLoadedMetadata: T,
+      muted: !0,
       onLoadedData: v,
       preload: "auto"
+    }), (0, n.jsx)("audio", {
+      id: "ClipsPlayerAudioTrack:application",
+      src: d,
+      muted: !c,
+      preload: "auto",
+      className: u.hidden,
+      ref: e => A(e, "application"),
+      onLoadedMetadata: T
     }), C.map(e => (0, n.jsx)(o, {
       audioTrackLabel: e,
       setRef: A,

@@ -21,7 +21,7 @@ n.r(t), n.d(t, {
   useCreateForumPostCommon: function() {
     return U
   }
-}), n("424973"), n("222007");
+}), n("781738"), n("424973"), n("222007");
 var i, l, a = n("884691"),
   s = n("872717"),
   o = n("913144"),
@@ -65,8 +65,9 @@ function R(e, t) {
   if ("" !== o) return o.length > 40 ? o.substring(0, 40) + "..." : o;
   {
     let t = m.default.unparse(null !== (a = null == s ? void 0 : s.content) && void 0 !== a ? a : "", e.id, !0),
-      n = (0, M.default)(t.split("\n")[0], !0),
-      i = [];
+      n = (0, M.default)(t.split("\n")[0], !0);
+    n = n.replace(/^[ #-]+/, "");
+    let i = [];
     for (;;) {
       let e = n.match(/(?:\s|[!@#$%^&*()_\-+={}[\]:";'<>?,./])+/);
       if (null == e || null == e.index) {

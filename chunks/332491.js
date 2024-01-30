@@ -31,8 +31,16 @@ class A extends I.default {
     if (!(0, T.default)(r.default)) return;
     let _ = (0, i.areClipsEnabled)(),
       E = s.default.getSettings(),
-      t = (E.clipsEnabled || E.decoupledClipsEnabled) && _;
-    r.default.getMediaEngine().setClipBufferLength(t ? E.clipsLength / 1e3 : 0), ((null == e ? void 0 : e.settings.decoupledClipsEnabled) || (null == e ? void 0 : e.settings.clipsQuality) != null) && this.fireClipsInitEvent()
+      t = (E.clipsEnabled || E.decoupledClipsEnabled) && _,
+      o = r.default.getMediaEngine();
+    if (o.setClipBufferLength(t ? E.clipsLength / 1e3 : 0), null == e ? void 0 : e.settings.decoupledClipsEnabled) this.fireClipsInitEvent();
+    else if ((null == e ? void 0 : e.settings.clipsQuality) != null) {
+      let {
+        frameRate: e,
+        resolution: _
+      } = E.clipsQuality;
+      !o.setClipsQualitySettings(_ <= 480 ? _ / 3 * 4 : _ / 9 * 16, _, e) && this.fireClipsInitEvent()
+    }
   }
   handleClipsInitOnToggleDetection(e) {
     let _ = a.default.getVisibleGame();

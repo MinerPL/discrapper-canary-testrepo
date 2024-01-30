@@ -7,22 +7,25 @@ n.r(t), n.d(t, {
     return m
   },
   shouldSkipToEditUsername: function() {
-    return O
+    return S
   },
   formatPomeloForEditing: function() {
-    return S
+    return O
   },
   getMemberSince: function() {
     return R
   },
   formatUsernameLiveCheckValidation: function() {
+    return L
+  },
+  getLocalizedForcedUUDate: function() {
     return T
   }
 }), n("781738"), n("222007"), n("794252");
 var i = n("866227"),
   a = n.n(i),
-  s = n("506838"),
-  r = n("315102"),
+  r = n("506838"),
+  s = n("315102"),
   o = n("299039"),
   u = n("159885"),
   l = n("644417"),
@@ -31,7 +34,7 @@ var i = n("866227"),
 
 function c(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-  return r.default.getUserAvatarURL({
+  return s.default.getUserAvatarURL({
     id: e.id,
     avatar: e.avatar,
     bot: e.bot,
@@ -47,7 +50,7 @@ let E = ["@", "#", ":"],
   f = ["```", "discord", "hypesquad", "system message", "system mesage", "sustem message", "sustem mesage", "clyde"],
   _ = ["discordtag", "everyone", "here", "discord nitro", "discord", "snowsgiving"];
 
-function O(e) {
+function S(e) {
   var t, n;
   let i = e.username.toLowerCase();
   if ((t = i, n = d.CONTROL_CHARACTERS_CODE, t.split("").filter(e => !n.includes(e.charCodeAt(0))).join("")).length < 2) return !0;
@@ -60,7 +63,7 @@ function O(e) {
   return !1
 }
 
-function S(e) {
+function O(e) {
   return e.toLowerCase().replace(/\s/g, "").replace("@", "")
 }
 
@@ -72,14 +75,14 @@ function R(e) {
   return null
 }
 
-function T(e) {
-  return (0, s.match)(e).with({
+function L(e) {
+  return (0, r.match)(e).with({
     rateLimited: !0
   }, () => ({
     type: l.NameValidationState.RATE_LIMIT,
     message: g.default.Messages.APPLICATION_STORE_LISTING_PURCHASE_RATE_LIMIT_ERROR_SHORT
   })).with({
-    error: s.P.not(s.P.nullish)
+    error: r.P.not(r.P.nullish)
   }, e => {
     let {
       error: t
@@ -99,9 +102,18 @@ function T(e) {
     type: l.NameValidationState.ERROR,
     message: g.default.Messages.POMELO_EXISTING_FLOW_ERROR_UNAVAILABLE
   })).with({
-    error: s.P.nullish
+    error: r.P.nullish
   }, () => ({
     type: l.NameValidationState.INTERNAL_ERROR,
     message: ""
   })).otherwise(() => void 0)
+}
+
+function T(e) {
+  let t = new Date(2024, 2, 4);
+  return t.toLocaleDateString(e, {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+  })
 }

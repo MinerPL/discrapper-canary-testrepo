@@ -37,7 +37,9 @@ var s = n("77078"),
             application: a
           }
         } = e, s = a.id;
-        if (null == s) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new f.default({
+          errorCode: I.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         o.default.setLocked(t, n)
       }
     },
@@ -55,14 +57,20 @@ var s = n("77078"),
             pid: a
           }
         } = e, s = t.application.id;
-        if (null == s) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new f.default({
+          errorCode: I.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         let i = d.default.getApplicationActivity(s);
-        if (null == i || null == i.secrets || !(0, E.validateActivityInvite)(n, i.party, i.secrets)) throw new f.default(C.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
+        if (null == i || null == i.secrets || !(0, E.validateActivityInvite)(n, i.party, i.secrets)) throw new f.default({
+          errorCode: I.RPCErrors.NO_ELIGIBLE_ACTIVITY
+        }, "No eligible activity for application. Ensure an activity includes a party and appropriate secret.");
         let {
           lock: r
         } = (0, h.unlockOverlay)(a), o = (0, u.default)(i, c.default);
         return (0, l.openModal)(i, o).then(() => {
-          if (r(), o) throw new f.default(C.RPCErrors.NO_ELIGIBLE_ACTIVITY, "No eligible activity for application. Ensure user does have have privacy enabled.")
+          if (r(), o) throw new f.default({
+            errorCode: I.RPCErrors.NO_ELIGIBLE_ACTIVITY
+          }, "No eligible activity for application. Ensure user does have have privacy enabled.")
         })
       }
     },
@@ -80,13 +88,17 @@ var s = n("77078"),
           },
           socket: a
         } = e, s = a.application.id;
-        if (null == s) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == s) throw new f.default({
+          errorCode: I.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         return r.default.resolveInvite(t, "Game SDK").then(e => {
           let {
             invite: t,
             code: a
           } = e;
-          if (null == t) throw new f.default(C.RPCErrors.INVALID_INVITE, "Invalid invite id: ".concat(a));
+          if (null == t) throw new f.default({
+            errorCode: I.RPCErrors.INVALID_INVITE
+          }, "Invalid invite id: ".concat(a));
           let {
             context: s,
             lock: l
@@ -115,7 +127,9 @@ var s = n("77078"),
           },
           socket: i
         } = e, l = i.application.id;
-        if (null == l) throw new f.default(C.RPCErrors.INVALID_COMMAND, "No application.");
+        if (null == l) throw new f.default({
+          errorCode: I.RPCErrors.INVALID_COMMAND
+        }, "No application.");
         let {
           lock: r
         } = (0, h.unlockOverlay)(t);

@@ -1,5 +1,8 @@
 "use strict";
 l.r(t), l.d(t, {
+  ShineSizes: function() {
+    return s
+  },
   Shine: function() {
     return p
   },

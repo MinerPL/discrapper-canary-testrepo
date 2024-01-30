@@ -3,11 +3,14 @@ n.r(t), n.d(t, {
   reportFalsePositive: function() {
     return r
   },
-  sendMessagesForScanning: function() {
+  reportFailedSendFalsePositive: function() {
     return a
   },
-  sendMultiChannelMessagesForScanning: function() {
+  sendMessagesForScanning: function() {
     return o
+  },
+  sendMultiChannelMessagesForScanning: function() {
+    return l
   }
 });
 var i = n("872717"),
@@ -25,7 +28,19 @@ function r(e, t, n, r) {
   })
 }
 
-function a(e, t) {
+function a(e, t, n, r) {
+  return i.default.post({
+    url: s.Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
+    body: {
+      channel_id: e,
+      message_id: t,
+      attachment_ids: n,
+      filenames: r
+    }
+  })
+}
+
+function o(e, t) {
   return i.default.patch({
     url: s.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
     body: {
@@ -34,7 +49,7 @@ function a(e, t) {
   })
 }
 
-function o(e) {
+function l(e) {
   let t = e.map(e => ({
     channel_id: e.channel_id,
     message_id: e.id

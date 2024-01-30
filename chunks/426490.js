@@ -29,10 +29,10 @@ var s, l, a = n("37983"),
   T = n("385976"),
   I = n("845579"),
   m = n("952368"),
-  N = n("476765"),
-  p = n("578706"),
-  S = n("866190"),
+  N = n("578706"),
+  p = n("866190"),
   A = n("847511"),
+  S = n("562228"),
   C = n("214400"),
   h = n("74232"),
   g = n("316350"),
@@ -192,7 +192,7 @@ function U(e) {
       messageId: E,
       answerId: n.answerId
     })
-  }, [f, E, n.answerId]), m = (0, N.useUID)();
+  }, [f, E, n.answerId]);
   switch (d) {
     case 0:
       return (0, a.jsx)("li", {
@@ -200,16 +200,14 @@ function U(e) {
         children: l
       });
     case 3:
-      return (0, a.jsxs)("li", {
-        children: [(0, a.jsx)(c.Clickable, {
+      return (0, a.jsx)("li", {
+        children: (0, a.jsxs)(c.Clickable, {
           className: o(R.listItemButton, t, _),
           onClick: I,
-          "aria-describedby": m,
-          children: l
-        }), (0, a.jsx)(c.HiddenVisually, {
-          id: m,
-          children: s
-        })]
+          children: [l, (0, a.jsx)(c.HiddenVisually, {
+            children: s
+          })]
+        })
       });
     case 1:
       return (0, a.jsx)(x, {
@@ -236,12 +234,12 @@ function j(e) {
     attachment: t,
     alt: n,
     className: s
-  } = e, l = (0, S.useIsWindowFocused)(), i = I.GifAutoPlay.useSetting();
+  } = e, l = (0, p.useIsWindowFocused)(), i = I.GifAutoPlay.useSetting();
   return (0, a.jsx)(m.default, {
     className: s,
     imageClassName: R.attachmentImage,
     src: null != t.proxy_url && "" !== t.proxy_url ? t.proxy_url : t.url,
-    alt: n,
+    alt: null != n ? n : (0, S.filterOutUUID)(t.filename),
     responsive: !0,
     width: 212,
     height: 212,
@@ -252,20 +250,21 @@ function j(e) {
 }
 
 function b(e) {
+  var t;
   let {
-    alt: t,
-    className: n,
-    emoji: s
-  } = e, l = (0, d.default)([T.default], () => {
-    var e, t, n;
-    return null !== (n = null === (e = T.default.getCustomEmojiById(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "")) || void 0 === e ? void 0 : e.animated) && void 0 !== n && n
-  }, [s.id]);
+    alt: n,
+    className: s,
+    emoji: l
+  } = e, i = (0, d.default)([T.default], () => {
+    var e;
+    return T.default.getCustomEmojiById(null !== (e = null == l ? void 0 : l.id) && void 0 !== e ? e : "")
+  }, [l.id]), r = (null == l ? void 0 : l.name) !== "" ? l.name : null == i ? void 0 : i.name;
   return (0, a.jsx)(f.default, {
-    className: n,
-    emojiId: null == s ? void 0 : s.id,
-    emojiName: null == s ? void 0 : s.name,
-    alt: t,
-    animated: l
+    className: s,
+    emojiId: null == l ? void 0 : l.id,
+    emojiName: null == l ? void 0 : l.name,
+    alt: null != n ? n : r,
+    animated: null !== (t = null == i ? void 0 : i.animated) && void 0 !== t && t
   })
 }
 
@@ -279,31 +278,30 @@ function G(e, t) {
 }
 
 function B(e) {
-  var t;
   let {
-    media: n,
-    containerClassName: s,
-    attachmentClassName: l,
-    emojiClassName: i,
-    fallback: r,
-    alt: o
+    media: t,
+    containerClassName: n,
+    attachmentClassName: s,
+    emojiClassName: l,
+    fallback: i,
+    alt: r
   } = e, {
-    message: u
-  } = (0, h.usePollContext)(), d = null !== (t = null != o ? o : n.text) && void 0 !== t ? t : "";
-  if (n.attachmentIds.length > 0) {
-    let e = u.attachments.find(e => e.id === n.attachmentIds[0]);
-    if (null != e) return G(s, (0, a.jsx)(j, {
-      className: l,
+    message: o
+  } = (0, h.usePollContext)();
+  if (t.attachmentIds.length > 0) {
+    let e = o.attachments.find(e => e.id === t.attachmentIds[0]);
+    if (null != e) return G(n, (0, a.jsx)(j, {
+      className: s,
       attachment: e,
-      alt: d
+      alt: r
     }))
   }
-  return null != n.emoji ? G(s, (0, a.jsx)(b, {
-    className: i,
-    emoji: n.emoji,
-    alt: d
-  })) : void 0 !== r ? (0, a.jsx)(a.Fragment, {
-    children: r
+  return null != t.emoji ? G(n, (0, a.jsx)(b, {
+    className: l,
+    emoji: t.emoji,
+    alt: r
+  })) : void 0 !== i ? (0, a.jsx)(a.Fragment, {
+    children: i
   }) : null
 }
 
@@ -313,7 +311,7 @@ function F(e) {
     color: n,
     className: s
   } = e;
-  return (0, a.jsx)(p.default, {
+  return (0, a.jsx)(N.default, {
     width: t,
     height: t,
     className: o(s, R.checkmarkCircle),

@@ -21,8 +21,8 @@ var a = n("37983"),
   I = n("718091"),
   T = n("698343"),
   S = n("970366"),
-  m = n("161778"),
-  p = n("545429"),
+  p = n("161778"),
+  m = n("545429"),
   A = n("476765"),
   g = n("564875"),
   N = n("956089"),
@@ -56,14 +56,14 @@ var x = function(e) {
     })
   }, [i, n]), s.useEffect(() => {
     f.setHomeLink(v.Routes.FRIENDS), (0, S.trackAppUIViewed)("friends")
-  }), s.useEffect(() => {
+  }, []), s.useEffect(() => {
     null != t && E.default.setInitialSection(t)
   }, [t]);
-  let I = (0, u.useStateFromStores)([m.default], () => m.default.theme),
+  let I = (0, u.useStateFromStores)([p.default], () => p.default.theme),
     {
       section: x,
       pendingCount: b
-    } = (0, u.useStateFromStoresObject)([p.default], () => p.default.getState()),
+    } = (0, u.useStateFromStoresObject)([m.default], () => m.default.getState()),
     U = (0, u.useStateFromStoresObject)([h.default], () => h.default.getSuggestionCount()),
     G = (0, A.useUID)(),
     j = (0, A.useUID)();

@@ -12,8 +12,8 @@ let r = new a.default(l.RPC_APPLICATION_LOGGING_CATEGORY);
 var o = {
   [l.RPCCommands.CAPTURE_LOG]: {
     validation: e => (0, i.default)(e).required().keys({
-      level: e.string().required(),
-      message: e.string().required()
+      level: e.string().max(10).required(),
+      message: e.string().max(1e3).required()
     }),
     handler(e) {
       let {

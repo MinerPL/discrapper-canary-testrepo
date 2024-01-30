@@ -184,6 +184,10 @@ let S = {
     throttlePeriod: 9e5,
     throttleKeys: e => [e.guild_id, e.channel_id]
   },
+  [_.AnalyticEvents.VOICE_CHANNEL_GAME_ACTIVITY_INDICATOR_VIEWED]: {
+    throttlePeriod: 6e4,
+    throttleKeys: e => [e.user_id]
+  },
   [_.AnalyticEvents.DM_PROFILE_VIEWED]: {
     throttlePeriod: 36e5,
     throttleKeys: e => [e.viewed_profile_user_id]

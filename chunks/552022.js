@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return b
+    return w
   }
 }), l("222007");
 var a, n, i = l("37983"),
@@ -17,8 +17,8 @@ var a, n, i = l("37983"),
   h = l("77078"),
   E = l("812204"),
   v = l("685665"),
-  _ = l("730859"),
-  C = l("739034"),
+  C = l("730859"),
+  _ = l("739034"),
   g = l("697218"),
   L = l("944832"),
   x = l("561744"),
@@ -34,10 +34,10 @@ var a, n, i = l("37983"),
   y = l("135284"),
   D = l("49111"),
   O = l("782340"),
-  H = l("593262"),
-  w = l("339010");
+  b = l("593262"),
+  H = l("339010");
 (n = a || (a = {})).DELETE = "delete", n.EDIT = "edit", n.SHARE = "share";
-var b = function(e) {
+var w = function(e) {
   var t, l, a;
   let {
     clip: n,
@@ -46,7 +46,7 @@ var b = function(e) {
     isNew: u,
     onDelete: p,
     onEdit: m,
-    onShare: C
+    onShare: _
   } = e, L = (0, c.useStateFromStoresArray)([g.default], () => n.users.map(e => g.default.getUser(e)).filter(R.isNotNullish)), {
     AnalyticsLocationProvider: T
   } = (0, v.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), N = s.useRef(null), A = (0, x.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), j = s.useRef(new f.DelayedCall(500, () => {
@@ -54,6 +54,9 @@ var b = function(e) {
     let t = N.current;
     null != t && t.paused && (t.currentTime = A.current, null === (e = N.current) || void 0 === e || e.play())
   })), y = s.useCallback(() => {
+    let e = N.current;
+    null != e && (e.pause(), e.src = "")
+  }, []), H = s.useCallback(() => {
     var e;
     S(!0), null === (e = j.current) || void 0 === e || e.delay()
   }, []), w = s.useCallback(() => {
@@ -61,13 +64,13 @@ var b = function(e) {
     S(!1);
     let a = N.current;
     null === (e = j.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
-  }, [null === (l = n.editMetadata) || void 0 === l ? void 0 : l.start]), b = s.useCallback(e => {
+  }, [null === (l = n.editMetadata) || void 0 === l ? void 0 : l.start]), B = s.useCallback(e => {
     var t, l;
     (null === (l = e.relatedTarget) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && w()
-  }, [w]), B = new Date(P.default.extractTimestamp(n.id)), z = B.toLocaleDateString(), F = B.toLocaleTimeString([], {
+  }, [w]), z = new Date(P.default.extractTimestamp(n.id)), F = z.toLocaleDateString(), G = z.toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit"
-  }), G = "".concat(z, " • ").concat(F);
+  }), Y = "".concat(F, " • ").concat(G);
   return (0, i.jsx)(T, {
     children: (0, i.jsxs)(h.ClickableContainer, {
       "aria-disabled": d,
@@ -75,51 +78,52 @@ var b = function(e) {
       onClick: d ? void 0 : () => {
         m(n), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
       },
-      className: o(H.clipItem, {
-        [H.disabled]: d
+      className: o(b.clipItem, {
+        [b.disabled]: d
       }),
-      onBlur: b,
-      onFocus: y,
-      onMouseOver: y,
+      onBlur: B,
+      onFocus: H,
+      onMouseOver: H,
       onMouseLeave: w,
       children: [(0, i.jsx)(k, {
         clip: n,
         isNew: u,
         videoRef: N
       }), (0, i.jsxs)("div", {
-        className: H.clipFooter,
+        className: b.clipFooter,
         children: [(0, i.jsx)(U, {
           clip: n,
           focused: I,
-          onFocus: y
+          onFocus: H
         }), (0, i.jsx)(h.Text, {
-          className: H.clipMetadata,
+          className: b.clipMetadata,
           color: "text-normal",
           variant: "text-md/medium",
           children: n.applicationName
         }), (0, i.jsx)(h.Text, {
-          className: H.clipMetadata,
+          className: b.clipMetadata,
           color: "text-normal",
           variant: "text-md/medium",
-          children: G
+          children: Y
         }), (0, i.jsxs)("div", {
-          className: H.usersAndDelete,
-          children: [(0, i.jsx)(_.default, {
+          className: b.usersAndDelete,
+          children: [(0, i.jsx)(C.default, {
             maxUsers: 4,
             users: L,
             onFocus: e => {
               var t, l, a, n;
               let i = e.relatedTarget,
                 s = null === (l = e.currentTarget.parentElement) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement;
-              if ((null == i ? void 0 : i.parentElement) !== s)(null == i ? void 0 : null === (n = i.parentElement) || void 0 === n ? void 0 : null === (a = n.parentElement) || void 0 === a ? void 0 : a.parentElement) !== s && y()
+              if ((null == i ? void 0 : i.parentElement) !== s)(null == i ? void 0 : null === (n = i.parentElement) || void 0 === n ? void 0 : null === (a = n.parentElement) || void 0 === a ? void 0 : a.parentElement) !== s && H()
             }
           }), I && (0, i.jsx)(V, {
             clip: n,
             actionsDisabled: d,
             exporting: r,
+            onBeforeDelete: y,
             onDelete: p,
             onEdit: m,
-            onShare: C,
+            onShare: _,
             onBlur: e => {
               var t;
               (null === (t = e.relatedTarget) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && w()
@@ -144,30 +148,30 @@ function k(e) {
   }, [t.length, t.editMetadata]), d = "".concat(o.seconds()).padStart(2, "0");
   return (0, i.jsxs)(L.default, {
     aspectRatio: 16 / 9,
-    className: H.clipThumbContainer,
+    className: b.clipThumbContainer,
     children: [(0, i.jsx)(B, {
       clip: t,
       videoRef: a
     }), (0, i.jsxs)("div", {
-      className: H.clipBadges,
+      className: b.clipBadges,
       children: [n && (0, i.jsx)("div", {
-        className: H.clipProcessingBadge,
+        className: b.clipProcessingBadge,
         children: (0, i.jsx)(h.Text, {
           variant: "text-md/medium",
           color: "always-white",
           children: O.default.Messages.CLIPS_PROCESSING_BADGE
         })
       }), !n && l && (0, i.jsxs)(h.Text, {
-        className: H.clipNewBadge,
+        className: b.clipNewBadge,
         variant: "eyebrow",
         color: "always-white",
         children: [(0, i.jsx)(I.default, {
-          className: H.newIcon
+          className: b.newIcon
         }), O.default.Messages.NEW.toUpperCase()]
       }), !n && (0, i.jsxs)("div", {
-        className: H.clipDurationBadge,
+        className: b.clipDurationBadge,
         children: [r ? (0, i.jsx)(N.default, {
-          className: H.clipDurationEditIcon
+          className: b.clipDurationEditIcon
         }) : null, (0, i.jsx)(h.Text, {
           variant: "text-md/medium",
           color: "always-white",
@@ -184,10 +188,10 @@ function U(e) {
     clip: l,
     focused: a,
     onFocus: n
-  } = e, [r, d] = s.useState(l.name), u = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [_, C] = s.useState(!1), g = async () => {
-    C(!0), await (0, j.updateClipMetadata)(l.id, {
+  } = e, [r, d] = s.useState(l.name), u = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [C, _] = s.useState(!1), g = async () => {
+    _(!0), await (0, j.updateClipMetadata)(l.id, {
       name: "" === E ? void 0 : E
-    }), C(!1), f(!1)
+    }), _(!1), f(!1)
   };
   return (s.useEffect(() => {
     if (r !== l.name) {
@@ -195,29 +199,29 @@ function U(e) {
       d(l.name), v(null !== (e = l.name) && void 0 !== e ? e : "")
     }
   }, [l.name, r]), c) ? (0, i.jsx)(h.TextInput, {
-    inputClassName: o(w["heading-lg/medium"], H.clipTitleInput),
+    inputClassName: o(H["heading-lg/medium"], b.clipTitleInput),
     onClick: e => e.stopPropagation(),
     value: E,
     autoFocus: !0,
     onKeyDown: e => {
       "Enter" === e.key && g()
     },
-    disabled: _,
+    disabled: C,
     onChange: v,
     onBlur: g
   }) : (0, i.jsxs)(h.Clickable, {
-    className: H.clipTitleInputPlaceholder,
+    className: b.clipTitleInputPlaceholder,
     onFocus: n,
     onClick: e => {
       e.stopPropagation(), f(!0)
     },
     children: [u ? (0, i.jsx)(h.Heading, {
-      className: H.clipTitle,
+      className: b.clipTitle,
       color: "text-muted",
       variant: "heading-lg/medium",
       children: O.default.Messages.CLIPS_ADD_A_TITLE
     }) : (0, i.jsx)(h.Heading, {
-      className: H.clipTitle,
+      className: b.clipTitle,
       color: "text-normal",
       variant: "heading-lg/medium",
       children: l.name
@@ -226,7 +230,7 @@ function U(e) {
       color: h.tokens.colors.TEXT_MUTED,
       height: p.ICON_SIZE.sm,
       width: p.ICON_SIZE.sm,
-      className: H.clipTitleIcon
+      className: b.clipTitleIcon
     })]
   })
 }
@@ -238,19 +242,19 @@ function B(e) {
   } = e, a = (0, y.useClipProtocolURL)(t);
   return 0 === t.length ? (0, i.jsx)(h.Spinner, {
     type: h.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
-    className: H.clipThumb
+    className: b.clipThumb
   }) : null != a ? (0, i.jsx)(A.default, {
     preload: "metadata",
     muted: !0,
     poster: t.thumbnail,
     src: a,
     loop: !0,
-    className: H.clipThumb,
+    className: b.clipThumb,
     ref: l
   }) : (0, i.jsx)("img", {
     alt: "",
     src: t.thumbnail,
-    className: H.clipThumb
+    className: b.clipThumb
   })
 }
 
@@ -259,29 +263,38 @@ function V(e) {
     clip: t,
     exporting: l,
     actionsDisabled: a,
-    onDelete: n,
-    onEdit: s,
-    onShare: r,
-    onBlur: o
-  } = e, d = (0, C.default)();
+    onBeforeDelete: n,
+    onDelete: r,
+    onEdit: o,
+    onShare: d,
+    onBlur: u
+  } = e, c = (0, _.default)(), f = s.useCallback(e => {
+    e.stopPropagation(), e.shiftKey ? (n(), (0, j.deleteClip)(t.filepath)) : r(t, n), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+      type: "delete"
+    })
+  }, [r, n, t]), p = s.useCallback(e => {
+    e.stopPropagation(), o(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+      type: "edit"
+    })
+  }, [o, t]), m = s.useCallback(e => {
+    e.stopPropagation(), d(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+      type: "share"
+    })
+  }, [d, t]);
   return (0, i.jsxs)("div", {
-    className: H.buttonContainer,
-    children: [null != n && (0, i.jsx)(h.Tooltip, {
+    className: b.buttonContainer,
+    children: [null != r && (0, i.jsx)(h.Tooltip, {
       text: O.default.Messages.DELETE,
       children: e => (0, i.jsx)(h.Button, {
         ...e,
         disabled: a,
-        color: d ? h.Button.Colors.RED : h.Button.Colors.PRIMARY,
-        onClick: e => {
-          e.stopPropagation(), e.shiftKey ? (0, j.deleteClip)(t.filepath) : n(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
-            type: "delete"
-          })
-        },
-        className: H.button,
+        color: c ? h.Button.Colors.RED : h.Button.Colors.PRIMARY,
+        onClick: f,
+        className: b.button,
         size: h.Button.Sizes.NONE,
         look: h.Button.Looks.FILLED,
         children: (0, i.jsx)(S.default, {
-          className: H.miniIcon
+          className: b.miniIcon
         })
       })
     }), (0, i.jsx)(h.Tooltip, {
@@ -290,33 +303,25 @@ function V(e) {
         ...e,
         disabled: a,
         color: h.Button.Colors.PRIMARY,
-        onClick: e => {
-          e.stopPropagation(), s(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
-            type: "edit"
-          })
-        },
-        className: H.button,
+        onClick: p,
+        className: b.button,
         size: h.Button.Sizes.NONE,
         look: h.Button.Looks.FILLED,
         children: (0, i.jsx)(N.default, {
-          className: H.miniIcon
+          className: b.miniIcon
         })
       })
     }), (0, i.jsx)(h.Button, {
       disabled: a && !l,
       submitting: l,
       color: h.Button.Colors.BRAND,
-      onBlur: o,
-      onClick: e => {
-        e.stopPropagation(), r(t), M.default.track(D.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
-          type: "share"
-        })
-      },
-      className: H.button,
+      onBlur: u,
+      onClick: m,
+      className: b.button,
       size: h.Button.Sizes.NONE,
       look: h.Button.Looks.FILLED,
       children: (0, i.jsx)(T.default, {
-        className: H.miniIcon
+        className: b.miniIcon
       })
     })]
   })

@@ -46,13 +46,19 @@ var a = n("812204"),
         await (0, s.maybeFetchSoundboardSounds)();
         let l = u.default.getCurrentUser(),
           c = i.default.getSound(t, n),
-          _ = (0, f.default)(),
-          h = null != c && null != l && (0, r.canUseSoundboardSound)(l, c, _);
-        if (null == _) throw new d.default(E.RPCErrors.INVALID_CHANNEL, "Invalid Channel.");
+          E = (0, f.default)(),
+          h = null != c && null != l && (0, r.canUseSoundboardSound)(l, c, E);
+        if (null == E) throw new d.default({
+          errorCode: _.RPCErrors.INVALID_CHANNEL
+        }, "Invalid Channel.");
         if (h) {
-          if ((0, o.default)(_)) null != c && (0, r.playSound)(c, _.id, [a.default.RPC]);
-          else throw new d.default(E.RPCErrors.INVALID_PERMISSIONS, "Invalid Permissions.")
-        } else throw new d.default(E.RPCErrors.INVALID_SOUND, "Invalid Sound.")
+          if ((0, o.default)(E)) null != c && (0, r.playSound)(c, E.id, [a.default.RPC]);
+          else throw new d.default({
+            errorCode: _.RPCErrors.INVALID_PERMISSIONS
+          }, "Invalid Permissions.")
+        } else throw new d.default({
+          errorCode: _.RPCErrors.INVALID_SOUND
+        }, "Invalid Sound.")
       }
     }
   }

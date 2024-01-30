@@ -1,32 +1,32 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useExplicitMediaActions: function() {
-    return n
+    return a
   }
-}), a("222007");
-var s = a("884691"),
-  l = a("448993"),
-  i = a("695681");
+}), n("222007");
+var s = n("884691"),
+  l = n("448993");
 
-function n(e) {
+function a(e) {
   let {
     onError: t,
-    onSuccess: a
-  } = null != e ? e : {}, [n, o] = s.useState(!1), d = s.useCallback(async (e, s, d, r) => {
-    if (!n) {
-      o(!0);
+    onSuccess: n,
+    report: a
+  } = e, [i, r] = s.useState(!1), o = s.useCallback(async () => {
+    if (!i) {
+      r(!0);
       try {
-        await (0, i.reportFalsePositive)(e, s, d, r), null == a || a()
-      } catch (a) {
-        let e = new l.APIError(a);
+        await a(), null == n || n()
+      } catch (n) {
+        let e = new l.APIError(n);
         null == t || t(e)
       } finally {
-        o(!1)
+        r(!1)
       }
     }
-  }, [n, t, a]);
+  }, [i, t, n, a]);
   return {
-    reportFalsePositive: d,
-    isReportFalsePositiveLoading: n
+    reportFalsePositive: o,
+    isReportFalsePositiveLoading: i
   }
 }

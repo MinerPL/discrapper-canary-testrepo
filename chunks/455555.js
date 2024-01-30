@@ -24,8 +24,8 @@ var s = n("37983"),
   m = n("167359"),
   N = n("55620"),
   p = n("52289"),
-  S = n("518888"),
-  A = n("70614"),
+  A = n("518888"),
+  S = n("70614"),
   C = n("79112"),
   h = n("376556"),
   g = n("812204"),
@@ -49,8 +49,8 @@ var s = n("37983"),
   H = n("538620"),
   V = n("703537"),
   Y = n("55282"),
-  W = n("42203"),
-  K = n("305961"),
+  K = n("42203"),
+  W = n("305961"),
   z = n("42887"),
   Z = n("945956"),
   J = n("162771"),
@@ -107,7 +107,7 @@ let em = l.memo(function() {
   let i = (0, o.useStateFromStores)([Q.default], () => Q.default.getCurrentUser()),
     _ = (0, o.useStateFromStores)([J.default], () => J.default.getGuildId()),
     g = (0, o.useStateFromStores)([$.default], () => $.default.getNotice()),
-    er = (0, o.useStateFromStores)([K.default], () => K.default.getGuild(_)),
+    er = (0, o.useStateFromStores)([W.default], () => W.default.getGuild(_)),
     {
       analyticsLocations: em
     } = (0, M.default)(),
@@ -128,12 +128,12 @@ let em = l.memo(function() {
         null != t && (0, v.trackExposureToExperiment)(e.id, t)
       }
     }, [g]), null == g) return null;
-  let eS = $.typeToDismissibleContent[g.type];
-  if (null != eS) return (0, s.jsx)(L.DismissibleContentNotices, {
-    dismissibleContent: eS,
+  let eA = $.typeToDismissibleContent[g.type];
+  if (null != eA) return (0, s.jsx)(L.DismissibleContentNotices, {
+    dismissibleContent: eA,
     noticeType: g.type
   });
-  let eA = null === (e = g.metadata) || void 0 === e ? void 0 : e.premiumType;
+  let eS = null === (e = g.metadata) || void 0 === e ? void 0 : e.premiumType;
   switch (g.type) {
     case eo.NoticeTypes.LURKING_GUILD:
       return (0, s.jsx)(k.default, {});
@@ -197,7 +197,7 @@ let em = l.memo(function() {
           onClick: () => {
             let e = Z.default.getRemoteDisconnectVoiceChannelId();
             if (null != e) {
-              let t = W.default.getChannel(e);
+              let t = K.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
             }
           },
@@ -217,7 +217,7 @@ let em = l.memo(function() {
           onClick: () => {
             let e = Z.default.getLastSessionVoiceChannelId();
             if (null != e) {
-              let t = W.default.getChannel(e);
+              let t = K.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
             }
           },
@@ -416,12 +416,12 @@ let em = l.memo(function() {
         children: [(0, s.jsx)(en.NoticeCloseButton, {
           noticeType: eo.NoticeTypes.SURVEY,
           onClick: () => {
-            (0, S.surveyHide)(t, !0)
+            (0, A.surveyHide)(t, !0)
           }
         }), n, (0, s.jsx)(en.PrimaryCTANoticeButton, {
           noticeType: eo.NoticeTypes.SURVEY,
           onClick: () => {
-            window.open(a, "_blank"), (0, S.surveyHide)(t, !1)
+            window.open(a, "_blank"), (0, A.surveyHide)(t, !1)
           },
           children: l
         })]
@@ -539,7 +539,7 @@ let em = l.memo(function() {
               applicationName: g.metadata.applicationName
             })
           }), (0, s.jsx)(en.NoticeCloseButton, {
-            onClick: A.reset,
+            onClick: S.reset,
             noticeType: eo.NoticeTypes.APPLICATION_TEST_MODE
           })]
         })
@@ -569,7 +569,7 @@ let em = l.memo(function() {
             applicationId: g.metadata.applicationId,
             children: ef.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
           }), (0, s.jsx)(en.NoticeCloseButton, {
-            onClick: A.reset,
+            onClick: S.reset,
             noticeType: eo.NoticeTypes.APPLICATION_TEST_MODE
           })]
         })
@@ -596,7 +596,7 @@ let em = l.memo(function() {
       return (0, s.jsx)(F.default, {});
     case eo.NoticeTypes.PREMIUM_UNCANCEL:
       return (0, s.jsxs)(en.default, {
-        color: eA === eu.PremiumTypes.TIER_1 ? en.NoticeColors.PREMIUM_TIER_1 : eA === eu.PremiumTypes.TIER_0 ? en.NoticeColors.PREMIUM_TIER_0 : en.NoticeColors.PREMIUM_TIER_2,
+        color: eS === eu.PremiumTypes.TIER_1 ? en.NoticeColors.PREMIUM_TIER_1 : eS === eu.PremiumTypes.TIER_0 ? en.NoticeColors.PREMIUM_TIER_0 : en.NoticeColors.PREMIUM_TIER_2,
         children: [(0, s.jsx)(en.NoticeCloseButton, {
           noticeType: eo.NoticeTypes.PREMIUM_UNCANCEL,
           onClick: () => {
@@ -605,9 +605,9 @@ let em = l.memo(function() {
           }
         }), (0, s.jsx)(et.default, {
           className: eE.premiumIcon
-        }), eA === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
+        }), eS === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_TEXT.format({
           daysLeft: g.metadata.daysLeft
-        }) : eA === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
+        }) : eS === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_TEXT.format({
           daysLeft: g.metadata.daysLeft
         }) : ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_TEXT.format({
           daysLeft: g.metadata.daysLeft
@@ -622,13 +622,13 @@ let em = l.memo(function() {
               return t => (0, s.jsx)(e, {
                 ...t,
                 daysLeft: g.metadata.daysLeft,
-                premiumType: eA,
+                premiumType: eS,
                 analyticsSource: "Nag Bar",
                 premiumSubscription: g.metadata.premiumSubscription
               })
             })
           },
-          children: eA === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
+          children: eS === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_1_NOTICE_BUTTON_TEXT : eS === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_TIER_0_NOTICE_BUTTON_TEXT : ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_NOTICE_BUTTON_TEXT
         })]
       });
     case eo.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT:
@@ -697,9 +697,9 @@ let em = l.memo(function() {
             var e, t;
             eI(null === (t = g.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd)
           }
-        }), eA === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
+        }), eS === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_TEXT.format({
           daysLeft: g.metadata.daysLeft
-        }) : eA === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
+        }) : eS === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_TEXT.format({
           daysLeft: g.metadata.daysLeft
         }) : ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_TEXT.format({
           daysLeft: g.metadata.daysLeft
@@ -709,7 +709,7 @@ let em = l.memo(function() {
             var e, t;
             eI(null === (t = g.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(eo.UserSettingsSections.SUBSCRIPTIONS)
           },
-          children: eA === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eA === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
+          children: eS === eu.PremiumTypes.TIER_1 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eS === eu.PremiumTypes.TIER_0 ? ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : ef.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
       });
     case eo.NoticeTypes.BACK_TO_PREVIOUS_SCREEN:
@@ -823,6 +823,20 @@ let em = l.memo(function() {
             C.default.open(eo.UserSettingsSections.LOCALE), eI()
           },
           children: ef.default.Messages.ESLATAM_LANGUAGE_LAUNCH_NOTICE_CTA
+        })]
+      });
+    case eo.NoticeTypes.HABITUAL_DND:
+      return (0, s.jsxs)(en.default, {
+        color: en.NoticeColors.BRAND,
+        children: [(0, s.jsx)(en.NoticeCloseButton, {
+          noticeType: eo.NoticeTypes.HABITUAL_DND,
+          onClick: () => eI()
+        }), ef.default.Messages.QUIET_MODE_HABITUAL_DND_NOTICE, (0, s.jsx)(en.PrimaryCTANoticeButton, {
+          noticeType: eo.NoticeTypes.HABITUAL_DND,
+          onClick: () => {
+            C.default.open(eo.UserSettingsSections.NOTIFICATIONS), eI()
+          },
+          children: ef.default.Messages.CHECK_IT_OUT
         })]
       });
     default:

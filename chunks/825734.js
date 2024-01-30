@@ -61,12 +61,16 @@ var I = {
       } = e;
       (0, u.validateTransportType)(t.transport);
       let i = t.application.id;
-      if (null == i) throw new l.default(c.RPCErrors.INVALID_COMMAND, "No application.");
+      if (null == i) throw new l.default({
+        errorCode: f.RPCErrors.INVALID_COMMAND
+      }, "No application.");
       let {
         lock: r,
         context: d
       } = h(t.transport !== c.TransportTypes.POST_MESSAGE ? s : null), E = (0, o.default)();
-      if (null == E) throw new l.default(c.RPCErrors.INVALID_CHANNEL, "Invalid channel");
+      if (null == E) throw new l.default({
+        errorCode: f.RPCErrors.INVALID_CHANNEL
+      }, "Invalid channel");
       let I = {
           page: f.AnalyticsPages.IN_APP
         },
@@ -84,9 +88,13 @@ var I = {
           } catch (e) {
             if (r(), null != e) {
               let t = "";
-              throw t = "object" == typeof e && "message" in e && "string" == typeof e.message ? e.message : "string" == typeof e ? e : JSON.stringify(e), new l.default(c.RPCErrors.PURCHASE_ERROR, t)
+              throw t = "object" == typeof e && "message" in e && "string" == typeof e.message ? e.message : "string" == typeof e ? e : JSON.stringify(e), new l.default({
+                errorCode: f.RPCErrors.PURCHASE_ERROR
+              }, t)
             }
-            throw new l.default(c.RPCErrors.PURCHASE_CANCELED, "Purchase was canceled by the user.")
+            throw new l.default({
+              errorCode: f.RPCErrors.PURCHASE_CANCELED
+            }, "Purchase was canceled by the user.")
           }
         };
       return T()
@@ -106,7 +114,9 @@ var I = {
       } = e;
       (0, u.validateTransportType)(t.transport);
       let a = t.application.id;
-      if (null == a) throw new l.default(c.RPCErrors.INVALID_COMMAND, "No application.");
+      if (null == a) throw new l.default({
+        errorCode: f.RPCErrors.INVALID_COMMAND
+      }, "No application.");
       let {
         lock: s,
         context: i
@@ -116,8 +126,12 @@ var I = {
       return C(i, r).then(() => {
         s()
       }, e => {
-        if (s(), null != e) throw new l.default(c.RPCErrors.PURCHASE_ERROR, e);
-        throw new l.default(c.RPCErrors.PURCHASE_CANCELED, "Purchase was canceled by the user.")
+        if (s(), null != e) throw new l.default({
+          errorCode: f.RPCErrors.PURCHASE_ERROR
+        }, e);
+        throw new l.default({
+          errorCode: f.RPCErrors.PURCHASE_CANCELED
+        }, "Purchase was canceled by the user.")
       })
     }
   }

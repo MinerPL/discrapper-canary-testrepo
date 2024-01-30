@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return P
   }
 }), n("808653"), n("424973"), n("222007");
 var a = n("37983"),
@@ -19,22 +19,23 @@ var a = n("37983"),
   m = n("95045"),
   E = n("393414"),
   C = n("144491"),
-  g = n("845579"),
-  S = n("42203"),
-  _ = n("957255"),
-  I = n("27618"),
-  T = n("744983"),
-  v = n("18494"),
-  x = n("697218"),
-  N = n("505684"),
-  A = n("593195"),
-  M = n("420861"),
-  R = n("18061"),
-  j = n("49111"),
-  L = n("782340"),
-  O = n("211631");
+  S = n("845579"),
+  g = n("42203"),
+  _ = n("305961"),
+  I = n("957255"),
+  T = n("27618"),
+  v = n("744983"),
+  x = n("18494"),
+  N = n("697218"),
+  A = n("505684"),
+  M = n("593195"),
+  R = n("420861"),
+  j = n("18061"),
+  L = n("49111"),
+  O = n("782340"),
+  y = n("211631");
 
-function y(e) {
+function P(e) {
   var t;
   let {
     search: n,
@@ -43,48 +44,48 @@ function y(e) {
     scrollTo: p,
     searchResults: m,
     blockCount: C,
-    onChangePage: g
+    onChangePage: S
   } = e, {
     offset: _,
-    totalResults: v,
+    totalResults: I,
     isSearching: x,
     showBlockedResults: N
   } = n, A = l.useCallback(e => {
     if (x) return;
     let t = e - 1;
-    null == g || g(t), u.changePage(f, t)
-  }, [f, x, g]), R = l.useCallback(e => {
+    null == S || S(t), u.changePage(f, t)
+  }, [f, x, S]), M = l.useCallback(e => {
     if (e.blocked) r.default.show({
-      title: L.default.Messages.UNBLOCK_TO_JUMP_TITLE,
-      body: L.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
+      title: O.default.Messages.UNBLOCK_TO_JUMP_TITLE,
+      body: O.default.Messages.UNBLOCK_TO_JUMP_BODY.format({
         name: e.author.username
       }),
-      confirmText: L.default.Messages.OKAY
+      confirmText: O.default.Messages.OKAY
     });
     else {
-      let t = S.default.getChannel(e.channel_id),
+      let t = g.default.getChannel(e.channel_id),
         n = null != t ? t.getGuildId() : null;
       o.default.trackJump(e.channel_id, e.id, "Search Results", {
-        search_id: T.default.getAnalyticsId(f)
-      }), (0, E.transitionTo)(j.Routes.CHANNEL(n, e.channel_id, e.id))
+        search_id: v.default.getAnalyticsId(f)
+      }), (0, E.transitionTo)(L.Routes.CHANNEL(n, e.channel_id, e.id))
     }
-  }, [f]), y = l.useMemo(() => {
+  }, [f]), j = l.useMemo(() => {
     let e;
     if (null == m) return [];
     let t = 0;
     return m.reduce((n, a) => {
       let l = a.find(e => e.isSearchHit);
-      if (!N && null != l && I.default.isBlocked(l.author.id)) return n;
-      let s = S.default.getChannel(a[0].channel_id);
+      if (!N && null != l && T.default.isBlocked(l.author.id)) return n;
+      let s = g.default.getChannel(a[0].channel_id);
       return null == s ? n : ((null == e || e !== s.id) && n.push({
         channel: s,
         results: [],
         startIndex: t
       }), t += 1, n[n.length - 1].results.push(a), e = null == s ? void 0 : s.id, n)
     }, [])
-  }, [m, N]), b = l.useRef([]), D = y.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
+  }, [m, N]), P = l.useRef([]), D = j.reduce((e, t) => e + 1 + t.results.length, 0), U = l.useCallback((e, t) => {
     if (!c.default.keyboardModeEnabled) return;
-    let n = b.current,
+    let n = P.current,
       a = null != t ? n[t] : void 0;
     if (null == a || null == a.hitRef.current) return;
     let l = a.hitRef.current.getClientRects()[0],
@@ -94,7 +95,7 @@ function y(e) {
       null === (t = document.getElementById(e)) || void 0 === t || t.focus()
     })
   }, [p]), w = l.useCallback(e => {
-    let t = b.current[e];
+    let t = P.current[e];
     null == t || t.jumpTo()
   }, []), F = (0, s.useListNavigator)({
     navId: "search-results",
@@ -102,148 +103,152 @@ function y(e) {
     focusedIndex: 0,
     setFocus: U,
     onSelect: w
-  }), k = T.default.getQuery(f), V = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), B = y.map(e => {
+  }), k = v.default.getQuery(f), V = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, B = (0, d.createASTHighlighter)(null !== (t = null == k ? void 0 : k.content) && void 0 !== t ? t : ""), H = j.map(e => {
     let {
       channel: t,
       results: n,
       startIndex: l
     } = e;
-    return (0, a.jsx)(P, {
+    return (0, a.jsx)(b, {
       channel: t,
       results: n,
-      highlighter: V,
+      highlighter: B,
       startIndex: l,
-      resultRefs: b,
-      totalResults: v,
+      resultRefs: P,
+      totalResults: I,
       scrollTo: p,
       searchId: f,
       renderEmbeds: h,
       offset: _,
-      jumpToMessage: R,
-      listNavigator: F
+      jumpToMessage: M,
+      listNavigator: F,
+      favoriteSearch: V
     }, "".concat(t.id, "-").concat(l))
   });
-  B.push();
-  let H = l.useRef(null);
+  H.push();
+  let G = l.useRef(null);
   l.useLayoutEffect(() => {
     var e;
-    null === (e = H.current) || void 0 === e || e.focus()
+    null === (e = G.current) || void 0 === e || e.focus()
   }, [m]);
-  let G = (0, i.useFocusJumpSection)();
+  let W = (0, i.useFocusJumpSection)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      ref: H,
+      ref: G,
       ...F.getContainerProps(),
-      ...G,
+      ...W,
       "aria-busy": x,
-      children: B
+      children: H
     }), C > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
-      className: O.resultsBlocked,
+      className: y.resultsBlocked,
       onClick: () => u.setShowBlockedResults(f, !N),
       children: [(0, a.jsx)("div", {
-        className: O.resultsBlockedImage
+        className: y.resultsBlockedImage
       }), (0, a.jsx)("div", {
-        className: O.resultsBlockedText,
-        children: N ? L.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
+        className: y.resultsBlockedText,
+        children: N ? O.default.Messages.SEARCH_HIDE_BLOCKED_MESSAGES.format({
           count: C
-        }) : L.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
+        }) : O.default.Messages.SEARCH_NUM_RESULTS_BLOCKED_NOT_SHOWN.format({
           count: C
         })
       })]
-    }) : null, !x && (0, a.jsx)(M.default, {
+    }) : null, !x && !V && (0, a.jsx)(R.default, {
       changePage: A,
       offset: _,
-      totalResults: v,
-      pageLength: j.SEARCH_PAGE_SIZE
+      totalResults: I,
+      pageLength: L.SEARCH_PAGE_SIZE
     })]
   })
 }
 
-function P(e) {
-  var t;
+function b(e) {
+  var t, n;
   let {
-    channel: n,
-    results: s,
-    highlighter: r,
-    startIndex: o,
-    resultRefs: u,
-    totalResults: d,
-    scrollTo: c,
-    searchId: E,
-    renderEmbeds: T,
-    offset: M,
-    jumpToMessage: L,
-    listNavigator: y
-  } = e, P = g.RenderSpoilers.useSetting(), b = l.useCallback(e => {
-    if (e === v.default.getChannelId()) return;
-    let t = S.default.getChannel(e);
-    if (null != t) _.default.can(j.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
-  }, []), D = null != n ? (0, f.computeChannelName)(n, x.default, I.default, !1) : "???", U = (null == n ? void 0 : n.parent_id) != null ? S.default.getChannel(n.parent_id) : null, w = null != U ? U.name : null, F = null !== (t = (0, h.default)(n)) && void 0 !== t ? t : A.default, k = null != U ? (0, h.default)(U) : null, V = _.default.can(j.Permissions.MANAGE_MESSAGES, n), {
-    content: B
+    channel: s,
+    results: r,
+    highlighter: o,
+    startIndex: u,
+    resultRefs: d,
+    totalResults: c,
+    scrollTo: E,
+    searchId: v,
+    renderEmbeds: R,
+    offset: O,
+    jumpToMessage: P,
+    listNavigator: b,
+    favoriteSearch: D
+  } = e, U = S.RenderSpoilers.useSetting(), w = l.useCallback(e => {
+    if (e === x.default.getChannelId()) return;
+    let t = g.default.getChannel(e);
+    if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, C.transitionToChannel)(t.id)
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", k = D && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, V = (null == s ? void 0 : s.parent_id) != null ? g.default.getChannel(s.parent_id) : null, B = null != V ? V.name : null, H = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != V ? (0, h.default)(V) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+    content: Y
   } = (0, m.default)({
-    content: D,
+    content: F,
     embeds: []
   }, {
-    postProcessor: r
-  }), H = l.useRef(null), [G, W] = l.useState(!1);
-  return l.useEffect(() => {
-    let e = H.current;
-    null != e && null != e.offsetWidth && null != e.scrollWidth && W(e.offsetWidth < e.scrollWidth)
-  }, []), (0, a.jsx)(N.ObscuredDisplayContext.Provider, {
-    value: (0, p.default)(P, V),
+    postProcessor: o
+  }), z = l.useRef(null), [K, Z] = l.useState(!1);
+  l.useEffect(() => {
+    let e = z.current;
+    null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
+  }, []);
+  let X = [F, B, k].filter(e => null != e).join(", ");
+  return (0, a.jsx)(A.ObscuredDisplayContext.Provider, {
+    value: (0, p.default)(U, W),
     children: (0, a.jsxs)("ul", {
       role: "group",
-      className: O.searchResultGroup,
-      "aria-label": null == w ? D : "".concat(D, ", ").concat(w),
+      className: y.searchResultGroup,
+      "aria-label": X,
       children: [(0, a.jsx)(i.Clickable, {
-        onClick: () => b(n.id),
+        onClick: () => w(s.id),
         children: (0, a.jsxs)("div", {
-          className: O.channelNameContainer,
-          children: [(0, a.jsx)(F, {
-            className: O.channelNameIcon,
+          className: y.channelNameContainer,
+          children: [(0, a.jsx)(H, {
+            className: y.channelNameIcon,
             width: 16,
             height: 16
           }), (0, a.jsx)(i.Tooltip, {
-            text: D,
-            shouldShow: G,
-            children: e => (0, a.jsx)("span", {
+            text: F,
+            shouldShow: K,
+            children: e => (0, a.jsxs)("span", {
               ...e,
-              ref: H,
-              className: O.channelNameText,
-              children: B
+              ref: z,
+              className: y.channelNameText,
+              children: [D && null !== k && "".concat(k, " : "), Y]
             })
-          }), null != U && null != w && null != k ? (0, a.jsxs)(i.Clickable, {
-            className: O.parentChannelNameClickable,
+          }), null != V && null != B && null != G ? (0, a.jsxs)(i.Clickable, {
+            className: y.parentChannelNameClickable,
             onClick: e => {
-              e.stopPropagation(), b(U.id)
+              e.stopPropagation(), w(V.id)
             },
-            children: [(0, a.jsx)(k, {
-              className: O.parentChannelNameIcon,
+            children: [(0, a.jsx)(G, {
+              className: y.parentChannelNameIcon,
               width: 12,
               height: 12
             }), (0, a.jsx)(i.Text, {
-              className: O.parentChannelNameText,
+              className: y.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
-              children: w
+              children: B
             })]
           }) : null]
         })
-      }), s.map((e, t) => {
-        let n = o + t;
-        return (0, a.jsx)(R.default, {
-          ref: e => u.current[n] = e,
-          totalResults: d,
-          scrollTo: c,
-          searchId: E,
-          renderEmbeds: T,
-          searchOffset: M,
-          pageResultsLength: s.length,
+      }), r.map((e, t) => {
+        let n = u + t;
+        return (0, a.jsx)(j.default, {
+          ref: e => d.current[n] = e,
+          totalResults: c,
+          scrollTo: E,
+          searchId: v,
+          renderEmbeds: R,
+          searchOffset: O,
+          pageResultsLength: r.length,
           result: e,
           index: n,
-          onJump: L,
-          listItemProps: y.getItemProps({
+          onJump: P,
+          listItemProps: b.getItemProps({
             index: n
           })
         }, "search-result-".concat(n))

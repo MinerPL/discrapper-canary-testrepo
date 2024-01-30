@@ -63,14 +63,18 @@ class m extends i.EventEmitter {
             return
           }
           if (i === d.RPCEvents.ERROR) {
-            this.emit("error", new u.default(r.code, r.message)), this.disconnect();
+            this.emit("error", new u.default({
+              errorCode: r.code
+            }, r.message)), this.disconnect();
             return
           }
           this.emit(f(n, i), r);
           return
         }
         let a = null;
-        i === d.RPCEvents.ERROR && (a = new u.default(r.code, r.message), r = null), this.emit(f(n, s), a, r)
+        i === d.RPCEvents.ERROR && (a = new u.default({
+          errorCode: r.code
+        }, r.message), r = null), this.emit(f(n, s), a, r)
       }, g.onclose = g.onerror = e => this.disconnect(e))
     }
   }
@@ -123,7 +127,9 @@ class m extends i.EventEmitter {
           data: n
         }
       } = e;
-      if (t === d.RPCEvents.ERROR) throw new u.default(n.code, n.message);
+      if (t === d.RPCEvents.ERROR) throw new u.default({
+        errorCode: n.code
+      }, n.message);
       return n
     })
   }
