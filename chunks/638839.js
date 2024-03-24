@@ -1,6 +1,6 @@
 "use strict";
-var r = n("911718")("%Object.defineProperty%", !0),
-  i = function() {
+var r = n("20042")("%Object.defineProperty%", !0),
+  a = function() {
     if (r) try {
       return r({}, "a", {
         value: 1
@@ -8,8 +8,8 @@ var r = n("911718")("%Object.defineProperty%", !0),
     } catch (e) {}
     return !1
   };
-i.hasArrayLengthDefineBug = function() {
-  if (!i()) return null;
+a.hasArrayLengthDefineBug = function() {
+  if (!a()) return null;
   try {
     return 1 !== r([], "length", {
       value: 1
@@ -17,4 +17,4 @@ i.hasArrayLengthDefineBug = function() {
   } catch (e) {
     return !0
   }
-}, e.exports = i
+}, e.exports = a
