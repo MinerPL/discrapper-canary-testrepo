@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return d
   },
   getUnauthenticatedReportMenu: function() {
-    return u
+    return o
   },
   submitHeadlessReport: function() {
-    return o
+    return u
   },
   submitReport: function() {
     return c
@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return m
   },
   sendUnauthenticatedReportPincode: function() {
-    return f
-  },
-  verifyUnauthenticatedReport: function() {
     return _
   },
+  verifyUnauthenticatedReport: function() {
+    return f
+  },
   submitReportSecondLook: function() {
-    return h
+    return E
   },
   trackCloseReportModalAnalytics: function() {
     return x
@@ -31,9 +31,9 @@ n.r(t), n.d(t, {
     return p
   },
   areRequiredElementsUnfilled: function() {
-    return g
+    return N
   }
-}), n("70102"), n("808653");
+}), n("70102"), n("808653"), n("222007");
 var a = n("872717"),
   l = n("913144"),
   r = n("716241"),
@@ -42,7 +42,7 @@ var a = n("872717"),
 async function d(e, t) {
   var n;
   let l = v(e),
-    r = await a.default.get({
+    r = await a.HTTP.get({
       url: i.Endpoints.GET_REPORT_MENU(l),
       query: (null == t ? void 0 : t.variant) != null ? {
         variant: t.variant
@@ -51,10 +51,10 @@ async function d(e, t) {
     s = null !== (n = r.body) && void 0 !== n ? n : JSON.parse(r.text);
   return s
 }
-async function u(e, t) {
+async function o(e, t) {
   var n;
-  let l = E(e),
-    r = await a.default.get({
+  let l = h(e),
+    r = await a.HTTP.get({
       url: i.Endpoints.GET_UNAUTHENTICATED_REPORT_MENU(l),
       query: (null == t ? void 0 : t.variant) != null ? {
         variant: t.variant
@@ -63,10 +63,10 @@ async function u(e, t) {
     s = null !== (n = r.body) && void 0 !== n ? n : JSON.parse(r.text);
   return s
 }
-async function o(e, t) {
+async function u(e, t) {
   let n = v(e),
     l = await d(e, t);
-  await a.default.post({
+  await a.HTTP.post({
     url: i.Endpoints.SUBMIT_REPORT_MENU(n),
     body: R(l, e, [{
       nodeRef: l.root_node_id,
@@ -76,22 +76,22 @@ async function o(e, t) {
 }
 
 function c(e, t, n) {
-  return a.default.post({
+  return a.HTTP.post({
     url: i.Endpoints.SUBMIT_REPORT_MENU(v(t)),
     body: R(e, t, n)
   })
 }
 
 function m(e, t, n, l) {
-  let r = E(t);
-  return a.default.post({
+  let r = h(t);
+  return a.HTTP.post({
     url: i.Endpoints.SUBMIT_UNAUTHENTICATED_REPORT_MENU(r),
     body: R(e, t, n, l)
   })
 }
 
-function f(e, t) {
-  return a.default.post({
+function _(e, t) {
+  return a.HTTP.post({
     url: i.Endpoints.SEND_UNAUTHENTICATED_REPORT_PINCODE(e),
     body: {
       name: e,
@@ -99,8 +99,8 @@ function f(e, t) {
     }
   })
 }
-async function _(e, t, n) {
-  let l = await a.default.post({
+async function f(e, t, n) {
+  let l = await a.HTTP.post({
     url: i.Endpoints.VERIFY_UNAUTHENTICATED_REPORT(e),
     body: {
       name: e,
@@ -110,8 +110,8 @@ async function _(e, t, n) {
   });
   return l.body
 }
-async function h(e) {
-  let t = await a.default.post({
+async function E(e) {
+  let t = await a.HTTP.post({
     url: i.Endpoints.SUBMIT_REPORT_SECOND_LOOK,
     body: {
       token: e
@@ -120,7 +120,7 @@ async function h(e) {
   return t.body
 }
 
-function E(e) {
+function h(e) {
   let t = e.name;
   if (!Object.values(s.UnauthenticatedReportNames).includes(t)) throw Error("Invalid report type ".concat(e.name));
   return t
@@ -144,7 +144,7 @@ let R = (e, t, n, a) => {
     guild_scheduled_event_id: void 0,
     user_id: void 0,
     email_token: void 0
-  }, u = {
+  }, o = {
     version: l,
     variant: r,
     language: null != i ? i : "en",
@@ -159,7 +159,12 @@ let R = (e, t, n, a) => {
         ...null != n && {
           [n.name]: Object.keys(n.state)
         },
-        ...a
+        ...Object.fromEntries(Object.entries(null != a ? a : {}).map(e => {
+          let [t, {
+            value: n
+          }] = e;
+          return [t, n]
+        }))
       }
     }, {})
   };
@@ -169,7 +174,7 @@ let R = (e, t, n, a) => {
       id: n
     } = t.record;
     return {
-      ...u,
+      ...o,
       ...d,
       name: t.name,
       channel_id: e,
@@ -181,7 +186,7 @@ let R = (e, t, n, a) => {
       id: e
     } = t.record;
     return {
-      ...u,
+      ...o,
       ...d,
       name: t.name,
       guild_id: e
@@ -193,7 +198,7 @@ let R = (e, t, n, a) => {
       channelId: n
     } = t.record;
     return {
-      ...u,
+      ...o,
       ...d,
       name: t.name,
       channel_id: n,
@@ -206,7 +211,7 @@ let R = (e, t, n, a) => {
       channel_id: a
     } = t.record;
     return {
-      ...u,
+      ...o,
       ...d,
       name: t.name,
       channel_id: a,
@@ -219,21 +224,21 @@ let R = (e, t, n, a) => {
       guild_id: n
     } = t.record;
     return {
-      ...u,
+      ...o,
       ...d,
       name: t.name,
       guild_id: n,
       guild_scheduled_event_id: e
     }
   } else if (t.name === s.ReportNames.USER) return {
-    ...u,
+    ...o,
     ...d,
     name: t.name,
     user_id: t.record.id,
     guild_id: t.contextualGuildId
   };
   else if (t.name === s.UnauthenticatedReportNames.USER) return {
-    ...u,
+    ...o,
     ...d,
     name: t.name,
     user_id: t.record.id,
@@ -241,7 +246,7 @@ let R = (e, t, n, a) => {
     email_token: a
   };
   else if (t.name === s.UnauthenticatedReportNames.MESSAGE) return {
-    ...u,
+    ...o,
     ...d,
     name: t.name,
     message_id: t.record.id,
@@ -271,6 +276,9 @@ function p(e, t) {
   })
 }
 
-function g(e, t, n, a, l) {
-  return e.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || t.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name]) === "")) || (null == n ? void 0 : n.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)
+function N(e, t, n, a, l) {
+  return e.some(e => {
+    var t;
+    return !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name].value) === "" || !(null == a ? void 0 : null === (t = a[e.name]) || void 0 === t ? void 0 : t.isValid))
+  }) || t.some(e => !0 === e.should_submit_data && ((null == a ? void 0 : a[e.name]) == null || (null == a ? void 0 : a[e.name].value) === "")) || (null == n ? void 0 : n.should_submit_data) === !0 && (null == l || 0 === Object.keys(l).length)
 }

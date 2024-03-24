@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   NotchBackground: function() {
-    return _.NotchBackground
+    return h.NotchBackground
   },
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("446674"),
   o = n("773364"),
   u = n("862337"),
@@ -18,12 +18,12 @@ var a = n("37983"),
   c = n("629109"),
   f = n("42887"),
   E = n("945956"),
-  _ = n("230962"),
-  h = n("599110"),
+  h = n("230962"),
+  _ = n("599110"),
   C = n("49111"),
-  I = n("782340"),
-  T = n("626009");
-class S extends s.PureComponent {
+  S = n("782340"),
+  I = n("22940");
+class m extends s.PureComponent {
   componentDidMount() {
     this._initTimeout.start(1e3, this.setupVoiceActivity)
   }
@@ -37,8 +37,8 @@ class S extends s.PureComponent {
       inputVolume: n,
       outputDeviceName: a,
       outputVolume: s,
-      inputMode: i,
-      vadAutoThreshold: l,
+      inputMode: l,
+      vadAutoThreshold: i,
       vadThreshold: r,
       location: o,
       isDeafened: u
@@ -47,13 +47,13 @@ class S extends s.PureComponent {
       isMicTesting: !0,
       isDetectingInput: !0,
       didDeafenUser: d
-    }), h.default.track(C.AnalyticEvents.MIC_TESTING_STARTED, {
+    }), _.default.track(C.AnalyticEvents.MIC_TESTING_STARTED, {
       input_device_name: t,
       input_device_volume: n,
       output_device_name: a,
       output_device_volume: s,
-      input_mode: i,
-      input_sensitivity_is_automatic: l,
+      input_mode: l,
+      input_sensitivity_is_automatic: i,
       input_sensitivity_threshold: Math.round(r),
       location: o
     })
@@ -69,7 +69,7 @@ class S extends s.PureComponent {
     if (!!t) n && a && e && c.default.toggleSelfDeaf(), c.default.setLoopback(!1), this.setState({
       isMicTesting: !1,
       didDeafenUser: !1
-    }), null != this._micTestStartTime && h.default.track(C.AnalyticEvents.MIC_TESTING_STOPPED, {
+    }), null != this._micTestStartTime && _.default.track(C.AnalyticEvents.MIC_TESTING_STOPPED, {
       testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3)
     })
   }
@@ -82,7 +82,7 @@ class S extends s.PureComponent {
       isDetectingInput: s
     } = this.state;
     return (0, a.jsx)(d.FormText, {
-      className: T.micTestCaption,
+      className: I.micTestCaption,
       type: d.FormText.Types.DESCRIPTION,
       children: n ? s ? e : t : null
     })
@@ -93,27 +93,27 @@ class S extends s.PureComponent {
       title: t,
       description: n,
       notchBackground: s,
-      buttonTest: i,
-      buttonStop: l,
+      buttonTest: l,
+      buttonStop: i,
       buttonClassName: r,
       buttonColor: o,
       isDeafened: u
     } = this.props, {
       isMicTesting: c,
       volume: f
-    } = this.state, E = e && !c ? I.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
+    } = this.state, E = e && !c ? S.default.Messages.MIC_TEST_VOICE_CHANNEL_WARNING : null;
     return c && e && !u && this._micTestStop(), (0, a.jsxs)("div", {
-      className: T.container,
+      className: I.container,
       children: [(0, a.jsx)(d.FormTitle, {
         tag: d.FormTitleTags.H5,
-        className: T.title,
+        className: I.title,
         children: t
       }), null != n && (0, a.jsx)(d.FormText, {
         type: d.FormText.Types.DESCRIPTION,
-        className: T.description,
+        className: I.description,
         children: n
       }), (0, a.jsxs)("div", {
-        className: T.micTest,
+        className: I.micTest,
         children: [(0, a.jsx)(d.Tooltip, {
           text: E,
           children: e => {
@@ -129,10 +129,10 @@ class S extends s.PureComponent {
               size: d.Button.Sizes.SMALL,
               className: r,
               color: o,
-              children: c ? l : i
+              children: c ? i : l
             })
           }
-        }), (0, a.jsx)(_.default, {
+        }), (0, a.jsx)(h.default, {
           progress: c ? f + 100 : 0,
           notchBackground: s
         }), this.renderCaption()]
@@ -170,10 +170,10 @@ class S extends s.PureComponent {
     }
   }
 }
-var m = r.default.connectStores([E.default, f.default], () => {
+var p = r.default.connectStores([E.default, f.default], () => {
   let e = f.default.getInputDeviceId(),
     t = f.default.getInputDevices(),
-    n = l.find(t, t => {
+    n = i.find(t, t => {
       let {
         id: n
       } = t;
@@ -181,7 +181,7 @@ var m = r.default.connectStores([E.default, f.default], () => {
     }),
     a = f.default.getOutputDeviceId(),
     s = f.default.getOutputDevices(),
-    i = l.find(s, e => {
+    l = i.find(s, e => {
       let {
         id: t
       } = e;
@@ -197,6 +197,6 @@ var m = r.default.connectStores([E.default, f.default], () => {
     isDeafened: f.default.isSelfDeaf(),
     vadAutoThreshold: r.autoThreshold,
     inputDeviceName: null != n ? n.name : "",
-    outputDeviceName: null != i ? i.name : ""
+    outputDeviceName: null != l ? l.name : ""
   }
-})(S)
+})(m)

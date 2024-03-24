@@ -17,14 +17,14 @@ var a = l("446674"),
   f = l("379385"),
   m = l("644169"),
   S = l("782340"),
-  C = l("524939");
+  C = l("45988");
 
 function E(e) {
   let {
     selectedChannelId: t,
     guildId: l,
     onChangeSelectedChannelId: E
-  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), _ = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), g = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), p = _.map(e => {
+  } = e, h = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()), N = (0, a.useStateFromStores)([i.default, r.default, u.default], () => (0, c.getStreamEligibleChannels)(r.default.getChannels(l), i.default, u.default)), g = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceStates(l)), _ = N.map(e => {
     var l;
     return {
       name: (0, n.jsx)(f.default, {
@@ -49,7 +49,7 @@ function E(e) {
     title: S.default.Messages.GO_LIVE_MODAL_SELECT_CHANNEL_FORM_TITLE,
     scrollerInnerClassName: C.channelSelectScrollerInner,
     children: (0, n.jsx)(s.RadioGroup, {
-      options: p,
+      options: _,
       value: t,
       itemInfoClassName: C.channelInfoWrapper,
       itemTitleClassName: C.channelTitleWrapper,

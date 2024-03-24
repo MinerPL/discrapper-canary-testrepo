@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return R
+    return N
   }
 }), n("70102"), n("860677"), n("506083");
 var s, r, a = n("759843"),
@@ -14,38 +14,37 @@ var s, r, a = n("759843"),
   u = n("95410"),
   d = n("913144"),
   c = n("448993"),
-  f = n("307439"),
-  _ = n("605250"),
-  h = n("21121"),
-  g = n("776502"),
-  m = n("393414"),
-  E = n("271938"),
-  p = n("350522"),
-  v = n("840707"),
+  _ = n("307439"),
+  f = n("605250"),
+  E = n("21121"),
+  h = n("393414"),
+  g = n("271938"),
+  m = n("350522"),
+  p = n("840707"),
   S = n("772017"),
   T = n("49111"),
-  I = n("191349");
-let C = new _.default("AuthenticationActionCreators"),
+  v = n("191349");
+let I = new f.default("AuthenticationActionCreators"),
   A = null;
 
-function y(e) {
+function C(e) {
   let t = {
     type: "LOGOUT",
     ...e
   };
   d.default.dispatch(t).catch(e => {
     var t;
-    throw C.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
+    throw I.error("Error while dispatching LOGOUT", e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e
   })
 }
 
-function N() {
+function y() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.Routes.DEFAULT_LOGGED_OUT;
-  y();
-  let t = (0, h.getRootNavigationRefIfInExperiment)();
-  null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, m.transitionTo)(e))
+  C();
+  let t = (0, E.getRootNavigationRefIfInExperiment)();
+  null != e && (null != t ? (S.default.popAll(), t.navigate("auth")) : (0, h.transitionTo)(e))
 }(r = s || (s = {})).MFA = "MFA", r.SUCCESS = "SUCCESS";
-var R = {
+var N = {
   startSession(e) {
     d.default.wait(() => {
       d.default.dispatch({
@@ -71,13 +70,13 @@ var R = {
       source: o,
       giftCodeSKUId: l,
       invite: u,
-      isMultiAccount: f
+      isMultiAccount: _
     } = e;
     d.default.dispatch({
       type: "LOGIN",
       login: n,
       loginMethod: null != s && "" !== s ? T.LoginMethods.LOGIN_CODE : T.LoginMethods.PASSWORD
-    }), this.setLoginCredentials(n, null !== (t = null != i ? i : s) && void 0 !== t ? t : void 0), v.default.post({
+    }), this.setLoginCredentials(n, null !== (t = null != i ? i : s) && void 0 !== t ? t : void 0), p.default.post({
       url: T.Endpoints.LOGIN,
       body: {
         login: n,
@@ -93,10 +92,10 @@ var R = {
         event: a.NetworkActionNames.USER_LOGIN,
         properties: {
           invite_code: null == u ? void 0 : u.code,
-          is_multi_account: f
+          is_multi_account: _
         }
       },
-      ...f ? {
+      ..._ ? {
         headers: {
           authorization: ""
         }
@@ -126,7 +125,7 @@ var R = {
         webauthn: i,
         totp: u,
         backup: a
-      }) : f ? this.switchAccountToken(r) : d.default.dispatch({
+      }) : _ ? this.switchAccountToken(r) : d.default.dispatch({
         type: "LOGIN_SUCCESS",
         token: r
       })
@@ -169,7 +168,7 @@ var R = {
       isMultiAccount: o,
       mfaType: l
     } = e;
-    return t = "webauthn" === l ? T.Endpoints.LOGIN_WEBAUTHN : "sms" === l ? T.Endpoints.LOGIN_SMS : T.Endpoints.LOGIN_MFA, v.default.post({
+    return t = "webauthn" === l ? T.Endpoints.LOGIN_WEBAUTHN : "sms" === l ? T.Endpoints.LOGIN_SMS : T.Endpoints.LOGIN_MFA, p.default.post({
       url: t,
       body: {
         code: n,
@@ -196,7 +195,7 @@ var R = {
         });
         return
       }
-      if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === T.AbortCodes.MFA_INVALID_CODE) throw Error((0, g.getInvalidMFACodeError)(l));
+      if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === T.AbortCodes.MFA_INVALID_CODE) throw Error(e.body.message);
       throw e
     })
   },
@@ -225,18 +224,18 @@ var R = {
     })
   },
   logoutInternal(e) {
-    y(e)
+    C(e)
   },
   logout() {
     var e;
     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.Routes.DEFAULT_LOGGED_OUT,
       n = arguments.length > 1 ? arguments[1] : void 0;
-    return v.default.post({
+    return p.default.post({
       url: T.Endpoints.LOGOUT,
       body: {
-        provider: (0, I.getDevicePushProvider)(),
+        provider: (0, v.getDevicePushProvider)(),
         token: u.default.get(T.DEVICE_TOKEN),
-        voip_provider: I.DEVICE_PUSH_VOIP_PROVIDER,
+        voip_provider: v.DEVICE_PUSH_VOIP_PROVIDER,
         voip_token: u.default.get(T.DEVICE_VOIP_TOKEN)
       },
       oldFormErrors: !0,
@@ -245,39 +244,39 @@ var R = {
       },
       ...null != n && {
         headers: {
-          authorization: null !== (e = o.default.getToken(n)) && void 0 !== e ? e : ""
+          authorization: null !== (e = o.getToken(n)) && void 0 !== e ? e : ""
         }
       }
     }).finally(() => {
-      (null == n || n === E.default.getId()) && N(t)
+      (null == n || n === g.default.getId()) && y(t)
     })
   },
   switchAccountToken(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-      n = E.default.getToken();
-    C.log("Switching accounts", {
+      n = g.default.getToken();
+    I.log("Switching accounts", {
       wasLoggedIn: null != n,
       tokenHasChanged: e !== n
-    }), y({
+    }), C({
       isSwitchingAccount: !0
     });
     let i = this.loginToken(e, !0).then(() => {
-      let t = E.default.getToken();
-      C.log("Switched accounts finished", {
+      let t = g.default.getToken();
+      I.log("Switched accounts finished", {
         isCorrectToken: e === t
       })
     });
-    return t && (0, m.transitionTo)(T.Routes.ME), i
+    return t && (0, h.transitionTo)(T.Routes.ME), i
   },
   verifySSOToken() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : T.Routes.DEFAULT_LOGGED_OUT;
-    return l.default.get({
+    return l.HTTP.get({
       url: T.Endpoints.ME,
       oldFormErrors: !0
-    }).catch(() => N(e))
+    }).catch(() => y(e))
   },
   verify(e) {
-    null != e ? v.default.post({
+    null != e ? p.default.post({
       url: T.Endpoints.VERIFY,
       body: {
         token: e
@@ -304,7 +303,7 @@ var R = {
   },
   async authorizePayment(e) {
     try {
-      await v.default.post({
+      await p.default.post({
         url: T.Endpoints.AUTHORIZE_PAYMENT,
         body: {
           token: e
@@ -332,7 +331,7 @@ var R = {
       return
     }
     try {
-      await v.default.post({
+      await p.default.post({
         url: T.Endpoints.AUTHORIZE_IP,
         body: {
           token: e
@@ -351,13 +350,30 @@ var R = {
       })
     }
   },
-  verifyResend: () => v.default.post({
+  verifyResend: () => p.default.post({
     url: T.Endpoints.VERIFY_RESEND,
     oldFormErrors: !0,
     trackedActionData: {
       event: a.NetworkActionNames.USER_VERIFY_RESEND
     }
   }),
+  async loginWebAuthn(e) {
+    let {
+      ticket: t,
+      credential: n,
+      source: i,
+      giftCodeSKUId: s
+    } = e, r = await l.HTTP.post({
+      url: T.Endpoints.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+      body: {
+        credential: n,
+        ticket: t,
+        source: i,
+        giftCodeSKUId: s
+      }
+    });
+    return r.body.token
+  },
   async resetPassword(e, t, n) {
     d.default.dispatch({
       type: "LOGIN"
@@ -368,10 +384,10 @@ var R = {
         source: n
       },
       s = u.default.get(T.DEVICE_TOKEN),
-      r = (0, I.getDevicePushProvider)();
+      r = (0, v.getDevicePushProvider)();
     null != r && null != s && (i.push_provider = r, i.push_token = s);
     let o = u.default.get(T.DEVICE_VOIP_TOKEN);
-    null != I.DEVICE_PUSH_VOIP_PROVIDER && null != o && (i.push_voip_provider = I.DEVICE_PUSH_VOIP_PROVIDER, i.push_voip_token = o);
+    null != v.DEVICE_PUSH_VOIP_PROVIDER && null != o && (i.push_voip_provider = v.DEVICE_PUSH_VOIP_PROVIDER, i.push_voip_token = o);
     try {
       let {
         body: {
@@ -383,7 +399,7 @@ var R = {
           backup: o,
           totp: l
         }
-      } = await v.default.post({
+      } = await p.default.post({
         url: T.Endpoints.RESET_PASSWORD,
         body: i,
         oldFormErrors: !0,
@@ -419,7 +435,7 @@ var R = {
     d.default.dispatch({
       type: "LOGIN_MFA"
     });
-    let l = await v.default.post({
+    let l = await p.default.post({
       url: T.Endpoints.RESET_PASSWORD,
       body: {
         code: n,
@@ -444,7 +460,7 @@ var R = {
       type: "FORGOT_PASSWORD_REQUEST"
     });
     try {
-      await v.default.post({
+      await p.default.post({
         url: T.Endpoints.FORGOT_PASSWORD,
         body: {
           login: e
@@ -484,13 +500,13 @@ var R = {
       type: "SET_CONSENT_REQUIRED",
       consentRequired: !0
     })
-  }, 5e3), A = l.default.get({
+  }, 5e3), A = l.HTTP.get({
     url: T.Endpoints.AUTH_LOCATION_METADATA,
     retries: 2,
     oldFormErrors: !0
   }).then(e => {
     var t, n, s, r, a;
-    if (clearTimeout(i), null == p.default.getAuthenticationConsentRequired()) {
+    if (clearTimeout(i), null == m.default.getAuthenticationConsentRequired()) {
       let t = null === (r = null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.consent_required) || void 0 === r || r;
       d.default.dispatch({
         type: "SET_CONSENT_REQUIRED",
@@ -502,7 +518,7 @@ var R = {
         countryCode: null !== (a = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== a ? a : void 0
       }), A = null, (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null) {
       let t = e.body.promotional_email_opt_in;
-      (0, f.setPromoEmailConsentState)({
+      (0, _.setPromoEmailConsentState)({
         required: t.required,
         checked: t.pre_checked,
         preChecked: t.pre_checked

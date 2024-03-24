@@ -12,9 +12,8 @@ var t = E("627445"),
   i = E("713349"),
   I = E("151426"),
   s = E("801340"),
-  T = E("913144");
-E("968027");
-var S = E("275877"),
+  T = E("913144"),
+  S = E("275877"),
   N = E("116949"),
   O = E("397336");
 let A = {
@@ -33,9 +32,9 @@ let A = {
     [O.UserSettingsTypes.PRELOADED_USER_SETTINGS]: A,
     [O.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS]: R
   },
-  L = !1;
+  u = !1;
 
-function u() {
+function L() {
   C()
 }
 
@@ -48,11 +47,11 @@ function C() {
   })
 }
 
-function D(e) {
+function c(e) {
   null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), e.editInfo = (0, O.createEmptyEditInfo)()
 }
 
-function c(e) {
+function D(e) {
   let {
     settings: {
       proto: _,
@@ -62,9 +61,9 @@ function c(e) {
     resetEditInfo: n,
     local: r
   } = e;
-  L = !r;
+  u = !r;
   let a = l[E];
-  n && D(a), t ? (a.proto = (0, N.mergeTopLevelFields)(a.ProtoClass, a.proto, _), o("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = _, o("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
+  n && c(a), t ? (a.proto = (0, N.mergeTopLevelFields)(a.ProtoClass, a.proto, _), o("string" != typeof a.proto, "UserSettingsProto cannot be a string")) : (a.proto = _, o("string" != typeof a.proto, "UserSettingsProto cannot be a string"), a.editInfo.loaded = !0, a.editInfo.loading = !1)
 }
 
 function d(e) {
@@ -107,7 +106,7 @@ class U extends a.default.PersistedStore {
     return R.proto
   }
   get wasMostRecentUpdateFromServer() {
-    return L
+    return u
   }
   getFullState() {
     return l
@@ -150,8 +149,8 @@ var M = new U(T.default, {
     } = e;
     d(_)
   },
-  USER_SETTINGS_PROTO_UPDATE: c,
-  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: c,
+  USER_SETTINGS_PROTO_UPDATE: D,
+  USER_SETTINGS_PROTO_ENQUEUE_UPDATE: D,
   USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function(e) {
     let {
       settings: {
@@ -176,12 +175,12 @@ var M = new U(T.default, {
       isDirty: t,
       cleanupFuncs: n
     } = (0, N.runMigrations)(A.proto, S.default[O.UserSettingsTypes.PRELOADED_USER_SETTINGS]);
-    t && D(A), A.proto = E, o("string" != typeof A.proto, "UserSettingsProto cannot be a string"), A.editInfo.triggeredMigrations = t, A.editInfo.cleanupFuncs = n, A.editInfo.loaded = !0, Object.values(l).forEach(e => {
+    t && c(A), A.proto = E, o("string" != typeof A.proto, "UserSettingsProto cannot be a string"), A.editInfo.triggeredMigrations = t, A.editInfo.cleanupFuncs = n, A.editInfo.loaded = !0, Object.values(l).forEach(e => {
       e.lazyLoaded && (e.editInfo.loaded = !1, e.editInfo.loading = !1)
     }), C()
   },
-  CONNECTION_CLOSED: u,
-  CONNECTION_RESUMED: u,
+  CONNECTION_CLOSED: L,
+  CONNECTION_RESUMED: L,
   OVERLAY_INITIALIZE: function(e) {
     let {
       userSettingsProto: _

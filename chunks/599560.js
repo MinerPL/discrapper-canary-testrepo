@@ -1,33 +1,33 @@
 "use strict";
 s.r(t), s.d(t, {
   fetchStatisticsForApplication: function() {
-    return i
+    return l
   }
 });
 var a = s("872717"),
-  n = s("913144"),
-  l = s("333805"),
-  r = s("49111");
-async function i(e) {
-  n.default.dispatch({
+  r = s("913144"),
+  n = s("333805"),
+  i = s("49111");
+async function l(e) {
+  r.default.dispatch({
     type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_START",
     applicationId: e
   });
   try {
-    let t = await a.default.get({
-        url: r.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
+    let t = await a.HTTP.get({
+        url: i.Endpoints.APPLICATION_ACTIVITY_STATISTICS(e),
         oldFormErrors: !0
       }),
       s = t.body;
-    return n.default.dispatch({
+    return r.default.dispatch({
       type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS",
       statistics: s,
       applicationId: e
     }), s
   } catch (t) {
-    throw n.default.dispatch({
+    throw r.default.dispatch({
       type: "APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL",
       applicationId: e
-    }), new l.default(t)
+    }), new n.default(t)
   }
 }

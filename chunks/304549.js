@@ -11,12 +11,12 @@ var i = n("37983"),
   o = n.n(a),
   l = n("718776"),
   u = n("462977"),
-  d = n("517614");
+  d = n("38879");
 
 function c(e, t, n) {
   let a = (0, u.getScrollbarSpecs)(e),
     c = new Map,
-    f = new n(e => {
+    _ = new n(e => {
       e.forEach(e => {
         var t;
         let {
@@ -25,56 +25,56 @@ function c(e, t, n) {
         null === (t = c.get(n)) || void 0 === t || t(e)
       })
     });
-  return (0, s.forwardRef)(function(n, _) {
+  return (0, s.forwardRef)(function(n, f) {
     let {
-      onScroll: h,
-      dir: g = "ltr",
-      sections: m,
-      columns: E,
+      onScroll: E,
+      dir: h = "ltr",
+      sections: g,
+      columns: m,
       getItemKey: p,
-      getItemHeight: v,
-      getSectionHeight: S,
-      chunkSize: T,
+      getItemHeight: S,
+      getSectionHeight: T,
+      chunkSize: v,
       renderSection: I,
-      renderItem: C,
-      getSectionProps: A,
+      renderItem: A,
+      getSectionProps: C,
       itemGutter: y,
       removeEdgeItemGutters: N,
       sectionGutter: R,
       padding: O,
       paddingVertical: D,
       paddingHorizontal: P,
-      fade: b = !1,
-      className: L,
-      style: M,
+      fade: L = !1,
+      className: M,
+      style: b,
       ...U
-    } = n, k = r.useRef(null), w = r.useRef(null), [V, G] = r.useState(!1), {
+    } = n, w = r.useRef(null), k = r.useRef(null), [V, G] = r.useState(!1), {
       scrollerRef: F,
       scrollerState: x,
       getScrollerState: B
     } = (0, u.useCachedScrollerState)();
     (0, u.usePaddingFixes)({
       scrollerRef: F,
-      className: L,
+      className: M,
       specs: a,
       orientation: "vertical",
-      dir: g
+      dir: h
     });
     let {
       forceUpdateOnChunkChange: H,
       coordsMap: Y,
-      gridData: j,
-      visibleSections: W,
-      totalHeight: K,
+      gridData: K,
+      visibleSections: j,
+      totalHeight: W,
       forceUpdate: z,
       masonryComputer: q
     } = (0, u.useVirtualizedMasonryState)({
-      sections: m,
-      columns: E,
+      sections: g,
+      columns: m,
       getItemKey: p,
-      getItemHeight: v,
-      getSectionHeight: S,
-      chunkSize: T,
+      getItemHeight: S,
+      getSectionHeight: T,
+      chunkSize: v,
       itemGutter: y,
       removeEdgeItemGutters: N,
       sectionGutter: R,
@@ -82,7 +82,7 @@ function c(e, t, n) {
       paddingVertical: D,
       paddingHorizontal: P,
       getScrollerState: B,
-      dir: g
+      dir: h
     }), X = (0, s.useCallback)(function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
       e > x.current.dirty && (x.current.dirty = e, 2 === e ? z() : H(1))
@@ -91,9 +91,9 @@ function c(e, t, n) {
       ref: F,
       key: "container",
       onUpdate: $,
-      resizeObserver: f,
+      resizeObserver: _,
       listenerMap: c
-    }), (0, s.useImperativeHandle)(_, () => ({
+    }), (0, s.useImperativeHandle)(f, () => ({
       getScrollerNode: () => F.current,
       getItemGrid: Z,
       getCoordsMap: J,
@@ -101,45 +101,45 @@ function c(e, t, n) {
       ...(0, u.getAnimatedScrollHelpers)(F, B, Q)
     }), [F, B, Z, Q, J]);
     let ee = (0, s.useCallback)(e => {
-      X(1), null == k.current ? G(!0) : clearTimeout(k.current), k.current = setTimeout(() => {
-        k.current = null, G(!1)
-      }, 200), null != h && h(e)
-    }, [h, X]);
+      X(1), null == w.current ? G(!0) : clearTimeout(w.current), w.current = setTimeout(() => {
+        w.current = null, G(!1)
+      }, 200), null != E && E(e)
+    }, [E, X]);
     return (0, i.jsx)("div", {
       ref: F,
       onScroll: ee,
-      className: o(L, {
+      className: o(M, {
         [e]: !0,
-        [t]: b,
+        [t]: L,
         [d.scrolling]: V
       }),
-      style: (0, u.getMergedOrientationStyles)(M),
+      style: (0, u.getMergedOrientationStyles)(b),
       ...U,
       children: (0, s.useMemo)(() => (0, i.jsx)(l.FocusRingScope, {
-        containerRef: w,
+        containerRef: k,
         children: (0, i.jsx)("div", {
           style: {
-            height: K
+            height: W
           },
           className: d.content,
-          ref: w,
-          children: Object.keys(W).map(e => {
+          ref: k,
+          children: Object.keys(j).map(e => {
             let t = (0, u.getMasonryListSectionIndex)(e),
               n = Y[e],
-              s = W[e],
+              s = j[e],
               r = Y[(0, u.getMasonryListSectionHeaderKey)(t)],
-              a = null == A ? void 0 : A(t);
+              a = null == C ? void 0 : C(t);
             return null != n && null != s ? (0, i.jsxs)("div", {
               style: n,
               ...a,
               children: [null != I && null != r && I(t, r, e), s.map(e => {
                 let [t, n, i] = e, s = Y[t];
-                return null != s ? C(n, i, s, t, j) : null
+                return null != s ? A(n, i, s, t, K) : null
               })]
             }, e) : null
           })
         })
-      }), [W, C, I, Y, K, A, j])
+      }), [j, A, I, Y, W, C, K])
     })
   })
 }

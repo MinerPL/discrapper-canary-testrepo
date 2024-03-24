@@ -10,7 +10,7 @@ var l = a("37983"),
   i = a.n(s),
   d = a("77078"),
   r = a("333987"),
-  u = a("975802"),
+  u = a("77810"),
   o = n.forwardRef(function(e, t) {
     let {
       className: a,
@@ -23,7 +23,7 @@ var l = a("37983"),
       itemId: E,
       selected: g,
       ...I
-    } = e, [_, x] = (0, r.default)(t), v = n.useRef(null);
+    } = e, [_, x] = (0, r.default)(t), S = n.useRef(null);
     return (0, l.jsxs)("div", {
       ref: x,
       className: i(u.card, u.interactiveCard, {
@@ -35,7 +35,7 @@ var l = a("37983"),
       ...I,
       children: [(0, l.jsx)(d.Clickable, {
         className: u.clickableTarget,
-        innerRef: v,
+        innerRef: S,
         "aria-label": o,
         onClick: m,
         ...h

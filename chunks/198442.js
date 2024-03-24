@@ -32,7 +32,7 @@ var l = n("37983"),
   R = n("255991"),
   M = n("49111"),
   O = n("782340"),
-  y = n("789978");
+  y = n("99725");
 let D = {
   analyticsSource: {
     page: M.AnalyticsPages.GUILD_CHANNEL,
@@ -53,157 +53,157 @@ function b(e, t) {
   })
 }
 var j = a.memo(function(e) {
-  var t, n, s, h, M;
+  var t, n, s, h, j;
   let {
-    guildNode: j,
-    setRef: G,
-    onDragStart: U,
-    onDragEnd: P,
-    route: w,
-    guild: F,
-    animatable: B,
-    selected: V = !1,
-    unread: H = !1,
-    mediaState: k,
-    unavailable: Y = !1,
-    badge: K = 0,
-    contextMenu: W = b,
-    draggable: Z = !1,
-    sorting: z = !1,
-    preloadOnClick: X = !0,
-    guildJoinRequestStatus: Q
+    guildNode: G,
+    setRef: U,
+    onDragStart: P,
+    onDragEnd: w,
+    route: F,
+    guild: B,
+    animatable: V,
+    selected: H = !1,
+    unread: k = !1,
+    mediaState: Y,
+    unavailable: K = !1,
+    badge: W = 0,
+    contextMenu: Z = b,
+    draggable: z = !1,
+    sorting: X = !1,
+    preloadOnClick: Q = !0,
+    guildJoinRequestStatus: q
   } = e, {
-    id: q,
-    parentId: J
-  } = j, $ = null !== (t = e.upperBadge) && void 0 !== t ? t : Y ? (0, R.renderUnavailableBadge)() : null != k ? (0, R.renderMediaBadge)(k) : void 0, ee = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
-  null == ee && K > 0 ? ee = null !== (s = (0, R.renderMentionBadge)(K)) && void 0 !== s ? s : void 0 : null == ee && null != Q && (ee = null !== (h = (0, R.renderGuildJoinRequestBadge)({
-    guildJoinRequestStatus: Q
+    id: J,
+    parentId: $
+  } = G, ee = null !== (t = e.upperBadge) && void 0 !== t ? t : K ? (0, R.renderUnavailableBadge)() : null != Y ? (0, R.renderMediaBadge)(Y) : void 0, et = null !== (n = e.lowerBadge) && void 0 !== n ? n : void 0;
+  null == et && W > 0 ? et = null !== (s = (0, R.renderMentionBadge)(W)) && void 0 !== s ? s : void 0 : null == et && null != q && (et = null !== (h = (0, R.renderGuildJoinRequestBadge)({
+    guildJoinRequestStatus: q
   })) && void 0 !== h ? h : void 0);
-  let et = null !== (M = e.lowerBadgeWidth) && void 0 !== M ? M : (0, S.getBadgeWidthForValue)(K),
+  let en = null !== (j = e.lowerBadgeWidth) && void 0 !== j ? j : (0, S.getBadgeWidthForValue)(W),
     [{
-      dragging: en
-    }, el] = (0, r.useDrag)({
+      dragging: el
+    }, ea] = (0, r.useDrag)({
       type: N.GuildsNodeType.GUILD,
       item: () => (requestAnimationFrame(() => {
-        null == U || U()
+        null == P || P()
       }), {
-        type: j.type,
-        nodeId: j.id
+        type: G.type,
+        nodeId: G.id
       }),
       end() {
-        null == P || P(), (0, C.saveGuildFolders)(g.default.getCompatibleGuildFolders())
+        null == w || w(), (0, C.saveGuildFolders)(g.default.getCompatibleGuildFolders())
       },
       collect: e => ({
         dragging: e.isDragging()
       })
     }),
-    ea = (0, o.useTreeItem)(null != q ? q : ""),
-    [es, ei] = a.useState(!1),
-    er = !z && es,
-    [eo, eu] = a.useState(!1),
-    [ed, ec] = a.useState(!1),
-    [ef] = a.useState(() => new d.DelayedCall(70, () => ec(!0)));
-  a.useEffect(() => () => ef.cancel(), [ef]);
-  let eh = a.useCallback(() => {
-      if (null != w) {
-        (0, p.transitionTo)(w, {
+    es = (0, o.useTreeItem)(null != J ? J : M.EMPTY_STRING_SNOWFLAKE_ID),
+    [ei, er] = a.useState(!1),
+    eo = !X && ei,
+    [eu, ed] = a.useState(!1),
+    [ec, ef] = a.useState(!1),
+    [eh] = a.useState(() => new d.DelayedCall(70, () => ef(!0)));
+  a.useEffect(() => () => eh.cancel(), [eh]);
+  let eC = a.useCallback(() => {
+      if (null != F) {
+        (0, p.transitionTo)(F, {
           state: D
         });
         return
-      }(0, m.transitionToGuild)(q, {
+      }(0, m.transitionToGuild)(J, {
         state: D
       })
-    }, [q, w]),
-    eC = a.useCallback(() => {
-      if (null != w || null == F || Y || !X) return;
-      let e = (0, m.getChannelIdForGuildTransition)(F.id);
-      null != e && f.default.preload(F.id, e)
-    }, [w, F, Y, X]),
-    ep = (0, u.default)([E.default], () => E.default.isCurrentUserGuest(q)),
-    em = a.useCallback(e => {
-      null != F && !ep && W(e, F)
-    }, [F, W, ep]),
+    }, [J, F]),
+    ep = a.useCallback(() => {
+      if (null != F || null == B || K || !Q) return;
+      let e = (0, m.getChannelIdForGuildTransition)(B.id);
+      null != e && f.default.preload(B.id, e)
+    }, [F, B, K, Q]),
+    em = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest(J)),
     eE = a.useCallback(e => {
-      if ("ArrowLeft" === e.key && null != J) {
-        var t;
-        null === (t = document.querySelector("[aria-owns=folder-items-".concat(J, "]"))) || void 0 === t || t.focus()
-      }
-    }, [J]),
+      null != B && !em && Z(e, B)
+    }, [B, Z, em]),
     eg = a.useCallback(e => {
+      if ("ArrowLeft" === e.key && null != $) {
+        var t;
+        null === (t = document.querySelector("[aria-owns=folder-items-".concat($, "]"))) || void 0 === t || t.focus()
+      }
+    }, [$]),
+    eI = a.useCallback(e => {
       if (e) {
-        ef.delay();
+        eh.delay();
         return
       }
-      ef.cancel(), ec(!1)
-    }, [ef]),
-    eI = a.useCallback(e => {
-      null == G || G(q, e)
-    }, [q, G]);
-  if (null == F) return null;
-  let eS = ed || eo ? (0, l.jsx)(T.default, {
-      guild: F,
-      show: ed,
-      active: V,
+      eh.cancel(), ef(!1)
+    }, [eh]),
+    eS = a.useCallback(e => {
+      null == U || U(J, e)
+    }, [J, U]);
+  if (null == B) return null;
+  let e_ = ec || eu ? (0, l.jsx)(T.default, {
+      guild: B,
+      show: ec,
+      active: H,
       onAnimationStart: function() {
-        eu(ed)
+        ed(ec)
       },
       onAnimationRest: function() {
-        ed || eu(!1)
+        ec || ed(!1)
       }
     }) : (0, l.jsx)(_.default, {
       ariaLabel: O.default.Messages.GUILD_TOOLTIP_A11Y_LABEL.format({
-        guildName: F.toString(),
-        mentions: K
+        guildName: B.toString(),
+        mentions: W
       }),
-      name: F.toString(),
-      onClick: eh,
+      name: B.toString(),
+      onClick: eC,
       onMouseEnter: function() {
-        z || ei(!0)
+        X || er(!0)
       },
       onMouseLeave: function() {
-        z || ei(!1)
+        X || er(!1)
       },
-      onMouseDown: eC,
-      onContextMenu: em,
-      onKeyDown: eE,
-      icon: F.getIconURL(96, er && B),
-      selected: V || er,
-      ...ea,
+      onMouseDown: ep,
+      onContextMenu: eE,
+      onKeyDown: eg,
+      icon: B.getIconURL(96, eo && V),
+      selected: H || eo,
+      ...es,
       role: "treeitem"
     }),
-    e_ = en ? (0, l.jsx)(A.PlaceholderDropTarget, {
+    eN = el ? (0, l.jsx)(A.PlaceholderDropTarget, {
       children: (0, l.jsx)(v.default, {})
     }) : (0, l.jsx)("div", {
-      ref: Z ? el : void 0,
-      "data-dnd-name": F.toString(),
+      ref: z ? ea : void 0,
+      "data-dnd-name": B.toString(),
       className: i(y.blobContainer, {
-        [y.sorting]: z,
-        [y.wobble]: ed,
-        [y.selected]: ed || V
+        [y.sorting]: X,
+        [y.wobble]: ec,
+        [y.selected]: ec || H
       }),
       children: (0, l.jsx)(c.BlobMask, {
-        selected: ed || V || er,
-        upperBadge: $,
-        lowerBadge: ee,
-        lowerBadgeWidth: et,
-        children: eS
+        selected: ec || H || eo,
+        upperBadge: ee,
+        lowerBadge: et,
+        lowerBadgeWidth: en,
+        children: e_
       })
     });
   return (0, l.jsxs)(x.ListItem, {
-    ref: eI,
+    ref: eS,
     children: [(0, l.jsx)(I.default, {
-      hovered: !en && er,
-      selected: !en && V,
-      unread: !en && H,
+      hovered: !el && eo,
+      selected: !el && H,
+      unread: !el && k,
       className: y.pill
     }), (0, l.jsx)(L.default, {
-      guild: F,
-      disabled: z,
-      children: e_
-    }), Z ? (0, l.jsx)(A.default, {
-      name: F.name,
-      targetNode: j,
-      onDragOverChanged: eg
+      guild: B,
+      disabled: X,
+      children: eN
+    }), z ? (0, l.jsx)(A.default, {
+      name: B.name,
+      targetNode: G,
+      onDragOverChanged: eI
     }) : null]
   })
 })

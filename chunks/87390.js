@@ -26,7 +26,7 @@ var n = l("37983"),
   O = l("674916"),
   _ = l("49111"),
   A = l("782340"),
-  C = l("40489");
+  C = l("897577");
 let x = e => {
   if (null == e) return null;
   let t = new I.default(e);
@@ -55,7 +55,7 @@ function M(e) {
   a.useEffect(() => () => b.stop(), [b]);
   let P = a.useMemo(() => R(l, l.avatar), [l]),
     D = a.useCallback(() => {
-      let e = "".concat(r.default.getAPIBaseURL(!1)).concat(_.Endpoints.WEBHOOK_INTEGRATION(l.id, l.token));
+      let e = "".concat((0, r.getAPIBaseURL)(!1)).concat(_.Endpoints.WEBHOOK_INTEGRATION(l.id, l.token));
       (0, g.copy)(e)
     }, [l]),
     y = a.useCallback(() => {
@@ -123,7 +123,9 @@ function M(e) {
             makeURL: e => R(l, e),
             imageClassName: C.avatarUploaderInner,
             showIcon: !0
-          }), null != M.avatar && "" !== M.avatar ? (0, n.jsx)(n.Fragment, {
+          }), null != M.avatar && "" !== M.avatar ? (0, n.jsx)(d.Text, {
+            color: "text-danger",
+            variant: "text-sm/normal",
             children: M.avatar
           }) : null]
         })

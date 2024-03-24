@@ -24,7 +24,7 @@ var s = l("37983"),
   I = l("653138"),
   v = l("49111"),
   O = l("782340"),
-  j = l("710362");
+  j = l("423789");
 
 function R(e, t) {
   return (0, s.jsx)("span", {
@@ -41,7 +41,7 @@ function b(e) {
   }).includeRules
 }
 
-function C(e) {
+function S(e) {
   let {
     headerId: t,
     guild: l,
@@ -53,14 +53,14 @@ function C(e) {
     gotoPrevPrompt: f,
     gotoNextPrompt: g,
     completeOnboarding: N
-  } = e, I = (0, a.useStateFromStoresArray)([h.default], () => h.default.getOnboardingResponsesForPrompt(l.id, d.id)), v = 0 === I.length && (null == d ? void 0 : d.required), b = null == d ? void 0 : d.options.filter(e => I.includes(e.id)), C = (0, x.getSelectedRoleIds)(b), S = (0, x.getSelectedChannelIds)(b), T = 0 === I.length, {
+  } = e, I = (0, a.useStateFromStoresArray)([h.default], () => h.default.getOnboardingResponsesForPrompt(l.id, d.id)), v = 0 === I.length && (null == d ? void 0 : d.required), b = null == d ? void 0 : d.options.filter(e => I.includes(e.id)), S = (0, x.getSelectedRoleIds)(b), C = (0, x.getSelectedChannelIds)(b), T = 0 === I.length, {
     helpText: _,
     helpTextAdditional: M
   } = (0, p.default)({
     guild: l,
     prompt: d,
-    selectedRoleIds: C,
-    selectedChannelIds: S,
+    selectedRoleIds: S,
+    selectedChannelIds: C,
     itemHook: R
   }), B = (0, u.default)(l.id, 1e3), D = d.options.map(e => ({
     value: e.id,
@@ -179,7 +179,7 @@ function C(e) {
   })
 }
 
-function S(e) {
+function C(e) {
   let {
     headerId: t,
     guild: l,
@@ -191,14 +191,14 @@ function S(e) {
     gotoPrevPrompt: m,
     gotoNextPrompt: f,
     completeOnboarding: g
-  } = e, E = (0, a.useStateFromStoresArray)([h.default], () => h.default.getOnboardingResponsesForPrompt(l.id, d.id)), I = 0 === E.length && (null == d ? void 0 : d.required), v = null == d ? void 0 : d.options.filter(e => E.includes(e.id)), b = (0, x.getSelectedRoleIds)(v), C = (0, x.getSelectedChannelIds)(v), S = 0 === E.length, {
+  } = e, E = (0, a.useStateFromStoresArray)([h.default], () => h.default.getOnboardingResponsesForPrompt(l.id, d.id)), I = 0 === E.length && (null == d ? void 0 : d.required), v = null == d ? void 0 : d.options.filter(e => E.includes(e.id)), b = (0, x.getSelectedRoleIds)(v), S = (0, x.getSelectedChannelIds)(v), C = 0 === E.length, {
     helpText: T,
     helpTextAdditional: _
   } = (0, p.default)({
     guild: l,
     prompt: d,
     selectedRoleIds: b,
-    selectedChannelIds: C,
+    selectedChannelIds: S,
     itemHook: R
   });
   return (0, s.jsx)("div", {
@@ -283,7 +283,7 @@ function S(e) {
                 size: r.Button.Sizes.MEDIUM,
                 look: r.Button.Looks.FILLED,
                 grow: !1,
-                color: S ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
+                color: C ? r.Button.Colors.PRIMARY : r.Button.Colors.BRAND,
                 children: i ? (0, s.jsxs)(s.Fragment, {
                   children: [O.default.Messages.FINISH, (0, s.jsx)("span", {
                     className: j.finishEmoji,
@@ -292,7 +292,7 @@ function S(e) {
                     children: "\uD83C\uDF89"
                   })]
                 }) : (0, s.jsxs)(s.Fragment, {
-                  children: [S ? O.default.Messages.SKIP : O.default.Messages.NEXT, (0, s.jsx)(c.default, {
+                  children: [C ? O.default.Messages.SKIP : O.default.Messages.NEXT, (0, s.jsx)(c.default, {
                     className: j.arrow,
                     direction: c.default.Directions.RIGHT
                   })]
@@ -316,7 +316,7 @@ function T(e) {
     setCurrentStep: g,
     headerId: h,
     disableTracking: x
-  } = e, p = (0, a.default)([d.default], () => d.default.getRulesPrompt(t.id));
+  } = e, p = (0, a.useStateFromStores)([d.default], () => d.default.getRulesPrompt(t.id));
   n.useEffect(() => {
     o.default.fetchVerificationForm(t.id)
   }, [t.id]);
@@ -363,7 +363,7 @@ function T(e) {
   if (null == N) return null;
   switch (N.type) {
     case I.OnboardingPromptType.MULTIPLE_CHOICE:
-      return (0, s.jsx)(S, {
+      return (0, s.jsx)(C, {
         guild: t,
         headerId: h,
         step: r,
@@ -376,7 +376,7 @@ function T(e) {
         completeOnboarding: c
       });
     case I.OnboardingPromptType.DROPDOWN:
-      return (0, s.jsx)(C, {
+      return (0, s.jsx)(S, {
         guild: t,
         headerId: h,
         step: r,

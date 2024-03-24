@@ -15,28 +15,28 @@ var a = s("37983"),
   c = s("79112"),
   S = s("642950"),
   E = s("158645"),
-  f = s("917454"),
-  T = s("10641"),
-  m = s("102985"),
-  _ = s("697218"),
+  T = s("917454"),
+  f = s("10641"),
+  _ = s("102985"),
+  m = s("697218"),
   g = s("104359"),
   h = s("945330"),
-  I = s("216947"),
-  N = s("267675"),
+  N = s("216947"),
+  I = s("267675"),
   p = s("449008"),
   C = s("49111"),
   A = s("994428"),
   O = s("782340"),
-  x = s("738318");
+  x = s("37082");
 
 function R() {
   let e;
   let {
     currentSession: t,
     otherSessions: s
-  } = (0, f.useAuthSessions)(), l = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), i = (0, r.useStateFromStores)([_.default], () => _.default.getCurrentUser()), [c, g] = n.useState(!1);
+  } = (0, T.useAuthSessions)(), l = (0, r.useStateFromStores)([_.default], () => _.default.hidePersonalInformation), i = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), [c, g] = n.useState(!1);
   n.useEffect(() => {
-    (0, T.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
+    (0, f.markDismissibleContentAsDismissed)(d.DismissibleContent.AUTH_SESSIONS_NEW, {
       dismissAction: A.ContentDismissActionType.AUTO
     }), (0, E.fetchAuthSessions)();
     let e = setTimeout(() => g(!0), 500);
@@ -45,11 +45,11 @@ function R() {
     }
   }, []);
   let h = () => {
-      o.default.post({
+      o.HTTP.post({
         url: C.Endpoints.AUTH_SESSION_NOTIFICATIONS_DEBUG
       })
     },
-    [I, N] = n.useState(new Set);
+    [N, I] = n.useState(new Set);
   return l ? (0, a.jsx)(S.default, {}) : (e = null == t && 0 === s.length ? c ? (0, a.jsx)("div", {
     className: x.loading,
     children: (0, a.jsx)(u.Spinner, {})
@@ -71,17 +71,17 @@ function R() {
         className: x.otherSessions,
         children: [s.map(e => (0, a.jsx)(M, {
           session: e,
-          useChecks: I.size > 0,
-          checked: I.has(e.id_hash),
+          useChecks: N.size > 0,
+          checked: N.has(e.id_hash),
           setChecked: t => {
-            let s = new Set(I);
-            t ? s.add(e.id_hash) : s.delete(e.id_hash), N(s)
+            let s = new Set(N);
+            t ? s.add(e.id_hash) : s.delete(e.id_hash), I(s)
           }
-        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(v, {})]
+        }, e.id_hash)), (null == i ? void 0 : i.mfaEnabled) ? null : (0, a.jsx)(D, {})]
       })]
     }), s.length > 0 ? (0, a.jsxs)(u.FormSection, {
       tag: u.FormTitleTags.H5,
-      title: I.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
+      title: N.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_TITLE : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_TITLE,
       children: [(0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
         children: O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_DESCRIPTION
@@ -91,10 +91,10 @@ function R() {
         size: u.Button.Sizes.SMALL,
         className: x.logOutAllButton,
         onClick: () => {
-          I.size > 0 ? (0, E.logOutSessions)(Array.from(I)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
+          N.size > 0 ? (0, E.logOutSessions)(Array.from(N)) : (0, E.logOutSessions)(s.map(e => e.id_hash))
         },
-        children: I.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
-          count: I.size
+        children: N.size > 0 ? O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_SELECTED_ACTION.format({
+          count: N.size
         }) : O.default.Messages.AUTH_SESSIONS_OTHERS_LOG_OUT_ACTION
       })]
     }) : null]
@@ -144,8 +144,8 @@ function M(e) {
     current: d,
     setChecked: c,
     checked: S,
-    useChecks: T
-  } = e, m = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, _ = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
+    useChecks: f
+  } = e, _ = null !== (r = null === (t = o.client_info) || void 0 === t ? void 0 : t.location) && void 0 !== r ? r : null === (s = o.client_info) || void 0 === s ? void 0 : s.ip, m = null === (n = o.client_info) || void 0 === n ? void 0 : n.platform, {
     text: g,
     icon: C
   } = function(e) {
@@ -154,26 +154,26 @@ function M(e) {
       case void 0:
       case "":
         return {
-          text: O.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: N.default
+          text: O.default.Messages.AUTH_SESSIONS_OS_UNKNOWN, icon: I.default
         };
       case "ios":
       case "android":
         return {
-          text: e, icon: I.default
+          text: e, icon: N.default
         };
       default:
         return {
-          text: e, icon: N.default
+          text: e, icon: I.default
         }
     }
-  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, f.formatDate)(o.approx_last_used_time), R = [g, _].filter(p.isNotNullish), M = [m, A].filter(p.isNotNullish), v = (0, u.useRedesignIconContext)().enabled, D = v ? 24 : 32;
+  }(null === (l = o.client_info) || void 0 === l ? void 0 : l.os), A = d ? null : (0, T.formatDate)(o.approx_last_used_time), R = [g, m].filter(p.isNotNullish), M = [_, A].filter(p.isNotNullish), D = (0, u.useRedesignIconContext)().enabled, v = D ? 24 : 32;
   return (0, a.jsxs)("div", {
     className: i(x.session, d ? x.currentSession : null),
     children: [(0, a.jsx)("div", {
       className: x.sessionIcon,
       children: (0, a.jsx)(C, {
-        width: D,
-        height: D
+        width: v,
+        height: v
       })
     }), (0, a.jsxs)("div", {
       className: x.sessionInfo,
@@ -202,7 +202,7 @@ function M(e) {
           })]
         })]
       })]
-    }), d ? null : T ? (0, a.jsx)("div", {
+    }), d ? null : f ? (0, a.jsx)("div", {
       className: x.sessionCheckbox,
       children: (0, a.jsx)(u.Checkbox, {
         onChange: (e, t) => {
@@ -221,7 +221,7 @@ function M(e) {
   }, o.id_hash)
 }
 
-function v() {
+function D() {
   return (0, a.jsxs)("div", {
     className: i(x.session, x.legacySession),
     children: [(0, a.jsx)("div", {

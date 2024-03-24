@@ -7,47 +7,48 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   s = n("669491"),
-  l = n("77078"),
-  i = n("462274"),
+  i = n("77078"),
+  l = n("462274"),
   u = n("181832"),
   o = n("981184"),
   d = n("506885"),
   c = n("217513"),
   f = n("845579"),
-  h = n("249941"),
+  h = n("49111"),
+  E = n("491595"),
   p = function(e) {
     let {
       style: t,
       src: n,
       backgroundSrc: p,
-      userId: E,
+      userId: m,
       pulseSpeakingIndicator: C = !1,
-      speaking: m = !1,
-      ...S
-    } = e, g = null != p ? p : n, _ = (0, i.default)(g, s.default.unsafe_rawColors.PRIMARY_800.css), T = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, v = (0, c.default)(null != E ? E : ""), A = null == v ? void 0 : v.getBannerURL({
+      speaking: S = !1,
+      ...g
+    } = e, _ = null != p ? p : n, T = (0, l.default)(_, s.default.unsafe_rawColors.PRIMARY_800.css), v = (0, u.useCallBannerBackgroundExperiment)(!0, "VideoBackground-web").enabled, I = (0, c.default)(null != m ? m : h.EMPTY_STRING_SNOWFLAKE_ID), A = null == I ? void 0 : I.getBannerURL({
       size: 1024,
       canAnimate: f.GifAutoPlay.getSetting()
     });
     if (r.useEffect(() => {
-        null != E && T && (0, d.default)(E, void 0, {
+        null != m && v && (0, d.default)(m, void 0, {
           dispatchWait: !0
         })
-      }, [T, E]), null == n) return null;
-    let I = (0, a.jsx)(l.Avatar, {
-        className: h.avatarWrapper,
+      }, [v, m]), null == n) return null;
+    let M = (0, a.jsx)(i.Avatar, {
+        className: E.avatarWrapper,
         src: n,
-        ...S
+        ...g
       }),
-      M = {
+      R = {
         ...t,
-        backgroundColor: _
+        backgroundColor: T
       };
-    return null != A && m && T && (M.backgroundImage = "url(".concat(A, ")"), M.backgroundSize = "cover"), (0, a.jsx)("div", {
-      style: M,
-      className: h.background,
+    return null != A && S && v && (R.backgroundImage = "url(".concat(A, ")"), R.backgroundSize = "cover"), (0, a.jsx)("div", {
+      style: R,
+      className: E.background,
       children: C ? (0, a.jsx)(o.default, {
-        shouldAnimate: m,
-        children: I
-      }) : I
+        shouldAnimate: S,
+        children: M
+      }) : M
     })
   }

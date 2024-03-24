@@ -7,85 +7,85 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   r = n("884691"),
   a = n("77078"),
-  l = n("635357"),
-  i = n("742926"),
+  i = n("635357"),
+  l = n("742926"),
   u = n("659632"),
   c = n("210721"),
-  o = n("78345"),
-  d = n("53253"),
-  f = n("65324"),
+  o = n("53253"),
+  d = n("65324"),
   m = n("563613"),
-  _ = n("64798"),
-  E = n("646718"),
-  I = n("782340"),
-  p = n("734203");
-let N = [o.PremiumGiftStyles.STANDARD_BOX, o.PremiumGiftStyles.CAKE, o.PremiumGiftStyles.COFFEE, o.PremiumGiftStyles.CHEST],
-  S = () => {
-    let {
-      giftRecipient: e,
-      selectedGiftStyle: t,
-      setSelectedGiftStyle: n,
-      emojiConfetti: o,
-      soundEffect: S,
-      setEmojiConfetti: T,
-      setSoundEffect: P
-    } = (0, l.useGiftContext)(), [C, A] = r.useState(!1), O = r.useRef(null), h = (0, a.useRadioGroup)({
-      orientation: "horizontal"
-    }), R = (0, u.getGiftExperience)(e, !0, "premiumGiftSelect_GiftAnimationOptions"), g = u.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(R), M = R !== u.GiftExperience.DEFAULT, v = (0, d.useIsSeasonalGiftingActive)(), {
-      enabled: x
-    } = d.default.useExperiment({
-      location: "premiumGiftSelect_GiftAnimationOptions"
-    }, {
-      autoTrackExposure: v
-    }), L = null;
-    return M && (L = v && x ? E.SeasonalGiftStyles2023 : N), (0, s.jsxs)("div", {
-      children: [M && (0, s.jsxs)("div", {
-        className: p.giftMainAnimation,
-        children: [null != t ? (0, s.jsx)(f.default, {
-          giftStyle: t,
-          defaultAnimationState: c.AnimationState.ACTION,
-          idleAnimationState: c.AnimationState.LOOP,
-          shouldAnimate: !0,
-          className: p.animation
-        }) : (0, s.jsx)(a.Spinner, {
-          className: p.spinner
-        }), g && (0, s.jsxs)("div", {
-          className: p.soundEmojiContainer,
-          children: [(0, s.jsx)("div", {
-            className: p.sound,
-            children: (0, s.jsx)(i.default, {
-              sound: S,
-              onSelect: e => {
-                null != P && P(null == e ? void 0 : e)
-              }
-            })
-          }), (0, s.jsx)("div", {
-            className: p.emoji,
-            children: (0, s.jsx)(m.default, {
-              setEmojiConfetti: T,
-              emojiConfetti: null == o ? void 0 : o
-            })
-          })]
+  f = n("64798"),
+  p = n("646718"),
+  _ = n("782340"),
+  I = n("421404");
+let S = e => {
+  let {
+    isShopGift: t
+  } = e, {
+    giftRecipient: n,
+    selectedGiftStyle: S,
+    setSelectedGiftStyle: E,
+    emojiConfetti: P,
+    soundEffect: T,
+    setEmojiConfetti: N,
+    setSoundEffect: A
+  } = (0, i.useGiftContext)(), [C, h] = r.useState(!1), v = r.useRef(null), g = (0, a.useRadioGroup)({
+    orientation: "horizontal"
+  }), x = (0, u.getGiftExperience)(n, t), y = x === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, O = x !== u.GiftExperience.DEFAULT, M = (0, o.useIsSeasonalGiftingActive)(), {
+    enabled: R
+  } = o.default.useExperiment({
+    location: "premiumGiftSelect_GiftAnimationOptions"
+  }, {
+    autoTrackExposure: M
+  }), L = null;
+  return O && (L = M && R ? p.SeasonalGiftStyles2023 : p.STANDARD_GIFT_OPTIONS), (0, s.jsxs)("div", {
+    children: [O && (0, s.jsxs)("div", {
+      className: I.giftMainAnimation,
+      children: [null != S ? (0, s.jsx)(d.default, {
+        giftStyle: S,
+        defaultAnimationState: c.AnimationState.ACTION,
+        idleAnimationState: c.AnimationState.LOOP,
+        shouldAnimate: !0,
+        className: I.animation
+      }) : (0, s.jsx)(a.Spinner, {
+        className: I.spinner
+      }), y && (0, s.jsxs)("div", {
+        className: I.soundEmojiContainer,
+        children: [(0, s.jsx)("div", {
+          className: I.sound,
+          children: (0, s.jsx)(l.default, {
+            sound: T,
+            onSelect: e => {
+              null != A && A(null == e ? void 0 : e)
+            }
+          })
+        }), (0, s.jsx)("div", {
+          className: I.emoji,
+          children: (0, s.jsx)(m.default, {
+            setEmojiConfetti: N,
+            emojiConfetti: null == P ? void 0 : P
+          })
         })]
-      }), (0, s.jsx)("div", {
-        tabIndex: null != t || C ? void 0 : 0,
-        onFocus: e => {
-          var t;
-          e.target === e.currentTarget && (null === (t = O.current) || void 0 === t || t.focus())
-        },
-        className: p.giftBoxOptionContainer,
-        "aria-label": I.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
-        ...h,
-        children: null != L && L.map((e, r) => (0, s.jsx)(_.GiftStaticOption, {
-          isSelected: t === e,
-          giftStyle: e,
-          setSelectedGiftStyle: n,
-          ref: 0 === r ? O : null,
-          onFocus: () => A(!0),
-          onBlur: () => A(!1)
-        }, e))
-      }), (0, s.jsx)("div", {
-        className: p.selectPlanDivider
       })]
-    })
-  }
+    }), (0, s.jsx)("div", {
+      tabIndex: null != S || C ? void 0 : 0,
+      onFocus: e => {
+        var t;
+        e.target === e.currentTarget && (null === (t = v.current) || void 0 === t || t.focus())
+      },
+      className: I.giftBoxOptionContainer,
+      "aria-label": _.default.Messages.SEASONAL_GIFTING_CUSTOMIZE_YOUR_GIFT_BOX,
+      ...g,
+      children: null != L && L.map((e, t) => (0, s.jsx)(f.GiftStaticOption, {
+        isSelected: S === e,
+        giftStyle: e,
+        setSelectedGiftStyle: E,
+        ref: 0 === t ? v : null,
+        onFocus: () => h(!0),
+        onBlur: () => h(!1)
+      }, e))
+    }), (0, s.jsx)("div", {
+      className: I.selectPlanDivider
+    })]
+  })
+}

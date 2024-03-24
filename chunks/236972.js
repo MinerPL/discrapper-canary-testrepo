@@ -13,11 +13,11 @@ var a = s("37983"),
   d = s("840022"),
   u = s("131424"),
   c = s("782340"),
-  S = s("559218"),
+  S = s("561275"),
   E = function(e) {
     let {
       hasAppliedGuildBoosts: t
-    } = e, s = (0, l.useStateFromStores)([r.default], () => r.default.affinities), E = (0, l.useStateFromStores)([o.default], () => o.default.getFlattenedGuildIds()), f = n.useMemo(() => {
+    } = e, s = (0, l.useStateFromStores)([r.default], () => r.default.affinities), E = (0, l.useStateFromStores)([o.default], () => o.default.getFlattenedGuildIds()), T = n.useMemo(() => {
       let e = s.slice(0, 3).map(e => e.guildId);
       for (let t = 0; t < E.length && !(e.length >= 3); t++) {
         let s = E[t];
@@ -25,17 +25,16 @@ var a = s("37983"),
       }
       return e
     }, [s, E]);
-    return 0 === f.length ? null : (0, a.jsxs)("div", {
+    return 0 === T.length ? null : (0, a.jsxs)("div", {
       className: S.wrapper,
       children: [t && (0, a.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
         className: S.header,
         children: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_RECOMMENDED_SERVERS_HEADING
-      }), f.map((e, t) => (0, a.jsx)(u.default, {
+      }), T.map(e => (0, a.jsx)(u.default, {
         className: S.recommendedServerCard,
         guildId: e,
-        boostingVariant: !0,
-        showSparkes: 0 === t
+        boostingVariant: !0
       }, e)), E.length > 3 && (0, a.jsx)(d.default, {})]
     })
   }

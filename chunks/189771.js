@@ -22,8 +22,9 @@ var l = n("679653"),
   i = n("288518"),
   r = n("884351"),
   o = n("406297"),
-  u = n("913491"),
-  d = n("755624"),
+  u = n("913491");
+n("726778");
+var d = n("755624"),
   c = n("414833"),
   f = n("845579"),
   h = n("233069"),
@@ -50,7 +51,7 @@ function y(e, t, n) {
     a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
   if (t.hasFlag(R.UserFlags.SPAMMER) || n.isManaged()) return !1;
   let i = n.getGuildId();
-  return !(null != i && s.default.isLurking(i) || t.id === e.id || g.default.isBlocked(t.id) || !l && _.default.getStatus() === R.StatusTypes.DND || f.QuietMode.getSetting() || !a && N.default.allowNoMessages(n)) && !0
+  return !(null != i && s.default.isLurking(i) || t.id === e.id || g.default.isBlocked(t.id) || !l && _.default.getStatus() === R.StatusTypes.DND || f.FocusMode.getSetting() || !a && N.default.allowNoMessages(n)) && !0
 }
 
 function D(e, t) {
@@ -99,7 +100,7 @@ function b(e, t) {
   e.type === R.MessageTypes.THREAD_STARTER_MESSAGE && (a = p.default.getChannel(null == a ? void 0 : a.parent_id));
   let s = T.default.getCurrentUser(),
     i = T.default.getUser(null === (n = e.author) || void 0 === n ? void 0 : n.id);
-  return !(null == a || null == s || null == i || a.isManaged() || i.hasFlag(R.UserFlags.SPAMMER) || g.default.isBlocked(i.id) || i.id === s.id || _.default.getStatus() === R.StatusTypes.DND || f.QuietMode.getSetting() || N.default.allowNoMessages(a)) && !0
+  return !(null == a || null == s || null == i || a.isManaged() || i.hasFlag(R.UserFlags.SPAMMER) || g.default.isBlocked(i.id) || i.id === s.id || _.default.getStatus() === R.StatusTypes.DND || f.FocusMode.getSetting() || N.default.allowNoMessages(a)) && !0
 }
 
 function j(e, t) {

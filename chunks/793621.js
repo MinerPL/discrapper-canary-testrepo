@@ -1,13 +1,13 @@
 "use strict";
 i.r(e), i.d(e, {
   default: function() {
-    return U
+    return k
   }
 }), i("834022"), i("222007");
 var l = i("37983"),
   r = i("884691"),
-  n = i("627445"),
-  a = i.n(n),
+  a = i("627445"),
+  n = i.n(a),
   s = i("917351"),
   o = i.n(s),
   d = i("446674"),
@@ -19,57 +19,58 @@ var l = i("37983"),
   m = i("841098"),
   g = i("376556"),
   j = i("716241"),
-  w = i("401642"),
-  p = i("766274"),
-  v = i("26989"),
+  w = i("685665"),
+  p = i("401642"),
+  v = i("766274"),
+  C = i("26989"),
   N = i("79798"),
-  C = i("36694"),
-  y = i("599110"),
-  T = i("535013"),
+  y = i("36694"),
+  T = i("599110"),
+  I = i("535013"),
   E = i("562368"),
-  I = i("216049"),
-  _ = i("339023"),
-  O = i("526190"),
-  M = i("685058"),
-  S = i("214509"),
-  A = i("49111"),
-  R = i("590456"),
-  P = i("782340"),
-  b = i("322776");
+  _ = i("216049"),
+  O = i("339023"),
+  M = i("526190"),
+  S = i("685058"),
+  A = i("214509"),
+  R = i("49111"),
+  P = i("590456"),
+  b = i("782340"),
+  L = i("48639");
 
-function L(t) {
+function B(t) {
   let e, {
     connectionType: i,
     connectionMetadataField: r,
-    operator: n,
-    value: a,
+    operator: a,
+    value: n,
     description: s
   } = t;
-  if (null != s) switch (n) {
-    case S.OperatorTypes.LESS_THAN:
-      e = P.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
+  if (null != s) switch (a) {
+    case A.OperatorTypes.LESS_THAN:
+      e = b.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
         description: s,
-        count: Math.max(0, Number(a) - 1)
+        count: Math.max(0, Number(n) - 1)
       });
       break;
-    case S.OperatorTypes.GREATER_THAN:
-      e = P.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
+    case A.OperatorTypes.GREATER_THAN:
+      e = b.default.Messages.CONNECTIONS_ROLE_RULE_GENERIC.format({
         description: s,
-        count: Math.max(0, Number(a) + 1)
+        count: Math.max(0, Number(n) + 1)
       });
       break;
     default:
       e = s
-  } else e = (0, T.getConnectionsCheckText)({
+  } else e = (0, I.getConnectionsCheckText)({
     connectionType: i,
     connectionMetadataField: r,
-    operator: n,
-    value: a
+    operator: a,
+    value: n
   });
   return null == e ? null : (0, l.jsxs)("div", {
-    className: b.popoutCheck,
-    children: [(0, l.jsx)(C.default, {
-      className: b.popoutCheckIcon
+    className: L.popoutCheck,
+    children: [(0, l.jsx)(y.default, {
+      className: L.popoutCheckIcon
     }), (0, l.jsx)(u.Text, {
       variant: "text-xs/medium",
       color: "header-primary",
@@ -78,40 +79,40 @@ function L(t) {
   })
 }
 
-function B(t) {
+function D(t) {
   let {
     eligibilityStates: e
-  } = t, i = (0, m.default)(), r = (0, u.useToken)(c.default.unsafe_rawColors.GREEN_330).hex(), n = o.groupBy(e, t => "".concat(t.connection_type).concat(null != t.application_id ? ":".concat(t.application_id) : ""));
+  } = t, i = (0, m.default)(), r = (0, u.useToken)(c.default.unsafe_rawColors.GREEN_330).hex(), a = o.groupBy(e, t => "".concat(t.connection_type).concat(null != t.application_id ? ":".concat(t.application_id) : ""));
   return (0, l.jsx)(l.Fragment, {
-    children: Object.keys(n).map(t => {
+    children: Object.keys(a).map(t => {
       var e, s;
       let o;
-      let d = n[t],
+      let d = a[t],
         c = d.filter(t => null != t.operator),
         f = d.find(t => null != t.application),
         m = g.default.get(t),
         j = null == f ? void 0 : f.application,
-        w = (null == j ? void 0 : j.bot) != null ? new p.default(j.bot) : null,
-        v = T.officialApplicationIds.includes(null !== (e = null == j ? void 0 : j.id) && void 0 !== e ? e : "");
-      return v ? o = (0, l.jsx)(O.default, {
-        className: b.botTag,
+        w = (null == j ? void 0 : j.bot) != null ? new v.default(j.bot) : null,
+        p = I.officialApplicationIds.includes(null !== (e = null == j ? void 0 : j.id) && void 0 !== e ? e : "");
+      return p ? o = (0, l.jsx)(M.default, {
+        className: L.botTag,
         color: r,
         size: 16
       }) : null != w && (o = (0, l.jsx)(N.default, {
-        className: b.botTag,
+        className: L.botTag,
         verified: w.isVerifiedBot()
       })), (0, l.jsxs)("div", {
-        className: b.popoutChecksGroup,
+        className: L.popoutChecksGroup,
         children: [(0, l.jsxs)("div", {
-          className: b.popoutCheckGroupName,
+          className: L.popoutCheckGroupName,
           children: [null != m ? (0, l.jsx)("img", {
             src: (0, h.isThemeDark)(i) ? m.icon.darkSVG : m.icon.lightSVG,
             alt: "",
-            className: b.popoutCheckGroupPlatformIcon
+            className: L.popoutCheckGroupPlatformIcon
           }) : null, null != w ? (0, l.jsx)(x.default, {
             user: w,
             size: u.AvatarSizes.SIZE_20,
-            className: b.popoutCheckGroupPlatformIcon
+            className: L.popoutCheckGroupPlatformIcon
           }) : null, (0, l.jsx)(u.Text, {
             variant: "text-sm/medium",
             color: "interactive-active",
@@ -122,109 +123,115 @@ function B(t) {
             connection_type: e,
             connection_metadata_field: i,
             operator: r,
-            value: n,
+            value: a,
             description: s
           } = t;
-          return a(null != i, "connectionMetadataField is null"), a(null != r, "operator is null"), a(null != n, "value is null"), (0, l.jsx)(L, {
+          return n(null != i, "connectionMetadataField is null"), n(null != r, "operator is null"), n(null != a, "value is null"), (0, l.jsx)(B, {
             connectionType: e,
             connectionMetadataField: i,
             operator: r,
-            value: n,
+            value: a,
             description: s
-          }, "".concat(e, ":").concat(i, ":").concat(r, ":").concat(n))
+          }, "".concat(e, ":").concat(i, ":").concat(r, ":").concat(a))
         })]
       }, t)
     })
   })
 }
 
-function D(t) {
+function U(t) {
   let e, {
     onGetRolesClicked: i,
-    onOpenProfile: n,
-    eligibilityStates: a,
+    onOpenProfile: a,
+    eligibilityStates: n,
     userId: s,
     roleId: o,
     channelId: c,
     guildId: h
   } = t;
   r.useEffect(() => {
-    y.default.track(A.AnalyticEvents.PASSPORT_ROLE_POPOUT_VIEWED, {
+    T.default.track(R.AnalyticEvents.PASSPORT_ROLE_POPOUT_VIEWED, {
       other_user_id: s,
       role_id: o,
       ...(0, j.collectChannelAnalyticsMetadataFromId)(c),
       ...(0, j.collectGuildAnalyticsMetadata)(h)
     })
   }, [s, o, c, h]);
-  let f = (0, d.useStateFromStores)([v.default], () => {
+  let f = (0, d.useStateFromStores)([C.default], () => {
     var t, e;
-    return null !== (e = null === (t = v.default.getSelfMember(h)) || void 0 === t ? void 0 : t.roles.includes(o)) && void 0 !== e && e
+    return null !== (e = null === (t = C.default.getSelfMember(h)) || void 0 === t ? void 0 : t.roles.includes(o)) && void 0 !== e && e
   }, [h, o]);
-  return e = 1 === a.length && 1 === a[0].length ? P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === a.length ? P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : P.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, l.jsxs)("div", {
-    className: b.popout,
+  return e = 1 === n.length && 1 === n[0].length ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ONE : 1 === n.length ? b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_ALL.format() : b.default.Messages.CONNECTIONS_ROLE_POPOUT_HEADER_OR.format(), (0, l.jsxs)("div", {
+    className: L.popout,
     children: [(0, l.jsx)("div", {
-      className: b.popoutHeaderContainer,
+      className: L.popoutHeaderContainer,
       children: (0, l.jsx)(u.Text, {
         variant: "text-xs/normal",
         color: "text-normal",
-        className: b.popoutHeaderText,
+        className: L.popoutHeaderText,
         children: e
       })
     }), (0, l.jsx)("div", {
-      className: b.popoutChecks,
-      children: (0, l.jsx)(B, {
-        eligibilityStates: a.flat()
+      className: L.popoutChecks,
+      children: (0, l.jsx)(D, {
+        eligibilityStates: n.flat()
       })
     }), (0, l.jsxs)("div", {
-      className: b.buttonContainer,
+      className: L.buttonContainer,
       children: [f ? null : (0, l.jsx)(u.Button, {
-        className: b.getRolesButton,
+        className: L.getRolesButton,
         onClick: i,
-        children: P.default.Messages.CONNECTIONS_ROLE_POPOUT_GET_ROLES
+        children: b.default.Messages.CONNECTIONS_ROLE_POPOUT_GET_ROLES
       }), (0, l.jsx)(u.Button, {
-        className: b.viewConnectionsButton,
+        className: L.viewConnectionsButton,
         color: u.Button.Colors.PRIMARY,
-        onClick: n,
-        children: P.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_CONNECTIONS
+        onClick: a,
+        children: b.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_CONNECTIONS
       })]
     })]
   })
 }
 
-function U(t) {
+function k(t) {
   let {
     userId: e,
-    guild: i,
-    channel: n
-  } = t, s = (0, I.default)(i, e, n.id, !0), o = (0, d.useStateFromStores)([E.default], () => E.default.getGuildRoleConnectionEligibility(null == s ? void 0 : s.id)), [c, h] = r.useState(null == o);
-  if (null == s) return null;
-  async function x() {
-    a(null != s, "visibleConnectionsRole is null"), c && null == o && (await f.default.fetchGuildRoleConnectionsEligibility(i.id, s.id), h(!1))
+    messageId: i,
+    guild: a,
+    channel: s
+  } = t, {
+    analyticsLocations: o
+  } = (0, w.default)(), c = (0, _.default)(a, e, s.id, !0), h = (0, d.useStateFromStores)([E.default], () => E.default.getGuildRoleConnectionEligibility(null == c ? void 0 : c.id)), [x, m] = r.useState(null == h);
+  if (null == c) return null;
+  async function g() {
+    n(null != c, "visibleConnectionsRole is null"), x && null == h && (await f.default.fetchGuildRoleConnectionsEligibility(a.id, c.id), m(!1))
   }
   return (0, l.jsx)(u.LazyPopout, {
-    onRequestOpen: x,
+    onRequestOpen: g,
     renderPopout: function() {
       return Promise.resolve(t => {
         let {
           closePopout: r
         } = t;
-        return null == o ? (0, l.jsx)(l.Fragment, {}) : (a(null != s, "visibleConnectionsRole is null"), (0, l.jsx)(D, {
-          eligibilityStates: o,
+        return null == h ? (0, l.jsx)(l.Fragment, {}) : (n(null != c, "visibleConnectionsRole is null"), (0, l.jsx)(U, {
+          eligibilityStates: h,
           userId: e,
-          roleId: s.id,
-          channelId: n.id,
-          guildId: i.id,
+          roleId: c.id,
+          channelId: s.id,
+          guildId: a.id,
           onGetRolesClicked: () => {
-            (0, M.openGuildRoleConnectionsModal)(i.id)
+            (0, S.openGuildRoleConnectionsModal)(a.id)
           },
           onOpenProfile: () => {
-            (0, w.openUserProfileModal)({
+            (0, p.openUserProfileModal)({
               userId: e,
-              guildId: i.id,
-              channelId: n.id,
-              section: R.UserProfileSections.USER_INFO_CONNECTIONS,
+              messageId: i,
+              guildId: a.id,
+              channelId: s.id,
+              roleId: c.id,
+              section: P.UserProfileSections.USER_INFO_CONNECTIONS,
+              sourceAnalyticsLocations: o,
               analyticsLocation: {
-                section: A.AnalyticsSections.CHANNEL
+                section: R.AnalyticsSections.CHANNEL
               }
             }), r()
           }
@@ -234,20 +241,20 @@ function U(t) {
     align: "top",
     nudgeAlignIntoViewport: !0,
     children: t => (0, l.jsx)(u.Tooltip, {
-      text: P.default.Messages.CONNECTIONS_ROLE_POPOUT_CLICK_TO_VIEW,
+      text: b.default.Messages.CONNECTIONS_ROLE_POPOUT_CLICK_TO_VIEW,
       children: e => (0, l.jsxs)("div", {
-        className: b.badge,
+        className: L.badge,
         ...e,
         ...t,
-        children: [(0, l.jsx)(_.default, {
-          className: b.badgeVerifiedIcon,
+        children: [(0, l.jsx)(O.default, {
+          className: L.badgeVerifiedIcon,
           size: 16,
-          color: s.colorString
+          color: c.colorString
         }), (0, l.jsx)(u.Text, {
           variant: "text-xs/bold",
           color: "header-primary",
-          className: b.roleName,
-          children: s.name
+          className: L.roleName,
+          children: c.name
         })]
       })
     })

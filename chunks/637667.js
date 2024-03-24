@@ -8,7 +8,7 @@ var l = n("37983"),
   a = n("884691"),
   s = n("414456"),
   i = n.n(s),
-  r = n("907002"),
+  r = n("146606"),
   o = n("394846"),
   u = n("77078"),
   d = n("51565"),
@@ -20,7 +20,7 @@ var l = n("37983"),
   m = n("49111"),
   E = n("695838"),
   g = n("782340"),
-  I = n("217997");
+  I = n("719890");
 
 function S(e) {
   var t;
@@ -170,12 +170,12 @@ var T = a.memo(function(e) {
           children: [(0, l.jsx)(p.default, {
             guild: x,
             isBannerVisible: n
-          }), (0, l.jsxs)(u.Text, {
+          }), x.id === E.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), (0, l.jsx)(u.Text, {
             color: "none",
             variant: "text-md/semibold",
             lineClamp: 1,
             className: I.name,
-            children: [x.id === E.FAVORITES_RAW_GUILD_ID && (0, l.jsx)(N, {}), x.toString()]
+            children: x.toString()
           }), null != f && (0, l.jsx)(u.Clickable, {
             className: I.headerButton,
             "aria-controls": v,

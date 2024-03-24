@@ -1,11 +1,14 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   useForceMigration: function() {
-    return i
+    return r
+  },
+  getForceMigration: function() {
+    return a
   }
 });
-var s = a("862205");
-let l = (0, s.createExperiment)({
+var s = n("862205");
+let i = (0, s.createExperiment)({
     kind: "user",
     id: "2024-01_uu_forced_migration",
     label: "Unique Username Forced Migration UI",
@@ -20,10 +23,20 @@ let l = (0, s.createExperiment)({
       }
     }]
   }),
-  i = () => {
+  r = () => {
     let {
       enabled: e
-    } = l.useExperiment({
+    } = i.useExperiment({
+      location: "force_migration"
+    }, {
+      autoTrackExposure: !1
+    });
+    return e
+  },
+  a = () => {
+    let {
+      enabled: e
+    } = i.getCurrentConfig({
       location: "force_migration"
     }, {
       autoTrackExposure: !1

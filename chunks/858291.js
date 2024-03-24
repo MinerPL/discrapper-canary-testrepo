@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildProductListingPublicCard: function() {
-    return N
+    return p
   }
 });
 var s = n("37983");
@@ -14,18 +14,18 @@ var l = n("65597"),
   u = n("306160"),
   d = n("442379"),
   c = n("757515"),
-  f = n("727411"),
-  E = n("492724"),
+  E = n("727411"),
+  f = n("492724"),
   _ = n("928576"),
   T = n("739726"),
   I = n("358404"),
-  m = n("875746");
+  m = n("875746"),
+  N = n("49111");
 
-function N(e) {
-  var t;
+function p(e) {
   let {
-    guildProductListing: n,
-    guildId: N,
+    guildProductListing: t,
+    guildId: n,
     location: p,
     shouldShowFullDescriptionButton: S = !0,
     hideRoleTag: A = !1,
@@ -35,18 +35,21 @@ function N(e) {
     thumbnailHeight: M,
     descriptionTextVariant: O = "text-sm/normal",
     showOpaqueBackground: R = !1
-  } = e, L = (0, l.default)([o.default], () => o.default.getGuild(N), [N]), v = null == L ? void 0 : L.roles[null !== (t = null == n ? void 0 : n.role_id) && void 0 !== t ? t : ""], P = (0, a.useListingThumbnailUrl)(n, 600), D = (0, _.useProductType)(n), x = (0, d.useCanManageGuildProduct)(L), {
+  } = e, v = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, l.useStateFromStores)([o.default], () => {
+    var e;
+    return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID)
+  }), P = (0, a.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(v), {
     shouldHideGuildPurchaseEntryPoints: y
-  } = (0, r.useShouldHideGuildPurchaseEntryPoints)(N), U = (0, _.usePrice)(n);
-  if (null == L || y) return null;
+  } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
+  if (null == v || y) return null;
   let j = () => (0, I.openGuildProductInfoModal)({
-      guildId: N,
-      guildProductListingId: n.id,
+      guildId: n,
+      guildProductListingId: t.id,
       analyticsLocation: p
     }),
     b = (0, s.jsx)(T.GuildProductListingPopout, {
-      product: n,
-      guildId: N,
+      product: t,
+      guildId: n,
       showEditProduct: x,
       showUnpublishProduct: !1,
       showCopyLink: !0,
@@ -54,29 +57,29 @@ function N(e) {
       showDeleteProduct: !1,
       showReportProduct: !0,
       onEditProduct: x ? () => {
-        f.openModal(L.id, n.id)
+        E.openModal(v.id, t.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
       onReportProduct: () => {
         (0, i.openGuildShopReportModal)({
-          listing: n
+          listing: t
         })
       },
       onCopyProductLink: () => {
-        (0, u.copy)((0, c.getGuildProductListingUrl)(N, n.id))
+        (0, u.copy)((0, c.getGuildProductListingUrl)(n, t.id))
       },
       onTestDownload: () => {}
     });
-  return (0, s.jsx)(E.default, {
+  return (0, s.jsx)(f.default, {
     imageUrl: P,
-    name: n.name,
-    description: n.description,
+    name: t.name,
+    description: t.description,
     formattedPrice: U,
-    role: v,
+    role: L,
     ctaComponent: (0, s.jsx)(m.default, {
-      guildId: N,
-      guildProductListingId: n.id,
+      guildId: n,
+      guildProductListingId: t.id,
       sourceAnalyticsLocations: p
     }),
     productType: D,
@@ -91,6 +94,6 @@ function N(e) {
     cardHeight: g,
     thumbnailHeight: M,
     descriptionTextVariant: O,
-    isDraft: !n.published
-  }, n.id)
+    isDraft: !t.published
+  }, t.id)
 }

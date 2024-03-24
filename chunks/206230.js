@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 });
 var i = n("446674"),
@@ -34,7 +34,8 @@ let _ = {
     alwaysShowLinkDecorations: !1,
     roleStyle: "username",
     submitButtonEnabled: !1,
-    syncProfileThemeWithUserTheme: !1
+    syncProfileThemeWithUserTheme: !1,
+    disableVoiceBackgrounds: !1
   },
   f = _,
   E = {
@@ -157,6 +158,9 @@ class S extends i.default.DeviceSettingsStore {
   get roleStyle() {
     return f.roleStyle
   }
+  get disableVoiceBackgrounds() {
+    return f.disableVoiceBackgrounds
+  }
   getUserAgnosticState() {
     return f
   }
@@ -217,6 +221,9 @@ S.displayName = "AccessibilityStore", S.persistKey = "AccessibilityStore", S.mig
 }), e => ({
   ...e,
   alwaysShowLinkDecorations: e.saturation <= o.LOW_SATURATION_THRESHOLD
+}), e => ({
+  ...e,
+  disableVoiceBackgrounds: !1
 })];
 let g = new S(s.default, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
@@ -356,6 +363,11 @@ let g = new S(s.default, {
       ...f,
       contrast: t
     }
+  },
+  ACCESSIBILITY_TOGGLE_DISABLE_VOICE_BACKGROUNDS: function() {
+    (f = {
+      ...f
+    }).disableVoiceBackgrounds = !f.disableVoiceBackgrounds
   }
 });
-var h = g
+var m = g

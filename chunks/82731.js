@@ -85,7 +85,7 @@ function E() {
       if (null == e._navigateFrameToAuth) throw Error("braintree client missing _navigateFrameToAuth. did someone upgrade the braintree library?");
       e._navigateFrameToAuth = function(e) {
         let t = this._formatPaymentResourceData(e);
-        return n.default.post({
+        return n.HTTP.post({
           url: c.Endpoints.BILLING_PAYPAL_BILLING_AGREEMENT_TOKENS,
           oldFormErrors: !0,
           body: {

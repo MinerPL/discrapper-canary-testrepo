@@ -8,16 +8,16 @@ s.r(t), s.d(t, {
   }
 }), s("424973"), s("222007");
 var a = s("316693"),
-  n = s("465305"),
-  l = s("49111");
+  l = s("465305"),
+  n = s("49111");
 
 function i(e) {
-  return a.default.hasAny(e.permissions, l.ElevatedPermissions)
+  return a.hasAny(e.permissions, n.ElevatedPermissions)
 }
 
 function r(e, t) {
   let s = [],
-    i = n.default.getGuildPermissionSpecMap(e);
-  for (let e of l.ElevatedPermissionsList) a.default.has(t.permissions, e) && s.push(i[e.toString()].title);
+    i = l.default.getGuildPermissionSpecMap(e);
+  for (let e of n.ElevatedPermissionsList) a.has(t.permissions, e) && s.push(i[e.toString()].title);
   return s
 }

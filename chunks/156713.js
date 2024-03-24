@@ -91,7 +91,7 @@ let p = u.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
   }];
 (n = class extends i.PureComponent {
   render() {
-    let e = r.default.isActiveCreator(this.context.router),
+    let e = r.isActiveCreator(this.context.router),
       {
         isMobile: t,
         isVisible: s,

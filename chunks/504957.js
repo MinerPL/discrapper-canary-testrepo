@@ -15,7 +15,7 @@ var a = n("446674"),
   d = n("829562"),
   c = n("49111"),
   f = n("782340"),
-  h = n("258023");
+  h = n("92979");
 
 function C() {
   let e = (0, a.useStateFromStores)([r.default, o.default], () => r.default.unavailableGuilds.filter(e => null == o.default.getGuild(e)).length);

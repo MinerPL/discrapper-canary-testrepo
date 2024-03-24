@@ -1,25 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildHomeExperiment: function() {
-    return f
-  },
-  canSeeGuildHome: function() {
     return _
   },
+  canSeeGuildHome: function() {
+    return f
+  },
   GuildFeedRenderSelectorExperiment: function() {
-    return h
-  },
-  GuildFeedRefreshButtonExperiment: function() {
-    return g
-  },
-  GuildHomeBadgeExperiment: function() {
-    return m
-  },
-  GuildHomeFeedbackExperiment: function() {
     return E
   },
+  GuildHomeBadgeExperiment: function() {
+    return h
+  },
+  GuildHomeFeedbackExperiment: function() {
+    return g
+  },
   GuildHomeDeprecationExperiment: function() {
-    return p
+    return m
   }
 });
 var i = n("446674"),
@@ -41,18 +38,18 @@ function c(e, t, n) {
   return i.length > 5
 }
 
-function f(e) {
+function _(e) {
   arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   let t = (0, i.useStateFromStores)([l.default, s.default], () => null != e && c(e.id, l.default, s.default));
   return !__OVERLAY__ && !!t && null != e && e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
 }
 
-function _(e) {
+function f(e) {
   if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
   let t = u.default.getGuild(e);
   return !!(null != t && c(e, l.default, s.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
 }
-let h = (0, r.createExperiment)({
+let E = (0, r.createExperiment)({
     kind: "user",
     id: "2022-01_home_feed_toggle",
     label: "Show Guild Feed Sorting Selector",
@@ -67,22 +64,7 @@ let h = (0, r.createExperiment)({
       }
     }]
   }),
-  g = (0, r.createExperiment)({
-    kind: "user",
-    id: "2022-06_home_refresh_button",
-    label: "Show refresh button",
-    defaultConfig: {
-      showRefreshButton: !1
-    },
-    treatments: [{
-      id: 1,
-      label: "Yes button",
-      config: {
-        showRefreshButton: !0
-      }
-    }]
-  }),
-  m = (0, r.createExperiment)({
+  h = (0, r.createExperiment)({
     kind: "user",
     id: "2022-08_home_badge",
     label: "Show badge on home channel",
@@ -162,7 +144,7 @@ let h = (0, r.createExperiment)({
     }
   }]
 });
-let E = (0, r.createExperiment)({
+let g = (0, r.createExperiment)({
     kind: "user",
     id: "2022-12_home_feedback_ux",
     label: "Show post feedback for home",
@@ -177,7 +159,7 @@ let E = (0, r.createExperiment)({
       }
     }]
   }),
-  p = (0, r.createExperiment)({
+  m = (0, r.createExperiment)({
     kind: "guild",
     id: "2023-03_home_deprecation",
     label: "Home Deprecation",

@@ -12,27 +12,27 @@ var n = s("917351"),
   r = s("819855"),
   o = s("77078"),
   d = s("629109"),
-  u = s("881719"),
+  u = s("533222"),
   c = s("42887"),
   S = s("145131"),
   E = s("161778"),
-  f = s("597870"),
-  T = s("353927"),
-  m = s("782340"),
-  _ = s("947148"),
-  g = s("926622");
+  T = s("597870"),
+  f = s("353927"),
+  _ = s("782340"),
+  m = s("63635"),
+  g = s("890957");
 
 function h() {
   let e, t;
   let n = (0, i.useStateFromStores)([E.default], () => E.default.theme),
     {
       canSetInputDevice: h,
-      canSetOutputDevice: I,
-      inputDeviceId: N,
+      canSetOutputDevice: N,
+      inputDeviceId: I,
       outputDeviceId: p
     } = (0, i.useStateFromStoresObject)([c.default], () => ({
-      canSetInputDevice: c.default.supports(T.Features.AUDIO_INPUT_DEVICE),
-      canSetOutputDevice: c.default.supports(T.Features.AUDIO_OUTPUT_DEVICE),
+      canSetInputDevice: c.default.supports(f.Features.AUDIO_INPUT_DEVICE),
+      canSetOutputDevice: c.default.supports(f.Features.AUDIO_OUTPUT_DEVICE),
       inputDeviceId: c.default.getInputDeviceId(),
       outputDeviceId: c.default.getOutputDeviceId()
     })),
@@ -41,14 +41,14 @@ function h() {
   !h && (e = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
-    children: m.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
-      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text Input Devices")
+    children: _.default.Messages.BROWSER_INPUT_DEVICE_WARNING.format({
+      onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Input Devices")
     })
-  })), !I && (t = (0, a.jsx)(o.FormText, {
+  })), !N && (t = (0, a.jsx)(o.FormText, {
     type: o.FormText.Types.DESCRIPTION,
     className: g.marginTop8,
-    children: m.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
-      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text Output Devices")
+    children: _.default.Messages.BROWSER_OUTPUT_DEVICE_WARNING.format({
+      onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text Output Devices")
     })
   }));
   let O = l(C).values().first(),
@@ -56,7 +56,7 @@ function h() {
     R = l(A).values().first(),
     M = null != R ? R.disabled : null != t;
 
-  function v(e) {
+  function D(e) {
     let t, {
       label: l,
       value: i
@@ -66,20 +66,20 @@ function h() {
       t = (0, a.jsx)("img", {
         src: e,
         alt: "Certified",
-        className: _.deviceOptionCertified
+        className: m.deviceOptionCertified
       })
     }
     return (0, a.jsxs)("span", {
-      className: _.deviceOption,
+      className: m.deviceOption,
       children: [(0, a.jsx)("span", {
-        className: _.deviceOptionLabel,
+        className: m.deviceOptionLabel,
         children: u.default.getCertifiedDeviceName(i, l)
       }), t]
     }, i)
   }
 
-  function D(e) {
-    return v(e[0])
+  function v(e) {
+    return D(e[0])
   }
   return (0, a.jsxs)(S.default, {
     className: g.marginBottom20,
@@ -88,9 +88,9 @@ function h() {
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         className: g.marginBottom8,
-        children: m.default.Messages.FORM_LABEL_INPUT_DEVICE
+        children: _.default.Messages.FORM_LABEL_INPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
-        value: N,
+        value: I,
         onChange: e => d.default.setInputDevice(e, "Settings"),
         options: l.map(C, e => {
           let {
@@ -103,15 +103,15 @@ function h() {
           }
         }),
         isDisabled: x,
-        renderOptionValue: D,
-        renderOptionLabel: v
+        renderOptionValue: v,
+        renderOptionLabel: D
       }), e]
     }), (0, a.jsxs)(S.default.Child, {
       basis: "50%",
       children: [(0, a.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         className: g.marginBottom8,
-        children: m.default.Messages.FORM_LABEL_OUTPUT_DEVICE
+        children: _.default.Messages.FORM_LABEL_OUTPUT_DEVICE
       }), (0, a.jsx)(o.SingleSelect, {
         value: p,
         onChange: e => d.default.setOutputDevice(e, "Settings"),
@@ -126,8 +126,8 @@ function h() {
           }
         }),
         isDisabled: M,
-        renderOptionValue: D,
-        renderOptionLabel: v
+        renderOptionValue: v,
+        renderOptionLabel: D
       }), t]
     })]
   })

@@ -1,5 +1,5 @@
 "use strict";
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   BlockedUsersNotice: function() {
     return g
   },
@@ -7,92 +7,92 @@ t.r(s), t.d(s, {
     return p
   }
 });
-var r = t("37983");
-t("884691");
-var a = t("446674"),
-  l = t("669491"),
-  n = t("77078"),
-  i = t("272030"),
-  d = t("328275"),
-  c = t("849467"),
-  o = t("258078"),
-  u = t("823050"),
-  h = t("158998"),
-  f = t("325861"),
-  C = t("151642"),
-  v = t("782340"),
-  x = t("960236");
+var r = s("37983");
+s("884691");
+var a = s("446674"),
+  n = s("669491"),
+  l = s("77078"),
+  i = s("272030"),
+  c = s("328275"),
+  d = s("849467"),
+  o = s("258078"),
+  u = s("823050"),
+  h = s("158998"),
+  f = s("325861"),
+  v = s("151642"),
+  C = s("782340"),
+  x = s("35121");
 let g = e => {
     let {
-      channelId: s
-    } = e, t = (0, C.useStageBlockedUsersCount)(s);
-    return 0 === t ? null : (0, r.jsxs)("div", {
+      channelId: t
+    } = e, s = (0, v.useStageBlockedUsersCount)(t);
+    return 0 === s ? null : (0, r.jsxs)("div", {
       className: x.blockedNotice,
-      children: [(0, r.jsx)(d.default, {
+      children: [(0, r.jsx)(c.default, {
         className: x.blockedIcon,
-        color: l.default.unsafe_rawColors.RED_400.css
-      }), (0, r.jsx)(n.Text, {
+        color: n.default.unsafe_rawColors.RED_400.css
+      }), (0, r.jsx)(l.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        children: v.default.Messages.STAGE_BLOCKED_USERS_DESCRIPTION_COUNT.format({
-          number: t
+        children: C.default.Messages.STAGE_BLOCKED_USERS_DESCRIPTION_COUNT.format({
+          number: s
         })
-      }), (0, r.jsx)(n.Clickable, {
+      }), (0, r.jsx)(l.Clickable, {
         className: x.blockedButton,
         onClick: e => {
           (0, i.openContextMenu)(e, e => (0, r.jsx)(m, {
             ...e,
-            channelId: s
+            channelId: t
           }), {
             position: "left",
             align: "bottom"
           })
         },
-        children: v.default.Messages.VIEW_ALL
+        children: C.default.Messages.VIEW_ALL
       })]
     })
   },
   p = e => {
     let {
-      user: s,
-      showStatus: t,
-      speaker: l,
+      user: t,
+      showStatus: s,
+      speaker: n,
       channelId: i
-    } = e, d = (0, a.useStateFromStores)([f.default], () => f.default.isModerator(s.id, i)), C = null;
-    return t && (C = l ? v.default.Messages.STAGE_SPEAKER : d ? v.default.Messages.STAGE_MODERATOR_TOOLTIP : v.default.Messages.STAGE_AUDIENCE), (0, r.jsxs)("div", {
+    } = e, c = (0, a.useStateFromStores)([f.default], () => f.default.isModerator(t.id, i)), v = null;
+    return s && (v = n ? C.default.Messages.STAGE_SPEAKER : c ? C.default.Messages.STAGE_MODERATOR_TOOLTIP : C.default.Messages.STAGE_AUDIENCE), (0, r.jsxs)("div", {
       className: x.user,
       children: [(0, r.jsx)(u.default, {
-        src: s.getAvatarURL(null, 32),
-        size: n.AvatarSizes.SIZE_32,
+        src: t.getAvatarURL(null, 32),
+        size: l.AvatarSizes.SIZE_32,
         muted: !1,
         deafen: !1,
         speaking: !1,
         ringing: !1,
-        renderIcon: l ? () => (0, r.jsx)(c.default, {
+        renderIcon: n ? () => (0, r.jsx)(d.default, {
           className: x.icon
         }) : null
-      }, s.id), (0, r.jsxs)("div", {
+      }, t.id), (0, r.jsxs)("div", {
         className: x.userInfo,
         children: [(0, r.jsxs)("div", {
           className: x.username,
           children: [(0, r.jsx)(o.default, {
-            size: t ? o.default.Sizes.SIZE_16 : o.default.Sizes.SIZE_14,
-            children: h.default.getName(s)
+            size: s ? o.default.Sizes.SIZE_16 : o.default.Sizes.SIZE_14,
+            children: h.default.getName(t)
           }), (0, r.jsx)(o.default, {
-            size: t ? o.default.Sizes.SIZE_16 : o.default.Sizes.SIZE_14,
+            size: s ? o.default.Sizes.SIZE_16 : o.default.Sizes.SIZE_14,
             color: o.default.Colors.HEADER_SECONDARY,
-            children: "#".concat(s.discriminator)
+            children: "#".concat(t.discriminator)
           })]
         }), (0, r.jsxs)("div", {
           className: x.username,
-          children: [(0, r.jsx)(n.Text, {
+          children: [(0, r.jsx)(l.Text, {
             variant: "text-xs/normal",
             color: "text-danger",
-            children: v.default.Messages.BLOCKED
-          }), (0, r.jsxs)(n.Text, {
+            children: C.default.Messages.BLOCKED
+          }), (0, r.jsxs)(l.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            children: [" ", "| ", C]
+            children: [" ", "| ", v]
           })]
         })]
       })]
@@ -100,18 +100,18 @@ let g = e => {
   },
   m = e => {
     let {
-      channelId: s
-    } = e, t = (0, C.useStageBlockedUsers)(s);
-    return (0, r.jsx)(n.Scroller, {
+      channelId: t
+    } = e, s = (0, v.useStageBlockedUsers)(t);
+    return (0, r.jsx)(l.Scroller, {
       className: x.container,
-      children: t.map(e => {
+      children: s.map(e => {
         let {
-          user: t
+          user: s
         } = e;
         return (0, r.jsx)(p, {
-          user: t,
-          channelId: s
-        }, t.id)
+          user: s,
+          channelId: t
+        }, s.id)
       })
     })
   }

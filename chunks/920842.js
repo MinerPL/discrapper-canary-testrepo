@@ -12,7 +12,7 @@ var t = E("872717"),
 
 function n() {
   var e;
-  return t.default.get("".concat((e = "https:", "https:")).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT))
+  return t.HTTP.get("".concat((e = "https:", "https:")).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT))
 }
 
 function r(e, _) {

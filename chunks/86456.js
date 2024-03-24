@@ -16,25 +16,25 @@ var s = n("37983"),
   u = n("506885"),
   d = n("981601"),
   c = n("697218"),
-  f = n("304198"),
-  E = n("315102"),
+  E = n("304198"),
+  f = n("315102"),
   _ = n("441823"),
   T = n("140596"),
   I = n("950576"),
   m = n("49111");
 
-function N(e) {
-  return l.useCallback(t => (l, r) => {
-    var o;
-    let f = E.default.getApplicationIconURL({
-        id: t.id,
-        icon: t.icon,
-        bot: t.bot,
+function N(e, t) {
+  return l.useCallback(l => (r, o) => {
+    var E;
+    let I = f.default.getApplicationIconURL({
+        id: l.id,
+        icon: l.icon,
+        bot: l.bot,
         botIconFirst: !0
       }),
-      I = c.default.getUser(null === (o = t.bot) || void 0 === o ? void 0 : o.id),
-      m = T.default.getIntegration(e.id, t.id),
-      N = e.isPrivate() && null != m ? t => {
+      m = c.default.getUser(null === (E = l.bot) || void 0 === E ? void 0 : E.id),
+      N = T.default.getIntegration(e.id, l.id),
+      p = e.isPrivate() && null != N ? t => {
         (0, i.openContextMenuLazy)(t, async () => {
           let {
             default: t
@@ -42,32 +42,33 @@ function N(e) {
           return n => (0, s.jsx)(t, {
             ...n,
             channel: e,
-            integration: m
+            integration: N
           })
         })
-      } : null != I ? t => (0, _.openUserContextMenu)(t, I, e) : void 0,
+      } : null != m ? t => (0, _.openUserContextMenu)(t, m, e) : void 0,
       {
-        bot: p
-      } = t;
-    return null == p ? l : (0, s.jsx)(a.Popout, {
+        bot: S
+      } = l;
+    return null == S ? r : (0, s.jsx)(a.Popout, {
       position: "right",
-      preload: () => (0, u.default)(p.id, f, {
+      preload: () => (0, u.default)(S.id, I, {
         guildId: e.guild_id,
         channelId: e.id
       }),
-      renderPopout: t => (0, s.jsx)(d.default, {
-        ...t,
-        userId: p.id,
+      renderPopout: n => (0, s.jsx)(d.default, {
+        ...n,
+        userId: S.id,
         guildId: e.guild_id,
-        channelId: e.id
+        channelId: e.id,
+        messageId: t.id
       }),
       children: e => (0, s.jsx)(a.Anchor, {
         ...e,
-        onContextMenu: N,
-        children: l
+        onContextMenu: p,
+        children: r
       })
-    }, r)
-  }, [e])
+    }, o)
+  }, [e, t.id])
 }
 
 function p(e) {
@@ -75,8 +76,13 @@ function p(e) {
     message: t,
     channel: l,
     compact: a
-  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, l.id, l.guild_id), c = N(l);
-  return (0, s.jsx)(f.default, {
+  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)({
+    user: t.author,
+    channelId: l.id,
+    guildId: l.guild_id,
+    messageId: t.id
+  }), c = N(l, t);
+  return (0, s.jsx)(E.default, {
     icon: n("127067"),
     timestamp: t.timestamp,
     compact: a,
@@ -94,8 +100,13 @@ function S(e) {
     message: t,
     channel: l,
     compact: a
-  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)(t.author, l.id, l.guild_id), c = N(l);
-  return (0, s.jsx)(f.default, {
+  } = e, i = (0, r.default)(t), u = t.application, d = (0, o.useUsernameHook)({
+    user: t.author,
+    channelId: l.id,
+    guildId: l.guild_id,
+    messageId: t.id
+  }), c = N(l, t);
+  return (0, s.jsx)(E.default, {
     icon: n("226315"),
     timestamp: t.timestamp,
     compact: a,

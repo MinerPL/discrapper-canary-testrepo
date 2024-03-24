@@ -24,7 +24,7 @@ function p(e) {
     m = (0, c.useShowRoleSubscriptionsInChannelList)(e.id),
     E = (0, a.useGuildShopVisibleInGuild)(e),
     g = (0, u.useCanSeeOnboardingHome)(e.id),
-    I = (0, l.default)([o.default], () => o.default.getNewMemberActions(e.id), [e.id]),
+    I = (0, l.useStateFromStores)([o.default], () => o.default.getNewMemberActions(e.id), [e.id]),
     S = (0, d.default)(e.id),
     _ = (0, r.useCanAccessMemberSafetyPage)(e.id),
     N = [],

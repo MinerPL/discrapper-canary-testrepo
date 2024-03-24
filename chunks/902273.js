@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return z
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("748820"),
+  l = s("884691"),
+  n = s("748820"),
   i = s("86758"),
   r = s("446674"),
   o = s("872717"),
@@ -15,258 +15,258 @@ var a = s("37983"),
   c = s("77078"),
   E = s("655772"),
   _ = s("10641"),
-  T = s("597517"),
-  I = s("915639"),
+  I = s("597517"),
+  T = s("915639"),
   S = s("525065"),
-  N = s("305961"),
-  g = s("37785"),
-  f = s("68238"),
-  A = s("956089"),
-  L = s("599110"),
-  m = s("199938"),
-  C = s("592407"),
-  O = s("738216"),
-  h = s("692541"),
-  R = s("900938"),
-  D = s("49111"),
-  M = s("994428"),
-  G = s("533613"),
-  x = s("782340"),
-  p = s("383353"),
-  U = s("330808"),
-  v = s("424596"),
-  j = s("284776"),
+  f = s("305961"),
+  m = s("37785"),
+  N = s("68238"),
+  g = s("956089"),
+  h = s("599110"),
+  C = s("199938"),
+  R = s("592407"),
+  x = s("738216"),
+  L = s("692541"),
+  O = s("900938"),
+  A = s("49111"),
+  p = s("994428"),
+  M = s("533613"),
+  D = s("782340"),
+  v = s("641399"),
+  G = s("330808"),
+  j = s("424596"),
+  U = s("284776"),
   P = s("101332"),
-  y = s("831153"),
-  b = s("432392"),
-  B = s("933861"),
+  b = s("831153"),
+  B = s("432392"),
+  y = s("933861"),
   F = s("877026"),
   H = s("775113");
-let V = function(e, t, s) {
+let k = function(e, t, s) {
     let a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-      n = null;
-    return null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (n = x.default.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : n = x.default.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({
+      l = null;
+    return null == t || Number.isNaN(t) ? (null == t || Number.isNaN(t)) && null != e && (l = D.default.Messages.GUILD_ANALYTICS_METRICS_LAST_WEEK) : l = D.default.Messages.PERCENTAGE_SINCE_LAST_WEEK.format({
       percentage: (0, i.truncateAndLocalizeNumber)(Math.abs(t), s)
     }), {
-      localizedNumber: null != e ? "".concat((0, i.truncateAndLocalizeNumber)(e, s)).concat(a ? "%" : "") : x.default.Messages.NOT_AVAILABLE,
-      subtext: n,
+      localizedNumber: null != e ? "".concat((0, i.truncateAndLocalizeNumber)(e, s)).concat(a ? "%" : "") : D.default.Messages.NOT_AVAILABLE,
+      subtext: l,
       isTrendingUp: t > 0,
       isTrendingDown: t < 0
     }
   },
   w = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return t || e === D.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
-      icon: f.default,
-      className: p.notEnoughMembersError,
+    return t || e === A.AbortCodes.NOT_ENOUGH_GUILD_MEMBERS ? (0, a.jsx)(c.FormErrorBlock, {
+      icon: N.default,
+      className: v.notEnoughMembersError,
       backgroundColor: c.FormErrorBlockColors.BACKGROUND_ACCENT,
-      children: x.default.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
+      children: D.default.Messages.GUILD_ANALYTICS_ERROR_GUILD_SIZE
     }) : null == e ? null : (0, a.jsx)(c.FormErrorBlock, {
       backgroundColor: c.FormErrorBlockColors.BACKGROUND_ACCENT,
-      children: x.default.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
+      children: D.default.Messages.GUILD_ANALYTICS_ERROR_MESSAGE
     })
   };
 
-function k(e) {
-  L.default.track(D.AnalyticEvents.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
+function V(e) {
+  h.default.track(A.AnalyticEvents.GUILD_INSIGHTS_SETTINGS_CTA_CLICKED, {
     guild_id: e
   });
-  let t = null == e ? D.RelativeMarketingURLs.DEVELOPER_PORTAL : D.RelativeMarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
-    s = (0, l.v4)();
-  return o.default.post({
-    url: D.Endpoints.HANDOFF,
+  let t = null == e ? A.RelativeMarketingURLs.DEVELOPER_PORTAL : A.RelativeMarketingURLs.DEVELOPER_PORTAL_GUILD_ANALYTICS(e),
+    s = (0, n.v4)();
+  return o.HTTP.post({
+    url: A.Endpoints.HANDOFF,
     body: {
       key: s
     },
     oldFormErrors: !0
   }).then(e => {
     let a = e.body.handoff_token;
-    window.open(D.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, a, t))
+    window.open(A.MarketingURLs.DEVELOPER_PORTAL_LOGIN_HANDOFF(s, a, t))
   }, () => {
     window.open(t)
   })
 }
 let Y = () => {
-  let [e, t] = n.useState(!1), s = (0, r.useStateFromStores)([R.default], () => R.default.getGuildId());
+  let [e, t] = l.useState(!1), s = (0, r.useStateFromStores)([O.default], () => O.default.getGuildId());
   return (0, a.jsx)(c.Button, {
-    className: p.developerPortalCta,
+    className: v.developerPortalCta,
     onClick: () => {
-      t(!0), k(s).then(() => {
+      t(!0), V(s).then(() => {
         t(!1)
       })
     },
     submitting: e,
-    children: x.default.Messages.GUILD_ANALYICS_DEVELOPERS_BUTTON
+    children: D.default.Messages.GUILD_ANALYICS_DEVELOPERS_BUTTON
   })
 };
 
-function K(e) {
+function W(e) {
   let {
     guildId: t
   } = e, {
     hasAccessRate: s,
-    accessRate: l
-  } = (0, r.useStateFromStoresObject)([h.default], () => h.default.getMemberInsights(t)), i = (0, r.useStateFromStores)([S.default], () => {
+    accessRate: n
+  } = (0, r.useStateFromStoresObject)([L.default], () => L.default.getMemberInsights(t)), i = (0, r.useStateFromStores)([S.default], () => {
     var e;
     return null !== (e = S.default.getMemberCount()) && void 0 !== e ? e : 0
   }), {
     showAccessRate: o
-  } = (0, m.useGuildAccessRateInsightExperiment)(t, !s);
-  if (n.useEffect(() => {
+  } = (0, C.useGuildAccessRateInsightExperiment)(t, !s);
+  if (l.useEffect(() => {
       o && ((0, _.requestMarkDismissibleContentAsShown)(d.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW), (0, _.markDismissibleContentAsDismissed)(d.DismissibleContent.GUILD_INSIGHTS_ACCESS_RATE_NEW, {
-        dismissAction: M.ContentDismissActionType.AUTO
+        dismissAction: p.ContentDismissActionType.AUTO
       }))
-    }, [o]), !o || !s || null == l) return null;
-  let E = 10 * Math.ceil((1 - l) * 10),
-    T = H,
-    I = null,
-    N = null;
-  return l >= .9 ? (T = H, I = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
+    }, [o]), !o || !s || null == n) return null;
+  let E = 10 * Math.ceil((1 - n) * 10),
+    I = H,
+    T = null,
+    f = null;
+  return n >= .9 ? (I = H, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_VERY_GOOD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
-      className: p.ratingVeryGood,
+      className: v.ratingVeryGood,
       children: e
     }, t)
-  }), N = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
+  }), f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_LESS.format({
     accessRate: 10
-  })) : l >= (i > 1e4 ? .7 : .8) ? (T = B, I = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
+  })) : n >= (i > 1e4 ? .7 : .8) ? (I = y, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_GOOD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
-      className: p.ratingGood,
+      className: v.ratingGood,
       children: e
     }, t)
-  }), N = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+  }), f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
     accessRate: E
-  })) : l >= .5 ? (T = F, I = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
+  })) : n >= .5 ? (I = F, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_NEUTRAL.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
-      className: p.ratingNeutral,
+      className: v.ratingNeutral,
       children: e
     }, t)
-  }), N = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+  }), f = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
     accessRate: E
-  })) : (T = b, I = x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
+  })) : (I = B, T = D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_BAD.format({
     ratingHook: (e, t) => (0, a.jsx)("span", {
-      className: p.ratingBad,
+      className: v.ratingBad,
       children: e
     }, t)
-  }), N = 100 === E ? x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
+  }), f = 100 === E ? D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_APPROX.format({
     accessRate: E
-  }) : x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({
+  }) : D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATING_MORE.format({
     accessRate: E
   })), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(c.Heading, {
       variant: "heading-md/semibold",
-      className: p.insightsTitle,
-      children: [x.default.Messages.MEMBER_INSIGHTS_SERVER_ACCESS, (0, a.jsx)(A.TextBadge, {
-        text: x.default.Messages.BETA,
+      className: v.insightsTitle,
+      children: [D.default.Messages.MEMBER_INSIGHTS_SERVER_ACCESS, (0, a.jsx)(g.TextBadge, {
+        text: D.default.Messages.BETA,
         color: u.default.unsafe_rawColors.BRAND_500.css,
-        className: p.betaTag
+        className: v.betaTag
       })]
     }), (0, a.jsxs)("div", {
-      className: p.memberInsightsContainer,
+      className: v.memberInsightsContainer,
       children: [(0, a.jsxs)("div", {
-        className: p.insightsHeader,
+        className: v.insightsHeader,
         children: [(0, a.jsx)("img", {
           alt: "",
-          className: p.insightsIcon,
-          src: T
+          className: v.insightsIcon,
+          src: I
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsx)(c.Text, {
             variant: "text-md/semibold",
-            className: p.title,
-            children: I
+            className: v.title,
+            children: T
           }), (0, a.jsxs)(c.Text, {
-            className: p.description,
+            className: v.description,
             variant: "text-sm/normal",
-            children: [N, (0, a.jsx)(c.TooltipContainer, {
-              text: x.default.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
-              className: p.insightsTooltip,
-              children: (0, a.jsx)(f.default, {
-                className: p.insightsTooltipIcon
+            children: [f, (0, a.jsx)(c.TooltipContainer, {
+              text: D.default.Messages.MEMBER_INSIGHTS_ACCESS_RATE_TOOLTIP,
+              className: v.insightsTooltip,
+              children: (0, a.jsx)(N.default, {
+                className: v.insightsTooltipIcon
               })
             })]
           })]
         })]
-      }), l < .9 ? (0, a.jsxs)(a.Fragment, {
+      }), n < .9 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: p.divider
+          className: v.divider
         }), (0, a.jsx)(c.Text, {
-          className: p.tips,
+          className: v.tips,
           variant: "text-sm/semibold",
-          children: x.default.Messages.MEMBER_INSIGHTS_TIPS.format()
+          children: D.default.Messages.MEMBER_INSIGHTS_TIPS.format()
         }), (0, a.jsxs)("div", {
-          className: p.insightsActions,
+          className: v.insightsActions,
           children: [(0, a.jsxs)("div", {
-            className: p.insightAction,
+            className: v.insightAction,
             children: [(0, a.jsx)("img", {
               alt: "",
-              className: p.actionIcon,
-              src: j
+              className: v.actionIcon,
+              src: U
             }), (0, a.jsx)(c.Text, {
-              className: p.actionText,
+              className: v.actionText,
               variant: "text-sm/normal",
-              children: x.default.Messages.ACCESS_RATE_ACTION_SIMPLIFY
+              children: D.default.Messages.ACCESS_RATE_ACTION_SIMPLIFY
             })]
           }), (0, a.jsx)("div", {
-            className: p.dividerInline
+            className: v.dividerInline
           }), (0, a.jsxs)("div", {
-            className: p.insightAction,
+            className: v.insightAction,
             children: [(0, a.jsx)("img", {
               alt: "",
-              className: p.actionIcon,
+              className: v.actionIcon,
               src: P
             }), (0, a.jsx)(c.Text, {
-              className: p.actionText,
+              className: v.actionText,
               variant: "text-sm/normal",
-              children: x.default.Messages.ACCESS_RATE_ACTION_EXTRA_STEPS
+              children: D.default.Messages.ACCESS_RATE_ACTION_EXTRA_STEPS
             })]
           }), (0, a.jsx)("div", {
-            className: p.dividerInline
+            className: v.dividerInline
           }), (0, a.jsxs)("div", {
-            className: p.insightAction,
+            className: v.insightAction,
             children: [(0, a.jsx)("img", {
               alt: "",
-              className: p.actionIcon,
-              src: v
+              className: v.actionIcon,
+              src: j
             }), (0, a.jsx)(c.Text, {
-              className: p.actionText,
+              className: v.actionText,
               variant: "text-sm/normal",
-              children: x.default.Messages.ACCESS_RATE_ACTION_BOTS.format({
-                integrationsHook: (e, t) => (0, a.jsx)(g.default, {
-                  onClick: () => C.default.setSection(D.GuildSettingsSections.INTEGRATIONS),
-                  className: p.link,
+              children: D.default.Messages.ACCESS_RATE_ACTION_BOTS.format({
+                integrationsHook: (e, t) => (0, a.jsx)(m.default, {
+                  onClick: () => R.default.setSection(A.GuildSettingsSections.INTEGRATIONS),
+                  className: v.link,
                   children: e
                 }, t)
               })
             })]
           }), (0, a.jsx)("div", {
-            className: p.dividerInline
+            className: v.dividerInline
           }), (0, a.jsxs)("div", {
-            className: p.insightAction,
+            className: v.insightAction,
             children: [(0, a.jsx)("img", {
               alt: "",
-              className: p.actionIcon,
-              src: U
+              className: v.actionIcon,
+              src: G
             }), (0, a.jsx)(c.Text, {
-              className: p.actionText,
+              className: v.actionText,
               variant: "text-sm/normal",
-              children: x.default.Messages.ACCESS_RATE_ACTION_AUDIT
+              children: D.default.Messages.ACCESS_RATE_ACTION_AUDIT
             })]
           })]
         })]
       }) : (0, a.jsx)("div", {
-        className: p.insightsActions,
+        className: v.insightsActions,
         children: (0, a.jsxs)("div", {
-          className: p.insightAction,
+          className: v.insightAction,
           children: [(0, a.jsx)("img", {
             alt: "",
-            className: p.actionIcon,
-            src: y
+            className: v.actionIcon,
+            src: b
           }), (0, a.jsx)(c.Text, {
-            className: p.actionText,
+            className: v.actionText,
             variant: "text-sm/normal",
-            children: x.default.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
-              insightsHook: (e, s) => (0, a.jsx)(g.default, {
-                onClick: () => k(t),
-                className: p.link,
+            children: D.default.Messages.ACCESS_RATE_ACTION_SUCCESS.format({
+              insightsHook: (e, s) => (0, a.jsx)(m.default, {
+                onClick: () => V(t),
+                className: v.link,
                 children: e
               }, s)
             })
@@ -274,70 +274,70 @@ function K(e) {
         })
       })]
     }), (0, a.jsx)("div", {
-      className: p.divider
+      className: v.divider
     }), (0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
-      className: p.insightsTitle,
-      children: x.default.Messages.SERVER_INSIGHTS
+      className: v.insightsTitle,
+      children: D.default.Messages.SERVER_INSIGHTS
     })]
   })
 }
-var W = () => {
-  let e = (0, r.useStateFromStores)([R.default], () => R.default.getGuildId()),
+var z = () => {
+  let e = (0, r.useStateFromStores)([O.default], () => O.default.getGuildId()),
     t = (0, r.useStateFromStores)([S.default], () => S.default.getMemberCount(e)),
-    s = (0, r.useStateFromStores)([N.default], () => N.default.getGuild(e)),
-    l = (0, r.useStateFromStores)([I.default], () => I.default.locale),
+    s = (0, r.useStateFromStores)([f.default], () => f.default.getGuild(e)),
+    n = (0, r.useStateFromStores)([T.default], () => T.default.locale),
     {
       analytics: i,
       errorCode: o
-    } = (0, r.useStateFromStoresObject)([h.default], () => ({
-      analytics: null != e ? h.default.getOverviewAnalytics(e) : null,
-      errorCode: h.default.getError()
+    } = (0, r.useStateFromStoresObject)([L.default], () => ({
+      analytics: null != e ? L.default.getOverviewAnalytics(e) : null,
+      errorCode: L.default.getError()
     })),
-    d = null == t || null == s || null != t && t < 500 && null != s && !s.hasFeature(D.GuildFeatures.PARTNERED) && !s.hasFeature(D.GuildFeatures.VERIFIED);
-  n.useEffect(() => {
-    null != e && !d && ((0, O.fetchEngagementOverview)(e), (0, O.fetchGrowthActivationOverview)(e), (0, O.fetchGrowthActivationRetention)(e))
-  }, [e, d]), n.useEffect(() => {
-    (0, T.hideHotspot)(G.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU)
+    d = null == t || null == s || null != t && t < 500 && null != s && !s.hasFeature(A.GuildFeatures.PARTNERED) && !s.hasFeature(A.GuildFeatures.VERIFIED);
+  l.useEffect(() => {
+    null != e && !d && ((0, x.fetchEngagementOverview)(e), (0, x.fetchGrowthActivationOverview)(e), (0, x.fetchGrowthActivationRetention)(e))
+  }, [e, d]), l.useEffect(() => {
+    (0, I.hideHotspot)(M.HotspotLocations.GUILD_ANALYTICS_GUILD_SETTINGS_MENU)
   }, []);
   let u = null != i ? (0, a.jsx)("div", {
-    className: p.guildAnalyticsOverviewWrapper,
+    className: v.guildAnalyticsOverviewWrapper,
     children: (0, a.jsxs)("div", {
-      className: p.overviewData,
+      className: v.overviewData,
       children: [(0, a.jsx)(E.default, {
-        title: x.default.Messages.WEEKLY_VISITORS,
-        tooltipText: x.default.Messages.VISITORS_INFO,
-        ...V(i.visitors, i.visitorsChange, l)
+        title: D.default.Messages.WEEKLY_VISITORS,
+        tooltipText: D.default.Messages.VISITORS_INFO,
+        ...k(i.visitors, i.visitorsChange, n)
       }), (0, a.jsx)(E.default, {
-        title: x.default.Messages.WEEKLY_COMMUNICATORS,
-        tooltipText: x.default.Messages.COMMUNICATORS_INFO,
-        ...V(i.communicators, i.communicatorsChange, l)
+        title: D.default.Messages.WEEKLY_COMMUNICATORS,
+        tooltipText: D.default.Messages.COMMUNICATORS_INFO,
+        ...k(i.communicators, i.communicatorsChange, n)
       }), (0, a.jsx)(E.default, {
-        title: x.default.Messages.WEEKLY_NEW_MEMBERS,
-        ...V(i.newMembers, i.newMembersChange, l)
+        title: D.default.Messages.WEEKLY_NEW_MEMBERS,
+        ...k(i.newMembers, i.newMembersChange, n)
       }), (0, a.jsx)(E.default, {
-        title: x.default.Messages.WEEKLY_NEW_MEMBER_RETENTION,
-        tooltipText: x.default.Messages.NEW_MEMBER_RETENTION_INFO,
-        ...V(i.pctRetained, i.pctRetainedChange, l, !0)
+        title: D.default.Messages.WEEKLY_NEW_MEMBER_RETENTION,
+        tooltipText: D.default.Messages.NEW_MEMBER_RETENTION_INFO,
+        ...k(i.pctRetained, i.pctRetainedChange, n, !0)
       })]
     })
   }) : null;
   return (0, a.jsxs)(c.FormSection, {
     tag: c.FormTitleTags.H1,
-    title: x.default.Messages.SERVER_INSIGHTS,
+    title: D.default.Messages.SERVER_INSIGHTS,
     children: [(0, a.jsx)(c.FormText, {
       type: c.FormTextTypes.DESCRIPTION,
-      children: x.default.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
-    }), w(o, d), null != e ? (0, a.jsx)(K, {
+      children: D.default.Messages.GUILD_ANALYTICS_DESCRIPTION.format()
+    }), w(o, d), null != e ? (0, a.jsx)(W, {
       guildId: e
     }) : null, (0, a.jsxs)("div", {
-      className: p.developerPortalCtaWrapper,
+      className: v.developerPortalCtaWrapper,
       children: [(0, a.jsx)("div", {
-        className: p.placeholderImage
+        className: v.placeholderImage
       }), (0, a.jsx)(c.Text, {
-        className: p.developerPortalCtaText,
+        className: v.developerPortalCtaText,
         variant: "text-sm/normal",
-        children: x.default.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
+        children: D.default.Messages.GUILD_ANALYTICS_DEVELOPERS_CTA
       }), (0, a.jsx)(Y, {})]
     }), u]
   })

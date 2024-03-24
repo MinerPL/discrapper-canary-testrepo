@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("65597"),
-  l = n("151426"),
-  r = n("77078"),
-  o = n("272030"),
-  u = n("812204"),
-  d = n("685665"),
-  c = n("235145"),
-  f = n("244390"),
-  E = n("42887"),
-  _ = n("754576"),
-  h = n("78581"),
+  l = n("65597"),
+  i = n("151426"),
+  r = n("204702"),
+  o = n("77078"),
+  u = n("272030"),
+  d = n("812204"),
+  c = n("685665"),
+  f = n("235145"),
+  E = n("244390"),
+  h = n("42887"),
+  _ = n("78581"),
   C = n("429829"),
-  I = n("191191"),
-  T = n("994428"),
-  S = n("782340");
+  S = n("191191"),
+  I = n("994428"),
+  m = n("782340");
 
-function m(e) {
+function p(e) {
   let {
     channel: t,
-    iconClassName: m,
-    className: p,
-    innerClassName: A,
-    ...g
+    iconClassName: p,
+    className: T,
+    innerClassName: g,
+    ...A
   } = e, {
     mute: N,
     suppress: R
-  } = (0, f.default)(t), O = (0, i.default)([E.default], () => E.default.isDeaf()), L = N || R || O, [v, M] = s.useState(!1), P = t.getGuildId(), D = (0, h.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: L
-  }), [y, x] = (0, c.useGetDismissibleContent)(D), {
+  } = (0, E.default)(t), O = (0, l.useStateFromStores)([h.default], () => h.default.isDeaf()), v = N || R || O, [L, M] = s.useState(!1), P = t.getGuildId(), y = (0, _.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: v
+  }), [D, x] = (0, f.useGetDismissibleContent)(y), {
     AnalyticsLocationProvider: b
-  } = (0, d.default)(u.default.SOUNDBOARD_BUTTON);
+  } = (0, c.default)(d.default.SOUNDBOARD_BUTTON);
 
   function U(e) {
-    null != P && (0, o.openContextMenuLazy)(e, async () => {
+    null != P && (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("136137").then(n.bind(n, "136137"));
@@ -49,19 +49,26 @@ function m(e) {
       })
     })
   }
-  let G = e => (0, a.jsx)(r.Popout, {
-    shouldShow: v,
+  let {
+    Component: G,
+    play: j,
+    events: {
+      onMouseEnter: w,
+      onMouseLeave: k
+    }
+  } = (0, r.useSoundboardLottie)(), F = e => (0, a.jsx)(o.Popout, {
+    shouldShow: L,
     position: "top",
     onRequestClose: () => M(!1),
     renderPopout: e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(I.default, {
+      return (0, a.jsx)(S.default, {
         guildId: P,
         channel: t,
         onClose: n,
-        gridNotice: y === l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(C.CustomCallSoundUpsell, {
+        gridNotice: D === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(C.CustomCallSoundUpsell, {
           onClose: n,
           markAsDismissed: x
         }),
@@ -69,36 +76,46 @@ function m(e) {
       })
     },
     children: t => (0, a.jsx)("div", {
-      children: (0, a.jsx)(r.Button, {
+      children: (0, a.jsx)(o.Button, {
         ...e,
         ...t,
-        className: p,
-        wrapperClassName: p,
-        innerClassName: A,
-        disabled: L,
+        className: T,
+        wrapperClassName: T,
+        innerClassName: g,
+        disabled: v,
         onClick: () => {
           var t, n;
-          null == n || n(), null != y && y !== l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(T.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!v)
+          null == n || n(), null != D && D !== i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && x(I.ContentDismissActionType.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), M(!L), j()
+        },
+        onMouseEnter: e => {
+          var t;
+          null === (t = A.onMouseEnter) || void 0 === t || t.call(A, e), w()
+        },
+        onMouseLeave: e => {
+          var t;
+          null === (t = A.onMouseLeave) || void 0 === t || t.call(A, e), k()
         },
         onContextMenu: U,
         fullWidth: !0,
-        size: r.Button.Sizes.SMALL,
-        ...g,
-        children: (0, a.jsx)(_.default, {
-          className: m
+        size: o.Button.Sizes.SMALL,
+        ...A,
+        children: (0, a.jsx)(G, {
+          className: p,
+          size: "sm",
+          color: o.tokens.colors.INTERACTIVE_ACTIVE
         })
       })
     })
   });
   return (0, a.jsx)(b, {
-    children: (0, a.jsx)(r.Tooltip, {
+    children: (0, a.jsx)(o.Tooltip, {
       text: function() {
-        if (N) return S.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (R) return S.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (O) return S.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
-        return S.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
+        if (N) return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (R) return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (O) return m.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED;
+        return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD
       }(),
-      children: e => G(e)
+      children: e => F(e)
     })
   })
 }

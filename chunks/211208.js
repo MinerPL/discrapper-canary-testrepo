@@ -1,33 +1,33 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   default: function() {
     return h
   }
-}), t("222007");
-var s = t("37983"),
-  n = t("884691"),
-  l = t("446674"),
-  o = t("77078"),
-  c = t("997289"),
-  i = t("716849"),
-  r = t("552917"),
-  d = t("697218"),
-  u = t("719923"),
-  O = t("154867"),
-  E = t("870879"),
-  _ = t("239448"),
-  g = t("439141"),
-  A = t("648911"),
-  p = t("360371"),
-  f = t("917219"),
-  M = t("49111"),
-  m = t("991207"),
-  I = t("782340"),
-  v = t("253493");
+}), a("222007");
+var s = a("37983"),
+  n = a("884691"),
+  l = a("446674"),
+  o = a("77078"),
+  c = a("997289"),
+  i = a("716849"),
+  r = a("552917"),
+  d = a("697218"),
+  u = a("719923"),
+  O = a("154867"),
+  E = a("870879"),
+  _ = a("239448"),
+  g = a("439141"),
+  A = a("648911"),
+  p = a("360371"),
+  f = a("917219"),
+  M = a("49111"),
+  m = a("991207"),
+  I = a("782340"),
+  v = a("80387");
 
 function h(e) {
   let {
-    onLearnMore: a,
+    onLearnMore: t,
     selectedBackgroundOption: h,
     onSelectBackgroundOption: x,
     currentDeviceId: C,
@@ -71,10 +71,10 @@ function h(e) {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
-          } = await t.el("497296").then(t.bind(t, "497296"));
-          return t => (0, s.jsx)(e, {
-            ...t,
-            onLearnMore: a,
+          } = await a.el("497296").then(a.bind(a, "497296"));
+          return a => (0, s.jsx)(e, {
+            ...a,
+            onLearnMore: t,
             analyticsSource: {
               ...V.location,
               object: M.AnalyticsObjects.BUTTON_CTA
@@ -82,12 +82,12 @@ function h(e) {
           })
         })
       },
-      onAddBackgroundImage: function(e, a) {
-        let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      onAddBackgroundImage: function(e, t) {
+        let a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         return new Promise(async s => {
           try {
             let s = await (0, O.uploadVideoFilterAsset)(e, f.VideoFilterType.BACKGROUND);
-            L(s), (0, _.trackBackgroundOptionAdded)(s, a.type === m.FileTypes.MP4, t), k(null)
+            L(s), (0, _.trackBackgroundOptionAdded)(s, t.type === m.FileTypes.MP4, a), k(null)
           } catch (e) {
             k(e.message)
           }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomodUserProfileQuarantineChatInputNotice: function() {
-    return f
+    return h
   }
 }), n("222007");
 var s = n("37983");
@@ -12,39 +12,40 @@ var a = n("77078"),
   r = n("594864"),
   o = n("533930"),
   u = n("956967"),
-  d = n("782340"),
-  c = n("382814");
+  d = n("49111"),
+  c = n("782340"),
+  f = n("743221");
 
-function f(e) {
+function h(e) {
   var t, n;
   let {
-    guild: f
+    guild: h
   } = e, {
-    analyticsLocations: h
-  } = (0, i.default)(l.default.AUTOMOD_PROFILE_QUARANTINE_ALERT), [C, p] = (0, u.useOpenFixQuarantinedProfileModal)({
-    guildId: null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : "",
-    analyticsLocations: h,
+    analyticsLocations: C
+  } = (0, i.default)(l.default.AUTOMOD_PROFILE_QUARANTINE_ALERT), [p, m] = (0, u.useOpenFixQuarantinedProfileModal)({
+    guildId: null !== (t = null == h ? void 0 : h.id) && void 0 !== t ? t : d.EMPTY_STRING_SNOWFLAKE_ID,
+    analyticsLocations: C,
     openWithoutBackstack: !0
-  }), m = p ? d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, E = p ? d.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : d.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
+  }), E = m ? c.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_DESCRIPTION : c.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_NO_PERMS_DESCRIPTION, g = m ? c.default.Messages.GUILD_AUTOMOD_UPDATE_PROFILE_CTA : c.default.Messages.GUILD_AUTOMOD_UPDATE_ACCOUNT_USERNAME_CTA;
   return (0, s.jsx)("div", {
     children: (0, s.jsx)(r.MessageNoticeBanner, {
       bannerIcon: (0, s.jsx)(o.default, {
-        className: c.bannerIcon,
+        className: f.bannerIcon,
         width: 32,
         height: 32
       }),
-      bannerHeader: d.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({
-        guildName: null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : ""
+      bannerHeader: c.default.Messages.GUILD_AUTOMOD_PROFILE_INVALID_MODAL_TITLE_MOBILE.format({
+        guildName: null !== (n = null == h ? void 0 : h.name) && void 0 !== n ? n : ""
       }),
-      bannerSubtext: m,
-      containerStyles: c.bannerContainer,
-      headerStyles: c.bannerHeader,
+      bannerSubtext: E,
+      containerStyles: f.bannerContainer,
+      headerStyles: f.bannerHeader,
       children: (0, s.jsx)(a.Button, {
         onClick: () => {
-          C()
+          p()
         },
         size: a.Button.Sizes.SMALL,
-        children: E
+        children: g
       })
     })
   })

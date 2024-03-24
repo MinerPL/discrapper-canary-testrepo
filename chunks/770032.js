@@ -5,11 +5,11 @@ E.r(_), E.d(_, {
     return n
   },
   default: function() {
-    return L
+    return u
   }
 }), E("424973");
-var n, r, i = E("171718"),
-  a = E("446674"),
+var n, r, a = E("171718"),
+  i = E("446674"),
   I = E("913144"),
   s = E("746574"),
   T = E("995802"),
@@ -24,7 +24,7 @@ function A(e) {
       id: E
     } = _;
     return E !== e
-  }), i.default.removeToken(e)
+  }), a.removeToken(e)
 }
 
 function R(e, _) {
@@ -37,7 +37,7 @@ function R(e, _) {
     });
   null != t && (t.tokenStatus = _, N = E)
 }
-class l extends a.default.PersistedStore {
+class l extends i.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var _;
@@ -99,7 +99,7 @@ l.displayName = "MultiAccountStore", l.persistKey = "MultiAccountStore", l.migra
     canUseMultiAccountMobile: !1
   }
 }];
-var L = new l(I.default, {
+var u = new l(I.default, {
   CONNECTION_OPEN: function(e) {
     let {
       user: _

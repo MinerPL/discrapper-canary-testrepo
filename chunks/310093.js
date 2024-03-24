@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftNote: function() {
-    return c
+    return o
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var a = n("812952"),
-  r = n("978679"),
-  l = n("659632"),
-  s = n("635357"),
+var r = n("812952"),
+  a = n("978679"),
+  i = n("659632"),
+  l = n("635357"),
   u = n("782340"),
-  o = n("588937");
+  c = n("771776");
 
-function c(e) {
+function o(e) {
   let {
     giftMessage: t = u.default.Messages.PREMIUM_PAYMENT_IS_GIFT
   } = e, {
     isGift: n,
-    giftRecipient: c
-  } = (0, s.useGiftContext)();
-  return !n || (0, l.shouldShowCustomGiftExperience)(c, !0, "GiftNote") ? null : (0, i.jsx)(a.default, {
-    className: o.paymentNote,
-    iconSize: a.default.Sizes.SMALL,
-    icon: r.default,
-    color: null == t ? a.default.Colors.PRIMARY : a.default.Colors.SECONDARY,
+    giftRecipient: o
+  } = (0, l.useGiftContext)();
+  return !n || (0, i.shouldShowCustomGiftExperience)(o) ? null : (0, s.jsx)(r.default, {
+    className: c.paymentNote,
+    iconSize: r.default.Sizes.SMALL,
+    icon: a.default,
+    color: null == t ? r.default.Colors.PRIMARY : r.default.Colors.SECONDARY,
     children: t
   })
 }

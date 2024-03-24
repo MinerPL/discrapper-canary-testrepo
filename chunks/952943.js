@@ -2,9 +2,9 @@
 let n, a;
 l.r(t), l.d(t, {
   default: function() {
-    return P
+    return b
   }
-}), l("222007"), l("424973");
+}), l("424973"), l("222007");
 var s = l("917351"),
   i = l.n(s),
   r = l("446674"),
@@ -24,40 +24,39 @@ let I = [],
   S = m.FormStates.CLOSED,
   O = {},
   _ = !1,
-  A = null,
-  C = new Set;
+  A = null;
 
-function x(e) {
+function C(e) {
   let {
     section: t
   } = e;
   if (t !== m.GuildSettingsSections.INTEGRATIONS) return !1;
   if (a = m.IntegrationSettingsSections.OVERVIEW, null == n) {
     let e = f.default.getGuildId();
-    null != e && d.default.fetchForGuild(e), R(!1)
+    null != e && d.default.fetchForGuild(e), x(!1)
   }
 }
 
-function R(e) {
+function x(e) {
   if (null != (n = f.default.getProps().guild) && u.default.can(m.Permissions.MANAGE_GUILD, n)) {
     let e = f.default.getProps().integrations;
     null == e && (p = !0), I = null != e ? e : []
   } else I = [];
   if (T = null != n && u.default.can(m.Permissions.MANAGE_WEBHOOKS, n) ? c.default.getWebhooksForGuild(n.id) : [], !e && null != E) {
-    let e = v(E.id);
+    let e = M(E.id);
     null != e && (E = e)
   }
   if (null != h) {
-    let e = L(h.id);
+    let e = v(h.id);
     null != e && (h = e)
   }
   N = null, S = m.FormStates.OPEN, O = {}, _ = !1
 }
-let M = i.debounce(() => {
-  _ && (null != E ? i.isEqual(E, v(E.id)) && (_ = !1) : null != h && i.isEqual(h, L(h.id)) && (_ = !1), !_ && b.emitChange())
+let R = i.debounce(() => {
+  _ && (null != E ? i.isEqual(E, M(E.id)) && (_ = !1) : null != h && i.isEqual(h, v(h.id)) && (_ = !1), !_ && j.emitChange())
 }, 500);
 
-function v(e) {
+function M(e) {
   return I.find(t => {
     let {
       id: l
@@ -66,7 +65,7 @@ function v(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   return T.find(t => {
     let {
       id: l
@@ -74,7 +73,7 @@ function L(e) {
     return l === e
   })
 }
-class j extends r.default.Store {
+class L extends r.default.Store {
   initialize() {
     this.waitFor(f.default, c.default, u.default)
   }
@@ -86,9 +85,6 @@ class j extends r.default.Store {
   }
   get integrations() {
     return I
-  }
-  get integrationIdsWithCommands() {
-    return C
   }
   get webhooks() {
     return T
@@ -115,10 +111,10 @@ class j extends r.default.Store {
     return A
   }
   getIntegration(e) {
-    return v(e)
+    return M(e)
   }
   getWebhook(e) {
-    return L(e)
+    return v(e)
   }
   isFetching() {
     return p || g
@@ -134,16 +130,16 @@ class j extends r.default.Store {
     })) || void 0 === t ? void 0 : t.application
   }
 }
-j.displayName = "GuildSettingsIntegrationsStore";
-let b = new j(o.default, __OVERLAY__ ? {} : {
+L.displayName = "GuildSettingsIntegrationsStore";
+let j = new L(o.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_INIT: function() {
-    return R(!1)
+    return x(!1)
   },
   INTEGRATION_SETTINGS_SAVE_SUCCESS: function() {
-    return R(!0)
+    return x(!0)
   },
-  GUILD_SETTINGS_INIT: x,
-  GUILD_SETTINGS_SET_SECTION: x,
+  GUILD_SETTINGS_INIT: C,
+  GUILD_SETTINGS_SET_SECTION: C,
   INTEGRATION_SETTINGS_SET_SECTION: function(e) {
     let {
       section: t,
@@ -167,7 +163,7 @@ let b = new j(o.default, __OVERLAY__ ? {} : {
   INTEGRATION_SETTINGS_START_EDITING_INTEGRATION: function(e) {
     let {
       integrationId: t
-    } = e, l = v(t);
+    } = e, l = M(t);
     if (null == l) return !1;
     E = l, N = null, h = null, O = {}, _ = !1
   },
@@ -181,7 +177,7 @@ let b = new j(o.default, __OVERLAY__ ? {} : {
     if (null == E) return !1;
     E = {
       ...E
-    }, null != t.enableEmoticons && E.enable_emoticons !== t.enableEmoticons && (E.enable_emoticons = t.enableEmoticons, _ = !0), null != t.expireBehavior && E.expire_behavior !== t.expireBehavior && (E.expire_behavior = t.expireBehavior, _ = !0), null != t.expireGracePeriod && E.expire_grace_period !== t.expireGracePeriod && (E.expire_grace_period = t.expireGracePeriod, _ = !0), _ && M()
+    }, null != t.enableEmoticons && E.enable_emoticons !== t.enableEmoticons && (E.enable_emoticons = t.enableEmoticons, _ = !0), null != t.expireBehavior && E.expire_behavior !== t.expireBehavior && (E.expire_behavior = t.expireBehavior, _ = !0), null != t.expireGracePeriod && E.expire_grace_period !== t.expireGracePeriod && (E.expire_grace_period = t.expireGracePeriod, _ = !0), _ && R()
   },
   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function(e) {
     let {
@@ -190,12 +186,12 @@ let b = new j(o.default, __OVERLAY__ ? {} : {
     if (null == h) return !1;
     h = {
       ...h
-    }, null != t.name && h.name !== t.name && (h.name = t.name, _ = !0), void 0 !== t.avatar && h.avatar !== t.avatar && (h.avatar = t.avatar, _ = !0), null != t.channelId && h.channel_id !== t.channelId && (h.channel_id = t.channelId, _ = !0), _ && M()
+    }, null != t.name && h.name !== t.name && (h.name = t.name, _ = !0), void 0 !== t.avatar && h.avatar !== t.avatar && (h.avatar = t.avatar, _ = !0), null != t.channelId && h.channel_id !== t.channelId && (h.channel_id = t.channelId, _ = !0), _ && R()
   },
   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function(e) {
     let {
       webhookId: t
-    } = e, l = L(t);
+    } = e, l = v(t);
     if (null == l) return !1;
     h = l, N = null, E = null, O = {}, _ = !1
   },
@@ -239,15 +235,7 @@ let b = new j(o.default, __OVERLAY__ ? {} : {
         (null == E ? void 0 : E.id) === l.id && (!1 === l.enabled ? E = null : !_ && (E = l)), I[e] = l
       } else(null == E ? void 0 : E.id) === t.id && (E = null), I.splice(e, 1)
     }
-    I = [...I], M()
-  },
-  GUILD_SETTINGS_LOADED_INTEGRATIONS_WITH_COMMANDS: function(e) {
-    let {
-      guildId: t,
-      integrationIds: l
-    } = e;
-    if (null == n || t !== n.id || S === m.FormStates.SUBMITTING) return !1;
-    C = new Set(l)
+    I = [...I], R()
   },
   WEBHOOKS_UPDATE: function(e) {
     let {
@@ -283,7 +271,7 @@ let b = new j(o.default, __OVERLAY__ ? {} : {
       });
       null == t && T.push(e)
     }
-    T = [...T], M()
+    T = [...T], R()
   },
   INTEGRATION_SETTINGS_SUBMITTING: function() {
     S = m.FormStates.SUBMITTING, O = {}
@@ -294,4 +282,4 @@ let b = new j(o.default, __OVERLAY__ ? {} : {
     S = m.FormStates.OPEN, O = null !== (t = e.errors) && void 0 !== t ? t : {}
   }
 });
-var P = b
+var b = j

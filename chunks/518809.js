@@ -13,7 +13,7 @@ var n = a("37983"),
   c = a("926223"),
   i = a("712218"),
   d = a("782340"),
-  E = a("30325");
+  E = a("908082");
 class p extends r.PureComponent {
   componentDidMount() {
     null != this.props.paypalClient && o.tokenizePayPal()

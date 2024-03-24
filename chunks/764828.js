@@ -1,68 +1,82 @@
 "use strict";
 n.r(t), n.d(t, {
   SafetyWarningTypes: function() {
-    return a
+    return i
   },
   SafetyWarningFeedbackTypes: function() {
-    return r
+    return a
   },
   default: function() {
-    return _
+    return v
   }
-});
-var i, l, a, r, s = n("446674"),
-  o = n("913144"),
-  u = n("42203");
-(i = a || (a = {}))[i.STRANGER_DANGER = 1] = "STRANGER_DANGER", i[i.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", i[i.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (l = r || (r = {}))[l.UPVOTE = 0] = "UPVOTE", l[l.DOWNVOTE = 1] = "DOWNVOTE";
-let d = [],
-  c = {};
+}), n("222007");
+var i, a, r, s, l = n("446674"),
+  u = n("913144"),
+  o = n("42203"),
+  d = n("718517");
+let c = 5 * d.default.Millis.SECOND;
+(r = i || (i = {}))[r.STRANGER_DANGER = 1] = "STRANGER_DANGER", r[r.INAPPROPRIATE_CONVERSATION_TIER_1 = 2] = "INAPPROPRIATE_CONVERSATION_TIER_1", r[r.INAPPROPRIATE_CONVERSATION_TIER_2 = 3] = "INAPPROPRIATE_CONVERSATION_TIER_2", (s = a || (a = {}))[s.UPVOTE = 0] = "UPVOTE", s[s.DOWNVOTE = 1] = "DOWNVOTE";
+let f = [],
+  E = {},
+  C = new Set;
 
-function f(e) {
+function p(e) {
   let {
     safetyWarnings: t
   } = e;
-  null != t && (c[e.id] = t), null == t && null != c[e.id] && delete c[e.id]
+  null != t && (E[e.id] = t, t.some(e => {
+    var t;
+    return (2 === (t = e).type || 3 === t.type) && null != e.dismiss_timestamp && ! function(e) {
+      return new Date(e).getTime() > Date.now() - c
+    }(e.dismiss_timestamp)
+  }) ? C.add(e.id) : C.delete(e.id)), null == t && (null != E[e.id] && delete E[e.id], C.delete(e.id))
 }
 
-function h() {
-  c = {}, Object.values(u.default.getMutablePrivateChannels()).forEach(e => {
-    f(e)
+function _() {
+  E = {}, Object.values(o.default.getMutablePrivateChannels()).forEach(e => {
+    p(e)
   })
 }
-class E extends s.default.Store {
+class h extends l.default.Store {
   initialize() {
-    this.waitFor(u.default)
+    this.waitFor(o.default)
   }
   getChannelSafetyWarning(e, t) {
     var n;
-    return null === (n = c[e]) || void 0 === n ? void 0 : n.find(e => e.id === t)
+    return null === (n = E[e]) || void 0 === n ? void 0 : n.find(e => e.id === t)
   }
   getChannelSafetyWarnings(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : d
+    return null !== (t = E[e]) && void 0 !== t ? t : f
+  }
+  hasShownInitialTooltipForChannel(e) {
+    return C.has(e)
   }
 }
-var _ = new E(o.default, {
+var v = new h(u.default, {
   CHANNEL_CREATE: function(e) {
-    f(e.channel)
+    p(e.channel)
   },
   CHANNEL_DELETE: function(e) {
-    null != c[e.channel.id] && delete c[e.channel.id]
+    let {
+      channel: t
+    } = e;
+    null != E[t.id] && delete E[t.id], C.delete(t.id)
   },
   CHANNEL_UPDATES: function(e) {
     e.channels.forEach(e => {
-      f(e)
+      p(e)
     })
   },
-  CONNECTION_OPEN: h,
-  CONNECTION_OPEN_SUPPLEMENTAL: h,
+  CONNECTION_OPEN: _,
+  CONNECTION_OPEN_SUPPLEMENTAL: _,
   CHANNEL_SAFETY_WARNING_FEEDBACK: function(e) {
     let {
       channelId: t,
       warningId: n,
       feedbackType: i
-    } = e, l = c[t];
-    null != l && (c[t] = l.map(e => e.id === n ? {
+    } = e, a = E[t];
+    null != a && (E[t] = a.map(e => e.id === n ? {
       ...e,
       feedback_type: i
     } : e))
@@ -70,8 +84,8 @@ var _ = new E(o.default, {
   CLEAR_CHANNEL_SAFETY_WARNINGS: function(e) {
     let {
       channelId: t
-    } = e, n = c[t];
-    null != n && (c[t] = n.map(e => ({
+    } = e, n = E[t];
+    C.delete(t), null != n && (E[t] = n.map(e => ({
       ...e,
       dismiss_timestamp: void 0
     })))
@@ -80,12 +94,18 @@ var _ = new E(o.default, {
     let {
       channelId: t,
       warningIds: n
-    } = e, i = c[t];
+    } = e, i = E[t];
     if (null == i) return;
-    let l = Date.now().toString();
-    c[t] = i.map(e => n.includes(e.id) ? {
+    let a = new Date().toISOString();
+    E[t] = i.map(e => n.includes(e.id) ? {
       ...e,
-      dismiss_timestamp: l
+      dismiss_timestamp: a
     } : e)
+  },
+  ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: function(e) {
+    let {
+      channelId: t
+    } = e;
+    C.add(t)
   }
 })

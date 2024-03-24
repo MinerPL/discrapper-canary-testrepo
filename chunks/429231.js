@@ -144,12 +144,6 @@ class o {
   upgradeTransaction(e) {
     return new l(this.prefix, this.tableId, e)
   }
-  getSyncUnsafe(e) {
-    var t;
-    return null !== (t = this.getManySyncUnsafe(e, {
-      limit: 1
-    })[0]) && void 0 !== t ? t : null
-  }
   getManySyncUnsafe() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
       t = arguments.length > 1 ? arguments[1] : void 0;
@@ -165,14 +159,6 @@ class o {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
     return this.database.executeSync({
       type: "kv.get_map_entries",
-      table: this.tableId,
-      key: (0, s.combineKeyPrefix)(this.prefix, e)
-    })
-  }
-  getChildIdsSyncUnsafe() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-    return this.database.executeSync({
-      type: "kv.get_child_ids",
       table: this.tableId,
       key: (0, s.combineKeyPrefix)(this.prefix, e)
     })

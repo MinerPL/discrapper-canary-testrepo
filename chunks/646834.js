@@ -6,15 +6,15 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("266491"),
-  l = s("77078"),
+var l = s("266491"),
+  n = s("77078"),
   i = s("45299"),
   r = s("965397"),
   o = s("454686"),
   d = s("353575"),
   u = s("151866"),
   c = s("782340"),
-  E = s("964101");
+  E = s("869451");
 
 function _(e) {
   let {
@@ -22,16 +22,16 @@ function _(e) {
     existingRules: s
   } = e, {
     cancelEditingRule: _,
-    isLoading: T,
-    hasChanges: I,
+    isLoading: I,
+    hasChanges: T,
     editingRule: S,
-    errorMessage: N,
-    saveEditingRule: g
+    errorMessage: f,
+    saveEditingRule: m
   } = (0, u.useAutomodEditingRuleActions)(), {
-    updateRule: f
-  } = (0, d.useAutomodRulesList)(t), A = null != S, L = A && !(0, o.isBackendPersistedRule)(S), m = A || I || L, C = async () => {
-    if (!I && !L) return _();
-    null != S && !L && f(S);
+    updateRule: N
+  } = (0, d.useAutomodRulesList)(t), g = null != S, h = g && !(0, o.isBackendPersistedRule)(S), C = g || T || h, R = async () => {
+    if (!T && !h) return _();
+    null != S && !h && N(S);
     let e = s.find(e => {
       let {
         id: t
@@ -39,30 +39,30 @@ function _(e) {
       return t === (null == S ? void 0 : S.id)
     });
     try {
-      let e = await g(s);
-      null != e && f(e)
+      let e = await m(s);
+      null != e && N(e)
     } catch (t) {
-      null != e && f(e)
+      null != e && N(e)
     }
-  }, O = c.default.Messages.CANCEL, h = !I && A ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
+  }, x = c.default.Messages.CANCEL, L = !T && g ? c.default.Messages.GUILD_AUTOMOD_EDIT_NO_CHANGES.format({
     ruleName: null == S ? void 0 : S.name
   }) : void 0;
-  return null != N && (h = (0, a.jsx)(l.Text, {
+  return null != f && (L = (0, a.jsx)(n.Text, {
     variant: "text-md/normal",
     color: "text-danger",
     className: E.message,
-    children: N
-  })), (0, a.jsx)(n.default, {
+    children: f
+  })), (0, a.jsx)(l.TransitionGroup, {
     component: "div",
     className: E.saveNoticeContainer,
-    children: m && (0, a.jsx)(r.default, {
+    children: C && (0, a.jsx)(r.default, {
       children: (0, a.jsx)(i.default, {
-        submitting: T,
-        disabled: T,
-        onSave: C,
+        submitting: I,
+        disabled: I,
+        onSave: R,
         onReset: _,
-        onResetText: O,
-        message: h
+        onResetText: x,
+        message: L
       })
     })
   })

@@ -1,74 +1,74 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   acceptMessageRequest: function() {
-    return o
-  },
-  clearMessageRequestState: function() {
     return u
   },
-  markAsMessageRequest: function() {
-    return d
+  clearMessageRequestState: function() {
+    return l
   },
-  rejectMessageRequest: function() {
+  markAsMessageRequest: function() {
     return c
   },
+  rejectMessageRequest: function() {
+    return E
+  },
   rejectMessageRequestBatch: function() {
-    return f
+    return T
   },
   fetchUserCountryCode: function() {
-    return h
+    return d
   }
 });
-var i = n("872717"),
-  l = n("913144"),
-  a = n("437822"),
-  r = n("773163"),
-  s = n("49111");
-async function o(e) {
-  await i.default.put({
-    url: s.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
+var n = s("872717"),
+  a = s("913144"),
+  r = s("437822"),
+  o = s("773163"),
+  i = s("49111");
+async function u(e) {
+  await n.HTTP.put({
+    url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
-      consent_status: r.MessageRequestConsentStatusTypes.ACCEPTED
+      consent_status: o.MessageRequestConsentStatusTypes.ACCEPTED
     }
-  }), l.default.dispatch({
+  }), a.default.dispatch({
     type: "MESSAGE_REQUEST_ACCEPT_OPTIMISTIC",
     channelId: e
   })
 }
 
-function u(e) {
-  return i.default.put({
-    url: s.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
+function l(e) {
+  return n.HTTP.put({
+    url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
     body: {
-      consent_status: r.MessageRequestConsentStatusTypes.UNSPECIFIED
-    }
-  })
-}
-
-function d(e) {
-  return i.default.put({
-    url: s.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
-    body: {
-      consent_status: r.MessageRequestConsentStatusTypes.PENDING
+      consent_status: o.MessageRequestConsentStatusTypes.UNSPECIFIED
     }
   })
 }
 
 function c(e) {
-  return i.default.delete({
-    url: s.Endpoints.CHANNEL_RECIPIENT_CONSENT(e)
+  return n.HTTP.put({
+    url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e),
+    body: {
+      consent_status: o.MessageRequestConsentStatusTypes.PENDING
+    }
   })
 }
 
-function f(e) {
-  return i.default.put({
-    url: s.Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
+function E(e) {
+  return n.HTTP.del({
+    url: i.Endpoints.CHANNEL_RECIPIENT_CONSENT(e)
+  })
+}
+
+function T(e) {
+  return n.HTTP.put({
+    url: i.Endpoints.CHANNEL_RECIPIENT_REJECT_BATCH(),
     body: {
       channel_ids: e
     }
   })
 }
 
-function h() {
-  a.default.getLocationMetadata()
+function d() {
+  r.default.getLocationMetadata()
 }

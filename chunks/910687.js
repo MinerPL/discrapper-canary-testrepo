@@ -5,9 +5,9 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("77078"),
   o = s("87657"),
   d = s("612039"),
@@ -15,15 +15,15 @@ var a = s("37983"),
   c = s("987772"),
   E = s("467094"),
   _ = s("41170"),
-  T = s("782340"),
-  I = s("9278"),
+  I = s("782340"),
+  T = s("369185"),
   S = e => {
     let {
       className: t,
-      isDisabled: l,
+      isDisabled: n,
       sticker: S,
-      canManageSticker: N
-    } = e, [g, f] = n.useState(!1), [A, L] = (0, d.default)(null, 4e3), m = () => {
+      canManageSticker: f
+    } = e, [m, N] = l.useState(!1), [g, h] = (0, d.default)(null, 4e3), C = () => {
       (0, r.openModalLazy)(async () => {
         let {
           default: e
@@ -34,40 +34,40 @@ var a = s("37983"),
           ...t
         })
       })
-    }, C = async () => {
-      L(null), f(!0);
+    }, R = async () => {
+      h(null), N(!0);
       try {
         await (0, E.deleteGuildSticker)(S)
       } catch (e) {
-        L(e.body.message), f(!1)
+        h(e.body.message), N(!1)
       }
     };
     return (0, a.jsx)(r.Tooltip, {
       color: r.Tooltip.Colors.RED,
-      forceOpen: null != A,
-      text: A,
+      forceOpen: null != g,
+      text: g,
       children: () => (0, a.jsxs)("div", {
-        className: i(I.wrapper, t, {
-          [I.wrapperDisabled]: l
+        className: i(T.wrapper, t, {
+          [T.wrapperDisabled]: n
         }),
         children: [(0, a.jsxs)("div", {
-          className: i(I.content, {
-            [I.contentRemoving]: g
+          className: i(T.content, {
+            [T.contentRemoving]: m
           }),
           children: [(0, a.jsx)(_.default, {
-            className: I.sticker,
+            className: T.sticker,
             size: 72,
             sticker: S
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsx)(r.Text, {
               color: "header-primary",
               variant: "text-xs/semibold",
-              className: I.stickerName,
+              className: T.stickerName,
               children: S.name
             }), null != S.user && (0, a.jsxs)("div", {
-              className: I.user,
+              className: T.user,
               children: [(0, a.jsx)(o.default, {
-                className: I.userAvatar,
+                className: T.userAvatar,
                 size: r.AvatarSizes.SIZE_16,
                 user: S.user
               }), (0, a.jsx)(r.Text, {
@@ -76,26 +76,26 @@ var a = s("37983"),
                 children: S.user.username
               })]
             })]
-          }), N ? (0, a.jsxs)("div", {
-            className: I.actions,
+          }), f ? (0, a.jsxs)("div", {
+            className: T.actions,
             children: [(0, a.jsx)(r.Clickable, {
-              className: i(I.action, I.actionEdit),
-              onClick: m,
-              "aria-label": T.default.Messages.EDIT,
+              className: i(T.action, T.actionEdit),
+              onClick: C,
+              "aria-label": I.default.Messages.EDIT,
               children: (0, a.jsx)(c.default, {
-                className: I.icon
+                className: T.icon
               })
             }), (0, a.jsx)(r.Clickable, {
-              className: i(I.action, I.actionRemove),
-              onClick: C,
-              "aria-label": T.default.Messages.REMOVE,
+              className: i(T.action, T.actionRemove),
+              onClick: R,
+              "aria-label": I.default.Messages.REMOVE,
               children: (0, a.jsx)(u.default, {
-                className: I.icon
+                className: T.icon
               })
             })]
           }) : null]
-        }), g && (0, a.jsx)(r.Spinner, {
-          className: I.spinner
+        }), m && (0, a.jsx)(r.Spinner, {
+          className: T.spinner
         })]
       })
     })

@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return c
   }
 });
 var l = n("37983"),
   r = n("884691"),
-  i = n("266937"),
-  s = n("286458"),
-  a = n("29799");
-let o = (0, i.CustomPicker)(e => (0, l.jsxs)("div", {
-  className: a.wrapper,
+  o = n("266937"),
+  a = n("286458"),
+  s = n("796727");
+let i = (0, o.CustomPicker)(e => (0, l.jsxs)("div", {
+  className: s.wrapper,
   children: [(0, l.jsx)("div", {
-    className: a.saturation,
-    children: (0, l.jsx)(s.Saturation, {
+    className: s.saturation,
+    children: (0, l.jsx)(a.Saturation, {
       ...e
     })
   }), (0, l.jsx)("div", {
-    className: a.hue,
-    children: (0, l.jsx)(s.Hue, {
+    className: s.hue,
+    children: (0, l.jsx)(a.Hue, {
       ...e,
       direction: "horizontal"
     })
   })]
 }));
-var u = r.memo(o)
+var c = r.memo(i)

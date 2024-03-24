@@ -1,21 +1,24 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return c
+    return h
   }
 });
-var a = r("37983");
-r("884691");
-var n = r("77078"),
-  i = r("484894"),
-  l = r("579921"),
-  o = r("926622");
-let s = () => {
-  r.el("776502").then(r.bind(r, "776502")).then(e => {
+var a = t("37983");
+t("884691");
+var n = t("414456"),
+  i = t.n(n),
+  o = t("77078"),
+  l = t("15408"),
+  s = t("484894"),
+  c = t("769284"),
+  d = t("890957");
+let u = () => {
+  t.el("776502").then(t.bind(t, "776502")).then(e => {
     let {
-      openMFAModal: t
+      openMFAModal: r
     } = e;
-    t({
+    r({
       ticket: "ticket",
       methods: [{
         type: "webauthn",
@@ -32,18 +35,24 @@ let s = () => {
   })
 };
 
-function c() {
+function h() {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      className: [l.buttonsContainer, o.marginBottom20].join(" "),
-      children: (0, a.jsx)(i.OverridePremiumTypeDropDown, {
+      className: i(c.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(s.OverridePremiumTypeDropDown, {
         isDevTools: !0
       })
     }), (0, a.jsx)("div", {
-      className: [l.buttonsContainer, o.marginBottom20].join(" "),
-      children: (0, a.jsx)(n.Button, {
-        onClick: s,
+      className: i(c.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(o.Button, {
+        onClick: u,
         children: "Launch MFA"
+      })
+    }), (0, a.jsx)("div", {
+      className: i(c.buttonsContainer, d.marginBottom20),
+      children: (0, a.jsx)(o.Button, {
+        onClick: () => (0, l.default)(),
+        children: "Launch Vibing Wumpus"
       })
     })]
   })

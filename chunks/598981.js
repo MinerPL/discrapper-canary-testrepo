@@ -1,12 +1,12 @@
 "use strict";
 n.r(e), n.d(e, {
   default: function() {
-    return r
+    return u
   }
 });
-var u = n("65597"),
-  i = n("271938");
+var i = n("65597"),
+  r = n("271938");
 
-function r() {
-  return (0, u.default)([i.default], () => i.default.isAuthenticated())
+function u() {
+  return (0, i.useStateFromStores)([r.default], () => r.default.isAuthenticated())
 }

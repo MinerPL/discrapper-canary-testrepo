@@ -18,7 +18,7 @@ var n = s("37983"),
   h = s("883029"),
   m = s("49111"),
   N = s("782340"),
-  _ = s("937596");
+  _ = s("94079");
 let T = (a = window.GLOBAL_ENV.INVITE_HOST, l = "", null == a && (a = location.host, l = m.Routes.INVITE("")), "".concat(location.protocol, "//").concat(a).concat(l, "/"));
 
 function A(e) {

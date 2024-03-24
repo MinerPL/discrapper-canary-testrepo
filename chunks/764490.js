@@ -10,15 +10,17 @@ var a = l("414456"),
   n = l.n(a),
   s = l("77078"),
   r = l("29557"),
-  c = l("502884");
+  c = l("283082");
 
 function o(e) {
   let {
     title: t,
-    className: l
+    className: l,
+    ref: a
   } = e;
   return (0, i.jsxs)("div", {
     className: n(c.header, l),
+    ref: a,
     children: [(0, i.jsx)(r.default, {
       className: c.logo
     }), (0, i.jsx)(s.HeadingLevel, {

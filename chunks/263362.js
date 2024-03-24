@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   RecentsPopout: function() {
-    return I
+    return A
   }
 }), n("222007");
 var a = n("37983"),
@@ -10,133 +10,139 @@ var a = n("37983"),
   i = n("446674"),
   r = n("151426"),
   o = n("77078"),
-  u = n("22082"),
-  d = n("979268"),
-  c = n("913796"),
-  f = n("872173"),
-  h = n("374363"),
-  E = n("659500"),
-  m = n("981024"),
-  p = n("519540"),
-  g = n("80649"),
-  S = n("385730"),
-  N = n("788072"),
-  _ = n("49111"),
-  T = n("782340");
+  u = n("812204"),
+  d = n("685665"),
+  c = n("22082"),
+  f = n("979268"),
+  h = n("913796"),
+  E = n("872173"),
+  m = n("374363"),
+  p = n("659500"),
+  S = n("981024"),
+  g = n("519540"),
+  N = n("80649"),
+  _ = n("385730"),
+  T = n("788072"),
+  I = n("49111"),
+  C = n("782340");
 
-function I(e) {
+function A(e) {
   let {
     onOpen: t,
     onClose: n,
-    children: I,
-    badgeState: C,
-    popoutPosition: A,
-    popoutAlign: M
-  } = e, [v, x] = l.useState(!1), [R, L] = function() {
-    let e = (0, i.useStateFromStores)([h.default], () => {
+    children: A,
+    badgeState: M,
+    popoutPosition: v,
+    popoutAlign: R
+  } = e, {
+    AnalyticsLocationProvider: x
+  } = (0, d.default)(u.default.NOTIFICATION_CENTER), [L, O] = l.useState(!1), [b, y] = function() {
+    let e = (0, i.useStateFromStores)([m.default], () => {
         var e, t;
-        return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
+        return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : r.InboxTab.UNREADS
       }),
       t = l.useCallback(e => {
-        f.PreloadedUserSettingsActionCreators.updateAsync("inbox", t => {
+        E.PreloadedUserSettingsActionCreators.updateAsync("inbox", t => {
           if (t.currentTab === e) return !1;
           t.currentTab = e
-        }, f.UserSettingsDelay.FREQUENT_USER_ACTION)
+        }, E.UserSettingsDelay.FREQUENT_USER_ACTION)
       }, []);
     return [e, t]
   }(), {
-    showTutorial: O,
-    setSeenTutorial: b
+    showTutorial: j,
+    setSeenTutorial: F
   } = function(e) {
-    let t = (0, i.useStateFromStores)([h.default], () => {
+    let t = (0, i.useStateFromStores)([m.default], () => {
         var e, t;
-        return null !== (t = null === (e = h.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
+        return null !== (t = null === (e = m.default.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t
       }),
       n = l.useCallback(() => {
-        f.PreloadedUserSettingsActionCreators.updateAsync("inbox", e => {
+        E.PreloadedUserSettingsActionCreators.updateAsync("inbox", e => {
           e.viewedTutorial = !0
-        }, f.UserSettingsDelay.INFREQUENT_USER_ACTION)
+        }, E.UserSettingsDelay.INFREQUENT_USER_ACTION)
       }, []),
       a = !t && e === r.InboxTab.UNREADS;
     return {
       showTutorial: a,
       setSeenTutorial: n
     }
-  }(R), y = l.useCallback(() => {
-    x(!1), v && (null == n || n())
-  }, [n, v]), j = l.useCallback(() => {
-    x(!v), v ? null == n || n() : null == t || t()
-  }, [n, t, v]), D = l.useCallback(() => {
-    j(), L(r.InboxTab.UNREADS)
-  }, [L, j]);
-  l.useEffect(() => (E.ComponentDispatch.subscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D), () => void E.ComponentDispatch.unsubscribe(_.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, D)), [D]);
+  }(b), D = l.useCallback(() => {
+    O(!1), L && (null == n || n())
+  }, [n, L]), U = l.useCallback(() => {
+    O(!L), L ? null == n || n() : null == t || t()
+  }, [n, t, L]), k = l.useCallback(() => {
+    U(), y(r.InboxTab.UNREADS)
+  }, [y, U]);
+  l.useEffect(() => (p.ComponentDispatch.subscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, k), () => void p.ComponentDispatch.unsubscribe(I.ComponentActions.TOGGLE_INBOX_UNREADS_TAB, k)), [k]);
   let {
-    showReminders: F
-  } = d.default.useExperiment({
+    showReminders: P
+  } = f.default.useExperiment({
     location: "RecentsPopout"
   }, {
     autoTrackExposure: !1
-  }), U = (0, c.useInDesktopNotificationCenterExperiment)(), {
-    enabled: k
-  } = u.default.useExperiment({
+  }), w = (0, h.useInDesktopNotificationCenterExperiment)(), {
+    enabled: G
+  } = c.default.useExperiment({
     location: "RecentsPopout"
   });
   l.useEffect(() => {
-    !F && R === r.InboxTab.TODOS && L(r.InboxTab.MENTIONS)
+    !P && b === r.InboxTab.TODOS && y(r.InboxTab.MENTIONS)
   });
-  let P = l.useCallback(e => {
-    !e.shiftKey && y()
-  }, [y]);
-  return (0, a.jsx)(o.Popout, {
-    animation: o.Popout.Animation.NONE,
-    position: A,
-    align: M,
-    autoInvert: !1,
-    shouldShow: v,
-    onRequestClose: y,
-    renderPopout: function() {
-      return (0, a.jsx)(o.Dialog, {
-        "aria-label": T.default.Messages.INBOX,
-        children: R === r.InboxTab.FOR_YOU && U ? (0, a.jsx)(m.default, {
-          setTab: L,
-          badgeState: C,
-          closePopout: y
-        }) : R === r.InboxTab.MENTIONS ? (0, a.jsx)(g.default, {
-          setTab: L,
-          onJump: P,
-          badgeState: C,
-          closePopout: y
-        }) : k && R === r.InboxTab.GAME_INVITES ? (0, a.jsx)(N.default, {
-          setTab: L,
-          badgeState: C,
-          closePopout: y
-        }) : F && R === r.InboxTab.TODOS ? (0, a.jsx)(p.default, {
-          setTab: L,
-          onJump: P,
-          closePopout: y
-        }) : (0, a.jsx)(s.ErrorBoundary, {
-          fallback: (0, a.jsx)(S.UnreadsCrashed, {
-            setTab: L,
-            closePopout: y,
-            badgeState: C
-          }),
-          children: (0, a.jsx)(S.default, {
-            setTab: L,
-            onJump: P,
-            showTutorial: O,
-            setSeenTutorial: b,
-            closePopout: y,
-            badgeState: C
+  let B = l.useCallback(e => {
+    !e.shiftKey && D()
+  }, [D]);
+  return (0, a.jsx)(x, {
+    children: (0, a.jsx)(o.Popout, {
+      animation: o.Popout.Animation.NONE,
+      position: v,
+      align: R,
+      autoInvert: !1,
+      shouldShow: L,
+      onRequestClose: D,
+      renderPopout: function() {
+        return (0, a.jsx)(o.Dialog, {
+          "aria-label": C.default.Messages.INBOX,
+          children: b === r.InboxTab.FOR_YOU && w ? (0, a.jsx)(S.default, {
+            setTab: y,
+            badgeState: M,
+            closePopout: D
+          }) : b === r.InboxTab.MENTIONS ? (0, a.jsx)(N.default, {
+            setTab: y,
+            onJump: B,
+            badgeState: M,
+            closePopout: D
+          }) : G && b === r.InboxTab.GAME_INVITES ? (0, a.jsx)(T.default, {
+            setTab: y,
+            badgeState: M,
+            closePopout: D
+          }) : P && b === r.InboxTab.TODOS ? (0, a.jsx)(g.default, {
+            setTab: y,
+            onJump: B,
+            closePopout: D
+          }) : (0, a.jsx)(s.ErrorBoundary, {
+            fallback: (0, a.jsx)(_.UnreadsCrashed, {
+              setTab: y,
+              closePopout: D,
+              badgeState: M
+            }),
+            children: (0, a.jsx)(_.default, {
+              setTab: y,
+              onJump: B,
+              showTutorial: j,
+              setSeenTutorial: F,
+              closePopout: D,
+              badgeState: M
+            })
           })
         })
-      })
-    },
-    ignoreModalClicks: !0,
-    children: (e, t) => {
-      let {
-        isShown: n
-      } = t;
-      return I(j, n, e)
-    }
+      },
+      ignoreModalClicks: !0,
+      children: (e, t) => {
+        let {
+          isShown: n
+        } = t;
+        return A(U, n, e)
+      }
+    })
   })
 }

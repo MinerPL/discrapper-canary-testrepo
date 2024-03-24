@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   disconnectRemote: function() {
-    return v
-  },
-  connectToRemote: function() {
     return S
   },
-  remoteVoiceStateUpdate: function() {
+  connectToRemote: function() {
     return T
+  },
+  remoteVoiceStateUpdate: function() {
+    return v
   },
   remoteDisconnect: function() {
     return I
   },
   remoteAudioSettingsUpdate: function() {
-    return C
+    return A
   },
   fetchDevices: function() {
     return y
@@ -34,50 +34,50 @@ var i = n("30945"),
   u = n("945956"),
   d = n("235660"),
   c = n("599110"),
-  f = n("286235"),
-  _ = n("893243"),
-  h = n("76393"),
-  g = n("780338"),
-  m = n("49111"),
-  E = n("782340");
+  _ = n("286235"),
+  f = n("893243"),
+  E = n("76393"),
+  h = n("780338"),
+  g = n("49111"),
+  m = n("782340");
 
 function p(e, t) {
   var n, i;
-  c.default.track(m.AnalyticEvents.REMOTE_COMMAND_SENT, {
+  c.default.track(g.AnalyticEvents.REMOTE_COMMAND_SENT, {
     command_type: e,
     remote_platform: null === (i = d.default.getSessionById(t)) || void 0 === i ? void 0 : null === (n = i.clientInfo) || void 0 === n ? void 0 : n.os
   })
 }
-async function v() {
-  let e = h.default.getAwaitingRemoteSessionInfo(),
+async function S() {
+  let e = E.default.getAwaitingRemoteSessionInfo(),
     t = null == e ? void 0 : e.nonce;
   a.default.dispatch({
     type: "REMOTE_SESSION_DISCONNECT"
   });
   let n = [];
-  ((null == e ? void 0 : e.type) === m.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === m.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(O(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
-    return r.default.delete({
-      url: m.Endpoints.CONNECT_REQUEST(e)
+  ((null == e ? void 0 : e.type) === g.PlatformTypes.PLAYSTATION || (null == e ? void 0 : e.type) === g.PlatformTypes.PLAYSTATION_STAGING) && (null == e ? void 0 : e.commandId) != null && (null == e ? void 0 : e.deviceId) != null && n.push(O(e.type, e.deviceId, e.commandId)), null != t && n.push(function(e) {
+    return r.HTTP.del({
+      url: g.Endpoints.CONNECT_REQUEST(e)
     })
   }(t));
   try {
     await Promise.all(n)
   } catch (e) {
     o.default.show({
-      title: E.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
-      body: E.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
+      title: m.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_TITLE,
+      body: m.default.Messages.CANCEL_TRANSFER_VOICE_FAILED_BODY
     })
   }
 }
 
-function S(e) {
+function T(e) {
   a.default.dispatch({
     type: "REMOTE_SESSION_CONNECT",
     sessionId: e
   })
 }
 
-function T(e, t) {
+function v(e, t) {
   let {
     selfMute: n,
     selfDeaf: i
@@ -100,10 +100,10 @@ function I(e) {
     payload: {
       type: "DISCONNECT"
     }
-  }), p("DISCONNECT", e), v()
+  }), p("DISCONNECT", e), S()
 }
 
-function C(e, t, n, i) {
+function A(e, t, n, i) {
   let s = (0, l.coerceAudioContextForProto)(n);
   null != s && (a.default.dispatch({
     type: "REMOTE_COMMAND",
@@ -116,12 +116,12 @@ function C(e, t, n, i) {
     }
   }), p("AUDIO_SETTINGS_UPDATE", e))
 }
-async function A() {
+async function C() {
   let e;
   try {
     let t = null != u.default.getRTCConnectionId() ? s.ConsoleHandoffType.TRANSFER_EXISTING_CALL : s.ConsoleHandoffType.CREATE_NEW_CALL,
-      n = await r.default.post({
-        url: m.Endpoints.CONNECT_REQUEST_CREATE,
+      n = await r.HTTP.post({
+        url: g.Endpoints.CONNECT_REQUEST_CREATE,
         body: {
           analytics_properties: {
             handoff_type: t
@@ -130,7 +130,7 @@ async function A() {
       });
     e = n.body.nonce
   } catch (e) {
-    f.default.captureException(e)
+    _.default.captureException(e)
   }
   return e
 }
@@ -141,8 +141,8 @@ async function y(e) {
     platform: e
   });
   try {
-    t = await r.default.get({
-      url: m.Endpoints.CONSOLES_DEVICES(e)
+    t = await r.HTTP.get({
+      url: g.Endpoints.CONSOLES_DEVICES(e)
     })
   } catch (t) {
     throw a.default.dispatch({
@@ -173,8 +173,8 @@ async function R(e, t, n, s) {
     platform: e
   });
   try {
-    o = await r.default.post({
-      url: m.Endpoints.CONSOLES_DEVICES_COMMANDS(e, t),
+    o = await r.HTTP.post({
+      url: g.Endpoints.CONSOLES_DEVICES_COMMANDS(e, t),
       body: {
         command: i.ConsoleCommands.CONNECT_VOICE,
         channel_id: n.id,
@@ -207,8 +207,8 @@ async function O(e, t, n) {
     commandId: n
   });
   try {
-    await r.default.delete({
-      url: m.Endpoints.CONSOLES_DEVICES_COMMAND(e, t, n)
+    await r.HTTP.del({
+      url: g.Endpoints.CONSOLES_DEVICES_COMMAND(e, t, n)
     })
   } catch (i) {
     throw a.default.dispatch({
@@ -227,7 +227,7 @@ async function O(e, t, n) {
   })
 }
 async function D(e, t, n) {
-  await _.default.maybeShowPTTAlert(e), await v();
-  let i = await A();
-  await R(e, t, n, i), (0, g.default)(n.id, e)
+  await f.default.maybeShowPTTAlert(e), await S();
+  let i = await C();
+  await R(e, t, n, i), (0, h.default)(n.id, e)
 }

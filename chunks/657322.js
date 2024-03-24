@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("860677");
 var a = n("599110"),
   s = n("843158"),
-  i = n("861309"),
-  l = n("846678"),
+  l = n("861309"),
+  i = n("846678"),
   r = n("842897"),
   o = n("49111"),
   u = {
@@ -19,10 +19,10 @@ var a = n("599110"),
           evt: u,
           args: d
         } = e, c = t.events[u];
-        if (null == c) throw new i.default({
+        if (null == c) throw new l.default({
           errorCode: o.RPCErrors.INVALID_EVENT
         }, "Invalid event: ".concat(u));
-        if (!(0, l.default)(n.authorization.scopes, c.scope)) throw new i.default({
+        if (!(0, i.default)(n.authorization.scopes, c.scope)) throw new l.default({
           errorCode: o.RPCErrors.INVALID_PERMISSIONS
         }, "Not authenticated or invalid scope");
         if (s.ExperimentRPCServerAnalyticsKillswitch.getCurrentConfig({
@@ -30,13 +30,14 @@ var a = n("599110"),
           }).enabled && a.default.track(o.AnalyticEvents.RPC_SUBSCRIPTION_REQUESTED, {
             event: u,
             scope: "object" == typeof c.scope ? JSON.stringify(c.scope) : c.scope,
-            application_id: n.application.id
+            application_id: n.application.id,
+            socket_scope: n.authorization.scopes.toString()
           }), null != c.validation) {
           let e = await t.getJoi(),
             n = e.validate(d, c.validation(e), {
               convert: !1
             });
-          if (null != n.error) throw new i.default({
+          if (null != n.error) throw new l.default({
             errorCode: o.RPCErrors.INVALID_PAYLOAD
           }, "Invalid subscription parameters provided")
         }
@@ -62,7 +63,7 @@ var a = n("599110"),
           evt: a,
           args: s
         } = e;
-        if (null == t.events[a]) throw new i.default({
+        if (null == t.events[a]) throw new l.default({
           errorCode: o.RPCErrors.INVALID_EVENT
         }, "Invalid event: ".concat(a));
         return t.removeSubscription(n, a, s), {

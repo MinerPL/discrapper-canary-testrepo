@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return v
   }
 });
 var a = n("37983");
@@ -13,62 +13,57 @@ var l = n("446674"),
   s = n("713726"),
   d = n("503417"),
   u = n("162236"),
-  c = n("546463"),
-  p = n("101125"),
-  f = n("953109"),
-  m = n("474571"),
-  h = n("782340"),
-  v = n("124705");
+  c = n("101125"),
+  p = n("953109"),
+  f = n("474571"),
+  m = n("782340"),
+  h = n("766855");
 
-function I() {
-  let e = (0, l.useStateFromStores)([p.default], () => p.default.getBroadcast()),
-    t = (0, l.useStateFromStores)([c.default], () => {
-      var t;
-      return null != e ? null === (t = c.default.getDetectableGame(e.applicationId)) || void 0 === t ? void 0 : t.id : null
-    }),
-    n = (0, r.useGetOrFetchApplication)(t);
+function v() {
+  let e = (0, l.useStateFromStores)([c.default], () => c.default.getBroadcast()),
+    t = (0, r.useGetOrFetchApplication)(null == e ? void 0 : e.applicationId);
   if (null == e) return null;
-  let I = () => {
+  let n = () => {
       (0, u.openBroadcastingPrivacySettingsModal)()
     },
-    P = () => {
+    v = () => {
       (0, s.stopBroadcast)(), o.default.disconnect()
     };
   return (0, a.jsxs)("div", {
-    className: v.container,
-    children: [null != n && (0, a.jsx)(f.default, {
-      game: n,
-      size: f.default.Sizes.LARGE
+    className: h.container,
+    children: [null != t && (0, a.jsx)(p.default, {
+      game: t,
+      size: p.default.Sizes.LARGE
     }), (0, a.jsxs)("div", {
-      className: v.content,
+      className: h.content,
       children: [(0, a.jsx)(i.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: h.default.Messages.BROADCASTING_CAPTURE_PAUSED
+        children: m.default.Messages.BROADCASTING_CAPTURE_PAUSED
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: h.default.Messages.BROADCASTING_CAPTURE_PAUSED_DETAILS
+        children: m.default.Messages.BROADCASTING_CAPTURE_PAUSED_DETAILS
       }), (0, a.jsxs)("div", {
-        className: v.actions,
+        className: h.actions,
         children: [(0, a.jsx)(i.Tooltip, {
-          text: h.default.Messages.BROADCASTING_SETTINGS,
+          text: m.default.Messages.BROADCASTING_SETTINGS,
           children: e => (0, a.jsx)(i.Clickable, {
             ...e,
-            onClick: I,
-            children: (0, a.jsx)(m.default, {
-              className: v.button,
+            onClick: n,
+            children: (0, a.jsx)(f.default, {
+              className: h.button,
               width: 20,
               height: 20
             })
           })
         }), (0, a.jsx)(i.Tooltip, {
-          text: h.default.Messages.STOP_BROADCASTING,
+          text: m.default.Messages.STOP_BROADCASTING,
           children: e => (0, a.jsx)(i.Clickable, {
             ...e,
-            onClick: P,
+            onClick: v,
             children: (0, a.jsx)(d.default, {
-              className: v.button,
+              className: h.button,
               width: 20,
               height: 20
             })

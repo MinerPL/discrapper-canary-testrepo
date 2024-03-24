@@ -1,33 +1,33 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return C
+    return E
   }
-}), n("222007");
-var a = n("37983"),
-  s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
-  r = n("748820"),
-  o = n("862337"),
-  u = n("77078"),
-  d = n("49111"),
-  c = n("782340"),
-  f = n("361473"),
-  E = n("173791"),
-  _ = n("926622");
-class h extends s.PureComponent {
+}), s("222007");
+var a = s("37983"),
+  n = s("884691"),
+  i = s("414456"),
+  l = s.n(i),
+  o = s("748820"),
+  r = s("862337"),
+  d = s("77078"),
+  h = s("49111"),
+  u = s("782340"),
+  m = s("908492"),
+  c = s("125047"),
+  f = s("890957");
+class g extends n.PureComponent {
   async componentDidMount() {
     let [e, {
       default: t
-    }] = await Promise.all([n.el("280201").then(n.t.bind(n, "280201", 19)), n.el("245749").then(n.t.bind(n, "245749", 23))]);
-    this._animItem = t.loadAnimation({
+    }] = await Promise.all([s.el("280201").then(s.t.bind(s, "280201", 19)), s.el("865981").then(s.t.bind(s, "865981", 23))]);
+    null != this._lottieRef && (this._animItem = t.loadAnimation({
       container: this._lottieRef,
       renderer: "svg",
       loop: !0,
       autoplay: !0,
       animationData: e
-    })
+    }))
   }
   componentWillUnmount() {
     this._timeout.stop(), null != this._animItem && (this._animItem.destroy(), this._animItem = void 0)
@@ -36,40 +36,40 @@ class h extends s.PureComponent {
     let {
       emailError: e,
       passwordError: t,
-      submitting: n
+      submitting: s
     } = this.props, {
-      email: s,
+      email: n,
       password: i
     } = this.state;
     return (0, a.jsxs)("div", {
-      className: f.container,
-      children: [(0, a.jsx)(u.FormItem, {
-        title: c.default.Messages.FORM_LABEL_EMAIL,
-        className: _.marginBottom20,
-        children: (0, a.jsx)(u.TextInput, {
-          value: s,
+      className: m.container,
+      children: [(0, a.jsx)(d.FormItem, {
+        title: u.default.Messages.FORM_LABEL_EMAIL,
+        className: f.marginBottom20,
+        children: (0, a.jsx)(d.TextInput, {
+          value: n,
           error: e,
           onChange: this.handleEmailChange,
           onKeyPress: this.handleKeyPress,
           autoFocus: !0
         })
-      }), (0, a.jsx)(u.FormItem, {
-        title: c.default.Messages.FORM_LABEL_PASSWORD,
-        className: _.marginBottom40,
-        children: (0, a.jsx)(u.TextInput, {
+      }), (0, a.jsx)(d.FormItem, {
+        title: u.default.Messages.FORM_LABEL_PASSWORD,
+        className: f.marginBottom40,
+        children: (0, a.jsx)(d.TextInput, {
           type: "password",
           value: i,
           error: t,
           onChange: this.handlePasswordChange,
           onKeyPress: this.handleKeyPress
         })
-      }), (0, a.jsx)(u.Button, {
+      }), (0, a.jsx)(d.Button, {
         fullWidth: !0,
-        size: u.Button.Sizes.LARGE,
+        size: d.Button.Sizes.LARGE,
         onClick: this.handleVerify,
-        submitting: n,
-        disabled: 0 === s.length || 0 === i.length,
-        children: c.default.Messages.VERIFY_ACCOUNT
+        submitting: s,
+        disabled: 0 === n.length || 0 === i.length,
+        children: u.default.Messages.VERIFY_ACCOUNT
       })]
     })
   }
@@ -78,23 +78,23 @@ class h extends s.PureComponent {
       canChange: e
     } = this.props;
     return (0, a.jsxs)("div", {
-      className: f.container,
-      children: [(0, a.jsx)(u.Button, {
-        className: _.marginTop20,
+      className: m.container,
+      children: [(0, a.jsx)(d.Button, {
+        className: f.marginTop20,
         fullWidth: !0,
-        size: u.Button.Sizes.LARGE,
-        look: u.ButtonLooks.INVERTED,
-        color: u.ButtonColors.PRIMARY,
+        size: d.Button.Sizes.LARGE,
+        look: d.ButtonLooks.INVERTED,
+        color: d.ButtonColors.PRIMARY,
         onClick: this.handleResendEmail,
-        children: c.default.Messages.RESEND_EMAIL
-      }), e && (0, a.jsx)(u.Button, {
-        className: _.marginTop20,
+        children: u.default.Messages.RESEND_EMAIL
+      }), e && (0, a.jsx)(d.Button, {
+        className: f.marginTop20,
         fullWidth: !0,
-        size: u.Button.Sizes.MEDIUM,
-        look: u.ButtonLooks.LINK,
-        color: u.ButtonColors.PRIMARY,
+        size: d.Button.Sizes.MEDIUM,
+        look: d.ButtonLooks.LINK,
+        color: d.ButtonColors.PRIMARY,
         onClick: this.handleChangeEmailClick,
-        children: c.default.Messages.CHANGE_EMAIL
+        children: u.default.Messages.CHANGE_EMAIL
       })]
     })
   }
@@ -103,31 +103,31 @@ class h extends s.PureComponent {
     let {
       resent: t
     } = this.state, {
-      email: n,
-      canResend: s,
+      email: s,
+      canResend: n,
       transitionState: i
     } = this.props;
-    return e = t && null != n ? c.default.Messages.VERIFY_EMAIL_BODY_RESENT.format({
-      email: n
-    }) : s ? c.default.Messages.VERIFY_EMAIL_BODY : c.default.Messages.ENTER_EMAIL_BODY, (0, a.jsxs)(u.ModalRoot, {
+    return e = t && null != s ? u.default.Messages.VERIFY_EMAIL_BODY_RESENT.format({
+      email: s
+    }) : n ? u.default.Messages.VERIFY_EMAIL_BODY : u.default.Messages.ENTER_EMAIL_BODY, (0, a.jsxs)(d.ModalRoot, {
       transitionState: i,
       "aria-labelledby": this._headerId,
-      className: l(f.emailVerificationModal, E.vertical, E.alignCenter, E.justifyCenter, _.marginTop60),
+      className: l(m.emailVerificationModal, c.vertical, c.alignCenter, c.justifyCenter, f.marginTop60),
       children: [(0, a.jsx)("div", {
-        className: f.animationContainer,
+        className: m.animationContainer,
         ref: this.setLottieRef
       }), (0, a.jsx)("div", {
         id: this._headerId,
-        className: l(f.title, _.marginBottom8),
-        children: c.default.Messages.VERIFY_BY_EMAIL
+        className: l(m.title, f.marginBottom8),
+        children: u.default.Messages.VERIFY_BY_EMAIL
       }), (0, a.jsx)("div", {
-        className: l(f.body, _.marginBottom20),
+        className: l(m.body, f.marginBottom20),
         children: e
-      }), s ? this.renderActions() : this.renderInputs()]
+      }), n ? this.renderActions() : this.renderInputs()]
     })
   }
   constructor(...e) {
-    super(...e), this._animItem = null, this._timeout = new o.Timeout, this._headerId = (0, r.v4)(), this.state = {
+    super(...e), this._animItem = null, this._timeout = new r.Timeout, this._headerId = (0, o.v4)(), this.state = {
       resent: !1,
       shouldClose: !1,
       email: "",
@@ -169,18 +169,18 @@ class h extends s.PureComponent {
     }, this.handleKeyPress = e => {
       let {
         email: t,
-        password: n
+        password: s
       } = this.state;
-      13 === e.which && t.length > 0 && n.length > 0 && (e.preventDefault(), this.handleVerify())
+      13 === e.which && t.length > 0 && s.length > 0 && (e.preventDefault(), this.handleVerify())
     }
   }
 }
-h.defaultProps = {
+g.defaultProps = {
   canResend: !1,
   canChange: !0,
-  onChangeEmailClick: d.NOOP,
+  onChangeEmailClick: h.NOOP,
   onVerify: (e, t) => {},
-  onResend: d.NOOP,
-  onClose: d.NOOP
+  onResend: h.NOOP,
+  onClose: h.NOOP
 };
-var C = h
+var E = g

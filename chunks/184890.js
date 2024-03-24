@@ -1,10 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   useGuildAuditLogV2Enabled: function() {
-    return i
+    return r
   }
 });
-var a = s("862205");
+var a = s("862205"),
+  l = s("49111");
 let n = (0, a.createExperiment)({
     kind: "user",
     id: "2022-02_guild_audit_log_user",
@@ -20,7 +21,7 @@ let n = (0, a.createExperiment)({
       }
     }]
   }),
-  l = (0, a.createExperiment)({
+  i = (0, a.createExperiment)({
     kind: "guild",
     id: "2022-02_guild_audit_log_guild",
     label: "Guild Audit Log - Guild Feature Flag",
@@ -36,11 +37,11 @@ let n = (0, a.createExperiment)({
     }]
   });
 
-function i(e) {
+function r(e) {
   let {
     enableForGuild: t
-  } = l.useExperiment({
-    guildId: null != e ? e : "",
+  } = i.useExperiment({
+    guildId: null != e ? e : l.EMPTY_STRING_SNOWFLAKE_ID,
     location: "da2d90_1"
   }), {
     enableForUser: s

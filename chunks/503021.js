@@ -1,19 +1,19 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   fetchGuildForPopout: function() {
     return i
   }
 });
-var n = l("872717"),
-  a = l("913144"),
-  s = l("49111");
+var l = n("872717"),
+  a = n("913144"),
+  s = n("49111");
 async function i(e) {
   a.default.dispatch({
     type: "GUILD_POPOUT_FETCH_START",
     guildId: e
   });
   try {
-    let t = await n.default.get({
+    let t = await l.HTTP.get({
       url: s.Endpoints.GUILD_PREVIEW(e),
       oldFormErrors: !0
     });

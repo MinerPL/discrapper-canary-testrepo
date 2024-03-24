@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983"),
   a = n("884691"),
-  l = n("90915"),
-  r = n("266491");
+  r = n("90915"),
+  l = n("266491");
 class i extends a.Component {
   render() {
     let {
@@ -22,10 +22,10 @@ class i extends a.Component {
       if (null == d && a.isValidElement(e)) {
         let {
           component: s,
-          render: r,
+          render: l,
           ...o
         } = e.props, u = o.path || o.from;
-        null != (d = null != u ? (0, l.matchPath)(t.pathname, {
+        null != (d = null != u ? (0, r.matchPath)(t.pathname, {
           ...o,
           path: u
         }) : null) && (o = {
@@ -35,12 +35,12 @@ class i extends a.Component {
           match: d,
           history: n,
           staticContext: i
-        }, null != s ? c = a.createElement(s, o) : null != r && (c = r(o)))
+        }, null != s ? c = a.createElement(s, o) : null != l && (c = l(o)))
       }
-    }), (0, s.jsx)(r.default, {
+    }), (0, s.jsx)(l.TransitionGroup, {
       ...u,
       children: c
     })
   }
 }
-var o = (0, l.withRouter)(i)
+var o = (0, r.withRouter)(i)

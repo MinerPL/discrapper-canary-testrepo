@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return p
   }
 }), n("222007"), n("781738");
 var s = n("37983"),
   r = n("884691"),
   a = n("77078"),
-  l = n("86678"),
-  i = n("46829"),
+  i = n("86678"),
+  l = n("46829"),
   u = n("49111"),
   c = n("958706"),
   o = n("782340"),
-  d = n("347609");
-let f = {
+  d = n("517184");
+let m = {
     section: u.AnalyticsSections.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
     openPopoutType: "gift_effect_emoji_picker"
   },
-  m = c.EmojiIntention.GIFT;
+  f = c.EmojiIntention.GIFT;
 
-function _(e) {
+function p(e) {
   let {
     setEmojiConfetti: t,
     emojiConfetti: n
-  } = e, [u, c] = r.useState(!1), _ = e => (0, s.jsxs)("div", {
+  } = e, [u, c] = r.useState(!1), p = e => (0, s.jsxs)("div", {
     className: d.customGiftContent,
     children: [(0, s.jsxs)("div", {
       className: d.customGiftHeader,
@@ -35,7 +35,7 @@ function _(e) {
         children: o.default.Messages.GIFT_SELECT_SOUNDBOARD_OR_EMOJI_DESCRIPTION
       })]
     }), e]
-  }), E = e => {
+  }), _ = e => {
     null != t && (t(e), c(!1))
   };
   return (0, s.jsx)(a.Popout, {
@@ -48,19 +48,21 @@ function _(e) {
       let {
         closePopout: t
       } = e;
-      return (0, s.jsx)(l.default, {
-        analyticsOverride: f,
-        closePopout: t,
-        onSelectEmoji: E,
-        wrapper: "div",
-        pickerIntention: m,
-        renderHeader: _,
-        headerClassName: d.emojiHeader,
-        className: d.emojiList,
-        listHeaderClassName: d.emojiList,
-        searchProps: {
-          accessory: (0, s.jsx)(s.Fragment, {})
-        }
+      return (0, s.jsx)(a.Dialog, {
+        children: (0, s.jsx)(i.default, {
+          analyticsOverride: m,
+          closePopout: t,
+          onSelectEmoji: _,
+          wrapper: "div",
+          pickerIntention: f,
+          renderHeader: p,
+          headerClassName: d.emojiHeader,
+          className: d.emojiList,
+          listHeaderClassName: d.emojiList,
+          searchProps: {
+            accessory: (0, s.jsx)(s.Fragment, {})
+          }
+        })
       })
     },
     children: () => (0, s.jsx)("div", {
@@ -69,7 +71,7 @@ function _(e) {
         className: d.emoji,
         onClick: () => c(!0),
         children: (null == n ? void 0 : n.name) == null ? (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(i.default, {
+          children: [(0, s.jsx)(l.default, {
             className: d.emojiIcon,
             width: 14,
             height: 14

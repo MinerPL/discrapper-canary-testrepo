@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("872717"),
   s = n("599110"),
-  i = n("492249"),
-  l = n("49111"),
+  l = n("492249"),
+  i = n("49111"),
   r = {
-    [l.RPCCommands.GET_NETWORKING_CONFIG]: {
-      scope: i.RPC_LOCAL_SCOPE,
-      handler: () => Promise.all([a.default.get({
+    [i.RPCCommands.GET_NETWORKING_CONFIG]: {
+      scope: l.RPC_LOCAL_SCOPE,
+      handler: () => Promise.all([a.HTTP.get({
         url: location.protocol + window.GLOBAL_ENV.NETWORKING_ENDPOINT,
         retries: 3
       }).then(e => {
@@ -21,8 +21,8 @@ var a = n("872717"),
           }
         } = e;
         return t
-      }), a.default.post({
-        url: l.Endpoints.NETWORKING_TOKEN,
+      }), a.HTTP.post({
+        url: i.Endpoints.NETWORKING_TOKEN,
         retries: 3,
         oldFormErrors: !0
       }).then(e => {
@@ -40,30 +40,30 @@ var a = n("872717"),
         }
       })
     },
-    [l.RPCCommands.NETWORKING_SYSTEM_METRICS]: {
-      scope: i.RPC_LOCAL_SCOPE,
+    [i.RPCCommands.NETWORKING_SYSTEM_METRICS]: {
+      scope: l.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
           socket: t,
           args: n
         } = e;
-        n.application_id = t.application.id, s.default.track(l.AnalyticEvents.NETWORKING_SYSTEM_METRICS, n)
+        n.application_id = t.application.id, s.default.track(i.AnalyticEvents.NETWORKING_SYSTEM_METRICS, n)
       }
     },
-    [l.RPCCommands.NETWORKING_PEER_METRICS]: {
-      scope: i.RPC_LOCAL_SCOPE,
+    [i.RPCCommands.NETWORKING_PEER_METRICS]: {
+      scope: l.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
           socket: t,
           args: n
         } = e;
-        n.application_id = t.application.id, s.default.track(l.AnalyticEvents.NETWORKING_PEER_METRICS, n)
+        n.application_id = t.application.id, s.default.track(i.AnalyticEvents.NETWORKING_PEER_METRICS, n)
       }
     },
-    [l.RPCCommands.NETWORKING_CREATE_TOKEN]: {
-      scope: i.RPC_LOCAL_SCOPE,
-      handler: () => a.default.post({
-        url: l.Endpoints.NETWORKING_TOKEN,
+    [i.RPCCommands.NETWORKING_CREATE_TOKEN]: {
+      scope: l.RPC_LOCAL_SCOPE,
+      handler: () => a.HTTP.post({
+        url: i.Endpoints.NETWORKING_TOKEN,
         retries: 1,
         oldFormErrors: !0
       }).then(e => e.body)

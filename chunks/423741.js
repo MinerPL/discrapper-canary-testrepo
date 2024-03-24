@@ -15,7 +15,7 @@ var i = n("37983"),
   c = n("6791"),
   f = n("49111"),
   h = n("782340"),
-  p = n("482096");
+  p = n("46027");
 let g = Object.values(c.OpacityBounds).map(e => 100 * e),
   m = (0, d.uid)();
 class E extends a.PureComponent {

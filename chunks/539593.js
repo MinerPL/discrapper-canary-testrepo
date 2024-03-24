@@ -41,47 +41,47 @@ var a = l("77078"),
       showChatItems: o = !0,
       context: L,
       onSelect: D
-    } = e, h = (0, U.default)(t.id, l), j = (0, p.default)(t, l, L), V = (0, N.default)(t.id, L), G = (0, O.default)(t.id), R = (0, _.default)(t, L), k = (0, g.default)({
+    } = e, h = {
+      page: C.AnalyticsPages.GUILD_CHANNEL,
+      section: C.AnalyticsSections.CHAT_USERNAME,
+      object: C.AnalyticsObjects.CONTEXT_MENU_ITEM
+    }, j = (0, U.default)(t.id, l), V = (0, p.default)(t, l, L), G = (0, N.default)(t.id, L), R = (0, O.default)(t.id), k = (0, _.default)(t, L), P = (0, g.default)({
       user: t,
       guildId: l,
       context: L
-    }), P = (0, E.default)(t), B = (0, b.default)(t.id), F = (0, m.default)(t.id), y = (0, c.default)({
+    }), B = (0, E.default)(t), F = (0, b.default)(t.id), y = (0, m.default)(t.id), w = (0, c.default)({
       guildId: l,
       userId: t.id,
-      analyticsLocation: {
-        page: C.AnalyticsPages.GUILD_CHANNEL,
-        section: C.AnalyticsSections.CHAT_USERNAME,
-        object: C.AnalyticsObjects.CONTEXT_MENU_ITEM
-      },
+      analyticsLocation: h,
       context: L
-    }), w = (0, f.default)({
+    }), H = (0, f.default)({
       user: t,
       guildId: l
-    }), H = (0, v.default)(t, l), X = (0, i.default)(null, t), Y = (0, M.default)(t), z = (0, S.default)(t), Z = (0, A.default)(t, l), W = (0, I.default)(t.id, l), q = (0, T.default)(t, l), J = (0, r.default)({
+    }), X = (0, v.default)(t, l), Y = (0, i.default)(null, t), z = (0, M.default)(t), Z = (0, S.default)(t), W = (0, A.default)(t, l), q = (0, I.default)(t.id, l), J = (0, T.default)(t, l), K = (0, r.default)({
       id: t.id,
       label: x.default.Messages.COPY_ID_USER
-    }), K = t.isNonUserBot();
+    }), Q = t.isNonUserBot();
     return (0, u.jsxs)(a.Menu, {
       navId: "user-context",
       onClose: d.closeContextMenu,
       "aria-label": x.default.Messages.USER_ACTIONS_MENU_LABEL,
       onSelect: D,
-      children: [!K && (0, u.jsxs)(u.Fragment, {
+      children: [!Q && (0, u.jsxs)(u.Fragment, {
         children: [(0, u.jsxs)(a.MenuGroup, {
-          children: [n && h, o && j, V, R, n && k, n && P, G]
+          children: [n && j, o && V, G, k, n && P, n && B, R]
         }), s && (0, u.jsx)(a.MenuGroup, {
-          children: B
+          children: F
         }), (0, u.jsx)(a.MenuGroup, {
-          children: n && X
+          children: n && Y
         }), (0, u.jsxs)(a.MenuGroup, {
-          children: [s && F, n && y, n && H, Y, w, n && z]
+          children: [s && y, n && w, n && X, z, H, n && Z]
         }), (0, u.jsx)(a.MenuGroup, {
-          children: Z
+          children: W
         }), (0, u.jsxs)(a.MenuGroup, {
-          children: [W, q]
+          children: [q, J]
         })]
       }), (0, u.jsx)(a.MenuGroup, {
-        children: J
+        children: K
       })]
     })
   }, {

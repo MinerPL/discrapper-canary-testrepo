@@ -1,83 +1,80 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return g
   }
 }), n("781738");
-var l = n("37983");
-n("884691");
 var i = n("798609"),
-  r = n("240249"),
-  o = n("972620"),
+  l = n("240249"),
+  a = n("972620"),
   s = n("524768"),
-  a = n("355263"),
-  u = n("845579"),
-  d = n("697218"),
-  c = n("501536"),
-  f = n("387111"),
-  p = n("511104"),
-  m = n("200294"),
-  h = n("851745"),
-  E = n("825871"),
-  S = n("782340");
+  r = n("355263"),
+  o = n("845579"),
+  u = n("697218"),
+  d = n("501536"),
+  c = n("387111"),
+  f = n("511104"),
+  p = n("200294"),
+  m = n("851745"),
+  h = n("825871"),
+  x = n("782340");
 
-function g(e) {
-  let t = p.PREFIX_COMMAND_REGEX.exec(e);
+function E(e) {
+  let t = f.PREFIX_COMMAND_REGEX.exec(e);
   if (null != t) return {
     type: "prefix",
     cleanedQuery: e.substring(t[0].length).trim()
   };
-  let n = p.BOT_MENTION_COMMAND_REGEX.exec(e);
+  let n = f.BOT_MENTION_COMMAND_REGEX.exec(e);
   if (null != n) {
     let t = n[1],
-      l = d.default.getUser(t);
-    return null == l || !l.bot || l.isClyde() ? null : {
+      i = u.default.getUser(t);
+    return null == i || !i.bot || i.isClyde() ? null : {
       type: "mention",
       cleanedQuery: e.substring(n[0].length).trim(),
-      user: l
+      user: i
     }
   }
   return null
 }
-let C = {
-  ...E.default,
+let y = {
+  ...h.default,
   sentinel: void 0,
-  focusMode: h.FocusMode.MANUAL,
-  matches(e, t, n, l, i) {
-    if (i.commands === h.CommandMode.DISABLED || i.commands === h.CommandMode.OLD_BUILT_INS || n.length < 2 || !u.ShowCommandSuggestions.getSetting()) return !1;
-    let r = g(n);
-    return null != r && r.cleanedQuery.length > 0
+  focusMode: m.FocusMode.MANUAL,
+  matches(e, t, n, i, l) {
+    if (l.commands === m.CommandMode.DISABLED || l.commands === m.CommandMode.OLD_BUILT_INS || n.length < 2 || !o.ShowCommandSuggestions.getSetting()) return !1;
+    let a = E(n);
+    return null != a && a.cleanedQuery.length > 0
   },
-  queryResults(e, t, n, l, s) {
-    if (!u.ShowCommandSuggestions.getSetting()) return E.EMPTY_RESULTS;
-    let d = g(n);
-    if (null == d) return E.EMPTY_RESULTS;
-    let c = (0, E.getLimit)("LegacyCommandAutocompletes"),
-      f = (0, a.getCommandQuery)(e, d.cleanedQuery),
+  queryResults(e, t, n, s, u) {
+    if (!o.ShowCommandSuggestions.getSetting()) return h.EMPTY_RESULTS;
+    let d = E(n);
+    if (null == d) return h.EMPTY_RESULTS;
+    let c = (0, r.getCommandQuery)(e, d.cleanedQuery),
       {
-        commands: p,
-        sections: m
-      } = r.executeQuery(e, {
+        commands: f,
+        sections: p
+      } = l.executeQuery(e, {
         commandType: i.ApplicationCommandType.CHAT,
-        text: f.text
+        text: c.text
       }, {
-        limit: c,
-        placeholderCount: h.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-        scoreMethod: o.ScoreMethod.COMMAND_OR_APPLICATION,
-        allowFetch: s
+        limit: m.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
+        placeholderCount: m.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+        scoreMethod: a.ScoreMethod.COMMAND_OR_APPLICATION,
+        allowFetch: u
       });
-    if (null == p) return E.EMPTY_RESULTS;
-    let S = p;
-    if (f.hasSpaceTerminator) {
-      let e = f.text.trim(),
+    if (null == f) return h.EMPTY_RESULTS;
+    let x = f;
+    if (c.hasSpaceTerminator) {
+      let e = c.text.trim(),
         t = e + " ";
-      S = S.filter(n => n.name === e || n.name.startsWith(t))
+      x = x.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === S.length ? E.EMPTY_RESULTS : {
+    return 0 === x.length ? h.EMPTY_RESULTS : {
       results: {
-        entries: S.slice(0, c).map(e => ({
+        entries: x.slice(0, m.MAX_COMMAND_AUTOCOMPLETE_RESULTS).map(e => ({
           command: e,
-          section: null == m ? void 0 : m.find(t => t.id === e.applicationId)
+          section: null == p ? void 0 : p.find(t => t.id === e.applicationId)
         }))
       }
     }
@@ -89,21 +86,21 @@ let C = {
       },
       selectedIndex: n,
       guild: i,
-      channel: r,
-      query: o,
+      channel: l,
+      query: a,
       options: s,
-      onHover: a,
-      onClick: u
+      onHover: r,
+      onClick: o
     } = e;
-    return (0, m.renderAutocompleteGroup)({
-      query: o,
+    return (0, p.renderAutocompleteGroup)({
+      query: a,
       selectedIndex: n,
       autocompletes: t,
-      onHover: a,
-      onClick: u,
-      titleWithQuery: S.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: S.default.Messages.COMMANDS,
-      Component: s.commands === h.CommandMode.OLD_BUILT_INS ? c.default.Command : c.default.NewCommand,
+      onHover: r,
+      onClick: o,
+      titleWithQuery: x.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: x.default.Messages.COMMANDS,
+      Component: s.commands === m.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -112,41 +109,40 @@ let C = {
         return {
           key: t.id,
           command: t,
-          channel: r,
-          guildId: r.guild_id,
+          channel: l,
+          guildId: l.guild_id,
           showImage: !0,
           section: n
         }
       },
       getQuery: e => {
-        let t = g(e);
+        let t = E(e);
         if ("mention" !== t.type) return e;
-        let n = f.default.getName(null == i ? void 0 : i.id, r.id, t.user);
-        return e.replace(p.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
+        let n = c.default.getName(null == i ? void 0 : i.id, l.id, t.user);
+        return e.replace(f.BOT_MENTION_COMMAND_REGEX, "@".concat(n))
       },
-      key: "commands",
-      footer: (0, l.jsx)(E.FakeFooter, {})
+      key: "commands"
     })
   },
   onSelect(e) {
     let {
       results: t,
       index: n,
-      type: l,
-      options: i,
-      channel: r
-    } = e, o = E.default.onSelect({
+      type: i,
+      options: l,
+      channel: a
+    } = e, r = h.default.onSelect({
       results: t,
       index: n,
-      type: l,
-      options: i,
-      channel: r,
+      type: i,
+      options: l,
+      channel: a,
       location: s.ApplicationCommandTriggerLocations.SUGGESTION
     });
-    return null == o ? null : {
-      ...o,
-      type: h.AutocompleteSelectionTypes.COMMAND_SUGGESTION
+    return null == r ? null : {
+      ...r,
+      type: m.AutocompleteSelectionTypes.COMMAND_SUGGESTION
     }
   }
 };
-var T = C
+var g = y

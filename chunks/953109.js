@@ -12,23 +12,24 @@ var s = l("414456"),
   r = l("476263"),
   c = l("547620"),
   u = l("646718"),
-  o = l("257920");
-let d = {
-    XSMALL: o.xsmall,
-    SMALL: o.small,
-    MEDIUM: o.medium,
-    LARGE: o.large
+  o = l("782340"),
+  d = l("877670");
+let h = {
+    XXSMALL: d.xxsmall,
+    XSMALL: d.xsmall,
+    SMALL: d.small,
+    MEDIUM: d.medium,
+    LARGE: d.large
   },
-  h = e => {
+  f = e => {
     let t, {
       game: s,
-      guild: h,
+      guild: f,
       skuId: p,
-      pid: f,
-      className: I,
-      guildClassName: A,
-      size: L = d.MEDIUM,
-      ...m
+      pid: I,
+      className: A,
+      guildClassName: L,
+      size: m = h.MEDIUM
     } = e;
     if (null != p && (t = function(e) {
         if (null == e) return null;
@@ -47,46 +48,51 @@ let d = {
         }
       }(p)), null != s && null == t && (t = s.getIconURL(function(e) {
         switch (e) {
-          case d.XSMALL:
+          case h.XXSMALL:
+            return 16;
+          case h.XSMALL:
             return 24;
-          case d.SMALL:
+          case h.SMALL:
             return 30;
-          case d.MEDIUM:
+          case h.MEDIUM:
             return 40;
-          case d.LARGE:
+          case h.LARGE:
             return 60;
           default:
             return 80
         }
-      }(L))), null == (t = (0, i.default)(f, t)) && null != h) {
+      }(m))), null == (t = (0, i.default)(I, t)) && null != f) {
       let e = function(e) {
         switch (e) {
-          case d.XSMALL:
+          case h.XSMALL:
             return r.default.Sizes.SMALLER;
-          case d.SMALL:
+          case h.SMALL:
             return r.default.Sizes.SMALL;
-          case d.LARGE:
+          case h.LARGE:
             return r.default.Sizes.LARGE;
           default:
-          case d.MEDIUM:
+          case h.MEDIUM:
             return r.default.Sizes.MEDIUM
         }
-      }(L);
+      }(m);
       return (0, a.jsx)(r.default, {
-        className: n(o.gameIcon, A, I),
-        guild: h,
+        className: n(d.gameIcon, L, A),
+        guild: f,
         size: e
       })
     }
-    return null == t ? (0, a.jsx)(c.default, {
-      className: n(o.gameIcon, L, I)
-    }) : (0, a.jsx)("div", {
-      ...m,
-      className: n(o.gameIcon, L, I),
-      style: {
-        backgroundImage: "url('".concat(t, "')")
-      }
+    if (null == t) return (0, a.jsx)(c.default, {
+      className: n(d.gameIcon, m, A)
+    });
+    let g = null == s ? void 0 : s.name,
+      S = null != g && "" !== g ? o.default.Messages.APPLICATION_ICON_A11Y_LABEL.format({
+        applicationName: g
+      }) : o.default.Messages.APPLICATION_ICON_NO_NAME_A11Y_LABEL;
+    return (0, a.jsx)("img", {
+      alt: S,
+      src: t,
+      className: n(d.gameIcon, m, A)
     })
   };
-h.Sizes = d;
-var p = h
+f.Sizes = h;
+var p = f

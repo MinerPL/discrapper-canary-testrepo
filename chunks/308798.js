@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return T
   }
 });
 var a = n("37983");
@@ -14,35 +14,36 @@ var l = n("446674"),
   d = n("610730"),
   o = n("271938"),
   f = n("957255"),
-  c = n("49111"),
-  _ = n("782340");
+  c = n("299039"),
+  _ = n("49111"),
+  E = n("782340");
 
-function E(e) {
+function T(e) {
   let t = e.isForumPost(),
-    E = (0, l.useStateFromStores)([o.default], () => e.isOwner(o.default.getId()), [e]),
+    T = (0, l.useStateFromStores)([o.default], () => e.isOwner(o.default.getId()), [e]),
     {
-      canManageChannel: T,
-      canAccessChannel: S
+      canManageChannel: S,
+      canAccessChannel: h
     } = (0, l.useStateFromStoresObject)([f.default], () => ({
       canAccessChannel: f.default.can(e.accessPermissions, e),
-      canManageChannel: f.default.can(e.isThread() ? c.Permissions.MANAGE_THREADS : c.Permissions.MANAGE_CHANNELS, e)
+      canManageChannel: f.default.can(e.isThread() ? _.Permissions.MANAGE_THREADS : _.Permissions.MANAGE_CHANNELS, e)
     }), [e]),
-    h = (0, l.useStateFromStores)([d.default], () => {
+    C = (0, l.useStateFromStores)([d.default], () => {
       var t;
       return null !== (t = d.default.getCount(e.id)) && void 0 !== t ? t : 0
     }, [e.id]),
     {
-      firstMessage: C
+      firstMessage: g
     } = (0, l.useStateFromStores)([s.default], () => s.default.getMessage(e.id), [e.id]),
-    g = t && (T || E && h < 1),
-    N = t && E && !T && h > 0 && null != C;
-  return S && (T || g || N) ? (0, a.jsx)(i.MenuItem, {
+    N = t && (S || T && C < 1),
+    A = t && T && !S && C > 0 && null != g;
+  return h && (S || N || A) ? (0, a.jsx)(i.MenuItem, {
     id: "delete-channel",
     label: (() => {
-      if (e.type === c.ChannelTypes.GUILD_CATEGORY) return _.default.Messages.DELETE_CATEGORY;
-      if (e.isForumPost()) return g ? _.default.Messages.DELETE_FORUM_POST : _.default.Messages.DELETE_MESSAGE;
-      if (e.isThread()) return _.default.Messages.DELETE_THREAD;
-      return _.default.Messages.DELETE_CHANNEL
+      if (e.type === _.ChannelTypes.GUILD_CATEGORY) return E.default.Messages.DELETE_CATEGORY;
+      if (e.isForumPost()) return N ? E.default.Messages.DELETE_FORUM_POST : E.default.Messages.DELETE_MESSAGE;
+      if (e.isThread()) return E.default.Messages.DELETE_THREAD;
+      return E.default.Messages.DELETE_CHANNEL
     })(),
     color: "danger",
     action: () => (0, i.openModalLazy)(async () => {
@@ -52,7 +53,7 @@ function E(e) {
       return n => (0, a.jsx)(t, {
         ...n,
         onConfirm: () => {
-          n.onClose(), N ? r.default.deleteMessage(e.id, e.id) : u.default.deleteChannel(e.id)
+          n.onClose(), A ? r.default.deleteMessage(e.id, c.default.castChannelIdAsMessageId(e.id)) : u.default.deleteChannel(e.id)
         },
         channel: e
       })

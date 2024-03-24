@@ -1,17 +1,17 @@
-    "use strict";
+"use strict";
 
-    function r(t, e) {
-      if (t.score === e.score) {
-        var n, r, o, i, u, c;
-        let l = null !== (i = null !== (o = t.sortable) && void 0 !== o ? o : null === (n = t.comparator) || void 0 === n ? void 0 : n.toLocaleLowerCase()) && void 0 !== i ? i : "",
-          a = null !== (c = null !== (u = t.sortable) && void 0 !== u ? u : null === (r = e.comparator) || void 0 === r ? void 0 : r.toLocaleLowerCase()) && void 0 !== c ? c : "";
-        if (l < a) return -1;
-        if (l > a) return 1
-      }
-      return e.score - t.score
-    }
-    n.r(e), n.d(e, {
-      default: function() {
-        return r
-      }
-    })
+function C(D, u) {
+  if (D.score === u.score) {
+    var E, C, F, B, A, l;
+    let o = null !== (B = null !== (F = D.sortable) && void 0 !== F ? F : null === (E = D.comparator) || void 0 === E ? void 0 : E.toLocaleLowerCase()) && void 0 !== B ? B : "",
+      r = null !== (l = null !== (A = D.sortable) && void 0 !== A ? A : null === (C = u.comparator) || void 0 === C ? void 0 : C.toLocaleLowerCase()) && void 0 !== l ? l : "";
+    if (o < r) return -1;
+    if (o > r) return 1
+  }
+  return u.score - D.score
+}
+E.r(u), E.d(u, {
+  default: function() {
+    return C
+  }
+})

@@ -31,14 +31,14 @@ var a = n("414456"),
   v = n("724210"),
   x = n("500307"),
   R = n("782340"),
-  M = n("864080");
+  M = n("894048");
 
 function O(e) {
   let {
     guildId: t,
     selected: n,
     handleClick: a
-  } = e, d = (0, C.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.default)([S.default], () => S.default.getGuild(t)), A = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.default.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.default)([c.default], () => c.default.useReducedMotion);
+  } = e, d = (0, C.useIsEligibleForSubscriptionsInGuildShop)(t, "guild_shop_channel_row"), p = (0, i.useStateFromStores)([S.default], () => S.default.getGuild(t)), A = (null == p ? void 0 : p.hasFeature(L.GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !0, v = "false" === o.default.get(x.GUILD_SHOP_CHANNEL_ROW_CLICK, "false"), O = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion);
   return (0, l.jsx)(u.ClickableContainer, {
     tag: "div",
     onClick: a,

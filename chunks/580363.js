@@ -1,91 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("702976"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
 var i = n("37983");
 n("884691");
 var s = n("414456"),
   r = n.n(s),
-  a = n("577776"),
-  o = n("841811"),
-  l = n("338835"),
-  u = n("83900"),
-  d = n("45029"),
-  c = n("71216"),
+  a = n("527073"),
+  o = n("577776"),
+  l = n("841811"),
+  u = n("338835"),
+  d = n("83900"),
+  c = n("45029"),
+  _ = n("71216"),
   f = n("148337"),
-  _ = n("568734"),
+  E = n("568734"),
   h = n("299039"),
   g = n("955145"),
   m = n("29479"),
-  E = n("49111"),
-  p = n("843455"),
-  v = n("782340"),
-  S = n("413973");
+  p = n("49111"),
+  S = n("843455"),
+  T = n("782340"),
+  v = n("10604");
 
-function T(e) {
+function I(e) {
   var t;
   let n, {
       application: s,
       scopes: r,
-      redirectUri: a,
-      approximateGuildCount: T,
+      redirectUri: o,
+      approximateGuildCount: I,
       isEmbeddedFlow: C,
-      embeddedActivityConfig: A
+      embeddedActivityConfig: y
     } = e,
-    y = new Date(h.default.extractTimestamp(s.id)),
-    N = (0, m.getSecurityMessage)(r),
-    R = (0, _.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, E.ApplicationFlags.EMBEDDED);
-  if (null != a && !R && !C) {
-    let e = new URL(a);
+    N = new Date(h.default.extractTimestamp(s.id)),
+    R = (0, m.getSecurityMessage)(r),
+    O = (0, E.hasFlag)(null !== (t = s.flags) && void 0 !== t ? t : 0, p.ApplicationFlags.EMBEDDED);
+  if (null != o && !O && !C) {
+    let e = new URL(o);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   }
   return (0, i.jsxs)("div", {
-    className: S.applicationDetails,
-    children: [null != n ? (0, i.jsx)(I, {
-      className: S.redirectWarning,
-      icon: u.default,
-      text: v.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
+    className: v.applicationDetails,
+    children: [null != n ? (0, i.jsx)(A, {
+      className: v.redirectWarning,
+      icon: d.default,
+      text: T.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, i.jsx)(I, {
-      icon: d.default,
-      text: (0, g.getApplicationDetailsText)(s)
-    }), (0, i.jsx)(I, {
-      icon: o.default,
-      text: v.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
-        date: y
-      })
-    }), r.includes(p.OAuth2Scopes.BOT) && null != T ? (0, i.jsx)(I, {
+    }) : null, (0, i.jsx)(A, {
       icon: c.default,
-      text: v.default.Messages.OAUTH2_DETAILS_GUILDS.format({
-        guildCount: T
-      })
-    }) : null, (0, i.jsx)(I, {
-      icon: f.default,
-      text: N
-    }), (null == A ? void 0 : A.has_csp_exception) ? (0, i.jsx)(I, {
+      text: (0, g.getApplicationDetailsText)(s)
+    }), (0, i.jsx)(A, {
       icon: l.default,
-      text: v.default.Messages.OAUTH2_SCOPES_IP_LOCATION_SCOPE
+      text: T.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
+        date: N
+      })
+    }), r.includes(S.OAuth2Scopes.BOT) && null != I ? (0, i.jsx)(A, {
+      icon: _.default,
+      text: T.default.Messages.OAUTH2_DETAILS_GUILDS.format({
+        guildCount: I
+      })
+    }) : null, (0, i.jsx)(A, {
+      icon: f.default,
+      text: R
+    }), (null == y ? void 0 : y.has_csp_exception) ? (0, i.jsx)(A, {
+      icon: u.default,
+      text: T.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
+    }) : null, (null == y ? void 0 : y.displays_advertisements) ? (0, i.jsx)(A, {
+      icon: a.EmbedIcon,
+      text: T.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
     }) : null]
   })
 }
 
-function I(e) {
+function A(e) {
   let {
     icon: t,
     text: n,
     className: s
   } = e;
   return (0, i.jsxs)("div", {
-    className: r(S.entry, s),
+    className: r(v.entry, s),
     children: [(0, i.jsx)(t, {
-      className: S.entryIcon
-    }), (0, i.jsx)(a.Text, {
+      className: v.entryIcon
+    }), (0, i.jsx)(o.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
-      className: S.entryInner,
+      className: v.entryInner,
       children: n
     })]
   })

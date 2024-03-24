@@ -1,42 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return d
+    return f
   }
-}), n("222007");
-var l = n("884691"),
-  s = n("249654"),
-  u = n("446674"),
-  i = n("718517"),
-  a = n("933326"),
-  o = n("398604"),
-  r = n("822516");
+}), l("222007");
+var n = l("884691"),
+  s = l("917351"),
+  u = l.n(s),
+  a = l("446674"),
+  i = l("634634"),
+  o = l("718517"),
+  r = l("299039"),
+  d = l("933326"),
+  c = l("398604"),
+  E = l("822516");
 
-function d(e, t, n) {
-  let d = (0, u.useStateFromStores)([o.default], () => o.default.getGuildScheduledEvent(e)),
-    [c, f] = l.useState(null != n && null != d ? (0, r.generateNextRecurrences)(4, (0, r.getRRule)(n), new Date(d.scheduled_start_time)) : []);
-  l.useEffect(() => {
+function f(e, t, l) {
+  let s = (0, a.useStateFromStores)([c.default], () => c.default.getGuildScheduledEvent(e)),
+    f = (0, i.default)(l),
+    [h, C] = n.useState(null != l && null != s ? (0, E.generateNextRecurrences)(4, (0, E.getRRule)(l), new Date(s.scheduled_start_time)) : []);
+  n.useEffect(() => {
+    if (null == f || null == l || null == s || u.isEqual(f, l)) return;
+    let e = (0, E.getRRule)(l);
+    C((0, E.generateNextRecurrences)(h.length, e, new Date(s.scheduled_start_time)))
+  }, [l, h.length, s, f]), n.useEffect(() => {
     if (null == t) return;
-    let n = c.map(e => s.default.fromTimestamp(Math.floor(e.getTime() / i.default.Millis.SECOND) * i.default.Millis.SECOND));
-    a.default.getGuildEventUserCounts(t, e, n)
-  }, [e, t, c]);
-  let E = l.useMemo(() => {
-    if (null == n || 0 === c.length || (null == d ? void 0 : d.scheduled_start_time) == null) return !1;
+    let l = h.map(e => r.default.fromTimestamp(Math.floor(e.getTime() / o.default.Millis.SECOND) * o.default.Millis.SECOND));
+    d.default.getGuildEventUserCounts(t, e, l)
+  }, [e, t, h]);
+  let g = n.useMemo(() => {
+    if (null == l || 0 === h.length || (null == s ? void 0 : s.scheduled_start_time) == null) return !1;
     let e = new Date;
-    e.setFullYear(e.getFullYear() + r.MAX_YEARS_AHEAD_RECURRING_EVENT);
-    let t = c[c.length - 1],
-      l = (0, r.getRRule)(n),
-      s = l.after(t);
-    return null != s && s <= e
-  }, [n, c, null == d ? void 0 : d.scheduled_start_time]);
+    e.setFullYear(e.getFullYear() + E.MAX_YEARS_AHEAD_RECURRING_EVENT);
+    let t = h[h.length - 1],
+      n = (0, E.getRRule)(l),
+      u = n.after(t);
+    return null != u && u <= e
+  }, [l, h, null == s ? void 0 : s.scheduled_start_time]);
   return {
-    recurrenceStartTimes: c,
-    canViewMoreRecurrences: E,
+    recurrenceStartTimes: h,
+    canViewMoreRecurrences: g,
     updateRecurrenceStartTimes: () => {
-      if (null == n || null == d) return;
-      let e = (0, r.getRRule)(n),
-        t = c[c.length - 1];
-      f([...c, ...(0, r.generateNextRecurrences)(4, e, t, !0)])
+      if (null == l || null == s) return;
+      let e = (0, E.getRRule)(l),
+        t = h[h.length - 1];
+      C([...h, ...(0, E.generateNextRecurrences)(4, e, t, !0)])
     }
   }
 }

@@ -5,12 +5,11 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("884691"),
-  i = n("865821");
+  i = n("91761");
 
 function a(e, t) {
   let n = (0, i.default)({
-    guildId: e,
-    disableFilter: !0
+    guildId: e
   });
   return s.useMemo(() => {
     var e;

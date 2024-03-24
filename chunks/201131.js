@@ -36,8 +36,8 @@ var o = n("884691"),
   r = n("171149"),
   _ = n("427693"),
   i = n("404336"),
-  a = n("772193"),
-  E = n("657827"),
+  E = n("772193"),
+  a = n("657827"),
   s = n("446674"),
   A = n("42203"),
   d = n("957255"),
@@ -82,7 +82,7 @@ function M(e, t) {
 function R(e, t) {
   var n, o;
   let _ = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.NOOP_NULL,
-    E = function(e) {
+    a = function(e) {
       let t = M(e, r.AutomodMessageEmbedKeys.BLOCK_PROFILE_UPDATE_TYPE);
       if (null != t) return t
     }(e),
@@ -101,7 +101,7 @@ function R(e, t) {
   if (null != T) {
     let e = function(e, t, n) {
       switch (t) {
-        case a.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE:
+        case E.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE:
           return function(e) {
             switch (e) {
               case u.AutomodBlockProfileUpdateMessageEmbedKeys.NICKNAME_UPDATE:
@@ -112,7 +112,7 @@ function R(e, t) {
                 return
             }
           }(e);
-        case a.AutomodQuarantineUserActionMessageEmbedKeys.QUARANTINE_USER:
+        case E.AutomodQuarantineUserActionMessageEmbedKeys.QUARANTINE_USER:
           return function(e) {
             switch (e) {
               case i.AutomodQuarantineEventMessageEmbedKeys.MESSAGE_SEND:
@@ -125,17 +125,17 @@ function R(e, t) {
                 return
             }
           }(n);
-        case a.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_GUEST_JOIN:
+        case E.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_GUEST_JOIN:
           return function() {
             return I.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_BLOCK_GUEST_ON_GUILD_JOIN
           }()
       }
-    }(E, s, A);
+    }(a, s, A);
     if (null != e) return e
   }
   let l = M(e, r.AutomodMessageEmbedKeys.FLAGGED_MESSAGE_ID),
     O = d.default.can(N.Permissions.VIEW_CHANNEL, t);
-  let c = (n = t, O ? null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : "#".concat(I.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER) : "#".concat(I.default.Messages.NO_ACCESS)),
+  let c = (n = t, O ? null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : I.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER : I.default.Messages.NO_ACCESS),
     R = null != t && O ? _ : N.NOOP_NULL,
     f = function(e, t, n) {
       let o = M(e, r.AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME);
@@ -157,11 +157,11 @@ function R(e, t) {
 
 function f(e) {
   switch (e) {
-    case E.AutomodQuarantineUserMessageEmbedKeys.NICKNAME:
+    case a.AutomodQuarantineUserMessageEmbedKeys.NICKNAME:
       return I.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON_NICKNAME;
-    case E.AutomodQuarantineUserMessageEmbedKeys.USERNAME:
+    case a.AutomodQuarantineUserMessageEmbedKeys.USERNAME:
       return I.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON_USERNAME;
-    case E.AutomodQuarantineUserMessageEmbedKeys.GLOBAL_NAME:
+    case a.AutomodQuarantineUserMessageEmbedKeys.GLOBAL_NAME:
       return I.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON_GLOBAL_NAME;
     default:
       return I.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_REASON_USERNAME
@@ -174,8 +174,8 @@ function S(e) {
     u = M(e, _.AutomodNotificationEmbedKeys.JOIN_ATTEMPTS),
     r = M(e, _.AutomodNotificationEmbedKeys.RAID_DATETIME),
     i = M(e, _.AutomodNotificationEmbedKeys.DMS_SENT),
-    a = M(e, _.AutomodNotificationEmbedKeys.RAID_TYPE),
-    E = M(e, _.AutomodNotificationEmbedKeys.RESOLVED_REASON),
+    E = M(e, _.AutomodNotificationEmbedKeys.RAID_TYPE),
+    a = M(e, _.AutomodNotificationEmbedKeys.RESOLVED_REASON),
     s = M(e, _.AutomodNotificationEmbedKeys.DECISION_ID),
     A = M(e, _.AutomodNotificationEmbedKeys.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
   return {
@@ -183,8 +183,8 @@ function S(e) {
     joinAttempts: null != u ? parseInt(u) : void 0,
     raidDatetime: null != r ? new Date(r) : void 0,
     dmsSent: null != i ? parseInt(i) : void 0,
-    raidType: null != a ? a : void 0,
-    resolvedReason: null != E ? E : void 0,
+    raidType: null != E ? E : void 0,
+    resolvedReason: null != a ? a : void 0,
     decisionId: null != s ? s : void 0,
     suspiciousMentionActivityUntil: null != A ? new Date(A) : void 0
   }

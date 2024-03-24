@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("538282"),
-  o = n("45961"),
-  s = n("794707"),
-  a = n("195638"),
-  u = n("44058");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("538282"),
+  s = n("45961"),
+  r = n("794707"),
+  o = n("195638"),
+  u = n("890832");
 
 function d(e) {
   let {
@@ -22,114 +22,114 @@ function d(e) {
     onSearchExpressions: p,
     hasSearchResults: m,
     defaultSearchPlaceholder: h,
-    emptySearchPlaceholder: E,
-    renderEmptyState: S,
-    renderRow: g,
-    renderSection: C,
-    renderSectionHeader: T,
-    renderSectionFooter: v,
-    renderInspector: y,
-    renderEmptySearchState: x,
+    emptySearchPlaceholder: x,
+    renderEmptyState: E,
+    renderRow: y,
+    renderSection: g,
+    renderSectionHeader: S,
+    renderSectionFooter: C,
+    renderInspector: T,
+    renderEmptySearchState: _,
     renderCategoryList: I,
-    renderHeaderAccessories: N,
-    rowHeight: _,
+    renderHeaderAccessories: v,
+    rowHeight: N,
     sectionHeaderHeight: A,
-    sectionFooterHeight: R,
-    itemNodeWidth: O,
+    sectionFooterHeight: O,
+    itemNodeWidth: R,
     listPaddingRight: M,
     itemNodeMargin: k,
-    listPadding: b,
+    listPadding: L,
     gridNavigatorId: P,
-    gridNotice: L,
-    renderHeader: U
-  } = e, j = i.useRef(null), D = i.useRef(null), w = i.useRef(null), B = 0 === t.length, H = (0, r.useExpressionPickerStore)(e => e.searchQuery), F = c.useStore(e => e.inspectedExpressionPosition), G = (0, o.useExpressionPickerGridWidth)({
-    gridWrapperRef: j,
+    gridNotice: b,
+    renderHeader: j
+  } = e, U = l.useRef(null), D = l.useRef(null), w = l.useRef(null), F = 0 === t.length, G = (0, a.useExpressionPickerStore)(e => e.searchQuery), H = c.useStore(e => e.inspectedExpressionPosition), B = (0, s.useExpressionPickerGridWidth)({
+    gridWrapperRef: U,
     containerWidth: d,
-    showingEmptyState: B
+    showingEmptyState: F
   }), {
-    expressionsGrid: K,
-    rowCount: V,
+    expressionsGrid: V,
+    rowCount: K,
     rowCountBySection: W,
     columnCounts: Y,
-    gutterWidth: q
-  } = (0, o.useExpressionGrid)({
+    gutterWidth: z
+  } = (0, s.useExpressionGrid)({
     categories: t,
     collapsedCategories: n,
-    gridWidth: G,
+    gridWidth: B,
     listPaddingRight: M,
-    itemNodeWidth: O,
+    itemNodeWidth: R,
     itemNodeMargin: k
   }), {
-    getItemProps: z,
-    getRowProps: Q,
-    gridContainerProps: X,
-    handleGridContainerKeyDown: Z,
-    isUsingKeyboardNavigation: J
-  } = (0, o.useKeyboardNavigation)({
+    getItemProps: Z,
+    getRowProps: J,
+    gridContainerProps: q,
+    handleGridContainerKeyDown: X,
+    isUsingKeyboardNavigation: Q
+  } = (0, s.useKeyboardNavigation)({
     columnCounts: Y,
     expressionsListRef: D,
-    expressionsGrid: K,
+    expressionsGrid: V,
     onSelectItem: f,
     store: c,
     gridNavigatorId: P
-  }), $ = i.useCallback(e => {
-    let t = K[e];
-    return g(t, Q(e), {
-      isUsingKeyboardNavigation: J.current,
-      gutterWidth: q,
+  }), $ = l.useCallback(e => {
+    let t = V[e];
+    return y(t, J(e), {
+      isUsingKeyboardNavigation: Q.current,
+      gutterWidth: z,
       rowIndex: e
-    }, t => z(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [K, z, Q, q, J, g, c]), ee = i.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), et = i.useCallback(e => null == T ? void 0 : T(t[e], e), [t, T]), en = i.useCallback(e => null == v ? void 0 : v(t[e]), [t, v]), el = i.useCallback(() => {
+    }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
+  }, [V, Z, J, z, Q, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
     var e;
-    return null == y ? void 0 : y(null == K ? void 0 : null === (e = K[F.rowIndex]) || void 0 === e ? void 0 : e[F.columnIndex])
-  }, [K, F.columnIndex, F.rowIndex, y]);
-  i.useEffect(() => {
-    p(H)
-  }, [p, H]), i.useEffect(() => c.resetStoreState, [c.resetStoreState]), i.useLayoutEffect(() => {
+    return null == T ? void 0 : T(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
+  }, [V, H.columnIndex, H.rowIndex, T]);
+  l.useEffect(() => {
+    p(G)
+  }, [p, G]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
     var e;
     null === (e = w.current) || void 0 === e || e.focus()
   }, []);
-  let ei = (0, l.jsxs)(l.Fragment, {
-    children: [(0, l.jsx)(a.default, {
+  let el = (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(o.default, {
       ref: w,
       store: c,
       hasSendableExpressions: !0,
-      onKeyDown: Z,
+      onKeyDown: X,
       expressionsListRef: D,
       gridNavigatorId: P,
       defaultSearchPlaceholder: h,
-      emptySearchPlaceholder: E
-    }), null == N ? void 0 : N()]
+      emptySearchPlaceholder: x
+    }), null == v ? void 0 : v()]
   });
-  return (0, l.jsxs)(l.Fragment, {
-    children: [null != U ? U(ei) : (0, l.jsxs)("div", {
+  return (0, i.jsxs)(i.Fragment, {
+    children: [null != j ? j(el) : (0, i.jsxs)("div", {
       className: u.header,
-      children: [" ", ei, " "]
-    }), B && null != S ? S(u.emptyState) : (0, l.jsxs)(l.Fragment, {
-      children: [I(D), null != L && (0, l.jsx)("div", {
+      children: [" ", el, " "]
+    }), F && null != E ? E(u.emptyState) : (0, i.jsxs)(i.Fragment, {
+      children: [I(D), null != b && (0, i.jsx)("div", {
         className: u.gridNoticeWrapper,
-        children: L
-      }), (0, l.jsx)("div", {
-        ref: j,
+        children: b
+      }), (0, i.jsx)("div", {
+        ref: U,
         className: u.listWrapper,
         id: P,
-        ...X,
-        children: null != G ? (0, l.jsx)(s.default, {
+        ...q,
+        children: null != B ? (0, i.jsx)(r.default, {
           ref: D,
           store: c,
           hasSearchResults: m,
-          listPadding: b,
+          listPadding: L,
           renderRow: $,
-          renderSection: null != C ? ee : void 0,
-          renderSectionHeader: null != T ? et : void 0,
-          renderSectionFooter: null != v ? en : void 0,
-          renderInspector: null != y ? el : void 0,
-          renderEmptySearchState: x,
-          rowCount: V,
+          renderSection: null != g ? ee : void 0,
+          renderSectionHeader: null != S ? et : void 0,
+          renderSectionFooter: null != C ? en : void 0,
+          renderInspector: null != T ? ei : void 0,
+          renderEmptySearchState: _,
+          rowCount: K,
           rowCountBySection: W,
-          rowHeight: _,
+          rowHeight: N,
           sectionHeaderHeight: A,
-          sectionFooterHeight: R
+          sectionFooterHeight: O
         }) : null
       })]
     })]

@@ -3,78 +3,130 @@ n.r(t), n.d(t, {
   useAvatarsWithGuilds: function() {
     return a
   },
-  setNewPendingUserBio: function() {
-    return u
+  useGuildMemberAndUserPendingAvatarDecoration: function() {
+    return S
   },
-  setNewPendingAvatar: function() {
+  useGlobalOrGuildIdentityProfileEffect: function() {
     return c
   },
-  setNewPendingAvatarDecoration: function() {
-    return d
+  useGlobalOrGuildIdentityPendingProfileEffect: function() {
+    return I
   },
-  setNewPendingProfileEffectId: function() {
+  setNewPendingUserBio: function() {
+    return s
+  },
+  setNewPendingAvatar: function() {
     return f
   },
+  setNewPendingAvatarDecoration: function() {
+    return N
+  },
+  setNewPendingProfileEffectId: function() {
+    return A
+  },
   getProfilePreviewField: function() {
-    return E
+    return U
   },
   showRemoveAvatar: function() {
-    return _
+    return p
   },
   showRemoveBanner: function() {
-    return p
+    return R
   }
 }), n("424973");
-var r = n("884691"),
-  i = n("152584"),
-  l = n("234251"),
-  o = n("783142"),
-  s = n("26989");
+var i = n("884691"),
+  r = n("446674"),
+  u = n("152584"),
+  o = n("929423"),
+  _ = n("424562"),
+  l = n("783142"),
+  E = n("713135"),
+  T = n("26989"),
+  d = n("790618");
 
 function a(e) {
-  return r.useMemo(() => {
-    let t = s.default.getMutableAllGuildsAndMembers(),
+  return i.useMemo(() => {
+    let t = T.default.getMutableAllGuildsAndMembers(),
       n = {};
-    for (let i in t) {
-      var r;
-      let l = t[i],
-        o = null === (r = l[e]) || void 0 === r ? void 0 : r.avatar;
-      null != o && (null == n[o] && (n[o] = []), n[o].push(i))
+    for (let r in t) {
+      var i;
+      let u = t[r],
+        o = null === (i = u[e]) || void 0 === i ? void 0 : i.avatar;
+      null != o && (null == n[o] && (n[o] = []), n[o].push(r))
     }
     return null != n ? Object.entries(n).map(e => e[1][0]) : []
   }, [e])
 }
 
-function u(e, t) {
-  (0, o.setPendingBio)(e === t ? void 0 : e)
+function S(e, t) {
+  let n = (0, r.useStateFromStores)([T.default], () => void 0 === t ? null : T.default.getMember(t.id, e.id)),
+    {
+      pendingUserAvatarDecoration: i,
+      userErrors: u
+    } = (0, r.useStateFromStoresObject)([d.default], () => ({
+      pendingUserAvatarDecoration: d.default.getPendingAvatarDecoration(),
+      userErrors: d.default.getErrors().avatarDecoration
+    })),
+    {
+      pendingGuildAvatarDecoration: o,
+      guildErrors: l
+    } = (0, r.useStateFromStoresObject)([_.default], () => ({
+      pendingGuildAvatarDecoration: _.default.getPendingAvatarDecoration(),
+      guildErrors: _.default.getErrors().avatarDecoration
+    }));
+  return {
+    userAvatarDecoration: e.avatarDecoration,
+    guildAvatarDecoration: null == n ? void 0 : n.avatarDecoration,
+    pendingAvatarDecoration: null != t ? o : i,
+    pendingErrors: null != t ? l : u
+  }
 }
 
 function c(e, t) {
-  (0, i.setPendingAvatar)(e === t ? void 0 : e)
+  return (0, r.useStateFromStores)([E.default], () => {
+    var n, i;
+    return null == t ? null === (n = E.default.getUserProfile(e.id)) || void 0 === n ? void 0 : n.profileEffectId : null === (i = E.default.getGuildMemberProfile(e.id, t.id)) || void 0 === i ? void 0 : i.profileEffectId
+  }, [e, t])
 }
 
-function d(e, t) {
-  if ((0, l.isEqualAvatarDecoration)(e, null != t ? t : null)) {
-    (0, i.setPendingAvatarDecoration)(void 0);
-    return
-  }(0, i.setPendingAvatarDecoration)(e)
+function I(e) {
+  return (0, r.useStateFromStoresObject)([d.default, _.default], () => null == e ? {
+    pendingProfileEffectId: d.default.getPendingProfileEffectId(),
+    errors: d.default.getErrors().profileEffect
+  } : {
+    pendingProfileEffectId: _.default.getPendingProfileEffectId(),
+    errors: _.default.getErrors().profileEffect
+  }, [e])
+}
+
+function s(e, t) {
+  (0, l.setPendingBio)(e === t ? void 0 : e)
 }
 
 function f(e, t) {
-  if (e === t) {
-    (0, i.setPendingProfileEffectId)(void 0);
-    return
-  }(0, i.setPendingProfileEffectId)(e)
+  (0, u.setPendingAvatar)(e === t ? void 0 : e)
 }
 
-function E(e, t, n) {
-  let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+function N(e, t) {
+  (null != e ? o.setPendingAvatarDecoration : u.setPendingAvatarDecoration)(t)
+}
+
+function A(e, t, n) {
+  if (e === t) {
+    null == n ? (0, u.setPendingProfileEffectId)(void 0) : (0, o.setPendingProfileEffectId)(void 0);
+    return
+  }
+  null == n ? (0, u.setPendingProfileEffectId)(e) : (0, o.setPendingProfileEffectId)(e)
+}
+
+function U(e, t, n) {
+  let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
   if (null != e) return "" === e ? {
-    value: r ? n : null,
+    value: i ? n : null,
     isUsingGuildValue: !1
   } : {
     value: e,
-    isUsingGuildValue: r
+    isUsingGuildValue: i
   };
   return null != t && "" !== t ? {
     value: t,
@@ -85,10 +137,10 @@ function E(e, t, n) {
   }
 }
 
-function _(e, t) {
+function p(e, t) {
   return void 0 === e ? null != t : null != e
 }
 
-function p(e, t) {
+function R(e, t) {
   return void 0 === e ? null != t : null != e
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 });
 var i = n("803182"),
@@ -13,28 +13,28 @@ var i = n("803182"),
   u = n("18494"),
   d = n("49111"),
   c = n("724210");
-let f = {},
-  _ = !1;
+let _ = {},
+  f = !1;
 
-function h(e) {
+function E(e) {
   if (null == e || e === c.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID || (0, c.isStaticChannelRoute)(e) || null != l.default.getChannel(e)) return Promise.resolve();
-  if (_ || (_ = !0, r.default.subscribe("CONNECTION_OPEN", () => {
-      f = {};
+  if (f || (f = !0, r.default.subscribe("CONNECTION_OPEN", () => {
+      _ = {};
       let e = u.default.getChannelId(),
         t = l.default.getChannel(e);
-      null != e && null == t && h(e)
+      null != e && null == t && E(e)
     })), !a.default.isConnected()) return Promise.resolve();
-  let t = f[e];
+  let t = _[e];
   if (null != t) return "LOADING" === t.type ? t.promise : Promise.resolve();
   let n = (0, i.matchPath)(location.pathname, {
       path: d.Routes.CHANNEL(":guildId", ":channelId", ":messageId"),
       exact: !0
     }),
-    g = s.default.get(d.Endpoints.CHANNEL(e)).then(t => {
+    h = s.HTTP.get(d.Endpoints.CHANNEL(e)).then(t => {
       let {
         body: i
       } = t;
-      if (f[e] = {
+      if (_[e] = {
           type: "LOADED"
         }, o.THREAD_CHANNEL_TYPES.has(i.type)) {
         var s;
@@ -46,7 +46,7 @@ function h(e) {
       }
     }).catch(() => {
       var t;
-      f[e] = {
+      _[e] = {
         type: "NOT_FOUND"
       }, r.default.dispatch({
         type: "CHANNEL_DELETE",
@@ -57,11 +57,11 @@ function h(e) {
         }
       })
     });
-  return f[e] = {
+  return _[e] = {
     type: "LOADING",
-    promise: g
-  }, g
+    promise: h
+  }, h
 }
-var g = {
-  loadThread: h
+var h = {
+  loadThread: E
 }

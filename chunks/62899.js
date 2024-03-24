@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("77078"),
-  l = n("340626"),
+  l = n("77078"),
+  i = n("340626"),
   r = n("393414"),
   o = n("239380"),
   u = n("305961"),
@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("599110"),
   f = n("315102"),
   E = n("853004"),
-  _ = n("49111"),
-  h = n("782340"),
-  C = n("443");
+  h = n("49111"),
+  _ = n("782340"),
+  C = n("368686");
 
-function I(e, t, n) {
+function S(e, t, n) {
   return (0, a.jsxs)("button", {
     className: C.container,
     onClick: n,
@@ -27,13 +27,13 @@ function I(e, t, n) {
       className: C.icon,
       children: (0, a.jsx)(e, {
         className: C.iconInner,
-        color: i.tokens.colors.WHITE.css
+        color: l.tokens.colors.WHITE.css
       })
     }) : (0, a.jsx)("img", {
       className: C.icon,
       alt: "",
       src: e
-    }), (0, a.jsx)(i.Text, {
+    }), (0, a.jsx)(l.Text, {
       className: C.text,
       variant: "text-md/medium",
       children: t
@@ -43,32 +43,32 @@ function I(e, t, n) {
   }, t)
 }
 
-function T() {
+function I() {
   let e = Object.values(u.default.getGuilds()),
-    t = e.filter(e => e.hasFeature(_.GuildFeatures.HUB)),
+    t = e.filter(e => e.hasFeature(h.GuildFeatures.HUB)),
     n = e => {
-      c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
+      c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_HUB_CLICKED, {
         guild_id: e
       }), (0, o.transitionToGuild)(e)
     };
   return (0, a.jsxs)(s.Fragment, {
     children: [(0, a.jsx)("header", {
       className: C.header,
-      children: (0, a.jsx)(i.FormTitle, {
+      children: (0, a.jsx)(l.FormTitle, {
         tag: "h2",
         className: C.title,
-        children: h.default.Messages.ADD_FRIEND_MAKE_FRIENDS
+        children: _.default.Messages.ADD_FRIEND_MAKE_FRIENDS
       })
     }), (0, a.jsxs)("div", {
       className: C.grid,
-      children: [t.map(e => I(f.default.getGuildIconURL({
+      children: [t.map(e => S(f.default.getGuildIconURL({
         id: e.id,
         icon: e.icon,
         size: 240
       }), e.name, () => {
         n(e.id)
-      })), I(d.default, h.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
-        (0, l.clearSearch)(), c.default.track(_.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(_.Routes.GUILD_DISCOVERY)
+      })), S(d.default, _.default.Messages.ADD_FRIEND_EXPLORE_PUBLIC_SERVERS, () => {
+        (0, i.clearSearch)(), c.default.track(h.AnalyticEvents.ADD_FRIEND_OTHER_PLACES_DISCOVERY_CLICKED), (0, r.transitionTo)(h.Routes.GUILD_DISCOVERY)
       })]
     })]
   })

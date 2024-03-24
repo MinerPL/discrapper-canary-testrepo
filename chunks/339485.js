@@ -5,30 +5,26 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  i = n("884691"),
-  a = n("819855"),
-  s = n("77078"),
-  r = n("272091"),
-  o = n("782340");
+  a = n("884691"),
+  s = n("819855"),
+  i = n("77078"),
+  r = n("782340");
 
 function u(e) {
   let {
-    guildId: t,
-    maxAge: n,
-    onConfirm: u,
-    onDismiss: d,
-    theme: c
-  } = e, f = (0, r.default)(t, 0 === n);
-  return (0, l.jsxs)(i.Fragment, {
-    children: [(0, l.jsx)(s.Button, {
-      onClick: u,
-      disabled: f,
-      children: o.default.Messages.GENERATE_A_NEW_LINK
-    }), (0, l.jsx)(s.Button, {
-      look: s.Button.Looks.LINK,
-      color: (0, a.isThemeLight)(c) ? s.Button.Colors.PRIMARY : s.Button.Colors.WHITE,
-      onClick: d,
-      children: o.default.Messages.CANCEL
+    onConfirm: t,
+    onDismiss: n,
+    theme: u
+  } = e;
+  return (0, l.jsxs)(a.Fragment, {
+    children: [(0, l.jsx)(i.Button, {
+      onClick: t,
+      children: r.default.Messages.GENERATE_A_NEW_LINK
+    }), (0, l.jsx)(i.Button, {
+      look: i.Button.Looks.LINK,
+      color: (0, s.isThemeLight)(u) ? i.Button.Colors.PRIMARY : i.Button.Colors.WHITE,
+      onClick: n,
+      children: r.default.Messages.CANCEL
     })]
   })
 }

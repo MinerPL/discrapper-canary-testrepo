@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   updatePaymentSource: function() {
-    return C
+    return A
   },
   validatePaymentSourceBillingAddress: function() {
     return R
@@ -19,22 +19,22 @@ n.r(t), n.d(t, {
     return P
   },
   createCardToken: function() {
-    return b
-  },
-  confirmEPS: function() {
     return L
   },
-  confirmIdeal: function() {
+  confirmEPS: function() {
     return M
+  },
+  confirmIdeal: function() {
+    return b
   },
   confirmPrzelewy24: function() {
     return U
   },
   confirmSofort: function() {
-    return k
+    return w
   },
   confirmCardPaymentSource: function() {
-    return w
+    return k
   },
   createPaymentRequestPaymentSource: function() {
     return V
@@ -58,13 +58,13 @@ n.r(t), n.d(t, {
     return Y
   },
   fetchPaymentSources: function() {
-    return j
+    return K
   },
   fetchPayment: function() {
-    return W
+    return j
   },
   fetchPayments: function() {
-    return K
+    return W
   },
   fetchSubscriptions: function() {
     return z
@@ -109,10 +109,13 @@ n.r(t), n.d(t, {
     return ec
   },
   changeSubscriptionCurrency: function() {
-    return ef
+    return e_
   },
   changePaymentSource: function() {
-    return e_
+    return ef
+  },
+  pausePendingSubscription: function() {
+    return eE
   },
   clearUpdatePaymentSourceError: function() {
     return eh
@@ -124,31 +127,31 @@ n.r(t), n.d(t, {
     return em
   },
   voidPendingPayment: function() {
-    return eE
-  },
-  refundPayment: function() {
     return ep
   },
-  popupBridgeState: function() {
-    return ev
-  },
-  popupBridgeCallback: function() {
+  refundPayment: function() {
     return eS
   },
-  fetchIpCountryCode: function() {
+  popupBridgeState: function() {
     return eT
   },
-  fetchLocalizedPromo: function() {
+  popupBridgeCallback: function() {
+    return ev
+  },
+  fetchIpCountryCode: function() {
     return eI
+  },
+  fetchLocalizedPromo: function() {
+    return eA
   },
   resetPaymentIntentId: function() {
     return eC
   },
   resetSubscriptionStore: function() {
-    return eA
+    return ey
   },
   startBrowserCheckout: function() {
-    return ey
+    return eN
   }
 }), n("70102");
 var i = n("41092"),
@@ -160,22 +163,22 @@ var i = n("41092"),
   u = n("736978"),
   d = n("865146"),
   c = n("766274"),
-  f = n("160299"),
-  _ = n("599110"),
-  h = n("745279"),
-  g = n("719923"),
-  m = n("224400"),
-  E = n("520713"),
+  _ = n("160299"),
+  f = n("599110"),
+  E = n("745279"),
+  h = n("719923"),
+  g = n("224400"),
+  m = n("520713"),
   p = n("49111"),
-  v = n("422487"),
-  S = n("843455"),
-  T = n("782340");
+  S = n("422487"),
+  T = n("843455"),
+  v = n("782340");
 async function I(e) {
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_REMOVE_START"
   });
   try {
-    await a.default.delete({
+    await a.HTTP.del({
       url: p.Endpoints.BILLING_PAYMENT_SOURCE(e),
       oldFormErrors: !0
     }), o.default.dispatch({
@@ -190,7 +193,7 @@ async function I(e) {
     }), e
   }
 }
-async function C(e, t) {
+async function A(e, t) {
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_UPDATE_START"
   });
@@ -202,7 +205,7 @@ async function C(e, t) {
         postalCode: s,
         ...r
       }
-    } = t, l = await a.default.patch({
+    } = t, l = await a.HTTP.patch({
       url: p.Endpoints.BILLING_PAYMENT_SOURCE(e),
       body: {
         billing_address: {
@@ -228,8 +231,8 @@ async function C(e, t) {
     }), e
   }
 }
-async function A(e) {
-  let t = await a.default.get({
+async function C(e) {
+  let t = await a.HTTP.get({
       url: p.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
       oldFormErrors: !0
     }),
@@ -239,7 +242,7 @@ async function A(e) {
   return n
 }
 async function y(e) {
-  let t = await a.default.get({
+  let t = await a.HTTP.get({
       url: p.Endpoints.BILLING_STRIPE_PAYMENT_INTENTS(e),
       oldFormErrors: !0
     }),
@@ -253,7 +256,7 @@ async function y(e) {
   }
 }
 async function N() {
-  let e = await a.default.post({
+  let e = await a.HTTP.post({
     url: p.Endpoints.BILLING_STRIPE_SETUP_INTENT_SECRET,
     oldFormErrors: !0
   });
@@ -261,7 +264,7 @@ async function N() {
 }
 async function R(e) {
   try {
-    let t = await a.default.post({
+    let t = await a.HTTP.post({
       url: p.Endpoints.BILLING_PAYMENT_SOURCES_VALIDATE_BILLING_ADDRESS,
       body: {
         billing_address: {
@@ -289,7 +292,7 @@ async function R(e) {
 function O(e) {
   var t;
   return p.VAULTABLE_PAYMENT_SOURCES.has(e.type) ? null : JSON.stringify({
-    type: null !== (t = S.ADYEN_PAYMENT_SOURCES.get(e.type)) && void 0 !== t ? t : null
+    type: null !== (t = T.ADYEN_PAYMENT_SOURCES.get(e.type)) && void 0 !== t ? t : null
   })
 }
 async function D(e, t, n, i) {
@@ -297,7 +300,7 @@ async function D(e, t, n, i) {
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
   });
   try {
-    let s = await a.default.post({
+    let s = await a.HTTP.post({
         url: p.Endpoints.BILLING_PAYMENT_SOURCES,
         query: {
           location: i.analyticsLocation
@@ -340,8 +343,8 @@ async function D(e, t, n, i) {
 function P(e) {
   var t, n;
   let i, s, r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-    a = T.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR;
-  if (t = e, v.StripeErrorTypes.includes(t.type)) {
+    a = v.default.Messages.PAYMENT_METHOD_CONFIRMATION_ERROR;
+  if (t = e, S.StripeErrorTypes.includes(t.type)) {
     ;
     let t = null != e.message ? "".concat(a, ": ").concat(e.message) : a,
       o = {
@@ -351,7 +354,7 @@ function P(e) {
         failure_sub_code: e.decline_code,
         payment_source_type: null === (n = e.payment_method) || void 0 === n ? void 0 : n.type
       };
-    if (s = o, "card_error" === e.type) _.default.track(p.AnalyticEvents.PAYMENT_SOURCE_CREATION_FAILED, {
+    if (s = o, "card_error" === e.type) f.default.track(p.AnalyticEvents.PAYMENT_SOURCE_CREATION_FAILED, {
       ...o,
       stacktrace: Error().stack
     }), r = !1;
@@ -365,11 +368,11 @@ function P(e) {
     error: i
   });
   let u = Error("string" == typeof e ? e : i.message);
-  return r && (0, h.captureBillingException)(u, {
+  return r && (0, E.captureBillingException)(u, {
     extra: s
   }), u
 }
-async function b(e, t) {
+async function L(e, t) {
   if (null == e || null == t) throw P("Stripe or elements not loaded");
   let n = t.getElement(i.CardNumberElement);
   if (null == n) throw P("Unable to load card elements from Stripe");
@@ -381,7 +384,7 @@ async function b(e, t) {
   if (null == s) throw P("token not available with successful stripe call");
   return s.id
 }
-async function L(e, t, n, i) {
+async function M(e, t, n, i) {
   if (null == e) throw P("Stripe not loaded");
   if (null == t) throw P("Bank required for EPS");
   let {
@@ -392,16 +395,16 @@ async function L(e, t, n, i) {
     city: u,
     state: d,
     postalCode: c,
-    country: f
+    country: _
   } = n;
   if (null == r) throw P("Name required for EPS");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
   });
-  let _ = await R(n),
+  let f = await R(n),
     {
-      paymentMethod: h,
-      error: g
+      paymentMethod: E,
+      error: h
     } = await e.createPaymentMethod({
       type: "eps",
       eps: {
@@ -414,21 +417,21 @@ async function L(e, t, n, i) {
           city: u,
           state: d,
           postal_code: c,
-          country: f
+          country: _
         },
         name: r,
         email: s
       }
     });
-  if (null != g) throw P(g);
-  if (null == h) throw P("paymentMethod not available with successful stripe call");
-  return D(p.PaymentGateways.STRIPE, h.id, n, {
-    billingAddressToken: _,
+  if (null != h) throw P(h);
+  if (null == E) throw P("paymentMethod not available with successful stripe call");
+  return D(p.PaymentGateways.STRIPE, E.id, n, {
+    billingAddressToken: f,
     analyticsLocation: i,
     bank: t
   })
 }
-async function M(e, t, n, i) {
+async function b(e, t, n, i) {
   if (null == e) throw P("Stripe not loaded");
   if (null == t) throw P("Bank required for iDEAL");
   let {
@@ -439,16 +442,16 @@ async function M(e, t, n, i) {
     city: u,
     state: d,
     postalCode: c,
-    country: f
+    country: _
   } = n;
   if (null == r) throw P("Name required for iDEAL");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
   });
-  let _ = await R(n),
+  let f = await R(n),
     {
-      paymentMethod: h,
-      error: g
+      paymentMethod: E,
+      error: h
     } = await e.createPaymentMethod({
       type: "ideal",
       ideal: {
@@ -461,16 +464,16 @@ async function M(e, t, n, i) {
           city: u,
           state: d,
           postal_code: c,
-          country: f
+          country: _
         },
         name: r,
         email: s
       }
     });
-  if (null != g) throw P(g);
-  if (null == h) throw P("paymentMethod not available with successful stripe call");
-  return D(p.PaymentGateways.STRIPE, h.id, n, {
-    billingAddressToken: _,
+  if (null != h) throw P(h);
+  if (null == E) throw P("paymentMethod not available with successful stripe call");
+  return D(p.PaymentGateways.STRIPE, E.id, n, {
+    billingAddressToken: f,
     analyticsLocation: i,
     bank: t
   })
@@ -485,21 +488,21 @@ async function U(e, t, n, i) {
     city: u,
     state: d,
     postalCode: c,
-    country: f
+    country: _
   } = n;
   if (null == s) throw P("Email required for Przelewy24");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
   });
-  let _ = await R(n),
-    h = t.p24Bank,
+  let f = await R(n),
+    E = t.p24Bank,
     {
-      paymentMethod: g,
-      error: m
+      paymentMethod: h,
+      error: g
     } = await e.createPaymentMethod({
       type: "p24",
       p24: {
-        bank: h
+        bank: E
       },
       billing_details: {
         address: {
@@ -508,21 +511,21 @@ async function U(e, t, n, i) {
           city: u,
           state: d,
           postal_code: c,
-          country: f
+          country: _
         },
         name: r,
         email: s
       }
     });
-  if (null != m) throw P(m);
-  if (null == g) throw P("paymentMethod not available with successful stripe call");
-  return D(p.PaymentGateways.STRIPE, g.id, n, {
-    billingAddressToken: _,
+  if (null != g) throw P(g);
+  if (null == h) throw P("paymentMethod not available with successful stripe call");
+  return D(p.PaymentGateways.STRIPE, h.id, n, {
+    billingAddressToken: f,
     analyticsLocation: i,
-    bank: h
+    bank: E
   })
 }
-async function k(e, t, n) {
+async function w(e, t, n) {
   if (null == e) throw P("Stripe not loaded");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
@@ -536,15 +539,15 @@ async function k(e, t, n) {
       city: u,
       state: d,
       postalCode: c,
-      country: f
+      country: _
     } = t,
     {
-      paymentMethod: _,
-      error: h
+      paymentMethod: f,
+      error: E
     } = await e.createPaymentMethod({
       type: "sofort",
       sofort: {
-        country: f
+        country: _
       },
       billing_details: {
         address: {
@@ -553,20 +556,20 @@ async function k(e, t, n) {
           city: u,
           state: d,
           postal_code: c,
-          country: f
+          country: _
         },
         name: r,
         email: s
       }
     });
-  if (null != h) throw P(h);
-  if (null == _) throw P("paymentMethod not available with successful stripe call");
-  return D(p.PaymentGateways.STRIPE, _.id, t, {
+  if (null != E) throw P(E);
+  if (null == f) throw P("paymentMethod not available with successful stripe call");
+  return D(p.PaymentGateways.STRIPE, f.id, t, {
     billingAddressToken: i,
     analyticsLocation: n
   })
 }
-async function w(e, t, n, i) {
+async function k(e, t, n, i) {
   if (null == e || null == t) throw P("Stripe or token not loaded");
   o.default.dispatch({
     type: "BILLING_PAYMENT_SOURCE_CREATE_START"
@@ -583,11 +586,11 @@ async function w(e, t, n, i) {
     line2: u,
     city: d,
     state: c,
-    postalCode: f,
-    country: _
-  } = n, h = await R(n), {
-    setupIntent: g,
-    error: m
+    postalCode: _,
+    country: f
+  } = n, E = await R(n), {
+    setupIntent: h,
+    error: g
   } = await e.confirmCardSetup(s, {
     payment_method: {
       card: {
@@ -599,17 +602,17 @@ async function w(e, t, n, i) {
           line2: u,
           city: d,
           state: c,
-          postal_code: f,
-          country: _
+          postal_code: _,
+          country: f
         },
         name: a
       }
     }
   });
-  if (null != m) throw P(m);
-  if ((null == g ? void 0 : g.payment_method) == null) throw P("setupIntent.payment_method not available with successful stripe call");
-  return r("string" == typeof g.payment_method, "setupIntent.payment_method expanded not supported"), D(p.PaymentGateways.STRIPE, g.payment_method, n, {
-    billingAddressToken: h,
+  if (null != g) throw P(g);
+  if ((null == h ? void 0 : h.payment_method) == null) throw P("setupIntent.payment_method not available with successful stripe call");
+  return r("string" == typeof h.payment_method, "setupIntent.payment_method expanded not supported"), D(p.PaymentGateways.STRIPE, h.payment_method, n, {
+    billingAddressToken: E,
     analyticsLocation: i
   })
 }
@@ -618,7 +621,7 @@ function V(e, t, n) {
   let {
     token: i,
     billingAddressInfo: s
-  } = E.parseStripePaymentMethod(e);
+  } = m.parseStripePaymentMethod(e);
   return D(p.PaymentGateways.STRIPE, i, null != t ? t : s, {
     analyticsLocation: n
   })
@@ -639,15 +642,15 @@ async function F(e, t, n, i) {
       city: u,
       state: d,
       postalCode: c,
-      country: f
+      country: _
     } = t,
-    _ = S.STRIPE_PAYMENT_SOURCES.get(n);
-  r(null != _, "unsupported payment method type");
+    f = T.STRIPE_PAYMENT_SOURCES.get(n);
+  r(null != f, "unsupported payment method type");
   let {
-    paymentMethod: h,
-    error: g
+    paymentMethod: E,
+    error: h
   } = await e.createPaymentMethod({
-    type: _,
+    type: f,
     billing_details: {
       address: {
         line1: o,
@@ -655,14 +658,14 @@ async function F(e, t, n, i) {
         city: u,
         state: d,
         postal_code: c,
-        country: f
+        country: _
       },
       name: a
     }
   });
-  if (null != g) throw P(g);
-  if (null == h) throw P("stripePaymentMethod not available with successful stripe call");
-  return D(p.PaymentGateways.STRIPE, h.id, t, {
+  if (null != h) throw P(h);
+  if (null == E) throw P("stripePaymentMethod not available with successful stripe call");
+  return D(p.PaymentGateways.STRIPE, E.id, t, {
     billingAddressToken: s,
     analyticsLocation: i
   })
@@ -670,7 +673,7 @@ async function F(e, t, n, i) {
 async function x(e, t, n) {
   let i = await R(e),
     s = {
-      type: S.ADYEN_PAYMENT_SOURCES.get(t)
+      type: T.ADYEN_PAYMENT_SOURCES.get(t)
     };
   return D(p.PaymentGateways.ADYEN, JSON.stringify(s), e, {
     billingAddressToken: i,
@@ -681,16 +684,16 @@ async function B(e, t, n, i) {
   var s;
   let r = await R(e),
     d = {
-      type: S.ADYEN_PAYMENT_SOURCES.get(t),
+      type: T.ADYEN_PAYMENT_SOURCES.get(t),
       ...null !== (s = null == i ? void 0 : i.paymentMethod) && void 0 !== s ? s : {}
     },
-    c = await ev(t),
-    f = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, null != c ? c : "", "success");
+    c = await eT(t),
+    _ = (0, a.getAPIBaseURL)() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, null != c ? c : "", "success");
   try {
     let t = await D(p.PaymentGateways.ADYEN, JSON.stringify(d), e, {
       billingAddressToken: r,
       analyticsLocation: n,
-      returnUrl: f
+      returnUrl: _
     });
     return {
       paymentSource: t,
@@ -710,7 +713,7 @@ async function B(e, t, n, i) {
 }
 async function H(e) {
   if (p.VAULTABLE_PAYMENT_SOURCES.has(e.type)) return null;
-  let t = await E.getStripe();
+  let t = await m.getStripe();
   if (null == t) throw new l.BillingError("Stripe not loaded", l.BillingError.ErrorCodes.UNKNOWN);
   let {
     email: n,
@@ -721,7 +724,7 @@ async function H(e) {
     state: u,
     postalCode: d,
     country: c
-  } = e.billingAddress, f = {
+  } = e.billingAddress, _ = {
     billing_details: {
       address: {
         line1: s,
@@ -735,50 +738,50 @@ async function H(e) {
     }
   };
   switch (e.type) {
-    case S.PaymentSourceTypes.GIROPAY:
-      f.type = "giropay";
+    case T.PaymentSourceTypes.GIROPAY:
+      _.type = "giropay";
       break;
-    case S.PaymentSourceTypes.SOFORT:
-      f.type = "sofort", f.sofort = {
+    case T.PaymentSourceTypes.SOFORT:
+      _.type = "sofort", _.sofort = {
         country: null != c ? c : ""
-      }, f.billing_details.email = n;
+      }, _.billing_details.email = n;
       break;
-    case S.PaymentSourceTypes.BANCONTACT:
-      f.type = "bancontact";
+    case T.PaymentSourceTypes.BANCONTACT:
+      _.type = "bancontact";
       break;
-    case S.PaymentSourceTypes.IDEAL:
+    case T.PaymentSourceTypes.IDEAL:
       if (null == e.bank) throw new l.BillingError("iDEAL missing bank information", l.BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
-      f.type = "ideal", f.ideal = {
+      _.type = "ideal", _.ideal = {
         bank: e.bank
       };
       break;
-    case S.PaymentSourceTypes.PRZELEWY24:
+    case T.PaymentSourceTypes.PRZELEWY24:
       if (null == e.bank) throw new l.BillingError("p24 missing bank information", l.BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
-      f.type = "p24", f.p24 = {
+      _.type = "p24", _.p24 = {
         bank: e.bank
-      }, f.billing_details.email = e.email;
+      }, _.billing_details.email = e.email;
       break;
-    case S.PaymentSourceTypes.EPS:
+    case T.PaymentSourceTypes.EPS:
       if (null == e.bank) throw new l.BillingError("EPS missing bank information", l.BillingError.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
-      f.type = "eps", f.eps = {
+      _.type = "eps", _.eps = {
         bank: e.bank
       }
   }
-  r(null != f.type, "unsupported payment method type");
+  r(null != _.type, "unsupported payment method type");
   let {
-    paymentMethod: _,
-    error: h
-  } = await t.createPaymentMethod(f);
-  if (null != h || null == _) throw new l.BillingError("Unable to create payment source token: code: ".concat(null == h ? void 0 : h.code, " message: ").concat(null == h ? void 0 : h.message), l.BillingError.ErrorCodes.UNKNOWN);
-  return _.id
+    paymentMethod: f,
+    error: E
+  } = await t.createPaymentMethod(_);
+  if (null != E || null == f) throw new l.BillingError("Unable to create payment source token: code: ".concat(null == E ? void 0 : E.code, " message: ").concat(null == E ? void 0 : E.message), l.BillingError.ErrorCodes.UNKNOWN);
+  return f.id
 }
 
 function Y(e) {
-  return p.VAULTABLE_PAYMENT_SOURCES.has(e.type) ? null : S.ADYEN_PAYMENT_SOURCES.has(e.type) ? O(e) : H(e)
+  return p.VAULTABLE_PAYMENT_SOURCES.has(e.type) ? null : T.ADYEN_PAYMENT_SOURCES.has(e.type) ? O(e) : H(e)
 }
-async function j() {
+async function K() {
   try {
-    let e = a.default.get({
+    let e = a.HTTP.get({
       url: p.Endpoints.BILLING_PAYMENT_SOURCES,
       oldFormErrors: !0
     });
@@ -797,8 +800,8 @@ async function j() {
     }), e
   }
 }
-async function W(e) {
-  let t = await a.default.get({
+async function j(e) {
+  let t = await a.HTTP.get({
     url: p.Endpoints.BILLING_PAYMENT(e)
   });
   return o.default.dispatch({
@@ -806,14 +809,14 @@ async function W(e) {
     payment: t.body
   }), t
 }
-async function K() {
+async function W() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10,
     t = arguments.length > 1 ? arguments[1] : void 0;
   o.default.dispatch({
     type: "BILLING_PAYMENTS_FETCH_START"
   });
   try {
-    let n = await a.default.get({
+    let n = await a.HTTP.get({
       url: p.Endpoints.BILLING_PAYMENTS,
       query: {
         limit: e,
@@ -838,7 +841,7 @@ async function z() {
     })
   });
   try {
-    let e = await a.default.get({
+    let e = await a.HTTP.get({
       url: p.Endpoints.BILLING_SUBSCRIPTIONS,
       oldFormErrors: !0
     });
@@ -860,7 +863,7 @@ async function q() {
     })
   });
   try {
-    let e = await a.default.get(p.Endpoints.BILLING_PERKS_RELEVANCE);
+    let e = await a.HTTP.get(p.Endpoints.BILLING_PERKS_RELEVANCE);
     o.default.dispatch({
       type: "BILLING_PERKS_RELEVANCE_FETCH_SUCCESS",
       res: e.body
@@ -873,7 +876,7 @@ async function q() {
 }
 async function X() {
   try {
-    let e = await a.default.get(p.Endpoints.BILLING_NITRO_AFFINITY);
+    let e = await a.HTTP.get(p.Endpoints.BILLING_NITRO_AFFINITY);
     o.default.dispatch({
       type: "BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED",
       res: e.body.map(e => new c.default(e))
@@ -891,13 +894,13 @@ async function Q() {
     })
   });
   try {
-    let e = await a.default.get({
+    let e = await a.HTTP.get({
       url: p.Endpoints.BILLING_SUBSCRIPTIONS,
       query: {
         include_inactive: !0,
         limit: 2,
         exclude_unpaid_statuses: !0,
-        subscription_type: S.SubscriptionTypes.PREMIUM
+        subscription_type: T.SubscriptionTypes.PREMIUM
       },
       oldFormErrors: !0
     });
@@ -925,18 +928,18 @@ async function Z(e) {
     currency: r,
     metadata: d,
     referralCode: c,
-    loadId: f
+    loadId: _
   } = e;
   o.default.dispatch({
     type: "BILLING_SUBSCRIPTION_UPDATE_START"
-  }), t = (0, g.coerceExistingItemsToNewItemInterval)(t);
-  let _ = null;
-  if (null != n && S.ADYEN_PAYMENT_SOURCES.has(n.type)) {
-    let e = await ev(n.type);
-    _ = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
+  }), t = (0, h.coerceExistingItemsToNewItemInterval)(t);
+  let f = null;
+  if (null != n && T.ADYEN_PAYMENT_SOURCES.has(n.type)) {
+    let e = await eT(n.type);
+    f = (0, a.getAPIBaseURL)() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
   }
   try {
-    let e = await a.default.post({
+    let e = await a.HTTP.post({
       url: p.Endpoints.BILLING_SUBSCRIPTIONS,
       body: {
         items: t.map(e => {
@@ -952,14 +955,14 @@ async function Z(e) {
         payment_source_id: null != n ? n.id : null,
         payment_source_token: null != n ? await Y(n) : null,
         trial_id: i,
-        return_url: _,
+        return_url: f,
         code: s,
-        currency: null != n ? r : S.CurrencyCodes.USD,
+        currency: null != n ? r : T.CurrencyCodes.USD,
         metadata: d,
-        gateway_checkout_context: await (0, h.createGatewayCheckoutContext)(n),
-        purchase_token: (0, m.getPurchaseToken)(),
+        gateway_checkout_context: await (0, E.createGatewayCheckoutContext)(n),
+        purchase_token: (0, g.getPurchaseToken)(),
         referral_code: c,
-        load_id: f
+        load_id: _
       },
       oldFormErrors: !0
     });
@@ -982,12 +985,12 @@ async function Z(e) {
 }
 async function J(e, t, n, i) {
   let s = null;
-  if (null != n && S.PREPAID_PAYMENT_SOURCES.has(n.type)) {
-    let e = await ev(n.type);
-    s = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
+  if (null != n && T.PREPAID_PAYMENT_SOURCES.has(n.type)) {
+    let e = await eT(n.type);
+    s = (0, a.getAPIBaseURL)() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(n.type, null != e ? e : "", "success")
   }
   try {
-    let r = await a.default.post({
+    let r = await a.HTTP.post({
       url: p.Endpoints.BILLING_INVOICE_MANUAL_PAYMENT(e.id, t),
       body: {
         payment_source_id: null != n ? n.id : null,
@@ -1016,7 +1019,7 @@ async function J(e, t, n, i) {
 }
 
 function $(e, t) {
-  return null != t && S.ADYEN_PAYMENT_SOURCES.has(t.type) ? ee(e.adyen_redirect_url, t) : et(e.payment_id, t)
+  return null != t && T.ADYEN_PAYMENT_SOURCES.has(t.type) ? ee(e.adyen_redirect_url, t) : et(e.payment_id, t)
 }
 async function ee(e, t) {
   if (null == e) throw P("redirect url cannot be null on a redirect for adyen.");
@@ -1030,7 +1033,7 @@ async function ee(e, t) {
   }
 }
 async function et(e, t) {
-  let n = await E.getStripe();
+  let n = await m.getStripe();
   if (null == t) throw P("Payment source cannot be null on a redirect.");
   let {
     clientSecret: i,
@@ -1038,7 +1041,7 @@ async function et(e, t) {
   } = await y(e);
   if (null == n) throw P("Stripe cannot be null on a redirect.");
   if (p.REDIRECTED_PAYMENT_SOURCES.has(t.type)) {
-    let e = await ev(t.type);
+    let e = await eT(t.type);
     return es(await ea({
       stripe: n,
       paymentSource: t,
@@ -1059,18 +1062,18 @@ async function et(e, t) {
 }
 async function en(e) {
   var t;
-  let n = await W(e);
+  let n = await j(e);
   if ((null == n ? void 0 : n.body) == null) throw P("could not fetch payment");
   let i = d.default.createFromServer(n.body.payment_source);
   if (!p.REDIRECTED_PAYMENT_SOURCES.has(i.type)) throw P("unsupported redirect payment source");
-  if ((null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.status) === S.PaymentStatusTypes.FAILED) throw P("payment failed");
+  if ((null == n ? void 0 : null === (t = n.body) || void 0 === t ? void 0 : t.status) === T.PaymentStatusTypes.FAILED) throw P("payment failed");
   return i.paymentGateway !== p.PaymentGateways.STRIPE || ei(e)
 }
 async function ei(e) {
-  let t = await E.getStripe();
+  let t = await m.getStripe();
   if (null == t) throw P("Stripe has not loaded.");
   if (null == e) throw P("payment intent id cannot be null.");
-  let n = await A(e),
+  let n = await C(e),
     {
       paymentIntent: i,
       error: s
@@ -1092,7 +1095,7 @@ async function er(e) {
       clientSecret: r
     } = e,
     a = {};
-  if (i.type === S.PaymentSourceTypes.SEPA_DEBIT) {
+  if (i.type === T.PaymentSourceTypes.SEPA_DEBIT) {
     if (null == s) throw P("On a sepa payment payment method id cannot be null");
     a.payment_method = s, t = n.confirmSepaDebitPayment
   } else throw P("Unsupported redirected payment source type.");
@@ -1113,14 +1116,14 @@ async function ea(e) {
     } = e,
     u = {};
   switch (r.type) {
-    case S.PaymentSourceTypes.GIROPAY:
+    case T.PaymentSourceTypes.GIROPAY:
       u = {
         billing_details: {
           name: r.billingAddress.name
         }
       }, i = s.confirmGiropayPayment;
       break;
-    case S.PaymentSourceTypes.BANCONTACT:
+    case T.PaymentSourceTypes.BANCONTACT:
       u = {
         billing_details: {
           name: r.billingAddress.name,
@@ -1128,7 +1131,7 @@ async function ea(e) {
         }
       }, i = s.confirmBancontactPayment;
       break;
-    case S.PaymentSourceTypes.SOFORT:
+    case T.PaymentSourceTypes.SOFORT:
       u = {
         sofort: {
           country: r.billingAddress.country
@@ -1139,7 +1142,7 @@ async function ea(e) {
         }
       }, i = s.confirmSofortPayment;
       break;
-    case S.PaymentSourceTypes.PRZELEWY24:
+    case T.PaymentSourceTypes.PRZELEWY24:
       if (null == r.bank) throw P("PaymentSource (".concat(r.id, ") missing bank info for p24."));
       u = {
         p24: {
@@ -1151,7 +1154,7 @@ async function ea(e) {
         }
       }, i = s.confirmP24Payment;
       break;
-    case S.PaymentSourceTypes.EPS:
+    case T.PaymentSourceTypes.EPS:
       if (null == r.bank) throw P("PaymentSource (".concat(r.id, ") missing bank info for EPS."));
       u = {
         eps: {
@@ -1162,7 +1165,7 @@ async function ea(e) {
         }
       }, i = s.confirmEpsPayment;
       break;
-    case S.PaymentSourceTypes.IDEAL:
+    case T.PaymentSourceTypes.IDEAL:
       if (null == r.bank) throw P("PaymentSource (".concat(r.id, ") missing bank info for iDEAL."));
       u = {
         ideal: {
@@ -1181,7 +1184,7 @@ async function ea(e) {
     error: c
   } = await i(o, {
     payment_method: u,
-    return_url: a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(r.type, null != l ? l : "", "success")
+    return_url: (0, a.getAPIBaseURL)() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(r.type, null != l ? l : "", "success")
   }, {
     handleActions: !1
   });
@@ -1195,7 +1198,7 @@ async function eo(e, t, n) {
     type: "BILLING_SUBSCRIPTION_CANCEL_START"
   });
   try {
-    let i = await a.default.delete({
+    let i = await a.HTTP.del({
       url: p.Endpoints.BILLING_SUBSCRIPTION(e),
       query: {
         location: n,
@@ -1232,14 +1235,15 @@ async function eu(e, t, n, i, s) {
       payment_source_id: null === (r = t.paymentSource) || void 0 === r ? void 0 : r.id,
       payment_source_token: null != t.paymentSource ? await Y(t.paymentSource) : null,
       currency: t.currency,
-      gateway_checkout_context: await (0, h.createGatewayCheckoutContext)(t.paymentSource),
-      load_id: s
+      gateway_checkout_context: await (0, E.createGatewayCheckoutContext)(t.paymentSource),
+      load_id: s,
+      pause_duration: t.pauseDuration
     };
-    if (null != t.paymentSource && S.ADYEN_PAYMENT_SOURCES.has(t.paymentSource.type)) {
-      let e = await ev(t.paymentSource.type);
-      l.return_url = a.default.getAPIBaseURL() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t.paymentSource.type, null != e ? e : "", "success")
+    if (null != t.paymentSource && T.ADYEN_PAYMENT_SOURCES.has(t.paymentSource.type)) {
+      let e = await eT(t.paymentSource.type);
+      l.return_url = (0, a.getAPIBaseURL)() + p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t.paymentSource.type, null != e ? e : "", "success")
     }
-    null != t.items && (l.items = (0, g.coerceExistingItemsToNewItemInterval)(t.items).map(e => {
+    null != t.items && (l.items = (0, h.coerceExistingItemsToNewItemInterval)(t.items).map(e => {
       let {
         planId: t,
         ...n
@@ -1249,7 +1253,7 @@ async function eu(e, t, n, i, s) {
         plan_id: t
       }
     }));
-    let u = await a.default.patch({
+    let u = await a.HTTP.patch({
       url: p.Endpoints.BILLING_SUBSCRIPTION(e.id),
       query: {
         location: i,
@@ -1285,24 +1289,30 @@ function ed(e, t, n, i, s) {
 }
 
 function ec(e, t, n, i) {
-  let s = (0, g.getItemsWithUpsertedPremiumPlanId)(e, t);
+  let s = (0, h.getItemsWithUpsertedPremiumPlanId)(e, t);
   return eu(e, {
     status: p.SubscriptionStatusTypes.ACTIVE,
     items: s
   }, n, i)
 }
 
-function ef(e, t, n, i) {
+function e_(e, t, n, i) {
   return eu(e, {
     currency: t
   }, n, i)
 }
 
-function e_(e, t, n, i, s) {
+function ef(e, t, n, i, s) {
   return eu(e, {
     paymentSource: t,
     currency: n
   }, i, s)
+}
+
+function eE(e, t, n, i) {
+  return eu(e, {
+    pauseDuration: t
+  }, n, i)
 }
 
 function eh() {
@@ -1322,26 +1332,26 @@ function em() {
     type: "PAYMENT_AUTHENTICATION_CLEAR_ERROR"
   })
 }
-async function eE(e) {
-  await a.default.post({
+async function ep(e) {
+  await a.HTTP.post({
     url: p.Endpoints.BILLING_PAYMENTS_VOID(e),
     oldFormErrors: !0
   })
 }
-async function ep(e, t) {
-  await a.default.post({
+async function eS(e, t) {
+  await a.HTTP.post({
     url: p.Endpoints.BILLING_PAYMENTS_REFUND(e),
     body: {
       reason: t
     }
   })
 }
-async function ev(e) {
+async function eT(e) {
   let {
     body: {
       state: t
     }
-  } = await a.default.post({
+  } = await a.HTTP.post({
     url: p.Endpoints.BILLING_POPUP_BRIDGE(e),
     oldFormErrors: !0
   });
@@ -1352,7 +1362,7 @@ async function ev(e) {
   }), t
 }
 
-function eS(e) {
+function ev(e) {
   let {
     paymentSourceType: t,
     state: n,
@@ -1363,7 +1373,7 @@ function eS(e) {
   return o.default.dispatch({
     type: "BILLING_POPUP_BRIDGE_CALLBACK_START",
     paymentSourceType: t
-  }), a.default.post({
+  }), a.HTTP.post({
     url: p.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK(t),
     body: {
       state: n,
@@ -1377,11 +1387,11 @@ function eS(e) {
     paymentSourceType: t
   }), e))
 }
-async function eT() {
+async function eI() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  if (!e && null != f.default.ipCountryCodeRequest) return f.default.ipCountryCodeRequest;
+  if (!e && null != _.default.ipCountryCodeRequest) return _.default.ipCountryCodeRequest;
   try {
-    let e = a.default.get({
+    let e = a.HTTP.get({
       url: p.Endpoints.BILLING_COUNTRY_CODE
     });
     o.default.wait(() => o.default.dispatch({
@@ -1400,9 +1410,9 @@ async function eT() {
     }), e
   }
 }
-async function eI() {
+async function eA() {
   try {
-    let e = await a.default.get({
+    let e = await a.HTTP.get({
       url: p.Endpoints.BILLING_LOCALIZED_PROMO
     });
     if (null != e.body.localized_pricing_promo) {
@@ -1426,13 +1436,13 @@ function eC() {
   })
 }
 
-function eA() {
+function ey() {
   o.default.dispatch({
     type: "BILLING_SUBSCRIPTION_RESET"
   })
 }
 
-function ey(e) {
+function eN(e) {
   o.default.dispatch({
     type: "USER_PAYMENT_BROWSER_CHECKOUT_STARTED",
     loadId: e

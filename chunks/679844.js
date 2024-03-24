@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return x
+    return P
   }
 }), l("222007");
 var s = l("37983"),
@@ -13,43 +13,44 @@ var s = l("37983"),
   d = l("398410"),
   u = l("571067"),
   c = l("923959"),
-  N = l("476765"),
-  O = l("423487"),
-  m = l("898260"),
-  _ = l("449008"),
-  E = l("385334"),
-  I = l("330724"),
-  f = l("136278"),
-  R = l("869447"),
-  h = l("653138"),
-  v = l("782340"),
-  T = l("326696");
+  N = l("305961"),
+  O = l("476765"),
+  m = l("423487"),
+  _ = l("898260"),
+  E = l("449008"),
+  I = l("385334"),
+  f = l("330724"),
+  R = l("136278"),
+  h = l("869447"),
+  v = l("653138"),
+  T = l("782340"),
+  x = l("996983");
 
-function x(e) {
+function P(e) {
   let {
     transitionState: t,
     onClose: l,
     onSave: a,
-    onDelete: O,
-    option: _,
+    onDelete: N,
+    option: m,
     guild: E,
-    prompt: x,
-    index: M
-  } = e, j = (0, N.useUID)(), g = (0, i.useStateFromStores)([c.default], () => c.default.getDefaultChannel(E.id)), [A, L] = n.useState(() => {
+    prompt: I,
+    index: P
+  } = e, j = (0, O.useUID)(), g = (0, i.useStateFromStores)([c.default], () => c.default.getDefaultChannel(E.id)), [A, L] = n.useState(() => {
     var e;
-    return null !== (e = null == _ ? void 0 : _.emoji) && void 0 !== e ? e : null
+    return null !== (e = null == m ? void 0 : m.emoji) && void 0 !== e ? e : null
   }), [p, C] = n.useState(() => {
     var e;
-    return null !== (e = null == _ ? void 0 : _.title) && void 0 !== e ? e : ""
-  }), [D, S] = n.useState(() => {
+    return null !== (e = null == m ? void 0 : m.title) && void 0 !== e ? e : ""
+  }), [S, D] = n.useState(() => {
     var e;
-    return null !== (e = null == _ ? void 0 : _.description) && void 0 !== e ? e : ""
+    return null !== (e = null == m ? void 0 : m.description) && void 0 !== e ? e : ""
   }), [B, H] = n.useState(() => {
     var e;
-    return new Set(null !== (e = null == _ ? void 0 : _.channelIds) && void 0 !== e ? e : [])
+    return new Set(null !== (e = null == m ? void 0 : m.channelIds) && void 0 !== e ? e : [])
   }), [k, G] = n.useState(() => {
     var e;
-    return new Set(null !== (e = null == _ ? void 0 : _.roleIds) && void 0 !== e ? e : [])
+    return new Set(null !== (e = null == m ? void 0 : m.roleIds) && void 0 !== e ? e : [])
   }), [b, U] = n.useState({}), y = n.useRef(null);
   return n.useLayoutEffect(() => {
     var e;
@@ -58,82 +59,82 @@ function x(e) {
     transitionState: t,
     "aria-labelledby": j,
     children: [(0, s.jsxs)("div", {
-      className: T.container,
+      className: x.container,
       children: [(0, s.jsx)(r.ModalCloseButton, {
-        className: T.closeButton,
+        className: x.closeButton,
         onClick: l
       }), (0, s.jsx)(r.Text, {
-        className: T.questionNumber,
+        className: x.questionNumber,
         variant: "text-xs/semibold",
         color: "text-muted",
-        children: v.default.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({
-          index: M + 1
+        children: T.default.Messages.ONBOARDING_PROMPT_OPTION_QUESTION_NUMBER.format({
+          index: P + 1
         })
       }), (0, s.jsx)(r.Heading, {
         id: j,
-        className: T.header,
+        className: x.header,
         variant: "heading-lg/semibold",
-        children: null != x.title && x.title.length > 0 ? x.title : v.default.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE
+        children: null != I.title && I.title.length > 0 ? I.title : T.default.Messages.ONBOARDING_PROMPT_DEFAULT_TITLE
       }), (0, s.jsx)(r.Heading, {
-        className: T.nameHeader,
+        className: x.nameHeader,
         variant: "heading-md/semibold",
-        children: v.default.Messages.ONBOARDING_PROMPT_OPTION_NAME_HEADER
+        children: T.default.Messages.ONBOARDING_PROMPT_OPTION_NAME_HEADER
       }), (0, s.jsx)(r.TextInput, {
         inputRef: y,
-        placeholder: v.default.Messages.ONBOARDING_PROMPT_OPTION_TITLE_PLACEHOLDER,
+        placeholder: T.default.Messages.ONBOARDING_PROMPT_OPTION_TITLE_PLACEHOLDER,
         value: p,
         onChange: e => C(e),
-        maxLength: h.MAX_PROMPT_OPTION_TITLE_LENGTH,
+        maxLength: v.MAX_PROMPT_OPTION_TITLE_LENGTH,
         autoFocus: !0
       }), (0, s.jsx)(r.InputError, {
         error: b.title
       }), (0, s.jsx)(r.TextInput, {
-        className: T.descriptionInput,
-        placeholder: v.default.Messages.ONBOARDING_PROMPT_OPTION_DESCRIPTION_PLACEHOLDER,
-        value: D,
-        onChange: e => S(e),
-        maxLength: h.MAX_PROMPT_OPTION_DESCRIPTION_LENGTH
-      }), (0, s.jsx)(m.default, {
-        className: T.divider
+        className: x.descriptionInput,
+        placeholder: T.default.Messages.ONBOARDING_PROMPT_OPTION_DESCRIPTION_PLACEHOLDER,
+        value: S,
+        onChange: e => D(e),
+        maxLength: v.MAX_PROMPT_OPTION_DESCRIPTION_LENGTH
+      }), (0, s.jsx)(_.default, {
+        className: x.divider
       }), (0, s.jsx)(r.Heading, {
-        className: T.rolesHeader,
+        className: x.rolesHeader,
         variant: "heading-md/semibold",
-        children: v.default.Messages.ONBOARDING_PROMPT_OPTION_ROLES_CHANNELS_HEADER
+        children: T.default.Messages.ONBOARDING_PROMPT_OPTION_ROLES_CHANNELS_HEADER
       }), (0, s.jsx)(d.default, {
         guildId: E.id,
         selectedChannelIds: B,
-        placeholder: v.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_CHANNEL_PLACEHOLDER,
+        placeholder: T.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_CHANNEL_PLACEHOLDER,
         onChange: H,
-        helperText: v.default.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS,
-        className: T.searchInput
+        helperText: T.default.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS,
+        className: x.searchInput
       }), (0, s.jsx)(u.default, {
         guildId: E.id,
         selectedRoleIds: k,
         disableEveryoneRole: !0,
-        placeholder: v.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER,
+        placeholder: T.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_ROLE_PLACEHOLDER,
         onChange: G,
-        helperText: v.default.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS_SUBTEXT,
-        className: T.searchInput
+        helperText: T.default.Messages.ONBOARDING_PROMPT_NO_PRIVATE_CHANNELS_SUBTEXT,
+        className: x.searchInput
       }), null == b.roles ? null : (0, s.jsx)(r.InputError, {
         error: b.roles
-      }), (0, s.jsx)(P, {
+      }), (0, s.jsx)(M, {
         guild: E,
         roleIds: k
-      }), (0, s.jsx)(m.default, {
-        className: T.divider
+      }), (0, s.jsx)(_.default, {
+        className: x.divider
       }), (0, s.jsxs)("div", {
-        className: T.emojiQuestionContainer,
+        className: x.emojiQuestionContainer,
         children: [(0, s.jsxs)("div", {
-          className: T.emojiQuestionText,
+          className: x.emojiQuestionText,
           children: [(0, s.jsx)(r.Heading, {
             variant: "heading-md/semibold",
-            children: v.default.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_HEADER
+            children: T.default.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_HEADER
           }), (0, s.jsx)(r.Text, {
             variant: "text-sm/normal",
             color: "text-muted",
-            children: v.default.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_SUBHEADER
+            children: T.default.Messages.ONBOARDING_PROMPT_OPTION_EMOJI_SUBHEADER
           })]
-        }), (0, s.jsx)(R.default, {
+        }), (0, s.jsx)(h.default, {
           emoji: A,
           setEmoji: L,
           channel: g
@@ -141,47 +142,47 @@ function x(e) {
       })]
     }), (0, s.jsx)(r.ModalFooter, {
       children: (0, s.jsxs)("div", {
-        className: T.footerButtons,
+        className: x.footerButtons,
         children: [(0, s.jsx)("div", {
-          className: T.removeButton,
+          className: x.removeButton,
           children: (0, s.jsx)(r.Button, {
             size: r.Button.Sizes.SMALL,
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.RED,
             onClick: () => {
-              O(), l()
+              N(), l()
             },
-            children: v.default.Messages.REMOVE
+            children: T.default.Messages.REMOVE
           })
         }), (0, s.jsxs)("div", {
-          className: T.rightButtons,
+          className: x.rightButtons,
           children: [(0, s.jsx)(r.Button, {
             onClick: l,
             size: r.Button.Sizes.SMALL,
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.PRIMARY,
-            children: v.default.Messages.CANCEL
+            children: T.default.Messages.CANCEL
           }), (0, s.jsx)(r.Button, {
             onClick: () => {
               var e;
               let t = {
-                  id: null !== (e = null == _ ? void 0 : _.id) && void 0 !== e ? e : "".concat(Date.now()),
+                  id: null !== (e = null == m ? void 0 : m.id) && void 0 !== e ? e : "".concat(Date.now()),
                   title: p,
-                  description: D,
+                  description: S,
                   channelIds: Array.from(B).sort(),
                   roleIds: Array.from(k).sort(),
                   emoji: null == A ? void 0 : A
                 },
-                s = f.default.editedOnboardingPrompts,
+                s = R.default.editedOnboardingPrompts,
                 n = function(e, t, l, s) {
                   let n = {};
-                  s.title.length <= 0 && (n.title = v.default.Messages.ONBOARDING_PROMPT_OPTION_TITLE_REQUIRED);
-                  let a = (0, I.validateOptionRoles)(e, t, l, s);
+                  s.title.length <= 0 && (n.title = T.default.Messages.ONBOARDING_PROMPT_OPTION_TITLE_REQUIRED);
+                  let a = (0, f.validateOptionRoles)(e, t, l, s);
                   return null != a && (n.roles = a), n
-                }(E, s, x, t);
+                }(E, s, I, t);
               U(n), o.isEmpty(n) && (a(t), l())
             },
-            children: v.default.Messages.SAVE
+            children: T.default.Messages.SAVE
           })]
         })]
       })
@@ -189,21 +190,21 @@ function x(e) {
   })
 }
 
-function P(e) {
+function M(e) {
   let {
     guild: t,
     roleIds: l
-  } = e, n = Array.from(l).map(e => t.getRole(e)).filter(_.isNotNullish).find(E.isRolePowerful);
-  return null == n ? null : (0, s.jsx)("div", {
-    className: T.notice,
+  } = e, n = (0, i.useStateFromStores)([N.default], () => N.default.getRoles(t.id)), a = Array.from(l).map(e => n[e]).filter(E.isNotNullish).find(I.isRolePowerful);
+  return null == a ? null : (0, s.jsx)("div", {
+    className: x.notice,
     children: (0, s.jsxs)("div", {
-      className: T.noticeMessage,
-      children: [(0, s.jsx)(O.default, {
-        className: T.noticeIcon
+      className: x.noticeMessage,
+      children: [(0, s.jsx)(m.default, {
+        className: x.noticeIcon
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
-        children: v.default.Messages.ROLE_PROMPT_ROLE_IS_POWERFUL.format({
-          permissions: (0, E.getPowerfulPermissionTitles)(t, n).join(", ")
+        children: T.default.Messages.ROLE_PROMPT_ROLE_IS_POWERFUL.format({
+          permissions: (0, I.getPowerfulPermissionTitles)(t, a).join(", ")
         })
       })]
     })

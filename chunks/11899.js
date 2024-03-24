@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var l = n("37983");
-n("884691");
-var r = n("414456"),
-  i = n.n(r),
-  s = n("394846"),
-  a = n("77078"),
-  o = n("570697"),
-  u = n("782340"),
-  c = n("56438");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("394846"),
+  r = s("77078"),
+  o = s("570697"),
+  d = s("782340"),
+  u = s("475830");
 
-function d(e) {
+function c(e) {
   let {
     children: t,
-    className: n,
-    layoutClassName: r,
-    profilePreview: d,
-    previewTitle: f
-  } = e, h = () => (0, l.jsx)(o.default, {
-    title: null != f ? f : u.default.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
-    className: c.preview,
-    children: d
+    className: s,
+    layoutClassName: n,
+    profilePreview: c,
+    previewTitle: S
+  } = e, E = () => (0, a.jsx)(o.default, {
+    title: null != S ? S : d.default.Messages.PROFILE_CUSTOMIZATION_PREVIEW,
+    className: u.preview,
+    children: c
   });
-  return (0, l.jsx)("div", {
-    className: n,
-    children: (0, l.jsxs)(a.FormSection, {
-      className: c.profileCustomizationSection,
-      children: [s.isMobile && h(), (0, l.jsxs)("div", {
-        className: i(c.baseLayout, r),
-        children: [t, !s.isMobile && h()]
+  return (0, a.jsx)("div", {
+    className: s,
+    children: (0, a.jsxs)(r.FormSection, {
+      className: u.profileCustomizationSection,
+      children: [i.isMobile && E(), (0, a.jsxs)("div", {
+        className: l(u.baseLayout, n),
+        children: [t, !i.isMobile && E()]
       })]
     })
   })

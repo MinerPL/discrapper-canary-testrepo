@@ -17,7 +17,7 @@
       }
       constructor(...e) {
         super(...e), this.handleConnectionOpen = e => {
-          ((0, c.isWindows)() || (0, c.isMac)()) && d.default.encryptAndStoreTokens()
+          ((0, c.isWindows)() || (0, c.isMac)()) && d.encryptAndStoreTokens()
         }
       }
     }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
@@ -16,36 +16,36 @@ var n = s("414456"),
   c = s("845579"),
   S = s("49111"),
   E = s("782340"),
-  f = s("926622");
+  T = s("890957");
 
-function T() {
+function f() {
   let e = c.ExpressionSuggestionsEnabled.useSetting(),
     t = c.IncludeStickersInAutocomplete.useSetting(),
     s = c.UseRichChatInput.useSetting(),
     n = c.RenderSpoilers.useSetting(),
-    T = c.UseThreadSidebar.useSetting(),
-    m = c.ViewImageDescriptions.useSetting(),
-    _ = c.ConvertEmoticons.useSetting(),
+    f = c.UseThreadSidebar.useSetting(),
+    _ = c.ViewImageDescriptions.useSetting(),
+    m = c.ConvertEmoticons.useSetting(),
     g = c.InlineAttachmentMedia.useSetting(),
     h = c.InlineEmbedMedia.useSetting(),
-    I = c.RenderEmbeds.useSetting(),
-    N = c.RenderReactions.useSetting(),
+    N = c.RenderEmbeds.useSetting(),
+    I = c.RenderReactions.useSetting(),
     {
       analyticsLocations: p
     } = (0, o.default)(r.default.TEXT_AND_IMAGES);
   return (0, a.jsxs)(i.FormSection, {
     tag: i.FormTitleTags.H1,
-    title: E.default.Messages.TEXT_AND_IMAGES,
+    title: E.default.Messages.CHAT,
     children: [(0, a.jsx)(i.FormTitle, {
-      className: f.marginBottom8,
+      className: T.marginBottom8,
       children: E.default.Messages.INLINE_MEDIA_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
-      className: l(f.marginTop8, f.marginBottom20),
+      className: l(T.marginTop8, T.marginBottom20),
       value: h,
       onChange: c.InlineEmbedMedia.updateSetting,
       children: E.default.Messages.INLINE_EMBED_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
-      className: l(f.marginTop8, f.marginBottom20),
+      className: l(T.marginTop8, T.marginBottom20),
       value: g,
       note: E.default.Messages.INLINE_ATTACHMENT_MEDIA_HELP.format({
         maxSize: 10
@@ -53,40 +53,40 @@ function T() {
       onChange: c.InlineAttachmentMedia.updateSetting,
       children: E.default.Messages.INLINE_ATTACHMENT_MEDIA
     }), (0, a.jsx)(i.FormSwitch, {
-      className: l(f.marginTop8, f.marginBottom20),
-      value: m,
+      className: l(T.marginTop8, T.marginBottom20),
+      value: _,
       note: E.default.Messages.IMAGE_DESCRIPTION_HELP,
       onChange: c.ViewImageDescriptions.updateSetting,
       children: E.default.Messages.USER_SETTINGS_WITH_IMAGE_DESCRIPTIONS
     }), (0, a.jsx)(i.FormTitle, {
-      className: f.marginBottom8,
+      className: T.marginBottom8,
       children: E.default.Messages.RENDER_EMBEDS_LABEL
     }), (0, a.jsx)(i.FormSwitch, {
-      className: l(f.marginTop8, f.marginBottom40),
-      value: I,
+      className: l(T.marginTop8, T.marginBottom40),
+      value: N,
       onChange: c.RenderEmbeds.updateSetting,
       children: E.default.Messages.RENDER_EMBEDS
     }), (0, a.jsx)(i.FormTitle, {
-      className: f.marginBottom8,
+      className: T.marginBottom8,
       children: E.default.Messages.EMOJI
     }), (0, a.jsx)(i.FormSwitch, {
-      className: l(f.marginTop8, f.marginBottom20),
-      value: N,
+      className: l(T.marginTop8, T.marginBottom20),
+      value: I,
       onChange: c.RenderReactions.updateSetting,
       children: E.default.Messages.RENDER_REACTIONS
     }), (0, a.jsx)(i.FormSwitch, {
-      className: f.marginBottom40,
-      value: _,
+      className: T.marginBottom40,
+      value: m,
       note: d.default.parse(E.default.Messages.CONVERT_EMOTICONS_HELP),
       onChange: c.ConvertEmoticons.updateSetting,
       children: E.default.Messages.CONVERT_EMOTICONS
     }), (0, a.jsxs)(i.FormSection, {
-      className: f.marginBottom8,
+      className: T.marginBottom8,
       children: [(0, a.jsx)(i.FormTitle, {
-        className: f.marginBottom8,
+        className: T.marginBottom8,
         children: E.default.Messages.STICKERS_AUTO_PLAY_HEADING
       }), (0, a.jsx)(i.FormSwitch, {
-        className: l(f.marginTop8, f.marginBottom20),
+        className: l(T.marginTop8, T.marginBottom20),
         value: e,
         note: E.default.Messages.AUTO_SUGGEST_STICKERS_DESCRIPTION,
         onChange: t => {
@@ -100,7 +100,7 @@ function T() {
         },
         children: E.default.Messages.AUTO_SUGGEST_STICKERS
       }), (0, a.jsx)(i.FormSwitch, {
-        className: f.marginBottom40,
+        className: T.marginBottom40,
         value: t,
         note: E.default.Messages.INCLUDE_STICKER_RESULTS_IN_AUTOCOMPLETE,
         onChange: e => {
@@ -115,12 +115,12 @@ function T() {
         children: E.default.Messages.STICKERS_IN_AUTOCOMPLETE
       })]
     }), (0, a.jsxs)(i.FormSection, {
-      className: f.marginBottom8,
+      className: T.marginBottom8,
       children: [(0, a.jsx)(i.FormTitle, {
-        className: f.marginBottom8,
+        className: T.marginBottom8,
         children: E.default.Messages.FORM_LABEL_USE_RICH_CHAT_BOX
       }), (0, a.jsx)(i.FormSwitch, {
-        className: f.marginTop8,
+        className: T.marginTop8,
         value: s,
         onChange: e => {
           u.default.track(S.AnalyticEvents.PREVIEW_MARKDOWN_TOGGLED, {
@@ -133,13 +133,13 @@ function T() {
         children: E.default.Messages.PREVIEW_MARKDOWN_DESCRIPTION
       })]
     }), (0, a.jsxs)(i.FormSection, {
-      className: f.marginBottom40,
+      className: T.marginBottom40,
       children: [(0, a.jsx)(i.FormTitle, {
-        className: f.marginBottom8,
+        className: T.marginBottom8,
         children: E.default.Messages.THREADS
       }), (0, a.jsx)(i.FormSwitch, {
-        className: f.marginTop8,
-        value: T,
+        className: T.marginTop8,
+        value: f,
         onChange: c.UseThreadSidebar.updateSetting,
         children: E.default.Messages.USE_THREADS_SIDEBAR_DESCRIPTION
       })]
@@ -147,7 +147,7 @@ function T() {
       title: E.default.Messages.SHOW_SPOILER_CONTENT,
       children: [(0, a.jsx)(i.FormText, {
         type: i.FormText.Types.DESCRIPTION,
-        className: f.marginBottom8,
+        className: T.marginBottom8,
         children: E.default.Messages.SHOW_SPOILER_CONTENT_HELP
       }), (0, a.jsx)(i.RadioGroup, {
         options: [{

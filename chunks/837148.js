@@ -10,29 +10,13 @@ let r = (0, s.createExperiment)({
   id: "2023-12_collectibles_gifting_dm_entrypoint",
   label: "Collectibles Gifting From DM's",
   defaultConfig: {
-    confirmUpsellEnabled: !1,
-    successUpsellEnabled: !1
+    confirmUpsellEnabled: !1
   },
   treatments: [{
-    id: 1,
-    label: "Collectibles Gifting From DM's Enabled With Success Step Upsell",
-    config: {
-      confirmUpsellEnabled: !1,
-      successUpsellEnabled: !0
-    }
-  }, {
     id: 2,
     label: "Collectibles Gifting from DM's Enabled With Confirm Step Upsell",
     config: {
-      confirmUpsellEnabled: !0,
-      successUpsellEnabled: !1
-    }
-  }, {
-    id: 100,
-    label: "Collectibles Gifting from DM's Enabled With All Upsells",
-    config: {
-      confirmUpsellEnabled: !0,
-      successUpsellEnabled: !0
+      confirmUpsellEnabled: !0
     }
   }]
 });

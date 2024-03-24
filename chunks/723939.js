@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), n("222007");
 var i = n("446674"),
-  r = n("705909"),
-  s = n("913144"),
+  s = n("705909"),
+  r = n("913144"),
   a = n("605250"),
   o = n("271938"),
   l = n("496533");
 let u = new a.default("DatabaseManager");
-class c extends i.Store {
+class d extends i.Store {
   initialize() {
     this.waitFor(o.default), this.carefullySpeculativelyOpen(l.getUserId()), this.handleAuthenticationStoreChanged(), o.default.addChangeListener(() => this.handleAuthenticationStoreChanged())
   }
   databaseName(e) {
-    return d(e)
+    return c(e)
   }
   database(e) {
     if (null != e) {
@@ -26,6 +26,7 @@ class c extends i.Store {
     return null
   }
   carefullyOpenDatabase(e) {
+    if (this.preventWritingCachesAgainThisSession) return u.verbose("Not opening database because caches have been manually cleared."), null;
     if (null != e && !this.databases.has(e)) {
       let t = function(e) {
         return null
@@ -45,14 +46,14 @@ class c extends i.Store {
     let t = this.databases.get(e);
     u.log("removing database (user: ".concat(e, ", database: ").concat(t, ")")), null == t || t.close(), this.databases.delete(e), this.emitChange()
   }
-  handleClearCaches() {
-    this.replaceDisableAllDatabases("DatabaseManager (action: CLEAR_CACHES)")
+  handleClearCaches(e) {
+    e.preventWritingCachesAgainThisSession && (this.preventWritingCachesAgainThisSession = !0), this.replaceDisableAllDatabases("DatabaseManager (".concat(e.reason, ")"))
   }
   handleConnectionOpen() {
     let e = o.default.getId(),
       t = this.databases.get(e),
       n = null == t ? void 0 : t.state();
-    null == t && n !== r.DatabaseState.Open && this.remove(e), this.carefullyOpenDatabase(e)
+    null == t && n !== s.DatabaseState.Open && this.remove(e), this.carefullyOpenDatabase(e)
   }
   handleAuthenticationStoreChanged() {
     let e = o.default.getId(),
@@ -63,26 +64,30 @@ class c extends i.Store {
     }
   }
   async carefullySpeculativelyOpen(e) {
+    if (this.preventWritingCachesAgainThisSession) {
+      u.verbose("Not opening database because caches have been manually cleared.");
+      return
+    }
     if (null != e) {
-      let t = await f(e);
+      let t = await _(e);
       null == t || this.databases.has(e) ? (u.verbose("discarding speculative database (".concat(e, " → ").concat(t, ")")), null == t || t.close()) : (u.verbose("added speculative database (".concat(e, " → ").concat(t, ")")), this.databases.set(e, t), this.emitChange())
     }
   }
   constructor() {
-    super(s.default, {
-      CLEAR_CACHES: () => this.handleClearCaches(),
+    super(r.default, {
+      CLEAR_CACHES: e => this.handleClearCaches(e),
       CONNECTION_CLOSED: () => this.handleAuthenticationStoreChanged(),
       CONNECTION_OPEN: () => this.handleConnectionOpen(),
       LOGOUT: () => this.handleAuthenticationStoreChanged()
-    }, s.DispatchBand.Early), this.databases = new Map, this.activeUserId = null
+    }, r.DispatchBand.Early), this.databases = new Map, this.activeUserId = null, this.preventWritingCachesAgainThisSession = !1
   }
 }
 
-function d(e) {
+function c(e) {
   return "@account.".concat(e)
 }
-async function f(e) {
+async function _(e) {
   var t;
   return null
 }
-var E = new c
+var f = new d

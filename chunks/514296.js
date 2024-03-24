@@ -4,25 +4,27 @@ r.r(t), r.d(t, {
     return u
   }
 }), r("808653"), r("424973");
-var u, l = r("407788"),
-  n = r("792382");
-u = class e extends n.default {
+var u, n = r("407788"),
+  i = r("792382");
+u = class e extends i.default {
   static fromServer(t) {
     let {
       products: r,
       logo: u,
-      ...n
+      mobile_bg: i,
+      ...E
     } = t;
     return new e({
-      ...super.fromServer(n),
+      ...super.fromServer(E),
       products: r.reduce((e, t) => {
-        let r = l.default.fromServer(t);
+        let r = n.default.fromServer(t);
         return 0 === r.items.length ? e : (e.push(r), e)
       }, []),
-      logo: u
+      logo: u,
+      mobile_bg: i
     })
   }
   constructor(e) {
-    super(e), this.products = e.products, this.logo = e.logo
+    super(e), this.products = e.products, this.logo = e.logo, this.mobile_bg = e.mobile_bg
   }
 }

@@ -9,30 +9,30 @@ var n = s("37983"),
   a = s("414456"),
   o = s.n(a),
   i = s("266491"),
-  l = s("77078"),
-  u = s("6481"),
+  u = s("77078"),
+  l = s("6481"),
   d = s("259051"),
   c = s("769703"),
   h = s("183766"),
   p = s("49111"),
   S = s("782340"),
-  H = s("144517"),
-  m = s("926622");
+  H = s("347312"),
+  m = s("890957");
 let g = e => (0, n.jsx)("div", {
     className: H.innerContentWrapper,
     children: e.children
   }),
-  E = {
+  f = {
     [p.HypeSquadHouses.HOUSE_1]: s("27905"),
     [p.HypeSquadHouses.HOUSE_2]: s("795098"),
     [p.HypeSquadHouses.HOUSE_3]: s("576348")
   },
-  _ = {
+  E = {
     [p.HypeSquadHouses.HOUSE_1]: H.quizResultLogoWrapperHouse1,
     [p.HypeSquadHouses.HOUSE_2]: H.quizResultLogoWrapperHouse2,
     [p.HypeSquadHouses.HOUSE_3]: H.quizResultLogoWrapperHouse3
   },
-  x = e => {
+  _ = e => {
     let t = {
       [p.HypeSquadHouses.HOUSE_1]: S.default.Messages.HYPESQUAD_QUIZ_BODY_HOUSE_1,
       [p.HypeSquadHouses.HOUSE_2]: S.default.Messages.HYPESQUAD_QUIZ_BODY_HOUSE_2,
@@ -40,7 +40,7 @@ let g = e => (0, n.jsx)("div", {
     };
     return t[e]
   };
-class f extends r.Component {
+class x extends r.Component {
   getSelectedHouseID() {
     let e;
     let {
@@ -54,11 +54,11 @@ class f extends r.Component {
   renderUnknownErrorMessage() {
     return (0, n.jsx)(c.default, {
       children: (0, n.jsxs)(r.Fragment, {
-        children: [(0, n.jsx)(l.Heading, {
+        children: [(0, n.jsx)(u.Heading, {
           className: H.quizResultHeading,
           variant: "heading-xl/semibold",
           children: S.default.Messages.HYPESQUAD_ERROR_HEADING
-        }), (0, n.jsx)(l.Text, {
+        }), (0, n.jsx)(u.Text, {
           variant: "text-sm/normal",
           children: S.default.Messages.HYPESQUAD_ERROR_BODY.format({
             emailAddress: "hypesquad@".concat(p.EMAIL_DOMAIN),
@@ -79,20 +79,20 @@ class f extends r.Component {
     return (0, n.jsx)(c.default, {
       children: (0, n.jsxs)(r.Fragment, {
         children: [(0, n.jsx)("div", {
-          className: o(H.quizResultLogoWrapper, _[e], m.marginBottom20),
+          className: o(H.quizResultLogoWrapper, E[e], m.marginBottom20),
           children: (0, n.jsx)("img", {
             alt: t,
             className: H.quizResultLogo,
-            src: E[e]
+            src: f[e]
           })
-        }), (0, n.jsx)(l.Heading, {
+        }), (0, n.jsx)(u.Heading, {
           className: H.quizResultHeading,
           variant: "heading-xl/semibold",
           children: t
-        }), (0, n.jsx)(l.Text, {
+        }), (0, n.jsx)(u.Text, {
           className: H.quizResultBody,
           variant: "text-sm/normal",
-          children: x(e)
+          children: _(e)
         })]
       })
     }, "submit-step")
@@ -129,7 +129,7 @@ class f extends r.Component {
   }
   renderNewsletterWarning() {
     return (0, n.jsx)(c.default, {
-      children: (0, n.jsx)(l.Text, {
+      children: (0, n.jsx)(u.Text, {
         className: H.nameFormPreface,
         variant: "text-md/normal",
         children: S.default.Messages.HYPESQUAD_NEWSLETTER_WARNING
@@ -145,28 +145,28 @@ class f extends r.Component {
       isRequestPending: a,
       questions: o
     } = this.state, i = null == t[e];
-    return s ? (0, n.jsx)(l.Button, {
+    return s ? (0, n.jsx)(u.Button, {
       type: "submit",
-      color: l.Button.Colors.BRAND,
+      color: u.Button.Colors.BRAND,
       onClick: this.handleSubmitButtonClick,
       submitting: a,
       children: S.default.Messages.HYPESQUAD_QUIZ_RETRY
-    }) : r ? (0, n.jsx)(l.Button, {
+    }) : r ? (0, n.jsx)(u.Button, {
       type: "submit",
-      color: l.Button.Colors.BRAND,
+      color: u.Button.Colors.BRAND,
       onClick: this.props.onClose,
       children: S.default.Messages.HYPESQUAD_QUIZ_CLOSE
-    }) : e === o.length - 1 ? (0, n.jsx)(l.Button, {
+    }) : e === o.length - 1 ? (0, n.jsx)(u.Button, {
       disabled: i,
       type: "submit",
-      color: l.Button.Colors.BRAND,
+      color: u.Button.Colors.BRAND,
       onClick: this.handleSubmitButtonClick,
       submitting: a,
       children: S.default.Messages.HYPESQUAD_QUIZ_SHOW_MY_HOUSE
-    }) : (0, n.jsx)(l.Button, {
+    }) : (0, n.jsx)(u.Button, {
       disabled: i,
       type: "submit",
-      color: l.Button.Colors.BRAND,
+      color: u.Button.Colors.BRAND,
       onClick: this.handleNextQuestionButtonClick,
       children: S.default.Messages.HYPESQUAD_QUIZ_NEXT_QUESTION
     })
@@ -175,10 +175,10 @@ class f extends r.Component {
     let {
       hasSubmittedHouse: e
     } = this.state;
-    return e ? null : (0, n.jsx)(l.Button, {
+    return e ? null : (0, n.jsx)(u.Button, {
       type: "button",
-      look: l.Button.Looks.LINK,
-      color: l.Button.Colors.PRIMARY,
+      look: u.Button.Looks.LINK,
+      color: u.Button.Colors.PRIMARY,
       onClick: this.props.onClose,
       children: S.default.Messages.HYPESQUAD_QUIZ_CANCEL
     })
@@ -189,22 +189,22 @@ class f extends r.Component {
     } = this.state, {
       transitionState: t
     } = this.props;
-    return (0, n.jsxs)(l.ModalRoot, {
-      size: null == e ? l.ModalSize.MEDIUM : l.ModalSize.SMALL,
+    return (0, n.jsxs)(u.ModalRoot, {
+      size: null == e ? u.ModalSize.MEDIUM : u.ModalSize.SMALL,
       transitionState: t,
-      children: [(0, n.jsx)(l.ModalHeader, {
+      children: [(0, n.jsx)(u.ModalHeader, {
         separator: !1,
-        children: (0, n.jsx)(l.Heading, {
+        children: (0, n.jsx)(u.Heading, {
           variant: "heading-lg/semibold",
           children: this.renderHeaderCopy()
         })
       }), (0, n.jsx)("div", {
         className: H.outerContentWrapper,
-        children: (0, n.jsx)(i.default, {
+        children: (0, n.jsx)(i.TransitionGroup, {
           component: g,
           children: this.renderContent()
         })
-      }), (0, n.jsxs)(l.ModalFooter, {
+      }), (0, n.jsxs)(u.ModalFooter, {
         children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
       })]
     })
@@ -230,7 +230,7 @@ class f extends r.Component {
       this.setState({
         isRequestPending: !0
       }, () => {
-        u.default.joinHypeSquadOnline({
+        l.default.joinHypeSquadOnline({
           houseID: e
         }).then(() => {
           this.setState({
@@ -256,4 +256,4 @@ class f extends r.Component {
     }
   }
 }
-var U = f
+var U = x

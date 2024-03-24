@@ -10,30 +10,30 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var i = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("414456"),
-  l = n.n(r),
-  o = n("77078"),
-  s = n("272460"),
+var i = n("414456"),
+  s = n.n(i),
+  l = n("77078"),
+  o = n("272460"),
   a = n("394294"),
-  u = n("847121");
+  u = n("28551");
 
 function c(e) {
   let {
     value: t,
     placeholder: n,
-    onChange: r,
-    disabled: s,
+    onChange: i,
+    disabled: o,
     className: c
   } = e;
-  return (0, i.jsx)(o.TextArea, {
-    className: l(u.paragraphFieldBody, c),
+  return (0, r.jsx)(l.TextArea, {
+    className: s(u.paragraphFieldBody, c),
     maxLength: a.MAX_PARAGRAPH_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: null != n ? n : "",
-    onChange: r,
-    disabled: s,
+    onChange: i,
+    disabled: o,
     autosize: !0
   })
 }
@@ -42,9 +42,9 @@ function d(e) {
   let {
     formField: t
   } = e;
-  return (0, i.jsx)(s.QuestionRenderer, {
+  return (0, r.jsx)(o.QuestionRenderer, {
     title: t.label,
-    children: (0, i.jsx)(c, {
+    children: (0, r.jsx)(c, {
       className: u.fieldBackground,
       value: t.response,
       disabled: !0
@@ -57,9 +57,9 @@ function f(e) {
     formField: t,
     onChange: n
   } = e;
-  return (0, i.jsx)(s.QuestionRenderer, {
+  return (0, r.jsx)(o.QuestionRenderer, {
     title: t.label,
-    children: (0, i.jsx)(c, {
+    children: (0, r.jsx)(c, {
       className: u.fieldBackground,
       value: t.response,
       onChange: n

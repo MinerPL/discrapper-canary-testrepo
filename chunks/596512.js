@@ -1,15 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
 }), n("222007"), n("424973");
-var i = n("693566"),
-  s = n.n(i),
-  a = n("689988"),
-  l = n("599110"),
-  r = n("49111");
-class o extends a.default {
+var s = n("693566"),
+  i = n.n(s),
+  r = n("689988"),
+  a = n("599110"),
+  u = n("299039"),
+  l = n("49111");
+class o extends r.default {
   handleMessageBecameVisible(e) {
     let {
       messageId: t
@@ -17,10 +18,10 @@ class o extends a.default {
     if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
     let n = this.recentViewTimes.get(t);
     if (null != n && Date.now() - n < 6e4) return;
-    let i = setTimeout(() => {
+    let s = setTimeout(() => {
       delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e)
     }, 1e3);
-    this.currentlyVisibleMessageTimers[t] = i
+    this.currentlyVisibleMessageTimers[t] = s
   }
   handleMessageLostVisibility(e) {
     let t = this.currentlyVisibleMessageTimers[e];
@@ -29,14 +30,14 @@ class o extends a.default {
   handleMessageListVisibilityChange(e) {
     for (let t of e) this.handleMessageBecameVisible(t);
     let t = new Set(e.map(e => e.messageId));
-    for (let e of Object.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e)
+    for (let e of u.default.keys(this.currentlyVisibleMessageTimers)) !t.has(e) && this.handleMessageLostVisibility(e)
   }
   handleChannelSelect() {
     for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
     this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel.clear(), this.drainBuffer()
   }
   drainBuffer() {
-    for (let e of this.batchBuffer) l.default.track(r.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
+    for (let e of this.batchBuffer) a.default.track(l.AnalyticEvents.ANNOUNCEMENT_MESSAGE_VIEWED, {
       message_id: e.messageId,
       channel_id: e.channelId,
       guild_id: e.guildId,
@@ -49,7 +50,7 @@ class o extends a.default {
     this.batchBuffer.length >= 10 && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3))
   }
   constructor(...e) {
-    super(...e), this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel = new Set, this.recentViewTimes = new s({
+    super(...e), this.currentlyVisibleMessageTimers = {}, this.viewsInCurrentChannel = new Set, this.recentViewTimes = new i({
       max: 500,
       maxAge: 6e4
     }), this.batchBuffer = [], this.batchTimerId = null, this.actions = {
@@ -57,4 +58,4 @@ class o extends a.default {
     }
   }
 }
-var u = new o
+var d = new o

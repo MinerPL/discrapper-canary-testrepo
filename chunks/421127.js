@@ -37,4 +37,4 @@ let a = 2,
     value: 24,
     label: u.default.Messages.GUILD_SERVER_LOCKDOWN_DURATION_24_HOURS
   }],
-  s = i.default.combine(l.Permissions.ADMINISTRATOR, l.Permissions.MANAGE_GUILD, l.Permissions.BAN_MEMBERS, l.Permissions.KICK_MEMBERS, l.Permissions.MODERATE_MEMBERS)
+  s = i.combine(l.Permissions.ADMINISTRATOR, l.Permissions.MANAGE_GUILD, l.Permissions.BAN_MEMBERS, l.Permissions.KICK_MEMBERS, l.Permissions.MODERATE_MEMBERS)

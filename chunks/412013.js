@@ -1,30 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return u
+    return A
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("77078"),
-  s = n("581583"),
-  o = n("843455");
+var _ = E("37983"),
+  s = E("884691"),
+  T = E("77078"),
+  a = E("581583"),
+  n = E("843455");
 
-function u(e) {
+function A(e) {
   var t;
   let {
-    guildId: n,
-    role: u,
-    className: a
-  } = e, c = (0, r.useToken)(r.tokens.unsafe_rawColors.PRIMARY_300).hex(), d = null !== (t = null == u ? void 0 : u.colorString) && void 0 !== t ? t : c, f = i.useMemo(() => ({
-    backgroundColor: "".concat(d, "27")
-  }), [d]);
-  return null == u ? null : (0, l.jsx)(s.MemberRole, {
-    className: a,
-    style: f,
-    role: u,
-    guildId: n,
-    canRemove: !1,
-    onRemove: o.NOOP
+    guildId: E,
+    role: A,
+    className: u,
+    canRemove: I = !1,
+    onRemove: i = n.NOOP
+  } = e, l = (0, T.useToken)(T.tokens.unsafe_rawColors.PRIMARY_300).hex(), L = null !== (t = null == A ? void 0 : A.colorString) && void 0 !== t ? t : l, o = s.useMemo(() => ({
+    backgroundColor: "".concat(L, "27")
+  }), [L]);
+  return null == A ? null : (0, _.jsx)(T.Clickable, {
+    children: (0, _.jsx)(a.MemberRole, {
+      className: u,
+      style: o,
+      role: A,
+      guildId: E,
+      canRemove: I,
+      onRemove: i
+    })
   })
 }

@@ -4,45 +4,48 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a, l, s = n("37983"),
   i = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  u = n("77078"),
+  u = n.n(r),
+  o = n("77078"),
   d = n("461380"),
   c = n("67602"),
-  f = n("89195"),
-  h = n("980662");
+  f = n("274210"),
+  h = n("228450");
 (l = a || (a = {}))[l.MutualFriendsList = 0] = "MutualFriendsList", l[l.MutualGuildList = 1] = "MutualGuildList", l[l.AppsList = 2] = "AppsList";
-var p = e => {
+var m = e => {
   let {
     header: t,
     children: n,
     itemType: a = 1,
     isLoadingHeader: l,
     isLoadingContents: r,
-    loadingContentsCount: p = 0,
-    className: m,
-    onHover: E,
-    onFocus: C
-  } = e, [g, S] = i.useState(!0), _ = (0, s.jsx)("div", {
+    loadingContentsCount: m = 0,
+    className: p,
+    onExpand: E,
+    onHover: g,
+    onFocus: S
+  } = e, [C, _] = i.useState(!0), I = (0, s.jsx)("div", {
     className: f.iconWrapper,
     children: (0, s.jsx)(d.default, {
-      direction: g ? d.default.Directions.RIGHT : d.default.Directions.DOWN
+      direction: C ? d.default.Directions.RIGHT : d.default.Directions.DOWN
     })
   });
   return (0, s.jsxs)("div", {
-    className: o(f.listWrapper, m),
-    children: [(0, s.jsx)(u.Button, {
+    className: u(f.listWrapper, p),
+    children: [(0, s.jsx)(o.Button, {
       className: f.collapseBtn,
       innerClassName: f.collapseBtnContent,
-      color: u.ButtonColors.CUSTOM,
-      onMouseEnter: E,
-      onFocus: C,
-      onClick: () => S(!g),
+      color: o.ButtonColors.CUSTOM,
+      onMouseEnter: g,
+      onFocus: S,
+      onClick: () => {
+        _(!C), C && (null == E || E())
+      },
       children: l ? (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(c.ContentBlob, {
           width: 34,
@@ -52,19 +55,19 @@ var p = e => {
           opacity: .08
         })]
       }) : (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(u.Text, {
+        children: [(0, s.jsx)(o.Text, {
           variant: "text-sm/medium",
           children: t
-        }), _]
+        }), I]
       })
     }), (0, s.jsx)("ul", {
-      className: o(f.connectionList, {
-        [f.isCollapsed]: g
+      className: u(f.connectionList, {
+        [f.isCollapsed]: C
       }),
       children: r ? Array.from({
-        length: p
+        length: m
       }).map((e, t) => (0, s.jsxs)("div", {
-        className: o({
+        className: u({
           [h.mutualFriendItem]: 0 === a,
           [h.mutualGuildsItem]: 1 === a
         }),

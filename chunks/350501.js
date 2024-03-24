@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
 var l = n("37983"),
   a = n("884691"),
   s = n("759843"),
-  i = n("249654"),
-  r = n("446674"),
-  o = n("812204"),
-  u = n("685665"),
-  d = n("428958"),
-  c = n("872173"),
-  f = n("945956"),
+  i = n("446674"),
+  r = n("812204"),
+  o = n("685665"),
+  u = n("428958"),
+  d = n("872173"),
+  c = n("945956"),
+  f = n("299039"),
   h = n("305122"),
   C = n("235004"),
   p = n("78581"),
@@ -22,7 +22,7 @@ var l = n("37983"),
   g = n("679864"),
   I = n("553372"),
   S = n("846325"),
-  _ = n("11099");
+  _ = n("711582");
 
 function N(e) {
   let {
@@ -35,14 +35,14 @@ function N(e) {
     analyticsSource: v,
     onClose: x
   } = e, R = (0, E.useSortedGuildIdsForSoundboard)(n, !0), M = function(e) {
-    let [t, n] = (0, r.useStateFromStoresArray)([C.default], () => [C.default.getSounds(), C.default.getFavorites()]);
+    let [t, n] = (0, i.useStateFromStoresArray)([C.default], () => [C.default.getSounds(), C.default.getFavorites()]);
     return a.useMemo(() => {
       let l = [],
         a = [...e, S.DEFAULT_SOUND_GUILD_ID],
         s = (e, a) => {
-          var s, r;
-          let o = null !== (r = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => i.default.compare(e.soundId, t.soundId))) && void 0 !== r ? r : [];
-          for (let e of o) {
+          var s, i;
+          let r = null !== (i = null === (s = t.get(e)) || void 0 === s ? void 0 : s.sort((e, t) => f.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : [];
+          for (let e of r) {
             let t = n.has(e.soundId),
               s = t && a || !t && !a;
             s && l.push(e)
@@ -50,20 +50,20 @@ function N(e) {
         };
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
-  }(R), O = (0, m.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [D, b] = a.useState(void 0), j = (0, r.useStateFromStores)([f.default], () => f.default.getMediaSessionId()), {
+  }(R), O = (0, m.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [D, b] = a.useState(void 0), j = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
     analyticsLocations: G,
     AnalyticsLocationProvider: U
-  } = (0, u.default)(o.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
+  } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
     (0, p.playSound)(e, n.id, G), x()
   }, [G, n.id, x]);
   a.useEffect(() => {
-    h.maybeFetchSoundboardSounds(), c.FrecencyUserSettingsActionCreators.loadIfNecessary()
+    h.maybeFetchSoundboardSounds(), d.FrecencyUserSettingsActionCreators.loadIfNecessary()
   }, []), a.useEffect(() => {
     0 === M.length && 0 === O.length && x()
   }, [M.length, O, x]), a.useEffect(() => () => {
     let e = y.current;
     !A && null != e && P(e)
-  }, [A, P]), (0, d.default)({
+  }, [A, P]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
     name: s.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {

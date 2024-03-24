@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("884691"),
-  a = n("65597"),
+var a = n("884691"),
+  l = n("65597"),
   s = n("776156"),
   r = n("915639"),
   o = n("34966"),
@@ -17,19 +17,19 @@ function c(e, t) {
     loadState: r,
     defaultChangelog: c,
     defaultLoadState: u
-  } = (0, a.useStateFromStoresObject)([o.default], () => {
+  } = (0, l.useStateFromStoresObject)([o.default], () => {
     let n = null != e ? o.default.getChangelog(e, t) : null,
-      l = null != e ? o.default.getChangelog(e, "en-US") : null,
-      a = null != e && o.default.getChangelogLoadStatus(e, "en-US"),
+      a = null != e ? o.default.getChangelog(e, "en-US") : null,
+      l = null != e && o.default.getChangelogLoadStatus(e, "en-US"),
       s = null != e && o.default.getChangelogLoadStatus(e, t);
     return {
       changelog: n,
       loadState: s,
-      defaultChangelog: l,
-      defaultLoadState: a
+      defaultChangelog: a,
+      defaultLoadState: l
     }
   }, [e, t]);
-  return (l.useEffect(() => {
+  return (a.useEffect(() => {
     null != e && null == n && r === i.ChangelogLoadState.NOT_LOADED && s.default.fetchChangelog(e, t)
   }, [e, n, r, t]), null == e) ? {
     id: e,
@@ -47,12 +47,12 @@ function c(e, t) {
 }
 
 function u() {
-  let e = (0, a.default)([r.default], () => r.default.locale),
-    t = (0, a.default)([o.default], () => o.default.latestChangelogId()),
-    n = (0, a.default)([o.default], () => o.default.getConfig()),
-    l = null != n && 0 === Object.keys(n).length,
+  let e = (0, l.useStateFromStores)([r.default], () => r.default.locale),
+    t = (0, l.useStateFromStores)([o.default], () => o.default.latestChangelogId()),
+    n = (0, l.useStateFromStores)([o.default], () => o.default.getConfig()),
+    a = null != n && 0 === Object.keys(n).length,
     s = null != n && Object.keys(n).length > 0 && null == t,
-    i = (0, a.default)([o.default], () => o.default.overrideId()),
+    i = (0, l.useStateFromStores)([o.default], () => o.default.overrideId()),
     {
       changelog: u,
       loaded: d
@@ -64,7 +64,7 @@ function u() {
   return null == i || null == h && p ? {
     id: t,
     changelog: u,
-    loaded: !!l || d,
+    loaded: !!a || d,
     clientTooOld: s
   } : {
     id: i,

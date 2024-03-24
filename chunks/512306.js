@@ -1,75 +1,76 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   BurstReactionSize: function() {
     return a
   },
   default: function() {
-    return A
+    return g
   }
 });
-var l, a, r = n("37983"),
-  i = n("884691"),
-  o = n("414456"),
-  s = n.n(o),
-  u = n("245749"),
-  c = n.n(u),
-  d = n("913144"),
-  f = n("15935"),
-  R = n("569512"),
-  m = n("941723"),
-  E = n("256346");
-(l = a || (a = {}))[l.NORMAL = 16] = "NORMAL", l[l.LARGE = 32] = "LARGE";
-let h = async e => {
+var n, a, l = i("37983"),
+  o = i("884691"),
+  s = i("414456"),
+  r = i.n(s),
+  u = i("865981"),
+  c = i.n(u),
+  d = i("913144"),
+  h = i("15935"),
+  m = i("569512"),
+  f = i("941723"),
+  p = i("49111"),
+  T = i("235735");
+(n = a || (a = {}))[n.NORMAL = 16] = "NORMAL", n[n.LARGE = 32] = "LARGE";
+let R = async e => {
   var t;
   let {
-    effect: n
-  } = e, l = await (0, R.getBurstAnimation)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : "", n.emoji.name), a = await (0, m.getResizedAnimation)("".concat(n.channelId, ":").concat(n.messageId, ":").concat(n.emoji.name), n.url, l, n.color);
-  return a.assets[0].p = n.url, a
+    effect: i
+  } = e, n = await (0, m.getBurstAnimation)(i.channelId, null !== (t = i.messageId) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID, i.emoji.name), a = await (0, f.getResizedAnimation)("".concat(i.channelId, ":").concat(i.messageId, ":").concat(i.emoji.name), i.url, n, i.color);
+  return a.assets[0].p = i.url, a
 };
 
-function A(e) {
+function g(e) {
   let {
     className: t,
-    effect: n,
-    onComplete: l,
+    effect: i,
+    onComplete: n,
     emojiSize: a = 16
-  } = e, o = i.useRef(null), u = a * m.ANIMATION_TO_EMOJI_RATIO, R = (u + a) / 2;
-  return i.useEffect(() => {
+  } = e, s = o.useRef(null), u = a * f.ANIMATION_TO_EMOJI_RATIO, m = (u + a) / 2;
+  return o.useEffect(() => {
     let e;
-    if (null != n) return !async function() {
-      if (null != o.current) {
-        let t = await h({
-          effect: n
+    if (null != i) return !async function() {
+      if (null != s.current) {
+        let t = await R({
+          effect: i
         });
         (e = c.loadAnimation({
-          container: o.current,
+          container: s.current,
           renderer: "svg",
           loop: !1,
           autoplay: !0,
           animationData: t
         })).addEventListener("complete", () => {
-          null == l || l(), e.destroy()
-        }), null != n.channelId && null != n.messageId && null != n.emoji && n.key === f.BurstReactionEffectSource.HOVER && d.default.dispatch({
+          null == n || n(), e.destroy()
+        }), null != i.channelId && null != i.messageId && null != i.emoji && i.key === h.BurstReactionEffectSource.HOVER && d.default.dispatch({
           type: "BURST_REACTION_ANIMATION_ADD",
-          channelId: n.channelId,
-          messageId: n.messageId,
-          emoji: n.emoji,
+          channelId: i.channelId,
+          messageId: i.messageId,
+          emoji: i.emoji,
           animation: e
         })
       }
     }(), () => {
       null != e && e.destroy()
     }
-  }, [l, n, a]), (0, r.jsx)("div", {
-    className: E.effectsWrapper,
-    children: (0, r.jsx)("div", {
-      className: s(E.effect, t),
+  }, [n, i, a]), (0, l.jsx)("div", {
+    className: T.effectsWrapper,
+    children: (0, l.jsx)("div", {
+      className: r(T.effect, t),
       style: {
-        transform: "translateY(".concat(R, "px)"),
+        transform: "translateY(".concat(m, "px)"),
         height: u,
         width: u
       },
-      ref: o
+      ref: s
     })
   })
 }

@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  SearchTabFetcherImpl: function() {
+    return d
+  },
   default: function() {
     return i
   }
@@ -54,10 +57,38 @@ i = class extends u {
   }
   makeRequest() {
     let e = this.getEndpoint();
-    return null == e ? null : r.default.get({
+    return null == e ? null : r.HTTP.get({
       url: e,
       query: s.stringify(this.query),
       oldFormErrors: !0
     })
+  }
+};
+class d extends u {
+  getEndpoint() {
+    switch (this.searchType) {
+      case l.SearchTypes.DMS:
+        return l.Endpoints.SEARCH_TABS_DMS;
+      case l.SearchTypes.GUILD_CHANNEL:
+      case l.SearchTypes.GUILD:
+        if (null == this.searchId || "" === this.searchId) return;
+        return l.Endpoints.SEARCH_TABS_GUILD(this.searchId);
+      case l.SearchTypes.CHANNEL:
+        if (null == this.searchId || "" === this.searchId) return;
+        return l.Endpoints.SEARCH_TABS_CHANNEL(this.searchId);
+      default:
+        throw Error("[SearchFetcher] Unhandled search type: ".concat(this.searchType))
+    }
+  }
+  makeRequest() {
+    let e = this.getEndpoint();
+    return null == e ? null : r.HTTP.post({
+      url: e,
+      body: this.payload,
+      oldFormErrors: !0
+    })
+  }
+  constructor(e, t, n, i) {
+    super(e, t, n), this.payload = i
   }
 }

@@ -61,8 +61,8 @@ var l = s("37983"),
   ee = s("515631"),
   et = s("648564"),
   es = s("782340"),
-  el = s("979554"),
-  ea = s("926622");
+  el = s("612574"),
+  ea = s("890957");
 let en = (0, G.uid)(),
   ei = (0, G.uid)(),
   er = (0, G.uid)(),
@@ -709,7 +709,7 @@ class eN extends a.PureComponent {
       canManageChannels: a,
       guild: n
     } = this.props;
-    if (null == n || !this.showVoiceSettings()) return null;
+    if (null == n || !this.showVoiceSettings() || e.isGuildStageVoice()) return null;
     let i = [];
     if (null != s) {
       let e = s.filter(e => !e.deprecated && !e.hidden);
@@ -806,7 +806,7 @@ class eN extends a.PureComponent {
       let {
         channel: t
       } = this.props;
-      null != t && (t.isThread() ? e = (0, v.default)(e, !1) : (0, y.isGuildTextChannelType)(t.type) && (e = (0, k.sanitizeGuildTextChannelName)(e)), (0, E.updateChannel)({
+      null != t && (t.isThread() ? e = (0, v.default)(e, !1) : X.ChannelTypesSets.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, k.sanitizeGuildTextChannelName)(e)), (0, E.updateChannel)({
         name: e
       }))
     }, this.handleBlurName = () => {

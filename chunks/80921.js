@@ -1,72 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return h
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("16470"),
-  a = n("77078"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("16470"),
+  o = n("497555"),
   u = n("200197"),
   d = n("538282"),
   c = n("551305"),
-  f = n("595086"),
-  p = n("88497"),
-  m = n("13030"),
-  h = n("782340"),
-  E = n("537461"),
-  S = i.memo(i.forwardRef(function(e, t) {
-    let n, {
-        disabled: r,
-        type: p
-      } = e,
-      [S, g] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], s.default),
-      C = i.useContext(u.default),
-      [T, v] = i.useState(!1),
-      y = S === m.ExpressionPickerViewType.STICKER,
-      x = i.useCallback(() => {
-        (0, d.toggleExpressionPicker)(m.ExpressionPickerViewType.STICKER, p)
-      }, [p]);
-    i.useEffect(() => {
+  f = n("13030"),
+  p = n("782340"),
+  m = n("350583"),
+  h = l.memo(l.forwardRef(function(e, t) {
+    let {
+      disabled: n,
+      type: a
+    } = e, [h, x] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.pickerId], r.default), E = l.useContext(u.default), [y, g] = l.useState(!1), S = h === f.ExpressionPickerViewType.STICKER, C = l.useCallback(() => {
+      (0, d.toggleExpressionPicker)(f.ExpressionPickerViewType.STICKER, a)
+    }, [a]);
+    l.useEffect(() => {
       let e = () => {
           requestAnimationFrame(() => {
-            v(!0)
+            g(!0)
           })
         },
         t = () => {
           requestAnimationFrame(() => {
-            v(!1)
+            g(!1)
           })
         };
-      return C.addListener("sticker-suggestions-shown", e), C.addListener("sticker-suggestions-hidden", t), () => {
-        C.removeListener("sticker-suggestions-shown", e), C.removeListener("sticker-suggestions-hidden", t)
+      return E.addListener("sticker-suggestions-shown", e), E.addListener("sticker-suggestions-hidden", t), () => {
+        E.removeListener("sticker-suggestions-shown", e), E.removeListener("sticker-suggestions-hidden", t)
       }
-    }, [C]);
-    let I = (0, a.useRedesignIconContext)().enabled;
-    return r ? null : (n = (0, l.jsx)(f.default, {
-      className: I ? "" : E.stickerIcon,
-      winking: T,
-      color: "currentColor"
-    }), (0, l.jsx)("div", {
-      className: o(m.CHAT_INPUT_BUTTON_CLASSNAME, E.buttonContainer),
+    }, [E]);
+    let {
+      Component: T,
+      events: _,
+      play: I
+    } = (0, o.useStickerLottie)();
+    return n ? null : (0, i.jsx)("div", {
+      className: s(f.CHAT_INPUT_BUTTON_CLASSNAME, m.buttonContainer),
       ref: t,
-      children: (0, l.jsx)(c.default, {
-        innerClassName: o(E.button, E.stickerButton, {
-          [E.stickerButtonWithNotification]: !1,
-          [E.stickerButtonTilted]: T && !y
+      children: (0, i.jsx)(c.default, {
+        innerClassName: s(m.button, m.stickerButton, {
+          [m.stickerButtonTilted]: y && !S
         }),
-        onClick: x,
-        isActive: y,
-        "aria-label": h.default.Messages.STICKER_BUTTON_LABEL,
-        "aria-expanded": y,
+        ..._,
+        onClick: () => {
+          C(), I()
+        },
+        isActive: S,
+        "aria-label": p.default.Messages.STICKER_BUTTON_LABEL,
+        "aria-expanded": S,
         "aria-haspopup": "dialog",
-        "aria-controls": g,
+        "aria-controls": x,
         sparkle: !1,
         notification: null,
-        children: n
+        children: (0, i.jsx)(T, {
+          color: "currentColor"
+        })
       })
-    }))
+    })
   }))

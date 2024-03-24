@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StreamRTCAnalyticsContext: function() {
-    return R
+    return D
   },
   default: function() {
     return i
@@ -15,22 +15,24 @@ var i, s = n("917351"),
   u = n("422791"),
   d = n("56947"),
   c = n("386045"),
-  f = n("808122"),
-  _ = n("845579"),
-  h = n("271938"),
-  g = n("42203"),
-  m = n("985365"),
-  E = n("945956"),
-  p = n("590401"),
-  v = n("278163"),
-  S = n("599110"),
-  T = n("104478"),
-  I = n("374014"),
-  C = n("933034"),
-  A = n("196383"),
-  y = n("49111"),
-  N = n("353927");
-class R {
+  _ = n("808122"),
+  f = n("963990"),
+  E = n("161454"),
+  h = n("845579"),
+  g = n("271938"),
+  m = n("42203"),
+  p = n("42887"),
+  S = n("985365"),
+  T = n("945956"),
+  v = n("590401"),
+  I = n("278163"),
+  A = n("599110"),
+  C = n("104478"),
+  y = n("374014"),
+  N = n("196383"),
+  R = n("49111"),
+  O = n("353927");
+class D {
   setActionContext(e) {
     this.actionContext = e
   }
@@ -53,7 +55,7 @@ i = class extends l.default {
     let {
       ownerId: e
     } = this._streamContext;
-    return h.default.getId() === e
+    return g.default.getId() === e
   }
   destroy(e) {
     this._videoStreamStats.stop(), this._trackVideoEndStats(e), this._updateVideoStreamId.cancel(), this._updateVideoStreamId(null, null), this._updateVideoStreamId.flush(), super.destroy()
@@ -101,23 +103,24 @@ i = class extends l.default {
           ...t,
           ...n,
           streamKey: this._streamKey
-        })), e === y.RTCConnectionStates.RTC_CONNECTED) {
+        })), e === R.RTCConnectionStates.RTC_CONNECTED) {
         var i;
-        null === (i = this._connection) || void 0 === i || i.on(a.BaseConnectionEvent.ScreenshareFinish, (e, t, n, i, s, r, a, o, l, u, d, c, f, _) => {
-          let h = this.getMediaSessionId(),
-            g = this.getRTCConnectionId(),
-            m = this.getGoLiveSource();
-          (0, v.getSystemAnalyticsInfo)().then(E => {
-            let p = null;
-            if (null != E) {
+        null === (i = this._connection) || void 0 === i || i.on(a.BaseConnectionEvent.ScreenshareFinish, (e, t, n, i, s, r, a, o, l, u, d, c, _, h) => {
+          let g = this.getMediaSessionId(),
+            m = this.getRTCConnectionId(),
+            p = this.getGoLiveSource();
+          (0, I.getSystemAnalyticsInfo)().then(S => {
+            var T, v, I;
+            let C = null;
+            if (null != S) {
               let {
                 cpu_brand: e,
                 cpu_vendor: t,
                 cpu_memory: n,
                 gpu_brand: i,
                 gpu_memory: s
-              } = E;
-              p = {
+              } = S;
+              C = {
                 cpu_brand: e,
                 cpu_vendor: t,
                 cpu_memory: n,
@@ -125,8 +128,15 @@ i = class extends l.default {
                 gpu_memory: s
               }
             }
-            let v = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != s ? s : 0) + (null != r ? r : 0) + (null != o ? o : 0) + (null != _ ? _ : 0) + (null != f ? f : 0);
-            S.default.track(y.AnalyticEvents.SCREENSHARE_FINISHED, {
+            let y = (null != e ? e : 0) + (null != t ? t : 0) + (null != n ? n : 0) + (null != i ? i : 0) + (null != s ? s : 0) + (null != r ? r : 0) + (null != o ? o : 0) + (null != h ? h : 0) + (null != _ ? _ : 0),
+              N = (null == p ? void 0 : null === (T = p.desktopSource) || void 0 === T ? void 0 : T.sourcePid) != null ? E.default.getGameForPID(p.desktopSource.sourcePid) : null,
+              {
+                gameName: D,
+                gameId: P,
+                exe: L,
+                distributor: M
+              } = (0, f.getRunningGameAnalytics)(N);
+            A.default.track(R.AnalyticEvents.SCREENSHARE_FINISHED, {
               screenshare_frames: e,
               videohook_frames: t,
               hybrid_dxgi_frames: n,
@@ -135,24 +145,28 @@ i = class extends l.default {
               hybrid_graphics_capture_frames: r,
               hybrid_capture_method_switches: a,
               quartz_frames: o,
-              screencapturekit_frames: _,
-              go_live_camera_frames: f,
-              total_frames: v,
+              screencapturekit_frames: h,
+              go_live_camera_frames: _,
+              total_frames: y,
               desktop_capturer_type: l,
-              media_session_id: h,
-              rtc_connection_id: g,
-              context: N.MediaEngineContextTypes.STREAM,
+              media_session_id: g,
+              rtc_connection_id: m,
+              context: O.MediaEngineContextTypes.STREAM,
               screens: u,
               windows: d,
               activity: c,
-              ...p,
-              ...(0, C.default)(null == m ? void 0 : m.desktopSource)
+              soundshare_session: null !== (I = null == p ? void 0 : null === (v = p.desktopSource) || void 0 === v ? void 0 : v.soundshareSession) && void 0 !== I ? I : void 0,
+              share_game_name: D,
+              share_game_id: P,
+              share_game_exe: L,
+              share_game_distributor: M,
+              ...C
             })
           })
         })
       }
     }), this.on(u.RTCConnectionEvent.Video, (t, n, i, s, r) => {
-      let a = (0, I.decodeStreamKey)(this._streamKey);
+      let a = (0, y.decodeStreamKey)(this._streamKey);
       a.guildId === t && a.channelId === n && a.ownerId === i && (null != this.getMediaSessionId() && !e && (this._trackVideoStartStats(), e = !0), this._updateVideoStreamId(s, r))
     }), this.on(u.RTCConnectionEvent.VideoSourceQualityChanged, (e, t, n, i, s, r) => {
       o.default.wait(() => o.default.dispatch({
@@ -176,22 +190,28 @@ i = class extends l.default {
     } = this.analyticsContext, {
       ownerId: r,
       guildId: a
-    } = this._streamContext, o = p.default.getRegion(E.default.getHostname()), l = _.BroadcastAutoBroadcast.getSetting();
+    } = this._streamContext, o = v.default.getRegion(T.default.getHostname()), l = h.BroadcastAutoBroadcast.getSetting(), {
+      gameName: u,
+      gameId: d,
+      exe: c,
+      distributor: _
+    } = (0, f.getRunningGameAnalytics)(t);
     return {
       channel_id: this.channelId,
       rtc_connection_id: this.getRTCConnectionId(),
       media_session_id: this.getMediaSessionId(),
       parent_media_session_id: this.parentMediaSessionId,
       sender_user_id: r,
-      context: N.MediaEngineContextTypes.STREAM,
+      context: O.MediaEngineContextTypes.STREAM,
       guild_id: a,
       stream_region: e,
       stream_source_type: n,
       guild_region: o,
       participant_type: this.isOwner ? "streamer" : "receiver",
-      share_application_name: null != t ? t.name : null,
-      share_application_id: null != t ? t.id : null,
-      share_application_executable: null != t ? t.exe : null,
+      share_application_name: u,
+      share_application_id: d,
+      share_application_executable: c,
+      share_application_distributor: _,
       video_layout: this._videoStreamStats.getLayout(),
       client_event_source: i,
       is_broadcast: s,
@@ -199,17 +219,17 @@ i = class extends l.default {
     }
   }
   _trackVideoStartStats() {
-    let e = this.isOwner ? (0, A.default)() : null;
-    S.default.track(y.AnalyticEvents.VIDEO_STREAM_STARTED, {
+    let e = this.isOwner ? (0, N.default)() : null;
+    A.default.track(R.AnalyticEvents.VIDEO_STREAM_STARTED, {
       ...this._getStreamAnalyticsProperties(),
       ...e,
-      connection_type: m.default.getType(),
-      effective_connection_speed: m.default.getEffectiveConnectionSpeed(),
-      service_provider: m.default.getServiceProvider()
+      connection_type: S.default.getType(),
+      effective_connection_speed: S.default.getEffectiveConnectionSpeed(),
+      service_provider: S.default.getServiceProvider()
     })
   }
   _trackVideoEndStats(e) {
-    let t = g.default.getChannel(this.channelId),
+    let t = m.default.getChannel(this.channelId),
       n = null != t ? t.type : null,
       {
         ownerId: i
@@ -221,32 +241,33 @@ i = class extends l.default {
     null != o && (s = this.isOwner ? o.getOutboundStats()[0] : o.getInboundStats(i), r = o.getNetworkStats(), a = this.isOwner ? o.getCodecUsageStats("streamer", this.userId) : o.getCodecUsageStats("receiver", i));
     let l = (0, d.areClipsEnabled)(),
       u = c.default.getSettings(),
-      _ = this.isOwner ? {
+      f = this.isOwner ? {
         clips_enabled: u.clipsEnabled && l,
         clips_buffer_length: u.clipsLength
       } : {},
-      h = this.isOwner ? {
+      E = this.isOwner ? {
         bandwidth_estimation_experiment: this.getBandwidthEstimationExperiment()
       } : {};
-    S.default.track(y.AnalyticEvents.VIDEO_STREAM_ENDED, {
+    A.default.track(R.AnalyticEvents.VIDEO_STREAM_ENDED, {
       ...s,
       ...a,
       ...r,
       ...this._videoStreamStats.getStats(),
       ...this._soundshareStats.getStats(),
       ...this._getStreamAnalyticsProperties(),
-      ..._,
-      ...h,
+      ...f,
+      ...E,
       channel_type: n,
       reason: e,
       max_viewers: this.analyticsContext.maxViewers,
       hostname: this.hostname,
-      device_performance_class: this.isOwner ? (0, f.getMediaPerformanceClass)() : null
+      hardware_enabled: p.default.getHardwareH264(),
+      device_performance_class: this.isOwner ? (0, _.getMediaPerformanceClass)() : null
     })
   }
   _getExtraConnectionOptions() {
     return {
-      streamUserId: (0, I.decodeStreamKey)(this._streamKey).ownerId
+      streamUserId: (0, y.decodeStreamKey)(this._streamKey).ownerId
     }
   }
   constructor({
@@ -258,25 +279,25 @@ i = class extends l.default {
     isStreamer: a,
     parentMediaSessionId: l
   }) {
-    let u = (0, I.decodeStreamKey)(t),
+    let u = (0, y.decodeStreamKey)(t),
       {
         guildId: d,
         channelId: c
       } = u;
     super({
-      userId: h.default.getId(),
+      userId: g.default.getId(),
       sessionId: e,
       guildId: d,
       channelId: c,
-      context: N.MediaEngineContextTypes.STREAM,
+      context: O.MediaEngineContextTypes.STREAM,
       rtcServerId: n,
       parentMediaSessionId: l
-    }), this._streamContext = u, this._streamKey = t, this._isStreamer = a, this._videoStreamStats = new T.default(i, this.isOwner), this.analyticsContext = s, this._updateVideoStreamId = r.debounce((e, t) => {
+    }), this._streamContext = u, this._streamKey = t, this._isStreamer = a, this._videoStreamStats = new C.default(i, this.isOwner), this.analyticsContext = s, this._updateVideoStreamId = r.debounce((e, t) => {
       let {
         guildId: n,
         channelId: i,
         ownerId: s
-      } = (0, I.decodeStreamKey)(this._streamKey);
+      } = (0, y.decodeStreamKey)(this._streamKey);
       o.default.wait(() => o.default.dispatch({
         type: "RTC_CONNECTION_VIDEO",
         guildId: n,
@@ -284,7 +305,7 @@ i = class extends l.default {
         userId: s,
         streamId: e,
         rtcServerId: t,
-        context: N.MediaEngineContextTypes.STREAM
+        context: O.MediaEngineContextTypes.STREAM
       }))
     }, 200), this._videoStreamStats.start(), this._initializeEvents()
   }

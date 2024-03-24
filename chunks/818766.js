@@ -8,7 +8,7 @@ var t = E("872717"),
   o = E("49111");
 
 function n(e, _) {
-  t.default.post({
+  t.HTTP.post({
     url: o.Endpoints.VOICE_CHANNEL_NOTIFICATIONS(e),
     query: {
       first_user: _

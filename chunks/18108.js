@@ -1,21 +1,21 @@
 "use strict";
-let i, s;
+let i, s, r;
 n.r(t), n.d(t, {
   updateIsInTabsUI: function() {
-    return u
+    return d
   }
 });
-var r = n("411916"),
-  a = n("827032"),
-  o = n("599110"),
-  l = n("286235");
+var a = n("411916"),
+  o = n("827032"),
+  l = n("599110"),
+  u = n("286235");
 
-function u(e) {
+function d(e) {
   i !== e && (i = e, s = e, ! function() {
-    let e = i ? s ? r.DesignIds.DESIGN_TABS_IA : r.DesignIds.DESIGN_IA : r.DesignIds.CLASSIC_IA;
-    o.default.extendSuperProperties({
+    let e = r && i && s ? a.DesignIds.YOU_BAR_IA : i ? s ? a.DesignIds.DESIGN_TABS_IA : a.DesignIds.DESIGN_IA : a.DesignIds.CLASSIC_IA;
+    l.default.extendSuperProperties({
       design_id: e
-    }), a.addGlobalTag("design_id", e), l.default.setTags({
+    }), o.addGlobalTag("design_id", e), u.default.setTags({
       design_id: "".concat(e)
     })
   }())

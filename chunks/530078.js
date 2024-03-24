@@ -14,12 +14,12 @@ var l = n("498574"),
   u = n("266926"),
   d = n("568734"),
   c = n("427459"),
-  f = n("665618"),
-  E = n("605953"),
+  E = n("665618"),
+  f = n("605953"),
   _ = n("793079"),
   T = n("49111"),
   I = n("782340"),
-  m = n("18978");
+  m = n("599541");
 
 function N(e) {
   var t, N;
@@ -31,14 +31,14 @@ function N(e) {
       author: O,
       currentUserId: R
     } = e,
-    L = R === O.id,
+    v = R === O.id,
     {
-      channel: v,
+      channel: L,
       approximate_member_count: P,
       approximate_presence_count: D
     } = M,
     x = M.state === T.InviteStates.ACCEPTING,
-    y = null != v ? (0, r.createChannelRecordFromInvite)(v) : null,
+    y = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
     U = null != g,
     j = null != y,
     b = null != y && y.isGuildVocal(),
@@ -47,14 +47,14 @@ function N(e) {
     F = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
-    g = f.fromInviteGuild(M.guild);
+    g = E.fromInviteGuild(M.guild);
     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
     g.premiumTier = e
   }
   let k = U ? C : h,
-    w = (0, E.getHeaderTextForInvite)({
+    w = (0, f.getHeaderTextForInvite)({
       isVoiceChannel: b,
-      isOwnInvite: L,
+      isOwnInvite: v,
       isGuest: B,
       isHubGuild: F,
       isStage: G,

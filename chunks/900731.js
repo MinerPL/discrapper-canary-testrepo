@@ -1,10 +1,10 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return a
   }
 });
-var a = (0, r("237436").defineColorTokens)({
+var a = (0, t("237436").defineColorTokens)({
   "button-danger-background": {
     dark: "red.430",
     light: "red.430"
@@ -237,20 +237,9 @@ var a = (0, r("237436").defineColorTokens)({
     dark: "brand.560",
     light: "brand.560"
   },
-  "redesign-button-primary-on-blurple-text": {
-    dark: "brand.500",
-    light: "brand.500"
-  },
-  "redesign-button-primary-on-blurple-background": {
-    name: "white"
-  },
   "redesign-button-primary-on-blurple-pressed-text": {
     dark: "brand.530",
     light: "brand.530"
-  },
-  "redesign-button-primary-on-blurple-pressed-background": {
-    dark: "brand.200",
-    light: "brand.200"
   },
   "redesign-button-primary-alt-text": {
     name: "text-brand"
@@ -343,26 +332,6 @@ var a = (0, r("237436").defineColorTokens)({
     dark: "primary.500",
     light: "primary.130"
   },
-  "redesign-button-secondary-alt-text": {
-    name: "text-primary"
-  },
-  "redesign-button-secondary-alt-background": {
-    dark: "primary.530",
-    light: {
-      color: "black.500",
-      opacity: .08
-    }
-  },
-  "redesign-button-secondary-alt-pressed-background": {
-    dark: "primary.560",
-    light: {
-      color: "black.500",
-      opacity: .16
-    }
-  },
-  "redesign-button-secondary-alt-pressed-text": {
-    name: "text-secondary"
-  },
   "redesign-button-danger-text": {
     name: "white"
   },
@@ -373,6 +342,9 @@ var a = (0, r("237436").defineColorTokens)({
   "redesign-button-danger-pressed-background": {
     dark: "red.460",
     light: "red.460"
+  },
+  "redesign-button-active-text": {
+    name: "white"
   },
   "redesign-button-positive-text": {
     name: "white"
@@ -392,11 +364,92 @@ var a = (0, r("237436").defineColorTokens)({
   "redesign-button-overlay-background": {
     name: "white"
   },
+  "redesign-button-primary-overlay-background": {
+    name: "white"
+  },
   "redesign-button-overlay-pressed-background": {
     dark: "primary.230",
     light: "primary.230"
   },
   "redesign-button-overlay-alpha-text": {
     name: "white"
+  },
+  "redesign-button-secondary-overlay-text": {
+    name: "white"
+  },
+  "redesign-button-overlay-alpha-background": {
+    dark: {
+      color: "black.500",
+      opacity: .54
+    },
+    darker: {
+      color: "black.500",
+      opacity: .54
+    },
+    midnight: {
+      color: "black.500",
+      opacity: .54
+    },
+    light: {
+      color: "black.500",
+      opacity: .54
+    }
+  },
+  "redesign-button-overlay-alpha-pressed-background": {
+    dark: {
+      color: "black.500",
+      opacity: .64
+    },
+    darker: {
+      color: "black.500",
+      opacity: .64
+    },
+    midnight: {
+      color: "black.500",
+      opacity: .64
+    },
+    light: {
+      color: "black.500",
+      opacity: .64
+    }
+  },
+  "redesign-button-selected-background": {
+    dark: {
+      color: "brand.500",
+      opacity: .24
+    },
+    darker: {
+      color: "brand.500",
+      opacity: .24
+    },
+    midnight: {
+      color: "brand.500",
+      opacity: .24
+    },
+    light: {
+      color: "brand.500",
+      opacity: .16
+    }
+  },
+  "redesign-button-selected-pressed-background": {
+    dark: {
+      color: "brand.500",
+      opacity: .28
+    },
+    darker: {
+      color: "brand.500",
+      opacity: .28
+    },
+    midnight: {
+      color: "brand.500",
+      opacity: .28
+    },
+    light: {
+      color: "brand.500",
+      opacity: .24
+    }
+  },
+  "redesign-button-selected-text": {
+    name: "bg-brand"
   }
 })

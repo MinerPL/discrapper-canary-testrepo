@@ -13,13 +13,14 @@ var s = n("65597"),
 let u = "no_text_activity",
   d = {
     [u]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES],
-    [o.ActivityPanelModes.ACTION_BAR]: [r.ChatOverlays.NEW_MESSAGES],
+    [o.ActivityPanelModes.DISCONNECTED]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES],
+    [o.ActivityPanelModes.LAUNCHING_WITH_ORIENTATION_CHANGE]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES],
     [o.ActivityPanelModes.PANEL]: [],
     [o.ActivityPanelModes.PIP]: [r.ChatOverlays.NEW_MESSAGES, r.ChatOverlays.OPT_IN_CHANNEL, r.ChatOverlays.SUMMARIES]
   };
 
 function c() {
-  let e = (0, s.default)([a.default], () => a.default.getCurrentEmbeddedActivity()),
-    t = (0, s.default)([a.default], () => a.default.getActivityPanelMode());
+  let e = (0, s.useStateFromStores)([a.default], () => a.default.getCurrentEmbeddedActivity()),
+    t = (0, s.useStateFromStores)([a.default], () => a.default.getActivityPanelMode());
   return void 0 === e || (0, l.default)(null == e ? void 0 : e.channelId, i.default) ? d[u] : d[t]
 }

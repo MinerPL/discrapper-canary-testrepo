@@ -1,50 +1,50 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
-}), l("222007");
-var a, n, r = l("37983"),
-  i = l("884691"),
-  u = l("414456"),
-  s = l.n(u),
-  o = l("77078"),
-  d = l("145131"),
-  c = l("618556");
-(n = a || (a = {})).SINGLE_AVATAR = "1", n.MULTIPLE_AVATAR = "2";
+}), n("222007");
+var i, l, a = n("37983"),
+  s = n("884691"),
+  r = n("414456"),
+  o = n.n(r),
+  u = n("77078"),
+  d = n("145131"),
+  c = n("92796");
+(l = i || (i = {})).SINGLE_AVATAR = "1", l.MULTIPLE_AVATAR = "2";
 let f = {
-  [o.AvatarSizes.SIZE_32]: c.avatarSmall,
-  [o.AvatarSizes.SIZE_40]: c.avatarLarge
+  [u.AvatarSizes.SIZE_32]: c.avatarSmall,
+  [u.AvatarSizes.SIZE_40]: c.avatarLarge
 };
-class m extends i.Component {
+class p extends s.Component {
   render() {
     let {
       type: e,
       avatarSize: t,
-      className: l
+      className: n
     } = this.props;
-    return "2" === e ? (0, r.jsxs)("div", {
-      className: s(c.multiplePlaceholder, l),
-      children: [(0, r.jsxs)(d.default, {
-        children: [(0, r.jsx)("div", {
-          className: s(c.placeholderAvatar, f[t], c.avatarMasked)
-        }), (0, r.jsx)("div", {
-          className: s(c.placeholderAvatar, f[t], c.avatarMasked)
-        }), (0, r.jsx)("div", {
-          className: s(c.placeholderAvatar, f[t])
+    return "2" === e ? (0, a.jsxs)("div", {
+      className: o(c.multiplePlaceholder, n),
+      children: [(0, a.jsxs)(d.default, {
+        children: [(0, a.jsx)("div", {
+          className: o(c.placeholderAvatar, f[t], c.avatarMasked)
+        }), (0, a.jsx)("div", {
+          className: o(c.placeholderAvatar, f[t], c.avatarMasked)
+        }), (0, a.jsx)("div", {
+          className: o(c.placeholderAvatar, f[t])
         })]
-      }), (0, r.jsx)(d.default, {
+      }), (0, a.jsx)(d.default, {
         grow: 1,
         className: c.mulitplePlaceholderUsername,
         style: {
           maxWidth: this.placeholderMaxWidth
         }
       })]
-    }) : (0, r.jsxs)(d.default, {
-      className: s(c.placeholder, l),
-      children: [(0, r.jsx)("div", {
-        className: s(c.placeholderAvatar, f[t])
-      }), (0, r.jsx)(d.default, {
+    }) : (0, a.jsxs)(d.default, {
+      className: o(c.placeholder, n),
+      children: [(0, a.jsx)("div", {
+        className: o(c.placeholderAvatar, f[t])
+      }), (0, a.jsx)(d.default, {
         grow: 1,
         className: c.placeholderUsername,
         style: {
@@ -57,7 +57,7 @@ class m extends i.Component {
     super(...e), this.placeholderMaxWidth = "".concat(Math.floor(40 * Math.random()) + 40, "%")
   }
 }
-m.defaultProps = {
+p.defaultProps = {
   type: "1"
-}, m.Types = a;
-var h = m
+}, p.Types = i;
+var m = p

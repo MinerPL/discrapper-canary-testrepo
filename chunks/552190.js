@@ -9,13 +9,13 @@ n("884691");
 var l = n("77078"),
   r = n("423487"),
   s = n("782340"),
-  i = n("169075"),
+  i = n("582253"),
   d = e => {
     let {
-      hasError: t,
+      errorMessage: t,
       onClose: n
     } = e;
-    return t ? (0, a.jsxs)("div", {
+    return null == t || "" === t ? null : (0, a.jsxs)("div", {
       className: i.errorContainer,
       children: [(0, a.jsx)(r.default, {
         width: 20,
@@ -24,7 +24,7 @@ var l = n("77078"),
       }), (0, a.jsx)(l.Text, {
         className: i.errorText,
         variant: "text-sm/normal",
-        children: s.default.Messages.MOBILE_REPORTS_SUBMIT_FAILED
+        children: t
       }), (0, a.jsx)(l.Clickable, {
         onClick: () => {
           n()
@@ -32,5 +32,5 @@ var l = n("77078"),
         "aria-label": s.default.Messages.DISMISS,
         className: i.closeIcon
       })]
-    }) : null
+    })
   }

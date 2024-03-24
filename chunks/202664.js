@@ -4,95 +4,95 @@ n.r(t), n.d(t, {
     return R
   }
 });
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  s = n.n(l),
-  a = n("446674"),
+var r = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  l = n.n(a),
+  s = n("446674"),
   o = n("77078"),
   u = n("109036"),
-  d = n("697218"),
-  c = n("993105"),
-  m = n("719923"),
-  f = n("552917"),
+  c = n("697218"),
+  d = n("993105"),
+  f = n("719923"),
+  m = n("552917"),
   _ = n("843647"),
   E = n("789946"),
-  T = n("646718"),
-  I = n("49111"),
-  P = n("527382"),
-  p = n("782340"),
-  S = n("74230");
+  I = n("646718"),
+  T = n("49111"),
+  p = n("527382"),
+  S = n("782340"),
+  P = n("348133");
 
 function R(e) {
   let t, {
       onClose: n,
-      fileSize: l,
+      fileSize: a,
       ...R
     } = e,
-    C = null != l && T.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < l,
+    C = null != a && I.MAX_PREMIUM_TIER_0_ATTACHMENT_SIZE < a,
     {
       isLoading: O,
-      suggestedPremiumType: M
+      suggestedPremiumType: g
     } = (0, _.default)({
       autoTrackExposure: !C,
-      experiment: f.default,
-      location: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
+      experiment: m.default,
+      location: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL
     }),
-    g = !C && M === T.PremiumTypes.TIER_0,
-    L = (0, a.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    v = (0, i.jsx)(u.default, {
-      icons: P.DEFAULT_FILE_UPLOAD_ICONS
+    M = !C && g === I.PremiumTypes.TIER_0,
+    h = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()),
+    L = (0, r.jsx)(u.default, {
+      icons: p.DEFAULT_FILE_UPLOAD_ICONS
     });
-  t = g ? p.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
-    premiumPlan: (0, m.getPremiumTypeDisplayName)(T.PremiumTypes.TIER_0),
-    premiumMaxSize: p.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
-  }) : p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
-  let U = r.useMemo(() => {
-      let e = m.default.getUserMaxFileSize(L),
-        t = (0, c.formatSize)(e / 1024, {
+  t = M ? S.default.Messages.UPLOAD_AREA_PREMIUM_TIER_UPSELL_BODY_LINE_2.format({
+    premiumPlan: (0, f.getPremiumTypeDisplayName)(I.PremiumTypes.TIER_0),
+    premiumMaxSize: S.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED
+  }) : S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_2_INCREASE;
+  let N = i.useMemo(() => {
+      let e = f.default.getUserMaxFileSize(h),
+        t = (0, d.formatSize)(e / 1024, {
           useKibibytes: !0
         }),
-        n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+        n = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
           maxSize: t
         });
-      switch (null == L ? void 0 : L.premiumType) {
-        case T.PremiumTypes.TIER_0:
-          n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
+      switch (null == h ? void 0 : h.premiumType) {
+        case I.PremiumTypes.TIER_0:
+          n = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_0.format({
             maxSize: t
           });
           break;
-        case T.PremiumTypes.TIER_1:
-          n = p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
+        case I.PremiumTypes.TIER_1:
+          n = S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1_PREMIUM_TIER_1.format({
             maxSize: t
           })
       }
       return n
-    }, [L]),
-    h = (0, i.jsxs)("div", {
-      className: S.body,
-      children: [(0, i.jsx)("span", {
-        children: U
-      }), (0, i.jsx)(o.Text, {
+    }, [h]),
+    v = (0, r.jsxs)("div", {
+      className: P.body,
+      children: [(0, r.jsx)("span", {
+        children: N
+      }), (0, r.jsx)(o.Text, {
         variant: "text-md/medium",
         children: t
       })]
     });
-  return (0, i.jsx)(E.default, {
-    artElement: v,
-    artContainerClassName: s(S.artContainer),
+  return (0, r.jsx)(E.default, {
+    artElement: L,
+    artContainerClassName: l(P.artContainer),
     enableArtBoxShadow: !1,
-    type: T.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
-    title: p.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    body: h,
-    context: p.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
-      maxSize: p.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
+    type: I.PremiumUpsellTypes.UPLOAD_ERROR_UPSELL,
+    title: S.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    body: v,
+    context: S.default.Messages.UPLOAD_AREA_PREMIUM_UPSELL_BODY_LINE_1.format({
+      maxSize: S.default.Messages.FILE_UPLOAD_LIMIT_NEW_STANDARD
     }),
     glowUp: t,
     analyticsLocation: {
-      section: I.AnalyticsSections.FILE_UPLOAD_POPOUT
+      section: T.AnalyticsSections.FILE_UPLOAD_POPOUT
     },
     onClose: n,
-    subscriptionTier: g ? T.PremiumSubscriptionSKUs.TIER_0 : T.PremiumSubscriptionSKUs.TIER_2,
+    subscriptionTier: M ? I.PremiumSubscriptionSKUs.TIER_0 : I.PremiumSubscriptionSKUs.TIER_2,
     isLoading: O,
     ...R
   })

@@ -1,23 +1,23 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return n
   }
 });
-var a, n, i = r("37983"),
-  l = r("884691"),
-  o = r("414456"),
-  s = r.n(o),
-  c = r("77078"),
-  d = r("339783"),
-  u = r("865146"),
-  h = r("145131"),
-  p = r("712218"),
-  f = r("745279"),
-  m = r("159885"),
-  g = r("782340"),
-  y = r("584565");
-(a = class extends l.PureComponent {
+var a, n, i = t("37983"),
+  o = t("884691"),
+  l = t("414456"),
+  s = t.n(l),
+  c = t("77078"),
+  d = t("339783"),
+  u = t("865146"),
+  h = t("145131"),
+  p = t("712218"),
+  m = t("745279"),
+  g = t("159885"),
+  f = t("782340"),
+  y = t("29419");
+(a = class extends o.PureComponent {
   get typeString() {
     let {
       paymentSource: e
@@ -38,25 +38,26 @@ var a, n, i = r("37983"),
     else if (e instanceof u.EPSSourceRecord) return p.default.Types.EPS;
     else if (e instanceof u.IdealSourceRecord) return p.default.Types.IDEAL;
     else if (e instanceof u.CashAppSourceRecord) return p.default.Types.CASH_APP;
+    else if (e instanceof u.AppleSourceRecord) return p.default.Types.APPLE;
     return p.default.Types.UNKNOWN
   }
   getLabel(e) {
-    return e instanceof u.CreditCardSourceRecord ? g.default.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
-      brand: (0, m.upperCaseFirstChar)(e.brand),
+    return e instanceof u.CreditCardSourceRecord ? f.default.Messages.PAYMENT_SOURCE_CARD_ENDING.format({
+      brand: (0, g.upperCaseFirstChar)(e.brand),
       last_4: e.last4
-    }) : e instanceof u.PaypalSourceRecord ? g.default.Messages.PAYMENT_SOURCE_PAYPAL : e instanceof u.SofortSourceRecord ? g.default.Messages.PAYMENT_SOURCE_SOFORT : e instanceof u.GiropaySourceRecord ? g.default.Messages.PAYMENT_SOURCE_GIROPAY : e instanceof u.Przelewy24SourceRecord ? g.default.Messages.PAYMENT_SOURCE_PRZELEWY24 : e instanceof u.PaysafeSourceRecord ? g.default.Messages.PAYMENT_SOURCE_PAYSAFE_CARD : e instanceof u.GcashSourceRecord ? g.default.Messages.PAYMENT_SOURCE_GCASH : e instanceof u.GrabPayMySourceRecord ? g.default.Messages.PAYMENT_SOURCE_GRABPAY : e instanceof u.MomoWalletSourceRecord ? g.default.Messages.PAYMENT_SOURCE_MOMO_WALLET : e instanceof u.VenmoSourceRecord ? g.default.Messages.PAYMENT_SOURCE_VENMO : e instanceof u.KaKaoPaySourceRecord ? g.default.Messages.PAYMENT_SOURCE_KAKAOPAY : e instanceof u.GoPayWalletSourceRecord ? g.default.Messages.PAYMENT_SOURCE_GOPAY_WALLET : e instanceof u.BancontactSourceRecord ? g.default.Messages.PAYMENT_SOURCE_BANCONTACT : e instanceof u.IdealSourceRecord ? g.default.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({
+    }) : e instanceof u.PaypalSourceRecord ? f.default.Messages.PAYMENT_SOURCE_PAYPAL : e instanceof u.SofortSourceRecord ? f.default.Messages.PAYMENT_SOURCE_SOFORT : e instanceof u.GiropaySourceRecord ? f.default.Messages.PAYMENT_SOURCE_GIROPAY : e instanceof u.Przelewy24SourceRecord ? f.default.Messages.PAYMENT_SOURCE_PRZELEWY24 : e instanceof u.PaysafeSourceRecord ? f.default.Messages.PAYMENT_SOURCE_PAYSAFE_CARD : e instanceof u.GcashSourceRecord ? f.default.Messages.PAYMENT_SOURCE_GCASH : e instanceof u.GrabPayMySourceRecord ? f.default.Messages.PAYMENT_SOURCE_GRABPAY : e instanceof u.MomoWalletSourceRecord ? f.default.Messages.PAYMENT_SOURCE_MOMO_WALLET : e instanceof u.VenmoSourceRecord ? f.default.Messages.PAYMENT_SOURCE_VENMO : e instanceof u.KaKaoPaySourceRecord ? f.default.Messages.PAYMENT_SOURCE_KAKAOPAY : e instanceof u.GoPayWalletSourceRecord ? f.default.Messages.PAYMENT_SOURCE_GOPAY_WALLET : e instanceof u.BancontactSourceRecord ? f.default.Messages.PAYMENT_SOURCE_BANCONTACT : e instanceof u.IdealSourceRecord ? f.default.Messages.PAYMENT_SOURCE_IDEAL_WITH_BANK.format({
       bank: (0, d.getIdealBankDisplayNameFromBankName)(e.bank)
-    }) : e instanceof u.EPSSourceRecord ? g.default.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({
+    }) : e instanceof u.EPSSourceRecord ? f.default.Messages.PAYMENT_SOURCE_EPS_WITH_BANK.format({
       bank: (0, d.getEPSBankDisplayNameFromBankName)(e.bank)
-    }) : e instanceof u.CashAppSourceRecord ? g.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY : g.default.Messages.PAYMENT_SOURCE_UNKNOWN
+    }) : e instanceof u.CashAppSourceRecord ? f.default.Messages.PAYMENT_SOURCE_CASH_APP_PAY : e instanceof u.AppleSourceRecord ? f.default.Messages.PAYMENT_SOURCE_APPLE : f.default.Messages.PAYMENT_SOURCE_UNKNOWN
   }
   renderDescription() {
     let {
       paymentSource: e,
-      descriptionClassName: t
+      descriptionClassName: r
     } = this.props;
     return (0, i.jsx)(c.Text, {
-      className: s(y.description, t),
+      className: s(y.description, r),
       variant: "text-md/semibold",
       children: this.getLabel(e)
     })
@@ -64,18 +65,18 @@ var a, n, i = r("37983"),
   renderSubText() {
     let {
       paymentSource: e,
-      locale: t
-    } = this.props, r = null;
-    return e instanceof u.CreditCardSourceRecord ? r = g.default.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
-      month: (0, f.getLocalizedDisplayMonth)(e.expiresMonth, t),
+      locale: r
+    } = this.props, t = null;
+    return e instanceof u.CreditCardSourceRecord ? t = f.default.Messages.PAYMENT_SOURCE_CARD_EXPIRES.format({
+      month: (0, m.getLocalizedDisplayMonth)(e.expiresMonth, r),
       year: e.expiresYear
-    }) : e instanceof u.PaypalSourceRecord ? r = e.email : e instanceof u.SofortSourceRecord ? r = e.email : e instanceof u.Przelewy24SourceRecord ? r = e.email : e instanceof u.VenmoSourceRecord ? r = "@" + e.username : e instanceof u.CashAppSourceRecord && (r = e.username), r
+    }) : e instanceof u.PaypalSourceRecord ? t = e.email : e instanceof u.SofortSourceRecord ? t = e.email : e instanceof u.Przelewy24SourceRecord ? t = e.email : e instanceof u.VenmoSourceRecord ? t = "@" + e.username : e instanceof u.CashAppSourceRecord && (t = e.username), t
   }
   render() {
     let {
       isDefault: e,
-      paymentSource: t,
-      showSubtext: r,
+      paymentSource: r,
+      showSubtext: t,
       isForSubscription: a
     } = this.props, n = this.renderSubText();
     return (0, i.jsxs)(h.default, {
@@ -88,15 +89,15 @@ var a, n, i = r("37983"),
           align: h.default.Align.CENTER,
           children: [this.renderDescription(), e ? (0, i.jsx)("div", {
             className: y.defaultIndicator,
-            children: g.default.Messages.DEFAULT
+            children: f.default.Messages.DEFAULT
           }) : null, a ? (0, i.jsx)("div", {
             className: y.premiumIndicator,
-            children: g.default.Messages.PAYMENT_SOURCE_SUBSCRIPTION
-          }) : null, t.invalid ? (0, i.jsx)("div", {
+            children: f.default.Messages.PAYMENT_SOURCE_SUBSCRIPTION
+          }) : null, r.invalid ? (0, i.jsx)("div", {
             className: y.invalidIndicator,
-            children: g.default.Messages.PAYMENT_SOURCE_INVALID
+            children: f.default.Messages.PAYMENT_SOURCE_INVALID
           }) : null]
-        }), r && null != n ? (0, i.jsx)("div", {
+        }), t && null != n ? (0, i.jsx)("div", {
           className: y.subText,
           children: n
         }) : null]

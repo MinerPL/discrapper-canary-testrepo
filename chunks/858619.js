@@ -1,7 +1,7 @@
 "use strict";
-var s, i;
+var i, s;
 n.r(t), n.d(t, {
   EmojiTypes: function() {
-    return s
+    return i
   }
-}), (i = s || (s = {})).UNICODE = "UNICODE", i.GUILD = "GUILD_EMOJI", i.PACK = "PACK_EMOJI"
+}), (s = i || (i = {})).UNICODE = "UNICODE", s.GUILD = "GUILD_EMOJI"

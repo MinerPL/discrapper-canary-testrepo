@@ -1,60 +1,69 @@
 "use strict";
 n.r(t), n.d(t, {
   openUserProfileModal: function() {
-    return o
+    return a
   },
   closeUserProfileModal: function() {
-    return u
+    return d
   }
 });
 var l = n("913144"),
-  r = n("327037"),
-  i = n("697218"),
-  s = n("506885"),
-  a = n("49111");
+  i = n("327037"),
+  u = n("697218"),
+  r = n("506885"),
+  o = n("49111");
 
-function o(e) {
+function a(e) {
   let {
     userId: t,
     section: n,
-    guildId: o = a.ME,
-    channelId: u,
-    friendToken: c,
-    autoFocusNote: d,
-    analyticsLocation: f
-  } = e, h = i.default.getUser(t), E = o !== a.ME ? o : void 0;
-  if (null == h) return (0, r.fetchProfile)(t, {
-    friendToken: c,
-    guildId: E
+    guildId: a = o.ME,
+    channelId: d,
+    messageId: s,
+    roleId: c,
+    friendToken: f,
+    autoFocusNote: E,
+    analyticsLocation: _,
+    sourceAnalyticsLocations: m
+  } = e, h = u.default.getUser(t), M = a !== o.ME ? a : void 0;
+  if (null == h) return (0, i.fetchProfile)(t, {
+    friendToken: f,
+    guildId: M
   }).then(() => {
     l.default.dispatch({
       type: "USER_PROFILE_MODAL_OPEN",
       userId: t,
       section: n,
-      guildId: o,
-      channelId: u,
-      friendToken: c,
-      autoFocusNote: d,
-      analyticsLocation: f
+      guildId: a,
+      channelId: d,
+      messageId: s,
+      roleId: c,
+      friendToken: f,
+      autoFocusNote: E,
+      analyticsLocation: _,
+      sourceAnalyticsLocations: m
     })
   });
-  (0, s.default)(t, h.getAvatarURL(void 0, 80), {
+  (0, r.default)(t, h.getAvatarURL(void 0, 80), {
     withMutualGuilds: !0,
-    friendToken: c,
-    guildId: E
+    friendToken: f,
+    guildId: M
   }), l.default.dispatch({
     type: "USER_PROFILE_MODAL_OPEN",
     userId: t,
     section: n,
-    guildId: o,
-    channelId: u,
-    friendToken: c,
-    autoFocusNote: d,
-    analyticsLocation: f
+    guildId: a,
+    channelId: d,
+    messageId: s,
+    roleId: c,
+    friendToken: f,
+    autoFocusNote: E,
+    analyticsLocation: _,
+    sourceAnalyticsLocations: m
   })
 }
 
-function u() {
+function d() {
   l.default.dispatch({
     type: "USER_PROFILE_MODAL_CLOSE"
   })

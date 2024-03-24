@@ -1,19 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return g
   }
 }), n("222007");
 var i = n("446674"),
-  l = n("913144"),
-  a = n("383018");
-let s = new Map,
-  r = new Map;
+  s = n("913144"),
+  r = n("716241"),
+  a = n("383018"),
+  o = n("49111");
+let l = new Map,
+  u = new Map,
+  d = new Map;
 
-function u(e) {
-  if (!r.has(e)) {
+function c(e) {
+  if (!u.has(e)) {
     var t;
-    r.set(e, {
+    u.set(e, {
       commandId: null === (t = a.default.getActiveCommand(e)) || void 0 === t ? void 0 : t.id,
       optionName: a.default.getActiveOptionName(e),
       optionNameToAutocompleteQueries: new Map,
@@ -24,106 +27,119 @@ function u(e) {
       lastResponseNonce: void 0
     })
   }
-  return r.get(e)
+  return u.get(e)
 }
 
-function d() {
-  return s.clear(), r.clear(), !0
+function _() {
+  return l.clear(), u.clear(), !0
 }
 
-function o(e) {
+function f(e) {
   let {
     channelId: t,
     command: n
   } = e;
-  c(t, null == n ? void 0 : n.id)
+  E(t, null == n ? void 0 : n.id)
 }
 
-function c(e, t) {
+function E(e, t) {
   let n = a.default.getActiveOptionName(e),
-    i = r.get(e);
+    i = u.get(e);
   return null != i && (t !== i.commandId || n !== i.optionName) && (null != t && t !== i.commandId && (i.optionNameToLastResults.clear(), i.optionNameToNonce.clear(), i.optionNameToLastQuery.clear(), i.optionNameToAutocompleteQueries.clear()), i.lastErrored = !1, i.commandId = t, i.optionName = n, !0)
 }
-class _ extends i.default.Store {
+class h extends i.default.Store {
   initialize() {
     this.waitFor(a.default)
   }
   getLastErrored(e) {
-    return u(e).lastErrored
+    return c(e).lastErrored
   }
   getAutocompleteChoices(e, t, n) {
     var i;
-    let l = u(e);
-    return null === (i = l.optionNameToAutocompleteQueries.get(t)) || void 0 === i ? void 0 : i.get(n)
+    let s = c(e);
+    return null === (i = s.optionNameToAutocompleteQueries.get(t)) || void 0 === i ? void 0 : i.get(n)
   }
   getAutocompleteLastChoices(e, t) {
-    let n = u(e);
+    let n = c(e);
     return n.optionNameToLastResults.get(t)
   }
   getLastResponseNonce(e) {
-    return u(e).lastResponseNonce
+    return c(e).lastResponseNonce
   }
 }
-_.displayName = "ApplicationCommandAutocompleteStore";
-var f = new _(l.default, {
-  CONNECTION_OPEN: d,
-  LOGOUT: d,
-  CHANNEL_SELECT: d,
+h.displayName = "ApplicationCommandAutocompleteStore";
+var g = new h(s.default, {
+  CONNECTION_OPEN: _,
+  LOGOUT: _,
+  CHANNEL_SELECT: _,
   APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST: function(e) {
     var t;
     let {
       nonce: n,
       channelId: i,
-      query: l,
-      name: a
-    } = e, r = u(i);
-    if (r.optionNameToLastQuery.get(a) === l) return !1;
-    r.optionNameToLastQuery.set(a, l);
-    let d = null === (t = r.optionNameToAutocompleteQueries.get(a)) || void 0 === t ? void 0 : t.get(l);
-    if (null != d) return r.lastErrored = !1, r.optionNameToLastResults.set(a, d), !0;
-    let o = r.optionNameToNonce.get(a);
-    if (null != o && s.delete(o), s.set(n, {
+      query: s,
+      name: r
+    } = e, a = c(i);
+    if (a.optionNameToLastQuery.get(r) === s) return !1;
+    a.optionNameToLastQuery.set(r, s);
+    let o = null === (t = a.optionNameToAutocompleteQueries.get(r)) || void 0 === t ? void 0 : t.get(s);
+    if (null != o) return a.lastErrored = !1, a.optionNameToLastResults.set(r, o), !0;
+    let u = a.optionNameToNonce.get(r);
+    if (null != u && l.delete(u), l.set(n, {
         channelId: i,
-        query: l,
-        name: a
-      }), r.optionNameToNonce.set(a, n), r.lastErrored) return r.lastErrored = !1, !0
+        query: s,
+        name: r
+      }), d.set(n, new Date), a.optionNameToNonce.set(r, n), a.lastErrored) return a.lastErrored = !1, !0
   },
   APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE: function(e) {
     var t, n;
     let {
       choices: i,
-      nonce: l
-    } = e, a = s.get(l);
+      nonce: s
+    } = e, a = l.get(s);
     if (null == a) return !1;
-    s.delete(l);
-    let r = null !== (n = null == i ? void 0 : i.map(e => {
+    l.delete(s);
+    let u = null !== (n = null == i ? void 0 : i.map(e => {
         var t;
         return {
           ...e,
           displayName: null !== (t = e.name_localized) && void 0 !== t ? t : e.name
         }
       })) && void 0 !== n ? n : [],
-      d = u(a.channelId);
-    return null == d.optionNameToAutocompleteQueries.get(a.name) && d.optionNameToAutocompleteQueries.set(a.name, new Map), null === (t = d.optionNameToAutocompleteQueries.get(a.name)) || void 0 === t || t.set(a.query, r), d.optionNameToLastQuery.get(a.name) === a.query && (d.lastErrored = !1, d.optionNameToLastResults.set(a.name, r)), d.lastResponseNonce = l, !0
+      _ = d.get(s),
+      f = null != _ ? new Date().getTime() - _.getTime() : 0;
+    (0, r.trackWithMetadata)(o.AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
+      duration_ms: f,
+      error: !1,
+      num_options: u.length
+    }), d.delete(s);
+    let E = c(a.channelId);
+    return null == E.optionNameToAutocompleteQueries.get(a.name) && E.optionNameToAutocompleteQueries.set(a.name, new Map), null === (t = E.optionNameToAutocompleteQueries.get(a.name)) || void 0 === t || t.set(a.query, u), E.optionNameToLastQuery.get(a.name) === a.query && (E.lastErrored = !1, E.optionNameToLastResults.set(a.name, u)), E.lastResponseNonce = s, !0
   },
   INTERACTION_FAILURE: function(e) {
     let {
       nonce: t
     } = e;
     if (null == t) return !1;
-    let n = s.get(t);
+    let n = l.get(t);
     if (null == n) return !1;
-    s.delete(t);
-    let i = u(n.channelId);
-    return i.lastErrored = !0, !0
+    l.delete(t);
+    let i = d.get(t),
+      s = null != i ? new Date().getTime() - i.getTime() : 0;
+    (0, r.trackWithMetadata)(o.AnalyticEvents.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
+      duration_ms: s,
+      error: !0
+    }), d.delete(t);
+    let a = c(n.channelId);
+    return a.lastErrored = !0, !0
   },
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: o,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: o,
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: f,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: f,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function(e) {
     let {
       channelId: t,
       command: n
     } = e;
-    c(t, null == n ? void 0 : n.id)
+    E(t, null == n ? void 0 : n.id)
   }
 })

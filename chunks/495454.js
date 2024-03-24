@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   getRiskyPerms: function() {
-    return S
+    return m
   },
   default: function() {
     return N
@@ -9,67 +9,69 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("316693"),
-  r = s("77078"),
-  o = s("957255"),
-  d = s("578706"),
-  u = s("423487"),
-  c = s("991170"),
-  E = s("695838"),
-  _ = s("69741"),
-  T = s("782340"),
-  I = s("642622");
+  r = s("446674"),
+  o = s("77078"),
+  d = s("305961"),
+  u = s("957255"),
+  c = s("578706"),
+  E = s("423487"),
+  _ = s("991170"),
+  I = s("695838"),
+  T = s("69741"),
+  S = s("782340"),
+  f = s("854743");
 
-function S(e) {
-  return _.MODERATOR_PERMISSIONS.filter(t => (null == e ? void 0 : e.id) !== E.FAVORITES_RAW_GUILD_ID && c.default.canEveryone(t, e))
+function m(e) {
+  return T.MODERATOR_PERMISSIONS.filter(t => (null == e ? void 0 : e.id) !== I.FAVORITES_RAW_GUILD_ID && _.canEveryone(t, e))
 }
 
 function N(e) {
   let {
     guild: t
-  } = e, n = t.roles[t.id], c = S(t), E = c.length > 0, N = _.MODERATOR_PERMISSIONS.some(e => !o.default.can(e, t, null, {
-    [n.id]: {
-      ...n,
-      permissions: i.default.remove(n.permissions, e)
+  } = e, l = (0, r.useStateFromStores)([d.default], () => d.default.getRole(t.id, t.getEveryoneRoleId())), _ = m(t), I = _.length > 0, N = T.MODERATOR_PERMISSIONS.some(e => !u.default.can(e, t, null, {
+    [l.id]: {
+      ...l,
+      permissions: i.remove(l.permissions, e)
     }
   })), g = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: I.itemContent,
-      children: [(0, a.jsx)(r.Heading, {
+      className: f.itemContent,
+      children: [(0, a.jsx)(o.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: T.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
-      }), (0, a.jsx)(r.Text, {
+        children: S.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS
+      }), (0, a.jsx)(o.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        children: T.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
-          numPerms: c.length
+        children: S.default.Messages.GUILD_SETTINGS_SAFETY_EVERYONE_RISKY_PERMISSIONS_DETAILS.format({
+          numPerms: _.length
         })
       })]
-    }), E ? (0, a.jsx)(u.default, {
+    }), I ? (0, a.jsx)(E.default, {
       height: 24,
       width: 24,
-      className: I.warning,
-      "aria-label": T.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
-    }) : (0, a.jsx)(d.default, {
+      className: f.warning,
+      "aria-label": S.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL
+    }) : (0, a.jsx)(c.default, {
       height: 24,
       width: 24,
-      className: I.check,
-      "aria-label": T.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
+      className: f.check,
+      "aria-label": S.default.Messages.SAFETY_REMOVE_RISKY_PERMS_ARIA_LABEL_COMPLETE
     })]
   });
-  return E ? N ? (0, a.jsx)(r.Tooltip, {
-    text: T.default.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
+  return I ? N ? (0, a.jsx)(o.Tooltip, {
+    text: S.default.Messages.SAFETY_REMOVE_RISKY_PERMS_WARNING,
     children: e => (0, a.jsx)("div", {
-      className: l(I.simpleItemWrapper, I.disabled),
+      className: n(f.simpleItemWrapper, f.disabled),
       ...e,
       children: g
     })
-  }) : (0, a.jsx)(r.Clickable, {
+  }) : (0, a.jsx)(o.Clickable, {
     onClick: () => {
-      (0, r.openModalLazy)(async () => {
+      (0, o.openModalLazy)(async () => {
         let {
           default: e
         } = await s.el("343600").then(s.bind(s, "343600"));
@@ -79,10 +81,10 @@ function N(e) {
         })
       })
     },
-    className: l(I.simpleItemWrapper, I.clickable),
+    className: n(f.simpleItemWrapper, f.clickable),
     children: g
   }) : (0, a.jsx)("div", {
-    className: I.simpleItemWrapper,
+    className: f.simpleItemWrapper,
     children: g
   })
 }

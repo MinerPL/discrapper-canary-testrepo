@@ -1,111 +1,113 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return R
   }
 }), n("222007");
 var a = n("446674"),
   s = n("95410"),
-  i = n("913144"),
-  l = n("271938"),
-  r = n("42203"),
-  o = n("101125"),
-  u = n("49111");
-let d = "IncomingCallStore",
-  c = {
+  l = n("913144"),
+  i = n("845579"),
+  r = n("374363"),
+  o = n("271938"),
+  u = n("42203"),
+  d = n("101125"),
+  c = n("49111");
+let f = "IncomingCallStore",
+  E = {
     width: 232,
     height: 315
   },
-  f = new Set,
-  E = [],
-  _ = new Map,
   h = new Set,
-  C = 0,
+  _ = [],
+  C = new Map,
+  S = new Set,
   I = 0,
-  T = !1;
+  m = 0,
+  p = !1;
 
-function S(e) {
-  if (null == e || null == _.get(e)) return !1;
-  _.delete(e), (h = new Set(h)).delete(e)
+function T(e) {
+  if (null == e || null == C.get(e)) return !1;
+  C.delete(e), (S = new Set(S)).delete(e)
 }
 
-function m(e) {
+function g(e) {
   let {
     channelId: t,
     ringing: n
-  } = e, a = n.includes(l.default.getId());
-  if (!h.has(t) && a) {
-    let e = r.default.getChannel(t);
+  } = e, a = n.includes(o.default.getId());
+  if (!S.has(t) && a) {
+    let e = u.default.getChannel(t);
     if (null == e) return !1;
-    let n = 10 * h.size;
-    _.set(t, {
+    let n = 10 * S.size;
+    C.set(t, {
       channel: e,
-      x: C + n,
-      y: I + n
-    }), (h = new Set(h)).add(t)
+      x: I + n,
+      y: m + n
+    }), (S = new Set(S)).add(t)
   } else {
-    if (!h.has(t) || a) return !1;
-    S(t)
+    if (!S.has(t) || a) return !1;
+    T(t)
   }
 }! function() {
-  let e = s.default.get(d);
-  if (null != e) C = +e.x, I = +e.y;
+  let e = s.default.get(f);
+  if (null != e) I = +e.x, m = +e.y;
   else {
     let e = n("471671").default.windowSize();
-    C = e.width / 2 - c.width / 2, I = e.height / 2 - c.height / 2
+    I = e.width / 2 - E.width / 2, m = e.height / 2 - E.height / 2
   }
 }();
 
-function p() {
-  T = o.default.getStatus() === u.StatusTypes.DND
+function A() {
+  p = d.default.getStatus() === c.StatusTypes.DND || i.FocusMode.getSetting()
 }
-class A extends a.default.Store {
+class N extends a.default.Store {
   initialize() {
-    this.waitFor(r.default, o.default), this.syncWith([o.default], p)
+    this.waitFor(u.default, d.default), this.syncWith([d.default], A), this.syncWith([r.default], A)
   }
   getIncomingCalls() {
-    return T ? E : Array.from(_.values())
+    return p ? _ : Array.from(C.values())
   }
   getIncomingCallChannelIds() {
-    return T ? f : h
+    return p ? h : S
   }
   getFirstIncomingCallId() {
-    return T ? null : h.values().next().value
+    return p ? null : S.values().next().value
   }
   hasIncomingCalls() {
-    return !T && h.size > 0
+    return !p && S.size > 0
   }
 }
-A.displayName = "IncomingCallStore";
-var g = new A(i.default, {
-  CALL_CREATE: m,
-  CALL_UPDATE: m,
+N.displayName = "IncomingCallStore";
+var R = new N(l.default, {
+  CALL_CREATE: g,
+  CALL_UPDATE: g,
   CALL_DELETE: function(e) {
     let {
       channelId: t
     } = e;
-    return S(t)
+    return T(t)
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return S(t)
+    return T(t)
   },
   INCOMING_CALL_MOVE: function(e) {
     let {
       x: t,
       y: n
     } = e;
-    return C = t, I = n, s.default.set(d, {
-      x: C,
-      y: I
+    return I = t, m = n, s.default.set(f, {
+      x: I,
+      y: m
     }), !1
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return S(t.id)
+    return T(t.id)
   }
 })

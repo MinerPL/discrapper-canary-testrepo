@@ -14,10 +14,10 @@ var n = s("65597"),
   d = s("49111"),
   u = s("353927"),
   c = s("782340"),
-  S = s("272371");
+  S = s("288061");
 
 function E() {
-  let e = (0, n.default)([r.default], () => r.default.supports(u.Features.LOOPBACK));
+  let e = (0, n.useStateFromStores)([r.default], () => r.default.supports(u.Features.LOOPBACK));
   return e ? (0, a.jsx)("div", {
     className: S.micTest,
     children: (0, a.jsx)(i.default, {

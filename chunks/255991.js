@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   renderMentionBadge: function() {
-    return N
-  },
-  renderUnavailableBadge: function() {
-    return T
-  },
-  renderMediaBadge: function() {
     return A
   },
-  renderGuildJoinRequestBadge: function() {
+  renderUnavailableBadge: function() {
     return L
+  },
+  renderMediaBadge: function() {
+    return v
+  },
+  renderGuildJoinRequestBadge: function() {
+    return x
   }
 }), n("222007");
 var l = n("37983");
@@ -24,78 +24,85 @@ var a = n("414456"),
   d = n("437825"),
   c = n("36694"),
   f = n("945330"),
-  h = n("841811"),
-  C = n("267675"),
-  p = n("987772"),
-  m = n("82636"),
-  E = n("368121"),
-  g = n("228427"),
-  I = n("956089"),
-  S = n("49111"),
-  _ = n("823660");
+  h = n("351368"),
+  C = n("841811"),
+  p = n("267675"),
+  m = n("987772"),
+  E = n("82636"),
+  g = n("368121"),
+  I = n("228427"),
+  S = n("956089"),
+  _ = n("471374"),
+  N = n("49111"),
+  T = n("853708");
 
-function N(e, t) {
-  return (0, l.jsx)(I.NumberBadge, {
+function A(e, t) {
+  return (0, l.jsx)(S.NumberBadge, {
     count: e,
     color: t
   })
 }
 
-function T() {
-  return (0, l.jsx)(I.IconBadge, {
+function L() {
+  return (0, l.jsx)(S.IconBadge, {
     icon: o.default,
     disableColor: !0,
-    className: _.unavailableBadge
+    className: T.unavailableBadge
   })
 }
 
-function A(e) {
+function v(e) {
   let t, {
-    audio: n,
-    video: l,
-    screenshare: a,
-    isCurrentUserConnected: s,
-    liveStage: i,
-    activeEvent: r,
-    activity: o
-  } = e;
-  if (r) t = u.default;
-  else if (i) t = g.default;
-  else if (o) t = m.default;
-  else if (a) t = C.default;
+      audio: n,
+      video: l,
+      screenshare: a,
+      isCurrentUserConnected: s,
+      liveStage: i,
+      activeEvent: r,
+      activity: o,
+      gaming: c
+    } = e,
+    f = (0, _.isGamingVoiceActivityEnabled)("Guild Icon", !1);
+  if (!r && !i && !o && !a && !l && c && _.default.trackExposure({
+      location: "Guild Icon"
+    }), r) t = u.default;
+  else if (i) t = I.default;
+  else if (o) t = E.default;
+  else if (a) t = p.default;
   else if (l) t = d.default;
+  else if (c && f) t = h.default;
   else {
     if (!n) return null;
-    t = E.default
+    t = g.default
   }
-  return v({
+  return R({
     icon: t,
     isCurrentUserConnected: s
   })
 }
 
-function L(e) {
+function x(e) {
   let {
     guildJoinRequestStatus: t
   } = e, [n, l] = function(e) {
     switch (e) {
       case r.GuildJoinRequestApplicationStatuses.SUBMITTED:
-        return [void 0, h.default];
+        return [void 0, C.default];
       case r.GuildJoinRequestApplicationStatuses.REJECTED:
-        return [S.Color.RED_400, f.default];
+        return [N.Color.RED_400, f.default];
       case r.GuildJoinRequestApplicationStatuses.APPROVED:
-        return [S.Color.GREEN_360, c.default];
+        return [N.Color.GREEN_360, c.default];
       default:
-        return [void 0, p.default]
+        return [void 0, m.default]
     }
   }(t);
-  return v({
+  return R({
     icon: l,
     color: n
   })
 }
 
-function v(e) {
+function R(e) {
   let {
     icon: t,
     color: n,
@@ -105,10 +112,10 @@ function v(e) {
   } : {
     color: (0, i.getColor)(n)
   };
-  return (0, l.jsx)(I.IconBadge, {
+  return (0, l.jsx)(S.IconBadge, {
     icon: t,
-    className: s(_.iconBadge, {
-      [_.isCurrentUserConnected]: a
+    className: s(T.iconBadge, {
+      [T.isCurrentUserConnected]: a
     }),
     ...r
   })

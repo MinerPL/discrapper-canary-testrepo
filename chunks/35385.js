@@ -1,62 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return f
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("16470"),
-  a = n("65597"),
-  u = n("77078"),
-  d = n("538282"),
-  c = n("13162"),
-  f = n("166465"),
-  p = n("882641"),
-  m = n("13030"),
-  h = n("365058"),
-  E = n("782340"),
-  S = n("537461"),
-  g = i.memo(i.forwardRef(function(e, t) {
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("16470"),
+  o = n("538282"),
+  u = n("882641"),
+  d = n("13030"),
+  c = n("350583"),
+  f = l.memo(l.forwardRef(function(e, t) {
     let {
       disabled: n,
-      type: r
-    } = e, g = (0, a.default)([f.default], () => f.default.getHasPackAddedNotification(), []);
-    i.useEffect(() => {
-      g && setTimeout(() => {
-        (0, c.dismissPackAddedNotification)()
-      }, h.INVENTORY_PACK_ADDED_NOTIFICATION_DURATION)
-    }, [g]);
-    let [C, T, v] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], s.default), y = i.useCallback(() => {
-      (0, d.toggleExpressionPicker)(m.ExpressionPickerViewType.EMOJI, r)
-    }, [r]);
-    return n ? null : (0, l.jsx)(u.Tooltip, {
-      color: u.TooltipColors.GREEN,
-      text: g ? E.default.Messages.INVENTORY_PACK_ADDED.format({
-        number: 1
-      }) : null,
-      forceOpen: !0,
-      children: e => (0, l.jsx)("div", {
-        className: o(m.CHAT_INPUT_BUTTON_CLASSNAME, S.buttonContainer),
-        ref: t,
-        ...e,
-        children: (0, l.jsx)(p.default, {
-          className: S.emojiButton,
-          onClick: y,
-          active: C === m.ExpressionPickerViewType.EMOJI && T === r,
-          "aria-controls": v,
-          tabIndex: 0,
-          focusProps: {
-            offset: {
-              top: 4,
-              bottom: 4,
-              left: -4,
-              right: -4
-            }
+      type: a
+    } = e, [f, p, m] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), h = l.useCallback(() => {
+      (0, o.toggleExpressionPicker)(d.ExpressionPickerViewType.EMOJI, a)
+    }, [a]);
+    return n ? null : (0, i.jsx)("div", {
+      className: s(d.CHAT_INPUT_BUTTON_CLASSNAME, c.buttonContainer),
+      ref: t,
+      children: (0, i.jsx)(u.default, {
+        className: c.emojiButton,
+        onClick: h,
+        active: f === d.ExpressionPickerViewType.EMOJI && p === a,
+        "aria-controls": m,
+        tabIndex: 0,
+        focusProps: {
+          offset: {
+            top: 4,
+            bottom: 4,
+            left: -4,
+            right: -4
           }
-        })
+        }
       })
     })
   }))

@@ -44,8 +44,8 @@ var a = n("414456"),
   F = n("49111"),
   B = n("695838"),
   V = n("782340"),
-  H = n("708995"),
-  k = n("68800");
+  H = n("65369"),
+  k = n("6426");
 class Y extends G.default {
   getVoiceStatesCount() {
     var e;
@@ -106,7 +106,7 @@ class Y extends G.default {
       isSubscriptionGated: p,
       needSubscriptionToAccess: m,
       unread: E,
-      unreadMode: g,
+      resolvedUnreadSetting: g,
       mentionCount: I,
       isFavoriteSuggestion: S
     } = this.props, {
@@ -139,7 +139,7 @@ class Y extends G.default {
               selected: !S && t,
               connected: n,
               unread: n ? E : void 0,
-              unreadMode: g,
+              resolvedUnreadSetting: g,
               mentionCount: I,
               locked: a,
               onClick: () => {
@@ -277,7 +277,7 @@ function W(e) {
   } = e, u = (0, i.useStateFromStoresObject)([M.default], () => ({
     unread: M.default.hasUnread(n.id),
     mentionCount: M.default.getMentionCount(n.id)
-  })), d = (0, i.useStateFromStores)([O.default], () => O.default.getChannelUnreadMode(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
+  })), d = (0, i.useStateFromStores)([O.default], () => O.default.resolveUnreadSetting(n)), c = (0, i.useStateFromStoresObject)([L.default, x.default, R.default], () => {
     let e = L.default.getChannel(n.parent_id),
       l = x.default.getCheck(n.guild_id);
     return {
@@ -313,6 +313,6 @@ function W(e) {
     isFavoriteSuggestion: s && !v,
     forceShowButtons: b,
     channelInfo: D,
-    unreadMode: d
+    resolvedUnreadSetting: d
   })
 }

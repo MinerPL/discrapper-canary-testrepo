@@ -1,25 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   filterOutMessageRequestsAndSpam: function() {
-    return r
-  },
-  filterOutMessageRequestsAndSpamById: function() {
     return a
   },
-  isMessageRequestOrSpamRequest: function() {
+  filterOutMessageRequestsAndSpamById: function() {
     return o
   },
-  shouldShowMessageRequests: function() {
+  isMessageRequestOrSpamRequest: function() {
     return l
+  },
+  shouldShowMessageRequests: function() {
+    return u
   }
 }), n("222007"), n("808653");
-var i = n("288518"),
-  s = n("486503");
+var i = n("299039"),
+  s = n("288518"),
+  r = n("486503");
 
-function r(e) {
-  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default, s.default], r = function(e) {
-    return Object.keys(e).map(t => [t, e[t]])
-  }(e), a = r.filter(e => {
+function a(e) {
+  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default], a = function(e) {
+    return i.default.keys(e).map(t => [t, e[t]])
+  }(e), o = a.filter(e => {
     let [, i] = e;
     return !t.isMessageRequest(i.id) && !n.isSpam(i.id)
   });
@@ -30,20 +31,20 @@ function r(e) {
         [n]: i
       })
     }, {})
-  }(a)
-}
-
-function a(e) {
-  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default, s.default];
-  return e.filter(e => !t.isMessageRequest(e) && !n.isSpam(e))
+  }(o)
 }
 
 function o(e) {
-  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [i.default, s.default];
+  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default];
+  return e.filter(e => !t.isMessageRequest(e) && !n.isSpam(e))
+}
+
+function l(e) {
+  let [t, n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.default, r.default];
   return t.isMessageRequest(e) || n.isSpam(e)
 }
 
-function l() {
-  let [e, t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [i.default, s.default], n = t.getSpamChannelsCount(), r = e.getMessageRequestsCount();
-  return r > 0 || n > 0
+function u() {
+  let [e, t] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [s.default, r.default], n = t.getSpamChannelsCount(), i = e.getMessageRequestsCount();
+  return i > 0 || n > 0
 }

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return C
+    return A
   },
   MaskLibrary: function() {
-    return A
+    return C
   }
 });
 var i, s, r = n("37983"),
@@ -16,15 +16,15 @@ var i, s, r = n("37983"),
   l = n.n(o),
   u = n("52904"),
   d = n("573135"),
-  c = n("580016");
+  c = n("509063");
 (i = s || (s = {})).SQUIRCLE = "svg-mask-squircle", i.HEADER_BAR_BADGE = "svg-mask-header-bar-badge", i.VOICE_USER_SUMMARY_ITEM = "svg-mask-voice-user-summary-item", i.VERTICAL_FADE = "svg-mask-vertical-fade", i.PANEL_BUTTON = "svg-mask-panel-button", i.CHANNEL_CALL_CONTROL_BUTTON = "svg-mask-channel-call-control-button", i.CHANNEL_CALL_CONTROL_BUTTON_BADGE_16 = "svg-mask-channel-call-control-button-badge-16", i.CHANNEL_CALL_CONTROL_BUTTON_BADGE_22 = "svg-mask-channel-call-control-button-badge-22", i.CHANNEL_CALL_CONTROL_BUTTON_BADGE_29 = "svg-mask-channel-call-control-button-badge-29", i.AVATAR_DEFAULT = "svg-mask-avatar-default", i.AVATAR_STATUS_ROUND_16 = "svg-mask-avatar-status-round-16", i.AVATAR_STATUS_ROUND_20 = "svg-mask-avatar-status-round-20", i.AVATAR_STATUS_ROUND_24 = "svg-mask-avatar-status-round-24", i.AVATAR_STATUS_ROUND_32 = "svg-mask-avatar-status-round-32", i.AVATAR_STATUS_ROUND_40 = "svg-mask-avatar-status-round-40", i.AVATAR_STATUS_ROUND_48 = "svg-mask-avatar-status-round-48", i.AVATAR_STATUS_ROUND_56 = "svg-mask-avatar-status-round-56", i.AVATAR_STATUS_ROUND_80 = "svg-mask-avatar-status-round-80", i.AVATAR_STATUS_ROUND_100 = "svg-mask-avatar-status-round-100", i.AVATAR_STATUS_ROUND_120 = "svg-mask-avatar-status-round-120", i.AVATAR_STATUS_MOBILE_16 = "svg-mask-avatar-status-mobile-16", i.AVATAR_STATUS_MOBILE_20 = "svg-mask-avatar-status-mobile-20", i.AVATAR_STATUS_MOBILE_24 = "svg-mask-avatar-status-mobile-24", i.AVATAR_STATUS_MOBILE_32 = "svg-mask-avatar-status-mobile-32", i.AVATAR_STATUS_MOBILE_40 = "svg-mask-avatar-status-mobile-40", i.AVATAR_STATUS_MOBILE_48 = "svg-mask-avatar-status-mobile-48", i.AVATAR_STATUS_MOBILE_56 = "svg-mask-avatar-status-mobile-56", i.AVATAR_STATUS_MOBILE_80 = "svg-mask-avatar-status-mobile-80", i.AVATAR_STATUS_MOBILE_100 = "svg-mask-avatar-status-mobile-100", i.AVATAR_STATUS_MOBILE_120 = "svg-mask-avatar-status-mobile-120", i.AVATAR_STATUS_TYPING_16 = "svg-mask-avatar-status-typing-16", i.AVATAR_STATUS_TYPING_20 = "svg-mask-avatar-status-typing-20", i.AVATAR_STATUS_TYPING_24 = "svg-mask-avatar-status-typing-24", i.AVATAR_STATUS_TYPING_32 = "svg-mask-avatar-status-typing-32", i.AVATAR_STATUS_TYPING_40 = "svg-mask-avatar-status-typing-40", i.AVATAR_STATUS_TYPING_48 = "svg-mask-avatar-status-typing-48", i.AVATAR_STATUS_TYPING_56 = "svg-mask-avatar-status-typing-56", i.AVATAR_STATUS_TYPING_80 = "svg-mask-avatar-status-typing-80", i.AVATAR_STATUS_TYPING_100 = "svg-mask-avatar-status-typing-100", i.AVATAR_STATUS_TYPING_120 = "svg-mask-avatar-status-typing-120", i.AVATAR_DECORATION_STATUS_ROUND_16 = "svg-mask-avatar-decoration-status-round-16", i.AVATAR_DECORATION_STATUS_ROUND_20 = "svg-mask-avatar-decoration-status-round-20", i.AVATAR_DECORATION_STATUS_ROUND_24 = "svg-mask-avatar-decoration-status-round-24", i.AVATAR_DECORATION_STATUS_ROUND_32 = "svg-mask-avatar-decoration-status-round-32", i.AVATAR_DECORATION_STATUS_ROUND_40 = "svg-mask-avatar-decoration-status-round-40", i.AVATAR_DECORATION_STATUS_ROUND_48 = "svg-mask-avatar-decoration-status-round-48", i.AVATAR_DECORATION_STATUS_ROUND_56 = "svg-mask-avatar-decoration-status-round-56", i.AVATAR_DECORATION_STATUS_ROUND_80 = "svg-mask-avatar-decoration-status-round-80", i.AVATAR_DECORATION_STATUS_ROUND_120 = "svg-mask-avatar-decoration-status-round-120", i.AVATAR_DECORATION_STATUS_MOBILE_16 = "svg-mask-avatar-decoration-status-mobile-16", i.AVATAR_DECORATION_STATUS_MOBILE_20 = "svg-mask-avatar-decoration-status-mobile-20", i.AVATAR_DECORATION_STATUS_MOBILE_24 = "svg-mask-avatar-decoration-status-mobile-24", i.AVATAR_DECORATION_STATUS_MOBILE_32 = "svg-mask-avatar-decoration-status-mobile-32", i.AVATAR_DECORATION_STATUS_MOBILE_40 = "svg-mask-avatar-decoration-status-mobile-40", i.AVATAR_DECORATION_STATUS_MOBILE_48 = "svg-mask-avatar-decoration-status-mobile-48", i.AVATAR_DECORATION_STATUS_MOBILE_56 = "svg-mask-avatar-decoration-status-mobile-56", i.AVATAR_DECORATION_STATUS_MOBILE_80 = "svg-mask-avatar-decoration-status-mobile-80", i.AVATAR_DECORATION_STATUS_MOBILE_100 = "svg-mask-avatar-decoration-status-mobile-100", i.AVATAR_DECORATION_STATUS_MOBILE_120 = "svg-mask-avatar-decoration-status-mobile-120", i.AVATAR_DECORATION_STATUS_TYPING_16 = "svg-mask-avatar-decoration-status-typing-16", i.AVATAR_DECORATION_STATUS_TYPING_20 = "svg-mask-avatar-decoration-status-typing-20", i.AVATAR_DECORATION_STATUS_TYPING_24 = "svg-mask-avatar-decoration-status-typing-24", i.AVATAR_DECORATION_STATUS_TYPING_32 = "svg-mask-avatar-decoration-status-typing-32", i.AVATAR_DECORATION_STATUS_TYPING_40 = "svg-mask-avatar-decoration-status-typing-40", i.AVATAR_DECORATION_STATUS_TYPING_48 = "svg-mask-avatar-decoration-status-typing-48", i.AVATAR_DECORATION_STATUS_TYPING_56 = "svg-mask-avatar-decoration-status-typing-56", i.AVATAR_DECORATION_STATUS_TYPING_80 = "svg-mask-avatar-decoration-status-typing-80", i.AVATAR_DECORATION_STATUS_TYPING_100 = "svg-mask-avatar-decoration-status-typing-100", i.AVATAR_DECORATION_STATUS_TYPING_120 = "svg-mask-avatar-decoration-status-typing-120", i.AVATAR_DECORATION_PROFILE_STATUS_SQUARE_80 = "svg-mask-avatar-decoration-profile-status-square-80", i.AVATAR_DECORATION_PROFILE_STATUS_MOBILE_SQUARE_80 = "svg-mask-avatar-decoration-profile-status-mobile-square-80", i.AVATAR_VOICE_CALL_80 = "svg-mask-avatar-voice-call-80", i.AVATAR_CALL_ICON = "svg-mask-avatar-call-icon", i.AVATAR_CALL_ICON_32 = "svg-mask-avatar-call-icon-32", i.STATUS_ONLINE_MOBILE = "svg-mask-status-online-mobile", i.STATUS_ONLINE = "svg-mask-status-online", i.STATUS_IDLE = "svg-mask-status-idle", i.STATUS_DND = "svg-mask-status-dnd", i.STATUS_OFFLINE = "svg-mask-status-offline", i.STATUS_STREAMING = "svg-mask-status-streaming", i.STATUS_TYPING = "svg-mask-status-typing", i.STATUS_SCREENSHARE = "svg-mask-status-screenshare", i.STICKER_ROUNDED_RECT = "svg-mask-sticker-rounded-rect", i.STICKER_SHOP_NOTIFICATION = "svg-mask-sticker-shop-notification", i.GUILD_ICON_WITH_CHANNEL_TYPE = "svg-mask-guild-icon-with-channel-type", i.CHAT_INPUT_BUTTON_NOTIFICATION = "svg-mask-chat-input-button-notification", i.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI = "svg-mask-autocomplete-emoji-upsell-emoji", i.EVENT_TICKET = "svg-mask-event-ticket";
 
-function f(e, t) {
+function _(e, t) {
   let n = null != t ? t : d.DECORATION_TO_AVATAR_RATIO;
   return (e - .5) / n + .5
 }
 
-function _(e, t, n) {
+function f(e, t, n) {
   let i = (0, u.getAvatarSpecs)(t),
     s = 32 === i.size,
     a = s ? 8 : 0,
@@ -48,7 +48,7 @@ function _(e, t, n) {
   })
 }
 
-function h(e, t) {
+function E(e, t) {
   return (0, r.jsxs)("mask", {
     id: e,
     maskContentUnits: "objectBoundingBox",
@@ -70,7 +70,7 @@ function h(e, t) {
   })
 }
 
-function g(e) {
+function h(e) {
   return (0, r.jsx)("mask", {
     id: e,
     maskContentUnits: "objectBoundingBox",
@@ -84,7 +84,7 @@ function g(e) {
   })
 }
 
-function m(e, t) {
+function g(e, t) {
   let n = (0, u.getAvatarSpecs)(t),
     i = n.status / 2;
   return (0, r.jsxs)("mask", {
@@ -105,11 +105,11 @@ function m(e, t) {
   })
 }
 
-function E(e, t) {
+function m(e, t) {
   let n = (0, u.getAvatarSpecs)(t),
     i = n.status / 2,
     s = (i + n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
-    a = f((n.size - i - n.offset) / n.size);
+    a = _((n.size - i - n.offset) / n.size);
   return (0, r.jsxs)("mask", {
     id: e,
     maskContentUnits: "objectBoundingBox",
@@ -155,14 +155,14 @@ function p(e, t) {
   })
 }
 
-function v(e, t) {
+function S(e, t) {
   let n = (0, u.getAvatarSpecs)(t),
     i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-    s = f((n.size - n.status - n.stroke - n.offset) / n.size),
-    a = f((n.size - n.status - i - n.offset) / n.size),
+    s = _((n.size - n.status - n.stroke - n.offset) / n.size),
+    a = _((n.size - n.status - i - n.offset) / n.size),
     o = (2.5 * n.status + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
     l = (n.status + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
-    c = f(l / 2 / n.size);
+    c = _(l / 2 / n.size);
   return (0, r.jsxs)("mask", {
     id: e,
     maskContentUnits: "objectBoundingBox",
@@ -185,7 +185,7 @@ function v(e, t) {
   })
 }
 
-function S(e, t) {
+function T(e, t) {
   let n = (0, u.getAvatarSpecs)(t);
   return (0, r.jsxs)("mask", {
     id: e,
@@ -208,10 +208,10 @@ function S(e, t) {
   })
 }
 
-function T(e, t) {
+function v(e, t) {
   let n = (0, u.getAvatarSpecs)(t),
-    i = f((n.size - n.status - n.stroke - n.offset) / n.size),
-    s = f((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size),
+    i = _((n.size - n.status - n.stroke - n.offset) / n.size),
+    s = _((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size),
     a = (n.status + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO,
     o = (n.status * u.MOBILE_HEIGHT_RATIO + 2 * n.stroke) / n.size / d.DECORATION_TO_AVATAR_RATIO;
   return (0, r.jsxs)("mask", {
@@ -246,8 +246,8 @@ function I(e) {
     children: o,
     className: u,
     style: d,
-    "aria-label": f,
-    ..._
+    "aria-label": _,
+    ...f
   } = e;
   return (0, r.jsx)("svg", {
     width: n + s,
@@ -255,23 +255,23 @@ function I(e) {
     className: l(c.svg, u),
     viewBox: "0 0 ".concat(n + s, " ").concat(i + a),
     style: d,
-    "aria-label": f,
-    ..._,
+    "aria-label": _,
+    ...f,
     children: (0, r.jsx)("foreignObject", {
       x: 0,
       y: 0,
       width: n,
       height: i,
       overflow: "visible",
-      mask: "url(#".concat(t, ")"),
+      mask: null != t ? "url(#".concat(t, ")") : void 0,
       children: o
     })
   })
 }
 I.Masks = s;
-var C = I;
-let A = a.memo(function() {
-  var e, t, n, i, s, a, o, l, c, I, C, A, y, N, R, O, D, P;
+var A = I;
+let C = a.memo(function() {
+  var e, t, n, i, s, a, o, l, c, I, A, C, y, N, R, O, D, P;
   return (0, r.jsxs)("svg", {
     viewBox: "0 0 1 1",
     style: {
@@ -380,13 +380,13 @@ let A = a.memo(function() {
         cy: .8214285714285714,
         r: .25
       })]
-    })), h("svg-mask-channel-call-control-button-badge-16", 16), h("svg-mask-channel-call-control-button-badge-22", 22), h("svg-mask-channel-call-control-button-badge-29", 29), g("svg-mask-avatar-default"), m("svg-mask-avatar-status-round-16", u.AvatarSizes.SIZE_16), E("svg-mask-avatar-decoration-status-round-16", u.AvatarSizes.SIZE_16), S("svg-mask-avatar-status-mobile-16", u.AvatarSizes.SIZE_16), T("svg-mask-avatar-decoration-status-mobile-16", u.AvatarSizes.SIZE_16), p("svg-mask-avatar-status-typing-16", u.AvatarSizes.SIZE_16), v("svg-mask-avatar-decoration-status-typing-16", u.AvatarSizes.SIZE_16), m("svg-mask-avatar-status-round-20", u.AvatarSizes.SIZE_20), E("svg-mask-avatar-decoration-status-round-20", u.AvatarSizes.SIZE_20), S("svg-mask-avatar-status-mobile-20", u.AvatarSizes.SIZE_20), T("svg-mask-avatar-decoration-status-mobile-20", u.AvatarSizes.SIZE_20), p("svg-mask-avatar-status-typing-20", u.AvatarSizes.SIZE_20), v("svg-mask-avatar-decoration-status-typing-20", u.AvatarSizes.SIZE_20), m("svg-mask-avatar-status-round-24", u.AvatarSizes.SIZE_24), E("svg-mask-avatar-decoration-status-round-24", u.AvatarSizes.SIZE_24), S("svg-mask-avatar-status-mobile-24", u.AvatarSizes.SIZE_24), T("svg-mask-avatar-decoration-status-mobile-24", u.AvatarSizes.SIZE_24), p("svg-mask-avatar-status-typing-24", u.AvatarSizes.SIZE_24), v("svg-mask-avatar-decoration-status-typing-24", u.AvatarSizes.SIZE_24), m("svg-mask-avatar-status-round-32", u.AvatarSizes.SIZE_32), E("svg-mask-avatar-decoration-status-round-32", u.AvatarSizes.SIZE_32), S("svg-mask-avatar-status-mobile-32", u.AvatarSizes.SIZE_32), T("svg-mask-avatar-decoration-status-mobile-32", u.AvatarSizes.SIZE_32), p("svg-mask-avatar-status-typing-32", u.AvatarSizes.SIZE_32), v("svg-mask-avatar-decoration-status-typing-32", u.AvatarSizes.SIZE_32), m("svg-mask-avatar-status-round-40", u.AvatarSizes.SIZE_40), E("svg-mask-avatar-decoration-status-round-40", u.AvatarSizes.SIZE_40), S("svg-mask-avatar-status-mobile-40", u.AvatarSizes.SIZE_40), T("svg-mask-avatar-decoration-status-mobile-40", u.AvatarSizes.SIZE_40), p("svg-mask-avatar-status-typing-40", u.AvatarSizes.SIZE_40), v("svg-mask-avatar-decoration-status-typing-40", u.AvatarSizes.SIZE_40), m("svg-mask-avatar-status-round-48", u.AvatarSizes.SIZE_48), E("svg-mask-avatar-decoration-status-round-48", u.AvatarSizes.SIZE_48), S("svg-mask-avatar-status-mobile-48", u.AvatarSizes.SIZE_48), T("svg-mask-avatar-decoration-status-mobile-48", u.AvatarSizes.SIZE_48), p("svg-mask-avatar-status-typing-48", u.AvatarSizes.SIZE_48), v("svg-mask-avatar-decoration-status-typing-48", u.AvatarSizes.SIZE_48), m("svg-mask-avatar-status-round-56", u.AvatarSizes.SIZE_56), E("svg-mask-avatar-decoration-status-round-56", u.AvatarSizes.SIZE_56), S("svg-mask-avatar-status-mobile-56", u.AvatarSizes.SIZE_56), T("svg-mask-avatar-decoration-status-mobile-56", u.AvatarSizes.SIZE_56), p("svg-mask-avatar-status-typing-56", u.AvatarSizes.SIZE_56), v("svg-mask-avatar-decoration-status-typing-56", u.AvatarSizes.SIZE_56), m("svg-mask-avatar-status-round-80", u.AvatarSizes.SIZE_80), E("svg-mask-avatar-decoration-status-round-80", u.AvatarSizes.SIZE_80), function(e, t) {
+    })), E("svg-mask-channel-call-control-button-badge-16", 16), E("svg-mask-channel-call-control-button-badge-22", 22), E("svg-mask-channel-call-control-button-badge-29", 29), h("svg-mask-avatar-default"), g("svg-mask-avatar-status-round-16", u.AvatarSizes.SIZE_16), m("svg-mask-avatar-decoration-status-round-16", u.AvatarSizes.SIZE_16), T("svg-mask-avatar-status-mobile-16", u.AvatarSizes.SIZE_16), v("svg-mask-avatar-decoration-status-mobile-16", u.AvatarSizes.SIZE_16), p("svg-mask-avatar-status-typing-16", u.AvatarSizes.SIZE_16), S("svg-mask-avatar-decoration-status-typing-16", u.AvatarSizes.SIZE_16), g("svg-mask-avatar-status-round-20", u.AvatarSizes.SIZE_20), m("svg-mask-avatar-decoration-status-round-20", u.AvatarSizes.SIZE_20), T("svg-mask-avatar-status-mobile-20", u.AvatarSizes.SIZE_20), v("svg-mask-avatar-decoration-status-mobile-20", u.AvatarSizes.SIZE_20), p("svg-mask-avatar-status-typing-20", u.AvatarSizes.SIZE_20), S("svg-mask-avatar-decoration-status-typing-20", u.AvatarSizes.SIZE_20), g("svg-mask-avatar-status-round-24", u.AvatarSizes.SIZE_24), m("svg-mask-avatar-decoration-status-round-24", u.AvatarSizes.SIZE_24), T("svg-mask-avatar-status-mobile-24", u.AvatarSizes.SIZE_24), v("svg-mask-avatar-decoration-status-mobile-24", u.AvatarSizes.SIZE_24), p("svg-mask-avatar-status-typing-24", u.AvatarSizes.SIZE_24), S("svg-mask-avatar-decoration-status-typing-24", u.AvatarSizes.SIZE_24), g("svg-mask-avatar-status-round-32", u.AvatarSizes.SIZE_32), m("svg-mask-avatar-decoration-status-round-32", u.AvatarSizes.SIZE_32), T("svg-mask-avatar-status-mobile-32", u.AvatarSizes.SIZE_32), v("svg-mask-avatar-decoration-status-mobile-32", u.AvatarSizes.SIZE_32), p("svg-mask-avatar-status-typing-32", u.AvatarSizes.SIZE_32), S("svg-mask-avatar-decoration-status-typing-32", u.AvatarSizes.SIZE_32), g("svg-mask-avatar-status-round-40", u.AvatarSizes.SIZE_40), m("svg-mask-avatar-decoration-status-round-40", u.AvatarSizes.SIZE_40), T("svg-mask-avatar-status-mobile-40", u.AvatarSizes.SIZE_40), v("svg-mask-avatar-decoration-status-mobile-40", u.AvatarSizes.SIZE_40), p("svg-mask-avatar-status-typing-40", u.AvatarSizes.SIZE_40), S("svg-mask-avatar-decoration-status-typing-40", u.AvatarSizes.SIZE_40), g("svg-mask-avatar-status-round-48", u.AvatarSizes.SIZE_48), m("svg-mask-avatar-decoration-status-round-48", u.AvatarSizes.SIZE_48), T("svg-mask-avatar-status-mobile-48", u.AvatarSizes.SIZE_48), v("svg-mask-avatar-decoration-status-mobile-48", u.AvatarSizes.SIZE_48), p("svg-mask-avatar-status-typing-48", u.AvatarSizes.SIZE_48), S("svg-mask-avatar-decoration-status-typing-48", u.AvatarSizes.SIZE_48), g("svg-mask-avatar-status-round-56", u.AvatarSizes.SIZE_56), m("svg-mask-avatar-decoration-status-round-56", u.AvatarSizes.SIZE_56), T("svg-mask-avatar-status-mobile-56", u.AvatarSizes.SIZE_56), v("svg-mask-avatar-decoration-status-mobile-56", u.AvatarSizes.SIZE_56), p("svg-mask-avatar-status-typing-56", u.AvatarSizes.SIZE_56), S("svg-mask-avatar-decoration-status-typing-56", u.AvatarSizes.SIZE_56), g("svg-mask-avatar-status-round-80", u.AvatarSizes.SIZE_80), m("svg-mask-avatar-decoration-status-round-80", u.AvatarSizes.SIZE_80), function(e, t) {
       let n = (0, u.getAvatarSpecs)(t),
         i = n.status / 2,
         s = n.size * d.DECORATION_TO_AVATAR_RATIO,
         a = s / n.size,
         o = (i + n.stroke) / n.size / a,
-        l = f((n.size - i - n.offset) / n.size, a);
+        l = _((n.size - i - n.offset) / n.size, a);
       return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -404,12 +404,12 @@ let A = a.memo(function() {
           r: o
         })]
       })
-    }("svg-mask-avatar-decoration-profile-status-square-80", u.AvatarSizes.SIZE_80), S("svg-mask-avatar-status-mobile-80", u.AvatarSizes.SIZE_80), T("svg-mask-avatar-decoration-status-mobile-80", u.AvatarSizes.SIZE_80), function(e, t) {
+    }("svg-mask-avatar-decoration-profile-status-square-80", u.AvatarSizes.SIZE_80), T("svg-mask-avatar-status-mobile-80", u.AvatarSizes.SIZE_80), v("svg-mask-avatar-decoration-status-mobile-80", u.AvatarSizes.SIZE_80), function(e, t) {
       let n = (0, u.getAvatarSpecs)(t),
         i = n.size * d.DECORATION_TO_AVATAR_RATIO,
         s = i / n.size,
-        a = f((n.size - n.status - n.stroke - n.offset) / n.size, s),
-        o = f((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size, s),
+        a = _((n.size - n.status - n.stroke - n.offset) / n.size, s),
+        o = _((n.size - n.status * u.MOBILE_HEIGHT_RATIO - n.stroke - n.offset) / n.size, s),
         l = (n.status + 2 * n.stroke) / n.size / s,
         c = (n.status * u.MOBILE_HEIGHT_RATIO + 2 * n.stroke) / n.size / s;
       return (0, r.jsxs)("mask", {
@@ -432,7 +432,7 @@ let A = a.memo(function() {
           ry: (n.status * u.MOBILE_HEIGHT_RATIO + 2 * n.stroke) * u.CUTOUT_BORDER_RADIUS / n.size
         })]
       })
-    }("svg-mask-avatar-decoration-profile-status-mobile-square-80", u.AvatarSizes.SIZE_80), p("svg-mask-avatar-status-typing-80", u.AvatarSizes.SIZE_80), v("svg-mask-avatar-decoration-status-typing-80", u.AvatarSizes.SIZE_80), m("svg-mask-avatar-status-round-120", u.AvatarSizes.SIZE_120), E("svg-mask-avatar-decoration-status-round-120", u.AvatarSizes.SIZE_120), S("svg-mask-avatar-status-mobile-120", u.AvatarSizes.SIZE_120), T("svg-mask-avatar-decoration-status-mobile-120", u.AvatarSizes.SIZE_120), p("svg-mask-avatar-status-typing-120", u.AvatarSizes.SIZE_120), v("svg-mask-avatar-decoration-status-typing-120", u.AvatarSizes.SIZE_120), function(e) {
+    }("svg-mask-avatar-decoration-profile-status-mobile-square-80", u.AvatarSizes.SIZE_80), p("svg-mask-avatar-status-typing-80", u.AvatarSizes.SIZE_80), S("svg-mask-avatar-decoration-status-typing-80", u.AvatarSizes.SIZE_80), g("svg-mask-avatar-status-round-120", u.AvatarSizes.SIZE_120), m("svg-mask-avatar-decoration-status-round-120", u.AvatarSizes.SIZE_120), T("svg-mask-avatar-status-mobile-120", u.AvatarSizes.SIZE_120), v("svg-mask-avatar-decoration-status-mobile-120", u.AvatarSizes.SIZE_120), p("svg-mask-avatar-status-typing-120", u.AvatarSizes.SIZE_120), S("svg-mask-avatar-decoration-status-typing-120", u.AvatarSizes.SIZE_120), function(e) {
       let t = 8 * u.MOBILE_HEIGHT_RATIO;
       return (0, r.jsxs)("mask", {
         id: e,
@@ -460,7 +460,7 @@ let A = a.memo(function() {
           ry: 1 / t
         })]
       })
-    }("svg-mask-status-online-mobile"), g("svg-mask-status-online"), (a = "svg-mask-status-idle", (0, r.jsxs)("mask", {
+    }("svg-mask-status-online-mobile"), h("svg-mask-status-online"), (a = "svg-mask-status-idle", (0, r.jsxs)("mask", {
       id: a,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
@@ -534,8 +534,8 @@ let A = a.memo(function() {
         ry: .5,
         rx: .2
       })
-    })), (C = "svg-mask-status-screenshare", (0, r.jsxs)("mask", {
-      id: C,
+    })), (A = "svg-mask-status-screenshare", (0, r.jsxs)("mask", {
+      id: A,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
       children: [(0, r.jsx)("rect", {
@@ -546,8 +546,8 @@ let A = a.memo(function() {
         d: "M0.5 0.71875C0.5 0.649716 0.555966 0.59375 0.625 0.59375H1.0V1.0H0.5V0.71875Z",
         fill: "black"
       })]
-    })), (A = "svg-mask-avatar-voice-call-80", (0, r.jsxs)("mask", {
-      id: A,
+    })), (C = "svg-mask-avatar-voice-call-80", (0, r.jsxs)("mask", {
+      id: C,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",
       children: [(0, r.jsx)("circle", {
@@ -561,7 +561,7 @@ let A = a.memo(function() {
         cy: .85,
         r: .2
       })]
-    })), _("svg-mask-avatar-call-icon", u.AvatarSizes.SIZE_56, 1), _("svg-mask-avatar-call-icon-32", u.AvatarSizes.SIZE_32, .5), (y = "svg-mask-sticker-rounded-rect", (0, r.jsx)("mask", {
+    })), f("svg-mask-avatar-call-icon", u.AvatarSizes.SIZE_56, 1), f("svg-mask-avatar-call-icon-32", u.AvatarSizes.SIZE_32, .5), (y = "svg-mask-sticker-rounded-rect", (0, r.jsx)("mask", {
       id: y,
       maskContentUnits: "objectBoundingBox",
       viewBox: "0 0 1 1",

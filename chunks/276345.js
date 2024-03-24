@@ -8,8 +8,8 @@ var a = t("37983"),
   l = t("884691"),
   i = t("414456"),
   n = t.n(i),
-  d = t("77078"),
-  r = t("446674"),
+  d = t("446674"),
+  r = t("77078"),
   c = t("305961"),
   o = t("677099"),
   u = t("116320"),
@@ -18,35 +18,35 @@ var a = t("37983"),
   N = t("70025"),
   I = t("461380"),
   T = t("593195"),
-  f = t("578706"),
-  m = t("945330"),
+  m = t("578706"),
+  f = t("945330"),
   v = t("474571"),
-  j = t("76539"),
-  _ = t("975743"),
+  _ = t("76539"),
+  j = t("975743"),
   g = t("904276"),
   M = t("875436"),
   O = t("782340"),
-  C = t("650287"),
-  A = t("492489");
+  C = t("406617"),
+  A = t("662421");
 
 function R(e) {
   let {
     count: s
   } = e, [t, i] = l.useState("server");
-  return (0, a.jsxs)("div", {
+  return (0, a.jsxs)(r.Scroller, {
     className: C.content,
     children: [(0, a.jsxs)("div", {
       className: n(C.header, A.header),
-      children: [(0, a.jsx)(f.default, {
+      children: [(0, a.jsx)(m.default, {
         width: 40,
         height: 40
-      }), (0, a.jsx)(d.Heading, {
+      }), (0, a.jsx)(r.Heading, {
         variant: "heading-xl/bold",
         color: "header-primary",
         children: O.default.Messages.NOTIF_MIGRATION_TIPS_TITLE.format({
           count: s
         })
-      }), (0, a.jsx)(d.Text, {
+      }), (0, a.jsx)(r.Text, {
         className: C.subtitle,
         variant: "text-md/medium",
         color: "header-secondary",
@@ -59,18 +59,18 @@ function R(e) {
         style: {
           left: "server" === t ? 0 : "50%"
         }
-      }), (0, a.jsx)(d.Clickable, {
+      }), (0, a.jsx)(r.Clickable, {
         className: A.tab,
         onClick: () => i("server"),
-        children: (0, a.jsx)(d.Text, {
+        children: (0, a.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "server" === t ? "header-primary" : "text-muted",
           children: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB1
         })
-      }), (0, a.jsx)(d.Clickable, {
+      }), (0, a.jsx)(r.Clickable, {
         className: A.tab,
         onClick: () => i("channel"),
-        children: (0, a.jsx)(d.Text, {
+        children: (0, a.jsx)(r.Text, {
           variant: "text-sm/medium",
           color: "channel" === t ? "header-primary" : "text-muted",
           children: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB2
@@ -90,7 +90,7 @@ function R(e) {
 function p(e) {
   let {
     hidden: s
-  } = e, t = (0, r.useStateFromStores)([c.default, o.default], () => {
+  } = e, t = (0, d.useStateFromStores)([c.default, o.default], () => {
     var e;
     return null === (e = c.default.getGuild(o.default.getFlattenedGuildIds()[0])) || void 0 === e ? void 0 : e.name
   }), [i, T] = l.useState(0);
@@ -115,12 +115,12 @@ function p(e) {
           className: A.channels,
           children: [(0, a.jsxs)("div", {
             className: A.guildName,
-            children: [(0, a.jsx)(d.Text, {
+            children: [(0, a.jsx)(r.Text, {
               variant: "text-md/medium",
               color: "interactive-active",
               lineClamp: 1,
               children: null != t ? t : "Keyboard Nerds"
-            }), i >= 1 ? (0, a.jsx)(m.default, {
+            }), i >= 1 ? (0, a.jsx)(f.default, {
               className: A.icon,
               width: 24,
               height: 24
@@ -129,23 +129,23 @@ function p(e) {
               width: 24,
               height: 24
             })]
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             grey: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             grey: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             grey: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             nodot: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             nodot: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
           })]
@@ -153,7 +153,7 @@ function p(e) {
           className: A.bigMenu,
           children: [(0, a.jsx)(L, {
             text: O.default.Messages.INVITE_PEOPLE,
-            icon: (0, a.jsx)(j.default, {
+            icon: (0, a.jsx)(_.default, {
               className: A.icon,
               width: 18,
               height: 18
@@ -170,7 +170,7 @@ function p(e) {
             })
           }), (0, a.jsx)(L, {
             text: O.default.Messages.PRIVACY_SETTINGS,
-            icon: (0, a.jsx)(_.default, {
+            icon: (0, a.jsx)(j.default, {
               className: A.icon,
               width: 18,
               height: 18
@@ -192,7 +192,7 @@ function p(e) {
           })]
         }), (0, a.jsxs)("div", {
           className: A.notifModal,
-          children: [(0, a.jsx)(d.Text, {
+          children: [(0, a.jsx)(r.Text, {
             className: A.modalHeader,
             variant: "text-md/medium",
             color: "interactive-active",
@@ -201,10 +201,10 @@ function p(e) {
             className: A.notifTabs,
             children: [(0, a.jsxs)("div", {
               className: A.notifTab,
-              children: [(0, a.jsx)(f.default, {
+              children: [(0, a.jsx)(m.default, {
                 width: 24,
                 height: 24
-              }), (0, a.jsx)(d.Text, {
+              }), (0, a.jsx)(r.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 lineClamp: 1,
@@ -215,7 +215,7 @@ function p(e) {
               children: [(0, a.jsx)(u.default, {
                 width: 24,
                 height: 24
-              }), (0, a.jsx)(d.Text, {
+              }), (0, a.jsx)(r.Text, {
                 variant: "text-xs/medium",
                 color: "interactive-active",
                 lineClamp: 1,
@@ -226,7 +226,7 @@ function p(e) {
               children: [(0, a.jsx)(x.default, {
                 width: 24,
                 height: 24
-              }), (0, a.jsx)(d.Text, {
+              }), (0, a.jsx)(r.Text, {
                 variant: "text-xs/medium",
                 color: "text-muted",
                 lineClamp: 1,
@@ -253,7 +253,7 @@ function p(e) {
           })]
         })]
       })
-    }), (0, a.jsx)(w, {
+    }), (0, a.jsx)(b, {
       text: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB1_TIP2,
       className: A.tipServers2,
       hidden: s || i < 4
@@ -284,25 +284,25 @@ function E(e) {
         }),
         children: [(0, a.jsxs)("div", {
           className: A.channels,
-          children: [(0, a.jsx)(b, {
+          children: [(0, a.jsx)(w, {
             selected: t >= 1,
             grey: t >= 5,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             grey: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             grey: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             grey: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             nodot: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
-          }), (0, a.jsx)(b, {
+          }), (0, a.jsx)(w, {
             nodot: !0,
             name: O.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
           })]
@@ -373,11 +373,11 @@ function E(e) {
           })]
         })]
       })
-    }), (0, a.jsx)(w, {
+    }), (0, a.jsx)(b, {
       text: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB2_TIP1,
       className: A.tipChannels1,
       hidden: s || t < 4
-    }), (0, a.jsx)(w, {
+    }), (0, a.jsx)(b, {
       text: O.default.Messages.NOTIF_MIGRATION_TIPS_TAB2_TIP2,
       className: A.tipChannels2,
       hidden: s || t < 4
@@ -385,7 +385,7 @@ function E(e) {
   })
 }
 
-function w(e) {
+function b(e) {
   let {
     text: s,
     className: t,
@@ -395,7 +395,7 @@ function w(e) {
     className: n(t, A.tip, {
       [A.hidden]: l
     }),
-    children: [(0, a.jsx)(d.Text, {
+    children: [(0, a.jsx)(r.Text, {
       className: A.tipText,
       variant: "text-sm/normal",
       color: "text-secondary",
@@ -406,7 +406,7 @@ function w(e) {
   })
 }
 
-function b(e) {
+function w(e) {
   let {
     grey: s,
     nodot: t,
@@ -423,7 +423,7 @@ function b(e) {
       className: A.channelIcon,
       width: 16,
       height: 16
-    }), (0, a.jsx)(d.Text, {
+    }), (0, a.jsx)(r.Text, {
       variant: "text-md/medium",
       className: A.channelName,
       children: i
@@ -442,7 +442,7 @@ function L(e) {
     className: n(A.menuItem, {
       [A.active]: t
     }),
-    children: [(0, a.jsx)(d.Text, {
+    children: [(0, a.jsx)(r.Text, {
       variant: l ? "text-xs/normal" : "text-sm/normal",
       color: t ? "always-white" : "interactive-normal",
       children: s

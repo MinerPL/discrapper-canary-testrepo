@@ -1,47 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("222007");
-var s = n("249654"),
-  l = n("446674"),
-  a = n("913144"),
-  i = n("718517"),
-  r = n("290723");
-let o = 14 * i.default.Millis.DAY,
-  u = Object.freeze([]),
-  d = {},
-  c = {};
+var s = n("446674"),
+  l = n("913144"),
+  a = n("718517"),
+  i = n("299039");
+let r = 14 * a.default.Millis.DAY,
+  o = Object.freeze([]),
+  u = {},
+  d = {};
 
-function f() {
-  d = {}, c = {}
+function c() {
+  u = {}, d = {}
 }
-class E extends l.default.Store {
+class E extends s.default.Store {
   getFpMessageInfo(e) {
-    return d[e]
+    return u[e]
   }
   getChannelFpInfo(e) {
     var t;
-    return null !== (t = c[e]) && void 0 !== t ? t : u
+    return null !== (t = d[e]) && void 0 !== t ? t : o
   }
   canSubmitFpReport(e) {
-    let t = d[e];
-    if (null == t) return !1;
-    let n = (0, r.getExplicitMediaSenderFalsePositiveExpirationOverride)();
-    return !t.reportSubmit && s.default.age(t.messageId) < (null != n ? n : o)
+    let t = u[e];
+    return null != t && !t.reportSubmit && i.default.age(t.messageId) < r
   }
 }
 E.displayName = "FalsePositiveStore";
-var _ = new E(a.default, {
+var f = new E(l.default, {
   LOGOUT: function() {
     (function() {
-      d = {}, c = {}
+      u = {}, d = {}
     })()
   },
   CONNECTION_OPEN: function() {
     (function() {
-      d = {}, c = {}
+      u = {}, d = {}
     })()
   },
   MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function(e) {
@@ -55,19 +52,19 @@ var _ = new E(a.default, {
       channelId: s,
       attachments: l,
       reportSubmit: !1
-    }, i = null !== (t = c[s]) && void 0 !== t ? t : u;
-    c[s] = [...i, a], d[n] = a
+    }, i = null !== (t = d[s]) && void 0 !== t ? t : o;
+    d[s] = [...i, a], u[n] = a
   },
   MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function(e) {
     let {
       messageId: t,
       channelId: n
-    } = e, s = c[n];
-    null != s && (c[n] = s.map(e => e.messageId === t ? {
+    } = e, s = d[n];
+    null != s && (d[n] = s.map(e => e.messageId === t ? {
       ...e,
       reportSubmit: !0
-    } : e), d[t] = {
-      ...d[t],
+    } : e), u[t] = {
+      ...u[t],
       reportSubmit: !0
     })
   }

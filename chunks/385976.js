@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return eh
+    return ed
   }
 }), n("222007"), n("581081"), n("424973"), n("686130"), n("781738"), n("808653");
 var i = n("917351"),
@@ -13,40 +13,39 @@ var i = n("917351"),
   u = n("913144"),
   d = n("80507"),
   c = n("802493"),
-  f = n("595525"),
-  _ = n("629538"),
-  h = n("39616"),
-  g = n("828674"),
-  m = n("153043"),
-  E = n("256941"),
+  _ = n("595525"),
+  f = n("629538"),
+  E = n("39616"),
+  h = n("828674"),
+  g = n("153043"),
+  m = n("256941"),
   p = n("505985"),
-  v = n("166465"),
   S = n("915639"),
   T = n("374363"),
-  I = n("26989"),
-  C = n("778689"),
+  v = n("26989"),
+  I = n("778689"),
   A = n("305961"),
-  y = n("677099"),
-  N = n("697218"),
-  R = n("315102"),
-  O = n("718517"),
-  D = n("402671"),
-  P = n("449008"),
-  b = n("655518"),
-  L = n("968027"),
-  M = n("299039"),
-  U = n("858619"),
-  k = n("867805"),
-  w = n("802461"),
-  V = n("26430"),
-  G = n("958706"),
-  F = n("115279"),
-  x = n("397336");
-let B = [F.EmojiCategories.TOP_GUILD_EMOJI.toString(), F.EmojiCategories.FAVORITES.toString(), F.EmojiCategories.RECENT.toString(), F.EmojiCategories.CUSTOM.toString()].concat(k.default.getCategories()),
-  H = {
+  C = n("677099"),
+  y = n("697218"),
+  N = n("315102"),
+  R = n("718517"),
+  O = n("402671"),
+  D = n("449008"),
+  P = n("655518"),
+  L = n("299039"),
+  M = n("858619"),
+  b = n("867805"),
+  U = n("802461"),
+  w = n("26430"),
+  k = n("958706"),
+  V = n("49111"),
+  G = n("115279"),
+  F = n("397336");
+let x = [G.EmojiCategories.TOP_GUILD_EMOJI.toString(), G.EmojiCategories.FAVORITES.toString(), G.EmojiCategories.RECENT.toString(), G.EmojiCategories.CUSTOM.toString()].concat(b.default.getCategories()),
+  B = {
     pendingUsages: []
   };
-class Y {
+class H {
   getEmoji(e) {
     return this.build(), this._emojiMap[e]
   }
@@ -56,10 +55,10 @@ class Y {
   }
   isUsable(e) {
     if (0 === e.roles.length) return !0;
-    let t = I.default.getMember(this.id, this._userId);
+    let t = v.default.getMember(this.id, this._userId);
     if (null == t) return !1;
     let n = t.roles.some(t => e.roles.includes(t));
-    return !!(n || (0, m.isPurchasableRoleSubscriptionEmoji)(e)) || !1
+    return !!(n || (0, g.isPurchasableRoleSubscriptionEmoji)(e)) || !1
   }
   get rawEmojis() {
     return this._emojis
@@ -75,83 +74,66 @@ class Y {
   }
   build() {
     this._dirty && (this._dirty = !1, this._emojis.forEach(e => {
-      e.url = R.default.getEmojiURL({
+      e.url = N.default.getEmojiURL({
         id: e.id,
         animated: e.animated,
         size: 48
-      }), e.allNamesString = ":".concat(e.name, ":"), e.guildId = this.id, e.type = U.EmojiTypes.GUILD, this._emojiMap[e.id] = e
+      }), e.allNamesString = ":".concat(e.name, ":"), e.guildId = this.id, e.type = M.EmojiTypes.GUILD, this._emojiMap[e.id] = e
     }), this._usableEmojis = s.sortBy(this._emojis.filter(e => this.isUsable(e)), e => e.name), this._emoticons = this._usableEmojis.filter(e => !e.require_colons))
   }
   constructor(e, t, n, i = !1) {
     this._dirty = !0, this._emojiMap = {}, this._emoticons = [], this._usableEmojis = [], this._canSeeServerSubIAP = !1, this._totalUsable = 0, this.id = e, this._userId = t, this._emojis = n, this._canSeeServerSubIAP = i
   }
 }
-let j = M.default.fromTimestamp(Date.now() - 60 * O.default.Millis.DAY),
-  W = [],
-  K = 2,
-  z = B.slice(0),
+let Y = L.default.fromTimestamp(Date.now() - 60 * R.default.Millis.DAY),
+  K = [],
+  j = 2,
+  W = x.slice(0),
+  z = {},
   q = {},
-  X = new Map,
-  Q = {},
-  Z = null,
-  J = new Map;
+  X = null,
+  Q = new Map;
 
-function $(e) {
-  var t, n, i;
-  let s = ee()[e];
-  return null != s ? null !== (i = null === (t = q[s]) || void 0 === t ? void 0 : t.getUsableEmoji(e)) && void 0 !== i ? i : null === (n = X.get(s)) || void 0 === n ? void 0 : n.emojiById[e] : null
+function Z(e) {
+  var t;
+  let n = J()[e];
+  return null != n ? null === (t = z[n]) || void 0 === t ? void 0 : t.getUsableEmoji(e) : null
 }
 
-function ee() {
-  if (et(), null == Q) {
-    for (let e in Q = {}, q) {
-      let t = q[e];
-      for (let n of t.rawEmojis) Q[n.id] = e
+function J() {
+  if ($(), null == q)
+    for (let e in q = {}, z) {
+      let t = z[e];
+      for (let n of t.rawEmojis) q[n.id] = e
     }
-    for (let [t, n] of X) {
-      var e;
-      for (let i of null !== (e = null == n ? void 0 : n.content.emojis) && void 0 !== e ? e : []) Q[i.id] = t
-    }
-  }
-  return Q
+  return q
 }
-let et = () => L.isStable ? function() {
-  if (0 !== K) return;
+async function $() {
+  if (0 !== j) return;
   let e = c.default.database();
   if (null == e) return;
-  K = 2;
-  let t = (0, f.tryLoadOrResetCacheGateway)("EmojiStore.loadSavedEmojis", () => o.default.time("\uD83D\uDCBE", "loadSavedEmojis", () => _.default.getSync(e)));
-  if (null != t) {
-    for (let [e, n] of t) !Object.hasOwn(q, e) && C.default.isMember(e) && el(e, n);
-    eo()
-  }
-}() : en();
-async function en() {
-  if (0 !== K) return;
-  let e = c.default.database();
-  if (null == e) return;
-  K = 2;
-  let t = await (0, f.tryLoadOrResetCacheGatewayAsync)("EmojiStore.loadSavedEmojis", () => o.default.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => _.default.getAsync(e)));
+  j = 2;
+  let t = await (0, _.tryLoadOrResetCacheGatewayAsync)("EmojiStore.loadSavedEmojis", () => o.default.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => f.default.getAsync(e)));
   null != t && u.default.dispatch({
     type: "CACHED_EMOJIS_LOADED",
     emojis: t
   })
 }
-class ei {
+class ee {
   static get(e) {
-    return void 0 === e && (e = null), (null == ei._lastInstance || ei._lastInstance.guildId !== e) && (ei._lastInstance = new ei(e)), ei._lastInstance
+    return void 0 === e && (e = null), (null == ee._lastInstance || ee._lastInstance.guildId !== e) && (ee._lastInstance = new ee(e)), ee._lastInstance
   }
   static reset() {
-    ei._lastInstance = null
+    ee._lastInstance = null
   }
   static resetFrequentlyUsed() {
-    null != ei._lastInstance && (ei._lastInstance.frequentlyUsed = null)
+    null != ee._lastInstance && (ee._lastInstance.frequentlyUsed = null)
   }
   static resetFavorites() {
-    null != ei._lastInstance && (ei._lastInstance.favorites = null, ei._lastInstance.favoriteNamesAndIds = null)
+    null != ee._lastInstance && (ee._lastInstance.favorites = null, ee._lastInstance.favoriteNamesAndIds = null)
   }
   static clear(e) {
-    null != ei._lastInstance && ei._lastInstance.guildId === e && (ei._lastInstance = null)
+    null != ee._lastInstance && ee._lastInstance.guildId === e && (ee._lastInstance = null)
   }
   ensureDisambiguated() {
     null == this.disambiguatedEmoji && this._buildDisambiguatedCustomEmoji()
@@ -182,7 +164,7 @@ class ei {
     return null == this.escapedEmoticonNames && this._buildDisambiguatedCustomEmoji(), null == this.emoticonRegex && null != this.escapedEmoticonNames && "" !== this.escapedEmoticonNames && (this.emoticonRegex = new RegExp("^\\b(".concat(this.escapedEmoticonNames, ")\\b"))), this.emoticonRegex
   }
   getFrequentlyUsedEmojisWithoutFetchingLatest() {
-    return this.ensureDisambiguated(), null == this.frequentlyUsed && (this.frequentlyUsed = es.frequently.map(e => null != e.id ? this.getById(e.id) : null != e.name ? k.default.getByName(e.name) : void 0).filter(P.isNotNullish)), this.frequentlyUsed
+    return this.ensureDisambiguated(), null == this.frequentlyUsed && (this.frequentlyUsed = et.frequently.map(e => null != e.id ? this.getById(e.id) : null != e.name ? b.default.getByName(e.name) : void 0).filter(D.isNotNullish)), this.frequentlyUsed
   }
   rebuildFavoriteEmojisWithoutFetchingLatest() {
     if (this.ensureDisambiguated(), null == this.favorites || null == this.favoriteNamesAndIds) {
@@ -191,8 +173,8 @@ class ei {
         var t;
         null === (t = this.favoriteNamesAndIds) || void 0 === t || t.add(e);
         let n = this.getById(e);
-        return null == n && (n = k.default.getByName(e)), n
-      }).filter(P.isNotNullish)
+        return null == n && (n = b.default.getByName(e)), n
+      }).filter(D.isNotNullish)
     }
     return [this.favorites, this.favoriteNamesAndIds]
   }
@@ -206,13 +188,13 @@ class ei {
   getTopEmojiWithoutFetchingLatest(e) {
     if (this.ensureDisambiguated(), null == this.topEmojis) {
       var t;
-      let n = J.get(e),
-        i = V.default.getTopEmojiIdsByGuildId(e);
-      if (null == n && null == i) return W;
+      let n = Q.get(e),
+        i = w.default.getTopEmojiIdsByGuildId(e);
+      if (null == n && null == i) return K;
       let s = null !== (t = null == n ? void 0 : n.emojiIds) && void 0 !== t ? t : i,
         r = s.map(e => {
           var t;
-          return null !== (t = this.getById(e)) && void 0 !== t ? t : k.default.getByName(k.default.convertSurrogateToName(e, !1))
+          return null !== (t = this.getById(e)) && void 0 !== t ? t : b.default.getByName(b.default.convertSurrogateToName(e, !1))
         }),
         a = [];
       r.forEach(e => {
@@ -224,9 +206,9 @@ class ei {
     return this.topEmojis
   }
   getNewlyAddedEmojiForGuild(e) {
-    if (this.ensureDisambiguated(), null == this.newlyAddedEmoji) return W;
+    if (this.ensureDisambiguated(), null == this.newlyAddedEmoji) return K;
     let t = this.newlyAddedEmoji[e];
-    return null == t ? W : t
+    return null == t ? K : t
   }
   getEscapedCustomEmoticonNames() {
     return null == this.escapedEmoticonNames && this._buildDisambiguatedCustomEmoji(), this.escapedEmoticonNames
@@ -237,7 +219,7 @@ class ei {
         id: n,
         names: i,
         name: r
-      } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(h.default.getTermsForEmoji(r), e), u = null != n && s.some(w.default.getCaptionsForEmojiById({
+      } = t, a = null != i && s.some(i, e), o = null != r && e(r), l = null != r && s.some(E.default.getTermsForEmoji(r), e), u = null != n && s.some(U.default.getCaptionsForEmojiById({
         emojiId: n
       }), e);
       return a || o || l || u
@@ -262,31 +244,22 @@ class ei {
         }
         if (this.emojisByName[t.name] = t, "names" in t && (null === (i = t.names) || void 0 === i || i.slice(1).forEach(e => this.unicodeAliases[e] = t.name)), null != t.id) {
           let e, n;
-          switch (this.emojisById[t.id] = t, this.customEmojis[t.name] = t, t.type) {
-            case U.EmojiTypes.GUILD:
-              e = t.guildId, n = !0;
-              break;
-            case U.EmojiTypes.PACK:
-              e = t.packId
-          }
-          null != e && (null != this.groupedCustomEmojis[e] ? this.groupedCustomEmojis[e].push(t) : this.groupedCustomEmojis[e] = [t], n && M.default.compare(t.id, j) >= 0 && (null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e].push(t) : this.newlyAddedEmoji[e] = [t]))
+          if (this.emojisById[t.id] = t, this.customEmojis[t.name] = t, t.type === M.EmojiTypes.GUILD) e = t.guildId, n = !0;
+          null != e && (null != this.groupedCustomEmojis[e] ? this.groupedCustomEmojis[e].push(t) : this.groupedCustomEmojis[e] = [t], n && L.default.compare(t.id, Y) >= 0 && (null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e].push(t) : this.newlyAddedEmoji[e] = [t]))
         }
         null == this.disambiguatedEmoji && (this.disambiguatedEmoji = []), this.disambiguatedEmoji.push(t)
       },
       i = e => {
-        !Object.prototype.hasOwnProperty.call(this.emoticonsByName, e.name) && (t.push(b.default.escape(e.name)), this.emoticonsByName[e.name] = e)
+        !Object.prototype.hasOwnProperty.call(this.emoticonsByName, e.name) && (t.push(P.default.escape(e.name)), this.emoticonsByName[e.name] = e)
       };
-    k.default.forEach(n);
+    b.default.forEach(n);
     let r = e => {
-      let t = q[null == e ? "null" : e];
+      let t = z[null == e ? V.NULL_STRING_GUILD_ID : e];
       null != t && (s.each(t.usableEmojis, n), s.each(t.emoticons, i))
     };
-    r(this.guildId);
-    for (let e in this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => M.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
-    y.default.getFlattenedGuildIds().forEach(e => {
+    for (let e in r(this.guildId), this.newlyAddedEmoji) null != this.newlyAddedEmoji[e] ? this.newlyAddedEmoji[e] = this.newlyAddedEmoji[e].sort((e, t) => L.default.compare(t.id, e.id)).slice(0, 3) : this.newlyAddedEmoji[e] = [];
+    C.default.getFlattenedGuildIds().forEach(e => {
       e !== this.guildId && r(e)
-    }), v.default.getPacksForUser().map(e => {
-      null != e.content.emojis && s.each(e.content.emojis, n)
     }), this.escapedEmoticonNames = t.join("|")
   }
   constructor(e) {
@@ -298,8 +271,8 @@ class ei {
     }, this.guildId = e
   }
 }
-ei._lastInstance = null;
-let es = new d.default({
+ee._lastInstance = null;
+let et = new d.default({
   computeBonus: () => 100,
   computeWeight: e => {
     let t = 0;
@@ -307,120 +280,117 @@ let es = new d.default({
   },
   lookupKey: e => {
     var t;
-    return null !== (t = k.default.getByName(e)) && void 0 !== t ? t : $(e)
+    return null !== (t = b.default.getByName(e)) && void 0 !== t ? t : Z(e)
   },
   afterCompute: () => {
-    ei.resetFrequentlyUsed(), z = B.slice(0), !s.some(q, e => e.usableEmojis.length > 0) && z.splice(B.indexOf(F.EmojiCategories.CUSTOM), 1)
+    ee.resetFrequentlyUsed(), W = x.slice(0), !s.some(z, e => e.usableEmojis.length > 0) && W.splice(x.indexOf(G.EmojiCategories.CUSTOM), 1)
   },
   numFrequentlyItems: 42
 });
 
-function er() {
-  q = {}, X.clear(), Q = {}, ei.reset(), J.clear(), K = 2
+function en() {
+  z = {}, q = {}, ee.reset(), Q.clear(), j = 2
 }
 
-function ea(e) {
-  let t = q[e];
-  null != t && delete q[e]
+function ei(e) {
+  let t = z[e];
+  null != t && delete z[e]
 }
 
-function eo() {
-  Q = null, ei.reset(), 0 !== K && es.compute()
+function es() {
+  q = null, ee.reset(), 0 !== j && et.compute()
 }
 
-function el(e, t) {
-  if (ea(e), ei.clear(e), null == t) return;
-  let n = N.default.getCurrentUser();
+function er(e, t) {
+  if (ei(e), ee.clear(e), null == t) return;
+  let n = y.default.getCurrentUser();
   if (null == n) return;
   let i = (0, p.canUseRoleSubscriptionIAP)(e);
-  q[e] = new Y(e, n.id, t, i)
+  z[e] = new H(e, n.id, t, i)
 }
 
-function eu() {
+function ea() {
   var e, t, n, i;
   let r = T.default.settings,
     a = null === (t = r.textAndImages) || void 0 === t ? void 0 : null === (e = t.diversitySurrogate) || void 0 === e ? void 0 : e.value;
-  null != a && k.default.setDefaultDiversitySurrogate(a), ei.reset();
+  null != a && b.default.setDefaultDiversitySurrogate(a), ee.reset();
   let o = T.default.frecencyWithoutFetchingLatest,
     l = null !== (i = null === (n = o.emojiFrecency) || void 0 === n ? void 0 : n.emojis) && void 0 !== i ? i : {};
-  es.overwriteHistory(s.mapValues(l, e => ({
+  et.overwriteHistory(s.mapValues(l, e => ({
     ...e,
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
-  })), H.pendingUsages), s.isEmpty(l) && s.isEmpty(H.pendingUsages) && T.default.hasLoaded(x.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (es.track("thumbsup"), es.track("thumbsup"), es.track("eyes"), es.track("eyes"), es.track("laughing"), es.track("laughing"), es.track("watermelon"), es.track("fork_and_knife"), es.track("yum"), es.track("weary"), es.track("tired_face"), es.track("poop"), es.track("100"))
+  })), B.pendingUsages), s.isEmpty(l) && s.isEmpty(B.pendingUsages) && T.default.hasLoaded(F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) && (et.track("thumbsup"), et.track("thumbsup"), et.track("eyes"), et.track("eyes"), et.track("laughing"), et.track("laughing"), et.track("watermelon"), et.track("fork_and_knife"), et.track("yum"), et.track("weary"), et.track("tired_face"), et.track("poop"), et.track("100"))
 }
 
-function ed(e) {
+function eo(e) {
+  if (null == e) return !1;
   for (let i of e) {
     var t, n;
     let e = null !== (n = null !== (t = i.id) && void 0 !== t ? t : i.uniqueName) && void 0 !== n ? n : i.name;
-    null != e && (es.track(e), H.pendingUsages.push({
+    null != e && (et.track(e), B.pendingUsages.push({
       key: e,
       timestamp: Date.now()
     }))
   }
   let i = e.length > 0;
-  return i && 0 !== K && es.compute(), i
+  return i && 0 !== j && et.compute(), i
 }
 
-function ec(e) {
+function el(e) {
   let {
     guildId: t,
     role: n
   } = e;
-  if (!(0, g.isSubscriptionRole)(n)) return !1;
+  if (!(0, h.isSubscriptionRole)(n)) return !1;
   {
-    let e = q[t];
-    el(t, null == e ? void 0 : e.emojis), eo()
+    let e = z[t];
+    er(t, null == e ? void 0 : e.emojis), es()
   }
 }
-
-function ef() {
-  X = v.default.getPacksById(), eo()
-}
-class e_ extends l.default.PersistedStore {
+class eu extends l.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default, C.default, I.default, A.default, v.default, S.default, E.default, V.default, N.default), null != e && (H = e), this.syncWith([T.default], eu), this.syncWith([v.default], ef)
+    this.waitFor(c.default, I.default, v.default, A.default, S.default, m.default, w.default, y.default), null != e && (B = e), this.syncWith([T.default], ea)
   }
   getState() {
-    return H
+    return B
   }
   get loadState() {
-    return K
+    return j
   }
   hasPendingUsage() {
-    return H.pendingUsages.length > 0
+    return B.pendingUsages.length > 0
   }
   get categories() {
-    return z
+    return W
   }
   get diversitySurrogate() {
     var e;
-    return null !== (e = k.default.getDefaultDiversitySurrogate()) && void 0 !== e ? e : ""
+    return null !== (e = b.default.getDefaultDiversitySurrogate()) && void 0 !== e ? e : ""
   }
   get emojiFrecencyWithoutFetchingLatest() {
-    return es
+    return et
   }
   getGuildEmoji(e) {
     var t;
-    et();
-    let n = q[e];
+    $();
+    let n = z[e];
     return null !== (t = null == n ? void 0 : n.emojis) && void 0 !== t ? t : []
   }
   getUsableGuildEmoji(e) {
     var t;
-    et();
-    let n = q[e];
+    $();
+    let n = z[e];
     return null !== (t = null == n ? void 0 : n.usableEmojis) && void 0 !== t ? t : []
   }
   getGuilds() {
-    return q
+    return z
   }
   getDisambiguatedEmojiContext(e) {
-    return et(), ei.get(e)
+    return $(), ee.get(e)
   }
   getSearchResultsOrder(e, t, n) {
     let i = t.toLowerCase(),
-      r = b.default.escape(i);
+      r = P.default.escape(i);
     if (e.length > 0) {
       let t = RegExp("^".concat(r), "i"),
         n = new RegExp("(^|_|[A-Z])".concat(r, "s?([A-Z]|_|$)")),
@@ -431,7 +401,7 @@ class e_ extends l.default.PersistedStore {
           if (null == e || null == t) return 0;
           let n = e.toLowerCase(),
             s = 1 + (n === i ? 4 : 0) + (a(n) || a(e) ? 2 : 0) + (o(e) ? 1 : 0),
-            r = es.getScore(t);
+            r = et.getScore(t);
           return null != r && (s *= r / 100), s
         };
       e = s.orderBy(e, [e => null != e.names ? l(e.names[0]) : l(e.name, e.id), e => null != e.names ? e.names[0] : e.name], ["desc", "asc"])
@@ -445,96 +415,93 @@ class e_ extends l.default.PersistedStore {
       count: s = 0,
       intention: r,
       includeExternalGuilds: a = !0,
-      canViewAndUsePackEmoji: o,
-      matchComparator: l
+      matchComparator: o
     } = e;
-    et();
-    let u = i.toLowerCase().replaceAll(/[ _]/g, ""),
-      d = b.default.escape(u);
-    if (null == l) {
-      let e = RegExp("".concat(d), "i");
+    $();
+    let l = i.toLowerCase().replaceAll(/[ _]/g, ""),
+      u = P.default.escape(l);
+    if (null == o) {
+      let e = RegExp("".concat(u), "i");
       t = t => e.test(t.replaceAll("_", ""))
-    } else t = l;
-    let c = null != n ? n.getGuildId() : null,
-      f = ei.get(c).nameMatchesChain(t).reduce((e, t) => {
-        let i = D.default.getEmojiUnavailableReason({
+    } else t = o;
+    let d = null != n ? n.getGuildId() : null,
+      c = ee.get(d).nameMatchesChain(t).reduce((e, t) => {
+        let i = O.default.getEmojiUnavailableReason({
           emoji: t,
           channel: n,
           intention: r,
-          canViewAndUsePackEmoji: o,
           forceIncludeExternalGuilds: a
         });
-        return i === G.EmojiDisabledReasons.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
+        return i === k.EmojiDisabledReasons.PREMIUM_LOCKED ? e.locked.push(t) : null == i && e.unlocked.push(t), e
       }, {
         unlocked: [],
         locked: []
       });
     return {
-      unlocked: this.getSearchResultsOrder(f.unlocked, i, s),
-      locked: this.getSearchResultsOrder(f.locked, i, 0)
+      unlocked: this.getSearchResultsOrder(c.unlocked, i, s),
+      locked: this.getSearchResultsOrder(c.locked, i, 0)
     }
   }
   getUsableCustomEmojiById(e) {
-    return et(), $(e)
+    return $(), Z(e)
   }
   getCustomEmojiById(e) {
-    return et(),
+    return $(),
       function(e) {
-        var t, n, i;
-        let s = ee()[e];
-        return null != s ? null !== (i = null === (t = q[s]) || void 0 === t ? void 0 : t.getEmoji(e)) && void 0 !== i ? i : null === (n = X.get(s)) || void 0 === n ? void 0 : n.emojiById[e] : null
+        var t;
+        let n = J()[e];
+        return null != n ? null === (t = z[n]) || void 0 === t ? void 0 : t.getEmoji(e) : null
       }(e)
   }
   getTopEmoji(e) {
-    return null == e ? W : (et(), ei.get(e).getTopEmojiWithoutFetchingLatest(e))
+    return null == e ? K : ($(), ee.get(e).getTopEmojiWithoutFetchingLatest(e))
   }
   getNewlyAddedEmoji(e) {
-    return null == e ? W : (et(), ei.get(e).getNewlyAddedEmojiForGuild(e))
+    return null == e ? K : ($(), ee.get(e).getNewlyAddedEmojiForGuild(e))
   }
   getTopEmojisMetadata(e) {
-    return J.get(e)
+    return Q.get(e)
   }
   getEmojiAutosuggestion(e) {
-    if (null != Z && Z.length > 0) {
+    if (null != X && X.length > 0) {
       let {
         locked: t,
         unlocked: n
       } = this.searchWithoutFetchingLatest({
         channel: e,
         count: 10,
-        query: Z,
-        intention: G.EmojiIntention.CHAT,
-        canViewAndUsePackEmoji: !1
+        query: X,
+        intention: k.EmojiIntention.CHAT
       });
       return [...n.slice(0, 5), ...t.slice(0, 5)].slice(0, 5)
     }
     return []
   }
   hasUsableEmojiInAnyGuild() {
-    et();
-    let e = Object.keys(q);
-    return e.some(e => q[e].usableEmojis.length > 0)
+    $();
+    let e = L.default.keys(z);
+    return e.some(e => z[e].usableEmojis.length > 0)
   }
   hasFavoriteEmojis(e) {
-    let t = ei.get(e);
+    let t = ee.get(e);
     return null != t && t.favoriteEmojisWithoutFetchingLatest.length > 0
   }
 }
-e_.displayName = "EmojiStore", e_.persistKey = "EmojiStoreV2";
-var eh = new e_(u.default, {
+eu.displayName = "EmojiStore", eu.persistKey = "EmojiStoreV2";
+var ed = new eu(u.default, {
   BACKGROUND_SYNC: function() {
-    er()
+    en()
   },
   CONNECTION_OPEN: function(e) {
-    for (let t of (er(), e.guilds)) el(t.id, t.emojis);
-    K = e.guilds.every(e => null != e.emojis) ? 1 : 0, eo()
+    for (let t of (en(), e.guilds)) er(t.id, t.emojis);
+    j = e.guilds.every(e => null != e.emojis) ? 1 : 0, es()
   },
   CACHED_EMOJIS_LOADED: function(e) {
     let {
       emojis: t
     } = e;
-    for (let [e, n] of t) !Object.hasOwn(q, e) && C.default.isMember(e) && el(e, n);
-    eo()
+    for (let [e, n] of t) !Object.hasOwn(z, e) && I.default.isMember(e) && er(e, n);
+    es()
   },
   GUILD_MEMBER_UPDATE: function(e) {
     var t;
@@ -542,40 +509,40 @@ var eh = new e_(u.default, {
       guildId: n,
       user: i
     } = e;
-    if (i.id !== (null === (t = N.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
-    let s = q[n];
-    el(n, null == s ? void 0 : s.usableEmojis), eo()
+    if (i.id !== (null === (t = y.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) return;
+    let s = z[n];
+    er(n, null == s ? void 0 : s.usableEmojis), es()
   },
   GUILD_CREATE: function(e) {
-    0 !== K && null == e.guild.emojis && null != e.guild.emojiUpdates && (K = 0), el(e.guild.id, e.guild.emojis), eo()
+    0 !== j && null == e.guild.emojis && null != e.guild.emojiUpdates && (j = 0), er(e.guild.id, e.guild.emojis), es()
   },
   GUILD_UPDATE: function(e) {
-    el(e.guild.id, e.guild.emojis), eo()
+    er(e.guild.id, e.guild.emojis), es()
   },
   GUILD_EMOJIS_UPDATE: function(e) {
     let {
       guildId: t,
       emojis: n
     } = e;
-    el(t, n), eo()
+    er(t, n), es()
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    ea(t.id), J.delete(t.id), eo()
+    ei(t.id), Q.delete(t.id), es()
   },
   MESSAGE_REACTION_ADD: function(e) {
     if (!e.optimistic) return !1;
-    let t = null != e.emoji.id && "0" !== e.emoji.id ? e.emoji : k.default.getByName(k.default.convertSurrogateToName(e.emoji.name, !1));
+    let t = null != e.emoji.id && "0" !== e.emoji.id ? e.emoji : b.default.getByName(b.default.convertSurrogateToName(e.emoji.name, !1));
     if (null == t) return !1;
-    ed([t])
+    eo([t])
   },
   EMOJI_TRACK_USAGE: function(e) {
     let {
       emojiUsed: t
     } = e;
-    ed(t)
+    eo(t)
   },
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {
@@ -584,40 +551,25 @@ var eh = new e_(u.default, {
       },
       wasSaved: n
     } = e;
-    if (h.default.setEmojiLocale(S.default.locale), t !== x.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
-    H.pendingUsages = []
+    if (E.default.setEmojiLocale(S.default.locale), t !== F.UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    B.pendingUsages = []
   },
-  GUILD_ROLE_CREATE: ec,
-  GUILD_ROLE_UPDATE: ec,
+  GUILD_ROLE_CREATE: el,
+  GUILD_ROLE_UPDATE: el,
   TOP_EMOJIS_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       topEmojisMetadata: n
     } = e;
-    J.set(t, {
+    Q.set(t, {
       emojiIds: n.map(e => e.emojiId),
       topEmojisTTL: a(a()).add(1, "days").valueOf()
     })
-  },
-  INVENTORY_FETCH_SUCCESS: function(e) {
-    let {} = e;
-    ef()
-  },
-  INVENTORY_COLLECT_PACK_SUCCESS: function(e) {
-    let {} = e;
-    eo()
-  },
-  INVENTORY_REMOVE_PACK_SUCCESS: function(e) {
-    let {} = e;
-    eo()
   },
   EMOJI_AUTOSUGGESTION_UPDATE: function(e) {
     let {
       text: t
     } = e;
-    Z = t
-  },
-  LOGOUT: function(e) {
-    er()
+    X = t
   }
 })

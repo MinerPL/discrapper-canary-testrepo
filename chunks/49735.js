@@ -4,30 +4,32 @@ n.r(t), n.d(t, {
     return d
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
-var a = n("77078"),
-  l = n("400307"),
-  r = n("646718"),
-  i = n("414539");
+var i = n("77078"),
+  s = n("400307"),
+  l = n("646718"),
+  u = n("932865");
 
-function u(e) {
+function a(e) {
   let {
     onClick: t,
-    isGift: n
+    isGift: n,
+    priceOptions: l
   } = e;
-  return (0, s.jsx)(a.Clickable, {
+  return (0, r.jsx)(i.Clickable, {
     onClick: t,
     style: {
       cursor: "pointer"
     },
-    children: (0, s.jsx)(l.Tier2Card, {
-      className: i.tier2MarketingCard,
+    children: (0, r.jsx)(s.Tier2Card, {
+      className: u.tier2MarketingCard,
       ctaButton: null,
       showWumpus: !0,
       showYearlyPrice: !0,
       isGift: n,
-      isModal: !0
+      isModal: !0,
+      priceOptions: l
     })
   })
 }
@@ -35,34 +37,39 @@ function u(e) {
 function o(e) {
   let {
     onClick: t,
-    isGift: n
+    isGift: n,
+    priceOptions: l
   } = e;
-  return (0, s.jsx)(a.Clickable, {
+  return (0, r.jsx)(i.Clickable, {
     onClick: t,
     style: {
       cursor: "pointer"
     },
-    children: (0, s.jsx)(l.Tier0Card, {
-      className: i.tier0MarketingCard,
+    children: (0, r.jsx)(s.Tier0Card, {
+      className: u.tier0MarketingCard,
       ctaButton: null,
       showWumpus: !0,
       showYearlyPrice: !0,
-      isGift: n
+      isGift: n,
+      priceOptions: l
     })
   })
 }
 var d = function(e) {
   let {
     onSelectSku: t,
-    isGift: n
+    isGift: n,
+    priceOptions: i
   } = e;
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(u, {
-      onClick: () => t(r.PremiumSubscriptionSKUs.TIER_2),
-      isGift: n
-    }), (0, s.jsx)(o, {
-      onClick: () => t(r.PremiumSubscriptionSKUs.TIER_0),
-      isGift: n
+  return (0, r.jsxs)(r.Fragment, {
+    children: [(0, r.jsx)(a, {
+      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_2),
+      isGift: n,
+      priceOptions: i
+    }), (0, r.jsx)(o, {
+      onClick: () => t(l.PremiumSubscriptionSKUs.TIER_0),
+      isGift: n,
+      priceOptions: i
     })]
   })
 }

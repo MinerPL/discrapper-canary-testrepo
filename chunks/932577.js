@@ -19,7 +19,7 @@ class u extends a.Component {
       selectedSkuId: s,
       onChange: n
     } = this.props;
-    null == t || 0 === t.length ? (0, i.fetchSKUsForApplication)(e, !1) : 1 === t.length && null == s && n(t[0].id)
+    null == t || 0 === t.length ? (0, i.fetchTestSKUsForApplication)(e, !1) : 1 === t.length && null == s && n(t[0].id)
   }
   componentDidUpdate() {
     let {

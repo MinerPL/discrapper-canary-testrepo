@@ -13,14 +13,14 @@ var s = n("37983"),
   u = n("381546"),
   d = n("733160"),
   c = n("713573"),
-  f = n("850642"),
-  E = n("782340"),
-  _ = n("35847"),
+  E = n("850642"),
+  f = n("782340"),
+  _ = n("382051"),
   T = e => {
     let {
       channelId: t,
       messageId: n
-    } = e, T = (0, a.useStateFromStores)([f.default], () => f.default.shouldShowBump(n), [n]), I = l.useCallback(() => {
+    } = e, T = (0, a.useStateFromStores)([E.default], () => E.default.shouldShowBump(n), [n]), I = l.useCallback(() => {
       r.default.dismissPublishBump(n), (0, o.default)(t, n)
     }, [t, n]), m = l.useCallback(() => {
       r.default.dismissPublishBump(n)
@@ -36,14 +36,14 @@ var s = n("37983"),
         }), (0, s.jsx)(c.default, {
           className: _.tagline,
           size: c.default.Sizes.SIZE_14,
-          children: E.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP
+          children: f.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP
         }), (0, s.jsx)(i.Button, {
           color: i.Button.Colors.LINK,
           look: i.Button.Looks.LINK,
           size: i.Button.Sizes.MIN,
           className: _.publish,
           onClick: I,
-          children: E.default.Messages.NEWS_CHANNEL_PUBLISH
+          children: f.default.Messages.NEWS_CHANNEL_PUBLISH
         }), (0, s.jsx)(i.Clickable, {
           onClick: m,
           children: (0, s.jsx)(u.default, {
@@ -58,7 +58,7 @@ var s = n("37983"),
         variant: "text-sm/normal",
         children: (0, s.jsx)(i.Clickable, {
           onClick: N,
-          children: E.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
+          children: f.default.Messages.NEWS_CHANNEL_PUBLISH_BUMP_HIDE_PERMANENTLY
         })
       })]
     }) : null

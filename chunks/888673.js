@@ -1,89 +1,90 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
-var l, a = n("37983"),
-  s = n("884691"),
-  i = n("254490"),
+var i, l = n("37983"),
+  a = n("884691"),
+  s = n("254490"),
   r = n("952368"),
   o = n("170113"),
   u = n("49111"),
   d = n("782340");
-l = class extends s.Component {
+i = class extends a.Component {
   render() {
     let {
       src: e,
       fileSize: t,
       className: n,
-      mediaPlayerClassName: l,
-      poster: s,
+      mediaPlayerClassName: i,
+      poster: a,
       fileName: c,
-      naturalWidth: m,
-      naturalHeight: f,
-      playable: h,
-      downloadable: p = !0,
-      volume: g,
+      naturalWidth: f,
+      naturalHeight: p,
+      playable: m,
+      downloadable: h = !0,
+      volume: x,
       autoPlay: E,
-      autoMute: v,
-      responsive: C,
-      mediaLayoutType: I,
-      mimeType: x,
-      renderOverlayContent: _,
-      renderLinkComponent: S,
-      onClick: N,
-      onPlay: M,
-      onEnded: T,
+      autoMute: y,
+      responsive: g,
+      mediaLayoutType: S,
+      mimeType: C,
+      renderOverlayContent: T,
+      renderLinkComponent: _,
+      onClick: I,
+      onPlay: v,
+      onEnded: N,
       onVolumeChange: A,
-      onMute: j,
-      alt: y = d.default.Messages.VIDEO,
-      ...R
+      onMute: O,
+      alt: R = d.default.Messages.VIDEO,
+      ...M
     } = this.props;
-    return (0, a.jsx)(r.default, {
-      alt: y,
+    return (0, l.jsx)(r.default, {
+      alt: R,
       className: n,
-      src: s,
-      ...R,
+      src: a,
+      ...M,
       minWidth: o.default.minWidth,
       minHeight: o.default.minHeight,
       shouldLink: !1,
       shouldAnimate: !1,
-      mediaLayoutType: I,
-      responsive: C,
+      mediaLayoutType: S,
+      responsive: g,
       children: n => {
         let {
-          src: s,
+          src: a,
           size: {
             width: r,
             height: d
           }
-        } = n, y = !(m <= u.MAX_VIDEO_WIDTH && f <= u.MAX_VIDEO_HEIGHT || m <= u.MAX_VIDEO_HEIGHT && f <= u.MAX_VIDEO_WIDTH);
-        return (0, a.jsx)(o.default, {
-          className: l,
-          forceExternal: y,
+        } = n, R = !(f <= u.MAX_VIDEO_WIDTH && p <= u.MAX_VIDEO_HEIGHT || f <= u.MAX_VIDEO_HEIGHT && p <= u.MAX_VIDEO_WIDTH);
+        return (0, l.jsx)(o.default, {
+          className: i,
+          forceExternal: R,
           src: e,
-          poster: s,
+          poster: a,
           width: r,
           height: d,
-          responsive: C,
-          volume: g,
+          responsive: g,
+          volume: x,
           autoPlay: null != E && E,
-          autoMute: null != v && v,
+          autoMute: null != y && y,
           type: o.default.Types.VIDEO,
-          mediaLayoutType: I,
+          mediaLayoutType: S,
           fileName: c,
-          fileSize: null == t ? void 0 : (0, i.sizeString)(t),
-          playable: h,
-          renderLinkComponent: S,
-          renderOverlayContent: _,
-          onClick: N,
-          onPlay: M,
-          onEnded: T,
+          fileSize: null == t ? void 0 : (0, s.sizeString)(t),
+          fileSizeBytes: null == t ? void 0 : t,
+          playable: m,
+          renderLinkComponent: _,
+          renderOverlayContent: T,
+          onClick: I,
+          onPlay: v,
+          onEnded: N,
           onVolumeChange: A,
-          onMute: j,
-          mimeType: x,
-          downloadable: p
+          onMute: O,
+          mimeType: C,
+          downloadable: h
         })
       }
     })

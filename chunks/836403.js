@@ -1,28 +1,29 @@
 "use strict";
-n.r(e), n.d(e, {
+a.r(t), a.d(t, {
   serializePushNotificationLogs: function() {
-    return r
+    return s
   },
   getPushNotificationLogs: function() {
-    return i
+    return r
   }
 });
-var o = n("95410"),
-  a = n("271938"),
-  l = n("49111");
+var n = a("95410"),
+  l = a("271938"),
+  o = a("49111");
 
-function r(t) {
-  if (0 === t.length) return "No logs";
-  let e = o.default.get(l.DEVICE_TOKEN),
-    n = o.default.get(l.DEVICE_VOIP_TOKEN),
-    a = t.map(t => {
-      let e = "Displayed";
-      return t.silent && (e = "Silent"), "".concat(new Date(t.receivedTimestamp).toISOString(), " [").concat(t.type, "] ").concat(e, " - ").concat(t.title, " - ").concat(t.content, " ")
+function s(e, t) {
+  if (0 === e.length) return "No logs";
+  let a = n.default.get(o.DEVICE_TOKEN),
+    l = n.default.get(o.DEVICE_VOIP_TOKEN),
+    s = e.map(e => {
+      let a = e.silent ? "Silent" : "Displayed",
+        n = t ? "".concat(e.channelId, " - ").concat(e.messageId) : "".concat(e.title, " - ").concat(e.content);
+      return "".concat(new Date(e.receivedTimestamp).toISOString(), " [").concat(e.type, "] ").concat(a, " - ").concat(n)
     }).join("\n");
-  return "".concat(null != e ? "Device Token: ".concat(e) : "", "\n").concat(null != n ? "Device Voip Token: ".concat(n) : "", "\n\n").concat(a)
+  return "".concat(null != a ? "Device Token: ".concat(a) : "", "\n").concat(null != l ? "Device Voip Token: ".concat(l) : "", "\n\n").concat(s)
 }
-async function i() {
-  let t = a.default.getId(),
-    e = [];
-  return e
+async function r() {
+  let e = l.default.getId(),
+    t = [];
+  return t
 }

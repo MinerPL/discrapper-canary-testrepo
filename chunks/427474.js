@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return E
   },
   CHANNEL_NOTICE_STORES: function() {
-    return _
+    return h
   }
 });
 var a = n("151426"),
   s = n("116460"),
-  i = n("779671"),
-  l = n("8452"),
+  l = n("779671"),
+  i = n("8452"),
   r = n("433973"),
   o = n("150057"),
   u = n("141162"),
@@ -22,11 +22,11 @@ var a = n("151426"),
 let f = "lastHiddenChannelNotice",
   E = [{
     type: c.ChannelNoticeTypes.GUILD_BOOSTING,
-    store: l.default,
+    store: i.default,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION
   }, {
     type: c.ChannelNoticeTypes.GUILD_BANNER,
-    store: i.default,
+    store: l.default,
     dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_GUILD_BANNER
   }, {
     type: c.ChannelNoticeTypes.INVITE,
@@ -47,11 +47,5 @@ let f = "lastHiddenChannelNotice",
   }, {
     type: c.ChannelNoticeTypes.LINKED_ROLES_ADMIN,
     dismissibleContentType: a.DismissibleContent.LINKED_ROLE_ADMIN_GUILD
-  }, {
-    type: c.ChannelNoticeTypes.CLYDE_ADMIN_NUX,
-    dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_CLYDE_NUX
-  }, {
-    type: c.ChannelNoticeTypes.CLYDE_USER_NUX,
-    dismissibleContentType: a.DismissibleContent.CHANNEL_NOTICE_CLYDE_NUX
   }],
-  _ = E.map(e => e.store).filter(d.isNotNullish)
+  h = E.map(e => e.store).filter(d.isNotNullish)

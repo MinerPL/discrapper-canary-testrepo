@@ -7,4 +7,4 @@ n.r(t), n.d(t, {
   MessagePreviewTypes: function() {
     return r
   }
-}), (o = i || (i = {})).COZY = "cozy", o.COMPACT = "compact", o.MINIMAL = "minimal", (s = r || (r = {})).ALL = "all", s.UNREADS = "unreads", s.NONE = "none"
+}), (o = i || (i = {})).COZY = "cozy", o.COZY_DRAWER = "cozy-drawer", o.COZY_DRAWER_SMOL = "cozy-drawer-smol", o.COMPACT = "compact", o.MINIMAL = "minimal", (s = r || (r = {})).ALL = "all", s.UNREADS = "unreads", s.NONE = "none"

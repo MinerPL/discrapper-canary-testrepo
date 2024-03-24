@@ -1,88 +1,88 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return T
+    return A
   }
-}), n("222007");
-var s = n("37983"),
-  r = n("884691"),
-  i = n("516555"),
-  l = n("812204"),
-  a = n("685665"),
-  u = n("635357"),
-  o = n("642906"),
-  d = n("85336"),
-  c = n("385179"),
-  f = n("292215"),
-  p = n("639137"),
-  E = n("526139"),
-  S = n("158184"),
-  h = n("385890"),
-  m = n("337978"),
-  I = n("49111"),
-  _ = n("843455"),
-  C = n("322859");
+}), s("222007");
+var n = s("37983"),
+  l = s("884691"),
+  a = s("516555"),
+  i = s("812204"),
+  r = s("685665"),
+  u = s("635357"),
+  o = s("642906"),
+  d = s("85336"),
+  c = s("385179"),
+  S = s("292215"),
+  E = s("639137"),
+  f = s("526139"),
+  I = s("158184"),
+  _ = s("385890"),
+  p = s("337978"),
+  T = s("49111"),
+  C = s("843455"),
+  m = s("773232");
 
-function T(e) {
+function A(e) {
   let {
     onClose: t,
-    onComplete: n,
-    transitionState: T,
-    loadId: x,
-    skuId: g,
-    isGift: v = !1,
-    giftRecipient: A,
-    giftMessage: N,
-    analyticsLocations: P,
-    returnRef: O
+    onComplete: s,
+    transitionState: A,
+    loadId: N,
+    skuId: h,
+    isGift: P = !1,
+    giftRecipient: g,
+    giftMessage: O,
+    analyticsLocations: x,
+    returnRef: R
   } = e, {
     analyticsLocations: L,
-    AnalyticsLocationProvider: M
-  } = (0, a.default)([...P, l.default.COLLECTIBLES_PAYMENT_MODAL]), R = r.useRef(new i.Environment), [j, y] = r.useState(null), F = [f.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, h.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...f.SHARED_STEP_CONFIGS, f.REVIEW_STEP_CONFIG, {
+    AnalyticsLocationProvider: v
+  } = (0, r.default)([...x, i.default.COLLECTIBLES_PAYMENT_MODAL]), M = l.useRef(new a.Environment), [F, j] = l.useState(null), y = [S.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, _.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, f.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...S.SHARED_STEP_CONFIGS, S.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
-    renderStep: e => (0, s.jsx)(S.CollectiblesPaymentModalConfirmStep, {
+    renderStep: e => (0, n.jsx)(I.CollectiblesPaymentModalConfirmStep, {
       ...e,
-      confettiCanvas: j,
+      confettiCanvas: F,
       analyticsLocations: L
     }),
     options: {
-      bodyClassName: C.modalOverrideBody,
-      sliderBodyClassName: C.modalOverrideSliderBody
+      bodyClassName: m.modalOverrideBody,
+      sliderBodyClassName: m.modalOverrideSliderBody
     }
   }];
-  return (0, s.jsxs)(M, {
-    children: [(0, s.jsx)(i.ConfettiCanvas, {
-      ref: y,
-      className: C.confettiCanvas,
-      environment: R.current
-    }), (0, s.jsx)(o.PaymentContextProvider, {
-      stepConfigs: F,
-      applicationId: I.COLLECTIBLES_APPLICATION_ID,
-      skuIDs: [g],
-      isGift: v,
+  return (0, n.jsxs)(v, {
+    children: [(0, n.jsx)(a.ConfettiCanvas, {
+      ref: j,
+      className: m.confettiCanvas,
+      environment: M.current
+    }), (0, n.jsx)(o.PaymentContextProvider, {
+      loadId: N,
+      stepConfigs: y,
+      applicationId: T.COLLECTIBLES_APPLICATION_ID,
+      skuIDs: [h],
+      isGift: P,
       activeSubscription: null,
-      purchaseType: _.PurchaseTypes.ONE_TIME,
-      children: (0, s.jsx)(u.GiftContextProvider, {
-        isGift: v,
-        giftRecipient: A,
-        giftMessage: N,
-        children: (0, s.jsx)(c.PaymentModal, {
+      purchaseType: C.PurchaseTypes.ONE_TIME,
+      children: (0, n.jsx)(u.GiftContextProvider, {
+        isGift: P,
+        giftRecipient: g,
+        giftMessage: O,
+        children: (0, n.jsx)(c.PaymentModal, {
           onClose: t,
-          onComplete: n,
-          loadId: x,
-          applicationId: I.COLLECTIBLES_APPLICATION_ID,
-          skuId: g,
+          onComplete: s,
+          applicationId: T.COLLECTIBLES_APPLICATION_ID,
+          skuId: h,
           initialPlanId: null,
           analyticsLocations: L,
-          transitionState: T,
-          renderHeader: (e, t, n) => v ? (0, s.jsx)(p.default, {
-            step: n,
+          transitionState: A,
+          renderHeader: (e, t, s) => P ? (0, n.jsx)(E.default, {
+            step: s,
             onClose: () => t(!1)
-          }) : (0, s.jsx)(m.default, {
-            step: n,
+          }) : (0, n.jsx)(p.default, {
+            step: s,
             onClose: () => t(!1)
           }),
-          returnRef: O,
+          returnRef: R,
           hideShadow: !0
         })
       })

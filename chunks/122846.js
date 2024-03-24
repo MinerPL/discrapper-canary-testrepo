@@ -1,190 +1,191 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return G
   }
 });
 var r = n("37983"),
-  i = n("884691"),
-  u = n("414456"),
-  l = n.n(u),
-  a = n("446674"),
+  l = n("884691"),
+  s = n("414456"),
+  a = n.n(s),
+  i = n("446674"),
   o = n("77078"),
-  s = n("913144"),
+  u = n("913144"),
   c = n("850068"),
   d = n("775433"),
-  _ = n("308592"),
-  E = n("642906"),
+  E = n("308592"),
+  _ = n("642906"),
   f = n("85336"),
   T = n("552917"),
-  S = n("843647"),
-  I = n("154889"),
+  I = n("843647"),
+  R = n("154889"),
   p = n("917247"),
   A = n("956597"),
-  R = n("635956"),
-  N = n("273619"),
-  C = n("674158"),
-  P = n("915639"),
-  O = n("357957"),
-  U = n("326880"),
-  m = n("46829"),
-  h = n("595086"),
-  L = n("719923"),
-  M = n("153160"),
+  S = n("635956"),
+  C = n("273619"),
+  M = n("674158"),
+  N = n("915639"),
+  m = n("357957"),
+  P = n("326880"),
+  h = n("46829"),
+  L = n("595086"),
+  O = n("240481"),
+  U = n("719923"),
+  D = n("153160"),
   v = n("49111"),
-  y = n("646718"),
-  D = n("782340"),
-  g = n("643076");
-let G = e => {
+  x = n("646718"),
+  g = n("782340"),
+  H = n("822549");
+let y = e => {
   let {
     locale: t
   } = e;
   return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(C.default, {
-      icon: h.default,
-      iconClassName: g.iconColorPurple,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
-    }), (0, r.jsx)(C.default, {
-      icon: U.default,
-      iconClassName: g.iconColorPink,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_GUILD_SUBSCRIPTION.format({
-        numGuildSubscriptions: y.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
-        discountPercent: (0, M.formatPercent)(t, y.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
+    children: [(0, r.jsx)(M.default, {
+      icon: L.default,
+      iconClassName: H.iconColorPurple,
+      description: g.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
+    }), (0, r.jsx)(M.default, {
+      icon: P.default,
+      iconClassName: H.iconColorPink,
+      description: g.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_GUILD_SUBSCRIPTION.format({
+        numGuildSubscriptions: x.NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM,
+        discountPercent: (0, O.formatPercent)(t, x.GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT / 100)
       })
-    }), (0, r.jsx)(C.default, {
-      icon: m.default,
-      iconClassName: g.iconColorYellow,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_PREMIUM_SUBSCRIPTION
+    }), (0, r.jsx)(M.default, {
+      icon: h.default,
+      iconClassName: H.iconColorYellow,
+      description: g.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_PREMIUM_SUBSCRIPTION
     })]
   })
 };
 
-function b() {
+function j() {
   return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(C.default, {
+    children: [(0, r.jsx)(M.default, {
+      icon: L.default,
+      iconClassName: H.iconColorPurple,
+      description: g.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
+    }), (0, r.jsx)(M.default, {
       icon: h.default,
-      iconClassName: g.iconColorPurple,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_PERK_CUSTOM
-    }), (0, r.jsx)(C.default, {
-      icon: m.default,
-      iconClassName: g.iconColorYellow,
-      description: D.default.Messages.STICKER_PREMIUM_TIER_0_UPSELL_PERK_PREMIUM_SUBSCRIPTION
+      iconClassName: H.iconColorYellow,
+      description: g.default.Messages.STICKER_PREMIUM_TIER_0_UPSELL_PERK_PREMIUM_SUBSCRIPTION
     })]
   })
 }
-let B = e => {
+let b = e => {
     let {
       trialOffer: t,
-      discountOffer: i,
-      isTier0Upsell: u,
-      isLoading: s,
+      discountOffer: l,
+      isTier0Upsell: s,
+      isLoading: u,
       price: c,
       onClose: d
-    } = e, _ = (0, a.useStateFromStores)([P.default], () => P.default.locale), E = null != t || null != i;
+    } = e, E = (0, i.useStateFromStores)([N.default], () => N.default.locale), _ = null != t || null != l;
     return (0, r.jsxs)("div", {
-      className: g.wrapper,
+      className: H.wrapper,
       children: [(0, r.jsx)(o.ModalCloseButton, {
         onClick: d,
-        className: g.closeButton
-      }), E && (0, r.jsx)(A.PremiumTrialGradientBadge, {
-        className: g.premiumTrialBadge
+        className: H.closeButton
+      }), _ && (0, r.jsx)(A.PremiumTrialGradientBadge, {
+        className: H.premiumTrialBadge
       }), (0, r.jsx)("img", {
-        className: l(g.heroImage, {
-          [g.heroImageWithTrialOffer]: E
+        className: a(H.heroImage, {
+          [H.heroImageWithTrialOffer]: _
         }),
         src: n("190389"),
         alt: ""
-      }), s ? (0, r.jsx)(o.Spinner, {}) : (0, r.jsxs)(r.Fragment, {
+      }), u ? (0, r.jsx)(o.Spinner, {}) : (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)(o.Text, {
           variant: "text-md/normal",
-          className: g.heading,
+          className: H.heading,
           children: null == c ? (0, r.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS
-          }) : u ? D.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
-            planName: (0, L.getTierDisplayName)(y.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-            monthlyPrice: (0, M.formatPrice)(c.amount, c.currency)
-          }) : D.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
-            monthlyPrice: (0, M.formatPrice)(c.amount, c.currency)
+          }) : s ? g.default.Messages.STICKER_PREMIUM_SUBSCRIPTION_UPSELL_ALERT_TITLE.format({
+            planName: (0, U.getTierDisplayName)(x.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+            monthlyPrice: (0, D.formatPrice)(c.amount, c.currency)
+          }) : g.default.Messages.STICKER_PREMIUM_TIER_2_UPSELL_ALERT_TITLE.format({
+            monthlyPrice: (0, D.formatPrice)(c.amount, c.currency)
           })
         }), (0, r.jsx)("div", {
-          className: g.perks,
-          children: u ? (0, r.jsx)(b, {}) : (0, r.jsx)(G, {
-            locale: _
+          className: H.perks,
+          children: s ? (0, r.jsx)(j, {}) : (0, r.jsx)(y, {
+            locale: E
           })
         })]
       })]
     })
   },
-  x = e => {
+  B = e => {
     let {
       trialOffer: t,
       discountOffer: n,
-      isTier0Upsell: i,
-      onClose: u
-    } = e, l = {
+      isTier0Upsell: l,
+      onClose: s
+    } = e, a = {
       section: v.AnalyticsSections.STICKER_PREMIUM_TIER_2_UPSELL_MODAL
     };
     return (0, r.jsxs)(o.ModalFooter, {
-      className: g.footer,
+      className: H.footer,
       children: [(0, r.jsx)(o.Button, {
-        onClick: u,
+        onClick: s,
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,
-        children: D.default.Messages.CLOSE
-      }), (0, r.jsx)(R.default, {
-        buttonText: null != t || null != n ? i ? D.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : D.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
-        premiumModalAnalyticsLocation: l,
-        subscriptionTier: i ? y.PremiumSubscriptionSKUs.TIER_0 : y.PremiumSubscriptionSKUs.TIER_2,
+        children: g.default.Messages.CLOSE
+      }), (0, r.jsx)(S.default, {
+        buttonText: null != t || null != n ? l ? g.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : g.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
+        premiumModalAnalyticsLocation: a,
+        subscriptionTier: l ? x.PremiumSubscriptionSKUs.TIER_0 : x.PremiumSubscriptionSKUs.TIER_2,
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.GREEN,
         onClick: () => {
-          u()
+          s()
         }
       })]
     })
   };
 
-function H(e) {
+function G(e) {
   let {
     onClose: t,
     ...n
-  } = e, u = (0, _.useSubscriptionPlansLoaded)(), l = (0, a.useStateFromStores)([O.default], () => O.default.hasFetchedPaymentSources), A = u && l, R = (0, p.usePremiumTrialOffer)(), C = (0, I.usePremiumDiscountOffer)(), {
-    isLoading: P,
-    suggestedPremiumType: U
-  } = (0, S.default)({
+  } = e, s = (0, E.useSubscriptionPlansLoaded)(), a = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedPaymentSources), A = s && a, S = (0, p.usePremiumTrialOffer)(), M = (0, R.usePremiumDiscountOffer)(), {
+    isLoading: N,
+    suggestedPremiumType: P
+  } = (0, I.default)({
     autoTrackExposure: A,
     experiment: T.default,
     location: "stickers_upsell"
   });
-  i.useEffect(() => {
-    s.default.wait(() => {
+  l.useEffect(() => {
+    u.default.wait(() => {
       (0, c.fetchPaymentSources)(), (0, d.fetchPremiumSubscriptionPlans)(null, null, v.RevenueSurfaces.DISCOVERY)
     })
   }, []);
-  let m = U === y.PremiumTypes.TIER_0 && null == C,
-    h = A ? L.default.getDefaultPrice(m ? y.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : y.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
-  return (0, r.jsx)(E.PaymentContextProvider, {
+  let h = P === x.PremiumTypes.TIER_0 && null == M,
+    L = A ? U.default.getDefaultPrice(h ? x.SubscriptionPlans.PREMIUM_MONTH_TIER_0 : x.SubscriptionPlans.PREMIUM_MONTH_TIER_2) : null;
+  return (0, r.jsx)(_.PaymentContextProvider, {
     activeSubscription: null,
     stepConfigs: [],
     skuIDs: [],
     children: (0, r.jsx)(o.ModalRoot, {
       ...n,
       "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
-      children: (0, r.jsx)(N.default, {
+      children: (0, r.jsx)(C.default, {
         hideBreadcrumbs: !0,
-        body: (0, r.jsx)(B, {
-          trialOffer: R,
-          discountOffer: C,
-          isTier0Upsell: m,
-          isLoading: !A || P,
-          price: h,
+        body: (0, r.jsx)(b, {
+          trialOffer: S,
+          discountOffer: M,
+          isTier0Upsell: h,
+          isLoading: !A || N,
+          price: L,
           onClose: t
         }),
-        footer: (0, r.jsx)(x, {
-          trialOffer: R,
-          discountOffer: C,
-          isTier0Upsell: m,
+        footer: (0, r.jsx)(B, {
+          trialOffer: S,
+          discountOffer: M,
+          isTier0Upsell: h,
           onClose: t
         }),
         steps: [f.Step.PREMIUM_UPSELL],

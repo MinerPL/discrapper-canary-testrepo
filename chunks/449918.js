@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   getColor: function() {
-    return f
-  },
-  useColorValue: function() {
     return _
   },
+  useColorValue: function() {
+    return f
+  },
   useDesaturatedColorString: function() {
-    return h
+    return E
   },
   useThemedColorValue: function() {
-    return g
+    return h
   }
 }), n("781738");
 var i = n("884691"),
@@ -26,16 +26,16 @@ function c(e) {
   return e.toUpperCase().replace(/-/g, "_")
 }
 
-function f(e) {
+function _(e) {
   return l.default.unsafe_rawColors[c(e)].css
 }
 
-function _(e) {
+function f(e) {
   return null != e ? a.ColorDetails[e] : null
 }
 
-function h(e) {
-  let t = (0, o.default)([d.default], () => d.default.saturation);
+function E(e) {
+  let t = (0, o.useStateFromStores)([d.default], () => d.default.saturation);
   return i.useMemo(() => {
     if (null == e) return null;
     if ("currentColor" === e || e.startsWith("var(")) return e;
@@ -45,9 +45,9 @@ function h(e) {
   }, [e, t])
 }
 
-function g(e, t) {
+function h(e, t) {
   let n = (0, u.useTheme)(),
-    s = (0, o.default)([d.default], () => d.default.saturation),
+    s = (0, o.useStateFromStores)([d.default], () => d.default.saturation),
     r = i.useMemo(() => {
       if (null == e) return null;
       let i = l.default.colors[c(e)].resolve({

@@ -6,7 +6,7 @@ E.r(_), E.d(_, {
   default: function() {
     return I
   }
-}), E("70102");
+}), E("222007"), E("70102");
 var t = E("303167"),
   o = E("423670"),
   n = E("773336"),
@@ -66,7 +66,14 @@ var I = {
     let E;
     let t = (0, o.getUpdatedOptions)(_);
     return null != window.DiscordSentry && window.DiscordSentry.withScope(_ => {
-      _.setExtras(t.extra), _.setTag("crash", "true"), E = window.DiscordSentry.captureException(e)
+      _.setExtras(t.extra), _.setTag("crash", "true"), _.setLevel("fatal"), _.addEventProcessor(e => {
+        var _, E;
+        let t = null === (E = e.exception) || void 0 === E ? void 0 : null === (_ = E.values) || void 0 === _ ? void 0 : _[0];
+        return null != t && (t.mechanism = {
+          ...t.mechanism,
+          handled: !1
+        }), e
+      }), E = window.DiscordSentry.captureException(e)
     }), E
   },
   captureMessage(e, _) {

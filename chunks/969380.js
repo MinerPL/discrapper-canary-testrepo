@@ -1,29 +1,29 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return i
+    return s
   }
-}), n("222007");
-var s = n("884691"),
-  l = n("550368");
-let a = ["embedded_cover", "embedded_background"];
+}), l("222007");
+var i = l("884691"),
+  a = l("550368");
+let n = ["embedded_cover", "embedded_background"];
 
-function i(e) {
+function s(e) {
   let {
     applicationId: t,
-    size: n,
-    names: i = a
-  } = e, [r, o] = s.useState(null), [u, d] = s.useState(!0), c = (0, l.getAssetImage)(t, r, n);
-  return s.useEffect(() => {
-    (0, l.fetchAssetIds)(t, i).then(e => {
-      for (let t of (d(!1), e))
-        if (null != t && "" !== t) {
-          o(t);
+    size: l,
+    names: s = n
+  } = e, [r, c] = i.useState(null), [o, d] = i.useState(!0), u = (0, a.getAssetImage)(t, r, l);
+  return i.useEffect(() => {
+    (0, a.getAssets)(t).then(e => {
+      for (let [t, l] of(d(!1), Object.entries(e)))
+        if (null != l && "" !== l.id && s.includes(l.name)) {
+          c(l.id);
           return
         }
     })
   }, [t]), {
-    url: c,
-    state: u ? "loading" : null != c ? "fetched" : "not-found"
+    url: u,
+    state: o ? "loading" : null != u ? "fetched" : "not-found"
   }
 }

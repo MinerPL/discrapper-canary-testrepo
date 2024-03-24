@@ -1,151 +1,149 @@
 "use strict";
-s.r(t), s.d(t, {
+E.r(t), E.d(t, {
   getTargetType: function() {
-    return d
-  },
-  getActionType: function() {
     return u
   },
+  getActionType: function() {
+    return I
+  },
   AuditLogChange: function() {
-    return c
+    return i
   },
   default: function() {
-    return _
+    return L
   }
 });
-var a = s("866227"),
-  n = s.n(a),
-  l = s("666038"),
-  i = s("286235"),
-  r = s("299039"),
-  o = s("49111");
-
-function d(e) {
-  if (e === o.AuditLogActions.ALL) return o.AuditLogTargetTypes.ALL;
-  if (e <= o.AuditLogActions.GUILD_UPDATE) return o.AuditLogTargetTypes.GUILD;
-  if (e <= o.AuditLogActions.CHANNEL_DELETE || e === o.AuditLogActions.MESSAGE_BULK_DELETE) return o.AuditLogTargetTypes.CHANNEL;
-  else if (e <= o.AuditLogActions.CHANNEL_OVERWRITE_DELETE) return o.AuditLogTargetTypes.CHANNEL_OVERWRITE;
-  else if (e <= o.AuditLogActions.BOT_ADD || e === o.AuditLogActions.MESSAGE_DELETE || e === o.AuditLogActions.MESSAGE_PIN || e === o.AuditLogActions.MESSAGE_UNPIN) return o.AuditLogTargetTypes.USER;
-  else if (e <= o.AuditLogActions.ROLE_DELETE) return o.AuditLogTargetTypes.ROLE;
-  else if (e <= o.AuditLogActions.INVITE_DELETE) return o.AuditLogTargetTypes.INVITE;
-  else if (e <= o.AuditLogActions.WEBHOOK_DELETE) return o.AuditLogTargetTypes.WEBHOOK;
-  else if (e <= o.AuditLogActions.EMOJI_DELETE) return o.AuditLogTargetTypes.EMOJI;
-  else if (e <= o.AuditLogActions.INTEGRATION_DELETE) return o.AuditLogTargetTypes.INTEGRATION;
-  else if (e <= o.AuditLogActions.STAGE_INSTANCE_DELETE) return o.AuditLogTargetTypes.STAGE_INSTANCE;
-  else if (e <= o.AuditLogActions.STICKER_DELETE) return o.AuditLogTargetTypes.STICKER;
-  else if (e <= o.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE) return o.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT;
-  else if (e <= o.AuditLogActions.THREAD_DELETE) return o.AuditLogTargetTypes.THREAD;
-  else if (e === o.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) return o.AuditLogTargetTypes.APPLICATION_COMMAND;
-  else if (e <= o.AuditLogActions.SOUNDBOARD_SOUND_DELETE) return o.AuditLogTargetTypes.GUILD_SOUNDBOARD;
-  else if (e < o.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE) return o.AuditLogTargetTypes.AUTO_MODERATION_RULE;
-  else if (e === o.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE) return o.AuditLogTargetTypes.USER;
-  else if (e === o.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL) return o.AuditLogTargetTypes.USER;
-  else if (e === o.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) return o.AuditLogTargetTypes.USER;
-  else if (e === o.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER) return o.AuditLogTargetTypes.USER;
-  else if (e <= o.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED) return o.AuditLogTargetTypes.GUILD;
-  else if (e <= o.AuditLogActions.ONBOARDING_PROMPT_DELETE) return o.AuditLogTargetTypes.ONBOARDING_PROMPT;
-  else if (e <= o.AuditLogActions.ONBOARDING_UPDATE) return o.AuditLogTargetTypes.GUILD_ONBOARDING;
-  else if (e <= o.AuditLogActions.GUILD_HOME_REMOVE_ITEM) return o.AuditLogTargetTypes.GUILD_HOME;
-  else if (e <= o.AuditLogActions.HARMFUL_LINKS_BLOCKED_MESSAGE) return o.AuditLogTargetTypes.GUILD;
-  else if (e <= o.AuditLogActions.HOME_SETTINGS_UPDATE) return o.AuditLogTargetTypes.HOME_SETTINGS;
-  else if (e <= o.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE) return o.AuditLogTargetTypes.VOICE_CHANNEL_STATUS;
-  else if (e === o.AuditLogActions.CLYDE_AI_PROFILE_UPDATE) return o.AuditLogTargetTypes.CLYDE_AI;
-  else if (e <= o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION;
-  return i.default.captureMessage("Unknown target type for: ".concat(e)), o.AuditLogTargetTypes.UNKNOWN
-}
+var _ = E("866227"),
+  s = E.n(_),
+  T = E("666038"),
+  a = E("286235"),
+  n = E("299039"),
+  A = E("49111");
 
 function u(e) {
+  if (e === A.AuditLogActions.ALL) return A.AuditLogTargetTypes.ALL;
+  if (e <= A.AuditLogActions.GUILD_UPDATE) return A.AuditLogTargetTypes.GUILD;
+  if (e <= A.AuditLogActions.CHANNEL_DELETE || e === A.AuditLogActions.MESSAGE_BULK_DELETE) return A.AuditLogTargetTypes.CHANNEL;
+  else if (e <= A.AuditLogActions.CHANNEL_OVERWRITE_DELETE) return A.AuditLogTargetTypes.CHANNEL_OVERWRITE;
+  else if (e <= A.AuditLogActions.BOT_ADD || e === A.AuditLogActions.MESSAGE_DELETE || e === A.AuditLogActions.MESSAGE_PIN || e === A.AuditLogActions.MESSAGE_UNPIN) return A.AuditLogTargetTypes.USER;
+  else if (e <= A.AuditLogActions.ROLE_DELETE) return A.AuditLogTargetTypes.ROLE;
+  else if (e <= A.AuditLogActions.INVITE_DELETE) return A.AuditLogTargetTypes.INVITE;
+  else if (e <= A.AuditLogActions.WEBHOOK_DELETE) return A.AuditLogTargetTypes.WEBHOOK;
+  else if (e <= A.AuditLogActions.EMOJI_DELETE) return A.AuditLogTargetTypes.EMOJI;
+  else if (e <= A.AuditLogActions.INTEGRATION_DELETE) return A.AuditLogTargetTypes.INTEGRATION;
+  else if (e <= A.AuditLogActions.STAGE_INSTANCE_DELETE) return A.AuditLogTargetTypes.STAGE_INSTANCE;
+  else if (e <= A.AuditLogActions.STICKER_DELETE) return A.AuditLogTargetTypes.STICKER;
+  else if (e <= A.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE) return A.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT;
+  else if (e <= A.AuditLogActions.THREAD_DELETE) return A.AuditLogTargetTypes.THREAD;
+  else if (e === A.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE) return A.AuditLogTargetTypes.APPLICATION_COMMAND;
+  else if (e <= A.AuditLogActions.SOUNDBOARD_SOUND_DELETE) return A.AuditLogTargetTypes.GUILD_SOUNDBOARD;
+  else if (e < A.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE) return A.AuditLogTargetTypes.AUTO_MODERATION_RULE;
+  else if (e === A.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE) return A.AuditLogTargetTypes.USER;
+  else if (e === A.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL) return A.AuditLogTargetTypes.USER;
+  else if (e === A.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) return A.AuditLogTargetTypes.USER;
+  else if (e === A.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER) return A.AuditLogTargetTypes.USER;
+  else if (e <= A.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED) return A.AuditLogTargetTypes.GUILD;
+  else if (e <= A.AuditLogActions.ONBOARDING_PROMPT_DELETE) return A.AuditLogTargetTypes.ONBOARDING_PROMPT;
+  else if (e <= A.AuditLogActions.ONBOARDING_UPDATE) return A.AuditLogTargetTypes.GUILD_ONBOARDING;
+  else if (e <= A.AuditLogActions.GUILD_HOME_REMOVE_ITEM) return A.AuditLogTargetTypes.GUILD_HOME;
+  else if (e <= A.AuditLogActions.HARMFUL_LINKS_BLOCKED_MESSAGE) return A.AuditLogTargetTypes.GUILD;
+  else if (e <= A.AuditLogActions.HOME_SETTINGS_UPDATE) return A.AuditLogTargetTypes.HOME_SETTINGS;
+  else if (e <= A.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE) return A.AuditLogTargetTypes.VOICE_CHANNEL_STATUS;
+  else if (e <= A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return A.AuditLogTargetTypes.GUILD_SCHEDULED_EVENT_EXCEPTION;
+  return a.default.captureMessage("Unknown target type for: ".concat(e)), A.AuditLogTargetTypes.UNKNOWN
+}
+
+function I(e) {
   switch (e) {
-    case o.AuditLogActions.CHANNEL_CREATE:
-    case o.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
-    case o.AuditLogActions.MEMBER_BAN_REMOVE:
-    case o.AuditLogActions.ROLE_CREATE:
-    case o.AuditLogActions.INVITE_CREATE:
-    case o.AuditLogActions.WEBHOOK_CREATE:
-    case o.AuditLogActions.EMOJI_CREATE:
-    case o.AuditLogActions.STICKER_CREATE:
-    case o.AuditLogActions.MESSAGE_PIN:
-    case o.AuditLogActions.BOT_ADD:
-    case o.AuditLogActions.INTEGRATION_CREATE:
-    case o.AuditLogActions.STAGE_INSTANCE_CREATE:
-    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
-    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
-    case o.AuditLogActions.THREAD_CREATE:
-    case o.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
-    case o.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
-    case o.AuditLogActions.ONBOARDING_PROMPT_CREATE:
-    case o.AuditLogActions.ONBOARDING_CREATE:
-    case o.AuditLogActions.GUILD_HOME_FEATURE_ITEM:
-    case o.AuditLogActions.SOUNDBOARD_SOUND_CREATE:
-    case o.AuditLogActions.HOME_SETTINGS_CREATE:
-    case o.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE:
-      return o.AuditLogActionTypes.CREATE;
-    case o.AuditLogActions.CHANNEL_DELETE:
-    case o.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
-    case o.AuditLogActions.MEMBER_KICK:
-    case o.AuditLogActions.MEMBER_PRUNE:
-    case o.AuditLogActions.MEMBER_BAN_ADD:
-    case o.AuditLogActions.ROLE_DELETE:
-    case o.AuditLogActions.INVITE_DELETE:
-    case o.AuditLogActions.WEBHOOK_DELETE:
-    case o.AuditLogActions.EMOJI_DELETE:
-    case o.AuditLogActions.STICKER_DELETE:
-    case o.AuditLogActions.MESSAGE_DELETE:
-    case o.AuditLogActions.MESSAGE_BULK_DELETE:
-    case o.AuditLogActions.MESSAGE_UNPIN:
-    case o.AuditLogActions.INTEGRATION_DELETE:
-    case o.AuditLogActions.MEMBER_DISCONNECT:
-    case o.AuditLogActions.STAGE_INSTANCE_DELETE:
-    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
-    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
-    case o.AuditLogActions.THREAD_DELETE:
-    case o.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
-    case o.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
-    case o.AuditLogActions.ONBOARDING_PROMPT_DELETE:
-    case o.AuditLogActions.GUILD_HOME_REMOVE_ITEM:
-    case o.AuditLogActions.SOUNDBOARD_SOUND_DELETE:
-    case o.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE:
-      return o.AuditLogActionTypes.DELETE;
-    case o.AuditLogActions.GUILD_UPDATE:
-    case o.AuditLogActions.CHANNEL_UPDATE:
-    case o.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
-    case o.AuditLogActions.MEMBER_UPDATE:
-    case o.AuditLogActions.MEMBER_ROLE_UPDATE:
-    case o.AuditLogActions.ROLE_UPDATE:
-    case o.AuditLogActions.INVITE_UPDATE:
-    case o.AuditLogActions.WEBHOOK_UPDATE:
-    case o.AuditLogActions.EMOJI_UPDATE:
-    case o.AuditLogActions.STICKER_UPDATE:
-    case o.AuditLogActions.INTEGRATION_UPDATE:
-    case o.AuditLogActions.MEMBER_MOVE:
-    case o.AuditLogActions.STAGE_INSTANCE_UPDATE:
-    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
-    case o.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
-    case o.AuditLogActions.THREAD_UPDATE:
-    case o.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
-    case o.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
-    case o.AuditLogActions.AUTO_MODERATION_RULE_UPDATE:
-    case o.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
-    case o.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
-    case o.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER:
-    case o.AuditLogActions.ONBOARDING_PROMPT_UPDATE:
-    case o.AuditLogActions.ONBOARDING_UPDATE:
-    case o.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
-    case o.AuditLogActions.HOME_SETTINGS_UPDATE:
-    case o.AuditLogActions.CLYDE_AI_PROFILE_UPDATE:
-      return o.AuditLogActionTypes.UPDATE
+    case A.AuditLogActions.CHANNEL_CREATE:
+    case A.AuditLogActions.CHANNEL_OVERWRITE_CREATE:
+    case A.AuditLogActions.MEMBER_BAN_REMOVE:
+    case A.AuditLogActions.ROLE_CREATE:
+    case A.AuditLogActions.INVITE_CREATE:
+    case A.AuditLogActions.WEBHOOK_CREATE:
+    case A.AuditLogActions.EMOJI_CREATE:
+    case A.AuditLogActions.STICKER_CREATE:
+    case A.AuditLogActions.MESSAGE_PIN:
+    case A.AuditLogActions.BOT_ADD:
+    case A.AuditLogActions.INTEGRATION_CREATE:
+    case A.AuditLogActions.STAGE_INSTANCE_CREATE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_CREATE:
+    case A.AuditLogActions.THREAD_CREATE:
+    case A.AuditLogActions.AUTO_MODERATION_RULE_CREATE:
+    case A.AuditLogActions.CREATOR_MONETIZATION_REQUEST_CREATED:
+    case A.AuditLogActions.ONBOARDING_PROMPT_CREATE:
+    case A.AuditLogActions.ONBOARDING_CREATE:
+    case A.AuditLogActions.GUILD_HOME_FEATURE_ITEM:
+    case A.AuditLogActions.SOUNDBOARD_SOUND_CREATE:
+    case A.AuditLogActions.HOME_SETTINGS_CREATE:
+    case A.AuditLogActions.VOICE_CHANNEL_STATUS_CREATE:
+      return A.AuditLogActionTypes.CREATE;
+    case A.AuditLogActions.CHANNEL_DELETE:
+    case A.AuditLogActions.CHANNEL_OVERWRITE_DELETE:
+    case A.AuditLogActions.MEMBER_KICK:
+    case A.AuditLogActions.MEMBER_PRUNE:
+    case A.AuditLogActions.MEMBER_BAN_ADD:
+    case A.AuditLogActions.ROLE_DELETE:
+    case A.AuditLogActions.INVITE_DELETE:
+    case A.AuditLogActions.WEBHOOK_DELETE:
+    case A.AuditLogActions.EMOJI_DELETE:
+    case A.AuditLogActions.STICKER_DELETE:
+    case A.AuditLogActions.MESSAGE_DELETE:
+    case A.AuditLogActions.MESSAGE_BULK_DELETE:
+    case A.AuditLogActions.MESSAGE_UNPIN:
+    case A.AuditLogActions.INTEGRATION_DELETE:
+    case A.AuditLogActions.MEMBER_DISCONNECT:
+    case A.AuditLogActions.STAGE_INSTANCE_DELETE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_DELETE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE:
+    case A.AuditLogActions.THREAD_DELETE:
+    case A.AuditLogActions.AUTO_MODERATION_BLOCK_MESSAGE:
+    case A.AuditLogActions.AUTO_MODERATION_RULE_DELETE:
+    case A.AuditLogActions.ONBOARDING_PROMPT_DELETE:
+    case A.AuditLogActions.GUILD_HOME_REMOVE_ITEM:
+    case A.AuditLogActions.SOUNDBOARD_SOUND_DELETE:
+    case A.AuditLogActions.VOICE_CHANNEL_STATUS_DELETE:
+      return A.AuditLogActionTypes.DELETE;
+    case A.AuditLogActions.GUILD_UPDATE:
+    case A.AuditLogActions.CHANNEL_UPDATE:
+    case A.AuditLogActions.CHANNEL_OVERWRITE_UPDATE:
+    case A.AuditLogActions.MEMBER_UPDATE:
+    case A.AuditLogActions.MEMBER_ROLE_UPDATE:
+    case A.AuditLogActions.ROLE_UPDATE:
+    case A.AuditLogActions.INVITE_UPDATE:
+    case A.AuditLogActions.WEBHOOK_UPDATE:
+    case A.AuditLogActions.EMOJI_UPDATE:
+    case A.AuditLogActions.STICKER_UPDATE:
+    case A.AuditLogActions.INTEGRATION_UPDATE:
+    case A.AuditLogActions.MEMBER_MOVE:
+    case A.AuditLogActions.STAGE_INSTANCE_UPDATE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_UPDATE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_CREATE:
+    case A.AuditLogActions.GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE:
+    case A.AuditLogActions.THREAD_UPDATE:
+    case A.AuditLogActions.APPLICATION_COMMAND_PERMISSION_UPDATE:
+    case A.AuditLogActions.CREATOR_MONETIZATION_TERMS_ACCEPTED:
+    case A.AuditLogActions.AUTO_MODERATION_RULE_UPDATE:
+    case A.AuditLogActions.AUTO_MODERATION_FLAG_TO_CHANNEL:
+    case A.AuditLogActions.AUTO_MODERATION_USER_COMMUNICATION_DISABLED:
+    case A.AuditLogActions.AUTO_MODERATION_QUARANTINE_USER:
+    case A.AuditLogActions.ONBOARDING_PROMPT_UPDATE:
+    case A.AuditLogActions.ONBOARDING_UPDATE:
+    case A.AuditLogActions.SOUNDBOARD_SOUND_UPDATE:
+    case A.AuditLogActions.HOME_SETTINGS_UPDATE:
+      return A.AuditLogActionTypes.UPDATE
   }
-  return o.AuditLogActionTypes.ALL
+  return A.AuditLogActionTypes.ALL
 }
-class c {
-  constructor(e, t, s) {
-    this.key = e, this.oldValue = t, this.newValue = s
+class i {
+  constructor(e, t, E) {
+    this.key = e, this.oldValue = t, this.newValue = E
   }
 }
-class E extends l.default {
+class l extends T.default {
   constructor(e) {
-    var t, s, a, l, i, o;
-    super(), this.id = e.id, this.action = e.action, this.actionType = u(this.action), this.targetId = e.targetId, this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : n(r.default.extractTimestamp(this.id)), this.timestampEnd = null !== (s = e.timestampEnd) && void 0 !== s ? s : this.timestampStart, this.userId = e.userId, this.changes = null !== (a = e.changes) && void 0 !== a ? a : [], this.targetType = d(this.action), this.options = null !== (l = e.options) && void 0 !== l ? l : {}, this.target = null !== (i = e.target) && void 0 !== i ? i : e.id, this.user = null !== (o = e.user) && void 0 !== o ? o : null
+    var t, E, _, T, a, A;
+    super(), this.id = e.id, this.action = e.action, this.actionType = I(this.action), this.targetId = e.targetId, this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : s(n.default.extractTimestamp(this.id)), this.timestampEnd = null !== (E = e.timestampEnd) && void 0 !== E ? E : this.timestampStart, this.userId = e.userId, this.changes = null !== (_ = e.changes) && void 0 !== _ ? _ : [], this.targetType = u(this.action), this.options = null !== (T = e.options) && void 0 !== T ? T : {}, this.target = null !== (a = e.target) && void 0 !== a ? a : e.id, this.user = null !== (A = e.user) && void 0 !== A ? A : null
   }
 }
-var _ = E
+var L = l

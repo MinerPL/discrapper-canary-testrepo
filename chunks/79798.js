@@ -1,93 +1,101 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
-var s = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
+var s = n("414456"),
+  r = n.n(s),
   a = n("414055"),
-  o = n("486952"),
-  d = n("988268"),
-  u = n("782340"),
-  l = n("647431");
-let f = e => {
+  o = n("996554"),
+  l = n("486952"),
+  u = n("988268"),
+  d = n("782340"),
+  c = n("639670");
+let _ = e => {
   let t, {
       invertColor: n = !1,
-      type: i = d.BotTagTypes.BOT,
-      className: f,
-      verified: _,
-      hideIcon: c = !1,
-      useRemSizes: g = !1,
-      children: m = []
+      type: s = u.BotTagTypes.BOT,
+      className: _,
+      verified: f,
+      hideIcon: E = !1,
+      useRemSizes: h = !1,
+      children: g = []
     } = e,
-    h = null,
-    v = u.default.Messages.VERIFIED_BOT_TOOLTIP;
-  switch (i) {
-    case d.BotTagTypes.SYSTEM_DM:
-    case d.BotTagTypes.OFFICIAL:
-      _ = !0, v = u.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, h = u.default.Messages.SYSTEM_DM_TAG_SYSTEM;
+    m = null,
+    p = d.default.Messages.VERIFIED_BOT_TOOLTIP,
+    {
+      enabled: S
+    } = o.AppLauncherOnboardingExperiment.useExperiment({
+      location: "Bot Tag"
+    }, {
+      autoTrackExposure: !1
+    });
+  switch (s) {
+    case u.BotTagTypes.SYSTEM_DM:
+    case u.BotTagTypes.OFFICIAL:
+      f = !0, p = d.default.Messages.DISCORD_SYSTEM_MESSAGE_BOT_TAG_TOOLTIP, m = d.default.Messages.SYSTEM_DM_TAG_SYSTEM;
       break;
-    case d.BotTagTypes.SERVER:
-      h = u.default.Messages.BOT_TAG_SERVER;
+    case u.BotTagTypes.SERVER:
+      m = d.default.Messages.BOT_TAG_SERVER;
       break;
-    case d.BotTagTypes.ORIGINAL_POSTER:
-      h = u.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
+    case u.BotTagTypes.ORIGINAL_POSTER:
+      m = d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER;
       break;
-    case d.BotTagTypes.STAFF_ONLY_DM:
-      h = u.default.Messages.STAFF_BADGE_TOOLTIP;
+    case u.BotTagTypes.STAFF_ONLY_DM:
+      m = d.default.Messages.STAFF_BADGE_TOOLTIP;
       break;
-    case d.BotTagTypes.AI:
-      _ = !0, v = u.default.Messages.AI_GENERATED_TOOLTIP, h = u.default.Messages.AI_TAG;
+    case u.BotTagTypes.AI:
+      f = !0, p = d.default.Messages.AI_GENERATED_TOOLTIP, m = d.default.Messages.AI_TAG;
       break;
-    case d.BotTagTypes.REMIX:
-      _ = !1, h = u.default.Messages.REMIXING_TAG;
+    case u.BotTagTypes.REMIX:
+      f = !1, m = d.default.Messages.REMIXING_TAG;
       break;
-    case d.BotTagTypes.BOT:
+    case u.BotTagTypes.BOT:
     default:
-      h = u.default.Messages.BOT_TAG_BOT
+      m = S ? d.default.Messages.APP_TAG : d.default.Messages.BOT_TAG_BOT
   }
-  let E = i === d.BotTagTypes.ORIGINAL_POSTER,
-    p = i === d.BotTagTypes.REMIX,
-    y = null;
-  _ && (y = (0, s.jsx)(a.Tooltip, {
-    text: v,
+  let T = s === u.BotTagTypes.ORIGINAL_POSTER,
+    v = s === u.BotTagTypes.REMIX,
+    I = null;
+  f && (I = (0, i.jsx)(a.Tooltip, {
+    text: p,
     align: "center",
     position: "top",
-    children: e => (0, s.jsx)(o.default, {
+    children: e => (0, i.jsx)(l.default, {
       ...e,
-      className: l.botTagVerified
+      className: c.botTagVerified
     })
-  })), t = i === d.BotTagTypes.AI ? l.botTagAI : n ? l.botTagInvert : l.botTagRegular;
-  let C = e => (0, s.jsxs)("span", {
+  })), t = s === u.BotTagTypes.AI ? c.botTagAI : n ? c.botTagInvert : c.botTagRegular;
+  let A = e => (0, i.jsxs)("span", {
     ...e,
-    className: r(f, t, g ? l.rem : l.px, {
-      [l.botTagOP]: E,
-      [l.botTagRemix]: p
+    className: r(_, t, h ? c.rem : c.px, {
+      [c.botTagOP]: T,
+      [c.botTagRemix]: v
     }),
-    children: [c ? null : y, m, (0, s.jsx)("span", {
-      className: l.botText,
-      children: h
+    children: [E ? null : I, g, (0, i.jsx)("span", {
+      className: c.botText,
+      children: m
     })]
   });
-  switch (i) {
-    case d.BotTagTypes.REMIX:
-      return (0, s.jsx)(a.Tooltip, {
-        text: u.default.Messages.REMIXING_DOWNLOAD_APP,
+  switch (s) {
+    case u.BotTagTypes.REMIX:
+      return (0, i.jsx)(a.Tooltip, {
+        text: d.default.Messages.REMIXING_DOWNLOAD_APP,
         position: "top",
-        children: e => C(e)
+        children: e => A(e)
       });
-    case d.BotTagTypes.ORIGINAL_POSTER:
-      return (0, s.jsx)(a.Tooltip, {
-        text: u.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
+    case u.BotTagTypes.ORIGINAL_POSTER:
+      return (0, i.jsx)(a.Tooltip, {
+        text: d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER_TOOLTIP,
         position: "top",
-        children: e => C(e)
+        children: e => A(e)
       });
     default:
-      return C()
+      return A()
   }
 };
-f.Types = d.BotTagTypes;
-var _ = f
+_.Types = u.BotTagTypes;
+var f = _

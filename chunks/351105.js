@@ -10,7 +10,7 @@ var o = r("872717"),
     async updateEstimate(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
         r = arguments.length > 2 ? arguments[2] : void 0,
-        n = await o.default.get({
+        n = await o.HTTP.get({
           url: a.Endpoints.GUILD_PRUNE(e),
           query: {
             days: t,
@@ -20,7 +20,7 @@ var o = r("872717"),
         });
       return n.body.pruned
     },
-    prune: (e, t, r) => o.default.post({
+    prune: (e, t, r) => o.HTTP.post({
       url: a.Endpoints.GUILD_PRUNE(e),
       body: {
         days: t,

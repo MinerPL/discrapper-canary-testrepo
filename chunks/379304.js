@@ -20,16 +20,16 @@ var a = n("65597"),
   S = n("782340");
 
 function v(e) {
-  let t = (0, a.default)([d.default], () => d.default.getChannelId() === e.id),
+  let t = (0, a.useStateFromStores)([d.default], () => d.default.getChannelId() === e.id),
     v = (0, c.default)(),
     h = (null == v ? void 0 : v.channelId) === e.id,
     _ = (0, i.useIsVoiceChannelLocked)(e) && !e.isPrivate(),
     N = (0, i.default)(e),
-    T = (0, a.default)([s.default], () => s.default.isInChannel(e.id)),
+    T = (0, a.useStateFromStores)([s.default], () => s.default.isInChannel(e.id)),
     g = !T && N || _,
-    I = (0, f.default)();
-  if (!h && 0 === I.length) return null;
-  let m = t => {
+    m = (0, f.default)();
+  if (!h && 0 === m.length) return null;
+  let I = t => {
     if (!t.twoWayLink || t.revoked) {
       (0, r.default)(t.type, "Console Transfer Item");
       return
@@ -62,14 +62,14 @@ function v(e) {
       },
       icon: (0, E.default)(void 0),
       disabled: g
-    }) : I.map(e => (0, l.jsx)(u.MenuItem, {
+    }) : m.map(e => (0, l.jsx)(u.MenuItem, {
       id: "transfer-".concat(e.type, "-").concat(e.id),
       label: function(e, t) {
         if (e === C.PlatformTypes.XBOX) return t ? S.default.Messages.TRANSFER_VOICE_TO_XBOX : S.default.Messages.JOIN_ON_XBOX;
         if (e === C.PlatformTypes.PLAYSTATION) return t ? S.default.Messages.CONSOLE_PLAYSTATION_TRANSFER_VOICE : S.default.Messages.CONSOLE_PLAYSTATION_JOIN_VOICE;
         if (e === C.PlatformTypes.PLAYSTATION_STAGING) return t ? S.default.Messages.CONSOLE_PLAYSTATION_STAGING_TRANSFER_VOICE : S.default.Messages.CONSOLE_PLAYSTATION_STAGING_JOIN_VOICE
       }(e.type, t),
-      action: () => m(e),
+      action: () => I(e),
       icon: (0, E.default)(e.type),
       disabled: g
     }, e.id))

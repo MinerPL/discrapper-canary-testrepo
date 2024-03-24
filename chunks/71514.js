@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var l = n("77078"),
-  r = n("34128");
+  r = n("608541");
 let s = e => {
   let {
     onChange: t,
@@ -25,11 +25,11 @@ let s = e => {
         color: "interactive-active",
         variant: "text-md/semibold",
         children: n
-      }), (0, a.jsx)(l.Text, {
+      }), null != s ? (0, a.jsx)(l.Text, {
         color: "interactive-active",
         variant: "text-sm/normal",
         children: s
-      })]
+      }) : null]
     })
   })
 };

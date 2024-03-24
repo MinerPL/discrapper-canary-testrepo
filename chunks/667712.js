@@ -8,7 +8,7 @@ var a = l("37983"),
   n = l("884691"),
   o = l("414456"),
   r = l.n(o),
-  i = l("907002"),
+  i = l("146606"),
   s = l("65597"),
   u = l("669491"),
   d = l("819855"),
@@ -20,7 +20,7 @@ var a = l("37983"),
   g = l("695284"),
   x = l("956089"),
   p = l("782340"),
-  C = l("489319");
+  C = l("360613");
 
 function N(e) {
   let {
@@ -30,13 +30,13 @@ function N(e) {
     onSelect: N,
     hideMemberCount: j,
     canBeNew: _
-  } = e, O = (0, d.isThemeDark)((0, f.default)()), [T, M] = n.useState(!1), A = T && !j, I = n.useRef(null), {
-    reducedMotion: E
-  } = n.useContext(c.AccessibilityPreferencesContext), b = (0, s.default)([h.default], () => {
+  } = e, O = (0, d.isThemeDark)((0, f.default)()), [T, S] = n.useState(!1), M = T && !j, A = n.useRef(null), {
+    reducedMotion: I
+  } = n.useContext(c.AccessibilityPreferencesContext), E = (0, s.useStateFromStores)([h.default], () => {
     var e, t, a, n;
     return (null === (e = l.emoji) || void 0 === e ? void 0 : e.id) != null && null !== (n = null === (t = h.default.getCustomEmojiById(null === (a = l.emoji) || void 0 === a ? void 0 : a.id)) || void 0 === t ? void 0 : t.animated) && void 0 !== n && n
-  }), S = (0, v.default)(t, 1e3), D = null == S || null == l.roleIds ? 0 : Math.max(...l.roleIds.map(e => S[e])), L = _ && !o && l.isUnseen, k = (0, i.useSpring)({
-    transform: o || E.enabled ? "scale(1)" : "scale(0.7)",
+  }), b = (0, v.default)(t, 1e3), D = null == b || null == l.roleIds ? 0 : Math.max(...l.roleIds.map(e => b[e])), L = _ && !o && l.isUnseen, k = (0, i.useSpring)({
+    transform: o || I.enabled ? "scale(1)" : "scale(0.7)",
     opacity: o ? 1 : 0,
     config: {
       duration: 150
@@ -52,9 +52,9 @@ function N(e) {
       duration: 300
     },
     delay: 500
-  }), B = (0, i.useTransition)(A, {
+  }), B = (0, i.useTransition)(M, {
     from: {
-      transform: E.enabled ? "translateX(0)" : "translateX(8px)",
+      transform: I.enabled ? "translateX(0)" : "translateX(8px)",
       opacity: 0
     },
     enter: {
@@ -70,32 +70,32 @@ function N(e) {
     }
   }), [P, U] = n.useState(!1);
   n.useEffect(() => {
-    if (A) return I.current = setTimeout(() => {
-      M(!1), I.current = null
+    if (M) return A.current = setTimeout(() => {
+      S(!1), A.current = null
     }, 3e3), () => {
-      null != I.current && clearTimeout(I.current)
+      null != A.current && clearTimeout(A.current)
     }
-  }, [A]);
+  }, [M]);
   let H = r(C.optionButtonWrapper, {
       [C.selected]: o,
       [C.pressed]: P
     }),
-    G = L ? {
+    F = L ? {
       borderColor: w.color
     } : {};
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(i.animated.div, {
-      style: G,
+      style: F,
       className: H,
       children: (0, a.jsxs)(c.Clickable, {
         className: r(C.optionButton),
         onClick: () => {
-          M(!o), N(!o)
+          S(!o), N(!o)
         },
         onMouseDown: () => U(!0),
         onMouseUp: () => U(!1),
         children: [null != l.emoji && (null != l.emoji.id || null != l.emoji.name) ? (0, a.jsx)(m.default, {
-          animated: l.emoji.animated || b,
+          animated: l.emoji.animated || E,
           className: C.buttonEmoji,
           emojiId: l.emoji.id,
           emojiName: l.emoji.name

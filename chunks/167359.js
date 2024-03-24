@@ -11,7 +11,7 @@ let i = "".concat(a.STATUS_PAGE_ENDPOINT, "/api/v2/scheduled-maintenances"),
   r = "".concat(a.STATUS_PAGE_ENDPOINT, "/api/v2/incidents/unresolved.json");
 var o = {
   checkIncidents() {
-    Promise.all([s.default.get("".concat(i, "/active.json")), s.default.get(r)]).then(e => {
+    Promise.all([s.HTTP.get("".concat(i, "/active.json")), s.HTTP.get(r)]).then(e => {
       let [t, n] = e, [s] = t.body.scheduled_maintenances, [a] = n.body.incidents;
       l.default.dispatch({
         type: "STATUS_PAGE_INCIDENT",
@@ -20,7 +20,7 @@ var o = {
     })
   },
   checkScheduledMaintenances() {
-    s.default.get("".concat(i, "/upcoming.json")).then(e => {
+    s.HTTP.get("".concat(i, "/upcoming.json")).then(e => {
       let [t] = e.body.scheduled_maintenances;
       l.default.dispatch({
         type: "STATUS_PAGE_SCHEDULED_MAINTENANCE",

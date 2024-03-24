@@ -1,30 +1,30 @@
 "use strict";
 a.r(e), a.d(e, {
   default: function() {
-    return r
+    return u
   }
 });
 var n = a("37983");
 a("884691");
 var i = a("77078"),
-  s = a("130479"),
+  s = a("58461"),
   l = a("53708");
 
-function r(t) {
+function u(t) {
   let {
     user: e,
     size: a
-  } = t, r = (0, i.getAvatarSpecs)(a), u = null != e ? e.getAvatarURL(null, r.size) : l;
+  } = t, u = (0, i.getAvatarSpecs)(a), r = null != e ? e.getAvatarURL(null, u.size) : l;
   return (0, n.jsx)("div", {
     className: s.avatarBackground,
     children: (0, n.jsx)("div", {
       className: s.avatar,
       style: {
-        width: r.size,
-        height: r.size
+        width: u.size,
+        height: u.size
       },
       children: (0, n.jsx)(i.Avatar, {
-        src: u,
+        src: r,
         "aria-hidden": !0,
         size: a
       })

@@ -16,11 +16,11 @@ var s = n("37983"),
   u = n("875978"),
   d = n("836943"),
   c = n("865343"),
-  f = n("621698"),
-  E = n("350134"),
+  E = n("621698"),
+  f = n("350134"),
   _ = n("782340"),
-  T = n("550244"),
-  I = n("314934");
+  T = n("159441"),
+  I = n("450076");
 let m = (e, t) => null == e && null == t || e === t,
   N = (e, t) => e.findIndex(e => m(e.emoji.id, null == t ? void 0 : t.id) && m(e.emoji.name, null == t ? void 0 : t.name)),
   p = (e, t) => {
@@ -57,12 +57,12 @@ class S extends l.PureComponent {
       combinedReactions: O,
       visibleReactionsCount: R
     } = this.props, {
-      disableTransitionAppear: L
-    } = this.state, v = h ? I : T, P = R > 0;
-    return P || A ? (0, s.jsxs)(r.default, {
+      disableTransitionAppear: v
+    } = this.state, L = h ? I : T, P = R > 0;
+    return P || A ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
-      className: i(v.reactions, S),
-      transitionAppear: !L,
+      className: i(L.reactions, S),
+      transitionAppear: !v,
       role: "group",
       transitionLeave: !1,
       id: (0, c.getMessageReactionsId)(e),
@@ -72,7 +72,7 @@ class S extends l.PureComponent {
       onMouseLeave: () => this.setState({
         isHovered: !1
       }),
-      children: [(0, s.jsx)(f.MessageReactionsGroupWrapper, {
+      children: [(0, s.jsx)(E.MessageReactionsGroupWrapper, {
         reactions: O,
         message: e,
         readOnly: n,
@@ -84,12 +84,12 @@ class S extends l.PureComponent {
         className: C
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
-          t.stopPropagation(), (0, E.showReactionsModal)(p, e)
+          t.stopPropagation(), (0, f.showReactionsModal)(p, e)
         },
-        className: i(v.reaction, C, v.remainingReactions),
+        className: i(L.reaction, C, L.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
         children: (0, s.jsxs)(o.Text, {
-          className: v.reactionInner,
+          className: L.reactionInner,
           variant: "text-sm/normal",
           children: ["+", M]
         })
@@ -100,8 +100,8 @@ class S extends l.PureComponent {
         useChatFontScaling: h,
         isHovered: this.state.isHovered,
         className: i({
-          [v.forceShow]: A && !P,
-          [v.forceShowLook]: A
+          [L.forceShow]: A && !P,
+          [L.forceShowLook]: A
         })
       })]
     }) : null

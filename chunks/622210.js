@@ -1,10 +1,10 @@
 "use strict";
 s.r(a), s.d(a, {
   useCustomizeGuildSlide: function() {
-    return A
+    return p
   },
   default: function() {
-    return c
+    return N
   }
 }), s("222007");
 var n = s("37983"),
@@ -12,143 +12,162 @@ var n = s("37983"),
   l = s("414456"),
   E = s.n(l),
   _ = s("77078"),
-  d = s("851387"),
-  i = s("68130"),
-  T = s("697218"),
-  r = s("145131"),
-  u = s("476765"),
-  L = s("651879"),
-  M = s("326678"),
-  C = s("49111"),
-  o = s("782340"),
-  I = s("852243");
+  i = s("851387"),
+  d = s("68130"),
+  T = s("177769"),
+  r = s("740822"),
+  u = s("697218"),
+  L = s("145131"),
+  C = s("476765"),
+  M = s("651879"),
+  o = s("326678"),
+  c = s("49111"),
+  I = s("782340"),
+  A = s("674637");
 
-function A(e) {
+function p(e) {
   var a;
   let {
     guildTemplate: s,
     onClose: l,
-    onBack: A,
-    onHubGuildInfoSet: c,
-    onGuildCreated: p,
-    isSlideReady: N,
-    hasFooter: G = !0,
-    isCommunity: m = !1
-  } = e, [f, U] = t.useState(L.default.getGuildNameSuggestion()), [D, O] = t.useState(null), [h, g] = t.useState(!1), [y, R] = t.useState(null), x = !!(null === (a = T.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [P, S] = t.useState(x), j = (0, u.useUID)(), H = t.useRef(null);
+    onBack: p,
+    onHubGuildInfoSet: N,
+    onGuildCreated: G,
+    isSlideReady: m,
+    hasFooter: f = !0,
+    isCommunity: U = !1
+  } = e, [D, O] = t.useState(M.default.getGuildNameSuggestion()), [h, g] = t.useState(null), [y, R] = t.useState(!1), [x, S] = t.useState(null), P = !!(null === (a = u.default.getCurrentUser()) || void 0 === a ? void 0 : a.isStaff()), [j, H] = t.useState(P), [V, F] = t.useState(!1), v = T.ClanExperiment.useExperiment({
+    location: "customize-guild-slide"
+  }).enableClanCreation, B = (0, C.useUID)(), Y = t.useRef(null);
   t.useEffect(() => {
     var e;
-    N && (null === (e = H.current) || void 0 === e || e.focus())
-  }, [N]);
-  let V = t.useCallback(async e => {
+    m && (null === (e = Y.current) || void 0 === e || e.focus())
+  }, [m]);
+  let b = t.useCallback(async e => {
       if (e.preventDefault(), null != s) {
-        g(!0), R(null);
+        R(!0), S(null);
         try {
-          if (null != c) c(f, D);
+          if (null != N) N(D, h);
           else {
-            let e = await M.default.createGuildFromTemplate(f, D, s, m, P);
-            d.default.transitionToGuildSync(e.id), null == p || p(e.id)
+            let e = await o.default.createGuildFromTemplate(D, h, s, U, j, V);
+            i.default.transitionToGuildSync(e.id), null == G || G(e.id)
           }
         } catch (e) {
-          R(e)
+          S(e)
         }
-        g(!1)
+        R(!1)
       }
-    }, [s, D, f, p, c, m, P]),
-    F = (0, n.jsxs)(n.Fragment, {
+    }, [s, h, D, G, N, U, j, V]),
+    k = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(_.Button, {
         color: _.Button.Colors.BRAND,
-        onClick: V,
-        disabled: 0 === f.length,
-        submitting: h,
-        children: null != c ? o.default.Messages.NEXT : o.default.Messages.CREATE
+        onClick: b,
+        disabled: 0 === D.length,
+        submitting: y,
+        children: null != N ? I.default.Messages.NEXT : I.default.Messages.CREATE
       }), (0, n.jsx)(_.Button, {
-        className: I.backButton,
+        className: A.backButton,
         look: _.Button.Looks.BLANK,
         size: _.Button.Sizes.MIN,
-        onClick: A,
-        children: o.default.Messages.BACK
+        onClick: p,
+        children: I.default.Messages.BACK
       })]
     }),
-    v = (0, n.jsxs)(n.Fragment, {
+    X = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsxs)(_.ModalHeader, {
-        direction: r.default.Direction.VERTICAL,
-        className: I.header,
+        direction: L.default.Direction.VERTICAL,
+        className: A.header,
         separator: !1,
         children: [(0, n.jsx)(_.Heading, {
-          className: E(I.title),
+          className: E(A.title),
           variant: "heading-xl/semibold",
-          children: o.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
+          children: I.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_HEADER
         }), (0, n.jsx)(_.Text, {
-          className: I.subtitle,
+          className: A.subtitle,
           color: "header-secondary",
           variant: "text-md/normal",
-          children: o.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
+          children: I.default.Messages.NUF_CREATE_SERVER_CUSTOMIZE_SUBHEADER
         }), null != l && (0, n.jsx)(_.ModalCloseButton, {
-          className: I.closeButton,
+          className: A.closeButton,
           onClick: l
         })]
       }), (0, n.jsxs)(_.ModalContent, {
-        className: I.createGuild,
+        className: A.createGuild,
         children: [(0, n.jsx)("div", {
-          className: I.uploadIcon,
-          children: (0, n.jsx)(i.default, {
-            icon: D,
-            onChange: O
+          className: A.uploadIcon,
+          children: (0, n.jsx)(d.default, {
+            icon: h,
+            onChange: g
           })
         }), (0, n.jsxs)("form", {
-          onSubmit: V,
+          onSubmit: b,
           children: [(0, n.jsxs)(_.FormItem, {
-            className: I.nameInput,
-            error: null == y ? void 0 : y.getFirstFieldErrorMessage("name"),
+            className: A.nameInput,
+            error: null == x ? void 0 : x.getFirstFieldErrorMessage("name"),
             children: [(0, n.jsx)(_.FormTitle, {
               tag: "label",
-              htmlFor: j,
-              children: o.default.Messages.FORM_LABEL_SERVER_NAME
+              htmlFor: B,
+              children: I.default.Messages.FORM_LABEL_SERVER_NAME
             }), (0, n.jsx)(_.TextInput, {
               type: "text",
-              value: f,
+              value: D,
               maxLength: 100,
-              onChange: U,
-              inputRef: H,
-              id: j
+              onChange: O,
+              inputRef: Y,
+              id: B
             })]
-          }), x && (0, n.jsx)(_.FormSwitch, {
+          }), P && (0, n.jsx)(_.FormSwitch, {
             hideBorder: !0,
-            value: P,
-            onChange: e => S(e),
-            note: o.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
-            className: I.formItemSpaced,
+            value: j,
+            onChange: e => H(e),
+            note: I.default.Messages.GUILD_CREATE_STAFF_ONLY_HINT,
+            className: A.formItemSpaced,
             children: (0, n.jsx)(_.FormTitle, {
               tag: "label",
               children: "Staff Only"
             })
+          }), v && (0, n.jsx)(n.Fragment, {
+            children: (0, n.jsx)(_.FormSwitch, {
+              hideBorder: !0,
+              value: V,
+              onChange: e => F(e),
+              note: "Creates a special gaming clan guild",
+              className: A.formItemSpaced,
+              children: (0, n.jsxs)("div", {
+                className: A.clanLabel,
+                children: [(0, n.jsx)(_.FormTitle, {
+                  tag: "label",
+                  children: "Clan"
+                }), (0, n.jsx)(r.default, {})]
+              })
+            })
           }), (0, n.jsx)(_.Text, {
             variant: "text-xs/normal",
             color: "text-muted",
-            className: I.guidelines,
-            children: o.default.Messages.CREATE_SERVER_GUIDELINES.format({
-              guidelinesURL: C.MarketingURLs.GUIDELINES
+            className: A.guidelines,
+            children: I.default.Messages.CREATE_SERVER_GUIDELINES.format({
+              guidelinesURL: c.MarketingURLs.GUIDELINES
             })
           })]
-        }), null == y || y.hasFieldErrors() ? null : (0, n.jsx)(_.Text, {
+        }), null == x || x.hasFieldErrors() ? null : (0, n.jsx)(_.Text, {
           variant: "text-xs/normal",
           color: "text-danger",
-          children: y.message
+          children: x.message
         })]
-      }), G && (0, n.jsx)(_.ModalFooter, {
-        justify: r.default.Justify.BETWEEN,
-        children: F
+      }), f && (0, n.jsx)(_.ModalFooter, {
+        justify: L.default.Justify.BETWEEN,
+        children: k
       })]
     });
   return {
-    content: v,
-    footer: F
+    content: X,
+    footer: k
   }
 }
 
-function c(e) {
+function N(e) {
   let {
     content: a
-  } = A(e);
+  } = p(e);
   return a
 }

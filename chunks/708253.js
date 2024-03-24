@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("65597"),
-  r = n("841098"),
-  s = n("206230");
+  s = n("841098"),
+  r = n("206230");
 
 function a(e, t) {
-  let n = (0, r.default)(),
-    a = (0, i.default)([s.default], () => s.default.saturation);
+  let n = (0, s.default)(),
+    a = (0, i.useStateFromStores)([r.default], () => r.default.saturation);
   return e.resolve({
     theme: null != t ? t : n,
     saturation: a

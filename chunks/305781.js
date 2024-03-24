@@ -1,25 +1,25 @@
 "use strict";
 i.r(t), i.d(t, {
   fetchTopEmojis: function() {
-    return o
+    return u
   },
   updateNewlyAddedLastSeen: function() {
-    return s
+    return a
   },
   updateNewlyAddedEmojiSeenAcknowledged: function() {
-    return u
+    return s
   }
 });
 var n = i("872717"),
   r = i("913144"),
-  a = i("49111");
+  o = i("49111");
 
-function o(e) {
+function u(e) {
   r.default.dispatch({
     type: "TOP_EMOJIS_FETCH",
     guildId: e
-  }), n.default.get({
-    url: a.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
+  }), n.HTTP.get({
+    url: o.Endpoints.TOP_EMOJIS_FOR_GUILD(e),
     oldFormErrors: !0
   }).then(t => r.default.dispatch({
     type: "TOP_EMOJIS_FETCH_SUCCESS",
@@ -34,7 +34,7 @@ function o(e) {
   }))
 }
 
-function s(e, t) {
+function a(e, t) {
   r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED"
   }), null != e && null != t && r.default.dispatch({
@@ -44,7 +44,7 @@ function s(e, t) {
   })
 }
 
-function u(e, t) {
+function s(e, t) {
   null != e && null != t && r.default.dispatch({
     type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED",
     guildId: e,

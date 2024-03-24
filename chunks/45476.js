@@ -1,14 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldRenderReportFalsePositiveButton: function() {
-    return i
+    return a
   }
 });
 var s = n("65597"),
-  l = n("290723"),
-  a = n("817892");
-
-function i(e, t) {
-  let n = (0, s.default)([a.default], () => a.default.getFpMessageInfo(e));
-  return (0, l.useIsEligibleForExplicitMediaSenderFalsePositive)(t) && null != n
+  l = n("817892");
+let a = e => {
+  let t = (0, s.useStateFromStores)([l.default], () => l.default.getFpMessageInfo(e));
+  return null != t
 }

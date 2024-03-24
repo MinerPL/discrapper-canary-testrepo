@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
 var s = n("884691"),
@@ -10,11 +10,12 @@ var s = n("884691"),
   i = n("206230"),
   r = n("166257"),
   o = n("845579"),
-  u = n("15935");
+  u = n("15935"),
+  d = n("875978");
 
-function d() {
+function c() {
   let e = o.AnimateEmoji.useSetting(),
-    t = (0, a.default)([i.default], () => i.default.useReducedMotion);
+    t = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion);
   s.useEffect(() => {
     function n(n) {
       let {
@@ -22,9 +23,9 @@ function d() {
         channelId: a,
         emoji: l,
         optimistic: i,
-        burst: o
+        reactionType: o
       } = n;
-      !i && o && e && !t && (0, r.playBurstReaction)({
+      !i && o === d.ReactionTypes.BURST && e && !t && (0, r.playBurstReaction)({
         channelId: a,
         messageId: s,
         emoji: l,

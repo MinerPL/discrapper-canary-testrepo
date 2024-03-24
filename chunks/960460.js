@@ -22,7 +22,7 @@ let u = "/__development/build_overrides";
 async function d(e) {
   try {
     var t;
-    let r = await l.default.put({
+    let r = await l.HTTP.put({
       url: (0, s.getAPIEndpoint)(u),
       body: {
         overrides: e,
@@ -40,7 +40,7 @@ async function d(e) {
 }
 async function o(e) {
   try {
-    let t = await l.default.put({
+    let t = await l.HTTP.put({
       url: (0, s.getAPIEndpoint)("/__development/link"),
       body: {
         payload: e,
@@ -55,7 +55,7 @@ async function o(e) {
   }
 }
 async function c() {
-  let e = await l.default.delete({
+  let e = await l.HTTP.del({
     url: (0, s.getAPIEndpoint)(u),
     oldFormErrors: !0
   });
@@ -64,7 +64,7 @@ async function c() {
 
 function f(e) {
   var t;
-  return l.default.post({
+  return l.HTTP.post({
     url: (0, s.getAPIEndpoint)("/__development/create_build_override_link"),
     body: e,
     headers: {

@@ -1,150 +1,159 @@
 "use strict";
 r.r(t), r.d(t, {
   openCollectiblesShop: function() {
-    return d
+    return a
   },
   closeCollectiblesShop: function() {
-    return E
-  },
-  productDetailsOpened: function() {
     return C
   },
-  fetchCollectiblesCategories: function() {
-    return p
+  productDetailsOpened: function() {
+    return _
   },
-  fetchCollectiblesPurchases: function() {
+  productDetailsClosed: function() {
+    return d
+  },
+  fetchCollectiblesCategories: function() {
     return I
   },
+  fetchCollectiblesPurchases: function() {
+    return T
+  },
   fetchCollectiblesProduct: function() {
-    return S
+    return A
   },
   claimPremiumCollectiblesProduct: function() {
     return L
   },
   validateCollectiblesRecipient: function() {
-    return f
+    return S
   },
   setCollectiblesCategoryItemsViewed: function() {
-    return y
+    return p
   }
 });
 var u = r("872717"),
-  l = r("913144"),
-  n = r("54239"),
-  i = r("448993"),
+  n = r("913144"),
+  i = r("54239"),
+  E = r("448993"),
   s = r("514296"),
-  o = r("407788"),
-  a = r("489134"),
-  c = r("49111");
+  l = r("407788"),
+  c = r("489134"),
+  o = r("49111");
 r("853987"), r("426497"), r("775416"), r("216719");
-let d = e => {
+let a = e => {
     let {
       openInLayer: t = !0,
       ...r
     } = e;
-    l.default.dispatch({
+    n.default.dispatch({
       type: "COLLECTIBLES_SHOP_OPEN",
       ...r
-    }), t && (0, n.pushLayer)(c.Layers.COLLECTIBLES_SHOP)
+    }), t && (0, i.pushLayer)(o.Layers.COLLECTIBLES_SHOP)
   },
-  E = () => {
-    l.default.dispatch({
+  C = () => {
+    n.default.dispatch({
       type: "COLLECTIBLES_SHOP_CLOSE"
-    }), (0, n.popLayer)()
+    }), (0, i.popLayer)()
   },
-  C = e => {
-    l.default.dispatch({
+  _ = e => {
+    n.default.dispatch({
       type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN",
       item: e
     })
   },
-  p = async e => {
-    l.default.dispatch({
+  d = e => {
+    n.default.dispatch({
+      type: "COLLECTIBLES_PRODUCT_DETAILS_CLOSE",
+      item: e
+    })
+  },
+  I = async e => {
+    n.default.dispatch({
       type: "COLLECTIBLES_CATEGORIES_FETCH"
     });
+    let t = {};
+    null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.countryCode = e.countryCode));
     try {
-      let t = await u.default.get({
-        url: c.Endpoints.COLLECTIBLES_CATEGORIES,
-        query: null != e ? {
-          country_code: e
-        } : {}
+      let e = await u.HTTP.get({
+        url: o.Endpoints.COLLECTIBLES_CATEGORIES,
+        query: t
       });
-      l.default.dispatch({
+      n.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-        categories: t.body.map(s.default.fromServer)
+        categories: e.body.map(s.default.fromServer)
       })
     } catch (e) {
-      throw l.default.dispatch({
+      throw n.default.dispatch({
         type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE",
         error: e
-      }), new i.APIError(e)
+      }), new E.APIError(e)
     }
-  }, I = async () => {
-    l.default.dispatch({
+  }, T = async () => {
+    n.default.dispatch({
       type: "COLLECTIBLES_PURCHASES_FETCH"
     });
     try {
-      let e = await u.default.get(c.Endpoints.COLLECTIBLES_PURCHASES);
-      l.default.dispatch({
+      let e = await u.HTTP.get(o.Endpoints.COLLECTIBLES_PURCHASES);
+      n.default.dispatch({
         type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS",
-        purchases: e.body.map(a.default.fromServer)
+        purchases: e.body.map(c.default.fromServer)
       })
     } catch (e) {
-      throw l.default.dispatch({
+      throw n.default.dispatch({
         type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE",
         error: e
-      }), new i.APIError(e)
+      }), new E.APIError(e)
     }
-  }, S = async (e, t) => {
-    l.default.dispatch({
+  }, A = async (e, t) => {
+    n.default.dispatch({
       type: "COLLECTIBLES_PRODUCT_FETCH"
     });
     try {
-      let r = await u.default.get({
-        url: c.Endpoints.COLLECTIBLES_PRODUCTS(e),
+      let r = await u.HTTP.get({
+        url: o.Endpoints.COLLECTIBLES_PRODUCTS(e),
         query: null != t ? {
           country_code: t
         } : {}
       });
-      l.default.dispatch({
+      n.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-        product: o.default.fromServer(r.body)
+        product: l.default.fromServer(r.body)
       })
     } catch (e) {
-      throw l.default.dispatch({
+      throw n.default.dispatch({
         type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE",
         error: e
-      }), new i.APIError(e)
+      }), new E.APIError(e)
     }
   }, L = async e => {
-    l.default.dispatch({
+    n.default.dispatch({
       type: "COLLECTIBLES_CLAIM",
       skuId: e
     });
     try {
       var t;
-      let r = await u.default.put({
-        url: c.Endpoints.COLLECTIBLES_CLAIM,
+      let r = await u.HTTP.put({
+        url: o.Endpoints.COLLECTIBLES_CLAIM,
         body: {
           sku_id: e
         }
       });
-      l.default.dispatch({
+      n.default.dispatch({
         type: "COLLECTIBLES_CLAIM_SUCCESS",
         skuId: e,
-        purchases: null === (t = r.body) || void 0 === t ? void 0 : t.map(a.default.fromServer)
+        purchases: null === (t = r.body) || void 0 === t ? void 0 : t.map(c.default.fromServer)
       })
     } catch (t) {
-      throw l.default.dispatch({
+      throw n.default.dispatch({
         type: "COLLECTIBLES_CLAIM_FAILURE",
         skuId: e,
         error: t
-      }), new i.APIError(t)
+      }), new E.APIError(t)
     }
-  }, f = async (e, t) => {
+  }, S = async (e, t) => {
     try {
-      let r = await u.default.get({
-        url: c.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+      let r = await u.HTTP.get({
+        url: o.Endpoints.COLLECTIBLES_VALID_GIFT_RECIPIENT,
         query: {
           sku_id: t,
           recipient_id: e
@@ -152,10 +161,10 @@ let d = e => {
       });
       return r.body.valid
     } catch (e) {
-      throw new i.APIError(e)
+      throw new E.APIError(e)
     }
-  }, y = e => {
-    l.default.dispatch({
+  }, p = e => {
+    n.default.dispatch({
       type: "COLLECTIBLES_CATEGORY_ITEMS_VIEWED",
       ...e
     })

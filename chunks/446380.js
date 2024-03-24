@@ -21,7 +21,7 @@ var l = n("37983"),
   E = n("41594"),
   g = n("49111"),
   I = n("133335"),
-  S = n("708995");
+  S = n("65369");
 
 function _(e, t) {
   let n = t.getGuildId();
@@ -53,7 +53,7 @@ class N extends m.default {
         "aria-label": (0, c.default)({
           channel: e
         }),
-        unreadMode: I.UnreadMode.NONE,
+        resolvedUnreadSetting: I.UnreadSetting.ONLY_MENTIONS,
         children: [this.renderInviteButton(), this.renderEditButton()]
       })
     });

@@ -17,7 +17,7 @@ var n = a("717227"),
   c = a("295583"),
   d = a("49111");
 async function p() {
-  let e = await r.default.get({
+  let e = await r.HTTP.get({
     url: d.Endpoints.BILLING_ADYEN_PAYMENT_METHODS,
     oldFormErrors: !0
   });

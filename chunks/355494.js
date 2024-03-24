@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return T
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("769846"),
-  o = n("917764"),
-  s = n("986632"),
-  a = n("562323"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("769846"),
+  s = n("917764"),
+  r = n("986632"),
+  o = n("562323"),
   u = n("305961"),
   d = n("151185"),
   c = n("159885"),
@@ -17,27 +17,27 @@ var l = n("37983"),
   p = n("161585"),
   m = n("24373"),
   h = n("41170"),
-  E = n("782340"),
-  S = n("13763");
-let g = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-  C = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
-  T = e => {
+  x = n("782340"),
+  E = n("498563");
+let y = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+  g = (0, c.cssValueToNumber)(a.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+  S = e => {
     let t = null,
       n = null;
     if (!(0, m.isStandardSticker)(e) && !(0, m.isGuildSticker)(e) || (0, m.isGuildSticker)(e)) {
-      let i = u.default.getGuild(e.guild_id);
-      null != i && (t = E.default.Messages.STICKER_FROM_SOURCE.format({
-        source: i.name
-      }), n = (0, l.jsx)(o.default, {
-        guild: i
+      let l = u.default.getGuild(e.guild_id);
+      null != l && (t = x.default.Messages.STICKER_FROM_SOURCE.format({
+        source: l.name
+      }), n = (0, i.jsx)(s.default, {
+        guild: l
       }))
     } else if ((0, m.isStandardSticker)(e)) {
-      let i = f.default.getStickerPack(e.pack_id);
-      null != i && (t = E.default.Messages.STICKER_FROM_SOURCE.format({
-        source: i.name
-      }), n = (0, l.jsx)(h.default, {
-        size: C,
-        sticker: (0, m.getStickerPackPreviewSticker)(i),
+      let l = f.default.getStickerPack(e.pack_id);
+      null != l && (t = x.default.Messages.STICKER_FROM_SOURCE.format({
+        source: l.name
+      }), n = (0, i.jsx)(h.default, {
+        size: g,
+        sticker: (0, m.getStickerPackPreviewSticker)(l),
         disableAnimation: !0
       }))
     }
@@ -46,40 +46,40 @@ let g = (0, c.cssValueToNumber)(r.default.EXPRESSION_PICKER_CONSTANTS_EXPRESSION
       graphic: n
     }
   },
-  v = i.memo(function(e) {
+  C = l.memo(function(e) {
     let {
       stickersGrid: t
-    } = e, n = s.StickerPickerStore.useStore(e => e.inspectedExpressionPosition), r = i.useMemo(() => {
+    } = e, n = r.StickerPickerStore.useStore(e => e.inspectedExpressionPosition), a = l.useMemo(() => {
       var e;
       let {
-        rowIndex: l,
-        columnIndex: i
-      } = n, r = null === (e = t[l]) || void 0 === e ? void 0 : e[i];
-      return (null == r ? void 0 : r.type) === p.StickerGridItemTypes.CREATE_STICKER ? {
-        guild_id: r.guild_id,
-        name: r.name
-      } : (null == r ? void 0 : r.type) !== p.StickerGridItemTypes.STICKER ? null : r.sticker
+        rowIndex: i,
+        columnIndex: l
+      } = n, a = null === (e = t[i]) || void 0 === e ? void 0 : e[l];
+      return (null == a ? void 0 : a.type) === p.StickerGridItemTypes.CREATE_STICKER ? {
+        guild_id: a.guild_id,
+        name: a.name
+      } : (null == a ? void 0 : a.type) !== p.StickerGridItemTypes.STICKER ? null : a.sticker
     }, [t, n]);
-    if (null == r) return null;
+    if (null == a) return null;
     let {
-      graphic: o,
+      graphic: s,
       title: u
-    } = T(r), c = (0, m.isStandardSticker)(r) || (0, m.isGuildSticker)(r) ? (0, l.jsx)(h.default, {
+    } = S(a), c = (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? (0, i.jsx)(h.default, {
       isInteracting: !0,
-      size: g,
-      sticker: r,
+      size: y,
+      sticker: a,
       disableAnimation: !0
-    }) : (0, l.jsx)("div", {
-      className: S.iconWrapper,
-      children: (0, l.jsx)(d.default, {
-        className: S.icon
+    }) : (0, i.jsx)("div", {
+      className: E.iconWrapper,
+      children: (0, i.jsx)(d.default, {
+        className: E.icon
       })
     });
-    return (0, l.jsx)(a.default, {
+    return (0, i.jsx)(o.default, {
       graphicPrimary: c,
-      graphicSecondary: o,
-      titlePrimary: r.name,
-      titleSecondary: (0, m.isStandardSticker)(r) || (0, m.isGuildSticker)(r) ? u : null
+      graphicSecondary: s,
+      titlePrimary: a.name,
+      titleSecondary: (0, m.isStandardSticker)(a) || (0, m.isGuildSticker)(a) ? u : null
     })
   });
-var y = v
+var T = C

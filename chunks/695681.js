@@ -17,7 +17,7 @@ var i = n("872717"),
   s = n("49111");
 
 function r(e, t, n, r) {
-  return i.default.post({
+  return i.HTTP.post({
     url: s.Endpoints.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
     body: {
       channel_id: e,
@@ -29,7 +29,7 @@ function r(e, t, n, r) {
 }
 
 function a(e, t, n, r) {
-  return i.default.post({
+  return i.HTTP.post({
     url: s.Endpoints.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
     body: {
       channel_id: e,
@@ -41,7 +41,7 @@ function a(e, t, n, r) {
 }
 
 function o(e, t) {
-  return i.default.patch({
+  return i.HTTP.patch({
     url: s.Endpoints.EXPLICIT_MEDIA_SCAN_MESSAGES(e),
     body: {
       message_ids: t
@@ -54,7 +54,7 @@ function l(e) {
     channel_id: e.channel_id,
     message_id: e.id
   }));
-  return i.default.patch({
+  return i.HTTP.patch({
     url: s.Endpoints.EXPLICIT_MEDIA_SCAN_MULTI_CHANNEL_MESSAGES,
     body: {
       messages: t

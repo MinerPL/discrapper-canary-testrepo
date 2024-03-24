@@ -1,3 +1,3 @@
 "use strict";
-var r = n("342646");
+var r = n("459078");
 e.exports = r.call(Function.call, Object.prototype.hasOwnProperty)

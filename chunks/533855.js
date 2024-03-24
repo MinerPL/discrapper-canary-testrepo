@@ -4,17 +4,11 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var s = n("884691"),
-  a = n("446674"),
-  l = n("764828"),
-  i = n("13427");
+var i = n("446674"),
+  a = n("764828");
 
-function r(e, t, n) {
-  let r = (0, a.useStateFromStores)([l.default], () => l.default.getChannelSafetyWarnings(e), [e]),
-    o = r.filter(e => e.type === t);
-  return s.useEffect(() => {
-    t === l.SafetyWarningTypes.STRANGER_DANGER && o.length > 0 && i.StrangerDangerTeensExperiment.trackExposure({
-      location: n
-    })
-  }, [t, o.length, n]), o.find(e => null == e.dismiss_timestamp)
+function r(e, t) {
+  let n = (0, i.useStateFromStores)([a.default], () => a.default.getChannelSafetyWarnings(e), [e]),
+    r = n.filter(e => e.type === t);
+  return r.find(e => null == e.dismiss_timestamp)
 }

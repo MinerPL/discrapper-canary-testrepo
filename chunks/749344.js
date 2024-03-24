@@ -1,74 +1,73 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return v
+    return E
   }
-}), s("222007");
-var n = s("37983"),
-  a = s("884691"),
-  i = s("414456"),
-  r = s.n(i),
-  l = s("917351"),
-  o = s.n(l),
-  d = s("862337"),
-  u = s("77078"),
-  h = s("659500"),
-  c = s("137215"),
-  p = s("944832"),
-  m = s("16594"),
-  g = s("49111"),
-  C = s("782340"),
-  f = s("561567");
-let I = {
+}), n("222007");
+var s = n("37983"),
+  a = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
+  l = n("917351"),
+  o = n.n(l),
+  d = n("862337"),
+  u = n("77078"),
+  h = n("659500"),
+  c = n("137215"),
+  p = n("16594"),
+  m = n("49111"),
+  g = n("782340"),
+  C = n("592994");
+let f = {
   JUMP: "jump",
   NEXT: "next",
   PREVIOUS: "previous"
 };
-class x extends a.PureComponent {
+class I extends a.PureComponent {
   componentDidMount() {
-    h.ComponentDispatch.subscribe(g.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.subscribe(g.ComponentActions.CAROUSEL_NEXT, this.handleNext)
+    h.ComponentDispatch.subscribe(m.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.subscribe(m.ComponentActions.CAROUSEL_NEXT, this.handleNext)
   }
   componentWillUnmount() {
-    h.ComponentDispatch.unsubscribe(g.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.unsubscribe(g.ComponentActions.CAROUSEL_NEXT, this.handleNext)
+    h.ComponentDispatch.unsubscribe(m.ComponentActions.CAROUSEL_PREV, this.handlePrevious), h.ComponentDispatch.unsubscribe(m.ComponentActions.CAROUSEL_NEXT, this.handleNext)
   }
   render() {
     let {
       current: e,
       count: t,
-      includeHitboxPadding: s,
+      includeHitboxPadding: n,
       arrowClassName: a
-    } = this.props, i = r(f.arrowHitbox, a, {
-      [f.arrowHitboxPadding]: s
+    } = this.props, i = r(C.arrowHitbox, a, {
+      [C.arrowHitboxPadding]: n
     });
-    return (0, n.jsxs)("div", {
-      className: r(f.controls, this.props.className),
-      children: [(0, n.jsx)(u.Button, {
+    return (0, s.jsxs)("div", {
+      className: r(C.controls, this.props.className),
+      children: [(0, s.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         className: i,
         onClick: this.handlePrevious,
-        "aria-label": C.default.Messages.PAGINATION_PREVIOUS,
-        children: (0, n.jsx)(c.default, {
-          className: f.arrow,
+        "aria-label": g.default.Messages.PAGINATION_PREVIOUS,
+        children: (0, s.jsx)(c.default, {
+          className: C.arrow,
           direction: c.default.Directions.LEFT
         })
-      }), (0, n.jsx)("div", {
-        className: f.dots,
-        children: o.times(t, t => (0, n.jsx)(u.Button, {
+      }), (0, s.jsx)("div", {
+        className: C.dots,
+        children: o.times(t, t => (0, s.jsx)(u.Button, {
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           onClick: () => this.handleDotClick(t),
-          className: t === e ? f.dotSelected : f.dotNormal,
-          "aria-label": C.default.Messages.PAGINATION_SLIDE_LABEL.format({
+          className: t === e ? C.dotSelected : C.dotNormal,
+          "aria-label": g.default.Messages.PAGINATION_SLIDE_LABEL.format({
             pageNumber: t + 1
           })
         }, "dot-".concat(t)))
-      }), (0, n.jsx)(u.Button, {
+      }), (0, s.jsx)(u.Button, {
         look: u.Button.Looks.BLANK,
         className: i,
         onClick: this.handleNext,
-        "aria-label": C.default.Messages.PAGINATION_NEXT,
-        children: (0, n.jsx)(c.default, {
-          className: f.arrow,
+        "aria-label": g.default.Messages.PAGINATION_NEXT,
+        children: (0, s.jsx)(c.default, {
+          className: C.arrow,
           direction: c.default.Directions.RIGHT
         })
       })]
@@ -78,31 +77,31 @@ class x extends a.PureComponent {
     super(...e), this.handleDotClick = e => {
       let {
         onSetItem: t,
-        onIntentionalChange: s,
-        current: n
+        onIntentionalChange: n,
+        current: s
       } = this.props;
-      null == s || s(n, e, I.JUMP), t(e)
+      null == n || n(s, e, f.JUMP), t(e)
     }, this.handleNext = () => {
       let {
         onIntentionalChange: e,
         current: t,
-        onChangePage: s
-      } = this.props, n = s(1);
-      null == e || e(t, n, I.NEXT)
+        onChangePage: n
+      } = this.props, s = n(1);
+      null == e || e(t, s, f.NEXT)
     }, this.handlePrevious = () => {
       let {
         onIntentionalChange: e,
         current: t,
-        onChangePage: s
-      } = this.props, n = s(-1);
-      null == e || e(t, n, I.PREVIOUS)
+        onChangePage: n
+      } = this.props, s = n(-1);
+      null == e || e(t, s, f.PREVIOUS)
     }
   }
 }
-x.defaultProps = {
+I.defaultProps = {
   includeHitboxPadding: !0
 };
-class E extends a.PureComponent {
+class x extends a.PureComponent {
   componentDidMount() {
     !this.props.paused && !this.state.hovered && this.startTimer()
   }
@@ -110,8 +109,8 @@ class E extends a.PureComponent {
     this.stopTimer()
   }
   componentDidUpdate(e, t) {
-    var s, n, a, i;
-    let r = (s = this.props, n = this.state, !s.paused && !n.hovered);
+    var n, s, a, i;
+    let r = (n = this.props, s = this.state, !n.paused && !s.hovered);
     let l = (a = e, i = t, !a.paused && !i.hovered);
     r && !l ? this.startTimer() : !r && l && this.stopTimer();
     let {
@@ -128,23 +127,23 @@ class E extends a.PureComponent {
     null != this.props.delay && this.timer.stop()
   }
   changeItem(e, t) {
-    let s = this.state.visibleIndex + t;
-    s < 0 ? s = e.length - 1 : s > e.length - 1 && (s = 0);
+    let n = this.state.visibleIndex + t;
+    n < 0 ? n = e.length - 1 : n > e.length - 1 && (n = 0);
     let {
-      onChangeItem: n
+      onChangeItem: s
     } = this.props;
-    null == n || n(e[s], this.state.visibleIndex, s);
-    let a = t > 0 ? m.SlideDirection.LEFT : m.SlideDirection.RIGHT;
+    null == s || s(e[n], this.state.visibleIndex, n);
+    let a = t > 0 ? p.SlideDirection.LEFT : p.SlideDirection.RIGHT;
     return this.setState({
-      visibleIndex: s,
+      visibleIndex: n,
       direction: a
-    }), s
+    }), n
   }
   render() {
     let {
       items: e,
       renderItem: t,
-      className: s,
+      className: n,
       paginationClassName: a,
       paginationArrowClassName: i,
       themedPagination: l,
@@ -154,21 +153,23 @@ class E extends a.PureComponent {
     } = this.props, {
       visibleIndex: h
     } = this.state;
-    return (0, n.jsxs)("div", {
-      className: r(f.root, s),
+    return (0, s.jsxs)("div", {
+      className: r(C.root, n),
       style: d,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
-      children: [(0, n.jsx)(p.default, {
-        aspectRatio: u,
-        children: (0, n.jsx)(m.default, {
+      children: [(0, s.jsx)("div", {
+        style: {
+          aspectRatio: u
+        },
+        children: (0, s.jsx)(p.default, {
           step: h,
           direction: this.getCurrentDirection(),
-          className: f.carousel,
+          className: C.carousel,
           children: t(e[h], h)
         })
-      }), e.length > 1 && (0, n.jsx)(x, {
-        className: r(a, l ? f.themedPagination : f.pagination),
+      }), e.length > 1 && (0, s.jsx)(I, {
+        className: r(a, l ? C.themedPagination : C.pagination),
         arrowClassName: i,
         includeHitboxPadding: o,
         current: h,
@@ -194,9 +195,9 @@ class E extends a.PureComponent {
       let {
         visibleIndex: t
       } = this.state, {
-        items: s
+        items: n
       } = this.props;
-      this.changeItem(s, e - t)
+      this.changeItem(n, e - t)
     }, this.handleMouseEnter = () => {
       this.setState({
         hovered: !0
@@ -205,20 +206,20 @@ class E extends a.PureComponent {
       this.setState({
         hovered: !1
       })
-    }, this.handleIntentionalChange = (e, t, s) => {
+    }, this.handleIntentionalChange = (e, t, n) => {
       let {
-        items: n,
+        items: s,
         onIntentionalChange: a
       } = this.props;
-      return null == a ? void 0 : a(n[t], e, t, s)
+      return null == a ? void 0 : a(s[t], e, t, n)
     }, this.state = {
       visibleIndex: !0 === e.randomize ? o.random(0, e.items.length - 1) : 0,
-      direction: m.SlideDirection.LEFT,
+      direction: p.SlideDirection.LEFT,
       hovered: !1
     }
   }
 }
-E.defaultProps = {
+x.defaultProps = {
   aspectRatio: 16 / 9
 };
-var v = E
+var E = x

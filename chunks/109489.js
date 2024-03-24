@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var a = n("37983"),
   r = n("884691"),
   s = n("414456"),
-  l = n.n(s),
-  i = n("255397"),
+  i = n.n(s),
+  l = n("255397"),
   u = n("256170"),
   o = n("155207"),
   d = n("981913"),
   c = n("782340"),
-  f = n("789749");
+  f = n("31665");
 
 function h(e) {
   let {
@@ -23,14 +23,14 @@ function h(e) {
   return (0, a.jsxs)("div", {
     className: f.iconContainer,
     children: [(0, a.jsx)(u.default, {
-      className: l(n ? f.upCaret : f.leftCaret, t)
+      className: i(n ? f.upCaret : f.leftCaret, t)
     }), (0, a.jsx)(o.default, {
-      className: l(f.members, t)
+      className: i(f.members, t)
     })]
   })
 }
 
-function p(e) {
+function E(e) {
   let {
     className: t,
     isVertical: n
@@ -38,25 +38,25 @@ function p(e) {
   return (0, a.jsxs)("div", {
     className: f.iconContainer,
     children: [(0, a.jsx)(u.default, {
-      className: l(n ? f.downCaret : f.rightCaret, t)
+      className: i(n ? f.downCaret : f.rightCaret, t)
     }), n && (0, a.jsx)(o.default, {
-      className: l(f.members, t)
+      className: i(f.members, t)
     })]
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     channelId: t,
     className: n,
     isParticipantsOpen: s,
     isVertical: u = !1,
     hideTooltip: o = !1
-  } = e, E = r.useCallback(e => {
+  } = e, p = r.useCallback(e => {
     let {
       className: t
     } = e;
-    return s ? (0, a.jsx)(p, {
+    return s ? (0, a.jsx)(E, {
       className: t,
       isVertical: u
     }) : (0, a.jsx)(h, {
@@ -66,11 +66,11 @@ function E(e) {
   }, [s, u]);
   return (0, a.jsx)(d.default, {
     label: s ? c.default.Messages.VIDEO_CALL_HIDE_MEMBERS : c.default.Messages.VIDEO_CALL_SHOW_MEMBERS,
-    className: l(f.participantsButton, n),
+    className: i(f.participantsButton, n),
     onClick: function() {
-      i.default.toggleParticipants(t, !s)
+      l.default.toggleParticipants(t, !s)
     },
-    iconComponent: E,
+    iconComponent: p,
     shouldShowTooltip: !o
   })
 }

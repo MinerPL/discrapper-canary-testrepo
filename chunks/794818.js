@@ -16,28 +16,28 @@ n.r(t), n.d(t, {
     return v
   },
   trackDiscoveryViewed: function() {
-    return R
+    return m
   },
   trackDiscoveryExited: function() {
-    return m
+    return R
   },
   trackSearchClosed: function() {
     return C
   },
   trackSearchStarted: function() {
-    return N
+    return T
   },
   trackTagSearchStarted: function() {
-    return T
+    return N
   },
   trackSearchResultsViewed: function() {
     return p
   },
   trackGuildJoinClicked: function() {
-    return I
+    return x
   },
   getDiscoverableGuild: function() {
-    return x
+    return I
   }
 }), n("222007");
 var l, a, r = n("522632"),
@@ -149,7 +149,7 @@ function v(e) {
   }
 }
 
-function R(e) {
+function m(e) {
   let {
     loadId: t,
     gamesYouPlayGuilds: n,
@@ -168,7 +168,7 @@ function R(e) {
   })
 }
 
-function m(e, t) {
+function R(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_EXITED, {
     load_id: e,
@@ -183,7 +183,7 @@ function C(e) {
   })
 }
 
-function N(e, t) {
+function T(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
     search_type: h.SearchTypes.GUILD_DISCOVERY,
@@ -193,7 +193,7 @@ function N(e, t) {
   })
 }
 
-function T(e, t, n, l) {
+function N(e, t, n, l) {
   E.default.track(h.AnalyticEvents.SEARCH_STARTED, {
     search_type: h.SearchTypes.GUILD_DISCOVERY_TAG,
     load_id: e,
@@ -228,7 +228,7 @@ function p(e) {
   })
 }
 
-function I(e) {
+function x(e) {
   let t = u.default.getLoadId(e);
   E.default.track(h.AnalyticEvents.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
     guild_id: e,
@@ -236,10 +236,10 @@ function I(e) {
     guild_size: d.default.getMemberCount(e)
   })
 }
-async function x(e) {
+async function I(e) {
   try {
     var t, n;
-    let l = await s.default.get({
+    let l = await s.HTTP.get({
         url: h.Endpoints.GUILD_DISCOVERY,
         query: r.stringify({
           guild_ids: e

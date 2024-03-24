@@ -1,42 +1,39 @@
 "use strict";
 l.r(t), l.d(t, {
   useRoleRows: function() {
-    return o
+    return i
   },
   default: function() {
-    return d
+    return r
   }
 });
 var a = l("37983");
 l("884691");
-var n = l("446674"),
-  s = l("305961"),
-  i = l("644583");
+var s = l("446674"),
+  n = l("305961"),
+  o = l("644583");
 
-function o(e, t, l) {
-  return (0, n.useStateFromStoresArray)([s.default], () => {
-    var a, n;
-    return Object.values(null !== (n = null === (a = s.default.getGuild(e)) || void 0 === a ? void 0 : a.roles) && void 0 !== n ? n : {}).filter(e => !t.has(e.id)).filter(t => !l || t.id !== e).map(e => (0, i.roleToPendingAddition)(e).row)
-  }, [l, e, t])
+function i(e, t, l) {
+  return (0, s.useStateFromStoresArray)([n.default], () => Object.values(n.default.getRoles(e)).filter(e => !t.has(e.id)).filter(t => !l || t.id !== e).map(e => (0, o.roleToPendingAddition)(e).row), [l, e, t])
 }
 
-function d(e) {
+function r(e) {
   let {
     guildId: t,
     selectedRoleIds: l,
-    onChange: n,
-    placeholder: s,
-    disableEveryoneRole: d,
-    helperText: r,
+    onChange: s,
+    placeholder: n,
+    disableEveryoneRole: r,
+    helperText: d,
     className: u
-  } = e, C = o(t, l, d);
-  return (0, a.jsx)(i.default, {
+  } = e, C = i(t, l, r);
+  return (0, a.jsx)(o.default, {
     roleRows: C,
     guildId: t,
     selectedRoleIds: l,
-    onChange: (e, t) => n(t),
-    placeholder: s,
-    helperText: r,
+    onChange: (e, t) => s(t),
+    placeholder: n,
+    helperText: d,
     className: u
   })
 }

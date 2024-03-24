@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return p
   },
   mergeEmbedsOnURL: function() {
-    return v
-  },
-  isEmbedInline: function() {
     return S
   },
-  isServerShopArticleEmbed: function() {
+  isEmbedInline: function() {
     return T
+  },
+  isServerShopArticleEmbed: function() {
+    return v
   },
   getMaxEmbedMediaSize: function() {
     return I
@@ -25,12 +25,12 @@ var i = n("917351"),
   u = n("49111");
 let d = /sketchfab/i,
   c = /^https:\/\/sketchfab\.com/i,
-  f = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
-  _ = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
-  h = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
-  g = new Set([u.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, u.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, u.MessageEmbedTypes.RICH, u.MessageEmbedTypes.SAFETY_POLICY_NOTICE, u.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, u.MessageEmbedTypes.VOICE_CHANNEL]);
+  _ = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
+  f = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
+  E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
+  h = new Set([u.MessageEmbedTypes.AUTO_MODERATION_MESSAGE, u.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION, u.MessageEmbedTypes.RICH, u.MessageEmbedTypes.SAFETY_POLICY_NOTICE, u.MessageEmbedTypes.SAFETY_SYSTEM_NOTIFICATION, u.MessageEmbedTypes.VOICE_CHANNEL]);
 
-function m(e) {
+function g(e) {
   let {
     width: t,
     height: n
@@ -38,18 +38,22 @@ function m(e) {
   return t > 0 && n > 0
 }
 
-function E(e) {
+function m(e) {
   let {
     url: t,
     proxy_url: n,
     width: i,
-    height: s
+    height: s,
+    placeholder: r,
+    placeholder_version: a
   } = e;
   return {
     url: t,
     proxyURL: n,
     width: i,
-    height: s
+    height: s,
+    placeholder: r,
+    placeholderVersion: a
   }
 }
 
@@ -76,23 +80,23 @@ function p(e, t, n) {
     }), null != n.provider && null != n.provider.name && (i.provider = {
       name: n.provider.name,
       url: n.provider.url
-    }), null != n.timestamp && (i.timestamp = a(new Date(n.timestamp))), null != n.color && (i.color = (0, o.int2hsl)(n.color, !0)), null != n.thumbnail && m(n.thumbnail)) switch (i.type) {
+    }), null != n.timestamp && (i.timestamp = a(new Date(n.timestamp))), null != n.color && (i.color = (0, o.int2hsl)(n.color, !0)), null != n.thumbnail && g(n.thumbnail)) switch (i.type) {
     case u.MessageEmbedTypes.ARTICLE:
     case u.MessageEmbedTypes.IMAGE:
-      i.image = E(n.thumbnail);
+      i.image = m(n.thumbnail);
       break;
     default:
-      i.thumbnail = E(n.thumbnail)
+      i.thumbnail = m(n.thumbnail)
   }
-  if (null != n.image && m(n.image) && (i.image = E(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && m(n.video) && (i.thumbnail = {
+  if (null != n.image && g(n.image) && (i.image = m(n.image)), null != n.video && (null == i.thumbnail && null != n.video.proxy_url && g(n.video) && (i.thumbnail = {
       width: n.video.width,
       height: n.video.height,
       url: "".concat(n.video.proxy_url, "?format=jpeg")
-    }), null != i.thumbnail && m(n.video) && function(e, t, n) {
+    }), null != i.thumbnail && g(n.video) && function(e, t, n) {
       if (null != t && d.test(t.name) || c.test(n.url)) return !1;
       let i = null != n.proxy_url || /^https:/i.test(n.url);
-      return 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && f.test(t.name)), i
-    }(t, n.provider, n.video) && (i.video = E(n.video))), g.has(i.type)) {
+      return null != e && 1492472454139 > l.default.extractTimestamp(e) && (i = i && null != t && _.test(t.name)), i
+    }(t, n.provider, n.video) && (i.video = m(n.video))), h.has(i.type)) {
     var r;
     let e = null !== (r = n.fields) && void 0 !== r ? r : [];
     i.fields = e.map(e => {
@@ -111,7 +115,7 @@ function p(e, t, n) {
   return i
 }
 
-function v(e) {
+function S(e) {
   let t = new Map,
     n = [];
   return e.forEach(e => {
@@ -128,7 +132,7 @@ function v(e) {
   }), n
 }
 
-function S(e) {
+function T(e) {
   let {
     image: t,
     video: n,
@@ -139,8 +143,8 @@ function S(e) {
   return (null != t || null != n) && (i === u.MessageEmbedTypes.GIFV || i !== u.MessageEmbedTypes.RICH && null == s && null == r)
 }
 
-function T(e) {
-  return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (h.test(e.url) || _.test(e.url))
+function v(e) {
+  return e.type === u.MessageEmbedTypes.ARTICLE && null != e.url && (E.test(e.url) || f.test(e.url))
 }
 
 function I(e, t, n) {

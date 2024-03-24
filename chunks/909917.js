@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("37983");
@@ -15,7 +15,7 @@ var l = n("627445"),
   d = n("42203"),
   c = n("25116");
 
-function f(e, t) {
+function E(e, t) {
   if ((0, r.isPublicSystemMessage)(t)) return (0, s.jsx)(o.default, {});
   if ((0, c.default)(t)) {
     let {
@@ -34,6 +34,7 @@ function f(e, t) {
   return a(null != n, "renderUserGuildPopout: channel should never be null"), (0, s.jsx)(u.default, {
     ...e,
     channelId: t.channel_id,
+    messageId: t.id,
     guildId: n.guild_id,
     userId: t.author.id,
     user: null != t.webhookId ? t.author : void 0

@@ -10,7 +10,7 @@ var a = n("37983"),
   i = n("77078"),
   r = n("545158"),
   o = n("370492"),
-  u = n("584369"),
+  u = n("368694"),
   d = n("471654"),
   c = n("496657"),
   f = n("758710"),
@@ -19,11 +19,11 @@ var a = n("37983"),
   m = n("782340");
 
 function p() {
-  let e = (0, s.useStateFromStores)([u.default], () => u.default.devToolsEnabled),
+  let e = (0, s.useStateFromStores)([u.default], () => u.default.isDeveloper),
     [t, p] = l.useState(!1),
-    [g, S] = l.useState(0),
+    [S, g] = l.useState(0),
     N = e => {
-      clearTimeout(g), S(setTimeout(() => {
+      clearTimeout(S), g(setTimeout(() => {
         p(e)
       }, 100))
     };
@@ -41,7 +41,7 @@ function p() {
       renderPopout: () => (function(e) {
         let {
           onClose: t,
-          devToolsEnabled: l
+          isDiscordDeveloper: l
         } = e;
         return (0, a.jsx)(i.Menu, {
           onSelect: () => {},
@@ -77,7 +77,7 @@ function p() {
         })
       })({
         onClose: () => p(!1),
-        devToolsEnabled: e
+        isDiscordDeveloper: e
       }),
       children: (e, t) => {
         let {

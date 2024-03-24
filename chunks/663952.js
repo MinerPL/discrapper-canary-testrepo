@@ -15,15 +15,15 @@ var a = s("37983"),
   c = s("77078"),
   S = s("913144"),
   E = s("54239"),
-  f = s("376152"),
-  T = s("579565"),
-  m = s("778695"),
-  _ = s("298878"),
+  T = s("376152"),
+  f = s("579565"),
+  _ = s("778695"),
+  m = s("298878"),
   g = s("697218"),
   h = s("888400"),
-  I = s("411511"),
-  N = s("782340"),
-  p = s("76836");
+  N = s("411511"),
+  I = s("782340"),
+  p = s("399953");
 let C = "YYYY-MM-DD HH:mm";
 
 function A(e) {
@@ -43,16 +43,16 @@ function A(e) {
   }, []);
   let {
     title: u,
-    endDate: m,
-    dropsQuestId: _,
+    endDate: _,
+    dropsQuestId: m,
     assets: g,
     articleUrl: h
-  } = t, I = (0, T.getDropByQuestId)(_);
-  if (null == I) return null;
+  } = t, N = (0, f.getDropByQuestId)(m);
+  if (null == N) return null;
   let C = () => {
-    (0, f.enrollDropsUser)(_).then(() => {
+    (0, T.enrollDropsUser)(m).then(() => {
       S.default.wait(async () => {
-        await (0, f.fetchDropsUserStatus)()
+        await (0, T.fetchDropsUserStatus)()
       })
     })
   };
@@ -79,13 +79,13 @@ function A(e) {
               variant: "text-xs/medium",
               color: "text-normal",
               className: p.availableUntil,
-              children: N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
-                endDate: o(m, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
+              children: I.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+                endDate: o(_, "YYYY-MM-DD HH:mm").format("MMMM Do, YYYY")
               })
             })]
           })]
         }), (0, a.jsx)(c.Tooltip, {
-          text: s && !l ? N.default.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
+          text: s && !l ? I.default.Messages.DROPS_GIFT_INVENTORY_REDEMPTION_TOOLTIP : null,
           tooltipContentClassName: p.redeemTooltipContent,
           children: e => (0, a.jsx)(c.Button, {
             className: p.promotionCardButton,
@@ -94,7 +94,7 @@ function A(e) {
             onClick: C,
             disabled: s && !l,
             ...e,
-            children: s ? N.default.Messages.REDEEM : N.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
+            children: s ? I.default.Messages.REDEEM : I.default.Messages.DROPS_GIFT_INVENTORY_ENROLL
           })
         })]
       })
@@ -110,13 +110,13 @@ function A(e) {
           color: "text-muted",
           variant: "text-sm/normal",
           className: p.dropCriteriaText,
-          children: I.messages.giftInfo()
+          children: N.messages.giftInfo()
         })
       }), (0, a.jsx)(c.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
         className: p.dropLearnMore,
-        children: N.default.Messages.DROPS_LEARN_MORE.format({
+        children: I.default.Messages.DROPS_LEARN_MORE.format({
           faqUrl: h
         })
       })]
@@ -129,9 +129,9 @@ function O(e) {
     drop: t,
     code: s,
     platform: l
-  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o(t.endDate), "LL"), E = N.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
+  } = e, [r, d] = n.useState(!1), u = void 0 !== s, S = (0, h.dateFormat)(o(t.endDate), "LL"), E = I.default.Messages.DROPS_CARD_REDEEM_UNTIL.format({
     endDate: S
-  }), f = u ? N.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : N.default.Messages.PROMOTION_CARD_ACTION_CLAIM, T = n.useCallback(() => d(!1), []);
+  }), T = u ? I.default.Messages.OUTBOUND_PROMOTION_SEE_CODE : I.default.Messages.PROMOTION_CARD_ACTION_CLAIM, f = n.useCallback(() => d(!1), []);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: i(p.skuCard, p.promotionCard),
@@ -161,18 +161,18 @@ function O(e) {
           color: c.Button.Colors.BRAND,
           size: c.Button.Sizes.SMALL,
           onClick: () => d(!0),
-          children: f
+          children: T
         })]
       })
     }), r && (0, a.jsx)(c.Modal, {
-      renderModal: e => (0, a.jsx)(m.default, {
+      renderModal: e => (0, a.jsx)(_.default, {
         ...e,
-        onClose: T,
+        onClose: f,
         code: s,
         drop: t,
         platform: l
       }),
-      onCloseRequest: T
+      onCloseRequest: f
     })]
   })
 }
@@ -181,17 +181,17 @@ var x = function(e) {
   let {
     dropsOptedOut: s,
     dropsStatuses: n
-  } = e, l = [], i = [], r = (0, u.default)([g.default], () => g.default.getCurrentUser()), d = !1;
+  } = e, l = [], i = [], r = (0, u.useStateFromStores)([g.default], () => g.default.getCurrentUser()), d = !1;
   if (null == n) return null;
   for (let e of Object.keys(n)) {
-    let t = (0, T.getDropByQuestId)(e);
+    let t = (0, f.getDropByQuestId)(e);
     if (null == t) continue;
     let s = n[e],
-      a = (0, T.getDropsPartnerGameNameByQuestId)(e);
+      a = (0, f.getDropsPartnerGameNameByQuestId)(e);
     if (null == a) continue;
-    let u = (0, T.getEligibilityByRunningGameDetection)(a),
+    let u = (0, f.getEligibilityByRunningGameDetection)(a),
       c = s.eligible && u,
-      S = (0, T.getDropsExperiment)(a);
+      S = (0, f.getDropsExperiment)(a);
     if (null == S) continue;
     c && S.trackExposure({
       location: "ENTITLEMENT_GIFTS"
@@ -201,16 +201,16 @@ var x = function(e) {
       }, {
         autoTrackExposure: !1
       }).showUnenroll),
-      f = S.getCurrentConfig({
+      T = S.getCurrentConfig({
         location: "076035_3"
       }, {
         autoTrackExposure: !1
       }).dropsEnabled;
-    if (!f) continue;
+    if (!T) continue;
     d = !0;
-    let m = o(t.endDate, C),
-      _ = o();
-    if (c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible) _ < m && l.push({
+    let _ = o(t.endDate, C),
+      m = o();
+    if (c && null == s.completed_at || null != s.enrolled_at && null == s.completed_at && s.eligible) m < _ && l.push({
       dropsQuestId: e,
       dropsStatus: s,
       showUnenroll: E,
@@ -218,7 +218,7 @@ var x = function(e) {
     });
     else if (null != s.code || null != s.completed_at) {
       let a = o(t.finalClaimDate, C);
-      _ < a && i.push({
+      m < a && i.push({
         dropsQuestId: e,
         dropsStatus: s,
         showUnenroll: E,
@@ -230,8 +230,8 @@ var x = function(e) {
     className: p.dropsHeaderContainer,
     children: [(0, a.jsx)(c.Heading, {
       variant: "heading-md/semibold",
-      children: N.default.Messages.DROPS_GIFT_INVENTORY_TITLE
-    }), (0, a.jsx)(_.default, {
+      children: I.default.Messages.DROPS_GIFT_INVENTORY_TITLE
+    }), (0, a.jsx)(m.default, {
       className: p.betaTagIcon
     })]
   });
@@ -240,15 +240,15 @@ var x = function(e) {
       className: p.divider
     }), (0, a.jsx)("div", {
       className: p.dropsHelpText,
-      children: N.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
-        blogURL: I.DropsFaqUrl
+      children: I.default.Messages.DROPS_READ_BLOG_TO_ENABLE.format({
+        blogURL: N.DropsFaqUrl
       })
     })]
   }) : 0 === l.length && 0 === i.length ? null : (0, a.jsxs)(c.FormSection, {
     children: [S, (0, a.jsx)(c.FormDivider, {
       className: p.divider
     }), l.map(e => {
-      let t = (0, T.getDropByQuestId)(e.dropsQuestId),
+      let t = (0, f.getDropByQuestId)(e.dropsQuestId),
         s = null != e.dropsStatus.enrolled_at,
         n = null != e.dropsStatus.completed_at;
       return null != t ? (0, a.jsxs)(a.Fragment, {
@@ -260,13 +260,13 @@ var x = function(e) {
           completed: n
         }, t.dropsQuestId), e.showUnenroll && (0, a.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          onClick: () => (0, f.unenrollDropsUser)(e.dropsQuestId),
+          onClick: () => (0, T.unenrollDropsUser)(e.dropsQuestId),
           children: "UNENROLL"
         })]
       }) : null
     }), i.map(e => {
       var t, s;
-      let n = (0, T.getDropByQuestId)(e.dropsQuestId);
+      let n = (0, f.getDropByQuestId)(e.dropsQuestId);
       return null != n ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(O, {
           drop: n,
@@ -274,13 +274,13 @@ var x = function(e) {
           platform: null !== (s = e.dropsStatus.platform) && void 0 !== s ? s : void 0
         }, e.dropsQuestId), e.showUnenroll && (0, a.jsx)(c.Button, {
           size: c.Button.Sizes.SMALL,
-          onClick: () => (0, f.unenrollDropsUser)(e.dropsQuestId),
+          onClick: () => (0, T.unenrollDropsUser)(e.dropsQuestId),
           children: "UNENROLL"
         })]
       }) : null
     }), "string" == typeof(null == r ? void 0 : r.id) && i.length > 0 ? (0, a.jsx)("div", {
       className: p.feedback,
-      children: N.default.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
+      children: I.default.Messages.DROPS_REQUEST_FEEDBACK_SUCCESS.format({
         feedbackURL: "https://survey.alchemer.com/s3/7043098/Discord-Drops-CSAT?user_id=".concat(null !== (t = null == r ? void 0 : r.id) && void 0 !== t ? t : "")
       })
     }) : null]

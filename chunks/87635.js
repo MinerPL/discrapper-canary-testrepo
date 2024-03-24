@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return L
   }
 }), n("222007");
 var s = n("37983"),
@@ -21,16 +21,16 @@ var s = n("37983"),
   E = n("578706"),
   g = n("347895"),
   S = n("129092"),
-  A = n("726274"),
-  _ = n("290886"),
-  T = n("205454"),
+  T = n("726274"),
+  A = n("290886"),
+  _ = n("205454"),
   M = n("782340"),
-  N = n("719832");
+  I = n("490259");
 
-function I(e) {
+function N(e) {
   let {
     action: t
-  } = e, n = (0, o.default)([h.default], () => h.default.getChannel(t.channelId)), a = (0, c.default)(n, !0);
+  } = e, n = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(t.channelId)), a = (0, c.default)(n, !0);
   return null == n ? (0, s.jsx)(u.Text, {
     variant: "text-xxs/normal",
     color: "header-secondary",
@@ -52,20 +52,20 @@ function v(e) {
     channelId: n,
     emojiId: a,
     emojiName: l
-  } = e, i = (0, o.default)([h.default], () => h.default.getChannel(n));
+  } = e, i = (0, o.useStateFromStores)([h.default], () => h.default.getChannel(n));
   if (null == i) return null;
   let r = null !== (t = (0, f.getChannelIconComponent)(i)) && void 0 !== t ? t : m.default;
-  return (0, s.jsx)(T.default, {
+  return (0, s.jsx)(_.default, {
     emojiId: a,
     emojiName: l,
-    size: T.CTAEmojiSize.MEDIUM,
+    size: _.CTAEmojiSize.MEDIUM,
     defaultComponent: (0, s.jsx)(r, {
-      className: N.channelIcon
+      className: I.channelIcon
     })
   })
 }
 
-function L(e) {
+function x(e) {
   var t, n, l, c;
   let {
     guildId: f,
@@ -73,70 +73,70 @@ function L(e) {
     className: C
   } = e, {
     channelAction: m,
-    completed: _
-  } = (0, A.useMemberActionsForChannel)(f, h), T = (0, A.useNextMemberAction)(f, null == m ? void 0 : m.channelId), L = (0, o.default)([d.default], () => d.default.useReducedMotion), x = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, R = (0, u.useToken)(u.tokens.colors.WHITE), [y, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [j] = a.useState(new r.default.Value(0));
+    completed: A
+  } = (0, T.useMemberActionsForChannel)(f, h), _ = (0, T.useNextMemberAction)(f, null == m ? void 0 : m.channelId), x = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = (null == m ? void 0 : m.actionType) === S.NewMemberActionTypes.VIEW, y = (0, u.useToken)(u.tokens.colors.WHITE), [R, O] = a.useState(!1), [D] = a.useState(new r.default.Value(0)), [P] = a.useState(new r.default.Value(0));
   a.useEffect(() => {
-    _ ? r.default.timing(D, {
+    A ? r.default.timing(D, {
       toValue: 0,
-      duration: L ? 1 : 350,
+      duration: x ? 1 : 350,
       easing: r.default.Easing.quad,
-      delay: x ? 0 : 500
+      delay: L ? 0 : 500
     }).start(() => O(!0)) : r.default.timing(D, {
       toValue: 1,
-      duration: L ? 1 : 350,
+      duration: x ? 1 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [_, D, x, L]), a.useEffect(() => {
-    _ && y && r.default.timing(j, {
+  }, [A, D, L, x]), a.useEffect(() => {
+    A && R && r.default.timing(P, {
       toValue: 1,
-      duration: L ? 0 : 350,
+      duration: x ? 0 : 350,
       easing: r.default.Easing.quad,
       delay: 400
     }).start()
-  }, [_, j, y, L]);
-  let P = a.useCallback(() => {
-    null != T && (0, g.selectNewMemberActionChannel)(f, T.channelId)
-  }, [f, T]);
-  return null == m || x && !y ? null : (0, s.jsx)("div", {
-    className: i(N.container, C),
-    children: y && null != T ? (0, s.jsx)(r.default.div, {
+  }, [A, P, R, x]);
+  let b = a.useCallback(() => {
+    null != _ && (0, g.selectNewMemberActionChannel)(f, _.channelId)
+  }, [f, _]);
+  return null == m || L && !R ? null : (0, s.jsx)("div", {
+    className: i(I.container, C),
+    children: R && null != _ ? (0, s.jsx)(r.default.div, {
       style: {
-        marginBottom: j.interpolate({
+        marginBottom: P.interpolate({
           inputRange: [0, 1],
           outputRange: [-60, 0]
         })
       },
       children: (0, s.jsxs)(u.Clickable, {
-        className: i(N.banner, N.clickable),
-        onClick: P,
+        className: i(I.banner, I.clickable),
+        onClick: b,
         children: [(0, s.jsx)(v, {
-          channelId: T.channelId,
-          emojiId: null === (t = T.emoji) || void 0 === t ? void 0 : t.id,
-          emojiName: null == T ? void 0 : null === (n = T.emoji) || void 0 === n ? void 0 : n.name
+          channelId: _.channelId,
+          emojiId: null === (t = _.emoji) || void 0 === t ? void 0 : t.id,
+          emojiName: null == _ ? void 0 : null === (n = _.emoji) || void 0 === n ? void 0 : n.name
         }), (0, s.jsxs)("div", {
-          className: N.text,
+          className: I.text,
           children: [(0, s.jsx)(u.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
             children: M.default.Messages.MEMBER_ACTIONS_NEXT_STEP.format({
-              step: T.title
+              step: _.title
             })
-          }), (0, s.jsx)(I, {
-            action: T
+          }), (0, s.jsx)(N, {
+            action: _
           })]
         }), (0, s.jsx)("div", {
-          className: N.iconCircle,
+          className: I.iconCircle,
           children: (0, s.jsx)(p.default, {
             width: 16,
             height: 16,
-            color: R.hex(),
-            className: N.nextIcon
+            color: y.hex(),
+            className: I.nextIcon
           })
         })]
       })
     }) : (0, s.jsxs)(r.default.div, {
-      className: N.banner,
+      className: I.banner,
       style: {
         marginBottom: D.interpolate({
           inputRange: [0, 1],
@@ -148,7 +148,7 @@ function L(e) {
         emojiId: null === (l = m.emoji) || void 0 === l ? void 0 : l.id,
         emojiName: null == m ? void 0 : null === (c = m.emoji) || void 0 === c ? void 0 : c.name
       }), (0, s.jsxs)("div", {
-        className: N.text,
+        className: I.text,
         children: [(0, s.jsx)(u.Text, {
           variant: "text-md/semibold",
           color: "header-primary",
@@ -158,9 +158,9 @@ function L(e) {
           color: "text-muted",
           children: M.default.Messages.MEMBER_ACTION_CHAT
         })]
-      }), _ ? (0, s.jsx)(E.default, {
-        className: N.completed,
-        backgroundColor: R.hex(),
+      }), A ? (0, s.jsx)(E.default, {
+        className: I.completed,
+        backgroundColor: y.hex(),
         width: 20,
         height: 20
       }) : null]
@@ -168,16 +168,16 @@ function L(e) {
   })
 }
 
-function x(e) {
+function L(e) {
   let {
     guildId: t,
     channel: n,
     className: a
-  } = e, l = (0, _.useCanSeeOnboardingHome)(t), i = (0, o.default)([C.default], () => {
+  } = e, l = (0, A.useCanSeeOnboardingHome)(t), i = (0, o.useStateFromStores)([C.default], () => {
     var e;
     return (null === (e = C.default.getSelfMember(t)) || void 0 === e ? void 0 : e.isPending) === !0
-  }), r = (0, A.useAllActionsCompleted)(t);
-  return r || i || !l ? null : (0, s.jsx)(L, {
+  }), r = (0, T.useAllActionsCompleted)(t);
+  return r || i || !l ? null : (0, s.jsx)(x, {
     guildId: t,
     channel: n,
     className: a

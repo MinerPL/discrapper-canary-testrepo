@@ -15,8 +15,8 @@ var s = n("37983"),
   c = n("599110"),
   f = n("49111"),
   h = n("782340"),
-  C = n("578000"),
-  p = n("632215");
+  C = n("609793"),
+  p = n("919163");
 
 function m(e) {
   let {
@@ -25,8 +25,8 @@ function m(e) {
     onCancel: E,
     channel: g,
     analyticsType: S,
-    popoutText: A,
-    animation: _
+    popoutText: T,
+    animation: A
   } = e;
   a.useEffect(() => {
     c.default.track(f.AnalyticEvents.OPEN_POPOUT, {
@@ -34,23 +34,23 @@ function m(e) {
       ...(0, o.collectChannelAnalyticsMetadata)(g)
     })
   }, [S, g]);
-  let T = a.useCallback(() => {
+  let _ = a.useCallback(() => {
       null == m || m(), t()
     }, [m, t]),
     M = a.useCallback(() => {
       null == E || E(), t()
     }, [E, t]),
-    N = a.useRef(null);
+    I = a.useRef(null);
   return a.useEffect(() => {
     let e;
     let t = u.default.theme,
       s = !1;
-    return null != _ && (async () => {
+    return null != A && (async () => {
       let [{
         default: a
-      }, l] = await Promise.all([n.el("245749").then(n.t.bind(n, "245749", 23)), (0, i.isThemeDark)(t) ? _.dark() : _.light()]);
-      !s && (e = a.loadAnimation({
-        container: N.current,
+      }, l] = await Promise.all([n.el("865981").then(n.t.bind(n, "865981", 23)), (0, i.isThemeDark)(t) ? A.dark() : A.light()]);
+      !s && null != I.current && (e = a.loadAnimation({
+        container: I.current,
         renderer: "svg",
         loop: !0,
         autoplay: !0,
@@ -59,16 +59,16 @@ function m(e) {
     })(), () => {
       s = !0, null != e && (e.destroy(), e = void 0)
     }
-  }, [_]), (0, s.jsx)(r.Dialog, {
+  }, [A]), (0, s.jsx)(r.Dialog, {
     "aria-labelledby": "content-warning-popout-label",
     children: (0, s.jsxs)("form", {
       className: C.contentWarningPopout,
-      onSubmit: T,
+      onSubmit: _,
       children: [(0, s.jsxs)("div", {
         className: C.body,
-        children: [null != _ && (0, s.jsx)("div", {
+        children: [null != A && (0, s.jsx)("div", {
           className: C.animation,
-          ref: N
+          ref: I
         }), (0, s.jsxs)("div", {
           className: C.content,
           children: [(0, s.jsx)("div", {
@@ -78,7 +78,7 @@ function m(e) {
             id: "content-warning-popout-label",
             className: p.markup,
             variant: "text-sm/normal",
-            children: A.body
+            children: T.body
           }), (0, s.jsxs)("div", {
             className: C.buttonWrapper,
             children: [(0, s.jsxs)("div", {
@@ -97,7 +97,7 @@ function m(e) {
               className: C.buttonContainer,
               children: [(0, s.jsx)(r.Button, {
                 className: C.button,
-                onClick: T,
+                onClick: _,
                 type: "submit",
                 autoFocus: !0,
                 children: h.default.Messages.EVERYONE_POPOUT_SEND_NOW
@@ -109,14 +109,14 @@ function m(e) {
             })]
           })]
         })]
-      }), null != A.footer && "" !== A.footer ? (0, s.jsxs)("div", {
+      }), null != T.footer && "" !== T.footer ? (0, s.jsxs)("div", {
         className: C.footer,
         children: [(0, s.jsx)(d.default, {
           color: l.default.unsafe_rawColors.PRIMARY_400.css,
           className: C.icon
         }), (0, s.jsx)(r.Text, {
           variant: "text-sm/normal",
-          children: A.footer
+          children: T.footer
         })]
       }) : null]
     })

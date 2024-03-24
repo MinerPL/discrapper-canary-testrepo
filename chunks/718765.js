@@ -13,10 +13,10 @@ var i = l("37983"),
   o = l("599110"),
   d = l("599994"),
   u = l("831109"),
-  p = l("682777"),
-  m = l("412707"),
+  m = l("682777"),
+  p = l("412707"),
   _ = l("49111"),
-  f = l("988865");
+  f = l("319420");
 
 function h(e) {
   let {
@@ -24,10 +24,10 @@ function h(e) {
     className: l,
     countsByCategory: n,
     onView: h
-  } = e, C = (0, m.useApplicationDirectoryHistory)(e => e.guildId), g = (0, r.default)([u.default], () => u.default.getCategories()), I = a.useMemo(() => {
-    let e = [(0, p.getAllCategory)(), ...g];
+  } = e, C = (0, p.useApplicationDirectoryHistory)(e => e.guildId), g = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), I = a.useMemo(() => {
+    let e = [(0, m.getAllCategory)(), ...g];
     return e
-  }, [g]), A = (0, m.getCurrentView)();
+  }, [g]), A = (0, p.getCurrentView)();
   return (0, i.jsx)(c.TabBar, {
     className: s(f.container, l),
     selectedItem: t,
@@ -47,17 +47,17 @@ function h(e) {
       var l;
       let a = e.id,
         r = e.name,
-        o = (0, p.getCategoryIcon)(e),
+        o = (0, m.getCategoryIcon)(e),
         u = s(f.category, {
           [f.activeCategory]: t === a
         }),
-        m = new URLSearchParams;
-      return m.set("category_id", a.toString()), (0, i.jsx)(c.TabBar.Item, {
+        p = new URLSearchParams;
+      return p.set("category_id", a.toString()), (0, i.jsx)(c.TabBar.Item, {
         id: a,
         "aria-label": r,
         disableItemStyles: !0,
         children: (0, i.jsxs)(d.default, {
-          href: "".concat(_.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(m),
+          href: "".concat(_.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(p),
           className: u,
           children: [(0, i.jsx)(o, {
             className: f.icon,

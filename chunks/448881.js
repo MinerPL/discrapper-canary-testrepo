@@ -1,154 +1,274 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   fetchCurrentQuests: function() {
-    return I
+    return d
   },
   sendHeartbeat: function() {
-    return s
+    return c
   },
   enrollInQuest: function() {
-    return T
+    return E
   },
   claimQuestRewardCode: function() {
-    return S
+    return f
   },
   fetchQuestRewardCode: function() {
-    return N
+    return S
+  },
+  dismissQuestContent: function() {
+    return _
+  },
+  dismissProgressTrackingFailureNotice: function() {
+    return T
+  },
+  completeQuestPreview: function() {
+    return p
+  },
+  resetQuestPreviewStatus: function() {
+    return C
+  },
+  resetQuestDismissibilityStatus: function() {
+    return h
+  },
+  optimisticallyUpdateQuestProgress: function() {
+    return A
   }
 });
-var t = E("872717"),
-  o = E("913144"),
-  n = E("599417"),
-  r = E("2973"),
-  a = E("227231"),
-  i = E("49111");
-async function I() {
-  o.default.dispatch({
-    type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
-  });
-  try {
-    let e = await t.default.get({
-        url: i.Endpoints.QUESTS_CURRENT_QUESTS
-      }),
-      _ = e.body.quests.map(e => (0, a.questWithUserStatusFromServer)(e)),
-      E = _.filter(e => {
-        var _;
-        return (null === (_ = e.userStatus) || void 0 === _ ? void 0 : _.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
-      });
-    o.default.dispatch({
-      type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
-      quests: E
-    })
-  } catch (e) {
-    o.default.dispatch({
-      type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE",
-      error: new n.default(e)
-    })
+var s = n("872717"),
+  i = n("913144"),
+  r = n("599417"),
+  a = n("815496"),
+  u = n("2973"),
+  l = n("227231"),
+  o = n("49111");
+async function d() {
+  if (!u.default.isFetchingCurrentQuests) {
+    i.default.dispatch({
+      type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN"
+    });
+    try {
+      let e = await s.HTTP.get({
+          url: o.Endpoints.QUESTS_CURRENT_QUESTS
+        }),
+        t = e.body.quests.map(e => (0, l.questWithUserStatusFromServer)(e)),
+        n = t.filter(e => {
+          var t;
+          return (null === (t = e.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || e.config.rewardCodePlatforms.length > 0
+        });
+      i.default.dispatch({
+        type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS",
+        quests: n
+      })
+    } catch (e) {
+      i.default.dispatch({
+        type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE",
+        error: new r.default(e)
+      })
+    }
   }
 }
-async function s(e) {
+async function c(e) {
   let {
-    questId: _,
-    streamKey: E,
-    applicationId: r
+    questId: t,
+    streamKey: n,
+    terminal: a = !1
   } = e;
   try {
-    let e = await t.default.post({
-      url: i.Endpoints.QUESTS_HEARTBEAT(_),
+    let e = await s.HTTP.post({
+      url: o.Endpoints.QUESTS_HEARTBEAT(t),
       body: {
-        stream_key: E,
-        application_id: r
+        stream_key: n,
+        terminal: a
       }
     });
-    o.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_SEND_HEARTBEAT_SUCCESS",
-      userStatus: (0, a.questUserStatusFromServer)(e.body),
-      applicationId: r,
-      questId: _,
-      streamKey: E
+      userStatus: (0, l.questUserStatusFromServer)(e.body),
+      questId: t,
+      streamKey: n
     })
   } catch (e) {
-    o.default.dispatch({
+    i.default.dispatch({
       type: "QUESTS_SEND_HEARTBEAT_FAILURE",
-      error: new n.default(e),
-      questId: _,
-      streamKey: E
+      error: new r.default(e),
+      questId: t,
+      streamKey: n
     })
   }
 }
-async function T(e) {
-  let _ = r.default.isEnrolling(e);
-  if (!_) {
-    o.default.dispatch({
+async function E(e, t) {
+  null != t.questContentCTA && (0, a.trackQuestContentClicked)(e, t.questContent, t.questContentCTA);
+  let n = u.default.isEnrolling(e);
+  if (!n) {
+    i.default.dispatch({
       type: "QUESTS_ENROLL_BEGIN",
       questId: e
     });
     try {
-      let _ = await t.default.post({
-        url: i.Endpoints.QUESTS_ENROLL(e)
+      let n = await s.HTTP.post({
+        url: o.Endpoints.QUESTS_ENROLL(e),
+        body: {
+          location: t.questContent
+        }
       });
-      o.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_ENROLL_SUCCESS",
-        enrolledQuestUserStatus: (0, a.questUserStatusFromServer)(_.body)
+        enrolledQuestUserStatus: (0, l.questUserStatusFromServer)(n.body)
       })
-    } catch (_) {
-      o.default.dispatch({
+    } catch (t) {
+      i.default.dispatch({
         type: "QUESTS_ENROLL_FAILURE",
         questId: e
       })
     }
   }
 }
-async function S(e, _) {
-  let E = r.default.isClaimingRewardCode(e);
-  if (!E) {
-    o.default.dispatch({
+async function f(e, t, n) {
+  let a = u.default.isClaimingRewardCode(e);
+  if (!a) {
+    i.default.dispatch({
       type: "QUESTS_CLAIM_REWARD_CODE_BEGIN",
       questId: e
     });
     try {
-      let E = await t.default.post({
-        url: i.Endpoints.QUESTS_REWARD_CODE(e),
+      let r = await s.HTTP.post({
+        url: o.Endpoints.QUESTS_REWARD_CODE(e),
         body: {
-          platform: _
+          platform: t,
+          location: n
         }
       });
-      o.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_CLAIM_REWARD_CODE_SUCCESS",
         questId: e,
-        rewardCode: (0, a.questsRewardCodeFromServer)(E.body)
+        rewardCode: (0, l.questsRewardCodeFromServer)(r.body)
       })
-    } catch (_) {
-      throw o.default.dispatch({
+    } catch (t) {
+      throw i.default.dispatch({
         type: "QUESTS_CLAIM_REWARD_CODE_FAILURE",
-        error: new n.default(_),
+        error: new r.default(t),
         questId: e
-      }), _
+      }), t
     }
   }
 }
-async function N(e) {
-  let _ = r.default.isFetchingRewardCode(e);
-  if (!_) {
-    o.default.dispatch({
+async function S(e) {
+  let t = u.default.isFetchingRewardCode(e);
+  if (!t) {
+    i.default.dispatch({
       type: "QUESTS_FETCH_REWARD_CODE_BEGIN",
       questId: e
     });
     try {
-      let _ = await t.default.get({
-        url: i.Endpoints.QUESTS_REWARD_CODE(e)
+      let t = await s.HTTP.get({
+        url: o.Endpoints.QUESTS_REWARD_CODE(e)
       });
-      o.default.dispatch({
+      i.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_SUCCESS",
         questId: e,
-        rewardCode: (0, a.questsRewardCodeFromServer)(_.body)
+        rewardCode: (0, l.questsRewardCodeFromServer)(t.body)
       })
-    } catch (_) {
-      throw o.default.dispatch({
+    } catch (t) {
+      throw i.default.dispatch({
         type: "QUESTS_FETCH_REWARD_CODE_FAILURE",
-        error: new n.default(_),
+        error: new r.default(t),
         questId: e
-      }), _
+      }), t
     }
   }
+}
+async function _(e, t) {
+  let n = u.default.isDismissingContent(e),
+    a = (0, l.isDismissible)(t);
+  if (!n && a) {
+    i.default.dispatch({
+      type: "QUESTS_DISMISS_CONTENT_BEGIN",
+      questId: e,
+      content: t
+    });
+    try {
+      let n = await s.HTTP.post({
+        url: o.Endpoints.QUESTS_DISMISS_CONTENT(e, t),
+        body: {}
+      });
+      i.default.dispatch({
+        type: "QUESTS_DISMISS_CONTENT_SUCCESS",
+        dismissedQuestUserStatus: (0, l.questUserStatusFromServer)(n.body)
+      })
+    } catch (t) {
+      i.default.dispatch({
+        type: "QUESTS_DISMISS_CONTENT_FAILURE",
+        error: new r.default(t),
+        questId: e
+      })
+    }
+  }
+}
+
+function T(e) {
+  i.default.dispatch({
+    type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE",
+    streamKey: e
+  })
+}
+async function p(e) {
+  try {
+    let t = await s.HTTP.post({
+      url: o.Endpoints.QUESTS_PREVIEW_COMPLETE(e),
+      body: {}
+    });
+    i.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+      previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
+    })
+  } catch (t) {
+    i.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+      error: new r.default(t),
+      questId: e
+    })
+  }
+}
+async function C(e) {
+  try {
+    let t = await s.HTTP.del({
+      url: o.Endpoints.QUESTS_PREVIEW_STATUS(e),
+      body: {}
+    });
+    i.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+      previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
+    })
+  } catch (t) {
+    i.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+      error: new r.default(t),
+      questId: e
+    })
+  }
+}
+async function h(e) {
+  try {
+    let t = await s.HTTP.del({
+      url: o.Endpoints.QUESTS_PREVIEW_DISMISSIBILITY(e),
+      body: {}
+    });
+    i.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_SUCCESS",
+      previewQuestUserStatus: (0, l.questUserStatusFromServer)(t.body)
+    })
+  } catch (t) {
+    i.default.dispatch({
+      type: "QUESTS_PREVIEW_UPDATE_FAILURE",
+      error: new r.default(t),
+      questId: e
+    })
+  }
+}
+
+function A(e) {
+  i.default.dispatch({
+    type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
+    userStatus: e
+  })
 }

@@ -1,22 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   getClassificationRelativeIncidentTime: function() {
-    return d
+    return c
   },
   getAttachmentFilename: function() {
-    return c
+    return E
   },
   parseMessageEmbedForProps: function() {
     return f
   },
   isFlaggedContentEmpty: function() {
-    return E
-  },
-  getAppealSignalDisplayText: function() {
     return _
   },
-  capitalizeText: function() {
+  getAppealSignalDisplayText: function() {
     return T
+  },
+  capitalizeText: function() {
+    return I
+  },
+  isGuildClassification: function() {
+    return m
+  },
+  getRequestReviewErrorFromCode: function() {
+    return N
   }
 }), n("808653");
 var s = n("866227"),
@@ -24,16 +30,17 @@ var s = n("866227"),
   a = n("651693"),
   i = n("908539"),
   r = n("170213"),
-  o = n("894488"),
-  u = n("782340");
+  o = n("49111"),
+  u = n("894488"),
+  d = n("782340");
 
-function d(e) {
+function c(e) {
   return l().to(l(e))
 }
 
-function c(e) {
+function E(e) {
   var t, n;
-  return (0, a.isImageFile)(e.filename) ? "".concat(o.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
+  return (0, a.isImageFile)(e.filename) || (0, a.isVideoFile)(e.filename) ? "".concat(u.SPOILER_ATTACHMENT_PREFIX).concat(null !== (t = e.filename) && void 0 !== t ? t : ".png") : null !== (n = e.filename) && void 0 !== n ? n : ""
 }
 
 function f(e) {
@@ -52,17 +59,25 @@ function f(e) {
   }
 }
 
-function E(e) {
+function _(e) {
   if (e.type === i.ContentIdType.MESSAGE) return "" === e.content && 0 === e.attachments.length;
   return !0
 }
-let _ = e => {
+let T = e => {
     let t = {
-      [r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY]: u.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
-      [r.AppealIngestionSignal.TOO_STRICT_UNFAIR]: u.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
-      [r.AppealIngestionSignal.DONT_AGREE_PENALTY]: u.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
-      [r.AppealIngestionSignal.SOMETHING_ELSE]: u.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
+      [r.AppealIngestionSignal.DIDNT_VIOLATE_POLICY]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DIDNT_VIOLATE_POLICY,
+      [r.AppealIngestionSignal.TOO_STRICT_UNFAIR]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_TOO_STRICT_UNFAIR,
+      [r.AppealIngestionSignal.DONT_AGREE_PENALTY]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_DONT_AGREE_PENALTY,
+      [r.AppealIngestionSignal.SOMETHING_ELSE]: d.default.Messages.APPEAL_INGESTION_MODAL_COLLECT_SIGNAL_SOMETHING_ELSE
     };
     return t[e]
   },
-  T = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1))
+  I = e => null == e || 0 === e.length ? "" : 1 === e.length ? e.toUpperCase() : "".concat(e.charAt(0).toUpperCase()).concat(e.slice(1));
+
+function m(e) {
+  return null != e && null != e.guild_metadata
+}
+let N = e => {
+  if (e === o.AbortCodes.DSA_APPEAL_REQUEST_DEFLECTION) return d.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_DEFLECTION_ERROR;
+  return d.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
+}

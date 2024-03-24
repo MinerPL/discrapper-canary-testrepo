@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var a, s = n("44170"),
-  i = n("191225"),
-  l = n("599110"),
+  l = n("191225"),
+  i = n("599110"),
   r = n("659500"),
   o = n("718517"),
   u = n("861309"),
@@ -14,32 +14,33 @@ var a, s = n("44170"),
   c = n("49111");
 let f = 10 * o.default.Millis.SECOND,
   E = new Map,
-  _ = new Set,
-  h = (e, t, n) => {
+  h = new Set,
+  _ = (e, t, n) => {
     n([d.default.CLOSE, t], e)
   };
 a = class extends s.EventEmitter {
   routeEvent(e, t, n, a) {
-    if (!Array.isArray(n)) throw new u.default({
-      closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
-    }, "Protocol error");
-    let [s, i] = n;
+    if (!Array.isArray(n)) {
+      console.warn("[PostMessageTransport] Protocol error: event data should be an Array!");
+      return
+    }
+    let [s, l] = n;
     switch (s) {
       case d.default.HANDSHAKE:
         if (null != e) throw new u.default({
           closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, "Already connected");
-        return this.handleHandshake(t, i, a);
+        return this.handleHandshake(t, l, a);
       case d.default.FRAME:
         if (null == e) throw new u.default({
           closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, "Not connected");
-        return this.handleFrame(t, e, i);
+        return this.handleFrame(t, e, l);
       case d.default.CLOSE:
         if (null == e) throw new u.default({
           closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, "Not connected");
-        return this.handleClose(e, i);
+        return this.handleClose(e, l);
       default:
         throw new u.default({
           closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
@@ -52,19 +53,19 @@ a = class extends s.EventEmitter {
       var n, a;
       let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
       o.emit("disconnect", e, s ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : "Unknown");
-      let [i] = null !== (a = Array.from(E.entries()).find(t => {
+      let [l] = null !== (a = Array.from(E.entries()).find(t => {
         let [n, a] = t;
         return a === e
       })) && void 0 !== a ? a : [null, null];
-      null != i && E.delete(i)
+      null != l && E.delete(l)
     }, this.handleIFrameMount = e => {
       let {
         id: t
       } = e;
-      _.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
-        Array.from(i.default.getSelfEmbeddedActivities().entries()).forEach(e => {
+      h.add(t), this.handshakeFailureTimeoutId = setTimeout(() => {
+        Array.from(l.default.getSelfEmbeddedActivities().entries()).forEach(e => {
           let [t, n] = e;
-          l.default.track(c.AnalyticEvents.ACTIVITY_HANDSHAKE_TIMED_OUT, {
+          i.default.track(c.AnalyticEvents.ACTIVITY_HANDSHAKE_TIMED_OUT, {
             application_id: t,
             channel_id: n.channelId,
             guild_id: n.guildId,
@@ -77,7 +78,7 @@ a = class extends s.EventEmitter {
       let {
         id: n
       } = e;
-      _.delete(n);
+      h.delete(n);
       let [a, s] = null !== (t = Array.from(E.entries()).find(e => {
         let [t, a] = e;
         return a.frameId === n
@@ -95,7 +96,7 @@ a = class extends s.EventEmitter {
         null != a ? this.disconnectSocket(a, {
           code: e.code,
           message: e.message
-        }, !0) : h(t, {
+        }, !0) : _(t, {
           code: e.code,
           message: e.message
         }, n)
@@ -117,33 +118,33 @@ a = class extends s.EventEmitter {
     }, this.handleHandshake = async (e, t, a) => {
       let s;
       null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
-      let i = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
+      let l = (await n.el("990599").then(n.t.bind(n, "990599", 23))).default;
       try {
-        i.assert(t, i.object().required().keys({
-          v: i.number().min(1).max(1).required(),
-          encoding: i.string().equal("json").optional(),
-          client_id: i.string().required(),
-          frame_id: i.string().required()
+        l.assert(t, l.object().required().keys({
+          v: l.number().min(1).max(1).required(),
+          encoding: l.string().equal("json").optional(),
+          client_id: l.string().required(),
+          frame_id: l.string().required()
         }))
       } catch (e) {
         throw new u.default({
           closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
         }, e.message)
       }
-      let l = t.frame_id,
-        r = !_.has(l);
-      if (r) throw this.logger.error("Unrecognized frame ID ".concat(l)), new u.default({
+      let i = t.frame_id,
+        r = !h.has(i);
+      if (r) throw this.logger.error("Unrecognized frame ID ".concat(i)), new u.default({
         closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
-      }, "Unrecognized frame ID ".concat(l));
+      }, "Unrecognized frame ID ".concat(i));
       try {
         var o;
         s = this.createPostMessageProxySocket({
           origin: e,
           postMessageToRPCClient: a,
-          frameId: l,
+          frameId: i,
           version: Number(t.v),
           logger: this.logger,
-          postClose: h,
+          postClose: _,
           encoding: null !== (o = t.encoding) && void 0 !== o ? o : "json"
         })
       } catch (e) {
@@ -151,10 +152,10 @@ a = class extends s.EventEmitter {
       }
       this.logger.info("Socket Opened: ".concat(s.id));
       try {
-        if (await this.validateSocketClient(s, e, t.client_id), !_.has(l)) throw this.logger.error("Frame ID ".concat(l, " no longer exists")), new u.default({
+        if (await this.validateSocketClient(s, e, t.client_id), !h.has(i)) throw this.logger.error("Frame ID ".concat(i, " no longer exists")), new u.default({
           closeCode: c.RPCCloseCodes.CLOSE_UNSUPPORTED
-        }, "Unrecognized frame ID ".concat(l));
-        E.set(e, s), _.delete(l), this.emit("connect", s), this.logger.info("Socket Validated: ".concat(s.id))
+        }, "Unrecognized frame ID ".concat(i));
+        E.set(e, s), h.delete(i), this.emit("connect", s), this.logger.info("Socket Validated: ".concat(s.id))
       } catch (e) {
         throw this.logger.info("Socket Closed: ".concat(s.id, ", ").concat(e.message)), e
       }

@@ -1,7 +1,7 @@
 "use strict";
 a.r(n), a.d(n, {
   default: function() {
-    return N
+    return M
   }
 });
 var i = a("37983");
@@ -19,81 +19,80 @@ var t = a("414456"),
   C = a("181108"),
   T = a("719923"),
   f = a("153160"),
-  P = a("78345"),
-  S = a("154889"),
-  h = a("646718"),
-  p = a("782340"),
-  M = a("9180");
+  P = a("154889"),
+  S = a("646718"),
+  h = a("782340"),
+  p = a("93747");
 let A = e => {
   let {
     isTier0: n,
     discountAmount: a
   } = e;
   return (0, i.jsx)("div", {
-    className: M.trialBadgeContainer,
+    className: p.trialBadgeContainer,
     children: (0, i.jsx)(u.Text, {
       variant: "text-xs/bold",
-      className: r(M.trialOfferText, {
-        [M.tier0TrialOffer]: n
+      className: r(p.trialOfferText, {
+        [p.tier0TrialOffer]: n
       }),
-      children: void 0 !== a ? p.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
+      children: void 0 !== a ? h.default.Messages.PREMIUM_DISCOUNT_AMOUNT_OFF_BADGE.format({
         percent: a
-      }) : p.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT
+      }) : h.default.Messages.BILLING_TRIAL_FREE_TRIAL_TEXT
     })
   })
 };
-var N = function(e) {
+var M = function(e) {
   var n;
   let a;
   let {
     hideCloseButton: t = !1,
-    hideCloseOnFullScreen: N,
-    shouldShowPrice: E,
-    plan: x,
-    renderAnimation: I,
-    onClose: R,
-    isGift: _,
-    upgradeToPremiumType: y,
-    headerTheme: g = P.PremiumHeaderThemes.DEFAULT,
-    className: j,
-    showTrialBadge: H = !1,
+    hideCloseOnFullScreen: M,
+    shouldShowPrice: N,
+    plan: E,
+    renderAnimation: x,
+    onClose: I,
+    isGift: R,
+    upgradeToPremiumType: _,
+    headerTheme: y = S.PremiumHeaderThemes.DEFAULT,
+    className: g,
+    showTrialBadge: j = !1,
     showDiscountBadge: v = !1
-  } = e, F = y === h.PremiumTypes.TIER_2;
-  a = y === h.PremiumTypes.TIER_0 ? o.default : y === h.PremiumTypes.TIER_1 ? d.default : c.default;
-  let O = (0, s.useStateFromStores)([m.default], () => m.default.useReducedMotion),
-    B = (0, S.usePremiumDiscountOffer)(),
-    w = null == B ? void 0 : null === (n = B.discount) || void 0 === n ? void 0 : n.amount;
+  } = e, H = _ === S.PremiumTypes.TIER_2;
+  a = _ === S.PremiumTypes.TIER_0 ? o.default : _ === S.PremiumTypes.TIER_1 ? d.default : c.default;
+  let F = (0, s.useStateFromStores)([m.default], () => m.default.useReducedMotion),
+    O = (0, P.usePremiumDiscountOffer)(),
+    B = null == O ? void 0 : null === (n = O.discount) || void 0 === n ? void 0 : n.amount;
   return (0, i.jsxs)("div", {
     "aria-hidden": !0,
     className: r({
-      [M.headerBackground]: !F,
-      [g === P.PremiumHeaderThemes.WINTER ? M.tier2HeaderBackgroundWinterTheme : M.tier2HeaderBackground]: F
-    }, j),
-    children: [O || g !== P.PremiumHeaderThemes.WINTER ? null : (0, i.jsx)(C.default, {
-      className: M.snow,
+      [p.headerBackground]: !H,
+      [y === S.PremiumHeaderThemes.WINTER ? p.tier2HeaderBackgroundWinterTheme : p.tier2HeaderBackground]: H
+    }, g),
+    children: [F || y !== S.PremiumHeaderThemes.WINTER ? null : (0, i.jsx)(C.default, {
+      className: p.snow,
       wind: 5
-    }), (H || v) && (0, i.jsx)(L.default, {
-      className: M.trialBadgeSparkles
-    }), I(), (0, i.jsxs)(l.default, {
+    }), (j || v) && (0, i.jsx)(L.default, {
+      className: p.trialBadgeSparkles
+    }), x(), (0, i.jsxs)(l.default, {
       align: l.default.Align.START,
       justify: l.default.Justify.BETWEEN,
-      className: M.headerTop,
+      className: p.headerTop,
       children: [(0, i.jsxs)("div", {
         children: [(0, i.jsx)(a, {
-          className: r(M.headerIcon, {
-            [M.nonTier2]: !F
+          className: r(p.headerIcon, {
+            [p.nonTier2]: !H
           })
-        }), (H || v) && (0, i.jsx)(A, {
-          isTier0: y === h.PremiumTypes.TIER_0,
-          discountAmount: v ? w : void 0
+        }), (j || v) && (0, i.jsx)(A, {
+          isTier0: _ === S.PremiumTypes.TIER_0,
+          discountAmount: v ? B : void 0
         })]
       }), !t && (0, i.jsx)(u.ModalCloseButton, {
-        hideOnFullscreen: N,
-        onClick: R,
-        className: M.closeButton
+        hideOnFullscreen: M,
+        onClick: I,
+        className: p.closeButton
       })]
-    }), E && null != x ? (0, i.jsx)("div", {
-      className: M.price,
+    }), N && null != E ? (0, i.jsx)("div", {
+      className: p.price,
       children: function(e, n) {
         let a = T.default.getDefaultPrice(e),
           {
@@ -102,16 +101,16 @@ var N = function(e) {
           t = (0, f.formatPrice)(a.amount, a.currency);
         if (n) return t;
         switch (i) {
-          case h.SubscriptionIntervalTypes.MONTH:
-            return p.default.Messages.BILLING_PRICE_PER_MONTH.format({
+          case S.SubscriptionIntervalTypes.MONTH:
+            return h.default.Messages.BILLING_PRICE_PER_MONTH.format({
               price: t
             });
-          case h.SubscriptionIntervalTypes.YEAR:
-            return p.default.Messages.BILLING_PRICE_PER_YEAR.format({
+          case S.SubscriptionIntervalTypes.YEAR:
+            return h.default.Messages.BILLING_PRICE_PER_YEAR.format({
               price: t
             })
         }
-      }(x, _)
+      }(E, R)
     }) : null]
   })
 }

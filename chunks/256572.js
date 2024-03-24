@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return R
+    return O
   }
 }), n("222007"), n("424973");
 var i, s, r = n("693566"),
@@ -14,15 +14,15 @@ var i, s, r = n("693566"),
   u = n("447435"),
   d = n("560208"),
   c = n("692038"),
-  f = n("42203"),
-  _ = n("377253"),
-  h = n("49111");
+  _ = n("42203"),
+  f = n("377253"),
+  E = n("49111");
 (s = i || (i = {}))[s.LOADED = 0] = "LOADED", s[s.NOT_LOADED = 1] = "NOT_LOADED", s[s.DELETED = 2] = "DELETED";
-let g = Object.freeze({
+let h = Object.freeze({
     state: 1
   }),
-  m = new Set;
-class E {
+  g = new Set;
+class m {
   handleCacheDisposed(e, t) {
     this._cachedMessageIds.has(e) && (this._cachedMessageIds = new Set(this._cachedMessageIds), this._cachedMessageIds.delete(e))
   }
@@ -56,7 +56,7 @@ let p = new class e {
   }
   set(e, t, n) {
     let i = this._channelCaches.get(e);
-    null == i && (i = new E, this._channelCaches.set(e, i)), i.set(t, n)
+    null == i && (i = new m, this._channelCaches.set(e, i)), i.set(t, n)
   }
   updateExistingMessageIfCached(e) {
     let t = this._channelCaches.get(e.channel_id);
@@ -86,9 +86,9 @@ let p = new class e {
   }
 };
 
-function v(e) {
+function S(e) {
   let t = !1;
-  if (p.updateExistingMessageIfCached(e) && (t = !0), h.MessageTypesWithLazyLoadedReferences.has(e.type)) {
+  if (p.updateExistingMessageIfCached(e) && (t = !0), E.MessageTypesWithLazyLoadedReferences.has(e.type)) {
     let n = e.message_reference;
     if (null == n) return t;
     let i = n.message_id;
@@ -98,35 +98,42 @@ function v(e) {
       null != t ? (p.set(t.channel_id, t.id, {
         state: 0,
         message: (0, c.createMessageRecord)(t)
-      }), e.type === h.MessageTypes.THREAD_STARTER_MESSAGE && v(t)) : p.set(e.channel_id, i, {
+      }), e.type === E.MessageTypes.THREAD_STARTER_MESSAGE && S(t)) : p.set(e.channel_id, i, {
         state: 2
       })
     } else {
-      let e = _.default.getMessage(n.channel_id, i);
+      let e = f.default.getMessage(n.channel_id, i);
       null != e ? p.set(n.channel_id, i, {
         state: 0,
         message: e
-      }) : p.set(n.channel_id, i, g)
+      }) : p.set(n.channel_id, i, h)
     }
     t = !0
   }
   return t
 }
 
-function S(e, t) {
+function T(e, t) {
   let n = !1;
   for (let i of e) n = !1 !== t(i) || n;
   return n
 }
 
-function T(e) {
+function v(e) {
   let {
     messages: t
   } = e;
-  return S(t, e => v(e))
+  return T(t, e => S(e))
 }
 
 function I(e) {
+  let {
+    messages: t
+  } = e;
+  return T(t, e => T(e, e => S(e)))
+}
+
+function A(e) {
   return p.deleteChannelCache(e.channel.id)
 }
 
@@ -137,58 +144,54 @@ function C(e, t) {
   })
 }
 
-function A() {
+function y() {
   p.clear()
 }
 
-function y(e) {
+function N(e) {
   let {
     firstMessages: t
   } = e;
-  return null != t && S(t, e => v(e))
+  return null != t && T(t, e => S(e))
 }
-class N extends o.default.Store {
+class R extends o.default.Store {
   initialize() {
-    this.waitFor(_.default, f.default)
+    this.waitFor(f.default, _.default)
   }
   getMessageByReference(e) {
     let t;
-    return null != e && (t = p.get(e.channel_id, e.message_id)), null != t ? t : g
+    return null != e && (t = p.get(e.channel_id, e.message_id)), null != t ? t : h
   }
   getMessage(e, t) {
     var n;
-    return null !== (n = p.get(e, t)) && void 0 !== n ? n : g
+    return null !== (n = p.get(e, t)) && void 0 !== n ? n : h
   }
   getReplyIdsForChannel(e) {
     let t;
-    return null != e && (t = p.getCachedMessageIdsForChannel(e)), null != t ? t : m
+    return null != e && (t = p.getCachedMessageIdsForChannel(e)), null != t ? t : g
   }
 }
-N.displayName = "ReferencedMessageStore";
-var R = new N(l.default, {
+R.displayName = "ReferencedMessageStore";
+var O = new R(l.default, {
   CACHE_LOADED: function(e) {
     let {
       messages: t
     } = e;
-    return S(Object.values(t), e => S(Object.values(e), e => v(e)))
+    return T(Object.values(t), e => T(Object.values(e), e => S(e)))
   },
-  LOCAL_MESSAGES_LOADED: T,
-  LOAD_MESSAGES_SUCCESS: T,
-  LOAD_MESSAGES_AROUND_SUCCESS: T,
-  SEARCH_FINISH: function(e) {
-    let {
-      messages: t
-    } = e;
-    return S(t, e => S(e, e => v(e)))
-  },
+  LOCAL_MESSAGES_LOADED: v,
+  LOAD_MESSAGES_SUCCESS: v,
+  LOAD_MESSAGES_AROUND_SUCCESS: v,
+  SEARCH_FINISH: I,
+  MOD_VIEW_SEARCH_FINISH: I,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
     } = e, n = (0, d.getMessagesFromGuildFeedFetch)(t);
-    return S(n, e => v(e))
+    return T(n, e => S(e))
   },
-  LOAD_THREADS_SUCCESS: y,
-  LOAD_ARCHIVED_THREADS_SUCCESS: y,
+  LOAD_THREADS_SUCCESS: N,
+  LOAD_ARCHIVED_THREADS_SUCCESS: N,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
       messageId: t,
@@ -206,18 +209,18 @@ var R = new N(l.default, {
     let {
       threads: t
     } = e;
-    return S(Object.values(t), e => {
+    return T(Object.values(t), e => {
       let {
         first_message: t
       } = e;
-      return null != t && v(t)
+      return null != t && S(t)
     })
   },
   MESSAGE_CREATE: function(e) {
     let {
       message: t
     } = e;
-    return !!_.default.getMessages(t.channel_id).ready && v(t)
+    return !!f.default.getMessages(t.channel_id).ready && S(t)
   },
   MESSAGE_UPDATE: function(e) {
     let {
@@ -243,7 +246,7 @@ var R = new N(l.default, {
       ids: t,
       channelId: n
     } = e;
-    return S(t, e => C(n, e))
+    return T(t, e => C(n, e))
   },
   CREATE_PENDING_REPLY: function(e) {
     let {
@@ -254,12 +257,12 @@ var R = new N(l.default, {
       message: t
     })
   },
-  CHANNEL_DELETE: I,
-  THREAD_DELETE: I,
+  CHANNEL_DELETE: A,
+  THREAD_DELETE: A,
   GUILD_DELETE: function() {
-    let e = p.retainWhere(e => null != f.default.getChannel(e));
+    let e = p.retainWhere(e => null != _.default.getChannel(e));
     if (0 === e) return !1
   },
-  CONNECTION_OPEN: A,
-  LOGOUT: A
+  CONNECTION_OPEN: y,
+  LOGOUT: y
 })

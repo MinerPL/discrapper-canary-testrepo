@@ -1,22 +1,19 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return u
   }
 });
-var n = l("446674"),
-  a = l("888355"),
-  s = l("267567"),
-  i = l("845579"),
-  r = l("271938"),
-  o = l("26989"),
-  u = l("27618"),
-  d = l("680894");
+var i = n("446674"),
+  l = n("267567"),
+  a = n("845579"),
+  s = n("271938"),
+  r = n("26989"),
+  o = n("27618");
 
-function c(e, t) {
-  let l = (0, n.useStateFromStores)([r.default], () => r.default.getId() === e),
-    c = (0, n.useStateFromStores)([s.default], () => null != t && s.default.isLurking(t)),
-    f = i.RestrictedGuildIds.useSetting(),
-    m = (0, a.useIsDMsToClydeEnabled)() && e === d.CLYDE_AI_USER_ID;
-  return (0, n.useStateFromStores)([u.default, o.default], () => !l && !c && (u.default.isFriend(e) || null != o.default.memberOf(e).find(e => !f.includes(e))) || m)
+function u(e, t) {
+  let n = (0, i.useStateFromStores)([s.default], () => s.default.getId() === e),
+    u = (0, i.useStateFromStores)([l.default], () => null != t && l.default.isLurking(t)),
+    d = a.RestrictedGuildIds.useSetting();
+  return (0, i.useStateFromStores)([o.default, r.default], () => !n && !u && (o.default.isFriend(e) || null != r.default.memberOf(e).find(e => !d.includes(e))))
 }

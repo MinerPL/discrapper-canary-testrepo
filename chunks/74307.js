@@ -5,27 +5,31 @@ n.r(t), n.d(t, {
   }
 }), n("424973");
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("748820"),
   l = n("718776"),
   u = n("516826"),
-  c = n("741662"),
-  d = n("324584"),
+  d = n("741662"),
+  c = n("577776"),
+  _ = n("324584"),
   f = n("782340"),
-  E = n("253469"),
-  h = n("905518"),
-  p = n("862839");
-let _ = (0, o.v4)(),
-  S = (0, o.v4)(),
-  m = (0, o.v4)();
-class T extends r.Component {
+  E = n("430594"),
+  h = n("182893"),
+  g = n("356410");
+let m = (0, o.v4)(),
+  p = (0, o.v4)(),
+  S = (0, o.v4)();
+class T extends s.Component {
   getPaddingRight() {
     let {
-      maxLength: e
+      maxLength: e,
+      showCharacterCountFullPadding: t
     } = this.props;
-    return null == e ? 10 : 7.23 * "".concat(e).length + 10
+    if (null == e) return 10;
+    let n = "".concat(e).length;
+    return t && (n += "".concat(e, " / ").length), 7.23 * n + 10
   }
   getCharsLeftLength() {
     let {
@@ -87,15 +91,17 @@ class T extends r.Component {
       minLength: n
     } = this.props, i = this.getIsOverflowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
       maxLength: t
-    }) : null, r = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+    }) : null, s = this.getIsUnderflowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
       minLength: n
     }) : null;
-    return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : r
+    return null != e && e.length < 1 || null === e ? null : void 0 !== e ? e : !1 === this.state.dirty ? null : null != i ? i : s
   }
   renderErrorMessage() {
     let e = this.getErrorMessage();
-    return null == e ? null : (0, i.jsx)("div", {
-      id: _,
+    return null == e ? null : (0, i.jsx)(c.Text, {
+      id: m,
+      variant: "text-xs/normal",
+      color: "text-danger",
       className: E.errorMessage,
       children: e
     })
@@ -104,71 +110,71 @@ class T extends r.Component {
     var e, t;
     let {
       disabled: n,
-      value: r,
-      placeholder: s,
+      value: s,
+      placeholder: r,
       autoFocus: o,
       minLength: u,
-      maxLength: _,
-      allowOverflow: T,
-      spellCheck: g,
-      resizeable: I,
-      className: C,
-      id: v,
-      rows: A,
-      flex: R,
+      maxLength: c,
+      allowOverflow: m,
+      spellCheck: T,
+      resizeable: v,
+      className: I,
+      id: A,
+      rows: C,
+      flex: y,
       autosize: N,
-      required: O,
-      onInvalid: D,
-      inputRef: y
-    } = this.props, P = N ? d.TextAreaAutosize : "textarea", L = this.hasError(), b = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, M = this.getAriaDescribedBy();
+      required: R,
+      onInvalid: O,
+      inputRef: D
+    } = this.props, P = N ? _.TextAreaAutosize : "textarea", L = this.hasError(), M = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, b = this.getAriaDescribedBy();
     return (0, i.jsxs)("div", {
       className: a(h.inputWrapper, {
-        [E.flex]: R
+        [E.flex]: y
       }),
       children: [(0, i.jsxs)("div", {
         className: a(E.inputMaxLength, {
-          [E.flex]: R
+          [E.flex]: y
         }),
         children: [(0, i.jsx)(l.FocusRing, {
           children: (0, i.jsx)(P, {
             type: "text",
-            className: a(h.inputDefault, E.textArea, p.scrollbarDefault, C, {
+            className: a(h.inputDefault, E.textArea, g.scrollbarDefault, I, {
               [h.error]: L,
               [h.disabled]: n,
-              [E.resizeable]: I
+              [E.resizeable]: v
             }),
-            "aria-labelledby": b,
-            "aria-describedby": M,
+            "aria-labelledby": M,
+            "aria-describedby": b,
             "aria-invalid": L,
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: v,
+            id: A,
             disabled: n,
-            placeholder: s,
-            value: r,
+            placeholder: r,
+            value: s,
             autoFocus: o,
             minLength: u,
-            maxLength: T ? void 0 : _,
-            spellCheck: g,
-            required: O,
+            maxLength: m ? void 0 : c,
+            spellCheck: T,
+            required: R,
             onChange: this.onChange,
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
-            onInvalid: D,
-            rows: A,
-            ref: y
+            onInvalid: O,
+            rows: C,
+            ref: D
           })
-        }), null != u && (0, i.jsx)(c.HiddenVisually, {
-          id: S,
+        }), null != u && (0, i.jsx)(d.HiddenVisually, {
+          id: p,
           children: f.default.Messages.MINIMUM_LENGTH.format({
             minLength: u
           })
-        }), null != _ && (0, i.jsx)(c.HiddenVisually, {
-          id: m,
+        }), null != c && (0, i.jsx)(d.HiddenVisually, {
+          id: S,
           children: f.default.Messages.MAXIMUM_LENGTH.format({
-            maxLength: _
+            maxLength: c
           })
         }), this.renderCharacterCount(), this.renderMaxLength()]
       }), this.renderErrorMessage()]
@@ -182,8 +188,8 @@ class T extends r.Component {
         maxLength: t,
         minLength: n,
         error: i
-      } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(i) : (null != t && r.push(m), null != n && r.push(S)), r.length > 0 ? r.join(" ") : void 0
+      } = this.props, s = [], r = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+      return null != r && s.push(r), null != i ? s.push(m) : (null != t && s.push(S), null != n && s.push(p)), s.length > 0 ? s.join(" ") : void 0
     }, this.onChange = e => {
       let {
         onChange: t,

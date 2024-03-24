@@ -9,7 +9,7 @@ var a = s("872717"),
   l = s("49111"),
   i = {
     fetch() {
-      a.default.get({
+      a.HTTP.get({
         url: l.Endpoints.OAUTH2_TOKENS,
         oldFormErrors: !0
       }).then(e => n.default.dispatch({
@@ -21,7 +21,7 @@ var a = s("872717"),
       }))
     },
     delete(e) {
-      a.default.delete({
+      a.HTTP.del({
         url: l.Endpoints.OAUTH2_TOKEN(e),
         oldFormErrors: !0
       }).then(() => {

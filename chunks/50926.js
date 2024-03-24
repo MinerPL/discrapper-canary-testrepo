@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var i = n("872717"),
@@ -13,12 +13,12 @@ var i = n("872717"),
   u = n("337543"),
   d = n("697218"),
   c = n("49111");
-let f = async (e, t) => {
+let _ = async (e, t) => {
   let n = null != t ? t : u.default.getInviteKeyForGuildId(e),
     r = d.default.getCurrentUser(),
     a = !l.default.isMember(e, null == r ? void 0 : r.id);
   try {
-    let t = await i.default.get({
+    let t = await i.HTTP.get({
       url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       query: {
         with_guild: a,
@@ -46,8 +46,8 @@ let f = async (e, t) => {
       guildId: e
     })
   }
-}, _ = async (e, t) => {
-  let n = await i.default.patch({
+}, f = async (e, t) => {
+  let n = await i.HTTP.patch({
       url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       body: {
         form_fields: t
@@ -66,8 +66,8 @@ let f = async (e, t) => {
       formFields: r.form_fields
     }
   })
-}, h = async (e, t) => {
-  let n = await i.default.patch({
+}, E = async (e, t) => {
+  let n = await i.HTTP.patch({
       url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
       body: {
         description: t
@@ -86,15 +86,15 @@ let f = async (e, t) => {
       formFields: r.form_fields
     }
   })
-}, g = async (e, t) => {
-  await i.default.patch({
+}, h = async (e, t) => {
+  await i.HTTP.patch({
     url: c.Endpoints.GUILD_MEMBER_VERIFICATION(e),
     body: {
       enabled: t
     },
     oldFormErrors: !0
   })
-}, m = async (e, t) => {
+}, g = async (e, t) => {
   if (a.default.isFullServerPreview(e)) {
     (0, r.updateImpersonatedData)(e, {
       memberOptions: {
@@ -104,7 +104,7 @@ let f = async (e, t) => {
     return
   }
   try {
-    let n = await i.default.put({
+    let n = await i.HTTP.put({
         url: c.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e),
         body: {
           version: t.version,
@@ -123,10 +123,10 @@ let f = async (e, t) => {
     throw e
   }
 };
-var E = {
-  fetchVerificationForm: f,
-  updateVerificationForm: _,
-  updateVerificationFormDescription: h,
-  enableVerificationForm: g,
-  submitVerificationForm: m
+var m = {
+  fetchVerificationForm: _,
+  updateVerificationForm: f,
+  updateVerificationFormDescription: E,
+  enableVerificationForm: h,
+  submitVerificationForm: g
 }

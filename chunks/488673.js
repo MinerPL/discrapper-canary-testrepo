@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return T
+    return _
   }
 }), a("222007");
-var n = a("37983"),
-  l = a("884691"),
-  i = a("414456"),
-  r = a.n(i),
+var l = a("37983"),
+  n = a("884691"),
+  r = a("414456"),
+  i = a.n(r),
   s = a("551042"),
   u = a("77078"),
   o = a("272030"),
@@ -16,57 +16,60 @@ var n = a("37983"),
   f = a("42203"),
   m = a("305961"),
   v = a("957255"),
-  E = a("697218"),
-  p = a("433487"),
-  h = a("299039"),
+  p = a("697218"),
+  h = a("433487"),
+  x = a("299039"),
   C = a("803725"),
-  N = a("142485"),
-  x = a("643290"),
-  S = a("431734"),
+  g = a("142485"),
+  E = a("643290"),
+  N = a("431734"),
+  L = a("141210"),
   I = a("80028"),
-  g = a("846325"),
-  _ = a("782340"),
-  L = a("515597"),
-  M = a("446825").Buffer;
+  M = a("846325"),
+  j = a("782340"),
+  T = a("309799"),
+  S = a("446825").Buffer;
 
-function T(e) {
+function _(e) {
   let {
     clip: t,
-    cropData: i,
-    channelId: T,
-    clipName: A,
-    voiceAudioEnabled: R,
-    applicationAudioEnabled: j,
+    channelId: r,
+    clipName: _,
     onSetClipName: b,
-    onChangeVoiceAudioEnabled: P,
-    onChangeApplicationAudioEnabled: w,
-    onPrompt: D,
-    onClose: y
-  } = e, [O, k] = l.useState(null), {
-    onShareClick: F
-  } = (0, N.default)({
-    channelId: T,
-    setExporting: e => k(null != e ? "share" : null)
+    onClose: w
+  } = e, {
+    videoPlayerRef: R,
+    cropData: A,
+    voiceAudioEnabled: y,
+    setVoiceAudioEnabled: k,
+    applicationAudioEnabled: D,
+    setApplicationAudioEnabled: P
+  } = (0, L.useEditModalContext)(), [O, F] = n.useState(null), {
+    onShareClick: B
+  } = (0, g.default)({
+    channelId: r,
+    setExporting: e => F(null != e ? "share" : null)
   });
-  async function G() {
-    let e = f.default.getChannel(T);
-    k("export"), D(!0);
+  async function U() {
+    var e;
+    let n = f.default.getChannel(r);
+    F("export"), null === (e = R.current) || void 0 === e || e.pause();
     try {
-      let l = await (0, C.exportClip)(t, {
-        ...i,
-        applicationAudio: j,
-        voiceAudio: R
+      let e = await (0, C.exportClip)(t, {
+        ...A,
+        applicationAudio: D,
+        voiceAudio: y
       });
       (0, u.openModalLazy)(async () => {
         let {
-          default: i
-        } = await a.el("823749").then(a.bind(a, "823749")), r = (null == e ? void 0 : e.guild_id) != null ? m.default.getGuild(e.guild_id) : null, s = null != r && (0, c.getManageResourcePermissions)(r, v.default, E.default).canCreateExpressions, u = null == A || "" === A ? (0, I.CLIP_NAME_TEMPLATE)(h.default.extractTimestamp(t.id)) : A, o = u.slice(0, g.MAX_LENGTH_SOUND_NAME);
-        return t => (0, n.jsx)(i, {
+          default: r
+        } = await a.el("823749").then(a.bind(a, "823749")), i = (null == n ? void 0 : n.guild_id) != null ? m.default.getGuild(n.guild_id) : null, s = null != i && (0, c.getManageResourcePermissions)(i, v.default, p.default).canCreateExpressions, u = null == _ || "" === _ ? (0, I.CLIP_NAME_TEMPLATE)(x.default.extractTimestamp(t.id)) : _, o = u.slice(0, M.MAX_LENGTH_SOUND_NAME);
+        return t => (0, l.jsx)(r, {
           ...t,
           showGuildPicker: !0,
-          guildId: s ? null == e ? void 0 : e.guild_id : void 0,
+          guildId: s ? null == n ? void 0 : n.guild_id : void 0,
           sourceFile: {
-            file: new File([l], "".concat(u, ".mp4"), {
+            file: new File([e], "".concat(u, ".mp4"), {
               type: "video/mp4"
             }),
             name: o
@@ -74,114 +77,116 @@ function T(e) {
         })
       })
     } catch (e) {} finally {
-      k(null), D(!1)
+      F(null)
     }
   }
-  async function U() {
-    k("export"), D(!0);
+  async function H() {
+    var e;
+    F("export"), null === (e = R.current) || void 0 === e || e.pause();
     try {
       let e = await (0, C.exportClip)(t, {
-          ...i,
-          applicationAudio: j,
-          voiceAudio: R
+          ...A,
+          applicationAudio: D,
+          voiceAudio: y
         }),
         a = await e.arrayBuffer();
-      await d.default.fileManager.saveWithDialog(M.from(a), (0, I.CLIPS_EXPORT_FILENAME)(t.id))
+      await d.default.fileManager.saveWithDialog(S.from(a), (0, I.CLIPS_EXPORT_FILENAME)(t.id))
     } catch (e) {} finally {
-      k(null), D(!1)
+      F(null)
     }
   }
 
-  function B() {
-    D(!0), (0, u.openModalLazy)(async () => {
+  function z() {
+    var e;
+    null === (e = R.current) || void 0 === e || e.pause(), (0, u.openModalLazy)(async () => {
       let {
         default: e
       } = await a.el("386092").then(a.bind(a, "386092"));
-      return a => (0, n.jsx)(e, {
+      return a => (0, l.jsx)(e, {
         clip: t,
         ...a,
         onClose: async () => {
-          await a.onClose(), D(!1)
+          await a.onClose()
         },
         onAfterDelete: async () => {
-          await a.onClose(), y(), D(!1)
+          await a.onClose(), w()
         }
       })
     })
   }
-  return (0, n.jsxs)("div", {
-    className: L.clipForm,
-    children: [(0, n.jsxs)("div", {
-      className: r(L.clipFormSection, L.editSection),
-      children: [(0, n.jsx)(u.FormItem, {
-        className: L.clipFormItem,
-        title: _.default.Messages.CLIPS_EDIT_TITLE,
-        children: (0, n.jsx)(u.TextInput, {
+  return (0, l.jsxs)("div", {
+    className: T.clipForm,
+    children: [(0, l.jsxs)("div", {
+      className: i(T.clipFormSection, T.editSection),
+      children: [(0, l.jsx)(u.FormItem, {
+        className: T.clipFormItem,
+        title: j.default.Messages.CLIPS_EDIT_TITLE,
+        children: (0, l.jsx)(u.TextInput, {
           onChange: e => {
             "" === e ? b(void 0) : b(e)
           },
-          value: A,
+          value: _,
           minLength: I.CLIP_NAME_MIN_CHAR_LENGTH,
           maxLength: I.CLIP_NAME_MAX_CHAR_LENGTH,
-          placeholder: _.default.Messages.CLIPS_UNTITLED
+          placeholder: j.default.Messages.CLIPS_UNTITLED
         })
-      }), (0, n.jsxs)("div", {
-        className: L.clipFormSwitches,
-        children: [(0, n.jsx)(u.FormSwitch, {
-          onChange: w,
-          value: j,
-          hideBorder: !0,
-          children: _.default.Messages.CLIPS_EDIT_GAME_AUDIO
-        }), (0, n.jsx)(u.FormSwitch, {
+      }), (0, l.jsxs)("div", {
+        className: T.clipFormSwitches,
+        children: [(0, l.jsx)(u.FormSwitch, {
           onChange: P,
-          value: R,
+          value: D,
           hideBorder: !0,
-          children: _.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
+          children: j.default.Messages.CLIPS_EDIT_GAME_AUDIO
+        }), (0, l.jsx)(u.FormSwitch, {
+          onChange: k,
+          value: y,
+          hideBorder: !0,
+          children: j.default.Messages.CLIPS_EDIT_VOICE_CHANNEL_AUDIO
         })]
       })]
-    }), (0, n.jsxs)("div", {
-      className: r(L.clipFormSection, L.metadataSection),
-      children: [(0, n.jsx)(x.default, {
+    }), (0, l.jsxs)("div", {
+      className: i(T.clipFormSection, T.metadataSection),
+      children: [(0, l.jsx)(E.default, {
         clip: t
-      }), (0, n.jsx)(S.default, {
-        className: L.userList,
+      }), (0, l.jsx)(N.default, {
+        className: T.userList,
         clip: t
       })]
-    }), (0, n.jsxs)("div", {
-      className: L.clipFormFooter,
-      children: [(0, n.jsx)(u.Button, {
+    }), (0, l.jsxs)("div", {
+      className: T.clipFormFooter,
+      children: [(0, l.jsx)(u.Button, {
         submitting: "share" === O,
         disabled: null != O && "share" !== O,
         color: u.Button.Colors.BRAND,
-        wrapperClassName: L.clipFormFooterButton,
-        onClick: () => F({
+        wrapperClassName: T.clipFormFooterButton,
+        onClick: () => B({
           clip: {
             ...t,
-            name: A
+            name: _
           },
-          cropData: i,
-          applicationAudioEnabled: j,
-          voiceAudioEnabled: R,
+          cropData: A,
+          applicationAudioEnabled: D,
+          voiceAudioEnabled: y,
           onShareComplete: () => {
             s.closeModal(I.CLIPS_EDIT_MODAL_KEY), s.closeModal(I.CLIPS_GALLERY_MODAL_KEY)
           }
         }),
-        children: _.default.Messages.CLIPS_EDIT_SHARE_CLIP
-      }), (0, n.jsx)(u.Button, {
+        children: j.default.Messages.CLIPS_EDIT_SHARE_CLIP
+      }), (0, l.jsx)(u.Button, {
         size: u.Button.Sizes.ICON,
-        className: L.clipFormFooterButton,
+        className: T.clipFormFooterButton,
         disabled: null != O,
-        wrapperClassName: r(L.clipFormFooterButton, {
-          [L.submittingWrapperFix]: null != O
+        wrapperClassName: i(T.clipFormFooterButton, {
+          [T.submittingWrapperFix]: null != O
         }),
         color: u.Button.Colors.PRIMARY,
-        onClick: y,
-        children: _.default.Messages.SAVE_CHANGES
-      }), (0, n.jsx)(u.Button, {
-        "aria-label": _.default.Messages.MORE_OPTIONS,
+        onClick: w,
+        children: j.default.Messages.SAVE_CHANGES
+      }), (0, l.jsx)(u.Button, {
+        "aria-label": j.default.Messages.MORE_OPTIONS,
         size: u.Button.Sizes.ICON,
-        wrapperClassName: r(L.clipFormFooterButton, {
-          [L.submittingWrapperFix]: null != O
+        wrapperClassName: i(T.clipFormFooterButton, {
+          [T.submittingWrapperFix]: null != O
         }),
         submitting: "export" === O,
         disabled: null != O && "export" !== O,
@@ -191,16 +196,16 @@ function T(e) {
             let {
               default: e
             } = await a.el("87102").then(a.bind(a, "87102"));
-            return t => (0, n.jsx)(e, {
+            return t => (0, l.jsx)(e, {
               ...t,
-              onExportToSoundboard: G,
-              onExportToFile: U,
-              onDelete: B,
-              channelId: T
+              onExportToSoundboard: U,
+              onExportToFile: H,
+              onDelete: z,
+              channelId: r
             })
           })
         },
-        children: (0, n.jsx)(p.default, {})
+        children: (0, l.jsx)(h.default, {})
       })]
     })]
   })

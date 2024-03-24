@@ -14,21 +14,21 @@ var a = t("37983"),
   o = t("660279"),
   u = t("593195"),
   h = t("782340"),
-  x = t("647181"),
-  N = t("650287"),
+  x = t("349072"),
+  N = t("406617"),
   I = l.forwardRef(function(e, s) {
-    let {} = e, [i, n] = l.useState("before"), [d, u] = l.useState(!1), [I, m] = l.useState(!1);
+    let {} = e, [i, n] = l.useState("before"), [d, u] = l.useState(!1), [I, f] = l.useState(!1);
     l.useImperativeHandle(s, () => ({
       maybeChangeToAfterTab: () => (!I && v("after"), I)
     }));
     let v = l.useCallback(e => {
       u(!0), setTimeout(() => {
         r.unstable_batchedUpdates(() => {
-          "after" === e && m(!0), u(!1), n(e)
+          "after" === e && f(!0), u(!1), n(e)
         })
       }, 400)
     }, []);
-    return (0, a.jsxs)("div", {
+    return (0, a.jsxs)(c.Scroller, {
       className: N.content,
       children: [(0, a.jsxs)("div", {
         className: N.header,
@@ -102,23 +102,23 @@ var a = t("37983"),
             })]
           }), (0, a.jsxs)("div", {
             className: x.channels,
-            children: [(0, a.jsx)(f, {
+            children: [(0, a.jsx)(m, {
               mention: !0,
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_1
-            }), (0, a.jsx)(f, {
+            }), (0, a.jsx)(m, {
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_2
-            }), (0, a.jsx)(f, {
+            }), (0, a.jsx)(m, {
               grey: "after" === i,
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_3
-            }), (0, a.jsx)(f, {
+            }), (0, a.jsx)(m, {
               grey: "after" === i,
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_4
-            }), (0, a.jsx)(f, {
+            }), (0, a.jsx)(m, {
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_5
-            }), (0, a.jsx)(f, {
+            }), (0, a.jsx)(m, {
               grey: "after" === i,
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_6
-            }), (0, a.jsx)(f, {
+            }), (0, a.jsx)(m, {
               grey: "after" === i,
               name: h.default.Messages.NOTIF_MIGRATION_INTRO_CHANNEL_7
             })]
@@ -165,7 +165,7 @@ function T(e) {
   })
 }
 
-function f(e) {
+function m(e) {
   let {
     grey: s,
     mention: t,

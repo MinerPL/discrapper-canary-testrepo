@@ -36,6 +36,9 @@ class o {
   setRaw(e, _) {
     t.setItem(e, _)
   }
+  getAfterRefresh(e) {
+    return Promise.resolve(this.get(e))
+  }
   constructor() {
     this.storage = {}
   }

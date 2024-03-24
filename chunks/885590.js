@@ -20,7 +20,7 @@ function f(e) {
     activity: f
   } = e, {
     channelId: h
-  } = null !== (t = (0, u.unpackStageChannelParty)(f)) && void 0 !== t ? t : {}, C = (0, s.default)([d.default], () => d.default.getStageInstanceByChannel(h), [h]), p = a.useRef(null), m = a.useCallback(() => {
+  } = null !== (t = (0, u.unpackStageChannelParty)(f)) && void 0 !== t ? t : {}, C = (0, s.useStateFromStores)([d.default], () => d.default.getStageInstanceByChannel(h), [h]), p = a.useRef(null), m = a.useCallback(() => {
     let e = r.default.getChannel(h);
     null != e && o.connectAndOpen(e)
   }, [h]), E = null !== (n = null == C ? void 0 : C.topic) && void 0 !== n ? n : f.name, g = c.default.Messages.STAGE_CHANNEL_ACTIVITY_FEED_JOIN.format({

@@ -8,7 +8,7 @@ var s = n("872717"),
   l = n("913144"),
   a = n("49111"),
   i = {
-    createChannelFollower: (e, t) => s.default.post({
+    createChannelFollower: (e, t) => s.HTTP.post({
       url: a.Endpoints.CHANNEL_FOLLOWERS(t),
       body: {
         webhook_channel_id: e
@@ -20,7 +20,7 @@ var s = n("872717"),
         type: "CHANNEL_FOLLOWER_STATS_FETCH_START"
       });
       try {
-        let t = await s.default.get({
+        let t = await s.HTTP.get({
           url: a.Endpoints.CHANNEL_FOLLOWER_STATS(e),
           body: {
             channel_id: e

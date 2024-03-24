@@ -8,12 +8,17 @@ var i = l("884691"),
   a = l("613676");
 
 function n(e, t) {
-  let l = i.useMemo(() => null != e && (0, a.canInstallApplication)(e.id, e.custom_install_url, e.install_params), [e]),
+  let l = i.useMemo(() => null != e && (0, a.canInstallApplication)({
+      customInstallUrl: e.custom_install_url,
+      installParams: e.install_params,
+      integrationTypesConfig: e.integration_types_config
+    }), [e]),
     n = i.useCallback(l => {
       null != e && (0, a.installApplication)({
         applicationId: e.id,
         customInstallUrl: e.custom_install_url,
         installParams: e.install_params,
+        integrationTypesConfig: e.integration_types_config,
         guildId: null != t ? t : void 0,
         source: l
       })

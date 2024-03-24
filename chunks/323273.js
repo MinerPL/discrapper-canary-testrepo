@@ -1,15 +1,15 @@
 "use strict";
 l.r(t), l.d(t, {
   carouselAssetFromImageEmbed: function() {
-    return g
-  },
-  carouselAssetFromAttachment: function() {
     return f
   },
-  createMediaOnClickOverrides: function() {
+  carouselAssetFromAttachment: function() {
     return b
+  },
+  createMediaOnClickOverrides: function() {
+    return x
   }
-}), l("511434"), l("313619"), l("654714"), l("287168"), l("956660"), l("222007");
+}), l("222007");
 var n = l("37983");
 l("884691");
 var r = l("118810"),
@@ -21,10 +21,11 @@ var r = l("118810"),
   u = l("924444"),
   c = l("688622"),
   m = l("599110"),
-  h = l("49111"),
-  p = l("377160");
+  h = l("253981"),
+  p = l("49111"),
+  g = l("400402");
 
-function g(e) {
+function f(e) {
   let {
     width: t,
     height: l
@@ -45,7 +46,7 @@ function g(e) {
   }
 }
 
-function f(e) {
+function b(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     r = function(e) {
@@ -93,12 +94,12 @@ function f(e) {
           proxyURL: e.proxy_url,
           url: e.url
         }),
-        h = new URL(e.proxy_url);
-      return h.searchParams.append("format", "jpeg"), {
+        p = h.default.toURLSafe(e.proxy_url);
+      return null == p ? null : (p.searchParams.append("format", "jpeg"), {
         component: (0, n.jsx)(u.VideoModal, {
           width: o,
           height: d,
-          poster: h.toString(),
+          poster: p.toString(),
           naturalWidth: o,
           naturalHeight: d,
           renderLinkComponent: e => (0, n.jsx)(s.default, {
@@ -116,18 +117,18 @@ function f(e) {
         width: o,
         height: d,
         src: m
-      }
+      })
     }
     return null
   }(e, t, l);
   return null != i ? i : null
 }
 
-function b(e, t) {
+function x(e, t) {
   let s = {};
   for (let [a, d] of e.entries()) s[d.src] = s => (function(e, t, s, a) {
-    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (m.default.track(h.AnalyticEvents.OPEN_MODAL, {
-      type: h.AnalyticsSections.MEDIA_VIEWER,
+    e.preventDefault(), (0, r.isElement)(e.currentTarget) && e.currentTarget.blur(), null != a && (m.default.track(p.AnalyticEvents.OPEN_MODAL, {
+      type: p.AnalyticsSections.MEDIA_VIEWER,
       ...a
     }, {
       throttlePercent: .01
@@ -142,9 +143,9 @@ function b(e, t) {
         return (0, n.jsx)(e, {
           ...r,
           onIndexChange: null != a ? o.incrementSelectedItemChanges : void 0,
-          className: p.zoomedCarouselModalRoot,
+          className: g.zoomedCarouselModalRoot,
           items: t,
-          modalCarouselClassName: p.modalCarouselWrapper,
+          modalCarouselClassName: g.modalCarouselWrapper,
           startingIndex: s
         })
       }

@@ -7,20 +7,20 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("716241"),
-  l = n("5667"),
+  l = n("716241"),
+  i = n("5667"),
   r = n("58608"),
   o = n("599110"),
   u = n("701909"),
   d = n("49111"),
   c = n("782340"),
-  f = n("45243");
+  f = n("685705");
 
 function E(e) {
   let {
     guildId: t,
     markAsDismissed: E
-  } = e, _ = (0, a.jsxs)(a.Fragment, {
+  } = e, h = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(s.Text, {
       color: "always-white",
       variant: "text-sm/normal",
@@ -34,9 +34,9 @@ function E(e) {
       })
     })]
   });
-  return (0, a.jsx)(l.default, {
+  return (0, a.jsx)(i.default, {
     header: c.default.Messages.MEDIA_CHANNEL_UPSELL_TITLE,
-    content: _,
+    content: h,
     asset: (0, a.jsx)(r.default, {
       className: f.video,
       src: "https://cdn.discordapp.com/assets/media_channel/media_channel_upsell_demo.mp4",
@@ -46,7 +46,7 @@ function E(e) {
     buttonCTA: c.default.Messages.MEDIA_CHANNEL_UPSELL_CREATE_NOW_CTA,
     onClick: () => {
       o.default.track(d.AnalyticEvents.MEDIA_CHANNEL_UPSELL_CLICKED, {
-        ...(0, i.collectGuildAnalyticsMetadata)(t)
+        ...(0, l.collectGuildAnalyticsMetadata)(t)
       }), (0, s.openModalLazy)(async () => {
         let {
           default: e

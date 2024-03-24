@@ -31,7 +31,7 @@ var t = E("37983"),
             })
           }
           constructor(...E) {
-            super(...E), this.memoizedGetStateFromStores = I(_), this.listener = new r.default(e, () => {
+            super(...E), this.memoizedGetStateFromStores = I(_), this.listener = new r.BatchedStoreListener(e, () => {
               let e = this.memoizedGetStateFromStores.getCachedResult(this.props.childProps);
               if (!(null != e && (this.memoizedGetStateFromStores.clear(), (0, n.default)(this.memoizedGetStateFromStores(this.props.childProps), e)))) this.forceUpdate()
             })
@@ -62,7 +62,7 @@ var t = E("37983"),
             })
           }
           constructor(...E) {
-            super(...E), this.memoizedGetStateFromStores = I(_), this.listener = new r.default(e, () => {
+            super(...E), this.memoizedGetStateFromStores = I(_), this.listener = new r.BatchedStoreListener(e, () => {
               let e = this.memoizedGetStateFromStores.getCachedResult(this.props);
               if (!(null != e && (this.memoizedGetStateFromStores.clear(), (0, n.default)(this.memoizedGetStateFromStores(this.props), e)))) this.forceUpdate()
             })

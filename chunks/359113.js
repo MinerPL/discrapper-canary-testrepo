@@ -12,10 +12,10 @@ var n, l, o = s("37983"),
   u = s("145131"),
   d = s("555158"),
   f = s("306160"),
-  h = s("691898"),
-  I = s("49111"),
-  N = s("782340"),
-  m = s("453938");
+  N = s("307831"),
+  h = s("49111"),
+  I = s("782340"),
+  m = s("703687");
 
 function x(e) {
   let {
@@ -42,17 +42,17 @@ function C(e) {
   let {
     onClose: t,
     transitionState: s
-  } = e, [n, l] = r.useState(""), [c, f] = r.useState(""), [C, p] = r.useState(null), [R, O] = r.useState(!1), [v, M] = r.useState("DOMAIN"), g = () => {
-    O(!0), p(null), a.default.post({
-      url: I.Endpoints.CONNECTION(I.PlatformTypes.DOMAIN, n),
+  } = e, [n, l] = r.useState(""), [c, f] = r.useState(""), [C, p] = r.useState(null), [R, v] = r.useState(!1), [O, M] = r.useState("DOMAIN"), g = () => {
+    v(!0), p(null), a.HTTP.post({
+      url: h.Endpoints.CONNECTION(h.PlatformTypes.DOMAIN, n),
       body: {}
     }).then(() => {
       t()
     }).catch(e => {
       var t, s, n, l, o, r, a;
-      (null === (t = e.body) || void 0 === t ? void 0 : t.proof) && "DOMAIN" === v ? (f(e.body.proof), M("PROOF_DNS")) : p((null === (r = e.body) || void 0 === r ? void 0 : null === (o = r.errors) || void 0 === o ? void 0 : null === (l = o.domain) || void 0 === l ? void 0 : null === (n = l._errors) || void 0 === n ? void 0 : null === (s = n[0]) || void 0 === s ? void 0 : s.message) || (null === (a = e.body) || void 0 === a ? void 0 : a.message) || e.message)
+      (null === (t = e.body) || void 0 === t ? void 0 : t.proof) && "DOMAIN" === O ? (f(e.body.proof), M("PROOF_DNS")) : p((null === (r = e.body) || void 0 === r ? void 0 : null === (o = r.errors) || void 0 === o ? void 0 : null === (l = o.domain) || void 0 === l ? void 0 : null === (n = l._errors) || void 0 === n ? void 0 : null === (s = n[0]) || void 0 === s ? void 0 : s.message) || (null === (a = e.body) || void 0 === a ? void 0 : a.message) || e.message)
     }).finally(() => {
-      O(!1)
+      v(!1)
     })
   };
   return (0, o.jsxs)(i.ModalRoot, {
@@ -64,13 +64,13 @@ function C(e) {
       separator: !1,
       children: [(0, o.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
-        children: N.default.Messages.DOMAIN_VERIFICATION_HEADER
+        children: I.default.Messages.DOMAIN_VERIFICATION_HEADER
       }), (0, o.jsx)(i.ModalCloseButton, {
         className: m.closeButton,
         onClick: t
       })]
     }), (0, o.jsxs)(i.Slides, {
-      activeSlide: v,
+      activeSlide: O,
       width: 440,
       children: [(0, o.jsx)(i.Slide, {
         id: "DOMAIN",
@@ -84,13 +84,13 @@ function C(e) {
               variant: "text-md/normal",
               color: "header-secondary",
               className: m.description,
-              children: N.default.Messages.DOMAIN_VERIFICATION_DESCRIPTION
+              children: I.default.Messages.DOMAIN_VERIFICATION_DESCRIPTION
             }), (0, o.jsx)(i.FormItem, {
-              title: N.default.Messages.DOMAIN_VERIFICATION_LABEL,
+              title: I.default.Messages.DOMAIN_VERIFICATION_LABEL,
               error: C,
               children: (0, o.jsx)(i.TextInput, {
                 onChange: l,
-                placeholder: h.EXAMPLE_DOMAIN,
+                placeholder: N.EXAMPLE_DOMAIN,
                 maxLength: 253,
                 value: n,
                 disabled: R,
@@ -103,12 +103,12 @@ function C(e) {
               type: "submit",
               submitting: R,
               disabled: "" === n,
-              children: N.default.Messages.NEXT
+              children: I.default.Messages.NEXT
             }), (0, o.jsx)(i.Button, {
               look: i.Button.Looks.LINK,
               color: i.Button.Colors.PRIMARY,
               onClick: t,
-              children: N.default.Messages.CANCEL
+              children: I.default.Messages.CANCEL
             })]
           })]
         })
@@ -122,23 +122,23 @@ function C(e) {
               children: (0, o.jsx)(i.Text, {
                 tag: "span",
                 variant: "text-md/normal",
-                children: N.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
+                children: I.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_1
               })
             }), (0, o.jsxs)("li", {
               children: [(0, o.jsx)(i.Text, {
                 tag: "span",
                 variant: "text-md/normal",
-                children: N.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
+                children: I.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_DNS_2
               }), (0, o.jsxs)("div", {
                 className: m.dnsRecordContainer,
                 children: [(0, o.jsx)(x, {
-                  name: N.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-                  value: (0, h.getDnsName)(n)
+                  name: I.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+                  value: (0, N.getDnsName)(n)
                 }), (0, o.jsx)(x, {
-                  name: N.default.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
+                  name: I.default.Messages.DOMAIN_VERIFICATION_RECORD_TYPE,
                   value: "TXT"
                 }), (0, o.jsx)(x, {
-                  name: N.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+                  name: I.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
                   value: c
                 })]
               })]
@@ -146,7 +146,7 @@ function C(e) {
           }), (0, o.jsx)(d.default, {
             messageType: d.HelpMessageTypes.INFO,
             className: m.text,
-            children: N.default.Messages.DOMAIN_VERIFICATION_DNS_WARNING
+            children: I.default.Messages.DOMAIN_VERIFICATION_DNS_WARNING
           }), null != C && (0, o.jsx)(i.Text, {
             variant: "text-sm/normal",
             color: "text-danger",
@@ -162,7 +162,7 @@ function C(e) {
             onClick: () => {
               M("DOMAIN"), p(null)
             },
-            children: N.default.Messages.BACK
+            children: I.default.Messages.BACK
           }), (0, o.jsxs)("div", {
             className: m.footerInner,
             children: [(0, o.jsx)(i.Button, {
@@ -172,11 +172,11 @@ function C(e) {
                 M("PROOF_HTTP"), p(null)
               },
               className: m.switchButton,
-              children: N.default.Messages.DOMAIN_VERIFICATION_USE_HTTP
+              children: I.default.Messages.DOMAIN_VERIFICATION_USE_HTTP
             }), (0, o.jsx)(i.Button, {
               submitting: R,
               onClick: g,
-              children: N.default.Messages.VERIFY
+              children: I.default.Messages.VERIFY
             })]
           })]
         })]
@@ -187,14 +187,14 @@ function C(e) {
           children: [(0, o.jsx)(i.Text, {
             tag: "span",
             variant: "text-md/normal",
-            children: N.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
+            children: I.default.Messages.DOMAIN_VERIFICATION_INSTRUCTIONS_HTTP
           }), (0, o.jsxs)("div", {
             className: m.httpFileContainer,
             children: [(0, o.jsx)(x, {
-              name: N.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
-              value: (0, h.getHttpName)(n)
+              name: I.default.Messages.DOMAIN_VERIFICATION_RECORD_NAME,
+              value: (0, N.getHttpName)(n)
             }), (0, o.jsx)(x, {
-              name: N.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
+              name: I.default.Messages.DOMAIN_VERIFICATION_RECORD_CONTENT,
               value: c
             })]
           }), null != C && (0, o.jsx)(i.Text, {
@@ -212,7 +212,7 @@ function C(e) {
             onClick: () => {
               M("DOMAIN"), p(null)
             },
-            children: N.default.Messages.BACK
+            children: I.default.Messages.BACK
           }), (0, o.jsxs)("div", {
             className: m.footerInner,
             children: [(0, o.jsx)(i.Button, {
@@ -222,11 +222,11 @@ function C(e) {
                 M("PROOF_DNS"), p(null)
               },
               className: m.switchButton,
-              children: N.default.Messages.DOMAIN_VERIFICATION_USE_DNS
+              children: I.default.Messages.DOMAIN_VERIFICATION_USE_DNS
             }), (0, o.jsx)(i.Button, {
               submitting: R,
               onClick: g,
-              children: N.default.Messages.VERIFY
+              children: I.default.Messages.VERIFY
             })]
           })]
         })]

@@ -15,17 +15,17 @@ var a = s("37983"),
   c = s("79112"),
   S = s("642950"),
   E = s("404515"),
-  f = s("87641"),
-  T = s("245187"),
-  m = s("102985"),
-  _ = s("697218"),
+  T = s("87641"),
+  f = s("245187"),
+  _ = s("102985"),
+  m = s("697218"),
   g = s("160299"),
   h = s("357957"),
-  I = s("521012"),
-  N = s("915639"),
+  N = s("521012"),
+  I = s("915639"),
   p = s("49111"),
   C = s("782340"),
-  A = s("952984");
+  A = s("60638");
 class O extends n.PureComponent {
   componentDidMount() {
     d.default.wait(() => {
@@ -51,7 +51,7 @@ class O extends n.PureComponent {
       children: [e && 0 === Object.keys(s).length ? (0, a.jsx)("div", {
         className: A.syncing,
         children: (0, a.jsx)(o.Spinner, {})
-      }) : (0, a.jsx)(f.default, {
+      }) : (0, a.jsx)(T.default, {
         paymentSources: s,
         defaultPaymentSourceId: n,
         premiumSubscriptionPaymentSourceId: null != i && i.status !== p.SubscriptionStatusTypes.CANCELED ? i.paymentSourceId : null,
@@ -65,7 +65,7 @@ class O extends n.PureComponent {
             tag: "h1",
             children: C.default.Messages.BILLING_PAYMENT_HISTORY
           }),
-          children: [(0, a.jsx)(T.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
+          children: [(0, a.jsx)(f.BlockedPaymentsWarning, {}), (0, a.jsx)(E.default, {
             locale: l
           })]
         })
@@ -81,12 +81,12 @@ class O extends n.PureComponent {
 }
 
 function x() {
-  let e = (0, r.useStateFromStoresObject)([N.default, g.default, h.default, _.default, m.default, I.default], () => {
-    let e = I.default.getPremiumTypeSubscription(),
-      t = _.default.getCurrentUser();
+  let e = (0, r.useStateFromStoresObject)([I.default, g.default, h.default, m.default, _.default, N.default], () => {
+    let e = N.default.getPremiumTypeSubscription(),
+      t = m.default.getCurrentUser();
     return i(null != t, "UserSettingsBilling: currentUser cannot be undefined"), {
-      locale: N.default.locale,
-      hide: m.default.enabled,
+      locale: I.default.locale,
+      hide: _.default.enabled,
       isClaimed: t.isClaimed(),
       isVerified: t.verified,
       premiumSubscription: e,

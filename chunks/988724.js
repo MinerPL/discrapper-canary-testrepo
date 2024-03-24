@@ -5,18 +5,18 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("872717"),
-  n = s("913144"),
-  l = s("49111");
+  l = s("913144"),
+  n = s("49111");
 
 function i(e) {
-  return a.default.get({
-    url: l.Endpoints.GUILD_TOP_READ_CHANNELS(e),
+  return a.HTTP.get({
+    url: n.Endpoints.GUILD_TOP_READ_CHANNELS(e),
     oldFormErrors: !0
   }).then(t => {
     let {
       body: s
     } = t;
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_TOP_READ_CHANNELS_FETCH_SUCCESS",
       guildId: e,
       topChannelIds: s

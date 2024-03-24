@@ -4,16 +4,16 @@ n.r(t), n.d(t, {
     return m
   },
   showReportModalForGuildDirectoryEntry: function() {
-    return f
-  },
-  showReportModalForMessage: function() {
     return _
   },
+  showReportModalForMessage: function() {
+    return f
+  },
   showReportModalForStageChannel: function() {
-    return h
+    return E
   },
   showReportModalForGuildScheduledEvent: function() {
-    return E
+    return h
   },
   showReportModalForFirstDM: function() {
     return v
@@ -28,7 +28,13 @@ n.r(t), n.d(t, {
     return p
   },
   showUnauthenticatedReportModalForMessage: function() {
+    return N
+  },
+  submitReportForInappropriateConversationSafetyAlert: function() {
     return g
+  },
+  showReportModalForInappropriateConversationSafetyAlert: function() {
+    return T
   }
 });
 var a = n("716241"),
@@ -37,36 +43,36 @@ var a = n("716241"),
   s = n("766274"),
   i = n("522874"),
   d = n("143618"),
-  u = n("965153"),
-  o = n("123265"),
+  o = n("965153"),
+  u = n("816090"),
   c = n("49111");
 
 function m(e, t) {
-  N(d.ReportNames.GUILD_DISCOVERY, {
+  S(d.ReportNames.GUILD_DISCOVERY, {
     guild_id: e.id
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.ReportNames.GUILD_DISCOVERY,
     record: e
   }, {}, t)
 }
 
-function f(e, t) {
-  N(d.ReportNames.GUILD_DIRECTORY_ENTRY, {
+function _(e, t) {
+  S(d.ReportNames.GUILD_DIRECTORY_ENTRY, {
     channel_id: e.channelId,
     guild_id: e.guildId
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.ReportNames.GUILD_DIRECTORY_ENTRY,
     record: e
   }, {}, t)
 }
 
-function _(e, t) {
-  N(d.ReportNames.MESSAGE, {
+function f(e, t) {
+  S(d.ReportNames.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id
   });
   let n = (0, i.shouldShowFraudMenuVariant)();
-  (0, o.showReportModal)({
+  (0, u.showReportModal)({
     name: d.ReportNames.MESSAGE,
     record: e
   }, {
@@ -74,42 +80,42 @@ function _(e, t) {
   }, t)
 }
 
-function h(e, t) {
+function E(e, t) {
   let n = l.default.getStageInstanceByChannel(e.id);
-  null != n && (N(d.ReportNames.STAGE_CHANNEL, {
+  null != n && (S(d.ReportNames.STAGE_CHANNEL, {
     stage_instance_id: n.id,
     channel_id: n.channel_id,
     guild_id: n.guild_id
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.ReportNames.STAGE_CHANNEL,
     record: n
   }, {}, t))
 }
 
-function E(e, t) {
+function h(e, t) {
   var n;
-  N(d.ReportNames.GUILD_SCHEDULED_EVENT, {
+  S(d.ReportNames.GUILD_SCHEDULED_EVENT, {
     guild_scheduled_event_id: e.id,
     guild_id: e.guild_id,
     channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.ReportNames.GUILD_SCHEDULED_EVENT,
     record: e
   }, {}, t)
 }
 
 function v(e, t) {
-  N(d.ReportNames.FIRST_DM, {
+  S(d.ReportNames.FIRST_DM, {
     message_id: e.id,
     channel_id: e.channel_id
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.ReportNames.FIRST_DM,
     record: e
   }, {}, t, void 0, !1)
 }
 async function R(e, t) {
   try {
-    await (0, u.submitHeadlessReport)({
+    await (0, o.submitHeadlessReport)({
       name: d.ReportNames.FIRST_DM,
       record: e
     }, {
@@ -119,9 +125,9 @@ async function R(e, t) {
 }
 
 function x(e, t, n) {
-  N(d.ReportNames.USER, {
+  S(d.ReportNames.USER, {
     reported_user_id: e.id
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.ReportNames.USER,
     record: e,
     contextualGuildId: t
@@ -130,26 +136,50 @@ function x(e, t, n) {
 
 function p(e, t) {
   let n = new s.default({});
-  N(d.UnauthenticatedReportNames.USER, {
+  S(d.UnauthenticatedReportNames.USER, {
     reported_user_id: n.id
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.UnauthenticatedReportNames.USER,
     record: n
   }, {}, t, void 0, !1, !1, e)
 }
 
-function g(e, t) {
+function N(e, t) {
   let n = new r.default({});
-  N(d.UnauthenticatedReportNames.MESSAGE, {
+  S(d.UnauthenticatedReportNames.MESSAGE, {
     message_id: void 0,
     channel_id: void 0
-  }), (0, o.showReportModal)({
+  }), (0, u.showReportModal)({
     name: d.UnauthenticatedReportNames.MESSAGE,
     record: n
   }, {}, t, void 0, !1, !1, e)
 }
+async function g(e, t, n) {
+  try {
+    await (0, o.submitHeadlessReport)({
+      name: d.ReportNames.MESSAGE,
+      record: e
+    }, {
+      variant: "safety_alerts_headless_v1"
+    }), null == t || t()
+  } catch {
+    null == n || n()
+  }
+}
 
-function N(e, t) {
+function T(e, t) {
+  S(d.ReportNames.MESSAGE, {
+    message_id: e.id,
+    channel_id: e.channel_id
+  }), (0, u.showReportModal)({
+    name: d.ReportNames.MESSAGE,
+    record: e
+  }, {
+    variant: "safety_alerts_v1"
+  }, t)
+}
+
+function S(e, t) {
   a.default.trackWithMetadata(c.AnalyticEvents.IAR_MODAL_OPEN, {
     report_type: e,
     ...t

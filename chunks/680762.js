@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchGuildAffinities: function() {
-    return l
+    return i
   }
 });
 var a = n("872717"),
   s = n("913144"),
-  i = n("49111");
-let l = () => a.default.get({
-  url: i.Endpoints.GUILD_AFFINITIES,
+  l = n("49111");
+let i = () => a.HTTP.get({
+  url: l.Endpoints.GUILD_AFFINITIES,
   oldFormErrors: !0
 }).then(e => {
   let {

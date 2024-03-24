@@ -10,28 +10,31 @@ n.r(t), n.d(t, {
     return c
   },
   getCoverRatio: function() {
-    return f
-  },
-  makeCssUrlString: function() {
     return _
   },
+  makeCssUrlString: function() {
+    return f
+  },
   getPalette: function() {
-    return g
+    return h
   },
   getPaletteForAvatar: function() {
-    return m
+    return g
   },
   readFileAsBase64: function() {
     return p
   },
   dataUriFileSize: function() {
-    return v
-  },
-  dataUrlToFile: function() {
     return S
   },
-  isPNGAnimated: function() {
+  dataUrlToFile: function() {
     return T
+  },
+  dataUrlToBlob: function() {
+    return v
+  },
+  isPNGAnimated: function() {
+    return I
   }
 }), n("424973"), n("101997"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102");
 var i = n("627445"),
@@ -85,7 +88,7 @@ function c(e) {
   return (n = Math.round(n * r)) > s && (a = s / n), Math.min(r * a, 1)
 }
 
-function f(e) {
+function _(e) {
   let {
     width: t,
     height: n,
@@ -95,17 +98,17 @@ function f(e) {
   return t === n ? 1 : Math.min(Math.max(i / t, s / n), 1)
 }
 
-function _(e) {
+function f(e) {
   return null == e || "" === e ? "none" : "url(".concat(e, ")")
 }
-let h = [
+let E = [
   [0, 0, 0]
 ];
 
-function g(e, t, n) {
+function h(e, t, n) {
   let i = document.createElement("canvas"),
     s = i.getContext("2d");
-  if (null == s) return h;
+  if (null == s) return E;
   let r = i.width = 0 === e.width ? 128 : e.width,
     a = i.height = 0 === e.height ? 128 : e.height;
   s.drawImage(e, 0, 0, r, a);
@@ -116,15 +119,15 @@ function g(e, t, n) {
       return i
     }(o, r * a, n),
     d = l(u, t);
-  return "boolean" == typeof d ? h : d.palette()
+  return "boolean" == typeof d ? E : d.palette()
 }
-let m = e => "number" == typeof e ? null : E(e),
-  E = a.memoize(e => new Promise((t, n) => {
+let g = e => "number" == typeof e ? null : m(e),
+  m = a.memoize(e => new Promise((t, n) => {
     let i = new Image;
     i.crossOrigin = "Anonymous", i.onerror = e => {
       n(e), i.onerror = i.onload = null, i = null
     }, i.onload = () => {
-      t(g(i, 5, 10)), i.onerror = i.onload = null, i = null
+      t(h(i, 5, 10)), i.onerror = i.onload = null, i = null
     }, i.src = e
   }));
 
@@ -137,27 +140,29 @@ function p(e) {
   })
 }
 
-function v(e) {
+function S(e) {
   let t = e.split(";base64,");
   return s(2 === t.length, "Input data is not a valid image."), atob(t[1]).length
 }
-async function S(e, t, n) {
-  let i = function(e) {
-      let t;
-      t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
-      let n = e.split(",")[0].split(":")[1].split(";")[0],
-        i = new Uint8Array(t.length);
-      for (var s = 0; s < t.length; s++) i[s] = t.charCodeAt(s);
-      return new Blob([i], {
-        type: n
-      })
-    }(e),
+async function T(e, t, n) {
+  let i = v(e),
     s = await i.arrayBuffer();
   return new File([s], t, {
     type: n
   })
 }
-async function T(e) {
+
+function v(e) {
+  let t;
+  t = e.split(",")[0].indexOf("base64") >= 0 ? atob(e.split(",")[1]) : btoa(e.split(",")[1]);
+  let n = e.split(",")[0].split(":")[1].split(";")[0],
+    i = new Uint8Array(t.length);
+  for (var s = 0; s < t.length; s++) i[s] = t.charCodeAt(s);
+  return new Blob([i], {
+    type: n
+  })
+}
+async function I(e) {
   var t;
   let n = null === (t = e.type) || void 0 === t ? void 0 : t.split(";")[0];
   if ("image/png" !== n) throw Error("File is not a PNG");

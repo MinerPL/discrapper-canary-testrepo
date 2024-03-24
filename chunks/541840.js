@@ -12,26 +12,26 @@ var a = s("37983"),
   o = s("476765"),
   d = s("44678"),
   u = s("782340"),
-  c = s("978896"),
+  c = s("76495"),
   S = function(e) {
     let {
       onClose: t,
       onClaim: s,
       code: S,
       outboundPromotion: E,
-      transitionState: f
-    } = e, [T, m] = n.useState(null), _ = (0, o.useUID)();
+      transitionState: T
+    } = e, [f, _] = n.useState(null), m = (0, o.useUID)();
     return n.useEffect(() => {
       null == S && (0, d.claimOutboundPromotion)(E.id).then(e => s(e)).catch(e => {
         var t;
-        return m(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code)
+        return _(null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.code)
       })
     }, [S, E.id, s]), (0, a.jsx)(l.ModalRoot, {
-      transitionState: f,
-      "aria-labelledby": _,
-      children: null != T ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
+      transitionState: T,
+      "aria-labelledby": m,
+      children: null != f ? (0, a.jsx)(r.DropsModalClaimErrorBody, {
         onClose: t,
-        errorCode: T
+        errorCode: f
       }) : null == S ? (0, a.jsx)(l.ModalContent, {
         children: (0, a.jsx)(l.Spinner, {
           className: c.loading

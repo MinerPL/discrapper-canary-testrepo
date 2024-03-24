@@ -1,30 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildIdsToFetchSoundsFor: function() {
-    return o
+    return u
   },
   getGuildIdsToFetchSoundsFor: function() {
-    return u
+    return d
   }
-});
-var l = n("884691"),
-  a = n("65597"),
-  s = n("305961"),
-  i = n("235004");
+}), n("222007");
+var i = n("884691"),
+  l = n("65597"),
+  a = n("305961"),
+  s = n("299039"),
+  r = n("235004");
 
-function r(e, t) {
-  let n = Object.keys(e);
+function o(e, t) {
+  let n = s.default.keys(e);
   return n.filter(e => null == t.get(e))
 }
 
-function o() {
-  let e = (0, a.default)([s.default], () => s.default.getGuilds()),
-    t = (0, a.default)([i.default], () => i.default.getSounds());
-  return (0, l.useMemo)(() => r(e, t), [e, t])
+function u() {
+  let e = (0, l.useStateFromStores)([a.default], () => a.default.getGuilds()),
+    t = (0, l.useStateFromStores)([r.default], () => r.default.getSounds());
+  return (0, i.useMemo)(() => o(e, t), [e, t])
 }
 
-function u() {
-  let e = s.default.getGuilds(),
-    t = i.default.getSounds();
-  return r(e, t)
+function d() {
+  let e = a.default.getGuilds(),
+    t = r.default.getSounds();
+  return o(e, t)
 }

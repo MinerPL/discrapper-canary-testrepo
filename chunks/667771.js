@@ -66,8 +66,8 @@ function A(e) {
             let t = h.default.getChannel(e.parent_id),
               l = null != t && E.default.can(_.Permissions.MANAGE_ROLES, c) && E.default.can(_.Permissions.MANAGE_ROLES, t);
             if (!l) return !0;
-            let a = S.default.areChannelsLocked(c, t),
-              s = S.default.areChannelsLocked(c, h.default.getChannel(c.parent_id));
+            let a = S.areChannelsLocked(c, t),
+              s = S.areChannelsLocked(c, h.default.getChannel(c.parent_id));
             return (null == c.parent_id && !a || s && !a) && (n = e), !0
           }), null != n) {
           let e = h.default.getChannel(n.parent_id);

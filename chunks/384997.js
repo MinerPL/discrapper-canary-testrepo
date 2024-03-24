@@ -1,26 +1,26 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   useSelectedDismissibleContent: function() {
     return d
   },
   default: function() {
     return c
   }
-}), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("65597"),
-  i = l("901165"),
-  r = l("495226"),
-  o = l("235145"),
-  u = l("994428");
+}), n("222007");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("65597"),
+  s = n("901165"),
+  r = n("495226"),
+  o = n("235145"),
+  u = n("994428");
 
 function d(e, t) {
-  let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    n = (0, s.default)([i.default], () => !!__OVERLAY__ && i.default.isInstanceUILocked()),
-    [d, c] = (0, o.useGetDismissibleContent)(e, t, n),
-    f = !l && null != d && !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);
-  return a.useEffect(() => () => {
+  let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    i = (0, a.useStateFromStores)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
+    [d, c] = (0, o.useGetDismissibleContent)(e, t, i),
+    f = !n && null != d && !r.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);
+  return l.useEffect(() => () => {
     f && c(u.ContentDismissActionType.AUTO_DISMISS)
   }, [f, c]), [d, c]
 }
@@ -28,13 +28,13 @@ function d(e, t) {
 function c(e) {
   let {
     contentTypes: t,
-    children: l,
-    groupName: a,
-    bypassAutoDismiss: s
-  } = e, [i, r] = d(t, a, s);
-  return (0, n.jsx)(n.Fragment, {
-    children: l({
-      visibleContent: i,
+    children: n,
+    groupName: l,
+    bypassAutoDismiss: a
+  } = e, [s, r] = d(t, l, a);
+  return (0, i.jsx)(i.Fragment, {
+    children: n({
+      visibleContent: s,
       markAsDismissed: r
     })
   })

@@ -1,36 +1,41 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("77078"),
-  s = l("910330"),
-  i = l("777003"),
-  r = l("782340"),
-  o = l("920244"),
-  u = l("814076");
+var i = n("37983");
+n("884691");
+var l = n("77078"),
+  a = n("910330"),
+  s = n("756507"),
+  r = n("777003"),
+  o = n("782340"),
+  u = n("999050"),
+  d = n("862939");
 
-function d(e) {
+function c(e) {
   let {
     user: t,
-    setNote: l,
-    autoFocus: d,
-    lastSection: c,
-    hideNote: f
-  } = e;
-  return f ? null : (0, n.jsxs)(i.default, {
-    lastSection: c,
-    children: [(0, n.jsx)(a.Heading, {
+    setNote: n,
+    autoFocus: c,
+    lastSection: f
+  } = e, {
+    trackUserProfileAction: p
+  } = (0, s.useUserProfileAnalyticsContext)();
+  return (0, i.jsxs)(r.default, {
+    lastSection: f,
+    children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
-      className: u.title,
-      children: r.default.Messages.NOTE
-    }), (0, n.jsx)(s.default, {
+      className: d.title,
+      children: o.default.Messages.NOTE
+    }), (0, i.jsx)(a.default, {
       userId: t.id,
-      autoFocus: l || d,
-      className: o.note
+      autoFocus: n || c,
+      className: u.note,
+      onUpdate: () => p({
+        action: "SET_NOTE"
+      })
     }, "note")]
   })
 }

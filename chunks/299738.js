@@ -1,89 +1,92 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return N
   }
 });
-var s = a("37983");
+var l = a("37983");
 a("884691");
-var l = a("414456"),
-  n = a.n(l),
+var s = a("414456"),
+  n = a.n(s),
   i = a("77078"),
   o = a("145131"),
-  d = a("736393"),
-  r = a("228408"),
-  c = a("795010"),
-  u = a("380676"),
-  E = a("170213"),
-  _ = a("782340"),
-  A = a("434848");
+  d = a("667963"),
+  r = a("736393"),
+  c = a("228408"),
+  u = a("795010"),
+  E = a("380676"),
+  _ = a("170213"),
+  A = a("782340"),
+  S = a("221389");
 
-function S(e) {
+function N(e) {
   var t, a;
   let {
-    classification: l,
-    isSpam: S = !1,
-    isCoppa: N = !1,
-    className: I,
-    onClose: x,
-    onNext: f
-  } = e, T = (0, r.useEmitAppealIngestionEvent)(), g = null !== (t = null == l ? void 0 : l.explainer_link) && void 0 !== t ? t : "", m = null != l && null != l.flagged_content && l.flagged_content.length > 0, p = (0, d.capitalizeText)(null == l ? void 0 : l.description), C = !S && !N, L = m && null == l.guild_metadata;
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)(i.ModalHeader, {
+    classification: s,
+    isSpam: N = !1,
+    isCoppa: I = !1,
+    className: x,
+    onClose: f,
+    onNext: T
+  } = e, g = (0, c.useEmitAppealIngestionEvent)(), p = null !== (t = null == s ? void 0 : s.explainer_link) && void 0 !== t ? t : "", m = null != s && null != s.flagged_content && s.flagged_content.length > 0, C = (0, r.capitalizeText)(null == s ? void 0 : s.description), L = !N && !I, h = (0, d.useIsSafetyHubDisplayGuildViolationsEnabled)("classification_evidence"), M = null != s && ((0, r.isGuildClassification)(s) && h || m);
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)(i.ModalHeader, {
       direction: o.default.Direction.VERTICAL,
-      className: A.header,
+      className: S.header,
       separator: !1,
-      children: [(0, s.jsx)(i.Heading, {
-        className: A.title,
+      children: [(0, l.jsx)(i.Heading, {
+        className: S.title,
         variant: "heading-xl/semibold",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_HEADER
-      }), (0, s.jsx)(i.Text, {
-        className: A.subtitle,
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_HEADER
+      }), (0, l.jsx)(i.Text, {
+        className: S.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER
-      }), null != x && (0, s.jsx)(i.ModalCloseButton, {
-        className: A.closeButton,
-        onClick: x
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBHEADER
+      }), null != f && (0, l.jsx)(i.ModalCloseButton, {
+        className: S.closeButton,
+        onClick: f
       })]
-    }), (0, s.jsxs)(i.ModalContent, {
-      className: n(A.modalContent, !L && A.evidenceOffset, I),
+    }), (0, l.jsxs)(i.ModalContent, {
+      className: n(S.modalContent, !M && S.evidenceOffset, x),
       paddingFix: !1,
-      children: [L && (0, s.jsx)(u.ClassificationEvidence, {
-        flaggedContent: null !== (a = l.flagged_content) && void 0 !== a ? a : []
-      }), (0, s.jsx)(i.Text, {
-        className: A.optionHeader,
+      children: [M && (0, l.jsx)(E.ClassificationEvidence, {
+        flaggedContent: null !== (a = s.flagged_content) && void 0 !== a ? a : [],
+        actions: s.actions,
+        guildMetadata: s.guild_metadata
+      }), (0, l.jsx)(i.Text, {
+        className: S.optionHeader,
         color: "header-secondary",
         variant: "text-xs/bold",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_POLICY_HEADER
-      }), (0, s.jsx)("div", {
-        className: A.policyContainer,
-        children: (0, s.jsx)(i.Text, {
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_POLICY_HEADER
+      }), (0, l.jsx)("div", {
+        className: S.policyContainer,
+        children: (0, l.jsx)(i.Text, {
           variant: "text-md/semibold",
-          children: p
+          children: C
         })
-      }), N && (0, s.jsx)(c.default, {
-        url: E.SafetyHubLinks.AGE_VERIFICATION_LINK,
-        text: _.default.Messages.APPEAL_INGESTION_AGE_VERIFICATION_LINK_TITLE,
-        onClick: () => T(E.SafetyHubAnalyticsActions.ClickAgeVerificationLink)
-      }), S && !N && (0, s.jsx)(c.default, {
-        url: E.SafetyHubLinks.SPAM_LINK,
-        text: _.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM,
-        onClick: () => T(E.SafetyHubAnalyticsActions.ClickSpamWebformLink)
-      }), !N && (0, s.jsx)(c.default, {
-        text: _.default.Messages.APPEAL_INGESTION_LEARN_MORE_LINK_TITLE,
-        url: g,
-        onClick: () => T(E.SafetyHubAnalyticsActions.ClickLearnMoreLink)
-      }), C && (0, s.jsx)(i.Text, {
-        className: A.learnMore,
+      }), I && (0, l.jsx)(u.default, {
+        url: _.SafetyHubLinks.AGE_VERIFICATION_LINK,
+        text: A.default.Messages.APPEAL_INGESTION_AGE_VERIFICATION_LINK_TITLE,
+        onClick: () => g(_.SafetyHubAnalyticsActions.ClickAgeVerificationLink)
+      }), N && !I && (0, l.jsx)(u.default, {
+        url: _.SafetyHubLinks.SPAM_LINK,
+        text: A.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_SUBMIT_SPAM,
+        onClick: () => g(_.SafetyHubAnalyticsActions.ClickSpamWebformLink)
+      }), !I && (0, l.jsx)(u.default, {
+        text: A.default.Messages.APPEAL_INGESTION_LEARN_MORE_LINK_TITLE,
+        url: p,
+        onClick: () => g(_.SafetyHubAnalyticsActions.ClickLearnMoreLink)
+      }), L && (0, l.jsx)(i.Text, {
+        className: S.learnMore,
         variant: "text-xs/normal",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA.format()
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_SPEED_BUMP_LEARN_MORE_OTHER_OPTIONS_DSA.format()
       })]
-    }), C && (0, s.jsx)(i.ModalFooter, {
-      children: (0, s.jsx)(i.Button, {
-        onClick: f,
+    }), L && (0, l.jsx)(i.ModalFooter, {
+      children: (0, l.jsx)(i.Button, {
+        onClick: T,
         color: i.Button.Colors.BRAND,
-        children: _.default.Messages.NEXT
+        children: A.default.Messages.NEXT
       })
     })]
   })

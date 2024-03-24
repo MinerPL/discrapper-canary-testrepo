@@ -1,55 +1,55 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
-var r = n("872717"),
-  i = n("599110");
+var i = n("872717"),
+  s = n("599110");
 
-function l(e, t, n) {
+function r(e, t, n) {
   let {
-    trackedActionData: r,
-    ...l
-  } = t, o = {
-    url: l.url,
+    trackedActionData: i,
+    ...r
+  } = t, a = {
+    url: r.url,
     request_method: n
   };
   return new Promise((t, n) => {
-    e(l).then(e => {
-      let n = r.properties;
-      "function" == typeof r.properties && (n = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
+    e(r).then(e => {
+      let n = i.properties;
+      "function" == typeof i.properties && (n = i.properties(e)), (0, s.trackNetworkAction)(i.event, {
         status_code: e.status,
-        ...o,
+        ...a,
         ...n
       }), t(e)
     }).catch(e => {
-      var t, l;
-      let s = r.properties;
-      "function" == typeof r.properties && (s = r.properties(e)), (0, i.trackNetworkAction)(r.event, {
+      var t, r;
+      let o = i.properties;
+      "function" == typeof i.properties && (o = i.properties(e)), (0, s.trackNetworkAction)(i.event, {
         status_code: e.status,
         error_code: null === (t = e.body) || void 0 === t ? void 0 : t.code,
-        error_message: null === (l = e.body) || void 0 === l ? void 0 : l.message,
-        ...o,
-        ...s
+        error_message: null === (r = e.body) || void 0 === r ? void 0 : r.message,
+        ...a,
+        ...o
       }), n(e)
     })
   })
 }
-var o = {
+var a = {
   get: function(e) {
-    return l(r.default.get, e, "get")
+    return r(i.HTTP.get, e, "get")
   },
   post: function(e) {
-    return l(r.default.post, e, "post")
+    return r(i.HTTP.post, e, "post")
   },
   put: function(e) {
-    return l(r.default.put, e, "put")
+    return r(i.HTTP.put, e, "put")
   },
   patch: function(e) {
-    return l(r.default.patch, e, "patch")
+    return r(i.HTTP.patch, e, "patch")
   },
   delete: function(e) {
-    return l(r.default.delete, e, "del")
+    return r(i.HTTP.del, e, "del")
   }
 }

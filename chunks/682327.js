@@ -1,18 +1,18 @@
 "use strict";
 s.r(t), s.d(t, {
   useEditedChattableDefaultChannelsWithQuestions: function() {
-    return T
+    return I
   },
   useAdvancedModeReady: function() {
-    return I
+    return T
   },
   AdvancedModeToggle: function() {
     return S
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("65597"),
+  l = s("884691"),
+  n = s("65597"),
   i = s("77078"),
   r = s("850364"),
   o = s("863636"),
@@ -22,17 +22,17 @@ var a = s("37983"),
   E = s("653138"),
   _ = s("782340");
 
-function T(e, t) {
-  let s = (0, l.useStateFromStoresArray)([c.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, t, c.default.editedOnboardingPrompts)),
-    a = (0, l.useStateFromStoresArray)([c.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, t, c.default.editedOnboardingPrompts, d.isChattableChannelId));
+function I(e, t) {
+  let s = (0, n.useStateFromStoresArray)([c.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, t, c.default.editedOnboardingPrompts)),
+    a = (0, n.useStateFromStoresArray)([c.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, t, c.default.editedOnboardingPrompts, d.isChattableChannelId));
   return [a, s]
 }
 
-function I(e) {
-  let t = (0, l.default)([o.default], () => o.default.isAdvancedMode(e)),
+function T(e) {
+  let t = (0, n.useStateFromStores)([o.default], () => o.default.isAdvancedMode(e)),
     [s, a] = function(e) {
-      let t = (0, l.useStateFromStoresArray)([o.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, o.default.getDefaultChannelIds(e), o.default.getOnboardingPrompts(e))),
-        s = (0, l.useStateFromStoresArray)([o.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, o.default.getDefaultChannelIds(e), o.default.getOnboardingPrompts(e), d.isChattableChannelId));
+      let t = (0, n.useStateFromStoresArray)([o.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, o.default.getDefaultChannelIds(e), o.default.getOnboardingPrompts(e))),
+        s = (0, n.useStateFromStoresArray)([o.default], () => (0, d.getMinimumSetOfDefaultChannelIds)(e, o.default.getDefaultChannelIds(e), o.default.getOnboardingPrompts(e), d.isChattableChannelId));
       return [s, t]
     }(e);
   return !!t && a.length >= E.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING && s.length >= E.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
@@ -42,7 +42,7 @@ function S(e) {
   let {
     guildId: t,
     className: s
-  } = e, d = (0, r.useAdvancedModeExperiment)(t).advancedModeAllowed, c = (0, l.default)([o.default], () => o.default.isAdvancedMode(t)), T = n.useCallback(() => {
+  } = e, d = (0, r.useAdvancedModeExperiment)(t).advancedModeAllowed, c = (0, n.useStateFromStores)([o.default], () => o.default.isAdvancedMode(t)), I = l.useCallback(() => {
     let e = c ? E.GuildOnboardingMode.ONBOARDING_DEFAULT : E.GuildOnboardingMode.ONBOARDING_ADVANCED;
     c ? (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {
       header: _.default.Messages.ONBOARDING_DEFAULT_MODE_HEADER,
@@ -71,7 +71,7 @@ function S(e) {
   return d ? (0, a.jsx)("div", {
     className: s,
     children: (0, a.jsx)(i.Anchor, {
-      onClick: T,
+      onClick: I,
       children: (0, a.jsx)(i.Text, {
         variant: "text-sm/medium",
         color: "text-link",

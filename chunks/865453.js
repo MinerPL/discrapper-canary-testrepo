@@ -1,43 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   useTrackOpenPopout: function() {
-    return m
+    return c
   }
 });
-var l = n("884691"),
-  a = n("913144"),
-  s = n("716241"),
-  i = n("412745"),
-  r = n("42203"),
-  o = n("18494"),
-  u = n("599110"),
-  d = n("958706"),
-  c = n("49111");
-let m = e => {
+var i = n("884691"),
+  l = n("716241"),
+  a = n("42203"),
+  s = n("18494"),
+  r = n("599110"),
+  o = n("558986"),
+  u = n("958706"),
+  d = n("49111");
+let c = e => {
   let {
     emojiId: t,
     currentGuildId: n,
-    popoutData: m,
-    emojiSourceGuildId: f,
-    nonce: h,
+    popoutData: c,
+    nonce: f,
     demoMode: p
   } = e, {
-    current: g
-  } = l.useRef({
+    current: m
+  } = i.useRef({
     guild_id: n,
     emoji_id: t,
-    ...(0, s.collectChannelAnalyticsMetadata)(r.default.getChannel(o.default.getChannelId(n)))
-  }), E = null != m && [i.EmojiPopoutType.ADD_PACK, i.EmojiPopoutType.REMOVE_PACK, i.EmojiPopoutType.GET_PREMIUM_INVENTORY_ENABLED].includes(m.type);
-  return l.useEffect(() => {
+    ...(0, l.collectChannelAnalyticsMetadata)(a.default.getChannel(s.default.getChannelId(n)))
+  });
+  return i.useEffect(() => {
     var e;
-    a.default.dispatch({
-      type: "EMOJI_INTERACTION_INITIATED",
-      interaction: d.EmojiInteractionPoint.TrackOpenPopoutUsed
-    }), !p && u.default.track(c.AnalyticEvents.OPEN_POPOUT, {
-      type: null !== (e = null == m ? void 0 : m.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
-      inventory_pack_id: E ? f : void 0,
-      nonce: h,
-      ...g
+    (0, o.initiateEmojiInteraction)(u.EmojiInteractionPoint.TrackOpenPopoutUsed), !p && r.default.track(d.AnalyticEvents.OPEN_POPOUT, {
+      type: null !== (e = null == c ? void 0 : c.analyticsType) && void 0 !== e ? e : "Standard Emoji Popout",
+      nonce: f,
+      ...m
     })
-  }, []), g
+  }, []), m
 }

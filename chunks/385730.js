@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return R
   },
   UnreadsCrashed: function() {
     return L
@@ -21,8 +21,8 @@ var a = n("37983"),
   E = n("206230"),
   m = n("510889"),
   p = n("826267"),
-  g = n("599110"),
-  S = n("659500"),
+  S = n("599110"),
+  g = n("659500"),
   N = n("150938"),
   _ = n("805614"),
   T = n("64318"),
@@ -30,21 +30,21 @@ var a = n("37983"),
   C = n("970268"),
   A = n("49111"),
   M = n("782340"),
-  v = n("930391");
+  v = n("84392");
 
-function x(e) {
+function R(e) {
   let {
     setTab: t,
     onJump: n,
     showTutorial: s,
     setSeenTutorial: r,
-    closePopout: x,
+    closePopout: R,
     badgeState: L
   } = e, O = l.useRef(null), [b, y] = (0, C.default)(O), {
     loadState: j,
-    channels: D
+    channels: F
   } = b, {
-    maybeLoadMore: F,
+    maybeLoadMore: D,
     markAllRead: U
   } = y;
   (function(e, t, n) {
@@ -77,20 +77,20 @@ function x(e) {
         let n = e.channels.find(e => !e.collapsed);
         null != n && t.markChannelRead(n)
       };
-      return S.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
-        S.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
+      return g.ComponentDispatch.subscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n), () => {
+        g.ComponentDispatch.unsubscribe(A.ComponentActions.MARK_TOP_INBOX_CHANNEL_READ, n)
       }
     }, [t, e.channels])
   }(b, y), l.useEffect(() => {
-    g.default.track(A.AnalyticEvents.OPEN_POPOUT, {
+    S.default.track(A.AnalyticEvents.OPEN_POPOUT, {
       type: "Inbox"
     })
-  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", x), () => {
-    h.default.unsubscribe("CONNECTION_OPEN", x)
-  }), [x]);
+  }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", R), () => {
+    h.default.unsubscribe("CONNECTION_OPEN", R)
+  }), [R]);
   let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
     P = (0, m.default)("unreads", O);
-  if (0 === D.length) {
+  if (0 === F.length) {
     var w;
     return (0, a.jsxs)("div", {
       className: v.container,
@@ -98,7 +98,7 @@ function x(e) {
         tab: c.InboxTab.UNREADS,
         setTab: t,
         badgeState: L,
-        closePopout: x
+        closePopout: R
       }), (0, a.jsx)(_.default, {
         Icon: p.default,
         header: M.default.Messages.UNREADS_EMPTY_STATE_HEADER,
@@ -113,7 +113,7 @@ function x(e) {
       tab: c.InboxTab.UNREADS,
       setTab: t,
       badgeState: L,
-      closePopout: x,
+      closePopout: R,
       children: (0, a.jsx)(N.default, {
         type: "top-header",
         onClick: U
@@ -132,11 +132,11 @@ function x(e) {
               O.current = e, t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null
             },
             ...l,
-            onScroll: j === C.LoadState.Done ? void 0 : F,
+            onScroll: j === C.LoadState.Done ? void 0 : D,
             className: v.scroller,
-            children: [s ? (0, a.jsx)(R, {
+            children: [s ? (0, a.jsx)(x, {
               setSeenTutorial: r
-            }) : null, (0, I.default)(D, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
+            }) : null, (0, I.default)(F, y, n), j === C.LoadState.Done ? null : (0, a.jsx)(f.Spinner, {
               className: v.spinner
             })]
           })
@@ -146,7 +146,7 @@ function x(e) {
   })
 }
 
-function R(e) {
+function x(e) {
   let {
     setSeenTutorial: t
   } = e;

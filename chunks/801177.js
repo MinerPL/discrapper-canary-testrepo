@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return F
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,209 +13,214 @@ var s = n("37983"),
   u = n("748820"),
   d = n("171210"),
   c = n("65597"),
-  f = n("77078"),
-  E = n("206230"),
-  _ = n("716241"),
-  T = n("606292"),
-  I = n("955735"),
-  m = n("537325"),
-  N = n("651693"),
-  p = n("380986"),
-  S = n("969706"),
-  A = n("506885"),
-  C = n("981601"),
-  h = n("845579"),
-  g = n("26989"),
-  M = n("697218"),
-  O = n("181114"),
-  R = n("752531"),
+  E = n("77078"),
+  f = n("206230"),
+  _ = n("812204"),
+  T = n("716241"),
+  I = n("606292"),
+  m = n("955735"),
+  N = n("537325"),
+  p = n("651693"),
+  S = n("380986"),
+  A = n("969706"),
+  C = n("506885"),
+  h = n("981601"),
+  g = n("845579"),
+  M = n("26989"),
+  O = n("697218"),
+  R = n("181114"),
+  v = n("752531"),
   L = n("315102"),
-  v = n("794818"),
-  P = n("866190"),
-  D = n("781083"),
-  x = n("159938"),
-  y = n("49111"),
-  U = n("894488"),
-  j = n("782340"),
-  b = n("177785"),
-  G = n("760238");
+  P = n("794818"),
+  D = n("866190"),
+  x = n("781083"),
+  y = n("159938"),
+  U = n("49111"),
+  j = n("894488"),
+  b = n("782340"),
+  G = n("960392"),
+  B = n("760238");
 
-function B(e) {
+function F(e) {
   var t, n, a;
   let {
     embedUrl: r,
-    message: B,
-    channel: F
-  } = e, k = (0, x.useMediaPostEmbedData)(r, B), {
-    setPopout: w
-  } = (0, S.default)(B.id, U.DEFAULT_POPOUTS), H = (0, p.useContextMenuMessage)(B, F, w, !0), V = h.GifAutoPlay.useSetting(), Y = (0, P.useIsWindowFocused)(), [W, K] = l.useState(!1), [z, Z] = l.useState((null == k ? void 0 : k.coverImage) == null), J = (0, c.default)([E.default], () => E.default.useReducedMotion), Q = (0, c.default)([g.default, M.default], () => {
+    message: F,
+    channel: k
+  } = e, w = (0, y.useMediaPostEmbedData)(r, F), {
+    setPopout: H
+  } = (0, A.default)(F.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), W = (0, D.useIsWindowFocused)(), [K, z] = l.useState(!1), [Q, Z] = l.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, O.default], () => {
     var e;
-    return g.default.isMember(null == k ? void 0 : k.guildId, null === (e = M.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
-  }, [k]), X = (0, c.default)([g.default], () => {
-    var e, t;
-    return (null == k ? void 0 : k.authorId) == null ? "inherit" : null !== (t = null === (e = g.default.getMember(k.guildId, k.authorId)) || void 0 === e ? void 0 : e.colorString) && void 0 !== t ? t : "inherit"
+    return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
+  }, [w]), [q, $] = (0, c.useStateFromStoresArray)([M.default], () => {
+    var e;
+    let t = (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null;
+    return [null !== (e = null == t ? void 0 : t.colorString) && void 0 !== e ? e : "inherit", null == t ? void 0 : t.colorRoleId]
   }), {
-    reducedMotion: q
-  } = l.useContext(f.AccessibilityPreferencesContext), [$, ee] = l.useState(!1), et = l.useCallback(() => {
-    K(!0)
-  }, [K]), en = l.useCallback(() => {
-    K(!1)
-  }, [K]), es = l.useCallback(async () => {
-    null != k && ((0, _.trackWithMetadata)(y.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
-      media_post_id: k.threadId,
-      channel_id: F.id,
-      can_access: k.canAccess,
-      is_member: Q
-    }), k.canAccess ? (0, m.default)(y.Routes.CHANNEL(k.guildId, k.threadId, k.messageId)) : Q ? (0, m.default)(y.Routes.CHANNEL(k.guildId, k.parentChannelId)) : await v.startLurking(k.guildId, {}, {
-      channelId: k.parentChannelId
+    reducedMotion: ee
+  } = l.useContext(E.AccessibilityPreferencesContext), [et, en] = l.useState(!1), es = l.useCallback(() => {
+    z(!0)
+  }, [z]), el = l.useCallback(() => {
+    z(!1)
+  }, [z]), ea = l.useCallback(async () => {
+    null != w && ((0, T.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+      media_post_id: w.threadId,
+      channel_id: k.id,
+      can_access: w.canAccess,
+      is_member: X
+    }), w.canAccess ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : X ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await P.startLurking(w.guildId, {}, {
+      channelId: w.parentChannelId
     }))
-  }, [k, F, Q]), el = l.useCallback(() => (o((null == k ? void 0 : k.authorId) != null, "Author Id cannot be null when loading user profile"), (0, A.default)(k.authorId, k.avatarUrl, {
-    guildId: k.guildId,
-    channelId: F.id
-  })), [k, F]);
-  if (null == k) return null;
-  let ea = e => (o(null != k.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(C.default, {
+  }, [w, k, X]), ei = l.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
+    guildId: w.guildId,
+    channelId: k.id
+  })), [w, k]);
+  if (null == w) return null;
+  let er = (e, t) => (o(null != w.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(h.default, {
       ...e,
-      userId: k.authorId,
-      guildId: k.guildId,
-      channelId: F.id
+      userId: w.authorId,
+      guildId: w.guildId,
+      channelId: k.id,
+      messageId: F.id,
+      roleId: $,
+      newAnalyticsLocations: t
     })),
-    ei = (0, L.getAvatarDecorationURL)({
-      avatarDecoration: null === (t = k.user) || void 0 === t ? void 0 : t.avatarDecoration,
-      size: (0, T.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
-      canAnimate: $
+    eo = (0, L.getAvatarDecorationURL)({
+      avatarDecoration: null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration,
+      size: (0, I.getDecorationSizeForAvatarSize)(E.AvatarSizes.SIZE_40),
+      canAnimate: et
     }),
-    er = null === (n = k.user) || void 0 === n ? void 0 : n.getAvatarURL(k.guildId, 40, $),
-    eo = () => {
-      !q.enabled && ee(e => !e)
+    eu = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, et),
+    ed = () => {
+      !ee.enabled && en(e => !e)
     },
-    eu = k.coverImage,
-    ed = null != eu && (0, N.isAnimatedImageUrl)(eu);
+    ec = w.coverImage,
+    eE = null != ec && (0, p.isAnimatedImageUrl)(ec);
   return (0, s.jsxs)("div", {
-    className: b.postPreviewContainer,
+    className: G.postPreviewContainer,
     children: [(0, s.jsxs)("div", {
-      className: b.thumbnailContainer,
-      onMouseEnter: et,
-      onMouseLeave: en,
-      children: [!z && (!0 === k.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: G,
-        alt: j.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
-        className: i(b.thumbnail, {
-          [b.spoiler]: k.shouldSpoiler
+      className: G.thumbnailContainer,
+      onMouseEnter: es,
+      onMouseLeave: el,
+      children: [!Q && (!0 === w.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
+        src: B,
+        alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        className: i(G.thumbnail, {
+          [G.spoiler]: w.shouldSpoiler
         }),
-        onContextMenu: H,
+        onContextMenu: V,
         onError: () => Z(!0)
-      }) : (0, s.jsx)(I.default, {
-        src: !(Y && (V || W)) && ed ? "".concat(eu, "?format=png") : eu,
-        backgroundSrc: "".concat(eu, "?format=png"),
-        alt: j.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+      }) : (0, s.jsx)(m.default, {
+        src: !(W && (Y || K)) && eE ? "".concat(ec, "?format=png") : ec,
+        backgroundSrc: "".concat(ec, "?format=png"),
+        alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
-        className: i(b.thumbnail, {
-          [b.spoiler]: k.shouldSpoiler
+        className: i(G.thumbnail, {
+          [G.spoiler]: w.shouldSpoiler
         }),
-        imageChildClassName: b.thumbnailImage,
-        onContextMenu: H,
+        imageChildClassName: G.thumbnailImage,
+        onContextMenu: V,
         onError: () => Z(!0)
-      })), null != k.coverImageOverlayText && (0, s.jsx)(f.Clickable, {
-        onClick: es,
+      })), null != w.coverImageOverlayText && (0, s.jsx)(E.Clickable, {
+        onClick: ea,
         children: (0, s.jsx)("div", {
-          className: b.thumbnailOverlay,
+          className: G.thumbnailOverlay,
           children: (0, s.jsxs)("div", {
-            className: b.thumbnailOverlayCta,
-            children: [(0, s.jsx)(D.default, {
+            className: G.thumbnailOverlayCta,
+            children: [(0, s.jsx)(x.default, {
               color: d.default.WHITE
-            }), (0, s.jsx)(f.Text, {
+            }), (0, s.jsx)(E.Text, {
               variant: "text-sm/semibold",
               color: "always-white",
-              children: k.coverImageOverlayText
+              children: w.coverImageOverlayText
             })]
           })
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: b.descriptionContainer,
+      className: G.descriptionContainer,
       children: [(0, s.jsxs)("div", {
-        className: b.descriptionHeader,
-        children: [(0, s.jsx)(f.Text, {
+        className: G.descriptionHeader,
+        children: [(0, s.jsx)(E.Text, {
           variant: "text-md/semibold",
           color: "text-normal",
-          className: b.descriptionHeaderText,
-          children: k.title
-        }), (0, s.jsx)(f.Text, {
+          className: G.descriptionHeaderText,
+          children: w.title
+        }), (0, s.jsx)(E.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: i(b.descriptionHeaderText, b.descriptionSubtitle),
-          children: k.subtitle
+          className: i(G.descriptionHeaderText, G.descriptionSubtitle),
+          children: w.subtitle
         })]
       }), (0, s.jsxs)("div", {
-        className: b.descriptionFooter,
-        children: [null != er && (0, s.jsx)(f.Popout, {
-          renderPopout: ea,
+        className: G.descriptionFooter,
+        children: [null != eu && (0, s.jsx)(E.Popout, {
+          renderPopout: e => er(e, [_.default.AVATAR]),
           position: "right",
           spacing: 12,
-          preload: null == k.authorId ? void 0 : el,
+          preload: null == w.authorId ? void 0 : ei,
           children: e => (0, s.jsx)("div", {
-            onMouseEnter: eo,
-            onMouseLeave: eo,
-            children: (0, s.jsx)(f.Avatar, {
+            onMouseEnter: ed,
+            onMouseLeave: ed,
+            children: (0, s.jsx)(E.Avatar, {
               ...e,
-              size: f.AvatarSizes.SIZE_40,
-              src: er,
-              "aria-label": j.default.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
-              avatarDecoration: ei
+              size: E.AvatarSizes.SIZE_40,
+              src: eu,
+              "aria-label": b.default.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
+              avatarDecoration: eo
             })
           })
         }), (0, s.jsxs)("div", {
-          className: b.descriptionFooterContainer,
+          className: G.descriptionFooterContainer,
           children: [(0, s.jsxs)("div", {
-            className: b.descriptionFooterChannelName,
-            children: [null != k.channelName && (0, s.jsx)(R.default, {
-              className: b.mediaChannelIcon
-            }), (0, s.jsx)(f.Clickable, {
-              onClick: es,
-              className: b.channelName,
-              children: (0, s.jsx)(f.Heading, {
+            className: G.descriptionFooterChannelName,
+            children: [null != w.channelName && (0, s.jsx)(v.default, {
+              className: G.mediaChannelIcon
+            }), (0, s.jsx)(E.Clickable, {
+              onClick: ea,
+              className: G.channelName,
+              children: (0, s.jsx)(E.Heading, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
-                children: null !== (a = k.channelName) && void 0 !== a ? a : k.guildName
+                children: null !== (a = w.channelName) && void 0 !== a ? a : w.guildName
               })
             })]
-          }), null != k.authorName && (0, s.jsx)(f.Text, {
+          }), null != w.authorName && (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            className: b.descriptionFooterAuthorContainer,
-            children: j.default.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
-              authorName: k.authorName,
-              authorNameHook: () => (0, s.jsx)(f.Popout, {
-                renderPopout: ea,
+            className: G.descriptionFooterAuthorContainer,
+            children: b.default.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
+              authorName: w.authorName,
+              authorNameHook: () => (0, s.jsx)(E.Popout, {
+                renderPopout: e => er(e, [_.default.USERNAME]),
                 position: "right",
-                preload: null == k.authorId ? void 0 : el,
-                children: e => (0, s.jsx)(f.NameWithRoleAnchor, {
+                preload: null == w.authorId ? void 0 : ei,
+                children: e => (0, s.jsx)(E.NameWithRoleAnchor, {
                   ...e,
-                  name: k.authorName,
-                  color: X,
-                  className: b.authorName
+                  name: w.authorName,
+                  color: q,
+                  className: G.authorName
                 })
               }, (0, u.v4)())
             })
           })]
-        }), k.canAccess ? (0, s.jsx)(f.Button, {
-          color: f.ButtonColors.BRAND,
-          onClick: es,
-          children: (0, s.jsx)(f.Text, {
+        }), w.canAccess ? (0, s.jsx)(E.Button, {
+          color: E.ButtonColors.BRAND,
+          onClick: ea,
+          children: (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "always-white",
-            children: k.ctaText
+            children: w.ctaText
           })
-        }) : (0, s.jsx)(O.default, {
+        }) : (0, s.jsx)(R.default, {
           pauseAnimation: J,
-          onClick: es,
-          className: i(b.ctaButtonContent, b.subscribeButton),
-          color: f.Button.Colors.CUSTOM,
-          children: (0, s.jsx)(f.Text, {
+          onClick: ea,
+          className: i(G.ctaButtonContent, G.subscribeButton),
+          color: E.Button.Colors.CUSTOM,
+          children: (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "always-white",
-            children: k.ctaText
+            children: w.ctaText
           })
         })]
       })]

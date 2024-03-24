@@ -1,34 +1,33 @@
 "use strict";
 E.r(_), E.d(_, {
-  default: function() {
+  rules: function() {
     return O
   }
 });
-var t = E("132710");
+var t = E("404828");
 let {
   newline: o,
   paragraph: n,
   url: r,
-  link: i,
-  strong: a,
+  link: a,
+  strong: i,
   u: I,
   br: s,
   em: T,
   image: S,
   text: N
-} = t.defaultRules;
-var O = {
+} = t.defaultRules, O = {
   newline: o,
   paragraph: n,
   url: r,
   link: {
-    ...i,
+    ...a,
     parse(e, _, E) {
-      let t = i.parse(e, _, E);
+      let t = a.parse(e, _, E);
       return t.context = E.context, t
     }
   },
-  strong: a,
+  strong: i,
   u: I,
   br: s,
   em: T,

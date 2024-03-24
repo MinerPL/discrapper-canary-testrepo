@@ -1,60 +1,74 @@
 "use strict";
 i.r(t), i.d(t, {
   useUsernameHook: function() {
-    return d
+    return h
   }
 });
-var a = i("37983"),
-  l = i("884691"),
-  n = i("77078"),
-  o = i("506885"),
-  s = i("981601"),
-  r = i("42203"),
-  u = i("441823");
+var n = i("37983"),
+  a = i("884691"),
+  l = i("77078"),
+  o = i("812204"),
+  s = i("685665"),
+  r = i("506885"),
+  u = i("981601"),
+  c = i("42203"),
+  d = i("441823");
 
-function d(e, t, i) {
-  var d, c;
-  let p = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    h = arguments.length > 4 ? arguments[4] : void 0;
-  let f = (d = e, c = t, l.useCallback(e => {
-    let t = r.default.getChannel(c);
-    null != t && null != d && (0, u.openUserContextMenu)(e, d, t)
-  }, [d, c]));
-  return l.useCallback(r => (u, d) => {
-    let c = (e, t) => (0, l.createElement)(n.NameWithRoleAnchor, {
-        ...null != e ? e : {},
-        key: t,
-        onContextMenu: f,
-        name: u,
-        color: null == r ? void 0 : r.colorString,
-        roleName: null == r ? void 0 : r.colorRoleName,
-        "aria-label": h
+function h(e) {
+  var t, i;
+  let {
+    user: h,
+    channelId: m,
+    guildId: f,
+    messageId: p,
+    stopPropagation: T = !1,
+    ariaLabel: R
+  } = e, {
+    AnalyticsLocationProvider: g
+  } = (0, s.default)(o.default.USERNAME);
+  let E = (t = h, i = m, a.useCallback(e => {
+    let n = c.default.getChannel(i);
+    null != n && null != t && (0, d.openUserContextMenu)(e, t, n)
+  }, [t, i]));
+  return a.useCallback(e => (t, i) => {
+    let o = (i, n) => (0, a.createElement)(l.NameWithRoleAnchor, {
+        ...null != i ? i : {},
+        key: n,
+        onContextMenu: E,
+        name: t,
+        color: null == e ? void 0 : e.colorString,
+        roleName: null == e ? void 0 : e.colorRoleName,
+        "aria-label": R
       }),
-      T = e => t => {
-        p && t.stopPropagation(), e(t)
+      s = e => t => {
+        T && t.stopPropagation(), e(t)
       };
-    return null != e ? (0, a.jsx)(n.Popout, {
-      position: "right",
-      preload: () => (0, o.default)(e.id, e.getAvatarURL(i, 80), {
-        guildId: i,
-        channelId: t
-      }),
-      renderPopout: l => (0, a.jsx)(s.default, {
-        ...l,
-        userId: e.id,
-        guildId: i,
-        channelId: t
-      }),
-      children: e => {
-        let {
-          onClick: t,
-          ...i
-        } = e;
-        return c({
-          onClick: T(t),
-          ...i
-        })
-      }
-    }, d) : c(void 0, d)
-  }, [e, t, i, f, p, h])
+    return (0, n.jsx)(g, {
+      children: null != h ? (0, n.jsx)(l.Popout, {
+        position: "right",
+        preload: () => (0, r.default)(h.id, h.getAvatarURL(f, 80), {
+          guildId: f,
+          channelId: m
+        }),
+        renderPopout: t => (0, n.jsx)(u.default, {
+          ...t,
+          userId: h.id,
+          guildId: f,
+          channelId: m,
+          messageId: p,
+          roleId: null == e ? void 0 : e.colorRoleId
+        }),
+        children: e => {
+          let {
+            onClick: t,
+            ...i
+          } = e;
+          return o({
+            onClick: s(t),
+            ...i
+          })
+        }
+      }, i) : o(void 0, i)
+    })
+  }, [h, m, f, p, E, T, R, g])
 }

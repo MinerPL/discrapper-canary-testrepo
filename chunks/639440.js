@@ -27,7 +27,7 @@ async function o(e) {
     threadId: e
   });
   try {
-    let t = await s.default.get({
+    let t = await s.HTTP.get({
         url: i.Endpoints.MEDIA_POST_RESHARE_GET_PREVIEW(e)
       }),
       n = t.body;
@@ -45,7 +45,7 @@ async function o(e) {
 }
 async function u(e) {
   try {
-    let t = await s.default.post({
+    let t = await s.HTTP.post({
       url: i.Endpoints.UNFURL_EMBED_URLS,
       body: {
         urls: e

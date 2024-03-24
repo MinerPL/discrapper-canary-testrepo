@@ -1,92 +1,84 @@
 "use strict";
 n.r(t), n.d(t, {
   EMOJI_BUTTON_SPRING_CONFIG: function() {
-    return _
+    return m
   },
   default: function() {
-    return I
+    return h
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  o = n.n(l),
-  s = n("907002"),
-  a = n("77078"),
-  u = n("913144"),
-  c = n("474293"),
-  d = n("958706"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("146606"),
+  o = n("77078"),
+  u = n("558986"),
+  d = n("474293"),
+  c = n("958706"),
   f = n("782340"),
-  E = n("505436");
-let _ = {
+  p = n("321573");
+let m = {
   tension: 800,
   friction: 24
 };
-var I = function(e) {
+var h = function(e) {
   var t;
   let {
     tabIndex: n,
-    className: l,
-    renderButtonContents: I,
-    active: h,
-    onClick: p,
-    "aria-controls": S,
-    focusProps: C
-  } = e, [T, N] = r.useState(!1), [v, m] = r.useState(50), g = T || h, A = (0, c.getClass)(E, "emojiButton", g ? "Hovered" : "Normal");
-  let L = (t = v, {
+    className: a,
+    renderButtonContents: h,
+    active: x,
+    onClick: E,
+    "aria-controls": y,
+    focusProps: g
+  } = e, [S, C] = l.useState(!1), [T, _] = l.useState(50), I = S || x, v = (0, d.getClass)(p, "emojiButton", I ? "Hovered" : "Normal");
+  let N = (t = T, {
       "--custom-emoji-sprite-size": "".concat(24, "px"),
       "--custom-emoji-sprite-row": Math.floor(t / 20),
       "--custom-emoji-sprite-col": t % 20
     }),
-    R = r.useCallback(() => {
-      if (!g) N(!0), m(Math.floor(77 * Math.random())), u.default.dispatch({
-        type: "EMOJI_INTERACTION_INITIATED",
-        interaction: d.EmojiInteractionPoint.EmojiButtonMouseEntered
-      })
-    }, [g, N, m]),
-    O = r.useCallback(() => {
-      N(!1)
-    }, [N]),
-    U = r.useCallback(() => {
-      u.default.dispatch({
-        type: "EMOJI_INTERACTION_INITIATED",
-        interaction: d.EmojiInteractionPoint.EmojiButtonFocused
-      })
-    }, []);
-  return (0, i.jsx)(a.Button, {
-    look: a.Button.Looks.BLANK,
-    size: a.Button.Sizes.NONE,
+    A = l.useCallback(() => {
+      if (!I) C(!0), _(Math.floor(77 * Math.random())), (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonMouseEntered)
+    }, [I, C, _]),
+    O = l.useCallback(() => {
+      C(!1)
+    }, [C]),
+    R = l.useCallback(() => (0, u.initiateEmojiInteraction)(c.EmojiInteractionPoint.EmojiButtonFocused), []);
+  return (0, i.jsx)(o.Button, {
+    look: o.Button.Looks.BLANK,
+    size: o.Button.Sizes.NONE,
     tabIndex: n,
-    className: o(A, l),
-    onMouseEnter: R,
-    onMouseOver: R,
+    className: s(v, a),
+    onMouseEnter: A,
+    onMouseOver: A,
     onMouseLeave: O,
-    onFocus: U,
-    onClick: p,
+    onFocus: R,
+    onClick: E,
     "aria-label": f.default.Messages.SELECT_EMOJI,
-    "aria-controls": S,
-    "aria-expanded": h,
+    "aria-controls": y,
+    "aria-expanded": x,
     "aria-haspopup": "dialog",
-    focusProps: C,
-    children: null != I ? I() : (0, i.jsx)(s.Spring, {
-      config: _,
+    focusProps: g,
+    children: null != h ? h() : (0, i.jsx)(r.Spring, {
+      config: m,
       to: {
-        value: g ? 1 : 0
+        value: I ? 1 : 0
       },
       children: e => {
         let {
           value: t
         } = e;
-        return (0, i.jsxs)(s.animated.div, {
-          className: E.spriteContainer,
+        return (0, i.jsxs)(r.animated.div, {
+          className: p.spriteContainer,
           style: {
-            ...L,
+            ...N,
             transform: t.to([0, 1], [1, 1.14]).to(e => "scale(".concat(e, ")"))
           },
           children: [(0, i.jsx)("div", {
-            className: o(E.sprite, E.spriteColored, g ? E.active : E.inactive)
+            className: s(p.sprite, p.spriteColored, I ? p.active : p.inactive)
           }), (0, i.jsx)("div", {
-            className: o(E.sprite, E.spriteGreyscale, g ? E.inactive : E.active)
+            className: s(p.sprite, p.spriteGreyscale, I ? p.inactive : p.active)
           })]
         })
       }

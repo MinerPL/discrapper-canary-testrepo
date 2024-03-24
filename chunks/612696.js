@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
     return d
   }
@@ -7,51 +7,51 @@ i.r(t), i.d(t, {
 var n = i("773336"),
   l = i("126939"),
   a = i("501260"),
-  u = i("871388"),
-  r = i("49111");
+  r = i("871388"),
+  u = i("49111");
 
-function d(e) {
+function d(t) {
   let {
-    user: t,
+    user: e,
     activity: i,
     application: d,
-    channelId: o,
-    currentUser: s,
+    channelId: s,
+    currentUser: o,
     isEmbedded: c,
-    ChannelStore: f,
+    ChannelStore: E,
     GuildStore: _,
-    GuildMemberCountStore: E,
+    GuildMemberCountStore: f,
     RelationshipStore: I,
     SelectedChannelStore: A,
     VoiceStateStore: T,
-    PermissionStore: C
-  } = e, v = (0, l.getIsActivitiesEnabledForCurrentPlatform)();
-  if (null == t) return !1;
+    PermissionStore: S
+  } = t, C = E.getChannel(s), N = (0, l.getIsActivitiesEnabledForCurrentPlatform)(C);
+  if (null == e) return !1;
   if (c) return (0, a.default)({
-    userId: t.id,
+    userId: e.id,
     activity: i,
-    channelId: o,
-    currentUser: s,
+    channelId: s,
+    currentUser: o,
     application: d,
-    isActivitiesEnabledForCurrentPlatform: v,
-    ChannelStore: f,
+    isActivitiesEnabledForCurrentPlatform: N,
+    ChannelStore: E,
     VoiceStateStore: T,
-    PermissionStore: C,
+    PermissionStore: S,
     GuildStore: _
   }) === a.EmbeddedActivityJoinability.CAN_JOIN;
   if (!(0, n.isDesktop)()) return !1;
-  if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_FRIENDS) && I.isFriend(t.id)) return !0;
-  if ((0, u.default)(i, r.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)) {
-    let e = f.getChannel(A.getVoiceChannelId());
-    if (null == e || !T.isInChannel(e.id, t.id)) return !1;
-    switch (e.type) {
-      case r.ChannelTypes.DM:
-      case r.ChannelTypes.GROUP_DM:
+  if ((0, r.default)(i, u.ActivityFlags.PARTY_PRIVACY_FRIENDS) && I.isFriend(e.id)) return !0;
+  if ((0, r.default)(i, u.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)) {
+    let t = E.getChannel(A.getVoiceChannelId());
+    if (null == t || !T.isInChannel(t.id, e.id)) return !1;
+    switch (t.type) {
+      case u.ChannelTypes.DM:
+      case u.ChannelTypes.GROUP_DM:
         return !0
     }
-    let i = _.getGuild(e.getGuildId());
-    if (null == i || i.hasFeature(r.GuildFeatures.COMMUNITY)) return !1;
-    let n = E.getMemberCount(i.id);
+    let i = _.getGuild(t.getGuildId());
+    if (null == i || i.hasFeature(u.GuildFeatures.COMMUNITY)) return !1;
+    let n = f.getMemberCount(i.id);
     return null != n && n < 100
   }
   return !1

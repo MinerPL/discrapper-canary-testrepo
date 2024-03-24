@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return v
   }
 }), n("222007");
 var i = n("988415"),
@@ -21,39 +21,39 @@ function c(e) {
   return d(e) && !a.has(e.id) && (a.add(e.id), t = !0), !d(e) && a.has(e.id) && (a.delete(e.id), t = !0), !d(e) && o.has(e.id) && (o.delete(e.id), t = !0), t
 }
 
-function f(e) {
+function _(e) {
   var t;
   null != e && (u = null !== (t = (0, i.getCountryCodeByAlpha2)(e)) && void 0 !== t ? t : (0, i.getDefaultCountryCode)())
 }
 
-function _(e) {
-  "CONNECTION_OPEN" === e.type && f(e.countryCode), a.clear(), o.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
+function f(e) {
+  "CONNECTION_OPEN" === e.type && _(e.countryCode), a.clear(), o.clear(), Object.values(s.default.getMutablePrivateChannels()).forEach(e => {
     c(e)
   }), l = !0
 }
 
-function h(e) {
+function E(e) {
   let {
     channelId: t
   } = e;
   o.add(t)
 }
 
-function g(e) {
+function h(e) {
   let {
     channel: t
   } = e;
   return c(t)
 }
 
-function m(e) {
+function g(e) {
   let {
     channels: t
   } = e;
   for (let e of t) c(e)
 }
 
-function E(e) {
+function m(e) {
   let {
     channel: t
   } = e;
@@ -67,16 +67,23 @@ function p(e) {
   t.forEach(e => a.add(e))
 }
 
-function v(e) {
+function S(e) {
   let {
     countryCode: t
   } = e;
-  f(t)
+  _(t)
 }
-class S extends r.default {
+class T extends r.default {
+  initialize() {
+    this.waitFor(s.default)
+  }
+  loadCache() {
+    let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
+    null != e && (a = new Set(e))
+  }
   takeSnapshot() {
     return {
-      version: S.LATEST_SNAPSHOT_VERSION,
+      version: T.LATEST_SNAPSHOT_VERSION,
       data: Array.from(a)
     }
   }
@@ -99,21 +106,18 @@ class S extends r.default {
     return l
   }
   constructor() {
-    super(), this.loadCache = () => {
-      let e = this.readSnapshot(S.LATEST_SNAPSHOT_VERSION);
-      null != e && (a = new Set(e))
-    }, this.registerActionHandlers({
-      CONNECTION_OPEN: _,
-      CONNECTION_OPEN_SUPPLEMENTAL: _,
-      CACHE_LOADED_LAZY: this.loadCache,
+    super({
+      CONNECTION_OPEN: f,
+      CONNECTION_OPEN_SUPPLEMENTAL: f,
+      CACHE_LOADED_LAZY: () => this.loadCache(),
       OVERLAY_INITIALIZE: p,
-      CHANNEL_CREATE: g,
-      CHANNEL_UPDATES: m,
-      CHANNEL_DELETE: E,
-      SET_LOCATION_METADATA: v,
-      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: h
-    }), this.waitFor(s.default)
+      CHANNEL_CREATE: h,
+      CHANNEL_UPDATES: g,
+      CHANNEL_DELETE: m,
+      SET_LOCATION_METADATA: S,
+      MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: E
+    })
   }
 }
-S.displayName = "MessageRequestStore", S.LATEST_SNAPSHOT_VERSION = 1;
-var T = new S
+T.displayName = "MessageRequestStore", T.LATEST_SNAPSHOT_VERSION = 1;
+var v = new T

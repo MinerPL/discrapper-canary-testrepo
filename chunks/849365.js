@@ -1,38 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return o
   }
 });
-var s = n("605250"),
-  i = n("802493"),
-  r = n("723939");
-let a = "version",
-  o = new s.default("KvCacheVersion");
-var d = new class e {
+var i = n("605250"),
+  s = n("802493"),
+  r = n("791109");
+let a = new i.default("KvCacheVersion");
+var o = new class e {
   async okAsync(e) {
-    let t = await i.default.cache(e).get(a);
-    return null == t ? null : 3 === t
+    let t = await s.default.cache(e).get(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY);
+    return null == t ? null : t === r.VERSION_TO_SKIP_READING_THE_DATABASE
   }
-  okSync(e) {
-    try {
-      let t = i.default.cache(e).getSyncUnsafe(a);
-      return null == t ? null : 3 === t
-    } catch (e) {
-      return o.log("couldn't read version from database: ".concat(e.message)), !1
-    }
+  canUseGuildVersions() {
+    return this.hasSuccessfullyConnected ? Promise.resolve(!0) : this.doesDatabaseVersionMatchJsConstants()
   }
-  handleClearGuildCache(e) {
-    i.default.cacheTransaction(e).delete(a), i.default.cacheTransaction(e).delete("CacheStore.Nonce"), r.default.replaceDisableAllDatabases("CLEAR_GUILD_CACHE (via KvCacheVersion)")
+  async doesDatabaseVersionMatchJsConstants() {
+    let e = s.default.forceResyncVersion();
+    if (null == e) return !1;
+    let t = await e.get(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY),
+      n = null == t ? void 0 : t.version;
+    return n === r.VERSION_TO_FORCE_RESYNCING_ALL_DATA || (a.info("KVStore version mismatch: ".concat(n, " vs ").concat(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA)), !1)
+  }
+  handleClear() {
+    this.hasSuccessfullyConnected = !1
+  }
+  handleConnectionOpen() {
+    this.hasSuccessfullyConnected = !0
   }
   handleWrite(e) {
-    i.default.cacheTransaction(e).put("hello", "\uD83D\uDC4B"), i.default.cacheTransaction(e).put(a, 3)
+    this.hasSuccessfullyConnected = !0, s.default.cacheTransaction(e).put(r.HELLO_KEY, "\uD83D\uDC4B"), s.default.cacheTransaction(e).put(r.VERSION_TO_SKIP_READING_THE_DATABASE_KEY, r.VERSION_TO_SKIP_READING_THE_DATABASE), s.default.forceResyncVersionTransaction(e).put(r.VERSION_TO_FORCE_RESYNCING_ALL_DATA_KEY, {
+      version: r.VERSION_TO_FORCE_RESYNCING_ALL_DATA
+    })
   }
-  handleReset() {}
+  resetInMemoryState() {
+    this.hasSuccessfullyConnected = !1
+  }
   constructor() {
-    this.actions = {
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
-      CONNECTION_OPEN: (e, t) => this.handleWrite(t),
+    this.hasSuccessfullyConnected = !1, this.actions = {
+      BACKGROUND_SYNC: (e, t) => this.handleWrite(t),
+      CONNECTION_OPEN: () => this.handleConnectionOpen(),
       WRITE_CACHES: (e, t) => this.handleWrite(t)
     }
   }

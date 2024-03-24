@@ -1,13 +1,21 @@
 "use strict";
-r.r(t), r.d(t, {
+e.r(t), e.d(t, {
   default: function() {
-    return n
+    return i
   }
-});
-var n = function(e, t) {
-  for (var r = -1, n = null == e ? 0 : e.length, o = 0, a = []; ++r < n;) {
-    var i = e[r];
-    t(i, r, e) && (a[o++] = i)
+}), e("511434"), e("313619"), e("654714"), e("287168"), e("956660"), e("222007");
+var o = e("884691"),
+  a = e("730290"),
+  c = e("49111"),
+  i = () => {
+    let {
+      redirect: n
+    } = (0, a.parse)(window.location.search);
+    return o.useEffect(() => {
+      if (null != n && "" !== n) {
+        let t = new URL("".concat(window.location.origin).concat(n)),
+          e = new URLSearchParams(t.search);
+        e.set("handoff_token", "null"), t.search = e.toString(), window.location.href = t.toString()
+      } else window.location.href = c.Routes.LOGIN
+    }, [n]), null
   }
-  return a
-}

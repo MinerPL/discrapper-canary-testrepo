@@ -13,9 +13,9 @@ var s = n("37983"),
   u = n("162771"),
   d = n("174622"),
   c = n("599110"),
-  f = n("49111"),
-  E = n("782340"),
-  _ = n("18978");
+  E = n("49111"),
+  f = n("782340"),
+  _ = n("599541");
 
 function T(e) {
   var t;
@@ -25,7 +25,7 @@ function T(e) {
     messageData: I
   } = e, m = u.default.getGuildId(), N = o.default.getChannelId(m), p = l.useCallback(() => {
     var e;
-    c.default.track(f.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
+    c.default.track(E.AnalyticEvents.CHANNEL_LINK_PREVIEW_JOINED, {
       author_id: null === (e = I.author) || void 0 === e ? void 0 : e.id,
       link_guild_id: n.id,
       link_channel_id: T.id,
@@ -47,7 +47,7 @@ function T(e) {
           onClick: p,
           children: (0, s.jsxs)("span", {
             className: _.infoTitle,
-            children: [E.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
+            children: [f.default.Messages.INVITE_BUTTON_BODY_IN_GUILD.format({
               guildName: n.name
             }), (0, s.jsx)("span", {
               className: _.infoBadge,
@@ -61,7 +61,7 @@ function T(e) {
       }), (0, s.jsx)(d.default.Button, {
         onClick: p,
         color: d.default.Button.Colors.GREEN,
-        children: T.isGuildStageVoice() ? E.default.Messages.STAGE_CHANNEL_JOIN : E.default.Messages.JOIN_VOICE
+        children: T.isGuildStageVoice() ? f.default.Messages.STAGE_CHANNEL_JOIN : f.default.Messages.JOIN_VOICE
       })]
     })
   })

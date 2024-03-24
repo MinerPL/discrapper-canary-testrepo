@@ -48,23 +48,24 @@ function w(e) {
     onSelect: O
   } = e, j = function(e) {
     let t = V(e),
-      n = e.ownerId === I.default.getId(),
-      d = (0, g.default)(x.default),
+      n = (0, g.default)(x.default),
+      d = M.default.getSettings().clipsEnabled,
+      o = e.ownerId === I.default.getId(),
       {
-        enableViewerClipping: o,
-        ignoreSenderPreference: r
+        enableViewerClipping: r,
+        ignoreSenderPreference: s
       } = E.default.useExperiment({
         location: "StreamContextMenu"
       }, {
         autoTrackExposure: !1
       }),
-      s = (0, l.useStateFromStores)([M.default], () => M.default.getIsAtMaxSaveClipOperations()),
-      i = (0, l.useStateFromStores)([M.default], () => M.default.isViewerClippingAllowedForUser(e.ownerId)) || r;
-    return d && o && t ? (0, a.jsx)(u.MenuItem, {
+      i = (0, l.useStateFromStores)([M.default], () => M.default.getIsAtMaxSaveClipOperations()),
+      c = (0, l.useStateFromStores)([M.default], () => M.default.isViewerClippingAllowedForUser(e.ownerId)) || s;
+    return n && r && t ? (0, a.jsx)(u.MenuItem, {
       id: "clip-stream",
-      disabled: !(n || i) || s,
+      disabled: !d || !(o || c) || i,
       label: U.default.Messages.CLIPS_SAVE,
-      action: () => n ? (0, m.saveClip)() : (0, m.saveClip)((0, v.encodeStreamKey)(e))
+      action: () => o ? (0, m.saveClip)() : (0, m.saveClip)((0, v.encodeStreamKey)(e))
     }) : null
   }(t), R = V(t), F = function(e) {
     let t = V(e),

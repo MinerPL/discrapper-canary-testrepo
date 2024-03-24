@@ -23,7 +23,7 @@ function r(e, t) {
     guildId: e,
     roles: t.roles,
     flags: t.flags
-  }), a.default.patch({
+  }), a.HTTP.patch({
     url: s.Endpoints.SET_GUILD_MEMBER(e),
     body: t,
     oldFormErrors: !!n || void 0

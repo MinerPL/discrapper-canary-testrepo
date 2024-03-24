@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 }), n("222007"), n("702976"), n("70102");
 var a = n("917351"),
   s = n.n(a),
-  i = n("913144"),
-  l = n("599110"),
+  l = n("913144"),
+  i = n("599110"),
   r = n("550368"),
   o = n("718517"),
   u = n("861309"),
@@ -15,8 +15,8 @@ var a = n("917351"),
   c = n("716724"),
   f = n("492249"),
   E = n("49111");
-let _ = ["349134787773988865"];
-var h = {
+let h = ["349134787773988865"];
+var _ = {
   [E.RPCCommands.SET_ACTIVITY]: {
     scope: {
       [f.RPC_SCOPE_CONFIG.ANY]: [E.OAuth2Scopes.RPC, E.OAuth2Scopes.RPC_ACTIVITIES_WRITE, f.RPC_LOCAL_SCOPE]
@@ -61,7 +61,7 @@ var h = {
         socket: a,
         args: {
           pid: c,
-          activity: h
+          activity: _
         },
         isSocketConnected: C
       } = e;
@@ -71,62 +71,66 @@ var h = {
       if (null == c && f.TransportTypes.IPC === a.transport) throw new u.default({
         errorCode: E.RPCErrors.INVALID_COMMAND
       }, "nonzero pid required");
-      if (null == h) return i.default.dispatch({
+      if (null == _) return l.default.dispatch({
         type: "LOCAL_ACTIVITY_UPDATE",
         socketId: a.id,
         pid: c,
-        activity: h
-      }), Promise.resolve(h);
-      h.name = a.application.name, h.application_id = a.application.id;
-      let I = a.transport === f.TransportTypes.POST_MESSAGE,
-        T = (0, d.computeActivityFlags)(h, I);
-      T > 0 && (h.flags = T), delete h.instance, null === (t = h.party) || void 0 === t || delete t.privacy;
+        activity: _
+      }), Promise.resolve(_);
+      _.name = a.application.name, _.application_id = a.application.id;
+      let S = a.transport === f.TransportTypes.POST_MESSAGE,
+        I = (0, d.computeActivityFlags)(_, S);
+      I > 0 && (_.flags = I), delete _.instance, null === (t = _.party) || void 0 === t || delete t.privacy;
       let {
-        assets: S,
+        assets: m,
         party: p,
-        secrets: m,
-        timestamps: A,
-        buttons: g,
+        secrets: T,
+        timestamps: g,
+        buttons: A,
         type: N
-      } = h;
-      if ((null == N || N !== E.ActivityTypes.PLAYING && !I) && (h.type = E.ActivityTypes.PLAYING), null != m) {
-        let e = s.values(m).filter(e => !!e);
-        if (null != p && s.intersection(e, [p.id]).length > 0 && !_.includes(a.application.id)) throw new u.default({
+      } = _;
+      if ((null == N || N !== E.ActivityTypes.PLAYING && !S) && (_.type = E.ActivityTypes.PLAYING), null != T) {
+        let e = s.values(T).filter(e => !!e);
+        if (null != p && s.intersection(e, [p.id]).length > 0 && !h.includes(a.application.id)) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot match the party id");
         if (s.uniq(e).length < e.length) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets must be unique");
-        if (null != g) throw new u.default({
+        if (null != A) throw new u.default({
           errorCode: E.RPCErrors.INVALID_ACTIVITY_SECRET
         }, "secrets cannot currently be sent with buttons")
       }
-      if (null != g && (h.metadata = {
-          button_urls: g.map(e => e.url)
-        }, h.buttons = g.map(e => e.label)), null != A)
-        for (let e of Object.keys(A)) Date.now().toString().length - A[e].toString().length > 2 && (A[e] = Math.floor(A[e] * o.default.Millis.SECOND));
-      if (null == S) n = Promise.resolve([]);
+      if (null != A && (_.metadata = {
+          button_urls: A.map(e => e.url)
+        }, _.buttons = A.map(e => e.label)), null != g)
+        for (let e of Object.keys(g)) Date.now().toString().length - g[e].toString().length > 2 && (g[e] = Math.floor(g[e] * o.default.Millis.SECOND));
+      if (null == m) n = Promise.resolve([]);
       else {
         if (null == a.application || null == a.application.id) throw Error();
-        n = (0, r.fetchAssetIds)(a.application.id, [S.large_image, S.small_image])
+        n = (0, r.fetchAssetIds)(a.application.id, [m.large_image, m.small_image])
       }
       return n.then(e => {
-        let [t, n] = e;
-        if (null != S && (null != t ? S.large_image = t : delete S.large_image, null != n ? S.small_image = n : delete S.small_image), !C()) return;
-        i.default.dispatch({
+        var t, n;
+        let [s, r] = e;
+        if (null != m && (null != s ? m.large_image = s : delete m.large_image, null != r ? m.small_image = r : delete m.small_image), !C()) return;
+        l.default.dispatch({
           type: "LOCAL_ACTIVITY_UPDATE",
           socketId: a.id,
           pid: c,
-          activity: h
+          activity: _
         });
         let {
-          secrets: s,
-          party: r
-        } = h, o = {
+          secrets: o,
+          party: u
+        } = _, d = {
           application_id: a.application.id,
-          type: h.type
+          type: _.type,
+          name: _.name,
+          details: null !== (t = _.details) && void 0 !== t ? t : "",
+          state: null !== (n = _.state) && void 0 !== n ? n : ""
         };
-        return null != s && (o.has_match_secret = !!s.match, o.has_join_secret = !!s.join), null != S && (o.has_images = !!(S.large_image || S.small_image)), null != r && (o.party_max = null != r.size ? r.size[1] : void 0, o.party_id = r.id), l.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, o), h
+        return null != o && (d.has_match_secret = !!o.match, d.has_join_secret = !!o.join), null != m && (d.has_images = !!(m.large_image || m.small_image)), null != u && (d.party_max = null != u.size ? u.size[1] : void 0, d.party_id = u.id), i.default.track(E.AnalyticEvents.ACTIVITY_UPDATED, d), _
       })
     }
   }

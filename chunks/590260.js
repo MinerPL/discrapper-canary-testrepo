@@ -24,9 +24,9 @@ function l(e) {
   return !!t && null != e && !d && (e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || n && l || u)
 }
 
-function u(e) {
-  let t = (0, r.isEligibleForGuildShopStorefront)(),
-    n = (0, r.isEligibleForSubscriptionsInGuildShop)(null == e ? void 0 : e.id, "channel_list"),
-    i = (0, s.areRoleSubscriptionsVisibleInGuild)(null == e ? void 0 : e.id);
-  return !!t && null != e && (e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || n && i)
+function u(e, t) {
+  let n = (0, r.isEligibleForGuildShopStorefront)(),
+    i = (0, r.isEligibleForSubscriptionsInGuildShop)(null == e ? void 0 : e.id, "channel_list"),
+    a = (0, s.areRoleSubscriptionsVisibleInGuild)(null == e ? void 0 : e.id, t);
+  return !!n && null != e && (e.hasFeature(o.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) || i && a)
 }

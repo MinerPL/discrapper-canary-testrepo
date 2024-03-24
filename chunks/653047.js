@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
   default: function() {
     return i
   }
-}), n("702976");
+}), n("702976"), n("222007");
 var i, s = n("266088"),
   r = n("666038"),
   a = n("315102"),
@@ -49,7 +49,13 @@ i = class e extends r.default {
       maxParticipants: t.max_participants,
       tags: t.tags,
       embeddedActivityConfig: t.embedded_activity_config,
-      roleConnectionsVerificationUrl: t.role_connections_verification_url
+      roleConnectionsVerificationUrl: t.role_connections_verification_url,
+      integrationTypesConfig: null != t.integration_types_config ? Object.fromEntries(Object.entries(t.integration_types_config).map(e => {
+        let [t, n] = e;
+        return [t, {
+          oauth2InstallParams: (null != n ? n : {}).oauth2_install_params
+        }]
+      })) : null
     })
   }
   getIconURL(e) {
@@ -85,6 +91,11 @@ i = class e extends r.default {
     var e, t;
     return null !== (t = null !== (e = this.maxParticipants) && void 0 !== e ? e : d[this.id]) && void 0 !== t ? t : 0
   }
+  supportsIntegrationTypes() {
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    let i = this.integrationTypesConfig;
+    return null != i && t.every(e => e in i)
+  }
   get destinationSkuId() {
     return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId
   }
@@ -97,6 +108,6 @@ i = class e extends r.default {
   }
   constructor(e) {
     var t, n, i, r;
-    super(), this.id = e.id, this.name = e.name, this.icon = e.icon || null, this.splash = e.splash || null, this.overlay = e.overlay || !1, this.overlayWarn = e.overlayWarn || !1, this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1, this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : s.ApplicationOverlayMethodFlags.DEFAULT, this.hook = null === (n = e.hook) || void 0 === n || n, this.aliases = e.aliases || [], this.publishers = e.publishers || [], this.developers = e.developers || [], this.primarySkuId = e.primarySkuId, this.storeListingSkuId = e.storeListingSkuId, this.guildId = e.guildId || null, this.guild = e.guild || null, this.thirdPartySkus = e.thirdPartySkus || [], this.executables = (e.executables || []).map(c), this.hashes = e.hashes || [], this.description = e.description || null, this.eulaId = e.eulaId || null, this.slug = e.slug || null, this.bot = e.bot || null, this.coverImage = e.coverImage || null, this.flags = null !== (i = e.flags) && void 0 !== i ? i : 0, this.tags = null !== (r = e.tags) && void 0 !== r ? r : [], this.maxParticipants = e.maxParticipants, this.embeddedActivityConfig = e.embedded_activity_config, this.type = e.type, this.team = e.team, this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl
+    super(), this.id = e.id, this.name = e.name, this.icon = e.icon || null, this.splash = e.splash || null, this.overlay = e.overlay || !1, this.overlayWarn = e.overlayWarn || !1, this.overlayCompatibilityHook = e.overlayCompatibilityHook || !1, this.overlayMethods = null !== (t = e.overlayMethods) && void 0 !== t ? t : s.ApplicationOverlayMethodFlags.DEFAULT, this.hook = null === (n = e.hook) || void 0 === n || n, this.aliases = e.aliases || [], this.publishers = e.publishers || [], this.developers = e.developers || [], this.primarySkuId = e.primarySkuId, this.storeListingSkuId = e.storeListingSkuId, this.guildId = e.guildId || null, this.guild = e.guild || null, this.thirdPartySkus = e.thirdPartySkus || [], this.executables = (e.executables || []).map(c), this.hashes = e.hashes || [], this.description = e.description || null, this.eulaId = e.eulaId || null, this.slug = e.slug || null, this.bot = e.bot || null, this.coverImage = e.coverImage || null, this.flags = null !== (i = e.flags) && void 0 !== i ? i : 0, this.tags = null !== (r = e.tags) && void 0 !== r ? r : [], this.maxParticipants = e.maxParticipants, this.embeddedActivityConfig = e.embedded_activity_config, this.type = e.type, this.team = e.team, this.roleConnectionsVerificationUrl = e.roleConnectionsVerificationUrl, this.integrationTypesConfig = e.integrationTypesConfig, this.isMonetized = e.is_monetized
   }
 }

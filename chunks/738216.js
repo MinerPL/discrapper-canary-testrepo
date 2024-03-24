@@ -14,17 +14,17 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("872717"),
-  n = s("913144"),
-  l = s("49111");
+  l = s("913144"),
+  n = s("49111");
 let i = 36288e5;
 
 function r(e, t) {
   let s = new Date,
-    n = new Date(s.getTime() - (s.getDay() + 1) * 864e5 - i);
-  return a.default.get({
+    l = new Date(s.getTime() - (s.getDay() + 1) * 864e5 - i);
+  return a.HTTP.get({
     url: t(e),
     query: {
-      start: n.toISOString(),
+      start: l.toISOString(),
       end: s.toISOString(),
       interval: 2
     },
@@ -33,17 +33,17 @@ function r(e, t) {
 }
 
 function o(e) {
-  return r(e, l.Endpoints.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(t => {
+  return r(e, n.Endpoints.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(t => {
     let {
       body: s
     } = t;
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS",
       guildId: e,
       stats: s.slice(0, 2)
     })
   }, e => {
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_FAILURE",
       error: e.body
     })
@@ -51,17 +51,17 @@ function o(e) {
 }
 
 function d(e) {
-  return r(e, l.Endpoints.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(t => {
+  return r(e, n.Endpoints.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(t => {
     let {
       body: s
     } = t;
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS",
       guildId: e,
       stats: s.slice(0, 2)
     })
   }, e => {
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_FAILURE",
       error: e.body
     })
@@ -69,7 +69,7 @@ function d(e) {
 }
 
 function u(e) {
-  return r(e, l.Endpoints.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(t => {
+  return r(e, n.Endpoints.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(t => {
     let {
       body: s
     } = t, a = s.filter(e => e.hasOwnProperty("pct_retained")).map(e => {
@@ -83,13 +83,13 @@ function u(e) {
         pct_retained: s
       }
     });
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS",
       guildId: e,
       stats: a.slice(0, 2)
     })
   }, e => {
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_FAILURE",
       error: e.body
     })
@@ -97,10 +97,10 @@ function u(e) {
 }
 
 function c(e) {
-  return a.default.get({
-    url: l.Endpoints.GUILD_ANALYTICS_MEMBER_INSIGHTS(e)
+  return a.HTTP.get({
+    url: n.Endpoints.GUILD_ANALYTICS_MEMBER_INSIGHTS(e)
   }).then(t => {
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_ANALYTICS_MEMBER_INSIGHTS_FETCH_SUCCESS",
       guildId: e,
       hasAccessRate: t.body.has_access_rate,

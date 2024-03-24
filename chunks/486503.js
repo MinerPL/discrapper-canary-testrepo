@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return g
   }
 }), n("222007");
 var i = n("42203"),
@@ -35,30 +35,37 @@ function c(e) {
   a.add(t)
 }
 
-function f(e) {
+function _(e) {
   let {
     channel: t
   } = e;
   return u(t)
 }
 
-function _(e) {
+function f(e) {
   let {
     channels: t
   } = e;
   for (let e of t) u(e)
 }
 
-function h(e) {
+function E(e) {
   let {
     channel: t
   } = e, n = !1;
   return r.has(t.id) && (r.delete(t.id), n = !0), n
 }
-class g extends s.default {
+class h extends s.default {
+  initialize() {
+    this.waitFor(i.default)
+  }
+  loadCache() {
+    let e = this.readSnapshot(h.LATEST_SNAPSHOT_VERSION);
+    null != e && (r = new Set(e))
+  }
   takeSnapshot() {
     return {
-      version: g.LATEST_SNAPSHOT_VERSION,
+      version: h.LATEST_SNAPSHOT_VERSION,
       data: Array.from(r)
     }
   }
@@ -78,19 +85,16 @@ class g extends s.default {
     return o
   }
   constructor() {
-    super(), this.loadCache = () => {
-      let e = this.readSnapshot(g.LATEST_SNAPSHOT_VERSION);
-      null != e && (r = new Set(e))
-    }, this.registerActionHandlers({
+    super({
       CONNECTION_OPEN: d,
       CONNECTION_OPEN_SUPPLEMENTAL: d,
-      CACHE_LOADED_LAZY: this.loadCache,
-      CHANNEL_CREATE: f,
-      CHANNEL_UPDATES: _,
-      CHANNEL_DELETE: h,
+      CACHE_LOADED_LAZY: () => this.loadCache(),
+      CHANNEL_CREATE: _,
+      CHANNEL_UPDATES: f,
+      CHANNEL_DELETE: E,
       MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c
-    }), this.waitFor(i.default)
+    })
   }
 }
-g.displayName = "SpamMessageRequestStore", g.LATEST_SNAPSHOT_VERSION = 1;
-var m = new g
+h.displayName = "SpamMessageRequestStore", h.LATEST_SNAPSHOT_VERSION = 1;
+var g = new h

@@ -8,19 +8,19 @@ var a = n("37983"),
   l = n("884691"),
   s = n("414456"),
   i = n.n(s),
-  r = n("907002"),
-  o = n("617258"),
-  u = n("446674"),
+  r = n("146606"),
+  u = n("617258"),
+  o = n("446674"),
   d = n("669491"),
   c = n("769846"),
   f = n("77078"),
   h = n("997289"),
-  p = n("685665"),
-  m = n("506885"),
+  m = n("685665"),
+  p = n("506885"),
   E = n("697218"),
-  C = n("216422"),
-  g = n("956089"),
-  S = n("980423"),
+  g = n("216422"),
+  S = n("956089"),
+  C = n("980423"),
   _ = n("599110"),
   I = n("719923"),
   T = n("12307"),
@@ -28,8 +28,8 @@ var a = n("37983"),
   x = n("49111"),
   N = n("646718"),
   A = n("782340"),
-  M = n("456802");
-let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
+  M = n("72523");
+let R = (0, u.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   j = {
     opacity: 0,
     transform: "translate3d(100%, 0, 0)"
@@ -38,19 +38,19 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
     opacity: 1,
     transform: "translate3d(0%, 0, 0)"
   },
-  O = {
+  y = {
     opacity: 0
   },
-  y = {
+  O = {
     opacity: 1
   },
   P = {
     borderRadius: "".concat(R, "px ").concat(R, "px ").concat(R, "px ").concat(R, "px")
   },
-  b = {
+  D = {
     borderRadius: "0px ".concat(R, "px ").concat(R, "px 0px")
   },
-  D = {
+  b = {
     mass: 1,
     tension: 500,
     friction: 18,
@@ -59,75 +59,75 @@ let R = (0, o.cssValueToNumber)(c.default.LIVE_INDICATOR_BORDER_RADIUS),
   U = e => {
     let t, s, {
         participant: r,
-        isUpsellEnabled: o,
+        isUpsellEnabled: u,
         shape: c,
-        size: m,
+        size: p,
         didTrackUpsellViewed: R,
         setDidTrackUpsellViewed: j,
         className: L
       } = e,
-      O = (0, T.getMaxQuality)(r),
+      y = (0, T.getMaxQuality)(r),
       {
-        analyticsLocations: y
-      } = (0, p.default)(),
+        analyticsLocations: O
+      } = (0, m.default)(),
       P = null != (0, v.default)(r);
     try {
-      t = (0, T.isPremiumFPS)(O)
+      t = (0, T.isPremiumFPS)(y)
     } catch (e) {
       t = !1
     }
     try {
-      s = (0, T.isPremiumResolution)(O)
+      s = (0, T.isPremiumResolution)(y)
     } catch (e) {
       s = !1
     }
-    let b = t || s,
+    let D = t || s,
       {
-        location: D
+        location: b
       } = (0, h.useAnalyticsContext)(),
-      U = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
-      w = o && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
+      U = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
+      w = u && !I.default.isPremium(U, N.PremiumTypes.TIER_1) && !I.default.canStreamQuality(I.default.StreamQuality.MID, U),
       F = l.useCallback(() => {
-        w && b && (0, f.openModalLazy)(async () => {
+        w && D && (0, f.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("754534").then(n.bind(n, "754534"));
           return t => (0, a.jsx)(e, {
             ...t,
-            analyticsSource: D
+            analyticsSource: b
           })
         })
-      }, [w, b, D]);
+      }, [w, D, b]);
     if (l.useEffect(() => {
-        !R && b && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        !R && D && (_.default.track(x.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: N.PremiumUpsellTypes.STREAM_QUALITY_INDICATOR,
           has_premium_stream_fps: t,
           has_premium_stream_resolution: s,
-          location_stack: y
+          location_stack: O
         }), j(!0))
-      }, [t, s, b, R, j, y]), null == O) return null;
-    let k = (0, a.jsx)(f.Tooltip, {
-      text: P ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : b ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
+      }, [t, s, D, R, j, O]), null == y) return null;
+    let V = (0, a.jsx)(f.Tooltip, {
+      text: P ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_REDUCED : D ? A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_PREMIUM : A.default.Messages.SCREENSHARE_QUALITY_TOOLTIP_NORMAL,
       position: "bottom",
       color: f.Tooltip.Colors.GREY,
       children: e => (0, a.jsxs)(f.Clickable, {
         ...e,
         onClick: F,
-        className: i(M.qualityIndicator, m, S.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
-          [M.clickable]: w && b
+        className: i(M.qualityIndicator, p, C.LiveIndicatorShapes[c], P ? M.qualityIndicatorLowQuality : M.qualityIndicatorFullQuality, {
+          [M.clickable]: w && D
         }),
-        children: [b ? (0, a.jsx)(C.default, {
+        children: [D ? (0, a.jsx)(g.default, {
           className: M.premiumStreamIcon
         }) : null, (0, a.jsx)("span", {
           className: M.qualityResolution,
-          children: (0, T.getResolutionText)(O.maxResolution)
+          children: (0, T.getResolutionText)(y.maxResolution)
         }), (0, a.jsx)("span", {
-          children: (0, T.getFPSText)(O.maxFrameRate)
+          children: (0, T.getFPSText)(y.maxFrameRate)
         })]
       })
     });
-    return (0, a.jsx)(g.TextBadge, {
-      text: k,
+    return (0, a.jsx)(S.TextBadge, {
+      text: V,
       className: i(L, M.qualityIndicatorBadge),
       color: d.default.unsafe_rawColors.PRIMARY_500.css,
       shape: c
@@ -138,27 +138,27 @@ var w = e => {
     participant: t,
     showQuality: n,
     isUpsellEnabled: s = !0,
-    size: o,
-    className: u
+    size: u,
+    className: o
   } = e, [d, c] = l.useState(!1), h = (0, T.getMaxQuality)(t), {
-    reducedMotion: p
+    reducedMotion: m
   } = l.useContext(f.AccessibilityPreferencesContext), E = n && null != h;
   l.useEffect(() => {
-    (0, m.default)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
+    (0, p.default)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), {
       dispatchWait: !0
     })
   }, [t]);
-  let C = (0, r.useTransition)(E, {
+  let g = (0, r.useTransition)(E, {
       enter: {
-        from: p.enabled ? O : j,
-        to: p.enabled ? y : L
+        from: m.enabled ? y : j,
+        to: m.enabled ? O : L
       },
-      leave: p.enabled ? O : j,
-      config: D
+      leave: m.enabled ? y : j,
+      config: b
     }),
     _ = (0, r.useSpring)({
-      to: E ? b : P,
-      config: D
+      to: E ? D : P,
+      config: b
     });
   return (e => {
     let {
@@ -168,13 +168,13 @@ var w = e => {
     return (0, a.jsxs)("div", {
       className: i(M.streamQualityIndicator, n),
       ...l,
-      children: [C((e, n) => n ? (0, a.jsx)(r.animated.div, {
+      children: [g((e, n) => n ? (0, a.jsx)(r.animated.div, {
         style: e,
         children: (0, a.jsx)(U, {
           className: M.liveQualityIndicator,
           participant: t,
-          size: o,
-          shape: g.BadgeShapes.ROUND_LEFT,
+          size: u,
+          shape: S.BadgeShapes.ROUND_LEFT,
           isUpsellEnabled: s,
           didTrackUpsellViewed: d,
           setDidTrackUpsellViewed: c
@@ -182,14 +182,14 @@ var w = e => {
       }) : null), (0, a.jsx)(r.animated.div, {
         style: _,
         className: M.liveIndicator,
-        children: (0, a.jsx)(S.default, {
-          look: S.LiveIndicatorLooks.RED,
-          size: o,
-          shape: E ? g.BadgeShapes.ROUND_RIGHT : g.BadgeShapes.ROUND
+        children: (0, a.jsx)(C.default, {
+          look: C.LiveIndicatorLooks.RED,
+          size: u,
+          shape: E ? S.BadgeShapes.ROUND_RIGHT : S.BadgeShapes.ROUND
         })
       })]
     })
   })({
-    className: u
+    className: o
   })
 }

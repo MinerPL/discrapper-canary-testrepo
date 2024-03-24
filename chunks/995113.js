@@ -1,11 +1,11 @@
 "use strict";
 E.r(_), E.d(_, {
-  default: function() {
-    return t
+  BatchedStoreListener: function() {
+    return o
   }
 }), E("70102");
-var t, o = E("805833");
-t = class {
+var t = E("805833");
+class o {
   attach(e) {
     let {
       stores: _
@@ -23,7 +23,7 @@ t = class {
   }
   constructor(e, _) {
     this.handleStoreChange = () => {
-      let e = o.default.getChangeSentinel();
+      let e = t.default.getChangeSentinel();
       this.storeVersionHandled !== e && (this.changeCallback(), this.storeVersionHandled = e)
     }, this.stores = e, this.changeCallback = _
   }

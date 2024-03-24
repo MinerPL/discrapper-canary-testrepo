@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   RPCCommandSchemas: function() {
-    return i
+    return l
   }
 }), n("222007");
 var a = n("792353"),
   s = n("843455");
-let i = {
+let l = {
     [a.RPCCommand.INITIATE_IMAGE_UPLOAD]: {
       request: void 0,
       response: e => e.object({
@@ -30,7 +30,8 @@ let i = {
           discriminator: e.string().required(),
           id: e.string().required(),
           avatar: e.string().allow(null),
-          public_flags: e.number().required()
+          public_flags: e.number().required(),
+          global_name: e.string().allow(null)
         }).required(),
         scopes: e.array().items(e.string().valid(...(0, a.joiEnum)(s.OAuth2Scopes))).required(),
         expires: e.string().required(),
@@ -46,13 +47,13 @@ let i = {
     [a.RPCCommand.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
       request: void 0,
       response: e => e.object({
-        participants: e.array().items(l(e).keys({
+        participants: e.array().items(i(e).keys({
           nickname: e.string().description("Server nickname. Not unique.")
         }).required()).required()
       }).required()
     }
   },
-  l = e => e.object({
+  i = e => e.object({
     id: e.string().required().description("User ID"),
     username: e.string().required(),
     global_name: e.string().allow(null).description("Global Discord name. Not unique."),

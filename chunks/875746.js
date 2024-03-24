@@ -14,8 +14,8 @@ var l = n("627445"),
   u = n("305961"),
   d = n("181114"),
   c = n("866190"),
-  f = n("442379"),
-  E = n("565559"),
+  E = n("442379"),
+  f = n("565559"),
   _ = n("777133"),
   T = n("407417"),
   I = n("782340");
@@ -25,9 +25,9 @@ function m(e) {
     guildId: t,
     guildProductListingId: n,
     sourceAnalyticsLocations: l
-  } = e, m = (0, i.default)([E.default], () => E.default.getGuildProduct(n)), N = (0, i.default)([u.default], () => u.default.getGuild(t), [t]), p = (0, i.default)([o.default], () => o.default.useReducedMotion), S = (0, c.useIsWindowFocused)();
+  } = e, m = (0, i.useStateFromStores)([f.default], () => f.default.getGuildProduct(n)), N = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), p = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), S = (0, c.useIsWindowFocused)();
   a(null != N, "guild cannot be null"), a(null != m, "guildProductListing cannot be null");
-  let A = (0, f.useCanManageGuildProduct)(N);
+  let A = (0, E.useCanManageGuildProduct)(N);
   if (A) return (0, s.jsx)(r.Tooltip, {
     text: I.default.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
     children: e => (0, s.jsx)(r.Button, {

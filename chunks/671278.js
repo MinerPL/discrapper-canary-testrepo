@@ -13,7 +13,7 @@ t.r(s), t.d(s, {
 var r, o, a = t("37983"),
   l = t("884691"),
   n = t("82697"),
-  i = t("56701");
+  i = t("679001");
 (r = o || (o = {})).SIZE_40 = "SIZE_40", r.SIZE_60 = "SIZE_60";
 let d = Object.freeze({
     SIZE_40: "size-40",

@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return s
   }
 });
 var i = n("37983");
 n("884691");
-var s = n("65597"),
-  l = n("880731");
+var l = n("65597"),
+  a = n("880731");
 
-function r(e) {
+function s(e) {
   let {
     children: t,
     confettiLocation: n
-  } = e, r = (0, s.default)([l.default], () => l.default.isEnabled({
+  } = e, s = (0, l.useStateFromStores)([a.default], () => a.default.isEnabled({
     confettiLocation: n
   }));
-  return r ? (0, i.jsx)(i.Fragment, {
+  return s ? (0, i.jsx)(i.Fragment, {
     children: t
   }) : null
 }

@@ -1,37 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   getChannelIdForGuildTransition: function() {
-    return h
+    return f
   },
   transitionToGuild: function() {
-    return g
+    return E
   }
 });
-var i = n("650033"),
-  s = n("471706"),
-  r = n("290886"),
-  a = n("21121"),
-  o = n("934306"),
-  l = n("42203"),
-  u = n("923959"),
-  d = n("18494"),
-  c = n("393414"),
-  f = n("49111"),
+var i = n("471706"),
+  s = n("290886"),
+  r = n("21121"),
+  a = n("934306"),
+  o = n("42203"),
+  l = n("923959"),
+  u = n("18494"),
+  d = n("393414"),
+  c = n("49111"),
   _ = n("724210");
 
-function h(e) {
+function f(e) {
   var t;
-  let n = d.default.getChannelId(e),
-    i = null === (t = u.default.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
-  if (n === _.StaticChannelRoute.GUILD_ONBOARDING && !s.default.shouldShowOnboarding(e) || n === _.StaticChannelRoute.GUILD_HOME && !(0, r.canSeeOnboardingHome)(e)) return i;
-  let a = l.default.getChannel(n);
-  return null == a || a.isGuildVocal() ? i : n
+  let n = u.default.getChannelId(e),
+    r = null === (t = l.default.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
+  if (n === _.StaticChannelRoute.GUILD_ONBOARDING && !i.default.shouldShowOnboarding(e) || n === _.StaticChannelRoute.GUILD_HOME && !(0, s.canSeeOnboardingHome)(e)) return r;
+  let a = o.default.getChannel(n);
+  return null == a ? r : n
 }
 
-function g(e, t) {
-  let n = !(0, a.isInMainTabsExperiment)() || (0, o.shouldHandleNewPanelsRoute)(e) || i.default.get("navigate_to_last_channel") ? h(e) : void 0;
-  (0, c.transitionTo)(f.Routes.CHANNEL(e, n), {
-    navigationReplace: (0, o.shouldHandleNewPanelsRoute)(e) || i.default.get("navigate_to_last_channel"),
+function E(e, t) {
+  let n = !(0, r.isInMainTabsExperiment)() || (0, a.shouldHandleNewPanelsRoute)(e) ? f(e) : void 0;
+  (0, d.transitionTo)(c.Routes.CHANNEL(e, n), {
+    navigationReplace: (0, a.shouldHandleNewPanelsRoute)(e),
     ...t
   })
 }

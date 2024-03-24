@@ -1,2 +1,10 @@
 "use strict";
-t.exports = n.p + "5ab9c3b362fa70cadcc4.png"
+n.r(t), n.d(t, {
+  default: function() {
+    return r
+  }
+});
+var r = {};
+r = {
+  dismiss: "Скасувати"
+}

@@ -21,7 +21,7 @@ var l = n("37983"),
   C = n("599110"),
   S = n("49111"),
   v = n("782340"),
-  h = n("447365");
+  h = n("658812");
 let _ = "VoiceChannelStatusModal";
 
 function N(e) {
@@ -29,7 +29,7 @@ function N(e) {
     channel: t,
     transitionState: n,
     onClose: N
-  } = e, T = (0, u.default)([d.default], () => d.default.getChannelStatus(t)), g = (0, u.default)([f.default], () => f.default.getMediaSessionId()), [I, m] = a.useState(null != T ? T : ""), [A, p] = a.useState(!1), [y, L] = a.useState(null);
+  } = e, T = (0, u.useStateFromStores)([d.default], () => d.default.getChannelStatus(t)), g = (0, u.useStateFromStores)([f.default], () => f.default.getMediaSessionId()), [m, I] = a.useState(null != T ? T : ""), [A, p] = a.useState(!1), [y, L] = a.useState(null);
   a.useEffect(() => {
     C.default.track(S.AnalyticEvents.OPEN_MODAL, {
       type: "Voice Channel Topic Modal",
@@ -37,10 +37,10 @@ function N(e) {
     })
   }, [t.guild_id]);
   let O = async e => {
-    I === T && N(), null == e || e.preventDefault(), L(null), p(!0);
-    let n = I.length,
-      l = I.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
-    await i.default.updateVoiceChannelStatus(t.id, I).then(e => {
+    m === T && N(), null == e || e.preventDefault(), L(null), p(!0);
+    let n = m.length,
+      l = m.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length;
+    await i.default.updateVoiceChannelStatus(t.id, m).then(e => {
       204 === e.status ? (C.default.track(S.AnalyticEvents.VOICE_CHANNEL_TOPIC_SET, {
         guild_id: t.guild_id,
         channel_id: t.id,
@@ -51,7 +51,7 @@ function N(e) {
     }, e => {
       L(e.body.message)
     }), p(!1)
-  }, [F, M] = a.useState((0, o.toRichValue)(I));
+  }, [F, M] = a.useState((0, o.toRichValue)(m));
   return (0, l.jsx)("form", {
     onSubmit: O,
     className: h.form,
@@ -82,7 +82,7 @@ function N(e) {
           title: v.default.Messages.VOICE_CHANNEL_STATUS,
           children: [(0, l.jsx)(c.default, {
             innerClassName: h.textArea,
-            textValue: I,
+            textValue: m,
             richValue: F,
             placeholder: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_PREFILL_CHANNEL.format({
               channelName: t.name
@@ -90,7 +90,7 @@ function N(e) {
             focused: !0,
             channel: t,
             onChange: (e, t, n) => {
-              m(t), M(n)
+              I(t), M(n)
             },
             onSubmit: () => (O(), Promise.resolve({
               shouldClear: !1,
@@ -101,8 +101,8 @@ function N(e) {
             canMentionChannels: !1,
             allowNewLines: !1,
             parentModalKey: _,
-            maxCharacterCount: 50,
-            showRemainingCharsAfterCount: 25,
+            maxCharacterCount: 500,
+            showRemainingCharsAfterCount: 250,
             emojiPickerCloseOnModalOuterClick: !0
           }), null != y ? (0, l.jsx)(r.FormErrorBlock, {
             className: h.error,
@@ -120,7 +120,7 @@ function N(e) {
           onClick: O,
           submitting: A,
           className: h.button,
-          disabled: I.length > 50,
+          disabled: m.length > 500,
           children: v.default.Messages.VOICE_CHANNEL_STATUS_MODAL_SET_STATUS
         })]
       })]

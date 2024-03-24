@@ -1,13 +1,7 @@
 "use strict";
-n.r(t), n.d(t, {
-  SEARCH_STICKERS: function() {
-    return l
-  }
-});
-var i = n("659500"),
-  o = n("49111");
-let l = {
-  binds: ["mod+s"],
-  comboKeysBindGlobal: !0,
-  action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.TOGGLE_STICKER_PICKER), !1)
+e.exports = {
+  scrollbar: "scrollbar_d66c5e",
+  scrollbarDefault: "scrollbarDefault_fec5d4 scrollbar_d66c5e",
+  scrollbarGhost: "scrollbarGhost__6f715 scrollbar_d66c5e",
+  scrollbarGhostHairline: "scrollbarGhostHairline_c9a45f scrollbar_d66c5e"
 }

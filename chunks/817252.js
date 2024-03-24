@@ -25,7 +25,7 @@ var l, a, s = n("37983"),
   T = n("828184"),
   A = n("49111"),
   L = n("782340"),
-  v = n("812931");
+  v = n("383059");
 (a = l || (l = {})).UP = "UP", a.DOWN = "DOWN", a.LEFT = "LEFT", a.RIGHT = "RIGHT";
 let x = {
     UP: f.throttle(() => (0, N.playSound)("ddr-up"), 100),
@@ -324,7 +324,7 @@ function j(e) {
     size: m.ModalSize.DYNAMIC,
     "aria-label": L.default.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(p.default, {
+    children: (0, s.jsx)(p.TransitionGroup, {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n

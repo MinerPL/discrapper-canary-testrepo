@@ -1,20 +1,20 @@
 "use strict";
 s.r(t), s.d(t, {
   SlideDirection: function() {
-    return n
+    return l
   },
   default: function() {
-    return T
+    return I
   }
 });
-var a, n, l = s("37983"),
+var a, l, n = s("37983"),
   i = s("884691"),
   r = s("414456"),
   o = s.n(r),
   d = s("458960"),
   u = s("266491"),
-  c = s("187615");
-(a = n || (n = {}))[a.RIGHT = -1] = "RIGHT", a[a.LEFT = 1] = "LEFT";
+  c = s("16723");
+(a = l || (l = {}))[a.RIGHT = -1] = "RIGHT", a[a.LEFT = 1] = "LEFT";
 let E = {
   friction: 10,
   tension: 40,
@@ -51,7 +51,7 @@ class _ extends i.PureComponent {
     })
   }
   render() {
-    return (0, l.jsx)(d.default.div, {
+    return (0, n.jsx)(d.default.div, {
       style: this.getStyle(),
       className: c.item,
       children: this.props.children
@@ -61,19 +61,19 @@ class _ extends i.PureComponent {
     super(e), this._animated = new d.default.Value(-1 * e.direction)
   }
 }
-var T = e => {
+var I = e => {
   let {
     children: t,
     step: s,
     direction: a,
-    className: n,
+    className: l,
     onAnimationStart: i,
     onAnimationEnd: r
   } = e;
-  return (0, l.jsx)(u.default, {
+  return (0, n.jsx)(u.TransitionGroup, {
     component: "div",
-    className: o(c.animator, n),
-    children: (0, l.jsx)(_, {
+    className: o(c.animator, l),
+    children: (0, n.jsx)(_, {
       direction: a,
       onAnimationStart: i,
       onAnimationEnd: r,

@@ -12,8 +12,8 @@ var l = a("884691"),
 let r = new Date(Date.UTC(2022, 7, 6));
 
 function u(e, t) {
-  let a = (0, n.default)([i.default], () => 2 >= i.default.getTotalNumCleanLoads()),
-    u = (0, n.default)([s.default], () => {
+  let a = (0, n.useStateFromStores)([i.default], () => 2 >= i.default.getTotalNumCleanLoads()),
+    u = (0, n.useStateFromStores)([s.default], () => {
       let e = s.default.getCurrentUser();
       return null == e || e.createdAt.getTime() < r.getTime()
     }),

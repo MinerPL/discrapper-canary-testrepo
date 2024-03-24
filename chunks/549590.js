@@ -1,15 +1,14 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var l = n("446674"),
-  i = n("305961"),
-  r = n("837008");
+var _ = E("446674"),
+  s = E("305961"),
+  T = E("837008");
 
-function s(e, t) {
-  let n = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(e), [e]),
-    s = (0, r.useSubscriptionListing)(t);
-  return null == n || null == s ? null : n.roles[s.role_id]
+function a(e, t) {
+  let E = (0, T.useSubscriptionListing)(t);
+  return (0, _.useStateFromStores)([s.default], () => null != e && null != E ? s.default.getRole(e, E.role_id) : void 0)
 }

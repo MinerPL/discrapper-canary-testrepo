@@ -18,23 +18,23 @@ n.r(t), n.d(t, {
   DISCOVERY_COMMANDS_FRECENCY_LIMIT: function() {
     return c
   },
-  DISCOVERY_COMMAND_FRECENCY_GATEWAY_LIMIT: function() {
-    return f
-  },
   SUB_COMMAND_KEY_SEPARATOR: function() {
     return _
   },
   APPLICATION_COMMAND_PERMISSIONS_LIMIT: function() {
-    return h
+    return f
   },
   MAX_SUBCOMMAND_LEVEL: function() {
-    return g
+    return E
   },
   CONTEXT_MENU_COMMANDS_QUERY_LIMIT: function() {
-    return m
+    return h
   },
   AUTOCOMPLETE_OPTION_DEBOUNCE_TIME: function() {
-    return E
+    return g
+  },
+  APPLICATION_USER_INSTALL_BETA_USER_LIMIT: function() {
+    return m
   },
   getValidationErrorText: function() {
     return p
@@ -56,12 +56,13 @@ let o = "True",
 (i = s || (s = {})).BUILT_IN = "-1", i.FRECENCY = "-2";
 let d = 10,
   c = 5,
-  f = 25,
   _ = "\x00",
-  h = 100,
-  g = 3,
-  m = 10,
-  E = 500;
+  f = 100,
+  E = 3,
+  h = 10,
+  g = 500;
+Object.freeze([]), Object.freeze([]);
+let m = 25;
 
 function p(e) {
   if (null != e.choices) return a.default.Messages.COMMAND_VALIDATION_CHOICE_ERROR;
@@ -84,4 +85,3 @@ function p(e) {
       return a.default.Messages.COMMAND_VALIDATION_GENERAL_ERROR
   }
 }
-Object.freeze([]), Object.freeze([])

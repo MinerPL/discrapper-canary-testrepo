@@ -1,38 +1,34 @@
 "use strict";
-n.r(e), n.d(e, {
+i.r(t), i.d(t, {
   default: function() {
-    return c
+    return u
   }
 });
-var r = n("37983");
-n("884691");
-var i = n("77078"),
-  a = n("272030"),
-  u = n("702495"),
-  s = n("835487"),
-  o = n("782340");
+var r = i("37983");
+i("884691");
+var n = i("77078"),
+  s = i("272030"),
+  a = i("702495"),
+  o = i("782340");
 
-function c(t) {
+function u(e) {
   let {
-    target: e,
-    onSelect: n
-  } = t, c = (0, u.default)({
-    type: e.getAttribute("data-type"),
-    id: e.getAttribute("data-id"),
-    name: e.getAttribute("data-name"),
+    target: t,
+    onSelect: i
+  } = e, u = (0, a.default)({
+    type: t.getAttribute("data-type"),
+    id: t.getAttribute("data-id"),
+    name: t.getAttribute("data-name"),
     isInExpressionPicker: !0
-  }), l = (0, s.default)({
-    type: e.getAttribute("data-type"),
-    packId: e.getAttribute("data-pack-id")
   });
-  return (0, r.jsx)(i.Menu, {
+  return (0, r.jsx)(n.Menu, {
     navId: "expression-picker",
-    onClose: a.closeContextMenu,
+    onClose: s.closeContextMenu,
     "aria-label": o.default.Messages.EXPRESSION_PICKER_ACTIONS_MENU_LABEL,
-    onSelect: n,
+    onSelect: i,
     className: "context-menu",
-    children: (0, r.jsxs)(i.MenuGroup, {
-      children: [c, l]
+    children: (0, r.jsx)(n.MenuGroup, {
+      children: u
     })
   })
 }

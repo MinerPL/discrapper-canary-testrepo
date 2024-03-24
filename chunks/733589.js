@@ -1,7 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var i = n("106919").default
+let i = new class e {
+  enterPipMode() {
+    return Promise.resolve()
+  }
+  setEnabled(e) {}
+  setSelectedStream(e) {}
+  setFocusedStream(e) {}
+  setMirrored(e) {}
+  setPipAspectRatio(e, t) {}
+  updateSourceTrackingView() {}
+  addOnPipModeChangedListener(e) {}
+  isEnabled() {
+    return !1
+  }
+};
+var s = i

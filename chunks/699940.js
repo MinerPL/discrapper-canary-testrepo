@@ -25,6 +25,7 @@ N.exports = {
   NAVIGATION_OPEN: "Ouvrir",
   NAVIGATION_PRODUCT: "Produit",
   NAVIGATION_RESOURCES: "Ressources",
+  NAVIGATION_APPLICATIONS: "Applications",
   NAVIGATION_TERMS: "Conditions",
   NAVIGATION_PRIVACY: "Confidentialit\xe9",
   NAVIGATION_ABOUT: "\xc0 propos",

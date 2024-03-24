@@ -47,7 +47,7 @@ var l = n("37983"),
   P = n("254167"),
   w = n("49111"),
   F = n("782340"),
-  B = n("244087");
+  B = n("48594");
 let V = G.default.getEnableHardwareAcceleration() ? h.AnimatedAvatar : h.Avatar,
   H = {
     offset: {

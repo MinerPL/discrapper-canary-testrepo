@@ -1,9 +1,9 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return A
+    return S
   }
-}), l("808653");
+}), l("222007"), l("808653");
 var n = l("37983"),
   a = l("884691"),
   s = l("414456"),
@@ -25,12 +25,13 @@ var n = l("37983"),
   C = l("476765"),
   _ = l("733160"),
   N = l("599110"),
-  b = l("49111"),
-  F = l("782340"),
-  j = l("188083");
-class I extends a.PureComponent {
+  b = l("299039"),
+  F = l("49111"),
+  j = l("782340"),
+  I = l("691788");
+class A extends a.PureComponent {
   componentDidMount() {
-    N.default.track(b.AnalyticEvents.OPEN_MODAL, {
+    N.default.track(F.AnalyticEvents.OPEN_MODAL, {
       type: "Follow Channel Modal",
       num_guild_permissions: Object.keys(this.props.guilds).length,
       location: "Chat Input Blocker - Follow Channel"
@@ -59,12 +60,12 @@ class I extends a.PureComponent {
         submitting: l,
         onClick: this.handleFollow,
         disabled: null == e || null == t,
-        children: F.default.Messages.FOLLOW
+        children: j.default.Messages.FOLLOW
       }), (0, n.jsx)(i.Button, {
         look: i.Button.Looks.LINK,
         color: i.Button.Colors.PRIMARY,
         onClick: s,
-        children: F.default.Messages.CANCEL
+        children: j.default.Messages.CANCEL
       })]
     })
   }
@@ -76,7 +77,7 @@ class I extends a.PureComponent {
       selectedGuildId: l,
       selectedChannelId: s,
       errorMessage: r
-    } = this.state, d = Object.keys(e).map(t => {
+    } = this.state, d = b.default.keys(e).map(t => {
       let {
         guild: l
       } = e[t];
@@ -96,11 +97,11 @@ class I extends a.PureComponent {
         channel: t,
         category: l
       }
-    }), u = 0 === d.length, g = u ? F.default.Messages.FOLLOW_MODAL_HINT_NO_PERMS : F.default.Messages.FOLLOW_MODAL_HINT;
+    }), u = 0 === d.length, g = u ? j.default.Messages.FOLLOW_MODAL_HINT_NO_PERMS : j.default.Messages.FOLLOW_MODAL_HINT;
     return (0, n.jsxs)(a.Fragment, {
       children: [(0, n.jsx)(i.FormItem, {
-        className: j.bottomMargin,
-        title: F.default.Messages.FORM_LABEL_SEND_TO,
+        className: I.bottomMargin,
+        title: j.default.Messages.FORM_LABEL_SEND_TO,
         children: (0, n.jsx)(i.SearchableSelect, {
           value: l,
           options: d,
@@ -118,8 +119,8 @@ class I extends a.PureComponent {
           })(e)
         })
       }), (0, n.jsx)(i.FormItem, {
-        className: j.bottomMargin,
-        title: F.default.Messages.FORM_LABEL_SELECT_CHANNEL,
+        className: I.bottomMargin,
+        title: j.default.Messages.FORM_LABEL_SELECT_CHANNEL,
         children: (0, n.jsx)(i.SearchableSelect, {
           value: s,
           options: o,
@@ -133,14 +134,14 @@ class I extends a.PureComponent {
             return null != l && (0, n.jsx)(l, {
               width: 16,
               height: 16,
-              className: j.icon
+              className: I.icon
             })
           })(e)
         })
       }), (0, n.jsx)(i.Text, {
         variant: "text-sm/normal",
         color: u || null != r ? "text-danger" : "text-muted",
-        className: j.bottomMargin,
+        className: I.bottomMargin,
         children: null != r ? r : g
       })]
     })
@@ -152,23 +153,23 @@ class I extends a.PureComponent {
       }
     } = this.props;
     return (0, n.jsxs)("div", {
-      className: j.body,
+      className: I.body,
       children: [(0, n.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
         id: this.state.headerId,
-        children: F.default.Messages.FOLLOW_MODAL_TITLE
+        children: j.default.Messages.FOLLOW_MODAL_TITLE
       }), (0, n.jsx)(i.Text, {
         color: "text-muted",
-        className: r(j.topMargin, {
-          [j.formMargin]: !e
+        className: r(I.topMargin, {
+          [I.formMargin]: !e
         }),
         variant: "text-sm/normal",
-        children: F.default.Messages.FOLLOW_MODAL_BODY
+        children: j.default.Messages.FOLLOW_MODAL_BODY
       }), e ? (0, n.jsx)(i.Text, {
-        className: r(j.formMargin, j.topMargin),
+        className: r(I.formMargin, I.topMargin),
         color: "text-danger",
         variant: "text-sm/normal",
-        children: F.default.Messages.FOLLOW_MODAL_WARNING
+        children: j.default.Messages.FOLLOW_MODAL_WARNING
       }) : null]
     })
   }
@@ -180,21 +181,21 @@ class I extends a.PureComponent {
       channel: a
     } = this.props, s = null !== (e = (0, c.getChannelIconComponent)(a)) && void 0 !== e ? e : _.default;
     return (0, n.jsxs)(i.ModalHeader, {
-      className: j.header,
+      className: I.header,
       children: [(0, n.jsx)(x.default, {
         guild: t,
         size: x.default.Sizes.LARGE
       }), (0, n.jsx)("div", {
-        className: j.channelContainer,
+        className: I.channelContainer,
         children: (0, n.jsxs)("div", {
-          className: j.channel,
+          className: I.channel,
           children: [(0, n.jsx)(s, {
             width: 20,
             height: 20,
-            className: j.channelIcon
+            className: I.channelIcon
           }), (0, n.jsx)(i.Text, {
             variant: "text-md/medium",
-            className: j.channelName,
+            className: I.channelName,
             children: l
           })]
         })
@@ -209,7 +210,7 @@ class I extends a.PureComponent {
       transitionState: e,
       "aria-labelledby": this.state.headerId,
       children: [this.renderHeader(), (0, n.jsxs)(i.ModalContent, {
-        className: j.content,
+        className: I.content,
         children: [this.renderBody(), this.renderForm()]
       }), (0, n.jsx)(i.ModalFooter, {
         children: this.renderFooter()
@@ -256,11 +257,11 @@ class I extends a.PureComponent {
           })
         })
       }).catch(e => {
-        e.body.code === b.AbortCodes.TOO_MANY_WEBHOOKS ? this.setState({
-          errorMessage: F.default.Messages.FOLLOW_MODAL_TOO_MANY_WEBHOOKS,
+        e.body.code === F.AbortCodes.TOO_MANY_WEBHOOKS ? this.setState({
+          errorMessage: j.default.Messages.FOLLOW_MODAL_TOO_MANY_WEBHOOKS,
           submitting: !1
         }) : this.setState({
-          errorMessage: F.default.Messages.FOLLOW_MODAL_FAIL,
+          errorMessage: j.default.Messages.FOLLOW_MODAL_FAIL,
           submitting: !1
         })
       }))
@@ -282,12 +283,12 @@ class I extends a.PureComponent {
     }
   }
 }
-var A = d.default.connectStores([f.default, g.default, m.default, p.default, L.default], e => {
+var S = d.default.connectStores([f.default, g.default, m.default, p.default, L.default], e => {
   let {
     channel: t
   } = e, l = f.default.getGuild(t.guild_id), n = Object.values(f.default.getGuilds()), a = n.reduce((e, t) => {
     let l = m.default.getChannels(t.id),
-      n = l.SELECTABLE.map(e => e.channel).filter(e => e.type === b.ChannelTypes.GUILD_TEXT && p.default.can(b.Permissions.MANAGE_WEBHOOKS, e)).map(e => {
+      n = l.SELECTABLE.map(e => e.channel).filter(e => e.type === F.ChannelTypes.GUILD_TEXT && p.default.can(F.Permissions.MANAGE_WEBHOOKS, e)).map(e => {
         let t = g.default.getChannel(e.parent_id);
         return {
           channel: e,
@@ -307,4 +308,4 @@ var A = d.default.connectStores([f.default, g.default, m.default, p.default, L.d
   }
 }, {
   forwardRef: !0
-})(I)
+})(A)

@@ -1,151 +1,151 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   getAmplitudinalSoundboardVolume: function() {
-    return T
+    return _
   },
   canUseSoundboardSound: function() {
-    return N
+    return v
   },
   playSound: function() {
-    return L
+    return N
   },
   maybePlayCustomJoinSound: function() {
-    return p
+    return A
   },
   useSoundBoardDismissContentTypes: function() {
     return O
   },
   removeCustomJoinSound: function() {
-    return v
+    return R
   },
   updateCustomJoinSound: function() {
-    return h
+    return M
   },
   trackCustomCallSoundExternallyDeleted: function() {
-    return R
+    return L
   }
-}), t("424973");
-var u = t("65597"),
-  l = t("151426"),
-  i = t("880553"),
-  o = t("845579"),
-  a = t("872173"),
-  d = t("374363"),
-  r = t("229502"),
-  s = t("233069"),
-  c = t("957255"),
-  _ = t("697218"),
-  f = t("599110"),
-  E = t("719923"),
-  S = t("158998"),
-  C = t("305122"),
-  y = t("235004"),
-  m = t("389480"),
-  A = t("245463"),
-  g = t("675961"),
-  U = t("846325"),
-  I = t("49111");
+}), n("424973");
+var i = n("65597"),
+  l = n("151426"),
+  a = n("880553"),
+  s = n("845579"),
+  r = n("872173"),
+  o = n("374363"),
+  u = n("229502"),
+  d = n("233069"),
+  c = n("957255"),
+  f = n("697218"),
+  p = n("599110"),
+  m = n("719923"),
+  h = n("158998"),
+  x = n("305122"),
+  E = n("235004"),
+  y = n("389480"),
+  g = n("245463"),
+  S = n("675961"),
+  C = n("846325"),
+  T = n("49111");
 
-function T() {
+function _() {
   var e;
-  let n = o.SoundboardSettings.getSetting();
-  return null !== (e = null == n ? void 0 : n.volume) && void 0 !== e ? e : 100
+  let t = s.SoundboardSettings.getSetting();
+  return null !== (e = null == t ? void 0 : t.volume) && void 0 !== e ? e : 100
 }
 
-function D(e, n) {
-  return (null == n ? void 0 : n.guild_id) == null || c.default.can(I.Permissions.USE_EXTERNAL_SOUNDS, n) || e.guildId === U.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == n ? void 0 : n.guild_id)
+function I(e, t) {
+  return (null == t ? void 0 : t.guild_id) == null || c.default.can(T.Permissions.USE_EXTERNAL_SOUNDS, t) || e.guildId === C.DEFAULT_SOUND_GUILD_ID || e.guildId === (null == t ? void 0 : t.guild_id)
 }
 
-function N(e, n, t) {
-  let u = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-  return (E.default.canUseSoundboardEverywhere(e) || n.guildId === (null == t ? void 0 : t.guild_id) || n.guildId === U.DEFAULT_SOUND_GUILD_ID) && D(n, t) && (!u || n.available)
+function v(e, t, n) {
+  let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+  return (m.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === C.DEFAULT_SOUND_GUILD_ID) && I(t, n) && (!i || t.available)
 }
 
-function L(e, n, t) {
-  (0, C.playSoundLocally)(n, e, m.LocalSoundTrigger.SOUNDBOARD), (0, r.sendVoiceChannelSoundboardEffect)(n, e, __OVERLAY__, t)
+function N(e, t, n) {
+  (0, x.playSoundLocally)(t, e, y.LocalSoundTrigger.SOUNDBOARD), (0, u.sendVoiceChannelSoundboardEffect)(t, e, __OVERLAY__, n)
 }
-async function p(e) {
-  let n = _.default.getCurrentUser(),
-    t = (0, i.default)(),
-    u = (0, g.getCustomJoinSound)(e);
-  if (null == t || s.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(t.type) || null == u || !E.default.canUseCustomCallSounds(n) || !(0, A.canSelectedVoiceChannelUseSoundboard)()) return;
-  await (0, C.maybeFetchSoundboardSounds)();
-  let l = u.guildId === U.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? U.DEFAULT_SOUND_GUILD_ID : u.guildId,
-    o = y.default.getSound(l, u.soundId);
-  if (null != o) {
-    var a, d;
-    if (!D(o, t) || !N(n, o, t, !0)) return null;
-    a = o, d = t.id, (0, C.playSoundLocally)(d, a, m.LocalSoundTrigger.JOINED_VOICE_CHANNEL), (0, r.sendVoiceChannelCustomCallSoundEffect)(d, a, __OVERLAY__)
+async function A(e) {
+  let t = f.default.getCurrentUser(),
+    n = (0, a.default)(),
+    i = (0, S.getCustomJoinSound)(e);
+  if (null == n || d.SILENT_JOIN_LEAVE_CHANNEL_TYPES.has(n.type) || null == i || !m.default.canUseCustomCallSounds(t) || !(0, g.canSelectedVoiceChannelUseSoundboard)()) return;
+  await (0, x.maybeFetchSoundboardSounds)();
+  let l = i.guildId === C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID ? C.DEFAULT_SOUND_GUILD_ID : i.guildId,
+    s = E.default.getSound(l, i.soundId);
+  if (null != s) {
+    var r, o;
+    if (!I(s, n) || !v(t, s, n, !0)) return null;
+    r = s, o = n.id, (0, x.playSoundLocally)(o, r, y.LocalSoundTrigger.JOINED_VOICE_CHANNEL), (0, u.sendVoiceChannelCustomCallSoundEffect)(o, r, __OVERLAY__)
   }
 }
 
 function O(e) {
   let {
-    isSoundboardButtonDisabled: n = !1
-  } = e, t = (0, u.default)([_.default], () => _.default.getCurrentUser()), i = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
-  if (!n && ! function() {
-      var e, n;
-      let t = null !== (n = null === (e = d.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== n ? n : {};
-      return Object.values(t).some(e => null != e.joinSound)
+    isSoundboardButtonDisabled: t = !1
+  } = e, n = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
+  if (!t && ! function() {
+      var e, t;
+      let n = null !== (t = null === (e = o.default.settings.guilds) || void 0 === e ? void 0 : e.guilds) && void 0 !== t ? t : {};
+      return Object.values(n).some(e => null != e.joinSound)
     }()) {
-    i.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES);
-    let e = (0, S.ageEligibleForPremiumUpsell)(t);
-    (E.default.canUseCustomCallSounds(t) || e) && i.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL)
+    a.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_SPARKLES);
+    let e = (0, h.ageEligibleForPremiumUpsell)(n);
+    (m.default.canUseCustomCallSounds(n) || e) && a.push(l.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL)
   }
-  return i
+  return a
 }
 
-function v(e, n) {
-  (0, a.updateUserGuildSettings)(e, t => {
-    t.joinSound = void 0, F({
+function R(e, t) {
+  (0, r.updateUserGuildSettings)(e, n => {
+    n.joinSound = void 0, k({
       guildId: e,
-      changeType: m.AnalyticsChangeType.REMOVED,
-      soundType: m.AnalyticsSoundType.ENTRY,
-      location: n
-    })
-  }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
-}
-
-function h(e, n, t) {
-  (0, a.updateUserGuildSettings)(e, u => {
-    let l = n.guildId === U.DEFAULT_SOUND_GUILD_ID,
-      i = l ? m.AnalyticsSoundSource.DEFAULT : m.AnalyticsSoundSource.CUSTOM,
-      o = null != u.joinSound ? m.AnalyticsChangeType.UPDATED : m.AnalyticsChangeType.ADDED;
-    u.joinSound = {
-      soundId: n.soundId,
-      guildId: l ? U.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : n.guildId
-    }, F({
-      guildId: e,
-      changeType: o,
-      soundSource: i,
-      soundType: m.AnalyticsSoundType.ENTRY,
+      changeType: y.AnalyticsChangeType.REMOVED,
+      soundType: y.AnalyticsSoundType.ENTRY,
       location: t
     })
-  }, a.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function F(e) {
+function M(e, t, n) {
+  (0, r.updateUserGuildSettings)(e, i => {
+    let l = t.guildId === C.DEFAULT_SOUND_GUILD_ID,
+      a = l ? y.AnalyticsSoundSource.DEFAULT : y.AnalyticsSoundSource.CUSTOM,
+      s = null != i.joinSound ? y.AnalyticsChangeType.UPDATED : y.AnalyticsChangeType.ADDED;
+    i.joinSound = {
+      soundId: t.soundId,
+      guildId: l ? C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID : t.guildId
+    }, k({
+      guildId: e,
+      changeType: s,
+      soundSource: a,
+      soundType: y.AnalyticsSoundType.ENTRY,
+      location: n
+    })
+  }, r.UserSettingsDelay.INFREQUENT_USER_ACTION)
+}
+
+function k(e) {
   let {
-    guildId: n,
-    changeType: t,
-    soundType: u,
+    guildId: t,
+    changeType: n,
+    soundType: i,
     soundSource: l,
-    location: i
+    location: a
   } = e;
-  f.default.track(I.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
-    location_stack: i,
-    guild_id: "" === n ? 0 : Number(n),
-    change_type: t,
-    sound_type: u,
+  p.default.track(T.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_UPDATED, {
+    location_stack: a,
+    guild_id: "" === t ? 0 : Number(t),
+    change_type: n,
+    sound_type: i,
     sound_source: l
   })
 }
 
-function R(e) {
+function L(e) {
   let {
-    location: n
+    location: t
   } = e;
-  f.default.track(I.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
-    location_stack: n
+  p.default.track(T.AnalyticEvents.USER_CUSTOM_CALL_SOUND_SETTING_GUILD_REMOVED, {
+    location_stack: t
   })
 }

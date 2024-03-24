@@ -11,7 +11,7 @@ var a = n("316693"),
   r = n("305961"),
   s = n("957255"),
   d = n("49111");
-let o = a.default.combine(d.Permissions.VIEW_CHANNEL, d.Permissions.MANAGE_MESSAGES, d.Permissions.READ_MESSAGE_HISTORY);
+let o = a.combine(d.Permissions.VIEW_CHANNEL, d.Permissions.MANAGE_MESSAGES, d.Permissions.READ_MESSAGE_HISTORY);
 
 function f(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

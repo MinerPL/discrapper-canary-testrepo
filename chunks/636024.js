@@ -23,16 +23,13 @@ function T(e) {
   let l = (0, r.useStateFromStores)([u.default], () => u.default.getHighestRole(t)),
     a = (0, r.useStateFromStoresArray)([o.default], () => o.default.getMembers(e), [e]),
     T = (0, r.useStateFromStoresObject)([c.default], () => c.default.getUsers()),
-    h = (0, r.useStateFromStoresArray)([d.default], () => {
-      var t, l;
-      return Object.values(null !== (l = null === (t = d.default.getGuild(e)) || void 0 === t ? void 0 : t.roles) && void 0 !== l ? l : {})
-    }, [e]),
+    h = (0, r.useStateFromStoresArray)([d.default], () => Object.values(d.default.getRoles(e)), [e]),
     g = n.useMemo(() => {
       let e = [];
       for (let l of a) {
         let n = T[l.userId];
         if (null == n || n.bot) continue;
-        let a = n.id !== t.ownerId && !f.default.can({
+        let a = n.id !== t.ownerId && !f.can({
           permission: I.Permissions.ADMINISTRATOR,
           user: n,
           context: t
@@ -54,7 +51,7 @@ function T(e) {
       let n = [];
       for (let a of h) {
         if (p(a)) continue;
-        let s = !i.default.has(a.permissions, I.Permissions.ADMINISTRATOR) && u.default.isRoleHigher(t, l, a),
+        let s = !i.has(a.permissions, I.Permissions.ADMINISTRATOR) && u.default.isRoleHigher(t, l, a),
           r = {
             id: a.id,
             name: a.name,

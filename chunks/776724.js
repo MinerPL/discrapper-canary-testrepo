@@ -1,11 +1,11 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return N
+    return I
   }
 }), a("222007");
-var s = a("37983"),
-  l = a("884691"),
+var l = a("37983"),
+  s = a("884691"),
   n = a("446674"),
   i = a("77078"),
   o = a("913144"),
@@ -14,115 +14,111 @@ var s = a("37983"),
   c = a("646356"),
   u = a("736393"),
   E = a("698609"),
-  _ = a("782340"),
-  A = a("199586"),
-  S = a("434848");
+  _ = a("49111"),
+  A = a("782340"),
+  S = a("803779"),
+  N = a("221389");
 
-function N(e) {
+function I(e) {
   let {
     className: t,
     onClose: a,
-    onNext: N,
-    onBack: I
-  } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getAppealClassificationId()), {
-    classification: f
-  } = (0, E.useSafetyHubClassification)(null != x ? x : ""), T = (0, u.capitalizeText)(null == f ? void 0 : f.description), g = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), m = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), p = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [C, L] = l.useState(p), [h, M] = l.useState(!1), [O, j] = l.useState(!1), P = l.useCallback(async () => {
-    if (null !== x) try {
-      j(!1), await r.requestReview(x, m, p), null == N || N()
-    } catch (e) {
-      j(!0)
+    onNext: I,
+    onBack: x
+  } = e, f = (0, n.useStateFromStores)([c.default], () => c.default.getAppealClassificationId()), {
+    classification: T
+  } = (0, E.useSafetyHubClassification)(null != f ? f : _.EMPTY_STRING_SNOWFLAKE_ID), g = (0, u.capitalizeText)(null == T ? void 0 : T.description), p = (0, n.useStateFromStores)([c.default], () => c.default.getIsSubmitting()), m = (0, n.useStateFromStores)([c.default], () => c.default.getAppealSignal()), C = (0, n.useStateFromStores)([c.default], () => c.default.getFreeTextAppealReason()), [L, h] = s.useState(!1), [M, O] = s.useState(""), j = s.useCallback(e => {
+    o.default.dispatch({
+      type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
+      userInput: e
+    })
+  }, []), P = s.useCallback(async () => {
+    if (null !== f) try {
+      O(""), await r.requestReview(f, m, C), null == I || I()
+    } catch (t) {
+      var e;
+      O((0, u.getRequestReviewErrorFromCode)(null === (e = t.body) || void 0 === e ? void 0 : e.code))
     }
-  }, [x, m, p, N]);
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)(i.ModalHeader, {
+  }, [f, m, C, I]);
+  return (0, l.jsxs)(l.Fragment, {
+    children: [(0, l.jsxs)(i.ModalHeader, {
       direction: d.default.Direction.VERTICAL,
-      className: S.header,
+      className: N.header,
       separator: !1,
-      children: [(0, s.jsx)(i.Heading, {
-        className: S.title,
+      children: [(0, l.jsx)(i.Heading, {
+        className: N.title,
         variant: "heading-xl/semibold",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_HEADER
-      }), (0, s.jsx)(i.Text, {
-        className: S.subtitle,
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_HEADER
+      }), (0, l.jsx)(i.Text, {
+        className: N.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
-      }), null != a && (0, s.jsx)(i.ModalCloseButton, {
-        className: S.closeButton,
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_SUBHEADER
+      }), null != a && (0, l.jsx)(i.ModalCloseButton, {
+        className: N.closeButton,
         onClick: a
       })]
-    }), (0, s.jsxs)(i.ModalContent, {
+    }), (0, l.jsxs)(i.ModalContent, {
       className: t,
       paddingFix: !1,
-      children: [(0, s.jsx)("ul", {
-        className: A.listContainer,
-        children: [(0, u.getAppealSignalDisplayText)(m), p].filter(e => e.length > 0).map((e, t) => (0, s.jsx)("li", {
-          className: A.listItem,
-          children: (0, s.jsx)(i.Text, {
+      children: [(0, l.jsx)("ul", {
+        className: S.listContainer,
+        children: [(0, u.getAppealSignalDisplayText)(m), C].filter(e => e.length > 0).map((e, t) => (0, l.jsx)("li", {
+          className: S.listItem,
+          children: (0, l.jsx)(i.Text, {
             tag: "span",
             variant: "text-md/normal",
             children: e
           })
         }, t))
-      }), (0, s.jsx)("div", {
-        className: A.anchorContainer,
-        children: (0, s.jsx)(i.Anchor, {
-          onClick: () => M(e => !e),
-          children: (0, s.jsx)(i.Heading, {
+      }), (0, l.jsx)("div", {
+        className: S.anchorContainer,
+        children: (0, l.jsx)(i.Anchor, {
+          onClick: () => h(e => !e),
+          children: (0, l.jsx)(i.Heading, {
             variant: "heading-md/normal",
             color: "text-link",
-            children: p.length > 0 ? _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
+            children: C.length > 0 ? A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_EDIT_DETAILS : A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ADD_DETAILS
           })
         })
-      }), h && (0, s.jsxs)("div", {
-        className: A.inputContainer,
-        children: [(0, s.jsx)(i.TextArea, {
+      }), L && (0, l.jsx)("div", {
+        className: S.inputContainer,
+        children: (0, l.jsx)(i.TextArea, {
           value: C,
-          onChange: e => L(e)
-        }), (0, s.jsx)(i.Button, {
-          onClick: () => {
-            o.default.dispatch({
-              type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE",
-              userInput: C
-            }), M(!1)
-          },
-          color: i.Button.Colors.BRAND,
-          submitting: g,
-          className: A.saveButton,
-          children: _.default.Messages.SAVE
-        })]
-      }), (0, s.jsx)("div", {
-        className: S.policyContainer,
-        children: (0, s.jsx)(i.Text, {
-          variant: "text-md/semibold",
-          children: T
+          onChange: j
         })
-      }), (0, s.jsx)(i.Text, {
+      }), (0, l.jsx)("div", {
+        className: N.policyContainer,
+        children: (0, l.jsx)(i.Text, {
+          variant: "text-md/semibold",
+          children: g
+        })
+      }), (0, l.jsx)(i.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        className: A.footerText,
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
+        className: S.footerText,
+        children: A.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_FOOTER
       })]
-    }), (0, s.jsxs)(i.ModalFooter, {
+    }), (0, l.jsxs)(i.ModalFooter, {
       direction: d.default.Direction.VERTICAL,
-      children: [O && (0, s.jsx)(i.Text, {
-        className: A.errorText,
+      children: ["" !== M && (0, l.jsx)(i.Text, {
+        className: S.errorText,
         variant: "text-lg/normal",
         color: "text-danger",
-        children: _.default.Messages.APPEAL_INGESTION_MODAL_CONFIRM_SUBMISSION_ERROR
-      }), (0, s.jsxs)("div", {
-        className: A.buttonContainer,
-        children: [(0, s.jsx)(i.Button, {
+        children: M
+      }), (0, l.jsxs)("div", {
+        className: S.buttonContainer,
+        children: [(0, l.jsx)(i.Button, {
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.PRIMARY,
-          onClick: I,
-          disabled: g,
-          children: _.default.Messages.BACK
-        }), (0, s.jsx)(i.Button, {
+          onClick: x,
+          disabled: p,
+          children: A.default.Messages.BACK
+        }), (0, l.jsx)(i.Button, {
           onClick: P,
           color: i.Button.Colors.RED,
-          submitting: g,
-          children: _.default.Messages.SUBMIT
+          submitting: p,
+          children: A.default.Messages.SUBMIT
         })]
       })]
     })]

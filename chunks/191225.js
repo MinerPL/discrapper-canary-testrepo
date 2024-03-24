@@ -5,7 +5,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return x
+    return K
   }
 }), n("222007"), n("424973"), n("581081");
 var s = n("446674"),
@@ -16,39 +16,43 @@ var s = n("446674"),
   u = n("957255"),
   d = n("18494"),
   c = n("697218"),
+  _ = n("659500"),
   f = n("773336"),
-  _ = n("711562"),
-  h = n("334368"),
-  g = n("420444"),
-  m = n("272505"),
-  E = n("49111");
-let p = {
+  E = n("378713"),
+  h = n("711562"),
+  g = n("334368"),
+  m = n("420444"),
+  p = n("272505"),
+  S = n("49111");
+let T = {
     seenActivities: new Set,
+    everLaunchedActivities: new Set,
     seenNewActivities: {},
     seenUpdatedActivities: {},
     shouldShowNewActivityIndicator: !1,
     usersHavePlayedByApp: new Map
   },
   v = [],
-  S = new Map,
-  T = new Map,
   I = new Map,
-  C = !1,
   A = new Map,
+  C = new Map,
   y = new Map,
-  N = new Map,
+  N = !1,
   R = new Map,
   O = new Map,
   D = new Map,
-  P = new Map;
-let b = m.ActivityPanelModes.ACTION_BAR,
-  L = m.FocusedActivityLayouts.RESIZABLE;
+  P = new Map,
+  L = new Map,
+  M = new Map,
+  b = new Map;
+let U = p.ActivityPanelModes.DISCONNECTED,
+  w = p.FocusedActivityLayouts.RESIZABLE;
 
-function M(e) {
+function k(e) {
   return null != e ? e : "0"
 }
 
-function U(e) {
+function V(e) {
   var t, n;
   let {
     guildId: i,
@@ -57,42 +61,52 @@ function U(e) {
     instanceId: d,
     userIds: c,
     activitySessionId: f
-  } = e, h = (0, _.default)(a);
-  if (null == h) return;
-  let g = l.default.getBasicChannel(s),
-    m = null != g && u.default.canBasicChannel(E.BasicPermissions.CONNECT, g) || (null == g ? void 0 : g.type) === E.ChannelTypes.DM || (null == g ? void 0 : g.type) === E.ChannelTypes.GROUP_DM;
+  } = e, g = (0, h.default)(a);
+  if (null == g) return;
+  let m = l.default.getBasicChannel(s),
+    p = null != m && u.default.canBasicChannel(S.BasicPermissions.CONNECT, m) || (null == m ? void 0 : m.type) === S.ChannelTypes.DM || (null == m ? void 0 : m.type) === S.ChannelTypes.GROUP_DM;
   if (function(e, t) {
       var n;
-      p.usersHavePlayedByApp.set(e, new Set([...null !== (n = p.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
-    }(a, c), !m) return;
+      T.usersHavePlayedByApp.set(e, new Set([...null !== (n = T.usersHavePlayedByApp.get(e)) && void 0 !== n ? n : [], ...t]))
+    }(a, c), !p) return;
   let v = {
       activitySessionId: null != f ? f : d,
       applicationId: a,
       channelId: s,
       guildId: i,
       instanceId: d,
-      url: h,
+      url: g,
       userIds: new Set(c)
     },
-    C = o.default.getId(),
-    A = S.get(v.applicationId);
-  c.some(e => e === C) && null != A && (S.set(A.applicationId, {
-    ...A,
-    ...v
-  }), r.default.dispatch({
-    type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
-    channelId: s,
-    instanceId: d
-  }));
-  let y = null !== (t = I.get(s)) && void 0 !== t ? t : [],
-    N = y.filter(e => e.applicationId !== a),
-    R = M(i),
-    O = null !== (n = T.get(R)) && void 0 !== n ? n : [],
-    D = O.filter(e => !(e.applicationId === a && e.channelId === s));
-  0 !== c.length && (N.push(v), D.push(v)), I.set(s, N), T.set(R, D)
+    N = o.default.getId(),
+    R = I.get(v.applicationId);
+  if (c.some(e => e === N) && null != R && (I.set(R.applicationId, {
+      ...R,
+      ...v
+    }), r.default.dispatch({
+      type: "EMBEDDED_ACTIVITY_INSTANCE_CHANGE",
+      channelId: s,
+      instanceId: d
+    })), null != R && s === R.channelId && !c.some(e => e === N) && Array.from(R.userIds).some(e => e === N)) y.get(s) === a ? y.delete(s) : I.delete(a);
+  else if (c.some(e => e === N) && (null == R || R.applicationId !== a || R.channelId !== s)) {
+    let e = null != f && f === o.default.getSessionId();
+    (e || (0, E.shouldMountActivityIFrameFromGatewayUpdateWithoutSessionIdCheck)("EmbeddedActivitiesStore")) && (F({
+      channelId: s,
+      applicationId: a,
+      instanceId: d
+    }), _.ComponentDispatch.dispatch(S.ComponentActions.OPEN_EMBEDDED_ACTIVITY, {
+      channelId: s
+    }))
+  }
+  let O = null !== (t = C.get(s)) && void 0 !== t ? t : [],
+    D = O.filter(e => e.applicationId !== a),
+    P = k(i),
+    L = null !== (n = A.get(P)) && void 0 !== n ? n : [],
+    M = L.filter(e => !(e.applicationId === a && e.channelId === s));
+  0 !== c.length && (D.push(v), M.push(v)), C.set(s, D), A.set(P, M)
 }
 
-function k(e) {
+function G(e) {
   let t = e.embedded_activities;
   t.forEach(t => {
     let {
@@ -100,7 +114,7 @@ function k(e) {
       embedded_activity: i,
       connections: s
     } = t;
-    U({
+    V({
       guildId: e.id,
       channelId: n,
       applicationId: i.application_id,
@@ -110,36 +124,61 @@ function k(e) {
   })
 }
 
-function w() {
-  C = !1
+function F(e) {
+  var t, n;
+  let {
+    channelId: s,
+    applicationId: r,
+    instanceId: a
+  } = e, u = (0, h.default)(r), _ = o.default.getSessionId();
+  if (null == u || null == _ || (null === (t = I.get(r)) || void 0 === t ? void 0 : t.channelId) === s) return !1;
+  let f = l.default.getChannel(s),
+    E = null == f ? void 0 : f.getGuildId(),
+    g = c.default.getCurrentUser();
+  if (null == E && !(null !== (n = null == f ? void 0 : f.isPrivate()) && void 0 !== n && n) || null == g) return !1;
+  i = s, I.set(r, {
+    guildId: E,
+    channelId: s,
+    applicationId: r,
+    url: u,
+    userIds: new Set([g.id]),
+    connectedSince: Date.now(),
+    instanceId: a
+  }), U = i !== d.default.getChannelId() || (0, m.default)(s) ? p.ActivityPanelModes.PIP : p.ActivityPanelModes.PANEL, b.set(B(s, r), Date.now())
 }
 
-function V(e, t) {
+function x() {
+  N = !1
+}
+
+function B(e, t) {
   return "".concat(e, ":").concat(t)
 }
-class G extends s.default.PersistedStore {
+class H extends s.default.PersistedStore {
   initialize(e) {
-    var t;
-    let n = new Map;
+    var t, n;
+    let i = new Map;
     Array.isArray(null == e ? void 0 : e.usersHavePlayedByApp) && (null == e || e.usersHavePlayedByApp.forEach(e => {
       if (Array.isArray(e)) {
-        let [t, i] = e;
-        "string" == typeof t && Array.isArray(i) && n.set(t, new Set(i))
+        let [t, n] = e;
+        "string" == typeof t && Array.isArray(n) && i.set(t, new Set(n))
       }
     }));
-    let i = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []);
-    null != e && (p = {
+    let s = new Set(null !== (t = null == e ? void 0 : e.seenActivities) && void 0 !== t ? t : []),
+      r = new Set(null !== (n = null == e ? void 0 : e.everLaunchedActivities) && void 0 !== n ? n : []);
+    null != e && (T = {
       ...e,
-      seenActivities: i,
-      usersHavePlayedByApp: n
+      seenActivities: s,
+      everLaunchedActivities: r,
+      usersHavePlayedByApp: i
     })
   }
   getState() {
-    return p
+    return T
   }
   getSelfEmbeddedActivityForChannel(e) {
     var t;
-    return null !== (t = Array.from(S.values()).find(t => {
+    return null !== (t = Array.from(I.values()).find(t => {
       let {
         channelId: n
       } = t;
@@ -147,39 +186,39 @@ class G extends s.default.PersistedStore {
     })) && void 0 !== t ? t : null
   }
   getSelfEmbeddedActivities() {
-    return S
+    return I
   }
   getEmbeddedActivitiesForGuild(e) {
     var t;
-    return null !== (t = T.get(e)) && void 0 !== t ? t : v
+    return null !== (t = A.get(e)) && void 0 !== t ? t : v
   }
   getEmbeddedActivitiesForChannel(e) {
     var t;
-    return null !== (t = I.get(e)) && void 0 !== t ? t : v
+    return null !== (t = C.get(e)) && void 0 !== t ? t : v
   }
   getEmbeddedActivitiesByChannel() {
-    return I
+    return C
   }
   getEmbeddedActivityDurationMs(e, t) {
-    let n = P.get(V(e, t));
+    let n = b.get(B(e, t));
     return null == n ? null : Date.now() - n
   }
   isLaunchingActivity() {
-    return C
+    return N
   }
   getShelfActivities(e) {
     var t;
-    let n = M(e);
-    return null !== (t = A.get(n)) && void 0 !== t ? t : []
+    let n = k(e);
+    return null !== (t = R.get(n)) && void 0 !== t ? t : []
   }
   getShelfFetchStatus(e) {
-    let t = M(e);
-    return y.get(t)
+    let t = k(e);
+    return O.get(t)
   }
   shouldFetchShelf(e) {
     var t, n;
-    let i = M(e),
-      s = null !== (t = y.get(i)) && void 0 !== t ? t : {
+    let i = k(e),
+      s = null !== (t = O.get(i)) && void 0 !== t ? t : {
         isFetching: !1
       },
       r = Date.now(),
@@ -188,39 +227,53 @@ class G extends s.default.PersistedStore {
   }
   getOrientationLockStateForApp(e) {
     var t;
-    return null !== (t = N.get(e)) && void 0 !== t ? t : null
+    return null !== (t = D.get(e)) && void 0 !== t ? t : null
   }
   getPipOrientationLockStateForApp(e) {
     var t;
-    return null !== (t = R.get(e)) && void 0 !== t ? t : this.getOrientationLockStateForApp(e)
+    return null !== (t = P.get(e)) && void 0 !== t ? t : this.getOrientationLockStateForApp(e)
   }
   getGridOrientationLockStateForApp(e) {
     var t, n;
-    return null !== (n = null !== (t = O.get(e)) && void 0 !== t ? t : R.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
+    return null !== (n = null !== (t = L.get(e)) && void 0 !== t ? t : P.get(e)) && void 0 !== n ? n : this.getOrientationLockStateForApp(e)
   }
   getLayoutModeForApp(e) {
-    return D.get(e)
+    return M.get(e)
   }
   getUsersHavePlayedByApp(e) {
     var t;
-    return [...null !== (t = p.usersHavePlayedByApp.get(e)) && void 0 !== t ? t : []]
+    return [...null !== (t = T.usersHavePlayedByApp.get(e)) && void 0 !== t ? t : []]
   }
   getConnectedActivityChannelId() {
     return i
   }
   getActivityPanelMode() {
-    return b
+    return U
   }
   getFocusedLayout() {
-    return L
+    return w
   }
   getCurrentEmbeddedActivity() {
     var e;
     let t = this.getConnectedActivityChannelId();
     if (null != t) return null !== (e = this.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0
   }
+  getEmbeddedActivityForUserId(e, t) {
+    let n;
+    if (void 0 !== t) {
+      e: for (let [i, s] of C)
+        for (let i of s)
+          if (i.applicationId === t && i.userIds.has(e)) {
+            n = i;
+            break e
+          }return n
+    }
+  }
+  hasActivityEverBeenLaunched(e) {
+    return T.everLaunchedActivities.has(e)
+  }
 }
-G.displayName = "EmbeddedActivitiesStore", G.persistKey = "EmbeddedActivities", G.migrations = [e => ({
+H.displayName = "EmbeddedActivitiesStore", H.persistKey = "EmbeddedActivities", H.migrations = [e => ({
   ...e,
   seenFeaturedActivities: [],
   shouldShowNewActivityIndicator: !1
@@ -240,26 +293,33 @@ G.displayName = "EmbeddedActivitiesStore", G.persistKey = "EmbeddedActivities", 
     seenNewActivities: {},
     seenUpdatedActivities: {}
   }
+}, e => {
+  var t;
+  let n = new Set(null !== (t = e.everLaunchedActivities) && void 0 !== t ? t : []);
+  return {
+    ...e,
+    everLaunchedActivities: n
+  }
 }];
-let F = new G(r.default, {
+let Y = new H(r.default, {
   ACTIVITY_LAYOUT_MODE_UPDATE: function(e) {
     let {
       applicationId: t,
       layoutMode: n
     } = e;
-    D.set(t, n)
+    M.set(t, n)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
     let {
       guilds: t
     } = e;
-    I.clear(), T.clear(), t.forEach(e => k(e))
+    C.clear(), A.clear(), t.forEach(e => G(e))
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    k(t)
+    G(t)
   },
   CALL_CREATE: function(e) {
     let {
@@ -273,7 +333,7 @@ let F = new G(r.default, {
           embedded_activity: n,
           connections: i
         } = e;
-        U({
+        V({
           guildId: null,
           channelId: t,
           applicationId: n.application_id,
@@ -287,46 +347,48 @@ let F = new G(r.default, {
     let {
       channel: t
     } = e;
-    I.set(t.id, []);
+    C.set(t.id, []);
     let n = t.guild_id;
     if (null != n) {
       var i;
-      let e = M(n),
-        s = null !== (i = T.get(e)) && void 0 !== i ? i : [],
+      let e = k(n),
+        s = null !== (i = A.get(e)) && void 0 !== i ? i : [],
         r = s.filter(e => e.channelId !== t.id);
-      T.set(e, r)
+      A.set(e, r)
     }
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function() {
-    C = !0
+    N = !0
   },
-  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: w,
-  EMBEDDED_ACTIVITY_LAUNCH_FAIL: w,
-  EMBEDDED_ACTIVITY_OPEN: function(e) {
-    var t, n;
+  EMBEDDED_ACTIVITY_LAUNCH_SUCCESS: function(e) {
     let {
-      channelId: s,
-      applicationId: r
-    } = e, a = (0, _.default)(r), u = o.default.getSessionId();
-    if (null == a || null == u || (null === (t = S.get(r)) || void 0 === t ? void 0 : t.channelId) === s) return !1;
-    let f = l.default.getChannel(s),
-      h = null == f ? void 0 : f.getGuildId(),
-      E = c.default.getCurrentUser();
-    if (null == h && !(null !== (n = null == f ? void 0 : f.isPrivate()) && void 0 !== n && n) || null == E) return !1;
-    i = s, S.set(r, {
-      guildId: h,
-      channelId: s,
-      applicationId: r,
-      url: a,
-      userIds: new Set([E.id]),
-      connectedSince: Date.now()
-    }), b = i !== d.default.getChannelId() || (0, g.default)(s) ? m.ActivityPanelModes.PIP : m.ActivityPanelModes.PANEL, P.set(V(s, r), Date.now())
+      applicationId: t
+    } = e;
+    T.everLaunchedActivities.add(t),
+      function() {
+        N = !1
+      }()
+  },
+  EMBEDDED_ACTIVITY_LAUNCH_FAIL: function() {
+    (function() {
+      N = !1
+    })()
+  },
+  EMBEDDED_ACTIVITY_OPEN: function(e) {
+    let {
+      channelId: t,
+      applicationId: n
+    } = e;
+    F({
+      channelId: t,
+      applicationId: n
+    })
   },
   EMBEDDED_ACTIVITY_CLOSE: function(e) {
     let {
       applicationId: t
-    } = e, n = S.get(t);
-    S.delete(t), (null == n ? void 0 : n.channelId) === i && (i = void 0)
+    } = e, n = I.get(t);
+    I.delete(t), (null == n ? void 0 : n.channelId) === i && (i = void 0)
   },
   EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
     let {
@@ -335,7 +397,7 @@ let F = new G(r.default, {
       embeddedActivity: i,
       connections: s
     } = e;
-    U({
+    V({
       guildId: t,
       channelId: n,
       applicationId: i.application_id,
@@ -352,7 +414,7 @@ let F = new G(r.default, {
       instanceId: r,
       userIds: a
     } = e;
-    U({
+    V({
       guildId: s,
       channelId: i,
       applicationId: n,
@@ -367,9 +429,9 @@ let F = new G(r.default, {
       activity: n
     } = e;
     if (null == n) return !1;
-    let i = S.get(null !== (t = n.application_id) && void 0 !== t ? t : "");
+    let i = I.get(null !== (t = n.application_id) && void 0 !== t ? t : "");
     if (null == i) return !1;
-    S.set(i.applicationId, {
+    I.set(i.applicationId, {
       ...i
     })
   },
@@ -377,8 +439,8 @@ let F = new G(r.default, {
     let {
       applicationId: t,
       config: n
-    } = e, i = S.get(t);
-    null != i && S.set(i.applicationId, {
+    } = e, i = I.get(t);
+    null != i && I.set(i.applicationId, {
       ...i,
       config: n
     })
@@ -386,8 +448,8 @@ let F = new G(r.default, {
   EMBEDDED_ACTIVITY_FETCH_SHELF: function(e) {
     let {
       guildId: t
-    } = e, n = M(t), i = y.get(n);
-    y.set(n, {
+    } = e, n = k(t), i = O.get(n);
+    O.set(n, {
       isFetching: !0,
       lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
     })
@@ -396,8 +458,8 @@ let F = new G(r.default, {
     let {
       guildId: t,
       activities: n
-    } = e, i = M(t);
-    A.set(i, n);
+    } = e, i = k(t);
+    R.set(i, n);
     let s = Date.now();
     ! function(e) {
       let {
@@ -406,23 +468,23 @@ let F = new G(r.default, {
       } = e;
       t.forEach(e => {
         let t = e.application_id,
-          i = e.client_platform_config[(0, h.default)((0, f.getOS)())];
-        if (!p.seenActivities.has(t) && (p.shouldShowNewActivityIndicator = !0, p.seenActivities.add(t)), null == i.label_until) return;
+          i = e.client_platform_config[(0, g.default)((0, f.getOS)())];
+        if (!T.seenActivities.has(t) && (T.shouldShowNewActivityIndicator = !0, T.seenActivities.add(t)), null == i.label_until) return;
         let s = new Date(i.label_until).getTime();
         if (s < n) return;
-        let r = p.seenNewActivities[t],
-          o = Object.hasOwn(p.seenNewActivities, t),
+        let r = T.seenNewActivities[t],
+          o = Object.hasOwn(T.seenNewActivities, t),
           l = new Date(r).getTime() < s;
-        i.label_type === a.EmbeddedActivityLabelTypes.NEW && (!o || l) && (p.shouldShowNewActivityIndicator = !0, p.seenNewActivities[t] = i.label_until);
-        let u = p.seenUpdatedActivities[t],
-          d = Object.hasOwn(p.seenUpdatedActivities, t),
+        i.label_type === a.EmbeddedActivityLabelTypes.NEW && (!o || l) && (T.shouldShowNewActivityIndicator = !0, T.seenNewActivities[t] = i.label_until);
+        let u = T.seenUpdatedActivities[t],
+          d = Object.hasOwn(T.seenUpdatedActivities, t),
           c = new Date(u).getTime() < s;
-        i.label_type === a.EmbeddedActivityLabelTypes.UPDATED && (!d || c) && (p.shouldShowNewActivityIndicator = !0, p.seenUpdatedActivities[t] = i.label_until)
+        i.label_type === a.EmbeddedActivityLabelTypes.UPDATED && (!d || c) && (T.shouldShowNewActivityIndicator = !0, T.seenUpdatedActivities[t] = i.label_until)
       })
     }({
       activities: n,
       now: s
-    }), y.set(i, {
+    }), O.set(i, {
       isFetching: !1,
       lastFetchTimestampMs: s
     })
@@ -430,14 +492,14 @@ let F = new G(r.default, {
   EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL: function(e) {
     let {
       guildId: t
-    } = e, n = M(t), i = y.get(n);
-    y.set(n, {
+    } = e, n = k(t), i = O.get(n);
+    O.set(n, {
       isFetching: !1,
       lastFetchTimestampMs: null == i ? void 0 : i.lastFetchTimestampMs
     })
   },
   EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR: () => {
-    p.shouldShowNewActivityIndicator = !1
+    T.shouldShowNewActivityIndicator = !1
   },
   EMBEDDED_ACTIVITY_SET_ORIENTATION_LOCK_STATE: function(e) {
     let {
@@ -446,25 +508,47 @@ let F = new G(r.default, {
       pictureInPictureLockState: i,
       gridLockState: s
     } = e;
-    null == n ? N.delete(t) : N.set(t, n), null === i ? R.delete(t) : void 0 !== i && R.set(t, i), null === s ? O.delete(t) : void 0 !== s && O.set(t, s)
+    null == n ? D.delete(t) : D.set(t, n), null === i ? P.delete(t) : void 0 !== i && P.set(t, i), null === s ? L.delete(t) : void 0 !== s && L.set(t, s)
   },
   EMBEDDED_ACTIVITY_SET_PANEL_MODE: function(e) {
     let {
       activityPanelMode: t
     } = e;
-    b = t
+    U = t
   },
   EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT: function(e) {
     let {
       focusedActivityLayout: t
     } = e;
-    L = t
+    w = t
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    i !== t && b === m.ActivityPanelModes.PANEL && (b = m.ActivityPanelModes.PIP)
+    i !== t && U === p.ActivityPanelModes.PANEL && (U = p.ActivityPanelModes.PIP)
+  },
+  EMBEDDED_ACTIVITY_DISCONNECT: function(e) {
+    let {
+      channelId: t,
+      applicationId: n,
+      isRejoiningFromCurrentSession: i
+    } = e;
+    i && y.set(t, n)
+  },
+  CONNECTION_INTERRUPTED: function(e) {
+    e.code === S.RPCCloseCodes.CLOSE_ABNORMAL && (i = void 0, I.clear(), N = !1, U = p.ActivityPanelModes.DISCONNECTED)
+  },
+  CHANNEL_CALL_POPOUT_WINDOW_OPEN: function(e) {
+    let {
+      channel: t
+    } = e, n = Array.from(I.values()).find(e => {
+      let {
+        channelId: n
+      } = e;
+      return t.id === n
+    });
+    void 0 !== n && y.set(t.id, n.applicationId)
   }
 });
-var x = F
+var K = Y

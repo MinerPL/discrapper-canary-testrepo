@@ -89,7 +89,7 @@ function p(e, t, l) {
           }
         }, [t]),
         p = (0, o.useStateFromStoresObject)([f.default], () => Object.fromEntries(d.map(f.default.getChannel).filter(N.isNotNullish).map(e => [e.id, e])), [d]),
-        S = n.useMemo(() => Object.fromEntries(E.map(e => l.getRole(e)).filter(N.isNotNullish).map(e => [e.id, e])), [l, E]),
+        S = (0, o.useStateFromStoresObject)([m.default], () => Object.fromEntries(E.map(t => m.default.getRole(e, t)).filter(N.isNotNullish).map(e => [e.id, e])), [E, e]),
         O = (0, o.useStateFromStoresObject)([T.default], () => Object.fromEntries(h.map(T.default.getUser).filter(N.isNotNullish).map(e => [e.id, e])), [h]);
       return n.useMemo(() => {
         let e = l.id,

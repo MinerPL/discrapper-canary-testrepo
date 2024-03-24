@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
 var i = n("917351"),
@@ -20,43 +20,51 @@ let c = new o.default(d.default.isMember, (e, t) => {
   })
 });
 
-function f() {
+function _() {
   c.reset()
 }
 
-function _(e, t) {
+function f(e, t) {
   return c.request(e, t), !1
 }
 
-function h(e, t) {
+function E(e, t) {
   return t.forEach(t => {
     let {
       author: n,
       mentions: i
     } = t;
-    null != n && _(e, n.id), null == i || i.forEach(t => _(e, t.id))
+    null != n && f(e, n.id), null == i || i.forEach(t => f(e, t.id))
   }), !1
 }
 
-function g(e) {
+function h(e) {
   let {
     channelId: t,
     messages: n
   } = e, i = u.default.getChannel(t);
-  return null != i && null != i.guild_id && h(i.guild_id, n)
+  return null != i && null != i.guild_id && E(i.guild_id, n)
+}
+
+function g(e) {
+  let {
+    guildId: t,
+    messages: n
+  } = e;
+  return null != t && E(t, s.flatten(n))
 }
 class m extends r.default.Store {
   initialize() {
     this.waitFor(u.default, d.default)
   }
   requestMember(e, t) {
-    _(e, t)
+    f(e, t)
   }
 }
 m.displayName = "GuildMemberRequesterStore";
-var E = new m(a.default, {
-  CONNECTION_CLOSED: f,
-  CONNECTION_OPEN: f,
+var p = new m(a.default, {
+  CONNECTION_CLOSED: _,
+  CONNECTION_OPEN: _,
   CONNECTION_RESUMED: function() {
     return c.requestUnacknowledged(), !1
   },
@@ -70,23 +78,18 @@ var E = new m(a.default, {
       c.acknowledge(t, e.user.id)
     }), null != i && i.forEach(e => c.acknowledge(t, e)), !1
   },
-  SEARCH_FINISH: function(e) {
-    let {
-      guildId: t,
-      messages: n
-    } = e;
-    return null != t && h(t, s.flatten(n))
-  },
-  LOCAL_MESSAGES_LOADED: g,
-  LOAD_MESSAGES_SUCCESS: g,
-  LOAD_MESSAGES_AROUND_SUCCESS: g,
-  LOAD_PINNED_MESSAGES_SUCCESS: g,
-  LOAD_RECENT_MENTIONS_SUCCESS: g,
+  SEARCH_FINISH: g,
+  MOD_VIEW_SEARCH_FINISH: g,
+  LOCAL_MESSAGES_LOADED: h,
+  LOAD_MESSAGES_SUCCESS: h,
+  LOAD_MESSAGES_AROUND_SUCCESS: h,
+  LOAD_PINNED_MESSAGES_SUCCESS: h,
+  LOAD_RECENT_MENTIONS_SUCCESS: h,
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       data: n
     } = e, i = (0, l.getMessagesFromGuildFeedFetch)(n);
-    return h(t, i)
+    return E(t, i)
   }
 })

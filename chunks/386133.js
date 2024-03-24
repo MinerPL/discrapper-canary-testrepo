@@ -1,71 +1,75 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return x
   }
-});
+}), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("483366"),
   o = n.n(r),
   u = n("446674"),
   d = n("77078"),
   c = n("913144"),
   f = n("777273"),
-  E = n("843823"),
-  _ = n("697218"),
-  h = n("392453"),
-  C = n("599110"),
-  I = n("718517"),
-  T = n("744923"),
-  S = n("333705"),
-  m = n("749554"),
-  p = n("62659"),
-  A = n("36512"),
-  g = n("638441"),
-  N = n("49111"),
-  R = n("988268"),
-  O = n("782340"),
-  L = n("561368");
-let v = 15 * I.default.Millis.MINUTE,
-  M = (0, g.default)(function(e) {
+  E = n("2973"),
+  h = n("227231"),
+  _ = n("843823"),
+  C = n("697218"),
+  S = n("392453"),
+  I = n("599110"),
+  m = n("718517"),
+  p = n("744923"),
+  T = n("333705"),
+  g = n("749554"),
+  A = n("62659"),
+  N = n("36512"),
+  R = n("638441"),
+  O = n("49111"),
+  v = n("988268"),
+  L = n("782340"),
+  M = n("852865");
+let P = 15 * m.default.Millis.MINUTE,
+  y = (0, R.default)(function(e) {
     let {
       party: t,
       onUserContextMenu: n,
-      onChannelContextMenu: i
-    } = e, l = (0, a.jsx)(m.default, {
+      onChannelContextMenu: l,
+      quest: i
+    } = e, r = (0, a.jsx)(g.default, {
       party: t,
       onUserContextMenu: n
-    }), r = (0, a.jsx)(S.default, {
+    }), u = (0, a.jsx)(T.default, {
       party: t,
-      onChannelContextMenu: i
+      onChannelContextMenu: l,
+      quest: i
     }), {
-      partiedMembers: u,
-      applicationStreams: c,
-      currentActivities: f,
-      voiceChannels: E
-    } = t, _ = u.length, h = c.length, I = f.length, T = E.length > 0, g = s.useCallback(() => {
-      let e = f.filter(e => {
+      partiedMembers: c,
+      applicationStreams: f,
+      currentActivities: E,
+      voiceChannels: h
+    } = t, _ = c.length, C = f.length, S = E.length, m = h.length > 0, p = s.useCallback(() => {
+      let e = E.filter(e => {
         var t, n;
-        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === R.ApplicationTypes.GAME
+        return (null === (t = e.game) || void 0 === t ? void 0 : t.name) != null && (null === (n = e.game) || void 0 === n ? void 0 : n.type) === v.ApplicationTypes.GAME
       }).map(e => e.game.name);
-      C.default.track(N.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
+      I.default.track(O.AnalyticEvents.NOW_PLAYING_CARD_HOVERED, {
         num_users: _,
-        num_streams: h,
-        num_activities: I,
-        in_voice_channel: T,
+        num_streams: C,
+        num_activities: S,
+        in_voice_channel: m,
         games_detected: e
       })
-    }, [_, h, I, T, f]), O = o(g, v);
-    return null != l || null != r ? (0, a.jsx)(d.Popout, {
+    }, [_, C, S, m, E]), R = o(p, P);
+    return null != r || null != u ? (0, a.jsx)(d.Popout, {
       position: "left",
       renderPopout: e => {
         let {
           closePopout: n
         } = e;
-        return (0, a.jsx)(A.default, {
+        return (0, a.jsx)(N.default, {
           party: t,
           close: n
         })
@@ -75,62 +79,77 @@ let v = 15 * I.default.Millis.MINUTE,
         let {
           isShown: n
         } = t;
-        return (0, a.jsx)(p.default, {
+        return (0, a.jsx)(A.default, {
           ...e,
-          onMouseEnter: O,
+          onMouseEnter: R,
           "aria-haspopup": "menu",
-          className: L.itemCard,
+          className: M.itemCard,
           active: n,
           children: (0, a.jsxs)("div", {
-            children: [l, r]
+            children: [r, u]
           })
         })
       }
     }) : null
   }),
-  P = l.throttle(() => f.fetchUserAffinities(!1), 3e5);
+  D = i.throttle(() => f.fetchUserAffinities(!1), 3e5);
 
-function D() {
+function x() {
   let {
     nowPlayingCards: e,
     loaded: t,
     needsRefresh: n,
-    fetching: i,
-    currentUser: l
-  } = (0, u.useStateFromStoresObject)([h.default, E.default, _.default], () => ({
-    nowPlayingCards: h.default.nowPlayingCards,
-    loaded: h.default.loaded,
-    needsRefresh: E.default.needsRefresh(),
-    fetching: E.default.getFetching(),
-    currentUser: _.default.getCurrentUser()
-  }));
-  s.useEffect(() => (c.default.wait(() => T.mount()), () => c.default.wait(() => T.unmount())), [null == l ? void 0 : l.id]), s.useEffect(() => {
-    n && !i && P()
-  }, [n, i]);
-  let r = null;
-  return t ? (r = e.length > 0 ? e.map(e => {
+    fetching: l,
+    currentUser: i
+  } = (0, u.useStateFromStoresObject)([S.default, _.default, C.default], () => ({
+    nowPlayingCards: S.default.nowPlayingCards,
+    loaded: S.default.loaded,
+    needsRefresh: _.default.needsRefresh(),
+    fetching: _.default.getFetching(),
+    currentUser: C.default.getCurrentUser()
+  })), r = (0, u.useStateFromStores)([E.default], () => E.default.quests);
+  s.useEffect(() => (c.default.wait(() => p.mount()), () => c.default.wait(() => p.unmount())), [null == i ? void 0 : i.id]), s.useEffect(() => {
+    n && !l && D()
+  }, [n, l]);
+  let o = s.useMemo(() => {
+      let t = new Map,
+        n = new Set;
+      for (let a of e) a.party.currentActivities.forEach(e => {
+        let {
+          game: s
+        } = e;
+        if (null != s) {
+          let e = (0, h.getQuestByApplicationId)(r, s.id);
+          null != e && !n.has(e.id) && (t.set(a.party.id, e), n.add(e.id))
+        }
+      });
+      return t
+    }, [e, r]),
+    f = null;
+  return t ? (f = e.length > 0 ? e.map(e => {
     let {
       party: t
     } = e;
-    return (0, a.jsx)(M, {
-      party: t
+    return (0, a.jsx)(y, {
+      party: t,
+      quest: o.get(t.id)
     }, t.id)
   }) : (0, a.jsxs)("div", {
-    className: L.emptyCard,
+    className: M.emptyCard,
     children: [(0, a.jsx)(d.Heading, {
       variant: "heading-md/semibold",
-      className: L.emptyHeader,
-      children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
+      className: M.emptyHeader,
+      children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_HEADER
     }), (0, a.jsx)(d.Text, {
       color: "none",
-      className: L.emptyText,
+      className: M.emptyText,
       variant: "text-sm/normal",
-      children: O.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
+      children: L.default.Messages.ACTIVITY_FEED_NONE_PLAYING_BODY
     })]
   }), (0, a.jsx)(a.Fragment, {
-    children: r
+    children: f
   })) : (0, a.jsx)("div", {
-    className: L.emptyCard,
+    className: M.emptyCard,
     children: (0, a.jsx)(d.Spinner, {})
   })
 }

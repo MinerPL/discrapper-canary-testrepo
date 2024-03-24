@@ -4,26 +4,28 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var i, r = n("605250"),
-  s = n("802493");
-let a = new r.default("ChannelReader");
+var i, s = n("605250"),
+  r = n("802493");
+let a = new s.default("ChannelReader");
 i = class {
   static getSync(e, t) {
     let n = performance.now(),
-      i = s.default.channels(e).getManySyncUnsafe(t),
-      r = performance.now() - n;
-    return a.log("synchronously loaded in ".concat(r, "ms (guild: ").concat(t, ", channels: ").concat(i.length, ")")), [i, r]
+      i = r.default.channels(e).getManySyncUnsafe(t),
+      s = performance.now() - n;
+    return a.log("synchronously loaded in ".concat(s, "ms (guild: ").concat(t, ", channels: ").concat(i.length, ")")), [i, s]
   }
   static async getAsync(e, t) {
     let n = performance.now(),
-      i = await s.default.channels(e).getMany(t),
-      r = performance.now() - n;
-    return a.verbose("loaded in ".concat(r, "ms (guild: ").concat(t, ", channels: ").concat(i.length, ")")), i
+      i = await r.default.channels(e).getMany(t),
+      s = performance.now() - n;
+    return a.verbose("loaded in ".concat(s, "ms (guild: ").concat(t, ", channels: ").concat(i.length, ")")), i
   }
-  static getGuildIdsSync() {
+  static async getGuildIds() {
     try {
-      var e, t;
-      let n = null !== (t = null === (e = s.default.channels()) || void 0 === e ? void 0 : e.getGuildIdsSyncUnsafe()) && void 0 !== t ? t : [],
+      var e;
+      let t = r.default.channels();
+      if (null == t) return new Set;
+      let n = null !== (e = await t.getGuildIds()) && void 0 !== e ? e : [],
         i = n.filter(e => null !== e && "string" == typeof e);
       return new Set(i)
     } catch (e) {

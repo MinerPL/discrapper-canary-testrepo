@@ -1,7 +1,7 @@
 "use strict";
-E.r(_), E.d(_, {
-  isStable: function() {
-    return t
+n.r(t), n.d(t, {
+  CurrentReleaseChannel: function() {
+    return i
   }
-});
-let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL
+}), window.GLOBAL_ENV.RELEASE_CHANNEL;
+let i = window.GLOBAL_ENV.RELEASE_CHANNEL

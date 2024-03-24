@@ -38,7 +38,7 @@ function g(e) {
   return null === (t = d[e]) || void 0 === t ? void 0 : t.message
 }
 
-function h(e) {
+function _(e) {
   let {
     threads: t,
     mostRecentMessages: n
@@ -47,7 +47,7 @@ function h(e) {
     f(e.channel_id, e)
   })
 }
-class _ extends l.default.Store {
+class h extends l.default.Store {
   initialize() {
     this.waitFor(s.default, r.default)
   }
@@ -58,14 +58,14 @@ class _ extends l.default.Store {
     }), d[e]
   }
 }
-_.displayName = "ForumPostRecentMessageStore";
-var p = new _(i.default, {
+h.displayName = "ForumPostRecentMessageStore";
+var p = new h(i.default, {
   CONNECTION_OPEN: function() {
     d = {}
   },
   MESSAGE_CREATE: function(e) {
     if (e.isPushNotification || !c(e.message)) return !1;
-    e.message.channel_id === e.message.id ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
+    e.message.channel_id === o.default.castMessageIdAsChannelId(e.message.id) ? f(e.message.channel_id, null) : f(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (!c(e.message) || e.message.channel_id === e.message.id) return !1;
@@ -92,6 +92,6 @@ var p = new _(i.default, {
     } = e;
     for (let e in t) f(e, t[e].most_recent_message)
   },
-  LOAD_ARCHIVED_THREADS_SUCCESS: h,
-  LOAD_THREADS_SUCCESS: h
+  LOAD_ARCHIVED_THREADS_SUCCESS: _,
+  LOAD_THREADS_SUCCESS: _
 })

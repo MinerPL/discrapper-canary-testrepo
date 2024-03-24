@@ -1,106 +1,108 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   maybeJoinEmbeddedActivity: function() {
-    return T
+    return S
   }
 });
 var n = i("404118"),
   l = i("651057"),
   a = i("299285"),
-  u = i("645999"),
-  r = i("653047"),
+  r = i("645999"),
+  u = i("653047"),
   d = i("42203"),
-  o = i("305961"),
-  s = i("957255"),
+  s = i("305961"),
+  o = i("957255"),
   c = i("697218"),
-  f = i("800762"),
+  E = i("800762"),
   _ = i("191225"),
-  E = i("706508"),
-  I = i("501260"),
-  A = i("782340");
-async function T(e) {
-  var t;
+  f = i("706508"),
+  I = i("126939"),
+  A = i("501260"),
+  T = i("782340");
+async function S(t) {
+  var e;
   let {
     channelId: i,
-    applicationId: T,
+    applicationId: S,
     instanceId: C,
-    inputApplication: v,
-    analyticsLocations: S,
-    embeddedActivitiesManager: N
-  } = e, h = _.default.getEmbeddedActivitiesForChannel(i), p = h.find(e => e.applicationId === T && (null == C || e.instanceId === C)), y = v;
+    inputApplication: N,
+    analyticsLocations: v,
+    embeddedActivitiesManager: O
+  } = t, D = _.default.getEmbeddedActivitiesForChannel(i), p = D.find(t => t.applicationId === S && (null == C || t.instanceId === C)), y = N;
   if (null == y) {
-    let e = await l.default.fetchApplication(T);
-    y = r.default.createFromServer(e)
+    let t = await l.default.fetchApplication(S);
+    y = u.default.createFromServer(t)
   }
   if (null == p || null == y) return;
-  let D = c.default.getCurrentUser(),
-    O = (0, I.default)({
-      userId: null == D ? void 0 : D.id,
+  let h = c.default.getCurrentUser(),
+    L = d.default.getChannel(i),
+    P = (0, A.default)({
+      userId: null == h ? void 0 : h.id,
       application: y,
       channelId: i,
-      currentUser: D,
-      isActivitiesEnabledForCurrentPlatform: !0,
+      currentUser: h,
+      isActivitiesEnabledForCurrentPlatform: (0, I.getIsActivitiesEnabledForCurrentPlatform)(L),
       ChannelStore: d.default,
-      VoiceStateStore: f.default,
-      PermissionStore: s.default,
-      GuildStore: o.default
+      VoiceStateStore: E.default,
+      PermissionStore: o.default,
+      GuildStore: s.default
     }),
     g = _.default.getSelfEmbeddedActivityForChannel(i),
-    L = null == g ? void 0 : g.applicationId,
-    m = null != L && null !== (t = a.default.getApplication(L)) && void 0 !== t ? t : void 0;
-  ! function(e) {
+    R = null == g ? void 0 : g.applicationId,
+    m = null != R && null !== (e = a.default.getApplication(R)) && void 0 !== e ? e : void 0;
+  ! function(t) {
     let {
-      embeddedActivityJoinability: t,
+      embeddedActivityJoinability: e,
       handleCanJoin: i
-    } = e;
-    switch (t) {
-      case I.EmbeddedActivityJoinability.CAN_JOIN:
+    } = t;
+    switch (e) {
+      case A.EmbeddedActivityJoinability.CAN_JOIN:
         null == i || i();
         break;
-      case I.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-        (0, u.showActivitiesInvalidPermissionsAlert)();
+      case A.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+        (0, r.showActivitiesInvalidPermissionsAlert)();
         break;
-      case I.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+      case A.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS,
           hideActionSheet: !1
         });
         break;
-      case I.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
+      case A.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS,
           hideActionSheet: !1
         });
         break;
-      case I.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
+      case A.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE,
           hideActionSheet: !1
         });
         break;
-      case I.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
-      case I.EmbeddedActivityJoinability.CHANNEL_FULL:
-      case I.EmbeddedActivityJoinability.NO_CHANNEL:
-      case I.EmbeddedActivityJoinability.NO_USER:
+      case A.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
+      case A.EmbeddedActivityJoinability.CHANNEL_FULL:
+      case A.EmbeddedActivityJoinability.NO_CHANNEL:
+      case A.EmbeddedActivityJoinability.NO_USER:
         n.default.show({
-          title: A.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-          body: A.default.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
+          title: T.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+          body: T.default.Messages.ACTIVITIES_GENERIC_LAUNCH_FAILURE_DIALOG_BODY,
           hideActionSheet: !1
         })
     }
   }({
-    embeddedActivityJoinability: O,
-    handleCanJoin: async function e() {
-      null != p && await (0, E.default)({
+    embeddedActivityJoinability: P,
+    handleCanJoin: async function t() {
+      null != p && await (0, f.default)({
         applicationId: p.applicationId,
         currentEmbeddedApplication: m,
         activityChannelId: i,
         locationObject: {},
-        embeddedActivitiesManager: N,
-        analyticsLocations: S
+        embeddedActivitiesManager: O,
+        analyticsLocations: v
       })
     }
   })

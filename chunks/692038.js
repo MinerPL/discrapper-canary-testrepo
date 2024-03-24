@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   createMessageRecord: function() {
-    return S
+    return T
   },
   updateServerMessage: function() {
-    return T
+    return v
   },
   updateMessageRecord: function() {
     return I
@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
   canEditMessageWithStickers: function() {
     return R
   }
-}), n("702976");
+}), n("702976"), n("222007");
 var i = n("866227"),
   s = n.n(i),
   r = n("312016");
@@ -23,62 +23,63 @@ var a = n("552310"),
   u = n("719926"),
   d = n("766274"),
   c = n("271938"),
-  f = n("27618"),
-  _ = n("697218"),
-  h = n("240873"),
-  g = n("659632");
+  _ = n("27618"),
+  f = n("697218"),
+  E = n("240873"),
+  h = n("659632");
 n("773336"), n("158998");
-var m = n("406297");
+var g = n("406297");
 n("574073");
-var E = n("894488"),
+var m = n("894488"),
   p = n("49111");
 n("782340");
-let v = new d.default({
+let S = new d.default({
   id: "???",
   username: "???"
 });
 
-function S(e) {
-  var t, n, i, o, h, E, S, T, I;
+function T(e) {
+  var t, n, i, s, o, E, m, T, v;
   let {
-    reactions: R,
-    interactionData: O
-  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, D = null !== (o = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== o ? o : [], P = null !== (h = e.mention_roles) && void 0 !== h ? h : [], b = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = s(new Date(e.timestamp)), U = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
-  let k = null == (T = e).author ? v : null != T.webhook_id ? new d.default(T.author) : null !== (I = _.default.getUser(T.author.id)) && void 0 !== I ? I : new d.default(T.author),
+    reactions: I,
+    interactionData: R
+  } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, O = null !== (s = null === (t = e.mentions) || void 0 === t ? void 0 : t.map(e => e.id)) && void 0 !== s ? s : [], D = null !== (o = e.mention_roles) && void 0 !== o ? o : [], P = null !== (E = e.mention_channels) && void 0 !== E ? E : [], L = e.message_reference, M = new Date(e.timestamp), b = e.type === p.MessageTypes.THREAD_CREATED ? [] : (0, r.default)(e.content);
+  let U = null == (T = e).author ? S : null != T.webhook_id ? new d.default(T.author) : null !== (v = f.default.getUser(T.author.id)) && void 0 !== v ? v : new d.default(T.author),
     w = null == e ? void 0 : e.gift_info,
-    V = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
-    G = e.type === p.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
-    F = e.type === p.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
-    x = e.content;
-  return e.type === p.MessageTypes.PREMIUM_REFERRAL && (x = ""), new u.default({
+    k = null != e.interaction ? l.default.createFromServer(e.interaction) : null,
+    V = e.type === p.MessageTypes.THREAD_STARTER_MESSAGE ? null === (i = e.referenced_message) || void 0 === i ? void 0 : null === (n = i.author) || void 0 === n ? void 0 : n.id : void 0,
+    G = e.type === p.MessageTypes.PREMIUM_REFERRAL ? e.content : void 0,
+    F = e.content;
+  return e.type === p.MessageTypes.PREMIUM_REFERRAL && (F = ""), new u.default({
     ...e,
-    author: k,
+    author: U,
     webhookId: e.webhook_id,
-    blocked: f.default.isBlocked(k.id) || null != G && f.default.isBlocked(G),
+    blocked: _.default.isBlocked(U.id) || null != V && _.default.isBlocked(V),
     timestamp: M,
-    editedTimestamp: null != e.edited_timestamp ? s(new Date(e.edited_timestamp)) : null,
+    editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
     mentionEveryone: e.mention_everyone,
-    mentions: D,
-    mentionRoles: P,
-    mentionChannels: b,
+    mentions: O,
+    mentionRoles: D,
+    mentionChannels: P,
     messageReference: L,
-    mentioned: (0, m.isMentioned)({
+    mentioned: (0, g.isMentioned)({
       userId: c.default.getId(),
       channelId: e.channel_id,
-      mentionEveryone: null !== (S = e.mention_everyone) && void 0 !== S && S,
-      mentionUsers: D,
-      mentionRoles: P
+      mentionEveryone: null !== (m = e.mention_everyone) && void 0 !== m && m,
+      mentionUsers: O,
+      mentionRoles: D
     }),
-    attachments: C(e),
+    attachments: A(e),
     embeds: y(e),
-    codedLinks: U,
-    giftCodes: (0, g.isGiftCodeEmbed)(e) ? (0, g.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url) : (0, g.findGiftCodes)(e.content),
-    content: x,
-    referralTrialOfferId: F,
-    call: A(e.call, M),
-    reactions: N(null != R ? R : e.reactions),
-    interaction: V,
-    interactionData: null != O ? O : e.interaction_data,
+    codedLinks: b,
+    giftCodes: (0, h.isGiftCodeEmbed)(e) ? (0, h.findGiftCodes)((null == e ? void 0 : e.embeds[0]).url) : (0, h.findGiftCodes)(e.content),
+    content: F,
+    referralTrialOfferId: G,
+    call: C(e.call, M),
+    reactions: N(null != I ? I : e.reactions, e.poll),
+    interaction: k,
+    interactionData: null != R ? R : e.interaction_data,
+    interactionMetadata: e.interaction_metadata,
     roleSubscriptionData: e.role_subscription_data,
     purchaseNotification: e.purchase_notification,
     poll: null == e.poll ? void 0 : (0, a.default)(e.poll),
@@ -86,7 +87,7 @@ function S(e) {
   })
 }
 
-function T(e, t) {
+function v(e, t) {
   return null != t.edited_timestamp ? {
     ...t,
     reactions: e.reactions,
@@ -98,26 +99,26 @@ function T(e, t) {
 }
 
 function I(e, t) {
-  if (null != t.edited_timestamp) return S(t, {
+  if (null != t.edited_timestamp) return T(t, {
     reactions: e.reactions,
     interactionData: e.interactionData
   });
   let n = e;
-  if (null != t.call && (n = n.set("call", A(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", C(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", y(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new d.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", t.components)), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
+  if (null != t.call && (n = n.set("call", C(t.call, e.timestamp))), null != t.attachments && (n = n.set("attachments", A(t))), null != t.content && "" !== t.content && (n = n.set("content", t.content)), null != t.embeds && (n = n.set("embeds", y(t))), t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)), null != n.webhookId && null != t.author && (n = n.set("author", new d.default(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)), null != t.components && (n = n.set("components", t.components)), null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)), null != t.reactions) {
     var i;
     n = n.set("reactions", N(null !== (i = e.reactions) && void 0 !== i ? i : t.reactions))
   }
   return null != t.poll && (n = n.set("poll", (0, a.default)(t.poll))), n
 }
 
-function C(e) {
+function A(e) {
   return null == e.attachments ? [] : e.attachments.map(e => ({
     ...e,
-    spoiler: e.filename.startsWith(E.SPOILER_ATTACHMENT_PREFIX)
+    spoiler: e.filename.startsWith(m.SPOILER_ATTACHMENT_PREFIX)
   }))
 }
 
-function A(e, t) {
+function C(e, t) {
   if (null != e) {
     let n = null != e.ended_timestamp ? s(new Date(e.ended_timestamp)) : null,
       i = null != n ? s.duration(n.diff(t)) : null;
@@ -132,12 +133,33 @@ function A(e, t) {
 
 function y(e) {
   if (null == e.embeds) return [];
-  let t = e.embeds.map(t => (0, h.sanitizeEmbed)(e.channel_id, e.id, t));
-  return (0, h.mergeEmbedsOnURL)(t)
+  let t = e.embeds.map(t => (0, E.sanitizeEmbed)(e.channel_id, e.id, t));
+  return (0, E.mergeEmbedsOnURL)(t)
 }
 
-function N(e) {
-  return null == e ? [] : e.map(e => {
+function N(e, t) {
+  var n;
+  if (null == e && (null == t ? void 0 : t.results) == null) return [];
+  let i = null == t ? void 0 : null === (n = t.results) || void 0 === n ? void 0 : n.answer_counts.map(e => {
+      let t = {
+        count_details: {
+          vote: e.count
+        },
+        me_vote: e.me_voted,
+        emoji: {
+          id: e.id.toString(),
+          name: "",
+          animated: !1
+        },
+        me: !1,
+        me_burst: !1,
+        count: e.count,
+        burst_count: 0
+      };
+      return t
+    }),
+    s = [...null != e ? e : [], ...null != i ? i : []];
+  return s.map(e => {
     let t = {
       ...e
     };

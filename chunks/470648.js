@@ -1,67 +1,75 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("627445"),
-  r = l.n(n),
-  i = l("394846"),
-  u = l("446674"),
-  s = l("77078"),
-  o = l("272030"),
-  d = l("980215"),
-  c = l("506885"),
-  f = l("981601"),
-  m = l("42203"),
-  h = l("26989"),
-  p = l("305961"),
-  E = l("27618"),
-  v = l("697218"),
-  _ = l("666897"),
-  x = l("387111"),
-  I = l("158998"),
-  S = l("680894");
+var i = n("37983");
+n("884691");
+var l = n("627445"),
+  a = n.n(l),
+  s = n("394846"),
+  r = n("446674"),
+  o = n("77078"),
+  u = n("272030"),
+  d = n("812204"),
+  c = n("685665"),
+  f = n("980215"),
+  p = n("506885"),
+  m = n("981601"),
+  h = n("42203"),
+  x = n("26989"),
+  E = n("305961"),
+  y = n("27618"),
+  g = n("697218"),
+  S = n("666897"),
+  C = n("387111"),
+  T = n("158998"),
+  _ = n("680894");
 
-function g(e) {
+function I(e) {
   let {
     className: t,
-    userId: n,
-    channelId: g,
-    inlinePreview: L = !1
-  } = e, M = (0, u.useStateFromStores)([v.default], () => v.default.getUser(n)), C = (0, u.useStateFromStores)([m.default], () => m.default.getChannel(g)), R = null != C ? C.getGuildId() : null, T = L || null == M || null == R || null == g ? void 0 : e => {
-    null != C && (0, o.openContextMenuLazy)(e, async () => {
+    userId: l,
+    channelId: I,
+    inlinePreview: v = !1
+  } = e, {
+    AnalyticsLocationProvider: N
+  } = (0, c.default)(d.default.USER_MENTION), A = (0, r.useStateFromStores)([g.default], () => g.default.getUser(l)), O = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(I)), R = null != O ? O.getGuildId() : null, M = v || null == A || null == R || null == I ? void 0 : e => {
+    null != O && (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await l.el("834247").then(l.bind(l, "834247"));
-      return t => (0, a.jsx)(e, {
+      } = await n.el("834247").then(n.bind(n, "834247"));
+      return t => (0, i.jsx)(e, {
         ...t,
-        user: M,
-        channel: C,
+        user: A,
+        channel: O,
         guildId: R
       })
     })
-  }, N = I.default.useName(M), j = (0, u.useStateFromStores)([m.default, h.default, E.default], () => x.default.getNickname(R, g, M)), A = p.default.getGuild(R), U = (0, d.useClydeEnabled)(A, C), y = U && n === S.CLYDE_AI_USER_ID ? S.CLYDE_AI_MENTION_COLOR : null, P = e => (0, a.jsx)(_.default, {
+  }, k = T.default.useName(A), L = (0, r.useStateFromStores)([h.default, x.default, y.default], () => C.default.getNickname(R, I, A)), P = E.default.getGuild(R), b = (0, f.useClydeEnabled)(P, O), j = b && l === _.CLYDE_AI_USER_ID ? _.CLYDE_AI_MENTION_COLOR : null, U = e => (0, i.jsx)(S.default, {
     className: t,
-    onContextMenu: T,
-    color: y,
+    onContextMenu: M,
+    color: j,
     ...e,
-    children: "@".concat(null != j ? j : N)
+    children: "@".concat(null != L ? L : k)
   });
-  return L ? P() : (0, a.jsx)(s.Popout, {
-    preload: null == M ? void 0 : () => (0, c.default)(M.id, M.getAvatarURL(R, 80), {
-      guildId: null != R ? R : void 0,
-      channelId: null != g ? g : void 0
-    }),
-    renderPopout: e => (r(null != M, "Unexpected missing user"), (0, a.jsx)(f.default, {
-      userId: M.id,
-      guildId: null != R ? R : void 0,
-      channelId: g,
-      ...e
-    })),
-    position: i.isMobile ? "top" : "right",
-    children: e => P(e)
+  return v ? (0, i.jsx)(N, {
+    children: U()
+  }) : (0, i.jsx)(N, {
+    children: (0, i.jsx)(o.Popout, {
+      preload: null == A ? void 0 : () => (0, p.default)(A.id, A.getAvatarURL(R, 80), {
+        guildId: null != R ? R : void 0,
+        channelId: null != I ? I : void 0
+      }),
+      renderPopout: e => (a(null != A, "Unexpected missing user"), (0, i.jsx)(m.default, {
+        userId: A.id,
+        guildId: null != R ? R : void 0,
+        channelId: I,
+        ...e
+      })),
+      position: s.isMobile ? "top" : "right",
+      children: e => U(e)
+    })
   })
 }

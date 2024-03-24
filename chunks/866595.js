@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   isAllChannelsRole: function() {
-    return s
+    return r
   },
   isChannelAccessDeniedBy: function() {
     return a
@@ -11,16 +11,16 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("316693"),
-  r = n("49111");
+  s = n("49111");
 
-function s(e) {
-  return i.default.has(e.permissions, r.Permissions.VIEW_CHANNEL)
+function r(e) {
+  return i.has(e.permissions, s.Permissions.VIEW_CHANNEL)
 }
 
 function a(e, t) {
-  return null != t && (!!i.default.has(t.deny, r.Permissions.VIEW_CHANNEL) || e.isGuildVocal() && i.default.has(t.deny, r.Permissions.CONNECT))
+  return null != t && (!!i.has(t.deny, s.Permissions.VIEW_CHANNEL) || e.isGuildVocal() && i.has(t.deny, s.Permissions.CONNECT))
 }
 
 function o(e, t) {
-  return !(null == t || a(e, t)) && !!i.default.has(t.allow, r.Permissions.VIEW_CHANNEL) && (!e.isGuildVocal() || i.default.has(t.allow, r.Permissions.CONNECT))
+  return !(null == t || a(e, t)) && !!i.has(t.allow, s.Permissions.VIEW_CHANNEL) && (!e.isGuildVocal() || i.has(t.allow, s.Permissions.CONNECT))
 }

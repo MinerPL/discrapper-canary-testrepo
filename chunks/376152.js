@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return c
   },
   fetchEnrolledUser: function() {
-    return f
+    return E
   },
   enrollDropsUser: function() {
-    return E
+    return f
   },
   sendHeartbeat: function() {
     return _
@@ -35,7 +35,7 @@ var s = n("872717"),
 let r = async e => {
   let t = !1;
   try {
-    let n = await s.default.get({
+    let n = await s.HTTP.get({
       url: i.Endpoints.DROPS_ELIGIBILITY,
       query: {
         drops_quest_id: e
@@ -53,7 +53,7 @@ let r = async e => {
 }, o = async e => {
   let t = [];
   try {
-    let n = await s.default.get({
+    let n = await s.HTTP.get({
       url: i.Endpoints.DROPS_PLATFORM_AVAILABILITY,
       query: {
         drops_quest_id: e
@@ -69,7 +69,7 @@ let r = async e => {
   })
 }, u = async (e, t) => {
   try {
-    let n = await s.default.post({
+    let n = await s.HTTP.post({
       url: i.Endpoints.DROPS_CLAIM_REWARD_CODE,
       query: {
         drops_quest_id: e,
@@ -85,7 +85,7 @@ let r = async e => {
   }
 }, d = async () => {
   try {
-    let e = await s.default.get({
+    let e = await s.HTTP.get({
       url: i.Endpoints.DROPS_USER_STATUS
     });
     l.default.dispatch({
@@ -98,7 +98,7 @@ let r = async e => {
     })
   }
 }, c = async e => {
-  await s.default.delete({
+  await s.HTTP.del({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {
       drops_quest_id: e
@@ -107,8 +107,8 @@ let r = async e => {
     type: "DROPS_UNENROLL_USER",
     dropsQuestId: e
   }), await d()
-}, f = async e => {
-  let t = await s.default.get({
+}, E = async e => {
+  let t = await s.HTTP.get({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {
       drops_quest_id: e
@@ -120,8 +120,8 @@ let r = async e => {
     isEnrolled: t.body.enrolled,
     dropsQuestId: e
   })
-}, E = async e => {
-  await s.default.post({
+}, f = async e => {
+  await s.HTTP.post({
     url: i.Endpoints.DROPS_ENROLL_USER,
     query: {
       drops_quest_id: e
@@ -132,7 +132,7 @@ let r = async e => {
 }, _ = async (e, t, n) => {
   let r = a.default.getViewerIds(t);
   try {
-    let a = await s.default.post({
+    let a = await s.HTTP.post({
       url: i.Endpoints.DROPS_HEARTBEAT(e),
       query: {
         stream_key: t,
@@ -156,7 +156,7 @@ let r = async e => {
   }
 }, T = async e => {
   try {
-    let t = await s.default.get({
+    let t = await s.HTTP.get({
       url: i.Endpoints.DROPS_PROGRESS(e)
     });
     l.default.dispatch({

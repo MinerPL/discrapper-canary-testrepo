@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return _
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  i = n.n(s),
-  l = n("617258"),
+  l = n.n(s),
+  i = n("617258"),
   r = n("65597"),
   o = n("77078"),
   u = n("580357"),
   d = n("822825"),
   c = n("49111"),
   f = n("782340"),
-  E = n("116658");
-let _ = [18, 18, 16, 16, 14, 12, 10];
-var h = e => {
+  E = n("756755");
+let h = [18, 18, 16, 16, 14, 12, 10];
+var _ = e => {
   let {
     guildId: t
-  } = e, n = (0, r.default)([d.default], () => d.default.getGuild(t));
+  } = e, n = (0, r.useStateFromStores)([d.default], () => d.default.getGuild(t));
   if (void 0 === n) return null;
   let s = n.hasFeature(c.GuildFeatures.VERIFIED) || n.hasFeature(c.GuildFeatures.PARTNERED),
-    h = n.toString(),
+    _ = n.toString(),
     C = n.getIconURL(40, !0),
-    I = null,
-    T = _[_.length - 1];
-  if (null == n.icon && null != h) {
-    var S;
-    T = null !== (S = _[(I = (0, l.getAcronym)(h)).length - 1]) && void 0 !== S ? S : _[_.length - 1]
+    S = null,
+    I = h[h.length - 1];
+  if (null == n.icon && null != _) {
+    var m;
+    I = null !== (m = h[(S = (0, i.getAcronym)(_)).length - 1]) && void 0 !== m ? m : h[h.length - 1]
   }
   return (0, a.jsxs)("div", {
     className: E.container,
     children: [(0, a.jsxs)("div", {
       style: {
-        fontSize: T
+        fontSize: I
       },
-      children: [null != I ? (0, a.jsx)("div", {
-        className: i(E.childWrapper, E.acronym),
+      children: [null != S ? (0, a.jsx)("div", {
+        className: l(E.childWrapper, E.acronym),
         "aria-hidden": !0,
-        children: I
+        children: S
       }) : null, null != C ? (0, a.jsx)(o.Avatar, {
         src: n.getIconURL(40, !0),
         size: o.AvatarSizes.SIZE_40,

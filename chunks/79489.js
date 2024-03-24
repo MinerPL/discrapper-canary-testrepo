@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var r = n("888400"),
-  s = n("718517"),
-  a = n("333805"),
-  o = n("782340");
-class l extends a.default {
-  _getMessageFromRateLimit(e) {
-    let t = e.body.retry_after,
-      n = (0, r.diffAsUnits)(0, t * s.default.Millis.SECOND);
-    return (0, r.unitsAsStrings)(n, {
-      days: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_DAYS,
-      hours: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_HOURS,
-      minutes: o.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_ERROR_RATE_LIMIT_MINUTES
-    })
-  }
-  constructor(e, t) {
-    super(e, t), 429 === this.status && (this.message = this._getMessageFromRateLimit(e))
-  }
+var r = {};
+r = {
+  calendar: "달력",
+  day: "일",
+  dayPeriod: "오전/오후",
+  endDate: "종료일",
+  era: "연호",
+  hour: "시",
+  minute: "분",
+  month: "월",
+  second: "초",
+  selectedDateDescription: e => "선택 일자: ".concat(e.date),
+  selectedRangeDescription: e => "선택 범위: ".concat(e.startDate, " ~ ").concat(e.endDate),
+  selectedTimeDescription: e => "선택 시간: ".concat(e.time),
+  startDate: "시작일",
+  timeZoneName: "시간대",
+  weekday: "요일",
+  year: "년"
 }
-var i = l

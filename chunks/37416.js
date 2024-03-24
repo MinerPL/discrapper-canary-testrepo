@@ -50,7 +50,7 @@ var a = n("414456"),
   K = n("49111"),
   W = n("695838"),
   Z = n("782340"),
-  z = n("708995");
+  z = n("65369");
 class X extends F.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
@@ -82,16 +82,20 @@ class X extends F.default {
     var e;
     let {
       channel: t,
-      connected: n
-    } = this.props, a = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
-      hovered: s
+      connected: n,
+      enableHangStatus: a,
+      allowChannelTopic: s
+    } = this.props, i = null === (e = (0, I.getChannelSubtitle)(this.props.subtitle)) || void 0 === e ? void 0 : e.subtitle, {
+      hovered: r
     } = this.state;
     return (0, l.jsx)(k.default, {
       onClick: this.handleVoiceStatusClick,
       channel: t,
       connected: n,
-      subtitle: a,
-      hovered: s
+      subtitle: i,
+      hovered: r,
+      enableHangStatus: a,
+      allowChannelTopic: s
     })
   }
   renderVoiceUsers() {
@@ -127,7 +131,7 @@ class X extends F.default {
       selected: t,
       connected: n,
       unread: a,
-      unreadMode: i,
+      resolvedUnreadSetting: i,
       mentionCount: r,
       locked: u,
       sorting: d,
@@ -143,12 +147,11 @@ class X extends F.default {
       embeddedApps: N,
       isSubscriptionGated: T,
       isFavoriteSuggestion: A,
-      withGuildIcon: L,
-      enableHangStatus: v
+      withGuildIcon: L
     } = this.props, {
-      shouldShowActivities: x,
-      shouldShowGuildVerificationPopout: M
-    } = this.state, O = this.getVoiceStatesCount(), y = (0, l.jsxs)("li", {
+      shouldShowActivities: v,
+      shouldShowGuildVerificationPopout: x
+    } = this.state, M = this.getVoiceStatesCount(), O = (0, l.jsxs)("li", {
       className: s(this.getModeClass(), {
         [z.disabled]: this.isDisabled()
       }),
@@ -161,7 +164,7 @@ class X extends F.default {
           renderPopout: this.renderPopout,
           spacing: 0,
           onRequestClose: this.closeGuildVerificationPopout,
-          shouldShow: x && !d && !c && !M || M,
+          shouldShow: v && !d && !c && !x || x,
           children: () => (0, l.jsx)(o.Tooltip, {
             text: this.getTooltipText(),
             children: o => {
@@ -179,11 +182,10 @@ class X extends F.default {
                 selected: !A && t,
                 connected: n,
                 unread: n ? a : void 0,
-                unreadMode: i,
+                resolvedUnreadSetting: i,
                 mentionCount: r,
                 locked: u,
                 subtitle: this.renderSubtitle(),
-                enableHangStatus: v,
                 onClick: () => {
                   this.handleClick(), null == d || d()
                 },
@@ -196,7 +198,7 @@ class X extends F.default {
                   channel: e,
                   unread: a,
                   mentionCount: r,
-                  userCount: O,
+                  userCount: M,
                   embeddedActivitiesCount: N.length,
                   isSubscriptionGated: T
                 }),
@@ -213,12 +215,12 @@ class X extends F.default {
         })
       }), this.renderVoiceUsers()]
     });
-    return I && (y = C(y)), g && (y = f(h(y))), S && (y = (0, l.jsx)(R.default, {
+    return I && (O = C(O)), g && (O = f(h(O))), S && (O = (0, l.jsx)(R.default, {
       tutorialId: "voice-conversations",
       position: "right",
       offsetX: -20,
-      children: y
-    })), y
+      children: O
+    })), O
   }
   constructor(...e) {
     super(...e), this.state = {
@@ -378,7 +380,7 @@ function q(e) {
   } = e, d = (0, i.useStateFromStoresObject)([j.default], () => ({
     unread: j.default.hasUnread(n.id),
     mentionCount: j.default.getMentionCount(n.id)
-  })), c = (0, i.useStateFromStores)([G.default], () => G.default.getChannelUnreadMode(n)), f = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
+  })), c = (0, i.useStateFromStores)([G.default], () => G.default.resolveUnreadSetting(n)), f = (0, i.useStateFromStoresObject)([O.default, D.default, b.default], () => {
     let e = O.default.getChannel(n.parent_id),
       l = D.default.getCheck(n.guild_id);
     return {
@@ -393,11 +395,14 @@ function q(e) {
     isSubscriptionGated: I,
     needSubscriptionToAccess: _
   } = (0, T.default)(n.id), N = (0, S.default)(), L = (0, i.useStateFromStores)([G.default], () => G.default.isFavorite(t.id, n.id)), x = e.connected || (null == N ? void 0 : N.channelId) === n.id, {
-    enableHangStatus: R
+    enableHangStatus: R,
+    allowChannelTopic: M
   } = v.HangStatusExperiment.useExperiment({
     guildId: n.guild_id,
     location: "VoiceChannel"
-  }), M = (0, B.default)({
+  }, {
+    autoTrackExposure: !1
+  }), y = (0, B.default)({
     channel: n,
     isChannelSelected: r,
     isChannelCollapsed: o,
@@ -406,7 +411,7 @@ function q(e) {
     needSubscriptionToAccess: _,
     enableConnectedUserLimit: !0,
     enableActivities: !0
-  }), y = x && null == M;
+  }), P = x && null == y;
   return (0, l.jsx)(Q, {
     channelName: m,
     embeddedApps: p,
@@ -420,9 +425,10 @@ function q(e) {
     ...e,
     connected: x,
     isFavoriteSuggestion: s && !L,
-    forceShowButtons: y,
-    channelInfo: M,
+    forceShowButtons: P,
+    channelInfo: y,
     enableHangStatus: R,
-    unreadMode: c
+    allowChannelTopic: M,
+    resolvedUnreadSetting: c
   })
 }

@@ -1,5 +1,5 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   getRoleIconProps: function() {
     return r
   },
@@ -10,38 +10,46 @@ l.r(t), l.d(t, {
     return u
   }
 });
-var n = l("884691"),
-  a = l("446674"),
-  s = l("305961"),
-  i = l("689226");
+var i = n("884691"),
+  l = n("446674"),
+  a = n("305961"),
+  s = n("689226");
 
 function r(e, t) {
-  var l;
+  var n;
   let {
-    customIconSrc: n,
-    unicodeEmoji: a
-  } = null !== (l = (0, i.getRoleIconData)(e, t)) && void 0 !== l ? l : {};
-  if (null != n || null != a) return {
-    src: n,
+    customIconSrc: i,
+    unicodeEmoji: l
+  } = null !== (n = (0, s.getRoleIconData)(e, t)) && void 0 !== n ? n : {};
+  if (null != i || null != l) return {
+    src: i,
     name: e.name,
     roleId: e.id,
     size: t,
-    unicodeEmoji: a
+    unicodeEmoji: l
   }
 }
-let o = e => {
-    let {
-      guildId: t,
-      roleId: l,
-      size: o = 20
-    } = e, u = (0, a.useStateFromStores)([s.default], () => s.default.getGuild(t));
-    return n.useMemo(() => {
-      if (null == u || null == l) return;
-      let e = u.roles[l];
-      if ((0, i.canGuildUseRoleIcons)(u, e)) return r(e, o)
-    }, [u, l, o])
-  },
-  u = (e, t) => {
-    let l = (0, a.useStateFromStores)([s.default], () => s.default.getGuild(e));
-    if (null != l && (0, i.canGuildUseRoleIcons)(l, t)) return r(t)
-  }
+
+function o(e) {
+  let {
+    guildId: t,
+    roleId: n,
+    size: o = 20
+  } = e, {
+    guild: u,
+    roles: d
+  } = (0, l.useStateFromStoresObject)([a.default], () => ({
+    guild: a.default.getGuild(t),
+    roles: a.default.getRoles(t)
+  }), [t]);
+  return i.useMemo(() => {
+    if (null == u || null == n) return;
+    let e = d[n];
+    if ((0, s.canGuildUseRoleIcons)(u, e)) return r(e, o)
+  }, [u, d, n, o])
+}
+
+function u(e, t) {
+  let n = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(e));
+  if (null != n && (0, s.canGuildUseRoleIcons)(n, t)) return r(t)
+}

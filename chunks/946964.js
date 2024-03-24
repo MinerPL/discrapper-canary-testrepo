@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var l = a("37983");
+var s = a("37983");
 a("884691");
-var s = a("748820"),
-  r = a("77078"),
+var r = a("748820"),
+  l = a("77078"),
   n = a("112679"),
   i = a("55689"),
   o = a("21526"),
@@ -20,45 +20,45 @@ function d(e) {
     isGift: d = !1,
     giftMessage: f,
     onClose: m,
-    onComplete: C,
-    analyticsLocations: p,
-    analyticsObject: g
-  } = e, E = !1, h = (0, s.v4)();
-  (0, r.openModalLazy)(async () => {
+    onComplete: p,
+    analyticsLocations: g,
+    analyticsObject: C
+  } = e, h = !1, E = (0, r.v4)();
+  (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await a.el("894742").then(a.bind(a, "894742"));
     return a => {
       let {
-        onClose: s,
-        returnRef: r,
+        onClose: r,
+        returnRef: l,
         ...n
       } = a;
-      return (0, l.jsx)(e, {
+      return (0, s.jsx)(e, {
         ...n,
-        loadId: h,
+        loadId: E,
         skuId: t,
         isGift: d,
         giftMessage: f,
-        analyticsLocations: p,
+        analyticsLocations: g,
         onClose: e => {
-          s(), null == m || m(e)
+          r(), null == m || m(e)
         },
         onComplete: () => {
-          E = !0, null == C || C()
+          h = !0, null == p || p()
         },
-        returnRef: r
+        returnRef: l
       })
     }
   }, {
     onCloseCallback: () => {
-      !E && c.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: h,
+      !h && c.default.track(u.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: E,
         payment_type: u.PurchaseTypeToAnalyticsPaymentType[u.PurchaseTypes.ONE_TIME],
-        location: g,
-        is_gift: !1,
-        location_stack: p
-      }), (0, n.clearError)(), (0, i.clearPurchaseTokenAuthState)(), null == m || m(E), E && (0, o.fetchCollectiblesPurchases)()
+        location: C,
+        is_gift: d,
+        location_stack: g
+      }), (0, n.clearError)(), (0, i.clearPurchaseTokenAuthState)(), null == m || m(h), h && (0, o.fetchCollectiblesPurchases)()
     },
     onCloseRequest: u.NOOP
   })

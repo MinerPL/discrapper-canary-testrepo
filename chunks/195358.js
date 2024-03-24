@@ -8,9 +8,10 @@ var i, s = n("666038"),
   r = n("643619");
 i = class e extends s.default {
   static createInvoiceFromServer(t) {
+    var n;
     return new e({
       id: t.id,
-      invoiceItems: t.invoice_items.map(r.createInvoiceItemFromServer),
+      invoiceItems: null === (n = t.invoice_items) || void 0 === n ? void 0 : n.map(r.createInvoiceItemFromServer),
       total: t.total,
       subtotal: t.subtotal,
       currency: t.currency,

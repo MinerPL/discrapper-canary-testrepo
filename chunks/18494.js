@@ -2,52 +2,56 @@
 let i, s, r, a, o, l, u;
 n.r(t), n.d(t, {
   findFirstVoiceChannelId: function() {
-    return w
+    return V
   },
   default: function() {
-    return B
+    return H
   }
 }), n("222007"), n("808653");
 var d = n("917351"),
   c = n.n(d),
-  f = n("446674"),
-  _ = n("95410"),
-  h = n("913144"),
-  g = n("21121"),
-  m = n("934306"),
-  E = n("393414"),
+  _ = n("446674"),
+  f = n("95410"),
+  E = n("913144"),
+  h = n("21121"),
+  g = n("934306"),
+  m = n("393414"),
   p = n("233069"),
-  v = n("449008"),
-  S = n("271938"),
-  T = n("42203"),
+  S = n("449008"),
+  T = n("271938"),
+  v = n("42203"),
   I = n("923959"),
-  C = n("305961"),
-  A = n("42887"),
+  A = n("305961"),
+  C = n("42887"),
   y = n("162771"),
   N = n("49111"),
   R = n("724210");
 let O = "SelectedChannelStore",
   D = {},
   P = {},
-  b = {},
-  L = new Set;
+  L = {},
+  M = new Set;
 
-function M() {
-  !__OVERLAY__ && _.default.set(O, {
+function b(e) {
+  return String(e)
+}
+
+function U() {
+  !__OVERLAY__ && f.default.set(O, {
     selectedChannelId: r,
     selectedVoiceChannelId: o,
     lastChannelFollowingDestination: a,
     lastConnectedTime: l,
     selectedChannelIds: D,
-    mostRecentSelectedTextChannelIds: b,
-    knownThreadIds: c(D).values().concat(c.values(b)).filter(v.isNotNullish).uniq().filter(e => {
-      let t = T.default.getBasicChannel(e);
-      return L.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
+    mostRecentSelectedTextChannelIds: L,
+    knownThreadIds: c(D).values().concat(c.values(L)).filter(S.isNotNullish).uniq().filter(e => {
+      let t = v.default.getBasicChannel(e);
+      return M.has(e) || null != t && p.THREAD_CHANNEL_TYPES.has(t.type)
     }).value()
   })
 }
 
-function U(e) {
+function w(e) {
   if (null != e) {
     let t = I.default.getDefaultChannel(e);
     if (null != t) return t.id
@@ -55,81 +59,82 @@ function U(e) {
 }
 
 function k(e, t) {
-  if (null == e || null == t || b[e] === t) return !1;
-  let n = T.default.getChannel(t),
+  if (null == e || null == t || L[e] === t) return !1;
+  let n = v.default.getChannel(t),
     i = null != n && (0, p.isGuildTextChannelType)(n.type),
     s = (null == n ? void 0 : n.getGuildId()) === e;
-  return !!i && !!s && (b[e] = t, !0)
+  return !!i && !!s && (L[e] = t, !0)
 }
 
-function w(e) {
-  let t = T.default.getMutableBasicGuildChannelsForGuild(e),
+function V(e) {
+  let t = v.default.getMutableBasicGuildChannelsForGuild(e),
     n = c.find(t, e => e.type === N.ChannelTypes.GUILD_VOICE);
   return null == n ? void 0 : n.id
 }
 
-function V() {
+function G() {
   let e = !1,
-    t = C.default.getGuilds();
+    t = A.default.getGuilds();
   return c.each(D, (t, n) => {
-    (null == t || !T.default.hasChannel(t) && t !== r && !L.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
-  }), c.each(b, (t, n) => {
-    (null == t || !T.default.hasChannel(t) && !L.has(t)) && (delete b[n], e = !0)
+    (null == t || !v.default.hasChannel(t) && t !== r && !M.has(t) && !(0, R.isGuildHomeChannel)(t)) && (delete D[n], delete P[n], e = !0)
+  }), c.each(L, (t, n) => {
+    (null == t || !v.default.hasChannel(t) && !M.has(t)) && (delete L[n], e = !0)
   }), c.each(t, e => {
     let t = D[e.id];
-    null == b[e.id] && k(e.id, t)
+    null == L[e.id] && k(e.id, t)
   }), null != l && Date.now() - l >= 3e5 && (o = null, e = !0), e
 }
 
-function G(e, t) {
-  if (L.delete(e), null == t) {
+function F(e, t) {
+  if (M.delete(e), null == t) {
     let n = y.default.getGuildId();
-    D[String(n)] === e && (t = n)
+    D[b(n)] === e && (t = n)
   }
-  let n = null != C.default.getGuild(t) ? t : null,
+  let n = null != A.default.getGuild(t) ? t : null,
     i = !1;
-  o === e && (o = null, i = !0), !(0, g.isInMainTabsExperiment)() && (D[String(n)] === e && (D[String(n)] = U(String(n)), y.default.getGuildId() === n && (0, E.replaceWith)(N.Routes.CHANNEL(t, D[String(n)])), i = !0), null != n && b[n] === e && (delete b[n], i = !0)), i && M()
+  o === e && (o = null, i = !0), !(0, h.isInMainTabsExperiment)() && (D[b(n)] === e && (D[b(n)] = w(b(n)), y.default.getGuildId() === n && (0, m.replaceWith)(N.Routes.CHANNEL(t, D[b(n)])), i = !0), null != n && L[n] === e && (delete L[n], i = !0)), i && U()
 }
 
-function F(e) {
+function x(e) {
   let {
     channel: {
       id: t,
       guild_id: n
     }
   } = e;
-  G(t, n)
+  F(t, n)
 }
-class x extends f.default.Store {
+class B extends _.default.Store {
   initialize() {
     if (!__OVERLAY__) {
       var e, t;
-      let n = null !== (e = _.default.get(O)) && void 0 !== e ? e : {
+      let n = null !== (e = f.default.get(O)) && void 0 !== e ? e : {
         selectedChannelId: r,
         selectedVoiceChannelId: o,
         lastChannelFollowingDestination: a,
         lastConnectedTime: l,
         selectedChannelIds: D,
-        mostRecentSelectedTextChannelIds: b
+        mostRecentSelectedTextChannelIds: L
       };
-      null != n.knownThreadIds && (L = new Set(n.knownThreadIds)), o = n.selectedVoiceChannelId, a = n.lastChannelFollowingDestination, l = n.lastConnectedTime, b = null !== (t = n.mostRecentSelectedTextChannelIds) && void 0 !== t ? t : {}, null != n.selectedChannelIds && (D = {
+      null != n.knownThreadIds && (M = new Set(n.knownThreadIds)), o = n.selectedVoiceChannelId, a = n.lastChannelFollowingDestination, l = n.lastConnectedTime, L = null !== (t = n.mostRecentSelectedTextChannelIds) && void 0 !== t ? t : {}, null != n.selectedChannelIds && (D = {
         ...n.selectedChannelIds,
         null: null
       })
     }
-    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(C.default, T.default, y.default, I.default, A.default)
+    this.mustEmitChanges(e => "CONNECTION_OPEN" !== e.type && "VOICE_STATE_UPDATES" !== e.type), this.waitFor(A.default, v.default, y.default, I.default, C.default)
   }
   getChannelId(e) {
     var t, n;
-    let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return e = String(e === N.ME ? null : null !== (t = null != e ? e : y.default.getGuildId()) && void 0 !== t ? t : null), i ? null !== (n = D[e]) && void 0 !== n ? n : U(e) : D[e]
+    let i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+      s = b(e === N.ME ? null : null !== (t = null != e ? e : y.default.getGuildId()) && void 0 !== t ? t : null);
+    return i ? null !== (n = D[s]) && void 0 !== n ? n : w(s) : D[s]
   }
   getVoiceChannelId() {
-    return A.default.isSupported() ? o : null
+    return C.default.isSupported() ? o : null
   }
   getMostRecentSelectedTextChannelId(e) {
     var t;
-    return null == e ? null : null !== (t = b[e]) && void 0 !== t ? t : null
+    return null == e ? null : null !== (t = L[e]) && void 0 !== t ? t : null
   }
   getCurrentlySelectedChannelId(e) {
     return null != e ? D[e] : r
@@ -144,15 +149,15 @@ class x extends f.default.Store {
     return a
   }
 }
-x.displayName = "SelectedChannelStore";
-var B = new x(h.default, {
+B.displayName = "SelectedChannelStore";
+var H = new B(E.default, {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, null != o && null == T.default.getChannel(o) && (o = null);
-    let t = V();
-    t && M()
+    i = e.sessionId, null != o && null == v.default.getChannel(o) && (o = null);
+    let t = G();
+    t && U()
   },
   OVERLAY_INITIALIZE: function(e) {
-    i = e.sessionId, o = e.selectedVoiceChannelId, D = {}, P = {}, r = e.selectedChannelId, D[e.selectedGuildId] = e.selectedChannelId, k(e.selectedGuildId, r), V()
+    i = e.sessionId, o = e.selectedVoiceChannelId, D = {}, P = {}, r = e.selectedChannelId, D[e.selectedGuildId] = e.selectedChannelId, k(e.selectedGuildId, r), G()
   },
   CONNECTION_CLOSED: function() {
     i = null
@@ -163,7 +168,7 @@ var B = new x(h.default, {
       channelId: n
     } = e;
     if (void 0 === t) return !1;
-    null == n && (!(0, g.isInMainTabsExperiment)() || (0, m.shouldHandleNewPanelsRoute)(t)) && (n = U(t)), null != r && n !== r && (s = r), r = n, k(t, n), D[String(t)] !== n && (P[String(t)] = D[String(t)], D[String(t)] = r), M()
+    null == n && (!(0, h.isInMainTabsExperiment)() || (0, g.shouldHandleNewPanelsRoute)(t)) && (n = w(t)), null != r && n !== r && (s = r), r = n, k(t, n), D[b(t)] !== n && (P[b(t)] = D[b(t)], D[b(t)] = r), U()
   },
   CHANNEL_CREATE: function(e) {
     let {
@@ -173,25 +178,25 @@ var B = new x(h.default, {
       case N.ChannelTypes.GUILD_ANNOUNCEMENT:
       case N.ChannelTypes.GUILD_TEXT:
         let n = t.guild_id;
-        if (null != n && null == b[n] && (b[n] = t.id), null != n && null == D[n]) return D[n] = U(n), !0
+        if (null != n && null == L[n] && (L[n] = t.id), null != n && null == D[n]) return D[n] = w(n), !0
     }
     return !1
   },
-  CHANNEL_DELETE: F,
+  CHANNEL_DELETE: x,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
     } = e;
-    for (let e of t) e.isScheduledForDeletion() && G(e.id, e.guild_id)
+    for (let e of t) e.isScheduledForDeletion() && F(e.id, e.guild_id)
   },
-  THREAD_DELETE: F,
+  THREAD_DELETE: x,
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
     if (null == D[t.id]) {
-      let e = U(t.id);
-      D[t.id] = e, k(t.id, e), M()
+      let e = w(t.id);
+      D[t.id] = e, k(t.id, e), U()
     }
   },
   GUILD_DELETE: function(e) {
@@ -202,18 +207,18 @@ var B = new x(h.default, {
       }
     } = e;
     if (o === D[t] && (o = null), n) return !1;
-    delete b[t], delete D[t], M()
+    delete L[t], delete D[t], U()
   },
   VOICE_CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
     if (null == t) {
-      let e = T.default.getChannel(o),
+      let e = v.default.getChannel(o),
         t = null == e ? void 0 : e.guild_id;
-      null != t && t !== y.default.getGuildId() && D[t] === o && (D[t] = U(t))
+      null != t && t !== y.default.getGuildId() && D[t] === o && (D[t] = w(t))
     }
-    o = t, M()
+    o = t, U()
   },
   VOICE_STATE_UPDATES: function(e) {
     let {
@@ -223,16 +228,16 @@ var B = new x(h.default, {
       var n, s, r;
       if (t.sessionId === i) {
         clearInterval(u);
-        let e = null === (n = T.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
+        let e = null === (n = v.default.getChannel(o)) || void 0 === n ? void 0 : n.getGuildId();
         t.guildId !== e && null == t.channelId || (o = t.channelId), l = Date.now(), null != o && (u = setInterval(() => {
-          l = Date.now(), M()
-        }, 6e4)), M()
+          l = Date.now(), U()
+        }, 6e4)), U()
       } else {
-        if (t.userId !== S.default.getId()) return e;
+        if (t.userId !== T.default.getId()) return e;
         clearInterval(u), u = void 0, l = 0;
-        let n = null === (s = T.default.getChannel(o)) || void 0 === s ? void 0 : s.getGuildId(),
-          i = null === (r = T.default.getChannel(t.channelId)) || void 0 === r ? void 0 : r.getGuildId();
-        null != n && i === n && (o = null), M()
+        let n = null === (s = v.default.getChannel(o)) || void 0 === s ? void 0 : s.getGuildId(),
+          i = null === (r = v.default.getChannel(t.channelId)) || void 0 === r ? void 0 : r.getGuildId();
+        null != n && i === n && (o = null), U()
       }
       return !0
     }, !1)
@@ -245,9 +250,9 @@ var B = new x(h.default, {
     (null == a || t !== a.channelId) && (a = {
       channelId: t,
       guildId: n
-    }, M())
+    }, U())
   },
   LOGOUT: function() {
-    D = {}, r = null, s = void 0, b = {}, a = {}, o = null, _.default.remove(O)
+    D = {}, r = null, s = void 0, L = {}, a = {}, o = null, f.default.remove(O)
   }
 })

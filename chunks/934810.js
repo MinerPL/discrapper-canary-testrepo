@@ -15,19 +15,19 @@ var a = s("37983"),
   c = s("305122"),
   S = s("235004"),
   E = s("78581"),
-  f = s("675961"),
-  T = s("561847"),
-  m = s("555158"),
-  _ = s("216422"),
+  T = s("675961"),
+  f = s("561847"),
+  _ = s("555158"),
+  m = s("216422"),
   g = s("368121"),
   h = s("701909"),
-  I = s("374363"),
-  N = s("267823"),
+  N = s("374363"),
+  I = s("267823"),
   p = s("49111"),
   C = s("846325"),
   A = s("782340"),
-  O = s("60351"),
-  x = s("926622");
+  O = s("832420"),
+  x = s("890957");
 
 function R(e) {
   return (0, l.useStateFromStores)([S.default], () => {
@@ -43,21 +43,20 @@ function R(e) {
 function M() {
   let {
     analyticsLocations: e
-  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, f.useCustomJoinSound)(t), g = R(r), I = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === f.CustomSoundType.GLOBAL, D = I && null != r && null == g;
+  } = (0, o.default)(), [t, s] = n.useState(C.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID), r = (0, T.useCustomJoinSound)(t), g = R(r), N = (0, l.useStateFromStores)([S.default], () => S.default.hasFetchedAllSounds()), M = (null == r ? void 0 : r.type) === T.CustomSoundType.GLOBAL, v = N && null != r && null == g;
   n.useEffect(() => {
-    D && (0, E.trackCustomCallSoundExternallyDeleted)({
+    v && (0, E.trackCustomCallSoundExternallyDeleted)({
       location: e
     })
-  }, [D, e]), n.useEffect(() => {
+  }, [v, e]), n.useEffect(() => {
     (0, c.maybeFetchSoundboardSounds)()
   }, []);
   let L = n.useCallback((e, t) => {
-    var s;
     let {
-      inDropdown: n
+      inDropdown: s
     } = t;
-    return n ? (0, a.jsx)(v, {
-      guildId: null !== (s = null == e ? void 0 : e.value) && void 0 !== s ? s : ""
+    return null == e ? null : s ? (0, a.jsx)(D, {
+      guildId: e.value
     }) : null
   }, []);
   return (0, a.jsxs)(i.FormSection, {
@@ -65,7 +64,7 @@ function M() {
     tag: i.FormTitleTags.H1,
     titleClassName: x.marginBottom16,
     title: A.default.Messages.SOUNDBOARD,
-    children: [(0, a.jsx)(N.default, {}), (0, a.jsx)(i.FormDivider, {
+    children: [(0, a.jsx)(I.default, {}), (0, a.jsx)(i.FormDivider, {
       className: O.callSoundsDivider
     }), (0, a.jsx)(i.Heading, {
       variant: "text-md/medium",
@@ -91,32 +90,32 @@ function M() {
     }), (0, a.jsxs)(u.default, {
       className: x.marginTop20,
       title: A.default.Messages.CALL_SOUNDS_SETTINGS_JOIN_SOUND.format({
-        nitroWheelHook: () => (0, a.jsx)(_.default, {
+        nitroWheelHook: () => (0, a.jsx)(m.default, {
           className: O.nitroWheel
         })
       }),
       forcedDivider: !0,
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(f.default, {
         sound: g,
         isGlobal: M,
         onSelect: s => {
           null == s ? (0, E.removeCustomJoinSound)(t, e) : (0, E.updateCustomJoinSound)(t, s, e)
         }
-      }), D && (0, a.jsx)(m.default, {
+      }), v && (0, a.jsx)(_.default, {
         className: O.notice,
-        messageType: m.HelpMessageTypes.WARNING,
+        messageType: _.HelpMessageTypes.WARNING,
         children: A.default.Messages.CALL_SOUNDS_SETTINGS_SOUND_REMOVED
       })]
     })]
   })
 }
 
-function v(e) {
+function D(e) {
   let {
     guildId: t
-  } = e, s = (0, l.useStateFromStores)([I.default], () => {
+  } = e, s = (0, l.useStateFromStores)([N.default], () => {
     var e, s, a;
-    return null === (a = I.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
+    return null === (a = N.default.settings.guilds) || void 0 === a ? void 0 : null === (s = a.guilds) || void 0 === s ? void 0 : null === (e = s[t]) || void 0 === e ? void 0 : e.joinSound
   }), n = R(s);
   if (null == s || null == n) return null;
   let {

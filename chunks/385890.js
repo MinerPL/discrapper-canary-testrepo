@@ -1,108 +1,112 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   COLLECTIBLES_GIFT_CUSTOMIZATION_STEP: function() {
-    return _
+    return m
   }
 });
-var s = n("37983");
-n("884691");
-var r = n("77078"),
-  i = n("446674"),
-  l = n("162848"),
-  a = n("349133"),
-  u = n("705820"),
-  o = n("889554"),
-  d = n("177998"),
-  c = n("697218"),
-  f = n("145131"),
-  p = n("635357"),
-  E = n("642906"),
-  S = n("85336"),
-  h = n("650484"),
-  m = n("782340"),
-  I = n("578956");
-let _ = {
-  key: S.Step.GIFT_CUSTOMIZATION,
-  renderStep: e => (0, s.jsx)(T, {
+var n = s("37983");
+s("884691");
+var l = s("446674"),
+  a = s("77078"),
+  i = s("162848"),
+  r = s("349133"),
+  u = s("705820"),
+  o = s("889554"),
+  d = s("177998"),
+  c = s("697218"),
+  S = s("145131"),
+  E = s("635357"),
+  f = s("642906"),
+  I = s("85336"),
+  _ = s("650484"),
+  p = s("646718"),
+  T = s("782340"),
+  C = s("645547");
+let m = {
+  key: I.Step.GIFT_CUSTOMIZATION,
+  renderStep: e => (0, n.jsx)(N, {
     ...e
   }),
   options: {
-    isLargeModal: !0
+    isLargeModal: !0,
+    useBreadcrumbLabel: () => T.default.Messages.GIFT_CARD_SELECTION
   }
 };
 
-function C(e) {
+function A(e) {
   let {
     onStepChange: t,
-    onBackClick: n,
-    showBackButton: i = !1,
-    disabled: l = !1,
-    loading: a = !1
+    onBackClick: s,
+    showBackButton: l = !1,
+    disabled: i = !1,
+    loading: r = !1
   } = e, {
     hasPaymentSources: u
-  } = (0, E.usePaymentContext)(), o = u ? S.Step.REVIEW : S.Step.ADD_PAYMENT_STEPS;
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(r.Button, {
+  } = (0, f.usePaymentContext)(), o = u ? I.Step.REVIEW : I.Step.ADD_PAYMENT_STEPS;
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(a.Button, {
       onClick: () => t(o),
-      disabled: l,
-      submitting: a,
-      children: m.default.Messages.PAGINATION_NEXT
-    }), i ? (0, s.jsx)(d.default, {
-      onClick: n
+      disabled: i,
+      submitting: r,
+      children: T.default.Messages.PAGINATION_NEXT
+    }), l ? (0, n.jsx)(d.default, {
+      onClick: s
     }) : null]
   })
 }
 
-function T(e) {
+function N(e) {
   let {
     handleStepChange: t,
-    handleClose: n
+    handleClose: s
   } = e, {
     customGiftMessage: d = "",
-    setCustomGiftMessage: S,
-    giftRecipientError: _,
-    validatingGiftRecipient: T,
-    giftRecipient: x
-  } = (0, p.useGiftContext)(), {
-    selectedSkuId: g,
-    selectedSkuPricePreview: v
-  } = (0, E.usePaymentContext)(), A = (0, i.useStateFromStores)([c.default], () => c.default.getCurrentUser());
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(h.PaymentPortalBody, {
-      children: (0, s.jsxs)("div", {
-        className: I.stepBody,
-        children: [(0, s.jsx)("div", {
-          className: I.bodyColumnMiddle,
-          children: (0, s.jsx)(o.GiftAnimationOptions, {})
-        }), (0, s.jsxs)("div", {
-          className: I.bodyColumnRight,
-          children: [(0, s.jsx)(a.default, {
-            selectedSkuId: g,
-            className: I.sendTo
-          }), (0, s.jsx)(u.default, {
-            sectionTitle: m.default.Messages.GIFT_OPTIONAL_MESSAGE,
-            onTextChange: e => null == S ? void 0 : S(e),
+    setCustomGiftMessage: I,
+    giftRecipientError: m,
+    validatingGiftRecipient: N,
+    giftRecipient: h
+  } = (0, E.useGiftContext)(), {
+    selectedSkuId: P,
+    selectedSkuPricePreview: g
+  } = (0, f.usePaymentContext)(), O = (0, l.useStateFromStores)([c.default], () => c.default.getCurrentUser());
+  return (0, n.jsxs)(n.Fragment, {
+    children: [(0, n.jsx)(_.PaymentPortalBody, {
+      children: (0, n.jsxs)("div", {
+        className: C.stepBody,
+        children: [(0, n.jsx)("div", {
+          className: C.bodyColumnMiddle,
+          children: (0, n.jsx)(o.GiftAnimationOptions, {
+            isShopGift: !0
+          })
+        }), (0, n.jsxs)("div", {
+          className: C.bodyColumnRight,
+          children: [(0, n.jsx)(r.default, {
+            selectedSkuId: P,
+            className: C.sendTo
+          }), (0, n.jsx)(u.default, {
+            sectionTitle: T.default.Messages.GIFT_OPTIONAL_MESSAGE,
+            onTextChange: e => null == I ? void 0 : I(e),
             pendingText: d,
             currentText: d,
             disableThemedBackground: !0,
-            className: I.customGiftMessageWrapper,
-            innerClassName: I.customGiftMessage
-          }), (0, s.jsx)(l.default, {
-            selectedSkuId: g,
-            selectedSkuPricePreview: v,
-            className: I.giftPreview
+            className: C.customGiftMessageWrapper,
+            innerClassName: C.customGiftMessage
+          }), (0, n.jsx)(i.default, {
+            selectedSkuId: P,
+            selectedSkuPricePreview: g,
+            className: C.giftPreview
           })]
         })]
       })
-    }), (0, s.jsx)(h.PaymentPortalFooter, {
-      children: (0, s.jsx)(r.ModalFooter, {
-        justify: f.default.Justify.BETWEEN,
-        align: f.default.Align.CENTER,
-        children: (0, s.jsx)(C, {
+    }), (0, n.jsx)(_.PaymentPortalFooter, {
+      children: (0, n.jsx)(a.ModalFooter, {
+        justify: S.default.Justify.BETWEEN,
+        align: S.default.Align.CENTER,
+        children: (0, n.jsx)(A, {
           onStepChange: t,
-          onBackClick: n,
-          disabled: null != _ || null == x || x.id === (null == A ? void 0 : A.id) || d.length > u.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
-          loading: T
+          onBackClick: s,
+          disabled: null != m || null == h || h.id === (null == O ? void 0 : O.id) || d.length > p.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
+          loading: N
         })
       })
     })]

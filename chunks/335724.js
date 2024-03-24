@@ -1,43 +1,44 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("414456"),
-  l = s.n(n),
-  i = s("77078"),
-  r = s("213523"),
-  o = s("567054"),
-  d = s("546470"),
-  u = s("782340"),
-  c = s("977618"),
-  E = function(e) {
+var n = i("37983");
+i("884691");
+var a = i("414456"),
+  l = i.n(a),
+  s = i("77078"),
+  r = i("213523"),
+  o = i("567054"),
+  d = i("546470"),
+  u = i("782340"),
+  c = i("935090"),
+  f = function(e) {
     let {
-      addFormField: t
+      addFormField: t,
+      guild: i
     } = e;
-    return (0, a.jsxs)("div", {
+    return (0, n.jsxs)("div", {
       className: l(c.spacingContainer, c.leftRailIconContainer, c.backgroundContainer),
-      children: [(0, a.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: c.iconContainer,
-        children: (0, a.jsx)(r.default, {
+        children: (0, n.jsx)(r.default, {
           width: 18,
           height: 20,
           className: c.icon
         })
-      }), (0, a.jsxs)(i.FormSection, {
-        children: [(0, a.jsx)(i.FormTitle, {
+      }), (0, n.jsxs)(s.FormSection, {
+        children: [(0, n.jsx)(s.FormTitle, {
           tag: "h3",
           className: c.leftRailIconContainerTitle,
           children: u.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
-        }), (0, a.jsx)(i.FormText, {
+        }), (0, n.jsx)(s.FormText, {
           className: c.leftRailIconContainerDescription,
-          type: i.FormText.Types.DESCRIPTION,
+          type: s.FormText.Types.DESCRIPTION,
           children: u.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
-        }), (0, a.jsx)(i.Button, {
-          onClick: () => (0, d.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t),
+        }), (0, n.jsx)(s.Button, {
+          onClick: () => (0, d.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, i),
           children: u.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
         })]
       })]

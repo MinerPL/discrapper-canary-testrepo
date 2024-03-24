@@ -14,7 +14,7 @@ var n = s("65597"),
   r = s("129082"),
   d = s("49111"),
   c = s("782340"),
-  f = s("834476");
+  f = s("618537");
 
 function S(e) {
   let {
@@ -22,7 +22,7 @@ function S(e) {
     messageId: s,
     transitionState: S,
     onClose: _
-  } = e, g = (0, n.default)([u.default], () => u.default.getChannel(t)), [F, E] = (0, r.default)(t), C = null == g ? void 0 : g.guild_id;
+  } = e, g = (0, n.useStateFromStores)([u.default], () => u.default.getChannel(t)), [F, E] = (0, r.default)(t), C = null == g ? void 0 : g.guild_id;
   return (0, l.jsx)(a.ConfirmModal, {
     header: c.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
     confirmText: c.default.Messages.CONFIRM,

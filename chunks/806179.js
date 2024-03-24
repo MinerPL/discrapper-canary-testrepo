@@ -1,31 +1,36 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return c
+    return f
   }
 });
 var n = l("37983"),
   u = l("884691"),
   i = l("77078"),
-  r = l("244201"),
-  o = l("401642"),
-  a = l("599110"),
-  d = l("49111"),
-  s = l("782340");
+  o = l("244201"),
+  r = l("685665"),
+  a = l("401642"),
+  d = l("599110"),
+  s = l("49111"),
+  c = l("782340");
 
-function c(e, t, l) {
-  let c = u.useContext(a.AnalyticsContext),
-    f = (0, r.useWindowDispatch)();
+function f(e, t, l) {
+  let f = u.useContext(d.AnalyticsContext),
+    {
+      analyticsLocations: M
+    } = (0, r.default)(),
+    O = (0, o.useWindowDispatch)();
   return (0, n.jsx)(i.MenuItem, {
     id: "user-profile",
-    label: s.default.Messages.PROFILE,
+    label: c.default.Messages.PROFILE,
     action: () => {
-      (0, o.openUserProfileModal)({
+      (0, a.openUserProfileModal)({
         userId: e,
         guildId: null != t ? t : void 0,
         channelId: null != l ? l : void 0,
-        analyticsLocation: c.location
-      }), f.dispatch(d.ComponentActions.POPOUT_CLOSE)
+        sourceAnalyticsLocations: M,
+        analyticsLocation: f.location
+      }), O.dispatch(s.ComponentActions.POPOUT_CLOSE)
     }
   })
 }

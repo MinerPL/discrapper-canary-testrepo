@@ -1,7 +1,7 @@
 "use strict";
-var s, l, a, i;
+var s, l, a, i, r, o;
 n.r(t), n.d(t, {
   PollChatAnswerInteractionType: function() {
-    return l
+    return a
   }
-}), (a = s || (s = {}))[a.NONE = 0] = "NONE", a[a.LOW = 1] = "LOW", a[a.HIGH = 2] = "HIGH", (i = l || (l = {}))[i.LIST = 1] = "LIST", i[i.CHECKBOXES = 2] = "CHECKBOXES", i[i.RADIO_BUTTONS = 3] = "RADIO_BUTTONS"
+}), (i = s || (s = {}))[i.NONE = 0] = "NONE", i[i.LOW = 1] = "LOW", i[i.HIGH = 2] = "HIGH", (r = l || (l = {}))[r.NONE = 0] = "NONE", r[r.HOLLOW = 1] = "HOLLOW", r[r.FILLED = 2] = "FILLED", r[r.CHECKMARK = 3] = "CHECKMARK", (o = a || (a = {}))[o.LIST = 1] = "LIST", o[o.CHECKBOXES = 2] = "CHECKBOXES", o[o.RADIO_BUTTONS = 3] = "RADIO_BUTTONS"

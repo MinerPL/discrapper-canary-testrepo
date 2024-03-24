@@ -1,32 +1,42 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   getEmojiCaptionsForUser: function() {
+    return s
+  },
+  initiateEmojiInteraction: function() {
     return r
   }
-}), E("222007");
-var t = E("872717"),
-  o = E("913144"),
-  n = E("49111");
-async function r() {
-  o.default.dispatch({
+}), n("222007");
+var i = n("872717"),
+  l = n("913144"),
+  a = n("49111");
+async function s() {
+  l.default.dispatch({
     type: "EMOJI_CAPTIONS_FETCH"
   });
   try {
     let {
       body: e
-    } = await t.default.get({
-      url: n.Endpoints.EMOJI_CAPTIONS_GET
-    }), _ = {};
-    for (let E of e.items) _[E.emoji_id] = E.emoji_captions;
-    o.default.dispatch({
+    } = await i.HTTP.get({
+      url: a.Endpoints.EMOJI_CAPTIONS_GET
+    }), t = {};
+    for (let n of e.items) t[n.emoji_id] = n.emoji_captions;
+    l.default.dispatch({
       type: "EMOJI_CAPTIONS_FETCH_SUCCESS",
-      emojiCaptions: _
+      emojiCaptions: t
     })
-  } catch (_) {
+  } catch (t) {
     var e;
-    o.default.dispatch({
+    l.default.dispatch({
       type: "EMOJI_CAPTIONS_FETCH_ERROR",
-      is4XXError: (null == (e = _.body) ? void 0 : e.status) >= 400 && (null == e ? void 0 : e.status) <= 499
+      is4XXError: (null == (e = t.body) ? void 0 : e.status) >= 400 && (null == e ? void 0 : e.status) <= 499
     })
   }
+}
+
+function r(e) {
+  l.default.dispatch({
+    type: "EMOJI_INTERACTION_INITIATED",
+    interaction: e
+  })
 }

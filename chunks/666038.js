@@ -11,7 +11,8 @@ n.r(t), n.d(t, {
     }
   }
   set(e, t) {
-    return this[e] !== t ? new this.constructor({
+    let n = this[e];
+    return t instanceof Date && n instanceof Date && t.getTime() === n.getTime() ? this : n !== t ? new this.constructor({
       ...this,
       [e]: t
     }) : this
@@ -20,8 +21,9 @@ n.r(t), n.d(t, {
     let t = null;
     for (let n in e) {
       if (!e.hasOwnProperty(n)) continue;
-      let i = e[n];
-      this[n] !== i && (null == t && (t = {
+      let i = this[n],
+        s = e[n];
+      (!(s instanceof Date) || !(i instanceof Date) || s.getTime() !== i.getTime()) && i !== s && (null == t && (t = {
         ...this
       }), t[n] = e[n])
     }

@@ -16,8 +16,8 @@ var s = n("37983"),
   f = n("97810"),
   h = n("49111"),
   C = n("782340"),
-  p = n("555821"),
-  m = n("877671");
+  p = n("864604"),
+  m = n("5762");
 
 function E(e) {
   let {
@@ -64,7 +64,7 @@ var g = a.memo(function(e) {
     collapsedReason: u
   } = e, {
     hasJumpTarget: d = !1
-  } = n, [C, g] = a.useState(d), S = a.useCallback(() => g(e => !e), []), A = n.hasUnread ? n.content.length - 1 : n.content.length;
+  } = n, [C, g] = a.useState(d), S = a.useCallback(() => g(e => !e), []), T = n.hasUnread ? n.content.length - 1 : n.content.length;
   return (0, s.jsxs)("div", {
     className: i({
       [m.groupStart]: !0,
@@ -74,7 +74,7 @@ var g = a.memo(function(e) {
       isUnread: !0,
       id: o
     }, "divider") : null, (0, s.jsx)(E, {
-      count: A,
+      count: T,
       compact: r,
       expanded: C,
       onClick: S,

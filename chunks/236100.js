@@ -1,53 +1,64 @@
 "use strict";
-l.r(r), l.d(r, {
+n.r(t), n.d(t, {
   default: function() {
-    return d
+    return f
   }
 });
-var t = l("37983");
-l("884691");
-var o = l("77078"),
-  i = l("38766"),
-  n = l("49111"),
-  a = l("782340"),
-  s = l("364547");
-let u = {
-    page: n.AnalyticsPages.GUILD_CHANNEL,
-    section: n.AnalyticsSections.PROFILE_POPOUT,
-    object: n.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
+var i = n("37983");
+n("884691");
+var l = n("77078"),
+  a = n("38766"),
+  s = n("756507"),
+  r = n("49111"),
+  o = n("782340"),
+  u = n("769143");
+let d = {
+    page: r.AnalyticsPages.GUILD_CHANNEL,
+    section: r.AnalyticsSections.PROFILE_POPOUT,
+    object: r.AnalyticsObjects.EDIT_PER_SERVER_IDENTITY
   },
-  f = {
-    page: n.AnalyticsPages.USER_POPOUT,
-    section: n.AnalyticsSections.PROFILE_POPOUT
+  c = {
+    page: r.AnalyticsPages.USER_POPOUT,
+    section: r.AnalyticsSections.PROFILE_POPOUT
   };
 
-function d(e) {
+function f(e) {
   let {
-    onSelect: r,
-    onClose: l,
-    guild: n
-  } = e, d = (0, i.default)({
-    guild: n,
-    analyticsLocation: u
-  }), c = (0, i.default)({
-    analyticsLocation: f
-  });
-  return (0, t.jsxs)(o.Menu, {
-    className: s.popoutMenu,
-    onSelect: r,
+    onSelect: t,
+    onClose: n,
+    guild: r
+  } = e, f = (0, a.default)({
+    guild: r,
+    analyticsLocation: d
+  }), p = (0, a.default)({
+    analyticsLocation: c
+  }), {
+    trackUserProfileAction: m
+  } = (0, s.useUserProfileAnalyticsContext)();
+  return (0, i.jsxs)(l.Menu, {
+    className: u.popoutMenu,
+    onSelect: t,
     navId: "edit-profile-popout",
-    onClose: l,
-    "aria-label": a.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
-    children: [(0, t.jsx)(o.MenuItem, {
+    onClose: n,
+    "aria-label": o.default.Messages.PROFILE_ACTIONS_MENU_LABEL,
+    children: [(0, i.jsx)(l.MenuItem, {
       id: "edit-server-profile",
-      label: a.default.Messages.CHANGE_IDENTITY,
-      subtext: a.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
-      action: () => d()
-    }), (0, t.jsx)(o.MenuItem, {
+      label: o.default.Messages.CHANGE_IDENTITY,
+      subtext: o.default.Messages.CHANGE_IDENTITY_SERVER_PROFILE_MENU_HELP,
+      action: () => {
+        m({
+          action: "EDIT_GUILD_PROFILE"
+        }), f()
+      }
+    }), (0, i.jsx)(l.MenuItem, {
       id: "edit-default-profile",
-      label: a.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
-      subtext: a.default.Messages.USER_PROFILE_MENU_HELP,
-      action: () => c()
+      label: o.default.Messages.USER_SETTINGS_EDIT_USER_PROFILE,
+      subtext: o.default.Messages.USER_PROFILE_MENU_HELP,
+      action: () => {
+        m({
+          action: "EDIT_PROFILE"
+        }), p()
+      }
     })]
   })
 }

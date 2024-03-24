@@ -10,7 +10,7 @@ var l = n("37983"),
   i = n.n(s),
   r = n("77078"),
   o = n("587974"),
-  u = n("620909");
+  u = n("653609");
 
 function d(e) {
   let {
@@ -33,6 +33,7 @@ function d(e) {
   } = e, T = a.isValidElement(f) ? f : (0, l.jsx)(f, {
     width: 20,
     height: 20,
+    size: "custom",
     foreground: h
   });
   return (0, l.jsx)(r.Tooltip, {

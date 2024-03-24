@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
   ExpressionPickerWidths: function() {
     return s
   }
-}), (r = i || (i = {})).EMOJI = "emoji", r.GIF = "gif", r.STICKER = "sticker", r.SOUNDBOARD = "soundboard", r.CUSTOM_UPLOAD = "custom-upload";
+}), (r = i || (i = {})).EMOJI = "emoji", r.GIF = "gif", r.STICKER = "sticker", r.SOUNDBOARD = "soundboard";
 let o = "expression-picker-chat-input-button",
   l = 498;
 (a = s || (s = {})).MIN = "min", a.MAX = "max"

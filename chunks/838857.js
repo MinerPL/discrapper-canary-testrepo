@@ -12,7 +12,7 @@ var l = n("49111"),
 let s = /^\d+$/;
 
 function i(e) {
-  return null != e && (!!(e === l.ME || e === l.FAVORITES || s.test(e)) || !1)
+  return null != e && (!!(e === l.ME || e === l.FAVORITES || e === l.EMPTY_NUX_SERVER || s.test(e)) || !1)
 }
 
 function r(e) {

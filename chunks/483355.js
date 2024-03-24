@@ -14,31 +14,32 @@ var i, a, l = n("884691"),
   f = n("539405"),
   h = n("658530"),
   p = n("773336"),
-  g = n("50885");
-let m = {
+  g = n("50885"),
+  m = n("819068");
+let E = {
     x: 0,
     y: 0
   },
-  E = !1;
+  S = !1;
 
-function S(e) {
+function v(e) {
   let {
     clientX: t,
     clientY: n
   } = e;
-  E = !0, m.x = t, m.y = n
+  S = !0, E.x = t, E.y = n
 }
-let v = new Map;
+let y = new Map;
 
-function y(e, t) {
-  if (null == t) v.delete(e), 0 === v.size && (window.removeEventListener("mousemove", S), E = !1);
+function O(e, t) {
+  if (null == t) y.delete(e), 0 === y.size && (window.removeEventListener("mousemove", v), S = !1);
   else {
-    let n = v.get(e);
+    let n = y.get(e);
     if (null != n && (0, u.default)(n.zone, t.zone)) return;
-    0 === v.size && window.addEventListener("mousemove", S), v.set(e, t)
+    0 === y.size && window.addEventListener("mousemove", v), y.set(e, t)
   }
   if (p.isPlatformEmbedded) {
-    f.default.setClickZones(Array.from(v.values()).map(e => {
+    if ((0, m.isOutOfProcess)()) f.default.setClickZones(Array.from(y.values()).map(e => {
       let {
         zone: t
       } = e, n = {
@@ -50,24 +51,26 @@ function y(e, t) {
       };
       return n
     }));
-    let e = g.default.requireModule("discord_overlay2");
-    e.broadcastCommand({
-        message: "set_click_zones",
-        zones: Array.from(v.values()).map(e => {
-          let {
-            zone: t
-          } = e;
-          return t
-        })
-      }),
-      function() {
-        if (C) return;
-        let e = g.default.requireModule("discord_overlay2");
-        e.setClickZoneCallback((e, t, n) => {
-          let i = v.get(e);
-          null != i && (!E && (m.x = t, m.y = n), i.instance.click())
-        }), C = !0
-      }()
+    else {
+      let e = g.default.requireModule("discord_overlay2");
+      e.broadcastCommand({
+          message: "set_click_zones",
+          zones: Array.from(y.values()).map(e => {
+            let {
+              zone: t
+            } = e;
+            return t
+          })
+        }),
+        function() {
+          if (C) return;
+          let e = g.default.requireModule("discord_overlay2");
+          e.setClickZoneCallback((e, t, n) => {
+            let i = y.get(e);
+            null != i && (!S && (E.x = t, E.y = n), i.instance.click())
+          }), C = !0
+        }()
+    }
   }
 }
 let C = !1;
@@ -76,7 +79,7 @@ let C = !1;
     this.props.observe ? this.observeZone() : this.updateZone()
   }
   componentWillUnmount() {
-    this.interval.stop(), y(this.zone, null)
+    this.interval.stop(), O(this.zone, null)
   }
   componentDidUpdate(e) {
     let {
@@ -91,8 +94,8 @@ let C = !1;
     this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone)
   }
   click() {
-    let e = (0, h.createMouseEvent)("click", m.x, m.y);
-    (0, h.dispatchEventToPoint)(e, m.x, m.y)
+    let e = (0, h.createMouseEvent)("click", E.x, E.y);
+    (0, h.dispatchEventToPoint)(e, E.x, E.y)
   }
   constructor(...e) {
     super(...e), this.zone = o.uniqueId("ClickArea"), this.interval = new c.Interval, this.updateZone = () => {
@@ -104,7 +107,7 @@ let C = !1;
           right: i,
           bottom: a
         } = e.getBoundingClientRect();
-        y(this.zone, {
+        O(this.zone, {
           instance: this,
           zone: {
             name: this.zone,

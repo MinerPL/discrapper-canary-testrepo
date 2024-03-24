@@ -60,20 +60,11 @@ class r {
   upgradeTransaction(e) {
     return new a(this.table.upgradeTransaction(e))
   }
-  getSyncUnsafe(e, t) {
-    return this.table.getSyncUnsafe([e, t])
-  }
   getManySyncUnsafe(e, t) {
     return this.table.getManySyncUnsafe([e], t)
   }
   getMapEntriesSyncUnsafe() {
     return this.table.getMapEntriesSyncUnsafe()
-  }
-  getIdsSyncUnsafe(e) {
-    return this.table.getChildIdsSyncUnsafe([e])
-  }
-  getGuildIdsSyncUnsafe() {
-    return this.table.getChildIdsSyncUnsafe([])
   }
   static cell(e, t, n) {
     return {

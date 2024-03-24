@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return b
   },
   AudienceVoiceUser: function() {
-    return D
+    return U
   },
   default: function() {
-    return w
+    return F
   }
 }), n("222007");
 var a = n("37983"),
@@ -15,40 +15,41 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("316693"),
-  o = n("77078"),
-  u = n("255397"),
+  u = n("77078"),
+  o = n("255397"),
   d = n("272030"),
   c = n("987317"),
   f = n("990766"),
   h = n("650912"),
+  m = n("812204"),
   p = n("76393"),
-  m = n("845038"),
-  E = n("374014"),
-  C = n("223913"),
-  S = n("709463"),
-  g = n("264429"),
-  _ = n("930291"),
-  I = n("506885"),
-  T = n("981601"),
-  v = n("271938"),
-  x = n("305961"),
-  N = n("957255"),
-  A = n("800762"),
-  M = n("272339"),
-  R = n("68148"),
-  j = n("49111"),
-  L = n("171644"),
+  E = n("845038"),
+  g = n("374014"),
+  S = n("223913"),
+  C = n("709463"),
+  _ = n("264429"),
+  I = n("930291"),
+  T = n("506885"),
+  v = n("981601"),
+  x = n("271938"),
+  N = n("305961"),
+  A = n("957255"),
+  M = n("800762"),
+  R = n("272339"),
+  j = n("68148"),
+  L = n("49111"),
+  y = n("171644"),
   O = n("706530"),
-  y = n("782340"),
-  P = n("375674");
+  P = n("782340"),
+  D = n("698964");
 
 function b(e) {
   let {
     numUsers: t
   } = e;
   return (0, a.jsx)("div", {
-    className: P.moreContainer,
-    children: (0, a.jsxs)(o.Text, {
+    className: D.moreContainer,
+    children: (0, a.jsxs)(u.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
       children: ["+", t]
@@ -56,36 +57,36 @@ function b(e) {
   })
 }
 
-function D(e) {
+function U(e) {
   let {
     numAudience: t,
     collapsed: n
-  } = e, l = n ? t : y.default.Messages.LISTENING_COUNT.format({
+  } = e, l = n ? t : P.default.Messages.LISTENING_COUNT.format({
     count: t
   });
   return (0, a.jsxs)("div", {
-    className: i(P.audienceContainer, {
-      [P.audienceContainerCollapsed]: n
+    className: i(D.audienceContainer, {
+      [D.audienceContainerCollapsed]: n
     }),
     children: [(0, a.jsx)("div", {
-      className: P.audienceIconContainer,
-      children: (0, a.jsx)(M.default, {
-        className: P.audienceIcon
+      className: D.audienceIconContainer,
+      children: (0, a.jsx)(R.default, {
+        className: D.audienceIcon
       })
-    }), (0, a.jsx)(o.Text, {
+    }), (0, a.jsx)(u.Text, {
       color: "text-muted",
       variant: "text-sm/medium",
       children: l
     })]
   })
 }
-class U extends l.PureComponent {
+class w extends l.PureComponent {
   get canWatchStream() {
     let {
       channel: e,
       isStreaming: t
     } = this.props;
-    return t && (0, C.canWatchStream)(e, A.default, x.default, N.default, p.default)[0]
+    return t && (0, S.canWatchStream)(e, M.default, N.default, A.default, p.default)[0]
   }
   render() {
     let {
@@ -97,12 +98,12 @@ class U extends l.PureComponent {
       user: s,
       channel: i
     } = this.props, r = (0, a.jsx)("div", {
-      className: P.draggable,
+      className: D.draggable,
       "data-dnd-name": i.name,
       onMouseEnter: l ? void 0 : this.handleMouseEnter,
       onMouseLeave: l ? void 0 : this.handleHidePreview,
-      children: (0, a.jsx)(o.Popout, {
-        preload: () => (0, I.default)(s.id, s.getAvatarURL(i.guild_id, 80), {
+      children: (0, a.jsx)(u.Popout, {
+        preload: () => (0, T.default)(s.id, s.getAvatarURL(i.guild_id, 80), {
           guildId: i.guild_id,
           channelId: i.id
         }),
@@ -118,7 +119,7 @@ class U extends l.PureComponent {
   constructor(...e) {
     super(...e), this.domElementRef = l.createRef(), this.state = {
       userPopoutOpen: !1,
-      isHoveringOwnHangStatus: !1
+      isHoveringHangStatus: !1
     }, this.handleClickUser = () => {
       this.setState({
         userPopoutOpen: !this.state.userPopoutOpen
@@ -134,7 +135,9 @@ class U extends l.PureComponent {
         user: n,
         showHangStatus: a
       } = this.props;
-      (t || a) && (null == e || e(n.id))
+      (t || a) && (null == e || e(n.id)), this.setState({
+        isHoveringHangStatus: !1
+      })
     }, this.handleMouseEnter = () => {
       let {
         user: e,
@@ -143,9 +146,9 @@ class U extends l.PureComponent {
         showHangStatus: a
       } = this.props;
       (n || a) && (null == t || t(e.id))
-    }, this.handleHoverOwnHangStatus = e => {
+    }, this.handleHoverHangStatus = e => {
       this.setState({
-        isHoveringOwnHangStatus: e
+        isHoveringHangStatus: e
       })
     }, this.handleWatchStream = () => {
       let {
@@ -161,14 +164,14 @@ class U extends l.PureComponent {
         channelId: t.id,
         guildId: t.guild_id
       };
-      v.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, S.default)(l), u.default.selectParticipant(l.channelId, (0, E.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
+      x.default.getId() !== e.id && c.default.selectVoiceChannel(t.id), n ? ((0, C.default)(l), o.default.selectParticipant(l.channelId, (0, g.encodeStreamKey)(l))) : (0, f.watchStreamAndTransitionToStream)(l), null == a || a(e.id)
     }, this.handleJoinVoice = () => {
       let {
         user: e,
         channel: t,
         hidePreview: n
       } = this.props;
-      N.default.can(r.default.combine(j.Permissions.CONNECT, j.Permissions.VIEW_CHANNEL), t) && (c.default.selectVoiceChannel(t.id), null == n || n(e.id))
+      A.default.can(r.combine(L.Permissions.CONNECT, L.Permissions.VIEW_CHANNEL), t) && (c.default.selectVoiceChannel(t.id), null == n || n(e.id))
     }, this.handleUserContextMenu = e => {
       let {
         channel: t,
@@ -192,10 +195,11 @@ class U extends l.PureComponent {
         channel: t,
         user: n
       } = this.props, l = t.getGuildId();
-      return (0, a.jsx)(T.default, {
+      return (0, a.jsx)(v.default, {
         userId: n.id,
         guildId: null != l ? l : void 0,
         channelId: t.id,
+        newAnalyticsLocations: [m.default.VOICE_USER],
         ...e
       })
     }, this.renderStreamPopout = () => {
@@ -205,7 +209,7 @@ class U extends l.PureComponent {
         previewIsOpen: n,
         location: l
       } = this.props;
-      return (0, a.jsx)(g.default, {
+      return (0, a.jsx)(_.default, {
         user: e,
         channel: t,
         onWatch: this.handleWatchStream,
@@ -219,7 +223,7 @@ class U extends l.PureComponent {
         user: n,
         channel: l
       } = this.props;
-      return (0, a.jsx)(_.default, {
+      return (0, a.jsx)(I.default, {
         userId: n.id,
         channel: l,
         hangStatusActivity: e,
@@ -232,16 +236,16 @@ class U extends l.PureComponent {
         voicePlatform: l,
         shouldShowPreview: s,
         mute: r,
-        localMute: u,
+        localMute: o,
         localVideoDisabled: d,
         speaking: c,
         user: f,
         deaf: h,
-        priority: p,
-        collapsed: E,
-        isStreaming: C,
+        priority: m,
+        collapsed: p,
+        isStreaming: g,
         isGuest: S,
-        nick: g,
+        nick: C,
         video: _,
         serverMute: I,
         serverDeaf: T,
@@ -250,25 +254,25 @@ class U extends l.PureComponent {
         channel: N,
         hangStatusActivity: A,
         showHangStatus: M,
-        isSelf: j,
-        application: O
+        isSelf: R,
+        application: L
       } = this.props, {
-        userPopoutOpen: b,
-        isHoveringOwnHangStatus: D
-      } = this.state, U = L.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), w = {
+        userPopoutOpen: O,
+        isHoveringHangStatus: b
+      } = this.state, U = y.GAME_CONSOLE_SESSIONS.has(null != n ? n : ""), w = {
         user: f,
         speaking: c,
         mute: r,
-        localMute: u,
+        localMute: o,
         localVideoDisabled: d,
-        isStreaming: C,
+        isStreaming: g,
         isGuest: S,
         video: _,
-        priority: p,
+        priority: m,
         deaf: h,
-        nick: g,
-        collapsed: E,
-        overlap: E,
+        nick: C,
+        collapsed: p,
+        overlap: p,
         serverMute: I,
         serverDeaf: T,
         tabIndex: v,
@@ -276,54 +280,54 @@ class U extends l.PureComponent {
         voicePlatform: l,
         embeddedApplication: x,
         avatarContainerClass: i({
-          [P.userAvatar]: !0
+          [D.userAvatar]: !0
         }),
         disabled: t && !U,
-        selected: b,
+        selected: O,
         onClick: U ? void 0 : this.handleClickUser,
         onDoubleClick: this.handleWatchStream,
         onContextMenu: this.handleUserContextMenu,
         guildId: N.guild_id,
         hangStatusActivity: A,
         showHangStatus: M,
-        isSelf: j,
-        application: O,
+        isSelf: R,
+        application: L,
         channelId: N.id
       };
       if (t) {
         var F;
-        return (0, a.jsx)(o.Tooltip, {
-          text: null !== (F = (0, m.default)(n)) && void 0 !== F ? F : y.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
+        return (0, a.jsx)(u.Tooltip, {
+          text: null !== (F = (0, E.default)(n)) && void 0 !== F ? F : P.default.Messages.CONNECTED_ON_ANOTHER_CLIENT,
           children: e => {
             let {
               onClick: t,
               onContextMenu: n,
               ...l
             } = e;
-            return (0, a.jsx)(R.default, {
+            return (0, a.jsx)(j.default, {
               ...w,
               ...l
             })
           }
         })
       }
-      return (0, a.jsx)(o.Popout, {
+      return (0, a.jsx)(u.Popout, {
         position: "right",
-        renderPopout: M && j && D || !C ? this.renderHangStatusPopout : this.renderStreamPopout,
-        shouldShow: s && !b,
+        renderPopout: M && b || !g ? this.renderHangStatusPopout : this.renderStreamPopout,
+        shouldShow: s && !O,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
-        children: () => (0, a.jsx)(R.default, {
+        children: () => (0, a.jsx)(j.default, {
           ...w,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,
-          handleHoverOwnHangStatus: this.handleHoverOwnHangStatus
+          handleHoverHangStatus: this.handleHoverHangStatus
         })
       })
     }
   }
 }
-U.defaultProps = {
+w.defaultProps = {
   isSelfOnOtherClient: !1
 };
-var w = (0, h.makeVoiceUserDraggable)(U)
+var F = (0, h.makeVoiceUserDraggable)(w)

@@ -1,95 +1,94 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("77078"),
-  r = l("272030"),
-  o = l("85027"),
-  u = l("33942"),
-  d = l("252063"),
-  c = l("42203"),
-  f = l("18494"),
-  m = l("191814"),
-  p = l("758710"),
-  T = l("351825"),
-  E = l("306160"),
-  _ = l("253981"),
-  S = l("613676"),
-  h = l("49111"),
-  I = l("782340"),
-  A = l("834680");
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("77078"),
+  r = n("272030"),
+  o = n("85027"),
+  u = n("33942"),
+  d = n("252063"),
+  c = n("42203"),
+  f = n("18494"),
+  p = n("191814"),
+  m = n("758710"),
+  h = n("351825"),
+  x = n("306160"),
+  E = n("253981"),
+  y = n("613676"),
+  g = n("49111"),
+  S = n("782340"),
+  C = n("796440");
 
-function g(e) {
+function T(e) {
   var t;
   let {
-    application: l,
-    className: a
-  } = e, g = c.default.getChannel(f.default.getChannelId()), {
-    appsInGDMEnabled: v,
-    availableApplications: C
+    application: n,
+    className: l
+  } = e, T = c.default.getChannel(f.default.getChannelId()), {
+    appsInGDMEnabled: _,
+    availableApplications: I
   } = (0, d.usePrivateChannelIntegrationState)({
-    channelId: null !== (t = null == g ? void 0 : g.id) && void 0 !== t ? t : ""
+    channelId: null !== (t = null == T ? void 0 : T.id) && void 0 !== t ? t : g.EMPTY_STRING_SNOWFLAKE_ID
   });
-  if (null == l || !(0, S.canInstallApplication)(l.id, l.customInstallUrl, l.installParams)) return null;
-  let N = v && null != C.find(e => e.id === (null == l ? void 0 : l.id));
-  return (0, n.jsx)(i.Button, {
-    color: i.Button.Colors.PRIMARY,
-    look: i.Button.Looks.FILLED,
-    size: i.Button.Sizes.SMALL,
-    onContextMenu: E.SUPPORTS_COPY ? e => {
-      var t, a;
-      let s = (0, o.getApplicationInstallURL)({
-        id: l.id,
-        custom_install_url: null !== (t = l.customInstallUrl) && void 0 !== t ? t : void 0,
-        install_params: null !== (a = l.installParams) && void 0 !== a ? a : void 0
-      });
-      (0, r.openContextMenu)(e, e => (0, n.jsx)(i.Menu, {
+  if (null == n || !(0, y.canInstallApplication)({
+      customInstallUrl: n.customInstallUrl,
+      installParams: n.installParams,
+      integrationTypesConfig: n.integrationTypesConfig
+    })) return null;
+  let v = _ && null != I.find(e => e.id === (null == n ? void 0 : n.id));
+  return (0, i.jsx)(s.Button, {
+    color: s.Button.Colors.PRIMARY,
+    look: s.Button.Looks.FILLED,
+    size: s.Button.Sizes.SMALL,
+    onContextMenu: x.SUPPORTS_COPY ? e => {
+      (0, r.openContextMenu)(e, e => (0, i.jsx)(s.Menu, {
         navId: "component-button",
         onClose: r.closeContextMenu,
-        "aria-label": I.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS,
+        "aria-label": S.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS,
         onSelect: void 0,
         ...e,
-        children: (0, n.jsx)(i.MenuGroup, {
-          children: (0, n.jsx)(i.MenuItem, {
+        children: (0, i.jsx)(s.MenuGroup, {
+          children: (0, i.jsx)(s.MenuItem, {
             id: "copy",
-            label: I.default.Messages.APPLICATION_ADD_TO_SERVER_ACTIONS_COPY,
-            action: () => (0, E.copy)(s)
+            label: S.default.Messages.APPLICATION_ADD_BUTTON_ACTIONS_COPY,
+            action: () => (0, x.copy)((0, o.getApplicationInstallURL)(n))
           })
         })
       }))
     } : void 0,
     onClick: () => {
-      N ? (0, u.openOAuth2Modal)({
-        clientId: l.id,
-        scopes: [h.OAuth2Scopes.APPLICATIONS_COMMANDS],
-        channelId: g.id,
+      v ? (0, u.openOAuth2Modal)({
+        clientId: n.id,
+        scopes: [g.OAuth2Scopes.APPLICATIONS_COMMANDS],
+        channelId: T.id,
         disableGuildSelect: !0
-      }) : (0, S.installApplication)({
-        applicationId: l.id,
-        customInstallUrl: l.customInstallUrl,
-        installParams: l.installParams
+      }) : (0, y.installApplication)({
+        applicationId: n.id,
+        customInstallUrl: n.customInstallUrl,
+        installParams: n.installParams,
+        integrationTypesConfig: n.integrationTypesConfig
       })
     },
-    className: s(A.applicationInstallButton, a),
-    children: (0, n.jsxs)("div", {
-      className: A.applicationInstallButtonContent,
-      children: [(0, n.jsx)(T.default, {
+    className: a(C.applicationInstallButton, l),
+    children: (0, i.jsxs)("div", {
+      className: C.applicationInstallButtonContent,
+      children: [(0, i.jsx)(h.default, {
         width: 16,
         height: 16
-      }), (0, n.jsx)(m.default, {
+      }), (0, i.jsx)(p.default, {
         size: 4,
         horizontal: !0
-      }), (0, n.jsx)("span", {
-        className: A.applicationInstallButtonText,
-        children: N ? I.default.Messages.ADD : I.default.Messages.APPLICATION_ADD_BUTTON
-      }), null == l.customInstallUrl || _.default.isDiscordUrl(l.customInstallUrl) ? null : (0, n.jsx)(p.default, {
-        className: A.launchIcon,
+      }), (0, i.jsx)("span", {
+        className: C.applicationInstallButtonText,
+        children: v ? S.default.Messages.ADD : S.default.Messages.APPLICATION_ADD_BUTTON
+      }), null == n.customInstallUrl || E.default.isDiscordUrl(n.customInstallUrl) ? null : (0, i.jsx)(m.default, {
+        className: C.launchIcon,
         width: 16,
         height: 16
       })]

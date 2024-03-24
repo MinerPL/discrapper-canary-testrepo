@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var i, r = n("773179"),
-  s = n.n(r),
+var i, s = n("464675"),
+  r = n.n(s),
   a = n("595275"),
   o = n("614276"),
   l = n("685961"),
   u = n("353927");
-let c = 0;
+let d = 0;
 i = class extends a.default {
   destroy() {
     this.destroyed = !0, this.framerateReducer.destroy(), this.setConnectionState(u.ConnectionStates.DISCONNECTED), this.emit(o.BaseConnectionEvent.Destroy, this), this.removeAllListeners()
@@ -44,8 +44,9 @@ i = class extends a.default {
   setClipRecordUser(e, t, n) {}
   setViewerSideClip(e) {}
   setClipsKeyFrameInterval(e) {}
+  setQualityDecoupling(e) {}
   getStreamParameters() {
-    return s.cloneDeep(this.videoStreamParameters)
+    return r(this.videoStreamParameters)
   }
   setExperimentFlag(e, t) {
     t ? this.experimentFlags.add(e) : this.experimentFlags.delete(e)
@@ -57,21 +58,21 @@ i = class extends a.default {
     let {
       quality: t,
       constraints: n
-    } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), i = s.cloneDeep(this.videoStreamParameters);
+    } = this.applyQualityConstraints({}, this.videoStreamParameters[0].ssrc), i = r(this.videoStreamParameters);
     null != t && (i[0].maxBitrate = t.bitrateMax, null != t.encode && (i[0].maxPixelCount = t.encode.pixelCount, i[0].maxFrameRate = t.encode.framerate)), this.videoStreamParameters = i;
     for (let e = 1; e < this.videoStreamParameters.length; e++) {
       let {
         quality: i,
-        constraints: r
+        constraints: s
       } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
-      null != i && (this.videoStreamParameters[e].maxBitrate = i.bitrateMax, null != i.encode && (this.videoStreamParameters[e].maxPixelCount = i.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = i.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (n = r, t = i)
+      null != i && (this.videoStreamParameters[e].maxBitrate = i.bitrateMax, null != i.encode && (this.videoStreamParameters[e].maxPixelCount = i.encode.pixelCount, this.videoStreamParameters[e].maxFrameRate = i.encode.framerate)), 100 === this.videoStreamParameters[e].quality && (n = s, t = i)
     }
-    n.streamParameters = s.cloneDeep(this.videoStreamParameters), n.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
+    n.streamParameters = r(this.videoStreamParameters), n.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map(e => {
       var t;
       return null !== (t = e.maxPixelCount) && void 0 !== t ? t : 0
     }));
-    let r = this.pickProperties(n, e);
-    this.logger.info("updateVideoQuality: ".concat(JSON.stringify(r, void 0, 4))), this.updateVideoQualityCore(r, t)
+    let s = this.pickProperties(n, e);
+    this.logger.info("updateVideoQuality: ".concat(JSON.stringify(s, void 0, 4))), this.updateVideoQualityCore(s, t)
   }
   applyVideoQualityMode(e) {
     if (this.context !== u.MediaEngineContextTypes.DEFAULT) return;
@@ -95,7 +96,7 @@ i = class extends a.default {
   initializeStreamParameters(e) {
     let t = this.videoQualityManager.getQuality();
     this.videoStreamParameters = e.filter(e => (e.type === u.MediaTypes.VIDEO || e.type === u.MediaTypes.SCREEN) && "string" == typeof e.rid).map(e => {
-      var n, i, r, s;
+      var n, i, s, r;
       return {
         type: e.type,
         active: e.active,
@@ -103,12 +104,12 @@ i = class extends a.default {
         ssrc: e.ssrc,
         rtxSsrc: e.rtxSsrc,
         quality: e.quality,
-        maxBitrate: (null !== (s = e.quality) && void 0 !== s ? s : 100) < 100 ? t.bitrateMax / 4 : t.bitrateMax,
+        maxBitrate: (null !== (r = e.quality) && void 0 !== r ? r : 100) < 100 ? t.bitrateMax / 4 : t.bitrateMax,
         maxFrameRate: null === (n = t.capture) || void 0 === n ? void 0 : n.framerate,
         maxResolution: {
           type: u.ResolutionTypes.FIXED,
           width: null === (i = t.capture) || void 0 === i ? void 0 : i.width,
-          height: null === (r = t.capture) || void 0 === r ? void 0 : r.height
+          height: null === (s = t.capture) || void 0 === s ? void 0 : s.height
         },
         profile: e.profile
       }
@@ -118,15 +119,15 @@ i = class extends a.default {
     var t, n;
     let i = this.remoteVideoSinkWants[null !== (n = null != e ? e : null === (t = this.videoStreamParameters[0]) || void 0 === t ? void 0 : t.ssrc) && void 0 !== n ? n : 0];
     if (null != i && i > 0) return i;
-    let r = this.remoteVideoSinkWants.any;
-    return null != r && r > 0 ? r : 100
+    let s = this.remoteVideoSinkWants.any;
+    return null != s && s > 0 ? s : 100
   }
   async emitStats() {
     let e = await this.getStats();
     return null != e && this.emit(o.BaseConnectionEvent.Stats, e), e
   }
   constructor(e, t) {
-    super(), this.mediaEngineConnectionId = "WebRTC-".concat(c++), this.destroyed = !1, this.audioSSRC = 0, this.selfDeaf = !1, this.localMutes = {}, this.disabledLocalVideos = {}, this.localVolumes = {}, this.isActiveOutputSinksEnabled = !1, this.activeOutputSinks = {}, this.videoSupported = !1, this.useElectronVideo = !1, this.voiceBitrate = u.DEFAULT_VOICE_BITRATE, this.remoteSinkWantsMaxFramerate = u.VIDEO_QUALITY_FRAMERATE, this.wantsPriority = new Set, this.localSpeakingFlags = {}, this.videoReady = !1, this.videoStreamParameters = [], this.remoteVideoSinkWants = {
+    super(), this.mediaEngineConnectionId = "WebRTC-".concat(d++), this.destroyed = !1, this.audioSSRC = 0, this.selfDeaf = !1, this.localMutes = {}, this.disabledLocalVideos = {}, this.localVolumes = {}, this.isActiveOutputSinksEnabled = !1, this.activeOutputSinks = {}, this.videoSupported = !1, this.useElectronVideo = !1, this.voiceBitrate = u.DEFAULT_VOICE_BITRATE, this.remoteSinkWantsMaxFramerate = u.VIDEO_QUALITY_FRAMERATE, this.wantsPriority = new Set, this.localSpeakingFlags = {}, this.videoReady = !1, this.videoStreamParameters = [], this.remoteVideoSinkWants = {
       any: 100
     }, this.localVideoSinkWants = {
       any: 100

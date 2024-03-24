@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return F
   },
   transformRelationship: function() {
-    return H
+    return B
   },
   isMatchingOrigin: function() {
-    return B
+    return H
   },
   hasMessageReadPermission: function() {
     return V
@@ -53,8 +53,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("424973"), n("70102"), n("781738"), n("917351");
 var a, s = n("746379"),
-  i = n.n(s),
-  l = n("872717"),
+  l = n.n(s),
+  i = n("872717"),
   r = n("497"),
   o = n("95410"),
   u = n("819689"),
@@ -62,32 +62,32 @@ var a, s = n("746379"),
   c = n("367376"),
   f = n("574073"),
   E = n("845579"),
-  _ = n("233069"),
-  h = n("766274"),
+  h = n("233069"),
+  _ = n("766274"),
   C = n("42203"),
-  I = n("305961"),
-  T = n("42887"),
-  S = n("377253"),
+  S = n("305961"),
+  I = n("42887"),
+  m = n("377253"),
   p = n("824563"),
-  m = n("697218"),
-  A = n("800762"),
-  g = n("718517"),
+  T = n("697218"),
+  g = n("800762"),
+  A = n("718517"),
   N = n("387111"),
   R = n("655518"),
   O = n("861309"),
-  L = n("694352"),
-  v = n("492249"),
+  v = n("694352"),
+  L = n("492249"),
   M = n("49111");
-let P = null !== (a = i.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
-  D = function() {
+let P = null !== (a = l.parse(window.GLOBAL_ENV.API_ENDPOINT, !1, !0).host) && void 0 !== a ? a : "localhost",
+  y = function() {
     let e = P.split(":")[0];
     if (!e.includes(".")) return e;
     let t = e.split("."),
       n = t[t.length - 1];
     return /^\d+$/.test(n) ? e : t.slice(-2).join(".")
   }(),
-  y = new RegExp("^".concat(R.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(R.default.escape(D), "|discordapp.com|discord.com)$")),
-  x = 1 * g.default.Millis.MINUTE,
+  D = new RegExp("^".concat(R.default.escape("https://"), "(?:[a-z]+\\.)?(").concat(R.default.escape(y), "|discordapp.com|discord.com)$")),
+  x = 1 * A.default.Millis.MINUTE,
   b = {};
 
 function U(e) {
@@ -106,16 +106,16 @@ function j(e) {
 function w(e, t) {
   let n = [],
     a = e.getGuildId();
-  return ![M.ChannelTypes.GUILD_CATEGORY, ...(0, _.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
-    S.default.whenReady(e.id, () => t()), u.default.fetchMessages({
+  return ![M.ChannelTypes.GUILD_CATEGORY, ...(0, h.GUILD_VOCAL_CHANNEL_TYPES)].includes(e.type) && n.push(new Promise(t => {
+    m.default.whenReady(e.id, () => t()), u.default.fetchMessages({
       channelId: e.id,
       limit: M.MAX_MESSAGES_PER_CHANNEL
     })
   })), Promise.all(n).then(() => {
     var n;
-    let s = !e.isNSFW() || (null === (n = m.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
-      i = s && t ? S.default.getMessages(e.id).toArray().map(k) : [],
-      l = Object.values(A.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
+    let s = !e.isNSFW() || (null === (n = T.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0,
+      l = s && t ? m.default.getMessages(e.id).toArray().map(k) : [],
+      i = Object.values(g.default.getVoiceStatesForChannel(e.id)).map(t => F(a, e.id, t));
     return {
       id: e.id,
       name: e.name,
@@ -125,8 +125,8 @@ function w(e, t) {
       user_limit: e.userLimit,
       guild_id: a,
       position: e.position,
-      messages: i,
-      voice_states: l
+      messages: l,
+      voice_states: i
     }
   })
 }
@@ -136,7 +136,7 @@ function k(e) {
       channelId: e.channel_id
     }).map(U),
     n = C.default.getChannel(e.channel_id),
-    a = null != e.author ? (0, f.getUserAuthor)(new h.default(e.author), n) : void 0;
+    a = null != e.author ? (0, f.getUserAuthor)(new _.default(e.author), n) : void 0;
   return {
     id: e.id,
     blocked: e.blocked,
@@ -163,33 +163,33 @@ function F(e, t, n) {
   let {
     mute: a,
     deaf: s,
-    selfMute: i,
-    selfDeaf: l,
+    selfMute: l,
+    selfDeaf: i,
     suppress: r,
     userId: o
-  } = n, u = m.default.getUser(o);
+  } = n, u = T.default.getUser(o);
   if (null == u) throw Error("Invalid user id: ".concat(o));
   return {
     nick: N.default.getName(e, t, u),
-    mute: T.default.isLocalMute(u.id),
-    volume: T.default.getLocalVolume(u.id),
-    pan: T.default.getLocalPan(u.id),
+    mute: I.default.isLocalMute(u.id),
+    volume: I.default.getLocalVolume(u.id),
+    pan: I.default.getLocalPan(u.id),
     voice_state: {
       mute: a,
       deaf: s,
-      self_mute: i,
-      self_deaf: l,
+      self_mute: l,
+      self_deaf: i,
       suppress: r
     },
-    user: (0, L.default)(u)
+    user: (0, v.default)(u)
   }
 }
 
-function H(e, t, n) {
-  let a = m.default.getUser(t);
+function B(e, t, n) {
+  let a = T.default.getUser(t);
   return {
     type: e,
-    user: null != a ? (0, L.default)(a) : null,
+    user: null != a ? (0, v.default)(a) : null,
     presence: {
       status: p.default.getStatus(t),
       activity: null != n ? p.default.getApplicationActivity(t, n) : p.default.getPrimaryActivity(t)
@@ -197,21 +197,21 @@ function H(e, t, n) {
   }
 }
 
-function B(e) {
+function H(e) {
   let t;
   if (null == e) return !1;
   let n = window.location.origin;
   if (e === n) return !0;
   try {
-    t = i.parse(e).hostname
+    t = l.parse(e).hostname
   } catch (e) {
     return !1
   }
-  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(y.test(e) && y.test(n)) || !1)
+  return window.location.hostname === t && "localhost" === t || null == e.match("staging") && (!!(D.test(e) && D.test(n)) || !1)
 }
 
 function V(e, t, n) {
-  let a = I.default.getGuild(e.getGuildId()),
+  let a = S.default.getGuild(e.getGuildId()),
     s = null != a ? a.getApplicationId() : e.getApplicationId();
   return s === t || n.indexOf(M.OAuth2Scopes.MESSAGES_READ) > -1
 }
@@ -234,8 +234,8 @@ function W(e) {
       secrets: a,
       party: s
     } = e,
-    i = 0;
-  return (n && (i |= M.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (i |= M.ActivityFlags.JOIN), t) ? (i |= M.ActivityFlags.EMBEDDED, i |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === M.ActivityPartyPrivacy.PUBLIC || o.default.get("ACTIVITIES_FORCE_PUBLIC")) && (E.AllowActivityPartyPrivacyFriends.getSetting() && (i |= M.ActivityFlags.PARTY_PRIVACY_FRIENDS), E.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (i |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), i)
+    l = 0;
+  return (n && (l |= M.ActivityFlags.INSTANCE), (null == a ? void 0 : a.join) != null && (l |= M.ActivityFlags.JOIN), t) ? (l |= M.ActivityFlags.EMBEDDED, l |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL) : (((null == s ? void 0 : s.privacy) === M.ActivityPartyPrivacy.PUBLIC || o.default.get("ACTIVITIES_FORCE_PUBLIC")) && (E.AllowActivityPartyPrivacyFriends.getSetting() && (l |= M.ActivityFlags.PARTY_PRIVACY_FRIENDS), E.AllowActivityPartyPrivacyVoiceChannel.getSetting() && (l |= M.ActivityFlags.PARTY_PRIVACY_VOICE_CHANNEL)), l)
 }
 
 function K(e, t, n) {
@@ -244,7 +244,7 @@ function K(e, t, n) {
 }
 
 function z(e, t, n) {
-  return l.default.get({
+  return i.HTTP.get({
     url: M.Endpoints.APPLICATION_RPC(t),
     oldFormErrors: !0,
     retries: 3
@@ -252,15 +252,15 @@ function z(e, t, n) {
     let {
       body: {
         rpc_origins: s,
-        id: i,
-        name: l,
+        id: l,
+        name: i,
         icon: r,
         cover_image: o,
         flags: u
       }
     } = a;
     if ("string" == typeof n) {
-      if (e.transport === v.TransportTypes.POST_MESSAGE) {
+      if (e.transport === L.TransportTypes.POST_MESSAGE) {
         let e = (0, d.default)(t);
         if (null == e || !j(n, [e])) throw new O.default({
           closeCode: M.RPCCloseCodes.INVALID_ORIGIN
@@ -270,8 +270,8 @@ function z(e, t, n) {
       }, "Invalid Origin")
     }
     e.application = {
-      id: i,
-      name: l,
+      id: l,
+      name: i,
       icon: r,
       coverImage: o,
       flags: u
@@ -288,11 +288,11 @@ async function q(e, t) {
 }
 
 function Q(e, t) {
-  null == t && (e.authorization.scopes = [v.RPC_LOCAL_SCOPE])
+  null == t && (e.authorization.scopes = [L.RPC_LOCAL_SCOPE])
 }
 
 function Z(e) {
-  let t = T.default.getSettings(),
+  let t = I.default.getSettings(),
     n = e => Object.values(e).sort((e, t) => e.index - t.index).map(e => ({
       id: e.id,
       name: e.name
@@ -300,12 +300,12 @@ function Z(e) {
     a = e(t);
   return {
     input: {
-      available_devices: n(T.default.getInputDevices()),
+      available_devices: n(I.default.getInputDevices()),
       device_id: t.inputDeviceId,
       volume: t.inputVolume
     },
     output: {
-      available_devices: n(T.default.getOutputDevices()),
+      available_devices: n(I.default.getOutputDevices()),
       device_id: t.outputDeviceId,
       volume: t.outputVolume
     },
@@ -327,7 +327,7 @@ function Z(e) {
 }
 
 function X(e, t) {
-  let n = T.default.getSettings(e),
+  let n = I.default.getSettings(e),
     a = t(n);
   return {
     input_mode: {
@@ -342,7 +342,7 @@ function X(e, t) {
 }
 
 function J(e) {
-  if (e !== v.TransportTypes.POST_MESSAGE) throw new O.default({
+  if (e !== L.TransportTypes.POST_MESSAGE) throw new O.default({
     errorCode: M.RPCErrors.INVALID_COMMAND
   }, 'command not available from "'.concat(e, " transport"))
 }

@@ -1,65 +1,76 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("16470"),
-  a = n("446674"),
-  u = n("77078"),
-  d = n("538282"),
-  c = n("374363"),
-  f = n("551305"),
-  p = n("110006"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("16470"),
+  o = n("446674"),
+  u = n("876543"),
+  d = n("77078"),
+  c = n("538282"),
+  f = n("374363"),
+  p = n("551305"),
   m = n("378765"),
   h = n("49111"),
-  E = n("13030"),
-  S = n("782340"),
-  g = n("537461"),
-  C = i.memo(i.forwardRef(function(e, t) {
+  x = n("13030"),
+  E = n("782340"),
+  y = n("350583"),
+  g = l.memo(l.forwardRef(function(e, t) {
     let {
       disabled: n,
-      type: r
-    } = e, [C, T] = i.useState(!1), v = (0, a.useStateFromStores)([c.default], () => {
+      type: a
+    } = e, [g, S] = l.useState(!1), C = (0, o.useStateFromStores)([f.default], () => {
       var e, t;
-      return C && Object.values(null !== (t = null === (e = c.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-    }), [y, x, I] = (0, d.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], s.default), N = i.useRef(0), _ = i.useCallback(() => {
-      T(!0), clearTimeout(N.current), N.current = setTimeout(() => {
-        T(!1)
+      return g && Object.values(null !== (t = null === (e = f.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
+    }), [T, _, I] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
+      S(!0), clearTimeout(v.current), v.current = setTimeout(() => {
+        S(!1)
       }, 1500)
     }, []);
-    i.useEffect(() => () => {
-      clearTimeout(N.current)
+    l.useEffect(() => () => {
+      clearTimeout(v.current)
     }), (0, m.useComponentAction)({
       event: h.ComponentActions.FAVORITE_GIF,
-      handler: _
+      handler: N
     });
-    let A = i.useCallback(() => {
-      (0, d.toggleExpressionPicker)(E.ExpressionPickerViewType.GIF, r)
-    }, [r]);
+    let A = l.useCallback(() => {
+        (0, c.toggleExpressionPicker)(x.ExpressionPickerViewType.GIF, a)
+      }, [a]),
+      {
+        Component: O,
+        events: R,
+        play: M
+      } = (0, u.useGifLottie)();
     if (n) return null;
-    let R = y === E.ExpressionPickerViewType.GIF && x === r;
-    return (0, l.jsx)(u.Tooltip, {
-      text: v ? S.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
+    let k = T === x.ExpressionPickerViewType.GIF && _ === a;
+    return (0, i.jsx)(d.Tooltip, {
+      text: C ? E.default.Messages.GIF_TOOLTIP_FAVORITED_PICKER_BUTTON : null,
       forceOpen: !0,
-      children: e => (0, l.jsx)("div", {
+      children: e => (0, i.jsx)("div", {
         ref: t,
-        className: o(E.CHAT_INPUT_BUTTON_CLASSNAME, g.buttonContainer),
+        className: s(x.CHAT_INPUT_BUTTON_CLASSNAME, y.buttonContainer),
         ...e,
-        children: (0, l.jsx)(f.default, {
-          innerClassName: g.button,
-          icon: p.default,
-          onClick: A,
-          isActive: R,
-          pulse: C,
-          "aria-label": S.default.Messages.GIF_BUTTON_LABEL,
-          "aria-expanded": R,
+        children: (0, i.jsx)(p.default, {
+          innerClassName: y.button,
+          onMouseEnter: R.onMouseEnter,
+          onMouseLeave: R.onMouseLeave,
+          onClick: () => {
+            A(), M()
+          },
+          isActive: k,
+          pulse: g,
+          "aria-label": E.default.Messages.GIF_BUTTON_LABEL,
+          "aria-expanded": k,
           "aria-haspopup": "dialog",
-          "aria-controls": I
+          "aria-controls": I,
+          children: (0, i.jsx)(O, {
+            color: "currentColor"
+          })
         })
       })
     })

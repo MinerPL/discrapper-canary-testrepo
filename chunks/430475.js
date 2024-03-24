@@ -1,14 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var i = n("446674"),
-  l = n("913144"),
-  a = n("692038"),
-  s = n("10802"),
-  r = n("697218");
+  s = n("913144"),
+  r = n("692038"),
+  a = n("10802"),
+  o = n("697218"),
+  l = n("299039");
 let u = {};
 
 function d(e) {
@@ -21,44 +22,38 @@ function d(e) {
     loaded: !0,
     firstMessage: null
   };
-  for (let e of n) o(e.channel_id, e)
+  for (let e of n) c(e.channel_id, e)
 }
 
-function o(e, t) {
-  let n = null == t ? null : (0, a.createMessageRecord)(t);
+function c(e, t) {
+  let n = null == t ? null : (0, r.createMessageRecord)(t);
   u[e] = {
     loaded: !0,
     firstMessage: n
   }
 }
 
-function c(e) {
+function _(e) {
   let {
     type: t,
     channelId: n,
     messageId: i,
-    userId: l,
-    emoji: a,
-    optimistic: s,
-    burst: d,
-    reactionType: o
-  } = e, c = u[n];
-  if (null == c || null == c.firstMessage || i !== c.firstMessage.id) return !1;
-  let _ = r.default.getCurrentUser(),
-    f = null != _ && _.id === l;
-  if (s && !f) return !1;
-  if (u[n] = {
-      ...c
-    }, "MESSAGE_REACTION_ADD" === t) {
-    let {
-      colors: t
-    } = e;
-    u[n].firstMessage = c.firstMessage.addReaction(a, f, t, d, o)
-  } else u[n].firstMessage = c.firstMessage.removeReaction(a, f, d, o)
+    userId: s,
+    emoji: r,
+    optimistic: a,
+    reactionType: l
+  } = e, d = u[n];
+  if (null == d || null == d.firstMessage || i !== d.firstMessage.id) return !1;
+  let c = o.default.getCurrentUser(),
+    _ = null != c && c.id === s;
+  if (a && !_) return !1;
+  u[n] = {
+    ...d
+  }, "MESSAGE_REACTION_ADD" === t ? u[n].firstMessage = d.firstMessage.addReaction(r, _, e.colors, l) : u[n].firstMessage = d.firstMessage.removeReaction(r, _, l)
 }
-class _ extends i.default.Store {
+class f extends i.default.Store {
   initialize() {
-    this.waitFor(s.default, r.default)
+    this.waitFor(a.default, o.default)
   }
   isLoading(e) {
     var t;
@@ -71,26 +66,26 @@ class _ extends i.default.Store {
     }), u[e]
   }
 }
-_.displayName = "ForumPostMessagesStore";
-var f = new _(l.default, {
+f.displayName = "ForumPostMessagesStore";
+var E = new f(s.default, {
   CONNECTION_OPEN: function() {
     u = {}
   },
   MESSAGE_CREATE: function(e) {
-    if (e.isPushNotification || e.message.id !== e.message.channel_id) return !1;
-    o(e.message.channel_id, e.message)
+    if (e.isPushNotification || e.message.id !== l.default.castChannelIdAsMessageId(e.message.channel_id)) return !1;
+    c(e.message.channel_id, e.message)
   },
   MESSAGE_UPDATE: function(e) {
     if (e.message.id !== e.message.channel_id) return !1;
-    let t = u[e.message.id];
+    let t = u[l.default.castMessageIdAsChannelId(e.message.id)];
     if (null == t || null == t.firstMessage) return !1;
-    u[e.message.id] = {
+    u[l.default.castMessageIdAsChannelId(e.message.id)] = {
       ...t,
-      firstMessage: (0, a.updateMessageRecord)(t.firstMessage, e.message)
+      firstMessage: (0, r.updateMessageRecord)(t.firstMessage, e.message)
     }
   },
   MESSAGE_DELETE: function(e) {
-    if (e.id !== e.channelId) return !1;
+    if (e.id !== l.default.castChannelIdAsMessageId(e.channelId)) return !1;
     u[e.channelId] = {
       loaded: !0,
       firstMessage: null
@@ -98,14 +93,14 @@ var f = new _(l.default, {
   },
   THREAD_CREATE: function(e) {
     let t = u[e.channel.id];
-    if (null != t || !s.default.isSubscribedToThreads(e.channel.guild_id)) return !1;
+    if (null != t || !a.default.isSubscribedToThreads(e.channel.guild_id)) return !1;
     u[e.channel.id] = {
       loaded: !0,
       firstMessage: null
     }
   },
-  MESSAGE_REACTION_ADD: c,
-  MESSAGE_REACTION_REMOVE: c,
+  MESSAGE_REACTION_ADD: _,
+  MESSAGE_REACTION_REMOVE: _,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,
@@ -122,11 +117,11 @@ var f = new _(l.default, {
       channelId: t,
       messageId: n,
       emoji: i
-    } = e, l = u[t];
-    if (null == l || null == l.firstMessage || n !== l.firstMessage.id) return !1;
+    } = e, s = u[t];
+    if (null == s || null == s.firstMessage || n !== s.firstMessage.id) return !1;
     u[t] = {
-      ...l,
-      firstMessage: l.firstMessage.removeReactionsForEmoji(i)
+      ...s,
+      firstMessage: s.firstMessage.removeReactionsForEmoji(i)
     }
   },
   MESSAGE_REACTION_ADD_MANY: function(e) {
@@ -134,20 +129,20 @@ var f = new _(l.default, {
       channelId: t,
       messageId: n,
       reactions: i
-    } = e, l = u[t];
-    if (null == l || null == l.firstMessage || n !== l.firstMessage.id) return !1;
-    let a = r.default.getCurrentUser(),
-      s = l.firstMessage.addReactionBatch(i, null == a ? void 0 : a.id);
+    } = e, s = u[t];
+    if (null == s || null == s.firstMessage || n !== s.firstMessage.id) return !1;
+    let r = o.default.getCurrentUser(),
+      a = s.firstMessage.addReactionBatch(i, null == r ? void 0 : r.id);
     u[t] = {
-      ...l,
-      firstMessage: s
+      ...s,
+      firstMessage: a
     }
   },
   LOAD_FORUM_POSTS: function(e) {
     let {
       threads: t
     } = e;
-    for (let e in t) o(e, t[e].first_message)
+    for (let e in t) c(e, t[e].first_message)
   },
   LOAD_THREADS_SUCCESS: d,
   LOAD_ARCHIVED_THREADS_SUCCESS: d,
@@ -156,9 +151,9 @@ var f = new _(l.default, {
       channelId: t,
       messages: n
     } = e, i = n[n.length - 1];
-    null != i && i.id === t && (u[t] = {
+    null != i && i.id === l.default.castChannelIdAsMessageId(t) && (u[t] = {
       loaded: !0,
-      firstMessage: (0, a.createMessageRecord)(i)
+      firstMessage: (0, r.createMessageRecord)(i)
     })
   }
 })

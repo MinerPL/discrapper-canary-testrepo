@@ -10,5 +10,5 @@ n.r(t), n.d(t, {
   LANDSCAPE_ACTIVITY_ASPECT_RATIO: function() {
     return o
   }
-}), (r = i || (i = {})).ACTION_BAR = "action_bar", r.PANEL = "panel", r.PIP = "pip", (a = s || (s = {}))[a.NO_CHAT = 0] = "NO_CHAT", a[a.RESIZABLE = 1] = "RESIZABLE";
+}), (r = i || (i = {})).DISCONNECTED = "disconnected", r.LAUNCHING_WITH_ORIENTATION_CHANGE = "launching_with_orientation_change", r.PANEL = "panel", r.PIP = "pip", (a = s || (s = {}))[a.NO_CHAT = 0] = "NO_CHAT", a[a.RESIZABLE = 1] = "RESIZABLE";
 let o = 16 / 9

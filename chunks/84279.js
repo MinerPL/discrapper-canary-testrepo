@@ -17,8 +17,8 @@ var a = s("37983"),
   f = s("133403"),
   m = s("145079"),
   p = s("87657"),
-  x = s("716241"),
-  T = s("161778"),
+  T = s("716241"),
+  x = s("161778"),
   N = s("517763"),
   I = s("766274"),
   g = s("42203"),
@@ -29,9 +29,9 @@ var a = s("37983"),
   S = s("599110"),
   _ = s("49111"),
   A = s("782340"),
-  D = s("578840"),
-  M = s("405879"),
-  y = s("926622");
+  D = s("55041"),
+  M = s("685691"),
+  y = s("890957");
 class R extends n.PureComponent {
   render() {
     let {
@@ -101,7 +101,7 @@ class b extends n.PureComponent {
     let {
       channelId: e
     } = this.props;
-    u.default.get({
+    u.HTTP.get({
       url: _.Endpoints.INSTANT_INVITES(e),
       retries: 3,
       oldFormErrors: !0
@@ -117,7 +117,7 @@ class b extends n.PureComponent {
         invites: t
       })
     }), S.default.track(_.AnalyticEvents.OPEN_MODAL, {
-      ...(0, x.collectChannelAnalyticsMetadata)(g.default.getChannel(e)),
+      ...(0, T.collectChannelAnalyticsMetadata)(g.default.getChannel(e)),
       type: "Group DM Invites",
       source: "Group DM Menu"
     })
@@ -236,8 +236,8 @@ class b extends n.PureComponent {
     }
   }
 }
-var k = o.default.connectStores([v.default, T.default], () => ({
+var k = o.default.connectStores([v.default, x.default], () => ({
   hideDiscriminators: v.default.hidePersonalInformation,
   hideInviteCodes: v.default.hideInstantInvites,
-  theme: T.default.theme
+  theme: x.default.theme
 }))(b)

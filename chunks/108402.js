@@ -2,7 +2,7 @@
 let n;
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return R
   }
 });
 var l = s("37983"),
@@ -17,7 +17,7 @@ var l = s("37983"),
   h = s("843455"),
   N = s("53452"),
   m = s("792788"),
-  g = s("641282");
+  g = s("161934");
 let k = "Footer Navigation",
   f = {
     BLURPLE: "Blurple",
@@ -166,7 +166,7 @@ let k = "Footer Navigation",
 class x extends a.PureComponent {
   componentDidMount() {
     this.setState({
-      token: c.default.getToken(),
+      token: c.getToken(),
       isAppCompatible: N.IS_APP_COMPATIBLE_BROWSER
     })
   }
@@ -332,4 +332,4 @@ x.Variants = f, x.defaultProps = {
   variant: f.PRIMARY,
   showWave: !0
 };
-var I = x
+var R = x

@@ -1,29 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildEligibleForGuildProducts: function() {
-    return s
+    return r
   },
   isGuildEligibleForGuildProducts: function() {
-    return r
+    return a
   }
 });
-var i = n("60705");
+var i = n("60705"),
+  s = n("49111");
 
-function s(e, t) {
+function r(e, t) {
   let {
     enabled: n
   } = i.GuildProductsExperiment.useExperiment({
-    guildId: null != e ? e : "",
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: t
   });
   return n
 }
 
-function r(e, t) {
+function a(e, t) {
   let {
     enabled: n
   } = i.GuildProductsExperiment.getCurrentConfig({
-    guildId: null != e ? e : "",
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: t
   });
   return n

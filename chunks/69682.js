@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FriendRow: function() {
-    return E
+    return g
   },
   default: function() {
-    return C
+    return S
   }
 });
 var a = n("37983"),
@@ -12,24 +12,25 @@ var a = n("37983"),
   s = n("446674"),
   i = n("77078"),
   r = n("272030"),
-  o = n("327037"),
-  u = n("145079"),
+  u = n("327037"),
+  o = n("145079"),
   d = n("824563"),
-  c = n("713135"),
-  f = n("401642"),
-  h = n("49111"),
+  c = n("756507"),
+  f = n("713135"),
+  h = n("401642"),
+  m = n("49111"),
   p = n("782340"),
-  m = n("568719");
+  E = n("155502");
 
-function E(e) {
+function g(e) {
   let {
     user: t,
     status: n,
     onSelect: l,
     onContextMenu: r
-  } = e, o = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
+  } = e, u = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
   return (0, a.jsxs)(i.Clickable, {
-    className: m.listRow,
+    className: E.listRow,
     onClick: () => l(t.id),
     onContextMenu: e => r(e, t),
     children: [(0, a.jsx)(i.Avatar, {
@@ -37,33 +38,45 @@ function E(e) {
       "aria-label": t.username,
       size: i.AvatarSizes.SIZE_40,
       status: n,
-      isMobile: o,
-      className: m.listAvatar
-    }), (0, a.jsx)(u.default, {
+      isMobile: u,
+      className: E.listAvatar
+    }), (0, a.jsx)(o.default, {
       user: t,
-      className: m.listName,
-      discriminatorClass: m.listDiscriminator
+      className: E.listName,
+      discriminatorClass: E.listDiscriminator
     })]
   })
 }
 
-function C(e) {
+function S(e) {
   let t, {
-      user: u,
+      user: o,
       onClose: d
     } = e,
-    C = (0, s.useStateFromStores)([c.default], () => c.default.getMutualFriends(u.id));
+    S = (0, s.useStateFromStores)([f.default], () => f.default.getMutualFriends(o.id)),
+    {
+      analyticsLocations: C,
+      guildId: _,
+      channelId: I,
+      messageId: T,
+      roleId: v
+    } = (0, c.useUserProfileAnalyticsContext)();
 
-  function g(e) {
-    d(), (0, f.openUserProfileModal)({
+  function x(e) {
+    d(), (0, h.openUserProfileModal)({
       userId: e,
+      guildId: null != _ ? _ : void 0,
+      channelId: null != I ? I : void 0,
+      messageId: null != T ? T : void 0,
+      roleId: null != v ? v : void 0,
+      sourceAnalyticsLocations: C,
       analyticsLocation: {
-        section: h.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
+        section: m.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
       }
     })
   }
 
-  function S(e, t) {
+  function N(e, t) {
     (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
@@ -75,25 +88,25 @@ function C(e) {
     })
   }
   return l.useEffect(() => {
-    null == C && (0, o.fetchMutualFriends)(u.id)
-  }, [C, u.id]), t = null == C ? (0, a.jsx)("div", {
-    className: m.empty,
+    null == S && (0, u.fetchMutualFriends)(o.id)
+  }, [S, o.id]), t = null == S ? (0, a.jsx)("div", {
+    className: E.empty,
     children: (0, a.jsx)(i.Spinner, {})
-  }) : 0 === C.length ? (0, a.jsxs)("div", {
-    className: m.empty,
+  }) : 0 === S.length ? (0, a.jsxs)("div", {
+    className: E.empty,
     children: [(0, a.jsx)("div", {
-      className: m.emptyIconFriends
+      className: E.emptyIconFriends
     }), (0, a.jsx)("div", {
-      className: m.emptyText,
+      className: E.emptyText,
       children: p.default.Messages.NO_MUTUAL_FRIENDS
     })]
-  }) : C.map(e => (0, a.jsx)(E, {
+  }) : S.map(e => (0, a.jsx)(g, {
     user: e.user,
     status: e.status,
-    onSelect: g,
-    onContextMenu: S
+    onSelect: x,
+    onContextMenu: N
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
-    className: m.listScroller,
+    className: E.listScroller,
     fade: !0,
     children: t
   })

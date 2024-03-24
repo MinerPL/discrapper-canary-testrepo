@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 });
 var a = n("65597"),
   s = n("127205"),
-  i = n("697218"),
-  l = n("158998"),
+  l = n("697218"),
+  i = n("158998"),
   r = n("332164");
 let o = () => {
   let e = (0, s.useIsSafetyConsumerEducationReportingEnabled)(),
-    t = (0, a.default)([i.default], () => i.default.getCurrentUser()),
+    t = (0, a.useStateFromStores)([l.default], () => l.default.getCurrentUser()),
     n = (0, r.useUserIsInLargeGuilds)();
-  return e && !(0, l.isNewUser)(t) && n
+  return e && !(0, i.isNewUser)(t) && n
 }

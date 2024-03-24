@@ -1,50 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   FEATURE_EXPIRES_SECONDS: function() {
-    return _
+    return I
   },
   isGuildFeedFeaturedItem: function() {
-    return m
-  },
-  createGuildFeedItemFromServer: function() {
     return F
   },
-  isChannelAvailableInGuildFeed: function() {
+  createGuildFeedItemFromServer: function() {
     return S
   },
-  isMessageAvailableInGuildFeed: function() {
+  isChannelAvailableInGuildFeed: function() {
     return T
   },
-  createFeatureItemsTimeLabel: function() {
+  isMessageAvailableInGuildFeed: function() {
     return g
   },
-  getFeatureItemsTimes: function() {
+  createFeatureItemsTimeLabel: function() {
     return G
   },
-  getSidebarMessageId: function() {
+  getFeatureItemsTimes: function() {
     return A
   },
-  getChannelIdForItem: function() {
+  getSidebarMessageId: function() {
     return D
+  },
+  getChannelIdForItem: function() {
+    return M
   }
 });
 var d = n("917351"),
   i = n.n(d),
-  r = n("611221"),
-  l = n("637612"),
+  l = n("611221"),
+  r = n("637612"),
   u = n("692038"),
   s = n("233069"),
   a = n("449008"),
-  E = n("2804"),
-  o = n("724210"),
-  c = n("782340");
-let _ = {
+  E = n("299039"),
+  o = n("2804"),
+  c = n("724210"),
+  _ = n("782340");
+let I = {
   ONE_DAY: 86400,
   THREE_DAYS: 259200,
   SEVEN_DAYS: 604800
 };
 
-function I(e) {
+function f(e) {
   return {
     entityId: e.entity_id,
     entityType: e.entity_type,
@@ -56,63 +57,63 @@ function I(e) {
   }
 }
 
-function f(e) {
+function m(e) {
   return null != e.featured_item || !1
 }
 
-function m(e) {
+function F(e) {
   return null != e.featuredItem || !1
 }
 
-function F(e, t) {
-  var n, d, l, a, o, c, _;
+function S(e, t) {
+  var n, d, r, a, E, c, _;
   switch (e.type) {
-    case r.GuildFeedItemTypes.FORUM_POST: {
+    case l.GuildFeedItemTypes.FORUM_POST: {
       let i = (0, u.createMessageRecord)(e.message),
-        l = (0, s.createChannelRecordFromServer)(e.thread),
+        r = (0, s.createChannelRecordFromServer)(e.thread),
         a = {
-          type: r.GuildFeedItemTypes.FORUM_POST,
-          id: (0, E.default)(e),
+          type: l.GuildFeedItemTypes.FORUM_POST,
+          id: (0, o.default)(e),
           sortIndex: t,
           message: i,
-          thread: l,
+          thread: r,
           featured: null !== (n = e.featured) && void 0 !== n && n,
           highlighted: null !== (d = e.highlighted) && void 0 !== d && d,
           seen: e.seen,
           unreadMention: !1
         };
-      return f(e) && (a = {
+      return m(e) && (a = {
         ...a,
-        featuredItem: I(e.featured_item)
+        featuredItem: f(e.featured_item)
       }), a
     }
-    case r.GuildFeedItemTypes.MESSAGE:
-      let m = (0, u.createMessageRecord)(e.message),
+    case l.GuildFeedItemTypes.MESSAGE:
+      let I = (0, u.createMessageRecord)(e.message),
         F = i.map(e.reference_messages, e => (0, u.createMessageRecord)(e)),
         S = {
-          type: r.GuildFeedItemTypes.MESSAGE,
-          id: (0, E.default)(e),
+          type: l.GuildFeedItemTypes.MESSAGE,
+          id: (0, o.default)(e),
           sortIndex: t,
-          message: m,
+          message: I,
           referenceMessages: F,
-          featured: null !== (l = e.featured) && void 0 !== l && l,
+          featured: null !== (r = e.featured) && void 0 !== r && r,
           highlighted: null !== (a = e.highlighted) && void 0 !== a && a,
-          unreadMention: null !== (o = e.unread_mention) && void 0 !== o && o,
+          unreadMention: null !== (E = e.unread_mention) && void 0 !== E && E,
           seen: e.seen
         };
-      return f(e) && (S = {
+      return m(e) && (S = {
         ...S,
-        featuredItem: I(e.featured_item)
+        featuredItem: f(e.featured_item)
       }), S;
-    case r.GuildFeedItemTypes.MESSAGE_BUNDLE:
+    case l.GuildFeedItemTypes.MESSAGE_BUNDLE:
       let T = e.messages.map(e => ({
         message: (0, u.createMessageRecord)(e.message),
         referenceMessages: e.reference_messages.map(e => (0, u.createMessageRecord)(e))
       }));
       return {
-        type: r.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: T, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
+        type: l.GuildFeedItemTypes.MESSAGE_BUNDLE, id: e.id, sortIndex: t, messages: T, featured: !1, highlighted: !1, unreadMention: null !== (c = e.unread_mention) && void 0 !== c && c, seen: e.seen
       };
-    case r.GuildFeedItemTypes.CONVERSATION:
+    case l.GuildFeedItemTypes.CONVERSATION:
       let g = function e(t) {
         let n = t.messages.map(e => (0, u.createMessageRecord)(e.message));
         return {
@@ -123,43 +124,43 @@ function F(e, t) {
         }
       }(e.root);
       return {
-        type: r.GuildFeedItemTypes.CONVERSATION, id: e.id, sortIndex: t, root: g, featured: !1, highlighted: !1, unreadMention: null !== (_ = e.unread_mention) && void 0 !== _ && _, seen: e.seen
+        type: l.GuildFeedItemTypes.CONVERSATION, id: e.id, sortIndex: t, root: g, featured: !1, highlighted: !1, unreadMention: null !== (_ = e.unread_mention) && void 0 !== _ && _, seen: e.seen
       };
     default:
       return null
   }
 }
 
-function S(e) {
-  return !(e.hasFlag(o.ChannelFlags.GUILD_FEED_REMOVED) || e.isNSFW()) && !0
+function T(e) {
+  return !(e.hasFlag(c.ChannelFlags.GUILD_FEED_REMOVED) || e.isNSFW()) && !0
 }
 
-function T(e) {
-  return !!l.MessageTypesSets.AVAILABLE_IN_GUILD_FEED.has(e.type) || !1
+function g(e) {
+  return !!r.MessageTypesSets.AVAILABLE_IN_GUILD_FEED.has(e.type) || !1
 }
-let g = e => c.default.Messages.GUILD_FEED_FEATURE_ITEM_MENU_ITEM_TEXT.format({
+let G = e => _.default.Messages.GUILD_FEED_FEATURE_ITEM_MENU_ITEM_TEXT.format({
     timePeriod: e
   }),
-  G = () => [{
-    value: _.ONE_DAY,
-    timePeriod: c.default.Messages.GUILD_FEED_FEATURE_ITEM_24_HOURS
+  A = () => [{
+    value: I.ONE_DAY,
+    timePeriod: _.default.Messages.GUILD_FEED_FEATURE_ITEM_24_HOURS
   }, {
-    value: _.THREE_DAYS,
-    timePeriod: c.default.Messages.GUILD_FEED_FEATURE_ITEM_THREE_DAYS
+    value: I.THREE_DAYS,
+    timePeriod: _.default.Messages.GUILD_FEED_FEATURE_ITEM_THREE_DAYS
   }, {
-    value: _.SEVEN_DAYS,
-    timePeriod: c.default.Messages.GUILD_FEED_FEATURE_ITEM_SEVEN_DAYS
+    value: I.SEVEN_DAYS,
+    timePeriod: _.default.Messages.GUILD_FEED_FEATURE_ITEM_SEVEN_DAYS
   }],
-  A = (e, t) => null != t && t.isThread() ? t.id : null != e && "details" in e && null != e.details && "initialMessageId" in e.details ? e.details.initialMessageId : null;
+  D = (e, t) => null != t && t.isThread() ? E.default.castChannelIdAsMessageId(t.id) : null != e && "details" in e && null != e.details && "initialMessageId" in e.details ? e.details.initialMessageId : null;
 
-function D(e) {
+function M(e) {
   switch (e.type) {
-    case r.GuildFeedItemTypes.MESSAGE:
-    case r.GuildFeedItemTypes.FORUM_POST:
+    case l.GuildFeedItemTypes.MESSAGE:
+    case l.GuildFeedItemTypes.FORUM_POST:
       return e.message.channel_id;
-    case r.GuildFeedItemTypes.MESSAGE_BUNDLE:
+    case l.GuildFeedItemTypes.MESSAGE_BUNDLE:
       return e.messages[0].message.channel_id;
-    case r.GuildFeedItemTypes.CONVERSATION:
+    case l.GuildFeedItemTypes.CONVERSATION:
       return e.root.messages[0].channel_id;
     default:
       (0, a.assertNever)(e)

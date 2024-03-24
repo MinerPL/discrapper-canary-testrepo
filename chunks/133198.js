@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   semanticColorTokens: function() {
     return i
   }
@@ -532,6 +532,16 @@ let a = {
       dark: "green.360",
       light: "green.360"
     },
+    "halo-positive": {
+      dark: {
+        color: "green.360",
+        opacity: .24
+      },
+      light: {
+        color: "green.360",
+        opacity: .24
+      }
+    },
     "text-brand": {
       dark: "brand.360",
       light: "brand.500"
@@ -591,7 +601,7 @@ let a = {
       light: "white.500",
       meta: n
     },
-    brand: {
+    "bg-brand": {
       dark: "brand.500",
       light: "brand.500",
       meta: n
@@ -632,6 +642,9 @@ let a = {
         color: "black.500"
       }
     },
+    "coachmark-bg": {
+      name: "bg-surface-overlay"
+    },
     "toast-bg": {
       name: "bg-surface-overlay"
     },
@@ -652,5 +665,8 @@ let a = {
     },
     "action-sheet-gradient-bg": {
       name: "bg-base-secondary"
+    },
+    "you-bar-bg": {
+      name: "bg-surface-overlay"
     }
   }

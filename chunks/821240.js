@@ -1,25 +1,38 @@
 "use strict";
-E.r(_), E.d(_, {
-  shouldShowInappropriateConversationTakeoverForChannel: function() {
+s.r(t), s.d(t, {
+  getSafetyAlertsSettingOrDefault: function() {
+    return r
+  },
+  getInappropriateConversationTakeoverForChannel: function() {
     return o
   },
-  shouldShowInappropriateConversationTakeoverForChannelRecord: function() {
-    return n
+  shouldShowTakeoverForWarnings: function() {
+    return i
   }
 });
-var t = E("764828");
+var n = s("374363"),
+  a = s("764828"),
+  l = s("217736");
 
-function o(e) {
-  let _ = function(e) {
-      let _ = t.default.getChannelSafetyWarnings(e);
-      return _.filter(e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1 || e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_2)
-    }(e),
-    E = _.filter(e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
-  return E.length > 0 && E.every(e => null == e.dismiss_timestamp)
+function r() {
+  var e, t, s;
+  let a = null === (s = null === (t = n.default.settings.privacy) || void 0 === t ? void 0 : null === (e = t.inappropriateConversationWarnings) || void 0 === e ? void 0 : e.value) || void 0 === s || s,
+    r = (0, l.getUserIsTeen)("safety_warnings_setting");
+  return r && a
 }
 
-function n(e) {
-  if (null == e.safetyWarnings) return !1;
-  let _ = e.safetyWarnings.filter(e => e.type === t.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
-  return _.length > 0 && _.every(e => null == e.dismiss_timestamp)
+function o(e) {
+  let t = function(e) {
+      let t = a.default.getChannelSafetyWarnings(e);
+      return t.filter(e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1)
+    }(e),
+    s = t.filter(e => null != e.dismiss_timestamp);
+  if (s.length > 0) return null;
+  let n = t.filter(e => null == e.dismiss_timestamp);
+  return 1 === n.length ? n[0] : null
+}
+
+function i(e) {
+  let t = e.filter(e => e.type === a.SafetyWarningTypes.INAPPROPRIATE_CONVERSATION_TIER_1);
+  return t.length > 0 && t.every(e => null == e.dismiss_timestamp)
 }

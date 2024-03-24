@@ -11,9 +11,9 @@ var r = s("414456"),
   l = s("77078"),
   o = s("326880"),
   n = s("51947"),
-  d = s("890128"),
-  u = s("782340"),
-  c = s("212993"),
+  u = s("890128"),
+  d = s("782340"),
+  c = s("82760"),
   E = s("506197");
 
 function _(e) {
@@ -45,13 +45,13 @@ var T = function(e) {
         className: c.heading,
         color: "always-white",
         variant: "heading-xxl/bold",
-        children: u.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_HEADING
+        children: d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_HEADING
       }), (0, i.jsxs)("ul", {
         className: c.cards,
         children: [(0, i.jsx)(_, {
           className: t,
           icon: o.default,
-          children: u.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_MEMBER_LIST_ICON
+          children: d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_MEMBER_LIST_ICON
         }), (0, i.jsx)(_, {
           className: t,
           icon: e => (0, i.jsx)("img", {
@@ -59,15 +59,15 @@ var T = function(e) {
             src: E,
             alt: ""
           }),
-          children: u.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_PROFILE_BADGE
+          children: d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_PROFILE_BADGE
         }), (0, i.jsx)(_, {
           className: t,
-          icon: d.default,
-          children: u.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_BOOSTER_ROLE
+          icon: u.default,
+          children: d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_BOOSTER_ROLE
         }), (0, i.jsx)(_, {
           className: t,
           icon: n.default,
-          children: u.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_COMMUNITY_SUPPORT
+          children: d.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_BOOSTER_RECOGNITION_COMMUNITY_SUPPORT
         })]
       })]
     }), (0, i.jsx)("div", {

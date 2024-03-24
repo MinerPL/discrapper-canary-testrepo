@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   useGuildOnboardingSettingsAvailable: function() {
-    return m
+    return g
   },
   isGuildOnboardingSettingsAvailable: function() {
-    return E
+    return m
   },
   isBlockedByOnboarding: function() {
     return p
   },
   getChannelCoverageForOnboarding: function() {
-    return S
+    return T
   },
   useChannelCoverageForOnboarding: function() {
-    return T
+    return v
   },
   isChattableChannelId: function() {
     return I
   },
   isChattableChannel: function() {
-    return C
+    return A
   },
   useIsChattableChannel: function() {
-    return A
+    return C
   },
   getMinimumSetOfDefaultChannelIds: function() {
     return y
@@ -37,7 +37,7 @@ n.r(t), n.d(t, {
     return P
   },
   getSelectedChannelIds: function() {
-    return b
+    return L
   }
 }), n("702976"), n("222007"), n("808653"), n("424973"), n("834022");
 var i = n("446674"),
@@ -49,35 +49,35 @@ var i = n("446674"),
   u = n("568734"),
   d = n("449008"),
   c = n("991170"),
-  f = n("648747"),
-  _ = n("49111"),
-  h = n("657944");
-let g = new Date(16824888e5);
+  _ = n("648747"),
+  f = n("49111"),
+  E = n("657944");
+let h = new Date(16824888e5);
 
-function m(e) {
+function g(e) {
   let t = (0, i.useStateFromStores)([o.default], () => o.default.getGuild(e)),
-    n = !!(null == t ? void 0 : t.hasFeature(_.GuildFeatures.COMMUNITY)),
-    s = l.default.can(_.Permissions.MANAGE_GUILD, t),
-    r = l.default.can(_.Permissions.MANAGE_ROLES, t);
+    n = !!(null == t ? void 0 : t.hasFeature(f.GuildFeatures.COMMUNITY)),
+    s = l.default.can(f.Permissions.MANAGE_GUILD, t),
+    r = l.default.can(f.Permissions.MANAGE_ROLES, t);
   return n && s && r
 }
 
-function E(e) {
+function m(e) {
   let t = o.default.getGuild(e),
-    n = !!(null == t ? void 0 : t.hasFeature(_.GuildFeatures.COMMUNITY)),
-    i = l.default.can(_.Permissions.MANAGE_GUILD, t),
-    s = l.default.can(_.Permissions.MANAGE_ROLES, t);
+    n = !!(null == t ? void 0 : t.hasFeature(f.GuildFeatures.COMMUNITY)),
+    i = l.default.can(f.Permissions.MANAGE_GUILD, t),
+    s = l.default.can(f.Permissions.MANAGE_ROLES, t);
   return n && i && s
 }
 
 function p(e, t) {
   var n;
-  if (null == e || !e.hasFeature(_.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < g) return !1;
+  if (null == e || !e.hasFeature(f.GuildFeatures.GUILD_ONBOARDING) || null == t || null == t.joinedAt || new Date(t.joinedAt) < h) return !1;
   let i = null !== (n = t.flags) && void 0 !== n ? n : 0;
-  return u.hasFlag(i, h.GuildMemberFlags.STARTED_ONBOARDING) && !u.hasFlag(i, h.GuildMemberFlags.COMPLETED_ONBOARDING)
+  return u.hasFlag(i, E.GuildMemberFlags.STARTED_ONBOARDING) && !u.hasFlag(i, E.GuildMemberFlags.COMPLETED_ONBOARDING)
 }
 
-function v(e, t, n) {
+function S(e, t, n) {
   let i = new Set;
   e.forEach(e => {
     e.options.forEach(e => {
@@ -93,9 +93,9 @@ function v(e, t, n) {
   return [a, o]
 }
 
-function S(e, t, n) {
+function T(e, t, n) {
   let i = a.default.getChannels(e);
-  return v(t, n, i[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
+  return S(t, n, i[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {
       channel: t
     } = e;
@@ -103,9 +103,9 @@ function S(e, t, n) {
   }))
 }
 
-function T(e, t, n) {
+function v(e, t, n) {
   let s = (0, i.useStateFromStores)([a.default], () => a.default.getChannels(e));
-  return v(t, n, s[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
+  return S(t, n, s[0, a.GUILD_SELECTABLE_CHANNELS_KEY].map(e => {
     let {
       channel: t
     } = e;
@@ -115,16 +115,16 @@ function T(e, t, n) {
 
 function I(e) {
   let t = r.default.getChannel(e);
-  return C(t)
-}
-
-function C(e) {
-  return !!(null != e && (0, f.canChannelBeDefault)(e.guild_id, e.id)) && (e.isForumChannel() ? c.default.canEveryoneRole(_.Permissions.SEND_MESSAGES_IN_THREADS, e) : c.default.canEveryoneRole(_.Permissions.SEND_MESSAGES, e))
+  return A(t)
 }
 
 function A(e) {
+  return !!(null != e && (0, _.canChannelBeDefault)(e.guild_id, e.id)) && (e.isForumChannel() ? c.canEveryoneRole(f.Permissions.SEND_MESSAGES_IN_THREADS, e) : c.canEveryoneRole(f.Permissions.SEND_MESSAGES, e))
+}
+
+function C(e) {
   let t = (0, i.useStateFromStores)([r.default], () => r.default.getChannel(e));
-  return (0, d.isNotNullish)(t) && C(t)
+  return (0, d.isNotNullish)(t) && A(t)
 }
 
 function y(e, t, n) {
@@ -152,7 +152,7 @@ function N(e, t) {
       } = t;
       return n.id === e
     });
-    return C(null == n ? void 0 : n.channel)
+    return A(null == n ? void 0 : n.channel)
   });
   return n
 }
@@ -164,7 +164,7 @@ function R(e, t) {
     let {
       channel: n
     } = e;
-    return (0, f.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
+    return (0, _.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
   }).map(e => {
     let {
       channel: t
@@ -194,7 +194,7 @@ function D(e, t) {
         let {
           channel: n
         } = e;
-        return (0, f.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
+        return (0, _.canChannelBeDefault)(n.guild_id, n.id) && (t.includes(n.id) && !n.isCategory() || !n.isThread() && null != n.parent_id && t.includes(n.parent_id))
       }).map(e => {
         let {
           channel: t
@@ -217,6 +217,6 @@ function P(e) {
   return new Set(e.map(e => e.roleIds).flat().filter(d.isNotNullish))
 }
 
-function b(e) {
+function L(e) {
   return new Set(e.map(e => e.channelIds).flat().filter(d.isNotNullish))
 }

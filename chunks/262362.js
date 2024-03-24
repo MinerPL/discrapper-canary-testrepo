@@ -1,36 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var l = n("65597"),
-  i = n("305961"),
-  a = n("354023"),
-  s = n("659404"),
+  a = n("305961"),
+  s = n("354023"),
+  i = n("659404"),
   r = n("49111");
 
-function o(e) {
+function u(e) {
   let {
     guildId: t
-  } = e, n = s.CommunityEndlessInvitesExperiment.useExperiment({
-    guildId: null != t ? t : "",
+  } = e, n = i.CommunityEndlessInvitesExperiment.useExperiment({
+    guildId: null != t ? t : r.EMPTY_STRING_SNOWFLAKE_ID,
     location: "6798be_2"
-  }), o = (0, l.default)([i.default], () => i.default.getGuild(t));
+  }), u = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(t));
   return null != t && function(e) {
     var t;
     let {
       guild: n,
       experimentConfig: l
     } = e, {
-      defaultInvitesToNeverExpire: i
-    } = null != l ? l : s.CommunityEndlessInvitesExperiment.getCurrentConfig({
-      guildId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : "",
+      defaultInvitesToNeverExpire: a
+    } = null != l ? l : i.CommunityEndlessInvitesExperiment.getCurrentConfig({
+      guildId: null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : r.EMPTY_STRING_SNOWFLAKE_ID,
       location: "6798be_1"
     });
-    if ((null == n ? void 0 : n.hasFeature(r.GuildFeatures.HUB)) === !0 || (null == n ? void 0 : n.hasFeature(r.GuildFeatures.COMMUNITY)) === !0 && i) return a.default.INVITE_OPTIONS_FOREVER.value
+    if ((null == n ? void 0 : n.hasFeature(r.GuildFeatures.HUB)) === !0 || (null == n ? void 0 : n.hasFeature(r.GuildFeatures.COMMUNITY)) === !0 && a) return s.default.INVITE_OPTIONS_FOREVER.value
   }({
-    guild: o,
+    guild: u,
     experimentConfig: n
   })
 }

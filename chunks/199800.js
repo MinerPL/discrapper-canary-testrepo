@@ -13,11 +13,11 @@ var i = l("37983"),
   o = l("599994"),
   d = l("967473"),
   u = l("412707"),
-  p = l("646186"),
-  m = l("121631"),
+  m = l("646186"),
+  p = l("121631"),
   _ = l("417152"),
   f = l("49111"),
-  h = l("859546");
+  h = l("294399");
 
 function C(e) {
   let {
@@ -52,7 +52,7 @@ function C(e) {
   let N = (0, r.useUID)();
   return (0, i.jsx)("div", {
     ref: T,
-    children: (0, i.jsx)(m.default, {
+    children: (0, i.jsx)(p.default, {
       header: C,
       headerId: N,
       tileWidth: I,
@@ -89,6 +89,7 @@ function C(e) {
             },
             className: h.itemContainer,
             children: (0, i.jsx)(o.default, {
+              className: h.seoAnchor,
               href: f.Routes.APPLICATION_DIRECTORY_PROFILE(s.id),
               children: (0, i.jsx)(d.default, {
                 application: s,
@@ -101,7 +102,7 @@ function C(e) {
                     application_id: s.id,
                     guild_id: R,
                     shown_mutual_guilds_count: t.length
-                  }), (0, p.goToApplication)({
+                  }), (0, m.goToApplication)({
                     applicationId: s.id
                   })
                 },

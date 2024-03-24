@@ -18,29 +18,29 @@ var i = s("65597"),
   _ = s("763838"),
   f = s("500307"),
   h = s("49111"),
-  L = s("782340"),
-  S = s("391536");
+  S = s("782340"),
+  L = s("255008");
 
 function x() {
   let e = o.GifAutoPlay.useSetting(),
     t = (0, C.useIsWindowFocused)(),
-    s = (0, i.default)([a.default], () => a.default.useReducedMotion),
+    s = (0, i.useStateFromStores)([a.default], () => a.default.useReducedMotion),
     r = t && e && !s ? (0, n.getAssetCDNUrl)("server_products/storefront/question-mark.gif") : (0, n.getAssetCDNUrl)("server_products/storefront/question-mark.png");
   return (0, l.jsxs)("div", {
-    className: S.previewListingCard,
+    className: L.previewListingCard,
     children: [(0, l.jsx)(d.default, {
       role: void 0,
       ctaComponent: null,
       imageUrl: (0, n.getAssetCDNUrl)("server_products/storefront/preview-thumbnail.png"),
-      name: L.default.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
-      description: L.default.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
+      name: S.default.Messages.GUILD_STORE_PREVIEW_CARD_TITLE,
+      description: S.default.Messages.GUILD_STORE_PREVIEW_CARD_DESCRIPTION,
       formattedPrice: (0, c.formatPrice)(0, h.CurrencyCodes.USD, {
         localeMatcher: "best fit",
         style: "currency",
         maximumSignificantDigits: 1
       }),
       shouldShowFullDescriptionButton: !1,
-      productType: L.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
+      productType: S.default.Messages.GUILD_PRODUCT_CARD_TYPE_DOWNLOADABLE_AND_ROLE,
       onTapCard: () => null,
       hideRoleTag: !0,
       lineClamp: 3,
@@ -48,7 +48,7 @@ function x() {
       cardWidth: 332,
       descriptionTextVariant: "text-xs/normal"
     }), (0, l.jsx)("img", {
-      className: S.questionMark,
+      className: L.questionMark,
       alt: "",
       src: r
     })]
@@ -57,13 +57,13 @@ function x() {
 
 function I() {
   return (0, l.jsxs)("div", {
-    className: S.learnMoreTipContainer,
+    className: L.learnMoreTipContainer,
     children: [(0, l.jsx)(u.default, {
-      className: S.infoCircle
+      className: L.infoCircle
     }), (0, l.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
-      children: L.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
+      children: S.default.Messages.GUILD_STORE_PREVIEW_LEARN_MORE.format({
         learnMoreLink: f.SERVER_SHOP_URL
       })
     })]
@@ -75,9 +75,9 @@ function p(e) {
     guildId: t
   } = e;
   return (0, l.jsxs)("div", {
-    className: S.previewContentContainer,
+    className: L.previewContentContainer,
     children: [(0, l.jsxs)("div", {
-      className: S.previewContent,
+      className: L.previewContent,
       children: [(0, l.jsx)(x, {}), (0, l.jsx)(_.default, {
         guildId: t,
         showCTA: !0

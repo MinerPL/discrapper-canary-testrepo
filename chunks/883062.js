@@ -1,34 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   KvMessage: function() {
-    return s
+    return a
   }
 }), n("222007"), n("424973");
-var a = n("26989"),
-  l = n("697218");
-class s {
-  static fromMessage(e, t, n, a) {
-    let [l, i] = s.deriveMemberUsers(e, n);
+var i = n("26989"),
+  s = n("697218"),
+  r = n("49111");
+class a {
+  static fromMessage(e, t, n, i) {
+    let [s, r] = a.deriveMemberUsers(e, n);
     return {
       id: n.id,
       channelId: t,
       message: n,
-      members: l,
-      users: i,
-      connectionId: a
+      members: s,
+      users: r,
+      connectionId: i
     }
   }
   static deriveMemberUsers(e, t) {
-    var n, s, i, r;
-    let d = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (s = t.interaction) || void 0 === s ? void 0 : s.user.id, ...null !== (r = null === (i = t.mentions) || void 0 === i ? void 0 : i.map(e => e.id)) && void 0 !== r ? r : []]),
-      u = [],
-      o = [];
-    for (let t of d) {
+    var n, a, o, l;
+    let u = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (a = t.interaction) || void 0 === a ? void 0 : a.user.id, ...null !== (l = null === (o = t.mentions) || void 0 === o ? void 0 : o.map(e => e.id)) && void 0 !== l ? l : []]),
+      d = [],
+      c = [];
+    for (let t of u) {
       if (null == t) continue;
-      let n = l.default.getUser(t),
-        s = a.default.getTrueMember(null != e ? e : "", t);
-      null != n && o.push(n), null != s && u.push(s)
+      let n = s.default.getUser(t),
+        a = i.default.getTrueMember(null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID, t);
+      null != n && c.push(n), null != a && d.push(a)
     }
-    return [u, o]
+    return [d, c]
   }
 }

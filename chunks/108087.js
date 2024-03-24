@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var a = n("316718"),
   s = n("465527"),
-  i = n("55620"),
-  l = n("84460"),
-  r = n("524503"),
+  l = n("55620"),
+  i = n("84460"),
+  r = n("927078"),
   o = n("167726"),
   u = n("861309"),
   d = n("383928"),
@@ -26,27 +26,27 @@ async function E(e, t) {
     n.forEach(e => {
       e.subscription_plans.forEach(n => {
         var s;
-        let i = null == n ? void 0 : n.price,
-          l = t.find(e => e.id === n.sku_id);
-        if (null == l) return;
+        let l = null == n ? void 0 : n.price,
+          i = t.find(e => e.id === n.sku_id);
+        if (null == i) return;
         let r = {
           id: n.sku_id,
-          name: l.name,
-          type: l.type,
+          name: i.name,
+          type: i.type,
           price: {
-            amount: i,
+            amount: l,
             currency: f.CurrencyCodes.USD
           },
           application_id: e.application_id,
           flags: e.sku_flags,
-          release_date: null !== (s = l.release_date) && void 0 !== s ? s : null
+          release_date: null !== (s = i.release_date) && void 0 !== s ? s : null
         };
         a.push(r)
       })
     }), a.filter(e => (null == e ? void 0 : e.price) != null).forEach(e => s.push(e))
   }), s
 }
-async function _(e) {
+async function h(e) {
   let {
     socket: t
   } = e;
@@ -55,18 +55,18 @@ async function _(e) {
   if (null == n) throw new u.default({
     errorCode: f.RPCErrors.INVALID_COMMAND
   }, "No application.");
-  if (o.default.inTestModeForApplication(n) || l.default.inDevModeForApplication(n)) {
-    let e = await s.fetchSKUsForApplication(n, !1),
+  if (o.default.inTestModeForApplication(n) || i.default.inDevModeForApplication(n)) {
+    let e = await s.fetchTestSKUsForApplication(n, !1),
       t = await E(n, e);
     return [...e.filter(e => null != e.price), ...t]
   }
-  let a = await i.fetchAllStoreListingsForApplication(n),
+  let a = await l.fetchAllStoreListingsForApplication(n),
     r = a.filter(e => e.sku.type !== f.SKUTypes.SUBSCRIPTION_GROUP).map(e => e.sku).filter(e => null != e.price),
     c = await E(n, a.map(e => e.sku));
   return [...r, ...c]
 }
 
-function h(e) {
+function _(e) {
   let {
     socket: t
   } = e;
@@ -80,22 +80,22 @@ function h(e) {
 var C = {
   [f.RPCCommands.GET_SKUS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
-    handler: _
+    handler: h
   },
   [f.RPCCommands.GET_ENTITLEMENTS]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
-    handler: h
+    handler: _
   },
   [f.RPCCommands.GET_SKUS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
-      skus: await _(e)
+      skus: await h(e)
     })
   },
   [f.RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE, c.RPC_LOCAL_SCOPE],
     handler: async e => ({
-      entitlements: await h(e)
+      entitlements: await _(e)
     })
   }
 }

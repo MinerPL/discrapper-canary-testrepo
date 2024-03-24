@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return M
+    return N
   }
 }), n("222007");
 var a = n("37983"),
@@ -9,72 +9,36 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("65597"),
-  u = n("891722"),
-  d = n("77078"),
-  c = n("419135"),
-  f = n("533222"),
-  h = n("692038"),
-  p = n("95045"),
-  m = n("535260"),
-  E = n("982108"),
-  C = n("26989"),
+  u = n("65597"),
+  o = n("77078"),
+  d = n("419135"),
+  c = n("574933"),
+  f = n("692038"),
+  h = n("95045"),
+  m = n("549206"),
+  p = n("982108"),
+  E = n("26989"),
   g = n("697218"),
   S = n("994906"),
-  _ = n("180968"),
+  C = n("180968"),
+  _ = n("473073"),
   I = n("763225"),
   T = n("789150"),
-  v = n("782340"),
-  x = n("63893"),
-  N = n("953035");
+  v = n("865331"),
+  x = n("714605");
 
-function A(e) {
-  let {
-    userId: t,
-    guildId: n,
-    onNavigate: l
-  } = e, s = (0, I.useProfileThemedPanelBackground)(t, n, .8, d.tokens.colors.BACKGROUND_SECONDARY);
-  return (0, a.jsxs)("div", {
-    className: i(x.header),
-    style: {
-      backgroundColor: s
-    },
-    children: [(0, a.jsx)("div", {
-      className: i(x.headerTitle),
-      children: (0, a.jsxs)(d.Clickable, {
-        className: i(N.backButton),
-        onClick: () => null == l ? void 0 : l(T.ModViewPanel.INFO),
-        children: [(0, a.jsx)(u.ArrowSmallLeftIcon, {
-          className: i(N.backButtonIcon),
-          width: 20,
-          height: 20
-        }), (0, a.jsx)(d.Heading, {
-          variant: "heading-md/semibold",
-          children: v.default.Messages.BACK
-        })]
-      })
-    }), (0, a.jsx)("div", {
-      className: i(N.options),
-      children: (0, a.jsx)(d.KeyCombo, {
-        shortcut: "esc",
-        keyClassName: N.keyComboInner,
-        className: N.keyComboContainer
-      })
-    })]
-  })
-}
-
-function M(e) {
+function N(e) {
   var t, n;
   let {
     userId: s,
-    guildId: u,
-    location: v,
+    guildId: N,
+    location: A,
     className: M,
     onNavigate: R
-  } = e, j = l.useRef(null), L = (0, o.default)([E.default], () => E.default.getGuildSidebarState(u), [u]), O = l.useRef(0), [y, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), {
-    messageHistoryState: b
-  } = (0, _.useServerActivityForUser)(s, u, y), D = (0, o.default)([g.default], () => g.default.getUser(s), [s]), U = (0, o.default)([C.default], () => C.default.getMember(u, s), [u, s]), w = (0, I.useProfileThemedPanelBackground)(s, u);
+  } = e, j = l.useRef(null), L = (0, u.useStateFromStores)([p.default], () => p.default.getGuildSidebarState(N), [N]), y = l.useRef(0), [O, P] = l.useState(null !== (t = null == L ? void 0 : L.details.additionalSearchQuery) && void 0 !== t ? t : {}), D = (0, C.useServerMessageHistoryForUser)(s, N, {
+    addtionalQuery: O,
+    shouldDispatch: !0
+  }), b = (0, u.useStateFromStores)([g.default], () => g.default.getUser(s), [s]), U = (0, u.useStateFromStores)([E.default], () => E.default.getMember(N, s), [N, s]), w = (0, I.useProfileThemedPanelBackground)(s, N);
   l.useLayoutEffect(() => {
     let e = null == L ? void 0 : L.details.scrollOffset;
     if (null != e) {
@@ -88,88 +52,88 @@ function M(e) {
   let F = l.useCallback(e => {
       if (null == L) return;
       let t = e.target.scrollTop;
-      O.current = t, (0, S.openGuildMemberModViewSidebar)(u, s, L.baseChannelId, {
+      y.current = t, (0, S.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
         modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
-        additionalSearchQuery: y,
-        scrollOffset: O.current
+        additionalSearchQuery: O,
+        scrollOffset: y.current
       })
-    }, [u, s, L, y]),
-    k = (0, r.throttle)(F, 300),
-    V = l.useCallback(e => {
+    }, [N, s, L, O]),
+    V = (0, r.throttle)(F, 300),
+    k = l.useCallback(e => {
       if (null == L) return;
       let t = {
-        ...y,
+        ...O,
         offset: 25 * e
       };
-      P(t), (0, S.openGuildMemberModViewSidebar)(u, s, L.baseChannelId, {
+      P(t), (0, S.openGuildMemberModViewSidebar)(N, s, L.baseChannelId, {
         modViewPanel: T.ModViewPanel.MESSAGE_HISTORY,
         additionalSearchQuery: t,
-        scrollOffset: O.current
+        scrollOffset: y.current
       })
-    }, [u, s, L, y]),
-    B = null !== (n = null == y ? void 0 : y.offset) && void 0 !== n ? n : 0,
-    H = (0, o.default)([f.default], () => {
-      if (null == b.result) return [];
-      let e = b.result.messages,
-        t = (0, c.createASTHighlighter)("");
+    }, [N, s, L, O]),
+    H = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
+    B = (0, u.useStateFromStores)([c.default], () => {
+      if (null == D.result) return [];
+      let e = D.result.messages,
+        t = (0, d.createASTHighlighter)("");
       return e.map(e => e.map(e => {
-        let n = f.default.getMessage(e.id, e.channel_id),
-          a = (0, h.createMessageRecord)(e);
+        let n = c.default.getMessage(e.id, e.channel_id),
+          a = (0, f.createMessageRecord)(e);
         return null != n && (a = a.merge({
           attachments: n.attachments,
           embeds: n.embeds
-        })), a.isSearchHit ? a.set("customRenderedContent", (0, p.default)(a, {
+        })), a.isSearchHit ? a.set("customRenderedContent", (0, h.default)(a, {
           postProcessor: t,
           allowHeading: !0,
           allowList: !0
         })) : a
       }))
-    }, [b.result]),
+    }, [D.result]),
     G = l.useMemo(() => {
       var e, t, n, a;
-      return null == b.result ? {
+      return null == D.result ? {
         documentsIndexed: 0,
         isSearching: !0,
         isIndexing: !1,
         isHistoricalIndexing: !1,
-        offset: B,
+        offset: H,
         totalResults: 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       } : {
-        documentsIndexed: null !== (e = b.result.documents_indexed) && void 0 !== e ? e : 0,
+        documentsIndexed: null !== (e = D.result.documents_indexed) && void 0 !== e ? e : 0,
         isSearching: !1,
-        isIndexing: null !== (t = b.result.doing_deep_historical_index) && void 0 !== t && t,
-        isHistoricalIndexing: null !== (n = b.result.doing_deep_historical_index) && void 0 !== n && n,
-        offset: B,
-        totalResults: null !== (a = b.result.total_results) && void 0 !== a ? a : 0,
+        isIndexing: null !== (t = D.result.doing_deep_historical_index) && void 0 !== t && t,
+        isHistoricalIndexing: null !== (n = D.result.doing_deep_historical_index) && void 0 !== n && n,
+        offset: H,
+        totalResults: null !== (a = D.result.total_results) && void 0 !== a ? a : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [b.result, B]);
-  return null == D || null == U || null == G ? null : (0, a.jsxs)("div", {
-    className: i(x.container, M),
+    }, [D.result, H]);
+  return null == b || null == U || null == G ? null : (0, a.jsxs)("div", {
+    className: i(v.container, M),
     style: {
       backgroundColor: w
     },
-    children: [(0, a.jsx)(A, {
-      guildId: u,
+    children: [(0, a.jsx)(_.default, {
+      guildId: N,
       userId: s,
       onNavigate: R
-    }), (0, a.jsx)(d.AdvancedScroller, {
-      className: i(N.innerContainer),
+    }), (0, a.jsx)(o.AdvancedScroller, {
+      className: i(x.innerContainer),
       ref: j,
-      onScroll: k,
+      onScroll: V,
       children: (0, a.jsx)(m.default, {
-        searchResults: H,
+        searchResults: B,
         search: G,
         searchId: s,
         renderEmbeds: !0,
         blockCount: 0,
         scrollTo: () => {},
-        onChangePage: V
+        onChangePage: k
       })
     })]
   })

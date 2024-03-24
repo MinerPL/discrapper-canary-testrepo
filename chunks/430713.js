@@ -1,35 +1,35 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 });
-var a = s("872717"),
-  n = s("913144"),
-  l = s("650893"),
-  i = s("49111");
+var i = n("872717"),
+  a = n("913144"),
+  o = n("650893"),
+  l = n("49111");
 
 function r(e, t) {
-  return n.default.dispatch({
+  return a.default.dispatch({
     type: "MFA_SMS_TOGGLE"
-  }), a.default.post({
+  }), i.HTTP.post({
     url: e,
     body: {
       password: t
     },
     oldFormErrors: !0
-  }).then(e => (n.default.dispatch({
+  }).then(e => (a.default.dispatch({
     type: "MFA_SMS_TOGGLE_COMPLETE"
   }), e), e => {
-    throw n.default.dispatch({
+    throw a.default.dispatch({
       type: "MFA_SMS_TOGGLE_COMPLETE"
     }), e
   })
 }
-var o = {
+var s = {
   async enableMFAStart(e) {
-    let t = await a.default.post({
-      url: i.Endpoints.MFA_TOTP_ENABLE,
+    let t = await i.HTTP.post({
+      url: l.Endpoints.MFA_TOTP_ENABLE,
       body: {
         password: e
       },
@@ -38,22 +38,22 @@ var o = {
     return t.body
   },
   async verifyEmailCode(e) {
-    let t = await a.default.post({
-      url: i.Endpoints.MFA_TOTP_ENABLE_VERIFY,
+    let t = await i.HTTP.post({
+      url: l.Endpoints.MFA_TOTP_ENABLE_VERIFY,
       body: {
         code: e
       }
     });
     return t.body
   },
-  resendEmailCode: e => a.default.post({
-    url: i.Endpoints.MFA_TOTP_ENABLE_RESEND,
+  resendEmailCode: e => i.HTTP.post({
+    url: l.Endpoints.MFA_TOTP_ENABLE_RESEND,
     body: {
       password: e
     }
   }),
   setEmailToken(e) {
-    n.default.dispatch({
+    a.default.dispatch({
       type: "MFA_ENABLE_EMAIL_TOKEN",
       token: e
     })
@@ -61,28 +61,28 @@ var o = {
   enable(e) {
     let {
       password: t,
-      code: s,
-      secret: l,
+      code: n,
+      secret: o,
       emailToken: r
     } = e;
-    return a.default.post({
-      url: i.Endpoints.MFA_TOTP_ENABLE,
+    return i.HTTP.post({
+      url: l.Endpoints.MFA_TOTP_ENABLE,
       body: {
-        code: s,
-        secret: l,
+        code: n,
+        secret: o,
         password: t,
         email_token: r
       },
       oldFormErrors: !0
-    }).then(e => n.default.dispatch({
+    }).then(e => a.default.dispatch({
       type: "MFA_ENABLE_SUCCESS",
       token: e.body.token,
       codes: e.body.backup_codes
     }))
   },
   disable() {
-    a.default.post({
-      url: i.Endpoints.MFA_TOTP_DISABLE,
+    i.HTTP.post({
+      url: l.Endpoints.MFA_TOTP_DISABLE,
       oldFormErrors: !0
     }).then(e => {
       let {
@@ -90,21 +90,21 @@ var o = {
           token: t
         }
       } = e;
-      return n.default.dispatch({
+      return a.default.dispatch({
         type: "MFA_DISABLE_SUCCESS",
         token: t
       })
     })
   },
-  enableSMS: e => r(i.Endpoints.MFA_SMS_ENABLE, e),
-  disableSMS: e => r(i.Endpoints.MFA_SMS_DISABLE, e),
-  sendMFABackupCodesVerificationKeyEmail: e => a.default.post({
-    url: i.Endpoints.MFA_SEND_VERIFICATION_KEY,
+  enableSMS: e => r(l.Endpoints.MFA_SMS_ENABLE, e),
+  disableSMS: e => r(l.Endpoints.MFA_SMS_DISABLE, e),
+  sendMFABackupCodesVerificationKeyEmail: e => i.HTTP.post({
+    url: l.Endpoints.MFA_SEND_VERIFICATION_KEY,
     body: {
       password: e
     },
     oldFormErrors: !0
-  }).then(e => n.default.dispatch({
+  }).then(e => a.default.dispatch({
     type: "MFA_SEND_VERIFICATION_KEY",
     nonces: {
       viewNonce: e.body.nonce,
@@ -115,18 +115,18 @@ var o = {
   }),
   confirmViewBackupCodes(e, t) {
     let {
-      viewNonce: s,
+      viewNonce: n,
       regenerateNonce: r
-    } = l.default.getNonces();
-    return a.default.post({
-      url: i.Endpoints.MFA_CODES_VERIFICATION,
+    } = o.default.getNonces();
+    return i.HTTP.post({
+      url: l.Endpoints.MFA_CODES_VERIFICATION,
       body: {
         key: e,
-        nonce: t ? r : s,
+        nonce: t ? r : n,
         regenerate: t
       },
       oldFormErrors: !0
-    }).then(t => n.default.dispatch({
+    }).then(t => a.default.dispatch({
       type: "MFA_VIEW_BACKUP_CODES",
       codes: t.body.backup_codes,
       key: e
@@ -135,7 +135,7 @@ var o = {
     })
   },
   clearBackupCodes() {
-    n.default.dispatch({
+    a.default.dispatch({
       type: "MFA_CLEAR_BACKUP_CODES"
     })
   }

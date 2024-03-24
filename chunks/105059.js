@@ -9,16 +9,7 @@ var i = n("605250"),
   r = n("802493");
 let a = new i.default("GuildVersions");
 var o = new class e {
-  getCommittedVersions() {
-    try {
-      var e, t;
-      let n = null === (t = r.default.guildVersions()) || void 0 === t ? void 0 : null === (e = t.getManySyncUnsafe()) || void 0 === e ? void 0 : e.map(e => [e.id, e.version]);
-      return new Map(null != n ? n : [])
-    } catch (e) {
-      return a.warn("couldn't load guild versions", e), new Map
-    }
-  }
-  async getCommittedVersionsAsync() {
+  async getCommittedVersions() {
     try {
       let e = r.default.guildVersions();
       if (null == e) return {};
@@ -77,10 +68,7 @@ var o = new class e {
   handleChannelDelete(e, t) {
     null != e.channel.guild_id && this.updateWith(e.channel.guild_id, [e.channel]), this.commit(t)
   }
-  handleClearGuildCache(e) {
-    this.reset(), r.default.guildVersionsTransaction(e).delete()
-  }
-  handleReset() {
+  resetInMemoryState() {
     this.reset()
   }
   reset() {
@@ -121,7 +109,6 @@ var o = new class e {
       CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
       CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),
       CHANNEL_UPDATES: (e, t) => this.handleChannelUpdates(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),

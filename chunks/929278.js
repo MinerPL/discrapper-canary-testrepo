@@ -1,60 +1,60 @@
 "use strict";
 n.r(t), n.d(t, {
   isDefaultChannelThresholdMetAfterDelete: function() {
-    return c
+    return f
   },
   checkDefaultChannelThresholdMetAfterChannelPermissionDeny: function() {
-    return _
+    return h
   }
 }), n("222007");
-var r = n("316693"),
-  i = n("404118"),
-  s = n("592407"),
-  l = n("305961"),
-  u = n("685829"),
-  a = n("863636"),
-  o = n("380710"),
+var i = n("316693"),
+  s = n("404118"),
+  r = n("592407"),
+  a = n("305961"),
+  o = n("685829"),
+  l = n("863636"),
+  u = n("380710"),
   d = n("653138"),
-  f = n("49111"),
-  E = n("782340");
-async function c(e, t) {
-  return null == e || await N(e, t, {
+  c = n("49111"),
+  _ = n("782340");
+async function f(e, t) {
+  return null == e || await E(e, t, {
     removingView: !0,
     removingChat: !0
   })
 }
-async function N(e, t, n) {
-  var r;
-  let i = l.default.getGuild(e);
-  if (null == i) return !0;
-  let s = null != i && (null === (r = i.features) || void 0 === r ? void 0 : r.has(f.GuildFeatures.GUILD_ONBOARDING));
-  if (!s) return !0;
-  s && a.default.shouldFetchPrompts(e) && await (0, u.fetchOnboardingPrompts)(e);
-  let E = a.default.getDefaultChannelIds(e),
-    [c, N] = (0, o.getChattableDefaultChannels)(e, E),
-    _ = E.includes(t);
-  if (!_) return !0;
-  let R = n.removingView && N.length - 1 < d.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING,
-    T = (n.removingChat || n.removingView) && c.length - 1 < d.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
-  return !R && !T
+async function E(e, t, n) {
+  var i;
+  let s = a.default.getGuild(e);
+  if (null == s) return !0;
+  let r = null != s && (null === (i = s.features) || void 0 === i ? void 0 : i.has(c.GuildFeatures.GUILD_ONBOARDING));
+  if (!r) return !0;
+  r && l.default.shouldFetchPrompts(e) && await (0, o.fetchOnboardingPrompts)(e);
+  let _ = l.default.getDefaultChannelIds(e),
+    [f, E] = (0, u.getChattableDefaultChannels)(e, _),
+    h = _.includes(t);
+  if (!h) return !0;
+  let g = n.removingView && E.length - 1 < d.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING,
+    m = (n.removingChat || n.removingView) && f.length - 1 < d.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+  return !g && !m
 }
-async function _(e, t, n) {
-  let l = e.getGuildId();
-  if (null == l) return !0;
-  null != n && (t = r.default.filter(t, r.default.invert(n)));
-  let u = e.permissionOverwrites[l],
-    a = null != u ? r.default.filter(u.deny, r.default.invert(u.allow)) : r.default.deserialize(0),
-    o = {
-      removingView: r.default.has(t, f.Permissions.VIEW_CHANNEL) && !r.default.has(a, f.Permissions.VIEW_CHANNEL),
+async function h(e, t, n) {
+  let a = e.getGuildId();
+  if (null == a) return !0;
+  null != n && (t = i.filter(t, i.invert(n)));
+  let o = e.permissionOverwrites[a],
+    l = null != o ? i.filter(o.deny, i.invert(o.allow)) : i.deserialize(0),
+    u = {
+      removingView: i.has(t, c.Permissions.VIEW_CHANNEL) && !i.has(l, c.Permissions.VIEW_CHANNEL),
       removingChat: !1
     };
-  if (e.isForumLikeChannel() ? o.removingChat = r.default.has(t, f.Permissions.SEND_MESSAGES_IN_THREADS) && !r.default.has(a, f.Permissions.SEND_MESSAGES_IN_THREADS) : o.removingChat = r.default.has(t, f.Permissions.SEND_MESSAGES) && !r.default.has(a, f.Permissions.SEND_MESSAGES), !o.removingChat && !o.removingView) return !0;
-  let d = await N(l, e.id, o);
-  return !!d || (i.default.show({
-    title: E.default.Messages.CANNOT_CHANGE_CHANNEL_PERMS,
-    body: E.default.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({
+  if (e.isForumLikeChannel() ? u.removingChat = i.has(t, c.Permissions.SEND_MESSAGES_IN_THREADS) && !i.has(l, c.Permissions.SEND_MESSAGES_IN_THREADS) : u.removingChat = i.has(t, c.Permissions.SEND_MESSAGES) && !i.has(l, c.Permissions.SEND_MESSAGES), !u.removingChat && !u.removingView) return !0;
+  let d = await E(a, e.id, u);
+  return !!d || (s.default.show({
+    title: _.default.Messages.CANNOT_CHANGE_CHANNEL_PERMS,
+    body: _.default.Messages.ONBOARDING_CHANNEL_THRESHOLD_WARNING.format({
       onClick: () => {
-        i.default.close(), s.default.open(l, f.GuildSettingsSections.ONBOARDING)
+        s.default.close(), r.default.open(a, c.GuildSettingsSections.ONBOARDING)
       }
     })
   }), !1)

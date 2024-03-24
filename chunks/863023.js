@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("627445"),
-  l = n.n(i),
+  l = n("627445"),
+  i = n.n(l),
   r = n("65597"),
   o = n("77078"),
   u = n("697218"),
@@ -15,38 +15,38 @@ var a = n("37983"),
   c = n("768815"),
   f = n("176661"),
   E = n("922832"),
-  _ = n("782340"),
-  h = n("850832");
+  h = n("782340"),
+  _ = n("840408");
 
 function C(e) {
   let {
     user: t
-  } = e, i = (0, r.default)([u.default], () => u.default.getCurrentUser()), C = s.useCallback(() => {
-    l(void 0 !== i, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
+  } = e, l = (0, r.useStateFromStores)([u.default], () => u.default.getCurrentUser()), C = s.useCallback(() => {
+    i(void 0 !== l, "User must be logged in to accept a link request"), (0, o.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("127563").then(n.bind(n, "127563"));
       return n => (0, a.jsx)(e, {
         ...n,
-        currentUser: i,
+        currentUser: l,
         otherUser: t
       })
     })
-  }, [i, t]);
+  }, [l, t]);
   return (0, a.jsxs)("div", {
-    className: h.container,
+    className: _.container,
     children: [(0, a.jsx)("div", {
-      className: h.details,
+      className: _.details,
       children: (0, a.jsx)(f.default, {
         otherUser: t,
         status: E.UserLinkStatus.ACTIVE
       })
     }), (0, a.jsx)("div", {
-      className: h.actions,
+      className: _.actions,
       children: (0, a.jsx)(c.default, {
         icon: d.default,
-        className: h.actionDeny,
-        tooltip: _.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
+        className: _.actionDeny,
+        tooltip: h.default.Messages.FAMILY_CENTER_LINK_ACTION_DISCONNECT,
         onClick: C
       })
     })]

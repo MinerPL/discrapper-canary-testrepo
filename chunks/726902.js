@@ -11,7 +11,7 @@ var a = l("77078"),
   s = l("967473"),
   r = l("49111"),
   c = l("782340"),
-  o = l("92118");
+  o = l("350349");
 
 function d(e) {
   let {
@@ -19,8 +19,8 @@ function d(e) {
     className: l,
     listingClassName: s,
     title: d,
-    showViewAll: p,
-    onViewOne: m,
+    showViewAll: m,
+    onViewOne: p,
     onViewAll: _
   } = e;
   return (0, i.jsxs)("div", {
@@ -30,7 +30,7 @@ function d(e) {
       children: [(0, i.jsx)(a.Heading, {
         variant: "heading-lg/semibold",
         children: d
-      }), p ? (0, i.jsx)(a.Button, {
+      }), m ? (0, i.jsx)(a.Button, {
         look: a.Button.Looks.LINK,
         color: a.Button.Colors.LINK,
         onClick: _,
@@ -47,7 +47,7 @@ function d(e) {
             let {
               mutualGuilds: l
             } = t;
-            return m({
+            return p({
               application: e,
               mutualGuilds: l
             })

@@ -86,25 +86,25 @@ function m(e, t) {
     switch (e.type) {
       case l.SnowflakeSelectDefaultValueTypes.USER:
         var t;
-        let o = s.default.getUser(e.id);
-        if (null == o) return null;
-        let r = null != a ? i.default.getNick(a.id, o.id) : void 0;
+        let r = s.default.getUser(e.id);
+        if (null == r) return null;
+        let d = null != a ? i.default.getNick(a.id, r.id) : void 0;
         return {
-          type: c.SelectOptionType.USER, value: o.id, label: null !== (t = null != r ? r : o.globalName) && void 0 !== t ? t : o.username
+          type: c.SelectOptionType.USER, value: r.id, label: null !== (t = null != d ? d : r.globalName) && void 0 !== t ? t : r.username
         };
       case l.SnowflakeSelectDefaultValueTypes.ROLE:
         if (null == a) return null;
-        let d = a.getRole(e.id);
-        if (null == d) return null;
+        let f = o.default.getRole(a.id, e.id);
+        if (null == f) return null;
         return {
-          type: c.SelectOptionType.ROLE, value: d.id, label: d.name
+          type: c.SelectOptionType.ROLE, value: f.id, label: f.name
         };
       case l.SnowflakeSelectDefaultValueTypes.CHANNEL:
         if (null == a) return null;
-        let f = u.default.getChannel(e.id);
-        if (null == f || f.guild_id !== a.id || n.length > 0 && !n.includes(f.type)) return null;
+        let E = u.default.getChannel(e.id);
+        if (null == E || E.guild_id !== a.id || n.length > 0 && !n.includes(E.type)) return null;
         return {
-          type: c.SelectOptionType.CHANNEL, value: f.id, label: f.name
+          type: c.SelectOptionType.CHANNEL, value: E.id, label: E.name
         }
     }
   }).filter(e => null !== e)

@@ -4,30 +4,28 @@ n.r(t), n.d(t, {
     return p
   }
 });
-var l = n("957255"),
-  i = n("501536"),
-  r = n("25292"),
-  o = n("200294"),
-  s = n("851745"),
-  a = n("406291"),
+var i = n("957255"),
+  l = n("501536"),
+  a = n("25292"),
+  s = n("200294"),
+  r = n("851745"),
+  o = n("406291"),
   u = n("49111"),
   d = n("958706"),
   c = n("782340");
 let f = {
-  sentinel: a.REACTION_START_SENTINEL,
-  matches(e, t, n, i, r) {
-    var o, s;
-    return i && null !== (s = null === (o = r.chatInputType.autocomplete) || void 0 === o ? void 0 : o.addReactionShortcut) && void 0 !== s && s && (l.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
+  sentinel: o.REACTION_START_SENTINEL,
+  matches(e, t, n, l, a) {
+    var s, r;
+    return l && null !== (r = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== r && r && (i.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
   },
-  queryResults(e, t, n, l, i) {
-    var o;
+  queryResults(e, t, n, i, l) {
     let {
       emojis: s
-    } = r.default.queryEmojiResults({
+    } = a.default.queryEmojiResults({
       query: n,
       channel: e,
-      intention: d.EmojiIntention.REACTION,
-      canViewAndUsePackEmoji: null !== (o = l.canViewAndUsePackEmoji) && void 0 !== o && o
+      intention: d.EmojiIntention.REACTION
     });
     return {
       results: {
@@ -41,25 +39,26 @@ let f = {
         emojis: t
       },
       selectedIndex: n,
-      query: l,
-      onHover: r,
-      onClick: s
+      query: i,
+      onHover: a,
+      onClick: r
     } = e;
-    return (0, o.renderAutocompleteGroup)({
-      query: l,
+    return (0, s.renderAutocompleteGroup)({
+      query: i,
       selectedIndex: n,
       autocompletes: t,
-      onHover: r,
-      onClick: s,
+      onHover: a,
+      onClick: r,
       titleWithQuery: c.default.Messages.REACTIONS_MATCHING,
       titleWithoutQuery: c.default.Messages.EMOJI,
-      Component: i.default.Emoji,
+      Component: l.default.Emoji,
       getProps: e => ({
         emoji: e,
         key: e.id || e.uniqueName || e.name,
-        sentinel: a.EMOJI_SENTINEL
+        sentinel: o.EMOJI_SENTINEL,
+        isLocked: !1
       }),
-      getQuery: e => "".concat(a.REACTION_START_SENTINEL).concat(e),
+      getQuery: e => "".concat(o.REACTION_START_SENTINEL).concat(e),
       key: "reactions"
     })
   },
@@ -69,12 +68,12 @@ let f = {
         emojis: t
       },
       index: n,
-      options: l
-    } = e, i = t[n];
-    return l.sendMessage(function(e) {
-      return "".concat(a.REACTION_START_SENTINEL).concat(e.name).concat(a.REACTION_END_SENTINEL)
-    }(i)), {
-      type: s.AutocompleteSelectionTypes.REACTION
+      options: i
+    } = e, l = t[n];
+    return i.sendMessage(function(e) {
+      return "".concat(o.REACTION_START_SENTINEL).concat(e.name).concat(o.REACTION_END_SENTINEL)
+    }(l)), {
+      type: r.AutocompleteSelectionTypes.REACTION
     }
   }
 };

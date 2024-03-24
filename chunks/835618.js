@@ -1,58 +1,64 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
-  r = s("77078"),
-  i = s("812204"),
-  u = s("685665"),
+var r = s("414456"),
+  n = s.n(r),
+  i = s("77078"),
+  l = s("685665"),
   o = s("53253"),
-  d = s("635956"),
-  c = s("782340"),
-  _ = s("903610"),
-  E = s("35257"),
-  I = s("871938"),
-  f = e => {
+  u = s("635956"),
+  d = s("782340"),
+  c = s("345870"),
+  _ = s("35257"),
+  E = s("871938"),
+  T = e => {
     let {
-      className: t
+      className: t,
+      imageClassName: s,
+      textContainerOverrideStyles: r,
+      location: T,
+      analyticsLocation: I
     } = e, {
-      AnalyticsLocationProvider: s
-    } = (0, u.default)(i.default.PREMIUM_MARKETING_GIFT_SECTION), n = (0, o.useIsSeasonalGiftingActive)(), {
-      enabled: f
+      AnalyticsLocationProvider: f
+    } = (0, l.default)(T), R = (0, o.useIsSeasonalGiftingActive)(), {
+      enabled: S
     } = o.SeasonalGiftingMarketingExperiment.useExperiment({
       location: "GiftNitro"
     }, {
-      autoTrackExposure: n
-    }), T = f && n;
-    return (0, a.jsx)(s, {
-      children: (0, a.jsx)("div", {
-        className: l(_.container, t),
-        style: {
-          backgroundImage: "url(".concat(T ? I : E, ")")
-        },
-        children: (0, a.jsxs)("div", {
-          className: _.textContainer,
-          children: [(0, a.jsx)(r.Heading, {
+      autoTrackExposure: R
+    }), m = S && R;
+    return (0, a.jsx)(f, {
+      children: (0, a.jsxs)("div", {
+        className: n(c.container, t),
+        children: [(0, a.jsxs)("div", {
+          className: c.textContainer,
+          style: r,
+          children: [(0, a.jsx)(i.Heading, {
             variant: "heading-lg/extrabold",
-            className: _.heading,
-            children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : c.default.Messages.GIFT_NITRO
-          }), (0, a.jsx)(r.Text, {
+            className: c.heading,
+            children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_HEADING : d.default.Messages.GIFT_NITRO
+          }), (0, a.jsx)(i.Text, {
             variant: "text-sm/medium",
-            children: T ? c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : c.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
-          }), (0, a.jsx)(d.default, {
+            children: m ? d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_SEASONAL_GIFT_BODY : d.default.Messages.PREMIUM_TRIAL_MARKETING_EXPERIMENT_GIFT_BODY
+          }), (0, a.jsx)(u.default, {
             isGift: !0,
-            className: _.giftCardButton,
-            look: r.Button.Looks.OUTLINED,
-            buttonText: c.default.Messages.GIFT_NITRO,
-            buttonTextClassName: _.giftButtonCTA,
-            color: r.Button.Colors.CUSTOM
+            className: c.giftCardButton,
+            look: i.Button.Looks.OUTLINED,
+            buttonText: d.default.Messages.GIFT_NITRO,
+            buttonTextClassName: c.giftButtonCTA,
+            color: i.Button.Colors.CUSTOM,
+            premiumModalAnalyticsLocation: I
           })]
-        })
+        }), (0, a.jsx)("img", {
+          src: m ? E : _,
+          className: n(c.bannerImage, s),
+          alt: "gift nitro banner"
+        })]
       })
     })
   }

@@ -1,15 +1,15 @@
 "use strict";
 r.r(e), r.d(e, {
   default: function() {
-    return L
+    return O
   }
-}), r("70102"), r("511434"), r("313619"), r("654714"), r("287168"), r("956660"), r("222007");
+}), r("70102");
 var n = r("37983");
 r("884691");
 var o = r("627445"),
   a = r.n(o),
-  i = r("730290"),
-  l = r("845574"),
+  l = r("730290"),
+  i = r("845574"),
   u = r("106076"),
   c = r("382825"),
   s = r("619340"),
@@ -17,13 +17,14 @@ var o = r("627445"),
   A = r("590157"),
   h = r("535013"),
   p = r("605250"),
-  T = r("872825"),
-  f = r("33942"),
+  f = r("872825"),
+  T = r("33942"),
   I = r("267570"),
-  w = r("49111");
-let P = new p.default("LinkAuthorize");
-async function _(t, e, r, n) {
-  var o, i, l, u, d;
+  P = r("253981"),
+  _ = r("49111");
+let v = new p.default("LinkAuthorize");
+async function w(t, e, r, n) {
+  var o, l, i, u, d;
   let A = null;
   try {
     let {
@@ -33,7 +34,7 @@ async function _(t, e, r, n) {
     });
     A = t.url
   } catch (t) {
-    throw Error("error at authorize with code ".concat(null !== (i = null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.code) && void 0 !== i ? i : 0))
+    throw Error("error at authorize with code ".concat(null !== (l = null == t ? void 0 : null === (o = t.body) || void 0 === o ? void 0 : o.code) && void 0 !== l ? l : 0))
   }
   let p = null;
   try {
@@ -47,22 +48,22 @@ async function _(t, e, r, n) {
   }
   try {
     let o = await s.default.completeTwoWayLink(n, t, e, p, r);
-    return null == o ? void 0 : null === (l = o.body) || void 0 === l ? void 0 : l.redirect
+    return null == o ? void 0 : null === (i = o.body) || void 0 === i ? void 0 : i.redirect
   } catch (t) {
     throw Error("error at callback with code ".concat(null !== (d = null == t ? void 0 : null === (u = t.body) || void 0 === u ? void 0 : u.code) && void 0 !== d ? d : 0))
   }
 }
 
-function v(t) {
+function L(t) {
   let {
     platformType: e
   } = t;
   (0, d.default)();
-  let r = (0, T.parseOAuth2AuthorizeProps)(window.location.search),
+  let r = (0, f.parseOAuth2AuthorizeProps)(window.location.search),
     {
       code: o,
       token_redirect_uri: a
-    } = i.parse(window.location.search),
+    } = l.parse(window.location.search),
     u = async t => {
       let {
         location: r
@@ -70,32 +71,33 @@ function v(t) {
       if (null == r) return;
       let {
         error: n
-      } = i.parse(r), u = null;
+      } = l.parse(r), u = null;
       if (null == n && null != o) try {
-        u = await _(r, o, a, e)
+        u = await w(r, o, a, e)
       } catch (e) {
         var c;
-        P.error("Error Creating Discord link", null == e ? void 0 : e.message);
-        let t = new URL(r);
+        v.error("Error Creating Discord link", null == e ? void 0 : e.message);
+        let t = P.default.toURLSafe(r);
+        if (null == t) return;
         t.searchParams.delete("code"), t.searchParams.set("error", "two_way_link_error"), t.searchParams.set("error_description", null !== (c = null == e ? void 0 : e.message) && void 0 !== c ? c : "unknown_error"), r = t.toString()
       }
-      window.location = null == u || u === l.ConnectionCallbackRedirectType.OAUTH_REDIRECT ? r : u
+      window.location = null == u || u === i.ConnectionCallbackRedirectType.OAUTH_REDIRECT ? r : u
     };
   return (0, n.jsx)(I.OAuth2Page, {
-    children: (0, n.jsx)(f.OAuth2Authorize, {
+    children: (0, n.jsx)(T.OAuth2Authorize, {
       ...r,
       showLogout: !0,
       callback: u
     })
   })
 }
-var L = (0, A.makeAuthenticated)(function(t) {
+var O = (0, A.makeAuthenticated)(function(t) {
   let {
     match: e
   } = t, r = e.params.type, {
     client_id: o = ""
-  } = i.parse(window.location.search), a = r === w.PlatformTypes.PLAYSTATION && o === u.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, l = r === w.PlatformTypes.PLAYSTATION_STAGING && o === u.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
-  return a || l ? (0, n.jsx)(v, {
+  } = l.parse(window.location.search), a = r === _.PlatformTypes.PLAYSTATION && o === u.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, i = r === _.PlatformTypes.PLAYSTATION_STAGING && o === u.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;
+  return a || i ? (0, n.jsx)(L, {
     platformType: r
   }) : null
 })

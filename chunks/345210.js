@@ -10,14 +10,15 @@ var a = s("884691"),
   i = s("235898"),
   r = e => {
     let [t, s] = a.useState(), {
-      categories: r
+      categories: r,
+      purchases: o
     } = (0, i.default)();
     return a.useEffect(() => {
       (null == t || 0 === t.size) && s(r)
     }, [r, t]), a.useMemo(() => {
       if (null != e) return e;
       if (null == t) return;
-      let s = (0, l.getAvatarDecorationsFromCategories)(t),
+      let s = (0, l.getAvatarDecorations)(o, t),
         a = s.filter(e => {
           let {
             skuId: t
@@ -25,5 +26,5 @@ var a = s("884691"),
           return (0, l.isPremiumCollectiblesProduct)(s)
         });
       return a[Math.floor(Math.random() * a.length)]
-    }, [t, e])
+    }, [t, e, o])
   }

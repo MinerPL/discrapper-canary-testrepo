@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 }), n("70102");
 var i = n("44170"),
@@ -14,35 +14,35 @@ var i = n("44170"),
   d = n("49111");
 let c = d.RPC_STARTING_PORT + d.RPC_PORT_RANGE - 1;
 
-function f(e, t) {
+function _(e, t) {
   if (null == e || null == t) throw Error("cmd and name required");
   return "".concat(e, ":").concat(t)
 }
-let _ = a.parse(location.search.slice(1)),
-  h = parseInt(null != _.rpc && "" !== _.rpc ? _.rpc : d.RPC_STARTING_PORT, 10),
-  g = null;
-class m extends i.EventEmitter {
+let f = a.parse(location.search.slice(1)),
+  E = parseInt(null != f.rpc && "" !== f.rpc ? f.rpc : d.RPC_STARTING_PORT, 10),
+  h = null;
+class g extends i.EventEmitter {
   get port() {
-    return h
+    return E
   }
   get connected() {
-    return null != g && g.readyState === WebSocket.OPEN
+    return null != h && h.readyState === WebSocket.OPEN
   }
   connect() {
-    if (null == g) {
-      if (h > c) {
-        h = d.RPC_STARTING_PORT, this.emit("disconnected");
+    if (null == h) {
+      if (E > c) {
+        E = d.RPC_STARTING_PORT, this.emit("disconnected");
         return
       }
       try {
-        g = new WebSocket("ws://127.0.0.1:".concat(this.port, "/?v=").concat(d.RPC_VERSION))
+        h = new WebSocket("ws://127.0.0.1:".concat(this.port, "/?v=").concat(d.RPC_VERSION))
       } catch (e) {
         this.disconnect({
           code: d.RPCCloseCodes.CLOSE_ABNORMAL
         });
         return
       }
-      null != g && (g.onmessage = e => {
+      null != h && (h.onmessage = e => {
         let t;
         try {
           if ("string" == typeof e.data) t = JSON.parse(e.data);
@@ -68,28 +68,28 @@ class m extends i.EventEmitter {
             }, r.message)), this.disconnect();
             return
           }
-          this.emit(f(n, i), r);
+          this.emit(_(n, i), r);
           return
         }
         let a = null;
         i === d.RPCEvents.ERROR && (a = new u.default({
           errorCode: r.code
-        }, r.message), r = null), this.emit(f(n, s), a, r)
-      }, g.onclose = g.onerror = e => this.disconnect(e))
+        }, r.message), r = null), this.emit(_(n, s), a, r)
+      }, h.onclose = h.onerror = e => this.disconnect(e))
     }
   }
   disconnect(e) {
     if (null != e && "code" in e && [d.RPCCloseCodes.CLOSE_ABNORMAL, d.RPCCloseCodes.INVALID_CLIENTID].includes(e.code)) {
-      h++, g = null, this.connect();
+      E++, h = null, this.connect();
       return
     }
-    null != g && (this.emit("disconnected"), g.close(), g = null)
+    null != h && (this.emit("disconnected"), h.close(), h = null)
   }
   subscribe(e, t, n) {
-    return this.on(f(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.SUBSCRIBE, t, e)
+    return this.on(_(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.SUBSCRIBE, t, e)
   }
   unsubscribe(e, t, n) {
-    return this.removeListener(f(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.UNSUBSCRIBE, t, e)
+    return this.removeListener(_(d.RPCCommands.DISPATCH, e), n), this.request(d.RPCCommands.UNSUBSCRIBE, t, e)
   }
   request(e, t, n) {
     return new Promise((i, s) => {
@@ -108,11 +108,11 @@ class m extends i.EventEmitter {
           evt: n,
           nonce: r
         });
-      this.once(f(e, r), (e, t) => null != e ? s(e) : i(t)), null == g || g.send(a)
+      this.once(_(e, r), (e, t) => null != e ? s(e) : i(t)), null == h || h.send(a)
     })
   }
   requestOnce(e, t, n) {
-    return l.default.post({
+    return l.HTTP.post({
       url: "http://127.0.0.1:".concat(this.port, "/rpc?v=").concat(d.RPC_VERSION),
       body: {
         cmd: e,
@@ -145,4 +145,4 @@ class m extends i.EventEmitter {
     return window.open("http://127.0.0.1:".concat(this.port, "/rpc?v=").concat(d.RPC_VERSION, "&payload=").concat(i, "&callback=").concat(s), "_self"), new Promise(() => null)
   }
 }
-var E = new m
+var m = new g

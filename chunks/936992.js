@@ -1,51 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   GuildSelectModalHeader: function() {
-    return _
+    return S
   },
   GuildSelectModalBody: function() {
     return C
   },
   default: function() {
-    return L
+    return R
   }
 }), n("808653"), n("424973"), n("222007");
-var l = n("37983"),
-  s = n("884691"),
-  i = n("448105"),
-  r = n.n(i),
-  a = n("446674"),
+var s = n("37983"),
+  r = n("884691"),
+  a = n("448105"),
+  l = n.n(a),
+  i = n("446674"),
   o = n("77078"),
   u = n("54239"),
   d = n("393414"),
-  c = n("334811"),
-  f = n("305961"),
-  p = n("677099"),
+  c = n("305961"),
+  f = n("677099"),
   m = n("476263"),
-  h = n("810567"),
-  E = n("427459"),
+  E = n("810567"),
+  p = n("427459"),
   I = n("49111"),
-  S = n("782340"),
-  g = n("109396");
+  _ = n("782340"),
+  h = n("198591");
 
-function _(e) {
+function S(e) {
   let {
     isTransfer: t = !1,
     setQuery: n,
-    query: s
+    query: r
   } = e;
-  return (0, l.jsxs)(o.ModalHeader, {
-    className: g.selectHeaderContainer,
-    children: [(0, l.jsx)(o.Heading, {
-      className: g.selectHeader,
+  return (0, s.jsxs)(o.ModalHeader, {
+    className: h.selectHeaderContainer,
+    children: [(0, s.jsx)(o.Heading, {
+      className: h.selectHeader,
       variant: "heading-md/semibold",
-      children: t ? S.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : S.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
-    }), (0, l.jsx)(h.default, {
-      size: h.default.Sizes.MEDIUM,
-      placeholder: S.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-      "aria-label": S.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
-      className: g.selectSearch,
-      query: s,
+      children: t ? _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_TRANSFER_HEADER : _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SELECT_GUILD_HEADER
+    }), (0, s.jsx)(E.default, {
+      size: E.default.Sizes.MEDIUM,
+      placeholder: _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+      "aria-label": _.default.Messages.PREMIUM_GUILD_SUBSCRIBE_SEARCH_GUILD_PLACEHOLDER,
+      className: h.selectSearch,
+      query: r,
       onChange: n,
       onClear: () => n("")
     })]
@@ -56,89 +55,83 @@ function C(e) {
   let {
     isTransfer: t = !1,
     selectedSlotGuilds: n,
-    onClose: s,
-    onSelectGuild: i,
-    query: h
-  } = e, _ = (0, a.useStateFromStores)([p.default], () => p.default.getFlattenedGuildIds()), C = (0, a.useStateFromStoresArray)([f.default], () => _.reduce((e, t) => {
-    let l = f.default.getGuild(t);
-    return null == l || null != n && n.some(e => e.id === t) ? e : ((h.length <= 0 || r(h.toLowerCase(), null == l ? void 0 : l.name.toLowerCase())) && e.push(l), e)
-  }, [])), {
-    enabled: L
-  } = c.default.useExperiment({
-    location: "5f417c_1"
-  }, {
-    autoTrackExposure: !0
-  });
+    onClose: r,
+    onSelectGuild: a,
+    query: E
+  } = e, S = (0, i.useStateFromStores)([f.default], () => f.default.getFlattenedGuildIds()), C = (0, i.useStateFromStoresArray)([c.default], () => S.reduce((e, t) => {
+    let s = c.default.getGuild(t);
+    return null == s || null != n && n.some(e => e.id === t) ? e : ((E.length <= 0 || l(E.toLowerCase(), null == s ? void 0 : s.name.toLowerCase())) && e.push(s), e)
+  }, []));
 
   function R() {
-    s(), (0, u.popLayer)(), (0, d.transitionTo)(I.Routes.GUILD_DISCOVERY)
+    r(), (0, u.popLayer)(), (0, d.transitionTo)(I.Routes.GUILD_DISCOVERY)
   }
-  return (0, l.jsxs)(l.Fragment, {
-    children: [0 === C.length && (0, l.jsx)("div", {
-      className: g.emptyStateWrapper,
-      children: (0, l.jsx)(o.Text, {
+  return (0, s.jsxs)(s.Fragment, {
+    children: [0 === C.length && (0, s.jsx)("div", {
+      className: h.emptyStateWrapper,
+      children: (0, s.jsx)(o.Text, {
         variant: "text-md/normal",
-        children: 0 === _.length ? S.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
-          publicGuildDirectoryHook: (e, t) => (0, l.jsx)(o.Clickable, {
+        children: 0 === S.length ? _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_NON_GUILD_MEMBER.format({
+          publicGuildDirectoryHook: (e, t) => (0, s.jsx)(o.Clickable, {
             onClick: R,
             tag: "a",
             children: e
           }, t)
-        }) : S.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
+        }) : _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_APPLY_GUILD_NOT_FOUND
       })
-    }), C.map(e => (0, l.jsxs)(o.Clickable, {
-      className: g.selectGuild,
+    }), C.map(e => (0, s.jsxs)(o.Clickable, {
+      className: h.selectGuild,
       onClick: () => {
-        i(e)
+        a(e)
       },
-      children: [(0, l.jsx)(m.default, {
-        className: g.selectGuildIcon,
+      children: [(0, s.jsx)(m.default, {
+        className: h.selectGuildIcon,
         guild: e,
         size: m.default.Sizes.SMALL
-      }), (0, l.jsxs)("div", {
-        className: g.selectGuildCopy,
-        children: [(0, l.jsx)(o.Text, {
-          className: g.selectGuildName,
+      }), (0, s.jsxs)("div", {
+        className: h.selectGuildCopy,
+        children: [(0, s.jsx)(o.Text, {
+          className: h.selectGuildName,
           variant: "text-md/normal",
           children: e.name
-        }), L && (0, l.jsx)(o.Text, {
-          className: g.selectGuildLevel,
+        }), (0, s.jsx)(o.Text, {
+          className: h.selectGuildLevel,
           color: "text-muted",
           variant: "text-xs/normal",
-          children: (0, E.getTierName)(e.premiumTier)
+          children: (0, p.getTierName)(e.premiumTier)
         })]
-      }), L && (0, l.jsx)(o.Text, {
-        className: g.selectGuildPseudoCta,
+      }), (0, s.jsx)(o.Text, {
+        className: h.selectGuildPseudoCta,
         color: "always-white",
         variant: "text-sm/medium",
-        children: t ? S.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : S.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+        children: t ? _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_TRANSFER_HERE : _.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
       })]
     }, e.id))]
   })
 }
 
-function L(e) {
+function R(e) {
   let {
     onClose: t,
     onSelectGuild: n,
-    transitionState: i
-  } = e, [r, a] = s.useState("");
-  return (0, l.jsxs)(o.ModalRoot, {
-    transitionState: i,
-    className: g.modal,
+    transitionState: a
+  } = e, [l, i] = r.useState("");
+  return (0, s.jsxs)(o.ModalRoot, {
+    transitionState: a,
+    className: h.modal,
     size: o.ModalSize.SMALL,
-    children: [(0, l.jsx)(_, {
-      query: r,
-      setQuery: a
-    }), (0, l.jsx)(o.ModalContent, {
-      className: g.modalContent,
-      children: (0, l.jsx)(C, {
+    children: [(0, s.jsx)(S, {
+      query: l,
+      setQuery: i
+    }), (0, s.jsx)(o.ModalContent, {
+      className: h.modalContent,
+      children: (0, s.jsx)(C, {
         onClose: t,
         onSelectGuild: n,
-        query: r
+        query: l
       })
-    }), (0, l.jsx)(o.ModalCloseButton, {
-      className: g.modalCloseButton,
+    }), (0, s.jsx)(o.ModalCloseButton, {
+      className: h.modalCloseButton,
       onClick: t
     })]
   })

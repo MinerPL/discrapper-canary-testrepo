@@ -10,12 +10,12 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var i = n("773179"),
+var i = n("582909"),
   s = n.n(i);
 let r = {};
 
 function a(e) {
-  let t = s.uniqueId("VideoStream");
+  let t = s("VideoStream");
   return r[t] = e, t
 }
 

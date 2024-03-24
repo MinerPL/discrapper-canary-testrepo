@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return v
   }
 }), n("222007");
 var s, r = n("446674"),
@@ -12,12 +12,12 @@ var s, r = n("446674"),
   u = n("653047"),
   d = n("773336");
 let c = "GameStoreReportedGames",
-  f = {},
   _ = {},
-  h = {},
-  g = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
-  m = "";
-let E = null;
+  f = {},
+  E = {},
+  h = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
+  g = "";
+let m = null;
 
 function p(e) {
   return {
@@ -33,45 +33,52 @@ function p(e) {
   }
 }
 
-function v(e) {
+function S(e) {
   let t = e instanceof u.default ? p(e) : e;
-  for (let n of (f[e.id] = t, _[e.name.toLowerCase()] = t, e.aliases)) _[n.toLowerCase()] = t;
+  for (let n of (_[e.id] = t, f[e.name.toLowerCase()] = t, e.aliases)) f[n.toLowerCase()] = t;
   if ((0, d.isDesktop)())
-    for (let n of e.executables) h[n.name] = t
+    for (let n of e.executables) E[n.name] = t
 }
-class S extends r.default.PersistedStore {
+class T extends r.default.PersistedStore {
   initialize(e) {
     var t;
-    null != e && (null != e.detectableGamesEtag && (m = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => v(e)))
+    null != e && (null != e.detectableGamesEtag && (g = e.detectableGamesEtag), null === (t = e.detectableGames) || void 0 === t || t.forEach(e => S(e)))
   }
   getState() {
-    return {
-      detectableGamesEtag: m,
-      detectableGames: Object.values(f)
+    return (0, d.isDesktop)() ? {
+      detectableGamesEtag: g,
+      detectableGames: Object.values(_)
+    } : {
+      detectableGamesEtag: "",
+      detectableGames: []
     }
   }
   get games() {
-    return Object.values(f)
+    return Object.values(_)
   }
   getDetectableGame(e) {
-    return f[e]
+    return _[e]
   }
   getGameByName(e) {
     if (null == e) return null;
     let t = e.toLowerCase();
-    return Object.prototype.hasOwnProperty.call(_, t) ? _[t] : null
+    return Object.prototype.hasOwnProperty.call(f, t) ? f[t] : null
+  }
+  isGameInDatabase(e) {
+    let t = this.getGameByName(e.name);
+    return null != t || void 0 !== e.nativeProcessObserverId && (2147483648 & e.nativeProcessObserverId) == 0
   }
   get fetching() {
     return !0 === i
   }
   get detectableGamesEtag() {
-    return m
+    return g
   }
   get lastFetched() {
-    return E
+    return m
   }
   getGameByExecutable(e) {
-    return h[e]
+    return E[e]
   }
   getGameByGameData(e) {
     var t, n;
@@ -87,16 +94,19 @@ class S extends r.default.PersistedStore {
     }
     return null !== (n = null !== (t = this.getGameByExecutable(s)) && void 0 !== t ? t : this.getGameByExecutable(r)) && void 0 !== n ? n : i
   }
+  getGameById(e) {
+    return _[e]
+  }
   shouldReport(e) {
     let t = null != this.getGameByName(e),
-      n = null != g[e];
+      n = null != h[e];
     return l.ShowCurrentGame.getSetting() && !i && !(t || n)
   }
   markGameReported(e) {
-    g[e] = !0, a.default.set(c, g)
+    h[e] = !0, a.default.set(c, h)
   }
 }
-S.displayName = "GameStore", S.persistKey = "GameStore", S.migrations = [e => {
+T.displayName = "GameStore", T.persistKey = "GameStore", T.migrations = [e => {
   var t, n;
   if (null == e) return {
     detectableGamesEtag: "",
@@ -106,13 +116,16 @@ S.displayName = "GameStore", S.persistKey = "GameStore", S.migrations = [e => {
     detectableGamesEtag: e.detectableGamesEtag,
     detectableGames: null !== (n = null === (t = e.detectableGames) || void 0 === t ? void 0 : t.map(e => p(new u.default(e)))) && void 0 !== n ? n : []
   }
+}, e => (0, d.isDesktop)() ? e : {
+  detectableGamesEtag: "",
+  detectableGames: []
 }];
-var T = new S(o.default, {
+var v = new T(o.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       detectableApplications: t
     } = e;
-    for (let e of t) v(e)
+    for (let e of t) S(e)
   },
   GAMES_DATABASE_FETCH: function() {
     i = !0
@@ -125,7 +138,7 @@ var T = new S(o.default, {
       games: t,
       etag: n
     } = e;
-    for (let e of (null != n && m !== n && (m = n), t)) v(function(e) {
+    for (let e of (null != n && g !== n && (g = n), t)) S(function(e) {
       var t, n, i, s, r, a;
       return {
         id: e.id,
@@ -139,6 +152,6 @@ var T = new S(o.default, {
         supportsOutOfProcessOverlay: u.default.supportsOutOfProcessOverlay(e.overlay_methods)
       }
     }(e));
-    i = void 0, E = Date.now()
+    i = void 0, m = Date.now()
   }
 })

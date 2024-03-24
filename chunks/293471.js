@@ -1,5 +1,5 @@
 "use strict";
-var r = n("37549")("%Object.getOwnPropertyDescriptor%", !0);
+var r = n("911718")("%Object.getOwnPropertyDescriptor%", !0);
 if (r) try {
   r([], "length")
 } catch (e) {

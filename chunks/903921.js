@@ -11,11 +11,11 @@ var i = s("37983");
 s("884691");
 var r = s("414456"),
   a = s.n(r),
-  l = s("907002"),
+  l = s("146606"),
   o = s("65597"),
   n = s("77078"),
-  d = s("206230"),
-  u = s("685665"),
+  u = s("206230"),
+  d = s("685665"),
   c = s("206453"),
   E = s("36694"),
   _ = s("427459"),
@@ -23,7 +23,7 @@ var r = s("414456"),
   I = s("651971"),
   N = s("49111"),
   f = s("782340"),
-  R = s("633640");
+  R = s("319519");
 let g = {
   [N.BoostedGuildTiers.NONE]: 0,
   [N.BoostedGuildTiers.TIER_1]: 1 / 3,
@@ -36,13 +36,13 @@ var m = function(e) {
     confettiTriggerRef: s,
     guild: r,
     isProgressBarAnimationComplete: m,
-    setConfettiCount: M,
-    setShouldFireConfetti: S,
+    setConfettiCount: S,
+    setShouldFireConfetti: M,
     tier: G,
     tierMarkerAnimationPosition: h
-  } = e, p = (0, o.default)([d.default], () => d.default.useReducedMotion), {
-    analyticsLocations: B
-  } = (0, u.default)(), O = N.AppliedGuildBoostsRequiredForBoostedGuildTier[G], x = O - r.premiumSubscriberCount, A = G <= h || m, v = A && G <= r.premiumTier, C = A && G < r.premiumTier, P = A && G === r.premiumTier, {
+  } = e, O = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
+    analyticsLocations: p
+  } = (0, d.default)(), C = N.AppliedGuildBoostsRequiredForBoostedGuildTier[G], A = C - r.premiumSubscriberCount, B = G <= h || m, x = B && G <= r.premiumTier, v = B && G < r.premiumTier, P = B && G === r.premiumTier, {
     scaleFactor: L
   } = (0, l.useSpring)({
     from: {
@@ -55,7 +55,7 @@ var m = function(e) {
       tension: 360,
       friction: 12
     },
-    immediate: p
+    immediate: O
   }), j = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(l.animated.div, {
       className: R.progressBarMarkerIndicator,
@@ -66,10 +66,10 @@ var m = function(e) {
       tier: G,
       className: R.boostedTierIcon
     })]
-  }), D = v ? "div" : n.Clickable, w = v ? {} : {
+  }), D = x ? "div" : n.Clickable, b = x ? {} : {
     onClick: function() {
-      A && (0, T.addAppliedGuildBoosts)({
-        analyticsLocations: B,
+      B && (0, T.addAppliedGuildBoosts)({
+        analyticsLocations: p,
         analyticsLocation: {
           page: N.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
           section: N.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_PROGRESS_BAR,
@@ -87,18 +87,18 @@ var m = function(e) {
             }
           }(G)
         },
-        numberOfBoostsToAdd: x,
+        numberOfBoostsToAdd: A,
         guild: r
       })
     }
   };
   return (0, i.jsx)(n.Tooltip, {
-    text: v ? f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
+    text: x ? f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_TIER_UNLOCKED.format({
       tierName: (0, _.getTierName)(G, {
         useLevels: !1
       })
     }) : f.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_PROGRESS_BAR_TOOLTIP_REMAINING_FOR_TIER.format({
-      numBoostsRequired: x,
+      numBoostsRequired: A,
       tierName: (0, _.getTierName)(G, {
         useLevels: !1
       })
@@ -106,27 +106,27 @@ var m = function(e) {
     shouldShow: G !== N.BoostedGuildTiers.NONE,
     children: e => (0, i.jsxs)(D, {
       className: a(R.progressBarMarker, {
-        [R.progressBarMarkerUnlocked]: v,
-        [R.progressBarMarkerLocked]: !v,
-        [R.progressBarMarkerLower]: C,
+        [R.progressBarMarkerUnlocked]: x,
+        [R.progressBarMarkerLocked]: !x,
+        [R.progressBarMarkerLower]: v,
         [R.progressBarMarkerCurrent]: P
       }),
       style: {
         left: "".concat(100 * g[G], "%")
       },
       ...e,
-      ...w,
-      children: [!v && (0, i.jsx)("div", {
+      ...b,
+      children: [!x && (0, i.jsx)("div", {
         className: R.boostedTierIconBackground
-      }), v && G === N.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(I.ProgressBarConfettiTrigger, {
+      }), x && G === N.BoostedGuildTiers.TIER_3 ? (0, i.jsx)(I.ProgressBarConfettiTrigger, {
         confettiTriggerRef: s,
-        setConfettiCount: M,
-        setShouldFireConfetti: S,
+        setConfettiCount: S,
+        setShouldFireConfetti: M,
         children: j
       }) : j, (0, i.jsxs)(n.Text, {
         className: R.progressBarMarkerLabel,
         variant: "text-md/normal",
-        children: [v && G !== N.BoostedGuildTiers.NONE && (0, i.jsx)(E.default, {
+        children: [x && G !== N.BoostedGuildTiers.NONE && (0, i.jsx)(E.default, {
           className: R.progressBarMarkerUnlockedIcon
         }), t]
       })]

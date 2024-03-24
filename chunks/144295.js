@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("462998"),
   _ = a("69927"),
   x = a("298878"),
-  v = a("713810"),
-  S = a("185014"),
+  S = a("713810"),
+  v = a("185014"),
   C = a("290886"),
   N = a("957687"),
   p = a("90713"),
@@ -36,8 +36,8 @@ var l = a("37983"),
   R = a("760190"),
   b = a("305961"),
   G = a("957255"),
-  O = a("744983"),
-  y = a("223383"),
+  y = a("744983"),
+  O = a("223383"),
   H = a("550515"),
   k = a("664336"),
   U = a("395118"),
@@ -60,34 +60,22 @@ var l = a("37983"),
   ea = a("724210"),
   el = a("515631"),
   en = a("782340"),
-  es = a("895976"),
-  ei = a("305794"),
+  es = a("695647"),
+  ei = a("250455"),
   ed = a("487577");
 let er = 936,
   eu = n.memo(function(e) {
     let {
       guild: t,
       seenManagerRef: a
-    } = e, s = function(e, t) {
-      let {
-        showRefreshButton: a
-      } = P.GuildFeedRefreshButtonExperiment.useExperiment({
-        location: "69386d_1"
-      }, {
-        autoTrackExposure: !1
-      });
-      n.useEffect(() => {
-        P.GuildFeedRefreshButtonExperiment.trackExposure({
-          location: "69386d_2"
-        })
-      }, []);
-      let s = (0, r.useStateFromStores)([G.default], () => G.default.can(et.Permissions.MANAGE_MESSAGES, e), [e]),
-        i = [];
-      return a && i.push((0, l.jsx)(k.Icon, {
+    } = e, n = function(e, t) {
+      let a = (0, r.useStateFromStores)([G.default], () => G.default.can(et.Permissions.MANAGE_MESSAGES, e), [e]),
+        n = [];
+      return n.push((0, l.jsx)(k.Icon, {
         tooltip: en.default.Messages.REFRESH,
         icon: H.default,
         onClick: function() {
-          (0, v.fetchGuildFeed)({
+          (0, S.fetchGuildFeed)({
             guildId: e.id,
             refresh: !0,
             flushSeenItems: () => {
@@ -96,18 +84,18 @@ let er = 936,
             }
           })
         }
-      })), s && i.push((0, l.jsx)(p.default, {
+      })), a && n.push((0, l.jsx)(p.default, {
         guildId: e.id
-      })), i
+      })), n
     }(t, a);
     return (0, l.jsxs)(T.default, {
       channelId: ea.StaticChannelRoute.GUILD_HOME,
       guildId: t.id,
       className: i(ei.title, es.background),
       innerClassname: es.headerBarInner,
-      toolbar: s,
+      toolbar: n,
       children: [(0, l.jsx)(T.default.Icon, {
-        icon: y.default,
+        icon: O.default,
         "aria-hidden": !0
       }), (0, l.jsxs)(T.default.Title, {
         children: [(0, l.jsx)(u.HiddenVisually, {
@@ -222,10 +210,10 @@ let eh = (0, c.default)(function(e) {
       guild: t,
       width: a,
       height: s
-    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, I] = n.useState(!1), [x, v] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
+    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([y.default], () => y.default.getCurrentSearchId()), [g, I] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
       ref: D
     } = (0, f.default)(), [F, R] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
-      hasNewHeader: y
+      hasNewHeader: O
     } = V.GuildHomeHeaderRedesignExperiment.useExperiment({
       guildId: o,
       location: "69386d_5"
@@ -237,12 +225,12 @@ let eh = (0, c.default)(function(e) {
     n.useEffect(() => {
       G.current = !1
     }, [o]), n.useEffect(() => {
-      let e = S.default.getLoadId(o);
+      let e = v.default.getLoadId(o);
       null == e && M.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
     }, [o]), (0, Z.default)(o), n.useLayoutEffect(() => {
       var e, t;
       let a = W.default.getSavedScrollPosition(o);
-      return y && (0 === a || null == a) ? null === (e = T.current) || void 0 === e || e.scrollTo({
+      return O && (0 === a || null == a) ? null === (e = T.current) || void 0 === e || e.scrollTo({
         to: H
       }) : null != a && (null === (t = T.current) || void 0 === t || t.scrollTo({
         to: a
@@ -251,7 +239,7 @@ let eh = (0, c.default)(function(e) {
         let t = null === (e = T.current) || void 0 === e ? void 0 : e.getScrollerState();
         null != t && (0, B.saveGuildHomeScrollPosition)(o, t.scrollTop)
       }
-    }, [o, y, H]);
+    }, [o, O, H]);
     let k = a - et.CHANNEL_SIDEBAR_WIDTH - x,
       U = !(p && k < er) || b,
       z = n.useRef(null),
@@ -312,7 +300,7 @@ let eh = (0, c.default)(function(e) {
                   },
                   ...n,
                   ...X,
-                  children: [y && (0, l.jsx)($.default, {
+                  children: [O && (0, l.jsx)($.default, {
                     guild: t
                   }), b ? Q : null, (0, l.jsxs)("div", {
                     className: es.homeContent,
@@ -366,7 +354,7 @@ let eh = (0, c.default)(function(e) {
       }), N ? (0, l.jsx)(ec, {
         pageWidth: a,
         onSidebarResize: (e, t) => {
-          I(t), v(e)
+          I(t), S(e)
         }
       }) : null]
     })

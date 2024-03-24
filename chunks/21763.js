@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return T
   }
 });
 var s = n("37983");
 n("884691");
 var a = n("414456"),
   l = n.n(a),
-  i = n("907002"),
+  i = n("146606"),
   r = n("65597"),
   o = n("77078"),
   u = n("97810"),
@@ -20,13 +20,13 @@ var a = n("414456"),
   p = n("200521"),
   m = n("894488"),
   E = n("782340"),
-  g = n("339723");
+  g = n("141342");
 
 function S(e) {
   let {
     summary: t,
     channel: n
-  } = e, a = (0, r.default)([h.default], () => h.default.summaryFeedback(t)), l = (e, s) => {
+  } = e, a = (0, r.useStateFromStores)([h.default], () => h.default.summaryFeedback(t)), l = (e, s) => {
     e.stopPropagation(), (0, C.default)({
       summary: t,
       channel: n,
@@ -81,14 +81,14 @@ function S(e) {
   })
 }
 
-function A(e) {
+function T(e) {
   var t, n;
   let a, {
       item: i,
       channel: o,
       index: c
     } = e,
-    f = (0, r.default)([h.default], () => h.default.selectedSummary(o.id));
+    f = (0, r.useStateFromStores)([h.default], () => h.default.selectedSummary(o.id));
   if (null == f) return null;
   let C = null != i.unreadId,
     p = null != i.content;

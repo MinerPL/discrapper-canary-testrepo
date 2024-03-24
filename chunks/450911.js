@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 }), n("222007");
 var i = n("872717"),
@@ -13,12 +13,13 @@ var i = n("872717"),
   u = n("393414"),
   d = n("233069"),
   c = n("42203"),
-  f = n("271560"),
-  _ = n("561288"),
-  h = n("987317"),
-  g = n("49111"),
+  _ = n("271560"),
+  f = n("561288"),
+  E = n("987317"),
+  h = n("49111"),
+  g = n("333188"),
   m = n("782340"),
-  E = {
+  p = {
     async openPrivateChannel(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -26,15 +27,15 @@ var i = n("872717"),
         r = arguments.length > 4 ? arguments[4] : void 0,
         a = this._getRecipients(e),
         o = e => {
-          t && _.default.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null)
+          t && f.default.call(e.id, n, !0, e.isDM() ? e.getRecipientId() : null)
         };
       if (1 === a.length) {
         let [e] = a, t = this._openCachedDMChannel(e, r);
         if (null != t) return o(t), Promise.resolve(t.id)
       }
       try {
-        let e = await i.default.post({
-          url: g.Endpoints.USER_CHANNELS,
+        let e = await i.HTTP.post({
+          url: h.Endpoints.USER_CHANNELS,
           body: {
             recipients: a
           },
@@ -48,32 +49,32 @@ var i = n("872717"),
         return o(t), e.body.id
       } catch (e) {
         var u;
-        throw (null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code) === g.AbortCodes.QUARANTINED && (0, l.default)(), e
+        throw (null == e ? void 0 : null === (u = e.body) || void 0 === u ? void 0 : u.code) === h.AbortCodes.QUARANTINED && (0, l.default)(), e
       }
     },
     async createBroadcastPrivateChannel() {
       try {
-        let e = await i.default.post({
-            url: g.Endpoints.BROADCAST_PRIVATE_CHANNEL
+        let e = await i.HTTP.post({
+            url: h.Endpoints.BROADCAST_PRIVATE_CHANNEL
           }),
           t = (0, d.createChannelRecordFromServer)(e.body);
-        return _.default.call(t.id, !1, !1, null), e.body.id
+        return f.default.call(t.id, !1, !1, null), e.body.id
       } catch (t) {
         var e;
-        throw (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === g.AbortCodes.QUARANTINED && (0, l.default)(), t
+        throw (null == t ? void 0 : null === (e = t.body) || void 0 === e ? void 0 : e.code) === h.AbortCodes.QUARANTINED && (0, l.default)(), t
       }
     },
     _openCachedDMChannel(e, t) {
       let n = c.default.getDMFromUserId(e),
         i = null != n ? c.default.getChannel(n) : null;
-      return null != i ? (null == t || t(), null != (0, o.getRootNavigationRefIfInExperiment)() ? (0, u.transitionTo)(g.Routes.CHANNEL(g.ME, i.id), {
+      return null != i ? (null == t || t(), null != (0, o.getRootNavigationRefIfInExperiment)() ? (0, u.transitionTo)(h.Routes.CHANNEL(h.ME, i.id), {
         navigationReplace: !0
-      }) : h.default.selectPrivateChannel(i.id), i) : null
+      }) : E.default.selectPrivateChannel(i.id), i) : null
     },
     async ensurePrivateChannel(e) {
       let t = this._getRecipients(e),
-        n = await i.default.post({
-          url: g.Endpoints.USER_CHANNELS,
+        n = await i.HTTP.post({
+          url: h.Endpoints.USER_CHANNELS,
           body: {
             recipients: t
           },
@@ -90,7 +91,7 @@ var i = n("872717"),
       return null != t ? t : await this.ensurePrivateChannel(e)
     },
     async getDMChannel(e) {
-      let t = await i.default.get(g.Endpoints.DM_CHANNEL(e)),
+      let t = await i.HTTP.get(h.Endpoints.DM_CHANNEL(e)),
         n = (0, d.createChannelRecordFromServer)(t.body);
       return r.default.dispatch({
         type: "CHANNEL_CREATE",
@@ -103,9 +104,9 @@ var i = n("872717"),
       return r.default.dispatch({
         type: "CHANNEL_CREATE",
         channel: t
-      }), null != (0, o.getRootNavigationRefIfInExperiment)() ? (0, u.transitionTo)(g.Routes.CHANNEL(g.ME, t.id), {
+      }), null != (0, o.getRootNavigationRefIfInExperiment)() ? (0, u.transitionTo)(h.Routes.CHANNEL(h.ME, t.id), {
         navigationReplace: !0
-      }) : h.default.selectPrivateChannel(t.id), t
+      }) : E.default.selectPrivateChannel(t.id), t
     },
     closePrivateChannel(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -118,8 +119,8 @@ var i = n("872717"),
           parent_id: void 0
         },
         silent: n
-      }), t && !__OVERLAY__ && (0, u.transitionTo)(g.Routes.FRIENDS), i.default.delete({
-        url: g.Endpoints.CHANNEL(e),
+      }), t && !__OVERLAY__ && (0, u.transitionTo)(h.Routes.FRIENDS), i.HTTP.del({
+        url: h.Endpoints.CHANNEL(e),
         query: {
           silent: n
         },
@@ -130,18 +131,18 @@ var i = n("872717"),
         s.AccessibilityAnnouncer.announce(m.default.Messages.A11Y_ANNOUNCEMENT_DM_CLOSED_FAILED)
       })
     },
-    updatePermissionOverwrite: (e, t) => i.default.put({
-      url: g.Endpoints.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
+    updatePermissionOverwrite: (e, t) => i.HTTP.put({
+      url: h.Endpoints.CHANNEL_PERMISSIONS_OVERWRITE(e, t.id),
       body: t,
       oldFormErrors: !0
     }),
-    clearPermissionOverwrite: (e, t) => i.default.delete({
-      url: g.Endpoints.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
+    clearPermissionOverwrite: (e, t) => i.HTTP.del({
+      url: h.Endpoints.CHANNEL_PERMISSIONS_OVERWRITE(e, t),
       oldFormErrors: !0
     }),
     addRecipient(e, t, n, r) {
-      return i.default.put({
-        url: g.Endpoints.CHANNEL_RECIPIENT(e, t),
+      return i.HTTP.put({
+        url: h.Endpoints.CHANNEL_RECIPIENT(e, t),
         context: {
           location: n
         },
@@ -151,12 +152,12 @@ var i = n("872717"),
     addRecipients(e, t, n, i) {
       return this.addRecipient(e, t[0], n, i).then(e => Promise.all(t.slice(1).map(t => this.addRecipient(e, t, n))).then(() => e))
     },
-    removeRecipient: (e, t) => i.default.delete({
-      url: g.Endpoints.CHANNEL_RECIPIENT(e, t),
+    removeRecipient: (e, t) => i.HTTP.del({
+      url: h.Endpoints.CHANNEL_RECIPIENT(e, t),
       oldFormErrors: !0
     }),
-    setDMOwner: (e, t) => i.default.patch({
-      url: g.Endpoints.CHANNEL(e),
+    setDMOwner: (e, t) => i.HTTP.patch({
+      url: h.Endpoints.CHANNEL(e),
       body: {
         owner: t
       },
@@ -164,8 +165,8 @@ var i = n("872717"),
     }),
     async setName(e, t) {
       let n = c.default.getChannel(e),
-        s = await i.default.patch({
-          url: g.Endpoints.CHANNEL(e),
+        s = await i.HTTP.patch({
+          url: h.Endpoints.CHANNEL(e),
           body: {
             name: t
           },
@@ -176,8 +177,8 @@ var i = n("872717"),
     },
     setIcon(e, t) {
       let n = c.default.getChannel(e);
-      i.default.patch({
-        url: g.Endpoints.CHANNEL(e),
+      i.HTTP.patch({
+        url: h.Endpoints.CHANNEL(e),
         body: {
           icon: t
         },
@@ -187,21 +188,34 @@ var i = n("872717"),
         null != e && !(null == n ? void 0 : n.isThread()) && a.default.checkGuildTemplateDirty(e)
       })
     },
-    convertToGuild: e => i.default.post({
-      url: g.Endpoints.CHANNEL_CONVERT(e),
+    setVoiceBackgroundDisplay(e, t) {
+      let n;
+      return n = t.type === g.VoiceCallBackgroundTypes.EMPTY ? t : {
+        type: t.type,
+        resource_id: t.resourceId
+      }, i.HTTP.put({
+        url: h.Endpoints.UPDATE_VOICE_CHANNEL_BACKGROUND(e),
+        body: {
+          voice_background_display: n
+        },
+        oldFormErrors: !0
+      })
+    },
+    convertToGuild: e => i.HTTP.post({
+      url: h.Endpoints.CHANNEL_CONVERT(e),
       oldFormErrors: !0
     }),
     preload(e, t) {
       r.default.dispatch({
         type: "CHANNEL_PRELOAD",
-        guildId: e === g.ME ? null : e,
+        guildId: e === h.ME ? null : e,
         channelId: t,
-        context: g.CURRENT_APP_CONTEXT
+        context: h.CURRENT_APP_CONTEXT
       })
     },
     fetchChannelStoreListing(e, t) {
-      let n = null != t ? g.Endpoints.CHANNEL_STORE_LISTING_SKU(e, t) : g.Endpoints.CHANNEL_STORE_LISTING(e);
-      return (0, f.httpGetWithCountryCodeQuery)(n).then(t => {
+      let n = null != t ? h.Endpoints.CHANNEL_STORE_LISTING_SKU(e, t) : h.Endpoints.CHANNEL_STORE_LISTING(e);
+      return (0, _.httpGetWithCountryCodeQuery)(n).then(t => {
         r.default.dispatch({
           type: "STORE_LISTING_FETCH_SUCCESS",
           channelId: e,
@@ -211,13 +225,13 @@ var i = n("872717"),
     },
     async createTextChannel(e, t, n, s) {
       let r = {
-        type: g.ChannelTypes.GUILD_TEXT,
+        type: h.ChannelTypes.GUILD_TEXT,
         name: t,
         permission_overwrites: []
       };
       null != n && (r.parent_id = n), null != s && (r.topic = s);
-      let o = await i.default.post({
-        url: g.Endpoints.GUILD_CHANNELS(e),
+      let o = await i.HTTP.post({
+        url: h.Endpoints.GUILD_CHANNELS(e),
         body: r,
         oldFormErrors: !0
       });

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return p
   }
 });
 var l = n("37983");
@@ -16,100 +16,100 @@ var a = n("446674"),
   c = n("923959"),
   E = n("305961"),
   f = n("330154"),
-  _ = n("943232"),
-  I = n("945330"),
-  h = n("599110"),
-  T = n("306160"),
-  N = n("354023"),
-  v = n("841363"),
-  m = n("49111"),
-  S = n("782340"),
-  g = n("131439");
+  h = n("943232"),
+  v = n("945330"),
+  m = n("599110"),
+  N = n("306160"),
+  _ = n("354023"),
+  I = n("841363"),
+  T = n("49111"),
+  x = n("782340"),
+  C = n("154585");
 let {
-  INVITE_OPTIONS_7_DAYS: C,
-  INVITE_OPTIONS_UNLIMITED: p
-} = N.default;
+  INVITE_OPTIONS_7_DAYS: g,
+  INVITE_OPTIONS_UNLIMITED: S
+} = _.default;
 
-function x(e) {
-  var t, n, x;
+function p(e) {
+  var t, n, p;
   let {
-    onClose: R,
-    event: A
-  } = e, O = null == A ? void 0 : A.guild_id, L = (0, a.useStateFromStores)([c.default], () => {
+    onClose: A,
+    event: L
+  } = e, y = null == L ? void 0 : L.guild_id, M = (0, a.useStateFromStores)([c.default], () => {
     var e;
-    return null != O ? null === (e = c.default.getDefaultChannel(O)) || void 0 === e ? void 0 : e.id : null
-  }, [O]), M = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(O), [O]), D = (null == M ? void 0 : M.vanityURLCode) != null && (null == M ? void 0 : M.vanityURLCode.length) > 0, {
-    enabled: y
+    return null != y ? null === (e = c.default.getDefaultChannel(y)) || void 0 === e ? void 0 : e.id : null
+  }, [y]), j = (0, a.useStateFromStores)([E.default], () => E.default.getGuild(y), [y]), R = (null == j ? void 0 : j.vanityURLCode) != null && (null == j ? void 0 : j.vanityURLCode.length) > 0, {
+    enabled: D
   } = r.default.useExperiment({
-    guildId: null != O ? O : "",
+    guildId: null != y ? y : T.EMPTY_STRING_SNOWFLAKE_ID,
     location: "bd50e8_1"
   }, {
-    autoTrackExposure: D
+    autoTrackExposure: R
   }), {
-    channel_id: U,
-    id: j
-  } = null != A ? A : {}, V = (0, a.useStateFromStores)([f.default], () => {
-    let e = null != U ? U : L;
+    channel_id: G,
+    id: V
+  } = null != L ? L : {}, O = (0, a.useStateFromStores)([f.default], () => {
+    let e = null != G ? G : M;
     return null == e ? null : f.default.getInvite(e)
-  }, [U, L]);
-  if (null == A) return R(), null;
-  let P = y && null !== (t = null == M ? void 0 : M.vanityURLCode) && void 0 !== t ? t : null == V ? void 0 : V.code,
-    G = null != P ? (0, i.generateInviteKeyFromExtraData)({
-      baseCode: P,
-      guildScheduledEventId: j
+  }, [G, M]);
+  if (null == L) return A(), null;
+  let U = D && null !== (t = null == j ? void 0 : j.vanityURLCode) && void 0 !== t ? t : null == O ? void 0 : O.code,
+    B = null != U ? (0, i.generateInviteKeyFromExtraData)({
+      baseCode: U,
+      guildScheduledEventId: V
     }) : null,
-    b = null == G || null == V,
-    H = (0, u.default)(null != G ? G : ""),
-    B = null !== (n = null == V ? void 0 : V.maxAge) && void 0 !== n ? n : C.value,
-    F = null !== (x = null == V ? void 0 : V.maxUses) && void 0 !== x ? x : p.value;
+    b = null == B || null == O,
+    P = (0, u.default)(null != B ? B : ""),
+    F = null !== (n = null == O ? void 0 : O.maxAge) && void 0 !== n ? n : g.value,
+    w = null !== (p = null == O ? void 0 : O.maxUses) && void 0 !== p ? p : S.value;
   return (0, l.jsxs)("div", {
-    className: g.container,
+    className: C.container,
     children: [(0, l.jsx)(s.Clickable, {
-      onClick: R,
-      className: g.close,
-      "aria-label": S.default.Messages.CLOSE,
-      children: (0, l.jsx)(I.default, {})
+      onClick: A,
+      className: C.close,
+      "aria-label": x.default.Messages.CLOSE,
+      children: (0, l.jsx)(v.default, {})
     }), (0, l.jsx)(d.default, {
       children: (0, l.jsx)("div", {
-        className: g.iconContainer,
-        children: (0, l.jsx)(_.default, {
+        className: C.iconContainer,
+        children: (0, l.jsx)(h.default, {
           height: 30,
           width: 30,
-          className: g.icon
+          className: C.icon
         })
       })
     }), (0, l.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
-      className: g.header,
-      children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_HEADER
+      className: C.header,
+      children: x.default.Messages.GUILD_EVENT_CREATED_MODAL_HEADER
     }), (0, l.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: g.body,
-      children: S.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
+      className: C.body,
+      children: x.default.Messages.GUILD_EVENT_CREATED_MODAL_BODY
     }), (0, l.jsxs)("div", {
-      className: g.invite,
+      className: C.invite,
       children: [(0, l.jsx)(o.RawInviteCopyInputConnected, {
-        value: H,
+        value: P,
         autoFocus: !1,
         onCopy: e => {
           if (b) return;
-          (0, T.copy)(e);
-          let t = (0, v.getChannelTypeFromEntity)(A.entity_type);
-          h.default.track(m.AnalyticEvents.COPY_INSTANT_INVITE, {
-            server: A.guild_id,
-            channel: U,
+          (0, N.copy)(e);
+          let t = (0, I.getChannelTypeFromEntity)(L.entity_type);
+          m.default.track(T.AnalyticEvents.COPY_INSTANT_INVITE, {
+            server: L.guild_id,
+            channel: G,
             channel_type: t,
-            location: m.InstantInviteSources.GUILD_EVENTS,
-            code: V.code,
-            guild_scheduled_event_id: null == A ? void 0 : A.id
+            location: T.InstantInviteSources.GUILD_EVENTS,
+            code: O.code,
+            guild_scheduled_event_id: null == L ? void 0 : L.id
           })
         }
-      }), (null == M ? void 0 : M.vanityURLCode) == null && (0, l.jsx)(s.Text, {
+      }), (null == j ? void 0 : j.vanityURLCode) == null && (0, l.jsx)(s.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        className: g.inviteDetail,
-        children: (0, N.maxAgeString)(B, F)
+        className: C.inviteDetail,
+        children: (0, _.maxAgeString)(F, w)
       })]
     })]
   })

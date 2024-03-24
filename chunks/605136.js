@@ -18,7 +18,7 @@ var i = n("316693"),
   r = n("299039");
 
 function a(e) {
-  e.permissions = i.default.deserialize(e.permissions)
+  e.permissions = i.deserialize(e.permissions)
 }
 
 function o(e) {
@@ -26,7 +26,7 @@ function o(e) {
   return {
     id: e.id,
     name: e.name,
-    permissions: i.default.deserialize(e.permissions),
+    permissions: i.deserialize(e.permissions),
     mentionable: e.mentionable,
     position: e.position,
     originalPosition: e.position,
@@ -47,8 +47,8 @@ function l(e, t) {
     i = {};
   return t.sort((t, n) => {
     var i, s;
-    let a = t.id === e ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
-      o = n.id === e ? 1 / 0 : -(null !== (s = n.originalPosition) && void 0 !== s ? s : n.position);
+    let a = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
+      o = e === n.id ? 1 / 0 : -(null !== (s = n.originalPosition) && void 0 !== s ? s : n.position);
     return a === o ? r.default.compare(t.id, n.id) : a < o ? -1 : a === o ? 0 : 1
   }).forEach((e, t) => {
     e.position = n - t, i[e.id] = e

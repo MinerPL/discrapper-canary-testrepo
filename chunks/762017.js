@@ -32,10 +32,6 @@ let o = {
     inlineRequire: () => E("578165").default,
     neverLoadBeforeConnectionOpen: !0
   },
-  ClydeAuthorizeManager: {
-    actions: ["MESSAGE_FAILED_CLYDE_CONSENT"],
-    inlineRequire: () => E("887418").default
-  },
   CommunicationDisabledManager: {
     inlineRequire: () => E("658536").default,
     loadAfterConnectionOpen: !0
@@ -44,6 +40,11 @@ let o = {
     inlineRequire: () => E("447868").default,
     loadRightBeforeConnectionOpen: !0,
     hasStoreChangeListeners: !0
+  },
+  CustomStatusManager: {
+    actions: ["USER_SETTINGS_PROTO_UPDATE", "POST_CONNECTION_OPEN"],
+    inlineRequire: () => E("864088").default,
+    loadAfterConnectionOpen: !0
   },
   DeadchatPromptManager: {
     actions: ["POST_CONNECTION_OPEN", "IDLE"],
@@ -58,17 +59,13 @@ let o = {
     actions: ["EMOJI_INTERACTION_INITIATED"],
     inlineRequire: () => E("531150").default
   },
-  InventoryDataManager: {
-    actions: ["EMOJI_INTERACTION_INITIATED"],
-    inlineRequire: () => E("338169").default
-  },
   EntityVersionsManager: {
     actions: ["GUILD_CREATE", "DELETED_ENTITY_IDS"],
     inlineRequire: () => E("382022").default,
     loadRightBeforeConnectionOpen: !0
   },
   ExplicitMediaManager: {
-    actions: ["CHANNEL_SELECT", "LOAD_MESSAGES_SUCCESS", "MESSAGE_CREATE", "MESSAGE_UPDATE", "SEARCH_FINISH", "LOAD_FORUM_POSTS", "LOAD_ARCHIVED_THREADS_SUCCESS", "LOAD_THREADS_SUCCESS", "LOGOUT", "LOAD_PINNED_MESSAGES_SUCCESS", "USER_SETTINGS_PROTO_UPDATE", "CHANNEL_RTC_UPDATE_CHAT_OPEN"],
+    actions: ["CHANNEL_SELECT", "LOAD_MESSAGES_SUCCESS", "MESSAGE_CREATE", "MESSAGE_UPDATE", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH", "LOAD_FORUM_POSTS", "LOAD_ARCHIVED_THREADS_SUCCESS", "LOAD_THREADS_SUCCESS", "LOGOUT", "LOAD_PINNED_MESSAGES_SUCCESS", "USER_SETTINGS_PROTO_UPDATE", "CHANNEL_RTC_UPDATE_CHAT_OPEN"],
     inlineRequire: () => E("983850").default,
     neverLoadBeforeConnectionOpen: !0
   },
@@ -104,6 +101,11 @@ let o = {
     inlineRequire: () => E("902801").default,
     neverLoadBeforeConnectionOpen: !0
   },
+  SignUpManager: {
+    actions: ["POST_CONNECTION_OPEN"],
+    inlineRequire: () => E("674487").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
   GuildOnboardingManager: {
     actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT", "GUILD_DELETE"],
     inlineRequire: () => E("999243").default,
@@ -133,7 +135,7 @@ let o = {
     inlineRequire: () => E("589636").default
   },
   HangStatusManager: {
-    actions: ["VOICE_CHANNEL_SELECT", "LOGOUT"],
+    actions: ["VOICE_CHANNEL_SELECT", "LOGOUT", "GUILD_MEMBER_UPDATE"],
     inlineRequire: () => E("360557").default,
     hasStoreChangeListeners: !0
   },
@@ -158,7 +160,7 @@ let o = {
     inlineRequire: () => E("332336").default
   },
   MessageCodedLinkManager: {
-    actions: ["POST_CONNECTION_OPEN", "MESSAGE_UPDATE", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_AROUND_SUCCESS", "LOAD_RECENT_MENTIONS_SUCCESS", "LOAD_PINNED_MESSAGES_SUCCESS", "SEARCH_FINISH", "GUILD_FEED_FETCH_SUCCESS"],
+    actions: ["POST_CONNECTION_OPEN", "MESSAGE_UPDATE", "LOAD_MESSAGES_SUCCESS", "LOAD_MESSAGES_AROUND_SUCCESS", "LOAD_RECENT_MENTIONS_SUCCESS", "LOAD_PINNED_MESSAGES_SUCCESS", "SEARCH_FINISH", "MOD_VIEW_SEARCH_FINISH", "GUILD_FEED_FETCH_SUCCESS"],
     inlineRequire: () => E("149681").default
   },
   MessageManager: {
@@ -174,7 +176,7 @@ let o = {
     loadAfterConnectionOpen: !0
   },
   OverlayUsageStatsManager: {
-    actions: __OVERLAY__ ? ["MESSAGE_ACKED", "MESSAGE_CREATE"] : ["OVERLAY_FOCUSED", "OVERLAY_NOTIFICATION_EVENT", "OVERLAY_SET_UI_LOCKED", "OVERLAY_WIDGET_CHANGED", "OVERLAY_MESSAGE_EVENT_ACTION", "RUNNING_GAMES_CHANGE", "SOUNDBOARD_SET_OVERLAY_ENABLED", "MESSAGE_ACKED", "MESSAGE_CREATE", "WINDOW_FOCUS", "RTC_CONNECTION_STATE", "AUDIO_TOGGLE_SELF_MUTE"],
+    actions: __OVERLAY__ ? ["MESSAGE_ACKED", "MESSAGE_CREATE"] : ["OVERLAY_FOCUSED", "OVERLAY_NOTIFICATION_EVENT", "OVERLAY_SET_UI_LOCKED", "OVERLAY_WIDGET_CHANGED", "OVERLAY_MESSAGE_EVENT_ACTION", "RUNNING_GAMES_CHANGE", "SOUNDBOARD_SET_OVERLAY_ENABLED", "MESSAGE_ACKED", "MESSAGE_CREATE", "WINDOW_FOCUS", "RTC_CONNECTION_STATE", "AUDIO_TOGGLE_SELF_MUTE", "OVERLAY_SUCCESSFULLY_SHOWN"],
     inlineRequire: () => E("488507").default,
     neverLoadBeforeConnectionOpen: !0
   },
@@ -271,6 +273,10 @@ let o = {
     actions: ["MEDIA_ENGINE_NOISE_CANCELLATION_ERROR"],
     inlineRequire: () => E("104545").default
   },
+  GPUWorkaroundManager: {
+    actions: ["POST_CONNECTION_OPEN"],
+    inlineRequire: () => E("41377").default
+  },
   HighFiveManager: {
     actions: ["VOICE_CHANNEL_EFFECT_SEND", "HIGH_FIVE_COMPLETE"],
     inlineRequire: () => E("536813").default
@@ -278,11 +284,6 @@ let o = {
   NativeCrashManager: {
     actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
     inlineRequire: () => E("352690").default
-  },
-  ChannelEmojisManager: {
-    actions: ["CHANNEL_SELECT"],
-    inlineRequire: () => E("915633").default,
-    neverLoadBeforeConnectionOpen: !0
   },
   GuestManager: {
     actions: ["POST_CONNECTION_OPEN"],
@@ -321,13 +322,33 @@ let o = {
     neverLoadBeforeConnectionOpen: !0
   },
   QuestsManager: {
-    actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CLOSE"],
+    actions: ["POST_CONNECTION_OPEN", "QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_SEND_HEARTBEAT_FAILURE", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "STREAM_START", "STREAM_CREATE", "STREAM_CLOSE", "PASSIVE_UPDATE_V1", "VOICE_STATE_UPDATES", "EMBEDDED_ACTIVITY_INBOUND_UPDATE", "EMBEDDED_ACTIVITY_INBOUND_UPDATE_V2"],
     inlineRequire: () => E("319405").default,
     neverLoadBeforeConnectionOpen: !0
   },
   VoiceChannelGameActivityManager: {
-    actions: ["PRESENCE_UPDATES", "POST_CONNECTION_OPEN", "VOICE_STATE_UPDATES", "RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
+    actions: ["RUNNING_GAMES_CHANGE", "VOICE_CHANNEL_SELECT"],
     inlineRequire: () => E("282655").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
+  InappropriateConversationsManager: {
+    actions: ["VIBING_WUMPUS_PLAY_MUSIC", "VIBING_WUMPUS_STOP_MUSIC", "VIBING_WUMPUS_PAUSE_MUSIC"],
+    inlineRequire: () => E("874200").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
+  ContentInventoryManager: {
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE"],
+    inlineRequire: () => E("389295").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
+  RunningGameHeartbeatManager: {
+    actions: ["RUNNING_GAMES_CHANGE", "LOGOUT", "CONNECTION_CLOSED", "POST_CONNECTION_OPEN"],
+    inlineRequire: () => E("34226").default,
+    neverLoadBeforeConnectionOpen: !0
+  },
+  TenureRewardManager: {
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "ENTITLEMENT_FETCH_APPLICATION_SUCCESS", "ENTITLEMENT_CREATE", "ENTITLEMENT_UPDATE", "ENTITLEMENT_DELETE", "LOGOUT"],
+    inlineRequire: () => E("881717").default,
     neverLoadBeforeConnectionOpen: !0
   }
 };

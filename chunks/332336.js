@@ -1,24 +1,25 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return A
+    return R
   }
 }), E("222007");
 var t = E("913144"),
   o = E("689988"),
   n = E("525065"),
-  r = E("178406");
-let a = {},
-  i = {},
-  I = null;
-async function s(e, _) {
-  null == a[e] && (a[e] = new Set), a[e].add(_), null == i[e] && (i[e] = Date.now()), S(e) && await T(e)
+  r = E("299039"),
+  a = E("178406");
+let i = {},
+  I = {},
+  s = null;
+async function T(e, _) {
+  null == i[e] && (i[e] = new Set), i[e].add(_), null == I[e] && (I[e] = Date.now()), N(e) && await S(e)
 }
 
-function T(e) {
-  if (null == a[e]) return;
-  let _ = Array.from(a[e]);
-  a[e] = new Set, i[e] = Date.now(), requestAnimationFrame(async () => {
+function S(e) {
+  if (null == i[e]) return;
+  let _ = Array.from(i[e]);
+  i[e] = new Set, I[e] = Date.now(), requestAnimationFrame(async () => {
     await t.default.dispatch({
       type: "MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH",
       guildId: e,
@@ -27,15 +28,15 @@ function T(e) {
   })
 }
 
-function S(e) {
-  let _ = a[e];
+function N(e) {
+  let _ = i[e];
   if (null == _) return !1;
   let E = _.size >= function(e) {
       var _;
       let E = null !== (_ = n.default.getMemberCount(e)) && void 0 !== _ ? _ : 0;
       return E >= 75e3 ? 10 : 2
     }(e),
-    t = i[e];
+    t = I[e];
   if (E) return !0;
   if (null == t) return !1;
   let o = Date.now() - t,
@@ -47,33 +48,35 @@ function S(e) {
   return r
 }
 
-function N(e) {
-  a[e] = new Set, i[e] = null
+function O(e) {
+  i[e] = new Set, I[e] = null
 }
-class O extends o.default {
+class A extends o.default {
   handleInitialize() {
-    null == I && null == I && (I = setInterval(() => {
-      for (let e in a) S(e) && T(e)
+    null == s && null == s && (s = setInterval(() => {
+      r.default.forEachKey(i, e => {
+        N(e) && S(e)
+      })
     }, 1e4))
   }
   handleGuildMemberUpdate(e, _) {
-    let E = r.default.isInitialized(e);
-    if (E) return s(e, _)
+    let E = a.default.isInitialized(e);
+    if (E) return T(e, _)
   }
   handleGuildMemberRemove(e, _) {
-    let E = r.default.isInitialized(e);
-    if (E) return s(e, _)
+    let E = a.default.isInitialized(e);
+    if (E) return T(e, _)
   }
   handleGuildDelete(e) {
     let _ = e.guild.id,
-      E = r.default.isInitialized(_);
-    E && N(_)
+      E = a.default.isInitialized(_);
+    E && O(_)
   }
   handleGuildMemberSearchSuccess(e) {
     let {
       guildId: _
-    } = e, E = r.default.isInitialized(_);
-    E && N(_)
+    } = e, E = a.default.isInitialized(_);
+    E && O(_)
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -85,4 +88,4 @@ class O extends o.default {
     }
   }
 }
-var A = new O
+var R = new A

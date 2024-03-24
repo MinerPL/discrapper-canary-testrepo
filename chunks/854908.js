@@ -1,56 +1,53 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return u
   }
 });
-var i = n("37983"),
-  E = n("884691"),
+var i = n("37983");
+n("884691");
+var E = n("446674"),
   o = n("77078"),
-  r = n("446674"),
-  l = n("437822"),
-  s = n("393414"),
-  c = n("271938"),
-  a = n("489622"),
-  I = n("861348"),
-  S = n("170213"),
-  A = n("49111"),
-  _ = n("782340"),
-  N = n("876680");
+  r = n("393414"),
+  s = n("271938"),
+  l = n("489622"),
+  c = n("861348"),
+  I = n("170213"),
+  S = n("49111"),
+  a = n("782340"),
+  _ = n("97911");
 
-function u() {
-  return (0, i.jsxs)(a.default, {
-    color: a.NoticeColors.DANGER,
-    className: N.nagbar,
+function A() {
+  return (0, i.jsxs)(l.default, {
+    color: l.NoticeColors.DANGER,
+    className: _.nagbar,
     children: [(0, i.jsx)(o.Text, {
       tag: "span",
       color: "always-white",
       variant: "text-md/normal",
-      children: _.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR
-    }), (0, i.jsx)(a.NoticeButtonAnchor, {
-      href: S.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
+      children: a.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR
+    }), (0, i.jsx)(l.NoticeButtonAnchor, {
+      href: I.SafetyHubLinks.WARNING_SYSTEM_HELPCENTER_LINK,
       children: (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         color: "always-white",
-        children: _.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR_CTA
+        children: a.default.Messages.SAFETY_HUB_STANDALONE_PAGE_NAGBAR_CTA
       })
     })]
   })
 }
 
-function T() {
+function N() {
   return (0, i.jsx)("div", {
-    className: N.pageContainer,
-    children: (0, i.jsx)(I.default, {})
+    className: _.pageContainer,
+    children: (0, i.jsx)(c.default, {})
   })
 }
 
-function L() {
-  let e = (0, r.useStateFromStores)([c.default], () => c.default.getSuspendedUserToken());
-  return null == e && (0, s.transitionTo)(A.Routes.LOGIN), E.useEffect(() => {
-    l.default.getExperiments()
-  }, []), (0, i.jsxs)("div", {
-    className: N.container,
-    children: [(0, i.jsx)(u, {}), (0, i.jsx)(T, {})]
+function u() {
+  let e = (0, E.useStateFromStores)([s.default], () => s.default.getSuspendedUserToken());
+  return null == e && (0, r.transitionTo)(S.Routes.LOGIN), (0, i.jsxs)("div", {
+    className: _.container,
+    children: [(0, i.jsx)(A, {}), (0, i.jsx)(N, {})]
   })
 }

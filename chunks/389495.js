@@ -54,7 +54,7 @@ async function p() {
 async function m() {
   let e = Array.from(f).slice(0, 25);
   try {
-    let t = await i.default.get({
+    let t = await i.HTTP.get({
       url: c.Endpoints.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA,
       query: {
         channel_ids: e

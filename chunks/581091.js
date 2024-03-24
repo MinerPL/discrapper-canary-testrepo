@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return f
+    return _
   }
 });
 var i = n("866227"),
@@ -32,22 +32,31 @@ let a = 3600,
     years: r.default.Messages.DURATION_YEARS_AGO
   });
 
-function f(e) {
+function _(e) {
   let {
     since: t,
     getFormatter: n
-  } = e, i = s().diff(s(t), "s"), r = n(), d = s(t).format("LL");
-  return d = i < 60 ? r.minutes.format({
-    minutes: 1
-  }) : i < a ? r.minutes.format({
-    minutes: Math.floor(i / 60)
-  }) : i < o ? r.hours.format({
-    hours: Math.floor(i / a)
-  }) : i < l ? r.days.format({
-    days: Math.floor(i / o)
-  }) : i < u ? r.months.format({
-    months: Math.floor(i / l)
-  }) : r.years.format({
-    years: Math.floor(i / u)
+  } = e, i = s().diff(s(t), "s");
+  return function(e) {
+    let {
+      seconds: t,
+      getFormatter: n
+    } = e, i = n(), s = "";
+    return s = t < 60 ? i.minutes.format({
+      minutes: 1
+    }) : t < a ? i.minutes.format({
+      minutes: Math.floor(t / 60)
+    }) : t < o ? i.hours.format({
+      hours: Math.floor(t / a)
+    }) : t < l ? i.days.format({
+      days: Math.floor(t / o)
+    }) : t < u ? i.months.format({
+      months: Math.floor(t / l)
+    }) : i.years.format({
+      years: Math.floor(t / u)
+    })
+  }({
+    seconds: i,
+    getFormatter: n
   })
 }

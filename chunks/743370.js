@@ -1,24 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return s
-  }
-});
-var i = n("37983");
-n("884691");
-var l = n("77078"),
-  u = n("54239"),
-  a = n("413266"),
-  r = n("49111"),
-  d = n("782340");
-
-function s(e, t) {
-  let n = t === r.AppContext.POPOUT;
-  return n ? null : (0, i.jsx)(l.MenuItem, {
-    id: "report-raid",
-    label: d.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
-    action: () => {
-      (0, u.popLayer)(), (0, a.openReportRaidModal)(e)
-    }
-  })
+e.exports = {
+  arrowIcon: "arrowIcon__75346 icon_f14fb1",
+  hr: "hr__2fde4",
+  icon: "icon_f14fb1",
+  line: "line__936a7",
+  locale: "locale__533cd localeBase__10938",
+  localeBase: "localeBase__10938",
+  localeCurrent: "localeCurrent_b37940 localeBase__10938",
+  localeIcon: "localeIcon__2a6e2 icon_f14fb1",
+  localeImage: "localeImage__67d01",
+  localeList: "localeList_e461c7",
+  localeListClosed: "localeListClosed__8e9c8 localeList_e461c7",
+  localeListOpen: "localeListOpen__4337b localeList_e461c7",
+  localePicker: "localePicker__7b964",
+  opener: "opener__7cb66",
+  openerOpen: "openerOpen__7ba36",
+  select: "select_e35d47"
 }

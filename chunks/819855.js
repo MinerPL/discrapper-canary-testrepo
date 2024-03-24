@@ -3,38 +3,41 @@ n.r(t), n.d(t, {
   AccessibilityAnnouncer: function() {
     return i.AccessibilityAnnouncer
   },
+  AccessibilityPreferencesContext: function() {
+    return r.AccessibilityPreferencesContext
+  },
   LOW_SATURATION_THRESHOLD: function() {
-    return r.LOW_SATURATION_THRESHOLD
+    return o.LOW_SATURATION_THRESHOLD
   },
   RootThemeContextProvider: function() {
-    return o.RootThemeContextProvider
+    return s.RootThemeContextProvider
   },
   useThemeContext: function() {
-    return o.useThemeContext
+    return s.useThemeContext
   },
   ThemeContextFlags: function() {
-    return o.ThemeContextFlags
+    return s.ThemeContextFlags
   },
   setThemeFlag: function() {
-    return o.setThemeFlag
+    return s.setThemeFlag
   },
   isThemeDark: function() {
-    return s.isThemeDark
+    return l.isThemeDark
   },
   isThemeLight: function() {
-    return s.isThemeLight
+    return l.isThemeLight
   },
   getContrastingColor: function() {
-    return l.getContrastingColor
+    return a.getContrastingColor
   },
   WCAGContrastRatios: function() {
-    return l.WCAGContrastRatios
+    return a.WCAGContrastRatios
   }
 });
-var i = n("539826");
-n("413197");
-var r = n("209613");
+var i = n("539826"),
+  r = n("413197"),
+  o = n("209613");
 n("247716");
-var o = n("36763"),
-  s = n("755854"),
-  l = n("390534")
+var s = n("36763"),
+  l = n("755854"),
+  a = n("390534")

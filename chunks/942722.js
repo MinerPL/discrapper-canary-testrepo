@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return w
   }
 }), n("222007");
 var a = n("37983"),
@@ -9,44 +9,46 @@ var a = n("37983"),
   s = n("394846"),
   i = n("446674"),
   r = n("77078"),
-  o = n("272030"),
-  u = n("352674"),
-  d = n("252063"),
-  c = n("506885"),
-  f = n("981601"),
-  h = n("824563"),
-  p = n("27618"),
-  m = n("191542"),
-  E = n("697218"),
+  u = n("272030"),
+  o = n("352674"),
+  d = n("812204"),
+  c = n("685665"),
+  f = n("252063"),
+  h = n("506885"),
+  m = n("981601"),
+  p = n("824563"),
+  E = n("27618"),
+  g = n("191542"),
+  S = n("697218"),
   C = n("79798"),
-  g = n("151185"),
-  S = n("11056"),
-  _ = n("826684"),
-  I = n("599110"),
-  T = n("315102"),
-  v = n("659500"),
-  x = n("519812"),
-  N = n("158998"),
-  A = n("50885"),
-  M = n("888503"),
-  R = n("49111"),
-  j = n("782340"),
-  L = n("282730"),
-  O = n("881235");
-let y = A.default.getEnableHardwareAcceleration();
+  _ = n("151185"),
+  I = n("11056"),
+  T = n("826684"),
+  v = n("599110"),
+  x = n("315102"),
+  N = n("659500"),
+  A = n("519812"),
+  M = n("158998"),
+  R = n("50885"),
+  j = n("888503"),
+  L = n("49111"),
+  y = n("782340"),
+  O = n("591665"),
+  P = n("559571");
+let D = R.default.getEnableHardwareAcceleration();
 
-function P(e) {
+function b(e) {
   let {
     user: t,
     channel: l
   } = e, {
     status: d,
-    activities: C
-  } = (0, i.useStateFromStoresObject)([p.default, E.default, h.default], () => p.default.isFriend(t.id) || t === E.default.getCurrentUser() ? {
-    status: h.default.getStatus(t.id),
-    activities: h.default.getActivities(t.id)
-  } : {}), g = (0, i.useStateFromStores)([m.default], () => null != m.default.getTypingUsers(l.id)[t.id]), S = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), _ = (0, i.useStateFromStores)([h.default], () => h.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([p.default], () => p.default.getNickname(t.id)), T = e => {
-    (0, o.openContextMenuLazy)(e, async () => {
+    activities: c
+  } = (0, i.useStateFromStoresObject)([E.default, S.default, p.default], () => E.default.isFriend(t.id) || t === S.default.getCurrentUser() ? {
+    status: p.default.getStatus(t.id),
+    activities: p.default.getActivities(t.id)
+  } : {}), f = (0, i.useStateFromStores)([g.default], () => null != g.default.getTypingUsers(l.id)[t.id]), C = (0, i.useStateFromStores)([S.default], () => S.default.getCurrentUser()), _ = (0, i.useStateFromStores)([p.default], () => p.default.isMobileOnline(t.id)), I = (0, i.useStateFromStores)([E.default], () => E.default.getNickname(t.id)), T = e => {
+    (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("166452").then(n.bind(n, "166452"));
@@ -58,8 +60,8 @@ function P(e) {
     })
   };
   return (0, a.jsx)(r.Popout, {
-    preload: () => (0, c.default)(t.id, t.getAvatarURL(void 0, 80)),
-    renderPopout: e => (0, a.jsx)(f.default, {
+    preload: () => (0, h.default)(t.id, t.getAvatarURL(void 0, 80)),
+    renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       userId: t.id,
       channelId: l.id
@@ -67,24 +69,24 @@ function P(e) {
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
     onShiftClick: () => {
-      let e = "@".concat(N.default.getUserTag(t, {
+      let e = "@".concat(M.default.getUserTag(t, {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      v.ComponentDispatch.dispatchToLastSubscribed(R.ComponentActions.INSERT_TEXT, {
+      N.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
-      }), u.default.startTyping(l.id)
+      }), o.default.startTyping(l.id)
     },
-    children: e => (0, a.jsx)(M.default, {
+    children: e => (0, a.jsx)(j.default, {
       user: t,
-      currentUser: S,
+      currentUser: C,
       isOwner: t.id === l.ownerId,
-      ownerTooltipText: j.default.Messages.GROUP_OWNER,
-      shouldAnimateStatus: y,
-      isTyping: g,
+      ownerTooltipText: y.default.Messages.GROUP_OWNER,
+      shouldAnimateStatus: D,
+      isTyping: f,
       status: d,
-      activities: C,
+      activities: c,
       channel: l,
       onContextMenu: T,
       isMobile: _,
@@ -94,53 +96,53 @@ function P(e) {
   })
 }
 
-function b(e) {
+function U(e) {
   var t;
   let {
     integration: i,
-    channel: u
+    channel: o
   } = e, d = l.useCallback(e => {
-    (0, o.openContextMenuLazy)(e, async () => {
+    (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("348866").then(n.bind(n, "348866"));
       return t => (0, a.jsx)(e, {
         ...t,
-        channel: u,
+        channel: o,
         integration: i
       })
     })
-  }, [i, u]), h = i.application.bot, p = T.default.getApplicationIconURL({
+  }, [i, o]), c = i.application.bot, f = x.default.getApplicationIconURL({
     id: i.application.id,
     icon: i.application.icon,
     bot: null === (t = i.application) || void 0 === t ? void 0 : t.bot,
     botIconFirst: !0
   });
-  return null != h ? (0, a.jsx)(r.Popout, {
-    preload: () => (0, c.default)(h.id, p),
-    renderPopout: e => (0, a.jsx)(f.default, {
+  return null != c ? (0, a.jsx)(r.Popout, {
+    preload: () => (0, h.default)(c.id, f),
+    renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
-      userId: h.id,
-      channelId: u.id
+      userId: c.id,
+      channelId: o.id
     }),
     position: s.isMobile ? "window_center" : "left",
     spacing: 16,
-    children: e => (0, a.jsx)(S.default, {
+    children: e => (0, a.jsx)(I.default, {
       onContextMenu: d,
-      className: L.member,
+      className: O.member,
       name: (0, a.jsx)("span", {
-        className: L.username,
+        className: O.username,
         children: i.application.name
       }),
       avatar: (0, a.jsx)(r.Avatar, {
         size: r.AvatarSizes.SIZE_32,
-        src: p,
+        src: f,
         "aria-label": i.application.name,
         statusTooltip: !0
       }),
       decorators: (0, a.jsx)(C.default, {
-        className: L.botTag,
-        verified: null == h ? void 0 : h.isVerifiedBot()
+        className: O.botTag,
+        verified: null == c ? void 0 : c.isVerifiedBot()
       }),
       id: i.application.id,
       focusProps: {
@@ -156,75 +158,79 @@ function b(e) {
   }) : null
 }
 
-function D(e) {
+function w(e) {
   let {
     channel: t
-  } = e, s = E.default.getCurrentUser(), o = null == s ? void 0 : s.isStaff(), u = (0, i.useStateFromStoresArray)([E.default], () => (0, x.getRecipients)(t.recipients, E.default), [t.recipients]), {
-    installedIntegrations: f,
-    applicationsShelf: h,
-    fetched: p,
-    appsInGDMEnabled: m,
-    availableApplications: T
-  } = (0, d.usePrivateChannelIntegrationState)({
+  } = e, s = S.default.getCurrentUser(), u = null == s ? void 0 : s.isStaff(), {
+    AnalyticsLocationProvider: o
+  } = (0, c.default)(d.default.MEMBER_LIST), m = (0, i.useStateFromStoresArray)([S.default], () => (0, A.getRecipients)(t.recipients, S.default), [t.recipients]), {
+    installedIntegrations: p,
+    applicationsShelf: E,
+    fetched: g,
+    appsInGDMEnabled: x,
+    availableApplications: N
+  } = (0, f.usePrivateChannelIntegrationState)({
     channelId: t.id
   });
   l.useEffect(() => {
-    if (o)
-      for (let e of u)(0, c.default)(e.id, e.getAvatarURL(void 0, 80), {
+    if (u)
+      for (let e of m)(0, h.default)(e.id, e.getAvatarURL(void 0, 80), {
         dispatchWait: !0
       })
-  }, [o, u]), l.useEffect(() => {
-    I.default.track(R.AnalyticEvents.MEMBER_LIST_VIEWED, {
+  }, [u, m]), l.useEffect(() => {
+    v.default.track(L.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
     })
   }, [t.guild_id, t.id, t.type]);
-  let v = o && u.every(e => e.isStaff());
-  return (0, a.jsx)("div", {
-    className: O.membersWrap,
-    children: (0, a.jsxs)(r.Scroller, {
-      className: O.members,
-      fade: !0,
-      children: [(0, a.jsxs)(_.default, {
-        className: O.membersGroup,
-        children: ["".concat(j.default.Messages.MEMBERS, "—").concat(u.length, " "), v ? (0, a.jsx)(C.default, {
-          className: O.decorator,
-          type: C.default.Types.STAFF_ONLY_DM
-        }) : null]
-      }), u.map(e => (0, a.jsx)(P, {
-        user: e,
-        channel: t
-      }, e.id)), m && (f.length > 0 || p && h.length > 0) && (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(_.default, {
-          className: O.membersGroup,
-          children: "".concat(j.default.Messages.APPS, "—").concat(f.length)
-        }), f.map(e => (0, a.jsx)(b, {
-          integration: e,
+  let M = u && m.every(e => e.isStaff());
+  return (0, a.jsx)(o, {
+    children: (0, a.jsx)("div", {
+      className: P.membersWrap,
+      children: (0, a.jsxs)(r.Scroller, {
+        className: P.members,
+        fade: !0,
+        children: [(0, a.jsxs)(T.default, {
+          className: P.membersGroup,
+          children: ["".concat(y.default.Messages.MEMBERS, "—").concat(m.length, " "), M ? (0, a.jsx)(C.default, {
+            className: P.decorator,
+            type: C.default.Types.STAFF_ONLY_DM
+          }) : null]
+        }), m.map(e => (0, a.jsx)(b, {
+          user: e,
           channel: t
-        }, e.application.id)), T.length > 0 && (0, a.jsx)(S.default, {
-          className: L.member,
-          onClick: () => {
-            (0, r.openModalLazy)(async () => {
-              let {
-                default: e
-              } = await n.el("724110").then(n.bind(n, "724110"));
-              return n => (0, a.jsx)(e, {
-                ...n,
-                channelId: t.id
+        }, e.id)), x && (p.length > 0 || g && E.length > 0) && (0, a.jsxs)(a.Fragment, {
+          children: [(0, a.jsx)(T.default, {
+            className: P.membersGroup,
+            children: "".concat(y.default.Messages.APPS, "—").concat(p.length)
+          }), p.map(e => (0, a.jsx)(U, {
+            integration: e,
+            channel: t
+          }, e.application.id)), N.length > 0 && (0, a.jsx)(I.default, {
+            className: O.member,
+            onClick: () => {
+              (0, r.openModalLazy)(async () => {
+                let {
+                  default: e
+                } = await n.el("724110").then(n.bind(n, "724110"));
+                return n => (0, a.jsx)(e, {
+                  ...n,
+                  channelId: t.id
+                })
               })
-            })
-          },
-          avatar: (0, a.jsx)("div", {
-            className: O.appIconWrapper,
-            children: (0, a.jsx)(g.default, {
-              width: 18,
-              height: 18
-            })
-          }),
-          name: j.default.Messages.PRIVATE_CHANNEL_ADD_APPS
+            },
+            avatar: (0, a.jsx)("div", {
+              className: P.appIconWrapper,
+              children: (0, a.jsx)(_.default, {
+                width: 18,
+                height: 18
+              })
+            }),
+            name: y.default.Messages.PRIVATE_CHANNEL_ADD_APPS
+          })]
         })]
-      })]
+      })
     })
   })
 }

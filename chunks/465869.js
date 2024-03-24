@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   useShouldHideGuildPurchaseEntryPoints: function() {
-    return f
-  },
-  useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
     return _
   },
+  useShouldRestrictUpdatingCreatorMonetizationSettings: function() {
+    return f
+  },
   useIsMonetizationReapplicationDisabled: function() {
-    return h
+    return E
   }
 });
 var i = n("884691"),
@@ -28,15 +28,15 @@ let c = e => {
     let n = null == e ? void 0 : e.id,
       l = (0, s.useStateFromStoresArray)([o.default], () => {
         var e;
-        return null !== (e = o.default.getMonetizationRestrictions(null != n ? n : "")) && void 0 !== e ? e : []
+        return null !== (e = o.default.getMonetizationRestrictions(null != n ? n : d.EMPTY_STRING_SNOWFLAKE_ID)) && void 0 !== e ? e : []
       }),
-      u = (0, s.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : "") === o.FetchState.FETCHING);
+      u = (0, s.useStateFromStores)([o.default], () => o.default.getMonetizationRestrictionsFetchState(null != n ? n : d.EMPTY_STRING_SNOWFLAKE_ID) === o.FetchState.FETCHING);
     return {
       restrictions: l,
       restrictionsLoading: u
     }
   },
-  f = e => {
+  _ = e => {
     var t;
     let n = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
       {
@@ -50,7 +50,7 @@ let c = e => {
       restrictionsLoading: r
     }
   },
-  _ = e => {
+  f = e => {
     var t;
     let n = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
       {
@@ -65,7 +65,7 @@ let c = e => {
       restrictionsLoading: r
     }
   },
-  h = e => {
+  E = e => {
     let t = (0, s.useStateFromStores)([l.default], () => l.default.getGuild(e), [e]),
       {
         restrictions: n,

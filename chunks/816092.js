@@ -3,42 +3,43 @@ n.r(t), n.d(t, {
   default: function() {
     return u
   }
-});
+}), n("222007");
 var i = n("446674"),
   s = n("913144"),
-  l = n("42203");
-let a = {},
-  r = a;
+  l = n("299039"),
+  a = n("42203");
+let r = {},
+  d = r;
 
-function d() {
-  Object.keys(r).forEach(e => {
-    null == l.default.getChannel(e) && delete r[e]
+function h() {
+  l.default.keys(d).forEach(e => {
+    null == a.default.getChannel(e) && delete d[e]
   })
 }
-class h extends i.default.PersistedStore {
+class o extends i.default.PersistedStore {
   initialize(e) {
-    this.waitFor(l.default), r = null != e ? e : a
+    this.waitFor(a.default), d = null != e ? e : r
   }
   getState() {
-    return r
+    return d
   }
   getCollapsed() {
-    return r
+    return d
   }
   isCollapsed(e) {
-    return r[e] || !1
+    return d[e] || !1
   }
 }
-h.displayName = "CollapsedVoiceChannelStore", h.persistKey = "collapsedChannels";
-var u = new h(s.default, {
-  CONNECTION_OPEN: d,
-  OVERLAY_INITIALIZE: d,
+o.displayName = "CollapsedVoiceChannelStore", o.persistKey = "collapsedChannels";
+var u = new o(s.default, {
+  CONNECTION_OPEN: h,
+  OVERLAY_INITIALIZE: h,
   CHANNEL_COLLAPSE: function(e) {
     let {
       channelId: t
     } = e;
-    r[t] ? delete r[t] : r[t] = !0, r = {
-      ...r
+    d[t] ? delete d[t] : d[t] = !0, d = {
+      ...d
     }
   }
 })

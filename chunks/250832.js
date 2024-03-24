@@ -1,29 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return u
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var a = n("476263"),
-  s = n("328413"),
-  i = n("550473"),
-  r = function(e) {
+var l = n("414456"),
+  a = n.n(l),
+  s = n("476263"),
+  r = n("328413"),
+  o = n("454924"),
+  u = function(e) {
     let {
       guild: t,
       children: n
-    } = e, r = null != t ? (0, l.jsx)(a.default, {
+    } = e, l = null != t ? (0, i.jsx)(s.default, {
       guild: t,
-      size: a.default.Sizes.MEDIUM,
-      className: i.icon,
+      size: s.default.Sizes.MEDIUM,
+      className: a(o.icon, null == t.icon ? o.textIcon : o.imageIcon),
       active: !0
     }) : null;
-    return (0, l.jsxs)("span", {
-      children: [(0, l.jsx)(s.default, {
-        children: r
-      }), (0, l.jsx)("span", {
-        className: i.name,
+    return (0, i.jsxs)("span", {
+      children: [(0, i.jsx)(r.default, {
+        children: l
+      }), (0, i.jsx)("span", {
+        className: o.name,
         children: n
       })]
     })

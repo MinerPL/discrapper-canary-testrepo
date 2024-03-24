@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return r
+    return i
   }
-}), n("70102");
-var s = n("748820"),
-  a = n("872717"),
-  l = n("49111"),
-  r = {
+}), s("70102");
+var a = s("748820"),
+  l = s("872717"),
+  n = s("49111"),
+  i = {
     generateNonce: function() {
-      return (0, s.v4)()
+      return (0, a.v4)()
     },
     createHandoffToken: async function e(e) {
       let {
         body: {
           handoff_token: t
         }
-      } = await a.default.post({
-        url: l.Endpoints.HANDOFF,
+      } = await l.HTTP.post({
+        url: n.Endpoints.HANDOFF,
         body: {
           key: e
         },

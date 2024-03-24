@@ -2,7 +2,7 @@
 let i, s;
 n.r(t), n.d(t, {
   default: function() {
-    return H
+    return B
   }
 }), n("222007");
 var r = n("714617"),
@@ -12,97 +12,102 @@ var r = n("714617"),
   u = n("446674"),
   d = n("913144"),
   c = n("429928"),
-  f = n("837374"),
-  _ = n("662285"),
-  h = n("845579"),
-  g = n("374363"),
-  m = n("233069"),
-  E = n("599110"),
-  p = n("964889"),
-  v = n("271938"),
+  _ = n("837374"),
+  f = n("662285"),
+  E = n("845579"),
+  h = n("374363"),
+  g = n("233069"),
+  m = n("964889"),
+  p = n("271938"),
   S = n("546463"),
   T = n("603699"),
-  I = n("686470"),
-  C = n("52028"),
+  v = n("686470"),
+  I = n("52028"),
   A = n("824563"),
-  y = n("235660"),
-  N = n("49111");
-let R = !1,
-  O = N.StatusTypes.ONLINE,
-  D = N.StatusTypes.UNKNOWN,
-  P = 0,
-  b = [],
+  C = n("235660"),
+  y = n("49111");
+let N = !1,
+  R = y.StatusTypes.ONLINE,
+  O = y.StatusTypes.UNKNOWN,
+  D = 0,
+  P = [],
   L = !1,
   M = !0,
-  U = Object.freeze([]),
-  k = [];
+  b = Object.freeze([]),
+  U = [];
 
 function w(e) {
-  return (0, p.shouldShareApplicationActivity)(e, I.default)
+  return (0, m.shouldShareApplicationActivity)(e, v.default)
 }
 
-function V(e) {
+function k(e) {
   switch (e.type) {
-    case N.ActivityTypes.LISTENING:
-      if ((0, c.default)(e)) return _.default.shouldShowActivity();
+    case y.ActivityTypes.LISTENING:
+      if ((0, c.default)(e)) return f.default.shouldShowActivity();
       if (null != e.application_id) return w(e.application_id);
       return !1;
-    case N.ActivityTypes.PLAYING:
+    case y.ActivityTypes.PLAYING:
       return null != e.application_id ? w(e.application_id) : function(e) {
         let t = S.default.getGameByName(e);
-        return null != t ? w(t.id) : h.ShowCurrentGame.getSetting()
+        return null != t ? w(t.id) : E.ShowCurrentGame.getSetting()
       }(e.name);
-    case N.ActivityTypes.STREAMING:
-    case N.ActivityTypes.WATCHING:
+    case y.ActivityTypes.STREAMING:
+    case y.ActivityTypes.WATCHING:
     default:
       return null == e.application_id || w(e.application_id)
   }
 }
 
-function G() {
+function V() {
   var e;
-  P = null !== (e = T.default.getIdleSince()) && void 0 !== e ? e : 0, L = T.default.isAFK(), M ? (O = D, F()) : O = R ? N.StatusTypes.INVISIBLE : h.StatusSetting.getSetting(), O === N.StatusTypes.ONLINE && P > 0 && (O = N.StatusTypes.IDLE);
+  if (D = null !== (e = T.default.getIdleSince()) && void 0 !== e ? e : 0, L = T.default.isAFK(), M) R = O, G();
+  else if (N) R = y.StatusTypes.INVISIBLE;
+  else {
+    let e = E.StatusSetting.getSetting();
+    R = e !== y.StatusTypes.UNKNOWN ? e : y.StatusTypes.ONLINE
+  }
+  R === y.StatusTypes.ONLINE && D > 0 && (R = y.StatusTypes.IDLE);
   let t = !1,
-    n = M || O === N.StatusTypes.INVISIBLE ? [] : C.default.getActivities().filter(V);
-  !a(b, n) && (b = n, t = !0);
-  let i = y.default.getRemoteActivities();
-  if (U !== i && (U = i, t = !0), t) {
-    let e = b.find(e => e.type === N.ActivityTypes.CUSTOM_STATUS),
-      t = b.filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS);
-    k = t.length > 0 ? b : null != e ? [e, ...l(U).filter(e => e.type !== N.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : l.uniqBy(U, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
+    n = M || R === y.StatusTypes.INVISIBLE ? [] : I.default.getActivities().filter(k);
+  !a(P, n) && (P = n, t = !0);
+  let i = C.default.getRemoteActivities();
+  if (b !== i && (b = i, t = !0), t) {
+    let e = P.find(e => e.type === y.ActivityTypes.CUSTOM_STATUS),
+      t = P.filter(e => e.type !== y.ActivityTypes.CUSTOM_STATUS);
+    U = t.length > 0 ? P : null != e ? [e, ...l(b).filter(e => e.type !== y.ActivityTypes.CUSTOM_STATUS).uniqBy(e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name)).value()] : l.uniqBy(b, e => "".concat(e.type, ":").concat(e.application_id, ":").concat(e.name))
   }
 }
 
-function F() {
+function G() {
   i = void 0, s = void 0
 }
 
-function x() {
-  M = !1, D = N.StatusTypes.UNKNOWN, G(), A.default.setCurrentUserOnConnectionOpen(O, k)
+function F() {
+  M = !1, O = y.StatusTypes.UNKNOWN, V(), A.default.setCurrentUserOnConnectionOpen(R, U)
 }
-class B extends u.default.Store {
+class x extends u.default.Store {
   initialize() {
-    this.waitFor(T.default, g.default, C.default, y.default, I.default, S.default), this.syncWith([C.default], G)
+    this.waitFor(T.default, h.default, I.default, C.default, v.default, S.default), this.syncWith([I.default], V)
   }
   getLocalPresence() {
     return {
-      status: O,
-      since: P,
-      activities: b,
+      status: R,
+      since: D,
+      activities: P,
       afk: L,
       broadcast: s
     }
   }
   getStatus() {
-    return O
+    return R
   }
   getActivities() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? k : b
+    return e ? U : P
   }
   getPrimaryActivity() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    return e ? k[0] : b[0]
+    return e ? U[0] : P[0]
   }
   getApplicationActivity(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -116,50 +121,47 @@ class B extends u.default.Store {
     return i
   }
 }
-B.displayName = "SelfPresenceStore";
-var H = new B(d.default, {
-  START_SESSION: G,
+x.displayName = "SelfPresenceStore";
+var B = new x(d.default, {
+  START_SESSION: V,
   CONNECTION_OPEN: function() {
-    x(), .001 > Math.random() && E.default.track(N.AnalyticEvents.GUILD_JOIN_FEEDBACK, {
-      reason: "status_on_connection",
-      rating: O
-    })
+    F()
   },
-  CONNECTION_OPEN_SUPPLEMENTAL: x,
-  OVERLAY_INITIALIZE: x,
-  CONNECTION_CLOSED: G,
-  IDLE: G,
-  AFK: G,
-  RUNNING_GAMES_CHANGE: G,
-  STREAMING_UPDATE: G,
-  USER_SETTINGS_PROTO_UPDATE: G,
-  LOCAL_ACTIVITY_UPDATE: G,
-  SPOTIFY_PLAYER_STATE: G,
-  SPOTIFY_PLAYER_PLAY: G,
-  USER_CONNECTIONS_UPDATE: G,
-  SESSIONS_REPLACE: G,
-  RPC_APP_DISCONNECTED: G,
-  LIBRARY_FETCH_SUCCESS: G,
-  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: G,
+  CONNECTION_OPEN_SUPPLEMENTAL: F,
+  OVERLAY_INITIALIZE: F,
+  CONNECTION_CLOSED: V,
+  IDLE: V,
+  AFK: V,
+  RUNNING_GAMES_CHANGE: V,
+  STREAMING_UPDATE: V,
+  USER_SETTINGS_PROTO_UPDATE: V,
+  LOCAL_ACTIVITY_UPDATE: V,
+  SPOTIFY_PLAYER_STATE: V,
+  SPOTIFY_PLAYER_PLAY: V,
+  USER_CONNECTIONS_UPDATE: V,
+  SESSIONS_REPLACE: V,
+  RPC_APP_DISCONNECTED: V,
+  LIBRARY_FETCH_SUCCESS: V,
+  LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: V,
   LOGOUT: function() {
-    M = !0, D = O, G()
+    M = !0, O = R, V()
   },
-  EMBEDDED_ACTIVITY_CLOSE: G,
-  EMBEDDED_ACTIVITY_OPEN: G,
+  EMBEDDED_ACTIVITY_CLOSE: V,
+  EMBEDDED_ACTIVITY_OPEN: V,
   FORCE_INVISIBLE: function(e) {
-    return R = e.invisible, G()
+    return N = e.invisible, V()
   },
   WINDOW_FOCUS: function() {
-    return R = !1, G()
+    return N = !1, V()
   },
   BROADCAST_START: function(e) {
-    i = e.broadcast, s = (0, f.broadcastToServer)(e.broadcast)
+    i = e.broadcast, s = (0, _.broadcastToServer)(e.broadcast)
   },
-  BROADCAST_STOP: F,
+  BROADCAST_STOP: G,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    t instanceof m.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === v.default.getId() && (i = void 0, s = void 0)
+    t instanceof g.ChannelRecordBase && (null == t ? void 0 : t.isBroadcastChannel()) && (null == t ? void 0 : t.ownerId) === p.default.getId() && (i = void 0, s = void 0)
   }
 })

@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var n = l("872717"),
-  a = l("49111"),
-  s = {
+var i = n("872717"),
+  l = n("49111"),
+  a = {
     updateNote(e, t) {
-      n.default.put({
-        url: a.Endpoints.NOTE(e),
+      i.HTTP.put({
+        url: l.Endpoints.NOTE(e),
         body: {
           note: t
         },

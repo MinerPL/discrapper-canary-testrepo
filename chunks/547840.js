@@ -18,7 +18,7 @@ var s = l("37983"),
   g = l("599110"),
   h = l("49111"),
   x = l("782340"),
-  p = l("710362");
+  p = l("423789");
 
 function N(e) {
   var t;
@@ -29,11 +29,11 @@ function N(e) {
     setCurrentStep: I,
     disableTracking: v,
     previousPromptIndex: O
-  } = e, j = n.useRef(null), R = (0, a.default)([c.default], () => c.default.getRulesPrompt(l.id)), [b, C] = n.useState(null !== (t = null == R ? void 0 : R.response) && void 0 !== t && t), S = (0, a.default)([c.default], () => c.default.get(l.id)), T = (0, o.default)(), _ = n.useRef(null), M = n.useRef(null), B = (0, r.isThemeDark)(T) ? "linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))" : "linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))", D = n.useCallback(async () => {
-    if (null != S && null != R) {
+  } = e, j = n.useRef(null), R = (0, a.useStateFromStores)([c.default], () => c.default.getRulesPrompt(l.id)), [b, S] = n.useState(null !== (t = null == R ? void 0 : R.response) && void 0 !== t && t), C = (0, a.useStateFromStores)([c.default], () => c.default.get(l.id)), T = (0, o.default)(), _ = n.useRef(null), M = n.useRef(null), B = (0, r.isThemeDark)(T) ? "linear-gradient(to top, rgba(54, 57, 63, 1), rgba(54, 57, 63, 0))" : "linear-gradient(to top, rgba(242, 243, 245, 1), rgba(242, 243, 245, 0))", D = n.useCallback(async () => {
+    if (null != C && null != R) {
       try {
         await u.default.submitVerificationForm(l.id, {
-          ...S,
+          ...C,
           formFields: [{
             ...R,
             response: b
@@ -42,11 +42,11 @@ function N(e) {
       } catch {}
       E()
     }
-  }, [l.id, S, R, b, E]);
+  }, [l.id, C, R, b, E]);
 
   function A(e) {
     let [t] = e;
-    t.isIntersecting && C(!0)
+    t.isIntersecting && S(!0)
   }
   return (n.useEffect(() => {
     let e = new IntersectionObserver(A, {

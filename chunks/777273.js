@@ -1,19 +1,19 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   fetchUserAffinities: function() {
-    return r
+    return i
   }
 });
-var n = a("872717"),
-  i = a("913144"),
-  s = a("843823"),
-  l = a("49111");
+var n = s("872717"),
+  r = s("913144"),
+  a = s("843823"),
+  l = s("49111");
 
-function r() {
+function i() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  return s.default.needsRefresh() ? (i.default.dispatch({
+  return a.default.needsRefresh() ? (r.default.dispatch({
     type: "LOAD_USER_AFFINITIES"
-  }), n.default.get({
+  }), n.HTTP.get({
     url: l.Endpoints.USER_AFFINITIES,
     retries: e ? 3 : 0,
     oldFormErrors: !0
@@ -21,12 +21,12 @@ function r() {
     let {
       body: t
     } = e;
-    i.default.dispatch({
+    r.default.dispatch({
       type: "LOAD_USER_AFFINITIES_SUCCESS",
       affinities: t
     })
   }, () => {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "LOAD_USER_AFFINITIES_FAILURE"
     })
   })) : Promise.resolve()

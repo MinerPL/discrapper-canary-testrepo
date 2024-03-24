@@ -21,11 +21,11 @@ var l = a("37983"),
   I = a("430312"),
   _ = a("305961"),
   x = a("697218"),
-  v = a("928201"),
-  S = a("387111"),
+  S = a("928201"),
+  v = a("387111"),
   C = a("158998"),
   N = a("590456"),
-  p = a("933488");
+  p = a("345696");
 
 function T(e) {
   var t;
@@ -33,13 +33,13 @@ function T(e) {
     guildId: a,
     welcomeMessage: s,
     className: T
-  } = e, A = (0, c.default)(), j = (0, r.default)([_.default], () => _.default.getGuild(a)), M = (0, r.default)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.default)([f.default], () => f.default.useReducedMotion), F = (0, r.default)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.default)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, O = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), y = n.useMemo(() => {
+  } = e, A = (0, c.default)(), j = (0, r.useStateFromStores)([_.default], () => _.default.getGuild(a)), M = (0, r.useStateFromStores)([f.default], () => f.default.syncProfileThemeWithUserTheme), D = (0, r.useStateFromStores)([f.default], () => f.default.useReducedMotion), F = (0, r.useStateFromStores)([x.default], () => x.default.getUser(null == s ? void 0 : s.authorIds[0])), L = (0, r.useStateFromStores)([x.default], () => x.default.getCurrentUser()), R = (0, E.default)(null == F ? void 0 : F.id, a), [b] = (0, g.default)(F, R), G = M ? A : null !== (t = (0, m.getProfileTheme)(b)) && void 0 !== t ? t : A, y = (0, u.useToken)(u.tokens.colors.BACKGROUND_SECONDARY, G).hex(), O = n.useMemo(() => {
     var e;
     return null !== (e = null == s ? void 0 : s.authorIds) && void 0 !== e ? e : []
   }, [s]);
   n.useEffect(() => {
-    o.default.requestMembersById(a, y)
-  }, [a, y]), n.useEffect(() => {
+    o.default.requestMembersById(a, O)
+  }, [a, O]), n.useEffect(() => {
     null != F && (0, h.default)(F.id, F.getAvatarURL(a, 48), {
       guildId: a
     })
@@ -71,7 +71,7 @@ function T(e) {
       }), (0, l.jsx)("div", {
         className: p.avatarBorder,
         style: {
-          backgroundColor: null != b ? (0, d.int2rgba)(b, 1) : O
+          backgroundColor: null != b ? (0, d.int2rgba)(b, 1) : y
         }
       }), (0, l.jsxs)("div", {
         className: p.welcomeMessageContent,
@@ -79,8 +79,8 @@ function T(e) {
           className: p.adminUsernameContainer,
           children: [(0, l.jsx)(u.Text, {
             variant: "text-sm/semibold",
-            children: S.default.getName(a, null, F)
-          }), k ? (0, l.jsx)(v.default, {
+            children: v.default.getName(a, null, F)
+          }), k ? (0, l.jsx)(S.default, {
             className: p.ownerIcon
           }) : null]
         }), (0, l.jsx)(u.Text, {

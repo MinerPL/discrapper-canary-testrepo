@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("884691"),
-  r = n("77078"),
-  l = n("606292"),
-  s = n("688318"),
-  a = n("19287");
+var r = n("884691"),
+  i = n("77078"),
+  a = n("606292"),
+  l = n("688318"),
+  s = n("19287");
 
 function o(e) {
   let {
@@ -16,44 +16,45 @@ function o(e) {
     guildId: n,
     size: o,
     showPending: u = !1,
-    showTryItOut: d = !1,
-    animateOnHover: c = !1,
-    avatarDecorationOverride: m,
-    avatarOverride: f
+    showTryItOut: c = !1,
+    animateOnHover: d = !1,
+    avatarDecorationOverride: f,
+    avatarOverride: m
   } = e, {
     avatarSrc: _,
     isAvatarAnimating: E,
-    eventHandlers: T
-  } = (0, a.useAnimatedAvatarSrc)({
+    eventHandlers: I
+  } = (0, s.useAnimatedAvatarSrc)({
     user: t,
     guildId: n,
-    size: (0, r.getAvatarSize)(o),
+    size: (0, i.getAvatarSize)(o),
     showPending: u,
-    animateOnHover: c,
-    avatarOverride: f
+    animateOnHover: d,
+    avatarOverride: m
   }), {
-    avatarPlaceholderSrc: I,
-    avatarDecorationSrc: P,
-    eventHandlers: p
-  } = (0, s.default)({
+    avatarPlaceholderSrc: T,
+    avatarDecorationSrc: p,
+    eventHandlers: S
+  } = (0, l.default)({
     user: t,
-    size: (0, l.getDecorationSizeForAvatarSize)(o),
+    guildId: null != n ? n : void 0,
+    size: (0, a.getDecorationSizeForAvatarSize)(o),
     showPending: u,
-    animateOnHover: c,
-    avatarDecorationOverride: m,
-    showTryItOut: d
-  }), S = i.useCallback(() => {
-    T.onMouseEnter(), p.onMouseEnter()
-  }, [T, p]), R = i.useCallback(() => {
-    T.onMouseLeave(), p.onMouseLeave()
-  }, [T, p]);
+    animateOnHover: d,
+    avatarDecorationOverride: f,
+    showTryItOut: c
+  }), P = r.useCallback(() => {
+    I.onMouseEnter(), S.onMouseEnter()
+  }, [I, S]), R = r.useCallback(() => {
+    I.onMouseLeave(), S.onMouseLeave()
+  }, [I, S]);
   return {
-    avatarPlaceholderSrc: I,
-    avatarDecorationSrc: P,
+    avatarPlaceholderSrc: T,
+    avatarDecorationSrc: p,
     avatarSrc: _,
     isAnimating: E,
     eventHandlers: {
-      onMouseEnter: S,
+      onMouseEnter: P,
       onMouseLeave: R
     }
   }

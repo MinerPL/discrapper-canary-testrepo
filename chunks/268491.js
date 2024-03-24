@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return _
   }
 });
 var i = n("446674"),
@@ -10,24 +10,26 @@ var i = n("446674"),
   a = n("353927");
 let o = r.ApplicationStreamPresets.PRESET_VIDEO,
   l = r.ApplicationStreamResolutions.RESOLUTION_720,
-  u = r.ApplicationStreamFPS.FPS_30;
-class d extends i.default.PersistedStore {
+  u = r.ApplicationStreamFPS.FPS_30,
+  d = !0;
+class c extends i.default.PersistedStore {
   initialize(e) {
     if (null != e) {
-      var t;
-      o = null !== (t = e.preset) && void 0 !== t ? t : r.ApplicationStreamPresets.PRESET_VIDEO, l = e.resolution, u = e.fps
+      var t, n;
+      o = null !== (t = e.preset) && void 0 !== t ? t : r.ApplicationStreamPresets.PRESET_VIDEO, l = e.resolution, u = e.fps, d = null === (n = e.soundshareEnabled) || void 0 === n || n
     }
   }
   getState() {
     return {
       preset: o,
       resolution: l,
-      fps: u
+      fps: u,
+      soundshareEnabled: d
     }
   }
 }
-d.displayName = "ApplicationStreamingSettingsStore", d.persistKey = "ApplicationStreamingSettingStore";
-var c = new d(s.default, {
+c.displayName = "ApplicationStreamingSettingsStore", c.persistKey = "ApplicationStreamingSettingStore";
+var _ = new c(s.default, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function(e) {
     let {
       settings: t
@@ -41,8 +43,9 @@ var c = new d(s.default, {
     let {
       preset: t,
       resolution: n,
-      frameRate: i
-    } = e, s = !1;
-    return null != t && (o = t, s = !0), null != n && (l = n, s = !0), null != i && (u = i, s = !0), s
+      frameRate: i,
+      soundshareEnabled: s
+    } = e, r = !1;
+    return null != t && (o = t, r = !0), null != n && (l = n, r = !0), null != i && (u = i, r = !0), null != s && (d = s, r = !0), r
   }
 })

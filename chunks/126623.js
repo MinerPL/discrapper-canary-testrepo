@@ -1,22 +1,23 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return c
+    return m
   },
   useCustomizeCommunityPromptHelpText: function() {
-    return m
+    return f
   }
 });
 var a = l("446674"),
   n = l("679653"),
   o = l("42203"),
-  r = l("27618"),
-  i = l("697218"),
-  s = l("449008"),
-  u = l("782340");
+  r = l("305961"),
+  i = l("27618"),
+  s = l("697218"),
+  u = l("449008"),
+  d = l("782340");
 
-function d(e, t, l) {
-  return 0 === e.length ? "" : (l ? u.default.Messages.ONBOARDING_HELP_TEXT_ADD_ROLES_ALSO : u.default.Messages.ONBOARDING_HELP_TEXT_ADD_ROLES).format({
+function c(e, t, l) {
+  return 0 === e.length ? "" : (l ? d.default.Messages.ONBOARDING_HELP_TEXT_ADD_ROLES_ALSO : d.default.Messages.ONBOARDING_HELP_TEXT_ADD_ROLES).format({
     count: e.length,
     extraCount: Math.max(e.length - 2, 0),
     role1: e[0],
@@ -25,69 +26,69 @@ function d(e, t, l) {
   })
 }
 
-function c(e) {
+function m(e) {
+  let {
+    guild: t,
+    prompt: l,
+    selectedRoleIds: m,
+    selectedChannelIds: f,
+    itemHook: h
+  } = e, v = (0, a.useStateFromStores)([r.default], () => null != t ? r.default.getRoles(t.id) : void 0), g = (0, a.useStateFromStoresArray)([o.default, s.default, i.default], () => Array.from(f).map(e => o.default.getChannel(e)).filter(u.isNotNullish).map(e => (0, n.computeChannelName)(e, s.default, i.default, !0))), x = Array.from(m).map(e => {
+    var t;
+    return null === (t = (null != v ? v : {})[e]) || void 0 === t ? void 0 : t.name
+  }).filter(u.isNotNullish).map(e => "@".concat(e)), p = (null == l ? void 0 : l.singleSelect) ? "" : d.default.Messages.ONBOARDING_CHOOSE_ALL_OPTIONS, C = "";
+  if (0 === g.length && x.length > 0) p = c(x, h);
+  else if (g.length > 0) {
+    var N, j;
+    N = g, j = h, p = 0 === N.length ? "" : d.default.Messages.ONBOARDING_HELP_TEXT_ADD_CHANNELS.format({
+      count: N.length,
+      extraCount: Math.max(N.length - 2, 0),
+      channel1: N[0],
+      channel2: N[1],
+      itemHook: j
+    }), x.length > 0 && (C = c(x, h, !0))
+  }
+  return {
+    helpText: p,
+    helpTextAdditional: C
+  }
+}
+
+function f(e) {
   let {
     guild: t,
     prompt: l,
     selectedRoleIds: c,
     selectedChannelIds: m,
     itemHook: f
-  } = e, h = (0, a.useStateFromStoresArray)([o.default, i.default, r.default], () => Array.from(m).map(e => o.default.getChannel(e)).filter(s.isNotNullish).map(e => (0, n.computeChannelName)(e, i.default, r.default, !0))), v = Array.from(c).map(e => {
-    var l, a;
-    return null === (l = (null !== (a = null == t ? void 0 : t.roles) && void 0 !== a ? a : {})[e]) || void 0 === l ? void 0 : l.name
-  }).filter(s.isNotNullish).map(e => "@".concat(e)), g = (null == l ? void 0 : l.singleSelect) ? "" : u.default.Messages.ONBOARDING_CHOOSE_ALL_OPTIONS, x = "";
-  if (0 === h.length && v.length > 0) g = d(v, f);
-  else if (h.length > 0) {
-    var p, C;
-    p = h, C = f, g = 0 === p.length ? "" : u.default.Messages.ONBOARDING_HELP_TEXT_ADD_CHANNELS.format({
-      count: p.length,
-      extraCount: Math.max(p.length - 2, 0),
-      channel1: p[0],
-      channel2: p[1],
-      itemHook: C
-    }), v.length > 0 && (x = d(v, f, !0))
-  }
-  return {
-    helpText: g,
-    helpTextAdditional: x
-  }
-}
-
-function m(e) {
-  let {
-    guild: t,
-    prompt: l,
-    selectedRoleIds: d,
-    selectedChannelIds: c,
-    itemHook: m
-  } = e, f = (0, a.useStateFromStoresArray)([o.default, i.default, r.default], () => Array.from(c).map(e => o.default.getChannel(e)).filter(s.isNotNullish).map(e => (0, n.computeChannelName)(e, i.default, r.default, !0))), h = Array.from(d).map(e => {
-    var l, a;
-    return null === (l = (null !== (a = null == t ? void 0 : t.roles) && void 0 !== a ? a : {})[e]) || void 0 === l ? void 0 : l.name
-  }).filter(s.isNotNullish).map(e => "@".concat(e)), v = (null == l ? void 0 : l.singleSelect) ? "" : u.default.Messages.ONBOARDING_CHOOSE_ALL_OPTIONS;
-  return 0 === f.length && h.length > 0 ? v = u.default.Messages.CUSTOMIZE_COMMUNITY_ADD_ROLES.format({
-    count: h.length,
-    extraCount: Math.max(h.length - 2, 0),
-    role1: h[0],
-    role2: h[1],
-    itemHook: m
-  }) : f.length > 0 && 0 === h.length ? v = u.default.Messages.CUSTOMIZE_COMMUNITY_ADD_CHANNELS.format({
-    count: f.length,
-    extraCount: Math.max(f.length - 2, 0),
-    channel1: f[0],
-    channel2: f[1],
-    itemHook: m
-  }) : f.length > 0 && h.length > 0 && (v = u.default.Messages.CUSTOMIZE_COMMUNITY_ADD_CHANNELS_AND_ROLES.format({
-    channelCount: f.length,
-    extraChannelCount: Math.max(f.length - 2, 0),
-    channel1: f[0],
-    channel2: f[1],
-    itemHook: m,
-    roleCount: h.length,
-    extraRoleCount: Math.max(h.length - 2, 0),
-    role1: h[0],
-    role2: h[1]
+  } = e, h = (0, a.useStateFromStores)([r.default], () => null != t ? r.default.getRoles(t.id) : void 0), v = (0, a.useStateFromStoresArray)([o.default, s.default, i.default], () => Array.from(m).map(e => o.default.getChannel(e)).filter(u.isNotNullish).map(e => (0, n.computeChannelName)(e, s.default, i.default, !0))), g = Array.from(c).map(e => {
+    var t;
+    return null === (t = (null != h ? h : {})[e]) || void 0 === t ? void 0 : t.name
+  }).filter(u.isNotNullish).map(e => "@".concat(e)), x = (null == l ? void 0 : l.singleSelect) ? "" : d.default.Messages.ONBOARDING_CHOOSE_ALL_OPTIONS;
+  return 0 === v.length && g.length > 0 ? x = d.default.Messages.CUSTOMIZE_COMMUNITY_ADD_ROLES.format({
+    count: g.length,
+    extraCount: Math.max(g.length - 2, 0),
+    role1: g[0],
+    role2: g[1],
+    itemHook: f
+  }) : v.length > 0 && 0 === g.length ? x = d.default.Messages.CUSTOMIZE_COMMUNITY_ADD_CHANNELS.format({
+    count: v.length,
+    extraCount: Math.max(v.length - 2, 0),
+    channel1: v[0],
+    channel2: v[1],
+    itemHook: f
+  }) : v.length > 0 && g.length > 0 && (x = d.default.Messages.CUSTOMIZE_COMMUNITY_ADD_CHANNELS_AND_ROLES.format({
+    channelCount: v.length,
+    extraChannelCount: Math.max(v.length - 2, 0),
+    channel1: v[0],
+    channel2: v[1],
+    itemHook: f,
+    roleCount: g.length,
+    extraRoleCount: Math.max(g.length - 2, 0),
+    role1: g[0],
+    role2: g[1]
   })), {
-    helpText: v,
+    helpText: x,
     helpTextAdditional: ""
   }
 }

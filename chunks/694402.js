@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), l("424973");
 var n = l("37983");
@@ -10,48 +10,49 @@ var a = l("446674"),
   s = l("77078"),
   i = l("851387"),
   r = l("477566"),
-  o = l("70919"),
-  d = l("861370"),
-  u = l("957255"),
-  c = l("228220"),
-  f = l("893455"),
-  m = l("782340");
+  o = l("454273"),
+  d = l("70919"),
+  u = l("861370"),
+  c = l("957255"),
+  f = l("228220"),
+  m = l("893455"),
+  I = l("782340");
 
-function I(e, t) {
+function T(e, t) {
   var l;
-  let I = (0, a.useStateFromStores)([u.default], () => {
-      let l = u.default.getHighestRole(e);
-      return !u.default.isRoleHigher(e, l, t)
+  let T = (0, a.useStateFromStores)([c.default], () => {
+      let l = c.default.getHighestRole(e);
+      return !c.default.isRoleHigher(e, l, t)
     }),
-    T = [],
-    N = (0, f.default)(e, t);
-  null != N && T.push(N);
-  let E = (0, d.default)({
+    N = [],
+    E = (0, m.default)(e, t);
+  null != E && N.push(E);
+  let h = (0, u.default)({
     id: t.id,
-    label: m.default.Messages.COPY_ID_ROLE
+    label: I.default.Messages.COPY_ID_ROLE
   });
-  null != E && T.push(E);
-  let h = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) === null,
-    g = t.managed && !h,
-    p = null != t && t.id === e.id;
-  return !I && !g && !p && T.push((0, n.jsx)(s.MenuGroup, {
+  null != h && N.push(h);
+  let g = (null === (l = t.tags) || void 0 === l ? void 0 : l.guild_connections) === null,
+    p = t.managed && !g,
+    S = null != t && (0, o.isEveryoneRoleId)(e.id, t.id);
+  return !T && !p && !S && N.push((0, n.jsx)(s.MenuGroup, {
     children: (0, n.jsx)(s.MenuItem, {
       id: "delete-role",
-      label: m.default.Messages.DELETE,
+      label: I.default.Messages.DELETE,
       color: "danger",
-      icon: c.default,
+      icon: f.default,
       action: () => {
         r.default.show({
-          title: m.default.Messages.SETTINGS_ROLES_DELETE_TITLE,
-          body: m.default.Messages.SETTINGS_ROLES_DELETE_BODY.format({
+          title: I.default.Messages.SETTINGS_ROLES_DELETE_TITLE,
+          body: I.default.Messages.SETTINGS_ROLES_DELETE_BODY.format({
             name: t.name
           }),
-          cancelText: m.default.Messages.CANCEL,
+          cancelText: I.default.Messages.CANCEL,
           onConfirm: async () => {
-            h && await (0, o.putRoleConnectionsConfigurations)(e.id, t.id, []), i.default.deleteRole(e.id, t.id)
+            g && await (0, d.putRoleConnectionsConfigurations)(e.id, t.id, []), i.default.deleteRole(e.id, t.id)
           }
         })
       }
     })
-  }, "delete-role")), T
+  }, "delete-role")), N
 }

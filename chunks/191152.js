@@ -16,7 +16,7 @@ async function d(e) {
   });
   try {
     var a, d;
-    let s = await l.default.get({
+    let s = await l.HTTP.get({
         url: i.Endpoints.ACTIVE_CHANNELS(e),
         query: {
           channel_limit: t

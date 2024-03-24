@@ -15,21 +15,21 @@ var a = s("37983"),
   c = s("872173"),
   S = s("374363"),
   E = s("145131"),
-  f = s("810567"),
-  T = s("258078"),
-  m = s("674268"),
-  _ = s("585653"),
+  T = s("810567"),
+  f = s("258078"),
+  _ = s("674268"),
+  m = s("585653"),
   g = s("989691"),
   h = s("862853"),
-  I = s("47317"),
-  N = s("926622");
+  N = s("216210"),
+  I = s("890957");
 
 function p(e) {
   let {
     contents: t,
     content: s,
     onChange: n
-  } = e, l = (0, m.hasBit)(t, o.DismissibleContent[s]);
+  } = e, l = (0, _.hasBit)(t, o.DismissibleContent[s]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(u.FormSwitch, {
       value: l,
@@ -37,8 +37,8 @@ function p(e) {
         n(s), l ? (0, c.removeDismissedContent)(o.DismissibleContent[s]) : (0, c.addDismissedContent)(o.DismissibleContent[s])
       },
       children: (0, a.jsx)(u.FormText, {
-        size: T.default.Sizes.SIZE_16,
-        className: N.marginTop4,
+        size: f.default.Sizes.SIZE_16,
+        className: I.marginTop4,
         children: "".concat(s.toLowerCase(), " (").concat(o.DismissibleContent[s], ")")
       })
     })
@@ -70,7 +70,7 @@ function A() {
       dailyCapReached: g.default.hasUserHitDCCap(),
       dailyCapOverridden: g.default.dailyCapOverridden
     })),
-    [T, m] = n.useState(""),
+    [f, _] = n.useState(""),
     p = null !== (e = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null === (e = S.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
@@ -93,42 +93,42 @@ function A() {
       })
     },
     R = t.map(e => o.DismissibleContent[e]),
-    M = A.filter(e => e.toLowerCase().includes(T.toLowerCase())).filter(e => !R.includes(e)),
-    v = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(T.toLowerCase())).sort((e, t) => e.localeCompare(t));
+    M = A.filter(e => e.toLowerCase().includes(f.toLowerCase())).filter(e => !R.includes(e)),
+    D = Object.keys(o.DismissibleContent).filter(e => !R.includes(e)).filter(e => !A.includes(e)).filter(e => e.toLowerCase().includes(f.toLowerCase())).sort((e, t) => e.localeCompare(t));
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(u.FormSection, {
       title: "Dismissible Content Fatigue",
       tag: u.FormTitleTags.H1,
-      className: N.marginBottom60,
+      className: I.marginBottom60,
       children: [(0, a.jsx)(u.FormItem, {
         children: (0, a.jsxs)(u.FormText, {
-          className: N.marginBottom4,
+          className: I.marginBottom4,
           children: ["Daily Cap Reached: ", s ? "Yes" : "No"]
         })
       }), (0, a.jsx)(u.FormSwitch, {
         value: l,
-        onChange: _.overrideDismissibleContentFramework,
+        onChange: m.overrideDismissibleContentFramework,
         children: "Override Dismissible Content Daily Cap"
       }), (0, a.jsxs)(u.FormItem, {
         children: [(0, a.jsx)(u.Button, {
-          onClick: () => (0, _.resetDismissibleContentFrameworkStore)(),
+          onClick: () => (0, m.resetDismissibleContentFrameworkStore)(),
           children: "Reset DismissibleContentFrameworkStore"
         }), (0, a.jsx)(u.FormText, {
-          className: N.marginTop4,
+          className: I.marginTop4,
           children: "This will reset the daily cap and content seen during session"
         })]
       })]
     }), (0, a.jsxs)(u.FormSection, {
       title: "Dismissible Contents",
       tag: u.FormTitleTags.H1,
-      children: [(0, a.jsx)(f.default, {
-        className: N.marginBottom20,
-        size: f.default.Sizes.LARGE,
-        query: T,
-        onChange: m,
-        onClear: () => m("")
+      children: [(0, a.jsx)(T.default, {
+        className: I.marginBottom20,
+        size: T.default.Sizes.LARGE,
+        query: f,
+        onChange: _,
+        onClear: () => _("")
       }), (0, a.jsxs)(u.FormItem, {
-        className: I.buttonsContainer,
+        className: N.buttonsContainer,
         children: [(0, a.jsx)(u.Button, {
           onClick: c.clearDismissedContents,
           children: "Clear All Dismissed Contents"
@@ -137,9 +137,9 @@ function A() {
           children: "Check All Dismissed Contents"
         })]
       }), t.length > 0 ? (0, a.jsxs)("div", {
-        className: N.marginBottom20,
+        className: I.marginBottom20,
         children: [(0, a.jsx)("div", {
-          className: N.marginBottom20,
+          className: I.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recently Shown"
           })
@@ -150,7 +150,7 @@ function A() {
         })]
       }) : null, M.length > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("div", {
-          className: N.marginBottom20,
+          className: I.marginBottom20,
           children: (0, a.jsx)(u.FormTitle, {
             children: "Recent Overrides"
           })
@@ -160,12 +160,12 @@ function A() {
           handleChange: x
         })]
       }) : null, (0, a.jsx)(E.default, {
-        className: i(N.marginBottom20, N.marginTop20),
+        className: i(I.marginBottom20, I.marginTop20),
         children: (0, a.jsx)(u.FormTitle, {
           children: "Available Dismissible Contents"
         })
       }), (0, a.jsx)(C, {
-        items: v,
+        items: D,
         dismissedContents: p,
         handleChange: x
       })]

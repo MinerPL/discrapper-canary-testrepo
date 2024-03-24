@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983");
@@ -10,22 +10,22 @@ var l = n("65597"),
   s = n("760679"),
   i = n("242260"),
   r = n("315841"),
-  o = n("124824"),
-  u = n("981913"),
+  u = n("124824"),
+  o = n("981913"),
   d = n("258901"),
   c = n("472037"),
   f = n("814711"),
   h = n("782340");
 
-function p(e) {
+function m(e) {
   let {
     channel: t
-  } = e, n = (0, l.default)([i.default], () => i.default.getDrawMode()), p = (null == n ? void 0 : n.type) === r.DrawableType.EMOJI_HOSE, m = (e, t) => {
+  } = e, n = (0, l.useStateFromStores)([i.default], () => i.default.getDrawMode()), m = (null == n ? void 0 : n.type) === r.DrawableType.EMOJI_HOSE, p = (e, t) => {
     null != e ? (0, s.setDrawMode)({
       type: r.DrawableType.EMOJI_HOSE,
       emojiName: e.name,
       emojiId: e.id
-    }) : p && (0, s.setDrawMode)(null), null == t || t()
+    }) : m && (0, s.setDrawMode)(null), null == t || t()
   };
   return (0, a.jsx)(f.default, {
     renderPopout: e => {
@@ -33,22 +33,22 @@ function p(e) {
         closePopout: n,
         onFocus: l
       } = e;
-      return (0, a.jsx)(o.default, {
+      return (0, a.jsx)(u.default, {
         children: (0, a.jsx)(d.default, {
           title: h.default.Messages.SHARED_CANVAS_DRAW_MODE_EMOJI_HOSE,
           channel: t,
           closePopout: n,
           onFocus: l,
-          onSelectEmoji: e => m(e, n)
+          onSelectEmoji: e => p(e, n)
         })
       })
     },
-    children: e => (0, a.jsx)(u.default, {
+    children: e => (0, a.jsx)(o.default, {
       ...e,
       iconComponent: c.default,
-      isActive: p || e.isActive,
+      isActive: m || e.isActive,
       onClick: t => {
-        m(null), e.onClick(t)
+        p(null), e.onClick(t)
       }
     })
   })

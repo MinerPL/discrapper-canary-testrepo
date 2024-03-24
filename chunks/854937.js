@@ -1,53 +1,53 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("77078"),
-  r = l("616225"),
-  o = l("387111"),
-  u = l("996866"),
-  d = l("228974");
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("77078"),
+  r = n("616225"),
+  o = n("387111"),
+  u = n("996866"),
+  d = n("8626");
 
 function c(e) {
   let {
     activity: t,
-    user: l,
-    channelId: a,
+    user: n,
+    channelId: l,
     guildId: c,
     source: f,
-    size: m,
-    className: p,
-    ...E
+    size: p,
+    className: m,
+    ...h
   } = e, {
-    tooltip: T,
-    loading: _,
-    disabled: S,
-    onClick: h
-  } = (0, u.useSpotifySyncAction)(t, l, f, o.default.getNickname(c, a, l));
-  return (0, n.jsx)(i.Tooltip, {
-    text: T,
+    tooltip: x,
+    loading: E,
+    disabled: y,
+    onClick: g
+  } = (0, u.useSpotifySyncAction)(t, n, f, o.default.getNickname(c, l, n));
+  return (0, i.jsx)(s.Tooltip, {
+    text: x,
     children: e => {
       let {
-        onMouseEnter: l,
-        onMouseLeave: a
+        onMouseEnter: n,
+        onMouseLeave: l
       } = e;
-      return (0, n.jsx)(i.Button, {
-        ...E,
-        size: s(m, d.iconButtonSize),
-        className: s(p, d.iconButton),
-        onClick: h,
-        onMouseEnter: l,
-        onMouseLeave: a,
-        disabled: S,
-        submitting: _,
-        "aria-label": null != T ? T : t.name,
-        children: (0, n.jsx)(r.default, {
+      return (0, i.jsx)(s.Button, {
+        ...h,
+        size: a(p, d.iconButtonSize),
+        className: a(m, d.iconButton),
+        onClick: g,
+        onMouseEnter: n,
+        onMouseLeave: l,
+        disabled: y,
+        submitting: E,
+        "aria-label": null != x ? x : t.name,
+        children: (0, i.jsx)(r.default, {
           className: d.listenAlongIcon
         })
       })

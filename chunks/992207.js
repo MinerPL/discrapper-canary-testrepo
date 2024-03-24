@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return _
   }
 });
 var a = n("37983");
@@ -10,39 +10,47 @@ var l = n("414456"),
   s = n.n(l),
   i = n("446674"),
   r = n("669491"),
-  o = n("77078"),
-  u = n("191145"),
-  d = n("373469"),
-  c = n("568307"),
-  f = n("522049"),
-  h = n("956089"),
-  p = n("386045"),
-  m = n("99795"),
-  E = n("782340"),
-  C = n("75606"),
-  g = e => {
+  u = n("77078"),
+  o = n("191145"),
+  d = n("161454"),
+  c = n("584687"),
+  f = n("373469"),
+  h = n("522049"),
+  m = n("956089"),
+  p = n("56947"),
+  E = n("386045"),
+  g = n("99795"),
+  S = n("782340"),
+  C = n("688257"),
+  _ = e => {
     let {
       className: t,
       channelId: n
-    } = e, l = (0, i.useStateFromStores)([d.default, u.default, p.default, c.default], () => {
+    } = e, l = (0, p.useEnableClips)(), {
+      enableDecoupledGameClipping: _
+    } = c.default.useExperiment({
+      location: "ClipsEnabledIndicator"
+    }, {
+      autoTrackExposure: !1
+    }), I = (0, i.useStateFromStores)([f.default, o.default, E.default, d.default], () => {
       var e;
       if (null == n) return !1;
-      let t = d.default.getCurrentUserActiveStream(),
-        a = null === (e = c.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
-      return null != t && !!p.default.getSettings().clipsEnabled || null != a && !!p.default.getSettings().decoupledClipsEnabled || u.default.getParticipants(n).some(e => e.type === m.ParticipantTypes.USER && p.default.isClipsEnabledForUser(e.user.id))
+      let t = f.default.getCurrentUserActiveStream(),
+        a = null === (e = d.default.getVisibleGame()) || void 0 === e ? void 0 : e.windowHandle;
+      return null != t && !!E.default.getSettings().clipsEnabled && !!l || null != a && !!E.default.getSettings().decoupledClipsEnabled && !!_ || o.default.getParticipants(n).some(e => e.type === g.ParticipantTypes.USER && E.default.isClipsEnabledForUser(e.user.id))
     });
-    return l ? (0, a.jsxs)(o.TooltipContainer, {
-      text: E.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
-      color: o.TooltipColors.GREY,
+    return I ? (0, a.jsxs)(u.TooltipContainer, {
+      text: S.default.Messages.CLIPS_ENABLED_VIEWER_TOOLTIP,
+      color: u.TooltipColors.GREY,
       className: s(t, C.clipsEnabledIndicator),
-      children: [(0, a.jsx)(h.IconBadge, {
-        icon: f.default,
-        shape: h.BadgeShapes.ROUND_LEFT,
+      children: [(0, a.jsx)(m.IconBadge, {
+        icon: h.default,
+        shape: m.BadgeShapes.ROUND_LEFT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
         className: C.clipBadgeIcon
-      }), (0, a.jsx)(h.TextBadge, {
-        text: E.default.Messages.CLIPS_ENABLED_BADGE,
-        shape: h.BadgeShapes.ROUND_RIGHT,
+      }), (0, a.jsx)(m.TextBadge, {
+        text: S.default.Messages.CLIPS_ENABLED_BADGE,
+        shape: m.BadgeShapes.ROUND_RIGHT,
         color: r.default.unsafe_rawColors.PRIMARY_500.css,
         className: C.clipBadgeText
       })]

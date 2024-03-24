@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   resetGuildOnboardingPrompts: function() {
-    return E
-  },
-  editGuildOnboardingPrompt: function() {
     return f
   },
-  deleteGuildOnboardingPrompt: function() {
+  editGuildOnboardingPrompt: function() {
     return O
   },
-  editGuildOnboardingPrompts: function() {
+  deleteGuildOnboardingPrompt: function() {
     return S
+  },
+  editGuildOnboardingPrompts: function() {
+    return T
   },
   saveGuildOnboardingPrompts: function() {
     return m
   },
   enableGuildOnboarding: function() {
-    return T
-  },
-  editOnboarding: function() {
     return D
   },
-  validateOptionRoles: function() {
+  editOnboarding: function() {
     return A
+  },
+  validateOptionRoles: function() {
+    return G
   }
 }), n("70102"), n("222007");
 var a = n("872717"),
@@ -32,30 +32,31 @@ var a = n("872717"),
   r = n("385976"),
   d = n("837648"),
   o = n("42203"),
-  u = n("449008"),
+  u = n("305961"),
+  N = n("449008"),
   c = n("136278"),
-  N = n("49111"),
-  _ = n("653138"),
-  I = n("782340");
+  _ = n("49111"),
+  I = n("653138"),
+  E = n("782340");
 
-function E() {
+function f() {
   l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET"
   })
 }
 
-function f(e, t, n) {
-  S(e, c.default.editedOnboardingPrompts.map(e => e.id === t ? {
+function O(e, t, n) {
+  T(e, c.default.editedOnboardingPrompts.map(e => e.id === t ? {
     ...e,
     ...n
   } : e))
 }
 
-function O(e, t) {
-  S(e, c.default.editedOnboardingPrompts.filter(e => e.id !== t))
+function S(e, t) {
+  T(e, c.default.editedOnboardingPrompts.filter(e => e.id !== t))
 }
 
-function S(e, t) {
+function T(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
   if (l.default.dispatch({
       type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT",
@@ -74,11 +75,11 @@ async function m(e, t) {
   } = (0, d.getOnboardingDropdownExperiment)(e.id);
   if (!c.default.hasChanges()) return;
   let a = c.default.editedOnboardingPrompts;
-  null != t && t.ignoreDefaultPrompt && 1 === a.length && (0, _.isDefaultPrompt)(a[0]) && (a = []);
-  let N = a.map(t => {
+  null != t && t.ignoreDefaultPrompt && 1 === a.length && (0, I.isDefaultPrompt)(a[0]) && (a = []);
+  let _ = a.map(t => {
       let a = t.options.map(t => {
         var n;
-        let a = null == t.roleIds ? t.roleIds : t.roleIds.filter(t => null != e.getRole(t)),
+        let a = null == t.roleIds ? t.roleIds : t.roleIds.filter(t => null != u.default.getRole(e.id, t)),
           l = null == t.channelIds ? t.channelIds : t.channelIds.filter(e => null != o.default.getChannel(e)),
           s = (null == t ? void 0 : null === (n = t.emoji) || void 0 === n ? void 0 : n.id) == null || null == r.default.getCustomEmojiById(t.emoji.id) ? void 0 : t.emoji.id;
         return {
@@ -91,37 +92,37 @@ async function m(e, t) {
       return {
         ...t,
         options: a,
-        type: a.length >= _.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD && n ? _.OnboardingPromptType.DROPDOWN : _.OnboardingPromptType.MULTIPLE_CHOICE
+        type: a.length >= I.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD && n ? I.OnboardingPromptType.DROPDOWN : I.OnboardingPromptType.MULTIPLE_CHOICE
       }
     }),
-    E = N.filter(e => e.inOnboarding),
-    f = N.filter(e => !0 !== e.inOnboarding),
-    O = N.map(t => g(e, N, t));
-  if (O.filter(u.isNotNullish).length > 0) throw l.default.dispatch({
+    f = _.filter(e => e.inOnboarding),
+    O = _.filter(e => !0 !== e.inOnboarding),
+    S = _.map(t => g(e, _, t));
+  if (S.filter(N.isNotNullish).length > 0) throw l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
-    errors: O
+    errors: S
   }), Error("failed to locally validate prompts");
-  if (E.length > _.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING) throw s.default.show({
-    title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-    body: I.default.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
-      numQuestions: _.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
+  if (f.length > I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING) throw s.default.show({
+    title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+    body: E.default.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
+      numQuestions: I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
     })
   }), l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED",
-    errors: O
+    errors: S
   }), Error("too many prompts in onboarding");
-  let S = [...E, ...f];
+  let T = [...f, ...O];
   l.default.dispatch({
     type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT"
   });
   try {
-    await D(e.id, {
-      prompts: S.map(_.clientPromptToServerPrompt)
+    await A(e.id, {
+      prompts: T.map(I.clientPromptToServerPrompt)
     }), l.default.dispatch({
       type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS",
       guildId: e.id,
       updates: {
-        prompts: S
+        prompts: T
       }
     })
   } catch (n) {
@@ -131,14 +132,14 @@ async function m(e, t) {
       error: t
     } = null !== (m = new(0, i.APIError)(n).getAnyErrorMessageAndField()) && void 0 !== m ? m : {};
     throw s.default.show({
-      title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-      body: [e, t].filter(u.isNotNullish).join(": ")
+      title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+      body: [e, t].filter(N.isNotNullish).join(": ")
     }), l.default.dispatch({
       type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED"
     }), Error("failed to save prompts")
   }
 }
-async function T(e, t) {
+async function D(e, t) {
   l.default.dispatch({
     type: "GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE",
     guildId: e,
@@ -147,7 +148,7 @@ async function T(e, t) {
     }
   });
   try {
-    await D(e, {
+    await A(e, {
       enabled: t
     })
   } catch (a) {
@@ -157,14 +158,14 @@ async function T(e, t) {
       error: t
     } = null !== (n = new(0, i.APIError)(a).getAnyErrorMessageAndField()) && void 0 !== n ? n : {};
     s.default.show({
-      title: I.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
-      body: [e, t].filter(u.isNotNullish).join(": ")
+      title: E.default.Messages.ONBOARDING_PROMPT_SAVE_FAILED,
+      body: [e, t].filter(N.isNotNullish).join(": ")
     })
   }
 }
-async function D(e, t) {
-  await a.default.put({
-    url: N.Endpoints.GUILD_ONBOARDING(e),
+async function A(e, t) {
+  await a.HTTP.put({
+    url: _.Endpoints.GUILD_ONBOARDING(e),
     body: t
   })
 }
@@ -174,22 +175,22 @@ function g(e, t, n) {
       optionErrors: []
     },
     l = !1;
-  return n.title.length <= 0 && (a.title = I.default.Messages.ONBOARDING_PROMPT_TITLE_REQUIRED, l = !0), n.options.length <= 0 && (a.options = I.default.Messages.ONBOARDING_PROMPT_ANSWER_REQUIRED, l = !0), n.inOnboarding && t.filter(e => e.inOnboarding).length > _.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING && (a.config = I.default.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
-    numQuestions: _.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
-  }), l = !0), a.optionErrors = n.options.map(a => A(e, t, n, a)), (l = l || a.optionErrors.some(e => null != e)) ? a : null
+  return n.title.length <= 0 && (a.title = E.default.Messages.ONBOARDING_PROMPT_TITLE_REQUIRED, l = !0), n.options.length <= 0 && (a.options = E.default.Messages.ONBOARDING_PROMPT_ANSWER_REQUIRED, l = !0), n.inOnboarding && t.filter(e => e.inOnboarding).length > I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING && (a.config = E.default.Messages.ONBOARDING_PROMPT_SAVE_TOO_MANY_PROMPTS_IN_ONBOARDING.format({
+    numQuestions: I.MAX_NUMBER_OF_ONBOARDING_PROMPTS_IN_ONBOARDING
+  }), l = !0), a.optionErrors = n.options.map(a => G(e, t, n, a)), (l = l || a.optionErrors.some(e => null != e)) ? a : null
 }
 
-function A(e, t, n, a) {
+function G(e, t, n, a) {
   var l, s, i;
   if (n.singleSelect) {
     let e = new Set(null !== (l = a.roleIds) && void 0 !== l ? l : []);
     for (let a of t)
       if (a.id !== n.id) {
         for (let t of a.options)
-          if (null != t.roleIds && t.roleIds.some(t => e.has(t))) return I.default.Messages.ONBOARDING_PROMPT_SINGLE_SELECT_UNIQUE_ROLES
+          if (null != t.roleIds && t.roleIds.some(t => e.has(t))) return E.default.Messages.ONBOARDING_PROMPT_SINGLE_SELECT_UNIQUE_ROLES
       }
   }
-  let r = (null !== (s = a.roleIds) && void 0 !== s ? s : []).filter(t => null != e.getRole(t)),
+  let r = (null !== (s = a.roleIds) && void 0 !== s ? s : []).filter(t => null != u.default.getRole(e.id, t)),
     d = (null !== (i = a.channelIds) && void 0 !== i ? i : []).filter(e => null != o.default.getChannel(e));
-  return 0 === r.length && 0 === d.length ? I.default.Messages.ONBOARDING_PROMPT_OPTION_ROLES_REQUIRED : null
+  return 0 === r.length && 0 === d.length ? E.default.Messages.ONBOARDING_PROMPT_OPTION_ROLES_REQUIRED : null
 }

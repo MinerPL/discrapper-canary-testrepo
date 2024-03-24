@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return S
   }
 }), l("424973"), l("222007");
 var n = l("37983"),
@@ -15,68 +15,69 @@ var n = l("37983"),
   c = l("978970"),
   f = l("766274"),
   m = l("26989"),
-  I = l("79798"),
-  T = l("145131"),
-  N = l("449008"),
-  E = l("991170"),
-  h = l("782340"),
-  g = l("992693");
+  I = l("305961"),
+  T = l("79798"),
+  N = l("145131"),
+  E = l("449008"),
+  h = l("991170"),
+  g = l("782340"),
+  p = l("984860");
 
-function p(e) {
+function S(e) {
   var t;
   let {
     guild: l,
-    applicationIntegration: p
-  } = e, {
-    application: S
-  } = p, O = null != S.bot ? new f.default(S.bot) : null, _ = (0, i.useStateFromStores)([m.default], () => null != O ? m.default.getMember(l.id, O.id) : null, [O, l]), A = null == O ? void 0 : O.id;
+    applicationIntegration: S
+  } = e, O = (0, i.useStateFromStores)([I.default], () => I.default.getRoles(l.id)), {
+    application: _
+  } = S, A = null != _.bot ? new f.default(_.bot) : null, C = (0, i.useStateFromStores)([m.default], () => null != A ? m.default.getMember(l.id, A.id) : null, [A, l]), x = null == A ? void 0 : A.id;
   a.useEffect(() => {
-    null != A && o.default.requestMembersById(l.id, A)
-  }, [l.id, A]);
-  let C = a.useMemo(() => {
+    null != x && o.default.requestMembersById(l.id, x)
+  }, [l.id, x]);
+  let R = a.useMemo(() => {
     var e, t, n;
-    let a = l.getRole(l.id),
-      i = null !== (t = null == _ ? void 0 : null === (e = _.roles) || void 0 === e ? void 0 : e.map(e => l.getRole(e)).filter(N.isNotNullish)) && void 0 !== t ? t : [],
-      r = null !== (n = null == a ? void 0 : a.permissions) && void 0 !== n ? n : E.default.NONE;
-    for (let e of i) r = s.default.add(r, e.permissions);
+    let a = O[l.getEveryoneRoleId()],
+      i = null !== (t = null == C ? void 0 : null === (e = C.roles) || void 0 === e ? void 0 : e.map(e => O[e]).filter(E.isNotNullish)) && void 0 !== t ? t : [],
+      r = null !== (n = null == a ? void 0 : a.permissions) && void 0 !== n ? n : h.NONE;
+    for (let e of i) r = s.add(r, e.permissions);
     return r
-  }, [l, _]);
-  return null == O ? null : (0, n.jsx)(r.Card, {
+  }, [l, O, C]);
+  return null == A ? null : (0, n.jsx)(r.Card, {
     editable: !0,
-    className: g.card,
-    children: (0, n.jsxs)(T.default, {
-      direction: T.default.Direction.VERTICAL,
-      children: [(0, n.jsxs)(T.default, {
-        align: T.default.Align.CENTER,
+    className: p.card,
+    children: (0, n.jsxs)(N.default, {
+      direction: N.default.Direction.VERTICAL,
+      children: [(0, n.jsxs)(N.default, {
+        align: N.default.Align.CENTER,
         children: [(0, n.jsx)("img", {
           alt: "",
-          src: O.getAvatarURL(l.id, 32),
-          className: g.iconWrapper
+          src: A.getAvatarURL(l.id, 32),
+          className: p.iconWrapper
         }), (0, n.jsx)(r.Text, {
           color: "header-primary",
           variant: "text-sm/normal",
-          children: h.default.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
-            user: O
+          children: g.default.Messages.INTEGRATIONS_APPLICATION_BOT_NAME.format({
+            user: A
           })
-        }), (0, n.jsx)(I.default, {
-          className: g.tag,
-          verified: O.isVerifiedBot()
+        }), (0, n.jsx)(T.default, {
+          className: p.tag,
+          verified: A.isVerifiedBot()
         })]
       }), function(e, t, l, a) {
         let i = [],
           o = [];
-        for (let e of c.OrderedPermissions) s.default.has(a, e) ? i.push(e) : o.push(e);
+        for (let e of c.OrderedPermissions) s.has(a, e) ? i.push(e) : o.push(e);
         return (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(r.FormDivider, {
-            className: g.divider
+            className: p.divider
           }), l.length > 0 ? (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(r.FormTitle, {
-              className: g.permissionHeader,
-              children: h.default.Messages.ROLES_LIST.format({
+              className: p.permissionHeader,
+              children: g.default.Messages.ROLES_LIST.format({
                 numRoles: l.length
               })
             }), (0, n.jsx)(d.default, {
-              className: g.rolePills,
+              className: p.rolePills,
               user: e,
               guild: t,
               userRoles: l,
@@ -84,14 +85,14 @@ function p(e) {
               readOnly: !0
             })]
           }) : null, i.length > 0 || o.length > 0 ? (0, n.jsx)(u.default, {
-            className: g.permissionList,
+            className: p.permissionList,
             grantedPermissions: i,
-            grantedPermissionsHeader: h.default.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
+            grantedPermissionsHeader: g.default.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
             disabledPermissions: o,
-            disabledPermissionsHeader: h.default.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
+            disabledPermissionsHeader: g.default.Messages.INTEGRATIONS_APPLICATION_DENIED_PERMISSIONS
           }) : null]
         })
-      }(O, l, null !== (t = null == _ ? void 0 : _.roles) && void 0 !== t ? t : [], C)]
+      }(A, l, null !== (t = null == C ? void 0 : C.roles) && void 0 !== t ? t : [], R)]
     })
   })
 }

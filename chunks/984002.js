@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return u
   }
 }), n("222007");
-var u = n("65597"),
+var a = n("65597"),
   r = n("853987"),
-  i = n("775416"),
-  a = e => {
-    let [t, n] = (0, u.useStateFromStoresArray)([r.default], () => [r.default.getCategoryForProduct(e), r.default.getProduct(e)]), a = (0, u.default)([i.default], () => i.default.getPurchase(e));
+  s = n("775416"),
+  u = e => {
+    let [t, n] = (0, a.useStateFromStoresArray)([r.default], () => [r.default.getCategoryForProduct(e), r.default.getProduct(e)]), u = (0, a.useStateFromStores)([s.default], () => s.default.getPurchase(e));
     return {
       category: t,
       product: n,
-      purchase: a
+      purchase: u
     }
   }

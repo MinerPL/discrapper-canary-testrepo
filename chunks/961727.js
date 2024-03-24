@@ -8,9 +8,9 @@ var n = l("37983"),
   a = l("884691"),
   s = l("414456"),
   i = l.n(s),
-  d = l("917351"),
-  r = l.n(d),
-  o = l("907002"),
+  r = l("917351"),
+  d = l.n(r),
+  o = l("146606"),
   u = l("509043"),
   c = l("446674"),
   h = l("669491"),
@@ -38,22 +38,22 @@ var n = l("37983"),
   y = l("50885"),
   B = l("921031"),
   w = l("685829"),
-  F = l("863636"),
-  H = l("380710"),
+  H = l("863636"),
+  F = l("380710"),
   U = l("469421"),
   k = l("126623"),
   P = l("15015"),
   G = l("771311"),
   W = l("667712"),
   z = l("469242"),
-  Y = l("653138"),
-  V = l("49111"),
+  V = l("653138"),
+  Y = l("49111"),
   Z = l("724210"),
   X = l("133335"),
   q = l("782340"),
-  K = l("231881"),
-  Q = l("305794"),
-  J = l("632215");
+  K = l("4767"),
+  Q = l("250455"),
+  J = l("919163");
 let $ = m.AvatarSizes.SIZE_80,
   ee = "required";
 
@@ -63,7 +63,7 @@ function et(e) {
     guild: l,
     user: s
   } = e, {
-    avatarSrc: d,
+    avatarSrc: r,
     eventHandlers: o,
     isAvatarAnimating: h
   } = (0, A.useAnimatedAvatarSrc)({
@@ -76,14 +76,14 @@ function et(e) {
     user: s,
     size: (0, g.getDecorationSizeForAvatarSize)($),
     animateOnHover: !h
-  }), C = (0, c.useStateFromStores)([O.default], () => O.default.getSelfMember(l.id)), N = (0, c.useStateFromStoresArray)([O.default], () => O.default.getMemberRoleWithPendingUpdates(l.id, s.id)), x = r(N).filter(e => l.roles.hasOwnProperty(e)).map(e => l.roles[e]).orderBy("position", "desc").value(), S = (0, v.default)(s.id, l.id);
+  }), C = (0, c.useStateFromStores)([O.default], () => O.default.getSelfMember(l.id)), N = (0, c.useStateFromStoresArray)([O.default], () => O.default.getMemberRoleWithPendingUpdates(l.id, s.id)), x = (0, c.useStateFromStores)([R.default], () => R.default.getRoles(l.id)), S = d(N).filter(e => x.hasOwnProperty(e)).map(e => x[e]).orderBy("position", "desc").value(), E = (0, v.default)(s.id, l.id);
   a.useEffect(() => {
     (0, T.default)(s.id, s.getAvatarURL(l.id, (0, m.getAvatarSize)($)), {
       guildId: l.id
     })
   }, []);
-  let E = (0, I.parseBioReact)(null == S ? void 0 : S.bio),
-    _ = y.default.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar;
+  let _ = (0, I.parseBioReact)(null == E ? void 0 : E.bio),
+    j = y.default.getEnableHardwareAcceleration() ? m.AnimatedAvatar : m.Avatar;
   return (0, n.jsxs)("div", {
     className: K.profile,
     children: [(0, n.jsx)(m.Heading, {
@@ -98,8 +98,8 @@ function et(e) {
       className: K.profileCard,
       children: [(0, n.jsx)("div", {
         ...o,
-        children: (0, n.jsx)(_, {
-          src: d,
+        children: (0, n.jsx)(j, {
+          src: r,
           avatarDecoration: f,
           size: $,
           "aria-label": s.username
@@ -113,8 +113,8 @@ function et(e) {
         variant: "text-sm/normal",
         color: "text-muted",
         className: i(J.markup, K.bio),
-        children: E
-      }), null != x && x.length > 0 && (0, n.jsxs)(n.Fragment, {
+        children: _
+      }), null != S && S.length > 0 && (0, n.jsxs)(n.Fragment, {
         children: [(0, n.jsx)("hr", {
           className: K.separator
         }), (0, n.jsx)(m.Text, {
@@ -124,12 +124,12 @@ function et(e) {
           children: q.default.Messages.ROLES
         }), (0, n.jsx)("div", {
           className: K.roles,
-          children: null == x ? void 0 : x.map(e => {
+          children: null == S ? void 0 : S.map(e => {
             var t;
             return (0, n.jsxs)("div", {
               className: K.role,
               children: [(0, n.jsx)(m.RoleCircle, {
-                color: null !== (t = e.colorString) && void 0 !== t ? t : (0, u.int2hex)(V.DEFAULT_ROLE_COLOR),
+                color: null !== (t = e.colorString) && void 0 !== t ? t : (0, u.int2hex)(Y.DEFAULT_ROLE_COLOR),
                 className: K.roleDot
               }), (0, n.jsx)(m.Text, {
                 variant: "text-xs/medium",
@@ -149,7 +149,7 @@ function el(e) {
   let {
     prompt: l,
     guild: s
-  } = e, [d, r] = a.useState(null), [u, f] = a.useState(new Set), C = null == l ? void 0 : null === (t = l.options) || void 0 === t ? void 0 : t.filter(e => u.has(e.id)), N = (0, H.getSelectedRoleIds)(C), x = (0, H.getSelectedChannelIds)(C), g = (0, c.useStateFromStoresArray)([F.default], () => F.default.getOnboardingResponsesForPrompt(s.id, l.id)), {
+  } = e, [r, d] = a.useState(null), [u, f] = a.useState(new Set), C = null == l ? void 0 : null === (t = l.options) || void 0 === t ? void 0 : t.filter(e => u.has(e.id)), N = (0, F.getSelectedRoleIds)(C), x = (0, F.getSelectedChannelIds)(C), g = (0, c.useStateFromStoresArray)([H.default], () => H.default.getOnboardingResponsesForPrompt(s.id, l.id)), {
     helpText: p,
     helpTextAdditional: E
   } = (0, k.useCustomizeCommunityPromptHelpText)({
@@ -190,7 +190,7 @@ function el(e) {
         borderColor: T.color
       },
       children: [l.isNew && (0, n.jsx)(L.TextBadge, {
-        color: (0, S.getColor)(V.Color.BRAND_260),
+        color: (0, S.getColor)(Y.Color.BRAND_260),
         text: q.default.Messages.NEW,
         className: K.newBadge
       }), (0, n.jsxs)(m.Heading, {
@@ -199,7 +199,7 @@ function el(e) {
         color: "header-primary",
         children: [l.title, l.required ? (0, n.jsx)("span", {
           className: i(K.required, {
-            [K.error]: (null == d ? void 0 : d.type) === ee
+            [K.error]: (null == r ? void 0 : r.type) === ee
           }),
           children: "*"
         }) : null]
@@ -215,7 +215,7 @@ function el(e) {
             let e = g.filter(e => !n.includes(e)),
               t = l.options.filter(t => e.includes(t.id));
             if (g.length <= t.length && l.required) {
-              r({
+              d({
                 type: ee
               });
               return
@@ -224,7 +224,7 @@ function el(e) {
               I(l, e, !1), u.delete(e.id)
             })
           }
-          f(new Set(u)), r(null)
+          f(new Set(u)), d(null)
         },
         canBeNew: !l.isNew
       }), (0, n.jsxs)(m.Text, {
@@ -242,7 +242,7 @@ function en(e) {
   let {
     prompt: l,
     guild: s
-  } = e, [d, r] = a.useState(null), [u, f] = a.useState(new Set), C = null == l ? void 0 : null === (t = l.options) || void 0 === t ? void 0 : t.filter(e => u.has(e.id)), N = (0, H.getSelectedRoleIds)(C), x = (0, H.getSelectedChannelIds)(C), g = (0, c.useStateFromStoresArray)([F.default], () => F.default.getOnboardingResponsesForPrompt(s.id, l.id)), {
+  } = e, [r, d] = a.useState(null), [u, f] = a.useState(new Set), C = null == l ? void 0 : null === (t = l.options) || void 0 === t ? void 0 : t.filter(e => u.has(e.id)), N = (0, F.getSelectedRoleIds)(C), x = (0, F.getSelectedChannelIds)(C), g = (0, c.useStateFromStoresArray)([H.default], () => H.default.getOnboardingResponsesForPrompt(s.id, l.id)), {
     helpText: p,
     helpTextAdditional: E
   } = (0, k.useCustomizeCommunityPromptHelpText)({
@@ -259,12 +259,12 @@ function en(e) {
     handleSelectOption: I
   } = (0, U.default)(s.id), _ = (e, t) => {
     if (!t && 1 === g.length && l.required) {
-      r({
+      d({
         type: ee
       });
       return
     }
-    I(l, e, null != t && t), l.singleSelect && t && l.options.forEach(e => u.delete(e.id)), t ? u.add(e.id) : u.delete(e.id), f(new Set(u)), r(null)
+    I(l, e, null != t && t), l.singleSelect && t && l.options.forEach(e => u.delete(e.id)), t ? u.add(e.id) : u.delete(e.id), f(new Set(u)), d(null)
   }, T = (0, m.useToken)(h.default.unsafe_rawColors.BRAND_500), v = (0, o.useSpring)({
     from: {
       color: l.isNew ? T.hex({
@@ -288,7 +288,7 @@ function en(e) {
         borderColor: v.color
       },
       children: [l.isNew && (0, n.jsx)(L.TextBadge, {
-        color: (0, S.getColor)(V.Color.BRAND_260),
+        color: (0, S.getColor)(Y.Color.BRAND_260),
         text: q.default.Messages.NEW,
         className: K.newBadge
       }), (0, n.jsxs)(m.Heading, {
@@ -297,7 +297,7 @@ function en(e) {
         color: "header-primary",
         children: [l.title, l.required ? (0, n.jsx)("span", {
           className: i(K.required, {
-            [K.error]: (null == d ? void 0 : d.type) === ee
+            [K.error]: (null == r ? void 0 : r.type) === ee
           }),
           children: "*"
         }) : null]
@@ -325,8 +325,8 @@ function ea(e) {
   let {
     guildId: t,
     onBrowseChannels: l
-  } = e, s = (0, f.isThemeDark)((0, x.default)()), d = (0, c.useStateFromStores)([R.default], () => R.default.getGuild(t)), r = (0, c.useStateFromStores)([b.default], () => b.default.getCurrentUser()), o = (0, N.default)("(min-width: 1344px)") && null != r, u = a.useCallback(() => {
-    (0, _.transitionTo)(V.Routes.CHANNEL(t, Z.StaticChannelRoute.CHANNEL_BROWSER)), null == l || l()
+  } = e, s = (0, f.isThemeDark)((0, x.default)()), r = (0, c.useStateFromStores)([R.default], () => R.default.getGuild(t)), d = (0, c.useStateFromStores)([b.default], () => b.default.getCurrentUser()), o = (0, N.default)("(min-width: 1344px)") && null != d, u = a.useCallback(() => {
+    (0, _.transitionTo)(Y.Routes.CHANNEL(t, Z.StaticChannelRoute.CHANNEL_BROWSER)), null == l || l()
   }, [t, l]), h = (0, c.useStateFromStores)([j.default], () => j.default.hasUnread(t, X.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), {
     onboardingPromptsRaw: g,
     newOnboardingPrompts: p,
@@ -335,35 +335,35 @@ function ea(e) {
     onboardingPrompts: v
   } = (0, P.default)(t);
   a.useEffect(() => {
-    if ((null == d ? void 0 : d.id) != null) !E.default.isFullServerPreview(d.id) && (F.default.shouldFetchPrompts(d.id) || h) && (0, w.fetchOnboardingPrompts)(d.id)
-  }, [null == d ? void 0 : d.id, h]), a.useEffect(() => {
-    if ((null == d ? void 0 : d.id) != null) {
-      if (!E.default.isFullServerPreview(d.id)) return () => {
-        (0, C.ackGuildFeature)(d.id, X.ReadStateTypes.GUILD_ONBOARDING_QUESTION, F.default.ackIdForGuild(d.id)), B.default.updateOnboardingResponses(d.id)
+    if ((null == r ? void 0 : r.id) != null) !E.default.isFullServerPreview(r.id) && (H.default.shouldFetchPrompts(r.id) || h) && (0, w.fetchOnboardingPrompts)(r.id)
+  }, [null == r ? void 0 : r.id, h]), a.useEffect(() => {
+    if ((null == r ? void 0 : r.id) != null) {
+      if (!E.default.isFullServerPreview(r.id)) return () => {
+        (0, C.ackGuildFeature)(r.id, X.ReadStateTypes.GUILD_ONBOARDING_QUESTION, H.default.ackIdForGuild(r.id)), B.default.updateOnboardingResponses(r.id)
       }
     }
-  }, [null == d ? void 0 : d.id]);
+  }, [null == r ? void 0 : r.id]);
   let A = a.useCallback(e => {
-    if (null == d) return null;
+    if (null == r) return null;
     switch (e.type) {
-      case Y.OnboardingPromptType.MULTIPLE_CHOICE:
+      case V.OnboardingPromptType.MULTIPLE_CHOICE:
         return (0, n.jsx)(en, {
           prompt: e,
-          guild: d
+          guild: r
         }, e.id);
-      case Y.OnboardingPromptType.DROPDOWN:
+      case V.OnboardingPromptType.DROPDOWN:
         return (0, n.jsx)(el, {
           prompt: e,
-          guild: d
+          guild: r
         }, e.id);
       default:
         (0, M.assertNever)(e.type)
     }
-  }, [d]);
-  if (null == d) return null;
+  }, [r]);
+  if (null == r) return null;
   if (0 === g.length) {
-    let e = (0, S.getColor)(s ? V.Color.PRIMARY_300 : V.Color.PRIMARY_500),
-      t = (0, S.getColor)(s ? V.Color.PRIMARY_700 : V.Color.PRIMARY_230);
+    let e = (0, S.getColor)(s ? Y.Color.PRIMARY_300 : Y.Color.PRIMARY_500),
+      t = (0, S.getColor)(s ? Y.Color.PRIMARY_700 : Y.Color.PRIMARY_230);
     return (0, n.jsx)("div", {
       className: Q.chat,
       children: (0, n.jsx)("div", {
@@ -423,8 +423,8 @@ function ea(e) {
           }), v.map(A)]
         })]
       }), o && (0, n.jsx)(et, {
-        guild: d,
-        user: r
+        guild: r,
+        user: d
       })]
     })
   })

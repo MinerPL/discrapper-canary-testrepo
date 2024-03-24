@@ -1,13 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("78938"),
-  i = n("782340"),
-  l = () => (0, a.jsx)(s.default, {
-    copy: i.default.Messages.NEW
-  })
+  l = n("782340"),
+  i = e => {
+    let {
+      copy: t
+    } = e;
+    return (0, a.jsx)(s.default, {
+      copy: null != t ? t : l.default.Messages.NEW
+    })
+  }

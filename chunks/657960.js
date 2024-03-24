@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return D
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("446674"),
+  l = s("884691"),
+  n = s("446674"),
   i = s("77078"),
   r = s("545158"),
   o = s("7331"),
@@ -15,135 +15,135 @@ var a = s("37983"),
   c = s("963393"),
   E = s("719887"),
   _ = s("697218"),
-  T = s("471671"),
-  I = s("37785"),
+  I = s("471671"),
+  T = s("37785"),
   S = s("599110"),
-  N = s("837008"),
-  g = s("757715"),
-  f = s("352807"),
-  A = s("417186"),
-  L = s("441901"),
-  m = s("341020"),
-  C = s("49111"),
-  O = s("988268"),
-  h = s("810367"),
-  R = s("782340"),
-  D = s("847007");
+  f = s("837008"),
+  m = s("757715"),
+  N = s("352807"),
+  g = s("417186"),
+  h = s("441901"),
+  C = s("341020"),
+  R = s("49111"),
+  x = s("988268"),
+  L = s("810367"),
+  O = s("782340"),
+  A = s("775261");
 
-function M(e) {
+function p(e) {
   let {
     onCreateTeamClick: t,
     isGuildOwner: s
   } = e;
   return (0, a.jsx)("div", {
-    className: D.selectTeamContainer,
+    className: A.selectTeamContainer,
     children: (0, a.jsx)(i.Button, {
       disabled: !s,
       onClick: t,
-      className: D.enableTicketingButton,
+      className: A.enableTicketingButton,
       fullWidth: !0,
-      children: R.default.Messages.GUILD_MONETIZATION_ENABLE_CREATE_TEAM
+      children: O.default.Messages.GUILD_MONETIZATION_ENABLE_CREATE_TEAM
     })
   })
 }
 
-function G(e) {
+function M(e) {
   let {
     guild: t,
     eligibleTeams: s,
-    isGuildOwner: l
-  } = e, [r, o] = n.useState(), {
+    isGuildOwner: n
+  } = e, [r, o] = l.useState(), {
     enableGuildMonetizationForTeam: u,
     submitting: c,
     error: E
   } = (0, d.default)(), {
     fetchSubscriptionsSettings: _
-  } = (0, N.useFetchSubscriptionsSettings)(), T = (0, g.useRoleSubscriptionSettingsDisabled)(), I = n.useMemo(() => s.map(e => ({
+  } = (0, f.useFetchSubscriptionsSettings)(), I = (0, m.useRoleSubscriptionSettingsDisabled)(), T = l.useMemo(() => s.map(e => ({
     label: e.name,
     value: e.id
   })), [s]), S = async () => {
-    let e = await u(t, r, O.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
-    e && (_(t.id), (0, f.openActionCompleteSuccessModal)({
-      Icon: m.default,
-      title: R.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
-      body: R.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
+    let e = await u(t, r, x.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS);
+    e && (_(t.id), (0, N.openActionCompleteSuccessModal)({
+      Icon: C.default,
+      title: O.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_TITLE,
+      body: O.default.Messages.GUILD_MONETIZATION_ENABLE_CONFIRMATION_SUBTITLE
     }))
   };
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
-      className: D.selectTeamContainer,
+      className: A.selectTeamContainer,
       children: [(0, a.jsx)(i.SingleSelect, {
-        className: D.teamSelect,
-        options: I,
-        placeholder: R.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
+        className: A.teamSelect,
+        options: T,
+        placeholder: O.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER,
         value: r,
-        isDisabled: 0 === I.length || T || !l,
+        isDisabled: 0 === T.length || I || !n,
         onChange: e => o(e),
-        "aria-label": R.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
+        "aria-label": O.default.Messages.GUILD_MONETIZATION_ENABLE_SELECT_PLACEHOLDER
       }), (0, a.jsx)(i.Button, {
         onClick: S,
-        className: D.enableTicketingButton,
+        className: A.enableTicketingButton,
         submitting: c,
-        disabled: null == r || T || !l,
-        children: R.default.Messages.GUILD_MONETIZATION_ENABLE_CTA
+        disabled: null == r || I || !n,
+        children: O.default.Messages.GUILD_MONETIZATION_ENABLE_CTA
       })]
     }), null != E && (0, a.jsx)(i.Text, {
-      className: D.error,
+      className: A.error,
       variant: "text-sm/normal",
       children: E.getAnyErrorMessage()
     })]
   })
 }
-var x = e => {
+var D = e => {
   let {
     guild: t
-  } = e, s = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()), d = t.isOwner(s), N = (0, o.useIsExpeditedOnboardingGuild)(t), g = (0, l.useStateFromStores)([T.default], () => T.default.isFocused()), {
-    teams: f,
-    loading: m
+  } = e, s = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()), d = t.isOwner(s), f = (0, o.useIsExpeditedOnboardingGuild)(t), m = (0, n.useStateFromStores)([I.default], () => I.default.isFocused()), {
+    teams: N,
+    loading: C
   } = (0, E.default)({
-    refreshOnDepChange: g
-  }), O = n.useMemo(() => f.filter(e => {
+    refreshOnDepChange: m
+  }), x = l.useMemo(() => N.filter(e => {
     var t;
-    return e.payout_account_status !== h.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : "", e)
-  }), [f, s]), x = O.length > 0, p = n.useCallback(async () => {
-    S.default.track(C.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
-      is_onboarding_v2: N,
-      has_eligible_team: x,
+    return e.payout_account_status !== L.PayoutAccountStatuses.BLOCKED && (0, c.isUserTeamAdministrator)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : R.EMPTY_STRING_SNOWFLAKE_ID, e)
+  }), [N, s]), D = x.length > 0, v = l.useCallback(async () => {
+    S.default.track(R.AnalyticEvents.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+      is_onboarding_v2: f,
+      has_eligible_team: D,
       guild_id: t.id,
       is_owner: d
     });
-    let e = await (0, u.generateDeveloperPortalLink)(C.RelativeMarketingURLs.DEVELOPER_PORTAL_TEAMS);
+    let e = await (0, u.generateDeveloperPortalLink)(R.RelativeMarketingURLs.DEVELOPER_PORTAL_TEAMS);
     (0, r.default)(e)
-  }, [t, d, N, x]), U = n.useCallback(e => d ? (0, a.jsx)(I.default, {
-    onClick: p,
+  }, [t, d, f, D]), G = l.useCallback(e => d ? (0, a.jsx)(T.default, {
+    onClick: v,
     children: e
-  }) : e, [p, d]);
-  return m ? (0, a.jsx)(i.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
-    children: [!d && (0, a.jsx)(A.default, {
-      className: D.nonOwnerNotice,
-      children: R.default.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
+  }) : e, [v, d]);
+  return C ? (0, a.jsx)(i.Spinner, {}) : (0, a.jsxs)(a.Fragment, {
+    children: [!d && (0, a.jsx)(g.default, {
+      className: A.nonOwnerNotice,
+      children: O.default.Messages.GUILD_MONETIZATION_ENABLE_NON_OWNER_WARNING
     }), (0, a.jsxs)(i.FormSection, {
-      title: R.default.Messages.GUILD_MONETIZATION_ENABLE_HEADER,
+      title: O.default.Messages.GUILD_MONETIZATION_ENABLE_HEADER,
       disabled: !d,
       children: [(0, a.jsx)(i.FormText, {
         type: i.FormText.Types.DESCRIPTION,
-        className: D.description,
+        className: A.description,
         disabled: !d,
-        children: R.default.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({
-          onCreateTeamHook: U
+        children: O.default.Messages.GUILD_MONETIZATION_ENABLE_DESCRIPTION.format({
+          onCreateTeamHook: G
         })
-      }), x ? (0, a.jsx)(G, {
+      }), D ? (0, a.jsx)(M, {
         guild: t,
-        eligibleTeams: O,
+        eligibleTeams: x,
         isGuildOwner: d
-      }) : (0, a.jsx)(M, {
-        onCreateTeamClick: p,
+      }) : (0, a.jsx)(p, {
+        onCreateTeamClick: v,
         isGuildOwner: d
       })]
     }), (0, a.jsx)(i.FormSection, {
-      title: R.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
-      className: D.selfDemonetization,
-      children: (0, a.jsx)(L.default, {
+      title: O.default.Messages.CREATOR_MONETIZATION_SETTINGS_DISABLE_MONETIZATION_SECTION_TITLE,
+      className: A.selfDemonetization,
+      children: (0, a.jsx)(h.default, {
         guildId: t.id,
         allPeriods: []
       })

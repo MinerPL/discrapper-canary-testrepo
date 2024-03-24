@@ -9,10 +9,10 @@ var n = l("37983"),
   s = l("446674"),
   i = l("77078"),
   r = l("404118"),
-  o = l("650509"),
-  d = l("671625"),
-  u = l("592407"),
-  c = l("990241"),
+  o = l("592407"),
+  d = l("990241"),
+  u = l("991254"),
+  c = l("182935"),
   f = l("485422"),
   m = l("957255"),
   I = l("145131"),
@@ -30,7 +30,7 @@ var n = l("37983"),
   x = l("421475"),
   R = l("49111"),
   M = l("782340"),
-  v = l("47902");
+  v = l("796308");
 
 function L(e) {
   let {
@@ -47,7 +47,7 @@ function L(e) {
     confirmText: M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE,
     cancelText: M.default.Messages.CANCEL,
     onConfirm: () => {
-      u.default.disableIntegration(l.id, a.id).catch(() => {
+      o.default.disableIntegration(l.id, a.id).catch(() => {
         r.default.show({
           title: M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR_TITLE,
           body: M.default.Messages.INTEGRATIONS_APPLICATION_REMOVE_ERROR
@@ -68,7 +68,7 @@ function j(e) {
   let {
     guild: l,
     applicationIntegration: r,
-    selectableWebhookChannels: u,
+    selectableWebhookChannels: o,
     editedWebhook: j,
     errors: b,
     canNavigate: P
@@ -109,7 +109,7 @@ function j(e) {
     })
   }), [D.bot, r, l]), {
     applicationSubscriptionListingsShown: W
-  } = (0, o.default)({
+  } = (0, u.default)({
     applicationId: D.id,
     groupListingId: D.primarySkuId,
     guildId: l.id
@@ -123,7 +123,7 @@ function j(e) {
     }), (null == D ? void 0 : D.description) != null ? (0, n.jsx)(f.default, {
       userBio: D.description,
       className: v.headerDescription
-    }) : null, B ? (0, n.jsx)(c.default, {
+    }) : null, B ? (0, n.jsx)(d.default, {
       application: D,
       canNavigate: P,
       guildId: l.id
@@ -140,7 +140,7 @@ function j(e) {
       children: [(0, n.jsx)(A.default, {
         icon: (0, n.jsx)(h.default, {}),
         title: M.default.Messages.INTEGRATIONS_APPLICATION_SUBSCRIPTION_TIERS
-      }), (0, n.jsx)(d.default, {
+      }), (0, n.jsx)(c.default, {
         applicationId: D.id,
         applicationPrimarySkuId: D.primarySkuId,
         guildId: l.id
@@ -153,7 +153,7 @@ function j(e) {
       }), G.length > 0 ? (0, n.jsx)(x.default, {
         webhooks: G,
         editedWebhook: j,
-        selectableWebhookChannels: u,
+        selectableWebhookChannels: o,
         errors: b,
         canNavigate: P
       }) : (0, n.jsx)(i.Card, {

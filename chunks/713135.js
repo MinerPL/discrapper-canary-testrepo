@@ -1,152 +1,153 @@
 "use strict";
-l.r(i), l.d(i, {
+n.r(t), n.d(t, {
   default: function() {
-    return H
+    return Y
   }
-}), l("222007"), l("702976");
-var t = l("917351"),
-  n = l.n(t),
-  r = l("376556"),
-  u = l("915639"),
-  o = l("766274"),
-  d = l("271938"),
-  s = l("305961"),
-  a = l("824563"),
-  c = l("455079"),
-  f = l("677099");
-let m = new Set,
-  _ = new Set,
-  p = {},
-  g = {},
-  h = {},
-  v = {},
-  b = {},
-  P = !1,
-  E = !1;
+}), n("222007"), n("702976");
+var i = n("917351"),
+  r = n.n(i),
+  u = n("376556"),
+  o = n("915639"),
+  _ = n("766274"),
+  l = n("271938"),
+  E = n("305961"),
+  T = n("824563"),
+  d = n("455079"),
+  a = n("677099");
+let S = new Set,
+  c = new Set,
+  I = {},
+  s = {},
+  f = {},
+  N = {},
+  A = {},
+  U = !1,
+  p = !1;
 
-function S() {
-  m.clear(), _.clear(), p = {}, g = {}, h = {}, v = {}, b = {}, P = !1
+function R() {
+  S.clear(), c.clear(), I = {}, s = {}, f = {}, N = {}, A = {}, U = !1
 }
 
-function I(e) {
+function D(e) {
   let {
-    userId: i
+    userId: t
   } = e;
-  _.add(i)
+  c.add(t)
 }
 
-function U(e) {
+function G(e) {
   let {
-    userId: i
+    userId: t
   } = e;
-  _.delete(i)
+  c.delete(t)
 }
 
 function C(e) {
-  _.delete(e.userId), h[e.userId] = n(e.mutualFriends).map(e => ({
+  c.delete(e.userId), f[e.userId] = r(e.mutualFriends).map(e => ({
     key: e.id,
-    user: new o.default(e),
-    status: a.default.getStatus(e.id)
+    user: new _.default(e),
+    status: T.default.getStatus(e.id)
   })).sortBy(e => {
     let {
-      user: i
+      user: t
     } = e;
-    return i.username.toLowerCase()
-  }).value(), v[e.userId] = e.mutualFriends.length
+    return t.username.toLowerCase()
+  }).value(), N[e.userId] = e.mutualFriends.length
 }
 
-function T() {
-  if (0 === Object.keys(b).length) return !1;
-  b = {}
+function P() {
+  if (0 === Object.keys(A).length) return !1;
+  A = {}
 }
 
-function F(e) {
-  if (null == b[e.user.id]) return !1;
-  delete b[e.user.id]
+function O(e) {
+  if (null == A[e.user.id]) return !1;
+  delete A[e.user.id]
 }
 
-function y(e) {
-  var i, l, t, n, u, o, d, a, c, _, h, P, E, S, I, U, C;
-  if (m.delete(e.user.id), null != e.mutual_guilds) {
-    let i = {};
+function g(e) {
+  var t, n, i, r, o, _, l, T, d, c, f, U, p, R, D, G, C;
+  if (S.delete(e.user.id), null != e.mutual_guilds) {
+    let t = {};
     e.mutual_guilds.forEach(e => {
       let {
-        id: l,
-        nick: t
-      } = e, n = s.default.getGuild(l);
-      null != n && (i[l] = {
-        guild: n,
-        nick: t
+        id: n,
+        nick: i
+      } = e, r = E.default.getGuild(n);
+      null != r && (t[n] = {
+        guild: r,
+        nick: i
       })
-    }), b[e.user.id] = f.default.getFlattenedGuildIds().filter(e => null != i[e]).map(e => ({
-      guild: i[e].guild,
-      nick: i[e].nick
+    }), A[e.user.id] = a.default.getFlattenedGuildIds().filter(e => null != t[e]).map(e => ({
+      guild: t[e].guild,
+      nick: t[e].nick
     }))
   }
   if (null != e.mutual_friends_count) {
-    let i = e.mutual_friends_count;
-    v[e.user.id] = i
+    let t = e.mutual_friends_count;
+    N[e.user.id] = t
   }
-  let T = null !== (c = e.premium_since) && void 0 !== c ? c : null,
-    F = e.application;
-  if (p[e.user.id] = {
+  let P = null !== (d = e.premium_since) && void 0 !== d ? d : null,
+    O = e.application;
+  if (I[e.user.id] = {
       userId: e.user.id,
-      banner: null === (i = e.user_profile) || void 0 === i ? void 0 : i.banner,
-      accentColor: null === (l = e.user_profile) || void 0 === l ? void 0 : l.accent_color,
-      themeColors: null === (t = e.user_profile) || void 0 === t ? void 0 : t.theme_colors,
-      popoutAnimationParticleType: null === (n = e.user_profile) || void 0 === n ? void 0 : n.popout_animation_particle_type,
-      bio: null !== (_ = null === (u = e.user_profile) || void 0 === u ? void 0 : u.bio) && void 0 !== _ ? _ : "",
-      profileEffectId: null === (d = e.user_profile) || void 0 === d ? void 0 : null === (o = d.profile_effect) || void 0 === o ? void 0 : o.id,
-      pronouns: null !== (h = null === (a = e.user_profile) || void 0 === a ? void 0 : a.pronouns) && void 0 !== h ? h : "",
-      connectedAccounts: null !== (P = e.connected_accounts.filter(e => r.default.isSupported(e.type))) && void 0 !== P ? P : [],
-      applicationRoleConnections: null !== (E = e.application_role_connections) && void 0 !== E ? E : [],
-      premiumSince: null != T ? new Date(T) : null,
+      banner: null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
+      accentColor: null === (n = e.user_profile) || void 0 === n ? void 0 : n.accent_color,
+      themeColors: null === (i = e.user_profile) || void 0 === i ? void 0 : i.theme_colors,
+      popoutAnimationParticleType: null === (r = e.user_profile) || void 0 === r ? void 0 : r.popout_animation_particle_type,
+      bio: null !== (c = null === (o = e.user_profile) || void 0 === o ? void 0 : o.bio) && void 0 !== c ? c : "",
+      profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (_ = l.profile_effect) || void 0 === _ ? void 0 : _.id,
+      pronouns: null !== (f = null === (T = e.user_profile) || void 0 === T ? void 0 : T.pronouns) && void 0 !== f ? f : "",
+      connectedAccounts: null !== (U = e.connected_accounts.filter(e => u.default.isSupported(e.type))) && void 0 !== U ? U : [],
+      applicationRoleConnections: null !== (p = e.application_role_connections) && void 0 !== p ? p : [],
+      premiumSince: null != P ? new Date(P) : null,
       premiumType: e.premium_type,
       premiumGuildSince: null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
       lastFetched: Date.now(),
       legacyUsername: e.legacy_username,
       profileFetchFailed: !1,
-      application: null != F ? {
-        id: F.id,
-        primarySkuId: F.primary_sku_id,
-        customInstallUrl: F.custom_install_url,
-        installParams: F.install_params,
-        flags: F.flags,
-        popularApplicationCommandIds: F.popular_application_command_ids
+      application: null != O ? {
+        id: O.id,
+        primarySkuId: O.primary_sku_id,
+        customInstallUrl: O.custom_install_url,
+        installParams: O.install_params,
+        integrationTypesConfig: O.integration_types_config,
+        flags: O.flags,
+        popularApplicationCommandIds: O.popular_application_command_ids
       } : null,
       badges: e.badges
     }, null != e.guild_member_profile) {
-    let i = {
+    let t = {
       userId: e.user.id,
       guildId: e.guild_member_profile.guild_id,
       banner: e.guild_member_profile.banner,
       accentColor: e.guild_member_profile.accent_color,
-      themeColors: null === (S = e.guild_member_profile) || void 0 === S ? void 0 : S.theme_colors,
-      popoutAnimationParticleType: null === (I = e.guild_member_profile) || void 0 === I ? void 0 : I.popout_animation_particle_type,
-      profileEffectId: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : null === (U = C.profile_effect) || void 0 === U ? void 0 : U.id,
+      themeColors: null === (R = e.guild_member_profile) || void 0 === R ? void 0 : R.theme_colors,
+      popoutAnimationParticleType: null === (D = e.guild_member_profile) || void 0 === D ? void 0 : D.popout_animation_particle_type,
+      profileEffectId: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : null === (G = C.profile_effect) || void 0 === G ? void 0 : G.id,
       bio: e.guild_member_profile.bio,
       pronouns: e.guild_member_profile.pronouns,
       badges: e.guild_badges
     };
-    null != g[e.user.id] ? g[e.user.id][e.guild_member_profile.guild_id] = i : g[e.user.id] = {
-      [e.guild_member_profile.guild_id]: i
+    null != s[e.user.id] ? s[e.user.id][e.guild_member_profile.guild_id] = t : s[e.user.id] = {
+      [e.guild_member_profile.guild_id]: t
     }
   }
 }
 
-function A(e) {
+function v(e) {
   let {
-    userId: i
+    userId: t
   } = e;
-  m.add(i)
+  S.add(t)
 }
 
-function R(e) {
-  var i;
+function L(e) {
+  var t;
   let {
-    userId: l
+    userId: n
   } = e;
-  p[l] = null !== (i = p[l]) && void 0 !== i ? i : {
+  I[n] = null !== (t = I[n]) && void 0 !== t ? t : {
     connectedAccounts: [],
     applicationRoleConnections: [],
     premiumSince: null,
@@ -155,158 +156,161 @@ function R(e) {
     profileFetchFailed: !0,
     application: null,
     legacyUsername: null,
-    userId: l,
+    userId: n,
     banner: null,
     accentColor: null,
     bio: "",
     pronouns: ""
-  }, m.delete(l)
+  }, S.delete(n)
 }
 
-function M(e) {
-  P = !0
+function m(e) {
+  U = !0
 }
 
-function L(e) {
-  P = !1, null != e.guild_id ? ! function(e) {
+function y(e) {
+  U = !1, null != e.guild_id ? ! function(e) {
     let {
-      userId: i,
-      guild_id: l,
-      accent_color: t,
-      banner: n,
-      bio: r,
-      pronouns: u,
-      popout_animation_particle_type: o,
-      theme_colors: d,
-      profileEffectId: s
+      userId: t,
+      guild_id: n,
+      accent_color: i,
+      banner: r,
+      bio: u,
+      pronouns: o,
+      popout_animation_particle_type: _,
+      theme_colors: l,
+      profileEffectId: E
     } = e;
-    if (null == l || null == g[i]) return !1;
-    let a = g[i][l];
-    if (null == a) return !1;
-    g[i][l] = {
-      ...a,
-      accentColor: t,
-      banner: n,
-      bio: r,
-      pronouns: u,
-      popoutAnimationParticleType: o,
-      themeColors: d,
-      profileEffectId: s
+    if (null == n || null == s[t]) return !1;
+    let T = s[t][n];
+    if (null == T) return !1;
+    s[t][n] = {
+      ...T,
+      accentColor: i,
+      banner: r,
+      bio: u,
+      pronouns: o,
+      popoutAnimationParticleType: _,
+      themeColors: l,
+      profileEffectId: E
     }
   }(e) : ! function(e) {
     let {
-      userId: i,
-      accent_color: l,
-      banner: t,
-      bio: n,
-      pronouns: r,
-      popout_animation_particle_type: u,
-      theme_colors: o,
-      profileEffectId: d
-    } = e, s = p[i];
-    if (null == s) return !1;
-    p[i] = {
-      ...s,
-      accentColor: l,
-      banner: t,
-      bio: n,
-      pronouns: r,
-      popoutAnimationParticleType: u,
-      themeColors: o,
-      profileEffectId: d
+      userId: t,
+      accent_color: n,
+      banner: i,
+      bio: r,
+      pronouns: u,
+      popout_animation_particle_type: o,
+      theme_colors: _,
+      profileEffectId: l
+    } = e, E = I[t];
+    if (null == E) return !1;
+    I[t] = {
+      ...E,
+      accentColor: n,
+      banner: i,
+      bio: r,
+      pronouns: u,
+      popoutAnimationParticleType: o,
+      themeColors: _,
+      profileEffectId: l
     }
   }(e)
 }
 
-function D(e) {
-  P = !1
+function h(e) {
+  U = !1
 }
 
-function G(e) {
-  E = !0
+function F(e) {
+  p = !0
 }
 
-function w(e) {
+function M(e) {
   let {
-    user: i
+    user: t
   } = e;
-  if (m.has(i.id) || null == p[i.id]) return !1;
-  p[i.id].lastFetched = 0
+  if (S.has(t.id) || null == I[t.id]) return !1;
+  I[t.id].lastFetched = 0
 }
 
-function O() {
-  m.clear(), p = {}, g = {}
+function b() {
+  S.clear(), I = {}, s = {}
 }
-class B extends c.default {
+class B extends d.default {
+  initialize() {
+    this.waitFor(a.default), this.syncWith([o.default], b)
+  }
   isFetchingProfile(e) {
-    return m.has(e)
+    return S.has(e)
   }
   isFetchingFriends(e) {
-    return _.has(e)
+    return c.has(e)
   }
   get isSubmitting() {
-    return P
+    return U
   }
   getUserProfile(e) {
-    return p[e]
+    return I[e]
   }
-  getGuildMemberProfile(e, i) {
-    var l;
-    return null == i ? null : null === (l = g[e]) || void 0 === l ? void 0 : l[i]
+  getGuildMemberProfile(e, t) {
+    var n;
+    return null == t ? null : null === (n = s[e]) || void 0 === n ? void 0 : n[t]
   }
   getMutualFriends(e) {
-    return h[e]
+    return f[e]
   }
   getMutualFriendsCount(e) {
-    return v[e]
+    return N[e]
   }
   getMutualGuilds(e) {
-    return b[e]
+    return A[e]
   }
   getIsAccessibilityTooltipViewed() {
-    return E
+    return p
   }
   takeSnapshot() {
-    let e = d.default.getId();
+    let e = l.default.getId();
     return {
       version: B.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
-        profile: p[e]
+        profile: I[e]
       }]
     }
   }
   constructor() {
-    super(), this.loadCache = () => {
+    super({
+      CACHE_LOADED_LAZY: () => this.loadCache(),
+      USER_PROFILE_FETCH_START: v,
+      USER_PROFILE_FETCH_FAILURE: L,
+      USER_PROFILE_FETCH_SUCCESS: g,
+      USER_PROFILE_UPDATE_START: m,
+      USER_PROFILE_UPDATE_SUCCESS: y,
+      USER_PROFILE_UPDATE_FAILURE: h,
+      USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: F,
+      MUTUAL_FRIENDS_FETCH_START: D,
+      MUTUAL_FRIENDS_FETCH_SUCCESS: C,
+      MUTUAL_FRIENDS_FETCH_FAILURE: G,
+      GUILD_JOIN: P,
+      GUILD_DELETE: P,
+      GUILD_MEMBER_ADD: O,
+      GUILD_MEMBER_REMOVE: O,
+      GUILD_MEMBER_UPDATE: M,
+      USER_UPDATE: M,
+      LOGOUT: R
+    }), this.loadCache = () => {
       let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
       null != e && e.forEach(e => {
         let {
-          userId: i,
-          profile: l
+          userId: t,
+          profile: n
         } = e;
-        p[i] = l
+        I[t] = n
       })
-    }, this.registerActionHandlers({
-      CACHE_LOADED_LAZY: this.loadCache,
-      USER_PROFILE_FETCH_START: A,
-      USER_PROFILE_FETCH_FAILURE: R,
-      USER_PROFILE_FETCH_SUCCESS: y,
-      USER_PROFILE_UPDATE_START: M,
-      USER_PROFILE_UPDATE_SUCCESS: L,
-      USER_PROFILE_UPDATE_FAILURE: D,
-      USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: G,
-      MUTUAL_FRIENDS_FETCH_START: I,
-      MUTUAL_FRIENDS_FETCH_SUCCESS: C,
-      MUTUAL_FRIENDS_FETCH_FAILURE: U,
-      GUILD_JOIN: T,
-      GUILD_DELETE: T,
-      GUILD_MEMBER_ADD: F,
-      GUILD_MEMBER_REMOVE: F,
-      GUILD_MEMBER_UPDATE: w,
-      USER_UPDATE: w,
-      LOGOUT: S
-    }), this.waitFor(f.default), this.syncWith([u.default], O)
+    }
   }
 }
 B.displayName = "UserProfileStore", B.LATEST_SNAPSHOT_VERSION = 1;
-var H = new B
+var Y = new B

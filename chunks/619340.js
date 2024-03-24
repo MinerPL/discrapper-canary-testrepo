@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("759843"),
@@ -13,11 +13,11 @@ var i = n("759843"),
   u = n("599110"),
   d = n("840707"),
   c = n("49111");
-let f = new l.default("ConnectedAccounts");
+let _ = new l.default("ConnectedAccounts");
 
-function _(e, t) {
+function f(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-  return r.default.post({
+  return r.HTTP.post({
     url: c.Endpoints.CONNECTIONS_CALLBACK(e),
     body: {
       ...t,
@@ -27,8 +27,8 @@ function _(e, t) {
     oldFormErrors: !0
   })
 }
-var h = {
-  fetch: () => r.default.get({
+var E = {
+  fetch: () => r.HTTP.get({
     url: c.Endpoints.CONNECTIONS,
     oldFormErrors: !0
   }).then(e => a.default.dispatch({
@@ -49,12 +49,12 @@ var h = {
     return u.default.track(c.AnalyticEvents.CONNECTED_ACCOUNT_INITIATED, {
       platform_type: e,
       location: n
-    }), t = i === s.TwoWayLinkType.DEVICE_CODE && null != a ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK_DEVICE(e, a) : null != i ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK(e, i) : c.Endpoints.CONNECTIONS_AUTHORIZE(e), r.default.get({
+    }), t = i === s.TwoWayLinkType.DEVICE_CODE && null != a ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK_DEVICE(e, a) : null != i ? c.Endpoints.CONNECTIONS_AUTHORIZE_LINK(e, i) : c.Endpoints.CONNECTIONS_AUTHORIZE(e), r.HTTP.get({
       url: t,
       oldFormErrors: !0
     })
   },
-  callback: _,
+  callback: f,
   connect(e, t, n, s, r) {
     var a;
     return d.default.put({
@@ -76,15 +76,15 @@ var h = {
       }
     })
   },
-  disconnect: (e, t) => r.default.delete({
+  disconnect: (e, t) => r.HTTP.del({
     url: c.Endpoints.CONNECTION(e, t),
     oldFormErrors: !0
   }),
-  refresh: (e, t) => r.default.post({
+  refresh: (e, t) => r.HTTP.post({
     url: c.Endpoints.CONNECTION_REFRESH(e, t),
     oldFormErrors: !0
   }),
-  submitPinCode: (e, t) => r.default.get({
+  submitPinCode: (e, t) => r.HTTP.get({
     url: c.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION(t, e),
     oldFormErrors: !0
   }).then(e => {
@@ -96,7 +96,7 @@ var h = {
       current_step: "PIN success",
       session_id: n.state,
       platform_type: t
-    }), _(t, {
+    }), f(t, {
       ...n,
       from_continuation: !0
     }, !0)
@@ -137,7 +137,7 @@ var h = {
       type: "USER_CONNECTIONS_INTEGRATION_JOINING",
       integrationId: e,
       joining: !0
-    }), r.default.post({
+    }), r.HTTP.post({
       url: c.Endpoints.INTEGRATION_JOIN(e),
       oldFormErrors: !0
     }, n => {
@@ -158,7 +158,7 @@ var h = {
         body: {
           access_token: n
         }
-      } = await r.default.get({
+      } = await r.HTTP.get({
         url: c.Endpoints.CONNECTION_ACCESS_TOKEN(e, t),
         oldFormErrors: !0
       });
@@ -177,7 +177,7 @@ var h = {
       }), n
     }
   },
-  linkDispatchAuthCallback: (e, t) => r.default.post({
+  linkDispatchAuthCallback: (e, t) => r.HTTP.post({
     url: c.Endpoints.CONNECTIONS_LINK_DISPATCH_AUTH_CALLBACK(e),
     body: {
       ...t
@@ -186,7 +186,7 @@ var h = {
   }),
   async completeTwoWayLink(e, t, n, i, s) {
     if (null == t) {
-      f.error("Two-way link: missing authorize location");
+      _.error("Two-way link: missing authorize location");
       return
     }
     let {
@@ -195,13 +195,13 @@ var h = {
       errorDescription: l
     } = (0, o.getCallbackParamsFromURL)(t);
     if (null != a) {
-      f.error("Two-way link: missing authorize code", {
+      _.error("Two-way link: missing authorize code", {
         error: a,
         errorDescription: l
       });
       return
     }
-    return await _(e, {
+    return await f(e, {
       code: n,
       state: i,
       two_way_link_code: r,

@@ -1,27 +1,29 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return d
+    return c
   }
 }), l("794252");
-var s = l("37983");
+var a = l("37983");
 l("884691");
-var a = l("506838"),
-  i = l("77078"),
+var s = l("414456"),
+  i = l.n(s),
+  n = l("506838"),
   o = l("265586"),
-  n = l("782340"),
-  r = l("576997");
+  r = l("77078"),
+  d = l("782340"),
+  u = l("483665");
 
-function d(e) {
+function c(e) {
   var t;
   let {
-    item: l
+    item: l,
+    isDarkText: s = !1
   } = e;
-  let d = (t = null == l ? void 0 : l.type, (0, a.match)(t).with(o.CollectiblesItemType.AVATAR_DECORATION, () => n.default.Messages.USER_SETTINGS_AVATAR_DECORATION).with(o.CollectiblesItemType.PROFILE_EFFECT, () => n.default.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
-  return null === d ? null : (0, s.jsx)(i.Text, {
-    color: "always-white",
+  let c = (t = null == l ? void 0 : l.type, (0, n.match)(t).with(o.CollectiblesItemType.AVATAR_DECORATION, () => d.default.Messages.USER_SETTINGS_AVATAR_DECORATION).with(o.CollectiblesItemType.PROFILE_EFFECT, () => d.default.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
+  return null === c ? null : (0, a.jsx)(r.Text, {
     variant: "text-xxs/normal",
-    className: r.container,
-    children: d
+    className: i([u.container, s ? u.darkText : u.lightText]),
+    children: c
   })
 }

@@ -14,8 +14,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("446674"),
-  n = s("42203"),
-  l = s("305961"),
+  l = s("42203"),
+  n = s("305961"),
   i = s("991170"),
   r = s("653274"),
   o = s("49111"),
@@ -30,17 +30,17 @@ function c(e, t) {
 }
 
 function E(e, t) {
-  return (0, a.useStateFromStores)([r.default, n.default], () => null != t && r.default.editedDefaultChannelIds.has(t) ? d.default.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY : i.default.canEveryoneRole(o.Permissions.VIEW_CHANNEL, n.default.getChannel(e)) ? void 0 : d.default.Messages.DEFAULT_CHANNELS_DISABLED_PRIVATE)
+  return (0, a.useStateFromStores)([r.default, l.default], () => null != t && r.default.editedDefaultChannelIds.has(t) ? d.default.Messages.CHANNEL_BROWSER_DISABLED_BY_CATEGORY : i.canEveryoneRole(o.Permissions.VIEW_CHANNEL, l.default.getChannel(e)) ? void 0 : d.default.Messages.DEFAULT_CHANNELS_DISABLED_PRIVATE)
 }
 
 function _(e, t) {
-  let s = (0, a.useStateFromStores)([l.default], () => {
+  let s = (0, a.useStateFromStores)([n.default], () => {
       var s;
-      return (null === (s = l.default.getGuild(e)) || void 0 === s ? void 0 : s.rulesChannelId) === t
+      return (null === (s = n.default.getGuild(e)) || void 0 === s ? void 0 : s.rulesChannelId) === t
     }),
-    i = (0, a.useStateFromStores)([n.default], () => {
+    i = (0, a.useStateFromStores)([l.default], () => {
       var e;
-      return null === (e = n.default.getChannel(t)) || void 0 === e ? void 0 : e.isGuildVocal()
+      return null === (e = l.default.getChannel(t)) || void 0 === e ? void 0 : e.isGuildVocal()
     });
   return s ? d.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_RULES_DISCOURAGED : i ? d.default.Messages.GUILD_ONBOARDING_DEFAULT_CHANNELS_VOICE_TOOLTIP : void 0
 }

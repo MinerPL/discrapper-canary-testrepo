@@ -1,32 +1,32 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return s
   }
 });
-var l = t("37983");
-t("884691");
-var u = t("627445"),
-  a = t.n(u),
-  d = t("65597"),
-  i = t("390236"),
-  r = t("292508"),
-  c = t("42203"),
-  f = t("58343");
+var u = n("37983");
+n("884691");
+var a = n("627445"),
+  l = n.n(a),
+  r = n("65597"),
+  d = n("390236"),
+  i = n("292508"),
+  c = n("42203"),
+  o = n("58343");
 
-function h(e) {
+function s(e) {
   let {
-    windowKey: n,
-    channelId: t
-  } = e, u = (0, d.default)([c.default], () => c.default.getChannel(t));
-  return a(null != u, "channel cannot be null for popout"), (0, l.jsx)(r.default, {
+    windowKey: t,
+    channelId: n
+  } = e, a = (0, r.useStateFromStores)([c.default], () => c.default.getChannel(n));
+  return l(null != a, "channel cannot be null for popout"), (0, u.jsx)(i.default, {
     withTitleBar: !0,
-    windowKey: n,
-    title: u.name,
-    children: (0, l.jsx)(i.default.Provider, {
-      value: u.guild_id,
-      children: (0, l.jsx)(f.default, {
-        channel: u
+    windowKey: t,
+    title: a.name,
+    children: (0, u.jsx)(d.default.Provider, {
+      value: a.guild_id,
+      children: (0, u.jsx)(o.default, {
+        channel: a
       })
     })
   })

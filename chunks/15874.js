@@ -1,42 +1,42 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("446674"),
-  s = l("987317"),
-  i = l("957255"),
-  r = l("945956"),
-  o = l("599110"),
-  u = l("295999"),
-  d = l("49111"),
-  c = l("782340");
+var i = n("37983");
+n("884691");
+var l = n("446674"),
+  a = n("987317"),
+  s = n("957255"),
+  r = n("945956"),
+  o = n("599110"),
+  u = n("295999"),
+  d = n("49111"),
+  c = n("782340");
 
 function f(e) {
   let {
     className: t,
-    color: l,
+    color: n,
     look: f,
-    hangStatusChannel: m
-  } = e, p = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId() === m.id);
-  return (0, n.jsx)(n.Fragment, {
-    children: (0, n.jsx)(u.default, {
+    hangStatusChannel: p
+  } = e, m = (0, l.useStateFromStores)([r.default], () => r.default.getChannelId() === p.id);
+  return (0, i.jsx)(i.Fragment, {
+    children: (0, i.jsx)(u.default, {
       className: t,
-      disabled: p,
+      disabled: m,
       onClick: () => {
-        i.default.can(d.Permissions.CONNECT, m), s.default.selectVoiceChannel(m.id), o.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+        s.default.can(d.Permissions.CONNECT, p), a.default.selectVoiceChannel(p.id), o.default.track(d.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
           source: "UserProfilePopout",
-          guild_id: m.guild_id,
-          channel_id: m.id
+          guild_id: p.guild_id,
+          channel_id: p.id
         })
       },
-      color: l,
+      color: n,
       look: f,
       fullWidth: !0,
-      children: c.default.Messages.JOIN
+      children: c.default.Messages.PROFILE_JOIN_VOICE_CHANNEL
     }, "join-hang")
   })
 }

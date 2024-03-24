@@ -35,8 +35,8 @@ var l = n("37983"),
   y = n("49111"),
   D = n("646718"),
   b = n("782340"),
-  j = n("672067"),
-  G = n("926622");
+  j = n("172641"),
+  G = n("890957");
 
 function U() {
   let {
@@ -135,7 +135,7 @@ function F(e) {
   let t, n, {
     transitionState: s
   } = e;
-  (0, r.default)([m.default], () => {
+  (0, r.useStateFromStores)([m.default], () => {
     var e;
     return null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.premiumType
   });

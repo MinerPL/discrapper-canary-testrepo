@@ -1,32 +1,32 @@
 "use strict";
-let i, s;
+let i, s, r;
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 }), n("222007");
-var r = n("917351"),
-  a = n.n(r),
-  o = n("446674"),
-  l = n("913144"),
-  u = n("49111");
-let d = c();
+var a = n("917351"),
+  o = n.n(a),
+  l = n("446674"),
+  u = n("913144"),
+  d = n("49111");
+let c = _();
 
-function c() {
+function _() {
   return {
     recentCustomStatuses: [],
     currentDefaultStatus: null
   }
 }
-class f extends o.default.PersistedStore {
+class f extends l.default.PersistedStore {
   initialize(e) {
-    d = {
-      ...c(),
+    c = {
+      ..._(),
       ...null != e ? e : {}
     }
   }
   getState() {
-    return d
+    return c
   }
   getCurrentHangStatus() {
     return i
@@ -35,62 +35,66 @@ class f extends o.default.PersistedStore {
     return s
   }
   getRecentCustomStatuses() {
-    return d.recentCustomStatuses
+    return c.recentCustomStatuses
   }
   getCurrentDefaultStatus() {
-    return d.currentDefaultStatus
+    return c.currentDefaultStatus
   }
   getHangStatusActivity() {
-    return null == i ? null : {
-      type: u.ActivityTypes.HANG_STATUS,
-      name: "Hang Status",
-      state: i,
-      details: null == s ? void 0 : s.status,
-      emoji: null == s ? void 0 : s.emoji
-    }
+    return null == i ? null : r
   }
 }
 f.displayName = "HangStatusStore", f.persistKey = "HangStatusStore";
-var _ = new f(l.default, {
+var E = new f(u.default, {
   LOGOUT: function() {
-    d = c()
+    c = _()
   },
   UPDATE_HANG_STATUS: function(e) {
     let {
       status: t,
       saveAsDefault: n
     } = e;
-    i = t, s = null, n && (d.currentDefaultStatus = {
+    i = t, s = null, n && (c.currentDefaultStatus = {
       status: t,
       customHangStatus: s,
       expiresAt: Date.now() + 288e5
-    })
+    }), r = {
+      type: d.ActivityTypes.HANG_STATUS,
+      name: "Hang Status",
+      state: i
+    }
   },
   UPDATE_HANG_STATUS_CUSTOM: function(e) {
     let {
       status: t,
       emoji: n,
-      saveAsDefault: r
+      saveAsDefault: a
     } = e;
-    i = u.HangStatusTypes.CUSTOM, s = {
+    i = d.HangStatusTypes.CUSTOM, s = {
       status: t,
       emoji: n
     };
-    let o = [...d.recentCustomStatuses],
-      l = o.findIndex(e => e.status === t && a.isEqual(e.emoji, n)); - 1 !== l ? o.splice(l, 1) : 7 === o.length && o.splice(6, 1), d.recentCustomStatuses = [s, ...o], r && (d.currentDefaultStatus = {
+    let l = [...c.recentCustomStatuses],
+      u = l.findIndex(e => e.status === t && o.isEqual(e.emoji, n)); - 1 !== u ? l.splice(u, 1) : 7 === l.length && l.splice(6, 1), c.recentCustomStatuses = [s, ...l], a && (c.currentDefaultStatus = {
       status: i,
       customHangStatus: s,
       expiresAt: Date.now() + 288e5
-    })
+    }), r = {
+      type: d.ActivityTypes.HANG_STATUS,
+      name: "Hang Status",
+      state: i,
+      details: t,
+      emoji: n
+    }
   },
   CLEAR_HANG_STATUS: function(e) {
     let {
       saveAsDefault: t
     } = e;
-    i = null, s = null, t && (d.currentDefaultStatus = {
+    i = null, s = null, t && (c.currentDefaultStatus = {
       status: null,
       customHangStatus: null,
       expiresAt: Date.now() + 288e5
-    })
+    }), r = null
   }
 })

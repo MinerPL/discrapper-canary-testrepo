@@ -1,76 +1,83 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return I
+    return _
+  },
+  AvatarWrapper: function() {
+    return E
   }
 });
-var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  r = s.n(l),
-  i = s("446674"),
-  u = s("77078"),
-  o = s("106435"),
-  d = s("446488"),
-  c = s("52904"),
-  _ = s("782340"),
-  E = s("659972");
+var r = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  l = n.n(a),
+  s = n("446674"),
+  o = n("77078"),
+  u = n("106435"),
+  c = n("446488"),
+  d = n("52904"),
+  f = n("782340"),
+  m = n("270166");
 
-function I(e) {
+function _(e) {
   let {
-    smallerText: t
-  } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3).reverse()), l = s.map((e, t) => (0, a.jsx)(f, {
+    smallerText: t,
+    className: n,
+    textColor: a
+  } = e, u = (0, s.useStateFromStores)([c.default], () => c.default.affinities.slice(0, 3).reverse()), _ = u.map((e, t) => (0, r.jsx)(E, {
     affinity: e,
-    applyMask: t !== s.length - 1
-  }, e.id)), r = e => null != e.globalName ? e.globalName : e.username, o = n.useMemo(() => 3 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
-    username: r(s[2])
-  }) : 2 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_2.format({
-    username: r(s[1]),
-    otherUsername: r(s[0])
-  }) : 1 === s.length ? _.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
-    username: r(s[0])
-  }) : "", [s]);
-  return 0 === s.length ? null : (0, a.jsxs)("div", {
-    className: E.container,
-    children: [(0, a.jsx)("div", {
-      className: E.iconContainer,
-      children: l
-    }), (0, a.jsx)("div", {
-      className: E.textContainer,
-      children: (0, a.jsx)(function() {
-        return t ? (0, a.jsx)(u.Text, {
+    applyMask: t !== u.length - 1,
+    size: d.AvatarSizes.SIZE_32
+  }, e.id)), I = e => null != e.globalName ? e.globalName : e.username, T = i.useMemo(() => 3 === u.length ? f.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
+    username: I(u[2])
+  }) : 2 === u.length ? f.default.Messages.AFFINITIES_MARKETING_HEADER_V2_2.format({
+    username: I(u[1]),
+    otherUsername: I(u[0])
+  }) : 1 === u.length ? f.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
+    username: I(u[0])
+  }) : "", [u]);
+  return 0 === u.length ? null : (0, r.jsxs)("div", {
+    className: l(m.container, n),
+    children: [(0, r.jsx)("div", {
+      className: m.iconContainer,
+      children: _
+    }), (0, r.jsx)("div", {
+      className: m.textContainer,
+      children: (0, r.jsx)(function() {
+        return t ? (0, r.jsx)(o.Text, {
           variant: "text-lg/medium",
-          color: "always-white",
-          children: o
-        }) : (0, a.jsx)(u.Heading, {
+          color: a,
+          children: T
+        }) : (0, r.jsx)(o.Heading, {
           variant: "heading-xl/medium",
-          color: "always-white",
-          children: o
+          color: a,
+          children: T
         })
       }, {})
     })]
   })
 }
 
-function f(e) {
+function E(e) {
   let {
     affinity: t,
-    applyMask: s
+    applyMask: n,
+    size: i
   } = e, {
-    avatarSrc: n,
-    eventHandlers: l
-  } = (0, o.default)({
+    avatarSrc: a,
+    eventHandlers: s
+  } = (0, u.default)({
     user: t,
-    size: c.AvatarSizes.SIZE_32,
+    size: i,
     animateOnHover: !0
   });
-  return (0, a.jsx)(u.Avatar, {
-    className: r(E.icon, {
-      [E.mask]: s
+  return (0, r.jsx)(o.Avatar, {
+    className: l(m.icon, {
+      [m.mask]: n
     }),
-    src: n,
+    src: a,
     "aria-label": t.username,
-    size: c.AvatarSizes.SIZE_32,
-    ...l
+    size: i,
+    ...s
   })
 }

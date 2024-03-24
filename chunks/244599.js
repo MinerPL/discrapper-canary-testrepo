@@ -10,9 +10,9 @@ var a = n("37983"),
   s = n.n(r),
   i = n("77078"),
   d = n("367376"),
-  u = n("306160"),
-  o = n("782340"),
-  c = n("285997");
+  o = n("306160"),
+  u = n("782340"),
+  c = n("12961");
 
 function m(e) {
   let {
@@ -24,7 +24,7 @@ function m(e) {
         is_localized: m
       }
     }
-  } = e, [f, _] = l.useState(!1), h = l.useRef(d.default.reactParserFor(d.default.defaultRules));
+  } = e, [_, f] = l.useState(!1), E = l.useRef(d.default.reactParserFor(d.default.defaultRules));
   return m ? (0, a.jsxs)("div", {
     className: c.container,
     children: [(0, a.jsx)(i.Heading, {
@@ -35,12 +35,12 @@ function m(e) {
     }), (0, a.jsx)(i.Text, {
       variant: "text-sm/normal",
       className: c.bodyText,
-      children: h.current(n)
+      children: E.current(n)
     }), (0, a.jsx)("div", {
       className: c.smsInfoContainer,
       children: (0, a.jsxs)("div", {
         className: s(c.smsNumberContainer, {
-          [c.copied]: f
+          [c.copied]: _
         }),
         children: [(0, a.jsx)(i.Text, {
           variant: "text-md/normal",
@@ -51,10 +51,10 @@ function m(e) {
           size: i.Button.Sizes.SMALL,
           className: c.trailingButton,
           onClick: () => {
-            (0, u.copy)(r) && _(!0)
+            (0, o.copy)(r) && f(!0)
           },
           color: i.Button.Colors.PRIMARY,
-          children: f ? o.default.Messages.COPIED : o.default.Messages.COPY
+          children: _ ? u.default.Messages.COPIED : u.default.Messages.COPY
         })]
       })
     })]

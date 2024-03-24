@@ -1,34 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   openGuildMemberModViewSidebar: function() {
-    return u
+    return r
   }
 });
-var a = n("812204"),
-  l = n("208021"),
-  s = n("582713"),
-  i = n("383606"),
-  r = n("459824"),
-  o = n("789150");
+var a = l("812204"),
+  n = l("208021"),
+  u = l("582713"),
+  i = l("383606"),
+  d = l("459824"),
+  s = l("789150");
 
-function u(e, t, n) {
-  var u, d, c;
+function r(e, t, l) {
+  var r, o, c;
   let f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
-    modViewPanel: o.ModViewPanel.INFO
+    modViewPanel: s.ModViewPanel.INFO
   };
-  if (!(0, r.canAccessGuildMemberModViewWithExperiment)(e)) return;
-  let h = null !== (u = f.modViewPanel) && void 0 !== u ? u : o.ModViewPanel.INFO,
-    p = null !== (d = f.sourceLocation) && void 0 !== d ? d : a.default.MEMBER_SAFETY_PAGE;
-  (0, i.trackModViewOpened)(e, t, h, p), l.default.openGuildSidebar({
+  if (!(0, d.canAccessGuildMemberModViewWithExperiment)(e)) return Promise.resolve();
+  let E = null !== (r = f.modViewPanel) && void 0 !== r ? r : s.ModViewPanel.INFO,
+    M = null !== (o = f.sourceLocation) && void 0 !== o ? o : a.default.MEMBER_SAFETY_PAGE;
+  return (0, i.trackModViewOpened)(e, t, E, M), n.default.openGuildSidebar({
     guildId: e,
-    baseChannelId: n,
-    sidebarType: s.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,
+    baseChannelId: l,
+    sidebarType: u.GuildSidebarType.GUILD_MEMBER_MOD_VIEW,
     details: {
-      type: s.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
+      type: u.SidebarOpenDetailsType.GUILD_MEMBER_MOD_VIEW,
       userId: t,
       guildId: e,
       ...f,
-      modViewPanel: null !== (c = f.modViewPanel) && void 0 !== c ? c : o.ModViewPanel.INFO
+      modViewPanel: null !== (c = f.modViewPanel) && void 0 !== c ? c : s.ModViewPanel.INFO
     }
   })
 }

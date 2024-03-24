@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("968194"),
   d = n("658457"),
   c = n("286509"),
-  f = n("676223"),
-  E = n("407908"),
+  E = n("676223"),
+  f = n("407908"),
   _ = n("649486"),
   T = n("860285"),
   I = n("769791"),
@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("686470"),
   O = n("52028"),
   R = n("697218"),
-  L = n("953998"),
-  v = n("535974"),
+  v = n("953998"),
+  L = n("535974"),
   P = n("763237"),
   D = n("315102"),
   x = n("773336"),
@@ -50,7 +50,7 @@ class B extends l.PureComponent {
       isPreview: s,
       message: l
     } = this.props;
-    if (null != n && (s || null != l && (0, f.default)(e, l, n.id))) {
+    if (null != n && (s || null != l && (0, E.default)(e, l, n.id))) {
       let t = (0, c.default)(e, n.id);
       if (null != t) return t
     }
@@ -101,7 +101,7 @@ class B extends l.PureComponent {
           applicationId: e.application_id,
           channelId: l,
           messageId: s.id
-        }), (0, E.default)({
+        }), (0, f.default)({
           type: j.AnalyticsGameOpenTypes.JOIN,
           source: j.AnalyticsLocations.MESSAGE_EMBED,
           userId: n,
@@ -144,13 +144,17 @@ class B extends l.PureComponent {
     }, this.renderUserPopout = (e, t) => {
       let {
         channelId: n,
-        guildId: l
+        guildId: l,
+        message: a,
+        analyticsLocations: i
       } = this.props;
       return null == n ? null : (0, s.jsx)(p.default, {
         ...t,
         userId: e.id,
         guildId: null != l ? l : void 0,
-        channelId: n
+        channelId: n,
+        messageId: null == a ? void 0 : a.id,
+        newAnalyticsLocations: i
       })
     }, this.renderSpotifyJoinButton = e => {
       let {
@@ -185,8 +189,8 @@ class B extends l.PureComponent {
         isSender: u,
         activityActionType: d,
         className: c,
-        channelId: f,
-        message: E,
+        channelId: E,
+        message: f,
         hideParty: _,
         isSyncable: T,
         isLaunchable: I,
@@ -213,9 +217,9 @@ class B extends l.PureComponent {
         isInBrowser: !x.isPlatformEmbedded,
         isSyncable: T,
         isSender: u,
-        channelId: f,
+        channelId: E,
         guildId: null != m ? m : void 0,
-        message: E,
+        message: f,
         hideParty: _,
         onJoin: this.handleJoin,
         onInvite: this.handleInvite,
@@ -234,7 +238,7 @@ class B extends l.PureComponent {
 B.defaultProps = {
   isPreview: !1
 };
-var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.default, v.default, C.default, L.default, R.default, g.default], e => {
+var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.default, L.default, C.default, v.default, R.default, g.default], e => {
   let {
     activity: t,
     analyticsLocations: n,
@@ -245,7 +249,7 @@ var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.d
   } = e, {
     id: r
   } = null != s ? s : {}, o = null != t && null != t.party && t.party.id === l ? h.default.getParty(t.party.id) : null, u = null != r ? O.default.getApplicationActivity(r) : O.default.findActivity(e => e.type === j.ActivityTypes.LISTENING), d = !1;
-  null != r && (d = L.default.getState(r, j.ActivityActionTypes.JOIN) === j.ActivityActionStates.LOADING);
+  null != r && (d = v.default.getState(r, j.ActivityActionTypes.JOIN) === j.ActivityActionStates.LOADING);
   let c = Array.from(null != o ? o : []).map(e => {
       let t = null != i ? g.default.getMember(i, e) : null,
         n = null != t ? t.nick : null,
@@ -259,20 +263,20 @@ var F = a.default.connectStores([m.default, h.default, O.default, M.default, T.d
         nick: n
       }
     }),
-    f = null != t && m.default.canPlay(t),
-    E = m.default.getSyncingWith(),
-    _ = null != E && null != a && E.userId === a;
+    E = null != t && m.default.canPlay(t),
+    f = m.default.getSyncingWith(),
+    _ = null != f && null != a && f.userId === a;
   return {
     analyticsLocations: n,
     partyMembers: c,
     connectedApplication: null != r ? C.default.getApplication(r) : null,
     myPartyId: null != u && null != u.party ? u.party.id : null,
     isLaunching: d,
-    isSyncable: f && !_,
+    isSyncable: E && !_,
     isLaunchable: null != r && (0, y.isLaunchable)({
       LibraryApplicationStore: M.default,
       LaunchableGameStore: T.default,
-      DispatchApplicationStore: v.default,
+      DispatchApplicationStore: L.default,
       ConnectedAppsStore: C.default,
       applicationId: r
     })

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = s("37983");
@@ -14,14 +14,14 @@ var n = s("77078"),
   d = s("15435"),
   u = s("578521"),
   c = s("49111"),
-  S = s("89315");
+  S = s("530894");
 let E = {
   offset: {
     top: -8
   }
 };
 
-function f() {
+function T() {
   return (0, a.jsxs)("div", {
     className: S.socialLinks,
     children: [(0, a.jsx)(n.Anchor, {

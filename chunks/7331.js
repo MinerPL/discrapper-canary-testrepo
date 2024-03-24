@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsUserInCreatorMonetizationEligibleCountry: function() {
-    return s
+    return r
   },
   isUserInCreatorMonetizationEligibleCountry: function() {
     return a
@@ -16,16 +16,16 @@ n.r(t), n.d(t, {
     return u
   },
   isMonetizationWaitlistEnabledForGuild: function() {
-    return c
+    return d
   },
   isCreatorMonetizationNagActivateEnabled: function() {
-    return d
+    return c
   }
 });
 var i = n("615923"),
-  r = n("49111");
+  s = n("49111");
 
-function s() {
+function r() {
   let {
     isUserEligibleForCreatorMonetization: e
   } = i.CreatorMonetizationCountryAllowlistExperiment.useExperiment({
@@ -52,7 +52,7 @@ function o(e) {
       let {
         enableFastMonetizationOnboardingForGuild: t
       } = i.CreatorMonetizationRavenOnboardingGuildExperiment.useExperiment({
-        guildId: null != e ? e : "",
+        guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
         location: "e3bb71_3"
       }, {
         autoTrackExposure: !0
@@ -73,7 +73,7 @@ function o(e) {
       }, {
         autoTrackExposure: !1
       });
-      return null != e && e.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
+      return null != e && e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
     }(e);
   return t || n
 }
@@ -83,7 +83,7 @@ function l(e) {
     let {
       enableFastMonetizationOnboardingForGuild: t
     } = i.CreatorMonetizationRavenOnboardingGuildExperiment.getCurrentConfig({
-      guildId: null != e ? e : "",
+      guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
       location: "e3bb71_5"
     }), {
       enableFastMonetizationOnboardingForUser: n
@@ -97,7 +97,7 @@ function l(e) {
     } = i.CreatorMonetizationRavenOnboardingUserExperiment.getCurrentConfig({
       location: "e3bb71_8"
     });
-    return null != e && e.hasFeature(r.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
+    return null != e && e.hasFeature(s.GuildFeatures.CREATOR_MONETIZABLE_WHITEGLOVE) && t
   }(e)
 }
 
@@ -105,7 +105,7 @@ function u(e) {
   let {
     enableWaitlist: t
   } = i.CreatorMonetizationOnboardingWaitlistExperiment.useExperiment({
-    guildId: null != e ? e : "",
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "e3bb71_9"
   }, {
     autoTrackExposure: !1
@@ -113,17 +113,17 @@ function u(e) {
   return t
 }
 
-function c(e) {
+function d(e) {
   let {
     enableWaitlist: t
   } = i.CreatorMonetizationOnboardingWaitlistExperiment.getCurrentConfig({
-    guildId: null != e ? e : "",
+    guildId: null != e ? e : s.EMPTY_STRING_SNOWFLAKE_ID,
     location: "e3bb71_10"
   });
   return t
 }
 
-function d() {
+function c() {
   let {
     enableCreatorMonetizationNagActivateForUser: e
   } = i.CreatorMonetizationNagActivateExperiment.getCurrentConfig({

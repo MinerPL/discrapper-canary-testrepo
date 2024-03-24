@@ -132,13 +132,13 @@ function G() {
       roles: [{
         id: "00",
         name: "@everyone",
-        permissions: d.default.DEFAULT
+        permissions: d.DEFAULT
       }, {
         id: "01",
         name: "officers (example)",
         mentionable: !0,
         hoist: !0,
-        permissions: I.default.combine(d.default.DEFAULT, l.Permissions.MANAGE_ROLES, l.Permissions.MANAGE_CHANNELS, l.Permissions.KICK_MEMBERS, l.Permissions.BAN_MEMBERS, l.Permissions.MANAGE_NICKNAMES, l.Permissions.MANAGE_GUILD_EXPRESSIONS, l.Permissions.MANAGE_MESSAGES, l.Permissions.SEND_TTS_MESSAGES),
+        permissions: I.combine(d.DEFAULT, l.Permissions.MANAGE_ROLES, l.Permissions.MANAGE_CHANNELS, l.Permissions.KICK_MEMBERS, l.Permissions.BAN_MEMBERS, l.Permissions.MANAGE_NICKNAMES, l.Permissions.MANAGE_GUILD_EXPRESSIONS, l.Permissions.MANAGE_MESSAGES, l.Permissions.SEND_TTS_MESSAGES),
         color: 3066993
       }],
       system_channel_id: "12"

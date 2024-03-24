@@ -1,159 +1,159 @@
 "use strict";
 n.r(t), n.d(t, {
   maybeFetchSoundboardSounds: function() {
-    return x
+    return C
   },
   uploadSound: function() {
-    return _
+    return T
   },
   updateSound: function() {
-    return S
+    return _
   },
   deleteSound: function() {
-    return N
+    return I
   },
   addFavoriteSound: function() {
-    return M
+    return v
   },
   removeFavoriteSound: function() {
-    return T
+    return N
   },
   playSoundLocally: function() {
     return A
   },
   reportSoundStartedPlaying: function() {
-    return j
+    return O
   },
   reportSoundFinishedPlaying: function() {
-    return y
-  },
-  updateUserSoundboardVolume: function() {
     return R
   },
+  updateUserSoundboardVolume: function() {
+    return M
+  },
   muteCustomJoinSound: function() {
-    return L
+    return k
   }
 }), n("222007"), n("424973");
-var l = n("917351"),
-  a = n.n(l),
-  s = n("872717"),
-  i = n("913144"),
+var i = n("917351"),
+  l = n.n(i),
+  a = n("872717"),
+  s = n("913144"),
   r = n("404118"),
   o = n("599417"),
   u = n("872173"),
   d = n("235004"),
   c = n("389480"),
-  m = n("24156"),
-  f = n("846325"),
-  h = n("49111"),
-  p = n("397336"),
-  g = n("782340");
+  f = n("24156"),
+  p = n("846325"),
+  m = n("49111"),
+  h = n("397336"),
+  x = n("782340");
 let E = async e => {
   try {
-    let t = await s.default.get({
-        url: h.Endpoints.SOUNDBOARD_DEFAULT_SOUNDS,
+    let t = await a.HTTP.get({
+        url: m.Endpoints.SOUNDBOARD_DEFAULT_SOUNDS,
         query: {
           guild_ids: e
         }
       }),
-      n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, f.DEFAULT_SOUND_GUILD_ID));
-    i.default.dispatch({
+      n = t.body.map(e => (0, c.soundboardSoundFromAPI)(e, p.DEFAULT_SOUND_GUILD_ID));
+    s.default.dispatch({
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS",
       soundboardSounds: n
     })
   } catch (e) {
-    throw i.default.dispatch({
+    throw s.default.dispatch({
       type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_FAILURE"
     }), new o.default(e)
   }
-}, v = e => new Promise(t => {
+}, y = e => new Promise(t => {
   let n = () => {
-    i.default.unsubscribe(e, n), setTimeout(t, 0)
+    s.default.unsubscribe(e, n), setTimeout(t, 0)
   };
-  i.default.subscribe(e, n)
-}), C = e => {
+  s.default.subscribe(e, n)
+}), g = e => {
   if (!d.default.shouldFetchDefaultSounds()) return Promise.resolve();
-  i.default.dispatch({
+  s.default.dispatch({
     type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS"
   });
-  let t = v("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
+  let t = y("SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS");
   return E(e), t
-}, I = () => {
-  let e = (0, m.getGuildIdsToFetchSoundsFor)();
+}, S = () => {
+  let e = (0, f.getGuildIdsToFetchSoundsFor)();
   if (0 === e.length) return Promise.resolve();
-  let t = v("SOUNDBOARD_SOUNDS_RECEIVED");
-  return i.default.dispatch({
+  let t = y("SOUNDBOARD_SOUNDS_RECEIVED");
+  return s.default.dispatch({
     type: "GUILD_SOUNDBOARD_FETCH"
-  }), i.default.dispatch({
+  }), s.default.dispatch({
     type: "REQUEST_SOUNDBOARD_SOUNDS",
     guildIds: e
   }), t
-}, x = () => __OVERLAY__ ? (i.default.dispatch({
+}, C = () => __OVERLAY__ ? (s.default.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
-}), Promise.all([])) : Promise.all([C(), I()]);
-async function _(e) {
+}), Promise.all([])) : Promise.all([g(), S()]);
+async function T(e) {
   let {
     guildId: t,
     name: n,
-    sound: l,
-    volume: a,
-    emojiId: i,
+    sound: i,
+    volume: l,
+    emojiId: s,
     emojiName: r
-  } = e, o = await s.default.post({
-    url: h.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),
+  } = e, o = await a.HTTP.post({
+    url: m.Endpoints.GUILD_SOUNDBOARD_SOUNDS(t),
     body: {
       name: n,
-      sound: l,
-      volume: a,
-      emoji_id: i,
+      sound: i,
+      volume: l,
+      emoji_id: s,
       emoji_name: r
     }
   }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
   return u
 }
-async function S(e) {
+async function _(e) {
   let {
     guildId: t,
     soundId: n,
-    name: l,
-    volume: a,
-    emojiId: i,
+    name: i,
+    volume: l,
+    emojiId: s,
     emojiName: r
-  } = e, o = await s.default.patch({
-    url: h.Endpoints.GUILD_SOUNDBOARD_SOUND(t, n),
+  } = e, o = await a.HTTP.patch({
+    url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(t, n),
     body: {
-      name: l,
-      volume: a,
-      emoji_id: i,
+      name: i,
+      volume: l,
+      emoji_id: s,
       emoji_name: r
     }
   }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
   return u
 }
-async function N(e, t) {
-  await s.default.delete({
-    url: h.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
+async function I(e, t) {
+  await a.HTTP.del({
+    url: m.Endpoints.GUILD_SOUNDBOARD_SOUND(e, t),
     oldFormErrors: !0
   })
 }
 
-function M(e) {
-  u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => a.size(t.soundIds) >= p.MAX_FAVORITES ? (r.default.show({
-    title: g.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
-    body: g.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
-      count: p.MAX_FAVORITES
+function v(e) {
+  u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => l.size(t.soundIds) >= h.MAX_FAVORITES ? (r.default.show({
+    title: x.default.Messages.FAVORITES_LIMIT_REACHED_TITLE,
+    body: x.default.Messages.FAVORITES_LIMIT_REACHED_BODY.format({
+      count: h.MAX_FAVORITES
     })
-  }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), p.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function T(e) {
+function N(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
     t.soundIds = t.soundIds.filter(t => t !== e)
-  }, p.UserSettingsDelay.INFREQUENT_USER_ACTION)
+  }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
 function A(e, t, n) {
-  i.default.dispatch({
+  s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
     sound: t,
     channelId: e,
@@ -161,31 +161,31 @@ function A(e, t, n) {
   })
 }
 
-function j(e, t) {
-  i.default.dispatch({
+function O(e, t) {
+  s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
     soundId: e,
     userId: t
   })
 }
 
-function y(e, t) {
-  i.default.dispatch({
+function R(e, t) {
+  s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
     soundId: e,
     userId: t
   })
 }
 
-function R(e) {
-  i.default.dispatch({
+function M(e) {
+  s.default.dispatch({
     type: "USER_SOUNDBOARD_SET_VOLUME",
     volume: e
   })
 }
 
-function L(e) {
-  i.default.dispatch({
+function k(e) {
+  s.default.dispatch({
     type: "SOUNDBOARD_MUTE_JOIN_SOUND",
     channelId: e
   })

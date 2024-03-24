@@ -12,7 +12,7 @@ var i = n("37983"),
   a = n.n(l),
   u = n("718776"),
   c = n("462977"),
-  d = n("517614");
+  d = n("38879");
 
 function _(e, t, n, o) {
   let l = (0, c.getScrollbarSpecs)(e),
@@ -30,8 +30,8 @@ function _(e, t, n, o) {
     let {
       className: S,
       onScroll: g,
-      onResize: h = null,
-      onContentResize: m = null,
+      onResize: m = null,
+      onContentResize: h = null,
       dir: p = "ltr",
       sections: I,
       sectionHeight: T,
@@ -42,20 +42,20 @@ function _(e, t, n, o) {
       renderSection: R,
       renderRow: O,
       renderFooter: L,
-      renderSidebar: D,
-      renderListHeader: y,
+      renderSidebar: y,
+      renderListHeader: D,
       wrapSection: P,
       getAnchorId: M,
       paddingTop: U,
-      paddingBottom: w,
-      fade: b = !1,
+      paddingBottom: b,
+      fade: w = !1,
       customTheme: G = !1,
       chunkSize: F,
       style: k,
       innerId: B,
       innerRole: x,
-      innerAriaLabel: H,
-      innerAriaMultiselectable: V,
+      innerAriaLabel: V,
+      innerAriaMultiselectable: H,
       innerAriaOrientation: W,
       innerClassName: Y,
       innerTag: z = "div",
@@ -88,13 +88,13 @@ function _(e, t, n, o) {
       sidebarHeight: N,
       listHeaderHeight: C,
       paddingTop: U,
-      paddingBottom: w,
+      paddingBottom: b,
       chunkSize: F,
       getScrollerState: $,
       getAnchorId: M
-    }), el = (0, c.useScrollSpring)(J), ea = r.useRef(h), eu = r.useRef(m);
+    }), el = (0, c.useScrollSpring)(J), ea = r.useRef(m), eu = r.useRef(h);
     r.useLayoutEffect(() => {
-      ea.current = h, eu.current = m
+      ea.current = m, eu.current = h
     });
     let ec = r.useCallback(function() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
@@ -168,7 +168,7 @@ function _(e, t, n, o) {
       onScroll: eE,
       className: s(S, {
         [e]: !0,
-        [t]: b,
+        [t]: w,
         [n]: G,
         [d.scrolling]: X
       }),
@@ -177,8 +177,8 @@ function _(e, t, n, o) {
       children: [r.useMemo(() => (0, i.jsx)(z, {
         id: B,
         role: x,
-        "aria-label": H,
-        "aria-multiselectable": V,
+        "aria-label": V,
+        "aria-multiselectable": H,
         "aria-orientation": W,
         style: {
           height: et
@@ -224,7 +224,7 @@ function _(e, t, n, o) {
             return a(c)
           }({
             items: en,
-            renderListHeader: y,
+            renderListHeader: D,
             renderSection: R,
             renderRow: O,
             renderFooter: L,
@@ -232,7 +232,7 @@ function _(e, t, n, o) {
             spacerTop: ee
           })
         })
-      }), [B, x, H, V, W, Y, z, et, en, R, O, L, y, P, ee]), r.useMemo(() => (function(e) {
+      }), [B, x, V, H, W, Y, z, et, en, R, O, L, D, P, ee]), r.useMemo(() => (function(e) {
         let {
           renderSidebar: t,
           sidebarHeight: n,
@@ -242,10 +242,10 @@ function _(e, t, n, o) {
         return null == n || null == t ? null : t(r, i)
       })({
         isSidebarVisible: ei,
-        renderSidebar: D,
+        renderSidebar: y,
         sidebarHeight: N,
         isListVisible: 0 !== en.length
-      }), [ei, D, N, en.length])]
+      }), [ei, y, N, en.length])]
     })
   })
 }

@@ -7,136 +7,114 @@ n.r(t), n.d(t, {
 var s = n("627445"),
   r = n.n(s),
   a = n("913144"),
-  l = n("850068"),
-  i = n("112679"),
+  i = n("850068"),
+  l = n("112679"),
   u = n("596523"),
-  o = n("465527"),
-  c = n("388290"),
+  c = n("465527"),
+  o = n("388290"),
   d = n("599110"),
-  f = n("745279"),
-  m = n("659632"),
-  _ = n("719923"),
-  E = n("286350"),
-  I = n("49111"),
-  p = n("646718"),
-  N = n("782340");
+  m = n("745279"),
+  f = n("719923"),
+  p = n("286350"),
+  _ = n("49111"),
+  I = n("646718");
 async function S(e) {
   let {
     setPurchaseState: t,
     setHasAcceptedTerms: n,
     setIsSubmitting: s,
     setPurchaseError: S,
-    hasRedirectURL: T,
+    hasRedirectURL: E,
     setHasRedirectURL: P,
-    isGift: C,
-    giftStyle: A,
-    baseAnalyticsData: O,
-    analyticsLocation: h,
-    analyticsLocations: R,
-    flowStartTime: g,
-    subscriptionPlan: M,
-    planGroup: v,
+    isGift: T,
+    baseAnalyticsData: N,
+    analyticsLocation: A,
+    analyticsLocations: C,
+    flowStartTime: h,
+    subscriptionPlan: v,
+    planGroup: g,
     trialId: x,
-    priceOptions: L,
-    paymentSource: y,
-    isPrepaidPaymentPastDue: b,
-    openInvoiceId: j,
-    premiumSubscription: G,
-    onNext: D,
-    metadata: U,
-    sku: B,
-    skuPricePreview: F,
-    purchaseType: k,
-    referralCode: w,
-    loadId: H,
-    giftRecipient: Y,
-    customMessage: W,
-    emojiConfetti: Z,
-    soundEffect: K
+    priceOptions: y,
+    paymentSource: O,
+    isPrepaidPaymentPastDue: M,
+    openInvoiceId: R,
+    premiumSubscription: L,
+    onNext: b,
+    metadata: j,
+    sku: G,
+    skuPricePreview: D,
+    purchaseType: U,
+    referralCode: F,
+    loadId: B,
+    giftInfoOptions: w
   } = e;
-  t(E.PurchaseState.PURCHASING), n(!0), s(!0), a.default.wait(i.clearError), S(null);
+  t(p.PurchaseState.PURCHASING), n(!0), s(!0), a.default.wait(l.clearError), S(null);
   try {
     let e, n, s;
-    if (d.default.track(I.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
-        ...O,
-        duration_ms: Date.now() - g
-      }), T) return;
-    let a = (0, m.getGiftExperience)(Y),
-      i = m.GIFT_EXPERIENCES_WITH_CUSTOM_MESSAGING.has(a),
-      S = m.GIFT_EXPERIENCES_WITH_CUSTOM_EMOJI_SOUNDBOARD.has(a);
-    if (k === I.PurchaseTypes.ONE_TIME) r(null != B, "SKU must exist and be fetched."), r(null != F, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(B.applicationId, B.id, {
-      expectedAmount: F.amount,
-      expectedCurrency: F.currency,
-      isGift: C,
-      paymentSource: y,
-      loadId: H,
-      giftStyle: A,
-      recipientId: a !== m.GiftExperience.DEFAULT ? null == Y ? void 0 : Y.id : void 0,
-      customMessage: i ? W : void 0,
-      emojiConfetti: S ? Z : void 0,
-      soundEffect: S ? K : void 0
+    if (d.default.track(_.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
+        ...N,
+        duration_ms: Date.now() - h
+      }), E) return;
+    if (U === _.PurchaseTypes.ONE_TIME) r(null != G, "SKU must exist and be fetched."), r(null != D, "SKUPricePreview must exist."), e = await (0, c.purchaseSKU)(G.applicationId, G.id, {
+      expectedAmount: D.amount,
+      expectedCurrency: D.currency,
+      isGift: T,
+      paymentSource: O,
+      loadId: B,
+      giftInfoOptions: w
     });
-    else if (r(null != M, "Missing subscriptionPlan"), C) {
-      let t = (0, _.getPrice)(M.id, !1, !0, L);
-      if ("usd" === t.currency && (null == y ? void 0 : y.type) === I.PaymentSourceTypes.GCASH) {
-        var V;
+    else if (r(null != v, "Missing subscriptionPlan"), T) {
+      let t = (0, f.getPrice)(v.id, !1, !0, y);
+      if ("usd" === t.currency && (null == O ? void 0 : O.type) === _.PaymentSourceTypes.GCASH) {
+        var k;
         let e = Error("Invalid USD currency for GCash");
-        (0, f.captureBillingException)(e, {
+        (0, m.captureBillingException)(e, {
           tags: {
-            paymentSourceId: null !== (V = null == y ? void 0 : y.id) && void 0 !== V ? V : "",
-            subscriptionPlanId: M.id,
-            priceOptions: JSON.stringify(L)
+            paymentSourceId: null !== (k = null == O ? void 0 : O.id) && void 0 !== k ? k : "",
+            subscriptionPlanId: v.id,
+            priceOptions: JSON.stringify(y)
           }
         })
       }
-      e = await (0, o.purchaseSKU)(p.PREMIUM_SUBSCRIPTION_APPLICATION, M.skuId, {
+      e = await (0, c.purchaseSKU)(I.PREMIUM_SUBSCRIPTION_APPLICATION, v.skuId, {
         expectedAmount: t.amount,
         expectedCurrency: t.currency,
-        paymentSource: y,
-        subscriptionPlanId: M.id,
+        paymentSource: O,
+        subscriptionPlanId: v.id,
         isGift: !0,
-        giftStyle: A,
-        loadId: H,
-        recipientId: a !== m.GiftExperience.DEFAULT ? null == Y ? void 0 : Y.id : void 0,
-        customMessage: i ? W : void 0,
-        emojiConfetti: S ? Z : void 0,
-        soundEffect: S ? K : void 0
+        loadId: B,
+        giftInfoOptions: w
       })
-    } else e = b && null != j && null != y && null != G ? I.PREPAID_PAYMENT_SOURCES.has(y.type) ? await (0, l.payInvoiceManually)(G, j, y, L.currency) : await (0, l.updateSubscription)(G, {
-      paymentSource: y,
-      currency: L.currency
-    }, R, h, H) : null != G ? await (0, l.updateSubscription)(G, {
-      items: (0, _.getItemsWithUpsertedPlanIdForGroup)(G, M.id, 1, new Set(v)),
-      paymentSource: y,
-      currency: L.currency
-    }, R, h, H) : await (0, u.subscribe)({
-      planId: M.id,
-      currency: L.currency,
-      paymentSource: y,
+    } else e = M && null != R && null != O && null != L ? _.PREPAID_PAYMENT_SOURCES.has(O.type) ? await (0, i.payInvoiceManually)(L, R, O, y.currency) : await (0, i.updateSubscription)(L, {
+      paymentSource: O,
+      currency: y.currency
+    }, C, A, B) : null != L ? await (0, i.updateSubscription)(L, {
+      items: (0, f.getItemsWithUpsertedPlanIdForGroup)(L, v.id, 1, new Set(g)),
+      paymentSource: O,
+      currency: y.currency
+    }, C, A, B) : await (0, u.subscribe)({
+      planId: v.id,
+      currency: y.currency,
+      paymentSource: O,
       trialId: x,
-      metadata: U,
-      referralCode: w,
-      loadId: H
+      metadata: j,
+      referralCode: F,
+      loadId: B
     });
     if (e.redirectConfirmation) {
       P(null != e.redirectURL);
       return
     }
-    let z = {
-      ...O,
-      duration_ms: Date.now() - g,
-      payment_source_type: null == y ? void 0 : y.type
-    };
-    C && (i && (z.is_custom_message_edited = W !== N.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE), S && (z.is_custom_emoji_sound_available = !0, null != Z && (z.emoji_name = Z.surrogates), null != K && (z.sound_id = K.soundId))), t(E.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (s = null != e.entitlements ? e.entitlements : void 0), D(n, s)
+    t(p.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? o.default.createFromServer(e.subscription) : null : "entitlements" in e && (s = null != e.entitlements ? e.entitlements : void 0), b(n, s)
   } catch (e) {
-    t(E.PurchaseState.FAIL), S(e), d.default.track(I.AnalyticEvents.PAYMENT_FLOW_FAILED, {
-      ...O,
+    t(p.PurchaseState.FAIL), S(e), d.default.track(_.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+      ...N,
       payment_error_code: null == e ? void 0 : e.code,
-      payment_source_id: null == y ? void 0 : y.id,
-      payment_source_type: null == y ? void 0 : y.type,
-      duration_ms: Date.now() - g
+      payment_source_id: null == O ? void 0 : O.id,
+      payment_source_type: null == O ? void 0 : O.type,
+      duration_ms: Date.now() - h
     })
   } finally {
-    !T && s(!1)
+    !E && s(!1)
   }
 }

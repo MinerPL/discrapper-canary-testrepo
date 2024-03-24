@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ButtonAddReaction: function() {
-    return v
+    return L
   }
 }), n("702976"), n("222007");
 var s = n("37983"),
@@ -12,9 +12,9 @@ var s = n("37983"),
   o = n.n(r),
   u = n("130969"),
   d = n("77078"),
-  c = n("913144"),
-  f = n("62587"),
-  E = n("85589"),
+  c = n("558986"),
+  E = n("62587"),
+  f = n("85589"),
   _ = n("166257"),
   T = n("432173"),
   I = n("219013"),
@@ -28,9 +28,9 @@ var s = n("37983"),
   g = n("958706"),
   M = n("646718"),
   O = n("782340"),
-  R = n("550244"),
-  L = n("314934");
-class v extends l.Component {
+  R = n("159441"),
+  v = n("450076");
+class L extends l.Component {
   render() {
     let {
       type: e,
@@ -42,13 +42,13 @@ class v extends l.Component {
       isReactionPickerActive: r
     } = this.state, o = t.state === h.MessageStates.SENDING, u = e === C.ReactionTypes.BURST;
     if (o || (0, S.hasFlag)(t.flags, h.MessageFlags.EPHEMERAL)) return null;
-    let E = m.default.getCurrentUser(),
-      _ = (0, A.isPremium)(E),
+    let f = m.default.getCurrentUser(),
+      _ = (0, A.isPremium)(f),
       T = u ? O.default.Messages.ADD_BURST_REACTION : O.default.Messages.ADD_REACTION;
-    !_ && u && (T = (0, s.jsx)(f.NitroTooltipLabel, {
+    !_ && u && (T = (0, s.jsx)(E.NitroTooltipLabel, {
       tooltipText: O.default.Messages.ADD_BURST_REACTION
     }));
-    let I = a ? L : R;
+    let I = a ? v : R;
     return (0, s.jsx)(d.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,
@@ -68,18 +68,8 @@ class v extends l.Component {
             onClick: e => {
               this.handleAddReactionClick(e)
             },
-            onMouseEnter: () => {
-              c.default.dispatch({
-                type: "EMOJI_INTERACTION_INITIATED",
-                interaction: g.EmojiInteractionPoint.AddReactionPopoutMouseEntered
-              })
-            },
-            onFocus: () => {
-              c.default.dispatch({
-                type: "EMOJI_INTERACTION_INITIATED",
-                interaction: g.EmojiInteractionPoint.AddReactionPopoutFocused
-              })
-            },
+            onMouseEnter: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+            onFocus: () => (0, c.initiateEmojiInteraction)(g.EmojiInteractionPoint.AddReactionPopoutFocused),
             className: i(I.reactionBtn, {
               [I.active]: a
             }, n),
@@ -121,7 +111,7 @@ class v extends l.Component {
       } = this.props;
       e.stopPropagation();
       let s = m.default.getCurrentUser();
-      t === C.ReactionTypes.BURST && !(0, A.isPremium)(s) && (0, E.openBurstReactionsUpsellModal)({
+      t === C.ReactionTypes.BURST && !(0, A.isPremium)(s) && (0, f.openBurstReactionsUpsellModal)({
         analytics: {
           type: M.PremiumUpsellTypes.BURST_REACTION_UPSELL,
           page: null != n.getGuildId() ? h.AnalyticsPages.GUILD_CHANNEL : h.AnalyticsPages.DM_CHANNEL,

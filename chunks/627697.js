@@ -14,8 +14,8 @@ var l = n("90915"),
   u = n("997289"),
   d = n("812204"),
   c = n("685665"),
-  f = n("442939"),
-  E = n("870346"),
+  E = n("442939"),
+  f = n("870346"),
   _ = n("950104"),
   T = n("42203"),
   I = n("697218"),
@@ -30,13 +30,13 @@ var l = n("90915"),
   M = n("706508"),
   O = n("986214"),
   R = n("549548"),
-  L = n("969380"),
-  v = n("141962"),
+  v = n("969380"),
+  L = n("141962"),
   P = n("478272"),
   D = n("954016"),
   x = n("49111"),
   y = n("782340"),
-  U = n("586449");
+  U = n("462813");
 let j = (0, A.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function b(e) {
@@ -47,10 +47,10 @@ function b(e) {
   } = e, {
     analyticsLocations: B,
     AnalyticsLocationProvider: F
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), k = (0, u.useAnalyticsContext)(), w = G.channel_id, H = (0, a.useStateFromStores)([T.default], () => T.default.getChannel(w), [w]), V = null == H ? void 0 : H.guild_id, Y = null != H && (H.isGuildVoice() || H.isPrivate()), W = (0, a.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(w)), K = (null == W ? void 0 : W.applicationId) === b, [z, Z] = (0, f.default)([b, null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n ? n : ""]), J = (0, R.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [Q] = (0, a.useStateFromStoresArray)([h.default], () => Y ? h.default.getEmbeddedActivitiesForChannel(w).filter(e => e.applicationId === b) : [], [b, w, Y]), X = Array.from(null !== (A = null == Q ? void 0 : Q.userIds) && void 0 !== A ? A : []), q = (0, a.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(S.isNotNullish), [X]), $ = (0, L.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), k = (0, u.useAnalyticsContext)(), w = G.channel_id, H = (0, a.useStateFromStores)([T.default], () => T.default.getChannel(w), [w]), V = null == H ? void 0 : H.guild_id, Y = null != H && (H.isGuildVoice() || H.isPrivate()), W = (0, a.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(w)), K = (null == W ? void 0 : W.applicationId) === b, [z, Q] = (0, E.default)([b, null !== (n = null == W ? void 0 : W.applicationId) && void 0 !== n ? n : ""]), Z = (0, R.default)(null !== (i = null == z ? void 0 : z.maxParticipants) && void 0 !== i ? i : 0), [J] = (0, a.useStateFromStoresArray)([h.default], () => Y ? h.default.getEmbeddedActivitiesForChannel(w).filter(e => e.applicationId === b) : [], [b, w, Y]), X = Array.from(null !== (A = null == J ? void 0 : J.userIds) && void 0 !== A ? A : []), q = (0, a.useStateFromStoresArray)([I.default], () => X.map(e => I.default.getUser(e)).filter(S.isNotNullish), [X]), $ = (0, v.default)({
     applicationId: b,
     size: j
-  }), ee = E.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = q.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, en = async () => {
+  }), ee = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), et = q.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, en = async () => {
     if (Y) {
       let {
         activityConfigs: e,
@@ -62,11 +62,11 @@ function b(e) {
         activityConfigs: e,
         applications: t
       });
-      if (null != Q && q.length > 0) await (0, M.default)({
-        applicationId: Q.applicationId,
-        currentEmbeddedApplication: Z,
+      if (null != J && q.length > 0) await (0, M.default)({
+        applicationId: J.applicationId,
+        currentEmbeddedApplication: Q,
         activityChannelId: w,
-        embeddedActivitiesManager: v.default,
+        embeddedActivitiesManager: L.default,
         locationObject: k.location,
         analyticsLocations: B
       });
@@ -74,10 +74,10 @@ function b(e) {
         let e = H.isPrivate() && !_.default.isCallActive(w),
           t = () => (0, O.default)({
             activityItem: n,
-            currentActivity: Z,
+            currentEmbeddedApplication: Q,
             channelId: w,
             guildId: V,
-            embeddedActivitiesManager: v.default,
+            embeddedActivitiesManager: L.default,
             analyticsLocations: B
           });
         e ? o.default.show({
@@ -139,7 +139,7 @@ function b(e) {
               className: U.peopleIcon
             }), (0, s.jsx)(r.Text, {
               variant: "text-xs/semibold",
-              children: J
+              children: Z
             })]
           }), (0, s.jsx)("div", {
             className: U.buttonWrapper,

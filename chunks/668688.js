@@ -1,68 +1,93 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return g
   }
 });
 var a = s("37983"),
   n = s("884691"),
   l = s("414456"),
   i = s.n(l),
-  r = s("446674"),
-  o = s("77078"),
-  d = s("685665"),
+  r = s("77078"),
+  o = s("685665"),
+  d = s("234251"),
   u = s("606292"),
-  c = s("790618"),
+  c = s("890503"),
   S = s("181114"),
-  E = s("906932"),
+  E = s("950603"),
+  T = s("906932"),
   f = s("570697"),
-  T = s("782340"),
-  m = s("808084");
+  _ = s("782340"),
+  m = s("572540");
 
-function _(e) {
+function g(e) {
   let {
     user: t,
-    className: s,
-    forcedDivider: l = !1,
-    withTutorial: _ = !1,
-    isTryItOutFlow: g = !1
+    guild: s,
+    className: l,
+    sectionTitle: E,
+    forcedDivider: g = !1,
+    withTutorial: N = !1,
+    isTryItOutFlow: I = !1
   } = e, {
-    analyticsLocations: h
-  } = (0, d.default)(), {
-    pendingAvatarDecoration: I,
-    errors: N
-  } = (0, r.useStateFromStoresObject)([c.default], () => ({
-    pendingAvatarDecoration: c.default.getPendingAvatarDecoration(),
-    errors: c.default.getErrors().avatarDecoration
-  })), p = n.useCallback(() => (0, u.openAvatarDecorationModal)({
-    analyticsLocations: h,
-    isTryItOutFlow: g
-  }), [h, g]), C = g || void 0 !== I ? null != I : null != t.avatarDecoration, A = _ ? S.default : o.Button;
-  return (0, a.jsx)(f.default, {
-    className: s,
-    forcedDivider: l,
+    analyticsLocations: p
+  } = (0, o.default)(), C = null != s, {
+    userAvatarDecoration: A,
+    guildAvatarDecoration: O,
+    pendingAvatarDecoration: x,
+    pendingErrors: R
+  } = (0, T.useGuildMemberAndUserPendingAvatarDecoration)(t, s), M = (0, c.default)("enable_avatar_decoration_uploads"), D = n.useCallback(() => (0, u.openAvatarDecorationModal)({
+    analyticsLocations: p,
+    isTryItOutFlow: I,
+    guild: s
+  }), [p, I, s]), v = I || void 0 !== x ? null != x : (C ? O : A) != null, L = N ? S.default : r.Button;
+  return (0, a.jsxs)(f.default, {
+    className: l,
+    forcedDivider: g,
     hasBackground: !0,
-    title: T.default.Messages.USER_SETTINGS_AVATAR_DECORATION,
-    errors: N,
-    children: (0, a.jsxs)("div", {
+    title: E,
+    errors: R,
+    children: [(0, a.jsxs)("div", {
       className: m.buttonsContainer,
-      children: [(0, a.jsx)(A, {
-        size: o.Button.Sizes.SMALL,
-        onClick: p,
+      children: [(0, a.jsx)(L, {
+        size: r.Button.Sizes.SMALL,
+        onClick: D,
         className: i({
-          [m.buttonHighlighted]: _
+          [m.buttonHighlighted]: N
         }),
-        children: T.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
-      }), C && (0, a.jsx)(o.Button, {
+        children: _.default.Messages.USER_SETTINGS_CHANGE_AVATAR_DECORATION
+      }), v && (0, a.jsx)(r.Button, {
         className: m.removeButton,
-        color: o.Button.Colors.PRIMARY,
-        look: o.Button.Looks.LINK,
-        size: o.Button.Sizes.SMALL,
+        color: r.Button.Colors.PRIMARY,
+        look: r.Button.Looks.LINK,
+        size: r.Button.Sizes.SMALL,
         onClick: function() {
-          (0, E.setNewPendingAvatarDecoration)(null, t.avatarDecoration)
+          (0, T.setNewPendingAvatarDecoration)(null == s ? void 0 : s.id, null)
         },
-        children: T.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
+        children: (0, d.hasGlobalDefaultAvatarDecoration)(t, s) ? _.default.Messages.USER_SETTINGS_REMOVE_PER_GUILD_AVATAR_DECORATION : _.default.Messages.USER_SETTINGS_REMOVE_AVATAR_DECORATION
       })]
-    })
+    }), t.isStaff() && M && (0, a.jsx)(h, {
+      user: t
+    })]
+  })
+}
+let h = e => {
+  let {
+    user: t
+  } = e;
+  return (0, a.jsxs)("div", {
+    className: m.overrideButtonsContainer,
+    children: [(0, a.jsx)(r.Text, {
+      variant: "text-xs/bold",
+      children: "STAFF ONLY and Experimental. Upload a decoration to view throughout the app."
+    }), (0, a.jsx)(E.default, {
+      onChange: e => {
+        null != e && (t.avatarDecoration = {
+          asset: e,
+          skuID: "PALUE000000001"
+        })
+      },
+      buttonCTA: "Upload Override"
+    })]
   })
 }

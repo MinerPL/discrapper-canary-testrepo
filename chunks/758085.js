@@ -34,9 +34,9 @@ var n = l("37983"),
   L = l("100835"),
   j = l("49111"),
   b = l("782340"),
-  P = l("322677"),
-  D = l("405879"),
-  y = l("926622");
+  P = l("857143"),
+  D = l("685691"),
+  y = l("890957");
 let G = {
   INVITER: 3,
   INVITE_CODE: 3,
@@ -141,7 +141,7 @@ function H(e) {
     {
       showAlertMode: p
     } = (0, S.useGuildAlertModeEnabled)(s.id),
-    A = (0, c.default)([_.default], () => _.default.getGuildIncident(s.id)),
+    A = (0, c.useStateFromStores)([_.default], () => _.default.getGuildIncident(s.id)),
     C = s.hasFeature(j.GuildFeatures.INVITES_DISABLED) || p && (null == A ? void 0 : A.invitesDisabledUntil) != null && new Date(A.invitesDisabledUntil) > new Date,
     [x, D] = a.useState(!1);
   a.useEffect(() => {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 }), n("222007");
 var r = n("884691"),
@@ -16,10 +16,10 @@ var r = n("884691"),
   f = n("15639"),
   p = n("49111");
 let _ = 1 * d.default.Millis.DAY,
-  m = new Map;
-var E = {
+  E = new Map;
+var m = {
   useShouldShowChannelNotice(e) {
-    let t = (0, i.default)([o.default, u.default], () => {
+    let t = (0, i.useStateFromStores)([o.default, u.default], () => {
       let t = o.default.getGuild(e);
       return null != t && u.default.can(p.Permissions.ADMINISTRATOR, t)
     });
@@ -27,8 +27,8 @@ var E = {
       t && ! function(e) {
         var t;
         let n = Date.now(),
-          r = null !== (t = m.get(e)) && void 0 !== t ? t : 0;
-        !(n < r + _) && (m.set(e, n), s.default.post({
+          r = null !== (t = E.get(e)) && void 0 !== t ? t : 0;
+        !(n < r + _) && (E.set(e, n), s.HTTP.post({
           url: p.Endpoints.GUILD_MIGRATE_COMMAND_SCOPE(e)
         }).then(t => {
           var n, r;
@@ -38,11 +38,11 @@ var E = {
             integrationIdsWithAppCommands: null !== (r = null === (n = t.body) || void 0 === n ? void 0 : n.integration_ids_with_app_commands) && void 0 !== r ? r : []
           })
         }, () => {
-          m.set(e, r)
+          E.set(e, r)
         }))
       }(e)
     }, [e, t]);
-    let n = (0, i.default)([f.default], () => f.default.shouldShowChannelNotice(e));
+    let n = (0, i.useStateFromStores)([f.default], () => f.default.shouldShowChannelNotice(e));
     return t && n
   },
   dismissNotice(e) {

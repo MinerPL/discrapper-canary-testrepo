@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return T
   }
 });
 var s = n("37983"),
@@ -20,16 +20,16 @@ var s = n("37983"),
   m = n("673844"),
   E = n("49111"),
   g = n("782340"),
-  S = n("64664");
+  S = n("618509");
 
-function A(e) {
+function T(e) {
   let {
     threadId: t
-  } = e, n = (0, i.default)([u.default], () => u.default.getChannel(t)), A = (0, i.default)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), _ = a.useCallback(() => {
-    null != n && null != A && ((0, o.trackWithMetadata)(E.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
+  } = e, n = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(t)), T = (0, i.useStateFromStores)([u.default], () => u.default.getChannel(null == n ? void 0 : n.parent_id)), A = a.useCallback(() => {
+    null != n && null != T && ((0, o.trackWithMetadata)(E.AnalyticEvents.MEDIA_POST_SHARE_PROMPT_CLICKED, {
       media_post_id: n.id
-    }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, A)))
-  }, [n, A]);
+    }), (0, l.copy)((0, h.getChannelLinkToCopy)(n, T)))
+  }, [n, T]);
   return (0, s.jsxs)("div", {
     className: S.sharePromptContainer,
     children: [(0, s.jsx)(m.default, {}), (0, s.jsxs)("div", {
@@ -49,7 +49,7 @@ function A(e) {
       }), (0, s.jsxs)(r.Button, {
         className: S.sharePromptCta,
         innerClassName: S.ctaContent,
-        onClick: _,
+        onClick: A,
         children: [(0, s.jsx)(f.default, {
           height: "16px",
           width: "16px"

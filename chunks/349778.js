@@ -5,11 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("943314"),
-  l = n("531869");
+  s = n("531869"),
+  r = n("49111");
 
 function a(e) {
-  let t = l.default.getCurrentConfig({
-      guildId: null != e ? e : "",
+  let t = s.default.getCurrentConfig({
+      guildId: null != e ? e : r.EMPTY_STRING_SNOWFLAKE_ID,
       location: "3fde52_1"
     }),
     n = i.default.getCurrentConfig({

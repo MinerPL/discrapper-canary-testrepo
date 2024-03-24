@@ -21,38 +21,38 @@ var l = a("37983"),
   I = a("347895"),
   _ = a("99384"),
   x = a("49111"),
-  v = a("782340"),
-  S = a("139238");
+  S = a("782340"),
+  v = a("332100");
 let C = n.memo(function(e) {
     let {
       guild: t
-    } = e, a = (0, s.default)([o.default], () => o.default.getGuild(t.id), [t]);
+    } = e, a = (0, s.useStateFromStores)([o.default], () => o.default.getGuild(t.id), [t]);
     return n.useEffect(() => {
       null == a && (0, u.fetchGuildForPopout)(t.id)
     }, [t.id, a]), (0, l.jsx)("div", {
-      className: S.sidebarCardWrapper,
+      className: v.sidebarCardWrapper,
       children: (0, l.jsxs)("div", {
-        className: S.sidebarCard,
+        className: v.sidebarCard,
         children: [(0, l.jsx)(i.Heading, {
-          className: S.sidebarCardHeader,
+          className: v.sidebarCardHeader,
           variant: "heading-md/bold",
           color: "header-primary",
-          children: v.default.Messages.GUILD_HOME_ABOUT
+          children: S.default.Messages.GUILD_HOME_ABOUT
         }), (0, l.jsx)(i.Text, {
-          className: S.guildDescription,
+          className: v.guildDescription,
           variant: "text-md/normal",
           color: "text-normal",
           children: t.description
         }), (0, l.jsx)("div", {
-          className: S.guildInfo,
+          className: v.guildInfo,
           children: (null == a ? void 0 : a.memberCount) != null && (null == a ? void 0 : a.presenceCount) != null && (0, l.jsxs)(l.Fragment, {
             children: [(0, l.jsx)("div", {
-              className: S.dotOnline
+              className: v.dotOnline
             }), (0, l.jsx)(i.Text, {
-              className: S.guildInfoText,
+              className: v.guildInfoText,
               variant: "text-xs/normal",
               color: "text-muted",
-              children: v.default.Messages.GUILD_ONBOARDING_HOME_GUILD_MEMBERS_RATIO.format({
+              children: S.default.Messages.GUILD_ONBOARDING_HOME_GUILD_MEMBERS_RATIO.format({
                 online: null == a ? void 0 : a.presenceCount,
                 total: null == a ? void 0 : a.memberCount
               })
@@ -67,7 +67,7 @@ let C = n.memo(function(e) {
       channelId: t,
       title: a,
       icon: u
-    } = e, o = (0, s.default)([f.default], () => f.default.getChannel(t)), _ = (0, s.default)([m.default], () => m.default.getMessages(t)), v = (0, s.default)([h.default], () => h.default.can(x.Permissions.VIEW_CHANNEL, o)), C = _.first(), N = (0, r.useForumPostMediaProperties)(C, !1), p = (null == N ? void 0 : N.length) > 0 ? N[0] : null, T = null != o && null == C && !_.loadingMore && !_.ready && !_.hasFetched && v;
+    } = e, o = (0, s.useStateFromStores)([f.default], () => f.default.getChannel(t)), _ = (0, s.useStateFromStores)([m.default], () => m.default.getMessages(t)), S = (0, s.useStateFromStores)([h.default], () => h.default.can(x.Permissions.VIEW_CHANNEL, o)), C = _.first(), N = (0, r.useForumPostMediaProperties)(C, !1), p = (null == N ? void 0 : N.length) > 0 ? N[0] : null, T = null != o && null == C && !_.loadingMore && !_.ready && !_.hasFetched && S;
     n.useEffect(() => {
       T && d.default.fetchMessages({
         channelId: t,
@@ -82,7 +82,7 @@ let C = n.memo(function(e) {
       }))
     };
     return (0, l.jsx)(i.Clickable, {
-      className: S.resourceChannel,
+      className: v.resourceChannel,
       onClick: e => A(e),
       children: (0, l.jsxs)(l.Fragment, {
         children: [(() => {
@@ -92,19 +92,19 @@ let C = n.memo(function(e) {
           });
           return null != u && null != e ? (0, l.jsx)("img", {
             src: e,
-            className: S.resourceImage,
+            className: v.resourceImage,
             alt: "",
             "aria-hidden": !0
           }) : null != p ? (0, l.jsx)("img", {
-            className: S.resourceImage,
+            className: v.resourceImage,
             src: p.src,
             alt: p.alt
           }) : (0, l.jsx)("div", {
-            className: S.placeholderImage,
+            className: v.placeholderImage,
             children: (0, l.jsx)(E.default, {})
           })
         })(), (0, l.jsx)(i.Text, {
-          className: S.guildInfoText,
+          className: v.guildInfoText,
           variant: "text-sm/semibold",
           color: "none",
           children: a
@@ -117,16 +117,16 @@ let C = n.memo(function(e) {
       guild: t
     } = e, a = (0, _.default)(t.id);
     return 0 === a.length ? null : (0, l.jsx)("div", {
-      className: S.sidebarCardWrapper,
+      className: v.sidebarCardWrapper,
       children: (0, l.jsxs)("div", {
-        className: S.sidebarCard,
+        className: v.sidebarCard,
         children: [(0, l.jsx)(i.Heading, {
-          className: S.sidebarCardHeader,
+          className: v.sidebarCardHeader,
           variant: "heading-md/bold",
           color: "header-primary",
-          children: v.default.Messages.GUILD_HOME_RESOURCES
+          children: S.default.Messages.GUILD_HOME_RESOURCES
         }), (0, l.jsx)("div", {
-          className: S.resourceChannelsList,
+          className: v.resourceChannelsList,
           children: a.map(e => (0, l.jsx)(N, {
             channelId: e.channelId,
             title: e.title,
@@ -142,7 +142,7 @@ let C = n.memo(function(e) {
       isNewMember: a
     } = e;
     return (0, l.jsxs)("aside", {
-      className: S.sidebar,
+      className: v.sidebar,
       children: [(0, l.jsx)(C, {
         guild: t
       }), a && (0, l.jsx)(p, {

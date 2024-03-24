@@ -1,16 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   renderTitle: function() {
-    return y
+    return x
   },
   renderTopic: function() {
-    return D
+    return y
   },
   HeaderGuildBreadcrumb: function() {
-    return P
-  },
-  ChannelEmoji: function() {
-    return b
+    return O
   }
 });
 var s = n("37983"),
@@ -19,73 +16,69 @@ var s = n("37983"),
   i = n.n(l),
   r = n("446674"),
   o = n("77078"),
-  u = n("430568"),
-  d = n("789394"),
-  c = n("843962"),
-  f = n("679653"),
-  h = n("619335"),
-  C = n("965381"),
-  p = n("393414"),
-  m = n("506885"),
-  E = n("27618"),
-  g = n("162771"),
-  S = n("697218"),
-  A = n("79798"),
-  _ = n("476263"),
-  T = n("718490"),
-  M = n("960454"),
-  N = n("740961"),
-  I = n("539938"),
-  v = n("540853"),
-  L = n("49111"),
-  x = n("782340"),
-  R = n("305794");
+  u = n("843962"),
+  d = n("679653"),
+  c = n("619335"),
+  f = n("393414"),
+  h = n("506885"),
+  C = n("27618"),
+  p = n("162771"),
+  m = n("697218"),
+  E = n("79798"),
+  g = n("476263"),
+  S = n("718490"),
+  T = n("960454"),
+  A = n("740961"),
+  _ = n("539938"),
+  M = n("540853"),
+  I = n("49111"),
+  N = n("782340"),
+  v = n("250455");
 
-function y(e) {
+function x(e) {
   let {
     channel: t,
     channelName: n,
     parentChannel: l,
     guild: r,
-    inSidebar: u = !1,
-    handleClick: d,
-    handleContextMenu: C,
-    handleParentClick: p,
-    handleParentContextMenu: m,
-    renderFollowButton: g,
-    channelEmojiLeftOfIcon: A
-  } = e, _ = (0, h.default)(t, r), {
-    prefix: T,
-    level: N
+    inSidebar: f = !1,
+    handleClick: h,
+    handleContextMenu: p,
+    handleParentClick: E,
+    handleParentContextMenu: g,
+    renderFollowButton: S
+  } = e, A = (0, c.default)(t, r), {
+    prefix: x,
+    level: L
   } = function(e, t) {
     var n, s;
     switch (e) {
-      case L.ChannelTypes.DM:
+      case I.ChannelTypes.DM:
         return {
-          prefix: x.default.Messages.DIRECT_MESSAGE, level: 1
+          prefix: N.default.Messages.DIRECT_MESSAGE, level: 1
         };
-      case L.ChannelTypes.GROUP_DM:
+      case I.ChannelTypes.GROUP_DM:
         return {
-          prefix: x.default.Messages.GROUP_DM, level: 1
+          prefix: N.default.Messages.GROUP_DM, level: 1
         };
-      case L.ChannelTypes.GUILD_DIRECTORY:
+      case I.ChannelTypes.GUILD_DIRECTORY:
         return {
           prefix: null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : "", level: 1
         };
-      case L.ChannelTypes.GUILD_ANNOUNCEMENT:
-      case L.ChannelTypes.GUILD_TEXT:
-      case L.ChannelTypes.GUILD_FORUM:
-      case L.ChannelTypes.GUILD_MEDIA:
-      case L.ChannelTypes.GUILD_STAGE_VOICE:
-      case L.ChannelTypes.GUILD_VOICE:
+      case I.ChannelTypes.GUILD_ANNOUNCEMENT:
+      case I.ChannelTypes.GUILD_TEXT:
+      case I.ChannelTypes.GUILD_FORUM:
+      case I.ChannelTypes.GUILD_MEDIA:
+      case I.ChannelTypes.GUILD_STAGE_VOICE:
+      case I.ChannelTypes.GUILD_VOICE:
         return {
           prefix: null !== (s = null == t ? void 0 : t.name) && void 0 !== s ? s : "", level: 1
         };
-      case L.ChannelTypes.ANNOUNCEMENT_THREAD:
-      case L.ChannelTypes.PUBLIC_THREAD:
-      case L.ChannelTypes.PRIVATE_THREAD:
+      case I.ChannelTypes.ANNOUNCEMENT_THREAD:
+      case I.ChannelTypes.PUBLIC_THREAD:
+      case I.ChannelTypes.PRIVATE_THREAD:
         return {
-          prefix: x.default.Messages.THREAD, level: 2
+          prefix: N.default.Messages.THREAD, level: 2
         };
       default:
         return {
@@ -93,148 +86,146 @@ function y(e) {
         }
     }
   }(t.type, r), y = (0, s.jsxs)(s.Fragment, {
-    children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
-      children: [T, ":"]
+    children: [null != x ? (0, s.jsxs)(o.HiddenVisually, {
+      children: [x, ":"]
     }) : null, " ", n]
-  }), O = (0, s.jsx)(b, {
-    channel: t
   });
   switch (t.type) {
-    case L.ChannelTypes.DM:
-      return (0, s.jsx)(v.default, {
-        level: N,
+    case I.ChannelTypes.DM:
+      return (0, s.jsx)(M.default, {
+        level: L,
         channel: t,
-        handleClick: d,
-        handleContextMenu: C
+        handleClick: h,
+        handleContextMenu: p
       });
-    case L.ChannelTypes.GROUP_DM:
+    case I.ChannelTypes.GROUP_DM:
       if (t.isManaged()) return y;
       return (0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsx)(o.HiddenVisually, {
-          children: x.default.Messages.GROUP_DM
+          children: N.default.Messages.GROUP_DM
         }), (0, s.jsx)("div", {
           children: (0, s.jsx)(o.Avatar, {
             "aria-hidden": !0,
-            className: R.avatar,
+            className: v.avatar,
             size: o.AvatarSizes.SIZE_24,
-            src: (0, c.getChannelIconURL)(t, 80, !1)
+            src: (0, u.getChannelIconURL)(t, 80, !1)
           })
-        }), (0, s.jsx)(M.default, {
+        }), (0, s.jsx)(T.default, {
           channel: t
         }, "channel-".concat(t.id))]
       });
-    case L.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case L.ChannelTypes.GUILD_TEXT:
-    case L.ChannelTypes.GUILD_FORUM:
-    case L.ChannelTypes.GUILD_MEDIA:
+    case I.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case I.ChannelTypes.GUILD_TEXT:
+    case I.ChannelTypes.GUILD_FORUM:
+    case I.ChannelTypes.GUILD_MEDIA:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && O, j(_, t.type === L.ChannelTypes.GUILD_ANNOUNCEMENT ? x.default.Messages.NEWS_CHANNEL : x.default.Messages.TEXT_CHANNEL), !A && O, (0, s.jsx)(I.default.Title, {
-          level: N,
-          onContextMenu: C,
-          onClick: d,
+        children: [R(A, t.type === I.ChannelTypes.GUILD_ANNOUNCEMENT ? N.default.Messages.NEWS_CHANNEL : N.default.Messages.TEXT_CHANNEL), (0, s.jsx)(_.default.Title, {
+          level: L,
+          onContextMenu: p,
+          onClick: h,
           children: y
-        }), null != g ? g() : null]
+        }), null != S ? S() : null]
       });
-    case L.ChannelTypes.GUILD_VOICE:
+    case I.ChannelTypes.GUILD_VOICE:
       return (0, s.jsxs)(a.Fragment, {
-        children: [A && O, j(_, x.default.Messages.VOICE_CHANNEL), !A && O, (0, s.jsx)(I.default.Title, {
-          level: N,
-          onContextMenu: C,
-          onClick: d,
-          children: y
-        })]
-      });
-    case L.ChannelTypes.GUILD_STAGE_VOICE:
-      return (0, s.jsxs)(a.Fragment, {
-        children: [A && O, j(_, x.default.Messages.STAGE_CHANNEL), !A && O, (0, s.jsx)(I.default.Title, {
-          level: N,
-          onContextMenu: C,
-          onClick: d,
+        children: [R(A, N.default.Messages.VOICE_CHANNEL), (0, s.jsx)(_.default.Title, {
+          level: L,
+          onContextMenu: p,
+          onClick: h,
           children: y
         })]
       });
-    case L.ChannelTypes.ANNOUNCEMENT_THREAD:
-    case L.ChannelTypes.PUBLIC_THREAD:
-    case L.ChannelTypes.PRIVATE_THREAD:
-      let D = null;
-      if (!u && null != l) {
-        let e = (0, h.default)(l, r);
-        D = (0, s.jsxs)(a.Fragment, {
-          children: [j(e, x.default.Messages.TEXT_CHANNEL), (0, s.jsx)(I.default.Title, {
-            level: N,
-            onContextMenu: m,
-            onClick: p,
-            className: i(R.parentChannelName, R.cursorPointer),
-            children: (0, f.computeChannelName)(l, S.default, E.default)
-          }), (0, s.jsx)(I.default.Caret, {})]
+    case I.ChannelTypes.GUILD_STAGE_VOICE:
+      return (0, s.jsxs)(a.Fragment, {
+        children: [R(A, N.default.Messages.STAGE_CHANNEL), (0, s.jsx)(_.default.Title, {
+          level: L,
+          onContextMenu: p,
+          onClick: h,
+          children: y
+        })]
+      });
+    case I.ChannelTypes.ANNOUNCEMENT_THREAD:
+    case I.ChannelTypes.PUBLIC_THREAD:
+    case I.ChannelTypes.PRIVATE_THREAD:
+      let O = null;
+      if (!f && null != l) {
+        let e = (0, c.default)(l, r);
+        O = (0, s.jsxs)(a.Fragment, {
+          children: [R(e, N.default.Messages.TEXT_CHANNEL), (0, s.jsx)(_.default.Title, {
+            level: L,
+            onContextMenu: g,
+            onClick: E,
+            className: i(v.parentChannelName, v.cursorPointer),
+            children: (0, d.computeChannelName)(l, m.default, C.default)
+          }), (0, s.jsx)(_.default.Caret, {})]
         })
       }
-      let P = (null == l ? void 0 : l.type) != null && L.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
+      let D = (null == l ? void 0 : l.type) != null && I.ChannelTypesSets.GUILD_THREADS_ONLY.has(l.type);
       return (0, s.jsxs)(a.Fragment, {
-        children: [D, j(P ? null : _, x.default.Messages.THREAD), (0, s.jsx)(I.default.Title, {
-          level: N,
-          onContextMenu: C,
-          onClick: d,
+        children: [O, R(D ? null : A, N.default.Messages.THREAD), (0, s.jsx)(_.default.Title, {
+          level: L,
+          onContextMenu: p,
+          onClick: h,
           className: i({
-            [R.cursorPointer]: u,
-            [R.forumPostTitle]: P
+            [v.cursorPointer]: f,
+            [v.forumPostTitle]: D
           }),
           children: y
         })]
       });
-    case L.ChannelTypes.GUILD_DIRECTORY:
-      let H = (null == r ? void 0 : r.hasFeature(L.GuildFeatures.HUB)) ? x.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
+    case I.ChannelTypes.GUILD_DIRECTORY:
+      let P = (null == r ? void 0 : r.hasFeature(I.GuildFeatures.HUB)) ? N.default.Messages.HUB_DIRECTORY_CHANNEL_TITLE.format({
         guildName: n
       }) : n;
       return (0, s.jsxs)(a.Fragment, {
-        children: [null !== _ ? (0, s.jsx)(I.default.Icon, {
-          iconClassName: R.icon,
-          icon: _,
+        children: [null !== A ? (0, s.jsx)(_.default.Icon, {
+          iconClassName: v.icon,
+          icon: A,
           "aria-hidden": !0
-        }) : null, (0, s.jsxs)(I.default.Title, {
-          level: N,
-          onContextMenu: C,
-          onClick: d,
-          children: [null != T ? (0, s.jsxs)(o.HiddenVisually, {
-            children: [T, ":"]
-          }) : null, " ", H]
+        }) : null, (0, s.jsxs)(_.default.Title, {
+          level: L,
+          onContextMenu: p,
+          onClick: h,
+          children: [null != x ? (0, s.jsxs)(o.HiddenVisually, {
+            children: [x, ":"]
+          }) : null, " ", P]
         })]
       });
     default:
       return null
   }
 }
-let O = e => {
+let L = e => {
   let {
     channel: t
-  } = e, n = (0, r.useStateFromStores)([S.default], () => S.default.getCurrentUser()), l = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t.getRecipientId()));
+  } = e, n = (0, r.useStateFromStores)([m.default], () => m.default.getCurrentUser()), l = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t.getRecipientId()));
   return (a.useEffect(() => {
-    (null == n ? void 0 : n.isStaff()) && (0, m.default)(l.id, l.getAvatarURL(void 0, 80), {
+    (null == n ? void 0 : n.isStaff()) && (0, h.default)(l.id, l.getAvatarURL(void 0, 80), {
       dispatchWait: !0,
       withMutualGuilds: !0,
       withMutualFriendsCount: !0
     })
-  }, [n, l]), t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff())) ? (0, s.jsx)(A.default, {
-    type: A.default.Types.STAFF_ONLY_DM
+  }, [n, l]), t.isDM() && (null == n ? void 0 : n.isStaff()) && (null == l ? void 0 : l.isStaff())) ? (0, s.jsx)(E.default, {
+    type: E.default.Types.STAFF_ONLY_DM
   }) : null
 };
 
-function D(e, t) {
+function y(e, t) {
   switch (e.type) {
-    case L.ChannelTypes.DM:
+    case I.ChannelTypes.DM:
       return (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(O, {
+        children: [(0, s.jsx)(L, {
           channel: e
-        }), (0, s.jsx)(T.default, {
+        }), (0, s.jsx)(S.default, {
           channel: e
         }, e.id)]
       });
-    case L.ChannelTypes.GUILD_ANNOUNCEMENT:
-    case L.ChannelTypes.GUILD_TEXT:
-    case L.ChannelTypes.GUILD_VOICE:
-    case L.ChannelTypes.GUILD_STAGE_VOICE:
-    case L.ChannelTypes.GROUP_DM:
-      return null != t ? (0, s.jsx)(N.default, {
+    case I.ChannelTypes.GUILD_ANNOUNCEMENT:
+    case I.ChannelTypes.GUILD_TEXT:
+    case I.ChannelTypes.GUILD_VOICE:
+    case I.ChannelTypes.GUILD_STAGE_VOICE:
+    case I.ChannelTypes.GROUP_DM:
+      return null != t ? (0, s.jsx)(A.default, {
         channel: e,
         guild: t
       }, e.id) : null;
@@ -243,10 +234,10 @@ function D(e, t) {
   }
 }
 
-function j(e, t) {
+function R(e, t) {
   return (0, s.jsxs)(s.Fragment, {
-    children: [null !== e && (0, s.jsx)(I.default.Icon, {
-      iconClassName: R.icon,
+    children: [null !== e && (0, s.jsx)(_.default.Icon, {
+      iconClassName: v.icon,
       icon: e,
       "aria-hidden": !0
     }), (0, s.jsx)(o.HiddenVisually, {
@@ -255,56 +246,29 @@ function j(e, t) {
   })
 }
 
-function P(e) {
+function O(e) {
   let {
     guild: t,
     channel: n,
     caretPosition: a = "left"
-  } = e, l = (0, r.useStateFromStores)([g.default], () => g.default.getGuildId());
-  return l !== L.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
-    className: R.guildBreadcrumbContainer,
-    children: ["left" === a && (0, s.jsx)(I.default.Caret, {
+  } = e, l = (0, r.useStateFromStores)([p.default], () => p.default.getGuildId());
+  return l !== I.FAVORITES || null == t ? null : (0, s.jsxs)("div", {
+    className: v.guildBreadcrumbContainer,
+    children: ["left" === a && (0, s.jsx)(_.default.Caret, {
       direction: "left"
-    }), (0, s.jsx)(_.default, {
+    }), (0, s.jsx)(g.default, {
       guild: t,
-      size: _.default.Sizes.SMALLER,
-      className: R.guildBreadcrumbIcon,
+      size: g.default.Sizes.SMALLER,
+      className: v.guildBreadcrumbIcon,
       active: !0
-    }), (0, s.jsx)(I.default.Title, {
+    }), (0, s.jsx)(_.default.Title, {
       onClick: () => {
-        (0, p.transitionToGuild)(t.id, n.id)
+        (0, f.transitionToGuild)(t.id, n.id)
       },
-      className: i(R.parentChannelName, R.cursorPointer),
+      className: i(v.parentChannelName, v.cursorPointer),
       children: t.name
-    }), "right" === a && (0, s.jsx)(I.default.Caret, {
+    }), "right" === a && (0, s.jsx)(_.default.Caret, {
       direction: "right"
     })]
   })
 }
-let b = a.memo(function(e) {
-  let {
-    channel: t
-  } = e, {
-    enabled: n,
-    left: a
-  } = d.ChannelEmojisExperiment.useExperiment({
-    location: "f2c6da_2"
-  }, {
-    autoTrackExposure: !1
-  }), {
-    emoji: l,
-    color: r
-  } = (0, C.useChannelEmojiAndColor)(t);
-  return n ? (0, s.jsx)("div", {
-    className: i(R.channelEmoji, a ? R.channelEmojiLeftOfIcon : R.channelEmojiRightOfIcon),
-    style: {
-      backgroundColor: r
-    },
-    children: (0, s.jsx)(u.default, {
-      className: R.twemoji,
-      emojiName: l.name,
-      emojiId: l.id,
-      src: l.url
-    })
-  }) : null
-})

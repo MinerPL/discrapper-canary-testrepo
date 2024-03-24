@@ -1,41 +1,48 @@
 "use strict";
-let s;
+let i;
 n.r(t), n.d(t, {
   createSoundForPack: function() {
-    return i
+    return l
   },
   createSound: function() {
-    return a
+    return u
   },
   playSound: function() {
-    return c
+    return d
   }
 });
-var u = n("870696"),
-  o = n("319291"),
-  r = n("102985");
+var s = n("817720"),
+  r = n("870696"),
+  a = n("319291"),
+  o = n("102985");
+{
+  let e = (0, s.isEligibleForWebAudioAPI)({
+      location: "SoundUtils"
+    }),
+    t = n("895737");
+  i = e ? t.WebAudioAPISound : t.WebAudioSound
+}
 
-function i(e, t) {
+function l(e, t) {
   var n;
-  let s = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-    u = (0, o.default)(t);
-  return a(null !== (n = u[e]) && void 0 !== n ? n : e, e, s)
+  let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+    s = (0, a.default)(t);
+  return u(null !== (n = s[e]) && void 0 !== n ? n : e, e, i)
 }
 
-function a(e, t) {
+function u(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-  return new s(e, t, n)
+  return new i(e, t, n)
 }
 
-function c(e) {
+function d(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-    s = arguments.length > 2 ? arguments[2] : void 0;
-  if (r.default.disableSounds) return;
-  let i = (0, o.default)(u.default.getSoundpack()),
-    c = a(null !== (t = i[e]) && void 0 !== t ? t : e, e, n);
-  return null != s ? c.playWithListener().then(e => {
-    e && s()
-  }) : c.play(), c
+    i = arguments.length > 2 ? arguments[2] : void 0;
+  if (o.default.disableSounds) return;
+  let s = (0, a.default)(r.default.getSoundpack()),
+    l = u(null !== (t = s[e]) && void 0 !== t ? t : e, e, n);
+  return null != i ? l.playWithListener().then(e => {
+    e && i()
+  }) : l.play(), l
 }
-s = n("895737").WebAudioSound

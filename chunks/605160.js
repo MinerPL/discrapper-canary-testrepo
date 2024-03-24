@@ -1,58 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
   ObscureReason: function() {
-    return l
+    return i
   },
   getObscureReason: function() {
-    return v
+    return y
   },
   getObscureReasonForEmbed: function() {
-    return C
+    return g
   },
   getForumPostShouldObscure: function() {
-    return I
+    return S
   },
   useShouldObscure: function() {
-    return x
+    return C
   },
   getObscuredAlt: function() {
-    return _
+    return T
   }
 }), n("702976"), n("794252");
-var l, a, s = n("506838"),
-  i = n("65597"),
+var i, l, a = n("506838"),
+  s = n("65597"),
   r = n("676574"),
   o = n("447435"),
   u = n("963119"),
   d = n("791234"),
   c = n("845579"),
-  m = n("377253"),
-  f = n("957255"),
-  h = n("568734"),
-  p = n("70845"),
-  g = n("49111"),
+  f = n("377253"),
+  p = n("957255"),
+  m = n("568734"),
+  h = n("70845"),
+  x = n("49111"),
   E = n("782340");
-(a = l || (l = {})).SPOILER = "spoiler", a.EXPLICIT_CONTENT = "explicit_content", a.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
-let v = (e, t) => {
+(l = i || (i = {})).SPOILER = "spoiler", l.EXPLICIT_CONTENT = "explicit_content", l.POTENTIAL_EXPLICIT_CONTENT = "potential_explicit_content";
+let y = (e, t) => {
     let {
       spoiler: n,
-      flags: l = 0,
-      content_scan_version: a
+      flags: i = 0,
+      content_scan_version: l
     } = e;
-    return t && (0, o.isPendingScan)(a) ? "potential_explicit_content" : t && ((0, h.hasFlag)(l, g.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, h.hasFlag)(l, g.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
+    return t && (0, o.isPendingScan)(l) ? "potential_explicit_content" : t && ((0, m.hasFlag)(i, x.MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : n || (0, m.hasFlag)(i, x.MessageAttachmentFlags.IS_SPOILER) ? "spoiler" : null
   },
-  C = (e, t, n, l, a) => {
+  g = (e, t, n, i, l) => {
     let {
-      flags: s = 0,
-      contentScanVersion: i
-    } = e, u = m.default.getMessage(t, n);
-    return null == u ? null : a && (0, o.isPendingScan)(i) ? "potential_explicit_content" : a && ((0, h.hasFlag)(s, g.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : l ? "spoiler" : null
+      flags: a = 0,
+      contentScanVersion: s
+    } = e, u = f.default.getMessage(t, n);
+    return null == u ? null : l && !u.author.bot && (0, o.isPendingScan)(s) ? "potential_explicit_content" : l && ((0, m.hasFlag)(a, x.MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA) || r.default.get("obscure_blur_effect_enabled")) ? "explicit_content" : i ? "spoiler" : null
   };
 
-function I(e, t, n) {
+function S(e, t, n) {
   if (null == e) return [!1, void 0];
   if (n && (0, o.isPendingScan)(e.contentScanVersion)) return [!0, "potential_explicit_content"];
-  let l = function(e) {
+  let i = function(e) {
     switch (e) {
       case d.ForumPostMediaTypes.EMBED:
         return o.ObscuredMediaTypes.Embed;
@@ -62,17 +62,17 @@ function I(e, t, n) {
         return
     }
   }(e.type);
-  return null != l && (0, o.isMediaObscured)({
-    type: l,
+  return null != i && (0, o.isMediaObscured)({
+    type: i,
     media: e
   }, n) ? [!0, "explicit_content"] : e.spoiler ? [t, "spoiler"] : [!1, void 0]
 }
 
-function x(e) {
+function C(e) {
   let {
     channel: t,
     media: n
-  } = e, l = (0, i.default)([f.default], () => null != t && f.default.can(g.Permissions.MANAGE_MESSAGES, t)), a = c.RenderSpoilers.useSetting(), s = (0, u.useShouldRedactExplicitContentForForum)();
-  return I(n, !(0, p.default)(a, l), s)
+  } = e, i = (0, s.useStateFromStores)([p.default], () => null != t && p.default.can(x.Permissions.MANAGE_MESSAGES, t)), l = c.RenderSpoilers.useSetting(), a = (0, u.useShouldRedactExplicitContentForForum)();
+  return S(n, !(0, h.default)(l, i), a)
 }
-let _ = e => (0, s.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)
+let T = e => (0, a.match)(e).with("explicit_content", () => E.default.Messages.EXPLICIT_CONTENT_ALT).with("spoiler", () => E.default.Messages.SPOILER_HIDDEN_A11Y_LABEL).otherwise(() => void 0)

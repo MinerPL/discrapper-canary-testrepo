@@ -4,9 +4,9 @@ s.r(t), s.d(t, {
     return g
   }
 });
-var a = s("37983");
+var n = s("37983");
 s("884691");
-var n = s("446674"),
+var a = s("446674"),
   l = s("77078"),
   i = s("819689"),
   d = s("249561"),
@@ -18,10 +18,11 @@ var n = s("446674"),
   E = s("782340");
 
 function g(e, t) {
-  let s = (0, n.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+  let s = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
     g = (0, r.useIsActiveChannelOrUnarchivableThread)(t),
-    M = (0, n.useStateFromStores)([u.default], () => u.default.can(f.Permissions.MANAGE_MESSAGES, t), [t]);
-  return e.state === f.MessageStates.SENDING || e.author.id !== (null == s ? void 0 : s.id) && !M || f.MessageTypesSets.UNDELETABLE.has(e.type) || !g ? null : (0, a.jsx)(l.MenuItem, {
+    M = (0, a.useStateFromStores)([u.default], () => u.default.can(f.Permissions.MANAGE_MESSAGES, t), [t]),
+    _ = M || null != s && e.canDeleteOwnMessage(s.id);
+  return e.state === f.MessageStates.SENDING || !_ || f.MessageTypesSets.UNDELETABLE.has(e.type) || !g ? null : (0, n.jsx)(l.MenuItem, {
     id: "delete",
     label: E.default.Messages.DELETE_MESSAGE,
     action: function(s) {

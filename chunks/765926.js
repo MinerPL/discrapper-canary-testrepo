@@ -1,10 +1,10 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return a
   }
 });
-var a = (0, r("237436").defineColorTokens)({
+var a = (0, t("237436").defineColorTokens)({
   "modal-background": {
     dark: "primary.600",
     light: "white.500",
@@ -43,7 +43,7 @@ var a = (0, r("237436").defineColorTokens)({
   },
   "blur-fallback-pressed": {
     light: {
-      color: "primary.530",
+      color: "primary.560",
       opacity: .96
     },
     dark: {
@@ -51,11 +51,11 @@ var a = (0, r("237436").defineColorTokens)({
       opacity: .96
     },
     darker: {
-      color: "plum.17",
+      color: "plum.18",
       opacity: .96
     },
     midnight: {
-      color: "plum.19",
+      color: "plum.20",
       opacity: .96
     }
   },
@@ -75,6 +75,24 @@ var a = (0, r("237436").defineColorTokens)({
     midnight: {
       color: "primary.700",
       opacity: .96
+    }
+  },
+  "voice-video-video-tile-background": {
+    light: {
+      color: "plum.17",
+      opacity: .4
+    },
+    dark: {
+      color: "plum.17",
+      opacity: .4
+    },
+    darker: {
+      color: "plum.17",
+      opacity: .4
+    },
+    midnight: {
+      color: "plum.17",
+      opacity: .4
     }
   },
   "voice-video-video-tile-blur-fallback": {

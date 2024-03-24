@@ -1,24 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return C
   }
 }), n("222007"), n("702976");
 var a = n("872717"),
   s = n("84460"),
+  l = n("648456"),
   i = n("299285"),
-  l = n("167726"),
-  r = n("599110"),
-  o = n("568734"),
-  u = n("861309"),
-  d = n("578287"),
-  c = n("716724"),
-  f = n("613652"),
-  E = n("492249"),
+  r = n("167726"),
+  o = n("599110"),
+  u = n("568734"),
+  d = n("861309"),
+  c = n("578287"),
+  f = n("716724"),
+  E = n("613652"),
+  h = n("492249"),
   _ = n("49111"),
-  h = {
+  C = {
     [_.RPCCommands.SEND_ANALYTICS_EVENT]: {
-      validation: e => (0, c.default)(e).required().keys({
+      validation: e => (0, f.default)(e).required().keys({
         event_name: e.string().required(),
         event_properties: e.object().required()
       }),
@@ -31,38 +32,44 @@ var a = n("872717"),
             event_properties: s
           }
         } = e;
-        (0, d.validatePostMessageTransport)(n.transport), (0, d.validateApplication)(n.application);
-        let l = n.application.id,
-          c = (0, f.default)(),
-          E = null == c ? void 0 : c.getGuildId();
-        if (null == c) throw new u.default({
+        (0, c.validatePostMessageTransport)(n.transport), (0, c.validateApplication)(n.application);
+        let r = n.application.id,
+          f = (0, E.default)(),
+          h = null == f ? void 0 : f.getGuildId();
+        if (null == f) throw new d.default({
           errorCode: _.RPCErrors.INVALID_COMMAND
         }, "Invalid channel");
-        let h = i.default.getApplication(l),
-          C = (0, o.hasFlag)(null !== (t = null == h ? void 0 : h.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
-        if (!C) throw new u.default({
+        let C = i.default.getApplication(r),
+          S = (0, u.hasFlag)(null !== (t = null == C ? void 0 : C.flags) && void 0 !== t ? t : 0, _.ApplicationFlags.EMBEDDED_FIRST_PARTY);
+        if (!S) throw new d.default({
           errorCode: _.RPCErrors.INVALID_COMMAND
         }, "This application cannot access this API");
-        r.default.track(a, {
-          ...s,
-          activity_application_id: l,
-          activity_guild_id: E
+        let I = (0, l.getActiveAnalyticsSessionIDs)(r),
+          m = {
+            activity_application_id: r,
+            activity_channel_type: f.type,
+            activity_guild_id: h,
+            activity_user_session_id: null == I ? void 0 : I.activityUserSessionId
+          };
+        o.default.track(a, {
+          ...m,
+          ...s
         })
       }
     },
     [_.RPCCommands.GET_APPLICATION_TICKET]: {
-      scope: E.RPC_LOCAL_SCOPE,
+      scope: h.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
           socket: t
         } = e, n = t.application.id;
-        if (null == n) throw new u.default({
+        if (null == n) throw new d.default({
           errorCode: _.RPCErrors.INVALID_COMMAND
         }, "No application.");
-        return a.default.post({
+        return a.HTTP.post({
           url: _.Endpoints.APPLICATION_TICKET(n),
           body: {
-            test_mode: l.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
+            test_mode: r.default.inTestModeForApplication(n) || s.default.inDevModeForApplication(n)
           },
           retries: 3,
           oldFormErrors: !0

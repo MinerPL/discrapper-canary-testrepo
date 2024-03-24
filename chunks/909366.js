@@ -1,47 +1,108 @@
 "use strict";
 n.r(t), n.d(t, {
   TextAndImageAnswers: function() {
-    return m
+    return O
   }
-});
-var s = n("37983");
-n("884691");
-var l = n("414456"),
-  a = n.n(l),
-  i = n("597287"),
-  r = n("907002"),
-  o = n("446674"),
-  u = n("77078"),
-  d = n("206230"),
-  c = n("426490"),
-  f = n("782340"),
-  E = n("139583");
+}), n("222007"), n("794252");
+var s = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  i = n.n(a),
+  r = n("597287"),
+  o = n("146606"),
+  u = n("506838"),
+  d = n("446674"),
+  c = n("77078"),
+  E = n("206230"),
+  f = n("486996"),
+  _ = n("476765"),
+  T = n("847511"),
+  I = n("562228"),
+  m = n("214400"),
+  N = n("426490"),
+  p = n("74232"),
+  S = n("782340"),
+  A = n("997559");
 
-function _(e) {
+function C(e) {
   let {
     percentage: t,
-    label: n
-  } = e;
+    label: n,
+    canShowVoterDetails: a,
+    answerId: i
+  } = e, o = (0, _.useUID)(), {
+    channelId: u,
+    messageId: d
+  } = (0, p.useMessageIds)(), [E, m] = l.useState(""), [N, S] = l.useState(!1), C = "" !== E && N, h = l.useCallback(() => {
+    let e = (0, I.getPollAnswerVotesTooltipText)(d, u, i);
+    m(e)
+  }, [d, u, i]), g = l.useCallback(() => {
+    h(), S(!0)
+  }, [h]), M = l.useCallback(() => {
+    S(!1)
+  }, []), O = l.useCallback(() => {
+    (0, T.handleShowVotesForAnswer)({
+      channelId: u,
+      messageId: d,
+      answerId: i
+    })
+  }, [u, d, i]);
+  l.useEffect(() => {
+    if (N) return f.default.addReactChangeListener(h), () => {
+      f.default.removeReactChangeListener(h)
+    }
+  }, [N, h]);
+  let R = (0, s.jsx)(c.Text, {
+    variant: "text-xs/semibold",
+    color: "none",
+    className: A.voteCount,
+    scaleFontToUserSetting: !0,
+    children: n
+  });
   return (0, s.jsxs)("div", {
-    className: E.votesData,
-    children: [(0, s.jsxs)(u.Text, {
-      className: E.voteDataLine,
-      variant: "text-md/semibold",
+    className: A.votesData,
+    children: [a ? (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(c.Tooltip, {
+        text: (0, s.jsx)(c.Text, {
+          variant: "text-sm/normal",
+          color: "text-muted",
+          scaleFontToUserSetting: !0,
+          children: E
+        }),
+        forceOpen: C,
+        "aria-label": !1,
+        children: e => (0, s.jsx)(c.Button, {
+          ...e,
+          onMouseEnter: g,
+          onMouseLeave: M,
+          onFocus: g,
+          onBlur: M,
+          onClick: O,
+          className: A.voteCountButton,
+          "aria-describedby": C ? o : void 0,
+          look: c.Button.Looks.BLANK,
+          size: c.Button.Sizes.NONE,
+          children: R
+        })
+      }), C && (0, s.jsx)(r.VisuallyHidden, {
+        id: o,
+        children: E
+      })]
+    }) : (0, s.jsx)(s.Fragment, {
+      children: R
+    }), (0, s.jsxs)(c.Text, {
+      variant: "text-md/bold",
       color: "none",
+      scaleFontToUserSetting: !0,
       children: [t, "%"]
-    }), (0, s.jsx)(u.Text, {
-      className: E.voteDataLine,
-      variant: "text-xs/semibold",
-      color: "none",
-      children: n
     })]
   })
 }
 
-function T(e) {
+function h(e) {
   let {
     percentage: t
-  } = e, n = (0, o.useStateFromStores)([d.default], () => d.default.useReducedMotion), l = (0, r.useSpring)({
+  } = e, n = (0, d.useStateFromStores)([E.default], () => E.default.useReducedMotion), l = (0, o.useSpring)({
     from: {
       width: "0%"
     },
@@ -49,80 +110,114 @@ function T(e) {
       width: "".concat(t, "%")
     },
     immediate: n,
-    config: 100 !== t && 0 !== t ? r.config.wobbly : r.config.default
+    config: 100 !== t && 0 !== t ? o.config.wobbly : o.config.default
   });
-  return (0, s.jsx)(r.animated.span, {
-    className: E.votePercentageBar,
+  return (0, s.jsx)(o.animated.span, {
+    className: A.votePercentageBar,
     style: l,
     "aria-hidden": !0
   })
 }
 
-function I(e) {
+function g(e) {
+  let {
+    answersInteraction: t,
+    isSelected: n,
+    didSelfVote: l,
+    isVictor: a,
+    isExpired: i,
+    className: r
+  } = e;
+  return (0, u.match)({
+    answersInteraction: t,
+    didSelfVote: l
+  }).with({
+    answersInteraction: m.PollChatAnswerInteractionType.RADIO_BUTTONS
+  }, () => (0, s.jsx)(N.PollAnswerRadioIcon, {
+    isSelected: n,
+    size: 24,
+    className: r
+  })).with({
+    answersInteraction: m.PollChatAnswerInteractionType.CHECKBOXES
+  }, () => (0, s.jsx)(N.PollAnswerCheckboxIcon, {
+    isSelected: n,
+    size: 20,
+    className: r
+  })).with({
+    answersInteraction: m.PollChatAnswerInteractionType.LIST,
+    didSelfVote: !0
+  }, () => (0, s.jsx)(N.PollAnswerVotedIcon, {
+    isVictor: a,
+    isExpired: i,
+    size: 24,
+    className: r
+  })).otherwise(() => null)
+}
+
+function M(e) {
   let {
     answer: t,
     isExpired: n,
-    hasVoted: l,
-    myAvatarUrl: r
-  } = e, o = l || n, d = !0 === t.isSelected, I = !0 === t.didSelfVote, m = !0 === t.isVictor;
-  return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsxs)("div", {
-      className: a(E.answerInner, {
-        [E.currentlyVoting]: !l && !n
+    answersInteraction: l,
+    canShowVoteCounts: a,
+    canShowVoterDetails: o
+  } = e, u = !0 === t.isSelected, d = !0 === t.didSelfVote, E = !0 === t.isVictor;
+  return (0, s.jsx)(s.Fragment, {
+    children: (0, s.jsxs)("div", {
+      className: i(A.answerInner, {
+        [A.currentlyVoting]: l !== m.PollChatAnswerInteractionType.LIST,
+        [A.selected]: u
       }),
-      children: [o ? (0, s.jsx)(T, {
+      children: [a ? (0, s.jsx)(h, {
         percentage: t.votesPercentage
-      }) : null, (0, s.jsxs)("div", {
-        className: E.answerContent,
-        children: [(0, s.jsx)(c.PollMediaView, {
-          attachmentClassName: E.attachment,
-          containerClassName: E.mediaContainer,
-          media: t.pollMedia,
-          fallback: null
-        }), (0, s.jsx)(u.Text, {
-          className: E.label,
-          variant: "text-sm/semibold",
-          color: "none",
-          children: t.pollMedia.text
-        }), (d || t.didSelfVote) && (0, s.jsx)(u.Avatar, {
-          className: E.avatarForSelected,
-          size: u.AvatarSizes.SIZE_20,
-          src: r,
-          "aria-hidden": !0
-        }), t.didSelfVote && (0, s.jsx)(i.VisuallyHidden, {
-          children: f.default.Messages.POLL_ANSWER_VOTED_ARIA
-        }), o && (0, s.jsx)(_, {
-          percentage: t.votesPercentage,
-          label: t.votes
-        })]
+      }) : null, null != t.pollMedia.emoji && (0, s.jsx)(N.PollEmojiMediaView, {
+        className: A.emoji,
+        emoji: t.pollMedia.emoji
+      }), (0, s.jsx)(c.Text, {
+        className: A.label,
+        variant: "text-sm/semibold",
+        color: "none",
+        scaleFontToUserSetting: !0,
+        children: t.pollMedia.text
+      }), t.didSelfVote && (0, s.jsx)(r.VisuallyHidden, {
+        children: S.default.Messages.POLL_ANSWER_VOTED_ARIA
+      }), a && (0, s.jsx)(C, {
+        percentage: t.votesPercentage,
+        label: t.votes,
+        canShowVoterDetails: o,
+        answerId: t.answerId
+      }), (0, s.jsx)(g, {
+        answersInteraction: l,
+        isSelected: u,
+        didSelfVote: d,
+        isVictor: E,
+        isExpired: n,
+        className: A.answerSelectionIcon
       })]
-    }), !n && I && (0, s.jsx)(c.PollAnswerVotedIcon, {
-      size: 18,
-      className: E.pollAnswerIcon
-    }), m && (0, s.jsx)(c.PollAnswerVictorIcon, {
-      size: 18,
-      className: E.pollAnswerIcon
-    })]
+    })
   })
 }
 
-function m(e) {
+function O(e) {
   let {
-    hasVoted: t,
-    isExpired: n,
-    myAvatarUrl: l,
-    ...a
+    isExpired: t,
+    answersInteraction: n,
+    canShowVoteCounts: l,
+    canTapAnswers: a,
+    ...i
   } = e;
-  return (0, s.jsx)(c.PollAnswers, {
-    className: E.answersContainer,
-    answerClassName: E.answer,
-    myAvatarUrl: l,
-    renderAnswerContent: e => (0, s.jsx)(I, {
+  return (0, s.jsx)(N.PollAnswers, {
+    className: A.answersContainer,
+    answerClassName: A.answer,
+    answersInteraction: n,
+    canTapAnswers: a,
+    renderAnswerContent: e => (0, s.jsx)(M, {
       answer: e,
-      isExpired: n,
-      hasVoted: t,
-      myAvatarUrl: l
+      isExpired: t,
+      answersInteraction: n,
+      canShowVoteCounts: l,
+      canShowVoterDetails: a
     }),
-    ...a
+    ...i
   })
 }

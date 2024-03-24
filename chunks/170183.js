@@ -1,20 +1,21 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return u
+    return d
   }
-}), i("808653"), i("424973");
-var n = i("446674"),
-  l = i("42203"),
-  s = i("957255"),
-  a = i("449008"),
-  r = i("923510"),
-  o = i("834052");
+}), n("808653"), n("424973"), n("222007");
+var i = n("446674"),
+  l = n("42203"),
+  a = n("957255"),
+  s = n("449008"),
+  r = n("299039"),
+  o = n("923510"),
+  u = n("834052");
 
-function u(e) {
-  let t = (0, n.useStateFromStoresArray)([o.default], () => Object.keys(o.default.getStageInstancesByGuild(e)), [e]);
+function d(e) {
+  let t = (0, i.useStateFromStoresArray)([u.default], () => r.default.keys(u.default.getStageInstancesByGuild(e)), [e]);
   return function(e) {
-    let t = (0, n.useStateFromStoresArray)([l.default], () => e.map(e => l.default.getChannel(e)).filter(a.isNotNullish), [e]);
-    return (0, n.useStateFromStoresArray)([s.default], () => t.filter(e => s.default.can(r.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)), [t])
+    let t = (0, i.useStateFromStoresArray)([l.default], () => e.map(e => l.default.getChannel(e)).filter(s.isNotNullish), [e]);
+    return (0, i.useStateFromStoresArray)([a.default], () => t.filter(e => a.default.can(o.JOIN_VOCAL_CHANNEL_PERMISSIONS, e)), [t])
   }(t)
 }

@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   PUBLIC_SUCCESS_MODAL_SEEN_KEY: function() {
-    return s
-  },
-  PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: function() {
-    return u
-  },
-  PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: function() {
-    return a
-  },
-  CREATE_NEW_CHANNEL_VALUE: function() {
     return o
   },
+  PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID: function() {
+    return l
+  },
+  PUBLIC_GUILD_UPDATES_WEBHOOK_USER_ID: function() {
+    return u
+  },
+  CREATE_NEW_CHANNEL_VALUE: function() {
+    return d
+  },
   MODERATOR_PERMISSIONS: function() {
-    return E
+    return c
   },
   MODERATOR_PERMISSIONS_FLAG: function() {
     return _
   },
   COMMUNITY_UPSELL_MINIMUM_GUILD_SIZE: function() {
-    return S
+    return f
   },
   ENABLE_COMMUNITY_FLOW_MODAL_KEY: function() {
-    return I
+    return E
   },
   EnableCommunityModalSteps: function() {
     return i
   }
 }), n("222007");
-var i, l, r = n("316693"),
-  d = n("49111");
-let s = "publicSuccessModalSeen",
-  u = "667560445975986187",
-  a = "669627189624307712",
-  o = "1",
-  E = [d.Permissions.ADMINISTRATOR, d.Permissions.MANAGE_GUILD, d.Permissions.MANAGE_CHANNELS, d.Permissions.MANAGE_ROLES, d.Permissions.KICK_MEMBERS, d.Permissions.BAN_MEMBERS, d.Permissions.MANAGE_MESSAGES, d.Permissions.MENTION_EVERYONE, d.Permissions.MANAGE_GUILD_EXPRESSIONS, d.Permissions.CREATE_GUILD_EXPRESSIONS, d.Permissions.MANAGE_EVENTS, d.Permissions.CREATE_EVENTS, d.Permissions.MODERATE_MEMBERS],
-  _ = r.default.combine(...E),
-  S = 1e3,
-  I = "Enable Community Modal";
-(l = i || (i = {})).SAFETY_CHECK = "safety_check", l.BASICS = "basics", l.FINISH = "finish"
+var i, s, r = n("316693"),
+  a = n("49111");
+let o = "publicSuccessModalSeen",
+  l = "667560445975986187",
+  u = "669627189624307712",
+  d = "1",
+  c = [a.Permissions.ADMINISTRATOR, a.Permissions.KICK_MEMBERS, a.Permissions.BAN_MEMBERS, a.Permissions.MANAGE_GUILD, a.Permissions.MANAGE_CHANNELS, a.Permissions.MANAGE_ROLES, a.Permissions.MANAGE_MESSAGES, a.Permissions.MANAGE_GUILD_EXPRESSIONS, a.Permissions.CREATE_GUILD_EXPRESSIONS, a.Permissions.MANAGE_EVENTS, a.Permissions.CREATE_EVENTS, a.Permissions.MODERATE_MEMBERS, a.Permissions.MENTION_EVERYONE],
+  _ = r.combine(...c),
+  f = 1e3,
+  E = "Enable Community Modal";
+(s = i || (i = {})).SAFETY_CHECK = "safety_check", s.BASICS = "basics", s.FINISH = "finish"

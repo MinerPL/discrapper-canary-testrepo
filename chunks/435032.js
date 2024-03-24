@@ -9,22 +9,22 @@ var a = A("37983"),
   n = A("414456"),
   r = A.n(n),
   s = A("748820"),
-  o = A("77078"),
-  i = A("149022"),
-  u = A("681060"),
-  d = A("233069"),
+  i = A("77078"),
+  o = A("149022"),
+  d = A("681060"),
+  u = A("233069"),
   c = A("474643"),
   f = A("49111"),
-  C = A("782340"),
-  g = A("68233"),
-  h = A("253469");
-let T = (0, s.v4)(),
-  m = (0, d.createChannelRecord)({
+  g = A("782340"),
+  C = A("715633"),
+  h = A("430594");
+let m = (0, s.v4)(),
+  p = (0, u.createChannelRecord)({
     id: "1",
     type: f.ChannelTypes.DM
   });
 
-function p() {
+function T() {
   return new Promise(e => {
     e({
       shouldClear: !1,
@@ -33,7 +33,7 @@ function p() {
   })
 }
 
-function I(e) {
+function v(e) {
   var t;
   let {
     hasError: A,
@@ -55,23 +55,23 @@ function U(e) {
     "aria-labelledby": A,
     className: n,
     id: s,
-    autoFocus: d,
+    autoFocus: u,
     maxLength: f,
     onChange: h,
     onSubmit: U,
-    showCharacterCount: v = !1,
+    showCharacterCount: I = !1,
     placeholder: E,
     required: x,
     value: N,
-    enableThemedBackground: q = !1,
-    parentModalKey: O
-  } = e, R = (0, o.useFormContext)(), [L, D] = l.useState(() => (0, i.toRichValue)(N)), P = l.useRef(!0 === d), V = null != A ? A : null == R ? void 0 : R.titleId, j = null !== (t = null == R ? void 0 : R.errorId) && void 0 !== t ? t : T, b = l.useMemo(() => ({
+    enableThemedBackground: D = !1,
+    parentModalKey: L
+  } = e, q = (0, i.useFormContext)(), [O, R] = l.useState(() => (0, o.toRichValue)(N)), P = l.useRef(!0 === u), j = null != A ? A : null == q ? void 0 : q.titleId, V = null !== (t = null == q ? void 0 : q.errorId) && void 0 !== t ? t : m, b = l.useMemo(() => ({
     analyticsName: "simple",
     autocomplete: {
       alwaysUseLayer: !0,
       small: !0
     },
-    disableAutoFocus: !0 !== d,
+    disableAutoFocus: !0 !== u,
     drafts: {
       type: c.DraftType.ChannelMessage
     },
@@ -85,21 +85,21 @@ function U(e) {
       useDisabledStylesOnSubmit: !0,
       disableEnterToSubmit: !0
     }
-  }), [d]);
-  return (0, a.jsxs)(u.default, {
-    "aria-describedby": j,
-    "aria-labelledby": V,
-    innerClassName: r(n, g.textArea),
+  }), [u]);
+  return (0, a.jsxs)(d.default, {
+    "aria-describedby": V,
+    "aria-labelledby": j,
+    innerClassName: r(n, C.textArea),
     id: s,
     maxCharacterCount: f,
     onChange: function(e, t, A) {
-      h(t), D(A)
+      h(t), R(A)
     },
     placeholder: E,
     required: x,
-    channel: m,
+    channel: p,
     textValue: N,
-    richValue: L,
+    richValue: O,
     type: b,
     onBlur: () => {
       P.current = !1
@@ -108,17 +108,17 @@ function U(e) {
       P.current = !0
     },
     focused: P.current,
-    onSubmit: null != U ? U : p,
-    disableThemedBackground: !q,
-    parentModalKey: O,
+    onSubmit: null != U ? U : T,
+    disableThemedBackground: !D,
+    parentModalKey: L,
     emojiPickerCloseOnModalOuterClick: !0,
-    children: [!0 === v && (0, a.jsx)(I, {
-      hasError: null != R.error || null != f && N.length > f,
+    children: [!0 === I && (0, a.jsx)(v, {
+      hasError: null != q.error || null != f && N.length > f,
       text: N,
       maxLength: f
-    }), null != f && (0, a.jsx)(o.HiddenVisually, {
-      id: T,
-      children: C.default.Messages.MAXIMUM_LENGTH.format({
+    }), null != f && (0, a.jsx)(i.HiddenVisually, {
+      id: m,
+      children: g.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: f
       })
     })]

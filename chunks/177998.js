@@ -1,21 +1,21 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var n = a("37983");
-a("884691");
-var l = a("77078"),
-  s = a("782340"),
-  r = a("816318"),
-  i = e => {
+var a = s("37983");
+s("884691");
+var n = s("77078"),
+  l = s("782340"),
+  i = s("32464"),
+  r = e => {
     let {
       onClick: t
     } = e;
-    return (0, n.jsx)(l.Anchor, {
+    return (0, a.jsx)(n.Anchor, {
       onClick: t,
-      className: r.link,
-      children: s.default.Messages.BACK
+      className: i.link,
+      children: l.default.Messages.BACK
     })
   }

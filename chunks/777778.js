@@ -35,7 +35,7 @@ function f() {
     p = (0, r.useIsBroadcastingGDM)(null == C ? void 0 : C.id);
   return null != C && !p && h.unshift((0, l.jsx)(c.default, {
     channel: C
-  }, C.id)), (0, l.jsx)(i.default, {
+  }, C.id)), (0, l.jsx)(i.TransitionGroup, {
     component: a.Fragment,
     children: h
   })

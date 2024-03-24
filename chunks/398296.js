@@ -1,15 +1,15 @@
 "use strict";
 a.r(l), a.d(l, {
   default: function() {
-    return S
+    return v
   }
 }), a("222007");
 var n = a("37983"),
   s = a("884691"),
   t = a("448105"),
-  d = a.n(t),
-  i = a("65597"),
-  r = a("77078"),
+  r = a.n(t),
+  d = a("65597"),
+  i = a("77078"),
   u = a("419830"),
   o = a("129092"),
   c = a("608684"),
@@ -22,9 +22,9 @@ var n = a("37983"),
   x = a("642807"),
   _ = a("895423"),
   R = a("782340"),
-  g = a("978965");
+  S = a("371732");
 
-function v(e, l, a, n) {
+function g(e, l, a, n) {
   return {
     channelId: e.value,
     title: l,
@@ -34,11 +34,11 @@ function v(e, l, a, n) {
   }
 }
 
-function S(e) {
+function v(e) {
   var l, a;
   let {
     transitionState: t,
-    onClose: S,
+    onClose: v,
     resourceChannel: f,
     guildId: L,
     onSave: j,
@@ -51,22 +51,22 @@ function S(e) {
       value: l.id,
       label: l.name
     }
-  }(f)), b = (0, i.default)([x.default], () => {
+  }(f)), b = (0, d.useStateFromStores)([x.default], () => {
     var e;
     return null === (e = x.default.getResourceChannel(null == f ? void 0 : f.channelId)) || void 0 === e ? void 0 : e.icon
-  }), k = (0, i.useStateFromStoresArray)([x.default], () => {
+  }), k = (0, d.useStateFromStoresArray)([x.default], () => {
     var e, l;
     let a = null !== (l = null === (e = x.default.getSettings()) || void 0 === e ? void 0 : e.resourceChannels) && void 0 !== l ? l : [];
     return a.map(e => e.channelId)
   }), H = p.length < o.RESOURCE_CHANNEL_TITLE_MIN_LENGTH || null == B, P = s.useCallback(() => {
-    null != B && !(p.length <= 0) && (j(v(B, p, D, b)), S())
-  }, [j, S, p, B, b, D]), y = s.useCallback(() => {
-    null == T || T(), S()
-  }, [T, S]), w = s.useCallback(e => {
+    null != B && !(p.length <= 0) && (j(g(B, p, D, b)), v())
+  }, [j, v, p, B, b, D]), y = s.useCallback(() => {
+    null == T || T(), v()
+  }, [T, v]), w = s.useCallback(e => {
     M(e)
   }, [M]), z = s.useCallback(e => {
     let l = N.default.getSelectableChannels(L),
-      a = l.filter(l => (0, o.isChannelValidForResourceChannel)(l.channel) && !k.includes(l.channel.id) && d(e, l.channel.name)).map(e => ({
+      a = l.filter(l => (0, o.isChannelValidForResourceChannel)(l.channel) && !k.includes(l.channel.id) && r(e, l.channel.name)).map(e => ({
         value: e.channel.id,
         label: e.channel.name
       }));
@@ -80,94 +80,94 @@ function S(e) {
     return null == s ? null : (0, n.jsx)(s, {
       width: 16,
       height: 16,
-      className: g.channelIcon
+      className: S.channelIcon
     })
   }, [L]), V = s.useCallback(e => {
-    null != O && null != B && O(v(B, p, D), e)
+    null != O && null != B && O(g(B, p, D), e)
   }, [B, p, O, D]), X = s.useCallback(() => null == b || null == B ? null : C.default.getResourceChannelIconURL({
     channelId: B.value,
     icon: b
   }), [B, b]);
-  return (0, n.jsxs)(r.ModalRoot, {
+  return (0, n.jsxs)(i.ModalRoot, {
     transitionState: t,
     "aria-labelledby": G,
     children: [(0, n.jsxs)("div", {
-      className: g.containerWithHeader,
+      className: S.containerWithHeader,
       children: [(0, n.jsxs)("div", {
-        className: g.splitGroup,
+        className: S.splitGroup,
         children: [(0, n.jsx)("div", {
-          className: g.header,
-          children: (0, n.jsx)(r.Heading, {
+          className: S.header,
+          children: (0, n.jsx)(i.Heading, {
             variant: "heading-md/semibold",
             color: "header-primary",
             children: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_CHANNEL_EDIT_TITLE
           })
-        }), (0, n.jsx)(r.ModalCloseButton, {
-          className: g.closeButton,
-          onClick: S
+        }), (0, n.jsx)(i.ModalCloseButton, {
+          className: S.closeButton,
+          onClick: v
         })]
       }), (0, n.jsxs)("div", {
-        className: g.formGroup,
-        children: [(0, n.jsxs)(r.Heading, {
+        className: S.formGroup,
+        children: [(0, n.jsxs)(i.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
           children: [R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_CHANNEL, (0, n.jsx)(_.default, {})]
-        }), (0, n.jsx)(r.SearchableSelect, {
+        }), (0, n.jsx)(i.SearchableSelect, {
           value: B,
           renderOptionPrefix: F,
           options: z,
           onChange: w
-        }), (0, n.jsx)(r.Text, {
+        }), (0, n.jsx)(i.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
           children: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_CHANNEL_EXPLAINER
         })]
       }), (0, n.jsx)("div", {
-        className: g.separator
+        className: S.separator
       }), (0, n.jsxs)("div", {
-        className: g.formGroup,
-        children: [(0, n.jsxs)(r.Heading, {
+        className: S.formGroup,
+        children: [(0, n.jsxs)(i.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
           children: [R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_TITLE, (0, n.jsx)(_.default, {})]
-        }), (0, n.jsx)(r.TextInput, {
+        }), (0, n.jsx)(i.TextInput, {
           value: p,
           onChange: A,
           placeholder: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_TITLE_PLACEHOLDER,
           maxLength: o.RESOURCE_CHANNEL_TITLE_MAX_LENGTH
         })]
       }), (0, n.jsx)("div", {
-        className: g.separator
+        className: S.separator
       }), (0, n.jsxs)("div", {
-        className: g.formGroup,
-        children: [(0, n.jsx)(r.Heading, {
+        className: S.formGroup,
+        children: [(0, n.jsx)(i.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
           children: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_DESCRIPTION
-        }), (0, n.jsx)(r.TextArea, {
+        }), (0, n.jsx)(i.TextArea, {
           value: D,
           onChange: U,
           placeholder: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_DESCRIPTION_PLACEHOLDER,
           maxLength: o.RESOURCE_CHANNEL_DESCRIPTION_MAX_LENGTH
         })]
       }), (0, n.jsx)("div", {
-        className: g.separator
+        className: S.separator
       }), (0, n.jsxs)("div", {
-        className: g.splitGroup,
+        className: S.splitGroup,
         children: [(0, n.jsxs)("div", {
-          children: [(0, n.jsx)(r.Heading, {
+          children: [(0, n.jsx)(i.Heading, {
             variant: "heading-md/semibold",
             color: "header-primary",
             children: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_UPLOAD
-          }), (0, n.jsx)(r.Text, {
+          }), (0, n.jsx)(i.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
             children: R.default.Messages.GUILD_SETTINGS_ONBOARDING_RESOURCE_UPLOAD_EXPLAINER
           })]
         }), (0, n.jsx)("div", {
           children: (0, n.jsx)(c.default, {
-            className: g.uploader,
-            imageClassName: g.uploadImage,
+            className: S.uploader,
+            imageClassName: S.uploadImage,
             image: b,
             makeURL: X,
             icon: (0, n.jsx)(I.default, {
@@ -176,32 +176,32 @@ function S(e) {
             }),
             hideSize: !0,
             onChange: V,
-            iconClassName: g.uploadImageIcon,
+            iconClassName: S.uploadImageIcon,
             showIcon: null == b
           })
         })]
       })]
-    }), (0, n.jsx)(r.ModalFooter, {
+    }), (0, n.jsx)(i.ModalFooter, {
       children: (0, n.jsxs)("div", {
-        className: g.footerButtons,
+        className: S.footerButtons,
         children: [null != f ? (0, n.jsx)("div", {
-          className: g.removeButton,
-          children: (0, n.jsx)(r.Button, {
-            size: r.Button.Sizes.SMALL,
-            look: r.Button.Looks.LINK,
-            color: r.Button.Colors.RED,
+          className: S.removeButton,
+          children: (0, n.jsx)(i.Button, {
+            size: i.Button.Sizes.SMALL,
+            look: i.Button.Looks.LINK,
+            color: i.Button.Colors.RED,
             onClick: y,
             children: R.default.Messages.REMOVE
           })
         }) : (0, n.jsx)("div", {}), (0, n.jsxs)("div", {
-          className: g.rightButtons,
-          children: [(0, n.jsx)(r.Button, {
-            onClick: S,
-            size: r.Button.Sizes.SMALL,
-            look: r.Button.Looks.LINK,
-            color: r.Button.Colors.PRIMARY,
+          className: S.rightButtons,
+          children: [(0, n.jsx)(i.Button, {
+            onClick: v,
+            size: i.Button.Sizes.SMALL,
+            look: i.Button.Looks.LINK,
+            color: i.Button.Colors.PRIMARY,
             children: R.default.Messages.CANCEL
-          }), (0, n.jsx)(r.Button, {
+          }), (0, n.jsx)(i.Button, {
             disabled: H,
             onClick: P,
             children: R.default.Messages.SAVE

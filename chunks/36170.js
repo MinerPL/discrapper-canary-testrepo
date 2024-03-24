@@ -1,140 +1,238 @@
 "use strict";
-s.r(l), s.d(l, {
+s.r(t), s.d(t, {
   default: function() {
-    return R
+    return w
   }
 }), s("222007");
 var a = s("37983"),
-  t = s("884691"),
-  d = s("446674"),
-  r = s("77078"),
-  n = s("913801"),
-  i = s("448881"),
-  u = s("2973"),
-  o = s("227231"),
-  E = s("782340"),
-  c = s("429383");
+  l = s("884691"),
+  n = s("446674"),
+  r = s("669491"),
+  o = s("276825"),
+  i = s("24763"),
+  d = s("199179"),
+  c = s("91297"),
+  u = s("265614"),
+  f = s("267013"),
+  h = s("819855"),
+  m = s("77078"),
+  C = s("913801"),
+  R = s("841098"),
+  E = s("367376"),
+  p = s("697218"),
+  g = s("284679"),
+  x = s("448881"),
+  S = s("2973"),
+  v = s("588025"),
+  _ = s("227231"),
+  N = s("260952"),
+  M = s("782340"),
+  A = s("435251");
 
-function R(e) {
-  var l;
+function T(e) {
+  var t;
+  let {
+    quest: s,
+    rewardCode: l
+  } = e, n = (0, h.isThemeDark)((0, R.default)()), i = {
+    border: "1px solid ".concat(s.config.colors.primary),
+    background: "\n    linear-gradient(\n      150deg,\n      transparent 68%,\n      ".concat((0, g.hexOpacityToRgba)(s.config.colors.primary, .2), " 85%,\n      transparent 100%\n    ),\n    linear-gradient(\n      150deg,\n      transparent 13%,\n      ").concat((0, g.hexOpacityToRgba)(s.config.colors.primary, .6), " 44%,\n      transparent 76%\n    ),\n    ").concat(n ? "var(--black)" : "var(--white)", "\n    ")
+  }, d = (null === (t = s.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null || null != l;
+  return (0, a.jsxs)("div", {
+    style: i,
+    className: A.rewardTile,
+    children: [(0, a.jsx)("img", {
+      src: (0, _.getRewardAssetUrl)(s.id),
+      alt: s.config.messages.rewardName,
+      style: {
+        border: "1px solid ".concat(s.config.colors.primary)
+      },
+      className: A.reward
+    }), (0, a.jsxs)("div", {
+      className: A.rewardSubheading,
+      children: [d && (0, a.jsx)(o.CheckmarkSmallIcon, {
+        width: 16,
+        height: 16,
+        color: r.default.colors.TEXT_MUTED,
+        className: A.rewardSubheadingIcon
+      }), (0, a.jsx)(m.Text, {
+        variant: "eyebrow",
+        color: "text-muted",
+        className: A.rewardSubheadingText,
+        children: d ? M.default.Messages.QUESTS_REWARD_CODE_CLAIMED_REWARD_TILE_SUBHEADER : M.default.Messages.QUESTS_REWARD_CODE_UNCLAIMED_REWARD_TILE_SUBHEADER
+      })]
+    }), (0, a.jsx)(m.Heading, {
+      variant: "display-sm",
+      color: "header-primary",
+      className: A.rewardHeading,
+      children: s.config.messages.rewardName
+    })]
+  })
+}
+
+function w(e) {
+  let t = (0, n.useStateFromStores)([p.default], () => {
+    var e;
+    return null === (e = p.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
+  });
+  return t ? (0, a.jsx)(I, {
+    ...e
+  }) : (0, a.jsx)(N.QuestsRewardCodeModalUnverified, {
+    ...e
+  })
+}
+
+function I(e) {
+  var t;
   let {
     transitionState: s,
-    onClose: R,
-    quest: m
-  } = e, _ = t.useMemo(() => {
+    onClose: r,
+    quest: o,
+    location: h
+  } = e, R = l.useMemo(() => {
     var e;
-    return (null === (e = m.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
-  }, []), S = m.config.rewardCodePlatforms.length > 1, [C, f] = t.useState(S ? null : m.config.rewardCodePlatforms[0]), {
-    rewardCode: g,
-    isFetchingRewardCode: D,
-    isClaimingRewardCode: A
-  } = (0, d.useStateFromStoresObject)([u.default], () => ({
-    rewardCode: u.default.getRewardCode(m.id),
-    isFetchingRewardCode: u.default.isFetchingRewardCode(m.id),
-    isClaimingRewardCode: u.default.isClaimingRewardCode(m.id)
-  })), [T, h] = t.useState(!1), O = S && (null === (l = m.userStatus) || void 0 === l ? void 0 : l.claimedAt) == null && null == g, M = t.useCallback((e, l) => {
-    h(!1), (0, i.claimQuestRewardCode)(e, l).catch(() => h(!0))
-  }, []), x = t.useCallback(e => {
-    h(!1), (0, i.fetchQuestRewardCode)(e).catch(() => h(!0))
+    return (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null
+  }, []), p = o.config.rewardCodePlatforms.length > 1, [g, N] = l.useState(p ? null : o.config.rewardCodePlatforms[0]), {
+    rewardCode: w,
+    isFetchingRewardCode: I,
+    isClaimingRewardCode: j
+  } = (0, n.useStateFromStoresObject)([S.default], () => ({
+    rewardCode: S.default.getRewardCode(o.id),
+    isFetchingRewardCode: S.default.isFetchingRewardCode(o.id),
+    isClaimingRewardCode: S.default.isClaimingRewardCode(o.id)
+  })), [D, O] = l.useState(!1), L = p && (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) == null && null == w, b = l.useCallback((e, t, s) => {
+    O(!1), (0, x.claimQuestRewardCode)(e, t, s).catch(() => O(!0))
+  }, []), B = l.useCallback(e => {
+    O(!1), (0, x.fetchQuestRewardCode)(e).catch(() => O(!0))
   }, []);
-  t.useEffect(() => {
-    var e, l;
-    null == g && !T && !A && !D && !O && ((null === (e = m.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != C ? M(m.id, C) : (null === (l = m.userStatus) || void 0 === l ? void 0 : l.claimedAt) != null && x(m.id))
-  }, [m, g, A, D, T, O, C, M, x]);
-  let v = null;
-  _ && null != g ? v = E.default.Messages.QUESTS_REWARD_CODE_HEADER : null != g ? v = E.default.Messages.QUESTS_REWARD_CODE_CONGRATS : O && (v = E.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
-  let w = null != v ? (0, a.jsx)(r.Heading, {
+  l.useEffect(() => {
+    var e, t;
+    null == w && !D && !j && !I && !L && ((null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) == null && null != g ? b(o.id, g, h) : (null === (t = o.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null && B(o.id))
+  }, [o, w, j, I, D, L, g, h, b, B]);
+  let y = null;
+  R && null != w ? y = M.default.Messages.QUESTS_REWARD_CODE_HEADER : null != w ? y = M.default.Messages.QUESTS_REWARD_CODE_CONGRATS : L && (y = M.default.Messages.QUESTS_REWARD_CODE_PLATFORM_SELECTION_HEADER);
+  let U = null != y ? (0, a.jsx)(m.Heading, {
       variant: "heading-xl/semibold",
       color: "header-primary",
-      className: c.heading,
-      children: v
+      className: A.heading,
+      children: y
     }) : null,
-    N = null;
-  O ? N = E.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({
-    rewardName: m.config.messages.rewardName
-  }) : null != g && (N = m.config.messages.rewardRedemptionInstructions);
-  let p = null != N ? (0, a.jsx)(r.Text, {
+    k = null;
+  L && (k = M.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_INSTRUCTIONS.format({
+    rewardName: o.config.messages.rewardName
+  }));
+  let F = null != g ? o.config.messages.rewardRedemptionInstructionsByPlatform[g] : void 0;
+  null != w && null != F && (k = E.default.parse(F, !1, {
+    allowLinks: !0
+  }));
+  let P = null != k ? (0, a.jsx)(m.Text, {
       variant: "text-sm/normal",
       color: "text-normal",
-      className: c.bodyCopy,
-      children: N
+      className: A.bodyCopy,
+      children: k
     }) : null,
-    j = t.useMemo(() => m.config.rewardCodePlatforms.map(e => ({
-      label: (0, o.getPlatformString)(e),
+    Q = l.useMemo(() => o.config.rewardCodePlatforms.map(e => ({
+      label: (0, _.getPlatformString)(e),
       value: e
-    })), [m.config.rewardCodePlatforms]),
-    Q = null;
-  O && (Q = (0, a.jsxs)(r.FormItem, {
-    title: E.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL,
-    children: [(0, a.jsx)(r.Select, {
-      placeholder: E.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER,
-      options: j,
+    })), [o.config.rewardCodePlatforms]),
+    W = null;
+  L && (W = (0, a.jsxs)(m.FormItem, {
+    title: M.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_LABEL,
+    children: [(0, a.jsx)(m.Select, {
+      placeholder: M.default.Messages.QUESTS_REWARD_CODE_SELECT_PLATFORM_PLACEHOLDER,
+      options: Q,
       select: e => {
-        h(!1), f(e)
+        O(!1), N(e)
       },
-      isSelected: e => e === C,
-      serialize: e => (0, o.getPlatformString)(e),
-      className: T ? c.errorInput : "",
-      isDisabled: A
-    }), T ? (0, a.jsx)(r.InputError, {
-      error: E.default.Messages.QUESTS_REWARD_CODE_ERROR
+      isSelected: e => e === g,
+      serialize: e => (0, _.getPlatformString)(e),
+      className: D ? A.errorInput : "",
+      isDisabled: j,
+      renderOptionLabel: e => {
+        let t = function(e) {
+          switch (e) {
+            case v.QuestRewardCodePlatforms.CROSS_PLATFORM:
+              return (0, a.jsx)(c.ScienceIcon, {
+                className: A.platformSelectionOptionIcon
+              });
+            case v.QuestRewardCodePlatforms.PC:
+              return (0, a.jsx)(u.ScreenIcon, {
+                className: A.platformSelectionOptionIcon
+              });
+            case v.QuestRewardCodePlatforms.PLAYSTATION:
+              return (0, a.jsx)(d.PlaystationIcon, {
+                className: A.platformSelectionOptionIcon
+              });
+            case v.QuestRewardCodePlatforms.SWITCH:
+              return (0, a.jsx)(i.NintendoSwitchNeutralIcon, {
+                className: A.platformSelectionOptionIcon
+              });
+            case v.QuestRewardCodePlatforms.XBOX:
+              return (0, a.jsx)(f.XboxIcon, {
+                className: A.platformSelectionOptionIcon
+              })
+          }
+        }(e.value);
+        return (0, a.jsxs)("div", {
+          className: A.platformSelectionOptionLabelContainer,
+          children: [t, e.label]
+        })
+      }
+    }), D ? (0, a.jsx)(m.InputError, {
+      error: M.default.Messages.QUESTS_REWARD_CODE_ERROR
     }) : null]
   }));
-  let U = null == g && (D || A),
-    b = U && !O ? (0, a.jsx)(r.Spinner, {
-      className: c.spinner
+  let H = null == w && (I || j),
+    Z = H && !L ? (0, a.jsx)(m.Spinner, {
+      className: A.spinner
     }) : null,
-    I = null;
-  null != g ? I = (0, a.jsx)(r.FormItem, {
-    title: E.default.Messages.QUESTS_REWARD_CODE_HEADER,
-    children: (0, a.jsx)(n.default, {
-      value: g.code,
+    V = null;
+  null != w ? V = (0, a.jsx)(m.FormItem, {
+    title: M.default.Messages.QUESTS_REWARD_CODE_HEADER,
+    children: (0, a.jsx)(C.default, {
+      value: w.code,
       delay: 1e3,
-      buttonColor: r.Button.Colors.BRAND
+      buttonColor: m.Button.Colors.BRAND
     })
-  }) : T && !O && (I = (0, a.jsx)(r.FormItem, {
-    title: E.default.Messages.QUESTS_REWARD_CODE_HEADER,
-    children: (0, a.jsx)(r.TextInput, {
+  }) : D && !L && (V = (0, a.jsx)(m.FormItem, {
+    title: M.default.Messages.QUESTS_REWARD_CODE_HEADER,
+    children: (0, a.jsx)(m.TextInput, {
       disabled: !0,
-      error: E.default.Messages.QUESTS_REWARD_CODE_ERROR,
-      inputClassName: c.errorInput
+      error: M.default.Messages.QUESTS_REWARD_CODE_ERROR,
+      inputClassName: A.errorInput
     })
   }));
-  let W = () => {
+  let z = () => {
       var e;
-      O && null != C ? M(m.id, C) : T ? (null === (e = m.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null ? x(m.id) : null != C && M(m.id, C) : R()
+      L && null != g ? b(o.id, g, h) : D ? (null === (e = o.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null ? B(o.id) : null != g && b(o.id, g, h) : r()
     },
-    L = O && A,
-    F = !L && (O && null == C || U),
-    P = E.default.Messages.QUESTS_REWARD_CODE_DONE;
-  O ? P = E.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !O && T && (P = E.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
-  let k = (0, a.jsx)(r.Button, {
-    onClick: () => W(),
-    submitting: L,
-    disabled: F,
-    children: P
+    G = L && j,
+    Y = !G && (L && null == g || H),
+    X = M.default.Messages.QUESTS_REWARD_CODE_DONE;
+  L ? X = M.default.Messages.QUESTS_REWARD_CODE_GET_CODE : !L && D && (X = M.default.Messages.QUESTS_REWARD_CODE_TRY_AGAIN);
+  let q = (0, a.jsx)(m.Button, {
+    onClick: () => z(),
+    submitting: G,
+    disabled: Y,
+    children: X
   });
-  return (0, a.jsxs)(r.ModalRoot, {
+  return (0, a.jsxs)(m.ModalRoot, {
     transitionState: s,
-    size: r.ModalSize.DYNAMIC,
+    size: m.ModalSize.DYNAMIC,
     children: [(0, a.jsxs)("div", {
-      className: c.modalBody,
-      children: [(0, a.jsx)(r.ModalCloseButton, {
-        className: c.closeButton,
-        onClick: () => R()
-      }), (0, a.jsx)("div", {
-        className: c.rewardTile,
-        children: (0, a.jsx)("img", {
-          src: (0, o.getRewardAssetUrl)(m.id),
-          alt: m.config.messages.rewardName,
-          className: c.reward
-        })
+      className: A.modalBody,
+      children: [(0, a.jsx)(m.ModalCloseButton, {
+        className: A.closeButton,
+        onClick: () => r()
+      }), (0, a.jsx)(T, {
+        quest: o,
+        rewardCode: w
       }), (0, a.jsxs)("div", {
-        className: c.modalContent,
-        children: [w, p, Q, b, I]
+        className: A.modalContent,
+        children: [U, P, W, Z, V]
       })]
-    }), (0, a.jsx)(r.ModalFooter, {
-      children: k
+    }), (0, a.jsx)(m.ModalFooter, {
+      children: q
     })]
   })
 }

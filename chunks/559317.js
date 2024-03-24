@@ -4,14 +4,14 @@ a.r(t), a.d(t, {
     return f
   }
 });
-var n = a("37983");
+var s = a("37983");
 a("884691");
-var s = a("65597"),
+var n = a("65597"),
   i = a("77078"),
   l = a("404118"),
-  u = a("697218"),
-  d = a("599110"),
-  r = a("49111"),
+  r = a("697218"),
+  u = a("599110"),
+  d = a("49111"),
   o = a("782340");
 
 function f(e) {
@@ -26,13 +26,13 @@ function f(e) {
     transitionState: E,
     onClose: O,
     ...T
-  } = e, g = (0, s.default)([u.default], () => u.default.getCurrentUser());
-  return (0, n.jsx)(i.ConfirmModal, {
+  } = e, g = (0, n.useStateFromStores)([r.default], () => r.default.getCurrentUser());
+  return (0, s.jsx)(i.ConfirmModal, {
     header: null != t ? t : o.default.Messages.REPORT,
     cancelText: null != R ? R : o.default.Messages.CANCEL,
     confirmText: null != m ? m : o.default.Messages.REPORT,
     onConfirm: () => {
-      d.default.track(r.AnalyticEvents.TNS_SKU_REPORT_SUBMITTED, {
+      u.default.track(d.AnalyticEvents.TNS_SKU_REPORT_SUBMITTED, {
         sku_id: f,
         guild_id: c,
         user_id: null == g ? void 0 : g.id

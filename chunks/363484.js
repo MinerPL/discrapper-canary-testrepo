@@ -9,7 +9,7 @@ var a = n("872717"),
   s = n("49111"),
   i = {
     fetchRegions(e) {
-      a.default.get({
+      a.HTTP.get({
         url: s.Endpoints.REGIONS(e),
         retries: 1,
         oldFormErrors: !0
@@ -24,7 +24,7 @@ var a = n("872717"),
       }))
     },
     changeCallRegion(e, t) {
-      a.default.patch({
+      a.HTTP.patch({
         url: s.Endpoints.CALL(e),
         body: {
           region: t

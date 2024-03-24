@@ -14,8 +14,8 @@ var i = a("37983"),
   u = a("393414"),
   o = a("980428"),
   h = a("665382"),
-  v = a("155207"),
-  m = a("82636"),
+  m = a("155207"),
+  v = a("82636"),
   x = a("507692"),
   g = a("664336"),
   p = a("58608"),
@@ -35,7 +35,7 @@ var i = a("37983"),
   b = a("905647"),
   O = a("49111"),
   k = a("782340"),
-  B = a("77951");
+  B = a("748831");
 
 function L(e) {
   var l, a;
@@ -69,7 +69,7 @@ function L(e) {
       children: [(0, i.jsxs)(g.default, {
         children: [(0, i.jsxs)("div", {
           className: B.titleContainer,
-          children: [(0, i.jsx)(m.default, {
+          children: [(0, i.jsx)(v.default, {
             className: B.rocketIcon
           }), (0, i.jsx)(d.Heading, {
             variant: "heading-md/semibold",
@@ -123,7 +123,7 @@ function L(e) {
                       className: B.detailsDetails,
                       children: [null != V ? (0, i.jsxs)("div", {
                         className: B.detailItem,
-                        children: [(0, i.jsx)(v.default, {
+                        children: [(0, i.jsx)(m.default, {
                           width: 16,
                           height: 16
                         }), (0, i.jsx)(d.Text, {
@@ -201,18 +201,18 @@ function R(e) {
     activityItem: n
   } = e, {
     analyticsLocations: c
-  } = (0, r.default)(), u = (0, _.default)(), [o, h] = t.useState(null !== (l = (0, C.getActivityGuildSuggestion)()) && void 0 !== l ? l : void 0), [v, m] = t.useState(null !== (s = (0, N.getActivityVoiceChannelSuggestion)({
+  } = (0, r.default)(), u = (0, _.default)(), [o, h] = t.useState(null !== (l = (0, C.getActivityGuildSuggestion)()) && void 0 !== l ? l : void 0), [m, v] = t.useState(null !== (s = (0, N.getActivityVoiceChannelSuggestion)({
     guildId: o
   })) && void 0 !== s ? s : void 0), x = (0, C.useSelectGuildOptions)(), g = (0, N.useSelectVoiceChannelOptions)(o), p = t.useCallback(() => {
-    null != v && null != o && (0, f.default)({
+    null != m && null != o && (0, f.default)({
       activityItem: n,
-      currentActivity: u,
-      channelId: v,
+      currentEmbeddedApplication: u,
+      channelId: m,
       guildId: o,
       embeddedActivitiesManager: M.default,
       analyticsLocations: c
     })
-  }, [n, c, u, v, o]), I = t.useCallback(() => {
+  }, [n, c, u, m, o]), I = t.useCallback(() => {
     (0, d.openModalLazy)(async () => {
       let {
         default: e
@@ -250,7 +250,7 @@ function R(e) {
       isSelected: e => e === o,
       select: e => {
         var l;
-        h(e), m(null !== (l = (0, N.getActivityVoiceChannelSuggestion)({
+        h(e), v(null !== (l = (0, N.getActivityVoiceChannelSuggestion)({
           guildId: e
         })) && void 0 !== l ? l : void 0)
       },
@@ -263,13 +263,13 @@ function R(e) {
         let {
           channel: l
         } = e;
-        return l.id === v
+        return l.id === m
       },
       select: e => {
         let {
           channel: l
         } = e;
-        return m(l.id)
+        return v(l.id)
       },
       serialize: e => {
         let {
@@ -278,7 +278,7 @@ function R(e) {
         return l.id
       },
       renderOptionValue: () => {
-        let e = g.find(e => e.value.channel.id === v);
+        let e = g.find(e => e.value.channel.id === m);
         return null == e ? null : (0, i.jsx)(y.SelectChannelOption, {
           channel: e.value.channel,
           users: e.value.users
@@ -298,7 +298,7 @@ function R(e) {
       }
     }), (0, i.jsx)(d.Button, {
       fullWidth: !0,
-      disabled: null == o || null == v || !x.some(e => e.value === o) || !g.some(e => e.value.channel.id === v),
+      disabled: null == o || null == m || !x.some(e => e.value === o) || !g.some(e => e.value.channel.id === m),
       onClick: p,
       children: k.default.Messages.START
     }), (0, i.jsx)("div", {

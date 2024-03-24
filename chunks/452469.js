@@ -6,41 +6,36 @@ n.r(t), n.d(t, {
 });
 var a = n("37983");
 n("884691");
-var s = n("987317"),
+var s = n("653564"),
+  l = n("987317"),
   i = n("713726"),
-  l = n("754493"),
-  r = n("374021"),
-  o = n("649275"),
-  u = n("751661"),
-  d = n("734019"),
-  c = n("293137"),
+  r = n("754493"),
+  o = n("374021"),
+  u = n("649275"),
+  d = n("751661"),
+  c = n("734019"),
   f = n("962541"),
   E = n("782340");
 
-function _() {
+function h(e) {
+  let {
+    tooltipText: t,
+    onClick: n
+  } = e, l = (0, s.useEndCallLottie)();
   return (0, a.jsx)(f.default, {
-    tooltipText: E.default.Messages.DISCONNECT_SELF,
-    onClick: () => {
-      (0, i.stopBroadcast)(), s.default.disconnect()
-    },
-    icon: c.default
+    tooltipText: t,
+    onClick: n,
+    ...l.events,
+    icon: l.Component
   })
 }
 
-function h(e) {
-  let {
-    channel: t
-  } = e;
-  return (0, a.jsx)(f.default, {
-    tooltipText: E.default.Messages.AUDIENCE_DISCONNECT,
+function _() {
+  return (0, a.jsx)(h, {
+    tooltipText: E.default.Messages.DISCONNECT_SELF,
     onClick: () => {
-      if ((0, d.default)(t)) {
-        (0, u.openEndStageModal)(t);
-        return
-      }
-      s.default.disconnect()
-    },
-    icon: c.default
+      (0, i.stopBroadcast)(), l.default.disconnect()
+    }
   })
 }
 
@@ -48,26 +43,41 @@ function C(e) {
   let {
     channel: t
   } = e;
-  return (0, a.jsx)(f.default, {
-    tooltipText: E.default.Messages.DISCONNECT_SELF,
+  return (0, a.jsx)(h, {
+    tooltipText: E.default.Messages.AUDIENCE_DISCONNECT,
     onClick: () => {
-      if ((0, o.default)(t)) {
-        (0, r.openEndEventModal)(t);
+      if ((0, c.default)(t)) {
+        (0, d.openEndStageModal)(t);
         return
       }
-      s.default.disconnect()
-    },
-    icon: c.default
+      l.default.disconnect()
+    }
+  })
+}
+
+function S(e) {
+  let {
+    channel: t
+  } = e;
+  return (0, a.jsx)(h, {
+    tooltipText: E.default.Messages.DISCONNECT_SELF,
+    onClick: () => {
+      if ((0, u.default)(t)) {
+        (0, o.openEndEventModal)(t);
+        return
+      }
+      l.default.disconnect()
+    }
   })
 }
 
 function I(e) {
   let {
     channel: t
-  } = e, n = (0, l.default)();
-  return t.isGuildStageVoice() ? (0, a.jsx)(h, {
+  } = e, n = (0, r.default)();
+  return t.isGuildStageVoice() ? (0, a.jsx)(C, {
     channel: t
-  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(C, {
+  }) : n && t.isBroadcastChannel() ? (0, a.jsx)(_, {}) : (0, a.jsx)(S, {
     channel: t
   })
 }

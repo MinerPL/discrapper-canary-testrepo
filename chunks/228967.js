@@ -1,31 +1,39 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return _
   }
 });
 var a = s("37983");
 s("884691");
 var r = s("748802"),
   n = s("77078"),
-  l = s("181114"),
-  i = s("782340"),
-  u = s("137537"),
-  o = e => {
+  i = s("181114"),
+  l = s("599110"),
+  o = s("907648"),
+  u = s("49111"),
+  d = s("782340"),
+  c = s("390553"),
+  _ = e => {
     let {
-      setIsAllPerksVisible: t
+      setIsAllPerksVisible: t,
+      previousComponent: s
     } = e;
-    return (0, a.jsx)(l.default, {
+    return (0, a.jsx)(i.default, {
       color: n.ButtonColors.CUSTOM,
       onlyShineOnHover: !0,
-      shineSize: l.ShineSizes.SMALL,
-      className: u.seeAllPerksButton,
+      shineSize: i.ShineSizes.SMALL,
+      className: c.seeAllPerksButton,
       onClick: () => {
-        t(!0)
+        t(!0), l.default.track(u.AnalyticEvents.NITRO_HOME_NAVIGATION, {
+          current_component: s,
+          next_component: o.NitroLandingPages.SEE_ALL,
+          interaction_component: "See All Button"
+        })
       },
       children: (0, a.jsxs)("div", {
-        className: u.seeAllPerksButtonContent,
-        children: [i.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(r.ChevronSmallRightIcon, {
+        className: c.seeAllPerksButtonContent,
+        children: [d.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(r.ChevronSmallRightIcon, {
           color: "currentColor"
         })]
       })

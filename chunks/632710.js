@@ -1,162 +1,166 @@
 "use strict";
 n.r(t), n.d(t, {
-  useListBox: function() {
-    return d
-  },
-  useOption: function() {
-    return l
-  },
-  useListBoxSection: function() {
-    return f
-  },
-  listData: function() {
-    return c
-  },
-  getItemId: function() {
-    return u
+  default: function() {
+    return b
   }
-}), n("222007"), n("781738"), n("70102");
-var r = n("290895"),
-  i = n("495912"),
-  o = n("825167"),
-  s = n("628364"),
-  a = n("872834");
-let c = new WeakMap;
-
-function u(e, t) {
-  var n;
-  let r = c.get(e);
-  if (!r) throw Error("Unknown list");
-  return "".concat(r.id, "-option-").concat("string" == typeof(n = t) ? n.replace(/\s*/g, "") : "" + n)
-}
-
-function d(e, t, n) {
-  let a = (0, r.filterDOMProps)(e, {
-      labelable: !0
-    }),
-    {
-      listProps: u
-    } = (0, s.useSelectableList)({
-      ...e,
-      ref: n,
-      selectionManager: t.selectionManager,
-      collection: t.collection,
-      disabledKeys: t.disabledKeys
-    }),
-    {
-      focusWithinProps: d
-    } = (0, i.useFocusWithin)({
-      onFocusWithin: e.onFocus,
-      onBlurWithin: e.onBlur,
-      onFocusWithinChange: e.onFocusChange
-    }),
-    l = (0, r.useId)(e.id);
-  c.set(t, {
-    id: l,
-    shouldUseVirtualFocus: e.shouldUseVirtualFocus,
-    shouldSelectOnPressUp: e.shouldSelectOnPressUp,
-    shouldFocusOnHover: e.shouldFocusOnHover,
-    isVirtualized: e.isVirtualized,
-    onAction: e.onAction
-  });
-  let {
-    labelProps: f,
-    fieldProps: p
-  } = (0, o.useLabel)({
-    ...e,
-    id: l,
-    labelElementType: "span"
-  });
-  return {
-    labelProps: f,
-    listBoxProps: (0, r.mergeProps)(a, d, "multiple" === t.selectionManager.selectionMode ? {
-      "aria-multiselectable": "true"
-    } : {}, {
-      role: "listbox",
-      ...(0, r.mergeProps)(p, u)
+});
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("627445"),
+  r = n.n(s),
+  o = n("118810"),
+  u = n("446674"),
+  d = n("77078"),
+  c = n("86621"),
+  f = n("376556"),
+  p = n("118033"),
+  m = n("42203"),
+  h = n("697218"),
+  x = n("800762"),
+  E = n("145131"),
+  y = n("313873"),
+  g = n("429928"),
+  S = n("36539"),
+  C = n("698372"),
+  T = n("770370"),
+  _ = n("667618"),
+  I = n("865677"),
+  v = n("15874"),
+  N = n("774713"),
+  A = n("510788"),
+  O = n("756731"),
+  R = n("762806"),
+  M = n("438278"),
+  k = n("898481"),
+  L = n("49111"),
+  P = n("279453"),
+  b = (0, c.default)(e => {
+    let t, {
+        activity: n,
+        user: l,
+        applicationStream: s,
+        className: c,
+        guildId: b,
+        channelId: j,
+        source: U,
+        color: D = d.Button.Colors.WHITE,
+        look: w = d.Button.Looks.OUTLINED,
+        type: F,
+        onAction: G,
+        isEmbedded: H = !1
+      } = e,
+      B = (0, C.default)(),
+      V = (0, u.useStateFromStores)([h.default], () => {
+        let e = h.default.getCurrentUser();
+        return r(null != e, "UserActivityActions: currentUser cannot be undefined"), e
+      }),
+      K = F === y.Types.PROFILE || F === y.Types.PROFILE_V2,
+      W = F === y.Types.STREAM_PREVIEW || null != s,
+      Y = (0, g.default)(n),
+      z = (0, p.isStageActivity)(n),
+      Z = K ? E.default.Align.END : E.default.Align.STRETCH,
+      J = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
+      q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
+      X = (0, u.useStateFromStores)([x.default, m.default], () => {
+        var e;
+        return q ? m.default.getChannel(null === (e = x.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null
+      });
+    if ((0, S.default)(n)) t = [(0, i.jsx)(T.default, {
+      look: w,
+      color: D,
+      platform: f.default.get(L.PlatformTypes.XBOX)
+    }, "ConnectPlatformActivityButton")];
+    else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(T.default, {
+      look: w,
+      color: D,
+      platform: f.default.get(L.PlatformTypes.PLAYSTATION)
+    }, "ConnectPlatformActivityButton")];
+    else if (Y) {
+      let e = (0, i.jsx)(R.default, {
+          activity: n,
+          user: l,
+          color: D,
+          look: w,
+          guildId: b,
+          channelId: j,
+          source: U
+        }, "spotify-activity-sync-button"),
+        a = (0, i.jsx)(O.default, {
+          activity: n,
+          user: l,
+          color: D,
+          look: w,
+          guildId: b,
+          channelId: j,
+          source: U
+        }, "spotify-activity-play-button");
+      t = [a, e]
+    } else if (z) {
+      let e = (0, p.unpackStageChannelParty)(n);
+      null != e && (t = [(0, i.jsx)(N.default, {
+        guildId: e.guildId,
+        channelId: e.channelId,
+        color: D,
+        look: w,
+        isProfile: K
+      }, e.channelId)])
+    } else if (W) {
+      let e = (0, i.jsx)(k.default, {
+        isCurrentUser: V.id === l.id,
+        color: D,
+        look: w,
+        applicationStream: s
+      }, "watch-button");
+      t = [e]
+    } else if (q && null != X) {
+      let e = (0, i.jsx)(v.default, {
+        color: D,
+        look: w,
+        hangStatusChannel: X
+      }, "hang-status-button");
+      t = [e]
+    } else {
+      let e = (0, i.jsx)(M.default, {
+          activity: n,
+          color: D,
+          look: w
+        }, "watch-button"),
+        a = (0, i.jsx)(I.default, {
+          activity: n,
+          currentEmbeddedApplication: B,
+          user: l,
+          isCurrentUser: V.id === l.id,
+          color: D,
+          look: w,
+          isEmbedded: H
+        }, "join-activity-button"),
+        s = (0, i.jsx)(A.default, {
+          activity: n,
+          user: l,
+          color: D,
+          look: w
+        }, "notify-button"),
+        r = (0, i.jsx)(_.default, {
+          user: l,
+          color: D,
+          look: w,
+          activity: n
+        }, "custom-activity-button");
+      if (null == a && null == s && null == e && null == r) return null;
+      t = [a, s, e, r]
+    }
+    let Q = J === E.default.Direction.VERTICAL;
+    return (0, i.jsx)(E.default, {
+      grow: 0,
+      align: Z,
+      direction: J,
+      wrap: Q ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
+      className: a(c, P.buttonsWrapper, Q ? P.vertical : P.horizontal),
+      onClick: function(e) {
+        (0, o.isElement)(e.target) && "BUTTON" === e.target.nodeName && (null == G || G())
+      },
+      children: t
     })
-  }
-}
-
-function l(e, t, n) {
-  var o, d, l, f, p, h, g;
-  let {
-    key: b
-  } = e, v = c.get(t), m = null !== (o = e.isDisabled) && void 0 !== o ? o : t.disabledKeys.has(b), y = null !== (d = e.isSelected) && void 0 !== d ? d : t.selectionManager.isSelected(b), x = null !== (l = e.shouldSelectOnPressUp) && void 0 !== l ? l : null == v ? void 0 : v.shouldSelectOnPressUp, w = null !== (f = e.shouldFocusOnHover) && void 0 !== f ? f : null == v ? void 0 : v.shouldFocusOnHover, S = null !== (p = e.shouldUseVirtualFocus) && void 0 !== p ? p : null == v ? void 0 : v.shouldUseVirtualFocus, k = null !== (h = e.isVirtualized) && void 0 !== h ? h : null == v ? void 0 : v.isVirtualized, _ = (0, r.useSlotId)(), E = (0, r.useSlotId)(), M = {
-    role: "option",
-    "aria-disabled": m || void 0,
-    "aria-selected": "none" !== t.selectionManager.selectionMode ? y : void 0
-  };
-  if (!((0, r.isMac)() && (0, r.isWebKit)()) && (M["aria-label"] = e["aria-label"], M["aria-labelledby"] = _, M["aria-describedby"] = E), k) {
-    let e = Number(null === (g = t.collection.getItem(b)) || void 0 === g ? void 0 : g.index);
-    M["aria-posinset"] = Number.isNaN(e) ? void 0 : e + 1, M["aria-setsize"] = (0, a.getItemCount)(t.collection)
-  }
-  let {
-    itemProps: D,
-    isPressed: C,
-    isFocused: P,
-    hasAction: T,
-    allowsSelection: A
-  } = (0, s.useSelectableItem)({
-    selectionManager: t.selectionManager,
-    key: b,
-    ref: n,
-    shouldSelectOnPressUp: x,
-    allowsDifferentPressOrigin: x && w,
-    isVirtualized: k,
-    shouldUseVirtualFocus: S,
-    isDisabled: m,
-    onAction: (null == v ? void 0 : v.onAction) ? () => {
-      var e;
-      return null == v ? void 0 : null === (e = v.onAction) || void 0 === e ? void 0 : e.call(v, b)
-    } : void 0
-  }), {
-    hoverProps: R
-  } = (0, i.useHover)({
-    isDisabled: m || !w,
-    onHoverStart() {
-      !(0, i.isFocusVisible)() && (t.selectionManager.setFocused(!0), t.selectionManager.setFocusedKey(b))
-    }
-  });
-  return {
-    optionProps: {
-      ...M,
-      ...(0, r.mergeProps)(D, R),
-      id: u(t, b)
-    },
-    labelProps: {
-      id: _
-    },
-    descriptionProps: {
-      id: E
-    },
-    isFocused: P,
-    isFocusVisible: P && (0, i.isFocusVisible)(),
-    isSelected: y,
-    isDisabled: m,
-    isPressed: C,
-    allowsSelection: A,
-    hasAction: T
-  }
-}
-
-function f(e) {
-  let {
-    heading: t,
-    "aria-label": n
-  } = e, i = (0, r.useId)();
-  return {
-    itemProps: {
-      role: "presentation"
-    },
-    headingProps: t ? {
-      id: i,
-      role: "presentation"
-    } : {},
-    groupProps: {
-      role: "group",
-      "aria-label": n,
-      "aria-labelledby": t ? i : void 0
-    }
-  }
-}
+  })

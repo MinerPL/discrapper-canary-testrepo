@@ -1,74 +1,52 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return c
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("446674"),
-  a = n("77078"),
-  u = n("206230"),
-  d = n("491605"),
-  c = n("782340"),
-  f = n("491422");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("77078"),
+  o = n("82636"),
+  u = n("782340"),
+  d = n("497855");
 
-function p(e) {
-  let {
-    hovered: t
-  } = e, i = (0, s.useStateFromStores)([u.default], () => u.default.useReducedMotion);
-  async function r() {
-    let {
-      default: e
-    } = await n.el("984138").then(n.t.bind(n, "984138", 19));
-    return e
-  }
-  return (0, l.jsx)(d.default, {
-    pauseAtFrame: t ? void 0 : 0,
-    importData: r,
-    shouldAnimate: t && !i,
-    className: o(f.rocket, {
-      [f.rocketHovered]: t
-    })
-  })
-}
-
-function m(e) {
+function c(e) {
   let {
     tabIndex: t,
     className: n,
-    onClick: r,
-    "aria-expanded": s,
-    "aria-controls": u,
-    focusProps: d
-  } = e, [m, h] = i.useState(!1);
+    onClick: a,
+    "aria-expanded": c,
+    "aria-controls": f,
+    focusProps: p
+  } = e, [m, h] = l.useState(!1);
 
-  function E() {
+  function x() {
     h(!0)
   }
 
-  function S() {
+  function E() {
     h(!1)
   }
-  return (0, l.jsx)(a.Button, {
-    look: a.Button.Looks.BLANK,
-    size: a.Button.Sizes.NONE,
+  return (0, i.jsx)(r.Button, {
+    look: r.Button.Looks.BLANK,
+    size: r.Button.Sizes.NONE,
     tabIndex: t,
-    className: o(f.activityButton, n),
-    onMouseEnter: E,
-    onMouseOver: E,
-    onMouseLeave: S,
-    onFocus: E,
-    onBlur: S,
-    onClick: r,
-    "aria-label": c.default.Messages.SELECT_ACTIVITY,
-    "aria-expanded": s,
-    "aria-controls": u,
-    focusProps: d,
-    children: (0, l.jsx)(p, {
-      hovered: m
+    className: s(d.activityButton, n),
+    onClick: a,
+    onMouseEnter: x,
+    onMouseOver: x,
+    onMouseLeave: E,
+    onFocus: x,
+    onBlur: E,
+    "aria-label": u.default.Messages.SELECT_ACTIVITY,
+    "aria-expanded": c,
+    "aria-controls": f,
+    focusProps: p,
+    children: (0, i.jsx)(o.default, {
+      className: s(d.rocket, m ? d.rocketHovered : d.rocketUnhovered)
     })
   })
 }

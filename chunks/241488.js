@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return H
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("917351"),
   o = n.n(r),
-  s = n("917351"),
-  a = n.n(s),
   u = n("394846"),
   d = n("118810"),
   c = n("446674"),
@@ -17,297 +17,284 @@ var l = n("37983"),
   p = n("77078"),
   m = n("452804"),
   h = n("901582"),
-  E = n("594203"),
-  S = n("244201"),
-  g = n("716241"),
-  C = n("86678"),
-  T = n("873622"),
-  v = n("277855"),
-  y = n("38290"),
-  x = n("191191"),
-  I = n("256860"),
-  N = n("364685"),
-  _ = n("889701"),
-  A = n("168973"),
-  R = n("983782"),
+  x = n("594203"),
+  E = n("244201"),
+  y = n("716241"),
+  g = n("86678"),
+  S = n("873622"),
+  C = n("277855"),
+  T = n("191191"),
+  _ = n("256860"),
+  I = n("364685"),
+  v = n("889701"),
+  N = n("168973"),
+  A = n("983782"),
   O = n("659500"),
-  M = n("791776"),
-  k = n("538282"),
-  b = n("13030"),
-  P = n("49111"),
-  L = n("115279"),
-  U = n("958706"),
+  R = n("791776"),
+  M = n("538282"),
+  k = n("13030"),
+  L = n("49111"),
+  P = n("115279"),
+  b = n("958706"),
   j = n("560241"),
-  D = n("782340"),
-  w = n("300441");
-let B = b.MIN_EXPRESSION_PICKER_WIDTH + L.EmojiSize.MEDIUM,
-  H = i.memo(function(e) {
+  U = n("782340"),
+  D = n("213524");
+let w = k.MIN_EXPRESSION_PICKER_WIDTH + P.EmojiSize.MEDIUM,
+  F = l.memo(function(e) {
     let {
       isActive: t,
       className: n,
-      viewType: i,
-      autoFocus: r = !1,
-      "aria-controls": s,
-      ...a
+      viewType: l,
+      autoFocus: a = !1,
+      "aria-controls": r,
+      ...o
     } = e;
-    return (0, l.jsx)(p.Button, {
+    return (0, i.jsx)(p.Button, {
       role: "tab",
-      autoFocus: r,
-      "aria-controls": t ? s : void 0,
-      ...a,
+      autoFocus: a,
+      "aria-controls": t ? r : void 0,
+      ...o,
       onClick: () => {
-        g.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
-          tab: i,
+        y.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_TAB_CLICKED, {
+          tab: l,
           badged: !1
-        }), (0, k.setExpressionPickerView)(i)
+        }), (0, M.setExpressionPickerView)(l)
       },
       "aria-current": t ? "page" : void 0,
-      className: o(n, w.navButton, w.navItem, {
-        [w.navButtonActive]: t
+      className: s(n, D.navButton, D.navItem, {
+        [D.navButtonActive]: t
       }),
       look: p.Button.Looks.BLANK,
       size: p.Button.Sizes.NONE
     })
   }),
-  F = e => {
+  G = e => {
     let {
       positionContainerRef: t,
       drawerRef: n,
-      orientation: l
-    } = e, r = (0, c.useStateFromStores)([A.default], () => A.default.expressionPickerWidth), [o, s] = i.useState(window.innerWidth), [u, d] = i.useState(null != r ? r : b.ExpressionPickerWidths.MIN), f = i.useMemo(() => {
+      orientation: i
+    } = e, a = (0, c.useStateFromStores)([N.default], () => N.default.expressionPickerWidth), [s, r] = l.useState(window.innerWidth), [u, d] = l.useState(null != a ? a : k.ExpressionPickerWidths.MIN), f = l.useMemo(() => {
       switch (u) {
-        case b.ExpressionPickerWidths.MIN:
-          return b.MIN_EXPRESSION_PICKER_WIDTH;
-        case b.ExpressionPickerWidths.MAX:
+        case k.ExpressionPickerWidths.MIN:
+          return k.MIN_EXPRESSION_PICKER_WIDTH;
+        case k.ExpressionPickerWidths.MAX:
           return null;
         default:
           return u
       }
-    }, [u]), p = i.useCallback(e => {
-      let t = e >= o ? b.ExpressionPickerWidths.MAX : e <= b.MIN_EXPRESSION_PICKER_WIDTH ? b.ExpressionPickerWidths.MIN : e;
+    }, [u]), p = l.useCallback(e => {
+      let t = e >= s ? k.ExpressionPickerWidths.MAX : e <= k.MIN_EXPRESSION_PICKER_WIDTH ? k.ExpressionPickerWidths.MIN : e;
       null == t && null != n.current && (n.current.style.width = ""), m.default.updatedUnsyncedSettings({
         expressionPickerWidth: t
       }), d(t)
-    }, [n, o]), h = (0, E.default)({
+    }, [n, s]), h = (0, x.default)({
       initialElementDimension: f,
-      maxDimension: o,
-      minDimension: b.MIN_EXPRESSION_PICKER_WIDTH,
+      maxDimension: s,
+      minDimension: k.MIN_EXPRESSION_PICKER_WIDTH,
       resizableDomNodeRef: n,
       onElementResize: p,
-      orientation: l
+      orientation: i
     });
-    i.useEffect(() => {
-      let e = a.debounce(() => {
-        null != t.current && s(t.current.offsetWidth)
+    l.useEffect(() => {
+      let e = o.debounce(() => {
+        null != t.current && r(t.current.offsetWidth)
       }, 500);
       return window.addEventListener("resize", e), () => {
         window.removeEventListener("resize", e)
       }
-    }, [t]), i.useLayoutEffect(() => {
-      null != t.current && s(t.current.offsetWidth)
+    }, [t]), l.useLayoutEffect(() => {
+      null != t.current && r(t.current.offsetWidth)
     }, [t]);
-    let S = i.useCallback(e => {
-      e.stopPropagation(), null != t.current && s(t.current.offsetWidth), h(e)
+    let E = l.useCallback(e => {
+      e.stopPropagation(), null != t.current && r(t.current.offsetWidth), h(e)
     }, [t, h]);
     return {
       drawerWidth: f,
-      handleDrawerResizeHandleMouseDown: S
+      handleDrawerResizeHandleMouseDown: E
     }
   };
-var G = i.memo(function(e) {
-  var t, n, r;
+var H = l.memo(function(e) {
+  var t, n, a;
   let {
-    positionTargetRef: s,
-    hideGifFavorites: a,
+    positionTargetRef: r,
+    hideGifFavorites: o,
     includeCreateEmojiButton: m,
-    onSelectGIF: A,
-    onSelectEmoji: G,
-    onSelectSticker: K,
+    onSelectGIF: N,
+    onSelectEmoji: H,
+    onSelectSticker: B,
     onSelectSound: V,
-    onCustomUpload: W,
-    channel: Y,
-    type: q,
-    position: z,
-    align: Q,
-    positionLayerClassName: X,
-    closeOnModalOuterClick: Z = !1,
-    parentModalKey: J,
-    customUploadFilters: $
-  } = e, ee = i.useRef(null), et = i.useRef(!1), en = i.useRef(), el = i.useRef(null), ei = "left" === Q ? E.ResizeOrientation.HORIZONTAL_RIGHT : E.ResizeOrientation.HORIZONTAL_LEFT, {
-    drawerWidth: er,
-    handleDrawerResizeHandleMouseDown: eo
-  } = F({
-    positionContainerRef: ee,
-    drawerRef: el,
-    orientation: ei
-  }), es = (0, k.useExpressionPickerStore)(e => e.activeView), ea = (0, I.useHasSendableSticker)(Y), {
-    renderWindow: eu,
-    windowDispatch: ed
-  } = i.useContext(S.default), ec = (0, c.useStateFromStores)([N.default], () => !N.default.hasLoadedStickerPacks), ef = (0, v.useSoundmojiExperiment)("expression_picker"), ep = null != J, em = (0, f.useIsModalAtTop)(null != J ? J : ""), eh = i.useCallback(e => {
+    channel: K,
+    type: W,
+    position: Y,
+    align: z,
+    positionLayerClassName: Z,
+    closeOnModalOuterClick: J = !1,
+    parentModalKey: q
+  } = e, X = l.useRef(null), Q = l.useRef(!1), $ = l.useRef(), ee = l.useRef(null), et = "left" === z ? x.ResizeOrientation.HORIZONTAL_RIGHT : x.ResizeOrientation.HORIZONTAL_LEFT, {
+    drawerWidth: en,
+    handleDrawerResizeHandleMouseDown: ei
+  } = G({
+    positionContainerRef: X,
+    drawerRef: ee,
+    orientation: et
+  }), el = (0, M.useExpressionPickerStore)(e => e.activeView), ea = (0, _.useHasSendableSticker)(K), {
+    renderWindow: es,
+    windowDispatch: er
+  } = l.useContext(E.default), eo = (0, c.useStateFromStores)([I.default], () => !I.default.hasLoadedStickerPacks), eu = (0, C.useSoundmojiExperiment)("expression_picker"), ed = null != q, ec = (0, f.useIsModalAtTop)(null != q ? q : ""), ef = l.useCallback(e => {
     var t;
-    if (!ep && (0, f.hasAnyModalOpen)() || ep && !(em && Z)) return;
+    if (!ed && (0, f.hasAnyModalOpen)() || ed && !(ec && J)) return;
     let {
       target: n
     } = e;
-    if ((0, d.isElement)(n) && null != n.closest("." + b.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+    if ((0, d.isElement)(n) && null != n.closest("." + k.CHAT_INPUT_BUTTON_CLASSNAME)) return;
     for (;
       (0, d.isElement)(n);) {
-      if (n === el.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+      if (n === ee.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
       n = n.parentNode
-    }(0, k.closeExpressionPicker)();
-    let l = null === (t = (0, M.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-    (null == l || "BODY" === l.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(P.ComponentActions.TEXTAREA_FOCUS)
-  }, [Z, em, ep]), eE = i.useCallback(() => {
-    (0, k.closeExpressionPicker)()
+    }(0, M.closeExpressionPicker)();
+    let i = null === (t = (0, R.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+    (null == i || "BODY" === i.tagName) && O.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.TEXTAREA_FOCUS)
+  }, [J, ec, ed]), ep = l.useCallback(() => {
+    (0, M.closeExpressionPicker)()
   }, []);
-  i.useLayoutEffect(() => {
+  l.useLayoutEffect(() => {
     let e = () => {
-      es === b.ExpressionPickerViewType.GIF && (0, k.closeExpressionPicker)()
+      el === k.ExpressionPickerViewType.GIF && (0, M.closeExpressionPicker)()
     };
-    return eu.addEventListener("mousedown", eh), eu.addEventListener("contextmenu", eh), ed.subscribe(P.ComponentActions.POPOUT_CLOSE, eE), O.ComponentDispatch.subscribe(P.ComponentActions.CLOSE_GIF_PICKER, e), () => {
-      eu.removeEventListener("mousedown", eh), eu.removeEventListener("contextmenu", eh), ed.unsubscribe(P.ComponentActions.POPOUT_CLOSE, eE), O.ComponentDispatch.unsubscribe(P.ComponentActions.CLOSE_GIF_PICKER, e)
+    return es.addEventListener("mousedown", ef), es.addEventListener("contextmenu", ef), er.subscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.subscribe(L.ComponentActions.CLOSE_GIF_PICKER, e), () => {
+      es.removeEventListener("mousedown", ef), es.removeEventListener("contextmenu", ef), er.unsubscribe(L.ComponentActions.POPOUT_CLOSE, ep), O.ComponentDispatch.unsubscribe(L.ComponentActions.CLOSE_GIF_PICKER, e)
     }
-  }, [es, eE, eh, eu, ed]), (0, p.useFocusLock)(ee), i.useEffect(() => {
-    (0, k.setSearchQuery)("")
-  }, []), i.useEffect(() => {
-    (!ep && (0, f.hasAnyModalOpen)() || ep && !em) && (0, k.closeExpressionPicker)()
-  }, [em, ep]), i.useEffect(() => {
-    if (null != el.current && !et.current) {
-      var e, t, n, l;
-      es === b.ExpressionPickerViewType.EMOJI ? (null == en ? void 0 : null === (e = en.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == en || null === (t = en.current) || void 0 === t || t.onPickerOpen(), et.current = !0) : es === b.ExpressionPickerViewType.STICKER ? (null == en ? void 0 : null === (n = en.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !ec && (null == en || null === (l = en.current) || void 0 === l || l.onPickerOpen(), et.current = !0) : (g.default.trackWithMetadata(P.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
-        width: el.current.offsetWidth,
-        tab: es,
+  }, [el, ep, ef, es, er]), (0, p.useFocusLock)(X), l.useEffect(() => {
+    (0, M.setSearchQuery)("")
+  }, []), l.useEffect(() => {
+    (!ed && (0, f.hasAnyModalOpen)() || ed && !ec) && (0, M.closeExpressionPicker)()
+  }, [ec, ed]), l.useEffect(() => {
+    if (null != ee.current && !Q.current) {
+      var e, t, n, i;
+      el === k.ExpressionPickerViewType.EMOJI ? (null == $ ? void 0 : null === (e = $.current) || void 0 === e ? void 0 : e.onPickerOpen) != null && (null == $ || null === (t = $.current) || void 0 === t || t.onPickerOpen(), Q.current = !0) : el === k.ExpressionPickerViewType.STICKER ? (null == $ ? void 0 : null === (n = $.current) || void 0 === n ? void 0 : n.onPickerOpen) != null && !eo && (null == $ || null === (i = $.current) || void 0 === i || i.onPickerOpen(), Q.current = !0) : (y.default.trackWithMetadata(L.AnalyticEvents.EXPRESSION_PICKER_OPENED, {
+        width: ee.current.offsetWidth,
+        tab: el,
         badged: !1
-      }), et.current = !0)
+      }), Q.current = !0)
     }
   });
-  let eS = (null === (t = q.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile,
-    eg = null === (n = q.stickers) || void 0 === n ? void 0 : n.allowSending,
-    eC = !(null === (r = q.expressionPicker) || void 0 === r ? void 0 : r.onlyEmojis) && (eS || eg),
-    eT = "left" === Q ? "right" : "left",
-    ev = null != X ? X : "left" === Q ? w.positionLayerDefaultAlignLeft : w.positionLayerDefaultAlignRight;
-  return (0, l.jsx)(h.default, {
-    section: P.AnalyticsSections.EXPRESSION_PICKER,
-    children: (0, l.jsx)(R.AppReferencePositionLayer, {
-      className: o(w.positionLayer, ev),
-      reference: s,
-      position: z,
-      align: Q,
+  let em = (null === (t = W.gifs) || void 0 === t ? void 0 : t.allowSending) && !u.isMobile && null != N,
+    eh = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != B,
+    ex = !(null === (a = W.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (em || eh),
+    eE = "left" === z ? "right" : "left",
+    ey = null != Z ? Z : "left" === z ? D.positionLayerDefaultAlignLeft : D.positionLayerDefaultAlignRight;
+  return (0, i.jsx)(h.default, {
+    section: L.AnalyticsSections.EXPRESSION_PICKER,
+    children: (0, i.jsx)(A.AppReferencePositionLayer, {
+      className: s(D.positionLayer, ey),
+      reference: r,
+      position: Y,
+      align: z,
       spacing: 8,
       autoInvert: !0,
       children: e => {
         let {
           isPositioned: t
         } = e;
-        return (0, l.jsx)("section", {
-          className: o(w.positionContainer, {
-            [w.positionContainerOnlyEmoji]: !eC
+        return (0, i.jsx)("section", {
+          className: s(D.positionContainer, {
+            [D.positionContainerOnlyEmoji]: !ex
           }),
-          ref: ee,
+          ref: X,
           role: "dialog",
-          "aria-label": D.default.Messages.EXPRESSION_PICKER,
-          children: t ? (0, l.jsxs)("div", {
-            className: w.drawerSizingWrapper,
+          "aria-label": U.default.Messages.EXPRESSION_PICKER,
+          children: t ? (0, i.jsxs)("div", {
+            className: D.drawerSizingWrapper,
             style: {
-              width: null == er ? void 0 : er,
-              [Q]: 0
+              width: null == en ? void 0 : en,
+              [z]: 0
             },
-            ref: el,
-            children: [(0, l.jsx)("div", {
-              className: w.resizeHandle,
-              onMouseDown: eo,
+            ref: ee,
+            children: [(0, i.jsx)("div", {
+              className: D.resizeHandle,
+              onMouseDown: ei,
               style: {
-                [eT]: -2
+                [eE]: -2
               }
-            }), (0, l.jsxs)("div", {
-              className: w.contentWrapper,
-              children: [eC ? (0, l.jsx)("nav", {
-                className: w.nav,
-                children: (0, l.jsxs)("div", {
-                  className: w.navList,
+            }), (0, i.jsxs)("div", {
+              className: D.contentWrapper,
+              children: [ex ? (0, i.jsx)("nav", {
+                className: D.nav,
+                children: (0, i.jsxs)("div", {
+                  className: D.navList,
                   role: "tablist",
-                  "aria-label": D.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
-                  children: [eS && (0, l.jsx)(H, {
-                    id: L.GIF_PICKER_TAB_ID,
-                    "aria-controls": L.GIF_PICKER_TAB_PANEL_ID,
-                    "aria-selected": es === b.ExpressionPickerViewType.GIF,
-                    isActive: es === b.ExpressionPickerViewType.GIF,
-                    viewType: b.ExpressionPickerViewType.GIF,
-                    children: D.default.Messages.EXPRESSION_PICKER_GIF
-                  }), eg ? (0, l.jsx)(H, {
+                  "aria-label": U.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
+                  children: [em ? (0, i.jsx)(F, {
+                    id: P.GIF_PICKER_TAB_ID,
+                    "aria-controls": P.GIF_PICKER_TAB_PANEL_ID,
+                    "aria-selected": el === k.ExpressionPickerViewType.GIF,
+                    isActive: el === k.ExpressionPickerViewType.GIF,
+                    viewType: k.ExpressionPickerViewType.GIF,
+                    children: U.default.Messages.EXPRESSION_PICKER_GIF
+                  }) : null, eh ? (0, i.jsx)(F, {
                     id: j.STICKER_PICKER_TAB_ID,
                     "aria-controls": j.STICKER_PICKER_TAB_PANEL_ID,
-                    "aria-selected": es === b.ExpressionPickerViewType.STICKER,
-                    isActive: es === b.ExpressionPickerViewType.STICKER,
+                    "aria-selected": el === k.ExpressionPickerViewType.STICKER,
+                    isActive: el === k.ExpressionPickerViewType.STICKER,
                     autoFocus: !ea,
-                    viewType: b.ExpressionPickerViewType.STICKER,
-                    children: (0, l.jsx)("div", {
-                      className: w.stickersNavItem,
-                      children: D.default.Messages.EXPRESSION_PICKER_STICKER
+                    viewType: k.ExpressionPickerViewType.STICKER,
+                    children: (0, i.jsx)("div", {
+                      className: D.stickersNavItem,
+                      children: U.default.Messages.EXPRESSION_PICKER_STICKER
                     })
-                  }) : null, (0, l.jsx)(H, {
-                    id: L.EMOJI_PICKER_TAB_ID,
-                    "aria-controls": L.EMOJI_PICKER_TAB_PANEL_ID,
-                    "aria-selected": es === b.ExpressionPickerViewType.EMOJI,
-                    isActive: es === b.ExpressionPickerViewType.EMOJI,
-                    viewType: b.ExpressionPickerViewType.EMOJI,
-                    children: D.default.Messages.EXPRESSION_PICKER_EMOJI
-                  }), ef && null != V && (0, l.jsx)(H, {
-                    id: L.SOUNDBOARD_PICKER_TAB_ID,
-                    "aria-controls": L.SOUNDBOARD_PICKER_TAB_PANEL_ID,
-                    "aria-selected": es === b.ExpressionPickerViewType.SOUNDBOARD,
-                    isActive: es === b.ExpressionPickerViewType.SOUNDBOARD,
-                    viewType: b.ExpressionPickerViewType.SOUNDBOARD,
+                  }) : null, (0, i.jsx)(F, {
+                    id: P.EMOJI_PICKER_TAB_ID,
+                    "aria-controls": P.EMOJI_PICKER_TAB_PANEL_ID,
+                    "aria-selected": el === k.ExpressionPickerViewType.EMOJI,
+                    isActive: el === k.ExpressionPickerViewType.EMOJI,
+                    viewType: k.ExpressionPickerViewType.EMOJI,
+                    children: U.default.Messages.EXPRESSION_PICKER_EMOJI
+                  }), eu && null != V && (0, i.jsx)(F, {
+                    id: P.SOUNDBOARD_PICKER_TAB_ID,
+                    "aria-controls": P.SOUNDBOARD_PICKER_TAB_PANEL_ID,
+                    "aria-selected": el === k.ExpressionPickerViewType.SOUNDBOARD,
+                    isActive: el === k.ExpressionPickerViewType.SOUNDBOARD,
+                    viewType: k.ExpressionPickerViewType.SOUNDBOARD,
                     children: "Sounds"
-                  }), null != W && (0, l.jsx)(H, {
-                    id: L.CUSTOM_UPLOAD_PICKER_TAB_ID,
-                    "aria-controls": L.CUSTOM_UPLOAD_PICKER_TAB_PANEL_ID,
-                    "aria-selected": es === b.ExpressionPickerViewType.CUSTOM_UPLOAD,
-                    isActive: es === b.ExpressionPickerViewType.CUSTOM_UPLOAD,
-                    viewType: b.ExpressionPickerViewType.CUSTOM_UPLOAD,
-                    children: D.default.Messages.EXPRESSION_PICKER_UPLOAD
                   })]
                 })
-              }) : null, es === b.ExpressionPickerViewType.STICKER && eC ? (0, l.jsx)(_.default, {
-                isLoading: ec,
-                channel: Y,
-                containerWidth: er,
-                onSelectSticker: K,
-                closePopout: eE,
+              }) : null, el === k.ExpressionPickerViewType.STICKER && eh ? (0, i.jsx)(v.default, {
+                isLoading: eo,
+                channel: K,
+                containerWidth: en,
+                onSelectSticker: B,
+                closePopout: ep,
                 ref: e => {
-                  en.current = e
+                  $.current = e
                 }
-              }) : null, es === b.ExpressionPickerViewType.GIF && eC ? (0, l.jsx)(T.default, {
-                onSelectGIF: A,
-                hideFavorites: a,
+              }) : null, el === k.ExpressionPickerViewType.GIF && em ? (0, i.jsx)(S.default, {
+                onSelectGIF: N,
+                hideFavorites: o,
                 persistSearch: !0
-              }) : null, es === b.ExpressionPickerViewType.EMOJI ? (0, l.jsx)(C.default, {
+              }) : null, el === k.ExpressionPickerViewType.EMOJI ? (0, i.jsx)(g.default, {
                 hasTabWrapper: !0,
                 persistSearch: !0,
-                channel: Y,
-                containerWidth: er,
+                channel: K,
+                containerWidth: en,
                 includeCreateEmojiButton: m,
-                emojiSize: null != er && er < B ? L.EmojiSize.MEDIUM : L.EmojiSize.LARGE,
-                pickerIntention: U.EmojiIntention.CHAT,
-                closePopout: eE,
-                onSelectEmoji: G,
+                emojiSize: null != en && en < w ? P.EmojiSize.MEDIUM : P.EmojiSize.LARGE,
+                pickerIntention: b.EmojiIntention.CHAT,
+                closePopout: ep,
+                onSelectEmoji: H,
                 ref: e => {
-                  en.current = e
+                  $.current = e
                 }
-              }) : null, es === b.ExpressionPickerViewType.SOUNDBOARD ? (0, l.jsx)("div", {
-                className: w.soundboardContainer,
-                children: (0, l.jsx)(x.default, {
-                  guildId: Y.guild_id,
-                  channel: Y,
-                  containerWidth: er,
-                  onClose: eE,
+              }) : null, el === k.ExpressionPickerViewType.SOUNDBOARD ? (0, i.jsx)("div", {
+                className: D.soundboardContainer,
+                children: (0, i.jsx)(T.default, {
+                  guildId: K.guild_id,
+                  channel: K,
+                  containerWidth: en,
+                  onClose: ep,
                   onSelect: V,
                   analyticsSource: "expression-picker",
                   autoWidth: !0
                 })
-              }) : null, es === b.ExpressionPickerViewType.CUSTOM_UPLOAD && null != W ? (0, l.jsx)(y.default, {
-                onCustomUpload: W,
-                customUploadFilters: $
               }) : null]
             })]
           }) : null

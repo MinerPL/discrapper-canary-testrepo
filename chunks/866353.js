@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   StickerSendability: function() {
-    return i
+    return s
   },
   getStickerSendability: function() {
     return u
   },
   isSendableSticker: function() {
-    return c
+    return d
   }
 });
-var r, i, l = n("991170"),
-  o = n("719923"),
-  s = n("24373"),
-  a = n("49111");
-(r = i || (i = {}))[r.SENDABLE = 0] = "SENDABLE", r[r.SENDABLE_WITH_PREMIUM = 1] = "SENDABLE_WITH_PREMIUM", r[r.NONSENDABLE = 2] = "NONSENDABLE", r[r.SENDABLE_WITH_BOOSTED_GUILD = 3] = "SENDABLE_WITH_BOOSTED_GUILD";
+var i, s, r = n("991170"),
+  a = n("719923"),
+  o = n("24373"),
+  l = n("49111");
+(i = s || (s = {}))[i.SENDABLE = 0] = "SENDABLE", i[i.SENDABLE_WITH_PREMIUM = 1] = "SENDABLE_WITH_PREMIUM", i[i.NONSENDABLE = 2] = "NONSENDABLE", i[i.SENDABLE_WITH_BOOSTED_GUILD = 3] = "SENDABLE_WITH_BOOSTED_GUILD";
 let u = (e, t, n) => {
     if (null == t) return 2;
-    let r = o.default.canUseCustomStickersEverywhere(t);
-    if ((0, s.isStandardSticker)(e)) return 0;
-    if ((0, s.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? 0 : null == n.guild_id || l.default.can({
-      permission: a.Permissions.USE_EXTERNAL_STICKERS,
+    let i = a.default.canUseCustomStickersEverywhere(t);
+    if ((0, o.isStandardSticker)(e)) return 0;
+    if ((0, o.isGuildSticker)(e) && null != n) return e.available ? null != n.guild_id && "" !== n.guild_id && n.guild_id === e.guild_id ? 0 : null == n.guild_id || r.can({
+      permission: l.Permissions.USE_EXTERNAL_STICKERS,
       user: t,
       context: n
-    }) ? r ? 0 : 1 : 2 : 3;
+    }) ? i ? 0 : 1 : 2 : 3;
     return 2
   },
-  c = (e, t, n) => 0 === u(e, t, n)
+  d = (e, t, n) => 0 === u(e, t, n)

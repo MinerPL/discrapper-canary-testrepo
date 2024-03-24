@@ -17,8 +17,8 @@ var n = s("37983"),
   f = s("446674"),
   m = s("669491"),
   g = s("77078"),
-  S = s("642995"),
-  p = s("656723"),
+  p = s("642995"),
+  S = s("656723"),
   v = s("299285"),
   x = s("384997"),
   C = s("943551"),
@@ -33,15 +33,15 @@ var n = s("37983"),
   j = s("191542"),
   O = s("697218"),
   w = s("471671"),
-  y = s("32238"),
-  L = s("599110"),
+  L = s("32238"),
+  y = s("599110"),
   R = s("659500"),
   b = s("718517"),
   P = s("449008"),
   D = s("387111"),
   U = s("49111"),
   H = s("782340"),
-  k = s("883181");
+  k = s("189209");
 let B = [];
 class z extends a.PureComponent {
   componentDidMount() {
@@ -56,7 +56,7 @@ class z extends a.PureComponent {
   }
   logShownEventIfNeeded() {
     let e = this.props.activity.application_id;
-    null != e && -1 === B.indexOf(e) && (L.default.track(U.AnalyticEvents.SHOW_TUTORIAL, {
+    null != e && -1 === B.indexOf(e) && (y.default.track(U.AnalyticEvents.SHOW_TUTORIAL, {
       tutorial: "activity-invite-nux-inline",
       application_id: e
     }), B.push(e))
@@ -89,7 +89,7 @@ class z extends a.PureComponent {
       let {
         activity: e
       } = this.props;
-      null != e && null != e.application_id && S.default.dismissForApplicationId(e.application_id)
+      null != e && null != e.application_id && p.default.dismissForApplicationId(e.application_id)
     }
   }
 }
@@ -143,13 +143,13 @@ class W extends a.PureComponent {
       slowmodeCooldownGuess: h,
       isBypassSlowmode: f,
       channel: m,
-      isThreadCreation: S,
-      renderDots: p,
+      isThreadCreation: p,
+      renderDots: S,
       poggermodeEnabled: v,
       isComboing: x
     } = this.props, {
       rateLimitPerUser: C
-    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = S ? [] : o(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(A.default.isBlocked).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
+    } = m, N = O.default.getCurrentUser(), E = I.default.getGuild(t), _ = C > 0, M = p ? [] : o(r).keys().filter(e => e !== (null == N ? void 0 : N.id)).reject(e => A.default.isBlocked(e)).map(e => O.default.getUser(e)).filter(P.isNotNullish).map(e => D.default.getName(t, this.props.channel.id, e)).value();
     if (0 === M.length && !_ && !x) return a && null != s ? (0, n.jsx)(z, {
       activity: s,
       isFocused: l
@@ -161,7 +161,7 @@ class W extends a.PureComponent {
       j = null,
       w = "";
     if (_) {
-      if (j = (0, n.jsx)(y.default, {
+      if (j = (0, n.jsx)(L.default, {
           className: k.slowModeIcon,
           width: 16,
           height: 16
@@ -195,14 +195,14 @@ class W extends a.PureComponent {
         }
       } else 0 === M.length && (F = f ? H.default.Messages.CHANNEL_SLOWMODE_DESC_IMMUNE : H.default.Messages.CHANNEL_SLOWMODE_DESC_SHORT)
     }
-    let [L, R, U] = M;
+    let [y, R, U] = M;
     return e = 0 === M.length ? "" : 1 === M.length ? H.default.Messages.ONE_USER_TYPING.format({
-      a: L
+      a: y
     }) : 2 === M.length ? H.default.Messages.TWO_USERS_TYPING.format({
-      a: L,
+      a: y,
       b: R
     }) : 3 === M.length ? H.default.Messages.THREE_USERS_TYPING.format({
-      a: L,
+      a: y,
       b: R,
       c: U
     }) : H.default.Messages.SEVERAL_USERS_TYPING, (0, n.jsxs)("div", {
@@ -212,7 +212,7 @@ class W extends a.PureComponent {
       }, u),
       children: [(0, n.jsxs)("div", {
         className: k.typingDots,
-        children: [M.length > 0 && !1 !== p && (0, n.jsx)(g.Dots, {
+        children: [M.length > 0 && !1 !== S && (0, n.jsx)(g.Dots, {
           className: k.ellipsis,
           dotRadius: 3.5,
           themed: !0
@@ -261,7 +261,7 @@ function V(e) {
     channel: t,
     isThreadCreation: s = !1,
     ...a
-  } = e, l = (0, f.useStateFromStores)([M.default], () => M.default.findActivity(e => null != e.application_id)), i = (0, f.useStateFromStores)([C.default, E.default], () => C.default.getUserCombo(E.default.getId(), t.id)), r = (0, f.useStateFromStores)([N.default, v.default], () => (0, p.default)(t, l, N.default, v.default)), o = (0, f.useStateFromStores)([F.default], () => F.default.getSlowmodeCooldownGuess(t.id, s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => s ? _.default.can(U.Permissions.MANAGE_THREADS, t) : _.default.can(U.Permissions.MANAGE_CHANNELS, t) || _.default.can(U.Permissions.MANAGE_MESSAGES, t)), d = {
+  } = e, l = (0, f.useStateFromStores)([M.default], () => M.default.findActivity(e => null != e.application_id)), i = (0, f.useStateFromStores)([C.default, E.default], () => C.default.getUserCombo(E.default.getId(), t.id)), r = (0, f.useStateFromStores)([N.default, v.default], () => (0, S.default)(t, l, N.default, v.default)), o = (0, f.useStateFromStores)([F.default], () => F.default.getSlowmodeCooldownGuess(t.id, s ? F.SlowmodeType.CreateThread : F.SlowmodeType.SendMessage)), u = (0, f.useStateFromStores)([_.default], () => s ? _.default.can(U.Permissions.MANAGE_THREADS, t) : _.default.can(U.Permissions.MANAGE_CHANNELS, t) || _.default.can(U.Permissions.MANAGE_MESSAGES, t)), d = {
     ...a,
     baseTextColor: (0, g.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),
     activeTextColor: (0, g.useToken)(m.default.colors.INTERACTIVE_NORMAL).hex(),

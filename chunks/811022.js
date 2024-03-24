@@ -22,6 +22,9 @@ t = class {
     }, this.log = function(e) {
       for (var E = arguments.length, t = Array(E > 1 ? E - 1 : 0), r = 1; r < E; r++) t[r - 1] = arguments[r];
       (0, o.checkLogForPII)(e, ...t), n(_.name, "log", e, ...t)
+    }, this.verboseDangerously = function(e) {
+      for (var E = arguments.length, t = Array(E > 1 ? E - 1 : 0), o = 1; o < E; o++) t[o - 1] = arguments[o];
+      n(_.name, "debug", e, ...t)
     }, this.verbose = function(e) {
       for (var E = arguments.length, t = Array(E > 1 ? E - 1 : 0), r = 1; r < E; r++) t[r - 1] = arguments[r];
       (0, o.checkLogForPII)(e, ...t), n(_.name, "debug", e, ...t)

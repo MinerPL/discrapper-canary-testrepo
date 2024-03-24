@@ -11,20 +11,20 @@ var i, s, r = n("917351"),
   u = n("42203"),
   d = n("923959"),
   c = n("26989"),
-  f = n("305961"),
-  _ = n("697218"),
-  h = n("800762"),
-  g = n("991170"),
-  m = n("923510"),
-  E = n("808422");
+  _ = n("305961"),
+  f = n("697218"),
+  E = n("800762"),
+  h = n("991170"),
+  g = n("923510"),
+  m = n("808422");
 (s = i || (i = {})).SPEAKER = "speaker", s.MODERATOR = "moderator";
 let p = {},
-  v = {
+  S = {
     speaker: !1,
     moderator: !1
   };
 
-function S(e, t) {
+function T(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   null == p[t] && (p[t] = {});
   let i = function(e, t) {
@@ -32,26 +32,26 @@ function S(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       a = u.default.getChannel(t),
       o = null == a ? void 0 : a.getGuildId(),
-      l = f.default.getGuild(o);
-    if (null == l || null == a || !a.isGuildStageVoice()) return v;
+      l = _.default.getGuild(o);
+    if (null == l || null == a || !a.isGuildStageVoice()) return S;
     return {
       speaker: function(e, t) {
-        let n = h.default.getVoiceStateForChannel(t, e);
-        return (0, E.getAudienceRequestToSpeakState)(n) === E.RequestToSpeakStates.ON_STAGE
+        let n = E.default.getVoiceStateForChannel(t, e);
+        return (0, m.getAudienceRequestToSpeakState)(n) === m.RequestToSpeakStates.ON_STAGE
       }(e, t),
-      moderator: r ? (n = e, i = l, s = a, g.default.can({
-        permission: m.MODERATE_STAGE_CHANNEL_PERMISSIONS,
+      moderator: r ? (n = e, i = l, s = a, h.can({
+        permission: g.MODERATE_STAGE_CHANNEL_PERMISSIONS,
         user: n,
         context: i,
         overwrites: s.permissionOverwrites,
-        roles: i.roles
+        roles: _.default.getRoles(i.id)
       })) : null
     }
   }(e, t, n);
   return p[t][e] = i, i
 }
 
-function T(e, t) {
+function v(e, t) {
   var n;
   if (null == t) return !1;
   let i = u.default.getChannel(t);
@@ -72,7 +72,7 @@ function I(e) {
   return t.length > 0
 }
 
-function C(e) {
+function A(e) {
   let {
     guildId: t,
     user: n
@@ -86,7 +86,7 @@ function C(e) {
   }(n.id, t)
 }
 
-function A(e) {
+function C(e) {
   let {
     guild: t
   } = e;
@@ -97,7 +97,7 @@ function A(e) {
 }
 class y extends o.default.Store {
   initialize() {
-    this.waitFor(c.default, u.default, f.default, _.default, h.default)
+    this.waitFor(c.default, u.default, _.default, f.default, E.default)
   }
   isSpeaker(e, t) {
     return this.getPermissionsForUser(e, t).speaker
@@ -113,10 +113,10 @@ class y extends o.default.Store {
   getPermissionsForUser(e, t) {
     var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (null == e || null == t) return v;
+    if (null == e || null == t) return S;
     let s = null === (n = p[t]) || void 0 === n ? void 0 : n[e];
-    if (null != s) return i && null == s.moderator ? S(e, t, !0) : s;
-    return S(e, t, i)
+    if (null != s) return i && null == s.moderator ? T(e, t, !0) : s;
+    return T(e, t, i)
   }
 }
 y.displayName = "StageChannelRoleStore";
@@ -130,8 +130,8 @@ var N = new y(l.default, {
   CONNECTION_OPEN: function() {
     p = {}
   },
-  GUILD_MEMBER_REMOVE: C,
-  GUILD_MEMBER_UPDATE: C,
+  GUILD_MEMBER_REMOVE: A,
+  GUILD_MEMBER_UPDATE: A,
   GUILD_ROLE_UPDATE: function(e) {
     let {
       guildId: t
@@ -141,7 +141,7 @@ var N = new y(l.default, {
   PASSIVE_UPDATE_V1: function(e) {
     var t;
     let n = I(e.guildId);
-    for (let i of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = T(i.userId, i.channelId) || n;
+    for (let i of null !== (t = e.voiceStates) && void 0 !== t ? t : []) n = v(i.userId, i.channelId) || n;
     return n
   },
   VOICE_STATE_UPDATES: function(e) {
@@ -153,9 +153,9 @@ var N = new y(l.default, {
         userId: n,
         channelId: i
       } = t;
-      return T(n, i) || e
+      return v(n, i) || e
     }, !1)
   },
-  GUILD_CREATE: A,
-  GUILD_DELETE: A
+  GUILD_CREATE: C,
+  GUILD_DELETE: C
 })

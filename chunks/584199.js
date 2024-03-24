@@ -1,64 +1,65 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
 var a = n("37983");
 n("884691");
 var l = n("679243"),
   s = n("42887"),
-  i = n("944832"),
-  r = n("929018");
+  i = n("24541");
 
-function o(e) {
+function r(e) {
   let {
     aspectRatio: t,
     blocked: n,
-    channel: o,
+    channel: r,
     className: u,
-    focused: d,
-    children: c,
-    inCall: f,
-    inPopout: h,
-    noBorder: p,
+    focused: o,
+    children: d,
+    inCall: c,
+    inPopout: f,
+    noBorder: h,
     onClick: m,
-    onContextMenu: E,
-    onDoubleClick: C,
+    onContextMenu: p,
+    onDoubleClick: E,
     onVideoResize: g,
     paused: S,
-    pulseSpeakingIndicator: _,
-    participant: I,
-    width: T,
-    ...v
-  } = e, x = s.default.getVideoComponent();
+    pulseSpeakingIndicator: C,
+    participant: _,
+    width: I,
+    ...T
+  } = e, v = s.default.getVideoComponent();
   return (0, a.jsx)("div", {
     style: {
-      width: T
+      width: I
     },
-    className: r.spaceBetweenTiles,
-    children: (0, a.jsxs)(i.default, {
-      className: r.tileSizer,
-      aspectRatio: t,
+    className: i.spaceBetweenTiles,
+    children: (0, a.jsxs)("div", {
+      className: i.tileSizer,
+      style: {
+        aspectRatio: t
+      },
       children: [(0, a.jsx)(l.default, {
         blocked: n,
-        channel: o,
+        channel: r,
         className: u,
-        focused: d,
-        inCall: f,
-        inPopout: h,
-        noBorder: p,
+        focused: o,
+        inCall: c,
+        inPopout: f,
+        noBorder: h,
         onClick: m,
-        onContextMenu: E,
-        onDoubleClick: C,
+        onContextMenu: p,
+        onDoubleClick: E,
         onVideoResize: g,
-        participant: I,
+        participant: _,
         paused: S,
-        pulseSpeakingIndicator: _,
-        videoComponent: x,
-        width: T,
-        ...v
-      }), c]
+        pulseSpeakingIndicator: C,
+        videoComponent: v,
+        width: I,
+        ...T
+      }), d]
     })
   })
 }

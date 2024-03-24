@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OnboardingPreview: function() {
-    return x
+    return P
   },
   default: function() {
     return M
@@ -16,22 +16,22 @@ var l = n("414456"),
   d = n("716241"),
   o = n("798796"),
   u = n("75061"),
-  c = n("233706"),
-  N = n("749623"),
+  N = n("233706"),
+  c = n("749623"),
   _ = n("768596"),
   I = n("305961"),
   E = n("697218"),
   f = n("593195"),
   O = n("36694"),
   S = n("991497"),
-  m = n("733160"),
-  T = n("599110"),
+  T = n("733160"),
+  m = n("599110"),
   D = n("900938"),
-  g = n("131835"),
-  A = n("259483"),
+  A = n("131835"),
+  g = n("259483"),
   G = n("49111"),
   h = n("782340"),
-  L = n("247757");
+  L = n("374025");
 let R = () => [{
     emoji: "\uD83E\uDDD9",
     emojiDescription: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,
@@ -49,7 +49,7 @@ let R = () => [{
     selected: !1
   }],
   p = () => [{
-    channelIcon: () => (0, a.jsx)(m.default, {
+    channelIcon: () => (0, a.jsx)(T.default, {
       className: L.channelIcon
     }),
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
@@ -74,7 +74,7 @@ let R = () => [{
     selected: !0
   }];
 
-function x(e) {
+function P(e) {
   let {
     isTooltip: t = !1
   } = e, n = R();
@@ -131,7 +131,7 @@ function x(e) {
   })
 }
 
-function P() {
+function x() {
   let e = [{
     message: h.default.Messages.GUILD_ONBOARDING_TESTIMONIAL_HARRY_POTTER,
     profilePic: "https://cdn.discordapp.com/avatars/302407541994946561/bb3fd59e6c2ea0a86a2bdabf5dff7856.webp?size=80",
@@ -160,7 +160,7 @@ function M() {
     n = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()),
     {
       homeSettingsEnabled: l
-    } = (0, c.useOnboardingHomeAdminExperiment)(null != e ? e : "");
+    } = (0, N.useOnboardingHomeAdminExperiment)(null != e ? e : G.EMPTY_STRING_SNOWFLAKE_ID);
   return null == e || null == t || null == n ? null : (0, a.jsxs)("div", {
     className: L.upsellContainer,
     children: [(0, a.jsxs)("div", {
@@ -185,23 +185,23 @@ function M() {
         className: L.upsellButtons,
         children: (0, a.jsx)(r.Button, {
           onClick: function() {
-            null != e && (T.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+            null != e && (m.default.track(G.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
               ...(0, d.collectGuildAnalyticsMetadata)(e),
-              step: A.GuildSettingsOnboardingPage[A.GuildSettingsOnboardingPage.LANDING],
+              step: g.GuildSettingsOnboardingPage[g.GuildSettingsOnboardingPage.LANDING],
               back: !1,
               skip: !1
-            }), (0, g.goToNextOnboardingStep)(e, A.GuildSettingsOnboardingPage.LANDING))
+            }), (0, A.goToNextOnboardingStep)(e, g.GuildSettingsOnboardingPage.LANDING))
           },
           color: r.Button.Colors.BRAND,
           disabled: !1,
           children: h.default.Messages.CHECK_IT_OUT
         })
       })]
-    }), (0, a.jsx)(r.FormDivider, {}), (0, a.jsx)(P, {}), (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)("div", {
+    }), (0, a.jsx)(r.FormDivider, {}), (0, a.jsx)(x, {}), (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)("div", {
       className: L.valuesContainer,
       children: [(0, a.jsxs)("div", {
         className: L.valueContainer,
-        children: [(0, a.jsx)(x, {}), (0, a.jsxs)("div", {
+        children: [(0, a.jsx)(P, {}), (0, a.jsxs)("div", {
           className: L.valueText,
           children: [(0, a.jsx)(r.Heading, {
             variant: "heading-md/semibold",
@@ -230,18 +230,18 @@ function M() {
               authorIds: [n.id],
               message: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_WELCOME_MESSAGE
             }
-          }), (0, a.jsx)(N.NewMemberAction, {
-            channelId: e,
+          }), (0, a.jsx)(c.NewMemberAction, {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
-            channelName: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
+            subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default
-          }), (0, a.jsx)(N.NewMemberAction, {
-            channelId: e,
+            Icon: f.default,
+            variant: "static"
+          }), (0, a.jsx)(c.NewMemberAction, {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
-            channelName: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
+            subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default
+            Icon: f.default,
+            variant: "static"
           })]
         })]
       }), (0, a.jsxs)("div", {

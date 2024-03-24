@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return B
   }
 }), n("222007"), n("702976"), n("424973"), n("860677");
 var i = n("917351"),
@@ -13,86 +13,71 @@ var i = n("917351"),
   u = n("605250"),
   d = n("447435"),
   c = n("10853"),
-  f = n("38654"),
-  _ = n("692038"),
-  h = n("61400");
+  _ = n("38654"),
+  f = n("692038"),
+  E = n("61400");
 n("574073");
-var g = n("432173"),
-  m = n("915639"),
-  E = n("568734"),
-  p = n("271938"),
-  v = n("42203"),
-  S = n("162805"),
-  T = n("923959"),
-  I = n("26989"),
+var h = n("432173"),
+  g = n("915639"),
+  m = n("568734"),
+  p = n("299039"),
+  S = n("271938"),
+  T = n("42203"),
+  v = n("162805"),
+  I = n("923959"),
+  A = n("26989"),
   C = n("305961"),
-  A = n("957255"),
-  y = n("27618"),
-  N = n("18494"),
-  R = n("162771"),
-  O = n("697218"),
-  D = n("49111");
-let P = new Set,
-  b = new u.default("MessageStore");
+  y = n("957255"),
+  N = n("27618"),
+  R = n("18494"),
+  O = n("162771"),
+  D = n("697218"),
+  P = n("49111");
+let L = new Set,
+  M = new u.default("MessageStore"),
+  b = !1;
 
-function L() {
+function U() {
   o.default.forEach(e => {
     o.default.commit(e.mutate({
       ready: !1,
       loadingMore: !1
     }))
-  }), P.clear()
+  }), L.clear()
 }
 
-function M() {
-  o.default.forEach(e => {
-    e.forAll(e => {
-      e.timestamp.locale(m.default.locale)
-    })
-  })
-}
-
-function U() {
+function w() {
   o.default.forEach(e => {
     let {
       channelId: t
     } = e;
-    null == v.default.getChannel(t) && o.default.clear(t)
+    null == T.default.getChannel(t) && o.default.clear(t)
   })
 }
 
 function k() {
   o.default.forEach(e => {
-    o.default.commit(e.reset(e.map(e => e.set("blocked", y.default.isBlocked(e.author.id)))))
+    o.default.commit(e.reset(e.map(e => e.set("blocked", N.default.isBlocked(e.author.id)))))
   })
 }
 
-function w(e) {}
+function V(e) {}
 
-function V(e) {
+function G(e) {
   let {
     type: t,
     channelId: n,
     messageId: i,
     userId: s,
     emoji: r,
-    burst: a,
-    reactionType: l
-  } = e, u = o.default.get(n);
-  if (null == u || !(0, g.shouldApplyReaction)(e)) return !1;
-  let d = p.default.getId() === s;
-  u = u.update(i, n => {
-    if ("MESSAGE_REACTION_ADD" !== t) return n.removeReaction(r, d, a, l);
-    {
-      let {
-        colors: t
-      } = e;
-      return n.addReaction(r, d, t, a, l)
-    }
-  }), o.default.commit(u)
+    reactionType: a
+  } = e, l = o.default.get(n);
+  if (null == l || !(0, h.shouldApplyReaction)(e)) return !1;
+  let u = S.default.getId() === s;
+  l = l.update(i, n => "MESSAGE_REACTION_ADD" === t ? n.addReaction(r, u, e.colors, a) : n.removeReaction(r, u, a)), o.default.commit(l)
 }
 
-function G(e) {
+function F(e) {
   let {
     type: t,
     messageData: n
@@ -102,18 +87,18 @@ function G(e) {
   if (!a.has(s)) return !1;
   a = a.update(s, e => {
     var n;
-    return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(c.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, E.addFlag)(e.flags, D.MessageFlags.EPHEMERAL))), e
+    return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(c.isNotAutomodEmbed).length) > 0 && (e = e.set("embeds", [])), "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, m.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e
   }), o.default.commit(a)
 }
-class F extends r.default.Store {
+class x extends r.default.Store {
   initialize() {
-    this.waitFor(O.default, v.default, S.default, I.default, m.default, N.default, R.default, C.default, y.default, T.default), this.syncWith([f.default], () => {})
+    this.waitFor(D.default, T.default, v.default, A.default, g.default, R.default, O.default, C.default, N.default, I.default), this.syncWith([_.default], () => {})
   }
   getMessages(e) {
-    if (f.default.hasViewingRoles()) {
-      let t = v.default.getChannel(e),
+    if (_.default.hasViewingRoles()) {
+      let t = T.default.getChannel(e),
         n = null == t ? void 0 : t.getGuildId();
-      if (f.default.isViewingRoles(n) && !A.default.can(D.Permissions.VIEW_CHANNEL, t)) return new o.default(e)
+      if (_.default.isViewingRoles(n) && !y.default.can(P.Permissions.VIEW_CHANNEL, t)) return new o.default(e)
     }
     return o.default.getOrCreate(e)
   }
@@ -121,12 +106,19 @@ class F extends r.default.Store {
     return o.default.getOrCreate(e).get(t)
   }
   getLastEditableMessage(e) {
-    let t = O.default.getCurrentUser();
-    return s(this.getMessages(e).toArray()).reverse().find(e => (0, h.default)(e, null == t ? void 0 : t.id))
+    let t = D.default.getCurrentUser();
+    return s(this.getMessages(e).toArray()).reverse().find(e => (0, E.default)(e, null == t ? void 0 : t.id))
   }
   getLastCommandMessage(e) {
-    let t = O.default.getCurrentUser();
+    let t = D.default.getCurrentUser();
     return this.getMessages(e).toArray().reverse().find(e => null != e.interaction && e.interaction.user.id === (null == t ? void 0 : t.id))
+  }
+  getLastMessage(e) {
+    return s(this.getMessages(e).toArray()).reverse().get(0)
+  }
+  getLastNonCurrentUserMessage(e) {
+    let t = D.default.getCurrentUser();
+    return s(this.getMessages(e).toArray()).reverse().find(e => e.author.id !== (null == t ? void 0 : t.id))
   }
   jumpedMessageId(e) {
     let t = o.default.get(e);
@@ -153,12 +145,15 @@ class F extends r.default.Store {
     return t.loadingMore
   }
   hasCurrentUserSentMessage(e) {
-    let t = O.default.getCurrentUser();
+    let t = D.default.getCurrentUser();
     return null != this.getMessages(e).findNewest(e => e.author.id === (null == t ? void 0 : t.id))
   }
+  hasCurrentUserSentMessageSinceAppStart() {
+    return b
+  }
 }
-F.displayName = "MessageStore";
-var x = new F(a.default, {
+x.displayName = "MessageStore";
+var B = new x(a.default, {
   BACKGROUND_SYNC_CHANNEL_MESSAGES: function(e) {
     let {
       changesByChannelId: t
@@ -168,16 +163,16 @@ var x = new F(a.default, {
       if (null == n) continue;
       let i = n.cached || true;
       if (!i) {
-        b.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
+        M.log("Skipping background message sync for ".concat(e, " cached:").concat(n.cached, " ") + "ready:".concat(n.ready, " hasMoreAfter:").concat(n.hasMoreAfter, " ") + "isConnected:".concat(!1));
         continue
       }
       n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids)
     }
   },
-  CONNECTION_OPEN: L,
-  OVERLAY_INITIALIZE: L,
+  CONNECTION_OPEN: U,
+  OVERLAY_INITIALIZE: U,
   CACHE_LOADED: function(e) {
-    for (let [t, n] of Object.entries(e.messages)) {
+    for (let [t, n] of p.default.entries(e.messages)) {
       let e = o.default.getOrCreate(t).addCachedMessages(n, !0);
       o.default.commit(e)
     }
@@ -246,7 +241,7 @@ var x = new F(a.default, {
       truncateBottom: n,
       truncateTop: i
     } = e;
-    b.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
+    M.log("Truncating messages for ".concat(t, " bottom:").concat(n, " top:").concat(i));
     let s = o.default.getOrCreate(t);
     s = s.truncate(n, i), o.default.commit(s)
   },
@@ -254,7 +249,7 @@ var x = new F(a.default, {
     let {
       channelId: t
     } = e;
-    b.log("Clearing messages for ".concat(t)), o.default.clear(t), P.clear()
+    M.log("Clearing messages for ".concat(t)), o.default.clear(t), L.clear()
   },
   MESSAGE_CREATE: function(e) {
     let {
@@ -263,11 +258,11 @@ var x = new F(a.default, {
       isPushNotification: i
     } = e, s = o.default.getOrCreate(t);
     if (i) {
-      b.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(s.receivePushNotification(n));
+      M.log("Inserting message tapped on from a push notification", n.id, n.channel_id), o.default.commit(s.receivePushNotification(n));
       return
     }
     if (!s.ready) return !1;
-    null != n.nonce && n.state !== D.MessageStates.SENDING && P.has(n.nonce) && (s = s.remove(n.nonce), P.delete(n.nonce)), s = s.receiveMessage(n, S.default.isAtBottom(t)), o.default.commit(s)
+    null != n.nonce && n.state !== P.MessageStates.SENDING && L.has(n.nonce) && (s = s.remove(n.nonce), L.delete(n.nonce)), s = s.receiveMessage(n, v.default.isAtBottom(t)), o.default.commit(s)
   },
   MESSAGE_SEND_FAILED: function(e) {
     let {
@@ -277,16 +272,16 @@ var x = new F(a.default, {
     } = e, s = o.default.getOrCreate(t);
     if (null == s || !s.has(n)) return !1;
     let r = s.get(n, !0);
-    s = (null == r ? void 0 : r.isPoll()) === !0 ? s.remove(n) : s.update(n, e => ((e = e.set("state", D.MessageStates.SEND_FAILED)).isCommandType() && (e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, E.addFlag)(e.flags, D.MessageFlags.EPHEMERAL))), e)), o.default.commit(s)
+    s = (null == r ? void 0 : r.isPoll()) === !0 ? s.remove(n) : s.update(n, e => ((e = e.set("state", P.MessageStates.SEND_FAILED)).isCommandType() && (e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, m.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e)), o.default.commit(s)
   },
-  MESSAGE_SEND_FAILED_AUTOMOD: G,
-  MESSAGE_EDIT_FAILED_AUTOMOD: G,
+  MESSAGE_SEND_FAILED_AUTOMOD: F,
+  MESSAGE_EDIT_FAILED_AUTOMOD: F,
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id,
       n = e.message.channel_id,
       i = o.default.getOrCreate(n);
     if (null == i || !i.has(t)) return !1;
-    i = i.update(t, t => (0, _.updateMessageRecord)(t, e.message)), o.default.commit(i)
+    i = i.update(t, t => (0, f.updateMessageRecord)(t, e.message)), o.default.commit(i)
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
@@ -310,7 +305,7 @@ var x = new F(a.default, {
         revealedMessageId: null
       })
     }
-    i = i.remove(t), o.default.commit(i), P.delete(t)
+    i = i.remove(t), o.default.commit(i), L.delete(t)
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
@@ -329,7 +324,7 @@ var x = new F(a.default, {
       })
     }
     o.default.commit(r), t.forEach(e => {
-      P.delete(e)
+      L.delete(e)
     })
   },
   MESSAGE_REVEAL: function(e) {
@@ -341,8 +336,6 @@ var x = new F(a.default, {
       revealedMessageId: n
     }))
   },
-  USER_SETTINGS_PROTO_UPDATE: M,
-  I18N_LOAD_SUCCESS: M,
   THREAD_CREATE_LOCAL: function(e) {
     let {
       channelId: t
@@ -353,14 +346,14 @@ var x = new F(a.default, {
       hasMoreBefore: !1
     }), o.default.commit(n)
   },
-  CHANNEL_DELETE: U,
-  THREAD_DELETE: U,
-  GUILD_DELETE: U,
+  CHANNEL_DELETE: w,
+  THREAD_DELETE: w,
+  GUILD_DELETE: w,
   RELATIONSHIP_ADD: k,
   RELATIONSHIP_REMOVE: k,
-  GUILD_MEMBERS_CHUNK: w,
-  THREAD_MEMBER_LIST_UPDATE: w,
-  MESSAGE_REACTION_ADD: V,
+  GUILD_MEMBERS_CHUNK: V,
+  THREAD_MEMBER_LIST_UPDATE: V,
+  MESSAGE_REACTION_ADD: G,
   MESSAGE_REACTION_ADD_MANY: function(e) {
     let {
       channelId: t,
@@ -370,10 +363,10 @@ var x = new F(a.default, {
     if (null == s) return !1;
     s = s.update(n, e => {
       var t;
-      return e.addReactionBatch(i, null === (t = O.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
+      return e.addReactionBatch(i, null === (t = D.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)
     }), o.default.commit(s)
   },
-  MESSAGE_REACTION_REMOVE: V,
+  MESSAGE_REACTION_REMOVE: G,
   MESSAGE_REACTION_REMOVE_ALL: function(e) {
     let {
       channelId: t,
@@ -394,24 +387,30 @@ var x = new F(a.default, {
   LOGOUT: function() {
     o.default.forEach(e => {
       o.default.clear(e.channelId)
-    }), P.clear()
+    }), L.clear()
   },
   UPLOAD_START: function(e) {
     let {
       message: t
     } = e;
-    null != t.nonce && P.add(t.nonce)
+    null != t.nonce && L.add(t.nonce)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       messageRecord: n
     } = e, i = null == n ? void 0 : n.nonce;
-    if (null != i && P.has(i)) {
+    if (null != i && L.has(i)) {
       let e = o.default.getOrCreate(t),
         n = e.get(i);
       if (null == n) return;
-      e = (e = e.remove(i)).merge([n]), P.delete(i), o.default.commit(e)
+      e = (e = e.remove(i)).merge([n]), L.delete(i), o.default.commit(e)
     }
+  },
+  LOCAL_MESSAGE_CREATE: function(e) {
+    let {
+      message: t
+    } = e, n = D.default.getCurrentUser();
+    null != t && null != t.author && null != n && t.author.id === n.id && (b = !0)
   }
 })

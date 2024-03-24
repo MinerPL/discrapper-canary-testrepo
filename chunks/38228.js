@@ -12,29 +12,30 @@ var s = t("37983"),
   d = t("476765"),
   r = t("418298"),
   u = t("356581"),
-  m = t("186859"),
+  m = t("491096"),
   c = t("782340"),
-  h = t("353096");
+  h = t("308607");
 let L = (0, d.uid)();
 
 function C(e) {
+  var a;
   let {
-    channelId: a,
-    answer: t,
-    index: o,
-    onAnswerTextChange: d,
+    channelId: t,
+    answer: o,
+    onSave: d,
     transitionState: C,
     onClose: E
   } = e, {
     emoji: x,
     hasUpload: M,
-    mediaUrl: j,
-    mediaFilename: T
+    upload: j,
+    mediaUrl: T,
+    mediaFilename: g
   } = (0, u.default)({
-    channelId: a,
-    localCreationAnswerId: t.localCreationAnswerId,
-    image: t.image
-  }), [g, A] = i.useState(t.text);
+    channelId: t,
+    localCreationAnswerId: o.localCreationAnswerId,
+    image: o.image
+  }), [A, I] = i.useState(null !== (a = null == j ? void 0 : j.description) && void 0 !== a ? a : "");
   return (0, s.jsxs)(n.ModalRoot, {
     size: n.ModalSize.DYNAMIC,
     className: l(h.modal, {
@@ -45,8 +46,8 @@ function C(e) {
     "aria-label": c.default.Messages.CREATE_POLL_EDIT_IMAGE_DESCRIPTION,
     children: [(0, s.jsx)(r.PollCreationMediaPreview, {
       hasUpload: M,
-      mediaUrl: j,
-      mediaFilename: T,
+      mediaUrl: T,
+      mediaFilename: g,
       imageClassName: h.imagePreview,
       emoji: x,
       emojiClassName: h.emojiPreview
@@ -58,9 +59,9 @@ function C(e) {
         children: c.default.Messages.CREATE_POLL_ALT_TEXT_LABEL
       }), (0, s.jsx)(n.TextInput, {
         id: L,
-        value: g,
+        value: A,
         inputClassName: h.input,
-        onChange: A,
+        onChange: I,
         maxLength: m.MAX_POLL_ANSWER_LENGTH,
         autoFocus: !0
       })]
@@ -70,7 +71,7 @@ function C(e) {
         look: n.ButtonLooks.FILLED,
         size: n.Button.Sizes.MEDIUM,
         onClick: () => {
-          null != g && d(g, o), E()
+          null != A && d(A), E()
         },
         children: (0, s.jsx)(n.Text, {
           variant: "text-md/semibold",

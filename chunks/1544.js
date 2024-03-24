@@ -20,7 +20,7 @@ function s(e) {
     if (null != t)
       for (let e in t) {
         let n = t[e];
-        n.allow = i.default.deserialize(n.allow), n.deny = i.default.deserialize(n.deny)
+        n.allow = i.deserialize(n.allow), n.deny = i.deserialize(n.deny)
       }
 }
 
@@ -35,7 +35,7 @@ function a(e) {
   if (null != t)
     for (let e in t) {
       let n = t[e];
-      n.allow = i.default.deserialize(n.allow), n.deny = i.default.deserialize(n.deny)
+      n.allow = i.deserialize(n.allow), n.deny = i.deserialize(n.deny)
     }
   return e
 }

@@ -14,8 +14,8 @@ var n = l("37983"),
   u = l("822997"),
   c = l("350625"),
   f = l("468759"),
-  m = l("752736"),
-  I = l("926622");
+  m = l("176060"),
+  I = l("890957");
 class T extends a.PureComponent {
   getOverwriteValue(e) {
     let {
@@ -23,10 +23,10 @@ class T extends a.PureComponent {
       deny: l
     } = this.props;
     if (null == t || null == l) throw Error("PermissionsForm.getOverwriteValue: Invalid allow or deny props");
-    return r.default.has(t, e) ? u.PermissionOverrideType.ALLOW : r.default.has(l, e) ? u.PermissionOverrideType.DENY : u.PermissionOverrideType.PASSTHROUGH
+    return r.has(t, e) ? u.PermissionOverrideType.ALLOW : r.has(l, e) ? u.PermissionOverrideType.DENY : u.PermissionOverrideType.PASSTHROUGH
   }
   getPermissionValue(e, t) {
-    return r.default.has(t, e)
+    return r.has(t, e)
   }
   handleChange(e, t) {
     let {

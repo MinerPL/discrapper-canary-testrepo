@@ -10,12 +10,10 @@ var r = n("497880");
 
 function l(e, t) {
   let {
-    message: n,
-    asPartialPreview: l
+    message: n
   } = e;
   return (0, i.jsx)(r.default, {
     message: n,
-    asPartialPreview: l,
     content: t
   })
 }

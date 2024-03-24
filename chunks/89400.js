@@ -1,4 +1,4 @@
-var s = {
+var i = {
   "./activities-rocket-time.mp3": "329160",
   "./activity_end.mp3": "376343",
   "./activity_launch.mp3": "865814",
@@ -66,20 +66,21 @@ var s = {
   "./unmute.mp3": "216636",
   "./user_join.mp3": "170438",
   "./user_leave.mp3": "911578",
-  "./user_moved.mp3": "455307"
+  "./user_moved.mp3": "455307",
+  "./vibing_wumpus.mp3": "653225"
 };
 
-function u(e) {
-  return n(o(e))
+function s(e) {
+  return n(r(e))
 }
 
-function o(e) {
-  if (!n.o(s, e)) {
+function r(e) {
+  if (!n.o(i, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
-  return s[e]
+  return i[e]
 }
-u.id = '"89400"', u.keys = function() {
-  return Object.keys(s)
-}, u.resolve = o, e.exports = u
+s.id = '"89400"', s.keys = function() {
+  return Object.keys(i)
+}, s.resolve = r, e.exports = s

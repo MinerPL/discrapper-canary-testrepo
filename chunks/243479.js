@@ -68,20 +68,11 @@ class r {
   upgradeTransaction(e) {
     return new a(this.table.upgradeTransaction(e))
   }
-  getSyncUnsafe(e, t) {
-    return this.table.getSyncUnsafe([e, t])
-  }
   getManySyncUnsafe(e, t) {
     return this.table.getManySyncUnsafe([e], t)
   }
   getMapEntriesSyncUnsafe() {
     return this.table.getMapEntriesSyncUnsafe()
-  }
-  getIdsSyncUnsafe(e) {
-    return this.table.getChildIdsSyncUnsafe([e])
-  }
-  getGuildIdsSyncUnsafe() {
-    return this.table.getChildIdsSyncUnsafe([])
   }
   constructor(e, t, n, i = !0) {
     this.originalPrefix = e, this.table = new s.Table([e], t, n, i)

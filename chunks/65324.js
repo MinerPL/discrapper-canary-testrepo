@@ -1,51 +1,51 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
-}), l("222007"), l("70102");
-var i = l("37983"),
-  s = l("884691"),
-  n = l("446674"),
-  a = l("206230"),
-  r = l("491605"),
-  u = l("210721"),
-  d = l("78345");
+}), n("222007"), n("70102");
+var s = n("37983"),
+  a = n("884691"),
+  l = n("446674"),
+  i = n("206230"),
+  r = n("491605"),
+  u = n("642716"),
+  o = n("646718");
 
-function o(e) {
+function d(e) {
   let {
     giftStyle: t,
-    className: l,
-    shouldAnimate: o = !0,
+    className: n,
+    shouldAnimate: d = !0,
     defaultAnimationState: c,
-    idleAnimationState: E
-  } = e, _ = (0, n.useStateFromStores)([a.default], () => a.default.useReducedMotion), [f, S] = s.useState(c), C = s.useRef((0, u.getGiftAnimationData)(t, f)), [h, p] = s.useState(null == E), [m, I] = s.useState(!1), [g, T] = s.useState(-1), v = () => {
-    C.current = (0, u.getGiftAnimationData)(t, f), T(e => e + 1)
-  }, O = () => {
-    p(!1), I(!0), T(-1), S(c)
+    idleAnimationState: f
+  } = e, E = (0, l.useStateFromStores)([i.default], () => i.default.useReducedMotion), [_, I] = a.useState(c), h = a.useRef((0, u.getGiftAnimationData)(t, _)), [p, T] = a.useState(null == f), [m, N] = a.useState(!1), [g, A] = a.useState(-1), S = () => {
+    h.current = (0, u.getGiftAnimationData)(t, _), A(e => e + 1)
+  }, C = () => {
+    T(!1), N(!0), A(-1), I(c)
   };
-  s.useEffect(() => {
-    null == E && S(c)
-  }, [E, c]), s.useEffect(() => {
-    if (null != E && g >= 0) {
-      O();
+  a.useEffect(() => {
+    null == f && I(c)
+  }, [f, c]), a.useEffect(() => {
+    if (null != f && g >= 0) {
+      C();
       return
     }
-    v()
-  }, [t, E]), s.useEffect(() => {
-    (!m || null == E) && v()
-  }, [f]), s.useEffect(() => {
-    m && (p(null == E), I(!1), v())
+    S()
+  }, [t, f]), a.useEffect(() => {
+    (!m || null == f) && S()
+  }, [_]), a.useEffect(() => {
+    m && (T(null == f), N(!1), S())
   }, [m]);
-  if (!d.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
-  return (0, i.jsx)(r.default, {
-    importData: C.current,
-    shouldAnimate: !_ && o,
-    className: l,
+  if (!o.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
+  return (0, s.jsx)(r.default, {
+    importData: h.current,
+    shouldAnimate: !E && d,
+    className: n,
     versionKey: g,
-    onComplete: null != E ? () => {
-      null != E && (S(E), p(!0))
+    onComplete: null != f ? () => {
+      null != f && (I(f), T(!0))
     } : void 0,
-    loop: h
+    loop: p
   })
 }

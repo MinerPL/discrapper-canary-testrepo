@@ -1,20 +1,36 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   getApplicationInstallURL: function() {
-    return s
+    return a
   }
-}), l("222007");
-var n = l("872717"),
-  a = l("49111");
+}), n("222007");
+var i = n("389153"),
+  l = n("49111");
 
-function s(e) {
-  var t, l;
-  if (null != e.custom_install_url) return e.custom_install_url;
-  let s = {};
-  s.client_id = e.id, (null === (t = e.install_params) || void 0 === t ? void 0 : t.permissions) != null && (s.permissions = e.install_params.permissions), (null === (l = e.install_params) || void 0 === l ? void 0 : l.scopes) != null && (s.scope = e.install_params.scopes.join(" "));
-  let i = Object.entries(s).map(e => {
-    let [t, l] = e;
-    return "".concat(t, "=").concat(encodeURIComponent(l))
+function a(e) {
+  let {
+    id: t,
+    customInstallUrl: n,
+    installParams: a,
+    integrationTypesConfig: s
+  } = e;
+  if (null != n) return n;
+  let r = {};
+  r.client_id = t;
+  let o = (0, i.isUserInUserAppExperiment)({
+      location: "getApplicationInstallURL"
+    }),
+    u = o && null != s && Object.values(s).some(e => (null == e ? void 0 : e.oauth2_install_params) != null);
+  if (null != a && !u) {
+    let {
+      permissions: e,
+      scopes: t
+    } = a;
+    null != e && (r.permissions = e), null != t && (r.scope = t.join(" "))
+  }
+  let d = Object.entries(r).map(e => {
+    let [t, n] = e;
+    return "".concat(t, "=").concat(encodeURIComponent(n))
   }).join("&");
-  return "".concat(n.default.getAPIBaseURL(!1)).concat(a.Endpoints.OAUTH2_AUTHORIZE, "?").concat(i)
+  return "".concat(location.protocol, "//").concat(location.host).concat(l.Routes.OAUTH2_AUTHORIZE, "?").concat(d)
 }

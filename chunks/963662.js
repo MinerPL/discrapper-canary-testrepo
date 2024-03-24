@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("77078"),
   o = n("716241"),
   u = n("945330"),
@@ -15,24 +15,24 @@ var a = n("37983"),
   c = n("478761"),
   f = n("164586"),
   E = n("49111"),
-  _ = n("782340"),
-  h = n("866241");
-let C = l.debounce(o.default.trackWithMetadata, 500),
-  I = e => {
+  h = n("782340"),
+  _ = n("64187");
+let C = i.debounce(o.default.trackWithMetadata, 500),
+  S = e => {
     let {
       guild: t,
       title: n,
-      message: i,
-      image: l,
+      message: l,
+      image: i,
       type: c,
       imageMarginX: f,
-      imageMarginTop: I,
-      trackingSource: T,
-      undismissable: S,
-      onDismissed: m,
-      onClick: p,
-      cta: A,
-      ctaColor: g
+      imageMarginTop: S,
+      trackingSource: I,
+      undismissable: m,
+      onDismissed: p,
+      onClick: T,
+      cta: g,
+      ctaColor: A
     } = e;
     s.useEffect(() => {
       C(E.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
@@ -41,66 +41,66 @@ let C = l.debounce(o.default.trackWithMetadata, 500),
       })
     }, [t.id, c]);
     let N = null;
-    "function" == typeof A ? N = A() : null != A && (N = (0, a.jsx)(r.Button, {
-      className: h.btn,
+    "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
+      className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: T,
+          source: I,
           guild_id: t.id,
           notice_type: c
-        }), null == p || p()
+        }), null == T || T()
       },
       fullWidth: !0,
-      color: g,
-      children: A
+      color: A,
+      children: g
     }));
     let R = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
-      className: h.channelNotice,
-      children: [!0 === S ? null : (0, a.jsx)(r.Clickable, {
+      className: _.channelNotice,
+      children: [!0 === m ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == m || m()
+          }), null == p || p()
         },
-        className: h.close,
-        "aria-label": _.default.Messages.DISMISS,
+        className: _.close,
+        "aria-label": h.default.Messages.DISMISS,
         children: (0, a.jsx)(u.default, {
-          className: h.closeIcon
+          className: _.closeIcon
         })
       }), (0, a.jsx)("div", {
-        className: h.imageContainer,
+        className: _.imageContainer,
         style: {
-          marginTop: "".concat(I, "px"),
+          marginTop: "".concat(S, "px"),
           marginLeft: R,
           marginRight: R
         },
         children: (0, a.jsx)("img", {
-          className: h.image,
-          src: l,
+          className: _.image,
+          src: i,
           alt: ""
         })
       }), (0, a.jsxs)("div", {
-        className: h.message,
+        className: _.message,
         children: [null != n ? (0, a.jsx)(r.Heading, {
           variant: "heading-md/semibold",
-          className: h.title,
+          className: _.title,
           children: n
         }) : null, (0, a.jsx)(r.Text, {
           variant: "text-sm/normal",
-          children: i
+          children: l
         }), N]
       })]
     })
   };
-var T = function(e) {
+var I = function(e) {
   let {
     showRedesignedChannelNotice: t
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);
   return t ? (0, a.jsx)(f.default, {
     ...e
-  }) : (0, a.jsx)(I, {
+  }) : (0, a.jsx)(S, {
     ...e
   })
 }

@@ -28,7 +28,7 @@ n.r(t), n.d(t, {
     return L
   },
   checkAllDismissedContents: function() {
-    return D
+    return y
   }
 }), n("70102"), n("222007"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
 var i = n("627445"),
@@ -45,8 +45,8 @@ var i = n("627445"),
   E = n("374363"),
   S = n("116949"),
   g = n("397336"),
-  h = n("49111");
-let m = "UserSettingsProtoLastWriteTimes",
+  m = n("49111");
+let h = "UserSettingsProtoLastWriteTimes",
   p = Date.now();
 c.default.subscribe("CONNECTION_OPEN", () => {
   Date.now()
@@ -122,8 +122,8 @@ class I {
   }
   saveLastSendTime() {
     var e;
-    let t = null !== (e = u.default.get(m)) && void 0 !== e ? e : {};
-    t[this.type] = Date.now(), u.default.set(m, t)
+    let t = null !== (e = u.default.get(h)) && void 0 !== e ? e : {};
+    t[this.type] = Date.now(), u.default.set(h, t)
   }
   async loadIfNecessary(e) {
     if (__OVERLAY__) {
@@ -145,8 +145,8 @@ class I {
           body: {
             settings: t
           }
-        } = await s.default.get({
-          url: h.Endpoints.USER_SETTINGS_PROTO(this.type)
+        } = await s.HTTP.get({
+          url: m.Endpoints.USER_SETTINGS_PROTO(this.type)
         }), n = (0, S.b64ToProto)(this.ProtoClass, t);
         if (null == n) {
           this.dispatchChanges({
@@ -236,8 +236,8 @@ class I {
         this.saveLastSendTime();
         let {
           body: n
-        } = await s.default.patch({
-          url: h.Endpoints.USER_SETTINGS_PROTO(this.type),
+        } = await s.HTTP.patch({
+          url: m.Endpoints.USER_SETTINGS_PROTO(this.type),
           body: {
             settings: t,
             required_data_version: e.offlineEditDataVersion
@@ -265,7 +265,7 @@ class I {
             rateLimited: !0,
             timeout: t
           })
-        } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === h.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
+        } else if (400 === e.status && (null === (n = e.body) || void 0 === n ? void 0 : n.code) === m.AbortCodes.INVALID_USER_SETTINGS_DATA) throw this.logger.log("Reloading do to invalid data"), this.loadIfNecessary(!0), e;
         else throw this.logger.log("Unknown user settings error"), e
       }
     }, this.logger = new o.default(this.ProtoClass.typeName)
@@ -306,7 +306,7 @@ function L() {
   }, g.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function D() {
+function y() {
   return T.updateAsync("userContent", e => {
     let t = new Uint8Array;
     for (let e of Object.keys(a.DismissibleContent)) t = (0, _.addBit)(t, a.DismissibleContent[e]);

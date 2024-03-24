@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var i = n("917351"),
-  l = n.n(i),
-  a = n("446674"),
-  s = n("913144"),
-  r = n("560208"),
-  u = n("233069"),
-  d = n("42203");
-let o = {};
+  s = n.n(i),
+  r = n("446674"),
+  a = n("913144"),
+  o = n("560208"),
+  l = n("233069"),
+  u = n("42203");
+let d = {};
 
 function c(e) {
   var t;
@@ -19,18 +19,18 @@ function c(e) {
 }
 
 function _(e) {
-  if (!u.ALL_CHANNEL_TYPES.has(e.type)) return !1;
+  if (!l.ALL_CHANNEL_TYPES.has(e.type)) return !1;
   let t = function(e) {
-    if (!(e.id in o)) {
+    if (!(e.id in d)) {
       var t, n;
-      o[e.id] = {
+      d[e.id] = {
         guildId: e.guild_id,
         parentId: e.parent_id,
         memberCount: null !== (t = e.memberCount) && void 0 !== t ? t : 0,
         memberIdsPreview: null !== (n = e.memberIdsPreview) && void 0 !== n ? n : []
       }
     }
-    return o[e.id]
+    return d[e.id]
   }(e);
   null != e.memberCount && (t.memberCount = e.memberCount), null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview)
 }
@@ -42,46 +42,55 @@ function f(e) {
   return _(t)
 }
 
-function h(e) {
+function E(e) {
   let {
     threads: t
   } = e;
-  t.forEach(E)
+  t.forEach(g)
 }
 
-function E(e) {
-  if (null != e && !(e.id in o)) {
-    let t = d.default.getChannel(e.id);
+function h(e) {
+  let t = !1;
+  for (let n of e.messages)
+    for (let e of n) t = g(e.thread) || t;
+  return e.threads.forEach(e => {
+    t = g(e) || t
+  }), t
+}
+
+function g(e) {
+  if (null != e && !(e.id in d)) {
+    let t = u.default.getChannel(e.id);
     if (null != t) return _(t), !0
   }
   return !1
 }
-class g extends a.default.Store {
+class m extends r.default.Store {
   initialize() {
-    this.waitFor(d.default)
+    this.waitFor(u.default)
   }
   getMemberCount(e) {
     var t, n;
-    return null !== (n = null === (t = o[e]) || void 0 === t ? void 0 : t.memberCount) && void 0 !== n ? n : null
+    return null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.memberCount) && void 0 !== n ? n : null
   }
   getMemberIdsPreview(e) {
     var t, n;
-    return null !== (n = null === (t = o[e]) || void 0 === t ? void 0 : t.memberIdsPreview) && void 0 !== n ? n : null
+    return null !== (n = null === (t = d[e]) || void 0 === t ? void 0 : t.memberIdsPreview) && void 0 !== n ? n : null
   }
   getInitialOverlayState() {
-    return o
+    return d
   }
 }
-g.displayName = "ThreadMembersStore";
-var m = new g(s.default, {
+m.displayName = "ThreadMembersStore";
+var p = new m(a.default, {
   CONNECTION_OPEN: function(e) {
-    o = {}, e.guilds.forEach(c)
+    d = {}, e.guilds.forEach(c)
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       threadMembers: t
     } = e;
-    o = {
+    d = {
       ...t
     }
   },
@@ -96,14 +105,14 @@ var m = new g(s.default, {
     let {
       guild: n
     } = e;
-    t = n.id, o = l.omitBy(o, e => e.guildId === t)
+    t = n.id, d = s.omitBy(d, e => e.guildId === t)
   },
   CHANNEL_DELETE: function(e) {
     var t;
     let {
       channel: n
     } = e;
-    t = n.id, o = l.omitBy(o, e => e.parentId === t)
+    t = n.id, d = s.omitBy(d, e => e.parentId === t)
   },
   THREAD_CREATE: f,
   THREAD_UPDATE: f,
@@ -114,36 +123,30 @@ var m = new g(s.default, {
     t.forEach(_)
   },
   THREAD_MEMBERS_UPDATE: function(e) {
-    let t = o[e.id];
+    let t = d[e.id];
     if (null == t) return !1;
     null != e.memberIdsPreview && (t.memberIdsPreview = e.memberIdsPreview), t.memberCount = e.memberCount
   },
-  SEARCH_FINISH: function(e) {
-    let t = !1;
-    for (let n of e.messages)
-      for (let e of n) t = E(e.thread) || t;
-    return e.threads.forEach(e => {
-      t = E(e) || t
-    }), t
-  },
-  LOAD_THREADS_SUCCESS: h,
-  LOAD_ARCHIVED_THREADS_SUCCESS: h,
+  SEARCH_FINISH: h,
+  MOD_VIEW_SEARCH_FINISH: h,
+  LOAD_THREADS_SUCCESS: E,
+  LOAD_ARCHIVED_THREADS_SUCCESS: E,
   THREAD_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    delete o[t.id]
+    delete d[t.id]
   },
   LOAD_MESSAGES_SUCCESS: function(e) {
     let t = !1;
-    for (let n of e.messages) t = E(n.thread) || t;
+    for (let n of e.messages) t = g(n.thread) || t;
     return t
   },
   GUILD_FEED_FETCH_SUCCESS: function(e) {
     let {
       data: t
     } = e, n = !1;
-    for (let e of (0, r.getThreadsFromGuildFeedFetch)(t)) n = E(e) || n;
+    for (let e of (0, o.getThreadsFromGuildFeedFetch)(t)) n = g(e) || n;
     return n
   }
 })

@@ -1,2 +1,2 @@
-var e = n("761197")(Object.getPrototypeOf, Object);
-t.exports = e
+var n = r("761197")(Object.getPrototypeOf, Object);
+e.exports = n

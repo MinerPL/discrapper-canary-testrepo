@@ -24,44 +24,43 @@ var l = a("37983"),
   I = a("315102"),
   _ = a("568734"),
   x = a("347895"),
-  v = a("698882"),
-  S = a("675305"),
+  S = a("698882"),
+  v = a("675305"),
   C = a("205454"),
   N = a("49111"),
   p = a("657944"),
   T = a("782340"),
-  A = a("280337");
+  A = a("918648");
 
 function j(e) {
   let {
-    channelId: t,
-    title: a,
-    channelName: n,
-    emojiId: s,
-    emojiName: d,
-    icon: r,
-    completed: u,
-    Icon: o
-  } = e, c = I.default.getNewMemberActionIconURL({
-    channelId: t,
-    icon: r
-  });
+    title: t,
+    emojiId: a,
+    emojiName: n,
+    icon: s,
+    completed: d,
+    Icon: r,
+    ...u
+  } = e, o = "channel" === u.variant ? u.channelId : null, c = "static" === u.variant ? u.subtitle : u.channelName, f = null != o ? I.default.getNewMemberActionIconURL({
+    channelId: o,
+    icon: s
+  }) : null;
   return (0, l.jsxs)("div", {
     className: A.action,
-    children: [null != c ? (0, l.jsx)("img", {
-      src: c,
+    children: [null != f ? (0, l.jsx)("img", {
+      src: f,
       className: A.icon,
       width: 32,
       height: 32,
       alt: "",
       "aria-hidden": !0
     }) : (0, l.jsx)(C.default, {
-      emojiId: s,
-      emojiName: d,
+      emojiId: a,
+      emojiName: n,
       size: C.CTAEmojiSize.LARGE,
       defaultComponent: (0, l.jsx)("div", {
         className: A.channelIconContainer,
-        children: (0, l.jsx)(o, {
+        children: (0, l.jsx)(r, {
           className: A.channelIcon
         })
       })
@@ -70,13 +69,13 @@ function j(e) {
       children: [(0, l.jsx)(i.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
-        children: a
-      }), null != n ? (0, l.jsx)(i.Text, {
+        children: t
+      }), null != c ? (0, l.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
-        children: n
+        children: c
       }) : null]
-    }), u ? (0, l.jsx)(h.default, {
+    }), d ? (0, l.jsx)(h.default, {
       backgroundColor: "#fff",
       className: A.checkCircleCompleted,
       width: 24,
@@ -102,19 +101,20 @@ function M(e) {
   } = a, {
     id: I,
     name: _
-  } = null != E ? E : {}, v = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(c)), S = (0, d.default)(v, !0), C = (0, s.useStateFromStores)([f.default], () => f.default.can(N.Permissions.VIEW_CHANNEL, v)), p = n.useCallback(() => {
-    if (null == v) return null;
-    (0, x.selectNewMemberActionChannel)(v.guild_id, v.id)
-  }, [v]);
-  if (null == v || !C) return null;
-  let T = null !== (t = (0, r.getChannelIconComponent)(v)) && void 0 !== t ? t : m.default;
+  } = null != E ? E : {}, S = (0, s.useStateFromStores)([u.default], () => u.default.getChannel(c)), v = (0, d.default)(S, !0), C = (0, s.useStateFromStores)([f.default], () => f.default.can(N.Permissions.VIEW_CHANNEL, S)), p = n.useCallback(() => {
+    if (null == S) return null;
+    (0, x.selectNewMemberActionChannel)(S.guild_id, S.id)
+  }, [S]);
+  if (null == S || !C) return null;
+  let T = null !== (t = (0, r.getChannelIconComponent)(S)) && void 0 !== t ? t : m.default;
   return (0, l.jsx)(i.Clickable, {
     className: A.clickableAction,
     onClick: p,
     children: (0, l.jsx)(j, {
+      variant: "channel",
       channelId: c,
       title: h,
-      channelName: S,
+      channelName: v,
       emojiId: I,
       emojiName: _,
       icon: g,
@@ -127,7 +127,7 @@ function M(e) {
 function D(e) {
   let {
     guildId: t
-  } = e, a = (0, s.useStateFromStores)([v.default], () => v.default.getNewMemberActions(t), [t]), d = (0, s.useStateFromStores)([S.default], () => S.default.getCompletedActions(t)), r = (0, s.useStateFromStores)([o.default], () => o.default.getSelfMember(t)), u = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
+  } = e, a = (0, s.useStateFromStores)([S.default], () => S.default.getNewMemberActions(t), [t]), d = (0, s.useStateFromStores)([v.default], () => v.default.getCompletedActions(t)), r = (0, s.useStateFromStores)([o.default], () => o.default.getSelfMember(t)), u = (0, s.useStateFromStores)([c.default], () => c.default.getGuild(t));
   n.useEffect(() => {
     var e;
     null == d && (null == r ? void 0 : r.flags) != null && (0, _.hasFlag)(null !== (e = r.flags) && void 0 !== e ? e : 0, p.GuildMemberFlags.STARTED_HOME_ACTIONS) && (0, x.fetchNewMemberActions)(t)

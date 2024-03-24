@@ -1,36 +1,36 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = s("37983"),
   n = s("884691"),
   i = s("414456"),
-  r = s.n(i),
-  l = s("77078"),
+  l = s.n(i),
+  r = s("77078"),
   u = s("980428"),
   o = s("772280"),
   d = s("782340"),
-  c = s("911545"),
-  f = n.forwardRef(function(e, t) {
+  c = s("45604"),
+  E = n.forwardRef(function(e, t) {
     let {
       currentPageIndex: s,
       numPages: n,
       onChangePage: i,
-      children: f,
-      className: E,
-      showPageCount: p = !0,
-      ...I
-    } = e, m = s <= 0, _ = s >= n - 1;
+      children: E,
+      className: f,
+      showPageCount: _ = !0,
+      ...p
+    } = e, m = s <= 0, I = s >= n - 1;
     return (0, a.jsxs)("div", {
-      className: r(c.paginator, E),
+      className: l(c.paginator, f),
       ref: t,
-      ...I,
-      children: [f, (0, a.jsxs)("div", {
+      ...p,
+      children: [E, (0, a.jsxs)("div", {
         className: c.pageActions,
-        children: [(0, a.jsx)(l.Clickable, {
-          className: r(c.pageButtonPrev, {
+        children: [(0, a.jsx)(r.Clickable, {
+          className: l(c.pageButtonPrev, {
             [c.disabled]: m
           }),
           tabIndex: m ? -1 : 0,
@@ -39,7 +39,7 @@ var a = s("37983"),
             className: c.pageButtonIcon,
             "aria-label": d.default.Messages.PAGINATION_PREVIOUS
           })
-        }), p ? (0, a.jsx)("div", {
+        }), _ ? (0, a.jsx)("div", {
           className: c.pageIndicator,
           children: d.default.Messages.PAGINATOR_OF_PAGES.format({
             currentPage: s + 1,
@@ -50,12 +50,12 @@ var a = s("37983"),
           children: d.default.Messages.PAGINATOR_CURRENT_PAGE.format({
             currentPage: s + 1
           })
-        }), (0, a.jsx)(l.Clickable, {
-          className: r(c.pageButtonNext, {
-            [c.disabled]: _
+        }), (0, a.jsx)(r.Clickable, {
+          className: l(c.pageButtonNext, {
+            [c.disabled]: I
           }),
-          tabIndex: _ ? -1 : 0,
-          onClick: _ ? void 0 : () => i(s + 1),
+          tabIndex: I ? -1 : 0,
+          onClick: I ? void 0 : () => i(s + 1),
           children: (0, a.jsx)(o.default, {
             className: c.pageButtonIcon,
             "aria-label": d.default.Messages.PAGINATION_NEXT

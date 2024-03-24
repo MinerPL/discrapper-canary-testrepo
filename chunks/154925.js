@@ -13,7 +13,7 @@ a.r(t), a.d(t, {
     return x
   },
   ActiveNowFiller: function() {
-    return v
+    return S
   }
 });
 var l = a("37983"),
@@ -27,7 +27,7 @@ var l = a("37983"),
   c = a("811305"),
   f = a("515631"),
   m = a("782340"),
-  h = a("62082"),
+  h = a("762382"),
   E = a("470932");
 let g = 3,
   I = 16,
@@ -89,7 +89,7 @@ let g = 3,
       usersInSummary: m,
       onChannelClick: E,
       channelIconOptions: x
-    } = e, v = (0, u.default)(f.COLLAPSED_SIZE_MEDIA_QUERY), S = (0, o.getChannelIconComponent)(s, null, x);
+    } = e, S = (0, u.default)(f.COLLAPSED_SIZE_MEDIA_QUERY), v = (0, o.getChannelIconComponent)(s, null, x);
     return (0, l.jsx)(_, {
       ref: t,
       textNode: null != i ? (0, l.jsx)(r.Text, {
@@ -101,12 +101,12 @@ let g = 3,
       accessoryNode: (0, l.jsx)(c.default, {
         guildId: n,
         users: m,
-        size: v ? c.Sizes.SIZE_24 : c.Sizes.SIZE_16,
-        max: v ? 5 : g,
+        size: S ? c.Sizes.SIZE_24 : c.Sizes.SIZE_16,
+        max: S ? 5 : g,
         extraDetail: d
       }),
       onClick: E,
-      icon: null != S && (0, l.jsx)(S, {
+      icon: null != v && (0, l.jsx)(v, {
         width: I,
         height: I
       }),
@@ -116,7 +116,7 @@ let g = 3,
     })
   });
 
-function v() {
+function S() {
   return (0, l.jsxs)("div", {
     className: i(h.container, h.containerCard, h.fillerCard),
     children: [(0, l.jsx)("img", {

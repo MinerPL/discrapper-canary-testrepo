@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   USER_MOD_ICON_SIZE_PX: function() {
-    return u
+    return o
   },
   UserModInfoItem: function() {
     return d
@@ -16,8 +16,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("426383"),
   r = n("77078"),
-  o = n("558595");
-let u = 16;
+  u = n("499559");
+let o = 16;
 
 function d(e) {
   let {
@@ -25,26 +25,30 @@ function d(e) {
     name: n,
     icon: l,
     onNavigate: d,
-    className: c
+    className: c,
+    missingNavIcon: f
   } = e;
   return (0, a.jsxs)(r.Clickable, {
     onClick: d,
-    className: s(o.modInfoItem, null != d && o.modInfoAction, c),
+    className: s(u.modInfoItem, null != d && u.modInfoAction, c),
     children: [null != l && (0, a.jsx)("div", {
-      className: s(o.modInfoItemIcon),
+      className: s(u.modInfoItemIcon),
       children: l
     }), null != n && (0, a.jsx)("div", {
-      className: s(o.modInfoItemName),
+      className: s(u.modInfoItemName),
       children: n
     }), (0, a.jsx)("div", {
-      className: s(o.modInfoItemDescription),
+      className: s(u.modInfoItemDescription),
       children: t
     }), null != d && (0, a.jsx)("div", {
-      className: s(o.modInfoItemActionIcon),
+      className: s(u.modInfoItemActionIcon),
       children: (0, a.jsx)(i.ChevronLargeRightIcon, {
-        width: u,
-        height: u
+        width: o,
+        height: o
       })
+    }), null == d && null != f && (0, a.jsx)("div", {
+      className: s(u.modInfoItemActionIcon),
+      children: f
     })]
   })
 }
@@ -54,7 +58,7 @@ function c(e) {
     children: t
   } = e;
   return (0, a.jsx)("div", {
-    className: s(o.modInfoItemContainer),
+    className: s(u.modInfoItemContainer),
     children: t
   })
 }

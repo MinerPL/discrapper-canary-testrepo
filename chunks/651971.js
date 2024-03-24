@@ -9,12 +9,12 @@ s.r(t), s.d(t, {
 }), s("222007");
 var i, r, a = s("37983"),
   l = s("884691"),
-  o = s("907002"),
+  o = s("146606"),
   n = s("446674"),
-  d = s("77078"),
-  u = s("206230"),
+  u = s("77078"),
+  d = s("206230"),
   c = s("526887"),
-  E = s("890891");
+  E = s("95291");
 
 function _(e) {
   let {
@@ -23,7 +23,7 @@ function _(e) {
     setConfettiCount: i,
     setShouldFireConfetti: r,
     tooltipProps: c
-  } = e, [_, T] = l.useState(0), I = l.useRef(-1), N = l.useRef(!0), f = (0, n.useStateFromStores)([u.default], () => u.default.useReducedMotion), {
+  } = e, [_, T] = l.useState(0), I = l.useRef(-1), N = l.useRef(!0), f = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion), {
     scaleFactor: R
   } = (0, o.useSpring)({
     from: {
@@ -46,7 +46,7 @@ function _(e) {
     style: {
       transform: R.to(e => "scale(".concat(e, ")"))
     },
-    children: (0, a.jsx)(d.Clickable, {
+    children: (0, a.jsx)(u.Clickable, {
       className: E.confettiTrigger,
       onMouseDown: () => {
         T(1), r(!0), i(e => Math.min(e + 2, 200)), window.clearTimeout(I.current), I.current = window.setTimeout(() => {
@@ -77,7 +77,7 @@ var T = function(e) {
   } = e, {
     cannon: r,
     createMultipleConfettiAt: a
-  } = l.useContext(c.ConfettiCannonContext), o = (0, n.useStateFromStores)([u.default], () => u.default.useReducedMotion);
+  } = l.useContext(c.ConfettiCannonContext), o = (0, n.useStateFromStores)([d.default], () => d.default.useReducedMotion);
   return l.useEffect(() => () => {
     null == r || r.clearConfetti()
   }, [r]), l.useEffect(() => {

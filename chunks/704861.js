@@ -5,12 +5,12 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("55620"),
-  r = s("440351"),
-  i = s("782340"),
-  u = s("76101");
-class o extends n.PureComponent {
+  r = s("884691"),
+  n = s("55620"),
+  i = s("440351"),
+  l = s("782340"),
+  o = s("595695");
+class u extends r.PureComponent {
   render() {
     let {
       game: {
@@ -18,25 +18,25 @@ class o extends n.PureComponent {
       }
     } = this.props;
     return (0, a.jsx)("div", {
-      className: u.matureListing,
-      children: (0, a.jsx)(r.default, {
+      className: o.matureListing,
+      children: (0, a.jsx)(i.default, {
         onAgree: this.handleAgree,
         onDisagree: this.handleDisagree,
-        title: i.default.Messages.MATURE_LISTING_TITLE.format({
+        title: l.default.Messages.MATURE_LISTING_TITLE.format({
           name: e
         }),
-        description: i.default.Messages.MATURE_LISTING_DESCRIPTION,
-        agreement: i.default.Messages.MATURE_LISTING_ACCEPT,
-        disagreement: i.default.Messages.MATURE_LISTING_DECLINE
+        description: l.default.Messages.MATURE_LISTING_DESCRIPTION,
+        agreement: l.default.Messages.MATURE_LISTING_ACCEPT,
+        disagreement: l.default.Messages.MATURE_LISTING_DECLINE
       })
     })
   }
   constructor(...e) {
     super(...e), this.handleDisagree = () => {
-      (0, l.matureDisagree)()
+      (0, n.matureDisagree)()
     }, this.handleAgree = () => {
-      (0, l.matureAgree)()
+      (0, n.matureAgree)()
     }
   }
 }
-var d = o
+var d = u

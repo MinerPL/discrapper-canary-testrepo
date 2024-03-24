@@ -9,7 +9,7 @@ var a = n("316693"),
   l = n("677315"),
   s = n("957255"),
   u = n("49111");
-let r = a.default.combine(u.Permissions.VIEW_CHANNEL, u.Permissions.MANAGE_MESSAGES, u.Permissions.READ_MESSAGE_HISTORY);
+let r = a.combine(u.Permissions.VIEW_CHANNEL, u.Permissions.MANAGE_MESSAGES, u.Permissions.READ_MESSAGE_HISTORY);
 
 function d(e, t) {
   let n = e.getGuildId();

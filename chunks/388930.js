@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return S
   }
 });
 var l = n("37983");
@@ -11,61 +11,58 @@ var a = n("974667"),
   i = n("151426"),
   r = n("77078"),
   o = n("272030"),
-  u = n("120363"),
-  d = n("10641"),
-  c = n("534222"),
-  f = n("131143"),
-  h = n("660478"),
-  C = n("282109"),
-  p = n("943232"),
-  m = n("956089"),
-  E = n("708402"),
-  g = n("133335"),
-  I = n("782340"),
-  S = n("404135");
+  u = n("10641"),
+  d = n("534222"),
+  c = n("660478"),
+  f = n("282109"),
+  h = n("943232"),
+  C = n("956089"),
+  p = n("708402"),
+  m = n("133335"),
+  E = n("782340"),
+  g = n("39776");
 
-function _(e) {
+function I(e) {
   let {
     selected: t,
     showUnread: n,
     onClick: s,
-    onContextMenu: r,
-    eventsMuted: o,
-    rowLabel: d,
-    mentionCount: c,
-    guildId: h
-  } = e, C = (0, a.useListItem)("upcoming-events-".concat(h)), g = (0, f.useCanShowRecurringEventUpsell)(h), I = (0, u.useChannelListUpsellLocationTrackerRef)(h, i.DismissibleContent.RECURRING_EVENT_COACHMARK, !g);
-  return (0, l.jsx)(E.default, {
-    ...C,
-    ref: I,
-    renderIcon: e => (0, l.jsx)(p.default, {
+    onContextMenu: i,
+    eventsMuted: r,
+    rowLabel: o,
+    mentionCount: u,
+    guildId: d
+  } = e, c = (0, a.useListItem)("upcoming-events-".concat(d));
+  return (0, l.jsx)(p.default, {
+    ...c,
+    renderIcon: e => (0, l.jsx)(h.default, {
       className: e
     }),
-    text: d,
+    text: o,
     selected: t,
     onClick: s,
-    onContextMenu: r,
+    onContextMenu: i,
     showUnread: n,
-    badge: !o && c > 0 ? (0, l.jsx)(m.NumberBadge, {
-      className: S.numberBadge,
+    badge: !r && u > 0 ? (0, l.jsx)(C.NumberBadge, {
+      className: g.numberBadge,
       disableColor: !0,
-      count: c
+      count: u
     }) : null
   })
 }
 
-function N(e) {
+function S(e) {
   let {
     guild: t,
     selected: a
   } = e, {
-    hasUnread: u,
-    mentionCount: f
-  } = (0, s.useStateFromStoresObject)([h.default], () => ({
-    hasUnread: h.default.hasUnread(t.id, g.ReadStateTypes.GUILD_EVENT),
-    mentionCount: h.default.getMentionCount(t.id, g.ReadStateTypes.GUILD_EVENT)
-  }), [t.id]), p = (0, s.useStateFromStores)([C.default], () => C.default.isMuteScheduledEventsEnabled(t.id));
-  async function m() {
+    hasUnread: h,
+    mentionCount: C
+  } = (0, s.useStateFromStoresObject)([c.default], () => ({
+    hasUnread: c.default.hasUnread(t.id, m.ReadStateTypes.GUILD_EVENT),
+    mentionCount: c.default.getMentionCount(t.id, m.ReadStateTypes.GUILD_EVENT)
+  }), [t.id]), p = (0, s.useStateFromStores)([f.default], () => f.default.isMuteScheduledEventsEnabled(t.id));
+  async function g() {
     await (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -74,16 +71,16 @@ function N(e) {
         ...n,
         guildId: t.id
       })
-    }), (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
+    }), (0, u.markDismissibleContentAsDismissed)(i.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)
   }
-  let E = (0, c.default)(t.id),
-    S = E.length > 0 ? I.default.Messages.GUILD_EVENTS_PLURAL.format({
-      number: E.length
-    }) : I.default.Messages.GUILD_EVENTS;
-  return (0, l.jsx)(_, {
+  let S = (0, d.default)(t.id),
+    _ = S.length > 0 ? E.default.Messages.GUILD_EVENTS_PLURAL.format({
+      number: S.length
+    }) : E.default.Messages.GUILD_EVENTS;
+  return (0, l.jsx)(I, {
     selected: a,
-    showUnread: u && !p,
-    onClick: m,
+    showUnread: h && !p,
+    onClick: g,
     onContextMenu: e => {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
@@ -96,8 +93,8 @@ function N(e) {
       })
     },
     eventsMuted: p,
-    rowLabel: S,
-    mentionCount: f,
+    rowLabel: _,
+    mentionCount: C,
     guildId: t.id
   })
 }

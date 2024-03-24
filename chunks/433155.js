@@ -24,7 +24,7 @@ var l = n("37983"),
   v = n("704257"),
   h = n("184406"),
   _ = n("49111"),
-  I = n("928123");
+  I = n("356086");
 
 function g(e) {
   var t;
@@ -51,7 +51,7 @@ function g(e) {
       }
       if ((null == e ? void 0 : e.type) === N.SelectOptionType.ROLE) {
         var a;
-        let n = null == x ? void 0 : x.getRole(e.value);
+        let n = null != x ? m.default.getRole(x.id, e.value) : void 0;
         if (null == n || null == x) return;
         let u = (0, i.canGuildUseRoleIcons)(x, n) ? (0, r.getRoleIconProps)(n, t) : null;
         return null != u ? (0, l.jsx)(S.default, {
@@ -76,7 +76,7 @@ function g(e) {
           forceUsername: !0
         }))
       } else if (e.type === N.SelectOptionType.ROLE) {
-        let n = null == x ? void 0 : x.getRole(e.value),
+        let n = null != x ? m.default.getRole(x.id, e.value) : void 0,
           a = null == n ? null : null == L ? void 0 : L[n.id];
         null != a && (t = (0, l.jsxs)("div", {
           className: I.roleCountContainer,

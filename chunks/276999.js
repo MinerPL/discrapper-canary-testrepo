@@ -13,7 +13,7 @@ var a = n("37983"),
   d = n("266491"),
   u = n("145131"),
   c = n("49111"),
-  p = n("169092");
+  p = n("758546");
 let f = {
   [c.ChannelLayouts.NORMAL]: p.normal,
   [c.ChannelLayouts.MINIMUM]: p.minimum,
@@ -79,7 +79,7 @@ class h extends l.PureComponent {
       backgroundKey: t,
       layout: n
     } = this.props, l = "".concat(n, "-").concat(null != t ? t : "");
-    return (0, a.jsx)(d.default, {
+    return (0, a.jsx)(d.TransitionGroup, {
       className: p.videoBackground,
       component: "div",
       children: (0, a.jsx)(m, {

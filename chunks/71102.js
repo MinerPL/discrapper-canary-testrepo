@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return h
   },
   addDirectoryGuildEntry: function() {
-    return p
+    return m
   },
   removeDirectoryGuildEntry: function() {
-    return m
+    return p
   },
   searchDirectoryEntries: function() {
     return E
   },
   clearDirectorySearch: function() {
-    return C
-  },
-  updateDirectoryEntry: function() {
     return g
   },
-  selectDirectoryCategory: function() {
+  updateDirectoryEntry: function() {
     return S
+  },
+  selectDirectoryCategory: function() {
+    return C
   },
   fetchGuildEntriesForIds: function() {
     return _
@@ -33,8 +33,8 @@ var a = n("483366"),
   s = n("759843"),
   i = n("872717"),
   r = n("913144"),
-  o = n("840707"),
-  u = n("393467"),
+  u = n("840707"),
+  o = n("393467"),
   d = n("730647"),
   c = n("49111");
 let f = l(async (e, t) => {
@@ -42,7 +42,7 @@ let f = l(async (e, t) => {
       r.default.dispatch({
         type: "GUILD_DIRECTORY_FETCH_START"
       });
-      let n = await i.default.get({
+      let n = await i.HTTP.get({
         url: c.Endpoints.DIRECTORY_CHANNEL_ENTRIES(e),
         query: {
           category_id: t
@@ -61,7 +61,7 @@ let f = l(async (e, t) => {
   }, 200),
   h = l(async e => {
     try {
-      let t = await i.default.get({
+      let t = await i.HTTP.get({
         url: c.Endpoints.DIRECTORY_CHANNEL_CATEGORY_COUNTS(e)
       });
       r.default.dispatch({
@@ -71,9 +71,9 @@ let f = l(async (e, t) => {
       })
     } catch (e) {}
   }, 200);
-async function p(e, t, n) {
+async function m(e, t, n) {
   let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
-    l = await o.default.post({
+    l = await u.default.post({
       url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
       body: {
         description: n,
@@ -95,8 +95,8 @@ async function p(e, t, n) {
   })
 }
 
-function m(e, t) {
-  o.default.delete({
+function p(e, t) {
+  u.default.delete({
     url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
     trackedActionData: {
       event: s.NetworkActionNames.DIRECTORY_GUILD_ENTRY_DELETE,
@@ -112,7 +112,7 @@ function m(e, t) {
   })
 }
 let E = l(async (e, t) => {
-    let n = u.default.shouldFetch(e, t);
+    let n = o.default.shouldFetch(e, t);
     if (!n) {
       r.default.dispatch({
         type: "GUILD_DIRECTORY_CACHED_SEARCH",
@@ -127,7 +127,7 @@ let E = l(async (e, t) => {
         channelId: e,
         query: t
       });
-      let n = await i.default.get({
+      let n = await i.HTTP.get({
         url: c.Endpoints.DIRECTORY_ENTRIES_SEARCH(e),
         query: {
           query: t
@@ -145,15 +145,15 @@ let E = l(async (e, t) => {
       })
     }
   }, 200),
-  C = e => {
+  g = e => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_SEARCH_CLEAR",
       channelId: e
     })
   },
-  g = async function(e, t, n) {
+  S = async function(e, t, n) {
     let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.DirectoryEntryCategories.UNCATEGORIZED,
-      l = await i.default.patch({
+      l = await i.HTTP.patch({
         url: c.Endpoints.DIRECTORY_CHANNEL_ENTRY(e, t),
         body: {
           description: n,
@@ -165,7 +165,7 @@ let E = l(async (e, t) => {
       channelId: e,
       entry: l.body
     })
-  }, S = (e, t) => {
+  }, C = (e, t) => {
     r.default.dispatch({
       type: "GUILD_DIRECTORY_CATEGORY_SELECT",
       channelId: e,
@@ -173,7 +173,7 @@ let E = l(async (e, t) => {
     })
   }, _ = async (e, t) => {
     try {
-      let n = await i.default.get({
+      let n = await i.HTTP.get({
         url: c.Endpoints.DIRECTORY_CHANNEL_LIST_BY_ID(e),
         query: {
           entity_ids: t

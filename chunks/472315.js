@@ -13,11 +13,11 @@ var s = n("37983"),
   u = n("271938"),
   d = n("42203"),
   c = n("27618"),
-  f = n("174622"),
-  E = n("158998"),
+  E = n("174622"),
+  f = n("158998"),
   _ = n("49111"),
   T = n("782340"),
-  I = n("18978");
+  I = n("599541");
 
 function m(e) {
   var t;
@@ -42,26 +42,26 @@ function m(e) {
   if (null == n.inviter) return null;
   let g = A ? C : h,
     M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND,
-    O = f.default.Button.Colors.GREEN;
-  A ? (M = T.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, O = f.default.Button.Colors.PRIMARY) : p && (M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND, O = f.default.Button.Colors.PRIMARY);
+    O = E.default.Button.Colors.GREEN;
+  A ? (M = T.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, O = E.default.Button.Colors.PRIMARY) : p && (M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND, O = E.default.Button.Colors.PRIMARY);
   let R = p ? T.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : T.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
-    L = null != n.inviter ? "".concat(n.inviter.username) : "",
-    v = null != n.inviter ? E.default.getUserTag(n.inviter) : "";
-  return (0, s.jsxs)(f.default, {
-    children: [(0, s.jsx)(f.default.Header, {
+    v = null != n.inviter ? "".concat(n.inviter.username) : "",
+    L = null != n.inviter ? f.default.getUserTag(n.inviter) : "";
+  return (0, s.jsxs)(E.default, {
+    children: [(0, s.jsx)(E.default.Header, {
       text: R
-    }), (0, s.jsxs)(f.default.Body, {
+    }), (0, s.jsxs)(E.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: I.headerLine,
-        children: [(0, s.jsx)(f.default.Icon, {
+        children: [(0, s.jsx)(E.default.Icon, {
           user: new o.default(n.inviter),
           onClick: A ? g : void 0
-        }), (0, s.jsx)(f.default.Info, {
-          title: L,
+        }), (0, s.jsx)(E.default.Info, {
+          title: v,
           onClick: A ? g : void 0,
-          children: v
+          children: L
         })]
-      }), (0, s.jsx)(f.default.Button, {
+      }), (0, s.jsx)(E.default.Button, {
         onClick: g,
         submitting: S,
         isDisabled: p,

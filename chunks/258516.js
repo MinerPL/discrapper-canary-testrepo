@@ -1,12 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   isInFriendSuggestionSeenStateExperiment: function() {
-    return i
+    return l
   }
-}), n("222007"), n("65597");
+}), n("65597");
 var a = n("862205");
-n("47319"), n("697218"), n("49111");
-(0, a.createExperiment)({
+n("47319"), n("697218"), n("49111"), (0, a.createExperiment)({
+  kind: "user",
+  id: "2024-03_friend_finder_selected_states",
+  label: "Friend Finder State Experiment",
+  defaultConfig: {
+    enabled: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "Enable Friend Finder on select states configurable in exp config",
+    config: {
+      enabled: !0
+    }
+  }]
+}), (0, a.createExperiment)({
   kind: "user",
   id: "2023-10_friend_finder_launch",
   label: "Friend Finder Launch Experiment",
@@ -16,34 +29,6 @@ n("47319"), n("697218"), n("49111");
   treatments: [{
     id: 1,
     label: "Enable Friend Finder",
-    config: {
-      enabled: !0
-    }
-  }]
-}), (0, a.createExperiment)({
-  kind: "user",
-  id: "2023-03_friend_finder",
-  label: "Friend Finder User Experiment",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable Friend Finder",
-    config: {
-      enabled: !0
-    }
-  }]
-}), (0, a.createExperiment)({
-  kind: "user",
-  id: "2023-10_friend_finder_virginia",
-  label: "Friend Finder User Experiment for Virginia",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable Friend Finder in Virginia",
     config: {
       enabled: !0
     }
@@ -121,7 +106,7 @@ let s = (0, a.createExperiment)({
   }]
 });
 
-function i(e) {
+function l(e) {
   let {
     enabled: t
   } = s.getCurrentConfig({

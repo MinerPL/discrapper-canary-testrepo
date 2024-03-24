@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return M
+    return p
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("917351"),
   o = s.n(r),
   d = s("446674"),
@@ -15,19 +15,19 @@ var a = s("37983"),
   c = s("77078"),
   E = s("583367"),
   _ = s("145079"),
-  T = s("900938"),
-  I = s("735201"),
+  I = s("900938"),
+  T = s("735201"),
   S = s("26989"),
-  N = s("697218"),
-  g = s("773309"),
-  f = s("533403"),
-  A = s("427459"),
-  L = s("159885"),
-  m = s("49111"),
-  C = s("782340"),
-  O = s("765565");
-let h = (0, L.cssValueToNumber)(u.default.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
-class R extends n.Component {
+  f = s("697218"),
+  m = s("773309"),
+  N = s("533403"),
+  g = s("427459"),
+  h = s("159885"),
+  C = s("49111"),
+  R = s("782340"),
+  x = s("69339");
+let L = (0, h.cssValueToNumber)(u.default.GUILD_SETTINGS_PREMIUM_TIER_STATUS_PROGRESS_WITH_SUBSCRIPTIONS_MARGIN_TOP);
+class O extends l.Component {
   componentDidMount() {
     this.measure();
     let {
@@ -52,42 +52,42 @@ class R extends n.Component {
       tierPositions: t
     } = this.state, {
       guildId: s
-    } = this.props, n = this.getSubscriptionCount();
+    } = this.props, l = this.getSubscriptionCount();
     if (null == t || null == s) return null;
-    let l = {
+    let n = {
         numRequired: 0,
         y: 0,
-        key: g.FIRST_TIER_KEY
+        key: m.FIRST_TIER_KEY
       },
-      i = (0, A.getAppliedGuildBoostsRequired)(s),
+      i = (0, g.getAppliedGuildBoostsRequired)(s),
       r = e.map(e => {
         var s;
         return {
           numRequired: i[e.tier],
-          name: (0, A.getTierName)(e.tier),
+          name: (0, g.getTierName)(e.tier),
           y: null !== (s = t[e.tier]) && void 0 !== s ? s : 0,
           key: e.tier
         }
       });
-    return (0, a.jsx)(g.default, {
-      className: n > 0 ? O.progressWithSubscriptions : O.progress,
-      progress: n,
-      tiers: [l, ...r],
+    return (0, a.jsx)(m.default, {
+      className: l > 0 ? x.progressWithSubscriptions : x.progress,
+      progress: l,
+      tiers: [n, ...r],
       initialAnimationDelay: 500,
       onAnimatedTierMaker: this.handleAnimatedTier
     })
   }
   renderTierNone() {
     return (0, a.jsxs)("div", {
-      className: O.tierDefaultUnlocked,
+      className: x.tierDefaultUnlocked,
       ref: this.defaultTierRef,
       children: [(0, a.jsx)(c.FormText, {
         type: c.FormText.Types.LABEL_BOLD,
-        children: C.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_NONE
+        children: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_NONE
       }), (0, a.jsx)(c.FormText, {
         type: c.FormText.Types.DESCRIPTION,
-        className: O.tierDefaultUnlockedDescription,
-        children: C.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_DESCRIPTION_NONE
+        className: x.tierDefaultUnlockedDescription,
+        children: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_DESCRIPTION_NONE
       })]
     })
   }
@@ -99,16 +99,16 @@ class R extends n.Component {
     } = this.props;
     return (0, a.jsxs)("div", {
       ref: this.defaultTierRef,
-      className: O.subscribers,
-      children: [(0, a.jsx)(f.default, {
+      className: x.subscribers,
+      children: [(0, a.jsx)(N.default, {
         guildId: null != s ? s : void 0,
         users: e,
         renderUser: this.renderSubscriber,
         renderMoreUsers: this.renderMoreSubscribers,
         max: 5
       }), (0, a.jsx)("div", {
-        className: O.subscriberCount,
-        children: C.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_COUNT_SUBSCRIBERS.format({
+        className: x.subscriberCount,
+        children: R.default.Messages.GUILD_SETTINGS_PREMIUM_GUILD_COUNT_SUBSCRIBERS.format({
           count: t
         })
       })]
@@ -119,22 +119,22 @@ class R extends n.Component {
       guildId: e,
       renderTier: t,
       subscriptions: s,
-      subscriberCount: n,
-      tiers: l
+      subscriberCount: l,
+      tiers: n
     } = this.props;
     if (null == s) return (0, a.jsx)(c.Spinner, {
       type: c.Spinner.Type.SPINNING_CIRCLE
     });
     if (null == e) return null;
-    let i = (0, A.getAppliedGuildBoostsRequired)(e);
+    let i = (0, g.getAppliedGuildBoostsRequired)(e);
     return (0, a.jsx)("div", {
       children: (0, a.jsxs)("div", {
-        className: O.content,
-        children: [this.renderProgressBar(l), (0, a.jsxs)("div", {
-          className: O.tiers,
-          children: [0 === n ? this.renderTierNone() : this.renderSubscribers(), l.map((s, a, n) => t({
+        className: x.content,
+        children: [this.renderProgressBar(n), (0, a.jsxs)("div", {
+          className: x.tiers,
+          children: [0 === l ? this.renderTierNone() : this.renderSubscribers(), n.map((s, a, l) => t({
             tier: s,
-            tiers: n,
+            tiers: l,
             tierIndex: a,
             onSetRef: this.setTierRef,
             isAnimatedTo: i[this.state.animatedTier] >= i[s.tier],
@@ -146,9 +146,9 @@ class R extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), this.tierRefs = {}, this.defaultTierRef = n.createRef(), this.state = {
+    super(...e), this.tierRefs = {}, this.defaultTierRef = l.createRef(), this.state = {
       tierPositions: null,
-      animatedTier: m.BoostedGuildTiers.NONE
+      animatedTier: C.BoostedGuildTiers.NONE
     }, this.measure = () => {
       let {
         subscriberCount: e
@@ -157,12 +157,12 @@ class R extends n.Component {
       let {
         top: s
       } = t.getBoundingClientRect(), a = {};
-      for (let [t, n] of Object.entries(this.tierRefs)) {
-        if (null == n) return;
+      for (let [t, l] of Object.entries(this.tierRefs)) {
+        if (null == l) return;
         let {
-          top: l
-        } = n.getBoundingClientRect(), i = e > 0 ? h : 0;
-        a[t] = l - s + 32 - i
+          top: n
+        } = l.getBoundingClientRect(), i = e > 0 ? L : 0;
+        a[t] = n - s + 32 - i
       }
       this.setState({
         tierPositions: a
@@ -174,32 +174,32 @@ class R extends n.Component {
         animatedTier: e.key
       })
     }, this.renderSubscriber = (e, t, s) => {
-      var n;
+      var l;
       return null == e ? null : (0, a.jsx)(c.Tooltip, {
         text: (0, a.jsx)(_.default, {
           user: e.user,
           nick: e.nick
         }),
-        "aria-label": null !== (n = e.nick) && void 0 !== n ? n : e.user.tag,
+        "aria-label": null !== (l = e.nick) && void 0 !== l ? l : e.user.tag,
         children: s => (0, a.jsx)(c.Avatar, {
           ...s,
           tabIndex: -1,
           src: null != e ? e.user.getAvatarURL(this.props.guildId, 32) : null,
-          className: i(O.avatar, t, null != t ? O.subscriberMask : null),
+          className: i(x.avatar, t, null != t ? x.subscriberMask : null),
           size: c.AvatarSizes.SIZE_32
         })
       }, s)
     }, this.renderSubscribersPopout = () => (0, a.jsx)(c.Scroller, {
-      className: O.subscribersPopout,
+      className: x.subscribersPopout,
       children: this.props.subscribers.map(e => (0, a.jsxs)("div", {
-        className: O.subscribersPopoutUser,
+        className: x.subscribersPopoutUser,
         children: [(0, a.jsx)(c.Avatar, {
           src: e.user.getAvatarURL(this.props.guildId, 32),
           "aria-label": e.user.username,
           size: c.AvatarSizes.SIZE_32,
-          className: O.avatar
+          className: x.avatar
         }), (0, a.jsx)("div", {
-          className: O.subscribersPopoutUsername,
+          className: x.subscribersPopoutUsername,
           children: (0, a.jsx)(_.default, {
             user: e.user,
             nick: e.nick
@@ -211,19 +211,19 @@ class R extends n.Component {
       position: "bottom",
       autoInvert: !1,
       children: t => (0, a.jsx)("div", {
-        className: O.moreSubscribers,
+        className: x.moreSubscribers,
         ...t,
         children: e
       })
     }, s)
   }
 }
-let D = d.default.connectStores([T.default, N.default, I.default, S.default], () => {
-  let e = T.default.getGuildId(),
-    t = null != e ? I.default.getAppliedGuildBoostsForGuild(e) : null,
+let A = d.default.connectStores([I.default, f.default, T.default, S.default], () => {
+  let e = I.default.getGuildId(),
+    t = null != e ? T.default.getAppliedGuildBoostsForGuild(e) : null,
     s = o(null != t ? t : []).uniqBy(e => e.userId),
     a = s.map(t => ({
-      user: N.default.getUser(t.userId),
+      user: f.default.getUser(t.userId),
       nick: S.default.getNick(e, t.userId)
     })).filter(e => null != e.user).value();
   return {
@@ -232,5 +232,5 @@ let D = d.default.connectStores([T.default, N.default, I.default, S.default], ()
     subscribers: a,
     subscriberCount: s.size()
   }
-})(R);
-var M = D
+})(O);
+var p = A

@@ -17,7 +17,7 @@ async function i(e) {
     answerIds: i
   } = e;
   try {
-    await s.default.put({
+    await s.HTTP.put({
       url: a.Endpoints.POLL_ANSWERS(t, n),
       body: {
         answer_ids: i
@@ -33,7 +33,7 @@ async function r(e) {
     messageId: n
   } = e;
   try {
-    await s.default.post({
+    await s.HTTP.post({
       url: a.Endpoints.POLL_EXPIRE(t, n)
     })
   } catch (e) {

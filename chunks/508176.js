@@ -25,13 +25,13 @@ var l = n("37983"),
   _ = n("724210"),
   N = n("133335"),
   T = n("782340"),
-  A = n("174757");
+  A = n("303566");
 
 function L(e) {
   let {
     guild: t,
     selected: L
-  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), M = (0, s.default)([C.default], () => C.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), O = R.length > g.MAX_NEW_CHANNELS_TO_SHOW, y = (0, s.default)([d.default, C.default], () => {
+  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), M = (0, s.useStateFromStores)([C.default], () => C.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), O = R.length > g.MAX_NEW_CHANNELS_TO_SHOW, y = (0, s.useStateFromStores)([d.default, C.default], () => {
     let e = d.default.lastFetchedAt(t.id),
       n = C.default.lastMessageId(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
     if (null == n) return !1;

@@ -22,7 +22,7 @@ let o = async e => {
   });
   try {
     var c;
-    let e = await s.default.get({
+    let e = await s.HTTP.get({
         url: r.Endpoints.GUILD_JOIN_REQUESTS(t),
         query: {
           status: n,
@@ -32,12 +32,12 @@ let o = async e => {
         }
       }),
       a = e.body.total,
-      f = null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : [],
-      E = f.map(i.joinRequestFromServer);
+      E = null !== (c = e.body.guild_join_requests) && void 0 !== c ? c : [],
+      f = E.map(i.joinRequestFromServer);
     return l.default.dispatch({
       type: "GUILD_JOIN_REQUESTS_FETCH_SUCCESS",
       status: n,
-      requests: E,
+      requests: f,
       total: a,
       limit: d,
       guildId: t
@@ -49,7 +49,7 @@ let o = async e => {
   }
 }, u = async e => {
   try {
-    let t = await s.default.delete({
+    let t = await s.HTTP.del({
       url: r.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
     });
     return l.default.dispatch({
@@ -62,7 +62,7 @@ let o = async e => {
   }
 }, d = async (e, t) => {
   try {
-    let n = await s.default.post({
+    let n = await s.HTTP.post({
       url: r.Endpoints.GUILD_JOIN_REQUEST_ACK(e, t)
     });
     return n
@@ -76,7 +76,7 @@ let o = async e => {
 }, c = async function(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.GuildJoinRequestApplicationStatuses.APPROVED,
     i = arguments.length > 3 ? arguments[3] : void 0,
-    o = await s.default.patch({
+    o = await s.HTTP.patch({
       url: r.Endpoints.GUILD_JOIN_REQUEST(e, t),
       body: {
         action: n,
@@ -89,8 +89,8 @@ let o = async e => {
     status: o.body.application_status,
     request: o.body
   })
-}, f = async (e, t) => {
-  let n = await s.default.patch({
+}, E = async (e, t) => {
+  let n = await s.HTTP.patch({
     url: r.Endpoints.GUILD_JOIN_REQUESTS(e),
     body: {
       action: t
@@ -101,9 +101,9 @@ let o = async e => {
     guildId: e,
     action: t
   }), n.body
-}, E = async e => {
+}, f = async e => {
   try {
-    let t = await s.default.post({
+    let t = await s.HTTP.post({
         url: r.Endpoints.GUILD_MEMBER_REQUEST_TO_JOIN(e)
       }),
       {
@@ -118,7 +118,7 @@ let o = async e => {
     throw e
   }
 }, _ = async () => {
-  let e = await s.default.get({
+  let e = await s.HTTP.get({
     url: r.Endpoints.USER_JOIN_REQUEST_GUILDS
   });
   l.default.dispatch({
@@ -131,14 +131,14 @@ var T = {
   ackUserGuildJoinRequest: d,
   removeGuildJoinRequest: u,
   updateGuildJoinRequest: c,
-  actionAllPendingJoinRequests: f,
-  resetGuildJoinRequest: E,
+  actionAllPendingJoinRequests: E,
+  resetGuildJoinRequest: f,
   fetchRequestToJoinGuilds: _,
-  setSelectedApplicationStatus: (e, t) => {
+  setSelectedApplicationTab: (e, t) => {
     l.default.dispatch({
-      type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_STATUS",
+      type: "GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB",
       guildId: e,
-      applicationStatus: t
+      applicationTab: t
     })
   },
   setSelectedSortOrder: (e, t) => {

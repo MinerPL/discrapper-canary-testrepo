@@ -14,7 +14,7 @@ let r = {
   [i.HypeSquadHouses.HOUSE_3]: 3
 };
 var o = {
-  joinHypeSquadOnline: e => a.default.post({
+  joinHypeSquadOnline: e => a.HTTP.post({
     url: i.Endpoints.HYPESQUAD_ONLINE,
     body: {
       house_id: r[e.houseID]
@@ -26,7 +26,7 @@ var o = {
   })).catch(e => {
     throw new l.V6OrEarlierAPIError(e)
   }),
-  leaveHypeSquadOnline: () => a.default.delete({
+  leaveHypeSquadOnline: () => a.HTTP.del({
     url: i.Endpoints.HYPESQUAD_ONLINE,
     oldFormErrors: !0
   }).then(() => n.default.dispatch({

@@ -11,9 +11,9 @@ var i, a, n = l("37983"),
   o = l("817736"),
   d = l("118810"),
   u = l("77078"),
-  p = l("737960"),
-  m = l("137215"),
-  _ = l("43236");
+  m = l("737960"),
+  p = l("137215"),
+  _ = l("219016");
 (a = i || (i = {}))[a.LEFT = 0] = "LEFT", a[a.RIGHT = 1] = "RIGHT";
 let f = e => {
   let {
@@ -25,7 +25,7 @@ let f = e => {
     "aria-hidden": !0,
     className: c(_.scrollerButton, l),
     onClick: t,
-    children: (0, n.jsx)(m.default, {
+    children: (0, n.jsx)(p.default, {
       className: _.scrollerButtonArrow,
       direction: i
     })
@@ -113,13 +113,13 @@ class h extends s.Component {
         }), o > 0 ? (0, n.jsxs)("div", {
           className: _.arrowsContainer,
           children: [(0, n.jsx)(f, {
-            direction: m.default.Directions.LEFT,
+            direction: p.default.Directions.LEFT,
             onClick: this.prev,
             className: c(_.arrowLeft, {
               [_.arrowDisabled]: 0 === e && 0 === t
             })
           }), (0, n.jsx)(f, {
-            direction: m.default.Directions.RIGHT,
+            direction: p.default.Directions.RIGHT,
             onClick: this.next,
             className: c(_.arrowRight, {
               [_.arrowDisabled]: e === this.getMaxIndex() && 1 === t
@@ -167,4 +167,4 @@ class h extends s.Component {
     }
   }
 }
-var C = (0, p.default)(h)
+var C = (0, m.default)(h)

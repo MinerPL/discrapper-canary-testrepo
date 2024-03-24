@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   StackedProgress: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i, s, r = n("37983");
@@ -11,9 +11,9 @@ var a = n("414456"),
   l = n("917351"),
   u = n.n(l),
   d = n("669491"),
-  c = n("35962");
+  c = n("789163");
 
-function f(e) {
+function _(e) {
   let {
     className: t,
     percents: n,
@@ -21,7 +21,7 @@ function f(e) {
     foregroundColors: s = [d.default.unsafe_rawColors.BRAND_500.css],
     backgroundColor: a = "var(--background-modifier-active)",
     animate: l = !0
-  } = e, f = u.zip(n, s).map((e, t) => {
+  } = e, _ = u.zip(n, s).map((e, t) => {
     let n, [s, a] = e;
     return n = Array.isArray(a) ? {
       background: "linear-gradient(to right, ".concat(a[0], ", ").concat(a[1], ")")
@@ -42,6 +42,6 @@ function f(e) {
     style: {
       backgroundColor: a
     },
-    children: f
+    children: _
   })
-}(s = i || (i = {})).XSMALL = "xsmall", s.SMALL = "small", s.LARGE = "large", f.Sizes = i
+}(s = i || (i = {})).XSMALL = "xsmall", s.SMALL = "small", s.LARGE = "large", _.Sizes = i

@@ -8,21 +8,21 @@ var n = a("37983"),
   i = a("884691"),
   s = a("917351"),
   l = a("446674"),
-  r = a("669491"),
-  u = a("891128"),
-  c = a("165984"),
-  o = a("505088"),
+  u = a("669491"),
+  r = a("891128"),
+  o = a("165984"),
+  c = a("505088"),
   d = a("77078"),
   _ = a("697218"),
   S = a("908539"),
-  f = a("132206"),
-  E = a("260883"),
-  T = a("170213"),
+  E = a("132206"),
+  T = a("260883"),
+  f = a("170213"),
   A = a("782340"),
-  I = a("122698");
+  I = a("948707");
 
 function g() {
-  let t = (0, f.useSafetyHubAccountStanding)(),
+  let t = (0, E.useSafetyHubAccountStanding)(),
     e = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
     [a, g] = i.useState(36),
     N = i.useRef({
@@ -44,62 +44,59 @@ function g() {
     let t = (0, s.debounce)(C, 100);
     window.addEventListener("resize", t)
   }, [C]);
-  let m = {
+  let p = {
       [S.AccountStandingState.ALL_GOOD]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION.format({
-          termsOfService: T.SafetyHubLinks.TOS_LINK,
-          communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_DESCRIPTION_V2.format({
+          termsOfService: f.SafetyHubLinks.TOS_LINK,
+          communityGuidelines: f.SafetyHubLinks.COMMUNITY_GUIDELINES
         }),
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_ALL_GOOD_SHORT,
-        Icon: u.CircleCheckIcon,
-        color: r.default.colors.STATUS_POSITIVE
+        Icon: r.CircleCheckIcon,
+        color: u.default.colors.STATUS_POSITIVE
       },
       [S.AccountStandingState.LIMITED]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION,
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_DESCRIPTION_V2,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_LIMITED_SHORT,
-        Icon: c.CircleExclamationPointIcon,
-        color: r.default.colors.STATUS_WARNING
+        Icon: o.CircleExclamationPointIcon,
+        color: u.default.colors.STATUS_WARNING
       },
       [S.AccountStandingState.VERY_LIMITED]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION,
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_DESCRIPTION_V2,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_VERY_LIMITED_SHORT,
-        Icon: c.CircleExclamationPointIcon,
-        color: r.default.unsafe_rawColors.ORANGE_345
+        Icon: o.CircleExclamationPointIcon,
+        color: u.default.unsafe_rawColors.ORANGE_345
       },
       [S.AccountStandingState.AT_RISK]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE,
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_TITLE_V2,
         description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_DESCRIPTION,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_AT_RISK_SHORT,
-        Icon: c.CircleExclamationPointIcon,
-        color: r.default.colors.STATUS_DANGER
+        Icon: o.CircleExclamationPointIcon,
+        color: u.default.colors.STATUS_DANGER
       },
       [S.AccountStandingState.SUSPENDED]: {
-        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE,
-        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION.format({
-          termsOfService: T.SafetyHubLinks.TOS_LINK,
-          communityGuidelines: T.SafetyHubLinks.COMMUNITY_GUIDELINES
-        }),
+        title: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_TITLE_V2,
+        description: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_DESCRIPTION_V2,
         status: A.default.Messages.SAFETY_HUB_ACCOUNT_STANDING_SUSPENDED_SHORT,
-        Icon: o.CircleXIcon,
-        color: r.default.colors.ICON_MUTED
+        Icon: c.CircleXIcon,
+        color: u.default.colors.ICON_MUTED
       }
     },
     {
-      title: p,
-      description: x,
+      title: m,
+      description: U,
       color: h,
-      Icon: U
-    } = m[t.state],
-    O = Object.keys(m).length;
+      Icon: H
+    } = p[t.state],
+    x = Object.keys(p).length;
   return (0, n.jsxs)(d.Card, {
     className: I.container,
     outline: !1,
     children: [(0, n.jsx)("div", {
       className: I.profile,
-      children: (0, n.jsx)(E.default, {
+      children: (0, n.jsx)(T.default, {
         user: e,
         size: d.AvatarSizes.SIZE_80
       })
@@ -110,7 +107,7 @@ function g() {
         children: [(0, n.jsx)(d.Heading, {
           color: "header-primary",
           variant: "heading-lg/normal",
-          children: p.format({
+          children: m.format({
             hook: t => (0, n.jsx)(d.Text, {
               style: {
                 color: h.css
@@ -123,7 +120,7 @@ function g() {
         }), (0, n.jsx)(d.Text, {
           color: "text-normal",
           variant: "text-sm/normal",
-          children: x
+          children: U
         })]
       }), (0, n.jsxs)("div", {
         className: I.health,
@@ -132,19 +129,19 @@ function g() {
         },
         children: [(0, n.jsx)("div", {
           className: I.line
-        }), Object.entries(m).map((e, a) => {
+        }), Object.entries(p).map((e, a) => {
           let [i, s] = e, l = parseInt(i) === t.state;
           return (0, n.jsxs)("div", {
             className: I.statusOption,
             ref: t => N.current[parseInt(i)] = t,
-            children: [l ? (0, n.jsx)(U, {
+            children: [l ? (0, n.jsx)(H, {
               className: I.marker,
               color: s.color
             }) : (0, n.jsx)("div", {
               className: I.marker,
               style: {
                 marginLeft: 0 === a ? -6 : 0,
-                marginRight: a === O - 1 ? -6 : 0
+                marginRight: a === x - 1 ? -6 : 0
               },
               children: (0, n.jsx)("div", {
                 className: I.empty

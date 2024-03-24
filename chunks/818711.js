@@ -14,7 +14,7 @@ var n = s("627445"),
 function r(t, e) {
   let s = l.default.get(t.planId);
   i(null != s, "missing premium subscription plan");
-  let n = l.default.getForSkuAndInterval(u.PremiumSubscriptionSKUs.GUILD, s.interval, s.intervalCount);
+  let n = l.default.getForSkuAndInterval((0, a.castPremiumSubscriptionAsSkuId)(u.PremiumSubscriptionSKUs.GUILD), s.interval, s.intervalCount);
   i(null != n, "missing premium guild plan");
   let r = null != t.renewalMutations ? t.renewalMutations.additionalPlans : t.additionalPlans,
     d = t.status === o.SubscriptionStatusTypes.CANCELED ? 0 : (0, a.getNumPremiumGuildSubscriptions)(r),

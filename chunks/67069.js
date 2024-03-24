@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   default: function() {
     return c
   }
 });
-var s = n("37983");
-n("884691");
-var i = n("414456"),
-  l = n.n(i),
-  r = n("791106"),
-  o = n("216422"),
-  a = n("258078"),
-  u = n("63625");
+var s = i("37983");
+i("884691");
+var n = i("414456"),
+  l = i.n(n),
+  r = i("791106"),
+  o = i("216422"),
+  a = i("258078"),
+  u = i("916834");
 
 function c(e) {
   let {
     text: t,
-    textSize: n = a.default.Sizes.SIZE_12,
-    textColor: i = a.default.Colors.STANDARD,
+    textSize: i = a.default.Sizes.SIZE_12,
+    textColor: n = a.default.Colors.STANDARD,
     className: c,
     button: d,
     reducedRightPadding: f = !1
@@ -31,8 +31,8 @@ function c(e) {
         color: r.GradientCssUrls.PREMIUM_TIER_2
       }), (0, s.jsx)(a.default, {
         className: u.text,
-        size: n,
-        color: i,
+        size: i,
+        color: n,
         children: t
       })]
     }), d]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return G
+    return b
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,41 +15,41 @@ var s = n("37983"),
   c = n("569808"),
   f = n("800932"),
   E = n("913645"),
-  I = n("434824"),
-  _ = n("473759"),
-  p = n("165926"),
-  h = n("970366"),
-  m = n("42963"),
-  T = n("271938"),
+  _ = n("434824"),
+  I = n("473759"),
+  h = n("165926"),
+  p = n("970366"),
+  T = n("42963"),
+  m = n("271938"),
   N = n("476108"),
   g = n("124969"),
   A = n("65300"),
   S = n("291850"),
   C = n("598489"),
   v = n("860959"),
-  x = n("49111"),
+  O = n("49111"),
   R = n("579033"),
   L = n("56235"),
-  O = n("149806"),
+  x = n("149806"),
   M = n("53452"),
   D = n("782340"),
-  P = n("40587"),
-  j = n("926622");
+  P = n("520916"),
+  U = n("890957");
 o.default.initialize();
-class U extends a.PureComponent {
+class j extends a.PureComponent {
   componentDidMount() {
-    (0, h.trackAppUIViewed)("guildTemplate"), !M.IS_APP_COMPATIBLE_BROWSER && A.default.launch("discord://" + x.Routes.GUILD_TEMPLATE(this.props.code), () => void 0)
+    (0, p.trackAppUIViewed)("guildTemplate"), !M.IS_APP_COMPATIBLE_BROWSER && A.default.launch("discord://" + O.Routes.GUILD_TEMPLATE(this.props.code), () => void 0)
   }
   componentDidUpdate(e) {
     this.props.code !== e.code && E.default.resolveGuildTemplate(this.props.code)
   }
   renderButton(e, t) {
     return M.IS_APP_COMPATIBLE_BROWSER ? (0, s.jsx)(g.Button, {
-      className: j.marginTop40,
+      className: U.marginTop40,
       onClick: t,
       children: e
     }) : (0, s.jsx)(g.IncompatibleBrowser, {
-      className: j.marginTop40
+      className: U.marginTop40
     })
   }
   renderSpinner(e) {
@@ -63,9 +63,9 @@ class U extends a.PureComponent {
     return (0, s.jsxs)(g.default, {
       children: [(0, s.jsx)(g.Image, {
         src: n("653240"),
-        className: j.marginBottom8
+        className: U.marginBottom8
       }), (0, s.jsx)(g.Title, {
-        className: i(j.marginTop8, j.marginBottom8),
+        className: i(U.marginTop8, U.marginBottom8),
         children: D.default.Messages.GUILD_TEMPLATE_INVALID_TITLE
       }), (0, s.jsx)(g.SubTitle, {
         children: D.default.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE
@@ -75,7 +75,7 @@ class U extends a.PureComponent {
   renderAppOpened() {
     return (0, s.jsxs)(g.default, {
       children: [(0, s.jsx)(g.Title, {
-        className: j.marginBottom8,
+        className: U.marginBottom8,
         children: D.default.Messages.APP_OPENED_TITLE
       }), (0, s.jsx)(g.SubTitle, {
         children: D.default.Messages.APP_OPENED_BODY
@@ -88,10 +88,10 @@ class U extends a.PureComponent {
     } = this.props;
     return (u(null != e, "guild template must not be null"), e.state === R.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(g.default, {
       className: P.authBox,
-      children: (0, s.jsx)(_.default, {
+      children: (0, s.jsx)(I.default, {
         guildTemplate: e
       })
-    }) : (0, s.jsx)(b, {
+    }) : (0, s.jsx)(G, {
       guildTemplate: e
     })
   }
@@ -111,8 +111,8 @@ class U extends a.PureComponent {
       location: l
     } = this.props;
     if (null == e) return this.renderSpinner(D.default.Messages.LOADING);
-    if (t === x.NativeAppStates.OPEN) return this.renderAppOpened();
-    if (t === x.NativeAppStates.OPENING) return this.renderSpinner(D.default.Messages.APP_OPENING);
+    if (t === O.NativeAppStates.OPEN) return this.renderAppOpened();
+    if (t === O.NativeAppStates.OPENING) return this.renderSpinner(D.default.Messages.APP_OPENING);
     switch (e.state) {
       case R.GuildTemplateStates.RESOLVING:
         return this.renderSpinner(D.default.Messages.APP_OPENING);
@@ -128,7 +128,7 @@ class U extends a.PureComponent {
           transitionTo: a,
           location: l,
           onRegister: () => {
-            (0, p.setNewUser)(L.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), m.default.flowStart(O.FlowType.ORGANIC_GUILD_TEMPLATES, O.RegistrationSteps.NUF_STARTED)
+            (0, h.setNewUser)(L.NewUserTypes.ORGANIC_REGISTERED_GUILD_TEMPLATE), T.default.flowStart(x.FlowType.ORGANIC_GUILD_TEMPLATES, x.RegistrationSteps.NUF_STARTED)
           }
         });
       case R.GuildTemplateStates.EXPIRED:
@@ -148,27 +148,27 @@ class U extends a.PureComponent {
   }
 }
 
-function G(e) {
+function b(e) {
   let t = {
     guildTemplate: (0, o.useStateFromStores)([c.default], () => c.default.getGuildTemplate(e.code)),
     nativeAppState: (0, o.useStateFromStores)([d.default], () => d.default.getState(e.code)),
-    authenticated: (0, o.useStateFromStores)([T.default], () => T.default.isAuthenticated()),
+    authenticated: (0, o.useStateFromStores)([m.default], () => m.default.isAuthenticated()),
     defaultRoute: (0, o.useStateFromStores)([N.default], () => N.default.defaultRoute)
   };
-  return (0, s.jsx)(U, {
+  return (0, s.jsx)(j, {
     ...e,
     ...t
   })
 }
 
-function b(e) {
+function G(e) {
   let {
     guildTemplate: t
   } = e, {
     form: n,
     handleSubmit: a
   } = (0, f.default)(t, !1);
-  m.default.flowStep(O.FlowType.ORGANIC_GUILD_TEMPLATES, O.CreateGuildSteps.GUILD_CREATE);
+  T.default.flowStep(x.FlowType.ORGANIC_GUILD_TEMPLATES, x.CreateGuildSteps.GUILD_CREATE);
   let l = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(g.Title, {
       className: P.header,
@@ -181,7 +181,7 @@ function b(e) {
   });
   return (0, s.jsx)(C.default, {
     className: P.authBox,
-    children: () => [(0, s.jsx)(I.default, {
+    children: () => [(0, s.jsx)(_.default, {
       guildTemplate: t
     }, "template"), (0, s.jsx)("div", {
       className: P.formContainer,

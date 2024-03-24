@@ -13,13 +13,13 @@ var s = n("37983"),
   u = n("232259"),
   d = n("393414"),
   c = n("304198"),
-  f = n("843257"),
-  E = n("721629"),
+  E = n("843257"),
+  f = n("721629"),
   _ = n("988521"),
   T = n("49111"),
   I = n("724210"),
   m = n("782340"),
-  N = n("158404");
+  N = n("878008");
 
 function p(e) {
   let {
@@ -79,12 +79,17 @@ function A(e) {
       author: t,
       channel: n,
       message: s
-    } = e, a = n.guild_id, o = (0, u.useUsernameHook)(s.author, n.id, a)(t), {
+    } = e, a = n.guild_id, o = (0, u.useUsernameHook)({
+      user: s.author,
+      channelId: n.id,
+      guildId: a,
+      messageId: s.id
+    })(t), {
       analyticsLocations: c
-    } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), E = s.roleSubscriptionData, _ = l.useCallback(() => {
-      (0, d.transitionTo)(T.Routes.CHANNEL(a, I.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == E ? void 0 : E.role_subscription_listing_id) != null && (0, f.trackRoleSubscriptionPurchaseMessageTierClick)(a, n.id, s.id, E.role_subscription_listing_id)
-    }, [a, n, s, E, c]);
-    return null == E ? null : (0, f.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
+    } = (0, r.default)(i.default.GUILD_ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE), f = s.roleSubscriptionData, _ = l.useCallback(() => {
+      (0, d.transitionTo)(T.Routes.CHANNEL(a, I.StaticChannelRoute.ROLE_SUBSCRIPTIONS), null, null, c), (null == f ? void 0 : f.role_subscription_listing_id) != null && (0, E.trackRoleSubscriptionPurchaseMessageTierClick)(a, n.id, s.id, f.role_subscription_listing_id)
+    }, [a, n, s, f, c]);
+    return null == f ? null : (0, E.getRoleSubscriptionPurchaseSystemMessageFormattedContent)({
       username: t.nick,
       usernameOnClickHandler: o,
       roleSubscriptionOnClickHandler: _,
@@ -106,7 +111,7 @@ function A(e) {
       guildId: _.guild_id,
       user: m.author,
       username: p.nick
-    }), (0, s.jsx)(E.default, {
+    }), (0, s.jsx)(f.default, {
       channel: _,
       message: m
     })]

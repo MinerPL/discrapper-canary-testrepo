@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
     return c
   },
   getBuildOverride: function() {
-    return f
-  },
-  getBuildOverrideMeta: function() {
     return _
   },
+  getBuildOverrideMeta: function() {
+    return f
+  },
   probablyHasBuildOverride: function() {
-    return h
-  },
-  getBuildOverrideExperiments: function() {
-    return g
-  },
-  isBuildOverrideLink: function() {
     return E
   },
+  getBuildOverrideExperiments: function() {
+    return h
+  },
+  isBuildOverrideLink: function() {
+    return m
+  },
   validateURL: function() {
-    return S
+    return I
   }
 }), n("101997"), n("222007");
 var i = n("160679"),
@@ -39,27 +39,43 @@ function c(e) {
   return "".concat(location.protocol, "//").concat(location.host).concat(e)
 }
 
-function f() {
+function _() {
   let e = o.default.safeParseWithQuery(c("/__development/build_overrides"));
-  return null == e ? Promise.resolve(null) : (e.search = null, d && (e.query.version = d), r.default.get({
+  return null == e ? Promise.resolve(null) : (e.search = null, d && (e.query.version = d), r.HTTP.get({
     url: s.format(e),
     oldFormErrors: !0
   }).then(e => e.body || null, () => null))
 }
 
-function _(e) {
+function f(e) {
+  if (S(e)) return Promise.resolve(function(e) {
+    let t = e.match(p);
+    if (null == t || 2 !== t.length) return null;
+    let n = (0, a.getNativePlatform)(),
+      i = t[1];
+    return {
+      targetBuildOverride: {
+        ["discord_".concat(n)]: {
+          type: "branch",
+          id: i
+        }
+      },
+      validForUserIds: [],
+      expiresAt: "Mon, 1 Jan 2038 00:00:00 GMT"
+    }
+  }(e));
   let t = o.default.safeParseWithQuery(e);
-  return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", d && (t.query.version = d), t.host = window.location.host, r.default.get({
+  return null == t ? Promise.resolve(null) : (t.search = null, t.query.meta = "true", d && (t.query.version = d), t.host = window.location.host, r.HTTP.get({
     url: s.format(t),
     oldFormErrors: !0
   }).then(e => e.body || null, () => null))
 }
 
-function h() {
+function E() {
   return -1 !== window.document.cookie.indexOf("".concat(l.BUILD_OVERRIDE_COOKIE_NAME, "="))
 }
 
-function g() {
+function h() {
   try {
     var e;
     let t = i.parse(window.document.cookie)[l.BUILD_OVERRIDE_COOKIE_NAME];
@@ -70,17 +86,26 @@ function g() {
     return {}
   }
 }
-let m = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
+let g = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link?[\\S]+$", "i");
 
-function E(e) {
-  return null != e && m.test(e)
+function m(e) {
+  return null != e && g.test(e)
 }
-let p = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
-  v = new Set(["/__development/link", "/__development/link/"]);
+let p = RegExp("^dev://branch/([\\w-./]+)$", "i");
 
 function S(e) {
+  return null != e && p.test(e)
+}
+let T = new Set(["canary.discord.com", "ptb.discord.com", "discord.com", "canary.discordapp.com", "ptb.discordapp.com", "discordapp.com"]),
+  v = new Set(["/__development/link", "/__development/link/"]);
+
+function I(e) {
+  if (S(e)) return {
+    payload: null,
+    url: e
+  };
   let t = o.default.safeParseWithQuery(e);
-  if (null == t || !p.has(t.hostname) || !("s" in t.query) || !v.has(t.pathname)) return null;
+  if (null == t || !T.has(t.hostname) || !("s" in t.query) || !v.has(t.pathname)) return null;
   for (let e in t.query) "s" !== e && delete t.query[e];
   return {
     payload: t.query.s,

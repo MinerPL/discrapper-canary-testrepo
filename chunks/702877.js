@@ -15,13 +15,13 @@ var a = s("37983"),
   c = s("570697"),
   S = s("49111"),
   E = s("782340"),
-  f = s("515847");
-let T = (0, u.uid)(),
-  m = (0, d.createChannelRecord)({
+  T = s("97236");
+let f = (0, u.uid)(),
+  _ = (0, d.createChannelRecord)({
     id: "1",
     type: S.ChannelTypes.DM
   }),
-  _ = (0, u.uid)();
+  m = (0, u.uid)();
 
 function g(e) {
   let {
@@ -31,8 +31,8 @@ function g(e) {
     pendingBio: u,
     placeholder: g,
     currentBio: h,
-    disabled: I = !1
-  } = e, [N, p] = n.useState(null != u ? u : h), [C, A] = n.useState((0, r.toRichValue)(N)), O = n.useRef(!1);
+    disabled: N = !1
+  } = e, [I, p] = n.useState(null != u ? u : h), [C, A] = n.useState((0, r.toRichValue)(I)), O = n.useRef(!1);
   return n.useEffect(() => {
     if (void 0 === u) {
       let e = (0, r.toRichValue)(h);
@@ -40,21 +40,21 @@ function g(e) {
     }
   }, [u, h]), (0, a.jsxs)(c.default, {
     title: t,
-    titleId: T,
+    titleId: f,
     description: E.default.Messages.USER_SETTINGS_ABOUT_ME_DETAILS,
     errors: s,
-    disabled: I,
+    disabled: N,
     children: [(0, a.jsx)(o.default, {
-      "aria-describedby": _,
-      "aria-labelledby": T,
-      innerClassName: f.bioTextArea,
+      "aria-describedby": m,
+      "aria-labelledby": f,
+      innerClassName: T.bioTextArea,
       maxCharacterCount: S.BIO_MAX_LENGTH,
       onChange: function(e, t, s) {
-        t !== N && (p(t), A(s), d(t))
+        t !== I && (p(t), A(s), d(t))
       },
       placeholder: g,
-      channel: m,
-      textValue: N,
+      channel: _,
+      textValue: I,
       richValue: C,
       type: i.ChatInputTypes.PROFILE_BIO_INPUT,
       onBlur: () => {
@@ -73,7 +73,7 @@ function g(e) {
         })
       }
     }), (0, a.jsx)(l.HiddenVisually, {
-      id: _,
+      id: m,
       children: E.default.Messages.MAXIMUM_LENGTH.format({
         maxLength: S.BIO_MAX_LENGTH
       })

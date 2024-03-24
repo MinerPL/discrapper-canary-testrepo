@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   FileUploadIconClassNames: function() {
-    return s
+    return l
   },
   DEFAULT_FILE_UPLOAD_ICONS: function() {
-    return a
+    return s
   },
   EMOJI_FILE_UPLOAD_ICONS: function() {
     return o
   }
 });
-var i, r, l = n("831839");
-(i = r || (r = {}))[i.IMAGE = 0] = "IMAGE", i[i.DOCUMENT = 1] = "DOCUMENT", i[i.CODE = 2] = "CODE";
-let s = {
-    0: l.image,
-    1: l.document,
-    2: l.code
+var r, i, a = n("1065");
+(r = i || (i = {}))[r.IMAGE = 0] = "IMAGE", r[r.DOCUMENT = 1] = "DOCUMENT", r[r.CODE = 2] = "CODE";
+let l = {
+    0: a.image,
+    1: a.document,
+    2: a.code
   },
-  a = [1, 0, 2],
+  s = [1, 0, 2],
   o = [0, 0, 0]

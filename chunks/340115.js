@@ -6,9 +6,11 @@ n.r(t), n.d(t, {
   default: function() {
     return s
   }
-}), n("702976");
+}), n("702976"), n("222007");
 var i, s, r, a = n("44170"),
-  o = n("590401");
+  o = n("590401"),
+  l = n("299039"),
+  u = n("49111");
 (r = i || (i = {}))[r.DISPATCH = 0] = "DISPATCH", r[r.HEARTBEAT = 1] = "HEARTBEAT", r[r.IDENTIFY = 2] = "IDENTIFY", r[r.PRESENCE_UPDATE = 3] = "PRESENCE_UPDATE", r[r.VOICE_STATE_UPDATE = 4] = "VOICE_STATE_UPDATE", r[r.VOICE_SERVER_PING = 5] = "VOICE_SERVER_PING", r[r.RESUME = 6] = "RESUME", r[r.RECONNECT = 7] = "RECONNECT", r[r.REQUEST_GUILD_MEMBERS = 8] = "REQUEST_GUILD_MEMBERS", r[r.INVALID_SESSION = 9] = "INVALID_SESSION", r[r.HELLO = 10] = "HELLO", r[r.HEARTBEAT_ACK = 11] = "HEARTBEAT_ACK", r[r.CALL_CONNECT = 13] = "CALL_CONNECT", r[r.GUILD_SUBSCRIPTIONS = 14] = "GUILD_SUBSCRIPTIONS", r[r.LOBBY_CONNECT = 15] = "LOBBY_CONNECT", r[r.LOBBY_DISCONNECT = 16] = "LOBBY_DISCONNECT", r[r.LOBBY_VOICE_STATES_UPDATE = 17] = "LOBBY_VOICE_STATES_UPDATE", r[r.STREAM_CREATE = 18] = "STREAM_CREATE", r[r.STREAM_DELETE = 19] = "STREAM_DELETE", r[r.STREAM_WATCH = 20] = "STREAM_WATCH", r[r.STREAM_PING = 21] = "STREAM_PING", r[r.STREAM_SET_PAUSED = 22] = "STREAM_SET_PAUSED", r[r.REQUEST_GUILD_APPLICATION_COMMANDS = 24] = "REQUEST_GUILD_APPLICATION_COMMANDS", r[r.EMBEDDED_ACTIVITY_LAUNCH = 25] = "EMBEDDED_ACTIVITY_LAUNCH", r[r.EMBEDDED_ACTIVITY_CLOSE = 26] = "EMBEDDED_ACTIVITY_CLOSE", r[r.EMBEDDED_ACTIVITY_UPDATE = 27] = "EMBEDDED_ACTIVITY_UPDATE", r[r.REQUEST_FORUM_UNREADS = 28] = "REQUEST_FORUM_UNREADS", r[r.REMOTE_COMMAND = 29] = "REMOTE_COMMAND", r[r.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH", r[r.REQUEST_SOUNDBOARD_SOUNDS = 31] = "REQUEST_SOUNDBOARD_SOUNDS", r[r.SPEED_TEST_CREATE = 32] = "SPEED_TEST_CREATE", r[r.SPEED_TEST_DELETE = 33] = "SPEED_TEST_DELETE", r[r.REQUEST_LAST_MESSAGES = 34] = "REQUEST_LAST_MESSAGES", r[r.SEARCH_RECENT_MEMBERS = 35] = "SEARCH_RECENT_MEMBERS", r[r.REQUEST_CHANNEL_STATUSES = 36] = "REQUEST_CHANNEL_STATUSES", r[r.GUILD_SUBSCRIPTIONS_BULK = 37] = "GUILD_SUBSCRIPTIONS_BULK", s = class extends a.EventEmitter {
   presenceUpdate(e, t, n, i, s) {
     this.send(3, {
@@ -27,28 +29,29 @@ var i, s, r, a = n("44170"),
       selfDeaf: s = !1,
       selfVideo: r = !1,
       preferredRegion: a = null,
-      videoStreamParameters: l = null,
-      flags: u = 0
-    } = e, d = {
+      preferredRegions: l = null,
+      videoStreamParameters: u = null,
+      flags: d = 0
+    } = e, c = {
       guild_id: t,
       channel_id: n,
       self_mute: i,
       self_deaf: s,
       self_video: r,
-      flags: u
+      flags: d
     };
-    null != n && o.default.shouldIncludePreferredRegion() && (d.preferred_region = a), null != l && (d.tracks = null == l ? void 0 : l.map(e => ({
+    null != n && o.default.shouldIncludePreferredRegion() && (c.preferred_region = a, c.preferred_regions = l), null != u && (c.tracks = null == u ? void 0 : u.map(e => ({
       type: e.type,
       rid: e.rid,
       quality: e.quality
-    }))), this.send(4, d)
+    }))), this.send(4, c)
   }
   voiceServerPing() {
     this.send(5, null)
   }
   embeddedActivityClose(e, t, n) {
     this.send(26, {
-      guild_id: null != e ? e : "0",
+      guild_id: null != e ? e : u.ZERO_STRING_GUILD_ID,
       channel_id: t,
       application_id: n
     })
@@ -80,8 +83,16 @@ var i, s, r, a = n("44170"),
     })
   }
   updateGuildSubscriptions(e) {
-    this.send(37, {
-      subscriptions: e
+    let t = {},
+      n = 0;
+    l.default.keys(e).forEach(i => {
+      let s = e[i],
+        r = JSON.stringify([i, s]).length;
+      n + r > 15360 && (this.send(37, {
+        subscriptions: t
+      }), t = {}, n = 0), t[i] = s, n += r
+    }), n > 0 && this.send(37, {
+      subscriptions: t
     })
   }
   callConnect(e) {

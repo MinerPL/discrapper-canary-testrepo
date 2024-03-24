@@ -15,7 +15,7 @@ async function r(e, t, l, r) {
       buildId: l
     });
     try {
-      let n = await a.default.post({
+      let n = await a.HTTP.post({
         url: i.Endpoints.APPLICATION_BUILD_SIZE(e, t, l),
         body: {
           manifest_ids: r

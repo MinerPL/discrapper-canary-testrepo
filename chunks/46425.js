@@ -13,12 +13,12 @@ var a = l("641761"),
   c = l("412707"),
   o = l("646186"),
   d = l("721908"),
-  u = l("499139"),
-  p = l("649135"),
-  m = l("983616"),
+  u = l("413989"),
+  m = l("649135"),
+  p = l("983616"),
   _ = l("49111"),
   f = l("782340"),
-  h = l("971441");
+  h = l("85911");
 let C = new Map([
     ["890343617762304070", {
       imageSrc: l("311537")
@@ -47,16 +47,16 @@ function A(e) {
       guildIconSize: r.GuildIconSize.SMALL,
       compact: !0
     }) : null,
-    p = null !== (l = null === (t = n.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0,
-    _ = p > 0 ? f.default.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
-      guildCount: p
+    m = null !== (l = null === (t = n.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0,
+    _ = m > 0 ? f.default.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
+      guildCount: m
     }) : void 0;
-  return (0, i.jsx)(m.default, {
+  return (0, i.jsx)(p.default, {
     imageSrc: c.imageSrc,
     header: a.data.name,
     description: a.data.description,
     secondaryInfo: _,
-    ctaLabel: f.default.Messages.APPLICATION_ADD_TO_SERVER,
+    ctaLabel: f.default.Messages.APPLICATION_ADD_BUTTON,
     mutualGuildCount: u,
     onCtaClick: () => (0, o.goToApplication)({
       applicationId: n.id
@@ -68,7 +68,7 @@ function E(e) {
   let {
     result: t
   } = e, l = g.get(t.data.id);
-  return null == l ? null : (0, i.jsx)(m.default, {
+  return null == l ? null : (0, i.jsx)(p.default, {
     imageSrc: l.imageSrc,
     header: t.data.name,
     description: t.data.description,
@@ -88,7 +88,7 @@ function v(e) {
       cta: "spotify",
       guild_id: o
     }), (0, n.default)("https://support.discord.com/hc/en-us/articles/360000167212-Discord-Spotify-Connection")
-  }), null == t || null == l || null == a) ? null : (0, i.jsx)(m.default, {
+  }), null == t || null == l || null == a) ? null : (0, i.jsx)(p.default, {
     imageSrc: d.imageSrc,
     header: t,
     description: l,
@@ -120,7 +120,7 @@ function x(e) {
           result: e
         }, n)
       })
-    }), (0, i.jsx)(p.default, {
+    }), (0, i.jsx)(m.default, {
       guildId: l
     })]
   })

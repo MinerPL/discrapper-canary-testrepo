@@ -13,13 +13,6 @@ var i, s, r = n("627445"),
   static clearAll() {
     e.allStores.forEach(e => e.clear())
   }
-  registerActionHandlers(e) {
-    return a(!("CLEAR_CACHES" in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"), a(!("WRITE_CACHES" in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"), super.registerActionHandlers({
-      ...e,
-      CLEAR_CACHES: () => this.clear(),
-      WRITE_CACHES: () => this.save()
-    })
-  }
   get persistKey() {
     return "".concat(this.getClass().displayName, "-snapshot")
   }
@@ -36,7 +29,11 @@ var i, s, r = n("627445"),
   getClass() {
     return this.constructor
   }
-  constructor() {
-    super(u.default, null), a(null != this.getClass().displayName, "Snapshot stores need a display name"), e.allStores.push(this)
+  constructor(t) {
+    super(u.default, {
+      ...t,
+      CLEAR_CACHES: () => this.clear(),
+      WRITE_CACHES: () => this.save()
+    }), a(null != this.getClass().displayName, "Snapshot stores need a display name"), a(!("CLEAR_CACHES" in t), "SnapshotStores cannot use the 'CLEAR_CACHES' action"), a(!("WRITE_CACHES" in t), "SnapshotStores cannot use the 'WRITE_CACHES' action"), e.allStores.push(this)
   }
 }).allStores = [], s = i

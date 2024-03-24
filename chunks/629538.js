@@ -14,12 +14,6 @@ var a = new class e {
       i = performance.now();
     return r.log("asynchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
   }
-  getSync(e) {
-    let t = performance.now(),
-      n = s.default.emojis(e).getMapEntriesSyncUnsafe(),
-      i = performance.now();
-    return r.log("synchronously loaded in ".concat(i - t, "ms (guilds: ").concat(n.length, ")")), n
-  }
   handleConnectionOpen(e, t) {
     for (let n of e.guilds) this.handleOneGuildCreate(n, t)
   }
@@ -44,18 +38,12 @@ var a = new class e {
   handleOneGuildCreate(e, t) {
     null != e.emojiUpdates ? this.update(e.id, e.emojiUpdates.writes, e.emojiUpdates.deletes, t) : null != e.emojis && this.replace(e.id, e.emojis, t)
   }
-  handleClearGuildCache(e) {
-    this.clear(e)
-  }
-  handleReset() {}
+  resetInMemoryState() {}
   replace(e, t, n) {
     s.default.emojisTransaction(n).replaceAll(e, t)
   }
   delete(e, t) {
     s.default.emojisTransaction(t).delete(e)
-  }
-  clear(e) {
-    s.default.emojisTransaction(e).delete()
   }
   update(e, t, n, i) {
     let r = s.default.emojisTransaction(i);
@@ -64,7 +52,6 @@ var a = new class e {
   constructor() {
     this.actions = {
       BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
-      CLEAR_GUILD_CACHE: (e, t) => this.handleClearGuildCache(t),
       CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
       GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),
       GUILD_DELETE: (e, t) => this.handleGuildDelete(e, t),

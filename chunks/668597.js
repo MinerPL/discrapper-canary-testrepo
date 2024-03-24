@@ -34,10 +34,9 @@ i = class {
   }
   setTimer(e, t, n) {
     var i;
-    if (null == e || null == t) return;
+    if (null == e || null == t) return !1;
     let s = null == (i = t).end_time ? null : new Date(i.end_time).getTime() - Date.now();
-    if (null == s) return null;
-    this.timers[e] = setTimeout(n, Math.max(0, s))
+    return null != s && (!!(s <= 0) || (this.timers[e] = setTimeout(n, Math.max(0, s)), !1))
   }
   clearTimer(e) {
     null != e && e in this.timers && (clearTimeout(this.timers[e]), delete this.timers[e])

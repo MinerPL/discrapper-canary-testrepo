@@ -13,7 +13,7 @@ var a = n("37983"),
   u = n("206230"),
   d = n("979268"),
   c = n("520899"),
-  f = n("954038");
+  f = n("567356");
 class h extends l.PureComponent {
   componentDidUpdate(e) {
     e.count < this.props.count && !this.props.reducedMotion && r.default.sequence([r.default.timing(this.animationScale, {
@@ -53,7 +53,7 @@ function E(e) {
     location: "f79435_1"
   }, {
     autoTrackExposure: !1
-  }), l = (0, o.default)([c.default], () => n ? c.default.getOverdueMessageReminderCount() : 0, [n]), s = (0, o.default)([u.default], () => u.default.useReducedMotion);
+  }), l = (0, o.useStateFromStores)([c.default], () => n ? c.default.getOverdueMessageReminderCount() : 0, [n]), s = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion);
   return n ? (0, a.jsx)(h, {
     count: l,
     className: t,

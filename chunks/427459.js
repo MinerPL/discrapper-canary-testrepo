@@ -1,97 +1,90 @@
 "use strict";
-i.r(t), i.d(t, {
+_.r(t), _.d(t, {
   PerkIcons: function() {
-    return _
+    return i
   },
   getNextTier: function() {
-    return M
+    return S
   },
   getTotalStickerCountForTier: function() {
-    return f
+    return U
   },
   getIncrementalStickerCountForTier: function() {
-    return c
+    return M
   },
   getTotalSoundboardSoundCountForTier: function() {
-    return L
+    return D
   },
   getIncrementalSoundboardSoundCountForTier: function() {
-    return D
+    return f
   },
   getTiers: function() {
     return N
   },
   getTierName: function() {
-    return P
+    return c
   },
   getShortenedTierName: function() {
-    return O
+    return L
   },
   minimumRequiredTierForGuildFeature: function() {
-    return B
+    return P
   },
   boostedGuildTierToAnalyticsObjectType: function() {
-    return A
+    return O
   },
   getGuildTierFromAppliedBoostCount: function() {
-    return p
-  },
-  getNextGuildTierFromAppliedBoostCount: function() {
-    return g
-  },
-  getAppliedGuildBoostMonths: function() {
-    return m
+    return B
   },
   isGuildBoostedAtLeast: function() {
-    return C
+    return A
   },
   isTierUnlocked: function() {
-    return b
+    return C
   },
   getAvailableGuildBoostSlots: function() {
-    return K
+    return g
   },
   generateBlockGuildSubscriptionPurchasesNode: function() {
-    return y
+    return m
   },
   isInGracePeriod: function() {
-    return h
+    return p
   },
   appliedGuildBoostsRequiredForPerks: function() {
-    return F
+    return K
   },
   getAppliedGuildBoostsRequired: function() {
-    return v
+    return b
   },
   getGracePeriodEndingDate: function() {
-    return w
+    return v
   },
   getAvailableStickerSlotCount: function() {
-    return V
+    return y
   },
   getAvailableSoundboardSoundCount: function() {
-    return j
+    return F
   },
   getNumberOfAppliedBoostsNeededForTier: function() {
-    return x
+    return H
   },
   isGuildBoostSlotCanceled: function() {
-    return k
+    return V
   }
-}), i("70102"), i("222007"), i("808653");
-var _, s, o = i("917351"),
-  I = i.n(o),
-  u = i("866227"),
-  r = i.n(u),
-  T = i("625634"),
-  d = i("521012"),
-  l = i("993105"),
-  n = i("449008"),
-  E = i("701909"),
-  a = i("719923"),
-  S = i("49111"),
-  R = i("646718"),
-  G = i("782340");
+}), _("70102"), _("222007"), _("808653");
+var i, s, I = _("917351"),
+  T = _.n(I);
+_("866227");
+var o = _("625634"),
+  u = _("521012"),
+  E = _("993105"),
+  r = _("449008"),
+  l = _("701909"),
+  d = _("719923"),
+  n = _("49111"),
+  a = _("646718"),
+  R = _("782340");
 Object.freeze({
   1: 1,
   2: 2,
@@ -102,338 +95,327 @@ Object.freeze({
   7: 15,
   8: 18,
   9: 24
-}), (s = _ || (_ = {}))[s.EMOJI = 1] = "EMOJI", s[s.AUDIO = 2] = "AUDIO", s[s.ANIMATED = 3] = "ANIMATED", s[s.CUSTOMIZATION = 4] = "CUSTOMIZATION", s[s.UPLOAD = 5] = "UPLOAD", s[s.VANITY = 6] = "VANITY", s[s.STREAM = 7] = "STREAM", s[s.STICKER = 8] = "STICKER", s[s.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", s[s.STAGE_VIDEO = 12] = "STAGE_VIDEO", s[s.SOUNDBOARD = 13] = "SOUNDBOARD";
-let U = [S.BoostedGuildTiers.NONE, S.BoostedGuildTiers.TIER_1, S.BoostedGuildTiers.TIER_2, S.BoostedGuildTiers.TIER_3],
-  M = (e, t) => {
-    var i;
-    return e === S.BoostedGuildTiers.NONE ? S.BoostedGuildTiers.TIER_1 : null === (i = Y(t).find(t => t.tier === e)) || void 0 === i ? void 0 : i.nextTier
+}), (s = i || (i = {}))[s.EMOJI = 1] = "EMOJI", s[s.AUDIO = 2] = "AUDIO", s[s.ANIMATED = 3] = "ANIMATED", s[s.CUSTOMIZATION = 4] = "CUSTOMIZATION", s[s.UPLOAD = 5] = "UPLOAD", s[s.VANITY = 6] = "VANITY", s[s.STREAM = 7] = "STREAM", s[s.STICKER = 8] = "STICKER", s[s.CUSTOM_ROLE_ICON = 11] = "CUSTOM_ROLE_ICON", s[s.STAGE_VIDEO = 12] = "STAGE_VIDEO", s[s.SOUNDBOARD = 13] = "SOUNDBOARD";
+let G = [n.BoostedGuildTiers.NONE, n.BoostedGuildTiers.TIER_1, n.BoostedGuildTiers.TIER_2, n.BoostedGuildTiers.TIER_3],
+  S = (e, t) => {
+    var _;
+    return e === n.BoostedGuildTiers.NONE ? n.BoostedGuildTiers.TIER_1 : null === (_ = h(t).find(t => t.tier === e)) || void 0 === _ ? void 0 : _.nextTier
   },
-  f = e => R.TotalStickerCountsByTier[e],
-  c = e => R.IncrementalStickerCountsByTier[e],
-  L = e => R.TotalSoundboardSoundCountsByTier[e],
-  D = e => {
-    if (e === S.BoostedGuildTiers.NONE) return R.TotalSoundboardSoundCountsByTier[e];
-    let t = U[U.indexOf(e) - 1];
-    return R.TotalSoundboardSoundCountsByTier[e] - R.TotalSoundboardSoundCountsByTier[t]
+  U = e => a.TotalStickerCountsByTier[e],
+  M = e => a.IncrementalStickerCountsByTier[e],
+  D = e => a.TotalSoundboardSoundCountsByTier[e],
+  f = e => {
+    if (e === n.BoostedGuildTiers.NONE) return a.TotalSoundboardSoundCountsByTier[e];
+    let t = G[G.indexOf(e) - 1];
+    return a.TotalSoundboardSoundCountsByTier[e] - a.TotalSoundboardSoundCountsByTier[t]
   },
   N = e => [{
-    tier: S.BoostedGuildTiers.TIER_1,
-    title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_1,
+    tier: n.BoostedGuildTiers.TIER_1,
+    title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_1,
     perks: [{
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-        adding: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji - R.BoostedGuildFeatures[S.BoostedGuildTiers.NONE].limits.emoji,
-        total: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
+        adding: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_1].limits.emoji - a.BoostedGuildFeatures[n.BoostedGuildTiers.NONE].limits.emoji,
+        total: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_1].limits.emoji
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_EMOJI,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_EMOJI,
       icon: 1
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: c(S.BoostedGuildTiers.TIER_1),
-        total: f(S.BoostedGuildTiers.TIER_1)
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
+        adding: M(n.BoostedGuildTiers.TIER_1),
+        total: U(n.BoostedGuildTiers.TIER_1)
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STICKER,
       icon: 8
     }, {
-      title: G.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-        soundCount: D(S.BoostedGuildTiers.TIER_1),
-        totalSoundCount: L(S.BoostedGuildTiers.TIER_1)
+      title: R.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
+        soundCount: f(n.BoostedGuildTiers.TIER_1),
+        totalSoundCount: D(n.BoostedGuildTiers.TIER_1)
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SOUNDBOARD,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SOUNDBOARD,
       icon: 13
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-        bitrate: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.bitrate / 1e3
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
+        bitrate: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_1].limits.bitrate / 1e3
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_AUDIO_QUALITY,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_AUDIO_QUALITY,
       icon: 2
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_ANIMATED_GUILD_ICON,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_ANIMATED_GUILD_ICON.format(),
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_ANIMATED_GUILD_ICON,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_ANIMATED_GUILD_ICON.format(),
       icon: 3
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_SPLASH,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SPLASH,
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_SPLASH,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_SPLASH,
       icon: 4
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_STREAMING,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STREAMING,
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_1_STREAMING,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_1_STREAMING,
       icon: 7
-    }].filter(n.isNotNullish)
+    }].filter(r.isNotNullish)
   }, {
-    tier: S.BoostedGuildTiers.TIER_2,
-    title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_2,
+    tier: n.BoostedGuildTiers.TIER_2,
+    title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_2,
     perks: [{
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-        adding: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji - R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_1].limits.emoji,
-        total: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
+        adding: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_2].limits.emoji - a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_1].limits.emoji,
+        total: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_2].limits.emoji
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_EMOJI,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_EMOJI,
       icon: 1
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: c(S.BoostedGuildTiers.TIER_2),
-        total: f(S.BoostedGuildTiers.TIER_2)
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
+        adding: M(n.BoostedGuildTiers.TIER_2),
+        total: U(n.BoostedGuildTiers.TIER_2)
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STICKER,
       icon: 8
     }, {
-      title: G.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-        soundCount: D(S.BoostedGuildTiers.TIER_2),
-        totalSoundCount: L(S.BoostedGuildTiers.TIER_2)
+      title: R.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
+        soundCount: f(n.BoostedGuildTiers.TIER_2),
+        totalSoundCount: D(n.BoostedGuildTiers.TIER_2)
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_SOUNDBOARD,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_SOUNDBOARD,
       icon: 13
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-        bitrate: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.bitrate / 1e3
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
+        bitrate: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_2].limits.bitrate / 1e3
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_AUDIO_QUALITY,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_AUDIO_QUALITY,
       icon: 2
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_BANNER,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_BANNER,
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_BANNER,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_BANNER,
       icon: 4
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-        fileSize: (0, l.formatSize)(R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.fileSize / 1024, {
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
+        fileSize: (0, E.formatSize)(a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_2].limits.fileSize / 1024, {
           useKibibytes: !0
         })
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_UPLOAD_LIMIT.format(),
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_UPLOAD_LIMIT.format(),
       icon: 5
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_STREAMING,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STREAMING,
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_STREAMING,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_STREAMING,
       icon: 7
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_CUSTOM_ROLE_ICONS,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_CUSTOM_ROLE_ICONS,
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_2_CUSTOM_ROLE_ICONS,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_2_CUSTOM_ROLE_ICONS,
       icon: 11
     }, e ? {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-        limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
+        limit: n.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-        limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
+        limit: n.MAX_STAGE_VIDEO_USER_LIMIT_TIER2
       }),
       icon: 12
-    } : null].filter(n.isNotNullish)
+    } : null].filter(r.isNotNullish)
   }, {
-    tier: S.BoostedGuildTiers.TIER_3,
-    title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_3,
+    tier: n.BoostedGuildTiers.TIER_3,
+    title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_3,
     perks: [{
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
-        adding: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.emoji - R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_2].limits.emoji,
-        total: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.emoji
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_EMOJI.format({
+        adding: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_3].limits.emoji - a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_2].limits.emoji,
+        total: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_3].limits.emoji
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_EMOJI,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_EMOJI,
       icon: 1
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
-        adding: c(S.BoostedGuildTiers.TIER_3),
-        total: f(S.BoostedGuildTiers.TIER_3)
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_STICKER.format({
+        adding: M(n.BoostedGuildTiers.TIER_3),
+        total: U(n.BoostedGuildTiers.TIER_3)
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_STICKER,
       icon: 8
     }, {
-      title: G.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
-        soundCount: D(S.BoostedGuildTiers.TIER_3),
-        totalSoundCount: L(S.BoostedGuildTiers.TIER_3)
+      title: R.default.Messages.SOUNDBOARD_MARKETING_BOOSTING_PERKS.format({
+        soundCount: f(n.BoostedGuildTiers.TIER_3),
+        totalSoundCount: D(n.BoostedGuildTiers.TIER_3)
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_SOUNDBOARD,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_SOUNDBOARD,
       icon: 13
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
-        bitrate: R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.bitrate / 1e3
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_AUDIO_QUALITY.format({
+        bitrate: a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_3].limits.bitrate / 1e3
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_AUDIO_QUALITY,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_AUDIO_QUALITY,
       icon: 2
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_VANITY_URL,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({
-        helpdeskArticle: E.default.getArticleURL(S.HelpdeskArticles.GUILD_VANITY_URL)
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_VANITY_URL,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_VANITY_URL.format({
+        helpdeskArticle: l.default.getArticleURL(n.HelpdeskArticles.GUILD_VANITY_URL)
       }),
       icon: 6
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
-        fileSize: (0, l.formatSize)(R.BoostedGuildFeatures[S.BoostedGuildTiers.TIER_3].limits.fileSize / 1024, {
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_ANY_UPLOAD_LIMIT.format({
+        fileSize: (0, E.formatSize)(a.BoostedGuildFeatures[n.BoostedGuildTiers.TIER_3].limits.fileSize / 1024, {
           useKibibytes: !0
         })
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_UPLOAD_LIMIT.format(),
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_UPLOAD_LIMIT.format(),
       icon: 5
     }, {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_ANIMATED_BANNER,
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_ANIMATED_BANNER,
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_TIER_3_ANIMATED_BANNER,
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_DESCRIPTION_TIER_3_ANIMATED_BANNER,
       icon: 3
     }, e ? {
-      title: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-        limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
+      title: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
+        limit: n.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
       }),
-      description: G.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
-        limit: S.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
+      description: R.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERK_TITLE_VIDEO_STAGE.format({
+        limit: n.MAX_STAGE_VIDEO_USER_LIMIT_TIER3
       }),
       icon: 12
-    } : null].filter(n.isNotNullish)
+    } : null].filter(r.isNotNullish)
   }];
 
-function P(e) {
+function c(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
-      useLevels: i = !0
+      useLevels: _ = !0
     } = t;
   switch (e) {
-    case S.BoostedGuildTiers.NONE:
-      return i ? G.default.Messages.PREMIUM_GUILD_TIER_0 : G.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME;
-    case S.BoostedGuildTiers.TIER_1:
-      return G.default.Messages.PREMIUM_GUILD_TIER_1;
-    case S.BoostedGuildTiers.TIER_2:
-      return G.default.Messages.PREMIUM_GUILD_TIER_2;
-    case S.BoostedGuildTiers.TIER_3:
-      return G.default.Messages.PREMIUM_GUILD_TIER_3;
+    case n.BoostedGuildTiers.NONE:
+      return _ ? R.default.Messages.PREMIUM_GUILD_TIER_0 : R.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_NONE_NAME;
+    case n.BoostedGuildTiers.TIER_1:
+      return R.default.Messages.PREMIUM_GUILD_TIER_1;
+    case n.BoostedGuildTiers.TIER_2:
+      return R.default.Messages.PREMIUM_GUILD_TIER_2;
+    case n.BoostedGuildTiers.TIER_3:
+      return R.default.Messages.PREMIUM_GUILD_TIER_3;
     default:
       throw Error("Not a valid tier type")
   }
 }
 
-function O(e) {
+function L(e) {
   switch (e) {
-    case S.BoostedGuildTiers.NONE:
-      return G.default.Messages.PREMIUM_GUILD_TIER_0;
-    case S.BoostedGuildTiers.TIER_1:
-      return G.default.Messages.PREMIUM_GUILD_TIER_1_SHORT;
-    case S.BoostedGuildTiers.TIER_2:
-      return G.default.Messages.PREMIUM_GUILD_TIER_2_SHORT;
-    case S.BoostedGuildTiers.TIER_3:
-      return G.default.Messages.PREMIUM_GUILD_TIER_3_SHORT;
+    case n.BoostedGuildTiers.NONE:
+      return R.default.Messages.PREMIUM_GUILD_TIER_0;
+    case n.BoostedGuildTiers.TIER_1:
+      return R.default.Messages.PREMIUM_GUILD_TIER_1_SHORT;
+    case n.BoostedGuildTiers.TIER_2:
+      return R.default.Messages.PREMIUM_GUILD_TIER_2_SHORT;
+    case n.BoostedGuildTiers.TIER_3:
+      return R.default.Messages.PREMIUM_GUILD_TIER_3_SHORT;
     default:
       throw Error("Not a valid tier type")
   }
 }
-let B = I.memoize(e => (0, R.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_1].features.includes(e) ? S.BoostedGuildTiers.TIER_1 : (0, R.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_2].features.includes(e) ? S.BoostedGuildTiers.TIER_2 : (0, R.BoostedGuildFeatures)[S.BoostedGuildTiers.TIER_3].features.includes(e) ? S.BoostedGuildTiers.TIER_3 : null),
-  A = e => {
-    if (e === S.BoostedGuildTiers.NONE) return S.AnalyticsObjectTypes.NONE;
-    if (e === S.BoostedGuildTiers.TIER_1) return S.AnalyticsObjectTypes.TIER_1;
-    if (e === S.BoostedGuildTiers.TIER_2) return S.AnalyticsObjectTypes.TIER_2;
-    else if (e === S.BoostedGuildTiers.TIER_3) return S.AnalyticsObjectTypes.TIER_3;
+let P = T.memoize(e => (0, a.BoostedGuildFeatures)[n.BoostedGuildTiers.TIER_1].features.includes(e) ? n.BoostedGuildTiers.TIER_1 : (0, a.BoostedGuildFeatures)[n.BoostedGuildTiers.TIER_2].features.includes(e) ? n.BoostedGuildTiers.TIER_2 : (0, a.BoostedGuildFeatures)[n.BoostedGuildTiers.TIER_3].features.includes(e) ? n.BoostedGuildTiers.TIER_3 : null),
+  O = e => {
+    if (e === n.BoostedGuildTiers.NONE) return n.AnalyticsObjectTypes.NONE;
+    if (e === n.BoostedGuildTiers.TIER_1) return n.AnalyticsObjectTypes.TIER_1;
+    if (e === n.BoostedGuildTiers.TIER_2) return n.AnalyticsObjectTypes.TIER_2;
+    else if (e === n.BoostedGuildTiers.TIER_3) return n.AnalyticsObjectTypes.TIER_3;
     return null
   };
 
-function p(e, t) {
-  for (let i of Y(t))
-    if (e >= i.amount) return i.tier;
-  return S.BoostedGuildTiers.NONE
+function B(e, t) {
+  for (let _ of h(t))
+    if (e >= _.amount) return _.tier;
+  return n.BoostedGuildTiers.NONE
 }
 
-function g(e, t) {
-  for (let i of Y(t))
-    if (e >= i.amount) return i.nextTier;
-  return S.BoostedGuildTiers.TIER_1
-}
-
-function m(e) {
-  var t;
-  return null !== (t = r().diff(r(e), "months")) && void 0 !== t ? t : 1
-}
-
-function C(e, t) {
+function A(e, t) {
   return null == t || null != e && e >= t
 }
 
-function b(e, t) {
-  return C(e.premiumTier, t)
+function C(e, t) {
+  return A(e.premiumTier, t)
 }
 
-function K(e) {
-  return I.values(e).filter(e => e.isAvailable())
+function g(e) {
+  return T.values(e).filter(e => e.isAvailable())
 }
 
-function y() {
-  let e = d.default.getPremiumTypeSubscription(),
-    t = Object.values(T.default.boostSlots),
+function m() {
+  let e = u.default.getPremiumTypeSubscription(),
+    t = Object.values(o.default.boostSlots),
     {
-      numAvailableGuildBoostSlots: i,
-      numCanceledGuildBoostSlots: _
-    } = t.reduce((e, t) => (k(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+      numAvailableGuildBoostSlots: _,
+      numCanceledGuildBoostSlots: i
+    } = t.reduce((e, t) => (V(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
       numAvailableGuildBoostSlots: 0,
       numCanceledGuildBoostSlots: 0
     });
-  if (null == e || i > 0) return null;
-  if (e.status === S.SubscriptionStatusTypes.PAST_DUE) return G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
-  if (e.status === S.SubscriptionStatusTypes.ACCOUNT_HOLD) return G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
-  if (_ > 0) return G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
+  if (null == e || _ > 0) return null;
+  if (e.status === n.SubscriptionStatusTypes.PAST_DUE) return R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
+  if (e.status === n.SubscriptionStatusTypes.ACCOUNT_HOLD) return R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
+  if (i > 0) return R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION;
   if (null == e.renewalMutations) return null;
-  let s = a.getNumPremiumGuildSubscriptions(e.renewalMutations.additionalPlans),
-    o = a.getNumPremiumGuildSubscriptions(e.additionalPlans);
-  return o > s ? G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION : G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN
+  let s = d.getNumPremiumGuildSubscriptions(e.renewalMutations.additionalPlans),
+    I = d.getNumPremiumGuildSubscriptions(e.additionalPlans);
+  return I > s ? R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PREMIUM_GUILD_SUBSCRIPTION : R.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_PENDING_MUTATION_PLAN
 }
 
-function h(e, t) {
-  return F(e, t) > 0
+function p(e, t) {
+  return K(e, t) > 0
 }
 
-function F(e, t) {
-  let i = p(e.length, t),
-    _ = v(t)[i],
+function K(e, t) {
+  let _ = B(e.length, t),
+    i = b(t)[_],
     s = e.filter(e => null != e.endsAt);
-  return _ - (e.length - s.length)
+  return i - (e.length - s.length)
 }
 
-function v(e) {
-  return S.AppliedGuildBoostsRequiredForBoostedGuildTier
+function b(e) {
+  return n.AppliedGuildBoostsRequiredForBoostedGuildTier
 }
 
-function Y(e) {
-  let t = v(e);
+function h(e) {
+  let t = b(e);
   return [{
-    tier: S.BoostedGuildTiers.TIER_3,
-    amount: t[S.BoostedGuildTiers.TIER_3],
+    tier: n.BoostedGuildTiers.TIER_3,
+    amount: t[n.BoostedGuildTiers.TIER_3],
     nextTier: null
   }, {
-    tier: S.BoostedGuildTiers.TIER_2,
-    amount: t[S.BoostedGuildTiers.TIER_2],
-    nextTier: S.BoostedGuildTiers.TIER_3
+    tier: n.BoostedGuildTiers.TIER_2,
+    amount: t[n.BoostedGuildTiers.TIER_2],
+    nextTier: n.BoostedGuildTiers.TIER_3
   }, {
-    tier: S.BoostedGuildTiers.TIER_1,
-    amount: t[S.BoostedGuildTiers.TIER_1],
-    nextTier: S.BoostedGuildTiers.TIER_2
+    tier: n.BoostedGuildTiers.TIER_1,
+    amount: t[n.BoostedGuildTiers.TIER_1],
+    nextTier: n.BoostedGuildTiers.TIER_2
   }]
 }
 
-function w(e, t) {
-  let i = F(e, t);
-  if (i > 0) {
+function v(e, t) {
+  let _ = K(e, t);
+  if (_ > 0) {
     let t = e.sort((e, t) => null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1).filter(e => null != e.endsAt),
-      _ = t[t.length - i];
-    return _.endsAt
+      i = t[t.length - _];
+    return i.endsAt
   }
   return null
 }
 
-function V(e, t) {
-  let i = c(t),
-    _ = U.indexOf(t);
-  if (-1 === _) return 0;
-  let s = U[_ - 1],
-    o = null != s ? f(s) : 0,
-    I = f(t);
-  return Math.max(0, i - e.slice(o, I).length)
-}
-
-function j(e, t) {
-  let i = U.indexOf(t);
+function y(e, t) {
+  let _ = M(t),
+    i = G.indexOf(t);
   if (-1 === i) return 0;
-  let _ = L(t);
-  return Math.max(0, _ - e.length)
+  let s = G[i - 1],
+    I = null != s ? U(s) : 0,
+    T = U(t);
+  return Math.max(0, _ - e.slice(I, T).length)
 }
 
-function x(e, t) {
-  let i = e.premiumSubscriberCount,
-    _ = v(e.id)[t];
-  return Math.max(0, _ - i)
+function F(e, t) {
+  let _ = G.indexOf(t);
+  if (-1 === _) return 0;
+  let i = D(t);
+  return Math.max(0, i - e.length)
 }
 
-function k(e) {
+function H(e, t) {
+  let _ = e.premiumSubscriberCount,
+    i = b(e.id)[t];
+  return Math.max(0, i - _)
+}
+
+function V(e) {
   var t;
-  return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === S.SubscriptionStatusTypes.CANCELED || e.canceled
+  return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === n.SubscriptionStatusTypes.CANCELED || e.canceled
 }

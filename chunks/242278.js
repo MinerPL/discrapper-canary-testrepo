@@ -1,5 +1,5 @@
 "use strict";
-u.r(e), u.d(e, {
+r.r(e), r.d(e, {
   updateGuildProductListing: function() {
     return o
   },
@@ -16,20 +16,20 @@ u.r(e), u.d(e, {
     return s
   }
 });
-var n = u("872717"),
-  r = u("448993"),
-  i = u("271560"),
-  l = u("49111");
-let o = async (t, e, u) => {
+var u = r("872717"),
+  n = r("448993"),
+  i = r("271560"),
+  l = r("49111");
+let o = async (t, e, r) => {
   let {
     priceTier: i,
     imageName: o,
     createNewRole: c,
     unlinkRole: a,
     ...d
-  } = u;
+  } = r;
   try {
-    let u = await n.default.patch({
+    let r = await u.HTTP.patch({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e),
       body: {
         ...d,
@@ -39,17 +39,17 @@ let o = async (t, e, u) => {
         unlink_role: a
       }
     });
-    return u.body
+    return r.body
   } catch (t) {
-    throw new r.APIError(t)
+    throw new n.APIError(t)
   }
 }, c = async (t, e) => {
   try {
-    await n.default.delete({
+    await u.HTTP.del({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e)
     })
   } catch (t) {
-    throw new r.APIError(t)
+    throw new n.APIError(t)
   }
 }, a = async t => {
   try {
@@ -58,29 +58,29 @@ let o = async (t, e, u) => {
     });
     return e.body.listings
   } catch (t) {
-    throw new r.APIError(t)
+    throw new n.APIError(t)
   }
 }, d = async (t, e) => {
   try {
-    let u = await (0, i.httpGetWithCountryCodeQuery)({
+    let r = await (0, i.httpGetWithCountryCodeQuery)({
       url: l.Endpoints.GUILD_PRODUCT_LISTINGS(t, e)
     });
-    return u.body
+    return r.body
   } catch (t) {
-    throw new r.APIError(t)
+    throw new n.APIError(t)
   }
 }, s = async t => {
   let {
     guildId: e,
-    productId: u,
+    productId: r,
     attachmentId: i
   } = t;
   try {
-    let t = await n.default.post({
-      url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, u, i)
+    let t = await u.HTTP.post({
+      url: l.Endpoints.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, r, i)
     });
     return t.body
   } catch (t) {
-    throw new r.APIError(t)
+    throw new n.APIError(t)
   }
 }

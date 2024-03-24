@@ -1,207 +1,207 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return b
+    return B
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
-  r = s("907002"),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
+  r = s("146606"),
   o = s("446674"),
   d = s("669491"),
   u = s("266491"),
   c = s("819855"),
   E = s("77078"),
   _ = s("841098"),
-  T = s("206230"),
-  I = s("716241"),
+  I = s("206230"),
+  T = s("716241"),
   S = s("137215"),
-  N = s("965397"),
-  g = s("599110"),
-  f = s("659500"),
-  A = s("900938"),
-  L = s("851490"),
-  m = s("131835"),
-  C = s("435076"),
-  O = s("642807"),
-  h = s("330724"),
-  R = s("136278"),
-  D = s("397947"),
-  M = s("259483"),
-  G = s("867928"),
-  x = s("545901"),
-  p = s("706866"),
-  U = s("764151"),
-  v = s("832931"),
-  j = s("49111"),
+  f = s("965397"),
+  m = s("599110"),
+  N = s("659500"),
+  g = s("900938"),
+  h = s("851490"),
+  C = s("131835"),
+  R = s("435076"),
+  x = s("642807"),
+  L = s("330724"),
+  O = s("136278"),
+  A = s("397947"),
+  p = s("259483"),
+  M = s("867928"),
+  D = s("545901"),
+  v = s("706866"),
+  G = s("764151"),
+  j = s("832931"),
+  U = s("49111"),
   P = s("782340"),
-  y = s("505324");
+  b = s("182574");
 
-function b() {
-  let e = (0, o.useStateFromStores)([A.default], () => A.default.getGuild());
-  return null == e ? null : (0, a.jsx)(B, {
+function B() {
+  let e = (0, o.useStateFromStores)([g.default], () => g.default.getGuild());
+  return null == e ? null : (0, a.jsx)(y, {
     guild: e
   })
 }
 
-function B(e) {
+function y(e) {
   let {
     guild: t
-  } = e, l = t.id, A = (0, o.useStateFromStores)([D.default], () => D.default.getCurrentPage()), b = (0, G.default)(l), {
-    hasChanges: B,
+  } = e, n = t.id, g = (0, o.useStateFromStores)([A.default], () => A.default.getCurrentPage()), B = (0, M.default)(n), {
+    hasChanges: y,
     hasConfiguredAnythingForCurrentStep: F,
     hasErrors: H
-  } = (0, o.useStateFromStoresObject)([D.default], () => ({
-    hasChanges: D.default.hasChanges(),
-    hasConfiguredAnythingForCurrentStep: D.default.hasConfiguredAnythingForCurrentStep(),
-    hasErrors: D.default.hasErrors()
-  })), V = (0, o.useStateFromStores)([D.default], () => {
-    let e = (0, M.pageToEducationUpsellType)(A);
-    return null != e && !D.default.isEducationUpsellDismissed(e)
-  }), w = (0, o.useStateFromStores)([T.default], () => T.default.useReducedMotion), k = (0, _.default)(), Y = n.useRef(null), [{
-    spring: K
-  }, W] = (0, r.useSpring)(() => ({
+  } = (0, o.useStateFromStoresObject)([A.default], () => ({
+    hasChanges: A.default.hasChanges(),
+    hasConfiguredAnythingForCurrentStep: A.default.hasConfiguredAnythingForCurrentStep(),
+    hasErrors: A.default.hasErrors()
+  })), k = (0, o.useStateFromStores)([A.default], () => {
+    let e = (0, p.pageToEducationUpsellType)(g);
+    return null != e && !A.default.isEducationUpsellDismissed(e)
+  }), w = (0, o.useStateFromStores)([I.default], () => I.default.useReducedMotion), V = (0, _.default)(), Y = l.useRef(null), [{
+    spring: W
+  }, z] = (0, r.useSpring)(() => ({
     spring: 0
   }));
-  n.useEffect(() => {
+  l.useEffect(() => {
     function e() {
-      W({
+      z({
         spring: 1,
         config: r.config.gentle
-      }), W({
+      }), z({
         spring: 0,
         config: r.config.gentle,
         delay: 1e3
       })
     }
-    return f.ComponentDispatch.subscribe(j.ComponentActions.EMPHASIZE_NOTICE, e), () => {
-      f.ComponentDispatch.unsubscribe(j.ComponentActions.EMPHASIZE_NOTICE, e)
+    return N.ComponentDispatch.subscribe(U.ComponentActions.EMPHASIZE_NOTICE, e), () => {
+      N.ComponentDispatch.unsubscribe(U.ComponentActions.EMPHASIZE_NOTICE, e)
     }
-  }, [W]);
-  let z = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
-    X = (0, E.useToken)(d.default.unsafe_rawColors.PRIMARY_160).hex(),
-    Z = (0, c.isThemeDark)(k) ? z : X,
-    J = K.to({
+  }, [z]);
+  let K = (0, E.useToken)(d.default.colors.BACKGROUND_FLOATING).hex(),
+    Z = (0, E.useToken)(d.default.unsafe_rawColors.PRIMARY_160).hex(),
+    X = (0, c.isThemeDark)(V) ? K : Z,
+    Q = W.to({
       range: [0, 1],
       output: [(0, E.useToken)(d.default.unsafe_rawColors.WHITE_500).hex(), (0, E.useToken)(d.default.colors.TEXT_NORMAL).hex()]
     }),
-    Q = K.to({
+    J = W.to({
       range: [0, 1],
-      output: [Z, (0, E.useToken)(d.default.colors.STATUS_DANGER).hex()]
+      output: [X, (0, E.useToken)(d.default.colors.STATUS_DANGER).hex()]
     });
-  if (b) {
-    if (A === M.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return (0, a.jsx)(p.GuildSettingsDefaultChannelsNotice, {});
-    if (A === M.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(v.GuildSettingsOnboardingPromptsNotice, {});
-    else if (A === M.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(U.GuildSettingsHomeSettingsNotice, {})
+  if (B) {
+    if (g === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) return (0, a.jsx)(v.GuildSettingsDefaultChannelsNotice, {});
+    if (g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) return (0, a.jsx)(j.GuildSettingsOnboardingPromptsNotice, {});
+    else if (g === p.GuildSettingsOnboardingPage.HOME_SETTINGS) return (0, a.jsx)(G.GuildSettingsHomeSettingsNotice, {})
   }
-  let q = A === M.ONBOARDING_STEPS[M.ONBOARDING_STEPS.length - 1],
+  let q = g === p.ONBOARDING_STEPS[p.ONBOARDING_STEPS.length - 1],
     $ = async () => {
-      let e = R.default.advancedMode;
-      if (B) try {
-        if (A === M.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) await (0, L.saveDefaultChannels)(t).then(() => e ? (0, h.saveGuildOnboardingPrompts)(t, {
+      let e = O.default.advancedMode;
+      if (y) try {
+        if (g === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS) await (0, h.saveDefaultChannels)(t).then(() => e ? (0, L.saveGuildOnboardingPrompts)(t, {
           ignoreDefaultPrompt: !0
         }) : Promise.resolve());
-        else if (A === M.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) await (0, h.saveGuildOnboardingPrompts)(t, {
+        else if (g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS) await (0, L.saveGuildOnboardingPrompts)(t, {
           ignoreDefaultPrompt: !0
         });
-        else if (A === M.GuildSettingsOnboardingPage.HOME_SETTINGS) {
-          let e = O.default.getSettings();
-          await (0, C.saveHomeSettings)(t.id, e)
+        else if (g === p.GuildSettingsOnboardingPage.HOME_SETTINGS) {
+          let e = x.default.getSettings();
+          await (0, R.saveHomeSettings)(t.id, e)
         }
       } catch {
         return !1
       }
       return !0
     }, ee = async () => {
-      g.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-        ...(0, I.collectGuildAnalyticsMetadata)(l),
-        step: M.GuildSettingsOnboardingPage[A],
+      m.default.track(U.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+        ...(0, T.collectGuildAnalyticsMetadata)(n),
+        step: p.GuildSettingsOnboardingPage[g],
         back: !1,
-        skip: !B
-      }), (0, m.dismissEducationUpsell)((0, M.pageToEducationUpsellType)(A)), await $() && (0, m.goToNextOnboardingStep)(l, A)
+        skip: !y
+      }), (0, C.dismissEducationUpsell)((0, p.pageToEducationUpsellType)(g)), await $() && (0, C.goToNextOnboardingStep)(n, g)
     }, et = async () => {
-      g.default.track(j.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
-        ...(0, I.collectGuildAnalyticsMetadata)(l),
-        step: M.GuildSettingsOnboardingPage[A],
+      m.default.track(U.AnalyticEvents.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED, {
+        ...(0, T.collectGuildAnalyticsMetadata)(n),
+        step: p.GuildSettingsOnboardingPage[g],
         back: !0,
         skip: !1
-      }), await $() && (0, m.goToPrevOnboardingStep)(l, A)
+      }), await $() && (0, C.goToPrevOnboardingStep)(n, g)
     }, es = null;
-  V && (A === M.GuildSettingsOnboardingPage.SAFETY_CHECK ? es = (0, a.jsx)(x.SafetyCheckUpsell, {}) : A === M.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? es = (0, a.jsx)(x.DefaultChannelsUpsell, {}) : A === M.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? es = (0, a.jsx)(x.CustomizationQuestionsUpsell, {}) : A === M.GuildSettingsOnboardingPage.HOME_SETTINGS && (es = (0, a.jsx)(x.HomeSettingsUpsell, {})));
+  k && (g === p.GuildSettingsOnboardingPage.SAFETY_CHECK ? es = (0, a.jsx)(D.SafetyCheckUpsell, {}) : g === p.GuildSettingsOnboardingPage.DEFAULT_CHANNELS ? es = (0, a.jsx)(D.DefaultChannelsUpsell, {}) : g === p.GuildSettingsOnboardingPage.CUSTOMIZATION_QUESTIONS ? es = (0, a.jsx)(D.CustomizationQuestionsUpsell, {}) : g === p.GuildSettingsOnboardingPage.HOME_SETTINGS && (es = (0, a.jsx)(D.HomeSettingsUpsell, {})));
   let ea = (0, a.jsx)(E.Button, {
-      className: i(y.button, {
-        [y.hidden]: V
+      className: i(b.button, {
+        [b.hidden]: k
       }),
       color: E.Button.Colors.PRIMARY,
       look: E.Button.Looks.OUTLINED,
       size: E.Button.Sizes.SMALL,
       onClick: et,
-      disabled: V || H,
+      disabled: k || H,
       children: (0, a.jsxs)("span", {
-        className: y.button,
+        className: b.button,
         children: [(0, a.jsx)(S.default, {
-          className: y.arrow,
+          className: b.arrow,
           direction: S.default.Directions.LEFT
         }), P.default.Messages.BACK]
       })
     }),
-    en = (0, a.jsx)(E.Button, {
-      className: y.button,
+    el = (0, a.jsx)(E.Button, {
+      className: b.button,
       color: F ? E.Button.Colors.BRAND : E.Button.Colors.PRIMARY,
       look: E.Button.Looks.FILLED,
       size: E.Button.Sizes.SMALL,
       onClick: ee,
-      disabled: V || H,
+      disabled: k || H,
       children: (0, a.jsxs)(r.animated.span, {
-        className: y.button,
+        className: b.button,
         style: {
-          color: J
+          color: Q
         },
         children: [F ? P.default.Messages.NEXT : P.default.Messages.SKIP, (0, a.jsx)(S.default, {
-          className: y.arrow,
+          className: b.arrow,
           direction: S.default.Directions.RIGHT
         })]
       })
     });
-  return (0, a.jsx)(u.default, {
+  return (0, a.jsx)(u.TransitionGroup, {
     component: "div",
-    children: (0, a.jsx)(N.default, {
-      className: i(y.noticeRegion),
+    children: (0, a.jsx)(f.default, {
+      className: i(b.noticeRegion),
       children: (0, a.jsx)(r.animated.div, {
-        className: y.container,
+        className: b.container,
         style: {
-          backgroundColor: Q
+          backgroundColor: J
         },
         children: (0, a.jsxs)("div", {
-          className: y.flexContainer,
+          className: b.flexContainer,
           ref: Y,
-          children: [V ? (0, a.jsxs)("div", {
-            className: y.educationUpsellRoot,
+          children: [k ? (0, a.jsxs)("div", {
+            className: b.educationUpsellRoot,
             children: [(0, a.jsx)("img", {
-              className: i(y.wumpus, {
-                [y.animated]: !w
+              className: i(b.wumpus, {
+                [b.animated]: !w
               }),
               src: s("353773"),
               alt: "wumpus"
             }), (0, a.jsxs)("div", {
-              className: y.educationUpsell,
+              className: b.educationUpsell,
               children: [es, (0, a.jsx)("div", {
-                className: y.educationUpsellArrow
+                className: b.educationUpsellArrow
               })]
             })]
           }) : null, (0, a.jsx)(E.FocusRingScope, {
             containerRef: Y,
             children: (0, a.jsxs)("div", {
-              className: y.actions,
+              className: b.actions,
               children: [ea, (0, a.jsxs)("div", {
-                className: y.next,
+                className: b.next,
                 children: [H ? (0, a.jsx)(E.Text, {
                   variant: "text-sm/normal",
                   color: "status-warning",
                   children: P.default.Messages.ONBOARDING_PROMPTS_INCOMPLETE
-                }) : null, q ? null : en]
+                }) : null, q ? null : el]
               })]
             })
           })]

@@ -15,14 +15,14 @@ var a = s("37983"),
   c = s("77078"),
   S = s("79112"),
   E = s("145079"),
-  f = s("583227"),
-  T = s("426902"),
-  m = s("861370"),
-  _ = s("956967"),
+  T = s("583227"),
+  f = s("426902"),
+  _ = s("861370"),
+  m = s("956967"),
   g = s("878720"),
   h = s("553257"),
-  I = s("167209"),
-  N = s("217513"),
+  N = s("167209"),
+  I = s("217513"),
   p = s("289918"),
   C = s("590006"),
   A = s("106435"),
@@ -30,17 +30,17 @@ var a = s("37983"),
   x = s("697218"),
   R = s("433487"),
   M = s("423487"),
-  v = s("306160"),
-  D = s("158998"),
+  D = s("306160"),
+  v = s("158998"),
   L = s("50885"),
   P = s("845579"),
   j = s("760947"),
   b = s("49111"),
   U = s("482931"),
-  B = s("935583"),
-  y = s("590456"),
+  y = s("935583"),
+  B = s("590456"),
   F = s("782340"),
-  G = s("594129");
+  G = s("648663");
 let k = L.default.getEnableHardwareAcceleration() ? c.AnimatedAvatar : c.Avatar;
 
 function H(e) {
@@ -48,7 +48,13 @@ function H(e) {
   let {
     className: r,
     user: o
-  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, I.useIsEligibleForPomelo)(), f = (0, _.useGuildAutomodProfileQuarantineErrors)(), T = null !== (l = null == f ? void 0 : null === (t = f.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, m = null != d.current && d.current.scrollWidth > d.current.clientWidth, g = !o.isClaimed(), N = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || g, p = N ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
+  } = e, d = n.useRef(null), S = (0, h.usePomeloEligibility)(), E = (0, N.useIsEligibleForPomelo)(), T = (0, m.useGuildAutomodProfileQuarantineErrors)(), f = null !== (l = null == T ? void 0 : null === (t = T.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : null, [_, g] = n.useState(!1);
+  n.useEffect(() => {
+    g(null != d.current && d.current.scrollWidth > d.current.clientWidth)
+  }, [o.username]);
+  let I = !o.isClaimed(),
+    p = S && !o.isPomelo() && !o.hasVerifiedEmailOrPhone() || I,
+    C = p ? F.default.Messages.POMELO_UPDATE_DISABLED_MESSAGE : void 0;
   return (0, a.jsxs)("div", {
     className: i(G.field, r),
     children: [(0, a.jsx)("div", {
@@ -83,10 +89,10 @@ function H(e) {
           color: u.default.colors.STATUS_WARNING.css
         })
       })
-    }), null != T && (0, a.jsx)("div", {
+    }), null != f && (0, a.jsx)("div", {
       className: G.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: T,
+        text: f,
         "aria-label": !1,
         children: e => (0, a.jsx)(M.default, {
           ...e,
@@ -94,10 +100,10 @@ function H(e) {
         })
       })
     }), (0, a.jsx)(c.Tooltip, {
-      text: p,
+      text: C,
       children: e => (0, a.jsx)(c.Button, {
         ...e,
-        disabled: N,
+        disabled: p,
         size: c.Button.Sizes.SMALL,
         className: G.fieldButton,
         color: c.Button.Colors.PRIMARY,
@@ -108,7 +114,7 @@ function H(e) {
               default: e
             } = await s.el("892845").then(s.bind(s, "892845"));
             return t => (0, a.jsx)(e, {
-              source: B.PomeloEntrypoints.USER_SETTINGS_EDIT,
+              source: y.PomeloEntrypoints.USER_SETTINGS_EDIT,
               ...t
             })
           } {
@@ -120,7 +126,7 @@ function H(e) {
             })
           }
         }),
-        children: m ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
+        children: _ ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
       })
     })]
   })
@@ -129,30 +135,35 @@ function H(e) {
 function w(e) {
   var t, s;
   let {
-    user: n,
-    className: l
-  } = e, r = (0, _.useGuildAutomodProfileQuarantineErrors)(), o = null !== (s = null == r ? void 0 : null === (t = r.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, d = D.default.getGlobalName(n);
-  return (0, a.jsxs)("div", {
-    className: i(G.field, l),
+    user: l,
+    className: r
+  } = e, o = (0, m.useGuildAutomodProfileQuarantineErrors)(), d = null !== (s = null == o ? void 0 : null === (t = o.nick) || void 0 === t ? void 0 : t[0]) && void 0 !== s ? s : null, S = v.default.getGlobalName(l), E = n.useRef(null), [T, f] = n.useState(!1);
+  return n.useEffect(() => {
+    f(null != E.current && E.current.scrollWidth > E.current.clientWidth)
+  }, [S]), (0, a.jsxs)("div", {
+    className: i(G.field, r),
     children: [(0, a.jsx)("div", {
       className: G.constrainedRow,
       children: (0, a.jsxs)("div", {
+        className: G.usernameRow,
         children: [(0, a.jsx)(c.FormTitle, {
           className: G.fieldTitle,
           children: F.default.Messages.DISPLAY_NAME
         }), (0, a.jsx)("div", {
+          className: G.usernameInnerRow,
+          ref: E,
           children: (0, a.jsx)(c.Text, {
             tag: "span",
             color: "header-primary",
             variant: "text-md/normal",
-            children: null == d ? F.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : d
+            children: null == S ? F.default.Messages.USER_SETTINGS_NO_DISPLAYNAME_PLACEHOLDER : S
           })
         })]
       })
-    }), null != o && (0, a.jsx)("div", {
+    }), null != d && (0, a.jsx)("div", {
       className: G.pomeloWarning,
       children: (0, a.jsx)(c.Tooltip, {
-        text: o,
+        text: d,
         "aria-label": !1,
         children: e => (0, a.jsx)(M.default, {
           ...e,
@@ -165,7 +176,7 @@ function w(e) {
       color: c.Button.Colors.PRIMARY,
       "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_EDIT_DISPLAYNAME_A11Y_LABEL,
       onClick: z,
-      children: F.default.Messages.EDIT
+      children: T ? F.default.Messages.DISAPPROVAL : F.default.Messages.EDIT
     })]
   })
 }
@@ -238,7 +249,7 @@ function Y(e) {
     buttonAriaLabel: F.default.Messages.CLAIM_ACCOUNT_SHORT,
     buttonColor: c.Button.Colors.BRAND,
     valueMessage: F.default.Messages.USER_SETTINGS_ADD_EMAIL_CLAIM,
-    handleClick: () => T.default.openClaimAccountModal()
+    handleClick: () => f.default.openClaimAccountModal()
   };
   return (0, a.jsxs)("div", {
     className: i(G.field, n),
@@ -268,7 +279,7 @@ function Y(e) {
   })
 }
 
-function W(e) {
+function K(e) {
   let t, {
     className: n,
     user: l
@@ -309,7 +320,7 @@ function W(e) {
         color: c.Button.Colors.PRIMARY,
         "aria-label": F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_A11Y_LABEL,
         onClick: function() {
-          (0, c.openModal)(e => (0, a.jsx)(f.default, {
+          (0, c.openModal)(e => (0, a.jsx)(T.default, {
             ...e,
             title: F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_NUMBER_TITLE,
             children: l.hasFlag(b.UserFlags.MFA_SMS) ? F.default.Messages.USER_SETTINGS_ACCOUNT_REMOVE_PHONE_SMS_BACKUP_WARNING : void 0,
@@ -342,14 +353,14 @@ function W(e) {
   })
 }
 
-function K(e) {
+function W(e) {
   let {
     user: t
-  } = e, s = (0, m.default)({
+  } = e, s = (0, _.default)({
     id: t.id,
     label: F.default.Messages.COPY_ID_USER
   }), n = P.DeveloperMode.useSetting();
-  return n && v.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
+  return n && D.SUPPORTS_COPY ? (0, a.jsx)(c.Popout, {
     renderPopout: e => {
       let {
         closePopout: t
@@ -385,7 +396,7 @@ function Q() {
       let e = x.default.getCurrentUser();
       return o(null != e, "UserSettingsAccountProfileCard: currentUser cannot be undefined"), e
     }),
-    s = (0, N.default)(t.id),
+    s = (0, I.default)(t.id),
     n = P.StatusSetting.useSetting(),
     l = (0, d.useStateFromStores)([O.default], () => O.default.getErrors()),
     i = null == l ? void 0 : null === (e = l.avatar) || void 0 === e ? void 0 : e[0],
@@ -403,7 +414,7 @@ function Q() {
       user: t,
       allowEdit: !1,
       guildId: void 0,
-      profileType: y.UserProfileTypes.SETTINGS
+      profileType: B.UserProfileTypes.SETTINGS
     }), (0, a.jsxs)("div", {
       className: G.userInfo,
       children: [(0, a.jsx)(k, {
@@ -420,7 +431,7 @@ function Q() {
             user: t,
             className: G.userTag,
             discriminatorClass: G.discriminator
-          }), (0, a.jsx)(K, {
+          }), (0, a.jsx)(W, {
             user: t
           })]
         }), (0, a.jsx)(C.default, {
@@ -450,7 +461,7 @@ function Q() {
         }), (0, a.jsx)(Y, {
           className: G.fieldSpacer,
           user: t
-        }), (0, a.jsx)(W, {
+        }), (0, a.jsx)(K, {
           className: G.fieldSpacer,
           user: t
         })]

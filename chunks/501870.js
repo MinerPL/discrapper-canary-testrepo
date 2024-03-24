@@ -1,2 +1,5 @@
-"use strict";
-t.exports = s.p + "95a2ef5a2c6f8df75be5.svg"
+var n = e("60297"),
+  o = e("346173");
+t.exports = function(t) {
+  return "symbol" == typeof t || o(t) && "[object Symbol]" == n(t)
+}

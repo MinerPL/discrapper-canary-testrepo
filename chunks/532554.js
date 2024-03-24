@@ -1,7 +1,7 @@
 "use strict";
 a.r(e), a.d(e, {
   BirthdayKitBash: function() {
-    return Z
+    return T
   }
 }), a("222007");
 var t = a("37983"),
@@ -14,60 +14,57 @@ var t = a("37983"),
   H = a("812204"),
   V = a("685665"),
   d = a("599110"),
-  c = a("243244"),
+  c = a("91761"),
   o = a("371316"),
-  M = a("954016"),
-  u = a("49111"),
-  E = a("782340"),
-  I = a("592618"),
-  _ = a("226363"),
-  T = a("17077");
+  M = a("49111"),
+  u = a("782340"),
+  E = a("305458"),
+  I = a("226363"),
+  _ = a("17077");
 
-function Z() {
-  var L, e;
-  let a = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion),
-    [s] = C.useState(Math.random()),
-    Z = (0, c.default)(null, !1),
-    [, f] = null !== (e = Z.find(L => {
-      let [e] = L;
-      return e === M.ActivityAccessStatus.UNLOCKED
-    })) && void 0 !== e ? e : [void 0, []],
+function T() {
+  var L;
+  let e = (0, i.useStateFromStores)([r.default], () => r.default.useReducedMotion),
+    [a] = C.useState(Math.random()),
+    s = (0, c.default)({
+      guildId: null
+    }),
     {
-      analyticsLocations: m
+      analyticsLocations: T
     } = (0, V.default)(H.default.ACTIVITIES_IM_FEELING_LUCKY),
-    h = Math.floor(s * f.length),
-    D = null === (L = f[h]) || void 0 === L ? void 0 : L.application.id,
-    N = null != D && "" !== D ? u.Routes.ACTIVITY_DETAILS(D) : void 0;
+    Z = Math.floor(a * s.length),
+    f = null === (L = s[Z]) || void 0 === L ? void 0 : L.application.id,
+    m = null != f && "" !== f ? M.Routes.ACTIVITY_DETAILS(f) : void 0;
   return (0, t.jsxs)(t.Fragment, {
     children: [(0, t.jsx)("img", {
-      src: _,
-      alt: E.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_KIT_BASH_ALT,
-      className: I.kitBash
-    }), void 0 !== N ? (0, t.jsxs)(t.Fragment, {
+      src: I,
+      alt: u.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_KIT_BASH_ALT,
+      className: E.kitBash
+    }), void 0 !== m ? (0, t.jsxs)(t.Fragment, {
       children: [(0, t.jsxs)(o.ClickableLink, {
-        className: I.luckyButton,
+        className: E.luckyButton,
         to: {
-          pathname: N,
+          pathname: m,
           state: {
-            analyticsLocations: m
+            analyticsLocations: T
           }
         },
-        onClick: () => d.default.track(u.AnalyticEvents.ACTIVITIES_PAGE_FEELING_LUCKY_CLICKED, {
-          application_id: D
+        onClick: () => d.default.track(M.AnalyticEvents.ACTIVITIES_PAGE_FEELING_LUCKY_CLICKED, {
+          application_id: f
         }),
         children: [(0, t.jsx)(n.Heading, {
           variant: "heading-lg/bold",
-          children: E.default.Messages.EMBEDDED_ACTIVITIES_FEELING_LUCKY_TITLE
+          children: u.default.Messages.EMBEDDED_ACTIVITIES_FEELING_LUCKY_TITLE
         }), (0, t.jsx)(n.Heading, {
           variant: "heading-sm/bold",
-          children: E.default.Messages.EMBEDDED_ACTIVITIES_FEELING_LUCKY_DESCRIPTION
+          children: u.default.Messages.EMBEDDED_ACTIVITIES_FEELING_LUCKY_DESCRIPTION
         })]
       }), (0, t.jsx)("img", {
-        src: T,
-        className: l(I.wumpus, {
-          [I.wumpusReducedMotion]: a
+        src: _,
+        className: l(E.wumpus, {
+          [E.wumpusReducedMotion]: e
         }),
-        alt: E.default.Messages.EMBEDDED_ACTIVITIES_WUMPUS_PEEKING_ALT
+        alt: u.default.Messages.EMBEDDED_ACTIVITIES_WUMPUS_PEEKING_ALT
       })]
     }) : null]
   })

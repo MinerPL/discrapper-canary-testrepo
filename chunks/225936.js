@@ -1,79 +1,80 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return v
+    return T
   }
 }), s("222007");
-var a = s("37983"),
-  n = s("884691"),
-  r = s("866227"),
-  i = s.n(r),
-  l = s("730290"),
+var n = s("37983"),
+  r = s("884691"),
+  a = s("866227"),
+  l = s.n(a),
+  i = s("730290"),
   o = s("872717"),
-  d = s("862337"),
+  c = s("862337"),
   u = s("77078"),
-  c = s("992629"),
-  h = s("145131"),
-  m = s("364719"),
-  g = s("258078"),
-  p = s("599110"),
-  f = s("49111"),
-  N = s("782340"),
-  x = s("249760"),
-  _ = s("120891"),
-  T = s("265369"),
-  C = s("799557");
-let E = e => {
+  d = s("145131"),
+  f = s("364719"),
+  h = s("258078"),
+  g = s("599110"),
+  m = s("814478"),
+  x = s("57641"),
+  p = s("49111"),
+  v = s("782340"),
+  N = s("89220"),
+  C = s("666042"),
+  j = s("265369"),
+  _ = s("799557");
+let I = e => {
     let {
       step: t,
       children: s
     } = e;
-    return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(u.Heading, {
-        className: x.sectionSubheader,
+    return (0, n.jsxs)(r.Fragment, {
+      children: [(0, n.jsx)(u.Heading, {
+        className: N.sectionSubheader,
         variant: "heading-sm/semibold",
-        children: N.default.Messages.STEP_NUMBER.format({
+        children: v.default.Messages.STEP_NUMBER.format({
           number: t
         })
-      }), (0, a.jsx)(g.default, {
-        className: x.sectionSubtitle,
-        size: g.default.Sizes.SIZE_24,
+      }), (0, n.jsx)(h.default, {
+        className: N.sectionSubtitle,
+        size: h.default.Sizes.SIZE_24,
         children: s
       })]
     })
   },
-  j = e => {
+  w = e => {
     let {
       pin: t,
       timeRemaining: s
     } = e;
-    return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(u.Text, {
-        className: x.pinNumber,
+    return (0, n.jsxs)(r.Fragment, {
+      children: [(0, n.jsx)(u.Text, {
+        className: N.pinNumber,
         variant: "text-sm/normal",
         children: t
-      }), (0, a.jsx)(u.Text, {
-        className: x.pinExpiresText,
+      }), (0, n.jsx)(u.Text, {
+        className: N.pinExpiresText,
         tag: "strong",
         variant: "text-sm/normal",
         children: s
       })]
     })
   };
-class I extends n.PureComponent {
+class L extends r.PureComponent {
   componentDidMount() {
-    let e = l.parse(this.props.location.search),
+    let e = i.parse(this.props.location.search),
       {
         code: t,
         state: s
       } = e;
-    p.default.track(f.AnalyticEvents.ACCOUNT_LINK_STEP, {
+    g.default.track(p.AnalyticEvents.ACCOUNT_LINK_STEP, {
       previous_step: "microsoft auth",
       current_step: "PIN code display",
       session_id: s,
-      platform_type: f.PlatformTypes.XBOX
-    }), i.locale(window.navigator.userLanguage || window.navigator.language), o.default.post({
-      url: f.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION("xbox"),
+      platform_type: p.PlatformTypes.XBOX
+    }), l.locale(window.navigator.userLanguage || window.navigator.language), o.HTTP.post({
+      url: p.Endpoints.CONNECTIONS_CALLBACK_CONTINUATION("xbox"),
       body: {
         code: t,
         state: s
@@ -82,10 +83,10 @@ class I extends n.PureComponent {
     }).then(e => {
       this.setState({
         pin: e.body.short_code,
-        currentTime: i(),
-        endTime: i(e.body.expires_at),
+        currentTime: l(),
+        endTime: l(e.body.expires_at),
         loading: !1
-      }), this.interval = new d.Interval, this.interval.start(1e3, this.tick)
+      }), this.interval = new c.Interval, this.interval.start(1e3, this.tick)
     }).catch(e => {
       let t;
       try {
@@ -93,12 +94,12 @@ class I extends n.PureComponent {
       } catch (s) {
         t = String(e)
       }
-      p.default.track(f.AnalyticEvents.ACCOUNT_LINK_FAILED, {
+      g.default.track(p.AnalyticEvents.ACCOUNT_LINK_FAILED, {
         error_message: t,
         status_code: e.status,
         link_method: "pin",
         current_step: "PIN code display",
-        platform_type: f.PlatformTypes.XBOX
+        platform_type: p.PlatformTypes.XBOX
       }), this.setState({
         errorMessage: t
       })
@@ -108,18 +109,18 @@ class I extends n.PureComponent {
     null != this.interval && this.interval.stop()
   }
   handleDone() {
-    window.location = f.Routes.CONNECTIONS(f.PlatformTypes.XBOX)
+    window.location = p.Routes.CONNECTIONS(p.PlatformTypes.XBOX)
   }
   goBack() {
     window.history.back()
   }
   renderXboxButtons() {
-    return (0, a.jsxs)("div", {
-      className: _.xboxButtonContainer,
-      children: [(0, a.jsx)(c.default.Button, {
-        type: c.default.Button.A,
-        text: N.default.Messages.CLOSE,
-        style: _.gamepadButton,
+    return (0, n.jsxs)("div", {
+      className: C.xboxButtonContainer,
+      children: [(0, n.jsx)(m.XboxGamepadButton, {
+        type: "A",
+        text: v.default.Messages.CLOSE,
+        style: C.gamepadButton,
         onClick: this.handleDone
       }), this.renderErrorMessage()]
     })
@@ -128,12 +129,12 @@ class I extends n.PureComponent {
     let {
       errorMessage: e
     } = this.state;
-    return null == e ? null : (0, a.jsxs)("div", {
-      className: _.errorMessageContainer,
-      children: [(0, a.jsx)(m.default, {
-        className: _.errorMessageIcon
-      }), (0, a.jsx)("div", {
-        className: _.errorMessage,
+    return null == e ? null : (0, n.jsxs)("div", {
+      className: C.errorMessageContainer,
+      children: [(0, n.jsx)(f.default, {
+        className: C.errorMessageIcon
+      }), (0, n.jsx)("div", {
+        className: C.errorMessage,
         children: e
       })]
     })
@@ -141,58 +142,58 @@ class I extends n.PureComponent {
   renderContent() {
     let {
       pin: e
-    } = this.state, t = null == e ? null : (0, a.jsx)(j, {
+    } = this.state, t = null == e ? null : (0, n.jsx)(w, {
       pin: e,
       timeRemaining: this.getMinutesLeftText()
     });
-    return (0, a.jsxs)("div", {
-      className: _.pageWrapper,
-      children: [(0, a.jsx)("img", {
+    return (0, n.jsxs)("div", {
+      className: C.pageWrapper,
+      children: [(0, n.jsx)("img", {
         alt: "Discord",
-        className: _.logo,
-        src: T
-      }), (0, a.jsxs)(h.default, {
-        className: _.container,
-        justify: h.default.Justify.CENTER,
-        align: h.default.Align.CENTER,
-        children: [(0, a.jsxs)(h.default.Child, {
-          className: x.leftPanel,
-          children: [t, (0, a.jsx)(u.Heading, {
-            className: x.sectionTitle,
+        className: C.logo,
+        src: j
+      }), (0, n.jsxs)(d.default, {
+        className: C.container,
+        justify: d.default.Justify.CENTER,
+        align: d.default.Align.CENTER,
+        children: [(0, n.jsxs)(d.default.Child, {
+          className: N.leftPanel,
+          children: [t, (0, n.jsx)(u.Heading, {
+            className: N.sectionTitle,
             variant: "heading-sm/semibold",
-            children: N.default.Messages.LINK_YOUR_DISCORD_ACCOUNT
-          }), (0, a.jsx)(E, {
+            children: v.default.Messages.LINK_YOUR_DISCORD_ACCOUNT
+          }), (0, n.jsx)(I, {
             step: 1,
-            children: N.default.Messages.XBOX_PIN_STEP1
-          }), (0, a.jsx)(E, {
+            children: v.default.Messages.XBOX_PIN_STEP1
+          }), (0, n.jsx)(I, {
             step: 2,
-            children: N.default.Messages.XBOX_PIN_STEP2
-          }), (0, a.jsx)(E, {
+            children: v.default.Messages.XBOX_PIN_STEP2
+          }), (0, n.jsx)(I, {
             step: 3,
-            children: N.default.Messages.XBOX_PIN_STEP3
+            children: v.default.Messages.XBOX_PIN_STEP3
           }), this.renderXboxButtons()]
-        }), (0, a.jsx)(h.default.Child, {
-          className: _.rightPanel,
-          children: (0, a.jsx)("img", {
+        }), (0, n.jsx)(d.default.Child, {
+          className: C.rightPanel,
+          children: (0, n.jsx)("img", {
             alt: "",
-            className: _.image,
-            src: C
+            className: C.image,
+            src: _
           })
         })]
       })]
     })
   }
   render() {
-    return (0, a.jsx)(c.default, {
-      onAPressed: this.handleDone,
-      onBPressed: this.goBack,
+    return (0, n.jsx)(x.XboxGamepadButtonHandlers, {
+      A: this.handleDone,
+      B: this.goBack,
       children: this.renderContent()
     })
   }
   constructor(...e) {
     super(...e), this.state = {
       pin: "",
-      currentTime: i(),
+      currentTime: l(),
       endTime: null,
       loading: !0,
       errorMessage: null
@@ -201,8 +202,8 @@ class I extends n.PureComponent {
         endTime: e
       } = this.state;
       if (this.setState({
-          currentTime: i()
-        }), null != e && i().isAfter(e)) {
+          currentTime: l()
+        }), null != e && l().isAfter(e)) {
         var t;
         null === (t = this.interval) || void 0 === t || t.stop()
       }
@@ -210,12 +211,12 @@ class I extends n.PureComponent {
       let {
         endTime: e
       } = this.state;
-      if (this.state.loading) return N.default.Messages.LOADING_YOUR_PIN;
-      if (null != e && i().isAfter(e)) return N.default.Messages.YOUR_PIN_IS_EXPIRED;
-      if (null != e) return N.default.Messages.YOUR_PIN_EXPIRES.format({
+      if (this.state.loading) return v.default.Messages.LOADING_YOUR_PIN;
+      if (null != e && l().isAfter(e)) return v.default.Messages.YOUR_PIN_IS_EXPIRED;
+      if (null != e) return v.default.Messages.YOUR_PIN_EXPIRES.format({
         time: e.fromNow()
       })
     }
   }
 }
-var v = I
+var T = L

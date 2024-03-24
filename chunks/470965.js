@@ -13,13 +13,13 @@ var a = n("37983"),
   u = n("362189"),
   d = n("697218"),
   c = n("782340"),
-  f = n("400004");
+  f = n("974214");
 
 function h(e) {
   let {
     inboxIconRef: t,
     recentsPopoutShown: n
-  } = e, [h, E] = l.useState(!1), m = (0, s.default)([o.default], () => o.default.getLastUnseenInvite()), p = (0, s.default)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
+  } = e, [h, E] = l.useState(!1), m = (0, s.useStateFromStores)([o.default], () => o.default.getLastUnseenInvite()), p = (0, s.useStateFromStores)([d.default], () => null != m ? d.default.getUser(m.inviter_id) : null);
   return (l.useEffect(() => {
     n && E(!1)
   }, [n]), l.useEffect(() => {

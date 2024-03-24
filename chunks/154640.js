@@ -1,36 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return h
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("15542"),
   o = n("458960"),
   u = n("355262"),
-  d = n("401642"),
-  c = n("49111"),
-  f = n("721578"),
-  E = e => {
+  d = n("685665"),
+  c = n("401642"),
+  f = n("49111"),
+  E = n("161950"),
+  h = e => {
     let {
       userId: t,
       children: n,
-      isLast: i,
-      className: E
-    } = e, [_, h] = s.useState(!1), C = s.useCallback(() => {
-      (0, d.openUserProfileModal)({
+      isLast: l,
+      className: h
+    } = e, [_, C] = s.useState(!1), {
+      analyticsLocations: S
+    } = (0, d.default)(), I = s.useCallback(() => {
+      (0, c.openUserProfileModal)({
         userId: t,
+        sourceAnalyticsLocations: S,
         analyticsLocation: {
-          section: c.AnalyticsSections.FAMILY_CENTER
+          section: f.AnalyticsSections.FAMILY_CENTER
         }
       })
-    }, [t]), I = () => {
-      h(!0)
-    }, T = () => {
-      h(!1)
+    }, [t, S]), m = () => {
+      C(!0)
+    }, p = () => {
+      C(!1)
     };
     return (0, a.jsx)(u.ListNavigatorItem, {
       id: t,
@@ -43,13 +47,13 @@ var a = n("37983"),
           style: {
             opacity: 1
           },
-          className: l(f.rowItem, E, {
-            [f.last]: i,
-            [f.active]: _
+          className: i(E.rowItem, h, {
+            [E.last]: l,
+            [E.active]: _
           }),
-          onMouseEnter: I,
-          onMouseLeave: T,
-          onClick: C,
+          onMouseEnter: m,
+          onMouseLeave: p,
+          onClick: I,
           ...e,
           children: n(_)
         })

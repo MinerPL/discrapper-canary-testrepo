@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 }), n("222007");
 var s = n("37983");
@@ -15,21 +15,21 @@ var l = n("759843"),
   d = n("858291"),
   c = n("660516");
 
-function f(e) {
+function E(e) {
   let {
     code: t
-  } = e, [n, f] = t.split("-"), E = (0, u.useFetchGuildProductListing)(n, f), _ = (0, a.default)([o.default], () => o.default.getGuildId());
+  } = e, [n, E] = t.split("-"), f = (0, u.useFetchGuildProductListing)(n, E), _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
   return ((0, r.default)({
     type: c.ImpressionTypes.VIEW,
     name: l.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
     properties: {
-      guild_product_listing_id: f,
-      has_entitlement: (null == E ? void 0 : E.has_entitlement) === !0
+      guild_product_listing_id: E,
+      has_entitlement: (null == f ? void 0 : f.has_entitlement) === !0
     }
   }, {
-    disableTrack: null == E
-  }), null == E || _ !== n) ? null : (0, s.jsx)(d.GuildProductListingPublicCard, {
-    guildProductListing: E,
+    disableTrack: null == f
+  }), null == f || _ !== n) ? null : (0, s.jsx)(d.GuildProductListingPublicCard, {
+    guildProductListing: f,
     guildId: n,
     location: i.default.GUILD_PRODUCT_EMBED_CARD,
     cardWidth: 390,

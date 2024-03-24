@@ -1,190 +1,192 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   getFormFieldBuilderComponent: function() {
-    return _
+    return E
   },
   openEmptyFormFieldModal: function() {
-    return T
+    return I
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("917351"),
-  l = s("77078"),
-  i = s("567054"),
-  r = s("403025"),
-  o = s("263974"),
-  d = s("169324"),
-  u = s("333554"),
-  c = s("49111"),
-  E = s("782340");
+var n = i("37983");
+i("884691");
+var a = i("917351"),
+  l = i("77078"),
+  s = i("567054"),
+  r = i("403025"),
+  o = i("263974"),
+  d = i("169324"),
+  u = i("333554"),
+  c = i("49111"),
+  f = i("782340");
 
-function _(e) {
+function E(e) {
   let {
     dropHoveredIndex: t,
     formField: c,
-    guild: _,
-    index: T,
-    isDragEnabled: S,
-    submittedGuildJoinRequestsCount: N,
-    removeFormField: g,
-    updateFormField: f,
-    updateFormFieldOrder: A
-  } = e, L = async () => {
-    await g(T)
-  }, m = async e => {
-    await f(T, e)
-  }, C = async (e, t, s) => {
-    await A(e, t, s)
-  }, O = (0, n.uniqueId)(), h = t === T, R = {
-    key: O,
-    index: T,
-    isDragEnabled: S,
-    isDropHovered: h,
+    guild: E,
+    index: I,
+    isDragEnabled: m,
+    submittedGuildJoinRequestsCount: _,
+    removeFormField: x,
+    updateFormField: h,
+    updateFormFieldOrder: p
+  } = e, R = async () => {
+    await x(I)
+  }, M = async e => {
+    await h(I, e)
+  }, F = async (e, t, i) => {
+    await p(e, t, i)
+  }, v = (0, a.uniqueId)(), N = t === I, S = {
+    key: v,
+    index: I,
+    isDragEnabled: m,
+    isDropHovered: N,
     onEdit: () => {
-      0 === N ? I(c, m) : (0, l.openModalLazy)(async () => {
+      0 === _ ? T(c, M, E) : (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await s.el("265397").then(s.bind(s, "265397"));
-        return t => (0, a.jsx)(e, {
+        } = await i.el("265397").then(i.bind(i, "265397"));
+        return t => (0, n.jsx)(e, {
           ...t,
-          guildId: _.id,
-          submittedGuildJoinRequestsCount: N,
-          onConfirm: () => I(c, m)
+          guildId: E.id,
+          submittedGuildJoinRequestsCount: _,
+          onConfirm: () => T(c, M, E)
         })
       })
     },
-    onRemove: L,
-    onDrop: C
+    onRemove: R,
+    onDrop: F
   };
   switch (c.field_type) {
-    case i.VerificationFormFieldTypes.TERMS:
-      return (0, a.jsx)(d.default, {
-        channelId: _.rulesChannelId,
-        title: E.default.Messages.GUILD_RULES_HEADER,
+    case s.VerificationFormFieldTypes.TERMS:
+      return (0, n.jsx)(d.default, {
+        channelId: E.rulesChannelId,
+        title: f.default.Messages.GUILD_RULES_HEADER,
         formField: c,
-        ...R
+        ...S
       });
-    case i.VerificationFormFieldTypes.PARAGRAPH:
-      return (0, a.jsx)(o.default, {
+    case s.VerificationFormFieldTypes.PARAGRAPH:
+      return (0, n.jsx)(o.default, {
         formField: c,
-        ...R
+        ...S
       });
-    case i.VerificationFormFieldTypes.TEXT_INPUT:
-      return (0, a.jsx)(u.default, {
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
+      return (0, n.jsx)(u.default, {
         formField: c,
-        ...R
+        ...S
       });
-    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, a.jsx)(r.default, {
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      return (0, n.jsx)(r.default, {
         formField: c,
-        ...R
+        ...S
       });
     default:
       return null
   }
 }
 
-function T(e, t) {
-  let n = {
+function I(e, t, a) {
+  let r = {
     onCloseRequest: c.NOOP
   };
   switch (e) {
-    case i.VerificationFormFieldTypes.TERMS:
+    case s.VerificationFormFieldTypes.TERMS:
       return (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await s.el("262099").then(s.bind(s, "262099"));
-        return s => (0, a.jsx)(e, {
-          ...s,
+        } = await i.el("262099").then(i.bind(i, "262099"));
+        return i => (0, n.jsx)(e, {
+          ...i,
           field: void 0,
-          onSave: t
+          onSave: t,
+          guild: a
         })
-      }, n);
-    case i.VerificationFormFieldTypes.PARAGRAPH:
+      }, r);
+    case s.VerificationFormFieldTypes.PARAGRAPH:
       return (0, l.openModalLazy)(async () => {
         let {
           ParagraphFormFieldModal: e
-        } = await s.el("198784").then(s.bind(s, "198784"));
-        return s => (0, a.jsx)(e, {
-          ...s,
+        } = await i.el("198784").then(i.bind(i, "198784"));
+        return i => (0, n.jsx)(e, {
+          ...i,
           field: void 0,
           onSave: t
         })
-      }, n);
-    case i.VerificationFormFieldTypes.TEXT_INPUT:
+      }, r);
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, l.openModalLazy)(async () => {
         let {
           TextInputFormFieldModal: e
-        } = await s.el("198784").then(s.bind(s, "198784"));
-        return s => (0, a.jsx)(e, {
-          ...s,
+        } = await i.el("198784").then(i.bind(i, "198784"));
+        return i => (0, n.jsx)(e, {
+          ...i,
           field: void 0,
           onSave: t
         })
-      }, n);
-    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
+      }, r);
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, l.openModalLazy)(async () => {
         let {
           default: e
-        } = await s.el("827619").then(s.bind(s, "827619"));
-        return s => (0, a.jsx)(e, {
-          ...s,
+        } = await i.el("827619").then(i.bind(i, "827619"));
+        return i => (0, n.jsx)(e, {
+          ...i,
           field: void 0,
           onSave: t
         })
-      }, n)
+      }, r)
   }
 }
 
-function I(e, t) {
-  let n = {
+function T(e, t, a) {
+  let r = {
     onCloseRequest: c.NOOP
   };
   switch (e.field_type) {
-    case i.VerificationFormFieldTypes.TERMS:
+    case s.VerificationFormFieldTypes.TERMS:
       return (0, l.openModalLazy)(async () => {
         let {
-          default: n
-        } = await s.el("262099").then(s.bind(s, "262099"));
-        return s => (0, a.jsx)(n, {
-          ...s,
+          default: l
+        } = await i.el("262099").then(i.bind(i, "262099"));
+        return i => (0, n.jsx)(l, {
+          ...i,
+          field: e,
+          onSave: t,
+          guild: a
+        })
+      }, r);
+    case s.VerificationFormFieldTypes.PARAGRAPH:
+      return (0, l.openModalLazy)(async () => {
+        let {
+          ParagraphFormFieldModal: a
+        } = await i.el("198784").then(i.bind(i, "198784"));
+        return i => (0, n.jsx)(a, {
+          ...i,
           field: e,
           onSave: t
         })
-      }, n);
-    case i.VerificationFormFieldTypes.PARAGRAPH:
+      }, r);
+    case s.VerificationFormFieldTypes.TEXT_INPUT:
       return (0, l.openModalLazy)(async () => {
         let {
-          ParagraphFormFieldModal: n
-        } = await s.el("198784").then(s.bind(s, "198784"));
-        return s => (0, a.jsx)(n, {
-          ...s,
+          TextInputFormFieldModal: a
+        } = await i.el("198784").then(i.bind(i, "198784"));
+        return i => (0, n.jsx)(a, {
+          ...i,
           field: e,
           onSave: t
         })
-      }, n);
-    case i.VerificationFormFieldTypes.TEXT_INPUT:
+      }, r);
+    case s.VerificationFormFieldTypes.MULTIPLE_CHOICE:
       return (0, l.openModalLazy)(async () => {
         let {
-          TextInputFormFieldModal: n
-        } = await s.el("198784").then(s.bind(s, "198784"));
-        return s => (0, a.jsx)(n, {
-          ...s,
+          default: a
+        } = await i.el("827619").then(i.bind(i, "827619"));
+        return i => (0, n.jsx)(a, {
+          ...i,
           field: e,
           onSave: t
         })
-      }, n);
-    case i.VerificationFormFieldTypes.MULTIPLE_CHOICE:
-      return (0, l.openModalLazy)(async () => {
-        let {
-          default: n
-        } = await s.el("827619").then(s.bind(s, "827619"));
-        return s => (0, a.jsx)(n, {
-          ...s,
-          field: e,
-          onSave: t
-        })
-      }, n)
+      }, r)
   }
 }

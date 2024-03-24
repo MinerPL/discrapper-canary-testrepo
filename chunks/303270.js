@@ -5,42 +5,42 @@ a.r(t), a.d(t, {
   }
 }), a("222007"), a("781738");
 var s = a("37983"),
-  l = a("884691"),
+  n = a("884691"),
   i = a("414456"),
-  n = a.n(i),
-  r = a("907002"),
+  l = a.n(i),
+  r = a("146606"),
   o = a("65597"),
   d = a("77078"),
   u = a("206230"),
   c = a("526887"),
   E = a("289918"),
-  f = a("935409"),
-  m = a("158998"),
+  m = a("935409"),
+  f = a("158998"),
   S = a("415133"),
-  _ = a("500645"),
-  I = a("925922"),
-  h = a("935583"),
-  N = a("590456"),
-  M = a("782340"),
-  T = a("341923"),
-  g = a("107681");
-let O = l.forwardRef(function(e, t) {
+  g = a("500645"),
+  _ = a("925922"),
+  T = a("935583"),
+  I = a("590456"),
+  h = a("782340"),
+  O = a("250727"),
+  N = a("107681");
+let M = n.forwardRef(function(e, t) {
   let {
     style: a,
-    value: l,
+    value: n,
     placeholder: i,
     maxLength: r,
     onFocus: o,
     onChange: u
   } = e;
   return (0, s.jsx)(d.TextArea, {
-    className: n(T.userCardInput, a),
+    className: l(O.userCardInput, a),
     autosize: !0,
     error: null,
     showCharacterCount: !1,
     spellCheck: !1,
     showRemainingCharacterCount: !1,
-    value: l,
+    value: n,
     placeholder: i,
     rows: 1,
     maxLength: r,
@@ -52,30 +52,30 @@ let O = l.forwardRef(function(e, t) {
     inputRef: t
   })
 });
-var L = l.forwardRef(function(e, t) {
+var L = n.forwardRef(function(e, t) {
   let {
     user: a,
     error: i,
     formValues: L,
-    displayProfile: x,
-    onChangeFormValue: C,
-    onFocusDisplayName: P,
-    onFocusUsername: p,
-    editState: v,
-    footerNotice: R,
+    displayProfile: R,
+    onChangeFormValue: P,
+    onFocusDisplayName: v,
+    onFocusUsername: C,
+    editState: x,
+    footerNotice: p,
     usernameSuggestionLoading: A,
-    oneClickFlow: j
+    oneClickFlow: y
   } = e, {
-    username: y,
-    globalName: D
-  } = L, U = l.useRef(null), G = l.useRef(null), F = l.useMemo(() => a.merge({
+    username: U,
+    globalName: G
+  } = L, D = n.useRef(null), b = n.useRef(null), j = n.useMemo(() => a.merge({
     discriminator: "0000"
-  }), [a]), [w, B] = (0, r.useSpring)(() => ({
+  }), [a]), [k, F] = (0, r.useSpring)(() => ({
     opacity: 0,
     y: 5
   }));
-  l.useEffect(() => {
-    B({
+  n.useEffect(() => {
+    F({
       y: 0,
       opacity: 1,
       from: {
@@ -83,23 +83,23 @@ var L = l.forwardRef(function(e, t) {
         opacity: 0
       }
     })
-  }, [B, v]), l.useImperativeHandle(t, () => ({
+  }, [F, x]), n.useImperativeHandle(t, () => ({
     focusDisplayName: () => {
       var e, t, a;
-      null === (t = G.current) || void 0 === t || t.setSelection(0, null === (e = G.current) || void 0 === e ? void 0 : e.value.length), null === (a = G.current) || void 0 === a || a.focus()
+      null === (t = b.current) || void 0 === t || t.setSelection(0, null === (e = b.current) || void 0 === e ? void 0 : e.value.length), null === (a = b.current) || void 0 === a || a.focus()
     },
     focusUsername: () => {
       var e, t, a;
-      null === (t = U.current) || void 0 === t || t.setSelection(0, null === (e = U.current) || void 0 === e ? void 0 : e.value.length), null === (a = U.current) || void 0 === a || a.focus()
+      null === (t = D.current) || void 0 === t || t.setSelection(0, null === (e = D.current) || void 0 === e ? void 0 : e.value.length), null === (a = D.current) || void 0 === a || a.focus()
     }
   }), []);
-  let b = (0, o.default)([u.default], () => u.default.useReducedMotion),
+  let w = (0, o.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     {
-      createMultipleConfettiAt: k
-    } = l.useContext(c.ConfettiCannonContext),
-    H = null == x ? void 0 : x.getLegacyUsername();
-  return l.useEffect(() => {
-    if (!b && v === h.EditState.PREVIEW) a.username.includes(h.POMELO_KEYWORD) && (k(window.innerWidth / 2 + 150, 0, {
+      createMultipleConfettiAt: B
+    } = n.useContext(c.ConfettiCannonContext),
+    H = null == R ? void 0 : R.getLegacyUsername();
+  return n.useEffect(() => {
+    if (!w && x === T.EditState.PREVIEW) a.username.includes(T.POMELO_KEYWORD) && (B(window.innerWidth / 2 + 150, 0, {
       velocity: {
         type: "static-random",
         minValue: {
@@ -111,7 +111,7 @@ var L = l.forwardRef(function(e, t) {
           y: 180
         }
       }
-    }, 15), k(window.innerWidth / 2 - 150, 0, {
+    }, 15), B(window.innerWidth / 2 - 150, 0, {
       velocity: {
         type: "static-random",
         minValue: {
@@ -124,34 +124,34 @@ var L = l.forwardRef(function(e, t) {
         }
       }
     }, 15))
-  }, [k, v, a, b]), (0, s.jsxs)("div", {
-    className: n(T.userCardContainer, {
-      [T.shinyCard]: v === h.EditState.PREVIEW
+  }, [B, x, a, w]), (0, s.jsxs)("div", {
+    className: l(O.userCardContainer, {
+      [O.shinyCard]: x === T.EditState.PREVIEW
     }),
     children: [(0, s.jsxs)("div", {
-      className: T.profileCard,
+      className: O.profileCard,
       children: [(0, s.jsx)(E.default, {
-        displayProfile: x,
-        user: F,
+        displayProfile: R,
+        user: j,
         allowEdit: !1,
         guildId: void 0,
-        profileType: N.UserProfileTypes.POMELO_POPOUT,
+        profileType: I.UserProfileTypes.POMELO_POPOUT,
         showPremiumBadgeUpsell: !1
-      }), (0, s.jsx)(f.UserPopoutAvatar, {
-        user: F,
-        displayProfile: x,
+      }), (0, s.jsx)(m.UserPopoutAvatar, {
+        user: j,
+        displayProfile: R,
         isMobile: !1,
         status: null,
         onClose: void 0,
         disableUserProfileLink: !0,
         hasBanner: !1,
-        profileType: N.UserProfileTypes.POMELO_POPOUT,
+        profileType: I.UserProfileTypes.POMELO_POPOUT,
         animateOnHover: !1
-      }), v === h.EditState.PREVIEW && null != H && (0, s.jsx)("div", {
-        className: T.legacyUsernameBadgeContainer,
+      }), x === T.EditState.PREVIEW && null != H && (0, s.jsx)("div", {
+        className: O.legacyUsernameBadgeContainer,
         children: (0, s.jsx)(d.Tooltip, {
           position: "top",
-          text: M.default.Messages.ORIGINALLY_KNOWN_AS.format({
+          text: h.default.Messages.ORIGINALLY_KNOWN_AS.format({
             legacyUsername: H
           }),
           spacing: 12,
@@ -159,91 +159,91 @@ var L = l.forwardRef(function(e, t) {
             ...e,
             onClick: e.onClick,
             children: (0, s.jsx)("img", {
-              className: T.legacyUsernameBadge,
+              className: O.legacyUsernameBadge,
               alt: "",
-              src: g
+              src: N
             })
           })
         })
       })]
-    }), v !== h.EditState.PREVIEW && (0, s.jsxs)(r.animated.div, {
+    }), x !== T.EditState.PREVIEW && (0, s.jsxs)(r.animated.div, {
       style: {
-        opacity: w.opacity,
-        y: w.y
+        opacity: k.opacity,
+        y: k.y
       },
-      className: T.inputContainer,
-      children: [v === h.EditState.EDIT_DISPLAY_NAME && (0, s.jsxs)(s.Fragment, {
+      className: O.inputContainer,
+      children: [x === T.EditState.EDIT_DISPLAY_NAME && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(d.Text, {
-          className: T.textPadding,
+          className: O.textPadding,
           color: "text-muted",
           variant: "text-sm/semibold",
-          children: M.default.Messages.DISPLAY_NAME
-        }), (0, s.jsx)(O, {
-          style: n(T.displayNameHeight, T["heading-xl/bold"]),
-          value: null != D ? D : "",
-          placeholder: m.default.getName(a),
-          maxLength: h.MAX_DISPLAY_NAME_LENGTH,
-          onChange: e => C({
+          children: h.default.Messages.DISPLAY_NAME
+        }), (0, s.jsx)(M, {
+          style: l(O.displayNameHeight, O["heading-xl/bold"]),
+          value: null != G ? G : "",
+          placeholder: f.default.getName(a),
+          maxLength: T.MAX_DISPLAY_NAME_LENGTH,
+          onChange: e => P({
             globalName: e
           }),
-          onFocus: P,
-          ref: G
+          onFocus: v,
+          ref: b
         })]
-      }), (v === h.EditState.EDIT_USERNAME || v === h.EditState.SUGGESTION) && (0, s.jsxs)(s.Fragment, {
+      }), (x === T.EditState.EDIT_USERNAME || x === T.EditState.SUGGESTION) && (0, s.jsxs)(s.Fragment, {
         children: [(0, s.jsx)(d.Text, {
-          className: T.textPadding,
+          className: O.textPadding,
           color: "text-muted",
           variant: "text-sm/semibold",
-          children: M.default.Messages.USERNAME
-        }), (0, s.jsx)(O, {
-          style: n(T.userCardHeight, T.lowercaseUsername, T["heading-lg/medium"]),
-          value: null != y ? y : "",
+          children: h.default.Messages.USERNAME
+        }), (0, s.jsx)(M, {
+          style: l(O.userCardHeight, O.lowercaseUsername, O["heading-lg/medium"]),
+          value: null != U ? U : "",
           placeholder: a.username,
-          maxLength: h.MAX_DISPLAY_NAME_LENGTH,
-          onChange: e => C({
+          maxLength: T.MAX_DISPLAY_NAME_LENGTH,
+          onChange: e => P({
             username: e.replace("@", "")
           }),
-          onFocus: p,
-          ref: U
+          onFocus: C,
+          ref: D
         })]
       }), (0, s.jsx)("div", {
-        className: T.messageContainer,
+        className: O.messageContainer,
         children: (() => {
-          if (null != i) return (0, s.jsx)(_.default, {
+          if (null != i) return (0, s.jsx)(g.default, {
             type: "error",
             children: i
           });
-          if (null != R) {
-            if (v !== h.EditState.SUGGESTION) return (0, s.jsx)(d.Text, {
+          if (null != p) {
+            if (x !== T.EditState.SUGGESTION) return (0, s.jsx)(d.Text, {
               variant: "text-sm/normal",
-              children: R
+              children: p
             });
-            if (!A) return (0, s.jsx)(_.default, {
+            if (!A) return (0, s.jsx)(g.default, {
               type: "success",
-              children: R
+              children: p
             })
           }
-          return null == R && null == i && (v === h.EditState.EDIT_USERNAME || v === h.EditState.SUGGESTION) ? (0, s.jsx)(I.default, {
-            username: y,
-            oneClickFlow: j
+          return null == p && null == i && (x === T.EditState.EDIT_USERNAME || x === T.EditState.SUGGESTION) ? (0, s.jsx)(_.default, {
+            username: U,
+            oneClickFlow: y
           }) : null
         })()
       })]
-    }), v === h.EditState.PREVIEW && (0, s.jsxs)("div", {
-      className: T.userCard,
+    }), x === T.EditState.PREVIEW && (0, s.jsxs)("div", {
+      className: O.userCard,
       children: [(0, s.jsx)(d.Heading, {
         color: "header-primary",
         variant: "heading-xl/bold",
-        children: m.default.getName(a)
+        children: f.default.getName(a)
       }), (0, s.jsx)(d.Heading, {
         color: "text-normal",
         variant: "heading-lg/medium",
         children: a.username
       }), (0, s.jsx)(d.Text, {
-        className: T.memberText,
+        className: O.memberText,
         color: "text-muted",
         variant: "text-sm/medium",
-        children: M.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+        children: h.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
           date: (0, S.getMemberSince)(a.id)
         })
       })]

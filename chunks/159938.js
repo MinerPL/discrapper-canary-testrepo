@@ -13,8 +13,8 @@ var s = n("884691"),
   u = n("26989"),
   d = n("305961"),
   c = n("162771"),
-  f = n("697218"),
-  E = n("639440"),
+  E = n("697218"),
+  f = n("639440"),
   _ = n("690563"),
   T = n("921387"),
   I = n("711326"),
@@ -23,11 +23,11 @@ var s = n("884691"),
 function N(e, t) {
   let n = (0, _.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
     N = (0, I.getMediaPostEmbedChannelPath)(e),
-    p = (0, l.default)([u.default, r.default], () => {
+    p = (0, l.useStateFromStores)([u.default, r.default], () => {
       let e = r.default.getId();
       return u.default.isMember(null == N ? void 0 : N.guildId, e)
     }, [N]),
-    S = (0, l.default)([a.default], () => null != N && (null == N ? void 0 : N.channelId) != null && a.default.isChannelGated(N.guildId, N.channelId), [N]),
+    S = (0, l.useStateFromStores)([a.default], () => null != N && (null == N ? void 0 : N.channelId) != null && a.default.isChannelGated(N.guildId, N.channelId), [N]),
     A = t.hasFlag(m.MessageFlags.IS_CROSSPOST),
     {
       rawMediaPostEmbedData: C,
@@ -36,12 +36,12 @@ function N(e, t) {
       user: M,
       selectedGuildId: O,
       canAccess: R
-    } = (0, l.useStateFromStoresObject)([T.default, d.default, o.default, f.default, c.default], () => {
+    } = (0, l.useStateFromStoresObject)([T.default, d.default, o.default, E.default, c.default], () => {
       var e;
       let t = null === (e = T.default.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
         n = d.default.getGuild(null == N ? void 0 : N.guildId),
         s = o.default.getChannel(null == N ? void 0 : N.channelId),
-        l = f.default.getUser(null == t ? void 0 : t.author_id),
+        l = E.default.getUser(null == t ? void 0 : t.author_id),
         a = c.default.getGuildId(),
         r = null != s && (0, i.canViewChannel)(s);
       return {
@@ -53,7 +53,7 @@ function N(e, t) {
         canAccess: r
       }
     }, [N]),
-    L = s.useMemo(() => {
+    v = s.useMemo(() => {
       let e = (0, I.getMediaPostEmbedCommonData)({
         mediaPostEmbedData: C,
         guild: h,
@@ -70,7 +70,7 @@ function N(e, t) {
   return s.useEffect(() => {
     if ((null == N ? void 0 : N.threadId) != null) {
       let e = T.default.getEmbedFetchState(N.threadId);
-      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, E.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
+      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, f.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
     }
-  }, [N, n, p, S, A]), L
+  }, [N, n, p, S, A]), v
 }

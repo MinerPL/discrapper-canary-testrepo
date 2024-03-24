@@ -12,54 +12,50 @@ n.r(t), n.d(t, {
   isRuleMentionSpamFilter: function() {
     return c
   },
-  isRuleServerPolicyFilter: function() {
-    return f
-  },
   isRuleUserProfileFilter: function() {
     return I
   },
   createDefaultRule: function() {
-    return g
+    return f
   },
   validateKeywordsOrThrow: function() {
-    return S
+    return g
   },
   validateRuleBeforeSaveOrThrow: function() {
-    return p
+    return O
   },
   isBackendPersistedRule: function() {
     return N
   },
   eventTypeToName: function() {
-    return O
+    return S
   },
   actionTypeToName: function() {
     return R
   },
   triggerTypeToName: function() {
-    return M
+    return p
   }
 }), n("222007"), n("70102");
 var r = n("389153"),
   o = n("271938"),
-  i = n("369035"),
-  u = n("600798"),
+  u = n("369035"),
+  i = n("600798"),
   a = n("353575"),
   l = n("296839"),
-  d = n("143460"),
-  s = n("782340");
+  s = n("143460"),
+  d = n("782340");
 let T = (e, t) => "".concat(e, "-").concat(t, "-new-rule"),
-  E = e => (null == e ? void 0 : e.triggerType) === d.AutomodTriggerType.KEYWORD,
-  A = e => (null == e ? void 0 : e.triggerType) === d.AutomodTriggerType.ML_SPAM,
-  _ = e => (null == e ? void 0 : e.triggerType) === d.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
-  c = e => (null == e ? void 0 : e.triggerType) === d.AutomodTriggerType.MENTION_SPAM,
-  f = e => (null == e ? void 0 : e.triggerType) === d.AutomodTriggerType.SERVER_POLICY,
-  I = e => (null == e ? void 0 : e.triggerType) === d.AutomodTriggerType.USER_PROFILE;
+  E = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.KEYWORD,
+  A = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.ML_SPAM,
+  _ = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.DEFAULT_KEYWORD_LIST,
+  c = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.MENTION_SPAM,
+  I = e => (null == e ? void 0 : e.triggerType) === s.AutomodTriggerType.USER_PROFILE;
 
-function g(e, t) {
+function f(e, t) {
   let n = l.triggerConfigs[t],
     r = (0, l.getDefaultTriggerMetadataForTriggerType)(t, e),
-    u = {
+    i = {
       id: T(e, t),
       name: n.getDefaultRuleName(),
       guildId: e,
@@ -68,49 +64,49 @@ function g(e, t) {
       triggerMetadata: r,
       enabled: !0,
       creatorId: o.default.getId(),
-      actions: (0, i.getRuleDefaultActionsFromConfig)(n),
+      actions: (0, u.getRuleDefaultActionsFromConfig)(n),
       position: 0,
       exemptChannels: new Set,
       exemptRoles: new Set
     };
-  if (N(u)) throw Error(s.default.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
-  let d = (0, a.getRuleCountByTriggerType)(e, t);
-  return d > 0 && (u.name += " ".concat(d + 1)), u
+  if (N(i)) throw Error(d.default.Messages.GUILD_AUTOMOD_NEW_RULE_ERROR);
+  let s = (0, a.getRuleCountByTriggerType)(e, t);
+  return s > 0 && (i.name += " ".concat(s + 1)), i
 }
 
-function S(e, t) {
-  if (e.length > t) throw Error(s.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({
+function g(e, t) {
+  if (e.length > t) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_KEYWORDS.format({
     limit: t
   }));
   e.forEach(e => {
-    if (e.length > d.MAX_CHARACTERS_PER_KEYWORD || e.length < d.MIN_CHARACTERS_PER_KEYWORD) throw new u.InvalidKeywordError(s.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
+    if (e.length > s.MAX_CHARACTERS_PER_KEYWORD || e.length < s.MIN_CHARACTERS_PER_KEYWORD) throw new i.InvalidKeywordError(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_INVALID_KEYWORD_LENGTH.format({
       keyword: e,
-      max: d.MAX_CHARACTERS_PER_KEYWORD,
-      min: d.MIN_CHARACTERS_PER_KEYWORD
+      max: s.MAX_CHARACTERS_PER_KEYWORD,
+      min: s.MIN_CHARACTERS_PER_KEYWORD
     }))
   })
 }
 
-function p(e) {
+function O(e) {
   if (E(e)) {
     var t, n;
     let r = null !== (t = e.triggerMetadata.keywordFilter) && void 0 !== t ? t : [],
       o = null !== (n = e.triggerMetadata.regexPatterns) && void 0 !== n ? n : [];
-    if (0 === r.length && 0 === o.length) throw Error(s.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
-    S(r, d.MAX_KEYWORDS_PER_KEYWORD_FILTER), ! function(e) {
-      if (e.length > d.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER) throw Error(s.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({
-        limit: d.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER
+    if (0 === r.length && 0 === o.length) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_NO_KEYWORDS_OR_REGEX);
+    g(r, s.MAX_KEYWORDS_PER_KEYWORD_FILTER), ! function(e) {
+      if (e.length > s.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER) throw Error(d.default.Messages.GUILD_AUTOMOD_KEYWORD_ERROR_TOO_MANY_REGEX.format({
+        limit: s.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER
       }));
       e.forEach(e => {
-        if (e.length > d.MAX_REGEX_PATTERN_LENGTH || e.length < d.MIN_REGEX_PATTERN_LENGTH) throw new u.InvalidRegexPatternError(s.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
+        if (e.length > s.MAX_REGEX_PATTERN_LENGTH || e.length < s.MIN_REGEX_PATTERN_LENGTH) throw new i.InvalidRegexPatternError(d.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_INVALID_REGEX_LENGTH.format({
           regex: e,
-          max: d.MAX_REGEX_PATTERN_LENGTH,
-          min: d.MIN_REGEX_PATTERN_LENGTH
+          max: s.MAX_REGEX_PATTERN_LENGTH,
+          min: s.MIN_REGEX_PATTERN_LENGTH
         }))
       })
     }(o)
   }
-  if (0 === e.actions.length) throw Error(s.default.Messages.GUILD_AUTOMOD_ERROR_NO_ACTIONS)
+  if (0 === e.actions.length) throw Error(d.default.Messages.GUILD_AUTOMOD_ERROR_NO_ACTIONS)
 }
 
 function N(e) {
@@ -118,31 +114,45 @@ function N(e) {
   return (0, r.isSnowflake)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "INVALID_SNOWFLAKE")
 }
 
-function O(e) {
-  if (e === d.AutomodEventType.MESSAGE_SEND) return s.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
-  return s.default.Messages.GUILD_AUTOMOD_UNKNOWN
+function S(e) {
+  switch (e) {
+    case s.AutomodEventType.MESSAGE_SEND:
+      return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_MESSAGE_SEND;
+    case s.AutomodEventType.GUILD_MEMBER_JOIN_OR_UPDATE:
+      return d.default.Messages.GUILD_AUTOMOD_EVENT_TYPE_GUILD_MEMBER_JOIN_OR_UPDATE;
+    default:
+      return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
+  }
 }
 
 function R(e) {
   switch (e) {
-    case d.AutomodActionType.BLOCK_MESSAGE:
-      return s.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
-    case d.AutomodActionType.FLAG_TO_CHANNEL:
-      return s.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
+    case s.AutomodActionType.BLOCK_MESSAGE:
+      return d.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
+    case s.AutomodActionType.FLAG_TO_CHANNEL:
+      return d.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_NAME;
+    case s.AutomodActionType.USER_COMMUNICATION_DISABLED:
+      return d.default.Messages.GUILD_AUTOMOD_ACTIONS_USER_COMMUNICATION_DISABLED;
+    case s.AutomodActionType.QUARANTINE_USER:
+      return d.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER;
     default:
-      return s.default.Messages.GUILD_AUTOMOD_UNKNOWN
+      return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
   }
 }
 
-function M(e) {
+function p(e) {
   switch (e) {
-    case d.AutomodTriggerType.KEYWORD:
-      return s.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
-    case d.AutomodTriggerType.ML_SPAM:
-      return s.default.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME;
-    case d.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
-      return s.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME;
+    case s.AutomodTriggerType.KEYWORD:
+      return d.default.Messages.GUILD_AUTOMOD_KEYWORD_FILTER_NAME;
+    case s.AutomodTriggerType.ML_SPAM:
+      return d.default.Messages.GUILD_AUTOMOD_ML_SPAM_FILTER_NAME;
+    case s.AutomodTriggerType.DEFAULT_KEYWORD_LIST:
+      return d.default.Messages.GUILD_AUTOMOD_DEFAULT_KEYWORD_LIST_FILTER_NAME;
+    case s.AutomodTriggerType.MENTION_SPAM:
+      return d.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_FILTER_NAME;
+    case s.AutomodTriggerType.USER_PROFILE:
+      return d.default.Messages.GUILD_AUTOMOD_USER_PROFILE_FILTER_NAME;
     default:
-      return s.default.Messages.GUILD_AUTOMOD_UNKNOWN
+      return d.default.Messages.GUILD_AUTOMOD_UNKNOWN
   }
 }

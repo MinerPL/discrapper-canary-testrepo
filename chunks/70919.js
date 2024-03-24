@@ -16,7 +16,7 @@ var s = n("872717"),
   o = n("49111");
 
 function l(e, t) {
-  s.default.get({
+  s.HTTP.get({
     url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t)
   }).then(e => {
     let n = [];
@@ -41,7 +41,7 @@ async function r(e, t, n) {
       operator: e.operator,
       value: e.value
     }))),
-    r = await s.default.put({
+    r = await s.HTTP.put({
       url: o.Endpoints.GUILD_ROLE_CONNECTIONS_CONFIGURATION(e, t),
       body: 0 === l.length ? [] : l,
       oldFormErrors: !0
@@ -68,7 +68,7 @@ async function r(e, t, n) {
   })
 }
 async function c() {
-  let e = await s.default.get({
+  let e = await s.HTTP.get({
     url: o.Endpoints.APPLICATION_USER_ROLE_CONNECTIONS
   });
   return e.body

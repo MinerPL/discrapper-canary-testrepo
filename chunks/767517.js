@@ -15,7 +15,7 @@ var s = n("872717"),
       type: "GUILD_TEMPLATE_ACCEPT",
       code: e
     }), new Promise((o, d) => {
-      s.default.post({
+      s.HTTP.post({
         url: u.Endpoints.UNRESOLVED_GUILD_TEMPLATE(e),
         body: {
           name: t,

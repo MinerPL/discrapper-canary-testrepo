@@ -1,32 +1,36 @@
 "use strict";
 n.r(t), n.d(t, {
   openMigrationModal: function() {
-    return f
+    return m
   },
   default: function() {
-    return m
+    return h
   }
 }), n("222007");
-var a = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("95410"),
-  s = n("77078"),
-  l = n("872717"),
-  r = n("689988"),
+var a = n("872717"),
+  s = n("95410"),
+  l = n("77078"),
+  o = n("689988"),
+  r = n("350522"),
   u = n("282109"),
-  o = n("640497"),
-  d = n("699668");
-class c extends r.default {
-  async handlePostConnectionOpen() {
-    if (i.default.get("turnedOffNewNotifications") || !o.NotificationsExperiment.getCurrentConfig({
+  d = n("640497"),
+  c = n("699668"),
+  f = n("49111");
+class g extends o.default {
+  handlePostConnectionOpen() {
+    if (!s.default.get("turnedOffNewNotifications") && !!r.default.hasConsented(f.Consents.PERSONALIZATION) && !!d.NotificationsExperiment.getCurrentConfig({
         location: "NotificationMigrationManager"
       }, {
         autoTrackExposure: !1
-      }).enabled || u.default.useNewNotifications) return;
+      }).enabled) !u.default.useNewNotifications && (this.checkOldUserExperiment(), this.checkNewUserExperiment())
+  }
+  async checkOldUserExperiment() {
     let {
       logExposure: e,
       autoOpen: t
-    } = o.UnreadsEntryPointExperiment.getCurrentConfig({
+    } = d.UnreadsEntryPointExperiment.getCurrentConfig({
       location: "NotificationMigrationManager"
     }, {
       autoTrackExposure: !1
@@ -34,46 +38,59 @@ class c extends r.default {
     if (!e) return;
     let {
       body: {
-        guild_noise: r,
-        usage: c
+        guild_noise: s,
+        usage: o
       }
-    } = await l.default.get("/users/@me/notification-migration-data2"), f = (0, d.transformUsageData)(c), {
-      default: m
+    } = await a.HTTP.get("/users/@me/notification-migration-data2"), r = (0, c.transformUsageData)(o), {
+      default: u
     } = await n.el("923660").then(n.bind(n, "923660"));
-    if (!(0, s.hasAnyModalOpen)()) o.UnreadsEntryPointExperiment.trackExposure({
+    if (!(0, l.hasAnyModalOpen)()) d.UnreadsEntryPointExperiment.trackExposure({
       location: "NotificationMigrationManager"
-    }), t && ((0, d.hasGoodCandidateServers)(r, f) ? (0, s.openModal)(e => (0, a.jsx)(m, {
+    }), t && ((0, c.hasGoodCandidateServers)(s, r) ? (0, l.openModal)(e => (0, i.jsx)(u, {
       ...e,
       dismissable: !1,
-      guildPain: r,
-      myUsage: f
+      guildPain: s,
+      myUsage: r
     }), {
       onCloseRequest: () => {}
-    }) : (0, d.autoMigrateToNewSystem)())
+    }) : (0, c.autoMigrateToNewSystem)())
+  }
+  checkNewUserExperiment() {
+    let {
+      logExposure: e,
+      enabled: t
+    } = d.NewUserUnreadsEntryPointExperiment.getCurrentConfig({
+      location: "NotificationMigrationManager"
+    }, {
+      autoTrackExposure: !1
+    });
+    e && (d.NewUserUnreadsEntryPointExperiment.trackExposure({
+      location: "NotificationMigrationManager"
+    }), t && (0, c.autoMigrateToNewSystem)())
   }
   constructor(...e) {
     super(...e), this.actions = {
-      POST_CONNECTION_OPEN: this.handlePostConnectionOpen
+      POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
     }
   }
 }
-async function f(e) {
+async function m(e) {
   let {
     body: {
       guild_noise: t,
-      usage: i
+      usage: s
     }
-  } = await l.default.get("/users/@me/notification-migration-data2"), r = (0, d.transformUsageData)(i);
-  (0, s.openModalLazy)(async () => {
+  } = await a.HTTP.get("/users/@me/notification-migration-data2"), o = (0, c.transformUsageData)(s);
+  (0, l.openModalLazy)(async () => {
     let {
-      default: i
+      default: a
     } = await n.el("923660").then(n.bind(n, "923660"));
-    return n => (0, a.jsx)(i, {
+    return n => (0, i.jsx)(a, {
       ...n,
       dismissable: e,
       guildPain: t,
-      myUsage: r
+      myUsage: o
     })
   })
 }
-var m = new c
+var h = new g

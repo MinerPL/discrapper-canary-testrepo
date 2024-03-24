@@ -5,11 +5,11 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("75247"),
-  r = n("913144"),
-  s = n("605250"),
+  s = n("913144"),
+  r = n("605250"),
   a = n("778689");
-let o = new s.default("BasicChannelCacheStore");
-class l extends i.default {
+let o = new r.default("BasicChannelCacheStore");
+class l extends i.Store {
   hasChannel(e) {
     return this.channels.has(e)
   }
@@ -53,7 +53,7 @@ class l extends i.default {
     this.guilds.delete(e)
   }
   constructor() {
-    super(r.default, {
+    super(s.default, {
       CACHE_LOADED_LAZY_NO_CACHE: e => this.handleCacheLoadedLazyNoCache(e),
       CACHE_LOADED_LAZY: e => this.handleCacheLoadedLazy(e),
       CONNECTION_OPEN: e => this.handleConnectionOpen(e),

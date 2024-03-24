@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   hasVoiceChannelActivityNotifsEnabled: function() {
-    return d
+    return o
   }
 });
 var a = n("862205"),
@@ -52,7 +52,7 @@ function s(e) {
     voiceChannelActivityNotifsEnabled: n
   } = u.useExperiment({
     location: "useVoiceActivityNotificationSettingsExperiment",
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : ""
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID
   }, {
     disable: (null == e ? void 0 : e.type) !== i.ChannelTypes.GUILD_VOICE,
     autoTrackExposure: !1
@@ -67,12 +67,12 @@ function s(e) {
   return (null == e ? void 0 : e.type) === i.ChannelTypes.GUILD_VOICE && n && a
 }
 
-function d(e) {
+function o(e) {
   var t;
   let {
     voiceChannelActivityNotifsEnabled: n
   } = u.getCurrentConfig({
-    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : "",
+    guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID,
     location: "hasVoiceChannelActivityNotifsEnabled"
   });
   return n

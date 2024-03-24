@@ -9,18 +9,18 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("463848"),
+  u = n("77078"),
+  o = n("463848"),
   d = n("750560"),
-  c = n("532602"),
+  c = n("632710"),
   f = n("76393"),
   h = n("373469"),
-  p = n("271938"),
-  m = n("305961"),
+  m = n("271938"),
+  p = n("305961"),
   E = n("957255"),
-  C = n("824563"),
-  g = n("800762"),
-  S = n("822332"),
+  g = n("824563"),
+  S = n("800762"),
+  C = n("822332"),
   _ = n("599110"),
   I = n("223913"),
   T = n("582415"),
@@ -28,7 +28,7 @@ var a = n("37983"),
   x = n("673527"),
   N = n("49111"),
   A = n("782340"),
-  M = n("995068");
+  M = n("430868");
 class R extends l.PureComponent {
   componentDidMount() {
     let {
@@ -52,7 +52,7 @@ class R extends l.PureComponent {
       canWatch: s,
       unavailableReason: i
     } = this.props;
-    return (0, a.jsxs)(o.Clickable, {
+    return (0, a.jsxs)(u.Clickable, {
       onClick: t,
       className: M.previewContainer,
       children: [(0, a.jsx)(x.default, {
@@ -60,7 +60,7 @@ class R extends l.PureComponent {
         stream: e
       }), s ? (0, a.jsx)("div", {
         className: M.previewHover,
-        children: (0, a.jsx)(o.Text, {
+        children: (0, a.jsx)(u.Text, {
           variant: "text-sm/normal",
           color: "none",
           className: M.white,
@@ -84,23 +84,29 @@ class R extends l.PureComponent {
         className: M.streamPreview,
         children: [this.renderPreview(n), (0, a.jsxs)("div", {
           className: M.body,
-          children: [null != e ? (0, a.jsx)(u.default, {
+          children: [null != e ? (0, a.jsx)(o.default, {
             hideHeader: !0,
-            type: u.UserActivityTypes.STREAM_PREVIEW,
+            type: o.UserActivityTypes.STREAM_PREVIEW,
             activity: e,
             user: t,
             guildId: n.guildId,
-            channelId: n.channelId
+            channelId: n.channelId,
+            analyticsParams: {
+              location: {
+                page: N.AnalyticsPages.GO_LIVE_MODAL,
+                section: N.AnalyticsSections.STREAM_VIEWER_POPOUT
+              }
+            }
           }) : (0, a.jsx)(c.default, {
-            type: u.UserActivityTypes.STREAM_PREVIEW,
+            type: o.UserActivityTypes.STREAM_PREVIEW,
             applicationStream: n,
             user: t,
             guildId: n.guildId,
             channelId: n.channelId,
             className: M.activityActions,
             color: M.watchButton
-          }), (0, a.jsx)(S.default, {
-            type: S.default.Types.INLINE,
+          }), (0, a.jsx)(C.default, {
+            type: C.default.Types.INLINE,
             className: M.protip,
             children: __OVERLAY__ ? A.default.Messages.WATCH_STREAM_IN_APP : A.default.Messages.WATCH_STREAM_TIP
           })]
@@ -115,18 +121,18 @@ function j(e) {
     user: t,
     channel: n,
     ...s
-  } = e, [i, o] = (0, r.useStateFromStoresArray)([g.default, m.default, E.default, f.default], () => (0, I.canWatchStream)(n, g.default, m.default, E.default, f.default)), u = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(u)), S = (0, r.useStateFromStores)([p.default], () => p.default.getId()), _ = (0, r.useStateFromStores)([C.default], () => (0, T.getStreamerApplication)(u, C.default)), v = (0, r.useStateFromStores)([C.default], () => (0, T.getStreamerActivity)(u, C.default)), x = l.useMemo(() => ({
+  } = e, [i, u] = (0, r.useStateFromStoresArray)([S.default, p.default, E.default, f.default], () => (0, I.canWatchStream)(n, S.default, p.default, E.default, f.default)), o = (0, r.useStateFromStores)([h.default], () => h.default.getStreamForUser(t.id, n.getGuildId())), c = (0, r.useStateFromStores)([h.default], () => h.default.getActiveStreamForApplicationStream(o)), C = (0, r.useStateFromStores)([m.default], () => m.default.getId()), _ = (0, T.useGetStreamApplication)(o), v = (0, r.useStateFromStores)([g.default], () => (0, T.getStreamerActivity)(o, g.default)), x = l.useMemo(() => ({
     [n.guild_id]: [t.id]
   }), [n.guild_id, t.id]);
   return (0, d.useSubscribeGuildMembers)(x), (0, a.jsx)(R, {
     ...s,
     canWatch: i,
-    unavailableReason: o,
+    unavailableReason: u,
     user: t,
     streamApplication: _,
-    stream: u,
+    stream: o,
     activeStream: c,
-    currentUserId: S,
+    currentUserId: C,
     activity: v
   })
 }

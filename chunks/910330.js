@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return x
   }
-}), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("817736"),
-  i = l.n(s),
-  r = l("446674"),
-  o = l("77078"),
-  u = l("890674"),
-  d = l("349649"),
-  c = l("102985"),
-  f = l("49111"),
-  m = l("782340"),
-  p = l("98325");
-class E extends a.PureComponent {
+}), n("222007");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("817736"),
+  s = n.n(a),
+  r = n("446674"),
+  o = n("77078"),
+  u = n("890674"),
+  d = n("349649"),
+  c = n("102985"),
+  f = n("49111"),
+  p = n("782340"),
+  m = n("380571");
+class h extends l.PureComponent {
   componentDidMount() {
     if (this.props.autoFocus && !this.props.hideNote) {
-      let e = i.findDOMNode(this.noteRef.current);
+      let e = s.findDOMNode(this.noteRef.current);
       null != e && null != e.selectionStart && (e.focus(), e.selectionStart = e.selectionEnd = e.value.length)
     }
   }
@@ -27,31 +27,33 @@ class E extends a.PureComponent {
     let {
       className: e,
       loading: t,
-      note: l,
-      hideNote: a
+      note: n,
+      hideNote: l
     } = this.props;
-    return a ? null : (0, n.jsx)("div", {
+    return l ? null : (0, i.jsx)("div", {
       className: e,
-      children: (0, n.jsx)(o.TextAreaAutosize, {
+      children: (0, i.jsx)(o.TextAreaAutosize, {
         ref: this.noteRef,
-        className: p.textarea,
+        className: m.textarea,
         disabled: t,
-        placeholder: t ? m.default.Messages.LOADING_NOTE : m.default.Messages.NOTE_PLACEHOLDER,
-        "aria-label": m.default.Messages.NOTE,
+        placeholder: t ? p.default.Messages.LOADING_NOTE : p.default.Messages.NOTE_PLACEHOLDER,
+        "aria-label": p.default.Messages.NOTE,
         onBlur: this.handleBlur,
         onKeyPress: this.handleKeyPress,
-        defaultValue: null != l ? l : void 0,
+        defaultValue: null != n ? n : void 0,
         maxLength: f.NOTE_MAX_LENGTH
       })
     })
   }
   constructor(...e) {
-    super(...e), this.noteRef = a.createRef(), this.handleBlur = e => {
+    super(...e), this.noteRef = l.createRef(), this.handleBlur = e => {
       let t = e.currentTarget.value,
         {
-          note: l
+          note: n,
+          userId: i,
+          onUpdate: l
         } = this.props;
-      l !== t && u.default.updateNote(this.props.userId, t)
+      n !== t && (null == l || l(), u.default.updateNote(i, t))
     }, this.handleKeyPress = e => {
       if (13 === e.which) {
         if (e.shiftKey) {
@@ -63,15 +65,15 @@ class E extends a.PureComponent {
   }
 }
 
-function T(e) {
+function x(e) {
   let t = (0, r.useStateFromStores)([c.default], () => c.default.hidePersonalInformation),
-    l = (0, d.default)(e.userId);
-  return (0, n.jsx)(E, {
+    n = (0, d.default)(e.userId);
+  return (0, i.jsx)(h, {
     ...e,
-    ...l,
+    ...n,
     hideNote: t
   })
 }
-E.defaultProps = {
+h.defaultProps = {
   autoFocus: !1
 }

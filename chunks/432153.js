@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   useChannelWithTemplateFallback: function() {
-    return p
+    return g
   },
   useSuggestedUnusedPrices: function() {
-    return _
+    return p
   },
   announceCreateTemplateChannels: function() {
-    return m
+    return I
   },
   announceDeleteTemplateChannels: function() {
-    return I
+    return m
   },
   createChannelsFromTemplateTierBenefits: function() {
     return T
@@ -19,15 +19,15 @@ n.r(t), n.d(t, {
     return v
   },
   isEligibleForNewBadge: function() {
-    return N
+    return R
   }
 }), n("424973"), n("222007"), n("462568");
 var i = n("642852"),
   r = n.n(i),
   l = n("65597"),
-  u = n("913144"),
-  o = n("437140"),
-  s = n("42203"),
+  s = n("913144"),
+  u = n("437140"),
+  o = n("42203"),
   a = n("808388"),
   d = n("648825"),
   c = n("971150"),
@@ -36,28 +36,28 @@ var i = n("642852"),
   E = n("49111"),
   h = n("724210");
 r.shim();
-let g = {};
+let _ = {};
 
-function p(e) {
-  let t = (0, l.default)([s.default], () => s.default.getChannel(e)),
-    n = (0, l.default)([S.default], () => S.default.getChannel(e));
+function g(e) {
+  let t = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(e)),
+    n = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(e));
   return null != t ? t : n
 }
 
-function _(e, t, n) {
-  let i = (0, l.default)([d.default], () => d.default.getSubscriptionListingsForGuild(e)),
+function p(e, t, n) {
+  let i = (0, l.useStateFromStores)([d.default], () => d.default.getSubscriptionListingsForGuild(e)),
     r = (0, c.useEditStateStore)(t => t.editStateIdsForGroup[e]),
-    u = (0, c.useEditStateStore)(e => e.listings);
+    s = (0, c.useEditStateStore)(e => e.listings);
   if (void 0 === n || void 0 === t) return null;
-  let o = i.filter(e => !e.soft_deleted && !e.archived),
-    s = o.map(e => e.subscription_plans[0].price),
+  let u = i.filter(e => !e.soft_deleted && !e.archived),
+    o = u.map(e => e.subscription_plans[0].price),
     a = [];
   void 0 !== r && r.forEach(e => {
-    let t = u[e],
+    let t = s[e],
       n = null == t ? void 0 : t.priceTier;
     null != n && a.push(n)
   });
-  let f = new Set(a.concat(s));
+  let f = new Set(a.concat(o));
   if (!f.has(n)) return null;
   let S = t.indexOf(n);
   if (-1 === S) return null;
@@ -88,22 +88,22 @@ function C(e) {
   return r
 }
 
-function m(e) {
+function I(e) {
   let t = C(e);
-  g[e] = t, t.forEach(e => {
+  _[e] = t, t.forEach(e => {
     let t = e.set("flags", h.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
-    u.default.dispatch({
+    s.default.dispatch({
       type: "CHANNEL_CREATE",
       channel: t
     })
   })
 }
 
-function I(e) {
+function m(e) {
   var t;
-  let n = null !== (t = g[e]) && void 0 !== t ? t : C(e);
+  let n = null !== (t = _[e]) && void 0 !== t ? t : C(e);
   n.forEach(e => {
-    u.default.dispatch({
+    s.default.dispatch({
       type: "CHANNEL_DELETE",
       channel: e
     })
@@ -114,7 +114,7 @@ async function T(e, t) {
     i = [];
   if (t.forEach(t => {
       let r = S.default.getChannel(t.ref_id);
-      null != r && (n.push(o.default.createRoleSubscriptionTemplateChannel(e, r.name, r.type, r.topic)), i.push(r))
+      null != r && (n.push(u.default.createRoleSubscriptionTemplateChannel(e, r.name, r.type, r.topic)), i.push(r))
     }), 0 === n.length) return;
   let r = await Promise.allSettled(n);
   r.forEach((n, r) => {
@@ -144,38 +144,38 @@ function v(e, t) {
     templateCategory: null,
     hasChangeFromTemplate: null
   };
-  let u = S.default.getTemplateWithCategory(t, l);
-  if (null == u) return {
+  let s = S.default.getTemplateWithCategory(t, l);
+  if (null == s) return {
     templateCategory: null,
     hasChangeFromTemplate: null
   };
-  let o = u.listings[0];
-  if ((null == r ? void 0 : r.name) !== o.name || (null == r ? void 0 : r.description) !== o.description || (null == r ? void 0 : r.priceTier) !== o.price_tier || (null == r ? void 0 : r.image) !== o.image || (null == r ? void 0 : r.roleColor) !== o.role_color || (null == r ? void 0 : null === (n = r.channelBenefits) || void 0 === n ? void 0 : n.length) !== o.channels.length || (null == r ? void 0 : null === (i = r.intangibleBenefits) || void 0 === i ? void 0 : i.length) !== o.additional_perks.length) return {
-    templateCategory: u.category,
+  let u = s.listings[0];
+  if ((null == r ? void 0 : r.name) !== u.name || (null == r ? void 0 : r.description) !== u.description || (null == r ? void 0 : r.priceTier) !== u.price_tier || (null == r ? void 0 : r.image) !== u.image || (null == r ? void 0 : r.roleColor) !== u.role_color || (null == r ? void 0 : null === (n = r.channelBenefits) || void 0 === n ? void 0 : n.length) !== u.channels.length || (null == r ? void 0 : null === (i = r.intangibleBenefits) || void 0 === i ? void 0 : i.length) !== u.additional_perks.length) return {
+    templateCategory: s.category,
     hasChangeFromTemplate: !0
   };
-  for (let e = 0; e < o.channels.length; e++) {
+  for (let e = 0; e < u.channels.length; e++) {
     let t = r.channelBenefits[e],
-      n = o.channels[e];
+      n = u.channels[e];
     if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name) return {
-      templateCategory: u.category,
+      templateCategory: s.category,
       hasChangeFromTemplate: !0
     }
   }
-  for (let e = 0; e < o.additional_perks.length; e++) {
+  for (let e = 0; e < u.additional_perks.length; e++) {
     let t = r.intangibleBenefits[e],
-      n = o.additional_perks[e];
+      n = u.additional_perks[e];
     if (t.name !== n.name || t.description !== n.description || t.emoji_name !== n.emoji_name) return {
-      templateCategory: u.category,
+      templateCategory: s.category,
       hasChangeFromTemplate: !0
     }
   }
   return {
-    templateCategory: u.category,
+    templateCategory: s.category,
     hasChangeFromTemplate: !1
   }
 }
 
-function N(e) {
+function R(e) {
   return (0, f.canManageGuildRoleSubscriptions)(e) && e.hasFeature(E.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, a.isUserEligibleForTierTemplates)() && (0, a.isGuildEligibleForTierTemplates)(e.id)
 }

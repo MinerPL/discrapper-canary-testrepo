@@ -1,47 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   overrideSurvey: function() {
-    return u
-  },
-  surveyHide: function() {
     return d
   },
-  surveyFetch: function() {
+  surveyHide: function() {
     return c
+  },
+  surveyFetch: function() {
+    return E
+  },
+  surveySeen: function() {
+    return f
   }
 });
 var s = n("759843"),
   l = n("627929"),
   a = n("913144"),
-  i = n("599110"),
-  r = n("840707"),
-  o = n("49111");
+  i = n("381684"),
+  r = n("599110"),
+  o = n("840707"),
+  u = n("49111");
 
-function u(e) {
+function d(e) {
   a.default.dispatch({
     type: "SURVEY_OVERRIDE",
     id: e
   })
 }
 
-function d(e, t) {
+function c(e, t) {
   a.default.dispatch({
     type: "SURVEY_HIDE",
     key: e
-  }), t ? i.default.track(o.AnalyticEvents.APP_NOTICE_CLOSED, {
-    notice_type: o.NoticeTypes.SURVEY,
+  }), t ? r.default.track(u.AnalyticEvents.APP_NOTICE_CLOSED, {
+    notice_type: u.NoticeTypes.SURVEY,
     survey_id: e,
     dismissed: t
-  }) : i.default.track(o.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
-    notice_type: o.NoticeTypes.SURVEY
+  }) : r.default.track(u.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+    notice_type: u.NoticeTypes.SURVEY
   })
 }
 
-function c(e) {
-  var t = {};
-  return null != e && (t.survey_override = e), r.default.get({
-    url: o.Endpoints.USER_SURVEY,
-    query: t,
+function E(e, t) {
+  var n = {};
+  return null != e && (n.survey_override = e), null != t && (n.disable_auto_seen = t), o.default.get({
+    url: u.Endpoints.USER_SURVEY,
+    query: n,
     trackedActionData: {
       event: s.NetworkActionNames.USER_SURVEY_FETCH,
       properties: e => {
@@ -63,5 +67,21 @@ function c(e) {
       type: "SURVEY_FETCHED",
       survey: null
     })
+  })
+}
+
+function f(e) {
+  let t = i.default.getLastSeenTimestamp();
+  if (null === t || null != t && Date.now() - t >= i.SURVEY_REFETCH_INTERVAL) return a.default.dispatch({
+    type: "SURVEY_SEEN",
+    key: e
+  }), o.default.post({
+    url: u.Endpoints.USER_SURVEY_SEEN(e),
+    trackedActionData: {
+      event: s.NetworkActionNames.USER_SURVEY_SEEN,
+      properties: t => (0, l.exact)({
+        key: e
+      })
+    }
   })
 }

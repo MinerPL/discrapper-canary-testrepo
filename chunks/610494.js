@@ -14,31 +14,31 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("872717"),
-  n = s("913144"),
-  l = s("49111");
+  l = s("913144"),
+  n = s("49111");
 
 function i() {
-  n.default.dispatch({
+  l.default.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_CLOSE"
   })
 }
 
 function r() {
-  n.default.dispatch({
+  l.default.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_RESET"
   })
 }
 
 function o(e) {
-  n.default.dispatch({
+  l.default.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_SET",
     code: e
   })
 }
 
 function d(e, t) {
-  return a.default.patch({
-    url: l.Endpoints.GUILD_VANITY_URL(e),
+  return a.HTTP.patch({
+    url: n.Endpoints.GUILD_VANITY_URL(e),
     body: {
       code: t
     },
@@ -50,12 +50,12 @@ function d(e, t) {
         uses: s
       }
     } = e;
-    n.default.dispatch({
+    l.default.dispatch({
       type: "GUILD_SETTINGS_SET_VANITY_URL",
       code: t,
       uses: s
     })
-  }, e => (n.default.dispatch({
+  }, e => (l.default.dispatch({
     type: "GUILD_SETTINGS_VANITY_URL_ERROR",
     error: e.body
   }), e))

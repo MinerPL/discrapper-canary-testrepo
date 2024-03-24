@@ -32,7 +32,7 @@ var I = {
       channelId: e
     })
   },
-  createForumTag: (e, t) => i.default.post({
+  createForumTag: (e, t) => i.HTTP.post({
     url: o.Endpoints.FORUM_TAGS(t),
     body: {
       name: e.name,
@@ -42,7 +42,7 @@ var I = {
     }
   }),
   updateForumTag(e, t) {
-    let s = i.default.put({
+    let s = i.HTTP.put({
       url: o.Endpoints.FORUM_TAG(t, e.id),
       body: {
         name: e.name,
@@ -54,12 +54,12 @@ var I = {
     m(() => s, c.default.Messages.FORUM_TAG_EDIT_ERROR, c.default.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
   },
   deleteForumTag(e, t) {
-    let s = i.default.delete({
+    let s = i.HTTP.del({
       url: o.Endpoints.FORUM_TAG(e, t)
     });
     m(() => s, c.default.Messages.FORUM_TAG_REMOVE_ERROR, c.default.Messages.FORUM_POST_NON_MODERATED_TAG_REQUIRED)
   },
-  updateForumPostTags: async (e, t) => (await d.default.unarchiveThreadIfNecessary(e), i.default.patch({
+  updateForumPostTags: async (e, t) => (await d.default.unarchiveThreadIfNecessary(e), i.HTTP.patch({
     url: o.Endpoints.CHANNEL(e),
     body: {
       applied_tags: t

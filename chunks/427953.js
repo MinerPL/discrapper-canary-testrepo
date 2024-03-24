@@ -9,62 +9,48 @@ n.r(t), n.d(t, {
   useIsActivitiesInTextEnabled: function() {
     return c
   },
-  useIsActivitiesInTextActionBarEnabled: function() {
-    return f
+  useActivitiesInTextButtonVisibility: function() {
+    return _
   }
 });
 var i = n("298386"),
   s = n("446674"),
-  r = n("862205"),
-  a = n("42203");
-let o = (0, r.createExperiment)({
-    kind: "user",
-    id: "2023-08_activities_in_text",
-    label: "Activities in Text User",
-    defaultConfig: {
-      enabled: !1,
-      actionBarEnabled: !1
-    },
-    treatments: [{
-      id: 1,
-      label: "enable Activities in text channels",
-      config: {
-        enabled: !0,
-        actionBarEnabled: !1
-      }
-    }, {
-      id: 2,
-      label: "enable Activities in text channels with action bar",
-      config: {
-        enabled: !0,
-        actionBarEnabled: !0
-      }
-    }]
-  }),
-  l = (0, r.createExperiment)({
-    kind: "guild",
-    id: "2023-11_activities_in_text_guild",
-    label: "Activities in Text Guild",
-    defaultConfig: {
-      enabled: !1,
-      actionBarEnabled: !1
-    },
-    treatments: [{
-      id: 1,
-      label: "enable Activities in text channels",
-      config: {
-        enabled: !0,
-        actionBarEnabled: !1
-      }
-    }, {
-      id: 2,
-      label: "enable Activities in text channels with action bar",
-      config: {
-        enabled: !0,
-        actionBarEnabled: !0
-      }
-    }]
-  });
+  r = n("75789"),
+  a = n("862205"),
+  o = n("42203");
+let l = (0, a.createExperiment)({
+  kind: "user",
+  id: "2023-08_activities_in_text",
+  label: "Activities in Text User",
+  defaultConfig: {
+    entryPointEnabled: !1,
+    desktopThrobberEnabled: !1,
+    activitiesInTextEnabled: !1,
+    showInOmniButtonMenu: !1,
+    showChatInputButton: !1
+  },
+  treatments: [{
+    id: 1,
+    label: "enable Activities in text channels",
+    config: {
+      entryPointEnabled: !0,
+      activitiesInTextEnabled: !0,
+      desktopThrobberEnabled: !1,
+      showInOmniButtonMenu: !0,
+      showChatInputButton: !1
+    }
+  }, {
+    id: 3,
+    label: "enable Activities in text with the rocket button in chat input",
+    config: {
+      entryPointEnabled: !0,
+      activitiesInTextEnabled: !0,
+      desktopThrobberEnabled: !1,
+      showInOmniButtonMenu: !1,
+      showChatInputButton: !0
+    }
+  }]
+});
 
 function u(e) {
   return [i.ChannelTypes.GUILD_TEXT, i.ChannelTypes.GROUP_DM, i.ChannelTypes.DM].includes(e)
@@ -73,40 +59,68 @@ function u(e) {
 function d(e, t) {
   if (null == e) return !1;
   let n = u(e.type);
-  return (null == e ? void 0 : e.guild_id) != null ? l.getCurrentConfig({
+  return (null == e ? void 0 : e.guild_id) != null ? r.default.getCurrentConfig({
     guildId: e.guild_id,
     location: t
   }, {
-    autoTrackExposure: !1
-  }).enabled && n : o.getCurrentConfig({
+    autoTrackExposure: !0
+  }).activitiesInTextEnabled && n : l.getCurrentConfig({
     location: t
   }, {
-    autoTrackExposure: !1
-  }).enabled && n
+    autoTrackExposure: !0
+  }).activitiesInTextEnabled && n
 }
 
 function c(e, t) {
-  var n;
-  let i = (0, s.useStateFromStores)([a.default], () => a.default.getChannel(e));
-  let r = null != (n = i) && u(n.type),
-    d = (null == i ? void 0 : i.guild_id) != null ? l : o,
-    c = d.useExperiment({
-      guildId: null == i ? void 0 : i.guild_id,
-      location: t
-    }, {
-      autoTrackExposure: !1
-    });
-  return c.enabled && r
+  let {
+    isActivitiesInTextEnabledForChannelType: n,
+    channelGuildId: i
+  } = (0, s.useStateFromStoresObject)([o.default], () => {
+    var t;
+    let n = o.default.getChannel(e);
+    return {
+      isActivitiesInTextEnabledForChannelType: null != (t = n) && u(t.type),
+      channelGuildId: null == n ? void 0 : n.guild_id
+    }
+  }), a = void 0 !== i, d = r.default.useExperiment({
+    guildId: i,
+    location: t
+  }, {
+    autoTrackExposure: a,
+    disable: !a
+  }), c = l.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: !a,
+    disable: a
+  });
+  return a ? d.activitiesInTextEnabled && n : c.activitiesInTextEnabled && n
 }
 
-function f(e, t) {
-  let n = (0, s.useStateFromStores)([a.default], () => a.default.getChannel(e)),
-    i = (null == n ? void 0 : n.guild_id) != null ? l : o,
-    r = i.useExperiment({
-      guildId: null == n ? void 0 : n.guild_id,
+function _(e, t) {
+  let n = (0, s.useStateFromStores)([o.default], () => {
+      var t;
+      return null === (t = o.default.getChannel(e)) || void 0 === t ? void 0 : t.guild_id
+    }),
+    i = void 0 !== n,
+    a = r.default.useExperiment({
+      guildId: n,
       location: t
     }, {
-      autoTrackExposure: !1
+      autoTrackExposure: i,
+      disable: !i
+    }),
+    u = l.useExperiment({
+      location: t
+    }, {
+      autoTrackExposure: !i,
+      disable: i
     });
-  return r.actionBarEnabled
+  return i ? {
+    showInOmniButtonMenu: a.showInOmniButtonMenu,
+    showChatInputButton: a.showChatInputButton
+  } : {
+    showInOmniButtonMenu: u.showInOmniButtonMenu,
+    showChatInputButton: u.showChatInputButton
+  }
 }

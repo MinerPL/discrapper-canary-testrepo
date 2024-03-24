@@ -1,32 +1,32 @@
 "use strict";
 a.r(t), a.d(t, {
   useExplicitMediaAttachmentsForMessage: function() {
-    return n
+    return d
   },
   useExplicitMediaEmbedsForMessage: function() {
     return o
   }
 });
 var s = a("65597"),
-  l = a("377253"),
-  i = a("447435");
-let n = (e, t, a) => {
-    var n, o;
-    let d = (0, s.default)([l.default], () => l.default.getMessage(e, t));
-    if (null == d) return [];
-    let r = void 0 !== a ? e => e.id === a : e => (0, i.isMediaObscured)({
-      type: i.ObscuredMediaTypes.Attachment,
+  i = a("377253"),
+  n = a("447435");
+let d = (e, t, a) => {
+    var d, o;
+    let l = (0, s.useStateFromStores)([i.default], () => i.default.getMessage(e, t));
+    if (null == l) return [];
+    let r = void 0 !== a ? e => e.id === a : e => (0, n.isMediaObscured)({
+      type: n.ObscuredMediaTypes.Attachment,
       media: e
-    }, (0, i.shouldRedactExplicitContent)(d));
-    return null !== (o = null == d ? void 0 : null === (n = d.attachments) || void 0 === n ? void 0 : n.filter(r)) && void 0 !== o ? o : []
+    }, (0, n.shouldRedactExplicitContent)(l));
+    return null !== (o = null == l ? void 0 : null === (d = l.attachments) || void 0 === d ? void 0 : d.filter(r)) && void 0 !== o ? o : []
   },
   o = (e, t, a) => {
-    var n, o;
-    let d = (0, s.default)([l.default], () => l.default.getMessage(e, t));
-    if (null == d) return [];
-    let r = void 0 !== a ? e => e.id === a : e => (0, i.isMediaObscured)({
-      type: i.ObscuredMediaTypes.Embed,
+    var d, o;
+    let l = (0, s.useStateFromStores)([i.default], () => i.default.getMessage(e, t));
+    if (null == l) return [];
+    let r = void 0 !== a ? e => e.id === a : e => (0, n.isMediaObscured)({
+      type: n.ObscuredMediaTypes.Embed,
       media: e
-    }, (0, i.shouldRedactExplicitContent)(d));
-    return null !== (o = null == d ? void 0 : null === (n = d.embeds) || void 0 === n ? void 0 : n.filter(r)) && void 0 !== o ? o : []
+    }, (0, n.shouldRedactExplicitContent)(l));
+    return null !== (o = null == l ? void 0 : null === (d = l.embeds) || void 0 === d ? void 0 : d.filter(r)) && void 0 !== o ? o : []
   }

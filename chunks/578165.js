@@ -1,41 +1,59 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return s
+    return S
   }
 }), E("222007");
 var t = E("689988"),
-  o = E("18494"),
-  n = E("821240"),
-  r = E("761771");
+  o = E("42203"),
+  n = E("18494"),
+  r = E("821240"),
+  a = E("761771"),
+  i = E("537597");
 
-function a(e) {
+function I(e) {
   let {
     channelId: _
   } = e;
-  return !!(null != _ && (0, r.isEligibleForInappropriateConversationWarning)({
-    location: "channel_select"
-  })) && (!!(0, n.shouldShowInappropriateConversationTakeoverForChannel)(_) || !1)
+  if (null == _ || !(0, a.isEligibleForInappropriateConversationWarning)({
+      location: "channel_select"
+    }) || !(0, r.getSafetyAlertsSettingOrDefault)()) return !1;
+  let E = o.default.getChannel(_);
+  if (null == E || !E.isDM()) return !1;
+  let t = (0, r.getInappropriateConversationTakeoverForChannel)(_);
+  return null != t && ((0, i.showTakeoverModal)({
+    warningId: t.id,
+    warningType: t.type,
+    senderId: E.getRecipientId(),
+    channelId: _
+  }), !0)
 }
 
-function i(e) {
+function s(e) {
   let {
     channels: _
   } = e;
-  if (!(0, r.isEligibleForInappropriateConversationWarning)({
+  if (!(0, a.isEligibleForInappropriateConversationWarning)({
       location: "channel_updates"
-    })) return !1;
-  let E = o.default.getCurrentlySelectedChannelId();
+    }) || !(0, r.getSafetyAlertsSettingOrDefault)()) return !1;
+  let E = n.default.getCurrentlySelectedChannelId();
   if (null == E) return !1;
   let t = _.find(e => e.id === E);
-  return null != t && (!!(0, n.shouldShowInappropriateConversationTakeoverForChannelRecord)(t) || !1)
+  if (null == t) return !1;
+  let o = (0, r.getInappropriateConversationTakeoverForChannel)(t.id);
+  return !!(null != o && t.isDM()) && ((0, i.showTakeoverModal)({
+    warningId: o.id,
+    warningType: o.type,
+    senderId: t.getRecipientId(),
+    channelId: t.id
+  }), !0)
 }
-class I extends t.default {
+class T extends t.default {
   constructor(...e) {
     super(...e), this.actions = {
-      CHANNEL_SELECT: a,
-      CHANNEL_UPDATES: i
+      CHANNEL_SELECT: I,
+      CHANNEL_UPDATES: s
     }
   }
 }
-var s = new I
+var S = new T

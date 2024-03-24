@@ -1,41 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return I
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144"),
-  l = n("892313"),
+  l = n("913144"),
+  i = n("892313"),
   r = n("61928"),
-  o = n("697218"),
-  u = n("708169"),
-  d = n("668596"),
-  c = n("197881"),
-  f = n("177632"),
-  E = n("49111"),
-  _ = n("843455");
-let h = "AGREEMENTS_MODAL_KEY";
-var C = {
+  o = n("271938"),
+  u = n("697218"),
+  d = n("708169"),
+  c = n("668596"),
+  f = n("197881"),
+  E = n("177632"),
+  h = n("49111"),
+  _ = n("482931"),
+  C = n("843455");
+let S = "AGREEMENTS_MODAL_KEY";
+var I = {
   init() {
-    i.default.subscribe("CONNECTION_OPEN", this.handleRequiredAction), i.default.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction), i.default.subscribe("CURRENT_USER_UPDATE", this.handleCurrentUserUpdate), i.default.subscribe("LOGOUT", this.handleLogout)
+    l.default.subscribe("CONNECTION_OPEN", this.handleRequiredAction), l.default.subscribe("USER_REQUIRED_ACTION_UPDATE", this.handleRequiredAction), l.default.subscribe("CURRENT_USER_UPDATE", this.handleCurrentUserUpdate), o.default.addChangeListener(this.handleAuthenticationStoreChanged)
   },
   handleRequiredAction(e) {
     let t = e.requiredAction;
-    !c.ProcessArgs.isDisallowPopupsSet() && (null == o.default.getCurrentUser() ? ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(h) && (0, s.closeModal)(h)) : t === E.UserRequiredActions.REQUIRE_CAPTCHA || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === E.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === E.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || l.default.isEmailReverification(t) ? (0, u.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
+    !f.ProcessArgs.isDisallowPopupsSet() && null != u.default.getCurrentUser() && (t === h.UserRequiredActions.REQUIRE_CAPTCHA || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL || t === h.UserRequiredActions.REQUIRE_VERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE || t === h.UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE || i.default.isEmailReverification(t) ? (0, d.openFullScreenLayer)(() => (0, a.jsx)(r.default, {}), {
       layerKey: "verification",
-      Layer: d.default
-    }) : t === E.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(f.default, {
+      Layer: c.default
+    }) : t === h.UserRequiredActions.AGREEMENTS ? (0, s.openModal)(e => (0, a.jsx)(E.default, {
       ...e
     }), {
-      modalKey: h,
-      onCloseRequest: _.NOOP_NULL
-    }) : null == t && ((0, u.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(h) && (0, s.closeModal)(h)))
+      modalKey: S,
+      onCloseRequest: C.NOOP_NULL
+    }) : null == t && ((0, d.closeFullScreenLayer)("verification"), (0, s.hasModalOpen)(S) && (0, s.closeModal)(S)))
   },
-  handleLogout() {
-    (0, u.closeFullScreenLayer)("verification")
+  handleAuthenticationStoreChanged() {
+    let e = o.default.getId();
+    null == e && ((0, d.closeFullScreenLayer)("verification"), (0, s.closeModal)(S), (0, s.closeModal)(r.PHONE_THEN_EMAIL_INTERSTITIAL_MODAL_KEY), (0, s.closeModal)(r.EMAIL_VERIFICATION_MODAL_KEY), (0, s.closeModal)(_.PHONE_VERIFICATION_MODAL_KEY))
   },
   handleCurrentUserUpdate(e) {
     let {

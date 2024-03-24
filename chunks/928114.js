@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   gradients: function() {
     return a
   }
@@ -151,12 +151,22 @@ let a = {
   },
   "redesign-button-secondary-background": {
     dark: {
-      color: "white.500",
+      color: "gradient.end",
       opacity: .1
     },
     light: {
-      color: "black.500",
+      color: "gradient.end",
       opacity: .1
+    }
+  },
+  "redesign-button-secondary-pressed-background": {
+    dark: {
+      color: "gradient.end",
+      opacity: .2
+    },
+    light: {
+      color: "gradient.end",
+      opacity: .2
     }
   },
   "redesign-button-primary-pressed-background": {
@@ -319,6 +329,36 @@ let a = {
       color: "gradient.mid",
       lightness: .925,
       saturation: "*0.8"
+    }
+  },
+  "you-bar-bg": {
+    dark: {
+      color: "gradient.mid",
+      lightness: .16
+    },
+    light: {
+      color: "gradient.mid",
+      lightness: .98
+    }
+  },
+  "embed-background": {
+    dark: {
+      color: "white.500",
+      opacity: .1
+    },
+    light: {
+      color: "white.500",
+      opacity: .25
+    }
+  },
+  "embed-background-alternate": {
+    dark: {
+      color: "white.500",
+      opacity: .075
+    },
+    light: {
+      color: "white.500",
+      opacity: .25
     }
   }
 }

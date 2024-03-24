@@ -8,7 +8,7 @@ var n, r = s("37983"),
   a = s("884691"),
   o = s("458960"),
   i = s("77078"),
-  l = s("83148");
+  u = s("254792");
 n = class extends a.Component {
   componentWillEnter(e) {
     let {
@@ -38,7 +38,7 @@ n = class extends a.Component {
       offset: t
     } = this.state;
     return (0, r.jsx)(o.default.div, {
-      className: l.wrapper,
+      className: u.wrapper,
       style: {
         left: 0,
         position: e ? "absolute" : "relative",
@@ -51,7 +51,7 @@ n = class extends a.Component {
         }]
       },
       children: (0, r.jsx)(i.ModalContent, {
-        className: l.contentWrapper,
+        className: u.contentWrapper,
         children: this.props.children
       })
     })

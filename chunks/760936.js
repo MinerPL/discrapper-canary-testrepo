@@ -1,24 +1,25 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return m
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  r = s.n(l),
-  i = s("77078"),
+  r = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
+  l = s("77078"),
+  o = s("812204"),
   u = s("506885"),
-  o = s("981601"),
-  d = s("280174"),
-  c = s("533403"),
-  _ = s("158998"),
-  E = s("49111"),
+  d = s("981601"),
+  c = s("280174"),
+  _ = s("533403"),
+  E = s("158998"),
+  T = s("49111"),
   I = s("782340"),
-  f = s("997672");
-let T = {
-  [E.StoreRecommendationTypes.NOW_PLAYING]: {
+  f = s("496743");
+let R = {
+  [T.StoreRecommendationTypes.NOW_PLAYING]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
       user1: e.username,
       user1Hook: () => t(e)
@@ -33,7 +34,7 @@ let T = {
       count: e
     })
   },
-  [E.StoreRecommendationTypes.RECENTLY_PLAYED]: {
+  [T.StoreRecommendationTypes.RECENTLY_PLAYED]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_RECENTLY_PLAYED_SINGLE.format({
       user1: e.username,
       user1Hook: () => t(e)
@@ -48,7 +49,7 @@ let T = {
       count: e
     })
   },
-  [E.StoreRecommendationTypes.EVER_PLAYED]: {
+  [T.StoreRecommendationTypes.EVER_PLAYED]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_EVER_PLAYED_SINGLE.format({
       user1: e.username,
       user1Hook: () => t(e)
@@ -64,15 +65,19 @@ let T = {
     })
   }
 };
-class S extends n.PureComponent {
+class S extends r.PureComponent {
   renderDescription(e, t) {
-    let s = T[e];
+    let s = R[e];
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
   }
   renderActivityDiscordTag(e) {
-    return (0, a.jsx)(i.Popout, {
+    return (0, a.jsx)(l.Popout, {
       preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
-      renderPopout: t => this.renderUserPopout(e, t),
+      renderPopout: t => (0, a.jsx)(d.default, {
+        ...t,
+        userId: e.id,
+        newAnalyticsLocations: [o.default.USERNAME]
+      }),
       position: "right",
       children: t => (0, a.jsx)("span", {
         className: f.username,
@@ -87,13 +92,13 @@ class S extends n.PureComponent {
       className: t
     } = this.props, {
       type: s,
-      userInfo: n
+      userInfo: r
     } = e;
-    return 0 === n.length ? null : (0, a.jsxs)("div", {
-      className: r(f.recommendationActivity, t),
-      children: [(0, a.jsx)(c.default, {
+    return 0 === r.length ? null : (0, a.jsxs)("div", {
+      className: i(f.recommendationActivity, t),
+      children: [(0, a.jsx)(_.default, {
         className: f.players,
-        users: n.map(e => {
+        users: r.map(e => {
           let {
             user: t
           } = e;
@@ -104,43 +109,44 @@ class S extends n.PureComponent {
         renderMoreUsers: this.renderPlayerOverflow
       }), (0, a.jsx)("div", {
         className: f.description,
-        children: this.renderDescription(s, n)
+        children: this.renderDescription(s, r)
       })]
     })
   }
   constructor(...e) {
-    super(...e), this.renderUserPopout = (e, t) => (0, a.jsx)(o.default, {
-      ...t,
-      userId: e.id
-    }), this.renderUserTooltip = (e, t, s) => (0, a.jsxs)("div", {
+    super(...e), this.renderUserTooltip = (e, t, s) => (0, a.jsxs)("div", {
       className: f.tooltip,
       children: [(0, a.jsx)("div", {
-        children: _.default.getUserTag(e)
-      }), (0, a.jsx)(d.default, {
+        children: E.default.getUserTag(e)
+      }), (0, a.jsx)(c.default, {
         className: f.tooltipTimestamp,
         start: t,
         end: s,
-        location: d.default.Locations.ACTIVITY_FEED
+        location: c.default.Locations.ACTIVITY_FEED
       })]
-    }), this.renderPlayer = (e, t, s, n) => {
+    }), this.renderPlayer = (e, t, s, r) => {
       if (null == e) return null;
-      let l = this.props.reason.userInfo.find(t => t.user === e);
-      return null == l ? null : (0, a.jsx)(i.Popout, {
+      let n = this.props.reason.userInfo.find(t => t.user === e);
+      return null == n ? null : (0, a.jsx)(l.Popout, {
         preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
-        renderPopout: t => this.renderUserPopout(e, t),
+        renderPopout: t => (0, a.jsx)(d.default, {
+          ...t,
+          userId: e.id,
+          newAnalyticsLocations: [o.default.AVATAR]
+        }),
         position: "right",
-        children: t => (0, a.jsx)(i.Tooltip, {
-          text: this.renderUserTooltip(e, l.startTime, l.endTime),
-          "aria-label": (0, _.getUserTag)(e, {
+        children: t => (0, a.jsx)(l.Tooltip, {
+          text: this.renderUserTooltip(e, n.startTime, n.endTime),
+          "aria-label": (0, E.getUserTag)(e, {
             decoration: "never"
           }),
-          children: s => (0, a.jsx)(i.Avatar, {
-            className: r(f.playerAvatar, {
-              [f.avatarMasked]: !n
+          children: s => (0, a.jsx)(l.Avatar, {
+            className: i(f.playerAvatar, {
+              [f.avatarMasked]: !r
             }),
             src: e.getAvatarURL(void 0, 32),
             "aria-label": e.username,
-            size: i.AvatarSizes.SIZE_32,
+            size: l.AvatarSizes.SIZE_32,
             ...s,
             ...t
           })
@@ -152,4 +158,4 @@ class S extends n.PureComponent {
     }, s)
   }
 }
-var R = S
+var m = S

@@ -1,50 +1,70 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return f
   }
 }), n("222007"), n("424973");
-var i = n("615361"),
-  s = n("872717"),
-  r = n("773336"),
-  a = n("827032"),
-  o = n("49111");
-let l = new Set(["darwin", "linux", "win32", "ios", "android"]);
-var u = new class e {
-  increment(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-      {
-        name: n,
-        tags: s
-      } = e,
-      o = {
-        name: n,
-        tags: (0, a.getGlobalTagsArray)()
-      };
-    null != s && s.forEach(e => {
-      o.tags.push(e)
+var i, s, r = n("615361"),
+  a = n("872717"),
+  o = n("773336"),
+  l = n("968027"),
+  u = n("82087"),
+  d = n("827032"),
+  c = n("49111");
+let _ = new Set(["darwin", "linux", "win32", "ios", "android"]);
+(s = i || (i = {})).COUNT = "count", s.DISTRIBUTION = "distribution";
+var f = new class e {
+  _getMetricWithDefaults(e, t) {
+    let {
+      name: n,
+      tags: i
+    } = e, s = {
+      name: n,
+      type: t,
+      tags: (0, d.getGlobalTagsArray)()
+    };
+    null != i && i.forEach(e => {
+      s.tags.push(e)
     });
-    let u = function() {
-      if ((0, r.isWeb)()) return "web";
+    let a = function() {
+      if ((0, o.isWeb)()) return "web";
       {
-        let e = (0, r.getPlatformName)();
-        return l.has(e) ? e : null
+        let e = (0, o.getPlatformName)();
+        return _.has(e) ? e : null
       }
     }();
-    null != u && o.tags.push("platform:".concat(u));
-    let d = function() {
-      let e = "{{cf_shim}}RELEASE_CHANNEL{{/cf_shim}}";
-      return i.ReleaseChannelsSets.ALL.has(e) ? e : null
+    null != a && s.tags.push("platform:".concat(a));
+    let u = function() {
+      let e = l.CurrentReleaseChannel;
+      return null != e && r.ReleaseChannelsSets.ALL.has(e) ? e : null
     }();
-    null != d && o.tags.push("release_channel:".concat(d)), this._metrics.push(o), (t || this._metrics.length >= 100) && this._flush()
+    return null != u && s.tags.push("release_channel:".concat(u)), s
+  }
+  increment(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+      n = this._getMetricWithDefaults(e, "count");
+    this._metrics.push(n), (t || this._metrics.length >= 100) && this._flush()
+  }
+  distribution(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    if (!(0, u.isMetricsEndpointV2Enabled)("distribution-metric")) return;
+    let i = {
+      ...this._getMetricWithDefaults(e, "distribution"),
+      value: t
+    };
+    this._metrics.push(i), (n || this._metrics.length >= 100) && this._flush()
   }
   _flush() {
     if (this._metrics.length > 0) {
       let e = [...this._metrics];
-      s.default.post({
-        url: o.Endpoints.METRICS,
+      a.HTTP.post({
+        url: (0, u.isMetricsEndpointV2Enabled)("monitoring-agent") ? c.Endpoints.METRICS_V2 : c.Endpoints.METRICS,
         body: {
-          metrics: e
+          metrics: e,
+          client_info: {
+            built_at: "1711255596761",
+            build_number: "278149"
+          }
         },
         retries: 1
       }).catch(t => {

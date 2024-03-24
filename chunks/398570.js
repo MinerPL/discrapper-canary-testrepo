@@ -1,15 +1,15 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return f
+    return m
   }
-}), r("222007");
-var a = r("748820"),
-  n = r("391679"),
-  i = r("446674"),
-  l = r("913144"),
-  o = r("271938"),
-  s = r("584369");
+}), t("222007");
+var a = t("748820"),
+  n = t("391679"),
+  i = t("446674"),
+  o = t("913144"),
+  l = t("271938"),
+  s = t("368694");
 let c = 0,
   d = [],
   u = [],
@@ -29,49 +29,49 @@ class p extends i.default.Store {
   }
 }
 p.displayName = "AnalyticsLogStore";
-var f = new p(l.default, {
+var m = new p(o.default, {
   TRACK: function(e) {
     let {
-      event: t,
-      properties: r,
+      event: r,
+      properties: t,
       fingerprint: a
     } = e;
-    if (s.default.devToolsEnabled) {
+    if (s.default.isDeveloper) {
       var i;
       (d = [...d, {
         key: (c++).toString(),
-        event: t,
-        properties: r,
-        fingerprint: null != (i = a) ? (0, n.extractId)(i) : o.default.getId(),
+        event: r,
+        properties: t,
+        fingerprint: null != (i = a) ? (0, n.extractId)(i) : l.default.getId(),
         timestamp: new Date
       }]).length > 500 && d.shift()
     }
   },
   TRACK_TRIGGER: function(e) {
     let {
-      experimentId: t,
-      descriptor: r,
+      experimentId: r,
+      descriptor: t,
       exposureType: n,
       excluded: i,
-      location: l,
-      previouslyTracked: o
+      location: o,
+      previouslyTracked: l
     } = e;
-    if (!!s.default.devToolsEnabled) h && (u = [...u, {
+    if (!!s.default.isDeveloper) h && (u = [...u, {
       key: (0, a.v4)(),
-      experimentId: t,
-      descriptor: r,
+      experimentId: r,
+      descriptor: t,
       exposureType: n,
       excluded: i,
-      location: l,
-      previouslyTracked: o,
+      location: o,
+      previouslyTracked: l,
       timestamp: new Date
     }]).length > 500 && u.shift()
   },
   SET_TRACK_TRIGGERS: function(e) {
     let {
-      enabled: t
+      enabled: r
     } = e;
-    h = t
+    h = r
   },
   ANALYTICS_LOG_CLEAR: function() {
     d = [], u = []

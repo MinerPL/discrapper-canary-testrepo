@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return A
   }
 });
 var a = s("37983"),
@@ -13,18 +13,20 @@ var a = s("37983"),
   d = s("10641"),
   u = s("103979"),
   c = s("845579"),
-  S = s("56947"),
-  E = s("386045"),
-  f = s("803725"),
-  T = s("311207"),
-  m = s("653485"),
-  _ = s("462491"),
-  g = s("782340"),
-  h = s("577199"),
-  I = s("180437"),
-  N = s("926622");
+  S = s("42887"),
+  E = s("56947"),
+  T = s("386045"),
+  f = s("18346"),
+  _ = s("803725"),
+  m = s("311207"),
+  g = s("653485"),
+  h = s("462491"),
+  N = s("782340"),
+  I = s("416255"),
+  p = s("824905"),
+  C = s("890957");
 
-function p() {
+function A() {
   let e = c.ClipsAllowVoiceRecording.useSetting(),
     {
       enableViewerClipping: t
@@ -36,41 +38,45 @@ function p() {
     {
       AnalyticsLocationProvider: s
     } = (0, o.default)(),
-    p = (0, S.useEnableClips)(),
+    A = (0, E.useEnableClips)(),
     {
-      viewerClipsEnabled: C
-    } = (0, l.useStateFromStoresObject)([E.default], () => E.default.getSettings());
+      viewerClipsEnabled: O
+    } = (0, l.useStateFromStoresObject)([T.default], () => T.default.getSettings()),
+    x = (0, f.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
   }), (0, a.jsxs)(s, {
     children: [(0, a.jsx)(r.FormSection, {
       tag: r.FormTitleTags.H1,
       title: (0, a.jsxs)("div", {
-        className: h.headerContainer,
-        children: [g.default.Messages.CLIPS, (0, a.jsx)(T.default, {})]
+        className: I.headerContainer,
+        children: [N.default.Messages.CLIPS, (0, a.jsx)(m.default, {})]
       }),
-      children: p && (0, a.jsxs)("form", {
+      children: A && (0, a.jsxs)("form", {
         onSubmit: e => e.preventDefault(),
-        children: [(0, a.jsx)(m.default, {}), (0, a.jsx)(_.default, {})]
+        children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(h.default, {})]
       })
-    }), p && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
-      className: N.marginTop20,
+    }), A && (0, a.jsx)(r.FormDivider, {}), (0, a.jsxs)(r.FormSection, {
+      className: C.marginTop20,
       children: [(0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: I.formItem,
+        className: p.formItem,
         value: e,
-        note: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
-        onChange: e => f.updateAllowVoiceRecording({
+        note: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING_DESCRIPTION,
+        onChange: e => _.updateAllowVoiceRecording({
           allowVoiceRecording: e
         }),
-        children: g.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
-      }), t && (0, a.jsx)(r.FormSwitch, {
+        children: N.default.Messages.CLIPS_SETTINGS_OPT_OUT_OF_VOICE_RECORDING
+      }), t && x && (0, a.jsx)(r.FormSwitch, {
         hideBorder: !0,
-        className: I.formItem,
-        value: C,
-        note: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
-        onChange: e => f.updateViewerClipsEnabled(e),
-        children: g.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
+        className: p.formItem,
+        value: O,
+        note: N.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE_DESCRIPTION,
+        onChange: e => _.updateViewerClipsEnabled({
+          enabled: e,
+          trackAnalytics: !0
+        }),
+        children: N.default.Messages.CLIPS_SETTINGS_VIEWERSIDE_CLIPS_TOGGLE
       })]
     })]
   })

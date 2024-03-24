@@ -15,7 +15,7 @@ var a = s("872717"),
   l = s("49111");
 async function i() {
   var e;
-  let t = await a.default.get({
+  let t = await a.HTTP.get({
     url: l.Endpoints.AUTH_SESSIONS
   });
   return (null == t ? void 0 : t.ok) && (null === (e = t.body) || void 0 === e ? void 0 : e.user_sessions) != null && n.default.dispatch({
@@ -34,7 +34,7 @@ async function o(e) {
   if (Array.isArray(e)) {
     if (0 === e.length) return
   } else e = [e];
-  let t = await a.default.post({
+  let t = await a.HTTP.post({
     url: l.Endpoints.AUTH_SESSIONS_LOGOUT,
     body: {
       session_id_hashes: e

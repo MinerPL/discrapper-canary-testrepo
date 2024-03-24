@@ -43,7 +43,7 @@ var l = s("37983"),
   U = s("49111"),
   B = s("843455"),
   G = s("782340"),
-  V = s("674310");
+  V = s("43500");
 
 function k(e) {
   let {
@@ -180,9 +180,9 @@ function W(e) {
     guild: t,
     channel: a,
     permissionUpdates: n
-  } = e, d = F.getExistingRolesRowWithPermissionDisabled(t, a, T.MODERATE_STAGE_CHANNEL_PERMISSIONS, n), u = (0, r.useStateFromStores)([C.default], () => F.getExistingMembersRows(C.default.getMemberIds(t.id), a, t, T.MODERATE_STAGE_CHANNEL_PERMISSIONS, n)), c = (0, g.useCanUpdateStageChannelModerators)(a.id);
+  } = e, d = (0, r.useStateFromStores)([_.default], () => _.default.getRoles(t.id)), u = F.getExistingRolesRowWithPermissionDisabled(t, d, a, T.MODERATE_STAGE_CHANNEL_PERMISSIONS, n), c = (0, r.useStateFromStores)([C.default], () => F.getExistingMembersRows(C.default.getMemberIds(t.id), a, t, T.MODERATE_STAGE_CHANNEL_PERMISSIONS, n)), h = (0, g.useCanUpdateStageChannelModerators)(a.id);
 
-  function h() {
+  function E() {
     (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -216,21 +216,21 @@ function W(e) {
           children: G.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_LABEL
         }), (0, l.jsx)(o.Tooltip, {
           text: G.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
-          shouldShow: !c,
+          shouldShow: !h,
           children: e => (0, l.jsx)(o.Button, {
             ...e,
             size: o.Button.Sizes.SMALL,
             color: o.Button.Colors.BRAND,
-            onClick: h,
-            disabled: !c,
+            onClick: E,
+            disabled: !h,
             children: G.default.Messages.CHANNEL_PERMISSIONS_ADD_MEMBERS_TITLE
           })
         })]
       }), (0, l.jsx)(k, {
         channel: a,
-        roles: d,
-        members: u,
-        disabledReason: c ? null : G.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
+        roles: u,
+        members: c,
+        disabledReason: h ? null : G.default.Messages.CHANNEL_PERMISSIONS_NOT_MODERATOR,
         getRemoveTooltipHint: S.getRemoveModeratorTooltipHint
       })]
     })]
@@ -244,7 +244,7 @@ function Y(e) {
     isPrivateGuildChannel: n,
     roles: d,
     members: u
-  } = e, c = (0, r.useStateFromStores)([p.default], () => p.default.can(B.Permissions.ADMINISTRATOR, t)), h = y.default.canEveryoneRole(B.Permissions.VIEW_CHANNEL, t), E = y.default.canEveryoneRole(B.Permissions.ADMINISTRATOR, t), f = {
+  } = e, c = (0, r.useStateFromStores)([p.default], () => p.default.can(B.Permissions.ADMINISTRATOR, t)), h = y.canEveryoneRole(B.Permissions.VIEW_CHANNEL, t), E = y.canEveryoneRole(B.Permissions.ADMINISTRATOR, t), f = {
     title: G.default.Messages.PRIVATE_CHANNEL,
     subtitle: G.default.Messages.CHANNEL_PERMISSIONS_PRIVATE_CHANNEL_DESCRIPTION,
     formLabel: G.default.Messages.FORM_LABEL_CHANNEL_PERMISSIONS
@@ -344,10 +344,13 @@ var K = r.default.connectStores([N.default, p.default, C.default, _.default], ()
   if (null != t) {
     e = _.default.getGuild(t.getGuildId());
     let s = C.default.getMemberIds(null == e ? void 0 : e.id);
-    null != e && (n = N.default.editedPermissionIds.reduce((e, t) => {
-      let s = N.default.getPermissionOverwrite(t);
-      return null != s && (e[t] = s), e
-    }, {}), l = F.getExistingRolesRows(e, t, t.accessPermissions, n), a = F.getExistingMembersRows(s, t, e, t.accessPermissions, n), i = F.isPrivateGuildChannel(t, n))
+    if (null != e) {
+      let r = _.default.getRoles(e.id);
+      n = N.default.editedPermissionIds.reduce((e, t) => {
+        let s = N.default.getPermissionOverwrite(t);
+        return null != s && (e[t] = s), e
+      }, {}), l = F.getExistingRolesRows(e, r, t, t.accessPermissions, n), a = F.getExistingMembersRows(s, t, e, t.accessPermissions, n), i = F.isPrivateGuildChannel(t, n)
+    }
   }
   return {
     canSyncChannel: null != s && p.default.can(B.Permissions.MANAGE_ROLES, s),
@@ -371,7 +374,7 @@ var K = r.default.connectStores([N.default, p.default, C.default, _.default], ()
     isPrivateGuildChannel: h,
     locked: E,
     permissionUpdates: f
-  } = e, [g, T] = a.useState(!y.default.canEveryoneRole(B.Permissions.SEND_MESSAGES, i));
+  } = e, [g, T] = a.useState(!y.canEveryoneRole(B.Permissions.SEND_MESSAGES, i));
   if (null == i || null == u) return null;
 
   function S() {
@@ -393,7 +396,7 @@ var K = r.default.connectStores([N.default, p.default, C.default, _.default], ()
           } = n, t = {
             ...n.permissionOverwrites
           };
-          null != e && null == t[e] && (t[e] = y.default.makeEveryoneOverwrite(e));
+          null != e && null == t[e] && (t[e] = y.makeEveryoneOverwrite(e));
           let s = await (0, m.checkDefaultChannelThresholdMetAfterChannelPermissionDeny)(i, t[e].deny, t[e].allow);
           s && (0, c.saveChannel)(i.id, {
             permissionOverwrites: Object.values(t)

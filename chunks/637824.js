@@ -1,51 +1,55 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return C
   }
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("736964"),
-  l = n("401642"),
-  r = n("152224"),
-  o = n("599110"),
-  u = n("371449"),
-  d = n("224978"),
-  c = n("559541"),
-  f = n("49111"),
-  E = n("782340"),
-  _ = n("728221");
+  l = n("736964"),
+  i = n("685665"),
+  r = n("401642"),
+  o = n("152224"),
+  u = n("599110"),
+  d = n("371449"),
+  c = n("224978"),
+  f = n("559541"),
+  E = n("49111"),
+  h = n("782340"),
+  _ = n("74967");
 
-function h(e) {
+function C(e) {
   let {
     user: t,
     key: n,
-    isFocused: h
-  } = e, C = s.useContext(o.AnalyticsContext), I = e => {
-    e.stopPropagation(), i.default.unblockUser(t.id, {
+    isFocused: C
+  } = e, S = s.useContext(u.AnalyticsContext), {
+    analyticsLocations: I
+  } = (0, i.default)(), m = e => {
+    e.stopPropagation(), l.default.unblockUser(t.id, {
       location: "Friends"
     })
   };
-  return (0, a.jsx)(d.default, {
-    isFocused: h,
-    onClick: () => (0, l.openUserProfileModal)({
+  return (0, a.jsx)(c.default, {
+    isFocused: C,
+    onClick: () => (0, r.openUserProfileModal)({
       userId: t.id,
-      analyticsLocation: C.location
+      sourceAnalyticsLocations: I,
+      analyticsLocation: S.location
     }),
     user: t,
     children: e => (0, a.jsxs)("div", {
       className: _.listItemContents,
-      children: [(0, a.jsx)(c.default, {
+      children: [(0, a.jsx)(f.default, {
         user: t,
         hovered: e,
-        status: f.StatusTypes.UNKNOWN,
-        subText: E.default.Messages.BLOCKED
-      }), (0, a.jsx)(u.default, {
-        icon: r.default,
-        actionType: u.default.ActionTypes.DENY,
-        tooltip: E.default.Messages.UNBLOCK,
-        onClick: I,
+        status: E.StatusTypes.UNKNOWN,
+        subText: h.default.Messages.BLOCKED
+      }), (0, a.jsx)(d.default, {
+        icon: o.default,
+        actionType: d.default.ActionTypes.DENY,
+        tooltip: h.default.Messages.UNBLOCK,
+        onClick: m,
         shouldHighlight: e
       })]
     })

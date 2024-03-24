@@ -1,76 +1,73 @@
 "use strict";
 n.r(t), n.d(t, {
-  CUSTOM_GIFT_MESSAGE_MAX_LENGTH: function() {
-    return I
-  },
   default: function() {
-    return N
+    return E
   }
 }), n("222007");
 var s = n("37983"),
   r = n("884691"),
   a = n("414456"),
-  l = n.n(a),
-  i = n("77078"),
+  i = n.n(a),
+  l = n("77078"),
   u = n("850391"),
   c = n("149022"),
   o = n("681060"),
   d = n("570697"),
-  f = n("233069"),
-  m = n("49111"),
+  m = n("233069"),
+  f = n("646718"),
+  p = n("49111"),
   _ = n("782340"),
-  E = n("809331");
-let I = 190,
-  p = (0, f.createChannelRecord)({
-    id: "1",
-    type: m.ChannelTypes.DM
-  });
+  I = n("716397");
+let S = (0, m.createChannelRecord)({
+  id: "1",
+  type: p.ChannelTypes.DM
+});
 
-function N(e) {
+function E(e) {
   let {
     sectionTitle: t,
     errors: n,
     onTextChange: a,
-    pendingText: f,
-    placeholder: m,
-    currentText: N,
-    className: S,
+    pendingText: m,
+    placeholder: p,
+    currentText: E,
+    className: P,
     innerClassName: T,
-    disabled: P = !1,
-    disableThemedBackground: C = !1
-  } = e, [A, O] = r.useState(null != f ? f : N), [h, R] = r.useState((0, c.toRichValue)(A)), g = r.useRef(!1);
+    disabled: N = !1,
+    disableThemedBackground: A = !1
+  } = e, [C, h] = r.useState(null != m ? m : E), [v, g] = r.useState((0, c.toRichValue)(C)), x = r.useRef(!1);
   return r.useEffect(() => {
-    g.current = !0
+    x.current = !0
   }, []), r.useEffect(() => {
-    if (void 0 === f) {
-      let e = (0, c.toRichValue)(N);
-      O(N), R(e)
+    if (void 0 === m) {
+      let e = (0, c.toRichValue)(E);
+      h(E), g(e)
     }
-  }, [f, N]), (0, s.jsx)("div", {
-    className: l(E.body, S),
+  }, [m, E]), (0, s.jsx)("div", {
+    className: i(I.body, P),
     children: (0, s.jsxs)(d.default, {
       title: t,
       errors: n,
-      disabled: P,
+      disabled: N,
       children: [(0, s.jsx)(o.default, {
-        innerClassName: l(E.textArea, T),
-        editorClassName: E.editorTextArea,
-        maxCharacterCount: I,
+        innerClassName: i(I.textArea, T),
+        editorClassName: I.editorTextArea,
+        maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== A && (O(t), R(n), a(t))
+          t !== C && (h(t), g(n), a(t))
         },
-        placeholder: m,
-        channel: p,
-        textValue: A,
-        richValue: h,
+        placeholder: p,
+        channel: S,
+        textValue: C,
+        richValue: v,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
-          g.current = !1
+          x.current = !1
         },
         onFocus: () => {
-          g.current = !0
+          x.current = !0
         },
-        focused: g.current,
+        focused: x.current,
         onSubmit: function() {
           return new Promise(e => {
             e({
@@ -79,10 +76,10 @@ function N(e) {
             })
           })
         },
-        disableThemedBackground: C
-      }), (0, s.jsx)(i.HiddenVisually, {
+        disableThemedBackground: A
+      }), (0, s.jsx)(l.HiddenVisually, {
         children: _.default.Messages.MAXIMUM_LENGTH.format({
-          maxLength: I
+          maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH
         })
       })]
     })

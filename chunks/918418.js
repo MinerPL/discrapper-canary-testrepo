@@ -10,8 +10,8 @@ var a = n("37983"),
   s = n("367376"),
   i = n("442791"),
   d = n("782340"),
-  u = n("45853"),
-  o = n("926622");
+  o = n("231074"),
+  u = n("890957");
 let c = e => {
   let {
     data: {
@@ -19,39 +19,46 @@ let c = e => {
       subtitle: n,
       placeholder: c,
       rows: m,
-      character_limit: f,
-      pattern: _
+      character_limit: _,
+      pattern: f
     },
-    onChange: h,
-    initialText: E,
+    onChange: E,
+    initialText: h,
     isRequired: v
   } = e, R = l.useRef(s.default.reactParserFor({
     ...s.default.defaultRules,
     link: i.LinkMarkupRule
-  })), [x, p] = l.useState(""), [g, N] = l.useState("");
+  })), [x, p] = l.useState(""), [N, g] = l.useState("");
   l.useEffect(() => {
-    p(null != E ? E : "")
-  }, [E]);
+    var e;
+    p(null !== (e = null == h ? void 0 : h.value) && void 0 !== e ? e : "")
+  }, [h]);
   let T = l.useCallback(e => {
-    let t = null != _ ? new RegExp(_) : null;
-    null != t && null == t.exec(e) ? (N(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), p(""), h("")) : null != e && (N(""), p(e), h(e))
-  }, [h, _]);
+    let t = null != f ? new RegExp(f) : null;
+    null != t && null == t.exec(e) ? (g(d.default.Messages.IN_APP_REPORTING_FREE_TEXT_INPUT_ERROR), E({
+      value: e,
+      isValid: !1
+    })) : null != e && (g(""), p(e), E({
+      value: e,
+      isValid: !0
+    }))
+  }, [E, f]);
   return (0, a.jsxs)("div", {
-    className: o.marginBottom8,
+    className: u.marginBottom8,
     children: [null != t && (0, a.jsx)("div", {
-      className: o.marginBottom8,
+      className: u.marginBottom8,
       children: (0, a.jsxs)(r.Text, {
         variant: "text-sm/bold",
         children: [t, v && (0, a.jsx)("span", {
-          className: u.required,
+          className: o.required,
           children: "*"
         })]
       })
     }), (0, a.jsx)(r.TextArea, {
-      maxLength: f,
+      maxLength: _,
       onChange: T,
       value: x,
-      error: g,
+      error: N,
       rows: m,
       placeholder: c,
       autoFocus: !0
@@ -73,7 +80,7 @@ var m = e => {
     let r = e.name;
     return (0, a.jsx)(c, {
       data: e.data,
-      onChange: e => n(r, e),
+      onChange: e => n(r, e.value, e.isValid),
       initialText: null !== (t = null == l ? void 0 : l[r]) && void 0 !== t ? t : void 0,
       isRequired: e.should_submit_data
     }, r)

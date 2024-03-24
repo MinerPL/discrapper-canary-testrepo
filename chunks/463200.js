@@ -1,47 +1,46 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
 var a = l("37983");
 l("884691");
-var n = l("969176"),
-  s = l.n(n),
-  i = l("866227"),
-  o = l.n(i),
-  d = l("65597"),
-  r = l("178406"),
+var s = l("969176"),
+  n = l.n(s),
+  o = l("866227"),
+  i = l.n(o),
+  r = l("65597"),
+  d = l("178406"),
   u = l("645266"),
   C = l("731612"),
   c = l("782340");
 
-function f(e) {
+function m(e) {
   let {
     guildId: t,
     onClose: l
-  } = e, n = (0, d.default)([r.default], () => r.default.getSearchStateByGuildId(t), [t], s), {
-    selectedAccountAgeOption: i
-  } = n, {
-    afterDate: f,
-    beforeDate: m,
-    optionId: E
-  } = i, M = E === C.DATE_OPTION.CUSTOM, h = M && null != f ? o(f).format(C.MENU_DATE_FORMAT) : c.default.Messages.NONE, T = M && null != m ? o(m).format(C.MENU_DATE_FORMAT) : c.default.Messages.NONE, x = M && null != f && null != m;
+  } = e, s = (0, r.useStateFromStores)([d.default], () => d.default.getSearchStateByGuildId(t), [t], n), {
+    selectedAccountAgeOption: o
+  } = s, {
+    afterDate: m,
+    beforeDate: E,
+    optionId: f
+  } = o, M = f === C.DATE_OPTION.CUSTOM, h = M && null != m ? i(m).format(C.MENU_DATE_FORMAT) : null, _ = M && null != E ? i(E).format(C.MENU_DATE_FORMAT) : null;
   return (0, a.jsx)(C.default, {
     startDateLabel: h,
-    endDateLabel: T,
-    afterDate: f,
-    beforeDate: m,
-    selectedOption: E,
+    endDateLabel: _,
+    afterDate: m,
+    beforeDate: E,
+    selectedOption: f,
     isCustomDateRange: M,
-    shouldShowCustomDateSubtext: x,
     menuName: "account-age",
     accessibilityLabel: c.default.Messages.MEMBER_SAFETY_ACCOUNT_AGE_LABEL,
     onClose: l,
     onSelectDateOption: function(e, l) {
-      let a = null != l ? o().subtract(l.input, l.unit).valueOf() : null;
+      let a = null != l ? i().subtract(l.input, l.unit).valueOf() : null;
       (0, u.updateSearchState)(t, {
-        ...n,
+        ...s,
         selectedAccountAgeOption: {
           optionId: e,
           afterDate: a,
@@ -51,30 +50,30 @@ function f(e) {
     },
     onToggleCustomDateRange: function() {
       (0, u.updateSearchState)(t, {
-        ...n,
+        ...s,
         selectedAccountAgeOption: {
           optionId: C.DATE_OPTION.CUSTOM,
-          afterDate: M ? f : null,
-          beforeDate: M ? m : null
+          afterDate: M ? m : null,
+          beforeDate: M ? E : null
         }
       })
     },
     onSelectStartDate: function(e) {
       (0, u.updateSearchState)(t, {
-        ...n,
+        ...s,
         selectedAccountAgeOption: {
           optionId: C.DATE_OPTION.CUSTOM,
           afterDate: e.valueOf(),
-          beforeDate: m
+          beforeDate: E
         }
       })
     },
     onSelectEndDate: function(e) {
       (0, u.updateSearchState)(t, {
-        ...n,
+        ...s,
         selectedAccountAgeOption: {
           optionId: C.DATE_OPTION.CUSTOM,
-          afterDate: f,
+          afterDate: m,
           beforeDate: e.valueOf()
         }
       })

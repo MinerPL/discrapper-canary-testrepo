@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getFailedContent: function() {
-    return _
+    return C
   },
   InteractionStatusMessage: function() {
-    return N
+    return _
   },
   default: function() {
-    return L
+    return N
   }
 });
 var l = n("37983"),
@@ -21,35 +21,34 @@ var l = n("37983"),
   c = n("809810"),
   E = n("752598"),
   p = n("423487"),
-  m = n("258078"),
-  T = n("49111"),
-  f = n("782340"),
-  S = n("932640");
+  m = n("49111"),
+  T = n("782340"),
+  f = n("52544");
 
-function C(e) {
+function S(e) {
   return {
     text: e,
     icon: (0, l.jsx)(r.Dots, {
-      className: S.icon,
+      className: f.icon,
       dotRadius: 3.5,
       themed: !0
     })
   }
 }
 
-function _(e) {
+function C(e) {
   return {
-    text: null != e ? e : f.default.Messages.APPLICATION_COMMAND_FAILED,
-    color: m.default.Colors.ERROR,
+    text: null != e ? e : T.default.Messages.APPLICATION_COMMAND_FAILED,
+    color: "text-danger",
     icon: (0, l.jsx)(p.default, {
       width: 16,
       height: 16,
-      className: i(S.icon, S.errorIcon)
+      className: i(f.icon, f.errorIcon)
     })
   }
 }
 
-function N(e) {
+function _(e) {
   let {
     className: t,
     icon: n,
@@ -57,15 +56,16 @@ function N(e) {
     color: u
   } = e;
   return (0, l.jsxs)("div", {
-    className: i(S.wrapper, t),
-    children: [n, (0, l.jsx)(m.default, {
-      size: m.default.Sizes.SIZE_14,
+    className: i(f.wrapper, t),
+    children: [n, (0, l.jsx)(r.Text, {
+      variant: "text-md/normal",
       color: u,
+      scaleFontToUserSetting: !0,
       children: a
     })]
   })
 }
-var L = a.memo(function(e) {
+var N = a.memo(function(e) {
   let {
     message: t,
     className: n,
@@ -73,7 +73,7 @@ var L = a.memo(function(e) {
   } = e, i = (0, o.useForceUpdate)(), r = (0, s.useStateFromStores)([c.default], () => c.default.getInteraction(t), [t]);
   a.useEffect(() => {
     let e = null;
-    if (t.hasFlag(T.MessageFlags.LOADING) && null != r) {
+    if (t.hasFlag(m.MessageFlags.LOADING) && null != r) {
       let n = (0, E.getInteractionTimeoutTimestamp)(t.id) - Date.now();
       n > 0 && (e = setTimeout(() => i(), 1e3 + n))
     }
@@ -86,30 +86,30 @@ var L = a.memo(function(e) {
     let n = (0, E.getInteractionStatusViewState)(t, e);
     switch (n) {
       case E.InteractionStatusViewState.SENDING:
-        return C(f.default.Messages.APPLICATION_COMMAND_SENDING);
+        return S(T.default.Messages.APPLICATION_COMMAND_SENDING);
       case E.InteractionStatusViewState.CREATED:
-        return C(f.default.Messages.APPLICATION_COMMAND_WAITING.format({
+        return S(T.default.Messages.APPLICATION_COMMAND_WAITING.format({
           applicationName: t.author.username
         }));
       case E.InteractionStatusViewState.TIMED_OUT:
-        return _(f.default.Messages.APPLICATION_COMMAND_TIMED_OUT);
+        return C(T.default.Messages.APPLICATION_COMMAND_TIMED_OUT);
       case E.InteractionStatusViewState.FAILED:
-        return _(t.interactionError)
+        return C(t.interactionError)
     }
   }(r, t);
   else {
     let e = (0, d.getActionRowErrorText)(r, t, u);
-    null != e && (p = _(e))
+    null != e && (p = C(e))
   }
   if (null == p) return null;
   let {
-    text: m,
-    icon: S,
+    text: f,
+    icon: N,
     color: L
   } = p;
-  return (0, l.jsx)(N, {
-    icon: S,
-    text: m,
+  return (0, l.jsx)(_, {
+    icon: N,
+    text: f,
     className: n,
     color: L
   })

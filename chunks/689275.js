@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return T
   }
 }), n("222007");
 var i = n("917351"),
@@ -9,11 +9,12 @@ var i = n("917351"),
   r = n("446674"),
   a = n("913144"),
   o = n("233069"),
-  l = n("42203");
-let u = {},
-  d = new Set;
+  l = n("42203"),
+  u = n("299039");
+let d = {},
+  c = new Set;
 
-function c(e) {
+function _(e) {
   return {
     id: e.id,
     parentId: e.parent_id
@@ -21,17 +22,17 @@ function c(e) {
 }
 
 function f(e) {
-  e in u && delete u[e]
+  e in d && delete d[e]
 }
 
-function _(e) {
-  null != e.threads && e.threads.length > 0 && (u[e.id] = {}, e.threads.filter(e => o.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => h(e.id, t))), e.hasThreadsSubscription && d.add(e.id)
+function E(e) {
+  null != e.threads && e.threads.length > 0 && (d[e.id] = {}, e.threads.filter(e => o.ALL_CHANNEL_TYPES.has(e.type)).forEach(t => h(e.id, t))), e.hasThreadsSubscription && c.add(e.id)
 }
 
 function h(e, t) {
-  let n = u[e],
+  let n = d[e],
     i = t.parent_id;
-  !(i in n) && (n[i] = {}), u[e][i][t.id] = c(t)
+  !(i in n) && (n[i] = {}), d[e][i][t.id] = _(t)
 }
 
 function g(e) {
@@ -42,12 +43,12 @@ function g(e) {
   if (!o.ALL_CHANNEL_TYPES.has(i.type)) return !1;
   if ((null === (t = i.threadMetadata) || void 0 === t ? void 0 : t.archived) === !0) return m(i);
   {
-    let e = null !== (n = u[i.guild_id]) && void 0 !== n ? n : {};
-    u[i.guild_id] = {
+    let e = null !== (n = d[i.guild_id]) && void 0 !== n ? n : {};
+    d[i.guild_id] = {
       ...e,
       [i.parent_id]: {
         ...e[i.parent_id],
-        [i.id]: c(i)
+        [i.id]: _(i)
       }
     }
   }
@@ -59,16 +60,16 @@ function m(e) {
     parent_id: n,
     id: i
   } = e;
-  if (null == t || null == n || !(t in u) || !(n in u[t]) || !(i in u[t][n])) return !1;
-  u[t] = {
-    ...u[t],
+  if (null == t || null == n || !(t in d) || !(n in d[t]) || !(i in d[t][n])) return !1;
+  d[t] = {
+    ...d[t],
     [n]: {
-      ...u[t][n]
+      ...d[t][n]
     }
-  }, delete u[t][n][i], s.isEmpty(u[t][n]) && delete u[t][n]
+  }, delete d[t][n][i], s.isEmpty(d[t][n]) && delete d[t][n]
 }
-let E = {};
-class p extends r.default.Store {
+let p = {};
+class S extends r.default.Store {
   initialize() {
     this.waitFor(l.default)
   }
@@ -77,42 +78,44 @@ class p extends r.default.Store {
   }
   getThreadsForGuild(e) {
     var t;
-    return null !== (t = u[e]) && void 0 !== t ? t : E
+    return null !== (t = d[e]) && void 0 !== t ? t : p
   }
   getThreadsForParent(e, t) {
     var n;
-    return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : E
+    return null !== (n = this.getThreadsForGuild(e)[t]) && void 0 !== n ? n : p
   }
   hasThreadsForChannel(e, t) {
     return !s.isEmpty(this.getThreadsForParent(e, t))
   }
   forEachGuild(e) {
-    for (let t in u) e(t, u[t])
+    u.default.keys(d).forEach(t => {
+      e(t, d[t])
+    })
   }
   hasLoaded(e) {
-    return d.has(e)
+    return c.has(e)
   }
 }
-p.displayName = "ActiveThreadsStore";
-var v = new p(a.default, {
+S.displayName = "ActiveThreadsStore";
+var T = new S(a.default, {
   CONNECTION_OPEN: function(e) {
-    u = {}, d.clear(), e.guilds.forEach(e => {
-      _(e)
+    d = {}, c.clear(), e.guilds.forEach(e => {
+      E(e)
     })
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
       channels: t
     } = e;
-    u = {}, s(t).filter(e => o.THREAD_CHANNEL_TYPES.has(e.type)).groupBy("guild_id").forEach((e, t) => {
-      u[t] = {}, e.forEach(e => h(t, e))
+    d = {}, s(t).filter(e => o.THREAD_CHANNEL_TYPES.has(e.type)).groupBy("guild_id").forEach((e, t) => {
+      d[t] = {}, e.forEach(e => h(t, e))
     })
   },
   GUILD_CREATE: function(e) {
     let {
       guild: t
     } = e;
-    f(t.id), _(t)
+    f(t.id), E(t)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -128,10 +131,10 @@ var v = new p(a.default, {
       threads: n,
       channelIds: i
     } = e;
-    for (let e in null == i && d.add(t), u[t] = {
-        ...u[t]
-      }, u[t]) u[t][e] = {
-      ...u[t][e]
+    for (let e in null == i && c.add(t), d[t] = {
+        ...d[t]
+      }, d[t]) d[t][e] = {
+      ...d[t][e]
     };
     n.forEach(e => h(t, e))
   },
@@ -145,9 +148,9 @@ var v = new p(a.default, {
     let {
       channel: t
     } = e;
-    if (null == t.guild_id || !(t.guild_id in u)) return !1;
-    u[t.guild_id] = {
-      ...u[t.guild_id]
-    }, delete u[t.guild_id][t.id]
+    if (null == t.guild_id || !(t.guild_id in d)) return !1;
+    d[t.guild_id] = {
+      ...d[t.guild_id]
+    }, delete d[t.guild_id][t.id]
   }
 })

@@ -26,14 +26,14 @@
     let T = {},
       O = new u.Timeout,
       R = !1,
-      w = window.document.createElement("canvas");
-    w.width = 512, w.height = 288;
-    let v = w.getContext("2d");
+      v = window.document.createElement("canvas");
+    v.width = 512, v.height = 288;
+    let w = v.getContext("2d");
 
-    function S() {
+    function A() {
       O.stop(), null != d && (f.default.removeSink(d, T), d = null)
     }
-    let A = i.debounce((e, a, t, d) => {
+    let S = i.debounce((e, a, t, d) => {
       N(e, (0, _.encodeStreamKey)({
         streamType: null != a ? E.StreamTypes.GUILD : E.StreamTypes.CALL,
         guildId: a,
@@ -102,16 +102,16 @@
             d = Math.min(a, t),
             s = e.width * d,
             n = e.height * d;
-          w.width = s, w.height = n;
+          v.width = s, v.height = n;
           let c = window.document.createElement("canvas"),
             i = c.getContext("2d");
           c.width = e.width, c.height = e.height;
           let r = new ImageData(e.data, e.width, e.height);
           return null == i || i.putImageData(r, 0, 0), new Promise(a => {
-            null == v || v.drawImage(c, 0, 0, e.width, e.height, 0, 0, s, n), a()
+            null == w || w.drawImage(c, 0, 0, e.width, e.height, 0, 0, s, n), a()
           })
         }(t);
-        let s = w.toDataURL("image/jpeg");
+        let s = v.toDataURL("image/jpeg");
         if (p.default.dispatch({
             type: "STREAM_PREVIEW_FETCH_SUCCESS",
             streamKey: a,
@@ -124,7 +124,7 @@
             method: "POST",
             token: e
           })
-        } else await r.default.post({
+        } else await r.HTTP.post({
           url: g.Endpoints.STREAM_PREVIEW(a),
           body: {
             thumbnail: s
@@ -139,7 +139,7 @@
     }
     var C = {
       init() {
-        p.default.subscribe("CONNECTION_OPEN", S), p.default.subscribe("LOGOUT", S), p.default.subscribe("STREAM_DELETE", S), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
+        p.default.subscribe("CONNECTION_OPEN", A), p.default.subscribe("LOGOUT", A), p.default.subscribe("STREAM_DELETE", A), p.default.subscribe("RTC_CONNECTION_VIDEO", e => {
           let {
             guildId: a,
             channelId: t,
@@ -147,7 +147,7 @@
             streamId: n,
             context: c
           } = e;
-          !(null == n || c !== I.MediaEngineContextTypes.STREAM || s !== h.default.getId() || __OVERLAY__) && (S(), d = n, A(n, a, t, s))
+          !(null == n || c !== I.MediaEngineContextTypes.STREAM || s !== h.default.getId() || __OVERLAY__) && (A(), d = n, S(n, a, t, s))
         }), p.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
           let {
             videoState: a

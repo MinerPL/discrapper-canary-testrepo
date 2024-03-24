@@ -1,10 +1,10 @@
 "use strict";
 a.r(t), a.d(t, {
   GuildFeedMessage: function() {
-    return P
+    return V
   },
   default: function() {
-    return V
+    return W
   }
 }), a("222007");
 var l = a("37983"),
@@ -13,9 +13,9 @@ var l = a("37983"),
   i = a.n(s),
   d = a("446674"),
   r = a("77078"),
-  u = a("193865"),
-  o = a("405645"),
-  c = a("887446"),
+  u = a("405645"),
+  o = a("887446"),
+  c = a("634807"),
   f = a("913491"),
   m = a("574073"),
   h = a("865343"),
@@ -24,8 +24,8 @@ var l = a("37983"),
   I = a("969706"),
   _ = a("39331"),
   x = a("115859"),
-  v = a("862451"),
-  S = a("611792"),
+  S = a("862451"),
+  v = a("611792"),
   C = a("554372"),
   N = a("256572"),
   p = a("208021"),
@@ -34,18 +34,19 @@ var l = a("37983"),
   j = a("780571"),
   M = a("497880"),
   D = a("93332"),
-  F = a("713810"),
-  L = a("185014"),
-  R = a("2804"),
-  b = a("603371"),
-  G = a("515631"),
+  F = a("299039"),
+  L = a("713810"),
+  R = a("185014"),
+  b = a("2804"),
+  G = a("603371"),
+  y = a("515631"),
   O = a("49111"),
-  y = a("724210"),
-  H = a("894488"),
-  k = a("782340"),
-  U = a("923254"),
-  w = a("877671");
-let B = n.memo(function(e) {
+  H = a("724210"),
+  k = a("894488"),
+  U = a("782340"),
+  w = a("840741"),
+  B = a("5762");
+let P = n.memo(function(e) {
     let {
       message: t,
       channel: a,
@@ -54,145 +55,145 @@ let B = n.memo(function(e) {
     } = e, {
       popouts: d,
       setPopout: r
-    } = (0, I.default)(t.id, H.DEFAULT_POPOUTS), {
-      usernameProfile: u,
+    } = (0, I.default)(t.id, k.DEFAULT_POPOUTS), {
+      usernameProfile: o,
       avatarProfile: c
-    } = d, f = (0, g.useContextMenuUser)(t.author.id, a.id), h = (0, g.useClickMessageAuthorUsername)(t, a, u, r), _ = (0, g.useClickMessageAuthorAvatar)(c, r), x = n.useCallback(() => r({
+    } = d, f = (0, g.useContextMenuUser)(t.author.id, a.id), h = (0, g.useClickMessageAuthorUsername)(t, a, o, r), _ = (0, g.useClickMessageAuthorAvatar)(c, r), x = n.useCallback(() => r({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
-    }), [r]), v = (0, m.default)(t), S = (0, o.useRoleIcon)({
+    }), [r]), S = (0, m.default)(t), v = (0, u.useRoleIcon)({
       guildId: a.guild_id,
-      roleId: v.iconRoleId
+      roleId: S.iconRoleId
     });
     return (0, l.jsx)(D.default, {
       guildId: a.guild_id,
       message: t,
       channel: a,
       repliedMessage: i,
-      author: v,
+      author: S,
       showTimestampOnHover: t.type !== O.MessageTypes.REPLY,
       renderPopout: E.default,
       showAvatarPopout: c,
-      showUsernamePopout: u,
+      showUsernamePopout: o,
       onClickAvatar: _,
       onClickUsername: h,
       onPopoutRequestClose: x,
       onContextMenu: f,
-      roleIcon: S,
+      roleIcon: v,
       animate: s
     })
   }),
-  P = n.forwardRef(function(e, t) {
-    var a, s;
+  V = n.forwardRef(function(e, t) {
+    var a;
     let {
-      guildId: o,
-      channel: m,
-      message: E,
-      feedItemId: g,
-      className: I,
-      animateAvatar: D,
-      contentClassName: b,
-      children: H,
+      guildId: s,
+      channel: u,
+      message: m,
+      feedItemId: E,
+      className: g,
+      animateAvatar: I,
+      contentClassName: D,
+      children: G,
       groupId: k,
       onMessageClick: U,
-      hideHeader: P = !1,
+      hideHeader: w = !1,
       forceAddReactions: V = !0,
       ...W
-    } = e, K = n.useRef(null), z = (0, d.useStateFromStores)([A.default], () => A.default.getChannel(m.id)), Y = null != z && E.isFirstMessageInForumPost(z), Z = (0, u.useShowImprovedMarkdownUserExperimentConfig)((null !== (a = E.editedTimestamp) && void 0 !== a ? a : E.timestamp).valueOf()), X = (0, u.useShowImprovedMarkdownGuildExperimentConfig)(o, (null !== (s = E.editedTimestamp) && void 0 !== s ? s : E.timestamp).valueOf()), {
-      content: J,
-      hasSpoilerEmbeds: q
-    } = (0, _.default)(E, {
+    } = e, K = n.useRef(null), z = (0, d.useStateFromStores)([A.default], () => A.default.getChannel(u.id)), Y = null != z && m.isFirstMessageInForumPost(z), Z = (0, c.isMessageNewerThanImprovedMarkdownEpoch)((null !== (a = m.editedTimestamp) && void 0 !== a ? a : m.timestamp).valueOf()), {
+      content: X,
+      hasSpoilerEmbeds: J
+    } = (0, _.default)(m, {
       hideSimpleEmbedContent: !0,
-      allowList: Y || Z.showListsAndHeaders || X.showListsAndHeaders,
-      allowHeading: Y || Z.showListsAndHeaders || X.showListsAndHeaders,
-      allowLinks: Z.showMaskedLinks || X.showMaskedLinks,
-      previewLinkTarget: Z.showMaskedLinks || X.showMaskedLinks
-    }), Q = E.type === O.MessageTypes.REPLY ? E.messageReference : void 0, $ = (0, d.useStateFromStores)([N.default], () => N.default.getMessageByReference(Q)), ee = (0, d.useStateFromStores)([A.default], () => E.hasFlag(O.MessageFlags.HAS_THREAD) && A.default.getChannel(E.id)), et = (0, h.getMessageAriaLabelledBy)(E, k, {
-      hasTimestamp: E.id === k
-    }), ea = (0, h.getMessageAriaDescribedBy)(E), el = null != Q ? (0, l.jsx)(r.Clickable, {
+      allowList: Y || Z,
+      allowHeading: Y || Z,
+      allowLinks: !0,
+      previewLinkTarget: !0
+    }), q = m.type === O.MessageTypes.REPLY ? m.messageReference : void 0, Q = (0, d.useStateFromStores)([N.default], () => N.default.getMessageByReference(q)), $ = (0, d.useStateFromStores)([A.default], () => m.hasFlag(O.MessageFlags.HAS_THREAD) && A.default.getChannel(F.default.castMessageIdAsChannelId(m.id))), ee = (0, h.getMessageAriaLabelledBy)(m, k, {
+      hasTimestamp: m.id === k
+    }), et = (0, h.getMessageAriaDescribedBy)(m), ea = null != q ? (0, l.jsx)(r.Clickable, {
       onClick: e => {
-        null != $.message && (e.stopPropagation(), (0, F.trackFeedItemInteracted)({
-          feed_item_type: (0, R.getFeedItemTypeFromId)(g),
-          feed_item_id: g,
-          load_id: L.default.getLoadId(o),
-          action_type: G.FeedItemInteractionType.REFERENCED_MESSAGE_CLICKED,
-          guild_id: o,
-          channel_id: m.id,
-          message_id: E.id,
-          home_session_id: c.default.getHomeSessionId(o)
+        null != Q.message && (e.stopPropagation(), (0, L.trackFeedItemInteracted)({
+          feed_item_type: (0, b.getFeedItemTypeFromId)(E),
+          feed_item_id: E,
+          load_id: R.default.getLoadId(s),
+          action_type: y.FeedItemInteractionType.REFERENCED_MESSAGE_CLICKED,
+          guild_id: s,
+          channel_id: u.id,
+          message_id: m.id,
+          home_session_id: o.default.getHomeSessionId(s)
         }), p.default.openChannelAsSidebar({
-          guildId: m.guild_id,
-          channelId: m.id,
-          baseChannelId: y.StaticChannelRoute.GUILD_HOME,
+          guildId: u.guild_id,
+          channelId: u.id,
+          baseChannelId: H.StaticChannelRoute.GUILD_HOME,
           details: {
             type: T.SidebarOpenDetailsType.HOME,
-            initialMessageId: $.message.id
+            initialMessageId: Q.message.id
           }
         }))
       },
-      children: (0, C.default)(E, m, Q, $, !1)
-    }) : null, en = (0, f.default)(E), es = n.useCallback(e => {
-      U(e, K.current, E)
-    }, [U, E]);
+      children: (0, C.default)(m, u, q, Q, !1)
+    }) : null, el = (0, f.default)(m), en = n.useCallback(e => {
+      U(e, K.current, m)
+    }, [U, m]);
     return (0, l.jsx)(j.default, {
       messageRef: K,
-      className: i(I, {
-        [w.mentioned]: E.mentioned && !(0, f.default)(E)
+      className: i(g, {
+        [B.mentioned]: m.mentioned && !(0, f.default)(m)
       }),
-      onClick: es,
-      childrenRepliedMessage: el,
-      childrenExecutedCommand: (0, S.default)(E, m, !1),
-      childrenHeader: en || P ? null : (0, l.jsx)(B, {
-        channel: m,
-        message: E,
-        animateAvatar: D,
-        repliedMessage: $
+      onClick: en,
+      childrenRepliedMessage: ea,
+      childrenExecutedCommand: (0, v.default)(m, u, !1),
+      childrenHeader: el || w ? null : (0, l.jsx)(P, {
+        channel: u,
+        message: m,
+        animateAvatar: I,
+        repliedMessage: Q
       }),
       childrenAccessories: (0, x.default)({
         channelMessageProps: e,
-        hasSpoilerEmbeds: q,
+        hasSpoilerEmbeds: J,
         isInteracting: !1,
         forceAddReactions: V
       }),
       childrenMessageContent: (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(M.default, {
-          className: b,
-          message: E,
-          content: J,
+          className: D,
+          message: m,
+          content: X,
           contentRef: t
-        }), H]
+        }), G]
       }),
-      childrenSystemMessage: (0, v.default)(e),
-      hasThread: null != ee && E.hasFlag(O.MessageFlags.HAS_THREAD),
-      hasReply: E.type === O.MessageTypes.REPLY,
-      isSystemMessage: en,
-      "aria-labelledby": et,
-      "aria-describedby": ea,
+      childrenSystemMessage: (0, S.default)(e),
+      hasThread: null != $ && m.hasFlag(O.MessageFlags.HAS_THREAD),
+      hasReply: m.type === O.MessageTypes.REPLY,
+      isSystemMessage: el,
+      "aria-labelledby": ee,
+      "aria-describedby": et,
       ...W
     })
   });
-var V = n.memo(function(e) {
+var W = n.memo(function(e) {
   let {
     message: t,
     guildId: a,
     feedItemId: s,
     disableTruncation: d
-  } = e, u = t.attachments.length > 0, [o, c] = n.useState(!1), [f, m] = (0, b.default)(a, s);
-  return (0, l.jsx)(P, {
+  } = e, u = t.attachments.length > 0, [o, c] = n.useState(!1), [f, m] = (0, G.default)(a, s);
+  return (0, l.jsx)(V, {
     ref: e => {
       null != e && !d && c(e.scrollHeight > e.clientHeight)
     },
     contentClassName: i({
-      [U.clampLarge]: !d && !f && !u,
-      [U.clampSmall]: !d && !f && u
+      [w.clampLarge]: !d && !f && !u,
+      [w.clampSmall]: !d && !f && u
     }),
     ...e,
     children: o && !f ? (0, l.jsx)(r.Clickable, {
-      className: U.showMore,
+      className: w.showMore,
       onClick: e => m(e, t),
       "aria-hidden": !0,
-      children: k.default.Messages.GUILD_FEED_TRUNCATED_MESSAGE_SEE_MORE
+      children: U.default.Messages.GUILD_FEED_TRUNCATED_MESSAGE_SEE_MORE
     }) : null
   })
 })

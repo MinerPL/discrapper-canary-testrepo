@@ -10,7 +10,7 @@ var a = l("414456"),
   n = l.n(a),
   s = l("77078"),
   r = l("782340"),
-  c = l("11338");
+  c = l("194767");
 
 function o(e) {
   let {
@@ -20,8 +20,8 @@ function o(e) {
     iconSrc: o,
     header: d,
     headerClassName: u,
-    subheaderVariant: p = "text-sm/normal",
-    subheader: m,
+    subheaderVariant: m = "text-sm/normal",
+    subheader: p,
     children: _,
     animatesOnHover: f,
     ...h
@@ -50,11 +50,11 @@ function o(e) {
             variant: "heading-md/medium",
             className: u,
             children: d
-          }), null != m && (0, i.jsx)(s.Text, {
+          }), null != p && (0, i.jsx)(s.Text, {
             className: c.subheader,
             color: "header-secondary",
-            variant: p,
-            children: m
+            variant: m,
+            children: p
           })]
         })]
       }), _]

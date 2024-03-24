@@ -13,7 +13,7 @@ var a = s("884691"),
 let d = new Set(Object.values(o.ProfileCustomizationSubsection)),
   u = e => null != e && d.has(e);
 var c = () => {
-  let e = (0, n.default)([i.default], () => {
+  let e = (0, n.useStateFromStores)([i.default], () => {
       let e = i.default.getSubsection();
       return u(e) ? e : o.ProfileCustomizationSubsection.USER_PROFILE
     }),

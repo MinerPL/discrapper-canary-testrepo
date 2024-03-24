@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return x
   }
 });
 var a = n("37983");
@@ -10,68 +10,69 @@ var l = n("414456"),
   s = n.n(l),
   i = n("65597"),
   r = n("797350"),
-  o = n("237020"),
-  u = n("352567"),
+  u = n("237020"),
+  o = n("352567"),
   d = n("305861"),
   c = n("715072"),
   f = n("77078"),
   h = n("917397"),
-  p = n("290491"),
-  m = n("305961"),
+  m = n("290491"),
+  p = n("305961"),
   E = n("18494"),
-  C = n("124969"),
+  g = n("124969"),
   S = n("153769"),
-  g = n("994906"),
+  C = n("994906"),
   _ = n("136281"),
-  I = n("782340"),
-  T = n("63893");
+  I = n("49111"),
+  T = n("782340"),
+  v = n("865331");
 
-function v(e) {
+function x(e) {
   let {
     member: t
-  } = e, n = (0, i.default)([m.default], () => m.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId), v = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), x = (0, h.useUserAccountAgeDate)(t.userId), N = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
+  } = e, n = (0, i.useStateFromStores)([p.default], () => p.default.getGuild(t.guildId), [t.guildId]), l = (0, h.useUserAccountVerified)(t.userId, t.guildId), x = (0, h.useUserRulesAgreementLevel)(t.userId, t.guildId), N = (0, h.useUserAccountAgeDate)(t.userId), A = (0, h.useGuildMemberJoinedAtDate)(t.userId, t.guildId);
   return null == n ? null : (0, a.jsx)("div", {
-    className: s(T.safetySignalsMainContainer),
+    className: s(v.safetySignalsMainContainer),
     children: (0, a.jsx)(f.FormItem, {
-      title: I.default.Messages.ACCOUNT,
-      titleClassName: T.infoTitle,
+      title: T.default.Messages.ACCOUNT,
+      titleClassName: v.infoTitle,
       children: (0, a.jsxs)(_.UserModInfoItemContainer, {
         children: [(0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(d.ShieldUserIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
-            className: T.unusualDMLabelIcon
+            className: v.unusualDMLabelIcon
           }),
           name: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
+            children: T.default.Messages.MEMBER_VERIFICATION_ACCOUNT_VERIFIED
           }),
-          description: l ? (0, a.jsx)(o.CheckmarkBoldIcon, {
+          description: l ? (0, a.jsx)(u.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
-          }) : (0, a.jsx)(u.CloseLargeBoldIcon, {
+          }) : (0, a.jsx)(o.CloseLargeBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
           })
-        }), v !== h.UserRulesAgreementLevel.NO_GATE && (0, a.jsx)(_.UserModInfoItem, {
+        }), x !== h.UserRulesAgreementLevel.NO_GATE && (0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(r.BookCheckIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
-            className: T.unusualDMLabelIcon
+            className: v.unusualDMLabelIcon
           }),
           name: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_AGREE_TO_RULES
           }),
-          description: v === h.UserRulesAgreementLevel.AGREED ? (0, a.jsx)(o.CheckmarkBoldIcon, {
+          description: x === h.UserRulesAgreementLevel.AGREED ? (0, a.jsx)(u.CheckmarkBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_POSITIVE_FOREGROUND
-          }) : (0, a.jsx)(u.CloseLargeBoldIcon, {
+          }) : (0, a.jsx)(o.CloseLargeBoldIcon, {
             width: _.USER_MOD_ICON_SIZE_PX,
             height: _.USER_MOD_ICON_SIZE_PX,
             color: f.tokens.colors.INFO_DANGER_FOREGROUND
@@ -84,29 +85,29 @@ function v(e) {
           name: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE
-          }),
-          description: (0, a.jsx)(f.Text, {
-            variant: "text-sm/medium",
-            color: "text-normal",
-            children: x
-          })
-        }), (0, a.jsx)(_.UserModInfoItem, {
-          icon: (0, a.jsx)(C.GuildIcon, {
-            guild: n,
-            size: C.GuildIcon.Sizes.SMOL,
-            animate: !1,
-            className: T.guildIcon
-          }),
-          name: (0, a.jsx)(f.Text, {
-            variant: "text-sm/medium",
-            color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_DISCORD_JOIN_DATE
           }),
           description: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
             children: N
+          })
+        }), (0, a.jsx)(_.UserModInfoItem, {
+          icon: (0, a.jsx)(g.GuildIcon, {
+            guild: n,
+            size: g.GuildIcon.Sizes.SMOL,
+            animate: !1,
+            className: v.guildIcon
+          }),
+          name: (0, a.jsx)(f.Text, {
+            variant: "text-sm/medium",
+            color: "text-normal",
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_GUILD_JOIN_DATE
+          }),
+          description: (0, a.jsx)(f.Text, {
+            variant: "text-sm/medium",
+            color: "text-normal",
+            children: A
           })
         }), (0, a.jsx)(_.UserModInfoItem, {
           icon: (0, a.jsx)(c.UserPlusIcon, {
@@ -116,18 +117,18 @@ function v(e) {
           name: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: I.default.Messages.GUILD_MEMBER_MOD_VIEW_INVITE_LINK_LABEL
+            children: T.default.Messages.GUILD_MEMBER_MOD_VIEW_INVITE_LINK_LABEL
           }),
           description: (0, a.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-normal",
-            children: (0, a.jsx)(p.default, {
+            children: (0, a.jsx)(m.default, {
               userId: t.userId,
               guildId: t.guildId,
               showInviterAsFooter: !0,
               onClickInviter: e => {
                 let n = E.default.getChannelId();
-                (0, g.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : "")
+                (0, C.openGuildMemberModViewSidebar)(t.guildId, e.id, null != n ? n : I.EMPTY_STRING_SNOWFLAKE_ID)
               }
             })
           })

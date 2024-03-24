@@ -1,28 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 }), n("222007");
 var l = n("37983");
 n("884691");
 var a = n("446674"),
   s = n("77078"),
-  i = n("697218"),
-  r = n("153769"),
-  o = n("719923"),
-  u = n("805199"),
-  d = n("513196"),
-  c = n("42723"),
-  f = n("605475");
+  i = n("199245"),
+  r = n("697218"),
+  o = n("153769"),
+  u = n("719923"),
+  d = n("805199"),
+  c = n("513196"),
+  f = n("42723"),
+  h = n("605475"),
+  C = n("903326");
 
-function h() {
-  let [e, t, n] = (0, a.useStateFromStoresArray)([i.default, u.default], () => [u.default.getCurrentDesktopIcon(), u.default.isEditorOpen, o.default.isPremium(i.default.getCurrentUser())]), h = f.ICONS_BY_ID[e], C = e !== d.FreemiumAppIconIds.DEFAULT && (n || t), p = (0, s.useRedesignIconContext)().enabled, m = (0, l.jsx)(r.default, {
+function p() {
+  let [e, t, n] = (0, a.useStateFromStoresArray)([r.default, d.default], () => [d.default.getCurrentDesktopIcon(), d.default.isEditorOpen, u.default.isPremium(r.default.getCurrentUser())]), p = h.ICONS_BY_ID[e], m = e !== c.FreemiumAppIconIds.DEFAULT && (n || t), E = (0, s.useRedesignIconContext)().enabled, g = (0, l.jsx)(o.default, {
     width: 30,
-    height: p ? 30 : 22
+    height: E ? 30 : 22
+  }), {
+    enabled: I
+  } = i.default.useExperiment({
+    location: "hi Kevin"
+  }, {
+    autoTrackExposure: !1
   });
-  return null != h && C ? (0, l.jsx)(c.default, {
+  return I ? (0, l.jsx)("img", {
+    src: C,
+    width: 30,
+    alt: "Hi Kevin!",
+    draggable: !1
+  }) : null != p && m ? (0, l.jsx)(f.default, {
     id: e,
     width: 48
-  }) : m
+  }) : g
 }

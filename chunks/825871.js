@@ -1,118 +1,99 @@
 "use strict";
 n.r(t), n.d(t, {
   EMPTY_RESULTS: function() {
-    return A
-  },
-  FakeFooter: function() {
-    return R
-  },
-  getLimit: function() {
-    return M
+    return v
   },
   default: function() {
-    return b
+    return O
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("271841"),
-  r = n("551042"),
-  o = n("798609"),
-  s = n("507217"),
-  a = n("589777"),
+var l = n("271841"),
+  a = n("551042"),
+  s = n("798609"),
+  r = n("507217"),
+  o = n("589777"),
   u = n("988721"),
   d = n("240249"),
   c = n("972620"),
-  f = n("166004"),
-  p = n("383018"),
-  m = n("524768"),
-  h = n("389153"),
-  E = n("396465"),
-  S = n("355263"),
-  g = n("957255"),
-  C = n("501536"),
-  T = n("655518"),
-  v = n("200294"),
-  y = n("851745"),
-  x = n("406291"),
-  I = n("317041"),
-  N = n("782340"),
-  _ = n("94885");
-let A = {
+  f = n("383018"),
+  p = n("524768"),
+  m = n("389153"),
+  h = n("355263"),
+  x = n("957255"),
+  E = n("501536"),
+  y = n("655518"),
+  g = n("200294"),
+  S = n("851745"),
+  C = n("406291"),
+  T = n("317041"),
+  _ = n("782340"),
+  I = n("826214");
+let v = {
   results: {
     entries: []
   }
 };
 
-function R() {
-  return d.useSearchOpenState(), null
-}
-
-function O() {
-  (0, r.openModalLazy)(async () => {
+function N() {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("496896").then(n.bind(n, "496896"));
-    return t => (0, l.jsx)(e, {
+    return t => (0, i.jsx)(e, {
       ...t
     })
   })
 }
-
-function M(e) {
-  return d.isInIndexExperiment({
-    location: e
-  }) ? y.MAX_COMMAND_AUTOCOMPLETE_RESULTS : y.MAX_COMMAND_AUTOCOMPLETE_RESULTS_LEGACY
-}
-let k = {
-  sentinel: x.COMMAND_SENTINEL,
-  stores: [p.default, f.default, u.default, g.default],
-  matches: (e, t, n, l, i) => i.commands !== y.CommandMode.DISABLED && null == p.default.getActiveCommand(e.id) && (l || i.commands !== y.CommandMode.OLD_BUILT_INS),
-  queryResults(e, t, n, l, i) {
-    if (0 === n.length && l.commands !== y.CommandMode.OLD_BUILT_INS) return A;
-    let r = M("CommandAutocompletes");
-    if (l.commands === y.CommandMode.OLD_BUILT_INS) {
-      let l = (0, a.getBuiltInCommands)(o.ApplicationCommandType.CHAT, !1, !1),
-        i = RegExp("^".concat(T.default.escape(n)), "i"),
-        s = (0, h.getMatchingGroupCommands)(l, i, {
+let A = {
+  sentinel: C.COMMAND_SENTINEL,
+  stores: [f.default, u.default, x.default],
+  matches: (e, t, n, i, l) => l.commands !== S.CommandMode.DISABLED && null == f.default.getActiveCommand(e.id) && (i || l.commands !== S.CommandMode.OLD_BUILT_INS),
+  queryResults(e, t, n, i, l) {
+    if (0 === n.length && i.commands !== S.CommandMode.OLD_BUILT_INS) return v;
+    if (i.commands === S.CommandMode.OLD_BUILT_INS) {
+      let i = (0, o.getBuiltInCommands)(s.ApplicationCommandType.CHAT, !1, !1),
+        l = RegExp("^".concat(y.default.escape(n)), "i"),
+        a = (0, m.getMatchingGroupCommands)(i, l, {
           channel: e,
           guild: t
-        }, r),
-        u = a.BUILT_IN_SECTIONS[I.BuiltInSectionId.BUILT_IN];
-      return 0 === s.length ? A : {
+        }, S.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
+        r = o.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN];
+      return 0 === a.length ? v : {
         results: {
-          entries: s.map(e => ({
+          entries: a.map(e => ({
             command: e,
-            section: u
+            section: r
           }))
         }
       }
     }
-    let s = (0, S.getCommandQuery)(e, n),
+    let a = (0, h.getCommandQuery)(e, n),
       {
-        commands: u,
-        sections: f
+        commands: r,
+        sections: u
       } = d.executeQuery(e, {
-        commandType: o.ApplicationCommandType.CHAT,
-        text: s.text
+        commandType: s.ApplicationCommandType.CHAT,
+        text: a.text
       }, {
-        limit: r,
-        placeholderCount: y.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+        limit: S.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
+        placeholderCount: S.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
         scoreMethod: c.ScoreMethod.COMMAND_OR_APPLICATION,
-        allowFetch: i
+        allowFetch: l
       });
-    if (null == u) return A;
-    let p = u;
-    if (s.hasSpaceTerminator) {
-      let e = s.text.trim(),
+    if (null == r) return v;
+    let f = r;
+    if (a.hasSpaceTerminator) {
+      let e = a.text.trim(),
         t = e + " ";
-      p = p.filter(n => n.name === e || n.name.startsWith(t))
+      f = f.filter(n => n.name === e || n.name.startsWith(t))
     }
-    return 0 === p.length ? A : {
+    return 0 === f.length ? v : {
       results: {
-        entries: p.slice(0, r).map(e => ({
+        entries: f.slice(0, S.MAX_COMMAND_AUTOCOMPLETE_RESULTS).map(e => ({
           command: e,
-          section: null == f ? void 0 : f.find(t => t.id === e.applicationId)
+          section: null == u ? void 0 : u.find(t => t.id === e.applicationId)
         }))
       }
     }
@@ -123,32 +104,22 @@ let k = {
         entries: t
       },
       selectedIndex: n,
-      channel: r,
-      query: o,
-      options: s,
-      onHover: a,
+      channel: a,
+      query: s,
+      options: r,
+      onHover: o,
       onClick: u
-    } = e, c = (0, S.getCommandQuery)(r, o);
-    if (s.commands !== y.CommandMode.OLD_BUILT_INS && !d.isInIndexExperiment({
-        location: "CommandAutocompletes"
-      })) return (0, l.jsx)(E.default, {
-      channel: r,
-      query: c.text,
-      selectedIndex: n,
-      onHover: a,
-      onClick: u
-    });
-    let f = s.commands === y.CommandMode.OLD_BUILT_INS;
-    return (0, v.renderAutocompleteGroup)({
-      query: c.text,
+    } = e, d = (0, h.getCommandQuery)(a, s), c = r.commands === S.CommandMode.OLD_BUILT_INS;
+    return (0, g.renderAutocompleteGroup)({
+      query: d.text,
       selectedIndex: n,
       autocompletes: t,
-      onHover: a,
+      onHover: o,
       onClick: u,
-      titleWithQuery: N.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: N.default.Messages.COMMANDS,
-      getQuery: e => "".concat(x.COMMAND_SENTINEL).concat(e),
-      Component: f ? C.default.Command : C.default.NewCommand,
+      titleWithQuery: _.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: _.default.Messages.COMMANDS,
+      getQuery: e => "".concat(C.COMMAND_SENTINEL).concat(e),
+      Component: c ? E.default.Command : E.default.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -157,23 +128,22 @@ let k = {
         return {
           key: t.id,
           command: t,
-          channel: r,
-          guildId: r.guild_id,
+          channel: a,
+          guildId: a.guild_id,
           showImage: !0,
           section: n
         }
       },
       key: "commands",
-      headerClassName: f ? _.legacyInputCommandHeader : null,
-      headerTrailingContent: f ? (0, l.jsx)(i.Button, {
+      headerClassName: c ? I.legacyInputCommandHeader : null,
+      headerTrailingContent: c ? (0, i.jsx)(l.Button, {
         type: "button",
-        look: i.Button.Looks.LINK,
-        color: i.Button.Colors.BRAND,
-        size: i.Button.Sizes.MIN,
-        onClick: O,
-        children: N.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
-      }) : null,
-      footer: (0, l.jsx)(R, {})
+        look: l.Button.Looks.LINK,
+        color: l.Button.Colors.BRAND,
+        size: l.Button.Sizes.MIN,
+        onClick: N,
+        children: _.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+      }) : null
     })
   },
   onSelect(e) {
@@ -182,32 +152,32 @@ let k = {
         entries: t
       },
       index: n,
-      queryText: l,
-      options: i,
-      channel: r,
-      location: o,
-      tabOrEnter: a
+      queryText: i,
+      options: l,
+      channel: a,
+      location: s,
+      tabOrEnter: o
     } = e, {
       command: u,
       section: d
     } = t[n];
-    if (u.inputType === m.ApplicationCommandInputType.PLACEHOLDER) return null;
-    if (i.commands === y.CommandMode.OLD_BUILT_INS) i.insertText(function(e) {
-      return "".concat(x.COMMAND_SENTINEL).concat(e.name)
+    if (u.inputType === p.ApplicationCommandInputType.PLACEHOLDER) return null;
+    if (l.commands === S.CommandMode.OLD_BUILT_INS) l.insertText(function(e) {
+      return "".concat(C.COMMAND_SENTINEL).concat(e.name)
     }(u));
     else {
-      let e = o;
-      null == e && (e = a ? m.ApplicationCommandTriggerLocations.QUERY : m.ApplicationCommandTriggerLocations.DISCOVERY), s.setActiveCommand({
-        channelId: r.id,
+      let e = s;
+      null == e && (e = o ? p.ApplicationCommandTriggerLocations.QUERY : p.ApplicationCommandTriggerLocations.DISCOVERY), r.setActiveCommand({
+        channelId: a.id,
         command: u,
         section: null != d ? d : null,
         location: e,
-        queryLength: null == l ? void 0 : l.length
+        queryLength: null == i ? void 0 : i.length
       })
     }
     return {
-      type: y.AutocompleteSelectionTypes.COMMAND
+      type: S.AutocompleteSelectionTypes.COMMAND
     }
   }
 };
-var b = k
+var O = A

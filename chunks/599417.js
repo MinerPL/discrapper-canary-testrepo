@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var i, s = n("872717"),
   r = n("49111"),
   a = n("782340");
-i = class extends s.default.V8APIError {
+i = class extends s.V8APIError {
   constructor(e, t) {
     super(e, t, null != t ? a.default.Messages.FORM_ERROR_GENERIC_WITH_DETAILS.format({
       statusPageURL: r.Links.STATUS,

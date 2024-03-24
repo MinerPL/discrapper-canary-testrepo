@@ -1,43 +1,44 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return x
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("446674"),
-  o = n("280214"),
-  s = n("271938"),
-  a = n("18494"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("446674"),
+  s = n("280214"),
+  r = n("271938"),
+  o = n("18494"),
   u = n("943551"),
   d = n("232268"),
   c = n("798592"),
   f = n("39141"),
-  p = n("172858");
-
-function m(e) {
-  var t, n;
-  let {
-    editorHeight: l,
-    textValue: d
-  } = e, f = i.useRef(d), m = (0, o.useChannelAutocompleteLayerPosition)({
-    editorHeight: l
-  }), h = (0, c.default)(), E = (0, r.useStateFromStores)([u.default, s.default, a.default], () => {
-    var e;
-    return u.default.isComboing(s.default.getId(), null !== (e = a.default.getChannelId()) && void 0 !== e ? e : "")
-  }), S = null !== (t = null == m ? void 0 : m.left) && void 0 !== t ? t : 0, g = (null !== (n = null == m ? void 0 : m.top) && void 0 !== n ? n : 0) - 16, C = i.useMemo(() => .05 > Math.random(), [0 === d.length]);
-  return i.useEffect(() => {
-    0 !== d.length && d !== f.current && E && (h.fire(S, g, C ? {
-      sprite: p.DUCK_CONFETTI_SPRITE
-    } : null), f.current = d)
-  }, [d, E, S, g, C, h]), null
-}
+  p = n("49111"),
+  m = n("172858");
 
 function h(e) {
-  return (0, l.jsx)(d.default, {
+  var t, n;
+  let {
+    editorHeight: i,
+    textValue: d
+  } = e, f = l.useRef(d), h = (0, s.useChannelAutocompleteLayerPosition)({
+    editorHeight: i
+  }), x = (0, c.default)(), E = (0, a.useStateFromStores)([u.default, r.default, o.default], () => {
+    var e;
+    return u.default.isComboing(r.default.getId(), null !== (e = o.default.getChannelId()) && void 0 !== e ? e : p.EMPTY_STRING_SNOWFLAKE_ID)
+  }), y = null !== (t = null == h ? void 0 : h.left) && void 0 !== t ? t : 0, g = (null !== (n = null == h ? void 0 : h.top) && void 0 !== n ? n : 0) - 16, S = l.useMemo(() => .05 > Math.random(), [0 === d.length]);
+  return l.useEffect(() => {
+    0 !== d.length && d !== f.current && E && (x.fire(y, g, S ? {
+      sprite: m.DUCK_CONFETTI_SPRITE
+    } : null), f.current = d)
+  }, [d, E, y, g, S, x]), null
+}
+
+function x(e) {
+  return (0, i.jsx)(d.default, {
     confettiLocation: f.ConfettiLocation.CHAT_INPUT,
-    children: (0, l.jsx)(m, {
+    children: (0, i.jsx)(h, {
       ...e
     })
   })

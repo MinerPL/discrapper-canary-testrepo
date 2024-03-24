@@ -14,12 +14,12 @@ var a = l("414456"),
   o = l("599994"),
   d = l("682777"),
   u = l("653891"),
-  p = l("288914"),
-  m = l("412707"),
+  m = l("288914"),
+  p = l("412707"),
   _ = l("646186"),
   f = l("417152"),
   h = l("49111"),
-  C = l("332119");
+  C = l("2025");
 
 function g(e) {
   let {
@@ -31,7 +31,7 @@ function g(e) {
     }
   } = e, I = (0, f.default)({
     collection: t
-  }), A = (0, m.useApplicationDirectoryHistory)(e => e.guildId);
+  }), A = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
   return (0, i.jsxs)("div", {
     ref: I,
     children: [(0, i.jsx)(r.Heading, {
@@ -44,7 +44,7 @@ function g(e) {
         let {
           id: t,
           type: a,
-          application: m,
+          application: p,
           image_hash: f,
           title: g,
           description: I,
@@ -56,28 +56,28 @@ function g(e) {
           itemId: t,
           hash: f
         });
-        return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != m ? (0, i.jsx)(o.default, {
-          href: h.Routes.APPLICATION_DIRECTORY_PROFILE(m.id),
+        return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != p ? (0, i.jsx)(o.default, {
+          href: h.Routes.APPLICATION_DIRECTORY_PROFILE(p.id),
           className: C.item,
           children: (0, i.jsx)(u.default, {
             imageSrc: x,
-            application: m,
+            application: p,
             onClick: e => {
               let {
                 mutualGuilds: t
               } = e;
               c.default.track(h.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
                 collection_id: l,
-                application_id: m.id,
+                application_id: p.id,
                 guild_id: A,
                 shown_mutual_guilds_count: t.length
               }), (0, _.goToApplication)({
-                applicationId: m.id
+                applicationId: p.id
               })
             },
             animatesOnHover: !0
           })
-        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != g ? (0, i.jsxs)(p.default, {
+        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != g ? (0, i.jsxs)(m.default, {
           className: n(C.item, C.linkCard),
           imageSrc: x,
           header: g,

@@ -1,50 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
+  NotificationSettingsUpdateType: function() {
+    return i
+  },
   NotificationLabels: function() {
-    return l
+    return s
   },
   NotificationLabel: function() {
-    return p
+    return h
   },
   MessageNotificationSettings: function() {
-    return E
+    return g
   },
   trackGuildNotificationSettingsUpdate: function() {
     return m
   },
   muteConfigToTimestamp: function() {
-    return v
-  },
-  trackChannelNotificationSettingsUpdate: function() {
-    return A
-  },
-  getCurrentGuildSettings: function() {
-    return C
-  },
-  getManyCurrentGuildSettings: function() {
     return S
   },
-  getCurrentChannelSettings: function() {
+  trackChannelNotificationSettingsUpdate: function() {
     return T
   },
-  getManyCurrentChannelSettings: function() {
-    return O
+  getCurrentGuildSettings: function() {
+    return v
   },
-  trackAccountNotificationSettingUpdated: function() {
+  getManyCurrentGuildSettings: function() {
     return I
+  },
+  getCurrentChannelSettings: function() {
+    return A
+  },
+  getManyCurrentChannelSettings: function() {
+    return C
   }
 }), n("702976"), n("222007");
-var i, l, u, s, o = n("716241"),
-  d = n("637929"),
-  a = n("42203"),
-  _ = n("282109"),
-  r = n("599110"),
-  c = n("568734"),
-  f = n("49111"),
-  g = n("133335"),
-  h = n("397336");
-(u = i || (i = {})).GUILD = "guild", u.CHANNEL = "channel", u.ACCOUNT = "account", (s = l || (l = {})).ForumThreadsCreatedOn = "enabled forum thread created notifs", s.ForumThreadsCreatedOff = "disabled forum thread created notifs", s.SuppressEveryoneOn = "enabled suppress everyone", s.SuppressEveryoneOff = "disabled suppress everyone", s.SuppressRolesOn = "enabled suppress roles", s.SuppressRolesOff = "disabled suppress roles", s.HighlightsOn = "enabled highlights", s.HighlightsOff = "disabled highlights", s.MobilePushOn = "enabled mobile push notifications", s.MobilePushOff = "disabled mobile push notifications", s.UnreadsAll = "unreads set to all messages", s.UnreadsMentions = "unreads set to mentions", s.UnreadsDefault = "unreads set to the default", s.NotificationsAll = "notifications set to all messages", s.NotificationsMentions = "notifications set to mentions", s.NotificationsNothing = "notifications set to nothing", s.NotificationsDefault = "notifications set to the default", s.PresetAll = "notification preset set to all messages", s.PresetMentions = "notification preset set to mentions", s.PresetNothing = "notification preset set to nothing", s.PresetDefault = "notification preset set to the default", s.OptedIn = "opted in to entity", s.OptedOut = "opted out from entity", s.Favorited = "favorited", s.UnFavorited = "unfavorited", s.Muted = "muted", s.Unmuted = "unmuted", s.MutedScheduledEvents = "muted scheduled events", s.UnmutedScheduledEvents = "unmuted scheduled events", s.OverrideCreated = "channel override created", s.OverrideDeleted = "channel override deleted";
-let p = {
+var i, s, r, a, o = n("716241"),
+  l = n("637929"),
+  u = n("42203"),
+  d = n("282109");
+n("599110");
+var c = n("568734"),
+  _ = n("49111"),
+  f = n("133335"),
+  E = n("397336");
+(r = i || (i = {})).GUILD = "guild", r.CHANNEL = "channel", r.ACCOUNT = "account", (a = s || (s = {})).ForumThreadsCreatedOn = "enabled forum thread created notifs", a.ForumThreadsCreatedOff = "disabled forum thread created notifs", a.SuppressEveryoneOn = "enabled suppress everyone", a.SuppressEveryoneOff = "disabled suppress everyone", a.SuppressRolesOn = "enabled suppress roles", a.SuppressRolesOff = "disabled suppress roles", a.HighlightsOn = "enabled highlights", a.HighlightsOff = "disabled highlights", a.MobilePushOn = "enabled mobile push notifications", a.MobilePushOff = "disabled mobile push notifications", a.UnreadsAll = "unreads set to all messages", a.UnreadsMentions = "unreads set to mentions", a.UnreadsDefault = "unreads set to the default", a.NotificationsAll = "notifications set to all messages", a.NotificationsMentions = "notifications set to mentions", a.NotificationsNothing = "notifications set to nothing", a.NotificationsDefault = "notifications set to the default", a.PresetAll = "notification preset set to all messages", a.PresetMentions = "notification preset set to mentions", a.PresetNothing = "notification preset set to nothing", a.PresetDefault = "notification preset set to the default", a.OptedIn = "opted in to entity", a.OptedOut = "opted out from entity", a.Favorited = "favorited", a.UnFavorited = "unfavorited", a.Muted = "muted", a.Unmuted = "unmuted", a.MutedScheduledEvents = "muted scheduled events", a.UnmutedScheduledEvents = "unmuted scheduled events", a.OverrideCreated = "channel override created", a.OverrideDeleted = "channel override deleted";
+let h = {
     forumThreadsCreated: e => e ? "enabled forum thread created notifs" : "disabled forum thread created notifs",
     suppressEveryone: e => e ? "enabled suppress everyone" : "disabled suppress everyone",
     suppressRoles: e => e ? "enabled suppress roles" : "disabled suppress roles",
@@ -54,152 +54,144 @@ let p = {
     favorited: e => e ? "favorited" : "unfavorited",
     muted: e => e ? "muted" : "unmuted",
     mutedEvents: e => e ? "muted scheduled events" : "unmuted scheduled events",
-    unreads: e => e === g.UnreadSetting.ALL_MESSAGES ? "unreads set to all messages" : e === g.UnreadSetting.ONLY_MENTIONS ? "unreads set to mentions" : "unreads set to the default",
-    notifications: e => e === f.UserNotificationSettings.ALL_MESSAGES ? "notifications set to all messages" : e === f.UserNotificationSettings.ONLY_MENTIONS ? "notifications set to mentions" : e === f.UserNotificationSettings.NO_MESSAGES ? "notifications set to nothing" : "notifications set to the default"
+    unreads: e => e === f.UnreadSetting.ALL_MESSAGES ? "unreads set to all messages" : e === f.UnreadSetting.ONLY_MENTIONS ? "unreads set to mentions" : "unreads set to the default",
+    notifications: e => e === _.UserNotificationSettings.ALL_MESSAGES ? "notifications set to all messages" : e === _.UserNotificationSettings.ONLY_MENTIONS ? "notifications set to mentions" : e === _.UserNotificationSettings.NO_MESSAGES ? "notifications set to nothing" : "notifications set to the default"
   },
-  E = Object.freeze({
-    [f.UserNotificationSettings.ALL_MESSAGES]: "All",
-    [f.UserNotificationSettings.ONLY_MENTIONS]: "Mentions",
-    [f.UserNotificationSettings.NO_MESSAGES]: "Nothing",
-    [f.UserNotificationSettings.NULL]: null
+  g = Object.freeze({
+    [_.UserNotificationSettings.ALL_MESSAGES]: "All",
+    [_.UserNotificationSettings.ONLY_MENTIONS]: "Mentions",
+    [_.UserNotificationSettings.NO_MESSAGES]: "Nothing",
+    [_.UserNotificationSettings.NULL]: null
   });
 
-function m(e, t, n, i, l) {
-  var u, s;
-  let a = function(e) {
-      var t, n, i, l, u, s, o;
-      let d = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        a = null != d.mute_config && null != d.mute_config.end_time ? new Date(d.mute_config.end_time).getTime() : e.guild_muted_until,
-        _ = null != d.message_notifications ? E[d.message_notifications] : e.guild_message_notification_settings;
+function m(e, t, n, i, s) {
+  var r, a;
+  let u = function(e) {
+      var t, n, i, s, r, a, o;
+      let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        u = null != l.mute_config && null != l.mute_config.end_time ? new Date(l.mute_config.end_time).getTime() : e.guild_muted_until,
+        d = null != l.message_notifications ? g[l.message_notifications] : e.guild_message_notification_settings;
       return {
-        guild_muted_until: a,
-        guild_flags: null !== (t = d.flags) && void 0 !== t ? t : e.guild_flags,
-        guild_is_muted: null !== (n = d.muted) && void 0 !== n ? n : e.guild_is_muted,
-        guild_message_notification_settings: _,
-        guild_suppress_roles: null !== (i = d.suppress_roles) && void 0 !== i ? i : e.guild_suppress_roles,
-        guild_receive_mobile_push: null !== (l = d.mobile_push) && void 0 !== l ? l : e.guild_receive_mobile_push,
-        guild_notify_highlights: null !== (u = d.notify_highlights) && void 0 !== u ? u : e.guild_notify_highlights,
-        guild_suppress_everyone: null !== (s = d.suppress_everyone) && void 0 !== s ? s : e.guild_suppress_everyone,
-        guild_scheduled_events_muted: null !== (o = d.mute_scheduled_events) && void 0 !== o ? o : e.guild_scheduled_events_muted
+        guild_muted_until: u,
+        guild_flags: null !== (t = l.flags) && void 0 !== t ? t : e.guild_flags,
+        guild_is_muted: null !== (n = l.muted) && void 0 !== n ? n : e.guild_is_muted,
+        guild_message_notification_settings: d,
+        guild_suppress_roles: null !== (i = l.suppress_roles) && void 0 !== i ? i : e.guild_suppress_roles,
+        guild_receive_mobile_push: null !== (s = l.mobile_push) && void 0 !== s ? s : e.guild_receive_mobile_push,
+        guild_notify_highlights: null !== (r = l.notify_highlights) && void 0 !== r ? r : e.guild_notify_highlights,
+        guild_suppress_everyone: null !== (a = l.suppress_everyone) && void 0 !== a ? a : e.guild_suppress_everyone,
+        guild_scheduled_events_muted: null !== (o = l.mute_scheduled_events) && void 0 !== o ? o : e.guild_scheduled_events_muted
       }
     },
-    _ = a(n),
-    r = a(C(e), t),
-    g = N(_, r, "RETURN_PREVIOUS_WHEN_CHANGED"),
-    p = null !== (u = g("guild_flags")) && void 0 !== u ? u : 0,
-    m = (null !== (s = r.guild_flags) && void 0 !== s ? s : 0) ^ p,
-    v = 0 === (0, c.removeFlags)(m, h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_OFF, h.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON);
-  o.default.trackWithMetadata(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
-    ...r,
-    ...d.default.getStats(e),
-    location: l,
+    d = u(n),
+    f = u(v(e), t),
+    h = p(d, f, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    m = null !== (r = h("guild_flags")) && void 0 !== r ? r : 0,
+    S = (null !== (a = f.guild_flags) && void 0 !== a ? a : 0) ^ m,
+    T = 0 === (0, c.removeFlags)(S, E.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_OFF, E.GuildNotificationSettingsFlags.OPT_IN_CHANNELS_ON);
+  o.default.trackWithMetadata(_.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    ...f,
+    ...l.default.getStats(e),
+    location: s,
     guild_id: e,
     update_type: "guild",
     label: i,
-    guild_flags_old: g("guild_flags"),
-    guild_is_muted_old: g("guild_is_muted"),
-    guild_suppress_roles_old: g("guild_suppress_roles"),
-    guild_notify_highlights_old: g("guild_notify_highlights"),
-    guild_suppress_everyone_old: g("guild_suppress_everyone"),
-    guild_receive_mobile_push_old: g("guild_receive_mobile_push"),
-    guild_scheduled_events_muted_old: g("guild_scheduled_events_muted"),
-    guild_message_notification_settings_old: g("guild_message_notification_settings"),
-    is_opt_in_only_change: v
+    guild_flags_old: h("guild_flags"),
+    guild_is_muted_old: h("guild_is_muted"),
+    guild_suppress_roles_old: h("guild_suppress_roles"),
+    guild_notify_highlights_old: h("guild_notify_highlights"),
+    guild_suppress_everyone_old: h("guild_suppress_everyone"),
+    guild_receive_mobile_push_old: h("guild_receive_mobile_push"),
+    guild_scheduled_events_muted_old: h("guild_scheduled_events_muted"),
+    guild_message_notification_settings_old: h("guild_message_notification_settings"),
+    is_opt_in_only_change: T
   })
 }
 
-function N(e, t, n) {
+function p(e, t, n) {
   return i => {
     if ("RETURN_PREVIOUS_WHEN_CHANGED" === n) return e[i] !== t[i] ? e[i] : void 0
   }
 }
 
-function v(e) {
+function S(e) {
   return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null
 }
 
-function A(e, t, n, i, l, u) {
-  var s, _;
-  let r = function(t) {
+function T(e, t, n, i, s, r) {
+  var a, d;
+  let f = function(t) {
       var n, i;
-      let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        u = null !== (n = l.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
-        s = null != l.message_notifications ? E[l.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
-        o = null == e ? null : !0 === u || null != s;
+      let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        r = null !== (n = s.muted) && void 0 !== n ? n : null == t ? void 0 : t.channel_is_muted,
+        a = null != s.message_notifications ? g[s.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
+        o = null == e ? null : !0 === r || null != a;
       return {
-        channel_is_muted: u,
+        channel_is_muted: r,
         channel_is_overridden: o,
-        channel_flags: null !== (i = l.flags) && void 0 !== i ? i : null == t ? void 0 : t.channel_flags,
-        channel_message_notification_settings: s,
-        channel_muted_until: v(l.mute_config)
+        channel_flags: null !== (i = s.flags) && void 0 !== i ? i : null == t ? void 0 : t.channel_flags,
+        channel_message_notification_settings: a,
+        channel_muted_until: S(s.mute_config)
       }
     },
-    g = r(i),
-    p = r(T(e, t), n),
-    m = N(g, p, "RETURN_PREVIOUS_WHEN_CHANGED"),
-    A = a.default.getChannel(t),
-    C = null !== (s = m("channel_flags")) && void 0 !== s ? s : 0,
-    S = (null !== (_ = p.channel_flags) && void 0 !== _ ? _ : 0) ^ C,
-    O = 0 === (0, c.removeFlags)(S, h.ChannelNotificationSettingsFlags.FAVORITED, h.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
-  o.default.trackWithMetadata(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
-    ...p,
-    ...d.default.getStats(e),
-    location: u,
+    h = f(i),
+    m = f(A(e, t), n),
+    T = p(h, m, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    v = u.default.getChannel(t),
+    I = null !== (a = T("channel_flags")) && void 0 !== a ? a : 0,
+    C = (null !== (d = m.channel_flags) && void 0 !== d ? d : 0) ^ I,
+    y = 0 === (0, c.removeFlags)(C, E.ChannelNotificationSettingsFlags.FAVORITED, E.ChannelNotificationSettingsFlags.OPT_IN_ENABLED);
+  o.default.trackWithMetadata(_.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
+    ...m,
+    ...l.default.getStats(e),
+    location: r,
     guild_id: e,
     channel_id: t,
     update_type: "channel",
-    label: l,
-    parent_id: null != A ? A.parent_id : null,
-    channel_flags_old: m("channel_flags"),
-    channel_is_muted_old: m("channel_is_muted"),
-    channel_muted_until_old: m("channel_muted_until"),
-    channel_is_overridden_old: m("channel_is_overridden"),
-    channel_message_notification_settings_old: m("channel_message_notification_settings"),
-    is_opt_in_only_change: O
+    label: s,
+    parent_id: null != v ? v.parent_id : null,
+    channel_flags_old: T("channel_flags"),
+    channel_is_muted_old: T("channel_is_muted"),
+    channel_muted_until_old: T("channel_muted_until"),
+    channel_is_overridden_old: T("channel_is_overridden"),
+    channel_message_notification_settings_old: T("channel_message_notification_settings"),
+    is_opt_in_only_change: y
   })
 }
 
-function C(e) {
-  let t = _.default.isMuted(e),
-    n = _.default.getMuteConfig(e);
+function v(e) {
+  let t = d.default.isMuted(e),
+    n = d.default.getMuteConfig(e);
   return {
-    guild_suppress_everyone: _.default.isSuppressEveryoneEnabled(e),
-    guild_suppress_roles: _.default.isSuppressRolesEnabled(e),
-    guild_scheduled_events_muted: _.default.isMuteScheduledEventsEnabled(e),
+    guild_suppress_everyone: d.default.isSuppressEveryoneEnabled(e),
+    guild_suppress_roles: d.default.isSuppressRolesEnabled(e),
+    guild_scheduled_events_muted: d.default.isMuteScheduledEventsEnabled(e),
     guild_is_muted: t,
     guild_muted_until: null != n && null != n.end_time ? new Date(n.end_time).getTime() : null,
-    guild_receive_mobile_push: _.default.isMobilePushEnabled(e),
-    guild_message_notification_settings: E[_.default.getMessageNotifications(e)],
-    guild_notify_highlights: _.default.getNotifyHighlights(e),
-    guild_flags: _.default.getGuildFlags(e)
+    guild_receive_mobile_push: d.default.isMobilePushEnabled(e),
+    guild_message_notification_settings: g[d.default.getMessageNotifications(e)],
+    guild_notify_highlights: d.default.getNotifyHighlights(e),
+    guild_flags: d.default.getGuildFlags(e)
   }
 }
 
-function S(e) {
+function I(e) {
   let t = new Map;
-  return e.forEach(e => t.set(e, C(e))), t
+  return e.forEach(e => t.set(e, v(e))), t
 }
 
-function T(e, t) {
-  let n = _.default.isChannelMuted(e, t),
-    i = _.default.getChannelMuteConfig(e, t);
+function A(e, t) {
+  let n = d.default.isChannelMuted(e, t),
+    i = d.default.getChannelMuteConfig(e, t);
   return {
     channel_is_muted: n,
     channel_muted_until: null != i && null != i.end_time ? new Date(i.end_time).getTime() : null,
-    channel_message_notification_settings: E[_.default.getChannelMessageNotifications(e, t)],
-    channel_flags: _.default.getChannelIdFlags(e, t)
+    channel_message_notification_settings: g[d.default.getChannelMessageNotifications(e, t)],
+    channel_flags: d.default.getChannelIdFlags(e, t)
   }
 }
 
-function O(e, t) {
+function C(e, t) {
   let n = new Map;
-  return t.forEach(t => n.set(t, T(e, t))), n
-}
-
-function I(e, t) {
-  r.default.track(f.AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, {
-    update_type: "account",
-    quiet_mode_enabled: e.quietMode,
-    quiet_mode_enabled_old: t.quietMode
-  })
+  return t.forEach(t => n.set(t, A(e, t))), n
 }

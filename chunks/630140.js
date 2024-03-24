@@ -1,45 +1,43 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return h
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144"),
-  l = n("152584"),
+  l = n("913144"),
+  i = n("152584"),
   r = n("316272"),
-  o = n("335189"),
-  u = n("473591"),
-  d = n("929423"),
-  c = n("783142"),
-  f = n("697218"),
-  E = n("719923"),
-  _ = n("75015");
-class h extends r.default {
+  o = n("929423"),
+  u = n("783142"),
+  d = n("697218"),
+  c = n("719923"),
+  f = n("75015");
+class E extends r.default {
   _initialize() {
-    i.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
+    l.default.subscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   _terminate() {
-    i.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
+    l.default.unsubscribe("PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL", this.maybeOpenProfilePreviewModal)
   }
   maybeOpenProfilePreviewModal(e) {
     let {
       imageSrc: t,
-      file: i,
+      file: l,
       uploadType: r,
-      guildId: h,
-      isTryItOutFlow: C
-    } = e, I = u.default.isEditingClydeProfile(), T = I ? o.setPendingAvatar : null != h ? d.setPendingAvatar : l.setPendingAvatar, S = I ? o.setPendingBanner : null != h ? d.setPendingBanner : c.setPendingBanner, m = f.default.getCurrentUser();
-    if (r === _.UploadTypes.AVATAR) {
-      if (C) {
-        (0, c.setTryItOutAvatar)(t);
+      guildId: E,
+      isTryItOutFlow: h
+    } = e, _ = null != E ? o.setPendingAvatar : i.setPendingAvatar, C = null != E ? o.setPendingBanner : u.setPendingBanner, S = d.default.getCurrentUser();
+    if (r === f.UploadTypes.AVATAR) {
+      if (h) {
+        (0, u.setTryItOutAvatar)(t);
         return
       }
-      let e = E.default.canUseAnimatedAvatar(m);
-      if (e || "image/gif" !== i.type || I) {
-        T(t);
+      let e = c.default.canUseAnimatedAvatar(S);
+      if (e || "image/gif" !== l.type) {
+        _(t);
         return
       }(0, s.openModalLazy)(async () => {
         let {
@@ -47,18 +45,18 @@ class h extends r.default {
         } = await n.el("745544").then(n.bind(n, "745544"));
         return n => (0, a.jsx)(e, {
           avatarSrc: t,
-          onSubscribe: () => T(t),
+          onSubscribe: () => _(t),
           ...n
         })
       })
-    } else if (r === _.UploadTypes.BANNER) {
-      if (C) {
-        (0, c.setTryItOutBanner)(t);
+    } else if (r === f.UploadTypes.BANNER) {
+      if (h) {
+        (0, u.setTryItOutBanner)(t);
         return
       }
-      let e = E.default.canUsePremiumProfileCustomization(m);
-      if (e || I) {
-        S(t);
+      let e = c.default.canUsePremiumProfileCustomization(S);
+      if (e) {
+        C(t);
         return
       }(0, s.openModalLazy)(async () => {
         let {
@@ -66,11 +64,11 @@ class h extends r.default {
         } = await n.el("745544").then(n.bind(n, "745544"));
         return n => (0, a.jsx)(e, {
           bannerSrc: t,
-          onSubscribe: () => S(t),
+          onSubscribe: () => C(t),
           ...n
         })
       })
     }
   }
 }
-var C = new h
+var h = new E

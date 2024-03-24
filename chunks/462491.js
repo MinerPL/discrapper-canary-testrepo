@@ -12,26 +12,36 @@ var n = s("446674"),
   r = s("386045"),
   o = s("803725"),
   d = s("119052"),
-  u = s("49111"),
-  c = s("782340"),
-  S = s("180437");
+  u = s("782340"),
+  c = s("824905"),
+  S = s("925994");
 
 function E() {
-  let e = (0, n.useStateFromStores)([r.default], () => r.default.getSettings().storageLocation);
+  let e = (0, n.useStateFromStores)([r.default], () => r.default.getSettings().storageLocation),
+    t = async () => {
+      let e = await i.default.fileManager.showOpenDialog({
+        properties: ["openDirectory", "createDirectory"]
+      });
+      e.length > 0 && o.updateClipsStorageLocation(e[0])
+    };
   return (0, a.jsx)(l.FormSection, {
-    children: (0, a.jsx)(d.TextInputItem, {
-      className: S.formItem,
-      title: c.default.Messages.CLIPS_SETTINGS_STORAGE_LOCATION,
-      note: c.default.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_HELP,
-      value: e,
-      editable: !1,
-      onClick: async () => {
-        let e = await i.default.fileManager.showOpenDialog({
-          properties: ["openDirectory", "createDirectory"]
-        });
-        e.length > 0 && o.updateClipsStorageLocation(e[0])
-      },
-      onChange: u.NOOP_NULL
+    children: (0, a.jsx)(d.InputItem, {
+      title: u.default.Messages.CLIPS_SETTINGS_STORAGE_LOCATION,
+      note: u.default.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_HELP,
+      className: c.formItem,
+      children: (0, a.jsx)(l.Clickable, {
+        className: S.selectControl,
+        "aria-label": u.default.Messages.CLIPS_SETTINGS_STORAGE_LOCATION_LABEL.format({
+          storageLocation: e
+        }),
+        onClick: t,
+        children: (0, a.jsx)(l.TextInput, {
+          tabIndex: -1,
+          value: e,
+          editable: !1,
+          "aria-hidden": !0
+        })
+      })
     })
   })
 }

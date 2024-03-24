@@ -1,47 +1,48 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
-var l, a = n("37983"),
-  s = n("884691"),
-  i = n("254490"),
+var i, l = n("37983"),
+  a = n("884691"),
+  s = n("254490"),
   r = n("170113");
-l = class extends s.PureComponent {
+i = class extends a.PureComponent {
   render() {
     let {
       src: e,
       fileSize: t,
       fileName: n,
-      className: l,
-      playable: s,
+      className: i,
+      playable: a,
       volume: o,
       renderLinkComponent: u,
       onVolumeChange: d,
       onVolumeShow: c,
-      onVolumeHide: m,
-      autoMute: f,
-      onMute: h,
-      mimeType: p,
-      onPlay: g
+      onVolumeHide: f,
+      autoMute: p,
+      onMute: m,
+      mimeType: h,
+      onPlay: x
     } = this.props;
-    return (0, a.jsx)(r.default, {
+    return (0, l.jsx)(r.default, {
       src: e,
       fileName: n,
-      fileSize: (0, i.sizeString)(t),
+      fileSize: (0, s.sizeString)(t),
+      fileSizeBytes: t,
       type: r.default.Types.AUDIO,
-      className: l,
-      playable: s,
+      className: i,
+      playable: a,
       volume: o,
-      onMute: h,
-      autoMute: f,
+      onMute: m,
+      autoMute: p,
       onVolumeChange: d,
       onVolumeShow: c,
-      onVolumeHide: m,
+      onVolumeHide: f,
       renderLinkComponent: u,
-      mimeType: p,
-      onPlay: g
+      mimeType: h,
+      onPlay: x
     })
   }
 }

@@ -7,21 +7,22 @@ n.r(t), n.d(t, {
     return _
   }
 }), n("424973");
-var s, a, l = n("167115"),
-  i = n("871388"),
-  r = n("679653"),
-  o = n("20606"),
-  u = n("27618"),
-  d = n("697218"),
-  c = n("83910"),
-  f = n("522049"),
-  h = n("462579"),
+var s, a, l = n("871388"),
+  i = n("679653"),
+  r = n("20606"),
+  o = n("27618"),
+  u = n("697218"),
+  d = n("64791"),
+  c = n("522049"),
+  f = n("462579"),
+  h = n("407535"),
   C = n("824326"),
   p = n("616225"),
-  m = n("12724"),
-  E = n("959097"),
-  g = n("507491"),
-  S = n("49111"),
+  m = n("777987"),
+  E = n("82636"),
+  g = n("12724"),
+  S = n("654276"),
+  T = n("49111"),
   A = n("782340");
 
 function _(e) {
@@ -31,63 +32,68 @@ function _(e) {
     useSlate: s,
     canUseApplicationCommands: a,
     hasClips: _,
-    channel: T,
-    activities: M,
+    channel: M,
+    activities: I,
     newClipsCount: N,
-    canPostPolls: I,
-    appContext: v
-  } = e, L = [];
-  return t && (L.push({
+    canPostPolls: v,
+    canLaunchActivities: x,
+    appContext: L
+  } = e, y = [];
+  return t && (y.push({
     type: "UPLOAD_A_FILE",
-    icon: g.default,
+    icon: h.default,
     display: A.default.Messages.CHAT_ATTACH_UPLOAD_A_FILE
-  }), L.push({
+  }), y.push({
     type: "UPLOAD_TEXT_AS_FILE",
-    icon: m.default,
+    icon: g.default,
     display: A.default.Messages.CHAT_ATTACH_UPLOAD_TEXT_AS_FILE
-  })), _ && t && v !== S.AppContext.POPOUT && L.push({
+  })), _ && t && L !== T.AppContext.POPOUT && y.push({
     type: "CLIPS",
-    icon: f.default,
+    icon: c.default,
     display: A.default.Messages.CLIPS_SHARE_A_CLIP,
     badgeVal: N,
-    badgeColor: o.default.REDESIGN_BUTTON_PRIMARY_BACKGROUND
-  }), n && L.push({
+    badgeColor: r.default.BG_BRAND
+  }), n && y.push({
     type: "CREATE_THREAD",
-    icon: E.default,
+    icon: S.default,
     display: A.default.Messages.CREATE_THREAD
-  }), I && L.push({
+  }), v && y.push({
     type: "POLL",
-    icon: l.PollsIcon,
+    icon: m.default,
     display: A.default.Messages.CREATE_POLL
-  }), s && a && L.push({
+  }), s && a && y.push({
     type: "SLASH_COMMAND",
-    icon: c.default,
+    icon: d.default,
     display: A.default.Messages.CHAT_ATTACH_USE_SLASH_COMMAND
-  }), M.forEach(e => {
-    !(0, i.default)(e, S.ActivityFlags.EMBEDDED) && (e.type === S.ActivityTypes.PLAYING && (0, i.default)(e, S.ActivityFlags.JOIN) && L.push({
+  }), x && y.push({
+    type: "ACTIVITY",
+    icon: E.default,
+    display: A.default.Messages.EMBEDDED_ACTIVITIES_START_ACTIVITY_LABEL
+  }), I.forEach(e => {
+    !(0, l.default)(e, T.ActivityFlags.EMBEDDED) && (e.type === T.ActivityTypes.PLAYING && (0, l.default)(e, T.ActivityFlags.JOIN) && y.push({
       type: "INVITE_TO_GAME",
       icon: C.default,
       display: A.default.Messages.CHAT_ATTACH_INVITE_TO_PLAY_GAME.format({
-        channel: (0, r.computeChannelName)(T, d.default, u.default, !0),
+        channel: (0, i.computeChannelName)(M, u.default, o.default, !0),
         game: null != e ? e.name : ""
       }),
       activity: e
-    }), e.type === S.ActivityTypes.LISTENING && (0, i.default)(e, S.ActivityFlags.SYNC) && L.push({
+    }), e.type === T.ActivityTypes.LISTENING && (0, l.default)(e, T.ActivityFlags.SYNC) && y.push({
       type: "INVITE_TO_LISTEN",
       icon: p.default,
       display: A.default.Messages.CHAT_ATTACH_INVITE_TO_LISTEN.format({
-        channel: (0, r.computeChannelName)(T, d.default, u.default, !0),
+        channel: (0, i.computeChannelName)(M, u.default, o.default, !0),
         name: null != e ? e.name : ""
       }),
       activity: e
-    }), e.type === S.ActivityTypes.WATCHING && (0, i.default)(e, S.ActivityFlags.SYNC) && L.push({
+    }), e.type === T.ActivityTypes.WATCHING && (0, l.default)(e, T.ActivityFlags.SYNC) && y.push({
       type: "INVITE_TO_WATCH",
-      icon: h.default,
+      icon: f.default,
       display: A.default.Messages.CHAT_ATTACH_INVITE_TO_WATCH.format({
-        channel: (0, r.computeChannelName)(T, d.default, u.default, !0),
+        channel: (0, i.computeChannelName)(M, u.default, o.default, !0),
         name: null != e ? e.name : ""
       }),
       activity: e
     }))
-  }), L
-}(a = s || (s = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", a.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", a.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", a.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", a.INVITE_TO_WATCH = "INVITE_TO_WATCH", a.CREATE_THREAD = "CREATE_THREAD", a.SLASH_COMMAND = "SLASH_COMMAND", a.CLIPS = "CLIPS", a.POLL = "POLL"
+  }), y
+}(a = s || (s = {})).UPLOAD_A_FILE = "UPLOAD_A_FILE", a.UPLOAD_TEXT_AS_FILE = "UPLOAD_TEXT_AS_FILE", a.INVITE_TO_PLAY_GAME = "INVITE_TO_GAME", a.INVITE_TO_LISTEN = "INVITE_TO_LISTEN", a.INVITE_TO_WATCH = "INVITE_TO_WATCH", a.CREATE_THREAD = "CREATE_THREAD", a.SLASH_COMMAND = "SLASH_COMMAND", a.CLIPS = "CLIPS", a.POLL = "POLL", a.ACTIVITY = "ACTIVITY"

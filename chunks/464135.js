@@ -1,13 +1,13 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return L
   }
 }), a("222007");
-var n = a("37983"),
-  l = a("884691"),
-  i = a("414456"),
-  r = a.n(i),
+var l = a("37983"),
+  n = a("884691"),
+  r = a("414456"),
+  i = a.n(r),
   s = a("917351"),
   u = a("65597"),
   o = a("718776"),
@@ -16,285 +16,287 @@ var n = a("37983"),
   f = a("31695"),
   m = a("471671"),
   v = a("830837"),
-  E = a("132755"),
-  p = a("58608"),
-  h = a("28388"),
-  C = a("80028"),
-  N = a("782340"),
-  x = a("766825"),
-  S = function(e) {
-    var t, a, i, S, _, L;
+  p = a("132755"),
+  h = a("58608"),
+  x = a("28388"),
+  C = a("141210"),
+  g = a("80028"),
+  E = a("782340"),
+  N = a("504835"),
+  L = function(e) {
+    var t, a, r, L, j, T;
     let {
-      sourceURL: M,
-      cropData: T,
-      videoPlayerRef: A,
-      setCropData: R
-    } = e, [j, b] = l.useState((L = !(null === (a = A.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused), L)), P = l.useRef(null), [w, D] = l.useState(null), [y, O] = l.useState(), k = l.useRef(null), F = l.useRef(null), [G, U] = l.useState(0), [B, V] = l.useState(!1), [H, z] = l.useState(null);
+      sourceURL: S
+    } = e, {
+      videoPlayerRef: _,
+      cropData: b,
+      setCropData: w
+    } = (0, C.useEditModalContext)(), [R, A] = n.useState((T = !(null === (a = _.current) || void 0 === a ? void 0 : null === (t = a.videoElement) || void 0 === t ? void 0 : t.paused), T)), y = n.useRef(null), [k, D] = n.useState(null), [P, O] = n.useState(), F = n.useRef(null), B = n.useRef(null), [U, H] = n.useState(0), [z, Z] = n.useState(!1), [V, G] = n.useState(null);
     (0, f.default)(() => {
       var e;
-      let t = null === (e = A.current) || void 0 === e ? void 0 : e.videoElement;
-      null != t && G !== t.currentTime && U(t.currentTime)
+      let t = null === (e = _.current) || void 0 === e ? void 0 : e.videoElement;
+      null != t && U !== t.currentTime && H(t.currentTime)
     });
-    let Z = l.useMemo(() => T.end - T.start, [T]);
-    l.useEffect(() => {
+    let K = n.useMemo(() => b.end - b.start, [b]);
+    n.useEffect(() => {
       var e;
-      let t = null === (e = A.current) || void 0 === e ? void 0 : e.videoElement,
-        a = k.current,
-        n = F.current;
-      if (null == t || null == a || null == n) return;
-      let l = (0, s.debounce)(b, C.CLIP_PLAYING_DEBOUNCE_MS),
-        i = () => {
-          D(null), V(!1), l.cancel(), l(!0)
-        },
+      let t = null === (e = _.current) || void 0 === e ? void 0 : e.videoElement,
+        a = F.current,
+        l = B.current;
+      if (null == t || null == a || null == l) return;
+      let n = (0, s.debounce)(A, g.CLIP_PLAYING_DEBOUNCE_MS),
         r = () => {
-          l.cancel(), l(!1)
+          D(null), Z(!1), n.cancel(), n(!0)
+        },
+        i = () => {
+          n.cancel(), n(!1)
         };
-      return t.addEventListener("play", i), t.addEventListener("pause", r), () => {
-        t.removeEventListener("play", i), t.removeEventListener("pause", r)
+      return t.addEventListener("play", r), t.addEventListener("pause", i), () => {
+        t.removeEventListener("play", r), t.removeEventListener("pause", i)
       }
-    }, [A]);
+    }, [_]);
     let {
-      ref: K,
-      width: X = 0,
-      height: W = 0
-    } = (0, c.default)(), Y = (0, u.default)([m.default], () => m.default.windowSize());
-    l.useMemo(() => {
-      let e = K.current;
-      null != e && z(e.getBoundingClientRect())
-    }, [Y.width, Y.height, X]);
-    let q = l.useRef(null),
-      J = l.useRef({}),
-      Q = l.useCallback(e => {
+      ref: Y,
+      width: W = 0,
+      height: X = 0
+    } = (0, c.default)(), q = (0, u.useStateFromStores)([m.default], () => m.default.windowSize());
+    n.useMemo(() => {
+      let e = Y.current;
+      null != e && G(e.getBoundingClientRect())
+    }, [q.width, q.height, W]);
+    let J = n.useRef(null),
+      Q = n.useRef({}),
+      $ = n.useCallback(e => {
         var t;
-        let a = (0, s.clamp)(e, 0, T.end - C.MIN_CLIP_DURATION_SECONDS);
-        R({
-          ...T,
+        let a = (0, s.clamp)(e, 0, b.end - g.MIN_CLIP_DURATION_SECONDS);
+        w({
+          ...b,
           start: a
-        }), null === (t = A.current) || void 0 === t || t.seek(a)
-      }, [T, R, A]),
-      $ = l.useCallback(e => {
+        }), null === (t = _.current) || void 0 === t || t.seek(a)
+      }, [b, w, _]),
+      ee = n.useCallback(e => {
         var t, a;
-        let n = null === (t = A.current) || void 0 === t ? void 0 : t.videoElement;
-        if (null == n) return;
-        let l = (0, s.clamp)(e, T.start + C.MIN_CLIP_DURATION_SECONDS, n.duration);
-        R({
-          ...T,
-          end: l
-        }), null === (a = A.current) || void 0 === a || a.seek(l)
-      }, [T, R, A]),
-      ee = l.useCallback((e, t) => {
-        var a, n;
-        if (null == y) return;
-        if (null == H) return null;
-        let l = (0, s.clamp)(e, H.left, H.right),
-          i = (l - H.left) / H.width * y,
-          r = (0, s.clamp)(i, 0, y),
-          u = w;
-        if (null == u && t && (u = r <= T.start ? "start" : r >= T.end ? "end" : "playhead", null === (a = A.current) || void 0 === a || a.pause(), D(u), V(j)), "start" === u) Q(r);
-        else if ("end" === u) $(r);
+        let l = null === (t = _.current) || void 0 === t ? void 0 : t.videoElement;
+        if (null == l) return;
+        let n = (0, s.clamp)(e, b.start + g.MIN_CLIP_DURATION_SECONDS, l.duration);
+        w({
+          ...b,
+          end: n
+        }), null === (a = _.current) || void 0 === a || a.seek(n)
+      }, [b, w, _]),
+      et = n.useCallback((e, t) => {
+        var a, l;
+        if (null == P) return;
+        if (null == V) return null;
+        let n = (0, s.clamp)(e, V.left, V.right),
+          r = (n - V.left) / V.width * P,
+          i = (0, s.clamp)(r, 0, P),
+          u = k;
+        if (null == u && t && (u = i <= b.start ? "start" : i >= b.end ? "end" : "playhead", null === (a = _.current) || void 0 === a || a.pause(), D(u), Z(R)), "start" === u) $(i);
+        else if ("end" === u) ee(i);
         else if ("playhead" === u) {
-          let e = (0, s.clamp)(r, T.start, T.end);
-          null === (n = A.current) || void 0 === n || n.seek(e)
+          let e = (0, s.clamp)(i, b.start, b.end);
+          null === (l = _.current) || void 0 === l || l.seek(e)
         }
-      }, [y, H, w, T.start, T.end, A, j, Q, $]),
-      et = l.useCallback(e => {
+      }, [P, V, k, b.start, b.end, _, R, $, ee]),
+      ea = n.useCallback(e => {
         var t;
-        let a = null === (t = A.current) || void 0 === t ? void 0 : t.videoElement;
+        let a = null === (t = _.current) || void 0 === t ? void 0 : t.videoElement;
         if (null == a) return;
-        let n = (0, h.default)(a.duration, e.shiftKey),
-          l = !1;
+        let l = (0, x.default)(a.duration, e.shiftKey),
+          n = !1;
         switch (e.key) {
           case "ArrowLeft":
-            l = !0, Q(T.start - n);
+            n = !0, $(b.start - l);
             break;
           case "ArrowRight":
-            l = !0, Q(T.start + n)
+            n = !0, $(b.start + l)
         }
-        l && (e.stopPropagation(), e.preventDefault())
-      }, [A, Q, T.start]),
-      ea = l.useCallback(e => {
+        n && (e.stopPropagation(), e.preventDefault())
+      }, [_, $, b.start]),
+      el = n.useCallback(e => {
         var t;
-        let a = null === (t = A.current) || void 0 === t ? void 0 : t.videoElement;
+        let a = null === (t = _.current) || void 0 === t ? void 0 : t.videoElement;
         if (null == a) return;
-        let n = (0, h.default)(a.duration, e.shiftKey),
-          l = !1;
+        let l = (0, x.default)(a.duration, e.shiftKey),
+          n = !1;
         switch (e.key) {
           case "ArrowLeft":
-            l = !0, $(T.end - n);
+            n = !0, ee(b.end - l);
             break;
           case "ArrowRight":
-            l = !0, $(T.end + n)
+            n = !0, ee(b.end + l)
         }
-        l && (e.stopPropagation(), e.preventDefault())
-      }, [A, $, T.end]),
-      en = l.useCallback(e => {
-        ee(e.clientX, !0)
-      }, [ee]),
-      el = l.useCallback(e => {
-        ee(e.clientX, !1)
-      }, [ee]),
-      ei = l.useCallback(() => {
-        if (B) {
+        n && (e.stopPropagation(), e.preventDefault())
+      }, [_, ee, b.end]),
+      en = n.useCallback(e => {
+        et(e.clientX, !0)
+      }, [et]),
+      er = n.useCallback(e => {
+        et(e.clientX, !1)
+      }, [et]),
+      ei = n.useCallback(() => {
+        if (z) {
           var e;
-          null === (e = A.current) || void 0 === e || e.play()
+          null === (e = _.current) || void 0 === e || e.play()
         }
-        V(!1), D(null)
-      }, [A, B]);
-    l.useEffect(() => (document.addEventListener("mousemove", el), document.addEventListener("mouseup", ei), () => {
-      document.removeEventListener("mousemove", el), document.removeEventListener("mouseup", ei)
-    }), [el, ei]), l.useEffect(() => {
+        Z(!1), D(null)
+      }, [_, z]);
+    n.useEffect(() => (document.addEventListener("mousemove", er), document.addEventListener("mouseup", ei), () => {
+      document.removeEventListener("mousemove", er), document.removeEventListener("mouseup", ei)
+    }), [er, ei]), n.useEffect(() => {
       (async function e() {
         var e;
-        let t = K.current,
-          a = P.current;
-        if (null == t || null == a || null == y) return;
-        t.height = W, t.width = X;
-        let n = t.getContext("2d");
-        if (null == n) return;
-        n.fillStyle = "#000", n.fillRect(0, 0, X, W);
-        let l = a.videoWidth / a.videoHeight,
-          i = Math.ceil(W * l),
-          r = Math.ceil(X / i),
-          s = q.current;
+        let t = Y.current,
+          a = y.current;
+        if (null == t || null == a || null == P) return;
+        t.height = X, t.width = W;
+        let l = t.getContext("2d");
+        if (null == l) return;
+        l.fillStyle = "#000", l.fillRect(0, 0, W, X);
+        let n = a.videoWidth / a.videoHeight,
+          r = Math.ceil(X * n),
+          i = Math.ceil(W / r),
+          s = J.current;
         if (null == s) return;
-        s.width = i, s.height = W;
+        s.width = r, s.height = X;
         let u = null == s ? void 0 : s.getContext("2d", {
           willReadFrequently: !0
         });
         if (null == u) return;
-        let o = J.current;
-        if ((null === (e = o[r]) || void 0 === e ? void 0 : e.length) === r) {
-          for (let e = 0; e < r; e++) n.putImageData(o[r][e], i * e, 0);
+        let o = Q.current;
+        if ((null === (e = o[i]) || void 0 === e ? void 0 : e.length) === i) {
+          for (let e = 0; e < i; e++) l.putImageData(o[i][e], r * e, 0);
           return
         }
-        for (let e = 0; e < r; e++) await new Promise(t => {
+        for (let e = 0; e < i; e++) await new Promise(t => {
           a.onseeked = () => {
-            n.drawImage(a, i * e, 0, i, W), u.drawImage(a, 0, 0, i, W);
-            let l = u.getImageData(0, 0, i, W);
-            null == o[r] && (o[r] = []), o[r][e] = l, t()
-          }, a.currentTime = i / X * y * e
+            l.drawImage(a, r * e, 0, r, X), u.drawImage(a, 0, 0, r, X);
+            let n = u.getImageData(0, 0, r, X);
+            null == o[i] && (o[i] = []), o[i][e] = n, t()
+          }, a.currentTime = r / W * P * e
         })
       })()
-    }, [X, W, K, y, q]);
-    let er = G - T.start,
-      es = null === (i = A.current) || void 0 === i ? void 0 : i.videoElement;
-    return (0, n.jsx)("div", {
-      className: x.centeringWrapper,
-      children: (0, n.jsxs)("div", {
-        className: x.timelineContainer,
-        children: [(0, n.jsx)("div", {
-          className: x.playPauseButtonWrapper,
-          children: (0, n.jsx)(d.Clickable, {
+    }, [W, X, Y, P, J]);
+    let es = U - b.start,
+      eu = null === (r = _.current) || void 0 === r ? void 0 : r.videoElement;
+    return (0, l.jsx)("div", {
+      className: N.centeringWrapper,
+      children: (0, l.jsxs)("div", {
+        className: N.timelineContainer,
+        children: [(0, l.jsx)("div", {
+          className: N.playPauseButtonWrapper,
+          children: (0, l.jsx)(d.Clickable, {
             tabIndex: 0,
             onClick: () => {
               var e, t;
-              return j ? null === (e = A.current) || void 0 === e ? void 0 : e.pause() : null === (t = A.current) || void 0 === t ? void 0 : t.play()
+              return R ? null === (e = _.current) || void 0 === e ? void 0 : e.pause() : null === (t = _.current) || void 0 === t ? void 0 : t.play()
             },
-            className: x.playPauseButton,
-            children: j ? (0, n.jsx)(v.default, {
+            className: N.playPauseButton,
+            children: R ? (0, l.jsx)(v.default, {
               width: 24,
               height: 24,
-              className: x.playPauseIcon
-            }) : (0, n.jsx)(E.default, {
+              className: N.playPauseIcon
+            }) : (0, l.jsx)(p.default, {
               width: 24,
               height: 24,
-              className: x.playPauseIcon
+              className: N.playPauseIcon
             })
           })
-        }), (0, n.jsxs)("div", {
-          className: r(x.timeline, {
-            [x.timelineDragging]: null != w
+        }), (0, l.jsxs)("div", {
+          className: i(N.timeline, {
+            [N.timelineDragging]: null != k
           }),
           onMouseDown: en,
-          children: [(0, n.jsx)("canvas", {
-            className: x.hiddenCanvas,
-            ref: q
-          }), (0, n.jsx)("canvas", {
-            className: x.timelineBackground,
-            ref: K
-          }), (0, n.jsx)(o.FocusRing, {
-            children: (0, n.jsx)("div", {
+          children: [(0, l.jsx)("canvas", {
+            className: N.hiddenCanvas,
+            ref: J
+          }), (0, l.jsx)("canvas", {
+            className: N.timelineBackground,
+            ref: Y
+          }), (0, l.jsx)(o.FocusRing, {
+            children: (0, l.jsx)("div", {
               tabIndex: 0,
-              ref: k,
-              className: x.playhead,
+              ref: F,
+              className: N.playhead,
               style: {
-                left: null != es ? "".concat(es.currentTime / es.duration * 100, "%") : 0
+                left: null != eu ? "".concat(eu.currentTime / eu.duration * 100, "%") : 0
               }
             })
-          }), (0, n.jsx)(p.default, {
+          }), (0, l.jsx)(h.default, {
             preload: "auto",
             onLoadedMetadata: function() {
-              let e = P.current;
+              let e = y.current;
               if (null != e) {
-                if (O(e.duration), 0 === T.start && (0 === T.end || T.end === e.duration)) {
+                if (O(e.duration), 0 === b.start && (0 === b.end || b.end === e.duration)) {
                   var t;
-                  null === (t = A.current) || void 0 === t || t.seek(e.duration / 2), U(e.duration / 2)
+                  null === (t = _.current) || void 0 === t || t.seek(e.duration / 2), H(e.duration / 2)
                 }
-                0 === T.end && R(t => ({
+                0 === b.end && w(t => ({
                   ...t,
                   end: e.duration
                 }))
               }
             },
-            className: x.timelineVideo,
-            ref: P,
-            src: M,
+            className: N.timelineVideo,
+            ref: y,
+            src: S,
             muted: !0
-          }), (0, n.jsxs)("div", {
-            className: x.dragBox,
+          }), (0, l.jsxs)("div", {
+            className: N.dragBox,
             style: {
-              left: null != y ? "".concat(T.start / y * 100, "%") : "0",
-              right: null != y ? "".concat((y - T.end) / y * 100, "%") : "0"
+              left: null != P ? "".concat(b.start / P * 100, "%") : "0",
+              right: null != P ? "".concat((P - b.end) / P * 100, "%") : "0"
             },
-            children: [(0, n.jsx)("div", {
-              className: x.timePillContainer,
-              children: (0, n.jsx)("div", {
-                ref: F,
-                className: x.timePillBackground,
-                children: (0, n.jsxs)(d.Text, {
+            children: [(0, l.jsx)("div", {
+              className: N.timePillContainer,
+              children: (0, l.jsx)("div", {
+                ref: B,
+                className: N.timePillBackground,
+                children: (0, l.jsxs)(d.Text, {
                   variant: "text-sm/normal",
-                  className: x.timePillText,
+                  className: N.timePillText,
                   color: "always-white",
-                  children: [I(er), (0, n.jsx)("span", {
-                    className: x.slashCharacter,
+                  children: [I(es), (0, l.jsx)("span", {
+                    className: N.slashCharacter,
                     children: " / "
-                  }), I(Z)]
+                  }), I(K)]
                 })
               })
-            }), (0, n.jsx)(o.FocusRing, {
-              children: (0, n.jsx)("button", {
-                className: r(x.dragHandleLeft, {
-                  [x.dragging]: "start" === w
-                }),
-                onMouseDown: en,
-                onKeyDown: et,
-                role: "slider",
-                tabIndex: 0,
-                "aria-valuemin": 0,
-                "aria-valuenow": T.start,
-                "aria-valuetext": g(T.start),
-                "aria-valuemax": T.end - C.MIN_CLIP_DURATION_SECONDS,
-                "aria-label": N.default.Messages.CLIPS_CROP_START,
-                children: (0, n.jsx)("div", {
-                  className: x.cropLeftArrow
-                })
-              })
-            }), (0, n.jsx)(o.FocusRing, {
-              children: (0, n.jsx)("button", {
-                className: r(x.dragHandleRight, {
-                  [x.dragging]: "end" === w
+            }), (0, l.jsx)(o.FocusRing, {
+              children: (0, l.jsx)("button", {
+                className: i(N.dragHandleLeft, {
+                  [N.dragging]: "start" === k
                 }),
                 onMouseDown: en,
                 onKeyDown: ea,
                 role: "slider",
                 tabIndex: 0,
-                "aria-valuemin": T.start + C.MIN_CLIP_DURATION_SECONDS,
-                "aria-valuenow": T.end,
-                "aria-valuetext": g(T.end),
-                "aria-valuemax": null === (_ = A.current) || void 0 === _ ? void 0 : null === (S = _.videoElement) || void 0 === S ? void 0 : S.duration,
-                "aria-label": N.default.Messages.CLIPS_CROP_END,
-                children: (0, n.jsx)("div", {
-                  className: x.cropRightArrow
+                "aria-valuemin": 0,
+                "aria-valuenow": b.start,
+                "aria-valuetext": M(b.start),
+                "aria-valuemax": b.end - g.MIN_CLIP_DURATION_SECONDS,
+                "aria-label": E.default.Messages.CLIPS_CROP_START,
+                children: (0, l.jsx)("div", {
+                  className: N.cropLeftArrow
+                })
+              })
+            }), (0, l.jsx)(o.FocusRing, {
+              children: (0, l.jsx)("button", {
+                className: i(N.dragHandleRight, {
+                  [N.dragging]: "end" === k
+                }),
+                onMouseDown: en,
+                onKeyDown: el,
+                role: "slider",
+                tabIndex: 0,
+                "aria-valuemin": b.start + g.MIN_CLIP_DURATION_SECONDS,
+                "aria-valuenow": b.end,
+                "aria-valuetext": M(b.end),
+                "aria-valuemax": null === (j = _.current) || void 0 === j ? void 0 : null === (L = j.videoElement) || void 0 === L ? void 0 : L.duration,
+                "aria-label": E.default.Messages.CLIPS_CROP_END,
+                children: (0, l.jsx)("div", {
+                  className: N.cropRightArrow
                 })
               })
             })]
@@ -308,15 +310,15 @@ function I(e) {
   ((e = Math.round(100 * e) / 100) < 0 || .01 > Math.abs(e)) && (e = 0);
   let t = Math.floor(e / 60),
     a = Math.floor(e % 60),
-    n = Math.floor(e % 1 * 100);
-  return t = t < 10 ? "0" + t : t, a = a < 10 ? "0" + a : a, n = n < 10 ? "0" + n : n, "".concat(t, ":").concat(a, ".").concat(n)
+    l = Math.floor(e % 1 * 100);
+  return t = t < 10 ? "0" + t : t, a = a < 10 ? "0" + a : a, l = l < 10 ? "0" + l : l, "".concat(t, ":").concat(a, ".").concat(l)
 }
 
-function g(e) {
-  let t = N.default.Messages.DURATION_MINUTES.format({
+function M(e) {
+  let t = E.default.Messages.DURATION_MINUTES.format({
       minutes: Math.floor(e / 60)
     }),
-    a = N.default.Messages.DURATION_SECONDS.format({
+    a = E.default.Messages.DURATION_SECONDS.format({
       seconds: e % 60
     });
   return "".concat(t, " ").concat(a)

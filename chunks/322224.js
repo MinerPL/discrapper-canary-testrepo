@@ -1,60 +1,61 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return v
   }
 });
-var u = n("872717"),
-  l = n("913144"),
-  r = n("987317"),
-  d = n("393414"),
-  i = n("271938"),
+var l = n("872717"),
+  d = n("913144"),
+  i = n("987317"),
+  u = n("393414"),
+  r = n("271938"),
   a = n("299039"),
-  c = n("271560"),
-  o = n("398604"),
-  E = n("189443"),
-  s = n("745049"),
-  _ = n("49111"),
-  y = {
-    startEvent: (e, t) => u.default.patch({
-      url: _.Endpoints.GUILD_EVENT(t, e),
+  E = n("271560"),
+  c = n("398604"),
+  s = n("189443"),
+  _ = n("832588"),
+  o = n("745049"),
+  y = n("49111"),
+  v = {
+    startEvent: (e, t) => l.HTTP.patch({
+      url: y.Endpoints.GUILD_EVENT(t, e),
       body: {
-        status: s.GuildScheduledEventStatus.ACTIVE
+        status: o.GuildScheduledEventStatus.ACTIVE
       }
     }),
-    endEvent: (e, t) => u.default.patch({
-      url: _.Endpoints.GUILD_EVENT(t, e),
+    endEvent: (e, t) => l.HTTP.patch({
+      url: y.Endpoints.GUILD_EVENT(t, e),
       body: {
-        status: s.GuildScheduledEventStatus.COMPLETED
+        status: o.GuildScheduledEventStatus.COMPLETED
       }
     }),
     joinVoiceEvent(e, t) {
-      r.default.selectVoiceChannel(t), (0, d.transitionTo)(_.Routes.CHANNEL(e, t))
+      i.default.selectVoiceChannel(t), (0, u.transitionTo)(y.Routes.CHANNEL(e, t))
     },
-    saveEvent(e, t, n, l) {
-      let r = s.ENTITY_TYPES_REQUIRED_CHANNEL_ID.has(t.entityType) ? t.channelId : null,
-        d = s.ENTITY_TYPES_REQUIRED_ENTITY_METADATA.has(t.entityType) ? t.entityMetadata : null,
-        i = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
+    saveEvent(e, t, n, d) {
+      let i = o.ENTITY_TYPES_REQUIRED_CHANNEL_ID.has(t.entityType) ? t.channelId : null,
+        u = o.ENTITY_TYPES_REQUIRED_ENTITY_METADATA.has(t.entityType) ? t.entityMetadata : null,
+        r = null != t.image && !1 === /^data:/.test(t.image) ? void 0 : t.image,
         a = {
           name: t.name,
           description: t.description,
-          image: i,
+          image: r,
           privacy_level: t.privacyLevel,
           scheduled_start_time: t.scheduledStartTime,
           scheduled_end_time: t.scheduledEndTime,
           entity_type: t.entityType,
-          channel_id: r,
-          entity_metadata: d,
-          broadcast_to_directory_channels: l.broadcastToDirectoryChannels,
-          recurrence_rule: (0, E.recurrenceRuleToServer)(t.recurrenceRule)
+          channel_id: i,
+          entity_metadata: u,
+          broadcast_to_directory_channels: d.broadcastToDirectoryChannels,
+          recurrence_rule: (0, s.recurrenceRuleToServer)(t.recurrenceRule)
         };
-      return u.default.patch({
-        url: _.Endpoints.GUILD_EVENT(n, e),
+      return l.HTTP.patch({
+        url: y.Endpoints.GUILD_EVENT(n, e),
         body: a
       })
     },
     createGuildEvent(e, t, n) {
-      let l = {
+      let d = {
         name: e.name,
         description: e.description,
         image: e.image,
@@ -65,199 +66,211 @@ var u = n("872717"),
         channel_id: e.channelId,
         entity_metadata: e.entityMetadata,
         broadcast_to_directory_channels: n.broadcastToDirectoryChannels,
-        recurrence_rule: (0, E.recurrenceRuleToServer)(e.recurrenceRule)
+        recurrence_rule: (0, s.recurrenceRuleToServer)(e.recurrenceRule)
       };
-      return u.default.post({
-        url: _.Endpoints.GUILD_EVENTS_FOR_GUILD(t),
-        body: l
+      return l.HTTP.post({
+        url: y.Endpoints.GUILD_EVENTS_FOR_GUILD(t),
+        body: d
       })
     },
     async fetchGuildEvent(e, t) {
       let {
         body: n
-      } = await (0, c.httpGetWithCountryCodeQuery)(_.Endpoints.GUILD_EVENT(e, t));
-      return l.default.dispatch({
+      } = await (0, E.httpGetWithCountryCodeQuery)(y.Endpoints.GUILD_EVENT(e, t));
+      return d.default.dispatch({
         type: "FETCH_GUILD_EVENT",
         guildScheduledEvent: n
       }), n
     },
     async fetchGuildEventsForGuild(e) {
       let t = {
-          url: _.Endpoints.GUILD_EVENTS_FOR_GUILD(e)
+          url: y.Endpoints.GUILD_EVENTS_FOR_GUILD(e)
         },
         {
           body: n
-        } = await (0, c.httpGetWithCountryCodeQuery)(t);
-      return l.default.dispatch({
+        } = await (0, E.httpGetWithCountryCodeQuery)(t);
+      return d.default.dispatch({
         type: "FETCH_GUILD_EVENTS_FOR_GUILD",
         guildId: e,
         guildScheduledEvents: n
       }), n
     },
     async fetchGuildEventUserCounts(e, t, n) {
-      let r = {
-          url: _.Endpoints.GUILD_EVENT_USER_COUNTS(e, t),
+      let i = {
+          url: y.Endpoints.GUILD_EVENT_USER_COUNTS(e, t),
           query: {
             guild_scheduled_event_exception_ids: n
           }
         },
         {
           body: {
-            guild_scheduled_event_count: d,
-            guild_scheduled_event_exception_counts: i
+            guild_scheduled_event_count: u,
+            guild_scheduled_event_exception_counts: r
           }
-        } = await u.default.get(r),
+        } = await l.HTTP.get(i),
         a = {
-          eventCount: d,
-          recurrenceCounts: i
+          eventCount: u,
+          recurrenceCounts: r
         };
-      return l.default.dispatch({
+      return d.default.dispatch({
         type: "GUILD_SCHEDULED_EVENT_USER_COUNTS_FETCH_SUCCESS",
         guildId: e,
         eventId: t,
         counts: a
       }), a
     },
-    cancelGuildEvent: (e, t) => u.default.patch({
-      url: _.Endpoints.GUILD_EVENT(t, e),
+    cancelGuildEvent: (e, t) => l.HTTP.patch({
+      url: y.Endpoints.GUILD_EVENT(t, e),
       body: {
-        status: s.GuildScheduledEventStatus.CANCELED
+        status: o.GuildScheduledEventStatus.CANCELED
       }
     }),
-    deleteGuildEvent: (e, t) => u.default.delete({
-      url: _.Endpoints.GUILD_EVENT(t, e)
+    deleteGuildEvent: (e, t) => l.HTTP.del({
+      url: y.Endpoints.GUILD_EVENT(t, e)
     }),
     async getGuildEventsForCurrentUser(e) {
       let {
         body: t
-      } = await u.default.get({
-        url: _.Endpoints.USER_GUILD_EVENTS,
+      } = await l.HTTP.get({
+        url: y.Endpoints.USER_GUILD_EVENTS,
         query: {
           guild_ids: [e]
         }
       });
-      l.default.dispatch({
+      d.default.dispatch({
         type: "GUILD_SCHEDULED_EVENT_RSVPS_FETCH_SUCESS",
         guildScheduledEventUsers: t,
         guildId: e
       })
     },
-    async createRsvpForGuildEvent(e, t, n, r) {
-      let d = i.default.getId();
+    async createRsvpForGuildEvent(e, t, n, i) {
+      let u = r.default.getId();
       try {
-        return l.default.dispatch({
+        return d.default.dispatch({
           type: "GUILD_SCHEDULED_EVENT_USER_ADD",
-          userId: d,
+          userId: u,
           guildId: n,
           guildEventId: e,
           guildEventExceptionId: t,
-          response: r
-        }), await u.default.put({
-          url: _.Endpoints.USER_GUILD_EVENT(n, e, t),
+          response: i
+        }), await l.HTTP.put({
+          url: y.Endpoints.USER_GUILD_EVENT(n, e, t),
           body: {
-            response: r
+            response: i
           }
         })
-      } catch (u) {
-        throw l.default.dispatch({
+      } catch (l) {
+        throw d.default.dispatch({
           type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
-          userId: d,
+          userId: u,
           guildId: n,
           guildEventId: e,
           guildEventExceptionId: t,
-          response: r
-        }), u
+          response: i
+        }), l
       }
     },
     async deleteRsvpForGuildEvent(e, t, n) {
-      let r = i.default.getId(),
-        d = o.default.getRsvp(e, t, r);
-      if (null != d) try {
-        return l.default.dispatch({
+      let i = r.default.getId(),
+        u = c.default.getRsvp(e, t, i);
+      if (null != u) try {
+        return d.default.dispatch({
           type: "GUILD_SCHEDULED_EVENT_USER_REMOVE",
-          userId: r,
+          userId: i,
           guildId: n,
           guildEventId: e,
           guildEventExceptionId: t,
-          response: d.response
-        }), await u.default.delete({
-          url: _.Endpoints.USER_GUILD_EVENT(n, e, t)
+          response: u.response
+        }), await l.HTTP.del({
+          url: y.Endpoints.USER_GUILD_EVENT(n, e, t)
         })
-      } catch (u) {
-        throw l.default.dispatch({
+      } catch (l) {
+        throw d.default.dispatch({
           type: "GUILD_SCHEDULED_EVENT_USER_ADD",
-          userId: r,
+          userId: i,
           guildId: n,
           guildEventId: e,
           guildEventExceptionId: t,
-          response: d.response
-        }), u
+          response: u.response
+        }), l
+      }
+    },
+    async updateRsvp(e, t, n, l, d) {
+      let i = (0, _.getExistingRsvp)(e, t);
+      if (null != i) try {
+        await this.deleteRsvpForGuildEvent(e, t, n), null == d || d()
+      } catch (e) {
+        null == d || d(e)
+      } else try {
+        await this.createRsvpForGuildEvent(e, t, n, l), null == d || d()
+      } catch (e) {
+        null == d || d(e)
       }
     },
     async fetchUsersForGuildEvent(e, t, n) {
-      let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.MAX_RSVP_USER_DISPLAY_COUNT;
+      let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.MAX_RSVP_USER_DISPLAY_COUNT;
       if (null == e || null == n) return [];
-      let d = await u.default.get({
-        url: _.Endpoints.GUILD_EVENT_USERS(n, e, t),
+      let u = await l.HTTP.get({
+        url: y.Endpoints.GUILD_EVENT_USERS(n, e, t),
         query: {
-          limit: r,
+          limit: i,
           with_member: !0,
           upgrade_response_type: !0
         }
       });
-      return l.default.dispatch({
+      return d.default.dispatch({
         type: "GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS",
         guildEventId: e,
-        guildScheduledEventUsers: d.body,
+        guildScheduledEventUsers: u.body,
         guildId: n,
         guildEventExceptionId: t
-      }), d.body.users
+      }), u.body.users
     },
     createGuildEventException(e, t, n) {
       let {
-        original_scheduled_start_time: l,
-        scheduled_start_time: r,
-        scheduled_end_time: d,
-        is_canceled: i
+        original_scheduled_start_time: d,
+        scheduled_start_time: i,
+        scheduled_end_time: u,
+        is_canceled: r
       } = e;
-      return u.default.post({
-        url: _.Endpoints.GUILD_EVENT_EXCEPTIONS(t, n),
+      return l.HTTP.post({
+        url: y.Endpoints.GUILD_EVENT_EXCEPTIONS(t, n),
         body: {
-          original_scheduled_start_time: l,
-          scheduled_start_time: r,
-          scheduled_end_time: d,
-          is_canceled: i
+          original_scheduled_start_time: d,
+          scheduled_start_time: i,
+          scheduled_end_time: u,
+          is_canceled: r
         }
       })
     },
-    updateGuildEventException(e, t, n, l) {
+    updateGuildEventException(e, t, n, d) {
       let {
-        scheduled_start_time: r,
-        scheduled_end_time: d,
-        is_canceled: i
+        scheduled_start_time: i,
+        scheduled_end_time: u,
+        is_canceled: r
       } = e;
-      return u.default.patch({
-        url: _.Endpoints.GUILD_EVENT_EXCEPTION(t, n, l),
+      return l.HTTP.patch({
+        url: y.Endpoints.GUILD_EVENT_EXCEPTION(t, n, d),
         body: {
-          scheduled_start_time: r,
-          scheduled_end_time: d,
-          is_canceled: i
+          scheduled_start_time: i,
+          scheduled_end_time: u,
+          is_canceled: r
         }
       })
     },
-    deleteGuildEventException: (e, t, n) => u.default.delete({
-      url: _.Endpoints.GUILD_EVENT_EXCEPTION(e, t, n)
+    deleteGuildEventException: (e, t, n) => l.HTTP.del({
+      url: y.Endpoints.GUILD_EVENT_EXCEPTION(e, t, n)
     }),
-    deleteRecurrence(e, t, n, u) {
-      if (null != u) this.updateGuildEventException({
-        scheduled_start_time: u.scheduled_start_time,
-        scheduled_end_time: u.scheduled_end_time,
+    deleteRecurrence(e, t, n, l) {
+      if (null != l) this.updateGuildEventException({
+        scheduled_start_time: l.scheduled_start_time,
+        scheduled_end_time: l.scheduled_end_time,
         is_canceled: !0
       }, e, t, n);
       else {
-        let u = a.default.extractTimestamp(n);
+        let l = a.default.extractTimestamp(n);
         this.createGuildEventException({
-          original_scheduled_start_time: new Date(u).toISOString(),
+          original_scheduled_start_time: new Date(l).toISOString(),
           is_canceled: !0
         }, e, t)
       }

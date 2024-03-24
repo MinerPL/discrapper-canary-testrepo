@@ -13,7 +13,10 @@ var i, s, r = n("913144");
     let {
       action: e
     } = this;
-    this.action = null, null != e && r.default.dispatch(e).catch(t => this.socket.resetSocketOnError(t, e.type))
+    this.action = null, null != e && r.default.dispatch(e).catch(t => this.socket.resetSocketOnError({
+      error: t,
+      action: e.type
+    }))
   }
   constructor(t, n, i) {
     this.socket = t, this.action = null, this.shouldFlush = i, this.add = e => {

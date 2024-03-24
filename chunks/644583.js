@@ -1,41 +1,41 @@
 "use strict";
 l.r(t), l.d(t, {
   roleToPendingAddition: function() {
-    return V
+    return B
   },
   channelToPendingAddition: function() {
-    return B
+    return V
   },
   default: function() {
     return w
   }
 }), l("222007");
-var a, n, s, i, o, d, r = l("37983"),
+var a, s, n, o, i, r, d = l("37983"),
   u = l("884691"),
   C = l("414456"),
   c = l.n(C),
-  f = l("448105"),
-  m = l.n(f),
-  E = l("446674"),
+  m = l("448105"),
+  E = l.n(m),
+  f = l("446674"),
   M = l("77078"),
   h = l("137223"),
-  T = l("679653"),
-  x = l("419830"),
-  _ = l("405645"),
-  H = l("19766"),
-  g = l("42203"),
-  A = l("305961"),
-  p = l("27618"),
-  S = l("697218"),
-  L = l("476765"),
-  N = l("483093"),
+  _ = l("679653"),
+  T = l("419830"),
+  S = l("405645"),
+  x = l("19766"),
+  A = l("42203"),
+  p = l("305961"),
+  L = l("27618"),
+  H = l("697218"),
+  N = l("476765"),
+  g = l("483093"),
   I = l("782340"),
-  v = l("159260");
-let b = (0, L.uid)(),
-  j = (0, L.uid)(),
-  R = "text-sm/medium";
+  R = l("761394");
+let j = (0, N.uid)(),
+  v = (0, N.uid)(),
+  D = "text-sm/medium";
 
-function D(e) {
+function b(e) {
   return 1 === e.type
 }
 
@@ -43,8 +43,8 @@ function O(e) {
   return 0 === e.type
 }
 
-function V(e) {
-  let t = "".concat(e.name.includes(H.EVERYONE_ID) ? "" : "@").concat(e.name);
+function B(e) {
+  let t = "".concat(e.name.includes(x.EVERYONE_ID) ? "" : "@").concat(e.name);
   return {
     tag: {
       type: h.RichTagTypes.ROLE,
@@ -59,8 +59,8 @@ function V(e) {
   }
 }
 
-function B(e) {
-  let t = (0, T.computeChannelName)(e, S.default, p.default);
+function V(e) {
+  let t = (0, _.computeChannelName)(e, H.default, L.default);
   return {
     tag: {
       type: h.RichTagTypes.CHANNEL,
@@ -73,70 +73,67 @@ function B(e) {
       record: e
     }
   }
-}(i = a || (a = {}))[i.CHANNEL = 0] = "CHANNEL", i[i.ROLE = 1] = "ROLE";
-let y = u.memo(function(e) {
+}(o = a || (a = {}))[o.CHANNEL = 0] = "CHANNEL", o[o.ROLE = 1] = "ROLE";
+let F = u.memo(function(e) {
   var t;
   let {
     row: l,
     guildId: a,
-    className: n
+    className: s
   } = e, {
-    id: s,
-    name: i
-  } = l.record, o = (0, _.useRoleIcon)({
+    id: n,
+    name: o
+  } = l.record, i = (0, S.useRoleIcon)({
     guildId: a,
-    roleId: s,
+    roleId: n,
     size: 16
-  }), d = (0, E.useStateFromStores)([A.default], () => {
-    let e = A.default.getGuild(a);
-    return null == e ? null : e.roles[s]
-  }, [s, a]), u = i.includes(H.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), f = null !== (t = null == d ? void 0 : d.colorString) && void 0 !== t ? t : C;
-  return (0, r.jsxs)("div", {
-    className: c(v.rowLabel, v.roleTagContainer, n),
-    children: [(0, r.jsx)(M.RoleDot, {
-      className: v.roleDot,
-      color: f,
+  }), r = (0, f.useStateFromStores)([p.default], () => p.default.getRole(a, n)), u = o.includes(x.EVERYONE_ID) ? "" : "@", C = (0, M.useToken)(M.tokens.unsafe_rawColors.PRIMARY_300).hsl(), m = null !== (t = null == r ? void 0 : r.colorString) && void 0 !== t ? t : C;
+  return (0, d.jsxs)("div", {
+    className: c(R.rowLabel, R.roleTagContainer, s),
+    children: [(0, d.jsx)(M.RoleDot, {
+      className: R.roleDot,
+      color: m,
       background: !1,
       tooltip: !1
-    }), null != o ? (0, r.jsx)(N.default, {
-      className: v.roleTagIcon,
-      ...o,
+    }), null != i ? (0, d.jsx)(g.default, {
+      className: R.roleTagIcon,
+      ...i,
       enableTooltip: !1
-    }) : u, (0, r.jsx)(M.Text, {
-      variant: R,
-      className: v.roleTagLabel,
-      children: i
+    }) : u, (0, d.jsx)(M.Text, {
+      variant: D,
+      className: R.roleTagLabel,
+      children: o
     })]
   })
 });
 
-function F(e) {
+function y(e) {
   let {
     channel: t,
     row: l,
     className: a
-  } = e, n = null != t.parent_id, s = (0, x.getChannelIconComponent)(t);
-  return (0, r.jsxs)("div", {
-    className: c(v.rowLabel, v.channelLabel, {
-      [v.hasParent]: n
+  } = e, s = null != t.parent_id, n = (0, T.getChannelIconComponent)(t);
+  return (0, d.jsxs)("div", {
+    className: c(R.rowLabel, R.channelLabel, {
+      [R.hasParent]: s
     }, a),
-    children: [null != s && (0, r.jsx)(s, {
+    children: [null != n && (0, d.jsx)(n, {
       width: 16,
       height: 16,
-      className: v.channelIcon
-    }), (0, r.jsx)(M.Text, {
-      variant: t.isCategory() ? "eyebrow" : R,
+      className: R.channelIcon
+    }), (0, d.jsx)(M.Text, {
+      variant: t.isCategory() ? "eyebrow" : D,
       children: l.display
     })]
   })
 }
 
 function U(e, t, l) {
-  return D(e) ? (0, r.jsx)(y, {
+  return b(e) ? (0, d.jsx)(F, {
     row: e,
     guildId: t,
     className: l
-  }, e.record.id) : O(e) ? (0, r.jsx)(F, {
+  }, e.record.id) : O(e) ? (0, d.jsx)(y, {
     row: e,
     channel: e.record,
     className: l
@@ -148,37 +145,34 @@ function w(e) {
     guildId: t,
     roleRows: l = [],
     channelRows: a = [],
-    selectedChannelIds: n = new Set,
-    selectedRoleIds: s = new Set,
-    onChange: i,
-    placeholder: o,
-    helperText: d,
+    selectedChannelIds: s = new Set,
+    selectedRoleIds: n = new Set,
+    onChange: o,
+    placeholder: i,
+    helperText: r,
     className: C
-  } = e, f = (0, E.useStateFromStores)([A.default], () => {
-    var e, l;
-    return null !== (l = null === (e = A.default.getGuild(t)) || void 0 === e ? void 0 : e.roles) && void 0 !== l ? l : {}
-  }, [t]), T = u.useMemo(() => (function(e, t, l) {
+  } = e, m = (0, f.useStateFromStores)([p.default], () => p.default.getRoles(t)), _ = u.useMemo(() => (function(e, t, l) {
     if (null == e) return {};
     let a = {};
     return e.forEach(e => {
-      let t = g.default.getChannel(e);
-      null != t && (a[e] = B(t))
+      let t = A.default.getChannel(e);
+      null != t && (a[e] = V(t))
     }), t.forEach(e => {
-      e in l && (a[e] = V(l[e]))
+      e in l && (a[e] = B(l[e]))
     }), a
-  })(n, s, f), [n, s, f]), x = u.useMemo(() => Object.keys(T), [T]), [_, H] = u.useState(""), [p, S] = u.useState(!1), [L, N] = u.useState(!1), [R, y] = u.useState(!1), F = u.useRef(null), {
+  })(s, n, m), [s, n, m]), T = u.useMemo(() => Object.keys(_), [_]), [S, x] = u.useState(""), [L, H] = u.useState(!1), [N, g] = u.useState(!1), [D, F] = u.useState(!1), y = u.useRef(null), {
     sections: w,
     sectionCounts: k
   } = u.useMemo(() => {
-    let e = "" !== _ ? a.filter(e => m(_, e.display.toLocaleLowerCase())) : a,
-      t = "" !== _ ? l.filter(e => m(_, e.display.toLocaleLowerCase())) : l,
-      n = [],
-      s = [];
-    return n[0] = e, s[0] = e.length, n[1] = t, s[1] = t.length, {
-      sections: n,
-      sectionCounts: s
+    let e = "" !== S ? a.filter(e => E(S, e.display.toLocaleLowerCase())) : a,
+      t = "" !== S ? l.filter(e => E(S, e.display.toLocaleLowerCase())) : l,
+      s = [],
+      n = [];
+    return s[0] = e, n[0] = e.length, s[1] = t, n[1] = t.length, {
+      sections: s,
+      sectionCounts: n
     }
-  }, [_, a, l]), Z = u.useCallback(e => {
+  }, [S, a, l]), P = u.useCallback(e => {
     let t = Object.values(e),
       l = t.filter(e => {
         let {
@@ -190,112 +184,112 @@ function w(e) {
         let {
           row: t
         } = e;
-        return D(t)
+        return b(t)
       }).map(e => e.row.record.id);
-    i(new Set(l), new Set(a))
-  }, [i]), P = () => {
-    S(!1), N(!1)
+    o(new Set(l), new Set(a))
+  }, [o]), Z = () => {
+    H(!1), g(!1)
   };
   u.useEffect(() => {
     let e = setTimeout(() => {
-      y(p || L)
+      F(L || N)
     }, 32);
     return () => {
       clearTimeout(e)
     }
-  }, [p, L]);
+  }, [L, N]);
   let Y = (e, t, l) => {
-      l.stopPropagation(), l.preventDefault(), 2 === t ? S(e) : (1 === t || S(e), N(e))
+      l.stopPropagation(), l.preventDefault(), 2 === t ? H(e) : (1 === t || H(e), g(e))
     },
     G = u.useCallback(e => {
       let t = {
-        ...T
+        ..._
       };
-      O(e) ? t[e.id] = B(e.record) : D(e) && (t[e.id] = V(e.record)), Z(t), H(""), P(), setTimeout(() => {
+      O(e) ? t[e.id] = V(e.record) : b(e) && (t[e.id] = B(e.record)), P(t), x(""), Z(), setTimeout(() => {
         var e;
-        let t = null === (e = F.current) || void 0 === e ? void 0 : e.containerRef.current,
+        let t = null === (e = y.current) || void 0 === e ? void 0 : e.containerRef.current,
           l = null == t ? void 0 : t.firstChild;
         null != l && l.scrollTo({
           top: l.scrollHeight,
           behavior: "smooth"
         })
       }, 16)
-    }, [Z, T]),
-    q = u.useCallback(e => {
+    }, [P, _]),
+    J = u.useCallback(e => {
       let {
         section: l,
         row: a
-      } = e, n = w[l][a];
-      return (0, r.jsx)(M.Clickable, {
-        className: c(v.selectableSearchRow, v.rowHeight),
+      } = e, s = w[l][a];
+      return (0, d.jsx)(M.Clickable, {
+        className: c(R.selectableSearchRow, R.rowHeight),
         onClick: e => {
-          e.stopPropagation(), G(n)
+          e.stopPropagation(), G(s)
         },
-        children: (0, r.jsx)("div", {
-          className: v.rowContainer,
-          children: U(n, t, v.searchRowLabel)
+        children: (0, d.jsx)("div", {
+          className: R.rowContainer,
+          children: U(s, t, R.searchRowLabel)
         })
-      }, n.id)
+      }, s.id)
     }, [t, G, w]),
-    J = u.useMemo(() => x.map(e => {
+    q = u.useMemo(() => T.map(e => {
       var l, a;
-      return l = T[e], a = t, {
+      return l = _[e], a = t, {
         ...l.tag,
-        label: U(l.row, a, v.noIndent)
+        label: U(l.row, a, R.noIndent)
       }
-    }), [T, x, t]);
-  return (0, r.jsxs)("div", {
-    className: c(v.searchContainer, C),
-    children: [(0, r.jsxs)("div", {
-      className: v.searchBox,
-      children: [(0, r.jsx)(h.default, {
-        tags: J,
+    }), [_, T, t]);
+  return (0, d.jsxs)("div", {
+    className: c(R.searchContainer, C),
+    children: [(0, d.jsxs)("div", {
+      className: R.searchBox,
+      children: [(0, d.jsx)(h.default, {
+        tags: q,
         maxHeight: 98,
         size: h.default.Sizes.MEDIUM,
-        query: _,
-        ref: F,
+        query: S,
+        ref: y,
         onRemoveTag: e => {
-          let t = x[e],
+          let t = T[e],
             {
               [t]: l,
               ...a
-            } = T;
-          Z(a), H(""), P()
+            } = _;
+          P(a), x(""), Z()
         },
         onQueryChange: e => {
-          H(e.trim().toLocaleLowerCase())
+          x(e.trim().toLocaleLowerCase())
         },
-        placeholder: null != o ? o : I.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
-        sections: [x.length],
+        placeholder: null != i ? i : I.default.Messages.GUILD_AUTOMOD_EXEMPTION_SEARCH_PLACEHOLDER,
+        sections: [T.length],
         inputProps: {
-          "aria-labelledby": b,
-          "aria-controls": j,
-          "aria-expanded": R,
+          "aria-labelledby": j,
+          "aria-controls": v,
+          "aria-expanded": D,
           onFocus: e => Y(!0, 2, e),
           onBlur: e => Y(!1, 2, e)
         }
-      }), R && (0, r.jsx)("div", {
-        className: v.resultsListParent,
+      }), D && (0, d.jsx)("div", {
+        className: R.resultsListParent,
         onFocus: e => Y(!0, 1, e),
         onBlur: e => Y(!1, 1, e),
         tabIndex: -1,
-        children: (0, r.jsx)(M.ListAuto, {
-          className: v.resultsListContainer,
-          innerClassName: v.resultsList,
+        children: (0, d.jsx)(M.ListAuto, {
+          className: R.resultsListContainer,
+          innerClassName: R.resultsList,
           sections: k,
-          renderRow: q,
+          renderRow: J,
           rowHeight: 34,
           renderSection: e => {
             let {
               section: t
             } = e;
-            return 0 === t ? (0, r.jsx)(M.FormTitle, {
+            return 0 === t ? (0, d.jsx)(M.FormTitle, {
               tag: "h5",
-              className: c(v.sectionTitle, v.sectionHeight),
+              className: c(R.sectionTitle, R.sectionHeight),
               children: I.default.Messages.CHANNELS
-            }, I.default.Messages.CHANNELS) : 1 === t ? (0, r.jsx)(M.FormTitle, {
+            }, I.default.Messages.CHANNELS) : 1 === t ? (0, d.jsx)(M.FormTitle, {
               tag: "h5",
-              className: c(v.sectionTitle, v.sectionHeight),
+              className: c(R.sectionTitle, R.sectionHeight),
               children: I.default.Messages.ROLES
             }, I.default.Messages.ROLES) : null
           },
@@ -303,9 +297,9 @@ function w(e) {
             let {
               section: t
             } = e;
-            if (0 === t) return 0 === k[1] && k[0] > 0 ? null : (0, r.jsx)("div", {
-              className: v.sectionFooter,
-              children: (0, r.jsx)(M.FormDivider, {})
+            if (0 === t) return 0 === k[1] && k[0] > 0 ? null : (0, d.jsx)("div", {
+              className: R.sectionFooter,
+              children: (0, d.jsx)(M.FormDivider, {})
             });
             return null
           },
@@ -316,15 +310,15 @@ function w(e) {
           },
           role: void 0,
           innerRole: "listbox",
-          innerId: j,
+          innerId: v,
           innerAriaOrientation: "vertical"
         })
       })]
-    }), null != d && (0, r.jsx)(M.Text, {
+    }), null != r && (0, d.jsx)(M.Text, {
       variant: "text-xs/normal",
       color: "text-muted",
-      className: v.helperText,
-      children: d
+      className: R.helperText,
+      children: r
     })]
   })
-}(o = n || (n = {}))[o.CHANNELS = 0] = "CHANNELS", o[o.ROLES = 1] = "ROLES", (d = s || (s = {}))[d.NONE = 0] = "NONE", d[d.LIST = 1] = "LIST", d[d.INPUT = 2] = "INPUT"
+}(i = s || (s = {}))[i.CHANNELS = 0] = "CHANNELS", i[i.ROLES = 1] = "ROLES", (r = n || (n = {}))[r.NONE = 0] = "NONE", r[r.LIST = 1] = "LIST", r[r.INPUT = 2] = "INPUT"

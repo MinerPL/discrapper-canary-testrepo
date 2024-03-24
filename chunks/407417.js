@@ -14,20 +14,20 @@ var l = n("627445"),
   u = n("246053"),
   d = n("195812"),
   c = n("565559"),
-  f = n("35018"),
-  E = n("898998"),
+  E = n("35018"),
+  f = n("898998"),
   _ = n("782340"),
-  T = n("418530");
+  T = n("116834");
 
 function I(e) {
   var t, n, l, I;
   let {
     guildId: m,
     productId: N
-  } = e, p = (0, i.default)([c.default], () => c.default.getGuildProduct(N)), S = (null !== (I = null == p ? void 0 : null === (t = p.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1, A = null == p ? void 0 : null === (l = p.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
+  } = e, p = (0, i.useStateFromStores)([c.default], () => c.default.getGuildProduct(N)), S = (null !== (I = null == p ? void 0 : null === (t = p.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1, A = null == p ? void 0 : null === (l = p.attachments) || void 0 === l ? void 0 : null === (n = l[0]) || void 0 === n ? void 0 : n.id;
   return S ? (0, s.jsxs)(r.Button, {
     onClick: function() {
-      f.default.open({
+      E.default.open({
         guildId: m,
         productId: N
       })
@@ -43,7 +43,7 @@ function I(e) {
       height: 16,
       direction: u.default.Directions.RIGHT
     })]
-  }) : (a(null != A, "No attachment"), (0, s.jsxs)(E.default, {
+  }) : (a(null != A, "No attachment"), (0, s.jsxs)(f.default, {
     guildId: m,
     productId: N,
     attachmentId: A,

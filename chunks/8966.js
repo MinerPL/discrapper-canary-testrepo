@@ -4,15 +4,15 @@ s.r(t), s.d(t, {
     return n
   }
 }), s("702976");
-var a, n, i, r = s("199108"),
-  l = s("666038"),
+var a, n, i, l = s("199108"),
+  r = s("666038"),
   u = s("568734"),
   o = s("865146"),
   d = s("137406"),
   c = s("388290"),
-  f = s("49111"),
-  E = s("646718");
-(i = a || (a = {}))[i.GIFT = 1] = "GIFT", i[i.PREORDER = 8] = "PREORDER", n = class e extends l.default {
+  E = s("49111"),
+  f = s("646718");
+(i = a || (a = {}))[i.GIFT = 1] = "GIFT", i[i.PREORDER = 8] = "PREORDER", n = class e extends r.default {
   static createFromServer(t) {
     let s = null != t.payment_source ? o.default.createFromServer(t.payment_source) : null,
       a = null != t.sku ? d.default.createFromServer(t.sku) : null,
@@ -42,10 +42,10 @@ var a, n, i, r = s("199108"),
     })
   }
   get isPurchasedViaApple() {
-    return this.paymentGateway === f.PaymentGateways.APPLE
+    return this.paymentGateway === E.PaymentGateways.APPLE
   }
   get isPurchasedViaGoogle() {
-    return this.paymentGateway === f.PaymentGateways.GOOGLE
+    return this.paymentGateway === E.PaymentGateways.GOOGLE
   }
   get isPurchasedExternally() {
     return this.isPurchasedViaApple || this.isPurchasedViaGoogle
@@ -54,33 +54,33 @@ var a, n, i, r = s("199108"),
     return null != this.subscription
   }
   get isPremiumSubscription() {
-    return null != this.subscription && E.PREMIUM_PLANS.has(this.subscription.planId)
+    return null != this.subscription && f.PREMIUM_PLANS.has(this.subscription.planId)
   }
   get isPremiumGuildSubscription() {
     return null != this.subscription && null != this.subscription.additionalPlans.find(e => {
       let {
         planId: t
       } = e;
-      return E.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(t)
+      return f.PREMIUM_GUILD_SUBSCRIPTION_PLANS.has(t)
     })
   }
   get isGift() {
     return u.hasFlag(this.flags, 1)
   }
   get isPremiumGift() {
-    return this.isGift && Object.values(E.PremiumSubscriptionSKUs).includes(this.skuId)
+    return this.isGift && Object.values(f.PremiumSubscriptionSKUs).includes(this.skuId)
   }
   get isPreorder() {
     return u.hasFlag(this.flags, 8)
   }
   get isGuildProductPurchase() {
-    return null != this.sku && (this.sku.productLine === f.SKUProductLines.GUILD_PRODUCT || u.hasFlag(this.sku.flags, r.SKUFlags.GUILD_PRODUCT))
+    return null != this.sku && (this.sku.productLine === E.SKUProductLines.GUILD_PRODUCT || u.hasFlag(this.sku.flags, l.SKUFlags.GUILD_PRODUCT))
   }
   get isSoftDeletedProduct() {
     var e;
     return (null === (e = this.sku) || void 0 === e ? void 0 : e.deleted) === !0
   }
   constructor(e) {
-    super(), this.id = e.id, this.amount = e.amount, this.amountRefunded = e.amountRefunded, this.createdAt = e.createdAt, this.currency = e.currency, this.description = e.description, this.paymentSource = e.paymentSource, this.status = e.status, this.tax = e.tax, this.taxInclusive = e.taxInclusive, this.subscription = e.subscription, this.skuId = e.skuId, this.skuPrice = e.skuPrice, this.sku = e.sku, this.flags = e.flags, this.downloadableInvoice = e.downloadableInvoice, this.downloadableRefundInvoices = e.downloadableRefundInvoices, this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons
+    super(), this.id = e.id, this.amount = e.amount, this.amountRefunded = e.amountRefunded, this.createdAt = e.createdAt, this.currency = e.currency, this.description = e.description, this.paymentSource = e.paymentSource, this.paymentGateway = e.paymentGateway, this.paymentGatewayPaymentId = e.paymentGatewayPaymentId, this.status = e.status, this.tax = e.tax, this.taxInclusive = e.taxInclusive, this.subscription = e.subscription, this.skuId = e.skuId, this.skuPrice = e.skuPrice, this.sku = e.sku, this.flags = e.flags, this.downloadableInvoice = e.downloadableInvoice, this.downloadableRefundInvoices = e.downloadableRefundInvoices, this.premiumRefundDisqualificationReasons = e.premiumRefundDisqualificationReasons
   }
 }

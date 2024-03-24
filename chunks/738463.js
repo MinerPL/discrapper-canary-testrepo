@@ -6,20 +6,20 @@ s.r(t), s.d(t, {
 });
 var i = s("37983");
 s("884691");
-var r = s("907002"),
+var r = s("146606"),
   a = s("65597"),
   l = s("77078"),
   o = s("206230"),
   n = s("476263"),
-  d = s("617917"),
-  u = s("49111"),
-  c = s("825697"),
+  u = s("617917"),
+  d = s("49111"),
+  c = s("532039"),
   E = function(e) {
     let {
       closeLayer: t,
       guild: s,
       isVisible: E
-    } = e, _ = (0, a.default)([o.default], () => o.default.useReducedMotion), T = (0, r.useSpring)({
+    } = e, _ = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), T = (0, r.useSpring)({
       transform: E ? "translateY(-100%)" : "translateY(0%)",
       opacity: E ? 1 : 0,
       config: {
@@ -44,14 +44,14 @@ var r = s("907002"),
             variant: "text-lg/bold",
             children: s.name
           })]
-        }), (0, i.jsx)(d.default, {
+        }), (0, i.jsx)(u.default, {
           className: c.ctaButton,
           guild: s,
           analyticsLocation: {
-            page: u.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
-            section: u.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
-            object: u.AnalyticsObjects.BUTTON_CTA,
-            objectType: u.AnalyticsObjectTypes.BUY
+            page: d.AnalyticsPages.PREMIUM_GUILD_USER_MODAL,
+            section: d.AnalyticsSections.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
+            object: d.AnalyticsObjects.BUTTON_CTA,
+            objectType: d.AnalyticsObjectTypes.BUY
           },
           closeLayer: t,
           pauseAnimation: !E,

@@ -13,39 +13,39 @@ var i = n("203288"),
   u = n("290886"),
   d = n("903724"),
   c = n("120252"),
-  f = n("42203"),
-  _ = n("305961"),
-  h = n("449008"),
-  g = n("361572"),
-  m = n("49111"),
-  E = n("724210");
+  _ = n("42203"),
+  f = n("305961"),
+  E = n("449008"),
+  h = n("361572"),
+  g = n("49111"),
+  m = n("724210");
 async function p(e) {
   let {
     guildId: t,
     channelId: n
-  } = e, p = _.default.getGuild(t);
-  if (null == p && t !== m.ME) return !1;
+  } = e, p = f.default.getGuild(t), S = f.default.getRoles(t);
+  if (null == p && t !== g.ME) return !1;
   if (null == n) return !0;
-  if ((0, E.isStaticChannelRoute)(n)) switch (n) {
-    case E.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
-      return (0, d.areRoleSubscriptionsVisibleInGuild)(t);
-    case E.StaticChannelRoute.GUILD_SHOP:
-      return (0, s.isGuildShopVisibleInGuild)(p);
-    case E.StaticChannelRoute.MEMBER_APPLICATIONS:
+  if ((0, m.isStaticChannelRoute)(n)) switch (n) {
+    case m.StaticChannelRoute.ROLE_SUBSCRIPTIONS:
+      return (0, d.areRoleSubscriptionsVisibleInGuild)(t, S);
+    case m.StaticChannelRoute.GUILD_SHOP:
+      return (0, s.isGuildShopVisibleInGuild)(p, S);
+    case m.StaticChannelRoute.MEMBER_APPLICATIONS:
       return (0, a.canReviewGuildMemberApplications)(t);
-    case E.StaticChannelRoute.GUILD_HOME:
+    case m.StaticChannelRoute.GUILD_HOME:
       return (0, r.canSeeGuildHome)(t) || (0, u.canSeeOnboardingHome)(t);
-    case E.StaticChannelRoute.CHANNEL_BROWSER:
-      return null != p && p.hasFeature(m.GuildFeatures.COMMUNITY);
-    case E.StaticChannelRoute.GUILD_ONBOARDING:
+    case m.StaticChannelRoute.CHANNEL_BROWSER:
+      return null != p && p.hasFeature(g.GuildFeatures.COMMUNITY);
+    case m.StaticChannelRoute.GUILD_ONBOARDING:
       return l.default.shouldShowOnboarding(t);
-    case E.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
-      return null != p && p.hasFeature(m.GuildFeatures.COMMUNITY);
-    case E.StaticChannelRoute.MEMBER_SAFETY:
+    case m.StaticChannelRoute.CUSTOMIZE_COMMUNITY:
+      return null != p && p.hasFeature(g.GuildFeatures.COMMUNITY);
+    case m.StaticChannelRoute.MEMBER_SAFETY:
       return (0, o.canAccessMemberSafetyPage)(t);
     default:
-      (0, h.assertNever)(n)
+      (0, E.assertNever)(n)
   }
-  let v = f.default.getChannel(n);
-  return (null != v || (await c.default.loadThread(n), null != (v = f.default.getChannel(n)))) && ((0, g.canViewChannel)(v) || i.default.isChannelGatedAndVisible(t, n))
+  let T = _.default.getChannel(n);
+  return (null != T || (await c.default.loadThread(n), null != (T = _.default.getChannel(n)))) && ((0, h.canViewChannel)(T) || i.default.isChannelGatedAndVisible(t, n))
 }

@@ -5,6 +5,9 @@ n.r(t), n.d(t, {
   },
   UnreadsEntryPointExperiment: function() {
     return r
+  },
+  NewUserUnreadsEntryPointExperiment: function() {
+    return a
   }
 });
 var i = n("862205");
@@ -55,6 +58,30 @@ let s = (0, i.createExperiment)({
         logExposure: !1,
         autoOpen: !1,
         manuallyOpen: !0
+      }
+    }]
+  }),
+  a = (0, i.createExperiment)({
+    kind: "user",
+    id: "2024-03_unreads_new_users",
+    label: "Unreads Experiment (grey-dot mode) (new users)",
+    defaultConfig: {
+      enabled: !1,
+      logExposure: !1
+    },
+    treatments: [{
+      id: 0,
+      label: "Control",
+      config: {
+        enabled: !1,
+        logExposure: !0
+      }
+    }, {
+      id: 1,
+      label: "Auto open migration",
+      config: {
+        enabled: !0,
+        logExposure: !0
       }
     }]
   })

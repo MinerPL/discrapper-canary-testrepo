@@ -11,29 +11,29 @@ var s, l, a = n("884691"),
 function o(e) {
   let {
     embeddedActivity: t,
-    currentUserId: n,
-    joinability: s
+    joinability: n,
+    currentEmbeddedActivity: s
   } = e;
   return a.useMemo(() => (function(e) {
     let {
       embeddedActivity: t,
-      currentUserId: n,
-      joinability: s
+      joinability: n,
+      currentEmbeddedActivity: s
     } = e, l = null == t, a = {
       disabled: !1,
       isJoinAction: !l,
       text: l ? r.default.Messages.START : r.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
       tooltip: void 0
-    }, o = null != t && t.userIds.has(n);
+    }, o = null != t && null != s && t.instanceId === s.instanceId;
     if (o) return {
       ...a,
       disabled: !0,
       text: r.default.Messages.EMBEDDED_ACTIVITIES_JOINED,
       tooltip: r.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
     };
-    if (null != s && s !== i.EmbeddedActivityJoinability.CAN_JOIN) {
+    if (null != n && n !== i.EmbeddedActivityJoinability.CAN_JOIN) {
       let e;
-      switch (s) {
+      switch (n) {
         case i.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
           e = r.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
           break;
@@ -67,7 +67,7 @@ function o(e) {
     return a
   })({
     embeddedActivity: t,
-    currentUserId: n,
-    joinability: s
-  }), [n, t, s])
+    joinability: n,
+    currentEmbeddedActivity: s
+  }), [t, n, s])
 }(s = l || (l = {}))[s.ACTIVE = 0] = "ACTIVE", s[s.ENDED = 1] = "ENDED"

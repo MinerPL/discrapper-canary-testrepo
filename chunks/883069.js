@@ -1,42 +1,42 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
-var d = l("872717"),
-  a = l("913144"),
-  r = l("599110"),
-  n = l("82339"),
-  o = l("49111"),
-  i = {
+var i = n("872717"),
+  s = n("913144"),
+  r = n("599110"),
+  a = n("82339"),
+  o = n("49111"),
+  l = {
     resolveGuildTemplate: function e(t) {
-      return a.default.isDispatching() ? Promise.resolve().then(() => e(t)) : (a.default.dispatch({
+      return s.default.isDispatching() ? Promise.resolve().then(() => e(t)) : (s.default.dispatch({
         type: "GUILD_TEMPLATE_RESOLVE",
         code: t
-      }), d.default.get({
+      }), i.HTTP.get({
         url: o.Endpoints.UNRESOLVED_GUILD_TEMPLATE(t),
         oldFormErrors: !0
       }).then(e => {
-        let l = e.body;
+        let n = e.body;
         return r.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
           resolved: !0,
           guild_template_code: t,
-          guild_template_name: l.name,
-          guild_template_description: l.description,
-          guild_template_guild_id: l.source_guild_id
-        }), a.default.dispatch({
+          guild_template_name: n.name,
+          guild_template_description: n.description,
+          guild_template_guild_id: n.source_guild_id
+        }), s.default.dispatch({
           type: "GUILD_TEMPLATE_RESOLVE_SUCCESS",
-          guildTemplate: l,
+          guildTemplate: n,
           code: t
         }), {
-          guildTemplate: (0, n.default)(l),
+          guildTemplate: (0, a.default)(n),
           code: t
         }
       }, () => (r.default.track(o.AnalyticEvents.GUILD_TEMPLATE_RESOLVED, {
         resolved: !1,
         guild_template_code: t
-      }), a.default.dispatch({
+      }), s.default.dispatch({
         type: "GUILD_TEMPLATE_RESOLVE_FAILURE",
         code: t
       }), {
@@ -44,56 +44,56 @@ var d = l("872717"),
         code: t
       })))
     },
-    loadTemplatesForGuild: e => d.default.get({
+    loadTemplatesForGuild: e => i.HTTP.get({
       url: o.Endpoints.GUILD_TEMPLATES(e),
       oldFormErrors: !0
-    }).then(e => (a.default.dispatch({
+    }).then(e => (s.default.dispatch({
       type: "GUILD_TEMPLATE_LOAD_FOR_GUILD_SUCCESS",
       guildTemplates: e.body
     }), e)),
-    createGuildTemplate: (e, t, l) => d.default.post({
+    createGuildTemplate: (e, t, n) => i.HTTP.post({
       url: o.Endpoints.GUILD_TEMPLATES(e),
       body: {
         name: t,
-        description: l
+        description: n
       },
       oldFormErrors: !0
     }).then(e => {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "GUILD_TEMPLATE_CREATE_SUCCESS",
         guildTemplate: e.body,
         code: e.body.code
       })
     }),
-    syncGuildTemplate: (e, t) => d.default.put({
+    syncGuildTemplate: (e, t) => i.HTTP.put({
       url: o.Endpoints.GUILD_TEMPLATE(e, t),
       oldFormErrors: !0
     }).then(e => {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "GUILD_TEMPLATE_SYNC_SUCCESS",
         guildTemplate: e.body,
         code: t
       })
     }),
-    updateGuildTemplate: (e, t, l, r) => d.default.patch({
+    updateGuildTemplate: (e, t, n, r) => i.HTTP.patch({
       url: o.Endpoints.GUILD_TEMPLATE(e, t),
       body: {
-        name: l,
+        name: n,
         description: r
       },
       oldFormErrors: !0
     }).then(e => {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "GUILD_TEMPLATE_SYNC_SUCCESS",
         guildTemplate: e.body,
         code: t
       })
     }),
-    deleteGuildTemplate: (e, t) => d.default.delete({
+    deleteGuildTemplate: (e, t) => i.HTTP.del({
       url: o.Endpoints.GUILD_TEMPLATE(e, t),
       oldFormErrors: !0
     }).then(() => {
-      a.default.dispatch({
+      s.default.dispatch({
         type: "GUILD_TEMPLATE_DELETE_SUCCESS",
         guildId: e,
         code: t

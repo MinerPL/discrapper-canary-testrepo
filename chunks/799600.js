@@ -1,22 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("424973"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341"), n("70102"), n("222007");
-var s = n("917351"),
-  i = n.n(s),
+var i = n("917351"),
+  s = n.n(i),
   r = n("605250"),
-  a = n("197881");
+  a = n("197881"),
+  o = n("863856");
 let {
-  NativeModules: o
-} = {}, d = [];
-class u {
+  NativeModules: l
+} = {}, u = [];
+class d {
   static canUse() {
     return !1
   }
   bindWebSocket(e) {}
   feed(e) {}
+  recomputeAlgorithm() {}
   dataReady(e) {
     this._onDataReady = e
   }
@@ -24,7 +26,7 @@ class u {
     this._onDataReady = null, this._gatewayEncoding = e
   }
 }
-d.push(class extends u {
+u.push(class extends d {
   static canUse() {
     return void 0 !== window.Uint8Array
   }
@@ -38,12 +40,12 @@ d.push(class extends u {
     let t = this._pako,
       n = this._inflate;
     if (null == n) throw Error("Trying to feed to closed compression adapter");
-    let s = this._onDataReady;
-    if (null === s) throw Error("Cannot feed unless a data ready callback is registered.");
+    let i = this._onDataReady;
+    if (null === i) throw Error("Cannot feed unless a data ready callback is registered.");
     if (e instanceof ArrayBuffer) {
-      let s = new DataView(e),
-        i = s.byteLength >= 4 && 65535 === s.getUint32(s.byteLength - 4, !1);
-      n.push(e, !!i && t.Z_SYNC_FLUSH)
+      let i = new DataView(e),
+        s = i.byteLength >= 4 && 65535 === i.getUint32(i.byteLength - 4, !1);
+      n.push(e, !!s && t.Z_SYNC_FLUSH)
     } else throw Error("Expected array buffer, but got " + typeof e)
   }
   close() {
@@ -52,39 +54,39 @@ d.push(class extends u {
   handleFlushEnd(e) {
     let t;
     let n = this._pako,
-      s = this._inflate;
-    if (null == s) {
+      i = this._inflate;
+    if (null == i) {
       new(0, r.default)("GatewayCompressionHandler").error("flush end happened on closed compression adapter");
       return
     }
-    if (e !== n.Z_OK) throw Error("zlib error, ".concat(e, ", ").concat(s.strm.msg));
+    if (e !== n.Z_OK) throw Error("zlib error, ".concat(e, ", ").concat(i.strm.msg));
     let {
-      chunks: i
-    } = s, a = i.length;
-    if (this._gatewayEncoding.wantsString()) t = a > 1 ? i.join("") : i[0];
+      chunks: s
+    } = i, a = s.length;
+    if (this._gatewayEncoding.wantsString()) t = a > 1 ? s.join("") : s[0];
     else if (a > 1) {
       let e = 0;
-      for (let t = 0; t < a; t++) e += i[t].length;
+      for (let t = 0; t < a; t++) e += s[t].length;
       let n = new Uint8Array(e),
-        s = 0;
+        i = 0;
       for (let e = 0; e < a; e++) {
-        let t = i[e];
-        n.set(t, s), s += t.length
+        let t = s[e];
+        n.set(t, i), i += t.length
       }
       t = n
-    } else t = i[0];
-    i.length = 0, null != this._onDataReady && this._onDataReady(t)
+    } else t = s[0];
+    s.length = 0, null != this._onDataReady && this._onDataReady(t)
   }
   constructor(e) {
     super(e), this._pako = n("181905");
     let t = this._pako,
-      s = this._inflate = new t.Inflate({
+      i = this._inflate = new t.Inflate({
         chunkSize: 65536,
         to: this._gatewayEncoding.wantsString() ? "string" : ""
       });
-    s.onEnd = this.handleFlushEnd.bind(this)
+    i.onEnd = this.handleFlushEnd.bind(this)
   }
-}), d.push(class extends u {
+}), u.push(class extends d {
   static canUse() {
     return !0
   }
@@ -105,15 +107,18 @@ d.push(class extends u {
   constructor(...e) {
     super(...e), this._pako = n("181905")
   }
-}), d.push(class extends u {
+}), u.push(class extends d {
   static canUse() {
     return !1
   }
   bindWebSocket(e) {
-    this.close(), this._socketId = e._socketId, o.DCDCompressionManager.enableZlibStreamSupport(this._socketId)
+    this.close(), this._socketId = e._socketId, this._usesZstd ? l.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0) : l.DCDCompressionManager.enableZlibStreamSupport(this._socketId)
+  }
+  recomputeAlgorithm() {
+    this._usesZstd = o.default.shouldUseZstd()
   }
   getAlgorithm() {
-    return "zlib-stream"
+    return this._usesZstd ? "zstd-stream" : "zlib-stream"
   }
   usesLegacyCompression() {
     return !1
@@ -124,13 +129,13 @@ d.push(class extends u {
   }
   close() {
     let e = this._socketId;
-    this._socketId = null, null !== e && o.DCDCompressionManager.disableZlibStreamSupport(e)
+    this._socketId = null, null !== e && l.DCDCompressionManager.disableZlibStreamSupport(e)
   }
   constructor(e) {
-    super(e), this._socketId = null
+    super(e), this._usesZstd = !1, this._socketId = null
   }
 });
-class l extends u {
+class c extends d {
   static canUse() {
     return !0
   }
@@ -146,7 +151,7 @@ class l extends u {
   }
   close() {}
 }
-d.push(l);
-let f = i.find(d, e => e.canUse());
-a.ProcessArgs.isDiscordGatewayPlaintextSet() && (f = l);
-var _ = f
+u.push(c);
+let _ = s.find(u, e => e.canUse());
+a.ProcessArgs.isDiscordGatewayPlaintextSet() && (_ = c);
+var f = _

@@ -1,49 +1,50 @@
 "use strict";
 n.r(t), n.d(t, {
   usePollFocusManager: function() {
-    return o
+    return u
   },
   PollFocusManager: function() {
-    return d
+    return c
   }
 }), n("70102"), n("222007");
 var s, l, a = n("37983"),
-  i = n("884691");
+  i = n("884691"),
+  r = n("449008");
 (l = s || (s = {})).POLL_ANSWERS = "POLL_ANSWERS", l.ACTION_BUTTON = "ACTION_BUTTON";
-let r = i.createContext(void 0);
+let o = i.createContext(void 0);
 
-function o() {
-  let e = i.useContext(r);
+function u() {
+  let e = i.useContext(o);
   if (null == e) throw Error("No PollFocusContextProvider found");
   return e
 }
 
-function u(e) {
+function d(e) {
   let {
     children: t,
     actionButtonRef: n,
     pollAnswerRef: s,
     manageFocusOnAction: l
-  } = e, o = i.useMemo(() => ({
+  } = e, r = i.useMemo(() => ({
     actionButtonRef: n,
     pollAnswerRef: s,
     manageFocusOnAction: l
   }), [n, s, l]);
-  return (0, a.jsx)(r.Provider, {
-    value: o,
+  return (0, a.jsx)(o.Provider, {
+    value: r,
     children: t
   })
 }
 
-function d(e) {
+function c(e) {
   let {
     children: t
-  } = e, [n, s] = i.useState(), l = i.useRef(null), r = i.useRef(null);
+  } = e, [n, s] = i.useState(), l = i.useRef(null), o = i.useRef(null);
   return i.useEffect(() => {
     var e, t, s;
-    "POLL_ANSWERS" === n && null != r.current && (null === (t = r.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), "ACTION_BUTTON" === n && null != l.current && (null === (s = l.current) || void 0 === s || s.focus())
-  }, [n]), (0, a.jsx)(u, {
-    pollAnswerRef: r,
+    "POLL_ANSWERS" === n && null != o.current && (null === (t = o.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()), "ACTION_BUTTON" === n && null != l.current && (null === (s = l.current) || void 0 === s || s.focus())
+  }, [n]), (0, a.jsx)(d, {
+    pollAnswerRef: o,
     actionButtonRef: l,
     manageFocusOnAction: e => {
       switch (e) {
@@ -51,8 +52,14 @@ function d(e) {
         case "cancel":
           s("ACTION_BUTTON");
           break;
-        case "edit":
-          s("POLL_ANSWERS")
+        case "remove":
+        case "showVotes":
+          s("POLL_ANSWERS");
+          break;
+        case "showVoterDetails":
+          break;
+        default:
+          (0, r.assertNever)(e)
       }
     },
     children: t

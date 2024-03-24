@@ -1,112 +1,115 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return g
+    return _
   }
-}), s("222007");
-var l = s("37983");
-s("884691");
-var a = s("750485"),
-  i = s("77078"),
-  n = s("887657"),
-  r = s("549586"),
-  o = s("564875"),
-  d = s("404158"),
-  c = s("368874"),
-  u = s("775032"),
-  h = s("821586"),
-  C = s("922832"),
-  f = s("782340"),
-  T = s("353530"),
-  x = s("392963");
-let p = {
-    [C.TeenActionDisplayType.USER_INTERACTION]: (0, l.jsx)(h.default, {
+}), i("222007");
+var l = i("37983");
+i("884691");
+var s = i("750485"),
+  a = i("77078"),
+  n = i("887657"),
+  r = i("549586"),
+  o = i("564875"),
+  d = i("404158"),
+  c = i("671088"),
+  u = i("368874"),
+  h = i("775032"),
+  C = i("821586"),
+  f = i("922832"),
+  T = i("782340"),
+  p = i("782962"),
+  x = i("392963");
+let A = {
+    [f.TeenActionDisplayType.USER_INTERACTION]: (0, l.jsx)(C.default, {
       width: 18,
       height: 18
     }),
-    [C.TeenActionDisplayType.USER_CALLED]: (0, l.jsx)(n.default, {
+    [f.TeenActionDisplayType.USER_CALLED]: (0, l.jsx)(n.default, {
       width: 22,
       height: 22
     }),
-    [C.TeenActionDisplayType.USER_ADD]: (0, l.jsx)(o.default, {
-      className: T.personWavingIcon,
+    [f.TeenActionDisplayType.USER_ADD]: (0, l.jsx)(o.default, {
+      className: p.personWavingIcon,
       width: 22,
       height: 22
     }),
-    [C.TeenActionDisplayType.GUILD_ADD]: (0, l.jsx)(r.default, {
+    [f.TeenActionDisplayType.GUILD_ADD]: (0, l.jsx)(r.default, {
       width: 22,
       height: 22
     }),
-    [C.TeenActionDisplayType.GUILD_INTERACTION]: (0, l.jsx)(d.default, {
-      className: T.threadIcon,
+    [f.TeenActionDisplayType.GUILD_INTERACTION]: (0, l.jsx)(d.default, {
+      className: p.threadIcon,
       width: 22,
       height: 22
     })
   },
-  A = e => {
+  g = e => {
     let {
       header: t,
-      description: s,
+      description: i,
       icon: n
     } = e;
-    return (0, l.jsxs)(a.default, {
-      className: T.row,
+    return (0, l.jsxs)(s.default, {
+      className: p.row,
       grow: 0,
       children: [(0, l.jsx)("div", {
-        className: T.iconContainer,
+        className: p.iconContainer,
         children: n
       }), (0, l.jsxs)("div", {
-        className: T.rowContent,
-        children: [(0, l.jsx)(i.Text, {
-          className: T.rowHeader,
+        className: p.rowContent,
+        children: [(0, l.jsx)(a.Text, {
+          className: p.rowHeader,
           variant: "text-sm/bold",
           children: t
-        }), (0, l.jsx)(i.Text, {
+        }), (0, l.jsx)(a.Text, {
           variant: "text-xs/medium",
-          children: s
+          children: i
         })]
       })]
     })
   };
-var g = e => {
+var _ = e => {
   let {
     transitionState: t,
-    onClose: s
-  } = e, n = (0, c.useAgeSpecificText)(f.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN, f.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT), r = (0, u.default)(), o = Array.from(C.ACTION_TO_TEXT.entries());
-  return (0, l.jsxs)(i.ModalRoot, {
+    onClose: i
+  } = e, n = (0, u.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN, T.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT), r = (0, h.default)(), o = Array.from(f.ACTION_TO_TEXT.entries()), d = (0, c.useIsEligibleForFamilyCenterVCJoin)({
+    location: "family_center_tooltip_modal_web"
+  });
+  return (0, l.jsxs)(a.ModalRoot, {
     transitionState: t,
     children: [(0, l.jsx)("img", {
-      className: T.art,
+      className: p.art,
       src: x,
-      alt: f.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
-    }), (0, l.jsx)(i.ModalContent, {
-      className: T.content,
-      children: (0, l.jsxs)(a.default, {
-        direction: a.default.Direction.VERTICAL,
-        align: a.default.Align.CENTER,
-        children: [(0, l.jsx)(i.Heading, {
-          className: T.header,
+      alt: T.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
+    }), (0, l.jsx)(a.ModalContent, {
+      className: p.content,
+      children: (0, l.jsxs)(s.default, {
+        direction: s.default.Direction.VERTICAL,
+        align: s.default.Align.CENTER,
+        children: [(0, l.jsx)(a.Heading, {
+          className: p.header,
           color: "header-primary",
           variant: "heading-lg/semibold",
-          children: (0, l.jsx)(i.HeadingLevel, {
+          children: (0, l.jsx)(a.HeadingLevel, {
             children: n
           })
         }), o.map(e => {
-          let [t, s] = e;
-          return (0, l.jsx)(A, {
-            icon: p[t],
-            header: s.tooltipHeader(),
-            description: s.tooltipDescription(null != r ? r : void 0)
+          let [t, i] = e;
+          return (0, l.jsx)(g, {
+            icon: A[t],
+            header: i.tooltipHeader(),
+            description: i.tooltipDescription(null != r ? r : void 0, d)
           }, t)
         })]
       })
-    }), (0, l.jsx)(i.ModalFooter, {
-      children: (0, l.jsx)(i.Button, {
-        className: T.button,
+    }), (0, l.jsx)(a.ModalFooter, {
+      children: (0, l.jsx)(a.Button, {
+        className: p.button,
         type: "button",
-        color: i.Button.Colors.BRAND,
-        onClick: s,
-        children: f.default.Messages.GOT_IT
+        color: a.Button.Colors.BRAND,
+        onClick: i,
+        children: T.default.Messages.GOT_IT
       })
     })]
   })

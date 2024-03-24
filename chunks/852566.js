@@ -5,23 +5,23 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
-  o = n("812725");
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
+  o = n("67387");
 let l = Object.freeze({
   SMALL: 1,
   MEDIUM: 2,
   LARGE: 4
 });
-class u extends r.Component {
+class u extends s.Component {
   renderCircle() {
     let {
       strokeSize: e,
       percent: t,
       colorOverride: n,
-      background: r
-    } = this.props, s = (20 - e) / 2, l = s * Math.PI * 2;
+      background: s
+    } = this.props, r = (20 - e) / 2, l = r * Math.PI * 2;
     return (0, i.jsxs)("svg", {
       viewBox: "0 0 ".concat(20, " ").concat(20),
       className: o.circle,
@@ -31,7 +31,7 @@ class u extends r.Component {
         cy: 10,
         r: 10
       }), (0, i.jsx)("circle", {
-        className: a(o.circleBackground, r),
+        className: a(o.circleBackground, s),
         cx: 10,
         cy: 10,
         r: (20 - 2 * e) / 2
@@ -39,7 +39,7 @@ class u extends r.Component {
         className: o.circleProgress,
         cx: 10,
         cy: 10,
-        r: s,
+        r: r,
         strokeWidth: "".concat(e, "px"),
         strokeLinecap: "round",
         transform: "rotate(-90 ".concat(10, " ").concat(10, ")"),

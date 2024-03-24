@@ -1,36 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return x
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("77078"),
-  o = n("812204"),
-  s = n("685665"),
-  a = n("649844"),
-  u = n("551305"),
-  d = n("978679"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("855643"),
+  s = n("77078"),
+  r = n("812204"),
+  o = n("685665"),
+  u = n("649844"),
+  d = n("551305"),
   c = n("158998"),
   f = n("49111"),
   p = n("646718"),
   m = n("782340"),
-  h = n("537461"),
-  E = i.memo(function(e) {
+  h = n("350583"),
+  x = l.memo(function(e) {
     let {
       disabled: t,
       channel: n
     } = e, {
-      analyticsLocations: i
-    } = (0, s.default)(o.default.GIFT_BUTTON), E = (0, c.useDirectMessageRecipient)(n);
+      analyticsLocations: l
+    } = (0, o.default)(r.default.GIFT_BUTTON), x = (0, c.useDirectMessageRecipient)(n), {
+      Component: E,
+      events: y,
+      play: g
+    } = (0, a.useGiftLottie)();
     if (t) return null;
-    let S = () => (0, a.default)({
+    let S = () => (0, u.default)({
       isGift: !0,
-      giftRecipient: null === E ? void 0 : E,
+      giftRecipient: null === x ? void 0 : x,
       initialPlanId: null,
       subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
-      analyticsLocations: i,
+      analyticsLocations: l,
       analyticsObject: {
         page: n.isPrivate() ? f.AnalyticsPages.DM_CHANNEL : f.AnalyticsPages.GUILD_CHANNEL,
         section: f.AnalyticsSections.CHANNEL_TEXT_AREA,
@@ -38,16 +42,21 @@ var l = n("37983"),
         objectType: f.AnalyticsObjectTypes.GIFT
       }
     });
-    return (0, l.jsx)(r.Tooltip, {
+    return (0, i.jsx)(s.Tooltip, {
       text: m.default.Messages.PREMIUM_GIFT_BUTTON_TOOLTIP,
-      children: e => (0, l.jsx)(u.default, {
+      children: e => (0, i.jsx)(d.default, {
         ...e,
         innerClassName: h.button,
         isActive: !1,
         "aria-label": m.default.Messages.PREMIUM_GIFT_BUTTON_LABEL,
         "aria-haspopup": "dialog",
-        onClick: S,
-        children: (0, l.jsx)(d.default, {})
+        onClick: () => {
+          S(), g()
+        },
+        ...y,
+        children: (0, i.jsx)(E, {
+          color: "currentColor"
+        })
       })
     })
   })

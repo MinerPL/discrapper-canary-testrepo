@@ -8,7 +8,7 @@ var l = n("37983"),
   s = n("884691"),
   a = n("414456"),
   i = n.n(a),
-  u = n("907002"),
+  u = n("146606"),
   r = n("65597"),
   o = n("77078"),
   d = n("804160"),
@@ -17,7 +17,7 @@ var l = n("37983"),
   h = n("691307"),
   m = n("314143"),
   S = n("721302"),
-  g = n("888940");
+  g = n("194112");
 
 function x(e) {
   let {
@@ -41,9 +41,9 @@ function E(e) {
     className: n,
     onPageChange: a,
     onMemberSelect: u
-  } = e, E = t.id, T = (0, r.default)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), C = (0, d.useIsMakingRequest)(E), p = (0, d.useIsStillIndexing)(E), I = s.useCallback(e => {
+  } = e, E = t.id, T = (0, r.useStateFromStores)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), p = (0, d.useIsMakingRequest)(E), C = (0, d.useIsStillIndexing)(E), I = s.useCallback(e => {
     null != e && (null == u || u(e))
-  }, [u]), M = (0, f.getSearchState)(p, C, T), A = s.useRef(null), N = s.useRef(null), b = s.useCallback(() => {
+  }, [u]), M = (0, f.getSearchState)(C, p, T), A = s.useRef(null), N = s.useRef(null), b = s.useCallback(() => {
     var e;
     null === (e = A.current) || void 0 === e || e.resetSearchText()
   }, []);

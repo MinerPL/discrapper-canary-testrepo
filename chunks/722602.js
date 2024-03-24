@@ -11,7 +11,7 @@ var r = a("77078"),
   n = a("959097"),
   d = a("300322"),
   u = a("782340"),
-  i = a("590545");
+  i = a("704407");
 
 function o(e) {
   let {
@@ -39,7 +39,7 @@ function o(e) {
     }), (0, s.jsx)(r.Text, {
       color: "header-secondary",
       variant: "text-md/normal",
-      children: u.default.Messages.THREAD_BROWSER_EMPTY_STATE_SUBTEXT
+      children: u.default.Messages.THREAD_BROWSER_EMPTY_STATE_SUBTEXT_REDESIGN
     }), c || f ? (0, s.jsx)(r.Button, {
       className: i.cta,
       onClick: o,

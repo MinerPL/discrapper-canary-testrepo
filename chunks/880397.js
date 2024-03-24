@@ -16,7 +16,7 @@ function l(e) {
     var s;
     t.nick = null !== (s = e.pendingNickname) && void 0 !== s ? s : ""
   }
-  return t
+  return void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t
 }
 s.r(t), s.d(t, {
   getProfileChangesForUpdateRequest: function() {

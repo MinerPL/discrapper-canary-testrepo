@@ -21,7 +21,7 @@ var a = n("65597"),
   m = n("803725"),
   E = n("49111"),
   g = n("782340"),
-  I = n("508170");
+  I = n("249576");
 
 function S(e) {
   (0, r.openContextMenuLazy)(e, async () => {
@@ -95,7 +95,7 @@ let N = e => {
   })
 };
 var T = () => {
-  let e = (0, a.default)([u.default], () => u.default.hasLayers()),
+  let e = (0, a.useStateFromStores)([u.default], () => u.default.hasLayers()),
     t = (0, C.useEnableClips)(),
     {
       clipsEnabled: n,
@@ -104,7 +104,7 @@ var T = () => {
       clipsEnabled: p.default.getSettings().clipsEnabled,
       isAtMaxSavingClipsOperations: p.default.getIsAtMaxSaveClipOperations()
     })),
-    i = (0, a.default)([d.default], () => d.default.getKeybindForAction(E.GlobalKeybindActions.SAVE_CLIP));
+    i = (0, a.useStateFromStores)([d.default], () => d.default.getKeybindForAction(E.GlobalKeybindActions.SAVE_CLIP));
   if (!(t && n) || null == i || e) return null;
   let r = h.toString(i.shortcut, !0);
   return (0, l.jsx)(N, {

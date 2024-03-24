@@ -84,7 +84,7 @@ class _ {
       r = !0;
       let s = n.default.getTrueMember(this.guildId, e);
       if (null == s) return [!1, !1];
-      i = this._members.enhanceNewMember(s, t)
+      i = this._members.enhanceNewMember(s, this.getSearchState(), t)
     }
     if (null == t.isIncludedInSearchResults) {
       let [e, n] = this._getIsIncludedInSearch(i, t);
@@ -104,7 +104,7 @@ class _ {
     if (null == r) {
       let t = n.default.getTrueMember(this.guildId, e);
       if (null == t) return !1;
-      r = this._members.enhanceNewMember(t)
+      r = this._members.enhanceNewMember(t, this.getSearchState())
     } else if (r.isIncludedInSearchResults) return !0;
     let i = this._search.isMemberIncludedInSearchResults(r);
     return i

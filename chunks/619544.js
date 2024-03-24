@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return _
   }
 });
 var s = n("37983");
@@ -10,20 +10,21 @@ var l = n("414456"),
   a = n.n(l),
   i = n("597287"),
   r = n("77078"),
-  o = n("426490"),
-  u = n("782340"),
-  d = n("314164");
+  o = n("214400"),
+  u = n("426490"),
+  d = n("782340"),
+  c = n("758888");
 
-function c(e) {
+function E(e) {
   let {
     didSelfVote: t,
     label: n,
     percentage: l
   } = e;
   return (0, s.jsxs)("div", {
-    className: d.votesData,
+    className: c.votesData,
     children: [t && (0, s.jsx)(i.VisuallyHidden, {
-      children: u.default.Messages.POLL_ANSWER_VOTED_ARIA
+      children: d.default.Messages.POLL_ANSWER_VOTED_ARIA
     }), (0, s.jsxs)(r.Text, {
       variant: "text-md/semibold",
       color: "none",
@@ -39,60 +40,63 @@ function c(e) {
 function f(e) {
   let {
     answer: t,
-    hasVoted: n,
-    isExpired: l,
-    myAvatarUrl: i
-  } = e, r = n || l, u = !0 === t.isSelected, f = !0 === t.didSelfVote, E = !0 === t.isVictor;
+    isExpired: n,
+    myAvatarUrl: l,
+    canShowVoteCounts: i
+  } = e, r = !0 === t.isSelected, o = !0 === t.didSelfVote, d = !0 === t.isVictor;
   return (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(o.PollMediaView, {
-      attachmentClassName: a(d.attachment, {
-        [d.attachmentWithResults]: r
+    children: [(0, s.jsx)(u.PollMediaView, {
+      attachmentClassName: a(c.attachment, {
+        [c.attachmentWithResults]: i
       }),
-      emojiClassName: d.emoji,
+      emojiClassName: c.emoji,
       media: t.pollMedia,
       fallback: (0, s.jsx)("div", {
-        className: a(d.attachment, d.mediaMissing)
-      }),
-      alt: t.pollMedia.text
-    }), u && (0, s.jsx)(o.PollAnswerSelectedIcon, {
+        className: a(c.attachment, c.mediaMissing)
+      })
+    }), r && (0, s.jsx)(u.PollAnswerVotedIcon, {
       size: 40,
-      className: d.selectedIcon
-    }), r && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(c, {
-        didSelfVote: f,
+      isVictor: d,
+      isExpired: n,
+      className: c.selectedIcon
+    }), i && (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(E, {
+        didSelfVote: o,
         percentage: t.votesPercentage,
         label: t.votes,
-        myAvatarUrl: f ? i : void 0
-      }), !l && f && (0, s.jsx)(o.PollAnswerVotedIcon, {
+        myAvatarUrl: o ? l : void 0
+      }), (!n && o || d) && (0, s.jsx)(u.PollAnswerVotedIcon, {
         size: 18,
-        className: d.pollAnswerIcon
-      }), E && (0, s.jsx)(o.PollAnswerVictorIcon, {
-        size: 18,
-        className: d.pollAnswerIcon
+        isVictor: d,
+        isExpired: n,
+        className: c.pollAnswerIcon
       })]
     })]
   })
 }
 
-function E(e) {
+function _(e) {
   let {
     isExpired: t,
-    hasVoted: n,
-    myAvatarUrl: l,
-    ...i
+    myAvatarUrl: n,
+    answersInteraction: l,
+    canShowVoteCounts: i,
+    ...r
   } = e;
-  return (0, s.jsx)(o.PollAnswers, {
-    className: d.answersContainer,
-    answerClassName: a(d.answer, {
-      [d.currentlyVoting]: !n && !t
+  return (0, s.jsx)(u.PollAnswers, {
+    className: c.answersContainer,
+    answerClassName: a(c.answer, {
+      [c.currentlyVoting]: l !== o.PollChatAnswerInteractionType.LIST
     }),
-    myAvatarUrl: l,
+    myAvatarUrl: n,
+    answersInteraction: l,
     renderAnswerContent: e => (0, s.jsx)(f, {
       answer: e,
       isExpired: t,
-      hasVoted: n,
-      myAvatarUrl: l
+      myAvatarUrl: n,
+      answersInteraction: l,
+      canShowVoteCounts: i
     }),
-    ...i
+    ...r
   })
 }

@@ -6,7 +6,7 @@ E.r(_), E.d(_, {
 });
 var t = E("37983");
 E("884691");
-var o = E("132710");
+var o = E("404828");
 
 function n(e) {
   return e.heading = o.defaultRules.heading, e.lheading = o.defaultRules.lheading, e.list = o.defaultRules.list, e.paragraph = {
@@ -24,7 +24,11 @@ function n(e) {
         let _ = e.context[e.target];
         _ && _.onClick ? (n.onClick = _.onClick, n.onContextMenu = _.onContextMenu) : n.onClick = _
       }
-      return null == n.onClick && (n.href = (0, o.sanitizeUrl)(e.target), n.target = "_blank"), (0, t.jsx)("a", {
+      if (null == n.onClick) {
+        var r;
+        n.href = null !== (r = (0, o.sanitizeUrl)(e.target)) && void 0 !== r ? r : void 0, n.target = "_blank"
+      }
+      return (0, t.jsx)("a", {
         title: e.title,
         ...n,
         rel: "noreferrer",

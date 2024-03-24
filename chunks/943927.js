@@ -15,22 +15,22 @@ var a = s("37983"),
   c = s("299285"),
   S = s("65324"),
   E = s("271938"),
-  f = s("55411"),
-  T = s("102985"),
-  m = s("10514"),
-  _ = s("552712"),
+  T = s("55411"),
+  f = s("102985"),
+  _ = s("10514"),
+  m = s("552712"),
   g = s("233976"),
   h = s("920700"),
-  I = s("145131"),
-  N = s("953109"),
+  N = s("145131"),
+  I = s("953109"),
   p = s("461380"),
   C = s("306160"),
   A = s("659632"),
   O = s("380186"),
   x = s("646718"),
   R = s("782340"),
-  M = s("664829");
-class v extends n.PureComponent {
+  M = s("43965");
+class D extends n.PureComponent {
   componentWillUnmount() {
     this._copyModeTimeout.stop()
   }
@@ -54,8 +54,8 @@ class v extends n.PureComponent {
     } = this.props, {
       copyMode: s
     } = this.state;
-    return (0, a.jsxs)(I.default, {
-      direction: I.default.Direction.VERTICAL,
+    return (0, a.jsxs)(N.default, {
+      direction: N.default.Direction.VERTICAL,
       className: M.giftCodeRow,
       children: [(0, a.jsx)(h.default, {
         className: M.codeText,
@@ -107,7 +107,7 @@ class v extends n.PureComponent {
     }
   }
 }
-class D extends n.PureComponent {
+class v extends n.PureComponent {
   componentDidMount() {
     this._loadedAt = Date.now()
   }
@@ -130,9 +130,9 @@ class D extends n.PureComponent {
     })
   }
   renderGenerateGiftCodeRow() {
-    return (0, a.jsxs)(I.default, {
-      justify: I.default.Justify.BETWEEN,
-      align: I.default.Align.CENTER,
+    return (0, a.jsxs)(N.default, {
+      justify: N.default.Justify.BETWEEN,
+      align: N.default.Align.CENTER,
       className: M.generateCodeRow,
       children: [(0, a.jsx)("div", {
         className: M.codeText,
@@ -175,15 +175,15 @@ class D extends n.PureComponent {
           splashArtURL: t.getSplashURL(512),
           children: (0, a.jsxs)("div", {
             className: M.cardHeader,
-            children: [(0, a.jsxs)(I.default, {
-              align: I.default.Align.CENTER,
+            children: [(0, a.jsxs)(N.default, {
+              align: N.default.Align.CENTER,
               children: [null != u ? (0, a.jsx)(S.default, {
                 giftStyle: u,
                 className: M.seasonalGiftBox,
                 shouldAnimate: this.state.isHovered
-              }) : (0, a.jsx)(N.default, {
+              }) : (0, a.jsx)(I.default, {
                 game: t,
-                size: N.default.Sizes.MEDIUM,
+                size: I.default.Sizes.MEDIUM,
                 skuId: i.id
               }), (0, a.jsxs)("div", {
                 className: M.headerText,
@@ -204,7 +204,7 @@ class D extends n.PureComponent {
         children: r ? (0, a.jsx)(d.Spinner, {
           className: M.spinner
         }) : (0, a.jsxs)(n.Fragment, {
-          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(v, {
+          children: [s.length < e.length ? this.renderGenerateGiftCodeRow() : null, s.map(e => (0, a.jsx)(D, {
             giftCode: e,
             sku: i,
             hideCode: o
@@ -243,21 +243,21 @@ class D extends n.PureComponent {
     }
   }
 }
-var L = r.default.connectStores([_.default, T.default, f.default, c.default, m.default, E.default], e => {
+var L = r.default.connectStores([m.default, f.default, T.default, c.default, _.default, E.default], e => {
   let {
     skuId: t,
     subscriptionPlanId: s,
     giftStyle: a
-  } = e, n = _.default.get(t);
+  } = e, n = m.default.get(t);
   if (null == n) throw Error("SKU was unavailable while rendering gift.");
-  let l = f.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
+  let l = T.default.getForGifterSKUAndPlan(E.default.getId(), t, s).filter(e => !e.isClaimed).filter(e => e.giftStyle === a);
   return {
     sku: n,
-    hideCodes: T.default.enabled,
-    isFetching: f.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
-    loadedAt: f.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
+    hideCodes: f.default.enabled,
+    isFetching: T.default.getUserGiftCodesFetchingForSKUAndPlan(t, s),
+    loadedAt: T.default.getUserGiftCodesLoadedAtForSKUAndPlan(t, s),
     application: c.default.getApplication(n.applicationId),
     subscriptionPlan: null != s ? (0, O.getOrFetchSubscriptionPlan)(s) : null,
     giftCodes: l
   }
-})(D)
+})(v)

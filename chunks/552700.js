@@ -12,21 +12,21 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("627445"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("669491"),
   c = n("77078"),
   f = n("272030"),
   h = n("244201"),
-  p = n("506885"),
-  m = n("981601"),
+  m = n("506885"),
+  p = n("981601"),
   E = n("26989"),
-  C = n("328275"),
-  g = n("118503"),
-  S = n("711486"),
+  g = n("328275"),
+  S = n("118503"),
+  C = n("711486"),
   _ = n("387111"),
   I = n("808422"),
-  T = n("5668");
+  T = n("26324");
 let v = l.memo(function(e) {
     let {
       guildId: t,
@@ -37,7 +37,7 @@ let v = l.memo(function(e) {
     } = e;
     return (0, a.jsxs)("div", {
       className: T.textContainer,
-      children: [i ? (0, a.jsx)(C.default, {
+      children: [i ? (0, a.jsx)(g.default, {
         className: T.blockedIcon,
         color: d.default.unsafe_rawColors.RED_400.css
       }) : null, (0, a.jsx)(c.Text, {
@@ -45,7 +45,7 @@ let v = l.memo(function(e) {
         variant: "text-sm/normal",
         color: "header-primary",
         children: _.default.getName(t, n, l)
-      }), s ? (0, a.jsx)(g.default, {
+      }), s ? (0, a.jsx)(S.default, {
         className: T.boost,
         color: d.default.unsafe_rawColors.GUILD_BOOSTING_PINK.css
       }) : null]
@@ -59,31 +59,31 @@ let v = l.memo(function(e) {
       channel: s,
       isPremium: r
     } = e, {
-      user: o,
-      blocked: u,
+      user: u,
+      blocked: o,
       rtsState: d
     } = n, c = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK, f = d === I.RequestToSpeakStates.REQUESTED_TO_SPEAK || c;
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: T.avatarContainer,
-        children: [f && (0, a.jsx)(S.default, {
+        children: [f && (0, a.jsx)(C.default, {
           className: i(T.icon, {
             [T.invited]: c
           })
         }), (0, a.jsx)("img", {
-          src: null !== (t = o.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
-          alt: o.username,
-          "aria-label": o.username,
+          src: null !== (t = u.getAvatarURL(s.guild_id, 56, !1)) && void 0 !== t ? t : void 0,
+          alt: u.username,
+          "aria-label": u.username,
           className: i(T.avatar, {
-            [T.faded]: u
+            [T.faded]: o
           })
         })]
       }), (0, a.jsx)(v, {
         guildId: l,
         channelId: s.id,
-        user: o,
+        user: u,
         isPremium: r,
-        isBlocked: u
+        isBlocked: o
       })]
     })
   }),
@@ -97,11 +97,11 @@ var A = l.memo(function(e) {
   } = e, {
     user: r,
     blocked: d
-  } = t, C = s.getGuildId(), g = (0, h.useAppContext)(), S = (0, u.useStateFromStores)([E.default], () => {
+  } = t, g = s.getGuildId(), S = (0, h.useAppContext)(), C = (0, o.useStateFromStores)([E.default], () => {
     var e;
-    return null != C && (null === (e = E.default.getMember(C, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
-  }, [C, r.id]);
-  o(null != C, "Channel cannot be guildless");
+    return null != g && (null === (e = E.default.getMember(g, r.id)) || void 0 === e ? void 0 : e.premiumSince) != null
+  }, [g, r.id]);
+  u(null != g, "Channel cannot be guildless");
   let _ = l.useCallback(e => {
       (0, f.openContextMenuLazy)(e, async () => {
         let {
@@ -110,24 +110,24 @@ var A = l.memo(function(e) {
         return t => (0, a.jsx)(e, {
           ...t,
           user: r,
-          guildId: C,
+          guildId: g,
           channel: s,
           showMediaItems: !0,
           showStageChannelItems: !0,
           showChatItems: !1
         })
       }, {
-        context: g
+        context: S
       })
-    }, [r, C, s, g]),
-    I = l.useCallback(e => (0, a.jsx)(m.default, {
+    }, [r, g, s, S]),
+    I = l.useCallback(e => (0, a.jsx)(p.default, {
       ...e,
-      guildId: C,
+      guildId: g,
       channelId: s.id,
       userId: r.id
-    }), [s.id, C, r.id]);
+    }), [s.id, g, r.id]);
   return (0, a.jsx)(c.Popout, {
-    preload: () => (0, p.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
+    preload: () => (0, m.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
       guildId: s.guild_id,
       channelId: s.id
     }),
@@ -136,16 +136,16 @@ var A = l.memo(function(e) {
     spacing: 8,
     children: e => (0, a.jsx)(c.Clickable, {
       className: i(T.tileContainer, {
-        [T.singleIcon]: S || d,
-        [T.doubleIcon]: S && d
+        [T.singleIcon]: C || d,
+        [T.doubleIcon]: C && d
       }),
       onContextMenu: _,
       ...e,
       children: (0, a.jsx)(x, {
         participant: t,
-        guildId: C,
+        guildId: g,
         channel: s,
-        isPremium: S
+        isPremium: C
       })
     })
   })

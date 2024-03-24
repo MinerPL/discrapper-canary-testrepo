@@ -3,11 +3,11 @@ n.r(t), n.d(t, {
   default: function() {
     return c
   }
-}), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007");
+});
 var i = n("917351"),
   s = n.n(i),
   r = n("669491"),
-  a = n("691898"),
+  a = n("253981"),
   o = n("49111");
 let l = [{
     type: o.PlatformTypes.TWITCH,
@@ -60,6 +60,19 @@ let l = [{
       lightSVG: n("35024"),
       darkSVG: n("35024"),
       whiteSVG: n("671223")
+    },
+    enabled: !0
+  }, {
+    type: o.PlatformTypes.BUNGIE,
+    name: "Bungie.net",
+    color: r.default.unsafe_rawColors.BUNGIE.css,
+    icon: {
+      lightPNG: n("879477"),
+      darkPNG: n("36180"),
+      whitePNG: n("191120"),
+      lightSVG: n("790262"),
+      darkSVG: n("353652"),
+      whiteSVG: n("946613")
     },
     enabled: !0
   }, {
@@ -306,6 +319,18 @@ let l = [{
     },
     enabled: !0
   }, {
+    type: o.PlatformTypes.ROBLOX,
+    name: "Roblox",
+    icon: {
+      lightPNG: n("740311"),
+      darkPNG: n("665042"),
+      whitePNG: n("640513"),
+      lightSVG: n("331944"),
+      darkSVG: n("531010"),
+      whiteSVG: n("213876")
+    },
+    enabled: !1
+  }, {
     type: o.PlatformTypes.PAYPAL,
     name: "PayPal",
     icon: {
@@ -367,7 +392,7 @@ let l = [{
       darkSVG: n("496955"),
       whiteSVG: n("152071")
     },
-    enabled: !0,
+    enabled: !1,
     getPlatformUserUrl: e => {
       let {
         name: t
@@ -404,11 +429,7 @@ let l = [{
       } = e;
       return "https://".concat(t, "/")
     },
-    get enabled() {
-      return a.DomainConnectionExperiment.getCurrentConfig({
-        location: "ed49a3_1"
-      }).enabled
-    }
+    enabled: !0
   }],
   u = s.keyBy(l, "type"),
   d = {};
@@ -424,8 +445,9 @@ var c = {
     return null !== (t = u[e]) && void 0 !== t ? t : null
   },
   getByUrl(e) {
-    let t = new URL(e),
-      n = t.hostname,
+    let t = a.default.toURLSafe(e);
+    if (null == t) return;
+    let n = t.hostname,
       i = n.startsWith("www.") ? n.slice(4) : n;
     return d[i]
   },

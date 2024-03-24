@@ -40,7 +40,7 @@ function r(e, t) {
 
 function a(e, t) {
   let n = [];
-  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? n.unshift({
+  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t === i.MediaEngineContextTypes.STREAM && n.unshift({
     name: "H265",
     encode: !0,
     decode: !0

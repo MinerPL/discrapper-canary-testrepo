@@ -1,164 +1,154 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return I
+    return A
   }
-}), n("843762");
-var a = n("917351"),
-  s = n.n(a),
-  l = n("446674"),
-  i = n("913144"),
-  r = n("447435"),
-  d = n("692038"),
-  u = n("915639"),
-  o = n("42203"),
-  c = n("26989"),
-  f = n("305961"),
-  g = n("377253"),
-  E = n("27618"),
-  m = n("697218");
-let h = {};
+}), s("843762");
+var n = s("917351"),
+  a = s.n(n),
+  l = s("446674"),
+  i = s("913144"),
+  d = s("447435"),
+  r = s("692038"),
+  u = s("915639"),
+  o = s("42203"),
+  c = s("26989"),
+  f = s("305961"),
+  E = s("377253"),
+  g = s("27618"),
+  M = s("697218");
+let _ = {};
 
-function p(e) {
+function h(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    s = o.default.getChannel(e),
-    l = null != s ? s.getGuildId() : null;
+    s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+    a = o.default.getChannel(e),
+    l = null != a ? a.getGuildId() : null;
   return {
     id: e,
-    messages: t.map(e => (0, d.createMessageRecord)(e)),
+    messages: t.map(e => (0, r.createMessageRecord)(e)),
     guildId: l,
-    loaded: n,
-    loading: a
+    loaded: s,
+    loading: n
   }
 }
 
-function M(e) {
+function m(e) {
   let {
     channel: t
   } = e;
-  delete h[t.id]
-}
-
-function _() {
-  s.forEach(h, e => {
-    s.forEach(e.messages, e => {
-      e.timestamp.locale(u.default.locale)
-    })
-  })
+  delete _[t.id]
 }
 
 function N() {
-  s.forEach(h, e => {
-    e.messages = e.messages.map(e => e.set("blocked", E.default.isBlocked(e.author.id)))
+  a.forEach(_, e => {
+    e.messages = e.messages.map(e => e.set("blocked", g.default.isBlocked(e.author.id)))
   })
 }
 class S extends l.default.Store {
   initialize() {
-    this.waitFor(o.default, f.default, c.default, g.default, m.default, u.default)
+    this.waitFor(o.default, f.default, c.default, E.default, M.default, u.default)
   }
   getPinnedMessages(e) {
     var t;
-    return null !== (t = h[e]) && void 0 !== t ? t : void 0
+    return null !== (t = _[e]) && void 0 !== t ? t : void 0
   }
   loaded(e) {
-    return null != h[e] && h[e].loaded
+    return null != _[e] && _[e].loaded
   }
 }
 S.displayName = "ChannelPinsStore";
-var I = new S(i.default, {
+var A = new S(i.default, {
   CONNECTION_OPEN: function() {
-    h = {}
+    _ = {}
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    h = s(h).filter(e => e.guildId !== t.id).keyBy("id").value()
+    _ = a(_).filter(e => e.guildId !== t.id).keyBy("id").value()
   },
   MESSAGE_UPDATE: function(e) {
     let t = e.message.id,
-      n = e.message.channel_id;
-    if (null == n) return !1;
-    let a = h[n];
-    if (null == a && !e.message.pinned) return !1;
+      s = e.message.channel_id;
+    if (null == s) return !1;
+    let n = _[s];
+    if (null == n && !e.message.pinned) return !1;
     if (null == e.message.author) {
-      if (null != a) {
-        let l = s.findIndex(a.messages, e => e.id === t);
+      if (null != n) {
+        let l = a.findIndex(n.messages, e => e.id === t);
         if (l >= 0) {
-          let t = a.messages[l],
-            s = (0, d.updateMessageRecord)(t, e.message);
-          if (s !== t) {
-            let e = a.messages.slice();
-            e[l] = s, h[n].messages = e
+          let t = n.messages[l],
+            a = (0, r.updateMessageRecord)(t, e.message);
+          if (a !== t) {
+            let e = n.messages.slice();
+            e[l] = a, _[s].messages = e
           }
         }
       }
       return
     }
     if (e.message.pinned) {
-      if (null == a) {
-        a = p(n, [e.message], !1), h[n] = a;
+      if (null == n) {
+        n = h(s, [e.message], !1), _[s] = n;
         return
       }
-      a.messages = a.messages.slice();
-      let l = s.findIndex(a.messages, e => e.id === t); - 1 === l ? a.messages.unshift((0, d.createMessageRecord)(e.message)) : a.messages[l] = (0, d.updateMessageRecord)(a.messages[l], e.message), h[n] = a
+      n.messages = n.messages.slice();
+      let l = a.findIndex(n.messages, e => e.id === t); - 1 === l ? n.messages.unshift((0, r.createMessageRecord)(e.message)) : n.messages[l] = (0, r.updateMessageRecord)(n.messages[l], e.message), _[s] = n
     } else {
-      if (null == a) return;
-      let e = s.findIndex(a.messages, e => e.id === t);
+      if (null == n) return;
+      let e = a.findIndex(n.messages, e => e.id === t);
       if (-1 === e) return;
-      a.messages = a.messages.slice(), a.messages.splice(e, 1), h[n] = a
+      n.messages = n.messages.slice(), n.messages.splice(e, 1), _[s] = n
     }
   },
   MESSAGE_DELETE: function(e) {
     let {
       id: t,
-      channelId: n
-    } = e, a = h[n];
-    if (null == a) return !1;
-    let l = s.remove(a.messages, e => e.id === t);
+      channelId: s
+    } = e, n = _[s];
+    if (null == n) return !1;
+    let l = a.remove(n.messages, e => e.id === t);
     if (0 === l.length) return !1;
-    a.messages = a.messages.slice(), h[n] = a
+    n.messages = n.messages.slice(), _[s] = n
   },
   MESSAGE_DELETE_BULK: function(e) {
     let {
       ids: t,
-      channelId: n
-    } = e, a = h[n];
-    null != a && (a.messages = a.messages.filter(e => -1 === t.indexOf(e.id)))
+      channelId: s
+    } = e, n = _[s];
+    null != n && (n.messages = n.messages.filter(e => -1 === t.indexOf(e.id)))
   },
   LOAD_PINNED_MESSAGES: function(e) {
     let {
       channelId: t
     } = e;
-    h[t] = p(t, [], !1, !0)
+    _[t] = h(t, [], !1, !0)
   },
   LOAD_PINNED_MESSAGES_SUCCESS: function(e) {
     let {
       channelId: t,
-      messages: n
+      messages: s
     } = e;
-    h[t] = p(t, n, !0)
+    _[t] = h(t, s, !0)
   },
   LOAD_PINNED_MESSAGES_FAILURE: function(e) {
     let {
       channelId: t
     } = e;
-    delete h[t]
+    delete _[t]
   },
-  USER_SETTINGS_PROTO_UPDATE: _,
-  I18N_LOAD_SUCCESS: _,
-  CHANNEL_DELETE: M,
-  THREAD_DELETE: M,
+  CHANNEL_DELETE: m,
+  THREAD_DELETE: m,
   RELATIONSHIP_ADD: N,
   RELATIONSHIP_REMOVE: N,
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function(e) {
     let {
       messageId: t,
-      channelId: n
-    } = e, a = h[n];
-    if (null == a) return;
-    let l = s.findIndex(a.messages, e => e.id === t); - 1 !== l && (a.messages = a.messages.slice(), a.messages[l] = (0, r.handleExplicitMediaScanTimeoutForMessage)(a.messages[l]), h[n] = a)
+      channelId: s
+    } = e, n = _[s];
+    if (null == n) return;
+    let l = a.findIndex(n.messages, e => e.id === t); - 1 !== l && (n.messages = n.messages.slice(), n.messages[l] = (0, d.handleExplicitMediaScanTimeoutForMessage)(n.messages[l]), _[s] = n)
   }
 })

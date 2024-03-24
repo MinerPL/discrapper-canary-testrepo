@@ -40,7 +40,7 @@ var a = n("872717"),
       l.default.dispatch({
         type: "LOAD_RECENT_MENTIONS",
         guildId: n
-      }), a.default.get({
+      }), a.HTTP.get({
         url: s.Endpoints.MENTIONS,
         query: {
           before: e,
@@ -68,7 +68,7 @@ var a = n("872717"),
       })
     },
     deleteRecentMention(e) {
-      a.default.delete({
+      a.HTTP.del({
         url: s.Endpoints.MENTIONS_MESSAGE_ID(e),
         retries: 2,
         oldFormErrors: !0

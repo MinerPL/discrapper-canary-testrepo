@@ -1,202 +1,202 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return j
+    return _
   }
-}), a("222007"), a("511434"), a("313619"), a("654714"), a("287168"), a("956660");
-var l = a("37983"),
-  s = a("884691"),
-  n = a("414456"),
-  i = a.n(n),
-  r = a("77078"),
-  o = a("81594"),
-  d = a("966724"),
-  u = a("149022"),
-  c = a("217535"),
-  m = a("474643"),
-  h = a("599110"),
-  p = a("773336"),
-  f = a("50885"),
-  g = a("49111"),
-  E = a("782340"),
-  M = a("831839"),
-  v = a("926622");
+}), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("77078"),
+  o = n("81594"),
+  u = n("966724"),
+  d = n("149022"),
+  c = n("217535"),
+  f = n("474643"),
+  p = n("599110"),
+  m = n("773336"),
+  h = n("50885"),
+  x = n("49111"),
+  E = n("782340"),
+  y = n("1065"),
+  g = n("890957");
 
-function x(e) {
-  var t, a, n, r;
+function S(e) {
+  var t, n, a, r;
   let {
     file: o
-  } = e, [d, u] = s.useState(), [c, m] = s.useState(!1), [h, p] = s.useState({}), f = s.useRef(null);
-  s.useEffect(() => {
-    let e = f.current;
-    if (null != e && m(!1), null == o) return;
+  } = e, [u, d] = l.useState(), [c, f] = l.useState(!1), [p, m] = l.useState({}), h = l.useRef(null);
+  l.useEffect(() => {
+    let e = h.current;
+    if (null != e && f(!1), null == o) return;
     let t = URL.createObjectURL(o);
-    return u(t), () => {
-      u(void 0), URL.revokeObjectURL(t)
+    return d(t), () => {
+      d(void 0), URL.revokeObjectURL(t)
     }
-  }, [o]), s.useLayoutEffect(() => {
-    let e = f.current;
+  }, [o]), l.useLayoutEffect(() => {
+    let e = h.current;
     null != e && (e.onload = () => {
       let t = e.naturalWidth / e.naturalHeight,
-        a = Math.max(.66, Math.min(t, 4));
-      1 === a ? p({
+        n = Math.max(.66, Math.min(t, 4));
+      1 === n ? m({
         width: 104,
         height: 104
-      }) : a > 1 ? p({
-        width: 104 * a,
+      }) : n > 1 ? m({
+        width: 104 * n,
         height: void 0
-      }) : p({
+      }) : m({
         width: void 0,
-        height: 104 / a
-      }), m(!0)
+        height: 104 / n
+      }), f(!0)
     })
   }, []);
-  let g = Math.max(16, (120 - (null !== (a = null === (t = f.current) || void 0 === t ? void 0 : t.width) && void 0 !== a ? a : 0)) / 2);
-  return (0, l.jsx)("img", {
-    ref: f,
-    src: d,
-    className: i(M.icon, {
-      [M.image]: !c
+  let x = Math.max(16, (120 - (null !== (n = null === (t = h.current) || void 0 === t ? void 0 : t.width) && void 0 !== n ? n : 0)) / 2);
+  return (0, i.jsx)("img", {
+    ref: h,
+    src: u,
+    className: s(y.icon, {
+      [y.image]: !c
     }),
     "aria-hidden": !0,
     alt: "",
     style: {
-      width: null !== (n = h.width) && void 0 !== n ? n : "initial",
-      height: null !== (r = h.height) && void 0 !== r ? r : 104,
-      marginLeft: g,
-      marginRight: g,
-      marginTop: null != h.height ? 104 - h.height - 33 : -33
+      width: null !== (a = p.width) && void 0 !== a ? a : "initial",
+      height: null !== (r = p.height) && void 0 !== r ? r : 104,
+      marginLeft: x,
+      marginRight: x,
+      marginTop: null != p.height ? 104 - p.height - 33 : -33
     }
   })
 }
-class T extends s.Component {
+class C extends l.Component {
   render() {
     var e;
-    if (this.props.upload.item.platform !== d.UploadPlatform.WEB) return null;
-    if (this.props.upload.isImage) return (0, l.jsx)(x, {
+    if (this.props.upload.item.platform !== u.UploadPlatform.WEB) return null;
+    if (this.props.upload.isImage) return (0, i.jsx)(S, {
       file: this.props.upload.item.file
     });
-    return (0, l.jsx)("div", {
-      className: i(M.icon, {
-        [M[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
+    return (0, i.jsx)("div", {
+      className: s(y.icon, {
+        [y[null !== (e = this.props.upload.classification) && void 0 !== e ? e : ""]]: !0
       })
     })
   }
 }
-class L extends s.Component {
+class T extends l.Component {
   componentDidMount() {
     var e;
-    (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === d.UploadPlatform.WEB && h.default.track(g.AnalyticEvents.OPEN_MODAL, {
+    (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && p.default.track(x.AnalyticEvents.OPEN_MODAL, {
       type: "Upload Large Message",
       message_content_length: this.props.upload.item.file.size
-    }), p.isPlatformEmbedded && f.default.focus()
+    }), m.isPlatformEmbedded && h.default.focus()
   }
   shouldComponentUpdate(e) {
     return null != e.upload
   }
   componentDidUpdate(e) {
-    var t, a, l, s;
-    (null === (t = e.upload) || void 0 === t ? void 0 : t.filename) !== (null === (a = this.props.upload) || void 0 === a ? void 0 : a.filename) && this.setState({
-      filename: null !== (s = null === (l = this.props.upload) || void 0 === l ? void 0 : l.filename) && void 0 !== s ? s : ""
+    var t, n, i, l;
+    (null === (t = e.upload) || void 0 === t ? void 0 : t.filename) !== (null === (n = this.props.upload) || void 0 === n ? void 0 : n.filename) && this.setState({
+      filename: null !== (l = null === (i = this.props.upload) || void 0 === i ? void 0 : i.filename) && void 0 !== l ? l : ""
     })
   }
   render() {
     let {
       upload: e,
       transitionState: t,
-      messageMaxLength: a,
-      disableSpoiler: n
+      messageMaxLength: n,
+      disableSpoiler: a
     } = this.props, {
       hasSpoiler: o
     } = this.state;
-    return (0, l.jsxs)(r.ModalRoot, {
+    return (0, i.jsxs)(r.ModalRoot, {
       "aria-label": E.default.Messages.ATTACH_FILES,
       size: r.ModalSize.DYNAMIC,
       transitionState: t,
-      className: i(M.uploadModal),
-      children: [(0, l.jsxs)("div", {
-        className: M.inner,
-        children: [(0, l.jsxs)("div", {
-          className: i(M.file, {
-            [M.expandable]: e.isImage
+      className: s(y.uploadModal),
+      children: [(0, i.jsxs)("div", {
+        className: y.inner,
+        children: [(0, i.jsxs)("div", {
+          className: s(y.file, {
+            [y.expandable]: e.isImage
           }),
-          children: [(0, l.jsx)(T, {
+          children: [(0, i.jsx)(C, {
             upload: e
-          }), (0, l.jsxs)("div", {
-            className: M.description,
-            children: [(0, l.jsx)("div", {
-              className: M.filename,
+          }), (0, i.jsxs)("div", {
+            className: y.description,
+            children: [(0, i.jsx)("div", {
+              className: y.filename,
               children: e.showLargeMessageDialog ? E.default.Messages.LARGE_MESSAGE_UPLOAD_TITLE_MAX_LENGTH.format({
-                maxLength: a
+                maxLength: n
               }) : e.filename
-            }), e.showLargeMessageDialog ? (0, l.jsx)("div", {
-              className: M.subtitle,
+            }), e.showLargeMessageDialog ? (0, i.jsx)("div", {
+              className: y.subtitle,
               children: E.default.Messages.LARGE_MESSAGE_UPLOAD_SUBTITLE
             }) : null]
           })]
-        }), (0, l.jsx)("div", {
-          className: M.comment,
-          children: (0, l.jsxs)(s.Fragment, {
-            children: [(0, l.jsx)("div", {
-              className: M.label,
-              children: (0, l.jsx)("span", {
+        }), (0, i.jsx)("div", {
+          className: y.comment,
+          children: (0, i.jsxs)(l.Fragment, {
+            children: [(0, i.jsx)("div", {
+              className: y.label,
+              children: (0, i.jsx)("span", {
                 children: E.default.Messages.UPLOAD_AREA_FILENAME
               })
-            }), (0, l.jsx)(r.TextInput, {
-              className: i(M.channelTextAreaUpload, v.marginTop8),
+            }), (0, i.jsx)(r.TextInput, {
+              className: s(y.channelTextAreaUpload, g.marginTop8),
               value: this.state.filename,
               onChange: e => this.setState({
                 filename: e
               }),
               onKeyDown: e => {
-                if (e.which === g.KeyboardKeys.ENTER) return this.handleSubmit()
+                if (e.which === x.KeyboardKeys.ENTER) return this.handleSubmit()
               }
-            }), e.isImage ? (0, l.jsxs)(s.Fragment, {
-              children: [(0, l.jsx)("div", {
-                className: M.label,
-                children: (0, l.jsx)("span", {
+            }), e.isImage ? (0, i.jsxs)(l.Fragment, {
+              children: [(0, i.jsx)("div", {
+                className: y.label,
+                children: (0, i.jsx)("span", {
                   children: E.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_LABEL
                 })
-              }), (0, l.jsx)(r.TextInput, {
-                className: i(M.channelTextAreaUpload, v.marginTop8),
+              }), (0, i.jsx)(r.TextInput, {
+                className: s(y.channelTextAreaUpload, g.marginTop8),
                 placeholder: E.default.Messages.ATTACHMENT_MODAL_IMAGE_DESCRIPTION_PLACEHOLDER,
                 value: this.state.description,
                 onChange: e => this.setState({
                   description: e
                 }),
                 onKeyDown: e => {
-                  if (e.which === g.KeyboardKeys.ENTER) return this.handleSubmit()
+                  if (e.which === x.KeyboardKeys.ENTER) return this.handleSubmit()
                 }
               })]
-            }) : null, !0 !== n && (0, l.jsx)(r.Checkbox, {
-              className: v.marginBottom20,
+            }) : null, !0 !== a && (0, i.jsx)(r.Checkbox, {
+              className: g.marginBottom20,
               value: o,
               onChange: (e, t) => this.setState({
                 hasSpoiler: t
               }),
-              children: (0, l.jsx)(r.Text, {
+              children: (0, i.jsx)(r.Text, {
                 variant: "text-sm/normal",
                 children: E.default.Messages.SPOILER_MARK_SELECTED
               })
             })]
           })
         })]
-      }), (0, l.jsx)("div", {
-        className: M.footer,
-        children: (0, l.jsxs)("div", {
-          className: i(M.hasSpoilers, M.footerRightAlign),
-          children: [(0, l.jsx)(r.Button, {
+      }), (0, i.jsx)("div", {
+        className: y.footer,
+        children: (0, i.jsxs)("div", {
+          className: s(y.hasSpoilers, y.footerRightAlign),
+          children: [(0, i.jsx)(r.Button, {
             type: "button",
             look: r.Button.Looks.LINK,
             color: r.Button.Colors.PRIMARY,
             onClick: this.cancel,
-            children: (0, l.jsx)("span", {
+            children: (0, i.jsx)("span", {
               children: E.default.Messages.CANCEL
             })
-          }), (0, l.jsx)(r.Button, {
+          }), (0, i.jsx)(r.Button, {
             type: "submit",
             onClick: this.handleSubmit,
-            children: (0, l.jsx)("span", {
+            children: (0, i.jsx)("span", {
               children: E.default.Messages.ATTACHMENT_MODAL_SAVE
             })
           })]
@@ -205,48 +205,48 @@ class L extends s.Component {
     })
   }
   constructor(e) {
-    var t, a, l, s, n, i;
+    var t, n, i, l, a, s;
     super(e), this.cancelAll = () => {
       o.default.clearAll(this.props.channelId, this.props.draftType), this.props.onClose()
     }, this.cancel = () => {
       this.props.onClose()
-    }, this.handleTextChange = (e, t, a) => {
+    }, this.handleTextChange = (e, t, n) => {
       this.setState({
         textValue: t,
-        richValue: a
+        richValue: n
       })
     }, this.handleSubmit = () => {
       let {
         upload: e,
         onClose: t,
-        onSubmit: a
+        onSubmit: n
       } = this.props, {
-        filename: l,
-        description: s,
-        hasSpoiler: n
+        filename: i,
+        description: l,
+        hasSpoiler: a
       } = this.state;
-      a({
+      n({
         upload: e,
-        name: l,
-        description: s,
-        spoiler: n
+        name: i,
+        description: l,
+        spoiler: a
       }), t()
     };
-    let r = e.ignoreDraft ? "" : m.default.getDraft(this.props.channelId, e.draftType);
+    let r = e.ignoreDraft ? "" : f.default.getDraft(this.props.channelId, e.draftType);
     this.state = {
-      ...(0, u.createState)(r),
+      ...(0, d.createState)(r),
       textFocused: !0,
-      hasSpoiler: null !== (s = null === (t = e.upload) || void 0 === t ? void 0 : t.spoiler) && void 0 !== s && s,
-      filename: null !== (n = null === (a = e.upload) || void 0 === a ? void 0 : a.filename) && void 0 !== n ? n : "",
+      hasSpoiler: null !== (l = null === (t = e.upload) || void 0 === t ? void 0 : t.spoiler) && void 0 !== l && l,
+      filename: null !== (a = null === (n = e.upload) || void 0 === n ? void 0 : n.filename) && void 0 !== a ? a : "",
       contentWarningProps: null,
-      description: null !== (i = null === (l = e.upload) || void 0 === l ? void 0 : l.description) && void 0 !== i ? i : ""
+      description: null !== (s = null === (i = e.upload) || void 0 === i ? void 0 : i.description) && void 0 !== s ? s : ""
     }
   }
 }
 
-function j(e) {
+function _(e) {
   let t = (0, c.default)();
-  return e.upload.item.platform !== d.UploadPlatform.WEB ? null : (0, l.jsx)(L, {
+  return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(T, {
     ...e,
     file: e.upload.item.file,
     messageMaxLength: t

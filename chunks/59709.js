@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), l("222007");
 var n = l("37983"),
@@ -21,7 +21,7 @@ var n = l("37983"),
   f = l("158998"),
   v = l("49111"),
   C = l("782340"),
-  I = l("244369");
+  I = l("562484");
 
 function m(e) {
   let {
@@ -72,7 +72,7 @@ function m(e) {
     }) : null]
   })
 }
-var g = function(e) {
+var T = function(e) {
   var t;
   let {
     transitionState: l,
@@ -80,12 +80,12 @@ var g = function(e) {
     guildId: u,
     onClose: c,
     analyticsSource: f,
-    analyticsLocations: g
-  } = e, T = (0, s.useStateFromStores)([_.default], () => null != u ? _.default.getMember(u, i.id) : null), k = (0, s.useStateFromStores)([A.default, N.default, E.default], () => {
+    analyticsLocations: T
+  } = e, g = (0, s.useStateFromStores)([_.default], () => null != u ? _.default.getMember(u, i.id) : null), k = (0, s.useStateFromStores)([A.default, N.default, E.default], () => {
     var e;
     let t = E.default.getGuild(u);
     return null != t && ((null === (e = N.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === i.id ? A.default.can(v.Permissions.CHANGE_NICKNAME, t) || A.default.can(v.Permissions.MANAGE_NICKNAMES, t) : A.default.canManageUser(v.Permissions.MANAGE_NICKNAMES, i.id, t))
-  }), [S, R] = a.useState(!1), [D, h] = a.useState(null !== (t = null == T ? void 0 : T.nick) && void 0 !== t ? t : ""), [y, L] = a.useState({});
+  }), [S, R] = a.useState(!1), [D, h] = a.useState(null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : ""), [y, L] = a.useState({});
   a.useEffect(() => {
     M.default.track(v.AnalyticEvents.OPEN_MODAL, {
       type: "Change Server Identity",
@@ -94,19 +94,19 @@ var g = function(e) {
     })
   }, []);
   let O = (0, d.useTrackModerationAction)(u, {
-      location: null == g ? void 0 : g[0],
+      location: null == T ? void 0 : T[0],
       targetUserId: i.id
     }),
     b = a.useCallback(async e => {
       var t, l, n, a, s, o, _, E, A;
       e.preventDefault();
       let N = null;
-      if (D !== (null !== (t = null == T ? void 0 : T.nick) && void 0 !== t ? t : "") && ((N = null != N ? N : {}).nick = D), null == N) {
+      if (D !== (null !== (t = null == g ? void 0 : g.nick) && void 0 !== t ? t : "") && ((N = null != N ? N : {}).nick = D), null == N) {
         c();
         return
       }
       try {
-        R(!0), await r.default.patch({
+        R(!0), await r.HTTP.patch({
           url: v.Endpoints.GUILD_MEMBER(u, i.id),
           body: N
         }), O(d.ModerationActionType.CHANGE_NICKNAME), c()
@@ -118,7 +118,7 @@ var g = function(e) {
           nick: e
         })
       }
-    }, [u, D, c, i, T, O]);
+    }, [u, D, c, i, g, O]);
   return (0, n.jsx)(o.ModalRoot, {
     "aria-label": C.default.Messages.CHANGE_IDENTITY,
     transitionState: l,
@@ -138,7 +138,7 @@ var g = function(e) {
           error: y.nick,
           nickname: D,
           setNickname: h,
-          hasNick: (null == T ? void 0 : T.nick) != null
+          hasNick: (null == g ? void 0 : g.nick) != null
         })
       }), (0, n.jsxs)(o.ModalFooter, {
         children: [(0, n.jsx)(o.Button, {

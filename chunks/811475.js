@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   default: function() {
-    return L
+    return x
   }
 }), n("222007");
 var s = n("37983"),
@@ -24,11 +24,11 @@ var s = n("37983"),
   E = n("681060"),
   g = n("884351"),
   S = n("671071"),
-  A = n("401848"),
-  _ = n("718422"),
-  T = n("49111"),
+  T = n("401848"),
+  A = n("718422"),
+  _ = n("49111"),
   M = n("782340"),
-  I = n("216220");
+  I = n("49077");
 let N = "ActivityInvite";
 class v extends a.PureComponent {
   componentDidMount() {
@@ -52,10 +52,10 @@ class v extends a.PureComponent {
       activity: e
     } = this.props;
     switch (e.type) {
-      case T.ActivityTypes.LISTENING:
+      case _.ActivityTypes.LISTENING:
         return M.default.Messages.INVITE_EMBED_LISTENING_INVITE;
-      case T.ActivityTypes.PLAYING:
-      case T.ActivityTypes.STREAMING:
+      case _.ActivityTypes.PLAYING:
+      case _.ActivityTypes.STREAMING:
       default:
         return M.default.Messages.INVITE_EMBED_GAME_INVITE
     }
@@ -75,7 +75,7 @@ class v extends a.PureComponent {
       application: C,
       transitionState: m,
       onClose: g
-    } = this.props, S = h > 0, A = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
+    } = this.props, S = h > 0, T = S ? M.default.Messages.CHANNEL_SLOWMODE_COOLDOWN.format({
       seconds: Math.round((h + 1e3) / 1e3)
     }) : null;
     return (0, s.jsxs)(o.ModalRoot, {
@@ -136,7 +136,7 @@ class v extends a.PureComponent {
         })]
       }), (0, s.jsxs)(o.ModalFooter, {
         children: [(0, s.jsx)(o.Tooltip, {
-          text: A,
+          text: T,
           children: e => (0, s.jsx)("div", {
             ...e,
             children: (0, s.jsx)(o.Button, {
@@ -167,18 +167,18 @@ class v extends a.PureComponent {
           activityActionType: s
         } = this.props, a = "";
         switch (s) {
-          case T.ActivityActionTypes.JOIN:
+          case _.ActivityActionTypes.JOIN:
             a = "Invite to Join";
             break;
-          case T.ActivityActionTypes.LISTEN:
+          case _.ActivityActionTypes.LISTEN:
             a = "Invite to Listen";
             break;
-          case T.ActivityActionTypes.WATCH:
+          case _.ActivityActionTypes.WATCH:
             a = "Invite to Watch"
         }
-        return f.default.trackWithMetadata(T.AnalyticEvents.INVITE_SENT, {
+        return f.default.trackWithMetadata(_.AnalyticEvents.INVITE_SENT, {
           location: "Channel Text Area - ".concat(a),
-          invite_type: t.type === T.ActivityTypes.LISTENING ? T.LoggingInviteTypes.SPOTIFY : T.LoggingInviteTypes.APPLICATION,
+          invite_type: t.type === _.ActivityTypes.LISTENING ? _.LoggingInviteTypes.SPOTIFY : _.LoggingInviteTypes.APPLICATION,
           application_id: t.application_id,
           guild_id: n.getGuildId(),
           channel_id: n.id,
@@ -217,7 +217,7 @@ class v extends a.PureComponent {
       }).then(e => this.trackInvite(e)), a(), Promise.resolve({
         shouldClear: !0,
         shouldRefocus: !0
-      })) : (0, _.applyChatRestrictions)({
+      })) : (0, A.applyChatRestrictions)({
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
@@ -241,13 +241,13 @@ class v extends a.PureComponent {
     }
   }
 }
-var L = r.default.connectStores([A.default, C.default], e => {
+var x = r.default.connectStores([T.default, C.default], e => {
   let {
     channel: t,
     activity: n
   } = e;
   return {
-    cooldown: A.default.getSlowmodeCooldownGuess(t.id),
+    cooldown: T.default.getSlowmodeCooldownGuess(t.id),
     application: null != n.application_id ? C.default.getApplication(n.application_id) : S.SpotifyApplication
   }
 })(v)

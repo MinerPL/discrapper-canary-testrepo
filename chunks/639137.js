@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
     return c
   }
-}), n("794252");
-var s = n("37983");
-n("884691");
-var r = n("414456"),
-  i = n.n(r),
-  l = n("506838"),
-  a = n("77078"),
-  u = n("85336"),
-  o = n("782340"),
-  d = n("432883");
+}), s("794252");
+var n = s("37983");
+s("884691");
+var l = s("414456"),
+  a = s.n(l),
+  i = s("506838"),
+  r = s("77078"),
+  u = s("85336"),
+  o = s("782340"),
+  d = s("95968");
 
 function c(e) {
   let {
     step: t,
-    onClose: n
-  } = e, r = (0, l.match)(t).with(u.Step.REVIEW, () => o.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER).with(u.Step.ADD_PAYMENT_STEPS, () => o.default.Messages.BILLING_STANDALONE_ADD_PAYMENT_TITLE).with(u.Step.GIFT_CUSTOMIZATION, () => o.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER).with(u.Step.CONFIRM, () => "").otherwise(() => null);
-  return null == r ? null : (0, s.jsxs)(a.ModalHeader, {
-    className: i(d.headerContainerGift),
+    onClose: s
+  } = e, l = (0, i.match)(t).with(u.Step.REVIEW, () => o.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_REVIEW_HEADER).with(u.Step.ADD_PAYMENT_STEPS, () => o.default.Messages.BILLING_STANDALONE_ADD_PAYMENT_TITLE).with(u.Step.GIFT_CUSTOMIZATION, () => o.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER).with(u.Step.AWAITING_PURCHASE_TOKEN_AUTH, () => o.default.Messages.COLLECTIBLES_GIFT_COACHMARK_HEADING).with(u.Step.CONFIRM, () => "").otherwise(() => null);
+  return null == l ? null : (0, n.jsxs)(r.ModalHeader, {
+    className: a(d.headerContainerGift),
     separator: t !== u.Step.CONFIRM,
-    children: [(0, s.jsx)(a.Heading, {
+    children: [(0, n.jsx)(r.Heading, {
       variant: "heading-lg/semibold",
-      children: r
-    }), (0, s.jsx)(a.ModalCloseButton, {
-      onClick: n,
+      children: l
+    }), (0, n.jsx)(r.ModalCloseButton, {
+      onClick: s,
       className: d.closeButtonGift
     })]
   })

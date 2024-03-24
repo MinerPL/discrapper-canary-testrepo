@@ -3,33 +3,29 @@ a.r(t), a.d(t, {
   useTrackPollCreationEvents: function() {
     return r
   }
-}), a("424973");
+});
 var l = a("884691"),
   n = a("716241"),
   s = a("49111");
 
-function r(e, t, a, r) {
-  let i = l.useCallback(() => {
-    let l = [],
-      i = 0,
-      o = 0,
-      u = 0;
-    t.forEach(e => {
-      null != e.text && l.push(e.text);
+function r(e, t, a) {
+  let r = l.useCallback(() => {
+    let l = 0,
+      r = 0,
+      o = 0;
+    e.forEach(e => {
       let t = e.image;
-      null != t && (null != t.emoji ? o += 1 : null != t.stickerId ? u += 1 : null != t.mediaAttachmentState && (i += 1))
+      null != t && (null != t.emoji ? r += 1 : null != t.stickerId ? o += 1 : null != t.mediaAttachmentState && (l += 1))
     }), n.default.trackWithMetadata(s.AnalyticEvents.POLL_CREATION_CANCELLED, {
-      question_text: e,
-      answers_text: l,
-      answers_count: t.length,
-      attachments_count: i,
-      emojis_count: o,
-      stickers_count: u,
-      allow_multiselect: a,
-      layout_type: r
+      answers_count: e.length,
+      attachments_count: l,
+      emojis_count: r,
+      stickers_count: o,
+      allow_multiselect: t,
+      layout_type: a
     })
-  }, [t, a, e, r]);
+  }, [e, t, a]);
   return {
-    trackPollCreationCancelled: i
+    trackPollCreationCancelled: r
   }
 }

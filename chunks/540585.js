@@ -21,12 +21,12 @@ var l = a("37983"),
   I = a("373469"),
   _ = a("271938"),
   x = a("957255"),
-  v = a("18494"),
-  S = a("267675"),
+  S = a("18494"),
+  v = a("267675"),
   C = a("158998"),
   N = a("154925"),
   p = a("49111"),
-  T = a("62082");
+  T = a("762382");
 
 function A(e) {
   var t;
@@ -34,7 +34,7 @@ function A(e) {
     channel: a,
     voiceStates: n,
     showPlaceholder: s
-  } = e, c = (0, d.useStateFromStores)([I.default], () => I.default.getAllApplicationStreamsForChannel(a.id)[0]), E = (0, d.useStateFromStores)([I.default], () => null != c ? I.default.getActiveStreamForApplicationStream(c) : null), g = (0, d.useStateFromStores)([_.default], () => _.default.getId()), [x, v] = (0, f.useCanWatchStream)(a);
+  } = e, c = (0, d.useStateFromStores)([I.default], () => I.default.getAllApplicationStreamsForChannel(a.id)[0]), E = (0, d.useStateFromStores)([I.default], () => null != c ? I.default.getActiveStreamForApplicationStream(c) : null), g = (0, d.useStateFromStores)([_.default], () => _.default.getId()), [x, S] = (0, f.useCanWatchStream)(a);
   if (null == c) return null;
   let N = i.chain(n).map("member").find(["userId", c.ownerId]).value(),
     A = i.chain(n).map("user").find(["id", c.ownerId]).value(),
@@ -57,11 +57,11 @@ function A(e) {
         variant: "text-sm/normal",
         color: "none",
         className: T.previewButton,
-        children: (0, m.default)(c, E, g, v)
+        children: (0, m.default)(c, E, g, S)
       })
     }) : null, null != j ? (0, l.jsxs)("div", {
       className: T.previewName,
-      children: [(0, l.jsx)(S.default, {
+      children: [(0, l.jsx)(v.default, {
         width: 18,
         height: 18,
         className: T.icon
@@ -99,9 +99,9 @@ function j(e) {
         null === (e = t.current) || void 0 === e || e.disconnect()
       }
     }, [e]), a
-  }(I), S = n.useRef(!1);
+  }(I), v = n.useRef(!1);
   n.useEffect(() => {
-    _ && (S.current = !0)
+    _ && (v.current = !0)
   }, [_]);
   let T = i.map(r, e => {
       var t, a;
@@ -116,7 +116,7 @@ function j(e) {
     usersInSummary: f,
     onChannelClick: () => {
       if (!(0, g.isGuildVocalChannelType)(s.type)) return;
-      let e = v.default.getVoiceChannelId(),
+      let e = S.default.getVoiceChannelId(),
         t = !x.default.can(p.Permissions.CONNECT, s);
       u(s), c.default.handleVoiceConnect({
         channel: s,
@@ -131,7 +131,7 @@ function j(e) {
     children: o && (0, l.jsx)(A, {
       channel: s,
       voiceStates: r,
-      showPlaceholder: !S.current
+      showPlaceholder: !v.current
     })
   })
 }

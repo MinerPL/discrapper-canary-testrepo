@@ -25,7 +25,7 @@ function s(e) {
     } = e;
     if (_ === a.CodedLinkType.INVITE);
     else if (_ === a.CodedLinkType.TEMPLATE) null == r.default.getGuildTemplate(E) && n.default.resolveGuildTemplate(E);
-    else if (_ === a.CodedLinkType.BUILD_OVERRIDE);
+    else if (_ === a.CodedLinkType.BUILD_OVERRIDE || _ === a.CodedLinkType.MANUAL_BUILD_OVERRIDE);
     else if (_ === a.CodedLinkType.EVENT);
     else if (_ === a.CodedLinkType.CHANNEL_LINK);
     else if (_ === a.CodedLinkType.APP_DIRECTORY_PROFILE);
@@ -34,6 +34,7 @@ function s(e) {
     else if (_ === a.CodedLinkType.GUILD_PRODUCT);
     else if (_ === a.CodedLinkType.SERVER_SHOP);
     else if (_ === a.CodedLinkType.CLYDE_PROFILE);
+    else if (_ === a.CodedLinkType.QUESTS_EMBED);
     else throw Error("Unknown coded link type: ".concat(_))
   })
 }
@@ -96,6 +97,7 @@ class T extends t.default {
       LOAD_RECENT_MENTIONS_SUCCESS: this.handleLoadRecentMentions,
       LOAD_PINNED_MESSAGES_SUCCESS: this.handleLoadPinnedMessages,
       SEARCH_FINISH: this.handleSearchFinish,
+      MOD_VIEW_SEARCH_FINISH: this.handleSearchFinish,
       GUILD_FEED_FETCH_SUCCESS: this.handleGuildFeedFetchSuccess,
       CHANNEL_SELECT: {
         callback: this.handleChannelSelect,

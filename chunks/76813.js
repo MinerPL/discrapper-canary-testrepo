@@ -1,47 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return N
   }
-}), n("222007");
+});
 var a = n("37983"),
   l = n("884691"),
   s = n("446674"),
   i = n("77078"),
-  r = n("778588"),
-  o = n("522049"),
-  u = n("664336"),
-  d = n("773336"),
-  c = n("56947"),
-  f = n("386045"),
-  h = n("389535"),
-  E = n("80028"),
-  m = n("782340");
+  r = n("550410"),
+  o = n("778588"),
+  u = n("42887"),
+  d = n("522049"),
+  c = n("664336"),
+  f = n("56947"),
+  h = n("386045"),
+  E = n("18346"),
+  m = n("728658"),
+  p = n("389535"),
+  S = n("80028"),
+  g = n("782340");
 
-function p(e) {
+function N(e) {
   let {
     canShowReminder: t = !1,
-    className: p
-  } = e, {
-    showClipsHeaderEntrypoint: g,
-    ignorePlatformRestriction: S
-  } = c.ClipsExperiment.useExperiment({
+    className: N
+  } = e, _ = (0, E.default)(u.default), {
+    showClipsHeaderEntrypoint: T
+  } = f.ClipsExperiment.useExperiment({
     location: "ClipsButton"
   }, {
     autoTrackExposure: !1
   }), {
-    hasClips: N,
-    hasNewClips: _,
-    lastClipsSession: T,
-    remindersEnabled: I
-  } = (0, s.useStateFromStoresObject)([f.default], () => ({
-    hasClips: f.default.hasClips(),
-    hasNewClips: f.default.getNewClipIds().length > 0,
-    lastClipsSession: f.default.getLastClipsSession(),
-    remindersEnabled: f.default.getSettings().remindersEnabled
-  })), C = null != T && T.newClipIds.length > 0, [A, M] = l.useState(null), v = (0, s.useStateFromStores)([r.default], () => r.default.hasLayers());
+    hasClips: I,
+    hasNewClips: C,
+    lastClipsSession: A,
+    remindersEnabled: M,
+    hasAnyClipAnimations: v
+  } = (0, s.useStateFromStoresObject)([h.default], () => ({
+    hasClips: h.default.hasClips(),
+    hasNewClips: h.default.getNewClipIds().length > 0,
+    lastClipsSession: h.default.getLastClipsSession(),
+    remindersEnabled: h.default.getSettings().remindersEnabled,
+    hasAnyClipAnimations: h.default.hasAnyClipAnimations()
+  })), R = null != A && A.newClipIds.length > 0, x = (0, m.useClipsButtonStore)(e => e.clipsButtonRef), L = (0, m.useClipsButtonStore)(e => e.setClipsButtonRef), O = (0, s.useStateFromStores)([o.default], () => o.default.hasLayers()), {
+    preventIdle: b,
+    allowIdle: y
+  } = (0, r.usePreventIdle)("animation");
 
-  function x() {
+  function j() {
     (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -50,22 +57,22 @@ function p(e) {
         ...t
       })
     }, {
-      modalKey: E.CLIPS_GALLERY_MODAL_KEY
+      modalKey: S.CLIPS_GALLERY_MODAL_KEY
     })
   }
-  return g && ((0, d.isWindows)() || S) && N ? (0, a.jsxs)(a.Fragment, {
-    children: [null != A && t && I && C && !(0, i.hasAnyModalOpen)() && !v && (0, a.jsx)(h.default, {
-      clipIconRef: A,
-      lastClipsSession: T,
-      onOpenClipsGallery: x
+  return (l.useEffect(() => (v ? b() : y(), () => y()), [v, b, y]), T && _ && I) ? (0, a.jsxs)(a.Fragment, {
+    children: [null != x && t && M && R && !(0, i.hasAnyModalOpen)() && !O && (0, a.jsx)(p.default, {
+      clipIconRef: x,
+      lastClipsSession: A,
+      onOpenClipsGallery: j
     }), (0, a.jsx)("div", {
-      ref: M,
-      children: (0, a.jsx)(u.Icon, {
-        className: p,
-        icon: o.default,
-        showBadge: _,
-        tooltip: m.default.Messages.CLIPS_GALLERY_TOOLTIP,
-        onClick: x
+      ref: L,
+      children: (0, a.jsx)(c.Icon, {
+        className: N,
+        icon: d.default,
+        showBadge: C,
+        tooltip: g.default.Messages.CLIPS_GALLERY_TOOLTIP,
+        onClick: j
       })
     })]
   }) : null

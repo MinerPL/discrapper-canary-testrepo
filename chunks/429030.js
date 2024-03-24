@@ -1,17 +1,18 @@
 "use strict";
 E.r(_), E.d(_, {
   setUpdateRules: function() {
-    return t.setUpdateRules
+    return o.setUpdateRules
   },
   FormattedMessage: function() {
-    return t.FormattedMessage
-  },
-  default: function() {
-    return o.default
+    return o.FormattedMessage
   },
   getSystemLocale: function() {
-    return o.getSystemLocale
+    return t.getSystemLocale
+  },
+  default: function() {
+    return n
   }
 });
-var t = E("907407"),
-  o = E("601860")
+var t = E("601860"),
+  o = E("907407"),
+  n = t.I18N

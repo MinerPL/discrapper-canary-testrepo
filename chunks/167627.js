@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   getPaymentPayoutGroups: function() {
-    return l
+    return n
   }
 });
 var a = s("872717"),
-  n = s("49111");
-let l = async (e, t) => {
-  let s = await a.default.get({
-    url: n.Endpoints.PAYMENT_PAYOUT_GROUPS(e),
+  l = s("49111");
+let n = async (e, t) => {
+  let s = await a.HTTP.get({
+    url: l.Endpoints.PAYMENT_PAYOUT_GROUPS(e),
     query: t
   });
   return s.body

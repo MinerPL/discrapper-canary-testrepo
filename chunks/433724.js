@@ -1,73 +1,82 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return p
   }
 }), n("222007");
-var a = n("37983");
-n("884691");
-var i = n("446674"),
-  s = n("77078"),
-  l = n("913144"),
+var i = n("37983"),
+  a = n("884691"),
+  s = n("446674"),
+  l = n("77078"),
+  o = n("913144"),
   r = n("891653"),
-  u = n("476765"),
-  o = n("805199"),
-  d = n("44771"),
-  c = n("605475"),
-  f = n("782340"),
-  m = n("143598");
+  u = n("225849"),
+  d = n("476765"),
+  c = n("805199"),
+  f = n("44771"),
+  g = n("605475"),
+  m = n("397336"),
+  h = n("782340"),
+  _ = n("23661");
 
-function _(e) {
+function p(e) {
   let {
     className: t,
     disabled: n,
-    renderCTAButtons: _
-  } = e, [h, g] = (0, i.useStateFromStoresArray)([o.default], () => [o.default.getCurrentDesktopIcon(), o.default.isEditorOpen]), S = (0, u.useUID)(), p = (0, s.useRadioGroup)({
-    orientation: "horizontal",
-    labelledBy: S
-  }), E = e => {
-    l.default.dispatch({
-      type: "APP_ICON_UPDATED",
-      id: e
-    })
-  };
-  return (0, a.jsx)("div", {
-    ...p,
-    className: m.container,
-    children: (0, a.jsxs)("div", {
-      className: t,
-      children: [(0, a.jsxs)("div", {
-        className: m.header,
-        children: [(0, a.jsxs)("div", {
-          className: m.headings,
-          children: [g ? null : (0, a.jsxs)("div", {
-            className: m.title,
-            children: [(0, a.jsx)(s.Heading, {
-              variant: "text-md/medium",
-              children: f.default.Messages.APP_ICON_SETTINGS_TITLE
-            }), (0, a.jsx)(r.default, {
-              className: m.premiumIcon
+    renderCTAButtons: p
+  } = e, [E, S] = (0, s.useStateFromStoresArray)([c.default], () => [c.default.getCurrentDesktopIcon(), c.default.isEditorOpen]), T = a.useRef(null);
+  (0, u.default)(T, m.AppearanceScrollPositions.CUSTOM_APP_ICONS);
+  let v = (0, d.useUID)(),
+    N = (0, l.useRadioGroup)({
+      orientation: "horizontal",
+      labelledBy: v
+    }),
+    I = e => {
+      o.default.dispatch({
+        type: "APP_ICON_UPDATED",
+        id: e
+      })
+    };
+  return (0, i.jsx)("div", {
+    ref: T,
+    children: (0, i.jsx)("div", {
+      ...N,
+      className: _.container,
+      children: (0, i.jsxs)("div", {
+        className: t,
+        children: [(0, i.jsxs)("div", {
+          className: _.header,
+          children: [(0, i.jsxs)("div", {
+            className: _.headings,
+            children: [S ? null : (0, i.jsxs)("div", {
+              className: _.title,
+              children: [(0, i.jsx)(l.Heading, {
+                variant: "text-md/medium",
+                children: h.default.Messages.APP_ICON_SETTINGS_TITLE
+              }), (0, i.jsx)(r.default, {
+                className: _.premiumIcon
+              })]
+            }), (0, i.jsx)(l.Heading, {
+              variant: "text-sm/normal",
+              children: h.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
             })]
-          }), (0, a.jsx)(s.Heading, {
-            variant: "text-sm/normal",
-            children: f.default.Messages.APP_ICON_SETTINGS_DESCRIPTION
-          })]
-        }), null == _ ? void 0 : _()]
-      }), (0, a.jsx)("div", {
-        className: m.presets,
-        children: c.ICONS.filter(e => {
-          let {
-            isHidden: t
-          } = e;
-          return !0 !== t
-        }).map((e, t) => (0, a.jsx)(d.default, {
-          icon: e,
-          isSelected: h === e.id,
-          onSelect: e => E(e),
-          disabled: n,
-          tabIndex: 0 !== t || n ? void 0 : 0
-        }, e.id))
-      })]
+          }), null == p ? void 0 : p()]
+        }), (0, i.jsx)("div", {
+          className: _.presets,
+          children: g.ICONS.filter(e => {
+            let {
+              isHidden: t
+            } = e;
+            return !0 !== t
+          }).map((e, t) => (0, i.jsx)(f.default, {
+            icon: e,
+            isSelected: E === e.id,
+            onSelect: e => I(e),
+            disabled: n,
+            tabIndex: 0 !== t || n ? void 0 : 0
+          }, e.id))
+        })]
+      })
     })
   })
 }

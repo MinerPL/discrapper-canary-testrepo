@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return S
   }
 }), n("702976");
 var i = n("981980"),
@@ -13,16 +13,16 @@ var i = n("981980"),
   u = n("527015"),
   d = n("718517"),
   c = n("286235"),
-  f = n("49111");
-let _ = (() => {
+  _ = n("49111");
+let f = (() => {
     let e = "".concat(location.protocol, "//").concat(location.host, "/__development/source_maps"),
       t = null,
       n = new i.default(5 * d.default.Millis.SECOND, 1 * d.default.Millis.MINUTE, !0),
       r = () => {
-        a.default.put({
+        a.HTTP.put({
           url: e,
           headers: {
-            Authorization: s.default.getToken()
+            Authorization: s.getToken()
           },
           oldFormErrors: !0
         }).then(e => {
@@ -36,18 +36,18 @@ let _ = (() => {
     return {
       set: n => {
         let i = null != t;
-        n !== i && (n ? t = setTimeout(r, 0) : (clearTimeout(t), t = null, a.default.delete({
+        n !== i && (n ? t = setTimeout(r, 0) : (clearTimeout(t), t = null, a.HTTP.del({
           url: e,
           headers: {
-            Authorization: s.default.getToken()
+            Authorization: s.getToken()
           },
           oldFormErrors: !0
         })))
       }
     }
   })(),
-  h = "DeveloperOptionsStore",
-  g = {
+  E = "DeveloperOptionsStore",
+  h = {
     trace: !1,
     canary: !1,
     logGatewayEvents: !1,
@@ -60,74 +60,74 @@ let _ = (() => {
     idleStatusIndicatorEnabled: !1,
     appDirectoryIncludesInactiveCollections: !1
   },
-  m = {
-    ...g
+  g = {
+    ...h
   };
 
-function E(e) {
-  m = {
+function m(e) {
+  g = {
+    ...h,
     ...g,
-    ...m,
     ...e
-  }, _.set(m.sourceMapsEnabled), o.default.set(h, m)
+  }, f.set(g.sourceMapsEnabled), o.default.set(E, g)
 }
 class p extends r.default.Store {
   initialize() {
-    let e = o.default.get(h);
-    null != e && (m = {
-      ...g,
+    let e = o.default.get(E);
+    null != e && (g = {
+      ...h,
       ...e
     })
   }
   get isTracingRequests() {
-    return m.trace
+    return g.trace
   }
   get isForcedCanary() {
-    return m.canary
+    return g.canary
   }
   get isLoggingGatewayEvents() {
-    return m.logGatewayEvents
+    return g.logGatewayEvents
   }
   get isLoggingOverlayEvents() {
-    return m.logOverlayEvents
+    return g.logOverlayEvents
   }
   get isLoggingAnalyticsEvents() {
-    return m.logAnalyticsEvents
+    return g.logAnalyticsEvents
   }
   get isAxeEnabled() {
-    return m.axeEnabled
+    return g.axeEnabled
   }
   get sourceMapsEnabled() {
-    return m.sourceMapsEnabled
+    return g.sourceMapsEnabled
   }
   get isAnalyticsDebuggerEnabled() {
-    return m.analyticsDebuggerEnabled
+    return g.analyticsDebuggerEnabled
   }
   get isBugReporterEnabled() {
-    return m.bugReporterEnabled
+    return g.bugReporterEnabled
   }
   get isIdleStatusIndicatorEnabled() {
-    return m.idleStatusIndicatorEnabled
+    return g.idleStatusIndicatorEnabled
   }
   get appDirectoryIncludesInactiveCollections() {
-    return m.appDirectoryIncludesInactiveCollections
+    return g.appDirectoryIncludesInactiveCollections
   }
   getDebugOptionsHeaderValue() {
-    Object.keys(m).map(e => m[e]);
-    let e = Object.keys(m).filter(e => m[e]);
+    Object.keys(g).map(e => g[e]);
+    let e = Object.keys(g).filter(e => g[e]);
     return e.join(",")
   }
 }
 p.displayName = "DeveloperOptionsStore";
-var v = new p(l.default, {
+var S = new p(l.default, {
   LOGOUT: function(e) {
-    E(g)
+    m(h)
   },
   CONNECTION_OPEN: function(e) {
     var t;
-    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & f.UserFlags.STAFF) === f.UserFlags.STAFF,
+    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & _.UserFlags.STAFF) === _.UserFlags.STAFF,
       i = n || null != e.user.personal_connection_id;
-    n && _.set(m.sourceMapsEnabled), c.default.setTags({
+    n && f.set(g.sourceMapsEnabled), c.default.setTags({
       isStaff: i.toString()
     })
   },
@@ -135,6 +135,6 @@ var v = new p(l.default, {
     let {
       settings: t
     } = e;
-    E(t)
+    m(t)
   }
 })

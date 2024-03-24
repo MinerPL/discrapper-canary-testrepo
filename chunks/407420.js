@@ -9,7 +9,7 @@ var t = a("37983"),
   s = a("414456"),
   l = a.n(s),
   i = a("398179"),
-  n = a("907002"),
+  n = a("146606"),
   r = a("65597"),
   H = a("669491"),
   V = a("77078"),
@@ -17,7 +17,7 @@ var t = a("37983"),
   c = a("476765"),
   o = a("709681"),
   M = a("782340"),
-  u = a("381530"),
+  u = a("628693"),
   E = a("625335");
 let I = (0, o.createSound)("activities-rocket-time", "activities-rocket-time", .6),
   _ = 0;
@@ -31,7 +31,7 @@ function T(L) {
     children: [(0, t.jsx)(N, {
       flipX: a,
       className: e
-    }), (0, t.jsx)(g, {
+    }), (0, t.jsx)(p, {
       flipX: a,
       className: e
     }), (0, t.jsx)(x, {
@@ -54,7 +54,7 @@ function m(L) {
     flipX: e,
     children: a,
     colors: s
-  } = L, [l, H] = C.useState(!1), [V, c] = C.useState(0), [o, T] = C.useState(!1), m = (0, r.default)([d.default], () => d.default.useReducedMotion);
+  } = L, [l, H] = C.useState(!1), [V, c] = C.useState(0), [o, T] = C.useState(!1), m = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion);
 
   function h() {
     c(L => {
@@ -137,7 +137,7 @@ function N(L) {
 }
 let A = [H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css];
 
-function g(L) {
+function p(L) {
   let {
     className: e,
     flipX: a
@@ -185,7 +185,7 @@ function g(L) {
     }
   })
 }
-let p = [H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css];
+let g = [H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, H.default.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css];
 
 function x(L) {
   let {
@@ -194,7 +194,7 @@ function x(L) {
   } = L;
   return (0, t.jsx)(m, {
     flipX: a,
-    colors: p,
+    colors: g,
     children: L => {
       let {
         style: a,

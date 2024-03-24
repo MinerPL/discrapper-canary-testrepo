@@ -24,13 +24,13 @@ var n = r("37983"),
   g = r("923510"),
   M = r("606762"),
   p = r("782340"),
-  x = r("514659");
+  x = r("898165");
 
 function N(e, t) {
   return {
     id: e,
     type: t,
-    deny: m.default.NONE,
+    deny: m.NONE,
     allow: g.MODERATE_STAGE_CHANNEL_PERMISSIONS
   }
 }

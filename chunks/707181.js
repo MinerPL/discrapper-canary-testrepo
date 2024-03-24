@@ -11,12 +11,12 @@ var i = n("617258"),
   l = n("77078"),
   u = n("305961"),
   r = n("315102"),
-  c = n("450682");
+  c = n("114945");
 
 function o(e) {
   let {
     guildId: t
-  } = e, n = (0, a.default)([u.default], () => u.default.getGuild(t));
+  } = e, n = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(t));
   if (null == n) return null;
   let o = null;
   if (null != n.icon) {

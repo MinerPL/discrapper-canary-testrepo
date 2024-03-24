@@ -1,105 +1,100 @@
 "use strict";
 n.r(t), n.d(t, {
   EmojiPopoutType: function() {
-    return i
+    return s
   },
   getEmojiPopoutData: function() {
-    return E
+    return f
   }
 });
-var l, r, u, i, o = n("365058"),
-  a = n("782340");
-(l = u || (u = {})).DEFAULT = "Custom Emoji Popout", l.CROSS_SERVER = "Custom Emoji Popout (Cross-Server)", l.UPSELL_CURRENT_SERVER_JOINED = "Custom Emoji Popout (Upsell Joined Current-Server)", l.UPSELL_CROSS_SERVER_JOINED = "Custom Emoji Popout (Upsell Joined Cross-Server)", l.UPSELL_CROSS_SERVER_JOINABLE = "Custom Emoji Popout (Upsell Not-Joined Cross-Server)", l.UPSELL_CROSS_SERVER_UNJOINABLE = "Custom Emoji Popout (Soft Upsell)", (r = i || (i = {})).GET_PREMIUM_INVENTORY_DISABLED = "GET_PREMIUM_INVENTORY_DISABLED", r.GET_PREMIUM_INVENTORY_ENABLED = "GET_PREMIUM_INVENTORY_ENABLED", r.JOIN_GUILD = "JOIN_GUILD", r.ADD_PACK = "ADD_PACK", r.REMOVE_PACK = "REMOVE_PACK", r.UNAVAILABLE = "UNAVAILABLE";
-let s = e => {
+var i, l, a, s, r = n("505233"),
+  o = n("782340");
+(i = a || (a = {})).DEFAULT = "Custom Emoji Popout", i.CROSS_SERVER = "Custom Emoji Popout (Cross-Server)", i.UPSELL_CURRENT_SERVER_JOINED = "Custom Emoji Popout (Upsell Joined Current-Server)", i.UPSELL_CROSS_SERVER_JOINED = "Custom Emoji Popout (Upsell Joined Cross-Server)", i.UPSELL_CROSS_SERVER_JOINABLE = "Custom Emoji Popout (Upsell Not-Joined Cross-Server)", i.UPSELL_CROSS_SERVER_UNJOINABLE = "Custom Emoji Popout (Soft Upsell)", (l = s || (s = {})).GET_PREMIUM = "GET_PREMIUM", l.JOIN_GUILD = "JOIN_GUILD", l.UNAVAILABLE = "UNAVAILABLE";
+let u = e => {
     let {
       isPremium: t,
       hasJoinedEmojiSourceGuild: n,
-      isUnusableRoleSubscriptionEmoji: l,
-      emojiComesFromCurrentGuild: r,
-      isDiscoverable: u
-    } = e, i = "Custom Emoji Popout";
-    return t && !n && u ? i = "Custom Emoji Popout (Cross-Server)" : t || !n || l ? !t && !n && (i = u ? "Custom Emoji Popout (Upsell Not-Joined Cross-Server)" : "Custom Emoji Popout (Soft Upsell)") : i = r ? "Custom Emoji Popout (Upsell Joined Current-Server)" : "Custom Emoji Popout (Upsell Joined Cross-Server)", i
+      isUnusableRoleSubscriptionEmoji: i,
+      emojiComesFromCurrentGuild: l,
+      isDiscoverable: a
+    } = e, s = "Custom Emoji Popout";
+    return t && !n && a ? s = "Custom Emoji Popout (Cross-Server)" : t || !n || i ? !t && !n && (s = a ? "Custom Emoji Popout (Upsell Not-Joined Cross-Server)" : "Custom Emoji Popout (Soft Upsell)") : s = l ? "Custom Emoji Popout (Upsell Joined Current-Server)" : "Custom Emoji Popout (Upsell Joined Cross-Server)", s
   },
   d = e => {
     let {
       isPremium: t,
       hasJoinedEmojiSourceGuild: n,
-      isUnusableRoleSubscriptionEmoji: l,
-      isDiscoverable: r,
-      emojiComesFromCurrentGuild: u,
-      userIsRoleSubscriber: i,
-      isRoleSubscriptionEmoji: o,
-      shouldHideRoleSubscriptionCTA: s,
-      packCollectionData: d,
+      isUnusableRoleSubscriptionEmoji: i,
+      isDiscoverable: l,
+      emojiComesFromCurrentGuild: a,
+      userIsRoleSubscriber: s,
+      isRoleSubscriptionEmoji: u,
+      shouldHideRoleSubscriptionCTA: d,
       onOpenPremiumSettings: c
-    } = e, E = null, _ = (null == d ? void 0 : d.collectEnabled) === !0, f = (null == d ? void 0 : d.viewAndUseEnabled) === !0, I = (null == d ? void 0 : d.collectedPack) != null;
-    if ((_ || f && I) && !n) {
-      let e = _ && (null == d ? void 0 : d.showTryPacksModalAndV2Copy) === !0;
-      return e ? I ? a.default.Messages.EMOJI_POPOUT_ADDED_PACK_DESCRIPTION : a.default.Messages.INVENTORY_EMOJI_FROM_ADDABLE_PACK : null
+    } = e, f = null;
+    if (t) {
+      if (n) {
+        if (u) f = d && i ? o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UNAVAILABLE_DESCRIPTION : i ? s ? o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_DESCRIPTION : o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_DESCRIPTION : o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_SUBSCRIBED_DESCRIPTION;
+        else {
+          let {
+            enabled: e
+          } = r.NitroBadgeOnEmojiHoverExperiment.getCurrentConfig({
+            location: "_getEmojiPopoutDescription_1"
+          });
+          f = e ? a ? o.default.Messages.EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION_V2 : o.default.Messages.EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION_V2 : a ? o.default.Messages.EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : o.default.Messages.EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION
+        }
+      } else {
+        let e = r.NitroBadgeOnEmojiHoverExperiment.getCurrentConfig({
+          location: "_getEmojiPopoutDescription_2"
+        }, {
+          disable: l,
+          autoTrackExposure: !l
+        }).enabled ? o.default.Messages.EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2 : o.default.Messages.EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION;
+        f = l ? o.default.Messages.EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : e
+      }
+    } else if (n) f = d && i ? o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UNAVAILABLE_DESCRIPTION : i ? s ? o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_DESCRIPTION : o.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_DESCRIPTION : a ? o.default.Messages.EMOJI_POPOUT_CURRENT_GUILD_DESCRIPTION : o.default.Messages.EMOJI_POPOUT_JOINED_GUILD_DESCRIPTION;
+    else {
+      let e = r.NitroBadgeOnEmojiHoverExperiment.getCurrentConfig({
+        location: "_getEmojiPopoutDescription_3"
+      }, {
+        disable: l,
+        autoTrackExposure: !l
+      }).enabled ? o.default.Messages.EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION_V2 : o.default.Messages.EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
+        openPremiumSettings: c
+      });
+      f = l ? o.default.Messages.EMOJI_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : e
     }
-    return E = t ? n ? o ? s && l ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UNAVAILABLE_DESCRIPTION : l ? i ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_DESCRIPTION : a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_DESCRIPTION : a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_SUBSCRIBED_DESCRIPTION : u ? a.default.Messages.EMOJI_POPOUT_PREMIUM_CURRENT_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_PREMIUM_JOINED_GUILD_DESCRIPTION : r ? a.default.Messages.EMOJI_POPOUT_PREMIUM_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_PREMIUM_UNJOINED_PRIVATE_GUILD_DESCRIPTION : n ? s && l ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UNAVAILABLE_DESCRIPTION : l ? i ? a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_DESCRIPTION : a.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_DESCRIPTION : u ? a.default.Messages.EMOJI_POPOUT_CURRENT_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_JOINED_GUILD_DESCRIPTION : r ? a.default.Messages.EMOJI_POPOUT_UNJOINED_DISCOVERABLE_GUILD_DESCRIPTION : a.default.Messages.EMOJI_POPOUT_UNJOINED_PRIVATE_GUILD_DESCRIPTION.format({
-      openPremiumSettings: c
-    })
+    return f
   },
   c = e => {
     let {
       isPremium: t,
       hasJoinedEmojiSourceGuild: n,
-      isUnusableRoleSubscriptionEmoji: l,
-      isDiscoverable: r,
-      packCollectionData: u
-    } = e, i = (null == u ? void 0 : u.collectEnabled) === !0, s = (null == u ? void 0 : u.viewAndUseEnabled) === !0, d = (null == u ? void 0 : u.collectedPack) != null, c = (null == u ? void 0 : u.showTryPacksModalAndV2Copy) === !0, E = !i && !d, _ = !n && r;
-    if ((E || !s) && t && _) return {
+      isUnusableRoleSubscriptionEmoji: i,
+      isDiscoverable: l
+    } = e, a = !n && l, s = !t && (n && !i || r.NitroBadgeOnEmojiHoverExperiment.getCurrentConfig({
+      location: "_getTypeTextDescription"
+    }).enabled || a);
+    return t && a ? {
       type: "JOIN_GUILD",
-      text: a.default.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON,
+      text: o.default.Messages.GUILD_PROFILE_JOIN_SERVER_BUTTON,
       description: null
-    };
-    if (!t && (n && !l || (E || !s) && _)) return {
-      type: "GET_PREMIUM_INVENTORY_DISABLED",
-      text: a.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,
+    } : s ? {
+      type: "GET_PREMIUM",
+      text: o.default.Messages.EMOJI_POPOUT_PREMIUM_CTA,
       description: null
-    };
-    if (i && !n && !d && t) return {
-      type: "ADD_PACK",
-      text: a.default.Messages.INVENTORY_ADD_PACK,
-      description: c ? a.default.Messages.INVENTORY_ADD_PACK_WITHOUT_JOINING_V2.format({
-        maxPacks: o.INVENTORY_MAX_PACKS
-      }) : a.default.Messages.INVENTORY_ADD_PACK_WITHOUT_JOINING
-    };
-    else if (!i || n || d || t) {
-      if (i && !n && d) return {
-        type: "REMOVE_PACK",
-        text: a.default.Messages.INVENTORY_REMOVE_PACK,
-        description: c ? null : a.default.Messages.INVENTORY_REMOVE_PACK_DESCRIPTION
-      }
-    } else {
-      var f;
-      let e = (null !== (f = null == u ? void 0 : u.numPacksCollected) && void 0 !== f ? f : 0) >= o.INVENTORY_MAX_FREE_PACKS,
-        t = e ? a.default.Messages.INVENTORY_ADD_NITRO_DESCRIPTION_WITH_PLURAL.format({
-          maxFreePacks: o.INVENTORY_MAX_FREE_PACKS,
-          maxPacks: o.INVENTORY_MAX_PACKS
-        }) : a.default.Messages.INVENTORY_ADD_PACK_NON_NITRO.format({
-          maxFreePacks: o.INVENTORY_MAX_FREE_PACKS,
-          maxPacks: o.INVENTORY_MAX_PACKS
-        });
-      return {
-        type: e ? "GET_PREMIUM_INVENTORY_ENABLED" : "ADD_PACK",
-        text: e ? a.default.Messages.EMOJI_POPOUT_PREMIUM_CTA : a.default.Messages.INVENTORY_ADD_PACK,
-        description: t
-      }
-    }
-    return {
+    } : {
       type: "UNAVAILABLE",
       text: null,
       description: null
     }
   },
-  E = e => {
+  f = e => {
     let t = d(e),
-      n = s(e),
-      l = c(e);
+      n = u(e),
+      i = c(e);
     return {
-      ...l,
+      ...i,
       emojiDescription: t,
       analyticsType: n
     }

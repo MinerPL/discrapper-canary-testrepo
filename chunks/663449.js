@@ -1,33 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return O
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("627445"),
   o = n.n(r),
   u = n("77078"),
-  d = n("506885"),
-  c = n("145131"),
-  f = n("533403"),
-  E = n("945330"),
-  _ = n("925877"),
-  h = n("701909"),
-  C = n("962541"),
-  I = n("762489"),
-  T = n("329858"),
-  S = n("49111"),
-  m = n("782340"),
-  p = n("234837");
-let A = {
+  d = n("812204"),
+  c = n("506885"),
+  f = n("981601"),
+  E = n("145131"),
+  h = n("533403"),
+  _ = n("945330"),
+  C = n("925877"),
+  S = n("701909"),
+  I = n("962541"),
+  m = n("762489"),
+  p = n("329858"),
+  T = n("49111"),
+  g = n("782340"),
+  A = n("32478");
+let N = {
   HOST: 5,
   LISTENER: 4
 };
-class g extends s.PureComponent {
+class R extends s.PureComponent {
   isHost() {
     let {
       currentUser: e,
@@ -37,12 +39,12 @@ class g extends s.PureComponent {
   }
   renderTitle() {
     return (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(T.default, {
-        children: this.isHost() ? m.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
+      children: [(0, a.jsx)(p.default, {
+        children: this.isHost() ? g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_HOST.format({
           count: this.props.party.length
-        }) : m.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
-      }), (0, a.jsx)(I.default, {
-        children: m.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
+        }) : g.default.Messages.SPOTIFY_LISTEN_ALONG_TITLE_LISTENER
+      }), (0, a.jsx)(m.default, {
+        children: g.default.Messages.SPOTIFY_LISTEN_ALONG_SUBTITLE_LISTENER
       })]
     })
   }
@@ -50,35 +52,35 @@ class g extends s.PureComponent {
     let {
       onStopListening: e
     } = this.props;
-    return this.isHost() ? null : (0, a.jsx)(C.default, {
-      tooltipText: m.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
+    return this.isHost() ? null : (0, a.jsx)(I.default, {
+      tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_STOP,
       onClick: e,
-      icon: E.default
+      icon: _.default
     })
   }
   renderHelpIcon() {
-    return this.isHost() ? (0, a.jsx)(C.default, {
-      tooltipText: m.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
+    return this.isHost() ? (0, a.jsx)(I.default, {
+      tooltipText: g.default.Messages.SPOTIFY_LISTEN_ALONG_INFO,
       onClick: () => {
-        window.open(h.default.getArticleURL(S.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
+        window.open(S.default.getArticleURL(T.HelpdeskArticles.SPOTIFY_CONNECTION), "_blank")
       },
-      icon: _.default
+      icon: C.default
     }) : null
   }
   render() {
     return (0, a.jsxs)("div", {
-      className: p.listeningAlong,
-      children: [this.renderTitle(), (0, a.jsx)(c.default, {
-        justify: c.default.Justify.END,
-        className: p.party,
-        children: (0, a.jsx)(f.default, {
+      className: A.listeningAlong,
+      children: [this.renderTitle(), (0, a.jsx)(E.default, {
+        justify: E.default.Justify.END,
+        className: A.party,
+        children: (0, a.jsx)(h.default, {
           users: this.props.party,
-          max: this.isHost() ? A.HOST : A.LISTENER,
+          max: this.isHost() ? N.HOST : N.LISTENER,
           renderUser: this.renderPartyMember,
           renderMoreUsers: this.renderPartyMemberOverflow
         })
       }), (0, a.jsxs)("div", {
-        className: p.icons,
+        className: A.icons,
         children: [this.renderHelpIcon(), this.renderStopListeningButton()]
       })]
     })
@@ -88,32 +90,35 @@ class g extends s.PureComponent {
       let n;
       if (null == e) return null;
       let {
-        host: i,
-        renderUserPopout: r,
-        onUserContextMenu: c
+        host: l,
+        onUserContextMenu: r
       } = this.props;
-      return n = (null == i ? void 0 : i.id) === e.id ? m.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
-        preload: () => (0, d.default)(e.id, e.getAvatarURL(void 0, 80)),
-        renderPopout: t => (o(null != e, ""), r(t, e)),
+      return n = (null == l ? void 0 : l.id) === e.id ? g.default.Messages.SPOTIFY_LISTEN_ALONG_HOST : g.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENER, (0, a.jsx)(u.Popout, {
+        preload: () => (0, c.default)(e.id, e.getAvatarURL(void 0, 80)),
+        renderPopout: t => (o(null != e, ""), (0, a.jsx)(f.default, {
+          ...t,
+          userId: e.id,
+          newAnalyticsLocations: [d.default.AVATAR]
+        })),
         position: "top",
         align: "center",
-        children: i => (0, a.jsx)(u.Tooltip, {
+        children: l => (0, a.jsx)(u.Tooltip, {
           text: n,
           children: n => {
             let {
               onMouseEnter: a,
-              onMouseLeave: r
+              onMouseLeave: o
             } = n;
             return (0, s.createElement)(u.Avatar, {
-              ...i,
+              ...l,
               key: e.id,
               src: e.getAvatarURL(void 0, 24),
               size: u.AvatarSizes.SIZE_24,
-              className: l(p.avatar, t),
+              className: i(A.avatar, t),
               "aria-label": e.username,
               onMouseEnter: a,
-              onMouseLeave: r,
-              onContextMenu: t => void(null != e && (null == c || c(t, e)))
+              onMouseLeave: o,
+              onContextMenu: t => void(null != e && (null == r || r(t, e)))
             })
           }
         })
@@ -125,9 +130,9 @@ class g extends s.PureComponent {
       return (0, a.jsx)(u.Popout, {
         renderPopout: s,
         children: n => (0, a.jsx)(u.Tooltip, {
-          text: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
+          text: g.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENERS,
           children: s => (0, a.jsx)("div", {
-            className: l(p.overflow, t),
+            className: i(A.overflow, t),
             ...s,
             ...n,
             children: e
@@ -137,4 +142,4 @@ class g extends s.PureComponent {
     }
   }
 }
-var N = g
+var O = R

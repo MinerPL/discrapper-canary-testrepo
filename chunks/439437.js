@@ -18,7 +18,7 @@ var s, o, i = n("37983"),
   C = n("87465"),
   g = n("659500"),
   E = n("49111"),
-  L = n("585292");
+  L = n("610533");
 let A = {
   friction: 10,
   tension: 100
@@ -142,7 +142,7 @@ class O extends r.Component {
     } = this.state, {
       modalCarouselItemClassName: o
     } = this.props, r = this.props.items[n], a = this.props.items;
-    return (0, i.jsxs)(p.default, {
+    return (0, i.jsxs)(p.TransitionGroup, {
       component: "div",
       className: l(L.wrapper, e),
       children: [a.length > 1 ? (0, i.jsx)(C.CarouselPrevious, {

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PictureInPictureWindow: function() {
-    return p
+    return h
   },
   default: function() {
     return E
@@ -10,19 +10,18 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   s = n("414456"),
-  l = n.n(s),
-  i = n("817736"),
+  i = n.n(s),
+  l = n("817736"),
   u = n("773336"),
   o = n("325753"),
   d = n("49111"),
-  c = n("925201"),
-  f = n("212029");
-let h = {
+  c = n("578549");
+let f = {
   top: 80,
   bottom: 132,
   left: 80
 };
-class p extends r.PureComponent {
+class h extends r.PureComponent {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -34,7 +33,7 @@ class p extends r.PureComponent {
     null === (e = this._resizeObserver) || void 0 === e || e.disconnect()
   }
   getPosition(e) {
-    let t = (0, i.findDOMNode)(this._innerDiv);
+    let t = (0, l.findDOMNode)(this._innerDiv);
     if (null != t) {
       let e = t.getBoundingClientRect();
       this._width = e.width, this._height = e.height
@@ -44,33 +43,33 @@ class p extends r.PureComponent {
       edgeOffsetLeft: a,
       edgeOffsetBottom: r,
       edgeOffsetRight: s,
-      maxX: l,
+      maxX: i,
       maxY: o,
       dockedRect: c
-    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), p = Math.round(a), E = Math.round(l - s - this._width), C = (0, u.getPlatform)(), m = C !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, f = Math.round(n), h = Math.round(o - r - this._height), E = Math.round(a), p = Math.round(i - s - this._width), m = (0, u.getPlatform)(), C = m !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != c) {
       var S, g;
       return {
-        y: (null !== (S = null == c ? void 0 : c.y) && void 0 !== S ? S : 0) - m,
+        y: (null !== (S = null == c ? void 0 : c.y) && void 0 !== S ? S : 0) - C,
         x: null !== (g = null == c ? void 0 : c.x) && void 0 !== g ? g : 0
       }
     }
     switch (e) {
       case d.PictureInPicturePositions.TOP_LEFT:
         return {
-          y: f, x: p
+          y: f, x: E
         };
       case d.PictureInPicturePositions.BOTTOM_LEFT:
         return {
-          y: h, x: p
+          y: h, x: E
         };
       case d.PictureInPicturePositions.TOP_RIGHT:
         return {
-          y: f, x: E
+          y: f, x: p
         };
       default:
         return {
-          y: h, x: E
+          y: h, x: p
         }
     }
   }
@@ -134,7 +133,7 @@ class p extends r.PureComponent {
       dockedRect: n,
       hidden: r,
       roundCorners: s,
-      className: i
+      className: l
     } = this.props, u = {};
     return null != n && (u = {
       transform: "translate3d(".concat(n.x, ", ").concat(n.y, ", 0)"),
@@ -143,7 +142,7 @@ class p extends r.PureComponent {
     }), (0, a.jsx)(o.default, {
       dragAnywhere: !0,
       ref: this.handleSetDraggableRef,
-      className: l(c.pictureInPictureWindow, i, {
+      className: i(c.pictureInPictureWindow, l, {
         [c.hidden]: r,
         [c.borderRadius]: s
       }),
@@ -183,8 +182,8 @@ class p extends r.PureComponent {
       let {
         maxX: a,
         maxY: r
-      } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), l = !0, i = !0;
-      if (s.x > a / 2 && (i = !1), s.y > r / 2 && (l = !1), n = l && i ? d.PictureInPicturePositions.TOP_LEFT : l && !i ? d.PictureInPicturePositions.TOP_RIGHT : !l && i ? d.PictureInPicturePositions.BOTTOM_LEFT : d.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+      } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), i = !0, l = !0;
+      if (s.x > a / 2 && (l = !1), s.y > r / 2 && (i = !1), n = i && l ? d.PictureInPicturePositions.TOP_LEFT : i && !l ? d.PictureInPicturePositions.TOP_RIGHT : !i && l ? d.PictureInPicturePositions.BOTTOM_LEFT : d.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
         let {
           id: e,
           onMove: t
@@ -194,7 +193,7 @@ class p extends r.PureComponent {
     }
   }
 }
-p.defaultProps = {
+h.defaultProps = {
   hidden: !1,
   roundCorners: !0
 };
@@ -205,38 +204,36 @@ var E = r.memo(e => {
     maxX: r,
     maxY: s,
     onWindowMove: i,
-    dockedRect: u,
-    pictureInPictureComponents: o,
-    appContext: E,
-    roundCorners: C
+    dockedRect: l,
+    pictureInPictureComponents: u,
+    appContext: o,
+    roundCorners: E
   } = e;
   return (0, a.jsx)("div", {
     className: c.pictureInPicture,
     children: (() => {
       if (null == t) return null;
       let e = n.map(e => {
-          if (e.id !== t.id && e.component !== d.PictureInPictureComponents.EMBED_IFRAME) return null;
-          let n = "string" == typeof e.component ? o[e.component] : e.component;
-          return (0, a.jsx)(n, {
-            ...e.props
-          }, "pipWindow-".concat(e.id))
-        }),
-        m = e.length > 1 ? c.noBoxShadow : {};
-      return (0, a.jsx)(p, {
-        className: l(c.pictureInPictureWindowOverflow, f.elevationHigh, m),
-        appContext: E,
+        if (e.id !== t.id && e.component !== d.PictureInPictureComponents.EMBED_IFRAME) return null;
+        let n = "string" == typeof e.component ? u[e.component] : e.component;
+        return (0, a.jsx)(n, {
+          ...e.props
+        }, "pipWindow-".concat(e.id))
+      });
+      return (0, a.jsx)(h, {
+        appContext: o,
         position: t.position,
         id: t.id,
         hidden: t.hidden,
         onMove: i,
         maxX: r,
         maxY: s,
-        dockedRect: u,
-        edgeOffsetTop: h.top,
-        edgeOffsetBottom: h.bottom,
-        edgeOffsetLeft: h.left,
-        edgeOffsetRight: h.top,
-        roundCorners: C,
+        dockedRect: l,
+        edgeOffsetTop: f.top,
+        edgeOffsetBottom: f.bottom,
+        edgeOffsetLeft: f.left,
+        edgeOffsetRight: f.top,
+        roundCorners: E,
         children: e
       })
     })()

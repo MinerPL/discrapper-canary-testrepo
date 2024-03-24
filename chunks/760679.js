@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   drawLinePoint: function() {
-    return o
+    return u
   },
   addLinePoints: function() {
-    return u
+    return o
   },
   updateLinePoints: function() {
     return d
@@ -19,16 +19,16 @@ n.r(t), n.d(t, {
     return h
   },
   updateEmojiHose: function() {
-    return p
+    return m
   },
   clearDrawables: function() {
-    return m
+    return p
   },
   setDrawMode: function() {
     return E
   },
   toggleOverlayCanvas: function() {
-    return C
+    return g
   }
 });
 var a = n("981980"),
@@ -37,7 +37,7 @@ var a = n("981980"),
   i = n("315841"),
   r = n("49111");
 
-function o(e, t, n, a, l) {
+function u(e, t, n, a, l) {
   s.default.dispatch({
     type: "SHARED_CANVAS_DRAW_LINE_POINT",
     channelId: e,
@@ -48,8 +48,8 @@ function o(e, t, n, a, l) {
   })
 }
 
-function u(e, t, n, a) {
-  return l.default.post({
+function o(e, t, n, a) {
+  return l.HTTP.post({
     url: r.Endpoints.SHARED_CANVAS_LINES(e, n),
     body: {
       line_id: t,
@@ -69,7 +69,7 @@ function d(e, t, n, a) {
 }
 
 function c(e, t, n) {
-  return l.default.post({
+  return l.HTTP.post({
     url: r.Endpoints.SHARED_CANVAS_EMOJI_HOSES(e, t),
     body: {
       emoji_hose: n
@@ -78,7 +78,7 @@ function c(e, t, n) {
 }
 
 function f(e, t, n) {
-  l.default.delete({
+  l.HTTP.del({
     url: r.Endpoints.SHARED_CANVAS_EMOJI_HOSE(e, t, n),
     backoff: new a.default
   })
@@ -93,7 +93,7 @@ function h(e, t) {
   })
 }
 
-function p(e, t, n) {
+function m(e, t, n) {
   s.default.dispatch({
     type: "SHARED_CANVAS_UPDATE_EMOJI_HOSE",
     emojiHose: e,
@@ -102,7 +102,7 @@ function p(e, t, n) {
   })
 }
 
-function m(e, t) {
+function p(e, t) {
   s.default.dispatch({
     type: "SHARED_CANVAS_CLEAR_DRAWABLES",
     drawables: e,
@@ -117,7 +117,7 @@ function E(e) {
   })
 }
 
-function C() {
+function g() {
   s.default.dispatch({
     type: "TOGGLE_OVERLAY_CANVAS"
   })

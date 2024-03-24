@@ -1,126 +1,126 @@
 "use strict";
 s.r(t), s.d(t, {
   MultiAccountActionType: function() {
-    return a
+    return n
   },
   default: function() {
-    return x
+    return I
   }
 }), s("506083");
-var a, n, r = s("37983"),
-  o = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+var n, o, a = s("37983"),
+  l = s("884691"),
+  r = s("414456"),
+  i = s.n(r),
   u = s("446674"),
-  d = s("77078"),
-  c = s("437822"),
+  c = s("77078"),
+  d = s("437822"),
   h = s("272030"),
-  f = s("766274"),
-  m = s("271938"),
-  p = s("102985"),
-  C = s("697218"),
-  S = s("433487"),
-  g = s("599110"),
-  T = s("158998"),
+  C = s("766274"),
+  f = s("271938"),
+  m = s("102985"),
+  p = s("697218"),
+  x = s("433487"),
+  N = s("599110"),
+  v = s("158998"),
   A = s("694787"),
-  N = s("770032"),
-  E = s("927101"),
-  _ = s("49111"),
-  M = s("782340"),
-  O = s("31295");
+  g = s("770032"),
+  y = s("927101"),
+  j = s("49111"),
+  T = s("782340"),
+  S = s("279983");
 
-function I(e) {
+function E(e) {
   let {
     actionText: t,
     user: s,
-    onAction: a
+    onAction: n
   } = e, {
-    currentUser: n,
-    hidePrivateData: o,
-    isAuthenticated: l
-  } = (0, u.useStateFromStoresObject)([C.default, p.default, m.default], () => ({
-    currentUser: C.default.getCurrentUser(),
-    hidePrivateData: p.default.hidePersonalInformation,
-    isAuthenticated: m.default.isAuthenticated()
-  })), E = new f.default(s), I = l && (null == n ? void 0 : n.id) === E.id, x = s.tokenStatus === N.MultiAccountTokenStatus.INVALID, R = o || E.isPomelo() ? null : "#".concat(E.discriminator), L = null;
-  return I ? L = (0, r.jsx)(d.Text, {
+    currentUser: o,
+    hidePrivateData: l,
+    isAuthenticated: r
+  } = (0, u.useStateFromStoresObject)([p.default, m.default, f.default], () => ({
+    currentUser: p.default.getCurrentUser(),
+    hidePrivateData: m.default.hidePersonalInformation,
+    isAuthenticated: f.default.isAuthenticated()
+  })), y = new C.default(s), E = r && (null == o ? void 0 : o.id) === y.id, I = s.tokenStatus === g.MultiAccountTokenStatus.INVALID, M = l || y.isPomelo() ? null : "#".concat(y.discriminator), _ = null;
+  return E ? _ = (0, a.jsx)(c.Text, {
     variant: "text-sm/semibold",
-    className: O.hintText,
+    className: S.hintText,
     color: "text-positive",
-    children: M.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
-  }) : x && (L = (0, r.jsx)(d.Text, {
+    children: T.default.Messages.SWITCH_ACCOUNTS_ACTIVE_ACCOUNT
+  }) : I && (_ = (0, a.jsx)(c.Text, {
     variant: "text-sm/semibold",
-    className: O.hintText,
+    className: S.hintText,
     color: "text-danger",
-    children: M.default.Messages.SWITCH_ACCOUNTS_INVALID_TOKEN
-  })), (0, r.jsx)("div", {
-    className: O.accountCard,
-    children: (0, r.jsxs)("div", {
-      className: O.userDetails,
-      children: [(0, r.jsx)(d.Avatar, {
-        src: E.getAvatarURL(void 0, 40),
-        size: d.AvatarSizes.SIZE_40,
+    children: T.default.Messages.SWITCH_ACCOUNTS_INVALID_TOKEN
+  })), (0, a.jsx)("div", {
+    className: S.accountCard,
+    children: (0, a.jsxs)("div", {
+      className: S.userDetails,
+      children: [(0, a.jsx)(c.Avatar, {
+        src: y.getAvatarURL(void 0, 40),
+        size: c.AvatarSizes.SIZE_40,
         "aria-label": s.username
-      }), (0, r.jsxs)("div", {
-        className: i(O.usernameSection, {
-          [O.hasActionMaxWidth]: !I
+      }), (0, a.jsxs)("div", {
+        className: i(S.usernameSection, {
+          [S.hasActionMaxWidth]: !E
         }),
-        children: [(0, r.jsxs)("div", {
-          className: O.username,
-          children: [(0, r.jsx)(d.Text, {
+        children: [(0, a.jsxs)("div", {
+          className: S.username,
+          children: [(0, a.jsx)(c.Text, {
             variant: "text-md/semibold",
             color: "header-primary",
-            className: O.textOverflow,
-            children: T.default.getUserTag(E, {
+            className: S.textOverflow,
+            children: v.default.getUserTag(y, {
               mode: "username",
-              identifiable: o ? "never" : "always"
+              identifiable: l ? "never" : "always"
             })
-          }), (0, r.jsx)(d.Text, {
+          }), (0, a.jsx)(c.Text, {
             color: "header-secondary",
             variant: "text-sm/normal",
-            children: R
+            children: M
           })]
-        }), L]
-      }), (0, r.jsxs)("div", {
-        className: O.userActions,
-        children: [!I && (0, r.jsx)(d.Button, {
+        }), _]
+      }), (0, a.jsxs)("div", {
+        className: S.userActions,
+        children: [!E && (0, a.jsx)(c.Button, {
           onClick: function() {
-            if (x) {
-              a(0, s.id);
+            if (I) {
+              n(0, s.id);
               return
             }
-            g.default.track(_.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
+            N.default.track(j.AnalyticEvents.MULTI_ACCOUNT_SWITCH_ATTEMPT, {
               location: {
-                section: _.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
+                section: j.AnalyticsSections.MANAGE_ACCOUNTS_MODAL
               }
-            }), A.switchAccount(s.id), a(1, s.id)
+            }), A.switchAccount(s.id), n(1, s.id)
           },
-          color: d.Button.Colors.PRIMARY,
-          children: x ? M.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
-        }), (0, r.jsx)(d.Button, {
-          className: O.userActionMenu,
+          color: c.Button.Colors.PRIMARY,
+          children: I ? T.default.Messages.SWITCH_ACCOUNTS_ACTION_LOG_IN : t
+        }), (0, a.jsx)(c.Button, {
+          className: S.userActionMenu,
           onClick: function(e) {
             (0, h.openContextMenu)(e, e => {
               let {
                 onSelect: t
               } = e;
-              return (0, r.jsx)(d.Menu, {
-                "aria-label": M.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNT,
+              return (0, a.jsx)(c.Menu, {
+                "aria-label": T.default.Messages.SWITCH_ACCOUNTS_MANAGE_ACCOUNT,
                 navId: "manage-multi-account",
                 onClose: h.closeContextMenu,
                 onSelect: t,
-                children: (0, r.jsx)(d.MenuItem, {
+                children: (0, a.jsx)(c.MenuItem, {
                   id: "remove-account",
-                  label: M.default.Messages.SWITCH_ACCOUNTS_REMOVE_ACCOUNT,
+                  label: T.default.Messages.SWITCH_ACCOUNTS_REMOVE_ACCOUNT,
                   action: () => {
                     ! function() {
-                      c.default.logout(null, s.id).finally(() => {
+                      d.default.logout(null, s.id).finally(() => {
                         A.removeAccount(s.id)
                       });
                       let e = {};
-                      null != n ? e.section = _.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = _.PageAnalyticsLocations.LOGIN, g.default.track(_.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
+                      null != o ? e.section = j.AnalyticsSections.MANAGE_ACCOUNTS_MODAL : e.page = j.PageAnalyticsLocations.LOGIN, N.default.track(j.AnalyticEvents.MULTI_ACCOUNT_ACCOUNT_REMOVE, {
                         location: e
-                      }), a(2, s.id)
+                      }), n(2, s.id)
                     }(), null != t && t()
                   },
                   color: "danger"
@@ -128,12 +128,12 @@ function I(e) {
               })
             })
           },
-          size: d.Button.Sizes.ICON,
-          look: d.Button.Looks.BLANK,
-          color: d.Button.Colors.WHITE,
-          "aria-label": M.default.Messages.MORE_OPTIONS,
-          children: (0, r.jsx)(S.default, {
-            className: O.overflowMenuIcon
+          size: c.Button.Sizes.ICON,
+          look: c.Button.Looks.BLANK,
+          color: c.Button.Colors.WHITE,
+          "aria-label": T.default.Messages.MORE_OPTIONS,
+          children: (0, a.jsx)(x.default, {
+            className: S.overflowMenuIcon
           })
         })]
       })]
@@ -141,25 +141,25 @@ function I(e) {
   })
 }
 
-function x(e) {
+function I(e) {
   let {
     actionText: t,
     onAction: s
   } = e, {
-    isLoading: a,
-    multiAccountUsers: n
-  } = (0, E.useMultiAccountUsers)();
-  return (0, r.jsx)("div", {
-    className: O.list,
-    children: a ? (0, r.jsx)(d.Spinner, {}) : n.map((e, a) => (0, r.jsxs)(o.Fragment, {
-      children: [(0, r.jsx)(I, {
+    isLoading: n,
+    multiAccountUsers: o
+  } = (0, y.useMultiAccountUsers)();
+  return (0, a.jsx)("div", {
+    className: S.list,
+    children: n ? (0, a.jsx)(c.Spinner, {}) : o.map((e, n) => (0, a.jsxs)(l.Fragment, {
+      children: [(0, a.jsx)(E, {
         user: e,
         actionText: t,
         onAction: s
-      }, e.id), n.length - 1 !== a && (0, r.jsx)("div", {
+      }, e.id), o.length - 1 !== n && (0, a.jsx)("div", {
         role: "separator",
-        className: O.separator
+        className: S.separator
       })]
     }, e.id))
   })
-}(n = a || (a = {}))[n.LOGIN_REQUIRED = 0] = "LOGIN_REQUIRED", n[n.SWITCHED = 1] = "SWITCHED", n[n.REMOVED = 2] = "REMOVED"
+}(o = n || (n = {}))[o.LOGIN_REQUIRED = 0] = "LOGIN_REQUIRED", o[o.SWITCHED = 1] = "SWITCHED", o[o.REMOVED = 2] = "REMOVED"

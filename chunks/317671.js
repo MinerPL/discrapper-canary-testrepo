@@ -11,15 +11,15 @@ var i = a("316693"),
   r = a("549825"),
   t = a("978970"),
   d = a("782340"),
-  o = a("871213");
+  o = a("703459");
 
 function c(e) {
   let {
     defaultMemberPermissions: s,
     onClose: a,
     transitionState: c
-  } = e, u = [];
-  for (let e of t.OrderedPermissions) i.default.has(s, e) && u.push(e);
+  } = e, h = [];
+  for (let e of t.OrderedPermissions) i.has(s, e) && h.push(e);
   return (0, n.jsxs)(l.ModalRoot, {
     size: l.ModalSize.DYNAMIC,
     "aria-label": d.default.Messages.INTEGRATIONS_APPLICATION_COMMAND_DEFAULT_MEMBER_PERMISSIONS_MODAL_ARIA_LABEL,
@@ -34,7 +34,7 @@ function c(e) {
     }), (0, n.jsx)(l.ModalContent, {
       children: (0, n.jsx)(r.default, {
         className: o.permissionList,
-        grantedPermissions: u
+        grantedPermissions: h
       })
     }), (0, n.jsx)(l.ModalFooter, {
       className: o.footer,

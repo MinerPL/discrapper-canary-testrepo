@@ -1,63 +1,64 @@
 "use strict";
 n.r(t), n.d(t, {
   shouldShowGuildOnboardingUpsell: function() {
-    return _
+    return C
   },
   dismissedGuildOnboardingUpsell: function() {
-    return S
+    return h
   }
 }), n("222007");
-var i = n("866227"),
-  s = n.n(i),
-  a = n("151426"),
-  l = n("801340"),
-  r = n("10641"),
-  o = n("872173"),
-  u = n("374363"),
+var s = n("866227"),
+  i = n.n(s),
+  r = n("151426"),
+  a = n("801340"),
+  u = n("10641"),
+  l = n("872173"),
+  o = n("374363"),
   d = n("305961"),
-  c = n("696326"),
+  c = n("299039"),
+  E = n("696326"),
   f = n("380710"),
-  h = n("49111"),
-  p = n("994428");
-let E = [a.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, a.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, a.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
-  T = [0, 1, 7];
+  S = n("49111"),
+  _ = n("994428");
+let T = [r.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE, r.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR],
+  p = [0, 1, 7];
 
-function _(e, t) {
+function C(e, t) {
   var n;
-  let i = d.default.getGuilds(),
-    a = Object.entries(i).some(e => {
-      let [t, n] = e, i = (0, f.isGuildOnboardingSettingsAvailable)(t), s = n.hasFeature(h.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
-      return i && s
+  let s = d.default.getGuilds(),
+    r = c.default.entries(s).some(e => {
+      let [t, n] = e, s = (0, f.isGuildOnboardingSettingsAvailable)(t), i = n.hasFeature(S.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
+      return s && i
     });
-  if (a || !(0, f.isGuildOnboardingSettingsAvailable)(e)) return !1;
-  let o = null === (n = u.default.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
-    p = null != o ? l.Timestamp.toDate(o) : void 0,
-    _ = null != p ? s().diff(p, "days") : null,
-    S = E.indexOf(t);
-  if (-1 === S) return !1;
-  let I = null == _ || _ > T[S];
-  if (!I) return !1;
-  let g = E.find(e => !(0, r.isDismissibleContentDismissed)(e)) === t;
+  if (r || !(0, f.isGuildOnboardingSettingsAvailable)(e)) return !1;
+  let l = null === (n = o.default.settings.userContent) || void 0 === n ? void 0 : n.guildOnboardingUpsellDismissedAt,
+    _ = null != l ? a.Timestamp.toDate(l) : void 0,
+    C = null != _ ? i().diff(_, "days") : null,
+    h = T.indexOf(t);
+  if (-1 === h) return !1;
+  let A = null == C || C > p[h];
+  if (!A) return !1;
+  let g = T.find(e => !(0, u.isDismissibleContentDismissed)(e)) === t;
   if (!g) return !1;
   let {
-    showLifecycleUpsells: A
-  } = c.default.getCurrentConfig({
+    showLifecycleUpsells: I
+  } = E.default.getCurrentConfig({
     guildId: e,
     location: "7f5b67_1"
   }, {
-    disable: a || !(0, f.isGuildOnboardingSettingsAvailable)(e),
+    disable: r || !(0, f.isGuildOnboardingSettingsAvailable)(e),
     autoTrackExposure: !0
   });
-  return A
+  return I
 }
 
-function S(e, t) {
-  let n = l.Timestamp.now();
-  o.PreloadedUserSettingsActionCreators.updateAsync("userContent", e => {
+function h(e, t) {
+  let n = a.Timestamp.now();
+  l.PreloadedUserSettingsActionCreators.updateAsync("userContent", e => {
     e.guildOnboardingUpsellDismissedAt = n
-  }, o.UserSettingsDelay.INFREQUENT_USER_ACTION), null != t && (0, r.markDismissibleContentAsDismissed)(t, {
+  }, l.UserSettingsDelay.INFREQUENT_USER_ACTION), null != t && (0, u.markDismissibleContentAsDismissed)(t, {
     forceTrack: !0,
-    dismissAction: p.ContentDismissActionType.AUTO,
+    dismissAction: _.ContentDismissActionType.AUTO,
     guildId: e
   })
 }

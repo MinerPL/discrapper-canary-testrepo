@@ -70,7 +70,7 @@ let H = "message1",
   };
 
 function X() {
-  return !!(L.default.getDesktopType() === F.DesktopNotificationTypes.NEVER || M.default.getStatus() === F.StatusTypes.DND || N.QuietMode.getSetting()) || !1
+  return !!(L.default.getDesktopType() === F.DesktopNotificationTypes.NEVER || M.default.getStatus() === F.StatusTypes.DND || N.FocusMode.getSetting()) || !1
 }
 
 function Q(e) {
@@ -247,7 +247,7 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
       a = A.default.getGuild(t.guild_id),
       s = T.default.getChannel(t.channel_id),
       i = y.default.getUser(t.host_id);
-    if (null == n || null == s || null == a || null == i || !(0, j.shouldNotifyBase)(n, i, s) || !v.default.can(l.default.combine(F.Permissions.CONNECT, F.Permissions.VIEW_CHANNEL), s)) return !1;
+    if (null == n || null == s || null == a || null == i || !(0, j.shouldNotifyBase)(n, i, s) || !v.default.can(l.combine(F.Permissions.CONNECT, F.Permissions.VIEW_CHANNEL), s)) return !1;
     G.default.showNotification(a.getIconURL(128), V.default.Messages.STAGE_START_PUSH_NOTIFICATION_TITLE.format({
       guildName: a.name
     }), V.default.Messages.STAGE_START_PUSH_NOTIFICATION_BODY.format({
@@ -276,7 +276,7 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
         a = A.default.getGuild(e.guild_id),
         s = T.default.getChannel(e.channel_id),
         i = y.default.getUser(e.host_id);
-      if (null == n || null == s || null == a || null == i || !v.default.can(l.default.combine(F.Permissions.CONNECT, F.Permissions.VIEW_CHANNEL), s)) return !1;
+      if (null == n || null == s || null == a || null == i || !v.default.can(l.combine(F.Permissions.CONNECT, F.Permissions.VIEW_CHANNEL), s)) return !1;
       G.default.showNotification(a.getIconURL(128), V.default.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_TITLE.format({
         guildName: a.name
       }), V.default.Messages.GUILD_SCHEDULED_EVENT_STAGE_START_BODY.format({

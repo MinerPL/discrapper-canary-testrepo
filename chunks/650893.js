@@ -1,69 +1,69 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return T
+    return M
   }
 });
-var a = s("917351"),
-  n = s.n(a),
-  l = s("171718"),
-  i = s("446674"),
-  r = s("913144");
-let o = !1,
+var i = n("917351"),
+  a = n.n(i),
+  o = n("171718"),
+  l = n("446674"),
+  r = n("913144");
+let s = !1,
   d = [],
-  u = "",
   c = "",
-  S = !1,
-  E = {
+  u = "",
+  E = !1,
+  _ = {
     viewNonce: "",
     regenerateNonce: ""
   };
-class f extends i.default.Store {
+class f extends l.default.Store {
   getVerificationKey() {
-    return u
+    return c
   }
   getBackupCodes() {
     return d
   }
   get togglingSMS() {
-    return o
+    return s
   }
   getNonces() {
-    return E
+    return _
   }
   get emailToken() {
-    return c
+    return u
   }
   get hasSeenBackupPrompt() {
-    return S
+    return E
   }
 }
 f.displayName = "MFAStore";
-var T = new f(r.default, {
+var M = new f(r.default, {
   MFA_ENABLE_SUCCESS: function(e) {
     let {
       token: t,
-      codes: s
+      codes: n
     } = e;
-    void 0 !== t && l.default.setToken(t), d = s
+    void 0 !== t && o.setToken(t), d = n
   },
   MFA_ENABLE_EMAIL_TOKEN: function(e) {
     let {
       token: t
     } = e;
-    c = t
+    u = t
   },
   MFA_DISABLE_SUCCESS: function(e) {
     let {
       token: t
     } = e;
-    l.default.setToken(t)
+    o.setToken(t)
   },
   MFA_SMS_TOGGLE: function() {
-    o = !0
+    s = !0
   },
   MFA_SMS_TOGGLE_COMPLETE: function() {
-    o = !1
+    s = !1
   },
   MFA_CLEAR_BACKUP_CODES: function() {
     d = []
@@ -71,17 +71,17 @@ var T = new f(r.default, {
   MFA_VIEW_BACKUP_CODES: function(e) {
     let {
       codes: t,
-      key: s
+      key: n
     } = e;
-    d = n.sortBy(t, "code"), u = s
+    d = a.sortBy(t, "code"), c = n
   },
   MFA_SEND_VERIFICATION_KEY: function(e) {
     let {
       nonces: t
     } = e;
-    E = t
+    _ = t
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function() {
-    S = !0
+    E = !0
   }
 })

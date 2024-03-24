@@ -1,46 +1,46 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
-    return o
+    return s
   }
 });
 var n = i("884691"),
   l = i("446674"),
   a = i("872717"),
-  u = i("913144"),
-  r = i("555179"),
+  r = i("913144"),
+  u = i("555179"),
   d = i("49111");
 
-function o(e) {
-  let t = (0, l.useStateFromStores)([r.default], () => r.default.getNote(e));
+function s(t) {
+  let e = (0, l.useStateFromStores)([u.default], () => u.default.getNote(t));
   return n.useEffect(() => {
-    null == t && s(e)
-  }, [t, e]), null != t ? t : {
+    null == e && o(t)
+  }, [e, t]), null != e ? e : {
     loading: !0,
     note: null
   }
 }
-async function s(e) {
-  u.default.dispatch({
+async function o(t) {
+  r.default.dispatch({
     type: "USER_NOTE_LOAD_START",
-    userId: e
+    userId: t
   });
   try {
     let {
-      body: t
-    } = await a.default.get({
-      url: d.Endpoints.NOTE(e),
+      body: e
+    } = await a.HTTP.get({
+      url: d.Endpoints.NOTE(t),
       oldFormErrors: !0
     });
-    u.default.dispatch({
+    r.default.dispatch({
       type: "USER_NOTE_LOADED",
-      userId: e,
-      note: t
+      userId: t,
+      note: e
     })
-  } catch (t) {
-    u.default.dispatch({
+  } catch (e) {
+    r.default.dispatch({
       type: "USER_NOTE_LOADED",
-      userId: e
+      userId: t
     })
   }
 }

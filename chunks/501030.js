@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
 var l = n("872717"),
   a = n("49111");
 async function s(e, t, n) {
-  let s = await l.default.get({
+  let s = await l.HTTP.get({
     url: a.Endpoints.DIRECTORY_ENTRIES_BROADCAST_INFO(e),
     query: {
       type: t,

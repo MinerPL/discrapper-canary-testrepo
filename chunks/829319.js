@@ -33,7 +33,7 @@ var n = l("37983"),
   v = l("429310"),
   L = l("49111"),
   j = l("782340"),
-  b = l("566818");
+  b = l("133023");
 
 function P(e) {
   let {
@@ -43,78 +43,82 @@ function P(e) {
     noneSelectedText: r,
     overwrites: f,
     hasAccessToMutatePermissions: T
-  } = e, E = (0, d.useStateFromStores)([g.default], () => g.default.getGuild(s), [s]);
+  } = e, E = (0, d.useStateFromStores)([g.default], () => g.default.getGuild(s));
   i(null != E, "");
-  let [h, S] = a.useState(new Set), O = a.useMemo(() => {
-    let e = (0, I.allChannelsSentinel)(s),
-      t = o(E.roles).sortBy(e => e.position).reduce((e, t, l) => (e[t.id] = l, e), {});
-    return Object.values(f).filter(e => e.canRead).sort((l, n) => {
-      let a = l.type - n.type;
-      if (0 !== a) return a;
-      switch (l.type) {
-        case m.ApplicationCommandPermissionType.USER:
-          return function(e, t, l) {
-            let n = Number(e.canWrite) - Number(t.canWrite);
-            if (0 !== n) return n;
-            let a = p.default.getUser(e.id),
-              s = p.default.getUser(t.id);
-            if (null != a && null != s) {
-              let e = _.default.getName(l, void 0, a),
-                t = _.default.getName(l, void 0, s);
-              return null == e ? void 0 : e.localeCompare(t)
-            }
-            return A.default.compare(e.id, t.id)
-          }(l, n, s);
-        case m.ApplicationCommandPermissionType.ROLE:
-          return function(e, t, l, n) {
-            if (e.id === l) return -1;
-            if (t.id === l) return 1;
-            let a = n[e.id],
-              s = n[t.id];
-            return a > s ? -1 : 1
-          }(l, n, s, t);
-        case m.ApplicationCommandPermissionType.CHANNEL:
-          return function(e, t, l) {
-            if (e.id === l) return -1;
-            if (t.id === l) return 1;
-            let n = Number(e.canWrite) - Number(t.canWrite);
-            return 0 !== n ? n : A.default.compare(e.id, t.id)
-          }(l, n, e)
-      }
-    })
-  }, [s, f, E]), M = a.useCallback((e, t) => {
-    let n = (0, R.toPermissionKey)(e, t);
-    l({}, [n])
-  }, [l]), v = a.useCallback((e, t, n) => {
-    let a = (0, R.toPermissionKey)(e, t),
-      s = f[a];
-    null != s && l({
-      [a]: {
-        id: e,
-        permission: n,
-        type: t
-      }
-    }, [])
-  }, [l, f]);
+  let h = (0, d.useStateFromStores)([g.default], () => g.default.getRoles(s)),
+    [S, O] = a.useState(new Set),
+    M = a.useMemo(() => {
+      let e = (0, I.allChannelsSentinel)(s),
+        t = o(h).sortBy(e => e.position).reduce((e, t, l) => (e[t.id] = l, e), {});
+      return Object.values(f).filter(e => e.canRead).sort((l, n) => {
+        let a = l.type - n.type;
+        if (0 !== a) return a;
+        switch (l.type) {
+          case m.ApplicationCommandPermissionType.USER:
+            return function(e, t, l) {
+              let n = Number(e.canWrite) - Number(t.canWrite);
+              if (0 !== n) return n;
+              let a = p.default.getUser(e.id),
+                s = p.default.getUser(t.id);
+              if (null != a && null != s) {
+                let e = _.default.getName(l, void 0, a),
+                  t = _.default.getName(l, void 0, s);
+                return null == e ? void 0 : e.localeCompare(t)
+              }
+              return A.default.compare(e.id, t.id)
+            }(l, n, s);
+          case m.ApplicationCommandPermissionType.ROLE:
+            return function(e, t, l, n) {
+              if (e.id === l) return -1;
+              if (t.id === l) return 1;
+              let a = n[e.id],
+                s = n[t.id];
+              return a > s ? -1 : 1
+            }(l, n, s, t);
+          case m.ApplicationCommandPermissionType.CHANNEL:
+            return function(e, t, l) {
+              if (e.id === l) return -1;
+              if (t.id === l) return 1;
+              let n = Number(e.canWrite) - Number(t.canWrite);
+              return 0 !== n ? n : A.default.compare(e.id, t.id)
+            }(l, n, e)
+        }
+      })
+    }, [s, f, h]),
+    v = a.useCallback((e, t) => {
+      let n = (0, R.toPermissionKey)(e, t);
+      l({}, [n])
+    }, [l]),
+    L = a.useCallback((e, t, n) => {
+      let a = (0, R.toPermissionKey)(e, t),
+        s = f[a];
+      null != s && l({
+        [a]: {
+          id: e,
+          permission: n,
+          type: t
+        }
+      }, [])
+    }, [l, f]);
   a.useEffect(() => {
-    let e = Object.values(f).filter(e => e.type === m.ApplicationCommandPermissionType.USER && !e.canRead && !h.has(e.id)).map(e => e.id);
-    0 !== e.length && (c.default.requestMembersById(s, e, !1), S(t => new Set([...t, ...e])))
-  }, [s, f, h, S]);
-  let L = (0, d.useStateFromStores)([x.default], () => x.default.getApplicationId()),
-    j = (0, d.useStateFromStores)([C.default], () => null == L ? void 0 : C.default.integrations.find(e => {
+    let e = Object.values(f).filter(e => e.type === m.ApplicationCommandPermissionType.USER && !e.canRead && !S.has(e.id)).map(e => e.id);
+    0 !== e.length && (c.default.requestMembersById(s, e, !1), O(t => new Set([...t, ...e])))
+  }, [s, f, S, O]);
+  let j = (0, d.useStateFromStores)([x.default], () => x.default.getApplicationId()),
+    P = (0, d.useStateFromStores)([C.default], () => null == j ? void 0 : C.default.integrations.find(e => {
       var t;
-      return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === L
+      return (null === (t = e.application) || void 0 === t ? void 0 : t.id) === j
     })),
-    P = (0, d.useStateFromStores)([N.default], () => void 0 !== j && N.default.canShowToggleTooltip(j.id));
+    y = (0, d.useStateFromStores)([N.default], () => void 0 !== P && N.default.canShowToggleTooltip(P.id));
   return (0, n.jsx)(a.Fragment, {
-    children: O.length > 0 ? O.map(e => (0, n.jsx)(D, {
+    children: M.length > 0 ? M.map(e => (0, n.jsx)(D, {
       guild: E,
       commandId: t,
-      onChange: t => v(e.id, e.type, t),
-      onRemove: () => M(e.id, e.type),
+      onChange: t => L(e.id, e.type, t),
+      onRemove: () => v(e.id, e.type),
       overwrite: e,
-      integration: j,
-      canShowMigrationTooltip: P,
+      integration: P,
+      canShowMigrationTooltip: y,
       hasAccessToMutatePermissions: T
     }, e.id)) : (0, n.jsx)("div", {
       className: b.noItemsSelected,
@@ -167,7 +171,7 @@ function D(e) {
           isDisabled: C,
           currentValue: N.permission,
           onChange: R ? e => {
-            T.default.dismissToggleTooltip(null == g ? void 0 : g.id), d(e)
+            T.default.dismissToggleTooltip(r.id, g), d(e)
           } : d
         })
       })

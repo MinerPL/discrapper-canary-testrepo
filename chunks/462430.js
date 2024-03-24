@@ -22,8 +22,8 @@ var s = l("37983"),
   S = l("305961"),
   h = l("145131"),
   m = l("476765"),
-  E = l("361777"),
-  R = l("944633"),
+  R = l("361777"),
+  E = l("944633"),
   f = l("599110"),
   x = l("404008"),
   T = l("651879"),
@@ -33,7 +33,7 @@ var s = l("37983"),
   A = l("606762"),
   M = l("49111"),
   b = l("782340"),
-  w = l("265821");
+  w = l("129647");
 let L = (0, m.uid)();
 
 function v(e, t) {
@@ -47,24 +47,25 @@ function N(e) {
       permission: r,
       pendingAdditions: d,
       setPendingAdditions: c,
-      isStageChannel: S = null != i && i.isGuildStageVoice(),
-      description: h
+      isStageChannel: h = null != i && i.isGuildStageVoice(),
+      description: m
     } = e,
-    [m, E] = n.useState(!1),
-    [R, f] = n.useState("");
+    [R, E] = n.useState(!1),
+    [f, x] = n.useState(""),
+    M = (0, a.useStateFromStores)([S.default], () => S.default.getRoles(l.id));
 
-  function x(e) {
-    let t = v(R.trim(), m),
+  function w(e) {
+    let t = v(f.trim(), R),
       l = RegExp("".concat(g.default.escape(t)), "i");
     return l.test(e)
   }
-  let M = (0, a.useStateFromStores)([u.default], () => u.default.getMemberIds(l.id));
-  m ? t = [] : S ? t = y.getRolesRowsWithPermissionDisabled(l, i, r, x) : 0 === (t = y.getRolesRows(l, i, r, x)).length && "" === R.trim() && !y.hasCustomRoles(l) && (t = y.getNoRolesRow());
-  let w = y.getMembersRows(M, i, l, r, x),
+  let L = (0, a.useStateFromStores)([u.default], () => u.default.getMemberIds(l.id));
+  R ? t = [] : h ? t = y.getRolesRowsWithPermissionDisabled(l, M, i, r, w) : 0 === (t = y.getRolesRows(l, M, i, r, w)).length && "" === f.trim() && !y.hasCustomRoles(l, M) && (t = y.getNoRolesRow());
+  let N = y.getMembersRows(L, i, l, r, w),
     {
-      placeholderText: L,
-      hintText: N,
-      renderEmptyText: C
+      placeholderText: C,
+      hintText: _,
+      renderEmptyText: I
     } = function() {
       return {
         placeholderText: b.default.Messages.PRIVATE_CHANNEL_ADD_MEMBERS_MODAL_PLACEHOLDER,
@@ -76,11 +77,11 @@ function N(e) {
     }();
   return (0, s.jsx)(j, {
     pendingAdditions: d,
-    query: R,
+    query: f,
     onQueryChange: function(e) {
       let t = e.trim(),
         s = "@" === t.charAt(0);
-      T.default.requestMembers(l.id, v(t, s), A.MEMBER_REQUEST_COUNT), f(e), E(s)
+      T.default.requestMembers(l.id, v(t, s), A.MEMBER_REQUEST_COUNT), x(e), E(s)
     },
     onClickRow: function(e) {
       let t = (0, p.getFullRowId)(e);
@@ -116,12 +117,12 @@ function N(e) {
       })
     },
     roles: t,
-    members: w,
-    placeholderText: L,
-    hintText: N,
-    renderEmptyText: C,
-    isStageChannel: S,
-    description: h
+    members: N,
+    placeholderText: C,
+    hintText: _,
+    renderEmptyText: I,
+    isStageChannel: h,
+    description: m
   })
 }
 
@@ -138,14 +139,14 @@ function j(e) {
     placeholderText: S,
     hintText: h,
     renderEmptyText: m,
-    isStageChannel: E,
-    focusSearchAfterReady: R,
+    isStageChannel: R,
+    focusSearchAfterReady: E,
     isReady: f,
     description: x
   } = e;
   return (0, s.jsxs)("div", {
     className: w.content,
-    children: [(null == (t = x) && E && (t = b.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION), null == t || "" === t) ? null : (0, s.jsx)(i.Text, {
+    children: [(null == (t = x) && R && (t = b.default.Messages.CHANNEL_PERMISSIONS_MODERATOR_DESCRIPTION), null == t || "" === t) ? null : (0, s.jsx)(i.Text, {
       color: "header-secondary",
       className: w.description,
       variant: "text-sm/normal",
@@ -162,8 +163,8 @@ function j(e) {
       placeholderText: S,
       hintText: h,
       renderEmptyText: m,
-      disabledText: E ? b.default.Messages.CHANNEL_PERMISSIONS_ROLE_ALREADY_HAS_PERMISSIONS : null,
-      focusSearchAfterReady: R,
+      disabledText: R ? b.default.Messages.CHANNEL_PERMISSIONS_ROLE_ALREADY_HAS_PERMISSIONS : null,
+      focusSearchAfterReady: E,
       isReady: f
     })]
   })
@@ -205,7 +206,7 @@ function C(e) {
       g(!1)
     }
   }
-  let I = (0, d.isGuildTextChannelType)(v.type) ? E.default : R.default;
+  let I = (0, d.isGuildTextChannelType)(v.type) ? R.default : E.default;
   return (0, s.jsxs)(i.ModalRoot, {
     transitionState: t,
     size: i.ModalSize.SMALL,

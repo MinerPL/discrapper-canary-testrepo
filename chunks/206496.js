@@ -22,9 +22,9 @@ var i = n("37983"),
   S = n("880584"),
   v = n("440899"),
   y = n("522019"),
-  C = n("49111");
-let N = {
-  [C.OverlayWidgets.TEXT](e) {
+  O = n("49111");
+let C = {
+  [O.OverlayWidgets.TEXT](e) {
     let {
       dragging: t,
       locked: n,
@@ -38,7 +38,7 @@ let N = {
       dragging: t
     })
   },
-  [C.OverlayWidgets.GUILDS](e) {
+  [O.OverlayWidgets.GUILDS](e) {
     let {
       locked: t,
       dragStart: n
@@ -48,7 +48,7 @@ let N = {
       locked: t
     })
   },
-  [C.OverlayWidgets.VOICE](e) {
+  [O.OverlayWidgets.VOICE](e) {
     let {
       id: t,
       anchor: n,
@@ -61,11 +61,11 @@ let N = {
       id: t,
       locked: l,
       pinned: s,
-      widget: C.OverlayWidgets.VOICE,
+      widget: O.OverlayWidgets.VOICE,
       isPreviewingInGame: a
     })
   },
-  [C.OverlayWidgets.GUILDS_TEXT](e) {
+  [O.OverlayWidgets.GUILDS_TEXT](e) {
     let {
       dragging: t,
       locked: n,
@@ -78,7 +78,7 @@ let N = {
       pinned: !1
     })
   },
-  [C.OverlayWidgets.LOBBY_VOICE](e) {
+  [O.OverlayWidgets.LOBBY_VOICE](e) {
     let {
       id: t,
       anchor: n,
@@ -91,14 +91,14 @@ let N = {
       id: t,
       locked: l,
       pinned: s,
-      widget: C.OverlayWidgets.LOBBY_VOICE,
+      widget: O.OverlayWidgets.LOBBY_VOICE,
       isPreviewingInGame: a
     })
   }
 };
-class O extends a.PureComponent {
+class N extends a.PureComponent {
   componentDidUpdate(e) {
-    this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(C.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
+    this.props.locked && !e.locked && null != this.state.lastLayoutUpdate && (o.default.track(O.AnalyticEvents.OVERLAY_LAYOUT_UPDATED, this.state.lastLayoutUpdate), this.setState({
       lastLayoutUpdate: null
     }))
   }
@@ -111,7 +111,7 @@ class O extends a.PureComponent {
       state: {
         dragging: l
       }
-    } = this, s = N[e.type];
+    } = this, s = C[e.type];
     if (null == s) throw Error("OverlayLayout: Widget does not exist in WidgetMap");
     return o => s({
       id: e.id,
@@ -145,11 +145,11 @@ class O extends a.PureComponent {
       resizeX: E,
       resizeY: v,
       dragAnywhere: y
-    } = t, C = (0, S.isWidgetContainerVisible)({
+    } = t, O = (0, S.isWidgetContainerVisible)({
       locked: a,
       isPreviewingInGame: l,
       pinned: r
-    }), N = {
+    }), C = {
       minX: 0,
       minY: 0,
       maxX: n.width,
@@ -159,9 +159,9 @@ class O extends a.PureComponent {
       id: o,
       size: p,
       anchor: g,
-      container: N,
+      container: C,
       minSize: m,
-      hidden: !C,
+      hidden: !O,
       resizeX: E,
       resizeY: v,
       style: {
@@ -239,9 +239,9 @@ let T = l.default.connectStores([d.default, u.default], e => {
     widgetConfig: null != n ? d.default.getWidgetConfig(n.type) : null,
     locked: u.default.isInstanceUILocked(),
     isPreviewingInGame: u.default.isPreviewingInGame(),
-    isActiveRegion: null != n && i.has(n.type)
+    isActiveRegion: null != n && n.type === O.OverlayWidgets.TEXT && i.has(O.OverlayActiveRegions.TEXT_WIDGET)
   }
-})(O);
+})(N);
 
 function I(e, t) {
   return (0, i.jsx)(T, {

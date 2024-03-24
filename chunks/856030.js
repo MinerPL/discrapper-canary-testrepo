@@ -1,26 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   useSafetyWarningsItem: function() {
-    return d
+    return c
   }
 });
 var i = n("37983");
 n("884691");
-var l = n("446674"),
-  a = n("77078"),
-  r = n("277734"),
-  s = n("764828"),
+var a = n("446674"),
+  r = n("77078"),
+  s = n("277734"),
+  l = n("764828"),
+  u = n("559922"),
   o = n("697218"),
-  u = n("782340");
+  d = n("782340");
 
-function d(e) {
-  let t = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
-    n = (0, l.useStateFromStores)([s.default], () => s.default.getChannelSafetyWarnings(e.id));
-  return (null == t ? void 0 : t.isStaff()) !== !0 || null == n || 0 === n.length ? null : (0, i.jsx)(i.Fragment, {
-    children: (0, i.jsx)(a.MenuItem, {
+function c(e) {
+  let t = (0, a.useStateFromStores)([o.default], () => o.default.getCurrentUser()),
+    n = (0, a.useStateFromStores)([l.default], () => l.default.getChannelSafetyWarnings(e.id));
+  return (null == t ? void 0 : t.isStaff()) !== !0 || null == n || 0 === n.length ? null : (0, i.jsxs)(i.Fragment, {
+    children: [(0, i.jsx)(r.MenuItem, {
+      id: "delete-safety-warnings",
+      label: d.default.Messages.SAFETY_WARNINGS_DELETE,
+      action: () => (0, u.deleteAllSafetyWarnings)(e.id)
+    }), (0, i.jsx)(r.MenuItem, {
       id: "clear-safety-warnings",
-      label: u.default.Messages.STRANGER_DANGER_CONTEXT_MENU_CLEAR,
-      action: () => (0, r.clearChannelSafetyWarnings)(e.id)
-    })
+      label: d.default.Messages.STRANGER_DANGER_CONTEXT_MENU_CLEAR,
+      action: () => (0, s.clearChannelSafetyWarnings)(e.id)
+    })]
   })
 }

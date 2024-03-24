@@ -14,7 +14,7 @@ var i = n("37983"),
   u = n("901165"),
   c = n("750549"),
   f = n("49111"),
-  h = n("246412");
+  h = n("72266");
 class p extends a.Component {
   render() {
     let {
@@ -25,7 +25,7 @@ class p extends a.Component {
     } = this.props;
     if (n === f.OverlayNotificationPositions.DISABLED) return null;
     let l = -1;
-    return (0, i.jsx)(r.default, {
+    return (0, i.jsx)(r.TransitionGroup, {
       component: "div",
       className: s(h.container, h[n]),
       children: t.map(t => a && t.status === f.OverlayNotificationStatus.TIMED_OUT ? null : (l += 1, (0, i.jsx)(c.default, {

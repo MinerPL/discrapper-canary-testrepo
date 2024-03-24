@@ -4,94 +4,92 @@ n.r(t), n.d(t, {
     return m
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("26989"),
-  o = n("501536"),
-  s = n("25292"),
-  a = n("158998"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("26989"),
+  s = n("501536"),
+  r = n("25292"),
+  o = n("158998"),
   u = n("200294"),
   d = n("851745"),
   c = n("406291"),
   f = n("782340");
 let p = {
   sentinel: c.MENTION_SENTINEL,
-  stores: [r.default],
-  matches: (e, t, n, l, i) => (i.mentions.user !== d.UserMentionMode.DENY || i.mentions.role !== d.RoleMentionMode.DENY || i.mentions.global !== d.GlobalMentionMode.DENY) && !0,
-  queryResults(e, t, n, l, i) {
-    let r = l.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE || l.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
-      o = l.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
-      a = l.mentions.user !== d.UserMentionMode.DENY,
-      u = l.mentions.role !== d.RoleMentionMode.DENY,
-      c = l.mentions.clyde !== d.ClydeMentionMode.DENY,
-      f = l.mentions.user === d.UserMentionMode.ALLOW_GUILD,
-      p = l.mentions.role === d.RoleMentionMode.ALLOW_ALL,
-      m = s.default.queryMentionResults({
+  stores: [a.default],
+  matches: (e, t, n, i, l) => (l.mentions.user !== d.UserMentionMode.DENY || l.mentions.role !== d.RoleMentionMode.DENY || l.mentions.global !== d.GlobalMentionMode.DENY) && !0,
+  queryResults(e, t, n, i, l) {
+    let a = i.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE || i.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
+      s = i.mentions.global === d.GlobalMentionMode.ALLOW_EVERYONE_OR_HERE,
+      o = i.mentions.user !== d.UserMentionMode.DENY,
+      u = i.mentions.role !== d.RoleMentionMode.DENY,
+      c = i.mentions.user === d.UserMentionMode.ALLOW_GUILD,
+      f = i.mentions.role === d.RoleMentionMode.ALLOW_ALL,
+      p = r.default.queryMentionResults({
         query: n,
         channel: e,
-        canMentionEveryone: r,
-        canMentionHere: o,
-        canMentionUsers: a,
+        canMentionEveryone: a,
+        canMentionHere: s,
+        canMentionUsers: o,
         canMentionRoles: u,
-        canMentionClyde: c,
-        includeAllGuildUsers: f,
-        includeNonMentionableRoles: p,
-        request: i
+        includeAllGuildUsers: c,
+        includeNonMentionableRoles: f,
+        request: l
       });
     return {
-      results: m
+      results: p
     }
   },
   renderResults(e) {
     let t, n, {
         results: {
-          users: r,
-          globals: s,
-          roles: a
+          users: a,
+          globals: r,
+          roles: o
         },
         selectedIndex: p,
         channel: m,
         query: h,
-        options: E,
-        onHover: S,
-        onClick: g
+        options: x,
+        onHover: E,
+        onClick: y
       } = e,
-      C = r.map((e, t) => (0, l.jsx)(o.default.User, {
+      g = a.map((e, t) => (0, i.jsx)(s.default.User, {
         guildId: m.guild_id,
-        onClick: g,
-        onHover: S,
+        onClick: y,
+        onHover: E,
         selected: p === t,
         index: t,
         user: e.user,
         nick: e.nick,
         status: e.status,
-        hidePersonalInformation: E.hidePersonalInformation
+        hidePersonalInformation: x.hidePersonalInformation
       }, e.user.id)),
-      T = s.map((e, t) => (0, l.jsx)(o.default.Generic, {
-        onClick: g,
-        onHover: S,
-        selected: p === t + r.length,
-        index: r.length + t,
+      S = r.map((e, t) => (0, i.jsx)(s.default.Generic, {
+        onClick: y,
+        onHover: E,
+        selected: p === t + a.length,
+        index: a.length + t,
         text: e.text,
-        description: E.hideMentionDescription ? null : e.description,
+        description: x.hideMentionDescription ? null : e.description,
         "aria-label": e.text
       }, e.text)),
-      v = a.map((e, t) => (0, l.jsx)(o.default.Role, {
-        onClick: g,
-        onHover: S,
-        selected: p === t + r.length + s.length,
-        index: r.length + s.length + t,
+      C = o.map((e, t) => (0, i.jsx)(s.default.Role, {
+        onClick: y,
+        onHover: E,
+        selected: p === t + a.length + r.length,
+        index: a.length + r.length + t,
         role: e,
-        hideDescription: E.hideMentionDescription
+        hideDescription: x.hideMentionDescription
       }, e.id)),
-      y = E.mentions.user === d.UserMentionMode.DENY;
-    return y ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, l.jsxs)(i.Fragment, {
+      T = x.mentions.user === d.UserMentionMode.DENY;
+    return T ? (t = f.default.Messages.ROLES_MATCHING, n = f.default.Messages.ROLES) : (t = f.default.Messages.MEMBERS_MATCHING, n = f.default.Messages.MEMBERS), (0, i.jsxs)(l.Fragment, {
       children: [(0, u.renderHeader)({
         titleWithQuery: t,
         titleWithoutQuery: n,
         query: h,
         getQuery: e => "".concat(c.MENTION_SENTINEL).concat(e)
-      }), C, r.length > 0 && s.length > 0 ? (0, l.jsx)(o.default.Divider, {}) : null, T, r.length > 0 && a.length > 0 || s.length > 0 && a.length > 0 ? (0, l.jsx)(o.default.Divider, {}) : null, v]
+      }), g, a.length > 0 && r.length > 0 ? (0, i.jsx)(s.default.Divider, {}) : null, S, a.length > 0 && o.length > 0 || r.length > 0 && o.length > 0 ? (0, i.jsx)(s.default.Divider, {}) : null, C]
     }, "mentions")
   },
   onSelect(e) {
@@ -99,21 +97,21 @@ let p = {
       results: {
         users: t,
         globals: n,
-        roles: l
+        roles: i
       },
-      index: i,
-      options: r,
-      channel: o
-    } = e, u = t[i], f = n[i - t.length], p = l[i - t.length - n.length];
-    return null != u ? r.insertText(function(e, t, n) {
-      return s.default.hasSameRoleAsUsername(t, e) ? "".concat(c.MENTION_SENTINEL).concat(e.tag) : "".concat(c.MENTION_SENTINEL).concat(a.default.getUserTag(e, {
+      index: l,
+      options: a,
+      channel: s
+    } = e, u = t[l], f = n[l - t.length], p = i[l - t.length - n.length];
+    return null != u ? a.insertText(function(e, t, n) {
+      return r.default.hasSameRoleAsUsername(t, e) ? "".concat(c.MENTION_SENTINEL).concat(e.tag) : "".concat(c.MENTION_SENTINEL).concat(o.default.getUserTag(e, {
         identifiable: n ? "never" : "always"
       }))
-    }(u.user, o, r.hidePersonalInformation), function(e) {
+    }(u.user, s, a.hidePersonalInformation), function(e) {
       return "<@".concat(e.id, ">")
-    }(u.user)) : null != f ? r.insertText(function(e) {
+    }(u.user)) : null != f ? a.insertText(function(e) {
       return e.text
-    }(f)) : null != p && r.insertText(function(e) {
+    }(f)) : null != p && a.insertText(function(e) {
       return "".concat(c.MENTION_SENTINEL).concat(e.name)
     }(p), function(e) {
       return "<@&".concat(e.id, ">")

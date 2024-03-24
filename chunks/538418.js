@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var a = n("37983"),
@@ -9,8 +9,8 @@ var a = n("37983"),
   r = n("367376"),
   s = n("555158"),
   i = n("442791"),
-  d = n("81143"),
-  u = e => {
+  d = n("512048"),
+  o = e => {
     let {
       node: {
         info: t

@@ -18,8 +18,8 @@ var i = s("414456"),
   _ = s("381546"),
   f = s("978679"),
   h = s("956089"),
-  L = s("551254"),
-  S = s("634388"),
+  S = s("551254"),
+  L = s("634388"),
   x = s("893399"),
   I = s("802810"),
   p = s("56673"),
@@ -28,7 +28,7 @@ var i = s("414456"),
   T = s("49111"),
   P = s("724210"),
   R = s("782340"),
-  m = s("28521");
+  m = s("691577");
 
 function j(e) {
   let {
@@ -85,12 +85,12 @@ function j(e) {
 function O(e) {
   let {
     guild: t
-  } = e, s = (0, L.useIsEligibleForSubscriptionsInGuildShop)(t.id, "guild_shop_category_selector"), {
+  } = e, s = (0, S.useIsEligibleForSubscriptionsInGuildShop)(t.id, "guild_shop_category_selector"), {
     selectedTab: i,
     setSelectedTab: r,
     categoryTabs: _,
     handlePreviewDismiss: h
-  } = (0, S.useGuildShopDisplayContext)(), O = "false" === n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"), v = (0, a.default)([o.default], () => o.default.useReducedMotion), G = _.map(e => {
+  } = (0, L.useGuildShopDisplayContext)(), O = "false" === n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"), v = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), G = _.map(e => {
     switch (e) {
       case x.GuildShopTab.GUILD_PRODUCTS:
         return (0, l.jsx)(j, {

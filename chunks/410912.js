@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i = n("102053"),
@@ -103,7 +103,7 @@ class d {
 }
 class c {
   constructor() {
-    this.loadIndex = new l("❗", "Load index.tsx"), this.loadFastConnectNativeModule = new l("\uD83D\uDCBE", "Load fast_connect native module"), this.beginFastConnect = new l("\uD83C\uDF10", "Fast Connect IDENTIFY"), this.loadImports = new l("\uD83C\uDFC3", "Load Imports"), this.init = new l("\uD83C\uDFC3", "Initial Initialization"), this.loadStorage = new l("\uD83D\uDCBE", "Load Storage"), this.parseStorage = new l("\uD83D\uDCBE", "Parse Storage"), this.loadMiniCache = new l("\uD83D\uDCBE", "Load Mini Cache"), this.fetchInitialGuildCache = new l("\uD83D\uDCBE", "Fetch Initial Guild Cache"), this.loadCachedMessages = new l("\uD83D\uDCBE", "Load Cached Messages"), this.renderApp = new u("\uD83C\uDFA8", "First React Render"), this.renderAppEffect = new u("\uD83C\uDFA8", "First React Render useEffect"), this.renderMessages = new u("\uD83C\uDFA8", "React Render Messages", !0), this.renderMessagesWithCache = new u("\uD83C\uDFA8", "React Render Cached Messages", !0), this.firstRowGenerator = new l("\uD83C\uDFA8", "RowGenerator.generate()"), this.renderLatestMessages = new u("\uD83C\uDFA8", "React Render Latest Messages"), this.initialGuild = new l("\uD83C\uDF10", "Initial Guild"), this.loadLazyCache = new l("\uD83D\uDCBE", "Load Lazy Cache"), this.fetchLazyCache = new l("\uD83D\uDCBE", "Fetch Lazy Cache"), this.parseLazyCache = new l("\uD83D\uDCBE", "Parse Lazy Cache"), this.fetchStaleChannels = new l("\uD83D\uDCBE", "Fetch Stale Channels"), this.deserializeCache = new l("\uD83D\uDCBE", "Deserialize Cache"), this.dispatchLazyCache = new l("\uD83D\uDCBE", "Dispatch Lazy Cache"), this.parseReady = new l("\uD83C\uDF10", "Parse READY"), this.ready = new l("\uD83C\uDF10", "READY"), this.hydrateReady = new l("\uD83C\uDF10", "Hydrate READY"), this.dispatchReady = new l("\uD83C\uDF10", "Dispatch READY"), this.parseReadySupplemental = new l("\uD83C\uDF10", "Parse READY Supplemental"), this.readySupplemental = new l("\uD83C\uDF10", "READY Supplemental"), this.hydrateReadySupplemental = new l("\uD83C\uDF10", "Hydrate READY Supplemental"), this.dispatchReadySupplemental = new l("\uD83C\uDF10", "Dispatch READY Supplemental"), this.fetchMessages = new l("\uD83C\uDF10", "Fetch messages"), this.dispatchMessages = new l("\uD83C\uDF10", "Dispatch messages"), this.imports = {
+    this.loadIndex = new l("❗", "Load index.tsx"), this.loadFastConnectNativeModule = new l("\uD83D\uDCBE", "Load fast_connect native module"), this.beginFastConnect = new l("\uD83C\uDF10", "Fast Connect IDENTIFY"), this.loadImports = new l("\uD83C\uDFC3", "Load Imports"), this.init = new l("\uD83C\uDFC3", "Initial Initialization"), this.loadStorage = new l("\uD83D\uDCBE", "Load Storage"), this.parseStorage = new l("\uD83D\uDCBE", "Parse Storage"), this.loadMiniCache = new l("\uD83D\uDCBE", "Load Mini Cache"), this.fetchGuildCache = new l("\uD83D\uDCBE", "Fetch Guild Cache"), this.fetchGuildChannelsCache = new l("\uD83D\uDCBE", "Fetch Initial Guild Channels Cache"), this.loadCachedMessages = new l("\uD83D\uDCBE", "Load Cached Messages"), this.renderApp = new u("\uD83C\uDFA8", "First React Render"), this.renderAppEffect = new u("\uD83C\uDFA8", "First React Render useEffect"), this.renderMessages = new u("\uD83C\uDFA8", "React Render Messages", !0), this.renderMessagesWithCache = new u("\uD83C\uDFA8", "React Render Cached Messages", !0), this.firstRowGenerator = new l("\uD83C\uDFA8", "RowGenerator.generate()"), this.renderLatestMessages = new u("\uD83C\uDFA8", "React Render Latest Messages"), this.initialGuild = new l("\uD83C\uDF10", "Initial Guild"), this.loadLazyCache = new l("\uD83D\uDCBE", "Load Lazy Cache"), this.fetchLazyCache = new l("\uD83D\uDCBE", "Fetch Lazy Cache"), this.parseLazyCache = new l("\uD83D\uDCBE", "Parse Lazy Cache"), this.fetchStaleChannels = new l("\uD83D\uDCBE", "Fetch Stale Channels"), this.deserializeCache = new l("\uD83D\uDCBE", "Deserialize Cache"), this.dispatchLazyCache = new l("\uD83D\uDCBE", "Dispatch Lazy Cache"), this.parseReady = new l("\uD83C\uDF10", "Parse READY"), this.ready = new l("\uD83C\uDF10", "READY"), this.hydrateReady = new l("\uD83C\uDF10", "Hydrate READY"), this.dispatchReady = new l("\uD83C\uDF10", "Dispatch READY"), this.parseReadySupplemental = new l("\uD83C\uDF10", "Parse READY Supplemental"), this.readySupplemental = new l("\uD83C\uDF10", "READY Supplemental"), this.hydrateReadySupplemental = new l("\uD83C\uDF10", "Hydrate READY Supplemental"), this.dispatchReadySupplemental = new l("\uD83C\uDF10", "Dispatch READY Supplemental"), this.fetchMessages = new l("\uD83C\uDF10", "Fetch messages"), this.dispatchMessages = new l("\uD83C\uDF10", "Dispatch messages"), this.imports = {
       polyfillsEnd: new d,
       sentryEnd: new d,
       appStateChangeStart: new d,
@@ -114,7 +114,7 @@ class c {
     }
   }
 }
-var f = new class e extends c {
+var _ = new class e extends c {
   setTTICallback(e) {
     r = () => {
       !0 === e() && (r = () => !1)
@@ -144,7 +144,7 @@ var f = new class e extends c {
   recordMessageRender(e, t, i, s) {
     let {
       default: r
-    } = n("249654");
+    } = n("299039");
     if (!this.renderLatestMessages.hasData()) {
       if (this.renderMessages.record(), t.length > 0 && this.renderMessagesWithCache.record(), i) {
         if (this.renderLatestMessages.record(), null == this.cachedChannelId) {
@@ -255,8 +255,8 @@ var f = new class e extends c {
       time_parse_storage_end: this.parseStorage.serializeEnd(u),
       time_load_mini_cache_start: this.loadMiniCache.serializeStart(u),
       time_load_mini_cache_end: this.loadMiniCache.serializeEnd(u),
-      time_fetch_initial_guild_start: this.fetchInitialGuildCache.serializeStart(u),
-      time_fetch_initial_guild_end: this.fetchInitialGuildCache.serializeEnd(u),
+      time_fetch_initial_guild_start: this.fetchGuildCache.serializeStart(u),
+      time_fetch_initial_guild_end: this.fetchGuildCache.serializeEnd(u),
       time_load_cached_messages_start: this.loadCachedMessages.serializeStart(u),
       time_load_cached_messages_end: this.loadCachedMessages.serializeEnd(u),
       time_render_app_start: this.renderApp.serialize(u),

@@ -1,52 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return h
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("65597"),
-  o = n("151426"),
-  u = n("384997"),
-  d = n("131143"),
-  c = n("162771"),
-  f = n("120363"),
-  E = n("994428"),
-  _ = n("326185");
-let h = s.memo(function(e) {
-  var t, n, i;
+  o = n("384997"),
+  u = n("162771"),
+  d = n("120363"),
+  c = n("994428"),
+  f = n("13972");
+let E = s.memo(function(e) {
+  var t, n, l;
   let {
     state: r,
-    markAsDismissed: u
+    markAsDismissed: o
   } = e, {
-    name: c,
-    guildId: f,
-    boundingRect: E
-  } = r, h = s.useMemo(() => (function(e, t, n) {
-    if (e === o.DismissibleContent.RECURRING_EVENT_COACHMARK) return (0, a.jsx)(d.default, {
-      guildId: t,
-      markAsDismissed: n
-    });
-    return null
-  })(c, f, u), [c, f, u]);
-  if (null == h) return null;
+    name: u,
+    guildId: d,
+    boundingRect: c
+  } = r, E = s.useMemo(() => {
+    var e, t, n;
+    return e = 0, t = 0, n = 0, null
+  }, [u, d, o]);
+  if (null == E) return null;
   return (0, a.jsx)("div", {
-    className: l(_.upsell, !(null != (t = E) && !(t.y < 0)) && _.hidden),
-    style: (n = 0, null == (i = E) ? {} : {
-      top: i.top,
-      left: i.right - i.x
+    className: i(f.upsell, !(null != (t = c) && !(t.y < 0)) && f.hidden),
+    style: (n = 0, null == (l = c) ? {} : {
+      top: l.top,
+      left: l.right - l.x
     }),
-    children: h
+    children: E
   })
 });
 
-function C() {
-  let e = (0, r.default)([c.default], () => c.default.getGuildId()),
-    t = (0, f.useChannelListUpsells)(e),
-    [n, s] = (0, u.useSelectedDismissibleContent)(Object.values(t).filter(e => {
+function h() {
+  let e = (0, r.useStateFromStores)([u.default], () => u.default.getGuildId()),
+    t = (0, d.useChannelListUpsells)(e),
+    [n, s] = (0, o.useSelectedDismissibleContent)(Object.values(t).filter(e => {
       let {
         disabled: t
       } = e;
@@ -56,13 +51,13 @@ function C() {
         name: t
       } = e;
       return t
-    }), E.DismissibleContentGroupName.SIDEBAR);
+    }), c.DismissibleContentGroupName.SIDEBAR);
   if (null == n) return null;
-  let i = t[n];
-  return null == i ? null : (0, a.jsx)("div", {
-    className: _.container,
-    children: (0, a.jsx)(h, {
-      state: i,
+  let l = t[n];
+  return null == l ? null : (0, a.jsx)("div", {
+    className: f.container,
+    children: (0, a.jsx)(E, {
+      state: l,
       markAsDismissed: s
     })
   })

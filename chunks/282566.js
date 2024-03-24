@@ -1,131 +1,131 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return M
   }
-}), i("222007");
-var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("819855"),
-  o = i("77078"),
-  u = i("841098"),
-  c = i("812204"),
-  d = i("685665"),
-  f = i("538282"),
-  E = i("626301"),
-  m = i("552917"),
-  I = i("843647"),
-  p = i("154889"),
-  g = i("917247"),
-  _ = i("956597"),
-  S = i("635956"),
-  h = i("599110"),
-  C = i("402671"),
-  T = i("719923"),
-  N = i("788506"),
-  A = i("115279"),
-  y = i("49111"),
-  v = i("958706"),
-  j = i("646718"),
-  R = i("782340"),
-  O = i("350028"),
+}), n("222007");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("819855"),
+  o = n("77078"),
+  u = n("841098"),
+  d = n("812204"),
+  c = n("685665"),
+  f = n("538282"),
+  p = n("626301"),
+  m = n("552917"),
+  h = n("843647"),
+  x = n("154889"),
+  E = n("917247"),
+  y = n("956597"),
+  g = n("635956"),
+  S = n("599110"),
+  C = n("402671"),
+  T = n("719923"),
+  _ = n("788506"),
+  I = n("115279"),
+  v = n("49111"),
+  N = n("958706"),
+  A = n("646718"),
+  O = n("782340"),
+  R = n("187971"),
   M = e => {
-    var t, s, M;
+    var t, a, M;
     let {
-      onLearnMore: x,
-      onClose: P,
-      channel: L,
-      emojiDescriptor: D,
-      pickerIntention: b,
+      onLearnMore: k,
+      onClose: L,
+      channel: P,
+      emojiDescriptor: b,
+      pickerIntention: j,
       analyticsLocation: U
-    } = e, w = (0, u.default)(), [G, k] = l.useState(!1), F = () => {
-      (0, N.trackPremiumSettingsPaneOpened)(L), (0, E.navigateToPremiumMarketingPage)(), x()
-    }, V = (0, r.isThemeLight)(w) ? i("602291") : i("609708"), K = (0, g.usePremiumTrialOffer)(), H = (0, p.usePremiumDiscountOffer)(), B = null != K || null != H, {
-      isLoading: J,
-      suggestedPremiumType: W
-    } = (0, I.default)({
-      autoTrackExposure: !B,
+    } = e, D = (0, u.default)(), [w, F] = l.useState(!1), G = () => {
+      (0, _.trackPremiumSettingsPaneOpened)(P), (0, p.navigateToPremiumMarketingPage)(), k()
+    }, H = (0, r.isThemeLight)(D) ? n("602291") : n("609708"), B = (0, E.usePremiumTrialOffer)(), V = (0, x.usePremiumDiscountOffer)(), K = null != B || null != V, {
+      isLoading: W,
+      suggestedPremiumType: Y
+    } = (0, h.default)({
+      autoTrackExposure: !K,
       experiment: m.default,
       location: "emoji_picker"
     }), z = (0, f.useExpressionPickerStore)(e => e.searchQuery), {
       analyticsLocations: Z
-    } = (0, d.default)(c.default.EMOJI_PICKER), Y = null == K ? void 0 : null === (t = K.subscription_trial) || void 0 === t ? void 0 : t.sku_id, Q = null != Y ? Y === j.PremiumSubscriptionSKUs.TIER_0 : W === j.PremiumTypes.TIER_0;
+    } = (0, c.default)(d.default.EMOJI_PICKER), J = null == B ? void 0 : null === (t = B.subscription_trial) || void 0 === t ? void 0 : t.sku_id, q = null != J ? J === A.PremiumSubscriptionSKUs.TIER_0 : Y === A.PremiumTypes.TIER_0;
     return l.useEffect(() => {
-      if (!J) {
+      if (!W) {
         let e;
-        e = b === v.EmojiIntention.REACTION ? j.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : D.subCategory === A.EmojiSubCategory.TOP_GUILD_EMOJI ? j.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : D.subCategory === A.EmojiSubCategory.NEWLY_ADDED_EMOJI ? j.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : j.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
-        let t = D.emoji;
-        h.default.track(y.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+        e = j === N.EmojiIntention.REACTION ? A.PremiumUpsellTypes.EMOJI_PICKER_REACTION_EMOJI_CLICKED : b.subCategory === I.EmojiSubCategory.TOP_GUILD_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : b.subCategory === I.EmojiSubCategory.NEWLY_ADDED_EMOJI ? A.PremiumUpsellTypes.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : A.PremiumUpsellTypes.EMOJI_PICKER_EMOJI_CLICKED;
+        let t = b.emoji;
+        S.default.track(v.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
           type: e,
           is_animated: t.animated,
-          is_external: !C.default.isInternalEmojiForGuildId(t, null == L ? void 0 : L.getGuildId()),
+          is_external: !C.default.isInternalEmojiForGuildId(t, null == P ? void 0 : P.getGuildId()),
           has_search_query: null != z && "" !== z,
           location: {
             ...U,
-            object: y.AnalyticsObjects.EMOJI
+            object: v.AnalyticsObjects.EMOJI
           },
           location_stack: Z,
-          sku_id: T.default.getSkuIdForPremiumType(W)
+          sku_id: (0, T.castPremiumSubscriptionAsSkuId)(T.default.getSkuIdForPremiumType(Y))
         })
       }
-    }, [J, W, D, L, U, Z, b, z]), (0, n.jsxs)("div", {
-      className: a(O.premiumPromo, {
-        [O.unifyTrialUpsell]: B
+    }, [W, Y, b, P, U, Z, j, z]), (0, i.jsxs)("div", {
+      className: s(R.premiumPromo, {
+        [R.unifyTrialUpsell]: K
       }),
-      children: [(0, n.jsx)(o.Clickable, {
-        className: O.premiumPromoClose,
-        onClick: P,
-        children: R.default.Messages.CLOSE
-      }), J ? (0, n.jsx)(o.Spinner, {}) : (0, n.jsxs)(n.Fragment, {
-        children: [B ? (0, n.jsx)(_.default, {
-          type: j.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-          subscriptionTier: null !== (M = null == K ? void 0 : null === (s = K.subscription_trial) || void 0 === s ? void 0 : s.sku_id) && void 0 !== M ? M : j.PremiumSubscriptionSKUs.TIER_2,
-          onClose: P,
-          trialOffer: K,
-          discountOffer: H,
-          children: Q ? R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
-            planName: (0, T.getTierDisplayName)(j.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-            onClick: F
-          }) : R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-            onClick: F
+      children: [(0, i.jsx)(o.Clickable, {
+        className: R.premiumPromoClose,
+        onClick: L,
+        children: O.default.Messages.CLOSE
+      }), W ? (0, i.jsx)(o.Spinner, {}) : (0, i.jsxs)(i.Fragment, {
+        children: [K ? (0, i.jsx)(y.default, {
+          type: A.PremiumUpsellTypes.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+          subscriptionTier: null !== (M = null == B ? void 0 : null === (a = B.subscription_trial) || void 0 === a ? void 0 : a.sku_id) && void 0 !== M ? M : A.PremiumSubscriptionSKUs.TIER_2,
+          onClose: L,
+          trialOffer: B,
+          discountOffer: V,
+          children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+            planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+            onClick: G
+          }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
+            onClick: G
           })
-        }) : (0, n.jsxs)(n.Fragment, {
-          children: [(0, n.jsx)("img", {
+        }) : (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)("img", {
             alt: "",
-            className: O.premiumPromoImage,
-            src: V
-          }), (0, n.jsx)("div", {
-            className: O.premiumPromoTitle,
-            children: R.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
-          }), (0, n.jsx)("div", {
-            className: O.premiumPromoDescription,
-            children: Q ? R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
-              planName: (0, T.getTierDisplayName)(j.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
-              onClick: F
-            }) : R.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
-              onClick: F
+            className: R.premiumPromoImage,
+            src: H
+          }), (0, i.jsx)("div", {
+            className: R.premiumPromoTitle,
+            children: O.default.Messages.PREMIUM_PROMO_TITLE_SEARCH_UPSELL
+          }), (0, i.jsx)("div", {
+            className: R.premiumPromoDescription,
+            children: q ? O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_TIER_UPSELL.format({
+              planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
+              onClick: G
+            }) : O.default.Messages.PREMIUM_PROMO_DESCRIPTION_SEARCH_UPSELL.format({
+              onClick: G
             })
           })]
-        }), !B && (0, n.jsx)(S.default, {
-          subscriptionTier: Q ? j.PremiumSubscriptionSKUs.TIER_0 : j.PremiumSubscriptionSKUs.TIER_2,
-          submitting: G,
+        }), !K && (0, i.jsx)(g.default, {
+          subscriptionTier: q ? A.PremiumSubscriptionSKUs.TIER_0 : A.PremiumSubscriptionSKUs.TIER_2,
+          submitting: w,
           premiumModalAnalyticsLocation: {
-            section: y.AnalyticsSections.EMOJI_PICKER_POPOUT,
-            object: y.AnalyticsObjects.BUTTON_CTA
+            section: v.AnalyticsSections.EMOJI_PICKER_POPOUT,
+            object: v.AnalyticsObjects.BUTTON_CTA
           },
           size: o.Button.Sizes.SMALL,
           color: o.Button.Colors.GREEN,
           onClick: () => {
-            k(!0)
+            F(!0)
           },
           onSubscribeModalClose: e => {
-            k(!1), e && P()
+            F(!1), e && L()
           },
           buttonText: (() => {
-            if (B) return Q ? R.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : R.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
-            return Q ? R.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : R.default.Messages.PREMIUM_REQUIRED_GET_NITRO
+            if (K) return q ? O.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : O.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT;
+            return q ? O.default.Messages.PREMIUM_SETTINGS_GET_TIER_0 : O.default.Messages.PREMIUM_REQUIRED_GET_NITRO
           })()
         })]
       })]

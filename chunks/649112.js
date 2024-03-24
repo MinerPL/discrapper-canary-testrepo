@@ -14,8 +14,8 @@ var l = n("446674"),
   u = n("659500"),
   d = n("158998"),
   c = n("49111"),
-  f = n("782340"),
-  E = n("18978");
+  E = n("782340"),
+  f = n("599541");
 
 function _(e) {
   let t, n, _, {
@@ -26,7 +26,7 @@ function _(e) {
     N = (0, l.useStateFromStores)([r.default], () => r.default.getChannelId()),
     p = d.default.useName(T),
     S = m === T.id;
-  return S ? (t = f.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = f.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = f.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, I ? t = f.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = f.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
+  return S ? (t = E.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = E.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = E.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, I ? t = E.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = E.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
     username: p
   }), n = (0, s.jsx)(o.default.Button, {
     onClick: function() {
@@ -40,18 +40,18 @@ function _(e) {
         rawText: "<@".concat(e, ">")
       }), null != N && a.default.startTyping(N)
     },
-    children: f.default.Messages.MENTION
-  })) : t = f.default.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE), (0, s.jsxs)(o.default, {
+    children: E.default.Messages.MENTION
+  })) : t = E.default.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE), (0, s.jsxs)(o.default, {
     children: [(0, s.jsx)(o.default.Header, {
       text: _
     }), (0, s.jsxs)(o.default.Body, {
       children: [(0, s.jsxs)("div", {
-        className: E.headerLine,
+        className: f.headerLine,
         children: [(0, s.jsx)(o.default.Icon, {
           expired: !0
         }), (0, s.jsx)(o.default.Info, {
           expired: !0,
-          title: f.default.Messages.INVITE_BUTTON_INVALID,
+          title: E.default.Messages.INVITE_BUTTON_INVALID,
           children: t
         })]
       }), n]

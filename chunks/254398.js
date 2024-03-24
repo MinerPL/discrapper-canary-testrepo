@@ -1,18 +1,18 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   makeTenorProxyURL: function() {
-    return a
+    return o
   }
-}), n("511434"), n("313619"), n("654714"), n("287168"), n("956660"), n("222007"), n("70102");
-var r = n("49111");
-let i = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-]+\.gif)$/;
+}), a("511434"), a("313619"), a("654714"), a("287168"), a("956660"), a("222007"), a("70102");
+var n = a("49111");
+let l = /^\/([a-zA-Z0-9-_]+\/[a-z0-9-%]+\.gif)$/;
 
-function a(e) {
+function o(e) {
   let t = new URL("".concat(window.location.protocol).concat(e)),
     {
-      ASSET_ENDPOINT: n
+      ASSET_ENDPOINT: a
     } = window.GLOBAL_ENV;
-  if (null == t.pathname.match(i)) throw Error("Unexpected Tenor GIF path.");
-  let a = "".concat(r.Endpoints.TENOR_ASSET_PATH).concat(t.pathname);
-  return "".concat(location.protocol).concat(n).concat(a)
+  if (null == t.pathname.match(l)) throw Error("Unexpected Tenor GIF path.");
+  let o = "".concat(n.Endpoints.TENOR_ASSET_PATH).concat(t.pathname);
+  return "".concat(location.protocol).concat(a).concat(o)
 }

@@ -1,58 +1,59 @@
 "use strict";
-r.r(t), r.d(t, {
+n.r(t), n.d(t, {
   registerFetchedSupplementals: function() {
-    return g
+    return h
   },
   JoinSourceType: function() {
     return s
   },
   getJoinSourceTypeLabel: function() {
-    return v
+    return A
   },
   getIntegrationLabel: function() {
-    return M
+    return p
   },
   useGetIntegrationIconString: function() {
-    return O
+    return L
   },
   fetchMemberSupplemental: function() {
-    return A
+    return U
   }
-}), r("424973");
-var n, s, u, l, i, a, o = r("872717"),
-  c = r("819855"),
-  d = r("841098"),
-  f = r("376556"),
-  E = r("572943"),
-  h = r("49111"),
-  _ = r("782340");
-let I = {};
+}), n("424973");
+var i, s, a, l, u, o, d = n("872717"),
+  r = n("819855"),
+  c = n("841098"),
+  f = n("376556"),
+  E = n("572943"),
+  S = n("49111"),
+  _ = n("782340");
+let g = {};
 
-function p(e, t) {
+function M(e, t) {
   return e + t
 }
 
-function T(e, t) {
+function N(e, t) {
   return t.map(t => e + t)
 }
 
-function S(e) {
+function I(e) {
   return e.split("-")[1]
-}(l = n || (n = {}))[l.FAILED = 0] = "FAILED", l[l.UNFETCHED = 1] = "UNFETCHED", l[l.PENDING = 2] = "PENDING", l[l.SUCCEEDED = 3] = "SUCCEEDED", l[l.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
+}(l = i || (i = {}))[l.FAILED = 0] = "FAILED", l[l.UNFETCHED = 1] = "UNFETCHED", l[l.PENDING = 2] = "PENDING", l[l.SUCCEEDED = 3] = "SUCCEEDED", l[l.FAILED_NO_RETRY = 4] = "FAILED_NO_RETRY";
 
-function N(e, t) {
+function T(e, t) {
   e.forEach(e => {
-    I[e] = t
+    g[e] = t
   })
 }
 
-function g(e, t) {
-  t.forEach(t => (function(e, t, r) {
-    I[e + t] = 3
+function h(e, t) {
+  t.forEach(t => (function(e, t, n) {
+    g[e + t] = 3
   })(e, t, 3))
-}(i = s || (s = {}))[i.UNSPECIFIED = 0] = "UNSPECIFIED", i[i.BOT = 1] = "BOT", i[i.INTEGRATION = 2] = "INTEGRATION", i[i.DISCOVERY = 3] = "DISCOVERY", i[i.HUB = 4] = "HUB", i[i.INVITE = 5] = "INVITE", i[i.VANITY_URL = 6] = "VANITY_URL";
-let v = function(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0;
+}(u = s || (s = {}))[u.UNSPECIFIED = 0] = "UNSPECIFIED", u[u.BOT = 1] = "BOT", u[u.INTEGRATION = 2] = "INTEGRATION", u[u.DISCOVERY = 3] = "DISCOVERY", u[u.HUB = 4] = "HUB", u[u.INVITE = 5] = "INVITE", u[u.VANITY_URL = 6] = "VANITY_URL";
+let A = function(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+    n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   switch (e) {
     case 1:
       return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_BOT;
@@ -65,7 +66,7 @@ let v = function(e) {
     case 5:
       return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INVITE;
     case 6:
-      if (null != t) return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
+      if (null != t && !n) return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL_LABEL_NAME.format({
         vanityUrl: t
       });
       return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_VANITY_URL;
@@ -73,8 +74,8 @@ let v = function(e) {
       return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_UNKNOWN
   }
 };
-(a = u || (u = {})).DISCORD = "discord", a.TWITCH = "twitch", a.YOUTUBE = "youtube", a.GUILD_SUBSCRIPTION = "guild_subscription";
-let M = e => {
+(o = a || (a = {})).DISCORD = "discord", o.TWITCH = "twitch", o.YOUTUBE = "youtube", o.GUILD_SUBSCRIPTION = "guild_subscription";
+let p = e => {
     switch (e) {
       case "twitch":
         return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION_TWITCH;
@@ -84,13 +85,13 @@ let M = e => {
         return _.default.Messages.MEMBER_SAFETY_JOIN_TYPE_INTEGRATION
     }
   },
-  O = e => {
+  L = e => {
     let t = f.default.get((0, E.useLegacyPlatformType)(e)),
-      r = (0, d.default)();
-    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, c.isThemeDark)(r) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
+      n = (0, c.default)();
+    return null != t && ["twitch", "youtube"].includes(e) ? "url('".concat((0, r.isThemeDark)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null
   };
 
-function R(e) {
+function O(e) {
   return {
     userId: e.user_id,
     sourceInviteCode: e.source_invite_code,
@@ -99,33 +100,33 @@ function R(e) {
     integrationType: e.integration_type
   }
 }
-async function A(e, t) {
-  let r = T(e, t),
-    n = r.filter(e => I[e] <= 1).map(S);
-  if (0 === n.length) return [];
-  N(r, 2);
+async function U(e, t) {
+  let n = N(e, t),
+    i = n.filter(e => g[e] <= 1).map(I);
+  if (0 === i.length) return [];
+  T(n, 2);
   try {
-    let t = await o.default.post({
-      url: h.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
+    let t = await d.HTTP.post({
+      url: S.Endpoints.MEMBER_SAFETY_SUPPLEMENTAL(e),
       body: {
-        user_ids: n
+        user_ids: i
       }
     });
-    if (!Array.isArray(t.body)) return N(r, 0), [];
-    let s = t.body.map(R),
-      u = [];
+    if (!Array.isArray(t.body)) return T(n, 0), [];
+    let s = t.body.map(O),
+      a = [];
     s.forEach(e => {
       let {
         userId: t
       } = e;
-      return u.push(t)
+      return a.push(t)
     });
-    let l = T(e, u),
-      i = n.filter(e => !u.includes(e)),
-      a = T(e, i);
-    return N(l, 3), N(a, 0), s
+    let l = N(e, a),
+      u = i.filter(e => !a.includes(e)),
+      o = N(e, u);
+    return T(l, 3), T(o, 0), s
   } catch (e) {
-    N(r, 0)
+    T(n, 0)
   }
   return []
 }

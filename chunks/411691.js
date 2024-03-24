@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   CollectiblesShopMarketingVariants: function() {
-    return a
+    return l
   },
   default: function() {
     return r
   }
 });
-var n, a, s = l("862205");
-(n = a || (a = {}))[n.DEFAULT = 0] = "DEFAULT", n[n.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", n[n.MONSTER_DROP = 2] = "MONSTER_DROP";
-let i = (0, s.createExperiment)({
+var i, l, a = n("862205");
+(i = l || (l = {}))[i.DEFAULT = 0] = "DEFAULT", i[i.WINTER_2023_DROP = 1] = "WINTER_2023_DROP", i[i.MONSTER_DROP = 2] = "MONSTER_DROP", i[i.SPRINGTOONS = 4] = "SPRINGTOONS", i[i.SHY = 5] = "SHY";
+let s = (0, a.createExperiment)({
   kind: "user",
   id: "2023-12_collectibles_shop_marketing",
   label: "Collectibles Shop Marketing Variations",
@@ -28,8 +28,20 @@ let i = (0, s.createExperiment)({
     config: {
       variant: 2
     }
+  }, {
+    id: 4,
+    label: "Springtoons 2024",
+    config: {
+      variant: 4
+    }
+  }, {
+    id: 5,
+    label: "Shy 2024",
+    config: {
+      variant: 5
+    }
   }]
 });
-var r = e => i.useExperiment({
+var r = e => s.useExperiment({
   location: e
 }).variant

@@ -1,36 +1,80 @@
 "use strict";
-E.r(_), E.d(_, {
+n.r(t), n.d(t, {
   isEligibleForInappropriateConversationWarning: function() {
-    return n
+    return s
+  },
+  useIsEligibleForInappropriateConversationWarning: function() {
+    return l
   }
 });
-var t = E("862205");
-let o = (0, t.createExperiment)({
-  kind: "user",
-  id: "2024-01_inappropriate_conversation_warning",
-  label: "Inappropriate Conversation Warning",
-  defaultConfig: {
-    enabled: !1
-  },
-  treatments: [{
-    id: 1,
-    label: "Enable Inappropriate Conversation Warning",
-    config: {
-      enabled: !0
-    }
-  }]
-});
-
-function n(e) {
-  let {
-    location: _,
-    autoTrackExposure: E = !0
-  } = e, {
-    enabled: t
-  } = o.getCurrentConfig({
-    location: _
-  }, {
-    autoTrackExposure: E
+var i = n("862205");
+let a = (0, i.createExperiment)({
+    kind: "user",
+    id: "2024-01_inappropriate_conversation_warning",
+    label: "Inappropriate Conversation Warning",
+    defaultConfig: {
+      enabled: !1
+    },
+    treatments: [{
+      id: 1,
+      label: "Enable Inappropriate Conversation Warning",
+      config: {
+        enabled: !0
+      }
+    }]
+  }),
+  r = (0, i.createExperiment)({
+    kind: "user",
+    id: "2024-01_inappropriate_conversation_warning_staff_bypass",
+    label: "Inappropriate Conversation Warning Staff Bypass",
+    defaultConfig: {
+      enabled: !1
+    },
+    treatments: [{
+      id: 1,
+      label: "Enable Inappropriate Conversation Warning Staff Bypass",
+      config: {
+        enabled: !0
+      }
+    }]
   });
-  return t
+
+function s(e) {
+  let {
+    location: t,
+    autoTrackExposure: n = !1
+  } = e, {
+    enabled: i
+  } = a.getCurrentConfig({
+    location: t
+  }, {
+    autoTrackExposure: n
+  }), {
+    enabled: s
+  } = r.getCurrentConfig({
+    location: t
+  }, {
+    autoTrackExposure: n
+  });
+  return i || s
+}
+
+function l(e) {
+  let {
+    location: t,
+    autoTrackExposure: n = !1
+  } = e, {
+    enabled: i
+  } = a.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: n
+  }), {
+    enabled: s
+  } = r.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: n
+  });
+  return i || s
 }

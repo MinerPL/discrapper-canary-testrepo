@@ -1,17 +1,20 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return a
+    return i
   }
 }), E("222007");
 var t = E("689988"),
   o = E("42203"),
-  n = E("612278");
-class r extends t.default {
+  n = E("612278"),
+  r = E("724210");
+class a extends t.default {
   handleChannelPreload(e) {
     let {
       channelId: _
-    } = e, E = o.default.getChannel(_);
+    } = e;
+    if ((0, r.isStaticChannelRoute)(_)) return;
+    let E = o.default.getChannel(_);
     null != E && E.isForumLikeChannel() && (0, n.preloadForumThreads)(E)
   }
   constructor(...e) {
@@ -20,4 +23,4 @@ class r extends t.default {
     }
   }
 }
-var a = new r
+var i = new a

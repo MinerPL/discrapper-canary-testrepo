@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   SlideDirection: function() {
     return a
   },
@@ -7,14 +7,14 @@ s.r(t), s.d(t, {
     return m
   }
 });
-var n, a, i = s("37983"),
-  r = s("884691"),
-  l = s("414456"),
-  o = s.n(l),
-  d = s("458960"),
-  u = s("266491"),
-  h = s("747287");
-(n = a || (a = {}))[n.RIGHT = -1] = "RIGHT", n[n.LEFT = 1] = "LEFT";
+var s, a, i = n("37983"),
+  r = n("884691"),
+  l = n("414456"),
+  o = n.n(l),
+  d = n("458960"),
+  u = n("266491"),
+  h = n("2331");
+(s = a || (a = {}))[s.RIGHT = -1] = "RIGHT", s[s.LEFT = 1] = "LEFT";
 let c = {
   friction: 7,
   tension: 40,
@@ -60,16 +60,16 @@ class p extends r.PureComponent {
 var m = e => {
   let {
     children: t,
-    step: s,
-    direction: n,
+    step: n,
+    direction: s,
     className: a
   } = e;
-  return (0, i.jsx)(u.default, {
+  return (0, i.jsx)(u.TransitionGroup, {
     component: "div",
     className: o(h.animator, a),
     children: (0, i.jsx)(p, {
-      direction: n,
+      direction: s,
       children: t
-    }, s)
+    }, n)
   })
 }

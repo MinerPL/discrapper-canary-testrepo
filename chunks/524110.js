@@ -26,7 +26,7 @@ var l = n("37983"),
   I = n("318042"),
   S = n("49111"),
   _ = n("782340"),
-  N = n("518837");
+  N = n("259893");
 let T = {
   [S.LocalDispatchApplicationStates.INSTALLING]: {
     [m.TimeUnits.NONE]: (e, t) => _.default.Messages.APPLICATION_PROGRESS_INDICATOR_INSTALLING.format({
@@ -229,7 +229,7 @@ var x = o.default.connectStores([p.default, C.default, f.default], () => {
     determineOwnVisibility: t = !0,
     ...n
   } = e;
-  return t ? (0, l.jsx)(d.default, {
+  return t ? (0, l.jsx)(d.TransitionGroup, {
     component: a.Fragment,
     children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(L, {
       ...n

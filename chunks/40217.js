@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 });
 var i = n("37983"),
   s = n("884691"),
   r = n("677935"),
   a = n.n(r),
-  o = n("773179"),
+  o = n("582909"),
   l = n.n(o),
   u = n("784063"),
   d = n("104240"),
   c = n("340346"),
-  f = n("625454");
+  _ = n("625454");
 
-function _(e) {
+function f(e) {
   let {
     streamId: t,
     paused: n,
     onReady: r,
     onResize: o,
-    className: _,
-    ...h
-  } = e, g = s.useRef(null), {
-    current: m
-  } = s.useRef(l.uniqueId("media-engine-video-"));
+    className: f,
+    ...E
+  } = e, h = s.useRef(null), {
+    current: g
+  } = s.useRef(l("media-engine-video-"));
   return s.useEffect(() => {
-    let e = g.current;
+    let e = h.current;
     if (!n && null != e) {
       let n = !1,
         i = (t, i) => {
@@ -37,8 +37,8 @@ function _(e) {
           }))
         },
         s = (0, u.getVoiceEngine)();
-      if (null != s.addVideoOutputSink) return s.addVideoOutputSink(m, t, i), () => {
-        s.removeVideoOutputSink(m, t)
+      if (null != s.addVideoOutputSink) return s.addVideoOutputSink(g, t, i), () => {
+        s.removeVideoOutputSink(g, t)
       };
       {
         let n = function(e) {
@@ -47,20 +47,20 @@ function _(e) {
           return "canary" === r || "development" === r ? (0, c.initRenderingContextWebGL)(e) : (0, d.initRenderingContext2D)(e)
         }(e);
         if (null == n) return;
-        return f.default.addSink(t, g, e => {
+        return _.default.addSink(t, h, e => {
           i(e.width, e.height), n.render(e)
         }), () => {
-          f.default.removeSink(t, g)
+          _.default.removeSink(t, h)
         }
       }
     }
-  }, [t, n, o, r, m]), (0, i.jsx)("canvas", {
-    id: m,
-    className: a("media-engine-video", _),
-    ref: g,
-    ...h
+  }, [t, n, o, r, g]), (0, i.jsx)("canvas", {
+    id: g,
+    className: a("media-engine-video", f),
+    ref: h,
+    ...E
   })
 }
-_.defaultProps = {
+f.defaultProps = {
   paused: !1
 }

@@ -1,65 +1,68 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return u
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("77078"),
-  r = l("782340"),
-  o = l("569313");
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("77078"),
+  r = n("782340"),
+  o = n("326436");
 
 function u(e) {
-  let {
-    className: t,
+  let t, {
+    className: n,
     src: l,
-    unicodeEmoji: a,
-    name: u,
-    size: d = 20,
-    enableTooltip: c = !0,
-    enableHeight: f = !0,
+    unicodeEmoji: u,
+    name: d,
+    size: c = 20,
+    enableTooltip: f = !0,
+    enableHeight: p = !0,
     onClick: m
   } = e;
-  if (null == l && null == a) return null;
-  let p = e => {
-    let c = (0, n.jsx)("img", {
+  if (null == l && null == u) return null;
+  return (0, i.jsx)(s.TooltipContainer, {
+    text: d,
+    "aria-label": !1,
+    shouldShow: f,
+    element: "span",
+    children: (t = (0, i.jsx)("img", {
       alt: "",
       "aria-label": r.default.Messages.ROLE_ICON_ALT_TEXT.format({
-        name: u
+        name: d
       }),
-      className: s(o.roleIcon, t, {
+      className: a(o.roleIcon, n, {
         [o.clickable]: null != m
       }),
-      height: f ? d : void 0,
+      height: p ? c : void 0,
       src: l,
-      width: d,
-      ...e
-    });
-    return (null != a && (c = (0, n.jsx)("img", {
+      width: c
+    }), (null != u && (t = (0, i.jsx)("img", {
       alt: "",
-      "aria-label": a.allNamesString,
-      className: s(o.roleIcon, t, {
+      "aria-label": u.allNamesString,
+      className: a(o.roleIcon, n, {
         [o.clickable]: null != m
       }),
-      height: f ? d : void 0,
-      src: a.url,
-      width: d,
-      ...e
-    })), null == m) ? (0, n.jsx)(i.FocusRing, {
-      children: c
-    }) : (0, n.jsx)(i.Clickable, {
+      height: p ? c : void 0,
+      src: u.url,
+      width: c
+    })), null == m) ? (0, i.jsx)(s.FocusRing, {
+      offset: {
+        left: 5
+      },
+      children: t
+    }) : (0, i.jsx)(s.Clickable, {
       onClick: m,
       tag: "span",
-      children: c
-    })
-  };
-  return (0, n.jsx)(i.Tooltip, {
-    text: u,
-    "aria-label": !1,
-    shouldShow: c,
-    children: e => p(e)
+      focusProps: {
+        offset: {
+          left: 5
+        }
+      },
+      children: t
+    }))
   })
 }

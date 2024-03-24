@@ -1,4 +1,4 @@
-I.exports = {
+N.exports = {
   Common: {
     OPEN_DISCORD: "Open Discord",
     SIGN_UP_NOW: "Sign Up Now"
@@ -54,5 +54,12 @@ I.exports = {
   },
   DynamicLinks: {
     IOS_APP_PREVIEW_DESCRIPTION: "Your place to talk with communities and friends."
+  },
+  Storefront: {
+    BENEFITS_TITLE: "Exclusive to this tier",
+    PRODUCT_DETAILS: "Product Details",
+    SERVER_SUBSCRIPTION: "Server subscription",
+    USER_SUBSCRIPTION: "Personal subscription",
+    MORE_BENEFITS: "+ {count, plural, one {# more benefit} other {# more benefits}}"
   }
 }

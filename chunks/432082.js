@@ -6,22 +6,22 @@ s.r(t), s.d(t, {
 });
 var i = s("37983");
 s("884691");
-var l = s("917351"),
-  a = s.n(l),
-  n = s("446674"),
+var n = s("917351"),
+  a = s.n(n),
+  l = s("446674"),
   r = s("77078"),
   d = s("320954"),
   o = s("679653"),
   u = s("419830"),
   c = s("233069"),
   h = s("42203"),
-  f = s("245997"),
-  N = s("27618"),
+  N = s("245997"),
+  S = s("27618"),
   g = s("697218"),
-  S = s("612434"),
+  f = s("612434"),
   E = s("49111"),
   m = s("782340"),
-  T = s("57317");
+  T = s("772681");
 let _ = e => {
   let {
     channel: {
@@ -35,13 +35,13 @@ function x(e) {
   var t;
   let {
     guildId: s,
-    onSelected: l
+    onSelected: n
   } = e;
   let {
     channels: c,
     categories: x
-  } = (t = s, (0, n.useStateFromStoresObject)([f.default], () => {
-    let e = f.default.getCategories(t);
+  } = (t = s, (0, l.useStateFromStoresObject)([N.default], () => {
+    let e = N.default.getCategories(t);
     return {
       channels: (0, d.default)(e._categories, e, _),
       categories: e
@@ -57,7 +57,7 @@ function x(e) {
     } = e;
     return {
       value: t.id,
-      label: (0, o.computeChannelName)(t, g.default, N.default)
+      label: (0, o.computeChannelName)(t, g.default, S.default)
     }
   }).value();
   return (0, i.jsxs)(r.FormItem, {
@@ -67,18 +67,18 @@ function x(e) {
     }), (0, i.jsx)("div", {
       className: T.input,
       children: (0, i.jsx)(r.SearchableSelect, {
-        value: "",
-        onChange: l,
+        value: E.EMPTY_STRING_SNOWFLAKE_ID,
+        onChange: n,
         options: I,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;
           let s = h.default.getChannel(t.parent_id),
-            l = null != s ? s.name : null;
-          return (0, i.jsx)(S.default, {
+            n = null != s ? s.name : null;
+          return (0, i.jsx)(f.default, {
             icon: (0, u.getChannelIconComponent)(t),
             title: e.label,
-            subtitle: l
+            subtitle: n
           })
         },
         placeholder: m.default.Messages.SELECT_CHANNEL_OR_CATEGORY

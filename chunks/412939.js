@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return B
+    return y
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("627445"),
   o = s.n(r),
   d = s("917351"),
@@ -15,84 +15,84 @@ var a = s("37983"),
   c = s("775560"),
   E = s("266491"),
   _ = s("769846"),
-  T = s("77078"),
-  I = s("45299"),
+  I = s("77078"),
+  T = s("45299"),
   S = s("731898"),
-  N = s("608684"),
-  g = s("965397"),
-  f = s("191814"),
-  A = s("476765"),
-  L = s("950603"),
-  m = s("593195"),
-  C = s("178837"),
-  O = s("271560"),
-  h = s("159885"),
-  R = s("837008"),
-  D = s("757715"),
-  M = s("620199"),
-  G = s("7370"),
-  x = s("395905"),
-  p = s("677795"),
-  U = s("874146"),
-  v = s("782340"),
-  j = s("254981");
-let P = (0, h.cssValueToNumber)(_.default.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
+  f = s("608684"),
+  m = s("965397"),
+  N = s("191814"),
+  g = s("476765"),
+  h = s("950603"),
+  C = s("593195"),
+  R = s("178837"),
+  x = s("271560"),
+  L = s("159885"),
+  O = s("837008"),
+  A = s("757715"),
+  p = s("620199"),
+  M = s("7370"),
+  D = s("395905"),
+  v = s("677795"),
+  G = s("874146"),
+  j = s("782340"),
+  U = s("518891");
+let P = (0, L.cssValueToNumber)(_.default.GUILD_SETTINGS_ROLE_SUBSCRIPTIONS_OVERVIEW_SETTINGS_MAX_WIDTH);
 
-function y() {
+function b() {
   return [{
-    name: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_SOME_CHANNELS_NAME,
-    desc: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_SOME_CHANNELS_DESCRIPTION,
-    value: p.GuildRoleSubscriptionFormat.SOME_CHANNELS,
-    icon: m.default
-  }, {
-    name: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_NAME,
-    desc: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_DESCRIPTION,
-    value: p.GuildRoleSubscriptionFormat.ALL_CHANNELS,
+    name: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_SOME_CHANNELS_NAME,
+    desc: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_SOME_CHANNELS_DESCRIPTION,
+    value: v.GuildRoleSubscriptionFormat.SOME_CHANNELS,
     icon: C.default
+  }, {
+    name: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_NAME,
+    desc: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_DESCRIPTION,
+    value: v.GuildRoleSubscriptionFormat.ALL_CHANNELS,
+    icon: R.default
   }]
 }
 
-function b(e) {
+function B(e) {
   let {
     value: t,
     "aria-labelledby": s,
-    onChange: l,
+    onChange: n,
     disabled: r = !1
   } = e, {
     ref: o,
     width: d
-  } = (0, S.default)(), u = (0, c.useLazyValue)(y), E = n.useMemo(() => u.map(e => ({
+  } = (0, S.default)(), u = (0, c.useLazyValue)(b), E = l.useMemo(() => u.map(e => ({
     ...e,
     icon: function() {
       let {
         icon: t
       } = e;
       return (0, a.jsx)("div", {
-        className: j.formatRadioIconWrapper,
+        className: U.formatRadioIconWrapper,
         children: (0, a.jsx)(t, {
-          className: j.formatRadioIcon
+          className: U.formatRadioIcon
         })
       })
     },
-    radioBarClassName: j.formatOptionRadioBar,
-    radioItemIconClassName: j.formatOptionRadioItemIcon
+    radioBarClassName: U.formatOptionRadioBar,
+    radioItemIconClassName: U.formatOptionRadioItemIcon
   })), [u]), _ = null != d && d >= 400;
   return (0, a.jsx)("div", {
     ref: o,
-    children: (0, a.jsx)(T.RadioGroup, {
+    children: (0, a.jsx)(I.RadioGroup, {
       options: E,
       value: t,
       orientation: _ ? "horizontal" : "vertical",
-      size: T.RadioGroup.Sizes.NONE,
+      size: I.RadioGroup.Sizes.NONE,
       className: i({
-        [j.radioGroupHorizontal]: _
+        [U.radioGroupHorizontal]: _
       }),
-      radioItemClassName: j.formatOptionRadioItem,
+      radioItemClassName: U.formatOptionRadioItem,
       onChange: e => {
         let {
           value: t
         } = e;
-        return l(t)
+        return n(t)
       },
       "aria-labelledby": s,
       disabled: r
@@ -100,193 +100,193 @@ function b(e) {
   })
 }
 
-function B(e) {
+function y(e) {
   var t;
   let {
     guild: s,
-    isGuildProducts: l = !1
+    isGuildProducts: n = !1
   } = e, {
     format: i
-  } = (0, G.default)(s.id), r = (0, R.useSubscriptionsSettings)(s.id), d = n.useCallback(() => {
+  } = (0, M.default)(s.id), r = (0, O.useSubscriptionsSettings)(s.id), d = l.useCallback(() => {
     var e;
-    return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
-  }, [r]), [c, _] = n.useState(i), [S, m] = n.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [C, h] = n.useState(d), [y, B] = n.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = n.useState(null == r ? void 0 : r.server_shop_tab_order), {
-    loading: V,
+    return (null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) == null ? null : (0, x.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P)
+  }, [r]), [c, _] = l.useState(i), [S, C] = l.useState(null !== (t = null == r ? void 0 : r.description) && void 0 !== t ? t : ""), [R, L] = l.useState(d), [b, y] = l.useState(null == r ? void 0 : r.store_page_guild_products_default_sort), [F, H] = l.useState(null == r ? void 0 : r.server_shop_tab_order), {
+    loading: k,
     error: w,
-    updateSubscriptionsSettings: k
-  } = (0, R.useUpdateSubscriptionsSettings)(), {
+    updateSubscriptionsSettings: V
+  } = (0, O.useUpdateSubscriptionsSettings)(), {
     imageCTA: Y,
-    imageAriaLabel: K,
-    setFilename: W
-  } = (0, M.default)(null == r ? void 0 : r.cover_image_asset), z = (0, A.useUID)(), X = (0, A.useUID)(), Z = (0, A.useUID)();
+    imageAriaLabel: W,
+    setFilename: z
+  } = (0, p.default)(null == r ? void 0 : r.cover_image_asset), K = (0, g.useUID)(), Z = (0, g.useUID)(), X = (0, g.useUID)();
 
-  function J(e, t) {
-    o(null != e, "Null value not allowed"), null != t && W(t.name), h(e)
+  function Q(e, t) {
+    o(null != e, "Null value not allowed"), null != t && z(t.name), L(e)
   }
-  let Q = n.useMemo(() => {
+  let J = l.useMemo(() => {
       var e;
-      return null != S && S !== (null !== (e = null == r ? void 0 : r.description) && void 0 !== e ? e : "") || (null == C ? void 0 : C.startsWith("data:")) === !0 || c !== i || (null == r ? void 0 : r.store_page_guild_products_default_sort) !== y || (null == r ? void 0 : r.server_shop_tab_order) !== F
-    }, [C, i, S, r, c, y, F]),
-    q = null != S && "" !== S && null != C;
-  n.useEffect(() => {
+      return null != S && S !== (null !== (e = null == r ? void 0 : r.description) && void 0 !== e ? e : "") || (null == R ? void 0 : R.startsWith("data:")) === !0 || c !== i || (null == r ? void 0 : r.store_page_guild_products_default_sort) !== b || (null == r ? void 0 : r.server_shop_tab_order) !== F
+    }, [R, i, S, r, c, b, F]),
+    q = null != S && "" !== S && null != R;
+  l.useEffect(() => {
     var e;
     if ((null == r ? void 0 : null === (e = r.cover_image_asset) || void 0 === e ? void 0 : e.application_id) != null) {
-      let e = (0, O.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P);
-      h(e)
+      let e = (0, x.getAssetURL)(r.cover_image_asset.application_id, r.cover_image_asset, P);
+      L(e)
     }
   }, [null == r ? void 0 : r.cover_image_asset]);
-  let $ = (0, D.useRoleSubscriptionSettingsDisabled)(),
-    ee = n.useMemo(() => U.DISPLAYED_SORT_OPTIONS.map(e => ({
-      label: (0, U.getGuildProductSortOptionLabel)(e),
+  let $ = (0, A.useRoleSubscriptionSettingsDisabled)(),
+    ee = l.useMemo(() => G.DISPLAYED_SORT_OPTIONS.map(e => ({
+      label: (0, G.getGuildProductSortOptionLabel)(e),
       value: e
     })), []),
-    et = n.useMemo(() => [{
-      label: v.default.Messages.GUILD_PRODUCTS_TITLE,
-      value: U.ServerShopTabOrder.PRODUCTS_FIRST
+    et = l.useMemo(() => [{
+      label: j.default.Messages.GUILD_PRODUCTS_TITLE,
+      value: G.ServerShopTabOrder.PRODUCTS_FIRST
     }, {
-      label: v.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
-      value: U.ServerShopTabOrder.SUBS_FIRST
+      label: j.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_TITLE,
+      value: G.ServerShopTabOrder.SUBS_FIRST
     }], []);
   return (0, a.jsxs)("div", {
-    className: j.container,
+    className: U.container,
     children: [null != w && (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(x.default, {
+      children: [(0, a.jsx)(D.default, {
         children: w.getAnyErrorMessage()
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(N.default, {
         size: 16
       })]
-    }), l ? null : (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsxs)(T.FormSection, {
-        title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_TITLE,
-        titleId: z,
+    }), n ? null : (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsxs)(I.FormSection, {
+        title: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_TITLE,
+        titleId: K,
         disabled: $,
-        children: [(0, a.jsx)(T.FormText, {
-          type: T.FormText.Types.DESCRIPTION,
-          className: j.formDescription,
+        children: [(0, a.jsx)(I.FormText, {
+          type: I.FormText.Types.DESCRIPTION,
+          className: U.formDescription,
           disabled: $,
-          children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_DESCRIPTION
-        }), (0, a.jsx)(b, {
+          children: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_DESCRIPTION
+        }), (0, a.jsx)(B, {
           value: c,
           onChange: e => {
-            i !== e && e === p.GuildRoleSubscriptionFormat.ALL_CHANNELS && (0, T.openModal)(e => (0, a.jsx)(T.ConfirmModal, {
+            i !== e && e === v.GuildRoleSubscriptionFormat.ALL_CHANNELS && (0, I.openModal)(e => (0, a.jsx)(I.ConfirmModal, {
               ...e,
-              header: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_DIALOG_TITLE,
-              confirmText: v.default.Messages.GOT_IT,
-              confirmButtonColor: T.Button.Colors.BRAND,
-              children: (0, a.jsx)(T.Text, {
+              header: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_DIALOG_TITLE,
+              confirmText: j.default.Messages.GOT_IT,
+              confirmButtonColor: I.Button.Colors.BRAND,
+              children: (0, a.jsx)(I.Text, {
                 variant: "text-md/normal",
-                children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_DIALOG_TEXT
+                children: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_FORMAT_ALL_CHANNELS_DIALOG_TEXT
               })
             })), _(e)
           },
-          "aria-labelledby": z,
+          "aria-labelledby": K,
           disabled: $
         })]
-      }), (0, a.jsx)(T.FormDivider, {
-        className: j.divider
+      }), (0, a.jsx)(I.FormDivider, {
+        className: U.divider
       })]
-    }), (0, a.jsx)(T.FormSection, {
-      title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_TITLE,
-      titleId: X,
+    }), (0, a.jsx)(I.FormSection, {
+      title: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_TITLE,
+      titleId: Z,
       disabled: $,
-      children: (0, a.jsx)(T.TextArea, {
-        placeholder: l ? v.default.Messages.GUILD_PRODUCT_SETUP_INFO_DESCRIPTION_PLACEHOLDER : v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_PLACEHOLDER,
+      children: (0, a.jsx)(I.TextArea, {
+        placeholder: n ? j.default.Messages.GUILD_PRODUCT_SETUP_INFO_DESCRIPTION_PLACEHOLDER : j.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_DESCRIPTION_PLACEHOLDER,
         maxLength: 1500,
         value: S,
         rows: 2,
         autosize: !0,
-        onChange: m,
-        "aria-labelledby": X,
+        onChange: C,
+        "aria-labelledby": Z,
         disabled: $
       })
-    }), (0, a.jsx)(T.FormDivider, {
-      className: j.divider
-    }), (0, a.jsxs)(T.FormSection, {
-      title: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_TITLE,
+    }), (0, a.jsx)(I.FormDivider, {
+      className: U.divider
+    }), (0, a.jsxs)(I.FormSection, {
+      title: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_TITLE,
       disabled: $,
-      children: [(0, a.jsx)(T.FormText, {
-        type: T.FormText.Types.DESCRIPTION,
-        className: j.formDescription,
+      children: [(0, a.jsx)(I.FormText, {
+        type: I.FormText.Types.DESCRIPTION,
+        className: U.formDescription,
         disabled: $,
-        children: v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_DESCRIPTION
-      }), (0, a.jsx)(N.default, {
-        image: C,
+        children: j.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_DESCRIPTION
+      }), (0, a.jsx)(f.default, {
+        image: R,
         hint: Y,
         showIcon: !0,
         showRemoveButton: !1,
         hideSize: !0,
-        className: j.coverImageUploader,
-        iconWrapperClassName: j.coverImageUploaderIconWrapper,
-        imageClassName: j.coverImageUploaderInner,
-        iconClassName: j.coverImageUploaderIcon,
-        onChange: J,
-        "aria-label": K,
+        className: U.coverImageUploader,
+        iconWrapperClassName: U.coverImageUploaderIconWrapper,
+        imageClassName: U.coverImageUploaderInner,
+        iconClassName: U.coverImageUploaderIcon,
+        onChange: Q,
+        "aria-label": W,
         disabled: $
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(N.default, {
         size: 16
-      }), (0, a.jsx)(L.default, {
-        onChange: J,
+      }), (0, a.jsx)(h.default, {
+        onChange: Q,
         buttonCTA: Y,
-        "aria-label": K,
+        "aria-label": W,
         disabled: $,
-        look: T.Button.Looks.OUTLINED,
-        color: T.Button.Colors.PRIMARY
+        look: I.Button.Looks.OUTLINED,
+        color: I.Button.Colors.PRIMARY
       })]
-    }), l ? (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(T.FormDivider, {
-        className: j.divider
-      }), (0, a.jsxs)(T.FormSection, {
-        title: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_TITLE,
-        titleId: Z,
+    }), n ? (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)(I.FormDivider, {
+        className: U.divider
+      }), (0, a.jsxs)(I.FormSection, {
+        title: j.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_TITLE,
+        titleId: X,
         disabled: $,
-        children: [(0, a.jsx)(T.FormText, {
-          type: T.FormText.Types.DESCRIPTION,
-          className: j.formDescription,
+        children: [(0, a.jsx)(I.FormText, {
+          type: I.FormText.Types.DESCRIPTION,
+          className: U.formDescription,
           disabled: $,
-          children: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_DESCRIPTION
-        }), (0, a.jsx)(T.SingleSelect, {
-          value: y,
-          placeholder: v.default.Messages.SELECT,
+          children: j.default.Messages.CREATOR_MONETIZATION_SETTINGS_GUILD_PRODUCT_SORT_OPTION_DESCRIPTION
+        }), (0, a.jsx)(I.SingleSelect, {
+          value: b,
+          placeholder: j.default.Messages.SELECT,
           options: ee,
-          onChange: e => B(e)
+          onChange: e => y(e)
         })]
       })]
     }) : null, et.length > 0 && (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(T.FormDivider, {
-        className: j.divider
-      }), (0, a.jsxs)(T.FormSection, {
-        title: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_TITLE,
-        titleId: Z,
+      children: [(0, a.jsx)(I.FormDivider, {
+        className: U.divider
+      }), (0, a.jsxs)(I.FormSection, {
+        title: j.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_TITLE,
+        titleId: X,
         disabled: $,
-        children: [(0, a.jsx)(T.FormText, {
-          type: T.FormText.Types.DESCRIPTION,
-          className: j.formDescription,
+        children: [(0, a.jsx)(I.FormText, {
+          type: I.FormText.Types.DESCRIPTION,
+          className: U.formDescription,
           disabled: $,
-          children: v.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_DESCRIPTION
-        }), (0, a.jsx)(T.SingleSelect, {
+          children: j.default.Messages.CREATOR_MONETIZATION_SETTINGS_SERVER_SHOP_DEFAULT_TAB_OPTION_DESCRIPTION
+        }), (0, a.jsx)(I.SingleSelect, {
           value: F,
-          placeholder: v.default.Messages.SELECT,
+          placeholder: j.default.Messages.SELECT,
           options: et,
           onChange: e => H(e)
         })]
       })]
-    }), (0, a.jsx)(E.default, {
+    }), (0, a.jsx)(E.TransitionGroup, {
       component: "div",
-      className: j.contentRegion,
-      children: Q && (0, a.jsx)(g.default, {
-        children: (0, a.jsx)(I.default, {
-          submitting: V,
+      className: U.contentRegion,
+      children: J && (0, a.jsx)(m.default, {
+        children: (0, a.jsx)(T.default, {
+          submitting: k,
           disabled: !q,
           onReset: () => {
             var e;
-            _(i), m(null !== (e = null == r ? void 0 : r.description) && void 0 !== e ? e : ""), h(d), B(null == r ? void 0 : r.store_page_guild_products_default_sort), H(null == r ? void 0 : r.server_shop_tab_order)
+            _(i), C(null !== (e = null == r ? void 0 : r.description) && void 0 !== e ? e : ""), L(d), y(null == r ? void 0 : r.store_page_guild_products_default_sort), H(null == r ? void 0 : r.server_shop_tab_order)
           },
           onSave: () => {
             o(null != r, "Settings must be defined");
             let e = {};
-            S !== r.description && (e.description = S), null != C && C.startsWith("data:") && (e.cover_image = C), c !== i && (e.full_server_gate = c === p.GuildRoleSubscriptionFormat.ALL_CHANNELS), y !== r.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = y), F !== r.server_shop_tab_order && (e.server_shop_tab_order = F), !u.isEmpty(e) && k(s.id, e)
+            S !== r.description && (e.description = S), null != R && R.startsWith("data:") && (e.cover_image = R), c !== i && (e.full_server_gate = c === v.GuildRoleSubscriptionFormat.ALL_CHANNELS), b !== r.store_page_guild_products_default_sort && (e.store_page_guild_products_default_sort = b), F !== r.server_shop_tab_order && (e.server_shop_tab_order = F), !u.isEmpty(e) && V(s.id, e)
           },
-          saveButtonTooltip: q ? void 0 : v.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
+          saveButtonTooltip: q ? void 0 : j.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_FULL_OUT_ALL_INFO
         })
       })
     })]

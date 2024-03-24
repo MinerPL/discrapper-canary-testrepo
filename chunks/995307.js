@@ -1,7 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
+  SUMMARY_POLL_INTERVAL: function() {
+    return c
+  },
   SummariesSidebarToggledSource: function() {
-    return i
+    return s
   },
   SummariesTopicClickedSource: function() {
     return r
@@ -10,29 +13,31 @@ n.r(t), n.d(t, {
     return o
   },
   getSummaryFeedbackReasons: function() {
-    return d
+    return f
   }
 });
-var l, a, s, i, r, o, u = n("782340");
+var i, l, a, s, r, o, u = n("718517"),
+  d = n("782340");
+let c = 5 * u.default.Millis.SECOND;
 
-function d() {
+function f() {
   return [{
     value: "DUPLICATED",
-    label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_DUPLICATED
+    label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_DUPLICATED
   }, {
     value: "TOO_GENERIC",
-    label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_GENERIC
+    label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_GENERIC
   }, {
     value: "TOO_MANY",
-    label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_MANY
+    label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_TOO_MANY
   }, {
     value: "INACCURATE",
-    label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_INACCURATE
+    label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_INACCURATE
   }, {
     value: "NOT_USEFUL",
-    label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_NOT_USEFUL
+    label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_NOT_USEFUL
   }, {
     value: "OTHER",
-    label: u.default.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
+    label: d.default.Messages.SUMMARIES_FEEDBACK_OPTION_OTHER
   }]
-}(l = i || (i = {})).TOOLBAR_BUTTON = "toolbar button", l.PILL = "pill", (a = r || (r = {})).SIDEBAR = "sidebar", a.PILL_DROPDOWN = "pill dropdown", a.PILL_NEXT_ARROW = "pill next arrow", a.PILL_PREVIOUS_ARROW = "pill previous arrow", (s = o || (o = {})).DUPLICATED = "DUPLICATED", s.TOO_GENERIC = "TOO_GENERIC", s.TOO_MANY = "TOO_MANY", s.INACCURATE = "INACCURATE", s.NOT_USEFUL = "NOT_USEFUL", s.OTHER = "OTHER"
+}(i = s || (s = {})).TOOLBAR_BUTTON = "toolbar button", i.PILL = "pill", (l = r || (r = {})).SIDEBAR = "sidebar", l.PILL_DROPDOWN = "pill dropdown", l.PILL_NEXT_ARROW = "pill next arrow", l.PILL_PREVIOUS_ARROW = "pill previous arrow", (a = o || (o = {})).DUPLICATED = "DUPLICATED", a.TOO_GENERIC = "TOO_GENERIC", a.TOO_MANY = "TOO_MANY", a.INACCURATE = "INACCURATE", a.NOT_USEFUL = "NOT_USEFUL", a.OTHER = "OTHER"

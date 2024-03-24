@@ -8,12 +8,12 @@ n.r(t), n.d(t, {
   }
 }), n("274635"), n("311790"), n("477657"), n("811875"), n("90301"), n("652153"), n("28797"), n("817884"), n("597349"), n("667536"), n("690341");
 var i = n("917351"),
-  r = n.n(i),
-  s = n("316693"),
+  s = n.n(i),
+  r = n("316693"),
   a = n("674268");
 
 function o(e) {
-  return r.cloneDeepWith(e, e => (0, s.isBigFlag)(e) ? {
+  return s.cloneDeepWith(e, e => (0, r.isBigFlag)(e) ? {
     __tag__: "bigflag",
     data: e.toJSON()
   } : (0, a.isUint8Array)(e) ? {
@@ -23,5 +23,5 @@ function o(e) {
 }
 
 function l(e) {
-  return r.cloneDeepWith(e, e => null != e && "object" == typeof e && "__tag__" in e && "bigflag" === e.__tag__ ? s.default.deserialize(e.data) : (0, a.isSerializedUint8Array)(e) ? new Uint8Array(e.data) : void 0)
+  return s.cloneDeepWith(e, e => null != e && "object" == typeof e && "__tag__" in e && "bigflag" === e.__tag__ ? r.deserialize(e.data) : (0, a.isSerializedUint8Array)(e) ? new Uint8Array(e.data) : void 0)
 }

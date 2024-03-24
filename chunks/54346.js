@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return E
   }
 }), n("222007");
 var i = n("446674"),
@@ -10,24 +10,25 @@ var i = n("446674"),
   a = n("305961"),
   r = n("957255"),
   d = n("607620"),
-  s = n("610174"),
-  o = n("311161");
-let c = {},
-  f = {};
+  s = n("299039"),
+  o = n("610174"),
+  c = n("311161");
+let f = {},
+  _ = {};
 
-function _() {
+function A() {
   var e;
   let t = null !== (e = u.default.getGuildsProto()) && void 0 !== e ? e : {},
     n = a.default.getGuilds(),
-    i = Object.keys(n);
-  for (let e of (f = {}, i))(0, s.getGuildAlertModeEnabled)(e).showAlertMode && (f[e] = {
+    i = s.default.keys(n);
+  for (let e of (_ = {}, i))(0, o.getGuildAlertModeEnabled)(e).showAlertMode && (_[e] = {
     guildId: e,
     guildName: n[e].name,
     ...t[e]
   })
 }
 
-function A(e) {
+function D(e) {
   return null != e && Object.keys(e).length > 0 ? {
     raidDetectedAt: e.raid_detected_at,
     dmSpamDetectedAt: e.dm_spam_detected_at,
@@ -35,47 +36,49 @@ function A(e) {
     invitesDisabledUntil: e.invites_disabled_until
   } : null
 }
-class D extends i.default.Store {
+class I extends i.default.Store {
   initialize() {
-    this.waitFor(u.default, a.default, r.default, d.default), this.syncWith([u.default, a.default, r.default, d.default], _)
+    this.waitFor(u.default, a.default, r.default, d.default), this.syncWith([u.default, a.default, r.default, d.default], A)
   }
   getGuildIncident(e) {
-    return c[e]
+    return f[e]
   }
   getIncidentsByGuild() {
-    return c
-  }
-  getGuildAlertSettings() {
     return f
   }
+  getGuildAlertSettings() {
+    return _
+  }
 }
-D.displayName = "GuildIncidentsStore";
-var I = new D(l.default, {
+I.displayName = "GuildIncidentsStore";
+var E = new I(l.default, {
   CONNECTION_OPEN: function(e) {
-    for (let t of (c = {}, e.guilds)) {
-      let e = A(t.properties.incidents_data);
-      null != e && ((0, o.hasDetectedActivity)(e) || (0, o.isUnderLockdown)(e)) && (c[t.id] = e)
+    for (let n of (f = {}, e.guilds)) {
+      var t;
+      let e = D(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+      null != e && ((0, c.hasDetectedActivity)(e) || (0, c.isUnderLockdown)(e)) && (f[n.id] = e)
     }
   },
   GUILD_CREATE: function(e) {
+    var t;
     let {
-      guild: t
-    } = e, n = A(t.properties.incidents_data);
-    null != n && ((0, o.hasDetectedActivity)(n) || (0, o.isUnderLockdown)(n)) && (c[t.id] = n)
+      guild: n
+    } = e, i = D(null === (t = n.properties) || void 0 === t ? void 0 : t.incidents_data);
+    null != i && ((0, c.hasDetectedActivity)(i) || (0, c.isUnderLockdown)(i)) && (f[n.id] = i)
   },
   GUILD_UPDATE: function(e) {
     let {
       guild: t
-    } = e, n = A(t.incidents_data);
-    null != n && ((0, o.hasDetectedActivity)(n) || (0, o.isUnderLockdown)(n)) ? c[t.id] = n : delete c[t.id]
+    } = e, n = D(t.incidents_data);
+    null != n && ((0, c.hasDetectedActivity)(n) || (0, c.isUnderLockdown)(n)) ? f[t.id] = n : delete f[t.id]
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete c[t.id]
+    delete f[t.id]
   },
   LOGOUT: function(e) {
-    c = {}
+    f = {}
   }
 })

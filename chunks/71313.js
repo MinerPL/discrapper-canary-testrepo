@@ -1,35 +1,35 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchLiveBuild: function() {
-    return _
+    return g
   }
 });
 var i = n("872717"),
-  r = n("398183"),
-  s = n("862337"),
+  s = n("398183"),
+  r = n("862337"),
   a = n("913144"),
   o = n("915639"),
   l = n("686470"),
   u = n("645672"),
-  c = n("718517"),
-  d = n("49111");
-let f = 10 * c.default.Millis.MINUTE,
-  E = 10 * c.default.Millis.MINUTE,
-  h = 1 * c.default.Millis.MINUTE,
-  p = {};
-async function _(e, t) {
+  d = n("718517"),
+  c = n("49111");
+let _ = 10 * d.default.Millis.MINUTE,
+  f = 10 * d.default.Millis.MINUTE,
+  E = 1 * d.default.Millis.MINUTE,
+  h = {};
+async function g(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    c = o.default.locale;
+    d = o.default.locale;
   return a.default.dispatch({
     type: "APPLICATION_BUILD_FETCH_START",
     applicationId: e,
     branchId: t,
-    locale: c
-  }), n && await (0, r.sleep)(Math.random() * h), i.default.get({
-    url: d.Endpoints.APPLICATION_LIVE_BUILD(e, t),
+    locale: d
+  }), n && await (0, s.sleep)(Math.random() * E), i.HTTP.get({
+    url: c.Endpoints.APPLICATION_LIVE_BUILD(e, t),
     query: {
       platform: (0, u.getBuildPlatform)(),
-      locale: c
+      locale: d
     },
     oldFormErrors: !0
   }).then(n => {
@@ -46,7 +46,7 @@ async function _(e, t) {
       type: "APPLICATION_BUILD_FETCH_SUCCESS",
       applicationId: e,
       branchId: t,
-      locale: c,
+      locale: d,
       build: i
     })
   }, n => {
@@ -59,10 +59,10 @@ async function _(e, t) {
       branchId: t
     });
     else {
-      var r, o;
-      r = e, null == p[o = t] && (p[o] = new s.Timeout), p[o].start(f + Math.random() * E, () => {
-        let e = l.default.getLibraryApplication(r, o);
-        null != e && _(r, o)
+      var s, o;
+      s = e, null == h[o = t] && (h[o] = new r.Timeout), h[o].start(_ + Math.random() * f, () => {
+        let e = l.default.getLibraryApplication(s, o);
+        null != e && g(s, o)
       })
     }
   })

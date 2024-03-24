@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionRecord: function() {
-    return f
+    return _
   },
   default: function() {
-    return _
+    return f
   }
 });
 var i = n("627445"),
@@ -23,9 +23,9 @@ function c(e) {
     quantity: e.quantity
   }
 }
-class f extends r.default {
+class _ extends r.default {
   static createFromServer(e) {
-    return new f({
+    return new _({
       id: e.id,
       type: e.type,
       createdAt: new Date(e.created_at),
@@ -46,6 +46,7 @@ class f extends r.default {
       } : null,
       streakStartedAt: null != e.streak_started_at ? new Date(e.streak_started_at) : null,
       currency: e.currency,
+      pauseEndsAt: null != e.pause_ends_at ? new Date(e.pause_ends_at) : null,
       metadata: e.metadata,
       useStorekitResubscribe: e.use_storekit_resubscribe,
       price: e.price,
@@ -88,7 +89,7 @@ class f extends r.default {
     return null != this.items.find(e => e.planId === d.SubscriptionPlans.PREMIUM_MONTH_TIER_2)
   }
   constructor(e) {
-    super(), this.id = e.id, this.type = e.type, this.items = e.items, this.createdAt = e.createdAt, this.canceledAt = e.canceledAt, this.currentPeriodStart = e.currentPeriodStart, this.currentPeriodEnd = e.currentPeriodEnd, this.status = e.status, this.paymentSourceId = e.paymentSourceId, this.paymentGateway = e.paymentGateway, this.paymentGatewayPlanId = e.paymentGatewayPlanId, this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId, this.trialId = e.trialId, this.trialEndsAt = e.trialEndsAt, this.renewalMutations = e.renewalMutations, this.currency = e.currency, this.metadata = e.metadata, this.latestInvoice = e.latestInvoice, this.useStorekitResubscribe = e.useStorekitResubscribe, this.price = e.price, this.userId = e.userId;
+    super(), this.id = e.id, this.type = e.type, this.items = e.items, this.createdAt = e.createdAt, this.canceledAt = e.canceledAt, this.currentPeriodStart = e.currentPeriodStart, this.currentPeriodEnd = e.currentPeriodEnd, this.status = e.status, this.paymentSourceId = e.paymentSourceId, this.paymentGateway = e.paymentGateway, this.paymentGatewayPlanId = e.paymentGatewayPlanId, this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId, this.trialId = e.trialId, this.trialEndsAt = e.trialEndsAt, this.renewalMutations = e.renewalMutations, this.currency = e.currency, this.pauseEndsAt = e.pauseEndsAt, this.metadata = e.metadata, this.latestInvoice = e.latestInvoice, this.useStorekitResubscribe = e.useStorekitResubscribe, this.price = e.price, this.userId = e.userId;
     let t = this.renewalMutations,
       n = e.items[0].planId,
       i = null;
@@ -101,4 +102,4 @@ class f extends r.default {
     this.planId = n, this.additionalPlans = e.items.filter(e => e.planId !== n), null != t && null != i && (t.planId = i, t.additionalPlans = t.items.filter(e => e.planId !== i))
   }
 }
-var _ = f
+var f = _

@@ -1,112 +1,122 @@
 "use strict";
 n.r(t), n.d(t, {
   initSessionHeartbeatScheduler: function() {
-    return g
+    return O
   }
 }), n("70102");
-var a = n("976255"),
-  s = n("95410"),
-  i = n("913144"),
-  l = n("945956"),
-  r = n("599110"),
-  o = n("718517"),
-  u = n("872507"),
-  d = n("286235"),
-  c = n("49111");
-let f = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
-  E = null,
-  _ = null,
-  h = null,
-  C = !1;
-async function I() {
-  if (C) return;
-  C = !0, (0, a.setSessionExtendingEnabled)(!0), d.default.addBreadcrumb({
+var a = n("95410"),
+  s = n("913144"),
+  l = n("918105"),
+  i = n("963990"),
+  r = n("161454"),
+  o = n("945956"),
+  u = n("599110"),
+  d = n("718517"),
+  c = n("872507"),
+  f = n("286235"),
+  E = n("371160"),
+  h = n("49111");
+let _ = "LATEST_HEARTBEAST_EVENT_TIMESTAMP",
+  C = null,
+  S = null,
+  I = null,
+  m = !1;
+async function p() {
+  if (m) return;
+  m = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
-  let e = await s.default.getAfterRefresh(f).then(a.timestampOrZero);
-  if (!C) return;
+  let e = await a.default.getAfterRefresh(_).then(E.timestampOrZero);
+  if (!m) return;
   let t = Date.now(),
-    n = 15 * o.default.Millis.MINUTE + e - t;
-  n > o.default.Millis.HOUR && d.default.addBreadcrumb({
+    n = 15 * d.default.Millis.MINUTE + e - t;
+  n > d.default.Millis.HOUR && f.default.addBreadcrumb({
     message: "Received invalid Date.now() when generating a heartbeat. Date.now() = ".concat(t, ", timeUntilNextHeartbeat = ").concat(n, ", latestHeartbeatEventTimestamp = ").concat(e)
-  }), e > t && (n = 0), d.default.addBreadcrumb({
+  }), e > t && (n = 0), f.default.addBreadcrumb({
     message: "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ".concat(n / 1e3, " seconds. Scheduling Heartbeat")
-  }), T(!1), _ = setTimeout(() => {
-    S(), E = setInterval(() => {
-      S()
-    }, 15 * o.default.Millis.MINUTE)
+  }), T(!1), S = setTimeout(() => {
+    g(), C = setInterval(() => {
+      g()
+    }, 15 * d.default.Millis.MINUTE)
   }, Math.max(n, 0))
 }
 
 function T() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-  null != _ && (clearTimeout(_), _ = null), null != E && (clearInterval(E), E = null), null != h && e && (clearTimeout(h), h = null)
+  null != S && (clearTimeout(S), S = null), null != C && (clearInterval(C), C = null), null != I && e && (f.default.addBreadcrumb({
+    message: "Heartbeat correctly scheduled. Clearing 10s check timeout"
+  }), clearTimeout(I), I = null)
 }
-async function S() {
+async function g() {
   let e = Date.now(),
-    t = await (0, a.getSession)(),
+    t = await (0, E.getSession)(),
     n = Date.now();
   if (null == t) {
-    d.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
+    f.default.captureException(Error("Null session when tracking session heartbeat. Waited ".concat(n - e, "ms")));
     return
   }
-  if (!C) {
-    d.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
+  if (!m) {
+    f.default.captureException(Error("Heartbeat scheduler not started when tracking session heartbeat.")), T();
     return
   }
-  d.default.addBreadcrumb({
+  f.default.addBreadcrumb({
     message: "Tracking Heartbeat",
     data: {
       initialized: t.initialized
     }
   });
-  let i = {
+  let s = {
       client_heartbeat_initialization_timestamp: t.initialized,
       client_heartbeat_version: 17
     },
-    l = u.default.getMemoryUsageElectronRenderer();
-  null != l && (i.client_heartbeat_renderer_memory = l);
-  let o = u.default.getMemoryUsageElectronRendererUsedHeapSize();
-  null != o && (i.client_heartbeat_renderer_memory_used_heap = o), r.default.track(c.AnalyticEvents.CLIENT_HEARTBEAT, i), s.default.set(f, Date.now().toString())
+    o = c.default.getMemoryUsageElectronRenderer();
+  null != o && (s.client_heartbeat_renderer_memory = o);
+  let d = c.default.getMemoryUsageElectronRendererUsedHeapSize();
+  null != d && (s.client_heartbeat_renderer_memory_used_heap = d);
+  {
+    let e = r.default.getCurrentGameForAnalytics();
+    null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, i.removeExecutablePathPrefix)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor)
+  }
+  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.default.set(_, Date.now().toString()), (0, l.drainClickstream)()
 }
-let m = null,
-  p = !0;
-
-function A() {
-  if (p || null != m && m !== c.RTCConnectionStates.DISCONNECTED && m !== c.RTCConnectionStates.RTC_DISCONNECTED) try {
-    I()
-  } catch (e) {
-    d.default.captureException(e)
-  } else !C || (C = !1, d.default.addBreadcrumb({
-    message: "Stopping Analytics Heartbeat"
-  }), (0, a.setSessionExtendingEnabled)(!1), T())
-}
-
-function g() {
-  d.default.addBreadcrumb({
-    message: "Initializing SessionHeartbeatScheduler"
-  }), l.default.addChangeListener(R), i.default.subscribe("WINDOW_FOCUS", O), i.default.subscribe("APP_STATE_UPDATE", L), i.default.subscribe("LOGIN_SUCCESS", N), A()
-}
-
-function N() {
-  S()
-}
+let A = null,
+  N = !0;
 
 function R() {
-  let e = l.default.getState();
-  m !== e && (m = e, A())
+  if (N || null != A && A !== h.RTCConnectionStates.DISCONNECTED && A !== h.RTCConnectionStates.RTC_DISCONNECTED) try {
+    p()
+  } catch (e) {
+    f.default.captureException(e)
+  } else !m || (m = !1, f.default.addBreadcrumb({
+    message: "Stopping Analytics Heartbeat"
+  }), (0, E.setSessionExtendingEnabled)(!1), T(), (0, l.drainClickstream)())
 }
 
-function O(e) {
+function O() {
+  f.default.addBreadcrumb({
+    message: "Initializing SessionHeartbeatScheduler"
+  }), o.default.addChangeListener(L), s.default.subscribe("WINDOW_FOCUS", M), s.default.subscribe("APP_STATE_UPDATE", P), s.default.subscribe("LOGIN_SUCCESS", v), R()
+}
+
+function v() {
+  g()
+}
+
+function L() {
+  let e = o.default.getState();
+  A !== e && (A = e, R())
+}
+
+function M(e) {
   let {
     focused: t
   } = e;
-  p = t, A()
+  N = t, R()
 }
 
-function L(e) {
+function P(e) {
   let {
     state: t
   } = e;
-  p = t === c.AppStates.ACTIVE, A()
+  N = t === h.AppStates.ACTIVE, R()
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   PictureInPictureHeader: function() {
-    return S
+    return C
   },
   default: function() {
-    return C
+    return S
   }
 });
 var a = n("37983");
@@ -23,9 +23,9 @@ var l = n("414456"),
   h = n("301178"),
   v = n("600123"),
   I = n("782340"),
-  P = n("374142");
+  P = n("735276");
 
-function S(e) {
+function C(e) {
   let {
     title: t,
     onJumpToChannel: n,
@@ -55,7 +55,7 @@ function S(e) {
   })
 }
 
-function C(e) {
+function S(e) {
   let {
     children: t,
     idle: n,
@@ -68,7 +68,7 @@ function C(e) {
     screenMessage: m,
     hideControls: h = !1,
     className: I,
-    innerClassName: C,
+    innerClassName: S,
     ...g
   } = e;
   return (0, a.jsxs)("div", {
@@ -79,9 +79,9 @@ function C(e) {
       [P.idle]: n
     }, I),
     onDoubleClick: l,
-    children: [(0, a.jsx)(s.default, {
+    children: [(0, a.jsx)(s.TransitionGroup, {
       children: (0, a.jsx)(p.BackgroundTransition, {
-        className: C,
+        className: S,
         children: t
       }, o)
     }), null != m ? (0, a.jsx)(v.default, {
@@ -91,7 +91,7 @@ function C(e) {
       className: P.videoControls,
       children: [(0, a.jsx)("div", {
         className: P.topControls,
-        children: (0, a.jsx)(S, {
+        children: (0, a.jsx)(C, {
           idle: n,
           onJumpToChannel: l,
           ...g

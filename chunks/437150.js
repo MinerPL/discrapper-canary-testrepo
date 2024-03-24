@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   useGuildFeedHideItem: function() {
-    return C
+    return S
   },
   useGuildFeedRemoveItem: function() {
-    return G
+    return C
   },
   targetToContext: function() {
-    return p
+    return G
   },
   default: function() {
-    return S
+    return p
   }
 });
 var n = s("37983");
 s("884691");
 var l = s("118810"),
-  a = s("65597"),
-  r = s("77078"),
+  r = s("65597"),
+  a = s("77078"),
   u = s("272030"),
   o = s("861370"),
   d = s("126423"),
@@ -32,8 +32,8 @@ var l = s("118810"),
   I = s("49111"),
   _ = s("782340");
 
-function C(e, t) {
-  return (0, n.jsx)(r.MenuItem, {
+function S(e, t) {
+  return (0, n.jsx)(a.MenuItem, {
     id: "hide-feed-message",
     label: _.default.Messages.GUILD_FEED_HIDE_MESSAGE_ITEM,
     action: s => (s.stopPropagation(), (0, g.hideItemFromGuildFeed)(e, t)),
@@ -44,11 +44,11 @@ function C(e, t) {
   })
 }
 
-function G(e, t, s) {
-  let l = (0, a.default)([E.default], () => E.default.getId()),
-    u = (0, a.default)([M.default], () => M.default.can(I.Permissions.MANAGE_MESSAGES, s), [s]),
+function C(e, t, s) {
+  let l = (0, r.useStateFromStores)([E.default], () => E.default.getId()),
+    u = (0, r.useStateFromStores)([M.default], () => M.default.can(I.Permissions.MANAGE_MESSAGES, s), [s]),
     o = t.author.id === l || u;
-  return o ? (0, n.jsx)(r.MenuItem, {
+  return o ? (0, n.jsx)(a.MenuItem, {
     id: "remove-feed-message",
     label: _.default.Messages.GUILD_FEED_REMOVE_MESSAGE_ITEM,
     action: t => {
@@ -59,13 +59,13 @@ function G(e, t, s) {
           if (!t) {
             (0, g.removeItemFromGuildFeed)(e);
             return
-          }(0, r.openModal)(t => (0, n.jsx)(r.ConfirmModal, {
+          }(0, a.openModal)(t => (0, n.jsx)(a.ConfirmModal, {
             header: _.default.Messages.GUILD_FEED_REMOVE_MESSAGE_ITEM_HEADER,
             confirmText: _.default.Messages.GUILD_FEED_REMOVE_CONFIRM,
             cancelText: _.default.Messages.CANCEL,
             onConfirm: () => (0, g.removeItemFromGuildFeed)(e),
             ...t,
-            children: (0, n.jsx)(r.Text, {
+            children: (0, n.jsx)(a.Text, {
               variant: "text-md/normal",
               children: _.default.Messages.GUILD_FEED_REMOVE_MESSAGE_ITEM_CONFIRM_TEXT
             })
@@ -79,10 +79,10 @@ function G(e, t, s) {
   }) : null
 }
 
-function p(e) {
-  let t, s, n, a = e;
+function G(e) {
+  let t, s, n, r = e;
   for (;
-    (0, l.isElement)(a, Node);)(0, l.isElement)(a, HTMLImageElement) && null != a.src && (s = a.src), (0, l.isElement)(a, HTMLAnchorElement) && null != a.href && (t = a.href, n = a.textContent), a = a.parentNode;
+    (0, l.isElement)(r, Node);)(0, l.isElement)(r, HTMLImageElement) && null != r.src && (s = r.src), (0, l.isElement)(r, HTMLAnchorElement) && null != r.href && (t = r.href, n = r.textContent), r = r.parentNode;
   return {
     href: t,
     src: s,
@@ -90,33 +90,33 @@ function p(e) {
   }
 }
 
-function S(e) {
+function p(e) {
   let {
     channel: t,
     message: s,
     messageItem: l,
-    target: a,
+    target: r,
     onSelect: E
   } = e, {
     href: M,
     src: m,
     textContent: h
-  } = p(a), g = (0, i.default)(s, t), I = (0, f.default)(null != M ? M : m, h), S = (0, c.default)(m), x = (0, o.default)({
+  } = G(r), g = (0, i.default)(s, t), I = (0, f.default)(null != M ? M : m, h), p = (0, c.default)(m), v = (0, o.default)({
     id: s.id,
     label: _.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(s.channel_id, "-").concat(s.id)
-  }), v = C(l, t.guild_id), L = G(l, l.message, t), A = (0, d.default)(s, t, {
+  }), x = S(l, t.guild_id), L = C(l, l.message, t), A = (0, d.default)(s, t, {
     hoist: !1
   });
-  return (0, n.jsxs)(r.Menu, {
+  return (0, n.jsxs)(a.Menu, {
     navId: "message",
     onClose: u.closeContextMenu,
     "aria-label": _.default.Messages.MESSAGE_ACTIONS_MENU_LABEL,
     onSelect: E,
-    children: [(0, n.jsxs)(r.MenuGroup, {
-      children: [v, L, A]
-    }), (0, n.jsxs)(r.MenuGroup, {
-      children: [g, S, I, x]
+    children: [(0, n.jsxs)(a.MenuGroup, {
+      children: [x, L, A]
+    }), (0, n.jsxs)(a.MenuGroup, {
+      children: [g, p, I, v]
     })]
   })
 }

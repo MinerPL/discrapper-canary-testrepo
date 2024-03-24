@@ -1,47 +1,47 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return m
   }
 });
-var i = n("37983"),
-  r = n("884691"),
-  l = n("414456"),
-  s = n.n(l),
-  a = n("446674"),
+var r = n("37983"),
+  i = n("884691"),
+  a = n("414456"),
+  l = n.n(a),
+  s = n("446674"),
   o = n("77078"),
   u = n("106435"),
-  d = n("446488"),
-  c = n("782340"),
-  m = n("760068");
+  c = n("446488"),
+  d = n("782340"),
+  f = n("808559");
 
-function f() {
-  let e = (0, a.useStateFromStores)([d.default], () => d.default.affinities.slice(0, 3)),
+function m() {
+  let e = (0, s.useStateFromStores)([c.default], () => c.default.affinities.slice(0, 3)),
     t = e[0],
     {
       avatarSrc: n,
-      eventHandlers: l
+      eventHandlers: a
     } = (0, u.default)({
       user: t,
       size: o.AvatarSizes.SIZE_24,
       animateOnHover: !0
     }),
-    f = e => null != e.globalName ? e.globalName : e.username,
-    _ = r.useMemo(() => e.length >= 2 ? c.default.Messages.AFFINITIES_MARKETING_HEADER_3.format({
-      username: f(e[0])
-    }) : 1 === e.length ? c.default.Messages.AFFINITIES_MARKETING_HEADER_1.format({
-      username: f(e[0])
+    m = e => null != e.globalName ? e.globalName : e.username,
+    _ = i.useMemo(() => e.length >= 2 ? d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_3.format({
+      username: m(e[0])
+    }) : 1 === e.length ? d.default.Messages.AFFINITIES_MARKETING_HEADER_V2_1.format({
+      username: m(e[0])
     }) : "", [e]);
-  return 0 === e.length ? null : (0, i.jsxs)("div", {
-    className: m.container,
-    children: [(0, i.jsx)(o.Avatar, {
-      className: m.icon,
+  return 0 === e.length ? null : (0, r.jsxs)("div", {
+    className: f.container,
+    children: [(0, r.jsx)(o.Avatar, {
+      className: f.icon,
       src: n,
       "aria-label": t.username,
       size: o.AvatarSizes.SIZE_24,
-      ...l
-    }), (0, i.jsx)(o.Text, {
-      className: s(m.text),
+      ...a
+    }), (0, r.jsx)(o.Text, {
+      className: l(f.text),
       variant: "text-sm/normal",
       color: "always-white",
       children: _

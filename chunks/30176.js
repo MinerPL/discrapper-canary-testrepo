@@ -7,39 +7,39 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var l = n("77078"),
-  s = n("646240"),
+  s = n("466857"),
   i = n("246053"),
   r = n("791679"),
-  o = n("782340"),
-  u = n("512233"),
-  d = n("64298"),
+  u = n("782340"),
+  o = n("794260"),
+  d = n("880418"),
   c = n("16873"),
   f = e => {
     let t, {
       searchQuery: n,
       setSearchQuery: f,
       mostRecentQuery: h,
-      handleClearSearch: p,
-      handleSearchKeyPress: m,
+      handleClearSearch: m,
+      handleSearchKeyPress: p,
       handleCreateOrAddGuild: E,
-      searchResults: C,
-      searchFetching: g
+      searchResults: g,
+      searchFetching: S
     } = e;
-    if (g) t = (0, a.jsx)("div", {
-      className: u.pageContainer,
+    if (S) t = (0, a.jsx)("div", {
+      className: o.pageContainer,
       children: (0, a.jsx)(l.Spinner, {
-        className: u.spinner
+        className: o.spinner
       })
     });
-    else if (0 === C.length) {
-      let e = null != E ? o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
+    else if (0 === g.length) {
+      let e = null != E ? u.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_SUBTITLE.format({
         addServerHook: function(e, t) {
           return (0, a.jsx)(l.Anchor, {
             onClick: E,
             children: e
           }, t)
         }
-      }) : o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_NO_ADD;
+      }) : u.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_NO_ADD;
       t = (0, a.jsxs)("div", {
         className: d.emptySearchWrapper,
         children: [(0, a.jsx)("img", {
@@ -50,7 +50,7 @@ var l = n("77078"),
           variant: "heading-xl/semibold",
           color: "header-primary",
           className: d.emptySearchTitle,
-          children: o.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
+          children: u.default.Messages.DIRECTORY_SEARCH_NO_RESULTS_TITLE
         }), (0, a.jsx)(l.Text, {
           variant: "text-md/normal",
           color: "header-secondary",
@@ -59,21 +59,21 @@ var l = n("77078"),
         })]
       })
     } else t = (0, a.jsx)("div", {
-      className: u.cardsContainer,
-      children: C.map(e => (0, a.jsx)(r.default, {
+      className: o.cardsContainer,
+      children: g.map(e => (0, a.jsx)(r.default, {
         entry: e
       }, e.guildId))
     });
     return (0, a.jsx)("div", {
-      className: u.pageContainer,
+      className: o.pageContainer,
       children: (0, a.jsxs)(l.ScrollerAuto, {
-        className: u.scroller,
+        className: o.scroller,
         children: [(0, a.jsxs)("div", {
           className: d.searchHeader,
           children: [(0, a.jsxs)("div", {
             className: d.headerTitleWrapper,
             children: [(0, a.jsx)(l.Clickable, {
-              onClick: p,
+              onClick: m,
               className: d.arrow,
               children: (0, a.jsx)(i.default, {
                 direction: i.default.Directions.LEFT
@@ -81,8 +81,8 @@ var l = n("77078"),
             }), (0, a.jsx)(l.Heading, {
               variant: "heading-xl/semibold",
               className: d.searchPageTitle,
-              children: o.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
-                numResults: C.length,
+              children: u.default.Messages.DIRECTORY_SEARCH_RESULTS_HEADER.format({
+                numResults: g.length,
                 query: h
               })
             })]
@@ -90,12 +90,12 @@ var l = n("77078"),
             searchTerm: n,
             className: d.searchPageBox,
             inputClassName: d.searchPageInput,
-            label: o.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
-            placeholder: o.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+            label: u.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
+            placeholder: u.default.Messages.DIRECTORY_SEARCH_PLACEHOLDER,
             onChange: f,
-            onClear: p,
-            onKeyPress: m,
-            cta: null != n && n.length > 0 ? o.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
+            onClear: m,
+            onKeyPress: p,
+            cta: null != n && n.length > 0 ? u.default.Messages.GUILD_DISCOVERY_SEARCH_ENTER_CTA : null
           })]
         }), t]
       })

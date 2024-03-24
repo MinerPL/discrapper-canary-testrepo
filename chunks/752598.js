@@ -1,160 +1,161 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   getInteractionTimeoutTimestamp: function() {
-    return _
+    return m
   },
   executeMessageComponentInteraction: function() {
-    return T
+    return p
   },
   executePrimaryEntryPointInteraction: function() {
-    return C
+    return S
   },
   handleInteractionResponse: function() {
-    return h
+    return v
   },
   InteractionStatusViewState: function() {
-    return a
+    return i
   },
   getInteractionStatusViewState: function() {
-    return N
+    return I
   },
   canRetryInteractionData: function() {
-    return D
+    return A
   }
 }), n("222007");
-var a, i, l = n("249654"),
-  r = n("872717"),
-  u = n("913144"),
-  d = n("819689"),
-  o = n("798609"),
-  c = n("263024"),
-  s = n("271938"),
-  E = n("274800"),
-  I = n("809810"),
-  p = n("3765"),
-  A = n("606981"),
-  f = n("49111");
+var i, s, r = n("872717"),
+  a = n("913144"),
+  o = n("819689"),
+  l = n("798609"),
+  u = n("263024"),
+  d = n("271938"),
+  c = n("299039"),
+  _ = n("274800"),
+  f = n("809810"),
+  E = n("3765"),
+  h = n("606981"),
+  g = n("49111");
 
-function _(t) {
-  return null == t || "" === t || Number.isNaN(t) ? Date.now() : l.default.extractTimestamp(t) + 9e5
+function m(e) {
+  return null == e || "" === e || Number.isNaN(e) ? Date.now() : c.default.extractTimestamp(e) + 9e5
 }
-let T = async t => {
+let p = async e => {
   let {
-    componentType: e,
+    componentType: t,
     messageId: n,
-    messageFlags: a,
-    customId: i,
-    indices: u,
-    applicationId: d,
-    channelId: p,
-    guildId: A,
-    localState: _
-  } = t, T = l.default.fromTimestamp(Date.now());
-  if (!I.default.canQueueInteraction(n, T)) return;
-  await c.default.unarchiveThreadIfNecessary(p), (0, E.addQueued)(T, {
+    messageFlags: i,
+    customId: s,
+    indices: a,
+    applicationId: o,
+    channelId: E,
+    guildId: h,
+    localState: m
+  } = e, p = c.default.fromTimestamp(Date.now());
+  if (!f.default.canQueueInteraction(n, p)) return;
+  await u.default.unarchiveThreadIfNecessary(E), (0, _.addQueued)(p, {
     messageId: n,
     data: {
-      interactionType: o.InteractionTypes.MESSAGE_COMPONENT,
-      customId: i,
-      indices: u
+      interactionType: l.InteractionTypes.MESSAGE_COMPONENT,
+      customId: s,
+      indices: a
     },
-    onFailure: (t, e) => y(p, t, e)
-  }), null != _ && (0, E.queueInteractionComponentState)(n, T, _, u);
-  let C = {
-    type: o.InteractionTypes.MESSAGE_COMPONENT,
-    nonce: T,
-    guild_id: A,
-    channel_id: p,
-    message_flags: a,
+    onFailure: (e, t) => T(E, e, t)
+  }), null != m && (0, _.queueInteractionComponentState)(n, p, m, a);
+  let S = {
+    type: l.InteractionTypes.MESSAGE_COMPONENT,
+    nonce: p,
+    guild_id: h,
+    channel_id: E,
+    message_flags: i,
     message_id: n,
-    application_id: d,
-    session_id: s.default.getSessionId(),
+    application_id: o,
+    session_id: d.default.getSessionId(),
     data: {
-      component_type: e,
-      custom_id: i,
-      ... function(t) {
-        if (null == t) return null;
-        if (t.type === o.ComponentType.STRING_SELECT || t.type === o.ComponentType.INPUT_TEXT) return t;
-        let e = t.selectedOptions.map(t => t.value);
+      component_type: t,
+      custom_id: s,
+      ... function(e) {
+        if (null == e) return null;
+        if (e.type === l.ComponentType.STRING_SELECT || e.type === l.ComponentType.INPUT_TEXT) return e;
+        let t = e.selectedOptions.map(e => e.value);
         return {
-          type: t.type,
-          values: e
+          type: e.type,
+          values: t
         }
-      }(_)
+      }(m)
     }
   };
-  await r.default.post({
-    url: f.Endpoints.INTERACTIONS,
-    body: C,
+  await r.HTTP.post({
+    url: g.Endpoints.INTERACTIONS,
+    body: S,
     timeout: 3e3
-  }, t => {
-    h(T, p, A, t)
+  }, e => {
+    v(p, E, h, e)
   })
-}, C = async t => {
+}, S = async e => {
   let {
-    applicationId: e,
+    applicationId: t,
     channelId: n,
-    guildId: a
-  } = t, i = l.default.fromTimestamp(Date.now()), u = {
-    type: o.InteractionTypes.APPLICATION_COMMAND,
-    nonce: i,
-    guild_id: a,
+    guildId: i
+  } = e, s = c.default.fromTimestamp(Date.now()), a = {
+    type: l.InteractionTypes.APPLICATION_COMMAND,
+    nonce: s,
+    guild_id: i,
     channel_id: n,
-    application_id: e,
-    session_id: s.default.getSessionId(),
+    application_id: t,
+    session_id: d.default.getSessionId(),
     data: {
-      type: o.ApplicationCommandType.PRIMARY_ENTRY_POINT
+      type: l.ApplicationCommandType.PRIMARY_ENTRY_POINT
     }
   };
-  await r.default.post({
-    url: f.Endpoints.INTERACTIONS,
-    body: u,
+  await r.HTTP.post({
+    url: g.Endpoints.INTERACTIONS,
+    body: a,
     timeout: 3e3
-  }, t => {
-    h(i, n, null != a ? a : null, t)
+  }, e => {
+    v(s, n, null != i ? i : null, e)
   })
-}, y = (t, e, n) => {
-  null == n && null != e && d.default.sendClydeError(t, e)
-}, h = (t, e, n, a) => {
-  if (!a.ok) {
-    if (!a.hasErr) {
-      var i;
-      if (a.status >= 400 && a.status < 500 && a.body) {
-        if (a.body.code === f.AbortCodes.INVALID_FORM_BODY && a.body.errors) {
-          let i = (0, A.getFirstSkemaError)(a.body.errors);
-          null != i && ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === i.code || "INTERACTION_APPLICATION_COMMAND_INVALID" === i.code) && u.default.dispatch({
+}, T = (e, t, n) => {
+  null == n && null != t && o.default.sendClydeError(e, t)
+}, v = (e, t, n, i) => {
+  if (!i.ok) {
+    if (!i.hasErr) {
+      var s;
+      if (i.status >= 400 && i.status < 500 && i.body) {
+        if (i.body.code === g.AbortCodes.INVALID_FORM_BODY && i.body.errors) {
+          let s = (0, h.getFirstSkemaError)(i.body.errors);
+          null != s && ("INTERACTION_APPLICATION_COMMAND_INVALID_VERSION" === s.code || "INTERACTION_APPLICATION_COMMAND_INVALID" === s.code) && a.default.dispatch({
             type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION",
-            channelId: e,
+            channelId: t,
             guildId: n
-          }), (0, E.setFailed)(t, void 0, null == i ? void 0 : i.message);
+          }), (0, _.setFailed)(e, void 0, null == s ? void 0 : s.message);
           return
-        }(0, E.setFailed)(t, void 0, a.body.message);
+        }(0, _.setFailed)(e, void 0, i.body.message);
         return
-      }(0, E.setFailed)(t, null === (i = a.body) || void 0 === i ? void 0 : i.code);
+      }(0, _.setFailed)(e, null === (s = i.body) || void 0 === s ? void 0 : s.code);
       return
-    }(0, E.setFailed)(t)
+    }(0, _.setFailed)(e)
   }
 };
-(i = a || (a = {}))[i.SENDING = 0] = "SENDING", i[i.CREATED = 1] = "CREATED", i[i.FAILED = 2] = "FAILED", i[i.TIMED_OUT = 3] = "TIMED_OUT";
-let N = (t, e) => {
+(s = i || (i = {}))[s.SENDING = 0] = "SENDING", s[s.CREATED = 1] = "CREATED", s[s.FAILED = 2] = "FAILED", s[s.TIMED_OUT = 3] = "TIMED_OUT", s[s.EPHEMERAL_SUCCESS = 4] = "EPHEMERAL_SUCCESS";
+let I = (e, t) => {
   var n;
-  let a = null == e ? void 0 : e.state,
-    i = t.state === f.MessageStates.SENT && _(t.id) < Date.now();
-  let r = t.state === f.MessageStates.SEND_FAILED && (null == (n = t.id) || "" === n || Number.isNaN(n) ? Date.now() : l.default.extractTimestamp(n) + 3e3) < Date.now(),
-    u = (null == e ? void 0 : e.data.interactionType) === o.InteractionTypes.APPLICATION_COMMAND,
-    d = t.isCommandType();
-  if (u && a === p.InteractionState.QUEUED || d && t.state === f.MessageStates.SENDING && null != e) return 0;
-  if (u && a === p.InteractionState.CREATED || t.hasFlag(f.MessageFlags.LOADING) && !i) return 1;
-  if (null != t.interaction && t.hasFlag(f.MessageFlags.LOADING) && i) return 3;
-  else if (null != t.interaction && !t.hasFlag(f.MessageFlags.LOADING) && r) return 3;
-  else if (d && t.state === f.MessageStates.SEND_FAILED) return 2
+  let i = null == t ? void 0 : t.state,
+    s = e.state === g.MessageStates.SENT && m(e.id) < Date.now();
+  let r = e.state === g.MessageStates.SEND_FAILED && (null == (n = e.id) || "" === n || Number.isNaN(n) ? Date.now() : c.default.extractTimestamp(n) + 3e3) < Date.now(),
+    a = (null == t ? void 0 : t.data.interactionType) === l.InteractionTypes.APPLICATION_COMMAND,
+    o = e.isCommandType();
+  if (a && i === E.InteractionState.QUEUED || o && e.state === g.MessageStates.SENDING && null != t) return 0;
+  if (a && i === E.InteractionState.CREATED || e.hasFlag(g.MessageFlags.LOADING) && !s) return 1;
+  if (null != e.interaction && e.hasFlag(g.MessageFlags.LOADING) && s) return 3;
+  else if (null != e.interaction && !e.hasFlag(g.MessageFlags.LOADING) && r) return 3;
+  else if (o && e.state === g.MessageStates.SEND_FAILED) return 2;
+  else if (null != e.interaction && e.hasFlag(g.MessageFlags.EPHEMERAL)) return 4
 };
 
-function D(t) {
-  let e = t.options;
+function A(e) {
+  let t = e.options;
   for (;
-    (null == e ? void 0 : e.length) === 1 && (e[0].type === o.ApplicationCommandOptionType.SUB_COMMAND_GROUP || e[0].type === o.ApplicationCommandOptionType.SUB_COMMAND);) e = e[0].options;
-  for (let t of null != e ? e : [])
-    if (t.type === o.ApplicationCommandOptionType.ATTACHMENT) return !1;
+    (null == t ? void 0 : t.length) === 1 && (t[0].type === l.ApplicationCommandOptionType.SUB_COMMAND_GROUP || t[0].type === l.ApplicationCommandOptionType.SUB_COMMAND);) t = t[0].options;
+  for (let e of null != t ? t : [])
+    if (e.type === l.ApplicationCommandOptionType.ATTACHMENT) return !1;
   return !0
 }

@@ -10,28 +10,28 @@ n.r(t), n.d(t, {
     return c
   },
   MAX_THREAD_MEMBERS_PREVIEW: function() {
-    return f
-  },
-  MAX_THREAD_UNREAD_MESSAGE_COUNT: function() {
     return _
   },
+  MAX_THREAD_UNREAD_MESSAGE_COUNT: function() {
+    return f
+  },
   ThreadMemberFlags: function() {
-    return h
+    return E
   },
   OpenThreadAnalyticsLocations: function() {
     return i
   },
   getThreadNotificationOptions: function() {
-    return g
+    return h
   },
   ThreadSortOrderReadableForAnalytics: function() {
     return s
   },
   FORUM_POST_CREATION_UPLOAD_ERRORS: function() {
-    return m
+    return g
   },
   FORUM_POST_CREATION_AUTOMOD_ERRORS: function() {
-    return E
+    return m
   }
 }), n("222007");
 var i, s, r, a, o = n("49111"),
@@ -39,26 +39,26 @@ var i, s, r, a, o = n("49111"),
 let u = 4320,
   d = 50,
   c = 1e5,
-  f = 50,
-  _ = 25,
-  h = {
+  _ = 50,
+  f = 25,
+  E = {
     HAS_INTERACTED: 1,
     ALL_MESSAGES: 2,
     ONLY_MENTIONS: 4,
     NO_MESSAGES: 8
   };
 
-function g() {
+function h() {
   return [{
-    setting: h.ALL_MESSAGES,
+    setting: E.ALL_MESSAGES,
     label: l.default.Messages.FORM_LABEL_ALL_MESSAGES
   }, {
-    setting: h.ONLY_MENTIONS,
+    setting: E.ONLY_MENTIONS,
     label: l.default.Messages.FORM_LABEL_ONLY_MENTIONS.format()
   }, {
-    setting: h.NO_MESSAGES,
+    setting: E.NO_MESSAGES,
     label: l.default.Messages.FORM_LABEL_NOTHING
   }]
 }(r = i || (i = {})).EMBED = "Embed", r.BROWSER = "Thread Browser", r.POPOUT = "Active Threads Popout", r.CHANNEL_LIST = "Channel List", r.GUILD_ACTIVE_THREADS_MODAL = "Guild Active Threads Modal", r.INBOX = "Inbox", r.FORUM = "Forum", r.VOICE_AUTO_OPEN = "Voice Auto Open", (a = s || (s = {})).LATEST_ACTIVITY = "Last Message", a.CREATION_DATE = "Creation";
-let m = new Set([o.AbortCodes.TOO_MANY_ATTACHMENTS, o.AbortCodes.EXPLICIT_CONTENT, o.AbortCodes.ENTITY_TOO_LARGE]),
-  E = new Set([o.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, o.AbortCodes.AUTOMOD_TITLE_BLOCKED])
+let g = new Set([o.AbortCodes.TOO_MANY_ATTACHMENTS, o.AbortCodes.EXPLICIT_CONTENT, o.AbortCodes.ENTITY_TOO_LARGE, o.AbortCodes.EXPLICIT_CONTENT]),
+  m = new Set([o.AbortCodes.AUTOMOD_MESSAGE_BLOCKED, o.AbortCodes.AUTOMOD_TITLE_BLOCKED])

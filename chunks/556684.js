@@ -16,7 +16,7 @@ var a = n("16470"),
   c = n("697218"),
   f = n("476263"),
   h = n("315102"),
-  C = n("3989");
+  C = n("941298");
 
 function p() {
   let {
@@ -36,8 +36,8 @@ function p() {
     "aria-hidden": !0,
     size: i.AvatarSizes.SIZE_80,
     className: C.avatarSizeOverride
-  }), A = null;
-  return A = null != n ? (0, s.jsx)(f.default, {
+  }), T = null;
+  return T = null != n ? (0, s.jsx)(f.default, {
     guild: n
   }) : null != E ? (0, s.jsx)(i.Avatar, {
     "aria-hidden": !0,
@@ -51,7 +51,7 @@ function p() {
       children: S
     }), (0, s.jsx)("div", {
       className: C.guildAvatar,
-      children: A
+      children: T
     }), (0, s.jsx)("svg", {
       className: C.illustration,
       xmlns: "http://www.w3.org/2000/svg",
