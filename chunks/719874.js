@@ -26,7 +26,7 @@ function u(e) {
     Component: p,
     events: E,
     play: g
-  } = (0, s.useScreenshareLottie)(u ? "off" : "on");
+  } = (0, s.useScreenshareLottie)(u ? "disable" : "enable");
   return l.useEffect(() => () => g(), [u, g]), (0, a.jsx)(m, {
     label: t,
     disabled: !n,

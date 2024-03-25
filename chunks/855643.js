@@ -20,10 +20,10 @@ let s = {
         null != e.current && e.current.play("all")
       }, []),
       r = l.useCallback(() => {
-        null != e.current && e.current.play("hover")
+        null != e.current && e.current.play("all")
       }, []),
       o = l.useCallback(() => {
-        null != e.current && e.current.stopIfPlaying("hover")
+        null != e.current && e.current.stopIfPlaying("all")
       }, []),
       u = l.useCallback(t => (0, i.jsx)(a.LottieIcon, {
         ...t,

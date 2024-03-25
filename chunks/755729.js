@@ -817,7 +817,7 @@ function ez(e) {
       onMouseEnter: E,
       onMouseLeave: _
     }
-  } = (0, h.useHeadphonesLottie)(u ? "unmute" : "mute"), C = n ? d.HeadphonesDenyIcon : c;
+  } = (0, h.useHeadphonesLottie)(u ? "undeafen" : "deafen"), C = n ? d.HeadphonesDenyIcon : c;
   return s.useEffect(() => () => f(), [u, f]), (0, a.jsx)(eO.default, {
     tooltipText: (0, P.default)(t, n, l),
     onMouseEnter: E,

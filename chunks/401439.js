@@ -1984,19 +1984,19 @@ i.exports = {
   }],
   markers: [{
     tm: 0,
-    cm: "mute",
+    cm: "deafen",
     dr: 70
   }, {
     tm: 110,
-    cm: "unmute",
+    cm: "undeafen",
     dr: 70
   }, {
     tm: 200,
-    cm: "hover_unmuted",
+    cm: "hover_undeafened",
     dr: 70
   }, {
     tm: 300,
-    cm: "hover_muted",
+    cm: "hover_deafened",
     dr: 70
   }],
   props: {}

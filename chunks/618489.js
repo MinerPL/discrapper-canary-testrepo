@@ -190,7 +190,7 @@ function eB(e) {
     Component: T,
     play: g,
     events: R
-  } = (0, E.useVideoLottie)(r.enabled ? "mute" : "unmute");
+  } = (0, E.useVideoLottie)(r.enabled ? "disable" : "enable");
   return s.useEffect(() => () => g(), [r.enabled, g]), (0, a.jsx)(eu.VideoButtonWrapper, {
     onChange: m,
     onCameraUnavailable: S,
@@ -354,7 +354,7 @@ function eV(e) {
       Component: O,
       events: v,
       play: L
-    } = (0, f.useScreenshareLottie)(R ? "off" : "on");
+    } = (0, f.useScreenshareLottie)(R ? "disable" : "enable");
   s.useEffect(() => () => L(), [L, R]);
   let M = (0, a.jsx)(O, {
     color: "currentColor",
@@ -654,7 +654,7 @@ function eW(e) {
     play: i,
     Component: r,
     events: o
-  } = (0, h.useWaveformLottie)(l ? "mute" : "unmute");
+  } = (0, h.useWaveformLottie)(l ? "disable" : "enable");
   return s.useEffect(() => () => i(), [l, i]), (0, a.jsx)(eO.default, {
     ...t,
     onMouseEnter: () => {

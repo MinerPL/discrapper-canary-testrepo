@@ -1565,7 +1565,7 @@ i.exports = {
   }],
   markers: [{
     tm: 0,
-    cm: "onclick",
+    cm: "click",
     dr: 66
   }, {
     tm: 90,

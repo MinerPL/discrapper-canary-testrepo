@@ -8,23 +8,23 @@ var a = n("37983"),
   s = n("884691"),
   l = n("414235");
 let i = {
-    mute: {
-      name: "mute",
+    deafen: {
+      name: "deafen",
       start: 0,
       duration: 70
     },
-    unmute: {
-      name: "unmute",
+    undeafen: {
+      name: "undeafen",
       start: 110,
       duration: 70
     },
-    hover_unmuted: {
-      name: "hover_unmuted",
+    hover_undeafened: {
+      name: "hover_undeafened",
       start: 200,
       duration: 70
     },
-    hover_muted: {
-      name: "hover_muted",
+    hover_deafened: {
+      name: "hover_deafened",
       start: 300,
       duration: 70
     }
@@ -37,12 +37,12 @@ let i = {
       }, [e]),
       u = s.useCallback(() => {
         if (null == t.current) return;
-        let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+        let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
         t.current.play(n)
       }, [e]),
       d = s.useCallback(() => {
         if (null == t.current) return;
-        let n = "mute" === e ? "hover_unmuted" : "hover_muted";
+        let n = "deafen" === e ? "hover_undeafened" : "hover_deafened";
         t.current.stopIfPlaying(n)
       }, [e]),
       c = s.useCallback(e => (0, a.jsx)(l.LottieIcon, {

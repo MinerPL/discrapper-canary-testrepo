@@ -4651,19 +4651,19 @@ i.exports = {
   }],
   markers: [{
     tm: 0,
-    cm: "on",
+    cm: "enable",
     dr: 70
   }, {
     tm: 90,
-    cm: "off",
+    cm: "disable",
     dr: 70
   }, {
     tm: 180,
-    cm: "hover_on",
+    cm: "hover_enabled",
     dr: 40
   }, {
     tm: 240,
-    cm: "hover_off",
+    cm: "hover_disabled",
     dr: 40
   }],
   props: {}
