@@ -26,28 +26,16 @@ let l = (0, a.createExperiment)({
     entryPointEnabled: !1,
     desktopThrobberEnabled: !1,
     activitiesInTextEnabled: !1,
-    showInOmniButtonMenu: !1,
-    showChatInputButton: !1
+    showInOmniButtonMenu: !1
   },
   treatments: [{
     id: 1,
-    label: "enable Activities in text channels",
+    label: "Enable Activities in Text, DM, and GDM channels",
     config: {
       entryPointEnabled: !0,
       activitiesInTextEnabled: !0,
       desktopThrobberEnabled: !1,
-      showInOmniButtonMenu: !0,
-      showChatInputButton: !1
-    }
-  }, {
-    id: 3,
-    label: "enable Activities in text with the rocket button in chat input",
-    config: {
-      entryPointEnabled: !0,
-      activitiesInTextEnabled: !0,
-      desktopThrobberEnabled: !1,
-      showInOmniButtonMenu: !1,
-      showChatInputButton: !0
+      showInOmniButtonMenu: !0
     }
   }]
 });
@@ -82,7 +70,7 @@ function c(e, t) {
       isActivitiesInTextEnabledForChannelType: null != (t = n) && u(t.type),
       channelGuildId: null == n ? void 0 : n.guild_id
     }
-  }), a = void 0 !== i, d = r.default.useExperiment({
+  }), a = null != i, d = r.default.useExperiment({
     guildId: i,
     location: t
   }, {
@@ -102,7 +90,7 @@ function _(e, t) {
       var t;
       return null === (t = o.default.getChannel(e)) || void 0 === t ? void 0 : t.guild_id
     }),
-    i = void 0 !== n,
+    i = null != n,
     a = r.default.useExperiment({
       guildId: n,
       location: t
@@ -116,11 +104,5 @@ function _(e, t) {
       autoTrackExposure: !i,
       disable: i
     });
-  return i ? {
-    showInOmniButtonMenu: a.showInOmniButtonMenu,
-    showChatInputButton: a.showChatInputButton
-  } : {
-    showInOmniButtonMenu: u.showInOmniButtonMenu,
-    showChatInputButton: u.showChatInputButton
-  }
+  return i ? a : u
 }
