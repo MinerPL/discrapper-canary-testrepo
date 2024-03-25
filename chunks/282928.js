@@ -245,7 +245,7 @@ class y extends S.default {
     let n = t.uri,
       i = t.file.name,
       s = t.file.type;
-    if (this.filename = i, null == i || null == n || null == s) throw I.error("Insufficient file data: ".concat({
+    if ((0, S.isResolvedUpload)(t.file) && (this.uploadAnalytics.imageCompressionQuality = t.file.imageCompressionQuality, this.uploadAnalytics.videoCompressionQuality = t.file.videoCompressionQuality, this.uploadAnalytics.convertedMimeType = t.file.type), this.filename = i, null == i || null == n || null == s) throw I.error("Insufficient file data: ".concat({
       filename: i,
       uri: n,
       mimeType: s
@@ -313,10 +313,10 @@ class y extends S.default {
     })
   }
   trackUploadFinished(e) {
-    var t, n;
-    let i = null != this.startTime ? performance.now() - this.startTime : -1;
+    var t, n, i, s, r;
+    let a = null != this.startTime ? performance.now() - this.startTime : -1;
     E.default.track(v.AnalyticEvents.ATTACHMENT_UPLOAD_FINISHED, {
-      duration_ms: i,
+      duration_ms: a,
       file_size: this.currentSize,
       pre_compression_file_size: this.preCompressionSize,
       final_state: e,
@@ -330,6 +330,11 @@ class y extends S.default {
       compress_time_ms: this.uploadAnalytics.timing.compressTimeMs,
       get_upload_url_time_ms: this.uploadAnalytics.timing.getUploadUrlTimeMs,
       upload_time_ms: this.uploadAnalytics.timing.uploadTimeMs,
+      converted_mime_type: null !== (i = this.uploadAnalytics.convertedMimeType) && void 0 !== i ? i : "unknown",
+      image_compression_quality: null !== (s = this.uploadAnalytics.imageCompressionQuality) && void 0 !== s ? s : 0,
+      video_compression_quality: null !== (r = this.uploadAnalytics.videoCompressionQuality) && void 0 !== r ? r : "unknown",
+      was_converted: this.mimeType !== this.uploadAnalytics.convertedMimeType,
+      was_compressed: this.currentSize < this.preCompressionSize,
       connection_type: f.default.getType(),
       effective_connection_speed: f.default.getEffectiveConnectionSpeed(),
       service_provider: f.default.getServiceProvider()

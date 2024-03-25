@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return z
   }
 }), s("222007"), s("808653");
 var a, n, l = s("37983"),
@@ -70,7 +70,7 @@ function B() {
         size: _.ButtonSizes.SMALL,
         color: _.ButtonColors.CUSTOM,
         children: [(0, l.jsx)(A.default, {
-          className: y.buttonIconLarge,
+          className: y.buttonIcon,
           color: _.tokens.colors.WHITE
         }), U.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA]
       })
@@ -152,7 +152,7 @@ function H() {
 }
 
 function w() {
-  let [e, t, a] = (0, S.useStateFromStoresArray)([I.default], () => [I.default.openedItems, I.default.redeemedPrize, I.default.userDataFetchState]), n = (0, b.getLootboxes)(), r = i.useMemo(() => Object.keys(e).length === Object.keys(n).length && !Object.values(e).some(e => 0 === e), [e, n]), o = async () => {
+  let [e, t] = (0, S.useStateFromStoresArray)([I.default], () => [I.default.openedItems, I.default.redeemedPrize]), a = (0, b.getLootboxes)(), n = i.useMemo(() => Object.keys(e).length === Object.keys(a).length && !Object.values(e).some(e => 0 === e), [e, a]), r = async () => {
     await (0, N.redeemPrize)(), (0, _.openModalLazy)(async () => {
       let {
         default: e
@@ -161,45 +161,47 @@ function w() {
         ...t
       })
     })
-  }, d = a === I.FetchState.FETCHED ? (0, l.jsxs)(l.Fragment, {
-    children: [!t && r && (0, l.jsxs)("div", {
-      className: y.banner,
-      children: [(0, l.jsxs)("div", {
-        className: y.inline,
-        children: [(0, l.jsx)(T.CircleInformationIcon, {
-          width: 16,
-          height: 16,
-          color: _.tokens.colors.WHITE
-        }), (0, l.jsx)(_.Text, {
-          variant: "text-sm/medium",
-          color: "always-white",
-          children: U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_DEFAULT
-        })]
-      }), (0, l.jsxs)(_.Button, {
-        className: y.headerButton,
-        innerClassName: y.innerButton,
-        onClick: o,
-        size: _.ButtonSizes.SMALL,
-        color: _.ButtonColors.CUSTOM,
-        children: [(0, l.jsx)(f.GiftIcon, {
-          className: y.buttonIconSmall,
-          color: _.tokens.colors.WHITE
-        }), U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA]
+  };
+  return !t && n ? (0, l.jsxs)("div", {
+    className: y.banner,
+    children: [(0, l.jsxs)("div", {
+      className: y.inline,
+      children: [(0, l.jsx)(T.CircleInformationIcon, {
+        className: y.infoIcon,
+        color: _.tokens.colors.WHITE
+      }), (0, l.jsx)(_.Text, {
+        variant: "text-sm/bold",
+        color: "always-white",
+        children: U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_DEFAULT
       })]
-    }), (0, l.jsx)("div", {
-      className: y.inventoryItems,
-      children: Object.keys(n).map((t, s) => {
-        var a;
-        let i = n[t];
-        return (0, l.jsx)(x.default, {
-          image: i.image,
-          name: i.name,
-          sound: i.sound,
-          openedCount: null !== (a = null == e ? void 0 : e[t]) && void 0 !== a ? a : 0,
-          index: s
-        }, t)
-      })
+    }), (0, l.jsxs)(_.Button, {
+      className: y.headerButton,
+      innerClassName: y.innerButton,
+      onClick: r,
+      size: _.ButtonSizes.SMALL,
+      color: _.ButtonColors.CUSTOM,
+      children: [(0, l.jsx)(f.GiftIcon, {
+        className: y.buttonIcon,
+        color: _.tokens.colors.WHITE
+      }), U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA]
     })]
+  }) : null
+}
+
+function V() {
+  let [e, t] = (0, S.useStateFromStoresArray)([I.default], () => [I.default.openedItems, I.default.userDataFetchState]), s = (0, b.getLootboxes)(), a = t === I.FetchState.FETCHED ? (0, l.jsx)("div", {
+    className: y.inventoryItems,
+    children: Object.keys(s).map((t, a) => {
+      var n;
+      let i = s[t];
+      return (0, l.jsx)(x.default, {
+        image: i.image,
+        name: i.name,
+        sound: i.sound,
+        openedCount: null !== (n = null == e ? void 0 : e[t]) && void 0 !== n ? n : 0,
+        index: a
+      }, t)
+    })
   }) : (0, l.jsx)(_.Spinner, {});
   return (0, l.jsxs)(l.Fragment, {
     children: [(0, l.jsxs)(_.Heading, {
@@ -210,12 +212,12 @@ function w() {
       })]
     }), (0, l.jsx)("div", {
       className: y.inventoryContainer,
-      children: d
+      children: a
     })]
   })
 }
 
-function V(e) {
+function Y(e) {
   let {
     children: t,
     className: s,
@@ -228,7 +230,7 @@ function V(e) {
   })
 }
 
-function Y() {
+function K() {
   let [e, t] = i.useState(1), [s, a] = i.useState(!1), [n] = i.useState(new E.Timeout), r = () => {
     L.default.track(j.AnalyticEvents.EASTER_EGG_INTERACTED, {
       type: "packages_no_text_to_speech",
@@ -277,7 +279,7 @@ function Y() {
           case 7:
             return []
         }
-      })().map((e, t) => (0, l.jsx)(V, {
+      })().map((e, t) => (0, l.jsx)(Y, {
         className: 0 === t ? y.noTextToSpeechButtonFirst : null,
         onClick: r,
         children: e
@@ -286,7 +288,7 @@ function Y() {
   })
 }
 
-function K() {
+function W() {
   return (0, l.jsxs)("div", {
     className: y.footer,
     children: [(0, l.jsx)(d.ClipsIcon, {}), (0, l.jsx)(_.Text, {
@@ -299,7 +301,7 @@ function K() {
   })
 }
 
-function W() {
+function z() {
   let {
     analyticsLocations: e
   } = (0, h.default)(g.default.PACKAGES), t = (0, S.useStateFromStores)([I.default], () => I.default.nextGlobalOpenedCountFetchDelay), [s] = i.useState(() => new E.Timeout);
@@ -307,6 +309,6 @@ function W() {
     (0, N.fetchUserLootboxData)()
   }, []), i.useEffect(() => (s.start(t, N.fetchCountStat), () => s.stop()), [t, s]), (0, l.jsxs)(h.AnalyticsLocationProvider, {
     value: e,
-    children: [(0, l.jsx)(B, {}), (0, l.jsx)(H, {}), (0, l.jsx)(w, {}), (0, l.jsx)(Y, {}), (0, l.jsx)(K, {})]
+    children: [(0, l.jsx)(B, {}), (0, l.jsx)(H, {}), (0, l.jsx)(w, {}), (0, l.jsx)(V, {}), (0, l.jsx)(K, {}), (0, l.jsx)(W, {})]
   })
 }(n = a || (a = {}))[n.QUESTION_1 = 1] = "QUESTION_1", n[n.QUESTION_2 = 2] = "QUESTION_2", n[n.QUESTION_3 = 3] = "QUESTION_3", n[n.QUESTION_4 = 4] = "QUESTION_4", n[n.QUESTION_5 = 5] = "QUESTION_5", n[n.QUESTION_6 = 6] = "QUESTION_6", n[n.QUESTION_7 = 7] = "QUESTION_7"
