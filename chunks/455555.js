@@ -878,9 +878,10 @@ let eA = l.memo(function() {
 
 function eC() {
   let {
-    AnalyticsLocationProvider: e
+    analyticsLocations: e
   } = (0, M.default)(g.default.NOTICE);
-  return (0, s.jsx)(e, {
+  return (0, s.jsx)(M.AnalyticsLocationProvider, {
+    value: e,
     children: (0, s.jsx)(eA, {})
   })
 }

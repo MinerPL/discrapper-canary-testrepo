@@ -7,22 +7,22 @@ t.r(a), t.d(a, {
 var s = t("37983");
 t("884691");
 var _ = t("669491"),
-  L = t("77078"),
-  n = t("685665"),
+  n = t("77078"),
+  L = t("685665"),
   r = t("956089"),
   o = t("626301"),
-  u = t("789946"),
-  l = t("646718"),
-  d = t("49111"),
-  A = t("782340"),
-  M = t("754976"),
-  c = t("857513"),
-  f = t("746227");
+  l = t("789946"),
+  u = t("646718"),
+  i = t("49111"),
+  c = t("782340"),
+  d = t("421090"),
+  A = t("758542"),
+  M = t("746227");
 
-function i(e, a) {
+function f(e, a) {
   return (0, s.jsx)(r.TextBadge, {
     text: e,
-    className: c.newBadge,
+    className: A.newBadge,
     color: _.default.unsafe_rawColors.BRAND_500.css
   }, a)
 }
@@ -33,11 +33,11 @@ function U(e) {
     guildCount: t,
     onClose: _,
     analyticsLocations: r,
-    ...c
+    ...A
   } = e;
   let U = (a = _, function(e, t) {
-      return (0, s.jsx)(L.Clickable, {
-        className: M.learnMoreLink,
+      return (0, s.jsx)(n.Clickable, {
+        className: d.learnMoreLink,
         tag: "span",
         onClick: () => {
           a(), (0, o.navigateToPremiumMarketingPage)()
@@ -46,29 +46,30 @@ function U(e) {
       }, t)
     }),
     {
-      AnalyticsLocationProvider: D
-    } = (0, n.default)(r);
-  return (0, s.jsx)(D, {
-    children: (0, s.jsx)(u.default, {
-      artURL: f,
+      analyticsLocations: D
+    } = (0, L.default)(r);
+  return (0, s.jsx)(L.AnalyticsLocationProvider, {
+    value: D,
+    children: (0, s.jsx)(l.default, {
+      artURL: M,
       onClose: _,
-      type: l.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL,
-      title: A.default.Messages.GUILD_CAP_UPSELL_MODAL_TITLE,
-      body: t < d.MAX_USER_GUILDS ? A.default.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_BODY.format({
+      type: u.PremiumUpsellTypes.GUILD_CAP_MODAL_UPSELL,
+      title: c.default.Messages.GUILD_CAP_UPSELL_MODAL_TITLE,
+      body: t < i.MAX_USER_GUILDS ? c.default.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_BODY.format({
         guildCount: t,
         onAndMore: U,
-        newBadgeHook: i
-      }) : A.default.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_BODY.format({
+        newBadgeHook: f
+      }) : c.default.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_BODY.format({
         onAndMore: U,
-        newBadgeHook: i
+        newBadgeHook: f
       }),
-      context: t < d.MAX_USER_GUILDS ? A.default.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({
+      context: t < i.MAX_USER_GUILDS ? c.default.Messages.GUILD_CAP_UPSELL_MODAL_NEAR_LIMIT_CONTEXT.format({
         guildCount: t
-      }) : A.default.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
-      glowUp: A.default.Messages.GUILD_CAP_UPSELL_MODAL_GLOW_UP.format({
+      }) : c.default.Messages.GUILD_CAP_UPSELL_MODAL_AT_LIMIT_CONTEXT,
+      glowUp: c.default.Messages.GUILD_CAP_UPSELL_MODAL_GLOW_UP.format({
         onAndMore: U
       }),
-      ...c
+      ...A
     })
   })
 }

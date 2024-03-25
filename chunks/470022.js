@@ -40,14 +40,14 @@ function A() {
       setSubsection: R
     } = (0, h.default)(),
     {
-      AnalyticsLocationProvider: M,
-      analyticsLocations: D
+      analyticsLocations: M
     } = (0, o.default)();
   return n.useEffect(() => {
     null != O && (0, E.default)(O.id, O.getAvatarURL(null == A ? void 0 : A.id, 80), {
       guildId: null == A ? void 0 : A.id
     })
-  }, [null == A ? void 0 : A.id, O]), (0, a.jsx)(M, {
+  }, [null == A ? void 0 : A.id, O]), (0, a.jsx)(o.AnalyticsLocationProvider, {
+    value: M,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsx)(i.Heading, {
         variant: "heading-lg/semibold",
@@ -67,7 +67,7 @@ function A() {
               }), m.ComponentDispatch.dispatch(N.ComponentActions.EMPHASIZE_NOTICE);
               return
             }
-            t === I.ProfileCustomizationSubsection.GUILD && null == e && null != A && (0, u.initGuildIdentitySettings)(A, D), R(t)
+            t === I.ProfileCustomizationSubsection.GUILD && null == e && null != A && (0, u.initGuildIdentitySettings)(A, M), R(t)
           }
         },
         children: [(0, a.jsx)(i.TabBar.Item, {

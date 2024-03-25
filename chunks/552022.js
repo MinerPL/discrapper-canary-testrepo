@@ -16,8 +16,8 @@ var a, n, i = l("37983"),
   m = l("504318"),
   h = l("77078"),
   E = l("812204"),
-  C = l("685665"),
-  v = l("730859"),
+  v = l("685665"),
+  C = l("730859"),
   _ = l("739034"),
   g = l("697218"),
   L = l("561744"),
@@ -30,8 +30,8 @@ var a, n, i = l("37983"),
   M = l("449008"),
   R = l("299039"),
   P = l("803725"),
-  j = l("135284"),
-  y = l("49111"),
+  y = l("135284"),
+  j = l("49111"),
   D = l("782340"),
   O = l("432261"),
   H = l("323805");
@@ -47,8 +47,8 @@ var b = function(e) {
     onEdit: m,
     onShare: _
   } = e, x = (0, c.useStateFromStoresArray)([g.default], () => n.users.map(e => g.default.getUser(e)).filter(M.isNotNullish)), {
-    AnalyticsLocationProvider: T
-  } = (0, C.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), A = s.useRef(null), P = (0, L.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), j = s.useRef(new f.DelayedCall(500, () => {
+    analyticsLocations: T
+  } = (0, v.default)(E.default.CLIPS_GALLERY_ITEM), [I, S] = s.useState(!1), A = s.useRef(null), P = (0, L.default)(null !== (a = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== a ? a : 0), y = s.useRef(new f.DelayedCall(500, () => {
     var e;
     let t = A.current;
     null != t && t.paused && (t.currentTime = P.current, null === (e = A.current) || void 0 === e || e.play())
@@ -57,12 +57,12 @@ var b = function(e) {
     null != e && (e.pause(), e.src = "")
   }, []), b = s.useCallback(() => {
     var e;
-    S(!0), null === (e = j.current) || void 0 === e || e.delay()
+    S(!0), null === (e = y.current) || void 0 === e || e.delay()
   }, []), U = s.useCallback(() => {
     var e, t, l;
     S(!1);
     let a = A.current;
-    null === (e = j.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
+    null === (e = y.current) || void 0 === e || e.cancel(), null != a && (a.pause(), a.currentTime = null !== (l = null === (t = n.editMetadata) || void 0 === t ? void 0 : t.start) && void 0 !== l ? l : 0)
   }, [null === (l = n.editMetadata) || void 0 === l ? void 0 : l.start]), V = s.useCallback(e => {
     var t, l;
     (null === (l = e.relatedTarget) || void 0 === l ? void 0 : null === (t = l.parentElement) || void 0 === t ? void 0 : t.parentElement) !== e.currentTarget.parentElement && U()
@@ -70,12 +70,13 @@ var b = function(e) {
     hour: "2-digit",
     minute: "2-digit"
   }), Y = "".concat(F, " • ").concat(G);
-  return (0, i.jsx)(T, {
+  return (0, i.jsx)(v.AnalyticsLocationProvider, {
+    value: T,
     children: (0, i.jsxs)(h.ClickableContainer, {
       "aria-disabled": u,
       "aria-label": D.default.Messages.EDIT,
       onClick: u ? void 0 : () => {
-        m(n), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
+        m(n), N.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_CLICKED)
       },
       className: o(O.clipItem, {
         [O.disabled]: u
@@ -106,7 +107,7 @@ var b = function(e) {
           children: Y
         }), (0, i.jsxs)("div", {
           className: O.usersAndDelete,
-          children: [(0, i.jsx)(v.default, {
+          children: [(0, i.jsx)(C.default, {
             maxUsers: 4,
             users: x,
             onFocus: e => {
@@ -186,7 +187,7 @@ function k(e) {
     clip: l,
     focused: a,
     onFocus: n
-  } = e, [r, u] = s.useState(l.name), d = !l.name, [c, f] = s.useState(!1), [E, C] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [v, _] = s.useState(!1), g = async () => {
+  } = e, [r, u] = s.useState(l.name), d = !l.name, [c, f] = s.useState(!1), [E, v] = s.useState(null !== (t = l.name) && void 0 !== t ? t : ""), [C, _] = s.useState(!1), g = async () => {
     _(!0), await (0, P.updateClipMetadata)(l.id, {
       name: "" === E ? void 0 : E
     }), _(!1), f(!1)
@@ -194,7 +195,7 @@ function k(e) {
   return (s.useEffect(() => {
     if (r !== l.name) {
       var e;
-      u(l.name), C(null !== (e = l.name) && void 0 !== e ? e : "")
+      u(l.name), v(null !== (e = l.name) && void 0 !== e ? e : "")
     }
   }, [l.name, r]), c) ? (0, i.jsx)(h.TextInput, {
     inputClassName: o(H["heading-lg/medium"], O.clipTitleInput),
@@ -204,8 +205,8 @@ function k(e) {
     onKeyDown: e => {
       "Enter" === e.key && g()
     },
-    disabled: v,
-    onChange: C,
+    disabled: C,
+    onChange: v,
     onBlur: g
   }) : (0, i.jsxs)(h.Clickable, {
     className: O.clipTitleInputPlaceholder,
@@ -237,7 +238,7 @@ function U(e) {
   let {
     clip: t,
     videoRef: l
-  } = e, a = (0, j.useClipProtocolURL)(t);
+  } = e, a = (0, y.useClipProtocolURL)(t);
   return 0 === t.length ? (0, i.jsx)(h.Spinner, {
     type: h.SpinnerTypes.SPINNING_CIRCLE_SIMPLE,
     className: O.clipThumb
@@ -267,15 +268,15 @@ function B(e) {
     onShare: u,
     onBlur: d
   } = e, c = (0, _.default)(), f = s.useCallback(e => {
-    e.stopPropagation(), e.shiftKey ? (n(), (0, P.deleteClip)(t.filepath)) : r(t, n), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), e.shiftKey ? (n(), (0, P.deleteClip)(t.filepath)) : r(t, n), N.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "delete"
     })
   }, [r, n, t]), p = s.useCallback(e => {
-    e.stopPropagation(), o(t), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), o(t), N.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "edit"
     })
   }, [o, t]), m = s.useCallback(e => {
-    e.stopPropagation(), u(t), N.default.track(y.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
+    e.stopPropagation(), u(t), N.default.track(j.AnalyticEvents.CLIP_GALLERY_CARD_BUTTON_CLICKED, {
       type: "share"
     })
   }, [u, t]);

@@ -24,7 +24,7 @@ function h(e) {
     stopPropagation: T = !1,
     ariaLabel: R
   } = e, {
-    AnalyticsLocationProvider: g
+    analyticsLocations: g
   } = (0, s.default)(o.default.USERNAME);
   let E = (t = h, i = m, a.useCallback(e => {
     let n = c.default.getChannel(i);
@@ -40,10 +40,11 @@ function h(e) {
         roleName: null == e ? void 0 : e.colorRoleName,
         "aria-label": R
       }),
-      s = e => t => {
+      c = e => t => {
         T && t.stopPropagation(), e(t)
       };
-    return (0, n.jsx)(g, {
+    return (0, n.jsx)(s.AnalyticsLocationProvider, {
+      value: g,
       children: null != h ? (0, n.jsx)(l.Popout, {
         position: "right",
         preload: () => (0, r.default)(h.id, h.getAvatarURL(f, 80), {
@@ -64,11 +65,11 @@ function h(e) {
             ...i
           } = e;
           return o({
-            onClick: s(t),
+            onClick: c(t),
             ...i
           })
         }
       }, i) : o(void 0, i)
     })
-  }, [h, m, f, p, E, T, R, g])
+  }, [g, h, m, f, p, E, T, R])
 }

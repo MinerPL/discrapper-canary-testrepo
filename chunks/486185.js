@@ -35,7 +35,7 @@ function p(e) {
   } = (0, E.default)(t), O = (0, l.useStateFromStores)([h.default], () => h.default.isDeaf()), v = N || R || O, [L, M] = s.useState(!1), P = t.getGuildId(), y = (0, _.useSoundBoardDismissContentTypes)({
     isSoundboardButtonDisabled: v
   }), [D, x] = (0, f.useGetDismissibleContent)(y), {
-    AnalyticsLocationProvider: b
+    analyticsLocations: b
   } = (0, c.default)(d.default.SOUNDBOARD_BUTTON);
 
   function U(e) {
@@ -107,7 +107,8 @@ function p(e) {
       })
     })
   });
-  return (0, a.jsx)(b, {
+  return (0, a.jsx)(c.AnalyticsLocationProvider, {
+    value: b,
     children: (0, a.jsx)(o.Tooltip, {
       text: function() {
         if (N) return m.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;

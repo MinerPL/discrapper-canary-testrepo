@@ -59,7 +59,7 @@ function j(e) {
   let {
     selectedGuild: t
   } = e, {
-    AnalyticsLocationProvider: s
+    analyticsLocations: s
   } = (0, T.default)(S.default.GUILD_PROFILE), l = (0, r.useStateFromStores)([N.default], () => {
     let e = N.default.getCurrentUser();
     return i(null != e, "GuildIdentitySettingsPage: user cannot be undefined"), e
@@ -104,7 +104,8 @@ function j(e) {
       activityCharacter: f.FakeActivityCharacter.PHIBI,
       openPremiumSettings: L
     };
-  return (0, a.jsxs)(s, {
+  return (0, a.jsxs)(T.AnalyticsLocationProvider, {
+    value: s,
     children: [(0, a.jsx)(o.Text, {
       variant: "text-sm/normal",
       children: v.default.Messages.PROFILE_CUSTOMIZATION_GUILD_HINT.format({

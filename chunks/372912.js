@@ -31,7 +31,7 @@ function _(e) {
     userId: c,
     channel: m
   } = e, {
-    AnalyticsLocationProvider: g
+    analyticsLocations: g
   } = (0, d.default)(u.default.USERNAME), S = (0, i.useStateFromStores)([p.default], () => p.default.getUser(c)), T = (0, i.useStateFromStores)([C.default], () => null != c ? C.default.getMember(m.guild_id, c) : null);
 
   function _(e) {
@@ -53,7 +53,8 @@ function _(e) {
   return null == S ? (0, s.jsx)("span", {
     className: l(A.threadCreatorName, A.unknownCreatorName),
     children: M
-  }) : (0, s.jsx)(g, {
+  }) : (0, s.jsx)(d.AnalyticsLocationProvider, {
+    value: g,
     children: (0, s.jsx)(r.Popout, {
       preload: () => (0, f.default)(S.id, S.getAvatarURL(m.guild_id, 80), {
         guildId: m.guild_id,

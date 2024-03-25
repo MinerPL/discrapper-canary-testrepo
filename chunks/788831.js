@@ -943,26 +943,25 @@ function eC() {
     submitting: n,
     subsection: i
   } = (0, c.useStateFromStoresObject)([ee.default], () => ee.default.getProps()), r = (0, f.default)(), {
-    AnalyticsLocationProvider: d,
-    analyticsLocations: u
+    analyticsLocations: d
   } = (0, g.default)(m.default.OVERVIEW);
   l.useEffect(() => {
     (0, j.hideHotspot)(G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
-  let E = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
-    _ = l.useMemo(() => (0, h.default)(E._categories, E), [E]),
+  let u = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
+    E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),
     {
-      canManageGuild: I,
-      isGuildAdmin: T
+      canManageGuild: _,
+      isGuildAdmin: I
     } = (0, c.useStateFromStoresObject)([k.default], () => ({
       canManageGuild: k.default.can(es.Permissions.MANAGE_GUILD, t),
       isGuildAdmin: k.default.can(es.Permissions.ADMINISTRATOR, t)
     })),
-    S = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
-    N = (0, c.useStateFromStores)([V.default], () => V.default.getCurrentUser());
-  o(null != N, "GuildSettingsOverview: currentUser cannot be undefined");
+    T = (0, c.useStateFromStores)([H.default], () => H.default.getMemberCount(null == t ? void 0 : t.id)),
+    S = (0, c.useStateFromStores)([V.default], () => V.default.getCurrentUser());
+  o(null != S, "GuildSettingsOverview: currentUser cannot be undefined");
   let {
-    enableDeadchat: C
+    enableDeadchat: N
   } = x.SimpleDeadchatPromptExperiment.useExperiment({
     guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : es.EMPTY_STRING_SNOWFLAKE_ID,
     location: "guild_settings"
@@ -970,20 +969,21 @@ function eC() {
     disable: null == t,
     autoTrackExposure: !0
   });
-  return null == t ? null : (0, a.jsx)(d, {
+  return null == t ? null : (0, a.jsx)(g.AnalyticsLocationProvider, {
+    value: d,
     children: (0, a.jsx)(eh, {
-      channels: _,
-      canManageGuild: I,
-      isGuildAdmin: T,
+      channels: E,
+      canManageGuild: _,
+      isGuildAdmin: I,
       subsection: i,
       guild: t,
       errors: s,
       submitting: n,
-      currentUser: N,
-      guildMemberCount: S,
+      currentUser: S,
+      guildMemberCount: T,
       theme: r,
-      analyticsLocations: u,
-      eligibleForDeadchatPrompt: C
+      analyticsLocations: d,
+      eligibleForDeadchatPrompt: N
     })
   })
 }

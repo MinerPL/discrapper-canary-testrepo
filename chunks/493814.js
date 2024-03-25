@@ -101,9 +101,10 @@ function w(e) {
   let {
     transitionState: t
   } = e, n = (0, I.useUID)(), {
-    AnalyticsLocationProvider: a
+    analyticsLocations: a
   } = (0, c.default)(d.default.INVITE_MODAL);
-  return (0, l.jsx)(a, {
+  return (0, l.jsx)(c.AnalyticsLocationProvider, {
+    value: a,
     children: (0, l.jsx)(o.ModalRoot, {
       size: o.ModalSize.DYNAMIC,
       "aria-labelledby": n,
@@ -149,7 +150,7 @@ function F(e) {
   }, []);
   let N = (0, I.useUID)(),
     {
-      AnalyticsLocationProvider: T
+      analyticsLocations: T
     } = (0, c.default)(d.default.INVITE_MODAL);
   if (null == C) return null;
   if (C.state === y.InviteStates.EXPIRED || C.state === y.InviteStates.BANNED || C.state === y.InviteStates.ERROR) return (0, l.jsx)(w, {
@@ -179,7 +180,8 @@ function F(e) {
     k = B ? b.default.Messages.INSTANT_INVITE_ACCEPT_STAGE : b.default.Messages.INVITE_MODAL_BUTTON.format({
       guildName: t
     });
-  return V && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(T, {
+  return V && (k = b.default.Messages.ACCEPT_INVITE_MODAL_BUTTON), (0, l.jsx)(c.AnalyticsLocationProvider, {
+    value: T,
     children: (0, l.jsxs)(o.ModalRoot, {
       size: o.ModalSize.DYNAMIC,
       "aria-labelledby": N,

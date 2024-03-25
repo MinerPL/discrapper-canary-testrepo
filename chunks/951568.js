@@ -66,18 +66,18 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
           }
       }
     }(a), {
-      analyticsLocations: D,
-      AnalyticsLocationProvider: x
+      analyticsLocations: D
     } = (0, E.default)(s);
     i.useEffect(() => {
       C.default.track(S.AnalyticEvents.TOOLTIP_VIEWED, {
         type: A
       })
     }, [A]);
-    let b = (0, u.useAppContext)(),
-      U = b === S.AppContext.POPOUT,
-      G = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
-    return (0, l.jsx)(x, {
+    let x = (0, u.useAppContext)(),
+      b = x === S.AppContext.POPOUT,
+      U = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(t), [t]);
+    return (0, l.jsx)(E.AnalyticsLocationProvider, {
+      value: D,
       children: (0, l.jsx)("div", {
         className: p.wrapper,
         children: (0, l.jsx)("div", {
@@ -124,19 +124,19 @@ let T = "https://cdn.discordapp.com/attachments/860252504826445825/1029516100356
                 color: o.Button.Colors.BRAND,
                 look: o.Button.Looks.INVERTED,
                 onClick: null != y ? y : () => {
-                  n(I.ContentDismissActionType.UNKNOWN), null != G && ((0, c.default)({
-                    channel: G.isGuildVoice() ? G : void 0,
-                    guildId: G.guild_id,
+                  n(I.ContentDismissActionType.UNKNOWN), null != U && ((0, c.default)({
+                    channel: U.isGuildVoice() ? U : void 0,
+                    guildId: U.guild_id,
                     locationObject: {
                       page: S.AnalyticsPages.GUILD_CHANNEL,
                       section: S.AnalyticsSections.GUILD_CHANNEL_LIST,
                       object: S.AnalyticsObjects.ACTIVITIES_COACH_MARK,
                       objectType: S.AnalyticsObjectTypes.ACTIVITY
                     },
-                    openInPopout: U,
+                    openInPopout: b,
                     analyticsLocations: D
                   }), (0, d.fetchShelf)({
-                    guildId: G.guild_id
+                    guildId: U.guild_id
                   }))
                 },
                 children: N

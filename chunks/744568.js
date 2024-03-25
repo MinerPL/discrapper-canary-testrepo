@@ -35,7 +35,7 @@ function x(e) {
     infoPanelClassName: N,
     style: A
   } = e, M = (0, C.useCanAccessGuildMemberModView)(n), R = (0, r.useStateFromStores)([S.default], () => S.default.getUser(t), [t]), j = (0, r.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), [L, y] = l.useState(null == R || null == j), O = (0, d.default)(j), P = l.useRef(null), {
-    AnalyticsLocationProvider: D
+    analyticsLocations: D
   } = (0, h.default)(f.default.GUILD_MEMBER_MOD_VIEW);
   return (l.useEffect(() => {
     !M && s()
@@ -66,7 +66,8 @@ function x(e) {
       animated: !0,
       type: L ? u.Spinner.Type.SPINNING_CIRCLE : u.Spinner.Type.CHASING_DOTS
     })
-  }) : (0, a.jsx)(D, {
+  }) : (0, a.jsx)(h.AnalyticsLocationProvider, {
+    value: D,
     children: (0, a.jsx)("div", {
       className: i(v.sidebarContianer, x),
       style: A,

@@ -36,8 +36,8 @@ var a, n, i = s("37983"),
   D = s("471131"),
   U = s("398309"),
   O = s("249718"),
-  b = s("360262"),
-  v = s("177998"),
+  v = s("360262"),
+  b = s("177998"),
   B = s("146163"),
   j = s("510928"),
   G = s("661128"),
@@ -276,7 +276,7 @@ function z(e) {
         children: H.default.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
           planPremiumType: M.default.getDisplayPremiumType(t.planId)
         })
-      }), (0, i.jsx)(v.default, {
+      }), (0, i.jsx)(b.default, {
         onClick: a
       })]
     })]
@@ -323,10 +323,10 @@ function q(e) {
   l.useEffect(() => {
     P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a))
   }, [a]);
-  let v = L === k.PremiumTypes.TIER_0 || L === k.PremiumTypes.TIER_1 || L === k.PremiumTypes.TIER_2;
-  null == E && (E = v ? 1 : 2);
+  let b = L === k.PremiumTypes.TIER_0 || L === k.PremiumTypes.TIER_1 || L === k.PremiumTypes.TIER_2;
+  null == E && (E = b ? 1 : 2);
   let {
-    AnalyticsLocationProvider: B
+    analyticsLocations: B
   } = (0, N.default)(u, I.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL), [j, W, K, q] = function(e, t, s) {
     let [a, n] = l.useState(e), [i, r] = l.useState(Date.now()), [u] = l.useState(Date.now()), o = l.useCallback(e => {
       P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
@@ -403,7 +403,7 @@ function q(e) {
       });
       break;
     case 1:
-      s = (0, i.jsx)(b.default, {
+      s = (0, i.jsx)(v.default, {
         premiumType: L,
         titleText: H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
         subtitleText: A ? H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD : H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
@@ -436,7 +436,7 @@ function q(e) {
         onContinue: () => W(2),
         isLoading: ee && es,
         churnUserDiscountOffer: et,
-        analyticsLocations: u
+        analyticsLocations: B
       });
       break;
     case 2:
@@ -445,7 +445,7 @@ function q(e) {
         premiumType: L,
         setStep: W,
         onClose: () => $(j),
-        whatYouLoseExperienceEnabled: v,
+        whatYouLoseExperienceEnabled: b,
         analyticsLocation: d
       });
       break;
@@ -479,7 +479,8 @@ function q(e) {
     default:
       throw Error("Unexpected step: ".concat(j))
   }
-  return (0, i.jsxs)(B, {
+  return (0, i.jsxs)(N.AnalyticsLocationProvider, {
+    value: B,
     children: [(0, i.jsx)(o.ConfettiCanvas, {
       ref: T,
       className: Y.confettiCanvas,

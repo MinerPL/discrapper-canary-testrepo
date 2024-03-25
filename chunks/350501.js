@@ -51,9 +51,8 @@ function N(e) {
       return a.forEach(e => s(e, !0)), a.forEach(e => s(e, !1)), l
     }, [t, n, e])
   }(R), O = (0, m.useGuildIdsToFetchSoundsFor)(), y = a.useRef(null), [D, b] = a.useState(void 0), j = (0, i.useStateFromStores)([c.default], () => c.default.getMediaSessionId()), {
-    analyticsLocations: G,
-    AnalyticsLocationProvider: U
-  } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), P = a.useCallback(e => {
+    analyticsLocations: G
+  } = (0, o.default)(r.default.SOUNDBOARD_WHEEL), U = a.useCallback(e => {
     (0, p.playSound)(e, n.id, G), x()
   }, [G, n.id, x]);
   a.useEffect(() => {
@@ -62,8 +61,8 @@ function N(e) {
     0 === M.length && 0 === O.length && x()
   }, [M.length, O, x]), a.useEffect(() => () => {
     let e = y.current;
-    !A && null != e && P(e)
-  }, [A, P]), (0, u.default)({
+    !A && null != e && U(e)
+  }, [A, U]), (0, u.default)({
     type: s.ImpressionTypes.POPOUT,
     name: s.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {
@@ -74,30 +73,31 @@ function N(e) {
   }, {
     disableTrack: !L
   });
-  let w = a.useCallback(e => {
+  let P = a.useCallback(e => {
       y.current = e, b(null == e ? void 0 : e.soundId)
     }, []),
-    F = a.useCallback(e => {
+    w = a.useCallback(e => {
       if (null == e) {
-        w(null);
+        P(null);
         return
       }
       let t = M[e];
-      null != t && w(t)
-    }, [w, M]),
-    B = a.useCallback(e => {
+      null != t && P(t)
+    }, [P, M]),
+    F = a.useCallback(e => {
       if (null == e) return;
       let t = M[e];
-      null != t && P(t)
-    }, [M, P]),
-    V = a.useMemo(() => M.map(e => (0, l.jsx)(I.default, {
+      null != t && U(t)
+    }, [M, U]),
+    B = a.useMemo(() => M.map(e => (0, l.jsx)(I.default, {
       interactive: L,
       className: _.soundButton,
       sound: e,
       focused: D === e.soundId,
       channel: n
     }, e.soundId)), [D, n, L, M]);
-  return 0 === M.length ? null : (0, l.jsx)(U, {
+  return 0 === M.length ? null : (0, l.jsx)(o.AnalyticsLocationProvider, {
+    value: G,
     children: (0, l.jsx)(g.default, {
       wheelWidth: N,
       wheelHeight: T,
@@ -105,10 +105,10 @@ function N(e) {
       itemHeight: 52,
       showDeadZoneIndicator: !A,
       activeItem: D,
-      onItemSelect: F,
-      onItemAction: B,
+      onItemSelect: w,
+      onItemAction: F,
       interactive: L,
-      children: V
+      children: B
     })
   })
 }

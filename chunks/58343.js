@@ -218,7 +218,7 @@ function er(e) {
     popoutWindow: I.default.getWindow(Q.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: I.default.getIsAlwaysOnTop(Q.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
   })), T = null != g && !g.closed, {
-    AnalyticsLocationProvider: v
+    analyticsLocations: v
   } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), x = (0, h.useAppContext)(), N = (0, u.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), A = (0, u.useStateFromStores)([y.default], () => y.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
     null == o.default.get(ee) && ((0, d.openModalLazy)(async () => {
@@ -234,7 +234,8 @@ function er(e) {
     width: M = 0,
     ref: R
   } = (0, f.default)();
-  return (0, a.jsx)(v, {
+  return (0, a.jsx)(p.AnalyticsLocationProvider, {
+    value: v,
     children: (0, a.jsxs)(S.ChannelCallChatLayerProvider, {
       children: [(0, a.jsxs)("div", {
         className: $.container,

@@ -183,7 +183,7 @@ function q() {
 
 function Q() {
   let {
-    AnalyticsLocationProvider: e
+    analyticsLocations: e
   } = (0, _.default)(h.default.FAMILY_CENTER), t = (0, x.default)(), n = (0, b.useAcceptedRequestsCount)(), l = (0, S.useIsDismissibleContentDismissed)(d.DismissibleContent.FAMILY_CENTER_NEW_BADGE), r = (0, u.useStateFromStores)([P.default], () => P.default.getIsInitialized()), I = (0, D.useSelectedTeenId)(), R = (0, u.useStateFromStores)([T.default], () => T.default.theme), {
     selectedTab: O,
     handleTabChange: L
@@ -209,7 +209,8 @@ function Q() {
     }, [r, t]), Y) return (0, E.openAgeGateModal)(F.AgeGateSource.FAMILY_CENTER), null;
   let K = O !== w.FamilyCenterSubPages.SETTINGS ? O : w.FamilyCenterSubPages.ACTIVITY,
     q = W[K];
-  return (0, a.jsx)(e, {
+  return (0, a.jsx)(_.AnalyticsLocationProvider, {
+    value: e,
     children: (0, a.jsxs)("main", {
       className: i(V.container, V.containerSidenav),
       "aria-label": H.default.Messages.FAMILY_CENTER_TITLE,

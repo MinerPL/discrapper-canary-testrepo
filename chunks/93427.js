@@ -31,8 +31,8 @@ var l = t("37983"),
   N = t("8161"),
   S = t("315102"),
   R = t("888400"),
-  I = t("449008"),
-  A = t("497880"),
+  A = t("449008"),
+  I = t("497880"),
   L = t("719347"),
   P = t("49111"),
   j = t("782340"),
@@ -96,7 +96,7 @@ function D(e, s, t, a, n) {
       width: d,
       height: d
     }))
-  } else r = (0, l.jsx)(A.default, {
+  } else r = (0, l.jsx)(I.default, {
     message: e,
     content: s,
     className: a
@@ -145,7 +145,7 @@ function U(e) {
       onContextMenu: g,
       onPopoutRequestClose: p
     } = e, {
-      AnalyticsLocationProvider: E
+      analyticsLocations: E
     } = (0, o.default)(d.default.AVATAR);
     if (n || a.state !== M.ReferencedMessageState.LOADED || r) return (0, l.jsx)("div", {
       className: O.replyBadge,
@@ -176,7 +176,8 @@ function U(e) {
         })
       })
     };
-    return null != t && null != h ? (0, l.jsx)(E, {
+    return null != t && null != h ? (0, l.jsx)(o.AnalyticsLocationProvider, {
+      value: E,
       children: (0, l.jsx)(u.Popout, {
         renderPopout: t,
         shouldShow: h,
@@ -184,7 +185,8 @@ function U(e) {
         onRequestClose: p,
         children: C
       })
-    }) : (0, l.jsx)(E, {
+    }) : (0, l.jsx)(o.AnalyticsLocationProvider, {
+      value: E,
       children: C()
     })
   }(e, _, m), x = function(e, s) {
@@ -209,7 +211,7 @@ function U(e) {
       onPopoutRequestClose: u,
       isRepliedMessage: !0
     })
-  }(e, m), A = function(e) {
+  }(e, m), I = function(e) {
     let {
       content: s,
       referencedMessage: t,
@@ -256,7 +258,7 @@ function U(e) {
           })
         });
       default:
-        (0, I.assertNever)(t)
+        (0, A.assertNever)(t)
     }
   }(e), U = a.useMemo(() => e.compact ? (0, p.default)((0, R.dateFormat)(c(), "LT")) : null, [e.compact]);
   return null != t && null != n && (s = j.default.Messages.CHANNEL_MESSAGE_REPLY_A11Y_LABEL.format({
@@ -266,6 +268,6 @@ function U(e) {
     id: (0, f.getMessageReplyId)(r),
     className: i(O.repliedMessage, U),
     "aria-label": s,
-    children: [T, x, A]
+    children: [T, x, I]
   })
 }

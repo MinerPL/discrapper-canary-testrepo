@@ -102,9 +102,8 @@ function L(e) {
   let {
     channel: t
   } = e, n = t.getRecipientId(), l = (0, c.useAvatarsWithGuilds)(n), i = Array(l.length).fill(null), {
-    AnalyticsLocationProvider: f,
-    analyticsLocations: h
-  } = (0, d.default)(u.default.AKA), E = function(e) {
+    analyticsLocations: f
+  } = (0, d.default)(u.default.AKA), h = function(e) {
     let {
       userId: t,
       channelId: n,
@@ -123,12 +122,13 @@ function L(e) {
     }), i
   }({
     userId: n,
-    analyticsLocations: h,
+    analyticsLocations: f,
     channelId: t.id
   });
-  return 0 === E.getNicknameGuildPairs().length && 0 === l.length ? (0, s.jsx)("div", {
+  return 0 === h.getNicknameGuildPairs().length && 0 === l.length ? (0, s.jsx)("div", {
     className: v.spacer
-  }) : (0, s.jsxs)(f, {
+  }) : (0, s.jsxs)(d.AnalyticsLocationProvider, {
+    value: f,
     children: [(0, s.jsx)(S.Divider, {}), (0, s.jsx)(g.TextBadge, {
       text: N.default.Messages.AKA,
       disableColor: !0,
@@ -139,7 +139,7 @@ function L(e) {
       showUserPopout: !1,
       renderUser: (e, t, n) => {
         var a;
-        let i = E.user,
+        let i = h.user,
           r = l[n];
         return null == r || null == i ? null : (0, s.jsx)(o.TooltipContainer, {
           text: null === (a = C.default.getGuild(r)) || void 0 === a ? void 0 : a.name,
@@ -147,20 +147,20 @@ function L(e) {
           children: (0, s.jsx)("img", {
             alt: "",
             className: v.avatar,
-            onClick: E.handleClick,
+            onClick: h.handleClick,
             src: i.getAvatarURL(r, 16),
             "aria-hidden": !0
           })
         }, r[1])
       },
-      renderMoreUsers: E.renderMoreAvatars,
+      renderMoreUsers: h.renderMoreAvatars,
       guildId: void 0,
       max: 3,
       className: v.avatars
-    }) : null, E.getNicknameGuildPairs().length > 0 ? (0, s.jsx)(m.default, {
+    }) : null, h.getNicknameGuildPairs().length > 0 ? (0, s.jsx)(m.default, {
       position: "bottom",
       className: v.nicknames,
-      children: E.renderNicknamePairs()
+      children: h.renderNicknamePairs()
     }) : null]
   })
 }

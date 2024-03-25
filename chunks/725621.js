@@ -675,7 +675,7 @@ function eK() {
     guildMetadata: o,
     isGuildMetadataLoaded: d
   } = (0, i.useStateFromStoresObject)([ei.default], () => ei.default.getProps()), {
-    AnalyticsLocationProvider: u
+    analyticsLocations: u
   } = (0, I.default)(E.default.GUILD_SETTINGS), c = (0, i.useStateFromStores)([w.default], () => w.default.theme), _ = (0, i.useStateFromStores)([w.default], () => w.default.darkSidebar ? eb.ThemeTypes.DARK : void 0), T = (0, i.useStateFromStores)([K.default], () => null != s ? K.default.getChannels(s.id).SELECTABLE : null, [s]), S = (0, i.useStateFromStoresObject)([X.default], () => null != s ? X.default.getGuildPermissionProps(s) : eW), f = null == s ? void 0 : s.id, m = (0, i.useStateFromStores)([X.default], () => null != s && X.default.canAccessGuildSettings(s)), g = null != s && (0, $.staffOnlyGuildSettingsAccess)(s.id), h = g || m, R = g || S.canViewGuildAnalytics, {
     shouldFetchMemberInsights: x,
     hasAccessRate: L
@@ -712,7 +712,8 @@ function eK() {
   let b = (0, i.useStateFromStores)([ed.default], () => ed.default.getCurrentPage()),
     B = (0, i.useStateFromStores)([A.default], () => null != f && A.default.getEnabled(f)),
     H = (0, i.useStateFromStores)([W.default], () => null != f && W.default.isEmpty(f));
-  return (0, a.jsx)(u, {
+  return (0, a.jsx)(I.AnalyticsLocationProvider, {
+    value: u,
     children: (0, a.jsx)(ez, {
       guild: s,
       section: n,

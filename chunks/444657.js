@@ -70,18 +70,18 @@ function O(e) {
     inPopout: n,
     handleClose: l
   } = e, {
-    analyticsLocations: s,
-    AnalyticsLocationProvider: r
-  } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SHELF_BUTTON), c = (0, d.useAnalyticsContext)(), f = (0, o.useToken)(u.default.colors.INTERACTIVE_NORMAL).hex(), E = () => {
+    analyticsLocations: s
+  } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SHELF_BUTTON), r = (0, d.useAnalyticsContext)(), c = (0, o.useToken)(u.default.colors.INTERACTIVE_NORMAL).hex(), f = () => {
     (0, h.default)({
       channel: t,
       guildId: t.guild_id,
-      locationObject: c.location,
+      locationObject: r.location,
       openInPopout: n,
       analyticsLocations: s
     })
   };
-  return (0, a.jsx)(r, {
+  return (0, a.jsx)(p.AnalyticsLocationProvider, {
+    value: s,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(o.Tooltip, {
         text: R.default.Messages.EMBEDDED_ACTIVITIES_START_AN_ACTIVITY,
@@ -94,7 +94,7 @@ function O(e) {
             ...n,
             className: j.clickableTile,
             onClick: () => {
-              null == t || t(), E()
+              null == t || t(), f()
             },
             children: (0, a.jsx)(N.default, {
               className: j.root,
@@ -115,7 +115,7 @@ function O(e) {
           width: 24,
           height: 24,
           className: j.closeButtonIcon,
-          backgroundColor: f
+          backgroundColor: c
         })
       })]
     })
@@ -137,10 +137,10 @@ function P(e) {
   }, []);
   let u = (0, d.useAnalyticsContext)(),
     {
-      analyticsLocations: c,
-      AnalyticsLocationProvider: f
+      analyticsLocations: c
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_INVITE);
-  return (0, a.jsx)(f, {
+  return (0, a.jsx)(p.AnalyticsLocationProvider, {
+    value: c,
     children: (0, a.jsxs)(N.default, {
       className: j.root,
       children: [r > 400 ? (0, a.jsx)("img", {
@@ -242,9 +242,10 @@ function b(e) {
       guildId: n.id
     }),
     {
-      AnalyticsLocationProvider: h
+      analyticsLocations: h
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SUGGESTION);
-  return (0, a.jsx)(h, {
+  return (0, a.jsx)(p.AnalyticsLocationProvider, {
+    value: h,
     children: (0, a.jsxs)(N.default, {
       className: j.root,
       children: [u > 480 ? (0, a.jsx)("img", {

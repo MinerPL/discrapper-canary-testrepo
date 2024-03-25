@@ -83,7 +83,7 @@ var V = e => {
     initialRecurrenceId: C,
     onClose: g
   } = e, {
-    AnalyticsLocationProvider: T
+    analyticsLocations: T
   } = (0, u.default)(a.default.GUILD_EVENT_MODAL), [R, L] = l.useState(C), V = (0, r.useStateFromStores)([m.default], () => m.default.getGuildScheduledEvent(t), [t]), D = null == V ? void 0 : V.id, O = null == V ? void 0 : V.guild_id, {
     guild: U,
     isMember: G
@@ -108,7 +108,8 @@ var V = e => {
       e !== Z && (e === j.EventDetailSections.RSVP_LIST && X(), z(e))
     },
     et = null != R ? R : (0, I.getNextRecurrenceIdInEvent)(V);
-  return (0, i.jsx)(T, {
+  return (0, i.jsx)(u.AnalyticsLocationProvider, {
+    value: T,
     children: (0, i.jsxs)(s.ModalRoot, {
       size: s.ModalSize.MEDIUM,
       transitionState: d,

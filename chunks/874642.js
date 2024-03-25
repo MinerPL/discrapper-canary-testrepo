@@ -1,7 +1,7 @@
 "use strict";
 l.r(r), l.d(r, {
   default: function() {
-    return v
+    return _
   }
 });
 var n = l("37983"),
@@ -17,8 +17,8 @@ var n = l("37983"),
   m = l("617917"),
   f = l("49111"),
   E = l("782340"),
-  N = l("315706"),
-  h = l("926622");
+  N = l("371664"),
+  h = l("890957");
 let S = "premium-guild-subscription-upsell-modal-header";
 
 function x(e) {
@@ -97,7 +97,7 @@ let C = e => {
       })]
     })
   },
-  _ = e => {
+  v = e => {
     let {
       guild: r,
       targetBoostedGuildTier: l,
@@ -130,7 +130,7 @@ let C = e => {
     })
   };
 
-function v(e) {
+function _(e) {
   let {
     analyticsSourceLocation: r,
     guild: l,
@@ -141,9 +141,10 @@ function v(e) {
     onClose: f,
     ...E
   } = e, {
-    AnalyticsLocationProvider: N
+    analyticsLocations: N
   } = (0, o.default)(a.default.ACTIVITY_DIRECTORY);
-  return (0, n.jsx)(N, {
+  return (0, n.jsx)(o.AnalyticsLocationProvider, {
+    value: N,
     children: (0, n.jsx)(i.PaymentContextProvider, {
       activeSubscription: null,
       stepConfigs: [],
@@ -159,7 +160,7 @@ function v(e) {
             perkIntro: p,
             headerProps: m
           }),
-          footer: (0, n.jsx)(_, {
+          footer: (0, n.jsx)(v, {
             guild: l,
             targetBoostedGuildTier: t,
             onClose: f,

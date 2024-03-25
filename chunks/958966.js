@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("446674"),
+  i = s.n(r),
+  n = s("446674"),
   l = s("77078"),
   o = s("812204"),
   u = s("685665"),
@@ -30,8 +30,8 @@ let C = e => {
       inOfferExperience: t,
       inTrial: s,
       subscriptionTier: r
-    } = e, n = null;
-    !t && (n = (0, a.jsxs)("div", {
+    } = e, i = null;
+    !t && (i = (0, a.jsxs)("div", {
       className: p.buttonContainer,
       children: [(0, a.jsx)(N.default, {
         forceInverted: !0,
@@ -42,15 +42,15 @@ let C = e => {
         forceWhite: !0
       })]
     }));
-    let i = null;
-    return s && (i = (0, a.jsx)("div", {
+    let n = null;
+    return s && (n = (0, a.jsx)("div", {
       className: p.buttonContainer,
       children: (0, a.jsx)(m.default, {
         className: p.button,
         forceWhite: !0
       })
     })), (0, a.jsxs)(a.Fragment, {
-      children: [n, " ", i]
+      children: [i, " ", n]
     })
   },
   g = e => {
@@ -93,23 +93,24 @@ var P = e => {
   } = e, N = (0, I.useMarketingOptimizationExperiment)({
     autoTrackExposure: !1
   }), {
-    AnalyticsLocationProvider: P
+    analyticsLocations: P
   } = (0, u.default)(o.default.PREMIUM_MARKETING_HERO_CTA), M = (0, T.useHasActiveTrial)(), h = (0, E.useIsInPremiumOfferExperience)(), L = (0, f.useIsEligibleForBogoPromotion)(), {
     marketingEnabled: x
   } = c.default.useExperiment({
     location: "HeroHeading"
   }, {
     autoTrackExposure: !1
-  }), D = (0, i.useStateFromStores)([_.default], () => _.default.affinities);
-  D.length > 0 && c.default.trackExposure({
+  }), v = (0, n.useStateFromStores)([_.default], () => _.default.affinities);
+  v.length > 0 && c.default.trackExposure({
     location: "HeroHeading"
   });
-  let v = x && D.length > 0;
-  return (0, a.jsx)(P, {
+  let D = x && v.length > 0;
+  return (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: P,
     children: (0, a.jsxs)("div", {
-      className: n(p.container, s, {
+      className: i(p.container, s, {
         [p.settingsContainer]: !t && !N,
-        [p.affinityHeight]: !t && v && !N
+        [p.affinityHeight]: !t && D && !N
       }),
       "data-testid": "v2-marketing-page-hero-header",
       children: [(0, a.jsxs)("div", {
@@ -119,8 +120,8 @@ var P = e => {
           variant: t ? "display-lg" : "display-md",
           color: N ? void 0 : "always-white",
           children: A.default.Messages.PREMIUM_MARKETING_HERO_HEADER_TITLE
-        }), v ? (0, a.jsx)("div", {
-          className: n({
+        }), D ? (0, a.jsx)("div", {
+          className: i({
             [p.affinityDescription]: !N,
             [p.affinityDescriptionNoMargin]: N
           }),
@@ -139,7 +140,7 @@ var P = e => {
           subscriptionTier: r,
           inOfferExperience: h,
           inTrial: M
-        }), v && !N && (0, a.jsx)(O, {
+        }), D && !N && (0, a.jsx)(O, {
           variant: "text-md/normal"
         })]
       }), !(h || d) && (0, a.jsx)(g, {

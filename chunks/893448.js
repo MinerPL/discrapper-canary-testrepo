@@ -194,12 +194,13 @@ function B(e) {
     roleMembers: u,
     handleAddClick: c
   } = e, {
-    AnalyticsLocationProvider: I
+    analyticsLocations: I
   } = (0, _.default)(E.default.MEMBER_LIST), T = l.useMemo(() => n.trim().toLowerCase(), [n]);
   (0, L.useQueryGuildMembers)(t, T);
   let S = l.useMemo(() => u.filter(e => (0, L.filterFullMembersByQuery)(T, e)), [u, T]),
     f = l.useMemo(() => S.sort((e, t) => e.name.localeCompare(t.name)), [S]);
-  return (0, a.jsx)(I, {
+  return (0, a.jsx)(_.AnalyticsLocationProvider, {
+    value: I,
     children: (0, a.jsx)(o.ListAuto, {
       className: G.list,
       sections: [Math.max(S.length, 1)],

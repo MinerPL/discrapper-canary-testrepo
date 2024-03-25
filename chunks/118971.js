@@ -164,7 +164,7 @@ class eC extends s.PureComponent {
       showGuildHeaderTutorial: s,
       showGuildTemplateDirtyTooltip: l,
       isGuildHeaderDismissibleTooltipShown: i,
-      HeaderAnalyticsLocationProvider: r
+      headerAnalyticsLocations: r
     } = this.props, {
       controller: o,
       renderBanner: u,
@@ -172,7 +172,8 @@ class eC extends s.PureComponent {
       bannerVisibleHeight: f,
       communityInfoVisible: E
     } = this.state, h = s || l || i;
-    return null == t ? null : (0, a.jsx)(r, {
+    return null == t ? null : (0, a.jsx)(I.AnalyticsLocationProvider, {
+      value: r,
       children: (0, a.jsx)(c.LazyPopout, {
         renderPopout: this.renderMenuPopout,
         position: "bottom",
@@ -306,7 +307,7 @@ class eC extends s.PureComponent {
   render() {
     let {
       guild: e,
-      FooterAnalyticsLocationProvider: t
+      footerAnalyticsLocations: t
     } = this.props;
     return (0, a.jsxs)("nav", {
       className: ef.container,
@@ -319,7 +320,8 @@ class eC extends s.PureComponent {
         setHasSubheader: e => this.setState({
           hasGuildSubheader: e
         })
-      }), this.renderChannelList(), (0, a.jsx)(t, {
+      }), this.renderChannelList(), (0, a.jsx)(I.AnalyticsLocationProvider, {
+        value: t,
         children: this.renderFooter()
       })]
     })
@@ -463,10 +465,10 @@ function eS(e) {
     [et, en] = s.useState(!K),
     ea = (0, C.default)(n),
     {
-      AnalyticsLocationProvider: es
+      analyticsLocations: es
     } = (0, I.default)(S.default.GUILD_HEADER),
     {
-      AnalyticsLocationProvider: el
+      analyticsLocations: el
     } = (0, I.default)(S.default.GUILD_CHANNEL_LIST_FOOTER);
   s.useEffect(() => {
     n !== ea && en(!K)
@@ -510,8 +512,8 @@ function eS(e) {
     enableStudyGroup: B,
     isGuildHeaderDismissibleTooltipShown: ed,
     canShowCoachMarkAtBottom: et,
-    HeaderAnalyticsLocationProvider: es,
-    FooterAnalyticsLocationProvider: el,
+    headerAnalyticsLocations: es,
+    footerAnalyticsLocations: el,
     shouldRenderClipsEducation: eb,
     isTutorialHighlightDismissed: eU,
     shouldRenderBurstCoachmark: ex

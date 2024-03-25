@@ -1,64 +1,65 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return p
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("90915"),
-  l = s("446674"),
-  r = s("77078"),
-  i = s("901582"),
-  u = s("86621"),
-  o = s("984376"),
+var r = s("90915"),
+  i = s("446674"),
+  n = s("77078"),
+  l = s("901582"),
+  o = s("86621"),
+  u = s("984376"),
   d = s("812204"),
   c = s("685665"),
   _ = s("539938"),
   E = s("595426"),
-  I = s("697218"),
-  f = s("145131"),
-  T = s("216422"),
-  S = s("49111"),
-  R = s("646718"),
+  T = s("697218"),
+  I = s("145131"),
+  f = s("216422"),
+  R = s("49111"),
+  S = s("646718"),
   m = s("782340"),
-  p = s("309285");
-let N = l.default.connectStores([I.default], () => ({
-  user: I.default.getCurrentUser()
-}))((0, o.default)((0, u.default)(e => {
+  N = s("571366");
+let A = i.default.connectStores([T.default], () => ({
+  user: T.default.getCurrentUser()
+}))((0, u.default)((0, o.default)(e => {
   let {
-    AnalyticsLocationProvider: t
+    analyticsLocations: t
   } = (0, c.default)(d.default.HOME_PAGE_PREMIUM_TAB), {
     isAuthenticated: s,
-    user: l
+    user: i
   } = e;
   return s ? (0, a.jsxs)("div", {
-    className: p.homeWrapperNormal,
-    children: [(0, a.jsx)(i.default, {
-      section: S.AnalyticsSections.NAVIGATION,
+    className: N.homeWrapperNormal,
+    children: [(0, a.jsx)(l.default, {
+      section: R.AnalyticsSections.NAVIGATION,
       children: (0, a.jsxs)(_.default, {
         isAuthenticated: s,
-        className: p.headerBar,
+        className: N.headerBar,
         children: [(0, a.jsx)(_.default.Icon, {
-          icon: T.default,
+          icon: f.default,
           "aria-hidden": !0
         }), (0, a.jsx)(_.default.Title, {
           children: m.default.Messages.PREMIUM
         })]
       })
-    }), (0, a.jsx)(t, {
-      children: null == l ? (0, a.jsx)(f.default, {
-        align: f.default.Align.CENTER,
-        justify: f.default.Justify.CENTER,
-        children: (0, a.jsx)(r.Spinner, {
-          className: p.spinner
+    }), (0, a.jsx)(c.AnalyticsLocationProvider, {
+      value: t,
+      children: null == i ? (0, a.jsx)(I.default, {
+        align: I.default.Align.CENTER,
+        justify: I.default.Justify.CENTER,
+        children: (0, a.jsx)(n.Spinner, {
+          className: N.spinner
         })
       }) : (0, a.jsx)(E.default, {
-        entrypoint: R.PremiumMarketingEntrypoints.ApplicationStoreHome
+        entrypoint: S.PremiumMarketingEntrypoints.ApplicationStoreHome
       })
     })]
-  }) : (0, a.jsx)(n.Redirect, {
-    to: S.Routes.LOGIN
+  }) : (0, a.jsx)(r.Redirect, {
+    to: R.Routes.LOGIN
   })
 })));
-var g = N
+var p = A

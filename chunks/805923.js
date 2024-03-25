@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return L
+    return T
   }
 }), s("222007");
 var a = s("37983"),
@@ -16,15 +16,15 @@ var a = s("37983"),
   u = s("49111"),
   M = s("646718"),
   E = s("782340"),
-  T = s("469510"),
-  L = e => {
+  L = s("766633"),
+  T = e => {
     let {
       imgURI: t,
       transitionState: s,
-      onClose: L,
+      onClose: T,
       onChangeAvatar: _
     } = e, [m, S] = o.useState(!1), [R, h] = o.useState(!1), {
-      AnalyticsLocationProvider: I,
+      analyticsLocations: I,
       sourceAnalyticsLocations: x
     } = (0, r.default)(i.default.PREMIUM_UPSELL), U = async () => {
       S(!0);
@@ -36,25 +36,26 @@ var a = s("37983"),
         var s;
         (null == e ? void 0 : null === (s = e.body) || void 0 === s ? void 0 : s.username) != null && (0, d.showInvalidUsernameToast)()
       }
-      S(!1), L()
+      S(!1), T()
     };
     return o.useEffect(() => {
       A.default.track(u.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: M.PremiumUpsellTypes.ANIMATED_USER_AVATAR_MODAL,
         location_stack: x
       })
-    }, [x]), (0, a.jsx)(I, {
+    }, [x]), (0, a.jsx)(r.AnalyticsLocationProvider, {
+      value: I,
       children: (0, a.jsxs)(l.ModalRoot, {
         transitionState: s,
         size: l.ModalSize.SMALL,
         "aria-label": E.default.Messages.IMAGE,
         children: [(0, a.jsxs)(l.ModalContent, {
-          className: T.modalContent,
+          className: L.modalContent,
           paddingFix: !1,
           orientation: "horizontal",
           children: [(0, a.jsx)(l.ModalHeader, {
             separator: !1,
-            className: T.header,
+            className: L.header,
             children: (0, a.jsx)(l.FormTitle, {
               tag: l.FormTitleTags.H1,
               children: E.default.Messages.PREMIUM_UPSELL_ANIMATED_AVATAR
@@ -64,11 +65,11 @@ var a = s("37983"),
             variant: "text-md/normal",
             children: E.default.Messages.PREMIUM_UPSELL_ANIMATED_AVATAR_SUBTITLE
           }), (0, a.jsxs)("div", {
-            className: T.promo,
+            className: L.promo,
             children: [(0, a.jsx)(l.Text, {
               color: "text-normal",
               variant: "text-sm/semibold",
-              className: T.promoText,
+              className: L.promoText,
               children: E.default.Messages.PREMIUM_UPSELL_ANIMATED_AVATAR_TEXT
             }), (0, a.jsx)(c.default, {
               submitting: R,
@@ -82,13 +83,13 @@ var a = s("37983"),
                 h(!0)
               },
               onSubscribeModalClose: e => {
-                h(!1), e && (U(), L())
+                h(!1), e && (U(), T())
               },
               buttonText: E.default.Messages.PREMIUM_REQUIRED_GET_NITRO
             })]
           })]
         }), (0, a.jsxs)(l.ModalFooter, {
-          className: T.modalFooter,
+          className: L.modalFooter,
           children: [(0, a.jsx)(l.Button, {
             look: l.Button.Looks.LINK,
             color: l.Button.Colors.PRIMARY,
@@ -96,13 +97,13 @@ var a = s("37983"),
             onClick: _,
             children: E.default.Messages.CHANGE_AVATAR_A11Y_LABEL
           }), (0, a.jsxs)("div", {
-            className: T.modalFooterActions,
+            className: L.modalFooterActions,
             children: [(0, a.jsx)(l.Button, {
-              className: T.cancelButton,
+              className: L.cancelButton,
               look: l.Button.Looks.LINK,
               color: l.Button.Colors.PRIMARY,
               size: l.ButtonSizes.SMALL,
-              onClick: L,
+              onClick: T,
               children: E.default.Messages.AVATAR_UPLOAD_CANCEL
             }), (0, a.jsx)(l.Button, {
               size: l.ButtonSizes.SMALL,
@@ -114,7 +115,7 @@ var a = s("37983"),
         }), (0, a.jsx)(l.Avatar, {
           src: t,
           "aria-hidden": !0,
-          className: T.avatar,
+          className: L.avatar,
           size: l.AvatarSizes.SIZE_120
         })]
       })

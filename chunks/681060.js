@@ -109,7 +109,7 @@ var i = n("37983"),
     } = e;
     u(null != eL, "chat input type must be set");
     let {
-      AnalyticsLocationProvider: e8
+      analyticsLocations: e8
     } = (0, y.default)(E.default.CHANNEL_TEXT_AREA), e4 = function(e) {
       let t = l.useRef(null);
       if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
@@ -414,7 +414,8 @@ var i = n("37983"),
       tq = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
     return (0, i.jsx)(N.EventEmitterProvider, {
       value: tE,
-      children: (0, i.jsxs)(e8, {
+      children: (0, i.jsxs)(y.AnalyticsLocationProvider, {
+        value: e8,
         children: [tY && td ? (0, i.jsx)(el.default, {
           editorRef: e9,
           options: eL.markdown,

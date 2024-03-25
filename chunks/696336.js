@@ -150,7 +150,7 @@ function er(e) {
     var e, t;
     null === (e = ec.current) || void 0 === e || e.calculateState(), null === (t = ef.current) || void 0 === t || t.calculateState()
   })), {
-    AnalyticsLocationProvider: eI
+    analyticsLocations: eI
   } = (0, S.default)(I.default.GUILDS_LIST), {
     pathname: eS
   } = (0, d.useLocation)(), e_ = eS.startsWith($.Routes.GUILD_DISCOVERY), eN = eS.startsWith($.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(""));
@@ -192,7 +192,8 @@ function er(e) {
       name: e.name,
       icon: e.icon
     }, e.id));
-  return (0, l.jsx)(eI, {
+  return (0, l.jsx)(S.AnalyticsLocationProvider, {
+    value: eI,
     children: (0, l.jsx)("nav", {
       className: i(et.wrapper, s, (0, G.getThemeClass)(r), {
         [et.hidden]: en

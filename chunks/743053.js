@@ -193,38 +193,38 @@ function Q() {
 var X = function() {
   let e = (0, C.useBlockedPaymentsConfig)(),
     {
-      AnalyticsLocationProvider: t,
-      analyticsLocations: s
+      analyticsLocations: t
     } = (0, p.default)(I.default.PREMIUM_SETTINGS),
-    l = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
-    i = (0, d.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
-    r = (0, A.useSubscriptionPlansLoaded)(),
-    [o, c] = n.useState(!0),
-    f = (0, U.useLocalizedPromoQuery)(),
-    m = null == f ? void 0 : f.countryCode,
-    N = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
-    x = "PremiumManagementSettings";
+    s = (0, d.useStateFromStores)([M.default], () => M.default.getPremiumTypeSubscription()),
+    l = (0, d.useStateFromStores)([M.default], () => M.default.hasFetchedSubscriptions()),
+    i = (0, A.useSubscriptionPlansLoaded)(),
+    [r, o] = n.useState(!0),
+    c = (0, U.useLocalizedPromoQuery)(),
+    f = null == c ? void 0 : c.countryCode,
+    m = (0, d.useStateFromStores)([R.default], () => R.default.enabled),
+    N = "PremiumManagementSettings";
   (0, h.useTriggerDebuggingAA)({
-    location: x + " auto on",
+    location: N + " auto on",
     autoTrackExposure: !0
   }), (0, h.useTriggerDebuggingAA)({
-    location: x + " auto off",
+    location: N + " auto off",
     autoTrackExposure: !1
   }), n.useEffect(() => {
     E.default.wait(async () => {
-      !N && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(m, null, H.RevenueSurfaces.DISCOVERY)]), c(!1)
+      !m && !e && await Promise.all([T.fetchSubscriptions(), T.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(f, null, H.RevenueSurfaces.DISCOVERY)]), o(!1)
     })
-  }, [m, N, e]);
-  let [v, P] = n.useState(!1);
-  if (N) return (0, a.jsx)(g.default, {});
+  }, [f, m, e]);
+  let [x, v] = n.useState(!1);
+  if (m) return (0, a.jsx)(g.default, {});
   if (e) return (0, a.jsx)(O.BlockedPaymentsContentSettings, {});
-  if ((!i || null == l || !r) && !o) return (0, a.jsx)(D.default, {
+  if ((!l || null == s || !i) && !r) return (0, a.jsx)(D.default, {
     title: w.default.Messages.REDIRECTED_CALLBACK_ERROR,
     note: null
   });
-  if (!i || null == l || !r || o) return (0, a.jsx)(S.Spinner, {});
-  let j = null != l.trialId;
-  return (0, a.jsx)(t, {
+  if (!l || null == s || !i || r) return (0, a.jsx)(S.Spinner, {});
+  let P = null != s.trialId;
+  return (0, a.jsx)(p.AnalyticsLocationProvider, {
+    value: t,
     children: (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsxs)("div", {
         className: V.container,
@@ -232,15 +232,15 @@ var X = function() {
           className: V.planComparisonTable,
           hideCTAs: !0,
           headingOverride: w.default.Messages.PREMIUM_COMPARISON_TABLE_WHAT_YOU_HAVE_GOT_TITLE,
-          hidePill: !j,
+          hidePill: !P,
           selectedPlanColumnClassName: V.tier2PlanComparisonTableBackground,
           selectedPlanTier: k.PremiumTypes.TIER_2
         })]
       }), (0, a.jsx)(u.VisibilitySensor, {
         onChange: e => {
-          e && !v && (L.default.track(H.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-            location_stack: s
-          }), P(!0))
+          e && !x && (L.default.track(H.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+            location_stack: t
+          }), v(!0))
         },
         children: (0, a.jsx)("div", {
           className: V.bottomOfPageVisibilitySensor

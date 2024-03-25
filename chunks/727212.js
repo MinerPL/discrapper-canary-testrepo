@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var u = n("37983"),
   r = n("884691"),
   a = n("77078"),
-  s = n("272030"),
-  l = n("79112"),
+  l = n("272030"),
+  s = n("79112"),
   i = n("534291"),
   o = n("158534"),
   d = n("812204"),
@@ -28,70 +28,70 @@ var u = n("37983"),
     let {
       webBuildOverride: t,
       onSelect: n
-    } = e, [o, d] = r.useState(!1), C = (0, T.default)(), x = (0, m.default)(), R = (0, M.default)(), v = (0, h.default)(), j = (0, I.default)(), L = (0, p.default)(), {
-      AnalyticsLocationProvider: b,
+    } = e, [o, d] = r.useState(!1), C = (0, T.default)(), x = (0, m.default)(), v = (0, M.default)(), R = (0, h.default)(), L = (0, I.default)(), j = (0, p.default)(), {
       analyticsLocations: A
-    } = (0, c.default)(), O = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
-    async function N() {
+    } = (0, c.default)(), b = r.useMemo(() => (0, S.getRecentBuildOverrides)(), []);
+    async function O() {
       try {
         d(!0), await (0, f.clearBuildOverride)(), window.location.reload(!0)
       } catch (e) {
         d(!1)
       }
     }
-    let y = e => {
+    let N = e => {
         switch (e) {
           case _.UserSettingsSections.STREAMER_MODE:
             return C;
           case _.UserSettingsSections.APPEARANCE:
             return x;
           case _.UserSettingsSections.ACCESSIBILITY:
-            return R;
-          case _.UserSettingsSections.VOICE:
             return v;
+          case _.UserSettingsSections.VOICE:
+            return R;
           case _.UserSettingsSections.TEXT:
-            return j;
-          case _.UserSettingsSections.EXPERIMENTS:
             return L;
+          case _.UserSettingsSections.EXPERIMENTS:
+            return j;
           default:
             return null
         }
       },
-      k = (0, E.default)().filter(e => {
+      y = (0, E.default)().filter(e => {
         let {
           section: t
         } = e;
         return t !== i.SectionTypes.HEADER && t !== i.SectionTypes.CUSTOM && t !== i.SectionTypes.DIVIDER && "logout" !== t
       }).filter(e => null == e.predicate || e.predicate());
-    return (0, u.jsx)(b, {
+    return (0, u.jsx)(c.AnalyticsLocationProvider, {
+      value: A,
       children: (0, u.jsxs)(a.Menu, {
         navId: "user-settings-cog",
-        onClose: s.closeContextMenu,
+        onClose: l.closeContextMenu,
         "aria-label": g.default.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
         onSelect: n,
-        children: [k.map(e => {
+        children: [y.map(e => {
           let {
             section: t,
             label: n,
             onClick: r
-          } = e, s = t.replace(/\W/gi, "_");
+          } = e, l = t.replace(/\W/gi, "_");
           return (0, u.jsx)(a.MenuItem, {
-            id: s,
+            id: l,
             label: n,
             action: () => null != r ? r() : function(e, t) {
               let n = Object.values(_.UserSettingsSections),
                 u = n.filter(t => t === e)[0];
-              null != u && l.default.open(u, void 0, {
+              null != u && s.default.open(u, void 0, {
                 analyticsLocations: t
               })
             }(t, A),
-            children: y(t)
-          }, s)
-        }), e.user.isStaff() && O.length > 0 ? (0, u.jsx)(a.MenuItem, {
+            children: N(t)
+          }, l)
+        }), e.user.isStaff() && b.length > 0 ? (0, u.jsx)(a.MenuItem, {
           label: "Build overrides",
           id: "build_overrides",
           children: (0, u.jsx)(a.MenuGroup, {
-            children: O.map(e => (0, u.jsx)(a.MenuRadioItem, {
+            children: b.map(e => (0, u.jsx)(a.MenuRadioItem, {
               id: "input-".concat(e.payload),
               group: "build_overrides",
               label: e.id,
@@ -108,7 +108,7 @@ var u = n("37983"),
             id: "clear-build-override",
             disabled: o,
             label: g.default.Messages.CLEAR_BUILD_OVERRIDE,
-            action: N,
+            action: O,
             color: "danger"
           })
         }) : null]

@@ -22,39 +22,39 @@ var a = n("37983"),
   S = n("539405"),
   v = n("304580"),
   y = n("175980"),
-  C = n("485328"),
-  N = n("827792"),
-  O = n("812204"),
+  O = n("485328"),
+  C = n("827792"),
+  N = n("812204"),
   T = n("685665"),
   I = n("9759"),
   _ = n("705565"),
-  A = n("479788"),
-  x = n("375202"),
-  R = n("831773"),
+  A = n("161454"),
+  x = n("479788"),
+  R = n("375202"),
+  L = n("831773"),
   M = n("359477"),
-  L = n("373469"),
-  D = n("271938"),
-  j = n("42203"),
-  w = n("305961"),
-  k = n("42887"),
-  b = n("568307"),
+  D = n("373469"),
+  j = n("271938"),
+  k = n("42203"),
+  b = n("305961"),
+  w = n("42887"),
   P = n("18494"),
   V = n("40597"),
   U = n("703370"),
   B = n("144747"),
   F = n("227602"),
-  H = n("901165"),
-  G = n("471671"),
-  W = n("145131");
+  G = n("901165"),
+  W = n("471671"),
+  H = n("145131");
 n("58608");
-var Y = n("718517"),
-  z = n("773336"),
+var z = n("718517"),
+  Y = n("773336"),
   K = n("50885"),
   Z = n("13798"),
   X = n("819068"),
   J = n("999819"),
-  Q = n("878624"),
-  q = n("827922"),
+  q = n("878624"),
+  Q = n("827922"),
   $ = n("485415"),
   ee = n("206496"),
   et = n("684325"),
@@ -63,7 +63,7 @@ var Y = n("718517"),
   ea = n("6791"),
   el = n("49111"),
   es = n("782340"),
-  eo = n("885971");
+  eo = n("939689");
 p.default.PersistedStore.disableWrites = __OVERLAY__, p.default.initialize();
 let er = null;
 
@@ -137,7 +137,7 @@ class eh extends l.Component {
     S.default.deactivateAllRegions()
   }
   componentDidMount() {
-    S.default.startSession(), R.default.initialize(), N.default.initialize(), M.default.initialize()
+    S.default.startSession(), L.default.initialize(), C.default.initialize(), M.default.initialize()
   }
   componentDidUpdate(e) {
     let {
@@ -155,8 +155,8 @@ class eh extends l.Component {
             unlocked_duration: e
           }), er = null
         }
-        C.default.disable(), this.activeKeyEventShapes = [], H.default.isPinned(el.OverlayWidgets.TEXT) && (C.default.setLayout(y.OVERLAY_LOCKED_LAYOUT), C.default.enable())
-      } else e.locked && !this.props.locked && (window.removeEventListener("contextmenu", ed, !1), null == er && (er = Date.now(), S.default.track(el.AnalyticEvents.OVERLAY_UNLOCKED)), C.default.disable(), this.activeKeyEventShapes = [], C.default.setLayout(y.OVERLAY_LAYOUT), C.default.enable());
+        O.default.disable(), this.activeKeyEventShapes = [], G.default.isPinned(el.OverlayWidgets.TEXT) && (O.default.setLayout(y.OVERLAY_LOCKED_LAYOUT), O.default.enable())
+      } else e.locked && !this.props.locked && (window.removeEventListener("contextmenu", ed, !1), null == er && (er = Date.now(), S.default.track(el.AnalyticEvents.OVERLAY_UNLOCKED)), O.default.disable(), this.activeKeyEventShapes = [], O.default.setLayout(y.OVERLAY_LAYOUT), O.default.enable());
       e.keybindKeyCodes !== this.props.keybindKeyCodes && (this.lockEventShape = (0, Z.toBrowserEvents)(this.props.keybindKeyCodes))
     }
   }
@@ -176,7 +176,7 @@ class eh extends l.Component {
     } = this.props;
     S.default.track(el.AnalyticEvents.OVERLAY_INITIALIZED, {
       voice_widget_connected: e,
-      text_widget_connected: H.default.isPinned(el.OverlayWidgets.TEXT)
+      text_widget_connected: G.default.isPinned(el.OverlayWidgets.TEXT)
     }), J.default.trackExposure({
       location: "Overlay"
     });
@@ -201,15 +201,15 @@ class eh extends l.Component {
       } : c && (h = {
         type: ea.OverlayNudgeTypes.GO_LIVE_NON_VOICE,
         game: s
-      }), S.default.overlayMounted(h), window.addEventListener("resize", this.handleWindowResize), t && window.addEventListener("contextmenu", ed, !1), z.isPlatformEmbedded) {
+      }), S.default.overlayMounted(h), window.addEventListener("resize", this.handleWindowResize), t && window.addEventListener("contextmenu", ed, !1), Y.isPlatformEmbedded) {
       let e = K.default.requireModule("discord_overlay2");
       void 0 !== e.setPerfInfoCallback && (e.setPerfInfoCallback(e => {
         S.default.track(el.AnalyticEvents.OVERLAY_PERF_INFO, e)
       }), e.broadcastCommand({
         message: "set_perf_report_interval",
-        interval: 15 * Y.default.Millis.MINUTE
+        interval: 15 * z.default.Millis.MINUTE
       })), K.default.on("REQUEST_OPEN_EXTERNAL_URL", (e, t) => {
-        H.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? K.default.send("OPEN_EXTERNAL_URL", t) : m.default.show({
+        G.default.getDisableExternalLinkAlert() || t === V.default.getLastURL() ? K.default.send("OPEN_EXTERNAL_URL", t) : m.default.show({
           title: es.default.Messages.OVERLAY_LINK_ALERT_TITLE,
           body: es.default.Messages.OVERLAY_LINK_ALERT_BODY,
           secondaryConfirmText: es.default.Messages.OVERLAY_LINK_ALERT_SECONDARY,
@@ -225,12 +225,12 @@ class eh extends l.Component {
     window.addEventListener("keydown", this.onKeyDownGlobal, !0), window.addEventListener("keyup", this.onKeyUpGlobal, !0)
   }
   componentWillUnmount() {
-    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", ed, !1), R.default.terminate(), N.default.terminate(), M.default.terminate()
+    window.removeEventListener("resize", this.handleWindowResize), window.removeEventListener("keydown", this.onKeyDownGlobal, !0), window.removeEventListener("keyup", this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener("contextmenu", ed, !1), L.default.terminate(), C.default.terminate(), M.default.terminate()
   }
   renderInvalidSizeMessage() {
-    return (0, a.jsx)(W.default, {
-      justify: W.default.Justify.CENTER,
-      align: W.default.Align.CENTER,
+    return (0, a.jsx)(H.default, {
+      justify: H.default.Justify.CENTER,
+      align: H.default.Align.CENTER,
       className: eo.invalidContainer,
       children: (0, a.jsx)("div", {
         className: eo.inactiveContainer,
@@ -255,7 +255,7 @@ class eh extends l.Component {
     } = d;
     if (0 === f || 0 === h || n || !l) return null;
     let p = e || s,
-      g = D.default.getId();
+      g = j.default.getId();
     return (0, a.jsxs)("div", {
       className: eo.overlay,
       children: [(0, a.jsx)(et.default, {}), s && (0, a.jsx)("header", {
@@ -278,7 +278,7 @@ class eh extends l.Component {
       }), (0, a.jsx)($.default, {
         locked: p,
         keybind: t
-      }), (0, a.jsx)(Q.default, {})]
+      }), (0, a.jsx)(q.default, {})]
     })
   }
   constructor(e) {
@@ -303,8 +303,8 @@ class eh extends l.Component {
         n = this.getActiveKeyEventIndex(t);
       n > -1 && this.activeKeyEventShapes.splice(n, 1)
     };
-    let t = e.locked && H.default.isPinned(el.OverlayWidgets.TEXT);
-    C.default.setLayout(t ? y.OVERLAY_LOCKED_LAYOUT : y.OVERLAY_LAYOUT), t && C.default.enable()
+    let t = e.locked && G.default.isPinned(el.OverlayWidgets.TEXT);
+    O.default.setLayout(t ? y.OVERLAY_LOCKED_LAYOUT : y.OVERLAY_LAYOUT), t && O.default.enable()
   }
 }
 
@@ -315,25 +315,26 @@ function ep() {
     incompatibleApp: n,
     activeRegions: i,
     isPreviewingInGame: l
-  } = (0, p.useStateFromStoresObject)([H.default], () => ({
-    locked: H.default.isUILocked((0, X.getPID)()),
-    initialized: H.default.initialized,
-    incompatibleApp: H.default.incompatibleApp,
-    activeRegions: H.default.getActiveRegions(),
-    isPreviewingInGame: H.default.isPreviewingInGame()
-  })), s = (0, p.useStateFromStores)([G.default], () => G.default.windowSize()), o = (0, p.useStateFromStores)([F.default], () => F.default.getOverlayKeybind()), r = (0, p.useStateFromStores)([P.default], () => P.default.getVoiceChannelId()), d = (0, p.useStateFromStores)([j.default], () => j.default.getChannel(r)), u = (0, p.useStateFromStores)([w.default], () => null != d ? w.default.getGuild(d.guild_id) : null), c = (0, p.useStateFromStores)([b.default, U.default], () => (0, x.default)(b.default, U.default)), f = (0, p.useStateFromStores)([k.default], () => (0, A.default)(k.default)), {
+  } = (0, p.useStateFromStoresObject)([G.default], () => ({
+    locked: G.default.isUILocked((0, X.getPID)()),
+    initialized: G.default.initialized,
+    incompatibleApp: G.default.incompatibleApp,
+    activeRegions: G.default.getActiveRegions(),
+    isPreviewingInGame: G.default.isPreviewingInGame()
+  })), s = (0, p.useStateFromStores)([W.default], () => W.default.windowSize()), o = (0, p.useStateFromStores)([F.default], () => F.default.getOverlayKeybind()), r = (0, p.useStateFromStores)([P.default], () => P.default.getVoiceChannelId()), d = (0, p.useStateFromStores)([k.default], () => k.default.getChannel(r)), u = (0, p.useStateFromStores)([b.default], () => null != d ? b.default.getGuild(d.guild_id) : null), c = (0, p.useStateFromStores)([A.default, U.default], () => (0, R.default)(A.default, U.default)), f = (0, p.useStateFromStores)([w.default], () => (0, x.default)(w.default)), {
     canBroadcast: h
   } = I.default.useExperiment({
     location: "overlay"
   }, {
     autoTrackExposure: !1
-  }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([L.default], () => null != L.default.getCurrentUserActiveStream()), {
-    AnalyticsLocationProvider: S
-  } = (0, T.default)(O.default.OVERLAY), {
+  }), m = (0, _.default)() && null != c, E = (0, p.useStateFromStores)([D.default], () => null != D.default.getCurrentUserActiveStream()), {
+    analyticsLocations: S
+  } = (0, T.default)(N.default.OVERLAY), {
     showKeybindIndicators: v,
     dismissKeybindNotification: y
-  } = (0, q.useGetKeybindNotification)();
-  return (0, a.jsx)(S, {
+  } = (0, Q.useGetKeybindNotification)();
+  return (0, a.jsx)(T.AnalyticsLocationProvider, {
+    value: S,
     children: (0, a.jsx)(g.RedesignIconContextProvider, {
       children: (0, a.jsx)(eh, {
         locked: e,

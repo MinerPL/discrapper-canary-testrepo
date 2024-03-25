@@ -222,7 +222,7 @@ var ed = l.memo(l.forwardRef(function(e, t) {
     ...eF,
     section: null != eH ? eH : q.AnalyticsSections.EMOJI_PICKER_POPOUT
   }), [eF, eH]), {
-    AnalyticsLocationProvider: eW
+    analyticsLocations: eW
   } = (0, y.default)(E.default.EMOJI_PICKER), {
     diversitySurrogate: eY
   } = (0, d.useStateFromStoresObject)([S.default], () => ({
@@ -454,7 +454,8 @@ var ed = l.memo(l.forwardRef(function(e, t) {
       })]
     })
   });
-  return (0, i.jsx)(eW, {
+  return (0, i.jsx)(y.AnalyticsLocationProvider, {
+    value: eW,
     children: tr
   })
 }))

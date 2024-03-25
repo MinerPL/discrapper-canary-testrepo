@@ -23,7 +23,7 @@ var a = s("37983"),
     let {
       guildId: t
     } = e, {
-      AnalyticsLocationProvider: s
+      analyticsLocations: s
     } = (0, r.default)(n.default.GUILD_MEMBER_APPLICATION_REVIEW), _ = (0, I.useSelectedGuildJoinRequest)({
       guildId: t
     }), {
@@ -34,7 +34,8 @@ var a = s("37983"),
       location: null == M ? void 0 : M.name
     }), l.useEffect(() => {
       E.default.fetchVerificationForm(t)
-    }, [t]), (0, a.jsxs)(s, {
+    }, [t]), (0, a.jsxs)(r.AnalyticsLocationProvider, {
+      value: s,
       children: [(0, a.jsx)("div", {
         className: S.content,
         children: (0, a.jsx)(f.default, {

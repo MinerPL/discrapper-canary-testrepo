@@ -61,16 +61,14 @@ let O = "vc-activities-".concat((0, u.v4)()),
     }, [u, s]);
     let B = (0, f.useAppContext)(),
       {
-        analyticsLocations: G,
-        AnalyticsLocationProvider: W
+        analyticsLocations: G
       } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
       {
-        analyticsLocations: Y,
-        AnalyticsLocationProvider: z
+        analyticsLocations: W
       } = (0, p.default)([...G, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      K = B === M.AppContext.POPOUT,
-      Z = (0, c.useAnalyticsContext)(),
-      X = function(e) {
+      Y = B === M.AppContext.POPOUT,
+      z = (0, c.useAnalyticsContext)(),
+      K = function(e) {
         let t = (0, v.default)({
           guildId: e
         });
@@ -80,23 +78,23 @@ let O = "vc-activities-".concat((0, u.v4)()),
       let e = setTimeout(() => T.dismissNewActivityIndicator(), 1e3);
       return () => clearTimeout(e)
     }, []);
-    let Q = l.useCallback(() => {
+    let Z = l.useCallback(() => {
         var e;
         (0, A.default)({
           channel: n,
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
-          locationObject: Z.location,
-          openInPopout: K,
+          locationObject: z.location,
+          openInPopout: Y,
           analyticsLocations: G
         }), D(), b()
-      }, [Z, G, n, b, D, K]),
-      q = l.useCallback(e => {
+      }, [z, G, n, b, D, Y]),
+      X = l.useCallback(e => {
         P(), _.default.track(M.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
           guild_id: n.getGuildId()
         })
       }, [P, n]),
-      J = w ? (0, a.jsxs)(r.Link, {
+      Q = w ? (0, a.jsxs)(r.Link, {
         to: M.Routes.ACTIVITIES,
         children: [(0, a.jsx)("img", {
           alt: R.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT,
@@ -106,7 +104,8 @@ let O = "vc-activities-".concat((0, u.v4)()),
           className: j.posterDivider
         })]
       }) : null;
-    return (0, a.jsx)(W, {
+    return (0, a.jsx)(p.AnalyticsLocationProvider, {
+      value: G,
       children: (0, a.jsx)(g.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,
@@ -122,7 +121,7 @@ let O = "vc-activities-".concat((0, u.v4)()),
             })
           }), (0, a.jsxs)("div", {
             className: j.container,
-            onMouseEnter: q,
+            onMouseEnter: X,
             onMouseLeave: D,
             children: [(0, a.jsxs)("div", {
               className: j.titleContainer,
@@ -137,7 +136,7 @@ let O = "vc-activities-".concat((0, u.v4)()),
                 })]
               }), (0, a.jsxs)(d.Clickable, {
                 className: j.titleRight,
-                onClick: Q,
+                onClick: Z,
                 children: [(0, a.jsx)(d.Text, {
                   variant: "eyebrow",
                   children: R.default.Messages.EMBEDDED_ACTIVITIES_AUTO_SUGGEST_SEE_ALL
@@ -148,11 +147,12 @@ let O = "vc-activities-".concat((0, u.v4)()),
                   className: j.titleRightIcon
                 })]
               })]
-            }), (0, a.jsx)(z, {
-              children: J
+            }), (0, a.jsx)(p.AnalyticsLocationProvider, {
+              value: W,
+              children: Q
             }), (0, a.jsxs)("div", {
               className: j.activityContainer,
-              children: [X.map(e => (0, a.jsx)(x.ActivitySuggestion, {
+              children: [K.map(e => (0, a.jsx)(x.ActivitySuggestion, {
                 channel: n,
                 activityItem: e,
                 onClick: () => {

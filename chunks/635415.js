@@ -70,7 +70,7 @@ function B(e) {
   let et = (0, g.default)(G.id),
     es = null == et ? void 0 : et.getPreviewBio(W),
     {
-      AnalyticsLocationProvider: ea,
+      analyticsLocations: ea,
       sourceAnalyticsLocations: en
     } = (0, u.default)(d.default.USER_SETTINGS_TRY_OUT_PREMIUM);
   n.useEffect(() => {
@@ -92,7 +92,8 @@ function B(e) {
   }), (0, o.useTriggerDebuggingAA)({
     location: eo + " auto off",
     autoTrackExposure: !1
-  }), (0, a.jsx)(ea, {
+  }), (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: ea,
     children: (0, a.jsxs)(M.default, {
       ref: ee,
       className: y.tryItOutSection,

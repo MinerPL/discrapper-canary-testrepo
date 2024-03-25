@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("65597"),
   o = s("77078"),
   u = s("206230"),
@@ -45,18 +45,18 @@ let C = (e, t) => t === m.PremiumTypes.TIER_0 ? A.default.Messages.NITRO_MARKETI
       title: t,
       description: s,
       className: r,
-      imageSource: n,
+      imageSource: i,
       imageClassName: l,
       titleBadge: u,
       isNew: T = !1,
       isEarlyAccess: I = !1
     } = e, {
-      AnalyticsLocationProvider: f,
-      analyticsLocations: R
+      analyticsLocations: f
     } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD);
-    return (0, a.jsx)(f, {
+    return (0, a.jsx)(c.AnalyticsLocationProvider, {
+      value: f,
       children: (0, a.jsxs)("div", {
-        className: i(p.perkCard, r),
+        className: n(p.perkCard, r),
         children: [T ? (0, a.jsx)(E.default, {
           className: p.perkCardNewBadge,
           shouldInheritBackgroundColor: !0,
@@ -64,9 +64,9 @@ let C = (e, t) => t === m.PremiumTypes.TIER_0 ? A.default.Messages.NITRO_MARKETI
         }) : null, I ? (0, a.jsx)(_.default, {
           className: p.perkCardEarlyAccessBadge
         }) : null, (0, a.jsx)("img", {
-          src: n,
+          src: i,
           alt: "",
-          className: i(l, p.perksCardArt)
+          className: n(l, p.perksCardArt)
         }), (0, a.jsxs)("div", {
           children: [(0, a.jsxs)(o.Heading, {
             variant: "heading-lg/extrabold",
@@ -75,7 +75,7 @@ let C = (e, t) => t === m.PremiumTypes.TIER_0 ? A.default.Messages.NITRO_MARKETI
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/normal",
             className: p.perkCardDescription,
-            children: "function" == typeof s ? s(R) : s
+            children: "function" == typeof s ? s(f) : s
           })]
         })]
       })
@@ -84,34 +84,34 @@ let C = (e, t) => t === m.PremiumTypes.TIER_0 ? A.default.Messages.NITRO_MARKETI
 var P = e => {
   let t, {
       className: s,
-      selectedPremiumType: n,
+      selectedPremiumType: i,
       isSubscriberNitroHome: d = !1
     } = e,
     [_, E] = r.useState(!1),
     I = (0, S.usePerkCards)({
       styles: p,
-      selectedPremiumType: n
+      selectedPremiumType: i
     }),
     f = (0, l.useStateFromStores)([u.default], () => u.default.useReducedMotion),
     {
       analyticsLocations: A
     } = (0, c.default)(),
     P = (0, T.useIsRemixANitroPerk)();
-  return t = n !== m.PremiumTypes.TIER_0 ? [I.emoji, I.streaming, I.upload, I.customAppIcons, I.soundboard, P ? I.remix : I.videoBackground, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt] : [I.emoji, I.upload, I.customAppIcons, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt], (0, a.jsxs)("div", {
-    className: i(p.perksContainer, s, {
+  return t = i !== m.PremiumTypes.TIER_0 ? [I.emoji, I.streaming, I.upload, I.customAppIcons, I.soundboard, P ? I.remix : I.videoBackground, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt] : [I.emoji, I.upload, I.customAppIcons, I.superReactions, I.stickersPerkDiscoverability, I.badgeAlt], (0, a.jsxs)("div", {
+    className: n(p.perksContainer, s, {
       [p.partiallyHidden]: d && !_,
       [p.subscriberNitroHome]: d,
       [p.reducedMotion]: f
     }),
     children: [(0, a.jsx)(o.Heading, {
       variant: "heading-xxl/extrabold",
-      className: i({
-        [p.perksTitle]: null == n,
-        [p.perksTitleStackedCards]: null != n
+      className: n({
+        [p.perksTitle]: null == i,
+        [p.perksTitleStackedCards]: null != i
       }),
-      children: C(d, n)
+      children: C(d, i)
     }), (0, a.jsx)("div", {
-      className: i(p.perkCardContainer, {
+      className: n(p.perkCardContainer, {
         [p.perkCardContainerExpanded]: _
       }),
       children: t.map(e => null != e && (0, a.jsx)(O, {
@@ -119,7 +119,7 @@ var P = e => {
       }, e.title))
     }), d && (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: i({
+        className: n({
           [p.sizeGizmo]: !_,
           [p.sizeGizmoExpanded]: _
         }),
@@ -133,7 +133,7 @@ var P = e => {
           isShowingAll: _
         })
       }), (0, a.jsx)("div", {
-        className: i(p.cover, {
+        className: n(p.cover, {
           [p.hidden]: _
         })
       })]

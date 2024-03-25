@@ -724,9 +724,10 @@ var eK = (0, T.default)(function(e) {
     (I || m) && v(!1)
   }, [I, m, v]);
   let {
-    AnalyticsLocationProvider: M
+    analyticsLocations: M
   } = (0, D.default)(y.default.RTC_PANEL), P = (0, R.default)(null != u ? u : ex.EMPTY_STRING_SNOWFLAKE_ID, null == o ? void 0 : o.id), b = (0, L.default)(null == o ? void 0 : o.id), U = (0, x.default)();
-  return (0, a.jsx)(M, {
+  return (0, a.jsx)(D.AnalyticsLocationProvider, {
+    value: M,
     children: (0, a.jsxs)("div", {
       className: eG.wrapper,
       children: [null != t || null != n ? (0, a.jsx)(w.default, {

@@ -19,11 +19,11 @@ var t = E("37983"),
   A = E("812204"),
   R = E("685665"),
   l = E("917247"),
-  L = E("635956"),
-  u = E("891653"),
+  u = E("635956"),
+  L = E("891653"),
   C = E("697218"),
-  D = E("381546"),
-  c = E("599110"),
+  c = E("381546"),
+  D = E("599110"),
   d = E("719923"),
   U = E("32531"),
   M = E("714657"),
@@ -32,18 +32,18 @@ var t = E("37983"),
   m = E("49111"),
   G = E("994428"),
   p = E("646718"),
-  y = E("782340"),
-  g = E("286609");
+  g = E("782340"),
+  y = E("537167");
 let B = () => (0, t.jsx)("div", {
-    className: g.editorHeader,
+    className: y.editorHeader,
     children: (0, t.jsxs)("div", {
-      className: g.bannerUpsell,
-      children: [(0, t.jsx)(u.default, {
-        className: g.premiumIcon
+      className: y.bannerUpsell,
+      children: [(0, t.jsx)(L.default, {
+        className: y.premiumIcon
       }), (0, t.jsx)(s.Heading, {
         variant: "heading-md/bold",
         color: "always-white",
-        children: y.default.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
+        children: g.default.Messages.CLIENT_THEMES_EDITOR_UPSELL_HEADER
       })]
     })
   }),
@@ -52,18 +52,18 @@ let B = () => (0, t.jsx)("div", {
       markAsDismissed: _
     } = e, E = (0, h.useTrackClientThemePreviewEvent)();
     return (0, t.jsxs)("div", {
-      className: g.editorHeader,
+      className: y.editorHeader,
       children: [(0, t.jsx)(s.Clickable, {
-        className: g.closeCircleButton,
+        className: y.closeCircleButton,
         onClick: () => {
           null != _ && _(G.ContentDismissActionType.DISMISS), E(m.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, U.closeEditor)()
         },
-        children: (0, t.jsx)(D.default, {
-          className: g.closeCircle
+        children: (0, t.jsx)(c.default, {
+          className: y.closeCircle
         })
       }), (0, t.jsx)(s.Heading, {
         variant: "heading-lg/extrabold",
-        children: y.default.Messages.CLIENT_THEMES_EDITOR_HEADER
+        children: g.default.Messages.CLIENT_THEMES_EDITOR_HEADER
       })]
     })
   },
@@ -74,13 +74,13 @@ let B = () => (0, t.jsx)("div", {
       markAsDismissed: r
     } = e, {
       analyticsLocations: a
-    } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), [S, N] = (0, i.useStateFromStoresArray)([C.default, M.default], () => [M.default.gradientPreset, d.default.isPremium(C.default.getCurrentUser())]), O = (0, l.usePremiumTrialOffer)(), u = (0, d.formatTrialCtaIntervalDuration)({
+    } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), [S, N] = (0, i.useStateFromStoresArray)([C.default, M.default], () => [M.default.gradientPreset, d.default.isPremium(C.default.getCurrentUser())]), O = (0, l.usePremiumTrialOffer)(), L = (0, d.formatTrialCtaIntervalDuration)({
       intervalType: null == O ? void 0 : null === (_ = O.subscription_trial) || void 0 === _ ? void 0 : _.interval,
       intervalCount: null == O ? void 0 : null === (E = O.subscription_trial) || void 0 === E ? void 0 : E.interval_count
     });
-    return (0, t.jsx)(L.default, {
+    return (0, t.jsx)(u.default, {
       size: s.Button.Sizes.MEDIUM,
-      buttonText: N ? y.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == O ? void 0 : null === (o = O.subscription_trial) || void 0 === o ? void 0 : o.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? u : y.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
+      buttonText: N ? g.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : (null == O ? void 0 : null === (o = O.subscription_trial) || void 0 === o ? void 0 : o.sku_id) === p.PremiumSubscriptionSKUs.TIER_2 ? L : g.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
       subscriptionTier: p.PremiumSubscriptionSKUs.TIER_2,
       onSubscribeModalClose: e => {
         if (!!e) null == n || n(), null != r && r(G.ContentDismissActionType.PRIMARY), null != S && ((0, P.trackClientThemeUpdated)({
@@ -111,18 +111,18 @@ let B = () => (0, t.jsx)("div", {
       isCoachmark: !0
     }, {
       forceShowCloseButton: !0
-    }, () => y.default.Messages.CLOSE).with({
+    }, () => g.default.Messages.CLOSE).with({
       isPreview: !0
-    }, () => y.default.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => y.default.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
+    }, () => g.default.Messages.CLIENT_THEMES_EDITOR_EXIT_PREVIEW).otherwise(() => g.default.Messages.CLIENT_THEMES_EDITOR_RETURN_TO_SETTINGS);
     return (0, t.jsxs)("div", {
-      className: g.editorFooter,
+      className: y.editorFooter,
       children: [E && (0, t.jsx)(H, {
         onSubscribeSuccess: () => {
           I(!0)
         },
         markAsDismissed: _
       }), (0, t.jsx)(s.Button, {
-        className: g.footerButton,
+        className: y.footerButton,
         onClick: () => {
           null != _ && _(G.ContentDismissActionType.DISMISS), T(m.AnalyticEvents.CLIENT_THEME_PREVIEW_CLOSED), (0, U.closeEditor)(), !n && S.default.open()
         },
@@ -137,44 +137,44 @@ function b(e) {
   let {
     markAsDismissed: _
   } = e, {
-    analyticsLocations: E,
-    AnalyticsLocationProvider: n
+    analyticsLocations: E
   } = (0, R.default)(A.default.CLIENT_THEMES_EDITOR), {
-    isPreview: a,
-    isCoachmark: I,
-    isEditorOpen: T,
-    shouldEditorAnimate: S
+    isPreview: n,
+    isCoachmark: a,
+    isEditorOpen: I,
+    shouldEditorAnimate: T
   } = (0, i.useStateFromStoresObject)([M.default, O.default], () => ({
     isPreview: M.default.isPreview,
     isCoachmark: M.default.isCoachmark,
     isEditorOpen: M.default.isEditorOpen,
     shouldEditorAnimate: M.default.isCoachmark && !O.default.useReducedMotion
-  })), l = (0, h.useTrackClientThemePreviewEvent)();
-  o.useEffect(() => l(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [l]), o.useEffect(() => {
-    a && c.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+  })), S = (0, h.useTrackClientThemePreviewEvent)();
+  o.useEffect(() => S(m.AnalyticEvents.CLIENT_THEME_PREVIEW_VIEWED), [S]), o.useEffect(() => {
+    n && D.default.track(m.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: p.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
       location_stack: E
     })
-  }, [a, E]);
-  let L = (0, h.useResetClientThemePreview)(),
-    u = (0, N.default)(null, a ? L : m.NOOP);
+  }, [n, E]);
+  let l = (0, h.useResetClientThemePreview)(),
+    u = (0, N.default)(null, n ? l : m.NOOP);
   return o.useEffect(() => {
-    if (a && !T) return L
-  }, [a, T, L]), (0, t.jsx)(n, {
+    if (n && !I) return l
+  }, [n, I, l]), (0, t.jsx)(R.AnalyticsLocationProvider, {
+    value: E,
     children: (0, t.jsx)("div", {
       ref: u,
-      className: r(g.themeEditor, S ? g.editorAnimate : null),
+      className: r(y.themeEditor, T ? y.editorAnimate : null),
       children: (0, t.jsxs)(s.HeadingLevel, {
-        children: [I ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, {
+        children: [a ? (0, t.jsx)(B, {}) : (0, t.jsx)(f, {
           markAsDismissed: _
         }), (0, t.jsx)(s.Scroller, {
-          className: g.editorBody,
+          className: y.editorBody,
           children: (0, t.jsxs)(P.default, {
             type: P.ThemeSelectionGroupType.EDITOR,
-            children: [!a && (0, t.jsx)(P.default.Basic, {
-              className: g.selectionGroup
+            children: [!n && (0, t.jsx)(P.default.Basic, {
+              className: y.selectionGroup
             }), (0, t.jsx)(P.default.Gradient, {
-              className: g.selectionGroup
+              className: y.selectionGroup
             })]
           })
         }), (0, t.jsx)(v, {

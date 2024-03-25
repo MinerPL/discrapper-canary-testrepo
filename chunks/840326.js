@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("290381"),
-  i = s("77078"),
+  i = s("290381"),
+  n = s("77078"),
   l = s("812204"),
   o = s("685665"),
   u = s("594098"),
@@ -26,17 +26,17 @@ var a = s("37983"),
     let e = r.useRef(null),
       [t, s] = r.useState(!1),
       {
-        AnalyticsLocationProvider: A,
-        analyticsLocations: p
+        analyticsLocations: A
       } = (0, o.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [C, g] = r.useState(!1);
+      [p, C] = r.useState(!1);
     return (0, c.useFetchEntitlementsForTenureReward)(), (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(i.AdvancedScrollerAuto, {
+      children: [(0, a.jsx)(n.AdvancedScrollerAuto, {
         className: m.mainPageScroller,
         ref: e,
         children: (0, a.jsx)("div", {
           className: m.container,
-          children: (0, a.jsxs)(A, {
+          children: (0, a.jsxs)(o.AnalyticsLocationProvider, {
+            value: A,
             children: [(0, a.jsx)(T.default, {
               className: m.heroHeading
             }), (0, a.jsx)(_.default, {
@@ -61,11 +61,11 @@ var a = s("37983"),
               }
             }), (0, a.jsx)("div", {
               className: m.footerSpacing
-            }), (0, a.jsx)(n.VisibilitySensor, {
+            }), (0, a.jsx)(i.VisibilitySensor, {
               onChange: e => {
-                e && !C && (d.default.track(S.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                  location_stack: p
-                }), g(!0))
+                e && !p && (d.default.track(S.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                  location_stack: A
+                }), C(!0))
               },
               children: (0, a.jsx)("div", {
                 className: m.bottomOfPageVisibilitySensor

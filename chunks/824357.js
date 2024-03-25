@@ -36,7 +36,7 @@ function A() {
       autoTrackExposure: !1
     }),
     {
-      AnalyticsLocationProvider: s
+      analyticsLocations: s
     } = (0, o.default)(),
     A = (0, E.useEnableClips)(),
     {
@@ -45,7 +45,8 @@ function A() {
     x = (0, f.default)(S.default);
   return n.useEffect(() => {
     (0, d.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIPS_SETTINGS_BETA_TAG)
-  }), (0, a.jsxs)(s, {
+  }), (0, a.jsxs)(o.AnalyticsLocationProvider, {
+    value: s,
     children: [(0, a.jsx)(r.FormSection, {
       tag: r.FormTitleTags.H1,
       title: (0, a.jsxs)("div", {

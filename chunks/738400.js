@@ -1,7 +1,7 @@
 "use strict";
 s.r(e), s.d(e, {
   default: function() {
-    return j
+    return R
   }
 }), s("222007"), s("70102");
 var n, i, l = s("37983"),
@@ -15,13 +15,13 @@ var n, i, l = s("37983"),
   m = s("583367"),
   N = s("812204"),
   C = s("685665"),
-  f = s("818711"),
-  S = s("161778"),
+  S = s("818711"),
+  f = s("161778"),
   p = s("521012"),
   h = s("145131"),
   M = s("719923"),
   T = s("782340"),
-  _ = s("378678");
+  _ = s("194718");
 async function g(t, e, s, n) {
   await (0, m.uncancelGuildBoostSlot)(s), await (0, I.updateSubscription)(t, {
     items: (0, M.getItemsFromNewAdditionalPlans)(t, e)
@@ -34,7 +34,7 @@ function E(t) {
     guildBoostSlotId: s,
     onNext: n,
     onClose: i
-  } = t, [u, I] = a.useState(!1), m = (0, r.useStateFromStores)([S.default], () => S.default.theme), {
+  } = t, [u, I] = a.useState(!1), m = (0, r.useStateFromStores)([f.default], () => f.default.theme), {
     analyticsLocations: N
   } = (0, C.default)();
   return (0, l.jsxs)(l.Fragment, {
@@ -55,7 +55,7 @@ function E(t) {
         onClick: async () => {
           try {
             I(!0);
-            let t = (0, f.calculateAdditionalPlansWithPremiumGuildAdjustment)(e, 1);
+            let t = (0, S.calculateAdditionalPlansWithPremiumGuildAdjustment)(e, 1);
             o((0, M.getNumPremiumGuildSubscriptions)(t) <= (0, M.getNumPremiumGuildSubscriptions)(e.additionalPlans), "Uncanceling should not increase the number of guild subscriptions"), await g(e, t, s, N), n()
           } catch (t) {
             I(!1)
@@ -74,7 +74,7 @@ function E(t) {
   })
 }
 
-function R(t) {
+function P(t) {
   let {
     onClose: e
   } = t;
@@ -103,14 +103,14 @@ function R(t) {
   })
 }
 
-function j(t) {
+function R(t) {
   let e, {
       guildBoostSlotId: s,
       transitionState: n,
       onClose: i
     } = t,
     {
-      AnalyticsLocationProvider: u
+      analyticsLocations: u
     } = (0, C.default)(N.default.GUILD_BOOST_UNCANCELLATION_MODAL);
   a.useEffect(() => {
     !p.default.hasFetchedSubscriptions() && (0, I.fetchSubscriptions)()
@@ -130,14 +130,15 @@ function j(t) {
       });
       break;
     case 2:
-      e = (0, l.jsx)(R, {
+      e = (0, l.jsx)(P, {
         onClose: i
       });
       break;
     default:
       throw Error("Unexpected step: ".concat(d))
   }
-  return (0, l.jsx)(u, {
+  return (0, l.jsx)(C.AnalyticsLocationProvider, {
+    value: u,
     children: (0, l.jsx)(c.ModalRoot, {
       transitionState: n,
       children: e

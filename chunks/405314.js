@@ -48,9 +48,10 @@ function h(e) {
     skuId: o,
     analyticsLocations: u
   } = e, {
-    AnalyticsLocationProvider: h
+    analyticsLocations: h
   } = (0, s.default)(u, r.default.PREMIUM_PAYMENT_MODAL);
-  return (0, i.jsx)(h, {
+  return (0, i.jsx)(s.AnalyticsLocationProvider, {
+    value: h,
     children: (0, i.jsx)(a.PaymentContextProvider, {
       loadId: t,
       stepConfigs: f,

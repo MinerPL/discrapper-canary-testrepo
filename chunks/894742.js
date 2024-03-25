@@ -14,8 +14,8 @@ var n = s("37983"),
   d = s("85336"),
   c = s("385179"),
   S = s("292215"),
-  E = s("639137"),
-  f = s("526139"),
+  f = s("639137"),
+  E = s("526139"),
   I = s("158184"),
   _ = s("385890"),
   p = s("337978"),
@@ -36,13 +36,12 @@ function A(e) {
     analyticsLocations: x,
     returnRef: R
   } = e, {
-    analyticsLocations: L,
-    AnalyticsLocationProvider: v
-  } = (0, r.default)([...x, i.default.COLLECTIBLES_PAYMENT_MODAL]), M = l.useRef(new a.Environment), [F, j] = l.useState(null), y = [S.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, _.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, f.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...S.SHARED_STEP_CONFIGS, S.REVIEW_STEP_CONFIG, {
+    analyticsLocations: L
+  } = (0, r.default)([...x, i.default.COLLECTIBLES_PAYMENT_MODAL]), v = l.useRef(new a.Environment), [M, F] = l.useState(null), j = [S.ONE_TIME_PAYMENT_PREDICATE_STEP_CONFIG, _.COLLECTIBLES_GIFT_CUSTOMIZATION_STEP, E.COLLECTIBLES_ADD_PAYMENT_STEP_CONFIG, ...S.SHARED_STEP_CONFIGS, S.REVIEW_STEP_CONFIG, {
     key: d.Step.CONFIRM,
     renderStep: e => (0, n.jsx)(I.CollectiblesPaymentModalConfirmStep, {
       ...e,
-      confettiCanvas: F,
+      confettiCanvas: M,
       analyticsLocations: L
     }),
     options: {
@@ -50,14 +49,15 @@ function A(e) {
       sliderBodyClassName: m.modalOverrideSliderBody
     }
   }];
-  return (0, n.jsxs)(v, {
+  return (0, n.jsxs)(r.AnalyticsLocationProvider, {
+    value: L,
     children: [(0, n.jsx)(a.ConfettiCanvas, {
-      ref: j,
+      ref: F,
       className: m.confettiCanvas,
-      environment: M.current
+      environment: v.current
     }), (0, n.jsx)(o.PaymentContextProvider, {
       loadId: N,
-      stepConfigs: y,
+      stepConfigs: j,
       applicationId: T.COLLECTIBLES_APPLICATION_ID,
       skuIDs: [h],
       isGift: P,
@@ -75,7 +75,7 @@ function A(e) {
           initialPlanId: null,
           analyticsLocations: L,
           transitionState: A,
-          renderHeader: (e, t, s) => P ? (0, n.jsx)(E.default, {
+          renderHeader: (e, t, s) => P ? (0, n.jsx)(f.default, {
             step: s,
             onClose: () => t(!1)
           }) : (0, n.jsx)(p.default, {

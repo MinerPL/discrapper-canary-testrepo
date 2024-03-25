@@ -38,7 +38,7 @@ var a = n("37983"),
       sectionFilter: t,
       titleId: n
     } = e, {
-      AnalyticsLocationProvider: l
+      analyticsLocations: l
     } = (0, h.default)(E.default.FRIENDS_LIST), {
       rows: D,
       section: x
@@ -70,7 +70,8 @@ var a = n("37983"),
       V = B.filter(e => e.type === M.RelationshipTypes.PENDING_INCOMING).length,
       Y = t === M.FriendsSections.PENDING && V > 0,
       W = Y && G && V >= L.MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL;
-    return (0, a.jsx)(l, {
+    return (0, a.jsx)(h.AnalyticsLocationProvider, {
+      value: l,
       children: (0, a.jsxs)(c.default, {
         section: M.AnalyticsSections.FRIENDS_LIST,
         children: [(0, a.jsx)(m.default, {

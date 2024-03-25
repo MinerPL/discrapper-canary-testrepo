@@ -1,10 +1,10 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return M
+    return y
   },
   ActivityDirectoryFooter: function() {
-    return y
+    return M
   }
 }), l("222007");
 var i = l("37983"),
@@ -12,8 +12,8 @@ var i = l("37983"),
   n = l("414456"),
   s = l.n(n),
   r = l("617258"),
-  c = l("446674"),
-  o = l("769846"),
+  o = l("446674"),
+  c = l("769846"),
   d = l("77078"),
   u = l("812204"),
   f = l("685665"),
@@ -30,27 +30,27 @@ var i = l("37983"),
   g = l("954016"),
   A = l("782340"),
   _ = l("638675");
-let N = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
-  j = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
-  D = (0, r.cssValueToNumber)(o.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
+let N = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_SLIDE_ACTIVITY_DIRECTORY_SHELF_GRID_GAP),
+  j = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_ACTIVITY_ITEM_HEIGHT),
+  D = (0, r.cssValueToNumber)(c.default.ACTIVITY_SHELF_ITEM_LARGE_ACTIVITY_ITEM_HEIGHT);
 
-function M(e) {
+function y(e) {
   let {
     channel: t,
     guildId: l,
     locationObject: n,
     onClose: r,
-    onActivityItemVisible: o,
+    onActivityItemVisible: c,
     scrollerRef: g
-  } = e, [M, y] = a.useState(0), L = (0, x.default)({
+  } = e, [y, M] = a.useState(0), L = (0, x.default)({
     guildId: l,
     enableFilter: !0
-  }), b = (0, c.useStateFromStores)([h.default], () => h.default.getCurrentUser()), V = (0, c.useStateFromStores)([v.default], () => v.default.getGuild(l), [l]), {
-    AnalyticsLocationProvider: R
+  }), b = (0, o.useStateFromStores)([h.default], () => h.default.getCurrentUser()), V = (0, o.useStateFromStores)([v.default], () => v.default.getGuild(l), [l]), {
+    analyticsLocations: R
   } = (0, f.default)(u.default.ACTIVITY_DIRECTORY), O = (0, T.default)(null == t ? void 0 : t.id), {
     isDeveloperActivityShelfEnabled: H,
     filter: B
-  } = (0, c.useStateFromStoresObject)([m.default], () => ({
+  } = (0, o.useStateFromStoresObject)([m.default], () => ({
     filter: m.default.getFilter(),
     isDeveloperActivityShelfEnabled: m.default.getIsEnabled()
   }));
@@ -62,13 +62,13 @@ function M(e) {
 
     function t() {
       var e, t;
-      y(null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
+      M(null !== (t = null === (e = g.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== t ? t : 0)
     }
   }, [g]);
   let {
     enableBigShelf: F,
-    enableSocialProofActivityDetails: w,
-    enableMinimalActivityDetails: P
+    enableSocialProofActivityDetails: P,
+    enableMinimalActivityDetails: w
   } = E.ExperimentShelfToDetailPage.useExperiment({
     location: "a48d9e_5"
   }, {
@@ -81,13 +81,14 @@ function M(e) {
       })
     }, [l, O]), (0, C.useFetchDeveloperActivityShelfItems)(), null == V && !O || null == b) return null;
   let Y = L.length > 0;
-  return (0, i.jsx)(R, {
+  return (0, i.jsx)(f.AnalyticsLocationProvider, {
+    value: R,
     children: (0, i.jsxs)("div", {
       className: _.scrollContainer,
       children: [Y && !F ? (0, i.jsx)("div", {
         className: _.scrollBackgroundContainer,
         style: {
-          top: -M
+          top: -y
         },
         children: (0, i.jsx)("div", {
           className: s(_.scrollTierBackground),
@@ -103,7 +104,7 @@ function M(e) {
         ref: g,
         className: _.scroller,
         children: function() {
-          let e = F || w || P ? S.default : p.default;
+          let e = F || P || w ? S.default : p.default;
           return Y ? (0, i.jsx)("div", {
             className: _.scrollSection,
             children: (0, i.jsx)("div", {
@@ -116,7 +117,7 @@ function M(e) {
                 channel: t,
                 guildId: l,
                 locationObject: n,
-                onActivityItemVisible: o,
+                onActivityItemVisible: c,
                 onActivityItemSelected: () => {
                   var e;
                   e = a.application.id, r()
@@ -139,7 +140,7 @@ function M(e) {
   })
 }
 
-function y() {
+function M() {
   return (0, i.jsx)(d.Text, {
     variant: "text-sm/normal",
     children: A.default.Messages.EMBEDDED_ACTIVITIES_FEEDBACK_SURVEY.format({

@@ -18,8 +18,8 @@ var a = l("37983"),
   E = l("606292"),
   m = l("688318"),
   I = l("692038"),
-  f = l("815297"),
-  L = l("574073"),
+  L = l("815297"),
+  f = l("574073"),
   p = l("291655"),
   A = l("946964"),
   _ = l("649844"),
@@ -87,13 +87,13 @@ let ea = d.AvatarSizes.SIZE_152,
       onClose: C,
       returnRef: I
     } = e, {
-      analyticsLocations: f
-    } = (0, T.default)(), L = M.default.canUseCollectibles(l), [p, _] = (0, r.useStateFromStoresArray)([j.default], () => [j.default.getPurchase(t.skuId), j.default.isClaiming === t.skuId]), {
+      analyticsLocations: L
+    } = (0, T.default)(), f = M.default.canUseCollectibles(l), [p, _] = (0, r.useStateFromStoresArray)([j.default], () => [j.default.getPurchase(t.skuId), j.default.isClaiming === t.skuId]), {
       productDetailModalDescriptionHidden: h
     } = (0, B.default)({
       location: "CollectiblesShopProductDetailsModal"
     }), S = (0, v.default)({
-      analyticsLocations: f
+      analyticsLocations: L
     }), {
       buttonColors: x,
       backgroundColors: N,
@@ -117,7 +117,7 @@ let ea = d.AvatarSizes.SIZE_152,
             product: t,
             category: i,
             returnRef: I,
-            analyticsLocations: f
+            analyticsLocations: L
           })
         }
       }),
@@ -180,7 +180,7 @@ let ea = d.AvatarSizes.SIZE_152,
               className: n([et.priceTag, P]),
               children: ee.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
             });
-            if (L) return (0, a.jsx)(G.default, {
+            if (f) return (0, a.jsx)(G.default, {
               product: t,
               className: et.priceTag,
               innerClassName: P,
@@ -225,7 +225,7 @@ let ea = d.AvatarSizes.SIZE_152,
           className: et.buttonsContainer,
           children: (0, a.jsxs)("div", {
             className: et.primaryButtons,
-            children: [!q || L || eo ? null != p ? (0, a.jsx)(d.Button, {
+            children: [!q || f || eo ? null != p ? (0, a.jsx)(d.Button, {
               style: U,
               className: et.button,
               look: d.Button.Looks.FILLED,
@@ -233,12 +233,12 @@ let ea = d.AvatarSizes.SIZE_152,
                 if (C(), (0, u.popLayer)(), S(), (null == er ? void 0 : er.type) === o.CollectiblesItemType.AVATAR_DECORATION) {
                   (0, E.openAvatarDecorationModal)({
                     initialSelectedDecoration: er,
-                    analyticsLocations: f
+                    analyticsLocations: L
                   });
                   return
                 }(null == er ? void 0 : er.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, g.openProfileEffectModal)({
                   initialSelectedEffectId: er.id,
-                  analyticsLocations: f
+                  analyticsLocations: L
                 })
               },
               children: ee.default.Messages.COLLECTIBLES_USE_NOW
@@ -252,7 +252,7 @@ let ea = d.AvatarSizes.SIZE_152,
               onClick: async () => {
                 await (0, D.claimPremiumCollectiblesProduct)(t.skuId), C(), (0, Z.default)({
                   product: t,
-                  analyticsLocations: f
+                  analyticsLocations: L
                 })
               },
               children: ee.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION
@@ -262,7 +262,7 @@ let ea = d.AvatarSizes.SIZE_152,
               look: d.Button.Looks.FILLED,
               onClick: () => (0, A.default)({
                 skuId: t.skuId,
-                analyticsLocations: f,
+                analyticsLocations: L,
                 onClose: e => e ? C() : (0, $.NOOP)()
               }),
               children: (null == er ? void 0 : er.type) === o.CollectiblesItemType.PROFILE_EFFECT ? ee.default.Messages.COLLECTIBLES_BUY_PROFILE_EFFECT : ee.default.Messages.COLLECTIBLES_BUY_DECORATION
@@ -311,7 +311,7 @@ let ea = d.AvatarSizes.SIZE_152,
     let {
       author: t
     } = e, l = (0, I.createMessageRecord)({
-      ...(0, f.default)({
+      ...(0, L.default)({
         author: t,
         channelId: "1337",
         content: ee.default.Messages.COLLECTIBLES_CHAT_PREVIEW_TEXT
@@ -334,7 +334,7 @@ let ea = d.AvatarSizes.SIZE_152,
         "aria-hidden": !0,
         children: [(0, a.jsx)(p.default, {
           className: et.mockMessage,
-          author: (0, L.getMessageAuthor)(l),
+          author: (0, f.getMessageAuthor)(l),
           message: l
         }, l.id), (0, a.jsxs)("div", {
           className: et.mockInput,
@@ -361,24 +361,24 @@ var eu = e => {
     returnRef: E,
     analyticsSource: m,
     analyticsLocations: I
-  } = e, f = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), {
-    analyticsLocations: L,
-    AnalyticsLocationProvider: p
+  } = e, L = (0, r.useStateFromStores)([N.default], () => N.default.getCurrentUser()), {
+    analyticsLocations: f
   } = (0, T.default)([...I, C.default.COLLECTIBLES_SHOP_DETAILS_MODAL]);
   (0, w.useProductDetailsLinkableRoute)(u);
-  let [A] = u.items;
+  let [p] = u.items;
   return (s.useEffect(() => {
-    let e = (null == A ? void 0 : A.type) === o.CollectiblesItemType.AVATAR_DECORATION ? "avatar decoration" : "profile effect";
+    let e = (null == p ? void 0 : p.type) === o.CollectiblesItemType.AVATAR_DECORATION ? "avatar decoration" : "profile effect";
     return P.default.track(J.AnalyticEvents.OPEN_MODAL, {
       type: J.AnalyticsSections.COLLECTIBLES_SHOP_DETAILS_MODAL,
       source: m,
-      location_stack: L,
+      location_stack: f,
       sku_id: u.skuId,
       product_type: e
     }), u.items.map(D.productDetailsOpened), () => {
       u.items.map(D.productDetailsClosed)
     }
-  }, [m, L, u.skuId, u.items, null == A ? void 0 : A.type]), null == f) ? null : (0, a.jsx)(p, {
+  }, [m, f, u.skuId, u.items, null == p ? void 0 : p.type]), null == L) ? null : (0, a.jsx)(T.AnalyticsLocationProvider, {
+    value: f,
     children: (0, a.jsx)(d.ModalRoot, {
       hideShadow: !0,
       className: et.modalRoot,
@@ -388,12 +388,12 @@ var eu = e => {
       children: (0, a.jsxs)(d.ModalContent, {
         className: et.modalContent,
         children: [(0, a.jsx)(en, {
-          user: f,
+          user: L,
           product: u,
           category: c,
           onClose: n
         }), (0, a.jsxs)("div", {
-          className: (null == A ? void 0 : A.type) === o.CollectiblesItemType.AVATAR_DECORATION ? et.collectiblePreviewsContainerWithChat : et.collectiblePreviewsContainerNoChat,
+          className: (null == p ? void 0 : p.type) === o.CollectiblesItemType.AVATAR_DECORATION ? et.collectiblePreviewsContainerWithChat : et.collectiblePreviewsContainerNoChat,
           children: [(0, a.jsx)(U.default, {
             assetUrlOverride: null === (t = q.categoryBannerOverrides[c.skuId]) || void 0 === t ? void 0 : t.assetUrlOverride,
             asset: u.banner,
@@ -401,7 +401,7 @@ var eu = e => {
             size: (0, X.getAssetSizeByHeight)(540),
             className: et.categoryBanner
           }), (0, a.jsx)(eo, {
-            user: f,
+            user: L,
             product: u
           })]
         }), (0, a.jsx)(d.ModalCloseButton, {

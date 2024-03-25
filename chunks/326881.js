@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("808653"), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("446674"),
   o = s("290381"),
   u = s("77078"),
@@ -30,29 +30,29 @@ var a = s("37983"),
     let {
       isAllPerksVisible: t,
       setIsAllPerksVisible: s,
-      previousComponent: n
+      previousComponent: i
     } = e, O = r.useRef(null), P = (0, S.default)(), M = Object.entries(P).reduce((e, t) => {
       let [s, a] = t;
       return !1 !== a.canReveal && "upcomingDropUntimed" !== a.name && (e[s] = a), e
     }, {}), {
-      AnalyticsLocationProvider: h,
-      analyticsLocations: L
-    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [x, D] = r.useState(!1), v = (0, E.default)("perks-discoverability"), U = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
+      analyticsLocations: h
+    } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME), [L, x] = r.useState(!1), v = (0, E.default)("perks-discoverability"), D = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion);
     return (0, a.jsx)(u.AdvancedScrollerAuto, {
-      className: i(C.allPerksScroller, {
+      className: n(C.allPerksScroller, {
         [C.open]: t,
-        [C.openCloseReduceMotion]: U
+        [C.openCloseReduceMotion]: D
       }),
       ref: O,
       children: (0, a.jsx)("div", {
         className: C.container,
-        children: (0, a.jsxs)(h, {
+        children: (0, a.jsxs)(_.AnalyticsLocationProvider, {
+          value: h,
           children: [(0, a.jsx)(f.default, {
             className: C.heroHeading,
             onBackClick: () => {
               s(!1), I.default.track(A.AnalyticEvents.NITRO_HOME_NAVIGATION, {
                 current_component: m.NitroLandingPages.SEE_ALL,
-                next_component: n,
+                next_component: i,
                 interaction_component: "Back Button"
               })
             }
@@ -90,9 +90,9 @@ var a = s("37983"),
             className: C.footerSpacing
           }), (0, a.jsx)(o.VisibilitySensor, {
             onChange: e => {
-              e && !x && (I.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                location_stack: L
-              }), D(!0))
+              e && !L && (I.default.track(A.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                location_stack: h
+              }), x(!0))
             },
             children: (0, a.jsx)("div", {
               className: C.bottomOfPageVisibilitySensor

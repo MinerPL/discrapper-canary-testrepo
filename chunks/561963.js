@@ -201,7 +201,7 @@ function q(e) {
     channel: t,
     guild: n
   } = e, s = "members-".concat(t.id), {
-    AnalyticsLocationProvider: r
+    analyticsLocations: r
   } = (0, g.default)(E.default.MEMBER_LIST), d = (0, _.useThreadMemberListSections)(t.id, n), h = d.filter(e => e.userIds.length > 0).reverse()[0], {
     navigator: m,
     listRef: S
@@ -267,7 +267,8 @@ function q(e) {
   });
   let I = u.omit(m.containerProps, ["ref"]),
     T = F.getGuildVisualOwnerId(n);
-  return (0, a.jsx)(r, {
+  return (0, a.jsx)(g.AnalyticsLocationProvider, {
+    value: r,
     children: (0, a.jsx)(o.ListNavigatorProvider, {
       navigator: m,
       children: (0, a.jsx)(f.FocusJumpSection, {

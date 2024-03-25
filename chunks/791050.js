@@ -131,38 +131,38 @@ function R(e) {
     isTryItOutFlow: S,
     guild: p
   } = e, E = (0, u.useStateFromStores)([h.default], () => h.default.getCurrentUser()), {
-    AnalyticsLocationProvider: C,
-    analyticsLocations: I
+    analyticsLocations: C
   } = (0, o.default)(r, l.default.EDIT_AVATAR_DECORATION_MODAL), {
-    categories: g,
-    purchases: T,
-    isFetchingCategories: A,
-    isFetchingPurchases: P
-  } = (0, m.default)(), R = A || P && 0 === T.size;
+    categories: I,
+    purchases: g,
+    isFetchingCategories: T,
+    isFetchingPurchases: A
+  } = (0, m.default)(), P = T || A && 0 === g.size;
   return n.useEffect(() => {
     _.default.track(v.AnalyticEvents.OPEN_MODAL, {
       type: "Edit Avatar Decoration Modal",
-      location_stack: I
+      location_stack: C
     })
-  }, [I]), n.useEffect(() => () => {
+  }, [C]), n.useEffect(() => () => {
     (0, c.setCollectiblesCategoryItemsViewed)({
-      categories: [...g.values()],
+      categories: [...I.values()],
       itemTypes: [s.CollectiblesItemType.AVATAR_DECORATION]
     })
-  }, [g]), null == E ? null : (0, a.jsx)(C, {
+  }, [I]), null == E ? null : (0, a.jsx)(o.AnalyticsLocationProvider, {
+    value: C,
     children: (0, a.jsx)(i.ModalRoot, {
       transitionState: t,
       className: N.modal,
-      size: R ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
-      children: R ? (0, a.jsx)(i.Spinner, {
+      size: P ? i.ModalSize.DYNAMIC : i.ModalSize.MEDIUM,
+      children: P ? (0, a.jsx)(i.Spinner, {
         className: N.spinner,
         type: i.Spinner.Type.SPINNING_CIRCLE
       }) : (0, a.jsx)(L, {
         user: E,
         guild: p,
-        categories: g,
-        purchases: T,
-        analyticsLocations: I,
+        categories: I,
+        purchases: g,
+        analyticsLocations: C,
         initialSelectedDecoration: f,
         onClose: d,
         isTryItOutFlow: S

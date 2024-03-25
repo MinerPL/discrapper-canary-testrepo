@@ -62,29 +62,28 @@ function D(e) {
     message: a,
     channel: r
   } = e, {
-    AnalyticsLocationProvider: u,
-    analyticsLocations: D
-  } = (0, I.default)(T.default.EXECUTED_COMMAND), x = l.useMemo(() => (e, t, n) => (o(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(S.default, {
+    analyticsLocations: u
+  } = (0, I.default)(T.default.EXECUTED_COMMAND), D = l.useMemo(() => (e, t, n) => (o(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(S.default, {
     ...e,
     channelId: r.id,
     messageId: a.id,
     guildId: r.guild_id,
     userId: t.id,
     newAnalyticsLocations: n
-  })), [r, a.id]), y = l.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(g.default, {
+  })), [r, a.id]), x = l.useMemo(() => e => (o(null != r, "ExecutedCommand: channel cannot be null"), (0, s.jsx)(g.default, {
     ...e,
     channel: r,
     messageId: a.id,
     interactionData: a.interactionData
-  })), [r, a.id, a.interactionData]), U = (0, N.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), j = l.useMemo(() => e.compact ? (0, p.default)((0, h.dateFormat)(d(), "LT")) : null, [e.compact]), b = (0, E.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), {
-    enabled: G
+  })), [r, a.id, a.interactionData]), y = (0, N.useNullableUserAuthor)(null === (t = a.interaction) || void 0 === t ? void 0 : t.user, r), U = l.useMemo(() => e.compact ? (0, p.default)((0, h.dateFormat)(d(), "LT")) : null, [e.compact]), j = (0, E.useIsActivitiesInTextEnabled)(r.id, "ExecutedCommand"), {
+    enabled: b
   } = m.AppLauncherOnboardingExperiment.useExperiment({
     location: "Executed Command"
   }, {
     autoTrackExposure: !1
-  }), B = a.interaction;
-  if (null == B || null == U) return null;
-  let F = () => {
+  }), G = a.interaction;
+  if (null == G || null == y) return null;
+  let B = () => {
     let t = function(e, t) {
         let n, {
           message: l,
@@ -145,7 +144,7 @@ function D(e) {
           onRequestClose: f,
           children: m
         }) : m()
-      }(e, e => x(e, B.user, [T.default.AVATAR])),
+      }(e, e => D(e, G.user, [T.default.AVATAR])),
       n = function(e, t, n) {
         var l;
         let {
@@ -168,7 +167,7 @@ function D(e) {
           onContextMenu: u,
           onPopoutRequestClose: d
         })
-      }(e, U, e => x(e, B.user));
+      }(e, y, e => D(e, G.user));
     return (0, s.jsxs)(l.Fragment, {
       children: [t, n]
     }, "user")
@@ -186,13 +185,13 @@ function D(e) {
         },
         openInPopout: !1,
         enableSelectedTextChannelInvite: !0,
-        analyticsLocations: D
+        analyticsLocations: u
       }), (0, f.fetchShelf)({
         guildId: r.guild_id
       })
     };
-    n = b ? v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
-      userHook: F,
+    n = j ? v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+      userHook: B,
       activityHook: () => (0, s.jsx)(c.Clickable, {
         tag: "span",
         onClick: e,
@@ -202,10 +201,10 @@ function D(e) {
         })
       })
     }) : v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
-      userHook: F
+      userHook: B
     })
   } else n = v.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
-    userHook: F,
+    userHook: B,
     commandHook: () => {
       let t = function(e, t, n) {
         let {
@@ -249,15 +248,16 @@ function D(e) {
             })
           }
         })
-      }(e, y, G);
+      }(e, x, b);
       return (0, s.jsx)(l.Fragment, {
         children: t
       }, "command")
     }
   });
-  return (0, s.jsx)(u, {
+  return (0, s.jsx)(I.AnalyticsLocationProvider, {
+    value: u,
     children: (0, s.jsx)("div", {
-      className: i(L.repliedMessage, L.executedCommand, j),
+      className: i(L.repliedMessage, L.executedCommand, U),
       "aria-hidden": !e.compact,
       children: n
     })

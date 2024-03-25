@@ -10,8 +10,8 @@ var a = l("37983"),
   s = l.n(i),
   r = l("917351"),
   o = l.n(r),
-  d = l("759843"),
-  u = l("446674"),
+  u = l("759843"),
+  d = l("446674"),
   c = l("551042"),
   f = l("77078"),
   p = l("812204"),
@@ -25,19 +25,19 @@ var a = l("37983"),
   L = l("548405"),
   x = l("411445"),
   T = l("80028"),
-  I = l("305085");
+  I = l("578675");
 
 function S(e) {
   let {
     channelId: t,
     onClose: i,
     transitionState: r
-  } = e, [S, N] = n.useState(""), [A, M] = n.useState("descending"), [R, P] = n.useState(!0), [j, y] = n.useState(null), D = n.useDeferredValue(S), O = (0, u.useStateFromStores)([v.default], () => v.default.getClips()), b = (0, u.useStateFromStores)([v.default], () => v.default.getPendingClips()), H = (0, u.useStateFromStores)([v.default], () => v.default.getSettings().storageLocation), w = (0, u.useStateFromStoresArray)([v.default], () => v.default.getNewClipIds()), {
-    AnalyticsLocationProvider: k
-  } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...b, ...O], [O, b]);
+  } = e, [S, A] = n.useState(""), [N, M] = n.useState("descending"), [R, P] = n.useState(!0), [y, j] = n.useState(null), D = n.useDeferredValue(S), O = (0, d.useStateFromStores)([v.default], () => v.default.getClips()), H = (0, d.useStateFromStores)([v.default], () => v.default.getPendingClips()), b = (0, d.useStateFromStores)([v.default], () => v.default.getSettings().storageLocation), w = (0, d.useStateFromStoresArray)([v.default], () => v.default.getNewClipIds()), {
+    analyticsLocations: k
+  } = (0, m.default)(p.default.CLIPS_GALLERY), U = n.useMemo(() => [...H, ...O], [O, H]);
   (0, h.default)({
-    type: d.ImpressionTypes.MODAL,
-    name: d.ImpressionNames.CLIP_GALLERY_VIEWED,
+    type: u.ImpressionTypes.MODAL,
+    name: u.ImpressionNames.CLIP_GALLERY_VIEWED,
     properties: {
       number_of_clips_loaded: U.length
     }
@@ -50,17 +50,17 @@ function S(e) {
     if ("" === D.trim()) return !0;
     let t = D.toLowerCase();
     return null != e.name && "" !== e.name && s(t, e.name.toLowerCase()) || s(t, e.applicationName.toLowerCase())
-  }).sort((e, t) => "ascending" === A ? E.default.compare(e.id, t.id) : "descending" === A ? E.default.compare(t.id, e.id) : 0).chunk(3).value(), [U, D, A]);
+  }).sort((e, t) => "ascending" === N ? E.default.compare(e.id, t.id) : "descending" === N ? E.default.compare(t.id, e.id) : 0).chunk(3).value(), [U, D, N]);
   n.useEffect(() => {
     (async function e() {
       P(!0);
       try {
-        await C.loadClipsDirectory(H)
+        await C.loadClipsDirectory(b)
       } finally {
         P(!1)
       }
     })()
-  }, [H]);
+  }, [b]);
   let V = n.useCallback(e => {
       (0, f.openModalLazy)(async () => {
         let {
@@ -79,7 +79,7 @@ function S(e) {
       onShareClick: z
     } = (0, _.default)({
       channelId: t,
-      setExporting: y
+      setExporting: j
     }),
     F = n.useCallback((e, t) => {
       (0, f.openModalLazy)(async () => {
@@ -103,8 +103,8 @@ function S(e) {
         children: l.map(e => {
           let t = 0 === e.length;
           return (0, a.jsx)(g.default, {
-            actionsDisabled: null != j || t,
-            exporting: j === e.id,
+            actionsDisabled: null != y || t,
+            exporting: y === e.id,
             isNew: w.includes(e.id),
             onDelete: F,
             onEdit: V,
@@ -116,7 +116,7 @@ function S(e) {
           }, e.id)
         })
       }, "clips-gallery-".concat(t))
-    }, [B, w, j, z, F, V]),
+    }, [B, w, y, z, F, V]),
     Y = R || 0 !== B.length ? R ? (0, a.jsx)("div", {
       className: I.spinnerContainer,
       children: (0, a.jsx)(f.Spinner, {})
@@ -134,12 +134,13 @@ function S(e) {
     size: f.ModalSize.DYNAMIC,
     transitionState: r,
     className: I.root,
-    children: (0, a.jsxs)(k, {
+    children: (0, a.jsxs)(m.AnalyticsLocationProvider, {
+      value: k,
       children: [(0, a.jsx)(x.default, {
         onClose: i,
         filterQuery: S,
-        setFilterQuery: N,
-        sortOrder: A,
+        setFilterQuery: A,
+        sortOrder: N,
         setSortOrder: M
       }), Y]
     })

@@ -292,11 +292,12 @@ function V() {
 
 function Y() {
   let {
-    AnalyticsLocationProvider: e
+    analyticsLocations: e
   } = (0, h.default)(g.default.PACKAGES), t = (0, S.useStateFromStores)([I.default], () => I.default.nextGlobalOpenedCountFetchDelay), [s] = i.useState(() => new E.Timeout);
   return i.useEffect(() => {
     (0, N.fetchUserLootboxData)()
-  }, []), i.useEffect(() => (s.start(t, N.fetchCountStat), () => s.stop()), [t, s]), (0, l.jsxs)(e, {
+  }, []), i.useEffect(() => (s.start(t, N.fetchCountStat), () => s.stop()), [t, s]), (0, l.jsxs)(h.AnalyticsLocationProvider, {
+    value: e,
     children: [(0, l.jsx)(U, {}), (0, l.jsx)(G, {}), (0, l.jsx)(k, {}), (0, l.jsx)(w, {}), (0, l.jsx)(V, {})]
   })
 }(n = a || (a = {}))[n.QUESTION_1 = 1] = "QUESTION_1", n[n.QUESTION_2 = 2] = "QUESTION_2", n[n.QUESTION_3 = 3] = "QUESTION_3", n[n.QUESTION_4 = 4] = "QUESTION_4", n[n.QUESTION_5 = 5] = "QUESTION_5", n[n.QUESTION_6 = 6] = "QUESTION_6", n[n.QUESTION_7 = 7] = "QUESTION_7"

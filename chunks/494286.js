@@ -728,9 +728,10 @@ var eV = function(e) {
   let ep = (0, ex.default)(n, !0),
     eE = (0, O.useIsContentShown)(d.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
     {
-      AnalyticsLocationProvider: eg
+      analyticsLocations: eg
     } = (0, y.default)(j.default.CHANNEL_CALL);
-  return (0, a.jsx)(eg, {
+  return (0, a.jsx)(y.AnalyticsLocationProvider, {
+    value: eg,
     children: (0, a.jsx)(_.default, {
       page: eP.AnalyticsPages.CHANNEL_CALL,
       children: (0, a.jsx)(eN.ChannelCallChatLayerProvider, {

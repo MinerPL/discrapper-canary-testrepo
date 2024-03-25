@@ -15,14 +15,14 @@ var a = s("37983"),
   c = s("642950"),
   S = s("875212"),
   E = s("812204"),
-  f = s("685665"),
-  T = s("104385"),
-  m = s("884351"),
-  _ = s("184900"),
+  T = s("685665"),
+  f = s("104385"),
+  _ = s("884351"),
+  m = s("184900"),
   g = s("11899"),
   h = s("635415"),
-  I = s("783142"),
-  N = s("102985"),
+  N = s("783142"),
+  I = s("102985"),
   p = s("790618"),
   C = s("697218"),
   A = s("719923"),
@@ -38,13 +38,13 @@ function M() {
   n.useEffect(() => {
     (0, d.fetchProfile)(e.id)
   }, [e.id]);
-  let t = (0, r.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
+  let t = (0, r.useStateFromStores)([I.default], () => I.default.hidePersonalInformation),
     {
       pendingAvatar: s,
       pendingBanner: l,
       pendingBio: M,
-      pendingPronouns: v,
-      pendingGlobalName: D,
+      pendingPronouns: D,
+      pendingGlobalName: v,
       pendingAccentColor: L,
       pendingAvatarDecoration: P,
       pendingThemeColors: j,
@@ -58,22 +58,22 @@ function M() {
       }
     }),
     U = O.UseLegacyChatInput.useSetting(),
-    B = U && null != M ? m.default.parse(void 0, M).content : M,
-    y = A.default.canUsePremiumProfileCustomization(e),
+    y = U && null != M ? _.default.parse(void 0, M).content : M,
+    B = A.default.canUsePremiumProfileCustomization(e),
     {
-      AnalyticsLocationProvider: F
-    } = (0, f.default)(E.default.PROFILE),
+      analyticsLocations: F
+    } = (0, T.default)(E.default.PROFILE),
     G = {
       user: e,
-      canUsePremiumCustomization: y,
+      canUsePremiumCustomization: B,
       onUpsellClick: x.default,
       onAvatarChange: u.setPendingAvatar,
-      onBannerChange: I.setPendingBanner,
+      onBannerChange: N.setPendingBanner,
       pendingBanner: l,
-      pendingBio: B,
-      pendingPronouns: v,
+      pendingBio: y,
+      pendingPronouns: D,
       pendingAvatar: s,
-      pendingGlobalName: D,
+      pendingGlobalName: v,
       pendingAvatarDecoration: P,
       pendingProfileEffectId: b
     };
@@ -85,10 +85,11 @@ function M() {
   }), (0, S.useTriggerDebuggingAA)({
     location: k + " auto off",
     autoTrackExposure: !1
-  }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(F, {
+  }), t) ? (0, a.jsx)(c.default, {}) : (0, a.jsx)(T.AnalyticsLocationProvider, {
+    value: F,
     children: (0, a.jsxs)(a.Fragment, {
-      children: [(0, a.jsx)(T.default, {}), (0, a.jsx)(g.default, {
-        profilePreview: (0, a.jsx)(_.default, {
+      children: [(0, a.jsx)(f.default, {}), (0, a.jsx)(g.default, {
+        profilePreview: (0, a.jsx)(m.default, {
           ...G,
           pendingThemeColors: j,
           pendingAccentColor: L

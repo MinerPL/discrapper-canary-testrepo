@@ -146,7 +146,7 @@ function Z(t) {
     onPopoutRequestClose: N,
     showAvatarPopout: E
   } = a, [_, O] = r.useState(!1), {
-    AnalyticsLocationProvider: M
+    analyticsLocations: M
   } = (0, h.default)(c.default.AVATAR), S = (0, o.useStateFromStores)([I.default], () => {
     var t;
     return null !== (t = a.displayCompactAvatars) && void 0 !== t ? t : I.default.displayCompactAvatars
@@ -173,7 +173,8 @@ function Z(t) {
   }, [F, null === (e = m.application) || void 0 === e ? void 0 : e.icon, null === (i = m.application) || void 0 === i ? void 0 : i.id, b.avatar, B, D]);
   if (r.useEffect(() => {
       if (null != w) return R.ComponentDispatch.subscribeKeyed(U.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(w, ":").concat(L), O), () => void R.ComponentDispatch.unsubscribeKeyed(U.ComponentActionsKeyed.ANIMATE_CHAT_AVATAR, "".concat(w, ":").concat(L), O)
-    }, [L, w]), !j || S) return null != u && null != E ? (0, l.jsx)(M, {
+    }, [L, w]), !j || S) return null != u && null != E ? (0, l.jsx)(h.AnalyticsLocationProvider, {
+    value: M,
     children: (0, l.jsx)(d.Popout, {
       preload: P ? void 0 : function() {
         return (0, y.default)(m.author.id, null != g.guildMemberAvatar && null != n ? A.default.getGuildMemberAvatarURLSimple({
@@ -203,7 +204,8 @@ function Z(t) {
         className: x
       })
     })
-  }) : (0, l.jsx)(M, {
+  }) : (0, l.jsx)(h.AnalyticsLocationProvider, {
+    value: M,
     children: V({
       ...G,
       avatarSrc: H,

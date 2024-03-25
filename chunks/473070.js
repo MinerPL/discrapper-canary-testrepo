@@ -23,14 +23,14 @@ var l = a("37983"),
   g = a("204839");
 
 function E(e) {
-  var t, a, E, N, L, I, M, j;
+  var t, a, E, L, N, I, M, j;
   let {
     clip: T,
     channelId: S,
     transitionState: _,
     onClose: b
   } = e, [w, R] = n.useState(!0), [A, y] = n.useState(null), [k, D] = n.useState(null), {
-    AnalyticsLocationProvider: P
+    analyticsLocations: P
   } = (0, d.default)(o.default.CLIPS_EDITOR);
   n.useEffect(() => {
     (async function e() {
@@ -59,9 +59,9 @@ function E(e) {
   }, [A]), n.useEffect(() => () => {
     null != k && URL.revokeObjectURL(k)
   }, [k]);
-  let [O, F] = n.useState(null === (L = null === (t = T.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === L || L), [B, U] = n.useState(null === (I = null === (a = T.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === I || I), [H, z] = n.useState({
+  let [O, F] = n.useState(null === (N = null === (t = T.editMetadata) || void 0 === t ? void 0 : t.voiceAudio) || void 0 === N || N), [B, U] = n.useState(null === (I = null === (a = T.editMetadata) || void 0 === a ? void 0 : a.applicationAudio) || void 0 === I || I), [H, z] = n.useState({
     start: null !== (M = null === (E = T.editMetadata) || void 0 === E ? void 0 : E.start) && void 0 !== M ? M : 0,
-    end: null !== (j = null === (N = T.editMetadata) || void 0 === N ? void 0 : N.end) && void 0 !== j ? j : 0
+    end: null !== (j = null === (L = T.editMetadata) || void 0 === L ? void 0 : L.end) && void 0 !== j ? j : 0
   }), [Z, V] = n.useState(T.name), G = n.useRef({
     name: Z,
     editMetadata: {
@@ -112,7 +112,8 @@ function E(e) {
     size: i.ModalSize.DYNAMIC,
     className: g.modalRoot,
     transitionState: _,
-    children: (0, l.jsx)(P, {
+    children: (0, l.jsx)(d.AnalyticsLocationProvider, {
+      value: P,
       children: (0, l.jsx)(i.ModalContent, {
         className: g.modalContent,
         children: (0, l.jsx)(x.EditModalContext.Provider, {

@@ -372,9 +372,10 @@ var ex = function(e) {
     reachedLimit: R,
     limit: b
   } = (0, ei.default)(t), {
-    AnalyticsLocationProvider: U
+    analyticsLocations: U
   } = (0, T.default)(I.default.VOICE_CONTROL_TRAY);
-  if (!N) return (0, s.jsx)(U, {
+  if (!N) return (0, s.jsx)(T.AnalyticsLocationProvider, {
+    value: U,
     children: (0, s.jsx)(ev, {
       channel: t,
       cameraUnavailable: r,
@@ -387,7 +388,8 @@ var ex = function(e) {
     user: i,
     context: t
   }) && !t.isPrivate() && !A;
-  return (0, s.jsx)(U, {
+  return (0, s.jsx)(T.AnalyticsLocationProvider, {
+    value: U,
     children: (0, s.jsxs)(g.default, {
       section: eE.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {

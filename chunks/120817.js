@@ -716,7 +716,7 @@ let ed = e => {
     selectedChannelId: n,
     selectedVoiceChannelId: s
   } = e, i = (0, o.useStateFromStores)([h.default], () => h.default.keyboardModeEnabled), {
-    AnalyticsLocationProvider: u
+    analyticsLocations: u
   } = (0, p.default)(C.default.GUILD_CHANNEL_LIST), d = (0, o.useStateFromStores)([M.default], () => M.default.getChannel(n)), c = (0, o.useStateFromStores)([M.default], () => M.default.getChannel(s)), m = (0, o.useStateFromStores)([D.default], () => D.default.getGuildId()), E = (0, A.useOptInEnabledForGuild)(t), g = a.useRef(null), I = a.useCallback((e, t) => {
     let n = g.current;
     if (null != n) {
@@ -751,7 +751,8 @@ let ed = e => {
     null != n && T(n)
   }, [n, T]);
   let L = (0, v.default)(t);
-  return (0, l.jsx)(u, {
+  return (0, l.jsx)(p.AnalyticsLocationProvider, {
+    value: u,
     children: (0, l.jsx)(f.default, {
       section: es.AnalyticsSections.GUILD_CHANNEL_LIST,
       children: (0, l.jsx)(r.ListNavigatorProvider, {

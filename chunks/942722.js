@@ -162,7 +162,7 @@ function w(e) {
   let {
     channel: t
   } = e, s = S.default.getCurrentUser(), u = null == s ? void 0 : s.isStaff(), {
-    AnalyticsLocationProvider: o
+    analyticsLocations: o
   } = (0, c.default)(d.default.MEMBER_LIST), m = (0, i.useStateFromStoresArray)([S.default], () => (0, A.getRecipients)(t.recipients, S.default), [t.recipients]), {
     installedIntegrations: p,
     applicationsShelf: E,
@@ -185,7 +185,8 @@ function w(e) {
     })
   }, [t.guild_id, t.id, t.type]);
   let M = u && m.every(e => e.isStaff());
-  return (0, a.jsx)(o, {
+  return (0, a.jsx)(c.AnalyticsLocationProvider, {
+    value: o,
     children: (0, a.jsx)("div", {
       className: P.membersWrap,
       children: (0, a.jsxs)(r.Scroller, {

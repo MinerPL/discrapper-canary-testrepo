@@ -94,9 +94,8 @@ function LB() {
     width: a,
     ref: t
   } = (0, I.default)(), C = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), s = (0, o.useStateFromStores)([U.default], () => U.default.isAcknowledged(Lr.WhatsNewSection.FREE)), [l, r] = n.useState(!1), [c, M] = n.useState(!1), [_, T] = n.useState(!1), h = (0, d.useHistory)(), D = (0, d.useLocation)(), N = (0, o.useStateFromStores)([p.default], () => p.default.getState().theme), [A] = n.useState((0, $.getActivitiesWhatsNewCount)(U.default) > 0), {
-    analyticsLocations: g,
-    AnalyticsLocationProvider: x
-  } = (0, m.default)([...null !== (e = null == D ? void 0 : null === (L = D.state) || void 0 === L ? void 0 : L.analyticsLocations) && void 0 !== e ? e : [], f.default.ACTIVITIES_PAGE]), S = n.useRef(new Date);
+    analyticsLocations: g
+  } = (0, m.default)([...null !== (e = null == D ? void 0 : null === (L = D.state) || void 0 === L ? void 0 : L.analyticsLocations) && void 0 !== e ? e : [], f.default.ACTIVITIES_PAGE]), x = n.useRef(new Date);
   return n.useEffect(() => {
     setTimeout(() => {
       !s && G.markSectionAcknowledged(Lr.WhatsNewSection.FREE)
@@ -112,14 +111,15 @@ function LB() {
   }, [s]), n.useEffect(() => ((0, E.setHomeLink)(LH.Routes.ACTIVITIES), A && !g.includes(f.default.ACTIVITIES_PAGE_NOTIFICATION_DOT) && h.replace(LH.Routes.ACTIVITIES, {
     analyticsLocations: [...g, f.default.ACTIVITIES_PAGE_NOTIFICATION_DOT]
   }), () => {
-    let L = S.current,
+    let L = x.current,
       e = new Date,
       a = Math.ceil((e.getTime() - L.getTime()) / 1e3);
     P.default.track(LH.AnalyticEvents.ROUTE_UNMOUNT, {
       route: "/activities",
       page_view_duration_s: a
     })
-  }), [g, h, A]), (0, i.jsx)(x, {
+  }), [g, h, A]), (0, i.jsx)(m.AnalyticsLocationProvider, {
+    value: g,
     children: (0, i.jsxs)("div", {
       className: Ld.outerContainer,
       children: [(0, i.jsxs)(B.default, {
@@ -389,7 +389,7 @@ function LG(L) {
     revealDate: c,
     enabled: M
   } = L, E = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), I = (0, o.useStateFromStores)([A.default], () => A.default.locale), {
-    AnalyticsLocationProvider: T
+    analyticsLocations: T
   } = (0, m.default)(f.default.ACTIVITIES_PAGE_WHATS_NEW_TILE), [h, D] = n.useState(!1), N = (0, _.default)(h), p = (0, o.useStateFromStores)([U.default], () => {
     if (!M) return 0;
     let L = U.default.isOpened(r);
@@ -425,7 +425,8 @@ function LG(L) {
       }), C]
     })]
   });
-  return (0, i.jsx)(T, {
+  return (0, i.jsx)(m.AnalyticsLocationProvider, {
+    value: T,
     children: (0, i.jsxs)("div", {
       className: Ld.flipCardOuter,
       children: [E || 2 !== p || h || !N ? null : (0, i.jsx)("div", {
@@ -577,7 +578,7 @@ function LJ(L, e) {
 
 function Lz() {
   let {
-    AnalyticsLocationProvider: L
+    analyticsLocations: L
   } = (0, m.default)(f.default.ACTIVITIES_HAPPENING_NOW), e = (0, o.useStateFromStores)([K.default, N.default, g.default, v.default, S.default], () => {
     let L = [],
       e = v.default.getCurrentUser();
@@ -610,7 +611,8 @@ function Lz() {
     }
   }, {
     trackOnInitialLoad: !0
-  }), e.length <= 0) ? null : (0, i.jsx)(L, {
+  }), e.length <= 0) ? null : (0, i.jsx)(m.AnalyticsLocationProvider, {
+    value: L,
     children: (0, i.jsx)("div", {
       className: Ld.happeningNowContainer,
       children: (0, i.jsx)(D.default, {

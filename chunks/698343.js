@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("151426"),
-  l = n("77078"),
+  l = n("151426"),
+  i = n("77078"),
   r = n("901582"),
   o = n("812204"),
   u = n("685665"),
@@ -16,27 +16,28 @@ var s = n("446674"),
   c = n("911574"),
   f = n("350522"),
   E = n("476765"),
-  _ = n("386133"),
-  h = n("49111"),
+  h = n("386133"),
+  _ = n("49111"),
   C = n("782340"),
-  I = n("607626");
+  S = n("754569");
 
-function T() {
+function I() {
   let {
-    AnalyticsLocationProvider: e
-  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(h.Consents.PERSONALIZATION)), n = t ? [] : [i.DismissibleContent.NOW_PLAYING_CONSENT_CARD], T = (0, E.useUID)();
-  return (0, a.jsx)(e, {
+    analyticsLocations: e
+  } = (0, u.default)(o.default.ACTIVE_NOW_COLUMN), t = (0, s.useStateFromStores)([f.default], () => f.default.hasConsented(_.Consents.PERSONALIZATION)), n = t ? [] : [l.DismissibleContent.NOW_PLAYING_CONSENT_CARD], I = (0, E.useUID)();
+  return (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: e,
     children: (0, a.jsx)(r.default, {
-      section: h.AnalyticsSections.ACTIVE_NOW_COLUMN,
+      section: _.AnalyticsSections.ACTIVE_NOW_COLUMN,
       children: (0, a.jsx)("aside", {
-        className: I.container,
-        "aria-labelledby": T,
-        children: (0, a.jsxs)(l.Scroller, {
-          className: I.scroller,
-          children: [(0, a.jsx)(l.Heading, {
+        className: S.container,
+        "aria-labelledby": I,
+        children: (0, a.jsxs)(i.Scroller, {
+          className: S.scroller,
+          children: [(0, a.jsx)(i.Heading, {
             variant: "heading-lg/semibold",
-            className: I.header,
-            id: T,
+            className: S.header,
+            id: I,
             children: C.default.Messages.GAME_FEED_CURRENT_HEADER_TITLE
           }), (0, a.jsx)(d.default, {
             contentTypes: n,
@@ -45,12 +46,12 @@ function T() {
                 visibleContent: t,
                 markAsDismissed: n
               } = e;
-              if (t === i.DismissibleContent.NOW_PLAYING_CONSENT_CARD) return (0, a.jsx)(c.default, {
-                className: I.consentCard,
+              if (t === l.DismissibleContent.NOW_PLAYING_CONSENT_CARD) return (0, a.jsx)(c.default, {
+                className: S.consentCard,
                 markAsDismissed: n
               })
             }
-          }), (0, a.jsx)(_.default, {})]
+          }), (0, a.jsx)(h.default, {})]
         })
       })
     })

@@ -497,7 +497,7 @@ function ee(e) {
     channel: t,
     className: n
   } = e, {
-    AnalyticsLocationProvider: s
+    analyticsLocations: s
   } = (0, I.default)(C.default.MEMBER_LIST), r = (0, c.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled), u = (0, c.useStateFromStoresObject)([O.default], () => O.default.getProps(t.guild_id, t.id)), {
     rows: d,
     groups: f,
@@ -547,7 +547,8 @@ function ee(e) {
     scrollToStart: g,
     scrollToEnd: _
   });
-  return (0, a.jsx)(s, {
+  return (0, a.jsx)(I.AnalyticsLocationProvider, {
+    value: s,
     children: (0, a.jsx)("div", {
       className: i(Y.container, n),
       children: (0, a.jsx)(o.ListNavigatorProvider, {

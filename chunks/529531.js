@@ -19,17 +19,17 @@ var t = E("37983"),
   A = E("917247"),
   R = E("635956"),
   l = E("891653"),
-  L = E("697218"),
-  u = E("381546"),
+  u = E("697218"),
+  L = E("381546"),
   C = E("599110"),
-  D = E("719923"),
-  c = E("805199"),
+  c = E("719923"),
+  D = E("805199"),
   d = E("433724"),
   U = E("49111"),
   M = E("994428"),
   h = E("646718"),
   P = E("782340"),
-  m = E("816087");
+  m = E("739471");
 let G = () => {
     I.default.dispatch({
       type: "APP_ICON_EDITOR_CLOSE"
@@ -37,19 +37,19 @@ let G = () => {
   },
   p = () => {
     var e, _, E;
-    let o = (0, a.useStateFromStores)([L.default], () => D.default.isPremium(L.default.getCurrentUser())),
+    let o = (0, a.useStateFromStores)([u.default], () => c.default.isPremium(u.default.getCurrentUser())),
       n = (0, A.usePremiumTrialOffer)(),
       r = (null == n ? void 0 : null === (e = n.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === h.PremiumSubscriptionSKUs.TIER_2;
     return (0, t.jsx)(R.default, {
       size: i.Button.Sizes.MEDIUM,
-      buttonText: o ? P.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : r ? (0, D.formatTrialCtaIntervalDuration)({
+      buttonText: o ? P.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : r ? (0, c.formatTrialCtaIntervalDuration)({
         intervalType: null == n ? void 0 : null === (_ = n.subscription_trial) || void 0 === _ ? void 0 : _.interval,
         intervalCount: null == n ? void 0 : null === (E = n.subscription_trial) || void 0 === E ? void 0 : E.interval_count
       }) : P.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
       subscriptionTier: h.PremiumSubscriptionSKUs.TIER_2
     })
   },
-  y = e => {
+  g = e => {
     let {
       markAsDismissed: _
     } = e, E = () => {
@@ -60,7 +60,7 @@ let G = () => {
       children: [(0, t.jsx)(i.Clickable, {
         className: m.closeCircleButton,
         onClick: () => E(),
-        children: (0, t.jsx)(u.default, {
+        children: (0, t.jsx)(L.default, {
           className: m.closeCircle
         })
       }), (0, t.jsxs)("div", {
@@ -74,11 +74,11 @@ let G = () => {
       })]
     })
   },
-  g = e => {
+  y = e => {
     let {
       isCoachmark: _,
       markAsDismissed: E
-    } = e, o = (0, a.useStateFromStores)([c.default], () => c.default.isUpsellPreview);
+    } = e, o = (0, a.useStateFromStores)([D.default], () => D.default.isUpsellPreview);
     return (0, t.jsxs)("div", {
       className: m.editorFooter,
       children: [o && (0, t.jsx)(p, {}), (0, t.jsx)(i.Button, {
@@ -98,39 +98,39 @@ function B(e) {
     isCoachmark: _,
     markAsDismissed: E
   } = e, {
-    analyticsLocations: n,
-    AnalyticsLocationProvider: I
-  } = (0, O.default)(N.default.APP_ICON_EDITOR), s = (0, a.useStateFromStores)([L.default], () => L.default.getCurrentUser()), {
-    isUpsellPreview: A,
-    isEditorOpen: R,
-    shouldEditorAnimate: l
-  } = (0, a.useStateFromStoresObject)([c.default, S.default], () => ({
-    isUpsellPreview: c.default.isUpsellPreview,
-    isEditorOpen: c.default.isEditorOpen,
+    analyticsLocations: n
+  } = (0, O.default)(N.default.APP_ICON_EDITOR), I = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+    isUpsellPreview: s,
+    isEditorOpen: A,
+    shouldEditorAnimate: R
+  } = (0, a.useStateFromStoresObject)([D.default, S.default], () => ({
+    isUpsellPreview: D.default.isUpsellPreview,
+    isEditorOpen: D.default.isEditorOpen,
     shouldEditorAnimate: _ && !S.default.useReducedMotion
   }));
   o.useEffect(() => {
-    A && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    s && C.default.track(U.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: h.PremiumUpsellTypes.APP_ICON_UPSELL,
       location_stack: n
     })
-  }, [A, n]);
-  let u = (0, T.default)(null, A ? G : U.NOOP);
+  }, [s, n]);
+  let l = (0, T.default)(null, s ? G : U.NOOP);
   return (o.useEffect(() => {
-    if (A && !R) return G
-  }, [A, R]), null == s) ? null : (0, t.jsx)(I, {
+    if (s && !A) return G
+  }, [s, A]), null == I) ? null : (0, t.jsx)(O.AnalyticsLocationProvider, {
+    value: n,
     children: (0, t.jsx)("div", {
-      ref: u,
-      className: r(m.editor, l ? m.editorAnimate : null),
+      ref: l,
+      className: r(m.editor, R ? m.editorAnimate : null),
       children: (0, t.jsxs)(i.HeadingLevel, {
-        children: [(0, t.jsx)(y, {
+        children: [(0, t.jsx)(g, {
           markAsDismissed: E
         }), (0, t.jsx)(i.Scroller, {
           className: m.editorBody,
           children: (0, t.jsx)(d.default, {
             className: m.selectionGroup
           })
-        }), (0, t.jsx)(g, {
+        }), (0, t.jsx)(y, {
           markAsDismissed: E,
           isCoachmark: _
         })]

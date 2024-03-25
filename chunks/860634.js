@@ -52,7 +52,7 @@ var l, a = n("37983"),
   K = n("646718"),
   z = n("843455"),
   q = n("782340"),
-  J = n("429478");
+  J = n("782363");
 (l || (l = {})).PREMIUM = "discord://app/settings/nitro";
 let X = K.SubscriptionPlans.NONE_MONTH,
   Q = [N.Step.PLAN_SELECT, N.Step.REVIEW, N.Step.CONFIRM],
@@ -186,14 +186,14 @@ function ee(e) {
   let e$ = s.useRef(null),
     [e0, e1] = (0, P.default)(!1, 500),
     [e4, e8] = s.useState(null),
-    [e5, e6] = s.useState([]),
-    [e7, e2] = s.useState(!1);
+    [e7, e6] = s.useState([]),
+    [e5, e2] = s.useState(!1);
   s.useEffect(() => {
     let e;
     if (!eB) return;
     let t = x.default.get(K.SubscriptionPlans.PREMIUM_MONTH_GUILD);
     null != t && e6(e = (0, F.getCurrencies)(K.SubscriptionPlans.PREMIUM_MONTH_GUILD, eT, !1)), null == eT && null != eo && null != eo.paymentSourceId ? e8(eo.currency) : null != e && e8(e[0])
-  }, [eT, eo, eB, JSON.stringify(e5)]);
+  }, [eT, eo, eB, JSON.stringify(e7)]);
   let e9 = (0, C.AddPaymentFlow)({
     paymentModalArgs: ef,
     initialStep: N.Step.PAYMENT_TYPE,
@@ -338,7 +338,7 @@ function ee(e) {
                     duration_ms: Date.now() - ej,
                     guild_id: en,
                     application_id: eu
-                  }), e7) return;
+                  }), e5) return;
                 if (null == eo || null == eS) {
                   u(null != e, "Missing paymentSource");
                   let t = await (0, p.createSubscription)({
@@ -371,7 +371,7 @@ function ee(e) {
                   duration_ms: Date.now() - ej
                 })
               } finally {
-                !e7 && eN(!1)
+                !e5 && eN(!1)
               }
             },
             children: q.default.Messages.GUILD_SUBSCRIPTION_PURCHASE_MODAL_SUBMIT
@@ -408,7 +408,7 @@ function ee(e) {
         currentStep: eY,
         paymentError: c,
         purchaseErrorBlockRef: eU,
-        hasCurrencies: e5.length > 1,
+        hasCurrencies: e7.length > 1,
         body: e,
         footer: eY !== N.Step.CONFIRM ? (0, a.jsxs)(S.ModalFooter, {
           direction: k.default.Direction.HORIZONTAL,
@@ -450,9 +450,10 @@ function ee(e) {
 function et(e) {
   let t = (0, c.useStateFromStores)([B.default], () => B.default.getPremiumTypeSubscription()),
     {
-      AnalyticsLocationProvider: n
+      analyticsLocations: n
     } = (0, f.default)(_.default.GUILD_BOOST_PURCHASE_MODAL);
-  return (0, a.jsx)(n, {
+  return (0, a.jsx)(f.AnalyticsLocationProvider, {
+    value: n,
     children: (0, a.jsx)(T.PaymentContextProvider, {
       activeSubscription: t,
       stepConfigs: [],

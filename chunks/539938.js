@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return x
+    return R
   }
 });
 var a = n("37983");
@@ -22,12 +22,12 @@ var l = n("414456"),
   E = n("664336"),
   m = n("773336"),
   p = n("50885"),
-  g = n("836056"),
-  S = n("922953"),
+  S = n("836056"),
+  g = n("922953"),
   N = n("879035"),
   _ = n("49111"),
   T = n("724210"),
-  I = n("122693");
+  I = n("461585");
 async function C() {
   if ((0, m.isMac)() && m.isPlatformEmbedded) {
     var e, t, n;
@@ -51,8 +51,8 @@ function A(e) {
     scrollable: A,
     role: M,
     hideSearch: v,
-    showDivider: x
-  } = e, R = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (null == R ? void 0 : R.isStaff()) || (null == R ? void 0 : R.isStaffPersonal()) || !1;
+    showDivider: R
+  } = e, x = (0, r.useStateFromStores)([h.default], () => h.default.getCurrentUser()), L = (null == x ? void 0 : x.isStaff()) || (null == x ? void 0 : x.isStaffPersonal()) || !1;
   return (0, a.jsx)(E.default, {
     className: n,
     innerClassName: o,
@@ -62,9 +62,9 @@ function A(e) {
       return i.isMobile ? p : (0, a.jsxs)(a.Fragment, {
         children: [m, e ? (0, a.jsx)(f.default, {
           className: I.search
-        }, null != s ? s : l) : null, x && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
+        }, null != s ? s : l) : null, R && (0, a.jsx)(E.default.Divider, {}), (0, a.jsx)(N.default, {}), (0, a.jsx)(d.default, {
           canShowReminder: !0
-        }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(S.default, {}) : (0, a.jsx)(g.default, {})]
+        }), (0, a.jsx)(c.default, {}), L ? (0, a.jsx)(g.default, {}) : (0, a.jsx)(S.default, {})]
       })
     }(),
     transparent: u,
@@ -100,11 +100,12 @@ function v(e) {
     isAuthenticated: t = !0,
     ...n
   } = e, {
-    AnalyticsLocationProvider: l
+    analyticsLocations: l
   } = (0, u.default)(o.default.HEADER_BAR), i = s(n.className, {
     [I.forumOrHome]: null != n.channelType && _.ChannelTypesSets.GUILD_THREADS_ONLY.has(n.channelType) || n.channelId === T.StaticChannelRoute.GUILD_HOME
   });
-  return (0, a.jsx)(l, {
+  return (0, a.jsx)(u.AnalyticsLocationProvider, {
+    value: l,
     children: t ? (0, a.jsx)(A, {
       ...n,
       className: i
@@ -115,4 +116,4 @@ function v(e) {
   })
 }
 v.Title = E.default.Title, v.Icon = E.default.Icon, v.Divider = E.default.Divider, v.Caret = E.default.Caret;
-var x = v
+var R = v
