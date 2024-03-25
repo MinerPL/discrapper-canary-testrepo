@@ -11,6 +11,9 @@ n.r(t), n.d(t, {
   },
   sendMultiChannelMessagesForScanning: function() {
     return l
+  },
+  fetchValidContentScanVersion: function() {
+    return u
   }
 });
 var i = n("872717"),
@@ -59,5 +62,11 @@ function l(e) {
     body: {
       messages: t
     }
+  })
+}
+
+function u() {
+  return i.HTTP.get({
+    url: s.Endpoints.EXPLICIT_MEDIA_GET_VALID_CONTENT_SCAN_VERSION
   })
 }
