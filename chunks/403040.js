@@ -11,7 +11,8 @@ function s(e, t) {
   if (e === i.AnalyticEvents.CHANNEL_OPENED_CLICKSTREAM) return {
     time_minus: t.map(e => n.getTime() - e.timestamp.getTime()),
     channel_ids: t.map(e => e.channelId),
-    channel_types: t.map(e => e.channelType)
+    channel_types: t.map(e => e.channelType),
+    rtc_states: t.map(e => e.rtcState)
   };
   throw Error("getClicksteamDrainEvent: Unknown event: ".concat(e))
 }
