@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("862337"),
+  l = n("446674"),
+  i = n("862337"),
   r = n("77078"),
   o = n("148813"),
   u = n("530311"),
@@ -15,8 +15,8 @@ var a = n("37983"),
   c = n("220978"),
   f = n("581454"),
   E = n("49111"),
-  _ = n("782340");
-let h = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
+  h = n("782340");
+let _ = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
   C = Object.freeze({
     [E.CloudSyncStateTypes.DONE]: u.default,
     [E.CloudSyncStateTypes.PLANNING]: u.default,
@@ -26,7 +26,7 @@ let h = new Set([E.CloudSyncStateTypes.PUSHING, E.CloudSyncStateTypes.PULLING]),
     [E.CloudSyncStateTypes.CONFLICT]: u.default,
     [E.CloudSyncStateTypes.ERROR]: u.default
   });
-class I extends s.PureComponent {
+class S extends s.PureComponent {
   componentDidMount() {
     this.getIsRecentlySynced() && this.setRecentlySyncedTimeout()
   }
@@ -63,19 +63,19 @@ class I extends s.PureComponent {
   getTooltip(e, t) {
     switch (e.type) {
       case E.CloudSyncStateTypes.DONE:
-        if (t) return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+        if (t) return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_DONE;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
       case E.CloudSyncStateTypes.CONFLICT:
       case E.CloudSyncStateTypes.ERROR:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_SUPPORTED;
       case E.CloudSyncStateTypes.PLANNING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PLANNING;
       case E.CloudSyncStateTypes.PREPARING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PREPARING;
       case E.CloudSyncStateTypes.PUSHING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PUSHING;
       case E.CloudSyncStateTypes.PULLING:
-        return _.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
+        return h.default.Messages.CLOUD_SYNC_ICON_TOOLTIP_PULLING;
       default:
         return null
     }
@@ -87,32 +87,32 @@ class I extends s.PureComponent {
       className: n
     } = this.props, s = null == e ? {
       type: E.CloudSyncStateTypes.DONE
-    } : e, i = this.getIsRecentlySynced(), l = {};
-    (h.has(s.type) || i) && (l.gradientConfig = {
+    } : e, l = this.getIsRecentlySynced(), i = {};
+    (_.has(s.type) || l) && (i.gradientConfig = {
       id: t.id,
       startColor: "rgba(199, 208, 240, 1)",
       stopColor: "rgba(114, 137, 218, 1)",
-      stop: this.getStop(s, i)
+      stop: this.getStop(s, l)
     });
-    let o = i ? d.default : C[s.type];
+    let o = l ? d.default : C[s.type];
     return (0, a.jsx)(r.Tooltip, {
-      text: this.getTooltip(s, i),
+      text: this.getTooltip(s, l),
       children: e => (0, a.jsx)(o, {
         className: n,
-        ...l,
+        ...i,
         ...e
       })
     })
   }
   constructor(...e) {
-    super(...e), this._doneTimer = new l.Timeout
+    super(...e), this._doneTimer = new i.Timeout
   }
 }
-var T = i.default.connectStores([o.default], e => {
+var I = l.default.connectStores([o.default], e => {
   let {
     libraryApplication: t
   } = e;
   return {
     cloudSyncState: o.default.getState(t.id, t.branchId)
   }
-})(I)
+})(S)

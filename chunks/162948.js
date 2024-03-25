@@ -1,7 +1,7 @@
 "use strict";
-var a, n;
+var a, l;
 s.r(t), s.d(t, {
   TeamMemberRoles: function() {
     return a
   }
-}), (n = a || (a = {})).ADMIN = "admin", n.DEVELOPER = "developer", n.READ_ONLY = "read_only"
+}), (l = a || (a = {})).ADMIN = "admin", l.DEVELOPER = "developer", l.READ_ONLY = "read_only"

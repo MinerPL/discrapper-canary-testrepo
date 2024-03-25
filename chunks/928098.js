@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   openSubmitFeedback: function() {
-    return a
+    return E
   },
   openRaidResolveModal: function() {
-    return E
+    return a
   },
   openConfirmRemoveMentionRaid: function() {
     return s
@@ -43,10 +43,10 @@ function i(e) {
       (0, u.openModalLazy)(async () => {
         let {
           default: u
-        } = await n.el("998730").then(n.bind(n, "998730")), a = t.actions.find(e => e.type === r.AutomodActionType.FLAG_TO_CHANNEL);
+        } = await n.el("998730").then(n.bind(n, "998730")), E = t.actions.find(e => e.type === r.AutomodActionType.FLAG_TO_CHANNEL);
         return n => (0, o.jsx)(u, {
           action: _,
-          isEdit: null != a,
+          isEdit: null != E,
           triggerType: t.triggerType,
           guildId: e,
           onEditChannel: e => {
@@ -77,7 +77,7 @@ function i(e) {
   }
 }
 
-function a(e, t, r, _) {
+function E(e, t, r, _) {
   (0, u.openModalLazy)(async () => {
     let {
       default: u
@@ -94,7 +94,7 @@ function a(e, t, r, _) {
   })
 }
 
-function E(e, t) {
+function a(e, t) {
   (0, u.openModalLazy)(async () => {
     let {
       default: u

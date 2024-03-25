@@ -5,8 +5,8 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("281859"),
   u = r("123090"),
   l = function(e) {
@@ -14,7 +14,7 @@ var n = r("884691"),
       r = e.onClick,
       n = e.onSwatchHover,
       l = e.active,
-      c = (0, a.default)({
+      s = (0, o.default)({
         default: {
           color: {
             background: t,
@@ -56,15 +56,15 @@ var n = r("884691"),
         "color-#FFFFFF": "#FFFFFF" === t,
         transparent: "transparent" === t
       });
-    return o.createElement(u.Swatch, {
-      style: c.color,
+    return a.createElement(u.Swatch, {
+      style: s.color,
       color: t,
       onClick: void 0 === r ? function() {} : r,
       onHover: n,
       focusStyle: {
         boxShadow: "0 0 4px " + t
       }
-    }, o.createElement("div", {
-      style: c.dot
+    }, a.createElement("div", {
+      style: s.dot
     }))
   }

@@ -38,8 +38,8 @@ var r = n("209488"),
       i = !c && "border-box" === n.boxSizing,
       m = l.test(n.writingMode || ""),
       h = !r && u.test(n.overflowY || ""),
-      _ = !r && u.test(n.overflowX || ""),
-      y = r ? 0 : d(n.paddingTop),
+      y = !r && u.test(n.overflowX || ""),
+      _ = r ? 0 : d(n.paddingTop),
       g = r ? 0 : d(n.paddingRight),
       v = r ? 0 : d(n.paddingBottom),
       b = r ? 0 : d(n.paddingLeft),
@@ -48,22 +48,22 @@ var r = n("209488"),
       k = r ? 0 : d(n.borderBottomWidth),
       L = r ? 0 : d(n.borderLeftWidth),
       D = b + g,
-      T = y + v,
+      T = _ + v,
       S = L + w,
       Y = M + k,
-      x = _ ? e.offsetHeight - Y - e.clientHeight : 0,
+      x = y ? e.offsetHeight - Y - e.clientHeight : 0,
       O = h ? e.offsetWidth - S - e.clientWidth : 0,
       E = r ? r.width : d(n.width) - (i ? D + S : 0) - O,
       P = r ? r.height : d(n.height) - (i ? T + Y : 0) - x,
       j = E + D + O + S,
       C = P + T + x + Y,
-      H = Object.freeze({
+      A = Object.freeze({
         devicePixelContentBoxSize: f(Math.round(E * devicePixelRatio), Math.round(P * devicePixelRatio), m),
         borderBoxSize: f(j, C, m),
         contentBoxSize: f(E, P, m),
-        contentRect: new a.DOMRectReadOnly(b, y, E, P)
+        contentRect: new a.DOMRectReadOnly(b, _, E, P)
       });
-    return s.set(e, H), H
+    return s.set(e, A), A
   },
   h = function(e, t, n) {
     var a = m(e, n),

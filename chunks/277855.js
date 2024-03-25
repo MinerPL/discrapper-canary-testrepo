@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   useSoundmojiExperiment: function() {
-    return s
+    return a
   }
 });
-var l = n("862205");
-let a = (0, l.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2023-09_soundmoji",
   label: "Soundmoji",
@@ -21,10 +21,10 @@ let a = (0, l.createExperiment)({
   }]
 });
 
-function s(e) {
+function a(e) {
   let {
     enabled: t
-  } = a.useExperiment({
+  } = l.useExperiment({
     location: e
   }, {
     autoTrackExposure: !0

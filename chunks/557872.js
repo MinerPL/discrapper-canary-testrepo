@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var l = n("37983"),
   a = n("884691"),
   r = n("414456"),
-  i = n.n(r),
-  s = n("77078"),
+  s = n.n(r),
+  i = n("77078"),
   u = n("134947"),
   o = n("913979"),
-  d = n("321797");
+  d = n("529353");
 
 function c(e) {
   let {
@@ -25,8 +25,8 @@ function c(e) {
       showChannelName: !0
     }, "".concat(e.section, "-").concat(e.row))
   }, [r, n]);
-  return (0, l.jsx)(s.List, {
-    className: i(d.list, d.activeThreadsList),
+  return (0, l.jsx)(i.List, {
+    className: s(d.list, d.activeThreadsList),
     fade: !0,
     sections: [r.length],
     renderSection: () => null,

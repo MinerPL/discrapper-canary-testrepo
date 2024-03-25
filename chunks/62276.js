@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return R
+    return V
   }
 }), l("222007");
 var i = l("37983"),
@@ -9,9 +9,9 @@ var i = l("37983"),
   n = l("414456"),
   s = l.n(n),
   r = l("446674"),
-  c = l("77078"),
-  d = l("272030"),
-  o = l("811425"),
+  o = l("77078"),
+  c = l("272030"),
+  d = l("811425"),
   u = l("206230"),
   f = l("697218"),
   v = l("155207"),
@@ -20,9 +20,9 @@ var i = l("37983"),
   I = l("58608"),
   E = l("659500"),
   x = l("449008"),
-  p = l("387111"),
-  C = l("159885"),
-  T = l("191225"),
+  C = l("387111"),
+  T = l("159885"),
+  p = l("191225"),
   S = l("686569"),
   g = l("607573"),
   A = l("555584"),
@@ -30,31 +30,31 @@ var i = l("37983"),
   N = l("687292"),
   j = l("141962"),
   D = l("905647"),
-  M = l("49111"),
-  y = l("782340"),
-  L = l("753587"),
-  V = l("728791");
+  y = l("49111"),
+  M = l("782340"),
+  L = l("962529"),
+  b = l("728791");
 
-function R(e) {
+function V(e) {
   let {
     activityItem: t,
     channel: n,
-    guildId: R,
-    locationObject: b,
+    guildId: V,
+    locationObject: R,
     onActivityItemVisible: O,
     onActivityItemSelected: H
   } = e, {
     imageBackground: B,
-    videoUrl: w,
-    activityAction: F,
-    staffReleasePhase: k,
+    videoUrl: F,
+    activityAction: P,
+    staffReleasePhase: w,
     onActivityItemSelected: Y,
-    labelType: P
+    labelType: k
   } = (0, g.default)({
     activityItem: t,
     channel: n,
-    guildId: R,
-    locationObject: b,
+    guildId: V,
+    locationObject: R,
     onActivityItemVisible: O,
     onActivityItemSelected: H,
     embeddedActivitiesManager: j.default
@@ -63,20 +63,20 @@ function R(e) {
     enableMinimalActivityDetails: G
   } = S.ExperimentShelfToDetailPage.useExperiment({
     location: "05846b_1"
-  }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([T.default, f.default], () => T.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
+  }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([p.default, f.default], () => p.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
     var t;
     return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
-  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, C.truncateText)(p.default.getName(null, null, W[0]), 25) : null, K = null;
-  null != z && W.length > 1 ? K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
+  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, T.truncateText)(C.default.getName(null, null, W[0]), 25) : null, K = null;
+  null != z && W.length > 1 ? K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
     username1: z,
     extras: W.length - 1
-  }) : null != z && (K = y.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
+  }) : null != z && (K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
     username1: z
   }));
   let X = a.useCallback(e => e && (null == O ? void 0 : O({
       applicationId: t.application.id
     })), [t.application.id, O]),
-    q = (0, o.useIsVisible)(X, .8, !0),
+    q = (0, d.useIsVisible)(X, .8, !0),
     [J, Q] = a.useState(!1),
     [$, ee] = a.useState(J);
   a.useEffect(() => {
@@ -84,24 +84,24 @@ function R(e) {
   }, [J]);
   let et = () => Q(!0),
     el = () => Q(!1),
-    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? y.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : y.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
+    ei = null == t.application.maxParticipants || -1 === t.application.maxParticipants ? M.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : M.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
       count: t.application.maxParticipants
     }),
     ea = a.useCallback(() => {
-      U ? E.ComponentDispatch.dispatch(M.ComponentActions.SHOW_ACTIVITY_DETAILS, {
+      U ? E.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITY_DETAILS, {
         applicationId: t.application.id
-      }) : F === g.ActivityAction.START && Y()
-    }, [F, t, U, Y]),
+      }) : P === g.ActivityAction.START && Y()
+    }, [P, t, U, Y]),
     en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
     es = (null == en ? void 0 : en.playersSuggestionMin) != null && (null == en ? void 0 : en.playersSuggestionMax) != null ? "".concat(en.playersSuggestionMin, " - ").concat(en.playersSuggestionMax) : void 0;
-  return (0, i.jsxs)(c.Clickable, {
+  return (0, i.jsxs)(o.Clickable, {
     className: s(L.activityCard, {
       [L.activityCardReducedMotion]: Z,
       [L.activityCardWithoutDetailPageRoute]: !U
     }),
     onClick: ea,
     onContextMenu: e => {
-      (0, d.openContextMenuLazy)(e, async () => {
+      (0, c.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await l.el("639028").then(l.bind(l, "639028"));
@@ -123,20 +123,20 @@ function R(e) {
         applicationName: t.application.name,
         imageClassName: L.activityImage,
         imageNotFoundClassName: L.brokenImageIconWrapper
-      }), !Z && null != w && $ ? (0, i.jsx)("div", {
+      }), !Z && null != F && $ ? (0, i.jsx)("div", {
         className: s(L.video, {
           [L.videoFadeOut]: !J
         }),
         onAnimationEnd: () => J ? null : ee(!1),
         children: (0, i.jsx)(I.default, {
           className: L.video,
-          src: w,
+          src: F,
           loop: !0,
           autoPlay: !0,
           muted: !0
         })
-      }) : null, F !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
-        action: F,
+      }) : null, P !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
+        action: P,
         onClick: Y
       }) : null, G && null != es ? (0, i.jsx)("div", {
         className: L.minimalDetailsContainer,
@@ -145,7 +145,7 @@ function R(e) {
           children: [(0, i.jsx)(v.default, {
             width: 16,
             height: 16
-          }), (0, i.jsx)(c.Text, {
+          }), (0, i.jsx)(o.Text, {
             variant: "text-xs/medium",
             children: es
           })]
@@ -156,13 +156,13 @@ function R(e) {
           className: L.badgeContainer,
           children: [(0, i.jsx)(N.default, {
             name: t.application.name,
-            labelType: P
-          }), null != k ? (0, i.jsx)(c.Tooltip, {
-            text: k,
+            labelType: k
+          }), null != w ? (0, i.jsx)(o.Tooltip, {
+            text: w,
             children: e => (0, i.jsx)("img", {
               className: L.staffBadge,
-              alt: k,
-              src: V,
+              alt: w,
+              src: b,
               ...e
             })
           }) : null]
@@ -171,10 +171,10 @@ function R(e) {
     }), G ? null : (0, i.jsxs)("div", {
       className: L.activityCardDetails,
       children: [(0, i.jsxs)("div", {
-        children: [(0, i.jsx)(c.Heading, {
+        children: [(0, i.jsx)(o.Heading, {
           variant: "heading-xl/extrabold",
           children: t.application.name
-        }), (0, i.jsx)(c.Text, {
+        }), (0, i.jsx)(o.Text, {
           variant: "text-xs/semibold",
           className: L.activityCardParticipants,
           children: ei
@@ -187,7 +187,7 @@ function R(e) {
             users: W,
             guildId: void 0,
             max: 4
-          }), null != K ? (0, i.jsx)(c.Text, {
+          }), null != K ? (0, i.jsx)(o.Text, {
             variant: "text-sm/medium",
             className: L.activityCardUsersHavePlayedText,
             children: K
@@ -198,7 +198,7 @@ function R(e) {
           className: L.activityCardTagContainer,
           children: t.application.tags.slice(0, 3).map(e => (0, i.jsx)("div", {
             className: L.activityCardTag,
-            children: (0, i.jsx)(c.Text, {
+            children: (0, i.jsx)(o.Text, {
               variant: "text-xs/semibold",
               children: e
             })
@@ -208,9 +208,9 @@ function R(e) {
         className: s(L.activityCardHoverHint, {
           [L.activityCardHoverHintReducedMotion]: Z
         }),
-        children: [(0, i.jsx)(c.Text, {
+        children: [(0, i.jsx)(o.Text, {
           variant: "text-sm/semibold",
-          children: y.default.Messages.LEARN_MORE
+          children: M.default.Messages.LEARN_MORE
         }), (0, i.jsx)(h.default, {
           width: 16,
           height: 16

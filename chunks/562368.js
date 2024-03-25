@@ -6,19 +6,19 @@ i.r(e), i.d(e, {
 }), i("222007");
 var l = i("446674"),
   r = i("913144");
-let n = new Map;
-class a extends l.default.Store {
+let a = new Map;
+class n extends l.default.Store {
   getGuildRoleConnectionEligibility(t) {
-    return null != t ? n.get(t) : void 0
+    return null != t ? a.get(t) : void 0
   }
 }
-a.displayName = "GuildRoleConnectionEligibilityStore";
-var s = new a(r.default, {
+n.displayName = "GuildRoleConnectionEligibilityStore";
+var s = new n(r.default, {
   GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: t => {
     let {
       roleId: e,
       roleConnectionEligibility: i
     } = t;
-    n.set(e, i)
+    a.set(e, i)
   }
 })

@@ -13,8 +13,8 @@ var n = function() {
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  o = r("884691"),
-  a = l(o),
+  a = r("884691"),
+  o = l(a),
   i = l(r("849122")),
   u = function(e) {
     if (e && e.__esModule) return e;
@@ -30,24 +30,24 @@ function l(e) {
   }
 }
 
-function c(e, t) {
+function s(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var s = t.Hue = function(e) {
+var f = t.Hue = function(e) {
   function t() {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, t);
-    for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
-    return r = n = c(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), n.handleChange = function(e) {
+    for (var e, r, n, a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
+    return r = n = s(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), n.handleChange = function(e) {
       var t = u.calculateChange(e, n.props.direction, n.props.hsl, n.container);
       t && "function" == typeof n.props.onChange && n.props.onChange(t, e)
     }, n.handleMouseDown = function(e) {
       n.handleChange(e), window.addEventListener("mousemove", n.handleChange), window.addEventListener("mouseup", n.handleMouseUp)
     }, n.handleMouseUp = function() {
       n.unbindEventListeners()
-    }, c(n, r)
+    }, s(n, r)
   }
   return ! function(e, t) {
     if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -111,9 +111,9 @@ var s = t.Hue = function(e) {
         }, {
           vertical: "vertical" === r
         });
-      return a.default.createElement("div", {
+      return o.default.createElement("div", {
         style: n.hue
-      }, a.default.createElement("div", {
+      }, o.default.createElement("div", {
         className: "hue-" + r,
         style: n.container,
         ref: function(t) {
@@ -122,12 +122,12 @@ var s = t.Hue = function(e) {
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
         onTouchStart: this.handleChange
-      }, a.default.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), a.default.createElement("div", {
+      }, o.default.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), o.default.createElement("div", {
         style: n.pointer
-      }, this.props.pointer ? a.default.createElement(this.props.pointer, this.props) : a.default.createElement("div", {
+      }, this.props.pointer ? o.default.createElement(this.props.pointer, this.props) : o.default.createElement("div", {
         style: n.slider
       }))))
     }
   }]), t
-}(o.PureComponent || o.Component);
-t.default = s
+}(a.PureComponent || a.Component);
+t.default = f

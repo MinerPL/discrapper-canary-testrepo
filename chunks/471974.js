@@ -38,7 +38,7 @@ function h(e, t) {
   }
 }
 
-function g(e) {
+function v(e) {
   var t = e[a];
   if (null !== t) {
     var n = e[p].read();
@@ -46,10 +46,10 @@ function g(e) {
   }
 }
 
-function b(e) {
-  i.nextTick(g, e)
+function g(e) {
+  i.nextTick(v, e)
 }
-var v = Object.getPrototypeOf(function() {}),
+var b = Object.getPrototypeOf(function() {}),
   m = Object.setPrototypeOf((o(r = {
     get stream() {
       return this[p]
@@ -96,7 +96,7 @@ var v = Object.getPrototypeOf(function() {}),
         t(h(void 0, !0))
       })
     })
-  }), r), v);
+  }), r), b);
 e.exports = function(e) {
   var t, n = Object.create(m, (o(t = {}, p, {
     value: e,
@@ -128,5 +128,5 @@ e.exports = function(e) {
     }
     var r = n[a];
     null !== r && (n[l] = null, n[a] = null, n[c] = null, r(h(void 0, !0))), n[d] = !0
-  }), e.on("readable", b.bind(null, n)), n
+  }), e.on("readable", g.bind(null, n)), n
 }

@@ -11,8 +11,8 @@ var n = l("37983"),
   a = l("884691"),
   s = l("414456"),
   i = l.n(s),
-  d = l("446674"),
-  r = l("77078"),
+  r = l("446674"),
+  d = l("77078"),
   o = l("665182"),
   u = l("462998"),
   c = l("982108"),
@@ -28,8 +28,8 @@ var n = l("37983"),
   E = l("49111"),
   I = l("724210"),
   _ = l("782340"),
-  T = l("505658"),
-  v = l("305794");
+  T = l("225894"),
+  v = l("250455");
 
 function A(e) {
   let {
@@ -48,10 +48,10 @@ function A(e) {
 function O(e) {
   let {
     guildId: t
-  } = e, [s, o] = a.useState(""), u = (0, d.useStateFromStores)([m.default], () => m.default.getGuild(t)), A = (0, d.useStateFromStores)([f.default], () => f.default.getChannels(t)), O = (0, d.useStateFromStores)([h.default], () => h.default.getCategories(t)), R = (0, p.useFilterCategoriesByQuery)(t, O, A, s), j = (0, d.useStateFromStores)([C.default], () => C.default.canWithPartialContext(E.Permissions.MANAGE_CHANNELS, {
+  } = e, [s, o] = a.useState(""), u = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(t)), A = (0, r.useStateFromStores)([f.default], () => f.default.getChannels(t)), O = (0, r.useStateFromStores)([h.default], () => h.default.getCategories(t)), R = (0, p.useFilterCategoriesByQuery)(t, O, A, s), j = (0, r.useStateFromStores)([C.default], () => C.default.canWithPartialContext(E.Permissions.MANAGE_CHANNELS, {
     guildId: t
-  })), b = (0, d.useStateFromStores)([c.default], () => null != c.default.getCurrentSidebarChannelId(I.StaticChannelRoute.CHANNEL_BROWSER)), L = a.useCallback(() => o(""), [o]), M = a.useCallback(() => {
-    (0, r.openModalLazy)(async () => {
+  })), b = (0, r.useStateFromStores)([c.default], () => null != c.default.getCurrentSidebarChannelId(I.StaticChannelRoute.CHANNEL_BROWSER)), L = a.useCallback(() => o(""), [o]), M = a.useCallback(() => {
+    (0, d.openModalLazy)(async () => {
       let {
         default: e
       } = await l.el("581354").then(l.bind(l, "581354"));
@@ -80,7 +80,7 @@ function O(e) {
             },
             onClear: L,
             placeholder: _.default.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
-          }), j ? (0, n.jsxs)(r.Button, {
+          }), j ? (0, n.jsxs)(d.Button, {
             className: T.createButton,
             innerClassName: T.createButtonInner,
             onClick: M,

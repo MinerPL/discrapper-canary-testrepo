@@ -22,7 +22,7 @@ var u = t("77078"),
       channel: n,
       guild: t,
       onSelect: s
-    } = e, r = (0, f.default)(n), I = (0, E.default)(n, t), N = (0, d.default)(n, t), M = (0, c.default)(n, t), C = (0, o.default)(n), A = (0, i.default)({
+    } = e, r = (0, f.default)(n), I = (0, E.default)(n, t), N = (0, d.default)(n, t), M = (0, c.default)(n, t), A = (0, o.default)(n), C = (0, i.default)({
       id: n.id,
       label: _.default.Messages.COPY_ID_CHANNEL
     });
@@ -36,9 +36,9 @@ var u = t("77078"),
       }), (0, a.jsxs)(u.MenuGroup, {
         children: [I, N, M]
       }), (0, a.jsx)(u.MenuGroup, {
-        children: C
-      }), (0, a.jsx)(u.MenuGroup, {
         children: A
+      }), (0, a.jsx)(u.MenuGroup, {
+        children: C
       })]
     })
   }, [r.default.CONTEXT_MENU, r.default.CHANNEL_ACTIVITY_FEED_VOICE_MENU])

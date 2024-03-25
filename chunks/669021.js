@@ -15,7 +15,7 @@ var l = s("37983"),
   c = s("655518"),
   h = s("49111"),
   E = s("782340"),
-  f = s("532568");
+  f = s("436107");
 class m extends a.Component {
   getSelectedSection(e) {
     let {

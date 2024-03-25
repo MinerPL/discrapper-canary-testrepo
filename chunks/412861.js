@@ -13,8 +13,8 @@ var a = l("255397"),
   s = l("336522"),
   r = l("966724"),
   o = l("716241"),
-  d = l("191145"),
-  u = l("585722"),
+  u = l("191145"),
+  d = l("585722"),
   c = l("697218"),
   f = l("599110"),
   p = l("254490"),
@@ -22,8 +22,8 @@ var a = l("255397"),
   h = l("834021"),
   E = l("49111"),
   v = l("894488"),
-  _ = l("646718"),
-  C = l("782340");
+  C = l("646718"),
+  _ = l("782340");
 
 function g(e, t) {
   let l = c.default.getCurrentUser(),
@@ -31,30 +31,30 @@ function g(e, t) {
     n = p.maxFileSize(a),
     i = [],
     r = 0,
-    d = 0,
     u = 0,
+    d = 0,
     f = [];
-  for (let e of t) u += 1, r += e.size, i.push(e.size), e.size > d && (d = e.size), null != e.type ? f.push(e.type) : f.push("unknown");
-  if (d > n) {
+  for (let e of t) d += 1, r += e.size, i.push(e.size), e.size > u && (u = e.size), null != e.type ? f.push(e.type) : f.push("unknown");
+  if (u > n) {
     (0, o.trackWithMetadata)(E.AnalyticEvents.FILE_SIZE_LIMIT_EXCEEDED, {
       channel_id: e.id,
       guild_id: a,
       user_individual_file_size_limit: n,
       pre_compression_file_sizes: i,
       pre_compression_aggregate_file_size: r,
-      num_attachments: u,
+      num_attachments: d,
       error_type: v.FileUploadErrorTypes.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
       attachment_mimetypes: f
     }), (0, s.openUploadError)({
-      title: C.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+      title: _.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
       help: (0, h.getErrorHelp)(l, a),
-      showPremiumUpsell: !(0, m.isPremiumExactly)(l, _.PremiumTypes.TIER_2),
-      fileSize: d
+      showPremiumUpsell: !(0, m.isPremiumExactly)(l, C.PremiumTypes.TIER_2),
+      fileSize: u
     });
     return
   }(0, s.openUploadError)({
-    title: C.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
-    help: C.default.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
+    title: _.default.Messages.UPLOAD_AREA_TOO_LARGE_TITLE,
+    help: _.default.Messages.UPLOAD_AREA_REQUEST_LIMIT_HELP.format({
       maxSize: p.sizeString(p.getMaxRequestSize())
     })
   })
@@ -74,19 +74,19 @@ function L(e, t, l) {
     g(t, e);
     return
   }
-  if (u.default.getUploadCount(t.id, l) + e.length > E.MAX_UPLOAD_COUNT) {
+  if (d.default.getUploadCount(t.id, l) + e.length > E.MAX_UPLOAD_COUNT) {
     (0, s.openUploadError)({
-      title: C.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
-      help: C.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
+      title: _.default.Messages.ATTACHMENT_TOO_MANY_ERROR_TITLE,
+      help: _.default.Messages.ATTACHMENT_TOO_MANY_ERROR_MESSAGE.format({
         limit: E.MAX_UPLOAD_COUNT
       })
     }), f.default.track(E.AnalyticEvents.UPLOAD_FILE_LIMIT_ERROR, {
-      existing_count: u.default.getUploadCount(t.id, l),
+      existing_count: d.default.getUploadCount(t.id, l),
       new_count: e.length
     });
     return
   }
-  if ((t.type === E.ChannelTypes.GUILD_VOICE || t.type === E.ChannelTypes.GUILD_STAGE_VOICE) && !d.default.getChatOpen(t.id) && a.default.updateChatOpen(t.id, !0), c) {
+  if ((t.type === E.ChannelTypes.GUILD_VOICE || t.type === E.ChannelTypes.GUILD_STAGE_VOICE) && !u.default.getChatOpen(t.id) && a.default.updateChatOpen(t.id, !0), c) {
     let a = Array.from(e).map((e, t) => ({
       file: e,
       platform: r.UploadPlatform.WEB,

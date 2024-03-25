@@ -17,22 +17,22 @@ n.r(t), n.d(t, {
     return d
   },
   getPID: function() {
-    return f
-  },
-  setPID: function() {
     return _
   },
+  setPID: function() {
+    return f
+  },
   getRPCAuthToken: function() {
-    return h
+    return E
   },
   validResolution: function() {
-    return g
+    return h
   },
   setOutOfProcessSupport: function() {
-    return m
+    return g
   },
   supportsOutOfProcess: function() {
-    return E
+    return m
   },
   isOutOfProcess: function() {
     return p
@@ -53,7 +53,7 @@ let a = 2,
   d = -2,
   c = !1;
 
-function f() {
+function _() {
   var e;
   if (void 0 !== i) return i;
   let t = new URLSearchParams(window.location.search),
@@ -62,24 +62,24 @@ function f() {
   return isNaN(s) && (s = -1), i = s
 }
 
-function _(e) {
+function f(e) {
   p() && (i = e)
 }
 
-function h() {
+function E() {
   let e = new URLSearchParams(window.location.search);
   return e.get("rpc_auth_token")
 }
 
-function g(e) {
+function h(e) {
   return !r.isPlatformEmbedded || e.width >= l.width && e.height >= l.height
 }
 
-function m(e) {
+function g(e) {
   c = e
 }
 
-function E() {
+function m() {
   return c
 }
 

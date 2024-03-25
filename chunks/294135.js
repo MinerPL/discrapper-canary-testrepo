@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("70102"), s("808653"), s("424973"), s("843762"), s("222007"), s("702976");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("446674"),
   o = s("862337"),
   u = s("819855"),
@@ -32,8 +32,8 @@ var a = s("37983"),
   h = s("305961"),
   L = s("957255"),
   x = s("71010"),
-  D = s("290877"),
-  v = s("437712"),
+  v = s("290877"),
+  D = s("437712"),
   U = s("552712"),
   b = s("698041"),
   j = s("167726"),
@@ -60,8 +60,8 @@ var a = s("37983"),
   es = s("23985"),
   ea = s("572158"),
   er = s("374266"),
-  en = s("951765"),
-  ei = s("729199"),
+  ei = s("951765"),
+  en = s("729199"),
   el = s("75576"),
   eo = s("49111"),
   eu = s("492249"),
@@ -78,17 +78,17 @@ class e_ extends r.PureComponent {
       isFetchingEntitlements: s,
       shouldFetchStatistics: a,
       didFetchEntitlements: r,
-      location: n,
-      fetchStoreListing: i
+      location: i,
+      fetchStoreListing: n
     } = this.props;
-    if (null != n.state) {
+    if (null != i.state) {
       let {
         analyticsSource: e,
         analyticsProperties: t
-      } = n.state;
+      } = i.state;
       this._analyticsSource = e, this._extraAnalyticsProperties = t
     } else this._analyticsSource = eo.DIRECT_ANALYTICS_LOCATION;
-    (null == t || t.isSlimDirectoryVersion()) && i(), null != e && (!s && !r && (0, E.fetchUserEntitlementsForApplication)(e.applicationId), a && c.default.wait(() => (0, _.fetchStatisticsForApplication)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug()
+    (null == t || t.isSlimDirectoryVersion()) && n(), null != e && (!s && !r && (0, E.fetchUserEntitlementsForApplication)(e.applicationId), a && c.default.wait(() => (0, _.fetchStatisticsForApplication)(e.applicationId))), this.trackViewed(), this.replaceUrlWithSlug()
   }
   componentDidUpdate(e) {
     let {
@@ -96,18 +96,18 @@ class e_ extends r.PureComponent {
       sku: s,
       shouldFetchStatistics: a,
       skuId: r,
-      storeListingId: n,
-      slug: i,
+      storeListingId: i,
+      slug: n,
       storeListing: l,
       fetchStoreListing: o
     } = this.props;
     if (l !== e.storeListing && null != l && (0, X.deepLinkRouteIfLandedAndNotAuthed)(eu.RPCDeepLinks.STORE_LISTING, {
         skuId: r,
-        slug: i
+        slug: n
       }), (t !== e.locale || r !== e.skuId) && o(), a && !e.shouldFetchStatistics) {
       if (null == s) throw Error("Unexpected missing sku");
       c.default.wait(() => (0, _.fetchStatisticsForApplication)(s.applicationId))
-    }(r !== e.skuId || n !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug()
+    }(r !== e.skuId || i !== e.storeListingId) && (this._trackedViewed = !1), this.trackViewed(), this.replaceUrlWithSlug()
   }
   componentWillUnmount() {
     this.showCopyLinkTextTimeout.stop();
@@ -150,10 +150,10 @@ class e_ extends r.PureComponent {
   renderHeader(e, t) {
     let {
       channel: s,
-      isAuthenticated: n
+      isAuthenticated: i
     } = this.props;
     return (0, a.jsx)(O.default, {
-      isAuthenticated: n,
+      isAuthenticated: i,
       toolbar: this.renderHeaderToolbar(e, t),
       children: null != s ? (0, a.jsxs)(r.Fragment, {
         children: [(0, a.jsx)(O.default.Icon, {
@@ -215,19 +215,19 @@ class e_ extends r.PureComponent {
   renderHeaderAssets(e, t, s) {
     let {
       theme: r
-    } = this.props, n = t.headerBackground, i = (0, u.isThemeLight)(r) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
-    return null == n || null == i ? (0, a.jsx)("div", {
+    } = this.props, i = t.headerBackground, n = (0, u.isThemeLight)(r) ? t.headerLogoLightTheme : t.headerLogoDarkTheme;
+    return null == i || null == n ? (0, a.jsx)("div", {
       className: ec.noHeaderSpacer
     }) : (0, a.jsxs)("div", {
       className: ec.headerAssets,
       children: [(0, a.jsx)("div", {
         className: ec.headerBackground,
         style: {
-          backgroundImage: "url(".concat((0, z.getAssetURL)(e.id, n, 1024, "png"), ")")
+          backgroundImage: "url(".concat((0, z.getAssetURL)(e.id, i, 1024, "png"), ")")
         }
       }), (0, a.jsx)("img", {
         className: ec.headerLogo,
-        src: (0, z.getAssetURL)(e.id, i, 1024, "png"),
+        src: (0, z.getAssetURL)(e.id, n, 1024, "png"),
         alt: s.name
       })]
     })
@@ -245,7 +245,7 @@ class e_ extends r.PureComponent {
       channel: s,
       pageSize: r
     } = this.props;
-    return (0, a.jsx)(ei.default, {
+    return (0, a.jsx)(en.default, {
       skuId: t.id,
       guild: e.guild,
       className: ec.guildInvite,
@@ -267,9 +267,9 @@ class e_ extends r.PureComponent {
   }
   renderDescription(e, t, s) {
     let {
-      description: n
+      description: i
     } = t;
-    if (null == n) throw Error("Rendering ApplicationStoreListing without description");
+    if (null == i) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
       children: [(0, a.jsx)(G.default, {
         tag: "h1",
@@ -279,7 +279,7 @@ class e_ extends r.PureComponent {
       }), (0, a.jsx)(R.default, {}), (0, a.jsx)(Z.default, {
         applicationId: e.id,
         blurb: t.summary,
-        description: n,
+        description: i,
         className: ec.description,
         assets: t.assets
       })]
@@ -305,9 +305,9 @@ class e_ extends r.PureComponent {
     } = this.props;
     if (null == e || null == t || null == s) return null;
     let r = [],
-      n = s.getSplashURL(1024);
-    null != n && r.push(n), null != t.headerLogoLightTheme && r.unshift((0, z.getAssetURL)(s.id, t.headerLogoLightTheme, 1024, "jpg"));
-    let i = k.default.Product({
+      i = s.getSplashURL(1024);
+    null != i && r.push(i), null != t.headerLogoLightTheme && r.unshift((0, z.getAssetURL)(s.id, t.headerLogoLightTheme, 1024, "jpg"));
+    let n = k.default.Product({
         name: e.name,
         description: null != e.summary && "" !== e.summary ? e.summary : t.tagline,
         image: k.default.Product.Image(r),
@@ -319,7 +319,7 @@ class e_ extends r.PureComponent {
         amount: e,
         currency: t
       } = l;
-      i.offers = k.default.Offer({
+      n.offers = k.default.Offer({
         priceCurrency: t.toUpperCase(),
         price: (0, Y.formatPrice)(e, t, {
           style: "decimal"
@@ -327,7 +327,7 @@ class e_ extends r.PureComponent {
       })
     }
     let o = k.default.ItemPage({
-      mainEntity: i
+      mainEntity: n
     });
     return (0, a.jsx)(k.default, {
       data: o
@@ -335,7 +335,7 @@ class e_ extends r.PureComponent {
   }
   renderSmall(e, t, s) {
     return (0, a.jsxs)("div", {
-      className: i(ec.listing, ec.listingSmall),
+      className: n(ec.listing, ec.listingSmall),
       children: [this.renderHeaderAssets(e, t, s), this.renderCarousel(e, t), this.renderWhyYouMightLikeThis(s, t), this.renderDescription(e, t, s), this.renderVerifiedGuildInvite(t, s), this.renderFeatures(s), this.renderSystemRequirements(s), this.renderApplicationContentRating(s), this.renderApplicationLegalInfo(s)]
     })
   }
@@ -362,8 +362,8 @@ class e_ extends r.PureComponent {
       application: e,
       sku: t,
       storeListing: s,
-      matureAgree: n,
-      isAuthenticated: i
+      matureAgree: i,
+      isAuthenticated: n
     } = this.props;
     if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(r.Fragment, {
       children: [this.renderHeader(e, t), (0, a.jsx)(y.default, {
@@ -374,8 +374,8 @@ class e_ extends r.PureComponent {
         })
       })]
     });
-    if (!n && t.showAgeGate) {
-      let s = i ? null : (0, a.jsx)("div", {
+    if (!i && t.showAgeGate) {
+      let s = n ? null : (0, a.jsx)("div", {
         className: ec.gatedListing,
         children: this.renderListing()
       });
@@ -387,7 +387,7 @@ class e_ extends r.PureComponent {
         }), s]
       })
     }
-    return i ? (0, a.jsxs)("div", {
+    return n ? (0, a.jsxs)("div", {
       className: ec.listingWrapper,
       children: [(0, a.jsx)(p.AppPageTitle, {
         location: e.name
@@ -493,7 +493,7 @@ class e_ extends r.PureComponent {
       let {
         isInTestMode: s,
         slug: r,
-        storeListing: n,
+        storeListing: i,
         channel: l,
         analyticsContext: {
           location: o
@@ -505,14 +505,14 @@ class e_ extends r.PureComponent {
         className: ec.headerBarListing,
         children: [(0, a.jsx)("div", {
           className: ec.headerSection,
-          children: s && null != t ? (0, a.jsx)(en.default, {
-            size: en.TestModeStoreListingButtonEnums.Sizes.MIN,
-            dropdownSize: en.TestModeStoreListingButtonEnums.DropdownSizes.MEDIUM,
-            look: en.TestModeStoreListingButtonEnums.Looks.OUTLINED,
-            color: en.TestModeStoreListingButtonEnums.Colors.YELLOW,
+          children: s && null != t ? (0, a.jsx)(ei.default, {
+            size: ei.TestModeStoreListingButtonEnums.Sizes.MIN,
+            dropdownSize: ei.TestModeStoreListingButtonEnums.DropdownSizes.MEDIUM,
+            look: ei.TestModeStoreListingButtonEnums.Looks.OUTLINED,
+            color: ei.TestModeStoreListingButtonEnums.Colors.YELLOW,
             skuId: t.id,
             className: ec.testModeSelectButton,
-            currentStoreListingId: null != n ? n.id : null,
+            currentStoreListingId: null != i ? i.id : null,
             onStoreListingSelect: e => {
               null != t && (0, T.goToSKUStoreListing)(t.id, {
                 slug: r,
@@ -528,7 +528,7 @@ class e_ extends r.PureComponent {
         }), (0, a.jsx)("div", {
           className: ec.headerSection,
           children: (0, a.jsxs)("div", {
-            className: i(ec.headerPurchase, {
+            className: n(ec.headerPurchase, {
               [ec.active]: u
             }),
             children: [null != t ? (0, g.default)(t) : null, null != e && null != t ? (0, a.jsx)(f.default, {
@@ -538,7 +538,7 @@ class e_ extends r.PureComponent {
               color: d.Button.Colors.GREEN,
               size: d.Button.Sizes.SMALL,
               tooltipPosition: "bottom",
-              entitlementBranchId: null != n ? n.entitlementBranchId : null,
+              entitlementBranchId: null != i ? i.entitlementBranchId : null,
               channelId: null != l ? l.id : null,
               onStoreListing: !0
             }) : null, (0, a.jsx)(et.default, {
@@ -579,38 +579,38 @@ class e_ extends r.PureComponent {
     }
   }
 }
-var eE = (0, S.default)((0, m.default)(l.default.connectStores([D.default, M.default, P.default, B.default, b.default, U.default, j.default, N.default, A.default, x.default, h.default, v.default], e => {
+var eE = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, B.default, b.default, U.default, j.default, N.default, A.default, x.default, h.default, D.default], e => {
   let t, s, a, {
     inputSkuId: r,
-    applicationId: n,
-    storeListingId: i,
+    applicationId: i,
+    storeListingId: n,
     isAuthenticated: l,
     channel: o
   } = e;
-  if (null == n) {
+  if (null == i) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    t = r, null != (n = null != (s = U.default.get(r)) ? s.applicationId : null) && (a = A.default.getApplication(n))
+    t = r, null != (i = null != (s = U.default.get(r)) ? s.applicationId : null) && (a = A.default.getApplication(i))
   } else if (null == r) {
-    if (null == n) throw Error("Needs applicationId or skuId");
-    null != (a = A.default.getApplication(n)) && (t = a.destinationSkuId), s = null != t ? U.default.get(t) : null
+    if (null == i) throw Error("Needs applicationId or skuId");
+    null != (a = A.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? U.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, V.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-  let u = null != n && (j.default.inTestModeForApplication(n) || N.default.inDevModeForApplication(n));
+  let u = null != i && (j.default.inTestModeForApplication(i) || N.default.inDevModeForApplication(i));
   return {
     skuId: t,
-    application: null != n ? A.default.getApplication(n) : null,
-    isFetchingEntitlements: null != n && v.default.applicationIdsFetching.has(n),
-    didFetchEntitlements: null != n && v.default.applicationIdsFetched.has(n),
-    shouldFetchStatistics: l && null != n && x.default.shouldFetchStatisticsForApplication(n),
+    application: null != i ? A.default.getApplication(i) : null,
+    isFetchingEntitlements: null != i && D.default.applicationIdsFetching.has(i),
+    didFetchEntitlements: null != i && D.default.applicationIdsFetched.has(i),
+    shouldFetchStatistics: l && null != i && x.default.shouldFetchStatisticsForApplication(i),
     sku: s,
     isFocused: B.default.isFocused(),
     storeListing: b.default.getStoreListing({
-      storeListingId: i,
+      storeListingId: n,
       skuId: t,
       channelId: null != o ? o.id : null,
       isTestMode: u
     }),
-    isInTestMode: null != n && u,
-    matureAgree: D.default.didMatureAgree,
+    isInTestMode: null != i && u,
+    matureAgree: v.default.didMatureAgree,
     theme: M.default.theme,
     locale: P.default.locale,
     guild: null != o ? h.default.getGuild(o.getGuildId()) : null

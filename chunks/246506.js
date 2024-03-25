@@ -1,56 +1,56 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return m
+    return S
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  s = n.n(r),
-  o = n("446674"),
-  u = n("405645"),
-  a = n("692038"),
-  c = n("815297"),
-  d = n("291655"),
-  f = n("697218"),
-  E = n("387111"),
-  _ = n("439932"),
-  h = n("49111"),
-  p = n("782340"),
-  S = n("515476");
+var _ = E("37983"),
+  s = E("884691"),
+  T = E("414456"),
+  a = E.n(T),
+  n = E("446674"),
+  A = E("405645"),
+  u = E("692038"),
+  I = E("815297"),
+  i = E("291655"),
+  l = E("697218"),
+  L = E("387111"),
+  o = E("439932"),
+  r = E("49111"),
+  d = E("782340"),
+  N = E("250351");
 
-function m(e) {
+function S(e) {
   var t;
   let {
-    guildId: n,
-    role: r,
-    theme: m,
-    content: M = p.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
-    className: T
-  } = e, v = (0, o.useStateFromStores)([f.default], () => f.default.getCurrentUser()), L = E.default.useName(n, null, v), C = (0, u.getRoleIconProps)(r), I = i.useMemo(() => (0, a.createMessageRecord)({
-    ...(0, c.default)({
+    guildId: E,
+    role: T,
+    theme: S,
+    content: g = d.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_FLAIR_PREVIEW_MESSAGE_TEXT,
+    className: D
+  } = e, G = (0, n.useStateFromStores)([l.default], () => l.default.getCurrentUser()), O = L.default.useName(E, null, G), c = (0, A.getRoleIconProps)(T), U = s.useMemo(() => (0, u.createMessageRecord)({
+    ...(0, I.default)({
       channelId: "0",
-      content: M,
+      content: g,
       tts: void 0,
       type: void 0,
       messageReference: void 0,
       allowedMentions: void 0,
-      author: v
+      author: G
     }),
-    state: h.MessageStates.SENT,
+    state: r.MessageStates.SENT,
     id: "0"
-  }), [v, M]), A = {
-    nick: L,
-    colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
+  }), [G, g]), C = {
+    nick: O,
+    colorString: null !== (t = T.colorString) && void 0 !== t ? t : void 0
   };
-  return (0, l.jsx)("div", {
-    className: s((0, _.getThemeClass)(m), S.container, T),
-    children: (0, l.jsx)(d.default, {
+  return (0, _.jsx)("div", {
+    className: a((0, o.getThemeClass)(S), N.container, D),
+    children: (0, _.jsx)(i.default, {
       hideTimestamp: !0,
-      author: A,
-      roleIcon: C,
-      message: I,
+      author: C,
+      roleIcon: c,
+      message: U,
       isGroupStart: !0,
       disableInteraction: !0
     })

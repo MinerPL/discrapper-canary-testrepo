@@ -11,7 +11,7 @@ var i = n("37983"),
   o = n("415518"),
   r = n("483355"),
   d = n("49111"),
-  u = n("906664");
+  u = n("850719");
 class Notification extends a.Component {
   componentWillAppear(e) {
     let {

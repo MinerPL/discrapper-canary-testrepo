@@ -31,21 +31,21 @@ n.r(t), n.d(t, {
     return I
   },
   showDatePicker: function() {
-    return m
-  },
-  filterHasAnswer: function() {
     return y
   },
+  filterHasAnswer: function() {
+    return m
+  },
   refreshSearchTokens: function() {
-    return C
+    return M
   }
 }), n("222007"), n("808653");
 var l = n("917351"),
   a = n.n(l),
   r = n("76385"),
   u = n("955513"),
-  o = n("247013"),
-  s = n("697218"),
+  s = n("247013"),
+  o = n("697218"),
   i = n("299039"),
   c = n("49111"),
   E = n("782340");
@@ -79,8 +79,8 @@ let _ = {
 };
 
 function T(e, t) {
-  if (o.default.didAgree(t)) {
-    let t = s.default.getCurrentUser();
+  if (s.default.didAgree(t)) {
+    let t = o.default.getCurrentUser();
     null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed)
   }
 }
@@ -107,27 +107,27 @@ function f(e) {
         return null == n && (n = "content"), n
       }(n);
       null == t[r] && (t[r] = new Set);
-      let o = t[r];
+      let s = t[r];
       switch (n) {
         case c.SearchTokenTypes.ANSWER_USERNAME_FROM:
         case c.SearchTokenTypes.ANSWER_USERNAME_MENTIONS:
-          o.add(e.getData("userId"));
+          s.add(e.getData("userId"));
           break;
         case c.SearchTokenTypes.ANSWER_FILE_TYPE:
         case c.SearchTokenTypes.ANSWER_FILE_NAME:
-          o.add(e.getMatch(1));
+          s.add(e.getMatch(1));
           break;
         case c.SearchTokenTypes.ANSWER_IN:
-          o.add(e.getData("channel").id);
+          s.add(e.getData("channel").id);
           break;
         case c.SearchTokenTypes.ANSWER_HAS:
-          o.add(e.getData("has"));
+          s.add(e.getData("has"));
           break;
         case c.SearchTokenTypes.ANSWER_PINNED:
-          o.add(e.getData("pinned"));
+          s.add(e.getData("pinned"));
           break;
         default:
-          o.add(e.getFullMatch().trim())
+          s.add(e.getFullMatch().trim())
       }
     }), Object.entries(t))) l instanceof Set && (t[n] = Array.from(l));
   return t.content && (t.content = t.content.join(" ").trim(), !t.content && delete t.content), t
@@ -221,16 +221,16 @@ function I() {
   return g.clearCache()
 }
 
-function m(e) {
+function y(e) {
   return null != e ? _[e] : null
 }
 
-function y(e, t) {
+function m(e, t) {
   let n = c.IS_SEARCH_FILTER_TOKEN.test(e.type);
   return (null != t || !n) && (null == t || !n || !!c.IS_SEARCH_ANSWER_TOKEN.test(t.type)) && !0
 }
 
-function C() {
+function M() {
   (0, u.refreshSearchTokens)(), g.reset(), a(u.default).forOwn((e, t) => g.addRule({
     type: t,
     ...e

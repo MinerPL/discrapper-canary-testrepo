@@ -14,9 +14,9 @@ var l = n("174727"),
   u = n("489622"),
   d = n("917247"),
   c = n("646718"),
-  f = n("49111"),
-  E = n("782340"),
-  _ = n("185401"),
+  E = n("49111"),
+  f = n("782340"),
+  _ = n("231537"),
   T = function(e) {
     var t;
     let {
@@ -52,19 +52,19 @@ var l = n("174727"),
       }), function(e, t) {
         switch (e) {
           case c.PremiumSubscriptionSKUs.TIER_0:
-            return t.days > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({
+            return t.days > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_DAYS_VARIANT.format({
               days: t.days
-            }) : t.hours > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({
+            }) : t.hours > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_HOURS_VARIANT.format({
               hours: t.hours
-            }) : E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({
+            }) : f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_MINUTES_VARIANT.format({
               minutes: Math.max(t.minutes, 1)
             });
           case c.PremiumSubscriptionSKUs.TIER_2:
-            return t.days > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({
+            return t.days > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_DAYS_VARIANT.format({
               days: t.days
-            }) : t.hours > 0 ? E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({
+            }) : t.hours > 0 ? f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_HOURS_VARIANT.format({
               hours: t.hours
-            }) : E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({
+            }) : f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_MINUTES_VARIANT.format({
               minutes: Math.max(t.minutes, 1)
             });
           default:
@@ -77,18 +77,18 @@ var l = n("174727"),
             subscriptionTier: T,
             analyticsLocations: I,
             analyticsObject: {
-              page: f.AnalyticsPages.IN_APP,
-              section: f.AnalyticsSections.NOTIFICATION_BAR,
-              object: f.AnalyticsObjects.BUTTON_CTA
+              page: E.AnalyticsPages.IN_APP,
+              section: E.AnalyticsSections.NOTIFICATION_BAR,
+              object: E.AnalyticsObjects.BUTTON_CTA
             }
           })
         },
         children: function(e) {
           switch (e) {
             case c.PremiumSubscriptionSKUs.TIER_0:
-              return E.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_CTA_VARIANT;
+              return f.default.Messages.NOTICE_PREMIUM_TIER_0_TRIAL_ENDING_CTA_VARIANT;
             case c.PremiumSubscriptionSKUs.TIER_2:
-              return E.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_CTA_VARIANT;
+              return f.default.Messages.NOTICE_PREMIUM_TIER_2_TRIAL_ENDING_CTA_VARIANT;
             default:
               throw Error("Unsupported subscription tier: ".concat(e))
           }

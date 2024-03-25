@@ -12,9 +12,9 @@ var n = l("37983"),
   o = l("77078"),
   d = l("713841"),
   u = l("800751"),
-  c = l("524503"),
-  f = l("186211"),
-  m = l("926994"),
+  c = l("926994"),
+  f = l("927078"),
+  m = l("248933"),
   I = l("923959"),
   T = l("957255"),
   N = l("454589"),
@@ -28,7 +28,7 @@ var n = l("37983"),
   A = l("810201"),
   C = l("49111"),
   x = l("782340"),
-  R = l("509223");
+  R = l("971828");
 
 function M(e, t) {
   switch (e) {
@@ -113,8 +113,8 @@ var v = a.memo(function(e) {
     }
   }, [Z, q, J, W, t, D]), a.useEffect(() => {
     if ((null == s ? void 0 : s.id) == null) return;
-    let e = f.default.getEntitlementsForGuildFetchState(s.id);
-    e === f.FetchState.NOT_FETCHED && c.fetchEntitlementsForGuild(s.id)
+    let e = m.default.getEntitlementsForGuildFetchState(s.id);
+    e === m.FetchState.NOT_FETCHED && f.fetchEntitlementsForGuild(s.id)
   }, [null == s ? void 0 : s.id]);
   let $ = null;
   switch (t) {
@@ -128,7 +128,7 @@ var v = a.memo(function(e) {
         platformType: C.PlatformTypes.TWITCH,
         descriptionText: x.default.Messages.INTEGRATIONS_TWITCH_DESCRIPTION,
         helpText: x.default.Messages.INTEGRATIONS_TWITCH_HELP.format({
-          connectAction: () => (0, m.default)(C.PlatformTypes.TWITCH, "Integration Settings"),
+          connectAction: () => (0, c.default)(C.PlatformTypes.TWITCH, "Integration Settings"),
           helpdeskArticle: g.default.getArticleURL(C.HelpdeskArticles.TWITCH_INTEGRATION)
         }),
         canNavigate: K
@@ -144,7 +144,7 @@ var v = a.memo(function(e) {
         platformType: C.PlatformTypes.YOUTUBE,
         descriptionText: x.default.Messages.INTEGRATIONS_YOUTUBE_DESCRIPTION,
         helpText: x.default.Messages.INTEGRATIONS_YOUTUBE_HELP.format({
-          connectAction: () => (0, m.default)(C.PlatformTypes.YOUTUBE),
+          connectAction: () => (0, c.default)(C.PlatformTypes.YOUTUBE),
           helpdeskArticle: g.default.getArticleURL(C.HelpdeskArticles.YOUTUBE_INTEGRATION)
         }),
         canNavigate: K

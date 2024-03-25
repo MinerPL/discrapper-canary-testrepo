@@ -18,15 +18,15 @@ function h(e, t) {
   return e << t | e >>> 32 - t
 }
 
-function g(e, t, n, r, i, o, s, a) {
+function v(e, t, n, r, i, o, s, a) {
   return h(e + (t ^ n ^ r) + o + s | 0, a) + i | 0
 }
 
-function b(e, t, n, r, i, o, s, a) {
+function g(e, t, n, r, i, o, s, a) {
   return h(e + (t & n | ~t & r) + o + s | 0, a) + i | 0
 }
 
-function v(e, t, n, r, i, o, s, a) {
+function b(e, t, n, r, i, o, s, a) {
   return h(e + ((t | ~n) ^ r) + o + s | 0, a) + i | 0
 }
 
@@ -39,29 +39,29 @@ function y(e, t, n, r, i, o, s, a) {
 }
 i(p, o), p.prototype._update = function() {
   for (var e, t, n = 0; n < 16; ++n) s[n] = this._block.readInt32LE(4 * n);
-  for (var r = 0 | this._a, i = 0 | this._b, o = 0 | this._c, l = 0 | this._d, f = 0 | this._e, p = 0 | this._a, g = 0 | this._b, b = 0 | this._c, v = 0 | this._d, m = 0 | this._e, y = 0; y < 80; y += 1) y < 16 ? (e = function(e, t, n, r, i, o, s, a) {
+  for (var r = 0 | this._a, i = 0 | this._b, o = 0 | this._c, l = 0 | this._d, f = 0 | this._e, p = 0 | this._a, v = 0 | this._b, g = 0 | this._c, b = 0 | this._d, m = 0 | this._e, y = 0; y < 80; y += 1) y < 16 ? (e = function(e, t, n, r, i, o, s, a) {
     return h(e + (t ^ n ^ r) + o + s | 0, a) + i | 0
   }(r, i, o, l, f, s[a[y]], 0, u[y]), t = function(e, t, n, r, i, o, s, a) {
     return h(e + (t ^ (n | ~r)) + o + s | 0, a) + i | 0
-  }(p, g, b, v, m, s[c[y]], 1352829926, d[y])) : y < 32 ? (e = function(e, t, n, r, i, o, s, a) {
+  }(p, v, g, b, m, s[c[y]], 1352829926, d[y])) : y < 32 ? (e = function(e, t, n, r, i, o, s, a) {
     return h(e + (t & n | ~t & r) + o + s | 0, a) + i | 0
   }(r, i, o, l, f, s[a[y]], 1518500249, u[y]), t = function(e, t, n, r, i, o, s, a) {
     return h(e + (t & r | n & ~r) + o + s | 0, a) + i | 0
-  }(p, g, b, v, m, s[c[y]], 1548603684, d[y])) : y < 48 ? (e = function(e, t, n, r, i, o, s, a) {
+  }(p, v, g, b, m, s[c[y]], 1548603684, d[y])) : y < 48 ? (e = function(e, t, n, r, i, o, s, a) {
     return h(e + ((t | ~n) ^ r) + o + s | 0, a) + i | 0
   }(r, i, o, l, f, s[a[y]], 1859775393, u[y]), t = function(e, t, n, r, i, o, s, a) {
     return h(e + ((t | ~n) ^ r) + o + s | 0, a) + i | 0
-  }(p, g, b, v, m, s[c[y]], 1836072691, d[y])) : y < 64 ? (e = function(e, t, n, r, i, o, s, a) {
+  }(p, v, g, b, m, s[c[y]], 1836072691, d[y])) : y < 64 ? (e = function(e, t, n, r, i, o, s, a) {
     return h(e + (t & r | n & ~r) + o + s | 0, a) + i | 0
   }(r, i, o, l, f, s[a[y]], 2400959708, u[y]), t = function(e, t, n, r, i, o, s, a) {
     return h(e + (t & n | ~t & r) + o + s | 0, a) + i | 0
-  }(p, g, b, v, m, s[c[y]], 2053994217, d[y])) : (e = function(e, t, n, r, i, o, s, a) {
+  }(p, v, g, b, m, s[c[y]], 2053994217, d[y])) : (e = function(e, t, n, r, i, o, s, a) {
     return h(e + (t ^ (n | ~r)) + o + s | 0, a) + i | 0
   }(r, i, o, l, f, s[a[y]], 2840853838, u[y]), t = function(e, t, n, r, i, o, s, a) {
     return h(e + (t ^ n ^ r) + o + s | 0, a) + i | 0
-  }(p, g, b, v, m, s[c[y]], 0, d[y])), r = f, f = l, l = h(o, 10), o = i, i = e, p = m, m = v, v = h(b, 10), b = g, g = t;
-  var x = this._b + o + v | 0;
-  this._b = this._c + l + m | 0, this._c = this._d + f + p | 0, this._d = this._e + r + g | 0, this._e = this._a + i + b | 0, this._a = x
+  }(p, v, g, b, m, s[c[y]], 0, d[y])), r = f, f = l, l = h(o, 10), o = i, i = e, p = m, m = b, b = h(g, 10), g = v, v = t;
+  var x = this._b + o + b | 0;
+  this._b = this._c + l + m | 0, this._c = this._d + f + p | 0, this._d = this._e + r + v | 0, this._e = this._a + i + g | 0, this._a = x
 }, p.prototype._digest = function() {
   this._block[this._blockOffset++] = 128, this._blockOffset > 56 && (this._block.fill(0, this._blockOffset, 64), this._update(), this._blockOffset = 0), this._block.fill(0, this._blockOffset, 56), this._block.writeUInt32LE(this._length[0], 56), this._block.writeUInt32LE(this._length[1], 60), this._update();
   var e = r.alloc ? r.alloc(20) : new r(20);

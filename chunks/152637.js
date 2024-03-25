@@ -38,8 +38,8 @@ var n = s("37983"),
   f = s("669491"),
   m = s("77078"),
   g = s("125667"),
-  S = s("731898"),
-  p = s("419135"),
+  p = s("731898"),
+  S = s("419135"),
   v = s("651693"),
   x = s("605160"),
   C = s("875978"),
@@ -54,8 +54,8 @@ var n = s("37983"),
   j = s("957255"),
   O = s("27618"),
   w = s("471671"),
-  y = s("738107"),
-  L = s("594098"),
+  L = s("738107"),
+  y = s("594098"),
   R = s("505684"),
   b = s("109264"),
   P = s("93427"),
@@ -77,8 +77,8 @@ var n = s("37983"),
   J = s("49111"),
   $ = s("719347"),
   ee = s("782340"),
-  et = s("260177"),
-  es = s("632215");
+  et = s("304696"),
+  es = s("919163");
 let en = 72,
   ea = 72;
 var el = a.memo(function(e) {
@@ -92,7 +92,7 @@ var el = a.memo(function(e) {
   } = e, {
     channel: f,
     isOpen: g,
-    messageCount: p,
+    messageCount: S,
     firstMessage: v,
     content: x,
     media: C
@@ -129,7 +129,7 @@ var el = a.memo(function(e) {
   }), {
     ref: T,
     height: N
-  } = (0, S.default)(), E = (0, Y.useForumPostComposerStore)(e => e.setCardHeight);
+  } = (0, p.default)(), E = (0, Y.useForumPostComposerStore)(e => e.setCardHeight);
   a.useEffect(() => {
     null != N && E(t, N)
   }, [N, E, t]), a.useEffect(() => {
@@ -150,8 +150,8 @@ var el = a.memo(function(e) {
       ...w
     } = (0, c.useListItem)(t),
     {
-      isFocused: y,
-      handleFocus: L,
+      isFocused: L,
+      handleFocus: y,
       handleBlur: R
     } = (0, K.default)(O);
   return (0, n.jsxs)("div", {
@@ -170,10 +170,10 @@ var el = a.memo(function(e) {
       onContextMenu: A,
       "aria-label": ee.default.Messages.FORUM_POST_ARIA_LABEL.format({
         title: f.name,
-        count: p
+        count: S
       }),
       className: et.focusTarget,
-      onFocus: L,
+      onFocus: y,
       onBlur: R,
       ...w
     }), (0, n.jsxs)("div", {
@@ -187,7 +187,7 @@ var el = a.memo(function(e) {
           containerWidth: d
         })
       }), (0, n.jsx)(m.FocusBlock, {
-        enabled: !y,
+        enabled: !L,
         children: (0, n.jsx)(eu, {
           channel: f,
           firstMessage: v,
@@ -263,7 +263,7 @@ function ei(e) {
 function er(e) {
   let t = (0, h.useStateFromStores)([W.default], () => W.default.getHasSearchResults(e.parent_id)),
     s = (0, h.useStateFromStores)([W.default], () => W.default.getSearchQuery(e.parent_id)),
-    n = a.useMemo(() => (0, p.createASTHighlighter)(t && null != s ? s : ""), [t, s]),
+    n = a.useMemo(() => (0, S.createASTHighlighter)(t && null != s ? s : ""), [t, s]),
     l = a.useMemo(() => (0, N.default)({
       content: e.name,
       embeds: []
@@ -385,7 +385,7 @@ function ed(e) {
         width: s,
         height: s
       })
-    }), "number" == typeof l ? (0, n.jsx)(y.default, {
+    }), "number" == typeof l ? (0, n.jsx)(L.default, {
       value: l,
       digitWidth: 9,
       className: et.messageCountText
@@ -511,21 +511,21 @@ function eg(e) {
     f = (0, x.getObscuredAlt)(c),
     {
       src: g,
-      width: S,
-      height: p,
+      width: p,
+      height: S,
       alt: C
     } = l;
-  return p > S ? s = ea : t = en, (0, n.jsx)(m.FocusBlock, {
+  return S > p ? s = ea : t = en, (0, n.jsx)(m.FocusBlock, {
     enabled: !0,
     children: (0, n.jsxs)("div", {
       className: et.bodyMedia,
       onClick: e => e.stopPropagation(),
-      children: [g.startsWith("data:") ? (0, n.jsx)(L.default, {
+      children: [g.startsWith("data:") ? (0, n.jsx)(y.default, {
         src: g,
         maxHeight: t,
         maxWidth: s,
-        width: S,
-        height: p,
+        width: p,
+        height: S,
         alt: null != C && d ? f : C,
         className: et.thumbnailContainer,
         imageClassName: i({
@@ -536,8 +536,8 @@ function eg(e) {
         src: g,
         maxHeight: t,
         maxWidth: s,
-        width: S,
-        height: p,
+        width: p,
+        height: S,
         alt: null != C && d ? f : C,
         autoPlay: u,
         animated: o && !d && r,

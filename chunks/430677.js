@@ -4,12 +4,12 @@ s.r(t), s.d(t, {
     return u
   }
 });
-var l = s("37983");
+var n = s("37983");
 s("884691");
-var n = s("414456"),
-  r = s.n(n),
-  o = s("839966"),
-  a = s("274456"),
+var l = s("414456"),
+  o = s.n(l),
+  a = s("170861"),
+  r = s("274456"),
   i = s("193919");
 
 function u(e) {
@@ -17,24 +17,24 @@ function u(e) {
     Icon: t,
     className: s
   } = e;
-  return (0, l.jsx)("div", {
-    className: r(o.container, s),
-    children: (0, l.jsxs)("div", {
-      className: o.innerContainer,
-      children: [(0, l.jsx)("img", {
+  return (0, n.jsx)("div", {
+    className: o(a.container, s),
+    children: (0, n.jsxs)("div", {
+      className: a.innerContainer,
+      children: [(0, n.jsx)("img", {
         src: i,
         alt: "",
-        className: o.star
-      }), (0, l.jsx)("div", {
-        className: o.iconWrapper,
-        children: (0, l.jsx)(t, {
+        className: a.star
+      }), (0, n.jsx)("div", {
+        className: a.iconWrapper,
+        children: (0, n.jsx)(t, {
           width: 40,
           height: 40
         })
-      }), (0, l.jsx)("img", {
-        src: a,
+      }), (0, n.jsx)("img", {
+        src: r,
         alt: "",
-        className: o.sparkle
+        className: a.sparkle
       })]
     })
   })

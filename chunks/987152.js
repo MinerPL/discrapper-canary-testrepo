@@ -5,8 +5,8 @@ r.r(t), r.d(t, {
   }
 }), r("781738");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("281859"),
   u = r("123090"),
   l = function(e) {
@@ -14,8 +14,8 @@ var n = r("884691"),
       r = e.rgb,
       n = e.hsl,
       l = e.hex,
-      c = e.disableAlpha,
-      s = (0, a.default)({
+      s = e.disableAlpha,
+      f = (0, o.default)({
         default: {
           fields: {
             display: "flex",
@@ -55,85 +55,85 @@ var n = r("884691"),
           }
         }
       }, {
-        disableAlpha: c
+        disableAlpha: s
       }),
-      f = function(e, o) {
+      c = function(e, a) {
         e.hex ? i.isValidHex(e.hex) && t({
           hex: e.hex,
           source: "hex"
-        }, o) : e.r || e.g || e.b ? t({
+        }, a) : e.r || e.g || e.b ? t({
           r: e.r || r.r,
           g: e.g || r.g,
           b: e.b || r.b,
           a: r.a,
           source: "rgb"
-        }, o) : e.a && (e.a < 0 ? e.a = 0 : e.a > 100 && (e.a = 100), e.a /= 100, t({
+        }, a) : e.a && (e.a < 0 ? e.a = 0 : e.a > 100 && (e.a = 100), e.a /= 100, t({
           h: n.h,
           s: n.s,
           l: n.l,
           a: e.a,
           source: "rgb"
-        }, o))
+        }, a))
       };
-    return o.createElement("div", {
-      style: s.fields,
+    return a.createElement("div", {
+      style: f.fields,
       className: "flexbox-fix"
-    }, o.createElement("div", {
-      style: s.double
-    }, o.createElement(u.EditableInput, {
+    }, a.createElement("div", {
+      style: f.double
+    }, a.createElement(u.EditableInput, {
       style: {
-        input: s.input,
-        label: s.label
+        input: f.input,
+        label: f.label
       },
       label: "hex",
       value: l.replace("#", ""),
-      onChange: f
-    })), o.createElement("div", {
-      style: s.single
-    }, o.createElement(u.EditableInput, {
+      onChange: c
+    })), a.createElement("div", {
+      style: f.single
+    }, a.createElement(u.EditableInput, {
       style: {
-        input: s.input,
-        label: s.label
+        input: f.input,
+        label: f.label
       },
       label: "r",
       value: r.r,
-      onChange: f,
+      onChange: c,
       dragLabel: "true",
       dragMax: "255"
-    })), o.createElement("div", {
-      style: s.single
-    }, o.createElement(u.EditableInput, {
+    })), a.createElement("div", {
+      style: f.single
+    }, a.createElement(u.EditableInput, {
       style: {
-        input: s.input,
-        label: s.label
+        input: f.input,
+        label: f.label
       },
       label: "g",
       value: r.g,
-      onChange: f,
+      onChange: c,
       dragLabel: "true",
       dragMax: "255"
-    })), o.createElement("div", {
-      style: s.single
-    }, o.createElement(u.EditableInput, {
+    })), a.createElement("div", {
+      style: f.single
+    }, a.createElement(u.EditableInput, {
       style: {
-        input: s.input,
-        label: s.label
+        input: f.input,
+        label: f.label
       },
       label: "b",
       value: r.b,
-      onChange: f,
+      onChange: c,
       dragLabel: "true",
       dragMax: "255"
-    })), o.createElement("div", {
-      style: s.alpha
-    }, o.createElement(u.EditableInput, {
+    })), a.createElement("div", {
+      style: f.alpha
+    }, a.createElement(u.EditableInput, {
       style: {
-        input: s.input,
-        label: s.label
+        input: f.input,
+        label: f.label
       },
       label: "a",
       value: Math.round(100 * r.a),
-      onChange: f,
+      onChange: c,
       dragLabel: "true",
       dragMax: "100"
     })))

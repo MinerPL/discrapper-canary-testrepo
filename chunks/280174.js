@@ -1,25 +1,25 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   TimeUnits: function() {
-    return a.TimeUnits
+    return l.TimeUnits
   },
   getTimeAndUnit: function() {
-    return a.getTimeAndUnit
+    return l.getTimeAndUnit
   },
   default: function() {
-    return s
+    return a
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("512330"),
-  s = (0, a.default)(function(e) {
+var i = n("37983");
+n("884691");
+var l = n("512330"),
+  a = (0, l.default)(function(e) {
     let {
       children: t,
-      className: l
+      className: n
     } = e;
-    return (0, n.jsx)("span", {
-      className: l,
+    return (0, i.jsx)("span", {
+      className: n,
       children: t
     })
   })

@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var i = n("446674"),
-  r = n("913144"),
-  s = n("35468"),
+  s = n("913144"),
+  r = n("35468"),
   a = n("49111");
 let o = a.NetworkConnectionTypes.UNKNOWN,
   l = a.NetworkConnectionSpeeds.UNKNOWN,
   u = null;
 
-function c(e) {
+function d(e) {
   var t;
-  o = null != e.type ? e.type : a.NetworkConnectionTypes.UNKNOWN, l = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : a.NetworkConnectionSpeeds.UNKNOWN, u = e.serviceProvider, f.emitChange()
+  o = null != e.type ? e.type : a.NetworkConnectionTypes.UNKNOWN, l = null !== (t = e.effectiveSpeed) && void 0 !== t ? t : a.NetworkConnectionSpeeds.UNKNOWN, u = e.serviceProvider, _.emitChange()
 }
-class d extends i.default.Store {
+class c extends i.default.Store {
   initialize() {
-    s.default.getNetworkInformation().then(c), s.default.addChangeCallback(c)
+    r.default.getNetworkInformation().then(d), r.default.addChangeCallback(d)
   }
   getType() {
     return o
@@ -30,6 +30,6 @@ class d extends i.default.Store {
     return u
   }
 }
-d.displayName = "NetworkStore";
-let f = new d(r.default, {});
-var E = f
+c.displayName = "NetworkStore";
+let _ = new c(s.default, {});
+var f = _

@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("884691"),
-  n = s("717559"),
-  l = s("38904"),
+  l = s("717559"),
+  n = s("38904"),
   i = s("257869"),
   r = s("452111"),
   o = s("397056");
@@ -16,7 +16,7 @@ function d(e, t) {
     {
       payoutsByPeriod: d,
       loading: u
-    } = (0, l.default)(null == t ? void 0 : t.id, {
+    } = (0, n.default)(null == t ? void 0 : t.id, {
       groupType: o.PaymentPayoutGroupTypes.SERVER_ROLE_SUBSCRIPTION,
       teamId: null == s ? void 0 : s.id
     }),
@@ -24,13 +24,13 @@ function d(e, t) {
     E = (0, r.default)(e),
     {
       currentPeriod: _,
-      previousPeriods: T,
-      metrics: I
+      previousPeriods: I,
+      metrics: T
     } = a.useMemo(() => {
       let {
         currentPeriod: e,
         previousPeriods: t
-      } = (0, n.splitCurrentPeriod)(d), s = (0, n.calculateMetrics)(e, t[0]), a = {
+      } = (0, l.splitCurrentPeriod)(d), s = (0, l.calculateMetrics)(e, t[0]), a = {
         ...s,
         subscribers: E,
         subscriberChange: s.paymentsCountChange
@@ -45,8 +45,8 @@ function d(e, t) {
     loading: u || !c,
     team: s,
     currentPeriod: _,
-    previousPeriods: T,
+    previousPeriods: I,
     allPeriods: d,
-    metrics: I
+    metrics: T
   }
 }

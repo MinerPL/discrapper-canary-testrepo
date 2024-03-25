@@ -14,11 +14,11 @@ var i, a, n = l("37983"),
   o = l("769846"),
   d = l("77078"),
   u = l("627490"),
-  p = l("587974"),
-  m = l("315102"),
+  m = l("587974"),
+  p = l("315102"),
   _ = l("159885"),
   f = l("782340"),
-  h = l("875612");
+  h = l("541304");
 (a = i || (i = {}))[a.SMALL = (0, _.cssValueToNumber)(o.default.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", a[a.LARGE = (0, _.cssValueToNumber)(o.default.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
 let C = {
     [i.SMALL]: h.moreGuildsSmall,
@@ -74,7 +74,7 @@ function I(e) {
       children: N.length > 0 ? (0, n.jsxs)(n.Fragment, {
         children: [N.map((e, t) => {
           let l = t === N.length - 1 && 0 === y,
-            i = m.default.getGuildIconURL({
+            i = p.default.getGuildIconURL({
               id: e.id,
               icon: e.icon,
               size: v,
@@ -92,11 +92,11 @@ function I(e) {
             });
           return l ? (0, n.jsx)(s.Fragment, {
             children: a
-          }, e.id) : (0, n.jsx)(p.default, {
+          }, e.id) : (0, n.jsx)(m.default, {
             className: h.iconMask,
             height: v,
             width: v,
-            mask: p.default.Masks.VOICE_USER_SUMMARY_ITEM,
+            mask: m.default.Masks.VOICE_USER_SUMMARY_ITEM,
             children: a
           }, e.id)
         }), y > 0 ? (0, n.jsx)(d.Tooltip, {

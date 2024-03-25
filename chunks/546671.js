@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
     return a
   }
 });
-var i = n("37983");
-n("884691");
-var s = n("469563"),
-  r = n("7037"),
-  l = n("246053"),
-  a = (0, s.replaceIcon)(function(e) {
-    return (0, i.jsx)(l.default, {
+var n = r("37983");
+r("884691");
+var i = r("469563"),
+  s = r("7037"),
+  l = r("246053"),
+  a = (0, i.replaceIcon)(function(e) {
+    return (0, n.jsx)(l.default, {
       ...e,
       direction: l.default.Directions.UP
     })
-  }, r.ArrowSmallUpIcon)
+  }, s.ArrowSmallUpIcon)

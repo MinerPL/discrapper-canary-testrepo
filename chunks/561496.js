@@ -6,11 +6,11 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("191814"),
+var l = s("77078"),
+  n = s("191814"),
   i = s("677795"),
   r = s("782340"),
-  o = s("988511"),
+  o = s("828127"),
   d = s("627150"),
   u = s("370730"),
   c = s("350233");
@@ -31,7 +31,7 @@ function E(e) {
       })
     }), (0, a.jsx)("div", {
       className: o.howItWorksDescription,
-      children: (0, a.jsx)(n.Text, {
+      children: (0, a.jsx)(l.Text, {
         variant: "text-sm/normal",
         color: "header-primary",
         children: s
@@ -52,11 +52,11 @@ function _() {
     description: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_STEP_3
   }];
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(n.Heading, {
+    children: [(0, a.jsx)(l.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
       children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_TITLE
-    }), (0, a.jsx)(l.default, {
+    }), (0, a.jsx)(n.default, {
       size: 24
     }), (0, a.jsx)("div", {
       className: o.howItWorksContainer,
@@ -64,9 +64,9 @@ function _() {
         imageSrc: e.imageSrc,
         description: e.description
       }, e.imageSrc))
-    }), (0, a.jsx)(l.default, {
+    }), (0, a.jsx)(n.default, {
       size: 24
-    }), (0, a.jsx)(n.Text, {
+    }), (0, a.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "header-secondary",
       children: r.default.Messages.GUILD_ROLE_SUBSCRIPTION_HOW_IT_WORKS_FOOTER.format({

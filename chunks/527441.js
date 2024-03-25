@@ -4,32 +4,32 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("446674"),
-  s = n("913144");
-let i = null;
-class l extends a.default.PersistedStore {
+var s = n("446674"),
+  a = n("913144");
+let l = null;
+class i extends s.default.PersistedStore {
   initialize(e) {
     var t;
-    i = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
+    l = null !== (t = null == e ? void 0 : e.type) && void 0 !== t ? t : null
   }
   getType() {
-    return i
+    return l
   }
   getState() {
     return {
-      type: i
+      type: l
     }
   }
 }
-l.displayName = "NewUserStore", l.persistKey = "nuf";
-var r = new l(s.default, {
+i.displayName = "NewUserStore", i.persistKey = "nuf";
+var r = new i(a.default, {
   NUF_NEW_USER: function(e) {
     let {
       newUserType: t
     } = e;
-    i = t
+    l = t
   },
   NUF_COMPLETE: function() {
-    i = null
+    l = null
   }
 })

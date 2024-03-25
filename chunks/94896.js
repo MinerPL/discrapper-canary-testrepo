@@ -5,17 +5,17 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var r = n("373589"),
-  o = n("330762"),
-  a = n("679640");
+  i = n("954562"),
+  o = n("679640");
 
-function i(e, t) {
+function s(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -30,11 +30,11 @@ var c = function() {
     var t = this;
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, c), s(this, "hooks", (0, o.wrapConnectorHooks)({
+    }(this, c), a(this, "hooks", (0, i.wrapConnectorHooks)({
       dropTarget: function(e, n) {
-        t.clearDropTarget(), t.dropTargetOptions = n, (0, a.isRef)(e) ? t.dropTargetRef = e : t.dropTargetNode = e, t.reconnect()
+        t.clearDropTarget(), t.dropTargetOptions = n, (0, o.isRef)(e) ? t.dropTargetRef = e : t.dropTargetNode = e, t.reconnect()
       }
-    })), s(this, "handlerId", null), s(this, "dropTargetRef", null), s(this, "dropTargetNode", void 0), s(this, "dropTargetOptionsInternal", null), s(this, "unsubscribeDropTarget", void 0), s(this, "lastConnectedHandlerId", null), s(this, "lastConnectedDropTarget", null), s(this, "lastConnectedDropTargetOptions", null), s(this, "backend", void 0), this.backend = e
+    })), a(this, "handlerId", null), a(this, "dropTargetRef", null), a(this, "dropTargetNode", void 0), a(this, "dropTargetOptionsInternal", null), a(this, "unsubscribeDropTarget", void 0), a(this, "lastConnectedHandlerId", null), a(this, "lastConnectedDropTarget", null), a(this, "lastConnectedDropTargetOptions", null), a(this, "backend", void 0), this.backend = e
   }
   return e = c, t = [{
     key: "connectTarget",
@@ -98,5 +98,5 @@ var c = function() {
     value: function() {
       this.dropTargetRef = null, this.dropTargetNode = null
     }
-  }], i(e.prototype, t), n && i(e, n), c
+  }], s(e.prototype, t), n && s(e, n), c
 }()

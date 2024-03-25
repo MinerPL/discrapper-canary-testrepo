@@ -43,9 +43,9 @@ let U = new E.default("SubscriptionHeader.tsx"),
     section: y.AnalyticsSections.SETTINGS_PREMIUM,
     object: y.AnalyticsObjects.CARD
   },
-  b = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING];
+  v = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING];
 
-function v(e) {
+function b(e) {
   let {
     wordMark: t,
     subscriptionInfo: s,
@@ -137,7 +137,7 @@ function G() {
   let {
     analyticsLocations: e
   } = (0, c.default)(d.default.ACCOUNT_CREDIT_BANNER);
-  return (0, a.jsx)(v, {
+  return (0, a.jsx)(b, {
     wordMark: (0, a.jsx)(j, {}),
     subscriptionInfo: (0, a.jsx)("div", {
       className: D.planInfo,
@@ -207,7 +207,7 @@ var F = function(e) {
       })
     }
   }, q = () => {
-    if (!b.includes(l.status) || null == l.pauseEndsAt) {
+    if (!v.includes(l.status) || null == l.pauseEndsAt) {
       (0, N.captureBillingException)(Error("Invalid subscription to resume"), {
         extra: {
           subscriptionId: l.id,
@@ -257,7 +257,7 @@ var F = function(e) {
         "aria-label": x.default.Messages.PREMIUM_TITLE
       })
   }
-  let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : v;
+  let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : b;
   return (0, a.jsx)(en, {
     wordMark: ea,
     subscriptionInfo: (n = $, r(null != E, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {

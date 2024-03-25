@@ -1,42 +1,42 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return N
+    return O
   }
 }), a("222007");
 var n = a("37983"),
   l = a("884691"),
-  s = a("748820"),
-  i = a("446674"),
+  o = a("748820"),
+  s = a("446674"),
   r = a("819855"),
-  o = a("77078"),
+  i = a("77078"),
   u = a("371642"),
-  d = a("966724"),
-  c = a("9560"),
+  c = a("966724"),
+  d = a("9560"),
   m = a("761354"),
   f = a("161778"),
-  h = a("228220"),
+  g = a("228220"),
   p = a("258078"),
-  R = a("149279"),
-  v = a("315102"),
-  x = a("773336"),
-  _ = a("367632"),
-  I = a("374159"),
-  g = a("782340"),
-  T = a("301410"),
-  E = a("741161"),
-  j = a("687444");
-let O = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map(e => ({
+  h = a("149279"),
+  _ = a("315102"),
+  v = a("773336"),
+  E = a("367632"),
+  R = a("374159"),
+  T = a("782340"),
+  x = a("521870"),
+  I = a("741161"),
+  S = a("687444");
+let N = ["Android", "iOS", "Windows Mobile", "Windows", "Linux", "Mac OS X"].map(e => ({
   label: e,
   value: e
 }));
 
-function N(e) {
-  var t, N, S, P, C;
+function O(e) {
+  var t, O, b, j, L;
   let {
-    transitionState: B,
-    onClose: M
-  } = e, b = l.useRef(null), U = l.useRef(null), [L, y] = l.useState(""), [G, A] = l.useState(""), [F, w] = l.useState(), [k, D] = l.useState(""), [V, Y] = l.useState([]), [H, W] = l.useState(), [z, X] = l.useState(), [Q, q] = l.useState(!1), [K, Z] = l.useState(""), [J, $] = l.useState(function(e) {
+    transitionState: C,
+    onClose: P
+  } = e, U = l.useRef(null), y = l.useRef(null), [B, M] = l.useState(""), [w, D] = l.useState(""), [F, G] = l.useState(), [A, V] = l.useState(""), [k, H] = l.useState([]), [Y, W] = l.useState(), [K, z] = l.useState(), [J, X] = l.useState(!1), [Q, q] = l.useState(""), [Z, $] = l.useState(function(e) {
     switch (e) {
       case "windows":
         return "Windows";
@@ -46,158 +46,158 @@ function N(e) {
         return "Linux"
     }
     return ""
-  }((0, x.getOS)())), [ee, et] = l.useState(""), [ea, en] = l.useState(""), [el, es] = l.useState(""), [ei, er] = l.useState(""), [eo, eu] = l.useState(!1), [ed, ec] = l.useState(!1), [em, ef] = l.useState(!1), eh = () => {
-    null == M || M()
+  }((0, v.getOS)())), [ee, et] = l.useState(""), [ea, en] = l.useState(""), [el, eo] = l.useState(""), [es, er] = l.useState(""), [ei, eu] = l.useState(!1), [ec, ed] = l.useState(!1), [em, ef] = l.useState(!1), eg = () => {
+    null == P || P()
   }, ep = e => {
-    Y(V.filter(t => t.id !== e))
+    H(k.filter(t => t.id !== e))
   };
-  async function eR() {
+  async function eh() {
     var e;
-    if (ef(!1), "" === L || null == F) {
+    if (ef(!1), "" === B || null == F) {
       eu(!0);
       return
     }
-    let t = null == H ? void 0 : null === (e = H.features) || void 0 === e ? void 0 : e.find(e => (0, _.getFeatureId)(e) === z);
-    ec(!0), eu(!1);
-    let l = (0, I.getAttachments)(V.map(e => {
+    let t = null == Y ? void 0 : null === (e = Y.features) || void 0 === e ? void 0 : e.find(e => (0, E.getFeatureId)(e) === K);
+    ed(!0), eu(!1);
+    let l = (0, R.getAttachments)(k.map(e => {
         let {
           item: t
         } = e;
         return t
       })),
-      s = !0 === Q ? {
-        overridePlatformInformation: Q,
-        device: K,
-        operatingSystem: J,
+      o = !0 === J ? {
+        overridePlatformInformation: J,
+        device: Q,
+        operatingSystem: Z,
         operatingSystemVersion: ee,
         clientVersion: ea,
         clientBuildNumber: el,
-        locale: ei
+        locale: es
       } : {
-        overridePlatformInformation: Q
+        overridePlatformInformation: J
       },
-      i = await (0, _.submitReport)({
-        name: L,
-        description: G,
+      s = await (0, E.submitReport)({
+        name: B,
+        description: w,
         priority: F,
         feature: t,
-        url: k
-      }, s, l).catch(() => ef(!0));
-    ec(!1), null != i && i.ok ? (window.open(i.body.permalink_url, "_blank"), eh(), (0, o.openModalLazy)(async () => {
+        url: A
+      }, o, l).catch(() => ef(!0));
+    ed(!1), null != s && s.ok ? (window.open(s.body.permalink_url, "_blank"), eg(), (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await a.el("223993").then(a.bind(a, "223993"));
       return t => (0, n.jsx)(e, {
         ...t,
-        asanaTask: i.body
+        asanaTask: s.body
       })
     })) : ef(!0)
   }
   l.useEffect(() => {
     (async function e() {
-      let e = await (0, _.fetchBugReportConfig)();
+      let e = await (0, E.fetchBugReportConfig)();
       W(e)
     })()
   }, []), l.useEffect(() => {
-    if (V.length > 0) {
+    if (k.length > 0) {
       var e;
-      null === (e = U.current) || void 0 === e || e.scrollIntoView({
+      null === (e = y.current) || void 0 === e || e.scrollIntoView({
         behavior: "smooth",
         block: "end"
       })
     }
-  }, [V]);
-  let ev = (0, i.useStateFromStores)([f.default], () => f.default.theme),
-    ex = (0, r.isThemeDark)(ev) ? E : j;
-  return (0, n.jsx)(o.ModalRoot, {
-    className: T.modalRoot,
-    transitionState: B,
-    "aria-label": g.default.Messages.SUBMIT_BUG,
-    children: (0, n.jsx)(o.ModalContent, {
-      className: T.modalContent,
+  }, [k]);
+  let e_ = (0, s.useStateFromStores)([f.default], () => f.default.theme),
+    ev = (0, r.isThemeDark)(e_) ? I : S;
+  return (0, n.jsx)(i.ModalRoot, {
+    className: x.modalRoot,
+    transitionState: C,
+    "aria-label": T.default.Messages.SUBMIT_BUG,
+    children: (0, n.jsx)(i.ModalContent, {
+      className: x.modalContent,
       paddingFix: !1,
       children: (0, n.jsx)("div", {
-        className: T.container,
-        children: (0, n.jsx)(o.HeadingLevel, {
+        className: x.container,
+        children: (0, n.jsx)(i.HeadingLevel, {
           forceLevel: 1,
           component: (0, n.jsx)("div", {
-            className: T.sidebarContainer,
+            className: x.sidebarContainer,
             children: (0, n.jsx)(p.default, {
               strong: !0,
               color: p.default.Colors.HEADER_PRIMARY,
               size: p.default.Sizes.SIZE_24,
-              children: (0, n.jsx)(o.H, {
-                children: g.default.Messages.BUG_REPORT_TITLE
+              children: (0, n.jsx)(i.H, {
+                children: T.default.Messages.BUG_REPORT_TITLE
               })
             })
           }),
           children: (0, n.jsxs)("div", {
-            className: T.contentContainer,
+            className: x.contentContainer,
             children: [(0, n.jsx)("img", {
-              className: T.contentIcon,
+              className: x.contentIcon,
               alt: "",
-              src: ex
+              src: ev
             }), (0, n.jsxs)("form", {
-              className: T.form,
-              onSubmit: eR,
-              children: [(0, n.jsx)(o.FormItem, {
-                error: eo && "" === L ? g.default.Messages.REQUIRED : null,
-                title: g.default.Messages.BUG_REPORT_NAME,
-                className: T.formInput,
-                children: (0, n.jsx)(o.TextInput, {
+              className: x.form,
+              onSubmit: eh,
+              children: [(0, n.jsx)(i.FormItem, {
+                error: ei && "" === B ? T.default.Messages.REQUIRED : null,
+                title: T.default.Messages.BUG_REPORT_NAME,
+                className: x.formInput,
+                children: (0, n.jsx)(i.TextInput, {
                   placeholder: "Something is broken on this screen.",
                   type: "text",
-                  value: L,
+                  value: B,
                   maxLength: 100,
-                  onChange: y
+                  onChange: M
                 })
-              }), (0, n.jsxs)(o.FormItem, {
-                title: g.default.Messages.BUG_REPORT_DESCRIPTION,
-                className: T.formInput,
-                children: [(0, n.jsx)(o.TextArea, {
+              }), (0, n.jsxs)(i.FormItem, {
+                title: T.default.Messages.BUG_REPORT_DESCRIPTION,
+                className: x.formInput,
+                children: [(0, n.jsx)(i.TextArea, {
                   placeholder: "What did you expect to see?",
-                  value: G,
-                  onChange: A
-                }), (0, n.jsx)(o.Text, {
+                  value: w,
+                  onChange: D
+                }), (0, n.jsx)(i.Text, {
                   variant: "text-sm/normal",
                   color: "info-help-text",
                   children: "You can add additional information/media on the ticket after submitting"
                 })]
-              }), (0, n.jsx)(o.FormItem, {
-                error: eo && void 0 === F ? g.default.Messages.REQUIRED : null,
-                title: g.default.Messages.BUG_REPORT_PRIORITY,
-                className: T.formInput,
-                children: (0, n.jsx)(o.SingleSelect, {
+              }), (0, n.jsx)(i.FormItem, {
+                error: ei && void 0 === F ? T.default.Messages.REQUIRED : null,
+                title: T.default.Messages.BUG_REPORT_PRIORITY,
+                className: x.formInput,
+                children: (0, n.jsx)(i.SingleSelect, {
                   renderOptionLabel: e => (function(e) {
                     let t = e.priority;
                     return (0, n.jsxs)("div", {
-                      className: T.formPriorityImageContainer,
+                      className: x.formPriorityImageContainer,
                       children: [(0, n.jsxs)("div", {
-                        className: T.formPriorityTitleContainer,
+                        className: x.formPriorityTitleContainer,
                         children: [(0, n.jsx)("img", {
                           alt: "",
-                          className: T.formPriorityImage,
-                          src: (0, v.getEmojiURL)({
+                          className: x.formPriorityImage,
+                          src: (0, _.getEmojiURL)({
                             id: t.emoji,
                             animated: !0,
                             size: 48
                           })
-                        }), (0, n.jsx)(o.Text, {
+                        }), (0, n.jsx)(i.Text, {
                           color: "header-primary",
                           variant: "text-sm/semibold",
-                          className: T.formPriorityTitle,
+                          className: x.formPriorityTitle,
                           children: t.title
                         })]
-                      }), (0, n.jsx)(o.Text, {
+                      }), (0, n.jsx)(i.Text, {
                         color: "header-secondary",
                         variant: "text-xs/normal",
-                        className: T.formPriorityDescription,
+                        className: x.formPriorityDescription,
                         children: t.description
                       })]
                     })
                   })(e),
-                  onChange: w,
-                  options: (0, _.getPriorities)().map(e => ({
+                  onChange: G,
+                  options: (0, E.getPriorities)().map(e => ({
                     priority: e,
                     value: e.value,
                     label: e.title
@@ -206,160 +206,160 @@ function N(e) {
                   maxVisibleItems: 3,
                   closeOnSelect: !0
                 })
-              }), (0, n.jsx)(o.FormItem, {
-                title: g.default.Messages.BUG_REPORT_FEATURE_AREA,
-                className: T.formInput,
-                children: (0, n.jsx)(o.SearchableSelect, {
-                  value: z,
-                  options: null !== (C = null == (t = H) ? void 0 : null === (P = t.features) || void 0 === P ? void 0 : null === (S = P.filter(e => "" !== (0, _.getFeatureId)(e))) || void 0 === S ? void 0 : null === (N = S.map(e => {
+              }), (0, n.jsx)(i.FormItem, {
+                title: T.default.Messages.BUG_REPORT_FEATURE_AREA,
+                className: x.formInput,
+                children: (0, n.jsx)(i.SearchableSelect, {
+                  value: K,
+                  options: null !== (L = null == (t = Y) ? void 0 : null === (j = t.features) || void 0 === j ? void 0 : null === (b = j.filter(e => "" !== (0, E.getFeatureId)(e))) || void 0 === b ? void 0 : null === (O = b.map(e => {
                     var t;
                     return {
                       label: null !== (t = e.name) && void 0 !== t ? t : "",
-                      value: (0, _.getFeatureId)(e)
+                      value: (0, E.getFeatureId)(e)
                     }
-                  })) || void 0 === N ? void 0 : N.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== C ? C : [],
-                  isDisabled: null == H,
-                  onChange: e => X(e)
+                  })) || void 0 === O ? void 0 : O.sort((e, t) => e.label.localeCompare(t.label))) && void 0 !== L ? L : [],
+                  isDisabled: null == Y,
+                  onChange: e => z(e)
                 })
-              }), (0, n.jsx)(o.FormItem, {
-                title: g.default.Messages.BUG_REPORT_URL,
-                className: T.formInput,
-                children: (0, n.jsx)(o.TextInput, {
-                  placeholder: g.default.Messages.BUG_REPORT_EXTERNAL_SOURCE,
+              }), (0, n.jsx)(i.FormItem, {
+                title: T.default.Messages.BUG_REPORT_URL,
+                className: x.formInput,
+                children: (0, n.jsx)(i.TextInput, {
+                  placeholder: T.default.Messages.BUG_REPORT_EXTERNAL_SOURCE,
                   type: "text",
-                  value: k,
+                  value: A,
                   maxLength: 5e3,
-                  onChange: D
+                  onChange: V
                 })
-              }), (0, n.jsx)(o.FormItem, {
-                className: T.formInput,
-                children: (0, n.jsx)(o.Checkbox, {
-                  value: Q,
-                  onChange: (e, t) => q(t),
-                  children: (0, n.jsx)(o.Text, {
+              }), (0, n.jsx)(i.FormItem, {
+                className: x.formInput,
+                children: (0, n.jsx)(i.Checkbox, {
+                  value: J,
+                  onChange: (e, t) => X(t),
+                  children: (0, n.jsx)(i.Text, {
                     variant: "text-sm/normal",
                     color: "info-help-text",
-                    children: g.default.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
+                    children: T.default.Messages.BUG_REPORT_OVERRIDE_PLATFORM_INFORMATION
                   })
                 })
-              }), Q ? (0, n.jsxs)(n.Fragment, {
-                children: [(0, n.jsx)(o.FormItem, {
-                  title: g.default.Messages.BUG_REPORT_DEVICE,
-                  className: T.formInput,
-                  children: (0, n.jsx)(o.TextInput, {
+              }), J ? (0, n.jsxs)(n.Fragment, {
+                children: [(0, n.jsx)(i.FormItem, {
+                  title: T.default.Messages.BUG_REPORT_DEVICE,
+                  className: x.formInput,
+                  children: (0, n.jsx)(i.TextInput, {
                     placeholder: "Device",
-                    value: K,
-                    onChange: e => Z(e)
+                    value: Q,
+                    onChange: e => q(e)
                   })
-                }), (0, n.jsx)(o.FormItem, {
-                  title: g.default.Messages.BUG_REPORT_OS,
-                  className: T.formInput,
-                  children: (0, n.jsx)(o.SingleSelect, {
-                    value: J,
-                    options: O,
+                }), (0, n.jsx)(i.FormItem, {
+                  title: T.default.Messages.BUG_REPORT_OS,
+                  className: x.formInput,
+                  children: (0, n.jsx)(i.SingleSelect, {
+                    value: Z,
+                    options: N,
                     onChange: e => $(e)
                   })
-                }), (0, n.jsx)(o.FormItem, {
-                  title: g.default.Messages.BUG_REPORT_OS_VERSION,
-                  className: T.formInput,
-                  children: (0, n.jsx)(o.TextInput, {
+                }), (0, n.jsx)(i.FormItem, {
+                  title: T.default.Messages.BUG_REPORT_OS_VERSION,
+                  className: x.formInput,
+                  children: (0, n.jsx)(i.TextInput, {
                     placeholder: "Operating System Version",
                     value: ee,
                     onChange: e => et(e)
                   })
-                }), (0, n.jsx)(o.FormItem, {
-                  title: g.default.Messages.BUG_REPORT_CLIENT_VERSION,
-                  className: T.formInput,
-                  children: (0, n.jsx)(o.TextInput, {
+                }), (0, n.jsx)(i.FormItem, {
+                  title: T.default.Messages.BUG_REPORT_CLIENT_VERSION,
+                  className: x.formInput,
+                  children: (0, n.jsx)(i.TextInput, {
                     placeholder: "Client Version",
                     value: ea,
                     onChange: e => en(e)
                   })
-                }), (0, n.jsx)(o.FormItem, {
-                  title: g.default.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
-                  className: T.formInput,
-                  children: (0, n.jsx)(o.TextInput, {
+                }), (0, n.jsx)(i.FormItem, {
+                  title: T.default.Messages.BUG_REPORT_CLIENT_BUILD_NUMBER,
+                  className: x.formInput,
+                  children: (0, n.jsx)(i.TextInput, {
                     placeholder: "Client Build Number",
                     value: el,
-                    onChange: e => es(e)
+                    onChange: e => eo(e)
                   })
-                }), (0, n.jsx)(o.FormItem, {
-                  title: g.default.Messages.BUG_REPORT_LOCALE,
-                  className: T.formInput,
-                  children: (0, n.jsx)(o.TextInput, {
+                }), (0, n.jsx)(i.FormItem, {
+                  title: T.default.Messages.BUG_REPORT_LOCALE,
+                  className: x.formInput,
+                  children: (0, n.jsx)(i.TextInput, {
                     placeholder: "Locale",
-                    value: ei,
+                    value: es,
                     onChange: e => er(e)
                   })
                 })]
-              }) : null, (0, n.jsxs)(o.Button, {
-                className: T.uploadButton,
-                children: [g.default.Messages.BUG_REPORT_ADD_ATTACHMENTS, (0, n.jsx)(u.default, {
-                  ref: b,
+              }) : null, (0, n.jsxs)(i.Button, {
+                className: x.uploadButton,
+                children: [T.default.Messages.BUG_REPORT_ADD_ATTACHMENTS, (0, n.jsx)(u.default, {
+                  ref: U,
                   onChange: e => {
                     var t, a;
                     if ((null === (a = e.currentTarget) || void 0 === a ? void 0 : null === (t = a.files) || void 0 === t ? void 0 : t[0]) != null) {
-                      let t = Array.from(e.currentTarget.files).map(e => new d.default({
-                        id: (0, s.v4)(),
+                      let t = Array.from(e.currentTarget.files).map(e => new c.default({
+                        id: (0, o.v4)(),
                         file: e,
-                        platform: d.UploadPlatform.WEB
+                        platform: c.UploadPlatform.WEB
                       }));
-                      Y([...V, ...t])
+                      H([...k, ...t])
                     }
                   },
                   multiple: !0
                 })]
-              }), V.length > 0 ? (0, n.jsxs)(n.Fragment, {
+              }), k.length > 0 ? (0, n.jsxs)(n.Fragment, {
                 children: [(0, n.jsx)("div", {
-                  className: T.imageOptionsContainer,
-                  children: (0, n.jsx)(o.FormTitle, {
+                  className: x.imageOptionsContainer,
+                  children: (0, n.jsx)(i.FormTitle, {
                     children: "Preview"
                   })
                 }), (0, n.jsx)("div", {
-                  ref: U,
-                  className: T.attachmentsGrid,
-                  children: V.length > 0 && V.map(e => (0, n.jsxs)("div", {
-                    className: T.attachmentsGridItem,
-                    children: [(0, n.jsx)(o.Text, {
+                  ref: y,
+                  className: x.attachmentsGrid,
+                  children: k.length > 0 && k.map(e => (0, n.jsxs)("div", {
+                    className: x.attachmentsGridItem,
+                    children: [(0, n.jsx)(i.Text, {
                       variant: "text-sm/normal",
                       children: e.filename
                     }), (0, n.jsxs)("div", {
-                      className: T.attachmentContainer,
+                      className: x.attachmentContainer,
                       children: [(0, n.jsx)(m.UploadIcon, {
                         upload: e
                       }), (0, n.jsx)("div", {
-                        className: T.toolBar,
-                        children: (0, n.jsx)(R.default, {
-                          children: (0, n.jsx)(c.default, {
-                            tooltip: g.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+                        className: x.toolBar,
+                        children: (0, n.jsx)(h.default, {
+                          children: (0, n.jsx)(d.default, {
+                            tooltip: T.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
                             onClick: () => ep(e.id),
                             dangerous: !0,
-                            children: (0, n.jsx)(h.default, {})
+                            children: (0, n.jsx)(g.default, {})
                           })
                         })
                       })]
                     })]
                   }, e.id))
                 })]
-              }) : null, em ? (0, n.jsx)(o.Text, {
+              }) : null, em ? (0, n.jsx)(i.Text, {
                 color: "text-danger",
                 variant: "text-sm/normal",
                 children: "Something went wrong, try again!"
               }) : null]
-            }), (0, n.jsxs)(o.ModalFooter, {
-              className: T.submitContainer,
-              children: [(0, n.jsx)(o.Button, {
-                className: T.formButton,
-                look: o.ButtonLooks.BLANK,
-                onClick: eh,
-                children: (0, n.jsx)(o.Text, {
+            }), (0, n.jsxs)(i.ModalFooter, {
+              className: x.submitContainer,
+              children: [(0, n.jsx)(i.Button, {
+                className: x.formButton,
+                look: i.ButtonLooks.BLANK,
+                onClick: eg,
+                children: (0, n.jsx)(i.Text, {
                   variant: "text-sm/normal",
-                  children: g.default.Messages.CANCEL
+                  children: T.default.Messages.CANCEL
                 })
-              }), (0, n.jsx)(o.Button, {
-                submitting: ed,
-                className: T.formButton,
-                onClick: eR,
+              }), (0, n.jsx)(i.Button, {
+                submitting: ec,
+                className: x.formButton,
+                onClick: eh,
                 children: "Submit and Open Report"
               })]
             })]

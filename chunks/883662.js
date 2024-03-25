@@ -24,12 +24,12 @@ i.r(n), i.d(n, {
 });
 var t = i("37983");
 i("884691");
-var r = i("414456"),
-  a = i.n(r),
-  l = i("798609"),
+var l = i("414456"),
+  r = i.n(l),
+  a = i("798609"),
   s = i("153160"),
   u = i("782340"),
-  o = i("889454");
+  o = i("398941");
 
 function c(e) {
   let {
@@ -37,7 +37,7 @@ function c(e) {
     className: i
   } = e;
   return (0, t.jsx)("div", {
-    className: a(o.table, i),
+    className: r(o.table, i),
     children: n
   })
 }
@@ -56,10 +56,10 @@ function d(e) {
   let {
     label: n,
     value: i,
-    className: r
+    className: l
   } = e;
   return (0, t.jsxs)("div", {
-    className: a(o.row, r),
+    className: r(o.row, l),
     children: [(0, t.jsx)("div", {
       className: o.rowLabel,
       children: n
@@ -74,13 +74,13 @@ function m(e) {
   let {
     label: n,
     value: i,
-    discounts: r,
-    originalAmount: a,
+    discounts: l,
+    originalAmount: r,
     interval: c,
     currency: I,
     className: m,
     intervalCount: P
-  } = e, T = e => null != r ? r.find(n => n.type === e) : null, _ = T(l.InvoiceDiscountTypes.SUBSCRIPTION_PLAN), v = T(l.InvoiceDiscountTypes.ENTITLEMENT), M = null != _ ? Math.floor(_.amount / a * 100) : null, R = (0, s.formatPrice)(a, I);
+  } = e, T = e => null != l ? l.find(n => n.type === e) : null, _ = T(a.InvoiceDiscountTypes.SUBSCRIPTION_PLAN), v = T(a.InvoiceDiscountTypes.ENTITLEMENT), M = null != _ ? Math.floor(_.amount / r * 100) : null, R = (0, s.formatPrice)(r, I);
   return (0, t.jsxs)(t.Fragment, {
     children: [(0, t.jsx)(d, {
       label: n,
@@ -105,13 +105,13 @@ function P(e) {
   let {
     extended: n = !1,
     negativeMarginTop: i = !1,
-    negativeMarginBottom: r = !1
+    negativeMarginBottom: l = !1
   } = e;
   return (0, t.jsx)("div", {
-    className: a(o.divider, {
+    className: r(o.divider, {
       [o.dividerExtended]: n,
       [o.negativeMarginTop]: i,
-      [o.negativeMarginBottom]: r
+      [o.negativeMarginBottom]: l
     })
   })
 }
@@ -120,10 +120,10 @@ function T(e) {
   let {
     label: n,
     value: i,
-    className: r
+    className: l
   } = e;
   return (0, t.jsxs)("div", {
-    className: a(o.totalRow, r),
+    className: r(o.totalRow, l),
     children: [(0, t.jsx)("div", {
       className: o.totalLabel,
       children: n
@@ -140,7 +140,7 @@ function _(e) {
     className: i
   } = e;
   return (0, t.jsx)("div", {
-    className: a(o.finePrint, i),
+    className: r(o.finePrint, i),
     children: n
   })
 }

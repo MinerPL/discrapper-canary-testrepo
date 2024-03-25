@@ -6,59 +6,59 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("77078"),
+var l = s("446674"),
+  n = s("77078"),
   i = s("679653"),
   r = s("42203"),
   o = s("27618"),
   d = s("697218"),
   u = s("462392"),
   c = s("782340"),
-  E = s("245225");
+  E = s("439418");
 
 function _(e) {
   var t;
   let {
     action: s,
     triggerType: _,
-    toggled: T,
-    onToggleAction: I
-  } = e, S = e => () => I(e), N = (0, u.getActionInfo)(s.type, s, _), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, f = (0, n.useStateFromStores)([d.default, o.default, r.default], () => {
-    let e = r.default.getChannel(g);
+    toggled: I,
+    onToggleAction: T
+  } = e, S = e => () => T(e), f = (0, u.getActionInfo)(s.type, s, _), m = null === (t = s.metadata) || void 0 === t ? void 0 : t.channelId, N = (0, l.useStateFromStores)([d.default, o.default, r.default], () => {
+    let e = r.default.getChannel(m);
     if (null == e) return null;
     let t = (0, i.computeChannelName)(e, d.default, o.default);
     return t
-  }, [g]);
-  if (null == N) return null;
+  }, [m]);
+  if (null == f) return null;
   let {
-    headerText: A,
-    descriptionText: L,
-    icon: m
-  } = N;
+    headerText: g,
+    descriptionText: h,
+    icon: C
+  } = f;
   return (0, a.jsxs)("div", {
     className: E.actionContainer,
     children: [(0, a.jsx)("div", {
       className: E.actionIconContainer,
-      children: (0, a.jsx)(m, {
+      children: (0, a.jsx)(C, {
         width: 24,
         height: 24,
         className: E.actionIcon
       })
     }), (0, a.jsxs)("div", {
       className: E.actionTextContainer,
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, a.jsx)(n.Heading, {
         variant: "heading-sm/semibold",
-        children: A
-      }), (0, a.jsx)(l.Text, {
+        children: g
+      }), (0, a.jsx)(n.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: L
-      }), T && (0, a.jsxs)(l.Text, {
+        children: h
+      }), I && (0, a.jsxs)(n.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: [null != f && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
-          channelName: f
-        }), (0, a.jsx)(l.Clickable, {
+        children: [null != N && c.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_EDIT_HELPER.format({
+          channelName: N
+        }), (0, a.jsx)(n.Clickable, {
           onClick: S(!0),
           className: E.editChannel,
           tag: "span",
@@ -67,9 +67,9 @@ function _(e) {
         })]
       })]
     }), (0, a.jsx)("div", {
-      children: (0, a.jsx)(l.Checkbox, {
-        type: l.Checkbox.Types.INVERTED,
-        value: T,
+      children: (0, a.jsx)(n.Checkbox, {
+        type: n.Checkbox.Types.INVERTED,
+        value: I,
         onChange: S(!1),
         className: E.actionCheckbox
       })

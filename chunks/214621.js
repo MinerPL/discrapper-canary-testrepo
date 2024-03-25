@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("70845"),
@@ -15,75 +15,75 @@ var a = n("37983"),
   c = n("845579"),
   f = n("957255"),
   E = n("27618"),
-  _ = n("505684"),
-  h = n("93427"),
+  h = n("505684"),
+  _ = n("93427"),
   C = n("389495"),
-  I = n("49111"),
-  T = n("719347"),
-  S = n("782340"),
-  m = n("863452"),
-  p = n("632215");
-let A = s.memo(function(e) {
+  S = n("49111"),
+  I = n("719347"),
+  m = n("782340"),
+  p = n("196417"),
+  T = n("919163");
+let g = s.memo(function(e) {
   let {
     channel: t
   } = e, {
     loaded: n,
-    error: i,
-    message: A
-  } = (0, C.useMessageRequestPreview)(t), g = (0, r.useStateFromStores)([E.default], () => null != A && E.default.isBlocked(A.author.id), [A]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(I.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
+    error: l,
+    message: g
+  } = (0, C.useMessageRequestPreview)(t), A = (0, r.useStateFromStores)([E.default], () => null != g && E.default.isBlocked(g.author.id), [g]), N = (0, r.useStateFromStores)([f.default], () => f.default.can(S.Permissions.MANAGE_MESSAGES, t)), R = c.RenderSpoilers.useSetting(), {
     content: O
-  } = s.useMemo(() => (null == A ? void 0 : A.content) != null && "" !== A.content ? (0, d.default)(A, {
+  } = s.useMemo(() => (null == g ? void 0 : g.content) != null && "" !== g.content ? (0, d.default)(g, {
     formatInline: !0,
     noStyleAndInteraction: !0
   }) : {
     content: null
-  }, [A]), L = null;
-  if (i) L = (0, a.jsx)(o.Text, {
-    className: m.messageReplacement,
+  }, [g]), v = null;
+  if (l) v = (0, a.jsx)(o.Text, {
+    className: p.messageReplacement,
     variant: "text-sm/normal",
     color: "text-muted",
-    children: S.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
+    children: m.default.Messages.MESSAGE_REQUESTS_ERROR_LOADING_PREVIEW
   });
   else if (n) {
-    if (null != A && g) L = (0, a.jsx)(o.Text, {
-      className: m.messageReplacement,
+    if (null != g && A) v = (0, a.jsx)(o.Text, {
+      className: p.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: S.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
+      children: m.default.Messages.MESSAGE_REQUESTS_BLOCKED_MESSAGE
     });
-    else if (null != A) {
+    else if (null != g) {
       let {
         contentPlaceholder: e,
         renderedContent: t
-      } = (0, h.renderSingleLineMessage)(A, O, g, l(m.messageContent, p.inlineFormat, p.smallFontSize), {
-        iconClass: m.messageContentIcon,
-        iconSize: T.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
+      } = (0, _.renderSingleLineMessage)(g, O, A, i(p.messageContent, T.inlineFormat, T.smallFontSize), {
+        iconClass: p.messageContentIcon,
+        iconSize: I.SINGLE_LINE_MESSAGE_DEFAULT_ICON_SIZE
       });
-      L = null != t ? (0, a.jsx)(o.Text, {
+      v = null != t ? (0, a.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: m.messageContent,
+        className: p.messageContent,
         children: t
       }) : (0, a.jsx)(o.Text, {
         tag: "span",
         variant: "text-sm/normal",
         color: "text-muted",
-        className: m.messageReplacement,
+        className: p.messageReplacement,
         children: e
       })
-    } else L = (0, a.jsx)(o.Text, {
-      className: m.messageReplacement,
+    } else v = (0, a.jsx)(o.Text, {
+      className: p.messageReplacement,
       variant: "text-sm/normal",
       color: "text-muted",
-      children: S.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
+      children: m.default.Messages.MESSAGE_REQUESTS_DELETED_MESSAGE
     })
-  } else L = null;
-  return (0, a.jsx)(_.ObscuredDisplayContext.Provider, {
+  } else v = null;
+  return (0, a.jsx)(h.ObscuredDisplayContext.Provider, {
     value: (0, u.default)(R, N),
     children: (0, a.jsx)(o.FocusBlock, {
-      className: m.messageFocusBlock,
-      children: L
+      className: p.messageFocusBlock,
+      children: v
     })
   })
 });
-var g = A
+var A = g

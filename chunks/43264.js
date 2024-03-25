@@ -13,7 +13,7 @@ var s = a("446674"),
   o = a("701909"),
   d = a("49111"),
   u = a("782340"),
-  c = a("539742");
+  c = a("193523");
 let N = o.default.getArticleURL(d.HelpdeskArticles.MISSING_ENTITLEMENT);
 var M = s.default.connectStores([n.default], e => {
   let {

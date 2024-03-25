@@ -5,11 +5,11 @@ r.r(t), r.d(t, {
   }
 }), r("424973"), r("781738");
 var n = r("599436"),
-  o = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-  a = /\\(\\)?/g,
+  a = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
+  o = /\\(\\)?/g,
   i = (0, n.default)(function(e) {
     var t = [];
-    return 46 === e.charCodeAt(0) && t.push(""), e.replace(o, function(e, r, n, o) {
-      t.push(n ? o.replace(a, "$1") : r || e)
+    return 46 === e.charCodeAt(0) && t.push(""), e.replace(a, function(e, r, n, a) {
+      t.push(n ? a.replace(o, "$1") : r || e)
     }), t
   })

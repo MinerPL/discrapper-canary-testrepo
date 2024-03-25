@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   authorizeAndSetTestModeApplication: function() {
-    return f
+    return E
   },
   reset: function() {
-    return E
+    return f
   },
   resetError: function() {
     return _
@@ -19,7 +19,7 @@ var s = n("913144"),
   u = n("253981"),
   d = n("568131"),
   c = n("49111");
-async function f(e, t) {
+async function E(e, t) {
   s.default.dispatch({
     applicationId: e,
     type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START"
@@ -27,15 +27,15 @@ async function f(e, t) {
   try {
     let n = await (0, l.validateTestMode)(e);
     if (!n) throw Error("Do not have access!");
-    let f = i.default.getApplication(e);
-    null == f && (f = r.default.createFromServer(await a.default.fetchApplication(e)));
-    let E = (0, o.hasFlag)(f.flags, c.ApplicationFlags.EMBEDDED);
-    if (E && (null == t || !u.default.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
-    return !E && d.createTestModeLibraryApplications(f), s.default.dispatch({
+    let E = i.default.getApplication(e);
+    null == E && (E = r.default.createFromServer(await a.default.fetchApplication(e)));
+    let f = (0, o.hasFlag)(E.flags, c.ApplicationFlags.EMBEDDED);
+    if (f && (null == t || !u.default.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
+    return !f && d.createTestModeLibraryApplications(E), s.default.dispatch({
       type: "DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS",
       applicationId: e,
-      originURL: E ? t : null
-    }), f
+      originURL: f ? t : null
+    }), E
   } catch (t) {
     return s.default.dispatch({
       type: "DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL",
@@ -45,7 +45,7 @@ async function f(e, t) {
   }
 }
 
-function E() {
+function f() {
   s.default.dispatch({
     type: "DEVELOPER_TEST_MODE_RESET"
   })

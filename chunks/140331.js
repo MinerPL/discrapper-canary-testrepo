@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   useFavoriteGIFs: function() {
-    return s
+    return o
   },
   useSortedFavoriteGIFs: function() {
-    return c
+    return u
   },
   useIsFavoriteGIF: function() {
-    return o
+    return c
   }
 });
-var r = n("884691"),
-  l = n("917351"),
-  a = n.n(l),
-  i = n("42507");
-let u = {};
+var s = r("884691"),
+  n = r("917351"),
+  l = r.n(n),
+  i = r("42507");
+let a = {};
 
-function s() {
+function o() {
   var e, t;
-  let n = (0, i.useFrecencySettings)();
-  return null !== (t = null === (e = n.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : u
+  let r = (0, i.useFrecencySettings)();
+  return null !== (t = null === (e = r.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : a
 }
 
-function c() {
-  let e = s();
-  return r.useMemo(() => a(e).map((e, t) => ({
+function u() {
+  let e = o();
+  return s.useMemo(() => l(e).map((e, t) => ({
     ...e,
     url: t
   })).sortBy("order").reverse().value(), [e])
 }
 
-function o(e) {
-  let t = s();
+function c(e) {
+  let t = o();
   return null != t[e]
 }

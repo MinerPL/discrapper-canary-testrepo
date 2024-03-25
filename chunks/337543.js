@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("702976");
 var i = n("446674"),
@@ -38,7 +38,7 @@ function c(e) {
     t.state = "banned" in e && e.banned ? a.InviteStates.BANNED : a.InviteStates.EXPIRED
   })
 }
-class f extends i.default.Store {
+class _ extends i.default.Store {
   getInvite(e) {
     return o[e]
   }
@@ -52,8 +52,8 @@ class f extends i.default.Store {
     return u[e]
   }
 }
-f.displayName = "InviteStore";
-var _ = new f(s.default, {
+_.displayName = "InviteStore";
+var f = new _(s.default, {
   INVITE_RESOLVE: function(e) {
     let {
       code: t

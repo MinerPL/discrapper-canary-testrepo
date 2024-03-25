@@ -1,12 +1,12 @@
-var n = r("931492"),
-  o = r("85762");
-e.exports = function(e, t, r, a) {
-  var i = !r;
-  r || (r = {});
-  for (var u = -1, l = t.length; ++u < l;) {
-    var c = t[u],
-      s = a ? a(r[c], e[c], c, r, e) : void 0;
-    void 0 === s && (s = e[c]), i ? o(r, c, s) : n(r, c, s)
+var r = n("931492"),
+  i = n("85762");
+e.exports = function(e, t, n, o) {
+  var s = !n;
+  n || (n = {});
+  for (var a = -1, c = t.length; ++a < c;) {
+    var u = t[a],
+      d = o ? o(n[u], e[u], u, n, e) : void 0;
+    void 0 === d && (d = e[u]), s ? i(n, u, d) : r(n, u, d)
   }
-  return r
+  return n
 }

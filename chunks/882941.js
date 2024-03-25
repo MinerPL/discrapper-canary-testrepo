@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getSKUIdFromURL: function() {
-    return f
+    return E
   },
   canUserInstall: function() {
-    return E
+    return f
   },
   getReadablePreorderReleaseDate: function() {
     return T
@@ -24,14 +24,14 @@ let u = {},
     ...o.SKUGenres
   });
 
-function f(e) {
+function E(e) {
   let t = (0, a.matchPath)(e, {
     path: o.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug")
   });
   return null != t ? t.params.skuId : null
 }
 
-function E(e) {
+function f(e) {
   let t = (0, r.nativePlatformTypeToSKUOperatingSystem)((0, i.getPlatform)());
   return e.type === o.SKUTypes.DURABLE_PRIMARY && null != t && e.supportedOperatingSystems.includes(t)
 }

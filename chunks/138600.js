@@ -1,11 +1,11 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = Function.prototype.toString,
-  o = function(e) {
+  a = function(e) {
     if (null != e) {
       try {
         return n.call(e)

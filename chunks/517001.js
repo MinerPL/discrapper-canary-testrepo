@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return c
   },
   getPremiumTypeFromRawValue: function() {
-    return f
+    return _
   }
 }), n("702976");
 var i = n("627445"),
@@ -42,6 +42,6 @@ function c(e) {
   return !!n || null != e && (!!(null != e.flags && (0, r.hasFlag)(e.flags, o.UserFlags.STAFF)) || null != e.personal_connection_id)
 }
 
-function f(e) {
+function _(e) {
   return void 0 !== e ? e === o.PREMIUM_TYPE_NONE ? null : e : e
 }

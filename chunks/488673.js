@@ -22,8 +22,8 @@ var l = a("37983"),
   C = a("803725"),
   g = a("142485"),
   E = a("643290"),
-  N = a("431734"),
-  L = a("141210"),
+  L = a("431734"),
+  N = a("141210"),
   I = a("80028"),
   M = a("846325"),
   j = a("782340"),
@@ -44,7 +44,7 @@ function _(e) {
     setVoiceAudioEnabled: k,
     applicationAudioEnabled: D,
     setApplicationAudioEnabled: P
-  } = (0, L.useEditModalContext)(), [O, F] = n.useState(null), {
+  } = (0, N.useEditModalContext)(), [O, F] = n.useState(null), {
     onShareClick: B
   } = (0, g.default)({
     channelId: r,
@@ -148,7 +148,7 @@ function _(e) {
       className: i(T.clipFormSection, T.metadataSection),
       children: [(0, l.jsx)(E.default, {
         clip: t
-      }), (0, l.jsx)(N.default, {
+      }), (0, l.jsx)(L.default, {
         className: T.userList,
         clip: t
       })]

@@ -9,17 +9,17 @@ n.r(t), n.d(t, {
 });
 var r = n("37983");
 n("884691");
-var i = n("414456"),
-  l = n.n(i),
-  o = n("75196"),
-  s = n("956089"),
-  a = n("125835"),
+var s = n("414456"),
+  i = n.n(s),
+  l = n("75196"),
+  a = n("956089"),
+  o = n("125835"),
   u = n("782340"),
-  c = n("159163");
+  c = n("389341");
 
 function d(e) {
   return (0, r.jsx)("svg", {
-    ...(0, o.default)({
+    ...(0, l.default)({
       ...e
     }),
     width: "25",
@@ -38,17 +38,17 @@ function f(e) {
   let {
     className: t,
     forceUseColorForSparkles: n = !1,
-    shouldInheritTextColor: i = !1,
-    shouldInheritBackgroundColor: o = !1
+    shouldInheritTextColor: s = !1,
+    shouldInheritBackgroundColor: l = !1
   } = e;
-  return (0, r.jsx)(a.default, {
+  return (0, r.jsx)(o.default, {
     className: t,
     forceUseColor: n,
-    children: (0, r.jsx)(s.TextBadge, {
+    children: (0, r.jsx)(a.TextBadge, {
       disableColor: !0,
-      className: l(c.tag, {
-        [c.inheritTextColor]: i,
-        [c.inheritBackgroundColor]: o
+      className: i(c.tag, {
+        [c.inheritTextColor]: s,
+        [c.inheritBackgroundColor]: l
       }),
       text: u.default.Messages.NEW
     })

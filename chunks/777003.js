@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var i = n("37983");
 n("884691");
 var l = n("414456"),
-  s = n.n(l),
-  i = n("383957");
+  a = n.n(l),
+  s = n("994468");
 
 function r(e) {
   let {
@@ -17,9 +17,9 @@ function r(e) {
     className: l,
     ...r
   } = e;
-  return (0, a.jsx)("div", {
-    className: s(i.section, l, {
-      [i.lastSection]: n
+  return (0, i.jsx)("div", {
+    className: a(s.section, l, {
+      [s.lastSection]: n
     }),
     ...r,
     children: t

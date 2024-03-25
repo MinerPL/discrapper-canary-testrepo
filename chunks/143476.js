@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("446674"),
   o = s("290381"),
   u = s("819855"),
@@ -32,8 +32,8 @@ var a = s("37983"),
   h = s("641078"),
   L = s("400307"),
   x = s("521322"),
-  D = s("159646"),
-  v = s("379521"),
+  v = s("159646"),
+  D = s("379521"),
   U = s("958966"),
   b = s("149102"),
   j = s("830648"),
@@ -57,8 +57,8 @@ let J = e => {
       isVisible: t,
       isMarketingPageOptimizationEnabled: s,
       children: r
-    } = e, n = (0, l.useStateFromStores)([E.default], () => E.default.useReducedMotion);
-    return !s || n ? (0, a.jsx)(a.Fragment, {
+    } = e, i = (0, l.useStateFromStores)([E.default], () => E.default.useReducedMotion);
+    return !s || i ? (0, a.jsx)(a.Fragment, {
       children: r
     }) : (0, a.jsx)(x.AnimatedWrapper, {
       isVisible: t,
@@ -85,7 +85,7 @@ let J = e => {
       alt: "starry sky background header splash",
       className: Y.dynamicImage,
       src: X
-    }) : (0, a.jsx)(v.default, {
+    }) : (0, a.jsx)(D.default, {
       lifted: !t && s
     }) : null
   },
@@ -94,11 +94,11 @@ let J = e => {
       isFullscreen: t,
       selectedPremiumType: s,
       isMarketingPageOptimizationEnabled: r,
-      inOfferExperience: n,
+      inOfferExperience: i,
       setIsAllPerksVisible: l
     } = e;
     return (t || r) && (!r || s !== W.PremiumTypes.TIER_0) ? (0, a.jsxs)("div", {
-      className: i({
+      className: n({
         [Y.whatsNewSectionBackground]: !r,
         [Y.whatsNewSection]: r
       }),
@@ -113,10 +113,10 @@ let J = e => {
           setIsAllPerksVisible: l,
           previousComponent: F.NitroLandingPages.MARKETING
         }) : void 0
-      }), n && !r ? (0, a.jsx)(G.default, {
+      }), i && !r ? (0, a.jsx)(G.default, {
         className: Y.pdSparklesTop,
         variant: G.SparkleVariants.TOP
-      }) : null, n && !r ? (0, a.jsx)(G.default, {
+      }) : null, i && !r ? (0, a.jsx)(G.default, {
         className: Y.pdSparklesBottom,
         variant: G.SparkleVariants.BOTTOM
       }) : null]
@@ -126,9 +126,9 @@ var et = e => {
   var t;
   let {
     isFullscreen: s
-  } = e, n = (0, A.useMarketingOptimizationExperiment)({
+  } = e, i = (0, A.useMarketingOptimizationExperiment)({
     autoTrackExposure: !0
-  }), E = r.useRef(null), [x, v] = r.useState(!1), [j, B] = r.useState(!1), [G, K] = r.useState(!1), X = !x && !j || n, [et, es] = r.useState(!1), ea = (0, l.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), [er, en] = r.useState(n ? W.PremiumTypes.TIER_2 : void 0), ei = null != ea ? (0, m.getPremiumPlanItem)(ea) : null, el = null != ei ? m.default.getSkuIdForPlan(ei.planId) : null, eo = null !== el && el !== W.PremiumSubscriptionSKUs.TIER_2 ? W.PremiumSubscriptionSKUs.TIER_2 : null, eu = (0, p.useLocalizedPromoQuery)(), ed = (0, u.isThemeLight)((0, _.default)()), ec = null != eu, [e_, eE] = r.useState(!1), eT = (0, C.usePremiumDiscountOffer)(), eI = (0, g.usePremiumTrialOffer)(), ef = null == eI ? void 0 : null === (t = eI.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eR = (0, N.useIsInPremiumOfferExperience)(), eS = (0, h.useIsEligibleForBogoPromotion)(), {
+  }), E = r.useRef(null), [x, D] = r.useState(!1), [j, B] = r.useState(!1), [G, K] = r.useState(!1), X = !x && !j || i, [et, es] = r.useState(!1), ea = (0, l.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), [er, ei] = r.useState(i ? W.PremiumTypes.TIER_2 : void 0), en = null != ea ? (0, m.getPremiumPlanItem)(ea) : null, el = null != en ? m.default.getSkuIdForPlan(en.planId) : null, eo = null !== el && el !== W.PremiumSubscriptionSKUs.TIER_2 ? W.PremiumSubscriptionSKUs.TIER_2 : null, eu = (0, p.useLocalizedPromoQuery)(), ed = (0, u.isThemeLight)((0, _.default)()), ec = null != eu, [e_, eE] = r.useState(!1), eT = (0, C.usePremiumDiscountOffer)(), eI = (0, g.usePremiumTrialOffer)(), ef = null == eI ? void 0 : null === (t = eI.subscription_trial) || void 0 === t ? void 0 : t.sku_id, eR = (0, N.useIsInPremiumOfferExperience)(), eS = (0, h.useIsEligibleForBogoPromotion)(), {
     analyticsLocations: em
   } = (0, I.default)(T.default.PREMIUM_MARKETING), eN = "PremiumMarketingHome";
   (0, c.useTriggerDebuggingAA)({
@@ -140,58 +140,58 @@ var et = e => {
   }), r.useEffect(() => {
     es(!0)
   }, []), r.useEffect(() => {
-    en(n ? W.PremiumTypes.TIER_2 : void 0)
-  }, [n]);
-  let eA = n ? {
+    ei(i ? W.PremiumTypes.TIER_2 : void 0)
+  }, [i]);
+  let eA = i ? {
       borderRadius: "24px"
     } : void 0,
     ep = (0, a.jsxs)("div", {
-      className: i(Y.container, {
-        [Y.settingsContainer]: !s && !n
+      className: n(Y.container, {
+        [Y.settingsContainer]: !s && !i
       }),
       "data-cy": "tier-0-marketing-page",
-      children: [(0, a.jsx)(D.default, {
+      children: [(0, a.jsx)(v.default, {
         premiumSubscription: ea,
-        className: i(s ? Y.fullscreenExistingSubscriberSpacing : Y.existingSubscriberSpacing, {
+        className: n(s ? Y.fullscreenExistingSubscriberSpacing : Y.existingSubscriberSpacing, {
           [Y.zIndex1]: eR
         }),
         isFullscreen: s,
-        textColor: n && ed ? "text-normal" : void 0
+        textColor: i && ed ? "text-normal" : void 0
       }), (0, a.jsx)($, {
         isFullscreen: s,
         inOfferExperience: eR,
-        isMarketingPageOptimizationEnabled: n
+        isMarketingPageOptimizationEnabled: i
       }), !s && ec ? (0, a.jsx)(M.default, {
         localizedPricingPromo: eu,
         smallGap: !0
       }) : (0, a.jsx)(o.VisibilitySensor, {
-        onChange: e => v(e),
+        onChange: e => D(e),
         threshold: 0,
         active: !0,
         children: (0, a.jsx)(U.default, {
           subscriptionTier: eo,
           isFullscreen: s || eR,
-          className: i({
-            [Y.fullscreenHero]: s && !n,
-            [Y.fullscreenHeroMarketingOptimization]: n,
+          className: n({
+            [Y.fullscreenHero]: s && !i,
+            [Y.fullscreenHeroMarketingOptimization]: i,
             [Y.settingsHeroNoBackground]: !s && eR,
-            [Y.trialMarketingMargin]: eR && !n,
+            [Y.trialMarketingMargin]: eR && !i,
             [Y.settingsHeroBogoHeight]: !s && eS,
             [Y.settingsHeroBogoMarginFullscreen]: s && eS,
             [Y.noTopPaddingOverride]: null != ea
           }),
-          hideSparkles: n,
-          hideSubscribeAndGiftButton: n
+          hideSparkles: i,
+          hideSubscribeAndGiftButton: i
         })
-      }), n && null != er && (0, a.jsx)(b.default, {
-        setSelectedPremiumType: en,
+      }), i && null != er && (0, a.jsx)(b.default, {
+        setSelectedPremiumType: ei,
         selectedPremiumType: er
       }), (0, a.jsxs)("div", {
-        className: i({
-          [Y.premiumStackedTierCardsContainerFullscreen]: s && n,
-          [Y.premiumTierCardsContainerSettings]: !s && !n,
-          [Y.premiumStackedTierCardsContainerSettings]: !s && n,
-          [Y.premiumTierCardsContainerFullscreen]: s && !n
+        className: n({
+          [Y.premiumStackedTierCardsContainerFullscreen]: s && i,
+          [Y.premiumTierCardsContainerSettings]: !s && !i,
+          [Y.premiumStackedTierCardsContainerSettings]: !s && i,
+          [Y.premiumTierCardsContainerFullscreen]: s && !i
         }),
         children: [(0, a.jsx)(O.default, {
           isFullscreen: s
@@ -202,79 +202,79 @@ var et = e => {
           threshold: .1,
           active: !0,
           children: (0, a.jsx)(L.default, {
-            showWumpus: !n,
-            variant: n ? L.PremiumTierCardsVariant.STACKED : L.PremiumTierCardsVariant.DEFAULT,
+            showWumpus: !i,
+            variant: i ? L.PremiumTierCardsVariant.STACKED : L.PremiumTierCardsVariant.DEFAULT,
             isFullScreen: s,
-            selectedPremiumType: n ? er : void 0,
+            selectedPremiumType: i ? er : void 0,
             tier0CTAButton: ef === W.PremiumSubscriptionSKUs.TIER_2 || eS || null != eT ? (0, a.jsx)(H.default, {
               forceInverted: !0,
               showIcon: !1,
               subscriptionTier: W.PremiumSubscriptionSKUs.TIER_0,
-              className: i({
-                [Y.marginTopForButtons]: !n,
-                [Y.roundedSubscribeButton]: n
+              className: n({
+                [Y.marginTopForButtons]: !i,
+                [Y.roundedSubscribeButton]: i
               }),
               style: eA,
               look: d.ButtonLooks.OUTLINED,
               color: d.ButtonColors.WHITE,
-              buttonShineClassName: n ? Y.buttonShine : void 0
+              buttonShineClassName: i ? Y.buttonShine : void 0
             }) : (0, a.jsx)(H.default, {
               forceInverted: !0,
               showIcon: !1,
               subscriptionTier: W.PremiumSubscriptionSKUs.TIER_0,
               style: eA,
-              className: i({
-                [Y.marginTopForButtons]: !n,
-                [Y.roundedSubscribeButton]: n
+              className: n({
+                [Y.marginTopForButtons]: !i,
+                [Y.roundedSubscribeButton]: i
               }),
-              buttonShineClassName: n ? Y.buttonShine : void 0
+              buttonShineClassName: i ? Y.buttonShine : void 0
             }),
             tier2CTAButton: ef === W.PremiumSubscriptionSKUs.TIER_0 ? (0, a.jsx)(H.default, {
               forceInverted: !0,
               showIcon: !1,
               subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2,
               style: eA,
-              className: i({
-                [Y.marginTopForButtons]: !n,
-                [Y.roundedSubscribeButton]: n
+              className: n({
+                [Y.marginTopForButtons]: !i,
+                [Y.roundedSubscribeButton]: i
               }),
               look: d.ButtonLooks.OUTLINED,
               color: d.ButtonColors.WHITE,
-              buttonShineClassName: n ? Y.buttonShine : void 0
+              buttonShineClassName: i ? Y.buttonShine : void 0
             }) : (0, a.jsx)(H.default, {
               forceInverted: !0,
               style: eA,
               showIcon: !1,
               subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2,
-              className: i({
-                [Y.marginTopForButtons]: !n,
-                [Y.roundedSubscribeButton]: n
+              className: n({
+                [Y.marginTopForButtons]: !i,
+                [Y.roundedSubscribeButton]: i
               }),
               isEligibleForBogoPromotion: eS,
-              buttonShineClassName: n ? Y.buttonShine : void 0
+              buttonShineClassName: i ? Y.buttonShine : void 0
             })
           })
         })]
       }), (0, a.jsx)(J, {
         isVisible: er === W.PremiumTypes.TIER_2,
-        isMarketingPageOptimizationEnabled: n,
+        isMarketingPageOptimizationEnabled: i,
         children: (0, a.jsx)(ee, {
           isFullscreen: s,
           inOfferExperience: eR,
           selectedPremiumType: er,
-          isMarketingPageOptimizationEnabled: n,
+          isMarketingPageOptimizationEnabled: i,
           setIsAllPerksVisible: eE
         })
       }), (0, a.jsx)(J, {
         isVisible: er === W.PremiumTypes.TIER_2,
-        isMarketingPageOptimizationEnabled: n,
+        isMarketingPageOptimizationEnabled: i,
         children: (er === W.PremiumTypes.TIER_2 || null == er) && (0, a.jsx)(q, {
           isFullscreen: s,
           selectedPremiumType: er
         })
-      }), n && (0, a.jsx)(J, {
+      }), i && (0, a.jsx)(J, {
         isVisible: er === W.PremiumTypes.TIER_0,
-        isMarketingPageOptimizationEnabled: n,
+        isMarketingPageOptimizationEnabled: i,
         children: er === W.PremiumTypes.TIER_0 && (0, a.jsx)(q, {
           isFullscreen: s,
           selectedPremiumType: er

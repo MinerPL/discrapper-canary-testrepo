@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   DnDKeyboardHelpBar: function() {
-    return E
+    return f
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  s = n("907002"),
+  s = n("884691"),
+  r = n("146606"),
   a = n("446674"),
   o = n("533979"),
   l = n("577776"),
   u = n("206230"),
-  c = n("57406"),
-  d = n("782340"),
-  f = n("157372");
+  d = n("57406"),
+  c = n("782340"),
+  _ = n("725599");
 
-function E() {
+function f() {
   let e = [{
       keybinds: ["Spacebar", "Enter"],
-      name: d.default.Messages.DND_OPERATION_LABEL_DROP
+      name: c.default.Messages.DND_OPERATION_LABEL_DROP
     }, {
       keybinds: ["up", "down"],
-      name: d.default.Messages.DND_OPERATION_LABEL_MOVE
+      name: c.default.Messages.DND_OPERATION_LABEL_MOVE
     }, {
       keybinds: ["ESC"],
-      name: d.default.Messages.DND_OPERATION_LABEL_CANCEL
+      name: c.default.Messages.DND_OPERATION_LABEL_CANCEL
     }],
     t = (0, a.useStateFromStores)([u.default], () => u.default.useReducedMotion),
-    n = (0, c.useDndMode)(),
-    E = (0, s.useTransition)(n, {
+    n = (0, d.useDndMode)(),
+    f = (0, r.useTransition)(n, {
       enter: {
         from: {
           opacity: 0,
@@ -43,28 +43,28 @@ function E() {
         opacity: 0,
         y: t ? 0 : 80
       },
-      config: s.config.stiff
+      config: r.config.stiff
     });
-  return E((t, n) => n ? (0, i.jsx)("div", {
-    className: f.positioner,
-    children: (0, i.jsx)(s.animated.div, {
-      className: f.container,
+  return f((t, n) => n ? (0, i.jsx)("div", {
+    className: _.positioner,
+    children: (0, i.jsx)(r.animated.div, {
+      className: _.container,
       style: t,
       children: e.map((t, n) => {
         let {
-          keybinds: s,
+          keybinds: r,
           name: a
         } = t;
-        return (0, i.jsxs)(r.Fragment, {
+        return (0, i.jsxs)(s.Fragment, {
           children: [(0, i.jsx)(l.Text, {
             variant: "text-md/semibold",
-            className: f.bindName,
+            className: _.bindName,
             children: a
-          }), s.map(e => (0, i.jsx)(o.KeyCombo, {
+          }), r.map(e => (0, i.jsx)(o.KeyCombo, {
             shortcut: e,
-            className: f.shortcut
+            className: _.shortcut
           }, e)), n < e.length - 1 ? (0, i.jsx)("span", {
-            className: f.separator
+            className: _.separator
           }) : null]
         }, a)
       })

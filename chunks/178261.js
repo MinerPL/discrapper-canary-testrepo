@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var i = n("446674"),
-  s = n("77078"),
-  l = n("820542"),
+  l = n("77078"),
+  s = n("820542"),
   u = n("870691"),
   r = n("42203"),
   o = n("49111"),
@@ -20,9 +20,9 @@ function f(e) {
       n = Object.values(t).filter(e => e.type === o.ChannelTypes.GUILD_CATEGORY);
     return 0 === n.length || n.every(e => u.default.isCollapsed(e.id))
   });
-  return t ? null : (0, a.jsx)(s.MenuItem, {
+  return t ? null : (0, a.jsx)(l.MenuItem, {
     id: "collapse-all-categories",
     label: d.default.Messages.COLLAPSE_ALL_CATEGORIES,
-    action: () => (0, l.categoryCollapseAll)(e.guild_id)
+    action: () => (0, s.categoryCollapseAll)(e.guild_id)
   })
 }

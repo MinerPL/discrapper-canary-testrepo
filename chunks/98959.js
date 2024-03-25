@@ -24,8 +24,8 @@ var r = n("697309"),
         n = e.options,
         m = e.name,
         h = n.mainAxis,
-        _ = n.altAxis,
-        y = n.boundary,
+        y = n.altAxis,
+        _ = n.boundary,
         g = n.rootBoundary,
         v = n.altBoundary,
         b = n.padding,
@@ -34,7 +34,7 @@ var r = n("697309"),
         k = n.tetherOffset,
         L = void 0 === k ? 0 : k,
         D = (0, c.default)(t, {
-          boundary: y,
+          boundary: _,
           rootBoundary: g,
           padding: b,
           altBoundary: v
@@ -50,7 +50,7 @@ var r = n("697309"),
         C = "function" == typeof L ? L(Object.assign({}, t.rects, {
           placement: t.placement
         })) : L,
-        H = "number" == typeof C ? {
+        A = "number" == typeof C ? {
           mainAxis: C,
           altAxis: C
         } : Object.assign({
@@ -58,17 +58,17 @@ var r = n("697309"),
           altAxis: 0
         }, C),
         F = t.modifiersData.offset ? t.modifiersData.offset[t.placement] : null,
-        N = {
+        H = {
           x: 0,
           y: 0
         };
       if (E) {
         if (void 0 === h || h) {
-          var I, A = "y" === x ? r.top : r.left,
+          var I, N = "y" === x ? r.top : r.left,
             R = "y" === x ? r.bottom : r.right,
             z = "y" === x ? "height" : "width",
             W = E[x],
-            B = W + D[A],
+            B = W + D[N],
             U = W - D[R],
             K = w ? -j[z] / 2 : 0,
             V = S === r.start ? P[z] : j[z],
@@ -79,18 +79,18 @@ var r = n("697309"),
               height: 0
             },
             $ = t.modifiersData["arrow#persistent"] ? t.modifiersData["arrow#persistent"].padding : (0, f.default)(),
-            Q = $[A],
+            Q = $[N],
             X = $[R],
             Z = (0, s.within)(0, P[z], q[z]),
-            ee = Y ? P[z] / 2 - K - Z - Q - H.mainAxis : V - Z - Q - H.mainAxis,
-            et = Y ? -P[z] / 2 + K + Z + X + H.mainAxis : J + Z + X + H.mainAxis,
+            ee = Y ? P[z] / 2 - K - Z - Q - A.mainAxis : V - Z - Q - A.mainAxis,
+            et = Y ? -P[z] / 2 + K + Z + X + A.mainAxis : J + Z + X + A.mainAxis,
             en = t.elements.arrow && (0, l.default)(t.elements.arrow),
             er = en ? "y" === x ? en.clientTop || 0 : en.clientLeft || 0 : 0,
             ea = null != (I = null == F ? void 0 : F[x]) ? I : 0,
             eo = (0, s.within)(w ? (0, p.min)(B, W + ee - ea - er) : B, W, w ? (0, p.max)(U, W + et - ea) : U);
-          E[x] = eo, N[x] = eo - W
+          E[x] = eo, H[x] = eo - W
         }
-        if (void 0 !== _ && _) {
+        if (void 0 !== y && y) {
           var ei, es = "x" === x ? r.top : r.left,
             eu = "x" === x ? r.bottom : r.right,
             el = E[O],
@@ -99,12 +99,12 @@ var r = n("697309"),
             ef = el - D[eu],
             ep = -1 !== [(0, r.top), (0, r.left)].indexOf(T),
             em = null != (ei = null == F ? void 0 : F[O]) ? ei : 0,
-            eh = ep ? ed : el - P[ec] - j[ec] - em + H.altAxis,
-            e_ = ep ? el + P[ec] + j[ec] - em - H.altAxis : ef,
-            ey = w && ep ? (0, s.withinMaxClamp)(eh, el, e_) : (0, s.within)(w ? eh : ed, el, w ? e_ : ef);
-          E[O] = ey, N[O] = ey - el
+            eh = ep ? ed : el - P[ec] - j[ec] - em + A.altAxis,
+            ey = ep ? el + P[ec] + j[ec] - em - A.altAxis : ef,
+            e_ = w && ep ? (0, s.withinMaxClamp)(eh, el, ey) : (0, s.within)(w ? eh : ed, el, w ? ey : ef);
+          E[O] = e_, H[O] = e_ - el
         }
-        t.modifiersData[m] = N
+        t.modifiersData[m] = H
       }
     },
     requiresIfExists: ["offset"]

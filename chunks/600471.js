@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("395905"),
-  l = s("264742"),
+var l = s("395905"),
+  n = s("264742"),
   i = s("782340");
 
 function r(e) {
@@ -19,11 +19,11 @@ function r(e) {
     reapplyNoticeText: u,
     isApplicationPending: c
   } = e;
-  if (null != r) return (0, a.jsx)(n.default, {
+  if (null != r) return (0, a.jsx)(l.default, {
     children: r.getAnyErrorMessage()
   });
   let E = null;
-  return c ? E = i.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING : null != d ? E = d : null != u && (E = u, t = i.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA), null != E ? (0, a.jsx)(l.default, {
+  return c ? E = i.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ENABLE_REQUEST_RECEIVED_AND_PENDING : null != d ? E = d : null != u && (E = u, t = i.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_SUBMIT_APPEAL_CTA), null != E ? (0, a.jsx)(n.default, {
     notice: E,
     ctaLabel: t,
     ctaLoading: s,

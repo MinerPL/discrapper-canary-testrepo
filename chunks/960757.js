@@ -16,37 +16,37 @@ let d = {
 };
 
 function c(e, t, n) {
-  let [c, E] = l.useState(d), [f, _] = l.useState(!1), I = l.useRef(!1), h = null == e ? void 0 : e.id, T = null == e ? void 0 : e.hasFeature(o.GuildFeatures.HAS_DIRECTORY_ENTRY);
+  let [c, E] = l.useState(d), [f, h] = l.useState(!1), v = l.useRef(!1), m = null == e ? void 0 : e.id, N = null == e ? void 0 : e.hasFeature(o.GuildFeatures.HAS_DIRECTORY_ENTRY);
   l.useEffect(() => {
-    if (!T) {
+    if (!N) {
       E(d);
       return
     }
-    if (I.current || null == h) return;
+    if (v.current || null == m) return;
     let e = async () => {
-      I.current = !0;
+      v.current = !0;
       try {
-        let e = await (0, r.getDirectoryEntryBroadcastInfo)(h, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
+        let e = await (0, r.getDirectoryEntryBroadcastInfo)(m, u.DirectoryEntryTypes.GUILD_SCHEDULED_EVENT, t);
         E(e)
       } catch (e) {
         E(d)
       }
-      I.current = !1
+      v.current = !1
     };
     e()
-  }, [h, T, t]), l.useEffect(() => {
+  }, [m, N, t]), l.useEffect(() => {
     var e;
     if (!c.can_broadcast) {
-      _(!1);
+      h(!1);
       return
     }
-    _(null === (e = c.has_broadcast) || void 0 === e || e)
+    h(null === (e = c.has_broadcast) || void 0 === e || e)
   }, [c]);
-  let N = (0, a.useStateFromStores)([i.default], () => (0, s.canEveryoneRoleViewEvent)(n, [i.default]));
+  let _ = (0, a.useStateFromStores)([i.default], () => (0, s.canEveryoneRoleViewEvent)(n, [i.default]));
   return {
     broadcastInfo: c,
-    broadcastToDirectoryChannels: N && f,
-    setBroadcastToDirectoryChannels: _,
-    canEveryoneRoleViewEvent: N
+    broadcastToDirectoryChannels: _ && f,
+    setBroadcastToDirectoryChannels: h,
+    canEveryoneRoleViewEvent: _
   }
 }

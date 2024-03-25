@@ -31,7 +31,7 @@ var l, a, s = n("37983"),
   M = n("570687"),
   O = n("49111"),
   y = n("782340"),
-  D = n("381226");
+  D = n("411264");
 (a = l || (l = {}))[a.PAGES = 0] = "PAGES", a[a.DMS = 1] = "DMS";
 let b = i.memo(function() {
   return (0, s.jsxs)("svg", {

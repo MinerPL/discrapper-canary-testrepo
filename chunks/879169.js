@@ -5,8 +5,8 @@ r.r(t), r.d(t, {
   }
 }), r("781738");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("281859"),
   u = r("123090"),
   l = function(e) {
@@ -14,7 +14,7 @@ var n = r("884691"),
       r = e.rgb,
       n = e.hsv,
       l = e.hex,
-      c = (0, a.default)({
+      s = (0, o.default)({
         default: {
           fields: {
             paddingTop: "5px",
@@ -85,98 +85,98 @@ var n = r("884691"),
           }
         }
       }),
-      s = function(e, o) {
+      f = function(e, a) {
         e["#"] ? i.isValidHex(e["#"]) && t({
           hex: e["#"],
           source: "hex"
-        }, o) : e.r || e.g || e.b ? t({
+        }, a) : e.r || e.g || e.b ? t({
           r: e.r || r.r,
           g: e.g || r.g,
           b: e.b || r.b,
           source: "rgb"
-        }, o) : (e.h || e.s || e.v) && t({
+        }, a) : (e.h || e.s || e.v) && t({
           h: e.h || n.h,
           s: e.s || n.s,
           v: e.v || n.v,
           source: "hsv"
-        }, o)
+        }, a)
       };
-    return o.createElement("div", {
-      style: c.fields
-    }, o.createElement(u.EditableInput, {
+    return a.createElement("div", {
+      style: s.fields
+    }, a.createElement(u.EditableInput, {
       style: {
-        wrap: c.RGBwrap,
-        input: c.RGBinput,
-        label: c.RGBlabel
+        wrap: s.RGBwrap,
+        input: s.RGBinput,
+        label: s.RGBlabel
       },
       label: "h",
       value: Math.round(n.h),
-      onChange: s
-    }), o.createElement(u.EditableInput, {
+      onChange: f
+    }), a.createElement(u.EditableInput, {
       style: {
-        wrap: c.RGBwrap,
-        input: c.RGBinput,
-        label: c.RGBlabel
+        wrap: s.RGBwrap,
+        input: s.RGBinput,
+        label: s.RGBlabel
       },
       label: "s",
       value: Math.round(100 * n.s),
-      onChange: s
-    }), o.createElement(u.EditableInput, {
+      onChange: f
+    }), a.createElement(u.EditableInput, {
       style: {
-        wrap: c.RGBwrap,
-        input: c.RGBinput,
-        label: c.RGBlabel
+        wrap: s.RGBwrap,
+        input: s.RGBinput,
+        label: s.RGBlabel
       },
       label: "v",
       value: Math.round(100 * n.v),
-      onChange: s
-    }), o.createElement("div", {
-      style: c.divider
-    }), o.createElement(u.EditableInput, {
+      onChange: f
+    }), a.createElement("div", {
+      style: s.divider
+    }), a.createElement(u.EditableInput, {
       style: {
-        wrap: c.RGBwrap,
-        input: c.RGBinput,
-        label: c.RGBlabel
+        wrap: s.RGBwrap,
+        input: s.RGBinput,
+        label: s.RGBlabel
       },
       label: "r",
       value: r.r,
-      onChange: s
-    }), o.createElement(u.EditableInput, {
+      onChange: f
+    }), a.createElement(u.EditableInput, {
       style: {
-        wrap: c.RGBwrap,
-        input: c.RGBinput,
-        label: c.RGBlabel
+        wrap: s.RGBwrap,
+        input: s.RGBinput,
+        label: s.RGBlabel
       },
       label: "g",
       value: r.g,
-      onChange: s
-    }), o.createElement(u.EditableInput, {
+      onChange: f
+    }), a.createElement(u.EditableInput, {
       style: {
-        wrap: c.RGBwrap,
-        input: c.RGBinput,
-        label: c.RGBlabel
+        wrap: s.RGBwrap,
+        input: s.RGBinput,
+        label: s.RGBlabel
       },
       label: "b",
       value: r.b,
-      onChange: s
-    }), o.createElement("div", {
-      style: c.divider
-    }), o.createElement(u.EditableInput, {
+      onChange: f
+    }), a.createElement("div", {
+      style: s.divider
+    }), a.createElement(u.EditableInput, {
       style: {
-        wrap: c.HEXwrap,
-        input: c.HEXinput,
-        label: c.HEXlabel
+        wrap: s.HEXwrap,
+        input: s.HEXinput,
+        label: s.HEXlabel
       },
       label: "#",
       value: l.replace("#", ""),
-      onChange: s
-    }), o.createElement("div", {
-      style: c.fieldSymbols
-    }, o.createElement("div", {
-      style: c.symbol
-    }, "\xb0"), o.createElement("div", {
-      style: c.symbol
-    }, "%"), o.createElement("div", {
-      style: c.symbol
+      onChange: f
+    }), a.createElement("div", {
+      style: s.fieldSymbols
+    }, a.createElement("div", {
+      style: s.symbol
+    }, "\xb0"), a.createElement("div", {
+      style: s.symbol
+    }, "%"), a.createElement("div", {
+      style: s.symbol
     }, "%")))
   }

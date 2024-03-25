@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("37983");
@@ -9,9 +9,9 @@ n("884691");
 var l = n("414456"),
   s = n.n(l),
   i = n("77078"),
-  r = n("887326");
+  r = n("882587");
 
-function o(e) {
+function u(e) {
   let {
     hasMentions: t,
     truncatedCount: n,

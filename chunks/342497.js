@@ -34,12 +34,12 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           value: "{",
           description: '"{"'
         },
-        _ = {
+        y = {
           type: "literal",
           value: ",",
           description: '","'
         },
-        y = {
+        _ = {
           type: "literal",
           value: "}",
           description: '"}"'
@@ -96,7 +96,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           description: "whitespace"
         },
         C = /^[ \t\n\r]/,
-        H = {
+        A = {
           type: "class",
           value: "[ \\t\\n\\r]",
           description: "[ \\t\\n\\r]"
@@ -105,13 +105,13 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
           type: "other",
           description: "optionalWhitespace"
         },
-        N = /^[0-9]/,
+        H = /^[0-9]/,
         I = {
           type: "class",
           value: "[0-9]",
           description: "[0-9]"
         },
-        A = /^[0-9a-f]/i,
+        N = /^[0-9a-f]/i,
         R = {
           type: "class",
           value: "[0-9a-f]i",
@@ -222,13 +222,13 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
                   return t
                 }()) !== l) {
                 if (ec() !== l) {
-                  if (a = Q, 44 === e.charCodeAt(Q) ? (o = ",", Q++) : (o = l, 0 === en && er(_)), o !== l && (i = ec()) !== l && (s = function() {
+                  if (a = Q, 44 === e.charCodeAt(Q) ? (o = ",", Q++) : (o = l, 0 === en && er(y)), o !== l && (i = ec()) !== l && (s = function() {
                       var t;
                       return (t = function() {
                         var t, n, r, a, o, i, s;
                         if (t = Q, e.substr(Q, 6) === g ? (n = g, Q += 6) : (n = l, 0 === en && er(v)), n === l && (e.substr(Q, 4) === b ? (n = b, Q += 4) : (n = l, 0 === en && er(M)), n === l && (e.substr(Q, 4) === w ? (n = w, Q += 4) : (n = l, 0 === en && er(k)))), n !== l) {
                           if (ec() !== l) {
-                            if (r = Q, 44 === e.charCodeAt(Q) ? (a = ",", Q++) : (a = l, 0 === en && er(_)), a !== l && (o = ec()) !== l && (i = eh()) !== l ? r = a = [a, o, i] : (Q = r, r = l), r === l && (r = null), r !== l) {
+                            if (r = Q, 44 === e.charCodeAt(Q) ? (a = ",", Q++) : (a = l, 0 === en && er(y)), a !== l && (o = ec()) !== l && (i = eh()) !== l ? r = a = [a, o, i] : (Q = r, r = l), r === l && (r = null), r !== l) {
                               ;
                               t = n = {
                                 type: n + "Format",
@@ -242,7 +242,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
                         var t, n, r, a, o;
                         if (t = Q, e.substr(Q, 6) === L ? (n = L, Q += 6) : (n = l, 0 === en && er(D)), n !== l) {
                           if (ec() !== l) {
-                            if (44 === e.charCodeAt(Q) ? (r = ",", Q++) : (r = l, 0 === en && er(_)), r !== l) {
+                            if (44 === e.charCodeAt(Q) ? (r = ",", Q++) : (r = l, 0 === en && er(y)), r !== l) {
                               if (ec() !== l) {
                                 if ((a = eu()) !== l) {
                                   ;
@@ -262,7 +262,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
                         var t, n, r, a, o;
                         if (t = Q, e.substr(Q, 13) === T ? (n = T, Q += 13) : (n = l, 0 === en && er(S)), n !== l) {
                           if (ec() !== l) {
-                            if (44 === e.charCodeAt(Q) ? (r = ",", Q++) : (r = l, 0 === en && er(_)), r !== l) {
+                            if (44 === e.charCodeAt(Q) ? (r = ",", Q++) : (r = l, 0 === en && er(y)), r !== l) {
                               if (ec() !== l) {
                                 if ((a = eu()) !== l) {
                                   ;
@@ -282,7 +282,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
                         var t, n, r, a, o;
                         if (t = Q, e.substr(Q, 6) === Y ? (n = Y, Q += 6) : (n = l, 0 === en && er(x)), n !== l) {
                           if (ec() !== l) {
-                            if (44 === e.charCodeAt(Q) ? (r = ",", Q++) : (r = l, 0 === en && er(_)), r !== l) {
+                            if (44 === e.charCodeAt(Q) ? (r = ",", Q++) : (r = l, 0 === en && er(y)), r !== l) {
                               if (ec() !== l) {
                                 if (a = [], (o = es()) !== l)
                                   for (; o !== l;) a.push(o), o = es();
@@ -300,7 +300,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
                       }()), t
                     }()) !== l ? a = o = [o, i, s] : (Q = a, a = l), a === l && (a = null), a !== l) {
                     if ((o = ec()) !== l) {
-                      if (125 === e.charCodeAt(Q) ? (i = "}", Q++) : (i = l, 0 === en && er(y)), i !== l) {
+                      if (125 === e.charCodeAt(Q) ? (i = "}", Q++) : (i = l, 0 === en && er(_)), i !== l) {
                         ;
                         t = n = {
                           type: "argumentElement",
@@ -328,7 +328,7 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
                 if (ec() !== l) {
                   if ((o = eo()) !== l) {
                     if (ec() !== l) {
-                      if (125 === e.charCodeAt(Q) ? (i = "}", Q++) : (i = l, 0 === en && er(y)), i !== l) t = n = {
+                      if (125 === e.charCodeAt(Q) ? (i = "}", Q++) : (i = l, 0 === en && er(_)), i !== l) t = n = {
                         type: "optionalFormatPattern",
                         selector: r,
                         value: o
@@ -373,8 +373,8 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function el() {
         var t, n;
-        if (en++, t = [], C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(H)), n !== l)
-          for (; n !== l;) t.push(n), C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(H));
+        if (en++, t = [], C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(A)), n !== l)
+          for (; n !== l;) t.push(n), C.test(e.charAt(Q)) ? (n = e.charAt(Q), Q++) : (n = l, 0 === en && er(A));
         else t = l;
         return en--, t === l && (n = l, 0 === en && er(j)), t
       }
@@ -387,12 +387,12 @@ n("70102"), n("424973"), n("781738"), t.default = function() {
 
       function ed() {
         var t;
-        return N.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(I)), t
+        return H.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(I)), t
       }
 
       function ef() {
         var t;
-        return A.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(R)), t
+        return N.test(e.charAt(Q)) ? (t = e.charAt(Q), Q++) : (t = l, 0 === en && er(R)), t
       }
 
       function ep() {

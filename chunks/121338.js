@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return c
   },
   setReceiveCommandHandler: function() {
-    return f
+    return _
   },
   send: function() {
-    return _
+    return f
   }
 });
 var i = n("43982"),
@@ -40,7 +40,7 @@ function c(e, t) {
   }, t => e((0, a.deserializeObject)(t)))
 }
 
-function f(e, t) {
+function _(e, t) {
   if (__OVERLAY__) throw new s.default({
     errorCode: o.RPCErrors.UNKNOWN_ERROR
   }, "called from wrong app context");
@@ -68,6 +68,6 @@ function f(e, t) {
   })
 }
 
-function _(e) {
+function f(e) {
   __OVERLAY__ ? i.default.request(o.RPCCommands.OVERLAY, (0, a.serializeObject)(e)) : r.default.dispatchToSubscriptions(o.RPCEvents.OVERLAY, {}, (0, a.serializeObject)(e))
 }

@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   AutomatedGiftCodeMessageExperiment: function() {
-    return a
+    return i
   }
 });
-var s = n("862205");
-let a = (0, s.createExperiment)({
+var r = n("862205");
+let i = (0, r.createExperiment)({
   kind: "user",
   id: "2023-07_automated_gift_code_message",
   label: "Automatically send gift code message in direct message to gift recipient",

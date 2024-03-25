@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   INVITE_ROW_HEIGHT: function() {
-    return _
+    return p
   },
   InviteRow: function() {
-    return T
+    return _
   }
 }), n("222007");
 var l = n("37983"),
-  i = n("884691"),
-  a = n("819855"),
-  s = n("77078"),
+  a = n("884691"),
+  s = n("819855"),
+  i = n("77078"),
   r = n("148387"),
-  o = n("843962"),
-  u = n("679653"),
+  u = n("843962"),
+  o = n("679653"),
   d = n("161778"),
   c = n("305961"),
-  f = n("705955"),
-  g = n("27618"),
-  h = n("697218"),
-  I = n("315102"),
-  m = n("159885"),
-  E = n("158998"),
-  p = n("782340"),
-  v = n("435808");
-let _ = 44;
-class T extends i.Component {
+  h = n("705955"),
+  f = n("27618"),
+  I = n("697218"),
+  g = n("315102"),
+  E = n("159885"),
+  v = n("158998"),
+  T = n("782340"),
+  m = n("696862");
+let p = 44;
+class _ extends a.Component {
   shouldComponentUpdate(e, t) {
     return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel
   }
   renderUserOrChannel() {
     let e, t, n;
     let {
-      user: i,
-      channel: a
+      user: a,
+      channel: s
     } = this.props;
-    if (null != i) t = i.getAvatarURL(null == a ? void 0 : a.guild_id, 32), n = E.default.getName(i);
-    else if (null != a && (t = (0, o.getChannelIconURL)(a), n = (0, u.computeChannelName)(a, h.default, g.default), null == t && null != a.guild_id)) {
-      let n = c.default.getGuild(a.guild_id);
-      null != n && (null != n.icon ? t = I.default.getGuildIconURL({
-        id: a.guild_id,
+    if (null != a) t = a.getAvatarURL(null == s ? void 0 : s.guild_id, 32), n = v.default.getName(a);
+    else if (null != s && (t = (0, u.getChannelIconURL)(s), n = (0, o.computeChannelName)(s, I.default, f.default), null == t && null != s.guild_id)) {
+      let n = c.default.getGuild(s.guild_id);
+      null != n && (null != n.icon ? t = g.default.getGuildIconURL({
+        id: s.guild_id,
         icon: n.icon,
         size: 32
-      }) : e = (0, m.getAcronym)(n.name))
+      }) : e = (0, E.getAcronym)(n.name))
     }
     if (null == t || null == n) return null != e ? (0, l.jsx)("div", {
-      className: v.acronym,
+      className: m.acronym,
       "aria-hidden": !0,
       children: e
     }) : null;
-    return (0, l.jsx)(s.Avatar, {
+    return (0, l.jsx)(i.Avatar, {
       src: t,
       "aria-label": n,
-      size: s.AvatarSizes.SIZE_32,
-      className: v.inviteRowAvatar
+      size: i.AvatarSizes.SIZE_32,
+      className: m.inviteRowAvatar
     })
   }
   render() {
@@ -62,33 +62,33 @@ class T extends i.Component {
       user: t,
       channel: n
     } = this.props, {
-      sending: i,
+      sending: a,
       invited: r,
-      hovered: o
+      hovered: u
     } = this.state;
-    return e = r ? (0, l.jsx)(s.Button, {
-      look: s.Button.Looks.LINK,
-      size: s.Button.Sizes.SMALL,
+    return e = r ? (0, l.jsx)(i.Button, {
+      look: i.Button.Looks.LINK,
+      size: i.Button.Sizes.SMALL,
       disabled: !0,
-      color: (0, a.isThemeDark)(d.default.theme) ? s.Button.Colors.WHITE : s.Button.Colors.BLACK,
-      children: p.default.Messages.INVITE_FRIEND_MODAL_SENT
-    }) : (0, l.jsx)(s.Button, {
-      color: s.Button.Colors.GREEN,
-      look: o ? s.Button.Looks.FILLED : s.Button.Looks.OUTLINED,
-      className: v.inviteRowButton,
-      size: s.Button.Sizes.SMALL,
-      submitting: i,
+      color: (0, s.isThemeDark)(d.default.theme) ? i.Button.Colors.WHITE : i.Button.Colors.BRAND,
+      children: T.default.Messages.INVITE_FRIEND_MODAL_SENT
+    }) : (0, l.jsx)(i.Button, {
+      color: i.Button.Colors.GREEN,
+      look: u ? i.Button.Looks.FILLED : i.Button.Looks.OUTLINED,
+      className: m.inviteRowButton,
+      size: i.Button.Sizes.SMALL,
+      submitting: a,
       onClick: this.handleClickInvite,
-      children: p.default.Messages.INVITE_FRIEND_MODAL_INVITE
+      children: T.default.Messages.INVITE_FRIEND_MODAL_INVITE
     }), (0, l.jsxs)("div", {
-      className: v.inviteRow,
+      className: m.inviteRow,
       onMouseEnter: this.handleMouseEnter,
       onMouseLeave: this.handleMouseLeave,
       children: [(0, l.jsxs)("div", {
-        className: v.inviteRowInfo,
+        className: m.inviteRowInfo,
         children: [this.renderUserOrChannel(), (0, l.jsxs)("div", {
-          className: v.inviteRowName,
-          children: [E.default.getName(t), null != n ? (0, u.computeChannelName)(n, h.default, g.default, !0) : null]
+          className: m.inviteRowName,
+          children: [v.default.getName(t), null != n ? (0, o.computeChannelName)(n, I.default, f.default, !0) : null]
         })]
       }), e]
     })
@@ -111,7 +111,7 @@ class T extends i.Component {
       let {
         row: t
       } = this.props;
-      return null !== (e = null != t ? f.default.getSelectedInviteMetadata(t) : null) && void 0 !== e ? e : null
+      return null !== (e = null != t ? h.default.getSelectedInviteMetadata(t) : null) && void 0 !== e ? e : null
     }, this.handleClickInvite = () => {
       let {
         user: e,

@@ -1,24 +1,24 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
-var l = s("37983");
+var n = s("37983");
 s("884691");
-var n = s("423487"),
-  r = s("223984");
+var l = s("423487"),
+  o = s("223984");
 
-function o(e) {
+function a(e) {
   let {
     children: t,
     className: s,
-    color: o = r.MessageBlockColors.YELLOW
+    color: a = o.MessageBlockColors.YELLOW
   } = e;
-  return (0, l.jsx)(r.default, {
+  return (0, n.jsx)(o.default, {
     className: s,
-    color: o,
-    icon: n.default,
+    color: a,
+    icon: l.default,
     children: t
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -12,14 +12,14 @@ var s = n("37983"),
   i = n("734990"),
   E = n("697218"),
   _ = n("782340"),
-  u = n("679012");
+  u = n("917908");
 
-function d(e) {
+function T(e) {
   let {
     onNext: t,
     onClose: n
-  } = e, [d, T] = o.useState(!1), S = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), N = async e => {
-    e.preventDefault(), T(!0);
+  } = e, [T, d] = o.useState(!1), S = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), N = async e => {
+    e.preventDefault(), d(!0);
     try {
       await (0, i.sendConfirmationCode)(), t()
     } catch (n) {
@@ -27,7 +27,7 @@ function d(e) {
         t = e.getAnyErrorMessage();
       null != t && (0, r.showToast)((0, r.createToast)(t, r.ToastType.FAILURE))
     } finally {
-      T(!1)
+      d(!1)
     }
   };
   return (0, s.jsxs)("form", {
@@ -58,7 +58,7 @@ function d(e) {
         type: "submit",
         color: r.Button.Colors.BRAND,
         size: r.Button.Sizes.MEDIUM,
-        submitting: d,
+        submitting: T,
         className: u.submit,
         children: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_SEND_BUTTON
       }), (0, s.jsx)(r.Button, {

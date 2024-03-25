@@ -9,7 +9,7 @@ var n = Object.assign || function(e) {
     }
     return e
   },
-  o = function() {
+  a = function() {
     function e(e, t) {
       for (var r = 0; r < t.length; r++) {
         var n = t[r];
@@ -20,7 +20,7 @@ var n = Object.assign || function(e) {
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  a = function(e) {
+  o = function(e) {
     return e && e.__esModule ? e : {
       default: e
     }
@@ -37,8 +37,8 @@ t.handleFocus = function(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
       }(this, u);
-      for (var e, t, r, n = arguments.length, o = Array(n), a = 0; a < n; a++) o[a] = arguments[a];
-      return t = r = i(this, (e = u.__proto__ || Object.getPrototypeOf(u)).call.apply(e, [this].concat(o))), r.state = {
+      for (var e, t, r, n = arguments.length, a = Array(n), o = 0; o < n; o++) a[o] = arguments[o];
+      return t = r = i(this, (e = u.__proto__ || Object.getPrototypeOf(u)).call.apply(e, [this].concat(a))), r.state = {
         focus: !1
       }, r.handleFocus = function() {
         return r.setState({
@@ -60,14 +60,14 @@ t.handleFocus = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(u, r), o(u, [{
+    }(u, r), a(u, [{
       key: "render",
       value: function() {
-        return a.default.createElement(t, {
+        return o.default.createElement(t, {
           onFocus: this.handleFocus,
           onBlur: this.handleBlur
-        }, a.default.createElement(e, n({}, this.props, this.state)))
+        }, o.default.createElement(e, n({}, this.props, this.state)))
       }
     }]), u
-  }(a.default.Component)
+  }(o.default.Component)
 }

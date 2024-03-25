@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("37983");
@@ -15,12 +15,12 @@ var l = n("446674"),
   d = n("159467"),
   c = n("827825");
 
-function f(e) {
+function E(e) {
   let {
     application: t,
     fullWidth: n = !1,
-    size: f = a.Button.Sizes.LARGE,
-    color: E,
+    size: E = a.Button.Sizes.LARGE,
+    color: f,
     customDisabledColor: _,
     hideNotLaunchable: T,
     tooltipPosition: I,
@@ -33,20 +33,20 @@ function f(e) {
     innerClassName: h
   } = e, g = {
     fullWidth: n,
-    size: f,
-    color: E,
+    size: E,
+    color: f,
     customDisabledColor: _,
     tooltipPosition: I,
     onClick: m,
     className: N,
     hover: C,
     innerClassName: h
-  }, M = (0, l.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), O = null != M ? M.sku.id : null, R = null != O ? O : t.primarySkuId, L = (0, l.useStateFromStores)([r.default], () => null != R && !r.default.didFetchingSkuFail(R));
+  }, M = (0, l.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), O = null != M ? M.sku.id : null, R = null != O ? O : t.primarySkuId, v = (0, l.useStateFromStores)([r.default], () => null != R && !r.default.didFetchingSkuFail(R));
   return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
     ...g,
     libraryApplication: M,
     source: p
-  }) : L ? (0, s.jsx)(u.default, {
+  }) : v ? (0, s.jsx)(u.default, {
     ...g,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,

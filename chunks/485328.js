@@ -13,16 +13,16 @@ var i = n("800648"),
   u = n("599110"),
   d = n("773336"),
   c = n("49111");
-let f = {},
-  _ = [],
-  h = !1,
-  g = a(new s(window)),
-  m = (0, d.isMac)() ? "cmd" : "ctrl",
-  E = (0, d.isMac)() ? "opt" : "alt",
+let _ = {},
+  f = [],
+  E = !1,
+  h = a(new s(window)),
+  g = (0, d.isMac)() ? "cmd" : "ctrl",
+  m = (0, d.isMac)() ? "opt" : "alt",
   p = (0, d.isMac)() ? "return" : "enter",
-  v = [...o.JUMP_TO_GUILD.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", m)),
-  S = () => [],
-  T = [];
+  S = [...o.JUMP_TO_GUILD.binds, "mod+shift+[", "mod+shift+]", "mod+[", "mod+]", "alt+[", "alt+]", "ctrl+shift+tab", "ctrl+tab", "mod+n", "mod+t", "mod+shift+t", "mod+plus", "mod+minus", "mod+0"].map(e => e.replace("mod", g)),
+  T = () => [],
+  v = [];
 if ((0, d.isDesktop)()) {
   let e = new s(document.documentElement);
   e.bind("backspace", e => e.preventDefault())
@@ -31,39 +31,39 @@ if ((0, d.isDesktop)()) {
 function I(e) {
   let t = [];
   for (let n of Object.values(e)) null != n && t.push(...n.binds);
-  return t.map(e => e.replace("mod", m))
+  return t.map(e => e.replace("mod", g))
 }
 
-function C(e, t) {
+function A(e, t) {
   return (n, i) => (u.default.track(c.AnalyticEvents.KEYBOARD_SHORTCUT_USED, {
     shortcut_name: e
   }), t(n, i))
 }
 
-function A(e) {
+function C(e) {
   for (let [t, n] of Object.entries(e)) {
     if (null == n) continue;
-    let e = S();
-    !d.isPlatformEmbedded && (e = e.concat(v));
-    let i = n.binds.filter(t => (t = t.replace("mod", m), 0 > e.indexOf(t)));
+    let e = T();
+    !d.isPlatformEmbedded && (e = e.concat(S));
+    let i = n.binds.filter(t => (t = t.replace("mod", g), 0 > e.indexOf(t)));
     if (0 === i.length) continue;
-    let s = n.comboKeysBindGlobal ? g.bindGlobal : g.bind;
-    if (null != n.action && s.call(g, i, C(t, n.action)), null != n.keyup && s.call(g, i, C(t, n.keyup), "keyup"), null != n.keydown) {
+    let s = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
+    if (null != n.action && s.call(h, i, A(t, n.action)), null != n.keyup && s.call(h, i, A(t, n.keyup), "keyup"), null != n.keydown) {
       let e = i.indexOf("any-character"); - 1 !== e && (! function(e, t) {
         let n = e => t(e, e.key);
-        document.addEventListener(e, n), T.push(() => document.removeEventListener(e, n))
-      }("keydown", n.keydown), i.splice(e, 1)), i.length > 0 && s.call(g, i, C(t, n.keydown), "keydown")
+        document.addEventListener(e, n), v.push(() => document.removeEventListener(e, n))
+      }("keydown", n.keydown), i.splice(e, 1)), i.length > 0 && s.call(h, i, A(t, n.keydown), "keydown")
     }
-    null != n.keypress && s.call(g, i, C(t, n.keypress), "keypress")
+    null != n.keypress && s.call(h, i, A(t, n.keypress), "keypress")
   }
 }
 var y = {
-  combokeys: g,
-  modKey: m,
-  altKey: E,
+  combokeys: h,
+  modKey: g,
+  altKey: m,
   returnKey: p,
   setGetKeybindList(e) {
-    S = e
+    T = e
   },
   checkDupes(e) {
     let t = new Set,
@@ -73,26 +73,26 @@ var y = {
     n.length > 0 && new(0, l.default)("Keybinds").warn("Duplicate keyboard shortcuts defined:", n)
   },
   setLayout(e) {
-    f = e
+    _ = e
   },
   enable() {
-    !h && (h = !0, this.checkDupes(f), A(f))
+    !E && (E = !0, this.checkDupes(_), C(_))
   },
   enableTemp(e) {
-    _.push(f), f = e, A(e), h = !0
+    f.push(_), _ = e, C(e), E = !0
   },
   disableTemp() {
-    let e = _.pop();
-    null != e && (f = e), this.disable(), this.enable()
+    let e = f.pop();
+    null != e && (_ = e), this.disable(), this.enable()
   },
   disable() {
-    h && (h = !1, T.forEach(e => e()), T = [], g.reset())
+    E && (E = !1, v.forEach(e => e()), v = [], h.reset())
   },
   validateKeybind(e) {
-    h && this.hasBind(e) && g.unbind(e)
+    E && this.hasBind(e) && h.unbind(e)
   },
   hasBind(e) {
-    let t = I(f);
+    let t = I(_);
     return e = (e = e.replace("meta", "cmd")).replace(/right |left /i, "").trim(), t.includes(e)
   }
 }

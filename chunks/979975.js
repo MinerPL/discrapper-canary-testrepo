@@ -1,24 +1,24 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var l = n("599110"),
-  a = n("793237"),
-  s = n("49111");
+var i = n("599110"),
+  l = n("793237"),
+  a = n("49111");
 
-function i(e) {
+function s(e) {
   let {
     summary: t,
     guildId: n,
-    channelId: i,
+    channelId: s,
     rating: r = null,
     problem: o = null,
     feedback: u = "",
     location: d
   } = e;
-  (0, a.setSummaryFeedback)(t, r), l.default.track(s.AnalyticEvents.SUMMARIES_REPORT_PROBLEM, {
+  (0, l.setSummaryFeedback)(t, r), i.default.track(a.AnalyticEvents.SUMMARIES_REPORT_PROBLEM, {
     reason: o,
     location: d,
     rating: r,
@@ -27,7 +27,7 @@ function i(e) {
     message_count: t.count,
     start_message_id: t.startId,
     guild_id: n,
-    channel_id: i,
+    channel_id: s,
     summary_id: t.id,
     summary_source: t.source,
     summary_type: t.type

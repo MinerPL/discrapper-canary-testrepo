@@ -12,13 +12,13 @@ n.r(t), n.d(t, {
 }), n("808653");
 var a = n("759843"),
   s = n("627929"),
-  i = n("913144"),
-  l = n("840707"),
+  l = n("913144"),
+  i = n("840707"),
   r = n("853994"),
   o = n("49111");
 async function u() {
   try {
-    let e = await l.default.get({
+    let e = await i.default.get({
       url: o.Endpoints.EMAIL_SETTINGS,
       trackedActionData: {
         event: a.NetworkActionNames.EMAIL_SETTINGS_FETCH,
@@ -31,25 +31,25 @@ async function u() {
         }
       }
     });
-    i.default.dispatch({
+    l.default.dispatch({
       type: "EMAIL_SETTINGS_FETCH_SUCCESS",
       settings: e.body
     })
   } catch {
-    i.default.dispatch({
+    l.default.dispatch({
       type: "EMAIL_SETTINGS_FETCH_FAILURE"
     })
   }
 }
 async function d(e, t) {
-  i.default.dispatch({
+  l.default.dispatch({
     type: "EMAIL_SETTINGS_UPDATE",
     updates: {
       [e]: t
     }
   });
   try {
-    let n = await l.default.patch({
+    let n = await i.default.patch({
       url: o.Endpoints.EMAIL_SETTINGS,
       body: {
         settings: {
@@ -66,12 +66,12 @@ async function d(e, t) {
         }
       }
     });
-    i.default.dispatch({
+    l.default.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
       settings: n.body
     })
   } catch (e) {
-    i.default.dispatch({
+    l.default.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_FAILURE"
     })
   }
@@ -81,12 +81,12 @@ async function c() {
     ...e,
     [t]: !1
   }), {});
-  i.default.dispatch({
+  l.default.dispatch({
     type: "EMAIL_SETTINGS_UPDATE",
     updates: e
   });
   try {
-    let t = await l.default.patch({
+    let t = await i.default.patch({
       url: o.Endpoints.EMAIL_SETTINGS,
       body: {
         settings: {
@@ -101,12 +101,12 @@ async function c() {
         }
       }
     });
-    i.default.dispatch({
+    l.default.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_SUCCESS",
       settings: t.body
     })
   } catch (e) {
-    i.default.dispatch({
+    l.default.dispatch({
       type: "EMAIL_SETTINGS_UPDATE_FAILURE"
     })
   }

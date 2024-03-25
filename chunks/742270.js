@@ -1,10 +1,10 @@
 "use strict";
 
-function s(e) {
+function i(e) {
   return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.INVITE_HOST, "/").concat(e)
 }
 
-function i(e) {
+function s(e) {
   return "".concat(location.protocol, "//").concat(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST, "/").concat(e)
 }
 
@@ -13,10 +13,10 @@ function r() {
 }
 n.r(t), n.d(t, {
   getInviteDynamicLinkTemplate: function() {
-    return s
+    return i
   },
   getGuildTemplateDynamicLinkTemplate: function() {
-    return i
+    return s
   },
   getDefaultDynamicLinkTemplate: function() {
     return r

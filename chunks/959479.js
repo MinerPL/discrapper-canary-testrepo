@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return C
+    return O
   }
 }), n("222007"), n("70102");
 var i, a, l = n("37983"),
@@ -14,7 +14,7 @@ var i, a, l = n("37983"),
   d = n("233736"),
   u = n("80687"),
   c = n("49111"),
-  f = n("502011");
+  f = n("667232");
 let h = (e, t, n, i) => Math.pow(e - n, 2) + Math.pow(t - i, 2);
 (a = i || (i = {})).MOVE = "MOVE", a.RESIZE_NORTH = "RESIZE_NORTH", a.RESIZE_WEST = "RESIZE_WEST", a.RESIZE_EAST = "RESIZE_EAST", a.RESIZE_SOUTH = "RESIZE_SOUTH", a.RESIZE_NORTH_WEST = "RESIZE_NORTH_WEST", a.RESIZE_NORTH_EAST = "RESIZE_NORTH_EAST", a.RESIZE_SOUTH_WEST = "RESIZE_SOUTH_WEST", a.RESIZE_SOUTH_EAST = "RESIZE_SOUTH_EAST";
 let p = new Set(["RESIZE_NORTH", "RESIZE_WEST", "RESIZE_EAST", "RESIZE_SOUTH", "RESIZE_NORTH_WEST", "RESIZE_NORTH_EAST", "RESIZE_SOUTH_WEST", "RESIZE_SOUTH_EAST"]);
@@ -137,13 +137,13 @@ class y extends s.Component {
     let {
       width: g,
       height: m
-    } = S(n, this.size), E = t - h, y = e - f, C = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
+    } = S(n, this.size), E = t - h, y = e - f, O = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
       top: E,
       left: y,
       bottom: null,
       right: null
-    }, a, l, g, m)), N = c ? (0, u.getAnchorCoordsFromFullCoords)(C) : v("RESIZE_SOUTH_EAST", C);
-    this.setDOMPositions(N), !p && (null != r && r(), this.setState({
+    }, a, l, g, m)), C = c ? (0, u.getAnchorCoordsFromFullCoords)(O) : v("RESIZE_SOUTH_EAST", O);
+    this.setDOMPositions(C), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
   }
@@ -467,4 +467,4 @@ y.Operations = i, y.defaultProps = {
   dragAnywhere: !0,
   active: !0
 };
-var C = y
+var O = y

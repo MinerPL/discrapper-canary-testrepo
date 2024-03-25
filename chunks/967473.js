@@ -11,10 +11,10 @@ var i = l("37983"),
   r = l("998944"),
   c = l("288914"),
   o = l("721908"),
-  d = l("800255");
+  d = l("433663");
 
 function u(e) {
-  var t, l, u, p, m;
+  var t, l, u, m, p;
   let {
     application: _,
     className: f,
@@ -28,7 +28,7 @@ function u(e) {
     size: 48
   }), E = (0, o.default)({
     application: _
-  }), v = null === (t = _.categories) || void 0 === t ? void 0 : t[0], x = (null !== (p = null === (l = _.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, R = a.useCallback(() => {
+  }), v = null === (t = _.categories) || void 0 === t ? void 0 : t[0], x = (null !== (m = null === (l = _.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== m ? m : 0) > 0 || E.length > 0, R = a.useCallback(() => {
     g({
       mutualGuilds: E
     })
@@ -59,7 +59,7 @@ function u(e) {
         className: d.listingDescription,
         variant: "text-sm/normal",
         lineClamp: 2,
-        children: null !== (m = null === (u = _.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== m ? m : _.description
+        children: null !== (p = null === (u = _.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== p ? p : _.description
       })
     }), x && (0, i.jsx)("div", {
       className: d.bottomGuildCountContainer,

@@ -36,8 +36,8 @@ var a, n, r = s("37983"),
   k = s("677987"),
   I = s("49111"),
   D = s("782340"),
-  O = s("561286"),
-  j = s("173791");
+  O = s("415596"),
+  j = s("125047");
 (n = a || (a = {})).PAYMENT_TYPE = "payment_type", n.CARD_INFO = "card_info", n.SOFORT_INFO = "sofort_info", n.ADDRESS = "billing_address", n.PAYMENT_REQUEST_INFO = "payment_request_info", n.PAYPAL = "paypal", n.PRZELEWY24_INFO = "przelewy24_info";
 let Y = ["payment_type", "card_info", "billing_address"],
   v = ["payment_type", "sofort_info", "billing_address"],

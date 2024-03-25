@@ -1,11 +1,11 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = r("544830"),
-  o = function(e) {
+  a = function(e) {
     var t = (0, n.default)(e, function(e) {
         return 500 === r.size && r.clear(), e
       }),

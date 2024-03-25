@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return U
   }
 }), n("222007"), n("70102");
 var s, a, l = n("37983"),
@@ -13,24 +13,24 @@ var s, a, l = n("37983"),
   c = n("437822"),
   f = n("569272"),
   E = n("568131"),
-  I = n("327037"),
-  _ = n("208620"),
-  p = n("970366"),
-  h = n("271938"),
-  m = n("476108"),
-  T = n("55411"),
+  _ = n("327037"),
+  I = n("208620"),
+  h = n("970366"),
+  p = n("271938"),
+  T = n("476108"),
+  m = n("55411"),
   N = n("686470"),
   g = n("552712"),
   A = n("124969"),
   S = n("659632"),
   C = n("701909"),
   v = n("158998"),
-  x = n("404432"),
+  O = n("404432"),
   R = n("291850"),
   L = n("860959"),
-  O = n("49111"),
+  x = n("49111"),
   M = n("782340"),
-  D = n("926622");
+  D = n("890957");
 o.default.initialize(), (a = s || (s = {})).REGISTER = "register", a.LOGIN = "login";
 class P extends i.PureComponent {
   componentDidMount() {
@@ -38,7 +38,7 @@ class P extends i.PureComponent {
       authenticated: e,
       isResolved: t
     } = this.props;
-    e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, p.trackAppUIViewed)("gift_code")
+    e && this.handleAuthenticated(), !t && this.resolveGiftCode(), (0, h.trackAppUIViewed)("gift_code")
   }
   componentDidUpdate(e) {
     let {
@@ -78,9 +78,9 @@ class P extends i.PureComponent {
     } = this.props, {
       error: s
     } = this.state, a = null != s ? s.code : null;
-    return a === O.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? M.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === O.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === O.SKUProductLines.COLLECTIBLES ? M.default.Messages.GIFT_ERROR_OWNED : null != t || a === O.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
-      libraryLink: O.Routes.APPLICATION_LIBRARY
-    }) : e.isClaimed || a === O.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === O.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? M.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
+    return a === x.AbortCodes.INVALID_GIFT_SELF_REDEMPTION ? M.default.Messages.GIFT_CONFIRMATION_BODY_SELF_GIFT_NO_PAYMENT : a === x.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED && (null == n ? void 0 : n.productLine) === x.SKUProductLines.COLLECTIBLES ? M.default.Messages.GIFT_ERROR_OWNED : null != t || a === x.AbortCodes.INVALID_GIFT_REDEMPTION_OWNED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_OWNED.format({
+      libraryLink: x.Routes.APPLICATION_LIBRARY
+    }) : e.isClaimed || a === x.AbortCodes.INVALID_GIFT_REDEMPTION_EXHAUSTED ? M.default.Messages.GIFT_CODE_AUTH_HELP_TEXT_CLAIMED : a === x.AbortCodes.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED ? M.default.Messages.GIFT_CODE_SMITE_REJECT_HELP_TEXT : void 0
   }
   renderSpinner(e) {
     return (0, l.jsxs)(A.default, {
@@ -108,7 +108,7 @@ class P extends i.PureComponent {
         onClick: () => t(e),
         children: M.default.Messages.CONTINUE_TO_WEBAPP
       }), (0, l.jsx)(A.Button, {
-        onClick: () => window.open(C.default.getArticleURL(O.HelpdeskArticles.GIFTING), "_blank"),
+        onClick: () => window.open(C.default.getArticleURL(x.HelpdeskArticles.GIFTING), "_blank"),
         look: A.Button.Looks.LINK,
         color: A.Button.Colors.LINK,
         children: M.default.Messages.GIFT_CODE_AUTH_INVALID_TIP
@@ -163,7 +163,7 @@ class P extends i.PureComponent {
   renderAuthenticated(e, t) {
     let n = this.getErrorMessage(e);
     return (0, l.jsxs)(A.default, {
-      children: [(0, l.jsx)(x.default, {
+      children: [(0, l.jsx)(O.default, {
         giftCode: e
       }), (0, l.jsx)(A.Button, {
         disabled: null != n,
@@ -196,8 +196,8 @@ class P extends i.PureComponent {
       fetchingUser: o,
       continueOnWeb: d
     } = this.state;
-    if (e === O.NativeAppStates.OPEN && !d) return this.renderAppOpened();
-    if (e === O.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
+    if (e === x.NativeAppStates.OPEN && !d) return this.renderAppOpened();
+    if (e === x.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
     if (i) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
     if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_RESOLVING);
     if (a) {
@@ -229,7 +229,7 @@ class P extends i.PureComponent {
     }, this.refreshUser = () => {
       this.setState({
         fetchingUser: !0
-      }), I.fetchCurrentUser({
+      }), _.fetchCurrentUser({
         withAnalyticsToken: !0
       }).then(e => this.setState({
         currentUser: e,
@@ -239,7 +239,7 @@ class P extends i.PureComponent {
       }))
     }, this.handleLogout = () => {
       let e = this.props.match.params.giftCode;
-      c.default.logout(O.Routes.GIFT_CODE_LOGIN(e))
+      c.default.logout(x.Routes.GIFT_CODE_LOGIN(e))
     }, this.handleResendVerification = () => {
       c.default.verifyResend(), this.setState({
         sentVerification: !0
@@ -256,7 +256,7 @@ class P extends i.PureComponent {
           error: null
         }), await f.default.redeemGiftCode({
           code: n
-        }), e(O.Routes.APP)
+        }), e(x.Routes.APP)
       } catch (e) {
         this.setState({
           error: e
@@ -267,24 +267,24 @@ class P extends i.PureComponent {
         transitionTo: e
       } = this.props, t = this.getCode();
       f.default.resolveGiftCode(t, !0, !0).then(n => {
-        null != n && null != n.giftCode.promotion && e(O.Routes.BILLING_PROMOTION_REDEMPTION(t))
+        null != n && null != n.giftCode.promotion && e(x.Routes.BILLING_PROMOTION_REDEMPTION(t))
       })
     }
   }
 }
-var j = o.default.connectStores([T.default, N.default, h.default, g.default, m.default, _.default], e => {
+var U = o.default.connectStores([m.default, N.default, p.default, g.default, T.default, I.default], e => {
   let t = e.match.params.giftCode,
-    n = T.default.get(t),
+    n = m.default.get(t),
     s = null != n ? g.default.get(n.skuId) : null;
   return {
     giftCode: n,
     sku: s,
     libraryApplication: null != s && (null == n ? void 0 : n.entitlementBranches) != null ? S.firstLibraryApplicationForGiftCode(n.entitlementBranches, s, N.default) : null,
-    authenticated: h.default.isAuthenticated(),
-    defaultRoute: m.default.defaultRoute,
-    isResolved: T.default.getIsResolved(t),
-    isAccepting: T.default.getIsAccepting(t),
+    authenticated: p.default.isAuthenticated(),
+    defaultRoute: T.default.defaultRoute,
+    isResolved: m.default.getIsResolved(t),
+    isAccepting: m.default.getIsAccepting(t),
     libraryApplicationsFetched: N.default.fetched,
-    nativeAppState: _.default.getState(t)
+    nativeAppState: I.default.getState(t)
   }
 })(P)

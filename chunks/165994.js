@@ -90,10 +90,10 @@ function c(e, t, n) {
             f = t.attributes,
             p = u(l, n, i),
             h = a,
-            g = f.minRanking,
-            b = f.maxRanking,
-            v = f.threshold;
-          return p < g && p >= s.MATCHES ? p = g : p > b && (p = b), p > o && (o = p, c = r, d = v, h = l), {
+            v = f.minRanking,
+            g = f.maxRanking,
+            b = f.threshold;
+          return p < v && p >= s.MATCHES ? p = v : p > g && (p = g), p > o && (o = p, c = r, d = b, h = l), {
             rankedValue: h,
             rank: o,
             keyIndex: c,

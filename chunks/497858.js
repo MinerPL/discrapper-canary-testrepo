@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("222007");
-var l = n("884691"),
-  i = n("775560"),
-  r = n("446674"),
-  o = n("118200"),
-  s = n("383018"),
-  a = n("850391"),
+var i = n("884691"),
+  l = n("775560"),
+  a = n("446674"),
+  s = n("118200"),
+  r = n("383018"),
+  o = n("850391"),
   u = n("980215"),
   d = n("26989"),
   c = n("957255"),
@@ -17,78 +17,78 @@ var l = n("884691"),
   p = n("697218"),
   m = n("234246"),
   h = n("689299"),
-  E = n("49111"),
-  S = n("680894"),
-  g = n("958706");
+  x = n("49111"),
+  E = n("680894"),
+  y = n("958706");
 
-function C(e, t, n) {
-  var C, T, v, y, x, I, N;
+function g(e, t, n) {
+  var g, S, C, T, _, I, v;
   let {
-    channel: _,
+    channel: N,
     type: A
-  } = e, [R, O] = l.useState(() => (0, m.createInitialState)()), M = (0, i.useForceUpdate)(), k = (0, r.useStateFromStores)([d.default], () => {
+  } = e, [O, R] = i.useState(() => (0, m.createInitialState)()), M = (0, l.useForceUpdate)(), k = (0, a.useStateFromStores)([d.default], () => {
     if (null != e.guild) {
       var t;
-      return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, S.CLYDE_AI_USER_ID)
+      return null != d.default.getMember(null === (t = e.guild) || void 0 === t ? void 0 : t.id, E.CLYDE_AI_USER_ID)
     }
     return !1
-  }), b = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, r.useStateFromStores)([d.default, p.default], () => {
+  }), L = (0, u.useClydeEnabled)(e.guild, e.channel) && !k && !(0, u.canUseCustomClydeProfiles)(e.guild), P = (0, a.useStateFromStores)([d.default, p.default], () => {
     var e, t;
     let n = p.default.getCurrentUser();
-    return null !== (t = null != _.guild_id && null != n ? null === (e = d.default.getMember(_.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
+    return null !== (t = null != N.guild_id && null != n ? null === (e = d.default.getMember(N.guild_id, n.id)) || void 0 === e ? void 0 : e.isPending : null) && void 0 !== t && t
   }), {
-    canMentionEveryone: L,
-    hidePersonalInformation: U
-  } = (0, r.useStateFromStoresObject)([c.default, f.default], () => {
-    let e = _.isPrivate();
+    canMentionEveryone: b,
+    hidePersonalInformation: j
+  } = (0, a.useStateFromStoresObject)([c.default, f.default], () => {
+    let e = N.isPrivate();
     return {
-      canMentionEveryone: e || P || A === a.ChatInputTypes.RULES_INPUT || c.default.can(E.Permissions.MENTION_EVERYONE, _),
+      canMentionEveryone: e || P || A === o.ChatInputTypes.RULES_INPUT || c.default.can(x.Permissions.MENTION_EVERYONE, N),
       hidePersonalInformation: f.default.hidePersonalInformation
     }
-  }, [_, A, P]), {
-    activeCommand: j,
+  }, [N, A, P]), {
+    activeCommand: U,
     activeCommandOption: D
-  } = (0, r.useStateFromStoresObject)([s.default], () => ({
-    activeCommand: s.default.getActiveCommand(_.id),
-    activeCommandOption: s.default.getActiveOption(_.id)
+  } = (0, a.useStateFromStoresObject)([r.default], () => ({
+    activeCommand: r.default.getActiveCommand(N.id),
+    activeCommandOption: r.default.getActiveOption(N.id)
   })), w = (0, h.default)({
     navId: "channel-autocomplete",
     scrollerRef: n,
-    state: R,
-    onFocus: e => F.setSelectedIndex(e)
-  }), B = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentWord(), H = {
+    state: O,
+    onFocus: e => H.setSelectedIndex(e)
+  }), F = null === (g = e.editorRef.current) || void 0 === g ? void 0 : g.getCurrentWord(), G = {
     ...e,
     navigator: w,
-    activeCommand: j,
+    activeCommand: U,
     activeCommandOption: D,
-    canMentionUsers: null !== (x = null === (T = A.users) || void 0 === T ? void 0 : T.allowMentioning) && void 0 !== x && x,
-    canMentionEveryone: L,
-    canMentionClyde: b,
-    hidePersonalInformation: U,
-    hideMentionDescription: A === a.ChatInputTypes.RULES_INPUT,
-    emojiIntention: A === a.ChatInputTypes.RULES_INPUT ? g.EmojiIntention.COMMUNITY_CONTENT : g.EmojiIntention.CHAT,
-    currentWord: null !== (I = null == B ? void 0 : B.word) && void 0 !== I ? I : "",
-    currentWordIsAtStart: (null == B ? void 0 : B.isAtStart) === !0,
-    optionText: null != D ? (0, o.getString)({
-      [D.name]: null !== (N = null === (v = e.editorRef.current) || void 0 === v ? void 0 : v.getCurrentCommandOptionValue()) && void 0 !== N ? N : []
+    canMentionUsers: null !== (_ = null === (S = A.users) || void 0 === S ? void 0 : S.allowMentioning) && void 0 !== _ && _,
+    canMentionEveryone: b,
+    canMentionClyde: L,
+    hidePersonalInformation: j,
+    hideMentionDescription: A === o.ChatInputTypes.RULES_INPUT,
+    emojiIntention: A === o.ChatInputTypes.RULES_INPUT ? y.EmojiIntention.COMMUNITY_CONTENT : y.EmojiIntention.CHAT,
+    currentWord: null !== (I = null == F ? void 0 : F.word) && void 0 !== I ? I : "",
+    currentWordIsAtStart: (null == F ? void 0 : F.isAtStart) === !0,
+    optionText: null != D ? (0, s.getString)({
+      [D.name]: null !== (v = null === (C = e.editorRef.current) || void 0 === C ? void 0 : C.getCurrentCommandOptionValue()) && void 0 !== v ? v : []
     }, D.name) : ""
-  }, [F] = l.useState(() => new m.default(H));
-  return l.useEffect(() => {
-    F.updateProps(H)
-  }), l.useImperativeHandle(t, () => F, [F]), l.useEffect(() => {
-    let e = e => O(e);
-    return F.on("change", e), F.on("update", M), () => {
-      F.off("change", e), F.off("update", M)
+  }, [H] = i.useState(() => new m.default(G));
+  return i.useEffect(() => {
+    H.updateProps(G)
+  }), i.useImperativeHandle(t, () => H, [H]), i.useEffect(() => {
+    let e = e => R(e);
+    return H.on("change", e), H.on("update", M), () => {
+      H.off("change", e), H.off("update", M)
     }
-  }, [M, F]), l.useEffect(() => {
+  }, [M, H]), i.useEffect(() => {
     var e;
-    let t = null === (e = R.query) || void 0 === e ? void 0 : e.typeInfo.stores;
+    let t = null === (e = O.query) || void 0 === e ? void 0 : e.typeInfo.stores;
     if (null != t) {
-      let e = () => F.queryResults();
+      let e = () => H.queryResults();
       for (let n of t) n.addChangeListener(e);
       return () => {
         for (let n of t) n.removeChangeListener(e)
       }
     }
-  }, [F, null === (y = R.query) || void 0 === y ? void 0 : y.typeInfo]), [R, F, w]
+  }, [H, null === (T = O.query) || void 0 === T ? void 0 : T.typeInfo]), [O, H, w]
 }

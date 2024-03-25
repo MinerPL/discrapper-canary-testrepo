@@ -11,8 +11,8 @@ var t = s("37983"),
   i = s("109264"),
   o = s("660074"),
   _ = s("434111"),
-  d = s("782340"),
-  c = s("732198");
+  c = s("782340"),
+  d = s("552664");
 
 function u(e) {
   let {
@@ -29,64 +29,64 @@ function u(e) {
     avatarSrc: m
   } = a;
   return (0, t.jsxs)("div", {
-    className: c.post,
+    className: d.post,
     children: [(0, t.jsxs)("div", {
       children: [(0, t.jsxs)("div", {
-        className: c.inline,
+        className: d.inline,
         children: [(0, t.jsxs)(r.Text, {
           color: "header-primary",
           variant: "text-xs/medium",
-          className: c.inline,
+          className: d.inline,
           children: [(0, t.jsx)("img", {
             src: m,
-            alt: d.default.Messages.USER_SETTINGS_AVATAR,
+            alt: c.default.Messages.USER_SETTINGS_AVATAR,
             width: 16,
             height: 16
           }), E]
         }), null != s && (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)("span", {
-            className: c.bullet,
+            className: d.bullet,
             children: "•"
           }), (0, t.jsx)(r.Text, {
             color: "header-primary",
             variant: "text-xxs/medium",
-            className: c.inlineTag,
+            className: d.inlineTag,
             children: u[s]
           })]
         })]
       }), (0, t.jsx)(r.Heading, {
         color: "header-primary",
         variant: "heading-md/semibold",
-        className: c.title,
+        className: d.title,
         children: n
       }), (0, t.jsxs)("div", {
-        className: c.inline,
+        className: d.inline,
         children: [(0, t.jsxs)(r.Text, {
           color: "header-secondary",
           variant: "text-xs/medium",
-          className: c.alignCenter,
+          className: d.alignCenter,
           children: [(0, t.jsx)(i.default, {
             width: 16,
             height: 16,
-            className: c.icon
+            className: d.icon
           }), l]
         }), o > 0 && (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)("span", {
-            className: c.bullet,
+            className: d.bullet,
             children: "•"
           }), (0, t.jsxs)(r.Text, {
             color: "header-secondary",
             variant: "text-xs/medium",
-            className: c.alignCenter,
+            className: d.alignCenter,
             children: [(0, t.jsx)("span", {
               role: "img",
-              "aria-label": d.default.Messages.REACTIONS,
-              className: c.icon,
+              "aria-label": c.default.Messages.REACTIONS,
+              className: d.icon,
               children: "❤️"
             }), o]
           })]
         }), (0, t.jsx)("span", {
-          className: c.bullet,
+          className: d.bullet,
           children: "•"
         }), (0, t.jsx)(r.Text, {
           color: "header-secondary",
@@ -96,10 +96,10 @@ function u(e) {
       })]
     }), null != M && (0, t.jsx)("img", {
       src: M,
-      alt: d.default.Messages.MESSAGE_ATTACHMENT_A11Y_LABEL.format({
+      alt: c.default.Messages.MESSAGE_ATTACHMENT_A11Y_LABEL.format({
         name: n
       }),
-      className: c.attachment
+      className: d.attachment
     })]
   })
 }
@@ -114,22 +114,22 @@ function M(e) {
     avatarSrc: i
   } = a;
   return (0, t.jsxs)("div", {
-    className: c.message,
+    className: d.message,
     children: [(0, t.jsx)("img", {
       src: i,
-      alt: d.default.Messages.USER_SETTINGS_AVATAR,
+      alt: c.default.Messages.USER_SETTINGS_AVATAR,
       width: 40,
       height: 40
     }), (0, t.jsxs)("div", {
       children: [(0, t.jsxs)("div", {
-        className: c.inline,
+        className: d.inline,
         children: [(0, t.jsx)(r.Text, {
           color: "header-primary",
           variant: "text-sm/semibold",
           children: n
         }), l && (0, t.jsx)("span", {
-          className: c.opTag,
-          children: d.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER
+          className: d.opTag,
+          children: c.default.Messages.BOT_TAG_FORUM_ORIGINAL_POSTER
         })]
       }), (0, t.jsx)(r.Text, {
         color: "text-normal",
@@ -147,60 +147,60 @@ function E(e) {
     maxHeight: n
   } = e;
   return (0, t.jsx)("div", {
-    className: c.previewContainer,
+    className: d.previewContainer,
     style: {
       maxHeight: n
     },
     "aria-hidden": !0,
     children: (0, t.jsxs)("div", {
-      className: c.preview,
+      className: d.preview,
       children: [(0, t.jsx)(o.default, {
-        className: c.forumPostIcon
+        className: d.forumPostIcon
       }), (0, t.jsx)(r.Heading, {
         color: "header-primary",
         variant: "heading-lg/semibold",
-        className: c.header,
+        className: d.header,
         children: a
       }), (0, t.jsx)("div", {
-        className: c.messageContainer,
+        className: d.messageContainer,
         children: s.map((e, a) => (0, t.jsxs)(t.Fragment, {
           children: [(0, t.jsx)(M, {
             ...e
           }, a), 0 === a && (0, t.jsxs)("div", {
             children: [(0, t.jsx)("hr", {
-              className: c.topSeparator
+              className: d.topSeparator
             }), (0, t.jsxs)("div", {
-              className: c.actionBar,
+              className: d.actionBar,
               children: [(0, t.jsxs)(r.Text, {
                 color: "text-brand",
                 variant: "text-xs/medium",
-                className: c.fakeReactions,
+                className: d.fakeReactions,
                 children: [(0, t.jsx)("span", {
                   role: "img",
-                  "aria-label": d.default.Messages.REACTIONS,
-                  className: c.icon,
+                  "aria-label": c.default.Messages.REACTIONS,
+                  className: d.icon,
                   children: "❤️"
                 }), "17"]
               }), (0, t.jsxs)(r.Text, {
                 color: "text-muted",
                 variant: "text-xs/medium",
-                className: c.following,
+                className: d.following,
                 children: [(0, t.jsx)(l.default, {
                   width: 16,
                   height: 16
-                }), d.default.Messages.FOLLOW]
+                }), c.default.Messages.FOLLOW]
               })]
             }), (0, t.jsx)("hr", {
-              className: c.bottomSeparator
+              className: d.bottomSeparator
             })]
           })]
         }))
       }), (0, t.jsx)("div", {
-        className: c.chatInput,
+        className: d.chatInput,
         children: (0, t.jsx)(r.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
-          children: d.default.Messages.SEND_A_MESSAGE
+          children: c.default.Messages.SEND_A_MESSAGE
         })
       })]
     })
@@ -212,7 +212,7 @@ function m(e) {
     id: a
   } = e, [s, l] = n.useState(0), i = n.useRef(null), {
     tags: o,
-    posts: d,
+    posts: c,
     postPreview: M,
     ariaLabel: m
   } = (0, _.default)(a);
@@ -222,24 +222,24 @@ function m(e) {
     var e;
     0 === s && (null == i ? void 0 : null === (e = i.current) || void 0 === e ? void 0 : e.clientHeight) != null && l(i.current.clientHeight - 40)
   }, [s]), (0, t.jsxs)("div", {
-    className: c.container,
+    className: d.container,
     role: "image",
     "aria-label": m,
     children: [(0, t.jsxs)("div", {
       ref: i,
-      className: c.browser,
+      className: d.browser,
       "aria-hidden": !0,
       children: [(0, t.jsx)("div", {
-        className: c.tags,
+        className: d.tags,
         children: o.map((e, a) => (0, t.jsx)(r.Text, {
           color: "header-primary",
           variant: "text-xs/medium",
-          className: c.tag,
+          className: d.tag,
           children: e
         }, a))
       }), (0, t.jsx)("div", {
-        className: c.posts,
-        children: d.map((e, a) => (0, t.jsx)(u, {
+        className: d.posts,
+        children: c.map((e, a) => (0, t.jsx)(u, {
           ...e,
           tags: o
         }, a))

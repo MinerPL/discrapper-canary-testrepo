@@ -1,6 +1,6 @@
 function r() {}
 
-function o(e) {
+function i(e) {
   this._tree = e, this._ancestors = [], this._cursor = null
 }
 n("424973"), r.prototype.clear = function() {
@@ -21,12 +21,12 @@ n("424973"), r.prototype.clear = function() {
   return null
 }, r.prototype.lowerBound = function(e) {
   for (var t = this._root, n = this.iterator(), r = this._comparator; null !== t;) {
-    var o = r(e, t.data);
-    if (0 === o) return n._cursor = t, n;
-    n._ancestors.push(t), t = t.get_child(o > 0)
+    var i = r(e, t.data);
+    if (0 === i) return n._cursor = t, n;
+    n._ancestors.push(t), t = t.get_child(i > 0)
   }
-  for (var a = n._ancestors.length - 1; a >= 0; --a)
-    if (0 > r(e, (t = n._ancestors[a]).data)) return n._cursor = t, n._ancestors.length = a, n;
+  for (var o = n._ancestors.length - 1; o >= 0; --o)
+    if (0 > r(e, (t = n._ancestors[o]).data)) return n._cursor = t, n._ancestors.length = o, n;
   return n._ancestors.length = 0, n
 }, r.prototype.upperBound = function(e) {
   for (var t = this.lowerBound(e), n = this._comparator; null !== t.data() && 0 === n(t.data(), e);) t.next();
@@ -42,14 +42,14 @@ n("424973"), r.prototype.clear = function() {
   for (; null !== e.right;) e = e.right;
   return e.data
 }, r.prototype.iterator = function() {
-  return new o(this)
+  return new i(this)
 }, r.prototype.each = function(e) {
   for (var t, n = this.iterator(); null !== (t = n.next());) e(t)
 }, r.prototype.reach = function(e) {
   for (var t, n = this.iterator(); null !== (t = n.prev());) e(t)
-}, o.prototype.data = function() {
+}, i.prototype.data = function() {
   return null !== this._cursor ? this._cursor.data : null
-}, o.prototype.next = function() {
+}, i.prototype.next = function() {
   if (null === this._cursor) {
     var e, t = this._tree._root;
     null !== t && this._minNode(t)
@@ -62,7 +62,7 @@ n("424973"), r.prototype.clear = function() {
       } while (this._cursor.right === e);
   else this._ancestors.push(this._cursor), this._minNode(this._cursor.right);
   return null !== this._cursor ? this._cursor.data : null
-}, o.prototype.prev = function() {
+}, i.prototype.prev = function() {
   if (null === this._cursor) {
     var e, t = this._tree._root;
     null !== t && this._maxNode(t)
@@ -75,10 +75,10 @@ n("424973"), r.prototype.clear = function() {
       } while (this._cursor.left === e);
   else this._ancestors.push(this._cursor), this._maxNode(this._cursor.left);
   return null !== this._cursor ? this._cursor.data : null
-}, o.prototype._minNode = function(e) {
+}, i.prototype._minNode = function(e) {
   for (; null !== e.left;) this._ancestors.push(e), e = e.left;
   this._cursor = e
-}, o.prototype._maxNode = function(e) {
+}, i.prototype._maxNode = function(e) {
   for (; null !== e.right;) this._ancestors.push(e), e = e.right;
   this._cursor = e
 }, e.exports = r

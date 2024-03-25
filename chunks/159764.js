@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("446674"),
   r = s("206230"),
-  n = s("359499"),
-  i = s("907648"),
+  i = s("359499"),
+  n = s("907648"),
   l = s("421046");
 let o = {
     subtitle: {
@@ -23,10 +23,10 @@ let o = {
   },
   u = e => {
     let t = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion),
-      s = (0, n.useShouldShowConfettiAndGlow)() && !t,
+      s = (0, i.useShouldShowConfettiAndGlow)() && !t,
       u = {
-        [i.CardVariants.DEFAULT]: o,
-        [i.CardVariants.REWARD]: {
+        [n.CardVariants.DEFAULT]: o,
+        [n.CardVariants.REWARD]: {
           subtitle: {
             onlyShowOnHover: !0,
             textVariant: "text-sm/semibold"
@@ -45,5 +45,5 @@ let o = {
           }
         }
       };
-    return null != e ? u[e] : u[i.CardVariants.DEFAULT]
+    return null != e ? u[e] : u[n.CardVariants.DEFAULT]
   }

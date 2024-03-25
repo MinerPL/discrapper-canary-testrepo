@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return E
   },
   default: function() {
-    return h
+    return _
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("669491"),
   o = n("769846"),
   u = n("159885"),
   d = n("874293"),
-  c = n("976143");
+  c = n("879104");
 let f = (0, u.cssValueToNumber)(o.default.GRADIENT_PROGRESS_NOTCH_WIDTH),
   E = Object.freeze({
     BLACK: c.black,
     GRAY: c.gray
   });
-class _ extends s.Component {
+class h extends s.Component {
   componentDidMount() {
     this.computeBars(), window.addEventListener("resize", this.computeBars)
   }
@@ -65,14 +65,14 @@ class _ extends s.Component {
       className: c.wrapper,
       ref: this.sizerRef,
       children: (0, a.jsxs)("div", {
-        className: l(c.container, e),
+        className: i(c.container, e),
         style: this.getGradientStyles(),
         children: [(0, a.jsx)("div", {
           className: c.progress,
           style: this.getProgressStyles()
         }), 0 !== n && (0, a.jsx)(d.default, {
           width: n,
-          className: l(c.notches, t)
+          className: i(c.notches, t)
         })]
       })
     })
@@ -90,8 +90,8 @@ class _ extends s.Component {
     }
   }
 }
-_.defaultProps = {
+h.defaultProps = {
   gradientStart: r.default.unsafe_rawColors.YELLOW_260.css,
   gradientEnd: r.default.unsafe_rawColors.GREEN_360.css
 };
-var h = _
+var _ = h

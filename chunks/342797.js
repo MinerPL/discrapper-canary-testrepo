@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   logResumeAnalytics: function() {
-    return f
+    return _
   }
 }), n("424973");
 var i = n("102053");
@@ -25,7 +25,7 @@ var s = n("410912"),
 
 function l(e, t, n, r, l) {
   var u, d, c;
-  let f = function(e) {
+  let _ = function(e) {
     let {
       _trace: t
     } = e, n = {};
@@ -45,10 +45,10 @@ function l(e, t, n, r, l) {
     } catch (e) {}
     return n
   }(t);
-  null != r && i.default.addDetail("payload_size(kb)", Math.round(r.uncompressed_byte_size / 1024)), i.default.addDetail("server_time(ms)", null !== (u = f.identify_total_server_duration_ms) && void 0 !== u ? u : 0);
-  let _ = {
+  null != r && i.default.addDetail("payload_size(kb)", Math.round(r.uncompressed_byte_size / 1024)), i.default.addDetail("server_time(ms)", null !== (u = _.identify_total_server_duration_ms) && void 0 !== u ? u : 0);
+  let f = {
     ...r,
-    ...f,
+    ..._,
     ... function(e) {
       let {
         guilds: t
@@ -77,7 +77,7 @@ function l(e, t, n, r, l) {
     had_cache_at_startup: null !== (d = e.analytics.hadCacheAtStartup) && void 0 !== d && d,
     used_cache_at_startup: null !== (c = e.analytics.usedCacheAtStartup) && void 0 !== c && c
   };
-  s.default.attachReadyPayloadProperties(_), a.default.track(o.AnalyticEvents.READY_PAYLOAD_RECEIVED, _, {
+  s.default.attachReadyPayloadProperties(f), a.default.track(o.AnalyticEvents.READY_PAYLOAD_RECEIVED, f, {
     logEventProperties: !0
   })
 }
@@ -112,20 +112,20 @@ function d(e) {
       user_guild_settings: u,
       user_settings: d,
       user_settings_proto: c,
-      experiments: f,
-      guild_experiments: _,
-      relationships: h,
-      users: g,
-      ...m
+      experiments: _,
+      guild_experiments: f,
+      relationships: E,
+      users: h,
+      ...g
     } = e,
-    E = [],
+    m = [],
     p = [],
-    v = [],
     S = [],
     T = [],
+    v = [],
     I = [],
-    C = [],
-    A = [];
+    A = [],
+    C = [];
   return s.forEach(e => {
     var t;
     if (e.unavailable) return;
@@ -137,27 +137,27 @@ function d(e) {
       guild_scheduled_events: r,
       ...a
     } = e;
-    E.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels), p.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles), v.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis), S.push(s), T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers), I.push(n), C.push(r), A.push(a, i)
+    m.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels), p.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles), S.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis), T.push(s), v.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers), I.push(n), A.push(r), C.push(a, i)
   }), {
     presences_size: JSON.stringify(null !== (t = null == r ? void 0 : r.friends) && void 0 !== t ? t : []).length,
-    users_size: JSON.stringify(g).length,
+    users_size: JSON.stringify(h).length,
     read_states_size: JSON.stringify(o).length,
     private_channels_size: JSON.stringify(l).length,
     user_settings_size: JSON.stringify(null != d ? d : "").length + (null != c ? c : "").length,
-    experiments_size: JSON.stringify(null != f ? f : []).length + JSON.stringify(null != _ ? _ : []).length,
+    experiments_size: JSON.stringify(null != _ ? _ : []).length + JSON.stringify(null != f ? f : []).length,
     user_guild_settings_size: JSON.stringify(u).length,
-    relationships_size: JSON.stringify(h).length,
-    remaining_data_size: JSON.stringify(null != m ? m : {}).length,
-    guild_channels_size: JSON.stringify(E).length,
+    relationships_size: JSON.stringify(E).length,
+    remaining_data_size: JSON.stringify(null != g ? g : {}).length,
+    guild_channels_size: JSON.stringify(m).length,
     guild_members_size: JSON.stringify(null != a ? a : []).length,
     guild_presences_size: JSON.stringify(null !== (n = null == r ? void 0 : r.guilds) && void 0 !== n ? n : []).length,
     guild_roles_size: JSON.stringify(p).length,
-    guild_emojis_size: JSON.stringify(v).length,
-    guild_threads_size: JSON.stringify(S).length,
-    guild_stickers_size: JSON.stringify(T).length,
-    guild_events_size: JSON.stringify(C).length,
+    guild_emojis_size: JSON.stringify(S).length,
+    guild_threads_size: JSON.stringify(T).length,
+    guild_stickers_size: JSON.stringify(v).length,
+    guild_events_size: JSON.stringify(A).length,
     guild_features_size: JSON.stringify(I).length,
-    guild_remaining_data_size: JSON.stringify(A).length,
+    guild_remaining_data_size: JSON.stringify(C).length,
     size_metrics_duration_ms: Date.now() - i
   }
 }
@@ -175,7 +175,7 @@ function c(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   var t;
   !(!(null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.isStaff()) && .5 > Math.random()) && a.default.track(o.AnalyticEvents.CONNECTION_RESUMED, {
     connect_time_ms: e.connectTime,

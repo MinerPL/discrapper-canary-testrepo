@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return C
   }
 }), n("424973"), n("222007");
 var a = n("446674"),
@@ -9,14 +9,14 @@ var a = n("446674"),
   s = n("867805"),
   i = n("697218"),
   r = n("402671"),
-  o = n("315841"),
-  u = n("52477"),
+  u = n("315841"),
+  o = n("52477"),
   d = n("827520");
 let c = {},
   f = {},
   h = {},
-  p = !0,
-  m = null;
+  m = !0,
+  p = null;
 
 function E(e) {
   if (null == f[e]) {
@@ -27,9 +27,9 @@ function E(e) {
     a.src = n, f[e] = a
   }
 }
-class C extends a.default.Store {
+class g extends a.default.Store {
   get visibleOverlayCanvas() {
-    return p
+    return m
   }
   getDrawables(e) {
     return null != c[e] ? c[e] : []
@@ -41,11 +41,11 @@ class C extends a.default.Store {
     return h[e]
   }
   getDrawMode() {
-    return m
+    return p
   }
 }
-C.displayName = "SharedCanvasStore";
-let g = new C(l.default, {
+g.displayName = "SharedCanvasStore";
+let S = new g(l.default, {
   SHARED_CANVAS_UPDATE_LINE_POINTS: function(e) {
     let {
       lineId: t,
@@ -54,7 +54,7 @@ let g = new C(l.default, {
       streamerId: l
     } = e, s = c[l];
     if (null == s) c[l] = [{
-      type: o.DrawableType.LINE,
+      type: u.DrawableType.LINE,
       id: t,
       userId: a,
       points: n
@@ -62,11 +62,11 @@ let g = new C(l.default, {
     else {
       let e = s.find(e => e.id === t);
       null == e ? s.push({
-        type: o.DrawableType.LINE,
+        type: u.DrawableType.LINE,
         id: t,
         userId: a,
         points: n
-      }) : (0, u.isLine)(e) && e.points.push(...n)
+      }) : (0, o.isLine)(e) && e.points.push(...n)
     }
     E(a)
   },
@@ -75,10 +75,10 @@ let g = new C(l.default, {
     let {
       emojiHose: l,
       streamerId: i,
-      userId: u
+      userId: o
     } = e, f = {
       ...l,
-      type: o.DrawableType.EMOJI_HOSE
+      type: u.DrawableType.EMOJI_HOSE
     };
     if (null == c[i]) c[i] = [f];
     else {
@@ -88,16 +88,16 @@ let g = new C(l.default, {
         ...f
       } : c[i].push(f)
     }
-    let p = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : "";
-    if (null == h[p]) {
+    let m = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : "";
+    if (null == h[m]) {
       let e = null != l.emojiName ? s.default.convertNameToSurrogate(l.emojiName) : null;
-      h[p] = new Image, h[p].src = (0, r.getEmojiUrl)({
+      h[m] = new Image, h[m].src = (0, r.getEmojiUrl)({
         id: l.emojiId,
         name: null !== (a = null != e ? e : l.emojiName) && void 0 !== a ? a : "",
         animated: !1
       }, d.EMOJI_HOSE_EMOJI_SIZE)
     }
-    E(u)
+    E(o)
   },
   SHARED_CANVAS_CLEAR_DRAWABLES: function(e) {
     let {
@@ -113,11 +113,11 @@ let g = new C(l.default, {
     let {
       drawMode: t
     } = e;
-    m = t
+    p = t
   },
   TOGGLE_OVERLAY_CANVAS: function(e) {
     let {} = e;
-    p = !p
+    m = !m
   }
 });
-var S = g
+var C = S

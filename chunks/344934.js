@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   GuildFeedConversationReply: function() {
-    return S
+    return v
   }
 });
 var l = a("37983"),
@@ -20,9 +20,9 @@ var l = a("37983"),
   g = a("93332"),
   I = a("587904"),
   _ = a("894488"),
-  x = a("307078");
+  x = a("422145");
 
-function v(e) {
+function S(e) {
   let {
     message: t,
     guildId: a,
@@ -34,8 +34,8 @@ function v(e) {
     setPopout: h
   } = (0, f.default)(t.id, _.DEFAULT_POPOUTS), {
     usernameProfile: E,
-    avatarProfile: v
-  } = m, S = n.useMemo(() => e => (0, o.default)(e, t), [t]), C = (0, c.useContextMenuUser)(t.author.id, i.id), N = (0, c.useClickMessageAuthorUsername)(t, i, E, h), p = (0, c.useClickMessageAuthorAvatar)(v, h), T = n.useCallback(() => h({
+    avatarProfile: S
+  } = m, v = n.useMemo(() => e => (0, o.default)(e, t), [t]), C = (0, c.useContextMenuUser)(t.author.id, i.id), N = (0, c.useClickMessageAuthorUsername)(t, i, E, h), p = (0, c.useClickMessageAuthorAvatar)(S, h), T = n.useCallback(() => h({
     usernameProfile: !1,
     avatarProfile: !1,
     referencedUsernameProfile: !1
@@ -48,7 +48,7 @@ function v(e) {
       compact: !0,
       displayCompactAvatars: !0,
       animate: s,
-      showAvatarPopout: v,
+      showAvatarPopout: S,
       showUsernamePopout: E,
       onContextMenu: C,
       onClickUsername: N,
@@ -56,9 +56,9 @@ function v(e) {
       onPopoutRequestClose: T
     },
     guildId: a,
-    handleRenderPopout: S,
+    handleRenderPopout: v,
     className: x.avatar
-  }), j = (0, g.useUsername)(e, S), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
+  }), j = (0, g.useUsername)(e, v), M = (0, u.getMessageUsernameId)(t), D = (0, u.getMessageTimestampId)(t), F = "".concat(M, " ").concat(D), L = (0, u.getMessageReplyId)(t);
   return (0, l.jsx)(l.Fragment, {
     children: (0, l.jsxs)(d.H, {
       className: x.header,
@@ -78,7 +78,7 @@ function v(e) {
     })
   })
 }
-let S = n.forwardRef(function(e, t) {
+let v = n.forwardRef(function(e, t) {
   let {
     message: a,
     className: s,
@@ -89,7 +89,7 @@ let S = n.forwardRef(function(e, t) {
     guildId: g,
     animateAvatar: I
   } = e, _ = n.useRef(null), {
-    content: S,
+    content: v,
     hasSpoilerEmbeds: C
   } = (0, m.default)(a, {
     hideSimpleEmbedContent: !0
@@ -108,7 +108,7 @@ let S = n.forwardRef(function(e, t) {
       },
       children: (0, l.jsxs)("div", {
         children: [(0, l.jsxs)("div", {
-          children: [(0, l.jsx)(v, {
+          children: [(0, l.jsx)(S, {
             author: N,
             message: a,
             channel: f,
@@ -119,7 +119,7 @@ let S = n.forwardRef(function(e, t) {
               [x.truncatedReply]: c
             }),
             message: a,
-            content: S,
+            content: v,
             contentRef: t
           })]
         }), (0, h.default)({

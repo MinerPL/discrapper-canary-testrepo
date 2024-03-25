@@ -17,7 +17,7 @@ var s = t("37983"),
   N = t("145131"),
   x = t("758710"),
   m = t("782340"),
-  C = t("429152");
+  C = t("221818");
 let f = new h.default("TwoWayLink");
 
 function T(e) {
@@ -28,8 +28,8 @@ function T(e) {
     expectedCallbackState: h,
     onAuthToken: T,
     onError: p,
-    onClose: j,
-    img: v,
+    onClose: v,
+    img: j,
     title: y,
     body: E,
     redirectDestination: g
@@ -78,14 +78,14 @@ function T(e) {
         })
       }), (0, s.jsxs)("div", {
         className: C.illustration,
-        children: [v, " "]
+        children: [j, " "]
       }), (0, s.jsx)(i.Heading, {
         className: C.title,
         variant: "heading-xl/extrabold",
         children: y
-      }), null != j && (0, s.jsx)(i.ModalCloseButton, {
+      }), null != v && (0, s.jsx)(i.ModalCloseButton, {
         className: C.closeButton,
-        onClick: j
+        onClick: v
       })]
     }), (0, s.jsxs)(i.ModalContent, {
       className: C.body,

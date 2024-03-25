@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var s = n("132710"),
-  i = n.n(s),
+var i = n("404828"),
+  s = n.n(i),
   r = n("862205");
 let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,
   o = (0, r.createExperiment)({
@@ -29,8 +29,8 @@ let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
       }
     }]
   }),
-  d = {
-    order: i.defaultRules.url.order - .5,
+  l = {
+    order: s.defaultRules.url.order - .5,
     requiredFirstCharacters: ["h"],
     match(e) {
       let t = a.exec(e);
@@ -45,20 +45,20 @@ let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com
       return t
     },
     parse(e, t, n) {
-      var s;
-      let i = e[0],
+      var i;
+      let s = e[0],
         r = e[1];
       return {
         type: "attachmentLink",
         content: [{
           type: "text",
-          content: s = r
+          content: i = r
         }],
-        attachmentUrl: i,
-        attachmentName: s
+        attachmentUrl: s,
+        attachmentName: i
       }
     }
   };
 var u = {
-  attachmentLink: d
+  attachmentLink: l
 }

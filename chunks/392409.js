@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return m
   }
 });
 var a = s("37983"),
@@ -15,16 +15,16 @@ var a = s("37983"),
   c = s("697218"),
   S = s("145131"),
   E = s("387225"),
-  f = s("782340"),
-  T = s("160918");
-class m extends n.Component {
+  T = s("782340"),
+  f = s("128601");
+class _ extends n.Component {
   renderNotice() {
     let {
       isClaimed: e,
       unclaimedNotice: t,
       unverifiedNotice: s
     } = this.props;
-    return e ? null != s ? s : f.default.Messages.NOTICE_UNVERIFIED_ACCOUNT : null != t ? t : f.default.Messages.NOTICE_UNCLAIMED_ACCOUNT
+    return e ? null != s ? s : T.default.Messages.NOTICE_UNVERIFIED_ACCOUNT : null != t ? t : T.default.Messages.NOTICE_UNCLAIMED_ACCOUNT
   }
   renderPrimaryAction() {
     return this.props.isClaimed ? this.props.hasEmail ? (0, a.jsx)(S.default.Child, {
@@ -35,7 +35,7 @@ class m extends n.Component {
       size: u.Button.Sizes.MEDIUM,
       color: u.Button.Colors.BRAND,
       onClick: this.openChangeEmailModal,
-      children: f.default.Messages.ADD_EMAIL_SHORT
+      children: T.default.Messages.ADD_EMAIL_SHORT
     }) : (0, a.jsx)(S.default.Child, {
       grow: 0,
       shrink: 0,
@@ -43,7 +43,7 @@ class m extends n.Component {
         size: u.Button.Sizes.MEDIUM,
         color: u.Button.Colors.BRAND,
         onClick: this.openClaimAccountModal,
-        children: f.default.Messages.CLAIM_ACCOUNT
+        children: T.default.Messages.CLAIM_ACCOUNT
       })
     })
   }
@@ -55,7 +55,7 @@ class m extends n.Component {
         color: u.Button.Colors.PRIMARY,
         look: u.Button.Looks.LINK,
         onClick: this.openChangeEmailModal,
-        children: f.default.Messages.CHANGE_EMAIL_SHORT
+        children: T.default.Messages.CHANGE_EMAIL_SHORT
       })
     }) : null
   }
@@ -86,11 +86,11 @@ class m extends n.Component {
       isVerified: s
     } = this.props;
     return t && s ? null : (0, a.jsx)(u.Card, {
-      className: i(T.wrapper, e),
+      className: i(f.wrapper, e),
       children: (0, a.jsxs)(S.default, {
         align: S.default.Align.CENTER,
         children: [(0, a.jsx)(S.default.Child, {
-          className: T.image,
+          className: f.image,
           grow: 0,
           shrink: 0
         }), (0, a.jsxs)(S.default.Child, {
@@ -99,7 +99,7 @@ class m extends n.Component {
             children: this.renderNotice()
           }), (0, a.jsxs)(S.default, {
             justify: S.default.Justify.CENTER,
-            className: T.content,
+            className: f.content,
             children: [this.renderPrimaryAction(), this.renderSecondaryAction()]
           })]
         })]
@@ -107,11 +107,11 @@ class m extends n.Component {
     })
   }
 }
-var _ = d.default.connectStores([c.default], () => {
+var m = d.default.connectStores([c.default], () => {
   let e = c.default.getCurrentUser();
   return o(null != e, "EmailNotice: currentUser cannot be undefined"), {
     isClaimed: e.isClaimed(),
     isVerified: e.verified,
     hasEmail: null != e.email
   }
-})(m)
+})(_)

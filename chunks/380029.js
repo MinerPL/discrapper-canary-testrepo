@@ -5,8 +5,8 @@
       i = n("483366"),
       u = n.n(i),
       c = n("655518"),
-      l = n("159885"),
-      a = n("195547");
+      a = n("159885"),
+      l = n("195547");
     let f = {
         UPDATE_USERS: "UPDATE_USERS",
         USER_RESULTS: "USER_RESULTS",
@@ -14,16 +14,16 @@
         QUERY_CLEAR: "QUERY_CLEAR"
       },
       s = new Map,
-      d = new Map,
-      p = new Set,
+      p = new Map,
+      d = new Set,
       v = "username",
       b = "friendNickname",
       g = "globalName",
       h = u(() => {
-        0 !== p.size && (p.forEach(t => {
-          let e = d.get(t);
+        0 !== d.size && (d.forEach(t => {
+          let e = p.get(t);
           null != e && m(t, e)
-        }), p.clear())
+        }), d.clear())
       }, 100, {
         leading: !0,
         trailing: !0
@@ -39,12 +39,12 @@
         query: i,
         limit: u,
         filters: f,
-        blacklist: d,
-        whitelist: p
+        blacklist: p,
+        whitelist: d
       } = e, h = null != f && f.strict && null !== (n = f.guild) && void 0 !== n ? n : null, m = null !== (r = e.boosters) && void 0 !== r ? r : {}, S = RegExp("^".concat(c.default.escape(i)), "i"), x = RegExp(c.default.escape(i), "i"), j = [];
       if ("" === i) return E(i, j, t);
       let O = i.toLocaleLowerCase(),
-        T = (0, l.normalize)(O);
+        T = (0, a.normalize)(O);
       s.forEach((t, e) => {
         let n;
         if (! function(t, e, n, r, o) {
@@ -58,7 +58,7 @@
               return !0 === t && !0 === e.isFriend || null != r && (null != e[r] || null === e[r]) || !1
             }
             return !0
-          }(e, t, f, d, p)) return;
+          }(e, t, f, p, d)) return;
         let {
           username: r
         } = t;
@@ -71,17 +71,17 @@
           let u;
           let c = t[i];
           if ("boolean" == typeof c || null == c || null != h && i !== v && i !== b && i !== g && h !== i) return;
-          let a = (0, l.stripDiacritics)(c.toLocaleLowerCase());
+          let l = (0, a.stripDiacritics)(c.toLocaleLowerCase());
           S.test(c) ? u = {
             comparator: c,
             score: y(10, m[e])
           } : x.test(c) ? u = {
             comparator: c,
             score: y(5, m[e])
-          } : o(O, a) ? u = {
+          } : o(O, l) ? u = {
             comparator: c,
             score: y(1, m[e])
-          } : o(T, (0, l.normalize)(a)) && (u = {
+          } : o(T, (0, a.normalize)(l)) && (u = {
             comparator: c,
             score: y(1, m[e])
           }), null != u && (null == n || n.score < u.score) && (n = {
@@ -90,7 +90,7 @@
             username: r
           })
         }), null != n && j.push(n)
-      }), j.sort(a.default), j.length > u && (j.length = u), E(i, j, t)
+      }), j.sort(l.default), j.length > u && (j.length = u), E(i, j, t)
     }
 
     function E(t, e, n) {
@@ -124,14 +124,14 @@
                 ...u,
                 ...i
               };
-              s.set(o, c), d.size > 0 && ((c.isFriend !== (null == u ? void 0 : u.isFriend) || c.friendNickname !== (null == u ? void 0 : u.friendNickname)) && (n = !0), Object.keys(c).forEach(t => {
+              s.set(o, c), p.size > 0 && ((c.isFriend !== (null == u ? void 0 : u.isFriend) || c.friendNickname !== (null == u ? void 0 : u.friendNickname)) && (n = !0), Object.keys(c).forEach(t => {
                 "isBot" !== t && "isFriend" !== t && t !== v && t !== b && t !== g && r.add(t)
               }))
-            }), d.forEach((t, e) => {
+            }), p.forEach((t, e) => {
               let {
                 filters: o
               } = t;
-              (null == o || o.friends === n || r.has(o.guild)) && p.add(e)
+              (null == o || o.friends === n || r.has(o.guild)) && d.add(e)
             }), h()
           }(e);
         case f.QUERY_SET:
@@ -140,14 +140,14 @@
               uuid: e,
               payload: n
             } = t;
-            d.set(e, n), m(e, n)
+            p.set(e, n), m(e, n)
           }(e);
         case f.QUERY_CLEAR:
           return function(t) {
             let {
               uuid: e
             } = t;
-            d.delete(e), p.delete(e), 0 === p.size && h.cancel()
+            p.delete(e), d.delete(e), 0 === d.size && h.cancel()
           }(e)
       }
     })

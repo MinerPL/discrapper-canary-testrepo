@@ -1,61 +1,61 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return E
+    return p
   }
 });
-var n = i("37983");
-i("884691");
-var l = i("414456"),
-  s = i.n(l),
-  a = i("45682"),
-  r = i("788506"),
-  o = i("695106"),
-  u = i("974634"),
-  c = i("115279"),
-  d = i("958706"),
-  f = i("431364"),
-  E = e => {
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("45682"),
+  r = n("788506"),
+  o = n("695106"),
+  u = n("974634"),
+  d = n("115279"),
+  c = n("958706"),
+  f = n("296323"),
+  p = e => {
     let {
       accessory: t,
-      pickerIntention: i,
+      pickerIntention: n,
       headerClassName: l,
-      emojiListRef: E,
+      emojiListRef: p,
       onKeyDown: m,
-      onFocus: I,
-      autoFocus: p,
-      searchBarRef: g,
-      hasTabWrapper: _,
-      diversitySurrogate: S,
-      isBurstReaction: h,
+      onFocus: h,
+      autoFocus: x,
+      searchBarRef: E,
+      hasTabWrapper: y,
+      diversitySurrogate: g,
+      isBurstReaction: S,
       onBurstReactionToggle: C,
       renderHeader: T
-    } = e, N = (0, n.jsxs)(n.Fragment, {
-      children: [(0, n.jsx)(u.default, {
-        emojiListRef: E,
-        gridNavigatorId: c.GRID_NAVIGATOR_ID,
+    } = e, _ = (0, i.jsxs)(i.Fragment, {
+      children: [(0, i.jsx)(u.default, {
+        emojiListRef: p,
+        gridNavigatorId: d.GRID_NAVIGATOR_ID,
         onKeyDown: m,
         className: f.searchBar,
-        ref: g,
-        isFullRow: i === d.EmojiIntention.COMMUNITY_CONTENT_ONLY,
-        onFocus: I,
-        autoFocus: p,
-        defaultSearchPlaceholder: (0, r.getSearchPlaceholder)(i, h)
-      }), i === d.EmojiIntention.REACTION ? (0, n.jsx)("div", {
+        ref: E,
+        isFullRow: n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY,
+        onFocus: h,
+        autoFocus: x,
+        defaultSearchPlaceholder: (0, r.getSearchPlaceholder)(n, S)
+      }), n === c.EmojiIntention.REACTION ? (0, i.jsx)("div", {
         className: f.burstToggle,
-        children: (0, n.jsx)(a.default, {
-          checked: h,
+        children: (0, i.jsx)(s.default, {
+          checked: S,
           onClick: C
         })
-      }) : null, i === d.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, n.jsx)(o.default, {
-        searchBarRef: g,
+      }) : null, n === c.EmojiIntention.COMMUNITY_CONTENT_ONLY ? null : null != t ? t : (0, i.jsx)(o.default, {
+        searchBarRef: E,
         className: f.diversitySelector,
-        hasTabWrapper: _,
-        selectedSurrogate: S
+        hasTabWrapper: y,
+        selectedSurrogate: g
       })]
     });
-    return (0, n.jsx)("div", {
-      className: s(f.header, l),
-      children: null != T ? T(N) : N
+    return (0, i.jsx)("div", {
+      className: a(f.header, l),
+      children: null != T ? T(_) : _
     })
   }

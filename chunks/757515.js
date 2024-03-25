@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   ROLE_FIELD_NAME: function() {
-    return u
+    return s
   },
   describeUploadProgressError: function() {
-    return o
+    return u
   },
   describeProductChangeValidation: function() {
-    return s
+    return o
   },
   computeProductChanges: function() {
     return a
@@ -20,9 +20,9 @@ var i = n("448993");
 n("957255");
 var r = n("49111"),
   l = n("782340");
-let u = "_role";
+let s = "_role";
 
-function o(e) {
+function u(e) {
   if (!(e >= 0)) switch (-e) {
     case r.AbortCodes.ENTITY_TOO_LARGE:
       return l.default.Messages.UPLOAD_ERROR_TOO_LARGE;
@@ -37,13 +37,13 @@ function o(e) {
   }
 }
 
-function s(e) {
+function o(e) {
   let {
     newRoleParams: t
   } = e;
   if (null != t && "" === t.name.trim()) {
     var n, r;
-    return n = u, r = l.default.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new i.APIError({
+    return n = s, r = l.default.Messages.GUILD_PRODUCT_ERROR_EMPTY_ROLE_NAME, new i.APIError({
       status: 400,
       body: {
         message: "Invalid form body",
@@ -67,13 +67,13 @@ function a(e) {
     name: i,
     priceTier: r,
     description: l,
-    image: u,
-    imageName: o,
-    isImageChanged: s,
+    image: s,
+    imageName: u,
+    isImageChanged: o,
     newRoleParams: a,
     hasUnsavedAttachmentChanges: d
   } = e, c = {};
-  (null == n ? void 0 : n.name) !== i && "" !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), u.startsWith("data:") && (s || null == n && (Object.keys(c).length > 0 || d)) && (c.image = u, c.imageName = o);
+  (null == n ? void 0 : n.name) !== i && "" !== i.trim() && (c.name = i), (null !== (t = null == n ? void 0 : n.description) && void 0 !== t ? t : "") !== l && (c.description = l), (null == n ? void 0 : n.price_tier) !== r && null != r && (c.priceTier = r), null != a && "" !== a.name.trim() ? c.createNewRole = !0 : null === a && (c.unlinkRole = !0), s.startsWith("data:") && (o || null == n && (Object.keys(c).length > 0 || d)) && (c.image = s, c.imageName = u);
   let f = Object.keys(c).length > 0 || d;
   return {
     changes: c,

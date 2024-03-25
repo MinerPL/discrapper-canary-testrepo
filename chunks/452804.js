@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   saveGuildFolders: function() {
-    return _
+    return f
   },
   saveClientTheme: function() {
-    return g
+    return h
   },
   default: function() {
-    return m
+    return g
   }
 });
 var i = n("151426"),
@@ -19,9 +19,9 @@ var i = n("151426"),
   u = n("161778"),
   d = n("845579"),
   c = n("872173"),
-  f = n("116319");
+  _ = n("116319");
 
-function _(e) {
+function f(e) {
   return c.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
     t.folders = e.map(e => {
       let t = i.GuildFolder.create({
@@ -38,11 +38,11 @@ function _(e) {
   }, c.UserSettingsDelay.SLOW_USER_ACTION)
 }
 
-function h(e) {
+function E(e) {
   return (0, r.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
 }
 
-function g(e) {
+function h(e) {
   let {
     backgroundGradientPresetId: t,
     theme: n
@@ -50,7 +50,7 @@ function g(e) {
   if (a.default.dispatch({
       type: "UNSYNCED_USER_SETTINGS_UPDATE",
       settings: {
-        useSystemTheme: "system" === n ? f.SystemThemeState.ON : f.SystemThemeState.OFF
+        useSystemTheme: "system" === n ? _.SystemThemeState.ON : _.SystemThemeState.OFF
       }
     }), a.default.dispatch({
       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
@@ -66,7 +66,7 @@ function g(e) {
       }
     }), l.default.shouldSync("appearance")) return c.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
     var i;
-    e.theme = h(n), e.clientThemeSettings = {
+    e.theme = E(n), e.clientThemeSettings = {
       backgroundGradientPresetId: null != (i = {
         backgroundGradientPresetId: t
       }).backgroundGradientPresetId ? s.UInt32Value.create({
@@ -75,7 +75,7 @@ function g(e) {
     }
   }, i)
 }
-var m = {
+var g = {
   overrideLocale(e) {
     a.default.dispatch({
       type: "USER_SETTINGS_LOCALE_OVERRIDE",
@@ -154,7 +154,7 @@ var m = {
         }
       }
     }), l.default.shouldSync("appearance") && c.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
-      t.theme = h(e)
+      t.theme = E(e)
     }, c.UserSettingsDelay.INFREQUENT_USER_ACTION)
   }
 }

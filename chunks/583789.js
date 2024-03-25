@@ -1,76 +1,76 @@
 "use strict";
-t.r(l), t.d(l, {
+a.r(l), a.d(l, {
   default: function() {
-    return d
+    return c
   }
-}), t("222007");
-var n = t("37983"),
-  a = t("884691"),
-  s = t("414456"),
-  r = t.n(s),
-  i = t("77078"),
-  o = t("476765"),
-  u = t("782340"),
-  c = t("876197");
+}), a("222007");
+var t = a("37983"),
+  s = a("884691"),
+  n = a("414456"),
+  r = a.n(n),
+  u = a("77078"),
+  i = a("476765"),
+  o = a("782340"),
+  d = a("840921");
 
-function d(e) {
+function c(e) {
   let {
     errorText: l,
-    title: t,
-    description: s,
-    transitionState: d,
+    title: a,
+    description: n,
+    transitionState: c,
     onCancel: E,
-    onConfirm: I,
-    children: C
-  } = e, h = (0, o.useUID)(), [m, M] = a.useState(!1), _ = a.useCallback(async () => {
-    M(!0);
+    onConfirm: R,
+    children: _
+  } = e, h = (0, i.useUID)(), [M, m] = s.useState(!1), f = s.useCallback(async () => {
+    m(!0);
     try {
-      await I()
+      await R()
     } catch (e) {
       throw e
     } finally {
-      M(!1)
+      m(!1)
     }
-  }, [I]);
-  return (0, n.jsxs)(i.ModalRoot, {
-    className: c.modal,
-    transitionState: d,
+  }, [R]);
+  return (0, t.jsxs)(u.ModalRoot, {
+    className: d.modal,
+    transitionState: c,
     "aria-labelledby": h,
-    size: i.ModalSize.SMALL,
-    children: [(0, n.jsxs)(i.ModalContent, {
-      className: c.modalContent,
-      children: [(0, n.jsx)(i.Heading, {
+    size: u.ModalSize.SMALL,
+    children: [(0, t.jsxs)(u.ModalContent, {
+      className: d.modalContent,
+      children: [(0, t.jsx)(u.Heading, {
         variant: "heading-md/semibold",
         id: h,
-        children: t
-      }), null != s && "" !== s ? (0, n.jsx)(i.Text, {
+        children: a
+      }), null != n && "" !== n ? (0, t.jsx)(u.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        className: c.description,
-        children: s
-      }) : null, (0, n.jsx)("div", {
-        className: c.body,
-        children: C
-      }), null != l && "" !== l ? (0, n.jsx)(i.Text, {
-        className: c.errorText,
+        className: d.description,
+        children: n
+      }) : null, (0, t.jsx)("div", {
+        className: d.body,
+        children: _
+      }), null != l && "" !== l ? (0, t.jsx)(u.Text, {
+        className: d.errorText,
         variant: "text-xs/normal",
         color: "text-danger",
         children: l
       }) : null]
-    }), (0, n.jsxs)(i.ModalFooter, {
-      children: [(0, n.jsx)(i.Button, {
-        submitting: m,
-        className: c.button,
-        size: i.Button.Sizes.SMALL,
-        color: i.Button.Colors.BRAND,
-        onClick: _,
-        children: u.default.Messages.SAVE
-      }), (0, n.jsx)(i.Button, {
-        className: r(c.cancelButton, c.button),
-        size: i.Button.Sizes.SMALL,
-        color: i.Button.Colors.PRIMARY,
+    }), (0, t.jsxs)(u.ModalFooter, {
+      children: [(0, t.jsx)(u.Button, {
+        submitting: M,
+        className: d.button,
+        size: u.Button.Sizes.SMALL,
+        color: u.Button.Colors.BRAND,
+        onClick: f,
+        children: o.default.Messages.SAVE
+      }), (0, t.jsx)(u.Button, {
+        className: r(d.cancelButton, d.button),
+        size: u.Button.Sizes.SMALL,
+        color: u.Button.Colors.PRIMARY,
         onClick: E,
-        children: u.default.Messages.CANCEL
+        children: o.default.Messages.CANCEL
       })]
     })]
   })

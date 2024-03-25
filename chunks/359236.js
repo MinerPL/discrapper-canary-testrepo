@@ -44,8 +44,8 @@ var o, a = r("706621"),
   x = RegExp("\r", "g"),
   C = RegExp("\n", "g"),
   E = RegExp("^\n", "g"),
-  O = RegExp("&nbsp;", "g"),
-  D = RegExp("&#13;?", "g"),
+  D = RegExp("&nbsp;", "g"),
+  O = RegExp("&#13;?", "g"),
   K = RegExp("&#8203;?", "g"),
   T = ["bold", "bolder", "500", "600", "700", "800", "900"],
   M = ["light", "lighter", "normal", "100", "200", "300", "400"],
@@ -244,7 +244,7 @@ var o, a = r("706621"),
 t.exports = function(t) {
   var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d,
     r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-    n = e(t = t.trim().replace(x, "").replace(O, " ").replace(D, "").replace(K, ""));
+    n = e(t = t.trim().replace(x, "").replace(D, " ").replace(O, "").replace(K, ""));
   if (!n) return null;
   var i = R(r);
   return new P(i, function(t, e) {

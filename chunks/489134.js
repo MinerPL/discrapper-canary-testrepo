@@ -4,16 +4,16 @@ r.r(t), r.d(t, {
     return u
   }
 });
-var u, l = r("407788");
-u = class e extends l.default {
+var u, n = r("407788");
+u = class e extends n.default {
   static fromServer(t) {
     let {
       purchased_at: r,
       purchase_type: u,
-      ...l
+      ...n
     } = t;
     return new e({
-      ...super.fromServer(l),
+      ...super.fromServer(n),
       purchaseType: u,
       purchasedAt: null != r ? new Date(r) : r
     })

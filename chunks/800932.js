@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return O
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,20 +15,20 @@ var s = n("37983"),
   c = n("77078"),
   f = n("437822"),
   E = n("327037"),
-  I = n("68130"),
-  _ = n("697218"),
-  p = n("461380"),
-  h = n("593195"),
-  m = n("368121"),
-  T = n("767517"),
+  _ = n("68130"),
+  I = n("697218"),
+  h = n("461380"),
+  p = n("593195"),
+  T = n("368121"),
+  m = n("767517"),
   N = n("5487"),
   g = n("932180"),
   A = n("473759"),
   S = n("49111"),
   C = n("782340"),
-  v = n("953066");
+  v = n("828999");
 
-function x(e) {
+function O(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     [n, l] = a.useState(""),
     [i, r] = a.useState(null),
@@ -36,7 +36,7 @@ function x(e) {
     d = (0, N.default)(e.code);
   a.useEffect(() => {
     (async function e() {
-      let e = _.default.getCurrentUser();
+      let e = I.default.getCurrentUser();
       if (null == e) try {
         e = await (0, E.fetchCurrentUser)()
       } catch (e) {
@@ -48,12 +48,12 @@ function x(e) {
     })()
   }, [d.defaultName]);
   (0, g.default)(e);
-  let p = (0, s.jsxs)(s.Fragment, {
+  let h = (0, s.jsxs)(s.Fragment, {
       children: [t ? (0, s.jsx)(A.default, {
         guildTemplate: e
       }) : null, (0, s.jsx)("div", {
         className: v.icon,
-        children: (0, s.jsx)(I.default, {
+        children: (0, s.jsx)(_.default, {
           icon: i,
           onChange: r
         })
@@ -75,8 +75,8 @@ function x(e) {
         })
       })]
     }),
-    h = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name),
-    m = (0, s.jsxs)(s.Fragment, {
+    p = e.serializedSourceGuild.roles.filter(e => "@everyone" !== e.name),
+    T = (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         className: v.divider
       }), (0, s.jsxs)(c.FormItem, {
@@ -93,20 +93,20 @@ function x(e) {
             children: [C.default.Messages.FORM_LABEL_ROLES_PRO_TIP, ":"]
           }), " ", C.default.Messages.GUILD_TEMPLATE_MODAL_CHANNELS_TIP]
         })]
-      }), h.length > 0 ? (0, s.jsx)(s.Fragment, {
+      }), p.length > 0 ? (0, s.jsx)(s.Fragment, {
         children: (0, s.jsx)(c.FormItem, {
           className: v.previewSection,
           title: C.default.Messages.GUILD_TEMPLATE_MODAL_ROLES_HEADER2,
           children: (0, s.jsx)(L, {
-            roles: h
+            roles: p
           })
         })
       }) : null]
     });
   return {
-    form: p,
-    preview: m,
-    handleSubmit: () => T.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
+    form: h,
+    preview: T,
+    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
   }
 }
 
@@ -118,7 +118,7 @@ function R(e) {
       let {
         type: t
       } = e;
-      return t === S.ChannelTypes.GUILD_VOICE ? m.default : t === S.ChannelTypes.GUILD_CATEGORY ? p.default : h.default
+      return t === S.ChannelTypes.GUILD_VOICE ? T.default : t === S.ChannelTypes.GUILD_CATEGORY ? h.default : p.default
     }(e);
     return (0, s.jsxs)("div", {
       className: i(v.channel, {
@@ -143,7 +143,7 @@ n("721247");
 function L(e) {
   let {
     roles: t
-  } = e, n = t.slice().reverse().map(e => (0, s.jsx)(O, {
+  } = e, n = t.slice().reverse().map(e => (0, s.jsx)(x, {
     role: e
   }, e.id));
   return (0, s.jsx)("ul", {
@@ -152,7 +152,7 @@ function L(e) {
   })
 }
 
-function O(e) {
+function x(e) {
   var t;
   let {
     role: n

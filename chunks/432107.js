@@ -5,14 +5,14 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("77078"),
+  l = s("884691"),
+  n = s("77078"),
   i = s("837899"),
   r = s("425190"),
   o = s("183866"),
   d = s("464847"),
   u = s("782340"),
-  c = s("820656");
+  c = s("958268");
 
 function E(e) {
   var t;
@@ -20,9 +20,9 @@ function E(e) {
     rule: s,
     onChangeRule: E,
     collapsed: _ = !1
-  } = e, [T, I] = n.useState(!_), S = n.useCallback(() => {
-    I(!T)
-  }, [T, I]), N = n.useCallback(e => {
+  } = e, [I, T] = l.useState(!_), S = l.useCallback(() => {
+    T(!I)
+  }, [I, T]), f = l.useCallback(e => {
     E({
       ...s,
       triggerMetadata: {
@@ -31,11 +31,11 @@ function E(e) {
       }
     })
   }, [E, s]);
-  return (0, o.isRegexSupported)(s.triggerType) ? (0, a.jsx)(l.Collapsible, {
-    isExpanded: T,
+  return (0, o.isRegexSupported)(s.triggerType) ? (0, a.jsx)(n.Collapsible, {
+    isExpanded: I,
     collapsibleContent: (0, a.jsx)(d.default, {
       rule: s,
-      onChangeText: N,
+      onChangeText: f,
       className: c.textAreaContainer,
       initialValue: null === (t = s.triggerMetadata) || void 0 === t ? void 0 : t.regexPatterns
     }),
@@ -44,16 +44,16 @@ function E(e) {
       let {
         onClick: t
       } = e;
-      return (0, a.jsx)(l.Clickable, {
+      return (0, a.jsx)(n.Clickable, {
         onClick: e => {
           S(), t(e)
         },
         children: (0, a.jsxs)("div", {
           className: c.header,
-          children: [(0, a.jsx)(l.Heading, {
+          children: [(0, a.jsx)(n.Heading, {
             variant: "text-sm/medium",
             children: u.default.Messages.GUILD_AUTOMOD_REGEX_TEXTAREA_TITLE
-          }), T ? (0, a.jsx)(r.default, {
+          }), I ? (0, a.jsx)(r.default, {
             className: c.arrow
           }) : (0, a.jsx)(i.default, {
             className: c.arrow

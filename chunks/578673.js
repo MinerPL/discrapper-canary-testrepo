@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("37983");
 n("884691");
 var l = n("77078"),
-  u = n("54239"),
-  a = n("413266"),
+  a = n("54239"),
+  u = n("413266"),
   r = n("49111"),
   d = n("782340");
 
@@ -18,7 +18,7 @@ function s(e, t) {
     id: "report-raid",
     label: d.default.Messages.GUILD_REPORT_RAID_BUTTON_TITLE,
     action: () => {
-      (0, u.popLayer)(), (0, a.openReportRaidModal)(e)
+      (0, a.popLayer)(), (0, u.openReportRaidModal)(e)
     }
   })
 }

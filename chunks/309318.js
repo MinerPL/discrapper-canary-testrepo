@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return r
   }
 });
-var i = (0, n("862205").createExperiment)({
+var r = (0, n("862205").createExperiment)({
   kind: "user",
   id: "2023-11_nitro_affinities",
   label: "Nitro Affinities",

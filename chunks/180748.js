@@ -7,43 +7,43 @@ n.r(t), n.d(t, {
     return c
   },
   setZoom: function() {
-    return f
-  },
-  enableKeyboardMode: function() {
     return _
   },
+  enableKeyboardMode: function() {
+    return f
+  },
   disableKeyboardMode: function() {
-    return h
+    return E
   },
   toggleDesaturateUserColors: function() {
-    return g
+    return h
   },
   toggleDarkSidebar: function() {
-    return m
+    return g
   },
   keyboardNavigationExplainerModalSeen: function() {
-    return E
+    return m
   },
   systemPrefersReducedMotionChanged: function() {
     return p
   },
   setSaturation: function() {
-    return v
-  },
-  setPrefersReducedMotion: function() {
     return S
   },
-  setSyncForcedColors: function() {
+  setPrefersReducedMotion: function() {
     return T
+  },
+  setSyncForcedColors: function() {
+    return v
   },
   systemColorPreferencesChanged: function() {
     return I
   },
   systemPrefersContrastChanged: function() {
-    return C
+    return A
   },
   setAlwaysShowLinkDecorations: function() {
-    return A
+    return C
   },
   setRoleStyle: function() {
     return y
@@ -78,14 +78,14 @@ function c() {
   })
 }
 
-function f(e) {
+function _(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ZOOM",
     zoom: e
   })
 }
 
-function _() {
+function f() {
   i.default.dispatch({
     type: "ACCESSIBILITY_KEYBOARD_MODE_ENABLE"
   }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
@@ -93,7 +93,7 @@ function _() {
   })
 }
 
-function h() {
+function E() {
   i.default.dispatch({
     type: "ACCESSIBILITY_KEYBOARD_MODE_DISABLE"
   }), r.default.track(o.AnalyticEvents.KEYBOARD_MODE_TOGGLED, {
@@ -101,19 +101,19 @@ function h() {
   })
 }
 
-function g() {
+function h() {
   i.default.dispatch({
     type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE"
   })
 }
 
-function m() {
+function g() {
   i.default.dispatch({
     type: "ACCESSIBILITY_DARK_SIDEBAR_TOGGLE"
   })
 }
 
-function E() {
+function m() {
   i.default.dispatch({
     type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN"
   })
@@ -126,14 +126,14 @@ function p(e) {
   })
 }
 
-function v(e) {
+function S(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_SATURATION",
     saturation: e
   })
 }
 
-function S(e) {
+function T(e) {
   let t = a.default.useReducedMotion;
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION",
@@ -156,7 +156,7 @@ function S(e) {
   }) : t && !n && s.default.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers")
 }
 
-function T(e) {
+function v(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS",
     syncForcedColors: e
@@ -171,14 +171,14 @@ function I(e, t) {
   })
 }
 
-function C(e) {
+function A(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED",
     systemPrefersContrast: e
   })
 }
 
-function A(e) {
+function C(e) {
   i.default.dispatch({
     type: "ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS",
     alwaysShowLinkDecorations: e

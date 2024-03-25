@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("369035"),
+  l = s("884691"),
+  n = s("369035"),
   i = s("296839"),
   r = s("928098"),
   o = s("914559");
@@ -15,30 +15,30 @@ function d(e) {
   let {
     rule: t,
     onChangeRule: s
-  } = e, d = n.useMemo(() => (0, i.getAvailableActionTypes)(t.triggerType), [t.triggerType]), u = r.getPromiseableActionHandlers(t.guildId), c = n.useMemo(() => (0, l.getDefaultActions)(), []), E = (e, a) => {
+  } = e, d = l.useMemo(() => (0, i.getAvailableActionTypes)(t.triggerType), [t.triggerType]), u = r.getPromiseableActionHandlers(t.guildId), c = l.useMemo(() => (0, n.getDefaultActions)(), []), E = (e, a) => {
     if (null == a) return;
-    let n = t.actions.some(e => e.type === a.type),
-      l = [...t.actions, a];
-    if (n) {
+    let l = t.actions.some(e => e.type === a.type),
+      n = [...t.actions, a];
+    if (l) {
       let s = t.actions.filter(e => e.type !== a.type);
-      l = e ? [...s, a] : s
+      n = e ? [...s, a] : s
     }
     s({
       ...t,
-      actions: l
+      actions: n
     })
   }, _ = e => async s => {
     let a = t.actions.find(t => t.type === e),
-      n = null != a,
-      l = c[e],
-      i = s ? a : l;
-    if (null != i && (!n || s)) {
+      l = null != a,
+      n = c[e],
+      i = s ? a : n;
+    if (null != i && (!l || s)) {
       let s = u[e];
       if (null != s) {
         let e = await s(t, i);
         E(!0, e)
       } else E(!0, i)
-    } else E(!1, n ? a : l)
+    } else E(!1, l ? a : n)
   };
   return (0, a.jsx)(a.Fragment, {
     children: d.map(e => {

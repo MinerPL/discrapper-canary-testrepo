@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("446674"),
-  i = n("913144"),
-  l = n("988415");
-let r = (0, l.getDefaultCountryCode)();
+  l = n("913144"),
+  i = n("988415");
+let r = (0, i.getDefaultCountryCode)();
 
 function o(e) {
   var t;
   let {
     countryCode: n
   } = e;
-  null != n && (r = null !== (t = (0, l.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, l.getDefaultCountryCode)())
+  null != n && (r = null !== (t = (0, i.getCountryCodeByAlpha2)(n)) && void 0 !== t ? t : (0, i.getDefaultCountryCode)())
 }
 class u extends s.default.DeviceSettingsStore {
   initialize(e) {
@@ -31,7 +31,7 @@ class u extends s.default.DeviceSettingsStore {
   }
 }
 u.displayName = "PhoneStore", u.persistKey = "PhoneStore";
-var d = new u(i.default, {
+var d = new u(l.default, {
   PHONE_SET_COUNTRY_CODE: function(e) {
     let {
       countryCode: t

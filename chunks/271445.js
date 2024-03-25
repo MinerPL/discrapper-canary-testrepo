@@ -13,10 +13,10 @@ var a, n, l = s("37983"),
   c = s("711562"),
   S = s("167726"),
   E = s("145131"),
-  f = s("476765"),
-  T = s("782340"),
-  m = s("866223"),
-  _ = s("926622");
+  T = s("476765"),
+  f = s("782340"),
+  _ = s("572458"),
+  m = s("890957");
 let g = /^\d+$|^$/;
 (n = a || (a = {})).LOCALHOST = "localhost", n.PROXY = "proxy";
 
@@ -32,7 +32,7 @@ function h(e) {
     authorizedApplicationId: S.default.testModeApplicationId,
     authorizationError: S.default.error,
     authorizing: S.default.isFetchingAuthorization
-  })), [I, N] = i.useState(null != a ? a : ""), [p, C] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, f.useUID)(), R = g.test(I);
+  })), [N, I] = i.useState(null != a ? a : ""), [p, C] = i.useState("8080"), [A, O] = i.useState("localhost"), x = (0, T.useUID)(), R = g.test(N);
   async function M() {
     u.resetError();
     let e = function(e, t, s) {
@@ -43,14 +43,14 @@ function h(e) {
           case "proxy":
             return (0, c.default)(s)
         }
-      }(A, p, I),
-      s = await u.authorizeAndSetTestModeApplication(I, e);
+      }(A, p, N),
+      s = await u.authorizeAndSetTestModeApplication(N, e);
     null != s && t()
   }
   i.useEffect(() => () => d.default.wait(() => u.resetError()), []);
-  let v = null != a && a === I,
-    D = v ? function() {
-      u.reset(), N(""), O(null)
+  let D = null != a && a === N,
+    v = D ? function() {
+      u.reset(), I(""), O(null)
     } : M;
   return (0, l.jsxs)(o.ModalRoot, {
     "aria-labelledby": x,
@@ -61,53 +61,53 @@ function h(e) {
       children: [(0, l.jsx)(o.FormTitle, {
         id: x,
         tag: "h1",
-        className: _.marginReset,
-        children: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
+        className: m.marginReset,
+        children: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_HEADER
       }), (0, l.jsx)(o.ModalCloseButton, {
         onClick: t
       })]
     }), (0, l.jsxs)(o.ModalContent, {
-      className: m.modalContent,
+      className: _.modalContent,
       children: [(0, l.jsx)(o.FormText, {
-        className: _.marginBottom20,
+        className: m.marginBottom20,
         type: o.FormText.Types.DESCRIPTION,
-        children: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
+        children: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_MODAL_BODY
       }), null == n ? null : (0, l.jsx)(o.FormErrorBlock, {
-        className: _.marginBottom20,
+        className: m.marginBottom20,
         children: n
       }), (0, l.jsx)("form", {
         onSubmit: e => {
-          e.preventDefault(), D()
+          e.preventDefault(), v()
         },
         children: (0, l.jsxs)(E.default, {
           direction: E.default.Direction.VERTICAL,
           align: E.default.Align.START,
           children: [(0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
-            title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
+            className: _.inputWrapper,
+            title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PLACEHOLDER,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
-              value: I,
+              value: N,
               maxLength: 19,
-              error: R ? null : T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
+              error: R ? null : f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_INVALID,
               onChange: function(e) {
-                N(e)
+                I(e)
               },
               disabled: h
             })
           }), (0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
-            title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
+            className: _.inputWrapper,
+            title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ORIGIN_LABEL,
             children: (0, l.jsx)(o.SingleSelect, {
-              isDisabled: !R || "" === I,
+              isDisabled: !R || "" === N,
               value: A,
               options: [{
                 value: "localhost",
-                label: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
+                label: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_LOCALHOST_OPTION,
                 key: "localhost"
               }, {
                 value: "proxy",
-                label: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
+                label: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PROXY_OPTION,
                 key: "proxy"
               }],
               onChange: function(e) {
@@ -116,8 +116,8 @@ function h(e) {
               placeholder: "URL Origin Type"
             })
           }), "localhost" !== A ? null : (0, l.jsx)(o.FormItem, {
-            className: m.inputWrapper,
-            title: T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
+            className: _.inputWrapper,
+            title: f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_PORT_NUMBER_LABEL,
             required: !0,
             children: (0, l.jsx)(o.TextInput, {
               value: p,
@@ -128,9 +128,9 @@ function h(e) {
           }), (0, l.jsx)(o.Button, {
             submitting: h,
             type: "submit",
-            disabled: !R || 0 === I.length || "localhost" === A && 0 === p.length,
-            color: v ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-            children: v ? T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : T.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
+            disabled: !R || 0 === N.length || "localhost" === A && 0 === p.length,
+            color: D ? o.Button.Colors.RED : o.Button.Colors.GREEN,
+            children: D ? f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_CLEAR : f.default.Messages.DEVELOPER_APPLICATION_TEST_MODE_ACTIVATE
           })]
         })
       })]

@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = Object.prototype.toString,
-  o = function(e) {
+  a = function(e) {
     return n.call(e)
   }

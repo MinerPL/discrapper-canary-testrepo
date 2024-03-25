@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return f
   }
 }), s("834022");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("77078"),
+  l = s("884691"),
+  n = s("77078"),
   i = s("353575"),
   r = s("296839"),
   o = s("348934"),
@@ -15,45 +15,45 @@ var a = s("37983"),
   c = s("772871"),
   E = s("766829"),
   _ = s("782340"),
-  T = s("544067");
+  I = s("494454");
 
-function I() {
+function T() {
   let e = "• ";
   return (0, a.jsxs)("div", {
-    className: T.changelog,
+    className: I.changelog,
     children: [(0, a.jsx)("img", {
-      className: T.changelogImage,
+      className: I.changelogImage,
       src: s("195238"),
       alt: "changelog"
     }), (0, a.jsxs)("div", {
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, a.jsx)(n.Heading, {
         variant: "heading-md/semibold",
         color: "header-primary",
-        className: T.updatesHeader,
+        className: I.updatesHeader,
         children: _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_HEADER
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: T.updatesDescription,
+        className: I.updatesDescription,
         children: _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_1
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
-        className: T.updatesDescription,
+        className: I.updatesDescription,
         children: _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_LINE_2
-      }), (0, a.jsxs)(l.Text, {
+      }), (0, a.jsxs)(n.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_1]
-      }), (0, a.jsxs)(l.Text, {
+      }), (0, a.jsxs)(n.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_2]
-      }), (0, a.jsxs)(l.Text, {
+      }), (0, a.jsxs)(n.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_3]
-      }), (0, a.jsxs)(l.Text, {
+      }), (0, a.jsxs)(n.Text, {
         variant: "text-sm/medium",
         color: "header-secondary",
         children: [e, _.default.Messages.GUILD_SETTINGS_SAFETY_UPDATES_ITEM_4]
@@ -66,127 +66,127 @@ function S(e) {
   let {
     title: t,
     subtitle: s,
-    icon: n,
+    icon: l,
     page: i
   } = e;
   return (0, a.jsxs)("div", {
-    className: T.safetyStepRow,
+    className: I.safetyStepRow,
     children: [(0, a.jsxs)("div", {
-      className: T.safetyStepContent,
-      children: [(0, a.jsx)(l.Avatar, {
-        src: n,
-        size: l.AvatarSizes.SIZE_40,
+      className: I.safetyStepContent,
+      children: [(0, a.jsx)(n.Avatar, {
+        src: l,
+        size: n.AvatarSizes.SIZE_40,
         "aria-label": t
       }), (0, a.jsxs)("div", {
-        children: [(0, a.jsx)(l.Heading, {
+        children: [(0, a.jsx)(n.Heading, {
           variant: "heading-md/semibold",
           color: "header-primary",
           children: t
-        }), (0, a.jsx)(l.Text, {
+        }), (0, a.jsx)(n.Text, {
           variant: "text-xs/medium",
           color: "header-secondary",
           children: s
         })]
       })]
-    }), (0, a.jsx)(l.Button, {
-      className: T.editButton,
-      size: l.Button.Sizes.SMALL,
-      color: l.Button.Colors.PRIMARY,
-      look: l.Button.Looks.OUTLINED,
-      borderColor: l.Button.BorderColors.PRIMARY,
+    }), (0, a.jsx)(n.Button, {
+      className: I.editButton,
+      size: n.Button.Sizes.SMALL,
+      color: n.Button.Colors.PRIMARY,
+      look: n.Button.Looks.OUTLINED,
+      borderColor: n.Button.BorderColors.PRIMARY,
       onClick: () => (0, u.setSafetyPage)(i),
       children: _.default.Messages.EDIT
     })]
   })
 }
 
-function N(e) {
+function f(e) {
   let {
     guild: t,
     hideChangelog: u
   } = e;
   (0, i.useSyncAutomodRulesEffect)(t.id);
-  let N = (0, r.useAvailableTriggerTypes)(t.id),
+  let f = (0, r.useAvailableTriggerTypes)(t.id),
     {
-      rulesByTriggerType: g
+      rulesByTriggerType: m
     } = (0, i.useAutomodRulesList)(t.id),
     {
-      numEnabledRules: f,
-      numRules: A
-    } = n.useMemo(() => {
+      numEnabledRules: N,
+      numRules: g
+    } = l.useMemo(() => {
       let e = 0,
         t = 0;
-      if (null == g) return {
+      if (null == m) return {
         numEnabledRules: e,
         numRules: t
       };
-      let s = Object.values(N).flat();
+      let s = Object.values(f).flat();
       return s.forEach(s => {
         var a;
-        let n = null === (a = g[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
-        if (null == n || 0 === n.length) {
+        let l = null === (a = m[s]) || void 0 === a ? void 0 : a.filter(d.isNotNullish);
+        if (null == l || 0 === l.length) {
           t++;
           return
         }
-        n.forEach(s => {
+        l.forEach(s => {
           s.enabled && e++, t++
         })
       }), {
         numEnabledRules: e,
         numRules: t
       }
-    }, [N, g]),
-    L = (0, E.getGuildSafetySettings)(t),
-    m = L[c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION],
-    C = L[c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION],
-    O = L[c.GuildSettingsSafetyPage.PERMISSIONS],
-    h = (0, o.useCanCurrentUserManageAutomod)(t.id);
+    }, [f, m]),
+    h = (0, E.getGuildSafetySettings)(t),
+    C = h[c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION],
+    R = h[c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION],
+    x = h[c.GuildSettingsSafetyPage.PERMISSIONS],
+    L = (0, o.useCanCurrentUserManageAutomod)(t.id);
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(l.Heading, {
+    children: [(0, a.jsx)(n.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      className: T.header,
+      className: I.header,
       children: _.default.Messages.GUILD_SETTINGS_SAFETY_SETUP_HEADER
-    }), !u && (0, a.jsx)(I, {}), (0, a.jsxs)("div", {
-      className: T.safetyChecklist,
+    }), !u && (0, a.jsx)(T, {}), (0, a.jsxs)("div", {
+      className: I.safetyChecklist,
       children: [(0, a.jsx)(S, {
         icon: s("373558"),
         title: _.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
         subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: m.filter(e => e.enabled).length,
-          total: m.length
+          enabled: C.filter(e => e.enabled).length,
+          total: C.length
         }),
         page: c.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION
       }), (0, a.jsx)("div", {
-        className: T.divider
+        className: I.divider
       }), (0, a.jsx)(S, {
         icon: s("119134"),
         title: _.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
         subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: C.filter(e => e.enabled).length,
-          total: C.length
+          enabled: R.filter(e => e.enabled).length,
+          total: R.length
         }),
         page: c.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION
       }), (0, a.jsx)("div", {
-        className: T.divider
-      }), h && (0, a.jsxs)(a.Fragment, {
+        className: I.divider
+      }), L && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(S, {
           icon: s("799036"),
           title: _.default.Messages.GUILD_SETTINGS_AUTOMOD_TITLE,
           subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-            enabled: f,
-            total: A
+            enabled: N,
+            total: g
           }),
           page: c.GuildSettingsSafetyPage.AUTOMOD
         }), (0, a.jsx)("div", {
-          className: T.divider
+          className: I.divider
         })]
       }), (0, a.jsx)(S, {
         icon: s("444964"),
         title: _.default.Messages.PERMISSIONS,
         subtitle: _.default.Messages.GUILD_SETTINGS_SAFETY_OVERVIEW_NUM_ENABLED.format({
-          enabled: O.filter(e => e.enabled).length,
-          total: O.length
+          enabled: x.filter(e => e.enabled).length,
+          total: x.length
         }),
         page: c.GuildSettingsSafetyPage.PERMISSIONS
       })]

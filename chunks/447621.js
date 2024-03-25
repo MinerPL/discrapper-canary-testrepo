@@ -7,31 +7,31 @@ n.r(t), n.d(t, {
     return c
   },
   DEFAULT_EMOJI_DISCOVERABILITY_SETTING: function() {
-    return f
-  },
-  DISCOVERY_ALL_CATEGORIES_ID: function() {
     return _
   },
+  DISCOVERY_ALL_CATEGORIES_ID: function() {
+    return f
+  },
   DISCORD_HUB_ID: function() {
-    return h
-  },
-  MAX_ALGOLIA_PAGINATOR_RESULTS: function() {
-    return g
-  },
-  DISCOVERY_SIDEBAR_CATEGORIES: function() {
-    return m
-  },
-  SUGGESTED_TAGS_FOR_CATEGORIES: function() {
     return E
   },
-  calculateLocaleOptions: function() {
-    return v
+  MAX_ALGOLIA_PAGINATOR_RESULTS: function() {
+    return h
   },
-  LANGUAGE_OPTIONS: function() {
+  DISCOVERY_SIDEBAR_CATEGORIES: function() {
+    return g
+  },
+  SUGGESTED_TAGS_FOR_CATEGORIES: function() {
+    return m
+  },
+  calculateLocaleOptions: function() {
     return S
   },
-  DISCOVERY_PARTICIPATOR_REQUIREMENT: function() {
+  LANGUAGE_OPTIONS: function() {
     return T
+  },
+  DISCOVERY_PARTICIPATOR_REQUIREMENT: function() {
+    return v
   },
   DISCOVERY_COMMUNICATOR_REQUIREMENT: function() {
     return I
@@ -40,17 +40,17 @@ n.r(t), n.d(t, {
     return l
   },
   ALLOWED_SOCIAL_LINKS_DOMAINS: function() {
-    return C
+    return A
   }
 });
 var i, s, r, a, o, l, u = n("782340");
 let d = 0,
   c = 13,
-  f = !0,
-  _ = -1,
-  h = -2,
-  g = 1e3,
-  m = [{
+  _ = !0,
+  f = -1,
+  E = -2,
+  h = 1e3,
+  g = [{
     categoryId: -1,
     icon: "Discover"
   }, {
@@ -70,7 +70,7 @@ let d = 0,
     icon: "Television"
   }];
 (i = a || (a = {}))[i.GENERAL_CHATTING = 14] = "GENERAL_CHATTING", i[i.GAMING = 1] = "GAMING", i[i.MUSIC = 2] = "MUSIC", i[i.ENTERTAINMENT = 3] = "ENTERTAINMENT", i[i.CREATIVE_ARTS = 4] = "CREATIVE_ARTS", i[i.SCIENCE_AND_TECH = 5] = "SCIENCE_AND_TECH", i[i.EDUCATION = 6] = "EDUCATION", i[i.SPORTS = 7] = "SPORTS", i[i.FASHION_AND_BEAUTY = 8] = "FASHION_AND_BEAUTY", i[i.RELATIONSHIPS_AND_IDENTITY = 9] = "RELATIONSHIPS_AND_IDENTITY", i[i.TRAVEL_AND_FOOD = 10] = "TRAVEL_AND_FOOD", i[i.FITNESS_AND_HEALTH = 11] = "FITNESS_AND_HEALTH", i[i.FINANCE = 12] = "FINANCE", i[i.OTHER = 13] = "OTHER", i[i.EMOJI = 43] = "EMOJI", i[i.BOTS = 49] = "BOTS";
-let E = {
+let m = {
     14: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_COMMUNITY, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_STREAMER, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ANIME, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY],
     1: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MINECRAFT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROBLOX, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_TWITCH, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FORTNITE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ESPORTS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_ROLEPLAY, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_VALORANT, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_LEAGUEOFLEGENDS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_FIVEM],
     2: [() => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_EDM, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_RAP, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_KPOP, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_YOUTUBE, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_MUSIC_PRODUCTION, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_HIPHOP, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_SINGING, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_GAMING, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_BTS, () => u.default.Messages.SERVER_DISCOVERY_SUGGESTED_TAG_METAL],
@@ -90,7 +90,7 @@ let E = {
   },
   p = ["en-GB"];
 
-function v() {
+function S() {
   return u.default.getAvailableLocales().map(e => {
     let t;
     let {
@@ -113,15 +113,15 @@ function v() {
     }
   }).filter(e => !p.includes(e.value))
 }
-v();
-let S = u.default.getLanguages().filter(e => !p.includes(e.code)).map(e => "en-US" === e.code ? {
+S();
+let T = u.default.getLanguages().filter(e => !p.includes(e.code)).map(e => "en-US" === e.code ? {
     ...e,
     name: u.default.Messages.en
   } : e),
-  T = 40,
+  v = 40,
   I = 20;
 (s = o || (o = {})).GAME_RECOMMENDATIONS = "Game Recommendations", s.SERVER_RECOMMENDATIONS = "Server Recommendations", (r = l || (l = {}))[r.Activity = 0] = "Activity", r[r.Discover = 1] = "Discover", r[r.Education = 2] = "Education", r[r.Music = 3] = "Music", r[r.Science = 4] = "Science", r[r.Stage = 5] = "Stage", r[r.Television = 6] = "Television";
-let C = {
+let A = {
   facebook: {
     presentation: "Facebook",
     baseUrl: "https://facebook.com"

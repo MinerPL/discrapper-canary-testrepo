@@ -12,7 +12,7 @@ var s = n("37983"),
   o = n("982108"),
   u = n("91551"),
   d = n("491605"),
-  c = n("327827"),
+  c = n("139388"),
   f = a.memo(function(e) {
     let {
       message: t,
@@ -25,28 +25,28 @@ var s = n("37983"),
       imageSrc: E,
       animationSrc: g,
       secondaryButtonText: S,
-      onSecondaryButtonClick: A,
-      children: _,
-      useReducedMotion: T = !1
+      onSecondaryButtonClick: T,
+      children: A,
+      useReducedMotion: _ = !1
     } = e, M = (0, i.useStateFromStores)([o.default], () => o.default.getState().isMembersOpen);
     if (l.isMobile && M) return null;
     if (null == t) return (0, s.jsx)(s.Fragment, {
-      children: a.Children.only(_)
+      children: a.Children.only(A)
     });
-    let N = null;
-    return null != E ? N = (0, s.jsx)("img", {
+    let I = null;
+    return null != E ? I = (0, s.jsx)("img", {
       alt: "",
       src: E,
       className: c.image
-    }) : null != g && (N = (0, s.jsx)(d.default, {
+    }) : null != g && (I = (0, s.jsx)(d.default, {
       importData: g,
-      shouldAnimate: !T,
+      shouldAnimate: !_,
       className: c.animation
     })), (0, s.jsxs)("div", {
       className: c.wrapper,
       children: [(0, s.jsxs)("div", {
         className: c.content,
-        children: [N, (0, s.jsxs)("div", {
+        children: [I, (0, s.jsxs)("div", {
           className: c.text,
           children: [(0, s.jsx)(r.Heading, {
             variant: "heading-md/semibold",
@@ -63,7 +63,7 @@ var s = n("37983"),
         children: [null != S && (0, s.jsx)(r.Button, {
           className: c.button,
           size: r.Button.Sizes.SMALL,
-          onClick: A,
+          onClick: T,
           look: r.Button.Looks.LINK,
           color: r.Button.Colors.PRIMARY,
           submitting: p,

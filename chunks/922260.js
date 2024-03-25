@@ -1,42 +1,42 @@
 "use strict";
 n.r(t), n.d(t, {
   MenuCompositeControlItem: function() {
-    return c
+    return d
   }
 });
 var i = n("37983"),
-  r = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+  s = n("884691"),
+  r = n("414456"),
+  a = n.n(r),
   o = n("697917"),
   l = n("389802"),
-  u = n("946032");
+  u = n("639826");
 
-function c(e) {
+function d(e) {
   let {
     color: t = "default",
     disabled: n,
-    isFocused: s,
-    showDefaultFocus: c = !1,
-    menuItemProps: d,
-    children: f
-  } = e, E = r.useRef(null);
-  return r.useLayoutEffect(() => {
-    if (!s) return;
-    let e = E.current;
+    isFocused: r,
+    showDefaultFocus: d = !1,
+    menuItemProps: c,
+    children: _
+  } = e, f = s.useRef(null);
+  return s.useLayoutEffect(() => {
+    if (!r) return;
+    let e = f.current;
     if (null == e) return;
-    (0, o.ensureItemVisible)(E);
+    (0, o.ensureItemVisible)(f);
     let t = e.querySelector('[tabindex="0"]');
     null == t || t.focus()
-  }, [s]), (0, i.jsx)("div", {
-    ref: E,
+  }, [r]), (0, i.jsx)("div", {
+    ref: f,
     className: a(u.item, l.MENU_ITEM_COLORS[t], {
       [u.disabled]: n,
-      [u.focused]: c && s,
-      [u.hideInteraction]: !c
+      [u.focused]: d && r,
+      [u.hideInteraction]: !d
     }),
     "aria-disabled": n,
-    ...d,
-    children: f
+    ...c,
+    children: _
   })
 }

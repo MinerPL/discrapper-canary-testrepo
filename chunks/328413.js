@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var a = n("219629");
+var l = n("475510");
 
-function s(e) {
+function a(e) {
   let {
     children: t
   } = e;
-  return (0, l.jsxs)("span", {
-    className: a.nowrap,
+  return (0, i.jsxs)("span", {
+    className: l.nowrap,
     children: [t, "⁠"]
   })
 }

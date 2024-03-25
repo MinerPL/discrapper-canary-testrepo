@@ -33,8 +33,8 @@ var a, n, i = s("37983"),
   D = s("865146"),
   U = s("305961"),
   O = s("357957"),
-  b = s("10514"),
-  v = s("251013"),
+  v = s("10514"),
+  b = s("251013"),
   B = s("145131"),
   j = s("953109"),
   G = s("37785"),
@@ -509,14 +509,14 @@ class e_ extends l.PureComponent {
         (0, X.isPremiumBaseSubscriptionPlan)(t) ? (s.push(X.default.getDisplayName(t, !1, _)), a = (0, X.castPremiumSubscriptionAsSkuId)(et.SubscriptionPlanInfo[t].skuId)) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(X.default.getDisplayName(t, !1, _))), null == a && (a = (0, X.castPremiumSubscriptionAsSkuId)(et.SubscriptionPlanInfo[t].skuId)))
       });
       else if (f.type === ee.SubscriptionTypes.GUILD) {
-        let e = b.default.get(f.items[0].planId);
+        let e = v.default.get(f.items[0].planId);
         d(null != e, "Guild subscription plan should already have been loaded");
         let t = e.interval === et.SubscriptionIntervalTypes.YEAR ? ea.default.Messages.YEARLY_GUILD_SUBSCRIPTION : ea.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
         s.push(t.format({
           planName: e.name
         })), a = e.skuId
       } else if (f.type === ee.SubscriptionTypes.APPLICATION) {
-        let e = b.default.get(f.items[0].planId);
+        let e = v.default.get(f.items[0].planId);
         d(null != e, "Application subscription plan should already have been loaded"), null != n ? s.push(ea.default.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({
           tier: null == c ? void 0 : c.name
         })) : s.push(ea.default.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), a = e.skuId
@@ -742,10 +742,10 @@ function ep(e) {
     applicationStatistics: f,
     gameApplication: _,
     paymentSources: m
-  } = (0, p.useStateFromStoresObject)([O.default, v.default, S.default], () => {
+  } = (0, p.useStateFromStoresObject)([O.default, b.default, S.default], () => {
     var e, t;
     return {
-      applicationStatistics: null != d ? v.default.getCurrentUserStatisticsForApplication(d) : null,
+      applicationStatistics: null != d ? b.default.getCurrentUserStatisticsForApplication(d) : null,
       gameApplication: null !== (t = S.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
       paymentSources: O.default.paymentSources
     }

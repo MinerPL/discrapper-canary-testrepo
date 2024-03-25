@@ -14,10 +14,10 @@ let s = e => {
     height: l = 24,
     color: s = a.default.colors.INTERACTIVE_NORMAL,
     colorClass: r = "",
-    ...c
+    ...o
   } = e;
   return (0, i.jsx)("svg", {
-    ...(0, n.default)(c),
+    ...(0, n.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: l,

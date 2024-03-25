@@ -4,15 +4,15 @@ s.r(t), s.d(t, {
     return S
   }
 }), s("222007");
-var a, n, l = s("37983"),
+var a, l, n = s("37983"),
   i = s("884691"),
   r = s("414456"),
   o = s.n(r),
   d = s("917351"),
   u = s.n(d),
   c = s("661486"),
-  E = s("663785");
-(n = a || (a = {}))[n.HOVERING = 0] = "HOVERING", n[n.FLYING = 1] = "FLYING";
+  E = s("158833");
+(l = a || (a = {}))[l.HOVERING = 0] = "HOVERING", l[l.FLYING = 1] = "FLYING";
 let _ = Object.freeze({
   HOVERING: {
     Y_DURATION: 1500,
@@ -52,13 +52,13 @@ let _ = Object.freeze({
   }
 });
 
-function T(e, t, s, a) {
-  return c.default.sequence(u.times(t, n => c.default.timing(e, {
-    toValue: a(n),
+function I(e, t, s, a) {
+  return c.default.sequence(u.times(t, l => c.default.timing(e, {
+    toValue: a(l),
     duration: s / t
   })))
 }
-class I extends i.Component {
+class T extends i.Component {
   componentDidMount() {
     this.startAnimation()
   }
@@ -83,23 +83,23 @@ class I extends i.Component {
     this.resetAnimation(), this.hoverAnimate(_.HOVERING.Y_VALUE)
   }
   createFireAnimation(e, t, s, a) {
-    return T(this.fireScale, e, t, () => u.random(s, a))
+    return I(this.fireScale, e, t, () => u.random(s, a))
   }
   async hoverAnimate(e) {
     if (0 !== this.props.stage || this.isUnmounted) return;
     let t = e > 1,
       s = t ? _.HOVERING.FIRE_MIN_INTENSITY_FALLING : _.HOVERING.FIRE_MIN_INTENSITY_RISING,
       a = t ? _.HOVERING.FIRE_MAX_INTENSITY_FALLING : _.HOVERING.FIRE_MAX_INTENSITY_RISING,
-      n = this.createFireAnimation(_.HOVERING.FIRE_COUNT, _.HOVERING.Y_DURATION, s, a),
-      l = c.default.timing(this.y, {
+      l = this.createFireAnimation(_.HOVERING.FIRE_COUNT, _.HOVERING.Y_DURATION, s, a),
+      n = c.default.timing(this.y, {
         toValue: e,
         duration: _.HOVERING.Y_DURATION,
         easing: c.default.Easing.inOut(c.default.Easing.ease)
       });
-    this.currentAnimation = c.default.parallel([l, n]), await this.currentAnimation.start(), this.hoverAnimate(e * _.HOVERING.Y_VALUE_MODIFIER)
+    this.currentAnimation = c.default.parallel([n, l]), await this.currentAnimation.start(), this.hoverAnimate(e * _.HOVERING.Y_VALUE_MODIFIER)
   }
   createShakeAnimation(e, t, s) {
-    return T(this.x, e, t, e => u.random(1, s) * (e % 2 == 0 ? 1 : -1))
+    return I(this.x, e, t, e => u.random(1, s) * (e % 2 == 0 ? 1 : -1))
   }
   async flyAnimate() {
     let e = c.default.spring(this.y, {
@@ -115,9 +115,9 @@ class I extends i.Component {
         toValue: _.STAGING.Y_VALUE,
         duration: _.STAGING.DURATION
       }),
-      n = this.createShakeAnimation(_.STAGING.SHAKE_COUNT, _.STAGING.DURATION, _.STAGING.SHAKE_INTENSITY),
-      l = this.createFireAnimation(_.STAGING.FIRE_COUNT, _.STAGING.DURATION, _.STAGING.FIRE_MIN_INTENSITY, _.STAGING.FIRE_MAX_INTENSITY),
-      i = c.default.parallel([a, n, l]),
+      l = this.createShakeAnimation(_.STAGING.SHAKE_COUNT, _.STAGING.DURATION, _.STAGING.SHAKE_INTENSITY),
+      n = this.createFireAnimation(_.STAGING.FIRE_COUNT, _.STAGING.DURATION, _.STAGING.FIRE_MIN_INTENSITY, _.STAGING.FIRE_MAX_INTENSITY),
+      i = c.default.parallel([a, l, n]),
       r = c.default.timing(this.y, {
         toValue: _.FLYING.Y_VALUE,
         duration: _.FLYING.DURATION,
@@ -170,25 +170,25 @@ class I extends i.Component {
       className: e,
       style: t
     } = this.props;
-    return (0, l.jsxs)(c.default.div, {
+    return (0, n.jsxs)(c.default.div, {
       className: o(E.animation, e),
       style: {
         ...t,
         ...this.getWumpusStyle()
       },
-      children: [(0, l.jsx)("div", {
+      children: [(0, n.jsx)("div", {
         className: E.fireTopWrapper,
-        children: (0, l.jsx)(c.default.div, {
+        children: (0, n.jsx)(c.default.div, {
           className: E.fire,
           style: this.getFireStyle()
         })
-      }), (0, l.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: E.fireBottomWrapper,
-        children: (0, l.jsx)(c.default.div, {
+        children: (0, n.jsx)(c.default.div, {
           className: E.fire,
           style: this.getFireStyle()
         })
-      }), (0, l.jsx)("div", {
+      }), (0, n.jsx)("div", {
         className: E.wumpus
       })]
     })
@@ -197,5 +197,5 @@ class I extends i.Component {
     super(...e), this.x = new c.default.Value(0), this.y = new c.default.Value(0), this.opacity = new c.default.Value(1), this.fireScale = new c.default.Value(1), this.currentAnimation = null, this.isUnmounted = !1
   }
 }
-I.Stages = a;
-var S = I
+T.Stages = a;
+var S = T

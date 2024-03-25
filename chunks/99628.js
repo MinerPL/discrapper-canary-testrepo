@@ -9,8 +9,8 @@ E("884691");
 var o = E("151426"),
   n = E("77078"),
   r = E("689988"),
-  i = E("10641"),
-  a = E("18494"),
+  a = E("10641"),
+  i = E("18494"),
   I = E("162771"),
   s = E("599110"),
   T = E("179803"),
@@ -21,13 +21,13 @@ let O = "GUILD_ONBOARDING_UPSELL_MODAL",
     if (__OVERLAY__ || null == e || null == _) return;
     let r = (0, T.shouldShowGuildOnboardingUpsell)(e, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
     if (!r) return;
-    (0, i.requestMarkDismissibleContentAsShown)(o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
-    let a = function() {
+    (0, a.requestMarkDismissibleContentAsShown)(o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2);
+    let i = function() {
       let _ = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : N.ContentDismissActionType.DISMISS;
       s.default.track(S.AnalyticEvents.UPSELL_CLICKED, {
         type: o.DismissibleContent[o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2],
         action: "dismiss"
-      }), (0, T.dismissedGuildOnboardingUpsell)(e, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, i.markDismissibleContentAsDismissed)(o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
+      }), (0, T.dismissedGuildOnboardingUpsell)(e, o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2), (0, a.markDismissibleContentAsDismissed)(o.DismissibleContent.GUILD_ONBOARDING_UPSELL_MODAL_V2, {
         dismissAction: _
       })
     };
@@ -39,13 +39,13 @@ let O = "GUILD_ONBOARDING_UPSELL_MODAL",
         ...E,
         guildId: e,
         onClose: e => {
-          a(e), E.onClose()
+          i(e), E.onClose()
         }
       })
     }, {
       modalKey: O,
       onCloseRequest: () => {
-        a(), (0, n.closeModal)(O)
+        i(), (0, n.closeModal)(O)
       }
     })
   };
@@ -58,7 +58,7 @@ class R extends r.default {
     A(_, E)
   }
   handlePostConnectionOpen() {
-    let e = a.default.getCurrentlySelectedChannelId(),
+    let e = i.default.getCurrentlySelectedChannelId(),
       _ = I.default.getGuildId();
     A(_, e)
   }

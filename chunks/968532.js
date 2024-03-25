@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return i
+    return l
   }
 });
 var s, r, a = n("862205");
 (s = r || (r = {}))[s.NONE = 0] = "NONE", s[s.BROWSER_AUTOFILL = 1] = "BROWSER_AUTOFILL", s[s.MERGE_PLAN_SELECT_TO_REVIEW = 2] = "MERGE_PLAN_SELECT_TO_REVIEW";
-let l = (0, a.createExperiment)({
+let i = (0, a.createExperiment)({
   id: "2023-08_checkout_v2_parent",
   label: "Checkout V2 Parent",
   kind: "user",
@@ -30,4 +30,4 @@ let l = (0, a.createExperiment)({
     }
   }]
 });
-var i = l
+var l = i

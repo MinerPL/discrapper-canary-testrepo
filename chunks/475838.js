@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   chain: function() {
-    return l
+    return s
   }
 }), n("222007");
-class a {
+class i {
   [Symbol.iterator]() {
     return this
   }
@@ -24,7 +24,7 @@ class a {
   }
 }
 
-function l() {
+function s() {
   for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-  return new a(t)
+  return new i(t)
 }

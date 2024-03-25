@@ -4,18 +4,18 @@ n.r(t), n.d(t, {
     return o
   },
   getDefaultActions: function() {
-    return i
+    return u
   }
 });
 var r = n("143460");
 
 function o(e) {
-  let t = i(),
+  let t = u(),
     n = Array.from(e.defaultActionTypes);
   return n.map(e => t[e])
 }
 
-function i() {
+function u() {
   return {
     [r.AutomodActionType.BLOCK_MESSAGE]: {
       type: r.AutomodActionType.BLOCK_MESSAGE,

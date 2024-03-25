@@ -1,51 +1,51 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
-}), l("222007");
-var n = l("627445"),
-  a = l.n(n),
-  s = l("884351"),
-  i = l("19766"),
-  r = l("957255"),
-  o = l("49111");
+}), n("222007");
+var i = n("627445"),
+  l = n.n(i),
+  a = n("884351"),
+  s = n("19766"),
+  r = n("957255"),
+  o = n("49111");
 let u = new RegExp(/@(:?everyone|here)/);
 
 function d(e, t) {
-  let l = 0;
+  let n = 0;
   if (t.isThread()) {
-    var n;
-    return null !== (n = t.memberCount) && void 0 !== n ? n : 0
+    var i;
+    return null !== (i = t.memberCount) && void 0 !== i ? i : 0
   }
-  let a = i.default.getProps(t.getGuildId(), t.id);
-  return a.groups.forEach(t => {
-    ("@everyone" === e || t.id !== o.StatusTypes.OFFLINE) && (l += t.count)
-  }), l
+  let l = s.default.getProps(t.getGuildId(), t.id);
+  return l.groups.forEach(t => {
+    ("@everyone" === e || t.id !== o.StatusTypes.OFFLINE) && (n += t.count)
+  }), n
 }
 var c = {
   shouldShowEveryoneGuard: function(e, t) {
-    let l = t.getGuildId();
-    a(l, "isGuildChannel with null guildId");
-    let n = d(e, t);
-    return n > 30 && r.default.can(o.Permissions.MENTION_EVERYONE, t)
+    let n = t.getGuildId();
+    l(n, "isGuildChannel with null guildId");
+    let i = d(e, t);
+    return i > 30 && r.default.can(o.Permissions.MENTION_EVERYONE, t)
   },
   everyoneMemberCount: d,
   extractEveryoneRole: function(e, t) {
-    let l = s.default.parsePreprocessor(t, e);
-    for (let e of l) {
+    let n = a.default.parsePreprocessor(t, e);
+    for (let e of n) {
       let t = function e(t) {
         if ("string" == typeof t.content) {
-          var l;
+          var n;
           if ("inlineCode" === t.type || "codeBlock" === t.type) return null;
-          let e = null === (l = t.content) || void 0 === l ? void 0 : l.match(u);
+          let e = null === (n = t.content) || void 0 === n ? void 0 : n.match(u);
           if (null != e) {
             let [t] = e;
             return t
           }
         } else if (Array.isArray(t.content))
-          for (let l of t.content) {
-            let t = e(l);
+          for (let n of t.content) {
+            let t = e(n);
             if (null != t) return t
           }
         return null

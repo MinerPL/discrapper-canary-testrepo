@@ -23,8 +23,8 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
     x = "BlackBerry",
     C = "Browser",
     E = "Chrome",
-    O = "Firefox",
-    D = "Google",
+    D = "Firefox",
+    O = "Google",
     K = "Huawei",
     T = "Microsoft",
     M = "Motorola",
@@ -119,7 +119,7 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
           [l, /(.+)/, "$1 Secure " + C], h
         ],
         [/\bfocus\/([\w\.]+)/i],
-        [h, [l, O + " Focus"]],
+        [h, [l, D + " Focus"]],
         [/\bopt\/([\w\.]+)/i],
         [h, [l, A + " Touch"]],
         [/coc_coc\w+\/([\w\.]+)/i],
@@ -131,7 +131,7 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
         [/miuibrowser\/([\w\.]+)/i],
         [h, [l, "MIUI " + C]],
         [/fxios\/([-\w\.]+)/i],
-        [h, [l, O]],
+        [h, [l, D]],
         [/\bqihu|(qi?ho?o?|360)browser/i],
         [
           [l, "360 " + C]
@@ -190,7 +190,7 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
           [l, "Netscape"], h
         ],
         [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-        [h, [l, O + " Reality"]],
+        [h, [l, D + " Reality"]],
         [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror|klar)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(polaris|lynx|dillo|icab|doris|amaya|w3m|netsurf|sleipnir|obigo|mosaic|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /(links) \(([\w\.]+)/i, /panasonic;(viera)/i],
         [l, h],
         [/(cobalt)\/([\w\.]+)/i],
@@ -316,11 +316,11 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
           [f, y]
         ],
         [/(pixel c)\b/i],
-        [c, [p, D],
+        [c, [p, O],
           [f, v]
         ],
         [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-        [c, [p, D],
+        [c, [p, O],
           [f, y]
         ],
         [/droid.+ (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
@@ -513,7 +513,7 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
         [/crkey/i],
         [
           [c, E + "cast"],
-          [p, D],
+          [p, O],
           [f, m]
         ],
         [/droid.+aft(\w+)( bui|\))/i],
@@ -565,7 +565,7 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
           [f, _]
         ],
         [/droid.+; (glass) \d/i],
-        [c, [p, D],
+        [c, [p, O],
           [f, _]
         ],
         [/droid.+; (wt63?0{2,3})\)/i],
@@ -636,7 +636,7 @@ t = r.nmd(t), r("781738"), ! function(r, n) {
         [/(?:symbian ?os|symbos|s60(?=;)|series60)[-\/ ]?([\w\.]*)/i],
         [h, [l, "Symbian"]],
         [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-        [h, [l, O + " OS"]],
+        [h, [l, D + " OS"]],
         [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
         [h, [l, "webOS"]],
         [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],

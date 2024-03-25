@@ -8,11 +8,11 @@ s.r(t), s.d(t, {
   }
 }), s("70102");
 var a = s("37983"),
-  n = s("884691");
-let l = n.createContext(void 0);
+  l = s("884691");
+let n = l.createContext(void 0);
 
 function i() {
-  let e = n.useContext(l);
+  let e = l.useContext(n);
   if (null == e) throw Error("No edit state; are you missing an <EditStateContextProvider />?");
   return e
 }
@@ -22,7 +22,7 @@ function r(e) {
     children: t,
     ...s
   } = e;
-  return (0, a.jsx)(l.Provider, {
+  return (0, a.jsx)(n.Provider, {
     value: s,
     children: t
   })

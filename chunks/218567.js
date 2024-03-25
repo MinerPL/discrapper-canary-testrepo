@@ -8,12 +8,12 @@ s.r(t), s.d(t, {
   }
 }), s("70102");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("465869");
-let i = n.createContext(void 0);
+  l = s("884691"),
+  n = s("465869");
+let i = l.createContext(void 0);
 
 function r() {
-  let e = n.useContext(i);
+  let e = l.useContext(i);
   if (null == e) throw Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
   return e
 }
@@ -23,10 +23,10 @@ function o(e) {
     guildId: t,
     children: s
   } = e, {
-    shouldRestrictUpdatingCreatorMonetizationSettings: n
-  } = (0, l.useShouldRestrictUpdatingCreatorMonetizationSettings)(t);
+    shouldRestrictUpdatingCreatorMonetizationSettings: l
+  } = (0, n.useShouldRestrictUpdatingCreatorMonetizationSettings)(t);
   return (0, a.jsx)(i.Provider, {
-    value: n,
+    value: l,
     children: s
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useProfileThemedPanelBackground: function() {
-    return o
+    return u
   }
 });
 var a = n("446674"),
@@ -10,20 +10,20 @@ var a = n("446674"),
   i = n("906889"),
   r = n("697218");
 
-function o(e, t) {
+function u(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .8,
-    o = arguments.length > 3 ? arguments[3] : void 0,
-    u = function(e, t) {
+    u = arguments.length > 3 ? arguments[3] : void 0,
+    o = function(e, t) {
       let n = (0, a.useStateFromStores)([r.default], () => r.default.getUser(e), [e]),
         l = (0, s.default)(e, t),
         {
-          profileTheme: o
+          profileTheme: u
         } = (0, i.default)(n, l, {
           isPreview: !0
         });
-      return o
+      return u
     }(e, t);
-  return (0, l.useToken)(null != o ? o : l.tokens.colors.BACKGROUND_NESTED_FLOATING, u).hex({
+  return (0, l.useToken)(null != u ? u : l.tokens.colors.BACKGROUND_NESTED_FLOATING, o).hex({
     opacity: n
   })
 }

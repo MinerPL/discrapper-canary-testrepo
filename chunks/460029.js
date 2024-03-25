@@ -1,100 +1,100 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return p
   }
 }), n("222007");
-var i = n("37983"),
-  l = n("884691"),
-  s = n("414456"),
-  a = n.n(s),
+var l = n("37983"),
+  a = n("884691"),
+  i = n("414456"),
+  s = n.n(i),
   r = n("77078"),
-  o = n("132755"),
-  u = n("78404"),
+  u = n("132755"),
+  o = n("78404"),
   d = n("718517"),
   c = n("812809"),
   f = n("129722"),
-  m = n("278175"),
-  h = n("859971"),
+  h = n("278175"),
+  m = n("859971"),
   g = n("846325"),
-  E = n("193326");
+  v = n("687702");
 let S = 10 * d.default.Millis.SECOND,
-  p = {
+  E = {
     startPositionMs: 0,
     endPositionMs: 2 * S,
     playheadPositionMs: 0
   };
-var v = l.memo(function(e) {
+var p = a.memo(function(e) {
   var t;
   let {
     className: n,
-    volume: s,
+    volume: i,
     disabled: S = !1,
-    onChange: v
+    onChange: p
   } = e, {
-    audio: _
-  } = (0, f.useAudioTrimmerStore)(), [N, C] = l.useState(!1), [A, b] = l.useState(p), {
-    playheadPositionMs: I,
-    endPositionMs: O,
-    startPositionMs: D
-  } = A, w = null != _, x = O - D, L = x > g.MAX_SOUND_LENGTH_SECONDS * d.default.Millis.SECOND;
-  l.useEffect(() => {
-    null != _ && b({
+    audio: N
+  } = (0, f.useAudioTrimmerStore)(), [_, O] = a.useState(!1), [A, D] = a.useState(E), {
+    playheadPositionMs: b,
+    endPositionMs: C,
+    startPositionMs: x
+  } = A, M = null != N, I = C - x, y = I > g.MAX_SOUND_LENGTH_SECONDS * d.default.Millis.SECOND;
+  a.useEffect(() => {
+    null != N && D({
       playheadPositionMs: 0,
-      endPositionMs: _.duration * d.default.Millis.SECOND,
+      endPositionMs: N.duration * d.default.Millis.SECOND,
       startPositionMs: 0
     })
-  }, [_]);
-  let U = l.useCallback(e => {
-      null != _ && (_.pause(), null != e && (_.currentTime = e), C(!1))
-    }, [_]),
-    T = l.useCallback(() => {
-      if (null != _) {
-        if (N) {
-          U();
+  }, [N]);
+  let T = a.useCallback(e => {
+      null != N && (N.pause(), null != e && (N.currentTime = e), O(!1))
+    }, [N]),
+    R = a.useCallback(() => {
+      if (null != N) {
+        if (_) {
+          T();
           return
         }
-        I >= O ? _.currentTime = (0, h.toSeconds)(D) : _.currentTime = (0, h.toSeconds)(I), _.volume = (0, c.default)(s), _.play(), C(!0)
+        b >= C ? N.currentTime = (0, m.toSeconds)(x) : N.currentTime = (0, m.toSeconds)(b), N.volume = (0, c.default)(i), N.play(), O(!0)
       }
-    }, [_, O, U, I, N, D, s]),
-    M = l.useCallback(e => {
-      b(e), null == v || v({
+    }, [N, C, T, b, _, x, i]),
+    w = a.useCallback(e => {
+      D(e), null == p || p({
         startMs: e.startPositionMs,
         endMs: e.endPositionMs
       })
-    }, [v]),
-    R = l.useCallback(e => {
-      null != _ && (_.currentTime = e)
-    }, [_]);
-  return (0, i.jsxs)("div", {
-    className: a(E.container, {
-      [E.initialized]: w,
-      [E.disabled]: !w || S
+    }, [p]),
+    L = a.useCallback(e => {
+      null != N && (N.currentTime = e)
+    }, [N]);
+  return (0, l.jsxs)("div", {
+    className: s(v.container, {
+      [v.initialized]: M,
+      [v.disabled]: !M || S
     }, n),
-    children: [(0, i.jsxs)("div", {
-      className: E.playButtonContainer,
-      children: [(0, i.jsx)(r.Clickable, {
-        className: E.playButton,
-        onClick: w ? T : void 0,
-        children: N ? (0, i.jsx)(u.default, {
-          className: E.playButtonIcon
-        }) : (0, i.jsx)(o.default, {
-          className: E.playButtonIcon
+    children: [(0, l.jsxs)("div", {
+      className: v.playButtonContainer,
+      children: [(0, l.jsx)(r.Clickable, {
+        className: v.playButton,
+        onClick: M ? R : void 0,
+        children: _ ? (0, l.jsx)(o.default, {
+          className: v.playButtonIcon
+        }) : (0, l.jsx)(u.default, {
+          className: v.playButtonIcon
         })
-      }), (0, i.jsx)("div", {
-        className: E.durationContainer,
-        children: (0, i.jsx)(r.Text, {
-          className: E.duration,
+      }), (0, l.jsx)("div", {
+        className: v.durationContainer,
+        children: (0, l.jsx)(r.Text, {
+          className: v.duration,
           variant: "text-xs/normal",
-          color: L ? "text-warning" : "text-positive",
-          children: (t = x, "".concat((0, h.toSeconds)(t).toFixed(2), "s"))
+          color: y ? "text-warning" : "text-positive",
+          children: (t = I, "".concat((0, m.toSeconds)(t).toFixed(2), "s"))
         })
       })]
-    }), (0, i.jsx)(m.default, {
-      playing: N,
-      onPlaybackChange: R,
-      onPausePlayback: U,
-      onChangePosition: M,
+    }), (0, l.jsx)(h.default, {
+      playing: _,
+      onPlaybackChange: L,
+      onPausePlayback: T,
+      onChangePosition: w,
       disabled: S
     })]
   })

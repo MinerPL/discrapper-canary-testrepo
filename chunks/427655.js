@@ -18,8 +18,8 @@ function d(e) {
     message: t,
     usernameHook: d,
     onClickPins: c,
-    compact: f
-  } = e, E = (0, r.default)(t), _ = E.nick, T = d(E), I = () => {
+    compact: E
+  } = e, f = (0, r.default)(t), _ = f.nick, T = d(f), I = () => {
     if (null == t.messageReference) return;
     let {
       channel_id: e,
@@ -42,7 +42,7 @@ function d(e) {
   return (0, s.jsx)(o.default, {
     ...N,
     timestamp: t.timestamp,
-    compact: f,
+    compact: E,
     children: null != t.messageReference ? null == c ? u.default.Messages.SYSTEM_MESSAGE_PINNED_MESSAGE_NO_CTA_FORMATTED_WITH_MESSAGE_HOOK.format({
       usernameHook: T,
       username: _,

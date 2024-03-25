@@ -1,69 +1,69 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return g
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("448105"),
-  l = s.n(n),
-  r = s("446674"),
-  i = s("77078"),
-  o = s("430568"),
-  u = s("385976"),
-  d = s("547896"),
-  c = s("680986"),
-  m = s("782340"),
-  h = s("224300");
+var s = a("37983");
+a("884691");
+var n = a("448105"),
+  l = a.n(n),
+  r = a("446674"),
+  i = a("77078"),
+  o = a("430568"),
+  u = a("385976"),
+  d = a("547896"),
+  c = a("680986"),
+  m = a("782340"),
+  h = a("282078");
 let f = e => {
   let {
     tag: t
   } = e, {
-    id: s,
+    id: a,
     name: n,
     emojiId: l,
     emojiName: c
   } = t, m = (0, r.useStateFromStores)([u.default], () => null != l ? u.default.getUsableCustomEmojiById(l) : null), f = null != l || null != c;
-  return (0, a.jsx)(i.ComboboxItem, {
-    value: s,
-    children: (0, a.jsx)(i.ComboboxItem.Label, {
-      children: (0, a.jsxs)("div", {
+  return (0, s.jsx)(i.ComboboxItem, {
+    value: a,
+    children: (0, s.jsx)(i.ComboboxItem.Label, {
+      children: (0, s.jsxs)("div", {
         className: h.row,
-        children: [f ? (0, a.jsx)(o.default, {
+        children: [f ? (0, s.jsx)(o.default, {
           className: h.emoji,
           emojiId: l,
           emojiName: c,
           animated: !!(null == m ? void 0 : m.animated)
-        }) : (0, a.jsx)(d.default, {
+        }) : (0, s.jsx)(d.default, {
           className: h.emoji
-        }), (0, a.jsx)(i.Text, {
+        }), (0, s.jsx)(i.Text, {
           variant: "text-md/semibold",
           color: "header-secondary",
           children: n
         })]
       })
     })
-  }, s)
+  }, a)
 };
 
 function g(e) {
   let {
     parentChannel: t,
-    appliedTags: s,
+    appliedTags: a,
     maxTagsApplied: n,
     onSelectTag: r,
     onClose: o
   } = e, u = (0, c.useVisibleForumTags)(t), d = (e, t) => t.filter(t => l(e.toLowerCase(), t.name.toLowerCase()));
-  return (0, a.jsx)(i.ComboboxPopout, {
+  return (0, s.jsx)(i.ComboboxPopout, {
     showScrollbar: !0,
-    value: s,
+    value: a,
     onChange: e => {
-      (!n || s.has(e)) && (r(e), o())
+      (!n || a.has(e)) && (r(e), o())
     },
     placeholder: m.default.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
     "aria-label": m.default.Messages.FORUM_TAG_POST_SEARCH_PLACEHOLDER,
-    children: e => d(e, u).map(e => (0, a.jsx)(f, {
+    children: e => d(e, u).map(e => (0, s.jsx)(f, {
       tag: e
     }, e.id))
   })

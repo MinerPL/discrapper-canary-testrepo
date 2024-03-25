@@ -22,7 +22,7 @@ E.r(_), E.d(_, {
     return l
   },
   default: function() {
-    return L
+    return u
   }
 }), E("222007");
 var t = E("37983"),
@@ -95,4 +95,4 @@ function R() {
 function l() {
   return o.useContext(s).windowDispatch
 }
-var L = s
+var u = s

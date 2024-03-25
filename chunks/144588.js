@@ -17,8 +17,8 @@ var l = s("37983"),
   _ = s("619443"),
   f = s("38112"),
   h = s("602818"),
-  L = s("539938"),
-  S = s("305961"),
+  S = s("539938"),
+  L = s("305961"),
   x = s("191814"),
   I = s("741515"),
   p = s("657199"),
@@ -36,8 +36,8 @@ var l = s("37983"),
   U = s("724210"),
   N = s("660516"),
   M = s("782340"),
-  w = s("261974"),
-  A = s("305794");
+  w = s("360024"),
+  A = s("250455");
 
 function V(e) {
   var t;
@@ -47,7 +47,7 @@ function V(e) {
   } = e, {
     loaded: r,
     subscriptionsSettings: a
-  } = (0, I.useMonetizationSettings)(s), n = (0, d.useStateFromStores)([S.default], () => S.default.getGuild(s)), {
+  } = (0, I.useMonetizationSettings)(s), n = (0, d.useStateFromStores)([L.default], () => L.default.getGuild(s)), {
     selectedTab: u,
     isPhantomPreview: c,
     categoryTabs: C
@@ -84,7 +84,7 @@ function b(e) {
   let {
     guildId: t,
     productId: s
-  } = e, r = (0, d.useStateFromStores)([_.default], () => _.default.isConnected()), x = (0, d.useStateFromStores)([S.default], () => S.default.getGuild(t)), {
+  } = e, r = (0, d.useStateFromStores)([_.default], () => _.default.isConnected()), x = (0, d.useStateFromStores)([L.default], () => L.default.getGuild(t)), {
     shouldHideGuildPurchaseEntryPoints: I,
     restrictionsLoading: E
   } = (0, C.useShouldHideGuildPurchaseEntryPoints)(t), {
@@ -105,12 +105,12 @@ function b(e) {
     disableTrack: m
   }), (0, l.jsxs)("div", {
     className: a(A.chat, w.container),
-    children: [(0, l.jsxs)(L.default, {
-      children: [(0, l.jsx)(L.default.Icon, {
+    children: [(0, l.jsxs)(S.default, {
+      children: [(0, l.jsx)(S.default.Icon, {
         icon: G.default,
         "aria-hidden": !0,
         color: c.default.INTERACTIVE_ACTIVE
-      }), (0, l.jsx)(L.default.Title, {
+      }), (0, l.jsx)(S.default.Title, {
         children: M.default.Messages.GUILD_SHOP_CHANNEL_LABEL
       }), (0, l.jsx)(O.default, {})]
     }), (0, l.jsx)(o.ScrollerNone, {

@@ -50,15 +50,15 @@ e.exports = l, l.prototype.keyPair = function(e) {
     if (0 >= (p = this._truncateToN(p, !0)).cmpn(1) || p.cmp(l) >= 0) continue;
     var h = this.g.mul(p);
     if (h.isInfinity()) continue;
-    var g = h.getX(),
-      b = g.umod(this.n);
-    if (0 !== b.cmpn(0)) {
-      var v = p.invm(this.n).mul(b.mul(t.getPrivate()).iadd(e));
-      if (0 !== (v = v.umod(this.n)).cmpn(0)) {
-        var m = (h.getY().isOdd() ? 1 : 0) | (0 !== g.cmp(b) ? 2 : 0);
-        return o.canonical && v.cmp(this.nh) > 0 && (v = this.n.sub(v), m ^= 1), new d({
-          r: b,
-          s: v,
+    var v = h.getX(),
+      g = v.umod(this.n);
+    if (0 !== g.cmpn(0)) {
+      var b = p.invm(this.n).mul(g.mul(t.getPrivate()).iadd(e));
+      if (0 !== (b = b.umod(this.n)).cmpn(0)) {
+        var m = (h.getY().isOdd() ? 1 : 0) | (0 !== v.cmp(g) ? 2 : 0);
+        return o.canonical && b.cmp(this.nh) > 0 && (b = this.n.sub(b), m ^= 1), new d({
+          r: g,
+          s: b,
           recoveryParam: m
         })
       }
@@ -86,8 +86,8 @@ e.exports = l, l.prototype.keyPair = function(e) {
   a = f ? this.curve.pointFromX(a.add(this.curve.n), l) : this.curve.pointFromX(a, l);
   var p = t.r.invm(o),
     h = o.sub(s).mul(p).umod(o),
-    g = u.mul(p).umod(o);
-  return this.g.mulAdd(h, a, g)
+    v = u.mul(p).umod(o);
+  return this.g.mulAdd(h, a, v)
 }, l.prototype.getKeyRecoveryParam = function(e, t, n, r) {
   if (null !== (t = new d(t, r)).recoveryParam) return t.recoveryParam;
   for (var i, o = 0; o < 4; o++) {

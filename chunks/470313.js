@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var a, s = n("917351"),
-  i = n.n(s),
-  l = n("861309"),
+  l = n.n(s),
+  i = n("861309"),
   r = n("49111");
 a = class {
   constructor(e, t, n) {
-    if (this.transport = e, this.version = t, this.encoding = n, this.id = i.uniqueId(), this.authorization = {
+    if (this.transport = e, this.version = t, this.encoding = n, this.id = l.uniqueId(), this.authorization = {
         authing: !1,
         scopes: [],
         accessToken: null,
@@ -19,7 +19,7 @@ a = class {
         id: null,
         name: null,
         icon: null
-      }, null == t || t > r.RPC_VERSION || t < 1) throw new l.default({
+      }, null == t || t > r.RPC_VERSION || t < 1) throw new i.default({
       closeCode: r.RPCCloseCodes.INVALID_VERSION
     }, "Invalid Version: ".concat(t))
   }

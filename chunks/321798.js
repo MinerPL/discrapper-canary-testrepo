@@ -2452,12 +2452,12 @@ function t3(t, e) {
 }
 let t6 = ["name", "type", "startTime", "transferSize", "duration"];
 
-function t4(t) {
+function t7(t) {
   return function(e) {
     return t6.every(n => t[n] === e[n])
   }
 }
-class t7 extends Error {
+class t4 extends Error {
   constructor() {
     super("Event buffer exceeded maximum size of ".concat(2e7, "."))
   }
@@ -2477,7 +2477,7 @@ class t8 {
   }
   async addEvent(t) {
     let e = JSON.stringify(t).length;
-    if (this._totalSize += e, this._totalSize > 2e7) throw new t7;
+    if (this._totalSize += e, this._totalSize > 2e7) throw new t4;
     this.events.push(t)
   }
   finish() {
@@ -2568,7 +2568,7 @@ class et {
     let e = tV(t.timestamp);
     (!this._earliestTimestamp || e < this._earliestTimestamp) && (this._earliestTimestamp = e);
     let n = JSON.stringify(t);
-    return (this._totalSize += n.length, this._totalSize > 2e7) ? Promise.reject(new t7) : this._sendEventToWorker(n)
+    return (this._totalSize += n.length, this._totalSize > 2e7) ? Promise.reject(new t4) : this._sendEventToWorker(n)
   }
   finish() {
     return this._finishRequest()
@@ -2761,7 +2761,7 @@ async function el(t, e, n) {
     if (!i) return;
     return await t.eventBuffer.addEvent(i)
   } catch (r) {
-    let e = r && r instanceof t7 ? "addEventSizeExceeded" : "addEvent";
+    let e = r && r instanceof t4 ? "addEventSizeExceeded" : "addEvent";
     ("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && k.logger.error(r), await t.stop(e);
     let n = (0, T.getCurrentHub)().getClient();
     n && n.recordDroppedEvent("internal_sdk_error", "replay")
@@ -4081,7 +4081,7 @@ class eq {
               return
             }
             if ("navigation" === t.entryType) {
-              t.duration > 0 && !n.find(t4(t)) && !s.find(t4(t)) && s.push(t);
+              t.duration > 0 && !n.find(t7(t)) && !s.find(t7(t)) && s.push(t);
               return
             }
             a.push(t)

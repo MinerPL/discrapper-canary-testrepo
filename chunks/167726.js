@@ -2,7 +2,7 @@
 let i, s, r;
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return S
   }
 }), n("222007"), n("860677");
 var a = n("446674"),
@@ -11,27 +11,27 @@ var a = n("446674"),
   u = n("845579"),
   d = n("374363"),
   c = n("686470");
-let f = {
+let _ = {
     applicationId: null,
     originURL: null
   },
-  _ = f,
-  h = new Set,
-  g = !1;
+  f = _,
+  E = new Set,
+  h = !1;
 
-function m() {
+function g() {
   r = null
 }
 
-function E() {
-  i = null, s = null, h = new Set, _.applicationId = null, _.originURL = null, m()
+function m() {
+  i = null, s = null, E = new Set, f.applicationId = null, f.originURL = null, g()
 }
 class p extends a.default.PersistedStore {
   initialize(e) {
-    i = (_ = {
-      ...null != e ? e : f
-    }).applicationId, s = _.originURL, this.waitFor(d.default, l.default), this.syncWith([d.default, l.default], () => !0), c.default.whenInitialized(() => {
-      g = !0
+    i = (f = {
+      ...null != e ? e : _
+    }).applicationId, s = f.originURL, this.waitFor(d.default, l.default), this.syncWith([d.default, l.default], () => !0), c.default.whenInitialized(() => {
+      h = !0
     })
   }
   inTestModeForApplication(e) {
@@ -44,13 +44,13 @@ class p extends a.default.PersistedStore {
     return u.DeveloperMode.getSetting() && this.inTestModeForApplication(e)
   }
   getState() {
-    return _
+    return f
   }
   get isTestMode() {
     return null != i
   }
   get isFetchingAuthorization() {
-    return h.size > 0
+    return E.size > 0
   }
   get testModeEmbeddedApplicationId() {
     return null != s ? i : null
@@ -66,31 +66,31 @@ class p extends a.default.PersistedStore {
   }
   whenInitialized(e) {
     this.addConditionalChangeListener(() => {
-      if (g) return setImmediate(e), !1
+      if (h) return setImmediate(e), !1
     })
   }
 }
 p.displayName = "TestModeStore", p.persistKey = "TestModeStore";
-var v = new p(o.default, {
+var S = new p(o.default, {
   DEVELOPER_TEST_MODE_AUTHORIZATION_START: function(e) {
     let {
       applicationId: t
     } = e;
-    h.add(t), r = null
+    E.add(t), r = null
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS: function(e) {
     let {
       applicationId: t,
       originURL: n
     } = e;
-    i = t, s = n, h.delete(t), r = null, _.applicationId = t, _.originURL = n
+    i = t, s = n, E.delete(t), r = null, f.applicationId = t, f.originURL = n
   },
   DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL: function(e) {
     let {
       applicationId: t,
       error: n
     } = e;
-    h.delete(t), r = n
+    E.delete(t), r = n
   },
   OVERLAY_INITIALIZE: function(e) {
     let {
@@ -98,7 +98,7 @@ var v = new p(o.default, {
     } = e;
     i = t
   },
-  DEVELOPER_TEST_MODE_RESET_ERROR: m,
-  LOGOUT: E,
-  DEVELOPER_TEST_MODE_RESET: E
+  DEVELOPER_TEST_MODE_RESET_ERROR: g,
+  LOGOUT: m,
+  DEVELOPER_TEST_MODE_RESET: m
 })

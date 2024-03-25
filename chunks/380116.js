@@ -9,17 +9,17 @@ var a = n("37983"),
   s = n("446674"),
   i = n("174727"),
   r = n("124824"),
-  o = n("515496"),
-  u = n("568088"),
+  u = n("515496"),
+  o = n("568088"),
   d = n("257407"),
   c = n("814711");
 
 function f(e) {
   let {
     channel: t
-  } = e, n = (0, s.useStateFromStores)([u.default], () => u.default.effectCooldownEndTime), f = l.useMemo(() => null != n ? (n.getTime() - Date.now()) / 1e3 : 0, [n]), {
+  } = e, n = (0, s.useStateFromStores)([o.default], () => o.default.effectCooldownEndTime), f = l.useMemo(() => null != n ? (n.getTime() - Date.now()) / 1e3 : 0, [n]), {
     seconds: h
-  } = (0, i.default)(null != n ? n : new Date), p = h > 0;
+  } = (0, i.default)(null != n ? n : new Date), m = h > 0;
   return (0, a.jsx)(c.default, {
     renderPopout: e => {
       let {
@@ -39,12 +39,12 @@ function f(e) {
         onMouseEnter: t,
         ...n
       } = e;
-      return (0, a.jsx)(o.default, {
+      return (0, a.jsx)(u.default, {
         totalCooldownSeconds: f,
         remainingCooldownSeconds: h,
         onMouseEnter: e => {
           var n, a;
-          return n = e, a = t, void(!p && a(n))
+          return n = e, a = t, void(!m && a(n))
         },
         ...n
       })

@@ -1,27 +1,27 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
-var l = n("37983");
-n("884691");
-var i = n("45029"),
-  r = n("826079"),
-  o = e => {
+var r = i("37983");
+i("884691");
+var n = i("45029"),
+  s = i("440162"),
+  a = e => {
     let {
       size: t
     } = e;
-    return (0, l.jsx)("div", {
-      className: r.unownedStickerLockContainer,
+    return (0, r.jsx)("div", {
+      className: s.unownedStickerLockContainer,
       style: {
         width: t,
         height: t
       },
-      children: (0, l.jsx)(i.default, {
+      children: (0, r.jsx)(n.default, {
         width: 12,
         height: 12,
-        className: r.unownedStickerLockIcon
+        className: s.unownedStickerLockIcon
       })
     })
   }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return O
   }
 });
 var i = n("37983"),
@@ -23,7 +23,7 @@ var i = n("37983"),
   v = n("357506"),
   y = n("49111");
 n("551184"), n("762017"), l.default.initialize();
-var C = function() {
+var O = function() {
   return a.useEffect(() => (f.default.initialize(), d.default.initialize(), p.default.init(), h.default.init(), () => {
     f.default.terminate(), d.default.terminate()
   }), []), (0, i.jsxs)(a.Fragment, {

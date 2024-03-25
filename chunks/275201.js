@@ -57,32 +57,32 @@ e.exports = c, c.prototype.point = function() {
     d[a] = h.wnd, l[a] = h.points
   }
   for (a = r - 1; a >= 1; a -= 2) {
-    var g = a - 1,
-      b = a;
-    if (1 !== d[g] || 1 !== d[b]) {
-      f[g] = o(n[g], d[g], this._bitLength), f[b] = o(n[b], d[b], this._bitLength), p = Math.max(f[g].length, p), p = Math.max(f[b].length, p);
+    var v = a - 1,
+      g = a;
+    if (1 !== d[v] || 1 !== d[g]) {
+      f[v] = o(n[v], d[v], this._bitLength), f[g] = o(n[g], d[g], this._bitLength), p = Math.max(f[v].length, p), p = Math.max(f[g].length, p);
       continue
     }
-    var v = [t[g], null, null, t[b]];
-    0 === t[g].y.cmp(t[b].y) ? (v[1] = t[g].add(t[b]), v[2] = t[g].toJ().mixedAdd(t[b].neg())) : 0 === t[g].y.cmp(t[b].y.redNeg()) ? (v[1] = t[g].toJ().mixedAdd(t[b]), v[2] = t[g].add(t[b].neg())) : (v[1] = t[g].toJ().mixedAdd(t[b]), v[2] = t[g].toJ().mixedAdd(t[b].neg()));
+    var b = [t[v], null, null, t[g]];
+    0 === t[v].y.cmp(t[g].y) ? (b[1] = t[v].add(t[g]), b[2] = t[v].toJ().mixedAdd(t[g].neg())) : 0 === t[v].y.cmp(t[g].y.redNeg()) ? (b[1] = t[v].toJ().mixedAdd(t[g]), b[2] = t[v].add(t[g].neg())) : (b[1] = t[v].toJ().mixedAdd(t[g]), b[2] = t[v].toJ().mixedAdd(t[g].neg()));
     var m = [-3, -1, -5, -7, 0, 7, 5, 1, 3],
-      y = s(n[g], n[b]);
-    for (c = 0, p = Math.max(y[0].length, p), f[g] = Array(p), f[b] = Array(p); c < p; c++) {
+      y = s(n[v], n[g]);
+    for (c = 0, p = Math.max(y[0].length, p), f[v] = Array(p), f[g] = Array(p); c < p; c++) {
       var x = 0 | y[0][c],
         w = 0 | y[1][c];
-      f[g][c] = m[(x + 1) * 3 + (w + 1)], f[b][c] = 0, l[g] = v
+      f[v][c] = m[(x + 1) * 3 + (w + 1)], f[g][c] = 0, l[v] = b
     }
   }
   var S = this.jpoint(null, null, null),
     k = this._wnafT4;
   for (a = p; a >= 0; a--) {
-    for (var _ = 0; a >= 0;) {
-      var E = !0;
-      for (c = 0; c < r; c++) k[c] = 0 | f[c][a], 0 !== k[c] && (E = !1);
-      if (!E) break;
-      _++, a--
+    for (var E = 0; a >= 0;) {
+      var _ = !0;
+      for (c = 0; c < r; c++) k[c] = 0 | f[c][a], 0 !== k[c] && (_ = !1);
+      if (!_) break;
+      E++, a--
     }
-    if (a >= 0 && _++, S = S.dblp(_), a < 0) break;
+    if (a >= 0 && E++, S = S.dblp(E), a < 0) break;
     for (c = 0; c < r; c++) {
       var M = k[c];
       if (0 !== M) {

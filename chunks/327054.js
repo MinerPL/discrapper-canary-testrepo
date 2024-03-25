@@ -1,15 +1,15 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return s
+    return r
   }
 });
-var u = n("300322"),
-  a = n("913491"),
-  r = n("49111");
+var u = t("300322"),
+  a = t("913491"),
+  l = t("49111");
 
-function s(e, t, n) {
-  let s = t.isSystemDM(),
-    l = !s && !(0, a.default)(e);
-  return l && (n || t.isPrivate()) && (0, u.getIsActiveChannelOrUnarchivableThread)(t) && t.type !== r.ChannelTypes.GUILD_VOICE && t.type !== r.ChannelTypes.GUILD_STAGE_VOICE
+function r(e, n, t) {
+  let r = n.isSystemDM(),
+    s = !r && !(0, a.default)(e);
+  return s && (t || n.isPrivate()) && (0, u.getIsActiveChannelOrUnarchivableThread)(n) && n.type !== l.ChannelTypes.GUILD_VOICE && n.type !== l.ChannelTypes.GUILD_STAGE_VOICE
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var a = n("37983");
@@ -10,72 +10,72 @@ var l = n("414456"),
   s = n.n(l),
   i = n("974667"),
   r = n("446674"),
-  o = n("77078"),
-  u = n("145079"),
+  u = n("77078"),
+  o = n("145079"),
   d = n("87657"),
   c = n("824563"),
   f = n("145131"),
   h = n("158998"),
-  p = n("539058");
+  m = n("855780");
 
-function m(e) {
+function p(e) {
   let {
     user: t,
     row: n,
     hideDiscriminator: l,
-    comparator: m,
+    comparator: p,
     selected: E,
-    checked: C,
-    onClick: g,
-    onMouseEnter: S,
+    checked: g,
+    onClick: S,
+    onMouseEnter: C,
     "aria-setsize": _,
     "aria-posinset": I
   } = e, T = (0, r.useStateFromStores)([c.default], () => c.default.getStatus(t.id)), v = (0, i.useListItem)(String(t.id));
-  return (0, a.jsx)(o.Clickable, {
+  return (0, a.jsx)(u.Clickable, {
     id: "user-row-".concat(n),
-    className: p.friendWrapper,
+    className: m.friendWrapper,
     onClick: () => {
-      null != g && g(t.id)
+      null != S && S(t.id)
     },
     onMouseEnter: () => {
-      null != S && S(n)
+      null != C && C(n)
     },
     ...v,
     role: "option",
-    "aria-selected": C,
+    "aria-selected": g,
     "aria-setsize": _,
     "aria-posinset": I,
     children: (0, a.jsxs)(f.default, {
       align: f.default.Align.CENTER,
-      className: s(p.friend, {
-        [p.friendSelected]: E
+      className: s(m.friend, {
+        [m.friendSelected]: E
       }),
       children: [(0, a.jsx)(d.default, {
         user: t,
         status: T,
-        className: p.avatar
+        className: m.avatar
       }), (0, a.jsxs)(f.default, {
-        className: p.match,
+        className: m.match,
         align: f.default.Align.BASELINE,
-        children: [(0, a.jsx)(o.Text, {
+        children: [(0, a.jsx)(u.Text, {
           tag: "strong",
-          className: p.nickname,
+          className: m.nickname,
           "aria-hidden": !0,
           variant: "text-md/medium",
-          children: null != m && m === t.tag ? h.default.getName(t) : null != m && "" !== m ? m : h.default.getName(t)
-        }), (0, a.jsx)(u.default, {
+          children: null != p && p === t.tag ? h.default.getName(t) : null != p && "" !== p ? p : h.default.getName(t)
+        }), (0, a.jsx)(o.default, {
           user: t,
           hideDiscriminator: l,
-          className: p.discordTag,
-          usernameClass: p.weightMedium,
-          discriminatorClass: p.weightMedium,
+          className: m.discordTag,
+          usernameClass: m.weightMedium,
+          discriminatorClass: m.weightMedium,
           forceUsername: !0
         })]
-      }), (0, a.jsx)(o.Checkbox, {
+      }), (0, a.jsx)(u.Checkbox, {
         displayOnly: !0,
         size: 22,
-        value: C,
-        className: p.checkbox
+        value: g,
+        className: m.checkbox
       })]
     })
   })

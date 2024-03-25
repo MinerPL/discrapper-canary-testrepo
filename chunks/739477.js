@@ -1,37 +1,37 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   FilterLoadingIndicator: function() {
     return M
   },
   default: function() {
     return m
   }
-}), t("222007");
-var s = t("37983"),
-  n = t("884691"),
-  l = t("414456"),
-  o = t.n(l),
-  c = t("446674"),
-  i = t("862337"),
-  r = t("77078"),
-  d = t("629109"),
-  u = t("845579"),
-  O = t("154867"),
-  E = t("211208"),
-  _ = t("42887"),
-  g = t("599110"),
-  A = t("49111"),
-  p = t("782340"),
-  f = t("986399");
+}), a("222007");
+var s = a("37983"),
+  n = a("884691"),
+  l = a("414456"),
+  o = a.n(l),
+  c = a("446674"),
+  i = a("862337"),
+  r = a("77078"),
+  d = a("629109"),
+  u = a("845579"),
+  O = a("154867"),
+  E = a("211208"),
+  _ = a("42887"),
+  g = a("599110"),
+  A = a("49111"),
+  p = a("782340"),
+  f = a("248502");
 
 function M() {
-  let [e, a] = n.useState(!1), t = (0, c.useStateFromStores)([_.default], () => _.default.isMediaFilterSettingLoading());
+  let [e, t] = n.useState(!1), a = (0, c.useStateFromStores)([_.default], () => _.default.isMediaFilterSettingLoading());
   return (n.useEffect(() => {
     let e = new i.Timeout;
-    return t ? e.start(150, () => {
-      a(!0)
-    }) : (e.stop(), a(!1)), () => e.stop()
-  }, [t]), e) ? (0, s.jsx)("div", {
+    return a ? e.start(150, () => {
+      t(!0)
+    }) : (e.stop(), t(!1)), () => e.stop()
+  }, [a]), e) ? (0, s.jsx)("div", {
     className: f.filterLoadingIndicator,
     children: (0, s.jsx)(r.Spinner, {})
   }) : null
@@ -39,8 +39,8 @@ function M() {
 
 function m(e) {
   let {
-    hideDeviceSelector: a = !1,
-    hideDeviceHeader: t = !1,
+    hideDeviceSelector: t = !1,
+    hideDeviceHeader: a = !1,
     onLearnMore: l,
     selectedBackgroundOption: i,
     onSelectBackgroundOption: M,
@@ -49,12 +49,12 @@ function m(e) {
     showSmallBackgroundOptions: v = !1
   } = e, h = (0, c.useStateFromStores)([_.default], () => _.default.getVideoDeviceId()), x = (0, c.useStateFromStoresArray)([_.default], () => Object.values(_.default.getVideoDevices())), C = u.AlwaysPreviewVideo.useSetting(), N = x.map(e => {
     let {
-      id: a,
-      name: t
+      id: t,
+      name: a
     } = e;
     return {
-      value: a,
-      label: t
+      value: t,
+      label: a
     }
   });
   return n.useEffect(() => {
@@ -81,8 +81,8 @@ function m(e) {
         className: f.cameraPreviewTitle,
         children: p.default.Messages.CAMERA_PREVIEW_ALWAYS_PREVIEW
       })
-    }), a ? null : (0, s.jsxs)(s.Fragment, {
-      children: [t ? null : (0, s.jsx)(r.Heading, {
+    }), t ? null : (0, s.jsxs)(s.Fragment, {
+      children: [a ? null : (0, s.jsx)(r.Heading, {
         className: f.spacingTop24,
         variant: "eyebrow",
         color: "header-secondary",
@@ -90,7 +90,7 @@ function m(e) {
       }), (0, s.jsx)(r.SingleSelect, {
         placeholder: p.default.Messages.CHANGE_CAMERA,
         className: o(f.selector, {
-          [f.selectorNoHeader]: t
+          [f.selectorNoHeader]: a
         }),
         options: N,
         value: h,

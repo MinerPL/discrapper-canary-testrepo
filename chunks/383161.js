@@ -1,49 +1,49 @@
 "use strict";
 n.r(t), n.d(t, {
   mentionUser: function() {
-    return I
+    return p
   },
   default: function() {
-    return T
+    return h
   }
 }), n("222007");
-var i = n("37983");
+var a = n("37983");
 n("884691");
-var a = n("446674"),
-  l = n("77078"),
-  r = n("352674"),
-  s = n("42203"),
-  u = n("957255"),
-  o = n("18494"),
-  d = n("659500"),
+var s = n("446674"),
+  r = n("77078"),
+  u = n("352674"),
+  i = n("42203"),
+  d = n("957255"),
+  l = n("18494"),
+  o = n("659500"),
   c = n("158998"),
-  E = n("49111"),
-  _ = n("782340");
+  f = n("49111"),
+  m = n("782340");
 
-function I(e, t) {
+function p(e, t) {
   let {
     id: n
-  } = e, i = "@".concat(c.default.getUserTag(e, {
+  } = e, a = "@".concat(c.default.getUserTag(e, {
     decoration: "never"
   }));
-  d.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.INSERT_TEXT, {
-    plainText: i,
+  o.ComponentDispatch.dispatchToLastSubscribed(f.ComponentActions.INSERT_TEXT, {
+    plainText: a,
     rawText: "<@".concat(n, ">")
-  }), null != t && r.default.startTyping(t)
+  }), null != t && u.default.startTyping(t)
 }
 
-function T(e, t, n) {
-  let [r, d] = (0, a.useStateFromStoresArray)([o.default, s.default, u.default], () => {
-    let e = o.default.getChannelId(t),
-      n = s.default.getChannel(e),
-      i = null != n && (n.isMultiUserDM() || u.default.can(E.Permissions.SEND_MESSAGES, n));
-    return [e, i]
-  }, [t]), c = n === E.AppContext.POPOUT;
-  return !d || c ? null : (0, i.jsx)(l.MenuItem, {
+function h(e, t, n) {
+  let [u, o] = (0, s.useStateFromStoresArray)([l.default, i.default, d.default], () => {
+    let e = l.default.getChannelId(t),
+      n = i.default.getChannel(e),
+      a = null != n && (n.isMultiUserDM() || d.default.can(f.Permissions.SEND_MESSAGES, n));
+    return [e, a]
+  }, [t]), c = n === f.AppContext.POPOUT;
+  return !o || c ? null : (0, a.jsx)(r.MenuItem, {
     id: "mention",
-    label: _.default.Messages.MENTION,
+    label: m.default.Messages.MENTION,
     action: function() {
-      I(e, r)
+      p(e, u)
     }
   })
 }

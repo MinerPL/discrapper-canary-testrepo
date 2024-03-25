@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691");
-let s = "file-input",
+  s = n("884691");
+let r = "file-input",
   a = e => ({
     position: "absolute",
     top: 0,
@@ -17,20 +17,20 @@ let s = "file-input",
     cursor: e ? "not-allowed" : "pointer",
     fontSize: 0
   });
-class o extends r.Component {
+class o extends s.Component {
   render() {
     let {
       disabled: e,
       tabIndex: t,
       className: n,
-      name: r,
+      name: s,
       "aria-label": o,
       "aria-hidden": l
     } = this.props;
     if (this.props.embedded) return (0, i.jsx)("div", {
       role: "button",
       style: a(e),
-      className: n || s,
+      className: n || r,
       tabIndex: t,
       onKeyDown: e ? void 0 : this.handleNativeKeyDown,
       onClick: e ? void 0 : this.handleNativeClick,
@@ -42,7 +42,7 @@ class o extends r.Component {
       let u = "";
       return this.props.filters && (u = this.props.filters.map(e => e.extensions.map(e => ".".concat(e)).join(",")).join(",")), (0, i.jsx)("input", {
         style: a(e),
-        className: n || s,
+        className: n || r,
         disabled: e,
         type: "file",
         tabIndex: t,
@@ -50,7 +50,7 @@ class o extends r.Component {
         onChange: this.props.onChange,
         multiple: this.props.multiple,
         accept: u,
-        name: r,
+        name: s,
         "aria-label": o,
         "aria-hidden": l || void 0,
         ref: e => this._input = e

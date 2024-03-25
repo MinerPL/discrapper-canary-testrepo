@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(e), i.d(e, {
   default: function() {
-    return r
+    return l
   }
-}), n("702976");
-var l = n("49111");
+}), i("702976");
+var n = i("49111");
 
-function r(e, t) {
-  return t !== l.ActivityFlags.INSTANCE && null != e && null != e.flags && !!(e.flags & t)
+function l(t, e) {
+  return e !== n.ActivityFlags.INSTANCE && null != t && null != t.flags && !!(t.flags & e)
 }

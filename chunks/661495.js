@@ -1,6 +1,6 @@
-var n = r("204366"),
-  o = r("182173"),
-  a = r("298169");
+var r = n("204366"),
+  i = n("182173"),
+  o = n("298169");
 e.exports = function(e) {
-  return n(e, a, o)
+  return r(e, o, i)
 }

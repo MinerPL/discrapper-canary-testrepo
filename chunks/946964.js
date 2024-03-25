@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var s = a("37983");
+var l = a("37983");
 a("884691");
-var r = a("748820"),
-  l = a("77078"),
+var s = a("748820"),
+  r = a("77078"),
   n = a("112679"),
   i = a("55689"),
   o = a("21526"),
@@ -23,18 +23,18 @@ function d(e) {
     onComplete: p,
     analyticsLocations: g,
     analyticsObject: C
-  } = e, h = !1, E = (0, r.v4)();
-  (0, l.openModalLazy)(async () => {
+  } = e, h = !1, E = (0, s.v4)();
+  (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await a.el("894742").then(a.bind(a, "894742"));
     return a => {
       let {
-        onClose: r,
-        returnRef: l,
+        onClose: s,
+        returnRef: r,
         ...n
       } = a;
-      return (0, s.jsx)(e, {
+      return (0, l.jsx)(e, {
         ...n,
         loadId: E,
         skuId: t,
@@ -42,12 +42,12 @@ function d(e) {
         giftMessage: f,
         analyticsLocations: g,
         onClose: e => {
-          r(), null == m || m(e)
+          s(), null == m || m(e)
         },
         onComplete: () => {
           h = !0, null == p || p()
         },
-        returnRef: l
+        returnRef: r
       })
     }
   }, {

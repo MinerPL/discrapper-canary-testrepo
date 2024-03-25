@@ -70,7 +70,7 @@ t.SemVer = p, p.prototype.format = function() {
 }, p.prototype.compare = function(e) {
   return r("SemVer.compare", this.version, this.options, e), !(e instanceof p) && (e = new p(e, this.options)), this.compareMain(e) || this.comparePre(e)
 }, p.prototype.compareMain = function(e) {
-  return !(e instanceof p) && (e = new p(e, this.options)), g(this.major, e.major) || g(this.minor, e.minor) || g(this.patch, e.patch)
+  return !(e instanceof p) && (e = new p(e, this.options)), v(this.major, e.major) || v(this.minor, e.minor) || v(this.patch, e.patch)
 }, p.prototype.comparePre = function(e) {
   if (!(e instanceof p) && (e = new p(e, this.options)), this.prerelease.length && !e.prerelease.length) return -1;
   if (!this.prerelease.length && e.prerelease.length) return 1;
@@ -83,7 +83,7 @@ t.SemVer = p, p.prototype.format = function() {
     if (void 0 === i) return 1;
     else if (void 0 === n) return -1;
     else if (n === i) continue;
-    else return g(n, i)
+    else return v(n, i)
   } while (++t)
 }, p.prototype.compareBuild = function(e) {
   !(e instanceof p) && (e = new p(e, this.options));
@@ -95,7 +95,7 @@ t.SemVer = p, p.prototype.format = function() {
     if (void 0 === i) return 1;
     else if (void 0 === n) return -1;
     else if (n === i) continue;
-    else return g(n, i)
+    else return v(n, i)
   } while (++t)
 }, p.prototype.inc = function(e, t) {
   switch (e) {
@@ -152,16 +152,16 @@ t.diff = function(e, t) {
     if (("major" === s || "minor" === s || "patch" === s) && n[s] !== r[s]) return i + s;
   return o
 };
-t.compareIdentifiers = g;
+t.compareIdentifiers = v;
 var h = /^[0-9]+$/;
 
-function g(e, t) {
+function v(e, t) {
   var n = h.test(e),
     r = h.test(t);
   return n && r && (e = +e, t = +t), e === t ? 0 : n && !r ? -1 : r && !n ? 1 : e < t ? -1 : 1
 }
 t.rcompareIdentifiers = function(e, t) {
-  return g(t, e)
+  return v(t, e)
 };
 t.major = function(e, t) {
   return new p(e, t).major
@@ -173,11 +173,11 @@ t.patch = function(e, t) {
   return new p(e, t).patch
 };
 
-function b(e, t, n) {
+function g(e, t, n) {
   return new p(e, n).compare(new p(t, n))
 }
-t.compare = b, t.compareLoose = function(e, t) {
-  return b(e, t, !0)
+t.compare = g, t.compareLoose = function(e, t) {
+  return g(e, t, !0)
 };
 t.compareBuild = function(e, t, n) {
   var r = new p(e, n),
@@ -185,7 +185,7 @@ t.compareBuild = function(e, t, n) {
   return r.compare(i) || r.compareBuild(i)
 };
 t.rcompare = function(e, t, n) {
-  return b(t, e, n)
+  return g(t, e, n)
 };
 t.sort = function(e, n) {
   return e.sort(function(e, r) {
@@ -198,28 +198,28 @@ t.rsort = function(e, n) {
   })
 };
 
-function v(e, t, n) {
-  return b(e, t, n) > 0
+function b(e, t, n) {
+  return g(e, t, n) > 0
 }
 
 function m(e, t, n) {
-  return 0 > b(e, t, n)
+  return 0 > g(e, t, n)
 }
 
 function y(e, t, n) {
-  return 0 === b(e, t, n)
+  return 0 === g(e, t, n)
 }
 
 function x(e, t, n) {
-  return 0 !== b(e, t, n)
+  return 0 !== g(e, t, n)
 }
 
 function w(e, t, n) {
-  return b(e, t, n) >= 0
+  return g(e, t, n) >= 0
 }
 
 function S(e, t, n) {
-  return 0 >= b(e, t, n)
+  return 0 >= g(e, t, n)
 }
 
 function k(e, t, n, r) {
@@ -235,7 +235,7 @@ function k(e, t, n, r) {
     case "!=":
       return x(e, n, r);
     case ">":
-      return v(e, n, r);
+      return b(e, n, r);
     case ">=":
       return w(e, n, r);
     case "<":
@@ -247,26 +247,26 @@ function k(e, t, n, r) {
   }
 }
 
-function _(e, t) {
+function E(e, t) {
   if ((!t || "object" != typeof t) && (t = {
       loose: !!t,
       includePrerelease: !1
-    }), e instanceof _) {
+    }), e instanceof E) {
     if (!!t.loose === e.loose) return e;
     e = e.value
   }
-  if (!(this instanceof _)) return new _(e, t);
-  r("comparator", e, t), this.options = t, this.loose = !!t.loose, this.parse(e), this.semver === E ? this.value = "" : this.value = this.operator + this.semver.version, r("comp", this)
+  if (!(this instanceof E)) return new E(e, t);
+  r("comparator", e, t), this.options = t, this.loose = !!t.loose, this.parse(e), this.semver === _ ? this.value = "" : this.value = this.operator + this.semver.version, r("comp", this)
 }
-t.gt = v, t.lt = m, t.eq = y, t.neq = x, t.gte = w, t.lte = S, t.cmp = k, t.Comparator = _;
-var E = {};
+t.gt = b, t.lt = m, t.eq = y, t.neq = x, t.gte = w, t.lte = S, t.cmp = k, t.Comparator = E;
+var _ = {};
 
 function Range(e, t) {
   if ((!t || "object" != typeof t) && (t = {
       loose: !!t,
       includePrerelease: !1
     }), e instanceof Range) return !!t.loose === e.loose && !!t.includePrerelease === e.includePrerelease ? e : new Range(e.raw, t);
-  if (e instanceof _) return new Range(e.value, t);
+  if (e instanceof E) return new Range(e.value, t);
   if (!(this instanceof Range)) return new Range(e, t);
   if (this.options = t, this.loose = !!t.loose, this.includePrerelease = !!t.includePrerelease, this.raw = e, this.set = e.split(/\s*\|\|\s*/).map(function(e) {
       return this.parseRange(e.trim())
@@ -282,23 +282,23 @@ function M(e, t) {
   }), i = r.pop();
   return n
 }
-_.prototype.parse = function(e) {
+E.prototype.parse = function(e) {
   var t = this.options.loose ? s[c.COMPARATORLOOSE] : s[c.COMPARATOR],
     n = e.match(t);
   if (!n) throw TypeError("Invalid comparator: " + e);
-  this.operator = void 0 !== n[1] ? n[1] : "", "=" === this.operator && (this.operator = ""), n[2] ? this.semver = new p(n[2], this.options.loose) : this.semver = E
-}, _.prototype.toString = function() {
+  this.operator = void 0 !== n[1] ? n[1] : "", "=" === this.operator && (this.operator = ""), n[2] ? this.semver = new p(n[2], this.options.loose) : this.semver = _
+}, E.prototype.toString = function() {
   return this.value
-}, _.prototype.test = function(e) {
-  if (r("Comparator.test", e, this.options.loose), this.semver === E || e === E) return !0;
+}, E.prototype.test = function(e) {
+  if (r("Comparator.test", e, this.options.loose), this.semver === _ || e === _) return !0;
   if ("string" == typeof e) try {
     e = new p(e, this.options)
   } catch (e) {
     return !1
   }
   return k(e, this.operator, this.semver, this.options)
-}, _.prototype.intersects = function(e, t) {
-  if (!(e instanceof _)) throw TypeError("a Comparator is required");
+}, E.prototype.intersects = function(e, t) {
+  if (!(e instanceof E)) throw TypeError("a Comparator is required");
   if ((!t || "object" != typeof t) && (t = {
       loose: !!t,
       includePrerelease: !1
@@ -368,7 +368,7 @@ _.prototype.parse = function(e) {
   return this.options.loose && (o = o.filter(function(e) {
     return !!e.match(i)
   })), o = o.map(function(e) {
-    return new _(e, this.options)
+    return new E(e, this.options)
   }, this)
 }, Range.prototype.intersects = function(e, t) {
   if (!(e instanceof Range)) throw TypeError("a Range is required");
@@ -409,7 +409,7 @@ Range.prototype.test = function(e) {
           if (!e[i].test(t)) return !1;
         if (t.prerelease.length && !n.includePrerelease) {
           for (i = 0; i < e.length; i++)
-            if (r(e[i].semver), e[i].semver !== E && e[i].semver.prerelease.length > 0) {
+            if (r(e[i].semver), e[i].semver !== _ && e[i].semver.prerelease.length > 0) {
               var o = e[i].semver;
               if (o.major === t.major && o.minor === t.minor && o.patch === t.patch) return !0
             } return !1
@@ -464,7 +464,7 @@ t.minVersion = function(e, t) {
         0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), t.raw = t.format();
       case "":
       case ">=":
-        (!n || v(n, t)) && (n = t);
+        (!n || b(n, t)) && (n = t);
         break;
       case "<":
       case "<=":
@@ -492,10 +492,10 @@ t.gtr = function(e, t, n) {
 function T(e, t, n, r) {
   switch (e = new p(e, r), t = new Range(t, r), n) {
     case ">":
-      i = v, o = S, s = m, a = ">", c = ">=";
+      i = b, o = S, s = m, a = ">", c = ">=";
       break;
     case "<":
-      i = m, o = w, s = v, a = "<", c = "<=";
+      i = m, o = w, s = b, a = "<", c = "<=";
       break;
     default:
       throw TypeError('Must provide a hilo val of "<" or ">"')
@@ -506,7 +506,7 @@ function T(e, t, n, r) {
       l = null,
       f = null;
     if (d.forEach(function(e) {
-        e.semver === E && (e = new _(">=0.0.0")), l = l || e, f = f || e, i(e.semver, l.semver, r) ? l = e : s(e.semver, f.semver, r) && (f = e)
+        e.semver === _ && (e = new E(">=0.0.0")), l = l || e, f = f || e, i(e.semver, l.semver, r) ? l = e : s(e.semver, f.semver, r) && (f = e)
       }), l.operator === a || l.operator === c) return !1;
     if ((!f.operator || f.operator === a) && o(e, f.semver)) return !1;
     if (f.operator === c && s(e, f.semver)) return !1

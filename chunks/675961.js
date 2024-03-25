@@ -1,40 +1,40 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   CustomSoundType: function() {
     return l
   },
   useCustomJoinSound: function() {
-    return d
+    return o
   },
   getCustomJoinSound: function() {
-    return r
+    return u
   }
 });
-var u, l, i = t("446674"),
-  o = t("374363"),
-  a = t("846325");
+var i, l, a = n("446674"),
+  s = n("374363"),
+  r = n("846325");
 
-function d(e) {
-  return (0, i.useStateFromStores)([o.default], () => {
-    var n, t;
-    let u = null !== (t = null === (n = o.default.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== t ? t : {};
-    return s(e, u)
+function o(e) {
+  return (0, a.useStateFromStores)([s.default], () => {
+    var t, n;
+    let i = null !== (n = null === (t = s.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {};
+    return d(e, i)
   })
 }
 
-function r(e) {
-  var n, t;
-  let u = null !== (t = null === (n = o.default.settings.guilds) || void 0 === n ? void 0 : n.guilds) && void 0 !== t ? t : {};
-  return s(e, u)
+function u(e) {
+  var t, n;
+  let i = null !== (n = null === (t = s.default.settings.guilds) || void 0 === t ? void 0 : t.guilds) && void 0 !== n ? n : {};
+  return d(e, i)
 }
 
-function s(e, n) {
-  var t, u;
-  let l = null === (t = n[e]) || void 0 === t ? void 0 : t.joinSound,
-    i = null === (u = n[a.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID]) || void 0 === u ? void 0 : u.joinSound,
-    o = null != l ? l : i;
-  return null != o ? {
-    ...o,
+function d(e, t) {
+  var n, i;
+  let l = null === (n = t[e]) || void 0 === n ? void 0 : n.joinSound,
+    a = null === (i = t[r.CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID]) || void 0 === i ? void 0 : i.joinSound,
+    s = null != l ? l : a;
+  return null != s ? {
+    ...s,
     type: null != l ? 1 : 0
   } : void 0
-}(u = l || (l = {}))[u.GLOBAL = 0] = "GLOBAL", u[u.GUILD = 1] = "GUILD"
+}(i = l || (l = {}))[i.GLOBAL = 0] = "GLOBAL", i[i.GUILD = 1] = "GUILD"

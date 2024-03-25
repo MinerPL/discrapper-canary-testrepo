@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return i
   }
 });
-var a = {
+var i = {
   backgroundTaskIdentifierInvalid: -1,
   backgroundify: function(e, t) {
     return e

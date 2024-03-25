@@ -8,9 +8,9 @@ var r = n("37983"),
   i = n("884691"),
   s = n("627445"),
   l = n.n(s),
-  u = n("491523"),
-  a = n("775155"),
-  o = n("659632"),
+  a = n("491523"),
+  o = n("775155"),
+  u = n("659632"),
   d = n("380186"),
   c = n("635357"),
   p = n("642906"),
@@ -38,8 +38,8 @@ function S(e) {
       startingPremiumSubscriptionPlanIdRef: b
     } = (0, p.usePaymentContext)(),
     {
-      isGift: j,
-      giftRecipient: A,
+      isGift: A,
+      giftRecipient: j,
       giftCode: k,
       hasSentMessage: L,
       isSendingMessage: O,
@@ -50,22 +50,22 @@ function S(e) {
     S(), null == E || E()
   }, [S, E]);
   return i.useEffect(() => {
-    if (!j || null == A || null == k || L || O || (0, o.shouldShowCustomGiftExperience)(A)) return;
-    let e = u.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
+    if (!A || null == j || null == k || L || O || (0, u.shouldShowCustomGiftExperience)(j)) return;
+    let e = a.AutomatedGiftCodeMessageExperiment.getCurrentConfig({
       location: "36b986_1"
     }).enabled;
     e && v({
       onSubscriptionConfirmation: E
     })
-  }, [v, j, A, k, L, O, E]), s = null != _ ? _(g, R, N) : j ? (0, r.jsx)(a.PremiumSubscriptionGiftPurchaseConfirmation, {
+  }, [v, A, j, k, L, O, E]), s = null != _ ? _(g, R, N) : A ? (0, r.jsx)(o.PremiumSubscriptionGiftPurchaseConfirmation, {
     planId: g.id,
     onClose: R
-  }) : b.current === g.id ? (0, r.jsx)(a.default, {
+  }) : b.current === g.id ? (0, r.jsx)(o.default, {
     planId: g.id,
     postSuccessGuild: x,
     onClose: R,
     paymentSourceType: null === (t = T[null != h ? h : ""]) || void 0 === t ? void 0 : t.type
-  }) : (0, r.jsx)(a.default, {
+  }) : (0, r.jsx)(o.default, {
     followupSKUInfo: C,
     startingPremiumSubscriptionPlanId: b.current,
     planId: g.id,

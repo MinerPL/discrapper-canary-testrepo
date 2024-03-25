@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return L
   },
   ModalFooter: function() {
-    return D
+    return y
   },
   ModalCloseButton: function() {
-    return y
+    return D
   },
   ModalListContent: function() {
     return P
@@ -26,7 +26,7 @@ var i, r, o = n("37983"),
   s = n("884691"),
   l = n("414456"),
   a = n.n(l),
-  u = n("907002"),
+  u = n("146606"),
   c = n("759843"),
   d = n("458960"),
   _ = n("413197"),
@@ -34,14 +34,14 @@ var i, r, o = n("37983"),
   E = n("130969"),
   S = n("718776"),
   g = n("860226"),
-  h = n("433600"),
-  m = n("446662"),
+  m = n("433600"),
+  h = n("446662"),
   p = n("145131"),
   I = n("945330"),
   T = n("625611"),
   v = n("843455"),
   A = n("782340"),
-  N = n("760021");
+  N = n("521841");
 (i = r || (r = {})).SMALL = "small", i.MEDIUM = "medium", i.LARGE = "large", i.DYNAMIC = "dynamic";
 let C = Object.freeze({
   small: N.small,
@@ -59,8 +59,8 @@ function R(e) {
     role: l = "dialog",
     className: f,
     fullscreenOnMobile: g = !0,
-    hideShadow: h = !1,
-    onAnimationEnd: m = v.NOOP,
+    hideShadow: m = !1,
+    onAnimationEnd: h = v.NOOP,
     returnRef: p,
     ...I
   } = e, A = n === T.ModalTransitionState.ENTERING || n === T.ModalTransitionState.ENTERED, {
@@ -73,11 +73,11 @@ function R(e) {
       easing: A ? d.default.Easing.inOut(d.default.Easing.back()) : d.default.Easing.quad,
       clamp: !0
     },
-    onRest: m
-  }), L = s.useRef(null), D = null != I["aria-label"], y = null != I["aria-labelledby"], P = s.useId(), M = null !== (t = I["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
+    onRest: h
+  }), L = s.useRef(null), y = null != I["aria-label"], D = null != I["aria-labelledby"], P = s.useId(), M = null !== (t = I["aria-labelledby"]) && void 0 !== t ? t : P, U = s.useMemo(() => ({
     headerId: M,
-    headerIdIsManaged: y
-  }), [M, y]);
+    headerIdIsManaged: D
+  }), [M, D]);
   return (0, o.jsx)(T.ModalContentContext.Provider, {
     value: U,
     children: (0, o.jsx)(E.Dialog, {
@@ -85,12 +85,12 @@ function R(e) {
       role: l,
       returnRef: p,
       impressionType: c.ImpressionTypes.MODAL,
-      "aria-labelledby": D ? void 0 : U.headerId,
+      "aria-labelledby": y ? void 0 : U.headerId,
       ...I,
       children: (0, o.jsx)(u.animated.div, {
         className: a(f, N.root, C[r], {
           [N.fullscreenOnMobile]: g,
-          [N.rootWithShadow]: !h
+          [N.rootWithShadow]: !m
         }),
         ref: L,
         style: O,
@@ -134,11 +134,11 @@ function L(e) {
   } = e, l = function(e) {
     switch (null != e ? e : "thin") {
       case "auto":
-        return m.AdvancedScrollerAuto;
+        return h.AdvancedScrollerAuto;
       case "none":
-        return m.AdvancedScrollerNone;
+        return h.AdvancedScrollerNone;
       default:
-        return m.AdvancedScrollerThin
+        return h.AdvancedScrollerThin
     }
   }(r);
   return (0, o.jsx)(l, {
@@ -151,7 +151,7 @@ function L(e) {
   })
 }
 
-function D(e) {
+function y(e) {
   var t, n, i, r, s;
   return (0, o.jsx)(p.default, {
     grow: 0,
@@ -169,7 +169,7 @@ function D(e) {
   })
 }
 
-function y(e) {
+function D(e) {
   return (0, o.jsx)(f.Button, {
     focusProps: e.focusProps,
     "aria-label": A.default.Messages.CLOSE,
@@ -197,7 +197,7 @@ function P(e) {
     scrollerRef: n,
     ...i
   } = e;
-  return (0, o.jsx)(h.ListThin, {
+  return (0, o.jsx)(m.ListThin, {
     className: t,
     ref: n,
     ...i

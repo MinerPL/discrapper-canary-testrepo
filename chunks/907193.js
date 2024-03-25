@@ -1,6 +1,6 @@
-var e = u("270281"),
-  r = u("488605"),
-  f = u("152828");
-t.exports = function(t) {
-  return r(t) ? f(t) : e(t)
+var i = n("270281"),
+  a = n("488605"),
+  l = n("152828");
+e.exports = function(e) {
+  return a(e) ? l(e) : i(e)
 }

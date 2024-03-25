@@ -1,15 +1,15 @@
 "use strict";
 a.r(t), a.d(t, {
   ShopCardHoverAnimationVariant: function() {
-    return r
+    return s
   },
   useShopCardHoverAnimationExperiment: function() {
     return i
   }
 });
-var s, r, l = a("862205");
-(s = r || (r = {}))[s.CONTROL = 0] = "CONTROL", s[s.TRANSFORMATION = 1] = "TRANSFORMATION", s[s.NO_MOVEMENT = 2] = "NO_MOVEMENT";
-let n = (0, l.createExperiment)({
+var l, s, r = a("862205");
+(l = s || (s = {}))[l.CONTROL = 0] = "CONTROL", l[l.TRANSFORMATION = 1] = "TRANSFORMATION", l[l.NO_MOVEMENT = 2] = "NO_MOVEMENT";
+let n = (0, r.createExperiment)({
     kind: "user",
     id: "2024-03_shop_card_hover_animation",
     label: "Shop card hover animation experiment",

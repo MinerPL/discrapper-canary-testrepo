@@ -7,18 +7,18 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("469563"),
-  i = n("215118"),
-  l = n("75196"),
+  l = n("215118"),
+  i = n("75196"),
   r = (0, s.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: s = "currentColor",
-      foreground: i,
+      foreground: l,
       ...r
     } = e;
     return (0, a.jsxs)("svg", {
-      ...(0, l.default)(r),
+      ...(0, i.default)(r),
       width: t,
       height: n,
       viewBox: "0 0 48 48",
@@ -45,9 +45,9 @@ var s = n("469563"),
       }), (0, a.jsx)("path", {
         d: "M42 8.54L39.46 6L6 39.46L8.54 42L16.92 33.64L19.38 31.16L22.7 27.84L29.98 20.56L42 8.54Z",
         fill: s,
-        className: i
+        className: l
       })]
     })
-  }, i.WaveformSlashIcon, void 0, {
+  }, l.WaveformSlashIcon, void 0, {
     size: 24
   })

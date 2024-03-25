@@ -9,10 +9,10 @@ var s, l, a, i, r = n("37983"),
   u = n("414456"),
   d = n.n(u),
   c = n("661579"),
-  f = n("880013"),
-  E = n("216422"),
+  E = n("880013"),
+  f = n("216422"),
   _ = n("782340"),
-  T = n("130104");
+  T = n("293302");
 (a = s || (s = {}))[a.DIRECTORY_HERO = 1] = "DIRECTORY_HERO", a[a.DIRECTORY_TILE = 2] = "DIRECTORY_TILE", a[a.DIRECTORY_SEARCH = 3] = "DIRECTORY_SEARCH", a[a.LISTING = 4] = "LISTING", a[a.EMBED = 5] = "EMBED", (i = l || (l = {}))[i.IN_LIBRARY = 1] = "IN_LIBRARY", i[i.ON_SALE = 2] = "ON_SALE", i[i.PREMIUM = 3] = "PREMIUM", i[i.DEFAULT = 4] = "DEFAULT", i[i.ENTITLEMENT_BRANCH = 5] = "ENTITLEMENT_BRANCH";
 let I = e => {
     let {
@@ -20,7 +20,7 @@ let I = e => {
     } = e;
     return (0, r.jsxs)("div", {
       className: d(T.row, t),
-      children: [(0, r.jsx)(f.default, {
+      children: [(0, r.jsx)(E.default, {
         className: T.icon
       }), _.default.Messages.APPLICATION_STORE_IN_LIBRARY]
     })
@@ -32,7 +32,7 @@ let I = e => {
     } = e;
     return (0, r.jsxs)("div", {
       className: d(T.row, n),
-      children: [(0, r.jsx)(E.default, {
+      children: [(0, r.jsx)(f.default, {
         className: T.icon
       }), (0, c.default)(t)]
     })

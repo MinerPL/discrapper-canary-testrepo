@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("446674"),
   r = s("77078"),
   o = s("419830"),
@@ -16,44 +16,44 @@ var n = s("414456"),
   c = s("843323"),
   E = s("461380"),
   _ = s("593195"),
-  T = s("653274"),
-  I = s("34654"),
+  I = s("653274"),
+  T = s("34654"),
   S = s("782340"),
-  N = s("873536");
+  f = s("402013");
 
-function g(e) {
+function m(e) {
   let {
     guild: t,
     scrollToQuestions: s
-  } = e, n = (0, i.useStateFromStores)([T.default], () => T.default.editedDefaultChannelIds), l = (0, c.useFlattenedChannels)(t.id, n), r = l.filter(e => e.isCategory() || (0, d.canChannelBeDefault)(e.guild_id, e.id));
+  } = e, l = (0, i.useStateFromStores)([I.default], () => I.default.editedDefaultChannelIds), n = (0, c.useFlattenedChannels)(t.id, l), r = n.filter(e => e.isCategory() || (0, d.canChannelBeDefault)(e.guild_id, e.id));
   return (0, a.jsxs)("div", {
-    className: N.container,
+    className: f.container,
     children: [(0, a.jsx)("div", {
-      className: N.header,
-      children: (0, a.jsx)(I.default, {
+      className: f.header,
+      children: (0, a.jsx)(T.default, {
         guildId: t.id,
         scrollToQuestions: s
       })
     }), (0, a.jsxs)("div", {
-      className: N.channelList,
-      children: [(0, a.jsx)(L, {}), 0 === r.length && (0, a.jsx)(f, {}), (0, a.jsx)(A, {
+      className: f.channelList,
+      children: [(0, a.jsx)(h, {}), 0 === r.length && (0, a.jsx)(N, {}), (0, a.jsx)(g, {
         channels: r
       })]
     })]
   })
 }
 
-function f() {
+function N() {
   return (0, a.jsxs)("div", {
-    className: N.emptyState,
+    className: f.emptyState,
     children: [(0, a.jsx)("div", {
-      className: N.emptyStateIcon,
+      className: f.emptyStateIcon,
       children: (0, a.jsx)(_.default, {
         width: 24,
         height: 24
       })
     }), (0, a.jsx)(r.Text, {
-      className: N.channelName,
+      className: f.channelName,
       variant: "text-md/normal",
       color: "text-muted",
       children: S.default.Messages.DEFAULT_CHANNELS_PREVIEW_EMPTY_STATE
@@ -61,33 +61,33 @@ function f() {
   })
 }
 
-function A(e) {
+function g(e) {
   let {
     channels: t
   } = e;
   return (0, a.jsx)(a.Fragment, {
-    children: t.map(e => e.isCategory() ? (0, a.jsx)(m, {
+    children: t.map(e => e.isCategory() ? (0, a.jsx)(C, {
       label: e.name
-    }, e.id) : (0, a.jsx)(C, {
+    }, e.id) : (0, a.jsx)(R, {
       channel: e
     }, e.id))
   })
 }
 
-function L() {
+function h() {
   return (0, a.jsx)("div", {
-    className: N.divider
+    className: f.divider
   })
 }
 
-function m(e) {
+function C(e) {
   let {
     label: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: N.category,
+    className: f.category,
     children: [(0, a.jsx)(E.default, {
-      className: N.caret,
+      className: f.caret,
       width: 12,
       height: 12,
       direction: E.default.Directions.DOWN
@@ -100,26 +100,26 @@ function m(e) {
   })
 }
 
-function C(e) {
+function R(e) {
   var t;
   let {
     channel: s
-  } = e, n = (0, u.isChattableChannel)(s), i = null !== (t = (0, o.getChannelIconComponent)(s)) && void 0 !== t ? t : _.default;
+  } = e, l = (0, u.isChattableChannel)(s), i = null !== (t = (0, o.getChannelIconComponent)(s)) && void 0 !== t ? t : _.default;
   return (0, a.jsxs)("div", {
-    className: N.channel,
+    className: f.channel,
     children: [(0, a.jsx)(i, {
-      className: N.channelIcon,
+      className: f.channelIcon,
       width: 16,
       height: 16
     }), (0, a.jsx)(r.Text, {
-      className: N.channelName,
+      className: f.channelName,
       variant: "text-md/normal",
       color: "text-muted",
       lineClamp: 1,
       children: s.name
     }), (0, a.jsx)("div", {
-      className: l({
-        [N.chattableIndicator]: n
+      className: n({
+        [f.chattableIndicator]: l
       })
     })]
   })

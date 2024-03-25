@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return E
+    return y
   }
 }), a("424973"), a("222007");
 var i = a("37983"),
@@ -16,8 +16,8 @@ var i = a("37983"),
   f = a("923959"),
   I = a("305961"),
   p = a("957255"),
-  T = a("27618"),
-  A = a("677099"),
+  A = a("27618"),
+  T = a("677099"),
   S = a("697218"),
   v = a("49111"),
   _ = a("782340");
@@ -28,10 +28,10 @@ function m(e, t) {
   })
 }
 
-function E(e, t) {
+function y(e, t) {
   let a = (0, l.useStateFromStores)([S.default], () => S.default.getCurrentUser(), []),
-    u = (0, l.useStateFromStoresArray)([A.default, I.default, p.default], () => {
-      let e = A.default.getFlattenedGuildIds(),
+    u = (0, l.useStateFromStoresArray)([T.default, I.default, p.default], () => {
+      let e = T.default.getFlattenedGuildIds(),
         a = [];
       return e.forEach(e => {
         let i = I.default.getGuild(e);
@@ -39,7 +39,7 @@ function E(e, t) {
       }), a
     }, [t]),
     [o, c] = n.useState({});
-  return (null == a ? void 0 : a.id) === e.id || e.bot || 0 === u.length || T.default.isBlocked(e.id) ? null : (0, i.jsx)(d.MenuItem, {
+  return (null == a ? void 0 : a.id) === e.id || e.bot || 0 === u.length || A.default.isBlocked(e.id) ? null : (0, i.jsx)(d.MenuItem, {
     id: "invite-to-server",
     label: _.default.Messages.INVITE_TO_SERVER,
     children: u.map(t => o[t.id] ? (0, i.jsx)(d.MenuItem, {

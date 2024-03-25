@@ -26,8 +26,8 @@ var n = i("37983"),
       guild: t,
       submittedGuildJoinRequestsCount: i,
       onFormFieldUpdate: p,
-      hideVerificationLevelField: R
-    } = e, M = t.hasFeature(x.GuildFeatures.CLAN), F = a.useRef(!1), [v, N] = a.useState(null), [S, C] = a.useState(e.formFields), g = a.useRef(e.formFields), A = a.useMemo(() => S.filter(d.isAutomaticApprovalFormField), [S]), L = a.useMemo(() => S.filter(d.isManualApprovalFormField), [S]), j = L.length, y = a.useMemo(() => S.length === _.MAX_FORM_ELEMENTS, [S]), O = a.useMemo(() => S.some(o.isTermsFormField), [S]), U = a.useMemo(() => S.some(e => !(0, o.isTermsFormField)(e)), [S]), D = j > 1, V = (0, r.useIsMemberVerificationManualApproval)(t.id), w = a.useCallback(() => {
+      hideVerificationLevelField: M
+    } = e, R = t.hasFeature(x.GuildFeatures.CLAN), F = a.useRef(!1), [v, N] = a.useState(null), [S, C] = a.useState(e.formFields), g = a.useRef(e.formFields), A = a.useMemo(() => S.filter(d.isAutomaticApprovalFormField), [S]), L = a.useMemo(() => S.filter(d.isManualApprovalFormField), [S]), j = L.length, y = a.useMemo(() => S.length === _.MAX_FORM_ELEMENTS, [S]), O = a.useMemo(() => S.some(o.isTermsFormField), [S]), U = a.useMemo(() => S.some(e => !(0, o.isTermsFormField)(e)), [S]), D = j > 1, V = (0, r.useIsMemberVerificationManualApproval)(t.id), w = a.useCallback(() => {
       (0, l.showToast)((0, l.createToast)(h.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     }, []), G = a.useCallback(async e => {
       if (!F.current) {
@@ -62,7 +62,7 @@ var n = i("37983"),
         w()
       }
     }, [S, G, w]), k = (0, n.jsxs)(n.Fragment, {
-      children: [!R && (0, n.jsx)(E.default, {
+      children: [!M && (0, n.jsx)(E.default, {
         guild: t
       }), (0, n.jsx)(c.default, {
         guildId: t.id
@@ -88,7 +88,7 @@ var n = i("37983"),
         text: h.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_MANUAL_APPROVAL_DIVIDER
       }), !U && (0, n.jsx)(u.default, {
         addFormField: B,
-        showManualApprovalWarning: !M && !(j > 0),
+        showManualApprovalWarning: !R && !(j > 0),
         guild: t
       }), L.map(e => (0, m.getFormFieldBuilderComponent)({
         dropHoveredIndex: v,

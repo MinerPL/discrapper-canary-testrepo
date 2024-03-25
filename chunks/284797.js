@@ -4,13 +4,13 @@ n.r(e), n.d(e, {
     return l
   }
 }), n("222007");
-var u = n("884691"),
-  i = n("85336"),
-  r = n("286350");
+var i = n("884691"),
+  r = n("85336"),
+  u = n("286350");
 
 function l(t) {
-  let [e, n] = u.useState(r.PurchaseState.WAITING);
-  return u.useEffect(() => {
-    null != t && t !== i.Step.REVIEW && e !== r.PurchaseState.WAITING && e !== r.PurchaseState.COMPLETED && n(r.PurchaseState.WAITING)
+  let [e, n] = i.useState(u.PurchaseState.WAITING);
+  return i.useEffect(() => {
+    null != t && t !== r.Step.REVIEW && e !== u.PurchaseState.WAITING && e !== u.PurchaseState.COMPLETED && n(u.PurchaseState.WAITING)
   }, [t, e, n]), [e, n]
 }

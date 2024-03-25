@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getRandomDateShortcut: function() {
-    return U
+    return x
   },
   ComponentTypes: function() {
     return l
   },
   refreshSearchTokens: function() {
-    return q
+    return V
   },
   getFilterAutocompletions: function() {
     return X
@@ -18,8 +18,8 @@ n.r(t), n.d(t, {
 }), n("222007"), n("843762");
 var l, a, r = n("448105"),
   u = n.n(r),
-  o = n("917351"),
-  s = n.n(o),
+  s = n("917351"),
+  o = n.n(s),
   i = n("866227"),
   c = n.n(i),
   E = n("923959"),
@@ -39,41 +39,41 @@ function I() {
   return new Set(c.months().map(e => e.toLowerCase()))
 }
 
-function m() {
+function y() {
   return new Set(c.weekdays().map(e => e.toLowerCase()))
 }
 
-function y() {
+function m() {
   let e = new Date().getFullYear();
-  return new Set(s.range(2015, e + 1).map(e => e.toString()))
+  return new Set(o.range(2015, e + 1).map(e => e.toString()))
 }
 
-function C(e, t) {
+function M(e, t) {
   return [e, e.clone().add(1, t)]
 }
 
-function M(e) {
+function C(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
     n = c().startOf(e).add(t, e);
-  return C(n, e)
+  return M(n, e)
 }
 
 function L(e, t, n) {
   let l = c(e, t).local();
-  return C(l, n)
+  return M(l, n)
 }
 
 function F() {
   return {
-    [N.default.Messages.SEARCH_SHORTCUT_TODAY]: () => M("day"),
-    [N.default.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => M("day", -1),
-    [N.default.Messages.SEARCH_SHORTCUT_WEEK]: () => M("week"),
-    [N.default.Messages.SEARCH_SHORTCUT_MONTH]: () => M("month"),
-    [N.default.Messages.SEARCH_SHORTCUT_YEAR]: () => M("year")
+    [N.default.Messages.SEARCH_SHORTCUT_TODAY]: () => C("day"),
+    [N.default.Messages.SEARCH_SHORTCUT_YESTERDAY]: () => C("day", -1),
+    [N.default.Messages.SEARCH_SHORTCUT_WEEK]: () => C("week"),
+    [N.default.Messages.SEARCH_SHORTCUT_MONTH]: () => C("month"),
+    [N.default.Messages.SEARCH_SHORTCUT_YEAR]: () => C("year")
   }
 }
-let v = RegExp("(?:\\s*(".concat("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", "|").concat("([0-9]{4})-([0-9]{1,2})", "|").concat("\\d{4}", "|").concat("([^\\d\\s]+)", "))"), "i"),
-  H = RegExp("\\s*(true|false)", "i");
+let H = RegExp("(?:\\s*(".concat("([0-9]{4})-([0-9]{1,2})-([0-9]{1,2})", "|").concat("([0-9]{4})-([0-9]{1,2})", "|").concat("\\d{4}", "|").concat("([^\\d\\s]+)", "))"), "i"),
+  v = RegExp("\\s*(true|false)", "i");
 
 function k(e) {
   return "".concat(e, ":")
@@ -94,7 +94,7 @@ function D(e, t) {
   let n, l;
   let a = e.getFullMatch().trim().toLowerCase(),
     r = F()[a];
-  null != r ? [n, l] = r() : I().has(a) ? [n, l] = L(a, "MMMM", "month") : m().has(a) ? [n, l] = L(a, "dddd", "day") : y().has(a) ? [n, l] = L(a, "YYYY", "year") : [n, l] = L(a, g.SEARCH_DATE_FORMAT, "day");
+  null != r ? [n, l] = r() : I().has(a) ? [n, l] = L(a, "MMMM", "month") : y().has(a) ? [n, l] = L(a, "dddd", "day") : m().has(a) ? [n, l] = L(a, "YYYY", "year") : [n, l] = L(a, g.SEARCH_DATE_FORMAT, "day");
   let u = n.isValid() && l.isValid();
   return !!u && ("before" === t ? (l = n, n = null) : "after" === t && (n = l, l = null), e.setData("start", n), e.setData("end", l), !0)
 }
@@ -104,7 +104,7 @@ function W(e) {
     n = f.default.getGuildId(),
     l = E.default.getChannels(n)[E.GUILD_SELECTABLE_CHANNELS_KEY].concat(E.default.getChannels(n)[E.GUILD_VOCAL_CHANNELS_KEY]),
     a = E.default.getTextChannelNameDisambiguations(n),
-    r = s.chain(l).map(e => {
+    r = o.chain(l).map(e => {
       let {
         channel: t
       } = e;
@@ -116,7 +116,7 @@ function W(e) {
   return null != r && (e.setData("channel", r), !0)
 }
 
-function b(e) {
+function U(e) {
   let t = {
     [N.default.Messages.SEARCH_ANSWER_HAS_LINK]: "link",
     [N.default.Messages.SEARCH_ANSWER_HAS_EMBED]: "embed",
@@ -129,16 +129,16 @@ function b(e) {
   return null != t && "" !== t && (e.setData("has", t), !0)
 }
 
-function x() {
-  return [...Array.from(I()), ...Array.from(m()), ...Array.from(y()), ...Object.keys(F())]
+function b() {
+  return [...Array.from(I()), ...Array.from(y()), ...Array.from(m()), ...Object.keys(F())]
 }
 
-function U() {
-  return s.sample(x())
+function x() {
+  return o.sample(b())
 }
 
 function G(e, t, n) {
-  return P(e, t, x()).map(e => ({
+  return P(e, t, b()).map(e => ({
     ...e,
     group: n,
     key: "".concat(n, "-").concat(e.text)
@@ -147,7 +147,7 @@ function G(e, t, n) {
 
 function P(e, t, n) {
   let l = e.toLocaleLowerCase();
-  return s(n).filter(e => u(l, e.toLocaleLowerCase())).take(t).map(e => ({
+  return o(n).filter(e => u(l, e.toLocaleLowerCase())).take(t).map(e => ({
     text: e
   })).value()
 }
@@ -197,19 +197,19 @@ function j(e, t) {
   })
 }
 
-function B() {
+function K() {
   return _.default.getSearchType() === g.SearchTypes.GUILD
 }
 
-function K() {
+function B() {
   return !S.default.hidePersonalInformation
 }
 let Y = /^(?:\s*(\d{17,20}|@me|([^@#:]+)#([0-9]{4})|([a-z0-9_.]{2,32})))/i;
 (a = l || (l = {})).FILTER = "FILTER", a.ANSWER = "ANSWER";
-let V = {};
+let q = {};
 
-function q() {
-  Object.assign(V, function() {
+function V() {
+  Object.assign(q, function() {
     let e = [N.default.Messages.SEARCH_ANSWER_HAS_LINK, N.default.Messages.SEARCH_ANSWER_HAS_EMBED, N.default.Messages.SEARCH_ANSWER_HAS_ATTACHMENT, N.default.Messages.SEARCH_ANSWER_HAS_VIDEO, N.default.Messages.SEARCH_ANSWER_HAS_IMAGE, N.default.Messages.SEARCH_ANSWER_HAS_SOUND, N.default.Messages.SEARCH_ANSWER_HAS_STICKER];
     return {
       [g.SearchTokenTypes.FILTER_FROM]: {
@@ -217,7 +217,7 @@ function q() {
         componentType: "FILTER",
         key: k(N.default.Messages.SEARCH_FILTER_FROM),
         plainText: N.default.Messages.SEARCH_FILTER_FROM,
-        validator: K,
+        validator: B,
         getAutocompletions: j
       },
       [g.SearchTokenTypes.ANSWER_USERNAME_FROM]: {
@@ -233,7 +233,7 @@ function q() {
         componentType: "FILTER",
         key: k(N.default.Messages.SEARCH_FILTER_MENTIONS),
         plainText: N.default.Messages.SEARCH_FILTER_MENTIONS,
-        validator: K,
+        validator: B,
         getAutocompletions: j
       },
       [g.SearchTokenTypes.ANSWER_USERNAME_MENTIONS]: {
@@ -254,7 +254,7 @@ function q() {
       [g.SearchTokenTypes.ANSWER_HAS]: {
         regex: RegExp("(?:\\s*-?(".concat(e.map(e => p.default.escape(e)).join("|"), "))"), "i"),
         follows: [g.SearchTokenTypes.FILTER_HAS],
-        validator: b,
+        validator: U,
         componentType: "ANSWER",
         queryKey: "has"
       },
@@ -306,21 +306,21 @@ function q() {
         getAutocompletions: (e, t, n) => G(e, n, g.SearchTokenTypes.FILTER_AFTER)
       },
       [g.SearchTokenTypes.ANSWER_BEFORE]: {
-        regex: v,
+        regex: H,
         follows: [g.SearchTokenTypes.FILTER_BEFORE],
         componentType: "ANSWER",
         mutable: !0,
         validator: e => D(e, "before")
       },
       [g.SearchTokenTypes.ANSWER_ON]: {
-        regex: v,
+        regex: H,
         follows: [g.SearchTokenTypes.FILTER_ON],
         componentType: "ANSWER",
         mutable: !0,
         validator: e => D(e, "on")
       },
       [g.SearchTokenTypes.ANSWER_AFTER]: {
-        regex: v,
+        regex: H,
         follows: [g.SearchTokenTypes.FILTER_AFTER],
         componentType: "ANSWER",
         mutable: !0,
@@ -331,7 +331,7 @@ function q() {
         componentType: "FILTER",
         key: k(N.default.Messages.SEARCH_FILTER_IN),
         plainText: N.default.Messages.SEARCH_FILTER_IN,
-        validator: B,
+        validator: K,
         getAutocompletions(e, t, n) {
           "#" === e[0] && (e = e.substring(1));
           let l = R.default.queryChannels({
@@ -356,7 +356,7 @@ function q() {
             null != n && (l.splice(l.indexOf(n), 1), l.unshift(n))
           }
           let a = E.default.getTextChannelNameDisambiguations(t);
-          return s(l).take(n).map(e => {
+          return o(l).take(n).map(e => {
             var t, n;
             return {
               text: "".concat(null !== (n = null === (t = a[e.id]) || void 0 === t ? void 0 : t.name) && void 0 !== n ? n : e.name),
@@ -385,7 +385,7 @@ function q() {
         }]
       },
       [g.SearchTokenTypes.ANSWER_PINNED]: {
-        regex: H,
+        regex: v,
         componentType: "ANSWER",
         follows: [g.SearchTokenTypes.FILTER_PINNED],
         queryKey: "pinned",
@@ -399,10 +399,10 @@ function q() {
 }
 
 function X(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(V).length;
-  return s(V).keys().filter(e => g.IS_SEARCH_FILTER_TOKEN.test(e)).filter(e => null != V[e].key).map(e => ({
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.keys(q).length;
+  return o(q).keys().filter(e => g.IS_SEARCH_FILTER_TOKEN.test(e)).filter(e => null != q[e].key).map(e => ({
     token: e,
-    text: V[e].key
+    text: q[e].key
   })).filter(t => {
     let {
       text: n
@@ -410,4 +410,4 @@ function X(e) {
     return u(e.toLowerCase(), n)
   }).take(t).value()
 }
-var z = V
+var z = q

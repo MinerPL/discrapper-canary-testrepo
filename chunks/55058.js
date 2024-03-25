@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("963662"),
-  i = n("701909"),
-  l = n("49111"),
+  l = n("701909"),
+  i = n("49111"),
   r = n("994428"),
   o = n("782340"),
   u = n("476742");
@@ -23,12 +23,12 @@ function d(e) {
     guild: t,
     onDismissed: () => n(r.ContentDismissActionType.UNKNOWN),
     onClick: () => {
-      open(i.default.getArticleURL(l.HelpdeskArticles.CONNECTION_DETAILS)), n(r.ContentDismissActionType.UNKNOWN)
+      open(l.default.getArticleURL(i.HelpdeskArticles.CONNECTION_DETAILS)), n(r.ContentDismissActionType.UNKNOWN)
     },
     title: o.default.Messages.LINKED_ROLES_ADMIN_NUX_TITLE,
     message: o.default.Messages.LINKED_ROLES_ADMIN_NUX_CONTENT,
     cta: o.default.Messages.LEARN_MORE,
-    trackingSource: l.ChannelNoticeCtaSources.LINKED_ROLES_ADMIN_NUX,
-    type: l.ChannelNoticeTypes.LINKED_ROLES_ADMIN
+    trackingSource: i.ChannelNoticeCtaSources.LINKED_ROLES_ADMIN_NUX,
+    type: i.ChannelNoticeTypes.LINKED_ROLES_ADMIN
   })
 }

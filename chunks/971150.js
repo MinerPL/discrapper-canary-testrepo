@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return r
   },
   useEditStateStore: function() {
-    return u
+    return s
   }
 });
 var i, r, l = n("308503");
 (i = r || (r = {}))[i.ALL_CHANNELS_ACCESS = 0] = "ALL_CHANNELS_ACCESS", i[i.SOME_CHANNELS_ACCESS = 1] = "SOME_CHANNELS_ACCESS";
-let u = (0, l.default)(e => ({
+let s = (0, l.default)(e => ({
   listings: {},
   setListing: (t, n) => e(e => ({
     listings: {

@@ -4,13 +4,13 @@ a.r(t), a.d(t, {
     return f
   }
 });
-var l = a("37983"),
-  n = a("884691"),
+var n = a("37983"),
+  l = a("884691"),
   s = a("77078"),
   u = a("398654"),
   i = a("712125"),
-  d = a("311161"),
-  r = a("45029"),
+  r = a("311161"),
+  d = a("45029"),
   o = a("372624"),
   c = a("782340");
 
@@ -21,26 +21,26 @@ function f(e) {
       isUnderLockdown: E,
       incidentData: C
     } = (0, u.useGuildIncidentsState)(e.id),
-    h = n.useCallback(() => {
+    h = l.useCallback(() => {
       let t = {
         source: i.GuildIncidentActionSources.CONTEXT_MENU,
-        alertType: (0, d.getIncidentAlertType)(C)
+        alertType: (0, r.getIncidentAlertType)(C)
       };
       (0, s.openModalLazy)(async () => {
         let {
-          default: n
+          default: l
         } = await a.el("186638").then(a.bind(a, "186638"));
-        return a => (0, l.jsx)(n, {
+        return a => (0, n.jsx)(l, {
           ...a,
           guildId: e.id,
           analyticsData: t
         })
       })
     }, [e.id, C]);
-  return e.isCommunity() && f ? (0, l.jsx)(s.MenuItem, {
+  return e.isCommunity() && f ? (0, n.jsx)(s.MenuItem, {
     id: "server-lockdown",
     label: E ? c.default.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_UNLOCK : c.default.Messages.GUILD_SERVER_LOCKDOWN_CONTEXT_MENU_LOCK,
-    icon: t ? E ? o.default : r.default : void 0,
+    icon: t ? E ? o.default : d.default : void 0,
     action: h,
     color: "danger"
   }) : null

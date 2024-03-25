@@ -10,11 +10,11 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("424973"), n("222007");
-var i, s, l, r, a = n("627445"),
-  u = n.n(a),
-  o = n("913144");
-(l = i || (i = {})).GUILD_HOME = "guild_home", l.FORUM_CHANNEL = "forum_channel", (r = s || (s = {}))[r.IMMEDIATE = 0] = "IMMEDIATE", r[r.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", r[r.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
-class d {
+var i, s, l, a, u = n("627445"),
+  d = n.n(u),
+  r = n("913144");
+(l = i || (i = {})).GUILD_HOME = "guild_home", l.FORUM_CHANNEL = "forum_channel", (a = s || (s = {}))[a.IMMEDIATE = 0] = "IMMEDIATE", a[a.IMMEDIATE_WITH_COOLDOWN = 1] = "IMMEDIATE_WITH_COOLDOWN", a[a.IMMEDIATE_WITH_DELAY = 2] = "IMMEDIATE_WITH_DELAY";
+class o {
   maybeMarkSeen(e) {
     let t = this.seenIntervals[this.seenIntervals.length - 1];
     return (null == t || null != t.endTimeMillis) && (this.seenIntervals.push({
@@ -46,7 +46,7 @@ class d {
       }
       n.push(i)
     }
-    return u(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
+    return d(n.length < 2, "there should only be a single left over data"), this.seenIntervals = n, Math.round(t)
   }
   constructor() {
     this.seenIntervals = []
@@ -71,10 +71,10 @@ class c {
   }) {
     this.initialize = () => {
       var e;
-      o.default.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), o.default.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), o.default.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), o.default.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), o.default.subscribe("DRAWER_OPEN", this.handleDrawerOpen), o.default.subscribe("DRAWER_CLOSE", this.handleDrawerClose), o.default.subscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this)
+      r.default.subscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), r.default.subscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), r.default.subscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), r.default.subscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), r.default.subscribe("DRAWER_OPEN", this.handleDrawerOpen), r.default.subscribe("DRAWER_CLOSE", this.handleDrawerClose), r.default.subscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onInitialize) || void 0 === e || e.call(this)
     }, this.terminate = () => {
       var e;
-      o.default.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), o.default.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), o.default.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), o.default.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), o.default.unsubscribe("DRAWER_OPEN", this.handleDrawerOpen), o.default.unsubscribe("DRAWER_CLOSE", this.handleDrawerClose), o.default.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0)
+      r.default.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", this.handleFeedItemSeen), r.default.unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", this.handleFeedItemUnseen), r.default.unsubscribe("ANALYTICS_FEED_FLUSH", this.handleFeedItemFlush), r.default.unsubscribe("APP_STATE_UPDATE", this.handleAppStateUpdate), r.default.unsubscribe("DRAWER_OPEN", this.handleDrawerOpen), r.default.unsubscribe("DRAWER_CLOSE", this.handleDrawerClose), r.default.unsubscribe("WINDOW_FOCUS", this.handleWindowFocus), null === (e = this.onTerminate) || void 0 === e || e.call(this), this.maybeFlushSeenItems(0)
     }, this.handleFeedItemFlush = e => {
       let {
         id: t,
@@ -92,8 +92,8 @@ class c {
         return
       }
       let l = this.getTrackedFeedItem(s),
-        r = l.maybeMarkSeen(i);
-      null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, s, r)
+        a = l.maybeMarkSeen(i);
+      null === (t = this.onFeedItemSeen) || void 0 === t || t.call(this, s, a)
     }, this.handleFeedItemUnseen = e => {
       var t;
       let n = e.id,
@@ -102,9 +102,9 @@ class c {
       if (n !== this._id) return;
       this._paused && this._pausedFeedItemIds.delete(s);
       let l = this.getTrackedFeedItem(s),
-        r = l.maybeMarkUnseen(i);
-      null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, s, r), this.maybeFlushSeenItems()
-    }, this.getTrackedFeedItem = e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new d), this.trackedFeedItems[e]), this.getVisibleFeedItemIds = () => {
+        a = l.maybeMarkUnseen(i);
+      null === (t = this.onFeedItemUnseen) || void 0 === t || t.call(this, s, a), this.maybeFlushSeenItems()
+    }, this.getTrackedFeedItem = e => (null == this.trackedFeedItems[e] && (this.trackedFeedItems[e] = new o), this.trackedFeedItems[e]), this.getVisibleFeedItemIds = () => {
       let e = Object.keys(this.trackedFeedItems);
       return new Set(e.filter(e => {
         var t;

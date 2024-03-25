@@ -8,12 +8,12 @@ var l = n("37983");
 n("884691");
 var a = n("77078"),
   r = n("945330"),
-  i = n("959097"),
-  s = n("557872"),
+  s = n("959097"),
+  i = n("557872"),
   u = n("967241"),
   o = n("648564"),
   d = n("782340"),
-  c = n("728360");
+  c = n("464771");
 
 function f(e) {
   let {
@@ -30,7 +30,7 @@ function f(e) {
       className: c.container,
       children: [(0, l.jsxs)("div", {
         className: c.header,
-        children: [(0, l.jsx)(i.default, {
+        children: [(0, l.jsx)(s.default, {
           className: c.threadIcon
         }), (0, l.jsx)(a.Heading, {
           variant: "heading-md/semibold",
@@ -44,7 +44,7 @@ function f(e) {
           "aria-label": d.default.Messages.CLOSE,
           children: (0, l.jsx)(r.default, {})
         })]
-      }), (0, l.jsx)(s.default, {
+      }), (0, l.jsx)(i.default, {
         guildId: t,
         goToThread: (e, t) => {
           n(), (0, u.openThreadSidebarForViewing)(e, !t, o.OpenThreadAnalyticsLocations.GUILD_ACTIVE_THREADS_MODAL)

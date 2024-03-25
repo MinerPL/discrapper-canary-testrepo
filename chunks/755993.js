@@ -14,7 +14,7 @@ var s = t("37983"),
   d = t("33942"),
   u = t("145131"),
   h = t("782340"),
-  N = t("429152");
+  N = t("221818");
 let x = new c.default("TwoWayLinkDiscordConsentWeb");
 
 function m(e) {
@@ -27,7 +27,7 @@ function m(e) {
     onError: C,
     onClose: f,
     redirectUri: T
-  } = e, [p, j] = n.useState(!1), v = n.useCallback(async e => {
+  } = e, [p, v] = n.useState(!1), j = n.useCallback(async e => {
     let t, {
         location: s
       } = e,
@@ -50,12 +50,12 @@ function m(e) {
     clientId: t,
     scopes: l,
     responseType: "code",
-    callback: v,
+    callback: j,
     isTrustedName: !0,
     isEmbeddedFlow: !0,
     redirectUri: T
   }), k = n.useCallback(() => {
-    r(null != L, "sendAuthorize not available"), j(!0), L(!0)
+    r(null != L, "sendAuthorize not available"), v(!0), L(!0)
   }, [L]);
   return (0, s.jsxs)("div", {
     className: N.container,

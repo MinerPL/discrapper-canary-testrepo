@@ -1,47 +1,47 @@
 "use strict";
 a.r(t), a.d(t, {
   createAudioMP4FromVideoMP4: function() {
-    return i
+    return r
   }
 }), a("222007"), a("424973");
-var n = a("469520"),
-  l = a.n(n);
-async function i(e) {
-  let t = l.createFile(),
-    a = l.createFile(),
-    n = {};
+var l = a("469520"),
+  n = a.n(l);
+async function r(e) {
+  let t = n.createFile(),
+    a = n.createFile(),
+    l = {};
   e.fileStart = 0, t.onReady = e => {
-    for (let l of (a.init({
+    for (let n of (a.init({
         duration: e.duration,
         timescale: e.timescale
-      }), e.audioTracks)) n[l.id] = l, t.setExtractionOptions(l.id, null, {
+      }), e.audioTracks)) l[n.id] = n, t.setExtractionOptions(n.id, null, {
       nbSamples: 1 / 0
     }), a.addTrack({
-      id: l.id,
-      timescale: l.timescale,
+      id: n.id,
+      timescale: n.timescale,
       hdlr: "soun",
       type: "mp4a",
-      duration: l.duration,
-      layer: l.layer,
-      channel_count: l.audio.channel_count,
-      samplerate: l.audio.sample_rate,
-      samplesize: l.audio.sample_size,
-      name: l.name
+      duration: n.duration,
+      layer: n.layer,
+      channel_count: n.audio.channel_count,
+      samplerate: n.audio.sample_rate,
+      samplesize: n.audio.sample_size,
+      name: n.name
     });
     t.start()
   };
-  let i = new Promise(e => {
-    t.onSamples = (l, i, r) => {
-      for (let e of r) a.addSample(l, e.data, e);
-      t.releaseUsedSamples(l, r.length), delete n[l];
-      let s = a.getTrackById(l),
-        u = t.getTrackById(l);
+  let r = new Promise(e => {
+    t.onSamples = (n, r, i) => {
+      for (let e of i) a.addSample(n, e.data, e);
+      t.releaseUsedSamples(n, i.length), delete l[n];
+      let s = a.getTrackById(n),
+        u = t.getTrackById(n);
       if (null != u.edts) {
         let e = u.edts.elst;
         s.add("edts").boxes.push(e)
       }
-      0 === Object.keys(n).length && e()
+      0 === Object.keys(l).length && e()
     }
   });
-  return t.appendBuffer(e), t.flush(), await i, a.getBuffer()
+  return t.appendBuffer(e), t.flush(), await r, a.getBuffer()
 }

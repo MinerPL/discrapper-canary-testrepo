@@ -9,11 +9,11 @@ n.r(t), n.d(t, {
 });
 var i = n("316693"),
   l = n("446674"),
-  u = n("862205"),
-  a = n("305961"),
+  a = n("862205"),
+  u = n("305961"),
   r = n("957255"),
   d = n("421127");
-let s = (0, u.createExperiment)({
+let s = (0, a.createExperiment)({
     kind: "guild",
     id: "2023-04_guild_alert_mode",
     label: "Guild Alert Mode",
@@ -37,7 +37,7 @@ let s = (0, u.createExperiment)({
       }
     }]
   }),
-  o = (0, u.createExperiment)({
+  o = (0, a.createExperiment)({
     kind: "guild",
     id: "2023-08_guild_alert_mode_friend_server",
     label: "Guild Alert Mode (friend servers only)",
@@ -63,9 +63,9 @@ let s = (0, u.createExperiment)({
   });
 
 function c(e) {
-  let t = (0, l.useStateFromStores)([a.default], () => a.default.getGuild(e)),
+  let t = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(e)),
     n = (0, l.useStateFromStores)([r.default], () => null != t && i.hasAny(r.default.computePermissions(t), d.IncidentAlertModeratorPermissions)),
-    u = s.useExperiment({
+    a = s.useExperiment({
       guildId: e,
       location: "c3fae3_1"
     }, {
@@ -80,13 +80,13 @@ function c(e) {
       autoTrackExposure: !0
     });
   return {
-    showAlertMode: u.showAlertMode || c.showAlertMode,
-    alsoShowMemberSafety: u.alsoShowMemberSafety || c.alsoShowMemberSafety
+    showAlertMode: a.showAlertMode || c.showAlertMode,
+    alsoShowMemberSafety: a.alsoShowMemberSafety || c.alsoShowMemberSafety
   }
 }
 
 function f(e) {
-  let t = a.default.getGuild(e),
+  let t = u.default.getGuild(e),
     n = null != t && i.hasAny(r.default.computePermissions(t), d.IncidentAlertModeratorPermissions),
     l = s.getCurrentConfig({
       guildId: e,
@@ -95,7 +95,7 @@ function f(e) {
       disable: !n,
       autoTrackExposure: !0
     }),
-    u = o.getCurrentConfig({
+    a = o.getCurrentConfig({
       guildId: e,
       location: "c3fae3_4"
     }, {
@@ -103,7 +103,7 @@ function f(e) {
       autoTrackExposure: !0
     });
   return {
-    showAlertMode: l.showAlertMode || u.showAlertMode,
-    alsoShowMemberSafety: l.alsoShowMemberSafety || u.alsoShowMemberSafety
+    showAlertMode: l.showAlertMode || a.showAlertMode,
+    alsoShowMemberSafety: l.alsoShowMemberSafety || a.alsoShowMemberSafety
   }
 }

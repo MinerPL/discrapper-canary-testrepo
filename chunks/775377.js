@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
-var a = n("37983");
+var i = n("37983");
 n("884691");
 var l = n("414456"),
-  s = n.n(l),
-  i = n("943722"),
-  r = n("462339");
+  a = n.n(l),
+  s = n("943722"),
+  r = n("157384");
 
-function u(e) {
+function o(e) {
   let {
     activity: t,
     className: n,
     emojiClassName: l,
-    textClassName: u,
-    placeholderText: o,
-    soloEmojiClassName: c,
-    animate: d = !0,
+    textClassName: o,
+    placeholderText: u,
+    soloEmojiClassName: d,
+    animate: c = !0,
     hideTooltip: f = !1,
-    hideEmoji: T = !1,
-    children: E
+    hideEmoji: p = !1,
+    children: m
   } = e;
   if (null == t) return null;
   let {
-    emoji: A
-  } = t, _ = null != t.state && "" !== t.state ? t.state : o;
-  return (0, a.jsxs)("div", {
-    className: s(r.container, n),
-    children: [T || null == A ? null : (0, a.jsx)(i.ActivityEmoji, {
-      emoji: A,
-      className: s(r.emoji, l, null != c ? {
-        [c]: null == _ || "" === _
+    emoji: h
+  } = t, x = null != t.state && "" !== t.state ? t.state : u;
+  return (0, i.jsxs)("div", {
+    className: a(r.container, n),
+    children: [p || null == h ? null : (0, i.jsx)(s.ActivityEmoji, {
+      emoji: h,
+      className: a(r.emoji, l, null != d ? {
+        [d]: null == x || "" === x
       } : null),
-      animate: d,
+      animate: c,
       hideTooltip: f
-    }), null != _ && _.length > 0 ? (0, a.jsx)("span", {
-      className: u,
-      children: _
-    }) : null, E]
+    }), null != x && x.length > 0 ? (0, i.jsx)("span", {
+      className: o,
+      children: x
+    }) : null, m]
   })
 }

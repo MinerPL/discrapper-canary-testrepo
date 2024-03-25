@@ -1,52 +1,52 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return I
   }
 });
-var l = s("37983");
+var a = s("37983");
 s("884691");
-var n = s("446674"),
-  r = s("77078"),
-  o = s("626301"),
-  a = s("400307"),
-  i = s("697218"),
-  u = s("719923"),
-  c = s("646718"),
-  d = s("782340"),
-  f = s("157997");
-let E = e => {
+var l = s("446674"),
+  n = s("77078"),
+  i = s("626301"),
+  r = s("400307"),
+  o = s("697218"),
+  d = s("719923"),
+  u = s("646718"),
+  c = s("782340"),
+  E = s("703278");
+let _ = e => {
   let {
     onOpenPremiumClick: t
-  } = e, s = (0, l.jsx)(r.Button, {
-    className: f.tier0Button,
-    color: r.Button.Colors.BRAND,
-    look: r.Button.Looks.INVERTED,
+  } = e, s = (0, a.jsx)(n.Button, {
+    className: E.tier0Button,
+    color: n.Button.Colors.BRAND,
+    look: n.Button.Looks.INVERTED,
     onClick: () => {
-      (0, o.navigateToPremiumMarketingPage)(), null != t && t()
+      (0, i.navigateToPremiumMarketingPage)(), null != t && t()
     },
-    children: d.default.Messages.LEARN_MORE
+    children: c.default.Messages.LEARN_MORE
   });
-  return (0, l.jsxs)("div", {
-    className: f.tier0Container,
-    children: [(0, l.jsx)(r.Heading, {
-      className: f.tier0Heading,
+  return (0, a.jsxs)("div", {
+    className: E.tier0Container,
+    children: [(0, a.jsx)(n.Heading, {
+      className: E.tier0Heading,
       variant: "heading-xxl/extrabold",
-      children: d.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_SECONDARY
-    }), (0, l.jsx)(a.Tier2Card, {
-      className: f.tier0Card,
+      children: c.default.Messages.GUILD_SETTINGS_PREMIUM_UPSELL_HEADING_SECONDARY
+    }), (0, a.jsx)(r.Tier2Card, {
+      className: E.tier0Card,
       ctaButton: s,
-      featureSet: a.Tier2FeatureSet.BOOSTING,
+      featureSet: r.Tier2FeatureSet.BOOSTING,
       showWumpus: !0,
       showYearlyPrice: !0
     })]
   })
 };
-var _ = e => {
+var I = e => {
   let {
     onOpenPremiumClick: t
-  } = e, s = (0, n.useStateFromStores)([i.default], () => i.default.getCurrentUser());
-  return u.default.isPremium(s, c.PremiumTypes.TIER_2) ? null : (0, l.jsx)(E, {
+  } = e, s = (0, l.useStateFromStores)([o.default], () => o.default.getCurrentUser());
+  return d.default.isPremium(s, u.PremiumTypes.TIER_2) ? null : (0, a.jsx)(_, {
     onOpenPremiumClick: t
   })
 }

@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
-}), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("414456"),
-  i = l.n(s),
-  r = l("862337"),
-  o = l("145131"),
-  u = l("813896");
+}), n("222007");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("862337"),
+  o = n("145131"),
+  u = n("140546");
 
 function d(e) {
   let {
     percentage: t,
-    isSingleLine: l
+    isSingleLine: n
   } = e;
-  return (0, n.jsx)("div", {
-    className: i({
-      [u.bar]: l,
-      [u.barInMultiLine]: !l
+  return (0, i.jsx)("div", {
+    className: s({
+      [u.bar]: n,
+      [u.barInMultiLine]: !n
     }),
-    children: (0, n.jsx)("div", {
+    children: (0, i.jsx)("div", {
       className: u.barInner,
       style: {
         width: "".concat(100 * Math.max(Math.min(t, 1), 0), "%")
@@ -38,11 +38,11 @@ function c(e) {
 function f(e) {
   let {
     time: t,
-    padLargestUnit: l
-  } = e, n = Math.floor(t) % 60, a = Math.floor(t / 60) % 60, s = Math.floor(t / 3600);
-  return 0 === s ? l ? "".concat(c(a), ":").concat(c(n)) : "".concat(a, ":").concat(c(n)) : l ? "".concat(c(s), ":").concat(c(a), ":").concat(c(n)) : "".concat(s, ":").concat(c(a), ":").concat(c(n))
+    padLargestUnit: n
+  } = e, i = Math.floor(t) % 60, l = Math.floor(t / 60) % 60, a = Math.floor(t / 3600);
+  return 0 === a ? n ? "".concat(c(l), ":").concat(c(i)) : "".concat(l, ":").concat(c(i)) : n ? "".concat(c(a), ":").concat(c(l), ":").concat(c(i)) : "".concat(a, ":").concat(c(l), ":").concat(c(i))
 }
-class m extends a.PureComponent {
+class p extends l.PureComponent {
   componentDidMount() {
     this.timer.start(500, () => {
       this.setState({
@@ -57,51 +57,51 @@ class m extends a.PureComponent {
     let {
       start: e,
       end: t,
-      className: l,
-      themed: a,
-      singleLine: s = !1
+      className: n,
+      themed: l,
+      singleLine: a = !1
     } = this.props, {
       now: r
-    } = this.state, c = (t - e) / 1e3, m = Math.max(Math.min((r - e) / 1e3, c), 0);
-    return s ? (0, n.jsxs)("div", {
-      className: i(l, {
-        [u.themed]: a
+    } = this.state, c = (t - e) / 1e3, p = Math.max(Math.min((r - e) / 1e3, c), 0);
+    return a ? (0, i.jsxs)("div", {
+      className: s(n, {
+        [u.themed]: l
       }, u.singleLineContainer),
-      children: [(0, n.jsx)("div", {
+      children: [(0, i.jsx)("div", {
         className: u.textLeftInSingleLine,
         children: f({
-          time: m,
+          time: p,
           padLargestUnit: !0
         })
-      }), (0, n.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: u.barInSingleLine,
-        children: (0, n.jsx)(d, {
-          percentage: m / c,
+        children: (0, i.jsx)(d, {
+          percentage: p / c,
           isSingleLine: !0
         })
-      }), (0, n.jsx)("div", {
+      }), (0, i.jsx)("div", {
         className: u.textRight,
         children: f({
           time: c,
           padLargestUnit: !0
         })
       })]
-    }) : (0, n.jsxs)("div", {
-      className: i(l, {
-        [u.themed]: a
+    }) : (0, i.jsxs)("div", {
+      className: s(n, {
+        [u.themed]: l
       }),
-      children: [(0, n.jsx)(d, {
-        percentage: m / c,
+      children: [(0, i.jsx)(d, {
+        percentage: p / c,
         isSingleLine: !1
-      }), (0, n.jsxs)(o.default, {
-        children: [(0, n.jsx)(o.default.Child, {
+      }), (0, i.jsxs)(o.default, {
+        children: [(0, i.jsx)(o.default.Child, {
           grow: 1,
           className: u.textLeft,
           children: f({
-            time: m,
+            time: p,
             padLargestUnit: !1
           })
-        }), (0, n.jsx)(o.default.Child, {
+        }), (0, i.jsx)(o.default.Child, {
           grow: 0,
           className: u.textRight,
           children: f({
@@ -118,7 +118,7 @@ class m extends a.PureComponent {
     }
   }
 }
-m.defaultProps = {
+p.defaultProps = {
   themed: !1
 };
-var p = m
+var m = p

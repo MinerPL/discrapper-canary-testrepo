@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("37983");
 n("884691");
 var r = n("446674"),
-  o = n("77078"),
-  u = n("592407"),
+  u = n("77078"),
+  o = n("592407"),
   i = n("479756"),
   c = n("507950"),
   s = n("957255"),
@@ -19,12 +19,12 @@ var r = n("446674"),
 function h(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.GuildSettingsSections.ROLES,
     h = (0, r.useStateFromStores)([s.default], () => s.default.canImpersonateRole(e, t));
-  return h ? (0, l.jsx)(o.MenuItem, {
+  return h ? (0, l.jsx)(u.MenuItem, {
     id: "view-as-role",
     label: f.default.Messages.VIEW_AS_ROLE,
     icon: a.default,
     action: () => {
-      u.default.close(), (0, i.startImpersonating)(e.id, {
+      o.default.close(), (0, i.startImpersonating)(e.id, {
         type: c.ImpersonateType.ROLES,
         roles: {
           [t.id]: t

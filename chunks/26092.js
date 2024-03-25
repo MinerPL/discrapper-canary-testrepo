@@ -13,26 +13,26 @@ var i = n("917351"),
 let u = l.FormStates.CLOSED,
   d = null,
   c = null,
-  f = {},
   _ = {},
-  h = {},
+  f = {},
+  E = {},
+  h = null,
   g = null,
-  m = null,
-  E = !1,
+  m = !1,
   p = !1,
-  v = null,
   S = null,
   T = null,
+  v = null,
   I = [],
-  C = null,
-  A = null;
+  A = null,
+  C = null;
 
 function y(e) {
   var t, n, i, s, r, a;
   let d = o.default.getCurrentUser();
   if (null == d) return N();
-  c = null !== (t = e.section) && void 0 !== t ? t : c, C = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (f[c] = e.subsection), null != e.scrollPosition && null != c && (_[c] = e.scrollPosition), p = !!e.openWithoutBackstack, u = l.FormStates.OPEN, h = {}, m = {
-    ...g = {
+  c = null !== (t = e.section) && void 0 !== t ? t : c, A = null !== (n = e.section) && void 0 !== n ? n : c, null != e.subsection && null != c && (_[c] = e.subsection), null != e.scrollPosition && null != c && (f[c] = e.scrollPosition), p = !!e.openWithoutBackstack, u = l.FormStates.OPEN, E = {}, g = {
+    ...h = {
       [l.UserSettingsSections.ACCOUNT]: {
         userId: d.id,
         username: d.username,
@@ -44,25 +44,25 @@ function y(e) {
         claimed: d.isClaimed()
       }
     }
-  }, S = null !== (i = e.onClose) && void 0 !== i ? i : null, T = null !== (s = e.analyticsLocation) && void 0 !== s ? s : null, I = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], A = null !== (a = e.impressionSource) && void 0 !== a ? a : null
+  }, T = null !== (i = e.onClose) && void 0 !== i ? i : null, v = null !== (s = e.analyticsLocation) && void 0 !== s ? s : null, I = null !== (r = e.analyticsLocations) && void 0 !== r ? r : [], C = null !== (a = e.impressionSource) && void 0 !== a ? a : null
 }
 
 function N() {
-  u = l.FormStates.CLOSED, E = !1, g = null, C = null, m = null, d = null, c = null, f = {}, _ = {}, S = null, T = null, I = [], A = null
+  u = l.FormStates.CLOSED, m = !1, h = null, A = null, g = null, d = null, c = null, _ = {}, f = {}, T = null, v = null, I = [], C = null
 }
 
 function R() {
-  u = l.FormStates.OPEN, h = {}
+  u = l.FormStates.OPEN, E = {}
 }
 class O extends r.default.Store {
   initialize() {
     this.waitFor(o.default)
   }
   hasChanges() {
-    return null != m && null != g && (!!this.isOpen() || v === l.DrawerTabTypes.USER_SETTINGS) && !s.isEqual(m, g)
+    return null != g && null != h && (!!this.isOpen() || S === l.DrawerTabTypes.USER_SETTINGS) && !s.isEqual(g, h)
   }
   isOpen() {
-    return E
+    return m
   }
   getPreviousSection() {
     return d
@@ -71,10 +71,10 @@ class O extends r.default.Store {
     return c
   }
   getSubsection() {
-    return null != c ? f[c] : null
+    return null != c ? _[c] : null
   }
   getScrollPosition() {
-    return null != c ? _[c] : null
+    return null != c ? f[c] : null
   }
   shouldOpenWithoutBackstack() {
     return p
@@ -83,26 +83,26 @@ class O extends r.default.Store {
     return {
       submitting: u === l.FormStates.SUBMITTING,
       section: c,
-      subsection: null != c ? f[c] : null,
-      scrollPosition: null != c ? _[c] : null,
-      settings: m,
-      errors: h,
+      subsection: null != c ? _[c] : null,
+      scrollPosition: null != c ? f[c] : null,
+      settings: g,
+      errors: E,
       hasChanges: this.hasChanges(),
       openWithoutBackstack: p,
-      analyticsLocation: T,
+      analyticsLocation: v,
       analyticsLocations: I,
-      initialSection: C,
-      impressionSource: A
+      initialSection: A,
+      impressionSource: C
     }
   }
   get onClose() {
-    return S
+    return T
   }
 }
 O.displayName = "UserSettingsModalStore";
 var D = new O(a.default, {
   USER_SETTINGS_MODAL_OPEN: function(e) {
-    E = !0, y(e)
+    m = !0, y(e)
   },
   USER_SETTINGS_MODAL_INIT: y,
   USER_SETTINGS_MODAL_CLOSE: N,
@@ -113,31 +113,31 @@ var D = new O(a.default, {
   USER_SETTINGS_MODAL_SUBMIT_FAILURE: function(e) {
     var t;
     if (u !== l.FormStates.SUBMITTING) return !1;
-    u = l.FormStates.OPEN, c = l.UserSettingsSections.ACCOUNT, h = null !== (t = e.errors) && void 0 !== t ? t : {}
+    u = l.FormStates.OPEN, c = l.UserSettingsSections.ACCOUNT, E = null !== (t = e.errors) && void 0 !== t ? t : {}
   },
   USER_SETTINGS_MODAL_SET_SECTION: function(e) {
     var t;
-    d = c, c = e.section, T = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (f[c] = e.subsection)
+    d = c, c = e.section, v = null, I = null !== (t = e.analyticsLocations) && void 0 !== t ? t : [], null != e.subsection && (_[c] = e.subsection)
   },
   USER_SETTINGS_MODAL_CLEAR_SUBSECTION: function(e) {
     let {
       forSection: t
     } = e;
-    null != t ? delete f[t] : null != c && delete f[c]
+    null != t ? delete _[t] : null != c && delete _[c]
   },
   USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION: function(e) {
     let {
       forSection: t
     } = e;
-    null != t ? delete _[t] : null != c && delete _[c]
+    null != t ? delete f[t] : null != c && delete f[c]
   },
   USER_SETTINGS_MODAL_UPDATE_ACCOUNT: function(e) {
     let {
       settings: t
     } = e;
-    null == m && (m = {});
-    let n = m[l.UserSettingsSections.ACCOUNT];
-    m[l.UserSettingsSections.ACCOUNT] = {
+    null == g && (g = {});
+    let n = g[l.UserSettingsSections.ACCOUNT];
+    g[l.UserSettingsSections.ACCOUNT] = {
       ...n,
       ...t
     }
@@ -145,8 +145,8 @@ var D = new O(a.default, {
   USER_SETTINGS_MODAL_SUBMIT_COMPLETE: R,
   USER_SETTINGS_MODAL_RESET: function() {
     let e = o.default.getCurrentUser();
-    R(), null != e && (m = {
-      ...g = {
+    R(), null != e && (g = {
+      ...h = {
         [l.UserSettingsSections.ACCOUNT]: {
           userId: e.id,
           username: e.username,
@@ -161,7 +161,7 @@ var D = new O(a.default, {
     })
   },
   DRAWER_SELECT_TAB: function(e) {
-    return v = e.tab, null == c && v === l.DrawerTabTypes.USER_SETTINGS && y({
+    return S = e.tab, null == c && S === l.DrawerTabTypes.USER_SETTINGS && y({
       type: "USER_SETTINGS_MODAL_INIT",
       section: null,
       subsection: null,

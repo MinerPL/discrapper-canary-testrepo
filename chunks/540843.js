@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return a
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("381784");
+var l = n("381784");
 
-function r(e) {
+function a(e) {
   let {
     channel: t,
     commands: n
-  } = e, r = (0, i.default)({
+  } = e, a = (0, l.default)({
     channel: t,
     commands: n,
     limit: 5
   });
-  return 0 === r.length ? null : (0, l.jsx)("li", {})
+  return 0 === a.length ? null : (0, i.jsx)("li", {})
 }

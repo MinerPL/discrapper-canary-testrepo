@@ -105,18 +105,18 @@ var o = r("275725"),
           x = d.last().get("end"),
           C = n.slice(k, x),
           E = e.getEntityAt(p.get("start")),
-          O = f.getHTMLDirIfDifferent(l.getDirection(C), t.props.direction),
-          D = {
+          D = f.getHTMLDirIfDifferent(l.getDirection(C), t.props.direction),
+          O = {
             contentState: t.props.contentState,
             decoratedText: C,
-            dir: O,
+            dir: D,
             start: k,
             end: x,
             blockKey: r,
             entityKey: E,
             offsetKey: w
           };
-        return u.createElement(b, i({}, S, D, {
+        return u.createElement(b, i({}, S, O, {
           key: w
         }), y)
       }).toArray()

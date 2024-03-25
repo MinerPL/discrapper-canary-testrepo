@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
 var i = n("913144"),
-  l = {
+  s = {
     clearDraft(e, t) {
       i.default.dispatch({
         type: "DRAFT_CLEAR",

@@ -8,13 +8,13 @@ var a, l = n("37983"),
   s = n("884691"),
   i = n("917351"),
   r = n.n(i),
-  o = n("118810"),
-  u = n("77078"),
+  u = n("118810"),
+  o = n("77078"),
   d = n("272030"),
   c = n("699473"),
   f = n("42203"),
   h = n("782340"),
-  p = n("821867");
+  m = n("139868");
 a = class extends s.PureComponent {
   render() {
     let {
@@ -25,34 +25,34 @@ a = class extends s.PureComponent {
       totalResults: s
     } = this.props, i = r.find(e, e => e.isSearchHit);
     if (null == i) return null;
-    let o = f.default.getChannel(i.channel_id);
-    if (null == o) return null;
+    let u = f.default.getChannel(i.channel_id);
+    if (null == u) return null;
     let d = "search-result-".concat(i.id);
-    return (0, l.jsx)(u.FocusRing, {
+    return (0, l.jsx)(o.FocusRing, {
       ringTarget: this.hitRef,
-      ringClassName: p.searchResultFocusRing,
+      ringClassName: m.searchResultFocusRing,
       offset: 4,
       children: (0, l.jsxs)("li", {
-        className: p.container,
+        className: m.container,
         ...t,
         "aria-posinset": 1 + n + a,
         "aria-setsize": s,
         "aria-labelledby": d,
-        children: [(0, l.jsx)(u.Clickable, {
+        children: [(0, l.jsx)(o.Clickable, {
           tabIndex: -1,
           onClick: this.handleMessageClick,
           innerRef: this.containerRef,
-          className: p.searchResult,
+          className: m.searchResult,
           focusProps: {
             enabled: !1
           },
           children: (0, l.jsx)("div", {
             ref: this.hitRef,
-            className: p.message,
+            className: m.message,
             children: (0, l.jsx)(c.default, {
               id: d,
               message: i,
-              channel: o,
+              channel: u,
               onContextMenu: e => this.handleContextMenu(e, i),
               animateAvatar: !1,
               subscribeToComponentDispatch: !1,
@@ -60,10 +60,10 @@ a = class extends s.PureComponent {
             })
           }, i.id)
         }), (0, l.jsx)("div", {
-          className: p.buttonsContainer,
+          className: m.buttonsContainer,
           "aria-hidden": !0,
-          children: (0, l.jsx)(u.Clickable, {
-            className: p.button,
+          children: (0, l.jsx)(o.Clickable, {
+            className: m.button,
             onClick: this.jumpTo,
             children: h.default.Messages.JUMP
           })
@@ -98,7 +98,7 @@ a = class extends s.PureComponent {
           if (null != a && !a.isCollapsed) return !0;
           if (null == e || null == t) return !1;
           for (;
-            (0, o.isElement)(e) && e !== t;) {
+            (0, u.isElement)(e) && e !== t;) {
             ;
             let {
               tagName: t

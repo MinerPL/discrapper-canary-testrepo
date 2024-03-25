@@ -1,51 +1,51 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
 var i = n("446674"),
-  l = n("913144"),
-  a = n("42203");
-let s = {};
+  s = n("913144"),
+  r = n("42203");
+let a = {};
 
-function r(e) {
-  let t = a.default.getChannel(e);
+function o(e) {
+  let t = r.default.getChannel(e);
   return !!(null != t && t.isForumLikeChannel()) || !1
 }
 
-function u(e) {
+function l(e) {
   var t;
-  let n = null !== (t = s[e]) && void 0 !== t ? t : {
+  let n = null !== (t = a[e]) && void 0 !== t ? t : {
     query: null,
     loading: !1,
     results: null
   };
-  return s[e] = n, n
+  return a[e] = n, n
 }
-class d extends i.default.Store {
+class u extends i.default.Store {
   getSearchQuery(e) {
-    let t = s[e];
+    let t = a[e];
     return null == t ? void 0 : t.query
   }
   getSearchLoading(e) {
     var t;
-    let n = s[e];
+    let n = a[e];
     return null !== (t = null == n ? void 0 : n.loading) && void 0 !== t && t
   }
   getSearchResults(e) {
-    let t = s[e];
+    let t = a[e];
     return null == t ? void 0 : t.results
   }
   getHasSearchResults(e) {
-    let t = s[e];
+    let t = a[e];
     return (null == t ? void 0 : t.results) != null && t.results.length > 0
   }
 }
-d.displayName = "ForumSearchStore";
-var o = new d(l.default, {
+u.displayName = "ForumSearchStore";
+var d = new u(s.default, {
   CONNECTION_OPEN: function() {
-    s = {}
+    a = {}
   },
   THREAD_DELETE: function(e) {
     var t;
@@ -53,17 +53,17 @@ var o = new d(l.default, {
       channel: n
     } = e, i = n.parent_id;
     if (null == i) return !1;
-    let l = s[i];
-    if (null == l) return !1;
-    s[i] = {
-      ...l,
-      results: null === (t = l.results) || void 0 === t ? void 0 : t.filter(e => n.id !== e)
+    let s = a[i];
+    if (null == s) return !1;
+    a[i] = {
+      ...s,
+      results: null === (t = s.results) || void 0 === t ? void 0 : t.filter(e => n.id !== e)
     }
   },
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
-    } = e, n = delete s[t.id];
+    } = e, n = delete a[t.id];
     return n
   },
   FORUM_SEARCH_QUERY_UPDATED: function(e) {
@@ -71,9 +71,9 @@ var o = new d(l.default, {
       channelId: t,
       query: n
     } = e;
-    if (!r(t)) return !1;
-    let i = u(t);
-    s[t] = {
+    if (!o(t)) return !1;
+    let i = l(t);
+    a[t] = {
       ...i,
       query: n,
       results: null
@@ -83,9 +83,9 @@ var o = new d(l.default, {
     let {
       channelId: t
     } = e;
-    if (!r(t)) return !1;
-    let n = u(t);
-    s[t] = {
+    if (!o(t)) return !1;
+    let n = l(t);
+    a[t] = {
       ...n,
       loading: !0
     }
@@ -95,9 +95,9 @@ var o = new d(l.default, {
       channelId: t,
       threadIds: n
     } = e;
-    if (!r(t)) return !1;
-    let i = u(t);
-    s[t] = {
+    if (!o(t)) return !1;
+    let i = l(t);
+    a[t] = {
       ...i,
       loading: !1,
       results: n
@@ -107,9 +107,9 @@ var o = new d(l.default, {
     let {
       channelId: t
     } = e;
-    if (!r(t)) return !1;
-    let n = u(t);
-    s[t] = {
+    if (!o(t)) return !1;
+    let n = l(t);
+    a[t] = {
       ...n,
       loading: !1,
       results: []
@@ -119,8 +119,8 @@ var o = new d(l.default, {
     let {
       channelId: t
     } = e;
-    if (!r(t)) return !1;
-    let n = delete s[t];
+    if (!o(t)) return !1;
+    let n = delete a[t];
     return n
   }
 })

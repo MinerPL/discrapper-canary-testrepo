@@ -1,71 +1,71 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return f
   }
 }), s("222007");
-var a = s("37983"),
-  n = s("884691"),
-  r = s("414456"),
-  o = s.n(r),
-  l = s("907002"),
+var n = s("37983"),
+  o = s("884691"),
+  a = s("414456"),
+  l = s.n(a),
+  r = s("146606"),
   i = s("446674"),
   u = s("77078"),
-  d = s("206230"),
-  c = s("878720"),
+  c = s("206230"),
+  d = s("878720"),
   h = s("189613"),
-  f = s("393004");
+  C = s("765702");
 
-function m(e) {
+function f(e) {
   let {
     show: t,
     alpha2: s,
-    countryCode: r
-  } = e, m = (0, i.useStateFromStores)([d.default], () => d.default.useReducedMotion), p = n.useRef(null), [C, S] = n.useState(0), [g, T] = n.useState(!1);
-  n.useEffect(() => {
+    countryCode: a
+  } = e, f = (0, i.useStateFromStores)([c.default], () => c.default.useReducedMotion), m = o.useRef(null), [p, x] = o.useState(0), [N, v] = o.useState(!1);
+  o.useEffect(() => {
     function e() {
       var e, s;
-      S(t && null !== (s = null === (e = p.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0)
+      x(t && null !== (s = null === (e = m.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0)
     }
     return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e)
-  }, [t, s, r]);
-  let A = (0, l.useSpring)({
-      width: "".concat(C, "px"),
-      immediate: m,
+  }, [t, s, a]);
+  let A = (0, r.useSpring)({
+      width: "".concat(p, "px"),
+      immediate: f,
       onStart: () => {
-        T(!0)
+        v(!0)
       },
       onRest: () => {
-        T(!1)
+        v(!1)
       }
     }),
-    N = e => {
-      c.default.setCountryCode(e)
+    g = e => {
+      d.default.setCountryCode(e)
     };
-  return (0, a.jsx)(u.Popout, {
+  return (0, n.jsx)(u.Popout, {
     position: "top",
-    renderPopout: e => (0, a.jsx)(h.default, {
-      className: f.popout,
+    renderPopout: e => (0, n.jsx)(h.default, {
+      className: C.popout,
       onClick: t => {
-        N(t), e.closePopout()
+        g(t), e.closePopout()
       }
     }),
-    children: e => (0, a.jsx)("div", {
-      className: o(f.outerContainer, {
-        [f.hidden]: !(t || g)
+    children: e => (0, n.jsx)("div", {
+      className: l(C.outerContainer, {
+        [C.hidden]: !(t || N)
       }),
-      children: (0, a.jsx)(l.animated.div, {
-        className: f.container,
+      children: (0, n.jsx)(r.animated.div, {
+        className: C.container,
         style: A,
-        children: (0, a.jsxs)("div", {
-          className: f.innerContainer,
-          ref: p,
-          children: [(0, a.jsxs)(u.Clickable, {
+        children: (0, n.jsxs)("div", {
+          className: C.innerContainer,
+          ref: m,
+          children: [(0, n.jsxs)(u.Clickable, {
             ...e,
-            className: f.countryCode,
-            children: [s, " ", r]
-          }), (0, a.jsx)("div", {
-            className: f.separator
+            className: C.countryCode,
+            children: [s, " ", a]
+          }), (0, n.jsx)("div", {
+            className: C.separator
           })]
         })
       })

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var s = n("913144");
+var i = n("913144");
 
-function i() {
-  s.default.dispatch({
+function s() {
+  i.default.dispatch({
     type: "ACTIVITY_SYNC_STOP"
   })
 }

@@ -15,13 +15,13 @@ var s = n("37983"),
   c = n("970366"),
   f = n("271938"),
   E = n("124969"),
-  I = n("599110"),
-  _ = n("49111"),
-  p = n("782340"),
-  h = n("956874"),
-  m = n("926622");
+  _ = n("599110"),
+  I = n("49111"),
+  h = n("782340"),
+  p = n("180688"),
+  T = n("890957");
 r.default.initialize();
-class T extends a.PureComponent {
+class m extends a.PureComponent {
   componentDidMount() {
     this.handleVerify(), (0, c.trackAppUIViewed)("verify_email")
   }
@@ -29,16 +29,16 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("768025"),
-        className: i(h.image, m.marginBottom20)
+        className: i(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: m.marginBottom8,
-        children: p.default.Messages.VERFICATION_EXPIRED
+        className: T.marginBottom8,
+        children: h.default.Messages.VERFICATION_EXPIRED
       }), (0, s.jsx)(E.SubTitle, {
-        className: m.marginBottom40,
-        children: p.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+        className: T.marginBottom40,
+        children: h.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleLogin,
-        children: p.default.Messages._LOGIN
+        children: h.default.Messages._LOGIN
       })]
     })
   }
@@ -46,13 +46,13 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("176872"),
-        className: i(h.image, m.marginBottom20)
+        className: i(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: m.marginBottom40,
-        children: p.default.Messages.VERIFICATION_VERIFIED
+        className: T.marginBottom40,
+        children: h.default.Messages.VERIFICATION_VERIFIED
       }), (0, s.jsx)(E.Button, {
         onClick: this.handleOpenApp,
-        children: p.default.Messages.VERIFICATION_OPEN_DISCORD
+        children: h.default.Messages.VERIFICATION_OPEN_DISCORD
       })]
     })
   }
@@ -60,13 +60,13 @@ class T extends a.PureComponent {
     return (0, s.jsxs)(E.default, {
       children: [(0, s.jsx)(E.Image, {
         src: n("951536"),
-        className: i(h.image, m.marginBottom20)
+        className: i(p.image, T.marginBottom20)
       }), (0, s.jsx)(E.Title, {
-        className: m.marginBottom8,
-        children: p.default.Messages.VERIFICATION_VERIFYING
+        className: T.marginBottom8,
+        children: h.default.Messages.VERIFICATION_VERIFYING
       }), (0, s.jsx)(E.SubTitle, {
-        className: m.marginBottom40,
-        children: p.default.Messages.ACTION_MAY_TAKE_A_MOMENT
+        className: T.marginBottom40,
+        children: h.default.Messages.ACTION_MAY_TAKE_A_MOMENT
       }), (0, s.jsx)(E.Button, {
         submitting: !0,
         color: E.Button.Colors.PRIMARY
@@ -88,18 +88,18 @@ class T extends a.PureComponent {
       let {
         transitionTo: e
       } = this.props;
-      e(_.Routes.LOGIN)
+      e(I.Routes.LOGIN)
     }, this.handleOpenApp = () => {
       let {
         verifyingUserId: e
       } = this.props;
-      I.default.track(_.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
+      _.default.track(I.AnalyticEvents.VERIFY_ACCOUNT_APP_OPENED, {
         verifying_user_id: e
       }), (0, d.default)("verify_email")
     }
   }
 }
-T.defaultProps = {
+m.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
 var N = r.default.connectStores([f.default], () => ({
@@ -108,4 +108,4 @@ var N = r.default.connectStores([f.default], () => ({
   verifySucceeded: f.default.didVerifySucceed(),
   fingerprint: f.default.getFingerprint(),
   verifyingUserId: f.default.getVerifyingUserId()
-}))(T)
+}))(m)

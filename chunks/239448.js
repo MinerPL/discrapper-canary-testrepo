@@ -7,25 +7,25 @@ n.r(t), n.d(t, {
     return c
   },
   getEffectAnalyticsType: function() {
-    return _
+    return f
   },
   getEffectDetailAnalyticsName: function() {
-    return h
+    return E
   },
   trackBackgroundOptionUpdated: function() {
-    return g
+    return h
   },
   trackBackgroundOptionAdded: function() {
-    return m
+    return g
   },
   trackBackgroundOptionDeleted: function() {
-    return E
+    return m
   },
   getVideoBackgroundProtoFromOption: function() {
     return p
   },
   getVideoBackgroundOptionFromProto: function() {
-    return v
+    return S
   }
 });
 var i = n("716241"),
@@ -44,15 +44,15 @@ function c(e) {
   return "number" == typeof e && e in l.DefaultVideoBackground
 }
 
-function f(e) {
+function _(e) {
   return c(e) ? l.ANIMATED_DEFAULT_VIDEO_BACKGROUNDS.includes(e) : !!d(e) && ((0, o.isAnimatedIconHash)(e.asset) || (0, o.isVideoAssetHash)(e.asset))
 }
 
-function _(e) {
+function f(e) {
   return null != e ? "Video Background" : "None"
 }
 
-function h(e) {
+function E(e) {
   if (null == e) return "None";
   if (d(e)) return "Custom";
   if ("blur" === e) return "Blur";
@@ -78,15 +78,15 @@ function h(e) {
   }(e))
 }
 
-function g(e, t, n) {
+function h(e, t, n) {
   let o = r.default.getGuildId(),
     l = r.default.getChannelId(),
     d = s.default.getChannel(l),
     c = (0, i.getVoiceStateMetadata)(o, l, !0);
   a.default.track(u.AnalyticEvents.VIDEO_EFFECT_UPDATED, {
     location: t,
-    effect_type: _(e),
-    effect_detail: h(e),
+    effect_type: f(e),
+    effect_detail: E(e),
     effect_state: n,
     channel_id: l,
     channel_type: null == d ? void 0 : d.type,
@@ -95,21 +95,21 @@ function g(e, t, n) {
     video_stream_count: c.video_stream_count,
     media_session_id: r.default.getMediaSessionId(),
     rtc_connection_id: r.default.getRTCConnectionId(),
-    is_animated: f(e)
+    is_animated: _(e)
   })
 }
 
-function m(e, t, n) {
+function g(e, t, n) {
   a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_ADDED, {
-    is_animated: f(e),
+    is_animated: _(e),
     is_video: t,
     is_from_tenor: n
   })
 }
 
-function E(e) {
+function m(e) {
   a.default.track(u.AnalyticEvents.VIDEO_BACKGROUND_DELETED, {
-    is_animated: f(e)
+    is_animated: _(e)
   })
 }
 
@@ -136,7 +136,7 @@ function p(e) {
   }
 }
 
-function v(e, t) {
+function S(e, t) {
   if (null == e || void 0 === e.oneofKind) return null;
   switch (e.oneofKind) {
     case "customAsset":

@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("446674"),
-  i = n("419830"),
-  l = n("153014"),
+  l = n("419830"),
+  i = n("153014"),
   r = n("316133"),
   o = n("782340"),
-  u = n("916333"),
+  u = n("415422"),
   d = function(e) {
     let {
       name: t,
@@ -21,8 +21,8 @@ var s = n("446674"),
         user: t
       } = e;
       return t
-    }), [n]), c = (0, i.getChannelIconComponent)(n);
-    return (0, a.jsx)(l.GuildNoticeBody, {
+    }), [n]), c = (0, l.getChannelIconComponent)(n);
+    return (0, a.jsx)(i.GuildNoticeBody, {
       heading: o.default.Messages.STAGE_CHANNEL_LIVE_NOW,
       topic: t,
       location: o.default.Messages.HUB_STUDY_ROOM_VOICE_CHANNEL_TOOLTIP,
@@ -31,10 +31,10 @@ var s = n("446674"),
         height: 16,
         className: u.icon
       }) : null,
-      children: (0, a.jsx)(l.LiveVoiceOrStageChannelNotice, {
+      children: (0, a.jsx)(i.LiveVoiceOrStageChannelNotice, {
         channel: n,
         speakers: d,
-        voiceType: l.VoiceChannelType.STUDY_ROOM
+        voiceType: i.VoiceChannelType.STUDY_ROOM
       })
     })
   }

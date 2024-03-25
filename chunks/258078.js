@@ -8,8 +8,8 @@ var i = n("37983");
 n("884691");
 var s = n("414456"),
   r = n.n(s),
-  a = n("426656"),
-  o = n("851706");
+  a = n("145873"),
+  o = n("548122");
 let l = Object.freeze({
     STANDARD: a.colorStandard,
     MUTED: a.colorMuted,
@@ -43,20 +43,20 @@ let l = Object.freeze({
       tag: o = "div",
       selectable: d = !1,
       strong: c = !1,
-      children: f,
-      style: _,
-      "aria-label": h,
-      ...g
+      children: _,
+      style: f,
+      "aria-label": E,
+      ...h
     } = e;
     return (0, i.jsx)(o, {
-      "aria-label": h,
+      "aria-label": E,
       className: r(n, s, t, {
         [a.selectable]: d,
         [a.strong]: c
       }),
-      style: _,
-      ...g,
-      children: f
+      style: f,
+      ...h,
+      children: _
     })
   };
 d.Colors = l, d.Sizes = u;

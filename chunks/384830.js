@@ -5,18 +5,18 @@ n.r(t), n.d(t, {
   }
 });
 var r = n("627445"),
-  i = n.n(r),
-  l = n("446674"),
+  l = n.n(r),
+  i = n("446674"),
   a = n("385976"),
-  o = n("867805");
+  s = n("867805");
 
 function u(e) {
   let {
     emojiId: t,
     emojiName: n
-  } = e, r = (0, l.useStateFromStores)([a.default], () => null != t ? a.default.getCustomEmojiById(t) : null);
+  } = e, r = (0, i.useStateFromStores)([a.default], () => null != t ? a.default.getCustomEmojiById(t) : null);
   if (null != r || null != n) {
-    if (null == t) return i(null != n, "emojiName must be defined if emojiId is not defined"), o.default.convertSurrogateToName(n, !1);
+    if (null == t) return l(null != n, "emojiName must be defined if emojiId is not defined"), s.default.convertSurrogateToName(n, !1);
     else return null == r ? void 0 : r.name
   }
 }

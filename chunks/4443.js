@@ -6,14 +6,14 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("216375");
+var l = s("77078"),
+  n = s("836996");
 
 function i() {
   return (0, a.jsx)("div", {
-    className: l.centerContainer,
-    children: (0, a.jsx)(n.Spinner, {
-      type: n.Spinner.Type.SPINNING_CIRCLE
+    className: n.centerContainer,
+    children: (0, a.jsx)(l.Spinner, {
+      type: l.Spinner.Type.SPINNING_CIRCLE
     })
   })
 }

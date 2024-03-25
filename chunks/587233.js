@@ -6,22 +6,22 @@ n.r(t), n.d(t, {
 });
 var a = n("913144"),
   s = n("316272"),
-  i = n("200008");
+  l = n("200008");
 
-function l(e) {
+function i(e) {
   let {
     channel: {
       id: t
     }
   } = e;
-  (0, i.removeFavoriteChannel)(t)
+  (0, l.removeFavoriteChannel)(t)
 }
 class r extends s.default {
   _initialize() {
-    a.default.subscribe("CHANNEL_DELETE", l)
+    a.default.subscribe("CHANNEL_DELETE", i)
   }
   _terminate() {
-    a.default.unsubscribe("CHANNEL_DELETE", l)
+    a.default.unsubscribe("CHANNEL_DELETE", i)
   }
 }
 var o = new r

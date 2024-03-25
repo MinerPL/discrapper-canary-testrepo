@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("37983");
+var i = n("37983");
 n("884691");
 var l = n("775377"),
-  s = n("777003"),
-  i = n("184256");
+  a = n("777003"),
+  s = n("438123");
 
 function r(e) {
   let {
@@ -16,15 +16,15 @@ function r(e) {
     className: n,
     animate: r
   } = e;
-  return null == t ? null : (0, a.jsx)(s.default, {
+  return null == t ? null : (0, i.jsx)(a.default, {
     className: n,
-    children: (0, a.jsx)(l.default, {
+    children: (0, i.jsx)(l.default, {
       activity: t,
-      className: i.customStatus,
+      className: s.customStatus,
       animate: r,
-      emojiClassName: i.customStatusEmoji,
-      soloEmojiClassName: i.customStatusSoloEmoji,
-      textClassName: i.customStatusText
+      emojiClassName: s.customStatusEmoji,
+      soloEmojiClassName: s.customStatusSoloEmoji,
+      textClassName: s.customStatusText
     })
   })
 }

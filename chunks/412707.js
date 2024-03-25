@@ -7,25 +7,25 @@ n.r(t), n.d(t, {
     return a
   },
   useApplicationDirectoryHistory: function() {
-    return _
+    return f
   },
   getPreviousView: function() {
-    return h
+    return E
   },
   getCurrentView: function() {
-    return g
+    return h
   },
   setEntrypoint: function() {
-    return m
+    return g
   },
   setGuildId: function() {
-    return E
+    return m
   },
   resetApplicationDirectoryHistory: function() {
     return p
   },
   setTrackedOpenedFromExternalEntrypoint: function() {
-    return v
+    return S
   }
 });
 var i, s, r, a, o = n("803182"),
@@ -34,14 +34,14 @@ var i, s, r, a, o = n("803182"),
   d = n("349503"),
   c = n("49111");
 (i = r || (r = {})).HOME = "home", i.SEARCH = "search", i.APPLICATION = "application", (s = a || (a = {})).EXTERNAL = "External", s.KEYBOARD_SHORTCUT = "Keyboard Shortcut", s.APPLICATION_DIRECTORY_URL = "Application Directory URL", s.APPLICATION_DIRECTORY_PROFILE_EMBED = "Application Directory Profile Embed", s.APPLICATION_DIRECTORY_UPSELL_MODAL = "Application Directory Upsell Modal", s.GUILD_HEADER_POPOUT = "Guild Header Popout", s.GUILD_SETTINGS = "Guild Settings", s.GUILD_INTEGRATION_SETTINGS = "Guild Integration Settings", s.GUILD_CONTEXT_MENU = "Guild Context Menu";
-let f = (0, l.default)(() => ({
+let _ = (0, l.default)(() => ({
     guildId: null,
     entrypoint: null,
     trackedOpenedFromExternalEntrypoint: !1
   })),
-  _ = f;
+  f = _;
 
-function h() {
+function E() {
   let {
     location: {
       state: e
@@ -50,7 +50,7 @@ function h() {
   return null == e ? void 0 : e.previousView
 }
 
-function g() {
+function h() {
   var e, t;
   let {
     location: {
@@ -86,27 +86,27 @@ function g() {
   }
 }
 
-function m(e) {
-  f.setState({
+function g(e) {
+  _.setState({
     entrypoint: e
   })
 }
 
-function E(e) {
-  f.setState({
+function m(e) {
+  _.setState({
     guildId: e
   })
 }
 
 function p() {
-  f.setState({
+  _.setState({
     entrypoint: null,
     guildId: null
   })
 }
 
-function v(e) {
-  f.setState({
+function S(e) {
+  _.setState({
     trackedOpenedFromExternalEntrypoint: e
   })
 }

@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("77078"),
-  r = n("592407"),
-  o = n("49111");
+var l = n("77078"),
+  a = n("592407"),
+  s = n("49111");
 
-function s(e) {
-  r.default.open(e, o.GuildSettingsSections.SOUNDBOARD), (0, i.openModalLazy)(async () => {
+function r(e) {
+  a.default.open(e, s.GuildSettingsSections.SOUNDBOARD), (0, l.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("823749").then(n.bind(n, "823749"));
-    return n => (0, l.jsx)(t, {
+    return n => (0, i.jsx)(t, {
       ...n,
       guildId: e
     })

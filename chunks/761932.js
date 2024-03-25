@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getVoiceAnalyticsMetadataAdditional: function() {
-    return i
+    return s
   }
 });
-var s = n("568307");
+var i = n("161454");
 
-function i() {
-  let e = s.default.getCurrentGameForAnalytics();
+function s() {
+  let e = i.default.getCurrentGameForAnalytics();
   return {
     game_name: null != e ? e.name : null,
     game_id: null != e ? e.id : null

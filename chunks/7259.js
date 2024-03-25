@@ -10,6 +10,6 @@ function s(e) {
   let {
     currentActivities: t,
     isSpotifyActivity: n
-  } = e, s = t[0], i = (0, a.default)(null == s ? void 0 : s.activity, null == s ? void 0 : s.activityUser);
-  return n ? i : null
+  } = e, s = t[0], l = (0, a.default)(null == s ? void 0 : s.activity, null == s ? void 0 : s.activityUser);
+  return n ? l : null
 }

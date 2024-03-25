@@ -23,17 +23,17 @@ var i = n("118810"),
   M = n("761136"),
   g = n("126423"),
   p = n("175537"),
-  I = n("485598"),
-  v = n("518155"),
-  S = n("355669"),
+  S = n("485598"),
+  I = n("518155"),
+  v = n("355669"),
   h = n("718381"),
   A = n("442711"),
   _ = n("702495"),
   T = n("875834"),
   C = n("780657"),
   R = n("204462"),
-  x = n("487051"),
-  O = n("815384"),
+  O = n("487051"),
+  x = n("815384"),
   y = n("263879"),
   N = n("604179"),
   b = n("167670"),
@@ -57,21 +57,21 @@ function U(e) {
     } = e,
     g = c,
     p = c.getAttribute("data-type"),
-    I = c.getAttribute("data-id"),
-    v = c.getAttribute("data-name");
+    S = c.getAttribute("data-id"),
+    I = c.getAttribute("data-name");
   if (null != f) l = a = u = f.url;
   else
     for (;
       (0, i.isElement)(g);)(0, i.isElement)(g, HTMLImageElement) && null != g.src && (l = g.src), (0, i.isElement)(g, HTMLAnchorElement) && null != g.href && (a = g.href, r = g.textContent, null == l && "img" === g.getAttribute("data-role") && (l = a, g.hasAttribute("data-safe-src") && "" !== g.getAttribute("data-safe-src") && (u = g.getAttribute("data-safe-src")))), g = g.parentNode;
-  let S = null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "";
+  let v = null !== (n = null === (t = document.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== n ? n : "";
   return w({
     message: o,
     channel: d,
     attachment: f,
-    textSelection: S,
+    textSelection: v,
     favoriteableType: p,
-    favoriteableId: I,
-    favoriteableName: v,
+    favoriteableId: S,
+    favoriteableName: I,
     itemHref: a,
     itemSrc: l,
     itemSafeSrc: u,
@@ -100,44 +100,44 @@ function w(e) {
     itemSafeSrc: H,
     itemTextContent: Y,
     canReport: B,
-    onHeightUpdate: Z,
-    onSelect: X,
+    onHeightUpdate: X,
+    onSelect: Z,
     onClose: z,
-    navId: J,
-    ariaLabel: W,
+    navId: W,
+    ariaLabel: J,
     shouldHideMediaOptions: q = !1
   } = e, $ = (0, d.default)(s), Q = (0, f.default)(s), ee = (0, R.default)(t, n), et = (0, p.default)(t, n), en = (0, A.default)(t, n), ea = (0, C.default)(t, n), ei = (0, _.default)({
     type: U,
     id: w,
     name: k
-  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, x.default)(t), er = (0, I.default)(t, n), ed = (0, v.default)(t, n), eo = (0, y.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, j.default)(t), em = (0, D.default)(t, n), eM = (0, c.default)(null != V ? V : K, Y, t, {
+  }), el = (0, G.default)(t, n), es = (0, T.default)(t, n), eu = (0, O.default)(t), er = (0, S.default)(t, n), ed = (0, I.default)(t, n), eo = (0, y.default)(t, n), ec = (0, N.default)(t, n), ef = (0, h.default)(t, n), eE = (0, j.default)(t), em = (0, D.default)(t, n), eM = (0, c.default)(null != V ? V : K, Y, t, {
     shouldHideMediaOptions: q
   }), eg = (0, o.default)(H, t, {
     shouldHideMediaOptions: q
-  }), ep = (0, F.default)(t, i), eI = (0, r.default)({
+  }), ep = (0, F.default)(t, i), eS = (0, r.default)({
     id: t.id,
     label: L.default.Messages.COPY_ID_MESSAGE,
     shiftId: "".concat(t.channel_id, "-").concat(t.id)
-  }), ev = (0, b.default)(t, n), eS = (0, P.default)(t, n), eh = (0, g.default)(t, n, {
+  }), eI = (0, b.default)(t, n), ev = (0, P.default)(t, n), eh = (0, g.default)(t, n, {
     hoist: !0
-  }), eA = (0, M.default)(s, n.getGuildId()), e_ = (0, O.default)(t), eT = (0, S.default)(t), eC = (0, m.default)({
+  }), eA = (0, M.default)(s, n.getGuildId()), e_ = (0, x.default)(t), eT = (0, v.default)(t), eC = (0, m.default)({
     commandType: u.ApplicationCommandType.MESSAGE,
     commandTargetId: t.id,
     channel: n,
     guildId: void 0,
-    onHeightUpdate: Z
+    onHeightUpdate: X
   }), eR = (0, E.default)(t, n);
   return (0, a.jsxs)(l.Menu, {
-    navId: J,
+    navId: W,
     onClose: z,
-    "aria-label": W,
-    onSelect: X,
+    "aria-label": J,
+    onSelect: Z,
     children: [(0, a.jsx)(l.MenuGroup, {
       children: $
     }), (0, a.jsx)(l.MenuGroup, {
       children: Q
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: ["" === s ? ee : null, et, eu, en, ea, ei, ev, eS, eT, eC, el, es, e_, er, ed, em, eh, eR, ec, eo, ef, B && eE]
+      children: ["" === s ? ee : null, et, eu, en, ea, ei, eI, ev, eT, eC, el, es, e_, er, ed, em, eh, eR, ec, eo, ef, B && eE]
     }), null != eA && (0, a.jsx)(l.MenuGroup, {
       children: eA
     }), (0, a.jsxs)(l.MenuGroup, {
@@ -145,7 +145,7 @@ function w(e) {
     }), (0, a.jsx)(l.MenuGroup, {
       children: eM
     }), (0, a.jsx)(l.MenuGroup, {
-      children: eI
+      children: eS
     })]
   })
 }

@@ -12,7 +12,7 @@ e = n.nmd(e), n("424973"), r = function() {
     p = 125,
     m = 0,
     h = 0,
-    _ = 0,
+    y = 0,
     IdleDeadline = {
       get didTimeout() {
         return !1
@@ -22,7 +22,7 @@ e = n.nmd(e), n("424973"), r = function() {
         return e < 0 ? 0 : e
       }
     },
-    y = function(e) {
+    _ = function(e) {
       var t, n, r = function() {
         var a = Date.now() - n;
         a < 99 ? t = setTimeout(r, 99 - a) : (t = null, e())
@@ -35,7 +35,7 @@ e = n.nmd(e), n("424973"), r = function() {
     });
 
   function g() {
-    125 != p && (d = 7, p = 125, f = 35, c && (c && (a && s(a), r && clearTimeout(r), c = !1), M())), y()
+    125 != p && (d = 7, p = 125, f = 35, c && (c && (a && s(a), r && clearTimeout(r), c = !1), M())), _()
   }
 
   function v() {
@@ -53,7 +53,7 @@ e = n.nmd(e), n("424973"), r = function() {
   function w() {
     var n, a, o, i = d > 9 ? 9 : 1;
     if (h = Date.now(), c = !1, r = null, l > 2 || h - t - 50 < e)
-      for (a = 0, o = u.length; a < o && IdleDeadline.timeRemaining() > i; a++) n = u.shift(), _++, n && n(IdleDeadline);
+      for (a = 0, o = u.length; a < o && IdleDeadline.timeRemaining() > i; a++) n = u.shift(), y++, n && n(IdleDeadline);
     u.length ? M() : l = 0
   }
 
@@ -62,7 +62,7 @@ e = n.nmd(e), n("424973"), r = function() {
   }
 
   function L(e) {
-    var t = e - 1 - _;
+    var t = e - 1 - y;
     u[t] && (u[t] = null)
   }
   if (o.requestIdleCallback && o.cancelIdleCallback) try {

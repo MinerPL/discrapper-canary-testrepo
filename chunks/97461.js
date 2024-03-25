@@ -8,9 +8,9 @@ var r = n("37983"),
   i = n("884691"),
   s = n("627445"),
   l = n.n(s),
-  u = n("65597"),
-  a = n("77078"),
-  o = n("856413"),
+  a = n("65597"),
+  o = n("77078"),
+  u = n("856413"),
   d = n("916187"),
   c = n("809071"),
   p = n("669073"),
@@ -30,8 +30,8 @@ var r = n("37983"),
   M = n("153727"),
   N = n("628738"),
   b = n("650484"),
-  j = n("310093"),
-  A = n("367767"),
+  A = n("310093"),
+  j = n("367767"),
   k = n("49111"),
   L = n("646718"),
   O = n("782340"),
@@ -67,7 +67,7 @@ function R(e) {
     location: "d17fd6_3"
   }, {
     autoTrackExposure: !1
-  }), en = (0, u.useStateFromStores)([E.default], () => E.default.getCurrentUser()), er = !Q && null != Y && Y === L.PremiumSubscriptionSKUs.TIER_2 && null != en && en.hasHadPremium() && H && null == D && (0, d.isPaymentSourceEligibleForMultiMonthPlans)(ee), ei = (0, m.usePremiumTrialOffer)(w), es = !Q && null != ei && null != Y && (0, L.SubscriptionTrials)[ei.trial_id].skus.includes(Y), el = (0, f.usePremiumDiscountOffer)(), eu = null == el ? void 0 : null === (t = el.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => L.SubscriptionPlanInfo[e].skuId === Y), ea = !Q && null != el && null != Y && eu, eo = null !== (n = es || ea) && void 0 !== n && n, {
+  }), en = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), er = !Q && null != Y && Y === L.PremiumSubscriptionSKUs.TIER_2 && null != en && en.hasHadPremium() && H && null == D && (0, d.isPaymentSourceEligibleForMultiMonthPlans)(ee), ei = (0, m.usePremiumTrialOffer)(w), es = !Q && null != ei && null != Y && (0, L.SubscriptionTrials)[ei.trial_id].skus.includes(Y), el = (0, f.usePremiumDiscountOffer)(), ea = null == el ? void 0 : null === (t = el.discount) || void 0 === t ? void 0 : t.plan_ids.some(e => L.SubscriptionPlanInfo[e].skuId === Y), eo = !Q && null != el && null != Y && ea, eu = null !== (n = es || eo) && void 0 !== n && n, {
     defaultToMonthlyPlan: ed
   } = p.TrialRedemptionDefaultPlanExperiment.useExperiment({
     location: "d17fd6_4"
@@ -82,34 +82,34 @@ function R(e) {
     isEligibleForTrial: es,
     defaultPlanId: q,
     defaultToMonthlyPlan: ed
-  }), [Y, z, et, D, er, Q, es, q, ed]), ep = ea && ec.includes(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2) ? L.SubscriptionPlans.PREMIUM_MONTH_TIER_2 : ec[0], ef = (0, u.useStateFromStores)([_.default], () => _.default.get(ep)), em = [{
+  }), [Y, z, et, D, er, Q, es, q, ed]), ep = eo && ec.includes(L.SubscriptionPlans.PREMIUM_MONTH_TIER_2) ? L.SubscriptionPlans.PREMIUM_MONTH_TIER_2 : ec[0], ef = (0, a.useStateFromStores)([_.default], () => _.default.get(ep)), em = [{
     planId: null == ef ? void 0 : ef.id,
     quantity: 1
-  }], [eS, eP] = i.useState(eo), [eE, e_] = (0, c.useSubscriptionInvoicePreview)({
+  }], [eS, eP] = i.useState(eu), [eE, e_] = (0, c.useSubscriptionInvoicePreview)({
     items: em,
     renewal: !1,
-    preventFetch: !eo,
+    preventFetch: !eu,
     applyEntitlements: !0,
     trialId: G,
     paymentSourceId: X.paymentSourceId,
     currency: X.currency
   });
   i.useEffect(() => {
-    eo && eP((null == eE ? void 0 : eE.subscriptionPeriodEnd) == null)
-  }, [eE, eo]), (0, o.default)("Payment Modal Plan Select Step", eS, 5, {
+    eu && eP((null == eE ? void 0 : eE.subscriptionPeriodEnd) == null)
+  }, [eE, eu]), (0, u.default)("Payment Modal Plan Select Step", eS, 5, {
     proratedInvoicePreview: eE,
     proratedInvoiceError: e_,
-    isEligibleForOffer: eo
+    isEligibleForOffer: eu
   }, {
     tags: {
       app_context: "billing"
     }
   });
   let ex = null !== (s = null == e_ ? void 0 : e_.message) && void 0 !== s ? s : O.default.Messages.ERROR_GENERIC_TITLE,
-    eC = eo && null == e_,
-    eI = eo && null != e_;
+    eC = eu && null == e_,
+    eI = eu && null != e_;
   return eC && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null ? (0, r.jsx)(N.default, {}) : (l(null != J, "Step should be set"), l(ec.length > 0, "Premium plan options should be set"), (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(j.GiftNote, {
+    children: [(0, r.jsx)(A.GiftNote, {
       giftMessage: $
     }), !(Q && (0, C.shouldShowCustomGiftExperience)(Z)) && (0, r.jsx)(M.default, {
       isEligibleForTrial: es
@@ -119,7 +119,7 @@ function R(e) {
       }), (0, r.jsx)(S.default, {
         isGift: Q,
         plan: V
-      }), (0, r.jsx)(A.default, {}), eI ? (0, r.jsx)(a.FormErrorBlock, {
+      }), (0, r.jsx)(j.default, {}), eI ? (0, r.jsx)(o.FormErrorBlock, {
         children: ex
       }) : (0, r.jsx)(P.PremiumSwitchPlanSelectBody, {
         planOptions: ec,
@@ -127,12 +127,12 @@ function R(e) {
         referralTrialOfferId: w,
         selectedPlanId: null == V ? void 0 : V.id,
         subscriptionPeriodEnd: null == eE ? void 0 : eE.subscriptionPeriodEnd,
-        discountInvoiceItems: ea ? null == eE ? void 0 : eE.invoiceItems : void 0,
+        discountInvoiceItems: eo ? null == eE ? void 0 : eE.invoiceItems : void 0,
         handleClose: F
       }), eC && (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)("hr", {
           className: v.planSelectSeparatorLower
-        }), (0, r.jsx)(a.Text, {
+        }), (0, r.jsx)(o.Text, {
           variant: "text-xs/normal",
           children: O.default.Messages.BILLING_TRIAL_CANCEL_ANYTIME_LINK.format({
             link: I.default.getArticleURL(k.HelpdeskArticles.PREMIUM_DETAILS_CANCEL_SUB)
@@ -140,7 +140,7 @@ function R(e) {
         })]
       })]
     }), (0, r.jsx)(b.PaymentPortalFooter, {
-      children: (0, r.jsx)(a.ModalFooter, {
+      children: (0, r.jsx)(o.ModalFooter, {
         justify: x.default.Justify.BETWEEN,
         align: x.default.Align.CENTER,
         children: (0, r.jsx)(P.PremiumSwitchPlanSelectFooter, {

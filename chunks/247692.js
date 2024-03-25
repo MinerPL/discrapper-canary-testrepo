@@ -12,12 +12,12 @@ var c = 286,
   p = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15],
   h = Array((c + 2) * 2);
 a(h);
-var g = Array(60);
-a(g);
-var b = Array(512);
-a(b);
-var v = Array(256);
+var v = Array(60);
 a(v);
+var g = Array(512);
+a(g);
+var b = Array(256);
+a(b);
 var m = Array(29);
 a(m);
 var y = Array(30);
@@ -31,19 +31,19 @@ function w(e, t) {
 }
 
 function S(e) {
-  return e < 256 ? b[e] : b[256 + (e >>> 7)]
+  return e < 256 ? g[e] : g[256 + (e >>> 7)]
 }
 
 function k(e, t) {
   e.pending_buf[e.pending++] = 255 & t, e.pending_buf[e.pending++] = t >>> 8 & 255
 }
 
-function _(e, t, n) {
+function E(e, t, n) {
   e.bi_valid > 16 - n ? (e.bi_buf |= t << e.bi_valid & 65535, k(e, e.bi_buf), e.bi_buf = t >> 16 - e.bi_valid, e.bi_valid += n - 16) : (e.bi_buf |= t << e.bi_valid & 65535, e.bi_valid += n)
 }
 
-function E(e, t, n) {
-  _(e, n[2 * t], n[2 * t + 1])
+function _(e, t, n) {
+  E(e, n[2 * t], n[2 * t + 1])
 }
 
 function M(e, t) {
@@ -92,8 +92,8 @@ function A(e, t, n) {
 function R(e, t, n) {
   var r, i, o, s, a = 0;
   if (0 !== e.last_lit)
-    do r = e.pending_buf[e.d_buf + 2 * a] << 8 | e.pending_buf[e.d_buf + 2 * a + 1], i = e.pending_buf[e.l_buf + a], a++, 0 === r ? E(e, i, t) : (E(e, (o = v[i]) + 256 + 1, t), 0 !== (s = d[o]) && _(e, i -= m[o], s), E(e, o = S(--r), n), 0 !== (s = l[o]) && _(e, r -= y[o], s)); while (a < e.last_lit);
-  E(e, 256, t)
+    do r = e.pending_buf[e.d_buf + 2 * a] << 8 | e.pending_buf[e.d_buf + 2 * a + 1], i = e.pending_buf[e.l_buf + a], a++, 0 === r ? _(e, i, t) : (_(e, (o = b[i]) + 256 + 1, t), 0 !== (s = d[o]) && E(e, i -= m[o], s), _(e, o = S(--r), n), 0 !== (s = l[o]) && E(e, r -= y[o], s)); while (a < e.last_lit);
+  _(e, 256, t)
 }
 
 function I(e, t) {
@@ -114,16 +114,16 @@ function I(e, t) {
       f = t.stat_desc.has_stree,
       p = t.stat_desc.extra_bits,
       h = t.stat_desc.extra_base,
-      g = t.stat_desc.max_length,
-      b = 0;
+      v = t.stat_desc.max_length,
+      g = 0;
     for (o = 0; o <= 15; o++) e.bl_count[o] = 0;
-    for (c[2 * e.heap[e.heap_max] + 1] = 0, n = e.heap_max + 1; n < u; n++)(o = c[2 * c[2 * (r = e.heap[n]) + 1] + 1] + 1) > g && (o = g, b++), c[2 * r + 1] = o, !(r > d) && (e.bl_count[o]++, s = 0, r >= h && (s = p[r - h]), a = c[2 * r], e.opt_len += a * (o + s), f && (e.static_len += a * (l[2 * r + 1] + s)));
-    if (0 !== b) {
+    for (c[2 * e.heap[e.heap_max] + 1] = 0, n = e.heap_max + 1; n < u; n++)(o = c[2 * c[2 * (r = e.heap[n]) + 1] + 1] + 1) > v && (o = v, g++), c[2 * r + 1] = o, !(r > d) && (e.bl_count[o]++, s = 0, r >= h && (s = p[r - h]), a = c[2 * r], e.opt_len += a * (o + s), f && (e.static_len += a * (l[2 * r + 1] + s)));
+    if (0 !== g) {
       do {
-        for (o = g - 1; 0 === e.bl_count[o];) o--;
-        e.bl_count[o]--, e.bl_count[o + 1] += 2, e.bl_count[g]--, b -= 2
-      } while (b > 0);
-      for (o = g; 0 !== o; o--)
+        for (o = v - 1; 0 === e.bl_count[o];) o--;
+        e.bl_count[o]--, e.bl_count[o + 1] += 2, e.bl_count[v]--, g -= 2
+      } while (g > 0);
+      for (o = v; 0 !== o; o--)
         for (r = e.bl_count[o]; 0 !== r;) {
           if (!((i = e.heap[--n]) > d)) c[2 * i + 1] !== o && (e.opt_len += (o - c[2 * i + 1]) * c[2 * i], c[2 * i + 1] = o), r--
         }
@@ -154,36 +154,36 @@ function j(e, t, n) {
   for (0 === s && (c = 138, u = 3), r = 0; r <= n; r++) {
     if (i = s, s = t[(r + 1) * 2 + 1], !(++a < c) || i !== s) {
       if (a < u)
-        do E(e, i, e.bl_tree); while (0 != --a);
-      else 0 !== i ? (i !== o && (E(e, i, e.bl_tree), a--), E(e, 16, e.bl_tree), _(e, a - 3, 2)) : a <= 10 ? (E(e, 17, e.bl_tree), _(e, a - 3, 3)) : (E(e, 18, e.bl_tree), _(e, a - 11, 7));
+        do _(e, i, e.bl_tree); while (0 != --a);
+      else 0 !== i ? (i !== o && (_(e, i, e.bl_tree), a--), _(e, 16, e.bl_tree), E(e, a - 3, 2)) : a <= 10 ? (_(e, 17, e.bl_tree), E(e, a - 3, 3)) : (_(e, 18, e.bl_tree), E(e, a - 11, 7));
       a = 0, o = i, 0 === s ? (c = 138, u = 3) : i === s ? (c = 6, u = 3) : (c = 7, u = 4)
     }
   }
 }
-var N = !1;
+var L = !1;
 
-function L(e, t, n, r) {
+function N(e, t, n, r) {
   var i, o, a, c;
-  _(e, 0 + (r ? 1 : 0), 3), i = e, o = t, a = n, c = !0, P(i), c && (k(i, a), k(i, ~a)), s.arraySet(i.pending_buf, i.window, o, a, i.pending), i.pending += a
+  E(e, 0 + (r ? 1 : 0), 3), i = e, o = t, a = n, c = !0, P(i), c && (k(i, a), k(i, ~a)), s.arraySet(i.pending_buf, i.window, o, a, i.pending), i.pending += a
 }
 t._tr_init = function(e) {
-  !N && (! function() {
+  !L && (! function() {
     var e, t, n, s, a, u = Array(16);
     for (s = 0, n = 0; s < 28; s++)
-      for (e = 0, m[s] = n; e < 1 << d[s]; e++) v[n++] = s;
-    for (v[n - 1] = s, a = 0, s = 0; s < 16; s++)
-      for (e = 0, y[s] = a; e < 1 << l[s]; e++) b[a++] = s;
+      for (e = 0, m[s] = n; e < 1 << d[s]; e++) b[n++] = s;
+    for (b[n - 1] = s, a = 0, s = 0; s < 16; s++)
+      for (e = 0, y[s] = a; e < 1 << l[s]; e++) g[a++] = s;
     for (a >>= 7; s < 30; s++)
-      for (e = 0, y[s] = a << 7; e < 1 << l[s] - 7; e++) b[256 + a++] = s;
+      for (e = 0, y[s] = a << 7; e < 1 << l[s] - 7; e++) g[256 + a++] = s;
     for (t = 0; t <= 15; t++) u[t] = 0;
     for (e = 0; e <= 143;) h[2 * e + 1] = 8, e++, u[8]++;
     for (; e <= 255;) h[2 * e + 1] = 9, e++, u[9]++;
     for (; e <= 279;) h[2 * e + 1] = 7, e++, u[7]++;
     for (; e <= 287;) h[2 * e + 1] = 8, e++, u[8]++;
-    for (D(h, c + 1, u), e = 0; e < 30; e++) g[2 * e + 1] = 5, g[2 * e] = M(e, 5);
-    r = new x(h, d, 257, c, 15), i = new x(g, l, 0, 30, 15), o = new x([], f, 0, 19, 7)
-  }(), N = !0), e.l_desc = new w(e.dyn_ltree, r), e.d_desc = new w(e.dyn_dtree, i), e.bl_desc = new w(e.bl_tree, o), e.bi_buf = 0, e.bi_valid = 0, C(e)
-}, t._tr_stored_block = L, t._tr_flush_block = function(e, t, n, r) {
+    for (D(h, c + 1, u), e = 0; e < 30; e++) v[2 * e + 1] = 5, v[2 * e] = M(e, 5);
+    r = new x(h, d, 257, c, 15), i = new x(v, l, 0, 30, 15), o = new x([], f, 0, 19, 7)
+  }(), L = !0), e.l_desc = new w(e.dyn_ltree, r), e.d_desc = new w(e.dyn_dtree, i), e.bl_desc = new w(e.bl_tree, o), e.bi_buf = 0, e.bi_valid = 0, C(e)
+}, t._tr_stored_block = N, t._tr_flush_block = function(e, t, n, r) {
   var i, o, s = 0;
   e.level > 0 ? (2 === e.strm.data_type && (e.strm.data_type = function(e) {
     var t, n = 4093624447;
@@ -197,14 +197,14 @@ t._tr_init = function(e) {
     var t;
     for (O(e, e.dyn_ltree, e.l_desc.max_code), O(e, e.dyn_dtree, e.d_desc.max_code), I(e, e.bl_desc), t = 18; t >= 3 && 0 === e.bl_tree[2 * p[t] + 1]; t--);
     return e.opt_len += 3 * (t + 1) + 5 + 5 + 4, t
-  }(e), i = e.opt_len + 3 + 7 >>> 3, (o = e.static_len + 3 + 7 >>> 3) <= i && (i = o)) : i = o = n + 5, n + 4 <= i && -1 !== t ? L(e, t, n, r) : 4 === e.strategy || o === i ? (_(e, 2 + (r ? 1 : 0), 3), R(e, h, g)) : (_(e, 4 + (r ? 1 : 0), 3), ! function(e, t, n, r) {
+  }(e), i = e.opt_len + 3 + 7 >>> 3, (o = e.static_len + 3 + 7 >>> 3) <= i && (i = o)) : i = o = n + 5, n + 4 <= i && -1 !== t ? N(e, t, n, r) : 4 === e.strategy || o === i ? (E(e, 2 + (r ? 1 : 0), 3), R(e, h, v)) : (E(e, 4 + (r ? 1 : 0), 3), ! function(e, t, n, r) {
     var i;
-    for (_(e, t - 257, 5), _(e, n - 1, 5), _(e, r - 4, 4), i = 0; i < r; i++) _(e, e.bl_tree[2 * p[i] + 1], 3);
+    for (E(e, t - 257, 5), E(e, n - 1, 5), E(e, r - 4, 4), i = 0; i < r; i++) E(e, e.bl_tree[2 * p[i] + 1], 3);
     j(e, e.dyn_ltree, t - 1), j(e, e.dyn_dtree, n - 1)
   }(e, e.l_desc.max_code + 1, e.d_desc.max_code + 1, s + 1), R(e, e.dyn_ltree, e.dyn_dtree)), C(e), r && P(e)
 }, t._tr_tally = function(e, t, n) {
-  return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(v[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * S(t)]++), e.last_lit === e.lit_bufsize - 1
+  return e.pending_buf[e.d_buf + 2 * e.last_lit] = t >>> 8 & 255, e.pending_buf[e.d_buf + 2 * e.last_lit + 1] = 255 & t, e.pending_buf[e.l_buf + e.last_lit] = 255 & n, e.last_lit++, 0 === t ? e.dyn_ltree[2 * n]++ : (e.matches++, t--, e.dyn_ltree[(b[n] + 256 + 1) * 2]++, e.dyn_dtree[2 * S(t)]++), e.last_lit === e.lit_bufsize - 1
 }, t._tr_align = function(e) {
   var t;
-  _(e, 2, 3), E(e, 256, h), 16 === (t = e).bi_valid ? (k(t, t.bi_buf), t.bi_buf = 0, t.bi_valid = 0) : t.bi_valid >= 8 && (t.pending_buf[t.pending++] = 255 & t.bi_buf, t.bi_buf >>= 8, t.bi_valid -= 8)
+  E(e, 2, 3), _(e, 256, h), 16 === (t = e).bi_valid ? (k(t, t.bi_buf), t.bi_buf = 0, t.bi_valid = 0) : t.bi_valid >= 8 && (t.pending_buf[t.pending++] = 255 & t.bi_buf, t.bi_buf >>= 8, t.bi_valid -= 8)
 }

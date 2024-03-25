@@ -1,85 +1,85 @@
 "use strict";
 n.r(t), n.d(t, {
   createNonce: function() {
-    return o
+    return d
   },
   userRecordToServer: function() {
     return c
   },
   default: function() {
-    return E
+    return _
   },
   createBotMessage: function() {
     return f
   }
 }), n("702976"), n("424973");
-var a = n("627445"),
-  l = n.n(a),
-  s = n("256572"),
-  i = n("766274"),
-  r = n("697218"),
-  d = n("299039"),
+var i = n("627445"),
+  s = n.n(i),
+  r = n("256572"),
+  a = n("766274"),
+  o = n("697218"),
+  l = n("299039"),
   u = n("49111");
 
-function o() {
-  return d.default.fromTimestamp(Date.now())
+function d() {
+  return l.default.fromTimestamp(Date.now())
 }
 
 function c(e) {
   let {
     id: t,
     username: n,
-    avatar: a,
-    discriminator: l,
-    bot: s,
-    globalName: i
+    avatar: i,
+    discriminator: s,
+    bot: r,
+    globalName: a
   } = e;
   return {
     id: t,
     username: n,
-    avatar: a,
-    discriminator: l,
-    bot: s,
-    global_name: i
+    avatar: i,
+    discriminator: s,
+    bot: r,
+    global_name: a
   }
 }
 
-function E(e) {
+function _(e) {
   let {
     channelId: t,
     content: n,
-    tts: a = !1,
-    type: d = u.MessageTypes.DEFAULT,
-    messageReference: E,
+    tts: i = !1,
+    type: l = u.MessageTypes.DEFAULT,
+    messageReference: _,
     allowedMentions: f,
-    author: _,
-    flags: g,
-    nonce: h,
+    author: E,
+    flags: h,
+    nonce: g,
     poll: m
-  } = e, S = [];
-  if (d === u.MessageTypes.REPLY && (l(null != E, "Replies must have a message reference"), null == f || f.replied_user)) {
-    let e = s.default.getMessageByReference(E);
-    (null == e ? void 0 : e.state) === s.ReferencedMessageState.LOADED && S.push(c(e.message.author))
+  } = e, p = [];
+  if (l === u.MessageTypes.REPLY && (s(null != _, "Replies must have a message reference"), null == f || f.replied_user)) {
+    let e = r.default.getMessageByReference(_);
+    (null == e ? void 0 : e.state) === r.ReferencedMessageState.LOADED && p.push(c(e.message.author))
   }
-  return null == _ && (_ = r.default.getCurrentUser()), _ instanceof i.default && (_ = c(_)), l(null != _, "createMessage: author cannot be undefined"), {
-    id: null != h ? h : o(),
-    type: d,
+  return null == E && (E = o.default.getCurrentUser()), E instanceof a.default && (E = c(E)), s(null != E, "createMessage: author cannot be undefined"), {
+    id: null != g ? g : d(),
+    type: l,
     content: n,
     channel_id: t,
-    author: _,
+    author: E,
     attachments: [],
     embeds: [],
     pinned: !1,
-    mentions: S,
+    mentions: p,
     mention_channels: [],
     mention_roles: [],
     mention_everyone: !1,
     timestamp: new Date().toISOString(),
     state: u.MessageStates.SENDING,
-    tts: a,
-    message_reference: E,
-    flags: g,
-    nonce: h,
+    tts: i,
+    message_reference: _,
+    flags: h,
+    nonce: g,
     poll: m
   }
 }
@@ -88,15 +88,15 @@ function f(e) {
   let {
     messageId: t,
     channelId: n,
-    content: a,
-    embeds: l,
-    loggingName: s
+    content: i,
+    embeds: s,
+    loggingName: r
   } = e;
   return {
-    id: null != t ? t : o(),
+    id: null != t ? t : d(),
     type: u.MessageTypes.DEFAULT,
     flags: u.MessageFlags.EPHEMERAL,
-    content: a,
+    content: i,
     channel_id: n,
     author: {
       id: u.LOCAL_BOT_ID,
@@ -106,7 +106,7 @@ function f(e) {
       bot: !0
     },
     attachments: [],
-    embeds: null != l ? l : [],
+    embeds: null != s ? s : [],
     pinned: !1,
     mentions: [],
     mention_channels: [],
@@ -115,6 +115,6 @@ function f(e) {
     timestamp: new Date().toISOString(),
     state: u.MessageStates.SENT,
     tts: !1,
-    loggingName: s
+    loggingName: r
   }
 }

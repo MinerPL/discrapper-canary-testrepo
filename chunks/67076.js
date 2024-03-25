@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return S
+    return v
   }
 });
 var l = a("37983");
@@ -17,7 +17,7 @@ var n = a("414456"),
   f = a("49111"),
   m = a("994428"),
   h = a("782340"),
-  E = a("719593"),
+  E = a("194728"),
   g = a("487577");
 
 function I(e) {
@@ -89,7 +89,7 @@ function x() {
   })
 }
 
-function v(e) {
+function S(e) {
   let {
     onClose: t
   } = e;
@@ -122,12 +122,12 @@ function v(e) {
   })
 }
 
-function S(e) {
+function v(e) {
   let {
     guild: t,
     onClose: a
   } = e, n = (0, i.useStateFromStores)([r.default], () => r.default.can(f.Permissions.MANAGE_MESSAGES, t)), s = (0, c.default)(t, a);
-  return s ? n ? (0, l.jsx)(v, {
+  return s ? n ? (0, l.jsx)(S, {
     onClose: () => a(m.ContentDismissActionType.UNKNOWN)
   }) : (0, l.jsx)(_, {
     onClose: () => a(m.ContentDismissActionType.UNKNOWN)

@@ -1,7 +1,7 @@
-var e = n("27556"),
-  o = 1 / 0;
-t.exports = function(t) {
-  if ("string" == typeof t || e(t)) return t;
-  var r = t + "";
-  return "0" == r && 1 / t == -o ? "-0" : r
+var r = n("27556"),
+  i = 1 / 0;
+e.exports = function(e) {
+  if ("string" == typeof e || r(e)) return e;
+  var t = e + "";
+  return "0" == t && 1 / e == -i ? "-0" : t
 }

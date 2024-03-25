@@ -1,23 +1,23 @@
 "use strict";
-r.r(e), r.d(e, {
+r.r(t), r.d(t, {
   isAvatarDecorationRecord: function() {
-    return u
+    return i
   },
   default: function() {
-    return n
+    return a
   }
 });
-var n, i = r("265586"),
-  o = r("200410");
-let u = t => t instanceof n;
-n = class t extends o.default {
-  static fromServer(e) {
-    return new t({
-      ...super.fromServer(e),
-      ...e
+var a, n = r("265586"),
+  l = r("200410");
+let i = e => e instanceof a;
+a = class e extends l.default {
+  static fromServer(t) {
+    return new e({
+      ...super.fromServer(t),
+      ...t
     })
   }
-  constructor(t) {
-    super(t), this.type = i.CollectiblesItemType.AVATAR_DECORATION, this.asset = t.asset, this.label = t.label
+  constructor(e) {
+    super(e), this.type = n.CollectiblesItemType.AVATAR_DECORATION, this.asset = e.asset, this.label = e.label
   }
 }

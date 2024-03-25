@@ -4,44 +4,44 @@ r.r(t), r.d(t, {
     return u
   }
 }), r("808653"), r("794252"), r("424973");
-var u, l = r("506838"),
-  n = r("265586"),
-  i = r("797647"),
+var u, n = r("506838"),
+  i = r("265586"),
+  E = r("797647"),
   s = r("730297"),
-  o = r("792382"),
-  a = r("806410"),
-  c = r("49111");
-u = class e extends o.default {
+  l = r("792382"),
+  c = r("806410"),
+  o = r("49111");
+u = class e extends l.default {
   static fromServer(t) {
     var r;
     let {
       type: u,
-      premium_type: o,
-      category_sku_id: d,
-      prices: E,
-      ...C
+      premium_type: l,
+      category_sku_id: a,
+      prices: C,
+      ..._
     } = t;
     return new e({
-      ...super.fromServer(C),
+      ...super.fromServer(_),
       type: u,
-      premiumType: o === c.PREMIUM_TYPE_NONE ? null : o,
-      categorySkuId: d,
-      prices: null == (r = E) ? {} : Object.keys(r).reduce((e, t) => {
+      premiumType: l === o.PREMIUM_TYPE_NONE ? null : l,
+      categorySkuId: a,
+      prices: null == (r = C) ? {} : Object.keys(r).reduce((e, t) => {
         if (null == r) return e;
         let u = r[t];
         return e[t] = {
           countryPrices: {
             countryCode: u.country_prices.country_code,
-            prices: u.country_prices.prices.map(e => (0, i.getPriceFromServer)(e, !0))
+            prices: u.country_prices.prices.map(e => (0, E.getPriceFromServer)(e, !0))
           },
           paymentSourcePrices: {}
         }, e
       }, {}),
-      items: C.items.reduce((e, t) => (0, l.match)(t).with({
-        type: n.CollectiblesItemType.AVATAR_DECORATION
+      items: _.items.reduce((e, t) => (0, n.match)(t).with({
+        type: i.CollectiblesItemType.AVATAR_DECORATION
       }, t => (e.push(s.default.fromServer(t)), e)).with({
-        type: n.CollectiblesItemType.PROFILE_EFFECT
-      }, t => (e.push(a.default.fromServer(t)), e)).otherwise(() => e), [])
+        type: i.CollectiblesItemType.PROFILE_EFFECT
+      }, t => (e.push(c.default.fromServer(t)), e)).otherwise(() => e), [])
     })
   }
   constructor(e) {

@@ -1,20 +1,20 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = l("37983"),
-  a = l("884691"),
-  s = l("862337"),
-  i = l("782340");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("862337"),
+  s = n("782340");
 
 function r(e) {
   return "".concat(e).length < 13 ? 1e3 * e : e
 }
 
 function o(e) {
-  return class extends a.PureComponent {
+  return class extends l.PureComponent {
     componentDidMount() {
       this._interval.start(1e3, () => this.setState(this.getUpdatedTime()))
     }
@@ -39,36 +39,36 @@ function o(e) {
       return t && e <= 0 ? -1 : e < 10 ? "0".concat(e) : e
     }
     getDiff(e, t) {
-      let l = Math.max(t - e, 0);
+      let n = Math.max(t - e, 0);
       return {
-        hours: Math.floor(l / 3600) % 24,
-        minutes: Math.floor(l / 60) % 60,
-        seconds: Math.floor(l) % 60
+        hours: Math.floor(n / 3600) % 24,
+        minutes: Math.floor(n / 60) % 60,
+        seconds: Math.floor(n) % 60
       }
     }
     render() {
       let {
         timestamps: t,
-        ...l
+        ...n
       } = this.props, {
-        hours: a,
-        minutes: s,
+        hours: l,
+        minutes: a,
         seconds: r
       } = this.state, o = {
-        hours: this.renderTime(a, !0),
-        minutes: this.renderTime(s),
+        hours: this.renderTime(l, !0),
+        minutes: this.renderTime(a),
         seconds: this.renderTime(r)
       };
-      return null != t.end ? (0, n.jsx)(e, {
-        ...l,
-        message: i.default.Messages.USER_ACTIVITY_TIMESTAMP_END.format(o)
-      }) : null != t.start ? (0, n.jsx)(e, {
-        ...l,
-        message: i.default.Messages.USER_ACTIVITY_TIMESTAMP_START.format(o)
+      return null != t.end ? (0, i.jsx)(e, {
+        ...n,
+        message: s.default.Messages.USER_ACTIVITY_TIMESTAMP_END.format(o)
+      }) : null != t.start ? (0, i.jsx)(e, {
+        ...n,
+        message: s.default.Messages.USER_ACTIVITY_TIMESTAMP_START.format(o)
       }) : null
     }
     constructor(e) {
-      super(e), this._interval = new s.Interval, this.state = {
+      super(e), this._interval = new a.Interval, this.state = {
         ...this.getUpdatedTime()
       }
     }

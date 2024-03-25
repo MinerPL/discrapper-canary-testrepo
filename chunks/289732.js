@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
     return d
   }
@@ -13,21 +13,21 @@ function a() {
     shelfOrder: []
   }
 }
-let u = a();
-class r extends n.default.PersistedStore {
-  initialize(e) {
-    u = {
+let r = a();
+class u extends n.default.PersistedStore {
+  initialize(t) {
+    r = {
       ...a(),
-      ...null != e ? e : {}
+      ...null != t ? t : {}
     }
   }
   getState() {
-    return u
+    return r
   }
 }
-r.displayName = "ActivityShelfStore", r.persistKey = "ActivityShelfStore";
-var d = new r(l.default, {
+u.displayName = "ActivityShelfStore", u.persistKey = "ActivityShelfStore";
+var d = new u(l.default, {
   LOGOUT: function() {
-    u = a()
+    r = a()
   }
 })

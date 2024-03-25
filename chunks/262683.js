@@ -1,70 +1,70 @@
 "use strict";
 n.r(t), n.d(t, {
   PaymentModalAddPaymentStep: function() {
-    return _
+    return p
   }
 });
 var s = n("627445"),
   r = n.n(s),
   a = n("775560"),
-  l = n("917247"),
-  i = n("724522"),
+  i = n("917247"),
+  l = n("724522"),
   u = n("599110"),
   c = n("635357"),
   o = n("642906"),
   d = n("85336"),
-  f = n("49111"),
-  m = n("646718");
+  m = n("49111"),
+  f = n("646718");
 
-function _(e) {
+function p(e) {
   let {
     analyticsData: t,
     initialPlanId: n,
     breadcrumbSteps: s,
-    handleStepChange: _,
-    referralTrialOfferId: E,
+    handleStepChange: p,
+    referralTrialOfferId: _,
     onReturn: I
   } = e, {
-    contextMetadata: p,
-    step: N,
-    paymentSources: S,
+    contextMetadata: S,
+    step: E,
+    paymentSources: P,
     paymentSourceId: T,
-    setPaymentSourceId: P,
-    purchaseError: C,
-    setPurchaseError: A,
-    purchaseErrorBlockRef: O,
-    paymentAuthenticationState: h,
-    selectedSkuId: R
+    setPaymentSourceId: N,
+    purchaseError: A,
+    setPurchaseError: C,
+    purchaseErrorBlockRef: h,
+    paymentAuthenticationState: v,
+    selectedSkuId: g
   } = (0, o.usePaymentContext)(), {
-    isGift: g
-  } = (0, c.useGiftContext)(), M = {
-    ...(0, i.useSharedPaymentModal)(),
-    paymentSources: S,
+    isGift: x
+  } = (0, c.useGiftContext)(), y = {
+    ...(0, l.useSharedPaymentModal)(),
+    paymentSources: P,
     paymentSourceId: T,
-    setPaymentSourceId: P,
-    purchaseError: C,
-    setPurchaseError: A,
-    purchaseErrorBlockRef: O,
-    paymentAuthenticationState: h
-  }, v = (0, l.usePremiumTrialOffer)(E), x = !g && null != v && null != R && (0, m.SubscriptionTrials)[v.trial_id].skus.includes(R), L = null != I ? I : () => {
-    let e = Object.values(S).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
-    _(e, {
+    setPaymentSourceId: N,
+    purchaseError: A,
+    setPurchaseError: C,
+    purchaseErrorBlockRef: h,
+    paymentAuthenticationState: v
+  }, O = (0, i.usePremiumTrialOffer)(_), M = !x && null != O && null != g && (0, f.SubscriptionTrials)[O.trial_id].skus.includes(g), R = null != I ? I : () => {
+    let e = Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
+    p(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
     })
   };
-  r(N, "Step should be set here");
-  let y = (0, a.useStableMemo)(() => Date.now(), [N]);
-  return (0, i.AddPaymentFlow)({
-    paymentModalArgs: M,
+  r(E, "Step should be set here");
+  let L = (0, a.useStableMemo)(() => Date.now(), [E]);
+  return (0, l.AddPaymentFlow)({
+    paymentModalArgs: y,
     initialStep: d.Step.PAYMENT_TYPE,
     prependSteps: [d.Step.PROMOTION_INFO],
     appendSteps: [d.Step.REVIEW, d.Step.CONFIRM],
     breadcrumpSteps: s,
-    currentBreadcrumpStep: N,
+    currentBreadcrumpStep: E,
     usePaymentModalStep: !0,
-    onReturn: L,
+    onReturn: R,
     onComplete: e => {
-      _(d.Step.REVIEW, {
+      p(d.Step.REVIEW, {
         trackedFromStep: e
       })
     },
@@ -73,14 +73,14 @@ function _(e) {
         currentStep: n,
         toStep: s
       } = e, r = Date.now();
-      u.default.track(f.AnalyticEvents.PAYMENT_FLOW_STEP, {
+      u.default.track(m.AnalyticEvents.PAYMENT_FLOW_STEP, {
         ...t,
         from_step: n,
         to_step: s,
-        step_duration_ms: r - y,
-        flow_duration_ms: r - p.startTime
+        step_duration_ms: r - L,
+        flow_duration_ms: r - S.startTime
       })
     },
-    isEligibleForTrial: x
+    isEligibleForTrial: M
   })
 }

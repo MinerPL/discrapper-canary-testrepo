@@ -13,9 +13,9 @@ var a = l("37983"),
   u = l("993105"),
   o = l("50885"),
   d = l("782340"),
-  h = l("335420");
-let p = "select";
-class f extends s.PureComponent {
+  h = l("370121");
+let f = "select";
+class p extends s.PureComponent {
   fetchAllDirectoryMetadata() {
     let {
       installationPaths: e
@@ -54,7 +54,7 @@ class f extends s.PureComponent {
       value: t,
       label: this.renderLabel(t)
     }), l.push({
-      value: p,
+      value: f,
       label: d.default.Messages.APPLICATION_INSTALLATION_MODAL_SELECT_DIRECTORY
     }), l
   }
@@ -119,7 +119,7 @@ class f extends s.PureComponent {
     super(...e), this.state = {
       newInstallationPath: null
     }, this.fetchedMetadataPaths = new Set, this.handleChange = e => {
-      e === p ? o.default.showOpenDialog(["openDirectory"]).then(e => {
+      e === f ? o.default.showOpenDialog(["openDirectory"]).then(e => {
         if (null != e && e.length > 0) {
           let t = e[0];
           this.setState({
@@ -138,4 +138,4 @@ class f extends s.PureComponent {
 var I = n.default.connectStores([c.default], () => ({
   installationPaths: c.default.installationPaths,
   installationPathsMetadata: c.default.installationPathsMetadata
-}))(f)
+}))(p)

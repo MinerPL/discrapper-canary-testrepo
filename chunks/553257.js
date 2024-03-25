@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   experiment: function() {
-    return s
+    return i
   },
   usePomeloEligibility: function() {
-    return a
+    return r
   },
   getPomeloEligibility: function() {
-    return l
+    return a
   }
 });
-var i = n("862205");
-let s = (0, i.createExperiment)({
+var s = n("862205");
+let i = (0, s.createExperiment)({
     kind: "user",
     label: "Pomelo",
     id: "2023-03_pomelo",
@@ -26,20 +26,20 @@ let s = (0, i.createExperiment)({
       }
     }]
   }),
-  a = () => {
+  r = () => {
     let {
       enabled: e
-    } = s.useExperiment({
+    } = i.useExperiment({
       location: "faf26d_1"
     }, {
       autoTrackExposure: !1
     });
     return e
   },
-  l = () => {
+  a = () => {
     let {
       enabled: e
-    } = s.getCurrentConfig({
+    } = i.getCurrentConfig({
       location: "faf26d_2"
     }, {
       autoTrackExposure: !1

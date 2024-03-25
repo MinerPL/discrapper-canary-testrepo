@@ -1,33 +1,33 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return I
   }
 }), s("781738");
 var a = s("37983"),
-  n = s("884691"),
-  r = s("414456"),
-  o = s.n(r),
+  r = s("884691"),
+  n = s("414456"),
+  o = s.n(n),
   l = s("446674"),
   i = s("77078"),
-  u = s("437822"),
-  d = s("152434"),
-  c = s("21572"),
-  h = s("24287"),
+  d = s("437822"),
+  u = s("152434"),
+  h = s("21572"),
+  c = s("24287"),
   f = s("878720"),
-  m = s("25033"),
-  p = s("589252"),
-  C = s("161778"),
+  p = s("25033"),
+  g = s("589252"),
+  m = s("161778"),
   S = s("271938"),
-  g = s("476108"),
-  T = s("124969"),
+  T = s("476108"),
+  C = s("124969"),
   A = s("659500"),
-  N = s("439932"),
-  E = s("49111"),
+  E = s("439932"),
+  N = s("49111"),
   _ = s("782340"),
-  M = s("698995"),
-  O = s("926622");
-class I extends n.PureComponent {
+  M = s("994613"),
+  R = s("890957");
+class O extends r.PureComponent {
   componentDidMount() {
     window.addEventListener("keydown", this.handleTabOrEnter)
   }
@@ -36,9 +36,9 @@ class I extends n.PureComponent {
       authenticated: t,
       transitionTo: s
     } = this.props;
-    if (t && !e.authenticated && s(E.Routes.APP), e.errors !== this.props.errors) {
-      var a, n, r;
-      this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (n = this.loginRef) || void 0 === n || n.focus() : this.hasError("code") && (null === (r = this.codeRef) || void 0 === r || r.focus())
+    if (t && !e.authenticated && s(N.Routes.APP), e.errors !== this.props.errors) {
+      var a, r, n;
+      this.hasError("password") ? null === (a = this.passwordRef) || void 0 === a || a.focus() : this.hasError("email") || this.hasError("login") ? null === (r = this.loginRef) || void 0 === r || r.focus() : this.hasError("code") && (null === (n = this.codeRef) || void 0 === n || n.focus())
     }
   }
   componentWillUnmount() {
@@ -51,9 +51,9 @@ class I extends n.PureComponent {
     var e;
     let {
       country: t
-    } = this.props, s = !this.hasError("email") && this.hasError("password"), r = (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(T.Title, {
-        className: o(O.marginBottom8, M.title),
+    } = this.props, s = !this.hasError("email") && this.hasError("password"), n = (0, a.jsxs)(r.Fragment, {
+      children: [(0, a.jsx)(C.Title, {
+        className: o(R.marginBottom8, M.title),
         children: _.default.Messages.MULTI_ACCOUNT_LOGIN_TITLE
       }, "title"), (0, a.jsx)(i.Text, {
         color: "header-secondary",
@@ -64,12 +64,12 @@ class I extends n.PureComponent {
     });
     return (0, a.jsxs)("div", {
       className: M.mainLoginContainer,
-      children: [r, (0, a.jsxs)(T.Block, {
+      children: [n, (0, a.jsxs)(C.Block, {
         className: M.loginForm,
-        children: [(0, a.jsx)(p.default, {
+        children: [(0, a.jsx)(g.default, {
           alpha2: t.alpha2,
           countryCode: t.code.split(" ")[0],
-          className: O.marginBottom20,
+          className: R.marginBottom20,
           label: _.default.Messages.FORM_LABEL_EMAIL_OR_PHONE_NUMBER,
           error: null !== (e = this.renderError("login")) && void 0 !== e ? e : this.renderError("email"),
           onChange: (e, t) => this.setState({
@@ -84,7 +84,7 @@ class I extends n.PureComponent {
           value: this.state.login,
           autoFocus: !s,
           required: !0
-        }), (0, a.jsx)(T.Input, {
+        }), (0, a.jsx)(C.Input, {
           label: _.default.Messages.FORM_LABEL_PASSWORD,
           error: this.renderError("password"),
           onChange: e => this.setState({
@@ -98,11 +98,11 @@ class I extends n.PureComponent {
           autoFocus: s,
           value: this.state.password,
           required: !0
-        }), (0, a.jsx)(T.Button, {
+        }), (0, a.jsx)(C.Button, {
           onClick: this.handleForgotPassword,
           look: i.Button.Looks.LINK,
           color: i.Button.Colors.LINK,
-          className: o(O.marginTop4),
+          className: o(R.marginTop4),
           children: _.default.Messages.FORGOT_PASSWORD
         })]
       })]
@@ -113,30 +113,30 @@ class I extends n.PureComponent {
       authBoxClassName: e,
       loginStatus: t,
       closeLogin: s,
-      theme: n
+      theme: r
     } = this.props;
     return (0, a.jsxs)("div", {
       className: M.pageContainer,
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(C.default, {
         tag: "form",
         className: e,
         expanded: !0,
-        theme: n,
+        theme: r,
         children: this.renderDefaultForm()
       }), (0, a.jsxs)("div", {
-        "data-theme": n,
-        className: o((0, N.getThemeClass)(n), M.navRow),
+        "data-theme": r,
+        className: o((0, E.getThemeClass)(r), M.navRow),
         children: [(0, a.jsx)(i.Button, {
           type: "button",
           look: i.Button.Looks.LINK,
           "aria-label": "back",
           onClick: s,
           size: i.Button.Sizes.SMALL,
-          className: o((0, N.getThemeClass)(n), M.backButton),
+          className: o((0, E.getThemeClass)(r), M.backButton),
           children: _.default.Messages.BACK
         }), (0, a.jsx)(i.Button, {
           "aria-label": "continue",
-          submitting: t === E.LoginStates.LOGGING_IN,
+          submitting: t === N.LoginStates.LOGGING_IN,
           color: i.Button.Colors.BRAND,
           onClick: this.handleLogin,
           className: M.continueButton,
@@ -150,12 +150,12 @@ class I extends n.PureComponent {
       ticket: this.props.mfaTicket,
       methods: this.props.mfaMethods
     };
-    return (0, a.jsx)(T.default, {
+    return (0, a.jsx)(C.default, {
       style: {
         padding: 0
       },
       theme: this.props.theme,
-      children: (0, a.jsx)(h.MFASlides, {
+      children: (0, a.jsx)(c.MFASlides, {
         mfaFinish: this.handleTokenSubmitMFA,
         request: e,
         onEarlyClose: () => {
@@ -169,26 +169,26 @@ class I extends n.PureComponent {
     let {
       authBoxClassName: e,
       theme: t
-    } = this.props, s = this.props.loginStatus === E.LoginStates.ACCOUNT_DISABLED, n = s ? _.default.Messages.ACCOUNT_DISABLED_TITLE : _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, r = s ? _.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
-    return (0, a.jsxs)(T.default, {
+    } = this.props, s = this.props.loginStatus === N.LoginStates.ACCOUNT_DISABLED, r = s ? _.default.Messages.ACCOUNT_DISABLED_TITLE : _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, n = s ? _.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
+    return (0, a.jsxs)(C.default, {
       tag: "form",
       onSubmit: this.handleReset,
       className: e,
       theme: t,
-      children: [(0, a.jsx)(T.Title, {
-        className: O.marginBottom8,
-        children: n
-      }), (0, a.jsx)(T.SubTitle, {
-        className: O.marginBottom20,
+      children: [(0, a.jsx)(C.Title, {
+        className: R.marginBottom8,
         children: r
-      }), (0, a.jsxs)(T.Block, {
+      }), (0, a.jsx)(C.SubTitle, {
+        className: R.marginBottom20,
+        children: n
+      }), (0, a.jsxs)(C.Block, {
         children: [(0, a.jsx)(i.Button, {
           color: i.Button.Colors.BRAND,
           type: "submit",
           fullWidth: !0,
           children: _.default.Messages._RETURN_TO_LOGIN
         }), (0, a.jsx)("div", {
-          className: o(O.marginTop8, M.needAccount),
+          className: o(R.marginTop8, M.needAccount),
           children: _.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_CANCEL.format({
             onClick: this.handleCancelAccountDeletion
           })
@@ -200,10 +200,10 @@ class I extends n.PureComponent {
     let {
       resetPasswordPhoneToken: e
     } = this.state;
-    return (0, a.jsx)(d.default, {
+    return (0, a.jsx)(u.default, {
       resetToken: e,
       onLoginSuccess: e => {
-        u.default.switchAccountToken(e)
+        d.default.switchAccountToken(e)
       },
       ...this.props
     })
@@ -214,12 +214,12 @@ class I extends n.PureComponent {
     } = this.props, {
       phoneVerifyError: t
     } = this.state;
-    return (0, a.jsx)(T.default, {
+    return (0, a.jsx)(C.default, {
       tag: "form",
       className: e,
       children: (0, a.jsx)("div", {
-        className: O.marginTop20,
-        children: (0, a.jsx)(c.default, {
+        className: R.marginTop20,
+        children: (0, a.jsx)(h.default, {
           title: _.default.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_TITLE,
           subtitle: _.default.Messages.PASSWORD_RECOVERY_VERIFY_PHONE_SUBTITLE_RESEND.format({
             onResendClick: this.handleResendCode
@@ -237,25 +237,25 @@ class I extends n.PureComponent {
     } = this.props;
     if (null != this.state.resetPasswordPhoneToken) return this.renderResetPhonePassword();
     switch (e) {
-      case E.LoginStates.LOGGING_IN_MFA_SMS:
-      case E.LoginStates.MFA_SMS_STEP:
-      case E.LoginStates.LOGGING_IN_MFA:
-      case E.LoginStates.MFA_STEP:
+      case N.LoginStates.LOGGING_IN_MFA_SMS:
+      case N.LoginStates.MFA_SMS_STEP:
+      case N.LoginStates.LOGGING_IN_MFA:
+      case N.LoginStates.MFA_STEP:
         return this.renderMFA();
-      case E.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION:
-      case E.LoginStates.ACCOUNT_DISABLED:
+      case N.LoginStates.ACCOUNT_SCHEDULED_FOR_DELETION:
+      case N.LoginStates.ACCOUNT_DISABLED:
         return this.renderDisabledAccount();
-      case E.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION:
+      case N.LoginStates.PASSWORD_RECOVERY_PHONE_VERIFICATION:
         return this.renderPhonePasswordRecovery();
-      case E.LoginStates.LOGGING_IN:
-      case E.LoginStates.NONE:
+      case N.LoginStates.LOGGING_IN:
+      case N.LoginStates.NONE:
       default:
         return this.renderDefault()
     }
   }
   constructor(e) {
     super(e), this.handleAuthToken = async e => {
-      await u.default.loginToken(e, !1)
+      await d.default.loginToken(e, !1)
     }, this.handleTabOrEnter = e => {
       if ("Tab" === e.key && !e.shiftKey && e.target === this.loginRef) {
         var t;
@@ -288,7 +288,7 @@ class I extends n.PureComponent {
       null == e || e.preventDefault(), null === (t = this.loginRef) || void 0 === t || t.focus();
       let s = this.getFullLogin();
       try {
-        A.ComponentDispatch.dispatch(E.ComponentActions.WAVE_EMPHASIZE), await u.default.forgotPassword(s), (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
+        A.ComponentDispatch.dispatch(N.ComponentActions.WAVE_EMPHASIZE), await d.default.forgotPassword(s), (0, i.openModal)(e => (0, a.jsx)(i.ConfirmModal, {
           header: _.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
           confirmText: _.default.Messages.OKAY,
           confirmButtonColor: i.Button.Colors.BRAND,
@@ -306,7 +306,7 @@ class I extends n.PureComponent {
         password: t,
         undelete: s
       } = this.state;
-      null != e && e.preventDefault(), u.default.login({
+      null != e && e.preventDefault(), d.default.login({
         login: this.getFullLogin(),
         password: t,
         undelete: s,
@@ -334,7 +334,7 @@ class I extends n.PureComponent {
         data: s,
         ticket: a
       } = e;
-      return u.default.loginMFAv2({
+      return d.default.loginMFAv2({
         code: s,
         ticket: a,
         mfaType: t,
@@ -343,7 +343,7 @@ class I extends n.PureComponent {
     }, this.handleResendCode = () => {
       f.default.resendCode(this.getFullLogin())
     }, this.handleReset = e => {
-      null != e && e.preventDefault(), u.default.loginReset(!0), this.setState({
+      null != e && e.preventDefault(), d.default.loginReset(!0), this.setState({
         password: "",
         loginPrefix: "",
         login: "",
@@ -368,12 +368,12 @@ class I extends n.PureComponent {
     }
   }
 }
-I.defaultProps = {
+O.defaultProps = {
   transitionTo: e => s.g.location.assign(e),
   replaceWith: e => s.g.location.replace(e)
 };
-var x = function(e) {
-  let t = (0, l.useStateFromStoresObject)([g.default, S.default, m.default, C.default], () => ({
+var I = function(e) {
+  let t = (0, l.useStateFromStoresObject)([T.default, S.default, p.default, m.default], () => ({
     authenticated: S.default.isAuthenticated(),
     loginStatus: S.default.getLoginStatus(),
     mfaTicket: S.default.getMFATicket(),
@@ -381,11 +381,11 @@ var x = function(e) {
     maskedPhone: S.default.getMaskedPhone(),
     mfaMethods: S.default.getMFAMethods(),
     errors: S.default.getErrors(),
-    defaultRoute: g.default.defaultRoute,
-    country: m.default.getCountryCode(),
-    theme: C.default.theme
+    defaultRoute: T.default.defaultRoute,
+    country: p.default.getCountryCode(),
+    theme: m.default.theme
   }));
-  return (0, a.jsx)(I, {
+  return (0, a.jsx)(O, {
     ...e,
     ...t
   })

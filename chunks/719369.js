@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 }), n("424973"), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("907002"),
-  l = n("948062"),
-  r = n("309633");
+  l = n("146606"),
+  i = n("948062"),
+  r = n("343691");
 class o extends s.PureComponent {
   renderPlaceholders() {
     let {
       loadingPlaceholderCount: e
     } = this.props, t = [];
-    for (let n = 0; n < e; n++) t.push((0, a.jsx)(l.DiscoverSearchResultPlaceholder, {}, n));
+    for (let n = 0; n < e; n++) t.push((0, a.jsx)(i.DiscoverSearchResultPlaceholder, {}, n));
     return t
   }
   render() {
@@ -22,7 +22,7 @@ class o extends s.PureComponent {
       guilds: e,
       loading: t
     } = this.props;
-    return (0, a.jsx)(i.Spring, {
+    return (0, a.jsx)(l.Spring, {
       from: {
         opacity: t ? 0 : 1
       },
@@ -30,7 +30,7 @@ class o extends s.PureComponent {
         opacity: 1
       },
       delay: 100,
-      children: n => (0, a.jsx)(i.animated.div, {
+      children: n => (0, a.jsx)(l.animated.div, {
         className: r.guildList,
         style: n,
         children: t || null == e ? this.renderPlaceholders() : e.map(this.renderGuild)
@@ -50,7 +50,7 @@ class o extends s.PureComponent {
         theme: n,
         onTagClick: s
       } = this.props;
-      return (0, a.jsx)(l.default, {
+      return (0, a.jsx)(i.default, {
         guild: e,
         theme: n,
         onView: this.handleViewGuild,

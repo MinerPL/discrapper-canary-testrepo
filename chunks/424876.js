@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 });
 var a = s("37983"),
@@ -14,11 +14,11 @@ var a = s("37983"),
   u = s("191814"),
   c = s("49111"),
   S = s("782340"),
-  E = s("973742"),
-  f = s("376121"),
-  T = s("137963");
+  E = s("314207"),
+  T = s("809432"),
+  f = s("137963");
 
-function m(e) {
+function _(e) {
   let {
     onClickManageSubscription: t
   } = e, s = (0, r.useStateFromStores)([d.default], () => d.default.getSubscriptions()), l = n.useMemo(() => Object.values(null != s ? s : {}).filter(e => e.type === c.SubscriptionTypes.GUILD).filter(e => e.status !== c.SubscriptionStatusTypes.ENDED), [s]);
@@ -37,9 +37,9 @@ function m(e) {
     }), (0, a.jsx)(u.default, {
       size: 24
     }), (0, a.jsxs)("div", {
-      className: i(f.guildBoostingSubscriptionRow, E.card),
+      className: i(T.guildBoostingSubscriptionRow, E.card),
       children: [(0, a.jsx)("img", {
-        src: T,
+        src: f,
         alt: "",
         className: E.handImage
       }), (0, a.jsxs)("div", {

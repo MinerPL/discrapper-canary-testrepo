@@ -4,33 +4,33 @@ n.r(t), n.d(t, {
     return r
   },
   ADD_TARGET: function() {
-    return o
-  },
-  REMOVE_SOURCE: function() {
-    return a
-  },
-  REMOVE_TARGET: function() {
     return i
   },
-  addSource: function() {
+  REMOVE_SOURCE: function() {
+    return o
+  },
+  REMOVE_TARGET: function() {
     return s
+  },
+  addSource: function() {
+    return a
   },
   addTarget: function() {
     return c
   },
   removeSource: function() {
-    return l
+    return u
   },
   removeTarget: function() {
-    return u
+    return d
   }
 });
 var r = "dnd-core/ADD_SOURCE",
-  o = "dnd-core/ADD_TARGET",
-  a = "dnd-core/REMOVE_SOURCE",
-  i = "dnd-core/REMOVE_TARGET";
+  i = "dnd-core/ADD_TARGET",
+  o = "dnd-core/REMOVE_SOURCE",
+  s = "dnd-core/REMOVE_TARGET";
 
-function s(e) {
+function a(e) {
   return {
     type: r,
     payload: {
@@ -41,25 +41,25 @@ function s(e) {
 
 function c(e) {
   return {
-    type: o,
+    type: i,
     payload: {
       targetId: e
     }
   }
 }
 
-function l(e) {
+function u(e) {
   return {
-    type: a,
+    type: o,
     payload: {
       sourceId: e
     }
   }
 }
 
-function u(e) {
+function d(e) {
   return {
-    type: i,
+    type: s,
     payload: {
       targetId: e
     }

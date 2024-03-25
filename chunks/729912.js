@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   SilentMessagesExperiment: function() {
-    return a
+    return s
   }
 });
-var n = l("862205");
-let a = (0, n.createExperiment)({
+var i = n("862205");
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2023-01_silent_messages",
   label: "Silent Messages",

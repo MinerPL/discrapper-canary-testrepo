@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("45299"),
+var l = s("446674"),
+  n = s("45299"),
   i = s("900938"),
   r = s("223170"),
   o = s("478964"),
@@ -15,11 +15,11 @@ var n = s("446674"),
   u = () => {
     let {
       guild: e
-    } = (0, n.useStateFromStores)([i.default], () => i.default.getProps()), {
+    } = (0, l.useStateFromStores)([i.default], () => i.default.getProps()), {
       submitting: t,
       welcomeSettings: s
-    } = (0, n.useStateFromStores)([o.default], () => o.default.getSettingsProps());
-    return null == e ? null : (0, a.jsx)(l.default, {
+    } = (0, l.useStateFromStores)([o.default], () => o.default.getSettingsProps());
+    return null == e ? null : (0, a.jsx)(n.default, {
       onSave: () => (0, r.saveWelcomeScreen)(e.id, s),
       onReset: r.resetWelcomeScreen,
       submitting: t,

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return m
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("394846"),
   o = n("77078"),
   u = n("892313"),
@@ -15,11 +15,11 @@ var a = n("37983"),
   c = n("145131"),
   f = n("109507"),
   E = n("49111"),
-  _ = n("782340"),
-  h = n("291273"),
-  C = n("926622");
-let I = d.default.getArticleURL(E.HelpdeskArticles.VERIFICATION_FAQ);
-class T extends s.PureComponent {
+  h = n("782340"),
+  _ = n("450552"),
+  C = n("890957");
+let S = d.default.getArticleURL(E.HelpdeskArticles.VERIFICATION_FAQ);
+class I extends s.PureComponent {
   renderFields() {
     let {
       types: e,
@@ -32,7 +32,7 @@ class T extends s.PureComponent {
         onVerify: s,
         theme: n
       }, t) : (0, a.jsx)(o.Button, {
-        className: l(C.marginBottom20),
+        className: i(C.marginBottom20),
         onClick: () => this.handleClick(e),
         children: u.default.getButtonTitle(e)
       }, e))
@@ -40,25 +40,25 @@ class T extends s.PureComponent {
   }
   render() {
     return (0, a.jsxs)(c.default, {
-      className: h.verification,
+      className: _.verification,
       align: c.default.Align.CENTER,
       direction: c.default.Direction.VERTICAL,
       children: [(0, a.jsxs)(c.default, {
-        className: l(h.container, {
-          [h.isMobile]: r.isMobile
+        className: i(_.container, {
+          [_.isMobile]: r.isMobile
         }),
         direction: c.default.Direction.VERTICAL,
         align: c.default.Align.CENTER,
         justify: c.default.Justify.CENTER,
         children: [(0, a.jsx)("div", {
-          className: h.image
+          className: _.image
         }), (0, a.jsx)("div", {
-          className: l(h.title, C.marginTop20),
-          children: _.default.Messages.VERIFICATION_TITLE
+          className: i(_.title, C.marginTop20),
+          children: h.default.Messages.VERIFICATION_TITLE
         }), (0, a.jsx)("div", {
-          className: l(h.body, C.marginTop4, C.marginBottom20),
-          children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-            helpCenterURL: I
+          className: i(_.body, C.marginTop4, C.marginBottom20),
+          children: h.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
+            helpCenterURL: S
           })
         }), (0, a.jsx)(c.default, {
           grow: 0,
@@ -67,22 +67,22 @@ class T extends s.PureComponent {
           children: this.renderFields()
         })]
       }), (0, a.jsx)("div", {
-        className: l(h.footer, C.marginTop20),
-        children: _.default.Messages.VERIFICATION_FOOTER
+        className: i(_.footer, C.marginTop20),
+        children: h.default.Messages.VERIFICATION_FOOTER
       }), (0, a.jsxs)(c.default, {
-        className: l(C.marginTop4, C.marginBottom20),
+        className: i(C.marginTop4, C.marginBottom20),
         grow: 0,
         children: [(0, a.jsx)("div", {
-          className: l(h.footer, h.footerAction),
-          children: _.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
+          className: i(_.footer, _.footerAction),
+          children: h.default.Messages.VERIFICATION_FOOTER_SUPPORT.format({
             supportURL: d.default.getSubmitRequestURL()
           })
         }), (0, a.jsx)("div", {
-          className: l(h.footer, h.footerBullet),
+          className: i(_.footer, _.footerBullet),
           children: "•"
         }), (0, a.jsx)("div", {
-          className: l(h.footer, h.footerAction),
-          children: _.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
+          className: i(_.footer, _.footerAction),
+          children: h.default.Messages.VERIFICATION_FOOTER_LOGOUT.format({
             logoutOnClick: this.props.onLogout
           })
         })]
@@ -98,9 +98,9 @@ class T extends s.PureComponent {
     }
   }
 }
-T.defaultProps = {
+I.defaultProps = {
   types: [E.VerificationTypes.CAPTCHA],
   onCaptchaVerify: E.NOOP,
   onLogout: E.NOOP
 };
-var S = T
+var m = I

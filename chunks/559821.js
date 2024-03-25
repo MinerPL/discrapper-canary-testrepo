@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("884691"),
-  n = s("228100"),
-  l = s("717559"),
+  l = s("986399"),
+  n = s("717559"),
   i = s("38904"),
   r = s("988268"),
   o = s("397056");
@@ -16,7 +16,7 @@ function d(e) {
   let {
     application: s,
     loading: d
-  } = (0, n.default)(e, r.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), {
+  } = (0, l.default)(e, r.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS), {
     payoutsByPeriod: u,
     loading: c
   } = (0, i.default)(null == s ? void 0 : s.id, {
@@ -25,12 +25,12 @@ function d(e) {
   }), {
     currentPeriod: E,
     previousPeriods: _,
-    metrics: T
+    metrics: I
   } = a.useMemo(() => {
     let {
       currentPeriod: e,
       previousPeriods: t
-    } = (0, l.splitCurrentPeriod)(u), s = (0, l.calculateMetrics)(e, t[0]);
+    } = (0, n.splitCurrentPeriod)(u), s = (0, n.calculateMetrics)(e, t[0]);
     return {
       currentPeriod: e,
       previousPeriods: t,
@@ -42,7 +42,7 @@ function d(e) {
     payoutsByPeriod: u,
     currentPeriod: E,
     previousPeriods: _,
-    metrics: T,
+    metrics: I,
     application: s
   }
 }

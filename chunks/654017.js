@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return u
   },
   isSpam: function() {
-    return o
+    return s
   }
 });
 var l = n("697218"),
@@ -22,6 +22,6 @@ function u(e) {
   return null !== (n = null === (t = l.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.UserFlags.SPAMMER)) && void 0 !== n && n
 }
 
-function o(e) {
+function s(e) {
   return u(e.author.id)
 }

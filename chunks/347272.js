@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("669491"),
-  i = n("77078"),
-  l = n("774223"),
+  l = n("77078"),
+  i = n("774223"),
   r = n("9759"),
   o = n("813531"),
   u = n("484140"),
   d = n("395635"),
   c = n("782340"),
-  f = n("472036");
+  f = n("115263");
 
 function E() {
   let {
@@ -32,14 +32,14 @@ function E() {
       className: f.header,
       children: (0, a.jsxs)("div", {
         className: f.inline,
-        children: [(0, a.jsx)(l.default, {
+        children: [(0, a.jsx)(i.default, {
           color: s.default.colors.HEADER_PRIMARY.css,
           height: 20,
           width: 20
-        }), (0, a.jsx)(i.Heading, {
+        }), (0, a.jsx)(l.Heading, {
           variant: "heading-md/semibold",
           children: c.default.Messages.LIVE_BROADCASTS
-        }), (0, a.jsx)(d.default, {}), (0, a.jsxs)(i.Heading, {
+        }), (0, a.jsx)(d.default, {}), (0, a.jsxs)(l.Heading, {
           variant: "heading-md/semibold",
           children: ["— ", t.length.toLocaleString()]
         })]

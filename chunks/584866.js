@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("222007");
 var a = n("37983"),
@@ -10,29 +10,29 @@ var a = n("37983"),
   s = n("716241"),
   i = n("592407"),
   d = n("305961"),
-  u = n("476263"),
-  o = n("49111"),
+  o = n("476263"),
+  u = n("49111"),
   c = n("782340"),
-  m = n("987013"),
-  f = e => {
+  m = n("433969"),
+  _ = e => {
     let {
       guildId: t,
       reportId: n
-    } = e, [f, _] = l.useState(!1), h = d.default.getGuild(t), E = null != h;
+    } = e, [_, f] = l.useState(!1), E = d.default.getGuild(t), h = null != E;
     l.useEffect(() => {
-      _(!E)
-    }, [E]);
+      f(!h)
+    }, [h]);
     let v = l.useCallback(() => {
-      _(!0), s.default.trackWithMetadata(o.AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+      f(!0), s.default.trackWithMetadata(u.AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
         guild_id: t,
         report_id: n
       }), i.default.leaveGuild(t)
     }, [t, n]);
-    if (null == h) return null;
+    if (null == E) return null;
     let R = () => {
       (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
         header: c.default.Messages.LEAVE_SERVER_TITLE.format({
-          name: h.name
+          name: E.name
         }),
         confirmText: c.default.Messages.LEAVE_SERVER,
         cancelText: c.default.Messages.CANCEL,
@@ -41,7 +41,7 @@ var a = n("37983"),
         children: (0, a.jsx)(r.Text, {
           variant: "text-md/normal",
           children: c.default.Messages.LEAVE_SERVER_BODY.format({
-            name: h.name
+            name: E.name
           })
         })
       }))
@@ -56,25 +56,25 @@ var a = n("37983"),
         className: m.guildContainer,
         children: [(0, a.jsxs)("div", {
           className: m.guildInfo,
-          children: [(0, a.jsx)(u.default, {
-            guild: h,
+          children: [(0, a.jsx)(o.default, {
+            guild: E,
             showBadge: !1,
             animate: !1,
-            size: u.default.Sizes.SMALL,
-            "aria-label": h.name,
+            size: o.default.Sizes.SMALL,
+            "aria-label": E.name,
             className: m.icon,
             active: !0
           }), (0, a.jsx)(r.Text, {
             className: m.guildName,
             variant: "text-sm/semibold",
-            children: h.name
+            children: E.name
           })]
         }), (0, a.jsx)(r.Button, {
           onClick: () => R(),
-          disabled: f,
+          disabled: _,
           size: r.Button.Sizes.SMALL,
           color: r.Button.Colors.RED,
-          children: f ? c.default.Messages.MOBILE_REPORTS_LEFT_SERVER : c.default.Messages.LEAVE_SERVER
+          children: _ ? c.default.Messages.MOBILE_REPORTS_LEFT_SERVER : c.default.Messages.LEAVE_SERVER
         })]
       })]
     })

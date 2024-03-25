@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("68238"),
-  i = s("476462");
+var l = s("77078"),
+  n = s("68238"),
+  i = s("402159");
 
 function r(e) {
   let {
@@ -23,24 +23,24 @@ function r(e) {
     "aria-label": t,
     children: [(0, a.jsxs)("div", {
       className: i.metricCardLabelContainer,
-      children: [(0, a.jsx)(n.Text, {
+      children: [(0, a.jsx)(l.Text, {
         className: i.metricCardLabel,
         variant: "text-xs/medium",
         color: "interactive-normal",
         "aria-hidden": !0,
         children: t
-      }), null != d && (0, a.jsx)(n.Tooltip, {
+      }), null != d && (0, a.jsx)(l.Tooltip, {
         text: d,
-        children: e => (0, a.jsx)(l.default, {
+        children: e => (0, a.jsx)(n.default, {
           className: i.labelTooltipIcon,
           ...e
         })
-      }), null != s ? (0, a.jsx)(n.Text, {
+      }), null != s ? (0, a.jsx)(l.Text, {
         variant: "text-xs/normal",
         color: "text-muted",
         children: s
       }) : null]
-    }), (0, a.jsx)(n.Text, {
+    }), (0, a.jsx)(l.Text, {
       tag: "span",
       variant: "heading-xl/medium",
       color: "header-primary",

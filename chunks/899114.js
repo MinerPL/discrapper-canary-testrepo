@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("605250"),
   s = n("578287"),
-  i = n("716724"),
-  l = n("49111");
-let r = new a.default(l.RPC_APPLICATION_LOGGING_CATEGORY);
+  l = n("716724"),
+  i = n("49111");
+let r = new a.default(i.RPC_APPLICATION_LOGGING_CATEGORY);
 var o = {
-  [l.RPCCommands.CAPTURE_LOG]: {
-    validation: e => (0, i.default)(e).required().keys({
+  [i.RPCCommands.CAPTURE_LOG]: {
+    validation: e => (0, l.default)(e).required().keys({
       level: e.string().max(10).required(),
       message: e.string().max(1e3).required()
     }),
@@ -24,23 +24,23 @@ var o = {
         }
       } = e;
       (0, s.validatePostMessageTransport)(t.transport);
-      let i = t.application.id,
-        l = "".concat(i, " - ").concat(a);
+      let l = t.application.id,
+        i = "".concat(l, " - ").concat(a);
       switch (n) {
         case "log":
-          r.log(l);
+          r.log(i);
           break;
         case "warn":
-          r.warn(l);
+          r.warn(i);
           break;
         case "debug":
-          r.verbose(l);
+          r.verbose(i);
           break;
         case "info":
-          r.info(l);
+          r.info(i);
           break;
         case "error":
-          r.error(l)
+          r.error(i)
       }
     }
   }

@@ -13,7 +13,7 @@ e.exports = function(e, t) {
     f = !n && !d && !l && c(e),
     p = n || d || l || f,
     h = p ? r(e.length, String) : [],
-    g = h.length;
-  for (var b in e)(t || u.call(e, b)) && !(p && ("length" == b || l && ("offset" == b || "parent" == b) || f && ("buffer" == b || "byteLength" == b || "byteOffset" == b) || a(b, g))) && h.push(b);
+    v = h.length;
+  for (var g in e)(t || u.call(e, g)) && !(p && ("length" == g || l && ("offset" == g || "parent" == g) || f && ("buffer" == g || "byteLength" == g || "byteOffset" == g) || a(g, v))) && h.push(g);
   return h
 }

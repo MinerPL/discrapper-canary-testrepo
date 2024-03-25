@@ -5,17 +5,17 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("382356"),
-  o = Object.prototype,
-  a = o.hasOwnProperty,
-  i = o.toString,
+  a = Object.prototype,
+  o = a.hasOwnProperty,
+  i = a.toString,
   u = n.default ? n.default.toStringTag : void 0,
   l = function(e) {
-    var t = a.call(e, u),
+    var t = o.call(e, u),
       r = e[u];
     try {
       e[u] = void 0;
       var n = !0
     } catch (e) {}
-    var o = i.call(e);
-    return n && (t ? e[u] = r : delete e[u]), o
+    var a = i.call(e);
+    return n && (t ? e[u] = r : delete e[u]), a
   }

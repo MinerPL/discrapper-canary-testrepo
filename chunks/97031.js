@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("255261");
+var l = s("77078"),
+  n = s("638035");
 
 function i(e) {
   let {
@@ -17,10 +17,10 @@ function i(e) {
     id: r,
     ...o
   } = e;
-  return (0, a.jsx)(n.TooltipContainer, {
+  return (0, a.jsx)(l.TooltipContainer, {
     text: s ? i : null,
-    children: (0, a.jsx)(n.TabBar.Item, {
-      className: l.tabBarItem,
+    children: (0, a.jsx)(l.TabBar.Item, {
+      className: n.tabBarItem,
       id: r,
       disabled: s,
       ...o,

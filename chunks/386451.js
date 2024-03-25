@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   DEFAULT_RANGES: function() {
-    return r.DEFAULT_RANGES
+    return o.DEFAULT_RANGES
   },
   default: function() {
     return i
   }
 }), n("222007");
-var i, l = n("917351"),
-  a = n.n(l),
-  s = n("862337"),
-  r = n("696605"),
-  u = n("623053"),
-  d = n("6850"),
-  o = n("49111");
+var i, s = n("917351"),
+  r = n.n(s),
+  a = n("862337"),
+  o = n("696605"),
+  l = n("623053"),
+  u = n("6850"),
+  d = n("49111");
 
 function c(e) {
-  return null != e && "null" !== e && e !== o.ME && "undefined" !== e && e !== o.FAVORITES
+  return null != e && "null" !== e && e !== d.ME && "undefined" !== e && e !== d.FAVORITES
 }
 i = class {
   _enqueue(e, t) {
@@ -60,7 +60,7 @@ i = class {
     (t || !this._threads.has(e)) && this._subscribed.delete(e), delete this._pending[e], this._members.clear(e), this._channels.clear(e), this._threadMemberLists.clear(e), this._typing.delete(e), this._memberUpdates.delete(e), t && this._threads.delete(e), this._activities.delete(e)
   }
   flush() {
-    a.forEach(this._pending, (e, t) => {
+    r.forEach(this._pending, (e, t) => {
       this._subscribed.add(t)
     }), this._onChange(this._pending), this._pending = {}
   }
@@ -104,12 +104,12 @@ i = class {
     if (!!c(e)) !t.has(e) && (t.add(e), this._enqueue(e, n))
   }
   constructor(e) {
-    this._members = new u.default((e, t) => this._enqueue(e, {
+    this._members = new l.default((e, t) => this._enqueue(e, {
       members: t
-    })), this._channels = new r.default((e, t) => this._enqueue(e, {
+    })), this._channels = new o.default((e, t) => this._enqueue(e, {
       channels: t
-    })), this._threadMemberLists = new d.default((e, t) => this._enqueue(e, {
+    })), this._threadMemberLists = new u.default((e, t) => this._enqueue(e, {
       thread_member_lists: t
-    })), this._typing = new Set, this._threads = new Set, this._activities = new Set, this._memberUpdates = new Set, this._subscribed = new Set, this._pending = {}, this._flush = new s.DelayedCall(0, () => this.flush()), this._onChange = e
+    })), this._typing = new Set, this._threads = new Set, this._activities = new Set, this._memberUpdates = new Set, this._subscribed = new Set, this._pending = {}, this._flush = new a.DelayedCall(0, () => this.flush()), this._onChange = e
   }
 }

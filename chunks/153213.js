@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return f
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("77078"),
-  o = n("86678"),
-  s = n("538282"),
-  a = n("882641"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("77078"),
+  s = n("86678"),
+  r = n("538282"),
+  o = n("882641"),
   u = n("848471"),
   d = n("958706"),
-  c = n("223797");
+  c = n("681426");
 
 function f(e) {
   var t;
@@ -20,27 +20,27 @@ function f(e) {
     editorRef: n,
     options: f,
     channel: p
-  } = e, m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = i.useCallback((e, t) => {
-    let l = n.current;
-    null != e && null != l && l.insertEmoji(e, t, !1), t && (0, s.closeExpressionPicker)()
+  } = e, m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = l.useCallback((e, t) => {
+    let i = n.current;
+    null != e && null != i && i.insertEmoji(e, t, !1), t && (0, r.closeExpressionPicker)()
   }, [n]);
-  return null == m ? null : (0, l.jsxs)("div", {
+  return null == m ? null : (0, i.jsxs)("div", {
     id: "slate-toolbar",
     className: c.staticToolbar,
-    children: [(0, l.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       className: c.staticButtons,
-      children: (0, l.jsx)(u.ToolbarButtons, {
+      children: (0, i.jsx)(u.ToolbarButtons, {
         editorRef: n,
         options: f,
         iconClassName: c.staticIcon,
         dividerClassName: c.staticDivider
       })
-    }), (0, l.jsx)(r.Popout, {
+    }), (0, i.jsx)(a.Popout, {
       renderPopout: e => {
         let {
           closePopout: t
         } = e;
-        return (0, l.jsx)(o.default, {
+        return (0, i.jsx)(s.default, {
           persistSearch: !0,
           channel: p,
           closePopout: t,
@@ -51,13 +51,13 @@ function f(e) {
         })
       },
       position: "bottom",
-      animation: r.Popout.Animation.NONE,
+      animation: a.Popout.Animation.NONE,
       align: "left",
       children: (e, t) => {
         let {
           isShown: n
         } = t;
-        return (0, l.jsx)(a.default, {
+        return (0, i.jsx)(o.default, {
           ...e,
           active: n,
           className: c.emojiButton,

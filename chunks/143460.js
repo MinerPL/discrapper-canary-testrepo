@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return u
   },
   MAX_KEYWORDS_PER_KEYWORD_FILTER: function() {
-    return a
+    return E
   },
   MAX_KEYWORDS_PER_ALLOWLIST_KEYWORD_FILTER_RULE: function() {
-    return E
+    return a
   },
   MAX_KEYWORDS_PER_ALLOWLIST_DEFAULT_KEYWORD_RULE: function() {
     return s
@@ -59,8 +59,8 @@ var o, u, r = n("214764"),
   _ = n("155481"),
   i = n("363312");
 (o = u || (u = {}))[o.PROFANITY = 1] = "PROFANITY", o[o.SEXUAL_CONTENT = 2] = "SEXUAL_CONTENT", o[o.SLURS = 3] = "SLURS", i.AutomodTriggerType.USER_PROFILE, i.AutomodTriggerType.SERVER_POLICY, i.AutomodTriggerType.MENTION_SPAM, i.AutomodTriggerType.ML_SPAM, i.AutomodTriggerType.DEFAULT_KEYWORD_LIST, i.AutomodTriggerType.KEYWORD;
-let a = 1e3,
-  E = 100,
+let E = 1e3,
+  a = 100,
   s = 1e3,
   A = 10,
   d = 60,

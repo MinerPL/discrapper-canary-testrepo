@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("387111"),
   r = n("49111"),
   s = n("782340");
 
-function l(e, t, n, l) {
+function i(e, t, n, i) {
   if (e.state === r.ApplicationStreamStates.RECONNECTING) return {
     mainText: s.default.Messages.STREAM_RECONNECTING_ERROR,
     supportingText: s.default.Messages.STREAM_RECONNECTING_ERROR_SUBTEXT
@@ -22,7 +22,7 @@ function l(e, t, n, l) {
       username: a.default.getName(e.guildId, e.channelId, t)
     })
   };
-  return l ? {
+  return i ? {
     mainText: s.default.Messages.STREAM_PREVIEW_PAUSED,
     supportingText: s.default.Messages.STREAM_PREVIEW_PAUSED_SUBTEXT
   } : null

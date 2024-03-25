@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = r("714311"),
-  o = function() {
+  a = function() {
     return n.default.Date.now()
   }

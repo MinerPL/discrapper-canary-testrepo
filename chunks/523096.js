@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return C
+    return A
   }
 });
 var i = n("560528"),
@@ -16,28 +16,28 @@ var i = n("560528"),
   u = n("593285"),
   d = n("575603"),
   c = n("181815"),
-  f = n("521089"),
-  _ = n("366942"),
-  h = n("125707"),
-  g = n("785744"),
-  m = n("297384"),
-  E = n("573220"),
+  _ = n("521089"),
+  f = n("366942"),
+  E = n("125707"),
+  h = n("785744"),
+  g = n("297384"),
+  m = n("573220"),
   p = n("265284"),
-  v = n("320436"),
-  S = n("348044"),
-  T = n("36409");
+  S = n("320436"),
+  T = n("348044"),
+  v = n("36409");
 
 function I() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return e ? T : s
+  return e ? v : s
 }
-var C = {
+var A = {
   DEFAULT_AVATARS: [r, a, o, l, u, d],
-  DEFAULT_GROUP_DM_AVATARS: [c, f, _, h, g, m, E, p],
+  DEFAULT_GROUP_DM_AVATARS: [c, _, f, E, h, g, m, p],
   BOT_AVATARS: {
-    clyde: S
+    clyde: T
   },
-  DEFAULT_CHANNEL_ICON: v,
+  DEFAULT_CHANNEL_ICON: S,
   canUseWebp: function() {
     return i.canUseWebp()
   }

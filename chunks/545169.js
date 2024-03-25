@@ -15,7 +15,7 @@ var t = r("37983"),
   u = r("65300"),
   m = r("49111"),
   p = r("782340"),
-  h = r("243433");
+  h = r("121036");
 let w = [{
     id: "discord",
     getName: () => p.default.Messages.DESKTOP_APP,

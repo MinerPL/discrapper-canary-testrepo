@@ -1,50 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   getBurstAnimation: function() {
-    return r
+    return l
   }
 });
-var l = n("103475");
+var n = i("103475");
 let a = [{
-    load: () => n.el("448779").then(n.t.bind(n, "448779", 19))
+    load: () => i.el("448779").then(i.t.bind(i, "448779", 19))
   }, {
-    load: () => n.el("734436").then(n.t.bind(n, "734436", 19))
+    load: () => i.el("734436").then(i.t.bind(i, "734436", 19))
   }, {
-    load: () => n.el("494925").then(n.t.bind(n, "494925", 19))
+    load: () => i.el("494925").then(i.t.bind(i, "494925", 19))
   }, {
-    load: () => n.el("199777").then(n.t.bind(n, "199777", 19))
+    load: () => i.el("199777").then(i.t.bind(i, "199777", 19))
   }, {
-    load: () => n.el("942466").then(n.t.bind(n, "942466", 19))
+    load: () => i.el("942466").then(i.t.bind(i, "942466", 19))
   }, {
-    load: () => n.el("56957").then(n.t.bind(n, "56957", 19))
+    load: () => i.el("56957").then(i.t.bind(i, "56957", 19))
   }, {
-    load: () => n.el("547173").then(n.t.bind(n, "547173", 19))
+    load: () => i.el("547173").then(i.t.bind(i, "547173", 19))
   }, {
-    load: () => n.el("485996").then(n.t.bind(n, "485996", 19))
+    load: () => i.el("485996").then(i.t.bind(i, "485996", 19))
   }, {
-    load: () => n.el("871996").then(n.t.bind(n, "871996", 19))
+    load: () => i.el("871996").then(i.t.bind(i, "871996", 19))
   }, {
-    load: () => n.el("584037").then(n.t.bind(n, "584037", 19))
+    load: () => i.el("584037").then(i.t.bind(i, "584037", 19))
   }, {
-    load: () => n.el("320512").then(n.t.bind(n, "320512", 19))
+    load: () => i.el("320512").then(i.t.bind(i, "320512", 19))
   }, {
-    load: () => n.el("925536").then(n.t.bind(n, "925536", 19))
+    load: () => i.el("925536").then(i.t.bind(i, "925536", 19))
   }, {
-    load: () => n.el("522373").then(n.t.bind(n, "522373", 19))
+    load: () => i.el("522373").then(i.t.bind(i, "522373", 19))
   }, {
-    load: () => n.el("837366").then(n.t.bind(n, "837366", 19))
+    load: () => i.el("837366").then(i.t.bind(i, "837366", 19))
   }, {
-    load: () => n.el("42949").then(n.t.bind(n, "42949", 19))
+    load: () => i.el("42949").then(i.t.bind(i, "42949", 19))
   }, {
-    load: () => n.el("294705").then(n.t.bind(n, "294705", 19))
+    load: () => i.el("294705").then(i.t.bind(i, "294705", 19))
   }, {
-    load: () => n.el("454599").then(n.t.bind(n, "454599", 19))
+    load: () => i.el("454599").then(i.t.bind(i, "454599", 19))
   }, {
-    load: () => n.el("814738").then(n.t.bind(n, "814738", 19))
+    load: () => i.el("814738").then(i.t.bind(i, "814738", 19))
   }],
-  r = async function(e, t, n) {
+  l = async function(e, t, i) {
     arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    let r = (0, l.getBurstAnimationHash)("".concat(e).concat(t).concat(n)),
-      i = a[r % a.length];
-    return await i.load()
+    let l = (0, n.getBurstAnimationHash)("".concat(e).concat(t).concat(i)),
+      o = a[l % a.length];
+    return await o.load()
   }

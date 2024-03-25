@@ -49,9 +49,9 @@ var u = new WeakMap,
   f = new WeakMap,
   p = new WeakMap,
   h = new WeakMap,
+  v = new WeakMap,
   g = new WeakMap,
   b = new WeakMap,
-  v = new WeakMap,
   m = new WeakMap,
   y = new WeakMap;
 class x {
@@ -93,25 +93,25 @@ class x {
       }), o(this, "setup", () => {
         if ("undefined" != typeof window) {
           if (x.isSetUp) throw Error("Cannot have two MultiBackends at the same time.");
-          x.isSetUp = !0, s(this, g).call(this, window), s(this, l)[s(this, u)].instance.setup()
+          x.isSetUp = !0, s(this, v).call(this, window), s(this, l)[s(this, u)].instance.setup()
         }
       }), o(this, "teardown", () => {
-        "undefined" != typeof window && (x.isSetUp = !1, s(this, b).call(this, window), s(this, l)[s(this, u)].instance.teardown())
-      }), o(this, "connectDragSource", (e, t, n) => s(this, y).call(this, "connectDragSource", e, t, n)), o(this, "connectDragPreview", (e, t, n) => s(this, y).call(this, "connectDragPreview", e, t, n)), o(this, "connectDropTarget", (e, t, n) => s(this, y).call(this, "connectDropTarget", e, t, n)), o(this, "profile", () => s(this, l)[s(this, u)].instance.profile()), o(this, "previewEnabled", () => s(this, l)[s(this, u)].preview), o(this, "previewsList", () => s(this, d)), o(this, "backendsList", () => s(this, f)), i(this, g, {
+        "undefined" != typeof window && (x.isSetUp = !1, s(this, g).call(this, window), s(this, l)[s(this, u)].instance.teardown())
+      }), o(this, "connectDragSource", (e, t, n) => s(this, y).call(this, "connectDragSource", e, t, n)), o(this, "connectDragPreview", (e, t, n) => s(this, y).call(this, "connectDragPreview", e, t, n)), o(this, "connectDropTarget", (e, t, n) => s(this, y).call(this, "connectDropTarget", e, t, n)), o(this, "profile", () => s(this, l)[s(this, u)].instance.profile()), o(this, "previewEnabled", () => s(this, l)[s(this, u)].preview), o(this, "previewsList", () => s(this, d)), o(this, "backendsList", () => s(this, f)), i(this, v, {
         writable: !0,
         value: e => {
           s(this, f).forEach(t => {
-            t.transition && e.addEventListener(t.transition.event, s(this, v))
+            t.transition && e.addEventListener(t.transition.event, s(this, b))
+          })
+        }
+      }), i(this, g, {
+        writable: !0,
+        value: e => {
+          s(this, f).forEach(t => {
+            t.transition && e.removeEventListener(t.transition.event, s(this, b))
           })
         }
       }), i(this, b, {
-        writable: !0,
-        value: e => {
-          s(this, f).forEach(t => {
-            t.transition && e.removeEventListener(t.transition.event, s(this, v))
-          })
-        }
-      }), i(this, v, {
         writable: !0,
         value: e => {
           let t = s(this, u);

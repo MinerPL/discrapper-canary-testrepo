@@ -7,22 +7,22 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("106435"),
-  l = n("50885"),
+  l = n("106435"),
+  i = n("50885"),
   r = n("25132"),
   o = n("884706"),
-  u = n("420386");
-let d = l.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
+  u = n("615111");
+let d = i.default.getEnableHardwareAcceleration() ? s.AnimatedAvatar : s.Avatar;
 
 function c(e) {
   let {
     otherUser: t,
     status: n
-  } = e, l = (0, r.useLinkTimestampText)(t.id, n), {
+  } = e, i = (0, r.useLinkTimestampText)(t.id, n), {
     avatarSrc: c,
     avatarDecorationSrc: f,
     eventHandlers: E
-  } = (0, i.default)({
+  } = (0, l.default)({
     user: t,
     size: s.AvatarSizes.SIZE_40,
     animateOnHover: !0
@@ -48,7 +48,7 @@ function c(e) {
         className: u.timestamp,
         color: "text-muted",
         variant: "text-xs/normal",
-        children: l
+        children: i
       })]
     })]
   })

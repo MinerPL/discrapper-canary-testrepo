@@ -2,142 +2,142 @@
 let i;
 n.r(t), n.d(t, {
   computeThreadIdsSnapshot: function() {
-    return F
+    return B
   },
   default: function() {
-    return w
+    return H
   }
 }), n("222007");
 var l = n("917351"),
   a = n.n(l),
-  s = n("335710"),
-  o = n("249654"),
-  r = n("446674"),
-  u = n("913144"),
-  d = n("689275"),
-  c = n("610730"),
-  p = n("271938"),
-  f = n("42203"),
-  m = n("660478"),
-  I = n("18494"),
+  o = n("335710"),
+  s = n("446674"),
+  r = n("913144"),
+  u = n("689275"),
+  d = n("610730"),
+  c = n("271938"),
+  p = n("42203"),
+  f = n("660478"),
+  m = n("18494"),
   _ = n("449008"),
-  C = n("786742");
-let T = [],
-  A = null,
+  I = n("299039"),
+  T = n("786742");
+let A = [],
   E = null,
+  C = null,
   N = new Set,
-  S = s.ThreadSortOrder.LATEST_ACTIVITY,
-  g = 0,
-  M = [],
-  O = !1,
+  g = o.ThreadSortOrder.LATEST_ACTIVITY,
+  M = 0,
+  O = [],
+  S = !1,
   h = [],
-  v = a.chain(T),
-  y = a.chain(T),
+  y = a.chain(A),
+  v = a.chain(A),
   D = new Set,
   R = new Set;
 
-function P(e) {
+function L(e) {
   var t;
-  return null !== (t = m.default.lastMessageId(e)) && void 0 !== t ? t : e
+  return null !== (t = f.default.lastMessageId(e)) && void 0 !== t ? t : e
 }
 
-function L(e) {
+function P(e) {
   return function(t, n) {
-    if ((0, C.isForumPostPinned)(t)) return -1;
-    if ((0, C.isForumPostPinned)(n)) return 1;
-    if (e === s.ThreadSortOrder.LATEST_ACTIVITY) return o.default.compare(P(n), P(t));
-    else return o.default.compare(n, t)
+    if ((0, T.isForumPostPinned)(t)) return -1;
+    if ((0, T.isForumPostPinned)(n)) return 1;
+    if (e === o.ThreadSortOrder.LATEST_ACTIVITY) return I.default.compare(L(n), L(t));
+    else return I.default.compare(n, t)
   }
 }
 
 function U() {
-  M = [], i = null, E = null, N = new Set, S = s.ThreadSortOrder.LATEST_ACTIVITY, g = 0, h = [], v = a.chain(T), y = a.chain(T), R.clear(), D.clear()
+  O = [], i = null, C = null, N = new Set, g = o.ThreadSortOrder.LATEST_ACTIVITY, M = 0, h = [], y = a.chain(A), v = a.chain(A), R.clear(), D.clear()
 }
 
-function B() {
+function b() {
   var e;
-  let t = I.default.getChannelId();
-  if (null == t || !(null === (e = f.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
-  b({
+  let t = m.default.getChannelId();
+  if (null == t || !(null === (e = p.default.getChannel(t)) || void 0 === e ? void 0 : e.isForumLikeChannel())) return U(), !1;
+  x({
     refreshThreadIds: !0
   })
 }
 
-function F(e) {
-  let t = f.default.getChannel(e);
-  return null == t ? [] : Object.values(d.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
+function B(e) {
+  let t = p.default.getChannel(e);
+  return null == t ? [] : Object.values(u.default.getThreadsForParent(t.guild_id, t.id)).map(e => {
     let {
       id: t
     } = e;
     return t
-  }).sort(L(S))
+  }).sort(P(g))
 }
 
-function b(e) {
+function x(e) {
   var t;
-  let n = f.default.getChannel(E);
+  let n = p.default.getChannel(C);
   if (null == n) return;
-  (null == e ? void 0 : e.refreshThreadIds) && (h = Object.values(d.default.getThreadsForParent(n.guild_id, n.id)).map(e => {
+  (null == e ? void 0 : e.refreshThreadIds) && (h = Object.values(u.default.getThreadsForParent(n.guild_id, n.id)).map(e => {
     let {
       id: t
     } = e;
     return t
-  }), g = 0, O = !0), 0 !== D.size && (h = h.filter(e => !D.has(e)), D.clear()), 0 !== R.size && (h = Array.from(new Set([...h, ...R])), R.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (y = a.chain(h).sort(L(s.ThreadSortOrder.LATEST_ACTIVITY)), v = a.chain(h).sort(L(s.ThreadSortOrder.CREATION_DATE)));
-  let l = S === s.ThreadSortOrder.LATEST_ACTIVITY ? y : v,
-    o = l.value();
-  M = 0 === N.size ? o : o.filter((t = N, function(e) {
+  }), M = 0, S = !0), 0 !== D.size && (h = h.filter(e => !D.has(e)), D.clear()), 0 !== R.size && (h = Array.from(new Set([...h, ...R])), R.clear()), ((null == e ? void 0 : e.refreshThreadIds) || (null == e ? void 0 : e.sortThreadIds)) && (v = a.chain(h).sort(P(o.ThreadSortOrder.LATEST_ACTIVITY)), y = a.chain(h).sort(P(o.ThreadSortOrder.CREATION_DATE)));
+  let l = g === o.ThreadSortOrder.LATEST_ACTIVITY ? v : y,
+    s = l.value();
+  O = 0 === N.size ? s : s.filter((t = N, function(e) {
     var n;
-    let i = null === (n = f.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
+    let i = null === (n = p.default.getChannel(e)) || void 0 === n ? void 0 : n.appliedTags;
     return null != i && 0 !== i.length && i.some(e => t.has(e))
   }));
-  let r = M.find(e => (function(e) {
-    let t = c.default.getCount(e);
+  let r = O.find(e => (function(e) {
+    let t = d.default.getCount(e);
     return null === t || 0 === t
   })(e));
   i = null == r ? null : r
 }
-class H extends r.default.Store {
+class F extends s.default.Store {
   initialize() {
-    this.waitFor(f.default, d.default, I.default, m.default)
+    this.waitFor(p.default, u.default, m.default, f.default)
   }
   getNewThreadCount() {
-    return g
-  }
-  getCanAckThreads() {
-    return O
-  }
-  getThreadIds(e, t, n) {
-    let i = e !== E,
-      l = !(0, _.areSetsEqual)(n, N),
-      a = t !== S;
-    return E = e, N = n, S = t, i ? b({
-      refreshThreadIds: !0
-    }) : a ? b({
-      sortThreadIds: !0
-    }) : l && b(), M
-  }
-  getCurrentThreadIds() {
     return M
   }
+  getCanAckThreads() {
+    return S
+  }
+  getThreadIds(e, t, n) {
+    let i = e !== C,
+      l = !(0, _.areSetsEqual)(n, N),
+      a = t !== g;
+    return C = e, N = n, g = t, i ? x({
+      refreshThreadIds: !0
+    }) : a ? x({
+      sortThreadIds: !0
+    }) : l && x(), O
+  }
+  getCurrentThreadIds() {
+    return O
+  }
   getAndDeleteMostRecentUserCreatedThreadId() {
-    let e = A;
-    return A = null, e
+    let e = E;
+    return E = null, e
   }
   getFirstNoReplyThreadId() {
     return i
   }
 }
-H.displayName = "ForumActivePostStore";
-var w = new H(u.default, {
-  CONNECTION_OPEN: B,
-  OVERLAY_INITIALIZE: B,
-  GUILD_CREATE: B,
-  CHANNEL_SELECT: B,
+F.displayName = "ForumActivePostStore";
+var H = new F(r.default, {
+  CONNECTION_OPEN: b,
+  OVERLAY_INITIALIZE: b,
+  GUILD_CREATE: b,
+  CHANNEL_SELECT: b,
   CHANNEL_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    if (null == t.parent_id || t.parent_id !== E) return !1;
+    if (null == t.parent_id || t.parent_id !== C) return !1;
     U()
   },
   THREAD_LIST_SYNC: function(e) {
@@ -145,8 +145,8 @@ var w = new H(u.default, {
     let {
       guildId: n
     } = e;
-    if (null == E || n !== (null === (t = f.default.getChannel(E)) || void 0 === t ? void 0 : t.guild_id)) return !1;
-    b({
+    if (null == C || n !== (null === (t = p.default.getChannel(C)) || void 0 === t ? void 0 : t.guild_id)) return !1;
+    x({
       refreshThreadIds: !0
     })
   },
@@ -155,22 +155,22 @@ var w = new H(u.default, {
       channel: t,
       isNewlyCreated: n
     } = e;
-    if (null == t.parent_id || t.parent_id !== E || !n) return !1;
-    t.ownerId !== p.default.getId() ? g++ : A = t.id
+    if (null == t.parent_id || t.parent_id !== C || !n) return !1;
+    t.ownerId !== c.default.getId() ? M++ : E = t.id
   },
   THREAD_UPDATE: function(e) {
     let {
       channel: t
     } = e;
-    if (null == t.parent_id || t.parent_id !== E) return !1;
-    let n = (0, C.isForumPostPinned)(t.id),
+    if (null == t.parent_id || t.parent_id !== C) return !1;
+    let n = (0, T.isForumPostPinned)(t.id),
       i = R.has(t.id);
-    if (n && !i) R.add(t.id), b({
+    if (n && !i) R.add(t.id), x({
       sortThreadIds: !0
     });
     else {
       if (n || !i) return !1;
-      R.delete(t.id), b({
+      R.delete(t.id), x({
         sortThreadIds: !0
       })
     }
@@ -179,8 +179,8 @@ var w = new H(u.default, {
     let {
       channel: t
     } = e;
-    if (null == t.parent_id || t.parent_id !== E) return !1;
-    D.add(t.id), b({
+    if (null == t.parent_id || t.parent_id !== C) return !1;
+    D.add(t.id), x({
       sortThreadIds: !0
     })
   },
@@ -188,8 +188,8 @@ var w = new H(u.default, {
     let {
       channelId: t
     } = e;
-    if (null == t || t !== E) return !1;
-    b({
+    if (null == t || t !== C) return !1;
+    x({
       refreshThreadIds: !0
     })
   },
@@ -197,7 +197,7 @@ var w = new H(u.default, {
     let {
       channelId: t
     } = e;
-    if (null == t || t !== E) return !1;
-    O = !1
+    if (null == t || t !== C) return !1;
+    S = !1
   }
 })

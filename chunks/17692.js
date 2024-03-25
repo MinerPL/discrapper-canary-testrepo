@@ -1,7 +1,7 @@
 "use strict";
 A.r(t), A.d(t, {
   default: function() {
-    return d
+    return u
   }
 });
 var a = A("37983"),
@@ -9,30 +9,30 @@ var a = A("37983"),
   n = A("414456"),
   r = A.n(n),
   s = A("77078"),
-  o = A("931164"),
-  i = A("289162"),
-  u = A("632215");
+  i = A("931164"),
+  o = A("667060"),
+  d = A("919163");
 
-function d(e) {
+function u(e) {
   let {
     color: t,
     className: A,
     variant: n,
-    text: d,
+    text: u,
     lineClamp: c
-  } = e, f = (0, s.usePrivateHeadingLevel)(), C = l.useMemo(() => null == d ? null : (0, o.default)(d, !0, {
+  } = e, f = (0, s.usePrivateHeadingLevel)(), g = l.useMemo(() => null == u ? null : (0, i.default)(u, !0, {
     allowHeading: null == c,
     allowList: null == c,
     initialHeaderLevel: f
-  }), [d, c, f]);
+  }), [u, c, f]);
   return (0, a.jsx)(s.Text, {
-    className: r(A, u.markup, {
-      [i.lineClamp2Plus]: null != c && c > 1,
-      [i.lineClamp1]: 1 === c
+    className: r(A, d.markup, {
+      [o.lineClamp2Plus]: null != c && c > 1,
+      [o.lineClamp1]: 1 === c
     }),
     color: t,
     variant: n,
     lineClamp: c,
-    children: C
+    children: g
   })
 }

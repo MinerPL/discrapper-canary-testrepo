@@ -10,22 +10,22 @@ s.r(t), s.d(t, {
     return o
   },
   GuildSettingsRoleEditSections: function() {
-    return n
+    return l
   },
   getSettingsErrorMessage: function() {
     return u
   }
 });
-var a, n, l = s("782340");
+var a, l, n = s("782340");
 let i = 5,
   r = 10,
   o = 30;
-(a = n || (n = {}))[a.DISPLAY = 0] = "DISPLAY", a[a.PERMISSIONS = 1] = "PERMISSIONS", a[a.MEMBERS = 2] = "MEMBERS", a[a.VERIFICATIONS = 3] = "VERIFICATIONS";
+(a = l || (l = {}))[a.DISPLAY = 0] = "DISPLAY", a[a.PERMISSIONS = 1] = "PERMISSIONS", a[a.MEMBERS = 2] = "MEMBERS", a[a.VERIFICATIONS = 3] = "VERIFICATIONS";
 let d = {
-  afk_channel_id: () => l.default.Messages.FORM_LABEL_AFK_CHANNEL,
-  public_updates_channel_id: () => l.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE,
-  safety_alerts_channel_id: () => l.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE,
-  system_channel_id: () => l.default.Messages.FORM_LABEL_SYSTEM_CHANNEL
+  afk_channel_id: () => n.default.Messages.FORM_LABEL_AFK_CHANNEL,
+  public_updates_channel_id: () => n.default.Messages.GUILD_SETTINGS_COMMUNITY_MOD_CHANNEL_TITLE,
+  safety_alerts_channel_id: () => n.default.Messages.GUILD_ANTIRAID_SAFETY_CHANNEL_TITLE,
+  system_channel_id: () => n.default.Messages.FORM_LABEL_SYSTEM_CHANNEL
 };
 
 function u(e) {

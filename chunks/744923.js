@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   unmount: function() {
-    return i
+    return l
   }
 });
 var a = n("913144");
@@ -15,7 +15,7 @@ function s() {
   })
 }
 
-function i() {
+function l() {
   a.default.dispatch({
     type: "NOW_PLAYING_UNMOUNTED"
   })

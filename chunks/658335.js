@@ -4,8 +4,8 @@ r.r(t), r.d(t, {
     return i
   }
 }), r("222007");
-var n, o = r("355806");
-var a = (n = /[^.]+$/.exec(o.default && o.default.keys && o.default.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
+var n, a = r("355806");
+var o = (n = /[^.]+$/.exec(a.default && a.default.keys && a.default.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
   i = function(e) {
-    return !!a && a in e
+    return !!o && o in e
   }

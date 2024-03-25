@@ -4,21 +4,21 @@ n.r(t), n.d(t, {
     return a
   },
   VideoSpinnerTimer: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a, l, s = n("811022"),
   i = n("398183"),
   r = n("271938"),
-  o = n("42203"),
-  u = n("985365"),
+  u = n("42203"),
+  o = n("985365"),
   d = n("945956"),
   c = n("800762"),
   f = n("599110"),
   h = n("49111");
 (l = a || (a = {})).SELF_VIDEO = "self_video", l.SELF_STREAM = "self_stream", l.REMOTE_VIDEO = "remote_video", l.REMOTE_STREAM = "remote_stream", l.CHANGE_VIDEO_BACKGROUND = "change_video_background", l.VIDEO_PLAYER = "video_player", l.REPLAY_VIDEO_STREAM = "replay_video_stream";
-let p = new Map;
-class m {
+let m = new Map;
+class p {
   onSpinnerStarted() {
     null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, i.now)())
   }
@@ -26,8 +26,8 @@ class m {
     if (null == this.spinnerVisibleStart) return;
     let a = function(e) {
         var t;
-        let n = (null !== (t = p.get(e)) && void 0 !== t ? t : 0) + 1;
-        return p.set(e, n), n
+        let n = (null !== (t = m.get(e)) && void 0 !== t ? t : 0) + 1;
+        return m.set(e, n), n
       }(n),
       l = (0, i.now)() - this.spinnerVisibleStart;
     if (this.spinnerVisibleStart = null, l < 0) {
@@ -36,7 +36,7 @@ class m {
     }
     this.logger.info("spinner visible for ".concat(l, " ms\n      [").concat(e, ", count for stream: ").concat(a, "]"));
     let s = d.default.getGuildId(),
-      m = c.default.getUserVoiceChannelId(s, r.default.getId()),
+      p = c.default.getUserVoiceChannelId(s, r.default.getId()),
       E = function(e) {
         if (null != e) {
           if (e.isGuildVoice()) return "guild_voice";
@@ -45,7 +45,7 @@ class m {
           if (e.isGroupDM()) return "group_dm"
         }
         return null
-      }(o.default.getChannel(m));
+      }(u.default.getChannel(p));
     f.default.track(h.AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, {
       video_spinner_context: e,
       duration_video_spinner_visible_ms: l,
@@ -53,12 +53,12 @@ class m {
       media_session_id: d.default.getMediaSessionId(),
       event_count_for_stream: a,
       guild_id: s,
-      channel_id: m,
+      channel_id: p,
       channel_type: E,
       spinning_user_id: t,
-      connection_type: u.default.getType(),
-      effective_connection_speed: u.default.getEffectiveConnectionSpeed(),
-      service_provider: u.default.getServiceProvider()
+      connection_type: o.default.getType(),
+      effective_connection_speed: o.default.getEffectiveConnectionSpeed(),
+      service_provider: o.default.getServiceProvider()
     })
   }
   constructor(e) {

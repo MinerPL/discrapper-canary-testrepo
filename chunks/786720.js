@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   CREATE_GUILD: function() {
-    return a
+    return u
   }
 });
 var i = n("77078"),
   o = n("616265"),
   l = n("243338");
-let a = {
+let u = {
   binds: ["mod+shift+n"],
   comboKeysBindGlobal: !0,
   action() {

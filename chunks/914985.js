@@ -1,27 +1,27 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return o
+    return i
   }
 });
 var a = l("37983");
 l("884691");
-var n = l("398654"),
-  s = l("311161"),
-  i = l("961868");
+var s = l("398654"),
+  n = l("311161"),
+  o = l("961868");
 
-function o(e) {
+function i(e) {
   let {
     guild: t
   } = e, {
     shouldShowIncidentActions: l,
-    incidentData: o,
-    isUnderLockdown: d
-  } = (0, n.useGuildIncidentsState)(t.id), r = !1;
-  return (null != o && (r = (0, s.hasDetectedActivity)(o) && l), r || d) ? (0, a.jsx)(i.default, {
+    incidentData: i,
+    isUnderLockdown: r
+  } = (0, s.useGuildIncidentsState)(t.id), d = !1;
+  return (null != i && (d = (0, n.hasDetectedActivity)(i) && l), d || r) ? (0, a.jsx)(o.default, {
     guild: t,
-    incidentData: o,
-    isUnderLockdown: d,
-    isRaidDetected: r
+    incidentData: i,
+    isUnderLockdown: r,
+    isRaidDetected: d
   }) : null
 }

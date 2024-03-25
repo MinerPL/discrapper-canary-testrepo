@@ -36,14 +36,14 @@ function h(e) {
     createdAt: P,
     actionedAt: j,
     guildId: G,
-    userId: O
-  } = i, v = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id, D = (0, r.useStateFromStores)([I.default], () => I.default.getUser(v)), L = (0, r.useStateFromStores)([E.default], () => null != v ? E.default.getMember(G, v) : null, [v, G]), b = l.useCallback(() => {
+    userId: v
+  } = i, O = null === (t = i.actionedByUser) || void 0 === t ? void 0 : t.id, D = (0, r.useStateFromStores)([I.default], () => I.default.getUser(O)), L = (0, r.useStateFromStores)([E.default], () => null != O ? E.default.getMember(G, O) : null, [O, G]), b = l.useCallback(() => {
     (0, o.showToast)((0, o.createToast)(A.default.Messages.ERROR_GENERIC_TITLE, o.ToastType.FAILURE))
   }, []), F = async () => {
     if (!C) {
       g(!0);
       try {
-        await m.default.updateGuildJoinRequest(G, O, N.GuildJoinRequestApplicationStatuses.APPROVED)
+        await m.default.updateGuildJoinRequest(G, v, N.GuildJoinRequestApplicationStatuses.APPROVED)
       } catch {
         b()
       } finally {
@@ -126,7 +126,7 @@ function h(e) {
                 return t => (0, a.jsx)(e, {
                   modalProps: t,
                   guildId: G,
-                  userId: O,
+                  userId: v,
                   onError: b
                 })
               })

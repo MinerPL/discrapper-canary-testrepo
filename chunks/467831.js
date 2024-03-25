@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentAnimationTier0: function() {
-    return _
+    return C
   },
   PremiumPaymentAnimationTier1: function() {
-    return L
+    return N
   },
   PremiumPaymentAnimationTier2: function() {
     return x
   },
   PremiumPaymentGuildAnimation: function() {
-    return O
+    return P
   }
 }), n("222007");
-var l, s, i, r, a, o, u, d, c = n("37983"),
+var s, r, a, l, i, o, u, d, c = n("37983"),
   f = n("884691"),
-  p = n("414456"),
-  m = n.n(p),
-  h = n("907002"),
-  E = n("458960"),
-  I = n("273108"),
-  S = n("635233");
-(a = l || (l = {})).NORMAL = "normal", a.SPEED_START = "speed_start", a.SPEED_LOOP = "speed_loop", a.FINISH = "finish", a.IDLE = "idle";
-let g = {
+  m = n("414456"),
+  E = n.n(m),
+  p = n("146606"),
+  I = n("458960"),
+  _ = n("273108"),
+  h = n("577567");
+(i = s || (s = {})).NORMAL = "normal", i.SPEED_START = "speed_start", i.SPEED_LOOP = "speed_loop", i.FINISH = "finish", i.IDLE = "idle";
+let S = {
   normal: {
     BEG: 0,
     END: 600,
@@ -45,13 +45,13 @@ let g = {
     END: 878
   }
 };
-class _ extends f.PureComponent {
+class C extends f.PureComponent {
   static getNextScene(e) {
     switch (e) {
-      case _.Scenes.SPEED_START:
-        return _.Scenes.SPEED_LOOP;
-      case _.Scenes.FINISH:
-        return _.Scenes.IDLE;
+      case C.Scenes.SPEED_START:
+        return C.Scenes.SPEED_LOOP;
+      case C.Scenes.FINISH:
+        return C.Scenes.IDLE;
       default:
         return e
     }
@@ -69,24 +69,24 @@ class _ extends f.PureComponent {
       className: e,
       nextScene: t,
       onScenePlay: n,
-      onSceneComplete: l,
-      pause: s,
-      pauseWhileUnfocused: i
+      onSceneComplete: s,
+      pause: r,
+      pauseWhileUnfocused: a
     } = this.props;
-    return (0, c.jsx)(I.default, {
-      className: m(S.sequencedAnimation, e),
+    return (0, c.jsx)(_.default, {
+      className: E(h.sequencedAnimation, e),
       importData: this.importDefault,
-      nextScene: s ? "idle" : t,
-      sceneSegments: g,
+      nextScene: r ? "idle" : t,
+      sceneSegments: S,
       onScenePlay: n,
-      onSceneComplete: l,
-      pauseWhileUnfocused: i,
-      pause: s
+      onSceneComplete: s,
+      pauseWhileUnfocused: a,
+      pause: r
     })
   }
 }
-_.Scenes = l, (o = s || (s = {})).NORMAL = "normal", o.SPEED_START = "speed_start", o.SPEED_LOOP = "speed_loop", o.FINISH = "finish", o.IDLE = "idle";
-let C = {
+C.Scenes = s, (o = r || (r = {})).NORMAL = "normal", o.SPEED_START = "speed_start", o.SPEED_LOOP = "speed_loop", o.FINISH = "finish", o.IDLE = "idle";
+let R = {
   normal: {
     BEG: 0,
     END: 600,
@@ -109,13 +109,13 @@ let C = {
     END: 878
   }
 };
-class L extends f.PureComponent {
+class N extends f.PureComponent {
   static getNextScene(e) {
     switch (e) {
-      case L.Scenes.SPEED_START:
-        return L.Scenes.SPEED_LOOP;
-      case L.Scenes.FINISH:
-        return L.Scenes.IDLE;
+      case N.Scenes.SPEED_START:
+        return N.Scenes.SPEED_LOOP;
+      case N.Scenes.FINISH:
+        return N.Scenes.IDLE;
       default:
         return e
     }
@@ -133,24 +133,24 @@ class L extends f.PureComponent {
       className: e,
       nextScene: t,
       onScenePlay: n,
-      onSceneComplete: l,
-      pause: s,
-      pauseWhileUnfocused: i
+      onSceneComplete: s,
+      pause: r,
+      pauseWhileUnfocused: a
     } = this.props;
-    return (0, c.jsx)(I.default, {
-      className: m(S.sequencedAnimation, e),
+    return (0, c.jsx)(_.default, {
+      className: E(h.sequencedAnimation, e),
       importData: this.importDefault,
-      nextScene: s ? "idle" : t,
-      sceneSegments: C,
+      nextScene: r ? "idle" : t,
+      sceneSegments: R,
       onScenePlay: n,
-      onSceneComplete: l,
-      pauseWhileUnfocused: i,
-      pause: s
+      onSceneComplete: s,
+      pauseWhileUnfocused: a,
+      pause: r
     })
   }
 }
-L.Scenes = s, (u = i || (i = {})).IDLE_ENTRY = "idle_entry", u.IDLE_LOOP = "idle_loop", u.BOOST_START = "boost_start", u.BOOST_LOOP = "boost_loop", u.BOOST_END = "boost_end", u.VICTORY = "victory", u.ERROR = "error";
-let R = {
+N.Scenes = r, (u = a || (a = {})).IDLE_ENTRY = "idle_entry", u.IDLE_LOOP = "idle_loop", u.BOOST_START = "boost_start", u.BOOST_LOOP = "boost_loop", u.BOOST_END = "boost_end", u.VICTORY = "victory", u.ERROR = "error";
+let L = {
   idle_entry: {
     BEG: 0,
     END: 50
@@ -181,7 +181,7 @@ let R = {
     END: 375
   }
 };
-class N extends f.PureComponent {
+class g extends f.PureComponent {
   getStyle(e) {
     let {
       animation: t
@@ -205,18 +205,18 @@ class N extends f.PureComponent {
       className: e
     } = this.props;
     return (0, c.jsxs)("div", {
-      className: S.panningAnimation,
-      children: [(0, c.jsx)(E.default.div, {
+      className: h.panningAnimation,
+      children: [(0, c.jsx)(I.default.div, {
         className: e,
         style: this.getStyle(!1)
-      }), (0, c.jsx)(E.default.div, {
+      }), (0, c.jsx)(I.default.div, {
         className: e,
         style: this.getStyle(!0)
       })]
     })
   }
 }
-let v = Object.freeze({
+let T = Object.freeze({
   IDLE_ENTRY: {
     toValue: 1,
     duration: 1500
@@ -224,7 +224,7 @@ let v = Object.freeze({
   IDLE_LOOP: {
     toValue: 1,
     duration: 6e3,
-    easing: E.default.Easing.linear
+    easing: I.default.Easing.linear
   },
   BOOST_START: {
     toValue: 0,
@@ -266,34 +266,34 @@ class x extends f.PureComponent {
     })
   }
   animateEntry(e) {
-    E.default.parallel([E.default.timing(this.foregroundAnimation.y, {
+    I.default.parallel([I.default.timing(this.foregroundAnimation.y, {
       toValue: e.toValue,
       duration: e.duration,
       delay: e.delay || 0
-    }), E.default.timing(this.backgroundAnimation.y, {
+    }), I.default.timing(this.backgroundAnimation.y, {
       toValue: e.toValue,
       duration: 1.2 * e.duration,
       delay: e.delay || 0
     })]).start()
   }
   animateIdleEntry() {
-    this.animateEntry(v.IDLE_ENTRY)
+    this.animateEntry(T.IDLE_ENTRY)
   }
   animateError() {
-    this.animateEntry(v.ERROR)
+    this.animateEntry(T.ERROR)
   }
   animateIdleLoop() {
     this.animateIdleLoopBackground(), this.animateIdleLoopForeground()
   }
   animateBoostStart() {
-    E.default.parallel([E.default.timing(this.foregroundAnimation.y, {
-      toValue: v.BOOST_START.toValue,
-      duration: v.BOOST_START.duration,
-      delay: v.BOOST_START.delay
-    }), E.default.timing(this.backgroundAnimation.y, {
-      toValue: v.BOOST_START.toValue,
-      duration: 1.2 * v.BOOST_START.duration,
-      delay: v.BOOST_START.delay
+    I.default.parallel([I.default.timing(this.foregroundAnimation.y, {
+      toValue: T.BOOST_START.toValue,
+      duration: T.BOOST_START.duration,
+      delay: T.BOOST_START.delay
+    }), I.default.timing(this.backgroundAnimation.y, {
+      toValue: T.BOOST_START.toValue,
+      duration: 1.2 * T.BOOST_START.duration,
+      delay: T.BOOST_START.delay
     })]).start()
   }
   render() {
@@ -301,57 +301,57 @@ class x extends f.PureComponent {
       className: e,
       nextScene: t,
       pause: n,
-      onSceneComplete: l
+      onSceneComplete: s
     } = this.props;
     return (0, c.jsxs)("div", {
-      className: m(S.tier2Animation, e),
+      className: E(h.tier2Animation, e),
       children: [n ? (0, c.jsx)(c.Fragment, {
         children: (0, c.jsxs)("div", {
-          className: S.panningAnimation,
+          className: h.panningAnimation,
           children: [(0, c.jsx)("div", {
-            className: S.tier2Background
+            className: h.tier2Background
           }), (0, c.jsx)("div", {
-            className: S.tier2Foreground
+            className: h.tier2Foreground
           })]
         })
       }) : (0, c.jsxs)(c.Fragment, {
-        children: [(0, c.jsx)(N, {
-          className: S.tier2Background,
+        children: [(0, c.jsx)(g, {
+          className: h.tier2Background,
           animation: this.backgroundAnimation
-        }), (0, c.jsx)(N, {
-          className: S.tier2Foreground,
+        }), (0, c.jsx)(g, {
+          className: h.tier2Foreground,
           animation: this.foregroundAnimation
         })]
-      }), (0, c.jsx)(I.default, {
-        className: S.sequencedAnimation,
+      }), (0, c.jsx)(_.default, {
+        className: h.sequencedAnimation,
         importData: this.importData,
         nextScene: n ? "idle_loop" : t,
-        sceneSegments: R,
+        sceneSegments: L,
         onScenePlay: this.handleScenePlay,
-        onSceneComplete: l,
+        onSceneComplete: s,
         pauseWhileUnfocused: !1,
         pause: n
       })]
     })
   }
   constructor(...e) {
-    super(...e), this.backgroundAnimation = new E.default.ValueXY({
+    super(...e), this.backgroundAnimation = new I.default.ValueXY({
       x: 0,
       y: 0
-    }), this.foregroundAnimation = new E.default.ValueXY({
+    }), this.foregroundAnimation = new I.default.ValueXY({
       x: 0,
       y: 0
     }), this.didUnmount = !1, this.animateIdleLoopBackground = () => {
-      !this.didUnmount && (this.backgroundAnimation.x.setValue(0), E.default.timing(this.backgroundAnimation.x, {
-        toValue: v.IDLE_LOOP.toValue,
-        duration: 1.2 * v.IDLE_LOOP.duration,
-        easing: E.default.Easing.linear
+      !this.didUnmount && (this.backgroundAnimation.x.setValue(0), I.default.timing(this.backgroundAnimation.x, {
+        toValue: T.IDLE_LOOP.toValue,
+        duration: 1.2 * T.IDLE_LOOP.duration,
+        easing: I.default.Easing.linear
       }).start(this.animateIdleLoopBackground))
     }, this.animateIdleLoopForeground = () => {
-      !this.didUnmount && (this.foregroundAnimation.x.setValue(0), E.default.timing(this.foregroundAnimation.x, {
-        toValue: v.IDLE_LOOP.toValue,
-        duration: v.IDLE_LOOP.duration,
-        easing: v.IDLE_LOOP.easing
+      !this.didUnmount && (this.foregroundAnimation.x.setValue(0), I.default.timing(this.foregroundAnimation.x, {
+        toValue: T.IDLE_LOOP.toValue,
+        duration: T.IDLE_LOOP.duration,
+        easing: T.IDLE_LOOP.easing
       }).start(this.animateIdleLoopForeground))
     }, this.handleScenePlay = e => {
       switch (e) {
@@ -371,8 +371,8 @@ class x extends f.PureComponent {
     }
   }
 }
-x.Scenes = i, (d = r || (r = {})).ENTRY = "entry", d.IDLE = "idle", d.STARS = "stars", d.ERROR = "error", d.SUCCESS = "success";
-let T = {
+x.Scenes = a, (d = l || (l = {})).ENTRY = "entry", d.IDLE = "idle", d.STARS = "stars", d.ERROR = "error", d.SUCCESS = "success";
+let M = {
     entry: {
       BEG: 0,
       END: 180
@@ -396,36 +396,36 @@ let T = {
       END: 778
     }
   },
-  A = Object.freeze({
+  v = Object.freeze({
     WHITE: "#ebf0f7",
     PINK: "#fa6ef6"
   }),
-  M = [{
+  U = [{
     left: 29,
     top: 100,
-    color: A.WHITE
+    color: v.WHITE
   }, {
     left: 245,
     top: 11,
-    color: A.PINK
+    color: v.PINK
   }, {
     left: 393,
     top: 22,
-    color: A.WHITE
+    color: v.WHITE
   }, {
     left: 74,
     top: 30,
-    color: A.PINK
+    color: v.PINK
   }, {
     left: 188,
     top: 9,
-    color: A.WHITE
+    color: v.WHITE
   }, {
     left: 379,
     top: 97,
-    color: A.PINK
+    color: v.PINK
   }],
-  U = Object.freeze({
+  D = Object.freeze({
     SCALE_INITIAL: 0,
     SCALE_MIDDLE: 1,
     SCALE_END: 0,
@@ -439,58 +439,58 @@ let T = {
     DURATION_END: 250,
     SIZE_MIN: 7,
     SIZE_MAX: 15,
-    EASING_MIDDLE: E.default.Easing.bezier(.3, .01, 0, .99),
-    EASING_END: E.default.Easing.bezier(0, -.01, .99, 0)
+    EASING_MIDDLE: I.default.Easing.bezier(.3, .01, 0, .99),
+    EASING_END: I.default.Easing.bezier(0, -.01, .99, 0)
   });
 
-function D(e) {
+function A(e) {
   let {
     animate: t
-  } = e, [n, l] = f.useState(0), s = (0, h.useSprings)(M.length, M.map((e, s) => {
-    let i = s > 0 ? U.DELAY_STAGGER * s + Math.random() * (U.DELAY_MAX - U.DELAY_MIN) + U.DELAY_MIN : 0,
-      r = Math.random() * (U.SIZE_MAX - U.SIZE_MIN) + U.SIZE_MIN;
+  } = e, [n, s] = f.useState(0), r = (0, p.useSprings)(U.length, U.map((e, r) => {
+    let a = r > 0 ? D.DELAY_STAGGER * r + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
+      l = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
     return {
       from: {
-        scale: U.SCALE_INITIAL,
-        rotate: U.ROTATE_INITIAL,
+        scale: D.SCALE_INITIAL,
+        rotate: D.ROTATE_INITIAL,
         top: e.top,
         left: e.left,
-        width: r,
-        height: r
+        width: l,
+        height: l
       },
       to: async e => {
         t ? (await e({
-          scale: U.SCALE_MIDDLE,
-          rotate: U.ROTATE_MIDDLE,
-          delay: i,
+          scale: D.SCALE_MIDDLE,
+          rotate: D.ROTATE_MIDDLE,
+          delay: a,
           config: {
-            duration: U.DURATION_MIDDLE,
-            easing: U.EASING_MIDDLE
+            duration: D.DURATION_MIDDLE,
+            easing: D.EASING_MIDDLE
           }
         }), await e({
-          scale: U.SCALE_END,
-          rotate: U.ROTATE_END,
+          scale: D.SCALE_END,
+          rotate: D.ROTATE_END,
           config: {
-            duration: U.DURATION_END,
-            easing: U.EASING_END
+            duration: D.DURATION_END,
+            easing: D.EASING_END
           }
         }), await e({
-          scale: U.SCALE_INITIAL,
-          rotate: U.ROTATE_INITIAL,
+          scale: D.SCALE_INITIAL,
+          rotate: D.ROTATE_INITIAL,
           immediate: !0
-        }), s === M.length - 1 && l(n + 1)) : await e({
-          scale: U.SCALE_INITIAL,
-          rotate: U.ROTATE_INITIAL
+        }), r === U.length - 1 && s(n + 1)) : await e({
+          scale: D.SCALE_INITIAL,
+          rotate: D.ROTATE_INITIAL
         })
       }
     }
   }));
   return (0, c.jsx)(c.Fragment, {
-    children: s.map((e, t) => {
-      let n = M[t];
-      return (0, c.jsx)(h.animated.svg, {
+    children: r.map((e, t) => {
+      let n = U[t];
+      return (0, c.jsx)(p.animated.svg, {
         style: e,
-        className: S.guildStar,
+        className: h.guildStar,
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 12.14 12.24",
         children: (0, c.jsx)("path", {
@@ -501,7 +501,7 @@ function D(e) {
     })
   })
 }
-class O extends f.PureComponent {
+class P extends f.PureComponent {
   static getNextScene(e) {
     switch (e) {
       case "entry":
@@ -525,25 +525,25 @@ class O extends f.PureComponent {
       className: e,
       nextScene: t,
       pause: n,
-      onScenePlay: l,
-      onSceneComplete: s,
-      pauseWhileUnfocused: i
+      onScenePlay: s,
+      onSceneComplete: r,
+      pauseWhileUnfocused: a
     } = this.props;
     return (0, c.jsxs)("div", {
-      className: m(S.guildWrapper, e),
-      children: [(0, c.jsx)(I.default, {
-        className: S.guildBackground,
+      className: E(h.guildWrapper, e),
+      children: [(0, c.jsx)(_.default, {
+        className: h.guildBackground,
         importData: this.importData,
         nextScene: n ? "idle" : t,
-        sceneSegments: T,
-        onScenePlay: l,
-        onSceneComplete: s,
-        pauseWhileUnfocused: i,
+        sceneSegments: M,
+        onScenePlay: s,
+        onSceneComplete: r,
+        pauseWhileUnfocused: a,
         pause: n
-      }), (0, c.jsx)(D, {
+      }), (0, c.jsx)(A, {
         animate: !n && "stars" === t
       })]
     })
   }
 }
-O.Scenes = r
+P.Scenes = l

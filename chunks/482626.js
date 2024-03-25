@@ -1,7 +1,7 @@
 "use strict";
-var l, i;
+var i, l;
 n.r(t), n.d(t, {
   CommandListSortOrder: function() {
-    return l
+    return i
   }
-}), (i = l || (l = {}))[i.POPULAR = 0] = "POPULAR", i[i.ALPHABETICAL = 1] = "ALPHABETICAL"
+}), (l = i || (i = {}))[l.POPULAR = 0] = "POPULAR", l[l.ALPHABETICAL = 1] = "ALPHABETICAL"

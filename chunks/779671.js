@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("913144"),
-  i = n("305961"),
-  l = n("49111");
+  l = n("305961"),
+  i = n("49111");
 class r extends a.default.Store {
   initialize() {
-    this.waitFor(i.default), this.syncWith([i.default], l.NOOP)
+    this.waitFor(l.default), this.syncWith([l.default], i.NOOP)
   }
   channelNoticePredicate(e, t) {
-    return !e.hasFeature(l.GuildFeatures.BANNER) && Date.now() - t >= l.CHANNEL_NOTICE_SHOW_DELAY
+    return !e.hasFeature(i.GuildFeatures.BANNER) && Date.now() - t >= i.CHANNEL_NOTICE_SHOW_DELAY
   }
 }
 r.displayName = "GuildBoostingNoticeStore";

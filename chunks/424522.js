@@ -20,10 +20,10 @@ e.exports = function(e, t, n) {
     if (r > n - f - 2) throw Error("message too long");
     var p = l.alloc(n - r - f - 2),
       h = n - d - 1,
-      g = i(d),
-      b = a(l.concat([u, p, l.alloc(1, 1), t], h), s(g, h)),
-      v = a(g, s(b, d));
-    return new c(l.concat([l.alloc(1), v, b], n))
+      v = i(d),
+      g = a(l.concat([u, p, l.alloc(1, 1), t], h), s(v, h)),
+      b = a(v, s(g, d));
+    return new c(l.concat([l.alloc(1), b, g], n))
   }(h, t);
   else if (1 === f) p = function(e, t, n) {
     var r, o = t.length,

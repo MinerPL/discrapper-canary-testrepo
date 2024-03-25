@@ -18,11 +18,11 @@ var a = n("446674"),
   h = n("503417"),
   C = n("162236"),
   p = n("384997"),
-  m = n("374014"),
-  E = n("375202"),
-  g = n("373469"),
-  I = n("271938"),
-  S = n("568307"),
+  m = n("161454"),
+  E = n("374014"),
+  g = n("375202"),
+  I = n("373469"),
+  S = n("271938"),
   _ = n("18494"),
   N = n("101125"),
   T = n("703370"),
@@ -34,8 +34,8 @@ var a = n("446674"),
 
 function M() {
   let e = (0, a.useStateFromStores)([_.default], () => _.default.getVoiceChannelId()),
-    t = (0, a.useStateFromStores)([I.default], () => I.default.getId()),
-    n = (0, a.useStateFromStores)([S.default, T.default], () => (0, E.default)(S.default, T.default)),
+    t = (0, a.useStateFromStores)([S.default], () => S.default.getId()),
+    n = (0, a.useStateFromStores)([m.default, T.default], () => (0, g.default)(m.default, T.default)),
     {
       canBroadcast: M
     } = d.default.useExperiment({
@@ -45,7 +45,7 @@ function M() {
     }),
     O = (0, c.default)() && null != n,
     y = (0, a.useStateFromStores)([N.default], () => null != N.default.getBroadcast()),
-    D = (0, a.useStateFromStoresArray)([g.default], () => g.default.getAllActiveStreams());
+    D = (0, a.useStateFromStoresArray)([I.default], () => I.default.getAllActiveStreams());
   if (!O && !y) return null;
   if (d.default.trackExposure({
       location: "broadcast_button_rtc_panel"
@@ -65,7 +65,7 @@ function M() {
             pid: null == n ? void 0 : n.pid,
             channelId: e
           })
-        }) : (0, u.startBroadcastForStream)((0, m.encodeStreamKey)(l), null == n ? void 0 : n.pid)
+        }) : (0, u.startBroadcastForStream)((0, E.encodeStreamKey)(l), null == n ? void 0 : n.pid)
       } else(0, u.stopBroadcast)()
     },
     U = e => (0, l.jsx)(L.default, {

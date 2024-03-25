@@ -1,31 +1,31 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
-}), s("222007");
-var o = s("37983"),
-  i = s("884691"),
-  l = s("446674"),
-  n = s("206230"),
-  C = s("491605");
+}), n("222007");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("446674"),
+  s = n("206230"),
+  r = n("491605");
 
-function a(e) {
+function o(e) {
   let {
     animationData: t,
-    className: s
-  } = e, [a, r] = (0, i.useState)(0), d = (0, l.useStateFromStores)([n.default], () => n.default.useReducedMotion);
-  return (0, i.useEffect)(() => {
-    let e = a + 1;
+    className: n
+  } = e, [o, u] = (0, l.useState)(0), d = (0, a.useStateFromStores)([s.default], () => s.default.useReducedMotion);
+  return (0, l.useEffect)(() => {
+    let e = o + 1;
     e < t.length && t[e]()
-  }, [a, t]), (0, o.jsx)(C.default, {
-    importData: t[a],
-    className: s,
+  }, [o, t]), (0, i.jsx)(r.default, {
+    importData: t[o],
+    className: n,
     shouldAnimate: !d,
-    versionKey: a,
+    versionKey: o,
     onComplete: () => {
-      a < t.length - 1 && r(a + 1)
+      o < t.length - 1 && u(o + 1)
     },
-    loop: a === t.length - 1
+    loop: o === t.length - 1
   })
 }

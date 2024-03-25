@@ -13,7 +13,7 @@ var i, r, o = n("37983"),
   a = n.n(l),
   u = n("413197"),
   c = n("782340"),
-  d = n("830306");
+  d = n("333365");
 (i = r || (r = {})).WANDERING_CUBES = "wanderingCubes", i.CHASING_DOTS = "chasingDots", i.PULSING_ELLIPSIS = "pulsingEllipsis", i.SPINNING_CIRCLE = "spinningCircle", i.SPINNING_CIRCLE_SIMPLE = "spinningCircleSimple", i.LOW_MOTION = "lowMotion";
 
 function _(e) {

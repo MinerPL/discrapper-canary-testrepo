@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 }), n("702976");
 var a = n("568734"),
-  i = n("49111"),
-  s = e => null != e && null != e.attachments && !(e.attachments.length < 1) && e.attachments.some(e => null != e.flags && (0, a.hasFlag)(e.flags, i.MessageAttachmentFlags.IS_REMIX))
+  s = n("49111"),
+  r = e => null != e && null != e.attachments && !(e.attachments.length < 1) && e.attachments.some(e => null != e.flags && (0, a.hasFlag)(e.flags, s.MessageAttachmentFlags.IS_REMIX))

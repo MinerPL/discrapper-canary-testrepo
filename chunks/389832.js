@@ -1,5 +1,5 @@
-var e = u("890022");
-t.exports = function(t, n, u) {
-  var r = t.length;
-  return u = void 0 === u ? r : u, !n && u >= r ? t : e(t, n, u)
+var i = n("890022");
+e.exports = function(e, t, n) {
+  var a = e.length;
+  return n = void 0 === n ? a : n, !t && n >= a ? e : i(e, t, n)
 }

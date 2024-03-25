@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PopoutCSSAnimator: function() {
-    return h
+    return E
   }
 }), n("222007");
 var i, s, r = n("37983"),
@@ -10,14 +10,14 @@ var i, s, r = n("37983"),
   l = n.n(o),
   u = n("862337"),
   d = n("413197"),
-  c = n("685551");
+  c = n("505444");
 (s = i || (i = {}))[s.TRANSLATE = 1] = "TRANSLATE", s[s.SCALE = 2] = "SCALE", s[s.FADE = 3] = "FADE";
-let f = Object.freeze({
+let _ = Object.freeze({
     1: c.translate,
     2: c.scale,
     3: c.fade
   }),
-  _ = Object.freeze({
+  f = Object.freeze({
     top: c.animatorTop,
     bottom: c.animatorBottom,
     left: c.animatorLeft,
@@ -26,22 +26,22 @@ let f = Object.freeze({
     window_center: c.animatorCenter
   });
 
-function h(e) {
+function E(e) {
   let {
     position: t,
     type: n,
     children: i
   } = e, {
     reducedMotion: s
-  } = a.useContext(d.AccessibilityPreferencesContext), o = s.enabled ? 3 : n, [h, g] = a.useState(null != t), [m] = a.useState(() => new u.Timeout);
-  return a.useEffect(() => () => m.stop(), [m]), a.useEffect(() => {
-    null != t && m.start(10, () => g(!0))
-  }, [t, m]), (0, r.jsx)("div", {
-    className: l(null != t ? _[t] : null, {
-      [f[o]]: null != t,
-      [c.didRender]: h
+  } = a.useContext(d.AccessibilityPreferencesContext), o = s.enabled ? 3 : n, [E, h] = a.useState(null != t), [g] = a.useState(() => new u.Timeout);
+  return a.useEffect(() => () => g.stop(), [g]), a.useEffect(() => {
+    null != t && g.start(10, () => h(!0))
+  }, [t, g]), (0, r.jsx)("div", {
+    className: l(null != t ? f[t] : null, {
+      [_[o]]: null != t,
+      [c.didRender]: E
     }),
     children: i
   })
 }
-h.Types = i
+E.Types = i

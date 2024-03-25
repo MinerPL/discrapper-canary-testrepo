@@ -4,25 +4,25 @@ n.r(t), n.d(t, {
     return o
   }
 }), n("866227");
-var a = n("249654"),
-  s = n("446674"),
-  i = n("487269"),
+var a = n("446674"),
+  s = n("487269"),
   l = n("660478"),
+  i = n("299039"),
   r = n("389495");
 
 function o(e) {
   let t = (0, r.useMessageRequestPreview)(e),
-    n = (0, s.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
+    n = (0, a.useStateFromStores)([l.default], () => l.default.lastMessageId(e.id)),
     o = function(e) {
       let {
         lastMessageId: t,
         message: n,
-        loaded: s
+        loaded: a
       } = e;
-      return s && null != n ? a.default.extractTimestamp(n.id) : null != t ? a.default.extractTimestamp(t) : null
+      return a && null != n ? i.default.extractTimestamp(n.id) : null != t ? i.default.extractTimestamp(t) : null
     }({
       lastMessageId: n,
       ...t
     });
-  return null == o ? "" : (0, i.getTimestampString)(o)
+  return null == o ? "" : (0, s.getTimestampString)(o)
 }

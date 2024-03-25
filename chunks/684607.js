@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("884691"),
-  i = n("383018"),
-  r = n("939563"),
-  o = n("467123"),
-  s = n("93640"),
-  a = n("49111");
+var i = n("884691"),
+  l = n("383018"),
+  a = n("939563"),
+  s = n("467123"),
+  r = n("93640"),
+  o = n("49111");
 
 function u(e) {
   let {
@@ -22,69 +22,69 @@ function u(e) {
     onEnter: p,
     allowNewLines: m,
     submit: h,
-    hideAutocomplete: E,
-    moveSelection: S
-  } = e, g = l.useCallback(e => {
-    var l;
+    hideAutocomplete: x,
+    moveSelection: E
+  } = e, y = i.useCallback(e => {
+    var i;
     switch (e.which) {
-      case a.KeyboardKeys.ARROW_UP:
-        if (S(-1)) {
+      case o.KeyboardKeys.ARROW_UP:
+        if (E(-1)) {
           e.preventDefault();
           return
         }
         break;
-      case a.KeyboardKeys.ARROW_DOWN:
-        if (S(1)) {
+      case o.KeyboardKeys.ARROW_DOWN:
+        if (E(1)) {
           e.preventDefault();
           return
         }
         break;
-      case a.KeyboardKeys.P:
-        if ((0, s.checkModifiers)(e, {
+      case o.KeyboardKeys.P:
+        if ((0, r.checkModifiers)(e, {
             ctrl: !0
-          }) && S(-1)) {
+          }) && E(-1)) {
           e.preventDefault();
           return
         }
         break;
-      case a.KeyboardKeys.N:
-        if ((0, s.checkModifiers)(e, {
+      case o.KeyboardKeys.N:
+        if ((0, r.checkModifiers)(e, {
             ctrl: !0
-          }) && S(1)) {
+          }) && E(1)) {
           e.preventDefault();
           return
         }
         break;
-      case a.KeyboardKeys.ESCAPE:
-        null == E || E();
+      case o.KeyboardKeys.ESCAPE:
+        null == x || x();
         break;
-      case a.KeyboardKeys.TAB:
-        if ((0, s.checkModifiers)(e, {}) && (null == f ? void 0 : f())) {
+      case o.KeyboardKeys.TAB:
+        if ((0, r.checkModifiers)(e, {}) && (null == f ? void 0 : f())) {
           e.preventDefault(), e.stopPropagation();
           return
         }
-        let c = i.default.getActiveCommand(n.id);
+        let c = l.default.getActiveCommand(n.id);
         if (null != c) {
-          e.preventDefault(), e.stopPropagation(), e.shiftKey ? r.SlateTransforms.selectPreviousCommandOption(t) : r.SlateTransforms.selectNextCommandOption(t);
+          e.preventDefault(), e.stopPropagation(), e.shiftKey ? a.SlateTransforms.selectPreviousCommandOption(t) : a.SlateTransforms.selectNextCommandOption(t);
           return
         }
         break;
-      case a.KeyboardKeys.ENTER:
-        if ((0, s.checkModifiers)(e, {}) && (null == p ? void 0 : p(e))) {
+      case o.KeyboardKeys.ENTER:
+        if ((0, r.checkModifiers)(e, {}) && (null == p ? void 0 : p(e))) {
           e.preventDefault(), e.stopPropagation();
           return
         }
     }
-    if ((null === (l = t.onKeyDown) || void 0 === l ? void 0 : l.call(t, e)) === !0) {
+    if ((null === (i = t.onKeyDown) || void 0 === i ? void 0 : i.call(t, e)) === !0) {
       e.preventDefault(), e.stopPropagation();
       return
     }
-    e.which === a.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, o.hasOpenPlainTextCodeBlock)(t) || !m) && (e.preventDefault(), e.stopPropagation(), h()), null == d || d(e)
-  }, [m, n.id, u, t, E, S, p, d, f, h]), C = l.useCallback(e => {
+    e.which === o.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.hasOpenPlainTextCodeBlock)(t) || !m) && (e.preventDefault(), e.stopPropagation(), h()), null == d || d(e)
+  }, [m, n.id, u, t, x, E, p, d, f, h]), g = i.useCallback(e => {
     null == c || c(e)
   }, [c]);
   return {
-    handleKeyDown: g,
-    handleKeyUp: C
+    handleKeyDown: y,
+    handleKeyUp: g
   }
 }

@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144"),
-  l = n("316272"),
+  l = n("913144"),
+  i = n("316272"),
   r = n("782340");
-class o extends l.default {
+class o extends i.default {
   _initialize() {
-    i.default.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled)
+    l.default.subscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled)
   }
   _terminate() {
-    i.default.unsubscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled)
+    l.default.unsubscribe("POGGERMODE_TEMPORARILY_DISABLED", this.handlePoggermodeTemporarilyDisabled)
   }
   handlePoggermodeTemporarilyDisabled() {
     (0, s.openModal)(e => (0, a.jsx)(s.ConfirmModal, {

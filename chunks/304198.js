@@ -10,7 +10,7 @@ var l = n("414456"),
   a = n.n(l),
   i = n("77078"),
   r = n("587904"),
-  o = n("933470");
+  o = n("957617");
 
 function u(e) {
   let {
@@ -21,17 +21,17 @@ function u(e) {
     children: u,
     contentClassName: d,
     iconClassName: c,
-    iconContainerClassName: f,
-    compact: E = !1
+    iconContainerClassName: E,
+    compact: f = !1
   } = e;
   return (0, s.jsxs)("div", {
     className: a(i, {
       [o.container]: !0,
-      [o.compact]: E,
-      [o.cozy]: !E
+      [o.compact]: f,
+      [o.cozy]: !f
     }),
     children: [null != n && (0, s.jsx)("div", {
-      className: a(o.iconContainer, f),
+      className: a(o.iconContainer, E),
       children: n
     }), null != t && (0, s.jsx)("div", {
       className: o.iconContainer,

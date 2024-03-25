@@ -13,13 +13,13 @@ var s = n("37983"),
   o = n("271938"),
   d = n("124969"),
   c = n("782340"),
-  f = n("926622"),
+  f = n("890957"),
   E = e => {
     let {
       location: t
     } = e, {
       verifyFailed: E,
-      verifySucceeded: I
+      verifySucceeded: _
     } = (0, l.useStateFromStoresObject)([o.default], () => ({
       verifyFailed: o.default.didVerifyFail(),
       verifySucceeded: o.default.didVerifySucceed()
@@ -39,7 +39,7 @@ var s = n("37983"),
         className: f.marginBottom40,
         children: c.default.Messages.PAYMENT_AUTH_EXPIRED_SUGGESTION
       })]
-    }) : I ? (0, s.jsxs)(d.default, {
+    }) : _ ? (0, s.jsxs)(d.default, {
       children: [(0, s.jsx)("img", {
         alt: "",
         src: n("176872"),

@@ -1,53 +1,53 @@
 "use strict";
-a.r(t), a.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return m
+    return d
   }
-}), a("222007");
-var n = a("37983"),
-  l = a("884691"),
-  s = a("77078"),
-  r = a("448993"),
-  o = a("592407"),
-  i = a("62418"),
-  u = a("583789"),
-  c = a("49111"),
-  d = a("782340"),
-  h = a("926622");
+}), s("222007");
+var a = s("37983"),
+  l = s("884691"),
+  E = s("77078"),
+  n = s("448993"),
+  i = s("592407"),
+  _ = s("62418"),
+  o = s("583789"),
+  r = s("49111"),
+  I = s("782340"),
+  u = s("890957");
 
-function m(e) {
+function d(e) {
   let {
     guild: t,
-    onClose: a,
-    hideColors: m
-  } = e, [x, f] = l.useState(t.verificationLevel), [C, L] = l.useState(null), M = t.hasFeature(c.GuildFeatures.COMMUNITY), p = (0, i.generateVerificationLevelOptions)(M, m).filter(e => !e.disabled), v = l.useCallback(async () => {
-    null != C && L(null);
+    onClose: s,
+    hideColors: d
+  } = e, [c, N] = l.useState(t.verificationLevel), [L, R] = l.useState(null), T = t.hasFeature(r.GuildFeatures.COMMUNITY), C = (0, _.generateVerificationLevelOptions)(T, d).filter(e => !e.disabled), M = l.useCallback(async () => {
+    null != L && R(null);
     try {
-      await o.default.saveGuild(t.id, {
-        verificationLevel: x
-      }), o.default.updateGuild({
-        verificationLevel: x
-      }), a()
+      await i.default.saveGuild(t.id, {
+        verificationLevel: c
+      }), i.default.updateGuild({
+        verificationLevel: c
+      }), s()
     } catch (t) {
-      let e = new r.APIError(t);
-      L(e.getAnyErrorMessage())
+      let e = new n.APIError(t);
+      R(e.getAnyErrorMessage())
     }
-  }, [C, t.id, x, a]);
-  return (0, n.jsx)(u.default, {
+  }, [L, t.id, c, s]);
+  return (0, a.jsx)(o.default, {
     ...e,
-    title: d.default.Messages.FORM_LABEL_VERIFICATION_LEVEL,
-    errorText: C,
-    onConfirm: v,
-    onCancel: a,
-    children: (0, n.jsxs)(s.FormSection, {
-      children: [(0, n.jsx)(s.FormText, {
-        type: s.FormText.Types.DESCRIPTION,
-        className: h.marginBottom20,
-        children: d.default.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
-      }), (0, n.jsx)(s.RadioGroup, {
-        value: x,
-        options: p,
-        onChange: e => f(e.value)
+    title: I.default.Messages.FORM_LABEL_VERIFICATION_LEVEL,
+    errorText: L,
+    onConfirm: M,
+    onCancel: s,
+    children: (0, a.jsxs)(E.FormSection, {
+      children: [(0, a.jsx)(E.FormText, {
+        type: E.FormText.Types.DESCRIPTION,
+        className: u.marginBottom20,
+        children: I.default.Messages.FORM_HELP_VERIFICATION_LEVEL.format()
+      }), (0, a.jsx)(E.RadioGroup, {
+        value: c,
+        options: C,
+        onChange: e => N(e.value)
       })]
     })
   })

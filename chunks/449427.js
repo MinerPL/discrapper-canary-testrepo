@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("414456"),
-  i = n.n(s),
-  l = n("449918"),
+  l = n.n(s),
+  i = n("449918"),
   r = n("145131"),
   o = n("833923"),
   u = n("318042"),
   d = n("782340"),
-  c = n("391269"),
+  c = n("563936"),
   f = function(e) {
     var t;
     let {
@@ -21,15 +21,15 @@ var s = n("414456"),
       className: s,
       color: f,
       animate: E,
-      gradientStopColor: _,
-      getHistoricalTotalBytes: h
-    } = e, C = (0, l.useColorValue)(f).hex, I = null === (t = (0, l.useColorValue)(_)) || void 0 === t ? void 0 : t.hex;
+      gradientStopColor: h,
+      getHistoricalTotalBytes: _
+    } = e, C = (0, i.useColorValue)(f).hex, S = null === (t = (0, i.useColorValue)(h)) || void 0 === t ? void 0 : t.hex;
     return (0, a.jsx)(u.default, {
-      getHistoricalTotalBytes: h,
-      children: (e, t, l) => {
+      getHistoricalTotalBytes: _,
+      children: (e, t, i) => {
         var u;
         return (0, a.jsx)("div", {
-          className: i(c.monitor, s),
+          className: l(c.monitor, s),
           children: (0, a.jsxs)(r.default, {
             align: r.default.Align.CENTER,
             children: [(0, a.jsxs)(r.default, {
@@ -54,8 +54,8 @@ var s = n("414456"),
                 className: c.sparkChart,
                 updateInterval: t,
                 color: C,
-                gradientStopColor: I,
-                numUpdatesToShow: l,
+                gradientStopColor: S,
+                numUpdatesToShow: i,
                 animate: E,
                 pixelWidth: 600,
                 pixelHeight: 48,

@@ -15,31 +15,31 @@ let o = s.forwardRef(function(e, t) {
     disabled: u = !1,
     className: d,
     titleClassName: c,
-    tag: f = "h5",
-    required: _ = !1,
-    style: h,
-    title: g,
-    error: m,
-    ...E
-  } = e, p = s.useId(), v = s.useId(), S = null !== (n = E.titleId) && void 0 !== n ? n : p, T = null != m ? null !== (o = E.errorId) && void 0 !== o ? o : v : void 0;
+    tag: _ = "h5",
+    required: f = !1,
+    style: E,
+    title: h,
+    error: g,
+    ...m
+  } = e, p = s.useId(), S = s.useId(), T = null !== (n = m.titleId) && void 0 !== n ? n : p, v = null != g ? null !== (o = m.errorId) && void 0 !== o ? o : S : void 0;
   return (0, i.jsxs)("div", {
     ref: t,
     className: null != d ? d : void 0,
-    style: null != h ? h : void 0,
-    children: [null != g || null != m ? (0, i.jsx)(a.FormTitle, {
-      tag: f,
+    style: null != E ? E : void 0,
+    children: [null != h || null != g ? (0, i.jsx)(a.FormTitle, {
+      tag: _,
       disabled: u,
-      required: _,
-      error: m,
+      required: f,
+      error: g,
       className: c,
-      id: S,
-      errorId: T,
-      ...E,
-      children: g
+      id: T,
+      errorId: v,
+      ...m,
+      children: h
     }) : null, (0, i.jsx)(r.FormContextProvider, {
-      titleId: S,
-      errorId: T,
-      error: null != m ? m : void 0,
+      titleId: T,
+      errorId: v,
+      error: null != g ? g : void 0,
       children: l
     })]
   })

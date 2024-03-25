@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("272030"),
-  l = s("42203"),
+var l = s("272030"),
+  n = s("42203"),
   i = s("305961"),
   r = s("697218"),
   o = s("156557"),
@@ -20,36 +20,36 @@ function c(e) {
     log: c,
     onHeaderClick: E,
     className: _,
-    expanded: T,
-    onContentClick: I
+    expanded: I,
+    onContentClick: T
   } = e;
   return null == t ? null : (0, a.jsx)(o.default, {
     guildId: t,
     log: c,
     className: _,
-    expanded: T,
-    onContentClick: I,
+    expanded: I,
+    onContentClick: T,
     onHeaderClick: () => {
       null == E || E(c)
     },
     onUserContextMenu: e => {
       let {
-        user: l
+        user: n
       } = c;
-      null != l && null != t && (0, n.openContextMenuLazy)(e, async () => {
+      null != n && null != t && (0, l.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await s.el("471085").then(s.bind(s, "471085"));
         return s => (0, a.jsx)(e, {
           ...s,
           guildId: t,
-          user: l
+          user: n
         })
       })
     },
     onChannelContextMenu: e => {
-      let l = i.default.getGuild(t);
-      null != c.options.channel && null != l && (0, n.openContextMenuLazy)(e, async () => {
+      let n = i.default.getGuild(t);
+      null != c.options.channel && null != n && (0, l.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await s.el("887127").then(s.bind(s, "887127"));
@@ -63,9 +63,9 @@ function c(e) {
       switch (c.targetType) {
         case d.AuditLogTargetTypes.CHANNEL:
         case d.AuditLogTargetTypes.CHANNEL_OVERWRITE:
-          let o = l.default.getChannel(c.targetId),
+          let o = n.default.getChannel(c.targetId),
             E = i.default.getGuild(t);
-          if (null != o && null != E) return (0, n.openContextMenuLazy)(e, async () => {
+          if (null != o && null != E) return (0, l.openContextMenuLazy)(e, async () => {
             let {
               default: e
             } = await s.el("887127").then(s.bind(s, "887127"));
@@ -74,7 +74,7 @@ function c(e) {
               channel: o
             })
           });
-          return (0, n.openContextMenuLazy)(e, async () => {
+          return (0, l.openContextMenuLazy)(e, async () => {
             let {
               default: e
             } = await s.el("443070").then(s.bind(s, "443070"));
@@ -86,7 +86,7 @@ function c(e) {
           });
         case d.AuditLogTargetTypes.USER:
           let _ = r.default.getUser(c.targetId);
-          if (null != _ && null != t) return (0, n.openContextMenuLazy)(e, async () => {
+          if (null != _ && null != t) return (0, l.openContextMenuLazy)(e, async () => {
             let {
               default: e
             } = await s.el("471085").then(s.bind(s, "471085"));

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   createToast: function() {
-    return _
+    return f
   },
   Toast: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -16,9 +16,9 @@ var i = n("37983"),
   u = n("984678"),
   d = n("830031"),
   c = n("159350"),
-  f = n("677841");
+  _ = n("882746");
 
-function _(e, t) {
+function f(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.TOAST_DEFAULT_OPTIONS,
     {
       position: i = c.TOAST_DEFAULT_OPTIONS.position,
@@ -36,7 +36,7 @@ function _(e, t) {
     }
   }
 }
-let h = s.memo(function(e) {
+let E = s.memo(function(e) {
   let {
     message: t,
     type: n,
@@ -49,29 +49,29 @@ let h = s.memo(function(e) {
     children: r
   }) : (0, i.jsxs)("div", {
     id: s,
-    className: f.toast,
+    className: _.toast,
     children: [function(e) {
       switch (e) {
         case c.ToastType.SUCCESS:
           return (0, i.jsx)(d.default, {
-            className: f.icon,
+            className: _.icon,
             color: o.tokens.colors.STATUS_POSITIVE.css
           });
         case c.ToastType.FAILURE:
           return (0, i.jsx)(u.default, {
-            className: f.icon,
+            className: _.icon,
             color: o.tokens.colors.STATUS_DANGER.css
           });
         case c.ToastType.CLIP:
           return (0, i.jsx)(l.default, {
-            className: f.clipIcon,
+            className: _.clipIcon,
             color: o.tokens.colors.HEADER_PRIMARY.css
           });
         default:
           return null
       }
     }(n), (0, i.jsx)(a.Text, {
-      className: f.content,
+      className: _.content,
       color: "header-primary",
       variant: "text-md/normal",
       children: t

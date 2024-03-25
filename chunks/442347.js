@@ -13,17 +13,17 @@ e.exports = function(e, t, n, o, s, a) {
   if (p && a.get(t)) return p == t;
   var h = !0;
   a.set(e, t), a.set(t, e);
-  for (var g = c; ++l < d;) {
-    var b = e[f = u[l]],
-      v = t[f];
-    if (o) var m = c ? o(v, b, f, t, e, a) : o(b, v, f, e, t, a);
-    if (!(void 0 === m ? b === v || s(b, v, n, o, a) : m)) {
+  for (var v = c; ++l < d;) {
+    var g = e[f = u[l]],
+      b = t[f];
+    if (o) var m = c ? o(b, g, f, t, e, a) : o(g, b, f, e, t, a);
+    if (!(void 0 === m ? g === b || s(g, b, n, o, a) : m)) {
       h = !1;
       break
     }
-    g || (g = "constructor" == f)
+    v || (v = "constructor" == f)
   }
-  if (h && !g) {
+  if (h && !v) {
     var y = e.constructor,
       x = t.constructor;
     y != x && "constructor" in e && "constructor" in t && !("function" == typeof y && y instanceof y && "function" == typeof x && x instanceof x) && (h = !1)

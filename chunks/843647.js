@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
-var i = n("446674"),
-  r = n("697218"),
-  l = n("10514"),
-  s = n("719923"),
-  a = n("716849"),
+var r = n("446674"),
+  i = n("697218"),
+  a = n("10514"),
+  l = n("719923"),
+  s = n("716849"),
   o = n("676572"),
   u = n("942377"),
-  d = n("917247"),
-  c = n("646718");
+  c = n("917247"),
+  d = n("646718");
 
-function m(e) {
+function f(e) {
   let {
     autoTrackExposure: t,
     experiment: n,
-    location: m
-  } = e, f = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()), _ = (0, d.usePremiumTrialOffer)(), E = null != _, T = null != f && (0, s.isPremium)(f);
-  (0, a.useMaybeFetchPremiumLikelihood)(n);
+    location: f
+  } = e, m = (0, r.useStateFromStores)([i.default], () => i.default.getCurrentUser()), _ = (0, c.usePremiumTrialOffer)(), E = null != _, I = null != m && (0, l.isPremium)(m);
+  (0, s.useMaybeFetchPremiumLikelihood)(n);
   let {
-    enabled: I,
-    useExpectedValue: P,
-    useLikelihood: p
+    enabled: T,
+    useExpectedValue: p,
+    useLikelihood: S
   } = n.useExperiment({
-    location: null != m ? m : "1"
+    location: null != f ? f : "1"
   }, {
-    autoTrackExposure: !T && !E && t
+    autoTrackExposure: !I && !E && t
   }), {
-    premiumLikelihood: S,
+    premiumLikelihood: P,
     fetched: R
-  } = (0, i.useStateFromStoresObject)([o.default], () => {
+  } = (0, r.useStateFromStoresObject)([o.default], () => {
     let e = o.default.getState();
     return {
       fetched: e.fetched,
       premiumLikelihood: e.premiumLikelihood
     }
-  }), C = (0, i.useStateFromStores)([l.default], () => l.default.isLoadedForSKUs([c.PremiumSubscriptionSKUs.TIER_0, c.PremiumSubscriptionSKUs.TIER_2])), O = !T && I && !E && (P ? !R || !C : !R), M = c.PremiumTypes.TIER_2;
+  }), C = (0, r.useStateFromStores)([a.default], () => a.default.isLoadedForSKUs([d.PremiumSubscriptionSKUs.TIER_0, d.PremiumSubscriptionSKUs.TIER_2])), O = !I && T && !E && (p ? !R || !C : !R), g = d.PremiumTypes.TIER_2;
   if (E) {
     let e = _.subscription_trial;
-    (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_0 ? M = c.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === c.PremiumSubscriptionSKUs.TIER_2 && (M = c.PremiumTypes.TIER_2)
-  } else if (!T && !O && I) {
-    if (P) {
+    (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_0 ? g = d.PremiumTypes.TIER_0 : (null == e ? void 0 : e.sku_id) === d.PremiumSubscriptionSKUs.TIER_2 && (g = d.PremiumTypes.TIER_2)
+  } else if (!I && !O && T) {
+    if (p) {
       let {
         amount: e
-      } = (0, s.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
+      } = (0, l.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_0), {
         amount: t
-      } = (0, s.getPrice)(c.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
-      M = (0, u.getHigherExpectedValue)(S, e, t)
-    } else p && (M = (0, u.getHighestLikelihood)(S))
+      } = (0, l.getPrice)(d.SubscriptionPlans.PREMIUM_MONTH_TIER_2);
+      g = (0, u.getHigherExpectedValue)(P, e, t)
+    } else S && (g = (0, u.getHighestLikelihood)(P))
   }
   return {
     isLoading: O,
-    suggestedPremiumType: M
+    suggestedPremiumType: g
   }
 }

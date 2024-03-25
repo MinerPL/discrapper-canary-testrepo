@@ -8,21 +8,21 @@ var i = l("37983"),
   a = l("884691"),
   n = l("414456"),
   s = l.n(n),
-  r = l("646240"),
+  r = l("466857"),
   c = l("49111"),
   o = l("782340"),
-  d = l("335839"),
+  d = l("242767"),
   u = a.forwardRef(function(e, t) {
     let {
       query: l,
       canShowCta: n = !1,
       onChange: u,
-      onSubmit: p,
-      className: m
+      onSubmit: m,
+      className: p
     } = e, [_, f] = a.useState(!1);
     return (0, i.jsx)(r.default, {
       ref: t,
-      className: s(d.search, m),
+      className: s(d.search, p),
       label: o.default.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
       placeholder: o.default.Messages.APP_DIRECTORY_SEARCH_PLACEHOLDER,
       searchTerm: l,
@@ -32,7 +32,7 @@ var i = l("37983"),
       onFocus: () => f(!0),
       onBlur: () => f(!1),
       onKeyPress: e => {
-        e.charCode === c.KeyboardKeys.ENTER && (null == p || p())
+        e.charCode === c.KeyboardKeys.ENTER && (null == m || m())
       },
       autoFocus: !0
     })

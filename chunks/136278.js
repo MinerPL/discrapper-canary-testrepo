@@ -12,29 +12,29 @@ var a = n("917351"),
   d = n("900938"),
   o = n("49111"),
   u = n("653138");
-let c = !1,
-  N = null,
+let N = !1,
+  c = null,
   _ = [],
   I = !1,
   E = [];
 
 function f() {
   (function() {
-    c = !1, N = null, E = [], I = !1
-  })(), null != (N = d.default.getGuildId()) && d.default.getSection() === o.GuildSettingsSections.ONBOARDING && (_ = r.default.getOnboardingPrompts(N), I = r.default.isAdvancedMode(N))
+    N = !1, c = null, E = [], I = !1
+  })(), null != (c = d.default.getGuildId()) && d.default.getSection() === o.GuildSettingsSections.ONBOARDING && (_ = r.default.getOnboardingPrompts(c), I = r.default.isAdvancedMode(c))
 }
 class O extends s.default.Store {
   initialize() {
     this.waitFor(d.default, r.default)
   }
   hasChanges() {
-    return null != N && !l.isEqual(r.default.getOnboardingPrompts(N), _)
+    return null != c && !l.isEqual(r.default.getOnboardingPrompts(c), _)
   }
   get guildId() {
-    return N
+    return c
   }
   get submitting() {
-    return c
+    return N
   }
   get errors() {
     return E
@@ -56,7 +56,7 @@ var S = new O(i.default, {
   GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: f,
   GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function(e) {
     var t;
-    E = null !== (t = e.errors) && void 0 !== t ? t : [], c = !1
+    E = null !== (t = e.errors) && void 0 !== t ? t : [], N = !1
   },
   GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function(e) {
     let {
@@ -65,7 +65,7 @@ var S = new O(i.default, {
     _ = t
   },
   GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function() {
-    c = !0, E = []
+    N = !0, E = []
   },
   GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function(e) {
     var t;

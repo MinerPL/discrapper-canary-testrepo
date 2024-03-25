@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return A
   }
 });
 var i = n("446674"),
@@ -13,99 +13,99 @@ var i = n("446674"),
   u = n("773336"),
   d = n("271938"),
   c = n("49111"),
-  f = n("353927");
-let _ = Date.now(),
+  _ = n("353927");
+let f = Date.now(),
+  E = !1,
   h = !1,
   g = !1,
   m = !1,
-  E = !1,
   p = !1;
 
-function v() {
-  return m || E || (0, u.isAndroid)() && p
+function S() {
+  return g || m || (0, u.isAndroid)() && p
 }
 
-function S() {
-  Date.now() - _ > c.IDLE_DURATION || v() ? h || s.default.dispatch({
+function T() {
+  Date.now() - f > c.IDLE_DURATION || S() ? E || s.default.dispatch({
     type: "IDLE",
     idle: !0,
-    idleSince: _
-  }) : h && s.default.dispatch({
+    idleSince: f
+  }) : E && s.default.dispatch({
     type: "IDLE",
     idle: !1
-  }), Date.now() - _ > Math.min(o.AfkTimeout.getSetting() * l.default.Millis.SECOND, c.IDLE_DURATION) || v() ? g || s.default.dispatch({
+  }), Date.now() - f > Math.min(o.AfkTimeout.getSetting() * l.default.Millis.SECOND, c.IDLE_DURATION) || S() ? h || s.default.dispatch({
     type: "AFK",
     afk: !0
-  }) : g && s.default.dispatch({
+  }) : h && s.default.dispatch({
     type: "AFK",
     afk: !1
   })
 }!__OVERLAY__ && (u.isPlatformEmbedded && (null === a.default || void 0 === a.default ? void 0 : a.default.remotePowerMonitor) != null ? (! function e() {
   var t;
   let n = t => {
-    _ = Math.max(Date.now() - t, _), S(), setTimeout(e, 10 * l.default.Millis.SECOND)
+    f = Math.max(Date.now() - t, f), T(), setTimeout(e, 10 * l.default.Millis.SECOND)
   };
   if ((null === a.default || void 0 === a.default ? void 0 : null === (t = a.default.remotePowerMonitor) || void 0 === t ? void 0 : t.getSystemIdleTimeMs) != null) {
     let e = a.default.remotePowerMonitor.getSystemIdleTimeMs();
     e instanceof Promise ? e.then(n) : n(e)
   }
 }(), a.default.remotePowerMonitor.on("resume", () => {
-  m = !1, T({})
+  g = !1, v({})
 }), a.default.remotePowerMonitor.on("suspend", () => {
-  m = !0, T({}), r.default.disconnect()
+  g = !0, v({}), r.default.disconnect()
 }), a.default.remotePowerMonitor.on("lock-screen", () => {
-  E = !0, T({})
+  m = !0, v({})
 }), a.default.remotePowerMonitor.on("unlock-screen", () => {
-  E = !1, T({})
-})) : setInterval(S, .25 * c.IDLE_DURATION));
+  m = !1, v({})
+})) : setInterval(T, .25 * c.IDLE_DURATION));
 
-function T(e) {
+function v(e) {
   let {
     timestamp: t,
     type: n
   } = e, i = "OVERLAY_SET_NOT_IDLE" === n && null != t;
-  return (!i || !(t <= _)) && (_ = i ? t : Date.now(), __OVERLAY__ ? s.default.dispatch({
+  return (!i || !(t <= f)) && (f = i ? t : Date.now(), __OVERLAY__ ? s.default.dispatch({
     type: "OVERLAY_SET_NOT_IDLE",
-    timestamp: _
-  }) : S(), !1)
+    timestamp: f
+  }) : T(), !1)
 }
 class I extends i.default.Store {
   isIdle() {
-    return h
+    return E
   }
   isAFK() {
-    return g
+    return h
   }
   getIdleSince() {
-    return h ? _ : null
+    return E ? f : null
   }
 }
 I.displayName = "IdleStore";
-var C = new I(s.default, {
+var A = new I(s.default, {
   IDLE: function(e) {
-    h = e.idle
+    E = e.idle
   },
   AFK: function(e) {
-    g = e.afk
+    h = e.afk
   },
   SPEAKING: function(e) {
     let {
       userId: t,
       speakingFlags: n
     } = e;
-    return n !== f.SpeakingFlags.NONE && t === d.default.getId() && T({}), !1
+    return n !== _.SpeakingFlags.NONE && t === d.default.getId() && v({}), !1
   },
   APP_STATE_UPDATE: function(e) {
     let {
       state: t
     } = e;
-    return p = t === c.AppStates.BACKGROUND, _ = Date.now(), S(), !1
+    return p = t === c.AppStates.BACKGROUND, f = Date.now(), T(), !1
   },
-  OVERLAY_SET_NOT_IDLE: T,
-  CHANNEL_SELECT: T,
-  VOICE_CHANNEL_SELECT: T,
-  WINDOW_FOCUS: T,
-  OVERLAY_INITIALIZE: T,
-  OVERLAY_SET_INPUT_LOCKED: T,
-  USER_SETTINGS_PROTO_UPDATE: T
+  OVERLAY_SET_NOT_IDLE: v,
+  CHANNEL_SELECT: v,
+  VOICE_CHANNEL_SELECT: v,
+  WINDOW_FOCUS: v,
+  OVERLAY_INITIALIZE: v,
+  OVERLAY_SET_INPUT_LOCKED: v,
+  USER_SETTINGS_PROTO_UPDATE: v
 })

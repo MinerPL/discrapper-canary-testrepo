@@ -4,13 +4,13 @@ s.r(t), s.d(t, {
     return _
   },
   GuildSettingsIntegrationsNotice: function() {
-    return T
+    return I
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("713841"),
+var l = s("446674"),
+  n = s("713841"),
   i = s("45299"),
   r = s("467733"),
   o = s("592407"),
@@ -22,16 +22,16 @@ var n = s("446674"),
 function _(e) {
   let {
     refToScroller: t
-  } = e, s = (0, n.useStateFromStores)([u.default], () => u.default.getGuild()), {
-    section: l,
+  } = e, s = (0, l.useStateFromStores)([u.default], () => u.default.getGuild()), {
+    section: n,
     sectionId: i,
     integrations: o,
     editedIntegration: c,
     webhooks: E,
     editedWebhook: _,
-    isFetching: T,
-    errors: I
-  } = (0, n.useStateFromStoresObject)([d.default], () => ({
+    isFetching: I,
+    errors: T
+  } = (0, l.useStateFromStoresObject)([d.default], () => ({
     editedIntegration: d.default.editedIntegration,
     editedWebhook: d.default.editedWebhook,
     errors: d.default.getErrors(),
@@ -43,41 +43,41 @@ function _(e) {
   }));
   return null == s ? null : (0, a.jsx)(r.default, {
     guild: s,
-    section: l,
+    section: n,
     sectionId: i,
     integrations: o,
     webhooks: E,
     editedIntegration: c,
     editedWebhook: _,
-    isFetching: T,
+    isFetching: I,
     hasChanges: d.default.hasChanges,
-    errors: I,
+    errors: T,
     refToScroller: t
   })
 }
 
-function T() {
+function I() {
   let {
     guild: e,
     submitting: t
-  } = (0, n.useStateFromStoresObject)([u.default], () => ({
+  } = (0, l.useStateFromStoresObject)([u.default], () => ({
     guild: u.default.getGuild(),
     submitting: u.default.isSubmitting()
   }));
   return (0, a.jsx)(i.default, {
     submitting: t,
     onReset: () => {
-      l.default.init(), c.resetPermissions(), null != e && o.default.init(e.id)
+      n.default.init(), c.resetPermissions(), null != e && o.default.init(e.id)
     },
     onSave: () => {
       if (null != e) {
-        if (null != d.default.editedIntegration) l.default.saveIntegration(e.id, d.default.editedIntegration);
-        else if (null != d.default.editedWebhook) l.default.saveWebhook(e.id, d.default.editedWebhook);
+        if (null != d.default.editedIntegration) n.default.saveIntegration(e.id, d.default.editedIntegration);
+        else if (null != d.default.editedWebhook) n.default.saveWebhook(e.id, d.default.editedWebhook);
         else if (null != d.default.editedCommandId) {
           let t = d.default.getSectionId(),
             s = E.default.getEditedApplication();
           if (null == t || null == s) return;
-          l.default.saveApplicationPermissions(t, e.id, Object.values(s))
+          n.default.saveApplicationPermissions(t, e.id, Object.values(s))
         }
         u.default.hasChanges() && o.default.saveGuild(e.id, {
           features: e.features

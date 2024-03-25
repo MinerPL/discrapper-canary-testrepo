@@ -23,8 +23,8 @@ r.inherits(f, d), e.exports = f, f.blockSize = 512, f.outSize = 160, f.hmacStren
     p = this.h[4];
   for (r = 0; r < n.length; r++) {
     var h = ~~(r / 20),
-      g = c(s(i, 5), u(h, o, d, f), p, n[r], l[h]);
-    p = f, f = d, d = s(o, 30), o = i, i = g
+      v = c(s(i, 5), u(h, o, d, f), p, n[r], l[h]);
+    p = f, f = d, d = s(o, 30), o = i, i = v
   }
   this.h[0] = a(this.h[0], i), this.h[1] = a(this.h[1], o), this.h[2] = a(this.h[2], d), this.h[3] = a(this.h[3], f), this.h[4] = a(this.h[4], p)
 }, f.prototype._digest = function(e) {

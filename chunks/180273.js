@@ -9,12 +9,12 @@ var s = n("866227"),
   a = n("446674"),
   i = n("862337"),
   r = n("913144"),
-  o = n("374014"),
-  u = n("271938"),
-  d = n("568307"),
+  o = n("161454"),
+  u = n("374014"),
+  d = n("271938"),
   c = n("718517"),
-  f = n("376152"),
-  E = n("579565"),
+  E = n("376152"),
+  f = n("579565"),
   _ = n("411511");
 let T = null,
   I = null,
@@ -36,8 +36,8 @@ let T = null,
       completed: l,
       gameTitle: a
     } = A;
-    !(null == t || null == a || l || null == s || null == n || S.isStarted()) && (e ? (0, f.sendHeartbeat)(t, n, s.pid) : S.start(1 * c.default.Millis.MINUTE, () => {
-      (0, f.sendHeartbeat)(t, n, s.pid)
+    !(null == t || null == a || l || null == s || null == n || S.isStarted()) && (e ? (0, E.sendHeartbeat)(t, n, s.pid) : S.start(1 * c.default.Millis.MINUTE, () => {
+      (0, E.sendHeartbeat)(t, n, s.pid)
     }))
   },
   h = e => {
@@ -48,14 +48,14 @@ let T = null,
   };
 class M extends a.default.Store {
   initialize() {
-    this.waitFor(d.default)
+    this.waitFor(o.default)
   }
   getActivityPanelTooltipAction() {
     return p
   }
   getIsPartnerGameQuestComplete(e) {
     var t;
-    let n = (0, E.getDrop)(e);
+    let n = (0, f.getDrop)(e);
     if (null == n || null == I) return !1;
     let s = !!(null === (t = I[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
       l = A.completed && A.gameTitle === n.title || s;
@@ -156,21 +156,21 @@ var O = new M(r.default, {
       guildId: s,
       channelId: l,
       pid: a
-    } = e, i = (0, o.encodeStreamKey)({
+    } = e, i = (0, u.encodeStreamKey)({
       streamType: n,
       guildId: s,
       channelId: l,
-      ownerId: u.default.getId()
+      ownerId: d.default.getId()
     });
     if (null == a) return;
-    let c = d.default.getGameForPID(a);
+    let c = o.default.getGameForPID(a);
     if (null == c) return;
     let T = Object.values(_.DROPS_GAMES).find(e => e.gameSearchTerm.find(e => {
       var t;
       return e.toLowerCase() === (null === (t = c.name) || void 0 === t ? void 0 : t.toLowerCase())
     }));
-    if (null == T || (0, E.getDropExpired)(T)) return;
-    let I = null === (t = (0, E.getDropsExperimentForDrop)(T)) || void 0 === t ? void 0 : t.getCurrentConfig({
+    if (null == T || (0, f.getDropExpired)(T)) return;
+    let I = null === (t = (0, f.getDropsExperimentForDrop)(T)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
@@ -179,7 +179,7 @@ var O = new M(r.default, {
     let m = I.autoEnrollment;
     null != N[T.dropsQuestId] && N[T.dropsQuestId].isEnrolled || m ? g(T, c, i) : r.default.wait(async () => {
       var e;
-      await (0, f.fetchEnrolledUser)(T.dropsQuestId), (null === (e = N[T.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(T, c, i)
+      await (0, E.fetchEnrolledUser)(T.dropsQuestId), (null === (e = N[T.dropsQuestId]) || void 0 === e ? void 0 : e.isEnrolled) && g(T, c, i)
     })
   },
   LOGOUT: function() {

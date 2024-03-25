@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("642622");
+var l = s("77078"),
+  n = s("854743");
 
 function i(e) {
   let {
@@ -15,10 +15,10 @@ function i(e) {
     settings: s
   } = e;
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(n.Heading, {
+    children: [(0, a.jsx)(l.Heading, {
       variant: "heading-lg/semibold",
       color: "header-primary",
-      className: l.header,
+      className: n.header,
       children: t
     }), s.map(e => e.renderComponent())]
   })

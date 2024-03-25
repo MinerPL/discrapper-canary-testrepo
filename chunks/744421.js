@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return N
   }
 }), s("222007"), s("424973");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("446674"),
   o = s("77078"),
   d = s("430568"),
@@ -15,30 +15,30 @@ var a = s("37983"),
   c = s("86678"),
   E = s("882641"),
   _ = s("381546"),
-  T = s("900938"),
-  I = s("958706"),
+  I = s("900938"),
+  T = s("958706"),
   S = s("782340"),
-  N = s("311352");
-let g = e => {
+  f = s("478762");
+let m = e => {
   var t;
   let {
     reason: s = "",
-    emoji_name: l,
+    emoji_name: n,
     onSetReason: u,
     onSelectEmoji: S,
-    onClearPressed: g,
-    reasonMinLength: f,
-    reasonMaxLength: A,
-    placeholder: L,
-    position: m
-  } = e, [C, O] = n.useState(!1), h = (0, r.useStateFromStores)([T.default], () => T.default.isGuildMetadataLoaded());
+    onClearPressed: m,
+    reasonMinLength: N,
+    reasonMaxLength: g,
+    placeholder: h,
+    position: C
+  } = e, [R, x] = l.useState(!1), L = (0, r.useStateFromStores)([I.default], () => I.default.isGuildMetadataLoaded());
   return (0, a.jsxs)("div", {
-    className: i(N.reasonContainer),
+    className: i(f.reasonContainer),
     children: [(0, a.jsx)(o.Popout, {
       onRequestClose: () => {
-        O(!1)
+        x(!1)
       },
-      shouldShow: C,
+      shouldShow: R,
       position: "right",
       align: "top",
       animation: o.Popout.Animation.NONE,
@@ -47,7 +47,7 @@ let g = e => {
           closePopout: t
         } = e;
         return (0, a.jsx)(c.default, {
-          pickerIntention: I.EmojiIntention.COMMUNITY_CONTENT,
+          pickerIntention: T.EmojiIntention.COMMUNITY_CONTENT,
           closePopout: t,
           onSelectEmoji: (e, s) => {
             null != e && S(e), s && t()
@@ -55,77 +55,77 @@ let g = e => {
         })
       },
       children: () => (0, a.jsx)("div", {
-        className: N.background,
+        className: f.background,
         children: (0, a.jsx)(E.default, {
           active: !1,
           onClick: () => {
-            O(!0)
+            x(!0)
           },
           tabIndex: 0,
-          renderButtonContents: null != l ? () => (0, a.jsx)(d.default, {
-            emojiName: l,
+          renderButtonContents: null != n ? () => (0, a.jsx)(d.default, {
+            emojiName: n,
             animated: !1
           }) : null
         })
       })
     }), (0, a.jsxs)("div", {
-      className: N.inputContainer,
+      className: f.inputContainer,
       children: [(0, a.jsx)(o.TextInput, {
-        inputClassName: N.reason,
-        placeholder: L,
+        inputClassName: f.reason,
+        placeholder: h,
         value: s,
-        minLength: f,
-        maxLength: A,
+        minLength: N,
+        maxLength: g,
         onChange: e => {
           u(e)
         },
         defaultDirty: (null == s ? void 0 : s.length) > 0
-      }, "text-input-".concat(m, "-").concat(h)), (null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0) > 0 || null != l ? (0, a.jsx)(o.Button, {
-        className: N.clearStatusButton,
-        onClick: g,
+      }, "text-input-".concat(C, "-").concat(L)), (null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0) > 0 || null != n ? (0, a.jsx)(o.Button, {
+        className: f.clearStatusButton,
+        onClick: m,
         look: o.Button.Looks.BLANK,
         size: o.Button.Sizes.NONE,
         tabIndex: -1,
         "aria-hidden": !0,
         children: (0, a.jsx)(_.default, {
-          className: N.clearStatusIcon
+          className: f.clearStatusIcon
         })
       }) : null]
     })]
   })
 };
-var f = e => {
+var N = e => {
   let {
     reasonMinLength: t,
     reasonMaxLength: s,
-    guildId: n,
-    reasons: l
+    guildId: l,
+    reasons: n
   } = e, i = [S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_ONE, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_TWO, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_THREE, S.default.Messages.DISCOVERY_LANDING_PAGE_REASONS_TO_JOIN_PLACEHOLDER_FOUR], r = [];
-  for (let e = 0; e < 4; e++) r.push((0, a.jsx)(g, {
+  for (let e = 0; e < 4; e++) r.push((0, a.jsx)(m, {
     position: e,
     placeholder: i[e],
-    ...l[e],
+    ...n[e],
     onSetReason: t => {
-      let s = [...l],
-        a = Object.assign({}, l[e], {
+      let s = [...n],
+        a = Object.assign({}, n[e], {
           reason: t
         });
-      s[e] = a, (0, u.updateGuildDiscoveryMetadataReasonsToJoin)(n, s)
+      s[e] = a, (0, u.updateGuildDiscoveryMetadataReasonsToJoin)(l, s)
     },
     onSelectEmoji: t => {
-      let s = [...l],
-        a = Object.assign({}, l[e], {
+      let s = [...n],
+        a = Object.assign({}, n[e], {
           emoji_name: t.optionallyDiverseSequence
         });
-      s[e] = a, (0, u.updateGuildDiscoveryMetadataReasonsToJoin)(n, s)
+      s[e] = a, (0, u.updateGuildDiscoveryMetadataReasonsToJoin)(l, s)
     },
     onClearPressed: () => {
-      let t = [...l],
+      let t = [...n],
         s = {
           reason: "",
           emoji_name: null
         };
-      t[e] = s, (0, u.updateGuildDiscoveryMetadataReasonsToJoin)(n, t)
+      t[e] = s, (0, u.updateGuildDiscoveryMetadataReasonsToJoin)(l, t)
     },
     reasonMinLength: t,
     reasonMaxLength: s

@@ -48,7 +48,7 @@ var i, o = "https://js.stripe.com/v3",
     throw Error(t)
   },
   h = !1,
-  g = function() {
+  v = function() {
     for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
     h = !0;
     var o = Date.now();
@@ -76,7 +76,7 @@ var i, o = "https://js.stripe.com/v3",
       return f(e, n, o)
     })
   };
-g.setLoadParameters = function(e) {
+v.setLoadParameters = function(e) {
   if (!(h && i && Object.keys(p(e)).reduce(function(t, n) {
       var r;
       return t && e[n] === (null === (r = i) || void 0 === r ? void 0 : r[n])
@@ -84,4 +84,4 @@ g.setLoadParameters = function(e) {
     if (h) throw Error("You cannot change load parameters after calling loadStripe");
     i = p(e)
   }
-}, t.loadStripe = g
+}, t.loadStripe = v

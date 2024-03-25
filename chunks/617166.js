@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   }
 }), n("222007");
-var r = n("290895"),
+var r = n("240849"),
   i = n("679750"),
   o = n("884691");
 
@@ -20,7 +20,7 @@ function s(e) {
   } = e, h = (0, o.useMemo)(() => {
     let e = (d - s) / 10;
     return Math.max(e = (0, r.snapValueToStep)(e, 0, e + f, f), f)
-  }, [f, d, s]), g = (0, o.useMemo)(() => c(e.value), [e.value]), b = (0, o.useMemo)(() => null !== (t = c(e.defaultValue)) && void 0 !== t ? t : [s], [e.defaultValue, s]), v = u(e.value, e.defaultValue, e.onChange), m = u(e.value, e.defaultValue, e.onChangeEnd), [y, x] = (0, i.useControlledState)(g, b, v), [w, S] = (0, o.useState)(Array(y.length).fill(!1)), k = (0, o.useRef)(Array(y.length).fill(!0)), [_, E] = (0, o.useState)(void 0), M = (0, o.useRef)(y), D = (0, o.useRef)(w), C = e => {
+  }, [f, d, s]), v = (0, o.useMemo)(() => c(e.value), [e.value]), g = (0, o.useMemo)(() => null !== (t = c(e.defaultValue)) && void 0 !== t ? t : [s], [e.defaultValue, s]), b = u(e.value, e.defaultValue, e.onChange), m = u(e.value, e.defaultValue, e.onChangeEnd), [y, x] = (0, i.useControlledState)(v, g, b), [w, S] = (0, o.useState)(Array(y.length).fill(!1)), k = (0, o.useRef)(Array(y.length).fill(!0)), [E, _] = (0, o.useState)(void 0), M = (0, o.useRef)(y), D = (0, o.useRef)(w), C = e => {
     M.current = e, x(e)
   }, P = e => {
     D.current = e, S(e)
@@ -53,7 +53,7 @@ function s(e) {
     return l.format(e)
   }
 
-  function N(e) {
+  function L(e) {
     let t = e * (d - s) + s;
     return (0, r.clamp)(Math.round((t - s) / f) * f + s, s, d)
   }
@@ -62,7 +62,7 @@ function s(e) {
     getThumbValue: e => y[e],
     setThumbValue: O,
     setThumbPercent: function(e, t) {
-      O(e, N(t))
+      O(e, L(t))
     },
     isThumbDragging: e => w[e],
     setThumbDragging: function(e, t) {
@@ -70,15 +70,15 @@ function s(e) {
       let r = D.current[e];
       D.current = a(D.current, e, t), P(D.current), m && r && !D.current.some(Boolean) && m(M.current)
     },
-    focusedThumb: _,
-    setFocusedThumb: E,
+    focusedThumb: E,
+    setFocusedThumb: _,
     getThumbPercent: e => T(y[e]),
     getValuePercent: T,
     getThumbValueLabel: e => j(y[e]),
     getFormattedValue: j,
     getThumbMinValue: A,
     getThumbMaxValue: R,
-    getPercentValue: N,
+    getPercentValue: L,
     isThumbEditable: I,
     setThumbEditable: function(e, t) {
       k.current[e] = t

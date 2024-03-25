@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return I
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("446674"),
-  a = n("77078"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("446674"),
+  o = n("77078"),
   u = n("812204"),
   d = n("685665"),
   c = n("154889"),
@@ -17,20 +17,20 @@ var l = n("37983"),
   p = n("956597"),
   m = n("42203"),
   h = n("18494"),
-  E = n("791106"),
-  S = n("216422"),
-  g = n("599110"),
-  C = n("49111"),
-  T = n("646718"),
-  v = n("782340"),
-  y = n("317478");
+  x = n("791106"),
+  E = n("216422"),
+  y = n("599110"),
+  g = n("49111"),
+  S = n("646718"),
+  C = n("782340"),
+  T = n("936369");
 
-function x() {
-  (0, a.openModalLazy)(async () => {
+function _() {
+  (0, o.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("532210").then(n.bind(n, "532210"));
-    return t => (0, l.jsx)(e, {
+    return t => (0, i.jsx)(e, {
       channel: null,
       ...t
     })
@@ -41,53 +41,53 @@ function I(e) {
   var t;
   let {
     className: n,
-    iconOnly: r,
+    iconOnly: a,
     remaining: I
-  } = e, N = (0, s.useStateFromStores)([h.default, m.default], () => {
+  } = e, v = (0, r.useStateFromStores)([h.default, m.default], () => {
     let e = m.default.getChannel(h.default.getChannelId());
-    return (null == e ? void 0 : e.isPrivate()) ? C.AnalyticsPages.DM_CHANNEL : C.AnalyticsPages.GUILD_CHANNEL
+    return (null == e ? void 0 : e.isPrivate()) ? g.AnalyticsPages.DM_CHANNEL : g.AnalyticsPages.GUILD_CHANNEL
   }), {
-    analyticsLocations: _
-  } = (0, d.default)(u.default.PREMIUM_UPSELL), A = (0, c.usePremiumDiscountOffer)(), R = (0, f.usePremiumTrialOffer)(), O = (0, c.discountOfferHasTier)(A, T.PremiumSubscriptionSKUs.TIER_2), M = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === T.PremiumSubscriptionSKUs.TIER_2;
-  return (i.useEffect(() => {
-    g.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    analyticsLocations: N
+  } = (0, d.default)(u.default.PREMIUM_UPSELL), A = (0, c.usePremiumDiscountOffer)(), O = (0, f.usePremiumTrialOffer)(), R = (0, c.discountOfferHasTier)(A, S.PremiumSubscriptionSKUs.TIER_2), M = (null == O ? void 0 : null === (t = O.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === S.PremiumSubscriptionSKUs.TIER_2;
+  return (l.useEffect(() => {
+    y.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: "longer messages inline",
       location: {
-        location_page: N,
-        location_section: C.AnalyticsSections.CHANNEL_TEXT_AREA
+        location_page: v,
+        location_section: g.AnalyticsSections.CHANNEL_TEXT_AREA
       },
-      location_stack: _
+      location_stack: N
     })
-  }, [N, _]), (M || O) && I < 0) ? (0, l.jsx)(p.default, {
-    type: T.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
-    subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
+  }, [v, N]), (M || R) && I < 0) ? (0, i.jsx)(p.default, {
+    type: S.PremiumUpsellTypes.MESSAGE_LENGTH_IN_EDITOR_UPSELL,
+    subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
     context: I,
     discountOffer: A,
-    trialOffer: R,
-    children: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-      onLearnMore: x
+    trialOffer: O,
+    children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+      onLearnMore: _
     })
-  }) : r ? (0, l.jsx)(a.Clickable, {
-    className: y.iconOnly,
-    onClick: () => x(),
-    children: (0, l.jsx)(a.Tooltip, {
-      text: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
+  }) : a ? (0, i.jsx)(o.Clickable, {
+    className: T.iconOnly,
+    onClick: () => _(),
+    children: (0, i.jsx)(o.Tooltip, {
+      text: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP_WITHOUT_LINK,
       position: "top",
-      children: e => (0, l.jsx)(S.default, {
-        className: y.premium,
+      children: e => (0, i.jsx)(E.default, {
+        className: T.premium,
         ...e
       })
     })
-  }) : (0, l.jsxs)("div", {
-    className: o(y.root, n),
-    children: [(0, l.jsx)(S.default, {
-      className: y.premium,
-      color: E.GradientCssUrls.PREMIUM_TIER_2
-    }), (0, l.jsx)(a.Text, {
-      className: y.text,
+  }) : (0, i.jsxs)("div", {
+    className: s(T.root, n),
+    children: [(0, i.jsx)(E.default, {
+      className: T.premium,
+      color: x.GradientCssUrls.PREMIUM_TIER_2
+    }), (0, i.jsx)(o.Text, {
+      className: T.text,
       variant: "text-sm/normal",
-      children: v.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
-        onLearnMore: x
+      children: C.default.Messages.PREMIUM_MESSAGE_LENGTH_UPSELL_TOOLTIP.format({
+        onLearnMore: _
       })
     })]
   })

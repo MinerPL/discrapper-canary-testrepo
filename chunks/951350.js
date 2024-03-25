@@ -1,5 +1,5 @@
 "use strict";
-t.exports = {
+e.exports = {
   sha224WithRSAEncryption: {
     sign: "rsa",
     hash: "sha224",

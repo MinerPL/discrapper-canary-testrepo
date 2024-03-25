@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("449008"),
   _ = a("185014"),
   x = a("886484"),
-  v = a("60036"),
-  S = a("468670"),
+  S = a("60036"),
+  v = a("468670"),
   C = a("113312"),
   N = a("339274"),
   p = a("605143"),
@@ -32,7 +32,7 @@ var l = a("37983"),
   M = a("49111"),
   D = a("724210"),
   F = a("782340"),
-  L = a("700045");
+  L = a("148631");
 let R = async () => {
   let {
     default: e
@@ -43,19 +43,19 @@ var b = n.forwardRef(function(e, t) {
   var a, b;
   let {
     guildId: G,
-    messageBundleItem: O,
-    showFeedback: y,
+    messageBundleItem: y,
+    showFeedback: O,
     setOnDismissedFeedback: H
   } = e, {
     messages: k
-  } = O, U = k[0].message, w = k[k.length - 1].message, B = w.channel_id, P = (0, i.useStateFromStoresArray)([_.default], () => k.map(e => _.default.getCachedMessage(G, B, e.message.id)).filter(I.isNotNullish), [G, B, k]), V = (0, i.useStateFromStores)([E.default], () => E.default.getChannel(B)), W = (0, o.getChannelIconComponent)(V, void 0, {
+  } = y, U = k[0].message, w = k[k.length - 1].message, B = w.channel_id, P = (0, i.useStateFromStoresArray)([_.default], () => k.map(e => _.default.getCachedMessage(G, B, e.message.id)).filter(I.isNotNullish), [G, B, k]), V = (0, i.useStateFromStores)([E.default], () => E.default.getChannel(B)), W = (0, o.getChannelIconComponent)(V, void 0, {
     textFocused: !0
-  }), K = (0, o.getChannelIconTooltipText)(V), z = (0, u.default)(V), [Y, Z] = n.useState(!1), X = (0, i.useStateFromStores)([g.default], () => null != w && g.default.isBlocked(w.author.id)), J = (0, s.useListItem)(null !== (b = null === (a = P[P.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== b ? b : O.id), q = O.id, Q = (0, i.useStateFromStores)([h.default], () => h.default.getSidebarState(D.StaticChannelRoute.GUILD_HOME)), $ = (0, x.getSidebarMessageId)(Q, V), ee = null != $ && U.id === $, {
+  }), K = (0, o.getChannelIconTooltipText)(V), z = (0, u.default)(V), [Y, Z] = n.useState(!1), X = (0, i.useStateFromStores)([g.default], () => null != w && g.default.isBlocked(w.author.id)), J = (0, s.useListItem)(null !== (b = null === (a = P[P.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== b ? b : y.id), q = y.id, Q = (0, i.useStateFromStores)([h.default], () => h.default.getSidebarState(D.StaticChannelRoute.GUILD_HOME)), $ = (0, x.getSidebarMessageId)(Q, V), ee = null != $ && U.id === $, {
     handleItemClick: et,
     handleChannelClick: ea,
     handleCardClick: el,
     handleMessageClick: en
-  } = (0, S.default)({
+  } = (0, v.default)({
     guildId: G,
     channelId: B,
     feedItemId: q,
@@ -70,7 +70,7 @@ var b = n.forwardRef(function(e, t) {
         details: {
           type: m.SidebarOpenDetailsType.HOME,
           initialMessageId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : U.id,
-          highlightMessageIds: new Set((0, v.getAllMessageIdsFromFeedItem)(O))
+          highlightMessageIds: new Set((0, S.getAllMessageIdsFromFeedItem)(y))
         }
       })
     }
@@ -84,13 +84,13 @@ var b = n.forwardRef(function(e, t) {
       let e = await R();
       return t => (0, l.jsx)(e, {
         ...t,
-        item: O,
+        item: y,
         channel: V
       })
     })
   };
   return (0, l.jsxs)(N.default, {
-    className: y ? L.containerNoPadding : L.container,
+    className: O ? L.containerNoPadding : L.container,
     ref: t,
     selected: ee,
     onCardClick: el,
@@ -128,7 +128,7 @@ var b = n.forwardRef(function(e, t) {
         }), (0, l.jsx)("div", {
           className: L.messageHeaderMenuRight,
           children: (0, l.jsx)(T.default, {
-            feedItem: O,
+            feedItem: y,
             guildId: G,
             onContextMenu: ei
           })
@@ -137,7 +137,7 @@ var b = n.forwardRef(function(e, t) {
       children: [(0, l.jsx)("div", {
         className: L.messageBundleItemBody,
         children: (0, l.jsx)(A.default, {
-          feedItemId: O.id,
+          feedItemId: y.id,
           guildId: G,
           channel: V,
           messages: P,
@@ -148,9 +148,9 @@ var b = n.forwardRef(function(e, t) {
         referenceMessages: es,
         guildId: G
       })]
-    }), y && (0, l.jsx)(C.default, {
+    }), O && (0, l.jsx)(C.default, {
       guildId: G,
-      guildFeedItem: O,
+      guildFeedItem: y,
       setOnDismissFeedback: H
     })]
   })

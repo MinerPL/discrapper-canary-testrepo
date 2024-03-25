@@ -1,45 +1,45 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
-}), l("222007");
-var n = l("37983");
-l("884691");
-var a = l("509043"),
-  s = l("446674"),
-  i = l("669491"),
-  r = l("77078"),
-  o = l("206230"),
-  u = l("931138"),
-  d = l("486952"),
-  c = l("782340");
+}), n("222007");
+var i = n("37983");
+n("884691");
+var l = n("509043"),
+  a = n("446674"),
+  s = n("669491"),
+  r = n("77078"),
+  o = n("206230"),
+  u = n("931138"),
+  d = n("486952"),
+  c = n("782340");
 
 function f(e) {
   let t, {
-      color: l,
+      color: n,
       size: f,
-      forcedIconColor: m,
-      className: p,
-      iconClassName: T,
-      tooltipText: E
+      forcedIconColor: p,
+      className: m,
+      iconClassName: h,
+      tooltipText: x
     } = e,
-    [_, S] = (0, s.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
-    h = (0, r.useToken)(i.default.unsafe_rawColors.PRIMARY_300).hex(),
-    I = (0, a.hex2int)(null != l ? l : h),
-    A = (0, a.int2hsl)(I, !1, _ ? S : null);
-  return t = null != m ? m : .3 > (0, a.getDarkness)(I) ? i.default.unsafe_rawColors.PRIMARY_630.css : i.default.unsafe_rawColors.WHITE_500.css, (0, n.jsx)(r.Tooltip, {
-    text: null != E ? E : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
-    children: e => (0, n.jsx)(u.default, {
+    [E, y] = (0, a.useStateFromStoresArray)([o.default], () => [o.default.desaturateUserColors, o.default.saturation]),
+    g = (0, r.useToken)(s.default.unsafe_rawColors.PRIMARY_300).hex(),
+    S = (0, l.hex2int)(null != n ? n : g),
+    C = (0, l.int2hsl)(S, !1, E ? y : null);
+  return t = null != p ? p : .3 > (0, l.getDarkness)(S) ? s.default.unsafe_rawColors.PRIMARY_630.css : s.default.unsafe_rawColors.WHITE_500.css, (0, i.jsx)(r.Tooltip, {
+    text: null != x ? x : c.default.Messages.CONNECTIONS_ROLE_OFFICIAL_ICON_TOOLTIP,
+    children: e => (0, i.jsx)(u.default, {
       ...e,
-      className: p,
-      color: A,
+      className: m,
+      color: C,
       size: f,
-      children: (0, n.jsx)(d.default, {
+      children: (0, i.jsx)(d.default, {
         color: t,
         height: f,
         width: f,
-        className: T
+        className: h
       })
     })
   })

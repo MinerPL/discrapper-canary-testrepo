@@ -116,9 +116,9 @@ function i() {
   var O = Object.getPrototypeOf,
     k = O && O(O(R([])));
   k && k !== o && a.call(k, c) && (w = k);
-  var S = x.prototype = b.prototype = Object.create(w);
+  var E = x.prototype = b.prototype = Object.create(w);
 
-  function E(t) {
+  function S(t) {
     ["next", "throw", "return"].forEach(function(e) {
       h(t, e, function(t) {
         return this._invoke(e, t)
@@ -191,7 +191,7 @@ function i() {
     }
     throw TypeError(r(t) + " is not iterable")
   }
-  return _.prototype = x, u(S, "constructor", {
+  return _.prototype = x, u(E, "constructor", {
     value: x,
     configurable: !0
   }), u(x, "constructor", {
@@ -201,12 +201,12 @@ function i() {
     var e = "function" == typeof t && t.constructor;
     return !!e && (e === _ || "GeneratorFunction" === (e.displayName || e.name))
   }, n.mark = function(t) {
-    return Object.setPrototypeOf ? Object.setPrototypeOf(t, x) : (t.__proto__ = x, h(t, f, "GeneratorFunction")), t.prototype = Object.create(S), t
+    return Object.setPrototypeOf ? Object.setPrototypeOf(t, x) : (t.__proto__ = x, h(t, f, "GeneratorFunction")), t.prototype = Object.create(E), t
   }, n.awrap = function(t) {
     return {
       __await: t
     }
-  }, E(P.prototype), h(P.prototype, l, function() {
+  }, S(P.prototype), h(P.prototype, l, function() {
     return this
   }), n.AsyncIterator = P, n.async = function(t, e, r, i, o) {
     void 0 === o && (o = Promise);
@@ -214,9 +214,9 @@ function i() {
     return n.isGeneratorFunction(e) ? a : a.next().then(function(t) {
       return t.done ? t.value : a.next()
     })
-  }, E(S), h(S, f, "Generator"), h(S, c, function() {
+  }, S(E), h(E, f, "Generator"), h(E, c, function() {
     return this
-  }), h(S, "toString", function() {
+  }), h(E, "toString", function() {
     return "[object Generator]"
   }), n.keys = function(t) {
     var e = Object(t),

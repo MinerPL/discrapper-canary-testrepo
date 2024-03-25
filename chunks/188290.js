@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return y
   },
   IGNORE_CLASS_NAME: function() {
     return m
@@ -44,7 +44,7 @@ function h(e, t) {
   var n = {};
   return -1 !== p.indexOf(t) && r && (n.passive = !e.props.preventDefault), n
 }
-var _ = function(e, t) {
+var y = function(e, t) {
   var n, a, p = e.displayName || e.name || "Component";
   return a = n = function(n) {
     function a(e) {
@@ -100,23 +100,23 @@ var _ = function(e, t) {
         return a.instanceRef = e
       }, a._uid = c(), a
     }
-    m = a, _ = n, m.prototype = Object.create(_.prototype), m.prototype.constructor = m, s(m, _);
-    var m, _, y = a.prototype;
-    return y.getInstance = function() {
+    m = a, y = n, m.prototype = Object.create(y.prototype), m.prototype.constructor = m, s(m, y);
+    var m, y, _ = a.prototype;
+    return _.getInstance = function() {
       if (e.prototype && !e.prototype.isReactComponent) return this;
       var t = this.instanceRef;
       return t.getInstance ? t.getInstance() : t
-    }, y.componentDidMount = function() {
+    }, _.componentDidMount = function() {
       if ("undefined" != typeof document && !!document.createElement) {
         var e = this.getInstance();
         if (t && "function" == typeof t.handleClickOutside && (this.__clickOutsideHandlerProp = t.handleClickOutside(e), "function" != typeof this.__clickOutsideHandlerProp)) throw Error("WrappedComponent: " + p + " lacks a function for processing outside click events specified by the handleClickOutside config option.");
         this.componentNode = this.__getComponentNode(), !this.props.disableOnClickOutside && this.enableOnClickOutside()
       }
-    }, y.componentDidUpdate = function() {
+    }, _.componentDidUpdate = function() {
       this.componentNode = this.__getComponentNode()
-    }, y.componentWillUnmount = function() {
+    }, _.componentWillUnmount = function() {
       this.disableOnClickOutside()
-    }, y.render = function() {
+    }, _.render = function() {
       var t = this.props;
       t.excludeScrollbar;
       var n = function(e, t) {

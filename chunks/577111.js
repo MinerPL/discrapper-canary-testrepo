@@ -35,19 +35,19 @@ function h(e, t) {
   }
 }
 
-function g(e, t) {
-  return (g = Object.setPrototypeOf || function(e, t) {
+function v(e, t) {
+  return (v = Object.setPrototypeOf || function(e, t) {
     return e.__proto__ = t, e
   })(e, t)
 }
 
-function b(e) {
+function g(e) {
   if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return e
 }
 
-function v(e) {
-  return (v = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
+function b(e) {
+  return (b = Object.setPrototypeOf ? Object.getPrototypeOf : function(e) {
     return e.__proto__ || Object.getPrototypeOf(e)
   })(e)
 }
@@ -70,8 +70,8 @@ function y(e) {
     w = e.containerDisplayName,
     S = e.getType,
     k = e.collect,
-    _ = e.options.arePropsEqual,
-    E = void 0 === _ ? o.shallowEqual : _,
+    E = e.options.arePropsEqual,
+    _ = void 0 === E ? o.shallowEqual : E,
     M = t.displayName || t.name || "Component",
     D = function(e) {
       ! function(e, t) {
@@ -82,9 +82,9 @@ function y(e) {
             writable: !0,
             configurable: !0
           }
-        }), t && g(e, t)
+        }), t && v(e, t)
       }(T, e);
-      var l, w, _, D, C, P = (l = T, w = function() {
+      var l, w, E, D, C, P = (l = T, w = function() {
         if ("undefined" == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
         if ("function" == typeof Proxy) return !0;
         try {
@@ -93,15 +93,15 @@ function y(e) {
           return !1
         }
       }(), function() {
-        var e, t = v(l);
+        var e, t = b(l);
         if (w) {
-          var n = v(this).constructor;
+          var n = b(this).constructor;
           e = Reflect.construct(t, arguments, n)
         } else e = t.apply(this, arguments);
         return function(e, t) {
           if (t && ("object" === f(t) || "function" == typeof t)) return t;
           if (void 0 !== t) throw TypeError("Derived constructors may only return object or undefined");
-          return b(e)
+          return g(e)
         }(this, e)
       });
 
@@ -109,12 +109,12 @@ function y(e) {
         var t;
         return ! function(e, t) {
           if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-        }(this, T), m(b(t = P.call(this, e)), "decoratedRef", (0, i.createRef)()), m(b(t), "handlerId", void 0), m(b(t), "manager", void 0), m(b(t), "handlerMonitor", void 0), m(b(t), "handlerConnector", void 0), m(b(t), "handler", void 0), m(b(t), "disposable", void 0), m(b(t), "currentType", void 0), m(b(t), "handleChange", function() {
+        }(this, T), m(g(t = P.call(this, e)), "decoratedRef", (0, i.createRef)()), m(g(t), "handlerId", void 0), m(g(t), "manager", void 0), m(g(t), "handlerMonitor", void 0), m(g(t), "handlerConnector", void 0), m(g(t), "handler", void 0), m(g(t), "disposable", void 0), m(g(t), "currentType", void 0), m(g(t), "handleChange", function() {
           var e = t.getCurrentState();
           !(0, o.shallowEqual)(e, t.state) && t.setState(e)
         }), t.disposable = new c.SerialDisposable, t.receiveProps(e), t.dispose(), t
       }
-      return _ = T, D = [{
+      return E = T, D = [{
         key: "getHandlerId",
         value: function() {
           return this.handlerId
@@ -127,7 +127,7 @@ function y(e) {
       }, {
         key: "shouldComponentUpdate",
         value: function(e, t) {
-          return !E(e, this.props) || !(0, o.shallowEqual)(t, this.state)
+          return !_(e, this.props) || !(0, o.shallowEqual)(t, this.state)
         }
       }, {
         key: "componentDidMount",
@@ -137,7 +137,7 @@ function y(e) {
       }, {
         key: "componentDidUpdate",
         value: function(e) {
-          !E(this.props, e) && (this.receiveProps(this.props), this.handleChange())
+          !_(this.props, e) && (this.receiveProps(this.props), this.handleChange())
         }
       }, {
         key: "componentWillUnmount",
@@ -227,7 +227,7 @@ function y(e) {
         value: function(e) {
           if (void 0 === this.manager)(0, s.invariant)(void 0 !== e, "Could not find the drag and drop manager in the context of %s. Make sure to render a DndProvider component in your top-level component. Read more: http://react-dnd.github.io/react-dnd/docs/troubleshooting#could-not-find-the-drag-and-drop-manager-in-the-context", M, M), void 0 !== e && (this.manager = e, this.handlerMonitor = d(e), this.handlerConnector = y(e.getBackend()), this.handler = n(this.handlerMonitor, this.decoratedRef))
         }
-      }], h(_.prototype, D), C && h(_, C), T
+      }], h(E.prototype, D), C && h(E, C), T
     }(i.Component);
   return m(D, "DecoratedComponent", t), m(D, "displayName", "".concat(w, "(").concat(M, ")")), l(D, t)
 }

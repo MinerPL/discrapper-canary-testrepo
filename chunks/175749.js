@@ -10,15 +10,15 @@ var i = n("59079"),
   s = n("446873");
 n("416037");
 var o = n("884691"),
-  u = n.n(o),
-  l = n("433479"),
+  l = n.n(o),
+  u = n("433479"),
   c = n("11092"),
-  d = Object.values || function(t) {
+  p = Object.values || function(t) {
     return Object.keys(t).map(function(e) {
       return t[e]
     })
   },
-  p = function(t) {
+  d = function(t) {
     function e(e, n) {
       var i, r = (i = t.call(this, e, n) || this).handleExited.bind((0, s.default)((0, s.default)(i)));
       return i.state = {
@@ -59,18 +59,18 @@ var o = n("884691"),
         n = t.childFactory,
         r = (0, i.default)(t, ["component", "childFactory"]),
         a = this.state.contextValue,
-        s = d(this.state.children).map(n);
-      return (delete r.appear, delete r.enter, delete r.exit, null === e) ? u.createElement(l.default.Provider, {
+        s = p(this.state.children).map(n);
+      return (delete r.appear, delete r.enter, delete r.exit, null === e) ? l.createElement(u.default.Provider, {
         value: a
-      }, s) : u.createElement(l.default.Provider, {
+      }, s) : l.createElement(u.default.Provider, {
         value: a
-      }, u.createElement(e, r, s))
+      }, l.createElement(e, r, s))
     }, e
-  }(u.Component);
-p.propTypes = {}, p.defaultProps = {
+  }(l.Component);
+d.propTypes = {}, d.defaultProps = {
   component: "div",
   childFactory: function(t) {
     return t
   }
 };
-var f = p
+var f = d

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   OAuth2Page: function() {
-    return E
+    return m
   },
   OAuth2Modal: function() {
     return p
@@ -16,33 +16,33 @@ var i = n("37983"),
   u = n("69927"),
   d = n("554054"),
   c = n("831588"),
-  f = n("439932"),
-  _ = n("49111"),
-  h = n("289382"),
-  g = n("782340"),
-  m = n("316618");
+  _ = n("439932"),
+  f = n("49111"),
+  E = n("289382"),
+  h = n("782340"),
+  g = n("720016");
 
-function E(e) {
+function m(e) {
   let {
     children: t,
     wrapperClassName: n,
     embedded: r
-  } = e, [o, E] = s.useState(h.WaveStates.INITIAL), p = s.useCallback(e => {
-    E(t => Math.max(t, e))
+  } = e, [o, m] = s.useState(E.WaveStates.INITIAL), p = s.useCallback(e => {
+    m(t => Math.max(t, e))
   }, []);
   return (0, u.usePageTitle)({
-    location: g.default.Messages.OAUTH2_TITLE
+    location: h.default.Messages.OAUTH2_TITLE
   }), (0, i.jsx)(l.ThemeContextProvider, {
-    theme: _.ThemeTypes.DARK,
+    theme: f.ThemeTypes.DARK,
     children: (0, i.jsx)(d.default, {
       embedded: r,
-      className: a((0, f.getThemeClass)(_.ThemeTypes.DARK), m.wave),
+      className: a((0, _.getThemeClass)(f.ThemeTypes.DARK), g.wave),
       splash: (0, c.getArtForPath)(),
       waveState: o,
       showLogo: !0,
       updateWaveState: p,
       children: (0, i.jsx)("div", {
-        className: a(m.oauth2Wrapper, n),
+        className: a(g.oauth2Wrapper, n),
         children: t
       })
     })
@@ -58,7 +58,7 @@ function p(e) {
   return (0, i.jsx)(o.ModalRoot, {
     size: o.ModalSize.DYNAMIC,
     transitionState: n,
-    className: m.oauth2Wrapper,
+    className: g.oauth2Wrapper,
     ...s,
     children: t
   })

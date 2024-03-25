@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return f
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("907002"),
+  l = s("884691"),
+  n = s("146606"),
   i = s("733724"),
   r = s("446674"),
   o = s("77078"),
@@ -15,61 +15,61 @@ var a = s("37983"),
   c = s("454686"),
   E = s("296839"),
   _ = s("151866"),
-  T = s("842357"),
-  I = s("782340"),
-  S = s("975456");
+  I = s("842357"),
+  T = s("782340"),
+  S = s("672703");
 
-function N(e) {
+function f(e) {
   let {
     guildId: t,
     triggerType: s
-  } = e, N = n.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [g] = n.useState(N), [f, A] = n.useState(!1), {
-    editingRule: L,
-    createNewEditingRule: m
+  } = e, f = l.useMemo(() => () => (0, c.createDefaultRule)(t, s), [t, s]), [m] = l.useState(f), [N, g] = l.useState(!1), {
+    editingRule: h,
+    createNewEditingRule: C
   } = (0, _.useAutomodEditingRuleState)(), {
-    getDefaultRuleName: C
-  } = E.triggerConfigs[s], O = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), h = !(0, c.isBackendPersistedRule)(L) && (null == L ? void 0 : L.triggerType) === s, [R, D] = n.useState(h ? L : g), M = (0, l.useSpring)({
-    opacity: h ? 0 : 1,
-    pointerEvents: h ? "none" : "all",
+    getDefaultRuleName: R
+  } = E.triggerConfigs[s], x = (0, r.useStateFromStores)([d.default], () => d.default.useReducedMotion), L = !(0, c.isBackendPersistedRule)(h) && (null == h ? void 0 : h.triggerType) === s, [O, A] = l.useState(L ? h : m), p = (0, n.useSpring)({
+    opacity: L ? 0 : 1,
+    pointerEvents: L ? "none" : "all",
     config: {
-      ...l.config.stiff,
+      ...n.config.stiff,
       clamp: !0
     },
-    immediate: O
-  }), G = (0, l.useSpring)({
-    opacity: h ? 1 : 0,
-    pointerEvents: h ? "all" : "none",
+    immediate: x
+  }), M = (0, n.useSpring)({
+    opacity: L ? 1 : 0,
+    pointerEvents: L ? "all" : "none",
     config: {
-      ...l.config.stiff,
+      ...n.config.stiff,
       clamp: !0
     },
-    immediate: O,
+    immediate: x,
     onStart: () => {
-      D(h ? L : g)
+      A(L ? h : m)
     },
     onRest: () => {
-      D(h ? L : g), A(h)
+      A(L ? h : m), g(L)
     }
   });
-  return null == L || h ? (0, a.jsxs)("div", {
+  return null == h || L ? (0, a.jsxs)("div", {
     className: S.mainRuleContainer,
     style: {
-      height: h ? "auto" : "60px"
+      height: L ? "auto" : "60px"
     },
-    children: [(0, a.jsx)(l.animated.div, {
+    children: [(0, a.jsx)(n.animated.div, {
       className: S.animatedRuleCardContainer,
-      style: G,
-      children: (0, a.jsx)(T.default, {
-        rule: R,
-        persistEdit: f
-      })
-    }), (0, a.jsx)(l.animated.div, {
-      className: S.animatedNewRuleContainer,
       style: M,
+      children: (0, a.jsx)(I.default, {
+        rule: O,
+        persistEdit: N
+      })
+    }), (0, a.jsx)(n.animated.div, {
+      className: S.animatedNewRuleContainer,
+      style: p,
       children: (0, a.jsxs)(o.Clickable, {
         className: S.addAnotherRuleCardContainer,
         onClick: () => {
-          m(t, s)
+          C(t, s)
         },
         children: [(0, a.jsx)(u.default, {
           width: 20,
@@ -79,8 +79,8 @@ function N(e) {
         }), (0, a.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: "text-link",
-          children: I.default.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
-            ruleName: C()
+          children: T.default.Messages.GUILD_AUTOMOD_ADD_ADDITIONAL_RULE.format({
+            ruleName: R()
           })
         })]
       })

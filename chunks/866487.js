@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverySidebarHeader: function() {
-    return l
+    return i
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("825321");
+  l = n("591634");
 
-function l(e) {
+function i(e) {
   let {
     text: t
   } = e;
   return (0, a.jsx)(s.Heading, {
     variant: "heading-xl/semibold",
-    className: i.discoverHeader,
+    className: l.discoverHeader,
     children: t
   })
 }

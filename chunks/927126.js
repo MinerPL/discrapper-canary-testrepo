@@ -1,10 +1,10 @@
 var n = e("672197"),
-  o = e("236520"),
+  o = e("523931"),
   i = e("123130"),
-  u = e("561583"),
-  a = e("63770");
+  a = e("561583"),
+  u = e("63770");
 
-function c(t) {
+function s(t) {
   var r = -1,
     e = null == t ? 0 : t.length;
   for (this.clear(); ++r < e;) {
@@ -12,4 +12,4 @@ function c(t) {
     this.set(n[0], n[1])
   }
 }
-c.prototype.clear = n, c.prototype.delete = o, c.prototype.get = i, c.prototype.has = u, c.prototype.set = a, t.exports = c
+s.prototype.clear = n, s.prototype.delete = o, s.prototype.get = i, s.prototype.has = a, s.prototype.set = u, t.exports = s

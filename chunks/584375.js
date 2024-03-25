@@ -25,40 +25,40 @@ let a = e => {
     let d = i.default.parseString(o);
     if (null == d) return null;
     let c = (0, s.rawRgbToHsl)(d.red, d.blue, d.green),
-      f = null !== (t = (0, s.getAccessibleColor)({
+      _ = null !== (t = (0, s.getAccessibleColor)({
         colors: [(0, s.getColorLightnessAdjusted)(d, .6, !0), l],
         ratio: 3,
         saturationFactor: a
       })) && void 0 !== t ? t : d,
-      _ = null !== (n = (0, s.getAccessibleColor)({
+      f = null !== (n = (0, s.getAccessibleColor)({
         colors: [(0, s.getColorLightnessAdjusted)(d, .6, !1), u],
         ratio: 5,
         saturationFactor: a
       })) && void 0 !== n ? n : d,
-      h = (0, s.getAccessibleColor)({
+      E = (0, s.getAccessibleColor)({
         colors: [d, l],
         ratio: 7,
         saturationFactor: a
       }),
-      g = (0, s.getAccessibleColor)({
+      h = (0, s.getAccessibleColor)({
         colors: [d, u],
         ratio: 7,
         saturationFactor: a
       });
     return {
       LIGHT: {
-        accentColor: null == h ? void 0 : h.toHexString(),
+        accentColor: null == E ? void 0 : E.toHexString(),
         backgroundColor: (0, s.getSaturatedColorHex)({
-          colorRGB: f,
+          colorRGB: _,
           saturationFactor: a
         }),
         highlightColor: null == d ? void 0 : d.toHexString(),
         opacity: (null == c ? void 0 : c.saturation) < .1 ? .35 : .1
       },
       DARK: {
-        accentColor: null == g ? void 0 : g.toHexString(),
+        accentColor: null == h ? void 0 : h.toHexString(),
         backgroundColor: (0, s.getSaturatedColorHex)({
-          colorRGB: _,
+          colorRGB: f,
           saturationFactor: a
         }),
         highlightColor: null == d ? void 0 : d.toHexString(),

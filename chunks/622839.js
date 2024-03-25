@@ -1,14 +1,14 @@
 "use strict";
-let u, i;
+let i, r;
 n.r(e), n.d(e, {
   NO_PAYMENT_SOURCE: function() {
     return o
   },
   default: function() {
-    return M
+    return L
   }
 }), n("222007");
-var r = n("446674"),
+var u = n("446674"),
   l = n("913144"),
   a = n("49111");
 let o = "no_payment_source",
@@ -21,17 +21,17 @@ let o = "no_payment_source",
   _ = null,
   T = !1,
   I = null,
-  A = !1,
   p = !1,
+  A = !1,
   C = !1,
   P = !1,
   N = null,
   R = new Set;
 
-function U(t) {
-  null != u && null != _ ? u(_) : null != i && i(t), u = null, i = null
+function h(t) {
+  null != i && null != _ ? i(_) : null != r && r(t), i = null, r = null
 }
-class L extends r.default.Store {
+class U extends u.default.Store {
   getPricesForSku(t) {
     return f[t]
   }
@@ -43,7 +43,7 @@ class L extends r.default.Store {
     return T
   }
   get forceConfirmationStepOnMount() {
-    return A
+    return p
   }
   get error() {
     return I
@@ -61,7 +61,7 @@ class L extends r.default.Store {
     return E
   }
   get isIAP() {
-    return p
+    return A
   }
   get giftCode() {
     return c
@@ -73,16 +73,16 @@ class L extends r.default.Store {
     return R.has(t)
   }
 }
-L.displayName = "SKUPaymentModalStore";
-var M = new L(l.default, {
+U.displayName = "SKUPaymentModalStore";
+var L = new U(l.default, {
   SKU_PURCHASE_MODAL_OPEN: function(t) {
-    U(), s = t.skuId, S = t.applicationId, p = t.isIAP, d = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, A = !1, u = t.resolve, i = t.reject, I = null, _ = null, E = t.promotionId
+    h(), s = t.skuId, S = t.applicationId, A = t.isIAP, d = t.analyticsLocation, N = t.context, P = t.isGift, C = !0, p = !1, i = t.resolve, r = t.reject, I = null, _ = null, E = t.promotionId
   },
   SKU_PURCHASE_MODAL_CLOSE: function(t) {
     let {
       error: e
     } = t;
-    C = !1, N = null, U(e)
+    C = !1, N = null, h(e)
   },
   SKU_PURCHASE_PREVIEW_FETCH: function(t) {
     let {
@@ -94,13 +94,13 @@ var M = new L(l.default, {
     let {
       skuId: e,
       paymentSourceId: n,
-      price: u
+      price: i
     } = t;
     f = {
       ...f,
       [e]: {
         ...f[e],
-        [null != n ? n : o]: u
+        [null != n ? n : o]: i
       }
     }, R.delete(e)
   },
@@ -127,7 +127,7 @@ var M = new L(l.default, {
     T = !1, I = e
   },
   SKU_PURCHASE_SHOW_CONFIRMATION_STEP: function() {
-    A = !0
+    p = !0
   },
   SKU_PURCHASE_CLEAR_ERROR: function() {
     I = null
@@ -140,7 +140,7 @@ var M = new L(l.default, {
       locked: e
     } = t;
     if (!e || null == N) return !1;
-    C = !1, N = null, U()
+    C = !1, N = null, h()
   },
   GIFT_CODE_CREATE: function(t) {
     let {

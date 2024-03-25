@@ -1,5 +1,5 @@
 "use strict";
-var r = s("243636");
-t.exports = function(t) {
-  return "symbol" == typeof t ? "Symbol" : "bigint" == typeof t ? "BigInt" : r(t)
+var r = n("243636");
+e.exports = function(e) {
+  return "symbol" == typeof e ? "Symbol" : "bigint" == typeof e ? "BigInt" : r(e)
 }

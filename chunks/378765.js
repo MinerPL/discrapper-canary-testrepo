@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ComponentDispatchGroupContext: function() {
-    return a
+    return o
   },
   ComponentDispatchGroupProvider: function() {
     return u
@@ -13,44 +13,44 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("222007"), n("70102");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("44170"),
-  o = n("659500");
-class s {
+var i = n("37983"),
+  l = n("884691"),
+  a = n("44170"),
+  s = n("659500");
+class r {
   subscribe(e, t) {
-    o.ComponentDispatch.subscribe(e, t), this.emitter.on(e, t)
+    s.ComponentDispatch.subscribe(e, t), this.emitter.on(e, t)
   }
   unsubscribe(e, t) {
-    o.ComponentDispatch.unsubscribe(e, t), this.emitter.off(e, t)
+    s.ComponentDispatch.unsubscribe(e, t), this.emitter.off(e, t)
   }
   bumpDispatchPriority() {
     for (let e of this.emitter.eventNames())
-      for (let t of this.emitter.listeners(e)) o.ComponentDispatch.resubscribe(e, t)
+      for (let t of this.emitter.listeners(e)) s.ComponentDispatch.resubscribe(e, t)
   }
   constructor() {
-    this.emitter = new r.EventEmitter
+    this.emitter = new a.EventEmitter
   }
 }
-let a = i.createContext(new class e {
+let o = l.createContext(new class e {
     subscribe(e, t) {
-      o.ComponentDispatch.subscribe(e, t)
+      s.ComponentDispatch.subscribe(e, t)
     }
     unsubscribe(e, t) {
-      o.ComponentDispatch.unsubscribe(e, t)
+      s.ComponentDispatch.unsubscribe(e, t)
     }
     bumpDispatchPriority() {}
   }),
-  u = i.forwardRef(function(e, t) {
+  u = l.forwardRef(function(e, t) {
     let {
       children: n
-    } = e, r = i.useRef(null);
+    } = e, a = l.useRef(null);
 
-    function o() {
-      return null === r.current && (r.current = new s), r.current
+    function s() {
+      return null === a.current && (a.current = new r), a.current
     }
-    return i.useImperativeHandle(t, o), (0, l.jsx)(a.Provider, {
-      value: o(),
+    return l.useImperativeHandle(t, s), (0, i.jsx)(o.Provider, {
+      value: s(),
       children: n
     })
   });
@@ -59,21 +59,21 @@ function d(e) {
   let {
     event: t,
     handler: n
-  } = e, l = i.useContext(a), r = i.useRef(n);
-  i.useEffect(() => {
-    r.current = n
+  } = e, i = l.useContext(o), a = l.useRef(n);
+  l.useEffect(() => {
+    a.current = n
   }, [n]);
-  let o = null == n;
-  return i.useEffect(() => {
-    if (o) return;
+  let s = null == n;
+  return l.useEffect(() => {
+    if (s) return;
     let e = function() {
-      for (var e, t = arguments.length, n = Array(t), l = 0; l < t; l++) n[l] = arguments[l];
-      null === (e = r.current) || void 0 === e || e.call(r, ...n)
+      for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+      null === (e = a.current) || void 0 === e || e.call(a, ...n)
     };
-    return l.subscribe(t, e), () => {
-      l.unsubscribe(t, e)
+    return i.subscribe(t, e), () => {
+      i.unsubscribe(t, e)
     }
-  }, [l, t, o]), null
+  }, [i, t, s]), null
 }
 
 function c(e) {

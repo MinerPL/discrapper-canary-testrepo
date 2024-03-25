@@ -14,8 +14,8 @@ var a = l("37983"),
   o = l("885508"),
   d = l("190017"),
   h = l("545876"),
-  p = l("299285"),
-  f = l("393414"),
+  f = l("299285"),
+  p = l("393414"),
   I = l("677225"),
   A = l("971427"),
   L = l("98328"),
@@ -23,9 +23,9 @@ var a = l("37983"),
   g = l("953109"),
   S = l("993105"),
   T = l("391820"),
-  E = l("49111"),
-  N = l("782340"),
-  v = l("861144");
+  N = l("49111"),
+  E = l("782340"),
+  v = l("842277");
 class C extends s.Component {
   fetchInstallSize() {
     let {
@@ -65,7 +65,7 @@ class C extends s.Component {
       disabled: t || null == e || !l,
       color: i.Button.Colors.GREEN,
       onClick: this.handleInstall,
-      children: N.default.Messages.GAME_ACTION_BUTTON_INSTALL
+      children: E.default.Messages.GAME_ACTION_BUTTON_INSTALL
     })
   }
   render() {
@@ -80,7 +80,7 @@ class C extends s.Component {
     return (0, a.jsxs)(i.ModalRoot, {
       transitionState: l,
       size: i.ModalSize.SMALL,
-      "aria-label": N.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
+      "aria-label": E.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE,
       children: [null != r ? (0, a.jsx)("div", {
         className: v.splash,
         style: {
@@ -92,7 +92,7 @@ class C extends s.Component {
           grow: 1,
           children: (0, a.jsx)(i.Heading, {
             variant: "heading-lg/semibold",
-            children: N.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE
+            children: E.default.Messages.APPLICATION_INSTALLATION_MODAL_TITLE
           })
         }), (0, a.jsx)(m.default.Child, {
           grow: 0,
@@ -161,7 +161,7 @@ class C extends s.Component {
         manifestIds: t,
         installationPath: this.state.selectedInstallationPath,
         analyticsLocation: s
-      }), (0, f.transitionTo)(E.Routes.APPLICATION_LIBRARY), this.close()
+      }), (0, p.transitionTo)(N.Routes.APPLICATION_LIBRARY), this.close()
     }, this.handleInstall = () => {
       let {
         application: e,
@@ -180,13 +180,13 @@ class C extends s.Component {
     }
   }
 }
-var M = n.default.connectStores([I.default, L.default, A.default, p.default], e => {
+var M = n.default.connectStores([I.default, L.default, A.default, f.default], e => {
   let {
     applicationId: t,
     branchId: l
   } = e, a = I.default.getTargetBuildId(t, l);
   return {
-    application: p.default.getApplication(t),
+    application: f.default.getApplication(t),
     defaultInstallationPath: L.default.defaultInstallationPath,
     buildId: a,
     manifestIds: I.default.getTargetManifests(t, l),

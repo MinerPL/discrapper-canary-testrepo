@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   useAdvancedModeExperiment: function() {
-    return l
+    return n
   }
 });
 var a = s("862205");
-let n = (0, a.createExperiment)({
+let l = (0, a.createExperiment)({
   kind: "guild",
   id: "2023-02_onboarding_advanced_mode",
   label: "Enables setting up onboarding with advanced mode",
@@ -21,8 +21,8 @@ let n = (0, a.createExperiment)({
   }]
 });
 
-function l(e) {
-  return n.useExperiment({
+function n(e) {
+  return l.useExperiment({
     guildId: e,
     location: "ed5d33_1"
   }, {

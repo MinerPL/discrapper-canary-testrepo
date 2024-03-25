@@ -2,7 +2,7 @@
 let r;
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var i = n("917351"),
@@ -43,7 +43,7 @@ class _ extends a.default.Store {
   }
 }
 _.displayName = "WebhooksStore";
-var m = new _(l.default, {
+var E = new _(l.default, {
   WEBHOOKS_UPDATE: function(e) {
     let {
       guildId: t,

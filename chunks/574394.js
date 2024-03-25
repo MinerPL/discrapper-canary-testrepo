@@ -1,7 +1,7 @@
 "use strict";
 var i = "_erd";
 
-function o(e) {
+function r(e) {
   return e[i]
 }
 e.exports = {
@@ -11,7 +11,7 @@ e.exports = {
         return e[i]
       }(e)
   },
-  getState: o,
+  getState: r,
   cleanState: function(e) {
     delete e[i]
   }

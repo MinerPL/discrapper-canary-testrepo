@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
@@ -14,11 +14,11 @@ var n = s("446674"),
   d = s("476765"),
   u = s("829536"),
   c = s("782340"),
-  S = s("926622");
+  S = s("890957");
 let E = (0, d.uid)(),
-  f = (0, d.uid)();
+  T = (0, d.uid)();
 
-function T() {
+function f() {
   let {
     inputVolume: e,
     outputVolume: t
@@ -43,7 +43,7 @@ function T() {
     }), (0, a.jsxs)(o.default.Child, {
       basis: "50%",
       children: [(0, a.jsx)(l.FormTitle, {
-        id: f,
+        id: T,
         tag: l.FormTitleTags.H5,
         className: S.marginBottom4,
         children: c.default.Messages.FORM_LABEL_OUTPUT_VOLUME
@@ -52,7 +52,7 @@ function T() {
         maxValue: 200,
         onValueRender: e => "".concat(e.toFixed(0), "%"),
         asValueChanges: e => i.default.setOutputVolume((0, u.perceptualToAmplitude)(e)),
-        "aria-labelledby": f
+        "aria-labelledby": T
       })]
     })]
   })

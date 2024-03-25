@@ -19,7 +19,7 @@ var l = a("37983"),
   E = a("821435"),
   g = a("515631"),
   I = a("782340"),
-  _ = a("850858");
+  _ = a("689556");
 
 function x(e) {
   let {
@@ -29,7 +29,7 @@ function x(e) {
     return s && e.length > 0 ? i.head(e) : i.chain(d).filter(e => !(0, m.isGuildScheduledEventActive)(e)).minBy(e => r(e.scheduled_start_time)).value()
   }, [d, s]);
   if (null == x) return null;
-  async function v() {
+  async function S() {
     await (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -48,7 +48,7 @@ function x(e) {
         variant: "heading-md/semibold",
         children: s ? I.default.Messages.GUILD_EVENTS : I.default.Messages.GUILD_HOME_EVENTS_TITLE
       }), d.length >= 2 ? (0, l.jsx)(o.Clickable, {
-        onClick: v,
+        onClick: S,
         children: (0, l.jsx)(o.Text, {
           className: _.showEvents,
           variant: "text-sm/normal",

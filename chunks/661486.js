@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("193809");
 s("222007");
-var n = s("458960");
-class l {
+var l = s("458960");
+class n {
   start() {
     return new Promise(e => {
       this.animation.start(() => {
@@ -55,15 +55,15 @@ function o(e, t, s) {
   let a = s(e, {
     ...t
   });
-  return new l(a)
+  return new n(a)
 }
 var d = {
-  ...n.default,
+  ...l.default,
   timing: function(e, t) {
-    return o(e, t, n.default.timing)
+    return o(e, t, l.default.timing)
   },
   spring: function(e, t) {
-    return o(e, t, n.default.spring)
+    return o(e, t, l.default.spring)
   },
   parallel: function(e) {
     return new i(e)

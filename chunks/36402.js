@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return a
   }
 });
 var l = n("446674"),
   u = n("913144");
-let a = {},
+let i = {},
   r = {};
-class o extends l.default.Store {
+class d extends l.default.Store {
   getRoleMemberCount(e) {
-    return null != e ? a[e] : null
+    return null != e ? i[e] : null
   }
   shouldFetch(e) {
     if (null == e) return !1;
@@ -18,21 +18,21 @@ class o extends l.default.Store {
     return null == t || Date.now() - t > 12e4
   }
 }
-o.displayName = "GuildRoleMemberCountStore";
-var i = new o(u.default, {
+d.displayName = "GuildRoleMemberCountStore";
+var a = new d(u.default, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function(e) {
     let {
       guildId: t,
       roleMemberCount: n
     } = e;
-    a[t] = n, r[t] = Date.now()
+    i[t] = n, r[t] = Date.now()
   },
   GUILD_ROLE_MEMBER_COUNT_UPDATE: function(e) {
     let {
       guildId: t,
       roleId: n,
       count: l
-    } = e, u = a[t];
+    } = e, u = i[t];
     if (null == u) return !1;
     u[n] = l
   },
@@ -41,7 +41,7 @@ var i = new o(u.default, {
       guildId: t,
       roleId: n,
       added: l
-    } = e, u = a[t];
+    } = e, u = i[t];
     if (null == u || null == u[n]) return !1;
     let r = Object.keys(l).length;
     u[n] += r
@@ -50,7 +50,7 @@ var i = new o(u.default, {
     let {
       guildId: t,
       roleId: n
-    } = e, l = a[t];
+    } = e, l = i[t];
     if (null == l || null == l[n]) return !1;
     l[n] = l[n] + 1
   },
@@ -58,7 +58,7 @@ var i = new o(u.default, {
     let {
       guildId: t,
       roleId: n
-    } = e, l = a[t];
+    } = e, l = i[t];
     if (null == l || null == l[n]) return !1;
     l[n] = Math.max(l[n] - 1, 0)
   },
@@ -67,12 +67,12 @@ var i = new o(u.default, {
       guildId: t,
       role: n
     } = e;
-    null == a[t] && (a[t] = {}), a[t][n.id] = 0
+    null == i[t] && (i[t] = {}), i[t][n.id] = 0
   },
   GUILD_DELETE: function(e) {
     let {
       guild: t
     } = e;
-    delete a[t.id], delete r[t.id]
+    delete i[t.id], delete r[t.id]
   }
 })

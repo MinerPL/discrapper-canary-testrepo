@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return _
   }
 });
 var a = n("37983");
@@ -11,40 +11,40 @@ var l = n("77078"),
   u = n("467475"),
   o = n("24373"),
   s = n("48703"),
-  c = n("599110"),
-  r = n("128259"),
+  r = n("599110"),
+  c = n("128259"),
   d = n("773336"),
   f = n("50885"),
   E = n("146574"),
-  _ = n("49111"),
-  g = n("782340");
+  h = n("49111"),
+  v = n("782340");
 
-function p(e, t, n, p) {
-  let v = (0, u.default)(null == n ? void 0 : n.getChannelId());
-  if (!d.isPlatformEmbedded || null == e || "" === e || v || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || null != e && null != (0, o.isStickerAssetUrl)(e) || null != e && (0, i.isRoleIconAssetUrl)(e)) return null;
-  let h = (0, s.getHostname)(e),
+function _(e, t, n, _) {
+  let g = (0, u.default)(null == n ? void 0 : n.getChannelId());
+  if (!d.isPlatformEmbedded || null == e || "" === e || g || (null == _ ? void 0 : _.shouldHideMediaOptions) === !0 || null != e && null != (0, o.isStickerAssetUrl)(e) || null != e && (0, i.isRoleIconAssetUrl)(e)) return null;
+  let p = (0, s.getHostname)(e),
     M = n => {
-      c.default.track(_.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
-        hostname: h,
+      r.default.track(h.AnalyticEvents.CONTEXT_MENU_LINK_OPENED, {
+        hostname: p,
         ...(0, E.getNativeContextMenuChannelAnalytics)()
-      }), (0, r.handleClick)({
+      }), (0, c.handleClick)({
         href: e,
-        trusted: (0, r.isLinkTrusted)(e, t),
+        trusted: (0, c.isLinkTrusted)(e, t),
         shouldConfirm: !0
       }, n)
     };
   return [(0, a.jsx)(l.MenuItem, {
     id: "copy-native-link",
-    label: g.default.Messages.COPY_LINK,
+    label: v.default.Messages.COPY_LINK,
     action: () => {
-      c.default.track(_.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
-        hostname: h,
+      r.default.track(h.AnalyticEvents.CONTEXT_MENU_LINK_COPIED, {
+        hostname: p,
         ...(0, E.getNativeContextMenuChannelAnalytics)()
       }), f.default.copy(e)
     }
   }, "copy-native-link"), (0, a.jsx)(l.MenuItem, {
     id: "open-native-link",
-    label: g.default.Messages.OPEN_LINK,
+    label: v.default.Messages.OPEN_LINK,
     action: e => M(e)
   }, "open-native-link")]
 }

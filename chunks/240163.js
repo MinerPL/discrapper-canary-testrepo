@@ -1,5 +1,5 @@
 var r = n("664813");
-e.exports = v, v.simpleSieve = g, v.fermatTest = b;
+e.exports = b, b.simpleSieve = v, b.fermatTest = g;
 var i = n("839309"),
   o = new i(24),
   s = new(n("925197")),
@@ -15,7 +15,7 @@ var f = new i(11),
 new i(12);
 var h = null;
 
-function g(e) {
+function v(e) {
   for (var t = function() {
       if (null !== h) return h;
       var e = [];
@@ -32,12 +32,12 @@ function g(e) {
     } return !0
 }
 
-function b(e) {
+function g(e) {
   var t = i.mont(e);
   return 0 === c.toRed(t).redPow(e.subn(1)).fromRed().cmpn(1)
 }
 
-function v(e, t) {
+function b(e, t) {
   var n, h;
   if (e < 16) return 2 === t || 5 === t ? new i([140, 123]) : new i([140, 39]);
   for (t = new i(t);;) {
@@ -47,6 +47,6 @@ function v(e, t) {
         for (; n.mod(d).cmp(l);) n.iadd(p)
     } else
       for (; n.mod(o).cmp(f);) n.iadd(p);
-    if (g(h = n.shrn(1)) && g(n) && b(h) && b(n) && s.test(h) && s.test(n)) return n
+    if (v(h = n.shrn(1)) && v(n) && g(h) && g(n) && s.test(h) && s.test(n)) return n
   }
 }

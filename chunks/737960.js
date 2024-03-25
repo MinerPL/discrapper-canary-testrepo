@@ -1,32 +1,32 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
-var r = n("37983"),
-  i = n("884691"),
-  a = n("308723");
+var s = r("37983"),
+  n = r("884691"),
+  l = r("308723");
 
-function l(e) {
-  return i.forwardRef(function(t, n) {
-    let l = i.useRef();
-    return i.useImperativeHandle(n, () => ({
+function i(e) {
+  return n.forwardRef(function(t, r) {
+    let i = n.useRef();
+    return n.useImperativeHandle(r, () => ({
       triggerResize: () => {
         var e;
-        null === (e = l.current) || void 0 === e || e.onResize()
+        null === (e = i.current) || void 0 === e || e.onResize()
       }
-    })), (0, r.jsx)(a.default, {
-      ref: l,
-      children: n => {
+    })), (0, s.jsx)(l.default, {
+      ref: i,
+      children: r => {
         let {
-          width: i,
-          height: a
-        } = n;
-        return (0, r.jsx)(e, {
+          width: n,
+          height: l
+        } = r;
+        return (0, s.jsx)(e, {
           ...t,
-          width: i,
-          height: a
+          width: n,
+          height: l
         })
       }
     })

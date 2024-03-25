@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var i = n("884691"),
-  a = n("79112"),
-  l = n("685665"),
-  r = n("929423");
+var r = n("884691"),
+  i = n("79112"),
+  s = n("685665"),
+  o = n("929423");
 n("424562");
-var s = n("49111"),
-  u = n("397336");
+var a = n("49111"),
+  l = n("397336");
 
-function o(e) {
+function u(e) {
   let {
     guild: t,
     scrollPosition: n,
-    analyticsLocation: o,
+    analyticsLocation: u,
     analyticsLocations: d,
     openWithoutBackstack: c = !1
   } = e, {
-    analyticsLocations: E
-  } = (0, l.default)(), _ = (0, i.useCallback)(() => {
-    null != t && (0, r.initGuildIdentitySettings)(t, null != d ? d : E), a.default.open(s.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? u.ProfileCustomizationSubsection.GUILD : u.ProfileCustomizationSubsection.USER_PROFILE, {
+    analyticsLocations: f
+  } = (0, s.default)(), E = (0, r.useCallback)(() => {
+    null != t && (0, o.initGuildIdentitySettings)(t, null != d ? d : f), i.default.open(a.UserSettingsSections.PROFILE_CUSTOMIZATION, null != t ? l.ProfileCustomizationSubsection.GUILD : l.ProfileCustomizationSubsection.USER_PROFILE, {
       scrollPosition: n,
-      analyticsLocation: o,
+      analyticsLocation: u,
       analyticsLocations: d,
       openWithoutBackstack: c
     })
-  }, [t, n, o, d, c, E]);
-  return _
+  }, [t, n, u, d, c, f]);
+  return E
 }

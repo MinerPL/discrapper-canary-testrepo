@@ -1,61 +1,61 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return h
+    return S
   }
 });
-var n = i("37983"),
-  l = i("884691"),
-  s = i("23411"),
-  a = i("811986"),
-  r = i("648439"),
-  o = i("841811"),
-  u = i("432335"),
-  c = i("849976"),
-  d = i("742223"),
-  f = i("877220"),
-  E = i("258752"),
-  m = i("216422"),
-  I = i("290581"),
-  p = i("742219"),
-  g = i("115279");
-let _ = e => {
+var i = n("37983"),
+  l = n("884691"),
+  a = n("23411"),
+  s = n("811986"),
+  r = n("648439"),
+  o = n("841811"),
+  u = n("432335"),
+  d = n("849976"),
+  c = n("742223"),
+  f = n("877220"),
+  p = n("258752"),
+  m = n("216422"),
+  h = n("290581"),
+  x = n("742219"),
+  E = n("115279");
+let y = e => {
     switch (e) {
-      case g.EmojiCategories.RECENT:
+      case E.EmojiCategories.RECENT:
         return o.default;
-      case g.EmojiCategories.FAVORITES:
-        return I.default;
-      case g.EmojiCategories.TOP_GUILD_EMOJI:
-        return p.default;
-      case g.EmojiCategories.PEOPLE:
-        return d.default;
-      case g.EmojiCategories.NATURE:
-        return u.default;
-      case g.EmojiCategories.FOOD:
-        return r.default;
-      case g.EmojiCategories.ACTIVITY:
-        return s.default;
-      case g.EmojiCategories.TRAVEL:
-        return E.default;
-      case g.EmojiCategories.OBJECTS:
+      case E.EmojiCategories.FAVORITES:
+        return h.default;
+      case E.EmojiCategories.TOP_GUILD_EMOJI:
+        return x.default;
+      case E.EmojiCategories.PEOPLE:
         return c.default;
-      case g.EmojiCategories.SYMBOLS:
-        return f.default;
-      case g.EmojiCategories.FLAGS:
+      case E.EmojiCategories.NATURE:
+        return u.default;
+      case E.EmojiCategories.FOOD:
+        return r.default;
+      case E.EmojiCategories.ACTIVITY:
         return a.default;
-      case g.EmojiCategories.PREMIUM_UPSELL:
+      case E.EmojiCategories.TRAVEL:
+        return p.default;
+      case E.EmojiCategories.OBJECTS:
+        return d.default;
+      case E.EmojiCategories.SYMBOLS:
+        return f.default;
+      case E.EmojiCategories.FLAGS:
+        return s.default;
+      case E.EmojiCategories.PREMIUM_UPSELL:
         return m.default;
       default:
         return
     }
   },
-  S = l.memo(function(e) {
+  g = l.memo(function(e) {
     let {
       categoryId: t,
-      ...i
-    } = e, l = _(t);
-    return null == l ? null : (0, n.jsx)(l, {
-      ...i
+      ...n
+    } = e, l = y(t);
+    return null == l ? null : (0, i.jsx)(l, {
+      ...n
     })
   });
-var h = S
+var S = g

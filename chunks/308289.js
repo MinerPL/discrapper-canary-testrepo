@@ -1,27 +1,27 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return r
   }
 });
-var n = l("37983"),
-  a = l("884691"),
-  s = l("77078"),
-  i = l("390236"),
-  r = a.memo(function(e) {
-    var t, l, r, o;
+var i = n("37983"),
+  l = n("884691"),
+  a = n("77078"),
+  s = n("390236"),
+  r = l.memo(function(e) {
+    var t, n, r, o;
     let {
       user: u,
-      size: d = s.AvatarSizes.SIZE_32,
+      size: d = a.AvatarSizes.SIZE_32,
       animate: c = !1,
       "aria-hidden": f = !1,
-      ...m
-    } = e, p = a.useContext(i.default);
-    return (0, n.jsx)(s.Avatar, {
-      src: (t = u, l = (0, s.getAvatarSize)(d), r = c, o = p, t.getAvatarURL(o, l, r)),
+      ...p
+    } = e, m = l.useContext(s.default);
+    return (0, i.jsx)(a.Avatar, {
+      src: (t = u, n = (0, a.getAvatarSize)(d), r = c, o = m, t.getAvatarURL(o, n, r)),
       size: d,
       "aria-label": f ? void 0 : u.username,
       "aria-hidden": f,
-      ...m
+      ...p
     })
   })

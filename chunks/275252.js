@@ -5,26 +5,26 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("77078"),
   o = s("998728"),
-  d = s("338518");
+  d = s("203391");
 
 function u(e) {
   let {
     action: t,
     children: s,
-    className: l,
+    className: n,
     onExpandChange: u,
     loading: c,
     ...E
-  } = e, [_, T] = n.useState(!1), I = e => {
-    T(e), null == u || u(e)
+  } = e, [_, I] = l.useState(!1), T = e => {
+    I(e), null == u || u(e)
   };
   return (0, a.jsx)(r.Collapsible, {
-    className: i(d.groupContainer, l),
+    className: i(d.groupContainer, n),
     isExpanded: _,
     collapsibleContent: (0, a.jsxs)("div", {
       className: d.groupCollapsedContainer,
@@ -43,7 +43,7 @@ function u(e) {
           type: r.Spinner.Type.PULSING_ELLIPSIS
         }) : t,
         onClick: e => {
-          I(!_), s(e)
+          T(!_), s(e)
         }
       })
     }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MAX_GUILDS_PER_PAGE: function() {
-    return p
+    return T
   },
   default: function() {
     return R
@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("522632"),
   o = n("446674"),
   u = n("77078"),
@@ -18,38 +18,38 @@ var a = n("37983"),
   c = n("393414"),
   f = n("926787"),
   E = n("246053"),
-  _ = n("794818"),
-  h = n("961098"),
+  h = n("794818"),
+  _ = n("961098"),
   C = n("338638"),
-  I = n("719369"),
-  T = n("447621"),
-  S = n("782340"),
-  m = n("492898");
-let p = 12,
-  A = () => {
+  S = n("719369"),
+  I = n("447621"),
+  m = n("782340"),
+  p = n("319688");
+let T = 12,
+  g = () => {
     let e = (0, c.getHistory)(),
       t = e.location.search,
       n = null != t && t.length > 0 && t.startsWith("?");
     return n ? r.parse(t) : {}
   },
-  g = e => {
+  A = e => {
     let {
       categoryId: t,
       categoryName: n,
       onClick: s
-    } = e, i = t === T.DISCOVERY_ALL_CATEGORIES_ID, l = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
+    } = e, l = t === I.DISCOVERY_ALL_CATEGORIES_ID, i = l ? m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_HEADER : m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_HEADER.format({
       categoryName: n
-    }), r = i ? S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : S.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
+    }), r = l ? m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_BODY : m.default.Messages.GUILD_DISCOVERY_SEARCH_EMPTY_CATEGORY_BODY.format({
       onClick: s
     });
     return (0, a.jsxs)("div", {
-      className: m.emptyContainer,
+      className: p.emptyContainer,
       children: [(0, a.jsx)("div", {
-        className: m.emptyImage
+        className: p.emptyImage
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: m.emptyHeader,
-        children: l
+        className: p.emptyHeader,
+        children: i
       }), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
@@ -58,47 +58,47 @@ let p = 12,
     })
   },
   N = () => (0, a.jsxs)("div", {
-    className: m.emptyContainer,
+    className: p.emptyContainer,
     children: [(0, a.jsx)("div", {
-      className: m.errorImage
+      className: p.errorImage
     }), (0, a.jsx)(u.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: m.emptyHeader,
-      children: S.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
+      className: p.emptyHeader,
+      children: m.default.Messages.GUILD_DISCOVERY_SEARCH_ERROR
     })]
   });
 var R = e => {
   let {
     loadId: t,
     searchResults: n,
-    mostRecentQuery: i,
+    mostRecentQuery: l,
     defaultLanguage: r,
     availableLanguages: c,
     isFetchingSearch: R,
     scroller: O,
-    loadingGuildId: L,
-    theme: v,
+    loadingGuildId: v,
+    theme: L,
     currentCategoryId: M,
     currentCategoryName: P,
-    onViewGuild: D,
-    onGuildCardSeen: y,
+    onViewGuild: y,
+    onGuildCardSeen: D,
     placeholder: x,
     onTagClick: b
-  } = e, U = l.uniqueId("GuildDiscovery"), {
+  } = e, U = i.uniqueId("GuildDiscovery"), {
     guilds: G,
     loading: j,
     total: w
   } = n, [k, F] = s.useState(!1), {
-    tag: H
-  } = A(), [B, V] = s.useState(H), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
-    d.doAlgoliaSearch(i, {
-      categoryId: n ? T.DISCOVERY_ALL_CATEGORIES_ID : M,
+    tag: B
+  } = g(), [H, V] = s.useState(B), Y = (0, o.useStateFromStores)([f.default], () => f.default.hasSearchError()), W = (e, t, n) => {
+    d.doAlgoliaSearch(l, {
+      categoryId: n ? I.DISCOVERY_ALL_CATEGORIES_ID : M,
       preferredLocale: r.code,
       offset: e,
       length: t,
       filters: {
-        approximate_member_count: _.MINIMUM_MEMBER_COUNT
+        approximate_member_count: h.MINIMUM_MEMBER_COUNT
       }
     }), F(!1)
   }, K = () => {
@@ -110,61 +110,61 @@ var R = e => {
     let {
       offset: e,
       tag: t
-    } = A(), n = null != e ? Math.floor(parseInt(e, 10) / p) + 1 : 1;
+    } = g(), n = null != e ? Math.floor(parseInt(e, 10) / T) + 1 : 1;
     V(!!t), 1 === n && F(!0)
-  }, [i]);
-  let z = M === T.DISCOVERY_ALL_CATEGORIES_ID ? S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
+  }, [l]);
+  let z = M === I.DISCOVERY_ALL_CATEGORIES_ID ? m.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
-    query: i
-  }) : S.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
+    query: l
+  }) : m.default.Messages.GUILD_DISCOVERY_SEARCH_RESULTS_CATEGORY_HEADER.format({
     count: null != w ? w.toLocaleString() : "0",
-    query: i,
+    query: l,
     category: P
   });
   return (0, a.jsxs)("div", {
-    className: m.container,
+    className: p.container,
     children: [(0, a.jsxs)("div", {
-      className: m.searchHeader,
+      className: p.searchHeader,
       children: [(0, a.jsx)(u.Clickable, {
         onClick: () => {
-          d.clearSearch(), _.trackSearchClosed(t)
+          d.clearSearch(), h.trackSearchClosed(t)
         },
-        className: m.arrow,
-        "aria-label": S.default.Messages.BACK,
+        className: p.arrow,
+        "aria-label": m.default.Messages.BACK,
         children: (0, a.jsx)(E.default, {
           direction: E.default.Directions.LEFT
         })
       }), (0, a.jsx)(u.Heading, {
         variant: "heading-xl/semibold",
-        className: m.header,
+        className: p.header,
         children: z
       })]
     }), (0, a.jsx)(C.default, {
       loadId: t,
       searchResults: n,
-      mostRecentQuery: i,
+      mostRecentQuery: l,
       isFetchingSearch: R,
       defaultLanguage: r,
       placeholder: x,
       availableLanguages: c,
       isSearchPage: !0,
       currentCategoryId: M,
-      isTagSearch: B
-    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(g, {
+      isTagSearch: H
+    }), Y ? (0, a.jsx)(N, {}) : w <= 0 ? (0, a.jsx)(A, {
       categoryId: M,
       categoryName: P,
       onClick: () => {
-        d.selectCategory(T.DISCOVERY_ALL_CATEGORIES_ID), W(0, p, !0)
+        d.selectCategory(I.DISCOVERY_ALL_CATEGORIES_ID), W(0, T, !0)
       }
     }) : (0, a.jsx)("div", {
-      className: m.results,
-      children: (0, a.jsx)(h.default, {
-        pageSize: p,
+      className: p.results,
+      children: (0, a.jsx)(_.default, {
+        pageSize: T,
         totalCount: w,
         resetCurrentPage: k,
         onPageChange: e => {
-          let t = (e - 1) * p;
-          W(t, p), K()
+          let t = (e - 1) * T;
+          W(t, T), K()
         },
         children: e => {
           let {
@@ -172,15 +172,15 @@ var R = e => {
           } = e;
           return (0, a.jsxs)("section", {
             "aria-labelledby": U,
-            children: [(0, a.jsx)(I.default, {
+            children: [(0, a.jsx)(S.default, {
               guilds: G,
               loading: j,
-              loadingPlaceholderCount: p,
-              onViewGuild: D,
-              loadingGuildId: L,
-              theme: v,
-              analyticsContext: _.AnalyticsContexts.SEARCH,
-              onGuildCardSeen: y,
+              loadingPlaceholderCount: T,
+              onViewGuild: y,
+              loadingGuildId: v,
+              theme: L,
+              analyticsContext: h.AnalyticsContexts.SEARCH,
+              onGuildCardSeen: D,
               onTagClick: b
             }), t]
           })

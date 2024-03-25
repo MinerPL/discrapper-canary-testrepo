@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return a
   }
 });
-var l = n("83800"),
-  i = n("385887");
+var i = n("83800"),
+  l = n("385887");
 
-function r(e, t) {
+function a(e, t) {
   let {
     apply: n,
-    deleteBackward: r,
-    deleteForward: s,
-    deleteFragment: a,
+    deleteBackward: a,
+    deleteForward: r,
+    deleteFragment: o,
     insertData: u,
     insertText: d,
     onChange: c
   } = e;
 
   function f(n) {
-    let i = l.HistoryUtils.currentEntry(e);
-    if (null != i && (i.mergeable = !1), n >= e.history.stack.length) return;
+    let l = i.HistoryUtils.currentEntry(e);
+    if (null != l && (l.mergeable = !1), n >= e.history.stack.length) return;
     e.history.index = n;
-    let r = l.HistoryUtils.currentEntry(e);
+    let a = i.HistoryUtils.currentEntry(e);
     t({
-      newValue: r.value,
-      newSelection: r.selection
+      newValue: a.value,
+      newSelection: a.selection
     })
   }
   e.history = {
@@ -35,7 +35,7 @@ function r(e, t) {
     let {
       history: t
     } = e;
-    0 === t.stack.length && (t.stack = [o(e)], t.index = 0), null != e.selection && (l.HistoryUtils.currentEntry(e).selection = e.selection), m = null, c()
+    0 === t.stack.length && (t.stack = [s(e)], t.index = 0), null != e.selection && (i.HistoryUtils.currentEntry(e).selection = e.selection), m = null, c()
   }, e.undo = () => {
     e.history.index > 0 && f(e.history.index - 1)
   }, e.redo = () => {
@@ -46,42 +46,42 @@ function r(e, t) {
     h = null;
   return e.apply = t => {
     let {
-      history: r
+      history: a
     } = e;
     n(t);
-    let s = i.EditorUtils.richValue(e);
-    s !== h && (0 === r.stack.length && (r.stack = [o(e)], r.index = 0), l.HistoryUtils.isSaving(e) && (function(e, t, n) {
-      let i;
+    let r = l.EditorUtils.richValue(e);
+    r !== h && (0 === a.stack.length && (a.stack = [s(e)], a.index = 0), i.HistoryUtils.isSaving(e) && (function(e, t, n) {
+      let l;
       let {
-        selection: r
-      } = e, o = l.HistoryUtils.currentEntry(e), s = !0, a = !0;
-      if ("insert_text" === t.type && 1 === t.text.length ? (i = "insert", a = !(("" === t.text || t.text.endsWith(" ")) && (null == n ? void 0 : n.type) === "insert_text" && !("" === n.text && n.text.endsWith(" ")))) : "split_node" === t.type ? i = "insert" : "remove_text" === t.type && 1 === t.text.length ? i = "delete" : (i = "other", s = !1, a = !1), "set_selection" === t.type && null != o) {
-        o.selection = r;
+        selection: a
+      } = e, s = i.HistoryUtils.currentEntry(e), r = !0, o = !0;
+      if ("insert_text" === t.type && 1 === t.text.length ? (l = "insert", o = !(("" === t.text || t.text.endsWith(" ")) && (null == n ? void 0 : n.type) === "insert_text" && !("" === n.text && n.text.endsWith(" ")))) : "split_node" === t.type ? l = "insert" : "remove_text" === t.type && 1 === t.text.length ? l = "delete" : (l = "other", r = !1, o = !1), "set_selection" === t.type && null != s) {
+        s.selection = a;
         return
       }
-      s && function(e, t) {
+      r && function(e, t) {
         return !((null == e ? void 0 : e.type) !== t || Date.now() - e.createdAt >= 4e3) && !0
-      }(o, i) ? l.HistoryUtils.insertOrMergeEntry(e, i, a) : l.HistoryUtils.insertEntry(e, i, a)
-    }(e, t, p), p = t), m = t, h = s)
+      }(s, l) ? i.HistoryUtils.insertOrMergeEntry(e, l, o) : i.HistoryUtils.insertEntry(e, l, o)
+    }(e, t, p), p = t), m = t, h = r)
   }, e.deleteBackward = t => {
-    l.HistoryUtils.withSingleEntry(e, () => r(t))
+    i.HistoryUtils.withSingleEntry(e, () => a(t))
   }, e.deleteForward = t => {
-    l.HistoryUtils.withSingleEntry(e, () => s(t))
+    i.HistoryUtils.withSingleEntry(e, () => r(t))
   }, e.deleteFragment = t => {
-    l.HistoryUtils.withSingleEntry(e, () => a(t))
+    i.HistoryUtils.withSingleEntry(e, () => o(t))
   }, e.insertText = t => {
-    1 === t.length && (null == m ? void 0 : m.type) === "remove_text" ? l.HistoryUtils.withMergedEntry(e, () => d(t)) : null != e.selection && i.RangeUtils.isExpanded(e.selection) ? l.HistoryUtils.withSingleEntry(e, () => d(t)) : d(t)
+    1 === t.length && (null == m ? void 0 : m.type) === "remove_text" ? i.HistoryUtils.withMergedEntry(e, () => d(t)) : null != e.selection && l.RangeUtils.isExpanded(e.selection) ? i.HistoryUtils.withSingleEntry(e, () => d(t)) : d(t)
   }, e.insertData = t => {
-    (null == m ? void 0 : m.type) === "remove_text" ? l.HistoryUtils.withMergedEntry(e, () => u(t)): l.HistoryUtils.withSingleEntry(e, () => u(t))
+    (null == m ? void 0 : m.type) === "remove_text" ? i.HistoryUtils.withMergedEntry(e, () => u(t)): i.HistoryUtils.withSingleEntry(e, () => u(t))
   }, e
 }
 
-function o(e) {
+function s(e) {
   return {
     type: "other",
     mergeable: !1,
     createdAt: Date.now(),
-    value: i.EditorUtils.richValue(e),
+    value: l.EditorUtils.richValue(e),
     selection: e.selection
   }
 }

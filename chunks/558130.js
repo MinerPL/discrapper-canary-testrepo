@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return s
   },
   default: function() {
-    return u
+    return L
   }
 }), E("424973"), E("222007"), E("808653");
 var t = E("917351"),
@@ -49,7 +49,7 @@ function l(e) {
   } = e;
   delete S[_.id], delete N[_.id]
 }
-class L extends n.default.Store {
+class u extends n.default.Store {
   getActiveChannelsFetchStatus(e) {
     return O[e]
   }
@@ -64,8 +64,8 @@ class L extends n.default.Store {
     return null == T[e] && !(null === (_ = O[e]) || void 0 === _ ? void 0 : _.loading)
   }
 }
-L.displayName = "ActiveChannelsStore";
-var u = new L(r.default, {
+u.displayName = "ActiveChannelsStore";
+var L = new u(r.default, {
   CHANNEL_SELECT: function(e) {
     let {
       channelId: _,

@@ -7,14 +7,14 @@ a.r(t), a.d(t, {
     return o
   },
   logVoiceMessagePlaybackFailed: function() {
-    return u
+    return d
   }
 });
-var n, l, s = a("599110"),
-  i = a("49111");
+var n, l, i = a("599110"),
+  s = a("49111");
 
 function r(e, t, a, n) {
-  s.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, {
+  i.default.track(s.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_STARTED, {
     message_id: e,
     total_duration_secs: t,
     start_duration_secs: Math.min(null != t ? t : a, a),
@@ -23,7 +23,7 @@ function r(e, t, a, n) {
 }
 
 function o(e, t, a, n, l) {
-  s.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, {
+  i.default.track(s.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_ENDED, {
     message_id: e,
     total_duration_secs: t,
     end_duration_secs: Math.min(null != t ? t : a, a),
@@ -32,8 +32,8 @@ function o(e, t, a, n, l) {
   })
 }
 
-function u(e, t) {
-  s.default.track(i.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
+function d(e, t) {
+  i.default.track(s.AnalyticEvents.VOICE_MESSAGE_PLAYBACK_FAILED, {
     message_id: e,
     error_message: t
   })

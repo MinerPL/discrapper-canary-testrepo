@@ -28,11 +28,11 @@ function m(e, t, m) {
     R = (0, n.useStateFromStores)([c.default], () => c.default.getGuild(t), [t]),
     T = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
     C = (0, i.default)(g, "Context Menu"),
-    N = (0, o.useIsThreadModerator)(g);
+    I = (0, o.useIsThreadModerator)(g);
   if ((null == T ? void 0 : T.id) === e.id) return [C];
   if (null == R || null == g || null == T) return [];
-  let I = N || g.ownerId === T.id && g.type === M.ChannelTypes.PRIVATE_THREAD;
-  return [I ? (0, u.jsx)(r.MenuItem, {
+  let N = I || g.ownerId === T.id && g.type === M.ChannelTypes.PRIVATE_THREAD;
+  return [N ? (0, u.jsx)(r.MenuItem, {
     id: "remove",
     label: g.isForumPost() ? S.default.Messages.REMOVE_USER_FROM_FORUM_POST.format({
       user: e.username
@@ -43,7 +43,7 @@ function m(e, t, m) {
     action: () => s.default.removeMember(g, e.id, "Context Menu")
   }) : null, E.default.canManageUser(M.Permissions.KICK_MEMBERS, e, R) ? (0, u.jsx)(r.MenuItem, {
     id: "kick",
-    label: I ? S.default.Messages.KICK_USER_FROM_SERVER.format({
+    label: N ? S.default.Messages.KICK_USER_FROM_SERVER.format({
       user: e.username
     }) : S.default.Messages.KICK_USER.format({
       user: e.username
@@ -61,7 +61,7 @@ function m(e, t, m) {
     })
   }) : null, E.default.canManageUser(M.Permissions.BAN_MEMBERS, e, R) ? (0, u.jsx)(r.MenuItem, {
     id: "ban",
-    label: I ? S.default.Messages.BAN_USER_FROM_SERVER.format({
+    label: N ? S.default.Messages.BAN_USER_FROM_SERVER.format({
       user: e.username
     }) : S.default.Messages.BAN_USER.format({
       user: e.username

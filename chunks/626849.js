@@ -1,5 +1,5 @@
-r("854508");
-var n = r("571255"),
-  i = "object" == typeof self && self && self.Object === Object && self,
-  o = n || i || Function("return this")();
-t.exports = o
+e("854508");
+var n = e("571255"),
+  o = "object" == typeof self && self && self.Object === Object && self,
+  i = n || o || Function("return this")();
+t.exports = i

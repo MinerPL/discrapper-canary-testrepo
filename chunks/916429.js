@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
     return h
   },
   toggleBlockStyle: function() {
-    return E
+    return x
   }
 }), n("222007");
-var l = n("627445"),
-  i = n.n(l),
-  r = n("83800"),
-  o = n("939563"),
-  s = n("385887");
-let a = new Set(["*", "_", "~", "`", "|"]),
+var i = n("627445"),
+  l = n.n(i),
+  a = n("83800"),
+  s = n("939563"),
+  r = n("385887");
+let o = new Set(["*", "_", "~", "`", "|"]),
   u = {
     bold: "**",
     italics: "*",
@@ -30,48 +30,48 @@ function d(e, t, n) {
     before: {},
     after: {}
   };
-  let l = c(e, t),
-    i = c(e, n);
-  for (let e in l) !(e in i) && delete l[e];
+  let i = c(e, t),
+    l = c(e, n);
   for (let e in i) !(e in l) && delete i[e];
+  for (let e in l) !(e in i) && delete l[e];
   return {
-    before: l,
-    after: i
+    before: i,
+    after: l
   }
 }
 
 function c(e, t) {
-  let [n] = s.EditorUtils.node(e, t.path);
-  if (!s.TextUtils.isText(n)) return {};
-  let l = n.text,
-    i = t.offset;
-  for (let e = i - 1; e >= 0 && a.has(l.charAt(e)); e--) i--;
-  let r = t.offset;
-  for (let e = r; e < l.length && a.has(l.charAt(e)); e++) r++;
-  let o = l.substring(i, r),
+  let [n] = r.EditorUtils.node(e, t.path);
+  if (!r.TextUtils.isText(n)) return {};
+  let i = n.text,
+    l = t.offset;
+  for (let e = l - 1; e >= 0 && o.has(i.charAt(e)); e--) l--;
+  let a = t.offset;
+  for (let e = a; e < i.length && o.has(i.charAt(e)); e++) a++;
+  let s = i.substring(l, a),
     u = {};
   return p({
     result: u,
-    text: o,
-    startIndex: i,
+    text: s,
+    startIndex: l,
     syntax: "***",
     type1: "italics",
     type2: "bold"
   }), p({
     result: u,
-    text: o,
-    startIndex: i,
+    text: s,
+    startIndex: l,
     syntax: "___",
     type1: "italics",
     type2: "underline"
-  }), f(u, o, i, "**", "bold"), f(u, o, i, "*", "italics"), f(u, o, i, "_", "italics"), f(u, o, i, "__", "underline"), f(u, o, i, "`", "inlineCode"), f(u, o, i, "~~", "strikethrough"), f(u, o, i, "||", "spoiler"), u
+  }), f(u, s, l, "**", "bold"), f(u, s, l, "*", "italics"), f(u, s, l, "_", "italics"), f(u, s, l, "__", "underline"), f(u, s, l, "`", "inlineCode"), f(u, s, l, "~~", "strikethrough"), f(u, s, l, "||", "spoiler"), u
 }
 
-function f(e, t, n, l, i) {
-  let r = m(t, l);
-  r >= 0 && (e[i] = {
-    chars: l,
-    location: n + r
+function f(e, t, n, i, l) {
+  let a = m(t, i);
+  a >= 0 && (e[l] = {
+    chars: i,
+    location: n + a
   })
 }
 
@@ -79,102 +79,102 @@ function p(e) {
   let {
     result: t,
     text: n,
-    startIndex: l,
-    syntax: i,
-    type1: r,
-    type2: o
-  } = e, s = m(n, i);
-  s >= 0 && (t[r] = {
-    chars: i.substring(0, 1),
-    location: s + l
-  }, t[o] = {
-    chars: i.substring(1),
-    location: s + l + 1
+    startIndex: i,
+    syntax: l,
+    type1: a,
+    type2: s
+  } = e, r = m(n, l);
+  r >= 0 && (t[a] = {
+    chars: l.substring(0, 1),
+    location: r + i
+  }, t[s] = {
+    chars: l.substring(1),
+    location: r + i + 1
   })
 }
 
 function m(e, t) {
   let n = e.indexOf(t);
   if (n >= 0) {
-    let l = t.charAt(0);
-    if (n > 0 && e.charAt(n - 1) === l || n < e.length - 1 && e.charAt(n + t.length) === l) return -1
+    let i = t.charAt(0);
+    if (n > 0 && e.charAt(n - 1) === i || n < e.length - 1 && e.charAt(n + t.length) === i) return -1
   }
   return n
 }
 
 function h(e, t) {
-  r.HistoryUtils.withSingleEntry(e, () => {
-    s.EditorUtils.withoutNormalizing(e, () => {
-      i(null != e.selection, "Editor has no selection");
-      let [n, l] = s.RangeUtils.edges(e.selection), r = d(e, n, l), a = r.before[t], c = r.after[t], f = s.EditorUtils.node(e, n.path), p = s.EditorUtils.node(e, l.path);
-      if (null == f || null == p || !s.TextUtils.isText(f[0]) || !s.TextUtils.isText(p[0])) return;
-      let m = s.PathUtils.equals(f[1], p[1]);
-      if (null != a && null != c) {
+  a.HistoryUtils.withSingleEntry(e, () => {
+    r.EditorUtils.withoutNormalizing(e, () => {
+      l(null != e.selection, "Editor has no selection");
+      let [n, i] = r.RangeUtils.edges(e.selection), a = d(e, n, i), o = a.before[t], c = a.after[t], f = r.EditorUtils.node(e, n.path), p = r.EditorUtils.node(e, i.path);
+      if (null == f || null == p || !r.TextUtils.isText(f[0]) || !r.TextUtils.isText(p[0])) return;
+      let m = r.PathUtils.equals(f[1], p[1]);
+      if (null != o && null != c) {
         let t = {
             path: n.path,
-            offset: a.location
+            offset: o.location
           },
-          i = {
-            path: l.path,
+          l = {
+            path: i.path,
             offset: c.location
           };
-        o.SlateTransforms.delete(e, {
-          at: i,
+        s.SlateTransforms.delete(e, {
+          at: l,
           distance: c.chars.length
-        }), o.SlateTransforms.delete(e, {
+        }), s.SlateTransforms.delete(e, {
           at: t,
-          distance: a.chars.length
+          distance: o.chars.length
         });
-        let r = n.offset,
-          u = l.offset;
-        !s.PointUtils.isBefore(n, t) && (r -= a.chars.length), m && !s.PointUtils.isBefore(l, t) && (u -= a.chars.length), s.PointUtils.isAfter(l, i) && (u -= c.chars.length), o.SlateTransforms.select(e, {
+        let a = n.offset,
+          u = i.offset;
+        !r.PointUtils.isBefore(n, t) && (a -= o.chars.length), m && !r.PointUtils.isBefore(i, t) && (u -= o.chars.length), r.PointUtils.isAfter(i, l) && (u -= c.chars.length), s.SlateTransforms.select(e, {
           anchor: {
             path: n.path,
-            offset: Math.max(0, r)
+            offset: Math.max(0, a)
           },
           focus: {
-            path: l.path,
+            path: i.path,
             offset: Math.max(0, u)
           }
         })
       } else {
-        let i = u[t];
-        o.SlateTransforms.insertText(e, i, {
-          at: l
-        }), o.SlateTransforms.insertText(e, i, {
+        let l = u[t];
+        s.SlateTransforms.insertText(e, l, {
+          at: i
+        }), s.SlateTransforms.insertText(e, l, {
           at: n
         });
-        let r = f[0].text.length + i.length,
-          s = p[0].text.length + (m ? 2 * i.length : i.length);
-        o.SlateTransforms.select(e, {
+        let a = f[0].text.length + l.length,
+          r = p[0].text.length + (m ? 2 * l.length : l.length);
+        s.SlateTransforms.select(e, {
           anchor: {
             path: n.path,
-            offset: Math.min(r, n.offset + i.length)
+            offset: Math.min(a, n.offset + l.length)
           },
           focus: {
-            path: l.path,
-            offset: Math.min(s, l.offset + (m ? i.length : 0))
+            path: i.path,
+            offset: Math.min(r, i.offset + (m ? l.length : 0))
           }
         })
       }
     })
-  }), s.EditorUtils.focus(e)
+  }), r.EditorUtils.focus(e)
 }
 
-function E(e, t) {
+function x(e, t) {
   let n = e.selection;
   if (null == n) return;
-  let l = !0;
-  for (let [i, r] of s.EditorUtils.blocks(e))("line" === i.type || i.type === t) && s.RangeUtils.includes(n, r) && (l = l && i.type === t);
-  s.EditorUtils.withoutNormalizing(e, () => {
-    for (let [i, r] of s.EditorUtils.blocks(e)) s.RangeUtils.includes(n, r) && (l || "line" !== i.type ? l && i.type === t && o.SlateTransforms.setNodes(e, {
+  let i = !0;
+  for (let [l, a] of r.EditorUtils.blocks(e))("line" === l.type || l.type === t) && r.RangeUtils.includes(n, a) && (i = i && l.type === t);
+  r.EditorUtils.withoutNormalizing(e, () => {
+    for (let [l, a] of r.EditorUtils.blocks(e)) r.RangeUtils.includes(n, a) && (i || "line" !== l.type ? i && l.type === t && s.SlateTransforms.setNodes(e, {
       type: "line"
     }, {
-      at: r
-    }) : o.SlateTransforms.setNodes(e, {
+      at: a
+    }) : s.SlateTransforms.setNodes(e, {
       type: t
     }, {
-      at: r
+      at: a
     }))
-  }), s.EditorUtils.focus(e)
+  }), r.EditorUtils.focus(e)
 }

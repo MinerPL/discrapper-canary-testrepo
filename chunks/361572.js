@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   CHANNEL_OR_MESSAGES_URL_RE: function() {
-    return g
+    return h
   },
   MEDIA_POST_URL_RE: function() {
-    return m
+    return g
   },
   tryParseChannelPath: function() {
-    return E
+    return m
   },
   tryParseEventDetailsPath: function() {
     return p
   },
   canViewChannel: function() {
-    return v
+    return S
   },
   isAccessibleChannelPath: function() {
-    return S
+    return T
   }
 });
 var i = n("42203"),
@@ -28,13 +28,13 @@ var i = n("42203"),
 let u = Array.from(l.StaticChannelRoutes).map(e => a.default.escape(e)).join("|"),
   d = new RegExp("^/channels/(\\d+|".concat(o.ME, ")(?:/)?(\\d+|").concat(u, ")?")),
   c = new RegExp("^/channels/(\\d+|".concat(o.ME, ")(?:/)(\\d+|").concat(u, ")(?:/)(\\d+)")),
-  f = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
-  _ = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
-  h = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
-  g = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(o.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
-  m = RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
+  _ = RegExp("^/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)"),
+  f = RegExp("^/guild-stages/(\\d+)(?:/)?(\\d+)?"),
+  E = RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?"),
+  h = new RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+|".concat(o.ME, ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?")),
+  g = RegExp("^https://(?:canary\\.|ptb\\.)?discord.com/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 
-function E(e) {
+function m(e) {
   if (null == e) return null;
   let t = e.match(c);
   if (null != t && t.length > 3) return {
@@ -42,7 +42,7 @@ function E(e) {
     channelId: t[2],
     messageId: t[3]
   };
-  let n = e.match(f);
+  let n = e.match(_);
   if (null != n && n.length > 4) return {
     guildId: n[1],
     channelId: n[2],
@@ -57,7 +57,7 @@ function E(e) {
       channelId: null !== (s = i[2]) && void 0 !== s ? s : void 0
     }
   }
-  let r = e.match(_);
+  let r = e.match(f);
   return null != r && r.length > 1 ? {
     guildId: r[1]
   } : null
@@ -65,7 +65,7 @@ function E(e) {
 
 function p(e) {
   if (null == e) return null;
-  let t = e.match(h);
+  let t = e.match(E);
   return null != t && t.length > 1 ? {
     guildId: t[1],
     guildEventId: t[2],
@@ -73,11 +73,11 @@ function p(e) {
   } : null
 }
 
-function v(e) {
+function S(e) {
   return !!e.isPrivate() || r.default.can(o.Permissions.VIEW_CHANNEL, e)
 }
 
-function S(e) {
+function T(e) {
   let {
     guildId: t,
     channelId: n
@@ -85,5 +85,5 @@ function S(e) {
   if (null == s.default.getGuild(t) && t !== o.ME) return !1;
   if (null == n) return !0;
   let r = i.default.getChannel(n);
-  return null != r && v(r)
+  return null != r && S(r)
 }

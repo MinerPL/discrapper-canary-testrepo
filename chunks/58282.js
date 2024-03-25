@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
 var n = r("794666"),
-  o = Object.create,
-  a = function() {
+  a = Object.create,
+  o = function() {
     function e() {}
     return function(t) {
       if (!(0, n.default)(t)) return {};
-      if (o) return o(t);
+      if (a) return a(t);
       e.prototype = t;
       var r = new e;
       return e.prototype = void 0, r

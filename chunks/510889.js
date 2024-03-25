@@ -11,7 +11,7 @@ var l = n("884691"),
 
 function s(e, t, n) {
   let s = (0, a.useStateFromStores)([i.default], () => i.default.keyboardModeEnabled),
-    u = l.useCallback(e => {
+    o = l.useCallback(e => {
       let n = document.querySelector(e),
         l = t.current;
       null != n && null != l && (n.focus(), l.scrollIntoViewNode({
@@ -19,7 +19,7 @@ function s(e, t, n) {
         padding: 80
       }))
     }, [t]),
-    o = l.useCallback(() => new Promise(e => {
+    c = l.useCallback(() => new Promise(e => {
       let n = t.current;
       if (null == n) return e();
       n.scrollTo({
@@ -27,7 +27,7 @@ function s(e, t, n) {
         callback: () => requestAnimationFrame(() => e())
       })
     }), [t]),
-    c = l.useCallback(() => new Promise(e => {
+    u = l.useCallback(() => new Promise(e => {
       let n = t.current;
       if (null == n) return e();
       n.scrollTo({
@@ -38,9 +38,9 @@ function s(e, t, n) {
   return (0, r.default)({
     id: e,
     isEnabled: s,
-    setFocus: u,
-    scrollToStart: o,
-    scrollToEnd: c,
+    setFocus: o,
+    scrollToStart: c,
+    scrollToEnd: u,
     orientation: null == n ? void 0 : n.orientation
   })
 }

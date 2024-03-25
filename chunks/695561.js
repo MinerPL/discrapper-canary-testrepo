@@ -10,13 +10,13 @@ var i = s("37983"),
   l = s.n(a),
   o = s("819855"),
   n = s("77078"),
-  d = s("841098"),
-  u = s("36694"),
+  u = s("841098"),
+  d = s("36694"),
   c = s("945330"),
   E = s("49111"),
   _ = s("646718"),
   T = s("782340"),
-  I = s("264528");
+  I = s("553922");
 let N = [{
   getPerkHeading: () => T.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_PERK_HEADING_EMOJI_SLOTS,
   getPerkPreviewLightTheme: () => s("209988"),
@@ -177,7 +177,7 @@ function R(e) {
     let e = l(I.booleanValueIcon, {
       [I.booleanValueTrue]: a
     });
-    t = a ? (0, i.jsx)(u.default, {
+    t = a ? (0, i.jsx)(d.default, {
       className: e
     }) : (0, i.jsx)(c.default, {
       className: e
@@ -222,20 +222,20 @@ function g(e) {
   })
 }
 var m = function(e) {
-  let t = (0, d.default)(),
+  let t = (0, u.default)(),
     [s, a] = r.useState(null),
     {
-      className: u,
+      className: d,
       guild: c,
       hideHeading: _,
       hideTier0: m
     } = e;
 
-  function M() {
+  function S() {
     a(null)
   }
   return (0, i.jsxs)("div", {
-    className: u,
+    className: d,
     children: [!_ && (0, i.jsx)(n.Heading, {
       className: I.heading,
       variant: "heading-xxl/extrabold",
@@ -271,9 +271,9 @@ var m = function(e) {
         }), (0, i.jsx)("tbody", {
           className: I.tableBody,
           children: N.map((e, r) => {
-            let d = s === r;
+            let u = s === r;
 
-            function u() {
+            function d() {
               a(r)
             }
             return void 0 === e.predicate ? (0, i.jsxs)("tr", {
@@ -283,10 +283,10 @@ var m = function(e) {
                 scope: "row",
                 children: (0, i.jsx)(n.Clickable, {
                   className: l(I.tableRowHeading, I.tableCell, I.tableCellInner),
-                  onFocus: u,
-                  onBlur: M,
-                  onMouseEnter: u,
-                  onMouseLeave: M,
+                  onFocus: d,
+                  onBlur: S,
+                  onMouseEnter: d,
+                  onMouseLeave: S,
                   children: (0, i.jsx)(n.Popout, {
                     align: "center",
                     disablePointerEvents: !0,
@@ -297,7 +297,7 @@ var m = function(e) {
                       src: (0, o.isThemeDark)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
                       alt: ""
                     }),
-                    shouldShow: d,
+                    shouldShow: u,
                     spacing: 16,
                     children: () => (0, i.jsx)(n.Text, {
                       variant: "text-md/normal",

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("37983"),
@@ -9,18 +9,18 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("748820"),
-  o = n("337062"),
-  u = n("77078"),
+  u = n("337062"),
+  o = n("77078"),
   d = n("981913"),
   c = n("782340"),
-  f = n("281848");
+  f = n("583546");
 
 function h(e) {
   let {
     width: t = 24,
     height: n = 24,
     isBadged: s = !1
-  } = e, [i] = l.useState(() => (0, r.v4)()), d = (0, u.useRedesignIconContext)().enabled;
+  } = e, [i] = l.useState(() => (0, r.v4)()), d = (0, o.useRedesignIconContext)().enabled;
   return (0, a.jsxs)("svg", {
     width: t,
     height: n,
@@ -41,7 +41,7 @@ function h(e) {
       })
     }), d ? (0, a.jsx)("g", {
       mask: "url(#".concat(i, ")"),
-      children: (0, a.jsx)(o.HandRequestSpeakListIcon, {})
+      children: (0, a.jsx)(u.HandRequestSpeakListIcon, {})
     }) : (0, a.jsx)("path", {
       fill: "currentColor",
       fillRule: "evenodd",
@@ -52,7 +52,7 @@ function h(e) {
   })
 }
 
-function p(e) {
+function m(e) {
   let {
     className: t,
     numRequestToSpeak: n
@@ -61,7 +61,7 @@ function p(e) {
     className: i(f.raisedHandIcon, t),
     children: [(0, a.jsx)(h, {
       isBadged: l
-    }), l ? (0, a.jsx)(u.Text, {
+    }), l ? (0, a.jsx)(o.Text, {
       className: f.raisedHandCount,
       variant: "text-xs/semibold",
       children: n > 99 ? "99+" : n
@@ -69,25 +69,25 @@ function p(e) {
   })
 }
 
-function m(e) {
+function p(e) {
   let {
     toggleRequestToSpeakSidebar: t,
     showRequestToSpeakSidebar: n,
     className: s,
     numRequestToSpeak: i,
     onClick: r,
-    ...o
-  } = e, u = l.useCallback(() => {
+    ...u
+  } = e, o = l.useCallback(() => {
     null == r || r(), t()
   }, [r, t]);
   return (0, a.jsx)(d.default, {
-    onClick: u,
+    onClick: o,
     label: n ? c.default.Messages.REQUEST_TO_SPEAK_AREA_CLOSE : c.default.Messages.REQUEST_TO_SPEAK_AREA_OPEN,
     className: s,
-    iconComponent: () => (0, a.jsx)(p, {
+    iconComponent: () => (0, a.jsx)(m, {
       numRequestToSpeak: i,
       className: s
     }),
-    ...o
+    ...u
   })
 }

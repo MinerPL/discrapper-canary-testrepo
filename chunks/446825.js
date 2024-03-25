@@ -187,12 +187,12 @@ function h(e, t, n) {
   }
 }
 
-function _(e, t, n) {
+function y(e, t, n) {
   var r = e[t];
   e[t] = e[n], e[n] = r
 }
 
-function y(e, t, n, r, a) {
+function _(e, t, n, r, a) {
   if (0 === e.length) return -1;
   if ("string" == typeof n ? (r = n, n = 0) : n > 2147483647 ? n = 2147483647 : n < -2147483648 && (n = -2147483648), function(e) {
       return e != e
@@ -282,17 +282,17 @@ s.isBuffer = function(e) {
 }, s.byteLength = m, s.prototype._isBuffer = !0, s.prototype.swap16 = function() {
   var e = this.length;
   if (e % 2 != 0) throw RangeError("Buffer size must be a multiple of 16-bits");
-  for (var t = 0; t < e; t += 2) _(this, t, t + 1);
+  for (var t = 0; t < e; t += 2) y(this, t, t + 1);
   return this
 }, s.prototype.swap32 = function() {
   var e = this.length;
   if (e % 4 != 0) throw RangeError("Buffer size must be a multiple of 32-bits");
-  for (var t = 0; t < e; t += 4) _(this, t, t + 3), _(this, t + 1, t + 2);
+  for (var t = 0; t < e; t += 4) y(this, t, t + 3), y(this, t + 1, t + 2);
   return this
 }, s.prototype.swap64 = function() {
   var e = this.length;
   if (e % 8 != 0) throw RangeError("Buffer size must be a multiple of 64-bits");
-  for (var t = 0; t < e; t += 8) _(this, t, t + 7), _(this, t + 1, t + 6), _(this, t + 2, t + 5), _(this, t + 3, t + 4);
+  for (var t = 0; t < e; t += 8) y(this, t, t + 7), y(this, t + 1, t + 6), y(this, t + 2, t + 5), y(this, t + 3, t + 4);
   return this
 }, s.prototype.toString = function() {
   var e = this.length;
@@ -319,9 +319,9 @@ s.isBuffer = function(e) {
 }, s.prototype.includes = function(e, t, n) {
   return -1 !== this.indexOf(e, t, n)
 }, s.prototype.indexOf = function(e, t, n) {
-  return y(this, e, t, n, !0)
+  return _(this, e, t, n, !0)
 }, s.prototype.lastIndexOf = function(e, t, n) {
-  return y(this, e, t, n, !1)
+  return _(this, e, t, n, !1)
 };
 
 function v(e, t, n, r) {
@@ -332,7 +332,7 @@ s.prototype.write = function(e, t, n, r) {
   else if (void 0 === n && "string" == typeof t) r = t, n = this.length, t = 0;
   else if (isFinite(t)) t >>>= 0, isFinite(n) ? (n >>>= 0, void 0 === r && (r = "utf8")) : (r = n, n = void 0);
   else throw Error("Buffer.write(string, encoding, offset[, length]) is no longer supported");
-  var a, o, i, s, u, l, c, d, f, p, m, h, _, y, g, v, b = this.length - t;
+  var a, o, i, s, u, l, c, d, f, p, m, h, y, _, g, v, b = this.length - t;
   if ((void 0 === n || n > b) && (n = b), e.length > 0 && (n < 0 || t < 0) || t > this.length) throw RangeError("Attempt to write outside buffer bounds");
   !r && (r = "utf8");
   for (var M = !1;;) switch (r) {
@@ -373,10 +373,10 @@ s.prototype.write = function(e, t, n, r) {
     case "utf16le":
     case "utf-16le":
       ;
-      return _ = this, y = e, g = t, v = n, O(function(e, t) {
+      return y = this, _ = e, g = t, v = n, O(function(e, t) {
         for (var n, r, a, o = [], i = 0; i < e.length && !((t -= 2) < 0); ++i) r = (n = e.charCodeAt(i)) >> 8, a = n % 256, o.push(a), o.push(r);
         return o
-      }(y, _.length - g), _, g, v);
+      }(_, y.length - g), y, g, v);
     default:
       if (M) throw TypeError("Unknown encoding: " + r);
       r = ("" + r).toLowerCase(), M = !0

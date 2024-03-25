@@ -7,7 +7,7 @@ l.r(t), l.d(t, {
 var s = l("37983"),
   n = l("884691"),
   a = l("137223"),
-  i = l("520479");
+  i = l("278243");
 let r = n.forwardRef(function(e, t) {
   let {
     query: l,
@@ -20,8 +20,8 @@ let r = n.forwardRef(function(e, t) {
     tags: S,
     sections: h,
     placeholder: m = "",
-    focusAfterReady: E,
-    isReady: R,
+    focusAfterReady: R,
+    isReady: E,
     "aria-labelledby": f,
     "aria-controls": x
   } = e;
@@ -41,8 +41,8 @@ let r = n.forwardRef(function(e, t) {
     size: a.default.Sizes.MEDIUM,
     tags: S,
     sections: h,
-    focusAfterReady: E,
-    isReady: R,
+    focusAfterReady: R,
+    isReady: E,
     inputProps: {
       "aria-labelledby": f,
       "aria-controls": x,

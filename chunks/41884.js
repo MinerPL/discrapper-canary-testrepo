@@ -4,46 +4,46 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("917351"),
-  o = n.n(r),
-  s = n("355263"),
-  a = n("406122"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("917351"),
+  s = n.n(a),
+  r = n("355263"),
+  o = n("300344"),
   u = e => {
     let {
       showImage: t
     } = e, {
       usageWidth: n,
-      descriptionWidth: r,
+      descriptionWidth: a,
       sourceWidth: u
-    } = i.useMemo(() => ({
-      usageWidth: o.random(60, 120),
-      descriptionWidth: o.random(200, 600),
-      sourceWidth: o.random(45, 90)
+    } = l.useMemo(() => ({
+      usageWidth: s.random(60, 120),
+      descriptionWidth: s.random(200, 600),
+      sourceWidth: s.random(45, 90)
     }), []);
-    return (0, l.jsxs)("div", {
-      className: a.wrapper,
-      children: [t ? (0, l.jsx)("div", {
-        className: a.image
-      }) : null, (0, l.jsxs)("div", {
-        className: a.infoWrapper,
-        children: [(0, l.jsx)("div", {
+    return (0, i.jsxs)("div", {
+      className: o.wrapper,
+      children: [t ? (0, i.jsx)("div", {
+        className: o.image
+      }) : null, (0, i.jsxs)("div", {
+        className: o.infoWrapper,
+        children: [(0, i.jsx)("div", {
           style: {
-            maxWidth: (0, s.pxToRem)(n)
+            maxWidth: (0, r.pxToRem)(n)
           },
-          className: a.usageWrapper
-        }), (0, l.jsx)("div", {
+          className: o.usageWrapper
+        }), (0, i.jsx)("div", {
           style: {
-            maxWidth: (0, s.pxToRem)(r)
+            maxWidth: (0, r.pxToRem)(a)
           },
-          className: a.description
+          className: o.description
         })]
-      }), (0, l.jsx)("div", {
+      }), (0, i.jsx)("div", {
         style: {
-          width: (0, s.pxToRem)(u)
+          width: (0, r.pxToRem)(u)
         },
-        className: a.source
+        className: o.source
       })]
     })
   }

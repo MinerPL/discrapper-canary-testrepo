@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return S
   }
 }), n("781738"), n("222007");
 var a = n("37983"),
@@ -9,17 +9,17 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("363484"),
-  u = n("402904"),
+  u = n("363484"),
+  o = n("402904"),
   d = n("145131"),
   c = n("841283"),
   f = n("782340"),
-  h = n("398990");
-let p = {
+  h = n("315426");
+let m = {
     position: "bottom",
     autoInvert: !1
   },
-  m = e => {
+  p = e => {
     let {
       region: t,
       className: n = h.regionSelectName
@@ -40,7 +40,7 @@ class E extends l.PureComponent {
       className: i({
         selected: t
       }),
-      children: [(0, a.jsx)(m, {
+      children: [(0, a.jsx)(p, {
         region: e,
         className: h.regionSelectName
       }), t ? (0, a.jsx)("i", {
@@ -49,9 +49,9 @@ class E extends l.PureComponent {
     })
   }
 }
-class C extends l.PureComponent {
+class g extends l.PureComponent {
   componentDidMount() {
-    null == this.props.regions && o.default.fetchRegions(null)
+    null == this.props.regions && u.default.fetchRegions(null)
   }
   render() {
     let {
@@ -74,7 +74,7 @@ class C extends l.PureComponent {
       value: n,
       onChange: this.handleChangeVoiceRegion,
       renderOption: this.renderOption,
-      popoutProps: p,
+      popoutProps: m,
       popoutClassName: h.regionSelectPopout
     })
   }
@@ -109,10 +109,10 @@ class C extends l.PureComponent {
       } = e, {
         channelId: n
       } = this.props.call;
-      o.default.changeCallRegion(n, t.id)
+      u.default.changeCallRegion(n, t.id)
     }
   }
 }
-var g = r.default.connectStores([u.default], () => ({
-  regions: u.default.getRegions(null)
-}))(C)
+var S = r.default.connectStores([o.default], () => ({
+  regions: o.default.getRegions(null)
+}))(g)

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("917351"),
-  l = s("446674"),
+var l = s("917351"),
+  n = s("446674"),
   i = s("77078"),
   r = s("79112"),
   o = s("957255"),
@@ -16,35 +16,35 @@ var n = s("917351"),
   c = s("690343"),
   E = s("49111"),
   _ = s("782340"),
-  T = s("642622");
+  I = s("854743");
 
-function I(e) {
+function T(e) {
   let t, {
       guild: s
     } = e,
-    I = s.mfaLevel,
-    S = (0, l.useStateFromStores)([o.default], () => null != s && o.default.can(E.Permissions.MANAGE_GUILD, s), [s]),
-    N = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
-    g = s.isOwner(N),
-    f = null == N ? void 0 : N.mfaEnabled,
-    A = I === E.MFALevels.ELEVATED,
-    L = g && f,
-    m = (0, n.throttle)(async e => {
-      L && await u.default.updateMFALevel({
+    T = s.mfaLevel,
+    S = (0, n.useStateFromStores)([o.default], () => null != s && o.default.can(E.Permissions.MANAGE_GUILD, s), [s]),
+    f = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()),
+    m = s.isOwner(f),
+    N = null == f ? void 0 : f.mfaEnabled,
+    g = T === E.MFALevels.ELEVATED,
+    h = m && N,
+    C = (0, l.throttle)(async e => {
+      h && await u.default.updateMFALevel({
         guildId: s.id,
         level: e ? E.MFALevels.ELEVATED : E.MFALevels.NONE,
         isEnabled: !e
       })
     }, 1e3);
   if (!S) return null;
-  !L && (t = g ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
+  !h && (t = m ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_DETAIL.format({
     settingsHook: () => r.default.open(E.UserSettingsSections.ACCOUNT)
   }) : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_DETAIL);
-  let C = s.hasFeature(E.GuildFeatures.DISCOVERABLE);
+  let R = s.hasFeature(E.GuildFeatures.DISCOVERABLE);
   return (0, a.jsxs)("div", {
-    className: T.simpleItemWrapper,
+    className: I.simpleItemWrapper,
     children: [(0, a.jsxs)("div", {
-      className: T.itemContent,
+      className: I.itemContent,
       children: [(0, a.jsx)(i.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -54,19 +54,19 @@ function I(e) {
         color: "header-secondary",
         children: [_.default.Messages.GUILD_SETTINGS_SAFETY_MFA_BODY, " ", t]
       })]
-    }), !L || A && C ? (0, a.jsx)(i.Tooltip, {
-      text: C ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : g ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
+    }), !h || g && R ? (0, a.jsx)(i.Tooltip, {
+      text: R ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_DISCOVERABLE_DISABLED_TOOLTIP : m ? _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_OWNER_TOOLTIP : _.default.Messages.GUILD_SETTINGS_SAFETY_MFA_NON_OWNER_TOOLTIP,
       children: e => (0, a.jsx)(c.default, {
-        checked: A,
+        checked: g,
         disabled: !0,
-        onChange: m,
-        className: T.bringToFront,
+        onChange: C,
+        className: I.bringToFront,
         tooltipProps: e
       })
     }) : (0, a.jsx)(c.default, {
-      checked: A,
-      onChange: m,
-      className: T.bringToFront
+      checked: g,
+      onChange: C,
+      className: I.bringToFront
     })]
   })
 }

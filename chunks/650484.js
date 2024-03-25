@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return v
   },
   PaymentPortalBody: function() {
-    return I
+    return m
   },
   PaymentPortalFooter: function() {
-    return h
+    return C
   }
 });
 var i = n("37983"),
   r = n("884691"),
   l = n("414456"),
-  o = n.n(l),
-  s = n("627445"),
-  a = n.n(s),
-  u = n("817736"),
-  c = n.n(u),
+  s = n.n(l),
+  o = n("627445"),
+  u = n.n(o),
+  a = n("817736"),
+  c = n.n(a),
   d = n("77078"),
   f = n("642906"),
-  E = n("990893");
+  h = n("304006");
 
-function _(e) {
-  var t, n, l, s, u, c;
+function v(e) {
+  var t, n, l, o, a, c;
   let {
-    header: _,
-    isLargeModal: I,
-    stepProps: h
+    header: v,
+    isLargeModal: m,
+    stepProps: C
   } = function(e) {
     let {
       header: t,
@@ -40,46 +40,46 @@ function _(e) {
       stepProps: i
     }
   }(e), {
-    step: p,
-    stepConfigs: S,
-    setBodyNode: C,
-    setFooterNode: T,
-    setModalOverlayNode: N,
-    setReadySlideId: v
-  } = (0, f.usePaymentContext)(), m = S.find(e => e.key === p);
+    step: E,
+    stepConfigs: g,
+    setBodyNode: p,
+    setFooterNode: S,
+    setModalOverlayNode: _,
+    setReadySlideId: I
+  } = (0, f.usePaymentContext)(), P = g.find(e => e.key === E);
   r.useEffect(() => {
-    N(null)
-  }, [p, N]), a(null != m, "Unknown step for current payment flow.");
-  let g = null !== (u = null == m ? void 0 : null === (t = m.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== u && u,
-    A = null == m ? void 0 : null === (n = m.options) || void 0 === n ? void 0 : n.bodyClassName,
-    L = void 0 !== I && I ? E.sliderBodyLarge : null == m ? void 0 : null === (l = m.options) || void 0 === l ? void 0 : l.sliderBodyClassName;
+    _(null)
+  }, [E, _]), u(null != P, "Unknown step for current payment flow.");
+  let A = null !== (a = null == P ? void 0 : null === (t = P.options) || void 0 === t ? void 0 : t.hideSlider) && void 0 !== a && a,
+    T = null == P ? void 0 : null === (n = P.options) || void 0 === n ? void 0 : n.bodyClassName,
+    N = void 0 !== m && m ? h.sliderBodyLarge : null == P ? void 0 : null === (l = P.options) || void 0 === l ? void 0 : l.sliderBodyClassName;
   return (0, i.jsxs)(i.Fragment, {
-    children: [null === (c = null == m ? void 0 : null === (s = m.options) || void 0 === s ? void 0 : s.renderHeader) || void 0 === c || c ? _ : null, m.renderStep(h), null == p || g ? null : (0, i.jsxs)(i.Fragment, {
+    children: [null === (c = null == P ? void 0 : null === (o = P.options) || void 0 === o ? void 0 : o.renderHeader) || void 0 === c || c ? v : null, P.renderStep(C), null == E || A ? null : (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(d.ModalContent, {
-        className: o(E.body, A),
+        className: s(h.body, T),
         children: (0, i.jsx)(d.Slides, {
-          activeSlide: p,
+          activeSlide: E,
           centered: !1,
-          onSlideReady: e => v(e),
-          children: S.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
+          onSlideReady: e => I(e),
+          children: g.filter(e => null != e.key).map(e => (0, i.jsx)(d.Slide, {
             id: e.key,
             children: (0, i.jsx)("form", {
-              className: o(E.sliderBody, L),
-              ref: e => C(e),
+              className: s(h.sliderBody, N),
+              ref: e => p(e),
               onSubmit: e => e.preventDefault()
             })
           }, e.key))
         })
       }), (0, i.jsx)("div", {
-        ref: e => T(e)
+        ref: e => S(e)
       }), (0, i.jsx)("div", {
-        ref: e => N(e)
+        ref: e => _(e)
       })]
     })]
   })
 }
 
-function I(e) {
+function m(e) {
   let {
     children: t
   } = e, {
@@ -88,7 +88,7 @@ function I(e) {
   return null == n ? null : c.createPortal(t, n)
 }
 
-function h(e) {
+function C(e) {
   let {
     children: t
   } = e, {

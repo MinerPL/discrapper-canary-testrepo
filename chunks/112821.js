@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 });
 var a = n("37983"),
@@ -9,23 +9,23 @@ var a = n("37983"),
   s = n("446674"),
   i = n("819855"),
   r = n("77078"),
-  o = n("828986"),
-  u = n("519841"),
+  u = n("828986"),
+  o = n("519841"),
   d = n("787336"),
   c = n("508229"),
   f = n("660478"),
   h = n("590514"),
-  p = n("249561"),
-  m = n("782340");
+  m = n("249561"),
+  p = n("782340");
 let E = [];
 
-function C(e) {
+function g(e) {
   let {
     channel: t,
-    onJump: C
+    onJump: g
   } = e, {
-    messages: g,
-    loading: S
+    messages: S,
+    loading: C
   } = (0, s.useStateFromStoresObject)([c.default], () => {
     let e = c.default.getPinnedMessages(t.id),
       n = null != e ? e.messages : E;
@@ -35,34 +35,34 @@ function C(e) {
     }
   }), _ = (0, s.useStateFromStores)([f.default], () => f.default.hasUnreadPins(t.id));
   return l.useEffect(() => {
-    u.AttachmentLinkRefreshExperiment.getCurrentConfig({
+    o.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "pins"
-    }).enabled && g.some(d.messageHasExpiredAttachmentUrl) && o.default.fetchPins(t.id, !0)
+    }).enabled && S.some(d.messageHasExpiredAttachmentUrl) && u.default.fetchPins(t.id, !0)
   }, []), l.useEffect(() => {
-    _ && o.default.ackPins(t.id)
+    _ && u.default.ackPins(t.id)
   }, [_, t.id]), (0, a.jsx)(r.Dialog, {
-    "aria-label": m.default.Messages.PINNED_MESSAGES,
+    "aria-label": p.default.Messages.PINNED_MESSAGES,
     children: (0, a.jsx)(h.default, {
       onFetch: function() {
-        o.default.ackPins(t.id), o.default.fetchPins(t.id)
+        u.default.ackPins(t.id), u.default.fetchPins(t.id)
       },
       channel: t,
-      messages: g,
-      loading: S,
+      messages: S,
+      loading: C,
       analyticsName: "Channel Pins",
       onCloseMessage: function(e, n) {
-        null != e && (n.shiftKey ? o.default.unpinMessage(t, e.id) : p.default.confirmUnpin(t, e))
+        null != e && (n.shiftKey ? u.default.unpinMessage(t, e.id) : m.default.confirmUnpin(t, e))
       },
-      onJump: C,
+      onJump: g,
       getProTip: function() {
-        return t.isPrivate() ? m.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : m.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
+        return t.isPrivate() ? p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_DMS : p.default.Messages.PINNED_MESSAGES_PRO_TIP_BODY_CHANNEL
       },
       renderHeader: () => (0, a.jsx)(h.Header, {
-        title: m.default.Messages.PINNED_MESSAGES
+        title: p.default.Messages.PINNED_MESSAGES
       }),
       renderEmptyState: function(e) {
-        let l = m.default.Messages.NO_PINS_IN_CHANNEL;
-        t.isPrivate() && (l = m.default.Messages.NO_PINS_IN_DM);
+        let l = p.default.Messages.NO_PINS_IN_CHANNEL;
+        t.isPrivate() && (l = p.default.Messages.NO_PINS_IN_DM);
         let s = (0, i.isThemeLight)(e) ? n("615184") : n("992507");
         return (0, a.jsx)(h.EmptyStateCenter, {
           msg: l,

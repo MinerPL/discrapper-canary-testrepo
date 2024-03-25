@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   HeroImage: function() {
-    return L
+    return v
   },
   default: function() {
-    return v
+    return L
   }
 }), n("222007");
 var s = n("37983"),
@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("834897"),
   d = n("183137"),
   c = n("132349"),
-  f = n("845579"),
-  E = n("26989"),
+  E = n("845579"),
+  f = n("26989"),
   _ = n("697218"),
   T = n("476263"),
   I = n("191814"),
@@ -30,7 +30,7 @@ var s = n("37983"),
   h = n("893399"),
   g = n("744917"),
   M = n("782340"),
-  O = n("347152");
+  O = n("947608");
 
 function R(e) {
   let {
@@ -53,11 +53,11 @@ function R(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
-  } = e, l = f.GifAutoPlay.useSetting(), a = (0, S.useIsWindowFocused)(), i = a && l, [r, o] = (0, c.default)(t, i), u = i ? (0, s.jsx)(N.default, {
+  } = e, l = E.GifAutoPlay.useSetting(), a = (0, S.useIsWindowFocused)(), i = a && l, [r, o] = (0, c.default)(t, i), u = i ? (0, s.jsx)(N.default, {
     autoPlay: !0,
     loop: !0,
     className: O.coverImage,
@@ -80,28 +80,28 @@ function L(e) {
   })
 }
 
-function v(e) {
+function L(e) {
   var t, n, a;
   let {
     guild: c,
-    subscriptionsSettings: f
+    subscriptionsSettings: E
   } = e, m = c.id;
   let {
     nickname: N,
     nickcolor: S
-  } = (a = m, (0, r.useStateFromStoresObject)([E.default, _.default], () => {
+  } = (a = m, (0, r.useStateFromStoresObject)([f.default, _.default], () => {
     var e, t;
     let n = _.default.getCurrentUser();
     i(null != n, "user cannot be null");
-    let s = E.default.getMember(a, n.id);
+    let s = f.default.getMember(a, n.id);
     return {
       nickname: null !== (e = null == s ? void 0 : s.nick) && void 0 !== e ? e : p.default.getName(n),
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
     }
   }, [a])), {
-    isTruncated: v,
+    isTruncated: L,
     ExpandableTextContainer: P
-  } = (0, A.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
+  } = (0, A.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = l.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
   } = (0, C.useGuildShopDisplayContext)(), G = j === h.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
@@ -110,9 +110,9 @@ function v(e) {
       children: (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-normal",
-        children: null == f ? void 0 : f.description
+        children: null == E ? void 0 : E.description
       })
-    }), v && (0, s.jsxs)(s.Fragment, {
+    }), L && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(I.default, {
         size: 4
       }), (0, s.jsx)(R, {
@@ -174,8 +174,8 @@ function v(e) {
           }), B]
         })]
       })]
-    }), (0, s.jsx)(L, {
-      coverImageAsset: null == f ? void 0 : f.cover_image_asset,
+    }), (0, s.jsx)(v, {
+      coverImageAsset: null == E ? void 0 : E.cover_image_asset,
       isPreview: b
     })]
   })

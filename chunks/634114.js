@@ -1,68 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return x
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("77078"),
-  a = n("798609"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("77078"),
+  o = n("798609"),
   u = n("240249"),
   d = n("776007"),
   c = n("810567"),
   f = n("113713"),
   p = n("968918"),
   m = n("317041"),
-  h = n("440987");
+  h = n("627862");
 
-function E(e) {
+function x(e) {
   var t, n;
   let {
-    channel: r,
-    isAppDetailPresent: E
-  } = e, [S, g] = i.useState(""), C = i.useCallback(() => g(""), [g]), {
-    commandsByActiveSection: T,
-    sectionDescriptors: v,
-    filterSection: y
-  } = u.useDiscovery(r, {
-    commandType: a.ApplicationCommandType.CHAT
+    channel: a,
+    isAppDetailPresent: x
+  } = e, [E, y] = l.useState(""), g = l.useCallback(() => y(""), [y]), {
+    commandsByActiveSection: S,
+    sectionDescriptors: C,
+    filterSection: T
+  } = u.useDiscovery(a, {
+    commandType: o.ApplicationCommandType.CHAT
   }, {
     placeholderCount: 0,
     limit: m.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
   });
-  i.useEffect(() => {
-    y(m.BuiltInSectionId.FRECENCY)
-  }, [y]);
-  let x = null !== (n = null === (t = T[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
-    I = v.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
-    N = (0, d.useSortApplicationsViaFrecency)(I);
-  return (0, l.jsxs)("div", {
-    className: o(h.container, {
-      [h.appDetailVisible]: E
+  l.useEffect(() => {
+    T(m.BuiltInSectionId.FRECENCY)
+  }, [T]);
+  let _ = null !== (n = null === (t = S[0]) || void 0 === t ? void 0 : t.data) && void 0 !== n ? n : [],
+    I = C.filter(e => e.id !== m.BuiltInSectionId.FRECENCY && e.id !== m.BuiltInSectionId.BUILT_IN),
+    v = (0, d.useSortApplicationsViaFrecency)(I);
+  return (0, i.jsxs)("div", {
+    className: s(h.container, {
+      [h.appDetailVisible]: x
     }),
-    children: [(0, l.jsx)("div", {
+    children: [(0, i.jsx)("div", {
       className: h.searchBarContainer,
-      children: (0, l.jsx)(c.default, {
+      children: (0, i.jsx)(c.default, {
         placeholder: "Search Apps & Commands",
-        onChange: g,
-        query: S,
-        onClear: C,
+        onChange: y,
+        query: E,
+        onClear: g,
         size: c.default.Sizes.MEDIUM
       })
-    }), (0, l.jsxs)(s.Scroller, {
+    }), (0, i.jsxs)(r.Scroller, {
       className: h.scrollableContent,
       fade: !0,
-      children: [(0, l.jsx)(f.default, {
-        channel: r,
-        commands: x,
-        sectionDescriptors: v
-      }), (0, l.jsx)(p.default, {
-        channel: r,
-        applications: N
+      children: [(0, i.jsx)(f.default, {
+        channel: a,
+        commands: _,
+        sectionDescriptors: C
+      }), (0, i.jsx)(p.default, {
+        channel: a,
+        applications: v
       })]
     })]
   })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PIPOverlay: function() {
-    return O
+    return b
   },
   TextActivityPIPOverlay: function() {
     return D
@@ -30,8 +30,8 @@ var l = n("414456"),
   v = n("598873"),
   I = n("981913"),
   P = n("576242"),
-  S = n("336971"),
-  C = n("109489"),
+  C = n("336971"),
+  S = n("109489"),
   g = n("116439"),
   y = n("42887"),
   E = n("145131"),
@@ -42,10 +42,10 @@ var l = n("414456"),
   M = n("49111"),
   j = n("843455"),
   _ = n("782340"),
-  L = n("163933"),
-  w = n("374142");
+  L = n("278121"),
+  w = n("735276");
 
-function b(e) {
+function O(e) {
   let {
     onClick: t,
     isExpanded: n
@@ -60,25 +60,25 @@ function b(e) {
   })
 }
 
-function O(e) {
+function b(e) {
   var t, n;
   let {
     channel: l,
     applicationId: i,
     onMouseDown: r,
     onMouseMove: I,
-    onMouseLeave: C,
+    onMouseLeave: S,
     onJumpToChannel: T,
     idle: A,
     selectedParticipant: x
-  } = e, _ = (0, d.useAppContext)(), b = _ === M.AppContext.POPOUT, O = (0, o.useStateFromStores)([y.default], () => y.default.isVideoEnabled()), D = (0, o.useStateFromStores)([y.default], () => Object.values(y.default.getVideoDevices())[0]), R = null === (t = null == D ? void 0 : D.disabled) || void 0 === t || t, F = !1 === R, W = (0, u.default)([i])[0], U = (0, f.default)(l), k = e => {
+  } = e, _ = (0, d.useAppContext)(), O = _ === M.AppContext.POPOUT, b = (0, o.useStateFromStores)([y.default], () => y.default.isVideoEnabled()), D = (0, o.useStateFromStores)([y.default], () => Object.values(y.default.getVideoDevices())[0]), R = null === (t = null == D ? void 0 : D.disabled) || void 0 === t || t, F = !1 === R, W = (0, u.default)([i])[0], U = (0, f.default)(l), k = e => {
     s.default.setVideoEnabled(e)
   };
   return (0, a.jsxs)("div", {
     className: w.videoControls,
     onMouseMove: I,
     onMouseDown: r,
-    onMouseLeave: C,
+    onMouseLeave: S,
     children: [(0, a.jsx)("div", {
       className: w.topControls,
       children: (0, a.jsx)(v.PictureInPictureHeader, {
@@ -96,7 +96,7 @@ function O(e) {
         align: E.default.Align.CENTER,
         children: [(0, a.jsx)(g.default, {
           className: L.leftPipIcon,
-          enabled: O,
+          enabled: b,
           cameraUnavailable: !F,
           hasPermission: U,
           onChange: k,
@@ -118,7 +118,7 @@ function O(e) {
         justify: E.default.Justify.END,
         basis: "50%",
         align: E.default.Align.CENTER,
-        children: [b ? null : (0, a.jsx)(S.default, {
+        children: [O ? null : (0, a.jsx)(C.default, {
           className: L.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
@@ -185,7 +185,7 @@ function R(e) {
     participantsOpen: n,
     showToggleParticipants: l
   } = e;
-  return l ? (0, a.jsx)(C.default, {
+  return l ? (0, a.jsx)(S.default, {
     channelId: t,
     isParticipantsOpen: n,
     className: L.participantsButton
@@ -227,7 +227,7 @@ function F(e) {
           preventIdleComponent: h.default
         }), (0, a.jsxs)("div", {
           className: L.pipHeaderButtonsRight,
-          children: [m ? null : (0, a.jsx)(b, {
+          children: [m ? null : (0, a.jsx)(O, {
             isExpanded: f,
             onClick: p
           }), (0, a.jsx)(P.default, {

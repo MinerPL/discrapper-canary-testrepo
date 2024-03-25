@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("77078"),
+var l = s("446674"),
+  n = s("77078"),
   i = s("305961"),
   r = s("957255"),
   o = s("462392"),
@@ -15,42 +15,42 @@ var n = s("446674"),
   u = s("49111"),
   c = s("903639"),
   E = s("782340"),
-  _ = s("245225");
+  _ = s("439418");
 
-function T(e) {
+function I(e) {
   var t;
   let {
     action: s,
-    triggerType: T,
-    guildId: I,
+    triggerType: I,
+    guildId: T,
     toggled: S,
-    onToggleAction: N
-  } = e, g = e => () => N(e), f = (0, o.getActionInfo)(s.type, s, T), A = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, L = null != A ? (0, c.getFriendlyDurationString)(A) : null, m = (0, n.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(I)), [I]);
-  if (null == f) return null;
+    onToggleAction: f
+  } = e, m = e => () => f(e), N = (0, o.getActionInfo)(s.type, s, I), g = null === (t = s.metadata) || void 0 === t ? void 0 : t.durationSeconds, h = null != g ? (0, c.getFriendlyDurationString)(g) : null, C = (0, l.useStateFromStores)([r.default, i.default], () => r.default.can(u.Permissions.MODERATE_MEMBERS, i.default.getGuild(T)), [T]);
+  if (null == N) return null;
   let {
-    headerText: C,
-    descriptionText: O,
-    icon: h
-  } = f;
+    headerText: R,
+    descriptionText: x,
+    icon: L
+  } = N;
   return (0, a.jsxs)("div", {
     className: _.actionContainer,
     children: [(0, a.jsx)("div", {
       className: _.actionIconContainer,
-      children: (0, a.jsx)(h, {
+      children: (0, a.jsx)(L, {
         width: 24,
         height: 24,
         className: _.actionIcon
       })
     }), (0, a.jsxs)("div", {
       className: _.actionTextContainer,
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, a.jsx)(n.Heading, {
         variant: "heading-sm/semibold",
-        children: C
-      }), (0, a.jsx)(l.Text, {
+        children: R
+      }), (0, a.jsx)(n.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
-        children: O
-      }), S && (0, a.jsxs)(l.Text, {
+        children: x
+      }), S && (0, a.jsxs)(n.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
         children: [function(e, t) {
@@ -61,25 +61,25 @@ function T(e) {
           return E.default.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_EDIT_HELPER.format({
             friendlyDurationString: t
           })
-        }(T, L), m && (0, a.jsx)(l.Clickable, {
-          onClick: g(!0),
+        }(I, h), C && (0, a.jsx)(n.Clickable, {
+          onClick: m(!0),
           className: _.editChannel,
           tag: "span",
           role: "link",
           children: E.default.Messages.GUILD_AUTOMOD_ACTIONS_TIMEOUT_UPDATE_DURATION
         })]
       })]
-    }), (0, a.jsx)(l.Tooltip, {
+    }), (0, a.jsx)(n.Tooltip, {
       text: E.default.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.format(),
       "aria-label": E.default.Messages.GUILD_AUTOMOD_MISSING_TIMEOUT_PERMISSIONS.plainFormat(),
-      shouldShow: !m,
+      shouldShow: !C,
       children: e => (0, a.jsx)("div", {
         ...e,
-        children: (0, a.jsx)(l.Checkbox, {
-          type: l.Checkbox.Types.INVERTED,
+        children: (0, a.jsx)(n.Checkbox, {
+          type: n.Checkbox.Types.INVERTED,
           value: S,
-          onChange: g(!1),
-          disabled: !m,
+          onChange: m(!1),
+          disabled: !C,
           className: _.actionCheckbox
         })
       })

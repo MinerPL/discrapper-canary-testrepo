@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("866227"),
@@ -19,7 +19,7 @@ class c extends a.default.Store {
   }
 }
 c.displayName = "SubscriptionRemindersStore";
-var f = new c(i.default, {
+var E = new c(i.default, {
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function(e) {
     let {
       subscription: t

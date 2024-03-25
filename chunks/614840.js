@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return C
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("446674"),
+  l = s("884691"),
+  n = s("446674"),
   i = s("151426"),
   r = s("77078"),
   o = s("10641"),
@@ -15,74 +15,74 @@ var a = s("37983"),
   c = s("137215"),
   E = s("900938"),
   _ = s("431451"),
-  T = s("353830"),
-  I = s("772871"),
+  I = s("353830"),
+  T = s("772871"),
   S = s("900084"),
-  N = s("860170"),
-  g = s("766829"),
-  f = s("994428"),
-  A = s("782340"),
-  L = s("642622");
+  f = s("860170"),
+  m = s("766829"),
+  N = s("994428"),
+  g = s("782340"),
+  h = s("854743");
 
-function m(e) {
+function C(e) {
   let t, {
       hideChangelog: s
     } = e,
-    m = (0, l.useStateFromStores)([E.default], () => E.default.getGuildId()),
-    C = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(m)),
-    O = (0, l.useStateFromStores)([T.default], () => T.default.getCurrentPage());
-  if (n.useEffect(() => {
+    C = (0, n.useStateFromStores)([E.default], () => E.default.getGuildId()),
+    R = (0, n.useStateFromStores)([u.default], () => u.default.getGuild(C)),
+    x = (0, n.useStateFromStores)([I.default], () => I.default.getCurrentPage());
+  if (l.useEffect(() => {
       (0, o.markDismissibleContentAsDismissed)(i.DismissibleContent.COMMUNITY_GUILD_SETTINGS_SAFETY, {
-        dismissAction: f.ContentDismissActionType.AUTO
+        dismissAction: N.ContentDismissActionType.AUTO
       })
-    }, []), null == C) return null;
-  let h = (0, g.getGuildSafetySettings)(C);
-  switch (O) {
-    case I.GuildSettingsSafetyPage.OVERVIEW:
+    }, []), null == R) return null;
+  let L = (0, m.getGuildSafetySettings)(R);
+  switch (x) {
+    case T.GuildSettingsSafetyPage.OVERVIEW:
       t = (0, a.jsx)(S.default, {
-        guild: C,
+        guild: R,
         hideChangelog: s
       });
       break;
-    case I.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION:
-      t = (0, a.jsx)(N.default, {
-        title: A.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
-        settings: h[I.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]
+    case T.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION:
+      t = (0, a.jsx)(f.default, {
+        title: g.default.Messages.GUILD_SETTINGS_SAFETY_CAPTCHA_RAID_PROTECTION,
+        settings: L[T.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]
       });
       break;
-    case I.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION:
-      t = (0, a.jsx)(N.default, {
-        title: A.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
-        settings: h[I.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]
+    case T.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION:
+      t = (0, a.jsx)(f.default, {
+        title: g.default.Messages.GUILD_SETTINGS_SAFETY_DM_SPAM_PROTECTION,
+        settings: L[T.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]
       });
       break;
-    case I.GuildSettingsSafetyPage.AUTOMOD:
+    case T.GuildSettingsSafetyPage.AUTOMOD:
       t = (0, a.jsx)(d.default, {
-        guildId: C.id
+        guildId: R.id
       });
       break;
-    case I.GuildSettingsSafetyPage.PERMISSIONS:
-      t = (0, a.jsx)(N.default, {
-        title: A.default.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
-        settings: h[I.GuildSettingsSafetyPage.PERMISSIONS]
+    case T.GuildSettingsSafetyPage.PERMISSIONS:
+      t = (0, a.jsx)(f.default, {
+        title: g.default.Messages.GUILD_SETTINGS_SAFETY_PERMISSIONS_TITLE,
+        settings: L[T.GuildSettingsSafetyPage.PERMISSIONS]
       })
   }
   return (0, a.jsxs)(a.Fragment, {
-    children: [O !== I.GuildSettingsSafetyPage.OVERVIEW && (0, a.jsxs)(r.Button, {
-      className: L.back,
-      innerClassName: L.backButton,
+    children: [x !== T.GuildSettingsSafetyPage.OVERVIEW && (0, a.jsxs)(r.Button, {
+      className: h.back,
+      innerClassName: h.backButton,
       look: r.Button.Looks.BLANK,
       size: r.Button.Sizes.MIN,
       onClick: () => {
-        (0, _.setSafetyPage)(I.GuildSettingsSafetyPage.OVERVIEW)
+        (0, _.setSafetyPage)(T.GuildSettingsSafetyPage.OVERVIEW)
       },
       children: [(0, a.jsx)(c.default, {
-        className: L.arrow,
+        className: h.arrow,
         direction: c.default.Directions.LEFT
       }), (0, a.jsx)(r.Text, {
         variant: "text-sm/semibold",
         color: "interactive-normal",
-        children: A.default.Messages.BACK
+        children: g.default.Messages.BACK
       })]
     }), t]
   })

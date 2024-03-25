@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   InputError: function() {
-    return g
+    return h
   },
   TextInput: function() {
-    return m
+    return g
   }
 });
 var i = n("37983"),
   s = n("884691"),
   r = n("414456"),
   a = n.n(r),
-  o = n("907002"),
+  o = n("146606"),
   l = n("718776"),
   u = n("516826"),
   d = n("577776"),
   c = n("634634"),
-  f = n("782340"),
-  _ = n("905518");
-let h = {
-  DEFAULT: _.inputDefault,
-  MINI: _.inputMini
+  _ = n("782340"),
+  f = n("182893");
+let E = {
+  DEFAULT: f.inputDefault,
+  MINI: f.inputMini
 };
 
-function g(e) {
+function h(e) {
   let {
     error: t
   } = e, n = (0, o.useTransition)(t, {
@@ -77,7 +77,7 @@ function g(e) {
     })
   })
 }
-class m extends s.Component {
+class g extends s.Component {
   render() {
     var e, t;
     let {
@@ -88,33 +88,33 @@ class m extends s.Component {
       size: u,
       editable: d,
       inputRef: c,
-      prefixElement: f,
-      focusProps: h,
-      ...m
-    } = this.props, E = null !== (t = m["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
+      prefixElement: _,
+      focusProps: E,
+      ...g
+    } = this.props, m = null !== (t = g["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId;
     return (0, i.jsxs)("div", {
-      className: a(_.inputWrapper, n),
-      children: [null != f && f, null != r ? (0, i.jsx)("span", {
-        className: _.inputPrefix,
+      className: a(f.inputWrapper, n),
+      children: [null != _ && _, null != r ? (0, i.jsx)("span", {
+        className: f.inputPrefix,
         children: r
       }) : null, (0, i.jsx)(l.FocusRing, {
-        ...h,
+        ...E,
         children: (0, i.jsx)("input", {
           className: a(u, s, {
-            [_.error]: this.hasError(),
-            [_.disabled]: o,
-            [_.editable]: d
+            [f.error]: this.hasError(),
+            [f.disabled]: o,
+            [f.editable]: d
           }),
           disabled: o,
           readOnly: !1 === d || void 0,
-          ...m,
-          "aria-labelledby": E,
+          ...g,
+          "aria-labelledby": m,
           onChange: this.onChange,
           onBlur: this.onBlur,
           onFocus: this.onFocus,
           ref: c
         })
-      }), (0, i.jsx)(g, {
+      }), (0, i.jsx)(h, {
         error: this.getError()
       })]
     })
@@ -126,9 +126,9 @@ class m extends s.Component {
         error: e,
         minLength: t,
         maxLength: n
-      } = this.props, i = this.getIsUnderFlowing() ? f.default.Messages.MINIMUM_LENGTH_ERROR.format({
+      } = this.props, i = this.getIsUnderFlowing() ? _.default.Messages.MINIMUM_LENGTH_ERROR.format({
         minLength: t
-      }) : null, s = this.getIsOverFlowing() ? f.default.Messages.MAXIMUM_LENGTH_ERROR.format({
+      }) : null, s = this.getIsOverFlowing() ? _.default.Messages.MAXIMUM_LENGTH_ERROR.format({
         maxLength: n
       }) : null;
       return null != e && e.length < 1 || null === e ? null : null != e ? e : !1 === this.state.dirty ? null : null != i ? i : s
@@ -162,9 +162,9 @@ class m extends s.Component {
     }
   }
 }
-m.Sizes = h, m.contextType = u.FormContext, m.defaultProps = {
+g.Sizes = E, g.contextType = u.FormContext, g.defaultProps = {
   name: "",
-  size: h.DEFAULT,
+  size: E.DEFAULT,
   disabled: !1,
   type: "text",
   placeholder: "",

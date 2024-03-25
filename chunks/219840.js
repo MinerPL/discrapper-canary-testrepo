@@ -1,24 +1,24 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return l
   }
 });
-var a = s("884691"),
-  n = s("974667");
+var s = a("884691"),
+  n = a("974667");
 
 function l(e) {
   let {
     listRef: t,
-    padding: s,
+    padding: a,
     channel: l,
     isEnabled: r
-  } = e, i = a.useCallback(e => {
-    let a = t.current,
+  } = e, i = s.useCallback(e => {
+    let s = t.current,
       n = document.querySelector(e);
-    null != n && (null == a || a.scrollIntoViewNode({
+    null != n && (null == s || s.scrollIntoViewNode({
       node: n,
-      padding: s,
+      padding: a,
       callback: () => {
         var t;
         null === (t = document.querySelector(e)) || void 0 === t || t.focus({
@@ -26,14 +26,14 @@ function l(e) {
         })
       }
     }))
-  }, [s]), o = a.useCallback(() => new Promise(e => {
-    let s = t.current;
-    null == s || s.scrollToTop({
+  }, [a]), o = s.useCallback(() => new Promise(e => {
+    let a = t.current;
+    null == a || a.scrollToTop({
       callback: () => requestAnimationFrame(e)
     })
-  }), []), u = a.useCallback(() => new Promise(e => {
-    let s = t.current;
-    null == s || s.scrollToBottom({
+  }), []), u = s.useCallback(() => new Promise(e => {
+    let a = t.current;
+    null == a || a.scrollToBottom({
       callback: () => requestAnimationFrame(e)
     })
   }), []);

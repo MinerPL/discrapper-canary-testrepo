@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
-var l = n("446674"),
-  i = n("913144");
-let r = {
+var i = n("446674"),
+  l = n("913144");
+let a = {
   showPopup: !1,
   appDetail: null
 };
 
-function o() {
-  return r.showPopup = !1, r.appDetail = null, !0
+function s() {
+  return a.showPopup = !1, a.appDetail = null, !0
 }
-class s extends l.default.Store {
+class r extends i.default.Store {
   initialize() {}
   shouldShowPopup() {
-    return r.showPopup
+    return a.showPopup
   }
   getCurrentAppDetail() {
-    return r.appDetail
+    return a.appDetail
   }
 }
-s.displayName = "AppLauncherStore";
-var a = new s(i.default, {
+r.displayName = "AppLauncherStore";
+var o = new r(l.default, {
   APP_LAUNCHER_SHOW_POPUP: function() {
-    return r.showPopup = !0, !0
+    return a.showPopup = !0, !0
   },
-  APP_LAUNCHER_DISMISS_POPUP: o,
+  APP_LAUNCHER_DISMISS_POPUP: s,
   APP_LAUNCHER_SHOW_APP_DETAIL: function(e) {
     let {
       appDetail: t
     } = e;
-    return r.appDetail = t, !0
+    return a.appDetail = t, !0
   },
   APP_LAUNCHER_DISMISS_APP_DETAIL: function() {
-    return r.appDetail = null, !0
+    return a.appDetail = null, !0
   },
-  CONNECTION_OPEN: o,
-  LOGOUT: o,
-  CHANNEL_SELECT: o,
-  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: o,
-  APP_LAUNCHER_SET_ACTIVE_COMMAND: o
+  CONNECTION_OPEN: s,
+  LOGOUT: s,
+  CHANNEL_SELECT: s,
+  APPLICATION_COMMAND_SET_ACTIVE_COMMAND: s,
+  APP_LAUNCHER_SET_ACTIVE_COMMAND: s
 })

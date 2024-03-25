@@ -4,10 +4,10 @@ n.r(e), n.d(e, {
     return I
   },
   fetchTestSKUsForApplication: function() {
-    return A
+    return p
   },
   fetchPurchasePreview: function() {
-    return p
+    return A
   },
   grantChannelBranchEntitlement: function() {
     return C
@@ -66,7 +66,7 @@ async function I(t, e) {
     }
   }
 }
-async function A(t) {
+async function p(t) {
   let e = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     n = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
   if (!n && e) throw Error("this should only be used in test mode");
@@ -77,7 +77,7 @@ async function A(t) {
     skus: u
   }), u
 }
-async function p(t, e, n, i) {
+async function A(t, e, n, i) {
   let u;
   let l = {
       payment_source_id: n,
@@ -143,8 +143,8 @@ async function N(t, e, n) {
     expectedAmount: s,
     expectedCurrency: f,
     analyticsLoadId: I,
-    isGift: A,
-    giftInfoOptions: p,
+    isGift: p,
+    giftInfoOptions: A,
     subscriptionPlanId: C,
     loadId: N,
     countryCode: R
@@ -162,7 +162,7 @@ async function N(t, e, n) {
   let h = c.default.inTestModeForApplication(t) || o.default.inDevModeForApplication(t);
   try {
     let t = {
-      gift: A,
+      gift: p,
       sku_subscription_plan_id: C,
       gateway_checkout_context: await (0, S.createGatewayCheckoutContext)(a),
       load_id: N
@@ -173,7 +173,7 @@ async function N(t, e, n) {
         let e = await (0, _.popupBridgeState)(a.type);
         t.return_url = (0, i.getAPIBaseURL)() + T.Endpoints.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(a.type, null != e ? e : "", "success")
       }
-      null != s && (t.expected_amount = s), null != f && (t.expected_currency = f), t.gift_info_options = p, null != R && (t.country_code = R), t.purchase_token = (0, E.getPurchaseToken)()
+      null != s && (t.expected_amount = s), null != f && (t.expected_currency = f), t.gift_info_options = A, null != R && (t.country_code = R), t.purchase_token = (0, E.getPurchaseToken)()
     }
     let n = await i.HTTP.post({
       url: T.Endpoints.STORE_SKU_PURCHASE(e),
@@ -198,7 +198,7 @@ async function N(t, e, n) {
     if ((n.code === l.ErrorCodes.CONFIRMATION_REQUIRED || n.code === l.ErrorCodes.AUTHENTICATION_REQUIRED) && r.default.dispatch({
         type: "SKU_PURCHASE_AWAIT_CONFIRMATION",
         skuId: e,
-        isGift: A
+        isGift: p
       }), n.code !== l.ErrorCodes.CONFIRMATION_REQUIRED) throw r.default.dispatch({
       type: "SKU_PURCHASE_FAIL",
       applicationId: t,

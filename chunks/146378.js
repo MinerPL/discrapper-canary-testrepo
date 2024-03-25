@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("917351"),
-  l = n.n(i),
+  l = n("917351"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("450911"),
@@ -15,18 +15,18 @@ var a = n("37983"),
   c = n("736964"),
   f = n("393414"),
   E = n("42203"),
-  _ = n("42887"),
-  h = n("109264"),
+  h = n("42887"),
+  _ = n("109264"),
   C = n("663745"),
-  I = n("158998"),
-  T = n("371449"),
-  S = n("224978"),
-  m = n("83916"),
-  p = n("559541"),
-  A = n("49111"),
-  g = n("353927"),
+  S = n("158998"),
+  I = n("371449"),
+  m = n("224978"),
+  p = n("83916"),
+  T = n("559541"),
+  g = n("49111"),
+  A = n("353927"),
   N = n("782340"),
-  R = n("889195");
+  R = n("393719");
 
 function O(e) {
   let {
@@ -36,13 +36,13 @@ function O(e) {
     c.default.removeFriend(t.id, {
       location: "Friends"
     })
-  }, i = (0, r.useStateFromStores)([_.default], () => _.default.supports(g.Features.VIDEO));
+  }, l = (0, r.useStateFromStores)([h.default], () => h.default.supports(A.Features.VIDEO));
   return (0, a.jsxs)(o.Menu, {
     navId: "friend-row",
     "aria-label": N.default.Messages.USER_ACTIONS_MENU_LABEL,
     onClose: d.closeContextMenu,
     onSelect: n,
-    children: [i ? (0, a.jsx)(o.MenuItem, {
+    children: [l ? (0, a.jsx)(o.MenuItem, {
       id: "start-video-call",
       label: N.default.Messages.START_VIDEO_CALL,
       action: function() {
@@ -60,7 +60,7 @@ function O(e) {
       action: () => {
         (0, o.openModal)(e => (0, a.jsx)(o.ConfirmModal, {
           header: N.default.Messages.REMOVE_FRIEND_TITLE.format({
-            name: I.default.getName(t)
+            name: S.default.getName(t)
           }),
           confirmText: N.default.Messages.REMOVE_FRIEND,
           cancelText: N.default.Messages.CANCEL,
@@ -69,7 +69,7 @@ function O(e) {
           children: (0, a.jsx)(o.Text, {
             variant: "text-md/normal",
             children: N.default.Messages.REMOVE_FRIEND_BODY.format({
-              name: I.default.getName(t)
+              name: S.default.getName(t)
             })
           })
         }))
@@ -78,7 +78,7 @@ function O(e) {
     })]
   })
 }
-class L extends s.PureComponent {
+class v extends s.PureComponent {
   componentWillLeave(e) {
     null != this.peopleListItemRef.current && this.peopleListItemRef.current.componentWillLeave(e)
   }
@@ -91,12 +91,12 @@ class L extends s.PureComponent {
       isFocused: t,
       activities: n,
       applicationStream: s,
-      status: i,
-      isMobile: l
+      status: l,
+      isMobile: i
     } = this.props, {
       isActiveRow: r
     } = this.state;
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(m.default, {
       ref: this.peopleListItemRef,
       isFocused: t,
       isActive: r,
@@ -105,27 +105,27 @@ class L extends s.PureComponent {
       onClick: this.handleOpenPrivateChannel,
       children: t => (0, a.jsxs)("div", {
         className: R.listItemContents,
-        children: [(0, a.jsx)(p.default, {
+        children: [(0, a.jsx)(T.default, {
           user: e,
-          status: i,
-          isMobile: l,
-          subText: (0, a.jsx)(m.default, {
+          status: l,
+          isMobile: i,
+          subText: (0, a.jsx)(p.default, {
             hovered: t,
             activities: n,
             applicationStream: s,
-            status: i,
+            status: l,
             user: e
           }),
           hovered: t,
           showAccountIdentifier: !0
         }), (0, a.jsxs)("div", {
           className: R.actions,
-          children: [(0, a.jsx)(T.default, {
-            icon: h.default,
+          children: [(0, a.jsx)(I.default, {
+            icon: _.default,
             tooltip: N.default.Messages.SEND_DM,
             onClick: this.handleOpenPrivateChannel,
             shouldHighlight: t
-          }), (0, a.jsx)(T.default, {
+          }), (0, a.jsx)(I.default, {
             icon: C.default,
             tooltip: N.default.Messages.MORE,
             onClick: this.handleOpenActionsMenu,
@@ -143,8 +143,8 @@ class L extends s.PureComponent {
         user: t
       } = this.props;
       e.stopPropagation();
-      let n = l.find(E.default.getMutablePrivateChannels(), e => e.type === A.ChannelTypes.DM && e.getRecipientId() === t.id);
-      null != n ? (0, f.transitionTo)(A.Routes.CHANNEL(A.ME, n.id)) : u.default.openPrivateChannel(t.id)
+      let n = i.find(E.default.getMutablePrivateChannels(), e => e.type === g.ChannelTypes.DM && e.getRecipientId() === t.id);
+      null != n ? (0, f.transitionTo)(g.Routes.CHANNEL(g.ME, n.id)) : u.default.openPrivateChannel(t.id)
     }, this.handleOpenActionsMenu = e => {
       let {
         user: t
@@ -164,4 +164,4 @@ class L extends s.PureComponent {
     }
   }
 }
-var v = L
+var L = v

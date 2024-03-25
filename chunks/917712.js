@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   scheduler: function() {
-    return d
+    return f
   },
   updateCount: function() {
-    return f
+    return d
   }
 });
 var n = r("812587"),
@@ -22,7 +22,7 @@ var n = r("812587"),
     return void 0 === e && (e = 0), Date.now() + e
   },
   c = !1,
-  d = new(function() {
+  f = new(function() {
     function e() {
       var e = this;
       this.stopped = !0, this.listener = function() {
@@ -64,6 +64,6 @@ var n = r("812587"),
       }), this.stopped = !0)
     }, e
   }()),
-  f = function(e) {
-    !o && e > 0 && d.start(), (o += e) || d.stop()
+  d = function(e) {
+    !o && e > 0 && f.start(), (o += e) || f.stop()
   }

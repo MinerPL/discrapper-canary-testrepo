@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return c
   },
   throttledTrackExpressionSuggestionDisplayed: function() {
-    return f
+    return _
   }
 }), n("781738");
 var i = n("369470"),
@@ -19,7 +19,7 @@ let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
   u = /(\n|\t|\s)/g,
   d = e => e.replace(l, "").replace(u, " "),
   c = e => null == e ? [] : d(e).trim().split(" "),
-  f = s(e => {
+  _ = s(e => {
     r.default.track(o.AnalyticEvents.AUTO_SUGGEST_DISPLAYED, {
       suggestion_trigger: e
     })

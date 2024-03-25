@@ -1,18 +1,18 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return i
   }
 });
 var a = s("37983");
 s("884691");
 var r = s("75196"),
-  n = e => {
+  i = e => {
     let {
       className: t,
       backgroundColor: s,
-      backgroundCircleSize: n,
-      ...i
+      backgroundCircleSize: i,
+      ...n
     } = e;
     return (0, a.jsxs)("svg", {
       width: "100%",
@@ -24,10 +24,10 @@ var r = s("75196"),
       },
       xmlns: "http://www.w3.org/2000/svg",
       ...(0, r.default)({
-        ...i
+        ...n
       }),
       children: [(0, a.jsx)("circle", {
-        r: null != n ? n : "40%",
+        r: null != i ? i : "40%",
         cx: "50%",
         cy: "50%",
         className: s

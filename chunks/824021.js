@@ -1,45 +1,45 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   Rules: function() {
     return C
   },
   default: function() {
     return E
   }
-}), s("222007");
-var n = s("37983"),
-  a = s("884691"),
-  i = s("414456"),
-  r = s.n(i),
-  l = s("132710"),
-  o = s.n(l),
-  d = s("77078"),
-  u = s("895530"),
-  h = s("9074"),
-  c = s("271560"),
-  p = s("782340"),
-  m = s("613743");
+}), n("222007");
+var s = n("37983"),
+  a = n("884691"),
+  i = n("414456"),
+  r = n.n(i),
+  l = n("404828"),
+  o = n.n(l),
+  d = n("77078"),
+  u = n("895530"),
+  h = n("9074"),
+  c = n("271560"),
+  p = n("782340"),
+  m = n("450731");
 let g = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
   C = {
     ...h.default.rules,
     heading: {
       ...h.default.rules.heading,
-      react(e, t, s) {
+      react(e, t, n) {
         let a = "h".concat(Math.min(Math.max(2, e.level + 1), 4));
-        return (0, n.jsx)(u.default, {
+        return (0, s.jsx)(u.default, {
           tag: a,
-          children: t(e.content, s)
-        }, s.key)
+          children: t(e.content, n)
+        }, n.key)
       }
     },
     assetImage: {
       order: 5,
       match(e, t) {
-        let s = e.match(g);
-        if (null != s) {
-          let e = s[2],
-            n = t.assets.find(t => t.id === e);
-          return null != n && [...s, n, t.applicationId]
+        let n = e.match(g);
+        if (null != n) {
+          let e = n[2],
+            s = t.assets.find(t => t.id === e);
+          return null != s && [...n, s, t.applicationId]
         }
         return !1
       },
@@ -48,14 +48,14 @@ let g = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
         alt: e[1],
         applicationId: e[4]
       }),
-      react: (e, t, s) => (0, n.jsx)("div", {
+      react: (e, t, n) => (0, s.jsx)("div", {
         className: m.assetWrapper,
-        children: (0, n.jsx)("img", {
+        children: (0, s.jsx)("img", {
           alt: e.alt,
           src: (0, c.getAssetURL)(e.applicationId, e.asset, 800),
           className: m.asset
         })
-      }, s.key)
+      }, n.key)
     }
   },
   f = o.parserFor(C),
@@ -75,25 +75,25 @@ class x extends a.PureComponent {
     let {
       applicationId: e,
       description: t,
-      blurb: s,
+      blurb: n,
       className: a,
       assets: i
     } = this.props, {
       collapsed: l,
       collapsable: o
     } = this.state;
-    return (0, n.jsxs)("div", {
+    return (0, s.jsxs)("div", {
       className: a,
-      children: [(0, n.jsx)("div", {
+      children: [(0, s.jsx)("div", {
         className: r({
           [m.collapsed]: o && l
         }),
-        children: (0, n.jsxs)("div", {
+        children: (0, s.jsxs)("div", {
           ref: this.setContentContainerRef,
-          children: [(0, n.jsx)("div", {
+          children: [(0, s.jsx)("div", {
             className: m.blurb,
-            children: s
-          }), (0, n.jsx)(h.default, {
+            children: n
+          }), (0, s.jsx)(h.default, {
             className: m.description,
             parser: f,
             output: I,
@@ -104,7 +104,7 @@ class x extends a.PureComponent {
             children: t
           })]
         })
-      }), o ? (0, n.jsx)(d.Button, {
+      }), o ? (0, s.jsx)(d.Button, {
         className: m.toggleCollapseButton,
         onClick: this.handleToggleCollapse,
         color: d.Button.Colors.PRIMARY,

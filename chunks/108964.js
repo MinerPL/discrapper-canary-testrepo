@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+s.r(t), s.d(t, {
   createHeaderResult: function() {
-    return u
+    return i
   }
 });
-var s = l("375822");
+var l = s("375822");
 
-function u(e) {
+function i(e) {
   return {
-    type: s.AutocompleterResultTypes.HEADER,
-    record: new s.HeaderRecord(e),
+    type: l.AutocompleterResultTypes.HEADER,
+    record: new l.HeaderRecord(e),
     score: 0
   }
 }

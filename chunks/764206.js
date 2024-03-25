@@ -4,102 +4,102 @@ s.r(t), s.d(t, {
     return a
   }
 });
-var a, n = s("37983"),
-  l = s("884691"),
-  r = s("414456"),
-  i = s.n(r),
-  u = s("888400"),
-  o = s("943232"),
+var a, r = s("37983"),
+  i = s("884691"),
+  n = s("414456"),
+  l = s.n(n),
+  o = s("888400"),
+  u = s("943232"),
   d = s("36694"),
   c = s("76638"),
   _ = s("216422"),
   E = s("49111"),
-  I = s("782340"),
-  f = s("822304");
-let T = e => {
+  T = s("782340"),
+  I = s("202812");
+let f = e => {
     let {
       IconComponent: t,
       className: s
     } = e;
-    return (0, n.jsx)("div", {
-      className: i(f.iconCircle, s),
-      children: (0, n.jsx)(t, {
-        className: f.icon
+    return (0, r.jsx)("div", {
+      className: l(I.iconCircle, s),
+      children: (0, r.jsx)(t, {
+        className: I.icon
       })
     })
   },
-  S = e => {
+  R = e => {
     let {
       circle: t,
       smallHeader: s,
       text: a,
-      className: l
+      className: i
     } = e;
-    return (0, n.jsxs)("div", {
-      className: i(f.recommendationReason, l),
-      children: [t, (0, n.jsxs)("div", {
-        className: f.description,
-        children: [null != s ? (0, n.jsx)("div", {
-          className: f.smallHeader,
+    return (0, r.jsxs)("div", {
+      className: l(I.recommendationReason, i),
+      children: [t, (0, r.jsxs)("div", {
+        className: I.description,
+        children: [null != s ? (0, r.jsx)("div", {
+          className: I.smallHeader,
           children: s
-        }) : null, (0, n.jsx)("div", {
-          className: f.text,
+        }) : null, (0, r.jsx)("div", {
+          className: I.text,
           children: a
         })]
       })]
     })
   };
-a = class extends l.Component {
+a = class extends i.Component {
   render() {
     let {
       reason: e,
       className: t
     } = this.props;
-    if (e.type === E.StoreRecommendationTypes.RECENT_RELEASE_DATE) return (0, n.jsx)(S, {
+    if (e.type === E.StoreRecommendationTypes.RECENT_RELEASE_DATE) return (0, r.jsx)(R, {
       className: t,
-      circle: (0, n.jsx)(T, {
-        IconComponent: o.default
+      circle: (0, r.jsx)(f, {
+        IconComponent: u.default
       }),
-      smallHeader: I.default.Messages.APPLICATION_STORE_NEW_RELEASE,
-      text: (0, u.dateFormat)(e.releaseDate, "LL")
+      smallHeader: T.default.Messages.APPLICATION_STORE_NEW_RELEASE,
+      text: (0, o.dateFormat)(e.releaseDate, "LL")
     });
-    if (e.type === E.StoreRecommendationTypes.RELEASE_DATE) return (0, n.jsx)(S, {
+    if (e.type === E.StoreRecommendationTypes.RELEASE_DATE) return (0, r.jsx)(R, {
       className: t,
-      circle: (0, n.jsx)(T, {
-        IconComponent: o.default
+      circle: (0, r.jsx)(f, {
+        IconComponent: u.default
       }),
-      smallHeader: I.default.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
-      text: (0, u.dateFormat)(e.releaseDate, "LL")
+      smallHeader: T.default.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
+      text: (0, o.dateFormat)(e.releaseDate, "LL")
     });
-    if (e.type === E.StoreRecommendationTypes.EARLY_ACCESS) return null != e.releaseDate ? (0, n.jsx)(S, {
+    if (e.type === E.StoreRecommendationTypes.EARLY_ACCESS) return null != e.releaseDate ? (0, r.jsx)(R, {
       className: t,
-      circle: (0, n.jsx)(T, {
+      circle: (0, r.jsx)(f, {
         IconComponent: c.default,
-        className: f.earlyAccess
+        className: I.earlyAccess
       }),
-      smallHeader: I.default.Messages.APPLICATION_STORE_EARLY_ACCESS,
-      text: (0, u.dateFormat)(e.releaseDate, "LL")
-    }) : (0, n.jsx)(S, {
+      smallHeader: T.default.Messages.APPLICATION_STORE_EARLY_ACCESS,
+      text: (0, o.dateFormat)(e.releaseDate, "LL")
+    }) : (0, r.jsx)(R, {
       className: t,
-      circle: (0, n.jsx)(T, {
+      circle: (0, r.jsx)(f, {
         IconComponent: c.default,
-        className: f.earlyAccess
+        className: I.earlyAccess
       }),
-      text: I.default.Messages.APPLICATION_STORE_EARLY_ACCESS
+      text: T.default.Messages.APPLICATION_STORE_EARLY_ACCESS
     });
-    return e.type === E.StoreRecommendationTypes.FLAVOR_TEXT ? (0, n.jsx)(S, {
-      circle: (0, n.jsx)(T, {
+    return e.type === E.StoreRecommendationTypes.FLAVOR_TEXT ? (0, r.jsx)(R, {
+      circle: (0, r.jsx)(f, {
         IconComponent: d.default
       }),
       text: e.flavorText,
       className: t
-    }) : e.type === E.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT ? (0, n.jsx)(S, {
+    }) : e.type === E.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT ? (0, r.jsx)(R, {
       className: t,
-      circle: (0, n.jsx)(T, {
+      circle: (0, r.jsx)(f, {
         IconComponent: _.default,
-        className: f.premiumCircle
+        className: I.premiumCircle
       }),
-      text: I.default.Messages.APPLICATION_STORE_FREE_PREMIUM_CONTENT
+      text: T.default.Messages.APPLICATION_STORE_FREE_PREMIUM_CONTENT
     }) : null
   }
 }

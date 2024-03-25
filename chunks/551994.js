@@ -1,35 +1,35 @@
 "use strict";
-l.r(e), l.d(e, {
+n.r(e), n.d(e, {
   installApplication: function() {
-    return u
+    return r
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("77078"),
-  i = l("190017"),
-  s = l("971427"),
-  o = l("98328");
+var l = n("37983");
+n("884691");
+var a = n("77078"),
+  i = n("190017"),
+  o = n("971427"),
+  s = n("98328");
 
-function u(t, e, u, c, r) {
-  let d = o.default.getInstallationPath(t.id, e),
-    p = null != t.eulaId && !s.default.hasAcceptedEULA(t.eulaId);
+function r(t, e, r, c, u) {
+  let d = s.default.getInstallationPath(t.id, e),
+    p = null != t.eulaId && !o.default.hasAcceptedEULA(t.eulaId);
   null == d || p ? (0, a.openModalLazy)(async () => {
     let {
       default: a
-    } = await l.el("727441").then(l.bind(l, "727441"));
-    return l => (0, n.jsx)(a, {
-      ...l,
+    } = await n.el("727441").then(n.bind(n, "727441"));
+    return n => (0, l.jsx)(a, {
+      ...n,
       applicationId: t.id,
       branchId: e,
-      analyticsLocation: r
+      analyticsLocation: u
     })
   }) : (0, i.installApplication)({
     application: t,
     branchId: e,
-    buildId: u,
+    buildId: r,
     manifestIds: c,
     installationPath: d,
-    analyticsLocation: r
+    analyticsLocation: u
   })
 }

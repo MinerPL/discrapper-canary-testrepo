@@ -15,7 +15,7 @@ function V() {
   let A = null === (I = e.default.settings.localization) || void 0 === I ? void 0 : null === (N = I.locale) || void 0 === N ? void 0 : N.value;
   return null != A && "" !== A && A !== E && (E = A, _.setLocale(E), !0)
 }
-class n extends O.default.Store {
+class i extends O.default.Store {
   initialize() {
     this.waitFor(e.default), V(), _.setLocale(E)
   }
@@ -23,8 +23,8 @@ class n extends O.default.Store {
     return E
   }
 }
-n.displayName = "LocaleStore";
-var t = new n(T.default, {
+i.displayName = "LocaleStore";
+var t = new i(T.default, {
   OVERLAY_INITIALIZE: V,
   CACHE_LOADED: V,
   CONNECTION_OPEN: V,

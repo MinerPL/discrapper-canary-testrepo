@@ -6,13 +6,13 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("381546"),
-  l = s("223984");
+var l = s("381546"),
+  n = s("223984");
 
 function i(e) {
-  return (0, a.jsx)(l.default, {
-    color: l.MessageBlockColors.RED,
-    icon: n.default,
+  return (0, a.jsx)(n.default, {
+    color: n.MessageBlockColors.RED,
+    icon: l.default,
     ...e
   })
 }

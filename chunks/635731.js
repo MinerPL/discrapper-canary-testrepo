@@ -7,17 +7,17 @@ n.r(t), n.d(t, {
 var r = n("37983");
 n("884691");
 var o = n("469563"),
-  i = n("646074"),
-  u = n("75196"),
+  u = n("646074"),
+  i = n("75196"),
   a = (0, o.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: n = 24,
       color: o = "currentColor",
-      ...i
+      ...u
     } = e;
     return (0, r.jsxs)("svg", {
-      ...(0, u.default)(i),
+      ...(0, i.default)(u),
       width: t,
       height: n,
       fill: "None",
@@ -35,6 +35,6 @@ var o = n("469563"),
         fill: o
       })]
     })
-  }, i.ChatXIcon, void 0, {
+  }, u.ChatXIcon, void 0, {
     size: 24
   })

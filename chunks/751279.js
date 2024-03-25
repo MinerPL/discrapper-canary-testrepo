@@ -1,6 +1,6 @@
-var e = n("391066"),
-  o = n("492692"),
-  c = n("276440"),
-  u = c && c.isMap,
-  a = u ? o(u) : e;
-t.exports = a
+var n = r("391066"),
+  u = r("492692"),
+  a = r("276440"),
+  o = a && a.isMap,
+  i = o ? u(o) : n;
+e.exports = i

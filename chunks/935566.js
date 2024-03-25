@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   BogoPromotionExperiment: function() {
-    return r
+    return i
   },
   isBogoPromotionExperimentEnabled: function() {
-    return l
+    return a
   },
   default: function() {
-    return s
+    return l
   }
 });
-var i = n("862205");
-let r = (0, i.createExperiment)({
+var r = n("862205");
+let i = (0, r.createExperiment)({
     kind: "user",
     id: "2023-06_bogo_promotion_gate",
     label: "BOGO Promotion Manager",
@@ -26,17 +26,17 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  l = function() {
+  a = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return r.getCurrentConfig({
+    return i.getCurrentConfig({
       location: "489551_2"
     }, {
       autoTrackExposure: e
     })
   };
-var s = function() {
+var l = function() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-  return r.useExperiment({
+  return i.useExperiment({
     location: "489551_1"
   }, {
     autoTrackExposure: e

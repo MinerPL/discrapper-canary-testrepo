@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("759843"),
-  l = s("77078"),
+var l = s("759843"),
+  n = s("77078"),
   i = s("428958"),
   r = s("724334"),
   o = s("191814"),
@@ -15,15 +15,15 @@ var n = s("759843"),
   u = s("264742"),
   c = s("459662"),
   E = s("782340"),
-  _ = s("666118"),
-  T = s("419143");
+  _ = s("267152"),
+  I = s("419143");
 
-function I(e) {
+function T(e) {
   let {
     config: t
   } = e, {
     noticeText: s,
-    ctaLabel: n,
+    ctaLabel: l,
     ctaClickable: i,
     onCtaClicked: r
   } = t;
@@ -31,17 +31,17 @@ function I(e) {
     className: _.ctaContainer,
     children: [(0, a.jsx)("img", {
       className: _.heroBanner,
-      src: T,
+      src: I,
       alt: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_HERO_BANNER_ALT
     }), (0, a.jsxs)("div", {
       className: _.ctaContent,
-      children: [(0, a.jsx)(l.Heading, {
+      children: [(0, a.jsx)(n.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",
         children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_DESKTOP_V2_TITLE
       }), (0, a.jsx)(o.default, {
         size: 12
-      }), (0, a.jsx)(l.Text, {
+      }), (0, a.jsx)(n.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
         children: E.default.Messages.GUILD_ROLE_SUBSCRIPTION_WELCOME_V2_SUBTITLE
@@ -52,7 +52,7 @@ function I(e) {
         color: d.MessageBlockColors.BROWN,
         buttonPosition: u.WarningBlockButtonPosition.RIGHT,
         notice: s,
-        ctaLabel: n,
+        ctaLabel: l,
         ctaDisabled: !i,
         ctaClassName: _.waitlistCtaButton,
         onClick: r
@@ -71,14 +71,14 @@ function S(e) {
     creatorMonetizationOnboardingMarketing: u
   } = (0, r.default)(t.id);
   return ((0, i.default)({
-    type: n.ImpressionTypes.PANE,
-    name: n.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
+    type: l.ImpressionTypes.PANE,
+    name: l.ImpressionNames.ENABLE_CREATOR_MONETIZATION_WAITLIST_LANDING,
     properties: {
       guild_id: t.id
     }
-  }), o) ? (0, a.jsx)(l.Spinner, {}) : (0, a.jsxs)("div", {
+  }), o) ? (0, a.jsx)(n.Spinner, {}) : (0, a.jsxs)("div", {
     className: _.container,
-    children: [(0, a.jsx)(I, {
+    children: [(0, a.jsx)(T, {
       config: s
     }), (0, a.jsx)(c.MarketingSections, {
       onboardingMarketing: u,

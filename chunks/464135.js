@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return L
+    return N
   }
 }), a("222007");
 var l = a("37983"),
@@ -22,9 +22,9 @@ var l = a("37983"),
   C = a("141210"),
   g = a("80028"),
   E = a("782340"),
-  N = a("504835"),
-  L = function(e) {
-    var t, a, r, L, j, T;
+  L = a("504835"),
+  N = function(e) {
+    var t, a, r, N, j, T;
     let {
       sourceURL: S
     } = e, {
@@ -181,44 +181,44 @@ var l = a("37983"),
     let es = U - b.start,
       eu = null === (r = _.current) || void 0 === r ? void 0 : r.videoElement;
     return (0, l.jsx)("div", {
-      className: N.centeringWrapper,
+      className: L.centeringWrapper,
       children: (0, l.jsxs)("div", {
-        className: N.timelineContainer,
+        className: L.timelineContainer,
         children: [(0, l.jsx)("div", {
-          className: N.playPauseButtonWrapper,
+          className: L.playPauseButtonWrapper,
           children: (0, l.jsx)(d.Clickable, {
             tabIndex: 0,
             onClick: () => {
               var e, t;
               return R ? null === (e = _.current) || void 0 === e ? void 0 : e.pause() : null === (t = _.current) || void 0 === t ? void 0 : t.play()
             },
-            className: N.playPauseButton,
+            className: L.playPauseButton,
             children: R ? (0, l.jsx)(v.default, {
               width: 24,
               height: 24,
-              className: N.playPauseIcon
+              className: L.playPauseIcon
             }) : (0, l.jsx)(p.default, {
               width: 24,
               height: 24,
-              className: N.playPauseIcon
+              className: L.playPauseIcon
             })
           })
         }), (0, l.jsxs)("div", {
-          className: i(N.timeline, {
-            [N.timelineDragging]: null != k
+          className: i(L.timeline, {
+            [L.timelineDragging]: null != k
           }),
           onMouseDown: en,
           children: [(0, l.jsx)("canvas", {
-            className: N.hiddenCanvas,
+            className: L.hiddenCanvas,
             ref: J
           }), (0, l.jsx)("canvas", {
-            className: N.timelineBackground,
+            className: L.timelineBackground,
             ref: Y
           }), (0, l.jsx)(o.FocusRing, {
             children: (0, l.jsx)("div", {
               tabIndex: 0,
               ref: F,
-              className: N.playhead,
+              className: L.playhead,
               style: {
                 left: null != eu ? "".concat(eu.currentTime / eu.duration * 100, "%") : 0
               }
@@ -238,35 +238,35 @@ var l = a("37983"),
                 }))
               }
             },
-            className: N.timelineVideo,
+            className: L.timelineVideo,
             ref: y,
             src: S,
             muted: !0
           }), (0, l.jsxs)("div", {
-            className: N.dragBox,
+            className: L.dragBox,
             style: {
               left: null != P ? "".concat(b.start / P * 100, "%") : "0",
               right: null != P ? "".concat((P - b.end) / P * 100, "%") : "0"
             },
             children: [(0, l.jsx)("div", {
-              className: N.timePillContainer,
+              className: L.timePillContainer,
               children: (0, l.jsx)("div", {
                 ref: B,
-                className: N.timePillBackground,
+                className: L.timePillBackground,
                 children: (0, l.jsxs)(d.Text, {
                   variant: "text-sm/normal",
-                  className: N.timePillText,
+                  className: L.timePillText,
                   color: "always-white",
                   children: [I(es), (0, l.jsx)("span", {
-                    className: N.slashCharacter,
+                    className: L.slashCharacter,
                     children: " / "
                   }), I(K)]
                 })
               })
             }), (0, l.jsx)(o.FocusRing, {
               children: (0, l.jsx)("button", {
-                className: i(N.dragHandleLeft, {
-                  [N.dragging]: "start" === k
+                className: i(L.dragHandleLeft, {
+                  [L.dragging]: "start" === k
                 }),
                 onMouseDown: en,
                 onKeyDown: ea,
@@ -278,13 +278,13 @@ var l = a("37983"),
                 "aria-valuemax": b.end - g.MIN_CLIP_DURATION_SECONDS,
                 "aria-label": E.default.Messages.CLIPS_CROP_START,
                 children: (0, l.jsx)("div", {
-                  className: N.cropLeftArrow
+                  className: L.cropLeftArrow
                 })
               })
             }), (0, l.jsx)(o.FocusRing, {
               children: (0, l.jsx)("button", {
-                className: i(N.dragHandleRight, {
-                  [N.dragging]: "end" === k
+                className: i(L.dragHandleRight, {
+                  [L.dragging]: "end" === k
                 }),
                 onMouseDown: en,
                 onKeyDown: el,
@@ -293,10 +293,10 @@ var l = a("37983"),
                 "aria-valuemin": b.start + g.MIN_CLIP_DURATION_SECONDS,
                 "aria-valuenow": b.end,
                 "aria-valuetext": M(b.end),
-                "aria-valuemax": null === (j = _.current) || void 0 === j ? void 0 : null === (L = j.videoElement) || void 0 === L ? void 0 : L.duration,
+                "aria-valuemax": null === (j = _.current) || void 0 === j ? void 0 : null === (N = j.videoElement) || void 0 === N ? void 0 : N.duration,
                 "aria-label": E.default.Messages.CLIPS_CROP_END,
                 children: (0, l.jsx)("div", {
-                  className: N.cropRightArrow
+                  className: L.cropRightArrow
                 })
               })
             })]

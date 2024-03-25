@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
 var i = n("446674"),
@@ -58,7 +58,7 @@ class c extends i.default.Store {
   }
 }
 c.displayName = "DimensionStore";
-var f = new c(r.default, {
+var _ = new c(r.default, {
   UPDATE_CHANNEL_DIMENSIONS: function(e) {
     let {
       channelId: t,

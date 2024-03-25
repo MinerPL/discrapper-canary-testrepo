@@ -17,7 +17,7 @@ var a = n("414456"),
   f = n("97347"),
   h = n("13798"),
   p = n("49111"),
-  g = n("707154");
+  g = n("589463");
 let m = {
   [p.GlobalKeybindActions.TOGGLE_MUTE]: {
     legacy: {

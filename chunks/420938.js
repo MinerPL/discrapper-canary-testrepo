@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var a = n("37983");
@@ -10,18 +10,18 @@ var l = n("77078"),
   r = n("587974"),
   s = n("315102"),
   i = n("782340"),
-  d = n("187886"),
-  u = e => {
+  d = n("270489"),
+  o = e => {
     var t;
     let {
       entry: n
     } = e, {
-      id: u,
-      icon: o,
+      id: o,
+      icon: u,
       name: c
     } = n, m = null !== (t = s.default.getGuildIconURL({
-      id: u,
-      icon: o,
+      id: o,
+      icon: u,
       size: 32
     })) && void 0 !== t ? t : void 0;
     return (0, a.jsxs)("div", {

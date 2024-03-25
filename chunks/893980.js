@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   trackProfilePanelViewed: function() {
     return u
   },
@@ -7,54 +7,54 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("373469"),
-  s = n("824563"),
-  r = n("27618"),
-  l = n("599110"),
-  a = n("49111");
+var n = r("373469"),
+  i = r("824563"),
+  s = r("27618"),
+  l = r("599110"),
+  a = r("49111");
 let u = e => {
     let {
       displayProfile: t,
-      isMobile: n,
-      loadDurationMs: i,
-      activity: s,
-      customStatusActivity: r,
+      isMobile: r,
+      loadDurationMs: n,
+      activity: i,
+      customStatusActivity: s,
       status: u
     } = e;
     l.default.track(a.AnalyticEvents.DM_PROFILE_VIEWED, {
-      has_mobile_indicator: n,
-      has_activity: null != s && (null == s ? void 0 : s.type) !== a.ActivityTypes.CUSTOM_STATUS,
-      has_game_activity: (null == s ? void 0 : s.type) === a.ActivityTypes.PLAYING,
-      load_duration_ms: i,
+      has_mobile_indicator: r,
+      has_activity: null != i && (null == i ? void 0 : i.type) !== a.ActivityTypes.CUSTOM_STATUS,
+      has_game_activity: (null == i ? void 0 : i.type) === a.ActivityTypes.PLAYING,
+      load_duration_ms: n,
       profile_user_status: u,
-      has_custom_status: null != r,
+      has_custom_status: null != s,
       has_profile_effect: null != t.profileEffectId,
-      ...c(t)
+      ...d(t)
     })
   },
   o = (e, t) => {
     l.default.track(a.AnalyticEvents.DM_PROFILE_TOGGLED, {
       is_profile_open: t,
-      ...c(e)
+      ...d(e)
     })
   },
-  c = e => {
+  d = e => {
     var t;
     if (null == e) return {};
-    let n = e.userId,
-      l = null != i.default.getAnyStreamForUser(n),
-      u = s.default.findActivity(n, e => {
+    let r = e.userId,
+      l = null != n.default.getAnyStreamForUser(r),
+      u = i.default.findActivity(r, e => {
         let {
           type: t
         } = e;
         return l ? t === a.ActivityTypes.PLAYING : t !== a.ActivityTypes.CUSTOM_STATUS
       }),
       o = null == u ? void 0 : u.assets,
-      c = r.default.isFriend(n);
+      d = s.default.isFriend(r);
     return {
       has_images: !!(null !== (t = null == o ? void 0 : o.large_image) && void 0 !== t ? t : null == o ? void 0 : o.small_image),
-      is_friend: c,
-      viewed_profile_user_id: n,
+      is_friend: d,
+      viewed_profile_user_id: r,
       profile_has_nitro_customization: e.hasPremiumCustomization(),
       profile_has_theme_color_customized: e.hasThemeColors(),
       profile_has_theme_animation: null != e.popoutAnimationParticleType

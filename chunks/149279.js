@@ -1,62 +1,62 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   Separator: function() {
     return o
   },
   Button: function() {
-    return d
+    return u
   },
   default: function() {
-    return u
+    return d
   }
 });
-var l = a("37983");
-a("884691");
-var s = a("414456"),
-  n = a.n(s),
-  i = a("77078"),
-  r = a("412066");
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("77078"),
+  r = n("323845");
 
 function o(e) {
   let {
     className: t
   } = e;
-  return (0, l.jsx)("div", {
-    className: n(t, r.separator)
+  return (0, i.jsx)("div", {
+    className: a(t, r.separator)
   })
 }
 
-function d(e) {
+function u(e) {
   let {
     onClick: t,
-    onContextMenu: a,
-    className: s,
+    onContextMenu: n,
+    className: l,
     selected: o = !1,
-    children: d,
-    disabled: u = !1,
+    children: u,
+    disabled: d = !1,
     dangerous: c,
-    ...m
+    ...f
   } = e;
-  return (0, l.jsx)(i.Clickable, {
-    onClick: u ? void 0 : t,
-    onContextMenu: u ? void 0 : a,
-    className: n(s, {
+  return (0, i.jsx)(s.Clickable, {
+    onClick: d ? void 0 : t,
+    onContextMenu: d ? void 0 : n,
+    className: a(l, {
       [r.button]: !0,
       [r.selected]: o,
-      [r.disabled]: u,
+      [r.disabled]: d,
       [r.dangerous]: c
     }),
-    ...m,
-    children: d
+    ...f,
+    children: u
   })
 }
-var u = function(e) {
+var d = function(e) {
   let {
     className: t,
-    children: a
+    children: n
   } = e;
-  return (0, l.jsx)("div", {
-    className: n(t, r.wrapper),
-    children: a
+  return (0, i.jsx)("div", {
+    className: a(t, r.wrapper),
+    children: n
   })
 }

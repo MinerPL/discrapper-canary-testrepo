@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("446674"),
+  l = s("884691"),
+  n = s("446674"),
   i = s("713841"),
   r = s("376556"),
   o = s("37785"),
@@ -16,26 +16,26 @@ var a = s("37983"),
   E = s("782340");
 
 function _(e) {
-  let t = (0, l.useStateFromStores)([u.default], () => u.default.getProps().integrations);
-  return n.useMemo(() => (function(e, t) {
-    var s, n, l, u;
+  let t = (0, n.useStateFromStores)([u.default], () => u.default.getProps().integrations);
+  return l.useMemo(() => (function(e, t) {
+    var s, l, n, u;
     let _;
     if (!e.managed) return null;
-    let T = null === (s = e.tags) || void 0 === s ? void 0 : s.bot_id,
-      I = null === (n = e.tags) || void 0 === n ? void 0 : n.integration_id,
-      S = (null === (l = e.tags) || void 0 === l ? void 0 : l.premium_subscriber) !== void 0,
-      N = (null === (u = e.tags) || void 0 === u ? void 0 : u.guild_connections) !== void 0;
-    if (null != T ? _ = null == t ? void 0 : t.find(e => {
+    let I = null === (s = e.tags) || void 0 === s ? void 0 : s.bot_id,
+      T = null === (l = e.tags) || void 0 === l ? void 0 : l.integration_id,
+      S = (null === (n = e.tags) || void 0 === n ? void 0 : n.premium_subscriber) !== void 0,
+      f = (null === (u = e.tags) || void 0 === u ? void 0 : u.guild_connections) !== void 0;
+    if (null != I ? _ = null == t ? void 0 : t.find(e => {
         var t;
         let {
           application: s
         } = e;
-        return (null == s ? void 0 : null === (t = s.bot) || void 0 === t ? void 0 : t.id) === T
-      }) : null != I && (_ = null == t ? void 0 : t.find(e => {
+        return (null == s ? void 0 : null === (t = s.bot) || void 0 === t ? void 0 : t.id) === I
+      }) : null != T && (_ = null == t ? void 0 : t.find(e => {
         let {
           id: t
         } = e;
-        return t === I
+        return t === T
       })), null != _ && null != _.application && null != _.name) {
       let e = _.application.id,
         t = _.name;
@@ -51,6 +51,6 @@ function _(e) {
         }, t)
       })
     }
-    return S ? E.default.Messages.MANAGED_ROLE_PREMIUM_SUBSCRIBER_EXPLANATION : N ? E.default.Messages.MANAGED_ROLE_GUILD_CONNECTIONS_EXPLANATION : E.default.Messages.MANAGED_ROLE_EXPLAINATION
+    return S ? E.default.Messages.MANAGED_ROLE_PREMIUM_SUBSCRIBER_EXPLANATION : f ? E.default.Messages.MANAGED_ROLE_GUILD_CONNECTIONS_EXPLANATION : E.default.Messages.MANAGED_ROLE_EXPLAINATION
   })(e, t), [e, t])
 }

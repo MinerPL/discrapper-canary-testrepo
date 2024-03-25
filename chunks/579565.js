@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getDropsExperiment: function() {
-    return f
+    return E
   },
   getDropsExperimentForDrop: function() {
-    return E
+    return f
   },
   doesGameTitleMatchList: function() {
     return _
@@ -42,27 +42,27 @@ n.r(t), n.d(t, {
 });
 var s = n("866227"),
   l = n.n(s),
-  a = n("845579"),
-  i = n("546463"),
-  r = n("568307"),
+  a = n("161454"),
+  i = n("845579"),
+  r = n("546463"),
   o = n("718517"),
   u = n("931115"),
   d = n("411511"),
   c = n("782340");
 
-function f(e) {
+function E(e) {
   let t = C(e);
-  return null == t ? null : E(t)
+  return null == t ? null : f(t)
 }
 
-function E(e) {
+function f(e) {
   if (e.dropsQuestId === d.FORTNITE_QUEST_ID) return u.DropsForGoLiveFortniteExperiment;
   return null
 }
 
 function _(e, t) {
   if (null == e) return !1;
-  let n = i.default.getGameByName(e);
+  let n = r.default.getGameByName(e);
   return !!(null != n && t.some(e => {
     var t;
     return e.toLowerCase() === (null == n ? void 0 : null === (t = n.name) || void 0 === t ? void 0 : t.toLowerCase())
@@ -87,7 +87,7 @@ function I(e, t, n) {
 }
 
 function m(e) {
-  let t = r.default.getGamesSeen(!1);
+  let t = a.default.getGamesSeen(!1);
   return I(e, t, T())
 }
 
@@ -101,12 +101,12 @@ function N(e, t) {
 function p(e) {
   var t;
   let n = C(e);
-  if (null == n || !(null === (t = f(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
+  if (null == n || !(null === (t = E(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
       autoTrackExposure: !1
     }).dropsEnabled)) return !1;
-  let s = a.DropsOptedOut.getSetting(),
+  let s = i.DropsOptedOut.getSetting(),
     l = N(n, !0);
   return !s && l
 }
@@ -114,14 +114,14 @@ function p(e) {
 function S(e) {
   var t, n;
   let s = C(e);
-  if (null == s || !(null === (n = f(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
+  if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
       location: "2"
     }, {
       autoTrackExposure: !1
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
-  let l = a.DropsOptedOut.getSetting(),
-    i = N(s, !1);
-  return A(s) && !l && i
+  let l = i.DropsOptedOut.getSetting(),
+    a = N(s, !1);
+  return A(s) && !l && a
 }
 
 function A(e) {

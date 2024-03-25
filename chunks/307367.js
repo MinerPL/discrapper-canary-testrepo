@@ -8,9 +8,9 @@ var r = n("37983"),
   i = n("884691"),
   s = n("748820"),
   l = n("872717"),
-  u = n("850068"),
-  a = n("253981"),
-  o = n("635357"),
+  a = n("850068"),
+  o = n("253981"),
+  u = n("635357"),
   d = n("642906"),
   c = n("85336"),
   p = n("149833"),
@@ -30,21 +30,21 @@ function _(e) {
     contextMetadata: C
   } = (0, d.usePaymentContext)(), {
     isGift: I
-  } = (0, o.useGiftContext)(), [T, h] = i.useState(!1);
+  } = (0, u.useGiftContext)(), [T, h] = i.useState(!1);
   return i.useEffect(() => {
     var e;
-    !T && (h(!0), (0, u.startBrowserCheckout)(C.loadId), ! function(e, t, n, r) {
+    !T && (h(!0), (0, a.startBrowserCheckout)(C.loadId), ! function(e, t, n, r) {
       let i = P.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n),
-        u = new URL(a.default.makeUrl(P.Routes.BILLING_LOGIN_HANDOFF)),
-        o = (0, s.v4)();
-      u.searchParams.append("handoff_key", o), u.searchParams.append("redirect_to", i), l.HTTP.post({
+        a = new URL(o.default.makeUrl(P.Routes.BILLING_LOGIN_HANDOFF)),
+        u = (0, s.v4)();
+      a.searchParams.append("handoff_key", u), a.searchParams.append("redirect_to", i), l.HTTP.post({
         url: P.Endpoints.HANDOFF,
         body: {
-          key: o
+          key: u
         },
         oldFormErrors: !0
       }).then(e => {
-        u.searchParams.append("handoff_token", e.body.handoff_token), window.open(u.href)
+        a.searchParams.append("handoff_token", e.body.handoff_token), window.open(a.href)
       }, () => {
         r()
       })

@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   GRID_POST_CONTROLS_MARGIN: function() {
     return r
   },
@@ -19,8 +19,8 @@ s.r(t), s.d(t, {
     return c
   }
 });
-var a = s("627445"),
-  n = s.n(a);
+var s = a("627445"),
+  n = a.n(s);
 let l = 2 / 3,
   r = 12;
 class i {
@@ -33,20 +33,20 @@ class i {
       columnWidth: this.minWidth
     };
     let t = e / this.maxWidth,
-      s = e / this.minWidth,
-      a = Math.max(Math.floor(t + (s - t) / 2), 1),
-      n = this.gap * (a - 1);
+      a = e / this.minWidth,
+      s = Math.max(Math.floor(t + (a - t) / 2), 1),
+      n = this.gap * (s - 1);
     return {
-      columns: a,
-      columnWidth: (e - n) / a
+      columns: s,
+      columnWidth: (e - n) / s
     }
   }
   constructor({
     minWidth: e,
     maxWidth: t,
-    gap: s
+    gap: a
   }) {
-    n(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = s
+    n(e < t, "minWidth needs to be smaller than maxWidth"), this.minWidth = e, this.maxWidth = t, this.gap = a
   }
 }
 let o = {

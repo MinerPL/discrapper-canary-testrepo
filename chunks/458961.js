@@ -1,17 +1,17 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("719726");
+  l = s("719726");
 
-function l(e) {
-  let [t, s] = a.useState(!0), [l, i] = a.useState(), [r, o] = a.useState(), d = a.useCallback(async e => {
+function n(e) {
+  let [t, s] = a.useState(!0), [n, i] = a.useState(), [r, o] = a.useState(), d = a.useCallback(async e => {
     s(!0), i(void 0);
     try {
-      let t = await n.fetchHighlightedCreatorGuildDetails(e);
+      let t = await l.fetchHighlightedCreatorGuildDetails(e);
       o(t)
     } catch (e) {
       i(e)
@@ -23,7 +23,7 @@ function l(e) {
     d(e)
   }, [e, d]), {
     isLoading: t,
-    error: l,
+    error: n,
     highlightedCreatorDetails: r
   }
 }

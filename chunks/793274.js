@@ -10,8 +10,8 @@ n("70102"), e.exports = function(e) {
     set: function(e) {
       var i = n(e);
       if (!i) throw Error("setId required the element to have a resize detection state.");
-      var o = t.generate();
-      return i.id = o, o
+      var r = t.generate();
+      return i.id = r, r
     }
   }
 }

@@ -1,27 +1,27 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   canSelectedVoiceChannelUseSoundboard: function() {
-    return a
+    return r
   },
   default: function() {
-    return d
+    return o
   }
 });
-var u = t("42203"),
-  l = t("957255"),
-  i = t("18494"),
-  o = t("49111");
+var i = n("42203"),
+  l = n("957255"),
+  a = n("18494"),
+  s = n("49111");
 
-function a() {
-  let e = i.default.getVoiceChannelId(),
-    n = u.default.getChannel(e);
-  return d(n)
+function r() {
+  let e = a.default.getVoiceChannelId(),
+    t = i.default.getChannel(e);
+  return o(t)
 }
 
-function d(e) {
+function o(e) {
   if (null == e) return !1;
-  if (o.ChannelTypesSets.CALLABLE.has(e.type)) return !0;
-  let n = l.default.can(o.Permissions.USE_SOUNDBOARD, e),
-    t = l.default.can(o.Permissions.SPEAK, e);
-  return e.type === o.ChannelTypes.GUILD_VOICE && n && t
+  if (s.ChannelTypesSets.CALLABLE.has(e.type)) return !0;
+  let t = l.default.can(s.Permissions.USE_SOUNDBOARD, e),
+    n = l.default.can(s.Permissions.SPEAK, e);
+  return e.type === s.ChannelTypes.GUILD_VOICE && t && n
 }

@@ -10,7 +10,7 @@ var l = a("37983"),
   i = a("603371"),
   d = a("208695"),
   r = a("782340"),
-  u = a("923254"),
+  u = a("840741"),
   o = n.memo(function(e) {
     let {
       guildId: t,
@@ -30,7 +30,7 @@ var l = a("37983"),
           }
         }
       }, [o, m]), 0 === o.length) return null;
-    let v = o[0].id;
+    let S = o[0].id;
     return (0, l.jsx)(l.Fragment, {
       children: o.map((t, a) => {
         if (null != h && a > h && !_) return null;
@@ -43,7 +43,7 @@ var l = a("37983"),
           f = n && null != i && !_;
         return (0, l.jsx)(d.GuildFeedMessage, {
           message: t,
-          groupId: v,
+          groupId: S,
           ...e,
           contentClassName: f ? i : void 0,
           children: f ? (0, l.jsx)(s.Clickable, {

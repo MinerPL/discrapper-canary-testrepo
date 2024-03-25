@@ -12,7 +12,7 @@ var l = n("414456"),
   r = n("780571"),
   o = n("497880"),
   u = n("93332"),
-  d = n("97194");
+  d = n("93792");
 
 function c(e) {
   let {
@@ -20,8 +20,8 @@ function c(e) {
     channel: n,
     content: l,
     className: c,
-    compact: f,
-    popoutProps: E,
+    compact: E,
+    popoutProps: f,
     hideTimestamp: _ = !1,
     withFooter: T = !1,
     ...I
@@ -30,16 +30,16 @@ function c(e) {
     className: a({
       [d.withFooter]: T
     }, d.embedCard, {
-      [d.compact]: f
+      [d.compact]: E
     }, c),
     children: (0, s.jsx)(r.default, {
       ...I,
       className: a(d.messageContainer, {
-        [d.compact]: f
+        [d.compact]: E
       }),
       childrenMessageContent: (0, s.jsx)(o.default, {
         className: a(d.messageContent, {
-          [d.compact]: f
+          [d.compact]: E
         }),
         message: t,
         content: l
@@ -49,14 +49,14 @@ function c(e) {
         channel: n,
         author: m,
         guildId: null == n ? void 0 : n.guild_id,
-        compact: f,
+        compact: E,
         hideTimestamp: _,
         className: a(d.header, {
-          [d.compact]: f
+          [d.compact]: E
         }),
-        ...null != E ? E : {}
+        ...null != f ? f : {}
       }),
-      compact: f
+      compact: E
     })
   })
 }

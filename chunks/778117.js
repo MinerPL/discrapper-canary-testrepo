@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("629109"),
   s = n("42887"),
-  i = n("13798"),
-  l = n("861309"),
+  l = n("13798"),
+  i = n("861309"),
   r = n("716724"),
   o = n("492249"),
   u = n("49111"),
@@ -15,7 +15,7 @@ var a = n("629109"),
 
 function c(e) {
   let t = e.application.id;
-  if (null == t) throw new l.default({
+  if (null == t) throw new i.default({
     errorCode: u.RPCErrors.INVALID_COMMAND
   }, "No application.");
   return t
@@ -36,13 +36,13 @@ var f = {
         socket: t,
         args: {
           input_mode: n,
-          self_mute: l,
+          self_mute: i,
           self_deaf: r
         }
       } = e, o = c(t);
       null != n && a.default.setMode(n.type, {
-        shortcut: (0, i.toCombo)(n.shortcut)
-      }, o), null != l && l !== s.default.isSelfMute(o) && a.default.toggleSelfMute({
+        shortcut: (0, l.toCombo)(n.shortcut)
+      }, o), null != i && i !== s.default.isSelfMute(o) && a.default.toggleSelfMute({
         context: o
       }), null != r && r !== s.default.isSelfDeaf(o) && a.default.toggleSelfDeaf({
         context: o
@@ -61,11 +61,11 @@ var f = {
         socket: t,
         args: {
           user_id: n,
-          mute: i,
-          volume: l
+          mute: l,
+          volume: i
         }
       } = e, r = c(t);
-      null != i && i !== s.default.isLocalMute(n, r) && a.default.toggleLocalMute(n, r), null != l && a.default.setLocalVolume(n, l, r)
+      null != l && l !== s.default.isLocalMute(n, r) && a.default.toggleLocalMute(n, r), null != i && a.default.setLocalVolume(n, i, r)
     }
   },
   [u.RPCCommands.PUSH_TO_TALK]: {

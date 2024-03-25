@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -9,11 +9,11 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("748820"),
-  o = n("469563"),
-  u = n("733154"),
+  u = n("469563"),
+  o = n("733154"),
   d = n("77078"),
   c = n("996496"),
-  f = n("574586");
+  f = n("881242");
 
 function h(e) {
   let {
@@ -21,7 +21,7 @@ function h(e) {
     height: n = 24,
     isBadged: s = !1,
     isTyping: i = !1
-  } = e, [c] = l.useState(() => (0, r.v4)()), f = (0, o.useRedesignIconContext)().enabled;
+  } = e, [c] = l.useState(() => (0, r.v4)()), f = (0, u.useRedesignIconContext)().enabled;
   return (0, a.jsxs)("svg", {
     width: t,
     height: n,
@@ -50,7 +50,7 @@ function h(e) {
       })
     }), f ? (0, a.jsx)("g", {
       mask: "url(#".concat(c, ")"),
-      children: (0, a.jsx)(u.ChatIcon, {
+      children: (0, a.jsx)(o.ChatIcon, {
         width: t,
         height: n,
         color: "currentColor"
@@ -63,22 +63,22 @@ function h(e) {
   })
 }
 
-function p(e) {
+function m(e) {
   var t;
   let {
     className: n,
     unreadCount: l,
     mentionCount: s,
     isTyping: r,
-    canBadge: o
-  } = e, u = null != s && s > 0, d = null !== (t = u ? s : l) && void 0 !== t ? t : 0, p = o && null != l && l > 0;
+    canBadge: u
+  } = e, o = null != s && s > 0, d = null !== (t = o ? s : l) && void 0 !== t ? t : 0, m = u && null != l && l > 0;
   return (0, a.jsxs)("div", {
     className: i(f.chatIcon, n),
     children: [(0, a.jsx)(h, {
-      isBadged: p,
+      isBadged: m,
       isTyping: r
-    }), p && (0, a.jsx)(c.default, {
-      hasMentions: u,
+    }), m && (0, a.jsx)(c.default, {
+      hasMentions: o,
       truncatedCount: d > 99 ? "99+" : d,
       className: f.badge
     })]

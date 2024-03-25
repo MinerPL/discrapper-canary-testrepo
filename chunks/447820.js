@@ -6,12 +6,12 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("185709"),
-  l = s("260928"),
+var l = s("185709"),
+  n = s("260928"),
   i = s("67310"),
   r = s("296416"),
   o = s("782340"),
-  d = s("452938");
+  d = s("334568");
 
 function u(e) {
   let {
@@ -29,7 +29,7 @@ function u(e) {
       }), (0, a.jsx)(i.default, {
         step: 2,
         header: o.default.Messages.GUILD_AUTOMOD_ACTIONS_HEADER,
-        children: (0, a.jsx)(n.default, {
+        children: (0, a.jsx)(l.default, {
           rule: t,
           onChangeRule: s
         })
@@ -38,7 +38,7 @@ function u(e) {
       }), (0, a.jsx)(i.default, {
         step: 3,
         header: o.default.Messages.GUILD_AUTOMOD_EXEMPTION_HEADER,
-        children: (0, a.jsx)(l.default, {
+        children: (0, a.jsx)(n.default, {
           rule: t,
           onChangeRule: s
         })

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   },
   StoreEmbedWithoutDimensions: function() {
     return P
@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("901582"),
   d = n("658457"),
   c = n("359606"),
-  f = n("883610"),
-  E = n("4919"),
+  E = n("883610"),
+  f = n("4919"),
   _ = n("86621"),
   T = n("737960"),
   I = n("299285"),
@@ -28,7 +28,7 @@ var s = n("37983"),
   A = n("271560"),
   C = n("49111"),
   h = n("782340"),
-  g = n("640492");
+  g = n("728495");
 class M extends l.Component {
   get analyticsLocation() {
     let {
@@ -67,8 +67,8 @@ class M extends l.Component {
       width: n,
       fetchFailed: l,
       renderFallback: i
-    } = this.props, r = n > E.HORIZONTAL_EMBED_BREAKPOINT;
-    if (null == e || null == t) return l ? i() : (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
+    } = this.props, r = n > f.HORIZONTAL_EMBED_BREAKPOINT;
+    if (null == e || null == t) return l ? i() : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
     return e.productLine === C.SKUProductLines.COLLECTIBLES ? (0, s.jsx)(u.default, {
@@ -125,8 +125,8 @@ class M extends l.Component {
       } = this.props, {
         playing: o,
         muted: u
-      } = this.state, d = l > E.HORIZONTAL_EMBED_BREAKPOINT;
-      return (0, s.jsx)(f.default, {
+      } = this.state, d = l > f.HORIZONTAL_EMBED_BREAKPOINT;
+      return (0, s.jsx)(E.default, {
         sku: e,
         storeListing: t,
         playing: o,
@@ -191,6 +191,6 @@ function R(e) {
     libraryApplication: null != n ? m.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let L = (0, T.default)((0, _.default)(M));
-var v = i.default.connectStores(O, R)(L);
+let v = (0, T.default)((0, _.default)(M));
+var L = i.default.connectStores(O, R)(v);
 let P = (0, _.default)(i.default.connectStores(O, R)(M))

@@ -1,33 +1,33 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 
-function l(e, t, n) {
+function i(e, t, n) {
   let {
-    onChange: l
-  } = e, i = !1, r = !1;
+    onChange: i
+  } = e, l = !1, a = !1;
   return e.onChange = () => {
-    if (i) {
-      r = !0;
+    if (l) {
+      a = !0;
       return
     }
-    i = !0;
+    l = !0;
     try {
       let e = 0;
       do {
-        if (r = !1, e++ >= 5) break;
+        if (a = !1, e++ >= 5) break;
         null == t || t();
         try {
-          l()
+          i()
         } finally {
           null == n || n()
         }
-      } while (r)
+      } while (a)
     } finally {
-      i = !1
+      l = !1
     }
   }, e
 }

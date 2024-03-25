@@ -5,30 +5,30 @@ s.r(t), s.d(t, {
   }
 }), s("222007"), s("808653"), s("424973");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("448105"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("448105"),
+  i = s.n(n),
   r = s("77078"),
   o = s("6466");
-class d extends n.PureComponent {
+class d extends l.PureComponent {
   render() {
     let {
       label: e,
       value: t,
       popoutProps: s,
-      renderValue: n,
-      className: l
+      renderValue: l,
+      className: n
     } = this.props;
     return (0, a.jsx)(r.Popout, {
       ...s,
       renderPopout: this.renderPopout,
       children: s => (0, a.jsx)(r.Clickable, {
         ...s,
-        className: l,
+        className: n,
         children: (0, a.jsx)(o.default, {
           label: e,
           value: t,
-          renderValue: n
+          renderValue: l
         })
       })
     })
@@ -39,21 +39,21 @@ class d extends n.PureComponent {
         items: t,
         renderItem: s
       } = this.props;
-      return t.reduce((t, a, n) => (i(e.toLowerCase(), a.label.toLowerCase()) && t.push(s(a, n)), t), [])
+      return t.reduce((t, a, l) => (i(e.toLowerCase(), a.label.toLowerCase()) && t.push(s(a, l)), t), [])
     }, this.renderPopout = e => {
       let {
         closePopout: t
       } = e, {
         placeholder: s,
-        popoutClassName: n,
-        onChange: l,
+        popoutClassName: l,
+        onChange: n,
         value: i
       } = this.props;
       return (0, a.jsx)(r.ComboboxPopout, {
-        className: n,
+        className: l,
         placeholder: s,
         value: new Set([i.value]),
-        onChange: l,
+        onChange: n,
         onClose: t,
         children: e => this.renderItems(e)
       })

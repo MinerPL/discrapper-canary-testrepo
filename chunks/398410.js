@@ -9,8 +9,8 @@ s.r(t), s.d(t, {
 }), s("222007"), s("424973"), s("808653");
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("656038"),
+var l = s("446674"),
+  n = s("656038"),
   i = s("923959"),
   r = s("644583"),
   o = s("49111");
@@ -18,12 +18,12 @@ var n = s("446674"),
 function d(e, t) {
   let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-    d = (0, n.useStateFromStoresArray)([i.default], () => {
-      let n = i.default.getChannels(e)[o.ChannelTypes.GUILD_CATEGORY],
+    d = (0, l.useStateFromStoresArray)([i.default], () => {
+      let l = i.default.getChannels(e)[o.ChannelTypes.GUILD_CATEGORY],
         d = [...i.default.getChannels(e)[i.GUILD_SELECTABLE_CHANNELS_KEY], ...i.default.getChannels(e)[i.GUILD_VOCAL_CHANNELS_KEY]],
         u = [],
         c = {};
-      n.forEach(e => {
+      l.forEach(e => {
         let {
           channel: t,
           comparator: s
@@ -34,14 +34,14 @@ function d(e, t) {
         }))
       }), d.forEach(e => {
         let {
-          channel: n,
+          channel: l,
           comparator: i
         } = e;
-        if (!(n.isThread() || t.has(n.id) || n.isGuildStageVoice() && !a)) !(!s && (0, l.default)(n)) && (null == n.parent_id ? u.push({
-          channel: n,
+        if (!(l.isThread() || t.has(l.id) || l.isGuildStageVoice() && !a)) !(!s && (0, n.default)(l)) && (null == l.parent_id ? u.push({
+          channel: l,
           comparator: i
-        }) : (null == c[n.parent_id] && (c[n.parent_id] = []), c[n.parent_id].push({
-          channel: n,
+        }) : (null == c[l.parent_id] && (c[l.parent_id] = []), c[l.parent_id].push({
+          channel: l,
           comparator: i
         })))
       });
@@ -50,18 +50,18 @@ function d(e, t) {
           comparator: s,
           channel: a
         } = e, {
-          comparator: n,
-          channel: l
+          comparator: l,
+          channel: n
         } = t;
-        return a.isCategory() && !l.isCategory() ? 1 : !a.isCategory() && l.isCategory() ? -1 : n - s
+        return a.isCategory() && !n.isCategory() ? 1 : !a.isCategory() && n.isCategory() ? -1 : l - s
       }).reduce((e, s) => {
         let {
           channel: a
         } = s;
         if (a.isGuildStageVoice() || a.isThread() || t.has(a.id)) return e;
         e.push((0, r.channelToPendingAddition)(a).row);
-        let n = c[a.id];
-        return null != n && n.length > 0 && n.forEach(t => {
+        let l = c[a.id];
+        return null != l && l.length > 0 && l.forEach(t => {
           let {
             channel: s
           } = t;
@@ -77,8 +77,8 @@ function u(e) {
   let {
     guildId: t,
     selectedChannelIds: s,
-    onChange: n,
-    placeholder: l,
+    onChange: l,
+    placeholder: n,
     includeRoleRestrictedPrivateChannels: i = !1,
     includeStageVoiceChannels: o = !1,
     helperText: u,
@@ -88,8 +88,8 @@ function u(e) {
     channelRows: E,
     guildId: t,
     selectedChannelIds: s,
-    onChange: (e, t) => n(e),
-    placeholder: l,
+    onChange: (e, t) => l(e),
+    placeholder: n,
     helperText: u,
     className: c
   })

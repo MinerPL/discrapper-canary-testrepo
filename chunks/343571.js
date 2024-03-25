@@ -16,17 +16,17 @@ var l = n("469563"),
       color: l = "currentColor",
       slashColor: s,
       className: r,
-      foreground: o,
-      ...u
+      foreground: u,
+      ...o
     } = e;
     return (0, a.jsxs)("svg", {
-      ...(0, i.default)(u),
+      ...(0, i.default)(o),
       className: r,
       width: t,
       height: n,
       viewBox: "0 0 24 24",
       children: [(0, a.jsx)("path", {
-        className: o,
+        className: u,
         fill: l,
         fillRule: "evenodd",
         clipRule: "evenodd",

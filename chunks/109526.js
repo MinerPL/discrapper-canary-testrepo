@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("808653");
 var a = n("37983");
@@ -10,33 +10,33 @@ var l = n("446674"),
   s = n("669491"),
   i = n("77078"),
   r = n("817963"),
-  o = n("42203"),
-  u = n("943232"),
+  u = n("42203"),
+  o = n("943232"),
   d = n("374021"),
   c = n("398604"),
   f = n("534222"),
   h = n("822516"),
-  p = n("888237"),
-  m = n("782340"),
-  E = n("571835");
+  m = n("888237"),
+  p = n("782340"),
+  E = n("647270");
 
-function C(e) {
+function g(e) {
   let {
     channelId: t
-  } = e, C = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(t), [t]), g = (0, f.useImminentUpcomingGuildEvents)(t), S = null != (0, f.useActiveEvent)(t), {
+  } = e, g = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(t), [t]), S = (0, f.useImminentUpcomingGuildEvents)(t), C = null != (0, f.useActiveEvent)(t), {
     canManageGuildEvent: _
-  } = (0, r.useManageResourcePermissions)(C), I = (0, l.useStateFromStoresObject)([c.default], () => g.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
-  return g.length < 1 || S ? null : (0, a.jsx)(a.Fragment, {
-    children: g.map(e => (0, a.jsx)(p.default, {
-      icon: (0, a.jsx)(u.default, {
+  } = (0, r.useManageResourcePermissions)(g), I = (0, l.useStateFromStoresObject)([c.default], () => S.reduce((e, t) => (e[t.id] = c.default.getUserCount(t.id, (0, h.getNextRecurrenceIdInEvent)(t)), e), {}));
+  return S.length < 1 || C ? null : (0, a.jsx)(a.Fragment, {
+    children: S.map(e => (0, a.jsx)(m.default, {
+      icon: (0, a.jsx)(o.default, {
         height: 20,
         width: 20
       }),
       color: s.default.unsafe_rawColors.GREEN_360.css,
-      title: (_(e) ? m.default.Messages.GUILD_EVENT_START_PROMPT : m.default.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
+      title: (_(e) ? p.default.Messages.GUILD_EVENT_START_PROMPT : p.default.Messages.GUILD_EVENT_UPCOMING_PROMPT).format({
         eventName: e.name
       }),
-      description: m.default.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
+      description: p.default.Messages.GUILD_EVENT_START_PROMPT_DESCRIPTION.format({
         startTime: (0, h.getEventTimeData)(e.scheduled_start_time).startDateTimeString
       }),
       onClick: () => {

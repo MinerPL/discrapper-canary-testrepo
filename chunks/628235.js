@@ -15,32 +15,32 @@ var a = s("37983"),
   c = s("920636"),
   S = s("583227"),
   E = s("878720"),
-  f = s("601745"),
-  T = s("685223"),
-  m = s("271938"),
-  _ = s("650893"),
+  T = s("601745"),
+  f = s("685223"),
+  _ = s("271938"),
+  m = s("650893"),
   g = s("697218"),
   h = s("145131"),
-  I = s("306160"),
-  N = s("222038"),
+  N = s("306160"),
+  I = s("222038"),
   p = s("462369"),
   C = s("803163"),
   A = s("49111"),
   O = s("482931"),
   x = s("782340"),
-  R = s("374204"),
-  M = s("926622");
+  R = s("858429"),
+  M = s("890957");
 
-function v(e) {
+function D(e) {
   let {
     code: {
       code: t,
       consumed: s
     }
   } = e, l = "".concat(t.substr(0, 4), "-").concat(t.substr(4)), i = n.useRef(null), r = n.useCallback(e => {
-    if ("c" === e.key && e.metaKey && I.SUPPORTS_COPY) {
+    if ("c" === e.key && e.metaKey && N.SUPPORTS_COPY) {
       var t;
-      e.preventDefault(), e.stopPropagation(), (0, I.copy)(l), null == i || null === (t = i.current) || void 0 === t || t.focus()
+      e.preventDefault(), e.stopPropagation(), (0, N.copy)(l), null == i || null === (t = i.current) || void 0 === t || t.focus()
     }
   }, [l]);
   return (0, a.jsx)("li", {
@@ -62,7 +62,7 @@ function v(e) {
     })
   })
 }
-class D extends n.PureComponent {
+class v extends n.PureComponent {
   maskPhoneNumber(e) {
     return null == e ? "" : "".concat("*".repeat(e.length - 4)).concat(e.slice(-4))
   }
@@ -146,7 +146,7 @@ class D extends n.PureComponent {
           children: x.default.Messages.TWO_FA_DOWNLOAD_CODES
         })
       });
-      let n = e => e.map(e => (0, a.jsx)(v, {
+      let n = e => e.map(e => (0, a.jsx)(D, {
         code: e
       }, e.code));
       e = (0, a.jsxs)(o.FormSection, {
@@ -207,7 +207,7 @@ class D extends n.PureComponent {
             children: x.default.Messages.TWO_FA_ENABLE
           })
         })]
-      }), e, this.renderMFASMS(), (0, a.jsx)(T.default, {})]
+      }), e, this.renderMFASMS(), (0, a.jsx)(f.default, {})]
     })
   }
   renderDisabled() {
@@ -223,14 +223,14 @@ class D extends n.PureComponent {
           size: o.ButtonSizes.SMALL,
           children: x.default.Messages.TWO_FA_ENABLE
         })
-      }), (0, a.jsx)(T.default, {})]
+      }), (0, a.jsx)(f.default, {})]
     })
   }
   render() {
     let {
       currentUser: e
     } = this.props;
-    return N.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
+    return I.hasCrypto ? e.verified ? e.mfaEnabled ? this.renderEnabled() : this.renderDisabled() : (0, a.jsx)(o.FormSection, {
       title: x.default.Messages.TWO_FA,
       children: (0, a.jsx)(o.FormText, {
         type: o.FormText.Types.DESCRIPTION,
@@ -246,7 +246,7 @@ class D extends n.PureComponent {
   }
   openPhoneVerificationModal() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, o.openModal)(t => (0, a.jsx)(f.default, {
+    (0, o.openModal)(t => (0, a.jsx)(T.default, {
       reason: E.ChangePhoneReason.USER_SETTINGS_UPDATE,
       ...t,
       ...e
@@ -265,7 +265,7 @@ class D extends n.PureComponent {
     }, this.handleDisableMFA = () => {
       d.default.disable()
     }, this.generateBackupCodes = async () => {
-      let e = _.default.getVerificationKey();
+      let e = m.default.getVerificationKey();
       await d.default.confirmViewBackupCodes(e, !0)
     }, this.sendMFABackupCodesVerificationKeyEmail = () => {
       (0, o.openModal)(e => (0, a.jsx)(S.default, {
@@ -331,11 +331,11 @@ class D extends n.PureComponent {
 function L(e) {
   let t = (0, r.useStateFromStores)([g.default], () => g.default.getCurrentUser());
   i(null != t, "TwoFactorAuth: currentUser cannot be undefined");
-  let s = (0, r.useStateFromStoresObject)([_.default, m.default], () => ({
-    togglingSMS: _.default.togglingSMS,
-    hasTOTPEnabled: m.default.hasTOTPEnabled()
+  let s = (0, r.useStateFromStoresObject)([m.default, _.default], () => ({
+    togglingSMS: m.default.togglingSMS,
+    hasTOTPEnabled: _.default.hasTOTPEnabled()
   }));
-  return (0, a.jsx)(D, {
+  return (0, a.jsx)(v, {
     currentUser: t,
     ...s,
     ...e

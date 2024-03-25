@@ -8,7 +8,7 @@ var l = a("37983"),
   n = a("884691"),
   s = a("414456"),
   i = a.n(s),
-  d = a("907002"),
+  d = a("146606"),
   r = a("819855"),
   u = a("77078"),
   o = a("841098"),
@@ -17,12 +17,12 @@ var l = a("37983"),
   m = a("945330"),
   h = a("302120"),
   E = a("782340"),
-  g = a("710611"),
+  g = a("453236"),
   I = a("499255"),
   _ = a("704936"),
   x = a("465988"),
-  v = a("526954"),
-  S = a("35296"),
+  S = a("526954"),
+  v = a("35296"),
   C = a("344665"),
   N = a("93556"),
   p = a("118913"),
@@ -60,8 +60,8 @@ let b = [{
   value: h.GuildFeedbackRating.GOOD,
   altDescription: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_GOOD
 }, {
-  light: S,
-  dark: v,
+  light: v,
+  dark: S,
   selected: C,
   value: h.GuildFeedbackRating.EXCELLENT,
   altDescription: () => E.default.Messages.GUILD_FEED_FEEDBACK_RATING_EXCELLENT,
@@ -122,7 +122,7 @@ function G(e) {
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     selectedRating: t,
     setSelectedRating: a,
@@ -160,7 +160,7 @@ function O(e) {
   })
 }
 
-function y(e) {
+function O(e) {
   var t;
   let {
     selectedRating: a,
@@ -227,22 +227,22 @@ function k(e) {
     onBackPressed: I,
     onClosePressed: _,
     showSubmitted: x,
-    canSubmit: v,
-    isAnimating: S,
+    canSubmit: S,
+    isAnimating: v,
     useReducedMotion: C
   } = (0, c.useGuildFeedFeedback)(e);
-  return x ? (a = !1, t = (0, l.jsx)(H, {})) : null == n || h || S ? (a = !1, t = (0, l.jsx)(O, {
+  return x ? (a = !1, t = (0, l.jsx)(H, {})) : null == n || h || v ? (a = !1, t = (0, l.jsx)(y, {
     disableAnimation: h || C,
     selectedRating: n,
     setSelectedRating: s
-  })) : (a = !0, t = (0, l.jsx)(y, {
+  })) : (a = !0, t = (0, l.jsx)(O, {
     selectedRating: n,
     selectedReasons: d,
     onSelectedReasons: r,
     onUserFeedbackChanged: o,
     onBackPressed: I,
     onSubmitPressed: E,
-    canSubmit: v
+    canSubmit: S
   })), (0, l.jsx)("div", {
     className: g.parentContainer,
     onClick: e => e.stopPropagation(),

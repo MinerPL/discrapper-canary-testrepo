@@ -1,7 +1,7 @@
 "use strict";
 i.r(e), i.d(e, {
   shouldShowNitroBadge: function() {
-    return n
+    return a
   }
 });
 var l = i("862205");
@@ -30,7 +30,7 @@ let r = (0, l.createExperiment)({
   }]
 });
 
-function n(t, e) {
+function a(t, e) {
   let i = r.getCurrentConfig({
     location: e
   }, {

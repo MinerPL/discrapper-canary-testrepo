@@ -1,38 +1,38 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
-var r = n("37983");
-n("884691");
-var a = n("469563"),
-  s = n("308472"),
-  i = n("75196"),
-  l = (0, a.replaceIcon)(function(e) {
+var s = r("37983");
+r("884691");
+var n = r("469563"),
+  l = r("308472"),
+  i = r("75196"),
+  a = (0, n.replaceIcon)(function(e) {
     let {
       width: t = 24,
-      height: n = 24,
-      color: a = "currentColor",
-      foreground: s,
-      ...l
+      height: r = 24,
+      color: n = "currentColor",
+      foreground: l,
+      ...a
     } = e;
-    return (0, r.jsx)("svg", {
-      ...(0, i.default)(l),
+    return (0, s.jsx)("svg", {
+      ...(0, i.default)(a),
       width: t,
-      height: n,
+      height: r,
       viewBox: "0 0 24 24",
-      children: (0, r.jsx)("g", {
+      children: (0, s.jsx)("g", {
         fill: "none",
         fillRule: "evenodd",
         transform: "translate(2 6)",
-        children: (0, r.jsx)("path", {
-          className: s,
-          fill: a,
+        children: (0, s.jsx)("path", {
+          className: l,
+          fill: n,
           d: "M14 0l2.29 2.29-4.88 4.88-4-4L0 10.59 1.41 12l6-6 4 4 6.3-6.29L20 6V0z"
         })
       })
     })
-  }, s.AnalyticsIcon, void 0, {
+  }, l.AnalyticsIcon, void 0, {
     size: 24
   })

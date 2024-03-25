@@ -1,15 +1,15 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   BROADCASTING_GUILDS_MAX_MEMBER_COUNT: function() {
-    return a
+    return l
   },
   BROADCASTING_MAX_ALLOWED_GUILD_IDS: function() {
     return n
   },
   BROADCASTING_MAX_ALLOWED_USER_IDS: function() {
-    return s
+    return r
   }
 });
-let a = 200,
+let l = 200,
   n = 10,
-  s = 10
+  r = 10

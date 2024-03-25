@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("446674"),
-  n = s("913144"),
-  l = s("900938"),
+  l = s("913144"),
+  n = s("900938"),
   i = s("772871"),
   r = s("49111");
 let o = i.GuildSettingsSafetyPage.OVERVIEW,
@@ -40,10 +40,10 @@ class c extends a.default.Store {
   }
 }
 c.displayName = "GuildSettingsSafetyStore";
-var E = new c(n.default, {
+var E = new c(l.default, {
   GUILD_SETTINGS_INIT: function() {
-    if (l.default.getGuildId() === d) return !1;
-    d = l.default.getGuildId()
+    if (n.default.getGuildId() === d) return !1;
+    d = n.default.getGuildId()
   },
   GUILD_SETTINGS_SET_SECTION: u,
   GUILD_SETTINGS_SAFETY_SET_SUBSECTION: u,

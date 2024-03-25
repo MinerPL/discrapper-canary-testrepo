@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   PromotionPreviewExperiment: function() {
-    return r
+    return i
   }
 });
-var i = n("862205");
-let r = (0, i.createExperiment)({
+var r = n("862205");
+let i = (0, r.createExperiment)({
   kind: "user",
   id: "2021-06_preview_promotions",
   label: "Promotions Preview",

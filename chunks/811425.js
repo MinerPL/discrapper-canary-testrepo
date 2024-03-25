@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("884691"),
-  r = n("561744"),
-  s = n("595698");
+  s = n("561744"),
+  r = n("595698");
 let a = {},
   o = new Map([
     [1, {
@@ -17,7 +17,7 @@ let a = {},
 function l(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
     n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    l = (0, r.default)(t => {
+    l = (0, s.default)(t => {
       e(t.isIntersecting)
     }),
     u = (0, i.useMemo)(() => {
@@ -30,20 +30,20 @@ function l(e) {
   return function(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
       o = (0, i.useRef)(null),
-      l = (0, r.default)(null != t ? t : a),
+      l = (0, s.default)(null != t ? t : a),
       u = (0, i.useRef)(null);
     return (0, i.useLayoutEffect)(() => {
       if (!n) return;
-      null == u.current && (u.current = (0, s.getIntersectionObserver)(l.current));
+      null == u.current && (u.current = (0, r.getIntersectionObserver)(l.current));
       let t = o.current,
         i = u.current;
-      null != t && null != i && (0, s.watch)(i, t, e)
+      null != t && null != i && (0, r.watch)(i, t, e)
     }, [n, e]), (0, i.useEffect)(() => {
       if (!n) return;
       let e = o.current,
         t = u.current;
       if (null != e && null != t) return () => {
-        (0, s.unwatch)(t, e)
+        (0, r.unwatch)(t, e)
       }
     }, [n, t]), o
   }(l.current, u, n)

@@ -7,7 +7,7 @@ s.r(a), s.d(a, {
 var n = s("37983");
 s("884691");
 var t = s("77078"),
-  l = s("906104"),
+  l = s("533211"),
   E = s("529861");
 
 function _(e) {
@@ -15,12 +15,12 @@ function _(e) {
     icon: a,
     message: s,
     onClick: _,
-    autoFocus: d
+    autoFocus: i
   } = e;
   return (0, n.jsxs)("button", {
     className: l.container,
     onClick: _,
-    autoFocus: d,
+    autoFocus: i,
     children: [(0, n.jsx)("img", {
       className: l.icon,
       alt: "",

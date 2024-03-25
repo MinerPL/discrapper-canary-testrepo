@@ -30,9 +30,9 @@ function E(e) {
     removeFormField: x,
     updateFormField: h,
     updateFormFieldOrder: p
-  } = e, R = async () => {
+  } = e, M = async () => {
     await x(I)
-  }, M = async e => {
+  }, R = async e => {
     await h(I, e)
   }, F = async (e, t, i) => {
     await p(e, t, i)
@@ -42,7 +42,7 @@ function E(e) {
     isDragEnabled: m,
     isDropHovered: N,
     onEdit: () => {
-      0 === _ ? T(c, M, E) : (0, l.openModalLazy)(async () => {
+      0 === _ ? T(c, R, E) : (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await i.el("265397").then(i.bind(i, "265397"));
@@ -50,11 +50,11 @@ function E(e) {
           ...t,
           guildId: E.id,
           submittedGuildJoinRequestsCount: _,
-          onConfirm: () => T(c, M, E)
+          onConfirm: () => T(c, R, E)
         })
       })
     },
-    onRemove: R,
+    onRemove: M,
     onDrop: F
   };
   switch (c.field_type) {

@@ -20,7 +20,7 @@ function i(e) {
     tooltip: u,
     loading: d,
     disabled: c,
-    onClick: f
+    onClick: E
   } = (0, a.useSpotifyJoinAction)(t, n, i);
   return (0, s.jsx)(l.Tooltip, {
     text: u,
@@ -32,7 +32,7 @@ function i(e) {
       return (0, s.jsx)(l.Button, {
         ...r,
         color: c ? l.Button.Colors.PRIMARY : l.Button.Colors.GREEN,
-        onClick: f,
+        onClick: E,
         onMouseEnter: t,
         onMouseLeave: n,
         disabled: !d && c,

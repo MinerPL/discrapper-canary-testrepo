@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return u
+    return A
   }
 });
-var l = n("884691"),
-  i = n("446674"),
-  r = n("385976"),
-  s = n("153043");
-let o = [];
+var _ = E("884691"),
+  s = E("446674"),
+  T = E("385976"),
+  a = E("153043");
+let n = [];
 
-function u(e) {
-  let t = (0, i.useStateFromStores)([r.default], () => r.default.getGuildEmoji(e), [e]);
-  return l.useMemo(() => null == t ? o : t.filter(t => (0, s.isRoleSubscriptionEmoji)(t, e)), [t, e])
+function A(e) {
+  let t = (0, s.useStateFromStores)([T.default], () => T.default.getGuildEmoji(e), [e]);
+  return _.useMemo(() => null == t ? n : t.filter(t => (0, a.isRoleSubscriptionEmoji)(t, e)), [t, e])
 }

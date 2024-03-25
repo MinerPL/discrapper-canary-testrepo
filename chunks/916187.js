@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   },
   isPaymentSourceEligibleForMultiMonthPlans: function() {
     return u
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
 var s = n("976979"),
   r = n("862205"),
   a = n("646718"),
-  l = (0, r.createExperiment)({
+  i = (0, r.createExperiment)({
     kind: "user",
     id: "2022-02_multi_month_plans",
     label: "Multi Month Plans",
@@ -31,8 +31,8 @@ var s = n("976979"),
       }
     }]
   });
-let i = new Set([s.CountryCodes.US, s.CountryCodes.CA]);
+let l = new Set([s.CountryCodes.US, s.CountryCodes.CA]);
 
 function u(e) {
-  return null == e || i.has(e.country)
+  return null == e || l.has(e.country)
 }

@@ -5,14 +5,14 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("123090"),
   u = function(e) {
     var t = e.hex,
       r = e.rgb,
       n = e.onChange,
-      u = (0, a.default)({
+      u = (0, o.default)({
         default: {
           fields: {
             display: "flex",
@@ -83,12 +83,12 @@ var n = r("884691"),
           source: "hex"
         }, t)
       };
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: u.fields,
       className: "flexbox-fix"
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: u.active
-    }), o.createElement(i.EditableInput, {
+    }), a.createElement(i.EditableInput, {
       style: {
         wrap: u.HEXwrap,
         input: u.HEXinput,
@@ -97,7 +97,7 @@ var n = r("884691"),
       label: "hex",
       value: t,
       onChange: l
-    }), o.createElement(i.EditableInput, {
+    }), a.createElement(i.EditableInput, {
       style: {
         wrap: u.RGBwrap,
         input: u.RGBinput,
@@ -106,7 +106,7 @@ var n = r("884691"),
       label: "r",
       value: r.r,
       onChange: l
-    }), o.createElement(i.EditableInput, {
+    }), a.createElement(i.EditableInput, {
       style: {
         wrap: u.RGBwrap,
         input: u.RGBinput,
@@ -115,7 +115,7 @@ var n = r("884691"),
       label: "g",
       value: r.g,
       onChange: l
-    }), o.createElement(i.EditableInput, {
+    }), a.createElement(i.EditableInput, {
       style: {
         wrap: u.RGBwrap,
         input: u.RGBinput,

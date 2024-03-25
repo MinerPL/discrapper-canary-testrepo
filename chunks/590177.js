@@ -1,21 +1,21 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   transformAssetURL: function() {
     return c
   },
   default: function() {
     return g
   }
-}), s("424973"), s("222007");
-var n = s("37983"),
-  a = s("884691"),
-  i = s("77078"),
-  r = s("700468"),
-  l = s("439437"),
-  o = s("180612"),
-  d = s("75576"),
-  u = s("49111"),
-  h = s("782340");
+}), n("424973"), n("222007");
+var s = n("37983"),
+  a = n("884691"),
+  i = n("77078"),
+  r = n("700468"),
+  l = n("439437"),
+  o = n("180612"),
+  d = n("75576"),
+  u = n("49111"),
+  h = n("782340");
 
 function c(e) {
   return "".concat(e.split("?")[0], "?size=").concat(2048)
@@ -23,22 +23,22 @@ function c(e) {
 let p = e => {
   let {
     index: t,
-    items: s,
+    items: n,
     ...a
-  } = e, i = s[t], r = 0, o = [];
-  for (let e of s)
+  } = e, i = n[t], r = 0, o = [];
+  for (let e of n)
     if (e.type === u.CarouselMediaTypes.IMG) {
       let {
         width: t,
-        height: s,
-        src: n
+        height: n,
+        src: s
       } = e;
       e === i && (r = o.length), o.push({
-        src: c(n),
+        src: c(s),
         width: t,
-        height: s
+        height: n
       })
-    } return (0, n.jsx)(l.default, {
+    } return (0, s.jsx)(l.default, {
     ...a,
     items: o,
     startWith: r
@@ -49,19 +49,19 @@ class m extends a.Component {
     let {
       pageSize: e,
       ...t
-    } = this.props, s = e === d.PageSizes.SMALL ? o.default : r.default;
-    return (0, n.jsx)(s, {
+    } = this.props, n = e === d.PageSizes.SMALL ? o.default : r.default;
+    return (0, s.jsx)(n, {
       ...t,
       onCurrentItemClick: this.handleCurrentItemClick
     })
   }
   constructor(...e) {
     super(...e), this.handleCurrentItemClick = (e, t) => {
-      e.type === u.CarouselMediaTypes.IMG && !(0, i.hasAnyModalOpen)() && (0, i.openModal)(e => (0, n.jsx)(i.ModalRoot, {
+      e.type === u.CarouselMediaTypes.IMG && !(0, i.hasAnyModalOpen)() && (0, i.openModal)(e => (0, s.jsx)(i.ModalRoot, {
         size: i.ModalSize.DYNAMIC,
         "aria-label": h.default.Messages.IMAGE,
         ...e,
-        children: (0, n.jsx)(p, {
+        children: (0, s.jsx)(p, {
           ...e,
           index: t,
           items: this.props.items

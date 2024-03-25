@@ -1,12 +1,12 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return c
+    return s
   }
 }), r("70102"), r("854508");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("938681"),
   u = function() {
     function e(e, t) {
@@ -24,13 +24,13 @@ function l(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
-var c = function(e) {
+var s = function(e) {
   function t() {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
     }(this, t);
-    for (var e, r, n, o = arguments.length, a = Array(o), u = 0; u < o; u++) a[u] = arguments[u];
-    return r = n = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a))), n.handleChange = function(e) {
+    for (var e, r, n, a = arguments.length, o = Array(a), u = 0; u < a; u++) o[u] = arguments[u];
+    return r = n = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o))), n.handleChange = function(e) {
       var t = i.calculateChange(e, n.props.direction, n.props.hsl, n.container);
       t && "function" == typeof n.props.onChange && n.props.onChange(t, e)
     }, n.handleMouseDown = function(e) {
@@ -65,7 +65,7 @@ var c = function(e) {
       var e = this,
         t = this.props.direction,
         r = void 0 === t ? "horizontal" : t,
-        n = (0, a.default)({
+        n = (0, o.default)({
           default: {
             hue: {
               absolute: "0px 0px 0px 0px",
@@ -101,9 +101,9 @@ var c = function(e) {
         }, {
           vertical: "vertical" === r
         });
-      return o.createElement("div", {
+      return a.createElement("div", {
         style: n.hue
-      }, o.createElement("div", {
+      }, a.createElement("div", {
         className: "hue-" + r,
         style: n.container,
         ref: function(t) {
@@ -112,9 +112,9 @@ var c = function(e) {
         onMouseDown: this.handleMouseDown,
         onTouchMove: this.handleChange,
         onTouchStart: this.handleChange
-      }, o.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), o.createElement("div", {
+      }, a.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), a.createElement("div", {
         style: n.pointer
-      }, this.props.pointer ? o.createElement(this.props.pointer, this.props) : o.createElement("div", {
+      }, this.props.pointer ? a.createElement(this.props.pointer, this.props) : a.createElement("div", {
         style: n.slider
       }))))
     }

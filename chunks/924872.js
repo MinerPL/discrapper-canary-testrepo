@@ -13,56 +13,56 @@ n.r(t), n.d(t, {
 var a = n("446674"),
   r = n("689988"),
   s = n("42203"),
-  l = n("42887"),
-  i = n("18494"),
+  i = n("42887"),
+  l = n("18494"),
   u = n("800762"),
   o = n("709681"),
   d = n("488464"),
   c = n("567469"),
   f = n("998716"),
   h = n("834052"),
-  p = n("274438");
-let E = e => e / 400,
-  C = !1,
-  m = (0, o.createSound)("stage_waiting", "stage_waiting", E(l.default.getOutputVolume()));
+  E = n("274438");
+let p = e => e / 400,
+  m = !1,
+  C = (0, o.createSound)("stage_waiting", "stage_waiting", p(i.default.getOutputVolume()));
 
 function S() {
-  let e = i.default.getVoiceChannelId();
+  let e = l.default.getVoiceChannelId();
   if (null == e) {
-    m.stop(), C = !1;
+    C.stop(), m = !1;
     return
   }
   let t = s.default.getChannel(e);
   if (!(null == t ? void 0 : t.isGuildStageVoice())) {
-    m.stop(), C = !1;
+    C.stop(), m = !1;
     return
   }
-  let n = l.default.isSelfDeaf();
+  let n = i.default.isSelfDeaf();
   if (n) {
-    m.stop(), C = !1;
+    C.stop(), m = !1;
     return
   }
-  let a = p.default.shouldPlay();
+  let a = E.default.shouldPlay();
   if (a) {
-    m.volume = E(l.default.getOutputVolume()), m.loop(), C = !0;
+    C.volume = p(i.default.getOutputVolume()), C.loop(), m = !0;
     return
   }
   let r = h.default.isLive(e);
   if (r) {
-    m.stop(), C = !1;
+    C.stop(), m = !1;
     return
   }
-  let o = p.default.isMuted();
+  let o = E.default.isMuted();
   if (o) {
-    m.pause(), C = !1;
+    C.pause(), m = !1;
     return
   }
   let d = null != Object.values(u.default.getVoiceStatesForChannel(e)).find(e => !e.suppress && !e.isVoiceMuted());
-  d || C ? d && (m.pause(), C = !1) : (m.volume = E(l.default.getOutputVolume()), m.loop(), C = !0)
+  d || m ? d && (C.pause(), m = !1) : (C.volume = p(i.default.getOutputVolume()), C.loop(), m = !0)
 }
 
 function g(e) {
-  let t = (0, a.useStateFromStores)([i.default], () => i.default.getVoiceChannelId() === e),
+  let t = (0, a.useStateFromStores)([l.default], () => l.default.getVoiceChannelId() === e),
     n = (0, c.useStageParticipants)(e, f.StageChannelParticipantNamedIndex.SPEAKER),
     r = null != n.find(e => !e.voiceState.isVoiceMuted()),
     s = (0, a.useStateFromStores)([h.default], () => h.default.getStageInstanceByChannel(e));
@@ -70,7 +70,7 @@ function g(e) {
 }
 
 function _(e) {
-  let t = i.default.getVoiceChannelId() === e,
+  let t = l.default.getVoiceChannelId() === e,
     n = d.default.getMutableParticipants(e, f.StageChannelParticipantNamedIndex.SPEAKER),
     a = null != n.find(e => !e.voiceState.isVoiceMuted()),
     r = h.default.getStageInstanceByChannel(e);
@@ -83,23 +83,23 @@ class T extends r.default {
     } = e;
     if (null != t) {
       let e = s.default.getChannel(t);
-      (null == e ? void 0 : e.isGuildStageVoice()) ? S(): (m.stop(), C = !1)
-    } else m.stop(), C = !1
+      (null == e ? void 0 : e.isGuildStageVoice()) ? S(): (C.stop(), m = !1)
+    } else C.stop(), m = !1
   }
   handleLogout() {
-    m.stop(), C = !1
+    C.stop(), m = !1
   }
   handlePlay(e) {
     let {
       play: t
     } = e;
-    t ? S() : (m.pause(), C = !1)
+    t ? S() : (C.pause(), m = !1)
   }
   handleMute(e) {
     let {
       muted: t
     } = e;
-    t ? (m.pause(), C = !1) : S()
+    t ? (C.pause(), m = !1) : S()
   }
   handleVoiceStateUpdates() {
     S()
@@ -108,7 +108,7 @@ class T extends r.default {
     let {
       volume: t
     } = e;
-    m.volume = E(t)
+    C.volume = p(t)
   }
   handleToggleSelfDeaf() {
     S()

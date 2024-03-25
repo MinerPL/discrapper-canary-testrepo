@@ -1,17 +1,17 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = Date.now,
-  o = function(e) {
+  a = function(e) {
     var t = 0,
       r = 0;
     return function() {
-      var o = n(),
-        a = 16 - (o - r);
-      if (r = o, a > 0) {
+      var a = n(),
+        o = 16 - (a - r);
+      if (r = a, o > 0) {
         if (++t >= 800) return arguments[0]
       } else t = 0;
       return e.apply(void 0, arguments)

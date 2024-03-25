@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("871388"),
   d = n("676223"),
   c = n("429928"),
-  f = n("506885"),
-  E = n("766274"),
+  E = n("506885"),
+  f = n("766274"),
   _ = n("701909"),
   T = n("474293"),
   I = n("158998"),
@@ -25,7 +25,7 @@ var s = n("37983"),
   A = n("49111"),
   C = n("450484"),
   h = n("782340"),
-  g = n("639700");
+  g = n("434641");
 class M extends l.PureComponent {
   render() {
     let {
@@ -36,7 +36,7 @@ class M extends l.PureComponent {
     return (0, s.jsx)(o.Popout, {
       renderPopout: this.renderUserPopout,
       position: "left",
-      preload: () => (0, f.default)(e.user.id, e.user.getAvatarURL(n, 80), {
+      preload: () => (0, E.default)(e.user.id, e.user.getAvatarURL(n, 80), {
         guildId: n
       }),
       children: l => {
@@ -220,8 +220,8 @@ class O extends l.PureComponent {
     } = this.props, c = {
       className: g.actionButton,
       size: o.Button.Sizes.SMALL
-    }, f = null != d ? d(c) : null;
-    return null != f ? f : !this.isDeadInvite() && this.isActionType(A.ActivityActionTypes.LISTEN) && null != a && null != r && null != i && (0, C.isSpotifyParty)(a) ? u({
+    }, E = null != d ? d(c) : null;
+    return null != E ? E : !this.isDeadInvite() && this.isActionType(A.ActivityActionTypes.LISTEN) && null != a && null != r && null != i && (0, C.isSpotifyParty)(a) ? u({
       ...c,
       activity: i,
       user: r.author
@@ -271,7 +271,7 @@ class O extends l.PureComponent {
     let o = [...t],
       u = Math.min(a, 6);
     for (; o.length < u;) o.push({
-      user: new E.default({
+      user: new f.default({
         discriminator: "0005"
       }),
       unknownUser: !0
@@ -301,9 +301,9 @@ class O extends l.PureComponent {
       src: t,
       className: (0, T.getClass)(g, "artwork", this.getActionableMode())
     });
-    let f = null != l && null != d && null != l.assets && null != l.assets.large_text && "" !== l.assets.large_text && !u && (0, c.default)(l) ? l.assets.large_text : null,
-      E = null != f ? (0, s.jsx)(o.Tooltip, {
-        text: f,
+    let E = null != l && null != d && null != l.assets && null != l.assets.large_text && "" !== l.assets.large_text && !u && (0, c.default)(l) ? l.assets.large_text : null,
+      f = null != E ? (0, s.jsx)(o.Tooltip, {
+        text: E,
         children: e => {
           let {
             onMouseEnter: t,
@@ -352,7 +352,7 @@ class O extends l.PureComponent {
               children: n
             }) : null]
           })]
-        }), E]
+        }), f]
       }), (0, s.jsx)(o.Anchor, {
         href: _.default.getArticleURL(this.getHelpdeskArticleURL()),
         className: g.helpIcon,

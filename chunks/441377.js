@@ -38,22 +38,22 @@ function h(e, t, n, r, i) {
     return o.from(e)
   })
 }
-e.exports = function(e, t, i, g, b, v) {
-  "function" == typeof b && (v = b, b = void 0);
-  var m = l[(b = b || "sha1").toLowerCase()];
+e.exports = function(e, t, i, v, g, b) {
+  "function" == typeof g && (b = g, g = void 0);
+  var m = l[(g = g || "sha1").toLowerCase()];
   if (!m || "function" != typeof n.g.Promise) {
     p()(function() {
       var n;
       try {
-        n = c(e, t, i, g, b)
+        n = c(e, t, i, v, g)
       } catch (e) {
-        return v(e)
+        return b(e)
       }
-      v(null, n)
+      b(null, n)
     });
     return
   }
-  if (s(i, g), e = u(e, a, "Password"), t = u(t, a, "Salt"), "function" != typeof v) throw Error("No callback provided to pbkdf2");
+  if (s(i, v), e = u(e, a, "Password"), t = u(t, a, "Salt"), "function" != typeof b) throw Error("No callback provided to pbkdf2");
   ! function(e, t) {
     e.then(function(e) {
       p()(function() {
@@ -74,6 +74,6 @@ e.exports = function(e, t, i, g, b, v) {
     });
     return f[e] = t, t
   })(m).then(function(n) {
-    return n ? h(e, t, i, g, m) : c(e, t, i, g, b)
-  }), v)
+    return n ? h(e, t, i, v, m) : c(e, t, i, v, g)
+  }), b)
 }

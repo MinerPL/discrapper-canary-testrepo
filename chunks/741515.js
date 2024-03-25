@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   usePriceTiers: function() {
-    return s
+    return o
   },
   useMonetizationSettings: function() {
     return a
@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
 var i = n("884691"),
   r = n("446674"),
   l = n("837008"),
-  u = n("763913"),
-  o = n("670535");
+  s = n("763913"),
+  u = n("670535");
 
-function s(e, t) {
-  let n = (0, r.useStateFromStores)([o.default], () => o.default.getPriceTiersForGuildAndType(e, t)),
-    l = (0, r.useStateFromStores)([o.default], () => o.default.getPriceTiersFetchStateForGuildAndType(e, t));
+function o(e, t) {
+  let n = (0, r.useStateFromStores)([u.default], () => u.default.getPriceTiersForGuildAndType(e, t)),
+    l = (0, r.useStateFromStores)([u.default], () => u.default.getPriceTiersFetchStateForGuildAndType(e, t));
   return i.useEffect(() => {
-    l === o.FetchState.NOT_FETCHED && (0, u.fetchPriceTiers)(e, t)
+    l === u.FetchState.NOT_FETCHED && (0, s.fetchPriceTiers)(e, t)
   }, [e, l, t]), {
-    loading: l === o.FetchState.FETCHING,
+    loading: l === u.FetchState.FETCHING,
     priceTiers: n
   }
 }
@@ -33,10 +33,10 @@ function a(e) {
   i.useEffect(() => {
     t(e)
   }, [t, e]);
-  let u = (0, l.useSubscriptionsSettings)(e);
+  let s = (0, l.useSubscriptionsSettings)(e);
   return {
-    loaded: null != u && !n,
-    subscriptionsSettings: u,
+    loaded: null != s && !n,
+    subscriptionsSettings: s,
     loading: n,
     error: r
   }

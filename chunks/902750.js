@@ -6,14 +6,14 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("479756"),
+var l = s("77078"),
+  n = s("479756"),
   i = s("507950"),
   r = s("246053"),
   o = s("592407"),
   d = s("49111"),
   u = s("782340"),
-  c = s("686273");
+  c = s("717649");
 
 function E(e) {
   let {
@@ -21,19 +21,19 @@ function E(e) {
     role: s
   } = e;
   return (0, a.jsx)(a.Fragment, {
-    children: (0, a.jsxs)(n.FormItem, {
+    children: (0, a.jsxs)(l.FormItem, {
       title: u.default.Messages.VIEW_AS_ROLE,
       className: c.container,
-      children: [(0, a.jsx)(n.Text, {
+      children: [(0, a.jsx)(l.Text, {
         variant: "text-sm/normal",
         children: u.default.Messages.VIEW_AS_ROLE_DESCRIPTION
-      }), (0, a.jsxs)(n.Button, {
+      }), (0, a.jsxs)(l.Button, {
         className: c.button,
         innerClassName: c.buttonInner,
-        size: n.Button.Sizes.SMALL,
-        color: n.Button.Colors.PRIMARY,
+        size: l.Button.Sizes.SMALL,
+        color: l.Button.Colors.PRIMARY,
         onClick: () => {
-          o.default.close(), (0, l.startImpersonating)(t, {
+          o.default.close(), (0, n.startImpersonating)(t, {
             type: i.ImpersonateType.ROLES,
             roles: {
               [s.id]: s

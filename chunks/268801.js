@@ -6,17 +6,17 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("17434"),
   s = n("861309"),
-  i = n("716724"),
-  l = n("492249"),
+  l = n("716724"),
+  i = n("492249"),
   r = n("49111"),
   o = n("353927"),
   u = {
     [r.RPCCommands.SET_CERTIFIED_DEVICES]: {
       scope: {
-        [l.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, l.RPC_LOCAL_SCOPE]
+        [i.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, i.RPC_LOCAL_SCOPE]
       },
-      validation: e => (0, i.default)(e).required().keys({
-        devices: e.array().items((0, i.default)(e).keys({
+      validation: e => (0, l.default)(e).required().keys({
+        devices: e.array().items((0, l.default)(e).keys({
           type: e.string().required().valid([o.DeviceTypes.AUDIO_INPUT, o.DeviceTypes.AUDIO_OUTPUT, o.DeviceTypes.VIDEO_INPUT]),
           id: e.string().required().min(1),
           vendor: e.object().required().keys({

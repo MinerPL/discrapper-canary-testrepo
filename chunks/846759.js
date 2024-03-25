@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var u = n("37983"),
   r = n("884691"),
   a = n("714617"),
-  s = n.n(a),
-  l = n("448105"),
-  i = n.n(l),
+  l = n.n(a),
+  s = n("448105"),
+  i = n.n(s),
   o = n("446674"),
   d = n("77078"),
   c = n("211470"),
@@ -58,15 +58,15 @@ function T() {
           currentBucket: null != u ? u.bucket : -1
         }
       })
-    }, [], s),
+    }, [], l),
     [t, n] = r.useState(""),
-    [a, l] = r.useState([]);
+    [a, s] = r.useState([]);
   r.useEffect(() => {
     if (0 === t.trim().length) {
-      l(e);
+      s(e);
       return
     }
-    l(e.filter(e => i(t, e.experiment.title.toLowerCase())))
+    s(e.filter(e => i(t, e.experiment.title.toLowerCase())))
   }, [e, t]);
   let c = r.useMemo(() => a.filter(e => {
       let {

@@ -7,19 +7,19 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("913144");
-let l = !1,
+  l = n("913144");
+let i = !1,
   r = null;
 var o = {
   init() {
-    i.default.subscribe("CONNECTION_OPEN", e => {
+    l.default.subscribe("CONNECTION_OPEN", e => {
       let {
         pendingPayments: t
       } = e;
       if (null != t && t.length > 0) {
-        var i;
+        var l;
         if (r === t[0] || null == (r = t[0])) return;
-        i = r, l || (l = !0, (0, s.openModalLazy)(async () => {
+        l = r, i || (i = !0, (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("905692").then(n.bind(n, "905692"));
@@ -29,9 +29,9 @@ var o = {
               onClose: s
             } = t;
             return (0, a.jsx)(e, {
-              pendingPayment: i,
+              pendingPayment: l,
               transitionState: n,
-              onClose: () => (l = !1, s())
+              onClose: () => (i = !1, s())
             })
           }
         }))

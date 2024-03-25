@@ -5,12 +5,12 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("372283"),
-  n = s("766419");
+  l = s("766419");
 
-function l(e) {
-  (0, n.updateRoleSort)([...e.map(e => e.id)])
+function n(e) {
+  (0, l.updateRoleSort)([...e.map(e => e.id)])
 }
 
 function i(e) {
-  return (0, a.default)(e, l)
+  return (0, a.default)(e, n)
 }

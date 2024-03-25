@@ -11,24 +11,24 @@ e.exports = function(e, t, n, s, a, c) {
   if (f && c.get(t)) return f == t;
   var p = -1,
     h = !0,
-    g = 2 & n ? new r : void 0;
+    v = 2 & n ? new r : void 0;
   for (c.set(e, t), c.set(t, e); ++p < d;) {
-    var b = e[p],
-      v = t[p];
-    if (s) var m = u ? s(v, b, p, t, e, c) : s(b, v, p, e, t, c);
+    var g = e[p],
+      b = t[p];
+    if (s) var m = u ? s(b, g, p, t, e, c) : s(g, b, p, e, t, c);
     if (void 0 !== m) {
       if (m) continue;
       h = !1;
       break
     }
-    if (g) {
+    if (v) {
       if (!i(t, function(e, t) {
-          if (!o(g, t) && (b === e || a(b, e, n, s, c))) return g.push(t)
+          if (!o(v, t) && (g === e || a(g, e, n, s, c))) return v.push(t)
         })) {
         h = !1;
         break
       }
-    } else if (!(b === v || a(b, v, n, s, c))) {
+    } else if (!(g === b || a(g, b, n, s, c))) {
       h = !1;
       break
     }

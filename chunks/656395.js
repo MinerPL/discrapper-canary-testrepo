@@ -15,14 +15,14 @@ var a = s("37983"),
   c = s("77078"),
   S = s("913139"),
   E = s("133403"),
-  f = s("278108"),
-  T = s("347445"),
-  m = s("493765"),
-  _ = s("485328"),
+  T = s("278108"),
+  f = s("347445"),
+  _ = s("493765"),
+  m = s("485328"),
   g = s("56947"),
   h = s("479788"),
-  I = s("42887"),
-  N = s("227602"),
+  N = s("42887"),
+  I = s("227602"),
   p = s("860957"),
   C = s("941886"),
   A = s("145131"),
@@ -30,31 +30,31 @@ var a = s("37983"),
   x = s("701909"),
   R = s("773336"),
   M = s("13798"),
-  v = s("161778"),
-  D = s("264278"),
+  D = s("161778"),
+  v = s("264278"),
   L = s("49111"),
   P = s("894282"),
   j = s("782340"),
-  b = s("371742"),
-  U = s("405879"),
-  B = s("926622");
+  b = s("579937"),
+  U = s("685691"),
+  y = s("890957");
 
-function y(e) {
+function B(e) {
   let {
     children: t
-  } = e, s = [m.KeybindGroup.MESSAGE, m.KeybindGroup.NAVIGATION, m.KeybindGroup.DND, m.KeybindGroup.CHAT, m.KeybindGroup.VOICE_AND_VIDEO, m.KeybindGroup.MISCELLANEOUS];
+  } = e, s = [_.KeybindGroup.MESSAGE, _.KeybindGroup.NAVIGATION, _.KeybindGroup.DND, _.KeybindGroup.CHAT, _.KeybindGroup.VOICE_AND_VIDEO, _.KeybindGroup.MISCELLANEOUS];
   return t(s)
 }
-let F = o((0, m.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
-  G = d.default.connectStores([v.default], () => ({
-    theme: v.default.theme
+let F = o((0, _.getDefaultLayoutContent)()).filter(e => e.description !== j.default.Messages.KEYBIND_DESCRIPTION_MODAL_EASTER_EGG).groupBy(e => e.group).value(),
+  G = d.default.connectStores([D.default], () => ({
+    theme: D.default.theme
   }))(C.default);
 class k extends n.PureComponent {
   renderMessage() {
     let {
       keybind: e
     } = this.props, t = M.toString(e.shortcut);
-    return _.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
+    return m.default.hasBind(t) ? (0, a.jsx)(c.FormText, {
       className: b.keybindMessage,
       type: c.FormTextTypes.DESCRIPTION,
       style: {
@@ -90,7 +90,7 @@ class k extends n.PureComponent {
         onClick: this.handleDeleteKeybind,
         look: E.default.Looks.FILLED
       }), (0, a.jsxs)(A.default, {
-        className: B.marginBottom8,
+        className: y.marginBottom8,
         children: [(0, a.jsx)(A.default.Child, {
           basis: "45%",
           children: (0, a.jsx)(c.FormItem, {
@@ -108,7 +108,7 @@ class k extends n.PureComponent {
           children: (0, a.jsx)(c.FormItem, {
             title: j.default.Messages.USER_SETTINGS_KEYBINDS_KEYBIND,
             className: b.item,
-            children: (0, a.jsx)(f.default, {
+            children: (0, a.jsx)(T.default, {
               defaultValue: this.props.keybind.shortcut,
               onChange: this.handleShortcutChange
             })
@@ -139,7 +139,7 @@ class k extends n.PureComponent {
     let {
       action: e
     } = this.props.keybind;
-    if (e === L.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL) return (0, a.jsx)(D.default, {
+    if (e === L.GlobalKeybindActions.SWITCH_TO_VOICE_CHANNEL) return (0, a.jsx)(v.default, {
       keybind: this.props.keybind
     })
   }
@@ -269,7 +269,7 @@ class H extends n.PureComponent {
   }
   renderEmpty(e) {
     if (0 === e.length) return (0, a.jsx)(G, {
-      className: B.marginTop60,
+      className: y.marginTop60,
       children: (0, a.jsx)(C.EmptyStateImage, {
         darkSrc: s("605149"),
         lightSrc: s("203017"),
@@ -288,7 +288,7 @@ class H extends n.PureComponent {
         children: R.isPlatformEmbedded ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsxs)(A.default, {
             justify: A.default.Justify.BETWEEN,
-            className: B.marginBottom20,
+            className: y.marginBottom20,
             children: [(0, a.jsx)(A.default.Child, {
               grow: 0,
               children: (0, a.jsx)(O.default, {
@@ -318,7 +318,7 @@ class H extends n.PureComponent {
       }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsxs)(c.FormSection, {
         tag: c.FormTitleTags.H1,
         title: j.default.Messages.USER_SETTINGS_KEYBINDS_DEFAULT_KEYBINDS_TITLE,
-        className: B.marginTop60,
+        className: y.marginTop60,
         children: [(0, a.jsxs)("div", {
           className: b.defaultKeybind,
           children: [(0, a.jsx)(c.Text, {
@@ -327,15 +327,15 @@ class H extends n.PureComponent {
           }), (0, a.jsx)("div", {
             className: b.defaultKeybindShortcutGroup,
             children: (0, a.jsx)(c.KeyCombo, {
-              shortcut: T.TOGGLE_HOTKEYS.binds[0],
+              shortcut: f.TOGGLE_HOTKEYS.binds[0],
               className: b.defaultKeybindShortcut
             })
           })]
-        }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(y, {
+        }), (0, a.jsx)(c.FormDivider, {}), (0, a.jsx)(B, {
           children: e => (0, a.jsx)(a.Fragment, {
             children: e.map((e, t) => {
-              let s = (0, m.getNameForKeybindGroup)(e),
-                l = (0, m.getDescriptionForKeybindGroup)(e),
+              let s = (0, _.getNameForKeybindGroup)(e),
+                l = (0, _.getDescriptionForKeybindGroup)(e),
                 r = F[e];
               return (0, a.jsxs)("div", {
                 className: b.defaultKeybindGroup,
@@ -379,8 +379,8 @@ class H extends n.PureComponent {
 }
 
 function w() {
-  let e = (0, d.useStateFromStores)([N.default], () => N.default.getState()),
-    t = (0, d.useStateFromStores)([I.default], () => (0, h.default)(I.default)),
+  let e = (0, d.useStateFromStores)([I.default], () => I.default.getState()),
+    t = (0, d.useStateFromStores)([N.default], () => (0, h.default)(N.default)),
     s = (0, d.useStateFromStores)([p.default], () => p.default.isSupported()),
     n = (0, g.useEnableClips)();
   return (0, a.jsx)(H, {

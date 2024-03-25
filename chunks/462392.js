@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   getActionInfo: function() {
-    return p
+    return N
   }
 });
 var r = n("679653"),
   o = n("42203"),
-  i = n("27618"),
-  u = n("697218"),
+  u = n("27618"),
+  i = n("697218"),
   a = n("593195"),
   l = n("635731"),
-  d = n("491401"),
-  s = n("381546"),
+  s = n("491401"),
+  d = n("381546"),
   T = n("143460"),
   E = n("903639"),
   A = n("782340");
@@ -30,7 +30,7 @@ let _ = e => {
         return !1
     }
   },
-  f = e => {
+  I = e => {
     switch (e) {
       case T.AutomodActionType.BLOCK_MESSAGE:
         return A.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_NAME;
@@ -42,7 +42,7 @@ let _ = e => {
         return A.default.Messages.GUILD_AUTOMOD_ACTIONS_QUARANTINE_USER
     }
   },
-  I = function(e) {
+  f = function(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.AutomodTriggerType.KEYWORD;
     switch (e) {
       case T.AutomodActionType.BLOCK_MESSAGE:
@@ -73,7 +73,7 @@ let _ = e => {
         if (null == e) return null;
         let a = o.default.getChannel(e);
         if (null == a) return null;
-        let l = (0, r.computeChannelName)(a, u.default, i.default);
+        let l = (0, r.computeChannelName)(a, i.default, u.default);
         return A.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_DISPLAY_HELPER.format({
           channelName: l
         })
@@ -88,26 +88,26 @@ let _ = e => {
       }
     }
   },
-  S = e => {
+  O = e => {
     switch (e) {
       case T.AutomodActionType.BLOCK_MESSAGE:
-        return s.default;
+        return d.default;
       case T.AutomodActionType.FLAG_TO_CHANNEL:
         return a.default;
       case T.AutomodActionType.USER_COMMUNICATION_DISABLED:
-        return d.default;
+        return s.default;
       case T.AutomodActionType.QUARANTINE_USER:
         return l.default
     }
   };
 
-function p(e, t, n) {
-  var r, o, i, u;
+function N(e, t, n) {
+  var r, o, u, i;
   return c(e) ? {
-    headerText: null !== (r = f(e)) && void 0 !== r ? r : "",
-    descriptionText: null !== (o = I(e, n)) && void 0 !== o ? o : "",
-    helperText: null !== (i = g(e, t)) && void 0 !== i ? i : null,
-    icon: null !== (u = S(e)) && void 0 !== u ? u : s.default,
+    headerText: null !== (r = I(e)) && void 0 !== r ? r : "",
+    descriptionText: null !== (o = f(e, n)) && void 0 !== o ? o : "",
+    helperText: null !== (u = g(e, t)) && void 0 !== u ? u : null,
+    icon: null !== (i = O(e)) && void 0 !== i ? i : d.default,
     isEditable: _(e)
   } : null
 }

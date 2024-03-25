@@ -6,10 +6,10 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("462392"),
+var l = s("77078"),
+  n = s("462392"),
   i = s("782340"),
-  r = s("245225");
+  r = s("439418");
 
 function o(e) {
   let {
@@ -17,35 +17,35 @@ function o(e) {
     triggerType: s,
     toggled: o,
     onToggleAction: d
-  } = e, u = e => () => d(e), c = (0, l.getActionInfo)(t.type, t, s);
+  } = e, u = e => () => d(e), c = (0, n.getActionInfo)(t.type, t, s);
   if (null == c) return null;
   let {
     headerText: E,
     descriptionText: _,
-    icon: T
+    icon: I
   } = c;
   return (0, a.jsxs)("div", {
     className: r.actionContainer,
     children: [(0, a.jsx)("div", {
       className: r.actionIconContainer,
-      children: (0, a.jsx)(T, {
+      children: (0, a.jsx)(I, {
         width: 24,
         height: 24,
         className: r.actionIcon
       })
     }), (0, a.jsxs)("div", {
       className: r.actionTextContainer,
-      children: [(0, a.jsx)(n.Heading, {
+      children: [(0, a.jsx)(l.Heading, {
         variant: "heading-sm/semibold",
         children: E
-      }), (0, a.jsx)(n.Text, {
+      }), (0, a.jsx)(l.Text, {
         color: "interactive-normal",
         variant: "text-xs/medium",
         children: _
-      }), o ? (0, a.jsxs)(n.Text, {
+      }), o ? (0, a.jsxs)(l.Text, {
         color: "text-muted",
         variant: "text-xs/medium",
-        children: [i.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_CUSTOM_MESSAGE_HELPER, (0, a.jsx)(n.Clickable, {
+        children: [i.default.Messages.GUILD_AUTOMOD_ACTIONS_BLOCK_MESSAGE_CUSTOM_MESSAGE_HELPER, (0, a.jsx)(l.Clickable, {
           onClick: u(!0),
           className: r.editChannel,
           tag: "span",
@@ -54,8 +54,8 @@ function o(e) {
         })]
       }) : null]
     }), (0, a.jsx)("div", {
-      children: (0, a.jsx)(n.Checkbox, {
-        type: n.Checkbox.Types.INVERTED,
+      children: (0, a.jsx)(l.Checkbox, {
+        type: l.Checkbox.Types.INVERTED,
         value: o,
         onChange: u(!1),
         className: r.actionCheckbox

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return W
+    return K
   }
 }), s("222007");
 var a = s("37983"),
@@ -15,14 +15,14 @@ var a = s("37983"),
   c = s("452804"),
   S = s("79112"),
   E = s("485328"),
-  f = s("180748"),
-  T = s("206230"),
-  m = s("951212"),
-  _ = s("714657"),
+  T = s("180748"),
+  f = s("206230"),
+  _ = s("951212"),
+  m = s("714657"),
   g = s("10641"),
   h = s("692038"),
-  I = s("815297"),
-  N = s("574073"),
+  N = s("815297"),
+  I = s("574073"),
   p = s("291655"),
   C = s("697218"),
   A = s("145131"),
@@ -30,15 +30,15 @@ var a = s("37983"),
   x = s("773336"),
   R = s("161778"),
   M = s("168973"),
-  v = s("845579"),
-  D = s("403338"),
+  D = s("845579"),
+  v = s("403338"),
   L = s("449550"),
   P = s("49111"),
   j = s("994428"),
   b = s("894488"),
   U = s("782340"),
-  B = s("358237"),
-  y = s("926622");
+  y = s("795797"),
+  B = s("890957");
 let F = {
     COZY: "cozy",
     COMPACT: "compact"
@@ -50,35 +50,35 @@ let F = {
   V = e => {
     let t = 0;
     return [(0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: w,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_1
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: w,
         content: (0, d.isThemeDark)(e) ? U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_DARK : U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_2_LIGHT
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: w,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_3
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: w,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_4
       }),
       state: P.MessageStates.SENT,
       id: "".concat(t++)
     }), (0, h.createMessageRecord)({
-      ...(0, I.default)({
+      ...(0, N.default)({
         channelId: w,
         content: U.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_MESSAGE_5
       }),
@@ -89,14 +89,14 @@ let F = {
 class Y extends n.Component {
   renderZoomSlider() {
     return x.isPlatformEmbedded ? (0, a.jsxs)(u.FormItem, {
-      className: y.marginTop20,
+      className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: G,
         tag: u.FormTitleTags.H5,
-        className: y.marginBottom8,
+        className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_ZOOM_LEVEL_LABEL
       }), (0, a.jsx)(u.Slider, {
-        className: i(y.marginTop20, y.marginBottom4),
+        className: i(B.marginTop20, B.marginBottom4),
         initialValue: this.props.zoom,
         defaultValue: P.Accessibility.ZOOM_DEFAULT,
         markers: P.Accessibility.ZOOM_SCALES,
@@ -114,16 +114,16 @@ class Y extends n.Component {
   }
   renderFontScaleSlider() {
     return (0, a.jsxs)(u.FormItem, {
-      className: y.marginTop20,
+      className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: k,
         tag: u.FormTitleTags.H5,
-        className: y.marginBottom8,
+        className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_FONT_SCALING_LABEL
       }), (0, a.jsx)(A.default, {
         align: A.default.Align.CENTER,
         children: (0, a.jsx)(u.Slider, {
-          className: i(y.marginTop20, y.marginBottom4),
+          className: i(B.marginTop20, B.marginBottom4),
           initialValue: this.props.fontSize,
           defaultValue: P.Accessibility.FONT_SIZE_DEFAULT,
           markers: P.Accessibility.FONT_SIZES,
@@ -143,14 +143,14 @@ class Y extends n.Component {
       messageGroupSpacing: t
     } = this.props;
     return (0, a.jsxs)(u.FormItem, {
-      className: y.marginTop20,
+      className: B.marginTop20,
       children: [(0, a.jsx)(u.FormTitle, {
         id: H,
         tag: u.FormTitleTags.H5,
-        className: y.marginBottom8,
+        className: B.marginBottom8,
         children: U.default.Messages.ACCESSIBILITY_MESSAGE_GROUP_SPACING
       }), (0, a.jsx)(u.Slider, {
-        className: i(y.marginTop20, y.marginBottom4),
+        className: i(B.marginTop20, B.marginBottom4),
         initialValue: t,
         defaultValue: e ? b.DEFAULT_COMPACT_SPACING : b.DEFAULT_COZY_SPACING,
         markers: b.MESSAGE_GROUP_SPACING,
@@ -172,15 +172,15 @@ class Y extends n.Component {
     } = this.props, l = (0, d.isThemeDark)(t) ? this.darkMessages : this.lightMessages;
     return (0, a.jsx)(u.FocusBlock, {
       children: (0, a.jsx)(u.Card, {
-        className: i(B.preview, y.marginBottom40, e ? B.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? b.DEFAULT_COMPACT_SPACING : b.DEFAULT_COZY_SPACING)),
+        className: i(y.preview, B.marginBottom40, e ? y.compactPreview : void 0, "group-spacing-".concat(null != s ? s : e ? b.DEFAULT_COMPACT_SPACING : b.DEFAULT_COZY_SPACING)),
         outline: !0,
         "aria-hidden": !0,
         children: l.map((t, s) => (0, a.jsx)(p.default, {
-          author: (0, N.getMessageAuthor)(t),
+          author: (0, I.getMessageAuthor)(t),
           message: t,
           compact: e,
           isGroupStart: s % 2 == 0,
-          className: 0 === s ? B.firstMessage : void 0,
+          className: 0 === s ? y.firstMessage : void 0,
           hideSimpleEmbedContent: n
         }, t.id))
       })
@@ -194,37 +194,37 @@ class Y extends n.Component {
       gradientPreset: n
     } = this.props;
     return t ? (0, a.jsx)(u.FormItem, {
-      className: i(y.marginTop8, y.marginBottom40),
+      className: i(B.marginTop8, B.marginBottom40),
       title: (0, a.jsx)("div", {
-        className: B.themeTitle,
+        className: y.themeTitle,
         children: (0, a.jsx)("div", {
-          className: B.title,
+          className: y.title,
           children: U.default.Messages.THEME
         })
       }),
       children: (0, a.jsx)(u.FormText, {
         type: u.FormText.Types.DEFAULT,
-        className: B.forcedColorsWarning,
-        children: (0, m.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
+        className: y.forcedColorsWarning,
+        children: (0, _.canEnableForcedColors)() ? U.default.Messages.THEME_DISABLED_FOR_CONTRAST_SYNC.format({
           onClick: () => {
             S.default.open(P.UserSettingsSections.ACCESSIBILITY)
           }
         }) : U.default.Messages.THEME_DISABLED_FOR_FORCED_COLORS
       })
     }) : (0, a.jsxs)(u.FormItem, {
-      className: y.marginTop8,
+      className: B.marginTop8,
       title: (0, a.jsxs)("div", {
-        className: B.themeTitle,
+        className: y.themeTitle,
         children: [(0, a.jsx)("div", {
-          className: B.title,
+          className: y.title,
           children: U.default.Messages.THEME
-        }), (0, a.jsx)(D.ClientThemesSidebarButton, {})]
+        }), (0, a.jsx)(v.ClientThemesSidebarButton, {})]
       }),
-      children: [(0, a.jsx)(D.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(L.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
+      children: [(0, a.jsx)(v.UserSettingsAppearanceClientThemes, {}), (0, a.jsx)(L.UserSettingsAppearanceInAppIcon, {}), (0, a.jsx)(u.FormSwitch, {
         value: s && (0, d.isThemeLight)(e) && !t,
         disabled: e !== P.ThemeTypes.LIGHT || t || null != n,
         onChange: this.handleDarkSidebarChecked,
-        className: y.marginTop20,
+        className: B.marginTop20,
         children: U.default.Messages.ACCESSIBILITY_DARK_SIDEBAR
       })]
     })
@@ -232,7 +232,7 @@ class Y extends n.Component {
   renderDisplayMode() {
     return (0, a.jsxs)(u.FormItem, {
       title: U.default.Messages.MESSAGE_DISPLAY_MODE_LABEL,
-      className: y.marginTop8,
+      className: B.marginTop8,
       children: [(0, a.jsx)(u.RadioGroup, {
         options: [{
           name: U.default.Messages.COZY_MODE,
@@ -247,18 +247,18 @@ class Y extends n.Component {
         value: this.props.messageDisplayCompact && this.props.displayCompactAvatars,
         disabled: !this.props.messageDisplayCompact,
         onChange: this.handleDisplayCompactAvatarsChanged,
-        className: y.marginTop20,
+        className: B.marginTop20,
         children: U.default.Messages.DISPLAY_COMPACT_AVATARS
       })]
     })
   }
   handleDarkSidebarChecked() {
-    (0, f.toggleDarkSidebar)()
+    (0, T.toggleDarkSidebar)()
   }
   renderScalingAndSpacing() {
     return (0, a.jsxs)(a.Fragment, {
       children: [this.renderFontScaleSlider(), this.renderMessageGroupSpacingSlider(), this.renderZoomSlider(), (0, a.jsx)(u.FormDivider, {
-        className: y.marginTop20
+        className: B.marginTop20
       })]
     })
   }
@@ -268,7 +268,7 @@ class Y extends n.Component {
       title: U.default.Messages.APPEARANCE,
       children: [this.renderPreview(), this.renderTheme(), this.renderDisplayMode(), this.renderScalingAndSpacing(), (0, a.jsx)(u.Text, {
         variant: "text-md/normal",
-        className: y.marginTop20,
+        className: B.marginTop20,
         children: U.default.Messages.APPEARANCE_SETTINGS_ACCESSIBILITY_LINK.format({
           onAccessibilityClick() {
             S.default.open(P.UserSettingsSections.ACCESSIBILITY)
@@ -289,7 +289,7 @@ class Y extends n.Component {
     })
   }
   handleFontSizeChange(e) {
-    (0, f.setFontSize)(e)
+    (0, T.setFontSize)(e)
   }
   handleMessageSpacingChange(e) {
     switch (e) {
@@ -298,11 +298,11 @@ class Y extends n.Component {
       case 8:
       case 16:
       case 24:
-        (0, f.setMessageGroupSpacing)(e)
+        (0, T.setMessageGroupSpacing)(e)
     }
   }
   handleZoomChange(e) {
-    (0, f.setZoom)(e)
+    (0, T.setZoom)(e)
   }
   constructor(...e) {
     super(...e), this.darkMessages = V(P.ThemeTypes.DARK), this.lightMessages = V(P.ThemeTypes.LIGHT), this.handleDisplayCompactAvatarsChanged = e => {
@@ -313,16 +313,16 @@ class Y extends n.Component {
       let {
         value: t
       } = e;
-      v.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, f.setMessageGroupSpacing)()
+      D.MessageDisplayCompact.updateSetting(t === F.COMPACT), (0, T.setMessageGroupSpacing)()
     }
   }
 }
 
-function W() {
-  let e = v.MessageDisplayCompact.useSetting(),
-    t = v.InlineEmbedMedia.useSetting(),
-    s = v.RenderEmbeds.useSetting(),
-    l = v.ClientThemeSettings.useSetting();
+function K() {
+  let e = D.MessageDisplayCompact.useSetting(),
+    t = D.InlineEmbedMedia.useSetting(),
+    s = D.RenderEmbeds.useSetting(),
+    l = D.ClientThemeSettings.useSetting();
   n.useEffect(() => {
     (0, g.markDismissibleContentAsDismissed)(o.DismissibleContent.CLIENT_THEMES_SETTINGS_BADGE, {
       dismissAction: j.ContentDismissActionType.AUTO,
@@ -335,19 +335,19 @@ function W() {
       forceTrack: !0
     })
   }, []);
-  let i = (0, r.useStateFromStoresObject)([R.default, M.default, T.default, C.default, _.default], () => {
+  let i = (0, r.useStateFromStoresObject)([R.default, M.default, f.default, C.default, m.default], () => {
     var e, t;
     return {
       theme: R.default.theme,
-      useForcedColors: T.default.useForcedColors,
+      useForcedColors: f.default.useForcedColors,
       useSystemTheme: M.default.useSystemTheme,
       darkSidebar: R.default.darkSidebar,
-      fontSize: T.default.fontSize,
-      zoom: T.default.zoom,
-      messageGroupSpacing: T.default.messageGroupSpacing,
+      fontSize: f.default.fontSize,
+      zoom: f.default.zoom,
+      messageGroupSpacing: f.default.messageGroupSpacing,
       displayCompactAvatars: M.default.displayCompactAvatars,
       isStaff: null !== (t = null === (e = C.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff) && void 0 !== t && t,
-      gradientPreset: _.default.gradientPreset
+      gradientPreset: m.default.gradientPreset
     }
   });
   return (0, a.jsx)(Y, {

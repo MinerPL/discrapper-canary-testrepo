@@ -5,35 +5,35 @@ i.r(t), i.d(t, {
   }
 }), i("222007");
 var l = i("884691"),
-  a = i("446674"),
-  n = i("442939"),
-  r = i("697218"),
-  d = i("167726"),
-  u = i("449008"),
+  n = i("446674"),
+  a = i("442939"),
+  d = i("697218"),
+  u = i("167726"),
+  r = i("449008"),
   o = i("773336"),
   c = i("191225"),
   s = i("334368");
 
 function f(e) {
-  let t = (0, a.useStateFromStores)([r.default], r.default.getCurrentUser),
-    i = (0, a.useStateFromStoresArray)([c.default], () => c.default.getShelfActivities(e)),
-    f = (0, a.useStateFromStores)([d.default], () => d.default.testModeEmbeddedApplicationId),
+  let t = (0, n.useStateFromStores)([d.default], d.default.getCurrentUser),
+    i = (0, n.useStateFromStoresArray)([c.default], () => c.default.getShelfActivities(e)),
+    f = (0, n.useStateFromStores)([u.default], () => u.default.testModeEmbeddedApplicationId),
     p = i.map(e => e.application_id),
     v = null != f ? [f, ...p] : p,
-    m = (0, n.default)(v),
-    b = l.useMemo(() => m.filter(u.isNotNullish), [m]),
-    A = l.useMemo(() => null != f && b.length > 0 && b[0].id === f && null != b[0].embeddedActivityConfig ? [{
-      activity: b[0].embeddedActivityConfig,
-      application: b[0]
-    }] : [], [b, f]),
-    E = l.useMemo(() => i.map(e => {
-      let t = b.find(t => t.id === e.application_id);
+    m = (0, a.default)(v),
+    A = l.useMemo(() => m.filter(r.isNotNullish), [m]),
+    E = l.useMemo(() => null != f && A.length > 0 && A[0].id === f && null != A[0].embeddedActivityConfig ? [{
+      activity: A[0].embeddedActivityConfig,
+      application: A[0]
+    }] : [], [A, f]),
+    y = l.useMemo(() => i.map(e => {
+      let t = A.find(t => t.id === e.application_id);
       return null == t ? null : {
         activity: e,
         application: t
       }
-    }).filter(u.isNotNullish), [i, b]);
-  return l.useMemo(() => [...A, ...E].filter(e => {
+    }).filter(r.isNotNullish), [i, A]);
+  return l.useMemo(() => [...E, ...y].filter(e => {
     var t;
     let {
       activity: i
@@ -44,5 +44,5 @@ function f(e) {
       activity: i
     } = e;
     return !i.requires_age_gate || (null == t ? void 0 : t.nsfwAllowed) === !0 || (null == t ? void 0 : t.nsfwAllowed) == null
-  }), [null == t ? void 0 : t.nsfwAllowed, E, A])
+  }), [null == t ? void 0 : t.nsfwAllowed, y, E])
 }

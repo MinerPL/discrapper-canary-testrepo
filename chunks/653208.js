@@ -14,7 +14,7 @@ var n = s("414456"),
   d = s("888400"),
   u = s("106413"),
   c = s("408792"),
-  S = s("539830");
+  S = s("996082");
 
 function E(e) {
   let {
@@ -25,20 +25,20 @@ function E(e) {
   let i = null != s,
     {
       name: E,
-      description: f,
-      hideDescriptionUntilUnlock: T,
-      onAction: m
+      description: T,
+      hideDescriptionUntilUnlock: f,
+      onAction: _
     } = n,
-    _ = T && !i,
+    m = f && !i,
     g = i ? "header-primary" : "text-muted",
     h = i ? "header-secondary" : "text-muted",
-    I = r(s),
-    N = null != m && i,
-    p = N ? o.Clickable : "div";
+    N = r(s),
+    I = null != _ && i,
+    p = I ? o.Clickable : "div";
   return (0, a.jsxs)(p, {
-    className: l(S.container, N && S.actionable),
+    className: l(S.container, I && S.actionable),
     onClick: () => {
-      N && m()
+      I && _()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
@@ -53,7 +53,7 @@ function E(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: S.unlocked,
-        children: (0, d.calendarFormat)(I)
+        children: (0, d.calendarFormat)(N)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: g,
@@ -61,7 +61,7 @@ function E(e) {
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: h,
-        children: _ ? "?????" : f()
+        children: m ? "?????" : T()
       })]
     })]
   })

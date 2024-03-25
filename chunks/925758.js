@@ -13,27 +13,27 @@ var s = n("917351"),
   u = n("101125"),
   d = n("49111");
 let c = {},
-  f = {};
+  E = {};
 
-function E(e, t) {
+function f(e, t) {
   var n;
   let s = null !== (n = c[e]) && void 0 !== n ? n : {};
   return s[t]
 }
 
 function _(e, t) {
-  let n = E(e, t);
+  let n = f(e, t);
   if (null == n) return;
   let s = c[e];
   delete s[t], l.isEmpty(s) && delete c[e];
-  let a = f[n];
-  null != a && (a.delete(e), 0 === a.size && delete f[n])
+  let a = E[n];
+  null != a && (a.delete(e), 0 === a.size && delete E[n])
 }
 
 function T(e, t, n, s) {
   let l = n.find(e => null != e.party && e.party.id),
     a = null != l && null != l.party ? l.party.id : null,
-    i = E(t, e);
+    i = f(t, e);
   if (null == a || s === d.StatusTypes.OFFLINE) return null != i && (_(t, e), void 0);
   if (null != i) {
     if (i === a) return !1;
@@ -42,8 +42,8 @@ function T(e, t, n, s) {
     var s;
     let l = c[e];
     if (null == l && (l = c[e] = {}), l[t] = n, o.default.isBlocked(e)) return;
-    let a = null !== (s = f[n]) && void 0 !== s ? s : new Set;
-    f[n] = a, a.add(e)
+    let a = null !== (s = E[n]) && void 0 !== s ? s : new Set;
+    E[n] = a, a.add(e)
   }(t, e, a)
 }
 
@@ -77,13 +77,13 @@ class p extends a.default.Store {
     this.syncWith([u.default], N), this.waitFor(u.default, o.default)
   }
   getParty(e) {
-    return null != e && null != f[e] ? f[e] : null
+    return null != e && null != E[e] ? E[e] : null
   }
   getUserParties() {
     return c
   }
   getParties() {
-    return f
+    return E
   }
 }
 p.displayName = "GamePartyStore";
@@ -109,9 +109,9 @@ var S = new p(i.default, {
       parties: t,
       userParties: n
     } = e;
-    f = {}, c = {
+    E = {}, c = {
       ...n
-    }, Object.keys(t).forEach(e => f[e] = new Set(t[e]))
+    }, Object.keys(t).forEach(e => E[e] = new Set(t[e]))
   },
   GUILD_CREATE: I,
   PRESENCES_REPLACE: function(e) {
@@ -161,7 +161,7 @@ var S = new p(i.default, {
     let n = c[t.id];
     if (null == n) return !1;
     for (let e of l.values(n)) {
-      let n = f[e];
+      let n = E[e];
       null != n && n.delete(t.id)
     }
   },
@@ -171,7 +171,7 @@ var S = new p(i.default, {
     } = e, n = c[t.id];
     if (null == n) return !1;
     for (let e of l.values(n)) {
-      let n = f[e];
+      let n = E[e];
       null != n && n.add(t.id)
     }
   }

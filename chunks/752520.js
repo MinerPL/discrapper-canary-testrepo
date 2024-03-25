@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("139375"),
-  n = s("679653"),
-  l = s("42203"),
+  l = s("679653"),
+  n = s("42203"),
   i = s("27618"),
   r = s("697218"),
   o = s("677795"),
@@ -16,9 +16,9 @@ var a = s("139375"),
 function c(e) {
   switch (e.ref_type) {
     case o.GuildRoleSubscriptionBenefitTypes.CHANNEL: {
-      let t = l.default.getChannel(e.ref_id);
+      let t = n.default.getChannel(e.ref_id);
       return null != t ? function(e) {
-        let t = (0, n.computeChannelName)(e, r.default, i.default);
+        let t = (0, l.computeChannelName)(e, r.default, i.default);
         switch (e.type) {
           case d.ChannelTypes.GUILD_VOICE:
             return u.default.Messages.GUILD_SIDEBAR_VOICE_CHANNEL_A11Y_LABEL.format({

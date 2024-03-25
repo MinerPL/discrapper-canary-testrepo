@@ -4,13 +4,13 @@ i.r(t), i.d(t, {
     return r
   }
 });
-var a = i("446674"),
-  l = i("819855"),
-  n = i("206230"),
+var n = i("446674"),
+  a = i("819855"),
+  l = i("206230"),
   o = i("161778"),
   s = i("584375");
 let r = e => {
-  let t = (0, a.useStateFromStores)([n.default], () => n.default.saturation),
-    i = (0, a.useStateFromStores)([o.default], () => (0, l.isThemeDark)(o.default.theme));
+  let t = (0, n.useStateFromStores)([l.default], () => l.default.saturation),
+    i = (0, n.useStateFromStores)([o.default], () => (0, a.isThemeDark)(o.default.theme));
   return (0, s.buildEmojiColorPalette)(e, t, i)
 }

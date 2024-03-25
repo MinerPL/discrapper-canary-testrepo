@@ -7,27 +7,27 @@ n.r(t), n.d(t, {
 var i = n("37983"),
   r = n("884691"),
   u = n("118810"),
-  o = n("446674"),
-  s = n("206230"),
-  l = n("719347");
-let a = e => {
+  s = n("446674"),
+  o = n("206230"),
+  a = n("719347");
+let l = e => {
   let {
     externalRef: t,
     autoPlay: n,
-    playOnHover: a,
+    playOnHover: l,
     responsive: c,
     mediaLayoutType: d,
     ...E
-  } = e, f = (0, o.useStateFromStores)([s.default], () => s.default.useReducedMotion), _ = r.useRef(null);
-
-  function h() {
-    var e;
-    a && (null == _ || null === (e = _.current) || void 0 === e || e.play())
-  }
+  } = e, f = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), _ = r.useRef(null);
 
   function I() {
     var e;
-    a && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
+    l && (null == _ || null === (e = _.current) || void 0 === e || e.play())
+  }
+
+  function h() {
+    var e;
+    l && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
   }
   return r.useLayoutEffect(() => () => {
     let {
@@ -45,12 +45,12 @@ let a = e => {
     "function" == typeof t ? t(null) : null != t && (t.current = null)
   }), [t, _]), (0, i.jsx)("video", {
     ref: _,
-    autoPlay: !f && !a && n,
-    onMouseEnter: h,
-    onMouseLeave: I,
-    onFocus: h,
-    onBlur: I,
-    style: d === l.MediaLayoutType.MOSAIC ? {
+    autoPlay: !f && !l && n,
+    onMouseEnter: I,
+    onMouseLeave: h,
+    onFocus: I,
+    onBlur: h,
+    style: d === a.MediaLayoutType.MOSAIC ? {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",
@@ -66,7 +66,7 @@ let a = e => {
     ...E
   })
 };
-var c = r.forwardRef((e, t) => (0, i.jsx)(a, {
+var c = r.forwardRef((e, t) => (0, i.jsx)(l, {
   ...e,
   externalRef: t
 }))

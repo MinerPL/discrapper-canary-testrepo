@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("37983");
@@ -14,73 +14,73 @@ var s = n("414456"),
   u = n("516256"),
   d = n("577776"),
   c = n("145131"),
-  f = n("782340"),
-  _ = n("525625"),
-  h = e => {
+  _ = n("782340"),
+  f = n("565695"),
+  E = e => {
     let t, n, s, {
-      body: h,
-      cancelText: g,
-      className: m,
-      confirmColor: E,
-      confirmText: p = f.default.Messages.OKAY,
-      secondaryConfirmText: v,
-      onCancel: S,
-      onClose: T,
+      body: E,
+      cancelText: h,
+      className: g,
+      confirmColor: m,
+      confirmText: p = _.default.Messages.OKAY,
+      secondaryConfirmText: S,
+      onCancel: T,
+      onClose: v,
       onConfirm: I,
-      onConfirmSecondary: C,
-      title: A,
+      onConfirmSecondary: A,
+      title: C,
       transitionState: y,
       titleClassName: N
     } = e;
-    return null != g && "" !== g && (t = (0, i.jsx)(a.Button, {
+    return null != h && "" !== h && (t = (0, i.jsx)(a.Button, {
       type: "button",
       size: a.Button.Sizes.XLARGE,
       color: a.Button.Colors.PRIMARY,
       onClick: () => {
-        null == T || T(), null == S || S()
+        null == v || v(), null == T || T()
       },
-      className: _.secondaryButton,
-      children: g
+      className: f.secondaryButton,
+      children: h
     })), null != p && "" !== p && (n = (0, i.jsx)(a.Button, {
       type: "submit",
-      color: E,
+      color: m,
       size: a.Button.Sizes.XLARGE,
-      className: r(_.primaryButton, null != t ? _.gutter : null),
+      className: r(f.primaryButton, null != t ? f.gutter : null),
       autoFocus: !0,
       children: p
-    })), null != v && "" !== v && (s = (0, i.jsx)(o.Clickable, {
+    })), null != S && "" !== S && (s = (0, i.jsx)(o.Clickable, {
       onClick: () => {
-        null == T || T(), null == C || C()
+        null == v || v(), null == A || A()
       },
-      className: _.minorContainer,
+      className: f.minorContainer,
       children: (0, i.jsx)(d.Text, {
-        className: _.secondaryAction,
+        className: f.secondaryAction,
         variant: "text-xs/normal",
-        children: v
+        children: S
       })
     })), (0, i.jsx)(u.ModalRoot, {
       transitionState: y,
-      className: r(m, _.container),
-      "aria-label": A,
+      className: r(g, f.container),
+      "aria-label": C,
       children: (0, i.jsxs)("form", {
         onSubmit: e => {
-          null != e && e.preventDefault(), null == T || T(), null == I || I()
+          null != e && e.preventDefault(), null == v || v(), null == I || I()
         },
-        className: _.form,
+        className: f.form,
         children: [(0, i.jsx)(u.ModalContent, {
-          className: _.modalContent,
+          className: f.modalContent,
           children: (0, i.jsxs)(c.default, {
             direction: c.default.Direction.VERTICAL,
             justify: c.default.Justify.CENTER,
-            className: _.content,
-            children: [null != A && (0, i.jsx)(l.FormTitle, {
+            className: f.content,
+            children: [null != C && (0, i.jsx)(l.FormTitle, {
               tag: "h2",
-              className: r(_.title, N),
-              children: A
-            }), null != h && (0, i.jsx)(d.Text, {
+              className: r(f.title, N),
+              children: C
+            }), null != E && (0, i.jsx)(d.Text, {
               variant: "text-md/normal",
-              className: _.body,
-              children: h
+              className: f.body,
+              children: E
             })]
           })
         }), (0, i.jsxs)(u.ModalFooter, {

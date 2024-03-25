@@ -51,8 +51,8 @@ var n, a, l = s("37983"),
   Y = s("593195"),
   V = s("361777"),
   K = s("991497"),
-  z = s("393621"),
-  W = s("178837"),
+  W = s("393621"),
+  z = s("178837"),
   X = s("45029"),
   q = s("990745"),
   J = s("190986"),
@@ -70,7 +70,7 @@ var n, a, l = s("37983"),
   ed = s("953371"),
   eo = s("843455"),
   eu = s("782340"),
-  eh = s("935518");
+  eh = s("309601");
 
 function ec(e) {
   let {
@@ -328,7 +328,7 @@ class eC extends r.PureComponent {
             value: er.ChannelTypes.GUILD_VOICE,
             description: eu.default.Messages.CREATE_VOICE_CHANNEL_DESCRIPTION
           }), r && d.push({
-            icon: t ? z.default : K.default,
+            icon: t ? W.default : K.default,
             label: eu.default.Messages.FORUM_CHANNEL_TYPE,
             value: er.ChannelTypes.GUILD_FORUM,
             description: (0, l.jsxs)(p.Text, {
@@ -482,7 +482,7 @@ class eC extends r.PureComponent {
         note: eu.default.Messages.CREATE_STORE_CHANNEL_BETA_NOTE.format({
           devPortalUrl: er.MarketingURLs.API_DOCS_GAME_AND_SERVER_MANAGEMENT
         }),
-        children: [(0, l.jsx)(W.default, {
+        children: [(0, l.jsx)(z.default, {
           className: eh.switchIcon
         }), eu.default.Messages.CREATE_STORE_CHANNEL_BETA_TITLE]
       }) : null, null != t ? (0, l.jsxs)(r.Fragment, {

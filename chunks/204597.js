@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("974667"),
-  l = n("446674"),
+  l = n("974667"),
+  i = n("446674"),
   r = n("77078"),
   o = n("206230"),
   u = n("59678"),
-  d = n("112082"),
+  d = n("512807"),
   c = function(e) {
     let {
       statusSections: t,
@@ -24,40 +24,40 @@ var a = n("37983"),
       let {
         section: a,
         row: s
-      } = e, i = t[a];
-      if (null == i || null == s) return null;
-      let l = i[s];
-      return null == l ? null : n(l)
-    }, _ = (0, l.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), h = s.useRef(null), C = s.useCallback(() => new Promise(e => {
-      let t = h.current;
+      } = e, l = t[a];
+      if (null == l || null == s) return null;
+      let i = l[s];
+      return null == i ? null : n(i)
+    }, h = (0, i.useStateFromStores)([o.default], () => o.default.keyboardModeEnabled), _ = s.useRef(null), C = s.useCallback(() => new Promise(e => {
+      let t = _.current;
       if (null == t) return e();
       t.scrollToTop({
         callback: () => requestAnimationFrame(() => e())
       })
-    }), []), I = s.useCallback(() => new Promise(e => {
-      let t = h.current;
+    }), []), S = s.useCallback(() => new Promise(e => {
+      let t = _.current;
       if (null == t) return e();
       t.scrollToBottom({
         callback: () => requestAnimationFrame(() => e())
       })
-    }), []), T = s.useCallback(e => {
+    }), []), I = s.useCallback(e => {
       let t = document.querySelector(e),
-        n = h.current;
+        n = _.current;
       null != t && null != n && n.scrollIntoViewNode({
         node: t,
         padding: 8,
         callback: () => null == t ? void 0 : t.focus()
       })
-    }, []), S = (0, i.default)({
+    }, []), m = (0, l.default)({
       id: "people-list",
-      isEnabled: _,
+      isEnabled: h,
       scrollToStart: C,
-      scrollToEnd: I,
-      setFocus: T
+      scrollToEnd: S,
+      setFocus: I
     });
-    return (0, a.jsx)(i.ListNavigatorProvider, {
-      navigator: S,
-      children: (0, a.jsx)(i.ListNavigatorContainer, {
+    return (0, a.jsx)(l.ListNavigatorProvider, {
+      navigator: m,
+      children: (0, a.jsx)(l.ListNavigatorContainer, {
         children: e => {
           let {
             ref: n,
@@ -66,7 +66,7 @@ var a = n("37983"),
           return (0, a.jsx)(r.ListAuto, {
             ref: e => {
               var t;
-              h.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
+              _.current = e, n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
             },
             sectionHeight: f,
             renderRow: E,

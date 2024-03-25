@@ -1,14 +1,14 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return l
   }
 }), s("222007");
 var a = s("476042");
 
-function n(e, t, s, n) {
+function l(e, t, s, l) {
   let [{
-    isDragging: l
+    isDragging: n
   }, i, r] = (0, a.useDrag)({
     type: t,
     item: () => ({
@@ -21,19 +21,19 @@ function n(e, t, s, n) {
     accept: t,
     hover(t, a) {
       if (null == e.current) return;
-      let l = t.index;
-      if (l === s) return;
+      let n = t.index;
+      if (n === s) return;
       let i = e.current.getBoundingClientRect(),
         r = (i.bottom - i.top) / 2,
         o = a.getClientOffset(),
         d = o.y - i.top;
-      if (!(l < s) || !(d < r))(!(l > s) || !(d > r)) && (n(l, s), t.index = s)
+      if (!(n < s) || !(d < r))(!(n > s) || !(d > r)) && (l(n, s), t.index = s)
     }
   });
   return {
     drag: i,
     dragPreview: r,
     drop: o,
-    isDragging: l
+    isDragging: n
   }
 }

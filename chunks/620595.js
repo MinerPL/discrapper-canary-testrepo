@@ -12,10 +12,10 @@ var s = n("77078"),
   a = n("768064"),
   l = n("579574"),
   d = n("168503"),
-  C = n("920460"),
-  u = n("598347"),
+  u = n("920460"),
+  C = n("598347"),
   c = n("49111"),
-  L = n("429152");
+  L = n("221818");
 
 function f(e) {
   let {
@@ -39,13 +39,13 @@ function f(e) {
       activeSlide: N,
       width: 408,
       children: [(0, o.jsx)(s.Slide, {
-        id: u.TwoWayLinkModalSlideTypes.LANDING,
+        id: C.TwoWayLinkModalSlideTypes.LANDING,
         children: (0, o.jsx)(l.default, {
           onContinue: T,
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT,
+        id: C.TwoWayLinkModalSlideTypes.PRE_CONNECT,
         children: (0, o.jsx)(d.default, {
           isWaitingForConnection: !1,
           onWaitingForConnection: h,
@@ -54,7 +54,7 @@ function f(e) {
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: u.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
+        id: C.TwoWayLinkModalSlideTypes.PRE_CONNECT_WAITING,
         children: (0, o.jsx)(d.default, {
           isWaitingForConnection: !0,
           expectedCallbackState: p,
@@ -63,7 +63,7 @@ function f(e) {
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: u.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
+        id: C.TwoWayLinkModalSlideTypes.DISCORD_CONSENT,
         children: (0, o.jsx)(r.default, {
           authToken: O,
           onContinue: T,
@@ -71,14 +71,14 @@ function f(e) {
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: u.TwoWayLinkModalSlideTypes.ERROR,
+        id: C.TwoWayLinkModalSlideTypes.ERROR,
         children: (0, o.jsx)(a.default, {
           onContinue: T,
           onClose: n
         })
       }), (0, o.jsx)(s.Slide, {
-        id: u.TwoWayLinkModalSlideTypes.SUCCESS,
-        children: (0, o.jsx)(C.default, {
+        id: C.TwoWayLinkModalSlideTypes.SUCCESS,
+        children: (0, o.jsx)(u.default, {
           onClose: n
         })
       })]

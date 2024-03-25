@@ -1,29 +1,29 @@
 "use strict";
-C.r(l), C.d(l, {
+t.r(l), t.d(l, {
   default: function() {
     return x
   }
-}), C("222007");
-var t, L, s = C("37983"),
-  a = C("884691"),
-  r = C("414456"),
-  d = C.n(r),
-  i = C("77078"),
-  n = C("449008"),
-  u = C("931138"),
-  c = C("928564"),
-  f = C("888978"),
-  o = C("390864"),
-  h = C("486952"),
-  E = C("49111"),
-  R = C("782340"),
-  p = C("465835");
-(L = t || (t = {}))[L.PARTNERED = 0] = "PARTNERED", L[L.STAFF = 1] = "STAFF", L[L.VERIFIED = 2] = "VERIFIED", L[L.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", L[L.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", L[L.HUB = 5] = "HUB", L[L.NONE = 6] = "NONE";
+}), t("222007");
+var C, s, L = t("37983"),
+  a = t("884691"),
+  r = t("414456"),
+  d = t.n(r),
+  i = t("77078"),
+  n = t("449008"),
+  u = t("931138"),
+  c = t("928564"),
+  f = t("888978"),
+  o = t("390864"),
+  h = t("486952"),
+  E = t("49111"),
+  R = t("782340"),
+  p = t("816242");
+(s = C || (C = {}))[s.PARTNERED = 0] = "PARTNERED", s[s.STAFF = 1] = "STAFF", s[s.VERIFIED = 2] = "VERIFIED", s[s.VERIFIED_AND_PARTNERED = 3] = "VERIFIED_AND_PARTNERED", s[s.VERIFIED_AND_HUB = 4] = "VERIFIED_AND_HUB", s[s.HUB = 5] = "HUB", s[s.NONE = 6] = "NONE";
 class v extends a.PureComponent {
-  renderBadge(e, l, C) {
+  renderBadge(e, l, t) {
     let {
-      className: t,
-      badgeStrokeColor: L,
+      className: C,
+      badgeStrokeColor: s,
       tooltipColor: a = i.Tooltip.Colors.BRAND,
       tooltipPosition: r,
       size: c = 16,
@@ -50,28 +50,28 @@ class v extends a.PureComponent {
           (0, n.assertNever)(e)
       }
     }(e);
-    return (0, s.jsx)(i.Tooltip, {
+    return (0, L.jsx)(i.Tooltip, {
       color: a,
       position: r,
       text: E,
-      children: a => 5 === e || 4 === e ? (0, s.jsx)("div", {
+      children: a => 5 === e || 4 === e ? (0, L.jsx)("div", {
         ...a,
-        className: d(C, t),
+        className: d(t, C),
         style: {
           width: c,
           height: c
         },
-        children: (0, s.jsx)(l, {
+        children: (0, L.jsx)(l, {
           className: d(p.icon, o)
         })
-      }) : (0, s.jsx)(u.default, {
+      }) : (0, L.jsx)(u.default, {
         ...a,
-        className: d(C, t),
+        className: d(t, C),
         flowerStarClassName: h,
         color: f,
-        stroke: L,
+        stroke: s,
         size: c,
-        children: (0, s.jsx)(l, {
+        children: (0, L.jsx)(l, {
           className: d(p.icon, o)
         })
       })

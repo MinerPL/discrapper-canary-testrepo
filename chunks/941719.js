@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   BACKGROUND_GRADIENT_PRESETS: function() {
-    return f
+    return _
   },
   BACKGROUND_GRADIENT_PRESETS_MAP: function() {
-    return E
+    return f
   }
 }), n("222007");
-var i, r, s = n("917351"),
+var i, s, r = n("917351"),
   a = n("151426"),
   o = n("843455"),
   l = n("782340");
@@ -140,7 +140,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_DESERT_KHAKI,
     midpointPercentage: 50
   }],
-  c = [{
+  d = [{
     id: a.BackgroundGradientPresetId.SUNSET,
     theme: o.ThemeTypes.DARK,
     colors: [{
@@ -352,7 +352,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_SEPIA,
     midpointPercentage: 50
   }],
-  d = {
+  c = {
     id: a.BackgroundGradientPresetId.EASTER_EGG,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
@@ -366,6 +366,6 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_EASTER_EGG,
     midpointPercentage: 50
   },
-  f = [...u, ...c, d];
-[...c, ...u], (r = i || (i = {}))[r.DARK = 0] = "DARK", r[r.LIGHT = 1] = "LIGHT", r[r.SYSTEM = 2] = "SYSTEM", o.ThemeTypes.DARK, o.ThemeTypes.LIGHT, o.ThemeTypes.DARKER, o.ThemeTypes.LIGHT, o.ThemeTypes.MIDNIGHT, () => l.default.Messages.THEME_MIDNIGHT;
-let E = (0, s.keyBy)(f, "id")
+  _ = [...u, ...d, c];
+[...d, ...u], (s = i || (i = {}))[s.DARK = 0] = "DARK", s[s.LIGHT = 1] = "LIGHT", s[s.SYSTEM = 2] = "SYSTEM", o.ThemeTypes.DARK, o.ThemeTypes.LIGHT, o.ThemeTypes.DARKER, o.ThemeTypes.LIGHT, o.ThemeTypes.MIDNIGHT, () => l.default.Messages.THEME_MIDNIGHT;
+let f = (0, r.keyBy)(_, "id")

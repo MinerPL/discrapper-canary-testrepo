@@ -25,11 +25,11 @@ var t = E("917351"),
   A = E("709048"),
   R = E("91801"),
   l = E("340431"),
-  L = E("538184"),
-  u = E("974893"),
+  u = E("538184"),
+  L = E("974893"),
   C = E("236734"),
-  D = E("832254"),
-  c = E("514594"),
+  c = E("832254"),
+  D = E("514594"),
   d = E("738940"),
   U = E("513196"),
   M = E("782340");
@@ -51,12 +51,12 @@ let h = 60,
     name: M.default.Messages.APP_ICON_MANGA
   }, {
     id: U.PremiumAppIconIds.MATTE_DARK,
-    iconSource: L,
+    iconSource: u,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_MATTE_DARK
   }, {
     id: U.PremiumAppIconIds.MATTE_LIGHT,
-    iconSource: u,
+    iconSource: L,
     name: M.default.Messages.APP_ICON_MATTE_LIGHT,
     isPremium: !0
   }, {
@@ -66,7 +66,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_PASTEL
   }, {
     id: U.PremiumAppIconIds.PIRATE,
-    iconSource: D,
+    iconSource: c,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_PIRATE
   }, {
@@ -76,7 +76,7 @@ let h = 60,
     name: M.default.Messages.APP_ICON_CAMO
   }, {
     id: U.PremiumAppIconIds.SUNSET,
-    iconSource: c,
+    iconSource: D,
     isPremium: !0,
     name: M.default.Messages.APP_ICON_SUNSET
   }, {

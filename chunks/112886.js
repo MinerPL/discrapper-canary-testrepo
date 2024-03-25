@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return O
+    return y
   }
 }), a("222007");
 var l = a("37983"),
@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("208021"),
   _ = a("845579"),
   x = a("42203"),
-  v = a("923959"),
-  S = a("377253"),
+  S = a("923959"),
+  v = a("377253"),
   C = a("957255"),
   N = a("471671"),
   p = a("315102"),
@@ -31,8 +31,8 @@ var l = a("37983"),
   j = a("99384"),
   M = a("49111"),
   D = a("782340"),
-  F = a("100703"),
-  L = a("632215"),
+  F = a("385454"),
+  L = a("919163"),
   R = a("448738");
 
 function b(e) {
@@ -48,9 +48,9 @@ function b(e) {
     f = (0, h.getObscuredAlt)(o),
     g = (0, d.useStateFromStores)([N.default], () => N.default.isFocused()),
     I = (0, m.isAnimatedImageUrl)(n.src),
-    v = _.GifAutoPlay.useSetting(),
+    S = _.GifAutoPlay.useSetting(),
     {
-      src: S,
+      src: v,
       width: C,
       height: p,
       alt: T
@@ -58,13 +58,13 @@ function b(e) {
   return p > C ? a = 72 : t = 72, (0, l.jsxs)("div", {
     className: F.media,
     children: [(0, E.renderImageComponent)({
-      src: S,
+      src: v,
       maxHeight: t,
       maxWidth: a,
       width: C,
       height: p,
       alt: null != T && u && null != f ? f : T,
-      autoPlay: v,
+      autoPlay: S,
       animated: I && !u && g,
       containerClassName: F.thumbnailContainer,
       imageClassName: i({
@@ -80,7 +80,7 @@ function b(e) {
 function G(e) {
   let {
     resource: t
-  } = e, a = (0, d.useStateFromStores)([x.default], () => x.default.getChannel(t.channelId)), s = (0, d.useStateFromStores)([S.default], () => S.default.getMessages(t.channelId)), c = (0, d.useStateFromStores)([C.default], () => C.default.can(M.Permissions.VIEW_CHANNEL, a)), m = s.first(), h = (0, A.default)(m), E = (0, o.useForumPostMediaProperties)(m, !1), g = (null == E ? void 0 : E.length) > 0 ? E[0] : null, _ = null != a && null == s.first() && !s.loadingMore && !s.ready && !s.hasFetched && c;
+  } = e, a = (0, d.useStateFromStores)([x.default], () => x.default.getChannel(t.channelId)), s = (0, d.useStateFromStores)([v.default], () => v.default.getMessages(t.channelId)), c = (0, d.useStateFromStores)([C.default], () => C.default.can(M.Permissions.VIEW_CHANNEL, a)), m = s.first(), h = (0, A.default)(m), E = (0, o.useForumPostMediaProperties)(m, !1), g = (null == E ? void 0 : E.length) > 0 ? E[0] : null, _ = null != a && null == s.first() && !s.loadingMore && !s.ready && !s.hasFetched && c;
   n.useEffect(() => {
     _ && u.default.fetchMessages({
       channelId: t.channelId,
@@ -89,7 +89,7 @@ function G(e) {
     })
   }, [t.channelId, _]);
   if (null == a || null == a.guild_id) return null;
-  let v = p.default.getResourceChannelIconURL({
+  let S = p.default.getResourceChannelIconURL({
       channelId: a.id,
       icon: t.icon
     }),
@@ -128,24 +128,24 @@ function G(e) {
           channelId: a.id
         })
       })]
-    }), null != t.icon && null != v ? (0, l.jsx)("div", {
+    }), null != t.icon && null != S ? (0, l.jsx)("div", {
       className: F.media,
       children: (0, l.jsx)("img", {
-        src: v,
+        src: S,
         className: F.thumbnail,
         width: 72,
         height: 72,
         alt: "",
         "aria-hidden": !0
       })
-    }) : null, null == v && null != g ? (0, l.jsx)(b, {
+    }) : null, null == S && null != g ? (0, l.jsx)(b, {
       firstMedia: g,
       channelId: t.channelId
     }) : null]
   })
 }
 
-function O(e) {
+function y(e) {
   let {
     guild: t,
     isNewMember: a
@@ -163,7 +163,7 @@ function O(e) {
     }), (0, l.jsx)(r.Button, {
       className: F.emptyStateButton,
       onClick: () => {
-        let e = v.default.getDefaultChannel(t.id);
+        let e = S.default.getDefaultChannel(t.id);
         null != e && (0, g.transitionTo)(M.Routes.CHANNEL(t.id, e.id))
       },
       fullWidth: !0,

@@ -1,10 +1,10 @@
 "use strict";
 
-function s(e) {
+function i(e) {
   return !1
 }
 n.r(t), n.d(t, {
   isOldVoiceUIEnabled: function() {
-    return s
+    return i
   }
 })

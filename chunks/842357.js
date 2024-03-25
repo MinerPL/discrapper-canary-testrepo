@@ -5,56 +5,56 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("454686"),
+  l = s("884691"),
+  n = s("454686"),
   i = s("254365"),
   r = s("151866"),
   o = s("155158"),
   d = s("872708"),
   u = s("567062"),
   c = s("736523"),
-  E = n.memo(function(e) {
+  E = l.memo(function(e) {
     let {
       rule: t,
       persistEdit: s = !1,
       initWithEdit: E = !1
     } = e, {
       hasChanges: _,
-      editingRule: T,
-      createNewEditingRule: I,
+      editingRule: I,
+      createNewEditingRule: T,
       setEditingRule: S
     } = (0, r.useAutomodEditingRuleState)(), {
-      isLoading: N
-    } = (0, r.useAutomodEditingRuleActions)(), [g] = n.useState(() => !(0, l.isBackendPersistedRule)(t)), f = (null == T ? void 0 : T.id) === t.id || s, A = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), L = f && null != T ? T : t, m = n.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), C = n.useCallback(() => {
-      I(t.guildId, t.triggerType)
-    }, [t.guildId, t.triggerType, I]), O = n.useCallback(e => {
-      !N && S(e, !0)
-    }, [N, S]);
-    n.useEffect(() => {
+      isLoading: f
+    } = (0, r.useAutomodEditingRuleActions)(), [m] = l.useState(() => !(0, n.isBackendPersistedRule)(t)), N = (null == I ? void 0 : I.id) === t.id || s, g = (0, i.isDefaultRuleId)(null == t ? void 0 : t.id), h = N && null != I ? I : t, C = l.useMemo(() => (0, o.createOnPreventNavigation)(t.name), [null == t ? void 0 : t.name]), R = l.useCallback(() => {
+      T(t.guildId, t.triggerType)
+    }, [t.guildId, t.triggerType, T]), x = l.useCallback(e => {
+      !f && S(e, !0)
+    }, [f, S]);
+    l.useEffect(() => {
       E && S(t, !0)
     }, [E, t, S]);
-    let h = n.useCallback(() => {
-      f ? !_ && S(null) : _ ? m(() => {
+    let L = l.useCallback(() => {
+      N ? !_ && S(null) : _ ? C(() => {
         S(t)
       }) : S(t)
-    }, [f, _, m, t, S]);
+    }, [N, _, C, t, S]);
     return (0, a.jsx)(u.default, {
       renderHeader: (0, a.jsx)(c.default, {
-        rule: L,
-        forceSetup: g && !f && !A,
+        rule: h,
+        forceSetup: m && !N && !g,
         triggerType: t.triggerType,
-        isEditMode: f,
-        isDefaultRule: A,
-        onChangeRule: O,
-        onSetupRule: C
+        isEditMode: N,
+        isDefaultRule: g,
+        onChangeRule: x,
+        onSetupRule: R
       }),
-      isStuck: f && _,
-      isExpanded: f,
-      onExpand: h,
-      children: f && (0, a.jsx)(d.default, {
-        rule: L,
-        isLoading: N,
-        onChangeRule: O
+      isStuck: N && _,
+      isExpanded: N,
+      onExpand: L,
+      children: N && (0, a.jsx)(d.default, {
+        rule: h,
+        isLoading: f,
+        onChangeRule: x
       })
     })
   })

@@ -1,6 +1,6 @@
 "use strict";
 var r = n("149384")(),
-  i = n("812095")("Object.prototype.toString"),
+  i = n("314970")("Object.prototype.toString"),
   o = function(e) {
     return (!r || !e || "object" != typeof e || !(Symbol.toStringTag in e)) && "[object Arguments]" === i(e)
   },

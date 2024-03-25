@@ -24,14 +24,14 @@ var l = a("37983"),
   I = a("181114"),
   _ = a("118503"),
   x = a("818643"),
-  v = a("315102"),
-  S = a("49111"),
+  S = a("315102"),
+  v = a("49111"),
   C = a("782340"),
-  N = a("53354"),
+  N = a("32492"),
   p = a("141555"),
   T = a("520609");
 let A = e => {
-  let t = n.useMemo(() => null == e ? null : v.default.getGuildHomeHeaderURL({
+  let t = n.useMemo(() => null == e ? null : S.default.getGuildHomeHeaderURL({
     id: e.id,
     homeHeader: e.homeHeader
   }), [e]);
@@ -46,8 +46,8 @@ function j(e) {
   let {
     guild: t
   } = e, a = () => {
-    f.default.open(t.id, S.GuildSettingsSections.ONBOARDING, void 0, S.GuildSettingsSubsections.SERVER_GUIDE)
-  }, n = t.hasFeature(S.GuildFeatures.BANNER);
+    f.default.open(t.id, v.GuildSettingsSections.ONBOARDING, void 0, v.GuildSettingsSubsections.SERVER_GUIDE)
+  }, n = t.hasFeature(v.GuildFeatures.BANNER);
   return n ? (0, l.jsxs)(u.Button, {
     className: N.editButton,
     innerClassName: N.editButtonInner,
@@ -127,7 +127,7 @@ let M = n.memo(function(e) {
                 return a => (0, l.jsx)(e, {
                   ...a,
                   guild: t,
-                  source: S.InstantInviteSources.GUILD_HOME
+                  source: v.InstantInviteSources.GUILD_HOME
                 })
               }),
               children: C.default.Messages.INSTANT_INVITE

@@ -40,13 +40,13 @@ e.exports = function(e, t, n, r, i) {
     d = s.allocUnsafe(r),
     p = s.allocUnsafe(t.length + 4);
   t.copy(p, 0, 0, t.length);
-  for (var h = 0, g = l[i], b = Math.ceil(r / g), v = 1; v <= b; v++) {
-    p.writeUInt32BE(v, t.length);
+  for (var h = 0, v = l[i], g = Math.ceil(r / v), b = 1; b <= g; b++) {
+    p.writeUInt32BE(b, t.length);
     for (var m = o.run(p, o.ipad1), y = m, x = 1; x < n; x++) {
       y = o.run(y, o.ipad2);
-      for (var w = 0; w < g; w++) m[w] ^= y[w]
+      for (var w = 0; w < v; w++) m[w] ^= y[w]
     }
-    m.copy(d, h), h += g
+    m.copy(d, h), h += v
   }
   return d
 }

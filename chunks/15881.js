@@ -1,7 +1,7 @@
 "use strict";
-var s, l;
+var s, n;
 a.r(t), a.d(t, {
   PomeloModalSlides: function() {
     return s
   }
-}), (l = s || (s = {}))[l.INFO = 0] = "INFO", l[l.EDIT_SCREEN = 1] = "EDIT_SCREEN", l[l.FINISH_LATER = 2] = "FINISH_LATER", l[l.SUGGESTIONS = 3] = "SUGGESTIONS"
+}), (n = s || (s = {}))[n.INFO = 0] = "INFO", n[n.EDIT_SCREEN = 1] = "EDIT_SCREEN", n[n.FINISH_LATER = 2] = "FINISH_LATER", n[n.SUGGESTIONS = 3] = "SUGGESTIONS"

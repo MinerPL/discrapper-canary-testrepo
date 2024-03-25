@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   getPartyMetadata: function() {
-    return i
+    return l
   }
 });
 var a = n("575365"),
   s = n("309570");
 
-function i(e) {
+function l(e) {
   return {
     af_voice_chat: e.voiceChannels.length > 0,
     af_people_count: e.partiedMembers.length,

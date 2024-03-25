@@ -1,29 +1,29 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 }), n("222007");
-var l = n("37983"),
-  a = n("884691"),
-  s = n("333987"),
-  i = a.forwardRef(function(e, t) {
+var i = n("37983"),
+  l = n("884691"),
+  a = n("333987"),
+  s = l.forwardRef(function(e, t) {
     let {
       muted: n,
-      volume: i,
+      volume: s,
       playing: r,
       ...o
-    } = e, [u, d] = (0, s.default)(t);
-    return a.useEffect(() => {
+    } = e, [u, d] = (0, a.default)(t);
+    return l.useEffect(() => {
       let e = u.current;
       if (null != e) void 0 !== n && (e.muted = n)
-    }, [u, n]), a.useEffect(() => {
+    }, [u, n]), l.useEffect(() => {
       let e = u.current;
-      if (null != e) void 0 !== i && (e.volume = i)
-    }, [u, i]), a.useEffect(() => {
+      if (null != e) void 0 !== s && (e.volume = s)
+    }, [u, s]), l.useEffect(() => {
       let e = u.current;
       if (null != e) void 0 !== r && (r ? e.play() : e.pause())
-    }, [u, r]), (0, l.jsx)("audio", {
+    }, [u, r]), (0, i.jsx)("audio", {
       ref: d,
       ...o
     })

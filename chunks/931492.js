@@ -1,7 +1,7 @@
-var n = r("85762"),
-  o = r("921563"),
-  a = Object.prototype.hasOwnProperty;
-e.exports = function(e, t, r) {
-  var i = e[t];
-  (!(a.call(e, t) && o(i, r)) || void 0 === r && !(t in e)) && n(e, t, r)
+var r = n("85762"),
+  i = n("921563"),
+  o = Object.prototype.hasOwnProperty;
+e.exports = function(e, t, n) {
+  var s = e[t];
+  (!(o.call(e, t) && i(s, n)) || void 0 === n && !(t in e)) && r(e, t, n)
 }

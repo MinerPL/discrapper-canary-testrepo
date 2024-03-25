@@ -1,18 +1,18 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("782340");
+  l = s("782340");
 
-function l(e) {
-  let [t, s] = a.useState(n.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMAGE_CTA_DEFAULT_FILENAME), l = null == e ? n.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_UPLOAD : n.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_EDIT, i = null == e ? n.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_UPLOAD : n.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_EDIT_A11Y.format({
+function n(e) {
+  let [t, s] = a.useState(l.default.Messages.GUILD_ROLE_SUBSCRIPTION_IMAGE_CTA_DEFAULT_FILENAME), n = null == e ? l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_UPLOAD : l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_EDIT, i = null == e ? l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_UPLOAD : l.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETUP_INFO_COVER_IMAGE_CTA_EDIT_A11Y.format({
     filename: t
   });
   return {
-    imageCTA: l,
+    imageCTA: n,
     imageAriaLabel: i,
     setFilename: s
   }

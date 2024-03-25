@@ -1,17 +1,17 @@
 "use strict";
 l.r(t), l.d(t, {
   openCreateGuildModal: function() {
-    return f
+    return I
   },
   updateCreateGuildModal: function() {
-    return I
+    return p
   }
 });
 var n = l("37983");
 l("884691");
 var r = l("77078"),
-  a = l("42963"),
-  s = l("599110"),
+  s = l("42963"),
+  a = l("599110"),
   i = l("169626"),
   o = l("243338"),
   u = l("49111"),
@@ -20,30 +20,30 @@ var r = l("77078"),
 function d(e, t, l, r) {
   return (0, n.jsx)(i.default, {
     onSuccess: t => {
-      a.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.SUCCESS), e.onClose(), null == r || r(t)
+      s.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.SUCCESS), e.onClose(), null == r || r(t)
     },
     onSlideChange: e => (function(e, t) {
       switch (e) {
         case o.CreateGuildSlideTypes.GUILD_TEMPLATES:
-          a.default.flowStepOrStart(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.GUILD_TEMPLATES), s.default.track(u.AnalyticEvents.OPEN_MODAL, {
+          s.default.flowStepOrStart(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.GUILD_TEMPLATES), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
             type: "Create Guild Templates",
             location: t
           });
           break;
         case o.CreateGuildSlideTypes.CUSTOMIZE_GUILD:
-          a.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.GUILD_CREATE), s.default.track(u.AnalyticEvents.OPEN_MODAL, {
+          s.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.GUILD_CREATE), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
             type: "Create Guild Step 2",
             location: t
           });
           break;
         case o.CreateGuildSlideTypes.CREATION_INTENT:
-          s.default.track(u.AnalyticEvents.OPEN_MODAL, {
+          a.default.track(u.AnalyticEvents.OPEN_MODAL, {
             type: "Server Intent Discovery",
             location: t
           });
           break;
         case o.CreateGuildSlideTypes.JOIN_GUILD:
-          a.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.JOIN_GUILD), s.default.track(u.AnalyticEvents.OPEN_MODAL, {
+          s.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.JOIN_GUILD), a.default.track(u.AnalyticEvents.OPEN_MODAL, {
             type: "Join Guild",
             location: t
           })
@@ -54,7 +54,7 @@ function d(e, t, l, r) {
     ...e
   })
 }
-let f = e => {
+let I = e => {
     let {
       initialSlide: t,
       location: l,
@@ -64,7 +64,7 @@ let f = e => {
       modalKey: o.CREATE_GUILD_MODAL_KEY
     })
   },
-  I = e => {
+  p = e => {
     let {
       slide: t,
       location: l

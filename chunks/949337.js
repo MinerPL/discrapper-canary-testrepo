@@ -17,9 +17,9 @@ var r = n("697309"),
   p = n("843279"),
   m = n("190418"),
   h = n("483165"),
-  _ = n("757367");
+  y = n("757367");
 
-function y(e, t, n) {
+function _(e, t, n) {
   var i, s, l;
   return t === r.viewport ? (0, h.default)((0, a.default)(e, n)) : (0, c.isElement)(t) ? (i = t, s = n, (l = (0, d.default)(i, !1, "fixed" === s)).top = l.top + i.clientTop, l.left = l.left + i.clientLeft, l.bottom = l.top + i.clientHeight, l.right = l.left + i.clientWidth, l.width = i.clientWidth, l.height = i.clientHeight, l.x = l.left, l.y = l.top, l) : (0, h.default)((0, o.default)((0, u.default)(e)))
 }
@@ -30,8 +30,8 @@ function g(e, t, n, r) {
     }) : []) : [].concat(t), [n]),
     h = d[0],
     g = d.reduce(function(t, n) {
-      var a = y(e, n, r);
-      return t.top = (0, _.max)(a.top, t.top), t.right = (0, _.min)(a.right, t.right), t.bottom = (0, _.min)(a.bottom, t.bottom), t.left = (0, _.max)(a.left, t.left), t
-    }, y(e, h, r));
+      var a = _(e, n, r);
+      return t.top = (0, y.max)(a.top, t.top), t.right = (0, y.min)(a.right, t.right), t.bottom = (0, y.min)(a.bottom, t.bottom), t.left = (0, y.max)(a.left, t.left), t
+    }, _(e, h, r));
   return g.width = g.right - g.left, g.height = g.bottom - g.top, g.x = g.left, g.y = g.top, g
 }

@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("79112"),
-  f = n("4919"),
-  E = n("86621"),
+  E = n("4919"),
+  f = n("86621"),
   _ = n("737960"),
   T = n("206230"),
   I = n("491232"),
@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("10514"),
   O = n("552712"),
   R = n("145131"),
-  L = n("880013"),
-  v = n("943519"),
+  v = n("880013"),
+  L = n("943519"),
   P = n("181108"),
   D = n("599110"),
   x = n("659632"),
@@ -41,7 +41,7 @@ var s = n("37983"),
   G = n("49111"),
   B = n("646718"),
   F = n("782340"),
-  k = n("192800");
+  k = n("120704");
 
 function w(e) {
   let {
@@ -51,7 +51,7 @@ function w(e) {
   return (0, s.jsxs)(d.Clickable, {
     className: k.libraryLink,
     onClick: t,
-    children: [(0, s.jsx)(L.default, {
+    children: [(0, s.jsx)(v.default, {
       className: k.libraryIcon
     }), (0, s.jsx)("div", {
       children: n.isHidden() ? F.default.Messages.APPLICATION_STORE_PURCHASE_IN_LIBRARY_HIDDEN : F.default.Messages.APPLICATION_STORE_PURCHASE_IN_LIBRARY
@@ -63,13 +63,13 @@ class H extends l.PureComponent {
     let {
       width: e
     } = this.props;
-    return e >= f.HORIZONTAL_EMBED_BREAKPOINT
+    return e >= E.HORIZONTAL_EMBED_BREAKPOINT
   }
   handleViewInventory() {
     c.default.open(G.UserSettingsSections.INVENTORY)
   }
   render() {
-    return (0, s.jsx)(f.ResponsiveEmbedTile, {
+    return (0, s.jsx)(E.ResponsiveEmbedTile, {
       isHorizontal: this.isHorizontal,
       renderTitle: this.renderTitle,
       renderTagline: this.renderTagline,
@@ -277,8 +277,8 @@ class V extends l.Component {
     if (null == e || e.revoked) return t ? (0, s.jsx)(H, {
       isSelfGift: l,
       width: n
-    }) : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
-      isHorizontal: n >= f.HORIZONTAL_EMBED_BREAKPOINT
+    }) : (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
+      isHorizontal: n >= E.HORIZONTAL_EMBED_BREAKPOINT
     });
     return (0, I.isCollectiblesGiftCode)(e) ? (0, s.jsx)("div", {
       className: k.collectiblesEmbedWrapper,
@@ -338,20 +338,20 @@ class V extends l.Component {
       let l = B.LegacySeasonalGiftStyles.includes(e.giftStyle),
         a = i(k.customGiftEmbedWrapper, {
           [k.legacySeasonalGiftEmbedWrapper]: l,
-          [k.giftEmbedWrapperHorizontal]: n >= f.HORIZONTAL_EMBED_BREAKPOINT
+          [k.giftEmbedWrapperHorizontal]: n >= E.HORIZONTAL_EMBED_BREAKPOINT
         }),
         r = i({
           [k.legacySeasonalGiftEmbedBox]: l,
-          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= f.HORIZONTAL_EMBED_BREAKPOINT,
+          [k.legacySeasonalGiftEmbedBoxHorizontal]: l && n >= E.HORIZONTAL_EMBED_BREAKPOINT,
           [k.customGiftEmbedBox]: !l,
-          [k.customGiftEmbedBoxHorizontal]: !l && n >= f.HORIZONTAL_EMBED_BREAKPOINT
+          [k.customGiftEmbedBoxHorizontal]: !l && n >= E.HORIZONTAL_EMBED_BREAKPOINT
         });
       return (0, s.jsxs)("div", {
         className: a,
         children: [!t && B.AllSeasonalGiftStyles.includes(e.giftStyle) && (0, s.jsx)(P.default, {
           className: k.snow,
           wind: 5
-        }), l && (0, s.jsx)(v.default, {
+        }), l && (0, s.jsx)(L.default, {
           className: k.headerIcon
         }), null != e.giftStyle && (0, s.jsx)(p.default, {
           defaultAnimationState: e.redeemed ? m.AnimationState.LOOP : m.AnimationState.IDLE,
@@ -362,7 +362,7 @@ class V extends l.Component {
     }
   }
 }
-let Y = (0, _.default)((0, E.default)(V));
+let Y = (0, _.default)((0, f.default)(V));
 var W = u.default.connectStores([C.default, O.default, g.default, h.default, M.default, A.default, T.default], e => {
   let {
     code: t,

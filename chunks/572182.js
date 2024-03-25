@@ -6,22 +6,22 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("913144"),
-  i = n("923959"),
-  l = n("697218"),
+  l = n("923959"),
+  i = n("697218"),
   r = n("49111");
 let o = null;
 
 function u() {
-  let e = l.default.getCurrentUser();
+  let e = i.default.getCurrentUser();
   if (null == e || e.mfaEnabled === o) return !1;
   o = e.mfaEnabled
 }
 class d extends a.default.Store {
   initialize() {
-    this.waitFor(l.default, i.default), this.syncWith([l.default, i.default], u)
+    this.waitFor(i.default, l.default), this.syncWith([i.default, l.default], u)
   }
   isVisible(e) {
-    return null != e && e.mfaLevel === r.MFALevels.ELEVATED && !1 === o && i.default.hasElevatedPermissions(e.id)
+    return null != e && e.mfaLevel === r.MFALevels.ELEVATED && !1 === o && l.default.hasElevatedPermissions(e.id)
   }
 }
 d.displayName = "GuildMFAWarningStore";

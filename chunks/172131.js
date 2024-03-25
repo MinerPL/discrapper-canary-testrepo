@@ -8,9 +8,9 @@ var a, l, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
-  o = n("256170"),
-  u = n("981913"),
-  d = n("698310");
+  u = n("256170"),
+  o = n("981913"),
+  d = n("608845");
 
 function c(e) {
   let {
@@ -19,11 +19,11 @@ function c(e) {
     themeable: a,
     ...l
   } = e;
-  return (0, s.jsx)(u.default, {
+  return (0, s.jsx)(o.default, {
     className: r(n, d.arrow, {
       [d.up]: 0 === t
     }),
-    iconComponent: o.default,
+    iconComponent: u.default,
     themeable: a,
     ...l
   })

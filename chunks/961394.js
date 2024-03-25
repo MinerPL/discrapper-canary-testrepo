@@ -1,11 +1,11 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 });
 var a = s("862205");
-let n = (0, a.createExperiment)({
+let l = (0, a.createExperiment)({
   kind: "user",
   id: "2020-12_guild_delete_feedback",
   label: "Guild Delete Feedback experiment",
@@ -20,4 +20,4 @@ let n = (0, a.createExperiment)({
     }
   }]
 });
-var l = n
+var n = l

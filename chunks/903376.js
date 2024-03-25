@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   OPEN_APP_DIRECTORY: function() {
-    return a
+    return u
   }
 });
 var i = n("412707"),
   o = n("646186"),
   l = n("162771");
-let a = {
+let u = {
   binds: ["mod+ctrl+a"],
   comboKeysBindGlobal: !0,
   action() {

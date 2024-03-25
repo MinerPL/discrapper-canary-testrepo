@@ -1,39 +1,39 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   default: function() {
     return r
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("199901"),
-  l = s("933351"),
-  i = s("977618"),
+var n = i("37983");
+i("884691");
+var a = i("199901"),
+  l = i("933351"),
+  s = i("935090"),
   r = function(e) {
     let {
       formField: t,
-      index: s,
+      index: i,
       isDragEnabled: r,
       isDropHovered: o,
       onDrop: d,
       onEdit: u,
       onRemove: c
     } = e, {
-      label: E,
-      placeholder: _
+      label: f,
+      placeholder: E
     } = t;
-    return (0, a.jsx)(l.default, {
+    return (0, n.jsx)(l.default, {
       field: t,
-      index: s,
+      index: i,
       isDragEnabled: r,
       isDropHovered: o,
       onDrop: d,
       onEdit: u,
       onRemove: c,
-      title: E,
-      children: (0, a.jsx)(n.ParagraphFieldBody, {
-        className: i.fieldBackground,
-        placeholder: _,
+      title: f,
+      children: (0, n.jsx)(a.ParagraphFieldBody, {
+        className: s.fieldBackground,
+        placeholder: E,
         disabled: !0
       })
     })

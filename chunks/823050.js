@@ -1,26 +1,26 @@
 "use strict";
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   default: function() {
-    return v
+    return C
   }
 });
-var r, a, l = t("37983"),
-  n = t("884691"),
-  i = t("414456"),
-  d = t.n(i),
-  c = t("77078"),
-  o = t("200639"),
-  u = t("97347"),
-  h = t("587974"),
-  f = t("989769");
+var r, a, n = s("37983"),
+  l = s("884691"),
+  i = s("414456"),
+  c = s.n(i),
+  d = s("77078"),
+  o = s("200639"),
+  u = s("97347"),
+  h = s("587974"),
+  f = s("688843");
 (r = a || (a = {}))[r.OUTGOING = 0] = "OUTGOING", r[r.INCOMING = 1] = "INCOMING";
-class C extends n.PureComponent {
+class v extends l.PureComponent {
   renderStatus() {
     let {
       muted: e,
-      deafen: s
-    } = this.props, t = s ? o.default : u.default;
-    return e || s ? (0, l.jsx)(t, {
+      deafen: t
+    } = this.props, s = t ? o.default : u.default;
+    return e || t ? (0, n.jsx)(s, {
       className: f.status
     }, "status") : null
   }
@@ -28,8 +28,8 @@ class C extends n.PureComponent {
     let {
       speaking: e
     } = this.props;
-    return (0, l.jsx)("div", {
-      className: d(f.border, {
+    return (0, n.jsx)("div", {
+      className: c(f.border, {
         [f.speaking]: e
       })
     }, "border")
@@ -37,67 +37,67 @@ class C extends n.PureComponent {
   renderMask() {
     let {
       muted: e,
-      speaking: s,
-      deafen: t
+      speaking: t,
+      deafen: s
     } = this.props;
-    return e && s ? (0, l.jsxs)(l.Fragment, {
+    return e && t ? (0, n.jsxs)(n.Fragment, {
       children: [this.renderBorder(), this.renderStatus()]
-    }) : e || t ? (0, l.jsx)(l.Fragment, {
+    }) : e || s ? (0, n.jsx)(n.Fragment, {
       children: this.renderStatus()
-    }) : (0, l.jsx)(l.Fragment, {
+    }) : (0, n.jsx)(n.Fragment, {
       children: this.renderBorder()
     })
   }
   renderVoiceCallAvatar() {
     let {
       src: e,
-      disabled: s,
-      ringing: t,
+      disabled: t,
+      ringing: s,
       ringingType: r,
       avatarClassName: a,
-      muted: n,
+      muted: l,
       deafen: i,
       size: o,
       renderIcon: u
-    } = this.props, C = (0, c.getAvatarSize)(o), v = (0, l.jsx)("img", {
+    } = this.props, v = (0, d.getAvatarSize)(o), C = (0, n.jsx)("img", {
       src: e,
       alt: " ",
-      className: d(f.voiceAvatar, a, {
-        [f.ringingOutgoing]: t && 0 === r
+      className: c(f.voiceAvatar, a, {
+        [f.ringingOutgoing]: s && 0 === r
       })
     });
-    if (s) return v;
+    if (t) return C;
     let x = h.MaskIDs.AVATAR_DEFAULT;
-    return null != u ? x = o === c.AvatarSizes.SIZE_32 ? h.MaskIDs.AVATAR_CALL_ICON_32 : h.MaskIDs.AVATAR_CALL_ICON : (n || i) && (x = h.MaskIDs.AVATAR_VOICE_CALL_80), (0, l.jsxs)("div", {
+    return null != u ? x = o === d.AvatarSizes.SIZE_32 ? h.MaskIDs.AVATAR_CALL_ICON_32 : h.MaskIDs.AVATAR_CALL_ICON : (l || i) && (x = h.MaskIDs.AVATAR_VOICE_CALL_80), (0, n.jsxs)("div", {
       className: f.callAvatarMaskContainer,
-      children: [(0, l.jsxs)(h.default, {
+      children: [(0, n.jsxs)(h.default, {
         className: f.callAvatarMask,
-        width: C,
-        height: C,
+        width: v,
+        height: v,
         mask: x,
-        children: [null == u ? void 0 : u(), v]
+        children: [null == u ? void 0 : u(), C]
       }), this.renderMask()]
     })
   }
   render() {
     let {
       size: e,
-      onClick: s,
-      style: t,
+      onClick: t,
+      style: s,
       onContextMenu: r,
       className: a,
-      ringingType: n,
+      ringingType: l,
       ringing: i
-    } = this.props, o = d(f.wrapper, {
-      [f.clickable]: null != s,
-      [f.ringingOutgoing]: i && 0 === n,
-      [f.ringingIncoming]: i && 1 === n
-    }, a), u = (0, c.getAvatarSize)(e), h = {
+    } = this.props, o = c(f.wrapper, {
+      [f.clickable]: null != t,
+      [f.ringingOutgoing]: i && 0 === l,
+      [f.ringingIncoming]: i && 1 === l
+    }, a), u = (0, d.getAvatarSize)(e), h = {
       height: u,
       width: u,
-      ...t
+      ...s
     };
-    return (0, l.jsx)("div", {
+    return (0, n.jsx)("div", {
       style: h,
       onContextMenu: r,
       className: o,
@@ -105,8 +105,8 @@ class C extends n.PureComponent {
     })
   }
 }
-C.defaultProps = {
-  size: c.AvatarSizes.SIZE_80,
+v.defaultProps = {
+  size: d.AvatarSizes.SIZE_80,
   ringingType: 0,
   speaking: !1,
   soundsharing: !1,
@@ -117,5 +117,5 @@ C.defaultProps = {
   mirror: !1,
   disabled: !1,
   paused: !1
-}, C.RingingType = a;
-var v = C
+}, v.RingingType = a;
+var C = v

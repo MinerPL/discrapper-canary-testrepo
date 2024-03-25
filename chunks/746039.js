@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return g
   }
 }), n("222007");
 var r = n("37983"),
@@ -15,23 +15,23 @@ var r = n("37983"),
   c = n("677099"),
   f = n("282109"),
   v = n("200008"),
-  h = n("986373"),
-  C = n("514525"),
+  C = n("986373"),
+  h = n("514525"),
   m = n("782340"),
-  S = n("968982");
+  p = n("590232");
 
-function p(e) {
+function g(e) {
   let {
     transitionState: t,
     onClose: n,
     parentId: i
-  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()[0]), [d, f] = a.useState(s), [v, h] = a.useState(!1);
+  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()[0]), [d, f] = a.useState(s), [v, C] = a.useState(!1);
   return (0, r.jsxs)(o.ModalRoot, {
     transitionState: t,
     children: [(0, r.jsxs)(o.ModalHeader, {
-      className: S.modalHeader,
+      className: p.modalHeader,
       children: [(0, r.jsxs)("div", {
-        className: S.modalHeaderTitle,
+        className: p.modalHeaderTitle,
         children: [(0, r.jsx)(o.Heading, {
           variant: "text-lg/semibold",
           children: m.default.Messages.FAVORITE_CHANNEL
@@ -39,7 +39,7 @@ function p(e) {
           onClick: n
         })]
       }), (0, r.jsx)("div", {
-        className: S.guildSelector,
+        className: p.guildSelector,
         children: (0, r.jsx)(u.GuildSelector, {
           guildId: d,
           onChange: function(e) {
@@ -48,16 +48,16 @@ function p(e) {
         })
       })]
     }), (0, r.jsx)(o.ModalContent, {
-      className: S.modalContent,
-      children: (0, r.jsx)(g, {
+      className: p.modalContent,
+      children: (0, r.jsx)(S, {
         guildId: d,
         hideMutedChannels: v,
         parentId: i
       })
     }), (0, r.jsxs)(o.ModalFooter, {
-      className: S.modalFooter,
+      className: p.modalFooter,
       children: [(0, r.jsx)(o.Button, {
-        className: S.goBackButton,
+        className: p.goBackButton,
         look: o.ButtonLooks.BLANK,
         color: o.ButtonColors.PRIMARY,
         size: o.ButtonSizes.SMALL,
@@ -67,7 +67,7 @@ function p(e) {
         children: (0, r.jsx)(o.Checkbox, {
           type: o.Checkbox.Types.INVERTED,
           value: v,
-          onChange: (e, t) => h(t),
+          onChange: (e, t) => C(t),
           children: (0, r.jsx)(o.Text, {
             variant: "text-sm/medium",
             color: "interactive-normal",
@@ -79,12 +79,12 @@ function p(e) {
   })
 }
 
-function g(e) {
+function S(e) {
   let {
     guildId: t,
     hideMutedChannels: n,
     parentId: o
-  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.getCategories(t)), u = (0, C.default)(s), c = a.useRef(null);
+  } = e, s = (0, l.useStateFromStores)([d.default], () => d.default.getCategories(t)), u = (0, h.default)(s), c = a.useRef(null);
   return a.useEffect(() => {
     var e;
     null == c || null === (e = c.current) || void 0 === e || e.scroll({
@@ -92,9 +92,9 @@ function g(e) {
     })
   }, [t]), (0, r.jsx)("div", {
     ref: c,
-    children: u.map(e => e.type === i.ChannelTypes.GUILD_CATEGORY ? (0, r.jsx)(F, {
+    children: u.map(e => e.type === i.ChannelTypes.GUILD_CATEGORY ? (0, r.jsx)(x, {
       name: e.name
-    }, e.id) : (0, r.jsx)(x, {
+    }, e.id) : (0, r.jsx)(F, {
       channel: e,
       hideMutedChannels: n,
       parentId: o
@@ -102,34 +102,34 @@ function g(e) {
   })
 }
 
-function F(e) {
+function x(e) {
   let {
     name: t
   } = e;
   return (0, r.jsx)(o.Text, {
-    className: S.categoryRow,
+    className: p.categoryRow,
     variant: "eyebrow",
     color: "interactive-normal",
     children: t
   })
 }
 
-function x(e) {
+function F(e) {
   let {
     channel: t,
     hideMutedChannels: n,
     parentId: a
-  } = e, i = (0, h.useFavorite)(t.id), u = (0, l.useStateFromStores)([f.default], () => f.default.isChannelMuted(t.guild_id, t.id));
+  } = e, i = (0, C.useFavorite)(t.id), u = (0, l.useStateFromStores)([f.default], () => f.default.isChannelMuted(t.guild_id, t.id));
   if (u && n) return null;
   let d = (0, s.getChannelIconComponent)(t);
   return (0, r.jsxs)("div", {
-    className: S.channelRow,
+    className: p.channelRow,
     children: [(0, r.jsxs)("div", {
-      className: S.channelName,
+      className: p.channelName,
       children: [null != d && (0, r.jsx)("div", {
-        className: S.channelIconContainer,
+        className: p.channelIconContainer,
         children: (0, r.jsx)(d, {
-          className: S.channelIcon,
+          className: p.channelIcon,
           height: 20,
           width: 20
         })
@@ -138,16 +138,16 @@ function x(e) {
         color: "interactive-normal",
         children: t.name
       })]
-    }), null != i ? (0, r.jsx)(N, {
+    }), null != i ? (0, r.jsx)(I, {
       channelId: t.id
-    }) : (0, r.jsx)(I, {
+    }) : (0, r.jsx)(N, {
       channelId: t.id,
       parentId: a
     })]
   }, t.id)
 }
 
-function I(e) {
+function N(e) {
   let {
     channelId: t,
     parentId: n
@@ -163,7 +163,7 @@ function I(e) {
   })
 }
 
-function N(e) {
+function I(e) {
   let {
     channelId: t
   } = e;

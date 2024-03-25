@@ -1,5 +1,5 @@
 "use strict";
-var i, r, s, a;
+var i, s, r, a;
 n.r(t), n.d(t, {
   StaticChannelRoute: function() {
     return i
@@ -14,27 +14,27 @@ n.r(t), n.d(t, {
     return u
   },
   isGuildHomeChannel: function() {
-    return c
-  },
-  ChannelFlags: function() {
     return d
   },
+  ChannelFlags: function() {
+    return c
+  },
   MAX_CHANNEL_TOPIC_LENGTH: function() {
-    return f
+    return _
   },
   MAX_FORUM_CHANNEL_TOPIC_LENGTH: function() {
-    return E
+    return f
   },
   StaticChannelId: function() {
-    return r
+    return s
   },
   StaticChannelIds: function() {
-    return h
+    return E
   },
   FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID: function() {
-    return p
+    return h
   }
-}), n("222007"), (s = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", s.GUILD_SHOP = "shop", s.MEMBER_APPLICATIONS = "member-applications", s.GUILD_HOME = "@home", s.CHANNEL_BROWSER = "channel-browser", s.GUILD_ONBOARDING = "onboarding", s.CUSTOMIZE_COMMUNITY = "customize-community", s.MEMBER_SAFETY = "member-safety";
+}), n("222007"), (r = i || (i = {})).ROLE_SUBSCRIPTIONS = "role-subscriptions", r.GUILD_SHOP = "shop", r.MEMBER_APPLICATIONS = "member-applications", r.GUILD_HOME = "@home", r.CHANNEL_BROWSER = "channel-browser", r.GUILD_ONBOARDING = "onboarding", r.CUSTOMIZE_COMMUNITY = "customize-community", r.MEMBER_SAFETY = "member-safety";
 let o = new Set(Object.values(i));
 
 function l(e) {
@@ -45,10 +45,10 @@ function u(e, t) {
   return "".concat(e, "-").concat(t)
 }
 
-function c(e) {
+function d(e) {
   return !!(null == e ? void 0 : e.includes("@home"))
 }
-let d = Object.freeze({
+let c = Object.freeze({
     GUILD_FEED_REMOVED: 1,
     PINNED: 2,
     ACTIVE_CHANNELS_REMOVED: 4,
@@ -63,8 +63,8 @@ let d = Object.freeze({
     IS_BROADCASTING: 16384,
     HIDE_MEDIA_DOWNLOAD_OPTIONS: 32768
   }),
-  f = 1024,
-  E = 4096;
-(a = r || (r = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
-let h = new Set(Object.values(r)),
-  p = "131"
+  _ = 1024,
+  f = 4096;
+(a = s || (s = {})).GUILD_HOME = "home", a.SERVER_GUIDE = "guide", a.CHANNEL_BROWSER = "browse", a.CUSTOMIZE_COMMUNITY = "customize";
+let E = new Set(Object.values(s)),
+  h = "131"

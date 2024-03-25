@@ -8,8 +8,8 @@ var i = n("37983"),
   r = n("884691"),
   o = n("414456"),
   s = n.n(o),
-  l = n("971792"),
-  a = n("173791");
+  l = n("763206"),
+  a = n("125047");
 let u = {
     VERTICAL: a.vertical,
     HORIZONTAL: l.horizontal,
@@ -85,18 +85,18 @@ let E = e => {
     shrink: E,
     grow: S,
     basis: g,
-    style: h,
-    ...m
+    style: m,
+    ...h
   } = e;
   return (0, i.jsx)("div", {
     style: {
       flexShrink: E,
       flexGrow: S,
       flexBasis: g,
-      ...h
+      ...m
     },
     className: s(l.flex, r, o, a, f, n),
-    ...m,
+    ...h,
     children: t
   })
 };

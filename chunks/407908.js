@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
     return a
   }
@@ -7,25 +7,25 @@ i.r(t), i.d(t, {
 var n = i("599110"),
   l = i("49111");
 
-function a(e) {
+function a(t) {
   let {
-    type: t,
+    type: e,
     source: i,
     userId: a,
-    applicationId: u,
-    partyId: r,
+    applicationId: r,
+    partyId: u,
     messageId: d,
-    locationObject: o,
-    analyticsLocations: s
-  } = e;
+    locationObject: s,
+    analyticsLocations: o
+  } = t;
   n.default.track(l.AnalyticEvents.APPLICATION_OPENED, {
-    type: t,
+    type: e,
     source: i,
-    application_id: u,
-    party_id: null != r ? r : void 0,
+    application_id: r,
+    party_id: null != u ? u : void 0,
     other_user_id: a,
     message_id: d,
-    location: o,
-    location_stack: s
+    location: s,
+    location_stack: o
   })
 }

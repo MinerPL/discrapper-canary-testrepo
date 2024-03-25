@@ -13,7 +13,7 @@ var n = a("37983"),
   u = a("73748"),
   c = a("295583"),
   d = a("782340"),
-  p = a("145701");
+  p = a("113062");
 class S extends r.PureComponent {
   componentDidMount() {
     null == this.props.adyenPaymentData && u.reopenCashAppPayWindow()

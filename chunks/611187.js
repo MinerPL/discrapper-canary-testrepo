@@ -8,32 +8,32 @@ var s = a("37983");
 a("884691");
 var l = a("509043"),
   n = a("77078"),
-  i = a("20606"),
-  r = a("361777"),
+  r = a("20606"),
+  i = a("361777"),
   c = a("393621"),
-  d = a("190986"),
-  o = a("990864"),
+  o = a("190986"),
+  d = a("990864"),
   u = a("944633"),
   T = a("697468"),
   m = a("153160"),
   _ = a("915675"),
   E = a("49111"),
   x = a("782340"),
-  h = a("443011");
+  h = a("802121");
 
 function I(e) {
   let {
     listing: t
   } = e, {
     name: a,
-    image: i,
-    description: r
+    image: r,
+    description: i
   } = t, c = (0, m.formatPrice)(t.price_tier, E.CurrencyCodes.USD);
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
       className: h.listingInfoRow,
       children: [(0, s.jsx)("img", {
-        src: i,
+        src: r,
         alt: "",
         className: h.avatar
       }), (0, s.jsxs)("div", {
@@ -59,7 +59,7 @@ function I(e) {
         },
         className: h.roleColor
       }), (0, s.jsx)("img", {
-        src: i,
+        src: r,
         alt: "",
         className: h.roleIcon
       }), (0, s.jsx)(n.Text, {
@@ -69,7 +69,7 @@ function I(e) {
     }), (0, s.jsx)(n.Text, {
       variant: "text-xs/normal",
       className: h.tierDescription,
-      children: r
+      children: i
     })]
   })
 }
@@ -80,7 +80,7 @@ function C(e) {
   } = e, a = function(e) {
     switch (e) {
       case E.ChannelTypes.GUILD_TEXT:
-        return r.default;
+        return i.default;
       case E.ChannelTypes.GUILD_VOICE:
         return u.default;
       case E.ChannelTypes.GUILD_STAGE_VOICE:
@@ -88,9 +88,9 @@ function C(e) {
       case E.ChannelTypes.GUILD_FORUM:
         return c.default;
       case E.ChannelTypes.GUILD_MEDIA:
-        return d.default;
-      case E.ChannelTypes.GUILD_ANNOUNCEMENT:
         return o.default;
+      case E.ChannelTypes.GUILD_ANNOUNCEMENT:
+        return d.default;
       default:
         return null
     }
@@ -111,7 +111,7 @@ function C(e) {
       })]
     }), (0, s.jsx)(_.default, {
       className: h.emojiIcon,
-      color: i.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
+      color: r.default.CREATOR_REVENUE_LOCKED_CHANNEL_ICON
     })]
   })
 }

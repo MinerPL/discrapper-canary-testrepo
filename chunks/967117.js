@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("269936"),
-  r = n("40597"),
-  s = n("49111");
+  s = n("40597"),
+  r = n("49111");
 
 function a() {
   return (0, i.importWithRetry)({
@@ -24,9 +24,9 @@ function a() {
 }
 
 function o() {
-  let e = r.default.getClient();
+  let e = s.default.getClient();
   return null == e ? a().then(e => e.client.create({
-    authorization: s.PaymentSettings.BRAINTREE.KEY
+    authorization: r.PaymentSettings.BRAINTREE.KEY
   }).then(e => l(e)).catch(() => null)) : l(e)
 }
 

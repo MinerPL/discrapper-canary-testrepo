@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("994428"),
-  l = n("782340"),
-  r = n("617979");
+  l = n("994428"),
+  i = n("782340"),
+  r = n("540675");
 
 function o(e) {
   let {
@@ -22,14 +22,14 @@ function o(e) {
     }), (0, a.jsx)(s.Text, {
       variant: "text-sm/normal",
       className: r.content,
-      children: l.default.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
+      children: i.default.Messages.HUB_PRIVACY_SETTINGS_TOOLTIP
     }), (0, a.jsx)(s.Button, {
       look: s.Button.Looks.INVERTED,
       fullWidth: !0,
       onClick: () => {
-        t(i.ContentDismissActionType.AUTO)
+        t(l.ContentDismissActionType.AUTO)
       },
-      children: l.default.Messages.GOT_IT
+      children: i.default.Messages.GOT_IT
     })]
   })
 }

@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   },
   FormNoticeImagePositions: function() {
-    return f
+    return _
   },
   FormNotice: function() {
-    return _
+    return f
   }
 });
 var i = n("37983");
@@ -18,26 +18,26 @@ var s = n("414456"),
   o = n("145131"),
   l = n("329272"),
   u = n("818810"),
-  d = n("467819");
+  d = n("468701");
 let c = a.Card.Types,
-  f = {
+  _ = {
     LEFT: "left",
     RIGHT: "right"
   };
 
-function _(e) {
+function f(e) {
   let t, n, {
       type: s = a.Card.Types.DANGER,
       imageData: c,
-      button: _,
-      className: h,
-      iconClassName: g,
-      title: m,
-      body: E,
+      button: f,
+      className: E,
+      iconClassName: h,
+      title: g,
+      body: m,
       style: p,
-      align: v = o.default.Align.START
+      align: S = o.default.Align.START
     } = e,
-    S = o.default.Direction.HORIZONTAL;
+    T = o.default.Direction.HORIZONTAL;
   if (null != c) {
     let {
       position: e,
@@ -48,35 +48,35 @@ function _(e) {
       shrink: 0,
       children: (0, i.jsx)("img", {
         alt: "",
-        className: r(d.icon, g),
+        className: r(d.icon, h),
         ...n
       })
-    }), e === f.RIGHT && (S = o.default.Direction.HORIZONTAL_REVERSE)
-  } else null != _ && (n = _);
-  let T = !0;
-  return s === a.Card.Types.PRIMARY && (T = !1), (0, i.jsx)(a.Card, {
-    className: r(d.formNotice, h),
+    }), e === _.RIGHT && (T = o.default.Direction.HORIZONTAL_REVERSE)
+  } else null != f && (n = f);
+  let v = !0;
+  return s === a.Card.Types.PRIMARY && (v = !1), (0, i.jsx)(a.Card, {
+    className: r(d.formNotice, E),
     type: s,
     style: p,
     children: (0, i.jsxs)(o.default, {
-      direction: S,
-      align: v,
+      direction: T,
+      align: S,
       children: [t, (0, i.jsxs)(o.default.Child, {
-        children: [null != m && "" !== m ? (0, i.jsx)(u.FormTitle, {
+        children: [null != g && "" !== g ? (0, i.jsx)(u.FormTitle, {
           tag: u.FormTitleTags.H5,
           className: r(d.formNoticeTitle, {
-            [d.whiteText]: T
+            [d.whiteText]: v
           }),
           faded: !0,
-          children: m
+          children: g
         }) : null, (0, i.jsx)(l.FormText, {
           className: r(d.formNoticeBody, {
-            [d.whiteText]: T
+            [d.whiteText]: v
           }),
-          children: E
+          children: m
         }), n]
       })]
     })
   })
 }
-_.Types = a.Card.Types
+f.Types = a.Card.Types

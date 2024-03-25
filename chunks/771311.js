@@ -14,10 +14,10 @@ function s(e) {
     height: l = 80,
     backgroundColor: s,
     foregroundColor: i,
-    ...d
+    ...r
   } = e;
   return (0, n.jsxs)("svg", {
-    ...(0, a.default)(d),
+    ...(0, a.default)(r),
     width: t,
     height: l,
     viewBox: "0 0 120 80",

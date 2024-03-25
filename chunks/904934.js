@@ -12,7 +12,7 @@ var n = s("37983"),
   o = s("141631"),
   c = s("352220"),
   u = s("792788"),
-  d = s("704197");
+  d = s("743370");
 class p extends l.PureComponent {
   componentDidMount() {
     this.callChangeLocale(u.default.getLocale())

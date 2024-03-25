@@ -5,32 +5,32 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("446674"),
-  r = n("913144"),
-  s = n("789563");
+  s = n("913144"),
+  r = n("789563");
 class a extends i.default.Store {
   initialize() {
-    this.waitFor(s.default)
+    this.waitFor(r.default)
   }
   get hasLoadedExperiments() {
-    return s.default.hasLoadedExperiments
+    return r.default.hasLoadedExperiments
   }
   getExperimentBucket(e) {
-    return s.default.getUserExperimentBucket(e)
+    return r.default.getUserExperimentBucket(e)
   }
   getEligibleExperiment(e) {
-    return s.default.getUserExperimentDescriptor(e)
+    return r.default.getUserExperimentDescriptor(e)
   }
   getEligibleExperiments() {
-    return s.default.getAllUserExperimentDescriptors()
+    return r.default.getAllUserExperimentDescriptors()
   }
   getRegisteredExperiments() {
-    return s.default.getRegisteredExperiments()
+    return r.default.getRegisteredExperiments()
   }
   getExperimentOverrides() {
-    return s.default.getAllExperimentOverrideDescriptors()
+    return r.default.getAllExperimentOverrideDescriptors()
   }
   getOverrideExperimentDescriptor(e) {
-    return s.default.getExperimentOverrideDescriptor(e)
+    return r.default.getExperimentOverrideDescriptor(e)
   }
 }
 
@@ -38,7 +38,7 @@ function o() {
   return !0
 }
 a.displayName = "LegacyExperimentStore";
-var l = new a(r.default, {
+var l = new a(s.default, {
   LOGOUT: o,
   LOGIN_SUCCESS: o,
   CONNECTION_OPEN: o,

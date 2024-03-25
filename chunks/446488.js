@@ -1,32 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
-var i = n("446674"),
-  r = n("913144");
-let l = {
+var r = n("446674"),
+  i = n("913144");
+let a = {
   fetched: !1,
   affinities: []
 };
-class s extends i.default.Store {
+class l extends r.default.Store {
   get hasFetched() {
-    return l.fetched
+    return a.fetched
   }
   get affinities() {
-    return l.affinities
+    return a.affinities
   }
 }
-var a = new s(r.default, {
+var s = new l(i.default, {
   BILLING_NITRO_AFFINITY_FETCHED: function(e) {
     let {} = e;
-    l.fetched = !0
+    a.fetched = !0
   },
   BILLING_NITRO_AFFINITY_FETCH_SUCCEEDED: function(e) {
     let {
       res: t
     } = e;
-    l.affinities = t
+    a.affinities = t
   }
 })

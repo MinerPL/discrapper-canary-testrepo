@@ -27,14 +27,14 @@ var a = n("37983"),
   C = n("476765"),
   A = n("659500"),
   M = n("202752"),
-  x = n("751520"),
-  v = n("313483"),
-  R = n("200745"),
+  v = n("751520"),
+  R = n("313483"),
+  x = n("200745"),
   L = n("653291"),
   O = n("49111"),
   b = n("782340"),
-  y = n("84691");
-n("525840");
+  y = n("79193");
+n("590976");
 let j = (0, C.uid)(),
   F = u(f.search, 500);
 class D extends l.PureComponent {
@@ -48,8 +48,8 @@ class D extends l.PureComponent {
       searchId: n
     } = this.props;
     if (t !== e.editorState) {
-      let e = x.tokenizeQuery(M.getFirstTextBlock(t)),
-        a = v.getSelectionScope(e, t);
+      let e = v.tokenizeQuery(M.getFirstTextBlock(t)),
+        a = R.getSelectionScope(e, t);
       f.updateAutocompleteQuery(n, e, a), null != this._editorRef && M.scrollCursorIntoView(this._editorRef.editor)
     }
   }
@@ -57,7 +57,7 @@ class D extends l.PureComponent {
     A.ComponentDispatch.unsubscribe(O.ComponentActions.PERFORM_SEARCH, this.search), A.ComponentDispatch.unsubscribe(O.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), A.ComponentDispatch.unsubscribe(O.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
   }
   tokenize(e) {
-    let t = x.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== E.default.NON_TOKEN_TYPE);
+    let t = v.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== E.default.NON_TOKEN_TYPE);
     return M.applyTokensAsEntities(t, e, m.default)
   }
   clearSearch() {
@@ -192,9 +192,9 @@ class D extends l.PureComponent {
         a = M.getFirstTextBlock(e)
       }
       if (null != t && !n) {
-        let e = x.tokenizeQuery(a),
-          n = x.getSearchQueryFromTokens(e);
-        for (let t = 0; t < e.length; t++) !x.filterHasAnswer(e[t], e[t + 1]) && (a = a.substring(0, e[t].start) + a.substring(e[t].end));
+        let e = v.tokenizeQuery(a),
+          n = v.getSearchQueryFromTokens(e);
+        for (let t = 0; t < e.length; t++) !v.filterHasAnswer(e[t], e[t + 1]) && (a = a.substring(0, e[t].start) + a.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
         F(t, n, a, !!l), this.onBlur()
       }
@@ -266,7 +266,7 @@ class D extends l.PureComponent {
       let {
         current: n
       } = this._searchPopoutRef, a = null != n && n.selectOption();
-      return !a && ((0, R.isFavoriteSearchEnabled)() && t ? this.search({
+      return !a && ((0, x.isFavoriteSearchEnabled)() && t ? this.search({
         searchEverywhere: !0
       }) : this.search()), !0
     }, this.handleBeforeInput = e => {
@@ -362,7 +362,7 @@ class D extends l.PureComponent {
         return this.setEditorState(e), !0
       }
       return M.getDefaultKeyBinding(e)
-    }, x.clearTokenCache()
+    }, v.clearTokenCache()
   }
 }
 var U = d.default.connectStores([S.default, T.default], () => {
@@ -370,7 +370,7 @@ var U = d.default.connectStores([S.default, T.default], () => {
   let t = T.default.getCurrentSearchId(),
     n = T.default.getSearchType(),
     a = null != t && T.default.isSearching(t),
-    l = null != t && null !== (e = T.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(v.generateDecorators(m.default)),
+    l = null != t && null !== (e = T.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(R.generateDecorators(m.default)),
     s = S.default.keyboardModeEnabled;
   return {
     searchId: t,

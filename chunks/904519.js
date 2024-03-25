@@ -10,18 +10,18 @@ var i = s("37983"),
   l = s.n(a),
   o = s("77078"),
   n = s("151185"),
-  d = s("342169"),
-  u = s("701909"),
+  u = s("342169"),
+  d = s("701909"),
   c = s("49111"),
   E = s("782340"),
-  _ = s("709548");
+  _ = s("669511");
 let T = [{
   getQuestion: () => E.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_1,
   getAnswer: () => E.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_1
 }, {
   getQuestion: () => E.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_2,
   getAnswer: () => E.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_ANSWER_2.format({
-    helpCenterUrl: u.default.getArticleURL(c.HelpdeskArticles.GUILD_BOOSTING_FAQ)
+    helpCenterUrl: d.default.getArticleURL(c.HelpdeskArticles.GUILD_BOOSTING_FAQ)
   })
 }, {
   getQuestion: () => E.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_FAQ_QUESTION_3,
@@ -56,7 +56,7 @@ var I = function(e) {
               className: _.question,
               variant: "text-lg/normal",
               children: e.getQuestion()
-            }), r ? (0, i.jsx)(d.default, {
+            }), r ? (0, i.jsx)(u.default, {
               className: _.questionIcon
             }) : (0, i.jsx)(n.default, {
               className: _.questionIcon

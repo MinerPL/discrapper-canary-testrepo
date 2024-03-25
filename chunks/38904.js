@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("917351"),
-  l = s.n(n),
+  l = s("917351"),
+  n = s.n(l),
   i = s("167627");
 let r = e => {
   let t = {};
@@ -22,13 +22,13 @@ let r = e => {
     let a = t[e];
     a.amount += s.amount, a.paymentsCount += s.payments_count, a.ppgs[s.grouping_id] = s
   }
-  return l.orderBy(Object.values(t), ["periodStartingAt"], ["desc"])
+  return n.orderBy(Object.values(t), ["periodStartingAt"], ["desc"])
 };
 var o = (e, t) => {
   let {
     groupType: s,
-    teamId: n
-  } = t, [l, o] = a.useState(!0), [d, u] = a.useState([]), c = a.useCallback(async () => {
+    teamId: l
+  } = t, [n, o] = a.useState(!0), [d, u] = a.useState([]), c = a.useCallback(async () => {
     if (u([]), null == e) {
       o(!1);
       return
@@ -47,11 +47,11 @@ var o = (e, t) => {
     c()
   }, [c]);
   let E = a.useMemo(() => {
-    let e = null != n ? d.filter(e => e.user_id === n) : d;
+    let e = null != l ? d.filter(e => e.user_id === l) : d;
     return r(e)
-  }, [d, n]);
+  }, [d, l]);
   return {
     payoutsByPeriod: E,
-    loading: l
+    loading: n
   }
 }

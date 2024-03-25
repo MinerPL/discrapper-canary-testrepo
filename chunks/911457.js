@@ -18,7 +18,7 @@ var s = n("414456"),
   f = n("476263"),
   E = n("228427"),
   h = n("193038"),
-  g = n("366091");
+  g = n("743494");
 
 function _(e) {
   let {
@@ -30,8 +30,8 @@ function _(e) {
     source: _,
     speakers: S,
     speakerCount: v,
-    audienceCount: R,
-    channelName: m
+    audienceCount: m,
+    channelName: R
   } = e, C = t.id;
   return (0, r.jsx)("div", {
     className: g.contentContainer,
@@ -74,7 +74,7 @@ function _(e) {
               children: "Featured"
             })
           }), (0, r.jsx)(h.default, {
-            count: R,
+            count: m,
             className: g.audienceCount
           })]
         })]
@@ -93,7 +93,7 @@ function _(e) {
         speakers: S,
         speakerCount: v,
         className: g.speakers
-      }), null != m && (0, r.jsxs)(r.Fragment, {
+      }), null != R && (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)("hr", {
           className: g.divider
         }), (0, r.jsxs)("div", {
@@ -106,7 +106,7 @@ function _(e) {
             color: "header-secondary",
             className: g.label,
             variant: "text-sm/normal",
-            children: m
+            children: R
           })]
         })]
       })]

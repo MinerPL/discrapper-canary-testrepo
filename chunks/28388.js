@@ -1,12 +1,12 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return l
+    return n
   }
 });
-var n = a("80028");
+var l = a("80028");
 
-function l(e, t) {
-  let a = e / n.SEEK_DENOMINATOR;
-  return t && (a /= n.SEEK_SHIFT_MODIFIER), a
+function n(e, t) {
+  let a = e / l.SEEK_DENOMINATOR;
+  return t && (a /= l.SEEK_SHIFT_MODIFIER), a
 }

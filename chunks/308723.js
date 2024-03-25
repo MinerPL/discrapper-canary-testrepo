@@ -9,7 +9,7 @@ var i = Object.assign || function(e) {
     }
     return e
   },
-  o = function() {
+  r = function() {
     function e(e, t) {
       for (var n = 0; n < t.length; n++) {
         var i = t[n];
@@ -20,8 +20,8 @@ var i = Object.assign || function(e) {
       return n && e(t.prototype, n), i && e(t, i), t
     }
   }(),
-  r = n("884691"),
-  a = u(r),
+  o = n("884691"),
+  a = u(o),
   s = u(n("416037")),
   l = u(n("817736")),
   c = u(n("664621")),
@@ -55,7 +55,7 @@ var f = function(e) {
         configurable: !0
       }
     }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-  }(t, e), o(t, null, [{
+  }(t, e), r(t, null, [{
     key: "getDomNodeDimensions",
     value: function(e) {
       var t = e.getBoundingClientRect();
@@ -68,7 +68,7 @@ var f = function(e) {
         height: t.height
       }
     }
-  }]), o(t, [{
+  }]), r(t, [{
     key: "componentDidMount",
     value: function() {
       this.parentNode = l.default.findDOMNode(this).parentNode, this.elementResizeDetector = (0, c.default)({
@@ -95,12 +95,12 @@ var f = function(e) {
       if ((0, d.default)(this.props.children, "Expected children to be one of function or React.Element"), !this.state.initiated) return a.default.createElement("div", null);
       if ("function" == typeof this.props.children) {
         var e = this.props.children(this.state);
-        return e && r.Children.only(e)
+        return e && o.Children.only(e)
       }
-      return r.Children.only(a.default.cloneElement(this.props.children, this.state))
+      return o.Children.only(a.default.cloneElement(this.props.children, this.state))
     }
   }]), t
-}(r.Component);
+}(o.Component);
 f.propTypes = {
   children: s.default.oneOfType([s.default.element, s.default.func]).isRequired
 }, t.default = f

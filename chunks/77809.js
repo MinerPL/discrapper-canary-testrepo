@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return m
   }
 }), s("808653");
 var a = s("37983"),
@@ -15,10 +15,10 @@ var a = s("37983"),
   c = s("521128"),
   S = s("853994"),
   E = s("782340"),
-  f = s("716553"),
-  T = s("926622");
+  T = s("796670"),
+  f = s("890957");
 
-function m(e) {
+function _(e) {
   let {
     label: t,
     onChange: s,
@@ -33,7 +33,7 @@ function m(e) {
   })
 }
 
-function _() {
+function m() {
   let e = (0, r.useStateFromStores)([d.default], () => d.default.getSubsection()),
     t = n.createRef(),
     {
@@ -47,12 +47,12 @@ function _() {
       null == t || null === (s = t.current) || void 0 === s || s.scrollIntoView(!0)
     }
   }, [l, t, e]);
-  let _ = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
+  let m = S.MarketingEmailCategories.reduce((e, t) => e || !!s[t], !1);
   return l ? (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       ref: t
     }), (0, a.jsxs)(o.FormSection, {
-      className: i(T.marginTop40),
+      className: i(f.marginTop40),
       tag: o.FormTitleTags.H1,
       title: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS,
       children: [S.EmailCategoriesList.map(e => {
@@ -61,7 +61,7 @@ function _() {
           label: n,
           subLabel: l
         } = e;
-        return (0, a.jsx)(m, {
+        return (0, a.jsx)(_, {
           label: n(),
           subLabel: l(),
           enabled: s[t],
@@ -71,8 +71,8 @@ function _() {
           }
         }, n())
       }), (0, a.jsx)(o.Button, {
-        className: f.marketingUnsubscribeButton,
-        disabled: !_,
+        className: T.marketingUnsubscribeButton,
+        disabled: !m,
         look: o.ButtonLooks.LINK,
         color: o.ButtonColors.LINK,
         onClick: u.updateMarketingEmailSettings,
@@ -81,7 +81,7 @@ function _() {
         type: o.FormTextTypes.DESCRIPTION,
         children: E.default.Messages.USER_SETTINGS_EMAIL_NOTIFICATIONS_UNSUB_MARKETING_DESCRIPTION
       }), (0, a.jsx)(o.FormDivider, {
-        className: i(T.marginTop40, T.marginBottom40)
+        className: i(f.marginTop40, f.marginBottom40)
       })]
     })]
   }) : null

@@ -8,7 +8,7 @@ var s = l("37983"),
   n = l("884691"),
   a = l("414456"),
   r = l.n(a),
-  i = l("907002"),
+  i = l("146606"),
   o = l("446674"),
   d = l("77078"),
   u = l("851387"),
@@ -27,11 +27,11 @@ var s = l("37983"),
   j = l("863636"),
   R = l("471706"),
   b = l("798796"),
-  C = l("686692"),
-  S = l("547840"),
+  S = l("686692"),
+  C = l("547840"),
   T = l("49111"),
   _ = l("782340"),
-  M = l("240805");
+  M = l("280627");
 async function B(e) {
   let t = await new Promise((t, l) => {
     let s = new Image;
@@ -56,12 +56,12 @@ function D(e) {
     height: D
   } = (0, m.default)(), [A, k] = n.useState(), P = (0, o.useStateFromStoresArray)([j.default], () => j.default.getOnboardingPromptsForOnboarding(t)), L = (0, o.useStateFromStores)([j.default], () => j.default.getEnabled(t)), y = n.useCallback((e, l, s) => {
     O.default.selectOption(t, e, l, s)
-  }, [t]), G = n.useCallback(() => {
+  }, [t]), F = n.useCallback(() => {
     O.default.completeOnboarding(t, P)
-  }, [t, P]), F = (0, o.useStateFromStores)([p.default], () => p.default.getGuild(t)), U = n.useMemo(() => null == F ? null : E.default.getGuildSplashURL({
-    id: F.id,
-    splash: F.splash
-  }), [F]), w = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentOnboardingStep(t)), [q, H] = n.useState(null != U ? null : "cover");
+  }, [t, P]), G = (0, o.useStateFromStores)([p.default], () => p.default.getGuild(t)), U = n.useMemo(() => null == G ? null : E.default.getGuildSplashURL({
+    id: G.id,
+    splash: G.splash
+  }), [G]), w = (0, o.useStateFromStores)([R.default], () => R.default.getCurrentOnboardingStep(t)), [q, H] = n.useState(null != U ? null : "cover");
   null != U && null == A && B(U).then(e => {
     k(e[0])
   });
@@ -72,8 +72,8 @@ function D(e) {
     Q = (0, o.useStateFromStores)([R.default], () => R.default.getOnboardingStatus(t)),
     Y = null != P && P.length > 0,
     K = n.useCallback(() => {
-      (0, R.isOnboarding)(Q) && L && Y ? z(0) : G()
-    }, [Q, L, Y, z, G]);
+      (0, R.isOnboarding)(Q) && L && Y ? z(0) : F()
+    }, [Q, L, Y, z, F]);
   n.useEffect(() => {
     if (!R.default.shouldShowOnboarding(t)) return u.default.escapeToDefaultChannel(t);
     (0, g.fetchMemberCounts)(t)
@@ -91,7 +91,7 @@ function D(e) {
       immediate: l || "cover" !== q && null !== q
     }),
     X = R.default.shouldShowOnboarding(t),
-    J = null == F;
+    J = null == G;
   if (n.useEffect(() => {
       if (!X || J) {
         let e = setTimeout(() => {
@@ -99,34 +99,34 @@ function D(e) {
         }, 1e3);
         return () => clearTimeout(e)
       }
-    }, [X, J, t]), !R.default.shouldShowOnboarding(t) || null == F) return null;
+    }, [X, J, t]), !R.default.shouldShowOnboarding(t) || null == G) return null;
   let Z = () => {
     switch (w) {
       case "cover":
         return (0, s.jsx)(b.default, {
-          guild: F,
+          guild: G,
           onboardingStatus: R.GuildOnboardingStatus.READY,
           onStart: K,
           disableTracking: V
         });
       case "rules":
-        return (0, s.jsx)(S.default, {
+        return (0, s.jsx)(C.default, {
           setCurrentStep: z,
           previousPromptIndex: P.length - 1,
-          guild: F,
+          guild: G,
           prompts: P,
-          completeOnboarding: G,
+          completeOnboarding: F,
           disableTracking: V
         });
       case null:
         return null;
       default:
-        return (0, s.jsx)(C.default, {
-          guild: F,
+        return (0, s.jsx)(S.default, {
+          guild: G,
           prompts: P,
           step: w,
           selectOption: y,
-          completeOnboarding: G,
+          completeOnboarding: F,
           setCurrentStep: z,
           disableTracking: V
         })

@@ -1,5 +1,5 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   rawPalette: function() {
     return a
   }

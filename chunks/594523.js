@@ -1,16 +1,16 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return g
   },
   AddOptionCard: function() {
-    return L
+    return h
   }
 }), s("222007");
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("917351"),
   r = s.n(i),
   o = s("77078"),
@@ -19,47 +19,47 @@ var n = s("414456"),
   c = s("837648"),
   E = s("569912"),
   _ = s("205454"),
-  T = s("673220"),
-  I = s("351825"),
+  I = s("673220"),
+  T = s("351825"),
   S = s("330724"),
-  N = s("653138"),
-  g = s("782340"),
-  f = s("504540");
+  f = s("653138"),
+  m = s("782340"),
+  N = s("105439");
 
-function A(e) {
-  var t, n, i, d;
+function g(e) {
+  var t, l, i, d;
   let {
     guild: c,
-    prompt: I,
-    singleColumn: A,
-    promptIndex: L,
-    option: m,
-    hasError: C,
-    onDragStart: O,
-    onDragComplete: h,
-    onDragReset: R
-  } = e, D = null, M = r.findIndex(I.options, e => e.id === m.id), {
-    drag: G,
-    dragSourcePosition: x,
-    drop: p,
-    setIsDraggable: U
+    prompt: T,
+    singleColumn: g,
+    promptIndex: h,
+    option: C,
+    hasError: R,
+    onDragStart: x,
+    onDragComplete: L,
+    onDragReset: O
+  } = e, A = null, p = r.findIndex(T.options, e => e.id === C.id), {
+    drag: M,
+    dragSourcePosition: D,
+    drop: v,
+    setIsDraggable: G
   } = (0, u.default)({
-    type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(I.id),
-    index: M,
-    optionId: m.id,
-    onDragStart: O,
-    onDragComplete: h,
-    onDragReset: R
+    type: "ONBOARDING_PROMPT_OPTION_CARD-".concat(T.id),
+    index: p,
+    optionId: C.id,
+    onDragStart: x,
+    onDragComplete: L,
+    onDragReset: O
   }), {
-    customEmoji: v,
-    unicodeEmoji: j
-  } = (0, E.default)(null === (t = m.emoji) || void 0 === t ? void 0 : t.id, null === (n = m.emoji) || void 0 === n ? void 0 : n.name), P = (0, N.isEmojiEmpty)(m.emoji) || null != v || null != j;
-  return !P && (D = g.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
-    className: l(f.optionCard, {
-      [f.hasError]: C || null != D,
-      [f.dropIndicatorBefore]: null != x && M < x,
-      [f.dropIndicatorAfter]: null != x && M > x,
-      [f.singleColumn]: A
+    customEmoji: j,
+    unicodeEmoji: U
+  } = (0, E.default)(null === (t = C.emoji) || void 0 === t ? void 0 : t.id, null === (l = C.emoji) || void 0 === l ? void 0 : l.name), P = (0, f.isEmojiEmpty)(C.emoji) || null != j || null != U;
+  return !P && (A = m.default.Messages.GUILD_SETTINGS_ONBOARDING_PROMPT_INVALID_EMOJI), (0, a.jsxs)(o.Clickable, {
+    className: n(N.optionCard, {
+      [N.hasError]: R || null != A,
+      [N.dropIndicatorBefore]: null != D && p < D,
+      [N.dropIndicatorAfter]: null != D && p > D,
+      [N.singleColumn]: g
     }),
     onClick: () => (0, o.openModalLazy)(async () => {
       let {
@@ -68,64 +68,64 @@ function A(e) {
       return t => (0, a.jsx)(e, {
         ...t,
         guild: c,
-        prompt: I,
-        option: m,
-        index: L,
+        prompt: T,
+        option: C,
+        index: h,
         onSave: e => {
-          (0, S.editGuildOnboardingPrompt)(c, I.id, {
-            options: I.options.map(t => t.id === m.id ? e : t)
+          (0, S.editGuildOnboardingPrompt)(c, T.id, {
+            options: T.options.map(t => t.id === C.id ? e : t)
           })
         },
         onDelete: () => {
-          (0, S.editGuildOnboardingPrompt)(c, I.id, {
-            options: I.options.filter(e => e.id !== m.id)
+          (0, S.editGuildOnboardingPrompt)(c, T.id, {
+            options: T.options.filter(e => e.id !== C.id)
           })
         }
       })
     }),
-    onMouseEnter: () => U(!0),
-    onMouseLeave: () => U(!1),
-    innerRef: e => G(p(e)),
+    onMouseEnter: () => G(!0),
+    onMouseLeave: () => G(!1),
+    innerRef: e => M(v(e)),
     children: [(0, a.jsx)("div", {
-      className: f.dragContainer,
-      children: (0, a.jsx)(T.default, {
-        className: f.dragIcon
+      className: N.dragContainer,
+      children: (0, a.jsx)(I.default, {
+        className: N.dragIcon
       })
     }), (0, a.jsxs)("div", {
-      className: f.optionCardRow,
+      className: N.optionCardRow,
       children: [(0, a.jsx)("div", {
-        className: f.emoji,
+        className: N.emoji,
         children: (0, a.jsx)(_.default, {
-          emojiId: null === (i = m.emoji) || void 0 === i ? void 0 : i.id,
-          emojiName: null === (d = m.emoji) || void 0 === d ? void 0 : d.name,
+          emojiId: null === (i = C.emoji) || void 0 === i ? void 0 : i.id,
+          emojiName: null === (d = C.emoji) || void 0 === d ? void 0 : d.name,
           defaultComponent: null
         })
       }), (0, a.jsxs)("div", {
-        className: f.text,
+        className: N.text,
         children: [(0, a.jsx)(o.Text, {
           variant: "text-md/medium",
           color: "header-primary",
           lineClamp: 1,
-          children: m.title
-        }), "" !== m.description && (0, a.jsx)(o.Text, {
-          className: f.description,
+          children: C.title
+        }), "" !== C.description && (0, a.jsx)(o.Text, {
+          className: N.description,
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: m.description
+          children: C.description
         })]
       })]
-    }), null != D && (0, a.jsx)(o.Text, {
+    }), null != A && (0, a.jsx)(o.Text, {
       variant: "text-xs/medium",
       color: "text-danger",
-      children: D
+      children: A
     })]
   })
 }
 
-function L(e) {
+function h(e) {
   let {
     guild: t,
-    prompt: n,
+    prompt: l,
     promptIndex: i,
     singleColumn: r
   } = e, {
@@ -138,9 +138,9 @@ function L(e) {
       return s => (0, a.jsx)(e, {
         ...s,
         guild: t,
-        prompt: n,
-        onSave: e => (0, S.editGuildOnboardingPrompt)(t, n.id, {
-          options: [...n.options, e]
+        prompt: l,
+        onSave: e => (0, S.editGuildOnboardingPrompt)(t, l.id, {
+          options: [...l.options, e]
         }),
         onDelete: () => {},
         index: i
@@ -148,31 +148,31 @@ function L(e) {
     })
   };
   return (0, a.jsx)(o.Clickable, {
-    className: l(f.optionCard, f.addOptionCard, {
-      [f.addFirstOptionCard]: 0 === n.options.length,
-      [f.singleColumn]: r
+    className: n(N.optionCard, N.addOptionCard, {
+      [N.addFirstOptionCard]: 0 === l.options.length,
+      [N.singleColumn]: r
     }),
     onClick: () => {
-      u && n.options.length + 1 === N.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD ? d.default.show({
-        title: g.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
-        body: g.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({
-          thresholdCount: N.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD
+      u && l.options.length + 1 === f.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD ? d.default.show({
+        title: m.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_TITLE,
+        body: m.default.Messages.ONBOARDING_PROMPT_THRESHOLD_ALERT_DESCRIPTION.format({
+          thresholdCount: f.ONBOARDING_PROMPT_TYPE_SWITCH_THRESHOLD
         }),
-        confirmText: g.default.Messages.OKAY,
-        cancelText: g.default.Messages.CANCEL,
+        confirmText: m.default.Messages.OKAY,
+        cancelText: m.default.Messages.CANCEL,
         onConfirm: E
       }) : E()
     },
     children: (0, a.jsxs)("div", {
-      className: f.optionCardRow,
-      children: [(0, a.jsx)(I.default, {
-        className: f.plusIcon,
+      className: N.optionCardRow,
+      children: [(0, a.jsx)(T.default, {
+        className: N.plusIcon,
         width: 24,
         height: 24
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: "header-primary",
-        children: g.default.Messages.ONBOARDING_PROMPT_ADD_OPTION
+        children: m.default.Messages.ONBOARDING_PROMPT_ADD_OPTION
       })]
     })
   })

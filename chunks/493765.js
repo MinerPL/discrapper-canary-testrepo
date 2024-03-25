@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   },
   getNameForKeybindGroup: function() {
-    return V
+    return v
   },
   getDescriptionForKeybindGroup: function() {
-    return v
+    return V
   },
   DEFAULT_LAYOUT: function() {
     return Y
@@ -20,15 +20,15 @@ n.r(t), n.d(t, {
   }
 }), n("70102");
 var i, o, l = n("102457"),
-  a = n("55562"),
-  u = n("863536"),
-  d = n("786720"),
-  s = n("211314"),
-  E = n("218143"),
-  r = n("586819"),
-  _ = n("953260"),
-  A = n("798232"),
-  c = n("278412"),
+  u = n("55562"),
+  a = n("863536"),
+  s = n("786720"),
+  d = n("211314"),
+  r = n("218143"),
+  E = n("586819"),
+  c = n("953260"),
+  _ = n("798232"),
+  A = n("278412"),
   C = n("222301"),
   T = n("903376"),
   S = n("242149"),
@@ -36,24 +36,24 @@ var i, o, l = n("102457"),
   f = n("24312"),
   N = n("30269"),
   O = n("709079"),
-  L = n("356410"),
-  D = n("271524"),
-  R = n("333949"),
-  p = n("945924"),
+  R = n("616903"),
+  L = n("271524"),
+  p = n("333949"),
+  D = n("945924"),
   h = n("648900"),
-  b = n("838021"),
-  G = n("745991"),
-  g = n("640968"),
-  M = n("347445"),
-  P = n("992642"),
-  U = n("200431"),
-  m = n("493334"),
+  g = n("838021"),
+  b = n("745991"),
+  G = n("640968"),
+  m = n("347445"),
+  M = n("992642"),
+  P = n("200431"),
+  U = n("493334"),
   y = n("809392"),
   K = n("202035"),
   H = n("49111"),
   B = n("782340");
 
-function V(e) {
+function v(e) {
   switch (e) {
     case "NAVIGATION":
       return B.default.Messages.USER_SETTINGS_KEYBINDS_NAVIGATION_SECTION_TITLE;
@@ -70,7 +70,7 @@ function V(e) {
   }
 }
 
-function v(e) {
+function V(e) {
   switch (e) {
     case "MESSAGE":
       return B.default.Messages.USER_SETTINGS_KEYBINDS_MESSAGE_DESCRIPTION;
@@ -90,51 +90,51 @@ function F() {
   })
 }(o = i || (i = {})).NAVIGATION = "NAVIGATION", o.CHAT = "CHAT", o.VOICE_AND_VIDEO = "VOICE_AND_VIDEO", o.MISCELLANEOUS = "MISCELLANEOUS", o.MESSAGE = "MESSAGE", o.DND = "DND";
 let Y = {
-  [H.KeybindActions.SERVER_NEXT]: D.SERVER_NEXT,
-  [H.KeybindActions.SERVER_PREV]: D.SERVER_PREV,
-  [H.KeybindActions.CHANNEL_NEXT]: a.CHANNEL_NEXT,
-  [H.KeybindActions.CHANNEL_PREV]: a.CHANNEL_PREV,
-  [H.KeybindActions.NAVIGATE_BACK]: a.NAVIGATE_BACK,
-  [H.KeybindActions.NAVIGATE_FORWARD]: a.NAVIGATE_FORWARD,
-  [H.KeybindActions.UNREAD_NEXT]: m.UNREAD_NEXT,
-  [H.KeybindActions.UNREAD_PREV]: m.UNREAD_PREV,
-  [H.KeybindActions.MENTION_CHANNEL_NEXT]: m.MENTION_NEXT,
-  [H.KeybindActions.MENTION_CHANNEL_PREV]: m.MENTION_PREV,
-  [H.KeybindActions.TOGGLE_PREVIOUS_GUILD]: a.TOGGLE_PREVIOUS_GUILD,
-  [H.KeybindActions.JUMP_TO_GUILD]: _.JUMP_TO_GUILD,
-  [H.KeybindActions.SUBMIT]: R.SUBMIT,
-  [H.KeybindActions.TEXTAREA_FOCUS]: p.TEXTAREA_FOCUS,
-  [H.KeybindActions.MARK_CHANNEL_READ]: A.MARK_CHANNEL_READ,
-  [H.KeybindActions.MARK_SERVER_READ]: c.MARK_SERVER_READ,
-  [H.KeybindActions.TOGGLE_CHANNEL_PINS]: G.TOGGLE_CHANNEL_PINS,
-  [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: P.TOGGLE_INBOX_UNREADS_TAB,
-  [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: P.MARK_TOP_INBOX_CHANNEL_READ,
-  [H.KeybindActions.TOGGLE_USERS]: U.TOGGLE_USERS,
-  [H.KeybindActions.TOGGLE_HELP]: g.TOGGLE_HELP,
+  [H.KeybindActions.SERVER_NEXT]: L.SERVER_NEXT,
+  [H.KeybindActions.SERVER_PREV]: L.SERVER_PREV,
+  [H.KeybindActions.CHANNEL_NEXT]: u.CHANNEL_NEXT,
+  [H.KeybindActions.CHANNEL_PREV]: u.CHANNEL_PREV,
+  [H.KeybindActions.NAVIGATE_BACK]: u.NAVIGATE_BACK,
+  [H.KeybindActions.NAVIGATE_FORWARD]: u.NAVIGATE_FORWARD,
+  [H.KeybindActions.UNREAD_NEXT]: U.UNREAD_NEXT,
+  [H.KeybindActions.UNREAD_PREV]: U.UNREAD_PREV,
+  [H.KeybindActions.MENTION_CHANNEL_NEXT]: U.MENTION_NEXT,
+  [H.KeybindActions.MENTION_CHANNEL_PREV]: U.MENTION_PREV,
+  [H.KeybindActions.TOGGLE_PREVIOUS_GUILD]: u.TOGGLE_PREVIOUS_GUILD,
+  [H.KeybindActions.JUMP_TO_GUILD]: c.JUMP_TO_GUILD,
+  [H.KeybindActions.SUBMIT]: p.SUBMIT,
+  [H.KeybindActions.TEXTAREA_FOCUS]: D.TEXTAREA_FOCUS,
+  [H.KeybindActions.MARK_CHANNEL_READ]: _.MARK_CHANNEL_READ,
+  [H.KeybindActions.MARK_SERVER_READ]: A.MARK_SERVER_READ,
+  [H.KeybindActions.TOGGLE_CHANNEL_PINS]: b.TOGGLE_CHANNEL_PINS,
+  [H.KeybindActions.TOGGLE_INBOX_UNREADS_TAB]: M.TOGGLE_INBOX_UNREADS_TAB,
+  [H.KeybindActions.MARK_TOP_INBOX_CHANNEL_READ]: M.MARK_TOP_INBOX_CHANNEL_READ,
+  [H.KeybindActions.TOGGLE_USERS]: P.TOGGLE_USERS,
+  [H.KeybindActions.TOGGLE_HELP]: G.TOGGLE_HELP,
   [H.KeybindActions.TOGGLE_MUTE]: h.TOGGLE_MUTE,
   [H.KeybindActions.TOGGLE_DEAFEN]: h.TOGGLE_DEAFEN,
-  [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: b.TOGGLE_CATEGORY_COLLAPSED,
+  [H.KeybindActions.TOGGLE_CATEGORY_COLLAPSED]: g.TOGGLE_CATEGORY_COLLAPSED,
   [H.KeybindActions.SCROLL_UP]: f.SCROLL_UP,
   [H.KeybindActions.SCROLL_DOWN]: f.SCROLL_DOWN,
   [H.KeybindActions.QUICKSWITCHER_SHOW]: S.QUICKSWITCHER_SHOW,
-  [H.KeybindActions.CREATE_DM_GROUP]: u.CREATE_DM_GROUP,
+  [H.KeybindActions.CREATE_DM_GROUP]: a.CREATE_DM_GROUP,
   [H.KeybindActions.SEARCH_EMOJIS]: N.SEARCH_EMOJIS,
   [H.KeybindActions.SEARCH_GIFS]: O.SEARCH_GIFS,
-  [H.KeybindActions.SEARCH_STICKERS]: L.SEARCH_STICKERS,
-  [H.KeybindActions.TOGGLE_HOTKEYS]: M.TOGGLE_HOTKEYS,
+  [H.KeybindActions.SEARCH_STICKERS]: R.SEARCH_STICKERS,
+  [H.KeybindActions.TOGGLE_HOTKEYS]: m.TOGGLE_HOTKEYS,
   [H.KeybindActions.JUMP_TO_FIRST_UNREAD]: C.JUMP_TO_FIRST_UNREAD,
-  [H.KeybindActions.CREATE_GUILD]: d.CREATE_GUILD,
+  [H.KeybindActions.CREATE_GUILD]: s.CREATE_GUILD,
   [H.KeybindActions.UPLOAD_FILE]: y.UPLOAD_FILE,
   [H.KeybindActions.RETURN_TO_AUDIO_CHANNEL]: I.RETURN_TO_AUDIO_CHANNEL,
   [H.KeybindActions.CALL_ACCEPT]: l.CALL_ACCEPT,
   [H.KeybindActions.CALL_START]: l.CALL_START,
-  [H.KeybindActions.FOCUS_SEARCH]: E.FOCUS_SEARCH,
-  [H.KeybindActions.JUMP_TO_CURRENT_CALL]: r.JUMP_TO_CURRENT_CALL,
+  [H.KeybindActions.FOCUS_SEARCH]: r.FOCUS_SEARCH,
+  [H.KeybindActions.JUMP_TO_CURRENT_CALL]: E.JUMP_TO_CURRENT_CALL,
   [H.KeybindActions.ZOOM_IN]: K.ZOOM_IN,
   [H.KeybindActions.ZOOM_OUT]: K.ZOOM_OUT,
   [H.KeybindActions.ZOOM_RESET]: K.ZOOM_RESET,
   [H.KeybindActions.OPEN_APP_DIRECTORY]: T.OPEN_APP_DIRECTORY,
-  [H.KeybindActions.BROWSER_DEVTOOLS]: s.BROWSER_DEVTOOLS
+  [H.KeybindActions.BROWSER_DEVTOOLS]: d.BROWSER_DEVTOOLS
 };
 
 function w() {

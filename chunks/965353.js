@@ -9,10 +9,10 @@ var i = n("37983"),
   r = n("414456"),
   s = n.n(r),
   a = n("77078"),
-  o = n("945330"),
-  u = n("745049"),
+  u = n("945330"),
+  o = n("745049"),
   d = n("782340"),
-  c = n("475267");
+  c = n("689560");
 
 function f(e) {
   let {
@@ -21,32 +21,32 @@ function f(e) {
     onTabSelected: r,
     userCount: f,
     hasBanner: h,
-    isHub: E = !1
-  } = e, C = l.useRef(null);
+    isHub: v = !1
+  } = e, E = l.useRef(null);
   l.useEffect(() => {
     var e, t, n;
-    return null === (n = C.current) || void 0 === n ? void 0 : null === (t = n.ref) || void 0 === t ? void 0 : null === (e = t.blur) || void 0 === e ? void 0 : e.call(t)
+    return null === (n = E.current) || void 0 === n ? void 0 : null === (t = n.ref) || void 0 === t ? void 0 : null === (e = t.blur) || void 0 === e ? void 0 : e.call(t)
   }, []);
-  let p = d.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
+  let m = d.default.Messages.GUILD_EVENT_DETAILS_USER_LIST_TAB_TITLE.format({
       userCount: f
     }),
-    v = [(0, i.jsx)(a.TabBar.Item, {
+    C = [(0, i.jsx)(a.TabBar.Item, {
       className: c.tabBarItem,
-      id: u.EventDetailSections.EVENT_INFO,
+      id: o.EventDetailSections.EVENT_INFO,
       children: d.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
     }, "event-details")];
-  return !E && v.push((0, i.jsx)(a.TabBar.Item, {
+  return !v && C.push((0, i.jsx)(a.TabBar.Item, {
     className: c.tabBarItem,
-    id: u.EventDetailSections.RSVP_LIST,
-    children: p
+    id: o.EventDetailSections.RSVP_LIST,
+    children: m
   }, "is-hub")), (0, i.jsxs)("div", {
     className: c.container,
     children: [(0, i.jsx)(a.Clickable, {
-      ref: C,
+      ref: E,
       onClick: t,
       className: c.closeButton,
       "aria-label": d.default.Messages.CLOSE,
-      children: (0, i.jsx)(o.default, {
+      children: (0, i.jsx)(u.default, {
         className: s(c.closeIcon, h && c.closeIconBanner)
       })
     }), (0, i.jsx)(a.TabBar, {
@@ -55,7 +55,7 @@ function f(e) {
       selectedItem: n,
       type: "top",
       onItemSelect: r,
-      children: v
+      children: C
     })]
   })
 }

@@ -47,13 +47,13 @@ o(c, s), e.exports = c, c.prototype._getEndomorphism = function(e) {
     o = new i(3).toRed(t).redNeg().redSqrt().redMul(n);
   return [r.redAdd(o).fromRed(), r.redSub(o).fromRed()]
 }, c.prototype._getEndoBasis = function(e) {
-  for (var t, n, r, o, s, a, c, u, d, l = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), f = e, p = this.n.clone(), h = new i(1), g = new i(0), b = new i(0), v = new i(1), m = 0; 0 !== f.cmpn(0);) {
+  for (var t, n, r, o, s, a, c, u, d, l = this.n.ushrn(Math.floor(this.n.bitLength() / 2)), f = e, p = this.n.clone(), h = new i(1), v = new i(0), g = new i(0), b = new i(1), m = 0; 0 !== f.cmpn(0);) {
     var y = p.div(f);
-    u = p.sub(y.mul(f)), d = b.sub(y.mul(h));
-    var x = v.sub(y.mul(g));
+    u = p.sub(y.mul(f)), d = g.sub(y.mul(h));
+    var x = b.sub(y.mul(v));
     if (!r && 0 > u.cmp(l)) t = c.neg(), n = h, r = u.neg(), o = d;
     else if (r && 2 == ++m) break;
-    c = u, p = f, f = u, b = h, h = d, v = g, g = x
+    c = u, p = f, f = u, g = h, h = d, b = v, v = x
   }
   s = u.neg(), a = d;
   var w = r.sqr().add(o.sqr());
@@ -295,12 +295,12 @@ o(c, s), e.exports = c, c.prototype._getEndomorphism = function(e) {
       f = l.redSqr(),
       p = d.redAdd(d).redIAdd(d).redIAdd(r.redMul(c)),
       h = o.redMul(l),
-      g = p.redSqr().redISub(h.redAdd(h)),
-      b = h.redISub(g),
-      v = p.redMul(b);
-    v = v.redIAdd(v).redISub(f);
+      v = p.redSqr().redISub(h.redAdd(h)),
+      g = h.redISub(v),
+      b = p.redMul(g);
+    b = b.redIAdd(b).redISub(f);
     var m = u.redMul(a);
-    t + 1 < e && (c = c.redMul(f)), o = g, a = m, u = v
+    t + 1 < e && (c = c.redMul(f)), o = v, a = m, u = b
   }
   return this.curve.jpoint(o, u.redMul(i), a)
 }, d.prototype.dbl = function() {
@@ -323,9 +323,9 @@ o(c, s), e.exports = c, c.prototype._getEndomorphism = function(e) {
       p = this.x.redAdd(l).redSqr().redISub(d).redISub(f);
     p = p.redIAdd(p);
     var h = d.redAdd(d).redIAdd(d),
-      g = h.redSqr(),
-      b = f.redIAdd(f);
-    b = (b = b.redIAdd(b)).redIAdd(b), e = g.redISub(p).redISub(p), t = h.redMul(p.redISub(e)).redISub(b), n = (n = this.y.redMul(this.z)).redIAdd(n)
+      v = h.redSqr(),
+      g = f.redIAdd(f);
+    g = (g = g.redIAdd(g)).redIAdd(g), e = v.redISub(p).redISub(p), t = h.redMul(p.redISub(e)).redISub(g), n = (n = this.y.redMul(this.z)).redIAdd(n)
   }
   return this.curve.jpoint(e, t, n)
 }, d.prototype._threeDbl = function() {
@@ -347,10 +347,10 @@ o(c, s), e.exports = c, c.prototype._getEndomorphism = function(e) {
       p = this.x.redSub(d).redMul(this.x.redAdd(d));
     p = p.redAdd(p).redIAdd(p);
     var h = f.redIAdd(f),
-      g = (h = h.redIAdd(h)).redAdd(h);
-    e = p.redSqr().redISub(g), n = this.y.redAdd(this.z).redSqr().redISub(l).redISub(d);
-    var b = l.redSqr();
-    b = (b = (b = b.redIAdd(b)).redIAdd(b)).redIAdd(b), t = p.redMul(h.redISub(e)).redISub(b)
+      v = (h = h.redIAdd(h)).redAdd(h);
+    e = p.redSqr().redISub(v), n = this.y.redAdd(this.z).redSqr().redISub(l).redISub(d);
+    var g = l.redSqr();
+    g = (g = (g = g.redIAdd(g)).redIAdd(g)).redIAdd(g), t = p.redMul(h.redISub(e)).redISub(g)
   }
   return this.curve.jpoint(e, t, n)
 }, d.prototype._dbl = function() {

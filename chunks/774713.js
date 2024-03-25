@@ -1,35 +1,35 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("446674"),
-  r = l("716214"),
-  o = l("800762"),
-  u = l("295999"),
-  d = l("782340"),
-  c = l("953212"),
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("446674"),
+  r = n("716214"),
+  o = n("800762"),
+  u = n("295999"),
+  d = n("782340"),
+  c = n("560772"),
   f = e => {
     let {
       guildId: t,
-      channelId: l,
-      color: a,
+      channelId: n,
+      color: l,
       look: f,
-      isProfile: m
-    } = e, p = (0, i.useStateFromStores)([o.default], () => o.default.isInChannel(l), [l]);
-    return (0, n.jsx)(u.default, {
-      className: s(c.button, {
-        [c.popout]: !m
+      isProfile: p
+    } = e, m = (0, s.useStateFromStores)([o.default], () => o.default.isInChannel(n), [n]);
+    return (0, i.jsx)(u.default, {
+      className: a(c.button, {
+        [c.popout]: !p
       }),
-      color: a,
+      color: l,
       look: f,
-      disabled: p,
-      onClick: () => r.connectOrLurkStage(t, l),
+      disabled: m,
+      onClick: () => r.connectOrLurkStage(t, n),
       fullWidth: !0,
       children: d.default.Messages.STAGE_CHANNEL_JOIN_BUTTON
     }, "stage")

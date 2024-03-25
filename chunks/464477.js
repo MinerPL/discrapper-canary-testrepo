@@ -1,5 +1,5 @@
-var n = r("553106"),
-  o = r("436335");
+var r = n("553106"),
+  i = n("436335");
 e.exports = function(e, t) {
-  return e && n(t, o(t), e)
+  return e && r(t, i(t), e)
 }

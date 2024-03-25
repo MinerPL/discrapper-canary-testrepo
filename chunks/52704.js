@@ -1,57 +1,57 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return h
+    return E
   }
 });
-var l = n("37983");
-n("884691");
-var r = n("414456"),
-  i = n.n(r),
-  s = n("77078"),
-  a = n("181114"),
-  o = n("771325"),
-  u = n("570697"),
-  c = n("75015"),
-  d = n("782340"),
-  f = n("650130");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("77078"),
+  r = s("181114"),
+  o = s("771325"),
+  d = s("570697"),
+  u = s("75015"),
+  c = s("782340"),
+  S = s("837087");
 
-function h(e) {
+function E(e) {
   let {
     showRemoveBannerButton: t,
-    errors: n,
-    onBannerChange: r,
-    guildId: h,
-    className: E,
-    disabled: p = !1,
-    showPremiumIcon: C = !0,
-    isTryItOutFlow: _ = !1,
-    forcedDivider: m,
-    withHighlight: v = !1
-  } = e, I = v ? a.default : s.Button;
-  return (0, l.jsx)(u.default, {
-    className: E,
-    title: d.default.Messages.USER_SETTINGS_PROFILE_BANNER,
-    showPremiumIcon: C,
-    errors: n,
-    disabled: p,
-    forcedDivider: m,
-    children: (0, l.jsxs)("div", {
-      className: f.buttonsContainer,
-      children: [(0, l.jsx)(I, {
-        className: i({
-          [f.buttonHighlighted]: v
+    errors: s,
+    onBannerChange: n,
+    guildId: E,
+    className: T,
+    disabled: f = !1,
+    showPremiumIcon: _ = !0,
+    isTryItOutFlow: m = !1,
+    forcedDivider: g,
+    withHighlight: h = !1
+  } = e, N = h ? r.default : i.Button;
+  return (0, a.jsx)(d.default, {
+    className: T,
+    title: c.default.Messages.USER_SETTINGS_PROFILE_BANNER,
+    showPremiumIcon: _,
+    errors: s,
+    disabled: f,
+    forcedDivider: g,
+    children: (0, a.jsxs)("div", {
+      className: S.buttonsContainer,
+      children: [(0, a.jsx)(N, {
+        className: l({
+          [S.buttonHighlighted]: h
         }),
-        size: s.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(c.UploadTypes.BANNER, h, _, void 0),
-        children: d.default.Messages.CHANGE_BANNER
-      }), t && (0, l.jsx)(s.Button, {
-        className: f.removeButton,
-        color: s.Button.Colors.PRIMARY,
-        look: s.Button.Looks.LINK,
-        size: s.Button.Sizes.SMALL,
-        onClick: () => r(null),
-        children: null != h ? d.default.Messages.USER_SETTINGS_RESET_BANNER : d.default.Messages.USER_SETTINGS_REMOVE_BANNER
+        size: i.Button.Sizes.SMALL,
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.BANNER, E, m, void 0),
+        children: c.default.Messages.CHANGE_BANNER
+      }), t && (0, a.jsx)(i.Button, {
+        className: S.removeButton,
+        color: i.Button.Colors.PRIMARY,
+        look: i.Button.Looks.LINK,
+        size: i.Button.Sizes.SMALL,
+        onClick: () => n(null),
+        children: null != E ? c.default.Messages.USER_SETTINGS_RESET_BANNER : c.default.Messages.USER_SETTINGS_REMOVE_BANNER
       })]
     })
   })

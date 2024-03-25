@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return N
   }
 });
 var l = n("37983"),
@@ -17,7 +17,7 @@ var l = n("37983"),
   E = n("103603"),
   h = n("474293"),
   g = n("580357"),
-  _ = n("491088");
+  _ = n("356659");
 let S = {
     SMOL: "Smol",
     MINI: "Mini",
@@ -38,7 +38,7 @@ let S = {
     [S.LARGER]: 64,
     [S.XLARGE]: 100
   },
-  R = {
+  m = {
     [S.SMOL]: [10, 10, 8, 6, 6, 4],
     [S.MINI]: [12, 12, 10, 10, 8, 6, 4],
     [S.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
@@ -48,7 +48,7 @@ let S = {
     [S.LARGER]: [19, 19, 17, 17, 15, 13, 11],
     [S.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
   };
-class m extends a.PureComponent {
+class R extends a.PureComponent {
   renderAcronym() {
     let {
       guild: e,
@@ -86,21 +86,21 @@ class m extends a.PureComponent {
       onClick: g,
       to: S,
       badgeStrokeColor: v,
-      animate: m,
+      animate: R,
       tabIndex: C,
-      iconSrc: N,
-      "aria-hidden": T,
+      iconSrc: T,
+      "aria-hidden": N,
       ...p
-    } = this.props, I = R[u], x = null != g ? c.Clickable : "div";
-    return (0, l.jsxs)(x, {
+    } = this.props, x = m[u], I = null != g ? c.Clickable : "div";
+    return (0, l.jsxs)(I, {
       className: s(_.icon, a, (0, h.getClass)(_, "iconSize", u), {
         [null !== (e = (0, h.getClass)(_, "iconActive", u)) && void 0 !== e ? e : ""]: i,
         [_.iconInactive]: !i,
         [_.noIcon]: null == n.icon
       }),
-      "aria-hidden": T,
+      "aria-hidden": N,
       style: null == n.icon ? {
-        fontSize: (null !== (t = I[n.acronym.length]) && void 0 !== t ? t : I[I.length - 1]) * d,
+        fontSize: (null !== (t = x[n.acronym.length]) && void 0 !== t ? t : x[x.length - 1]) * d,
         ...o
       } : o,
       onClick: null != S || null == g ? void 0 : g,
@@ -160,17 +160,17 @@ let C = u.default.connectStores([f.default], e => {
       backgroundImage: (0, E.makeCssUrlString)(null != l ? l : t.getIconURL(v[r], n && f.default.isFocused()))
     }
   }
-})((0, d.backgroundImagePreloader)(e => (0, l.jsx)(m, {
+})((0, d.backgroundImagePreloader)(e => (0, l.jsx)(R, {
   ...e
 })));
-class N extends a.PureComponent {
+class T extends a.PureComponent {
   render() {
     return (0, l.jsx)(C, {
       ...this.props
     })
   }
 }
-N.Sizes = S, N.defaultProps = {
+T.Sizes = S, T.defaultProps = {
   size: S.LARGE,
   textScale: 1,
   showBadge: !1,
@@ -180,4 +180,4 @@ N.Sizes = S, N.defaultProps = {
   badgeStrokeColor: o.default.unsafe_rawColors.WHITE_500.css,
   animate: !1
 };
-var T = N
+var N = T

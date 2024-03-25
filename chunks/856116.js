@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
 var a = n("49111");
 let s = "<removed>";
 
-function i(e) {
+function l(e) {
   var t, n;
-  let i = {
+  let l = {
     ...e
   };
-  if ("object" == typeof(t = i).args && "string" == typeof t.cmd) i = function(e) {
+  if ("object" == typeof(t = l).args && "string" == typeof t.cmd) l = function(e) {
     if (e.cmd === a.RPCCommands.AUTHENTICATE) return {
       ...e,
       args: {
@@ -23,8 +23,8 @@ function i(e) {
     return {
       ...e
     }
-  }(i);
-  if ("object" == typeof(n = i).data && "string" == typeof n.cmd) i = function(e) {
+  }(l);
+  if ("object" == typeof(n = l).data && "string" == typeof n.cmd) l = function(e) {
     if (e.cmd === a.RPCCommands.AUTHENTICATE) return {
       ...e,
       data: {
@@ -35,6 +35,6 @@ function i(e) {
     return {
       ...e
     }
-  }(i);
-  return i
+  }(l);
+  return l
 }

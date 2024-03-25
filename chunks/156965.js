@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("917351"),
   s = n.n(a),
-  i = n("305961"),
-  l = n("861309"),
+  l = n("305961"),
+  i = n("861309"),
   r = n("716724"),
   o = n("49111"),
   u = {
@@ -26,13 +26,13 @@ var a = n("917351"),
             timeout: s = 0
           }
         } = e;
-        return n.storeWait(t, () => i.default.getGuild(a), s).catch(() => {
-          throw new l.default({
+        return n.storeWait(t, () => l.default.getGuild(a), s).catch(() => {
+          throw new i.default({
             errorCode: o.RPCErrors.GET_GUILD_TIMED_OUT
           }, "Request to get guild timed out.")
         }).then(e => {
           var t;
-          if (null == e) throw new l.default({
+          if (null == e) throw new i.default({
             errorCode: o.RPCErrors.INVALID_GUILD
           }, "Invalid guild id: ".concat(a));
           return {
@@ -48,7 +48,7 @@ var a = n("917351"),
     [o.RPCCommands.GET_GUILDS]: {
       scope: o.OAuth2Scopes.RPC,
       handler() {
-        let e = i.default.getGuilds();
+        let e = l.default.getGuilds();
         return {
           guilds: s.map(e, e => ({
             id: e.id,

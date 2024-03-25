@@ -1,20 +1,20 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return n
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("271938");
+  r = s("884691"),
+  i = s("271938");
 
-function r(e) {
-  return class extends n.Component {
+function n(e) {
+  return class extends r.Component {
     componentDidMount() {
-      l.default.addChangeListener(this.onStoreChange)
+      i.default.addChangeListener(this.onStoreChange)
     }
     componentWillUnmount() {
-      l.default.removeChangeListener(this.onStoreChange)
+      i.default.removeChangeListener(this.onStoreChange)
     }
     render() {
       return (0, a.jsx)(e, {
@@ -24,10 +24,10 @@ function r(e) {
     }
     constructor(...e) {
       super(...e), this.state = {
-        isAuthenticated: l.default.isAuthenticated()
+        isAuthenticated: i.default.isAuthenticated()
       }, this.onStoreChange = () => {
         this.setState({
-          isAuthenticated: l.default.isAuthenticated()
+          isAuthenticated: i.default.isAuthenticated()
         })
       }
     }

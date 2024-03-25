@@ -1,13 +1,13 @@
-r("70102");
-var n = r("478098"),
-  i = r("952133");
-t.exports = function(t, e, r) {
+n("70102");
+var r = n("478098"),
+  a = n("952133");
+e.exports = function(e, t, n) {
   var o = !0,
-    a = !0;
-  if ("function" != typeof t) throw TypeError("Expected a function");
-  return i(r) && (o = "leading" in r ? !!r.leading : o, a = "trailing" in r ? !!r.trailing : a), n(t, e, {
+    i = !0;
+  if ("function" != typeof e) throw TypeError("Expected a function");
+  return a(n) && (o = "leading" in n ? !!n.leading : o, i = "trailing" in n ? !!n.trailing : i), r(e, t, {
     leading: o,
-    maxWait: e,
-    trailing: a
+    maxWait: t,
+    trailing: i
   })
 }

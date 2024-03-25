@@ -1,5 +1,5 @@
-var e = n("540956"),
-  o = n("270879");
-t.exports = function(t) {
-  return o(t) && "[object Set]" == e(t)
+var n = r("540956"),
+  u = r("270879");
+e.exports = function(e) {
+  return u(e) && "[object Set]" == n(e)
 }

@@ -8,8 +8,8 @@ var n = l("37983"),
   a = l("884691"),
   s = l("414456"),
   i = l.n(s),
-  d = l("446674"),
-  r = l("151426"),
+  r = l("446674"),
+  d = l("151426"),
   o = l("669491"),
   u = l("77078"),
   c = l("69927"),
@@ -33,8 +33,8 @@ var n = l("37983"),
   j = l("724210"),
   b = l("994428"),
   L = l("782340"),
-  M = l("168393"),
-  D = l("305794");
+  M = l("530506"),
+  D = l("250455");
 
 function y(e) {
   let {
@@ -42,7 +42,7 @@ function y(e) {
     previousChannel: l
   } = e, s = (0, A.default)(t);
   a.useEffect(() => {
-    (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX, {
+    (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX, {
       dismissAction: b.ContentDismissActionType.DISMISS
     })
   });
@@ -51,7 +51,7 @@ function y(e) {
     }) : L.default.Messages.CHANNEL_BROWSER_HTML_TITLE.format({
       guildName: t.name
     }),
-    d = s ? L.default.Messages.CHANNELS_AND_ROLES : L.default.Messages.CHANNEL_BROWSER_TITLE;
+    r = s ? L.default.Messages.CHANNELS_AND_ROLES : L.default.Messages.CHANNEL_BROWSER_TITLE;
   return (0, c.usePageTitle)({
     location: i
   }), (0, n.jsxs)(m.default, {
@@ -93,7 +93,7 @@ function y(e) {
       icon: T.default,
       "aria-hidden": !0
     }), (0, n.jsx)(m.default.Title, {
-      children: d
+      children: r
     })]
   })
 }
@@ -102,15 +102,15 @@ function B(e) {
   let {
     guildId: t,
     selectedSection: l
-  } = e, s = (0, d.useStateFromStores)([E.default], () => E.default.getGuild(t)), r = (0, A.default)(s), [c, h] = a.useState(null != l ? l : R.GuildOnboardingTab.CUSTOMIZE);
+  } = e, s = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(t)), d = (0, A.default)(s), [c, h] = a.useState(null != l ? l : R.GuildOnboardingTab.CUSTOMIZE);
   a.useEffect(() => {
     null != l && h(l)
   }, [l]);
-  let f = (0, d.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)),
-    m = (0, d.useStateFromStores)([p.default], () => p.default.getCurrentSidebarChannelId(j.StaticChannelRoute.CHANNEL_BROWSER)),
+  let f = (0, r.useStateFromStores)([I.default], () => I.default.getLastSelectedChannelId(t)),
+    m = (0, r.useStateFromStores)([p.default], () => p.default.getCurrentSidebarChannelId(j.StaticChannelRoute.CHANNEL_BROWSER)),
     g = null != m && c === R.GuildOnboardingTab.BROWSE,
-    _ = (0, d.useStateFromStores)([S.default], () => S.default.getChannel(f)),
-    T = (0, d.useStateFromStores)([x.default], () => x.default.getNewChannelIds(t).size > 0),
+    _ = (0, r.useStateFromStores)([S.default], () => S.default.getChannel(f)),
+    T = (0, r.useStateFromStores)([x.default], () => x.default.getNewChannelIds(t).size > 0),
     b = (0, C.useChannelBrowserChannelCount)(t);
   return null == s ? null : (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)("div", {
@@ -122,7 +122,7 @@ function B(e) {
         previousChannel: _
       }), (0, n.jsxs)("div", {
         className: i(D.content, M.container),
-        children: [r && (0, n.jsxs)(u.TabBar, {
+        children: [d && (0, n.jsxs)(u.TabBar, {
           className: M.tabBar,
           type: "top",
           look: "brand",

@@ -4,53 +4,53 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return S
+    return E
   }
 }), n("222007"), n("424973");
-var i, a, l = n("446674"),
-  r = n("913144"),
-  s = n("653047"),
-  u = n("946028");
-(a = i || (i = {}))[a.NOT_FETCHED = 0] = "NOT_FETCHED", a[a.FETCHING = 1] = "FETCHING", a[a.FETCHED = 2] = "FETCHED", a[a.FETCH_FAILED = 3] = "FETCH_FAILED";
-let o = new Map,
+var i, l, a = n("446674"),
+  s = n("913144"),
+  r = n("653047"),
+  o = n("946028");
+(l = i || (i = {}))[l.NOT_FETCHED = 0] = "NOT_FETCHED", l[l.FETCHING = 1] = "FETCHING", l[l.FETCHED = 2] = "FETCHED", l[l.FETCH_FAILED = 3] = "FETCH_FAILED";
+let u = new Map,
   d = new Map,
   c = [],
-  E = 0,
-  _ = [];
-class I extends l.default.Store {
+  f = 0,
+  p = [];
+class m extends a.default.Store {
   getIntegrations(e) {
     var t;
-    return null !== (t = o.get(e)) && void 0 !== t ? t : _
+    return null !== (t = u.get(e)) && void 0 !== t ? t : p
   }
   getIntegration(e, t) {
     var n;
-    return null === (n = o.get(e)) || void 0 === n ? void 0 : n.find(e => e.application.id === t)
+    return null === (n = u.get(e)) || void 0 === n ? void 0 : n.find(e => e.application.id === t)
   }
   getAllIntegrations() {
-    return o
+    return u
   }
   getIntegrationsFetchState(e) {
     var t;
     return null !== (t = d.get(e)) && void 0 !== t ? t : 0
   }
   getApplicationsShelfFetchState() {
-    return E
+    return f
   }
   getApplicationsShelf() {
     return c
   }
 }
 
-function T(e) {
+function h(e) {
   return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
 }
-I.displayName = "PrivateChannelIntegrationStore";
-let f = new I(r.default, {
+m.displayName = "PrivateChannelIntegrationStore";
+let x = new m(s.default, {
   LOGOUT() {
-    o.clear()
+    u.clear()
   },
   CONNECTION_OPEN() {
-    o.clear(), d.clear()
+    u.clear(), d.clear()
   },
   CHANNEL_SELECT(e) {
     let {
@@ -60,29 +60,29 @@ let f = new I(r.default, {
     d.set(t, 0)
   },
   APPLICATIONS_SHELF_FETCH_START() {
-    E = 1
+    f = 1
   },
   APPLICATIONS_SHELF_FETCH_SUCCESS(e) {
     let {
       applications: t
     } = e;
-    c = t.map(s.default.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), E = 2
+    c = t.map(r.default.createFromServer).sort((e, t) => e.name.localeCompare(t.name)), f = 2
   },
   APPLICATIONS_SHELF_FETCH_FAIL() {
-    E = 3
+    f = 3
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_START(e) {
     let {
       channelId: t
     } = e;
-    o.set(t, null), d.set(t, 1)
+    u.set(t, null), d.set(t, 1)
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_SUCCESS(e) {
     let {
       channelId: t,
       integrations: n
     } = e;
-    o.set(t, T(n.map(u.createPrivateChannelIntegration))), d.set(t, 2)
+    u.set(t, h(n.map(o.createPrivateChannelIntegration))), d.set(t, 2)
   },
   FETCH_PRIVATE_CHANNEL_INTEGRATIONS_FAIL(e) {
     let {
@@ -93,32 +93,32 @@ let f = new I(r.default, {
   PRIVATE_CHANNEL_INTEGRATION_CREATE(e) {
     let {
       integration: t
-    } = e, n = o.get(t.channel_id);
+    } = e, n = u.get(t.channel_id);
     if (null == n) return !1;
-    o.set(t.channel_id, T([...n, (0, u.createPrivateChannelIntegration)(t)]))
+    u.set(t.channel_id, h([...n, (0, o.createPrivateChannelIntegration)(t)]))
   },
   PRIVATE_CHANNEL_INTEGRATION_UPDATE(e) {
     let {
       integration: t
-    } = e, n = o.get(t.channel_id);
+    } = e, n = u.get(t.channel_id);
     if (null == n) return !1;
-    let i = (0, u.createPrivateChannelIntegration)(t),
-      a = n.findIndex(e => e.application.id === i.application.id),
-      l = [...n]; - 1 === a ? l.push(i) : l[a] = i, o.set(i.channel_id, T(l))
+    let i = (0, o.createPrivateChannelIntegration)(t),
+      l = n.findIndex(e => e.application.id === i.application.id),
+      a = [...n]; - 1 === l ? a.push(i) : a[l] = i, u.set(i.channel_id, h(a))
   },
   PRIVATE_CHANNEL_INTEGRATION_DELETE(e) {
     let {
       channelId: t,
       applicationId: n
-    } = e, i = o.get(t);
+    } = e, i = u.get(t);
     if (null == i) return !1;
-    o.set(t, i.filter(e => e.application.id !== n))
+    u.set(t, i.filter(e => e.application.id !== n))
   },
   CHANNEL_DELETE(e) {
     let {
       channel: t
     } = e;
-    return o.delete(t.id)
+    return u.delete(t.id)
   }
 });
-var S = f
+var E = x

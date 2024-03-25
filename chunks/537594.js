@@ -24,7 +24,7 @@ var l = a("37983"),
       scrollerRef: g,
       showFeedback: I,
       setOnDismissedFeedback: _
-    } = e, [x, v, S] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getItem(t, a), u.default.getIsItemHiding(t, a), u.default.getIsItemHidden(t, a)]), C = n.useRef(null);
+    } = e, [x, S, v] = (0, i.useStateFromStoresArray)([u.default], () => [u.default.getItem(t, a), u.default.getIsItemHiding(t, a), u.default.getIsItemHidden(t, a)]), C = n.useRef(null);
     if (n.useEffect(() => {
         var e;
         let l = C.current;
@@ -51,8 +51,8 @@ var l = a("37983"),
         return d.observe(l), () => {
           d.disconnect()
         }
-      }, [a, t, g, E, v, S]), null == x || S) return null;
-    if (v) return (0, l.jsx)(c.default, {
+      }, [a, t, g, E, S, v]), null == x || v) return null;
+    if (S) return (0, l.jsx)(c.default, {
       guildId: t,
       feedItem: x
     });

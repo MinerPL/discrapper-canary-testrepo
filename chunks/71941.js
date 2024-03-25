@@ -1,80 +1,80 @@
 "use strict";
-a.r(s), a.d(s, {
+t.r(s), t.d(s, {
   Tab: function() {
     return l
   },
   default: function() {
-    return h
+    return u
   }
 });
-var t, l, i = a("37983");
-a("884691");
-var n = a("414456"),
-  d = a.n(n),
-  c = a("77078"),
-  r = a("782340"),
-  o = a("805986");
+var a, l, i = t("37983");
+t("884691");
+var n = t("414456"),
+  d = t.n(n),
+  r = t("77078"),
+  c = t("782340"),
+  o = t("404020");
 
-function h(e) {
+function u(e) {
   let {
     selectedTab: s,
-    onClick: a,
-    submitted: t
+    onClick: t,
+    submitted: a
   } = e;
   return (0, i.jsxs)("div", {
     className: o.tabs,
-    children: [(0, i.jsx)(x, {
+    children: [(0, i.jsx)(h, {
       tab: 0,
       selectedTab: s,
-      label: r.default.Messages.NOTIF_MIGRATION_INTRO_TAB,
-      disabled: t,
-      onClick: a
-    }), (0, i.jsx)(x, {
+      label: c.default.Messages.NOTIF_MIGRATION_INTRO_TAB,
+      disabled: a,
+      onClick: t
+    }), (0, i.jsx)(h, {
       tab: 1,
       selectedTab: s,
-      label: r.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TAB,
-      disabled: t,
-      onClick: a
-    }), (0, i.jsx)(x, {
+      label: c.default.Messages.NOTIF_MIGRATION_CUSTOMIZE_TAB,
+      disabled: a,
+      onClick: t
+    }), (0, i.jsx)(h, {
       tab: 2,
       selectedTab: s,
-      label: r.default.Messages.NOTIF_MIGRATION_TIPS_TAB,
-      disabled: !t,
-      onClick: a
+      label: c.default.Messages.NOTIF_MIGRATION_TIPS_TAB,
+      disabled: !a,
+      onClick: t
     })]
   })
 }
 
-function x(e) {
+function h(e) {
   let {
     tab: s,
-    selectedTab: a,
-    label: t,
+    selectedTab: t,
+    label: a,
     disabled: l,
     onClick: n
   } = e;
   return l ? (0, i.jsxs)("div", {
     className: d(o.tab, {
-      [o.current]: a === s
+      [o.current]: t === s
     }),
     children: [(0, i.jsx)("div", {
       className: o.progressBar
-    }), (0, i.jsx)(c.Text, {
+    }), (0, i.jsx)(r.Text, {
       variant: "text-xs/medium",
-      color: a === s ? "text-brand" : "text-muted",
-      children: t
+      color: t === s ? "text-brand" : "text-muted",
+      children: a
     })]
-  }) : (0, i.jsxs)(c.Clickable, {
+  }) : (0, i.jsxs)(r.Clickable, {
     onClick: () => n(s),
     className: d(o.tab, {
-      [o.current]: a === s
+      [o.current]: t === s
     }),
     children: [(0, i.jsx)("div", {
       className: o.progressBar
-    }), (0, i.jsx)(c.Text, {
+    }), (0, i.jsx)(r.Text, {
       variant: "text-xs/medium",
-      color: a === s ? "text-brand" : "text-muted",
-      children: t
+      color: t === s ? "text-brand" : "text-muted",
+      children: a
     })]
   })
-}(t = l || (l = {}))[t.Intro = 0] = "Intro", t[t.Customize = 1] = "Customize", t[t.Tips = 2] = "Tips"
+}(a = l || (l = {}))[a.Intro = 0] = "Intro", a[a.Customize = 1] = "Customize", a[a.Tips = 2] = "Tips"

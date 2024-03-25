@@ -1,14 +1,14 @@
 "use strict";
 r.r(t), r("70102"), r("854508");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("882982"),
-  c = r("123090"),
-  s = r("879169"),
-  f = r("348457"),
+  s = r("123090"),
+  f = r("879169"),
+  c = r("348457"),
   d = r("101944"),
   p = r("859390"),
   h = r("461034"),
@@ -108,48 +108,48 @@ var n = r("884691"),
               }
             }
           }, void 0 === t ? {} : t));
-        return o.createElement("div", {
+        return a.createElement("div", {
           style: n.picker,
           className: "photoshop-picker " + (void 0 === r ? "" : r)
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: n.head
-        }, this.props.header), o.createElement("div", {
+        }, this.props.header), a.createElement("div", {
           style: n.body,
           className: "flexbox-fix"
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: n.saturation
-        }, o.createElement(c.Saturation, {
+        }, a.createElement(s.Saturation, {
           hsl: this.props.hsl,
           hsv: this.props.hsv,
-          pointer: f.default,
+          pointer: c.default,
           onChange: this.props.onChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: n.hue
-        }, o.createElement(c.Hue, {
+        }, a.createElement(s.Hue, {
           direction: "vertical",
           hsl: this.props.hsl,
           pointer: d.default,
           onChange: this.props.onChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: n.controls
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: n.top,
           className: "flexbox-fix"
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: n.previews
-        }, o.createElement(h.default, {
+        }, a.createElement(h.default, {
           rgb: this.props.rgb,
           currentColor: this.state.currentColor
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: n.actions
-        }, o.createElement(p.default, {
+        }, a.createElement(p.default, {
           label: "OK",
           onClick: this.props.onAccept,
           active: !0
-        }), o.createElement(p.default, {
+        }), a.createElement(p.default, {
           label: "Cancel",
           onClick: this.props.onCancel
-        }), o.createElement(s.default, {
+        }), a.createElement(f.default, {
           onChange: this.props.onChange,
           rgb: this.props.rgb,
           hsv: this.props.hsv,
@@ -157,11 +157,11 @@ var n = r("884691"),
         }))))))
       }
     }]), t
-  }(o.Component);
+  }(a.Component);
 v.propTypes = {
   header: i.string,
   styles: i.object
 }, v.defaultProps = {
   header: "Color Picker",
   styles: {}
-}, (0, c.ColorWrap)(v)
+}, (0, s.ColorWrap)(v)

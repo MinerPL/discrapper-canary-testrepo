@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   reducedPaymentInfoExperiment: function() {
-    return a
+    return r
   }
 });
-var r = n("862205");
-let s = (0, r.createExperiment)({
+var i = n("862205");
+let s = (0, i.createExperiment)({
   id: "2023-06_reduced_payment_method_address_info",
   label: "Reduced Payment Method Address Info",
   kind: "user",
@@ -30,7 +30,7 @@ let s = (0, r.createExperiment)({
   }]
 });
 
-function a() {
+function r() {
   let {
     autoTrackExposure: e
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {

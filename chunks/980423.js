@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   LiveIndicatorShapes: function() {
-    return E
+    return f
   },
   default: function() {
     return T
@@ -17,13 +17,13 @@ var i = n("414456"),
   o = n("669491"),
   u = n("956089"),
   d = n("782340"),
-  c = n("164910");
+  c = n("895925");
 (s = l || (l = {})).RED = "RED", s.GRAY = "GRAY";
-let f = {
+let E = {
     LARGE: c.liveLarge,
     SMALL: c.liveSmall
   },
-  E = {
+  f = {
     [u.BadgeShapes.ROUND]: c.liveShapeRound,
     [u.BadgeShapes.ROUND_LEFT]: c.liveShapeRoundLeft,
     [u.BadgeShapes.ROUND_RIGHT]: c.liveShapeRoundRight,
@@ -36,21 +36,21 @@ function _(e) {
     style: n,
     shape: s = u.BadgeShapes.ROUND,
     look: l = "RED",
-    size: i = f.LARGE
+    size: i = E.LARGE
   } = e;
   return "RED" === l ? (0, a.jsx)(u.TextBadge, {
     text: d.default.Messages.LIVE,
     className: r(t, c.live, i),
     color: o.default.unsafe_rawColors.RED_400.css,
-    shape: E[s],
+    shape: f[s],
     style: n
   }) : (0, a.jsx)(u.TextBadge, {
     text: d.default.Messages.LIVE,
     className: r(t, c.live, i, c.grey),
     disableColor: !0,
-    shape: E[s],
+    shape: f[s],
     style: n
   })
 }
-_.Looks = l, _.Sizes = f;
+_.Looks = l, _.Sizes = E;
 var T = _

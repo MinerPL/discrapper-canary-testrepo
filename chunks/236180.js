@@ -1,44 +1,44 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return o
   }
 });
-var a = l("37983");
-l("884691");
-var n = l("272030"),
-  r = l("643306"),
-  i = l("470648"),
-  u = l("42203"),
-  s = {
-    handleUserContextMenu(e, t, r, i) {
-      let s = u.default.getChannel(t);
-      null != s && (0, n.openContextMenuLazy)(i, async () => {
+var i = n("37983");
+n("884691");
+var l = n("272030"),
+  a = n("643306"),
+  s = n("470648"),
+  r = n("42203"),
+  o = {
+    handleUserContextMenu(e, t, a, s) {
+      let o = r.default.getChannel(t);
+      null != o && (0, l.openContextMenuLazy)(s, async () => {
         let {
           default: t
-        } = await l.el("834247").then(l.bind(l, "834247"));
-        return l => (0, a.jsx)(t, {
-          ...l,
+        } = await n.el("834247").then(n.bind(n, "834247"));
+        return n => (0, i.jsx)(t, {
+          ...n,
           user: e,
-          channel: s,
-          guildId: r
+          channel: o,
+          guildId: a
         })
       })
     },
-    react(e, t, l) {
+    react(e, t, n) {
       let {
-        userId: n,
-        channelId: u
+        userId: l,
+        channelId: r
       } = e;
-      return null == n ? (0, a.jsx)(r.default, {
-        inlinePreview: l.formatInline,
+      return null == l ? (0, i.jsx)(a.default, {
+        inlinePreview: n.formatInline,
         ...e,
-        children: t(e.content, l)
-      }, l.key) : (0, a.jsx)(i.default, {
+        children: t(e.content, n)
+      }, n.key) : (0, i.jsx)(s.default, {
         className: "mention",
-        userId: n,
-        channelId: u,
-        inlinePreview: l.noStyleAndInteraction
-      }, l.key)
+        userId: l,
+        channelId: r,
+        inlinePreview: n.noStyleAndInteraction
+      }, n.key)
     }
   }

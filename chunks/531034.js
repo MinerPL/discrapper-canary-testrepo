@@ -4,17 +4,17 @@ n.r(t), n.d(t, {
     return l
   },
   getRenewButtonLabels: function() {
-    return u
+    return s
   },
   STICKERS: function() {
-    return o
+    return u
   }
 });
 var i = n("161585"),
   r = n("782340");
 let l = () => [r.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_JOIN_CTA_LABEL2],
-  u = () => [r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
-  o = [{
+  s = () => [r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL1, r.default.Messages.ROLE_SUBSCRIPTION_RENEW_CTA_LABEL2],
+  u = [{
     id: "781323471249604648",
     format_type: i.StickerFormat.APNG,
     description: "Cheerful Choco jumps out of gift box",

@@ -9,16 +9,16 @@ var a = n("37983"),
   s = n("77078"),
   i = n("788220"),
   r = n("894282"),
-  o = n("186503");
+  u = n("960863");
 
-function u(e) {
+function o(e) {
   let {
     renderPopout: t,
     onMouseEnter: n,
     onMouseLeave: s,
     closePopout: i,
     isHovered: r,
-    ...o
+    ...u
   } = e;
   return l.useEffect(() => {
     !r && i()
@@ -27,7 +27,7 @@ function u(e) {
     onMouseLeave: s,
     children: t({
       closePopout: i,
-      ...o
+      ...u
     })
   })
 }
@@ -39,20 +39,20 @@ function d(e) {
   } = e, [d, c] = l.useState(!1), {
     isHovered: f,
     setIsHovered: h,
-    onMouseEnter: p,
-    onMouseLeave: m,
+    onMouseEnter: m,
+    onMouseLeave: p,
     cancelTimers: E
   } = (0, i.default)(200, 300);
 
+  function g(e) {
+    "focus" !== e.type && !d && m()
+  }
+
+  function S() {
+    !d && p()
+  }
+
   function C(e) {
-    "focus" !== e.type && !d && p()
-  }
-
-  function g() {
-    !d && m()
-  }
-
-  function S(e) {
     E(), c(!d), (!f || d) && e()
   }
   let _ = f || d;
@@ -65,11 +65,11 @@ function d(e) {
     onRequestClose: () => {
       h(!1), c(!1)
     },
-    renderPopout: e => (0, a.jsx)(u, {
+    renderPopout: e => (0, a.jsx)(o, {
       isHovered: _,
       onFocus: () => c(!0),
-      onMouseEnter: p,
-      onMouseLeave: g,
+      onMouseEnter: m,
+      onMouseLeave: S,
       renderPopout: t,
       ...e
     }),
@@ -80,14 +80,14 @@ function d(e) {
       } = e;
       return (0, a.jsx)(a.Fragment, {
         children: n({
-          onClick: e => S(() => t(e)),
+          onClick: e => C(() => t(e)),
           onKeyDown: e => {
             var t, n;
-            return t = e, n = l, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && S(() => n(t)))
+            return t = e, n = l, void((t.key === r.KeyboardKeysUpdated.ENTER || t.key === r.KeyboardKeysUpdated.SPACE) && C(() => n(t)))
           },
-          className: o.actionBarButton,
-          onMouseEnter: C,
-          onMouseLeave: g,
+          className: u.actionBarButton,
+          onMouseEnter: g,
+          onMouseLeave: S,
           isActive: _
         })
       })

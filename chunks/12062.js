@@ -1,6 +1,6 @@
-var n = r("947450"),
-  o = r("191472"),
-  a = r("752166");
+var r = n("947450"),
+  i = n("191472"),
+  o = n("752166");
 e.exports = function(e) {
-  return "function" != typeof e.constructor || a(e) ? {} : n(o(e))
+  return "function" != typeof e.constructor || o(e) ? {} : r(i(e))
 }

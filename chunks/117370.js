@@ -57,10 +57,10 @@ function A(e) {
       G.current = !1, o.default.setSelectedGuildJoinRequest(t, g[0]), null === (e = s.current) || void 0 === e || e.scrollToTop()
     }
   }, [t, g, x]);
-  let O = l.useCallback(async e => {
+  let v = l.useCallback(async e => {
       if ("REVIEW_APPLICATION" !== A) h !== e && (o.default.setSelectedSortOrder(t, e), await P(e, A))
     }, [A, h, t, P]),
-    v = l.useCallback(async e => {
+    O = l.useCallback(async e => {
       if (A !== e) p(e), "REVIEW_APPLICATION" !== e && (o.default.setSelectedApplicationTab(t, e), o.default.setSelectedGuildJoinRequest(t, null), await P(h, e))
     }, [A, h, t, P]),
     D = l.useCallback(async () => {
@@ -75,7 +75,7 @@ function A(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(_.default, {
       currentTab: A,
-      onTabItemSelect: v,
+      onTabItemSelect: O,
       pendingGuildJoinRequestsTotal: C,
       showSetupTab: !0
     }), (0, a.jsx)("div", {
@@ -88,7 +88,7 @@ function A(e) {
           children: (0, a.jsx)(S.default, {
             className: M.sortSelect,
             sortOrder: h,
-            onSortChange: O
+            onSortChange: v
           })
         }), (0, a.jsx)(n.Text, {
           className: M.description,

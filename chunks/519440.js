@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("963662"),
-  i = n("592407"),
-  l = n("702411"),
+  l = n("592407"),
+  i = n("702411"),
   r = n("49111"),
   o = n("782340"),
   u = n("885634");
@@ -16,7 +16,7 @@ var s = n("963662"),
 function d(e) {
   let {
     guild: t
-  } = e, n = () => l.default.dismissNotice(t.id);
+  } = e, n = () => i.default.dismissNotice(t.id);
   return (0, a.jsx)(s.default, {
     guild: t,
     onDismissed: n,
@@ -25,7 +25,7 @@ function d(e) {
     type: r.ChannelNoticeTypes.COMMANDS_MIGRATION,
     image: u,
     onClick: () => {
-      n(), i.default.open(t.id, r.GuildSettingsSections.INTEGRATIONS)
+      n(), l.default.open(t.id, r.GuildSettingsSections.INTEGRATIONS)
     },
     imageMarginTop: 15,
     imageMarginX: 22

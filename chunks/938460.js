@@ -7,8 +7,8 @@
     var s = t("913144"),
       d = t("629109"),
       n = t("990766"),
-      i = t("605250"),
-      c = t("660078"),
+      c = t("605250"),
+      i = t("660078"),
       r = t("268491"),
       o = t("373469"),
       f = t("271938"),
@@ -34,7 +34,7 @@
       }
       _onStreamDirectSource(e, a, t, s) {
         this.mode = "verbatim-source", this.streamKey = e, this._onDirectorAction({
-          type: c.StreamDirectorActionType.STREAM,
+          type: i.StreamDirectorActionType.STREAM,
           sourceId: a,
           audioSourceId: t,
           sound: s
@@ -47,7 +47,7 @@
             break;
           case "verbatim-source":
             this._onDirectorAction({
-              type: c.StreamDirectorActionType.STOP
+              type: i.StreamDirectorActionType.STOP
             });
             break;
           default:
@@ -71,7 +71,7 @@
         let a = o.default.getCurrentUserActiveStream(),
           t = r.default.getState();
         switch (e.type) {
-          case c.StreamDirectorActionType.STREAM:
+          case i.StreamDirectorActionType.STREAM:
             if (null != a && (0, n.setStreamPaused)(a, !1), e.sourceId.startsWith("camera") && null != e.audioSourceId) {
               let a = e.sourceId.split(":"),
                 s = a[1];
@@ -103,10 +103,10 @@
               })
             }
             break;
-          case c.StreamDirectorActionType.PAUSE:
+          case i.StreamDirectorActionType.PAUSE:
             null != a && (0, n.setStreamPaused)(a, !0);
             break;
-          case c.StreamDirectorActionType.STOP:
+          case i.StreamDirectorActionType.STOP:
             null != a && (0, u.default)(a);
             break;
           default:
@@ -131,14 +131,14 @@
         }
       }
       constructor() {
-        this.mode = null, this.applications = [], this.director = new c.StreamDirector(e => this._onDirectorAction(e)), s.default.subscribe("STREAM_START", e => {
+        this.mode = null, this.applications = [], this.director = new i.StreamDirector(e => this._onDirectorAction(e)), s.default.subscribe("STREAM_START", e => {
           let {
             streamType: a,
             guildId: t,
             channelId: s,
             pid: d,
             sourceId: n,
-            audioSourceId: c,
+            audioSourceId: i,
             sound: r
           } = e, o = f.default.getId(), u = (0, l.encodeStreamKey)({
             streamType: a,
@@ -146,7 +146,7 @@
             channelId: s,
             ownerId: o
           });
-          null == d != (null == n) ? (null != d && this._onStreamApplication(u, d), null != n && this._onStreamDirectSource(u, n, c, r)) : new(0, i.default)("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(d, ", source-id: ").concat(n, ")"))
+          null == d != (null == n) ? (null != d && this._onStreamApplication(u, d), null != n && this._onStreamDirectSource(u, n, i, r)) : new(0, c.default)("ApplicationSwitchingManager").warn("invalid start_stream: both application + display modes were specified (pid: ".concat(d, ", source-id: ").concat(n, ")"))
         }), s.default.subscribe("STREAM_DELETE", e => {
           let {
             streamKey: a

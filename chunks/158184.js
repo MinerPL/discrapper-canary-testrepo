@@ -14,8 +14,8 @@ var n = s("37983"),
   d = s("677257"),
   c = s("923702"),
   S = s("658756"),
-  E = s("408381"),
-  f = s("635357"),
+  f = s("408381"),
+  E = s("635357"),
   I = s("642906"),
   _ = s("891865"),
   p = s("650484"),
@@ -32,8 +32,8 @@ function C(e) {
     application: d
   } = (0, I.usePaymentContext)(), c = (0, r.useStateFromStores)([o.default], () => o.default.getProduct(u));
   i(null != u, "Expected selectedSkuId"), i(null != d, "Expected application");
-  let E = a[u];
-  return (i(null != E, "Expected sku"), null == c) ? null : (0, n.jsxs)(p.PaymentPortalBody, {
+  let f = a[u];
+  return (i(null != f, "Expected sku"), null == c) ? null : (0, n.jsxs)(p.PaymentPortalBody, {
     children: [(0, n.jsx)(T.default, {}), (0, n.jsx)(S.CollectiblesCollectedModalInner, {
       product: c,
       onClose: t,
@@ -52,7 +52,7 @@ function m(e) {
     giftRecipient: S,
     giftMessageError: p,
     isSendingMessage: T
-  } = (0, f.useGiftContext)(), m = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), A = l.useRef(null), {
+  } = (0, E.useGiftContext)(), m = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), A = l.useRef(null), {
     selectedSkuId: N
   } = (0, I.usePaymentContext)(), h = (0, r.useStateFromStores)([o.default], () => o.default.getProduct(N)), {
     confettiColors: P
@@ -70,7 +70,7 @@ function m(e) {
     }), !m && (0, n.jsx)(c.default, {
       confettiTarget: A.current,
       confettiCanvas: e.confettiCanvas,
-      sprites: (0, E.getConfettiSprites)(null == h ? void 0 : h.categorySkuId),
+      sprites: (0, f.getConfettiSprites)(null == h ? void 0 : h.categorySkuId),
       colors: null == P ? void 0 : P.map(e => e.toHexString())
     })]
   }) : (0, n.jsx)(C, {

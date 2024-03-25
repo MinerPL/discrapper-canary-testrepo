@@ -1,20 +1,20 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("882982"),
-  c = r("123090"),
-  s = r("15523"),
-  f = r("786412"),
+  s = r("123090"),
+  f = r("15523"),
+  c = r("786412"),
   d = r("861550"),
   p = function(e) {
     var t = e.width,
       r = e.onChange,
       n = e.disableAlpha,
-      a = e.rgb,
+      o = e.rgb,
       i = e.hsl,
       p = e.hsv,
       h = e.hex,
@@ -63,7 +63,7 @@ var n = r("884691"),
             absolute: "0px 0px 0px 0px",
             borderRadius: "8px",
             boxShadow: "inset 0 0 0 1px rgba(0,0,0,.1)",
-            background: "rgba(" + a.r + ", " + a.g + ", " + a.b + ", " + a.a + ")",
+            background: "rgba(" + o.r + ", " + o.g + ", " + o.b + ", " + o.a + ")",
             zIndex: "2"
           },
           toggles: {
@@ -104,50 +104,50 @@ var n = r("884691"),
       }, void 0 === v ? {} : v), {
         disableAlpha: n
       });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: y.picker,
       className: "chrome-picker " + (void 0 === g ? "" : g)
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: y.saturation
-    }, o.createElement(c.Saturation, {
+    }, a.createElement(s.Saturation, {
       style: y.Saturation,
       hsl: i,
       hsv: p,
       pointer: d.default,
       onChange: r
-    })), o.createElement("div", {
+    })), a.createElement("div", {
       style: y.body
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: y.controls,
       className: "flexbox-fix"
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: y.color
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: y.swatch
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: y.active
-    }), o.createElement(c.Checkboard, {
+    }), a.createElement(s.Checkboard, {
       renderers: b
-    }))), o.createElement("div", {
+    }))), a.createElement("div", {
       style: y.toggles
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: y.hue
-    }, o.createElement(c.Hue, {
+    }, a.createElement(s.Hue, {
       style: y.Hue,
       hsl: i,
-      pointer: f.default,
+      pointer: c.default,
       onChange: r
-    })), o.createElement("div", {
+    })), a.createElement("div", {
       style: y.alpha
-    }, o.createElement(c.Alpha, {
+    }, a.createElement(s.Alpha, {
       style: y.Alpha,
-      rgb: a,
+      rgb: o,
       hsl: i,
-      pointer: f.default,
+      pointer: c.default,
       renderers: b,
       onChange: r
-    })))), o.createElement(s.default, {
-      rgb: a,
+    })))), a.createElement(f.default, {
+      rgb: o,
       hsl: i,
       hex: h,
       view: x,
@@ -164,4 +164,4 @@ p.propTypes = {
   width: 225,
   disableAlpha: !1,
   styles: {}
-}, (0, c.ColorWrap)(p)
+}, (0, s.ColorWrap)(p)

@@ -1,84 +1,84 @@
 "use strict";
 n.r(t), n.d(t, {
   HistoryUtils: function() {
-    return o
+    return s
   }
 }), n("222007"), n("424973");
-var l = n("385887");
-let i = new WeakMap,
-  r = new WeakMap,
-  o = {
+var i = n("385887");
+let l = new WeakMap,
+  a = new WeakMap,
+  s = {
     isMerging(e) {
       var t;
-      return null === (t = r.get(e)) || void 0 === t || t
+      return null === (t = a.get(e)) || void 0 === t || t
     },
     isSaving(e) {
       var t;
-      return null === (t = i.get(e)) || void 0 === t || t
+      return null === (t = l.get(e)) || void 0 === t || t
     },
     withoutMerging(e, t) {
       let n = this.isMerging(e);
-      r.set(e, !1);
+      a.set(e, !1);
       try {
         t()
       } finally {
-        r.set(e, n)
+        a.set(e, n)
       }
     },
     withoutSaving(e, t) {
       let n = this.isSaving(e);
-      i.set(e, !1);
+      l.set(e, !1);
       try {
         t()
       } finally {
-        i.set(e, n)
+        l.set(e, n)
       }
     },
-    withSingleEntry: (e, t) => s(e, "other", !1, t),
-    withMergedEntry: (e, t) => s(e, "other", !0, t),
+    withSingleEntry: (e, t) => r(e, "other", !1, t),
+    withMergedEntry: (e, t) => r(e, "other", !0, t),
     currentEntry: e => e.history.stack.length > 0 ? e.history.stack[e.history.index] : null,
     insertOrMergeEntry(e, t) {
       let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        l = o.currentEntry(e);
-      o.isMerging(e) && (null == l ? void 0 : l.mergeable) ? this.mergeEntry(e, n) : this.insertEntry(e, t, n)
+        i = s.currentEntry(e);
+      s.isMerging(e) && (null == i ? void 0 : i.mergeable) ? this.mergeEntry(e, n) : this.insertEntry(e, t, n)
     },
     insertEntry(e, t) {
       let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        r = arguments.length > 4 ? arguments[4] : void 0;
-      r = null != r ? r : e.selection, i = null != i ? i : l.EditorUtils.richValue(e);
+        l = arguments.length > 3 ? arguments[3] : void 0,
+        a = arguments.length > 4 ? arguments[4] : void 0;
+      a = null != a ? a : e.selection, l = null != l ? l : i.EditorUtils.richValue(e);
       let {
-        history: s
-      } = e, a = o.currentEntry(e);
-      for (null != a && (a.mergeable = !1), s.stack.length > 0 && (s.stack.length = s.index + 1); s.stack.length >= 250;) s.stack.shift();
-      s.stack.push({
+        history: r
+      } = e, o = s.currentEntry(e);
+      for (null != o && (o.mergeable = !1), r.stack.length > 0 && (r.stack.length = r.index + 1); r.stack.length >= 250;) r.stack.shift();
+      r.stack.push({
         type: t,
         mergeable: n,
         createdAt: Date.now(),
-        value: i,
-        selection: r
-      }), s.index = s.stack.length - 1
+        value: l,
+        selection: a
+      }), r.index = r.stack.length - 1
     },
     mergeEntry(e) {
       let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         {
           selection: n
         } = e,
-        i = l.EditorUtils.richValue(e),
-        r = o.currentEntry(e);
-      null != r && (r.value = i, r.selection = n, !t && (r.mergeable = !1))
+        l = i.EditorUtils.richValue(e),
+        a = s.currentEntry(e);
+      null != a && (a.value = l, a.selection = n, !t && (a.mergeable = !1))
     }
   };
 
-function s(e, t, n, r) {
-  let s = e.children,
-    a = e.selection,
-    u = o.isSaving(e);
-  i.set(e, !1);
+function r(e, t, n, a) {
+  let r = e.children,
+    o = e.selection,
+    u = s.isSaving(e);
+  l.set(e, !1);
   try {
-    let i = r();
-    return u && (n ? o.mergeEntry(e) : e.children !== s ? o.insertEntry(e, t, !1) : o.isMerging(e) && null != e.selection && (null == a || !l.RangeUtils.equals(e.selection, a)) && o.mergeEntry(e)), i
+    let l = a();
+    return u && (n ? s.mergeEntry(e) : e.children !== r ? s.insertEntry(e, t, !1) : s.isMerging(e) && null != e.selection && (null == o || !i.RangeUtils.equals(e.selection, o)) && s.mergeEntry(e)), l
   } finally {
-    i.set(e, u)
+    l.set(e, u)
   }
 }

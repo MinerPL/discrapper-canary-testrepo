@@ -6,8 +6,8 @@ i.r(e), i.d(e, {
 });
 var l = i("884691"),
   r = i("95045"),
-  n = i("227698"),
-  a = i("49111");
+  a = i("227698"),
+  n = i("49111");
 
 function s(t, e) {
   let {
@@ -20,7 +20,7 @@ function s(t, e) {
     allowLinks: u = !1,
     previewLinkTarget: f = !1
   } = e;
-  return l.useMemo(() => null != t.customRenderedContent ? t.customRenderedContent : t.isCommandType() && 0 === t.content.length || t.hasFlag(a.MessageFlags.LOADING) ? (0, n.default)(t) : (0, r.default)(t, {
+  return l.useMemo(() => null != t.customRenderedContent ? t.customRenderedContent : t.isCommandType() && 0 === t.content.length || t.hasFlag(n.MessageFlags.LOADING) ? (0, a.default)(t) : (0, r.default)(t, {
     hideSimpleEmbedContent: i,
     formatInline: s,
     noStyleAndInteraction: o,

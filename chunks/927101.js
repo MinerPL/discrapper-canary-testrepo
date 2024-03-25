@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("884691"),
   s = n("446674"),
-  i = n("913144"),
-  l = n("694787"),
+  l = n("913144"),
+  i = n("694787"),
   r = n("770032");
 
 function o() {
@@ -16,8 +16,8 @@ function o() {
     multiAccountUsers: r.default.getUsers()
   }));
   return a.useEffect(() => {
-    i.default.wait(() => {
-      l.validateMultiAccountTokens()
+    l.default.wait(() => {
+      i.validateMultiAccountTokens()
     })
   }, []), e
 }

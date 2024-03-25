@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   setNewUserFlowCompleted: function() {
-    return i
+    return l
   }
 });
 var a = n("913144");
@@ -16,7 +16,7 @@ function s(e) {
   }))
 }
 
-function i() {
+function l() {
   a.default.wait(() => a.default.dispatch({
     type: "NUF_COMPLETE"
   }))

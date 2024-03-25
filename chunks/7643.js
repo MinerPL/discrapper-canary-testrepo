@@ -25,23 +25,11 @@ function E(e) {
     onAcceptSuccess: n,
     onRejectSuccess: a,
     onError: E
-  } = e, g = (0, C.default)(), [S, A] = s.useState(!1), [_, T] = s.useState(!1), [M, N] = s.useState(!1), [I, v] = s.useState(!1), [L, x] = s.useState(!1), R = S || _ || M, y = s.useCallback(async e => {
-    if (!R) {
-      A(!0);
-      try {
-        await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
-      } catch (t) {
-        let e = new i.APIError(t);
-        null == E || E(e)
-      } finally {
-        A(!1)
-      }
-    }
-  }, [R, n, E]), O = s.useCallback(async e => {
-    if (!R) {
+  } = e, g = (0, C.default)(), [S, T] = s.useState(!1), [A, _] = s.useState(!1), [M, I] = s.useState(!1), [N, v] = s.useState(!1), [x, L] = s.useState(!1), y = S || A || M, R = s.useCallback(async e => {
+    if (!y) {
       T(!0);
       try {
-        await (0, f.rejectMessageRequest)(e), x(!0), null == a || a()
+        await (0, f.acceptMessageRequest)(e), v(!0), null == n || n()
       } catch (t) {
         let e = new i.APIError(t);
         null == E || E(e)
@@ -49,30 +37,42 @@ function E(e) {
         T(!1)
       }
     }
-  }, [R, a, E]), D = s.useCallback(async e => {
-    if (R) return;
-    T(!0);
+  }, [y, n, E]), O = s.useCallback(async e => {
+    if (!y) {
+      _(!0);
+      try {
+        await (0, f.rejectMessageRequest)(e), L(!0), null == a || a()
+      } catch (t) {
+        let e = new i.APIError(t);
+        null == E || E(e)
+      } finally {
+        _(!1)
+      }
+    }
+  }, [y, a, E]), D = s.useCallback(async e => {
+    if (y) return;
+    _(!0);
     let t = l(e, p.BATCH_REJECT_LIMIT);
     try {
       for (let e of t) await (0, f.rejectMessageRequestBatch)(e);
-      x(!0), null == a || a()
+      L(!0), null == a || a()
     } catch (t) {
       let e = new i.APIError(t);
       null == E || E(e)
     } finally {
-      T(!1)
+      _(!1)
     }
-  }, [R, a, E]), j = s.useCallback(async e => {
-    if (R) return;
+  }, [y, a, E]), P = s.useCallback(async e => {
+    if (y) return;
     if (null != t && null == o.default.getMutualGuilds(t.id)) {
-      N(!0);
+      I(!0);
       try {
         await (0, u.default)(t.id, t.getAvatarURL(void 0, 80), {
           withMutualGuilds: !0,
           withMutualFriendsCount: !0
         })
       } catch (e) {} finally {
-        N(!1)
+        I(!1)
       }
     }
     let n = async () => {
@@ -83,7 +83,7 @@ function E(e) {
         channel_id: e,
         mutual_guild_ids: null != s ? s : [],
         other_user_id: null == t ? void 0 : t.id
-      }), await y(e)
+      }), await R(e)
     };
     (0, h.openAcceptMessageRequestConfirmModal)({
       channelId: e,
@@ -99,9 +99,9 @@ function E(e) {
         })
       }
     })
-  }, [y, R, t]), P = s.useCallback((e, t, n) => {
+  }, [R, y, t]), b = s.useCallback((e, t, n) => {
     let s = (s, a) => {
-        a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), y(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
+        a && d.NonSpamRetrainingOptIn.updateSetting(s), s && null != t && (0, r.submitHamReportForFirstDM)(t), R(e.id), c.default.track(m.AnalyticEvents.MESSAGE_REQUEST_ACTION, {
           action: p.MessageRequestAnalyticsAction.ACCEPT_HAM_CONFIRMATION_PROMPT,
           channel_id: e.id,
           is_dont_show_again_checked: a,
@@ -119,16 +119,16 @@ function E(e) {
         })
       }
     }) : s(a)
-  }, [y]);
+  }, [R]);
   return {
-    acceptMessageRequest: g ? j : y,
+    acceptMessageRequest: g ? P : R,
     rejectMessageRequest: O,
     rejectAll: D,
-    markAsNotSpam: P,
+    markAsNotSpam: b,
     isAcceptLoading: S,
-    isRejectLoading: _,
+    isRejectLoading: A,
     isUserProfileLoading: M,
-    isOptimisticAccepted: I,
-    isOptimisticRejected: L
+    isOptimisticAccepted: N,
+    isOptimisticRejected: x
   }
 }

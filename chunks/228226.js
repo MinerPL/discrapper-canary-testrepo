@@ -4,55 +4,55 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("272030"),
-  a = n("406291"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("272030"),
+  o = n("406291"),
   u = n("782340"),
-  d = n("755203");
+  d = n("267336");
 
 function c(e) {
   var t;
-  let r, c, f, {
+  let a, c, f, {
       className: p,
       activeCommand: m,
       activeOption: h,
-      optionStates: E
+      optionStates: x
     } = e,
-    S = i.useCallback(e => {
+    E = l.useCallback(e => {
       var t;
-      let i = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
-      if (null == i) {
+      let l = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
+      if (null == l) {
         e.preventDefault();
         return
-      }(0, s.openContextMenuLazy)(e, async () => {
+      }(0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("443070").then(n.bind(n, "443070"));
-        return t => (0, l.jsx)(e, {
+        return t => (0, i.jsx)(e, {
           ...t,
-          id: i,
+          id: l,
           label: u.default.Messages.COPY_ID_COMMAND
         })
       })
     }, [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]);
   if (null == m) return null;
   if (null != h) {
-    let e = E[h.name].lastValidationResult;
-    r = h.displayName, c = h.displayDescription, f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
-  } else r = "".concat(a.COMMAND_SENTINEL).concat(m.displayName), c = m.displayDescription, f = null;
-  return (0, l.jsxs)("div", {
-    className: o(p, d.bar),
-    onContextMenu: S,
-    children: [(0, l.jsx)("span", {
+    let e = x[h.name].lastValidationResult;
+    a = h.displayName, c = h.displayDescription, f = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
+  } else a = "".concat(o.COMMAND_SENTINEL).concat(m.displayName), c = m.displayDescription, f = null;
+  return (0, i.jsxs)("div", {
+    className: s(p, d.bar),
+    onContextMenu: E,
+    children: [(0, i.jsx)("span", {
       className: d.name,
-      children: r
-    }), null != f ? (0, l.jsx)("span", {
+      children: a
+    }), null != f ? (0, i.jsx)("span", {
       className: d.error,
       children: f
-    }) : (0, l.jsx)("span", {
+    }) : (0, i.jsx)("span", {
       className: d.description,
       children: c
     })]

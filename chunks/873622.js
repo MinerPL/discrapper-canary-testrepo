@@ -1,42 +1,42 @@
 "use strict";
-s.r(t), s.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return C
+    return T
   }
-}), s("222007");
-var r = s("37983"),
-  l = s("884691"),
-  n = s("414456"),
-  a = s.n(n),
-  i = s("446674"),
-  o = s("77078"),
-  u = s("913144"),
-  c = s("960476"),
-  h = s("538282"),
-  d = s("510849"),
-  m = s("145131"),
-  p = s("810567"),
-  f = s("531470"),
-  g = s("140331"),
-  R = s("588155"),
-  I = s("762518"),
-  y = s("49111"),
-  _ = s("115279"),
-  E = s("782340"),
-  F = s("705602");
-let S = e => e.stopPropagation();
-class T extends l.PureComponent {
+}), r("222007");
+var s = r("37983"),
+  n = r("884691"),
+  l = r("414456"),
+  i = r.n(l),
+  a = r("446674"),
+  o = r("77078"),
+  u = r("913144"),
+  c = r("960476"),
+  d = r("538282"),
+  h = r("510849"),
+  f = r("145131"),
+  m = r("810567"),
+  p = r("531470"),
+  I = r("140331"),
+  g = r("588155"),
+  _ = r("762518"),
+  E = r("49111"),
+  R = r("115279"),
+  S = r("782340"),
+  y = r("901137");
+let v = e => e.stopPropagation();
+class F extends n.PureComponent {
   componentDidMount() {
-    c.initializeSearch(), document.addEventListener("keydown", this.backToFrontPage), "" !== this.props.query && this.search(this.props.query, y.GIFPickerResultTypes.SEARCH)
+    c.initializeSearch(), document.addEventListener("keydown", this.backToFrontPage), "" !== this.props.query && this.search(this.props.query, E.GIFPickerResultTypes.SEARCH)
   }
   componentWillUnmount() {
     u.default.wait(() => c.resetSearch()), document.removeEventListener("keydown", this.backToFrontPage)
   }
-  search(e, t, s) {
-    c.search(e, t, s), "" === e ? this.setState({
+  search(e, t, r) {
+    c.search(e, t, r), "" === e ? this.setState({
       resultType: null
-    }) : this.state.resultType !== y.GIFPickerResultTypes.SEARCH && this.setState({
-      resultType: y.GIFPickerResultTypes.SEARCH
+    }) : this.state.resultType !== E.GIFPickerResultTypes.SEARCH && this.setState({
+      resultType: E.GIFPickerResultTypes.SEARCH
     })
   }
   renderHeaderContent() {
@@ -46,27 +46,27 @@ class T extends l.PureComponent {
       resultType: t
     } = this.state;
     switch (t) {
-      case y.GIFPickerResultTypes.FAVORITES:
-        return (0, r.jsx)(o.FormTitle, {
+      case E.GIFPickerResultTypes.FAVORITES:
+        return (0, s.jsx)(o.FormTitle, {
           tag: "h5",
-          className: F.searchHeader,
-          children: E.default.Messages.CATEGORY_FAVORITE
+          className: y.searchHeader,
+          children: S.default.Messages.CATEGORY_FAVORITE
         });
-      case y.GIFPickerResultTypes.TRENDING_GIFS:
-        return (0, r.jsx)(o.FormTitle, {
+      case E.GIFPickerResultTypes.TRENDING_GIFS:
+        return (0, s.jsx)(o.FormTitle, {
           tag: "h5",
-          className: F.searchHeader,
-          children: E.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
+          className: y.searchHeader,
+          children: S.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
         });
       default:
-        return (0, r.jsx)(p.default, {
-          className: F.searchBar,
-          size: p.default.Sizes.MEDIUM,
+        return (0, s.jsx)(m.default, {
+          className: y.searchBar,
+          size: m.default.Sizes.MEDIUM,
           query: e,
           onChange: this.handleChangeQuery,
           onClear: this.handleClearQuery,
-          placeholder: E.default.Messages.SEARCH_TENOR,
-          "aria-label": E.default.Messages.SEARCH_TENOR,
+          placeholder: S.default.Messages.SEARCH_TENOR,
+          "aria-label": S.default.Messages.SEARCH_TENOR,
           ref: this.searchBarRef,
           autoFocus: !0
         })
@@ -76,15 +76,15 @@ class T extends l.PureComponent {
     let {
       resultType: e
     } = this.state, t = null;
-    return null != e && (t = (0, r.jsx)(o.Clickable, {
+    return null != e && (t = (0, s.jsx)(o.Clickable, {
       onClick: this.handleClearQuery,
-      className: F.backButton,
-      "aria-label": E.default.Messages.BACK,
-      children: (0, r.jsx)(f.default, {
-        title: E.default.Messages.BACK
+      className: y.backButton,
+      "aria-label": S.default.Messages.BACK,
+      children: (0, s.jsx)(p.default, {
+        title: S.default.Messages.BACK
       })
-    })), (0, r.jsxs)(m.default, {
-      align: m.default.Align.CENTER,
+    })), (0, s.jsxs)(f.default, {
+      align: f.default.Align.CENTER,
       children: [t, this.renderHeaderContent()]
     })
   }
@@ -92,28 +92,28 @@ class T extends l.PureComponent {
     let {
       resultItems: e,
       resultQuery: t,
-      query: s,
-      favorites: l,
-      searchOffset: n,
-      searchLimit: a,
-      searchTotalResults: i,
+      query: r,
+      favorites: n,
+      searchOffset: l,
+      searchLimit: i,
+      searchTotalResults: a,
       suggestions: o,
       hideFavorites: u
     } = this.props, {
       resultType: c
     } = this.state;
-    return null == c ? (0, r.jsx)(R.default, {
+    return null == c ? (0, s.jsx)(g.default, {
       hideFavoritesTile: u,
       onSelectItem: this.handleSelectItem
-    }) : (0, r.jsx)(I.default, {
-      data: c === y.GIFPickerResultTypes.FAVORITES ? l : e,
+    }) : (0, s.jsx)(_.default, {
+      data: c === E.GIFPickerResultTypes.FAVORITES ? n : e,
       onSelectGIF: this.handleSelectGIF,
       resultType: c,
       resultQuery: t,
-      query: s,
-      searchOffset: n,
-      searchLimit: a,
-      searchTotalResults: i,
+      query: r,
+      searchOffset: l,
+      searchLimit: i,
+      searchTotalResults: a,
       suggestions: o,
       onSelectSuggestion: this.handleSelectSuggestion
     })
@@ -123,18 +123,18 @@ class T extends l.PureComponent {
       className: e,
       forwardedRef: t
     } = this.props;
-    return (0, r.jsxs)("div", {
-      id: _.GIF_PICKER_TAB_PANEL_ID,
+    return (0, s.jsxs)("div", {
+      id: R.GIF_PICKER_TAB_PANEL_ID,
       role: "tabpanel",
-      "aria-labelledby": _.GIF_PICKER_TAB_ID,
-      className: a(F.container, e),
-      onClick: S,
+      "aria-labelledby": R.GIF_PICKER_TAB_ID,
+      className: i(y.container, e),
+      onClick: v,
       ref: t,
-      children: [(0, r.jsx)("div", {
-        className: F.header,
+      children: [(0, s.jsx)("div", {
+        className: y.header,
         children: this.renderHeader()
-      }), (0, r.jsx)("div", {
-        className: F.content,
+      }), (0, s.jsx)("div", {
+        className: y.content,
         children: this.renderContent()
       })]
     })
@@ -142,20 +142,20 @@ class T extends l.PureComponent {
   constructor(...e) {
     super(...e), this.state = {
       resultType: null
-    }, this.searchBarRef = l.createRef(), this.backToFrontPage = e => {
+    }, this.searchBarRef = n.createRef(), this.backToFrontPage = e => {
       let {
         resultType: t
       } = this.state;
-      e.keyCode === y.KeyboardKeys.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery())
+      e.keyCode === E.KeyboardKeys.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery())
     }, this.handleChangeQuery = e => {
-      (0, h.setSearchQuery)(e), this.search(e, y.GIFPickerResultTypes.SEARCH)
+      (0, d.setSearchQuery)(e), this.search(e, E.GIFPickerResultTypes.SEARCH)
     }, this.handleSelectSuggestion = e => {
-      (0, h.setSearchQuery)(""), c.resetSearch(), this.search(e, y.GIFPickerResultTypes.SEARCH_SUGGESTION, !0)
+      (0, d.setSearchQuery)(""), c.resetSearch(), this.search(e, E.GIFPickerResultTypes.SEARCH_SUGGESTION, !0)
     }, this.handleClearQuery = () => {
       let {
         current: e
       } = this.searchBarRef;
-      (0, h.setSearchQuery)(""), c.resetSearch(), this.setState({
+      (0, d.setSearchQuery)(""), c.resetSearch(), this.setState({
         resultType: null
       }), null != e && e.focus()
     }, this.handleSelectGIF = e => {
@@ -165,13 +165,13 @@ class T extends l.PureComponent {
       null != t && t(e)
     }, this.handleSelectItem = (e, t) => {
       let {
-        current: s
+        current: r
       } = this.searchBarRef;
       switch (e) {
-        case y.GIFPickerResultTypes.TRENDING_CATEGORY:
-          c.search(t, y.GIFPickerResultTypes.TRENDING_CATEGORY, !0), null != s && s.focus();
+        case E.GIFPickerResultTypes.TRENDING_CATEGORY:
+          c.search(t, E.GIFPickerResultTypes.TRENDING_CATEGORY, !0), null != r && r.focus();
           break;
-        case y.GIFPickerResultTypes.TRENDING_GIFS:
+        case E.GIFPickerResultTypes.TRENDING_GIFS:
           c.fetchTrendingGIFs()
       }
       this.setState({
@@ -180,29 +180,29 @@ class T extends l.PureComponent {
     }
   }
 }
-var C = l.forwardRef((e, t) => {
-  !e.persistSearch && (0, h.setSearchQuery)("");
+var T = n.forwardRef((e, t) => {
+  !e.persistSearch && (0, d.setSearchQuery)("");
   let {
-    query: s,
-    resultQuery: l,
-    resultItems: n,
-    suggestions: a
-  } = (0, i.useStateFromStoresObject)([d.default], () => ({
-    query: d.default.getQuery(),
-    resultQuery: d.default.getResultQuery(),
-    resultItems: d.default.getResultItems(),
-    suggestions: d.default.getSuggestions()
-  })), o = (0, h.useExpressionPickerStore)(e => e.searchQuery), u = (0, g.useSortedFavoriteGIFs)();
-  return (0, r.jsx)(T, {
+    query: r,
+    resultQuery: n,
+    resultItems: l,
+    suggestions: i
+  } = (0, a.useStateFromStoresObject)([h.default], () => ({
+    query: h.default.getQuery(),
+    resultQuery: h.default.getResultQuery(),
+    resultItems: h.default.getResultItems(),
+    suggestions: h.default.getSuggestions()
+  })), o = (0, d.useExpressionPickerStore)(e => e.searchQuery), u = (0, I.useSortedFavoriteGIFs)();
+  return (0, s.jsx)(F, {
     ...e,
     forwardedRef: t,
-    query: null != o && "" !== o ? o : s,
-    resultQuery: l,
-    resultItems: n,
-    suggestions: a,
+    query: null != o && "" !== o ? o : r,
+    resultQuery: n,
+    resultItems: l,
+    suggestions: i,
     favorites: u,
     searchOffset: 0,
-    searchTotalResults: d.default.getResultItems().length,
+    searchTotalResults: h.default.getResultItems().length,
     searchLimit: null
   })
 })

@@ -1,18 +1,18 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
 var n = r("441609"),
-  o = r("944644"),
-  a = function(e, t, r, a) {
+  a = r("944644"),
+  o = function(e, t, r, o) {
     var i = !r;
     r || (r = {});
     for (var u = -1, l = t.length; ++u < l;) {
-      var c = t[u],
-        s = a ? a(r[c], e[c], c, r, e) : void 0;
-      void 0 === s && (s = e[c]), i ? (0, o.default)(r, c, s) : (0, n.default)(r, c, s)
+      var s = t[u],
+        f = o ? o(r[s], e[s], s, r, e) : void 0;
+      void 0 === f && (f = e[s]), i ? (0, a.default)(r, s, f) : (0, n.default)(r, s, f)
     }
     return r
   }

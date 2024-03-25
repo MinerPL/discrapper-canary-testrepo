@@ -4,10 +4,10 @@ r.r(t), r.d(t, {
     return n
   },
   pink: function() {
-    return o
+    return a
   },
   purple: function() {
-    return a
+    return o
   },
   deepPurple: function() {
     return i
@@ -19,13 +19,13 @@ r.r(t), r.d(t, {
     return l
   },
   lightBlue: function() {
-    return c
-  },
-  cyan: function() {
     return s
   },
-  teal: function() {
+  cyan: function() {
     return f
+  },
+  teal: function() {
+    return c
   },
   green: function() {
     return d
@@ -71,7 +71,7 @@ var n = {
     a400: "#ff1744",
     a700: "#d50000"
   },
-  o = {
+  a = {
     50: "#fce4ec",
     100: "#f8bbd0",
     200: "#f48fb1",
@@ -87,7 +87,7 @@ var n = {
     a400: "#f50057",
     a700: "#c51162"
   },
-  a = {
+  o = {
     50: "#f3e5f5",
     100: "#e1bee7",
     200: "#ce93d8",
@@ -151,7 +151,7 @@ var n = {
     a400: "#2979ff",
     a700: "#2962ff"
   },
-  c = {
+  s = {
     50: "#e1f5fe",
     100: "#b3e5fc",
     200: "#81d4fa",
@@ -167,7 +167,7 @@ var n = {
     a400: "#00b0ff",
     a700: "#0091ea"
   },
-  s = {
+  f = {
     50: "#e0f7fa",
     100: "#b2ebf2",
     200: "#80deea",
@@ -183,7 +183,7 @@ var n = {
     a400: "#00e5ff",
     a700: "#00b8d4"
   },
-  f = {
+  c = {
     50: "#e0f2f1",
     100: "#b2dfdb",
     200: "#80cbc4",

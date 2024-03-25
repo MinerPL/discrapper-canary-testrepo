@@ -1,75 +1,75 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return s
   }
 });
-var l, s = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  a = n.n(r),
+var s, r = n("37983"),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   o = n("931138"),
   u = n("476263"),
   d = n("206453"),
   c = n("811151"),
   f = n("427459"),
-  p = n("804308");
-class m extends i.PureComponent {
+  m = n("858466");
+class E extends a.PureComponent {
   render() {
     let {
       tier: e
     } = this.props;
-    return (0, s.jsxs)("div", {
-      className: p.tierPill,
-      children: [(0, s.jsx)(o.default, {
-        className: p.tierPillStar,
-        children: (0, s.jsx)(d.default, {
+    return (0, r.jsxs)("div", {
+      className: m.tierPill,
+      children: [(0, r.jsx)(o.default, {
+        className: m.tierPillStar,
+        children: (0, r.jsx)(d.default, {
           tier: e,
-          className: p.tierPillGem
+          className: m.tierPillGem
         })
       }), (0, f.getTierName)(e)]
     })
   }
 }
-let h = e => {
+let p = e => {
   let {
     subscriptionChange: t,
     guild: n
   } = e;
   if (0 === t) return null;
-  let l = Math.max(n.premiumSubscriberCount + t, 0),
-    i = (0, f.getGuildTierFromAppliedBoostCount)(l, n.id),
-    r = i - (0, f.getGuildTierFromAppliedBoostCount)(n.premiumSubscriberCount, n.id);
-  return 0 === r ? null : (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(c.default, {
-      className: r > 0 ? p.levelUpIcon : p.levelDownIcon
-    }), (0, s.jsx)(m, {
-      tier: i
+  let s = Math.max(n.premiumSubscriberCount + t, 0),
+    a = (0, f.getGuildTierFromAppliedBoostCount)(s, n.id),
+    l = a - (0, f.getGuildTierFromAppliedBoostCount)(n.premiumSubscriberCount, n.id);
+  return 0 === l ? null : (0, r.jsxs)(r.Fragment, {
+    children: [(0, r.jsx)(c.default, {
+      className: l > 0 ? m.levelUpIcon : m.levelDownIcon
+    }), (0, r.jsx)(E, {
+      tier: a
     })]
   })
 };
-l = class extends i.PureComponent {
+s = class extends a.PureComponent {
   render() {
     let {
       guild: e,
       className: t,
       subscriptionChange: n
     } = this.props;
-    return (0, s.jsxs)("div", {
-      className: a(p.subscription, t),
-      children: [(0, s.jsx)(u.default, {
+    return (0, r.jsxs)("div", {
+      className: i(m.subscription, t),
+      children: [(0, r.jsx)(u.default, {
         guild: e,
         size: u.default.Sizes.LARGE
-      }), (0, s.jsxs)("div", {
-        className: p.subscriptionInfo,
-        children: [(0, s.jsx)("div", {
-          className: p.guildName,
+      }), (0, r.jsxs)("div", {
+        className: m.subscriptionInfo,
+        children: [(0, r.jsx)("div", {
+          className: m.guildName,
           children: e.name
-        }), (0, s.jsxs)("div", {
-          className: p.tierInfo,
-          children: [(0, s.jsx)(m, {
+        }), (0, r.jsxs)("div", {
+          className: m.tierInfo,
+          children: [(0, r.jsx)(E, {
             tier: e.premiumTier
-          }), (0, s.jsx)(h, {
+          }), (0, r.jsx)(p, {
             guild: e,
             subscriptionChange: null != n ? n : 0
           })]

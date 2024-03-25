@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("204597"),
-  i = n("904945"),
-  l = n("59678");
+  l = n("904945"),
+  i = n("59678");
 
 function r(e) {
   let {
@@ -19,11 +19,11 @@ function r(e) {
     sectionFilter: u,
     useReducedMotion: d
   } = e;
-  return t >= l.RELATIONSHIP_COUNT_ANIMATION_THRESHOLD ? (0, a.jsx)(s.default, {
+  return t >= i.RELATIONSHIP_COUNT_ANIMATION_THRESHOLD ? (0, a.jsx)(s.default, {
     statusSections: n,
     renderRow: r,
     searchQuery: o
-  }) : (0, a.jsx)(i.default, {
+  }) : (0, a.jsx)(l.default, {
     statusSections: n,
     renderRow: r,
     sectionFilter: u,

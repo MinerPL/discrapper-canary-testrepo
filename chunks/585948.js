@@ -1,59 +1,59 @@
 "use strict";
 n.r(t), n.d(t, {
   useKeyboardNavigation: function() {
-    return a
+    return o
   }
 });
-var l = n("884691"),
-  i = n("880317"),
-  r = n("997289"),
-  o = n("246511"),
-  s = n("45961");
-let a = e => {
+var i = n("884691"),
+  l = n("880317"),
+  a = n("997289"),
+  s = n("246511"),
+  r = n("45961");
+let o = e => {
   let {
     columnCounts: t,
     stickersGrid: n,
-    stickersListRef: a,
+    stickersListRef: o,
     store: u,
     gridNavigatorId: d,
     setInspectedStickerPosition: c,
     onGridItemSelect: f
-  } = e, p = (0, r.useAnalyticsContext)(), m = l.useCallback(e => {
+  } = e, p = (0, a.useAnalyticsContext)(), m = i.useCallback(e => {
     f(e, p)
-  }, [f, p]), h = l.useCallback((e, t) => {
-    c(e, t, o.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
+  }, [f, p]), h = i.useCallback((e, t) => {
+    c(e, t, s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
   }, [c]), {
-    gridDispatch: E,
-    getItemProps: S,
-    getRowProps: g,
-    gridContainerProps: C,
-    handleGridContainerKeyDown: T,
-    isUsingKeyboardNavigation: v
-  } = (0, s.useExpressionPickerGridKeyboardNavigation)({
+    gridDispatch: x,
+    getItemProps: E,
+    getRowProps: y,
+    gridContainerProps: g,
+    handleGridContainerKeyDown: S,
+    isUsingKeyboardNavigation: C
+  } = (0, r.useExpressionPickerGridKeyboardNavigation)({
     columnCounts: t,
     gridNavigatorId: d,
     itemGrid: n,
-    itemList: a,
+    itemList: o,
     onGridNavigatorItemSelect: m,
     onGridNavigatorPositionChange: h
   });
-  return l.useEffect(() => u.useStore.subscribe(e => {
+  return i.useEffect(() => u.useStore.subscribe(e => {
     if (null == e) return;
     let {
       columnIndex: t,
       rowIndex: n,
-      source: l
+      source: i
     } = e;
-    l !== o.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && E({
-      type: i.GridActionType.SET_FOCUSED_POSITION,
+    i !== s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT && x({
+      type: l.GridActionType.SET_FOCUSED_POSITION,
       x: t,
       y: n
     })
-  }, e => e.inspectedExpressionPosition), [E, u]), {
-    getItemProps: S,
-    getRowProps: g,
-    gridContainerProps: C,
-    handleGridContainerKeyDown: T,
-    isUsingKeyboardNavigation: v
+  }, e => e.inspectedExpressionPosition), [x, u]), {
+    getItemProps: E,
+    getRowProps: y,
+    gridContainerProps: g,
+    handleGridContainerKeyDown: S,
+    isUsingKeyboardNavigation: C
   }
 }

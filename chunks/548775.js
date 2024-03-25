@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 });
-var r = n("37983");
+var i = n("37983");
 n("884691");
-var s = n("469563"),
-  i = n("645156"),
-  a = (0, s.replaceIcon)(function(e) {
+var l = n("469563"),
+  a = n("645156"),
+  s = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 16,
       height: n = 16,
-      color: s = "currentColor",
-      className: i,
-      foreground: a
+      color: l = "currentColor",
+      className: a,
+      foreground: s
     } = e;
-    return (0, r.jsx)("svg", {
-      className: i,
+    return (0, i.jsx)("svg", {
+      className: a,
       width: t,
       height: n,
       viewBox: "0 0 16 16",
-      children: (0, r.jsxs)("g", {
+      children: (0, i.jsxs)("g", {
         fill: "none",
         fillRule: "evenodd",
-        children: [(0, r.jsx)("rect", {
+        children: [(0, i.jsx)("rect", {
           width: "16",
           height: "16"
-        }), (0, r.jsx)("polygon", {
-          className: a,
-          fill: s,
+        }), (0, i.jsx)("polygon", {
+          className: s,
+          fill: l,
           points: "12 2.32 10.513 2 4 13.68 5.487 14"
         })]
       })
     })
-  }, i.SlashIcon, void 0, {
+  }, a.SlashIcon, void 0, {
     size: 16
   })

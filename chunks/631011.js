@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return f
+    return N
   }
 }), s("222007");
-var a, n, l = s("37983"),
+var a, l, n = s("37983"),
   i = s("884691"),
   r = s("446674"),
   o = s("77078"),
@@ -13,90 +13,90 @@ var a, n, l = s("37983"),
   c = s("223170"),
   E = s("449008"),
   _ = s("900938"),
-  T = s("999905"),
-  I = s("782340"),
-  S = s("812735"),
-  N = s("756058");
-(n = a || (a = {}))[n.LOADING = 0] = "LOADING", n[n.INTRO = 1] = "INTRO", n[n.SETTINGS = 2] = "SETTINGS";
-let g = e => {
+  I = s("999905"),
+  T = s("782340"),
+  S = s("924928"),
+  f = s("750235");
+(l = a || (a = {}))[l.LOADING = 0] = "LOADING", l[l.INTRO = 1] = "INTRO", l[l.SETTINGS = 2] = "SETTINGS";
+let m = e => {
   let {
     setWelcomeView: t,
     setShowCreateModal: a
-  } = e, n = [{
+  } = e, l = [{
     emoji: "\uD83D\uDCAC",
-    description: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_1,
-    name: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_1
+    description: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_1,
+    name: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_1
   }, {
     emoji: "\uD83C\uDFF9",
-    description: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_2,
-    name: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_2
+    description: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_2,
+    name: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_2
   }, {
     emoji: "\uD83D\uDDDE",
-    description: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_3,
-    name: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_3
+    description: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_DESCRIPTION_3,
+    name: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_CHANNEL_NAME_3
   }];
-  return (0, l.jsxs)(o.FormSection, {
-    title: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
+  return (0, n.jsxs)(o.FormSection, {
+    title: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME,
     tag: "h1",
-    children: [(0, l.jsxs)("div", {
+    children: [(0, n.jsxs)("div", {
       className: S.welcomeDescription,
-      children: [(0, l.jsx)(o.Text, {
+      children: [(0, n.jsx)(o.Text, {
         variant: "text-sm/normal",
-        children: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_TEXT.format()
-      }), (0, l.jsx)(o.Button, {
+        children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_TEXT.format()
+      }), (0, n.jsx)(o.Button, {
         onClick: () => {
           a(!0), t(2)
         },
-        children: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_BUTTON
+        children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_INTRO_BUTTON
       })]
-    }), (0, l.jsxs)("div", {
+    }), (0, n.jsxs)("div", {
       className: S.exampleContainer,
-      children: [(0, l.jsxs)("div", {
+      children: [(0, n.jsxs)("div", {
         className: S.exampleWumpus,
-        children: [(0, l.jsx)("img", {
+        children: [(0, n.jsx)("img", {
           className: S.wumpus,
           alt: "",
           src: s("517226")
-        }), (0, l.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: S.tooltipPointer
-        }), (0, l.jsx)("div", {
+        }), (0, n.jsx)("div", {
           className: S.tooltip,
-          children: I.default.Messages.GUILD_SETTINGS_EXAMPLE_TOOLTIP
+          children: T.default.Messages.GUILD_SETTINGS_EXAMPLE_TOOLTIP
         })]
-      }), (0, l.jsxs)("div", {
+      }), (0, n.jsxs)("div", {
         className: S.exampleModal,
-        children: [(0, l.jsx)("img", {
+        children: [(0, n.jsx)("img", {
           alt: "",
-          className: N.guildIcon,
+          className: f.guildIcon,
           src: s("822460"),
           width: 64,
           height: 64
-        }), (0, l.jsx)(o.Heading, {
+        }), (0, n.jsx)(o.Heading, {
           variant: "heading-xl/semibold",
           className: S.header,
-          children: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_TITLE.format()
-        }), (0, l.jsx)(o.Text, {
+          children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_TITLE.format()
+        }), (0, n.jsx)(o.Text, {
           variant: "text-sm/normal",
           color: "header-secondary",
-          className: N.guildDescription,
-          children: I.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_DESCRIPTION
-        }), (0, l.jsx)(o.FormTitle, {
-          className: N.choiceHeader,
-          children: I.default.Messages.WELCOME_SCREEN_CHOICE_HEADER
-        }), (0, l.jsx)("div", {
-          className: N.options,
-          children: n.map(e => (0, l.jsxs)("div", {
+          className: f.guildDescription,
+          children: T.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_EXAMPLE_DESCRIPTION
+        }), (0, n.jsx)(o.FormTitle, {
+          className: f.choiceHeader,
+          children: T.default.Messages.WELCOME_SCREEN_CHOICE_HEADER
+        }), (0, n.jsx)("div", {
+          className: f.options,
+          children: l.map(e => (0, n.jsxs)("div", {
             className: S.optionContainer,
-            children: [(0, l.jsx)(u.default, {
+            children: [(0, n.jsx)(u.default, {
               emojiName: e.emoji,
-              className: N.optionEmoji
-            }), (0, l.jsxs)("div", {
-              className: N.optionTextContainer,
-              children: [(0, l.jsx)(o.Text, {
+              className: f.optionEmoji
+            }), (0, n.jsxs)("div", {
+              className: f.optionTextContainer,
+              children: [(0, n.jsx)(o.Text, {
                 variant: "text-md/semibold",
-                className: N.channelDescription,
+                className: f.channelDescription,
                 children: e.description
-              }), (0, l.jsx)(o.Text, {
+              }), (0, n.jsx)(o.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
                 children: "#".concat(e.name)
@@ -108,10 +108,10 @@ let g = e => {
     })]
   })
 };
-var f = () => {
+var N = () => {
   let {
     guild: e
-  } = (0, r.useStateFromStores)([_.default], () => _.default.getProps()), [t, s] = i.useState(0), [a, n] = i.useState(!1);
+  } = (0, r.useStateFromStores)([_.default], () => _.default.getProps()), [t, s] = i.useState(0), [a, l] = i.useState(!1);
   switch (i.useEffect(() => {
       null != e && d.default.wait(() => {
         (0, c.fetchWelcomeScreen)(e.id).then(e => {
@@ -120,16 +120,16 @@ var f = () => {
       })
     }, [e]), t) {
     case 0:
-      return (0, l.jsx)(o.Spinner, {
+      return (0, n.jsx)(o.Spinner, {
         type: o.Spinner.Type.SPINNING_CIRCLE
       });
     case 1:
-      return (0, l.jsx)(g, {
+      return (0, n.jsx)(m, {
         setWelcomeView: s,
-        setShowCreateModal: n
+        setShowCreateModal: l
       });
     case 2:
-      return (0, l.jsx)(T.default, {
+      return (0, n.jsx)(I.default, {
         guild: e,
         showCreateModal: a
       });

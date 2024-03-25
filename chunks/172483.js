@@ -6,17 +6,17 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("469563"),
-  l = s("410507"),
+var l = s("469563"),
+  n = s("410507"),
   i = s("75196"),
-  r = (0, n.replaceIcon)(function(e) {
+  r = (0, l.replaceIcon)(function(e) {
     let {
       height: t = 24,
       width: s = 24,
-      ...n
+      ...l
     } = e;
     return (0, a.jsx)("svg", {
-      ...(0, i.default)(n),
+      ...(0, i.default)(l),
       width: s,
       height: t,
       viewBox: "0 0 24 24",
@@ -29,6 +29,6 @@ var n = s("469563"),
         fill: "#B9BBBE"
       })
     })
-  }, l.FiltersHorizontalIcon, void 0, {
+  }, n.FiltersHorizontalIcon, void 0, {
     size: 24
   })

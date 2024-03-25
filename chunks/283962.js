@@ -5,19 +5,19 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("77078"),
-  i = s("446674"),
+  l = s("884691"),
+  n = s("446674"),
+  i = s("77078"),
   r = s("697218"),
   o = s("49111");
 
 function d(e) {
   let t = (null == e ? void 0 : e.hasFeature(o.GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING)) === !0,
     d = (null == e ? void 0 : e.hasFeature(o.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED)) === !0,
-    u = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
+    u = (0, n.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
     c = (null == e ? void 0 : e.isOwner(u)) === !0;
-  n.useEffect(() => {
-    null != e && t && c && (0, l.openModalLazy)(async () => {
+  l.useEffect(() => {
+    null != e && t && c && (0, i.openModalLazy)(async () => {
       let {
         default: t
       } = await s.el("795262").then(s.bind(s, "795262"));

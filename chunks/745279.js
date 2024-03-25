@@ -14,8 +14,8 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("967117"),
-  r = n("286235"),
-  s = n("843455");
+  s = n("286235"),
+  r = n("843455");
 
 function a(e, t) {
   let n = new Date;
@@ -25,7 +25,7 @@ function a(e, t) {
 }
 async function o(e) {
   let t = null;
-  if (null != e && e.paymentGateway === s.PaymentGateways.BRAINTREE) {
+  if (null != e && e.paymentGateway === r.PaymentGateways.BRAINTREE) {
     let e = await (0, i.collectDeviceData)();
     null != e && (t = {
       braintree_device_data: e
@@ -35,7 +35,7 @@ async function o(e) {
 }
 
 function l(e, t) {
-  r.default.captureException(e, {
+  s.default.captureException(e, {
     ...t,
     tags: {
       ...null == t ? void 0 : t.tags,
@@ -45,7 +45,7 @@ function l(e, t) {
 }
 
 function u(e, t) {
-  r.default.captureMessage(e, {
+  s.default.captureMessage(e, {
     ...t,
     tags: {
       ...null == t ? void 0 : t.tags,

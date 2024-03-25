@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   DropsCopyCodeModalContent: function() {
-    return T
+    return f
   },
   DropsModalClaimErrorBody: function() {
-    return m
+    return _
   },
   default: function() {
-    return _
+    return m
   }
 }), s("222007");
 var a = s("37983"),
@@ -21,9 +21,9 @@ var a = s("37983"),
   c = s("180273"),
   S = s("579565"),
   E = s("782340"),
-  f = s("519874");
+  T = s("126867");
 
-function T(e) {
+function f(e) {
   let {
     onClose: t,
     code: s,
@@ -33,24 +33,24 @@ function T(e) {
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
-      className: f.headerContainer,
+      className: T.headerContainer,
       children: [(0, a.jsx)("div", {
-        className: f.dropArt
+        className: T.dropArt
       }), (0, a.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
         children: E.default.Messages.OUTBOUND_PROMOTION_REDEMPTION_MODAL_TITLE
       })]
     }), (0, a.jsxs)(i.ModalContent, {
-      className: f.modalContent,
+      className: T.modalContent,
       children: [(0, a.jsx)(i.Text, {
         variant: "text-md/normal",
-        className: f.codeBodyText,
+        className: T.codeBodyText,
         children: l
       }), (0, a.jsx)(i.FormDivider, {
-        className: f.formDivider
+        className: T.formDivider
       }), (0, a.jsx)(i.FormSection, {
         title: n,
-        className: f.formSection,
+        className: T.formSection,
         children: (0, a.jsx)(i.Button, {
           onClick: () => (0, o.default)(s),
           color: i.Button.Colors.BRAND,
@@ -59,19 +59,19 @@ function T(e) {
         })
       })]
     }), (0, a.jsx)(i.ModalFooter, {
-      className: f.modalFooter,
+      className: T.modalFooter,
       children: (0, a.jsx)(i.Button, {
-        className: f.closeButton,
+        className: T.closeButton,
         onClick: t,
         look: i.Button.Looks.LINK,
-        color: f.closeButton,
+        color: T.closeButton,
         children: E.default.Messages.CLOSE
       })
     })]
   })
 }
 
-function m(e) {
+function _(e) {
   let {
     onClose: t,
     errorCode: s
@@ -84,18 +84,18 @@ function m(e) {
   return null != n[s] && (l = n[s]), (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)(i.ModalHeader, {
       separator: !1,
-      className: f.errorHeader,
+      className: T.errorHeader,
       children: [(0, a.jsx)("div", {
-        className: f.errorArt
+        className: T.errorArt
       }), (0, a.jsx)(i.Heading, {
         variant: "heading-xl/semibold",
         children: E.default.Messages.GENERIC_ERROR_TITLE
       })]
     }), (0, a.jsx)(i.ModalContent, {
-      className: f.errorBody,
+      className: T.errorBody,
       children: (0, a.jsx)(i.Text, {
         variant: "text-md/normal",
-        className: f.bodyText,
+        className: T.bodyText,
         children: l
       })
     }), (0, a.jsx)(i.ModalFooter, {
@@ -107,36 +107,36 @@ function m(e) {
     })]
   })
 }
-var _ = function(e) {
+var m = function(e) {
   let {
     onClose: t,
     code: o,
-    drop: m,
-    platform: _,
+    drop: _,
+    platform: m,
     transitionState: g
-  } = e, h = (0, d.useUID)(), [I, N] = n.useState();
+  } = e, h = (0, d.useUID)(), [N, I] = n.useState();
   n.useEffect(() => {
     null == o && r.default.wait(async () => {
-      await (0, u.fetchCodePlatformAvailability)(m.dropsQuestId)
+      await (0, u.fetchCodePlatformAvailability)(_.dropsQuestId)
     })
-  }, [m.dropsQuestId, o]);
+  }, [_.dropsQuestId, o]);
   let p = (0, l.useStateFromStores)([c.default], () => c.default.platformAvailability);
   return (0, a.jsx)(i.ModalRoot, {
     transitionState: g,
     "aria-labelledby": h,
     children: (0, a.jsx)(a.Fragment, {
       children: (() => {
-        if (null != o) return (0, a.jsx)(T, {
-          bodyText: m.messages.claimTip(),
+        if (null != o) return (0, a.jsx)(f, {
+          bodyText: _.messages.claimTip(),
           onClose: t,
           copyInputTitle: E.default.Messages.DROPS_REDEMPTION_CODE_PLATFORM_TITLE.format({
-            platform: _
+            platform: m
           }),
           code: o
         });
         {
           if (null === p) return (0, a.jsx)("div", {
-            className: f.spinnerContainer,
+            className: T.spinnerContainer,
             children: (0, a.jsx)(i.Spinner, {})
           });
           let e = p.length > 0,
@@ -144,9 +144,9 @@ var _ = function(e) {
           return (0, a.jsxs)(a.Fragment, {
             children: [(0, a.jsxs)(i.ModalHeader, {
               separator: !1,
-              className: f.headerContainer,
+              className: T.headerContainer,
               children: [(0, a.jsx)("div", {
-                className: f.dropArt
+                className: T.dropArt
               }), (0, a.jsx)(i.Heading, {
                 variant: "heading-lg/semibold",
                 children: E.default.Messages.OUTBOUND_PROMOTION_REDEMPTION_MODAL_TITLE
@@ -154,30 +154,30 @@ var _ = function(e) {
             }), (0, a.jsxs)(i.ModalContent, {
               children: [(0, a.jsx)(i.Text, {
                 variant: "text-md/normal",
-                className: f.dropBodyText,
+                className: T.dropBodyText,
                 children: n ? E.default.Messages.DROPS_MODAL_CHOOSE_SINGLE_PLATFORM.format({
                   platform: (0, S.getPlatformLabel)(p[0])
                 }) : E.default.Messages.DROPS_MODAL_CHOOSE_PLATFORM.format({
-                  title: m.title
+                  title: _.title
                 })
               }), (0, a.jsx)(i.FormDivider, {
-                className: f.formDivider
+                className: T.formDivider
               }), (0, a.jsxs)(i.FormSection, {
-                className: f.dropFormSection,
+                className: T.dropFormSection,
                 children: [(0, a.jsx)(i.SingleSelect, {
-                  onChange: N,
+                  onChange: I,
                   options: p.map(e => ({
                     value: e,
                     label: (0, S.getPlatformLabel)(e)
                   })),
-                  value: n ? p[0] : I,
+                  value: n ? p[0] : N,
                   isDisabled: !e,
-                  className: e ? "" : f.selectDangerBorder,
+                  className: e ? "" : T.selectDangerBorder,
                   look: e ? i.SelectLooks.FILLED : i.SelectLooks.CUSTOM
                 }), !e && (0, a.jsx)(i.Text, {
                   variant: "text-sm/medium",
                   color: "text-danger",
-                  className: f.errorCodesText,
+                  className: T.errorCodesText,
                   children: E.default.Messages.DROPS_CODES_RAN_OUT
                 })]
               })]
@@ -189,27 +189,27 @@ var _ = function(e) {
                     let {
                       default: e
                     } = await s.el("343495").then(s.bind(s, "343495"));
-                    return s => (void 0 !== I || n) && (0, a.jsx)(e, {
+                    return s => (void 0 !== N || n) && (0, a.jsx)(e, {
                       ...s,
-                      platform: void 0 === I ? p[0] : I,
+                      platform: void 0 === N ? p[0] : N,
                       code: o,
-                      dropsQuestId: m.dropsQuestId,
+                      dropsQuestId: _.dropsQuestId,
                       closeParentModal: t,
                       singlePlatformClaim: n
                     })
                   })
                 },
-                disabled: void 0 === I && !n,
+                disabled: void 0 === N && !n,
                 children: E.default.Messages.UNLOCK_CODE
               }), e ? (0, a.jsx)(i.Button, {
                 onClick: t,
                 look: i.Button.Looks.LINK,
-                color: f.maybeLaterButton,
+                color: T.maybeLaterButton,
                 children: E.default.Messages.MAYBE_LATER
               }) : (0, a.jsx)(i.Button, {
                 onClick: t,
                 look: i.Button.Looks.LINK,
-                color: f.closeButton,
+                color: T.closeButton,
                 children: E.default.Messages.CLOSE
               })]
             })]

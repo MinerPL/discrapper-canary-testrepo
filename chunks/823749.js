@@ -1,60 +1,60 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return C
   }
 }), n("222007"), n("70102");
-var i, l, s = n("37983"),
-  a = n("884691"),
+var l, a, i = n("37983"),
+  s = n("884691"),
   r = n("414456"),
-  o = n.n(r),
-  u = n("627445"),
-  d = n.n(u),
+  u = n.n(r),
+  o = n("627445"),
+  d = n.n(o),
   c = n("77078"),
   f = n("599417"),
-  m = n("208548"),
-  h = n("104945"),
+  h = n("208548"),
+  m = n("104945"),
   g = n("599110"),
-  E = n("305122"),
+  v = n("305122"),
   S = n("664113"),
-  p = n("129722"),
-  v = n("102432"),
-  _ = n("876189"),
-  N = n("846325"),
-  C = n("49111"),
+  E = n("129722"),
+  p = n("102432"),
+  N = n("876189"),
+  _ = n("846325"),
+  O = n("49111"),
   A = n("782340"),
-  b = n("921389");
-(l = i || (i = {})).READY = "ready", l.ENCODING_FAILED = "encoding-failed", l.ENCODING = "encoding", l.UPLOADING = "uploading";
-let I = [{
+  D = n("509252");
+(a = l || (l = {})).READY = "ready", a.ENCODING_FAILED = "encoding-failed", a.ENCODING = "encoding", a.UPLOADING = "uploading";
+let b = [{
   name: "audio",
   extensions: ["mp3", "wav", "ogg", "x-wav", "mp4"]
 }];
 
-function O(e) {
-  var t, n, i, l;
+function C(e) {
+  var t, n, l, a;
   let {
     guildId: r,
-    sourceFile: u,
-    existingSound: O,
-    onClose: D,
-    transitionState: w,
-    showGuildPicker: x = !1
-  } = e, [L, U] = a.useState(null !== (n = null !== (t = null == u ? void 0 : u.name) && void 0 !== t ? t : null == O ? void 0 : O.name) && void 0 !== n ? n : ""), [T, M] = a.useState(null !== (i = null == O ? void 0 : O.volume) && void 0 !== i ? i : 1), [R, y] = a.useState(null == O ? void 0 : O.emojiId), [P, k] = a.useState(null == O ? void 0 : O.emojiName), {
+    sourceFile: o,
+    existingSound: C,
+    onClose: x,
+    transitionState: M,
+    showGuildPicker: I = !1
+  } = e, [y, T] = s.useState(null !== (n = null !== (t = null == o ? void 0 : o.name) && void 0 !== t ? t : null == C ? void 0 : C.name) && void 0 !== n ? n : ""), [R, w] = s.useState(null !== (l = null == C ? void 0 : C.volume) && void 0 !== l ? l : 1), [L, P] = s.useState(null == C ? void 0 : C.emojiId), [U, j] = s.useState(null == C ? void 0 : C.emojiName), {
     file: F,
-    loadAudioFromFile: j,
-    maxVolume: V,
-    setMaxVolume: B
-  } = (0, p.useAudioTrimmerStore)(), [G, H] = a.useState(!1), [W, K] = a.useState(null), [Z, z] = a.useState(null), [Y, q] = a.useState("ready"), [X, J] = a.useState(r);
+    loadAudioFromFile: V,
+    maxVolume: B,
+    setMaxVolume: k
+  } = (0, E.useAudioTrimmerStore)(), [G, H] = s.useState(!1), [W, z] = s.useState(null), [Y, q] = s.useState(null), [X, Z] = s.useState("ready"), [J, K] = s.useState(r);
   async function Q(e) {
     try {
-      await j(null != e ? e : null), q("ready"), K(null)
+      await V(null != e ? e : null), Z("ready"), z(null)
     } catch (e) {
       $(e)
     }
   }
 
   function $(e) {
-    if (e instanceof f.default) K(e);
+    if (e instanceof f.default) z(e);
     else if (e instanceof Error) {
       let t = {
         status: 500,
@@ -62,19 +62,19 @@ function O(e) {
           message: e.message
         }
       };
-      K(new f.default(t))
-    } else K(new f.default(e))
+      z(new f.default(t))
+    } else z(new f.default(e))
   }
-  a.useEffect(() => {
-    (null == u ? void 0 : u.file) != null && e(u.file);
+  s.useEffect(() => {
+    (null == o ? void 0 : o.file) != null && e(o.file);
     async function e(e) {
       try {
-        await j(e), q("ready"), K(null)
+        await V(e), Z("ready"), z(null)
       } catch (e) {
         $(e)
       }
     }
-  }, [null == u ? void 0 : u.file, j]);
+  }, [null == o ? void 0 : o.file, V]);
   let ee = function(e) {
       switch (e) {
         case "encoding":
@@ -85,166 +85,166 @@ function O(e) {
           return A.default.Messages.SOUNDBOARD_MODAL_AUDIO_STATE_UPLOADING
       }
       return null
-    }(Y),
-    et = "uploading" === Y || "encoding" === Y,
-    en = null != O,
-    ei = L.length >= 2 && (en || null != F) && null != X && function(e) {
+    }(X),
+    et = "uploading" === X || "encoding" === X,
+    en = null != C,
+    el = y.length >= 2 && (en || null != F) && null != J && function(e) {
       if (null == e) return !0;
       let t = (e.endMs - e.startMs) / 1e3;
-      return t > 0 && t <= N.MAX_SOUND_LENGTH_SECONDS
-    }(Z),
-    el = a.useCallback(async (e, t) => {
-      q("encoding");
+      return t > 0 && t <= _.MAX_SOUND_LENGTH_SECONDS
+    }(Y),
+    ea = s.useCallback(async (e, t) => {
+      Z("encoding");
       try {
-        let n = await (0, v.trimAndEncodeAudio)(e, t);
-        return q("ready"), n
+        let n = await (0, p.trimAndEncodeAudio)(e, t);
+        return Z("ready"), n
       } catch (e) {
-        throw q("encoding-failed"), e
+        throw Z("encoding-failed"), e
       }
     }, []),
-    es = a.useCallback(async () => {
+    ei = s.useCallback(async () => {
       if (null == F) return;
-      d(null != X, "Cannot submit soundboard sound with no guildId");
+      d(null != J, "Cannot submit soundboard sound with no guildId");
       let e = F;
-      if (null != Z) {
-        let t = await el(F, Z);
+      if (null != Y) {
+        let t = await ea(F, Y);
         if (null == t) return;
         e = t
       }
-      let t = (0, v.getDataUrlFromFile)(e);
-      q("uploading");
+      let t = (0, p.getDataUrlFromFile)(e);
+      Z("uploading");
       try {
-        await (0, v.uploadFileReadPromise)({
+        await (0, p.uploadFileReadPromise)({
           readPromise: t,
-          guildId: X,
-          name: L,
-          volume: T,
-          emojiId: R,
-          emojiName: P
-        }), q("ready")
+          guildId: J,
+          name: y,
+          volume: R,
+          emojiId: L,
+          emojiName: U
+        }), Z("ready")
       } catch (e) {
         throw new f.default(e)
       }
-    }, [F, X, L, el, Z, T, R, P]),
-    ea = a.useCallback(async () => {
-      d(null != X, "Cannot submit soundboard sound with no guildId"), H(!0), K(null);
+    }, [F, J, y, ea, Y, R, L, U]),
+    es = s.useCallback(async () => {
+      d(null != J, "Cannot submit soundboard sound with no guildId"), H(!0), z(null);
       try {
-        en ? await (0, E.updateSound)({
-          guildId: X,
-          soundId: O.soundId,
-          name: L,
-          volume: T,
-          emojiId: R,
-          emojiName: P
-        }) : await es(), D()
+        en ? await (0, v.updateSound)({
+          guildId: J,
+          soundId: C.soundId,
+          name: y,
+          volume: R,
+          emojiId: L,
+          emojiName: U
+        }) : await ei(), x()
       } catch (e) {
         $(e)
       } finally {
-        q("ready"), H(!1), M(1), B(1)
+        Z("ready"), H(!1), w(1), k(1)
       }
-    }, [en, D, X, O, L, T, R, P, es, B]);
-  a.useEffect(() => {
-    j(null), g.default.track(C.AnalyticEvents.OPEN_MODAL, {
+    }, [en, x, J, C, y, R, L, U, ei, k]);
+  s.useEffect(() => {
+    V(null), g.default.track(O.AnalyticEvents.OPEN_MODAL, {
       type: "Soundboard Upload Sound",
-      guild_id: X
+      guild_id: J
     })
-  }, []), a.useEffect(() => {
-    M(Math.min(T, V))
-  }, [T, M, V]);
-  let er = (0, s.jsx)(m.default, {
-    guildId: X,
-    emojiId: R,
-    emojiName: P,
-    setEmojiId: y,
-    setEmojiName: k,
+  }, []), s.useEffect(() => {
+    w(Math.min(R, B))
+  }, [R, w, B]);
+  let er = (0, i.jsx)(h.default, {
+    guildId: J,
+    emojiId: L,
+    emojiName: U,
+    setEmojiId: P,
+    setEmojiName: j,
     error: null == W ? void 0 : W.getFirstFieldErrorMessage("emoji"),
     isRequiredField: !1
   });
-  return (0, s.jsxs)(c.ModalRoot, {
-    transitionState: w,
-    children: [(0, s.jsx)(c.ModalCloseButton, {
-      onClick: D,
-      className: b.modalClose
-    }), (0, s.jsx)(c.ModalHeader, {
-      className: b.headerContainer,
+  return (0, i.jsxs)(c.ModalRoot, {
+    transitionState: M,
+    children: [(0, i.jsx)(c.ModalCloseButton, {
+      onClick: x,
+      className: D.modalClose
+    }), (0, i.jsx)(c.ModalHeader, {
+      className: D.headerContainer,
       separator: !1,
-      children: (0, s.jsx)(c.Heading, {
-        className: b.header,
+      children: (0, i.jsx)(c.Heading, {
+        className: D.header,
         variant: "heading-xl/extrabold",
         children: en ? A.default.Messages.SOUNDBOARD_SOUND_UPDATE_MODAL_HEADER : A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_HEADER
       })
-    }), (0, s.jsxs)(c.ModalContent, {
-      className: b.content,
-      children: [null != W && !W.hasFieldErrors() && (0, s.jsx)(c.FormErrorBlock, {
-        className: b.section,
+    }), (0, i.jsxs)(c.ModalContent, {
+      className: D.content,
+      children: [null != W && !W.hasFieldErrors() && (0, i.jsx)(c.FormErrorBlock, {
+        className: D.section,
         children: W.message
-      }), x ? (0, s.jsx)(c.FormItem, {
+      }), I ? (0, i.jsx)(c.FormItem, {
         required: !0,
-        className: b.section,
+        className: D.section,
         title: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_GUILD_SELECT,
-        children: (0, s.jsx)(_.default, {
-          value: X,
-          onChange: J
+        children: (0, i.jsx)(N.default, {
+          value: J,
+          onChange: K
         })
-      }) : null, (en || null != F) && (0, s.jsx)(S.default, {
-        sound: O,
-        volume: T,
+      }) : null, (en || null != F) && (0, i.jsx)(S.default, {
+        sound: C,
+        volume: R,
         disabled: et,
-        onChange: z
-      }), en || null != u ? null : (0, s.jsx)(c.FormItem, {
+        onChange: q
+      }), en || null != o ? null : (0, i.jsx)(c.FormItem, {
         required: !0,
         error: null == W ? void 0 : W.getFirstFieldErrorMessage("sound"),
-        className: b.section,
+        className: D.section,
         title: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_FILE,
-        children: (0, s.jsx)(h.default, {
-          filename: null !== (l = null == F ? void 0 : F.name) && void 0 !== l ? l : "",
+        children: (0, i.jsx)(m.default, {
+          filename: null !== (a = null == F ? void 0 : F.name) && void 0 !== a ? a : "",
           buttonText: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_BROWSE,
           placeholder: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_INPUT_PLACEHOLDER,
           onFileSelect: Q,
-          filters: I
+          filters: b
         })
-      }), (0, s.jsxs)("div", {
-        className: b.multiInput,
-        children: [(0, s.jsx)(c.FormItem, {
+      }), (0, i.jsxs)("div", {
+        className: D.multiInput,
+        children: [(0, i.jsx)(c.FormItem, {
           required: !0,
           error: null == W ? void 0 : W.getFirstFieldErrorMessage("name"),
-          className: o(b.section, b.halfInput),
+          className: u(D.section, D.halfInput),
           title: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
-          children: (0, s.jsx)(c.TextInput, {
+          children: (0, i.jsx)(c.TextInput, {
             placeholder: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_NAME,
-            value: L,
-            onChange: U,
-            maxLength: N.MAX_LENGTH_SOUND_NAME
+            value: y,
+            onChange: T,
+            maxLength: _.MAX_LENGTH_SOUND_NAME
           })
         }), er]
-      }), (0, s.jsx)(c.FormItem, {
+      }), (0, i.jsx)(c.FormItem, {
         error: null == W ? void 0 : W.getFirstFieldErrorMessage("volume"),
-        className: b.section,
+        className: D.section,
         title: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SOUND_VOLUME,
-        children: (0, s.jsx)(c.Slider, {
-          initialValue: T,
-          onValueChange: e => M(e),
+        children: (0, i.jsx)(c.Slider, {
+          initialValue: R,
+          onValueChange: e => w(e),
           minValue: 0,
-          maxValue: V
+          maxValue: B
         })
       })]
-    }), (0, s.jsxs)(c.ModalFooter, {
-      children: [(0, s.jsx)(c.Button, {
-        disabled: !ei,
+    }), (0, i.jsxs)(c.ModalFooter, {
+      children: [(0, i.jsx)(c.Button, {
+        disabled: !el,
         submitting: G,
         size: c.Button.Sizes.SMALL,
-        onClick: ea,
+        onClick: es,
         children: en ? A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_SAVE : A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_UPLOAD
-      }), (0, s.jsx)(c.Button, {
+      }), (0, i.jsx)(c.Button, {
         disabled: G,
-        onClick: D,
+        onClick: x,
         size: c.Button.Sizes.SMALL,
         look: c.Button.Looks.LINK,
         color: c.Button.Colors.PRIMARY,
         children: A.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_CANCEL
-      }), null != ee && (0, s.jsx)("div", {
-        className: b.soundStateHint,
-        children: (0, s.jsx)(c.Text, {
+      }), null != ee && (0, i.jsx)("div", {
+        className: D.soundStateHint,
+        children: (0, i.jsx)(c.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: ee

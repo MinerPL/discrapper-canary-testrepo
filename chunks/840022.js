@@ -13,7 +13,7 @@ var a = s("37983"),
   d = s("427459"),
   u = s("49111"),
   c = s("782340"),
-  S = s("763516"),
+  S = s("157674"),
   E = function() {
     let e = n.useRef(null),
       {
@@ -32,7 +32,7 @@ var a = s("37983"),
         guild: s
       })
     }
-    async function f() {
+    async function T() {
       e.current = await (0, l.openModalLazy)(async () => {
         let {
           default: e
@@ -47,7 +47,7 @@ var a = s("37983"),
         }
       })
     }
-    let T = (0, d.generateBlockGuildSubscriptionPurchasesNode)();
+    let f = (0, d.generateBlockGuildSubscriptionPurchasesNode)();
     return (0, a.jsxs)("div", {
       className: S.wrapper,
       children: [(0, a.jsx)(o.default, {
@@ -60,17 +60,17 @@ var a = s("37983"),
         variant: "text-sm/medium",
         children: c.default.Messages.GUILD_BOOSTING_USER_SETTINGS_BOOST_ANY_GUILD_CTA.format({
           boostAnyGuildHook: (e, t) => {
-            let s = null != T,
+            let s = null != f,
               n = (0, a.jsx)(l.Button, {
                 className: S.cta,
                 disabled: s,
                 color: l.Button.Colors.LINK,
                 look: l.Button.Looks.LINK,
-                onClick: s ? void 0 : f,
+                onClick: s ? void 0 : T,
                 children: e
               }, t);
             return s ? (0, a.jsx)(l.Tooltip, {
-              text: T,
+              text: f,
               children: e => (0, a.jsx)("span", {
                 ...e,
                 children: n

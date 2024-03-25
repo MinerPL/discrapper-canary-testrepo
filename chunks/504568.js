@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return p
   }
 });
 var s = n("37983"),
@@ -15,10 +15,10 @@ var s = n("37983"),
   c = n("271938"),
   f = n("124969"),
   E = n("49111"),
-  I = n("782340"),
-  _ = n("926622");
+  _ = n("782340"),
+  I = n("890957");
 r.default.initialize();
-class p extends a.PureComponent {
+class h extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location);
     null != e && u.default.authorizeIPAddress(e), (0, d.trackAppUIViewed)("authorize_ip")
@@ -30,7 +30,7 @@ class p extends a.PureComponent {
     } = this.props;
     return (0, s.jsx)(f.Button, {
       onClick: () => e(E.Routes.LOGIN),
-      children: I.default.Messages._LOGIN
+      children: _.default.Messages._LOGIN
     })
   }
   renderFailed() {
@@ -38,13 +38,13 @@ class p extends a.PureComponent {
       children: [(0, s.jsx)("img", {
         alt: "",
         src: n("501851"),
-        className: _.marginBottom20
+        className: I.marginBottom20
       }), (0, s.jsx)(f.Title, {
-        className: _.marginBottom8,
-        children: I.default.Messages.AUTHORIZATION_EXPIRED
+        className: I.marginBottom8,
+        children: _.default.Messages.AUTHORIZATION_EXPIRED
       }), (0, s.jsx)(f.SubTitle, {
-        className: _.marginBottom40,
-        children: I.default.Messages._AUTH_EXPIRED_SUGGESTION
+        className: I.marginBottom40,
+        children: _.default.Messages._AUTH_EXPIRED_SUGGESTION
       }), this.renderLoginButton()]
     })
   }
@@ -53,20 +53,20 @@ class p extends a.PureComponent {
       children: [(0, s.jsx)("img", {
         alt: "",
         src: n("346619"),
-        className: _.marginBottom20
+        className: I.marginBottom20
       }), (0, s.jsx)(f.Title, {
-        className: _.marginBottom8,
-        children: I.default.Messages.IP_AUTHORIZATION_SUCCEEDED
+        className: I.marginBottom8,
+        children: _.default.Messages.IP_AUTHORIZATION_SUCCEEDED
       }), (0, s.jsx)(f.SubTitle, {
-        className: _.marginBottom40,
-        children: I.default.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
+        className: I.marginBottom40,
+        children: _.default.Messages._AUTH_IP_AUTH_SUCCEEDED_SUGGESTION
       }), this.renderLoginButton()]
     })
   }
   renderDefault() {
     return (0, s.jsxs)(f.default, {
       children: [(0, s.jsx)(f.AuthSpinner, {}), (0, s.jsx)(f.Title, {
-        children: I.default.Messages.AUTHORIZING
+        children: _.default.Messages.AUTHORIZING
       })]
     })
   }
@@ -78,10 +78,10 @@ class p extends a.PureComponent {
     return e ? this.renderFailed() : t ? this.renderSucceeded() : this.renderDefault()
   }
 }
-p.defaultProps = {
+h.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var h = r.default.connectStores([c.default], () => ({
+var p = r.default.connectStores([c.default], () => ({
   verifyFailed: c.default.didVerifyFail(),
   verifySucceeded: c.default.didVerifySucceed()
-}))(p)
+}))(h)

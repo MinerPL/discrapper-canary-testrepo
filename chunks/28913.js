@@ -7,17 +7,17 @@ i.r(e), i.d(e, {
 var l = i("37983");
 i("884691");
 var r = i("77078"),
-  n = i("35006"),
-  a = i("967003"),
+  a = i("35006"),
+  n = i("967003"),
   s = i("989750"),
   o = i("782340"),
-  d = i("407817");
+  d = i("626793");
 
 function c(t) {
   let {
     guild: e,
     message: i
-  } = t, c = (0, a.useNewMemberBadge)(e.id, i.author.id);
+  } = t, c = (0, n.useNewMemberBadge)(e.id, i.author.id);
   return c ? (0, l.jsx)(r.Popout, {
     animation: r.Popout.Animation.TRANSLATE,
     align: "center",
@@ -46,7 +46,7 @@ function c(t) {
           children: t => (0, l.jsx)("div", {
             className: d.newMemberBadge,
             ...t,
-            children: (0, l.jsx)(n.default, {
+            children: (0, l.jsx)(a.default, {
               width: 20,
               height: 20
             })

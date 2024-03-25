@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   INACTIVE_CATEGORY_INDEX: function() {
     return l
   },
@@ -13,12 +13,12 @@ i.r(t), i.d(t, {
     return u
   },
   ApplicationCommandDiscoveryPickerStore: function() {
-    return c
+    return d
   }
 });
-var n = i("308503");
+var i = n("308503");
 let l = -1,
-  s = Object.freeze({
+  a = Object.freeze({
     inspectedExpressionPosition: {
       rowIndex: 0,
       columnIndex: 0
@@ -27,17 +27,17 @@ let l = -1,
     searchPlaceholder: null
   });
 
-function a() {
-  let e = (0, n.default)(e => s);
+function s() {
+  let e = (0, i.default)(e => a);
   return {
     useStore: e,
     getState: () => e.getState(),
-    setInspectedExpressionPosition: (t, i, n) => {
+    setInspectedExpressionPosition: (t, n, i) => {
       e.setState({
         inspectedExpressionPosition: {
-          rowIndex: i,
+          rowIndex: n,
           columnIndex: t,
-          source: n
+          source: i
         }
       })
     },
@@ -52,11 +52,11 @@ function a() {
       })
     },
     resetStoreState: () => {
-      e.setState(s)
+      e.setState(a)
     }
   }
 }
-let r = a(),
-  o = a(),
-  u = a(),
-  c = a()
+let r = s(),
+  o = s(),
+  u = s(),
+  d = s()

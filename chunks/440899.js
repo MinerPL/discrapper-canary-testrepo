@@ -22,41 +22,41 @@ var i = n("37983"),
   S = n("738073"),
   v = n("685888"),
   y = n("533466"),
-  C = n("710216"),
-  N = n("348652"),
-  O = n("306588"),
+  O = n("710216"),
+  C = n("348652"),
+  N = n("306588"),
   T = n("850391"),
   I = n("149022"),
   _ = n("228800"),
   A = n("681060"),
   x = n("884351"),
   R = n("818950"),
-  M = n("529805"),
-  L = n("685841"),
+  L = n("529805"),
+  M = n("685841"),
   D = n("42203"),
   j = n("474643"),
-  w = n("247013"),
-  k = n("305961"),
-  b = n("377253"),
+  k = n("247013"),
+  b = n("305961"),
+  w = n("377253"),
   P = n("18494"),
   V = n("162771"),
   U = n("697218"),
   B = n("227602"),
   F = n("901165"),
-  H = n("959479"),
-  G = n("62843"),
-  W = n("560995"),
-  Y = n("659500"),
-  z = n("718422"),
+  G = n("959479"),
+  W = n("62843"),
+  H = n("560995"),
+  z = n("659500"),
+  Y = n("718422"),
   K = n("13798"),
   Z = n("117026"),
   X = n("880584"),
   J = n("839878"),
-  Q = n("6791"),
-  q = n("49111"),
+  q = n("6791"),
+  Q = n("49111"),
   $ = n("782340"),
-  ee = n("126419");
-let et = Q.OpacityBounds.TOP;
+  ee = n("851525");
+let et = q.OpacityBounds.TOP;
 class en extends a.Component {
   componentDidUpdate(e) {
     e.channel.id !== this.props.channel.id && this.draftDidChange(this.props), (this.props.channel !== e.channel || this.props.isTemporarilyActive && !e.isTemporarilyActive) && this.setState({
@@ -64,7 +64,7 @@ class en extends a.Component {
     })
   }
   componentWillUnmount() {
-    j.default.removeChangeListener(this.draftDidChange), Y.ComponentDispatch.unsubscribe(q.ComponentActions.TEXTAREA_FOCUS, this.focusInput), Y.ComponentDispatch.unsubscribe(q.ComponentActions.TEXTAREA_BLUR, this.blurInput)
+    j.default.removeChangeListener(this.draftDidChange), z.ComponentDispatch.unsubscribe(Q.ComponentActions.TEXTAREA_FOCUS, this.focusInput), z.ComponentDispatch.unsubscribe(Q.ComponentActions.TEXTAREA_BLUR, this.blurInput)
   }
   render() {
     let {
@@ -114,10 +114,10 @@ class en extends a.Component {
         focused: a
       })
     });
-    return e.isPrivate() ? (0, i.jsx)(N.default, {
+    return e.isPrivate() ? (0, i.jsx)(C.default, {
       channel: e,
       children: d
-    }, e.id) : (0, i.jsx)(O.default, {
+    }, e.id) : (0, i.jsx)(N.default, {
       channel: e,
       children: d
     }, e.id)
@@ -132,11 +132,11 @@ class en extends a.Component {
         i = j.default.getDraft(e.channel.id, j.DraftType.ChannelMessage);
       n !== i && "" === i && t.setState((0, I.createState)(i))
     }, this.handleTextareaKeyDown = e => {
-      if (e.which === q.KeyboardKeys.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
+      if (e.which === Q.KeyboardKeys.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
         e.preventDefault();
         let {
           channel: t
-        } = this.props, n = b.default.getLastEditableMessage(t.id);
+        } = this.props, n = w.default.getLastEditableMessage(t.id);
         null != n && h.default.startEditMessage(t.id, n.id, n.content)
       }
     }, this.handleTextareaChange = (e, t, n) => {
@@ -160,7 +160,7 @@ class en extends a.Component {
       return 0 === t.length ? Promise.resolve({
         shouldClear: !1,
         shouldRefocus: !0
-      }) : (0, z.applyChatRestrictions)({
+      }) : (0, Y.applyChatRestrictions)({
         openWarningPopout: e => this.setState({
           contentWarningProps: e
         }),
@@ -172,7 +172,7 @@ class en extends a.Component {
           valid: l,
           failureReason: s
         } = e;
-        if (!l) return s === q.MessageRestrictionTypes.SLOWMODE_COOLDOWN ? (Y.ComponentDispatch.dispatch(q.ComponentActions.EMPHASIZE_SLOWMODE_COOLDOWN), {
+        if (!l) return s === Q.MessageRestrictionTypes.SLOWMODE_COOLDOWN ? (z.ComponentDispatch.dispatch(Q.ComponentActions.EMPHASIZE_SLOWMODE_COOLDOWN), {
           shouldClear: !1,
           shouldRefocus: !0
         }) : {
@@ -180,7 +180,7 @@ class en extends a.Component {
           shouldRefocus: !1
         };
         let o = h.default.getSendMessageOptionsForReply(i);
-        return (h.default.sendMessage(n.id, x.default.parse(n, t), !0, o), this.setState((0, I.createEmptyState)()), (0, M.deletePendingReply)(n.id), a) ? (p.default.deactivateAllRegions(), {
+        return (h.default.sendMessage(n.id, x.default.parse(n, t), !0, o), this.setState((0, I.createEmptyState)()), (0, L.deletePendingReply)(n.id), a) ? (p.default.deactivateAllRegions(), {
           shouldClear: !1,
           shouldRefocus: !1
         }) : {
@@ -209,7 +209,7 @@ class en extends a.Component {
       ...(0, I.createState)(n),
       focused: !1,
       contentWarningProps: null
-    }, Y.ComponentDispatch.subscribe(q.ComponentActions.TEXTAREA_FOCUS, this.focusInput), Y.ComponentDispatch.subscribe(q.ComponentActions.TEXTAREA_BLUR, this.blurInput)
+    }, z.ComponentDispatch.subscribe(Q.ComponentActions.TEXTAREA_FOCUS, this.focusInput), z.ComponentDispatch.subscribe(Q.ComponentActions.TEXTAREA_BLUR, this.blurInput)
   }
 }
 class ei extends a.PureComponent {
@@ -218,7 +218,7 @@ class ei extends a.PureComponent {
       channel: t,
       activated: n
     } = this.props;
-    (0, X.dispatchOverlayWidgetIfChanged)(e, this.props, this.shouldDisplay), null != t && n && !e.activated && p.default.track(q.AnalyticEvents.OVERLAY_UNLOCKED, {
+    (0, X.dispatchOverlayWidgetIfChanged)(e, this.props, this.shouldDisplay), null != t && n && !e.activated && p.default.track(Q.AnalyticEvents.OVERLAY_UNLOCKED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id
@@ -235,7 +235,7 @@ class ei extends a.PureComponent {
       opacity: i,
       isPreviewingInGame: a
     } = this.props;
-    return e = t && !n || a ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : W.DEFAULT_OPACITY
+    return e = t && !n || a ? i / 100 : n || !t ? Math.min(1, (i + 25) / 100) : H.DEFAULT_OPACITY
   }
   renderContent() {
     let e;
@@ -265,16 +265,16 @@ class ei extends a.PureComponent {
       showNewMessagesBar: !g,
       scrollerClassName: c ? ee.scroller : void 0,
       showingQuarantineBanner: !1
-    }, t.id), (0, i.jsx)(G.MessagesInteractionContext.Provider, {
+    }, t.id), (0, i.jsx)(W.MessagesInteractionContext.Provider, {
       value: {
         disableInteractions: c && r && !d,
         disableAnimations: c && g && !d
       },
       children: (0, i.jsxs)(a.Fragment, {
-        children: [!r && !f && (0, i.jsx)(C.default, {
+        children: [!r && !f && (0, i.jsx)(O.default, {
           channel: t,
           guild: o
-        }), (0, i.jsx)(W.default.Background, {
+        }), (0, i.jsx)(H.default.Background, {
           opacityOverride: r || f ? null : et,
           children: (0, i.jsx)("div", {
             className: s(ee.messagesContainer, {
@@ -284,7 +284,7 @@ class ei extends a.PureComponent {
             children: e
           })
         }), E ? null : (0, i.jsx)("div", {
-          children: v ? (0, i.jsx)(W.default.Background, {
+          children: v ? (0, i.jsx)(H.default.Background, {
             opacityOverride: r || f ? null : et,
             children: (0, i.jsxs)("div", {
               className: ee.footerContent,
@@ -303,8 +303,8 @@ class ei extends a.PureComponent {
             })
           }) : (0, i.jsx)("div", {
             className: ee.activateContainer,
-            children: (0, i.jsx)(W.default.Background, {
-              opacityOverride: Q.OpacityBounds.LOWER,
+            children: (0, i.jsx)(H.default.Background, {
+              opacityOverride: q.OpacityBounds.LOWER,
               children: (0, i.jsx)("div", {
                 className: s(ee.activateKeybind, ee.mediumBackgroundOpacity),
                 children: null != t.name && t.name.length > 0 ? $.default.Messages.OVERLAY_CHANNEL_CHAT_HOTKEY.format({
@@ -327,14 +327,14 @@ class ei extends a.PureComponent {
       activated: a,
       isPreviewingInGame: l,
       opacity: o
-    } = this.props, r = q.OverlayWidgetTypes.UNPINNED;
-    a ? r = q.OverlayWidgetTypes.IN_GAME_ACTIVE : n && t || l ? r = q.OverlayWidgetTypes.IN_GAME_TEXT : n && (r = q.OverlayWidgetTypes.PINNED);
+    } = this.props, r = Q.OverlayWidgetTypes.UNPINNED;
+    a ? r = Q.OverlayWidgetTypes.IN_GAME_ACTIVE : n && t || l ? r = Q.OverlayWidgetTypes.IN_GAME_TEXT : n && (r = Q.OverlayWidgetTypes.PINNED);
     let d = t && !a || l,
       u = n && (d || a),
       c = n && a,
       f = n && d && !a,
       h = (0, Z.default)(o);
-    return (0, i.jsx)(W.default, {
+    return (0, i.jsx)(H.default, {
       className: s(h, {
         [ee.widgetWrapper]: !n,
         [ee.widgetWrapperPinned]: n,
@@ -391,12 +391,12 @@ class ei extends a.PureComponent {
     super(...e), this.handlePin = () => {
       var e, t, n;
       let i = !this.props.pinned;
-      p.default.track(q.AnalyticEvents.OVERLAY_PIN_TOGGLED, {
+      p.default.track(Q.AnalyticEvents.OVERLAY_PIN_TOGGLED, {
         pinned: i,
         guild_id: null === (e = this.props.channel) || void 0 === e ? void 0 : e.guild_id,
         channel_id: null === (t = this.props.channel) || void 0 === t ? void 0 : t.id,
         channel_type: null === (n = this.props.channel) || void 0 === n ? void 0 : n.type,
-        widget_type: q.OverlayWidgets.TEXT
+        widget_type: Q.OverlayWidgets.TEXT
       }), p.default.setPinChat(i)
     }, this.handleContextMenu = e => {
       let {
@@ -418,12 +418,12 @@ class ei extends a.PureComponent {
       let {
         dragStart: t
       } = this.props;
-      t(H.Operations.MOVE, e.clientX, e.clientY)
+      t(G.Operations.MOVE, e.clientX, e.clientY)
     }, this.resizeDragStart = e => {
       let {
         dragStart: t
       } = this.props;
-      t(H.Operations.RESIZE_SOUTH_EAST, e.clientX, e.clientY)
+      t(G.Operations.RESIZE_SOUTH_EAST, e.clientX, e.clientY)
     }
   }
 }
@@ -432,22 +432,22 @@ function ea(e) {
   let {
     contained: t = !1,
     ...n
-  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([P.default], () => P.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([k.default], () => k.default.getGuild(a)), p = (0, d.useStateFromStores)([w.default], () => null != a && w.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([L.default], () => null != l ? L.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
+  } = e, a = (0, d.useStateFromStores)([V.default], () => V.default.getGuildId()), l = (0, d.useStateFromStores)([P.default], () => P.default.getChannelId(a)), s = (0, d.useStateFromStores)([D.default], () => D.default.getChannel(l)), o = (0, d.useStateFromStores)([B.default], () => B.default.getOverlayChatKeybind()), r = null != o ? (0, K.toString)(o.shortcut, !0) : "]", [u, c, f] = (0, d.useStateFromStoresArray)([F.default], () => [F.default.getTextWidgetOpacity(), F.default.getActiveRegions(), !t && F.default.isPreviewingInGame()]), h = (0, d.useStateFromStores)([b.default], () => b.default.getGuild(a)), p = (0, d.useStateFromStores)([k.default], () => null != a && k.default.didAgree(a)), g = null != s && s.isPrivate() ? s.getRecipientId() : null, m = (0, d.useStateFromStores)([M.default], () => null != l ? M.default.getPendingReply(l) : void 0), E = (0, d.useStateFromStores)([U.default], () => null != g ? U.default.getUser(g) : null), {
     placeholder: S
   } = (0, v.default)(s);
-  return null != s && null != h && q.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type) ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(ei, {
+  return null != s && null != h && Q.ChannelTypesSets.GUILD_THREADS_ONLY.has(s.type) ? (0, i.jsx)(y.default, {}) : (0, i.jsx)(ei, {
     guild: h,
     channel: s,
     user: E,
     opacity: u,
     nsfwAgree: p,
     chatKeybind: r,
-    activated: c.has(q.OverlayActiveRegions.TEXT_WIDGET),
+    activated: c.has(Q.OverlayActiveRegions.TEXT_WIDGET),
     isPreviewingInGame: f,
     pendingReply: m,
     contained: t,
     placeholder: S,
-    widget: q.OverlayWidgets.TEXT,
+    widget: Q.OverlayWidgets.TEXT,
     ...n
   })
 }

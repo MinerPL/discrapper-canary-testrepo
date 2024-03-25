@@ -17,9 +17,9 @@ c.prototype._update = function(e) {
     t[c] = (d = t[c - 3] ^ t[c - 8] ^ t[c - 14] ^ t[c - 16]) << 1 | d >>> 31
   }
   for (var u = 0; u < 80; ++u) {
-    var d, l, f, p, h, g, b, v = ~~(u / 20);
-    var m = ((l = n) << 5 | l >>> 27) + (f = v, p = r, h = i, g = o, 0 === f ? p & h | ~p & g : 2 === f ? p & h | p & g | h & g : p ^ h ^ g) + a + t[u] + s[v] | 0;
-    a = o, o = i, i = (b = r) << 30 | b >>> 2, r = n, n = m
+    var d, l, f, p, h, v, g, b = ~~(u / 20);
+    var m = ((l = n) << 5 | l >>> 27) + (f = b, p = r, h = i, v = o, 0 === f ? p & h | ~p & v : 2 === f ? p & h | p & v | h & v : p ^ h ^ v) + a + t[u] + s[b] | 0;
+    a = o, o = i, i = (g = r) << 30 | g >>> 2, r = n, n = m
   }
   this._a = n + this._a | 0, this._b = r + this._b | 0, this._c = i + this._c | 0, this._d = o + this._d | 0, this._e = a + this._e | 0
 }, c.prototype._hash = function() {

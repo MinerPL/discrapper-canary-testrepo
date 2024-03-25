@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return E
   }
 }), n("222007");
 var i = n("37983");
 n("884691");
 var l = n("917351"),
   a = n.n(l),
-  s = n("77078"),
-  o = n("450911"),
+  o = n("77078"),
+  s = n("450911"),
   r = n("819689"),
   u = n("798609"),
   d = n("679653"),
@@ -17,19 +17,19 @@ var l = n("917351"),
   p = n("697218"),
   f = n("524768"),
   m = n("317041"),
-  I = n("49111"),
-  _ = n("782340");
+  _ = n("49111"),
+  I = n("782340");
 
-function C(e) {
+function T(e) {
   switch (e) {
-    case I.ChannelTextAreaIntegrations.GIF.title:
-    case I.ChannelTextAreaIntegrations.TENOR.title:
-      return _.default.Messages.COMMAND_GIPHY_DESCRIPTION;
+    case _.ChannelTextAreaIntegrations.GIF.title:
+    case _.ChannelTextAreaIntegrations.TENOR.title:
+      return I.default.Messages.COMMAND_GIPHY_DESCRIPTION;
     default:
       return ""
   }
 }
-let T = [...a(I.ChannelTextAreaIntegrations).values().map(e => ({
+let A = [...a(_.ChannelTextAreaIntegrations).values().map(e => ({
   id: e.commandId,
   name: e.command,
   displayName: e.command,
@@ -37,20 +37,20 @@ let T = [...a(I.ChannelTextAreaIntegrations).values().map(e => ({
   inputType: f.ApplicationCommandInputType.BUILT_IN_INTEGRATION,
   applicationId: m.BuiltInSectionId.BUILT_IN,
   get description() {
-    return C(e.title)
+    return T(e.title)
   },
   get displayDescription() {
-    return C(e.title)
+    return T(e.title)
   },
-  options: e.type === I.ChannelTextAreaIntegrationTypes.GIF ? [{
+  options: e.type === _.ChannelTextAreaIntegrationTypes.GIF ? [{
     name: "query",
     displayName: "query",
     type: u.ApplicationCommandOptionType.STRING,
     get description() {
-      return _.default.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION
+      return I.default.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION
     },
     get displayDescription() {
-      return _.default.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION
+      return I.default.Messages.COMMAND_GIPHY_QUERY_DESCRIPTION
     },
     required: !0
   }] : [],
@@ -64,20 +64,20 @@ let T = [...a(I.ChannelTextAreaIntegrations).values().map(e => ({
   inputType: f.ApplicationCommandInputType.BUILT_IN,
   applicationId: m.BuiltInSectionId.BUILT_IN,
   get description() {
-    return _.default.Messages.LEAVE_GROUP_DM
+    return I.default.Messages.LEAVE_GROUP_DM
   },
   get displayDescription() {
-    return _.default.Messages.LEAVE_GROUP_DM
+    return I.default.Messages.LEAVE_GROUP_DM
   },
   options: [{
     name: "silent",
     displayName: "silent",
     type: u.ApplicationCommandOptionType.BOOLEAN,
     get description() {
-      return _.default.Messages.LEAVE_GROUP_DM_SILENTLY_COMMAND_OPTION
+      return I.default.Messages.LEAVE_GROUP_DM_SILENTLY_COMMAND_OPTION
     },
     get displayDescription() {
-      return _.default.Messages.LEAVE_GROUP_DM_SILENTLY
+      return I.default.Messages.LEAVE_GROUP_DM_SILENTLY
     },
     required: !1
   }],
@@ -91,33 +91,33 @@ let T = [...a(I.ChannelTextAreaIntegrations).values().map(e => ({
     var n, l;
     let {
       channel: a
-    } = t, u = (0, d.computeChannelName)(a, p.default, c.default), f = _.default.Messages.LEAVE_GROUP_DM_TITLE.format({
+    } = t, u = (0, d.computeChannelName)(a, p.default, c.default), f = I.default.Messages.LEAVE_GROUP_DM_TITLE.format({
       name: u
-    }), m = _.default.Messages.LEAVE_GROUP_DM_BODY.format({
+    }), m = I.default.Messages.LEAVE_GROUP_DM_BODY.format({
       name: u
-    }), I = null !== (l = null === (n = e.find(e => "silent" === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== l && l;
-    async function C() {
+    }), _ = null !== (l = null === (n = e.find(e => "silent" === e.name)) || void 0 === n ? void 0 : n.value) && void 0 !== l && l;
+    async function T() {
       try {
-        await o.default.closePrivateChannel(a.id, void 0, I)
+        await s.default.closePrivateChannel(a.id, void 0, _)
       } catch (e) {
-        r.default.sendBotMessage(a.id, _.default.Messages.LEAVE_GROUP_DM_ERROR)
+        r.default.sendBotMessage(a.id, I.default.Messages.LEAVE_GROUP_DM_ERROR)
       }
     }
-    a.isManaged() && (f = _.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
+    a.isManaged() && (f = I.default.Messages.LEAVE_GROUP_DM_MANAGED_TITLE.format({
       name: u
-    }), m = _.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
+    }), m = I.default.Messages.LEAVE_GROUP_DM_MANAGED_BODY.format({
       name: u
-    })), (0, s.openModal)(e => (0, i.jsx)(s.ConfirmModal, {
+    })), (0, o.openModal)(e => (0, i.jsx)(o.ConfirmModal, {
       header: f,
-      confirmText: _.default.Messages.LEAVE_GROUP_DM,
-      cancelText: _.default.Messages.CANCEL,
-      onConfirm: C,
+      confirmText: I.default.Messages.LEAVE_GROUP_DM,
+      cancelText: I.default.Messages.CANCEL,
+      onConfirm: T,
       ...e,
-      children: (0, i.jsx)(s.Text, {
+      children: (0, i.jsx)(o.Text, {
         variant: "text-md/normal",
         children: m
       })
     }))
   }
 }];
-var A = T
+var E = A

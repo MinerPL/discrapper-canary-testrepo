@@ -1,13 +1,13 @@
 "use strict";
-var r, i, l, u, a, o, d, s;
+var i, s, r, a, o, l, u, d;
 n.r(t), n.d(t, {
   InviteTypes: function() {
-    return i
+    return s
   },
   InviteTargetTypes: function() {
-    return l
+    return r
   },
   InstantInviteModalPages: function() {
-    return u
+    return a
   }
-}), (a = r || (r = {})).SENDING = "sending", a.SENT = "sent", a.ERROR = "error", (o = i || (i = {}))[o.GUILD = 0] = "GUILD", o[o.GROUP_DM = 1] = "GROUP_DM", o[o.FRIEND = 2] = "FRIEND", (d = l || (l = {}))[d.STREAM = 1] = "STREAM", d[d.EMBEDDED_APPLICATION = 2] = "EMBEDDED_APPLICATION", d[d.ROLE_SUBSCRIPTIONS_PURCHASE = 3] = "ROLE_SUBSCRIPTIONS_PURCHASE", (s = u || (u = {})).MAIN = "main", s.SETTINGS = "settings", s.GUEST = "guest"
+}), (o = i || (i = {})).SENDING = "sending", o.SENT = "sent", o.ERROR = "error", (l = s || (s = {}))[l.GUILD = 0] = "GUILD", l[l.GROUP_DM = 1] = "GROUP_DM", l[l.FRIEND = 2] = "FRIEND", (u = r || (r = {}))[u.STREAM = 1] = "STREAM", u[u.EMBEDDED_APPLICATION = 2] = "EMBEDDED_APPLICATION", u[u.ROLE_SUBSCRIPTIONS_PURCHASE = 3] = "ROLE_SUBSCRIPTIONS_PURCHASE", (d = a || (a = {})).MAIN = "main", d.SETTINGS = "settings", d.GUEST = "guest"

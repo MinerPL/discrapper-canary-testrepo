@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("222007");
-var i, l = n("693566"),
-  a = n.n(l);
+var i, s = n("693566"),
+  r = n.n(s);
 i = class {
   reset() {
     this._subscriptions = {}
@@ -21,7 +21,7 @@ i = class {
   }
   _get(e) {
     var t;
-    return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new a({
+    return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new r({
       max: 3,
       updateAgeOnGet: !0
     })

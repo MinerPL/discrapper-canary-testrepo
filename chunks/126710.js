@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("450911"),
-  r = n("42203"),
-  s = n("782340");
+var a = n("77078"),
+  r = n("450911"),
+  s = n("42203"),
+  l = n("782340");
 
-function o(e, t) {
-  let n = r.default.getChannel(e);
-  return null == n || n.isMultiUserDM() ? null : (0, i.jsx)(l.MenuItem, {
+function u(e, t) {
+  let n = s.default.getChannel(e);
+  return null == n || n.isMultiUserDM() ? null : (0, i.jsx)(a.MenuItem, {
     id: "close-dm",
-    label: s.default.Messages.CLOSE_DM,
-    action: () => a.default.closePrivateChannel(e, t)
+    label: l.default.Messages.CLOSE_DM,
+    action: () => r.default.closePrivateChannel(e, t)
   })
 }

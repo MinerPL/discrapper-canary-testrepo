@@ -20,10 +20,10 @@ var a = n("37983"),
   v = n("719923"),
   I = n("550410"),
   P = n("981913"),
-  S = n("49111"),
-  C = n("646718"),
+  C = n("49111"),
+  S = n("646718"),
   g = n("782340"),
-  y = n("978461");
+  y = n("293678");
 
 function E(e) {
   let {
@@ -54,8 +54,8 @@ function A(e) {
     hideBadges: t = !1,
     stream: n,
     ...f
-  } = e, m = (0, i.useStateFromStores)([p.default], () => v.default.isPremium(p.default.getCurrentUser(), C.PremiumTypes.TIER_1)), h = (0, i.useStateFromStores)([c.default], () => c.default.getChannel(null == n ? void 0 : n.channelId)), y = l.useMemo(() => null != n ? [n] : [], [n]), A = (0, r.useIsBroadcastingInChannel)(null == h ? void 0 : h.id), x = l.useCallback(() => {
-    null != h && (0, u.default)(h.getGuildId(), h.id, S.AnalyticsSections.STREAM_SETTINGS)
+  } = e, m = (0, i.useStateFromStores)([p.default], () => v.default.isPremium(p.default.getCurrentUser(), S.PremiumTypes.TIER_1)), h = (0, i.useStateFromStores)([c.default], () => c.default.getChannel(null == n ? void 0 : n.channelId)), y = l.useMemo(() => null != n ? [n] : [], [n]), A = (0, r.useIsBroadcastingInChannel)(null == h ? void 0 : h.id), x = l.useCallback(() => {
+    null != h && (0, u.default)(h.getGuildId(), h.id, C.AnalyticsSections.STREAM_SETTINGS)
   }, [h]);
   if (null == n || null == h) return null;
   let N = E;

@@ -24,16 +24,16 @@ function r(e) {
     });
     return e
   }, []);
-  let [f] = a.useState(() => new l.default(E, s, void 0, r));
+  let [T] = a.useState(() => new l.default(E, s, void 0, r));
   a.useEffect(() => {
-    t ? (null == o || o(f), f.createSearchContext()) : (f.clean(), u(""))
-  }, [t, f, o]);
-  let T = a.useCallback(e => {
-    u(e), f.search(e)
-  }, [f]);
+    t ? (null == o || o(T), T.createSearchContext()) : (T.clean(), u(""))
+  }, [t, T, o]);
+  let f = a.useCallback(e => {
+    u(e), T.search(e)
+  }, [T]);
   return {
     queryResults: c,
     query: d,
-    updateQuery: T
+    updateQuery: f
   }
 }

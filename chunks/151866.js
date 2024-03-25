@@ -4,47 +4,47 @@ n.r(t), n.d(t, {
     return g
   },
   useAutomodEditingRuleState: function() {
-    return S
+    return O
   }
 });
 var r = n("917351"),
   o = n.n(r),
-  i = n("308503"),
-  u = n("448993"),
+  u = n("308503"),
+  i = n("448993"),
   a = n("449008"),
   l = n("600798"),
-  d = n("454686"),
-  s = n("296839"),
+  s = n("454686"),
+  d = n("296839"),
   T = n("702873"),
   E = n("314865"),
   A = n("254365"),
   _ = n("49111"),
   c = n("782340");
-let f = Object.freeze({
+let I = Object.freeze({
     editingRule: null,
     hasChanges: !1,
     isLoading: !1,
     errorMessage: null
   }),
-  I = (0, i.default)((e, t) => ({
+  f = (0, u.default)((e, t) => ({
     editingRule: null,
     hasChanges: !1,
     setEditingRule: n => {
       let r = t().editingRule,
-        i = null != n && null != r && n.id === r.id,
-        u = o.cloneDeep(n);
-      null != u && (u = {
-        ...u,
-        actions: u.actions.filter(a.isNotNullish)
+        u = null != n && null != r && n.id === r.id,
+        i = o.cloneDeep(n);
+      null != i && (i = {
+        ...i,
+        actions: i.actions.filter(a.isNotNullish)
       }), e({
-        editingRule: u,
-        hasChanges: i,
+        editingRule: i,
+        hasChanges: u,
         errorMessage: null
       })
     },
     createNewEditingRule: (t, n, r) => {
       let o = {
-        ...(0, d.createDefaultRule)(t, n),
+        ...(0, s.createDefaultRule)(t, n),
         ...null != r ? r : {}
       };
       return e({
@@ -56,16 +56,16 @@ let f = Object.freeze({
     errorMessage: null,
     cancelEditingRule: () => {
       e({
-        ...f
+        ...I
       })
     },
     saveRule: async (t, n) => {
       if (null == t) return e({
-        ...f
+        ...I
       }), null;
       try {
-        var r, o, i;
-        (0, d.isRuleKeywordFilter)(t) && (t.triggerMetadata.keywordFilter = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))), (0, d.isRuleDefaultKeywordListFilter)(t) && (t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (i = t.triggerMetadata.allowList) && void 0 !== i ? i : []))), (0, s.validateRuleByTriggerConfigOrThrow)(t, n), (0, d.validateRuleBeforeSaveOrThrow)(t)
+        var r, o, u;
+        (0, s.isRuleKeywordFilter)(t) && (t.triggerMetadata.keywordFilter = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (r = t.triggerMetadata.keywordFilter) && void 0 !== r ? r : [])), t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (o = t.triggerMetadata.allowList) && void 0 !== o ? o : []))), (0, s.isRuleDefaultKeywordListFilter)(t) && (t.triggerMetadata.allowList = (0, E.sortKeywords)((0, E.dedupeKeywords)(null !== (u = t.triggerMetadata.allowList) && void 0 !== u ? u : []))), (0, d.validateRuleByTriggerConfigOrThrow)(t, n), (0, s.validateRuleBeforeSaveOrThrow)(t)
       } catch (t) {
         return t instanceof l.InvalidKeywordError ? e({
           errorMessage: c.default.Messages.GUILD_AUTOMOD_KEYWORD_GENERIC_SAVE_ERROR,
@@ -83,11 +83,11 @@ let f = Object.freeze({
           isLoading: !0
         });
         let n = null;
-        return n = (0, d.isBackendPersistedRule)(t) && !(0, A.isDefaultRuleId)(t.id) ? await (0, T.updateAutomodRule)(t) : await (0, T.createAutomodRule)(t), e({
-          ...f
+        return n = (0, s.isBackendPersistedRule)(t) && !(0, A.isDefaultRuleId)(t.id) ? await (0, T.updateAutomodRule)(t) : await (0, T.createAutomodRule)(t), e({
+          ...I
         }), n
       } catch (n) {
-        let t = new u.APIError(n);
+        let t = new i.APIError(n);
         e({
           isLoading: !1,
           errorMessage: function(e) {
@@ -111,7 +111,7 @@ let f = Object.freeze({
   }));
 
 function g() {
-  return I(e => ({
+  return f(e => ({
     hasChanges: e.hasChanges,
     editingRule: e.editingRule,
     isLoading: e.isLoading,
@@ -122,9 +122,9 @@ function g() {
   }))
 }
 
-function S() {
+function O() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-    t = I(e => ({
+    t = f(e => ({
       hasChanges: e.hasChanges,
       editingRule: e.editingRule,
       setEditingRule: e.setEditingRule,

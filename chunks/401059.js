@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 }), n("222007"), n("424973");
 var i = n("483366"),
@@ -13,16 +13,16 @@ var i = n("483366"),
   u = n("289382");
 let d = 7.5,
   c = (0, a.cssValueToNumber)(r.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-  f = 1 / 60;
+  _ = 1 / 60;
 
-function _(e, t, n, i) {
+function f(e, t, n, i) {
   return t * (n / i) + e
 }
 
-function h() {
+function E() {
   return Math.min(Math.max(Math.min(.8 * window.innerWidth, .8 * window.innerHeight), u.MIN_RADIUS), u.MAX_RADIUS)
 }
-var g = class e {
+var h = class e {
   initialize() {
     this._resizeWave()
   }
@@ -33,7 +33,7 @@ var g = class e {
     this.points = []
   }
   update(e) {
-    0 !== this.points.length && (this.points.forEach(t => t.update(Math.min(e, f))), !this.hasEntered && this.points[0].x > c && (this.hasEntered = !0, this.updateWaveState(u.WaveStates.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && (this.isFilling = !1, this.updateWaveState(u.WaveStates.FILLED)))
+    0 !== this.points.length && (this.points.forEach(t => t.update(Math.min(e, _))), !this.hasEntered && this.points[0].x > c && (this.hasEntered = !0, this.updateWaveState(u.WaveStates.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && (this.isFilling = !1, this.updateWaveState(u.WaveStates.FILLED)))
   }
   render(e) {
     if (0 === this.points.length) return;
@@ -49,7 +49,7 @@ var g = class e {
   }
   fill() {
     let e = Math.sqrt(window.innerWidth * window.innerWidth + window.innerHeight * window.innerHeight) + 100,
-      t = h() - 140,
+      t = E() - 140,
       n = (e, t, n, i) => {
         e.targetX = -40 + t * Math.cos(u.TWO_PI * (.25 * (n / 15) + 0)), e.targetY = -40 + t * Math.sin(u.TWO_PI * (.25 * (n / 15) + 0)), i && (e.targetX += (0, l.randomNumber)(0, 30) - 15, e.targetY += (0, l.randomNumber)(0, 30) - 15, e.speedUp = 3, e.spring.tension = u.POINT_TENSION_DEFAULT * Math.random() * .5 + u.POINT_TENSION_DEFAULT)
       };
@@ -63,7 +63,7 @@ var g = class e {
   }
   constructor(e) {
     this.points = [], this.hasEntered = !1, this.isFilling = !1, this._resizeWave = () => {
-      let e = h();
+      let e = E();
       this.points.forEach((t, n) => {
         let i = -40 + e * Math.cos(u.TWO_PI * (.25 * (n / 15) + 0)),
           s = -40 + e * Math.sin(u.TWO_PI * (.25 * (n / 15) + 0));

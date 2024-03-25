@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 });
-var s = (0, n("862205").createExperiment)({
+var i = (0, n("862205").createExperiment)({
   kind: "user",
   id: "2023-03_april_fools",
   label: "April Fools 2023",

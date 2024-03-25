@@ -5,8 +5,8 @@ n.r(e), n.d(e, {
     return I
   }
 });
-var r = n("917351"),
-  i = n.n(r),
+var i = n("917351"),
+  r = n.n(i),
   a = n("446674"),
   o = n("913144"),
   s = n("628454");
@@ -47,19 +47,19 @@ var I = new E(o.default, {
     let {
       lobbyVoiceStates: e,
       user: n,
-      sessionId: r
+      sessionId: i
     } = t;
-    f = {}, i.each(e, (t, e) => {
-      f[e] = {}, i.each(t, (t, n) => {
+    f = {}, r.each(e, (t, e) => {
+      f[e] = {}, r.each(t, (t, n) => {
         f[e][n] = new s.default(t)
       })
-    }), l = n.id, u = r
+    }), l = n.id, u = i
   },
   LOBBY_VOICE_STATE_UPDATE: function(t) {
     var e;
     let n, {
-        sessionId: r,
-        userId: i,
+        sessionId: i,
+        userId: r,
         lobbyId: a,
         channelId: o,
         mute: d,
@@ -67,20 +67,20 @@ var I = new E(o.default, {
         selfMute: E,
         selfDeaf: I
       } = t,
-      g = i === l && r !== u,
+      g = r === l && i !== u,
       S = null !== (e = f[a]) && void 0 !== e ? e : {},
-      O = S[i];
+      O = S[r];
     if (null != o && !g && (n = null == O ? new s.default({
-        userId: i,
-        sessionId: r,
+        userId: r,
+        sessionId: i,
         channelId: o,
         mute: d,
         deaf: c,
         selfMute: E,
         selfDeaf: I
       }) : O.merge({
-        userId: i,
-        sessionId: r,
+        userId: r,
+        sessionId: i,
         channelId: o,
         mute: d,
         deaf: c,
@@ -89,9 +89,9 @@ var I = new E(o.default, {
       })), O === n) return !1;
     null == n ? (S = {
       ...S
-    }, delete S[i]) : S = {
+    }, delete S[r]) : S = {
       ...S,
-      [i]: n
+      [r]: n
     }, f[a] = S
   },
   LOBBY_DELETE: c,

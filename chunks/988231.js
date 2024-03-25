@@ -15,14 +15,14 @@ var a = s("37983"),
   c = s("42887"),
   S = s("661919"),
   E = s("697218"),
-  f = s("145131"),
-  T = s("922932"),
-  m = s("50885"),
-  _ = s("49111"),
+  T = s("145131"),
+  f = s("922932"),
+  _ = s("50885"),
+  m = s("49111"),
   g = s("353927"),
   h = s("782340"),
-  I = s("926622");
-async function N() {
+  N = s("890957");
+async function I() {
   let e = await d.default.fileManager.getModulePath(),
     t = d.default.fileManager.join(e, "discord_voice");
   d.default.fileManager.showItemInFolder(t)
@@ -57,15 +57,15 @@ function C() {
   })), O = (0, l.useStateFromStores)([S.default], () => S.default.shouldRecordNextConnection()), x = (0, l.useStateFromStores)([E.default], () => {
     var e, t;
     return null !== (t = null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t
-  }), R = ("canary" === m.default.releaseChannel || "development" === m.default.releaseChannel) && x && A;
+  }), R = ("canary" === _.default.releaseChannel || "development" === _.default.releaseChannel) && x && A;
   async function M() {
     t(!0);
     try {
-      await c.default.getMediaEngine().writeAudioDebugState(), await T.default.submitLiveCrashReport({
+      await c.default.getMediaEngine().writeAudioDebugState(), await f.default.submitLiveCrashReport({
         message: {
           message: "User Live Dump"
         }
-      }), await (0, u.uploadDebugLogFiles)(_.DebugLogCategory.RTC), ! function() {
+      }), await (0, u.uploadDebugLogFiles)(m.DebugLogCategory.RTC), ! function() {
         let e = h.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS_HEADER,
           t = h.default.Messages.UPLOAD_DEBUG_LOG_SUCCESS;
         (0, i.openModal)(s => (0, a.jsx)(i.ConfirmModal, {
@@ -97,7 +97,7 @@ function C() {
     }
   }
   return (0, a.jsxs)(i.FormSection, {
-    className: I.marginBottom40,
+    className: N.marginBottom40,
     title: h.default.Messages.FORM_LABEL_DEBUG,
     children: [s && (0, a.jsx)(i.FormSwitch, {
       value: C,
@@ -112,9 +112,9 @@ function C() {
         note: h.default.Messages.FORM_HELP_CONNECTION_LOG,
         children: h.default.Messages.FORM_CHECKBOX_CONNECTION_LOG
       }), (0, a.jsx)(i.FormItem, {
-        children: (0, a.jsx)(f.default, {
-          className: I.marginBottom20,
-          children: (0, a.jsx)(f.default.Child, {
+        children: (0, a.jsx)(T.default, {
+          className: N.marginBottom20,
+          children: (0, a.jsx)(T.default.Child, {
             grow: 0,
             shrink: 0,
             children: (0, a.jsx)(i.Button, {
@@ -132,8 +132,8 @@ function C() {
       note: h.default.Messages.FORM_HELP_DEBUG_LOGGING,
       children: h.default.Messages.FORM_CHECKBOX_DEBUG_LOGGING
     }), (0, a.jsx)(i.FormItem, {
-      children: (0, a.jsxs)(f.default, {
-        children: [(0, a.jsx)(f.default.Child, {
+      children: (0, a.jsxs)(T.default, {
+        children: [(0, a.jsx)(T.default.Child, {
           grow: 0,
           shrink: 0,
           children: (0, a.jsx)(i.Button, {
@@ -142,12 +142,12 @@ function C() {
             onClick: M,
             children: h.default.Messages.UPLOAD
           })
-        }), (0, a.jsx)(f.default.Child, {
+        }), (0, a.jsx)(T.default.Child, {
           grow: 0,
           shrink: 0,
           children: (0, a.jsx)(i.Button, {
             size: i.Button.Sizes.SMALL,
-            onClick: N,
+            onClick: I,
             children: h.default.Messages.SHOW_FOLDER
           })
         })]

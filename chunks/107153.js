@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("363025"),
-  l = n("701909"),
+  l = n("363025"),
+  i = n("701909"),
   r = n("963662"),
   o = n("49111"),
   u = n("782340"),
@@ -16,14 +16,14 @@ var a = n("37983"),
     let {
       guild: t
     } = e, n = s.useCallback(() => {
-      (0, i.hideMaxMemberCountChannelNotice)(t.id)
+      (0, l.hideMaxMemberCountChannelNotice)(t.id)
     }, [t.id]);
     return (0, a.jsx)(r.default, {
       guild: t,
       onDismissed: n,
       message: u.default.Messages.NOTICE_CHANNEL_MAX_MEMBERS_CAP_REACHED_MESSAGE.format({
         maxMemberCount: t.maxMembers,
-        maxMembersUrl: l.default.getArticleURL(o.HelpdeskArticles.MAX_MEMBERS)
+        maxMembersUrl: i.default.getArticleURL(o.HelpdeskArticles.MAX_MEMBERS)
       }),
       type: o.ChannelNoticeTypes.MAX_MEMBER_COUNT,
       image: d,

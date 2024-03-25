@@ -1,4 +1,4 @@
-t.exports = function(t, r) {
-  for (var n = -1, e = null == t ? 0 : t.length; ++n < e && !1 !== r(t[n], n, t););
-  return t
+e.exports = function(e, t) {
+  for (var r = -1, n = null == e ? 0 : e.length; ++r < n && !1 !== t(e[r], r, e););
+  return e
 }

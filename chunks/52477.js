@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return h
   },
   isLine: function() {
-    return p
+    return m
   },
   getUserColors: function() {
-    return m
+    return p
   }
 });
 var a = n("656280"),
@@ -24,8 +24,8 @@ var a = n("656280"),
   s = n("509043"),
   i = n("462274"),
   r = n("697218"),
-  o = n("315841"),
-  u = n("827520");
+  u = n("315841"),
+  o = n("827520");
 
 function d(e) {
   let t = e.current,
@@ -58,23 +58,23 @@ function h(e, t, n) {
   }
 }
 
-function p(e) {
-  return e.type === o.DrawableType.LINE
+function m(e) {
+  return e.type === u.DrawableType.LINE
 }
 
-function m(e, t, n, a) {
-  var o;
+function p(e, t, n, a) {
+  var u;
   let d = r.default.getUser(e),
-    c = null == d ? void 0 : d.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE),
-    f = null != c ? null === (o = i.useColorStore.getState().palette[c]) || void 0 === o ? void 0 : o[0] : null,
+    c = null == d ? void 0 : d.getAvatarURL(null, o.AVATAR_COLOR_AVATAR_SIZE),
+    f = null != c ? null === (u = i.useColorStore.getState().palette[c]) || void 0 === u ? void 0 : u[0] : null,
     h = null != f ? "#".concat(l({
       r: f[0],
       g: f[1],
       b: f[2]
     }).toHex()) : a,
-    p = (0, s.getDarkness)((0, s.hex2int)(h)) > .5 ? n : t;
+    m = (0, s.getDarkness)((0, s.hex2int)(h)) > .5 ? n : t;
   return {
     fillColor: h,
-    outlineColor: p
+    outlineColor: m
   }
 }

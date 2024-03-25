@@ -5,11 +5,11 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = function(e) {
     var t = e.direction,
-      r = (0, a.default)({
+      r = (0, o.default)({
         default: {
           picker: {
             width: "18px",
@@ -28,7 +28,7 @@ var n = r("884691"),
       }, {
         vertical: "vertical" === t
       });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: r.picker
     })
   }

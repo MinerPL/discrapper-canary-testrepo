@@ -7,24 +7,24 @@ i.r(e), i.d(e, {
 var l = i("37983");
 i("884691");
 var r = i("469563"),
-  n = i("447060"),
-  a = i("75196"),
+  a = i("447060"),
+  n = i("75196"),
   s = (0, r.replaceIcon)(function(t) {
     let {
       width: e = 24,
       height: i = 24,
       color: r = "currentColor",
-      foreground: n,
+      foreground: a,
       ...s
     } = t;
     return (0, l.jsxs)("svg", {
-      ...(0, a.default)(s),
+      ...(0, n.default)(s),
       width: e,
       height: i,
       viewBox: "0 0 24 24",
       fill: "none",
       children: [(0, l.jsx)("path", {
-        className: n,
+        className: a,
         fill: r,
         fillRule: "evenodd",
         clipRule: "evenodd",
@@ -34,6 +34,6 @@ var r = i("469563"),
         fill: r
       })]
     })
-  }, n.BellZIcon, void 0, {
+  }, a.BellZIcon, void 0, {
     size: 24
   })

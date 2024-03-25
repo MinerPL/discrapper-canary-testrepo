@@ -4,21 +4,21 @@ n.r(t), n.d(t, {
     return o
   },
   openClaimAccountModal: function() {
-    return d
+    return l
   }
 });
-var s = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("551042"),
+var s = n("551042"),
   r = n("586391"),
   a = n("843455");
 
 function o(e) {
-  (0, i.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("377531").then(n.bind(n, "377531"));
-    return t => (0, s.jsx)(e, {
+    return t => (0, i.jsx)(e, {
       ...t
     })
   }, {
@@ -28,14 +28,14 @@ function o(e) {
   })
 }
 
-function d() {
+function l() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 ? arguments[1] : void 0;
-  (0, i.openModalLazy)(async () => {
+  (0, s.openModalLazy)(async () => {
     let {
       default: t
     } = await n.el("633156").then(n.bind(n, "633156"));
-    return n => (0, s.jsx)(t, {
+    return n => (0, i.jsx)(t, {
       claimRequired: e,
       ...n
     })

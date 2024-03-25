@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("37983");
@@ -11,31 +11,31 @@ var l = n("77078"),
   s = n("305961"),
   i = n("476263"),
   d = n("782340"),
-  u = n("468807"),
-  o = e => {
+  o = n("946565"),
+  u = e => {
     let {
       entry: t
     } = e, n = r.default.getChannel(t.channelId);
     if (null == n) return null;
-    let o = s.default.getGuild(n.guild_id);
-    return null == o ? null : (0, a.jsxs)("div", {
-      className: u.container,
+    let u = s.default.getGuild(n.guild_id);
+    return null == u ? null : (0, a.jsxs)("div", {
+      className: o.container,
       children: [(0, a.jsx)(l.Heading, {
-        className: u.header,
+        className: o.header,
         variant: "heading-sm/semibold",
         children: d.default.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
       }), (0, a.jsxs)("div", {
-        className: u.guildContainer,
+        className: o.guildContainer,
         children: [(0, a.jsxs)("div", {
-          className: u.hubInfo,
+          className: o.hubInfo,
           children: [(0, a.jsx)(i.default, {
-            guild: o,
+            guild: u,
             size: i.default.Sizes.MINI,
-            className: u.hubIcon
+            className: o.hubIcon
           }), (0, a.jsx)(l.Text, {
             color: "header-secondary",
             variant: "text-sm/normal",
-            children: o.name
+            children: u.name
           })]
         }), (0, a.jsx)(l.Text, {
           variant: "text-md/semibold",

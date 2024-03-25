@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var a, s = n("913144"),
-  i = n("316272"),
-  l = n("271938"),
+  l = n("316272"),
+  i = n("271938"),
   r = n("42887");
-a = class extends i.default {
+a = class extends l.default {
   _initialize() {
     !__OVERLAY__ && (s.default.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleSoundboardSoundReceived), s.default.subscribe("GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", this._handleSoundboardSoundPlayLocally), s.default.subscribe("VOICE_CHANNEL_SELECT", this._handleVoiceChannelSelect), s.default.subscribe("AUDIO_TOGGLE_SELF_DEAF", this._handleToggleSelfDeafened))
   }
@@ -27,12 +27,12 @@ a = class extends i.default {
         userId: a,
         channelId: s
       } = e;
-      if (null != t && a !== l.default.getId()) return this._playSound(t, n, a, s)
+      if (null != t && a !== i.default.getId()) return this._playSound(t, n, a, s)
     }, this._handleSoundboardSoundPlayLocally = e => {
       let {
         sound: t,
         channelId: n
-      } = e, a = l.default.getId();
+      } = e, a = i.default.getId();
       return this._playSound(t.soundId, t.volume, a, n)
     }, this._handleVoiceChannelSelect = () => {
       this._stopAndClearSounds()

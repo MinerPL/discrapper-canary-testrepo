@@ -8,8 +8,8 @@ var r, a, o, i, s = n("503486"),
   p = n("574430"),
   m = n("484320"),
   h = n("382780"),
-  _ = n("79807"),
-  y = n("69600"),
+  y = n("79807"),
+  _ = n("69600"),
   g = n("106106"),
   v = s.setImmediate,
   b = s.clearImmediate,
@@ -42,7 +42,7 @@ var T = function(e) {
     s.postMessage(String(e), r.protocol + "//" + r.host)
   };
 (!v || !b) && (v = function(e) {
-  _(arguments.length, 1);
+  y(arguments.length, 1);
   var t = c(e) ? e : Function(e),
     n = m(arguments, 1);
   return L[++k] = function() {
@@ -54,7 +54,7 @@ var T = function(e) {
   M.nextTick(S(e))
 } : w && w.now ? a = function(e) {
   w.now(S(e))
-} : MessageChannel && !y ? (i = (o = new MessageChannel).port2, o.port1.onmessage = Y, a = l(i.postMessage, i)) : s.addEventListener && c(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(x) ? (a = x, s.addEventListener("message", Y, !1)) : a = D in h("script") ? function(e) {
+} : MessageChannel && !_ ? (i = (o = new MessageChannel).port2, o.port1.onmessage = Y, a = l(i.postMessage, i)) : s.addEventListener && c(s.postMessage) && !s.importScripts && r && "file:" !== r.protocol && !f(x) ? (a = x, s.addEventListener("message", Y, !1)) : a = D in h("script") ? function(e) {
   p.appendChild(h("script"))[D] = function() {
     p.removeChild(this), T(e)
   }

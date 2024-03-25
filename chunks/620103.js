@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var a = n("37983"),
@@ -9,31 +9,31 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  o = n("837899"),
-  u = n("849467"),
+  u = n("837899"),
+  o = n("849467"),
   d = n("155207"),
   c = n("980423"),
   f = n("215536"),
-  h = n("154017"),
-  p = l.memo(function(e) {
+  h = n("232027"),
+  m = l.memo(function(e) {
     let {
       label: t,
       participantCount: n,
       onClick: l,
       className: s,
-      collapsed: p,
-      speakers: m,
+      collapsed: m,
+      speakers: p,
       channel: E,
-      isStreamLive: C
+      isStreamLive: g
     } = e;
     return (0, a.jsxs)(r.Clickable, {
       onClick: l,
       className: i(h.container, s),
-      children: [null == m ? (0, a.jsx)(d.default, {
+      children: [null == p ? (0, a.jsx)(d.default, {
         width: 20,
         height: 20,
         className: h.micIcon
-      }) : (0, a.jsx)(u.default, {
+      }) : (0, a.jsx)(o.default, {
         width: 20,
         height: 20,
         className: h.micIcon
@@ -42,16 +42,16 @@ var a = n("37983"),
         variant: "text-md/semibold",
         className: h.text,
         children: [t, " — ", n]
-      }), p && null != E && null != m && m.length > 0 && (0, a.jsxs)(a.Fragment, {
+      }), m && null != E && null != p && p.length > 0 && (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(f.default, {
           channel: E,
-          speakers: m
-        }), C && (0, a.jsx)(c.default, {})]
-      }), (0, a.jsx)(o.default, {
+          speakers: p
+        }), g && (0, a.jsx)(c.default, {})]
+      }), (0, a.jsx)(u.default, {
         width: 20,
         height: 20,
         className: i(h.downIcon, {
-          [h.upIcon]: p
+          [h.upIcon]: m
         })
       })]
     })

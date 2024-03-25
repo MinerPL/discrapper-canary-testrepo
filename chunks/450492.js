@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return g
+    return C
   }
 });
 var l = a("37983"),
@@ -12,11 +12,11 @@ var l = a("37983"),
   o = a("108486"),
   c = a("946964"),
   u = a("978679"),
-  d = a("177586"),
+  d = a("677257"),
   f = a("843455"),
   m = a("782340"),
-  C = a("436752");
-let p = {
+  p = a("691164");
+let g = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -62,51 +62,51 @@ let p = {
     ribbon: "#026530"
   }]
 };
-var g = e => {
+var C = e => {
   let {
     product: t,
     returnRef: a,
-    onSuccess: g,
-    tooltipDelay: E,
-    isGiftEasterEggEnabled: h,
+    onSuccess: C,
+    tooltipDelay: h,
+    isGiftEasterEggEnabled: E,
     disableCustomColor: b = !1
   } = e, {
-    analyticsLocations: T
-  } = (0, i.default)(), x = s.useRef(null), L = (0, n.default)(x), {
-    buttonColors: S
-  } = (0, d.default)(t.styles), v = null == S || b ? void 0 : {
-    background: S.secondary.toHslString(),
-    color: S.text.toHslString()
-  }, I = b || (null == S ? void 0 : S.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+    analyticsLocations: S
+  } = (0, i.default)(), x = s.useRef(null), T = (0, n.default)(x), {
+    buttonColors: v
+  } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
+    background: v.secondary.toHslString(),
+    color: v.text.toHslString()
+  }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: E,
+    delay: h,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
       buttonRef: x,
-      style: v,
-      className: C.giftButton,
+      style: L,
+      className: p.giftButton,
       color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: C.giftButtonInner,
+      innerClassName: p.giftButtonInner,
       "aria-label": m.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, c.default)({
           skuId: t.skuId,
           isGift: !0,
-          analyticsLocations: T,
+          analyticsLocations: S,
           returnRef: a,
-          onClose: null != g ? e => {
-            e && g()
+          onClose: null != C ? e => {
+            e && C()
           } : void 0
         })
       },
-      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
-        hovered: L,
+      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
+        hovered: T,
         isContentDismissed: !0,
         themeOverride: I,
-        boxColors: p
+        boxColors: g
       }) : (0, l.jsx)(u.default, {
         width: 24,
         height: 24

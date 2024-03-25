@@ -7,24 +7,24 @@ s.r(t), s.d(t, {
 var n = s("37983");
 s("884691");
 var l = s("469563"),
-  a = s("88885"),
-  r = s("75196"),
+  r = s("88885"),
+  a = s("75196"),
   u = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: s = 24,
       color: l = "currentColor",
-      foreground: a,
+      foreground: r,
       ...u
     } = e;
     return (0, n.jsxs)("svg", {
-      ...(0, r.default)(u),
+      ...(0, a.default)(u),
       width: t,
       height: s,
       viewBox: "0 0 24 24",
       fill: "none",
       children: [(0, n.jsx)("rect", {
-        className: a,
+        className: r,
         x: "2.10049",
         y: "20.4853",
         width: "26",
@@ -38,6 +38,6 @@ var l = s("469563"),
         fill: l
       })]
     })
-  }, a.HomeSlashIcon, void 0, {
+  }, r.HomeSlashIcon, void 0, {
     size: 24
   })

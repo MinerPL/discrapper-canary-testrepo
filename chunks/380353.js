@@ -1,17 +1,17 @@
 "use strict";
-var a, i, s, l;
+var i, a, s, l;
 n.r(t), n.d(t, {
   Mode: function() {
-    return a
-  },
-  PainLevel: function() {
     return i
   },
+  PainLevel: function() {
+    return a
+  },
   defaultThresholds: function() {
-    return r
+    return o
   }
-}), (s = a || (a = {}))[s.KeepAsIs = 0] = "KeepAsIs", s[s.UseGreyDot = 1] = "UseGreyDot", (l = i || (i = {}))[l.Low = 0] = "Low", l[l.Medium = 1] = "Medium", l[l.High = 2] = "High";
-let r = {
+}), (s = i || (i = {}))[s.KeepAsIs = 0] = "KeepAsIs", s[s.UseGreyDot = 1] = "UseGreyDot", (l = a || (a = {}))[l.Low = 0] = "Low", l[l.Medium = 1] = "Medium", l[l.High = 2] = "High";
+let o = {
   careALot: {
     monthOpenPerc: .01,
     yearOpenPerc: .01,

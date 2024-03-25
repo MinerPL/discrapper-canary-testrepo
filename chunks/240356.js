@@ -1,11 +1,11 @@
-r("424973"), r("781738");
-var n = r("91589"),
+e("424973"), e("781738");
+var n = e("91589"),
   o = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-  a = /\\(\\)?/g,
-  i = n(function(e) {
-    var t = [];
-    return 46 === e.charCodeAt(0) && t.push(""), e.replace(o, function(e, r, n, o) {
-      t.push(n ? o.replace(a, "$1") : r || e)
-    }), t
+  i = /\\(\\)?/g,
+  a = n(function(t) {
+    var r = [];
+    return 46 === t.charCodeAt(0) && r.push(""), t.replace(o, function(t, e, n, o) {
+      r.push(n ? o.replace(i, "$1") : e || t)
+    }), r
   });
-e.exports = i
+t.exports = a

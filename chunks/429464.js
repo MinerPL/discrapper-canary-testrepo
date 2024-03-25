@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("913144"),
-  i = n("271938"),
-  l = n("356702"),
+  l = n("271938"),
+  i = n("356702"),
   r = n("880731"),
   o = n("943551");
 let u = {
@@ -18,7 +18,7 @@ let u = {
   };
 class c extends a.default.PersistedStore {
   initialize(e) {
-    this.waitFor(i.default, o.default);
+    this.waitFor(l.default, o.default);
     let t = null != e ? e : {
       ...u
     };
@@ -50,7 +50,7 @@ var f = new c(s.default, {
         dateUnlocked: Date.now()
       }
     }, setTimeout(() => {
-      (0, l.showAchievementToast)(t, !0)
+      (0, i.showAchievementToast)(t, !0)
     }, 2e3))
   }
 })

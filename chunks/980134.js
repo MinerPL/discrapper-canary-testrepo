@@ -13,15 +13,15 @@ n.r(t), n.d(t, {
     return u
   },
   getFileContentLength: function() {
-    return c
+    return d
   },
   getFile: function() {
-    return d
+    return c
   }
 }), n("70102");
 var i = n("66175"),
-  r = n("894488");
-let s = [{
+  s = n("894488");
+let r = [{
     reName: /\.jpe?g$/i,
     name: e => "image".concat(e, ".jpg"),
     type: "image/jpeg"
@@ -71,7 +71,7 @@ let s = [{
 function o(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-    s = arguments.length > 2 ? arguments[2] : void 0,
+    r = arguments.length > 2 ? arguments[2] : void 0,
     a = {
       id: null !== (t = null == n ? void 0 : n.toString()) && void 0 !== t ? t : e.id
     };
@@ -80,18 +80,18 @@ function o(e) {
     let {
       spoiler: t
     } = e;
-    return t ? r.SPOILER_ATTACHMENT_PREFIX : ""
+    return t ? s.SPOILER_ATTACHMENT_PREFIX : ""
   }({
     spoiler: e.spoiler
   });
-  return a.filename = "".concat(o).concat(null != s ? s : e.filename), a.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (a.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix), "clip" in e && null != e.clip && (a.is_clip = !0, a.title = e.clip.name, a.application_id = e.clip.applicationId, a.clip_created_at = (0, i.getClipCreatedAt)(e.clip.id), a.clip_participant_ids = (0, i.getClipParticipantIds)(e.clip.users)), a
+  return a.filename = "".concat(o).concat(null != r ? r : e.filename), a.uploaded_filename = e.uploadedFilename, "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs), "waveform" in e && null != e.waveform && (a.waveform = e.waveform), "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail), "isRemix" in e && !0 === e.isRemix && (a.is_remix = e.isRemix), "clip" in e && null != e.clip && (a.is_clip = !0, a.title = e.clip.name, a.application_id = e.clip.applicationId, a.clip_created_at = (0, i.getClipCreatedAt)(e.clip.id), a.clip_participant_ids = (0, i.getClipParticipantIds)(e.clip.users)), a
 }
 
 function l(e, t, n) {
   let i = new XMLHttpRequest;
-  return new Promise((r, s) => {
-    i.open("GET", e, !0), i.responseType = "blob", i.setRequestHeader("Range", "bytes=".concat(t, "-").concat(n)), i.onabort = e => s(e), i.onerror = e => s(e), i.ontimeout = e => s(e), i.onload = () => {
-      206 === i.status ? r(i.response) : s(Error("Range request failed"))
+  return new Promise((s, r) => {
+    i.open("GET", e, !0), i.responseType = "blob", i.setRequestHeader("Range", "bytes=".concat(t, "-").concat(n)), i.onabort = e => r(e), i.onerror = e => r(e), i.ontimeout = e => r(e), i.onload = () => {
+      206 === i.status ? s(i.response) : r(Error("Range request failed"))
     }, i.send()
   })
 }
@@ -106,7 +106,7 @@ function u(e) {
   })
 }
 
-function c(e) {
+function d(e) {
   return new Promise((t, n) => {
     let i = new XMLHttpRequest;
     i.open("HEAD", e, !0), i.onload = () => {
@@ -118,28 +118,28 @@ function c(e) {
   })
 }
 
-function d(e) {
-  var t, n, i, r, a, o;
+function c(e) {
+  var t, n, i, s, a, o;
   let l, {
       uri: u,
-      i: c,
-      overrideFilename: d,
-      overrideType: f
+      i: d,
+      overrideFilename: c,
+      overrideType: _
     } = e,
-    E = u.split("/"),
-    h = E[E.length - 1];
-  h = null !== (i = null === (n = h.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
-  let p = s.find(e => e.reName.test(h));
-  if (null == p && null != d && (p = s.find(e => e.reName.test(d))), null != p && null != d) {
-    let e = p.name(c).split(".").pop(),
-      t = d.lastIndexOf(".");
-    l = -1 !== t ? "".concat(d.substr(0, t), ".").concat(e) : "".concat(d, ".").concat(e)
-  } else l = null != p ? p.name(c) : null != d ? d : "unknown";
+    f = u.split("/"),
+    E = f[f.length - 1];
+  E = null !== (i = null === (n = E.split("?")) || void 0 === n ? void 0 : null === (t = n[0]) || void 0 === t ? void 0 : t.toLowerCase()) && void 0 !== i ? i : "";
+  let h = r.find(e => e.reName.test(E));
+  if (null == h && null != c && (h = r.find(e => e.reName.test(c))), null != h && null != c) {
+    let e = h.name(d).split(".").pop(),
+      t = c.lastIndexOf(".");
+    l = -1 !== t ? "".concat(c.substr(0, t), ".").concat(e) : "".concat(c, ".").concat(e)
+  } else l = null != h ? h.name(d) : null != c ? c : "unknown";
   return {
     uri: u,
     filename: l,
-    type: null !== (r = null != f ? f : null == p ? void 0 : p.type) && void 0 !== r ? r : "unknown",
-    isVideo: -1 !== (null !== (a = null != f ? f : null == p ? void 0 : p.name(c)) && void 0 !== a ? a : "").indexOf("video"),
-    isImage: -1 !== (null !== (o = null != f ? f : null == p ? void 0 : p.name(c)) && void 0 !== o ? o : "").indexOf("image")
+    type: null !== (s = null != _ ? _ : null == h ? void 0 : h.type) && void 0 !== s ? s : "unknown",
+    isVideo: -1 !== (null !== (a = null != _ ? _ : null == h ? void 0 : h.name(d)) && void 0 !== a ? a : "").indexOf("video"),
+    isImage: -1 !== (null !== (o = null != _ ? _ : null == h ? void 0 : h.name(d)) && void 0 !== o ? o : "").indexOf("image")
   }
 }

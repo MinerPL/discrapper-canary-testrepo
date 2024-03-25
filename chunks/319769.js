@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("913144"),
   s = n("299285"),
-  i = n("269180"),
-  l = n("860285");
+  l = n("269180"),
+  i = n("860285");
 
 function r(e) {
   let {
@@ -15,9 +15,9 @@ function r(e) {
   } = e;
   ! function(e) {
     let t;
-    let n = l.default.launchableGames[e],
+    let n = i.default.launchableGames[e],
       r = s.default.getApplication(e);
-    (t = null != r ? i.default.isLaunchable(r) : i.default.isGameLaunchable(e)).then(t => {
+    (t = null != r ? l.default.isLaunchable(r) : l.default.isGameLaunchable(e)).then(t => {
       t !== n && a.default.dispatch({
         type: "GAME_LAUNCHABLE_UPDATE",
         gameId: e,

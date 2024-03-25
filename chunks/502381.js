@@ -6,14 +6,14 @@ s.r(t), s.d(t, {
 });
 var a = s("907648"),
   r = s("598739"),
-  n = s("908309"),
-  i = s("359499"),
+  i = s("908309"),
+  n = s("359499"),
   l = s("511143"),
   o = s("782340");
 
 function u() {
-  let e = (0, i.useFreeBoostUserTenureReward)(),
-    t = (0, n.useUserEligibleForNitroTenureRewardCard)({
+  let e = (0, n.useFreeBoostUserTenureReward)(),
+    t = (0, i.useUserEligibleForNitroTenureRewardCard)({
       location: a.NitroLandingPages.HOME
     });
   if (null != e && t) return {

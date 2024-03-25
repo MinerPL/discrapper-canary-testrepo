@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("599110"),
-  l = n("698370"),
+  l = n("599110"),
+  i = n("698370"),
   r = n("922832"),
   o = n("49111"),
   u = n("782340"),
-  d = n("615108");
+  d = n("238595");
 
 function c() {
   return (0, a.jsxs)(s.Button, {
@@ -26,10 +26,10 @@ function c() {
         return t => (0, a.jsx)(e, {
           ...t
         })
-      }), i.default.track(o.AnalyticEvents.FAMILY_CENTER_ACTION, {
+      }), l.default.track(o.AnalyticEvents.FAMILY_CENTER_ACTION, {
         action: r.FamilyCenterAction.ShowQRCodeModal
       })
     },
-    children: [(0, a.jsx)(l.default, {}), u.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_BUTTON]
+    children: [(0, a.jsx)(i.default, {}), u.default.Messages.FAMILY_CENTER_REQUESTS_LINKING_BANNER_TEEN_BUTTON]
   })
 }

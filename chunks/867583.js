@@ -65,17 +65,17 @@ var o = r("579050"),
         var C = S.getNextSiblingKey();
         S = C ? d.getBlockForKey(C) : null
       }
-      for (var E = [], O = 0; O < b.length;) {
-        var D = b[O];
-        if (D.wrapperTemplate) {
+      for (var E = [], D = 0; D < b.length;) {
+        var O = b[D];
+        if (O.wrapperTemplate) {
           var K = [];
-          do K.push(b[O].block), O++; while (O < b.length && b[O].wrapperTemplate === D.wrapperTemplate);
-          var T = u.cloneElement(D.wrapperTemplate, {
-            key: D.key + "-wrap",
-            "data-offset-key": D.offsetKey
+          do K.push(b[D].block), D++; while (D < b.length && b[D].wrapperTemplate === O.wrapperTemplate);
+          var T = u.cloneElement(O.wrapperTemplate, {
+            key: O.key + "-wrap",
+            "data-offset-key": O.offsetKey
           }, K);
           E.push(T)
-        } else E.push(D.block), O++
+        } else E.push(O.block), D++
       }
       return u.createElement("div", {
         "data-contents": "true"

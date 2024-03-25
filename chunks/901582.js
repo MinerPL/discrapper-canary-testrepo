@@ -4,23 +4,23 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var i, l, u = n("37983"),
-  a = n("884691"),
+var i, l, a = n("37983"),
+  u = n("884691"),
   r = n("748820"),
   d = n("599110"),
   s = n("117362"),
   o = n("49111");
-(i = class extends a.Component {
+(i = class extends u.Component {
   renderProvider(e) {
     var t, n;
     let {
       section: i,
       page: l,
-      object: a,
+      object: u,
       objectType: r,
       children: s
-    } = this.props, o = this.mergeLocation(e.location, this.getLocation(l, i, a, r)), c = this.getContext(o, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
-    return (0, u.jsx)(d.AnalyticsContext.Provider, {
+    } = this.props, o = this.mergeLocation(e.location, this.getLocation(l, i, u, r)), c = this.getContext(o, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+    return (0, a.jsx)(d.AnalyticsContext.Provider, {
       value: c,
       children: s
     })
@@ -29,7 +29,7 @@ var i, l, u = n("37983"),
     let {
       context: e
     } = this.props;
-    return null != e ? this.renderProvider(e) : (0, u.jsx)(d.AnalyticsContext.Consumer, {
+    return null != e ? this.renderProvider(e) : (0, a.jsx)(d.AnalyticsContext.Consumer, {
       children: e => this.renderProvider(e)
     })
   }

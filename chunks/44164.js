@@ -8,7 +8,7 @@ a.r(t), a.d(t, {
   }
 });
 var n = a("37983");
-a("884691"), a("167022");
+a("884691"), a("771042");
 let r = "cash-app-pay-container";
 
 function s() {

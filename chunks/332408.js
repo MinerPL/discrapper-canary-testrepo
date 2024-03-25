@@ -1,11 +1,11 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = /\s/,
-  o = function(e) {
+  a = function(e) {
     for (var t = e.length; t-- && n.test(e.charAt(t)););
     return t
   }

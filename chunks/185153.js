@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return p
   },
   GuildSelector: function() {
-    return p
+    return g
   }
 }), n("843762");
 var r = n("37983"),
@@ -18,11 +18,11 @@ var r = n("37983"),
   c = n("677099"),
   f = n("476263"),
   v = n("449008"),
-  h = n("424562"),
-  C = n("782340"),
-  m = n("764347");
+  C = n("424562"),
+  h = n("782340"),
+  m = n("714423");
 
-function S(e) {
+function p(e) {
   let {
     guildId: t,
     className: n,
@@ -33,10 +33,10 @@ function S(e) {
   } = e;
   return (0, r.jsx)(u.default, {
     className: l(m.section, n),
-    title: C.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
+    title: h.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_TITLE,
     hideDivider: i,
     forcedDivider: !0,
-    children: (0, r.jsx)(p, {
+    children: (0, r.jsx)(g, {
       guildId: t,
       onChange: o,
       renderOptionSuffix: s,
@@ -45,30 +45,30 @@ function S(e) {
   })
 }
 
-function p(e) {
+function g(e) {
   let {
     guildId: t,
     globalOption: n,
     onChange: i,
     renderOptionSuffix: l
-  } = e, u = (0, o.useStateFromStores)([h.default], () => h.default.showNotice()), S = (0, o.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), p = (0, o.useStateFromStores)([d.default], () => d.default.getGuilds()), g = a.useMemo(() => {
-    let e = S.map(e => {
-      let t = p[e];
+  } = e, u = (0, o.useStateFromStores)([C.default], () => C.default.showNotice()), p = (0, o.useStateFromStores)([c.default], () => c.default.getFlattenedGuildIds()), g = (0, o.useStateFromStores)([d.default], () => d.default.getGuilds()), S = a.useMemo(() => {
+    let e = p.map(e => {
+      let t = g[e];
       return null == t ? null : {
         label: t.name,
         value: t.id
       }
     }).filter(v.isNotNullish);
     return null != n && e.unshift(n), e
-  }, [S, p, n]), F = a.useCallback(e => {
+  }, [p, g, n]), x = a.useCallback(e => {
     let t = (null == e ? void 0 : e.label) === (null == n ? void 0 : n.label) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value);
     return null == e || "" === e.value || t ? null : (0, r.jsx)(f.default, {
       className: m.guildSelectOptionIcon,
-      guild: p[e.value],
+      guild: g[e.value],
       size: f.default.Sizes.SMOL,
       active: !0
     })
-  }, [p, n]);
+  }, [g, n]);
   return (0, r.jsx)(s.SearchableSelect, {
     isDisabled: u,
     onChange: e => {
@@ -76,13 +76,13 @@ function p(e) {
         i(null);
         return
       }
-      let t = p[e];
+      let t = g[e];
       null != t && i(t)
     },
     value: t,
-    options: g,
-    renderOptionPrefix: F,
+    options: S,
+    renderOptionPrefix: x,
     renderOptionSuffix: l,
-    placeholder: C.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
+    placeholder: h.default.Messages.PROFILE_CUSTOMIZATION_GUILD_SELECT_PLACEHOLDER
   })
 }

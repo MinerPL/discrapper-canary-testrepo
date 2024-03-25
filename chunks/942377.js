@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   getHigherExpectedValue: function() {
-    return l
+    return a
   },
   getHighestLikelihood: function() {
-    return s
+    return l
   }
 });
-var i = n("716849"),
-  r = n("646718");
+var r = n("716849"),
+  i = n("646718");
 
-function l(e, t, n) {
-  return null == e ? r.PremiumTypes.TIER_2 : e[r.PremiumSubscriptionSKUs.TIER_0] * t > e[r.PremiumSubscriptionSKUs.TIER_2] * n ? r.PremiumTypes.TIER_0 : r.PremiumTypes.TIER_2
+function a(e, t, n) {
+  return null == e ? i.PremiumTypes.TIER_2 : e[i.PremiumSubscriptionSKUs.TIER_0] * t > e[i.PremiumSubscriptionSKUs.TIER_2] * n ? i.PremiumTypes.TIER_0 : i.PremiumTypes.TIER_2
 }
 
-function s(e) {
-  if (null == e) return r.PremiumTypes.TIER_0;
-  let t = e[i.NON_SUBSCRIBER_SENTINEL],
-    n = e[r.PremiumSubscriptionSKUs.TIER_0],
-    l = e[r.PremiumSubscriptionSKUs.TIER_2];
-  return l > n && l > t ? r.PremiumTypes.TIER_2 : r.PremiumTypes.TIER_0
+function l(e) {
+  if (null == e) return i.PremiumTypes.TIER_0;
+  let t = e[r.NON_SUBSCRIBER_SENTINEL],
+    n = e[i.PremiumSubscriptionSKUs.TIER_0],
+    a = e[i.PremiumSubscriptionSKUs.TIER_2];
+  return a > n && a > t ? i.PremiumTypes.TIER_2 : i.PremiumTypes.TIER_0
 }

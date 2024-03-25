@@ -12,9 +12,9 @@ var s = n("855670"),
   a = n("106390"),
   l = n("49111"),
   d = n("782340"),
-  C = n("140413");
+  u = n("140413");
 
-function u() {
+function C() {
   return (0, o.jsx)(a.ValuePropContainer, {
     children: (0, o.jsx)(a.ValueProp, {
       text: d.default.Messages.CONNECT_CRUNCHYROLL_DISPLAY_SHOW_VALUE_PROP,
@@ -36,11 +36,11 @@ function c(e) {
     onClose: n,
     onContinue: t,
     img: (0, o.jsx)("img", {
-      src: C,
+      src: u,
       width: 234,
       height: 152,
       alt: ""
     }),
-    valueProps: (0, o.jsx)(u, {})
+    valueProps: (0, o.jsx)(C, {})
   })
 }

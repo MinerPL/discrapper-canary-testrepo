@@ -1,10 +1,10 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   ICON_SIZE: function() {
-    return a
+    return i
   }
 });
-let a = {
+let i = {
   xxs: 12,
   xs: 16,
   sm: 18,

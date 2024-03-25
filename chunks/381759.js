@@ -6,15 +6,15 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("831314"),
   s = n("861309"),
-  i = n("716724"),
-  l = n("492249"),
+  l = n("716724"),
+  i = n("492249"),
   r = n("49111"),
   o = {
     [r.RPCCommands.SET_USER_ACHIEVEMENT]: {
       scope: {
-        [l.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, l.RPC_LOCAL_SCOPE]
+        [i.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, i.RPC_LOCAL_SCOPE]
       },
-      validation: e => (0, i.default)(e).required().keys({
+      validation: e => (0, l.default)(e).required().keys({
         achievement_id: e.string().min(2).max(128),
         percent_complete: e.number().min(0).max(100).required()
       }),
@@ -23,13 +23,13 @@ var a = n("831314"),
           socket: t,
           args: {
             achievement_id: n,
-            percent_complete: i
+            percent_complete: l
           }
-        } = e, l = t.application.id;
-        if (null == l) throw new s.default({
+        } = e, i = t.application.id;
+        if (null == i) throw new s.default({
           errorCode: r.RPCErrors.INVALID_COMMAND
         }, "No application.");
-        return a.default.setUserAchievement(l, n, i).catch(e => {
+        return a.default.setUserAchievement(i, n, l).catch(e => {
           let {
             status: t,
             body: n
@@ -56,7 +56,7 @@ var a = n("831314"),
     },
     [r.RPCCommands.GET_USER_ACHIEVEMENTS]: {
       scope: {
-        [l.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, l.RPC_LOCAL_SCOPE]
+        [i.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, i.RPC_LOCAL_SCOPE]
       },
       handler(e) {
         let {

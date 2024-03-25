@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   useChangeUsernameLivecheckEnabled: function() {
-    return o
+    return s
   }
 });
 var a = n("862205");
-let s = (0, a.createExperiment)({
+let i = (0, a.createExperiment)({
     kind: "user",
     id: "2023-06_unique_username_live_check_in_settings",
     label: "Username Livecheck in Settings",
@@ -20,10 +20,10 @@ let s = (0, a.createExperiment)({
       }
     }]
   }),
-  o = () => {
+  s = () => {
     let {
       enabled: e
-    } = s.useExperiment({
+    } = i.useExperiment({
       location: "7e1108_1"
     }, {
       autoTrackExposure: !0

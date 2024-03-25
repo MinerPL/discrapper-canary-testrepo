@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return O
   }
 });
 var a = n("37983"),
@@ -9,18 +9,18 @@ var a = n("37983"),
   s = n("627445"),
   i = n.n(s),
   r = n("866227"),
-  o = n.n(r),
-  u = n("446674"),
+  u = n.n(r),
+  o = n("446674"),
   d = n("913144"),
   c = n("775433"),
   f = n("834897"),
   h = n("685665"),
-  p = n("233322"),
-  m = n("567054"),
+  m = n("233322"),
+  p = n("567054"),
   E = n("982527"),
-  C = n("157186"),
-  g = n("267567"),
-  S = n("666391"),
+  g = n("157186"),
+  S = n("267567"),
+  C = n("666391"),
   _ = n("10514"),
   I = n("701909"),
   T = n("577357"),
@@ -32,62 +32,62 @@ var a = n("37983"),
   R = n("258501"),
   j = n("677795"),
   L = n("49111"),
-  O = n("782340"),
-  y = (e, t, n, s) => {
+  y = n("782340"),
+  O = (e, t, n, s) => {
     let r;
-    let y = (0, u.useStateFromStores)([g.default], () => g.default.isLurking(t)),
-      P = (0, C.useShowMemberVerificationGate)(t),
-      b = (0, u.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
-      D = (null == b ? void 0 : b.applicationStatus) === m.GuildJoinRequestApplicationStatuses.SUBMITTED,
+    let O = (0, o.useStateFromStores)([S.default], () => S.default.isLurking(t)),
+      P = (0, g.useShowMemberVerificationGate)(t),
+      D = (0, o.useStateFromStores)([E.default], () => null != t ? E.default.getRequest(t) : null),
+      b = (null == D ? void 0 : D.applicationStatus) === p.GuildJoinRequestApplicationStatuses.SUBMITTED,
       U = null == e ? void 0 : e.subscription_plans[0],
       w = null == U ? void 0 : U.id,
       F = (null == e ? void 0 : e.published) === !0,
-      k = null == U ? void 0 : U.sku_id,
-      V = (0, u.useStateFromStores)([_.default], () => null != w ? _.default.get(w) : null),
+      V = null == U ? void 0 : U.sku_id,
+      k = (0, o.useStateFromStores)([_.default], () => null != w ? _.default.get(w) : null),
       {
-        activeSubscription: B,
-        activeSubscriptionPlanFromStore: H
+        activeSubscription: H,
+        activeSubscriptionPlanFromStore: B
       } = (0, N.default)(n),
-      G = null == B || null != H,
+      G = null == H || null != B,
       W = (0, v.useSubscriptionListingsForGroup)(n, {
         includeSoftDeleted: !0
       }),
       Y = W.map(e => e.subscription_plans[0].id),
-      z = (0, x.getRoleSubscriptionMutationPlanId)(B),
+      z = (0, x.getRoleSubscriptionMutationPlanId)(H),
       K = null != z,
-      Z = (null == B ? void 0 : B.trialId) != null,
+      Z = (null == H ? void 0 : H.trialId) != null,
       {
         loading: X,
-        getTrialPurchaseEligibility: J
+        getTrialPurchaseEligibility: Q
       } = (0, A.useGetTrialPurchaseEligibility)(),
       q = (0, v.useSubscriptionTrial)(null == e ? void 0 : e.id),
       {
-        analyticsLocations: Q
+        analyticsLocations: J
       } = (0, h.default)(),
-      $ = (null == B ? void 0 : B.paymentGateway) === L.PaymentGateways.APPLE_PARTNER;
-    D ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : y && !P ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : z === w ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
-      changeDate: null != B ? o(B.currentPeriodEnd).format("MMM DD, YYYY") : ""
-    }) : K ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : Z ? r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : $ && (r = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
+      $ = (null == H ? void 0 : H.paymentGateway) === L.PaymentGateways.APPLE_PARTNER;
+    b ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : O && !P ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_REQUIRE_APPROVED_MEMBER : z === w ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION_TO_CURRENT_LISTING.format({
+      changeDate: null != H ? u(H.currentPeriodEnd).format("MMM DD, YYYY") : ""
+    }) : K ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_HAS_PENDING_MUTATION : Z ? r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IN_TRIAL : $ && (r = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_CHANGE_TIER_DISABLED_IF_IAP);
     let ee = (0, f.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY);
     l.useEffect(() => {
-      F && null != k && d.default.wait(() => {
-        (0, c.fetchSubscriptionPlansForSKU)(k)
+      F && null != V && d.default.wait(() => {
+        (0, c.fetchSubscriptionPlansForSKU)(V)
       })
-    }, [F, k]);
+    }, [F, V]);
     let et = l.useCallback(async () => {
         let n, l;
         if (i(null != e, "No subscription listing"), i(null != U, "No subscription plan"), i(F, "Cannot purchase this unpublished plan"), (null == q ? void 0 : q.active_trial) != null) {
-          let a = await J(t, e.id, q.active_trial.id);
+          let a = await Q(t, e.id, q.active_trial.id);
           if ((null == a ? void 0 : a.is_eligible) === !0) {
             var r;
             n = null == q ? void 0 : null === (r = q.active_trial) || void 0 === r ? void 0 : r.id
-          } else l = O.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
-        }(0, S.default)({
-          activeSubscription: B,
+          } else l = y.default.Messages.GUILD_ROLE_SUBSCRIPTION_INELIGIBLE_TRIAL_DISCLAIMER
+        }(0, C.default)({
+          activeSubscription: H,
           analyticsSubscriptionType: L.SubscriptionTypes.GUILD,
           trialId: n,
-          trialFooterMessageOverride: (null == q ? void 0 : q.active_trial) != null ? O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
-            buttonText: O.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
+          trialFooterMessageOverride: (null == q ? void 0 : q.active_trial) != null ? y.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_RENEWAL_FOOTER_V2.format({
+            buttonText: y.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SUBSCRIBE,
             interval: (0, T.formatPlanIntervalDuration)(U),
             days: 1,
             contactLink: L.MarketingURLs.CONTACT,
@@ -96,7 +96,7 @@ var a = n("37983"),
             paidServiceTermsArticle: I.default.getArticleURL(L.HelpdeskArticles.PAID_TERMS),
             tierName: U.name
           }) : void 0,
-          analyticsLocations: Q,
+          analyticsLocations: J,
           analyticsLocation: s,
           renderHeader: (n, l, s) => (0, a.jsx)(R.Header, {
             onClose: l,
@@ -118,13 +118,13 @@ var a = n("37983"),
           }),
           reviewWarningMessage: l
         })
-      }, [F, e, U, B, Y, t, Q, s, J, q, ee]),
+      }, [F, e, U, H, Y, t, J, s, Q, q, ee]),
       en = l.useCallback(() => {
-        (0, p.openMemberVerificationModal)(t)
+        (0, m.openMemberVerificationModal)(t)
       }, [t]);
     return {
       openModal: P ? en : et,
-      canOpenModal: !y && null != V && G && !D && !K && !Z && !$,
+      canOpenModal: !O && null != k && G && !b && !K && !Z && !$,
       cannotOpenReason: r,
       isCheckingTrialEligibility: X
     }

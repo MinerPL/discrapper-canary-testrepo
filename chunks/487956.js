@@ -8,18 +8,18 @@ var s = n("37983");
 n("884691");
 var l = n("77078"),
   r = n("272030"),
-  u = n("158534"),
-  a = n("812204"),
+  a = n("158534"),
+  u = n("812204"),
   i = n("861370"),
   o = n("366416"),
   c = n("49111"),
   d = n("782340"),
-  f = (0, u.default)(function(e) {
+  f = (0, a.default)(function(e) {
     let {
       user: t,
       relationshipType: n,
-      onRemoveFriend: u,
-      onBlock: a,
+      onRemoveFriend: a,
+      onBlock: u,
       onReport: f,
       onMessage: p,
       onCopyId: h,
@@ -30,19 +30,19 @@ var l = n("77078"),
         C.push((0, s.jsx)(l.MenuItem, {
           id: "user-unblock",
           label: d.default.Messages.UNBLOCK,
-          action: u
+          action: a
         }));
         break;
       case c.RelationshipTypes.FRIEND:
         C.push((0, s.jsx)(l.MenuItem, {
           id: "user-remove",
           label: d.default.Messages.REMOVE_FRIEND,
-          action: u,
+          action: a,
           color: "danger"
         })), C.push((0, s.jsx)(l.MenuItem, {
           id: "user-block",
           label: d.default.Messages.BLOCK,
-          action: a,
+          action: u,
           color: "danger"
         })), I && C.push((0, s.jsx)(l.MenuItem, {
           id: "user-report",
@@ -57,7 +57,7 @@ var l = n("77078"),
         C.push((0, s.jsx)(l.MenuItem, {
           id: "user-block",
           label: d.default.Messages.BLOCK,
-          action: a,
+          action: u,
           color: "danger"
         })), I && C.push((0, s.jsx)(l.MenuItem, {
           id: "user-report",
@@ -88,4 +88,4 @@ var l = n("77078"),
         children: R
       }) : null]
     })
-  }, [a.default.CONTEXT_MENU, a.default.USER_PROFILE_ACTIONS_MENU])
+  }, [u.default.CONTEXT_MENU, u.default.USER_PROFILE_ACTIONS_MENU])

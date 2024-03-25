@@ -1,12 +1,12 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var n = l("954016"),
-  a = l("49111");
+var i = n("954016"),
+  l = n("49111");
 
-function s(e) {
-  return null != e && (e.application_id === n.XBOX_ACTIVITY_APPLICATION_ID || e.platform === a.ActivityGamePlatforms.XBOX)
+function a(e) {
+  return null != e && (e.application_id === i.XBOX_ACTIVITY_APPLICATION_ID || e.platform === l.ActivityGamePlatforms.XBOX)
 }

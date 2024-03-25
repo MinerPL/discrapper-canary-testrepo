@@ -4,7 +4,7 @@ E.r(_), E.d(_, {
     return l
   },
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("689988"),
@@ -34,7 +34,7 @@ function l(e, _) {
   let o = n.default.isSpeaker(e, _);
   return o
 }
-class L extends t.default {
+class u extends t.default {
   handleVoiceChannelSelect(e) {
     let {
       channelId: _
@@ -73,4 +73,4 @@ class L extends t.default {
     }
   }
 }
-var u = new L
+var L = new u

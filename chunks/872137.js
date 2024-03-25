@@ -8,8 +8,8 @@ var u = n("37983");
 n("884691");
 var r = n("446674"),
   a = n("77078"),
-  s = n("452804"),
-  l = n("180748"),
+  l = n("452804"),
+  s = n("180748"),
   i = n("206230"),
   o = n("685665"),
   d = n("648114"),
@@ -45,7 +45,7 @@ function p() {
           isPersisted: !0,
           analyticsLocations: t,
           themeName: "default ".concat(e)
-        }), (0, s.saveClientTheme)({
+        }), (0, l.saveClientTheme)({
           theme: e
         })
       }
@@ -57,7 +57,7 @@ function p() {
       id: "compact-mode",
       label: e ? m.default.Messages.SWITCH_TO_COZY_MODE : m.default.Messages.SWITCH_TO_COMPACT_MODE,
       action: () => {
-        S.MessageDisplayCompact.updateSetting(!e), (0, l.setMessageGroupSpacing)()
+        S.MessageDisplayCompact.updateSetting(!e), (0, s.setMessageGroupSpacing)()
       }
     })
   }, "compact-mode")]

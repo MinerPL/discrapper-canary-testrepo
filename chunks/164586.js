@@ -1,109 +1,109 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return C
   }
 });
 var a = n("37983"),
-  l = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
+  s = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("917351"),
   o = n("77078"),
   u = n("716241"),
   d = n("945330"),
   c = n("599110"),
   f = n("49111"),
-  h = n("782340"),
-  p = n("832025");
-let m = (0, r.debounce)(u.default.trackWithMetadata, 500);
-var E = function(e) {
+  E = n("782340"),
+  h = n("231663");
+let _ = (0, r.debounce)(u.default.trackWithMetadata, 500);
+var C = function(e) {
   let {
     guild: t,
     title: n,
-    message: s,
+    message: l,
     image: r,
-    type: E,
-    imageStyles: C,
-    imageMarginX: g,
-    imageMarginTop: S,
-    trackingSource: _,
-    undismissable: I,
-    onDismissed: T,
-    onClick: v,
-    cta: x,
-    ctaColor: N,
-    centerText: A
+    type: C,
+    imageStyles: S,
+    imageMarginX: I,
+    imageMarginTop: m,
+    trackingSource: p,
+    undismissable: T,
+    onDismissed: g,
+    onClick: A,
+    cta: N,
+    ctaColor: R,
+    centerText: O
   } = e;
-  l.useEffect(() => {
-    m(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
-      notice_type: E,
+  s.useEffect(() => {
+    _(f.AnalyticEvents.CHANNEL_NOTICE_VIEWED, {
+      notice_type: C,
       guild_id: t.id
     })
-  }, [t.id, E]);
-  let M = null;
-  "function" == typeof x ? M = x() : null != x && (M = (0, a.jsx)(o.Button, {
-    className: p.button,
+  }, [t.id, C]);
+  let v = null;
+  "function" == typeof N ? v = N() : null != N && (v = (0, a.jsx)(o.Button, {
+    className: h.button,
     size: o.Button.Sizes.SMALL,
     onClick: () => {
-      null != E && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-        source: _,
+      null != C && c.default.track(f.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
+        source: p,
         guild_id: t.id,
-        notice_type: E
-      }), null == v || v()
+        notice_type: C
+      }), null == A || A()
     },
     fullWidth: !0,
-    color: N,
-    children: x
+    color: R,
+    children: N
   }));
-  let R = null;
-  "function" == typeof n ? R = n() : null != n && (R = (0, a.jsx)(o.Text, {
+  let L = null;
+  "function" == typeof n ? L = n() : null != n && (L = (0, a.jsx)(o.Text, {
     variant: "text-md/medium",
     color: "header-primary",
-    className: i(p.title, {
-      [p.noImageTitle]: null == r
+    className: i(h.title, {
+      [h.noImageTitle]: null == r
     }, {
-      [p.center]: A
+      [h.center]: O
     }),
     children: n
   }));
-  let j = null != g ? "".concat(g, "px") : "16px";
+  let M = null != I ? "".concat(I, "px") : "16px";
   return (0, a.jsxs)("div", {
-    className: p.container,
-    children: [!0 === I ? null : (0, a.jsx)(o.Clickable, {
+    className: h.container,
+    children: [!0 === T ? null : (0, a.jsx)(o.Clickable, {
       onClick: () => {
         u.default.trackWithMetadata(f.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
-          notice_type: E
-        }), null == T || T()
+          notice_type: C
+        }), null == g || g()
       },
-      className: p.close,
-      "aria-label": h.default.Messages.DISMISS,
+      className: h.close,
+      "aria-label": E.default.Messages.DISMISS,
       children: (0, a.jsx)(d.default, {
-        className: p.closeIcon
+        className: h.closeIcon
       })
     }), null != r && (0, a.jsx)("div", {
-      className: p.imageContainer,
+      className: h.imageContainer,
       style: {
-        marginTop: "".concat(S, "px"),
-        marginLeft: j,
-        marginRight: j
+        marginTop: "".concat(m, "px"),
+        marginLeft: M,
+        marginRight: M
       },
       children: (0, a.jsx)("img", {
-        className: p.image,
-        style: C,
+        className: h.image,
+        style: S,
         src: r,
         alt: ""
       })
     }), (0, a.jsxs)("div", {
-      className: p.message,
-      children: [R, (0, a.jsx)(o.Text, {
+      className: h.message,
+      children: [L, (0, a.jsx)(o.Text, {
         className: i({
-          [p.center]: A
+          [h.center]: O
         }),
         variant: "text-sm/normal",
         color: "text-muted",
-        children: s
-      }), M]
+        children: l
+      }), v]
     })]
   })
 }

@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return n
+    return l
   }
 });
 var a = s("625990");
 
-function n() {
+function l() {
   let {
     createGuildApplication: e,
     submitting: t,

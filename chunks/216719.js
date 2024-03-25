@@ -2,23 +2,23 @@
 let u;
 r.r(t), r.d(t, {
   default: function() {
-    return d
+    return a
   }
 });
-var l = r("446674"),
-  n = r("913144");
-let i = [],
-  s = i,
-  o = null,
-  a = e => {
-    s = i, o = null
+var n = r("446674"),
+  i = r("913144");
+let E = [],
+  s = E,
+  l = null,
+  c = e => {
+    s = E, l = null
   };
-class c extends l.default.Store {
+class o extends n.default.Store {
   get analyticsLocations() {
     return s
   }
   get analyticsSource() {
-    return o
+    return l
   }
   get initialProductSkuId() {
     return u
@@ -26,19 +26,19 @@ class c extends l.default.Store {
   getAnalytics() {
     return {
       analyticsLocations: s,
-      analyticsSource: o
+      analyticsSource: l
     }
   }
 }
-c.displayName = "CollectiblesShopStore";
-var d = new c(n.default, {
+o.displayName = "CollectiblesShopStore";
+var a = new o(i.default, {
   COLLECTIBLES_SHOP_OPEN: e => {
     var t, r;
-    s = null !== (t = e.analyticsLocations) && void 0 !== t ? t : i, o = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, u = e.initialProductSkuId
+    s = null !== (t = e.analyticsLocations) && void 0 !== t ? t : E, l = null !== (r = e.analyticsSource) && void 0 !== r ? r : null, u = e.initialProductSkuId
   },
-  COLLECTIBLES_SHOP_CLOSE: a,
+  COLLECTIBLES_SHOP_CLOSE: c,
   COLLECTIBLES_PRODUCT_DETAILS_OPEN: e => {
     e.item.skuId === u && (u = void 0)
   },
-  LOGOUT: a
+  LOGOUT: c
 })

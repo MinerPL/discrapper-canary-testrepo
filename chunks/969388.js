@@ -4,7 +4,7 @@ function a(e) {
   let t;
   let n = !1;
   return function() {
-    for (var a = arguments.length, s = Array(a), i = 0; i < a; i++) s[i] = arguments[i];
+    for (var a = arguments.length, s = Array(a), l = 0; l < a; l++) s[l] = arguments[l];
     return !n && (n = !0, t = e(...s)), t
   }
 }

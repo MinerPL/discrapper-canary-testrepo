@@ -1,46 +1,46 @@
 "use strict";
 n.r(t), n.d(t, {
   isHookModuleTooOld: function() {
-    return E
+    return m
   },
   attachToProcess: function() {
-    return v
+    return S
   },
   cancelAttachToProcess: function() {
-    return S
+    return T
   }
 }), n("70102");
 var i, s, r = n("913144"),
   a = n("363658"),
   o = n("115718"),
-  l = n("546463"),
-  u = n("568307"),
+  l = n("161454"),
+  u = n("546463"),
   d = n("697218"),
   c = n("599110"),
-  f = n("773336"),
-  _ = n("50885"),
-  h = n("688225"),
-  g = n("49111");
-let m = {
+  _ = n("773336"),
+  f = n("50885"),
+  E = n("688225"),
+  h = n("49111");
+let g = {
   development: [0, 0, 0, 0],
   canary: [1, 0, 30, 10],
   ptb: [1, 0, 1005, 2],
   stable: [1, 0, 9001, 2]
 };
 
-function E() {
+function m() {
   var e;
-  return !(null === _.default || void 0 === _.default ? void 0 : null === (e = _.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(_.default, "discord_hook", m))
+  return !(null === f.default || void 0 === f.default ? void 0 : null === (e = f.default.isModuleVersionAtLeast) || void 0 === e ? void 0 : e.call(f.default, "discord_hook", g))
 }
 async function p() {
-  if (!(0, f.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
-  if (E()) return Promise.reject(Error("Hook module is too old"));
-  await _.default.ensureModule("discord_hook");
-  let e = await _.default.requireModule("discord_hook");
+  if (!(0, _.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
+  if (m()) return Promise.reject(Error("Hook module is too old"));
+  await f.default.ensureModule("discord_hook");
+  let e = await f.default.requireModule("discord_hook");
   return function(e) {
     if (null == e.setFlags) return;
     let t = 0,
-      n = h.default.getCurrentConfig({
+      n = E.default.getCurrentConfig({
         location: "edd7d3_1"
       }, {
         autoTrackExposure: !1
@@ -51,36 +51,36 @@ async function p() {
   }(e), e
 }(s = i || (i = {}))[s.None = 0] = "None", s[s.EnableCrashReporting = 1] = "EnableCrashReporting", s[s.EnableCrashTrigger = 2] = "EnableCrashTrigger";
 
-function v(e, t) {
+function S(e, t) {
   return p().then(n => {
     var i;
-    let s = null === (i = u.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
-      d = l.default.getGameByName(s),
-      f = null;
+    let s = null === (i = l.default.getGameForPID(e)) || void 0 === i ? void 0 : i.name,
+      d = u.default.getGameByName(s),
+      _ = null;
     return new Promise(i => {
-      let l = (e, n) => {
-          c.default.track(g.AnalyticEvents.HOOK_RESULT, {
+      let u = (e, n) => {
+          c.default.track(h.AnalyticEvents.HOOK_RESULT, {
             game_name: s,
             game_id: null == d ? null : d.id,
             success: n,
             error: e,
             ...t
-          }), null != f && (clearTimeout(f), f = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
+          }), null != _ && (clearTimeout(_), _ = null), n ? i() : i(e = null != e ? e : "Unknown hook error")
         },
-        _ = u.default.getOverlayOptionsForPID(e),
-        h = {
+        f = l.default.getOverlayOptionsForPID(e),
+        E = {
           ...o.DEFAULT_OVERLAY_OPTIONS,
-          ..._,
-          elevate: u.default.shouldElevateProcessForPID(e)
+          ...f,
+          elevate: l.default.shouldElevateProcessForPID(e)
         };
-      null == h.allowHook || h.allowHook ? (f = setTimeout(() => {
-        n.cancelAttachToProcess(e), l("Timed out waiting for hook response", !1)
-      }, 12e4), n.attachToProcess(e, h, l), r.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
+      null == E.allowHook || E.allowHook ? (_ = setTimeout(() => {
+        n.cancelAttachToProcess(e), u("Timed out waiting for hook response", !1)
+      }, 12e4), n.attachToProcess(e, E, u), r.default.wait(() => a.default.clearElevatedProcess())) : i("Hook is disabled for this game")
     })
   })
 }
 
-function S(e) {
+function T(e) {
   return p().then(t => {
     t.cancelAttachToProcess(e)
   })

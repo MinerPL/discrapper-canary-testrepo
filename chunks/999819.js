@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return r
   }
 });
-var a = n("862205");
-let l = (0, a.createExperiment)({
+var i = n("862205");
+let s = (0, i.createExperiment)({
   kind: "user",
   id: "2023-11_keybind_indicators",
   label: "Overlay Keybind Indicators",
@@ -20,4 +20,4 @@ let l = (0, a.createExperiment)({
     }
   }]
 });
-var o = l
+var r = s

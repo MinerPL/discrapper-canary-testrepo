@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("599417"),
-  l = s("197509"),
+  l = s("599417"),
+  n = s("197509"),
   i = s("396076");
 
 function r(e) {
@@ -14,7 +14,7 @@ function r(e) {
     s(!0), o(void 0);
     try {
       var t, a, r, d, c;
-      let s = await l.getCreatorMonetizationEligibility(e);
+      let s = await n.getCreatorMonetizationEligibility(e);
       u({
         isEligibleForMonetization: s.sufficient,
         hasSufficientMembers: s.size,
@@ -38,7 +38,7 @@ function r(e) {
         retentionScore: null === (c = s.health_score) || void 0 === c ? void 0 : c.perc_ret_w1
       })
     } catch (e) {
-      o(new n.default(e))
+      o(new l.default(e))
     } finally {
       s(!1)
     }

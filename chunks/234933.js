@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("697218"),
   s = n("315102"),
-  i = n("103603"),
-  l = n("861309"),
+  l = n("103603"),
+  i = n("861309"),
   r = n("716724"),
   o = n("492249"),
   u = n("49111"),
@@ -35,14 +35,14 @@ var a = n("697218"),
             t = s.default.getUserAvatarURL(e, !1, d, o);
             let n = window.GLOBAL_ENV.CDN_HOST;
             null != n && -1 !== t.indexOf(n) && (t += "&_=")
-          } else throw new l.default({
+          } else throw new i.default({
             errorCode: u.RPCErrors.INVALID_USER
           }, "Invalid user id: ".concat(r))
         }
-        if (null == t) throw new l.default({
+        if (null == t) throw new i.default({
           errorCode: u.RPCErrors.INVALID_COMMAND
         }, "No valid type.");
-        return fetch(t).then(e => e.blob()).then(e => (0, i.readFileAsBase64)(e)).then(e => ({
+        return fetch(t).then(e => e.blob()).then(e => (0, l.readFileAsBase64)(e)).then(e => ({
           data_url: e
         }))
       }

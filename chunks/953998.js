@@ -6,8 +6,8 @@ n.r(e), n.d(e, {
 });
 var l = n("446674"),
   u = n("862337"),
-  r = n("913144"),
-  i = n("49111");
+  i = n("913144"),
+  r = n("49111");
 let a = {},
   o = {};
 
@@ -16,10 +16,10 @@ function s(t, e, n) {
   let {
     applicationId: s
   } = n, d = null !== (l = a[s]) && void 0 !== l ? l : {};
-  if (d[e] = t, a[s] = d, !__OVERLAY__ && t === i.ActivityActionStates.FAILED) {
+  if (d[e] = t, a[s] = d, !__OVERLAY__ && t === r.ActivityActionStates.FAILED) {
     null != o[s] && o[s].stop();
     let t = new u.Timeout;
-    t.start(12e4, () => r.default.dispatch({
+    t.start(12e4, () => i.default.dispatch({
       type: "ACTIVITY_LAUNCH_FAIL",
       applicationId: s,
       activityType: e
@@ -28,7 +28,7 @@ function s(t, e, n) {
 }
 
 function d(t) {
-  return s(i.ActivityActionStates.COMPLETE, i.ActivityActionTypes.JOIN, t)
+  return s(r.ActivityActionStates.COMPLETE, r.ActivityActionTypes.JOIN, t)
 }
 class f extends l.default.Store {
   getState(t, e) {
@@ -40,7 +40,7 @@ class f extends l.default.Store {
   }
 }
 f.displayName = "ActivityLauncherStore";
-var c = new f(r.default, {
+var c = new f(i.default, {
   OVERLAY_INITIALIZE: function(t) {
     let {
       activityLauncherStates: e
@@ -49,8 +49,8 @@ var c = new f(r.default, {
       ...e
     }
   },
-  ACTIVITY_JOIN_LOADING: t => s(i.ActivityActionStates.LOADING, i.ActivityActionTypes.JOIN, t),
-  ACTIVITY_JOIN_FAILED: t => s(i.ActivityActionStates.FAILED, i.ActivityActionTypes.JOIN, t),
+  ACTIVITY_JOIN_LOADING: t => s(r.ActivityActionStates.LOADING, r.ActivityActionTypes.JOIN, t),
+  ACTIVITY_JOIN_FAILED: t => s(r.ActivityActionStates.FAILED, r.ActivityActionTypes.JOIN, t),
   ACTIVITY_JOIN: d,
   EMBEDDED_ACTIVITY_CLOSE: d,
   ACTIVITY_LAUNCH_FAIL: function(t) {
@@ -58,7 +58,7 @@ var c = new f(r.default, {
       applicationId: e,
       activityType: n
     } = t, l = a[e];
-    if (null == l || l[n] !== i.ActivityActionStates.FAILED) return !1;
+    if (null == l || l[n] !== r.ActivityActionStates.FAILED) return !1;
     delete l[n]
   }
 })

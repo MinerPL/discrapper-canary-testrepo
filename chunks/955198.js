@@ -8,26 +8,26 @@ s.r(t), s.d(t, {
   }
 }), s("222007"), s("424973"), s("860677");
 var a = s("884691"),
-  n = s("714617"),
-  l = s.n(n),
+  l = s("714617"),
+  n = s.n(l),
   i = s("817736"),
   r = s("673122");
 
 function o(e) {
-  let [t, s] = a.useState([e]), [n, i] = a.useState(0), r = a.useMemo(() => t[n], [t, n]), o = a.useCallback(e => {
+  let [t, s] = a.useState([e]), [l, i] = a.useState(0), r = a.useMemo(() => t[l], [t, l]), o = a.useCallback(e => {
     let a = e(r);
-    if (l(r, a)) return;
-    let o = t.slice(0, n + 1);
+    if (n(r, a)) return;
+    let o = t.slice(0, l + 1);
     o.push(a), s(o), i(o.length - 1)
-  }, [n, r, t]), d = a.useCallback(function() {
+  }, [l, r, t]), d = a.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-      s = Math.max(0, n - e);
+      s = Math.max(0, l - e);
     return i(s), t[s]
-  }, [n, t]), u = a.useCallback(function() {
+  }, [l, t]), u = a.useCallback(function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-      s = Math.min(t.length - 1, n + e);
+      s = Math.min(t.length - 1, l + e);
     return i(s), t[s]
-  }, [n, t]);
+  }, [l, t]);
   return {
     state: r,
     setState: o,
@@ -39,8 +39,8 @@ function o(e) {
 function d(e, t) {
   let {
     scrollerRef: s,
-    mainInputRef: n,
-    mainContainerRef: l
+    mainInputRef: l,
+    mainContainerRef: n
   } = t, {
     state: {
       value: o,
@@ -65,11 +65,11 @@ function d(e, t) {
       document.removeEventListener("keydown", t), document.removeEventListener("keyup", s)
     }
   }, [c]);
-  let T = a.useCallback(e => {
+  let I = a.useCallback(e => {
       var t, a;
-      let n = null !== (a = e.clipboardData.getData("text")) && void 0 !== a ? a : "",
-        l = n.split(r.CHIPLET_PASTE_SEPERATOR).map(e => e.trim()).filter(e => e.length > 0);
-      !(l.length <= 1) && ((0, i.flushSync)(() => {
+      let l = null !== (a = e.clipboardData.getData("text")) && void 0 !== a ? a : "",
+        n = l.split(r.CHIPLET_PASTE_SEPERATOR).map(e => e.trim()).filter(e => e.length > 0);
+      !(n.length <= 1) && ((0, i.flushSync)(() => {
         c(e => {
           let {
             tags: t,
@@ -77,14 +77,14 @@ function d(e, t) {
           } = e;
           return {
             value: s,
-            tags: [...t, ...l],
+            tags: [...t, ...n],
             selections: [],
             isSelecting: !1
           }
         })
       }), e.preventDefault(), e.stopPropagation(), null === (t = s.current) || void 0 === t || t.scrollToBottom())
     }, [c, s]),
-    I = a.useCallback(e => {
+    T = a.useCallback(e => {
       c(t => {
         let {
           tags: s,
@@ -102,50 +102,50 @@ function d(e, t) {
       c(s => {
         let {
           tags: a,
-          value: n
-        } = s, l = [...a];
-        return l[e] = t, {
-          value: n,
-          tags: l,
+          value: l
+        } = s, n = [...a];
+        return n[e] = t, {
+          value: l,
+          tags: n,
           selections: [],
           isSelecting: !1
         }
       })
     }, [c]),
-    N = a.useCallback(e => {
+    f = a.useCallback(e => {
       c(t => {
         let {
           tags: s,
           value: a,
-          selections: n,
-          isSelecting: l
+          selections: l,
+          isSelecting: n
         } = t;
         return {
           value: a,
           tags: s,
-          selections: [...n, s[e]],
-          isSelecting: l
+          selections: [...l, s[e]],
+          isSelecting: n
         }
       })
     }, [c]),
-    g = a.useCallback(function(e) {
+    m = a.useCallback(function(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       c(s => {
         let {
           tags: a,
-          value: n,
-          selections: l,
+          value: l,
+          selections: n,
           isSelecting: i
         } = s;
         return {
-          value: n,
+          value: l,
           tags: a,
-          selections: t ? [] : l.filter(t => t !== a[e]),
+          selections: t ? [] : n.filter(t => t !== a[e]),
           isSelecting: i
         }
       })
     }, [c]),
-    f = a.useCallback(e => {
+    N = a.useCallback(e => {
       var t;
       c(e => {
         let {
@@ -158,9 +158,9 @@ function d(e, t) {
           selections: [],
           isSelecting: !1
         }
-      }), null != e && (e.preventDefault(), e.stopPropagation()), null === (t = n.current) || void 0 === t || t.focus()
-    }, [n, c]),
-    A = a.useCallback(e => {
+      }), null != e && (e.preventDefault(), e.stopPropagation()), null === (t = l.current) || void 0 === t || t.focus()
+    }, [l, c]),
+    g = a.useCallback(e => {
       c(t => {
         let {
           tags: s
@@ -173,11 +173,11 @@ function d(e, t) {
         }
       })
     }, [c]),
-    L = a.useCallback(function(e) {
+    h = a.useCallback(function(e) {
       let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         a = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        n = o.trim().length <= 0;
-      !n && ((0, i.flushSync)(() => {
+        l = o.trim().length <= 0;
+      !l && ((0, i.flushSync)(() => {
         c(e => {
           let {
             tags: t
@@ -191,7 +191,7 @@ function d(e, t) {
         })
       }), a && null != s.current && s.current.scrollToBottom(), t && (e.preventDefault(), e.stopPropagation()))
     }, [s, c, o]),
-    m = a.useCallback(e => {
+    C = a.useCallback(e => {
       let t = o.trim().length <= 0;
       if (u.length > 0) {
         var s;
@@ -209,7 +209,7 @@ function d(e, t) {
               isSelecting: !1
             }
           })
-        }), null === (s = n.current) || void 0 === s || s.focus(), e.preventDefault(), e.stopPropagation()
+        }), null === (s = l.current) || void 0 === s || s.focus(), e.preventDefault(), e.stopPropagation()
       } else t && ((0, i.flushSync)(() => {
         c(e => {
           let {
@@ -223,25 +223,25 @@ function d(e, t) {
           }
         })
       }), e.preventDefault(), e.stopPropagation())
-    }, [n, u.length, c, o]),
-    C = a.useCallback(e => {
-      var t, s, a, l;
+    }, [l, u.length, c, o]),
+    R = a.useCallback(e => {
+      var t, s, a, n;
       let i = e.metaKey || e.ctrlKey;
       if ("z" === e.key && i) {
         let a = E();
-        a.selections.length > 0 ? null === (t = n.current) || void 0 === t || t.blur() : null === (s = n.current) || void 0 === s || s.focus(), e.preventDefault(), e.stopPropagation()
+        a.selections.length > 0 ? null === (t = l.current) || void 0 === t || t.blur() : null === (s = l.current) || void 0 === s || s.focus(), e.preventDefault(), e.stopPropagation()
       } else if ("y" === e.key && i) {
         let t = _();
-        t.selections.length > 0 ? null === (a = n.current) || void 0 === a || a.blur() : null === (l = n.current) || void 0 === l || l.focus(), e.preventDefault(), e.stopPropagation()
+        t.selections.length > 0 ? null === (a = l.current) || void 0 === a || a.blur() : null === (n = l.current) || void 0 === n || n.focus(), e.preventDefault(), e.stopPropagation()
       }
-    }, [E, _, n]),
-    O = a.useCallback(e => {
+    }, [E, _, l]),
+    x = a.useCallback(e => {
       var t;
       let s = o.trim().length > 0,
         {
           selectionStart: a = 0,
           selectionEnd: r = 0
-        } = null !== (t = n.current) && void 0 !== t ? t : {};
+        } = null !== (t = l.current) && void 0 !== t ? t : {};
       0 !== d.length && (!s || a !== r) && ((0, i.flushSync)(() => {
         c(e => {
           let {
@@ -257,34 +257,34 @@ function d(e, t) {
         })
       }), setImmediate(() => {
         var e;
-        null === (e = n.current) || void 0 === e || e.blur(), setTimeout(() => {
+        null === (e = l.current) || void 0 === e || e.blur(), setTimeout(() => {
           var e;
-          null === (e = l.current) || void 0 === e || e.focus()
+          null === (e = n.current) || void 0 === e || e.focus()
         }, 16)
       }), e.preventDefault(), e.stopPropagation())
-    }, [l, n, c, d.length, o]),
-    h = a.useCallback(e => {
-      e.relatedTarget !== e.currentTarget && L(e, !1, !1)
-    }, [L]),
-    R = a.useCallback(e => {
+    }, [n, l, c, d.length, o]),
+    L = a.useCallback(e => {
+      e.relatedTarget !== e.currentTarget && h(e, !1, !1)
+    }, [h]),
+    O = a.useCallback(e => {
       let t = e.metaKey || e.ctrlKey;
-      "Meta" !== e.key && (r.NEXT_CHIP_INPUT_KEY.has(e.key) ? L(e) : "Backspace" === e.key ? m(e) : "Escape" === e.key ? f(e) : "a" === e.key && t ? O(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t && C(e))
-    }, [L, m, f, O, C]),
-    D = a.useCallback(e => {
-      if (document.activeElement !== l.current) return;
+      "Meta" !== e.key && (r.NEXT_CHIP_INPUT_KEY.has(e.key) ? h(e) : "Backspace" === e.key ? C(e) : "Escape" === e.key ? N(e) : "a" === e.key && t ? x(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t && R(e))
+    }, [h, C, N, x, R]),
+    A = a.useCallback(e => {
+      if (document.activeElement !== n.current) return;
       let t = e.metaKey || e.ctrlKey;
-      "Backspace" === e.key ? m(e) : "a" === e.key && t ? O(e) : "Escape" === e.key ? f(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t ? C(e) : "Meta" !== e.key && f(e)
-    }, [C, m, O, f, l]);
+      "Backspace" === e.key ? C(e) : "a" === e.key && t ? x(e) : "Escape" === e.key ? N(e) : r.CHIPLET_STATE_HISTORY_KEYS.has(e.key) && t ? R(e) : "Meta" !== e.key && N(e)
+    }, [R, C, x, N, n]);
   return {
-    handlePasteEvent: T,
-    handleInputChange: A,
-    handleKeyDown: R,
-    handleContainerKeyUp: D,
-    handleRemoveTag: I,
+    handlePasteEvent: I,
+    handleInputChange: g,
+    handleKeyDown: O,
+    handleContainerKeyUp: A,
+    handleRemoveTag: T,
     handleTagChangeEvent: S,
-    handleSelectTag: N,
-    handleUnselectTag: g,
-    handleResetTagSelections: f,
-    handleInputBlurEvent: h
+    handleSelectTag: f,
+    handleUnselectTag: m,
+    handleResetTagSelections: N,
+    handleInputBlurEvent: L
   }
 }

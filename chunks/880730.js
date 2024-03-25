@@ -14,7 +14,7 @@ var l = n("37983"),
   a = n("884691"),
   s = n("414456"),
   i = n.n(s),
-  r = n("907002"),
+  r = n("146606"),
   o = n("446674"),
   u = n("769846"),
   d = n("77078"),
@@ -34,7 +34,7 @@ var l = n("37983"),
   A = n("944305"),
   L = n("49111"),
   v = n("782340"),
-  x = n("503561");
+  x = n("395914");
 let R = (0, S.cssValueToNumber)(u.default.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
   M = e => {
     let {

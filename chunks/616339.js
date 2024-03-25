@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("77078"),
+  i = s.n(r),
+  n = s("77078"),
   l = s("719923"),
   o = s("837797"),
   u = s("154889"),
@@ -43,7 +43,7 @@ var r = s("414456"),
       })
     }), L = (0, c.useCardVariantsInfo)(C);
     return (0, a.jsxs)("div", {
-      className: n(f.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+      className: i(f.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
       children: [(0, a.jsx)(_.default, {
         title: r,
         cardVariantStyleInfo: L,
@@ -53,9 +53,9 @@ var r = s("414456"),
       }), A && (0, a.jsx)(E.default, {
         subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
         buttonText: h,
-        color: i.Button.Colors.GREEN,
-        look: i.Button.Looks.FILLED
-      }), 0 !== N.length && (s = null == L ? void 0 : L.descriptionCta, (null == s ? void 0 : s.hideOnHoverComponent) !== !0) && null != p && (0, a.jsx)(i.Button, {
+        color: n.Button.Colors.GREEN,
+        look: n.Button.Looks.FILLED
+      }), 0 !== N.length && (s = null == L ? void 0 : L.descriptionCta, (null == s ? void 0 : s.hideOnHoverComponent) !== !0) && null != p && (0, a.jsx)(n.Button, {
         onClick: p,
         children: N
       })]

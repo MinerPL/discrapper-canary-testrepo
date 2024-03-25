@@ -1,23 +1,23 @@
 "use strict";
-e.r(t), e.d(t, {
+n.r(e), n.d(e, {
   default: function() {
     return r
   }
 });
-var l = e("37983");
-e("884691");
-var i = e("77078"),
-  o = e("272030"),
-  a = e("773336"),
-  u = e("26051"),
-  c = e("782340");
+var l = n("37983");
+n("884691");
+var i = n("77078"),
+  o = n("272030"),
+  a = n("773336"),
+  u = n("26051"),
+  c = n("782340");
 
-function r(n) {
+function r(t) {
   let {
-    href: t,
-    textContent: e,
+    href: e,
+    textContent: n,
     onSelect: r
-  } = n, s = (0, u.default)(t, e);
+  } = t, s = (0, u.default)(e, n);
   return a.isPlatformEmbedded && null != s ? (0, l.jsx)(i.Menu, {
     navId: "image-context",
     onClose: o.closeContextMenu,

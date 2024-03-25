@@ -11,10 +11,10 @@ var n = l("77078"),
   s = l("810567"),
   r = l("522049"),
   o = l("474571"),
-  d = l("311207"),
-  u = l("49111"),
+  u = l("311207"),
+  d = l("49111"),
   c = l("782340"),
-  f = l("552986");
+  f = l("216855");
 
 function p(e) {
   let {
@@ -35,7 +35,7 @@ function p(e) {
       children: c.default.Messages.CLIPS
     }), (0, a.jsx)("div", {
       className: f.betaTag,
-      children: (0, a.jsx)(d.default, {})
+      children: (0, a.jsx)(u.default, {})
     }), (0, a.jsx)(s.default, {
       autoFocus: !0,
       size: s.default.Sizes.MEDIUM,
@@ -63,7 +63,7 @@ function p(e) {
       className: f.settingsButton,
       look: n.Button.Looks.FILLED,
       onClick: () => {
-        i.default.open(u.UserSettingsSections.CLIPS), p()
+        i.default.open(d.UserSettingsSections.CLIPS), p()
       },
       children: (0, a.jsx)(o.default, {})
     }), (0, a.jsx)(n.ModalCloseButton, {

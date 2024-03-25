@@ -14,8 +14,8 @@ var l = n("77078"),
   u = n("697218"),
   d = n("340412"),
   c = n("719923"),
-  f = n("540692"),
-  E = n("456015"),
+  E = n("540692"),
+  f = n("456015"),
   _ = n("982457"),
   T = n("1607"),
   I = n("157829"),
@@ -77,7 +77,7 @@ class N extends i.default {
       let e = u.default.getCurrentUser();
       if (null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer()) {
         let e = (0, I.shouldHitUserOfferEndPoints)("PremiumManager");
-        e ? (0, E.fetchUserOffer)() : _.default.fetchUserTrialOffer()
+        e ? (0, f.fetchUserOffer)() : _.default.fetchUserTrialOffer()
       }
     }, this._maybeFetchReferralsRemaining = () => {
       let e = u.default.getCurrentUser(),
@@ -88,7 +88,7 @@ class N extends i.default {
         }, {
           autoTrackExposure: !1
         });
-      t && null != e && e.verified && (0, c.isPremiumExactly)(e, m.PremiumTypes.TIER_2) && f.default.checkAndFetchReferralsRemaining()
+      t && null != e && e.verified && (0, c.isPremiumExactly)(e, m.PremiumTypes.TIER_2) && E.default.checkAndFetchReferralsRemaining()
     }, this._handlePremiumPaymentModalOpen = e => {
       (0, o.default)({
         ...e,

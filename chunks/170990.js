@@ -24,8 +24,8 @@ function c(e) {
       var e;
       return (null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === a
     }, [a]),
-    [p, T] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.isFriend(a), s.default.isBlocked(a)], [a]),
-    [A, S] = n.useState(!1);
+    [p, A] = (0, l.useStateFromStoresArray)([s.default], () => [s.default.isFriend(a), s.default.isBlocked(a)], [a]),
+    [T, S] = n.useState(!1);
   return f || I ? null : p ? (0, i.jsx)(d.MenuItem, {
     id: "remove-friend",
     label: r.default.Messages.REMOVE_FRIEND,
@@ -52,15 +52,15 @@ function c(e) {
     }
   }) : (0, i.jsx)(d.MenuItem, {
     id: "add-friend",
-    label: A ? r.default.Messages.ADD_FRIEND_BUTTON_AFTER : r.default.Messages.ADD_FRIEND,
+    label: T ? r.default.Messages.ADD_FRIEND_BUTTON_AFTER : r.default.Messages.ADD_FRIEND,
     action: () => {
-      !A && (u.default.addRelationship({
+      !T && (u.default.addRelationship({
         userId: a,
         context: {
           location: t
         }
       }), S(!0))
     },
-    disabled: T || A && !p
+    disabled: A || T && !p
   })
 }

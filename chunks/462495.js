@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return E
   }
 }), n("222007"), n("860677");
-var s = n("446674"),
-  a = n("913144"),
-  l = n("377253");
-let i = Object.freeze([]),
+var i = n("446674"),
+  l = n("913144"),
+  a = n("377253");
+let s = Object.freeze([]),
   r = {},
   o = {},
   u = {},
@@ -16,35 +16,35 @@ let i = Object.freeze([]),
 
 function f(e, t) {}
 
-function h() {
+function p() {
   c = {}
 }
 
-function C(e, t) {
+function m(e, t) {
   let n = r[e];
   return null != n && (r[e] = n.filter(e => e.id !== t), delete o[t], delete u[t], n.length !== r[e].length)
 }
 
-function p(e, t) {
+function h(e, t) {
   let n = r[e];
   if (null == n) return !1;
   r[e] = n.map(e => e.id === t.id ? {
     ...e,
     ...t
   } : e);
-  let s = u[t.id];
-  null != s && null != d[s.id] && (d[s.id] = {
-    ...d[s.id],
+  let i = u[t.id];
+  null != i && null != d[i.id] && (d[i.id] = {
+    ...d[i.id],
     ...t
   })
 }
-class m extends s.default.Store {
+class x extends i.default.Store {
   initialize() {
-    this.waitFor(l.default)
+    this.waitFor(a.default)
   }
   getFiles(e) {
     var t;
-    return null !== (t = r[e]) && void 0 !== t ? t : i
+    return null !== (t = r[e]) && void 0 !== t ? t : s
   }
   getMessageForFile(e) {
     return u[e]
@@ -56,8 +56,8 @@ class m extends s.default.Store {
     if (null != e) return c[e]
   }
 }
-m.displayName = "UploadStore";
-var E = new m(a.default, {
+x.displayName = "UploadStore";
+var E = new x(l.default, {
   CONNECTION_OPEN: function() {
     c = {}
   },
@@ -68,48 +68,48 @@ var E = new m(a.default, {
     var t;
     let {
       channelId: n,
-      file: s,
-      uploader: a,
-      message: l
+      file: i,
+      uploader: l,
+      message: a
     } = e;
-    if (a._aborted || a._errored) return;
-    let c = null !== (t = r[n]) && void 0 !== t ? t : i;
-    o[s.id] = a, r[n] = [...c, s], u[s.id] = l;
+    if (l._aborted || l._errored) return;
+    let c = null !== (t = r[n]) && void 0 !== t ? t : s;
+    o[i.id] = l, r[n] = [...c, i], u[i.id] = a;
     let {
       items: f
-    } = s;
-    null != f && (d[l.id] = {
-      ...s,
+    } = i;
+    null != f && (d[a.id] = {
+      ...i,
       items: f
-    }), l.nonce
+    }), a.nonce
   },
   UPLOAD_COMPRESSION_PROGRESS: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    p(t, n)
+    h(t, n)
   },
   UPLOAD_PROGRESS: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    p(t, n)
+    h(t, n)
   },
   UPLOAD_COMPLETE: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    return C(t, n.id)
+    return m(t, n.id)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    return C(t, n.id)
+    return m(t, n.id)
   },
   UPLOAD_CANCEL_REQUEST: function(e) {
     let {
@@ -125,16 +125,16 @@ var E = new m(a.default, {
     let {
       file: t,
       itemId: n
-    } = e, s = o[t.id];
-    if (null == s) return !1;
-    setImmediate(() => s.cancelItem(n))
+    } = e, i = o[t.id];
+    if (null == i) return !1;
+    setImmediate(() => i.cancelItem(n))
   },
   UPLOAD_FILE_UPDATE: function(e) {
     let {
       channelId: t,
       file: n
-    } = e, s = u[n.id];
-    null != s && s.nonce, p(t, n)
+    } = e, i = u[n.id];
+    null != i && i.nonce, h(t, n)
   },
   UPLOAD_RESTORE_FAILED_UPLOAD: function(e) {
     let {

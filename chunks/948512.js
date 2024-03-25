@@ -1,12 +1,12 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return n
+    return s
   }
 });
 var a = l("37983");
 
-function n(e) {
+function s(e) {
   let {
     width: t = 188,
     height: l = 90

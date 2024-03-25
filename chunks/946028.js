@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   createPrivateChannelIntegration: function() {
-    return r
+    return s
   }
 });
 var i = n("653047");
 
-function r(e) {
+function s(e) {
   return {
     ...e,
     application: i.default.createFromServer(e.application)

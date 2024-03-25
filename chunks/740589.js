@@ -17,10 +17,10 @@ function u(e) {
   let {
     author: u,
     inviteError: d
-  } = e, c = (0, l.useStateFromStores)([a.default], () => a.default.getId()), f = c === u.id, E = f ? o.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, _ = (0, r.getDescriptiveInviteError)(null == d ? void 0 : d.code);
+  } = e, c = (0, l.useStateFromStores)([a.default], () => a.default.getId()), E = c === u.id, f = E ? o.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, _ = (0, r.getDescriptiveInviteError)(null == d ? void 0 : d.code);
   return (0, s.jsxs)(i.default, {
     children: [(0, s.jsx)(i.default.Header, {
-      text: E
+      text: f
     }), (0, s.jsxs)(i.default.Body, {
       children: [(0, s.jsx)(i.default.Icon, {
         expired: !0

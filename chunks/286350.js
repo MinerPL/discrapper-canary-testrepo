@@ -1,7 +1,7 @@
 "use strict";
-var u, i;
+var i, r;
 n.r(e), n.d(e, {
   PurchaseState: function() {
-    return u
+    return i
   }
-}), (i = u || (u = {})).WAITING = "WAITING", i.PURCHASING = "PURCHASING", i.FAIL = "FAIL", i.COMPLETED = "COMPLETED"
+}), (r = i || (i = {})).WAITING = "WAITING", r.PURCHASING = "PURCHASING", r.FAIL = "FAIL", r.COMPLETED = "COMPLETED"

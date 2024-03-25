@@ -12,37 +12,37 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("446674"),
-  o = n("77078"),
-  u = n("272030"),
+  u = n("77078"),
+  o = n("272030"),
   d = n("851387"),
   c = n("407063"),
   f = n("239380"),
   h = n("813006"),
-  p = n("305961"),
-  m = n("580357"),
+  m = n("305961"),
+  p = n("580357"),
   E = n("476263"),
-  C = n("433487"),
-  g = n("987772"),
-  S = n("587974"),
+  g = n("433487"),
+  S = n("987772"),
+  C = n("587974"),
   _ = n("149279"),
   I = n("315102"),
   T = n("187163"),
   v = n("175703"),
   x = n("49111"),
   N = n("782340"),
-  A = n("477362"),
+  A = n("843143"),
   M = n("712967");
 let R = e => {
   let {
     onClick: t
   } = e;
-  return (0, a.jsxs)(o.Clickable, {
+  return (0, a.jsxs)(u.Clickable, {
     onClick: t,
     className: A.addEntryCard,
     children: [(0, a.jsx)("img", {
       alt: "",
       src: M
-    }), (0, a.jsx)(o.Text, {
+    }), (0, a.jsx)(u.Text, {
       variant: "text-sm/semibold",
       color: "header-primary",
       className: A.addServerText,
@@ -55,14 +55,14 @@ function j(e) {
   let {
     entry: t
   } = e, [s, r] = l.useState(!1), {
-    canEdit: u
+    canEdit: o
   } = (0, T.default)(t);
   return (0, a.jsx)("div", {
     className: i(A.actionButtonsContainer, {
       [A.forceButtonsShow]: s
     }),
     children: (0, a.jsxs)(_.default, {
-      children: [u ? (0, a.jsx)(o.Tooltip, {
+      children: [o ? (0, a.jsx)(u.Tooltip, {
         text: N.default.Messages.HUB_ENTRY_UPDATE,
         hideOnClick: !0,
         children: e => {
@@ -73,7 +73,7 @@ function j(e) {
           return (0, a.jsx)(_.Button, {
             ...s,
             onClick: () => {
-              null == l || l(), (0, o.openModalLazy)(async () => {
+              null == l || l(), (0, u.openModalLazy)(async () => {
                 let {
                   default: e
                 } = await n.el("895792").then(n.bind(n, "895792"));
@@ -84,7 +84,7 @@ function j(e) {
               })
             },
             "aria-label": N.default.Messages.HUB_ENTRY_UPDATE,
-            children: (0, a.jsx)(g.default, {
+            children: (0, a.jsx)(S.default, {
               className: A.overflowIcon
             })
           })
@@ -99,7 +99,7 @@ function j(e) {
             onClick: t,
             ...n
           } = e;
-          return (0, a.jsx)(o.Tooltip, {
+          return (0, a.jsx)(u.Tooltip, {
             text: N.default.Messages.MORE,
             hideOnClick: !0,
             children: e => {
@@ -114,7 +114,7 @@ function j(e) {
                   null == l || l(), t(e)
                 },
                 "aria-label": N.default.Messages.MORE,
-                children: (0, a.jsx)(C.default, {
+                children: (0, a.jsx)(g.default, {
                   className: A.overflowIcon
                 })
               })
@@ -129,14 +129,14 @@ var L = e => {
   var t;
   let {
     entry: s
-  } = e, [i, C] = l.useState(!1), g = (0, r.useStateFromStores)([p.default], () => p.default.getGuild(s.guildId)), _ = null != g, T = async () => {
-    C(!0);
+  } = e, [i, g] = l.useState(!1), S = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(s.guildId)), _ = null != S, T = async () => {
+    g(!0);
     try {
       _ ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
         source: x.JoinGuildSources.DIRECTORY_ENTRY
       })
     } finally {
-      C(!1)
+      g(!1)
     }
   }, v = I.default.getGuildSplashURL({
     id: s.guildId,
@@ -150,7 +150,7 @@ var L = e => {
   return _ && (R = N.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
     className: A.card,
     onContextMenu: e => {
-      (0, u.openContextMenuLazy)(e, async () => {
+      (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("184727").then(n.bind(n, "184727"));
@@ -171,8 +171,8 @@ var L = e => {
         })
       }), (0, a.jsx)("div", {
         className: A.guildIcon,
-        children: (0, a.jsx)(S.default, {
-          mask: S.default.Masks.SQUIRCLE,
+        children: (0, a.jsx)(C.default, {
+          mask: C.default.Masks.SQUIRCLE,
           width: 48,
           height: 48,
           children: (0, a.jsx)("div", {
@@ -191,17 +191,17 @@ var L = e => {
       className: A.guildInfo,
       children: [(0, a.jsxs)("div", {
         className: A.title,
-        children: [(0, a.jsx)(m.default, {
+        children: [(0, a.jsx)(p.default, {
           className: A.guildBadge,
           guild: s,
-          tooltipColor: o.Tooltip.Colors.PRIMARY
-        }), (0, a.jsx)(o.Text, {
+          tooltipColor: u.Tooltip.Colors.PRIMARY
+        }), (0, a.jsx)(u.Text, {
           className: A.guildName,
           variant: "heading-md/semibold",
           color: "header-primary",
           children: s.name
         })]
-      }), (0, a.jsx)(o.Text, {
+      }), (0, a.jsx)(u.Text, {
         className: A.description,
         variant: "text-sm/normal",
         color: "header-secondary",
@@ -212,7 +212,7 @@ var L = e => {
           className: A.memberCount,
           children: [(0, a.jsx)("div", {
             className: A.dotOnline
-          }), (0, a.jsx)(o.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
@@ -223,7 +223,7 @@ var L = e => {
           className: A.memberCount,
           children: [(0, a.jsx)("div", {
             className: A.dotOffline
-          }), (0, a.jsx)(o.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
             children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
@@ -231,10 +231,10 @@ var L = e => {
             })
           })]
         })]
-      }), (0, a.jsx)(o.Button, {
+      }), (0, a.jsx)(u.Button, {
         submitting: i,
         className: A.joinButton,
-        color: _ ? o.Button.Colors.PRIMARY : o.Button.Colors.GREEN,
+        color: _ ? u.Button.Colors.PRIMARY : u.Button.Colors.GREEN,
         onClick: T,
         children: R
       })]

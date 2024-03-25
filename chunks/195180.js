@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("629109"),
   s = n("42887"),
-  i = n("697218"),
-  l = n("861309"),
+  l = n("697218"),
+  i = n("861309"),
   r = n("716724"),
   o = n("56245"),
   u = n("492249"),
@@ -34,8 +34,8 @@ var a = n("629109"),
             volume: r,
             mute: o
           }
-        } = e, u = i.default.getCurrentUser();
-        if (null == i.default.getUser(t) || (null == u ? void 0 : u.id) === t) throw new l.default({
+        } = e, u = l.default.getCurrentUser();
+        if (null == l.default.getUser(t) || (null == u ? void 0 : u.id) === t) throw new i.default({
           errorCode: d.RPCErrors.INVALID_USER
         }, "Invalid user id: ".concat(t));
         if (null != n && a.default.setLocalPan(t, n.left, n.right), null != r && a.default.setLocalVolume(t, r), null != o) {
@@ -93,8 +93,8 @@ var a = n("629109"),
           args: {
             input: t,
             output: n,
-            mode: i,
-            automatic_gain_control: l,
+            mode: l,
+            automatic_gain_control: i,
             echo_cancellation: r,
             noise_suppression: u,
             qos: d,
@@ -103,12 +103,12 @@ var a = n("629109"),
             mute: E
           }
         } = e;
-        if (t && (null != t.device_id && a.default.setInputDevice(t.device_id), null != t.volume && a.default.setInputVolume(t.volume)), n && (null != n.device_id && a.default.setOutputDevice(n.device_id), null != n.volume && a.default.setOutputVolume(n.volume)), i) {
+        if (t && (null != t.device_id && a.default.setInputDevice(t.device_id), null != t.volume && a.default.setInputVolume(t.volume)), n && (null != n.device_id && a.default.setOutputDevice(n.device_id), null != n.volume && a.default.setOutputVolume(n.volume)), l) {
           let e = s.default.getMode(),
             t = s.default.getModeOptions();
-          null != i.type && (e = i.type), null != i.auto_threshold && (t.autoThreshold = i.auto_threshold), null != i.threshold && (t.threshold = i.threshold), null != i.shortcut && (t.shortcut = i.shortcut.map(e => [e.type, e.code])), null != i.delay && (t.delay = i.delay), a.default.setMode(e, t)
+          null != l.type && (e = l.type), null != l.auto_threshold && (t.autoThreshold = l.auto_threshold), null != l.threshold && (t.threshold = l.threshold), null != l.shortcut && (t.shortcut = l.shortcut.map(e => [e.type, e.code])), null != l.delay && (t.delay = l.delay), a.default.setMode(e, t)
         }
-        if (null != l && a.default.setAutomaticGainControl(l), null != r && a.default.setEchoCancellation(r), null != u && a.default.setNoiseSuppression(u), null != d && a.default.setQoS(d), null != c && a.default.setSilenceWarning(c), null != f) {
+        if (null != i && a.default.setAutomaticGainControl(i), null != r && a.default.setEchoCancellation(r), null != u && a.default.setNoiseSuppression(u), null != d && a.default.setQoS(d), null != c && a.default.setSilenceWarning(c), null != f) {
           let e = s.default.isSelfDeaf();
           (e && !f || !e && f) && a.default.toggleSelfDeaf()
         }

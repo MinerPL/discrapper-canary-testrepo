@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   CALL_START: function() {
-    return a
+    return u
   }
 });
 var i = n("659500"),
@@ -16,7 +16,7 @@ let l = {
       if (i.ComponentDispatch.hasSubscribers(o.ComponentActions.CALL_ACCEPT)) return i.ComponentDispatch.dispatch(o.ComponentActions.CALL_ACCEPT), !1
     }
   },
-  a = {
+  u = {
     binds: ["ctrl+'", "ctrl+shift+'"],
     comboKeysBindGlobal: !0,
     action(e) {

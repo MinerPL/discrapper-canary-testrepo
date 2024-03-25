@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useCurrentUserCommunicationDisabled: function() {
-    return s
+    return r
   },
   default: function() {
     return d
@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i = n("446674"),
-  a = n("26989"),
-  l = n("697218"),
-  r = n("509");
+var l = n("446674"),
+  i = n("26989"),
+  a = n("697218"),
+  s = n("509");
 
-function s(e) {
-  let t = (0, i.useStateFromStores)([l.default], () => l.default.getCurrentUser());
+function r(e) {
+  let t = (0, l.useStateFromStores)([a.default], () => a.default.getCurrentUser());
   return d(null == t ? void 0 : t.id, e)
 }
 
@@ -26,15 +26,15 @@ function u(e, t, n) {
 
 function o(e) {
   var t;
-  return [null !== (t = null == e ? void 0 : e.communicationDisabledUntil) && void 0 !== t ? t : null, (0, r.isMemberCommunicationDisabled)(e)]
+  return [null !== (t = null == e ? void 0 : e.communicationDisabledUntil) && void 0 !== t ? t : null, (0, s.isMemberCommunicationDisabled)(e)]
 }
 
 function d(e, t) {
-  let n = (0, i.useStateFromStores)([a.default], () => u(e, t, a.default), [t, e]);
+  let n = (0, l.useStateFromStores)([i.default], () => u(e, t, i.default), [t, e]);
   return o(n)
 }
 
 function c(e, t) {
-  let n = u(e, t, a.default);
+  let n = u(e, t, i.default);
   return o(n)
 }

@@ -22,22 +22,22 @@ n.r(t), n.d(t, {
     return c
   },
   MAX_CHOICE_LENGTH: function() {
-    return f
-  },
-  MAX_TEXT_RESPONSE_LENGTH: function() {
     return _
   },
+  MAX_TEXT_RESPONSE_LENGTH: function() {
+    return f
+  },
   MAX_PARAGRAPH_RESPONSE_LENGTH: function() {
-    return h
+    return E
   },
   MAX_DESCRIPTION_LENGTH: function() {
-    return g
+    return h
   },
   MEMBER_VERIFICATION_TYPE: function() {
-    return m
+    return g
   },
   IN_APP_MEMBER_VERIFICATION_MODAL_KEY: function() {
-    return E
+    return m
   }
 }), n("222007");
 var i, s = n("567054");
@@ -49,10 +49,10 @@ let r = new Set([s.VerificationFormFieldTypes.TERMS]),
   u = 300,
   d = 300,
   c = 8,
-  f = 150,
   _ = 150,
-  h = 1e3,
-  g = 300,
-  m = "Membership Gating",
-  E = "in-app-member-verification";
+  f = 150,
+  E = 1e3,
+  h = 300,
+  g = "Membership Gating",
+  m = "in-app-member-verification";
 (i || (i = {})).VERIFICATION_INFO = "VERIFICATION_INFO"

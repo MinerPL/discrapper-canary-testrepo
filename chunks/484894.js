@@ -1,41 +1,41 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(r), t.d(r, {
   OverridePremiumTypeDropDown: function() {
-    return c
+    return u
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("446674"),
-  l = s("77078"),
-  i = s("811199"),
-  r = s("285471"),
-  o = s("400205"),
-  d = s("697218"),
-  u = s("646718");
-let c = e => {
+var a = t("37983");
+t("884691");
+var n = t("446674"),
+  i = t("77078"),
+  o = t("811199"),
+  l = t("285471"),
+  s = t("400205"),
+  c = t("697218"),
+  d = t("646718");
+let u = e => {
   let {
-    isDevTools: t = !1
-  } = e, s = (0, n.useStateFromStores)([d.default], () => d.default.getCurrentUser()), c = (0, n.useStateFromStores)([o.default], () => o.default.getPremiumTypeOverride());
+    isDevTools: r = !1
+  } = e, t = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), u = (0, n.useStateFromStores)([s.default], () => s.default.getPremiumTypeOverride());
   return (0, a.jsxs)("div", {
-    children: [(0, a.jsx)(l.FormSection, {
+    children: [(0, a.jsx)(i.FormSection, {
       title: "Override Client-Side Premium Type",
-      tag: l.FormTitleTags.H3,
-      children: (0, a.jsx)(l.SingleSelect, {
-        options: u.PREMIUM_TYPE_OVERRIDE_OPTIONS,
-        value: c,
+      tag: i.FormTitleTags.H3,
+      children: (0, a.jsx)(i.SingleSelect, {
+        options: d.PREMIUM_TYPE_OVERRIDE_OPTIONS,
+        value: u,
         onChange: e => {
-          (0, r.updateClientPremiumTypeOverride)(e, s)
+          (0, l.updateClientPremiumTypeOverride)(e, t)
         },
-        popoutLayerContext: t ? i.devToolsLayerContext : void 0
+        popoutLayerContext: r ? o.devToolsLayerContext : void 0
       })
-    }), (0, a.jsx)(l.Button, {
-      look: l.Button.Looks.LINK,
+    }), (0, a.jsx)(i.Button, {
+      look: i.Button.Looks.LINK,
       style: {
         padding: "0"
       },
       onClick: () => {
-        (0, r.updateClientPremiumTypeOverride)(u.UNSELECTED_PREMIUM_TYPE_OVERRIDE, s)
+        (0, l.updateClientPremiumTypeOverride)(d.UNSELECTED_PREMIUM_TYPE_OVERRIDE, t)
       },
       children: "Reset premium type override"
     })]

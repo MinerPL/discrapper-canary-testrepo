@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("77078"),
   d = n("404118"),
   c = n("73961"),
-  f = n("465527"),
-  E = n("55620"),
+  E = n("465527"),
+  f = n("55620"),
   _ = n("79112"),
   T = n("308757"),
   I = n("997289"),
@@ -29,15 +29,15 @@ var s = n("37983"),
   M = n("552712"),
   O = n("167726"),
   R = n("471671"),
-  L = n("181114"),
-  v = n("216422"),
+  v = n("181114"),
+  L = n("216422"),
   P = n("599110"),
   D = n("568734"),
   x = n("719923"),
   y = n("882941"),
   U = n("49111"),
   j = n("782340"),
-  b = n("576057");
+  b = n("683372");
 class G extends l.Component {
   get analyticsLocation() {
     let {
@@ -64,10 +64,10 @@ class G extends l.Component {
       applicationId: t,
       targetSkuId: n
     } = this.props;
-    null == e && null != n && f.fetchSKU(t, n).catch(() => {})
+    null == e && null != n && E.fetchSKU(t, n).catch(() => {})
   }
   componentDidUpdate(e) {
-    this.props.locale !== e.locale && null != this.props.targetSkuId && f.fetchSKU(this.props.applicationId, this.props.targetSkuId).catch(() => {})
+    this.props.locale !== e.locale && null != this.props.targetSkuId && E.fetchSKU(this.props.applicationId, this.props.targetSkuId).catch(() => {})
   }
   async purchaseOrGrantSKU(e) {
     let {
@@ -76,10 +76,10 @@ class G extends l.Component {
       analyticsContext: s
     } = this.props;
     if (null != t && null != n) {
-      let n = await f.grantChannelBranchEntitlement(e.applicationId, t, e.id);
+      let n = await E.grantChannelBranchEntitlement(e.applicationId, t, e.id);
       return n
     }
-    let l = await f.purchaseSKU(e.applicationId, e.id, {
+    let l = await E.purchaseSKU(e.applicationId, e.id, {
       analyticsLoadId: s.loadId
     });
     return l.entitlements
@@ -110,8 +110,8 @@ class G extends l.Component {
         fullWidth: o,
         size: d,
         isWindowFocused: c,
-        color: f,
-        customDisabledColor: E,
+        color: E,
+        customDisabledColor: f,
         pauseAnimation: _,
         isEntitled: T,
         asGift: I,
@@ -128,14 +128,14 @@ class G extends l.Component {
         className: r,
         fullWidth: o,
         size: d,
-        color: C && null != E ? E : null != f ? f : u.Button.Colors.GREEN,
+        color: C && null != f ? f : null != E ? E : u.Button.Colors.GREEN,
         hover: this.hover,
         innerClassName: i(null != S ? S : null, b.applicationBuyButton),
         disabled: C,
         submitting: l || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
       };
-    return (t = !0 === n.useShinyButton ? (0, s.jsxs)(L.default, {
+    return (t = !0 === n.useShinyButton ? (0, s.jsxs)(v.default, {
       ...g,
       pauseAnimation: !c || _,
       children: [n.buttonIcon, e]
@@ -168,7 +168,7 @@ class G extends l.Component {
       isInTestMode: r
     } = this.props, o = {
       useShinyButton: !0,
-      buttonIcon: (0, s.jsx)(v.default, {
+      buttonIcon: (0, s.jsx)(L.default, {
         className: b.premiumIcon
       })
     };
@@ -201,10 +201,10 @@ class G extends l.Component {
         onClick: l
       } = this.props;
       if (null == t) throw Error("Unexpected missing sku");
-      null != l && l(e), null != n ? (0, E.goToSKUStoreListing)(t.id, {
+      null != l && l(e), null != n ? (0, f.goToSKUStoreListing)(t.id, {
         analyticsSource: this.analyticsLocation,
         slug: t.slug
-      }) : null != s && (0, E.goToApplicationStoreListing)(s.id, {
+      }) : null != s && (0, f.goToApplicationStoreListing)(s.id, {
         analyticsSource: this.analyticsLocation,
         slug: s.slug
       })
@@ -218,8 +218,8 @@ class G extends l.Component {
         isUserPremium: i,
         onClick: o,
         isInTestMode: u,
-        storeListingAnalyticsProperties: f,
-        asGift: E,
+        storeListingAnalyticsProperties: E,
+        asGift: f,
         forceDistribution: I
       } = this.props;
       if (null == s) throw Error("should not be able to buy without sku");
@@ -241,8 +241,8 @@ class G extends l.Component {
         if ((s.requiresPayment || I) && !m) {
           if (null != l) try {
             await (0, T.openSKUPaymentModal)(n, l, this.analyticsLocation, {
-              promotionId: null != f ? f.promotionId : null,
-              isGift: E
+              promotionId: null != E ? E.promotionId : null,
+              isGift: f
             })
           } catch (e) {
             e === U.PaymentModalPriceChangedError && d.default.show({
@@ -281,7 +281,7 @@ var B = l.forwardRef((e, t) => {
     channelId: a,
     skuId: i,
     ...r
-  } = e, u = (0, o.useStateFromStores)([m.default, O.default], () => O.default.inTestModeForApplication(l) || m.default.inDevModeForApplication(l), [l]), [d, c, f, E, _, T] = (0, o.useStateFromStoresArray)([N.default, C.default, M.default, h.default], () => {
+  } = e, u = (0, o.useStateFromStores)([m.default, O.default], () => O.default.inTestModeForApplication(l) || m.default.inDevModeForApplication(l), [l]), [d, c, E, f, _, T] = (0, o.useStateFromStoresArray)([N.default, C.default, M.default, h.default], () => {
     let e = N.default.getApplication(l),
       t = C.default.getCurrentUser(),
       s = null == i && null != e ? e.destinationSkuId : i,
@@ -290,7 +290,7 @@ var B = l.forwardRef((e, t) => {
       o = null != s ? h.default.isEntitledToSku(t, s, l, r) : null,
       u = x.default.canInstallPremiumApplications(t);
     return [e, t, a, o, u, s]
-  }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), S = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), L = (0, o.useStateFromStores)([A.default], () => A.default.locale), v = (0, I.useAnalyticsContext)();
+  }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), S = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), v = (0, o.useStateFromStores)([A.default], () => A.default.locale), L = (0, I.useAnalyticsContext)();
   if (null != n && null == a) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, s.jsx)(G, {
     ...r,
@@ -299,15 +299,15 @@ var B = l.forwardRef((e, t) => {
     entitlementBranchId: n,
     channelId: a,
     application: d,
-    sku: f,
+    sku: E,
     isAuthenticated: null != c,
     isInTestMode: u,
-    isEntitled: E,
+    isEntitled: f,
     isUserPremium: _,
     isWindowFocused: p,
     isPurchasing: S,
-    locale: L,
-    analyticsContext: v,
+    locale: v,
+    analyticsContext: L,
     ref: t,
     targetSkuId: T
   })

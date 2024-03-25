@@ -9,11 +9,11 @@ var a = l("866227"),
   u = l("851387"),
   i = {
     async setCommunicationDisabledDuration(e, t, l, a, i) {
-      let s = null != l ? n().add(l, "s").toISOString() : null;
+      let d = null != l ? n().add(l, "s").toISOString() : null;
       await u.default.setCommunicationDisabledUntil({
         guildId: e,
         userId: t,
-        communicationDisabledUntilTimestamp: s,
+        communicationDisabledUntilTimestamp: d,
         duration: l,
         reason: a,
         location: i

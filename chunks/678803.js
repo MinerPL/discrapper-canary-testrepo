@@ -22,7 +22,7 @@ function r(e, t) {
       (0, i.openModalLazy)(async () => {
         let {
           default: i
-        } = await n("723653");
+        } = await n("151622");
         return n => (0, a.jsx)(i, {
           channelId: e.channel_id,
           messageId: e.id,

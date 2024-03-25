@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -12,14 +12,14 @@ var s = n("37983"),
   i = n("734990"),
   E = n("790618"),
   _ = n("782340"),
-  u = n("679012");
+  u = n("917908");
 
-function d(e) {
+function T(e) {
   var t;
   let {
     isSlideReady: n,
-    error: d,
-    setEmailToken: T,
+    error: T,
+    setEmailToken: d,
     setError: S,
     onNext: N,
     onClose: c
@@ -36,7 +36,7 @@ function d(e) {
       let {
         token: e
       } = await (0, i.confirmEmailChange)(I);
-      T(e), N()
+      d(e), N()
     } catch (t) {
       let e = new l.default(t);
       S(e.getAnyErrorMessage())
@@ -79,7 +79,7 @@ function d(e) {
       className: u.content,
       children: [(0, s.jsx)(r.FormItem, {
         title: _.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
-        error: null != d ? d : null == O ? void 0 : null === (t = O.email_token) || void 0 === t ? void 0 : t[0],
+        error: null != T ? T : null == O ? void 0 : null === (t = O.email_token) || void 0 === t ? void 0 : t[0],
         children: (0, s.jsx)(r.TextInput, {
           value: I,
           onChange: f,

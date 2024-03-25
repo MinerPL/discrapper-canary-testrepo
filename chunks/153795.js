@@ -1,12 +1,12 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return c
+    return s
   }
 }), r("70102"), r("854508");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("506063"),
   u = r("385961"),
   l = function() {
@@ -20,7 +20,7 @@ var n = r("884691"),
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  c = function(e) {
+  s = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -78,7 +78,7 @@ var n = r("884691"),
           i = t.black,
           u = t.pointer,
           l = t.circle,
-          c = (0, a.default)({
+          s = (0, o.default)({
             default: {
               color: {
                 absolute: "0px 0px 0px 0px",
@@ -119,24 +119,24 @@ var n = r("884691"),
           }, {
             custom: !!this.props.style
           });
-        return o.createElement("div", {
-          style: c.color,
+        return a.createElement("div", {
+          style: s.color,
           ref: function(t) {
             return e.container = t
           },
           onMouseDown: this.handleMouseDown,
           onTouchMove: this.handleChange,
           onTouchStart: this.handleChange
-        }, o.createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), o.createElement("div", {
-          style: c.white,
+        }, a.createElement("style", null, "\n          .saturation-white {\n            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));\n            background: linear-gradient(to right, #fff, rgba(255,255,255,0));\n          }\n          .saturation-black {\n            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));\n            background: linear-gradient(to top, #000, rgba(0,0,0,0));\n          }\n        "), a.createElement("div", {
+          style: s.white,
           className: "saturation-white"
-        }, o.createElement("div", {
-          style: c.black,
+        }, a.createElement("div", {
+          style: s.black,
           className: "saturation-black"
-        }), o.createElement("div", {
-          style: c.pointer
-        }, this.props.pointer ? o.createElement(this.props.pointer, this.props) : o.createElement("div", {
-          style: c.circle
+        }), a.createElement("div", {
+          style: s.pointer
+        }, this.props.pointer ? a.createElement(this.props.pointer, this.props) : a.createElement("div", {
+          style: s.circle
         }))))
       }
     }]), t

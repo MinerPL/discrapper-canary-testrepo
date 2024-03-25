@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   },
   default: function() {
-    return f
+    return _
   }
 }), n("222007");
 var i, s, r = n("446674"),
@@ -41,7 +41,7 @@ class c extends r.default.Store {
   }
 }
 c.displayName = "ApplicationDirectoryApplicationsStore";
-var f = new c(a.default, {
+var _ = new c(a.default, {
   APPLICATION_DIRECTORY_FETCH_APPLICATION: function(e) {
     let {
       applicationId: t

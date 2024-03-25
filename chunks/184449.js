@@ -1,10 +1,10 @@
-var n = r("169828");
+var r = n("169828");
 e.exports = function(e, t) {
-  return function(r, o) {
-    if (null == r) return r;
-    if (!n(r)) return e(r, o);
-    for (var a = r.length, i = t ? a : -1, u = Object(r);
-      (t ? i-- : ++i < a) && !1 !== o(u[i], i, u););
-    return r
+  return function(n, i) {
+    if (null == n) return n;
+    if (!r(n)) return e(n, i);
+    for (var o = n.length, s = t ? o : -1, a = Object(n);
+      (t ? s-- : ++s < o) && !1 !== i(a[s], s, a););
+    return n
   }
 }

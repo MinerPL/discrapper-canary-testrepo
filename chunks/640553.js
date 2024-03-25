@@ -9,26 +9,26 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("917351"),
-  o = n("446674"),
-  u = n("255397"),
+  u = n("446674"),
+  o = n("255397"),
   d = n("191145"),
   c = n("660478"),
   f = n("18494"),
   h = n("191542"),
-  p = n("378765"),
-  m = n("115531"),
+  m = n("378765"),
+  p = n("115531"),
   E = n("585513"),
-  C = n("981913"),
-  g = n("49111"),
-  S = n("782340");
+  g = n("981913"),
+  S = n("49111"),
+  C = n("782340");
 
 function _(e) {
-  let t = (0, o.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
-    n = (0, o.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === e, [e]),
+  let t = (0, u.useStateFromStores)([h.default], () => !(0, r.isEmpty)(h.default.getTypingUsers(e)), [e]),
+    n = (0, u.useStateFromStores)([f.default], () => f.default.getVoiceChannelId() === e, [e]),
     {
       unreadCount: a,
       mentionCount: l
-    } = (0, o.useStateFromStoresObject)([c.default], () => ({
+    } = (0, u.useStateFromStoresObject)([c.default], () => ({
       unreadCount: c.default.getUnreadCount(e),
       mentionCount: c.default.getMentionCount(e)
     }), [e]);
@@ -74,7 +74,7 @@ function T(e) {
       disabled: v
     } = T,
     x = l.useRef(null),
-    N = (0, o.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
+    N = (0, u.useStateFromStores)([d.default], () => d.default.getChatOpen(n), [n]),
     {
       isShowing: A,
       unreadCount: M,
@@ -89,7 +89,7 @@ function T(e) {
         i(t > 0);
         let e = setTimeout(() => {
           i(!1)
-        }, m.TOAST_LINGER_MS);
+        }, p.TOAST_LINGER_MS);
         return () => {
           clearTimeout(e), i(!1)
         }
@@ -100,7 +100,7 @@ function T(e) {
       }
     }(n),
     j = l.useCallback(() => {
-      null == c || c(), !N && h && (null == E || E()), u.default.updateChatOpen(n, !N)
+      null == c || c(), !N && h && (null == E || E()), o.default.updateChatOpen(n, !N)
     }, [n, N, c, h, E]),
     L = l.useCallback(e => {
       let {
@@ -111,42 +111,42 @@ function T(e) {
         channelId: n
       })
     }, [n]),
-    O = l.useCallback(() => {
+    y = l.useCallback(() => {
       var e;
       null === (e = x.current) || void 0 === e || e.focus()
     }, []);
-  (0, p.useComponentAction)({
-    event: g.ComponentActions.FOCUS_CHAT_BUTTON,
-    handler: v ? null : O
+  (0, m.useComponentAction)({
+    event: S.ComponentActions.FOCUS_CHAT_BUTTON,
+    handler: v ? null : y
   });
-  let [y, P] = l.useState(!1), b = l.useCallback(() => {
+  let [O, P] = l.useState(!1), D = l.useCallback(() => {
     f && P(!0)
   }, [f]);
-  (0, p.useComponentAction)({
-    event: g.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
-    handler: b
+  (0, m.useComponentAction)({
+    event: S.ComponentActions.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+    handler: D
   }), l.useEffect(() => {
     let e;
-    return y && (e = setTimeout(() => {
+    return O && (e = setTimeout(() => {
       P(!1)
     }, 3e3)), () => {
       clearTimeout(e)
     }
-  }, [y]), t = f && v ? S.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? S.default.Messages.VIDEO_CALL_HIDE_CHAT : S.default.Messages.VIDEO_CALL_SHOW_CHAT;
-  let D = [t];
-  return R > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
+  }, [O]), t = f && v ? C.default.Messages.TEXT_IN_VOICE_POPOUT_DISABLED : N ? C.default.Messages.VIDEO_CALL_HIDE_CHAT : C.default.Messages.VIDEO_CALL_SHOW_CHAT;
+  let b = [t];
+  return R > 0 && b.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_MENTIONS.format({
     mentionCount: R
-  })), M > 0 && D.push(S.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(C.default, {
+  })), M > 0 && b.push(C.default.Messages.GUILD_SIDEBAR_CHANNEL_A11Y_LABEL_UNREAD), (0, a.jsx)(g.default, {
     buttonRef: x,
     onClick: j,
     label: t,
-    "aria-label": D.join(", "),
+    "aria-label": b.join(", "),
     iconComponent: L,
     tooltipPosition: "bottom",
     wrapperClassName: i(s, null != r && {
       [r]: A
     }),
-    forceTooltipOpen: y,
+    forceTooltipOpen: O,
     ...T
   })
 }

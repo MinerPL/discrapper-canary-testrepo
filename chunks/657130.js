@@ -4,19 +4,19 @@ s.r(t), s.d(t, {
     return E
   }
 }), s("222007");
-var r = s("37983"),
-  n = s("884691"),
+var n = s("37983"),
+  r = s("884691"),
   a = s("446674"),
-  i = s("850068"),
-  l = s("112679"),
+  l = s("850068"),
+  i = s("112679"),
   o = s("926223"),
   u = s("758764"),
   d = s("357957"),
   c = s("45640"),
   p = s("803427"),
-  h = s("49111");
-let S = [c.Steps.REVIEW, c.Steps.CONFIRM];
-class f extends n.Component {
+  S = s("49111");
+let h = [c.Steps.REVIEW, c.Steps.CONFIRM];
+class f extends r.Component {
   get stepsToRender() {
     let {
       prependSteps: e
@@ -32,84 +32,84 @@ class f extends n.Component {
     return 0 === t || !this._hasChangedSteps
   }
   componentDidMount() {
-    !d.default.hasFetchedPaymentSources && i.fetchPaymentSources()
+    !d.default.hasFetchedPaymentSources && l.fetchPaymentSources()
   }
   componentDidUpdate(e, t) {
     let {
       onStepChange: s
     } = this.props, {
-      step: r
+      step: n
     } = this.state;
-    r !== t.step && (this._hasChangedSteps = !0, null != s && s(t.step, r))
+    n !== t.step && (this._hasChangedSteps = !0, null != s && s(t.step, n))
   }
   static getDerivedStateFromProps(e, t) {
     let {
       billingError: s,
-      isAwaitingAuthentication: r
+      isAwaitingAuthentication: n
     } = e, {
-      errorStep: n
+      errorStep: r
     } = t, a = {};
-    if (null == s) null != n && (a.errorStep = null);
+    if (null == s) null != r && (a.errorStep = null);
     else {
       let e = (0, c.errorToStep)(s);
       null != e && e !== t.errorStep && (a.step = e, a.errorStep = e)
     }
-    return null == t.paymentSourceId && null != e.defaultPaymentSourceId && (a.paymentSourceId = e.defaultPaymentSourceId), r ? a.step = c.Steps.AWAITING_AUTHENTICATION : t.step === c.Steps.AWAITING_AUTHENTICATION && (null != s ? a.step = c.Steps.REVIEW : a.step = c.Steps.CONFIRM), a
+    return null == t.paymentSourceId && null != e.defaultPaymentSourceId && (a.paymentSourceId = e.defaultPaymentSourceId), n ? a.step = c.Steps.AWAITING_AUTHENTICATION : t.step === c.Steps.AWAITING_AUTHENTICATION && (null != s ? a.step = c.Steps.REVIEW : a.step = c.Steps.CONFIRM), a
   }
   render() {
     let {
       isPurchasing: e,
       canSubmit: t,
       submitButtonText: s,
-      useShinySubmitButton: n,
+      useShinySubmitButton: r,
       legalNotice: a,
-      renderHeader: i,
-      onPaymentSourceChange: l,
+      renderHeader: l,
+      onPaymentSourceChange: i,
       price: o,
       onClearError: u,
       size: d,
-      renderConfirmationBody: h,
-      renderConfirmationFooter: S,
+      renderConfirmationBody: S,
+      renderConfirmationFooter: h,
       className: f,
       isGift: E,
-      isGiftable: P,
+      isGiftable: _,
       needsToBeGift: A,
-      onIsGiftUpdate: _,
-      transitionState: m
+      onIsGiftUpdate: P,
+      transitionState: I
     } = this.props, C = {
       [c.Steps.CONFIRM]: {
-        renderBody: h,
-        renderFooter: S
+        renderBody: S,
+        renderFooter: h
       },
       [c.Steps.SELECT_PLAN]: {
         renderBody: () => this.props.renderSelectPlanBody(this.handleSelectPlan),
         renderFooter: () => this.props.renderSelectPlanFooter()
       }
     }, {
-      step: I,
-      paymentSourceId: T
-    } = this.state, N = this.stepsToRender;
-    return (0, r.jsx)(p.default, {
-      transitionState: m,
+      step: T,
+      paymentSourceId: m
+    } = this.state, R = this.stepsToRender;
+    return (0, n.jsx)(p.default, {
+      transitionState: I,
       className: f,
       isPurchasing: e,
       canSubmit: t,
       submitButtonText: s,
-      useShinySubmitButton: n,
+      useShinySubmitButton: r,
       legalNotice: a,
-      renderHeader: i,
-      onPaymentSourceChange: l,
+      renderHeader: l,
+      onPaymentSourceChange: i,
       price: o,
       onClearError: u,
       size: d,
       extraRenderers: C,
-      step: I,
-      steps: N,
-      paymentSourceId: T,
-      isGiftable: P,
+      step: T,
+      steps: R,
+      paymentSourceId: m,
+      isGiftable: _,
       isGift: E,
       needsToBeGift: A,
-      onIsGiftUpdate: _,
+      onIsGiftUpdate: P,
       onBack: this.handleBack,
       onChoosePaymentType: this.handleChoosePaymentType,
       onCreditCardContinue: this.handleCreditCardContinue,
@@ -154,14 +154,14 @@ class f extends n.Component {
         onClose: t
       } = this.props, {
         step: s,
-        steps: r
-      } = this.state, n = this.stepsToRender, a = (0, c.getStepIndex)(s, n);
+        steps: n
+      } = this.state, r = this.stepsToRender, a = (0, c.getStepIndex)(s, r);
       if (a > 0) {
-        let e = n[a - 1],
+        let e = r[a - 1],
           t = e === c.Steps.PAYMENT_TYPE;
-        t && l.clearError(), this.setState({
+        t && i.clearError(), this.setState({
           step: e,
-          steps: t ? p.ADD_PAYMENT_STEPS : r
+          steps: t ? p.ADD_PAYMENT_STEPS : n
         })
       } else if ((0, c.canGoBack)(a, e)) {
         let {
@@ -175,37 +175,37 @@ class f extends n.Component {
       } else t()
     }, this.handleChoosePaymentType = e => {
       switch (e) {
-        case h.PaymentSourceTypes.PAYPAL:
+        case S.PaymentSourceTypes.PAYPAL:
           this.setState({
             step: c.Steps.PAYPAL,
             steps: p.ADD_PAYPAL_STEPS
           });
           break;
-        case h.PaymentSourceTypes.CARD:
+        case S.PaymentSourceTypes.CARD:
           this.setState({
             step: c.Steps.CREDIT_CARD_INFORMATION,
             steps: p.ADD_CARD_STEPS
           });
           break;
-        case h.PaymentSourceTypes.PAYMENT_REQUEST:
+        case S.PaymentSourceTypes.PAYMENT_REQUEST:
           this.setState({
             step: c.Steps.PAYMENT_REQUEST_INFO,
             steps: p.ADD_PAYMENT_REQUEST_STEPS
           });
           break;
-        case h.PaymentSourceTypes.GIROPAY:
+        case S.PaymentSourceTypes.GIROPAY:
           this.setState({
             step: c.Steps.ADDRESS,
             steps: p.ADD_GIROPAY_STEPS
           });
           break;
-        case h.PaymentSourceTypes.PAYSAFE_CARD:
+        case S.PaymentSourceTypes.PAYSAFE_CARD:
           this.setState({
             step: c.Steps.ADDRESS,
             steps: p.ADD_PAYSAFECARD_STEPS
           });
           break;
-        case h.PaymentSourceTypes.VENMO:
+        case S.PaymentSourceTypes.VENMO:
           this.setState({
             step: c.Steps.VENMO,
             steps: p.ADD_VENMO_STEPS
@@ -222,11 +222,11 @@ class f extends n.Component {
         onPurchase: t,
         isGift: s
       } = this.props, {
-        paymentSourceId: r
+        paymentSourceId: n
       } = this.state;
-      if (null != r) try {
-        await t(e[r], s), this.setState({
-          steps: S,
+      if (null != n) try {
+        await t(e[n], s), this.setState({
+          steps: h,
           step: c.Steps.CONFIRM
         })
       } catch (e) {}
@@ -241,11 +241,11 @@ class f extends n.Component {
     let {
       defaultPaymentSourceId: t,
       paymentSources: s,
-      initialStep: r
-    } = e, n = Object.values(s).length > 0, a = r;
-    null == a && (a = n ? c.Steps.REVIEW : c.Steps.PAYMENT_TYPE), this.state = {
+      initialStep: n
+    } = e, r = Object.values(s).length > 0, a = n;
+    null == a && (a = r ? c.Steps.REVIEW : c.Steps.PAYMENT_TYPE), this.state = {
       paymentSourceId: t,
-      steps: n ? p.REVIEW_PAYMENT_STEPS : p.ADD_PAYMENT_STEPS,
+      steps: r ? p.REVIEW_PAYMENT_STEPS : p.ADD_PAYMENT_STEPS,
       step: a,
       errorStep: null
     }
@@ -256,19 +256,19 @@ f.defaultProps = {
   needsToBeGift: !1,
   isGiftable: !1,
   isGift: !1,
-  renderConfirmationBody: h.NOOP_NULL,
-  renderConfirmationFooter: h.NOOP_NULL,
-  renderSelectPlanBody: h.NOOP_NULL,
-  renderSelectPlanFooter: h.NOOP_NULL
+  renderConfirmationBody: S.NOOP_NULL,
+  renderConfirmationFooter: S.NOOP_NULL,
+  renderSelectPlanBody: S.NOOP_NULL,
+  renderSelectPlanFooter: S.NOOP_NULL
 };
-var E = n.forwardRef((e, t) => {
-  let [s, n] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.paymentSources, d.default.defaultPaymentSourceId]), i = (0, a.useStateFromStores)([o.default], () => o.default.error), [l, c] = (0, a.useStateFromStoresArray)([u.default], () => [u.default.error, u.default.isAwaitingAuthentication]);
-  return (0, r.jsx)(f, {
+var E = r.forwardRef((e, t) => {
+  let [s, r] = (0, a.useStateFromStoresArray)([d.default], () => [d.default.paymentSources, d.default.defaultPaymentSourceId]), l = (0, a.useStateFromStores)([o.default], () => o.default.error), [i, c] = (0, a.useStateFromStoresArray)([u.default], () => [u.default.error, u.default.isAwaitingAuthentication]);
+  return (0, n.jsx)(f, {
     ...e,
     ref: t,
-    billingError: null != l ? l : i,
+    billingError: null != i ? i : l,
     paymentSources: s,
-    defaultPaymentSourceId: n,
+    defaultPaymentSourceId: r,
     isAwaitingAuthentication: c
   })
 })

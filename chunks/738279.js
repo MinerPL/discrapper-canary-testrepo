@@ -1,5 +1,5 @@
-var e = /\w*$/;
-t.exports = function(t) {
-  var r = new t.constructor(t.source, e.exec(t));
-  return r.lastIndex = t.lastIndex, r
+var n = /\w*$/;
+e.exports = function(e) {
+  var t = new e.constructor(e.source, n.exec(e));
+  return t.lastIndex = e.lastIndex, t
 }

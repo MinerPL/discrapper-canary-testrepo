@@ -1,26 +1,26 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("882982"),
-  c = r("281859"),
-  s = r("123090"),
-  f = r("113296"),
+  s = r("281859"),
+  f = r("123090"),
+  c = r("113296"),
   d = function(e) {
     var t = e.onChange,
       r = e.onSwatchHover,
       n = e.hex,
-      a = e.colors,
+      o = e.colors,
       i = e.width,
       d = e.triangle,
       p = e.styles,
       h = e.className,
       b = "transparent" === n,
       v = function(e, r) {
-        c.isValidHex(e) && t({
+        s.isValidHex(e) && t({
           hex: e,
           source: "hex"
         }, r)
@@ -48,7 +48,7 @@ var n = r("884691"),
           },
           label: {
             fontSize: "18px",
-            color: c.getContrastingColor(n),
+            color: s.getContrastingColor(n),
             position: "relative"
           },
           triangle: {
@@ -83,24 +83,24 @@ var n = r("884691"),
       }, void 0 === p ? {} : p), {
         "hide-triangle": "hide" === d
       });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: g.card,
       className: "block-picker " + (void 0 === h ? "" : h)
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: g.triangle
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: g.head
-    }, b && o.createElement(s.Checkboard, {
+    }, b && a.createElement(f.Checkboard, {
       borderRadius: "6px 6px 0 0"
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: g.label
-    }, n)), o.createElement("div", {
+    }, n)), a.createElement("div", {
       style: g.body
-    }, o.createElement(f.default, {
-      colors: a,
+    }, a.createElement(c.default, {
+      colors: o,
       onClick: v,
       onSwatchHover: r
-    }), o.createElement(s.EditableInput, {
+    }), a.createElement(f.EditableInput, {
       style: {
         input: g.input
       },
@@ -118,4 +118,4 @@ d.propTypes = {
   colors: ["#D9E3F0", "#F47373", "#697689", "#37D67A", "#2CCCE4", "#555555", "#dce775", "#ff8a65", "#ba68c8"],
   triangle: "top",
   styles: {}
-}, (0, s.ColorWrap)(d)
+}, (0, f.ColorWrap)(d)

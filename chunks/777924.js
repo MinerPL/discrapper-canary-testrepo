@@ -1,19 +1,19 @@
 "use strict";
 s.r(t), s.d(t, {
   CreateEmojiWithRolesModal: function() {
-    return A
+    return N
   },
   UpdateEmojiRolesModal: function() {
-    return N
+    return C
   }
 }), s("222007");
-var l = s("37983"),
-  a = s("884691"),
+var a = s("37983"),
+  l = s("884691"),
   i = s("414456"),
   n = s.n(i),
   r = s("917351"),
-  o = s.n(r),
-  d = s("748820"),
+  d = s.n(r),
+  o = s("748820"),
   u = s("77078"),
   c = s("150021"),
   h = s("162426"),
@@ -28,45 +28,45 @@ var l = s("37983"),
   M = s("547831"),
   R = s("49111"),
   I = s("782340"),
-  O = s("979923");
+  O = s("903058");
 let g = e => {
   let {
     className: t,
     onChange: s,
-    textVariant: a = "text-md/normal",
+    textVariant: l = "text-md/normal",
     label: i,
     value: r,
-    isArchived: o = !1
+    isArchived: d = !1
   } = e;
-  return (0, l.jsx)(u.Checkbox, {
+  return (0, a.jsx)(u.Checkbox, {
     size: 24,
     className: n(O.checklistRow, t),
     value: r,
     onChange: s,
     type: u.Checkbox.Types.INVERTED,
-    children: (0, l.jsxs)("div", {
+    children: (0, a.jsxs)("div", {
       className: O.checklistLabel,
-      children: [(0, l.jsx)(u.Text, {
+      children: [(0, a.jsx)(u.Text, {
         color: "interactive-active",
-        variant: a,
+        variant: l,
         children: i
-      }), o && (0, l.jsx)(x.TextBadge, {
+      }), d && (0, a.jsx)(x.TextBadge, {
         text: I.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_MANAGEMENT_ARCHIVED_LABEL
       })]
     })
   })
 };
 
-function v(e) {
+function A(e) {
   let {
     transitionState: t,
     onClose: s,
     initialRoleIds: i = [],
     listingChoices: n,
     emojiUrl: r,
-    saving: d,
+    saving: o,
     onSave: c
-  } = e, h = (0, m.useUID)(), [_, x] = a.useState(() => new Set(i)), f = a.useMemo(() => o.isEqual(_, new Set(n.map(e => {
+  } = e, h = (0, m.useUID)(), [_, x] = l.useState(() => new Set(i)), f = l.useMemo(() => d.isEqual(_, new Set(n.map(e => {
     let {
       role_id: t
     } = e;
@@ -77,46 +77,46 @@ function v(e) {
   }), M = () => {
     c(Array.from(_), s)
   };
-  return (0, l.jsxs)(u.ModalRoot, {
+  return (0, a.jsxs)(u.ModalRoot, {
     transitionState: t,
     "aria-labelledby": h,
-    children: [(0, l.jsxs)(u.ModalHeader, {
+    children: [(0, a.jsxs)(u.ModalHeader, {
       separator: !1,
-      children: [(0, l.jsxs)("div", {
+      children: [(0, a.jsxs)("div", {
         className: O.headerContent,
-        children: [(0, l.jsx)(S.default, {
+        children: [(0, a.jsx)(S.default, {
           src: r,
           width: 40,
           height: 40,
           alt: ""
-        }), (0, l.jsx)(E.default, {
+        }), (0, a.jsx)(E.default, {
           size: 16,
           horizontal: !0
-        }), (0, l.jsxs)("div", {
+        }), (0, a.jsxs)("div", {
           className: O.headerText,
-          children: [(0, l.jsx)(u.Heading, {
+          children: [(0, a.jsx)(u.Heading, {
             id: h,
             variant: "heading-md/semibold",
             children: I.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_ROLES_MODAL_HEADER
-          }), (0, l.jsx)(E.default, {
+          }), (0, a.jsx)(E.default, {
             size: 2
-          }), (0, l.jsx)(u.Text, {
+          }), (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "header-secondary",
             children: I.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_ROLES_MODAL_DESCRIPTION
           })]
         })]
-      }), (0, l.jsx)(u.ModalCloseButton, {
+      }), (0, a.jsx)(u.ModalCloseButton, {
         className: O.closeButton,
         onClick: s
       })]
-    }), (0, l.jsx)("div", {
+    }), (0, a.jsx)("div", {
       className: O.seperator
-    }), (0, l.jsx)(u.ModalContent, {
+    }), (0, a.jsx)(u.ModalContent, {
       className: O.modalContent,
-      children: (0, l.jsxs)("div", {
+      children: (0, a.jsxs)("div", {
         className: O.checklistContainer,
-        children: [(0, l.jsx)(g, {
+        children: [(0, a.jsx)(g, {
           className: O.selectAllCheckbox,
           label: I.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_ROLES_MODAL_SELECT_ALL_LABEL,
           textVariant: "text-md/semibold",
@@ -129,10 +129,10 @@ function v(e) {
               return t
             })))
           }
-        }, "allSubscriptionRoles"), n.map((e, t) => (0, l.jsxs)(l.Fragment, {
-          children: [0 !== t && (0, l.jsx)("div", {
+        }, "allSubscriptionRoles"), n.map((e, t) => (0, a.jsxs)(a.Fragment, {
+          children: [0 !== t && (0, a.jsx)("div", {
             className: O.seperator
-          }), (0, l.jsx)(g, {
+          }), (0, a.jsx)(g, {
             onChange: () => L(e.role_id),
             value: _.has(e.role_id),
             label: e.name,
@@ -140,15 +140,15 @@ function v(e) {
           }, e.role_id)]
         }))]
       })
-    }), (0, l.jsx)(u.ModalFooter, {
-      children: (0, l.jsx)(u.Tooltip, {
+    }), (0, a.jsx)(u.ModalFooter, {
+      children: (0, a.jsx)(u.Tooltip, {
         shouldShow: !j,
         text: I.default.Messages.GUILD_ROLE_SUBSCRIPTIONS_MANAGE_EMOJI_ROLES_MODAL_NEEDS_ONE_ROLE,
-        children: e => (0, l.jsx)(u.Button, {
+        children: e => (0, a.jsx)(u.Button, {
           ...e,
           "aria-label": I.default.Messages.SAVE,
           disabled: !j,
-          submitting: d,
+          submitting: o,
           onClick: M,
           children: I.default.Messages.SAVE
         })
@@ -157,34 +157,34 @@ function v(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     guildId: t,
     data: s,
     file: i,
     ...n
-  } = e, [r, o] = a.useState(!1), u = async (e, l) => {
+  } = e, [r, d] = l.useState(!1), u = async (e, a) => {
     try {
-      o(!0);
-      let a = (0, d.v4)();
+      d(!0);
+      let l = (0, o.v4)();
       f.default.track(R.AnalyticEvents.EMOJI_UPLOAD_STARTED, {
         guild_id: t,
-        upload_id: a
+        upload_id: l
       }), await (0, _.uploadEmojiFile)({
         guildId: t,
-        uploadId: a,
+        uploadId: l,
         data: s,
         file: i,
         roles: e
-      }), l()
+      }), a()
     } catch (e) {} finally {
-      o(!1)
+      d(!1)
     }
   }, c = (0, L.useSubscriptionListingsForGuild)(t, {
     includeSoftDeleted: !0,
     sortDeletedListingsLast: !0
   });
-  return (0, l.jsx)(v, {
+  return (0, a.jsx)(A, {
     emojiUrl: s,
     onSave: u,
     saving: r,
@@ -193,7 +193,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function C(e) {
   let {
     emoji: t,
     guildId: s,
@@ -203,20 +203,20 @@ function N(e) {
     animated: t.animated,
     size: 40
   }), [r, {
-    loading: o
-  }] = (0, h.default)(c.updateEmoji), d = async (e, l) => {
-    let a = await r({
+    loading: d
+  }] = (0, h.default)(c.updateEmoji), o = async (e, a) => {
+    let l = await r({
       guildId: s,
       emojiId: t.id,
       roles: e
     });
-    null != a && l()
+    null != l && a()
   }, u = (0, L.useSubscriptionListingsForGuild)(s, {
     includeSoftDeleted: !0
   });
   u.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
   let _ = (0, M.default)(s),
-    S = a.useMemo(() => {
+    S = l.useMemo(() => {
       let e = new Set(_.map(e => {
         let {
           id: t
@@ -225,11 +225,11 @@ function N(e) {
       }));
       return t.roles.filter(t => e.has(t))
     }, [t.roles, _]);
-  return (0, l.jsx)(v, {
+  return (0, a.jsx)(A, {
     emojiUrl: n,
-    onSave: d,
+    onSave: o,
     initialRoleIds: S,
-    saving: o,
+    saving: d,
     listingChoices: u,
     ...i
   })

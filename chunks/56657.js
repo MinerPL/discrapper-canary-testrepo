@@ -1,7 +1,7 @@
 "use strict";
 a.r(s), a.d(s, {
   default: function() {
-    return I
+    return f
   }
 });
 var t = a("37983");
@@ -19,13 +19,13 @@ var l = a("414456"),
   h = a("701909"),
   E = a("49111"),
   _ = a("782340"),
-  N = a("729819");
+  v = a("864555");
 
-function v() {
+function N() {
   return (0, t.jsx)("div", {
-    className: N.dummySwitch,
+    className: v.dummySwitch,
     children: (0, t.jsxs)("svg", {
-      className: N.dummySlider,
+      className: v.dummySlider,
       viewBox: "0 0 28 20",
       preserveAspectRatio: "xMinYMid meet",
       style: {
@@ -53,7 +53,7 @@ function v() {
   })
 }
 
-function I(e) {
+function f(e) {
   let {
     transitionState: s,
     onClose: a
@@ -63,87 +63,87 @@ function I(e) {
     "aria-labelledby": l,
     size: d.ModalSize.LARGE,
     children: [(0, t.jsx)(d.ModalCloseButton, {
-      className: N.closeButton,
+      className: v.closeButton,
       onClick: a
     }), (0, t.jsxs)(d.ModalContent, {
-      className: N.container,
+      className: v.container,
       children: [(0, t.jsx)(d.Heading, {
         id: l,
         color: "header-primary",
         variant: "heading-xl/medium",
         children: _.default.Messages.GUILD_FEED_NUX_CURATION_TITLE
       }), (0, t.jsx)(d.Text, {
-        className: N.subtitle,
+        className: v.subtitle,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: _.default.Messages.GUILD_FEED_NUX_CURATION_SUBTITLE
       }), (0, t.jsxs)("div", {
-        className: N.itemList,
+        className: v.itemList,
         children: [(0, t.jsx)("div", {
-          className: N.demoContainer,
+          className: v.demoContainer,
           children: (0, t.jsxs)("div", {
-            className: N.demoList,
+            className: v.demoList,
             children: [(0, t.jsxs)("div", {
-              className: N.demoItem,
+              className: v.demoItem,
               children: [(0, t.jsx)(d.Text, {
                 variant: "text-md/medium",
                 color: "interactive-normal",
                 children: _.default.Messages.ADD_REACTION
               }), (0, t.jsx)(o.default, {
-                className: N.demoIcon
+                className: v.demoIcon
               })]
             }), (0, t.jsxs)("div", {
-              className: i(N.demoItem, N.demoItemSelected),
+              className: i(v.demoItem, v.demoItemSelected),
               children: [(0, t.jsx)(d.Text, {
                 variant: "text-md/medium",
                 color: "interactive-active",
                 children: _.default.Messages.GUILD_FEED_FEATURE_MESSAGE
               }), (0, t.jsx)(c.default, {
-                className: i(N.demoIcon, N.demoIconActive, N.demoCaret)
+                className: i(v.demoIcon, v.demoIconActive, v.demoCaret)
               })]
             }), (0, t.jsxs)("div", {
-              className: N.demoItem,
+              className: v.demoItem,
               children: [(0, t.jsx)(d.Text, {
                 variant: "text-md/medium",
                 color: "interactive-normal",
                 children: _.default.Messages.PIN_MESSAGE
               }), (0, t.jsx)(u.default, {
-                className: N.demoIcon
+                className: v.demoIcon
               })]
             })]
           })
         }), (0, t.jsx)("div", {
-          className: N.demoContainer,
+          className: v.demoContainer,
           children: (0, t.jsxs)("div", {
-            className: N.demoList,
+            className: v.demoList,
             children: [(0, t.jsxs)("div", {
-              className: N.demoItem,
+              className: v.demoItem,
               children: [(0, t.jsx)(d.Text, {
                 variant: "text-md/medium",
                 color: "interactive-normal",
                 children: _.default.Messages.GUILD_FEED_HIDE_MESSAGE_ITEM
               }), (0, t.jsx)(m.default, {
-                className: N.demoIcon,
+                className: v.demoIcon,
                 foregroundColor: "currentColor"
               })]
             }), (0, t.jsxs)("div", {
-              className: i(N.demoItem, N.demoItemSelected),
+              className: i(v.demoItem, v.demoItemSelected),
               children: [(0, t.jsx)(d.Text, {
                 variant: "text-md/medium",
                 color: "interactive-active",
                 children: _.default.Messages.GUILD_FEED_REMOVE_MESSAGE_ITEM
               }), (0, t.jsx)(x.default, {
-                className: i(N.demoIcon, N.demoIconActive),
+                className: i(v.demoIcon, v.demoIconActive),
                 foregroundColor: "currentColor"
               })]
             })]
           })
         }), (0, t.jsx)("div", {
-          className: N.demoContainer,
+          className: v.demoContainer,
           children: (0, t.jsx)("div", {
-            className: N.demoList,
+            className: v.demoList,
             children: (0, t.jsxs)("div", {
-              className: N.demoItem,
+              className: v.demoItem,
               style: {
                 padding: 0
               },
@@ -151,44 +151,44 @@ function I(e) {
                 variant: "text-md/semibold",
                 color: "header-primary",
                 children: _.default.Messages.GUILD_FEED_DEMOTE_CHANNEL
-              }), (0, t.jsx)(v, {})]
+              }), (0, t.jsx)(N, {})]
             })
           })
         }), (0, t.jsxs)("div", {
-          className: N.textContainer,
+          className: v.textContainer,
           children: [(0, t.jsx)(d.Text, {
-            className: N.itemTitle,
+            className: v.itemTitle,
             variant: "text-md/medium",
             color: "header-primary",
             children: _.default.Messages.GUILD_FEED_NUX_CURATION_FEATURE_TITLE
           }), (0, t.jsx)(d.Text, {
-            className: N.itemSubtitle,
+            className: v.itemSubtitle,
             variant: "text-sm/normal",
             color: "header-secondary",
             children: _.default.Messages.GUILD_FEED_NUX_CURATION_FEATURE_SUBTITLE
           })]
         }), (0, t.jsxs)("div", {
-          className: N.textContainer,
+          className: v.textContainer,
           children: [(0, t.jsx)(d.Text, {
-            className: N.itemTitle,
+            className: v.itemTitle,
             variant: "text-md/medium",
             color: "header-primary",
             children: _.default.Messages.GUILD_FEED_NUX_CURATION_REMOVE_TITLE
           }), (0, t.jsx)(d.Text, {
-            className: N.itemSubtitle,
+            className: v.itemSubtitle,
             variant: "text-sm/normal",
             color: "header-secondary",
             children: _.default.Messages.GUILD_FEED_NUX_CURATION_REMOVE_SUBTITLE
           })]
         }), (0, t.jsxs)("div", {
-          className: N.textContainer,
+          className: v.textContainer,
           children: [(0, t.jsx)(d.Text, {
-            className: N.itemTitle,
+            className: v.itemTitle,
             variant: "text-md/medium",
             color: "header-primary",
             children: _.default.Messages.GUILD_FEED_NUX_CURATION_BLOCK_TITLE
           }), (0, t.jsx)(d.Text, {
-            className: N.itemSubtitle,
+            className: v.itemSubtitle,
             variant: "text-sm/normal",
             color: "header-secondary",
             children: _.default.Messages.GUILD_FEED_NUX_CURATION_BLOCK_SUBTITLE
@@ -200,7 +200,7 @@ function I(e) {
         onClick: a,
         children: _.default.Messages.OKAY
       }), (0, t.jsx)(d.Anchor, {
-        className: i(N.learnMore, (0, d.getButtonStyle)({
+        className: i(v.learnMore, (0, d.getButtonStyle)({
           look: d.Button.Looks.LINK,
           color: d.Button.Colors.PRIMARY
         })),

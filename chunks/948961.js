@@ -1,55 +1,55 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 }), n("222007"), n("424973");
 var i = n("823302");
 
-function r(e) {
+function s(e) {
   return {
     id: e.payloadType,
     name: e.mimeType.split("/").slice(1)[0]
   }
 }
 
-function s(e, t, n, s) {
+function r(e, t, n, r) {
   var a, o, l;
   let u = {},
-    c = {},
-    d = [],
-    f = [];
+    d = {},
+    c = [],
+    _ = [];
   for (let t of e.values()) switch (t.type) {
     case "candidate-pair":
       u[t.id] = t;
       break;
     case "codec":
-      c[t.id] = t;
+      d[t.id] = t;
       break;
     case "inbound-rtp":
-      d.push(t);
+      c.push(t);
       break;
     case "outbound-rtp":
-      f.push(t)
+      _.push(t)
   }
-  let E = Object.values(u).find(e => "succeeded" === e.state);
-  if (void 0 === E) return null;
-  let h = [];
-  for (let e of f) {
-    let t = c[e.codecId];
+  let f = Object.values(u).find(e => "succeeded" === e.state);
+  if (void 0 === f) return null;
+  let E = [];
+  for (let e of _) {
+    let t = d[e.codecId];
     if (null == t) continue;
-    let s = {
+    let r = {
       type: e.kind,
       ssrc: e.ssrc,
       timestamp: e.timestamp,
       sinkWant: (0, i.formatSinkWantStat)(n, e.ssrc, "video" === e.kind),
       sinkWantAsInt: (0, i.formatSinkWantAsInt)(n, e.ssrc),
-      codec: r(t),
+      codec: s(t),
       bytesSent: e.bytesSent,
       packetsSent: e.packetsSent
     };
-    if ("audio" === e.kind) h.push({
-      ...s,
+    if ("audio" === e.kind) E.push({
+      ...r,
       type: "audio"
     });
     else if ("video" === e.kind) {
@@ -58,8 +58,8 @@ function s(e, t, n, s) {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      h.push({
-        ...s,
+      E.push({
+        ...r,
         framesEncoded: e.framesEncoded,
         keyFramesEncoded: e.keyFramesEncoded,
         firCount: e.firCount,
@@ -75,9 +75,9 @@ function s(e, t, n, s) {
       })
     }
   }
-  let p = {};
-  for (let e of d) {
-    let a = c[e.codecId];
+  let h = {};
+  for (let e of c) {
+    let a = d[e.codecId];
     if (null == a) continue;
     let o = t(e.ssrc);
     if (null == o) continue;
@@ -87,27 +87,27 @@ function s(e, t, n, s) {
       timestamp: e.timestamp,
       sinkWant: (0, i.formatSinkWantStat)(n, e.ssrc, "video" === e.kind),
       sinkWantAsInt: (0, i.formatSinkWantAsInt)(n, e.ssrc),
-      sinkWantLocal: (0, i.formatSinkWantStat)(s, e.ssrc, "video" === e.kind),
-      codec: r(a),
+      sinkWantLocal: (0, i.formatSinkWantStat)(r, e.ssrc, "video" === e.kind),
+      codec: s(a),
       bytesReceived: e.bytesReceived,
       packetsReceived: e.packetsReceived,
       packetsLost: e.packetsLost
     };
     if ("audio" === e.kind) {
       let t = void 0 !== e.jitterBufferDelay && void 0 !== e.jitterBufferEmittedCount ? Math.round(1e3 * e.jitterBufferDelay / e.jitterBufferEmittedCount) : 0;
-      null == p[o] && (p[o] = []), p[o].push({
+      null == h[o] && (h[o] = []), h[o].push({
         ...l,
         audioLevel: e.audioLevel,
         jitter: 1e3 * e.jitter,
         jitterBuffer: t
       })
     } else if ("video" === e.kind) {
-      null == p[o] && (p[o] = []);
+      null == h[o] && (h[o] = []);
       let t = null !== e.frameWidth ? {
         width: e.frameWidth,
         height: e.frameHeight
       } : void 0;
-      p[o].push({
+      h[o].push({
         ...l,
         resolution: t,
         framesDecoded: e.framesDecoded,
@@ -124,17 +124,17 @@ function s(e, t, n, s) {
       })
     }
   }
-  let _ = (null !== (a = E.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
+  let g = (null !== (a = f.currentRoundTripTime) && void 0 !== a ? a : 0) * 1e3;
   return {
     transport: {
-      availableOutgoingBitrate: null !== (o = E.availableOutgoingBitrate) && void 0 !== o ? o : 0,
-      bytesReceived: E.bytesReceived,
-      bytesSent: E.bytesSent,
-      ping: _
+      availableOutgoingBitrate: null !== (o = f.availableOutgoingBitrate) && void 0 !== o ? o : 0,
+      bytesReceived: f.bytesReceived,
+      bytesSent: f.bytesSent,
+      ping: g
     },
     rtp: {
-      inbound: p,
-      outbound: h
+      inbound: h,
+      outbound: E
     }
   }
 }

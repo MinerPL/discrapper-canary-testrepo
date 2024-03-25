@@ -1,20 +1,20 @@
 "use strict";
 r.r(t), r.d(t, {
   get: function() {
-    return a
+    return o
   }
 });
 var n = {},
-  o = function(e, t, r, n) {
+  a = function(e, t, r, n) {
     if ("undefined" == typeof document && !n) return null;
-    var o = n ? new n : document.createElement("canvas");
-    o.width = 2 * r, o.height = 2 * r;
-    var a = o.getContext("2d");
-    return a ? (a.fillStyle = e, a.fillRect(0, 0, o.width, o.height), a.fillStyle = t, a.fillRect(0, 0, r, r), a.translate(r, r), a.fillRect(0, 0, r, r), o.toDataURL()) : null
+    var a = n ? new n : document.createElement("canvas");
+    a.width = 2 * r, a.height = 2 * r;
+    var o = a.getContext("2d");
+    return o ? (o.fillStyle = e, o.fillRect(0, 0, a.width, a.height), o.fillStyle = t, o.fillRect(0, 0, r, r), o.translate(r, r), o.fillRect(0, 0, r, r), a.toDataURL()) : null
   },
-  a = function(e, t, r, a) {
-    var i = e + "-" + t + "-" + r + (a ? "-server" : "");
+  o = function(e, t, r, o) {
+    var i = e + "-" + t + "-" + r + (o ? "-server" : "");
     if (n[i]) return n[i];
-    var u = o(e, t, r, a);
+    var u = a(e, t, r, o);
     return n[i] = u, u
   }

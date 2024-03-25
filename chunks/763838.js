@@ -18,16 +18,16 @@ var i = s("414456"),
   _ = s("500307"),
   f = s("49111"),
   h = s("782340"),
-  L = s("326386");
+  S = s("301794");
 
-function S(e) {
+function L(e) {
   let {
     pills: t
   } = e;
   return (0, l.jsx)("div", {
-    className: L.row,
+    className: S.row,
     children: t.map(e => (0, l.jsx)("div", {
-      className: L.pill,
+      className: S.pill,
       children: (0, l.jsx)(a.Text, {
         variant: "text-sm/normal",
         children: e
@@ -49,27 +49,27 @@ function x(e) {
   ];
   return (0, l.jsx)("div", {
     className: r({
-      [L.responsive]: i
+      [S.responsive]: i
     }),
     children: (0, l.jsxs)("div", {
-      className: L.container,
+      className: S.container,
       children: [(0, l.jsxs)("div", {
-        className: L.content,
+        className: S.content,
         children: [(0, l.jsx)("div", {
-          className: L.pillContainer,
-          children: x.map((e, t) => (0, l.jsx)(S, {
+          className: S.pillContainer,
+          children: x.map((e, t) => (0, l.jsx)(L, {
             pills: e
           }, "pill-row-".concat(t)))
         }), (0, l.jsxs)("div", {
-          className: L.ctaContent,
+          className: S.ctaContent,
           children: [(0, l.jsx)(a.Text, {
             variant: "text-lg/medium",
             color: "header-primary",
             children: h.default.Messages.GUILD_STORE_PREVIEW_MURAL_TITLE
           }), s && (0, l.jsxs)(u.default, {
             size: a.Button.Sizes.MEDIUM,
-            className: L.getStartedButton,
-            innerClassName: L.getStartedButtonContents,
+            className: S.getStartedButton,
+            innerClassName: S.getStartedButtonContents,
             shineSize: u.default.ShineSizes.SMALL,
             onClick: () => {
               C.default.track(f.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, {
@@ -78,20 +78,20 @@ function x(e) {
               }), o.default.open(t, f.GuildSettingsSections.GUILD_PRODUCTS)
             },
             children: [h.default.Messages.GUILD_SHOP_PREVIEW_CTA_BUTTON, (0, l.jsx)(c.default, {
-              className: L.getStartedArrow
+              className: S.getStartedArrow
             })]
           })]
         })]
       }), (0, l.jsxs)("div", {
-        className: L.muralImageContainer,
+        className: S.muralImageContainer,
         children: [(0, l.jsx)("img", {
           src: (0, d.getAssetCDNUrl)("server_products/storefront/preview-mural.png"),
           alt: "",
-          className: L.muralImage
+          className: S.muralImage
         }), (0, l.jsx)("img", {
           src: (0, d.getAssetCDNUrl)("server_products/storefront/preview-mural-reduced.png"),
           alt: "",
-          className: L.muralImageReducedWidth
+          className: S.muralImageReducedWidth
         })]
       })]
     })

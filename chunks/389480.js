@@ -1,62 +1,62 @@
 "use strict";
-var l, a, s, i, r, o, u, d, c, m, f, h, p, g;
+var i, l, a, s, r, o, u, d, c, f, p, m, h, x;
 
 function E(e, t) {
   let {
     sound_id: n,
-    emoji_id: l,
-    emoji_name: a,
-    user_id: s,
-    available: i,
+    emoji_id: i,
+    emoji_name: l,
+    user_id: a,
+    available: s,
     ...r
   } = e;
   return {
     ...r,
     soundId: n,
     guildId: t,
-    emojiId: l,
-    emojiName: a,
-    userId: s,
-    available: null == i || i
+    emojiId: i,
+    emojiName: l,
+    userId: a,
+    available: null == s || s
   }
 }
 
-function v(e) {
+function y(e) {
   let {
     soundId: t,
     guildId: n,
-    emojiId: l,
-    emojiName: a,
-    userId: s,
-    ...i
+    emojiId: i,
+    emojiName: l,
+    userId: a,
+    ...s
   } = e;
   return {
-    ...i,
+    ...s,
     sound_id: t,
     guild_id: n,
-    emoji_id: l,
-    emoji_name: a,
-    user_id: s
+    emoji_id: i,
+    emoji_name: l,
+    user_id: a
   }
 }
 n.r(t), n.d(t, {
   SoundButtonOverlay: function() {
-    return l
+    return i
   },
   AnalyticsSoundType: function() {
-    return a
+    return l
   },
   AnalyticsChangeType: function() {
-    return s
+    return a
   },
   AnalyticsSoundSource: function() {
-    return i
+    return s
   },
   soundboardSoundFromAPI: function() {
     return E
   },
   soundboardSoundToAPI: function() {
-    return v
+    return y
   },
   SoundboardSoundGridSectionType: function() {
     return r
@@ -67,4 +67,4 @@ n.r(t), n.d(t, {
   LocalSoundTrigger: function() {
     return u
   }
-}), (d = l || (l = {}))[d.PLAY = 0] = "PLAY", d[d.ADD = 1] = "ADD", (c = a || (a = {})).ENTRY = "entry_sound", c.EXIT = "exit_sound", c.DEFAULT = "default", (m = s || (s = {})).ADDED = "added", m.UPDATED = "updated", m.REMOVED = "removed", (f = i || (i = {})).DEFAULT = "default", f.CUSTOM = "custom", (h = r || (r = {}))[h.FAVORITES = 0] = "FAVORITES", h[h.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", h[h.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", h[h.GUILD = 3] = "GUILD", h[h.DEFAULTS = 4] = "DEFAULTS", h[h.SEARCH = 5] = "SEARCH", (p = o || (o = {}))[p.SOUND = 0] = "SOUND", p[p.ADD_SOUND = 1] = "ADD_SOUND", (g = u || (u = {}))[g.GIFT_CODE = 0] = "GIFT_CODE", g[g.SOUNDBOARD = 1] = "SOUNDBOARD", g[g.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"
+}), (d = i || (i = {}))[d.PLAY = 0] = "PLAY", d[d.ADD = 1] = "ADD", (c = l || (l = {})).ENTRY = "entry_sound", c.EXIT = "exit_sound", c.DEFAULT = "default", (f = a || (a = {})).ADDED = "added", f.UPDATED = "updated", f.REMOVED = "removed", (p = s || (s = {})).DEFAULT = "default", p.CUSTOM = "custom", (m = r || (r = {}))[m.FAVORITES = 0] = "FAVORITES", m[m.RECENTLY_HEARD = 1] = "RECENTLY_HEARD", m[m.FREQUENTLY_USED = 2] = "FREQUENTLY_USED", m[m.GUILD = 3] = "GUILD", m[m.DEFAULTS = 4] = "DEFAULTS", m[m.SEARCH = 5] = "SEARCH", (h = o || (o = {}))[h.SOUND = 0] = "SOUND", h[h.ADD_SOUND = 1] = "ADD_SOUND", (x = u || (u = {}))[x.GIFT_CODE = 0] = "GIFT_CODE", x[x.SOUNDBOARD = 1] = "SOUNDBOARD", x[x.JOINED_VOICE_CHANNEL = 2] = "JOINED_VOICE_CHANNEL"

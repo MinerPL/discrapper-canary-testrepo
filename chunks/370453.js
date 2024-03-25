@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("917351"),
   s = n.n(a),
-  i = n("686470"),
-  l = n("860957"),
+  l = n("686470"),
+  i = n("860957"),
   r = n("861309"),
   o = n("492249"),
   u = n("49111");
@@ -28,10 +28,10 @@ let d = {
         let {
           prevState: a,
           dispatch: r
-        } = e, o = l.default.enabled, u = !0, d = n.application.id;
+        } = e, o = i.default.enabled, u = !0, d = n.application.id;
         if (null != d) {
-          let e = i.default.getActiveLibraryApplication(d);
-          null != e && (o = o && e.isOverlayEnabled()), u = l.default.isInputLocked(t)
+          let e = l.default.getActiveLibraryApplication(d);
+          null != e && (o = o && e.isOverlayEnabled()), u = i.default.isInputLocked(t)
         }
         let c = {
           enabled: o,

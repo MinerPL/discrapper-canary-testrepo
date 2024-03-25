@@ -60,7 +60,7 @@ function h(e, t) {
   }
 }
 
-function g(e, t, n, r, i) {
+function v(e, t, n, r, i) {
   this.key = e, this.value = t, this.length = n, this.now = r, this.maxAge = i || 0
 }
 r = "function" == typeof Symbol ? function(e) {
@@ -174,7 +174,7 @@ r = "function" == typeof Symbol ? function(e) {
     var o = a(this, "cache").get(e).value;
     return a(this, "dispose") && a(this, "dispose").call(this, e, o.value), o.now = r, o.maxAge = n, o.value = t, a(this, "length", a(this, "length") + (i - o.length)), o.length = i, this.get(e), p(this), !0
   }
-  var s = new g(e, t, i, r, n);
+  var s = new v(e, t, i, r, n);
   return s.length > a(this, "max") ? (a(this, "dispose") && a(this, "dispose").call(this, e, t), !1) : (a(this, "length", a(this, "length") + s.length), a(this, "lruList").unshift(s), a(this, "cache").set(e, a(this, "lruList").head), p(this), !0)
 }, u.prototype.has = function(e) {
   return !(!a(this, "cache").has(e) || f(this, a(this, "cache").get(e).value)) && !0

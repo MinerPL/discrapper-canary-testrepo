@@ -8,8 +8,8 @@ var u = n("37983");
 n("884691");
 var r = n("446674"),
   a = n("77078"),
-  s = n("180748"),
-  l = n("206230"),
+  l = n("180748"),
+  s = n("206230"),
   i = n("782340");
 
 function o() {
@@ -17,10 +17,10 @@ function o() {
     saturation: e,
     useReducedMotion: t,
     roleStyle: n
-  } = (0, r.useStateFromStoresObject)([l.default], () => ({
-    saturation: l.default.saturation,
-    useReducedMotion: l.default.useReducedMotion,
-    roleStyle: l.default.roleStyle
+  } = (0, r.useStateFromStoresObject)([s.default], () => ({
+    saturation: s.default.saturation,
+    useReducedMotion: s.default.useReducedMotion,
+    roleStyle: s.default.roleStyle
   })), o = [{
     name: i.default.Messages.ACCESSIBILITY_SETTINGS_ROLE_STYLE_USERNAME_LABEL,
     value: "username"
@@ -36,7 +36,7 @@ function o() {
       id: "reduced-motion",
       label: i.default.Messages.ACCESSIBILITY_PREFERS_REDUCED_MOTION_ENABLE,
       checked: t,
-      action: () => (0, s.setPrefersReducedMotion)(t ? "no-preference" : "reduce")
+      action: () => (0, l.setPrefersReducedMotion)(t ? "no-preference" : "reduce")
     })
   }, "reduced-motion"), (0, u.jsx)(a.MenuGroup, {
     children: (0, u.jsx)(a.MenuControlItem, {
@@ -46,7 +46,7 @@ function o() {
         ...t,
         ref: n,
         value: 100 * e,
-        onChange: e => (0, s.setSaturation)(e / 100),
+        onChange: e => (0, l.setSaturation)(e / 100),
         "aria-label": i.default.Messages.ACCESSIBILITY_SETTINGS_SATURATION_TITLE
       })
     })
@@ -64,7 +64,7 @@ function o() {
           group: "role-colors",
           checked: r === n,
           label: t,
-          action: () => (0, s.setRoleStyle)(r)
+          action: () => (0, l.setRoleStyle)(r)
         }, r)
       })
     })

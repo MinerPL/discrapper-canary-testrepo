@@ -38,19 +38,19 @@ var o = r("969872"),
       return i !== o || a !== u || s !== c || r.mustForceSelection()
     }, f.render = function() {
       for (var t = this.props, e = t.blockRenderMap, r = t.blockRendererFn, n = t.blockStyleFn, f = t.customStyleMap, p = t.customStyleFn, h = t.editorState, d = t.editorKey, g = t.preventScroll, y = t.textDirectionality, v = h.getCurrentContent(), m = h.getSelection(), _ = h.mustForceSelection(), b = h.getDecorator(), S = l(h.getDirectionMap()), w = v.getBlocksAsArray(), k = [], x = null, C = null, E = 0; E < w.length; E++) {
-        var O = w[E],
-          D = O.getKey(),
-          K = O.getType(),
-          T = r(O),
+        var D = w[E],
+          O = D.getKey(),
+          K = D.getType(),
+          T = r(D),
           M = void 0,
           A = void 0,
           I = void 0;
         T && (M = T.component, A = T.props, I = T.editable);
-        var B = y || S.get(D),
-          L = a.encode(D, 0, 0),
+        var B = y || S.get(O),
+          L = a.encode(O, 0, 0),
           R = {
             contentState: v,
-            block: O,
+            block: D,
             blockProps: A,
             blockStyleFn: n,
             customStyleMap: f,
@@ -61,14 +61,14 @@ var o = r("969872"),
             offsetKey: L,
             preventScroll: g,
             selection: m,
-            tree: h.getBlockTree(D)
+            tree: h.getBlockTree(O)
           },
           N = e.get(K) || e.get("unstyled"),
           F = N.wrapper,
           Element = N.element || e.get("unstyled").element,
-          z = O.getDepth(),
+          z = D.getDepth(),
           P = "";
-        if (n && (P = n(O)), "li" === Element) {
+        if (n && (P = n(D)), "li" === Element) {
           var j, U, q, H = C !== F || null === x || z > x;
           P = c(P, s({
             "public/DraftStyleDefault/unorderedListItem": "unordered-list-item" === (j = K),
@@ -89,7 +89,7 @@ var o = r("969872"),
             "data-block": !0,
             "data-editor": d,
             "data-offset-key": L,
-            key: D
+            key: O
           };
         void 0 !== I && (V = function(t) {
           for (var e = 1; e < arguments.length; e++) {
@@ -114,14 +114,14 @@ var o = r("969872"),
           suppressContentEditableWarning: !0
         }));
         var G = u.createElement(Element, V, u.createElement(W, i({}, R, {
-          key: D
+          key: O
         })));
         k.push({
           block: G,
           wrapperTemplate: F,
-          key: D,
+          key: O,
           offsetKey: L
-        }), x = F ? O.getDepth() : null, C = F
+        }), x = F ? D.getDepth() : null, C = F
       }
       for (var J = [], X = 0; X < k.length;) {
         var Y = k[X];

@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return x
+    return _
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("118810"),
-  a = n("446674"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("118810"),
+  o = n("446674"),
   u = n("551042"),
   d = n("77078"),
   c = n("901582"),
@@ -17,52 +17,52 @@ var l = n("37983"),
   p = n("983782"),
   m = n("659500"),
   h = n("791776"),
-  E = n("82372"),
-  S = n("426969"),
-  g = n("105571"),
-  C = n("634114"),
-  T = n("49111"),
-  v = n("13030"),
-  y = n("652277"),
-  x = i.memo(function(e) {
+  x = n("82372"),
+  E = n("426969"),
+  y = n("105571"),
+  g = n("634114"),
+  S = n("49111"),
+  C = n("13030"),
+  T = n("942838"),
+  _ = l.memo(function(e) {
     let {
       positionTargetRef: t,
       channel: n,
-      closeOnModalOuterClick: r = !1,
-      parentModalKey: x
-    } = e, I = i.useRef(null), N = i.useRef(null), {
-      renderWindow: _,
+      closeOnModalOuterClick: a = !1,
+      parentModalKey: _
+    } = e, I = l.useRef(null), v = l.useRef(null), {
+      renderWindow: N,
       windowDispatch: A
-    } = i.useContext(f.default), R = null != x, O = (0, u.useIsModalAtTop)(null != x ? x : ""), M = () => {
-      E.dismissAppLauncherPopup()
-    }, k = i.useCallback(e => {
+    } = l.useContext(f.default), O = null != _, R = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
+      x.dismissAppLauncherPopup()
+    }, k = l.useCallback(e => {
       var t;
-      if (!R && (0, u.hasAnyModalOpen)() || R && !(O && r)) return;
+      if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
       let {
         target: n
       } = e;
-      if ((0, s.isElement)(n) && null != n.closest("." + v.CHAT_INPUT_BUTTON_CLASSNAME)) return;
+      if ((0, r.isElement)(n) && null != n.closest("." + C.CHAT_INPUT_BUTTON_CLASSNAME)) return;
       for (;
-        (0, s.isElement)(n);) {
-        if (n === N.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
+        (0, r.isElement)(n);) {
+        if (n === v.current || "true" === n.getAttribute("data-menu-item") || "true" === n.getAttribute("data-premium-tutorial-expression-picker-tooltip") || "true" === n.getAttribute("data-premium-tutorial-persistent-coachmark-emoji-step")) return;
         n = n.parentNode
       }
       M();
-      let l = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      (null == l || "BODY" === l.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(T.ComponentActions.TEXTAREA_FOCUS)
-    }, [r, O, R]), b = i.useCallback(() => {
+      let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
+      (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
+    }, [a, R, O]), L = l.useCallback(() => {
       M()
     }, []);
-    i.useLayoutEffect(() => (_.addEventListener("mousedown", k), _.addEventListener("contextmenu", k), A.subscribe(T.ComponentActions.POPOUT_CLOSE, b), () => {
-      _.removeEventListener("mousedown", k), _.removeEventListener("contextmenu", k), A.unsubscribe(T.ComponentActions.POPOUT_CLOSE, b)
-    }), [b, k, _, A]), (0, d.useFocusLock)(I), i.useEffect(() => {
-      (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
-    }, [O, R]);
-    let P = (0, a.useStateFromStores)([S.default], () => S.default.getCurrentAppDetail());
-    return (0, l.jsx)(c.default, {
-      section: T.AnalyticsSections.EXPRESSION_PICKER,
-      children: (0, l.jsx)(p.AppReferencePositionLayer, {
-        className: y.positionLayer,
+    l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
+      N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
+    }), [L, k, N, A]), (0, d.useFocusLock)(I), l.useEffect(() => {
+      (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
+    }, [R, O]);
+    let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
+    return (0, i.jsx)(c.default, {
+      section: S.AnalyticsSections.EXPRESSION_PICKER,
+      children: (0, i.jsx)(p.AppReferencePositionLayer, {
+        className: T.positionLayer,
         reference: t,
         position: "top",
         align: "left",
@@ -72,22 +72,22 @@ var l = n("37983"),
           let {
             isPositioned: t
           } = e;
-          return (0, l.jsx)("section", {
-            className: o(y.positionContainer),
+          return (0, i.jsx)("section", {
+            className: s(T.positionContainer),
             ref: I,
             role: "dialog",
             "aria-label": "Application Launcher",
-            children: t ? (0, l.jsxs)("div", {
-              className: y.drawerSizingWrapper,
-              ref: N,
-              children: [(0, l.jsx)("div", {
-                className: y.resizeHandle
-              }), (0, l.jsxs)("div", {
-                className: y.contentWrapper,
-                children: [(0, l.jsx)(C.default, {
+            children: t ? (0, i.jsxs)("div", {
+              className: T.drawerSizingWrapper,
+              ref: v,
+              children: [(0, i.jsx)("div", {
+                className: T.resizeHandle
+              }), (0, i.jsxs)("div", {
+                className: T.contentWrapper,
+                children: [(0, i.jsx)(g.default, {
                   channel: n,
                   isAppDetailPresent: null != P
-                }), null != P ? (0, l.jsx)(g.default, {
+                }), null != P ? (0, i.jsx)(y.default, {
                   channel: n,
                   appDetail: P
                 }, P.id) : null]

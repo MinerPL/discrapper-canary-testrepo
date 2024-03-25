@@ -10,8 +10,8 @@ var n = a("872717"),
   s = a("821316"),
   r = a("605250"),
   i = a("836403"),
-  c = a("825287"),
-  u = a("929331"),
+  u = a("825287"),
+  c = a("929331"),
   d = a("49111");
 let m = new r.default("DebugUploadManager");
 async function f(e, t) {
@@ -28,7 +28,7 @@ async function g(e) {
       t = t.slice(t.length - Math.floor(t.length * e)), a = a.slice(a.length - Math.floor(a.length * e)), l = l.slice(l.length - Math.floor(l.length * e))
     }
     let m = null,
-      f = "\n    ".concat((0, u.default)(m), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, c.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(o.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(a, "\n\n    Push Notifications:\n    ").concat(l, "\n    ");
+      f = "\n    ".concat((0, c.default)(m), "\n\n    Metadata:\n    ").concat(JSON.stringify((0, u.default)(), void 0, 2), "\n\n    ChannelStore:\n    ").concat(JSON.stringify(o.default.getDebugInfo(), void 0, 2), "\n\n    Logs:\n    ").concat(t, "\n\n    System logs:\n    ").concat(a, "\n\n    Push Notifications:\n    ").concat(l, "\n    ");
     s.clear();
     let g = d.Endpoints.DEBUG_LOG(e, "discord_app_logs");
     await n.HTTP.post({

@@ -22,11 +22,11 @@ let N = 15 * i.default.Millis.SECOND,
     let E = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return "".concat(e, ":").concat(_, ":").concat(E)
   },
-  L = new n.Timeout,
-  u = [],
+  u = new n.Timeout,
+  L = [],
   C = {},
-  D = (0, I.createSound)("highfive_whistle", "highfive_whistle", .6),
-  c = (0, I.createSound)("highfive_clap", "highfive_clap", .6);
+  c = (0, I.createSound)("highfive_whistle", "highfive_whistle", .6),
+  D = (0, I.createSound)("highfive_clap", "highfive_clap", .6);
 
 function d(e) {
   let {
@@ -43,16 +43,16 @@ function d(e) {
         let [_] = e;
         return _ !== o
       })) && void 0 !== t ? t : [];
-      if (null != r && null != a) a.cancel(), c.play(), delete C[r], (0, s.completeHighFive)(r.split(":")[0], _, E, e);
+      if (null != r && null != a) a.cancel(), D.play(), delete C[r], (0, s.completeHighFive)(r.split(":")[0], _, E, e);
       else {
-        (0, s.queueHighFive)(e, _, E), D.play();
+        (0, s.queueHighFive)(e, _, E), c.play();
         let t = new n.DelayedCall(O, () => {
           delete C[_], (0, s.removeHighFive)(_, E)
         });
         C[_] = t, t.delay()
       }
     }(_.name, t, E);
-    t === r && (u = [...u, _.name].slice(-1 * R), o.isEqual(u, A) ? (D.play(), L.stop(), u = [], (0, s.setHighFiveEnabled)(!i)) : L.start(N, () => u = []))
+    t === r && (L = [...L, _.name].slice(-1 * R), o.isEqual(L, A) ? (c.play(), u.stop(), L = [], (0, s.setHighFiveEnabled)(!i)) : u.start(N, () => L = []))
   }
 }
 

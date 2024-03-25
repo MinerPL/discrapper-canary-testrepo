@@ -12,32 +12,32 @@ var a = n("917351"),
   d = n("900938"),
   o = n("49111");
 let u = !1,
-  c = null,
-  N = new Set;
+  N = null,
+  c = new Set;
 
 function _() {
   (function() {
-    u = !1, c = null
-  })(), null != (c = d.default.getGuildId()) && d.default.getSection() === o.GuildSettingsSections.ONBOARDING && (N = new Set(r.default.getDefaultChannelIds(c)))
+    u = !1, N = null
+  })(), null != (N = d.default.getGuildId()) && d.default.getSection() === o.GuildSettingsSections.ONBOARDING && (c = new Set(r.default.getDefaultChannelIds(N)))
 }
 class I extends s.default.Store {
   initialize() {
     this.waitFor(d.default, r.default)
   }
   hasChanges() {
-    if (null == c) return !1;
-    let e = r.default.getDefaultChannelIds(c).sort(),
-      t = Array.from(N).sort();
+    if (null == N) return !1;
+    let e = r.default.getDefaultChannelIds(N).sort(),
+      t = Array.from(c).sort();
     return !l.isEqual(e, t)
   }
   get guildId() {
-    return c
+    return N
   }
   get submitting() {
     return u
   }
   get editedDefaultChannelIds() {
-    return N
+    return c
   }
 }
 I.displayName = "GuildSettingsDefaultChannelsStore";
@@ -54,7 +54,7 @@ var E = new I(i.default, {
     let {
       channelId: t
     } = e;
-    (N = new Set(N)).has(t) ? N.delete(t) : N.add(t)
+    (c = new Set(c)).has(t) ? c.delete(t) : c.add(t)
   },
   GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function() {
     u = !0

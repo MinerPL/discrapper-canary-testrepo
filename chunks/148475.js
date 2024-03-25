@@ -14,8 +14,8 @@ function l(e) {
     canManageRoles: n,
     canBanMembers: l,
     canManageNicknames: u,
-    canCreateEmojisAndStickers: d,
-    canManageEmojisAndStickers: o,
+    canCreateEmojisAndStickers: o,
+    canManageEmojisAndStickers: d,
     canManageWebhooks: r,
     canViewAuditLog: c
   } = (0, i.useStateFromStoresObject)([s.default], () => ({
@@ -28,5 +28,5 @@ function l(e) {
     canManageWebhooks: s.default.can(a.Permissions.MANAGE_WEBHOOKS, e),
     canViewAuditLog: s.default.can(a.Permissions.VIEW_AUDIT_LOG, e)
   }), [e]);
-  return t || n || l || u || d || o || r || c
+  return t || n || l || u || o || d || r || c
 }

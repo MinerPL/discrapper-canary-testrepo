@@ -1,59 +1,59 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return S
+    return y
   }
-}), l("222007");
-var n = l("37983"),
-  a = l("884691"),
-  s = l("446674"),
-  i = l("151426"),
-  r = l("819855"),
-  o = l("77078"),
-  u = l("841098"),
-  d = l("340066"),
-  c = l("206230"),
-  f = l("10641"),
-  m = l("874419"),
-  p = l("430312"),
-  T = l("590456"),
-  E = l("393036");
-let _ = () => {
-  let e = (0, f.useIsDismissibleContentDismissed)(i.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
-    t = (0, s.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
-    l = (0, u.default)(),
+}), n("222007");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("446674"),
+  s = n("151426"),
+  r = n("819855"),
+  o = n("77078"),
+  u = n("841098"),
+  d = n("340066"),
+  c = n("206230"),
+  f = n("10641"),
+  p = n("874419"),
+  m = n("430312"),
+  h = n("590456"),
+  x = n("779614");
+let E = () => {
+  let e = (0, f.useIsDismissibleContentDismissed)(s.DismissibleContent.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP),
+    t = (0, a.useStateFromStores)([c.default], () => c.default.syncProfileThemeWithUserTheme),
+    n = (0, u.default)(),
     {
-      profileTheme: n
-    } = a.useContext(p.UserProfileContext),
-    o = (0, r.isThemeDark)(l) && (0, r.isThemeLight)(n);
+      profileTheme: i
+    } = l.useContext(m.UserProfileContext),
+    o = (0, r.isThemeDark)(n) && (0, r.isThemeLight)(i);
   return !e && !t && o
 };
-var S = e => {
+var y = e => {
   let {
     onTooltipClose: t
   } = e, {
-    profileType: l
-  } = a.useContext(p.UserProfileContext), s = l === T.UserProfileTypes.POPOUT, i = _(), [r, u] = a.useState(!s && i);
-  return (0, d.default)(() => u(i), s ? 300 : null), (0, n.jsx)(o.Popout, {
+    profileType: n
+  } = l.useContext(m.UserProfileContext), a = n === h.UserProfileTypes.POPOUT, s = E(), [r, u] = l.useState(!a && s);
+  return (0, d.default)(() => u(s), a ? 300 : null), (0, i.jsx)(o.Popout, {
     shouldShow: r,
     position: "left",
     align: "center",
     spacing: 32,
     ignoreModalClicks: !0,
     onRequestClose: () => {
-      !s && u(!1)
+      !a && u(!1)
     },
     renderPopout: e => {
       let {
-        position: l
+        position: n
       } = e;
-      return (0, n.jsx)(m.default, {
-        position: null != l ? l : "left",
+      return (0, i.jsx)(p.default, {
+        position: null != n ? n : "left",
         onClose: t
       })
     },
-    children: () => (0, n.jsx)("span", {
-      className: E.hidden
+    children: () => (0, i.jsx)("span", {
+      className: x.hidden
     })
   })
 }

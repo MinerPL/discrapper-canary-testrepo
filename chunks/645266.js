@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return h
   },
   getMemberSupplemental: function() {
-    return g
+    return _
   }
 });
 var i = n("913144"),
@@ -65,7 +65,7 @@ function h(e) {
     n = s.default.getGuild(e);
   return !!t && null != n && (n.hasFeature(a.GuildFeatures.COMMUNITY) || n.hasFeature(a.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.transitionTo)(a.Routes.CHANNEL(e, d.StaticChannelRoute.MEMBER_SAFETY)), !0) : (r.default.open(n.id, a.GuildSettingsSections.MEMBERS), !0))
 }
-async function g(e, t) {
+async function _(e, t) {
   let n = await (0, o.fetchMemberSupplemental)(e, t);
   return 0 === n.length ? [] : (await i.default.dispatch({
     type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS",

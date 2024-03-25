@@ -9,8 +9,8 @@ var n = Object.assign || function(e) {
     }
     return e
   },
-  o = l(r("884691")),
-  a = l(r("849122")),
+  a = l(r("884691")),
+  o = l(r("849122")),
   i = r("662525"),
   u = l(r("355945"));
 
@@ -19,19 +19,19 @@ function l(e) {
     default: e
   }
 }
-var c = t.Swatch = function(e) {
+var s = t.Swatch = function(e) {
   var t = e.color,
     r = e.style,
     i = e.onClick,
     l = void 0 === i ? function() {} : i,
-    c = e.onHover,
-    s = e.title,
-    f = void 0 === s ? t : s,
+    s = e.onHover,
+    f = e.title,
+    c = void 0 === f ? t : f,
     d = e.children,
     p = e.focus,
     h = e.focusStyle,
     b = "transparent" === t,
-    v = (0, a.default)({
+    v = (0, o.default)({
       default: {
         swatch: n({
           background: t,
@@ -44,21 +44,21 @@ var c = t.Swatch = function(e) {
       }
     }),
     g = {};
-  return c && (g.onMouseOver = function(e) {
-    return c(t, e)
-  }), o.default.createElement("div", n({
+  return s && (g.onMouseOver = function(e) {
+    return s(t, e)
+  }), a.default.createElement("div", n({
     style: v.swatch,
     onClick: function(e) {
       return l(t, e)
     },
-    title: f,
+    title: c,
     tabIndex: 0,
     onKeyDown: function(e) {
       return 13 === e.keyCode && l(t, e)
     }
-  }, g), d, b && o.default.createElement(u.default, {
+  }, g), d, b && a.default.createElement(u.default, {
     borderRadius: v.swatch.borderRadius,
     boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)"
   }))
 };
-t.default = (0, i.handleFocus)(c)
+t.default = (0, i.handleFocus)(s)

@@ -4,14 +4,14 @@ s.r(t), s.d(t, {
     return d
   }
 });
-var l = s("37983");
+var n = s("37983");
 s("884691");
-var n = s("77078"),
-  r = s("191814"),
-  o = s("430677"),
-  a = s("476765"),
+var l = s("77078"),
+  o = s("191814"),
+  a = s("430677"),
+  r = s("476765"),
   i = s("782340"),
-  u = s("937769");
+  u = s("440809");
 
 function c(e) {
   let {
@@ -19,42 +19,42 @@ function c(e) {
     Icon: s,
     title: c,
     body: d,
-    onClose: f
-  } = e, E = (0, a.useUID)();
-  return (0, l.jsxs)(n.ModalRoot, {
+    onClose: E
+  } = e, f = (0, r.useUID)();
+  return (0, n.jsxs)(l.ModalRoot, {
     className: u.container,
     transitionState: t,
-    "aria-labelledby": E,
-    children: [(0, l.jsxs)(n.ModalContent, {
-      children: [(0, l.jsx)(o.default, {
+    "aria-labelledby": f,
+    children: [(0, n.jsxs)(l.ModalContent, {
+      children: [(0, n.jsx)(a.default, {
         Icon: s
-      }), (0, l.jsx)(r.default, {
+      }), (0, n.jsx)(o.default, {
         size: 24
-      }), (0, l.jsx)(n.Heading, {
-        id: E,
+      }), (0, n.jsx)(l.Heading, {
+        id: f,
         className: u.title,
         variant: "heading-xl/semibold",
         children: c
-      }), (0, l.jsx)(r.default, {
+      }), (0, n.jsx)(o.default, {
         size: 8
-      }), (0, l.jsx)(n.Text, {
+      }), (0, n.jsx)(l.Text, {
         className: u.body,
         variant: "text-sm/normal",
         children: d
       })]
-    }), (0, l.jsx)(r.default, {
+    }), (0, n.jsx)(o.default, {
       size: 24
-    }), (0, l.jsx)(n.Button, {
-      size: n.Button.Sizes.MEDIUM,
+    }), (0, n.jsx)(l.Button, {
+      size: l.Button.Sizes.MEDIUM,
       grow: !1,
-      onClick: f,
+      onClick: E,
       children: i.default.Messages.GOT_IT
     })]
   })
 }
 
 function d(e) {
-  (0, n.openModal)(t => (0, l.jsx)(c, {
+  (0, l.openModal)(t => (0, n.jsx)(c, {
     ...t,
     ...e
   }))

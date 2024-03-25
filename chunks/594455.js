@@ -1,17 +1,17 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return i
+    return n
   }
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("43837"),
-  i = e => {
+  i = s("43837"),
+  n = e => {
     let {
       percentage: t = 0,
       children: s,
-      animationClassName: i,
+      animationClassName: n,
       initialPercentage: l = 0,
       progressCircleStrokeSize: o = 2
     } = e, u = 43 + o / 2, d = 2 * Math.PI * u, [c, _] = r.useState(l);
@@ -21,12 +21,12 @@ var a = s("37983"),
       }, 200);
       return () => clearTimeout(e)
     }, [t]), (0, a.jsxs)("div", {
-      className: n.circleContainer,
+      className: i.circleContainer,
       children: [(0, a.jsxs)("svg", {
         viewBox: "0 0 100 100",
-        className: n.circleSVG,
+        className: i.circleSVG,
         children: [(0, a.jsx)("circle", {
-          className: n.baseProgressCircle,
+          className: i.baseProgressCircle,
           fill: "transparent",
           strokeWidth: o,
           r: "".concat(u),
@@ -37,7 +37,7 @@ var a = s("37983"),
           strokeWidth: o,
           strokeLinecap: "round",
           strokeDasharray: "".concat(d, " ").concat(d),
-          className: i,
+          className: n,
           style: {
             strokeDashoffset: (1 - c / 100) * d
           },
@@ -67,7 +67,7 @@ var a = s("37983"),
           })]
         })
       }), (0, a.jsx)("div", {
-        className: n.childrenContainer,
+        className: i.childrenContainer,
         children: s
       })]
     })

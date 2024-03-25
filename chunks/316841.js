@@ -6,9 +6,9 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("462392"),
-  i = s("490291");
+var l = s("77078"),
+  n = s("462392"),
+  i = s("974020");
 
 function r(e) {
   var t;
@@ -16,7 +16,7 @@ function r(e) {
     action: s,
     actionType: r,
     triggerType: o
-  } = e, d = (0, l.getActionInfo)(null !== (t = null == s ? void 0 : s.type) && void 0 !== t ? t : r, s, o);
+  } = e, d = (0, n.getActionInfo)(null !== (t = null == s ? void 0 : s.type) && void 0 !== t ? t : r, s, o);
   if (null == d) return null;
   let {
     headerText: u,
@@ -34,11 +34,11 @@ function r(e) {
       })
     }), (0, a.jsx)("div", {
       className: i.actionTextContainer,
-      children: (0, a.jsxs)(n.Text, {
+      children: (0, a.jsxs)(l.Text, {
         className: i.actionTextHeader,
         variant: "text-xs/medium",
         color: "interactive-normal",
-        children: [u, null != c && (0, a.jsx)(n.Text, {
+        children: [u, null != c && (0, a.jsx)(l.Text, {
           className: i.actionTextHelper,
           variant: "text-xs/medium",
           color: "text-muted",

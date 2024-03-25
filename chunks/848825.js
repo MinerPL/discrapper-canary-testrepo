@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var a = n("772280"),
-  s = n("961291"),
-  i = function() {
-    return (0, l.jsx)(a.default, {
-      className: s.icon
+var l = n("772280"),
+  a = n("802683"),
+  s = function() {
+    return (0, i.jsx)(l.default, {
+      className: a.icon
     })
   }

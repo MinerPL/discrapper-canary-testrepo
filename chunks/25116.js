@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
 var a = n("49111");
 
-function i(e) {
+function s(e) {
   return e.type === a.MessageTypes.DEFAULT && null != e.messageReference
 }

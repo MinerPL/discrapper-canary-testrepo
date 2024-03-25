@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MessageType: function() {
-    return _
+    return y
   }
 }), n("70102");
 var r = n("803628"),
@@ -17,7 +17,7 @@ var r = n("803628"),
   p = n("154090"),
   m = n("171742"),
   h = n("926481");
-class _ {
+class y {
   create(e) {
     let t = (0, l.reflectionCreate)(this);
     return void 0 !== e && (0, c.reflectionMergePartial)(this, t, e), t

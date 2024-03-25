@@ -4,7 +4,7 @@ A.r(t), A.d(t, {
     return s
   },
   GuildProductAttachmentManagerContextProvider: function() {
-    return o
+    return i
   }
 }), A("70102");
 var a = A("37983"),
@@ -18,7 +18,7 @@ function s() {
   return e
 }
 
-function o(e) {
+function i(e) {
   let {
     children: t,
     guildId: A,

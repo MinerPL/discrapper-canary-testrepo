@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   useGiftContext: function() {
-    return m
+    return h
   }
 }), n("222007");
 var i = n("37983"),
@@ -18,17 +18,17 @@ var i = n("37983"),
   d = n("782340");
 let f = c.PremiumGiftStyles.STANDARD_BOX,
   p = void 0,
-  [h, m, S] = (0, l.default)();
+  [m, h, S] = (0, l.default)();
 
 function I(e) {
   let {
     isGift: t = !1,
     giftRecipient: n,
     giftMessage: l,
-    children: m
+    children: h
   } = e, {
     selectedSkuId: S
-  } = (0, u.usePaymentContext)(), [I, g] = a.useState(n), [C, v] = a.useState(), [E, A] = a.useState(!1), N = (0, o.shouldShowCustomGiftExperience)(I), x = (0, r.useIsSeasonalGiftingActive)(), {
+  } = (0, u.usePaymentContext)(), [I, g] = a.useState(n), [C, E] = a.useState(), [v, A] = a.useState(!1), N = (0, o.shouldShowCustomGiftExperience)(I), x = (0, r.useIsSeasonalGiftingActive)(), {
     enabled: T
   } = r.default.useExperiment({
     location: "PaymentContextProvider"
@@ -44,7 +44,7 @@ function I(e) {
       w(!1), k(e), B(!0)
     })
   }, [I, R, w, B, k]);
-  return (0, i.jsx)(h.Provider, {
+  return (0, i.jsx)(m.Provider, {
     value: {
       isGift: t,
       giftCode: R,
@@ -52,8 +52,8 @@ function I(e) {
       giftRecipient: I,
       setGiftRecipient: g,
       giftRecipientError: C,
-      setGiftRecipientError: v,
-      validatingGiftRecipient: E,
+      setGiftRecipientError: E,
+      validatingGiftRecipient: v,
       setValidatingGiftRecipient: A,
       soundEffect: y,
       setSoundEffect: M,
@@ -68,6 +68,6 @@ function I(e) {
       isSendingMessage: G,
       giftMessageError: D
     },
-    children: m
+    children: h
   })
 }

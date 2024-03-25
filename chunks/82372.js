@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   showAppLauncherPopup: function() {
-    return i
+    return l
   },
   dismissAppLauncherPopup: function() {
-    return r
+    return a
   },
   showAppDetail: function() {
-    return o
+    return s
   },
   dismissAppDetail: function() {
-    return s
+    return r
   }
 });
-var l = n("913144");
+var i = n("913144");
 
-function i() {
-  l.default.dispatch({
+function l() {
+  i.default.dispatch({
     type: "APP_LAUNCHER_SHOW_POPUP"
   })
 }
 
-function r() {
-  l.default.dispatch({
+function a() {
+  i.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_POPUP"
   })
 }
 
-function o(e) {
-  l.default.dispatch({
+function s(e) {
+  i.default.dispatch({
     type: "APP_LAUNCHER_SHOW_APP_DETAIL",
     appDetail: e
   })
 }
 
-function s() {
-  l.default.dispatch({
+function r() {
+  i.default.dispatch({
     type: "APP_LAUNCHER_DISMISS_APP_DETAIL"
   })
 }

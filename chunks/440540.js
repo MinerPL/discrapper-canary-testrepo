@@ -1,5 +1,5 @@
 "use strict";
-i.exports = {
+e.exports = {
   v: "4.8.0",
   meta: {
     g: "LottieFiles AE 3.0.2",

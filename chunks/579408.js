@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   l = n("884691"),
   s = n("594203"),
-  i = n("701268");
+  i = n("592550");
 
 function r(e) {
   let {
     resizableNode: t,
     onResize: n,
     onResizeEnd: r,
-    minHeight: o,
-    maxHeight: u
+    minHeight: u,
+    maxHeight: o
   } = e, [d, c] = l.useState(null);
   l.useEffect(() => {
     var e, n;
@@ -23,8 +23,8 @@ function r(e) {
   }, [t]);
   let f = (0, s.default)({
     initialElementDimension: d,
-    minDimension: o,
-    maxDimension: u,
+    minDimension: u,
+    maxDimension: o,
     resizableDomNodeRef: t,
     onElementResize: n,
     onElementResizeEnd: r,

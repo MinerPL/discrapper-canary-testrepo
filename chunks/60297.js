@@ -1,7 +1,7 @@
-var Symbol = r("506264"),
-  n = r("754892"),
-  i = r("19797"),
-  o = Symbol ? Symbol.toStringTag : void 0;
+var Symbol = e("506264"),
+  n = e("754892"),
+  o = e("19797"),
+  i = Symbol ? Symbol.toStringTag : void 0;
 t.exports = function(t) {
-  return null == t ? void 0 === t ? "[object Undefined]" : "[object Null]" : o && o in Object(t) ? n(t) : i(t)
+  return null == t ? void 0 === t ? "[object Undefined]" : "[object Null]" : i && i in Object(t) ? n(t) : o(t)
 }

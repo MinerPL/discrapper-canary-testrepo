@@ -4,24 +4,24 @@ n.r(t), n.d(t, {
     return r
   },
   BEGIN_DRAG: function() {
-    return o
-  },
-  PUBLISH_DRAG_SOURCE: function() {
-    return a
-  },
-  HOVER: function() {
     return i
   },
-  DROP: function() {
+  PUBLISH_DRAG_SOURCE: function() {
+    return o
+  },
+  HOVER: function() {
     return s
+  },
+  DROP: function() {
+    return a
   },
   END_DRAG: function() {
     return c
   }
 });
 var r = "dnd-core/INIT_COORDS",
-  o = "dnd-core/BEGIN_DRAG",
-  a = "dnd-core/PUBLISH_DRAG_SOURCE",
-  i = "dnd-core/HOVER",
-  s = "dnd-core/DROP",
+  i = "dnd-core/BEGIN_DRAG",
+  o = "dnd-core/PUBLISH_DRAG_SOURCE",
+  s = "dnd-core/HOVER",
+  a = "dnd-core/DROP",
   c = "dnd-core/END_DRAG"

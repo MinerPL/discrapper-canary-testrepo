@@ -72,7 +72,7 @@ t.exports = function(t, e) {
       text: b.getText().slice(0, v) + S.getText().slice(_),
       characterList: d
     }),
-    O = w && 0 === v && 0 === _ && S.getParentKey() === y && null == S.getPrevSiblingKey() ? Map([
+    D = w && 0 === v && 0 === _ && S.getParentKey() === y && null == S.getPrevSiblingKey() ? Map([
       [y, null]
     ]) : g.toSeq().skipUntil(function(t, e) {
       return e === y
@@ -85,12 +85,12 @@ t.exports = function(t, e) {
     ])).map(function(t, e) {
       return e === y ? E : null
     }),
-    D = g.merge(O).filter(function(t) {
+    O = g.merge(D).filter(function(t) {
       return !!t
     });
   if (w && b !== S) {
     ;
-    r = D, o = b, p = S, h = g, D = r.withMutations(function(t) {
+    r = O, o = b, p = S, h = g, O = r.withMutations(function(t) {
       if (a(o.getKey(), t, function(e) {
           return e.merge({
             nextSibling: c(e, t, h),
@@ -182,7 +182,7 @@ t.exports = function(t, e) {
     })
   }
   return t.merge({
-    blockMap: D,
+    blockMap: O,
     selectionBefore: e,
     selectionAfter: e.merge({
       anchorKey: y,

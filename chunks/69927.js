@@ -7,13 +7,13 @@ n.r(t), n.d(t, {
     return c
   },
   usePageTitle: function() {
-    return _
+    return f
   },
   AppPageTitle: function() {
-    return h
+    return E
   },
   usePageTitleManager: function() {
-    return g
+    return h
   }
 }), n("222007");
 var i = n("884691"),
@@ -48,16 +48,16 @@ function c(e) {
   };
   return t.count = Math.max(t.count, t.messages.length), u.setState(e => ({
     flashQueue: [...e.flashQueue, t]
-  })), () => f(t.id)
+  })), () => _(t.id)
 }
 
-function f(e) {
+function _(e) {
   u.setState(t => ({
     flashQueue: t.flashQueue.filter(t => t.id !== e)
   }))
 }
 
-function _(e) {
+function f(e) {
   i.useEffect(() => {
     var t;
     return t = e, u.setState(e => ({
@@ -70,11 +70,11 @@ function _(e) {
   }, [...Object.values(e)])
 }
 
-function h(e) {
-  return _(e), null
+function E(e) {
+  return f(e), null
 }
 
-function g() {
+function h() {
   let {
     skipsSettingDefaultPageTitle: e
   } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -115,12 +115,12 @@ function g() {
         return
       }
       if (document.hasFocus() && t.onlyWhenBlurred) {
-        f(t.id), s(!1);
+        _(t.id), s(!1);
         return
       }
       let e = setInterval(() => {
         if (r.current >= t.count) {
-          f(t.id), s(!1);
+          _(t.id), s(!1);
           return
         }
         s(e => !e || (r.current += 1, !1))

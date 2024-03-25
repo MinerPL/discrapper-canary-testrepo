@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return E
   },
   activityInstanceConnectedParticipantsUpdateEvent: function() {
-    return _
+    return h
   },
   subscribeToActivityInstanceConnectedParticipants: function() {
-    return h
+    return _
   }
 });
 var a = n("917351"),
   s = n.n(a),
-  i = n("913144"),
-  l = n("191225"),
+  l = n("913144"),
+  i = n("191225"),
   r = n("697218"),
   o = n("449008"),
   u = n("387111"),
@@ -24,7 +24,7 @@ var a = n("917351"),
   c = n("492249");
 
 function f() {
-  let e = l.default.getCurrentEmbeddedActivity();
+  let e = i.default.getCurrentEmbeddedActivity();
   if (null == e) return {
     participants: []
   };
@@ -47,7 +47,7 @@ function f() {
 let E = {
     [c.RPC_SCOPE_CONFIG.ANY]: [c.RPC_AUTHENTICATED_SCOPE]
   },
-  _ = {
+  h = {
     scope: E,
     handler: () => e => {
       let {
@@ -58,10 +58,10 @@ let E = {
     }
   };
 
-function h(e) {
+function _(e) {
   let t = "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
     n = () => {
       e(f())
     };
-  return i.default.subscribe(t, n), () => i.default.unsubscribe(t, n)
+  return l.default.subscribe(t, n), () => l.default.unsubscribe(t, n)
 }

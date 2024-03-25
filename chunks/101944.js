@@ -5,10 +5,10 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = function() {
-    var e = (0, a.default)({
+    var e = (0, o.default)({
       default: {
         triangle: {
           width: 0,
@@ -45,15 +45,15 @@ var n = r("884691"),
         }
       }
     });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: e.pointer
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: e.left
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: e.leftInside
-    })), o.createElement("div", {
+    })), a.createElement("div", {
       style: e.right
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: e.rightInside
     })))
   }

@@ -9,18 +9,18 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("737960"),
-  o = n("141681"),
-  u = n("271938"),
+  u = n("141681"),
+  o = n("271938"),
   d = n("145131"),
   c = n("659500"),
   f = n("119106"),
   h = n("573540"),
-  p = n("972155"),
-  m = n("732961"),
+  m = n("972155"),
+  p = n("732961"),
   E = n("153984"),
-  C = n("49111"),
-  g = n("99795"),
-  S = n("111647"),
+  g = n("49111"),
+  S = n("99795"),
+  C = n("772313"),
   _ = (0, r.default)(e => {
     let {
       participants: t,
@@ -38,42 +38,42 @@ var a = n("37983"),
       showParticipants: R = !0,
       paused: j = !1,
       width: L,
-      height: O,
-      idle: y,
+      height: y,
+      idle: O,
       mode: P,
-      popoutWindow: b,
-      awaitingRemoteSessionInfo: D
+      popoutWindow: D,
+      awaitingRemoteSessionInfo: b
     } = e;
     l.useEffect(() => {
-      c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
-    }, [L, O]);
-    let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
-    if ((null == D ? void 0 : D.channelId) === x.id) return (0, a.jsx)(h.default, {
-      height: O
+      c.ComponentDispatch.dispatch(g.ComponentActions.REMEASURE_TARGET)
+    }, [L, y]);
+    let U = l.useMemo(() => n.filter(e => e.type !== S.ParticipantTypes.ACTIVITY || !e.participants.has(o.default.getId())), [n, r]);
+    if ((null == b ? void 0 : b.channelId) === x.id) return (0, a.jsx)(h.default, {
+      height: y
     });
     if ((null == x ? void 0 : x.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
       channel: x,
       participants: t,
       hasConnectPermission: N
     });
-    if (P === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
+    if (P === g.ChannelModes.VOICE) return (0, a.jsx)(u.default, {
       guildId: x.guild_id,
       width: L,
-      className: S.voiceCallWrapper,
+      className: C.voiceCallWrapper,
       participants: t,
       onContextMenu: T
     });
     if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
-      className: i(S.videoGrid, S.hiddenParticipants),
+      className: i(C.videoGrid, C.hiddenParticipants),
       channelId: x.id,
       width: L
     }) : (0, a.jsx)(d.default, {
-      className: S.videoGridWrapper,
+      className: C.videoGridWrapper,
       justify: d.default.Justify.CENTER,
       align: d.default.Align.CENTER,
-      children: (0, a.jsx)(p.default, {
+      children: (0, a.jsx)(m.default, {
         channel: x,
-        className: S.videoGrid,
+        className: C.videoGrid,
         participants: U,
         totalNumberOfParticipants: t.length,
         onClick: I,
@@ -83,17 +83,17 @@ var a = n("37983"),
         inCall: M
       })
     });
-    return (0, a.jsx)(m.default, {
+    return (0, a.jsx)(p.default, {
       onFullscreenParticipant: v,
       onContextMenuParticipant: T,
       onSelectParticipant: I,
       selectedParticipant: s,
       filteredParticipants: U,
       participants: t,
-      popoutWindow: b,
+      popoutWindow: D,
       className: A,
-      idle: y,
-      height: O,
+      idle: O,
+      height: y,
       width: L,
       layout: _,
       inCall: M,

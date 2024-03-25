@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("845579"),
-  l = n("476263"),
+  l = n("845579"),
+  i = n("476263"),
   r = n("866190"),
   o = n("132349"),
-  u = n("492969");
+  u = n("724386");
 
 function d(e) {
   let {
@@ -20,11 +20,11 @@ function d(e) {
     guild: d,
     description: c,
     children: f
-  } = e, E = i.GifAutoPlay.useSetting(), _ = (0, r.useIsWindowFocused)(), [h, C] = (0, o.default)(t, _ && E);
+  } = e, E = l.GifAutoPlay.useSetting(), h = (0, r.useIsWindowFocused)(), [_, C] = (0, o.default)(t, h && E);
   return (0, a.jsxs)("div", {
     className: u.container,
     children: [(0, a.jsx)("div", {
-      ref: h,
+      ref: _,
       className: u.coverImageContainer,
       children: null != C && (0, a.jsx)("img", {
         src: C,
@@ -33,9 +33,9 @@ function d(e) {
       })
     }), (0, a.jsx)("div", {
       className: u.guildIconContainer,
-      children: (0, a.jsx)(l.default, {
+      children: (0, a.jsx)(i.default, {
         guild: d,
-        size: l.default.Sizes.XLARGE
+        size: i.default.Sizes.XLARGE
       })
     }), (0, a.jsx)(s.Heading, {
       variant: "heading-xl/semibold",

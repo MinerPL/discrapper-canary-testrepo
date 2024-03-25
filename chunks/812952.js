@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   }
 });
-var r, i, u, l, a = n("37983"),
+var r, l, s, a, i = n("37983"),
   o = n("884691"),
-  s = n("414456"),
-  c = n.n(s),
+  u = n("414456"),
+  c = n.n(u),
   d = n("145131"),
-  _ = n("298754");
-(r = u || (u = {})).PRIMARY = "primary", r.SECONDARY = "secondary", r.WARNING = "warning", r.ERROR = "error", (i = l || (l = {})).SMALL = "small", i.LARGE = "large", i.NONE = "none";
-let E = {
-    primary: _.colorPrimary,
-    secondary: _.colorSecondary,
-    warning: _.colorWarning,
-    error: _.colorError
+  E = n("138592");
+(r = s || (s = {})).PRIMARY = "primary", r.SECONDARY = "secondary", r.WARNING = "warning", r.ERROR = "error", (l = a || (a = {})).SMALL = "small", l.LARGE = "large", l.NONE = "none";
+let _ = {
+    primary: E.colorPrimary,
+    secondary: E.colorSecondary,
+    warning: E.colorWarning,
+    error: E.colorError
   },
   f = {
-    small: _.small,
-    large: _.large,
+    small: E.small,
+    large: E.large,
     none: null
   };
 class T extends o.PureComponent {
@@ -29,19 +29,19 @@ class T extends o.PureComponent {
       color: t,
       children: n,
       iconSize: r,
-      className: i,
-      iconClassName: u
+      className: l,
+      iconClassName: s
     } = this.props;
-    return (0, a.jsxs)(d.default, {
-      className: c(_.note, E[t], i),
+    return (0, i.jsxs)(d.default, {
+      className: c(E.note, _[t], l),
       align: d.default.Align.CENTER,
-      children: [(0, a.jsx)(e, {
-        className: c(_.icon, f[r], u)
-      }), (0, a.jsx)("div", {
+      children: [(0, i.jsx)(e, {
+        className: c(E.icon, f[r], s)
+      }), (0, i.jsx)("div", {
         children: n
       })]
     })
   }
 }
-T.Colors = u, T.Sizes = l;
-var S = T
+T.Colors = s, T.Sizes = a;
+var I = T

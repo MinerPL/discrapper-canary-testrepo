@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return C
+    return T
   }
 }), n("424973");
 var i = n("917351"),
   l = n.n(i),
   a = n("446674"),
-  s = n("913144"),
-  o = n("798609"),
+  o = n("913144"),
+  s = n("798609"),
   r = n("80507"),
   u = n("374363"),
   d = n("397336");
@@ -34,7 +34,7 @@ function m(e) {
   }), f.track(e), f.compute()
 }
 
-function I() {
+function _() {
   var e, t;
   let n = u.default.frecencyWithoutFetchingLatest,
     i = null !== (t = null === (e = n.applicationFrecency) || void 0 === e ? void 0 : e.applications) && void 0 !== t ? t : {};
@@ -43,9 +43,9 @@ function I() {
     recentUses: e.recentUses.map(Number).filter(e => e > 0)
   })), p.pendingUsages)
 }
-class _ extends a.default.PersistedStore {
+class I extends a.default.PersistedStore {
   initialize(e) {
-    null != e && (p = e), this.syncWith([u.default], I)
+    null != e && (p = e), this.syncWith([u.default], _)
   }
   getState() {
     return p
@@ -64,13 +64,13 @@ class _ extends a.default.PersistedStore {
     return f.frequently
   }
 }
-_.displayName = "ApplicationFrecencyStore", _.persistKey = "ApplicationFrecency";
-var C = new _(s.default, {
+I.displayName = "ApplicationFrecencyStore", I.persistKey = "ApplicationFrecency";
+var T = new I(o.default, {
   APPLICATION_COMMAND_USED: function(e) {
     let {
       command: t
     } = e;
-    if (t.type !== o.ApplicationCommandType.CHAT) return !1;
+    if (t.type !== s.ApplicationCommandType.CHAT) return !1;
     m(t.applicationId)
   },
   EMBEDDED_ACTIVITY_OPEN: function(e) {

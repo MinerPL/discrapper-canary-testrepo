@@ -1,63 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 }), n("222007"), n("106442"), n("175143");
-var l = n("987295"),
-  i = n("939563"),
-  r = n("385887");
+var i = n("987295"),
+  l = n("939563"),
+  a = n("385887");
 
-function o(e) {
+function s(e) {
   let {
     apply: t,
     deleteBackward: n,
-    deleteForward: o,
-    deleteFragment: a,
+    deleteForward: s,
+    deleteFragment: o,
     insertText: d
   } = e;
   return e.apply = n => {
-    var l;
-    if ("set_selection" === n.type && (null === (l = e.composition) || void 0 === l ? void 0 : l.startedInsideInline) && r.RangeUtils.isRange(n.properties) && r.RangeUtils.isRange(n.newProperties) && r.RangeUtils.isCollapsed(n.newProperties)) {
-      let t = r.EditorUtils.getParentInline(e, n.properties),
-        l = r.EditorUtils.getParentInline(e, n.newProperties);
-      if (null != t && (null == l || !r.PathUtils.equals(t[1], l[1]))) return
+    var i;
+    if ("set_selection" === n.type && (null === (i = e.composition) || void 0 === i ? void 0 : i.startedInsideInline) && a.RangeUtils.isRange(n.properties) && a.RangeUtils.isRange(n.newProperties) && a.RangeUtils.isCollapsed(n.newProperties)) {
+      let t = a.EditorUtils.getParentInline(e, n.properties),
+        i = a.EditorUtils.getParentInline(e, n.newProperties);
+      if (null != t && (null == i || !a.PathUtils.equals(t[1], i[1]))) return
     }
     t(n)
   }, e.insertText = t => {
     if (null != e.selection) {
-      let n = r.EditorUtils.getCurrentInline(e);
+      let n = a.EditorUtils.getCurrentInline(e);
       if (null != n) {
-        i.SlateTransforms.insertText(e, t);
+        l.SlateTransforms.insertText(e, t);
         return
       }
     }
     d(t)
   }, e.deleteBackward = t => {
-    !s(e, t, !0) && n(t)
+    !r(e, t, !0) && n(t)
   }, e.deleteForward = t => {
-    !s(e, t, !1) && o(t)
+    !r(e, t, !1) && s(t)
   }, e.deleteFragment = t => {
-    if (null != e.selection && r.RangeUtils.isExpanded(e.selection)) {
-      var n, l, o, s;
+    if (null != e.selection && a.RangeUtils.isExpanded(e.selection)) {
+      var n, i, s, r;
       let u = e.selection.anchor,
         d = e.selection.focus,
-        c = r.EditorUtils.getParentInline(e, u),
-        f = r.EditorUtils.getParentInline(e, d);
-      if (null != c && null != f && r.PathUtils.equals(c[1], f[1])) {
-        a(t);
+        c = a.EditorUtils.getParentInline(e, u),
+        f = a.EditorUtils.getParentInline(e, d);
+      if (null != c && null != f && a.PathUtils.equals(c[1], f[1])) {
+        o(t);
         return
       }
-      let p = r.RangeUtils.isForward(e.selection);
+      let p = a.RangeUtils.isForward(e.selection);
       if (null != c) {
-        let [, t] = c, [i, o] = r.EditorUtils.edges(e, t);
-        p && r.PointUtils.equals(u, i) ? u = null !== (n = r.EditorUtils.before(e, i)) && void 0 !== n ? n : r.EditorUtils.start(e, []) : !p && r.PointUtils.equals(u, o) && (u = null !== (l = r.EditorUtils.after(e, o)) && void 0 !== l ? l : r.EditorUtils.end(e, []))
+        let [, t] = c, [l, s] = a.EditorUtils.edges(e, t);
+        p && a.PointUtils.equals(u, l) ? u = null !== (n = a.EditorUtils.before(e, l)) && void 0 !== n ? n : a.EditorUtils.start(e, []) : !p && a.PointUtils.equals(u, s) && (u = null !== (i = a.EditorUtils.after(e, s)) && void 0 !== i ? i : a.EditorUtils.end(e, []))
       }
       if (null != f) {
-        let [, t] = f, [n, l] = r.EditorUtils.edges(e, t);
-        !p && r.PointUtils.equals(d, n) ? d = null !== (o = r.EditorUtils.before(e, n)) && void 0 !== o ? o : r.EditorUtils.start(e, []) : p && r.PointUtils.equals(d, l) && (d = null !== (s = r.EditorUtils.after(e, l)) && void 0 !== s ? s : r.EditorUtils.end(e, []))
+        let [, t] = f, [n, i] = a.EditorUtils.edges(e, t);
+        !p && a.PointUtils.equals(d, n) ? d = null !== (s = a.EditorUtils.before(e, n)) && void 0 !== s ? s : a.EditorUtils.start(e, []) : p && a.PointUtils.equals(d, i) && (d = null !== (r = a.EditorUtils.after(e, i)) && void 0 !== r ? r : a.EditorUtils.end(e, []))
       }
-      i.SlateTransforms.delete(e, {
+      l.SlateTransforms.delete(e, {
         at: {
           anchor: u,
           focus: d
@@ -67,71 +67,71 @@ function o(e) {
       });
       return
     }
-    a(t)
-  }, l.Editor.positions = u, e
+    o(t)
+  }, i.Editor.positions = u, e
 }
 
-function s(e, t, n) {
-  let l = r.EditorUtils.getCurrentInline(e),
-    o = r.EditorUtils.getCurrentBlock(e),
-    s = r.RangeUtils.toPoint(e.selection);
-  if (null == s || null == o || "block" === t) return !0;
-  if ("line" === t && null == l) return !1;
-  let a = l;
-  if (null == a) {
-    let t = (n ? r.EditorUtils.before : r.EditorUtils.after)(e, s);
-    null != t && null != (a = r.EditorUtils.getParentInline(e, t)) && (s = t)
+function r(e, t, n) {
+  let i = a.EditorUtils.getCurrentInline(e),
+    s = a.EditorUtils.getCurrentBlock(e),
+    r = a.RangeUtils.toPoint(e.selection);
+  if (null == r || null == s || "block" === t) return !0;
+  if ("line" === t && null == i) return !1;
+  let o = i;
+  if (null == o) {
+    let t = (n ? a.EditorUtils.before : a.EditorUtils.after)(e, r);
+    null != t && null != (o = a.EditorUtils.getParentInline(e, t)) && (r = t)
   }
-  if (null != a) {
-    let [l, o] = a;
-    if (r.EditorUtils.isEmpty(e, l) || r.EditorUtils.isVoid(e, l)) i.SlateTransforms.removeInline(e, o);
+  if (null != o) {
+    let [i, s] = o;
+    if (a.EditorUtils.isEmpty(e, i) || a.EditorUtils.isVoid(e, i)) l.SlateTransforms.removeInline(e, s);
     else {
-      let [l, a] = r.EditorUtils.edges(e, o);
-      i.SlateTransforms.delete(e, {
-        at: s,
+      let [i, o] = a.EditorUtils.edges(e, s);
+      l.SlateTransforms.delete(e, {
+        at: r,
         unit: t,
         reverse: n,
         select: !0,
         bounds: {
-          anchor: l,
-          focus: a
+          anchor: i,
+          focus: o
         }
       })
     }
     return !0
   }
   let u = !1;
-  if (null != o) {
-    let [, t] = o, [l, i] = r.EditorUtils.edges(e, t);
-    u = n && r.PointUtils.equals(s, l) || !n && r.PointUtils.equals(s, i)
+  if (null != s) {
+    let [, t] = s, [i, l] = a.EditorUtils.edges(e, t);
+    u = n && a.PointUtils.equals(r, i) || !n && a.PointUtils.equals(r, l)
   }
   if ("word" === t && !u) {
-    let l = r.EditorUtils.getCurrentText(e);
-    if (null != l) {
-      let [, o] = l, [a, u] = r.EditorUtils.edges(e, o);
-      return i.SlateTransforms.delete(e, {
-        at: s,
+    let i = a.EditorUtils.getCurrentText(e);
+    if (null != i) {
+      let [, s] = i, [o, u] = a.EditorUtils.edges(e, s);
+      return l.SlateTransforms.delete(e, {
+        at: r,
         unit: t,
         reverse: n,
         select: !0,
         bounds: {
-          anchor: a,
+          anchor: o,
           focus: u
         }
       }), !0
     }
   }
-  return i.SlateTransforms.delete(e, {
-    at: s,
+  return l.SlateTransforms.delete(e, {
+    at: r,
     unit: t,
     reverse: n,
     select: !0
   }), !0
 }
-let a = l.Editor.positions;
+let o = i.Editor.positions;
 
 function* u(e) {
-  var t, n, l, i, o, s, u, d;
+  var t, n, i, l, s, r, u, d;
   let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       at: f = e.selection,
@@ -140,60 +140,60 @@ function* u(e) {
       voids: h = !1
     } = null != c ? c : {};
   if ("word" !== p) {
-    for (let t of a(e, {
+    for (let t of o(e, {
         ...c,
         voids: h || "block" === p
       })) yield t;
     return
   }
   if (null == f) return;
-  let E = r.EditorUtils.range(e, f),
-    [S, g] = r.RangeUtils.edges(E),
-    C = r.EditorUtils.richValue(e),
-    T = m ? -1 : 1,
-    v = null !== (l = null === (t = S.path) || void 0 === t ? void 0 : t[0]) && void 0 !== l ? l : 0,
-    y = null !== (i = null === (n = g.path) || void 0 === n ? void 0 : n[0]) && void 0 !== i ? i : C.length - 1,
-    x = m ? v : y,
-    I = m ? y : v;
+  let x = a.EditorUtils.range(e, f),
+    [E, y] = a.RangeUtils.edges(x),
+    g = a.EditorUtils.richValue(e),
+    S = m ? -1 : 1,
+    C = null !== (i = null === (t = E.path) || void 0 === t ? void 0 : t[0]) && void 0 !== i ? i : 0,
+    T = null !== (l = null === (n = y.path) || void 0 === n ? void 0 : n[0]) && void 0 !== l ? l : g.length - 1,
+    _ = m ? C : T,
+    I = m ? T : C;
   for (;;) {
-    let t = C[I],
-      n = null !== (u = I === v ? null === (o = S.path) || void 0 === o ? void 0 : o[1] : null) && void 0 !== u ? u : 0,
-      l = null !== (d = I === y ? null === (s = g.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== d ? d : t.children.length - 1,
-      i = m ? l : n,
-      f = m ? n : l,
-      p = i;
+    let t = g[I],
+      n = null !== (u = I === C ? null === (s = E.path) || void 0 === s ? void 0 : s[1] : null) && void 0 !== u ? u : 0,
+      i = null !== (d = I === T ? null === (r = y.path) || void 0 === r ? void 0 : r[1] : null) && void 0 !== d ? d : t.children.length - 1,
+      l = m ? i : n,
+      f = m ? n : i,
+      p = l;
     for (;;) {
-      let n, l;
-      let i = t.children[p],
-        o = [I, p];
-      if (n = r.PathUtils.equals(o, S.path) || r.PathUtils.isAncestor(o, S.path) ? !m && r.EditorUtils.isEnd(e, S, o) ? null : S : r.EditorUtils.start(e, o), l = r.PathUtils.equals(o, g.path) || r.PathUtils.isAncestor(o, g.path) ? m && r.EditorUtils.isStart(e, g, o) ? null : g : r.EditorUtils.end(e, o), null != n && null != l) {
-        if (r.TextUtils.isText(i) && 0 === i.text.length) {
+      let n, i;
+      let l = t.children[p],
+        s = [I, p];
+      if (n = a.PathUtils.equals(s, E.path) || a.PathUtils.isAncestor(s, E.path) ? !m && a.EditorUtils.isEnd(e, E, s) ? null : E : a.EditorUtils.start(e, s), i = a.PathUtils.equals(s, y.path) || a.PathUtils.isAncestor(s, y.path) ? m && a.EditorUtils.isStart(e, y, s) ? null : y : a.EditorUtils.end(e, s), null != n && null != i) {
+        if (a.TextUtils.isText(l) && 0 === l.text.length) {
           let e = {
-            path: o,
+            path: s,
             offset: 0
           };
           yield e, yield e
-        } else if (r.EditorUtils.isInline(e, i) && r.TextUtils.isText(i.children[0]) && 0 === i.children[0].text.length) {
+        } else if (a.EditorUtils.isInline(e, l) && a.TextUtils.isText(l.children[0]) && 0 === l.children[0].text.length) {
           let e = {
-            path: r.PathUtils.child(o, 0),
+            path: a.PathUtils.child(s, 0),
             offset: 0
           };
           yield e, yield e
         } else {
           let t = {
             anchor: n,
-            focus: l
+            focus: i
           };
-          for (let n of a(e, {
+          for (let n of o(e, {
               ...c,
               at: t
             })) yield n
         }
       }
       if (p === f) break;
-      p += T
+      p += S
     }
-    if (I === x) break;
-    I += T
+    if (I === _) break;
+    I += S
   }
 }

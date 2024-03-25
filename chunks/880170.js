@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("77078"),
+  i = s.n(r),
+  n = s("77078"),
   l = s("359499"),
   o = s("159764"),
   u = s("449881"),
@@ -50,7 +50,7 @@ var r = s("414456"),
     }
     return (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)("div", {
-        className: n(c.cover, c.below)
+        className: i(c.cover, c.below)
       }), (0, a.jsx)(u.default, {
         title: I,
         shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
@@ -61,7 +61,7 @@ var r = s("414456"),
       }), null != R && (0, a.jsx)("img", {
         src: R,
         alt: "",
-        className: n({
+        className: i({
           [c.cardImage]: !S,
           [c.carouselCardImage]: S
         })
@@ -71,7 +71,7 @@ var r = s("414456"),
           children: [(0, a.jsx)("div", {
             className: c.cardComponent,
             children: N
-          }), 0 !== p.length && null != m && (0, a.jsx)(i.Button, {
+          }), 0 !== p.length && null != m && (0, a.jsx)(n.Button, {
             disabled: !M,
             fullWidth: !0,
             onClick: m,

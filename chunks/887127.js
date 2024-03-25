@@ -1,43 +1,43 @@
 "use strict";
-a.r(n), a.d(n, {
+n.r(t), n.d(t, {
   default: function() {
-    return _
+    return E
   }
 });
-var t = a("37983");
-a("884691");
-var s = a("77078"),
-  u = a("272030"),
-  l = a("54239"),
-  i = a("158534"),
-  r = a("812204"),
-  c = a("861370"),
-  d = a("393414"),
-  o = a("47006"),
-  f = a("782340"),
-  _ = (0, i.default)(function(e) {
+var l = n("37983");
+n("884691");
+var a = n("77078"),
+  i = n("272030"),
+  u = n("54239"),
+  r = n("158534"),
+  o = n("812204"),
+  d = n("861370"),
+  s = n("393414"),
+  c = n("47006"),
+  _ = n("782340"),
+  E = (0, r.default)(function(e) {
     let {
-      channel: n,
-      onSelect: a
-    } = e, i = (0, o.default)(n), r = (0, c.default)({
-      id: n.id,
-      label: f.default.Messages.COPY_ID_CHANNEL
+      channel: t,
+      onSelect: n
+    } = e, r = (0, c.default)(t), o = (0, d.default)({
+      id: t.id,
+      label: _.default.Messages.COPY_ID_CHANNEL
     });
-    return (0, t.jsxs)(s.Menu, {
+    return (0, l.jsxs)(a.Menu, {
       navId: "channel-context",
-      onClose: u.closeContextMenu,
-      "aria-label": f.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-      onSelect: a,
-      children: [(0, t.jsxs)(s.MenuGroup, {
-        children: [i, n.isCategory() ? null : (0, t.jsx)(s.MenuItem, {
+      onClose: i.closeContextMenu,
+      "aria-label": _.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+      onSelect: n,
+      children: [(0, l.jsxs)(a.MenuGroup, {
+        children: [r, t.isCategory() ? null : (0, l.jsx)(a.MenuItem, {
           id: "jump-to-channel",
-          label: f.default.Messages.JUMP_TO_CHANNEL,
+          label: _.default.Messages.JUMP_TO_CHANNEL,
           action: () => {
-            (0, d.transitionToGuild)(n.guild_id, n.id), (0, l.popLayer)()
+            (0, s.transitionToGuild)(t.guild_id, t.id), (0, u.popLayer)()
           }
         })]
-      }), (0, t.jsx)(s.MenuGroup, {
-        children: r
+      }), (0, l.jsx)(a.MenuGroup, {
+        children: o
       })]
     })
-  }, [r.default.CONTEXT_MENU, r.default.CHANNEL_AUDIT_LOG_MENU])
+  }, [o.default.CONTEXT_MENU, o.default.CHANNEL_AUDIT_LOG_MENU])

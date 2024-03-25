@@ -1,4 +1,4 @@
-t.exports = function(t) {
-  var r = typeof t;
-  return "string" == r || "number" == r || "symbol" == r || "boolean" == r ? "__proto__" !== t : null === t
+e.exports = function(e) {
+  var t = typeof e;
+  return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e
 }

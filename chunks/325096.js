@@ -9,7 +9,7 @@ var n = Object.assign || function(e) {
     }
     return e
   },
-  o = function() {
+  a = function() {
     function e(e, t) {
       for (var r = 0; r < t.length; r++) {
         var n = t[r];
@@ -20,9 +20,9 @@ var n = Object.assign || function(e) {
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  a = r("884691"),
-  i = c(a),
-  u = c(r("478098")),
+  o = r("884691"),
+  i = s(o),
+  u = s(r("478098")),
   l = function(e) {
     if (e && e.__esModule) return e;
     var t = {};
@@ -31,12 +31,12 @@ var n = Object.assign || function(e) {
     return t.default = e, t
   }(r("268514"));
 
-function c(e) {
+function s(e) {
   return e && e.__esModule ? e : {
     default: e
   }
 }
-var s = t.ColorWrap = function(e) {
+var f = t.ColorWrap = function(e) {
   var t = function(t) {
     function r(e) {
       ! function(e, t) {
@@ -70,7 +70,7 @@ var s = t.ColorWrap = function(e) {
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(r, t), o(r, [{
+    }(r, t), a(r, [{
       key: "render",
       value: function() {
         var t = {};
@@ -84,7 +84,7 @@ var s = t.ColorWrap = function(e) {
         return n({}, l.toState(e.color, t.oldHue))
       }
     }]), r
-  }(a.PureComponent || a.Component);
+  }(o.PureComponent || o.Component);
   return t.propTypes = n({}, e.propTypes), t.defaultProps = n({}, e.defaultProps, {
     color: {
       h: 250,
@@ -94,4 +94,4 @@ var s = t.ColorWrap = function(e) {
     }
   }), t
 };
-t.default = s
+t.default = f

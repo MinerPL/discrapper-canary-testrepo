@@ -40,8 +40,8 @@ var n = l("414456"),
       buttonTextClassName: b,
       iconClassName: x,
       postSuccessGuild: g,
-      onSubscribeModalClose: B,
-      premiumModalAnalyticsLocation: v,
+      onSubscribeModalClose: v,
+      premiumModalAnalyticsLocation: B,
       showIcon: j = !0,
       disableShine: D,
       applicationId: G,
@@ -57,7 +57,7 @@ var n = l("414456"),
         return
       }
       if (null == A || A(e), (null == K ? void 0 : K.status) === C.SubscriptionStatusTypes.ACCOUNT_HOLD) {
-        (0, c.trackPremiumSettingsPaneOpened)(), o.default.open(C.UserSettingsSections.PREMIUM), null == B || B(!1);
+        (0, c.trackPremiumSettingsPaneOpened)(), o.default.open(C.UserSettingsSections.PREMIUM), null == v || v(!1);
         return
       }! function(e) {
         let {
@@ -133,9 +133,9 @@ var n = l("414456"),
         subscriptionTier: n,
         trialId: O,
         postSuccessGuild: g,
-        onSubscribeModalClose: B,
+        onSubscribeModalClose: v,
         analyticsLocations: W,
-        premiumModalAnalyticsLocation: v,
+        premiumModalAnalyticsLocation: B,
         applicationId: G,
         giftMessage: H
       })

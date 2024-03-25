@@ -4,26 +4,26 @@ l.r(t), l.d(t, {
     return u
   }
 });
-var n = l("37983");
+var s = l("37983");
 l("884691");
-var s = l("469563"),
+var n = l("469563"),
   a = l("998460"),
   i = l("75196"),
-  u = (0, s.replaceIcon)(function(e) {
+  u = (0, n.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: l = 24,
-      color: s = "currentColor",
+      color: n = "currentColor",
       foreground: a,
       ...u
     } = e;
-    return (0, n.jsx)("svg", {
+    return (0, s.jsx)("svg", {
       width: t,
       height: l,
       ...(0, i.default)(u),
       viewBox: "0 0 24 24",
-      children: (0, n.jsx)("path", {
-        fill: s,
+      children: (0, s.jsx)("path", {
+        fill: n,
         className: a,
         fillRule: "evenodd",
         clipRule: "evenodd",

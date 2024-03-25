@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return A
   }
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("627445"),
-  l = n.n(i),
+  l = n("627445"),
+  i = n.n(l),
   r = n("77078"),
   o = n("252917"),
   u = n("945183"),
@@ -15,16 +15,16 @@ var a = n("37983"),
   c = n("485328"),
   f = n("206230"),
   E = n("105437"),
-  _ = n("126090"),
-  h = n("53889"),
+  h = n("126090"),
+  _ = n("53889"),
   C = n("471671"),
-  I = n("659500"),
-  T = n("214875"),
-  S = n("223415"),
-  m = n("399174"),
-  p = n("49111"),
-  A = n("507812"),
-  g = s.memo(function() {
+  S = n("659500"),
+  I = n("214875"),
+  m = n("223415"),
+  p = n("399174"),
+  T = n("49111"),
+  g = n("793932"),
+  A = s.memo(function() {
     let e = s.useRef(null),
       t = s.useCallback(t => {
         let {
@@ -35,16 +35,16 @@ var a = n("37983"),
         let {
           current: s
         } = e;
-        l(null != s, "Shakeable is shaken when not mounted"), s.shake(n, a)
+        i(null != s, "Shakeable is shaken when not mounted"), s.shake(n, a)
       }, []);
-    return s.useEffect(() => (c.default.setLayout(d.default), c.default.enable(), () => c.default.disable()), []), s.useEffect(() => (I.ComponentDispatch.subscribe(p.ComponentActions.SHAKE_APP, t), () => {
-      I.ComponentDispatch.unsubscribe(p.ComponentActions.SHAKE_APP, t)
+    return s.useEffect(() => (c.default.setLayout(d.default), c.default.enable(), () => c.default.disable()), []), s.useEffect(() => (S.ComponentDispatch.subscribe(T.ComponentActions.SHAKE_APP, t), () => {
+      S.ComponentDispatch.unsubscribe(T.ComponentActions.SHAKE_APP, t)
     }), [t]), (0, E.default)(), (0, a.jsxs)(r.Shakeable, {
       ref: e,
-      className: A.app,
-      children: [(0, a.jsx)(m.default, {
-        className: A.layers,
+      className: g.app,
+      children: [(0, a.jsx)(p.default, {
+        className: g.layers,
         children: (0, a.jsx)(o.default, {})
-      }), (0, a.jsx)(_.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(T.default, {}), (0, a.jsx)(h.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {}), (0, a.jsx)(S.default, {})]
+      }), (0, a.jsx)(h.default, {}), (0, a.jsx)(u.default, {}), (0, a.jsx)(I.default, {}), (0, a.jsx)(_.default, {}), (0, a.jsx)(r.DnDKeyboardHelpBar, {}), (0, a.jsx)(m.default, {})]
     })
   })

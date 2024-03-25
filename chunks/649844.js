@@ -40,7 +40,7 @@ function f(e) {
     giftRecipient: b,
     returnRef: x,
     subscription: g
-  } = null != e ? e : {}, B = !1, v = (0, n.v4)(), j = r.default.getCurrentUser(), D = (0, T.isPremiumExactly)(j, E.PremiumTypes.TIER_2);
+  } = null != e ? e : {}, v = !1, B = (0, n.v4)(), j = r.default.getCurrentUser(), D = (0, T.isPremiumExactly)(j, E.PremiumTypes.TIER_2);
   (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -52,7 +52,7 @@ function f(e) {
       } = l;
       return (0, s.jsx)(e, {
         ...a,
-        loadId: v,
+        loadId: B,
         subscriptionTier: A,
         skuId: (0, T.castPremiumSubscriptionAsSkuId)(A),
         isGift: R,
@@ -64,7 +64,7 @@ function f(e) {
           n(), null == p || p(e), e && (null == I || I(), !R && null != t && t === E.PremiumSubscriptionSKUs.TIER_2 && !D && d.ComponentDispatch.dispatch(_.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
-          B = !0, null == S || S(), !R && (0, o.setCanPlayWowMoment)(!0)
+          v = !0, null == S || S(), !R && (0, o.setCanPlayWowMoment)(!0)
         },
         onSubscriptionConfirmation: I,
         analyticsLocations: m,
@@ -84,8 +84,8 @@ function f(e) {
   }, {
     modalKey: "payment-modal",
     onCloseCallback: () => {
-      !B && c.default.track(_.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: v,
+      !v && c.default.track(_.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: B,
         payment_type: _.PurchaseTypeToAnalyticsPaymentType[_.PurchaseTypes.SUBSCRIPTION],
         location: null != M ? M : P,
         source: C,
@@ -94,7 +94,7 @@ function f(e) {
         eligible_for_trial: null != L,
         application_id: h,
         location_stack: m
-      }), (0, i.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == p || p(B), B && (null == I || I())
+      }), (0, i.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == p || p(v), v && (null == I || I())
     }
   })
 }

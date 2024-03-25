@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   },
   flushAnalyticsFeedItems: function() {
-    return r
+    return a
   }
 });
 var i = n("913144");
@@ -30,7 +30,7 @@ function l(e, t, n) {
   })
 }
 
-function r(e, t) {
+function a(e, t) {
   i.default.dispatch({
     type: "ANALYTICS_FEED_FLUSH",
     id: e,

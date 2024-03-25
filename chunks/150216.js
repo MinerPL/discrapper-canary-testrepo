@@ -1,11 +1,11 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   appStorefrontExperiment: function() {
-    return a
+    return l
   }
 });
-var n = l("862205");
-let a = (0, n.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2024-02_app_storefront",
   label: "App Storefront",

@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 }), n("222007");
-var l = n("446674"),
-  u = n("913144");
+var i = n("446674"),
+  s = n("913144");
 let r = {},
-  i = {},
-  a = new Set;
-class d extends l.default.Store {
+  a = {},
+  o = new Set;
+class l extends i.default.Store {
   getCompletedActions(e) {
-    return null == e ? null : i[e]
+    return null == e ? null : a[e]
   }
   hasCompletedActionForChannel(e, t) {
     let n = this.getCompletedActions(e);
@@ -19,18 +19,18 @@ class d extends l.default.Store {
   }
   getState(e) {
     return null == e ? {} : {
-      completedActions: i[e],
-      loading: a.has(e)
+      completedActions: a[e],
+      loading: o.has(e)
     }
   }
 }
-d.displayName = "GuildOnboardingMemberActionStore";
-var o = new d(u.default, {
+l.displayName = "GuildOnboardingMemberActionStore";
+var u = new l(s.default, {
   GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function(e) {
     let {
       guildId: t
     } = e;
-    a.add(t)
+    o.add(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function(e) {
     let {
@@ -38,33 +38,33 @@ var o = new d(u.default, {
       guildId: n
     } = e;
     if (null == t) {
-      i[n] = r;
+      a[n] = r;
       return
     }
-    i[n] = t, a.delete(n)
+    a[n] = t, o.delete(n)
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: function(e) {
     let {
       guildId: t
     } = e;
-    a.delete(t)
+    o.delete(t)
   },
   GUILD_NEW_MEMBER_ACTIONS_DELETE_SUCCESS: function(e) {
     let {
       guildId: t
     } = e;
-    if (null == i[t]) return !1;
-    delete i[t]
+    if (null == a[t]) return !1;
+    delete a[t]
   },
   COMPLETE_NEW_MEMBER_ACTION: function(e) {
     let {
       guildId: t,
       channelId: n
     } = e;
-    i = {
-      ...i,
+    a = {
+      ...a,
       [t]: {
-        ...i[t],
+        ...a[t],
         [n]: !0
       }
     }
@@ -73,7 +73,7 @@ var o = new d(u.default, {
     let {
       guild: t
     } = e;
-    if (null == i[t.id]) return !1;
-    delete i[t.id]
+    if (null == a[t.id]) return !1;
+    delete a[t.id]
   }
 })

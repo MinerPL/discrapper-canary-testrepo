@@ -61,36 +61,36 @@ function c(e, t, s) {
     c = 0,
     S = 0,
     E = null,
-    f = null,
     T = null,
-    m = null,
-    _ = null;
+    f = null,
+    _ = null,
+    m = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 0)),
       a = i.getUint32(4 * (4 * e + 1)),
       n = i.getUint32(4 * (4 * e + 2)),
       l = i.getUint32(4 * (4 * e + 3));
-    u++, c += a, S += a + s, null == f && (f = l), T = l, null == E && (E = n), null == m && (m = t);
+    u++, c += a, S += a + s, null == T && (T = l), f = l, null == E && (E = n), null == _ && (_ = t);
     let r = l - (n - E);
-    null == _ && (_ = r), r < _ && (_ = r)
+    null == m && (m = r), r < m && (m = r)
   }
   let g = new n.Histogram,
     h = null;
   for (let e = 0; e < i.byteLength / r; e++) {
     let t = i.getUint32(4 * (4 * e + 2)),
       s = i.getUint32(4 * (4 * e + 3)),
-      a = (s - (t - E) - _) / 1e3;
+      a = (s - (t - E) - m) / 1e3;
     g.addSample(a), null == h && (h = a), a > h && (h = a)
   }
-  let I = null != f && null != T ? (T - f) / 1e3 : 0,
-    N = 1 - u / d,
-    p = 8 * c / I,
-    C = 8 * S / I,
+  let N = null != T && null != f ? (f - T) / 1e3 : 0,
+    I = 1 - u / d,
+    p = 8 * c / N,
+    C = 8 * S / N,
     A = g.getReport([50, 95, 99]);
   return {
     payloadBandwidth: p,
     networkBandwidth: C,
-    loss: N,
+    loss: I,
     iatP50: A.percentiles[50],
     iatP95: A.percentiles[95],
     iatP99: A.percentiles[99],

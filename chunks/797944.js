@@ -1,7 +1,7 @@
 "use strict";
-var l, n;
+var n, l;
 s.r(t), s.d(t, {
   HighlightColors: function() {
-    return l
+    return n
   }
-}), (n = l || (l = {})).ACCENT = "accent", n.GREEN = "statusGreen", n.YELLOW = "statusYellow", n.ORANGE = "statusOrange", n.RED = "statusRed", n.NONE = "transparent"
+}), (l = n || (n = {})).ACCENT = "accent", l.GREEN = "statusGreen", l.YELLOW = "statusYellow", l.ORANGE = "statusOrange", l.RED = "statusRed", l.NONE = "transparent"

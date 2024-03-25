@@ -82,8 +82,8 @@ function d(e, t, n, u) {
         var p, m = {},
           h = Object.keys(t).sort(c);
         for (p = 0; p < h.length; p++) {
-          var _ = h[p];
-          e(t[_], _, p, s, t, d, f), m[_] = t[_]
+          var y = h[p];
+          e(t[y], y, p, s, t, d, f), m[y] = t[y]
         }
         if (void 0 === u) return m;
         o.push([u, n, t]), u[n] = m

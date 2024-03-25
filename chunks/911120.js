@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("95410"),
   u = n("77078"),
@@ -15,40 +15,40 @@ var a = n("37983"),
   c = n("355025"),
   f = n("945330"),
   E = n("50647"),
-  _ = n("782340"),
-  h = n("805244");
+  h = n("782340"),
+  _ = n("531639");
 let C = "isHideDevBanner";
-var I = () => {
+var S = () => {
   var e;
-  let [t, n] = (0, s.useState)((null === (e = o.default.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), i = (0, r.useStateFromStores)([d.default], () => {
+  let [t, n] = (0, s.useState)((null === (e = o.default.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), l = (0, r.useStateFromStores)([d.default], () => {
     var e;
     return (0, c.probablyHasBuildOverride)() ? null === (e = d.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (t) return null;
-  let I = () => {
+  let S = () => {
       o.default.set(C, !0), n(!0)
     },
-    T = () => (0, a.jsx)(u.Clickable, {
-      onClick: I,
-      className: h.closeButton,
-      "aria-label": _.default.Messages.DISMISS,
+    I = () => (0, a.jsx)(u.Clickable, {
+      onClick: S,
+      className: _.closeButton,
+      "aria-label": h.default.Messages.DISMISS,
       children: (0, a.jsx)(f.default, {
-        className: h.closeIcon
+        className: _.closeIcon
       })
     });
-  if (null != i) return (0, a.jsxs)("div", {
-    className: l(h.devBanner, h.buildOverride),
+  if (null != l) return (0, a.jsxs)("div", {
+    className: i(_.devBanner, _.buildOverride),
     children: [(0, a.jsx)(E.default, {
-      className: h.icon
-    }), _.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(T, {})]
+      className: _.icon
+    }), h.default.Messages.BUILD_OVERRIDE, (0, a.jsx)(I, {})]
   });
-  let S = window.GLOBAL_ENV.RELEASE_CHANNEL;
-  return "staging" === S ? (0, a.jsxs)("div", {
-    className: l(h.devBanner, h.staging),
+  let m = window.GLOBAL_ENV.RELEASE_CHANNEL;
+  return "staging" === m ? (0, a.jsxs)("div", {
+    className: i(_.devBanner, _.staging),
     children: [(0, a.jsx)(E.default, {
-      className: h.icon
-    }), _.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "260361"
-    }), (0, a.jsx)(T, {})]
+      className: _.icon
+    }), h.default.Messages.DEV_NOTICE_STAGING.format({
+      buildNumber: "278320"
+    }), (0, a.jsx)(I, {})]
   }) : null
 }

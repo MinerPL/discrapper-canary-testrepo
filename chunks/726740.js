@@ -5,8 +5,8 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = function(e) {
     var t = e.hsl,
       r = e.offset,
@@ -14,8 +14,8 @@ var n = r("884691"),
       i = void 0 === n ? function() {} : n,
       u = e.active,
       l = e.first,
-      c = e.last,
-      s = (0, a.default)({
+      s = e.last,
+      f = (0, o.default)({
         default: {
           swatch: {
             height: "12px",
@@ -42,10 +42,10 @@ var n = r("884691"),
       }, {
         active: u,
         first: l,
-        last: c
+        last: s
       });
-    return o.createElement("div", {
-      style: s.swatch,
+    return a.createElement("div", {
+      style: f.swatch,
       onClick: function(e) {
         return i({
           h: t.h,

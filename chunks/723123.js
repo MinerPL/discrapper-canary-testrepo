@@ -5,10 +5,10 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("123090"),
-  u = (0, a.handleHover)(function(e) {
+  u = (0, o.handleHover)(function(e) {
     var t = e.hover,
       r = e.color,
       n = e.onClick,
@@ -19,7 +19,7 @@ var n = r("884691"),
         outline: "2px solid #fff",
         boxShadow: "0 0 5px 2px rgba(0,0,0,0.25)"
       },
-      c = (0, a.default)({
+      s = (0, o.default)({
         default: {
           swatch: {
             width: "25px",
@@ -33,9 +33,9 @@ var n = r("884691"),
       }, {
         hover: t
       });
-    return o.createElement("div", {
-      style: c.swatch
-    }, o.createElement(i.Swatch, {
+    return a.createElement("div", {
+      style: s.swatch
+    }, a.createElement(i.Swatch, {
       color: r,
       onClick: n,
       onHover: u,

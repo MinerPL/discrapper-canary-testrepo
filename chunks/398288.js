@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
-  r = n("358689");
+  l = n("414456"),
+  i = n.n(l),
+  r = n("744377");
 class o extends s.PureComponent {
   render() {
     let {
@@ -16,14 +16,14 @@ class o extends s.PureComponent {
       children: t,
       hoverText: n,
       className: s,
-      forceHover: i,
+      forceHover: l,
       ...o
     } = this.props;
     return (0, a.jsxs)("div", {
       ...o,
-      className: l(s, r.hoverRoll, {
+      className: i(s, r.hoverRoll, {
         [r.disabled]: null == n,
-        [r.forceHover]: i
+        [r.forceHover]: l
       }),
       children: [(0, a.jsx)(e, {
         className: r.hovered,

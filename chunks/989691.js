@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 }), n("222007");
 var i = n("446674"),
-  r = n("913144"),
-  s = n("599110"),
+  s = n("913144"),
+  r = n("599110"),
   a = n("495226"),
   o = n("49111");
 let l = {
@@ -42,7 +42,7 @@ class u extends i.default.PersistedStore {
 u.displayName = "DismissibleContentFrameworkStore", u.persistKey = "DismissibleContentFrameworkStore", u.migrations = [e => ({
   ...e
 })];
-var c = new u(r.default, {
+var d = new u(s.default, {
   LOGOUT: function() {
     l = {
       ...l,
@@ -66,7 +66,7 @@ var c = new u(r.default, {
           let e = new Date;
           e.setHours(0, 0, 0, 0), l.dailyCapPeriodStart = e.getTime()
         }
-        l.numberOfDCsShownToday += 1, l.numberOfDCsShownToday > 3 && s.default.track(o.AnalyticEvents.DCF_CAP_EXCEEDED, {
+        l.numberOfDCsShownToday += 1, l.numberOfDCsShownToday > 3 && r.default.track(o.AnalyticEvents.DCF_CAP_EXCEEDED, {
           cap_type: "daily_cap",
           dismissible_content: t,
           shown_dcs: l.numberOfDCsShownToday

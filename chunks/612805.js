@@ -8,12 +8,12 @@ var l = a("37983"),
   n = a("884691"),
   s = a("414456"),
   r = a.n(s),
-  i = a("77078"),
   o = a("418009"),
+  i = a("77078"),
   u = a("95689"),
-  c = a("100300"),
-  d = a("782340"),
-  E = a("105335");
+  d = a("100300"),
+  c = a("782340"),
+  E = a("563778");
 
 function _(e) {
   let {
@@ -40,18 +40,18 @@ var A = function(e) {
     orientation: "horizontal"
   }), r = n.useMemo(() => [{
     name: o.PollLayoutTypes.DEFAULT,
-    label: d.default.Messages.CREATE_POLL_LAYOUT_DEFAULT,
-    icon: c.default
+    label: c.default.Messages.CREATE_POLL_LAYOUT_DEFAULT,
+    icon: d.default
   }, {
     name: o.PollLayoutTypes.IMAGE_ONLY_ANSWERS,
-    label: d.default.Messages.CREATE_POLL_LAYOUT_IMAGE,
+    label: c.default.Messages.CREATE_POLL_LAYOUT_IMAGE,
     icon: u.default
   }], []), A = e => {
     a(e)
   };
   return (0, l.jsx)("div", {
     className: E.container,
-    "aria-label": d.default.Messages.CREATE_POLL_LAYOUTS_RADIOGROUP_ARIA_LABEL,
+    "aria-label": c.default.Messages.CREATE_POLL_LAYOUTS_RADIOGROUP_ARIA_LABEL,
     ...s,
     children: r.map(e => {
       let a = e.icon;

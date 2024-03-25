@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
-var a = n("641078"),
-  l = n("132554"),
-  r = n("646718"),
-  i = n("782340"),
-  u = n("880865"),
-  o = e => {
+var i = n("641078"),
+  s = n("132554"),
+  l = n("646718"),
+  a = n("782340"),
+  o = n("880865"),
+  u = e => {
     let {
       isGift: t,
       plan: n
-    } = e, o = (0, a.useIsEligibleForBogoPromotion)();
-    return t || (null == n ? void 0 : n.skuId) !== r.PremiumSubscriptionSKUs.TIER_2 || !o ? null : (0, s.jsx)(l.default, {
-      copy: i.default.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
-      bannerImage: u
+    } = e, u = (0, i.useIsEligibleForBogoPromotion)();
+    return t || (null == n ? void 0 : n.skuId) !== l.PremiumSubscriptionSKUs.TIER_2 || !u ? null : (0, r.jsx)(s.default, {
+      copy: a.default.Messages.BOGO_ANNOUNCEMENT_MODAL_UPGRADE_HEADER,
+      bannerImage: o
     })
   }

@@ -1,46 +1,46 @@
 "use strict";
-let a, n, l;
+let a, r, i;
 s.r(t), s.d(t, {
   default: function() {
     return d
   }
 }), s("222007");
-var r = s("446674"),
-  i = s("913144");
+var n = s("446674"),
+  l = s("913144");
 
-function u() {
-  n = {}, a = {}, l = new Set
+function o() {
+  r = {}, a = {}, i = new Set
 }
-u();
-class o extends r.default.Store {
+o();
+class u extends n.default.Store {
   getStatisticsForApplication(e) {
     return a[e]
   }
   shouldFetchStatisticsForApplication(e) {
-    let t = n[e];
-    return !l.has(e) && (null == t || Date.now() - t > 36e5)
+    let t = r[e];
+    return !i.has(e) && (null == t || Date.now() - t > 36e5)
   }
 }
-o.displayName = "ApplicationStatisticsStore";
-var d = new o(i.default, {
+u.displayName = "ApplicationStatisticsStore";
+var d = new u(l.default, {
   APPLICATION_ACTIVITY_STATISTICS_FETCH_START: function(e) {
     let {
       applicationId: t
     } = e;
-    l.add(t)
+    i.add(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL: function(e) {
     let {
       applicationId: t
     } = e;
-    l.delete(t)
+    i.delete(t)
   },
   APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS: function(e) {
     let {
       statistics: t,
       applicationId: s
     } = e;
-    n[s] = Date.now(), l.delete(s), a[s] = t
+    r[s] = Date.now(), i.delete(s), a[s] = t
   },
-  LOGOUT: u
+  LOGOUT: o
 })

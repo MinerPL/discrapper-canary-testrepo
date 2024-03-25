@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
-var l = n("627445"),
-  a = n.n(l);
+var i = n("627445"),
+  l = n.n(i);
 
-function s(e, t) {
-  if (a(e.length >= t, "Waveform smaller than samples"), e.length === t) return e;
+function a(e, t) {
+  if (l(e.length >= t, "Waveform smaller than samples"), e.length === t) return e;
   let n = e.length / t,
-    l = [],
-    s = 0;
-  for (; l.length < t;) {
-    let t = Math.round((l.length + 1) * n),
-      a = 0,
-      i = 0;
-    for (let n = s; n < t && n < e.length; n++) a += e[n], i++;
-    l[l.length] = a / i, s = t
+    i = [],
+    a = 0;
+  for (; i.length < t;) {
+    let t = Math.round((i.length + 1) * n),
+      l = 0,
+      s = 0;
+    for (let n = a; n < t && n < e.length; n++) l += e[n], s++;
+    i[i.length] = l / s, a = t
   }
-  return l
+  return i
 }

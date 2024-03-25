@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   createUtterance: function() {
-    return i
+    return l
   },
   speakUtterance: function() {
-    return l
+    return i
   },
   cancelAll: function() {
     return r
@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
 var a = n("981957");
 let s = null != window.speechSynthesis;
 
-function i(e, t) {
+function l(e, t) {
   let n = e.replace(/(https?:\/\/[^\s]+)/g, e => {
     let t = e.match(/^https?:\/\/(?:www\.)?([^/?#]+)(?:[/?#]|$)/i);
     return null != t ? t[1] : ""
@@ -26,7 +26,7 @@ function i(e, t) {
   return s.rate = a.default.speechRate, s
 }
 
-function l(e, t) {
+function i(e, t) {
   s && (e.voice = t, speechSynthesis.speak(e))
 }
 

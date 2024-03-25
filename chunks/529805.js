@@ -1,46 +1,46 @@
 "use strict";
-t.r(x), t.d(x, {
+n.r(t), n.d(t, {
   createPendingReply: function() {
-    return a
+    return i
   },
   setPendingReplyShouldMention: function() {
-    return o
+    return r
   },
   deletePendingReply: function() {
-    return y
+    return u
   }
 });
-var s = t("913144");
+var l = n("913144");
 
-function a(i) {
+function i(e) {
   let {
-    message: x,
-    channel: t,
-    shouldMention: a,
-    showMentionToggle: o,
-    source: y
-  } = i;
-  s.default.dispatch({
+    message: t,
+    channel: n,
+    shouldMention: i,
+    showMentionToggle: r,
+    source: u
+  } = e;
+  l.default.dispatch({
     type: "CREATE_PENDING_REPLY",
-    message: x,
-    channel: t,
-    shouldMention: a,
-    showMentionToggle: o,
-    source: y
+    message: t,
+    channel: n,
+    shouldMention: i,
+    showMentionToggle: r,
+    source: u
   })
 }
 
-function o(i, x) {
-  s.default.dispatch({
+function r(e, t) {
+  l.default.dispatch({
     type: "SET_PENDING_REPLY_SHOULD_MENTION",
-    channelId: i,
-    shouldMention: x
+    channelId: e,
+    shouldMention: t
   })
 }
 
-function y(i) {
-  s.default.dispatch({
+function u(e) {
+  l.default.dispatch({
     type: "DELETE_PENDING_REPLY",
-    channelId: i
+    channelId: e
   })
 }

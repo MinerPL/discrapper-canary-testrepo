@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("290381"),
   o = n("77078"),
   u = n("272030"),
@@ -15,25 +15,25 @@ var a = n("37983"),
   c = n("574921"),
   f = n("311092"),
   E = n("613088"),
-  _ = n("407063"),
-  h = n("845579"),
+  h = n("407063"),
+  _ = n("845579"),
   C = n("315102"),
-  I = n("794818"),
-  T = n("580357"),
-  S = n("587974"),
-  m = n("49111"),
-  p = n("782340"),
-  A = n("362962"),
-  g = n("68422"),
+  S = n("794818"),
+  I = n("580357"),
+  m = n("587974"),
+  p = n("49111"),
+  T = n("782340"),
+  g = n("196779"),
+  A = n("68422"),
   N = n("578817"),
   R = n("855237");
 class O extends s.PureComponent {
   getDefaultSplashURL(e, t) {
     if (t) return R;
     switch (e) {
-      case m.ThemeTypes.DARK:
-        return g;
-      case m.ThemeTypes.LIGHT:
+      case p.ThemeTypes.DARK:
+        return A;
+      case p.ThemeTypes.LIGHT:
         return N
     }
   }
@@ -43,23 +43,23 @@ class O extends s.PureComponent {
       guild: t,
       className: n,
       theme: s,
-      onTagClick: i
+      onTagClick: l
     } = this.props, {
       loaded: u,
-      hasBeenSeen: g,
+      hasBeenSeen: A,
       isVisible: N,
       submitting: R
     } = this.state, {
       name: O,
-      description: L,
-      presenceCount: v,
+      description: v,
+      presenceCount: L,
       memberCount: M,
       keywords: P
-    } = t, D = null === (e = t.features) || void 0 === e ? void 0 : e.has(m.GuildFeatures.HUB), y = C.default.getGuildDiscoverySplashURL({
+    } = t, y = null === (e = t.features) || void 0 === e ? void 0 : e.has(p.GuildFeatures.HUB), D = C.default.getGuildDiscoverySplashURL({
       id: t.id,
       splash: t.discoverySplash,
-      size: 300 * (0, _.getDevicePixelRatio)()
-    }), x = null != y ? y : this.getDefaultSplashURL(s, D), b = C.default.getGuildIconURL({
+      size: 300 * (0, h.getDevicePixelRatio)()
+    }), x = null != D ? D : this.getDefaultSplashURL(s, y), b = C.default.getGuildIconURL({
       id: t.id,
       icon: t.icon,
       size: 40
@@ -83,114 +83,114 @@ class O extends s.PureComponent {
     d.DiscoveryInAppReportingExperiment.trackExposure({
       location: "de1ef6_4"
     });
-    let j = h.DeveloperMode.getSetting();
+    let j = _.DeveloperMode.getSetting();
     return (0, a.jsx)(r.VisibilitySensor, {
       active: !N,
       onChange: this.setIsVisible,
       threshold: .1,
       children: N ? (0, a.jsx)(r.VisibilitySensor, {
         onChange: this.handleVisibilityChange,
-        active: !g,
+        active: !A,
         threshold: .55,
         children: (0, a.jsxs)("div", {
-          className: l(n, {
-            [A.loaded]: u,
-            [A.loading]: !u
+          className: i(n, {
+            [g.loaded]: u,
+            [g.loading]: !u
           }),
           children: [R ? (0, a.jsx)(o.Spinner, {
             type: o.Spinner.Type.PULSING_ELLIPSIS,
-            className: A.spinner
+            className: g.spinner
           }) : null, (0, a.jsxs)(o.Clickable, {
             onClick: this.handleClickView,
-            className: l(A.card, {
-              [A.submitting]: R,
-              [A.cardWithTags]: U
+            className: i(g.card, {
+              [g.submitting]: R,
+              [g.cardWithTags]: U
             }),
             onContextMenu: this.handleContextMenu,
             children: [(0, a.jsxs)("div", {
-              className: A.cardHeader,
+              className: g.cardHeader,
               children: [(0, a.jsx)("div", {
-                className: A.splash,
+                className: g.splash,
                 children: (0, a.jsx)("img", {
                   src: x,
                   alt: "",
-                  className: l(A.splashImage, {
-                    [A.splashImageHeight]: !D
+                  className: i(g.splashImage, {
+                    [g.splashImageHeight]: !y
                   }),
                   onLoad: () => this.setState({
                     loaded: !0
                   })
                 })
               }), j || G ? (0, a.jsx)("div", {
-                className: A.actionButtons,
+                className: g.actionButtons,
                 children: (0, a.jsx)(E.default, {
                   guild: t
                 })
               }) : null, (0, a.jsx)("div", {
-                className: A.guildIcon,
-                children: (0, a.jsx)(S.default, {
-                  mask: S.default.Masks.SQUIRCLE,
+                className: g.guildIcon,
+                children: (0, a.jsx)(m.default, {
+                  mask: m.default.Masks.SQUIRCLE,
                   width: 48,
                   height: 48,
                   children: (0, a.jsx)("div", {
-                    className: A.iconMask,
-                    children: (0, a.jsx)(S.default, {
-                      mask: S.default.Masks.SQUIRCLE,
+                    className: g.iconMask,
+                    children: (0, a.jsx)(m.default, {
+                      mask: m.default.Masks.SQUIRCLE,
                       width: 40,
                       height: 40,
                       children: (0, a.jsx)("img", {
                         src: b,
                         alt: "",
-                        className: A.avatar
+                        className: g.avatar
                       })
                     })
                   })
                 })
               })]
             }), (0, a.jsxs)("div", {
-              className: A.guildInfo,
+              className: g.guildInfo,
               children: [(0, a.jsxs)("div", {
-                className: A.title,
-                children: [(0, a.jsx)(T.default, {
-                  className: A.guildBadge,
+                className: g.title,
+                children: [(0, a.jsx)(I.default, {
+                  className: g.guildBadge,
                   guild: t,
                   tooltipColor: o.Tooltip.Colors.PRIMARY
                 }), (0, a.jsx)(o.Heading, {
                   variant: "heading-md/semibold",
-                  className: A.guildName,
+                  className: g.guildName,
                   children: O
                 })]
               }), (0, a.jsx)(o.Text, {
-                className: A.description,
+                className: g.description,
                 variant: "text-sm/normal",
                 color: "header-secondary",
-                children: L
-              }), U && null != P && null != i && (0, a.jsx)(f.DiscoveryTags, {
+                children: v
+              }), U && null != P && null != l && (0, a.jsx)(f.DiscoveryTags, {
                 tags: P,
-                onTagClick: e => i(e, t.id),
+                onTagClick: e => l(e, t.id),
                 guildId: t.id,
-                section: I.AnalyticsContexts.POPULAR
+                section: S.AnalyticsContexts.POPULAR
               }), (0, a.jsxs)("div", {
-                className: A.memberInfo,
-                children: [null != v && (0, a.jsxs)("div", {
-                  className: A.memberCount,
+                className: g.memberInfo,
+                children: [null != L && (0, a.jsxs)("div", {
+                  className: g.memberCount,
                   children: [(0, a.jsx)("div", {
-                    className: A.dotOnline
+                    className: g.dotOnline
                   }), (0, a.jsx)(o.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-                      membersOnline: v
+                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                      membersOnline: L
                     })
                   })]
                 }), null != M && (0, a.jsxs)("div", {
-                  className: A.memberCount,
+                  className: g.memberCount,
                   children: [(0, a.jsx)("div", {
-                    className: A.dotOffline
+                    className: g.dotOffline
                   }), (0, a.jsx)(o.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: p.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                    children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                       count: M
                     })
                   })]
@@ -200,8 +200,8 @@ class O extends s.PureComponent {
           })]
         })
       }) : (0, a.jsx)("div", {
-        className: l(A.card, {
-          [A.cardWithTags]: U
+        className: i(g.card, {
+          [g.cardWithTags]: U
         })
       })
     })
@@ -257,6 +257,6 @@ class O extends s.PureComponent {
   }
 }
 O.Placeholder = e => (0, a.jsx)("div", {
-  className: l(e.className, A.cardPlaceholder)
+  className: i(e.className, g.cardPlaceholder)
 });
-var L = O
+var v = O

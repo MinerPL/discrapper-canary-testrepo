@@ -1,76 +1,76 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return A
   }
-}), r("222007");
-var a = r("37983"),
-  n = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
-  o = r("866227"),
-  s = r.n(o),
-  c = r("446674"),
-  d = r("77078"),
-  u = r("145079"),
-  h = r("697218"),
-  p = r("756609"),
-  f = r("228220"),
-  m = r("664336"),
-  g = r("888400"),
-  y = r("398570"),
-  b = r("370492"),
-  x = r("332814"),
-  k = r("928063"),
-  v = r("637171"),
-  C = r("724209"),
-  S = r("782340"),
-  j = r("185187"),
-  T = r("694735");
+}), t("222007");
+var a = t("37983"),
+  n = t("884691"),
+  i = t("414456"),
+  o = t.n(i),
+  l = t("866227"),
+  s = t.n(l),
+  c = t("446674"),
+  d = t("77078"),
+  u = t("145079"),
+  h = t("697218"),
+  p = t("756609"),
+  m = t("228220"),
+  g = t("664336"),
+  f = t("888400"),
+  y = t("398570"),
+  b = t("370492"),
+  x = t("332814"),
+  k = t("928063"),
+  v = t("637171"),
+  C = t("724209"),
+  S = t("782340"),
+  j = t("731343"),
+  T = t("699412");
 let w = [{
   key: "event",
   cellClassName: j.eventColumn,
   render(e) {
     let {
-      event: t
+      event: r
     } = e;
-    return t
+    return r
   }
 }, {
   key: "location",
   cellClassName: j.locationColumn,
   render(e) {
     let {
-      properties: t
+      properties: r
     } = e;
-    return t.location
+    return r.location
   }
 }];
 
 function N(e) {
   let {
-    children: t
+    children: r
   } = e;
   return (0, a.jsx)(d.ScrollerThin, {
     className: j.customPropertiesContainer,
     children: (0, a.jsx)("dl", {
-      children: t
+      children: r
     })
   })
 }
 
 function E(e) {
   let {
-    name: t,
-    children: r
+    name: r,
+    children: t
   } = e;
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("dt", {
       className: j.customPropertiesName,
-      children: t
+      children: r
     }), (0, a.jsx)("dd", {
       className: j.customPropertiesValue,
-      children: r
+      children: t
     })]
   })
 }
@@ -80,20 +80,20 @@ let L = [{
     render: e => {
       let {
         loggedEvent: {
-          event: t,
-          properties: r,
+          event: r,
+          properties: t,
           timestamp: n,
           fingerprint: i
         }
-      } = e, o = h.default.getUser(i), c = s(n);
+      } = e, l = h.default.getUser(i), c = s(n);
       return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsxs)(m.default, {
-          className: l(T.headerBar, j.subPanelHeaderBar),
-          children: [(0, a.jsx)(m.default.Icon, {
+        children: [(0, a.jsxs)(g.default, {
+          className: o(T.headerBar, j.subPanelHeaderBar),
+          children: [(0, a.jsx)(g.default.Icon, {
             icon: p.default,
-            tooltip: t
-          }), (0, a.jsx)(m.default.Title, {
-            children: t
+            tooltip: r
+          }), (0, a.jsx)(g.default.Title, {
+            children: r
           })]
         }), (0, a.jsxs)(x.Properties, {
           className: j.commonProperties,
@@ -101,13 +101,13 @@ let L = [{
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
               dateTime: n.toISOString(),
-              title: (0, g.dateFormat)(c, "LLLL"),
-              children: (0, g.calendarFormat)(c)
+              title: (0, f.dateFormat)(c, "LLLL"),
+              children: (0, f.calendarFormat)(c)
             })
-          }), null != o && (0, a.jsx)(x.Property, {
+          }), null != l && (0, a.jsx)(x.Property, {
             name: "User",
             children: (0, a.jsx)(u.default, {
-              user: o
+              user: l
             })
           }), (0, a.jsx)(x.Property, {
             name: "Fingerprint",
@@ -116,17 +116,17 @@ let L = [{
             })
           })]
         }), (0, a.jsx)(N, {
-          children: Object.entries(r).map(e => {
-            let [t, r] = e;
+          children: Object.entries(t).map(e => {
+            let [r, t] = e;
             return (0, a.jsx)(E, {
-              name: "".concat(t, ":"),
-              children: null != r ? (0, a.jsx)("code", {
-                children: JSON.stringify(r)
+              name: "".concat(r, ":"),
+              children: null != t ? (0, a.jsx)("code", {
+                children: JSON.stringify(t)
               }) : (0, a.jsx)("code", {
                 className: j.emptyProperty,
                 children: "null"
               })
-            }, t)
+            }, r)
           })
         })]
       })
@@ -136,12 +136,12 @@ let L = [{
     events: {
       label: "Events",
       filter: e => Object.entries(_).filter(e => {
-        let [t] = e;
-        return "events" !== t
-      }).map(t => {
-        let [r, {
+        let [r] = e;
+        return "events" !== r
+      }).map(r => {
+        let [t, {
           filter: a
-        }] = t;
+        }] = r;
         return !a(e)
       }).every(e => e)
     },
@@ -161,24 +161,24 @@ let L = [{
 
 function A() {
   let e = n.useRef(null),
-    t = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
-    [r, i] = n.useState(Object.keys(_)),
-    o = t.filter(e => {
-      for (let t of r)
-        if (_[t].filter(e)) return !0;
+    r = (0, c.useStateFromStores)([y.default], () => y.default.loggedEvents),
+    [t, i] = n.useState(Object.keys(_)),
+    l = r.filter(e => {
+      for (let r of t)
+        if (_[r].filter(e)) return !0;
       return !1
     }),
     [s, u] = n.useState(void 0),
-    h = o.find(e => e.key === s),
+    h = l.find(e => e.key === s),
     {
       TabBar: p,
-      renderSelectedTab: m
+      renderSelectedTab: g
     } = (0, C.default)({
       tabs: L
     }, []);
   return (0, a.jsxs)("div", {
     ref: e,
-    className: l(T.panel, j.panel),
+    className: o(T.panel, j.panel),
     children: [(0, a.jsxs)("div", {
       className: j.toolbar,
       children: [(0, a.jsx)(d.Button, {
@@ -188,7 +188,7 @@ function A() {
         onClick: b.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: S.default.Messages.CLEAR,
-          children: (0, a.jsx)(f.default, {
+          children: (0, a.jsx)(m.default, {
             "aria-label": S.default.Messages.CLEAR
           })
         })
@@ -197,22 +197,22 @@ function A() {
       }), (0, a.jsx)("div", {
         className: j.filters,
         children: Object.entries(_).map(e => {
-          let [t, n] = e;
+          let [r, n] = e;
           return (0, a.jsx)(d.Clickable, {
-            className: l(j.filter, r.includes(t) && j.activeFilter),
+            className: o(j.filter, t.includes(r) && j.activeFilter),
             onClick: () => {
               var e;
-              return e = t, void i(t => t.includes(e) ? t.filter(t => t !== e) : [...t, e])
+              return e = r, void i(r => r.includes(e) ? r.filter(r => r !== e) : [...r, e])
             },
             children: n.label
-          }, t)
+          }, r)
         })
       })]
     }), (0, a.jsx)(d.ScrollerThin, {
       className: j.tableContainer,
       children: (0, a.jsx)(v.default, {
         columns: w,
-        data: o,
+        data: l,
         selectedRowKey: s,
         onClickRow: u
       })
@@ -220,7 +220,7 @@ function A() {
       className: j.subPanel,
       minHeight: 100,
       initialHeight: null != e.current ? e.current.clientHeight / 2 : 300,
-      children: [(0, a.jsx)(p, {}), m({
+      children: [(0, a.jsx)(p, {}), g({
         loggedEvent: h
       })]
     })]

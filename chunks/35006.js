@@ -7,17 +7,17 @@ i.r(e), i.d(e, {
 var l = i("37983");
 i("884691");
 var r = i("469563"),
-  n = i("114770"),
-  a = i("75196"),
+  a = i("114770"),
+  n = i("75196"),
   s = (0, r.replaceIcon)(function(t) {
     let {
       width: e = 24,
       height: i = 24,
       color: r = "currentColor",
-      ...n
+      ...a
     } = t;
     return (0, l.jsxs)("svg", {
-      ...(0, a.default)(n),
+      ...(0, n.default)(a),
       width: e,
       height: i,
       viewBox: "0 0 64 64",
@@ -827,6 +827,6 @@ var r = i("469563"),
         fill: r
       })]
     })
-  }, n.NewUserIcon, void 0, {
+  }, a.NewUserIcon, void 0, {
     size: 24
   })

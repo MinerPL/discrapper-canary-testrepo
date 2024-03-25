@@ -1,72 +1,72 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return p
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var r = n("446674"),
-  l = n("77078"),
-  u = n("255397"),
-  o = n("987317"),
-  s = n("679653"),
-  a = n("393414"),
+var l = n("446674"),
+  a = n("77078"),
+  i = n("255397"),
+  r = n("987317"),
+  o = n("679653"),
+  u = n("393414"),
   d = n("233069"),
   c = n("42203"),
-  f = n("305961"),
-  S = n("27618"),
-  E = n("697218"),
-  h = n("666897"),
-  g = n("404008"),
-  p = n("794818"),
-  _ = n("49111");
+  E = n("305961"),
+  f = n("27618"),
+  _ = n("697218"),
+  T = n("666897"),
+  I = n("404008"),
+  m = n("794818"),
+  N = n("49111");
 
-function C(e) {
+function p(e) {
   let {
     channel: t,
     onClick: n,
-    beforeTransition: C,
-    className: m,
-    openChatWithoutConnecting: I
-  } = e, T = (0, r.useStateFromStores)([E.default, S.default], () => null == t ? "" : (0, s.computeChannelName)(t, E.default, S.default), [t]);
-  return (0, i.jsx)(l.Tooltip, {
-    text: T,
+    beforeTransition: p,
+    className: S,
+    openChatWithoutConnecting: A
+  } = e, C = (0, l.useStateFromStores)([_.default, f.default], () => null == t ? "" : (0, o.computeChannelName)(t, _.default, f.default), [t]);
+  return (0, s.jsx)(a.Tooltip, {
+    text: C,
     position: "top",
     children: e => {
       let {
-        onMouseEnter: r,
-        onMouseLeave: s
+        onMouseEnter: l,
+        onMouseLeave: o
       } = e;
-      return (0, i.jsx)(h.default, {
+      return (0, s.jsx)(T.default, {
         role: "link",
-        className: m,
+        className: S,
         onClick: e => {
-          e.stopPropagation(), null != n ? n() : (null != C && C(), (0, l.closeAllModals)(), ! function(e, t) {
+          e.stopPropagation(), null != n ? n() : (null != p && p(), (0, a.closeAllModals)(), ! function(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             if (null == e || null == t) return;
-            let i = f.default.getGuild(e);
-            if ((null == i ? void 0 : i.joinedAt) == null) {
-              p.startLurking(e, {}, {
+            let s = E.default.getGuild(e);
+            if ((null == s ? void 0 : s.joinedAt) == null) {
+              m.startLurking(e, {}, {
                 channelId: t
               });
               return
             }
-            let r = c.default.getChannel(t);
-            if (null != r && (0, d.isGuildVocalChannelType)(r.type)) {
+            let l = c.default.getChannel(t);
+            if (null != l && (0, d.isGuildVocalChannelType)(l.type)) {
               if (n) {
-                u.default.updateChatOpen(r.id, !0), (0, a.transitionTo)(_.Routes.CHANNEL(e, t));
+                i.default.updateChatOpen(l.id, !0), (0, u.transitionTo)(N.Routes.CHANNEL(e, t));
                 return
               }
-              o.default.selectVoiceChannel(r.id);
+              r.default.selectVoiceChannel(l.id);
               return
-            }(0, a.transitionTo)(_.Routes.CHANNEL(e, t))
-          }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, I))
+            }(0, u.transitionTo)(N.Routes.CHANNEL(e, t))
+          }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, A))
         },
-        onMouseEnter: r,
-        onMouseLeave: s,
-        iconType: (0, g.getMentionIconType)(t),
-        children: T
+        onMouseEnter: l,
+        onMouseLeave: o,
+        iconType: (0, I.getMentionIconType)(t),
+        children: C
       })
     }
   })

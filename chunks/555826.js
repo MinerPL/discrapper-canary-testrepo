@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var a = n("446674"),
   s = n("913144"),
-  i = n("680762"),
-  l = n("305961");
+  l = n("680762"),
+  i = n("305961");
 let r = {},
   o = () => {
     r = {
@@ -19,7 +19,7 @@ let r = {},
 o();
 class u extends a.default.PersistedStore {
   initialize(e) {
-    null != e && (r = e), this.waitFor(l.default)
+    null != e && (r = e), this.waitFor(i.default)
   }
   getState() {
     return r
@@ -37,7 +37,7 @@ class u extends a.default.PersistedStore {
 u.displayName = "GuildAffinitiesStore", u.persistKey = "GuildAffinitiesStore";
 var d = new u(s.default, {
   CONNECTION_OPEN: function() {
-    return Date.now() - r.lastFetched > 864e5 && (0, i.fetchGuildAffinities)(), !1
+    return Date.now() - r.lastFetched > 864e5 && (0, l.fetchGuildAffinities)(), !1
   },
   LOAD_GUILD_AFFINITIES_SUCCESS: function(e) {
     let {

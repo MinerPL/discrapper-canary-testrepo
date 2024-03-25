@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = s("208302"),
-  n = s.n(a),
-  l = s("446674"),
+  l = s.n(a),
+  n = s("446674"),
   i = s("913144");
 let r = ["pct_retained", "new_members", "visitors", "communicators"],
   o = {},
@@ -20,16 +20,16 @@ function c(e) {
   } = e;
   u = null;
   let a = {},
-    l = {},
+    n = {},
     i = s[0],
     d = s[1];
   null != i && r.forEach(e => {
     if (null != i[e]) {
-      let t = n(e);
-      null != d && 0 !== d[e] && (a["".concat(t, "Change")] = (i[e] - d[e]) * 100 / d[e]), l[t] = i[e]
+      let t = l(e);
+      null != d && 0 !== d[e] && (a["".concat(t, "Change")] = (i[e] - d[e]) * 100 / d[e]), n[t] = i[e]
     }
   }), o[t] = {
-    ...l,
+    ...n,
     ...a,
     ...o[t]
   }
@@ -41,7 +41,7 @@ function E(e) {
   } = e;
   u = t.code
 }
-class _ extends l.default.Store {
+class _ extends n.default.Store {
   getOverviewAnalytics(e) {
     return o[e]
   }
@@ -59,7 +59,7 @@ class _ extends l.default.Store {
   }
 }
 _.displayName = "GuildSettingsAnalyticsStore";
-var T = new _(i.default, {
+var I = new _(i.default, {
   GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW_FETCH_SUCCESS: c,
   GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW_FETCH_SUCCESS: c,
   GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION_FETCH_SUCCESS: c,

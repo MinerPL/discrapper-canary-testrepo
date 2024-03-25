@@ -20,8 +20,8 @@ var n = a("37983"),
   _ = a("197537"),
   A = a("49111"),
   N = a("782340"),
-  T = a("204199"),
-  S = a("173791");
+  T = a("301999"),
+  S = a("125047");
 let y = {
     [A.PaymentSourceTypes.CARD]: f.default.Types.UNKNOWN,
     [A.PaymentSourceTypes.PAYPAL]: f.default.Types.PAYPAL,

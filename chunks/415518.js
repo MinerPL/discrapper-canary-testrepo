@@ -21,8 +21,8 @@ var i, a, l = n("37983"),
   u = n("942699"),
   c = n("945330"),
   f = n("782340"),
-  h = n("229804"),
-  p = n("926622");
+  h = n("699602"),
+  p = n("890957");
 let g = e => e.stopPropagation(),
   m = () => (0, l.jsx)("div", {
     className: h.clickBlocker,

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return S
   }
 }), n("222007");
 var i = n("446674"),
@@ -13,45 +13,45 @@ var i = n("446674"),
   u = n("49111");
 let d = new Set([u.PlatformTypes.CONTACTS]),
   c = !0,
-  f = [],
   _ = [],
+  f = [],
+  E = {},
   h = {},
   g = {},
-  m = {},
-  E = e => {
-    f = e.filter(e => !d.has(e.type) && a.default.isSupported(e.type)), _ = e.filter(e => d.has(e.type)), c = !1
+  m = e => {
+    _ = e.filter(e => !d.has(e.type) && a.default.isSupported(e.type)), f = e.filter(e => d.has(e.type)), c = !1
   };
 class p extends i.default.Store {
   isJoining(e) {
-    return h[e] || !1
+    return E[e] || !1
   }
   joinErrorMessage(e) {
-    return m[e]
+    return g[e]
   }
   isFetching() {
     return c
   }
   getAccounts() {
-    return f
-  }
-  getLocalAccounts() {
     return _
   }
+  getLocalAccounts() {
+    return f
+  }
   getAccount(e, t) {
-    return f.find(n => (null == e || n.id === e) && n.type === t)
+    return _.find(n => (null == e || n.id === e) && n.type === t)
   }
   getLocalAccount(e) {
-    return _.find(t => t.type === e)
+    return f.find(t => t.type === e)
   }
   isSuggestedAccountType(e) {
-    return g[e] || !1
+    return h[e] || !1
   }
 }
 p.displayName = "ConnectedAccountsStore";
-var v = new p(s.default, {
+var S = new p(s.default, {
   CONNECTION_OPEN: function(e) {
     let t = e.connectedAccounts.map(e => new o.default(e));
-    E(t)
+    m(t)
   },
   USER_CONNECTIONS_UPDATE: function(e) {
     if (e.local && null != e.accounts) {
@@ -62,11 +62,11 @@ var v = new p(s.default, {
           guild: new l.default(e.guild)
         }))
       }));
-      E(t)
+      m(t)
     } else r.default.fetch()
   },
   USER_CONNECTIONS_INTEGRATION_JOINING: function(e) {
-    h[e.integrationId] = e.joining
+    E[e.integrationId] = e.joining
   },
   USER_CONNECTION_UPDATE: function(e) {
     let {
@@ -74,11 +74,11 @@ var v = new p(s.default, {
       id: n,
       revoked: i,
       accessToken: s
-    } = e, r = f.find(e => e.id === n && e.type === t);
+    } = e, r = _.find(e => e.id === n && e.type === t);
     if (null == r) return !1;
     null != i && (r.revoked = i), null != s && (r.accessToken = s)
   },
   USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function(e) {
-    m[e.integrationId] = void 0 !== e.error ? e.error : ""
+    g[e.integrationId] = void 0 !== e.error ? e.error : ""
   }
 })

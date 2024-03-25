@@ -1,17 +1,17 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
-    return m
+    return g
   }
-}), r("222007");
-var a = r("37983");
-r("884691");
-var n = r("420117"),
-  i = r("669491"),
-  l = r("841098"),
-  o = r("505684"),
-  s = r("49111"),
-  c = r("694735");
+}), t("222007");
+var a = t("37983");
+t("884691");
+var n = t("420117"),
+  i = t("669491"),
+  o = t("841098"),
+  l = t("505684"),
+  s = t("49111"),
+  c = t("699412");
 let d = {
   base00: i.default.colors.BACKGROUND_SECONDARY.css,
   base03: i.default.colors.TEXT_WARNING.css,
@@ -23,33 +23,33 @@ let d = {
 };
 
 function u(e) {
-  let t = {};
-  for (let [r, a] of Object.entries(e)) t[r] = a;
-  return t
+  let r = {};
+  for (let [t, a] of Object.entries(e)) r[t] = a;
+  return r
 }
 let h = u(d),
   p = u(d);
 
-function f(e) {
-  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(o.default, {
-    type: o.default.Types.TEXT,
+function m(e) {
+  return s.TOKEN_REGEX.test(e) ? (0, a.jsx)(l.default, {
+    type: l.default.Types.TEXT,
     children: () => (0, a.jsx)(a.Fragment, {
       children: e
     })
   }) : e
 }
 
-function m(e) {
+function g(e) {
   let {
-    data: t
-  } = e, r = (0, l.default)();
+    data: r
+  } = e, t = (0, o.default)();
   return (0, a.jsx)("div", {
     className: c.inspectorWrapper,
     children: (0, a.jsx)(n.JSONTree, {
-      data: t,
-      theme: "light" === r ? p : h,
+      data: r,
+      theme: "light" === t ? p : h,
       invertTheme: !1,
-      valueRenderer: f
+      valueRenderer: m
     })
   })
 }

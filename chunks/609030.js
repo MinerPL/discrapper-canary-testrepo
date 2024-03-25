@@ -1,29 +1,29 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return r
   }
 });
-var n = l("376556"),
-  a = l("575365"),
-  s = l("49111"),
-  i = l("782340");
+var i = n("376556"),
+  l = n("575365"),
+  a = n("49111"),
+  s = n("782340");
 
 function r(e) {
   var t;
-  let l = null !== (t = (0, a.default)(e)) && void 0 !== t ? t : "";
-  switch (l) {
-    case s.ActivityGamePlatforms.PS4:
-    case s.ActivityGamePlatforms.PS5:
-      return i.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({
-        platform: l.toUpperCase()
+  let n = null !== (t = (0, l.default)(e)) && void 0 !== t ? t : "";
+  switch (n) {
+    case a.ActivityGamePlatforms.PS4:
+    case a.ActivityGamePlatforms.PS5:
+      return s.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({
+        platform: n.toUpperCase()
       });
-    case s.ActivityGamePlatforms.XBOX:
-    case s.ActivityGamePlatforms.SAMSUNG:
-      return i.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({
-        platform: n.default.get(l).name
+    case a.ActivityGamePlatforms.XBOX:
+    case a.ActivityGamePlatforms.SAMSUNG:
+      return s.default.Messages.USER_ACTIVITY_HEADER_PLAYING_ON_PLATFORM.format({
+        platform: i.default.get(n).name
       });
     default:
-      return i.default.Messages.USER_ACTIVITY_HEADER_PLAYING
+      return s.default.Messages.USER_ACTIVITY_HEADER_PLAYING
   }
 }

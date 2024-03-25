@@ -69,22 +69,22 @@ var r = n("884691"),
         };
         return s(i.current, e) ? i.current || e : (i.current = e, e)
       }, [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, m]),
-      _ = r.useRef();
+      y = r.useRef();
     return (0, u.useIsomorphicLayoutEffect)(function() {
-      _.current && _.current.setOptions(h)
+      y.current && y.current.setOptions(h)
     }, [h]), (0, u.useIsomorphicLayoutEffect)(function() {
       if (null != e && null != t) {
         var r = (n.createPopper || o.createPopper)(e, t, h);
-        return _.current = r,
+        return y.current = r,
           function() {
-            r.destroy(), _.current = null
+            r.destroy(), y.current = null
           }
       }
     }, [e, t, n.createPopper]), {
-      state: _.current ? _.current.state : null,
+      state: y.current ? y.current.state : null,
       styles: f.styles,
       attributes: f.attributes,
-      update: _.current ? _.current.update : null,
-      forceUpdate: _.current ? _.current.forceUpdate : null
+      update: y.current ? y.current.update : null,
+      forceUpdate: y.current ? y.current.forceUpdate : null
     }
   }

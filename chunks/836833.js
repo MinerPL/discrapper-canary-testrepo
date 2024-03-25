@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 }), s("222007"), s("424973");
 var a = s("37983"),
@@ -15,28 +15,28 @@ var a = s("37983"),
   c = s("610109"),
   S = s("414074"),
   E = s("84908"),
-  f = s("926622");
-class T extends n.Component {
+  T = s("890957");
+class f extends n.Component {
   renderTestCase(e, t, s, n, l) {
     let r = null == t ? void 0 : t.summary;
     return (0, a.jsxs)(o.FormText, {
-      className: f.marginBottom20,
+      className: T.marginBottom20,
       children: [!0 === n ? "✅" : !0 === l ? "❌" : !0 === s ? "\uD83C\uDFCE️" : "", "speed test, bitrate = ", ((0, S.speedTestRate)(e) / 1e3).toFixed(0), " kbps, framerate =", " ", (0, S.speedTestFps)(e).toFixed(0), " fps, duration = ", (0, S.speedTestDuration)(e).toFixed(1), "s, direction =", " ", (0, S.speedTestDirection)(e), void 0 !== r && (0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: i(f.marginTop8, f.marginBottom8),
+          className: i(T.marginTop8, T.marginBottom8),
           children: ["Loss ", 100 * r.loss.toFixed(2), "%, Payload Bandwidth ", r.payloadBandwidth.toFixed(0), " kbps, Network Bandwidth ", r.networkBandwidth.toFixed(0), " kbps"]
         }), (0, a.jsxs)("div", {
-          className: i(f.marginTop8, f.marginBottom8),
+          className: i(T.marginTop8, T.marginBottom8),
           children: ["IAT p50=", r.iatP50.toFixed(2), "ms, p95=", r.iatP95.toFixed(2), "ms, max=", r.iatMax.toFixed(2), "ms"]
         })]
       }), !1 === n && !0 === s && !1 === l && (0, a.jsx)("div", {
         children: (0, a.jsx)("div", {
-          className: i(f.marginTop8, f.marginBottom8),
+          className: i(T.marginTop8, T.marginBottom8),
           children: "Test in progress. Results will appear when test completes."
         })
       }), !1 === n && !0 === l && (0, a.jsx)("div", {
         children: (0, a.jsx)("div", {
-          className: i(f.marginTop8, f.marginBottom8),
+          className: i(T.marginTop8, T.marginBottom8),
           children: "Test skipped."
         })
       })]
@@ -56,22 +56,22 @@ class T extends n.Component {
     if (!1 === e) return;
     let n = s.length > 0 ? (0, S.speedTestPingInfo)(s) : null;
     return (0, a.jsxs)(o.FormText, {
-      className: f.marginBottom20,
+      className: T.marginBottom20,
       children: [t > E.SpeedTestLifecycles.PINGING ? "✅" : t === E.SpeedTestLifecycles.PINGING ? "\uD83C\uDFCE️" : "", "Ping endpoint", null !== n && (0, a.jsxs)("div", {
-        className: i(f.marginTop8, f.marginBottom8),
+        className: i(T.marginTop8, T.marginBottom8),
         children: ["Pinged ", n.count, " time(s), min=", n.min, "ms, p50=", n.p50, "ms, max=", n.max, "ms"]
       })]
     })
   }
   renderConnect(e, t, s) {
     if (!1 !== e) return (0, a.jsxs)(o.FormText, {
-      className: f.marginBottom20,
+      className: T.marginBottom20,
       children: [t > E.SpeedTestLifecycles.CONNECTING ? "✅" : t === E.SpeedTestLifecycles.CONNECTING ? "\uD83C\uDFCE️" : "", "Connect to ", null != s ? s : "endpoint"]
     })
   }
   renderNotes() {
     return (0, a.jsx)(o.TextArea, {
-      className: f.marginBottom20,
+      className: T.marginBottom20,
       value: this.state.notes,
       onChange: e => {
         c.default.setNotes(e), this.setState({
@@ -83,20 +83,20 @@ class T extends n.Component {
   }
   renderAwaitingEndpoint(e, t) {
     if (!1 !== e) return (0, a.jsxs)(o.FormText, {
-      className: f.marginBottom20,
+      className: T.marginBottom20,
       children: [t > E.SpeedTestLifecycles.AWAITING_ENDPOINT ? "✅" : t === E.SpeedTestLifecycles.AWAITING_ENDPOINT ? "\uD83C\uDFCE️" : "", "Select endpoint"]
     })
   }
   renderUpload(e, t) {
     if (!1 !== e) return (0, a.jsxs)(o.FormText, {
-      className: f.marginBottom20,
+      className: T.marginBottom20,
       children: [t > E.SpeedTestLifecycles.UPLOADING ? "✅" : t === E.SpeedTestLifecycles.UPLOADING ? "\uD83C\uDFCE️" : "", "Upload results"]
     })
   }
   renderComplete(e, t) {
     if (!1 !== e) {
       if (t === E.SpeedTestLifecycles.COMPLETED) return (0, a.jsx)(o.FormText, {
-        className: f.marginBottom20,
+        className: T.marginBottom20,
         children: "Your Speed Test is completed and the results have been uploaded. You may safely close this page."
       })
     }
@@ -112,26 +112,26 @@ class T extends n.Component {
       d = this.props.testResults,
       c = this.props.pings,
       S = t ? u.default.stopSpeedTest : u.default.startSpeedTest,
-      T = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
+      f = l >= E.SpeedTestLifecycles.AWAITING_ENDPOINT;
     return !1 === e ? (0, a.jsx)(o.FormSection, {
       tag: o.FormTitleTags.H1,
       title: "Speed Test",
       children: (0, a.jsx)(o.FormText, {
-        className: f.marginBottom20,
+        className: T.marginBottom20,
         children: "Sorry! The Speed Test is not currently available. Disconnect from any existing calls and try again."
       })
     }) : (0, a.jsxs)(o.FormSection, {
       tag: o.FormTitleTags.H1,
       title: "Speed Test",
       children: [this.renderNotes(), (0, a.jsx)(o.FormItem, {
-        className: f.marginBottom20,
+        className: T.marginBottom20,
         children: (0, a.jsx)("div", {
           children: (0, a.jsx)(o.Button, {
             onClick: () => S(),
             children: t ? "Stop Speed Test" : "Start Speed Test"
           })
         })
-      }), this.renderAwaitingEndpoint(T, l), this.renderConnect(T, l, n), this.renderPing(T, l, c), this.renderTestCases(T, s, i, d, r), this.renderUpload(T, l), this.renderComplete(T, l)]
+      }), this.renderAwaitingEndpoint(f, l), this.renderConnect(f, l, n), this.renderPing(f, l, c), this.renderTestCases(f, s, i, d, r), this.renderUpload(f, l), this.renderComplete(f, l)]
     })
   }
   constructor(...e) {
@@ -141,7 +141,7 @@ class T extends n.Component {
   }
 }
 
-function m() {
+function _() {
   let e = (0, r.useStateFromStoresObject)([c.default], () => ({
       available: c.default.getAvailable(),
       active: c.default.getActive(),
@@ -161,7 +161,7 @@ function m() {
     }, [t]);
   return n.useEffect(() => (d.default.subscribe("RTC_SPEED_TEST_STATE_UPDATE", l), () => {
     d.default.unsubscribe("RTC_SPEED_TEST_STATE_UPDATE", l)
-  }), [l]), (0, a.jsx)(T, {
+  }), [l]), (0, a.jsx)(f, {
     ...e
   })
 }

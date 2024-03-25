@@ -11,8 +11,8 @@ var n = l("77078"),
   s = l("474643"),
   r = l("599110"),
   o = l("299039"),
-  d = l("412861"),
-  u = l("13136"),
+  u = l("412861"),
+  d = l("13136"),
   c = l("803725"),
   f = l("80028"),
   p = l("49111");
@@ -23,11 +23,11 @@ async function m(e, t) {
     analyticsLocations: E
   } = t, v = i.default.getChannel(m);
   if (null != v) try {
-    var _;
+    var C;
     let t = await (0, c.exportClip)(e, h),
-      l = null !== (_ = e.name) && void 0 !== _ ? _ : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
-      a = (0, u.default)(l);
-    (0, d.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
+      l = null !== (C = e.name) && void 0 !== C ? C : (0, f.CLIP_NAME_TEMPLATE)(o.default.extractTimestamp(e.id)),
+      a = (0, d.default)(l);
+    (0, u.promptToUpload)([new File([t], "".concat("" !== a ? a : "clip", ".mp4"), {
       type: "video/mp4"
     })], v, s.DraftType.ChannelMessage, {
       filesMetadata: [{

@@ -1,42 +1,42 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("414456"),
-  s = l.n(a),
-  i = l("77078"),
-  r = l("581583"),
-  o = l("777003"),
-  u = l("782340"),
-  d = l("259236"),
-  c = l("814076");
+var i = n("37983");
+n("884691");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("77078"),
+  r = n("581583"),
+  o = n("777003"),
+  u = n("782340"),
+  d = n("690807"),
+  c = n("862939");
 
 function f(e) {
   let {
     user: t,
-    guild: l,
-    guildMember: a,
+    guild: n,
+    guildMember: l,
     showBorder: f
   } = e;
-  return null == l || null == a ? null : (0, n.jsxs)(o.default, {
-    children: [(0, n.jsx)(i.Heading, {
+  return null == n || null == l ? null : (0, i.jsxs)(o.default, {
+    children: [(0, i.jsx)(s.Heading, {
       variant: "eyebrow",
       className: c.title,
       children: u.default.Messages.ROLES_LIST.format({
-        numRoles: a.roles.length
+        numRoles: l.roles.length
       })
-    }), (0, n.jsx)(r.default, {
-      roleClassName: s(d.rolePill, {
+    }), (0, i.jsx)(r.default, {
+      roleClassName: a(d.rolePill, {
         [d.rolePillBorder]: f
       }),
       className: d.roles,
-      guild: l,
+      guild: n,
       user: t,
-      userRoles: a.roles,
+      userRoles: l.roles,
       disableBorderColor: !0
     }, "roles")]
   })

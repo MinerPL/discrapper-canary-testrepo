@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 }), n("424973");
 var i = n("37983"),
@@ -58,4 +58,4 @@ class c extends s.Component {
     super(e), this._ref = s.createRef(), this.setRef = this.setRef.bind(this)
   }
 }
-var f = c
+var _ = c

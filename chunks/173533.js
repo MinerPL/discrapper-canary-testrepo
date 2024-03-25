@@ -78,9 +78,9 @@ var u = 0,
         throw TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
       }()),
       h = p[0],
-      g = p[1];
+      v = p[1];
     return (0, i.useEffect)(function() {
-      if (g) {
+      if (v) {
         var e = f();
         return ++u,
           function() {

@@ -25,12 +25,12 @@ var a = l("77078"),
   R = l("314838"),
   T = l("383161"),
   C = l("421602"),
-  N = l("459870"),
-  I = l("393394"),
+  I = l("459870"),
+  N = l("393394"),
   O = l("806179"),
   U = l("97508"),
-  p = l("623879"),
-  v = l("49111"),
+  v = l("623879"),
+  p = l("49111"),
   b = l("782340"),
   h = (0, d.default)((0, r.default)(function(e) {
     let {
@@ -40,7 +40,7 @@ var a = l("77078"),
       context: d,
       onSelect: o,
       onHeightUpdate: h
-    } = e, F = (0, O.default)(t.id, l), L = (0, T.default)(t, l, d), x = (0, C.default)(t.id, d), G = (0, p.default)(t.id), j = (0, g.default)(t, d), y = (0, S.default)({
+    } = e, F = (0, O.default)(t.id, l), L = (0, T.default)(t, l, d), x = (0, C.default)(t.id, d), y = (0, v.default)(t.id), G = (0, g.default)(t, d), j = (0, S.default)({
       user: t,
       guildId: l,
       context: d
@@ -48,12 +48,12 @@ var a = l("77078"),
       guildId: l,
       userId: t.id,
       analyticsLocation: {
-        page: v.AnalyticsPages.GUILD_CHANNEL,
-        section: v.AnalyticsSections.CHAT_USERNAME,
-        object: v.AnalyticsObjects.CONTEXT_MENU_ITEM
+        page: p.AnalyticsPages.GUILD_CHANNEL,
+        section: p.AnalyticsSections.CHAT_USERNAME,
+        object: p.AnalyticsObjects.CONTEXT_MENU_ITEM
       },
       context: d
-    }), k = (0, R.default)(t, l), V = (0, s.default)(null, t), H = (0, _.default)(t), B = (0, A.default)(t), K = (0, I.default)(t, l, r.id), Y = (0, U.default)(t.id, l), w = (0, N.default)(t, l), q = (0, f.default)({
+    }), k = (0, R.default)(t, l), V = (0, s.default)(null, t), H = (0, _.default)(t), B = (0, A.default)(t), K = (0, N.default)(t, l, r.id), Y = (0, U.default)(t.id, l), w = (0, I.default)(t, l), q = (0, f.default)({
       id: t.id,
       label: b.default.Messages.COPY_ID_USER
     }), z = (0, E.default)(t), W = (0, m.default)({
@@ -72,7 +72,7 @@ var a = l("77078"),
         children: [(0, u.jsx)(a.MenuGroup, {
           children: z
         }), (0, u.jsxs)(a.MenuGroup, {
-          children: [F, L, x, j, y, D, G]
+          children: [F, L, x, G, j, D, y]
         }), (0, u.jsx)(a.MenuGroup, {
           children: V
         }), (0, u.jsxs)(a.MenuGroup, {
@@ -87,5 +87,5 @@ var a = l("77078"),
       })]
     })
   }, {
-    object: v.AnalyticsObjects.CONTEXT_MENU
+    object: p.AnalyticsObjects.CONTEXT_MENU
   }), [o.default.CONTEXT_MENU, o.default.THREAD_USER_MENU])

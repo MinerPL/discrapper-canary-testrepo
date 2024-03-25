@@ -1,17 +1,17 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   DEFAULT_PREVIEW_ROLE: function() {
-    return i
+    return s
   }
 });
-var l = n("49111");
-let i = {
+var _ = E("49111");
+let s = {
   id: "0",
   name: "",
   mentionable: !1,
   position: 0,
   hoist: !1,
-  permissions: l.Permissions.SEND_MESSAGES,
+  permissions: _.Permissions.SEND_MESSAGES,
   color: 0,
   colorString: "0",
   icon: null,

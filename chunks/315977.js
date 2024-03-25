@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("90915"),
-  l = n("446674"),
+  l = n("90915"),
+  i = n("446674"),
   r = n("450911"),
   o = n("737960"),
   u = n("970366"),
@@ -15,19 +15,19 @@ var a = n("37983"),
   c = n("901582"),
   f = n("294135"),
   E = n("404247"),
-  _ = n("49111"),
-  h = n("128403");
+  h = n("49111"),
+  _ = n("504659");
 class C extends s.Component {
   componentDidMount() {
     this.fetchStoreListing(), (0, u.trackAppUIViewed)("channel_store_listing")
   }
   render() {
     return null != this.props.skuId ? (0, a.jsx)(c.default, {
-      page: _.AnalyticsPages.CHANNEL_STORE_LISTING,
+      page: h.AnalyticsPages.CHANNEL_STORE_LISTING,
       root: !0,
       children: (0, a.jsx)("div", {
-        className: h.applicationStore,
-        children: (0, a.jsx)(i.Route, {
+        className: _.applicationStore,
+        children: (0, a.jsx)(l.Route, {
           path: "*",
           render: this.renderApplicationListing
         })
@@ -47,19 +47,19 @@ class C extends s.Component {
       } = e, {
         channel: n,
         skuId: s,
-        width: i
+        width: l
       } = this.props;
       return (0, a.jsx)(f.default, {
         channel: n,
         inputSkuId: s,
         fetchStoreListing: this.fetchStoreListing,
         location: t,
-        pageSize: (0, E.getPageSize)(i)
+        pageSize: (0, E.getPageSize)(l)
       })
     }
   }
 }
-var I = (0, o.default)(l.default.connectStores([d.default], e => {
+var S = (0, o.default)(i.default.connectStores([d.default], e => {
   let {
     channel: t,
     inputSkuId: n

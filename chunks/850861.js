@@ -9,11 +9,11 @@ var a = A("37983"),
   n = A("414456"),
   r = A.n(n),
   s = A("77078"),
-  o = A("476765"),
-  i = A("952479"),
-  u = A("867544"),
-  d = A("782340"),
-  c = A("972623");
+  i = A("476765"),
+  o = A("952479"),
+  d = A("867544"),
+  u = A("782340"),
+  c = A("268353");
 
 function f(e) {
   let {
@@ -21,10 +21,10 @@ function f(e) {
     disabledTooltip: A,
     published: n,
     submitting: f = !1,
-    onClick: C
-  } = e, g = (0, o.useUID)(), [h, T] = l.useState(n);
+    onClick: g
+  } = e, C = (0, i.useUID)(), [h, m] = l.useState(n);
   return l.useEffect(() => {
-    T(e => e || n)
+    m(e => e || n)
   }, [n]), (0, a.jsxs)("div", {
     className: r({
       [c.publishable]: !t && !n,
@@ -35,12 +35,12 @@ function f(e) {
       children: [(0, a.jsx)(s.Heading, {
         variant: "text-sm/semibold",
         color: "header-primary",
-        children: n ? d.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : d.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
+        children: n ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_TITLE : u.default.Messages.GUILD_PRODUCT_PUBLISH_TITLE
       }), (0, a.jsx)(s.Text, {
-        id: g,
+        id: C,
         variant: "text-sm/normal",
         color: "text-normal",
-        children: n ? d.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : d.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
+        children: n ? u.default.Messages.GUILD_PRODUCT_UNPUBLISH_DESCRIPTION : u.default.Messages.GUILD_PRODUCT_PUBLISH_DESCRIPTION
       })]
     }), (0, a.jsx)(s.Tooltip, {
       text: t ? A : void 0,
@@ -53,16 +53,16 @@ function f(e) {
         }),
         innerClassName: c.buttonContents,
         color: n ? s.Button.Colors.RED : s.Button.Colors.CUSTOM,
-        "aria-describedby": g,
+        "aria-describedby": C,
         "aria-disabled": t,
         grow: !1,
-        onClick: t ? void 0 : C,
+        onClick: t ? void 0 : g,
         submitting: f,
-        children: [n ? d.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : d.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, n ? (0, a.jsx)(u.default, {
+        children: [n ? u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_UNPUBLISH_BUTTON : u.default.Messages.GUILD_PRODUCT_EDIT_MODAL_PUBLISH_BUTTON, n ? (0, a.jsx)(d.default, {
           className: c.buttonIcon,
           color: "currentColor",
           foregroundColor: "currentColor"
-        }) : (0, a.jsx)(i.default, {
+        }) : (0, a.jsx)(o.default, {
           className: c.buttonIcon
         })]
       })

@@ -82,9 +82,9 @@ t.exports = function(t, e) {
           entity: c(_.getCurrentContent(), _.getSelection())
         }),
         E = s.getCurrentBlockType(_),
-        O = a.processText(y, C, E),
-        D = n.createFromArray(O);
-      t.update(h(t._latestEditorState, D))
+        D = a.processText(y, C, E),
+        O = n.createFromArray(D);
+      t.update(h(t._latestEditorState, O))
     }
   }
 }

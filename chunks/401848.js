@@ -1,112 +1,112 @@
 "use strict";
 n.r(t), n.d(t, {
   SlowmodeType: function() {
-    return a
+    return i
   },
   default: function() {
     return m
   }
 }), n("222007");
-var a, l, s = n("446674"),
-  i = n("862337"),
-  r = n("913144"),
-  d = n("718517"),
+var i, s, r = n("446674"),
+  a = n("862337"),
+  o = n("913144"),
+  l = n("718517"),
   u = n("42203"),
-  o = n("957255"),
+  d = n("957255"),
   c = n("49111");
-(l = a || (a = {}))[l.SendMessage = 0] = "SendMessage", l[l.CreateThread = 1] = "CreateThread";
-let E = {
+(s = i || (i = {}))[s.SendMessage = 0] = "SendMessage", s[s.CreateThread = 1] = "CreateThread";
+let _ = {
   0: {},
   1: {}
 };
 
 function f(e, t, n) {
   if (function(e, t) {
-      null != E[t][e.id] && (E[t][e.id].timer.stop(), delete E[t][e.id])
+      null != _[t][e.id] && (_[t][e.id].timer.stop(), delete _[t][e.id])
     }(e, t), function(e, t) {
-      return 0 === t ? o.default.can(c.Permissions.MANAGE_CHANNELS, e) || o.default.can(c.Permissions.MANAGE_MESSAGES, e) : o.default.can(c.Permissions.MANAGE_THREADS, e)
+      return 0 === t ? d.default.can(c.Permissions.MANAGE_CHANNELS, e) || d.default.can(c.Permissions.MANAGE_MESSAGES, e) : d.default.can(c.Permissions.MANAGE_THREADS, e)
     }(e, t) || n <= 0) return;
-  let a = n + Date.now();
-  E[t][e.id] = {
+  let i = n + Date.now();
+  _[t][e.id] = {
     rateLimitPerUser: e.rateLimitPerUser,
     cooldownMs: n,
-    cooldownEndTimestamp: a,
-    timer: new i.Timeout
-  }, E[t][e.id].timer.start(1e3, () => {
-    r.default.dispatch({
+    cooldownEndTimestamp: i,
+    timer: new a.Timeout
+  }, _[t][e.id].timer.start(1e3, () => {
+    o.default.dispatch({
       type: "SLOWMODE_SET_COOLDOWN",
       channelId: e.id,
       slowmodeType: t,
-      cooldownMs: Math.max(a - Date.now(), 0)
+      cooldownMs: Math.max(i - Date.now(), 0)
     })
   }, !0)
 }
 
-function _(e, t) {
+function E(e, t) {
   let n = u.default.getChannel(e);
   if (null == n) return !1;
-  f(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * d.default.Millis.SECOND + 100)
+  f(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.default.Millis.SECOND + 100)
 }
 
-function g(e) {
+function h(e) {
   let {
     file: t
   } = e, n = u.default.getChannel(t.channelId);
   return null != n && f(n, 0, 0)
 }
-class h extends s.default.Store {
+class g extends r.default.Store {
   initialize() {
     this.waitFor(u.default)
   }
   getSlowmodeCooldownGuess(e, t) {
-    let n = E[null != t ? t : 0][e];
+    let n = _[null != t ? t : 0][e];
     return null != n ? n.cooldownMs : 0
   }
 }
-h.displayName = "SlowmodeStore";
-var m = new h(r.default, {
+g.displayName = "SlowmodeStore";
+var m = new g(o.default, {
   SLOWMODE_RESET_COOLDOWN: function(e) {
     let {
       channelId: t,
       slowmodeType: n
     } = e;
-    return _(t, n)
+    return E(t, n)
   },
   SLOWMODE_SET_COOLDOWN: function(e) {
     let {
       channelId: t,
       slowmodeType: n,
-      cooldownMs: a
-    } = e, l = u.default.getChannel(t);
-    if (null == l) return !1;
-    f(l, n, 0 === a ? 0 : a + 100)
+      cooldownMs: i
+    } = e, s = u.default.getChannel(t);
+    if (null == s) return !1;
+    f(s, n, 0 === i ? 0 : i + 100)
   },
   UPLOAD_START: function(e) {
     let {
       channelId: t
     } = e;
-    return _(t, 0)
+    return E(t, 0)
   },
-  UPLOAD_FAIL: g,
-  UPLOAD_CANCEL_REQUEST: g,
+  UPLOAD_FAIL: h,
+  UPLOAD_CANCEL_REQUEST: h,
   CHANNEL_UPDATES: function(e) {
     let {
       channels: t
     } = e;
     [0, 1].forEach(e => {
-      for (let a of t) {
+      for (let i of t) {
         var n;
-        let t = E[e][a.id],
-          l = a.rateLimitPerUser;
-        if (null == t || t.rateLimitPerUser === l) continue;
-        let s = Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, l * d.default.Millis.SECOND);
-        f(a, e, s)
+        let t = _[e][i.id],
+          s = i.rateLimitPerUser;
+        if (null == t || t.rateLimitPerUser === s) continue;
+        let r = Math.min(null !== (n = null == t ? void 0 : t.cooldownMs) && void 0 !== n ? n : 0, s * l.default.Millis.SECOND);
+        f(i, e, r)
       }
     })
   },
   LOGOUT: function() {
     [0, 1].forEach(e => {
-      Object.keys(E[e]).forEach(t => E[e][t].timer.stop()), E[e] = {}
+      Object.keys(_[e]).forEach(t => _[e][t].timer.stop()), _[e] = {}
     })
   }
 })

@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return T
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("77078"),
   o = s("925993"),
   d = s("461380"),
@@ -15,12 +15,12 @@ var a = s("37983"),
   c = s("216947"),
   E = s("49111"),
   _ = s("782340"),
-  T = s("642622");
+  I = s("854743");
 
-function I(e) {
+function T(e) {
   let {
     guild: t
-  } = e, l = t.verificationLevel, I = n.useMemo(() => (0, o.getVerificationLevelText)(l), [l]);
+  } = e, n = t.verificationLevel, T = l.useMemo(() => (0, o.getVerificationLevelText)(n), [n]);
   return (0, a.jsxs)(r.Clickable, {
     onClick: () => (0, r.openModalLazy)(async () => {
       let {
@@ -32,9 +32,9 @@ function I(e) {
         hideColors: !0
       })
     }),
-    className: i(T.simpleItemWrapper, T.clickable),
+    className: i(I.simpleItemWrapper, I.clickable),
     children: [(0, a.jsxs)("div", {
-      className: T.itemContent,
+      className: I.itemContent,
       children: [(0, a.jsx)(r.Heading, {
         variant: "text-md/semibold",
         color: "header-primary",
@@ -44,25 +44,25 @@ function I(e) {
         color: "header-secondary",
         children: _.default.Messages.GUILD_SETTINGS_SAFETY_VERIFICATION_DESCRIPTION
       }), (0, a.jsx)("div", {
-        className: T.pillRow,
+        className: I.pillRow,
         children: (0, a.jsxs)(r.Text, {
           variant: "text-xs/medium",
           color: "interactive-normal",
-          className: T.valuePill,
-          children: [l === E.VerificationLevels.VERY_HIGH ? (0, a.jsx)(c.default, {
+          className: I.valuePill,
+          children: [n === E.VerificationLevels.VERY_HIGH ? (0, a.jsx)(c.default, {
             width: 16,
             height: 16
           }) : (0, a.jsx)(u.default, {
             width: 16,
             height: 16
-          }), I]
+          }), T]
         })
       })]
     }), (0, a.jsx)(d.default, {
       height: 24,
       width: 24,
       direction: d.default.Directions.RIGHT,
-      className: T.caret
+      className: I.caret
     })]
   })
 }

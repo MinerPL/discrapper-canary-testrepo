@@ -1,21 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var i = n("884691"),
-  r = n("627445"),
-  l = n.n(r);
+var r = n("884691"),
+  i = n("627445"),
+  a = n.n(i);
 
-function s(e, t) {
-  let n = (0, i.useRef)(e);
-  (0, i.useEffect)(() => {
+function l(e, t) {
+  let n = (0, r.useRef)(e);
+  (0, r.useEffect)(() => {
     n.current = e
-  }, [e]), (0, i.useEffect)(() => {
+  }, [e]), (0, r.useEffect)(() => {
     if (null === t) return;
     let e = setInterval(function() {
-      l(null != n.current, "Missing callback"), n.current()
+      a(null != n.current, "Missing callback"), n.current()
     }, t);
     return () => clearInterval(e)
   }, [t])

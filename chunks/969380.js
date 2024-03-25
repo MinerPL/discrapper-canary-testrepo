@@ -13,17 +13,17 @@ function s(e) {
     applicationId: t,
     size: l,
     names: s = n
-  } = e, [r, c] = i.useState(null), [o, d] = i.useState(!0), u = (0, a.getAssetImage)(t, r, l);
+  } = e, [r, o] = i.useState(null), [c, d] = i.useState(!0), u = (0, a.getAssetImage)(t, r, l);
   return i.useEffect(() => {
     (0, a.getAssets)(t).then(e => {
       for (let [t, l] of(d(!1), Object.entries(e)))
         if (null != l && "" !== l.id && s.includes(l.name)) {
-          c(l.id);
+          o(l.id);
           return
         }
     })
   }, [t]), {
     url: u,
-    state: o ? "loading" : null != u ? "fetched" : "not-found"
+    state: c ? "loading" : null != u ? "fetched" : "not-found"
   }
 }

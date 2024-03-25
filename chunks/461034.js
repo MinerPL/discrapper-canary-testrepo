@@ -5,12 +5,12 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = function(e) {
     var t = e.rgb,
       r = e.currentColor,
-      n = (0, a.default)({
+      n = (0, o.default)({
         default: {
           swatches: {
             border: "1px solid #B3B3B3",
@@ -35,15 +35,15 @@ var n = r("884691"),
           }
         }
       });
-    return o.createElement("div", null, o.createElement("div", {
+    return a.createElement("div", null, a.createElement("div", {
       style: n.label
-    }, "new"), o.createElement("div", {
+    }, "new"), a.createElement("div", {
       style: n.swatches
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: n.new
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: n.current
-    })), o.createElement("div", {
+    })), a.createElement("div", {
       style: n.label
     }, "current"))
   }

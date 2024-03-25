@@ -26,9 +26,9 @@ var s = n("954016"),
   y = n("55926"),
   A = n("349683"),
   M = n("870968"),
-  b = n("705996"),
-  j = n("850436"),
-  C = n("135814"),
+  j = n("705996"),
+  C = n("850436"),
+  b = n("135814"),
   P = n("548768"),
   N = n("13906"),
   L = n("839358"),
@@ -109,13 +109,13 @@ let G = {
     playersSuggestionMin: 1,
     playersSuggestionMax: 7,
     timeSuggestionMinutes: 15,
-    gameplayImageUrls: [C, P]
+    gameplayImageUrls: [b, P]
   },
   [s.BYS_LETTER_APP_ID]: {
     playersSuggestionMin: 2,
     playersSuggestionMax: 8,
     timeSuggestionMinutes: 15,
-    gameplayImageUrls: [b, j]
+    gameplayImageUrls: [j, C]
   },
   [s.BYS_TWOODLE_APP_ID]: {
     playersSuggestionMin: 2,

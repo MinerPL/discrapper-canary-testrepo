@@ -8,12 +8,12 @@ var i = n("37983");
 n("884691");
 var r = n("414456"),
   l = n.n(r),
-  o = n("77078"),
-  s = n("782340"),
-  a = n("239636");
+  s = n("77078"),
+  a = n("782340"),
+  o = n("518377");
 let u = Object.freeze({
-  DEFAULT: a.default,
-  FILLED: a.filled
+  DEFAULT: o.default,
+  FILLED: o.filled
 });
 
 function c(e) {
@@ -23,9 +23,9 @@ function c(e) {
     "aria-label": r,
     look: c = u.DEFAULT
   } = e;
-  return (0, i.jsx)(o.Clickable, {
-    "aria-label": null != r ? r : s.default.Messages.REMOVE,
-    className: l(a.button, c, t),
+  return (0, i.jsx)(s.Clickable, {
+    "aria-label": null != r ? r : a.default.Messages.REMOVE,
+    className: l(o.button, c, t),
     onClick: n
   })
 }

@@ -15,7 +15,7 @@ var o, a, n, l, s = r("37983"),
   p = r("77078"),
   h = r("49111"),
   v = r("782340"),
-  g = r("599619");
+  g = r("852968");
 (l = a || (a = {})).TOP = "top", l.BOTTOM = "bottom";
 let f = {
   container: (e, t) => {
@@ -182,17 +182,17 @@ let f = {
       autofocus: h,
       disabled: m,
       clearable: b,
-      searchable: x,
-      styleOverrides: E,
+      searchable: E,
+      styleOverrides: x,
       isMulti: S,
-      placeholder: M,
-      filterOption: R,
+      placeholder: R,
+      filterOption: M,
       closeMenuOnSelect: _ = !0,
-      ...C
-    } = this.props, y = {
-      ...C
+      ...y
+    } = this.props, C = {
+      ...y
     };
-    null != h && (y.autoFocus = h), null != m && (y.isDisabled = m), null != b && (y.isClearable = b), null != x && (y.isSearchable = x);
+    null != h && (C.autoFocus = h), null != m && (C.isDisabled = m), null != b && (C.isClearable = b), null != E && (C.isSearchable = E);
     let k = {
       IndicatorSeparator: () => null
     };
@@ -203,7 +203,7 @@ let f = {
       ...e,
       children: a(e.data)
     })), null != l && (k.MultiValue = e => l(e.data));
-    let O = null != E ? E : f;
+    let O = null != x ? x : f;
     if (S && Array.isArray(u)) {
       let t = {};
       i.forEach(e => {
@@ -219,7 +219,7 @@ let f = {
         }),
         ref: this._containerRef,
         children: [(0, s.jsx)(c.default, {
-          ...y,
+          ...C,
           className: r,
           ref: this._selectRef,
           isMulti: S,
@@ -233,9 +233,9 @@ let f = {
           closeMenuOnSelect: _,
           value: e,
           onKeyDown: this.handleKeyDown,
-          placeholder: null != M ? M : v.default.Messages.SELECT,
+          placeholder: null != R ? R : v.default.Messages.SELECT,
           noOptionsMessage: () => v.default.Messages.NO_RESULTS_FOUND,
-          filterOption: R
+          filterOption: M
         }), null != o ? (0, s.jsx)("div", {
           className: g.errorMessage,
           children: o

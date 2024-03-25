@@ -68,18 +68,18 @@ var i = n("913144"),
     update(e, t, n, l) {
       let {
         description: a,
-        filename: s,
-        spoiler: o,
+        filename: o,
+        spoiler: s,
         thumbnail: r
       } = l;
       i.default.dispatch({
         type: "UPLOAD_ATTACHMENT_UPDATE_FILE",
         channelId: e,
         id: t,
-        filename: s,
+        filename: o,
         description: a,
         thumbnail: r,
-        spoiler: o,
+        spoiler: s,
         draftType: n
       })
     },

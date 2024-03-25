@@ -13,8 +13,8 @@ var s = n("917351"),
   u = n("465527"),
   d = n("651057"),
   c = n("299285"),
-  f = n("568307"),
-  E = n("697218"),
+  E = n("161454"),
+  f = n("697218"),
   _ = n("437712"),
   T = n("552712"),
   I = n("49111");
@@ -41,7 +41,7 @@ function A() {
       !T.default.isFetching(t) && !T.default.didFetchingSkuFail(t) && u.fetchSKU(s.id, t);
       continue
     }
-    _.default.applicationIdsFetching.has(s.id) || _.default.isEntitledToSku(E.default.getCurrentUser(), t, s.id, s.id) || !l.available ? null != N[t] && (delete N[t], e = !0) : (N[t] = {
+    _.default.applicationIdsFetching.has(s.id) || _.default.isEntitledToSku(f.default.getCurrentUser(), t, s.id, s.id) || !l.available ? null != N[t] && (delete N[t], e = !0) : (N[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
@@ -51,7 +51,7 @@ function A() {
 class C extends a.default.Store {
   initialize() {
     var e;
-    this.waitFor(f.default, T.default, _.default), S = null !== (e = i.default.get(m)) && void 0 !== e ? e : S
+    this.waitFor(E.default, T.default, _.default), S = null !== (e = i.default.get(m)) && void 0 !== e ? e : S
   }
   getDetectedOffPlatformPremiumPerks() {
     return l.values(N)
@@ -79,7 +79,7 @@ var h = new C(r.default, {
         id: t,
         distributor: n
       }
-      of f.default.getRunningGames())
+      of E.default.getRunningGames())
       if (null != t && n !== I.Distributors.DISCORD)
         for (let {
             skuId: n,

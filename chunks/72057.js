@@ -1,7 +1,7 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return T
+    return A
   }
 });
 var i = a("37983"),
@@ -17,30 +17,30 @@ var i = a("37983"),
   I = a("590456"),
   p = a("782340");
 
-function T(e) {
+function A(e) {
   let {
     user: t,
     guildId: a,
-    context: T
+    context: A
   } = e, {
-    id: A
+    id: T
   } = t, {
     loading: S,
-    note: _
-  } = (0, u.default)(A), v = !S && null != _ && _.length > 0, m = T === f.AppContext.POPOUT, E = n.useContext(c.AnalyticsContext), {
-    analyticsLocations: y
+    note: v
+  } = (0, u.default)(T), _ = !S && null != v && v.length > 0, m = A === f.AppContext.POPOUT, y = n.useContext(c.AnalyticsContext), {
+    analyticsLocations: E
   } = (0, d.default)();
-  return A === o.default.getId() || r.default.hidePersonalInformation || m ? null : (0, i.jsx)(l.MenuItem, {
+  return T === o.default.getId() || r.default.hidePersonalInformation || m ? null : (0, i.jsx)(l.MenuItem, {
     id: "note",
-    label: S ? p.default.Messages.LOADING_NOTE : v ? p.default.Messages.EDIT_NOTE : p.default.Messages.ADD_NOTE,
+    label: S ? p.default.Messages.LOADING_NOTE : _ ? p.default.Messages.EDIT_NOTE : p.default.Messages.ADD_NOTE,
     action: () => {
       (0, s.openUserProfileModal)({
         userId: t.id,
         section: I.UserProfileSections.USER_INFO,
         guildId: a,
         autoFocusNote: !0,
-        sourceAnalyticsLocations: y,
-        analyticsLocation: E.location
+        sourceAnalyticsLocations: E,
+        analyticsLocation: y.location
       })
     }
   })

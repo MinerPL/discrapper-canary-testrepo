@@ -1,61 +1,61 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return E
+    return T
   }
 });
-var l = n("37983");
-n("884691");
-var r = n("414456"),
-  i = n.n(r),
-  s = n("77078"),
-  a = n("181114"),
-  o = n("771325"),
-  u = n("570697"),
-  c = n("75015"),
-  d = n("782340"),
-  f = n("359223");
-let h = [{
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("77078"),
+  r = s("181114"),
+  o = s("771325"),
+  d = s("570697"),
+  u = s("75015"),
+  c = s("782340"),
+  S = s("761289");
+let E = [{
   name: "gif",
   extensions: ["gif"]
 }];
 
-function E(e) {
+function T(e) {
   let {
     showRemoveAvatarButton: t,
-    errors: n,
-    onAvatarChange: r,
-    sectionTitle: E,
-    changeAvatarButtonText: p,
-    guildId: C,
-    className: _,
-    disabled: m = !1,
-    isTryItOutFlow: v = !1,
-    forcedDivider: I,
-    withHighlight: g = !1
-  } = e, S = g ? a.default : s.Button;
-  return (0, l.jsx)(u.default, {
-    className: _,
-    title: E,
-    errors: n,
-    disabled: m,
-    forcedDivider: I,
-    children: (0, l.jsxs)("div", {
-      className: f.buttonsContainer,
-      children: [(0, l.jsx)(S, {
-        className: i({
-          [f.buttonHighlighted]: g
+    errors: s,
+    onAvatarChange: n,
+    sectionTitle: T,
+    changeAvatarButtonText: f,
+    guildId: _,
+    className: m,
+    disabled: g = !1,
+    isTryItOutFlow: h = !1,
+    forcedDivider: N,
+    withHighlight: I = !1
+  } = e, p = I ? r.default : i.Button;
+  return (0, a.jsx)(d.default, {
+    className: m,
+    title: T,
+    errors: s,
+    disabled: g,
+    forcedDivider: N,
+    children: (0, a.jsxs)("div", {
+      className: S.buttonsContainer,
+      children: [(0, a.jsx)(p, {
+        className: l({
+          [S.buttonHighlighted]: I
         }),
-        size: s.Button.Sizes.SMALL,
-        onClick: () => (0, o.handleOpenSelectImageModal)(c.UploadTypes.AVATAR, C, v, v ? h : void 0),
-        children: null != p ? p : d.default.Messages.USER_SETTINGS_CHANGE_AVATAR
-      }), t && (0, l.jsx)(s.Button, {
-        className: f.removeButton,
-        color: s.Button.Colors.PRIMARY,
-        look: s.Button.Looks.LINK,
-        size: s.Button.Sizes.SMALL,
-        onClick: () => r(null),
-        children: null != C ? d.default.Messages.USER_SETTINGS_RESET_AVATAR : d.default.Messages.USER_SETTINGS_REMOVE_AVATAR
+        size: i.Button.Sizes.SMALL,
+        onClick: () => (0, o.handleOpenSelectImageModal)(u.UploadTypes.AVATAR, _, h, h ? E : void 0),
+        children: null != f ? f : c.default.Messages.USER_SETTINGS_CHANGE_AVATAR
+      }), t && (0, a.jsx)(i.Button, {
+        className: S.removeButton,
+        color: i.Button.Colors.PRIMARY,
+        look: i.Button.Looks.LINK,
+        size: i.Button.Sizes.SMALL,
+        onClick: () => n(null),
+        children: null != _ ? c.default.Messages.USER_SETTINGS_RESET_AVATAR : c.default.Messages.USER_SETTINGS_REMOVE_AVATAR
       })]
     })
   })

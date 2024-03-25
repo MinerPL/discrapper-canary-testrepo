@@ -1,39 +1,39 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return c
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("77078"),
-  s = l("899604"),
-  i = l("999203"),
-  r = l("777003"),
-  o = l("782340"),
-  u = l("391119"),
-  d = l("814076");
+var i = n("37983");
+n("884691");
+var l = n("77078"),
+  a = n("139737"),
+  s = n("999203"),
+  r = n("777003"),
+  o = n("782340"),
+  u = n("910077"),
+  d = n("862939");
 
 function c(e) {
   var t;
   let {
-    user: l,
+    user: n,
     guildId: c
   } = e, {
     botUpgraded: f,
-    activeSubscriptionListing: m
-  } = (0, i.default)({
-    user: l,
+    activeSubscriptionListing: p
+  } = (0, s.default)({
+    user: n,
     guildId: c
-  }), p = null == m ? void 0 : null === (t = m.sku_benefits) || void 0 === t ? void 0 : t.benefits;
-  return null != c && f && null != p && 0 !== p.length ? (0, n.jsxs)(r.default, {
-    children: [(0, n.jsx)(a.Heading, {
+  }), m = null == p ? void 0 : null === (t = p.sku_benefits) || void 0 === t ? void 0 : t.benefits;
+  return null != c && f && null != m && 0 !== m.length ? (0, i.jsxs)(r.default, {
+    children: [(0, i.jsx)(l.Heading, {
       variant: "eyebrow",
       className: d.title,
       children: o.default.Messages.BOT_PROFILE_BENEFITS_HEADING
-    }), (0, n.jsx)("div", {
+    }), (0, i.jsx)("div", {
       className: u.benefitsContainer,
-      children: p.map((e, t) => (0, n.jsx)(s.default, {
+      children: m.map((e, t) => (0, i.jsx)(a.default, {
         showsDescription: !1,
         emojiContainerClassName: u.emojiContainer,
         nameTextVariant: "text-sm/normal",

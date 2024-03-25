@@ -4,31 +4,31 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("272030"),
-  o = n("305961"),
-  s = n("697218"),
-  a = n("719923");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("272030"),
+  s = n("305961"),
+  r = n("697218"),
+  o = n("719923");
 
 function u(e, t) {
-  return i.useCallback(i => {
-    i.stopPropagation();
-    let u = o.default.getGuild(e.guildId),
-      d = s.default.getCurrentUser();
-    (null != u || a.default.canUseCustomCallSounds(d)) && ! function(e, t, i, o) {
-      let u = s.default.getCurrentUser();
-      (null != t || a.default.canUseCustomCallSounds(u)) && (0, r.openContextMenuLazy)(e, async () => {
+  return l.useCallback(l => {
+    l.stopPropagation();
+    let u = s.default.getGuild(e.guildId),
+      d = r.default.getCurrentUser();
+    (null != u || o.default.canUseCustomCallSounds(d)) && ! function(e, t, l, s) {
+      let u = r.default.getCurrentUser();
+      (null != t || o.default.canUseCustomCallSounds(u)) && (0, a.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("632507").then(n.bind(n, "632507"));
-        return n => (0, l.jsx)(e, {
+        return n => (0, i.jsx)(e, {
           ...n,
           soundGuild: t,
-          activeCallGuildId: o,
-          sound: i
+          activeCallGuildId: s,
+          sound: l
         })
       })
-    }(i, u, e, t)
+    }(l, u, e, t)
   }, [e, t])
 }

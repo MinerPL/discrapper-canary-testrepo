@@ -5,12 +5,12 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
-  r = s("907002"),
-  o = s("837403");
-class d extends n.Component {
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
+  r = s("146606"),
+  o = s("467159");
+class d extends l.Component {
   render() {
     let {
       icon: e,
@@ -26,12 +26,12 @@ var c = function(e) {
   let {
     className: t,
     name: s,
-    icon: n,
-    iconClassName: l
+    icon: l,
+    iconClassName: n
   } = e, d = (0, r.useTransition)({
     name: s,
-    icon: n,
-    iconClassName: l
+    icon: l,
+    iconClassName: n
   }, {
     key: e => e.name,
     initial: null,
@@ -50,11 +50,11 @@ var c = function(e) {
     children: d((e, t) => {
       let {
         icon: s,
-        iconClassName: n
+        iconClassName: l
       } = t;
       return (0, a.jsx)(u, {
         icon: s,
-        className: i(o.icon, n),
+        className: i(o.icon, l),
         style: e
       })
     })

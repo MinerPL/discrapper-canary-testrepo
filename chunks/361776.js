@@ -1,29 +1,29 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return a
   },
   isGuildOnboardingAvailable: function() {
-    return u
+    return o
   }
 });
-var n = l("446674"),
-  a = l("38654"),
-  r = l("49111");
+var i = n("446674"),
+  s = n("38654"),
+  r = n("49111");
 
-function i(e) {
-  let t = (0, n.useStateFromStores)([a.default], () => {
+function a(e) {
+  let t = (0, i.useStateFromStores)([s.default], () => {
     if ((null == e ? void 0 : e.id) == null) return !1;
-    let t = a.default.isFullServerPreview(e.id),
-      l = a.default.isOnboardingEnabled(e.id);
-    return t && l
+    let t = s.default.isFullServerPreview(e.id),
+      n = s.default.isOnboardingEnabled(e.id);
+    return t && n
   });
   return t || (null == e ? void 0 : e.hasFeature(r.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS))
 }
 
-function u(e) {
+function o(e) {
   if (null == e) return !1;
-  let t = a.default.isFullServerPreview(e.id),
-    l = a.default.isOnboardingEnabled(e.id);
-  return t && l || e.hasFeature(r.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS)
+  let t = s.default.isFullServerPreview(e.id),
+    n = s.default.isOnboardingEnabled(e.id);
+  return t && n || e.hasFeature(r.GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS)
 }

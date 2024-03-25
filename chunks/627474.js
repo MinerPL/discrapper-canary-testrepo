@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("516555"),
   o = s("77078"),
   u = s("411691"),
@@ -24,16 +24,16 @@ let S = e => {
     showAllPerksButton: t,
     leftAlignHeaders: s,
     title: r,
-    headerClassname: n
-  } = e, i = (0, a.jsx)(o.Heading, {
+    headerClassname: i
+  } = e, n = (0, a.jsx)(o.Heading, {
     variant: "heading-xxl/extrabold",
     color: "header-primary",
-    className: null != n ? n : R.heading,
+    className: null != i ? i : R.heading,
     children: r
   });
-  return null == t ? i : s ? (0, a.jsxs)("div", {
+  return null == t ? n : s ? (0, a.jsxs)("div", {
     className: R.sectionHeader,
-    children: [i, null != t && (0, a.jsx)("div", {
+    children: [n, null != t && (0, a.jsx)("div", {
       className: R.showAllPerksButton,
       children: t
     })]
@@ -41,7 +41,7 @@ let S = e => {
     className: R.container,
     children: (0, a.jsx)("div", {
       className: R.sectionHeaderSeeAll,
-      children: i
+      children: n
     })
   })
 };
@@ -49,7 +49,7 @@ var m = e => {
   var t;
   let {
     className: s,
-    variant: n = T.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
+    variant: i = T.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY,
     noBackground: m = !1,
     leftAlignHeaders: N = !1,
     showAllPerksButton: A,
@@ -59,7 +59,7 @@ var m = e => {
     autoTrackExposure: !1
   });
   (0, _.useClearNewBadge)(), (0, c.useClearTenureBadge)();
-  let h = n === T.PerksDiscoverabilityCardSection.WHATS_NEW;
+  let h = i === T.PerksDiscoverabilityCardSection.WHATS_NEW;
   r.useEffect(() => {
     let e = g.current;
     if (null == e || !O || !h) return;
@@ -72,9 +72,9 @@ var m = e => {
   }, [g, O, h]);
   let L = (0, I.usePerksDiscoverabilityStrings)(h),
     x = (0, E.default)(),
-    D = (0, c.useFreeBoostUserTenureReward)(),
-    v = (0, I.getFilteredPerksDiscoverabilityCards)(x, n, P, C, null == D ? void 0 : D.showNotification),
-    U = v.some(e => null != e.pillText),
+    v = (0, c.useFreeBoostUserTenureReward)(),
+    D = (0, I.getFilteredPerksDiscoverabilityCards)(x, i, P, C, null == v ? void 0 : v.showNotification),
+    U = D.some(e => null != e.pillText),
     [b, j] = r.useState(null),
     B = r.useRef(new l.Environment);
   return (0, a.jsxs)(a.Fragment, {
@@ -84,7 +84,7 @@ var m = e => {
       environment: B.current
     }), (0, a.jsxs)("div", {
       ref: g,
-      className: i(R.section, {
+      className: n(R.section, {
         [R.centerAlignSection]: !N,
         [R.leftAlignSection]: N
       }, s),
@@ -96,7 +96,7 @@ var m = e => {
       }), !M && (0, a.jsx)(o.Text, {
         variant: "text-lg/normal",
         color: "header-primary",
-        className: i(R.subtitle, {
+        className: n(R.subtitle, {
           [R.subtitle]: null == A || N,
           [R.subtitleWithButton]: null != A && !N,
           [R.fullWidth]: h || N,
@@ -106,14 +106,14 @@ var m = e => {
         }),
         children: L.subtitle
       }), !N && null != A && (0, a.jsx)("div", {
-        className: i(R.showAllPerksButtonCenter),
+        className: n(R.showAllPerksButtonCenter),
         children: A
       }), (0, a.jsx)("div", {
-        className: i({
+        className: n({
           [R.cardContainer]: C,
           [R.cardContainerNarrowWidth]: !C
         }),
-        children: v.map((e, t) => (0, a.jsx)(f.default, {
+        children: D.map((e, t) => (0, a.jsx)(f.default, {
           confettiCanvas: e.name === E.PerksDiscoverabilityCardTypes.FREE_BOOST ? b : void 0,
           ...e,
           forceShadow: m

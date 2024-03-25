@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   SCROLL_DOWN: function() {
-    return a
+    return u
   }
 });
 var i = n("659500"),
@@ -14,7 +14,7 @@ let l = {
     comboKeysBindGlobal: !0,
     action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.SCROLL_PAGE_UP), !1)
   },
-  a = {
+  u = {
     binds: ["pagedown"],
     comboKeysBindGlobal: !0,
     action: () => (i.ComponentDispatch.dispatchToLastSubscribed(o.ComponentActions.SCROLL_PAGE_DOWN), !1)

@@ -1,12 +1,12 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return c
+    return s
   }
 }), r("70102"), r("854508"), r("781738");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = function() {
     function e(e, t) {
       for (var r = 0; r < t.length; r++) {
@@ -20,7 +20,7 @@ var n = r("884691"),
   }(),
   u = [38, 40],
   l = 1,
-  c = function(e) {
+  s = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -39,9 +39,9 @@ var n = r("884691"),
       }, r.handleKeyDown = function(e) {
         var t, n = Number(String(e.target.value).replace(/%/g, ""));
         if (!isNaN(n) && (t = e.keyCode, u.indexOf(t) > -1)) {
-          var o = r.getArrowOffset(),
-            a = 38 === e.keyCode ? n + o : n - o;
-          r.setUpdatedValue(a, e)
+          var a = r.getArrowOffset(),
+            o = 38 === e.keyCode ? n + a : n - a;
+          r.setUpdatedValue(o, e)
         }
       }, r.handleDrag = function(e) {
         if (r.props.dragLabel) {
@@ -112,7 +112,7 @@ var n = r("884691"),
       key: "render",
       value: function() {
         var e = this,
-          t = (0, a.default)({
+          t = (0, o.default)({
             default: {
               wrap: {
                 position: "relative"
@@ -131,9 +131,9 @@ var n = r("884691"),
           }, {
             "user-override": !0
           }, this.props);
-        return o.createElement("div", {
+        return a.createElement("div", {
           style: t.wrap
-        }, o.createElement("input", {
+        }, a.createElement("input", {
           id: this.inputId,
           style: t.input,
           ref: function(t) {
@@ -145,7 +145,7 @@ var n = r("884691"),
           onBlur: this.handleBlur,
           placeholder: this.props.placeholder,
           spellCheck: "false"
-        }), this.props.label && !this.props.hideLabel ? o.createElement("label", {
+        }), this.props.label && !this.props.hideLabel ? a.createElement("label", {
           htmlFor: this.inputId,
           style: t.label,
           onMouseDown: this.handleMouseDown

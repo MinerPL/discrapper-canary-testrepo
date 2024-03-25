@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return l
   },
   default: function() {
-    return f
+    return _
   }
 });
 var i, s, r = n("446674"),
@@ -37,7 +37,7 @@ class c extends r.default.Store {
   }
 }
 c.displayName = "GuildOnboardingStore";
-var f = new c(a.default, {
+var _ = new c(a.default, {
   LOGOUT: function() {
     u = {}, d = {}
   },

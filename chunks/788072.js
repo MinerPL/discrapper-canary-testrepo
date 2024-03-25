@@ -18,9 +18,9 @@ var a = n("37983"),
   E = n("211248"),
   m = n("805614"),
   p = n("64318"),
-  g = n("833150"),
-  S = n("782340"),
-  N = n("643000");
+  S = n("833150"),
+  g = n("782340"),
+  N = n("129519");
 
 function _(e) {
   let {
@@ -46,8 +46,8 @@ function _(e) {
       className: N.emptyStateContainer,
       children: (0, a.jsx)(m.default, {
         Icon: u.GameControllerIcon,
-        header: S.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
-        tip: S.default.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
+        header: g.default.Messages.GAME_INVITES_EMPTY_STATE_TITLE,
+        tip: g.default.Messages.GAME_INVITES_EMPTY_STATE_SUBTITLE
       })
     })]
   }) : (0, a.jsxs)("div", {
@@ -59,7 +59,7 @@ function _(e) {
       closePopout: _,
       children: (0, a.jsx)(E.default, {
         className: N.deleteButton,
-        tooltip: S.default.Messages.GAME_INVITES_DELETE_ALL,
+        tooltip: g.default.Messages.GAME_INVITES_DELETE_ALL,
         color: E.CircleIconButtonColors.SECONDARY,
         icon: (0, a.jsx)(d.TrashIcon, {
           width: 16,
@@ -84,18 +84,18 @@ function _(e) {
         className: N.invitesContainer,
         children: [A.length > 0 && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(T, {
-            title: S.default.Messages.GAME_INVITES_RECENT_HEADER
+            title: g.default.Messages.GAME_INVITES_RECENT_HEADER
           }), (0, a.jsx)(a.Fragment, {
-            children: A.map(e => (0, a.jsx)(g.default, {
+            children: A.map(e => (0, a.jsx)(S.default, {
               invite: e,
               expired: !1
             }, e.invite_id))
           })]
         }), M.length > 0 && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(T, {
-            title: S.default.Messages.GAME_INVITES_EXPIRED_HEADER
+            title: g.default.Messages.GAME_INVITES_EXPIRED_HEADER
           }), (0, a.jsx)(a.Fragment, {
-            children: M.map(e => (0, a.jsx)(g.default, {
+            children: M.map(e => (0, a.jsx)(S.default, {
               invite: e,
               expired: !0
             }, e.invite_id))

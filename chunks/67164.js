@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return p
   }
 }), n("808653"), n("70102");
-var a = n("884691"),
-  r = n.n(a);
+var r = n("884691"),
+  a = n.n(r);
 
 function i(e, t) {
   return (i = Object.setPrototypeOf || function(e, t) {
@@ -20,8 +20,8 @@ var c = function(e) {
   s = ["sitekey", "theme", "size", "badge", "tabindex", "hl", "isolated"],
   p = function(e) {
     function t() {
-      for (var t, n = arguments.length, a = Array(n), i = 0; i < n; i++) a[i] = arguments[i];
-      return (t = e.call.apply(e, [this].concat(a)) || this).container = void 0, t.timer = void 0, t.state = {
+      for (var t, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+      return (t = e.call.apply(e, [this].concat(r)) || this).container = void 0, t.timer = void 0, t.state = {
         instanceKey: Date.now(),
         ready: !1,
         rendered: !1,
@@ -37,12 +37,12 @@ var c = function(e) {
       }, t._prepare = function() {
         var e = t.props,
           n = e.explicit,
-          a = e.onLoad;
+          r = e.onLoad;
         window.grecaptcha.ready(function() {
           t.setState({
             ready: !0
           }, function() {
-            n || t.renderExplicitly(), a && a()
+            n || t.renderExplicitly(), r && r()
           })
         })
       }, t._renderRecaptcha = function(e, t) {
@@ -71,7 +71,7 @@ var c = function(e) {
         return new Promise(function(e, n) {
           if (t.state.rendered) return n(Error("This recaptcha instance has been already rendered."));
           if (!t.state.ready || !t.container) return n(Error("Recaptcha is not ready for rendering yet."));
-          var a = t._renderRecaptcha(t.container, {
+          var r = t._renderRecaptcha(t.container, {
             sitekey: t.props.sitekey,
             theme: t.props.theme,
             size: t.props.size,
@@ -84,7 +84,7 @@ var c = function(e) {
             hl: t.state.invisible ? void 0 : t.props.hl
           });
           t.setState({
-            instanceId: a,
+            instanceId: r,
             rendered: !0
           }, function() {
             t.props.onRender && t.props.onRender(), e()
@@ -105,7 +105,7 @@ var c = function(e) {
           n(Error("This recaptcha instance did not render yet."))
         })
       }, t.render = function() {
-        var e = r.createElement("div", {
+        var e = a.createElement("div", {
           key: t.state.instanceKey,
           id: t.props.id,
           className: t.props.className,
@@ -129,8 +129,8 @@ var c = function(e) {
       } : null
     }, t.prototype.componentDidUpdate = function(e) {
       var t = this;
-      s.reduce(function(n, a) {
-        return t.props[a] !== e[a] ? [].concat(n, [a]) : n
+      s.reduce(function(n, r) {
+        return t.props[r] !== e[r] ? [].concat(n, [r]) : n
       }, []).length > 0 && this.setState({
         instanceKey: Date.now(),
         rendered: !1
@@ -138,7 +138,7 @@ var c = function(e) {
         t.props.explicit || t.renderExplicitly()
       })
     }, t
-  }(a.Component);
+  }(r.Component);
 p.defaultProps = {
   id: "",
   className: "g-recaptcha",

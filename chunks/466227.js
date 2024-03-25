@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("446674"),
-  n = s("913144"),
-  l = s("159794"),
+  l = s("913144"),
+  n = s("277277"),
   i = s("162771");
 let r = {},
   o = {},
@@ -27,7 +27,7 @@ class u extends a.default.Store {
   }
 }
 u.displayName = "GuildSettingsEmojiStore";
-var c = new u(n.default, {
+var c = new u(l.default, {
   EMOJI_DELETE: function(e) {
     let {
       guildId: t,
@@ -40,7 +40,7 @@ var c = new u(n.default, {
       guildId: t,
       emojis: s
     } = e;
-    o[t] = s.map(e => new l.default(e))
+    o[t] = s.map(e => new n.default(e))
   },
   EMOJI_FETCH_FAILURE: function(e) {
     let {

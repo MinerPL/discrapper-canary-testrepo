@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return S
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("316887"),
-  i = n("627490"),
-  l = n("447853"),
+  l = n("627490"),
+  i = n("447853"),
   r = n("517425"),
   o = n("709071"),
   u = n("228427"),
@@ -16,15 +16,15 @@ var s = n("316887"),
   c = n("11056"),
   f = n("449008"),
   E = n("447621"),
-  _ = n("763065");
-let h = e => {
+  h = n("791666");
+let _ = e => {
     switch (e) {
       case E.CategoryIcons.Activity:
         return (0, a.jsx)(s.default, {});
       case E.CategoryIcons.Discover:
-        return (0, a.jsx)(i.default, {});
-      case E.CategoryIcons.Education:
         return (0, a.jsx)(l.default, {});
+      case E.CategoryIcons.Education:
+        return (0, a.jsx)(i.default, {});
       case E.CategoryIcons.Music:
         return (0, a.jsx)(r.default, {});
       case E.CategoryIcons.Science:
@@ -45,11 +45,11 @@ let h = e => {
       categories: t,
       currentCategoryId: n,
       handleCategorySelect: s,
-      shouldDisplaySelectedCategory: i = !0
+      shouldDisplaySelectedCategory: l = !0
     } = e;
     return (0, a.jsx)(a.Fragment, {
       children: t.map(e => (0, a.jsx)(c.default, {
-        avatar: h(e.icon),
+        avatar: _(e.icon),
         name: e.name,
         focusProps: {
           offset: {
@@ -60,12 +60,12 @@ let h = e => {
         },
         onClick: () => s(e.categoryId),
         wrapContent: !0,
-        selected: i && e.categoryId === n,
-        className: _.categoryItem,
-        selectedClassName: _.selectedCategoryItem,
-        innerClassName: _.itemInner
+        selected: l && e.categoryId === n,
+        className: h.categoryItem,
+        selectedClassName: h.selectedCategoryItem,
+        innerClassName: h.itemInner
       }, e.categoryId))
     })
   };
 C.Icons = E.CategoryIcons;
-var I = C
+var S = C

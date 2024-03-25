@@ -18,11 +18,11 @@ var l = n("37983"),
   h = n("476765"),
   _ = n("794352"),
   C = n("883310"),
-  v = n("93550"),
-  g = n("617347"),
-  S = n("745049"),
-  T = n("782340"),
-  p = n("823020");
+  T = n("93550"),
+  v = n("617347"),
+  g = n("745049"),
+  S = n("782340"),
+  p = n("764718");
 
 function N(e) {
   var t;
@@ -36,18 +36,18 @@ function N(e) {
     privacy_level: y
   } = a, R = (0, r.useStateFromStores)([f.default], () => f.default.getChannel(a.channel_id), [a]), O = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(m), [m]), {
     canManageGuildEvent: L
-  } = (0, o.useManageResourcePermissions)(null != R ? R : O), x = L(a), G = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(m), [m]), M = a.entity_type === S.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [U, w] = i.useState(M), [k, {
-    loading: D,
-    error: P
+  } = (0, o.useManageResourcePermissions)(null != R ? R : O), G = L(a), x = (0, r.useStateFromStores)([u.default], () => u.default.isLurking(m), [m]), M = a.entity_type === g.GuildScheduledEventEntityTypes.STAGE_INSTANCE, [U, w] = i.useState(M), [P, {
+    loading: k,
+    error: D
   }] = (0, C.default)();
-  if (!x) return null;
-  let b = y === S.GuildScheduledEventPrivacyLevel.PUBLIC ? T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : T.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
-    j = () => {
+  if (!G) return null;
+  let j = y === g.GuildScheduledEventPrivacyLevel.PUBLIC ? S.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PUBLIC_LABEL : S.default.Messages.STAGE_INSTANCE_PRIVACY_TYPE_PRIVATE_LABEL,
+    b = () => {
       null == N || N(), A(), (0, c.setIsOnStartStageScreen)(!1)
     },
-    V = async () => {
-      await k(a, U, {
-        onSuccess: j
+    H = async () => {
+      await P(a, U, {
+        onSuccess: b
       })
     };
   return (0, l.jsx)(d.ModalRoot, {
@@ -57,14 +57,14 @@ function N(e) {
       className: p.content,
       children: [(0, l.jsx)("div", {
         className: p.previewCard,
-        children: (0, l.jsx)(g.default, {
+        children: (0, l.jsx)(v.default, {
           guild: O,
           channel: R,
           name: a.name,
           description: null !== (t = a.description) && void 0 !== t ? t : void 0,
-          imageSource: (0, v.default)(a),
+          imageSource: (0, T.default)(a),
           isActive: !1,
-          isUserLurking: G,
+          isUserLurking: x,
           speakers: [],
           speakerCount: 0,
           rsvped: !0,
@@ -74,9 +74,9 @@ function N(e) {
         color: "header-secondary",
         className: p.privacyLevel,
         variant: "text-sm/normal",
-        children: T.default.Messages.START_EVENT_CONFIRMATION.format({
-          privacyLevel: b,
-          privacyLevelHook: (e, t) => y !== S.GuildScheduledEventPrivacyLevel.PUBLIC ? null : (0, l.jsxs)("div", {
+        children: S.default.Messages.START_EVENT_CONFIRMATION.format({
+          privacyLevel: j,
+          privacyLevelHook: (e, t) => y !== g.GuildScheduledEventPrivacyLevel.PUBLIC ? null : (0, l.jsxs)("div", {
             className: p.privacyLevel,
             children: [(0, l.jsx)(_.default, {
               width: 16,
@@ -104,7 +104,7 @@ function N(e) {
         },
         children: (0, l.jsx)(d.Text, {
           variant: "text-sm/normal",
-          children: T.default.Messages.GUILD_NOTIFY_MEMBERS_DESKTOP
+          children: S.default.Messages.GUILD_NOTIFY_MEMBERS_DESKTOP
         })
       }), (0, l.jsxs)("div", {
         className: s(p.inline, p.buttons, p.verticalSpacing),
@@ -114,19 +114,19 @@ function N(e) {
             A()
           },
           className: s(p.button, p.spacing),
-          children: T.default.Messages.STAGE_BLOCKED_USERS_CANCEL
+          children: S.default.Messages.STAGE_BLOCKED_USERS_CANCEL
         }), (0, l.jsx)(d.Button, {
           color: d.Button.Colors.GREEN,
-          onClick: V,
-          submitting: D,
+          onClick: H,
+          submitting: k,
           className: p.button,
-          children: T.default.Messages.START_EVENT
+          children: S.default.Messages.START_EVENT
         })]
-      }), null != P && null != P.getAnyErrorMessage() ? (0, l.jsx)(d.Text, {
+      }), null != D && null != D.getAnyErrorMessage() ? (0, l.jsx)(d.Text, {
         color: "text-danger",
         variant: "text-sm/normal",
         className: p.errorMessage,
-        children: P.getAnyErrorMessage()
+        children: D.getAnyErrorMessage()
       }) : null]
     })
   })

@@ -5,13 +5,13 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("77078"),
+  l = s("884691"),
+  n = s("77078"),
   i = s("837899"),
   r = s("425190"),
   o = s("301341"),
   d = s("782340"),
-  u = s("744451");
+  u = s("123402");
 
 function c(e) {
   let {
@@ -19,8 +19,8 @@ function c(e) {
     initialValue: s,
     maxWordCount: c,
     collapsed: E = !1
-  } = e, [_, T] = n.useState(!E);
-  return (0, a.jsx)(l.Collapsible, {
+  } = e, [_, I] = l.useState(!E);
+  return (0, a.jsx)(n.Collapsible, {
     isExpanded: _,
     collapsibleContent: (0, a.jsx)(o.default, {
       onChangeText: t,
@@ -35,13 +35,13 @@ function c(e) {
       let {
         onClick: t
       } = e;
-      return (0, a.jsx)(l.Clickable, {
+      return (0, a.jsx)(n.Clickable, {
         onClick: e => {
-          T(!_), t(e)
+          I(!_), t(e)
         },
         children: (0, a.jsxs)("div", {
           className: u.header,
-          children: [(0, a.jsx)(l.Heading, {
+          children: [(0, a.jsx)(n.Heading, {
             variant: "text-sm/medium",
             children: d.default.Messages.GUILD_AUTOMOD_ALLOW_LIST_TITLE
           }), _ ? (0, a.jsx)(r.default, {

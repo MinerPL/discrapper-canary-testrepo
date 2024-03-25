@@ -1,7 +1,7 @@
 "use strict";
 n.r(e), n.d(e, {
   Step: function() {
-    return u
+    return i
   },
   COLLAPSED_PAYMENT_BREADCRUMB_STEPS: function() {
     return d
@@ -16,14 +16,14 @@ n.r(e), n.d(e, {
     return _
   }
 }), n("222007"), n("70102");
-var u, i, r = n("884691"),
+var i, r, u = n("884691"),
   l = n("448993"),
   a = n("605250"),
   o = n("745279"),
   s = n("286350"),
   c = n("782340");
 let S = new a.default("PaymentSteps");
-(i = u || (u = {})).PAYMENT_TYPE = "payment_type", i.CREDIT_CARD_INFORMATION = "credit_card_information", i.PAYPAL_INFORMATION = "paypal_information", i.VENMO_INFORMATION = "venmo_information", i.SOFORT_INFORMATION = "sofort_information", i.PRZELEWY24_INFORMATION = "przelewy24_information", i.EPS_INFORMATION = "eps_information", i.IDEAL_INFORMATION = "ideal_information", i.CASH_APP_INFORMATION = "cash_app_information", i.PAYMENT_REQUEST_INFORMATION = "payment_request_information", i.ADDRESS = "address", i.AWAITING_AUTHENTICATION = "awaiting_authentication", i.SKU_SELECT = "sku_select", i.PLAN_SELECT = "plan_select", i.PREMIUM_UPSELL = "premium_upsell", i.PREMIUM_GUILD_UPSELL = "premium_guild_upsell", i.REVIEW = "review", i.CONFIRM = "confirm", i.CLAIM_FREE_SKU = "claim_free_sku", i.SKU_PREVIEW = "sku_preview", i.LOADING_PAYMENT_SOURCES = "loading_payment_sources", i.SHOP = "shop", i.PROMOTION_INFO = "promotion_info", i.AWAITING_PURCHASE_TOKEN_AUTH = "awaiting_purchase_token_auth", i.BENEFITS = "benefits", i.WHAT_YOU_LOSE = "what_you_lose", i.ADD_PAYMENT_STEPS = "add_payment_steps", i.AWAITING_BROWSER_CHECKOUT = "awaiting_browser_checkout", i.GIFT_CUSTOMIZATION = "gift_customization";
+(r = i || (i = {})).PAYMENT_TYPE = "payment_type", r.CREDIT_CARD_INFORMATION = "credit_card_information", r.PAYPAL_INFORMATION = "paypal_information", r.VENMO_INFORMATION = "venmo_information", r.SOFORT_INFORMATION = "sofort_information", r.PRZELEWY24_INFORMATION = "przelewy24_information", r.EPS_INFORMATION = "eps_information", r.IDEAL_INFORMATION = "ideal_information", r.CASH_APP_INFORMATION = "cash_app_information", r.PAYMENT_REQUEST_INFORMATION = "payment_request_information", r.ADDRESS = "address", r.AWAITING_AUTHENTICATION = "awaiting_authentication", r.SKU_SELECT = "sku_select", r.PLAN_SELECT = "plan_select", r.PREMIUM_UPSELL = "premium_upsell", r.PREMIUM_GUILD_UPSELL = "premium_guild_upsell", r.REVIEW = "review", r.CONFIRM = "confirm", r.CLAIM_FREE_SKU = "claim_free_sku", r.SKU_PREVIEW = "sku_preview", r.LOADING_PAYMENT_SOURCES = "loading_payment_sources", r.SHOP = "shop", r.PROMOTION_INFO = "promotion_info", r.AWAITING_PURCHASE_TOKEN_AUTH = "awaiting_purchase_token_auth", r.BENEFITS = "benefits", r.WHAT_YOU_LOSE = "what_you_lose", r.ADD_PAYMENT_STEPS = "add_payment_steps", r.AWAITING_BROWSER_CHECKOUT = "awaiting_browser_checkout", r.GIFT_CUSTOMIZATION = "gift_customization";
 let d = new Set(["credit_card_information", "payment_request_information", "paypal_information", "venmo_information", "cash_app_information", "address", "claim_free_sku", "sku_preview", "premium_upsell", "sofort_information", "przelewy24_information"]);
 
 function E(t) {
@@ -70,7 +70,7 @@ function f(t) {
 }
 
 function _(t, e, n) {
-  r.useEffect(() => {
+  u.useEffect(() => {
     null != t && "review" !== t && e !== s.PurchaseState.WAITING && e !== s.PurchaseState.COMPLETED && n(s.PurchaseState.WAITING)
   }, [t, e, n])
 }

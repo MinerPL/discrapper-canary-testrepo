@@ -1,7 +1,7 @@
-var n = r("396494"),
-  o = r("128387"),
-  a = r("267427"),
-  i = r("486036");
+var r = n("396494"),
+  i = n("128387"),
+  o = n("267427"),
+  s = n("486036");
 e.exports = function(e, t) {
-  return (i(e) ? n : o)(e, a(t))
+  return (s(e) ? r : i)(e, o(t))
 }

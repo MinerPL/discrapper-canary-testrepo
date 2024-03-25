@@ -6,19 +6,19 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("782340"),
-  l = s("134205");
+var l = s("782340"),
+  n = s("988341");
 
 function i(e) {
   let {
     showDirtyIndicator: t
   } = e;
   return t ? (0, a.jsxs)("div", {
-    className: l.container,
-    children: [n.default.Messages.GUILD_TEMPLATES, (0, a.jsx)("div", {
-      className: l.dot
+    className: n.container,
+    children: [l.default.Messages.GUILD_TEMPLATES, (0, a.jsx)("div", {
+      className: n.dot
     })]
   }) : (0, a.jsx)(a.Fragment, {
-    children: n.default.Messages.GUILD_TEMPLATES
+    children: l.default.Messages.GUILD_TEMPLATES
   })
 }

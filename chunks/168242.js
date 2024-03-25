@@ -28,11 +28,11 @@ t.exports = function(t, e) {
       x = w.decoratorKey,
       C = w.leafKey,
       E = b.getBlockTree(k).getIn([x, "leaves", C]),
-      O = E.start,
-      D = E.end,
+      D = E.start,
+      O = E.end,
       K = b.getCurrentContent(),
       T = K.getBlockForKey(k),
-      M = T.getText().slice(O, D);
+      M = T.getText().slice(D, O);
     if (_.endsWith("\n\n") && (_ = _.slice(0, -1)), _ === M) {
       var A = e.nativeEvent.inputType;
       if (A) {
@@ -46,15 +46,15 @@ t.exports = function(t, e) {
     }
     var B = b.getSelection(),
       L = B.merge({
-        anchorOffset: O,
-        focusOffset: D,
+        anchorOffset: D,
+        focusOffset: O,
         isBackward: !1
       }),
-      R = T.getEntityAt(O),
+      R = T.getEntityAt(D),
       N = u(R) ? K.getEntity(R) : null,
       F = "MUTABLE" === (null != N ? N.getMutability() : null),
-      z = n.replaceText(K, L, _, T.getInlineStyleAt(O), F ? T.getEntityAt(O) : null);
-    if (f) r = d.anchorOffset, h = (p = O + Math.min(r, a = d.focusOffset)) + Math.abs(r - a), r = p, a = h;
+      z = n.replaceText(K, L, _, T.getInlineStyleAt(D), F ? T.getEntityAt(D) : null);
+    if (f) r = d.anchorOffset, h = (p = D + Math.min(r, a = d.focusOffset)) + Math.abs(r - a), r = p, a = h;
     else {
       var P = _.length - M.length;
       p = B.getStartOffset(), h = B.getEndOffset(), r = y ? h + P : p, a = h + P

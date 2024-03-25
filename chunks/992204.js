@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("446674"),
   s = n("913144"),
-  i = n("954016");
-let l = new Set,
-  r = new Set([i.WhatsNewSection.DISCORD_TURNS_8]);
+  l = n("954016");
+let i = new Set,
+  r = new Set([l.WhatsNewSection.DISCORD_TURNS_8]);
 class o extends a.default.PersistedStore {
   initialize(e) {
-    null != e && (Array.isArray(e.acknowledged) && (l = new Set(e.acknowledged)), Array.isArray(e.opened) && (r = new Set(e.opened)))
+    null != e && (Array.isArray(e.acknowledged) && (i = new Set(e.acknowledged)), Array.isArray(e.opened) && (r = new Set(e.opened)))
   }
   getState() {
     return {
-      acknowledged: l,
+      acknowledged: i,
       opened: r
     }
   }
@@ -23,13 +23,13 @@ class o extends a.default.PersistedStore {
     return r
   }
   getAcknowledged() {
-    return l
+    return i
   }
   isOpened(e) {
     return r.has(e)
   }
   isAcknowledged(e) {
-    return l.has(e)
+    return i.has(e)
   }
 }
 o.displayName = "ActivitiesWhatsNewStore", o.persistKey = "ActivitiesWhatsNewStore";
@@ -38,7 +38,7 @@ var u = new o(s.default, {
     let {
       section: t
     } = e;
-    l.add(t)
+    i.add(t)
   },
   ACTIVITIES_WHATS_NEW_MARK_OPENED_SECTION: function(e) {
     let {

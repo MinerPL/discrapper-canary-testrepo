@@ -31,7 +31,7 @@ var l = n("77078"),
       guild: n,
       includeTopic: i = !1,
       onSelect: d
-    } = e, M = (0, T.default)(t), m = (0, p.default)(t), A = (0, h.default)(t), L = (0, c.default)(t), S = (0, E.default)(t), x = (0, C.default)(t, n), v = (0, o.default)(t, n), U = (0, f.default)(t, n, O.ChannelTypes.GUILD_TEXT), y = (0, f.default)(t, n, O.ChannelTypes.GUILD_VOICE), P = (0, _.default)(t), b = (0, s.default)({
+    } = e, M = (0, T.default)(t), m = (0, p.default)(t), A = (0, h.default)(t), L = (0, c.default)(t), S = (0, E.default)(t), x = (0, C.default)(t, n), v = (0, o.default)(t, n), y = (0, f.default)(t, n, O.ChannelTypes.GUILD_TEXT), U = (0, f.default)(t, n, O.ChannelTypes.GUILD_VOICE), P = (0, _.default)(t), b = (0, s.default)({
       id: t.id,
       label: g.default.Messages.COPY_ID_CHANNEL
     }), G = (0, I.default)(t, "title_context_menu"), j = (0, r.useShouldUseNewNotificationSystem)("ChannelTitleContextMenu"), V = (0, N.default)(t);
@@ -47,7 +47,7 @@ var l = n("77078"),
       }), (0, a.jsxs)(l.MenuGroup, {
         children: [i ? L : j ? V : A, S]
       }), (0, a.jsxs)(l.MenuGroup, {
-        children: [x, v, U, y]
+        children: [x, v, y, U]
       }), (0, a.jsx)(l.MenuGroup, {
         children: G
       }), (0, a.jsx)(l.MenuGroup, {

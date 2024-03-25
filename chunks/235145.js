@@ -1,50 +1,50 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   useGetDismissibleContent: function() {
-    return m
+    return p
   }
 });
-var n = l("884691"),
-  a = l("446674"),
-  s = l("374363"),
-  i = l("162771"),
-  r = l("674268"),
-  o = l("989691"),
-  u = l("862853"),
-  d = l("10641"),
-  c = l("846614"),
-  f = l("397336");
+var i = n("884691"),
+  l = n("446674"),
+  a = n("374363"),
+  s = n("162771"),
+  r = n("674268"),
+  o = n("989691"),
+  u = n("862853"),
+  d = n("10641"),
+  c = n("846614"),
+  f = n("397336");
 
-function m(e, t, l) {
-  let m = (0, a.useStateFromStores)([s.default], () => {
+function p(e, t, n) {
+  let p = (0, l.useStateFromStores)([a.default], () => {
       var e;
-      return null === (e = s.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
+      return null === (e = a.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     }),
-    p = (0, a.useStateFromStores)([i.default], () => i.default.getGuildId()),
-    T = (0, c.useNewUserDismissibleContent)(e),
-    E = null;
-  s.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? E = T.find(e => null == m || !(0, r.hasBit)(m, e)) : null != m && (E = T.find(e => !(0, r.hasBit)(m, e)));
-  let _ = (0, u.default)(e => null != E && e.currentlyShown.has(E)),
-    S = (0, a.useStateFromStores)([o.default], () => null != E && o.default.hasUserHitDCCap(E));
-  n.useEffect(() => {
-    if (null != E) return (0, d.requestMarkDismissibleContentAsShown)(E, {
+    m = (0, l.useStateFromStores)([s.default], () => s.default.getGuildId()),
+    h = (0, c.useNewUserDismissibleContent)(e),
+    x = null;
+  a.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? x = h.find(e => null == p || !(0, r.hasBit)(p, e)) : null != p && (x = h.find(e => !(0, r.hasBit)(p, e)));
+  let E = (0, u.default)(e => null != x && e.currentlyShown.has(x)),
+    y = (0, l.useStateFromStores)([o.default], () => null != x && o.default.hasUserHitDCCap(x));
+  i.useEffect(() => {
+    if (null != x) return (0, d.requestMarkDismissibleContentAsShown)(x, {
       groupName: t,
-      guildId: p
-    }, l), () => {
-      if (null == E) return;
+      guildId: m
+    }, n), () => {
+      if (null == x) return;
       let e = !o.default.hasUserHitDCCap();
       (0, u.removeCandidateContent)({
-        content: E,
+        content: x,
         groupName: t
       }, e)
     }
-  }, [E, t, p, S, l]);
-  let h = n.useCallback(e => {
-    null != E && (0, d.markDismissibleContentAsDismissed)(E, {
+  }, [x, t, m, y, n]);
+  let g = i.useCallback(e => {
+    null != x && (0, d.markDismissibleContentAsDismissed)(x, {
       dismissAction: e,
       groupName: t,
-      guildId: p
+      guildId: m
     })
-  }, [E, t, p]);
-  return [_ && null != E ? E : null, h]
+  }, [x, t, m]);
+  return [E && null != x ? x : null, g]
 }

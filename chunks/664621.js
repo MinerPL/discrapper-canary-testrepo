@@ -1,8 +1,8 @@
 "use strict";
 n("424973"), n("70102");
 var i = n("133331").forEach,
-  o = n("241075"),
-  r = n("501174"),
+  r = n("241075"),
+  o = n("501174"),
   a = n("528049"),
   s = n("793274"),
   l = n("705116"),
@@ -53,25 +53,25 @@ e.exports = function(e) {
     })),
     w = {};
   w.callOnAdd = !!v(e, "callOnAdd", !0), w.debug = !!v(e, "debug", !1);
-  var E = r(t),
-    x = o({
+  var E = o(t),
+    S = r({
       stateHandler: u
     }),
-    S = v(e, "strategy", "object"),
+    x = v(e, "strategy", "object"),
     k = v(e, "important", !1),
-    z = {
+    O = {
       reporter: b,
       batchProcessor: y,
       stateHandler: u,
       idHandler: t,
       important: k
     };
-  if ("scroll" === S && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), S = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), S = "object")), "scroll" === S) n = h(z);
-  else if ("object" === S) n = f(z);
-  else throw Error("Invalid strategy name: " + S);
-  var D = {};
+  if ("scroll" === x && (c.isLegacyOpera() ? (b.warn("Scroll strategy is not supported on legacy Opera. Changing to object strategy."), x = "object") : c.isIE(9) && (b.warn("Scroll strategy is not supported on IE9. Changing to object strategy."), x = "object")), "scroll" === x) n = h(O);
+  else if ("object" === x) n = f(O);
+  else throw Error("Invalid strategy name: " + x);
+  var z = {};
   return {
-    listenTo: function(e, o, r) {
+    listenTo: function(e, r, o) {
       function a(e) {
         i(E.get(e), function(t) {
           t(e)
@@ -81,48 +81,48 @@ e.exports = function(e) {
       function s(e, t, n) {
         E.add(t, n), e && n(t)
       }
-      if (!r && (r = o, o = e, e = {}), !o) throw Error("At least one element required.");
-      if (!r) throw Error("Listener required.");
-      if (g(o)) o = [o];
+      if (!o && (o = r, r = e, e = {}), !r) throw Error("At least one element required.");
+      if (!o) throw Error("Listener required.");
+      if (g(r)) r = [r];
       else {
-        if (!p(o)) return b.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
-        o = m(o)
+        if (!p(r)) return b.error("Invalid arguments. Must be a DOM element or a collection of DOM elements.");
+        r = m(r)
       }
       var l = 0,
         c = v(e, "callOnAdd", w.callOnAdd),
         d = v(e, "onReady", function() {}),
         f = v(e, "debug", w.debug);
-      i(o, function(e) {
+      i(r, function(e) {
         !u.getState(e) && (u.initState(e), t.set(e));
         var h = t.get(e);
-        if (f && b.log("Attaching listener to element", h, e), !x.isDetectable(e)) {
-          if (f && b.log(h, "Not detectable."), x.isBusy(e)) {
-            f && b.log(h, "System busy making it detectable"), s(c, e, r), D[h] = D[h] || [], D[h].push(function() {
-              ++l === o.length && d()
+        if (f && b.log("Attaching listener to element", h, e), !S.isDetectable(e)) {
+          if (f && b.log(h, "Not detectable."), S.isBusy(e)) {
+            f && b.log(h, "System busy making it detectable"), s(c, e, o), z[h] = z[h] || [], z[h].push(function() {
+              ++l === r.length && d()
             });
             return
           }
-          return f && b.log(h, "Making detectable..."), x.markBusy(e, !0), n.makeDetectable({
+          return f && b.log(h, "Making detectable..."), S.markBusy(e, !0), n.makeDetectable({
             debug: f,
             important: k
           }, e, function(e) {
             if (f && b.log(h, "onElementDetectable"), u.getState(e)) {
-              x.markAsDetectable(e), x.markBusy(e, !1), n.addListener(e, a), s(c, e, r);
+              S.markAsDetectable(e), S.markBusy(e, !1), n.addListener(e, a), s(c, e, o);
               var t = u.getState(e);
               if (t && t.startSize) {
                 var p = e.offsetWidth,
                   m = e.offsetHeight;
                 (t.startSize.width !== p || t.startSize.height !== m) && a(e)
               }
-              D[h] && i(D[h], function(e) {
+              z[h] && i(z[h], function(e) {
                 e()
               })
             } else f && b.log(h, "Element uninstalled before being detectable.");
-            delete D[h], ++l === o.length && d()
+            delete z[h], ++l === r.length && d()
           })
         }
-        f && b.log(h, "Already detecable, adding listener."), s(c, e, r), l++
-      }), l === o.length && d()
+        f && b.log(h, "Already detecable, adding listener."), s(c, e, o), l++
+      }), l === r.length && d()
     },
     removeListener: E.removeListener,
     removeAllListeners: E.removeAllListeners,

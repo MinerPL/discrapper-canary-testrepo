@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 });
 var s = n("627445"),
@@ -15,10 +15,10 @@ var s = n("627445"),
   c = n("271938"),
   f = n("476108"),
   E = n("599110"),
-  I = n("65300"),
-  _ = n("49111");
+  _ = n("65300"),
+  I = n("49111");
 
-function p(e) {
+function h(e) {
   let t = function(e) {
       var t;
       let n = null === (t = i.os) || void 0 === t ? void 0 : t.family;
@@ -34,11 +34,11 @@ function p(e) {
       return "discord://"
     }(e),
     n = (0, u.parseDynamicLink)(t);
-  null != n && E.default.track(_.AnalyticEvents.DEEP_LINK_CLICKED, {
+  null != n && E.default.track(I.AnalyticEvents.DEEP_LINK_CLICKED, {
     fingerprint: (0, o.maybeExtractId)(n.fingerprint),
     attempt_id: n.attemptId,
     source: n.utmSource
-  }), I.default.launch(t, e => {
+  }), _.default.launch(t, e => {
     !e && (0, d.replaceWith)(f.default.fallbackRoute)
   })
 }

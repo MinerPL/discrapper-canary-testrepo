@@ -5,15 +5,15 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("917351"),
-  n = s.n(a),
-  l = s("446674"),
+  l = s.n(a),
+  n = s("446674"),
   i = s("913144"),
   r = s("271938"),
   o = s("449008"),
   d = s("501208");
 let u = {},
   c = 0;
-class E extends l.default.Store {
+class E extends n.default.Store {
   initialize() {
     this.waitFor(r.default)
   }
@@ -37,7 +37,7 @@ var _ = new E(i.default, {
       guilds: t
     } = e;
     c -= 1;
-    let s = n.map(t, d.default);
+    let s = l.map(t, d.default);
     s.forEach(e => u[e.id] = e)
   },
   DISCOVER_GUILDS_FETCH_FAILURE: function(e) {

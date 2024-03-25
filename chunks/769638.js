@@ -13,12 +13,12 @@ var i = l("37983"),
   o = l("313915"),
   d = l("721698"),
   u = l("810047"),
-  p = l("449281"),
-  m = l("915267"),
+  m = l("449281"),
+  p = l("915267"),
   _ = l("201335"),
   f = l("199800"),
   h = l("113241"),
-  C = l("461410");
+  C = l("266159");
 
 function g() {
   let e = (0, c.useStateFromStores)([o.default], () => o.default.appDirectoryIncludesInactiveCollections),
@@ -32,7 +32,7 @@ function g() {
     d.getCollections({
       includesInactive: e
     })
-  }, [e]), t === u.FetchState.ERROR) ? (0, i.jsx)(p.default, {}) : (0, i.jsx)(m.default, {
+  }, [e]), t === u.FetchState.ERROR) ? (0, i.jsx)(m.default, {}) : (0, i.jsx)(p.default, {
     loading: t === u.FetchState.FETCHING,
     children: null == l ? void 0 : l.map((e, t) => {
       let a;

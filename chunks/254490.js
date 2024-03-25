@@ -1,31 +1,31 @@
 "use strict";
 n.r(t), n.d(t, {
   transformNativeFile: function() {
-    return h
+    return E
   },
   makeFile: function() {
-    return g
+    return h
   },
   classifyFile: function() {
-    return E
+    return m
   },
   classifyFileName: function() {
     return p
   },
   sizeString: function() {
-    return v
-  },
-  maxFileSize: function() {
     return S
   },
-  anyFileTooLarge: function() {
+  maxFileSize: function() {
     return T
+  },
+  anyFileTooLarge: function() {
+    return v
   },
   uploadSumTooLarge: function() {
     return I
   },
   getMaxRequestSize: function() {
-    return C
+    return A
   }
 }), n("222007");
 var i = n("477850"),
@@ -37,14 +37,14 @@ var i = n("477850"),
   u = n("305961"),
   d = n("697218"),
   c = n("719923"),
-  f = n("49111"),
-  _ = n("646718");
+  _ = n("49111"),
+  f = n("646718");
 
-function h(e, t) {
-  return e instanceof File ? e : g(e.data, e.filename, t)
+function E(e, t) {
+  return e instanceof File ? e : h(e.data, e.filename, t)
 }
 
-function g(e, t, i) {
+function h(e, t, i) {
   let s = n("637139");
   if (null == t && (t = "unknown", "type" in e)) {
     let n = s.extension(e.type);
@@ -54,7 +54,7 @@ function g(e, t, i) {
     type: i
   })
 }
-let m = [{
+let g = [{
   reType: /^image\/vnd.adobe.photoshop/,
   klass: "photoshop"
 }, {
@@ -98,22 +98,22 @@ let m = [{
   klass: "audio"
 }];
 
-function E(e) {
+function m(e) {
   return p(e.name, e.type)
 }
 
 function p(e, t) {
   var n;
   e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : "";
-  let i = a.find(m, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
+  let i = a.find(g, n => null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e));
   return null != i ? i.klass : "unknown"
 }
 
-function v(e) {
+function S(e) {
   return s.filesize(e)
 }
 
-function S(e) {
+function T(e) {
   let t = d.default.getCurrentUser();
   o.default.trackExposure({
     location: "de18ec_1"
@@ -123,12 +123,12 @@ function S(e) {
   let n = c.default.getUserMaxFileSize(t);
   if (null == e) return n;
   let i = u.default.getGuild(e),
-    s = null != i ? _.BoostedGuildFeatures[i.premiumTier].limits.fileSize : f.MAX_ATTACHMENT_SIZE;
+    s = null != i ? f.BoostedGuildFeatures[i.premiumTier].limits.fileSize : _.MAX_ATTACHMENT_SIZE;
   return Math.max(s, n)
 }
 
-function T(e, t) {
-  let n = S(t);
+function v(e, t) {
+  let n = T(t);
   return Array.from(e).some(e => e.size > n)
 }
 
@@ -137,10 +137,10 @@ function I(e) {
     let t = 0;
     for (let n of e) t += n.size;
     return t
-  }(e) > C()
+  }(e) > A()
 }
 
-function C() {
+function A() {
   let e = d.default.getCurrentUser();
   return null != e && e.isStaff() ? 524288e3 : 524288e3
 }

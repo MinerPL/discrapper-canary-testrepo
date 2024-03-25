@@ -8,52 +8,52 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("730290"),
-  r = s("90915"),
-  i = s("446674"),
-  u = s("971178"),
-  o = s("850068"),
+  r = s("884691"),
+  i = s("730290"),
+  n = s("90915"),
+  l = s("446674"),
+  o = s("971178"),
+  u = s("850068"),
   d = s("901582"),
   c = s("984376"),
   _ = s("737960"),
   E = s("667247"),
-  I = s("493765"),
-  f = s("485328"),
-  T = s("269936"),
-  S = s("967889"),
-  R = s("393414"),
+  T = s("493765"),
+  I = s("485328"),
+  f = s("269936"),
+  R = s("967889"),
+  S = s("393414"),
   m = s("970366"),
-  p = s("592433"),
-  N = s("489749"),
-  g = s("75576"),
-  A = s("49111"),
-  P = s("782340"),
-  C = s("128403");
-let O = (0, T.makeLazy)({
+  N = s("592433"),
+  A = s("489749"),
+  p = s("75576"),
+  C = s("49111"),
+  g = s("782340"),
+  O = s("504659");
+let P = (0, f.makeLazy)({
   createPromise: () => s.el("972119").then(s.bind(s, "972119")),
   webpackId: "972119"
 });
 
 function M(e) {
-  return e < g.PAGE_WIDTH_THRESHOLD ? g.PageSizes.SMALL : g.PageSizes.LARGE
+  return e < p.PAGE_WIDTH_THRESHOLD ? p.PageSizes.SMALL : p.PageSizes.LARGE
 }
-i.default.initialize();
-class h extends n.PureComponent {
+l.default.initialize();
+class h extends r.PureComponent {
   componentDidMount() {
-    (0, u.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
-      e.pathname.startsWith(A.Routes.APPLICATION_STORE) && (0, u.updateLocation)(e)
-    }), this.props.isAuthenticated && (0, o.fetchPaymentSources)(), f.default.disable(), f.default.setLayout(E.APPLICATION_STORE_LAYOUT), f.default.enable(), (0, m.trackAppUIViewed)("application_store")
+    (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, S.getHistory)().listen(e => {
+      e.pathname.startsWith(C.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
+    }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), I.default.disable(), I.default.setLayout(E.APPLICATION_STORE_LAYOUT), I.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }
   componentWillUnmount() {
-    null != this.stopListeningToHistory && this.stopListeningToHistory(), f.default.disable(), f.default.setLayout(I.DEFAULT_LAYOUT), f.default.enable()
+    null != this.stopListeningToHistory && this.stopListeningToHistory(), I.default.disable(), I.default.setLayout(T.DEFAULT_LAYOUT), I.default.enable()
   }
   renderCustomErrorMessage() {
     return (0, a.jsxs)("div", {
       children: [(0, a.jsx)("p", {
-        children: P.default.Messages.ERRORS_STORE_CRASH
+        children: g.default.Messages.ERRORS_STORE_CRASH
       }), (0, a.jsx)("p", {
-        children: P.default.Messages.ERRORS_ACTION_TO_TAKE
+        children: g.default.Messages.ERRORS_ACTION_TO_TAKE
       })]
     })
   }
@@ -62,14 +62,14 @@ class h extends n.PureComponent {
       isAuthenticated: e,
       location: t
     } = this.props, s = e ? (0, a.jsx)("div", {
-      className: C.applicationStore,
+      className: O.applicationStore,
       children: this.renderContent()
-    }) : (0, a.jsx)(O, {
-      className: C.applicationStore,
+    }) : (0, a.jsx)(P, {
+      className: O.applicationStore,
       location: t,
       render: this.renderContent
     });
-    return (0, a.jsx)(S.default, {
+    return (0, a.jsx)(R.default, {
       renderCustomMessage: this.renderCustomErrorMessage,
       children: s
     })
@@ -81,50 +81,50 @@ class h extends n.PureComponent {
           params: {
             skuId: t,
             applicationId: s,
-            slug: n
+            slug: r
           }
         },
-        location: r
+        location: n
       } = e, {
-        width: i
-      } = this.props, u = (0, l.parse)(r.search);
+        width: l
+      } = this.props, o = (0, i.parse)(n.search);
       return (0, a.jsx)(d.default, {
-        page: A.AnalyticsPages.STORE_LISTING,
+        page: C.AnalyticsPages.STORE_LISTING,
         root: !0,
-        children: (0, a.jsx)(N.default, {
+        children: (0, a.jsx)(A.default, {
           skuId: t,
           applicationId: s,
-          slug: n,
-          location: r,
-          storeListingId: u.store_listing_id,
-          pageSize: M(i)
+          slug: r,
+          location: n,
+          storeListingId: o.store_listing_id,
+          pageSize: M(l)
         })
       })
-    }, this.renderContent = () => (0, a.jsxs)(r.Switch, {
-      children: [(0, a.jsx)(r.Route, {
-        path: A.Routes.APPLICATION_STORE,
+    }, this.renderContent = () => (0, a.jsxs)(n.Switch, {
+      children: [(0, a.jsx)(n.Route, {
+        path: C.Routes.APPLICATION_STORE,
         exact: !0,
         render: () => (0, a.jsx)(d.default, {
-          page: A.AnalyticsPages.STORE_DIRECTORY_HOME,
+          page: C.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(p.default, {})
+          children: (0, a.jsx)(N.default, {})
         })
-      }), (0, a.jsx)(r.Route, {
-        path: A.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
+      }), (0, a.jsx)(n.Route, {
+        path: C.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(r.Route, {
-        path: A.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
+      }), (0, a.jsx)(n.Route, {
+        path: C.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(r.Route, {
-        path: A.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
+      }), (0, a.jsx)(n.Route, {
+        path: C.Routes.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(r.Route, {
-        path: A.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
+      }), (0, a.jsx)(n.Route, {
+        path: C.Routes.APPLICATION_STORE_LISTING_SKU(":skuId"),
         render: this.renderStoreListing
-      }), (0, a.jsx)(r.Redirect, {
-        to: A.Routes.APP
+      }), (0, a.jsx)(n.Redirect, {
+        to: C.Routes.APP
       })]
     })
   }
 }
-var L = (0, r.withRouter)((0, c.default)((0, _.default)(h)))
+var L = (0, n.withRouter)((0, c.default)((0, _.default)(h)))

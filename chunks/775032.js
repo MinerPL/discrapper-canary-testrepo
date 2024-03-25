@@ -1,16 +1,16 @@
 "use strict";
-a.r(t), a.d(t, {
+E.r(t), E.d(t, {
   default: function() {
-    return i
+    return n
   }
 });
-var s = a("446674"),
-  l = a("697218");
+var _ = E("446674"),
+  T = E("697218");
 
-function i() {
-  let e = (0, s.useStateFromStores)([l.default], () => {
+function n() {
+  let e = (0, _.useStateFromStores)([T.default], () => {
     var e;
-    return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
+    return null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.nsfwAllowed
   });
   return e
 }

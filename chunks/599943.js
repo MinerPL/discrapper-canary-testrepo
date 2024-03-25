@@ -11,8 +11,8 @@ var u = t("77078"),
   s = t("158534"),
   r = t("812204"),
   i = t("861370"),
-  d = t("308798"),
-  o = t("47006"),
+  o = t("308798"),
+  d = t("47006"),
   c = t("878526"),
   f = t("782340"),
   E = (0, s.default)(function(e) {
@@ -20,7 +20,7 @@ var u = t("77078"),
       channel: n,
       guild: t,
       onSelect: s
-    } = e, r = (0, o.default)(n), E = (0, c.default)(n, t), _ = (0, d.default)(n), I = (0, i.default)({
+    } = e, r = (0, d.default)(n), E = (0, c.default)(n, t), _ = (0, o.default)(n), I = (0, i.default)({
       id: n.id,
       label: f.default.Messages.COPY_ID_CHANNEL
     });

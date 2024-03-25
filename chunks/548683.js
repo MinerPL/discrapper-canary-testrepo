@@ -9,9 +9,9 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  o = n("808388"),
-  u = n("782340"),
-  d = n("635845");
+  u = n("808388"),
+  o = n("782340"),
+  d = n("705542");
 
 function c(e) {
   let {
@@ -38,17 +38,17 @@ function c(e) {
 
 function f(e) {
   let [t, n] = l.useState(), [s, i] = l.useState(), [r, d] = l.useState(!1), [f, h] = l.useState(!1), {
-    enabled: p
-  } = (0, o.useRoleSubscriptionMaxTiersExperiment)(e);
+    enabled: m
+  } = (0, u.useRoleSubscriptionMaxTiersExperiment)(e);
   l.useEffect(() => {
-    p && null != t && null != s ? d(t < s) : d(!1)
-  }, [p, t, s]);
-  let m = l.useMemo(() => r ? (0, a.jsx)(c, {
-    text: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
+    m && null != t && null != s ? d(t < s) : d(!1)
+  }, [m, t, s]);
+  let p = l.useMemo(() => r ? (0, a.jsx)(c, {
+    text: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_LISTINGS_SCROLLABLE_NOTICE,
     hasScrolled: f
   }) : null, [r, f]);
   return {
-    horizontalScrollNotice: m,
+    horizontalScrollNotice: p,
     handleScroll: () => h(!0),
     handleSetScrollerRef: e => {
       var t;

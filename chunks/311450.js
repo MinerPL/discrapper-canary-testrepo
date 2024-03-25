@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("75196");
 
-function i(e) {
+function l(e) {
   let {
     width: t = 24,
     height: n = 24,
-    color: i = "currentColor",
-    foreground: l,
+    color: l = "currentColor",
+    foreground: i,
     ...r
   } = e;
   return (0, a.jsxs)("svg", {
@@ -23,8 +23,8 @@ function i(e) {
     viewBox: "0 0 24 24",
     fill: "none",
     children: [(0, a.jsxs)("g", {
-      className: l,
-      fill: i,
+      className: i,
+      fill: l,
       clipPath: "url(#a)",
       children: [(0, a.jsx)("path", {
         d: "M14.8377 9.86956a2.79875 2.79875 0 0 1 1.9166.70444 2.7981 2.7981 0 0 1 .9278 1.8188.59587.59587 0 0 1 .0459.2753v9.4968H4.51517v-8.2581l9.17563-3.8078a3.2101 3.2101 0 0 1 1.1469-.22944Zm0-1.83512a5.23024 5.23024 0 0 0-1.8351.36703L3.27647 12.4387a.96346.96346 0 0 0-.59641.9176v9.6344c0 .2676.10633.5244.29562.7137.18928.1892.446.2956.71369.2956H19.5631V12.6681c0-.1376-.0458-.2753-.0458-.4129-.1041-1.164-.644-2.2457-1.5118-3.02835a4.63378 4.63378 0 0 0-3.1678-1.19241Z"

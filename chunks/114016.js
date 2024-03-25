@@ -9,13 +9,13 @@ var n = Object.assign || function(e) {
     }
     return e
   },
-  o = function(e) {
+  a = function(e) {
     return e && e.__esModule ? e : {
       default: e
     }
   }(r("884691"));
 
-function a(e, t) {
+function o(e, t) {
   if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
   return t && ("object" == typeof t || "function" == typeof t) ? t : e
 }
@@ -26,8 +26,8 @@ var i = t.hover = function(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
       }(this, i);
-      for (var r, u, l, c = arguments.length, s = Array(c), f = 0; f < c; f++) s[f] = arguments[f];
-      return u = l = a(this, (r = i.__proto__ || Object.getPrototypeOf(i)).call.apply(r, [this].concat(s))), l.state = {
+      for (var r, u, l, s = arguments.length, f = Array(s), c = 0; c < s; c++) f[c] = arguments[c];
+      return u = l = o(this, (r = i.__proto__ || Object.getPrototypeOf(i)).call.apply(r, [this].concat(f))), l.state = {
         hover: !1
       }, l.handleMouseOver = function() {
         return l.setState({
@@ -38,11 +38,11 @@ var i = t.hover = function(e) {
           hover: !1
         })
       }, l.render = function() {
-        return o.default.createElement(t, {
+        return a.default.createElement(t, {
           onMouseOver: l.handleMouseOver,
           onMouseOut: l.handleMouseOut
-        }, o.default.createElement(e, n({}, l.props, l.state)))
-      }, a(l, u)
+        }, a.default.createElement(e, n({}, l.props, l.state)))
+      }, o(l, u)
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -55,6 +55,6 @@ var i = t.hover = function(e) {
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
     }(i, r), i
-  }(o.default.Component)
+  }(a.default.Component)
 };
 t.default = i

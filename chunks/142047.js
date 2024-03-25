@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return O
   }
 });
 var a = n("37983");
 n("884691");
 var i = n("77078"),
-  s = n("272030"),
-  l = n("158534"),
+  l = n("272030"),
+  s = n("158534"),
   u = n("812204"),
   r = n("861370"),
   o = n("20209"),
@@ -18,35 +18,35 @@ var i = n("77078"),
   E = n("178261"),
   _ = n("852275"),
   N = n("963150"),
-  g = n("308798"),
+  S = n("308798"),
   C = n("47006"),
-  A = n("44141"),
-  M = n("531674"),
-  S = n("619436"),
-  T = n("625399"),
-  O = n("339876"),
-  L = n("295189"),
-  h = n("782340");
+  T = n("44141"),
+  g = n("531674"),
+  A = n("619436"),
+  h = n("625399"),
+  M = n("339876"),
+  I = n("295189"),
+  L = n("782340");
 
 function p(e) {
   let {
     channel: t,
     onSelect: n
-  } = e, l = (0, A.default)(t), u = (0, M.default)(t), o = (0, S.default)(t), N = (0, _.default)(t), g = (0, E.default)(t), C = (0, f.default)(t), O = (0, d.default)(t), p = (0, L.default)(t), v = (0, r.default)({
+  } = e, s = (0, T.default)(t), u = (0, g.default)(t), o = (0, A.default)(t), N = (0, _.default)(t), S = (0, E.default)(t), C = (0, f.default)(t), M = (0, d.default)(t), p = (0, I.default)(t), v = (0, r.default)({
     id: t.id,
-    label: h.default.Messages.COPY_ID_CHANNEL
-  }), I = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), U = (0, T.default)(t);
+    label: L.default.Messages.COPY_ID_CHANNEL
+  }), O = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryFavoritesMenu"), m = (0, h.default)(t);
   return (0, a.jsxs)(i.Menu, {
     navId: "channel-context",
-    onClose: s.closeContextMenu,
-    "aria-label": h.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onClose: l.closeContextMenu,
+    "aria-label": L.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     onSelect: n,
     children: [(0, a.jsxs)(i.MenuGroup, {
-      children: [l, O, C]
+      children: [s, M, C]
     }), (0, a.jsxs)(i.MenuGroup, {
-      children: [u, I ? U : o]
+      children: [u, O ? m : o]
     }), (0, a.jsxs)(i.MenuGroup, {
-      children: [N, g]
+      children: [N, S]
     }), (0, a.jsx)(i.MenuGroup, {
       children: p
     }), (0, a.jsx)(i.MenuGroup, {
@@ -59,30 +59,30 @@ function v(e) {
   let {
     channel: t,
     guild: n,
-    onSelect: l
-  } = e, u = (0, A.default)(t), o = (0, M.default)(t), d = (0, S.default)(t), L = (0, _.default)(t), p = (0, E.default)(t), v = (0, C.default)(t), I = (0, f.default)(t), U = (0, N.default)(t, n), m = (0, g.default)(t), R = (0, r.default)({
+    onSelect: s
+  } = e, u = (0, T.default)(t), o = (0, g.default)(t), d = (0, A.default)(t), I = (0, _.default)(t), p = (0, E.default)(t), v = (0, C.default)(t), O = (0, f.default)(t), m = (0, N.default)(t, n), U = (0, S.default)(t), y = (0, r.default)({
     id: t.id,
-    label: h.default.Messages.COPY_ID_CHANNEL
-  }), y = (0, O.default)(t), F = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), G = (0, T.default)(t);
+    label: L.default.Messages.COPY_ID_CHANNEL
+  }), R = (0, M.default)(t), G = (0, c.useShouldUseNewNotificationSystem)("ChannelCategoryNormalMenu"), F = (0, h.default)(t);
   return (0, a.jsxs)(i.Menu, {
     navId: "channel-context",
-    onClose: s.closeContextMenu,
-    "aria-label": h.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onSelect: l,
+    onClose: l.closeContextMenu,
+    "aria-label": L.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onSelect: s,
     children: [(0, a.jsx)(i.MenuGroup, {
       children: u
     }, "mark-as-read"), (0, a.jsxs)(i.MenuGroup, {
-      children: [y, L, p]
+      children: [R, I, p]
     }, "channel-actions"), (0, a.jsxs)(i.MenuGroup, {
-      children: [o, F ? G : d]
+      children: [o, G ? F : d]
     }, "notifications"), (0, a.jsxs)(i.MenuGroup, {
-      children: [v, I, U, m]
+      children: [v, O, m, U]
     }, "admin-actions"), (0, a.jsx)(i.MenuGroup, {
-      children: R
+      children: y
     }, "developer-actions")]
   })
 }
-var I = (0, l.default)(function(e) {
+var O = (0, s.default)(function(e) {
   let t = (0, o.default)();
   return t ? (0, a.jsx)(p, {
     ...e

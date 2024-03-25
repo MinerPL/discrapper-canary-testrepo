@@ -1,29 +1,29 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var n = r("884691");
-let i = 1e3 / 24;
-var u = function(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i,
+let u = 1e3 / 24;
+var o = function(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u,
     r = n.useRef(0),
-    u = n.useRef(),
+    o = n.useRef(),
     l = n.useRef(!0),
-    o = n.useCallback(() => {
+    i = n.useCallback(() => {
       l.current = !1, cancelAnimationFrame(r.current)
     }, []),
     a = n.useCallback(n => {
-      null == u.current && (u.current = n);
-      let i = n - u.current;
-      i >= t && (u.current = n, e(i)), l.current && (r.current = requestAnimationFrame(a))
+      null == o.current && (o.current = n);
+      let u = n - o.current;
+      u >= t && (o.current = n, e(u)), l.current && (r.current = requestAnimationFrame(a))
     }, [e, t]),
     s = n.useCallback(() => {
-      l.current = !0, u.current = void 0, r.current = requestAnimationFrame(a)
+      l.current = !0, o.current = void 0, r.current = requestAnimationFrame(a)
     }, [a]);
   return n.useEffect(() => (r.current = requestAnimationFrame(a), () => cancelAnimationFrame(r.current)), []), {
-    stop: o,
+    stop: i,
     reset: s,
     ticking: l
   }

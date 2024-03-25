@@ -4,27 +4,27 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("37983");
+var a = n("37983");
 n("884691");
-var i = n("446674"),
-  a = n("77078"),
-  u = n("255397"),
-  o = n("191145"),
-  d = n("800762"),
-  r = n("49111"),
-  s = n("782340");
+var u = n("446674"),
+  i = n("77078"),
+  l = n("255397"),
+  d = n("191145"),
+  r = n("800762"),
+  s = n("49111"),
+  o = n("782340");
 
 function c(e, t) {
-  let n = (0, i.useStateFromStores)([o.default], () => e === o.default.getSelectedParticipantId(t), [t, e]),
-    c = (0, i.useStateFromStores)([o.default, d.default], () => {
-      let n = d.default.isInChannel(t, e) && d.default.hasVideo(t),
-        l = o.default.getLayout(t),
-        i = l === r.ChannelLayouts.MINIMUM || l === r.ChannelLayouts.NORMAL;
-      return !n || i
+  let n = (0, u.useStateFromStores)([d.default], () => e === d.default.getSelectedParticipantId(t), [t, e]),
+    c = (0, u.useStateFromStores)([d.default, r.default], () => {
+      let n = r.default.isInChannel(t, e) && r.default.hasVideo(t),
+        a = d.default.getLayout(t),
+        u = a === s.ChannelLayouts.MINIMUM || a === s.ChannelLayouts.NORMAL;
+      return !n || u
     }, [t, e]);
-  return c ? null : (0, l.jsx)(a.MenuItem, {
+  return c ? null : (0, a.jsx)(i.MenuItem, {
     id: "focus-video",
-    label: n ? s.default.Messages.UNFOCUS_PARTICIPANT : s.default.Messages.FOCUS_PARTICIPANT,
-    action: () => u.default.selectParticipant(t, n ? null : e)
+    label: n ? o.default.Messages.UNFOCUS_PARTICIPANT : o.default.Messages.FOCUS_PARTICIPANT,
+    action: () => l.default.selectParticipant(t, n ? null : e)
   })
 }

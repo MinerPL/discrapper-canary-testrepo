@@ -11,9 +11,9 @@ var a, l, s = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
-  o = n("145131"),
-  u = n("600123"),
-  d = n("434018");
+  u = n("145131"),
+  o = n("600123"),
+  d = n("890317");
 
 function c(e) {
   let {
@@ -35,23 +35,23 @@ function c(e) {
       children: null == n ? void 0 : n()
     }), null == r ? void 0 : r(), (0, s.jsxs)("div", {
       className: d.bottomControls,
-      children: [(0, s.jsx)(o.default, {
+      children: [(0, s.jsx)(u.default, {
         grow: 0,
         shrink: 1,
         basis: "50%",
-        align: o.default.Align.CENTER,
+        align: u.default.Align.CENTER,
         children: null == a ? void 0 : a()
-      }), (0, s.jsx)(o.default, {
+      }), (0, s.jsx)(u.default, {
         grow: 1,
-        justify: o.default.Justify.CENTER,
-        align: o.default.Align.CENTER,
+        justify: u.default.Justify.CENTER,
+        align: u.default.Align.CENTER,
         children: null == l ? void 0 : l()
-      }), (0, s.jsx)(o.default, {
+      }), (0, s.jsx)(u.default, {
         grow: 0,
         shrink: 1,
-        justify: o.default.Justify.END,
+        justify: u.default.Justify.END,
         basis: "50%",
-        align: o.default.Align.CENTER,
+        align: u.default.Align.CENTER,
         children: null == i ? void 0 : i()
       })]
     })]
@@ -65,23 +65,23 @@ function f(e) {
     onActive: a,
     onForceIdle: l,
     idle: i,
-    children: o,
+    children: u,
     renderChatButton: f,
     renderChatToasts: h,
-    renderVoiceChannelEffects: p,
-    style: m,
+    renderVoiceChannelEffects: m,
+    style: p,
     ...E
   } = e;
   return (0, s.jsxs)("div", {
     className: r(d.root, {
       [d.idle]: i
     }),
-    style: m,
+    style: p,
     onMouseMove: a,
     onMouseDown: a,
     onMouseLeave: l,
     onDoubleClick: n,
-    children: [o, null != t ? (0, s.jsx)(u.default, {
+    children: [u, null != t ? (0, s.jsx)(o.default, {
       size: "large",
       ...t
     }) : null, (0, s.jsx)(c, {
@@ -89,6 +89,6 @@ function f(e) {
     }), null == f ? void 0 : f({
       className: d.chatButton,
       showingClassName: d.chatButtonShowing
-    }), null == h ? void 0 : h(), null == p ? void 0 : p()]
+    }), null == h ? void 0 : h(), null == m ? void 0 : m()]
   })
 }(a = l || (l = {}))[a.TOP = 0] = "TOP", a[a.BOTTOM = 1] = "BOTTOM"

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return s
   }
 });
 var l = n("446674"),
@@ -9,28 +9,28 @@ var l = n("446674"),
   i = n("998716"),
   a = n("834052"),
   r = n("42203"),
-  s = n("305961");
+  d = n("305961");
 
-function d(e) {
+function s(e) {
   let {
     id: t,
     data: {
       guild: n,
-      instance: d,
+      instance: s,
       speakers: o,
       participantCount: c
     },
     context: f
-  } = e, E = (0, l.useStateFromStores)([s.default, r.default], () => {
+  } = e, E = (0, l.useStateFromStores)([d.default, r.default], () => {
     var e;
-    return s.default.getGuild(null === (e = r.default.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId())
-  }, [t]), v = (0, l.useStateFromStores)([a.default], () => a.default.getStageInstanceByChannel(t), [t]), S = (0, u.useStageParticipants)(t, i.StageChannelParticipantNamedIndex.SPEAKER), g = (0, u.useStageParticipantsCount)(t), h = null != v ? S : o, m = (null != v ? g : c) - h.length;
+    return d.default.getGuild(null === (e = r.default.getChannel(t)) || void 0 === e ? void 0 : e.getGuildId())
+  }, [t]), v = (0, l.useStateFromStores)([a.default], () => a.default.getStageInstanceByChannel(t), [t]), g = (0, u.useStageParticipants)(t, i.StageChannelParticipantNamedIndex.SPEAKER), S = (0, u.useStageParticipantsCount)(t), h = null != v ? g : o, N = (null != v ? S : c) - h.length;
   return {
     channelId: t,
     guild: null != E ? E : n,
-    stage: null != v ? v : d,
+    stage: null != v ? v : s,
     speakers: h,
-    audienceCount: m,
+    audienceCount: N,
     context: f
   }
 }

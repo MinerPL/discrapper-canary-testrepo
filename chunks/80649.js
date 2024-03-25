@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("42203"),
   m = n("247013"),
   p = n("18494"),
-  g = n("211248"),
-  S = n("116320"),
+  S = n("211248"),
+  g = n("116320"),
   N = n("945330"),
   _ = n("138217"),
   T = n("530686"),
@@ -28,8 +28,8 @@ var a = n("37983"),
   A = n("805614"),
   M = n("64318"),
   v = n("49111"),
-  x = n("782340"),
-  R = n("228146");
+  R = n("782340"),
+  x = n("126343");
 let L = {
   offset: {
     left: 4,
@@ -52,8 +52,8 @@ function b(e) {
     badgeState: f,
     closePopout: h
   } = e, m = (0, s.useStateFromStores)([E.default, p.default], () => E.default.getChannel(p.default.getChannelId())), {
-    messages: g,
-    hasMore: S,
+    messages: S,
+    hasMore: g,
     loading: N,
     guildFilter: T,
     roleFilter: C,
@@ -75,11 +75,11 @@ function b(e) {
   l.useEffect(() => {
     d.AttachmentLinkRefreshExperiment.getCurrentConfig({
       location: "mentions"
-    }).enabled && (null == g ? void 0 : g.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
+    }).enabled && (null == S ? void 0 : S.some(c.messageHasExpiredAttachmentUrl)) && (r.default.clearMentions(), O(m, !0))
   }, []), l.useEffect(() => () => {
     r.default.truncateMentions(v.MAX_MENTIONS_PER_FETCH)
   }, []);
-  let D = l.useCallback(() => (0, a.jsx)(M.default, {
+  let F = l.useCallback(() => (0, a.jsx)(M.default, {
     tab: i.InboxTab.MENTIONS,
     setTab: t,
     badgeState: f,
@@ -88,48 +88,48 @@ function b(e) {
   }), [!0, t, f, h]);
   return (0, a.jsx)(a.Fragment, {
     children: (0, a.jsx)(o.default, {
-      className: R.recentMentionsPopout,
-      scrollerClassName: R.scroller,
+      className: x.recentMentionsPopout,
+      scrollerClassName: x.scroller,
       onFetch: () => null,
       onJump: n,
       onCloseMessage: function(e) {
         r.default.deleteRecentMention(e.id)
       },
       channel: m,
-      messages: g,
+      messages: S,
       loading: N,
-      hasMore: S,
+      hasMore: g,
       analyticsName: "Recent Mentions",
       loadMore: function() {
-        let e = null != g && g.length > 0 ? g[g.length - 1].id : null;
+        let e = null != S && S.length > 0 ? S[S.length - 1].id : null;
         O(m, !0, e)
       },
       canCloseAllMessages: !0,
-      renderHeader: D,
-      renderEmptyState: F,
+      renderHeader: F,
+      renderEmptyState: D,
       renderMessage: j,
-      "aria-label": x.default.Messages.RECENT_MENTIONS,
+      "aria-label": R.default.Messages.RECENT_MENTIONS,
       listName: "recents"
     })
   })
 }
 
 function y(e, t) {
-  return [(0, a.jsx)(D, {
+  return [(0, a.jsx)(F, {
     message: e,
     gotoMessage: t
   }, e.id)]
 }
 
 function j(e, t) {
-  return [(0, a.jsx)(D, {
+  return [(0, a.jsx)(F, {
     message: e,
     gotoMessage: t,
     dismissible: !0
   }, e.id)]
 }
 
-function D(e) {
+function F(e) {
   let {
     message: t,
     gotoMessage: n,
@@ -141,14 +141,14 @@ function D(e) {
   let i = m.default.didAgree(s.getGuildId()),
     o = !!s.isNSFW() && !i;
   return (0, a.jsxs)("div", {
-    className: R.container,
+    className: x.container,
     children: [(0, a.jsx)(C.default, {
       channel: s,
       gotoChannel: n,
-      children: null != l ? (0, a.jsx)(g.default, {
-        className: R.closeButton,
-        tooltip: x.default.Messages.CLOSE,
-        color: g.CircleIconButtonColors.TERTIARY,
+      children: null != l ? (0, a.jsx)(S.default, {
+        className: x.closeButton,
+        tooltip: R.default.Messages.CLOSE,
+        color: S.CircleIconButtonColors.TERTIARY,
         icon: (0, a.jsx)(N.default, {
           width: 16,
           height: 16
@@ -156,14 +156,14 @@ function D(e) {
         onClick: () => r.default.deleteRecentMention(t.id)
       }) : null
     }), (0, a.jsxs)("div", {
-      className: R.messageContainer,
+      className: x.messageContainer,
       children: [(0, a.jsx)(T.default, {
-        className: R.jumpButton,
+        className: x.jumpButton,
         onJump: n
       }), (0, a.jsx)(f.default, {
         message: t,
         channel: s,
-        className: R.message,
+        className: x.message,
         hideAccessories: o,
         compact: h.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
@@ -174,10 +174,10 @@ function D(e) {
   })
 }
 
-function F(e) {
+function D(e) {
   return (0, a.jsx)(A.default, {
-    Icon: S.default,
-    header: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
-    tip: x.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
+    Icon: g.default,
+    header: R.default.Messages.RECENT_MENTIONS_EMPTY_STATE_HEADER,
+    tip: R.default.Messages.RECENT_MENTIONS_EMPTY_STATE_TIP
   })
 }

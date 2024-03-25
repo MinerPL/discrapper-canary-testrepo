@@ -9,39 +9,39 @@ var a = A("37983"),
   n = A("414456"),
   r = A.n(n),
   s = A("77078"),
-  o = A("694187"),
-  i = A("818643"),
-  u = A("987772"),
-  d = A("228220"),
+  i = A("694187"),
+  o = A("818643"),
+  d = A("987772"),
+  u = A("228220"),
   c = A("782340"),
-  f = A("610828");
-let C = "custom-image",
-  g = l.forwardRef(function(e, t) {
+  f = A("981476");
+let g = "custom-image",
+  C = l.forwardRef(function(e, t) {
     let {
       selectedImageName: A,
       onChange: l,
       disabled: n = !1,
-      name: o,
-      alt: i,
-      data: u
-    } = e, d = o === A, c = (0, s.useRadioItem)({
-      isSelected: d,
-      label: i
-    }), C = n ? void 0 : () => {
-      l(u, o)
+      name: i,
+      alt: o,
+      data: d
+    } = e, u = i === A, c = (0, s.useRadioItem)({
+      isSelected: u,
+      label: o
+    }), g = n ? void 0 : () => {
+      l(d, i)
     };
     return (0, a.jsx)(s.Clickable, {
       ref: t,
       className: r(f.radioOption, {
-        [f.selected]: d,
+        [f.selected]: u,
         [f.disabled]: n
       }),
-      onClick: C,
+      onClick: g,
       "aria-disabled": n,
       ...c,
       children: (0, a.jsx)("img", {
-        src: u,
-        alt: i,
+        src: d,
+        alt: o,
         className: f.radioOptionImage
       })
     })
@@ -53,32 +53,32 @@ function h(e) {
     image: A,
     imageName: n,
     savedImageName: h,
-    onChange: T,
-    uploadButtonLabel: m = c.default.Messages.UPLOAD_IMAGE,
-    radioGroupAriaLabel: p = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
-    disabled: I = !1
-  } = e, U = n === C, [v, E] = l.useState(U ? A : null), [x, N] = l.useState(null), q = l.useRef(null), O = l.useRef(null);
+    onChange: m,
+    uploadButtonLabel: p = c.default.Messages.UPLOAD_IMAGE,
+    radioGroupAriaLabel: T = c.default.Messages.CUSTOM_IMAGE_SELECTOR_RADIO_GROUP_ARIA_LABEL,
+    disabled: v = !1
+  } = e, U = n === g, [I, E] = l.useState(U ? A : null), [x, N] = l.useState(null), D = l.useRef(null), L = l.useRef(null);
   l.useEffect(() => {
-    h !== C && (E(null), N(null))
+    h !== g && (E(null), N(null))
   }, [h]);
-  let R = null != x ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
+  let q = null != x ? c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE_WITH_FILENAME.format({
       filename: x
     }) : c.default.Messages.CUSTOM_IMAGE_SELECTOR_YOUR_CUSTOM_IMAGE,
-    L = (0, s.useRadioGroup)({
+    O = (0, s.useRadioGroup)({
       orientation: "horizontal",
-      isDisabled: I
+      isDisabled: v
     }),
-    D = () => {
+    R = () => {
       var e;
-      return null === (e = q.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+      return null === (e = D.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     },
     P = () => {
-      n === C && T(t[0].data, t[0].name), E(null), N(null)
+      n === g && m(t[0].data, t[0].name), E(null), N(null)
     };
   return l.useEffect(() => {
     if (U && null != x) {
       var e, t;
-      null === (t = O.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()
+      null === (t = L.current) || void 0 === t || null === (e = t.ref) || void 0 === e || e.focus()
     }
   }, [U, x]), (0, a.jsxs)("div", {
     className: f.imageSelectionContainer,
@@ -86,11 +86,11 @@ function h(e) {
       within: !0,
       children: (0, a.jsxs)("div", {
         className: r(f.uploadButton, {
-          [f.disabled]: I,
-          [f.hidden]: null != v
+          [f.disabled]: v,
+          [f.hidden]: null != I
         }),
-        "aria-disabled": I,
-        children: [(0, a.jsx)(i.default, {
+        "aria-disabled": v,
+        children: [(0, a.jsx)(o.default, {
           width: 16,
           height: 16,
           color: "currentColor",
@@ -99,17 +99,17 @@ function h(e) {
           variant: "text-xxs/normal",
           color: "text-muted",
           "aria-hidden": !0,
-          children: m
-        }), (0, a.jsx)(o.default, {
-          ref: q,
+          children: p
+        }), (0, a.jsx)(i.default, {
+          ref: D,
           tabIndex: 0,
           onChange: (e, t) => {
-            null != t && (N(t.name), E(e), T(e, C))
+            null != t && (N(t.name), E(e), m(e, g))
           },
-          "aria-label": m
+          "aria-label": p
         })]
       })
-    }), null != v && (0, a.jsxs)("div", {
+    }), null != I && (0, a.jsxs)("div", {
       className: f.customImageActionContainer,
       children: [(0, a.jsx)(s.Tooltip, {
         text: c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_IMAGE_TOOLTIP,
@@ -117,11 +117,11 @@ function h(e) {
         children: e => (0, a.jsx)(s.Clickable, {
           ...e,
           className: f.customImageAction,
-          onClick: D,
+          onClick: R,
           "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_EDIT_CUSTOM_IMAGE_ARIA_LABEL.format({
             filename: x
           }),
-          children: (0, a.jsx)(u.default, {
+          children: (0, a.jsx)(d.default, {
             className: f.editIcon
           })
         })
@@ -135,27 +135,27 @@ function h(e) {
           "aria-label": c.default.Messages.CUSTOM_IMAGE_SELECTOR_DELETE_CUSTOM_IMAGE_ARIA_LABEL.format({
             filename: x
           }),
-          children: (0, a.jsx)(d.default, {
+          children: (0, a.jsx)(u.default, {
             className: f.deleteIcon
           })
         })
       })]
     }), (0, a.jsxs)("div", {
-      "aria-label": p,
-      ...L,
+      "aria-label": T,
+      ...O,
       className: f.radioGroup,
-      children: [null != v && (0, a.jsx)(g, {
-        ref: O,
+      children: [null != I && (0, a.jsx)(C, {
+        ref: L,
         selectedImageName: n,
-        onChange: T,
-        disabled: I,
-        name: C,
-        alt: R,
-        data: v
-      }), t.map(e => (0, a.jsx)(g, {
+        onChange: m,
+        disabled: v,
+        name: g,
+        alt: q,
+        data: I
+      }), t.map(e => (0, a.jsx)(C, {
         selectedImageName: n,
-        onChange: T,
-        disabled: I,
+        onChange: m,
+        disabled: v,
         ...e
       }, e.name))]
     })]

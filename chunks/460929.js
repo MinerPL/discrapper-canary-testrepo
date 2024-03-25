@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("249654");
+var a = n("299039");
 
 function s(e) {
   return e.sort((e, t) => a.default.compare(e.lastMessageId, t.lastMessageId)).reverse()

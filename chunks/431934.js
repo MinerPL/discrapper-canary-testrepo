@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var l = n("446674"),
   u = n("913144"),
-  a = n("271938"),
-  d = n("398604"),
-  i = n("49129"),
-  r = n("745049");
+  i = n("271938"),
+  a = n("398604"),
+  r = n("49129"),
+  d = n("745049");
 let s = {},
   o = {};
 
@@ -23,7 +23,7 @@ function c(e) {
   };
   delete n[e], o = n
 }
-class E extends l.default.PersistedStore {
+class f extends l.default.PersistedStore {
   initialize(e) {
     if (null != e) {
       var t, n;
@@ -49,8 +49,8 @@ class E extends l.default.PersistedStore {
     }
   }
 }
-E.displayName = "UpcomingEventNoticesStore", E.persistKey = "UpcomingEventNotices";
-var f = new E(u.default, {
+f.displayName = "UpcomingEventNoticesStore", f.persistKey = "UpcomingEventNotices";
+var E = new f(u.default, {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function(e) {
     let {
       eventId: t
@@ -63,7 +63,7 @@ var f = new E(u.default, {
     let {
       guildScheduledEvent: t
     } = e;
-    (t.status === r.GuildScheduledEventStatus.CANCELED || t.status === r.GuildScheduledEventStatus.COMPLETED) && c(t.id)
+    (t.status === d.GuildScheduledEventStatus.CANCELED || t.status === d.GuildScheduledEventStatus.COMPLETED) && c(t.id)
   },
   GUILD_SCHEDULED_EVENT_DELETE: function(e) {
     let {
@@ -75,15 +75,15 @@ var f = new E(u.default, {
     let {
       userId: t,
       guildEventId: n
-    } = e, l = a.default.getId();
+    } = e, l = i.default.getId();
     if (t !== l) return;
-    let u = d.default.getGuildScheduledEvent(n);
-    if (null == u || u.status !== r.GuildScheduledEventStatus.SCHEDULED) return;
+    let u = a.default.getGuildScheduledEvent(n);
+    if (null == u || u.status !== d.GuildScheduledEventStatus.SCHEDULED) return;
     let c = s[n];
     if (null != c) return;
-    let E = o[n],
-      f = (0, i.getNextShownUpcomingEventNoticeType)(u, void 0, E, !1);
-    if (f === r.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
+    let f = o[n],
+      E = (0, r.getNextShownUpcomingEventNoticeType)(u, void 0, f, !1);
+    if (E === d.UpcomingGuildEventNoticeTypes.NEW_EVENT) {
       let e = {
         ...s
       };

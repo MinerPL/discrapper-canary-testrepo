@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   openReportRaidModal: function() {
-    return u
+    return a
   },
   openSafetyChannelSetupModal: function() {
-    return a
+    return u
   }
 });
 var i = n("37983");
 n("884691");
 var l = n("77078");
 
-function u(e) {
+function a(e) {
   (0, l.openModalLazy)(async () => {
     let {
       default: t
@@ -23,7 +23,7 @@ function u(e) {
   })
 }
 
-function a(e) {
+function u(e) {
   (0, l.openModalLazy)(async () => {
     let {
       default: t

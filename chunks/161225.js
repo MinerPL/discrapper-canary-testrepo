@@ -14,10 +14,10 @@ var l = n("414456"),
   u = n("93332"),
   d = n("304198"),
   c = n("250375"),
-  f = n("49111"),
-  E = n("988268"),
+  E = n("49111"),
+  f = n("988268"),
   _ = n("782340"),
-  T = n("413362");
+  T = n("950912");
 
 function I(e) {
   let {
@@ -68,7 +68,7 @@ function I(e) {
               className: T.username,
               children: _.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
-              type: E.BotTagTypes.SYSTEM_DM,
+              type: f.BotTagTypes.SYSTEM_DM,
               className: T.systemTag
             })]
           }),
@@ -78,7 +78,7 @@ function I(e) {
           className: a(T.messageContent, {
             [T.compact]: n
           }),
-          children: t.type === f.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
+          children: t.type === E.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED ? _.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_SYSTEM_MESSAGE_SHORT.format({
             username: I.nick,
             usernameHook: m,
             time: A

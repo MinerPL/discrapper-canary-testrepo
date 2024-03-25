@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return I
   }
 }), n("222007");
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("819855"),
-  a = n("77078"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("819855"),
+  o = n("77078"),
   u = n("997289"),
   d = n("841098"),
   c = n("812204"),
@@ -17,95 +17,95 @@ var l = n("37983"),
   p = n("626301"),
   m = n("635956"),
   h = n("599110"),
-  E = n("719923"),
-  S = n("23106"),
-  g = n("553372"),
-  C = n("49111"),
-  T = n("646718"),
-  v = n("782340"),
-  y = n("665946"),
-  x = n("350028");
+  x = n("719923"),
+  E = n("23106"),
+  y = n("553372"),
+  g = n("49111"),
+  S = n("646718"),
+  C = n("782340"),
+  T = n("163448"),
+  _ = n("187971");
 
 function I(e) {
   var t;
   let {
-    onClose: r,
+    onClose: a,
     closePopout: I,
-    sound: N,
-    channel: _
-  } = e, A = (0, d.default)(), [R, O] = i.useState(!1), {
+    sound: v,
+    channel: N
+  } = e, A = (0, d.default)(), [O, R] = l.useState(!1), {
     location: M
-  } = (0, u.useAnalyticsContext)(), k = i.useMemo(() => ({
+  } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
     ...M,
-    section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
+    section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER
   }), [M]), {
-    analyticsLocations: b
+    analyticsLocations: L
   } = (0, f.default)(c.default.PREMIUM_UPSELL), {
     previewSound: P
-  } = (0, S.default)(N, null !== (t = null == _ ? void 0 : _.id) && void 0 !== t ? t : null), L = (0, g.PreviewButton)({
-    sound: N,
+  } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
+    sound: v,
     previewSound: P,
     tooltipPosition: "left"
-  }), U = (0, s.isThemeLight)(A) ? n("602291") : n("609708");
-  i.useEffect(() => {
-    h.default.track(C.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
-      type: T.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
+  }), j = (0, r.isThemeLight)(A) ? n("602291") : n("609708");
+  l.useEffect(() => {
+    h.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      type: S.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
       is_external: !0,
       location: {
         ...k,
-        object: C.AnalyticsObjects.SOUNDBOARD_SOUND
+        object: g.AnalyticsObjects.SOUNDBOARD_SOUND
       },
-      location_stack: b,
-      sku_id: E.default.getSkuIdForPremiumType(T.PremiumTypes.TIER_2)
+      location_stack: L,
+      sku_id: x.default.getSkuIdForPremiumType(S.PremiumTypes.TIER_2)
     })
-  }, [b, k]);
-  let j = i.useCallback(() => {
-    h.default.track(C.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-      location_section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
+  }, [L, k]);
+  let U = l.useCallback(() => {
+    h.default.track(g.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+      location_section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER_UPSELL
     }), (0, p.navigateToPremiumMarketingPage)(), I()
   }, [I]);
-  return (0, l.jsxs)("div", {
-    className: o(x.premiumPromo, y.container),
-    children: [(0, l.jsx)(a.Clickable, {
-      className: x.premiumPromoClose,
-      onClick: r,
-      children: v.default.Messages.CLOSE
-    }), (0, l.jsx)("img", {
+  return (0, i.jsxs)("div", {
+    className: s(_.premiumPromo, T.container),
+    children: [(0, i.jsx)(o.Clickable, {
+      className: _.premiumPromoClose,
+      onClick: a,
+      children: C.default.Messages.CLOSE
+    }), (0, i.jsx)("img", {
       "aria-hidden": !0,
       alt: "",
-      className: o(x.premiumPromoImage, x.premiumPromoImageSmaller, y.image),
-      src: U
-    }), (0, l.jsx)(a.Heading, {
+      className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, T.image),
+      src: j
+    }), (0, i.jsx)(o.Heading, {
       variant: "heading-lg/normal",
       color: "header-primary",
-      className: x.premiumPromoTitle,
-      children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
-    }), (0, l.jsx)(a.Text, {
+      className: _.premiumPromoTitle,
+      children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
+    }), (0, i.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: x.premiumPromoDescription,
-      children: v.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
-        onClick: j
+      className: _.premiumPromoDescription,
+      children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
+        onClick: U
       })
-    }), (0, l.jsxs)("div", {
-      className: y.buttonContainer,
-      children: [(0, l.jsx)("div", {
-        className: y.previewButtonContainer,
-        children: L
-      }), (0, l.jsx)(m.default, {
-        subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-        submitting: R,
+    }), (0, i.jsxs)("div", {
+      className: T.buttonContainer,
+      children: [(0, i.jsx)("div", {
+        className: T.previewButtonContainer,
+        children: b
+      }), (0, i.jsx)(m.default, {
+        subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
+        submitting: O,
         premiumModalAnalyticsLocation: {
-          section: C.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
-          object: C.AnalyticsObjects.BUTTON_CTA
+          section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
+          object: g.AnalyticsObjects.BUTTON_CTA
         },
-        size: a.Button.Sizes.SMALL,
-        color: a.Button.Colors.GREEN,
+        size: o.Button.Sizes.SMALL,
+        color: o.Button.Colors.GREEN,
         onClick: () => {
-          O(!0)
+          R(!0)
         },
         onSubscribeModalClose: e => {
-          O(!1), e && r()
+          R(!1), e && a()
         }
       })]
     })]

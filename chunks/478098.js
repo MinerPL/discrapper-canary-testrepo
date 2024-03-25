@@ -1,54 +1,54 @@
-r("70102");
-var n = r("952133"),
-  i = r("645942"),
-  o = r("261497"),
-  a = Math.max,
-  c = Math.min;
-t.exports = function(t, e, r) {
-  var l, u, s, f, p, d, v = 0,
+n("70102");
+var r = n("952133"),
+  a = n("645942"),
+  o = n("261497"),
+  i = Math.max,
+  s = Math.min;
+e.exports = function(e, t, n) {
+  var u, l, c, d, f, p, m = 0,
     h = !1,
-    g = !1,
-    m = !0;
-  if ("function" != typeof t) throw TypeError("Expected a function");
+    y = !1,
+    _ = !0;
+  if ("function" != typeof e) throw TypeError("Expected a function");
 
-  function b(e) {
-    var r = l,
-      n = u;
-    return l = u = void 0, v = e, f = t.apply(n, r)
+  function g(t) {
+    var n = u,
+      r = l;
+    return u = l = void 0, m = t, d = e.apply(r, n)
   }
-  e = o(e) || 0, n(r) && (h = !!r.leading, s = (g = "maxWait" in r) ? a(o(r.maxWait) || 0, e) : s, m = "trailing" in r ? !!r.trailing : m);
+  t = o(t) || 0, r(n) && (h = !!n.leading, c = (y = "maxWait" in n) ? i(o(n.maxWait) || 0, t) : c, _ = "trailing" in n ? !!n.trailing : _);
 
-  function y(t) {
-    var r = t - d,
-      n = t - v;
-    return void 0 === d || r >= e || r < 0 || g && n >= s
+  function v(e) {
+    var n = e - p,
+      r = e - m;
+    return void 0 === p || n >= t || n < 0 || y && r >= c
+  }
+
+  function b() {
+    var e, n, r, o, i = a();
+    if (v(i)) return M(i);
+    f = setTimeout(b, (n = (e = i) - p, r = e - m, o = t - n, y ? s(o, c - r) : o))
+  }
+
+  function M(e) {
+    return (f = void 0, _ && u) ? g(e) : (u = l = void 0, d)
   }
 
   function w() {
-    var t, r, n, o, a = i();
-    if (y(a)) return x(a);
-    p = setTimeout(w, (r = (t = a) - d, n = t - v, o = e - r, g ? c(o, s - n) : o))
-  }
-
-  function x(t) {
-    return (p = void 0, m && l) ? b(t) : (l = u = void 0, f)
-  }
-
-  function O() {
-    var t, r = i(),
-      n = y(r);
-    if (l = arguments, u = this, d = r, n) {
-      if (void 0 === p) {
+    var e, n = a(),
+      r = v(n);
+    if (u = arguments, l = this, p = n, r) {
+      if (void 0 === f) {
         ;
-        return v = t = d, p = setTimeout(w, e), h ? b(t) : f
+        return m = e = p, f = setTimeout(b, t), h ? g(e) : d
       }
-      if (g) return clearTimeout(p), p = setTimeout(w, e), b(d)
+      if (y) return clearTimeout(f), f = setTimeout(b, t), g(p)
     }
-    return void 0 === p && (p = setTimeout(w, e)), f
+    return void 0 === f && (f = setTimeout(b, t)), d
   }
-  return O.cancel = function() {
-    void 0 !== p && clearTimeout(p), v = 0, l = d = u = p = void 0
-  }, O.flush = function() {
-    return void 0 === p ? f : x(i())
-  }, O
+  return w.cancel = function() {
+    void 0 !== f && clearTimeout(f), m = 0, u = p = l = f = void 0
+  }, w.flush = function() {
+    return void 0 === f ? d : M(a())
+  }, w
 }

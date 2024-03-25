@@ -1,11 +1,11 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var n = r("884691");
-let i = e => {
+let u = e => {
   e.effects.forEach(e => {
     let {
       src: t
@@ -13,8 +13,8 @@ let i = e => {
     r.rel = "prefetch", r.href = t, document.body.appendChild(r)
   })
 };
-var u = e => {
+var o = e => {
   n.useEffect(() => {
-    i(e)
+    u(e)
   }, [e])
 }

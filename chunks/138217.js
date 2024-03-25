@@ -102,11 +102,11 @@ function U(e) {
   }), 0 === (C = s).length && (x = !1)
 }
 
-function k() {
+function P() {
   C = [], A = {}, x = !1, b = !1
 }
 
-function P() {
+function k() {
   C = C.filter(e => !S.default.isBlocked(e.author.id))
 }
 
@@ -179,7 +179,7 @@ var B = new G(o.default, {
   },
   SET_RECENT_MENTIONS_FILTER: U,
   CLEAR_MENTIONS: function(e) {
-    k()
+    P()
   },
   TRUNCATE_MENTIONS: function(e) {
     let {
@@ -193,7 +193,7 @@ var B = new G(o.default, {
     if (R.guildFilter !== T.RecentMentionsFilters.THIS_SERVER) return !1;
     x = !1
   },
-  CONNECTION_OPEN: k,
+  CONNECTION_OPEN: P,
   GUILD_DELETE: function(e) {
     let {
       guild: t
@@ -241,8 +241,8 @@ var B = new G(o.default, {
   },
   CHANNEL_DELETE: w,
   THREAD_DELETE: w,
-  RELATIONSHIP_ADD: P,
-  RELATIONSHIP_REMOVE: P,
+  RELATIONSHIP_ADD: k,
+  RELATIONSHIP_REMOVE: k,
   MENTION_MODAL_OPEN: function() {
     O = !0
   },

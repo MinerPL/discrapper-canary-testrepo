@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("745633"),
-  l = n("782340"),
-  r = n("672639"),
+  l = n("745633"),
+  i = n("782340"),
+  r = n("103453"),
   o = e => {
     let {
       hasHub: t
@@ -18,19 +18,19 @@ var s = n("77078"),
       className: r.container,
       children: [(0, a.jsx)("div", {
         className: r.iconContainer,
-        children: (0, a.jsx)(i.default, {
+        children: (0, a.jsx)(l.default, {
           color: s.tokens.colors.WHITE.css
         })
       }), (0, a.jsx)(s.Text, {
         color: "header-primary",
         variant: "text-lg/semibold",
         className: r.header,
-        children: t ? l.default.Messages.HUB_EMAIL_CONNECTION_ADD_HEADER : l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_HEADER
+        children: t ? i.default.Messages.HUB_EMAIL_CONNECTION_ADD_HEADER : i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_HEADER
       }), (0, a.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         className: r.description,
-        children: t ? l.default.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
+        children: t ? i.default.Messages.HUB_EMAIL_CONNECTION_ADD_DESCRIPTION : i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_CARD_DESCRIPTION
       }), (0, a.jsx)("div", {
         className: r.gap
       }), (0, a.jsx)(s.Button, {
@@ -48,7 +48,7 @@ var s = n("77078"),
           variant: "text-sm/semibold",
           className: r.addButton,
           color: "none",
-          children: t ? l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : l.default.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
+          children: t ? i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_ANOTHER : i.default.Messages.HUB_EMAIL_CONNECTION_JOIN_MY_SCHOOOL
         })
       })]
     })

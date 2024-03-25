@@ -9,30 +9,7 @@ n("884691");
 var i = n("77078"),
   s = n("400307"),
   l = n("646718"),
-  u = n("932865");
-
-function a(e) {
-  let {
-    onClick: t,
-    isGift: n,
-    priceOptions: l
-  } = e;
-  return (0, r.jsx)(i.Clickable, {
-    onClick: t,
-    style: {
-      cursor: "pointer"
-    },
-    children: (0, r.jsx)(s.Tier2Card, {
-      className: u.tier2MarketingCard,
-      ctaButton: null,
-      showWumpus: !0,
-      showYearlyPrice: !0,
-      isGift: n,
-      isModal: !0,
-      priceOptions: l
-    })
-  })
-}
+  a = n("932865");
 
 function o(e) {
   let {
@@ -45,8 +22,31 @@ function o(e) {
     style: {
       cursor: "pointer"
     },
+    children: (0, r.jsx)(s.Tier2Card, {
+      className: a.tier2MarketingCard,
+      ctaButton: null,
+      showWumpus: !0,
+      showYearlyPrice: !0,
+      isGift: n,
+      isModal: !0,
+      priceOptions: l
+    })
+  })
+}
+
+function u(e) {
+  let {
+    onClick: t,
+    isGift: n,
+    priceOptions: l
+  } = e;
+  return (0, r.jsx)(i.Clickable, {
+    onClick: t,
+    style: {
+      cursor: "pointer"
+    },
     children: (0, r.jsx)(s.Tier0Card, {
-      className: u.tier0MarketingCard,
+      className: a.tier0MarketingCard,
       ctaButton: null,
       showWumpus: !0,
       showYearlyPrice: !0,
@@ -62,11 +62,11 @@ var d = function(e) {
     priceOptions: i
   } = e;
   return (0, r.jsxs)(r.Fragment, {
-    children: [(0, r.jsx)(a, {
+    children: [(0, r.jsx)(o, {
       onClick: () => t(l.PremiumSubscriptionSKUs.TIER_2),
       isGift: n,
       priceOptions: i
-    }), (0, r.jsx)(o, {
+    }), (0, r.jsx)(u, {
       onClick: () => t(l.PremiumSubscriptionSKUs.TIER_0),
       isGift: n,
       priceOptions: i

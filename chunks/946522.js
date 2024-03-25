@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983");
 n("884691");
-var i = n("77078"),
-  l = n("913144"),
+var l = n("77078"),
+  i = n("913144"),
   r = n("316272"),
   o = n("19009"),
   u = n("774146"),
@@ -16,52 +16,52 @@ var i = n("77078"),
   c = n("894887"),
   f = n("42963"),
   E = n("223170"),
-  _ = n("59811"),
-  h = n("341542"),
+  h = n("59811"),
+  _ = n("341542"),
   C = n("305961"),
-  I = n("162771"),
-  T = n("697218"),
-  S = n("449008"),
-  m = n("773336"),
-  p = n("165926"),
-  A = n("527441"),
-  g = n("56235"),
+  S = n("162771"),
+  I = n("697218"),
+  m = n("449008"),
+  p = n("773336"),
+  T = n("165926"),
+  g = n("527441"),
+  A = n("56235"),
   N = n("218971"),
   R = n("49111"),
   O = n("492397"),
-  L = n("149806");
+  v = n("149806");
 
-function v() {
-  null != a && (0, i.closeModal)(a)
+function L() {
+  null != a && (0, l.closeModal)(a)
 }
 class M extends r.default {
   _initialize() {
-    l.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.subscribe("LOGOUT", v)
+    i.default.subscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.subscribe("LOGOUT", L)
   }
   _terminate() {
-    l.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), l.default.unsubscribe("LOGOUT", v)
+    i.default.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen), i.default.unsubscribe("LOGOUT", L)
   }
   handleConnectionOpen() {
     var e;
-    let t, l = A.default.getType();
-    if (null == l) return;
-    switch (l) {
-      case g.NewUserTypes.INVITE_UNCLAIMED:
-        f.default.flowStart(L.FlowType.INVITE, L.RegistrationSteps.NUF_STARTED);
+    let t, i = g.default.getType();
+    if (null == i) return;
+    switch (i) {
+      case A.NewUserTypes.INVITE_UNCLAIMED:
+        f.default.flowStart(v.FlowType.INVITE, v.RegistrationSteps.NUF_STARTED);
         break;
-      case g.NewUserTypes.ORGANIC_REGISTERED:
-        f.default.flowStart(L.FlowType.ORGANIC, L.RegistrationSteps.NUF_STARTED);
+      case A.NewUserTypes.ORGANIC_REGISTERED:
+        f.default.flowStart(v.FlowType.ORGANIC, v.RegistrationSteps.NUF_STARTED);
         break;
-      case g.NewUserTypes.MARKETING_UNCLAIMED:
-        f.default.flowStart(L.FlowType.ORGANIC_MARKETING, L.RegistrationSteps.NUF_STARTED)
+      case A.NewUserTypes.MARKETING_UNCLAIMED:
+        f.default.flowStart(v.FlowType.ORGANIC_MARKETING, v.RegistrationSteps.NUF_STARTED)
     }
     let r = !1,
-      v = I.default.getGuildId();
-    if (l === g.NewUserTypes.INVITE_UNCLAIMED) {
-      let e = C.default.getGuild(v);
+      L = S.default.getGuildId();
+    if (i === A.NewUserTypes.INVITE_UNCLAIMED) {
+      let e = C.default.getGuild(L);
       (null == e ? void 0 : e.hasVerificationGate()) && (r = !0, (0, E.fetchWelcomeScreen)(e.id))
     }
-    let M = () => 0 === h.default.totalGuilds && !m.isPlatformEmbedded,
+    let M = () => 0 === _.default.totalGuilds && !p.isPlatformEmbedded,
       P = o.userNeedsAgeGate();
     e = [{
       key: "Unified NUF Modal",
@@ -69,33 +69,33 @@ class M extends r.default {
         let t = e => {
           switch (e) {
             case N.NUFSlides.AGE_GATE:
-              f.default.flowStep(L.FlowType.ANY, L.RegistrationSteps.AGE_GATE);
+              f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.AGE_GATE);
               break;
             case N.NUFSlides.CHOOSE_TEMPLATE:
-              f.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.GUILD_TEMPLATES);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.GUILD_TEMPLATES);
               break;
             case N.NUFSlides.CUSTOMIZE_GUILD:
-              f.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.GUILD_CREATE);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.GUILD_CREATE);
               break;
             case N.NUFSlides.CHANNEL_PROMPT:
-              f.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.CHANNEL_PROMPT);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.CHANNEL_PROMPT);
               break;
             case N.NUFSlides.JOIN_GUILD:
-              f.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.JOIN_GUILD);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.JOIN_GUILD);
               break;
             case N.NUFSlides.CREATION_INTENT:
-              f.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.CREATION_INTENT);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.CREATION_INTENT);
               break;
             case N.NUFSlides.COMPLETE:
-              f.default.flowStep(L.FlowType.ANY, L.CreateGuildSteps.SUCCESS);
+              f.default.flowStep(v.FlowType.ANY, v.CreateGuildSteps.SUCCESS);
               break;
             case null:
               break;
             default:
-              S.assertNever(e)
+              m.assertNever(e)
           }
         };
-        a = await (0, i.openModalLazy)(async () => {
+        a = await (0, l.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("439431").then(n.bind(n, "439431"));
@@ -116,34 +116,34 @@ class M extends r.default {
       predicate: () => P && !M() && !O.CONFERENCE_MODE_ENABLED
     }, {
       key: "Claim Account Modal",
-      open: e => u.openClaimAccountModal(m.isPlatformEmbedded, e),
+      open: e => u.openClaimAccountModal(p.isPlatformEmbedded, e),
       predicate: () => {
         var e;
-        return !r && null != T.default.getCurrentUser() && !(null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
+        return !r && null != I.default.getCurrentUser() && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED && !(0, c.isMidjourneyOnboardingFlow)("new_user_manager")
       }
     }, {
       key: "Verification Gate with Claim Account",
-      open: e => (0, d.openMemberVerificationModal)(v, null != e ? e : void 0),
+      open: e => (0, d.openMemberVerificationModal)(L, null != e ? e : void 0),
       predicate: () => {
         var e;
-        return r && !(null === (e = T.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
+        return r && !(null === (e = I.default.getCurrentUser()) || void 0 === e ? void 0 : e.isClaimed()) && !O.CONFERENCE_MODE_ENABLED
       }
     }, {
       key: "Guild Welcome Modal",
-      open: e => (0, i.openModalLazy)(async () => {
+      open: e => (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("900257").then(n.bind(n, "900257"));
         return t => (0, s.jsx)(e, {
           ...t,
-          guildId: v
+          guildId: L
         })
       }, {
         onCloseCallback: e
       }),
-      predicate: () => null != v && null != _.default.get(v) && _.default.get(v) !== _.NO_WELCOME_SCREEN
+      predicate: () => null != L && null != h.default.get(L) && h.default.get(L) !== h.NO_WELCOME_SCREEN
     }], t = () => {
-      p.setNewUserFlowCompleted(), f.default.flowStep(L.FlowType.ANY, L.RegistrationSteps.NUF_COMPLETE, !0)
+      T.setNewUserFlowCompleted(), f.default.flowStep(v.FlowType.ANY, v.RegistrationSteps.NUF_COMPLETE, !0)
     }, [...e].reverse().forEach(e => {
       let n = t;
       t = () => {

@@ -13,8 +13,8 @@ var i = l("37983"),
   o = l("394846"),
   d = l("77078"),
   u = l("304580"),
-  p = l("493765"),
-  m = l("485328"),
+  m = l("493765"),
+  p = l("485328"),
   _ = l("545158"),
   f = l("69927"),
   h = l("592407"),
@@ -31,7 +31,7 @@ var i = l("37983"),
   P = l("49111"),
   y = l("894282"),
   j = l("782340"),
-  O = l("751788");
+  O = l("746874");
 let S = E.default.getArticleURL(P.HelpdeskArticles.APP_DIRECTORY_HEADER_LEARN_MORE);
 
 function L(e) {
@@ -153,7 +153,7 @@ function Y(e) {
       source: T.ApplicationDirectoryEntrypointNames.EXTERNAL
     }), (0, T.setTrackedOpenedFromExternalEntrypoint)(!0))
   }, [u, _]), a.useEffect(() => {
-    if (n) return m.default.setLayout(p.default), m.default.enable(), () => m.default.disable()
+    if (n) return p.default.setLayout(m.default), p.default.enable(), () => p.default.disable()
   }, [n]), a.useEffect(() => {
     v.getCategories()
   }, []), a.useEffect(() => {

@@ -4,28 +4,28 @@ n.r(t), n.d(t, {
     return c.StatusTypes
   },
   useStatusFillColor: function() {
-    return g
+    return h
   },
   getStatusBackdropOpacity: function() {
-    return m
+    return g
   },
   getStatusBackdropColor: function() {
-    return E
+    return m
   },
   getStatusValues: function() {
-    return S
+    return T
   },
   renderStatusMask: function() {
-    return T
+    return v
   },
   AnimatedStatus: function() {
     return I
   },
   getStatusMask: function() {
-    return C
+    return A
   },
   getStatusSize: function() {
-    return A
+    return C
   },
   Status: function() {
     return y
@@ -35,19 +35,19 @@ var i = n("37983"),
   s = n("884691"),
   r = n("414456"),
   a = n.n(r),
-  o = n("907002"),
+  o = n("146606"),
   l = n("819855"),
   u = n("449918"),
   d = n("587974"),
   c = n("49111"),
-  f = n("52904"),
-  _ = n("844254");
-let h = {
+  _ = n("52904"),
+  f = n("143820");
+let E = {
   tension: 600,
   friction: 70
 };
 
-function g(e, t) {
+function h(e, t) {
   let n = (0, u.useColorValue)(function(e) {
       switch (e) {
         case c.StatusTypes.ONLINE:
@@ -69,23 +69,23 @@ function g(e, t) {
   return null != i ? i : void 0
 }
 
-function m(e, t) {
-  return t === f.StatusBackdropColors.WHITE && e === c.StatusTypes.IDLE ? f.StatusBackdropOpacity.HIGH : f.StatusBackdropOpacity.LOW
+function g(e, t) {
+  return t === _.StatusBackdropColors.WHITE && e === c.StatusTypes.IDLE ? _.StatusBackdropOpacity.HIGH : _.StatusBackdropOpacity.LOW
 }
 
-function E(e) {
-  return (0, l.isThemeDark)(e) ? f.StatusBackdropColors.BLACK : f.StatusBackdropColors.WHITE
+function m(e) {
+  return (0, l.isThemeDark)(e) ? _.StatusBackdropColors.BLACK : _.StatusBackdropColors.WHITE
 }
 
 function p(e, t, n, i) {
   return "scale(".concat(t, ") translate(").concat(.5625 * e + i, " ").concat(.75 * e + n, ")")
 }
 
-function v(e, t, n) {
+function S(e, t, n) {
   return "".concat(.5625 * e + n, "px ").concat(.75 * e + t, "px")
 }
 
-function S(e) {
+function T(e) {
   let {
     size: t,
     status: n,
@@ -99,14 +99,14 @@ function S(e) {
     bgY: .25 * t + o,
     bgX: 0,
     bgHeight: t,
-    bgWidth: t * f.TYPING_WIDTH_RATIO,
+    bgWidth: t * _.TYPING_WIDTH_RATIO,
     cutoutX: .5 * t + l,
     cutoutY: .75 * t + o,
     cutoutWidth: 0,
     cutoutHeight: 0,
     cutoutRadius: 0,
     polygonScale: p(t, 0, o, l),
-    polygonOrigin: v(t, o, l),
+    polygonOrigin: S(t, o, l),
     dotY: .75 * t + o,
     dotX: .5 * t + l,
     dotRadius: 0
@@ -114,10 +114,10 @@ function S(e) {
   switch (n) {
     case c.StatusTypes.ONLINE:
       if (i) return {
-        bgRadius: t * f.MOBILE_HEIGHT_RATIO * f.MOBILE_ICON_RADIUS,
+        bgRadius: t * _.MOBILE_HEIGHT_RATIO * _.MOBILE_ICON_RADIUS,
         bgY: 0,
         bgX: l,
-        bgHeight: t * f.MOBILE_HEIGHT_RATIO,
+        bgHeight: t * _.MOBILE_HEIGHT_RATIO,
         bgWidth: t,
         cutoutX: .125 * t + l,
         cutoutY: .25 * t,
@@ -125,37 +125,37 @@ function S(e) {
         cutoutHeight: .75 * t,
         cutoutRadius: 0,
         polygonScale: p(t, 0, o, l),
-        polygonOrigin: v(t, o, l),
+        polygonOrigin: S(t, o, l),
         dotY: 1.25 * t,
         dotX: .5 * t + l,
         dotRadius: .125 * t
       };
       return {
-        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + o, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: 0, polygonScale: p(t, 0, o, l), polygonOrigin: v(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + o, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: 0, polygonScale: p(t, 0, o, l), polygonOrigin: S(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
       };
     case c.StatusTypes.IDLE:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: -(.125 * t) + l, cutoutY: .125 * t + o, cutoutWidth: .75 * t, cutoutHeight: .75 * t, cutoutRadius: .375 * t, polygonScale: p(t, 0, o, l), polygonOrigin: v(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: -(.125 * t) + l, cutoutY: .125 * t + o, cutoutWidth: .75 * t, cutoutHeight: .75 * t, cutoutRadius: .375 * t, polygonScale: p(t, 0, o, l), polygonOrigin: S(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
       };
     case c.StatusTypes.DND:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .125 * t + l, cutoutY: .625 * t + o, cutoutWidth: .75 * t, cutoutHeight: .25 * t, cutoutRadius: .125 * t, polygonScale: p(t, 0, o, l), polygonOrigin: v(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .125 * t + l, cutoutY: .625 * t + o, cutoutWidth: .75 * t, cutoutHeight: .25 * t, cutoutRadius: .125 * t, polygonScale: p(t, 0, o, l), polygonOrigin: S(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
       };
     case c.StatusTypes.STREAMING:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + o, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: .25 * t, polygonScale: p(t, 1, o, l), polygonOrigin: v(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .5 * t + l, cutoutY: .75 * t + o, cutoutWidth: 0, cutoutHeight: 0, cutoutRadius: .25 * t, polygonScale: p(t, 1, o, l), polygonOrigin: S(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
       };
     case c.StatusTypes.INVISIBLE:
     case c.StatusTypes.UNKNOWN:
     case c.StatusTypes.OFFLINE:
     default:
       return {
-        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .25 * t + l, cutoutY: .5 * t + o, cutoutWidth: .5 * t, cutoutHeight: .5 * t, cutoutRadius: .25 * t, polygonScale: p(t, 0, o, l), polygonOrigin: v(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
+        bgRadius: .5 * t, bgY: .25 * t + o, bgX: l, bgHeight: t, bgWidth: t, cutoutX: .25 * t + l, cutoutY: .5 * t + o, cutoutWidth: .5 * t, cutoutHeight: .5 * t, cutoutRadius: .25 * t, polygonScale: p(t, 0, o, l), polygonOrigin: S(t, o, l), dotY: .75 * t + o, dotX: .5 * t + l, dotRadius: 0
       }
   }
 }
 
-function T(e, t, n) {
+function v(e, t, n) {
   var s;
   let {
     bgRadius: r,
@@ -164,15 +164,15 @@ function T(e, t, n) {
     bgHeight: u,
     bgWidth: d,
     cutoutX: c,
-    cutoutY: f,
-    cutoutWidth: _,
-    cutoutHeight: h,
-    cutoutRadius: g,
-    polygonScale: m,
-    polygonOrigin: E,
+    cutoutY: _,
+    cutoutWidth: f,
+    cutoutHeight: E,
+    cutoutRadius: h,
+    polygonScale: g,
+    polygonOrigin: m,
     dotY: p,
-    dotX: v,
-    dotRadius: S
+    dotX: S,
+    dotRadius: T
   } = e;
   return (0, i.jsxs)("mask", {
     id: n,
@@ -186,24 +186,24 @@ function T(e, t, n) {
       fill: "white"
     }), (0, i.jsx)(o.animated.rect, {
       x: c,
-      y: f,
-      width: _,
-      height: h,
-      rx: g,
-      ry: g,
+      y: _,
+      width: f,
+      height: E,
+      rx: h,
+      ry: h,
       fill: "black"
     }), (0, i.jsx)(o.animated.polygon, {
       points: (s = t, "-".concat(.216506 * s, ",-").concat(.25 * s, " ").concat(.216506 * s, ",0 -").concat(.216506 * s, ",").concat(.25 * s)),
       fill: "black",
-      transform: m,
+      transform: g,
       style: {
-        transformOrigin: E
+        transformOrigin: m
       }
     }), (0, i.jsx)(o.animated.circle, {
       fill: "black",
-      cx: v,
+      cx: S,
       cy: p,
-      r: S
+      r: T
     })]
   })
 }
@@ -216,37 +216,37 @@ function I(e) {
     color: l,
     className: u,
     style: d
-  } = e, m = s.useId(), E = t === c.StatusTypes.ONLINE && n, p = s.useMemo(() => S({
+  } = e, g = s.useId(), m = t === c.StatusTypes.ONLINE && n, p = s.useMemo(() => T({
     size: r,
     status: t,
-    isMobile: E
-  }), [r, t, E]), v = (0, o.useSpring)({
-    config: h,
+    isMobile: m
+  }), [r, t, m]), S = (0, o.useSpring)({
+    config: E,
     to: p
-  }), I = g(t, l), [{
-    fill: C
+  }), I = h(t, l), [{
+    fill: A
   }] = (0, o.useSpring)({
-    config: h,
+    config: E,
     fill: I
-  }, [I]), A = Math.ceil(r * f.MOBILE_HEIGHT_RATIO);
+  }, [I]), C = Math.ceil(r * _.MOBILE_HEIGHT_RATIO);
   return (0, i.jsxs)("svg", {
     width: r,
-    height: A,
-    viewBox: "0 0 ".concat(r, " ").concat(A),
-    className: a(_.mask, u),
+    height: C,
+    viewBox: "0 0 ".concat(r, " ").concat(C),
+    className: a(f.mask, u),
     style: d,
-    children: [T(v, r, m), (0, i.jsx)(o.animated.rect, {
+    children: [v(S, r, g), (0, i.jsx)(o.animated.rect, {
       x: 0,
       y: 0,
       width: r,
-      height: A,
-      fill: C,
-      mask: "url(#".concat(m, ")")
+      height: C,
+      fill: A,
+      mask: "url(#".concat(g, ")")
     })]
   })
 }
 
-function C(e, t) {
+function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   if (n) return d.default.Masks.STATUS_TYPING;
   switch (e) {
@@ -267,13 +267,13 @@ function C(e, t) {
   }
 }
 
-function A(e, t, n) {
+function C(e, t, n) {
   let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
   return t === c.StatusTypes.ONLINE && n && !i ? {
     width: e,
-    height: e * f.MOBILE_HEIGHT_RATIO
+    height: e * _.MOBILE_HEIGHT_RATIO
   } : {
-    width: i ? e * f.TYPING_WIDTH_RATIO : e,
+    width: i ? e * _.TYPING_WIDTH_RATIO : e,
     height: e
   }
 }
@@ -286,17 +286,17 @@ function y(e) {
     className: r,
     style: o,
     color: l
-  } = e, u = t === c.StatusTypes.ONLINE && n, f = g(t, l);
+  } = e, u = t === c.StatusTypes.ONLINE && n, _ = h(t, l);
   return (0, i.jsx)(d.default, {
-    mask: C(t, u),
-    className: a(_.mask, r),
+    mask: A(t, u),
+    className: a(f.mask, r),
     style: o,
-    ...A(s, t, u),
+    ...C(s, t, u),
     children: (0, i.jsx)("div", {
       style: {
-        backgroundColor: f
+        backgroundColor: _
       },
-      className: _.status
+      className: f.status
     })
   })
 }

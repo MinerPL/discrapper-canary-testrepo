@@ -1,60 +1,60 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return _
   }
-}), r("222007");
-var a = r("37983"),
-  n = r("884691"),
-  i = r("414456"),
-  l = r.n(i),
-  o = r("448105"),
-  s = r.n(o),
-  c = r("866227"),
-  d = r.n(c),
-  u = r("446674"),
-  h = r("77078"),
-  p = r("913144"),
-  f = r("810567"),
-  m = r("756609"),
-  g = r("228220"),
-  y = r("664336"),
-  b = r("888400"),
-  x = r("398570"),
-  k = r("370492"),
-  v = r("332814"),
-  C = r("928063"),
-  S = r("637171"),
-  j = r("724209"),
-  T = r("782340"),
-  w = r("185187"),
-  N = r("694735");
+}), t("222007");
+var a = t("37983"),
+  n = t("884691"),
+  i = t("414456"),
+  o = t.n(i),
+  l = t("448105"),
+  s = t.n(l),
+  c = t("866227"),
+  d = t.n(c),
+  u = t("446674"),
+  h = t("77078"),
+  p = t("913144"),
+  m = t("810567"),
+  g = t("756609"),
+  f = t("228220"),
+  y = t("664336"),
+  b = t("888400"),
+  x = t("398570"),
+  k = t("370492"),
+  v = t("332814"),
+  C = t("928063"),
+  S = t("637171"),
+  j = t("724209"),
+  T = t("782340"),
+  w = t("731343"),
+  N = t("699412");
 let E = [{
     key: "id",
     cellClassName: w.eventColumn,
     render(e) {
       let {
-        experimentId: t
+        experimentId: r
       } = e;
-      return t
+      return r
     }
   }, {
     key: "bucket",
     cellClassName: w.locationColumn,
     render(e) {
       let {
-        descriptor: t
+        descriptor: r
       } = e;
-      return t.bucket
+      return r.bucket
     }
   }, {
     key: "timestamp",
     cellClassName: w.locationColumn,
     render(e) {
       let {
-        timestamp: t
+        timestamp: r
       } = e;
-      return t.toLocaleString()
+      return r.toLocaleString()
     }
   }],
   L = [{
@@ -63,52 +63,52 @@ let E = [{
     render: e => {
       let {
         loggedTrigger: {
-          experimentId: t,
-          descriptor: r,
+          experimentId: r,
+          descriptor: t,
           exposureType: n,
           excluded: i,
-          timestamp: o,
+          timestamp: l,
           location: s,
           previouslyTracked: c
         }
-      } = e, u = d(o);
+      } = e, u = d(l);
       return (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsxs)(y.default, {
-          className: l(N.headerBar, w.subPanelHeaderBar),
+          className: o(N.headerBar, w.subPanelHeaderBar),
           children: [(0, a.jsx)(y.default.Icon, {
-            icon: m.default,
-            tooltip: t
+            icon: g.default,
+            tooltip: r
           }), (0, a.jsx)(y.default.Title, {
-            children: t
+            children: r
           })]
         }), (0, a.jsxs)(v.Properties, {
           className: w.commonProperties,
           children: [(0, a.jsx)(v.Property, {
             name: "Timestamp (local)",
             children: (0, a.jsx)("time", {
-              dateTime: o.toISOString(),
+              dateTime: l.toISOString(),
               title: (0, b.dateFormat)(u, "LLLL"),
               children: (0, b.calendarFormat)(u)
             })
-          }), "guild" === r.type && (0, a.jsx)(v.Property, {
+          }), "guild" === t.type && (0, a.jsx)(v.Property, {
             name: "Guild ID",
             children: (0, a.jsx)("code", {
-              children: r.guildId
+              children: t.guildId
             })
           }), (0, a.jsx)(v.Property, {
             name: "Bucket",
             children: (0, a.jsx)("code", {
-              children: r.bucket
+              children: t.bucket
             })
           }), (0, a.jsx)(v.Property, {
             name: "Revision",
             children: (0, a.jsx)("code", {
-              children: r.revision
+              children: t.revision
             })
           }), (0, a.jsx)(v.Property, {
             name: "Override",
             children: (0, a.jsx)(v.BooleanPropertyValue, {
-              value: r.override
+              value: t.override
             })
           }), (0, a.jsx)(v.Property, {
             name: "Exposure type",
@@ -137,7 +137,7 @@ let E = [{
   }];
 
 function _() {
-  let [e, t] = n.useState(""), r = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), o = n.useMemo(() => i.filter(t => 0 === e.length || s(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), m = o.find(e => e.key === c), {
+  let [e, r] = n.useState(""), t = n.useRef(null), i = (0, u.useStateFromStoresArray)([x.default], () => x.default.loggedTriggers), l = n.useMemo(() => i.filter(r => 0 === e.length || s(e, r.experimentId)).sort((e, r) => r.timestamp.getTime() - e.timestamp.getTime()), [i, e]), [c, d] = n.useState(void 0), g = l.find(e => e.key === c), {
     TabBar: y,
     renderSelectedTab: b
   } = (0, j.default)({
@@ -149,8 +149,8 @@ function _() {
     })
   }, []);
   return (0, a.jsxs)("div", {
-    ref: r,
-    className: l(N.panel, w.panel),
+    ref: t,
+    className: o(N.panel, w.panel),
     children: [(0, a.jsxs)("div", {
       className: w.toolbar,
       children: [(0, a.jsx)("div", {
@@ -168,31 +168,31 @@ function _() {
         onClick: k.clearAnalyticsLog,
         children: (0, a.jsx)("span", {
           title: T.default.Messages.CLEAR,
-          children: (0, a.jsx)(g.default, {
+          children: (0, a.jsx)(f.default, {
             "aria-label": T.default.Messages.CLEAR
           })
         })
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(m.default, {
         className: w.searchBar,
         query: e,
-        onChange: t,
-        onClear: () => t(""),
+        onChange: r,
+        onClear: () => r(""),
         placeholder: "Search by experiment id"
       })]
     }), (0, a.jsx)(h.ScrollerThin, {
       className: w.tableContainer,
       children: (0, a.jsx)(S.default, {
         columns: E,
-        data: o,
+        data: l,
         selectedRowKey: c,
         onClickRow: d
       })
-    }), null != m && (0, a.jsxs)(C.default, {
+    }), null != g && (0, a.jsxs)(C.default, {
       className: w.subPanel,
       minHeight: 100,
-      initialHeight: null != r.current ? r.current.clientHeight / 2 : 300,
+      initialHeight: null != t.current ? t.current.clientHeight / 2 : 300,
       children: [(0, a.jsx)(y, {}), b({
-        loggedTrigger: m
+        loggedTrigger: g
       })]
     })]
   })

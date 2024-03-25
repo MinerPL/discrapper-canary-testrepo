@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   selectVoiceChannelAdditional: function() {
-    return m
+    return g
   }
 });
 var i = n("551042"),
@@ -13,21 +13,21 @@ var i = n("551042"),
   u = n("172538"),
   d = n("42203"),
   c = n("305961"),
-  f = n("88093"),
-  _ = n("18494"),
-  h = n("800762"),
-  g = n("404008");
-let m = function(e, t) {
-  let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+  _ = n("88093"),
+  f = n("18494"),
+  E = n("800762"),
+  h = n("404008");
+let g = function(e, t) {
+  let g = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    m = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
     p = d.default.getChannel(e),
-    v = h.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
-    S = null != p ? f.default.getCheck(p.guild_id) : null,
-    T = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
-  if (!T) {
-    if (null == S || S.canChat || (0, a.canLurkerListen)(p)) {
-      if (null != p && !v) {
-        let e = (0, g.isChannelFull)(p, h.default, c.default);
+    S = E.default.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+    T = null != p ? _.default.getCheck(p.guild_id) : null,
+    v = null != t && (0, r.shouldShowMembershipVerificationGate)(t);
+  if (!v) {
+    if (null == T || T.canChat || (0, a.canLurkerListen)(p)) {
+      if (null != p && !S) {
+        let e = (0, h.isChannelFull)(p, E.default, c.default);
         if (e && p.isGuildStageVoice() && (0, o.getStageHasMedia)(p.id)) {
           (0, i.openModalLazy)(async () => {
             let {
@@ -44,22 +44,22 @@ let m = function(e, t) {
           (0, i.openModalLazy)(async () => {
             let {
               default: e
-            } = await n.el("440224").then(n.bind(n, "440224"));
+            } = await n.el("242144").then(n.bind(n, "242144"));
             return t => e(t)
           });
           return
         }
       }
-      m && (0, l.applyInitialVideoBackgroundOption)(), (0, u.default)(function() {
+      g && (0, l.applyInitialVideoBackgroundOption)(), (0, u.default)(function() {
         s.default.dispatch({
           type: "VOICE_CHANNEL_SELECT",
           guildId: t,
           channelId: e,
-          currentVoiceChannelId: _.default.getVoiceChannelId(),
-          video: m,
-          stream: E
+          currentVoiceChannelId: f.default.getVoiceChannelId(),
+          video: g,
+          stream: m
         })
-      }, e, E, m)
+      }, e, m, g)
     }
   }
 }

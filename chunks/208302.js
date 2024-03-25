@@ -1,5 +1,5 @@
-var e = u("863398"),
-  r = u("864979")(function(t, n, u) {
-    return n = n.toLowerCase(), t + (u ? e(n) : n)
+var i = n("863398"),
+  a = n("864979")(function(e, t, n) {
+    return t = t.toLowerCase(), e + (n ? i(t) : t)
   });
-t.exports = r
+e.exports = a

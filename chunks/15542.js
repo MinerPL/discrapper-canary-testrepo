@@ -326,12 +326,12 @@ var w = function(t, e, n, r) {
   return !0
 };
 let O = !1,
-  k, S = {};
+  k, E = {};
 
-function E() {
+function S() {
   if (!O) return;
   let t = null == r ? void 0 : r.getStyle();
-  null == t || w(t, S) ? null != k && cancelAnimationFrame(k) : (S = t, null == r || r.invalidate()), k = requestAnimationFrame(E)
+  null == t || w(t, E) ? null != k && cancelAnimationFrame(k) : (E = t, null == r || r.invalidate()), k = requestAnimationFrame(S)
 }
 let P = !1,
   C = {
@@ -342,7 +342,7 @@ let P = !1,
       P = t, null == r || r.invalidate()
     },
     enableAnimationTracking() {
-      O = !0, k = requestAnimationFrame(E)
+      O = !0, k = requestAnimationFrame(S)
     },
     disableAnimationTracking() {
       O = !1, null != k && cancelAnimationFrame(k)
@@ -474,7 +474,7 @@ function F(t) {
   let k = u.useCallback(t => {
       m.hide(), d.current = !1, y(!1), null == b || b(t)
     }, [b, m]),
-    S = u.useCallback(t => {
+    E = u.useCallback(t => {
       let n = null == a ? void 0 : a.current;
       t.currentTarget === t.target ? (d.current = !0, m.showElement(null != n ? n : t.currentTarget, O)) : (y(!0), e && m.showElement(null != n ? n : t.currentTarget, O)), null == _ || _(t)
     }, [a, e, _, m, O]);
@@ -482,6 +482,6 @@ function F(t) {
     ...w,
     className: h(w.className, d.current ? c : void 0, v ? l : void 0),
     onBlur: k,
-    onFocus: S
+    onFocus: E
   }) : g
 }

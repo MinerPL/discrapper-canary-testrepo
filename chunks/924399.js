@@ -14,11 +14,11 @@ var l = n("414456"),
   u = n("305961"),
   d = n("79798"),
   c = n("93332"),
-  f = n("304198"),
-  E = n("250375"),
+  E = n("304198"),
+  f = n("250375"),
   _ = n("988268"),
   T = n("782340"),
-  I = n("413362");
+  I = n("950912");
 
 function m(e) {
   var t;
@@ -33,15 +33,15 @@ function m(e) {
       onMouseEnter: h,
       onMouseLeave: g
     }
-  } = (0, E.useAutomodAvatar)(!0);
+  } = (0, f.useAutomodAvatar)(!0);
   return (0, s.jsx)("div", {
     onMouseEnter: h,
     onMouseLeave: g,
-    children: (0, s.jsx)(f.default, {
+    children: (0, s.jsx)(E.default, {
       className: a(I.mainContainer, {
         [I.compact]: l
       }),
-      iconNode: l ? null : (0, s.jsx)(E.AutomodAvatar, {
+      iconNode: l ? null : (0, s.jsx)(f.AutomodAvatar, {
         src: C
       }),
       iconContainerClassName: I.iconContainer,

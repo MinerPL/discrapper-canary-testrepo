@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return f
   }
 }), n("702976");
 var i = n("446674"),
@@ -21,7 +21,7 @@ function l() {
 let u = l(),
   d = null,
   c = [];
-class f extends i.default.PersistedStore {
+class _ extends i.default.PersistedStore {
   initialize(e) {
     u = {
       ...l(),
@@ -56,10 +56,10 @@ class f extends i.default.PersistedStore {
     return this.getIsEnabled() && null != c.find(t => t.id === e)
   }
 }
-f.displayName = "DeveloperActivityShelfStore", f.persistKey = "DeveloperActivityShelfStore", f.migrations = [e => (delete e.isEnabled, {
+_.displayName = "DeveloperActivityShelfStore", _.persistKey = "DeveloperActivityShelfStore", _.migrations = [e => (delete e.isEnabled, {
   ...e
 })];
-var _ = new f(s.default, {
+var f = new _(s.default, {
   LOGOUT: function() {
     u = l(), d = null, c = []
   },

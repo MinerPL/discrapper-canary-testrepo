@@ -11,8 +11,8 @@ n("222007"), e.exports = function() {
   var r = Object.getOwnPropertySymbols(e);
   if (1 !== r.length || r[0] !== t || !Object.prototype.propertyIsEnumerable.call(e, t)) return !1;
   if ("function" == typeof Object.getOwnPropertyDescriptor) {
-    var i = Object.getOwnPropertyDescriptor(e, t);
-    if (42 !== i.value || !0 !== i.enumerable) return !1
+    var a = Object.getOwnPropertyDescriptor(e, t);
+    if (42 !== a.value || !0 !== a.enumerable) return !1
   }
   return !0
 }

@@ -1,27 +1,27 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var a = n("913144"),
-  i = {
-    show(t, e, n, i, l) {
-      a.default.dispatch({
+var i = n("913144"),
+  s = {
+    show(e, t, n, s, r) {
+      i.default.dispatch({
         type: "NOTICE_SHOW",
         notice: {
-          id: l,
-          type: t,
-          message: e,
+          id: r,
+          type: e,
+          message: t,
           buttonText: n,
-          callback: i
+          callback: s
         }
       })
     },
-    dismiss(t) {
-      a.default.dispatch({
+    dismiss(e) {
+      i.default.dispatch({
         type: "NOTICE_DISMISS",
-        ...t
+        ...e
       })
     }
   }

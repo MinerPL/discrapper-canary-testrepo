@@ -1,6 +1,6 @@
-r("781738");
-var n = r("84927"),
-  i = /^\s+/;
-t.exports = function(t) {
-  return t ? t.slice(0, n(t) + 1).replace(i, "") : t
+n("781738");
+var r = n("84927"),
+  a = /^\s+/;
+e.exports = function(e) {
+  return e ? e.slice(0, r(e) + 1).replace(a, "") : e
 }

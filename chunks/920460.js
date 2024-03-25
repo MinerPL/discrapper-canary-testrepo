@@ -11,10 +11,10 @@ var s = n("77078"),
   r = n("451039"),
   a = n("49111"),
   l = n("782340"),
-  d = n("612827"),
-  C = n("997265");
+  d = n("168072"),
+  u = n("997265");
 
-function u() {
+function C() {
   return (0, o.jsx)("div", {
     className: d.getCrunchyrollApp,
     children: (0, o.jsx)("div", {
@@ -37,14 +37,14 @@ function c(e) {
   } = e;
   return (0, o.jsx)(r.TwoWayLinkSuccess, {
     img: (0, o.jsx)("img", {
-      src: C,
+      src: u,
       width: "224",
       height: "104",
       alt: ""
     }),
     title: l.default.Messages.CONNECT_CRUNCHYROLL_SUCCESS_TITLE,
     body: l.default.Messages.CONNECT_CRUNCHYROLL_SUCCESS_BODY,
-    content: (0, o.jsx)(u, {}),
+    content: (0, o.jsx)(C, {}),
     onClose: t
   })
 }

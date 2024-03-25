@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("42203"),
   _ = a("27618"),
   x = a("449008"),
-  v = a("185014"),
-  S = a("886484"),
+  S = a("185014"),
+  v = a("886484"),
   C = a("60036"),
   N = a("468670"),
   p = a("465519"),
@@ -35,15 +35,15 @@ var l = a("37983"),
   L = a("49111"),
   R = a("724210"),
   b = a("782340"),
-  G = a("520627");
-let O = async () => {
+  G = a("985443");
+let y = async () => {
   let {
     default: e
   } = await a.el("814781").then(a.bind(a, "814781"));
   return e
 };
 
-function y(e) {
+function O(e) {
   let {
     item: t,
     referenceMessageBundles: a,
@@ -108,9 +108,9 @@ var H = n.forwardRef(function(e, t) {
   } = H, {
     messages: B,
     children: P
-  } = w, V = B[0], W = B[B.length - 1], K = W.channel_id, z = (0, r.useStateFromStoresArray)([v.default], () => B.map(e => v.default.getCachedMessage(T, K, e.id)).filter(x.isNotNullish), [T, K, B]), Y = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(K)), Z = (0, f.getChannelIconComponent)(Y, void 0, {
+  } = w, V = B[0], W = B[B.length - 1], K = W.channel_id, z = (0, r.useStateFromStoresArray)([S.default], () => B.map(e => S.default.getCachedMessage(T, K, e.id)).filter(x.isNotNullish), [T, K, B]), Y = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(K)), Z = (0, f.getChannelIconComponent)(Y, void 0, {
     textFocused: !0
-  }), X = (0, f.getChannelIconTooltipText)(Y), J = (0, c.default)(Y), [q, Q] = n.useState(!1), $ = (0, r.useStateFromStores)([_.default], () => null != W && _.default.isBlocked(W.author.id)), ee = (0, d.useListItem)(null !== (s = null === (a = z[z.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== s ? s : H.id), et = H.id, ea = (0, r.useStateFromStores)([g.default], () => g.default.getSidebarState(R.StaticChannelRoute.GUILD_HOME)), el = (0, S.getSidebarMessageId)(ea, Y), en = null != el && V.id === el, {
+  }), X = (0, f.getChannelIconTooltipText)(Y), J = (0, c.default)(Y), [q, Q] = n.useState(!1), $ = (0, r.useStateFromStores)([_.default], () => null != W && _.default.isBlocked(W.author.id)), ee = (0, d.useListItem)(null !== (s = null === (a = z[z.length - 1]) || void 0 === a ? void 0 : a.id) && void 0 !== s ? s : H.id), et = H.id, ea = (0, r.useStateFromStores)([g.default], () => g.default.getSidebarState(R.StaticChannelRoute.GUILD_HOME)), el = (0, v.getSidebarMessageId)(ea, Y), en = null != el && V.id === el, {
     handleItemClick: es,
     handleChannelClick: ei,
     handleCardClick: ed,
@@ -134,11 +134,11 @@ var H = n.forwardRef(function(e, t) {
         }
       })
     }
-  }), eu = (0, r.useStateFromStores)([v.default], () => null == Y ? [] : P.map(e => e.messages.map(e => v.default.getCachedMessage(T, Y.id, e.id)).filter(x.isNotNullish)).filter(e => 0 !== e.length), [T, Y, P], p.areSecondLevelArraysEqual);
+  }), eu = (0, r.useStateFromStores)([S.default], () => null == Y ? [] : P.map(e => e.messages.map(e => S.default.getCachedMessage(T, Y.id, e.id)).filter(x.isNotNullish)).filter(e => 0 !== e.length), [T, Y, P], p.areSecondLevelArraysEqual);
   if (null == Y || null == V || null == W || $) return null;
   let eo = e => {
     e.stopPropagation(), (0, o.openContextMenuLazy)(e, async () => {
-      let e = await O();
+      let e = await y();
       return t => (0, l.jsx)(e, {
         ...t,
         item: H,
@@ -204,7 +204,7 @@ var H = n.forwardRef(function(e, t) {
           animateAvatar: q,
           onMessageClick: er
         })
-      }), (0, l.jsx)(y, {
+      }), (0, l.jsx)(O, {
         item: H,
         channel: Y,
         guildId: T,

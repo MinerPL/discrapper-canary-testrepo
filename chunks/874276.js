@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   getVolume: function() {
-    return s
+    return a
   },
   setVolume: function() {
-    return i
+    return s
   },
   getMuted: function() {
     return r
@@ -13,19 +13,19 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var l = n("95410");
-let a = "MediaPlayerVolume";
+var i = n("95410");
+let l = "MediaPlayerVolume";
 
-function s() {
+function a() {
   var e;
   let {
     volume: t
-  } = null !== (e = l.default.get(a)) && void 0 !== e ? e : {};
+  } = null !== (e = i.default.get(l)) && void 0 !== e ? e : {};
   return "number" != typeof t && (t = 1), t = Math.min(1, Math.max(0, t))
 }
 
-function i(e) {
-  l.default.set(a, {
+function s(e) {
+  i.default.set(l, {
     volume: e,
     muted: r()
   })
@@ -35,13 +35,13 @@ function r() {
   var e;
   let {
     muted: t
-  } = null !== (e = l.default.get(a)) && void 0 !== e ? e : {};
+  } = null !== (e = i.default.get(l)) && void 0 !== e ? e : {};
   return "boolean" != typeof t && (t = !1), t
 }
 
 function o(e) {
-  l.default.set(a, {
-    volume: s(),
+  i.default.set(l, {
+    volume: a(),
     muted: e
   })
 }

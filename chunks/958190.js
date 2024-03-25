@@ -20,17 +20,17 @@ var r = Symbol.for("react.element"),
     enqueueReplaceState: function() {},
     enqueueSetState: function() {}
   },
-  _ = Object.assign,
-  y = {};
+  y = Object.assign,
+  _ = {};
 
 function g(e, t, n) {
-  this.props = e, this.context = t, this.refs = y, this.updater = n || h
+  this.props = e, this.context = t, this.refs = _, this.updater = n || h
 }
 
 function v() {}
 
 function b(e, t, n) {
-  this.props = e, this.context = t, this.refs = y, this.updater = n || h
+  this.props = e, this.context = t, this.refs = _, this.updater = n || h
 }
 g.prototype.isReactComponent = {}, g.prototype.setState = function(e, t) {
   if ("object" != typeof e && "function" != typeof e && null != e) throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");
@@ -39,7 +39,7 @@ g.prototype.isReactComponent = {}, g.prototype.setState = function(e, t) {
   this.updater.enqueueForceUpdate(this, e, "forceUpdate")
 }, v.prototype = g.prototype;
 var M = b.prototype = new v;
-M.constructor = b, _(M, g.prototype), M.isPureReactComponent = !0;
+M.constructor = b, y(M, g.prototype), M.isPureReactComponent = !0;
 var w = Array.isArray,
   k = Object.prototype.hasOwnProperty,
   L = {
@@ -187,7 +187,7 @@ t.Children = {
   ReactCurrentOwner: L
 }, t.cloneElement = function(e, t, n) {
   if (null == e) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + e + ".");
-  var a = _({}, e.props),
+  var a = y({}, e.props),
     o = e.key,
     i = e.ref,
     s = e._owner;

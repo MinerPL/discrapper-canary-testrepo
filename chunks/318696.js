@@ -2,7 +2,7 @@
 let O, T;
 A.r(I), A.d(I, {
   setLocale: function() {
-    return n
+    return i
   },
   updateLocaleLoadingStatus: function() {
     return t
@@ -14,7 +14,7 @@ var _ = A("913144"),
 O = A("792788").default;
 let V = !1;
 
-function n(N) {
+function i(N) {
   T = E.default.loadPromise, O && O.setLocale(N), E.default.setLocale(N), t(N)
 }
 
@@ -27,9 +27,9 @@ function t(N) {
   });
   let A = [E.default.loadPromise];
   O && A.push(O.loadPromise);
-  let n = Promise.all(A);
+  let i = Promise.all(A);
   setImmediate(() => {
-    n.then(() => {
+    i.then(() => {
       _.default.dispatch({
         type: "I18N_LOAD_SUCCESS",
         locale: N

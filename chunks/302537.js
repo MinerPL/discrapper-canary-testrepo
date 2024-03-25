@@ -19,21 +19,21 @@ var t = E("37983"),
   A = E("584369"),
   R = E("915639"),
   l = E("161778"),
-  L = E("471671"),
-  u = E("439932"),
+  u = E("471671"),
+  L = E("439932"),
   C = E("779601"),
-  D = E("69927"),
-  c = E("983689"),
+  c = E("69927"),
+  D = E("983689"),
   d = E("628922"),
   U = E("49111");
-E("313380");
+E("597323");
 let M = new Set([U.Routes.LOGIN, U.Routes.REGISTER]);
 var h = o.memo(function(e) {
   let {
     children: _,
     skipsSettingDefaultPageTitle: n
   } = e;
-  (0, D.usePageTitleManager)({
+  (0, c.usePageTitleManager)({
     skipsSettingDefaultPageTitle: n
   });
   let {
@@ -50,12 +50,12 @@ var h = o.memo(function(e) {
       } = (0, s.useStateFromStoresObject)([l.default, R.default], () => ({
         locale: R.default.locale,
         theme: l.default.theme
-      })), n = (0, s.useStateFromStores)([L.default], () => L.default.isFocused(), []), {
+      })), n = (0, s.useStateFromStores)([u.default], () => u.default.isFocused(), []), {
         reducedMotion: a,
         alwaysShowLinkDecorations: T
       } = o.useContext(S.AccessibilityPreferencesContext), {
         fontScale: O,
-        fontScaleClass: D,
+        fontScaleClass: c,
         keyboardModeEnabled: U,
         saturation: h,
         desaturateUserColors: P,
@@ -80,9 +80,9 @@ var h = o.memo(function(e) {
           useForcedColors: n,
           systemForcedColors: r
         }
-      }), p = (0, i.useLocation)(), y = o.useMemo(() => M.has(p.pathname), [p.pathname]);
-      (0, c.default)(window, y);
-      let g = (0, d.default)(window, __OVERLAY__ || n),
+      }), p = (0, i.useLocation)(), g = o.useMemo(() => M.has(p.pathname), [p.pathname]);
+      (0, D.default)(window, g);
+      let y = (0, d.default)(window, __OVERLAY__ || n),
         B = (0, s.useStateFromStores)([A.default], () => A.default.sidebarWidth),
         f = (0, S.useRedesignIconContext)().enabled;
       return (0, t.jsx)("html", {
@@ -90,7 +90,7 @@ var h = o.memo(function(e) {
         style: "font-size: ".concat(O, "%; --saturation-factor: ").concat(h, "; --devtools-sidebar-width: ").concat(B, "px;"),
         className: r(e, {
           overlay: __OVERLAY__,
-          "mouse-mode": g,
+          "mouse-mode": y,
           "keyboard-mode": U,
           "reduce-motion": a.enabled,
           "full-motion": !a.enabled,
@@ -102,7 +102,7 @@ var h = o.memo(function(e) {
           "disable-forced-colors": !m && "active" === G,
           "enable-forced-colors": m,
           "show-redesigned-icons": f
-        }, (0, u.getThemeClass)(E), (0, C.default)(), D)
+        }, (0, L.getThemeClass)(E), (0, C.default)(), c)
       })
     }(U), function() {
       let [e, _] = o.useState([]);

@@ -11,16 +11,16 @@ var l = n("669491"),
   i = n("228427"),
   r = n("304198"),
   o = n("782340"),
-  u = n("896393");
+  u = n("714478");
 
 function d(e) {
   let {
     message: t,
     compact: n,
     usernameHook: d
-  } = e, c = (0, a.default)(t), f = d(c), E = o.default.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
+  } = e, c = (0, a.default)(t), E = d(c), f = o.default.Messages.SYSTEM_MESSAGE_STAGE_START_HOOK.format({
     username: c.nick,
-    usernameHook: f,
+    usernameHook: E,
     topic: t.content
   });
   return (0, s.jsx)(r.default, {
@@ -33,6 +33,6 @@ function d(e) {
     iconContainerClassName: u.iconContainer,
     timestamp: t.timestamp,
     compact: n,
-    children: E
+    children: f
   })
 }

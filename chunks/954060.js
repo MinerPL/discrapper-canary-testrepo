@@ -19,9 +19,9 @@ function u(e) {
     channel: u,
     playingActivity: d,
     onJoinStream: c,
-    usernameHook: f,
-    compact: E
-  } = e, _ = (0, l.default)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, I = f(_), m = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+    usernameHook: E,
+    compact: f
+  } = e, _ = (0, l.default)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, I = E(_), m = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
     username: _.nick,
     activityName: null != d ? d.name : "unknown",
     onJoinStream: c,
@@ -40,7 +40,7 @@ function u(e) {
       size: r.default.Sizes.SMALL
     }),
     timestamp: n.timestamp,
-    compact: E,
+    compact: f,
     children: m
   })
 }

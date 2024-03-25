@@ -1,5 +1,5 @@
 "use strict";
-l.r(e), l.d(e, {
+n.r(e), n.d(e, {
   playApplication: function() {
     return a.playApplication
   },
@@ -16,46 +16,46 @@ l.r(e), l.d(e, {
     return h
   }
 });
-var n = l("190017"),
-  a = l("596169"),
-  i = l("299285"),
-  s = l("677225"),
-  o = l("9377"),
-  u = l("535974"),
-  c = l("352326"),
-  r = l("551994"),
-  d = l("49111");
+var l = n("190017"),
+  a = n("596169"),
+  i = n("299285"),
+  o = n("677225"),
+  s = n("9377"),
+  r = n("535974"),
+  c = n("352326"),
+  u = n("551994"),
+  d = n("49111");
 
-function p(t, e, l) {
-  let n = i.default.getApplication(t);
-  if (null == n) return;
-  let a = s.default.getTargetBuildId(n.id, e),
-    o = s.default.getTargetManifests(n.id, e);
-  null != a && null != o && null != r.installApplication && (0, r.installApplication)(n, e, a, o, l)
+function p(t, e, n) {
+  let l = i.default.getApplication(t);
+  if (null == l) return;
+  let a = o.default.getTargetBuildId(l.id, e),
+    s = o.default.getTargetManifests(l.id, e);
+  null != a && null != s && null != u.installApplication && (0, u.installApplication)(l, e, a, s, n)
 }
 
 function f(t, e) {
-  let l = i.default.getApplication(t);
-  if (null != l) return n.updateApplication(l, e, s.default.getTargetBuildId(l.id, e), s.default.getTargetManifests(l.id, e))
+  let n = i.default.getApplication(t);
+  if (null != n) return l.updateApplication(n, e, o.default.getTargetBuildId(n.id, e), o.default.getTargetManifests(n.id, e))
 }
 
-function C(t, e, l) {
+function C(t, e, n) {
   let a = i.default.getApplication(t);
-  if (null != a) return n.repairApplication(a, e, l)
+  if (null != a) return l.repairApplication(a, e, n)
 }
 
 function h(t, e) {
-  let l = (0, o.getDefaultLibraryApplicationAction)(t, u.default, c.default),
+  let n = (0, s.getDefaultLibraryApplicationAction)(t, r.default, c.default),
     {
-      analyticsParams: n
+      analyticsParams: l
     } = e;
-  switch (l) {
+  switch (n) {
     case d.LibraryApplicationActions.PLAY:
       return (0, a.playApplication)(t.id, t, {
-        analyticsParams: n
+        analyticsParams: l
       });
     case d.LibraryApplicationActions.INSTALL:
-      return p(t.id, t.branchId, n.source);
+      return p(t.id, t.branchId, l.source);
     case d.LibraryApplicationActions.UPDATE:
       return f(t.id, t.branchId)
   }

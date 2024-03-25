@@ -1,6 +1,6 @@
 "use strict";
 
-function l(e) {
+function i(e) {
   let {
     isInline: t,
     isVoid: n
@@ -9,6 +9,6 @@ function l(e) {
 }
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 })

@@ -5,122 +5,122 @@ n.r(t), n.d(t, {
     return m
   },
   default: function() {
-    return L
+    return M
   }
 }), n("222007");
-var l = n("917351"),
-  a = n.n(l),
-  s = n("335710"),
-  r = n("249654"),
-  u = n("446674"),
-  d = n("913144"),
-  o = n("786742"),
-  c = n("867965"),
-  _ = n("233069"),
-  f = n("42203"),
-  h = n("660478"),
+var s = n("917351"),
+  r = n.n(s),
+  a = n("335710"),
+  o = n("446674"),
+  l = n("913144"),
+  u = n("786742"),
+  d = n("867965"),
+  c = n("233069"),
+  _ = n("42203"),
+  f = n("660478"),
   E = n("449008"),
+  h = n("299039"),
   g = n("755624");
 let m = 25,
-  A = !1,
-  T = !0,
   p = !1,
-  S = !1,
-  M = null,
-  N = s.ThreadSortOrder.LATEST_ACTIVITY,
-  v = [],
-  C = 0;
+  S = !0,
+  T = !1,
+  v = !1,
+  I = null,
+  A = a.ThreadSortOrder.LATEST_ACTIVITY,
+  C = [],
+  y = 0;
 
-function O() {
-  A = !1, T = !0, p = !1, S = !1, M = null, N = s.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, C = 0, v = []
+function N() {
+  p = !1, S = !0, T = !1, v = !1, I = null, A = a.ThreadSortOrder.LATEST_ACTIVITY, i = new Set, y = 0, C = []
 }
 
 function R(e, t) {
-  return t === s.ThreadSortOrder.LATEST_ACTIVITY ? h.default.lastMessageId(e.id) : e.id
+  return t === a.ThreadSortOrder.LATEST_ACTIVITY ? f.default.lastMessageId(e.id) : e.id
 }
 
-function I() {
-  if (null == M) return !1;
-  let e = !p,
-    t = f.default.getChannel(v[v.length - 1]),
-    n = null == t ? null : R(t, N);
-  v = a(f.default.getAllThreadsForParent(M)).filter(e => e.isArchivedThread()).filter(t => {
-    var l;
-    if (0 !== i.size && (null === (l = t.appliedTags) || void 0 === l ? void 0 : l.some(e => i.has(e))) !== !0) return !1;
+function O() {
+  if (null == I) return !1;
+  let e = !T,
+    t = _.default.getChannel(C[C.length - 1]),
+    n = null == t ? null : R(t, A);
+  C = r(_.default.getAllThreadsForParent(I)).filter(e => e.isArchivedThread()).filter(t => {
+    var s;
+    if (0 !== i.size && (null === (s = t.appliedTags) || void 0 === s ? void 0 : s.some(e => i.has(e))) !== !0) return !1;
     if (e || null == n) return !0;
     {
-      let e = null == t ? null : R(t, N);
-      return null != e && r.default.compare(e, n) >= 0
+      let e = null == t ? null : R(t, A);
+      return null != e && h.default.compare(e, n) >= 0
     }
-  }).sort((e, t) => r.default.compare(R(e, N), R(t, N))).map(e => e.id).reverse().value()
+  }).sort((e, t) => h.default.compare(R(e, A), R(t, A))).map(e => e.id).reverse().value()
 }
 
-function b(e) {
-  if (!(v.indexOf(e) >= 0)) return !1;
-  v = v.filter(t => t !== e)
+function D(e) {
+  if (!(C.indexOf(e) >= 0)) return !1;
+  C = C.filter(t => t !== e)
 }
-let D = [];
-class y extends u.default.Store {
+let P = [];
+class L extends o.default.Store {
   initialize() {
-    this.waitFor(f.default, g.default, h.default)
+    this.waitFor(_.default, g.default, f.default)
   }
   get canLoadMore() {
-    return p && !A && !S
+    return T && !p && !v
   }
   get nextOffset() {
-    return C
+    return y
   }
   get isInitialLoad() {
-    return T
+    return S
   }
   isLoading(e, t, n) {
-    return M === e && N === t && (0, E.areSetsEqual)(i, n) ? A : (O(), !1)
+    return I === e && A === t && (0, E.areSetsEqual)(i, n) ? p : (N(), !1)
   }
   getThreads(e, t, n) {
-    return M === e && N === t && (0, E.areSetsEqual)(i, n) ? v : D
+    return I === e && A === t && (0, E.areSetsEqual)(i, n) ? C : P
   }
 }
-y.displayName = "ArchivedThreadsStore";
-var L = new y(d.default, {
-  CONNECTION_OPEN: O,
+L.displayName = "ArchivedThreadsStore";
+var M = new L(l.default, {
+  CONNECTION_OPEN: N,
   THREAD_DELETE: function(e) {
     let {
       channel: t
     } = e;
-    return b(t.id)
+    return D(t.id)
   },
   THREAD_UPDATE: function(e) {
     let {
       channel: t
     } = e;
-    return M === t.parent_id && !!(0, o.isForumPostPinned)(t.id) && void b(t.id)
+    return I === t.parent_id && !!(0, u.isForumPostPinned)(t.id) && void D(t.id)
   },
   CHANNEL_DELETE: function(e) {
-    if (e.channel.id !== M) return !1;
-    O()
+    if (e.channel.id !== I) return !1;
+    N()
   },
   LOAD_ARCHIVED_THREADS: function(e) {
-    (e.channelId !== M || e.sortOrder !== N || !(0, E.areSetsEqual)(e.tagFilter, i)) && O(), M = e.channelId, N = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), A = !0, T = !1
+    (e.channelId !== I || e.sortOrder !== A || !(0, E.areSetsEqual)(e.tagFilter, i)) && N(), I = e.channelId, A = e.sortOrder, i = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter), p = !0, S = !1
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function(e) {
-    if (e.channelId !== M || e.sortOrder !== N || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
-    let t = e.threads.filter(e => _.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
-    v = v.concat(t);
-    let n = f.default.getChannel(M);
-    null != n && n.isForumLikeChannel() && (0, c.trackForumMorePostsLoaded)({
+    if (e.channelId !== I || e.sortOrder !== A || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
+    let t = e.threads.filter(e => c.ALL_CHANNEL_TYPES.has(e.type)).map(e => e.id);
+    C = C.concat(t);
+    let n = _.default.getChannel(I);
+    null != n && n.isForumLikeChannel() && (0, d.trackForumMorePostsLoaded)({
       guildId: n.guild_id,
       channelId: n.id,
-      numArchivedThreads: v.length,
+      numArchivedThreads: C.length,
       hasMoreThreads: e.hasMore,
       filterTagIds: Array.from(e.tagFilter),
       sortOrder: e.sortOrder
-    }), I(), p = e.hasMore, C = e.offset + m, A = !1, T = !1
+    }), O(), T = e.hasMore, y = e.offset + m, p = !1, S = !1
   },
   LOAD_ARCHIVED_THREADS_FAIL: function(e) {
-    if (e.channelId !== M || e.sortOrder !== N || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
-    A = !1, S = !0, T = !1
+    if (e.channelId !== I || e.sortOrder !== A || !(0, E.areSetsEqual)(e.tagFilter, i)) return !1;
+    p = !1, v = !0, S = !1
   },
   RESORT_THREADS: function(e) {
-    return (null == M || null == e.channelId || M === e.channelId) && I()
+    return (null == I || null == e.channelId || I === e.channelId) && O()
   }
 })

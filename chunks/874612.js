@@ -15,7 +15,7 @@ function r(e) {
     message: t,
     usernameHook: r,
     compact: o
-  } = e, u = (0, l.default)(t), d = r(u), c = i.default.getSystemMessageUserJoin(t.id), f = c.format({
+  } = e, u = (0, l.default)(t), d = r(u), c = i.default.getSystemMessageUserJoin(t.id), E = c.format({
     username: u.nick,
     usernameHook: d
   });
@@ -23,6 +23,6 @@ function r(e) {
     icon: n("127067"),
     timestamp: t.timestamp,
     compact: o,
-    children: f
+    children: E
   })
 }

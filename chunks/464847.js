@@ -1,13 +1,13 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return f
   }
 }), s("222007"), s("808653");
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("77078"),
   o = s("701909"),
   d = s("995482"),
@@ -15,89 +15,89 @@ var a = s("37983"),
   c = s("143460"),
   E = s("49111"),
   _ = s("782340"),
-  T = s("493265");
-let I = o.default.getArticleURL(E.HelpdeskArticles.GUILD_AUTOMOD_REGEX);
+  I = s("772806");
+let T = o.default.getArticleURL(E.HelpdeskArticles.GUILD_AUTOMOD_REGEX);
 
 function S(e) {
   let {
     hasErrors: t,
     text: s,
-    errorText: n
+    errorText: l
   } = e;
   return t ? (0, a.jsx)("div", {
-    className: i(T.subtext),
+    className: i(I.subtext),
     children: (0, a.jsx)(r.Text, {
-      className: i(T.errorSpan),
+      className: i(I.errorSpan),
       variant: "text-xs/medium",
       color: "text-danger",
-      children: null != n ? n : _.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_HELP.format({
-        helpArticle: I
+      children: null != l ? l : _.default.Messages.GUILD_AUTOMOD_REGEX_ERROR_HELP.format({
+        helpArticle: T
       })
     })
   }) : (0, a.jsx)(r.Text, {
-    className: T.subtext,
+    className: I.subtext,
     variant: "text-xs/medium",
     color: "text-muted",
     children: s
   })
 }
 
-function N(e) {
+function f(e) {
   var t, s;
   let {
-    rule: l,
+    rule: n,
     onChangeText: r,
     className: o
   } = e, {
     patterns: E,
-    valueError: N,
-    errors: g,
-    validatePatternsChanged: f,
-    validateEditingValueChanged: A
-  } = (0, u.default)(l, r), [L] = n.useState(() => ({
+    valueError: f,
+    errors: m,
+    validatePatternsChanged: N,
+    validateEditingValueChanged: g
+  } = (0, u.default)(n, r), [h] = l.useState(() => ({
     tags: E,
     value: "",
     selections: [],
     isSelecting: !1
-  })), m = n.useMemo(() => g.reduce((e, t) => {
+  })), C = l.useMemo(() => m.reduce((e, t) => {
     let {
       pattern: s,
       message: a,
-      description: n,
-      erroringCharacterLength: l = s.length,
+      description: l,
+      erroringCharacterLength: n = s.length,
       erroringCharacterOffset: i = 0
     } = t, r = E.find(e => e === s);
     return null == r ? e : (e[s] = {
       value: s,
-      message: null != n ? n : a,
-      erroringCharacterLength: l,
+      message: null != l ? l : a,
+      erroringCharacterLength: n,
       erroringCharacterOffset: i
     }, e)
-  }, {}), [g, E]), C = n.useCallback(e => {
-    f(e, E)
-  }, [f, E]), O = n.useCallback(e => {
-    A(e)
-  }, [A]);
+  }, {}), [m, E]), R = l.useCallback(e => {
+    N(e, E)
+  }, [N, E]), x = l.useCallback(e => {
+    g(e)
+  }, [g]);
   return (0, a.jsxs)("div", {
-    className: i(T.keywordsContainer, o),
+    className: i(I.keywordsContainer, o),
     children: [(0, a.jsx)(d.default, {
       placeholder: "^b(a|@)d$\nw(o|0)rd(s|$)",
-      initialValue: L,
-      onChangeTags: C,
-      onChangeNewTagValue: O,
-      tagErrors: m,
+      initialValue: h,
+      onChangeTags: R,
+      onChangeNewTagValue: x,
+      tagErrors: C,
       maxTags: c.MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER
     }), (0, a.jsx)(S, {
       text: _.default.Messages.GUILD_AUTOMOD_REGEX_SUBTEXT.format({
-        helpArticle: I
+        helpArticle: T
       }),
-      hasErrors: g.length > 0 || null != N,
-      errorText: null !== (s = null === (t = g.find(e => {
+      hasErrors: m.length > 0 || null != f,
+      errorText: null !== (s = null === (t = m.find(e => {
         let {
           pattern: t
         } = e;
         return t === u.SCHEMA_ERROR_KEY
-      })) || void 0 === t ? void 0 : t.message) && void 0 !== s ? s : null == N ? void 0 : N.message
+      })) || void 0 === t ? void 0 : t.message) && void 0 !== s ? s : null == f ? void 0 : f.message
     })]
   })
 }

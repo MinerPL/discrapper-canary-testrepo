@@ -6,15 +6,15 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("77078"),
-  l = s("84190"),
+var l = s("77078"),
+  n = s("84190"),
   i = s("782340"),
-  r = s("469735"),
+  r = s("536072"),
   o = e => {
     let {
       guild: t
     } = e;
-    return (0, a.jsxs)(n.FormSection, {
+    return (0, a.jsxs)(l.FormSection, {
       title: i.default.Messages.DISCOVERY,
       tag: "h2",
       children: [(0, a.jsx)("div", {
@@ -23,15 +23,15 @@ var n = s("77078"),
         className: r.discoverySettings,
         children: [(0, a.jsx)("div", {
           className: r.image
-        }), (0, a.jsx)(n.Heading, {
+        }), (0, a.jsx)(l.Heading, {
           className: r.header,
           variant: "heading-xl/semibold",
           children: i.default.Messages.GUILD_SETTINGS_DISCOVERY_DISQUALIFIED
-        }), (0, a.jsx)(n.Text, {
+        }), (0, a.jsx)(l.Text, {
           className: r.description,
           variant: "text-md/normal",
           children: i.default.Messages.GUILD_SETTINGS_DISCOVERY_DISQUALIFIED_DESCRIPTION.format()
-        }), (0, a.jsx)(l.default, {
+        }), (0, a.jsx)(n.default, {
           className: r.checklist,
           guild: t,
           guildId: t.id,

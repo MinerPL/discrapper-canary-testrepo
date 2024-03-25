@@ -12,7 +12,7 @@ var i = n("884691"),
 function a(e, t) {
   let n = (0, l.useStateFromStoresArray)([r.default], () => Object.values(r.default.getUsersForGuildEvent(e, null)), [e]),
     a = (0, l.useStateFromStoresArray)([r.default], () => Object.values(r.default.getUsersForGuildEvent(e, t)), [e, t]),
-    o = (0, i.useMemo)(() => {
+    u = (0, i.useMemo)(() => {
       let e = a.reduce((e, t) => (e[t.user_id] = t, e), {}),
         t = n.filter(t => {
           let n = e[t.user_id];
@@ -21,10 +21,10 @@ function a(e, t) {
         i = a.filter(e => e.response === s.GuildScheduledEventUserResponses.INTERESTED),
         l = new Set,
         r = [],
-        o = e => {
+        u = e => {
           !l.has(e.user_id) && (r.push(e), l.add(e.user_id))
         };
-      return t.forEach(o), i.forEach(o), r
+      return t.forEach(u), i.forEach(u), r
     }, [n, a]);
-  return o
+  return u
 }

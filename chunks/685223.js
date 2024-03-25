@@ -15,15 +15,15 @@ var a = s("37983"),
   c = s("663745"),
   S = s("11056"),
   E = s("222038"),
-  f = s("773336"),
-  T = s("286235"),
-  m = s("50885"),
-  _ = s("425922"),
+  T = s("773336"),
+  f = s("286235"),
+  _ = s("50885"),
+  m = s("425922"),
   g = s("52408"),
   h = s("426353"),
-  I = s("49111"),
-  N = s("782340"),
-  p = s("532921");
+  N = s("49111"),
+  I = s("782340"),
+  p = s("562936");
 
 function C(e) {
   let {
@@ -31,14 +31,14 @@ function C(e) {
     onClose: i,
     ticket: o,
     challenge: c
-  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [C, A] = n.useState(!0), [O, x] = n.useState(h.WebAuthnScreens.INIT), [R, M] = n.useState(""), [v, D] = n.useState(null), L = async () => {
+  } = e, S = (0, u.useUID)(), [E, g] = n.useState(""), [C, A] = n.useState(!0), [O, x] = n.useState(h.WebAuthnScreens.INIT), [R, M] = n.useState(""), [D, v] = n.useState(null), L = async () => {
     let e;
     x(h.WebAuthnScreens.REGISTER);
-    let t = f.isPlatformEmbedded && m.default.supportsFeature(I.NativeFeatures.WEBAUTHN) ? m.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
+    let t = T.isPlatformEmbedded && _.default.supportsFeature(N.NativeFeatures.WEBAUTHN) ? _.default.webAuthnRegister(c) : l.create(JSON.parse(c)).then(e => JSON.stringify(e));
     try {
       e = await t
     } catch (e) {
-      T.default.captureException(e), D(N.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
+      f.default.captureException(e), v(I.default.Messages.MFA_V2_WEBAUTHN_GENERIC_ERROR), x(h.WebAuthnScreens.INIT);
       return
     }
     M(e), x(h.WebAuthnScreens.NAME)
@@ -52,7 +52,7 @@ function C(e) {
       children: [(0, a.jsxs)(r.Heading, {
         id: S,
         variant: "heading-lg/semibold",
-        children: [O === h.WebAuthnScreens.INIT && N.default.Messages.TWO_FA_WEBAUTHN_REGISTER, O === h.WebAuthnScreens.REGISTER && N.default.Messages.TWO_FA_WEBAUTHN_INTERACT, O === h.WebAuthnScreens.NAME && N.default.Messages.TWO_FA_WEBAUTHN_NAME]
+        children: [O === h.WebAuthnScreens.INIT && I.default.Messages.TWO_FA_WEBAUTHN_REGISTER, O === h.WebAuthnScreens.REGISTER && I.default.Messages.TWO_FA_WEBAUTHN_INTERACT, O === h.WebAuthnScreens.NAME && I.default.Messages.TWO_FA_WEBAUTHN_NAME]
       }), (0, a.jsx)(r.ModalCloseButton, {
         onClick: i,
         className: p.modalCloseButton
@@ -71,21 +71,21 @@ function C(e) {
               src: s("473604")
             })
           }), (0, a.jsx)("div", {
-            children: null != v && (0, a.jsx)(r.Text, {
+            children: null != D && (0, a.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "status-danger",
-              children: v
+              children: D
             })
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(r.Text, {
               variant: "text-md/normal",
-              children: N.default.Messages.TWO_FA_WEBAUTHN_REGISTER_INSTRUCTIONS
+              children: I.default.Messages.TWO_FA_WEBAUTHN_REGISTER_INSTRUCTIONS
             })
           })]
         }), (0, a.jsx)(r.ModalFooter, {
           children: (0, a.jsx)(r.Button, {
             onClick: L,
-            children: N.default.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
+            children: I.default.Messages.TWO_FA_WEBAUTHN_REGISTER_CONFIRM
           })
         })]
       }), (0, a.jsxs)(r.Slide, {
@@ -101,7 +101,7 @@ function C(e) {
           }), (0, a.jsx)("div", {
             children: (0, a.jsx)(r.Text, {
               variant: "text-md/normal",
-              children: N.default.Messages.TWO_FA_WEBAUTHN_INTERACT_INSTRUCTIONS
+              children: I.default.Messages.TWO_FA_WEBAUTHN_INTERACT_INSTRUCTIONS
             })
           })]
         }), (0, a.jsx)(r.ModalFooter, {
@@ -113,10 +113,10 @@ function C(e) {
         id: h.WebAuthnScreens.NAME,
         children: (0, a.jsxs)("form", {
           onSubmit: e => {
-            e.preventDefault(), (0, _.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
+            e.preventDefault(), (0, m.finishRegisterWebAuthnCredential)(E, o, R).then(async () => {
               await (0, d.showMFASuccessModal)(!1)
             }).then(() => i()).catch(() => {
-              D(N.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(h.WebAuthnScreens.INIT)
+              v(I.default.Messages.ERROR_OCCURRED_TRY_AGAIN), x(h.WebAuthnScreens.INIT)
             })
           },
           children: [(0, a.jsxs)(r.ModalContent, {
@@ -130,7 +130,7 @@ function C(e) {
             }), (0, a.jsxs)("div", {
               children: [(0, a.jsx)(r.Text, {
                 variant: "text-md/normal",
-                children: N.default.Messages.TWO_FA_WEBAUTHN_NAME_INSTRUCTIONS
+                children: I.default.Messages.TWO_FA_WEBAUTHN_NAME_INSTRUCTIONS
               }), (0, a.jsx)(r.TextInput, {
                 className: p.input,
                 value: E,
@@ -146,14 +146,14 @@ function C(e) {
             children: [(0, a.jsx)(r.Button, {
               type: "submit",
               disabled: C,
-              children: N.default.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
+              children: I.default.Messages.TWO_FA_WEBAUTHN_REGISTER_FINISH
             }), (0, a.jsx)(r.Button, {
               look: r.Button.Looks.LINK,
               color: r.Button.Colors.PRIMARY,
               onClick: () => {
                 x(h.WebAuthnScreens.INIT)
               },
-              children: N.default.Messages.BACK
+              children: I.default.Messages.BACK
             })]
           })]
         })
@@ -170,11 +170,11 @@ function A(e) {
   return (0, a.jsxs)(r.Menu, {
     navId: "webauthn-credential-actions",
     onClose: o.closeContextMenu,
-    "aria-label": N.default.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
+    "aria-label": I.default.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
     onSelect: t,
     children: [(0, a.jsx)(r.MenuItem, {
       id: "webauthn-edit-credential-".concat(n.id),
-      label: N.default.Messages.EDIT,
+      label: I.default.Messages.EDIT,
       action: () => {
         (0, r.openModalLazy)(async () => {
           let {
@@ -188,10 +188,10 @@ function A(e) {
       }
     }), (0, a.jsx)(r.MenuItem, {
       id: "webauthn-delete-credential-".concat(n.id),
-      label: N.default.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
+      label: I.default.Messages.TWO_FA_WEBAUTHN_DELETE_CREDENTIAL,
       color: "danger",
       action: () => {
-        (0, _.deleteWebAuthnCredential)(n)
+        (0, m.deleteWebAuthnCredential)(n)
       }
     })]
   })
@@ -206,16 +206,16 @@ function O() {
     credentials: g.default.getCredentials()
   }));
   n.useEffect(() => {
-    !t && (0, _.fetchWebAuthnCredentials)()
+    !t && (0, m.fetchWebAuthnCredentials)()
   }, [t]);
   let [s, l] = n.useState(!1);
   return (0, a.jsxs)(r.FormSection, {
-    title: N.default.Messages.TWO_FA_WEBAUTHN_TITLE,
+    title: I.default.Messages.TWO_FA_WEBAUTHN_TITLE,
     className: p.settings,
     children: [(0, a.jsx)(r.FormText, {
       type: r.FormText.Types.DESCRIPTION,
       className: p.description,
-      children: N.default.Messages.TWO_FA_WEBAUTHN_DESCRIPTION
+      children: I.default.Messages.TWO_FA_WEBAUTHN_DESCRIPTION
     }), e.length > 0 && (0, a.jsx)("div", {
       className: p.credentialList,
       children: e.map(e => (0, a.jsx)(S.default, {
@@ -238,7 +238,7 @@ function O() {
               credential: e
             }))
           },
-          "aria-label": N.default.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
+          "aria-label": I.default.Messages.TWO_FA_WEBAUTHN_CREDENTIAL_OPTIONS,
           innerClassName: p.credentialOptions,
           children: (0, a.jsx)(c.default, {
             className: p.overflowIcon,
@@ -250,7 +250,7 @@ function O() {
     }), (0, a.jsx)("div", {
       children: (0, a.jsx)(r.Button, {
         onClick: () => {
-          l(!0), (0, _.startRegisterWebAuthnCredential)().then(e => {
+          l(!0), (0, m.startRegisterWebAuthnCredential)().then(e => {
             let {
               ticket: t,
               challenge: s
@@ -261,7 +261,7 @@ function O() {
               challenge: s
             }))
           }).catch(e => {
-            e.message !== N.default.Messages.MFA_V2_CANCELED && T.default.captureException(e)
+            e.message !== I.default.Messages.MFA_V2_CANCELED && f.default.captureException(e)
           }).finally(() => {
             l(!1)
           })
@@ -269,7 +269,7 @@ function O() {
         submitting: s,
         disabled: !E.hasWebAuthn,
         size: r.Button.Sizes.SMALL,
-        children: N.default.Messages.TWO_FA_WEBAUTHN_REGISTER
+        children: I.default.Messages.TWO_FA_WEBAUTHN_REGISTER
       })
     })]
   })

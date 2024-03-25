@@ -13,15 +13,15 @@ var s = n("917351"),
   u = n("390933"),
   d = n("25932"),
   c = n("42203"),
-  f = n("305961"),
-  _ = n("49111");
-let h = {},
-  g = !1;
+  _ = n("305961"),
+  f = n("49111");
+let E = {},
+  h = !1;
 
-function m(e) {
-  return null == h[e] && (h[e] = {
+function g(e) {
+  return null == E[e] && (E[e] = {
     searchId: e,
-    searchType: E(e),
+    searchType: m(e),
     isIndexing: !1,
     isHistoricalIndexing: !1,
     isSearching: !1,
@@ -37,63 +37,63 @@ function m(e) {
     resultsBlocked: 0,
     showBlockedResults: !1,
     showNoResultsAlt: !1
-  }), h[e]
+  }), E[e]
 }
 
-function E(e) {
-  return e === _.SearchTypes.DMS ? _.SearchTypes.DMS : e === _.FAVORITES ? _.SearchTypes.FAVORITES : null != f.default.getGuild(e) ? _.SearchTypes.GUILD : null != c.default.getChannel(e) ? _.SearchTypes.CHANNEL : null
+function m(e) {
+  return e === f.SearchTypes.DMS ? f.SearchTypes.DMS : e === f.FAVORITES ? f.SearchTypes.FAVORITES : null != _.default.getGuild(e) ? f.SearchTypes.GUILD : null != c.default.getChannel(e) ? f.SearchTypes.CHANNEL : null
 }
 
 function p(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
   if (null == e) return n;
-  let i = h[e];
+  let i = E[e];
   return null == i ? n : t(i)
 }
-let v = "SearchStore",
-  S = !1,
-  T = {},
+let S = "SearchStore",
+  T = !1,
+  v = {},
   I = null;
 
-function C(e) {
+function A(e) {
   var t;
   let {
     searchId: n,
     query: i
   } = e;
   if ("string" != typeof i || "" === (i = i.trim())) return;
-  let s = T[n] = null !== (t = T[n]) && void 0 !== t ? t : [],
-    r = s.indexOf(i); - 1 !== r ? (s.splice(r, 1), s.unshift(i)) : null != s[0] && "" !== s[0] && i.startsWith(s[0]) ? s[0] = i : r < 0 && s.unshift(i), s.length > 5 && s.splice(5, s.length), o.default.set(v, {
-    history: T
+  let s = v[n] = null !== (t = v[n]) && void 0 !== t ? t : [],
+    r = s.indexOf(i); - 1 !== r ? (s.splice(r, 1), s.unshift(i)) : null != s[0] && "" !== s[0] && i.startsWith(s[0]) ? s[0] = i : r < 0 && s.unshift(i), s.length > 5 && s.splice(5, s.length), o.default.set(S, {
+    history: v
   })
 }
 
-function A(e) {
+function C(e) {
   let {
     searchId: t
-  } = e, n = h[t];
+  } = e, n = E[t];
   if (null == n) return !1;
-  null != n.searchFetcher && n.searchFetcher.cancel(), delete h[t]
+  null != n.searchFetcher && n.searchFetcher.cancel(), delete E[t]
 }
 
 function y(e) {
   if (e === I) return !1;
-  null != e && null == h[e] && m(e), I = e
+  null != e && null == E[e] && g(e), I = e
 }
 class N extends a.default.Store {
   initialize() {
-    this.waitFor(f.default, c.default);
-    let e = o.default.get(v);
+    this.waitFor(_.default, c.default);
+    let e = o.default.get(S);
     if ((null == e ? void 0 : e.history) != null) {
       var t;
       Object.keys(t = e.history).forEach(e => {
         Array.isArray(t[e]) && (t[e] = t[e].filter(e => "string" == typeof e && e.trim())), (!Array.isArray(t[e]) || 0 === t[e].length) && delete t[e]
-      }), T = t
+      }), v = t
     }
-    S = !!o.default.get("tokenized")
+    T = !!o.default.get("tokenized")
   }
   isOpen() {
-    return g
+    return h
   }
   getCurrentSearchModalType() {
     return i
@@ -106,7 +106,7 @@ class N extends a.default.Store {
     return null != e && (this.isIndexing(e) || this.isSearching(e) || this.hasResults(e))
   }
   isTokenized() {
-    return S
+    return T
   }
   getSearchType(e) {
     return p(null != e ? e : I, e => e.searchType)
@@ -146,7 +146,7 @@ class N extends a.default.Store {
     return p(e, e => e.editorState)
   }
   getHistory(e) {
-    return T[e]
+    return v[e]
   }
   getOffset(e) {
     var t;
@@ -189,22 +189,22 @@ var R = new N(l.default, {
       queryString: i,
       searchId: s,
       query: a
-    } = e, o = m(s);
+    } = e, o = g(s);
     null != o.searchFetcher && (o.searchFetcher.cancel(), o.searchFetcher = null);
-    let f = o.searchType,
-      h = new u.default(s, f, a);
-    o.searchFetcher = h, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, C({
+    let _ = o.searchType,
+      E = new u.default(s, _, a);
+    o.searchFetcher = E, o.isSearching = !0, o.rawResults = null, o.analyticsId = null, o.query = r.omit(a, "type"), o.offset = null !== (n = a.offset) && void 0 !== n ? n : 0, o.showBlockedResults = !1, A({
       type: "SEARCH_ADD_HISTORY",
       searchId: s,
       query: i
     });
-    let g = s === _.FAVORITES ? null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.guild_id : f === _.SearchTypes.GUILD ? s : null;
-    h.fetch(e => {
+    let h = s === f.FAVORITES ? null === (t = c.default.getChannel(s)) || void 0 === t ? void 0 : t.guild_id : _ === f.SearchTypes.GUILD ? s : null;
+    E.fetch(e => {
       var t, n;
       l.default.dispatch({
         type: "SEARCH_FINISH",
         searchId: s,
-        guildId: g,
+        guildId: h,
         analyticsId: e.body.analytics_id,
         totalResults: e.body.total_results,
         messages: e.body.messages,
@@ -223,7 +223,7 @@ var R = new N(l.default, {
       l.default.dispatch({
         type: "SEARCH_FINISH",
         searchId: s,
-        guildId: g,
+        guildId: h,
         messages: [],
         threads: [],
         members: [],
@@ -238,36 +238,36 @@ var R = new N(l.default, {
   SEARCH_INDEXING: function(e) {
     let {
       searchId: t
-    } = e, n = m(t);
+    } = e, n = g(t);
     n.isIndexing = !0, n.isHistoricalIndexing = !0, n.isSearching = !1
   },
   SEARCH_FINISH: function(e) {
     let {
       searchId: t
-    } = e, n = m(t);
+    } = e, n = g(t);
     n.isSearching = !1, n.isIndexing = !1, n.isHistoricalIndexing = e.doingHistoricalIndex || !1, n.searchFetcher = null, n.totalResults = e.totalResults, n.hasError = e.hasError, n.analyticsId = e.analyticsId, n.documentsIndexed = null != e.documentsIndexed ? e.documentsIndexed : 0, n.showNoResultsAlt = .05 > Math.random(), n.rawResults = e.messages;
     let i = n.query;
     null == i && (n.hasError = !0)
   },
-  SEARCH_EDITOR_STATE_CLEAR: A,
+  SEARCH_EDITOR_STATE_CLEAR: C,
   SEARCH_ENSURE_SEARCH_STATE: function(e) {
     let {
       searchId: t
     } = e;
-    null != t && m(t)
+    null != t && g(t)
   },
   SEARCH_EDITOR_STATE_CHANGE: function(e) {
     let {
       searchId: t,
       editorState: n
     } = e;
-    m(t).editorState = n
+    g(t).editorState = n
   },
   SEARCH_SET_SHOW_BLOCKED_RESULTS: function(e) {
     let {
       searchId: t,
       showBlocked: n
-    } = e, i = m(t);
+    } = e, i = g(t);
     i.showBlockedResults = n
   },
   SEARCH_SCREEN_OPEN: function(e) {
@@ -284,7 +284,7 @@ var R = new N(l.default, {
     y(null != t ? t : n)
   },
   CHANNEL_TOGGLE_MEMBERS_SECTION: function() {
-    return null != I && A({
+    return null != I && C({
       searchId: I
     })
   },
@@ -292,8 +292,8 @@ var R = new N(l.default, {
     let {
       searchId: t
     } = e;
-    null == t ? (o.default.remove(v), T = {}) : (delete T[t], o.default.set(v, {
-      history: T
+    null == t ? (o.default.remove(S), v = {}) : (delete v[t], o.default.set(S, {
+      history: v
     }))
   },
   SEARCH_REMOVE_HISTORY: function(e) {
@@ -301,17 +301,17 @@ var R = new N(l.default, {
       searchId: t,
       query: n
     } = e;
-    null != T[t] && (T[t] = T[t].filter(e => e !== n), o.default.set(v, {
-      history: T
+    null != v[t] && (v[t] = v[t].filter(e => e !== n), o.default.set(S, {
+      history: v
     }))
   },
-  SEARCH_ADD_HISTORY: C,
+  SEARCH_ADD_HISTORY: A,
   LOGOUT: function() {
-    o.default.remove(v), T = {}
+    o.default.remove(S), v = {}
   },
   CONNECTION_OPEN: function() {
-    Object.keys(h).forEach(e => {
-      null != h[e] && (h[e].searchType = E(e))
+    Object.keys(E).forEach(e => {
+      null != E[e] && (E[e].searchType = m(e))
     })
   },
   SEARCH_MODAL_OPEN: function(e) {
@@ -319,9 +319,9 @@ var R = new N(l.default, {
       searchId: t,
       searchType: n
     } = e;
-    null != t && (I = t), g = !0, i = n
+    null != t && (I = t), h = !0, i = n
   },
   SEARCH_MODAL_CLOSE: function() {
-    g = !1, i = void 0
+    h = !1, i = void 0
   }
 })

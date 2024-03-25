@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   openModal: function() {
-    return u
+    return s
   }
 });
 var i = n("37983");
@@ -9,7 +9,7 @@ n("884691");
 var r = n("77078"),
   l = n("307785");
 
-function u(e, t) {
+function s(e, t) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r

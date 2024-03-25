@@ -1,7 +1,7 @@
-var e = n("446288"),
-  o = n("775730"),
-  c = n("625301"),
-  u = n("754076");
-t.exports = function(t, r) {
-  return r = e(r, t), null == (t = c(t, r)) || delete t[u(o(r))]
+var n = r("446288"),
+  u = r("775730"),
+  a = r("625301"),
+  o = r("754076");
+e.exports = function(e, t) {
+  return t = n(t, e), null == (e = a(e, t)) || delete e[o(u(t))]
 }

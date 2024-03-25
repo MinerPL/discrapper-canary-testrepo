@@ -8,9 +8,9 @@ var t = E("866227"),
   o = E.n(t),
   n = E("429030"),
   r = E("229353"),
-  i = E.n(r),
-  a = E("444051"),
-  I = E.n(a),
+  a = E.n(r),
+  i = E("444051"),
+  I = E.n(i),
   s = E("657743"),
   T = E.n(s);
 let S = e => ({
@@ -19,7 +19,7 @@ let S = e => ({
     ...e
   }),
   N = new n.default({
-    getMessages: e => "en-US" === e ? S(i) : E("795529")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
+    getMessages: e => "en-US" === e ? S(a) : E("795529")("./messages/".concat(e, ".jsona").replace("./messages/", "./")).then(e => {
       let {
         default: _
       } = e;

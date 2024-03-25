@@ -1,10 +1,10 @@
 "use strict";
-var a, n, l, i;
+var a, l, n, i;
 s.r(t), s.d(t, {
   CreatorMonetizationApplicationState: function() {
     return a
   },
   CreatorMonetizationOnboardingMarketingSection: function() {
-    return n
+    return l
   }
-}), (l = a || (a = {})).OPEN = "OPEN", l.REJECTED = "REJECTED", l.APPROVED = "APPROVED", l.ACTION_REQUIRED = "ACTION_REQUIRED", (i = n || (n = {})).HOW_IT_WORKS = "HOW_IT_WORKS", i.BENEFITS = "BENEFITS", i.OTHER_CREATORS = "OTHER_CREATORS"
+}), (n = a || (a = {})).OPEN = "OPEN", n.REJECTED = "REJECTED", n.APPROVED = "APPROVED", n.ACTION_REQUIRED = "ACTION_REQUIRED", (i = l || (l = {})).HOW_IT_WORKS = "HOW_IT_WORKS", i.BENEFITS = "BENEFITS", i.OTHER_CREATORS = "OTHER_CREATORS"

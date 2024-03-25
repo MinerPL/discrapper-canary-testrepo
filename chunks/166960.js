@@ -1,11 +1,11 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return r
+    return a
   }
 });
-var a = i("862205");
-let s = (0, a.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2023-05_referral_trials_birthday_moment",
   label: "Referral Trials Birthday Moment",
@@ -20,4 +20,4 @@ let s = (0, a.createExperiment)({
     }
   }]
 });
-var r = s
+var a = l

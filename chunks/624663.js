@@ -1,34 +1,34 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return s
+    return n
   }
 }), l("222007");
 var a = l("308503");
-let n = (0, a.default)((e, t) => ({
+let s = (0, a.default)((e, t) => ({
   selectedUserIds: {},
   addUsers: (l, a) => {
-    var n;
+    var s;
     let {
-      selectedUserIds: s
-    } = t(), i = null !== (n = s[l]) && void 0 !== n ? n : new Set, o = new Set([...i, ...a]);
+      selectedUserIds: n
+    } = t(), o = null !== (s = n[l]) && void 0 !== s ? s : new Set, i = new Set([...o, ...a]);
     e({
       selectedUserIds: {
-        ...s,
-        [l]: o
+        ...n,
+        [l]: i
       }
     })
   },
   removeUser: (l, a) => {
     let {
-      selectedUserIds: n
-    } = t(), s = n[l];
-    if (null == s) return;
-    let i = [...s].filter(e => e !== a);
+      selectedUserIds: s
+    } = t(), n = s[l];
+    if (null == n) return;
+    let o = [...n].filter(e => e !== a);
     e({
       selectedUserIds: {
-        ...n,
-        [l]: new Set(i)
+        ...s,
+        [l]: new Set(o)
       }
     })
   },
@@ -45,8 +45,8 @@ let n = (0, a.default)((e, t) => ({
   }
 }));
 
-function s(e) {
-  return n(t => {
+function n(e) {
+  return s(t => {
     var l;
     return {
       selectedUserIds: null !== (l = t.selectedUserIds[e]) && void 0 !== l ? l : new Set,

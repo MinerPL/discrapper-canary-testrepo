@@ -1,20 +1,20 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
 var n = r("37983");
 r("884691");
-var i = r("833395"),
-  u = e => {
+var u = r("833395"),
+  o = e => {
     let {
       profileEffectConfig: t,
       onReady: r
     } = e, {
-      pendingRef: u,
+      pendingRef: o,
       setPending: l
-    } = (0, i.default)(t.effects, r);
+    } = (0, u.default)(t.effects, r);
     return (0, n.jsx)("div", {
       children: t.effects.map(e => (0, n.jsx)("img", {
         src: e.src,
@@ -25,7 +25,7 @@ var i = r("833395"),
           position: "absolute"
         },
         onLoad: () => {
-          l(u.current - 1), u.current = u.current - 1
+          l(o.current - 1), o.current = o.current - 1
         }
       }, e.src))
     })

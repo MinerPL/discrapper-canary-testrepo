@@ -93,9 +93,9 @@ function l(e, t) {
       var v = D.value,
         p = v.endsWith("?") && v.length > 1;
       p && (v = v.slice(0, -1));
-      var C = f(v),
+      var C = d(v),
         g = u[C];
-      (1 === o || !g) && (r ? n.key = C : n.which = d(v)), g && (n[g] = !p || null)
+      (1 === o || !g) && (r ? n.key = C : n.which = f(v)), g && (n[g] = !p || null)
     }
   } catch (e) {
     l = !0, c = e
@@ -120,11 +120,11 @@ function c(e, t) {
   return !0
 }
 
-function d(e) {
-  return o[e = f(e)] || e.toUpperCase().charCodeAt(0)
+function f(e) {
+  return o[e = d(e)] || e.toUpperCase().charCodeAt(0)
 }
 
-function f(e) {
+function d(e) {
   return e = a[e = e.toLowerCase()] || e
 }
 t.default = s, t.isHotkey = s, t.isCodeHotkey = function(e, t) {
@@ -133,4 +133,4 @@ t.default = s, t.isHotkey = s, t.isCodeHotkey = function(e, t) {
   return s(e, {
     byKey: !0
   }, t)
-}, t.parseHotkey = l, t.compareHotkey = c, t.toKeyCode = d, t.toKeyName = f
+}, t.parseHotkey = l, t.compareHotkey = c, t.toKeyCode = f, t.toKeyName = d

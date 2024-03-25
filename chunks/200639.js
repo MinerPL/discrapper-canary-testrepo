@@ -1,26 +1,26 @@
 "use strict";
-t.r(s), t.d(s, {
+s.r(t), s.d(t, {
   default: function() {
     return i
   }
 });
-var r = t("37983");
-t("884691");
-var a = t("469563"),
-  l = t("838048"),
-  n = t("75196"),
+var r = s("37983");
+s("884691");
+var a = s("469563"),
+  n = s("838048"),
+  l = s("75196"),
   i = (0, a.replaceIcon)(function(e) {
     let {
-      width: s = 24,
-      height: t = 24,
+      width: t = 24,
+      height: s = 24,
       color: a = "currentColor",
-      foreground: l,
+      foreground: n,
       ...i
     } = e;
     return (0, r.jsxs)("svg", {
-      ...(0, n.default)(i),
-      width: s,
-      height: t,
+      ...(0, l.default)(i),
+      width: t,
+      height: s,
       viewBox: "0 0 24 24",
       children: [(0, r.jsx)("path", {
         d: "M6.16204 15.0065C6.10859 15.0022 6.05455 15 6 15H4V12C4 7.588 7.589 4 12 4C13.4809 4 14.8691 4.40439 16.0599 5.10859L17.5102 3.65835C15.9292 2.61064 14.0346 2 12 2C6.486 2 2 6.485 2 12V19.1685L6.16204 15.0065Z",
@@ -30,10 +30,10 @@ var a = t("469563"),
         fill: a
       }), (0, r.jsx)("path", {
         d: "M3.20101 23.6243L1.7868 22.2101L21.5858 2.41113L23 3.82535L3.20101 23.6243Z",
-        className: l,
+        className: n,
         fill: a
       })]
     })
-  }, l.HeadphonesSlashIcon, void 0, {
+  }, n.HeadphonesSlashIcon, void 0, {
     size: 24
   })

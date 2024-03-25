@@ -53,13 +53,13 @@ function d(e) {
   } = e, {
     content: d,
     timestamp: c,
-    messageReference: f
-  } = l, E = (0, i.default)(l), _ = t(E), T = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
-    username: E.nick,
+    messageReference: E
+  } = l, f = (0, i.default)(l), _ = t(f), T = o.default.Messages.SYSTEM_MESSAGE_CHANNEL_FOLLOW_ADD_HOOK.format({
+    username: f.nick,
     usernameHook: _,
     webhookName: d,
     webhookNameHook: (e, t) => (0, s.jsx)(u, {
-      messageReference: f,
+      messageReference: E,
       children: e
     }, t)
   });

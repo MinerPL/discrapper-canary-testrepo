@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   ReportRaidExperiment: function() {
-    return l
+    return s
   },
   RaidAlertExperiment: function() {
     return r
   }
 });
 var i = n("862205");
-let l = (0, i.createExperiment)({
+let s = (0, i.createExperiment)({
     kind: "guild",
     id: "2022-07_report_raids",
     label: "Report Raids",

@@ -11,8 +11,8 @@ var s, l, a = n("37983"),
   u = n("77078"),
   d = n("438931"),
   c = n("997289"),
-  f = n("605250"),
-  E = n("393414"),
+  E = n("605250"),
+  f = n("393414"),
   _ = n("677225"),
   T = n("9377"),
   I = n("148813"),
@@ -25,7 +25,7 @@ var s, l, a = n("37983"),
   h = n("159467"),
   g = n("49111"),
   M = n("782340"),
-  O = n("530570");
+  O = n("176153");
 (l = s || (s = {})).PLAY = "play", l.NOW_PLAYING = "now_playing", l.INSTALL = "install", l.UPDATE = "update", l.PAUSED = "paused", l.LOCATE = "locate", l.UNINSTALLING = "uninstalling", l.QUEUED = "queued", l.DOWNLOADING = "downloading", l.UNSUPPORTED_OS = "unsupported_os", l.ADD_TO_LIBRARY = "add_to_library", l.PREORDER_WAIT = "preorder_wait";
 let R = Object.freeze({
     [g.LibraryApplicationActions.PLAY]: "play",
@@ -35,8 +35,8 @@ let R = Object.freeze({
     [g.LibraryApplicationActions.MOVE_UP]: "queued",
     [g.LibraryApplicationActions.RESUME]: "paused"
   }),
-  L = () => [M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
-class v extends i.Component {
+  v = () => [M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
+class L extends i.Component {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -55,7 +55,7 @@ class v extends i.Component {
       case "locate":
         return M.default.Messages.GAME_ACTION_BUTTON_LOCATE;
       case "uninstalling":
-        let t = L();
+        let t = v();
         return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
       case "queued":
         return M.default.Messages.GAME_ACTION_BUTTON_QUEUED;
@@ -195,9 +195,9 @@ class v extends i.Component {
         let {
           libraryApplication: e
         } = this.props;
-        await d.updateFlags(e.id, e.branchId, e.getFlags() & ~g.LibraryApplicationFlags.HIDDEN), (0, E.transitionTo)(g.Routes.APPLICATION_LIBRARY)
+        await d.updateFlags(e.id, e.branchId, e.getFlags() & ~g.LibraryApplicationFlags.HIDDEN), (0, f.transitionTo)(g.Routes.APPLICATION_LIBRARY)
       } catch (e) {
-        new(0, f.default)("LibraryApplicationButton").error(e)
+        new(0, E.default)("LibraryApplicationButton").error(e)
       }
     }, this.handleInstall = () => {
       let {
@@ -227,7 +227,7 @@ function P(e) {
   let {
     libraryApplication: t
   } = e, n = (0, c.useAnalyticsContext)(), [s, l] = (0, r.useStateFromStoresArray)([m.default, N.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, m.default, N.default), m.default.getState(t.id, t.branchId)], [t]), i = (0, r.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), o = (0, r.useStateFromStores)([_.default], () => _.default.hasNoBuild(t.id, t.branchId), [t]);
-  return (0, a.jsx)(v, {
+  return (0, a.jsx)(L, {
     ...e,
     analyticsContext: n,
     actionState: s,
@@ -236,10 +236,10 @@ function P(e) {
     hasNoBuild: o
   })
 }
-v.defaultProps = {
+L.defaultProps = {
   fullWidth: !1,
   size: u.Button.Sizes.LARGE,
   hideProgress: !1,
   isPlayShiny: !1,
   tooltipPosition: "top"
-}, v.ButtonStates = s
+}, L.ButtonStates = s

@@ -1,4 +1,4 @@
-t.exports = function(t) {
-  var r = null == t ? 0 : t.length;
-  return r ? t[r - 1] : void 0
+e.exports = function(e) {
+  var t = null == e ? 0 : e.length;
+  return t ? e[t - 1] : void 0
 }

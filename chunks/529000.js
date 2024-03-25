@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return S
   }
 }), n("222007");
 var i = n("37983"),
@@ -13,12 +13,12 @@ var i = n("37983"),
   u = n("509043"),
   d = n("669491"),
   c = n("718776"),
-  f = n("145131"),
-  _ = n("36694"),
-  h = n("49111"),
-  g = n("422955"),
-  m = n("926622");
-let E = l.memoize(e => {
+  _ = n("145131"),
+  f = n("36694"),
+  E = n("49111"),
+  h = n("750692"),
+  g = n("890957");
+let m = l.memoize(e => {
   let t = !1;
   if (null != e && (0, u.isValidHex)(e)) {
     let n = (0, u.hex2int)(e);
@@ -34,7 +34,7 @@ class p extends s.PureComponent {
       color: n,
       className: s,
       children: r
-    } = this.props, o = E(n);
+    } = this.props, o = m(n);
     return t ? e = {
       color: o,
       background: null != n ? n : d.default.unsafe_rawColors.BRAND_500.css
@@ -44,30 +44,30 @@ class p extends s.PureComponent {
       offset: {
         left: 4
       },
-      children: (0, i.jsxs)(f.default, {
-        className: a(g.selectableItem, s, {
-          [g.selected]: t
+      children: (0, i.jsxs)(_.default, {
+        className: a(h.selectableItem, s, {
+          [h.selected]: t
         }),
         onClick: this.handleClick,
         onKeyUp: this.handleKeyUp,
-        align: f.default.Align.CENTER,
+        align: _.default.Align.CENTER,
         style: {
           ...e,
           ...this.props.style
         },
         role: "button",
         tabIndex: 0,
-        children: [(0, i.jsx)(f.default, {
-          align: f.default.Align.CENTER,
-          className: g.selectableItemLabel,
+        children: [(0, i.jsx)(_.default, {
+          align: _.default.Align.CENTER,
+          className: h.selectableItemLabel,
           shrink: 1,
           children: r
-        }), t && (0, i.jsx)(f.default, {
-          wrap: f.default.Wrap.WRAP,
-          className: m.marginReset,
+        }), t && (0, i.jsx)(_.default, {
+          wrap: _.default.Wrap.WRAP,
+          className: g.marginReset,
           grow: 0,
           shrink: 0,
-          children: (0, i.jsx)(_.default, {
+          children: (0, i.jsx)(f.default, {
             color: o
           })
         })]
@@ -76,9 +76,9 @@ class p extends s.PureComponent {
   }
   constructor(...e) {
     super(...e), this.state = {
-      color: E(this.props.color)
+      color: m(this.props.color)
     }, this.handleKeyUp = e => {
-      if (e.which === h.KeyboardKeys.ENTER || e.which === h.KeyboardKeys.SPACE) {
+      if (e.which === E.KeyboardKeys.ENTER || e.which === E.KeyboardKeys.SPACE) {
         let {
           onClick: e,
           ...t
@@ -94,4 +94,4 @@ class p extends s.PureComponent {
     }
   }
 }
-var v = p
+var S = p

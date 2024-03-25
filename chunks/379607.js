@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("679653"),
   _ = a("419830"),
   x = a("713810"),
-  v = a("185014"),
-  S = a("465519"),
+  S = a("185014"),
+  v = a("465519"),
   C = a("120027"),
   N = a("699473"),
   p = a("42203"),
@@ -31,7 +31,7 @@ var l = a("37983"),
   j = a("215361"),
   M = a("345318"),
   D = a("782340"),
-  F = a("120967"),
+  F = a("286669"),
   L = a("782983"),
   R = a("229709");
 let b = async () => {
@@ -46,7 +46,7 @@ let b = async () => {
   } = e, s = c.default.colors.TEXT_POSITIVE, d = j.default, u = (0, o.useStateFromStores)([T.default], () => T.default.getUser(t.details.actorUserId), [t]), f = n.useMemo(() => null == u ? {} : {
     [t.guildId]: [u.id]
   }, [t.guildId, u]);
-  switch ((0, g.useSubscribeGuildMembers)(f), s = (0, S.getFeaturedExpirationTextColor)(t.details.expiresAt)) {
+  switch ((0, g.useSubscribeGuildMembers)(f), s = (0, v.getFeaturedExpirationTextColor)(t.details.expiresAt)) {
     case c.default.colors.TEXT_DANGER:
       d = A.default;
       break;
@@ -91,7 +91,7 @@ let b = async () => {
       })]
     })]
   })
-}, O = e => {
+}, y = e => {
   let {
     channel: t
   } = e, a = (0, I.default)(t), n = (0, _.getChannelIconComponent)(t), s = (0, _.getChannelIconTooltipText)(t);
@@ -112,11 +112,11 @@ let b = async () => {
       children: a
     })]
   })
-}, y = n.memo(function(e) {
+}, O = n.memo(function(e) {
   let {
     guildId: t,
     featuredItem: a
-  } = e, n = (0, o.useStateFromStores)([v.default], () => v.default.getCachedMessage(t, a.message.channel_id, a.message.id)), s = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(null == n ? void 0 : n.channel_id));
+  } = e, n = (0, o.useStateFromStores)([S.default], () => S.default.getCachedMessage(t, a.message.channel_id, a.message.id)), s = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(null == n ? void 0 : n.channel_id));
   return null == s || null == n ? null : (0, l.jsxs)(m.Clickable, {
     onContextMenu: e => {
       e.stopPropagation(), (0, h.openContextMenuLazy)(e, async () => {
@@ -132,7 +132,7 @@ let b = async () => {
     className: F.featuredItemsGroupWrapper,
     children: [(0, l.jsx)(G, {
       featuredItem: a.featuredItem
-    }), (0, l.jsx)(O, {
+    }), (0, l.jsx)(y, {
       channel: s
     }), (0, l.jsx)(N.default, {
       className: F.featuredItemsGroupCozy,
@@ -144,7 +144,7 @@ let b = async () => {
   let {
     guildId: t,
     featuredItem: a
-  } = e, n = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(a.thread.id)), s = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(null == n ? void 0 : n.parent_id)), i = (0, o.useStateFromStores)([v.default], () => v.default.getCachedMessage(t, a.message.channel_id, a.message.id));
+  } = e, n = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(a.thread.id)), s = (0, o.useStateFromStores)([p.default], () => p.default.getChannel(null == n ? void 0 : n.parent_id)), i = (0, o.useStateFromStores)([S.default], () => S.default.getCachedMessage(t, a.message.channel_id, a.message.id));
   return null == i || null == s || null == n ? null : (0, l.jsxs)(m.Clickable, {
     onContextMenu: e => {
       e.stopPropagation(), (0, h.openContextMenuLazy)(e, async () => {
@@ -160,7 +160,7 @@ let b = async () => {
     className: F.featuredItemsGroupWrapper,
     children: [(0, l.jsx)(G, {
       featuredItem: a.featuredItem
-    }), (0, l.jsx)(O, {
+    }), (0, l.jsx)(y, {
       channel: s
     }), (0, l.jsx)(m.Heading, {
       className: F.forumPostHeading,
@@ -199,7 +199,7 @@ function U() {
 function w(e) {
   let {
     guildId: t
-  } = e, a = (0, o.useStateFromStoresArray)([v.default], () => v.default.getFeaturedItems(t), [t]), s = (0, o.useStateFromStores)([v.default], () => v.default.getFeaturedItemsFetchStatus(t), [t]);
+  } = e, a = (0, o.useStateFromStoresArray)([S.default], () => S.default.getFeaturedItems(t), [t]), s = (0, o.useStateFromStores)([S.default], () => S.default.getFeaturedItemsFetchStatus(t), [t]);
   return n.useEffect(() => {
     (0, x.fetchGuildFeedFeaturedItems)(t)
   }, [t]), (0, l.jsx)(m.Dialog, {
@@ -208,11 +208,11 @@ function w(e) {
       analyticsName: "Featured Feed Items Popout",
       listName: "featuredMessages",
       items: a,
-      loading: s.loading !== v.LoadingStatus.NONE,
+      loading: s.loading !== S.LoadingStatus.NONE,
       renderEmptyState: k,
       renderHeader: U,
       renderItem: function(e) {
-        return null == e ? [] : e.type === u.GuildFeedItemTypes.MESSAGE ? [(0, l.jsx)(y, {
+        return null == e ? [] : e.type === u.GuildFeedItemTypes.MESSAGE ? [(0, l.jsx)(O, {
           guildId: t,
           featuredItem: e
         }, e.id)] : e.type === u.GuildFeedItemTypes.FORUM_POST ? [(0, l.jsx)(H, {

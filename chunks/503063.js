@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return T
   }
 });
-var l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  o = n.n(r),
-  s = n("446674"),
-  a = n("77078"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("446674"),
+  o = n("77078"),
   u = n("716241"),
   d = n("574073"),
   c = n("529805"),
@@ -17,90 +17,90 @@ var l = n("37983"),
   p = n("300322"),
   m = n("967241"),
   h = n("377253"),
-  E = n("116320"),
-  S = n("381546"),
-  g = n("49111"),
-  C = n("782340"),
-  T = n("650593");
+  x = n("116320"),
+  E = n("381546"),
+  y = n("49111"),
+  g = n("782340"),
+  S = n("731851");
 
-function v(e) {
+function C(e) {
   let {
     channel: t,
     message: n,
-    replyChainLength: r
+    replyChainLength: a
   } = e;
-  return i.useEffect(() => {
-    (0, u.trackWithMetadata)(g.AnalyticEvents.THREAD_NUDGE_SHOWN, {
+  return l.useEffect(() => {
+    (0, u.trackWithMetadata)(y.AnalyticEvents.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
-      reply_chain_length: r + 1,
+      reply_chain_length: a + 1,
       channel_id: t.id,
       guild_id: t.guild_id
     })
-  }, [t]), (0, l.jsxs)(a.Clickable, {
+  }, [t]), (0, i.jsxs)(o.Clickable, {
     onClick: function() {
       (0, c.deletePendingReply)(t.id), (0, m.openThreadSidebarForCreating)(t, n, "Reply Chain Nudge")
     },
-    className: T.threadSuggestionBar,
+    className: S.threadSuggestionBar,
     focusProps: {
       offset: {
         right: -4,
         left: -4
       }
     },
-    children: [(0, l.jsx)(a.Text, {
+    children: [(0, i.jsx)(o.Text, {
       color: "header-secondary",
-      className: T.text,
+      className: S.text,
       variant: "text-sm/normal",
-      children: C.default.Messages.THREAD_REPLY_SUGGESTION.format({
-        count: Math.min(10, r + 1)
+      children: g.default.Messages.THREAD_REPLY_SUGGESTION.format({
+        count: Math.min(10, a + 1)
       })
-    }), (0, l.jsx)(a.Text, {
+    }), (0, i.jsx)(o.Text, {
       color: "text-link",
-      className: T.createThreadButton,
+      className: S.createThreadButton,
       variant: "text-sm/semibold",
-      children: C.default.Messages.CREATE_THREAD
+      children: g.default.Messages.CREATE_THREAD
     })]
   })
 }
 
-function y(e) {
+function T(e) {
   let {
     reply: t,
     chatInputType: n
   } = e, {
-    channel: i,
-    message: r,
+    channel: l,
+    message: a,
     shouldMention: u,
     showMentionToggle: m
   } = t, {
-    nick: y,
-    colorString: x,
+    nick: T,
+    colorString: _,
     colorRoleName: I
-  } = (0, d.default)(r), N = function(e, t) {
+  } = (0, d.default)(a), v = function(e, t) {
     let n = e.id,
-      l = t.id;
-    return (0, s.useStateFromStores)([h.default], () => {
-      let e = l;
+      i = t.id;
+    return (0, r.useStateFromStores)([h.default], () => {
+      let e = i;
       for (let t = 0; t < 10; t++) {
-        let l = h.default.getMessage(n, e);
-        if ((null == l ? void 0 : l.type) !== g.MessageTypes.REPLY || null == l.messageReference) return t;
-        e = l.messageReference.message_id
+        let i = h.default.getMessage(n, e);
+        if ((null == i ? void 0 : i.type) !== y.MessageTypes.REPLY || null == i.messageReference) return t;
+        e = i.messageReference.message_id
       }
       return 10
-    }, [n, l])
-  }(i, r), _ = (0, p.useCanStartPublicThread)(i, r), A = n.showThreadPromptOnReply && N >= 2 && _;
+    }, [n, i])
+  }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
 
-  function R(e) {
-    e.stopPropagation(), (0, c.setPendingReplyShouldMention)(i.id, !u)
+  function O(e) {
+    e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
   }
-  return (0, l.jsx)("div", {
-    className: T.clipContainer,
-    children: (0, l.jsxs)("div", {
-      className: T.container,
-      children: [(0, l.jsxs)("div", {
-        className: T.replyBar,
-        children: [(0, l.jsx)(a.Clickable, {
-          onClick: () => (0, f.transitionTo)(g.Routes.CHANNEL(i.getGuildId(), i.id, r.id)),
+  return (0, i.jsx)("div", {
+    className: S.clipContainer,
+    children: (0, i.jsxs)("div", {
+      className: S.container,
+      children: [(0, i.jsxs)("div", {
+        className: S.replyBar,
+        children: [(0, i.jsx)(o.Clickable, {
+          onClick: () => (0, f.transitionTo)(y.Routes.CHANNEL(l.getGuildId(), l.id, a.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -109,68 +109,68 @@ function y(e) {
               left: -4
             }
           },
-          children: (0, l.jsx)(a.Text, {
+          children: (0, i.jsx)(o.Text, {
             color: "header-secondary",
-            className: o(T.text, T.replyLabel),
+            className: s(S.text, S.replyLabel),
             variant: "text-sm/normal",
-            children: C.default.Messages.REPLYING_TO.format({
-              userHook: (e, t) => (0, l.jsx)(a.NameWithRole, {
-                className: T.name,
-                name: y,
-                color: x,
+            children: g.default.Messages.REPLYING_TO.format({
+              userHook: (e, t) => (0, i.jsx)(o.NameWithRole, {
+                className: S.name,
+                name: T,
+                color: _,
                 roleName: I
               }, t)
             })
           })
-        }), (0, l.jsxs)("div", {
-          className: T.actions,
-          children: [m && (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsx)(a.Tooltip, {
-              text: u ? C.default.Messages.REPLY_MENTION_ON_TOOLTIP : C.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
+        }), (0, i.jsxs)("div", {
+          className: S.actions,
+          children: [m && (0, i.jsxs)(i.Fragment, {
+            children: [(0, i.jsx)(o.Tooltip, {
+              text: u ? g.default.Messages.REPLY_MENTION_ON_TOOLTIP : g.default.Messages.REPLY_MENTION_OFF_TOOLTIP,
               children: e => {
                 let {
                   onMouseEnter: t,
                   onMouseLeave: n,
-                  onFocus: i,
-                  onBlur: r
+                  onFocus: l,
+                  onBlur: a
                 } = e;
-                return (0, l.jsx)(a.Clickable, {
+                return (0, i.jsx)(o.Clickable, {
                   role: "switch",
                   "aria-checked": u,
-                  onClick: R,
+                  onClick: O,
                   onMouseEnter: t,
                   onMouseLeave: n,
-                  onFocus: i,
-                  onBlur: r,
-                  children: (0, l.jsxs)(a.Text, {
+                  onFocus: l,
+                  onBlur: a,
+                  children: (0, i.jsxs)(o.Text, {
                     variant: "text-sm/bold",
                     color: u ? "text-link" : "text-muted",
-                    className: T.mentionButton,
-                    children: [(0, l.jsx)(E.default, {
-                      "aria-label": C.default.Messages.MENTION,
-                      className: T.mentionIcon
-                    }), u ? C.default.Messages.REPLY_MENTION_ON : C.default.Messages.REPLY_MENTION_OFF]
+                    className: S.mentionButton,
+                    children: [(0, i.jsx)(x.default, {
+                      "aria-label": g.default.Messages.MENTION,
+                      className: S.mentionIcon
+                    }), u ? g.default.Messages.REPLY_MENTION_ON : g.default.Messages.REPLY_MENTION_OFF]
                   })
                 })
               }
-            }), (0, l.jsx)("div", {
-              className: T.separator,
+            }), (0, i.jsx)("div", {
+              className: S.separator,
               "aria-hidden": !0
             })]
-          }), (0, l.jsx)(a.Clickable, {
-            className: T.closeButton,
+          }), (0, i.jsx)(o.Clickable, {
+            className: S.closeButton,
             onClick: function(e) {
-              e.stopPropagation(), (0, c.deletePendingReply)(i.id)
+              e.stopPropagation(), (0, c.deletePendingReply)(l.id)
             },
-            children: (0, l.jsx)(S.default, {
-              className: T.closeIcon
+            children: (0, i.jsx)(E.default, {
+              className: S.closeIcon
             })
           })]
         })]
-      }), A && (0, l.jsx)(v, {
-        channel: i,
-        message: r,
-        replyChainLength: N
+      }), A && (0, i.jsx)(C, {
+        channel: l,
+        message: a,
+        replyChainLength: v
       })]
     })
   })

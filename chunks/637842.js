@@ -19,17 +19,17 @@ var i, a, l = n("37983"),
   E = n("999819"),
   S = n("49111"),
   v = n("782340"),
-  y = n("406638"),
-  C = n("926622");
+  y = n("233327"),
+  O = n("890957");
 (a = i || (i = {})).GENERAL = "GENERAL", a.VOICE = "VOICE", a.DEVELOPER = "DEVELOPER";
-let N = () => [{
+let C = () => [{
     value: S.OverlayAvatarSizes.LARGE,
     name: v.default.Messages.AVATAR_SIZE_OPTION_LARGE
   }, {
     value: S.OverlayAvatarSizes.SMALL,
     name: v.default.Messages.AVATAR_SIZE_OPTION_SMALL
   }],
-  O = () => [{
+  N = () => [{
     value: S.OverlayDisplayNames.ALWAYS,
     name: v.default.Messages.DISPLAY_OPTION_ALWAYS
   }, {
@@ -163,7 +163,7 @@ class _ extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_NOTIFICATION_POSITION,
-        className: C.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(p.default, {
           position: t,
           onChange: this.handleChangeNotificationPositionMode
@@ -191,25 +191,25 @@ class _ extends s.PureComponent {
     return (0, l.jsxs)(s.Fragment, {
       children: [(0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_AVATAR_SIZE,
-        className: C.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeAvatarSizeMode,
-          options: N(),
+          options: C(),
           value: e,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_NAMES,
-        className: C.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayNameMode,
-          options: O(),
+          options: N(),
           value: t,
           size: r.RadioGroup.Sizes.SMALL
         })
       }), (0, l.jsx)(r.FormItem, {
         title: v.default.Messages.FORM_LABEL_DISPLAY_USERS,
-        className: C.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.RadioGroup, {
           onChange: this.handleChangeDisplayUserMode,
           options: T(),
@@ -223,7 +223,7 @@ class _ extends s.PureComponent {
     return (0, l.jsx)(s.Fragment, {
       children: (0, l.jsx)(r.FormItem, {
         title: "Crashes",
-        className: C.marginBottom20,
+        className: O.marginBottom20,
         children: (0, l.jsx)(r.SingleSelect, {
           value: void 0,
           options: [{

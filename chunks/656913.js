@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return m
   }
 });
 var l = n("37983");
@@ -15,20 +15,20 @@ var a = n("414456"),
   d = n("818643"),
   c = n("608684"),
   E = n("49111"),
-  f = n("575282");
-let _ = E.Color.PRIMARY_400,
-  I = E.Color.PRIMARY_500;
+  f = n("854045");
+let h = E.Color.PRIMARY_400,
+  v = E.Color.PRIMARY_500;
 
-function h(e) {
+function m(e) {
   let {
     enabled: t,
     imageClassName: n,
     iconWrapperClassName: a,
     ...E
-  } = e, h = (0, r.default)(), T = (0, i.isThemeDark)(h) ? _ : I, N = {
+  } = e, m = (0, r.default)(), N = (0, i.isThemeDark)(m) ? h : v, _ = {
     height: 18,
     width: 18,
-    color: (0, u.getColor)(T)
+    color: (0, u.getColor)(N)
   };
   return (0, l.jsx)(c.default, {
     className: s({
@@ -39,9 +39,9 @@ function h(e) {
       [f.avatarUploaderInnerSquareDisabled]: !t
     }),
     icon: null != E.image && "" !== E.image ? (0, l.jsx)(o.default, {
-      ...N
+      ..._
     }) : (0, l.jsx)(d.default, {
-      ...N
+      ..._
     }),
     iconClassName: s(f.avatarUploadIcon, f.hideDefaultIcon),
     iconWrapperClassName: a,

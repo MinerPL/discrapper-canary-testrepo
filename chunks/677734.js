@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("37983"),
@@ -10,20 +10,20 @@ var a = n("37983"),
   s = n("367376"),
   i = n("442791"),
   d = n("782340"),
-  u = n("698821"),
-  o = e => {
+  o = n("595427"),
+  u = e => {
     let {
       node: {
         header: t,
         subheader: n,
-        button: o
+        button: u
       }
-    } = e, c = (null == o ? void 0 : o.type) === "submit", m = l.useRef(s.default.reactParserFor({
+    } = e, c = (null == u ? void 0 : u.type) === "submit", m = l.useRef(s.default.reactParserFor({
       ...s.default.defaultRules,
       link: i.LinkMarkupRule
     }));
     return (0, a.jsxs)("div", {
-      className: u.headerContainer,
+      className: o.headerContainer,
       children: [null != t && "" !== t ? (0, a.jsx)(r.Heading, {
         variant: "heading-xl/semibold",
         color: "header-primary",

@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 }), s("222007");
 var a = s("37983"),
   r = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
+  i = s("414456"),
+  n = s.n(i),
   l = s("77078"),
   o = s("812204"),
   u = s("506885"),
@@ -95,7 +95,7 @@ class S extends r.PureComponent {
       userInfo: r
     } = e;
     return 0 === r.length ? null : (0, a.jsxs)("div", {
-      className: i(f.recommendationActivity, t),
+      className: n(f.recommendationActivity, t),
       children: [(0, a.jsx)(_.default, {
         className: f.players,
         users: r.map(e => {
@@ -126,8 +126,8 @@ class S extends r.PureComponent {
       })]
     }), this.renderPlayer = (e, t, s, r) => {
       if (null == e) return null;
-      let n = this.props.reason.userInfo.find(t => t.user === e);
-      return null == n ? null : (0, a.jsx)(l.Popout, {
+      let i = this.props.reason.userInfo.find(t => t.user === e);
+      return null == i ? null : (0, a.jsx)(l.Popout, {
         preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (0, a.jsx)(d.default, {
           ...t,
@@ -136,12 +136,12 @@ class S extends r.PureComponent {
         }),
         position: "right",
         children: t => (0, a.jsx)(l.Tooltip, {
-          text: this.renderUserTooltip(e, n.startTime, n.endTime),
+          text: this.renderUserTooltip(e, i.startTime, i.endTime),
           "aria-label": (0, E.getUserTag)(e, {
             decoration: "never"
           }),
           children: s => (0, a.jsx)(l.Avatar, {
-            className: i(f.playerAvatar, {
+            className: n(f.playerAvatar, {
               [f.avatarMasked]: !r
             }),
             src: e.getAvatarURL(void 0, 32),

@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   DragDropManagerImpl: function() {
-    return a
+    return o
   }
 }), n("70102"), n("808653");
 var r = n("234160");
 
-function o(e, t) {
+function i(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n];
     r.enumerable = r.enumerable || !1, r.configurable = !0, "value" in r && (r.writable = !0), Object.defineProperty(e, r.key, r)
   }
 }
-var a = function() {
+var o = function() {
   var e, t, n;
 
-  function a(e, t) {
+  function o(e, t) {
     var n = this;
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, a), this.isSetUp = !1, this.handleRefCountChange = function() {
+    }(this, o), this.isSetUp = !1, this.handleRefCountChange = function() {
       var e = n.store.getState().refCount > 0;
       n.backend && (e && !n.isSetUp ? (n.backend.setup(), n.isSetUp = !0) : !e && n.isSetUp && (n.backend.teardown(), n.isSetUp = !1))
     }, this.store = e, this.monitor = t, e.subscribe(this.handleRefCountChange)
   }
-  return e = a, t = [{
+  return e = o, t = [{
     key: "receiveBackend",
     value: function(e) {
       this.backend = e
@@ -50,12 +50,12 @@ var a = function() {
       var e = this,
         t = this.store.dispatch,
         n = (0, r.createDragDropActions)(this);
-      return Object.keys(n).reduce(function(r, o) {
-        var a, i = n[o];
-        return r[o] = (a = i, function() {
-          for (var n = arguments.length, r = Array(n), o = 0; o < n; o++) r[o] = arguments[o];
-          var i = a.apply(e, r);
-          void 0 !== i && t(i)
+      return Object.keys(n).reduce(function(r, i) {
+        var o, s = n[i];
+        return r[i] = (o = s, function() {
+          for (var n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
+          var s = o.apply(e, r);
+          void 0 !== s && t(s)
         }), r
       }, {})
     }
@@ -64,5 +64,5 @@ var a = function() {
     value: function(e) {
       this.store.dispatch(e)
     }
-  }], o(e.prototype, t), n && o(e, n), a
+  }], i(e.prototype, t), n && i(e, n), o
 }()

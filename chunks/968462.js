@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   ForumPostMediaPreviewPlaceholder: function() {
     return l
   },
@@ -10,47 +10,47 @@ s.r(t), s.d(t, {
     return i
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("687791");
+var s = a("37983");
+a("884691");
+var n = a("195069");
 
 function l() {
-  return (0, a.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: n.bodyMedia
   })
 }
 
 function r() {
-  return (0, a.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: n.content,
-    children: [(0, a.jsxs)("div", {
+    children: [(0, s.jsxs)("div", {
       className: n.titleAndMessage,
-      children: [(0, a.jsxs)("div", {
+      children: [(0, s.jsxs)("div", {
         className: n.header,
-        children: [(0, a.jsxs)("div", {
+        children: [(0, s.jsxs)("div", {
           className: n.tags,
-          children: [(0, a.jsx)("div", {
+          children: [(0, s.jsx)("div", {
             className: n.tag
-          }), (0, a.jsx)("div", {
+          }), (0, s.jsx)("div", {
             className: n.tag
-          }), (0, a.jsx)("div", {
+          }), (0, s.jsx)("div", {
             className: n.tag
           })]
-        }), (0, a.jsx)("div", {
+        }), (0, s.jsx)("div", {
           className: n.seperator
         })]
-      }), (0, a.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: n.time
-      }), (0, a.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: n.title
-      }), (0, a.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: n.firstMessage
       })]
-    }), (0, a.jsxs)("div", {
+    }), (0, s.jsxs)("div", {
       className: n.engagement,
-      children: [(0, a.jsx)("div", {
+      children: [(0, s.jsx)("div", {
         className: n.reactions
-      }), (0, a.jsx)("div", {
+      }), (0, s.jsx)("div", {
         className: n.replies
       })]
     })]
@@ -58,11 +58,11 @@ function r() {
 }
 
 function i() {
-  return (0, a.jsx)("div", {
+  return (0, s.jsx)("div", {
     className: n.card,
-    children: (0, a.jsxs)("div", {
+    children: (0, s.jsxs)("div", {
       className: n.body,
-      children: [(0, a.jsx)(r, {}), (0, a.jsx)(l, {})]
+      children: [(0, s.jsx)(r, {}), (0, s.jsx)(l, {})]
     })
   })
 }

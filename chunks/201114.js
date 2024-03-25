@@ -16,29 +16,29 @@ var n = s("414456"),
   c = s("42887"),
   S = s("145131"),
   E = s("476765"),
-  f = s("773336"),
-  T = s("597870"),
-  m = s("49111"),
-  _ = s("782340"),
-  g = s("871940"),
-  h = s("926622");
-let I = !f.isPlatformEmbedded,
-  N = (0, E.uid)();
+  T = s("773336"),
+  f = s("597870"),
+  _ = s("49111"),
+  m = s("782340"),
+  g = s("192255"),
+  h = s("890957");
+let N = !T.isPlatformEmbedded,
+  I = (0, E.uid)();
 
 function p(e) {
   let {
     value: t
   } = e;
-  t === m.InputModes.PUSH_TO_TALK && I && (0, r.openModalLazy)(async () => {
+  t === _.InputModes.PUSH_TO_TALK && N && (0, r.openModalLazy)(async () => {
     let {
       default: e
     } = await s.el("135230").then(s.bind(s, "135230"));
     return t => (0, a.jsx)(e, {
-      title: _.default.Messages.PTT_LIMITED_TITLE,
-      confirmText: _.default.Messages.DOWNLOAD,
-      cancelText: _.default.Messages.OKAY,
-      onConfirm: () => (0, T.openDownloadAppsModal)("PTT Limited Modal"),
-      body: _.default.Messages.PTT_LIMITED_BODY,
+      title: m.default.Messages.PTT_LIMITED_TITLE,
+      confirmText: m.default.Messages.DOWNLOAD,
+      cancelText: m.default.Messages.OKAY,
+      onConfirm: () => (0, f.openDownloadAppsModal)("PTT Limited Modal"),
+      body: m.default.Messages.PTT_LIMITED_BODY,
       ...t
     })
   }), o.default.setMode(t)
@@ -56,17 +56,17 @@ function A(e) {
       shortcut: n,
       delay: E
     } = (0, i.useStateFromStoresObject)([c.default], () => c.default.getModeOptions());
-  return t = f.isPlatformEmbedded || s !== m.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
+  return t = T.isPlatformEmbedded || s !== _.InputModes.PUSH_TO_TALK ? (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
     className: l(g.pttToolsMessage, h.marginBottom8),
-    children: _.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
-      onClick: () => d.default.setSection(m.UserSettingsSections.KEYBINDS)
+    children: m.default.Messages.USER_SETTINGS_VOICE_ADD_MULTIPLE.format({
+      onClick: () => d.default.setSection(_.UserSettingsSections.KEYBINDS)
     })
   }) : (0, a.jsx)(r.FormText, {
     type: r.FormText.Types.DESCRIPTION,
     className: l(g.pttToolsMessage, g.pttToolsWarning, h.marginBottom8),
-    children: _.default.Messages.PTT_LIMITED_WARNING.format({
-      onDownloadClick: () => (0, T.openDownloadAppsModal)("Help Text PTT")
+    children: m.default.Messages.PTT_LIMITED_WARNING.format({
+      onDownloadClick: () => (0, f.openDownloadAppsModal)("Help Text PTT")
     })
   }), (0, a.jsxs)("div", {
     className: g.pttTools,
@@ -74,7 +74,7 @@ function A(e) {
       children: [(0, a.jsx)(S.default.Child, {
         basis: "50%",
         children: (0, a.jsx)(r.FormItem, {
-          title: _.default.Messages.FORM_LABEL_SHORTCUT,
+          title: m.default.Messages.FORM_LABEL_SHORTCUT,
           children: (0, a.jsx)(u.default, {
             defaultValue: n,
             onChange: e => o.default.setMode(s, {
@@ -86,18 +86,18 @@ function A(e) {
         basis: "50%",
         children: (0, a.jsxs)(r.FormItem, {
           children: [(0, a.jsx)(r.FormTitle, {
-            id: N,
+            id: I,
             tag: r.FormTitleTags.H5,
             className: h.marginBottom8,
-            children: _.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
+            children: m.default.Messages.INPUT_MODE_PTT_RELEASE_DELAY
           }), (0, a.jsx)(r.Slider, {
             initialValue: E,
             onValueChange: e => o.default.setMode(s, {
               delay: e
             }),
             onValueRender: C,
-            maxValue: m.MAX_PTT_RELEASE_DELAY,
-            "aria-labelledby": N
+            maxValue: _.MAX_PTT_RELEASE_DELAY,
+            "aria-labelledby": I
           })]
         })
       })]
@@ -108,22 +108,22 @@ function A(e) {
 function O() {
   let e = (0, i.useStateFromStores)([c.default], () => c.default.getMode()),
     t = [{
-      value: m.InputModes.VOICE_ACTIVITY,
-      name: _.default.Messages.INPUT_MODE_VAD
+      value: _.InputModes.VOICE_ACTIVITY,
+      name: m.default.Messages.INPUT_MODE_VAD
     }, {
-      value: m.InputModes.PUSH_TO_TALK,
-      name: I ? _.default.Messages.INPUT_MODE_PTT_LIMITED : _.default.Messages.INPUT_MODE_PTT
+      value: _.InputModes.PUSH_TO_TALK,
+      name: N ? m.default.Messages.INPUT_MODE_PTT_LIMITED : m.default.Messages.INPUT_MODE_PTT
     }];
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(r.FormItem, {
-      title: _.default.Messages.FORM_LABEL_INPUT_MODE,
+      title: m.default.Messages.FORM_LABEL_INPUT_MODE,
       className: h.marginBottom20,
       children: (0, a.jsx)(r.RadioGroup, {
         onChange: p,
         options: t,
         value: e
       })
-    }), e === m.InputModes.PUSH_TO_TALK && (0, a.jsx)(A, {
+    }), e === _.InputModes.PUSH_TO_TALK && (0, a.jsx)(A, {
       inputMode: e
     })]
   })

@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   isPremiumResolution: function() {
-    return f
-  },
-  isPremiumFPS: function() {
     return _
   },
+  isPremiumFPS: function() {
+    return f
+  },
   getResolutionText: function() {
-    return g
+    return h
   },
   getFPSText: function() {
-    return m
+    return g
   },
   getMaxQuality: function() {
-    return E
+    return m
   },
   trackStreamSettingsUpdate: function() {
     return p
@@ -29,37 +29,37 @@ var i = n("305961"),
   d = n("353927"),
   c = n("782340");
 
-function f(e) {
+function _(e) {
   if (null == e) return;
   let t = e.maxResolution.type === d.ResolutionTypes.SOURCE ? l.ApplicationStreamResolutions.RESOLUTION_SOURCE : e.maxResolution.height,
     n = (0, l.getApplicationResolution)(t),
     i = (0, l.getApplicationFramerate)(e.maxFrameRate);
-  return i !== l.ApplicationStreamFPS.FPS_5 && null == l.ApplicationStreamSettingRequirements.find(e => e.resolution === n && e.fps !== l.ApplicationStreamFPS.FPS_5 && !h(e))
+  return i !== l.ApplicationStreamFPS.FPS_5 && null == l.ApplicationStreamSettingRequirements.find(e => e.resolution === n && e.fps !== l.ApplicationStreamFPS.FPS_5 && !E(e))
 }
 
-function _(e) {
+function f(e) {
   if (null == e) return;
   let t = (0, l.getApplicationFramerate)(e.maxFrameRate);
-  return null == l.ApplicationStreamSettingRequirements.find(e => e.fps === t && !h(e))
+  return null == l.ApplicationStreamSettingRequirements.find(e => e.fps === t && !E(e))
 }
 
-function h(e) {
+function E(e) {
   return null != e.quality || null != e.guildPremiumTier
 }
 
-function g(e) {
+function h(e) {
   return e.type === d.ResolutionTypes.SOURCE ? c.default.Messages.SCREENSHARE_SOURCE : c.default.Messages.SCREENSHARE_RESOLUTION_ABBREVIATED.format({
     resolution: e.height
   })
 }
 
-function m(e) {
+function g(e) {
   return c.default.Messages.SCREENSHARE_FPS_ABBREVIATED.format({
     fps: e
   })
 }
 
-function E(e) {
+function m(e) {
   return null == e.maxResolution || null == e.maxFrameRate ? null : {
     maxFrameRate: e.maxFrameRate,
     maxResolution: e.maxResolution
@@ -67,16 +67,16 @@ function E(e) {
 }
 
 function p(e, t, n) {
-  var d, c, f;
-  let _ = (d = e, c = t, f = n, l.ApplicationStreamSettingRequirements.find(e => (null == e.preset || e.preset === d) && e.resolution === c && e.fps === f)),
-    h = r.default.getCurrentUser(),
-    g = s.default.getGuildId(),
-    m = null != g ? i.default.getGuild(g) : null;
+  var d, c, _;
+  let f = (d = e, c = t, _ = n, l.ApplicationStreamSettingRequirements.find(e => (null == e.preset || e.preset === d) && e.resolution === c && e.fps === _)),
+    E = r.default.getCurrentUser(),
+    h = s.default.getGuildId(),
+    g = null != h ? i.default.getGuild(h) : null;
   a.default.track(o.AnalyticEvents.STREAM_SETTINGS_UPDATE, {
-    user_premium_tier: null == h ? void 0 : h.premiumType,
-    guild_premium_tier: null == m ? void 0 : m.premiumTier,
-    stream_quality_user_premium_tier: (null == _ ? void 0 : _.quality) != null ? u.StreamQualitiesToPremiumType[_.quality] : null,
-    stream_quality_guild_premium_tier: null == _ ? void 0 : _.guildPremiumTier,
+    user_premium_tier: null == E ? void 0 : E.premiumType,
+    guild_premium_tier: null == g ? void 0 : g.premiumTier,
+    stream_quality_user_premium_tier: (null == f ? void 0 : f.quality) != null ? u.StreamQualitiesToPremiumType[f.quality] : null,
+    stream_quality_guild_premium_tier: null == f ? void 0 : f.guildPremiumTier,
     stream_quality_preset: e,
     stream_quality_resolution: t,
     stream_quality_frame_rate: n

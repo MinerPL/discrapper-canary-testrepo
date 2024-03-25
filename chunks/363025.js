@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   hideEnablePublicGuildUpsellNotice: function() {
-    return i
+    return l
   },
   hideMaxMemberCountChannelNotice: function() {
-    return l
+    return i
   }
 });
 var a = n("913144");
@@ -19,14 +19,14 @@ function s(e) {
   })
 }
 
-function i(e) {
+function l(e) {
   a.default.dispatch({
     type: "PUBLIC_UPSELL_NOTICE_DISMISS",
     guildId: e
   })
 }
 
-function l(e) {
+function i(e) {
   a.default.dispatch({
     type: "MAX_MEMBER_COUNT_NOTICE_DISMISS",
     guildId: e

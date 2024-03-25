@@ -6,36 +6,36 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("77078"),
   r = s("797944"),
-  o = s("893407");
+  o = s("741593");
 
 function d(e) {
   let {
     title: t,
     description: s,
-    action: n,
+    action: l,
     highlightColor: d = r.HighlightColors.NONE,
     selected: u = !1,
     subsection: c = null,
     onClick: E,
     className: _,
-    disabled: T
+    disabled: I
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(o.container, _),
+    className: n(o.container, _),
     children: [(0, a.jsx)(i.Clickable, {
-      className: l(o.clickableContainer, {
+      className: n(o.clickableContainer, {
         [o.noAction]: null == E,
-        [o.disabled]: T
+        [o.disabled]: I
       }, _),
-      onClick: T ? void 0 : E,
+      onClick: I ? void 0 : E,
       children: (0, a.jsxs)("div", {
-        className: l(o.backgroundModifierContainer, o[d], {
+        className: n(o.backgroundModifierContainer, o[d], {
           [o.selected]: u,
-          [o.disabled]: T,
+          [o.disabled]: I,
           [o.noAction]: null == E
         }),
         children: [(0, a.jsxs)("div", {
@@ -52,7 +52,7 @@ function d(e) {
           })]
         }), (0, a.jsx)("div", {
           className: o.action,
-          children: n
+          children: l
         })]
       })
     }), null != c && (0, a.jsx)("div", {

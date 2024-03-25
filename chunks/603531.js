@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return k
   }
 }), n("702976");
 var a = n("37983"),
@@ -38,8 +38,8 @@ var a = n("37983"),
   F = n("49111"),
   D = n("782340"),
   U = n("864604"),
-  k = n("5762"),
-  P = l.memo(function e(t) {
+  P = n("5762"),
+  k = l.memo(function e(t) {
     var n;
     let l;
     let {
@@ -47,7 +47,7 @@ var a = n("37983"),
       message: S,
       compact: N = !1,
       className: U,
-      onContextMenu: P,
+      onContextMenu: k,
       onClick: G,
       disableInteraction: B = !1,
       hasThread: H,
@@ -81,9 +81,9 @@ var a = n("37983"),
     }) : (0, a.jsx)(g.default, {
       compact: N,
       className: i(U, {
-        [k.ephemeral]: (0, _.hasFlag)(S.flags, F.MessageFlags.EPHEMERAL),
-        [k.disableInteraction]: B,
-        [k.groupStart]: t.isGroupStart
+        [P.ephemeral]: (0, _.hasFlag)(S.flags, F.MessageFlags.EPHEMERAL),
+        [P.disableInteraction]: B,
+        [P.groupStart]: t.isGroupStart
       }),
       childrenRepliedMessage: (0, j.default)(S, s, Y, z, N),
       childrenHeader: (0, O.default)({
@@ -117,7 +117,7 @@ var a = n("37983"),
       childrenExecutedCommand: (0, y.default)(S, s, N),
       childrenMessageContent: (0, L.default)(t, ee),
       childrenSystemMessage: (0, b.default)(t),
-      onContextMenu: P,
+      onContextMenu: k,
       onClick: G,
       hasThread: !1 !== H && null != ea && S.hasFlag(F.MessageFlags.HAS_THREAD),
       hasReply: S.type === F.MessageTypes.REPLY,

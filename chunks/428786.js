@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var s = n("37983"),
@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("394846"),
   d = n("446674"),
   c = n("77078"),
-  f = n("4919"),
-  E = n("812204"),
+  E = n("4919"),
+  f = n("812204"),
   _ = n("685665"),
   T = n("649844"),
   I = n("697218"),
@@ -27,7 +27,7 @@ var s = n("37983"),
   h = n("833516"),
   g = n("646718"),
   M = n("782340"),
-  O = n("668524");
+  O = n("179171");
 class R extends l.Component {
   renderTitle(e, t) {
     let {
@@ -156,7 +156,7 @@ class R extends l.Component {
   }
 }
 
-function L(e) {
+function v(e) {
   let {
     userTrialOfferId: t,
     canRenderReferralEmbed: n
@@ -171,14 +171,14 @@ function L(e) {
     return r ? null === (e = m.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
   }), {
     analyticsLocations: c
-  } = (0, _.default)(E.default.SHARE_NITRO_EMBED), {
+  } = (0, _.default)(f.default.SHARE_NITRO_EMBED), {
     enabled: T
   } = C.default.useExperiment({
     location: "f4ff1d_1"
   }, {
     autoTrackExposure: !0
   });
-  return a ? (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
+  return a ? (0, s.jsx)(E.ResponsiveLoadingEmbedTile, {
     isHorizontal: !u.isMobile
   }) : n && null != l && void 0 !== i ? (0, s.jsx)(R, {
     trialOffer: l,

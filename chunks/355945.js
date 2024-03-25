@@ -9,8 +9,8 @@ var n = Object.assign || function(e) {
     }
     return e
   },
-  o = r("884691"),
-  a = l(o),
+  a = r("884691"),
+  o = l(a),
   i = l(r("849122")),
   u = function(e) {
     if (e && e.__esModule) return e;
@@ -25,33 +25,33 @@ function l(e) {
     default: e
   }
 }
-var c = t.Checkboard = function(e) {
+var s = t.Checkboard = function(e) {
   var t = e.white,
     r = e.grey,
     l = e.size,
-    c = e.renderers,
-    s = e.borderRadius,
-    f = e.boxShadow,
+    s = e.renderers,
+    f = e.borderRadius,
+    c = e.boxShadow,
     d = e.children,
     p = (0, i.default)({
       default: {
         grid: {
-          borderRadius: s,
-          boxShadow: f,
+          borderRadius: f,
+          boxShadow: c,
           absolute: "0px 0px 0px 0px",
-          background: "url(" + u.get(t, r, l, c.canvas) + ") center left"
+          background: "url(" + u.get(t, r, l, s.canvas) + ") center left"
         }
       }
     });
-  return (0, o.isValidElement)(d) ? a.default.cloneElement(d, n({}, d.props, {
+  return (0, a.isValidElement)(d) ? o.default.cloneElement(d, n({}, d.props, {
     style: n({}, d.props.style, p.grid)
-  })) : a.default.createElement("div", {
+  })) : o.default.createElement("div", {
     style: p.grid
   })
 };
-c.defaultProps = {
+s.defaultProps = {
   size: 8,
   white: "transparent",
   grey: "rgba(0,0,0,.08)",
   renderers: {}
-}, t.default = c
+}, t.default = s

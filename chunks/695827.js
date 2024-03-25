@@ -14,8 +14,8 @@ var l = n("79112"),
   u = n("485138"),
   d = n("49111"),
   c = n("994428"),
-  f = n("782340"),
-  E = n("185401"),
+  E = n("782340"),
+  f = n("231537"),
   _ = e => {
     let {
       notice: t,
@@ -32,13 +32,13 @@ var l = n("79112"),
         onClick: () => _(c.ContentDismissActionType.UNKNOWN),
         noticeType: n
       }), !T && (0, s.jsx)(a.default, {
-        className: E.premiumIcon
+        className: f.premiumIcon
       }), (0, r.getLocalizedPricingNotice)(m, N, p, T), (0, s.jsx)(i.PrimaryCTANoticeButton, {
         onClick: () => {
           _(c.ContentDismissActionType.UNKNOWN), l.default.open(d.UserSettingsSections.PREMIUM)
         },
         noticeType: n,
-        children: f.default.Messages.LEARN_MORE
+        children: E.default.Messages.LEARN_MORE
       })]
     })
   }

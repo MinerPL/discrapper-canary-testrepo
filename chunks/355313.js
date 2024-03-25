@@ -19,11 +19,11 @@ var s = l("37983"),
   S = l("476263"),
   h = l("476765"),
   m = l("682344"),
-  E = l("454273"),
-  R = l("191458"),
+  R = l("454273"),
+  E = l("191458"),
   f = l("606762"),
   x = l("782340"),
-  T = l("265821");
+  T = l("129647");
 let g = (0, h.uid)(),
   y = (0, h.uid)();
 
@@ -50,8 +50,8 @@ function M(e) {
     showCheckbox: S,
     selected: h,
     onMouseEnter: m,
-    "aria-posinset": E,
-    "aria-setsize": R
+    "aria-posinset": R,
+    "aria-setsize": E
   } = e, f = (0, r.useListItem)(t);
   return (0, s.jsx)(o.Clickable, {
     ...f,
@@ -66,8 +66,8 @@ function M(e) {
     role: "option",
     "aria-disabled": c,
     "aria-selected": a,
-    "aria-setsize": R,
-    "aria-posinset": E,
+    "aria-setsize": E,
+    "aria-posinset": R,
     children: (0, s.jsxs)(u.default, {
       justify: u.default.Justify.BETWEEN,
       align: u.default.Align.CENTER,
@@ -111,7 +111,7 @@ function b(e) {
     isReady: B,
     maxCount: D,
     hideRowLabel: P = !1
-  } = e, z = n.useRef(null), H = n.useRef(null), U = [w.length, L.length, v.length, N.length], [F, V] = n.useState(!1), [G, Y] = n.useState(0), [q, Q] = n.useState(-1);
+  } = e, z = n.useRef(null), F = n.useRef(null), H = [w.length, L.length, v.length, N.length], [U, V] = n.useState(!1), [G, Y] = n.useState(0), [q, Q] = n.useState(-1);
   n.useEffect(() => {
     var e;
     null === (e = z.current) || void 0 === e || e.focus()
@@ -120,7 +120,7 @@ function b(e) {
       let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
       if (Y(e), Q(t), l) {
         var s;
-        null === (s = H.current) || void 0 === s || s.scrollToIndex({
+        null === (s = F.current) || void 0 === s || s.scrollToIndex({
           section: null != e ? e : 0,
           row: null != t ? t : 0,
           padding: 8
@@ -144,19 +144,19 @@ function b(e) {
 
   function ee() {
     var e;
-    V(!(null === (e = H.current) || void 0 === e ? void 0 : e.isScrolledToTop()) && $)
+    V(!(null === (e = F.current) || void 0 === e ? void 0 : e.isScrolledToTop()) && $)
   }
   return n.useEffect(() => {
     ee()
   }), (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsxs)("div", {
       className: i(T.searchBox, {
-        [T.scrollSeparator]: F
+        [T.scrollSeparator]: U
       }),
       children: [null != I && (0, s.jsx)(o.FormTitle, {
         tag: o.FormTitleTags.H5,
         children: I
-      }), (0, s.jsx)(R.default, {
+      }), (0, s.jsx)(E.default, {
         ref: z,
         query: a,
         onQueryChange: r,
@@ -165,7 +165,7 @@ function b(e) {
         onSelectionChange: W,
         onSelect: J,
         tags: Z.map(e => l[e].display),
-        sections: U,
+        sections: H,
         onRemoveTag: function(e) {
           b(Z[e])
         },
@@ -179,9 +179,9 @@ function b(e) {
         children: _
       }) : null]
     }), $ ? (0, s.jsx)(o.List, {
-      ref: H,
+      ref: F,
       className: i(T.roleMemberList, t),
-      sections: U,
+      sections: H,
       renderRow: e => {
         let t, n, {
             section: a,
@@ -190,11 +190,11 @@ function b(e) {
           d = null,
           u = !1,
           h = !1,
-          R = !1,
+          E = !1,
           x = !u && null != D && Object.keys(l).length >= D;
         switch (a) {
           case f.AudienceSelectorSections.ROLES:
-            u = (n = p(d = w[r])) in l || d.disabled, h = d.disabled || x, R = G === f.AudienceSelectorSections.ROLES && q === r, t = (0, s.jsxs)("div", {
+            u = (n = p(d = w[r])) in l || d.disabled, h = d.disabled || x, E = G === f.AudienceSelectorSections.ROLES && q === r, t = (0, s.jsxs)("div", {
               className: T.rowBody,
               children: [(0, s.jsx)("div", {
                 className: i(T.rowHeight, T.alignCenter),
@@ -218,7 +218,7 @@ function b(e) {
             });
             break;
           case f.AudienceSelectorSections.MEMBERS:
-            u = (n = p(d = L[r])) in l || d.disabled, h = d.disabled || x, R = G === f.AudienceSelectorSections.MEMBERS && q === r, t = (0, s.jsxs)("div", {
+            u = (n = p(d = L[r])) in l || d.disabled, h = d.disabled || x, E = G === f.AudienceSelectorSections.MEMBERS && q === r, t = (0, s.jsxs)("div", {
               className: T.rowBody,
               children: [(0, s.jsx)(o.Avatar, {
                 src: d.avatarURL,
@@ -240,7 +240,7 @@ function b(e) {
             });
             break;
           case f.AudienceSelectorSections.USERS:
-            u = (n = p(d = v[r])) in l || d.disabled, h = d.disabled || x, R = G === f.AudienceSelectorSections.USERS && q === r, t = (0, s.jsxs)("div", {
+            u = (n = p(d = v[r])) in l || d.disabled, h = d.disabled || x, E = G === f.AudienceSelectorSections.USERS && q === r, t = (0, s.jsxs)("div", {
               className: T.rowBody,
               children: [(0, s.jsx)(o.Avatar, {
                 src: d.avatarURL,
@@ -260,7 +260,7 @@ function b(e) {
             });
             break;
           case f.AudienceSelectorSections.GUILDS:
-            u = (n = p(d = N[r])) in l || d.disabled, h = d.disabled || x, R = G === f.AudienceSelectorSections.GUILDS && q === r, t = (0, s.jsxs)("div", {
+            u = (n = p(d = N[r])) in l || d.disabled, h = d.disabled || x, E = G === f.AudienceSelectorSections.GUILDS && q === r, t = (0, s.jsxs)("div", {
               className: T.rowBody,
               children: [(0, s.jsx)(S.default, {
                 guild: d.guild,
@@ -278,15 +278,15 @@ function b(e) {
         }
         return null == d ? null : (0, s.jsx)(M, {
           id: "user-row-".concat(r),
-          rowLabel: P ? null : E.getRowTypeLabel(d.rowType),
+          rowLabel: P ? null : R.getRowTypeLabel(d.rowType),
           checked: u,
           disabled: h,
           onSelect: () => K(d),
           showCheckbox: d.rowType !== f.RowType.EMPTY_STATE,
           onMouseEnter: () => W(a, r, !1),
-          selected: R,
+          selected: E,
           "aria-posinset": r + 1,
-          "aria-setsize": U.reduce((e, t) => e + t, 0),
+          "aria-setsize": H.reduce((e, t) => e + t, 0),
           children: t
         }, n)
       },

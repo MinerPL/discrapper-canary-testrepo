@@ -4,10 +4,10 @@ u.r(t), u.d(t, {
     return a
   },
   INVITE_OPTIONS_ONCE: function() {
-    return l
+    return I
   },
   INVITE_OPTIONS_5_TIMES: function() {
-    return I
+    return l
   },
   INVITE_OPTIONS_10_TIMES: function() {
     return r
@@ -62,10 +62,10 @@ function s(e, t) {
 let a = s(0, () => n.default.Messages.MAX_USES.format({
     maxUses: 0
   })),
-  l = s(1, () => n.default.Messages.MAX_USES.format({
+  I = s(1, () => n.default.Messages.MAX_USES.format({
     maxUses: 1
   })),
-  I = s(5, () => n.default.Messages.MAX_USES.format({
+  l = s(5, () => n.default.Messages.MAX_USES.format({
     maxUses: 5
   })),
   r = s(10, () => n.default.Messages.MAX_USES.format({
@@ -80,7 +80,7 @@ let a = s(0, () => n.default.Messages.MAX_USES.format({
   _ = s(100, () => n.default.Messages.MAX_USES.format({
     maxUses: 100
   })),
-  T = [a, l, I, r, i, E, _],
+  T = [a, I, l, r, i, E, _],
   f = s(1800, () => n.default.Messages.DURATION_MINUTES.format({
     minutes: 30
   })),

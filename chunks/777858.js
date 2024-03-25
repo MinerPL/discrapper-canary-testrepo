@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), n("222007");
 var s = n("37983"),
@@ -15,15 +15,15 @@ var s = n("37983"),
   c = n("893552"),
   f = n("810621"),
   E = n("49111"),
-  I = n("782340"),
-  _ = n("255987");
+  _ = n("782340"),
+  I = n("425589");
 
-function p(e) {
+function h(e) {
   let {
     location: t
-  } = e, [p, h] = a.useState(!1), {
-    verifySuccess: m,
-    verifyErrors: T,
+  } = e, [h, p] = a.useState(!1), {
+    verifySuccess: T,
+    verifyErrors: m,
     redirectGuildId: N
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
@@ -31,55 +31,55 @@ function p(e) {
     i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
   let g = () => {
-    (0, f.default)(N), h(!0)
+    (0, f.default)(N), p(!0)
   };
-  return p ? (0, s.jsxs)(d.default, {
+  return h ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.APP_OPENED_TITLE
+      className: I.title,
+      children: _.default.Messages.APP_OPENED_TITLE
     }), (0, s.jsx)(d.SubTitle, {
-      className: _.subtitle,
-      children: I.default.Messages.APP_OPENED_BODY
+      className: I.subtitle,
+      children: _.default.Messages.APP_OPENED_BODY
     }), (0, s.jsx)(d.Button, {
-      className: _.spacedButton,
+      className: I.spacedButton,
       onClick: () => (0, u.transitionTo)(E.Routes.CHANNEL(N)),
-      children: I.default.Messages.CONTINUE_TO_WEBAPP
+      children: _.default.Messages.CONTINUE_TO_WEBAPP
     })]
-  }) : m ? (0, s.jsxs)(d.default, {
+  }) : T ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
-      className: _.image,
+      className: I.image,
       src: n("176872")
     }), (0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.VERIFICATION_VERIFIED
+      className: I.title,
+      children: _.default.Messages.VERIFICATION_VERIFIED
     }), (0, s.jsx)(d.Button, {
       onClick: g,
-      children: I.default.Messages.VERIFICATION_OPEN_DISCORD
+      children: _.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
-  }) : null != T ? (0, s.jsxs)(d.default, {
+  }) : null != m ? (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
-      className: _.image,
+      className: I.image,
       src: n("768025")
     }), (0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.VERFICATION_EXPIRED
+      className: I.title,
+      children: _.default.Messages.VERFICATION_EXPIRED
     }), (0, s.jsx)(d.SubTitle, {
-      className: _.subtitle,
-      children: I.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
+      className: I.subtitle,
+      children: _.default.Messages._AUTH_VERFICATION_EXPIRED_SUGGESTION
     }), (0, s.jsx)(d.Button, {
       onClick: g,
-      children: I.default.Messages.VERIFICATION_OPEN_DISCORD
+      children: _.default.Messages.VERIFICATION_OPEN_DISCORD
     })]
   }) : (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.Image, {
-      className: _.image,
+      className: I.image,
       src: n("951536")
     }), (0, s.jsx)(d.Title, {
-      className: _.title,
-      children: I.default.Messages.VERIFICATION_VERIFYING
+      className: I.title,
+      children: _.default.Messages.VERIFICATION_VERIFYING
     }), (0, s.jsx)(d.SubTitle, {
-      className: _.subtitle,
-      children: I.default.Messages.ACTION_MAY_TAKE_A_MOMENT
+      className: I.subtitle,
+      children: _.default.Messages.ACTION_MAY_TAKE_A_MOMENT
     }), (0, s.jsx)(d.Button, {
       submitting: !0,
       color: d.Button.Colors.PRIMARY

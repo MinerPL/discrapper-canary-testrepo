@@ -24,8 +24,8 @@ s.r(t), s.d(t, {
 }), s("424973");
 var a = s("446674"),
   r = s("819855"),
-  n = s("411691"),
-  i = s("521012"),
+  i = s("411691"),
+  n = s("521012"),
   l = s("719923"),
   o = s("907648"),
   u = s("646718"),
@@ -84,31 +84,31 @@ function I(e, t) {
 }
 let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
   R = (e, t, s, a, r) => {
-    let i = [];
+    let n = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
-        i = [e.profiles, e.clientThemes, e.serverBoosts];
+        n = [e.profiles, e.clientThemes, e.serverBoosts];
         break;
       case o.PerksDiscoverabilityCardSection.WHATS_NEW:
-        null != e.freeBoost && r && i.push(e.freeBoost), i.push(e.earlyAccess, s !== n.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing), (i.length < 3 && a || i.length < 3 && !a) && i.push(e.unlimitedSuperReactions);
+        null != e.freeBoost && r && n.push(e.freeBoost), n.push(e.earlyAccess, s !== i.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing), (n.length < 3 && a || n.length < 3 && !a) && n.push(e.unlimitedSuperReactions);
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
-        i = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
+        n = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
-        i = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
+        n = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
-        i = [e.entranceSoundsSeeAllVariation, e.badge]
+        n = [e.entranceSoundsSeeAllVariation, e.badge]
     }
-    return !a && (i = i.filter(e => !e.hideOnNarrowScreen)), i
+    return !a && (n = n.filter(e => !e.hideOnNarrowScreen)), n
   },
   S = e => {
-    let t = (0, a.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()),
+    let t = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()),
       s = null != t ? l.default.getPremiumPlanItem(t) : null,
       r = null != s ? l.default.getSkuIdForPlan(s.planId) : null,
-      n = r === u.PremiumSubscriptionSKUs.TIER_2;
-    if (e) return n ? {
+      i = r === u.PremiumSubscriptionSKUs.TIER_2;
+    if (e) return i ? {
       title: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
       subtitle: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
     } : {

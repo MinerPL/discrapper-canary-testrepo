@@ -81,7 +81,7 @@ f.serializeObject = m, f.parseString = h, f.types = {
   "application/json": JSON.parse
 };
 
-function _(e) {
+function y(e) {
   return /[/+]json($|[^-\w])/.test(e)
 }
 
@@ -114,13 +114,13 @@ function Request(e, t) {
   })
 }
 
-function y(e, t, n) {
+function _(e, t, n) {
   var r = f("DELETE", e);
   return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
 }
 l(Response.prototype), Response.prototype._parseBody = function(e) {
   var t = f.parse[this.type];
-  return this.req._parser ? this.req._parser(this, e) : (!t && _(this.type) && (t = f.parse["application/json"]), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null)
+  return this.req._parser ? this.req._parser(this, e) : (!t && y(this.type) && (t = f.parse["application/json"]), t && e && (e.length > 0 || e instanceof Object) ? t(e) : null)
 }, Response.prototype.toError = function() {
   var e = this.req,
     t = e.method,
@@ -204,7 +204,7 @@ l(Response.prototype), Response.prototype._parseBody = function(e) {
   if (this._withCredentials && (t.withCredentials = !0), !this._formData && "GET" !== this.method && "HEAD" !== this.method && "string" != typeof n && !this._isHost(n)) {
     var a = this._header["content-type"],
       o = this._serializer || f.serialize[a ? a.split(";")[0] : ""];
-    !o && _(a) && (o = f.serialize["application/json"]), o && (n = o(n))
+    !o && y(a) && (o = f.serialize["application/json"]), o && (n = o(n))
   }
   for (var i in this.header) null !== this.header[i] && Object.prototype.hasOwnProperty.call(this.header, i) && t.setRequestHeader(i, this.header[i]);
   this._responseType && (t.responseType = this._responseType), this.emit("request", this), t.send(void 0 === n ? null : n)
@@ -224,7 +224,7 @@ l(Response.prototype), Response.prototype._parseBody = function(e) {
 }, f.options = function(e, t, n) {
   var r = f("OPTIONS", e);
   return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
-}, f.del = y, f.delete = y, f.patch = function(e, t, n) {
+}, f.del = _, f.delete = _, f.patch = function(e, t, n) {
   var r = f("PATCH", e);
   return "function" == typeof t && (n = t, t = null), t && r.send(t), n && r.end(n), r
 }, f.post = function(e, t, n) {

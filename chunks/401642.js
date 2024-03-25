@@ -4,12 +4,12 @@ n.r(t), n.d(t, {
     return a
   },
   closeUserProfileModal: function() {
-    return d
+    return s
   }
 });
 var l = n("913144"),
-  i = n("327037"),
-  u = n("697218"),
+  u = n("327037"),
+  i = n("697218"),
   r = n("506885"),
   o = n("49111");
 
@@ -18,15 +18,15 @@ function a(e) {
     userId: t,
     section: n,
     guildId: a = o.ME,
-    channelId: d,
-    messageId: s,
+    channelId: s,
+    messageId: d,
     roleId: c,
     friendToken: f,
     autoFocusNote: E,
     analyticsLocation: _,
     sourceAnalyticsLocations: m
-  } = e, h = u.default.getUser(t), M = a !== o.ME ? a : void 0;
-  if (null == h) return (0, i.fetchProfile)(t, {
+  } = e, h = i.default.getUser(t), M = a !== o.ME ? a : void 0;
+  if (null == h) return (0, u.fetchProfile)(t, {
     friendToken: f,
     guildId: M
   }).then(() => {
@@ -35,8 +35,8 @@ function a(e) {
       userId: t,
       section: n,
       guildId: a,
-      channelId: d,
-      messageId: s,
+      channelId: s,
+      messageId: d,
       roleId: c,
       friendToken: f,
       autoFocusNote: E,
@@ -53,8 +53,8 @@ function a(e) {
     userId: t,
     section: n,
     guildId: a,
-    channelId: d,
-    messageId: s,
+    channelId: s,
+    messageId: d,
     roleId: c,
     friendToken: f,
     autoFocusNote: E,
@@ -63,7 +63,7 @@ function a(e) {
   })
 }
 
-function d() {
+function s() {
   l.default.dispatch({
     type: "USER_PROFILE_MODAL_CLOSE"
   })

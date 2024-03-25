@@ -4,28 +4,28 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("424973");
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var a = n("917351"),
-  s = n.n(a),
-  i = n("77078"),
+var l = n("917351"),
+  a = n.n(l),
+  s = n("77078"),
   r = n("86621"),
   o = n("449008"),
-  u = n("735310");
+  u = n("545538");
 let d = (0, r.default)(e => {
   let {
     member: t,
     empty: n,
-    guildId: a
+    guildId: l
   } = e;
-  return n || null == t ? (0, l.jsx)("div", {
+  return n || null == t ? (0, i.jsx)("div", {
     className: u.partyMember
-  }) : (0, l.jsx)("div", {
+  }) : (0, i.jsx)("div", {
     className: u.partyMember,
-    children: (0, l.jsx)(i.Avatar, {
-      src: t.getAvatarURL(a, 16),
+    children: (0, i.jsx)(s.Avatar, {
+      src: t.getAvatarURL(l, 16),
       "aria-label": t.username,
-      size: i.AvatarSizes.SIZE_16,
+      size: s.AvatarSizes.SIZE_16,
       className: u.partyMember
     })
   })
@@ -34,38 +34,38 @@ var c = e => {
   let {
     partySize: t,
     members: n,
-    minAvatarsShown: a = 1,
-    maxAvatarsShown: i = 2,
+    minAvatarsShown: l = 1,
+    maxAvatarsShown: s = 2,
     guildId: r
   } = e, {
     totalSize: c,
-    knownSize: m
+    knownSize: f
   } = t;
-  if (c < a) return null;
-  let f = s(n).filter(o.isNotNullish).take(i).map(e => (0, l.jsx)(d, {
+  if (c < l) return null;
+  let p = a(n).filter(o.isNotNullish).take(s).map(e => (0, i.jsx)(d, {
       member: e,
       guildId: r
     }, e.id)).value(),
-    h = c - m;
-  for (let e = 0; e < h && f.length < i; e++) f.push((0, l.jsx)(d, {
+    m = c - f;
+  for (let e = 0; e < m && p.length < s; e++) p.push((0, i.jsx)(d, {
     empty: !0,
     guildId: r
   }, "empty-member-".concat(e)));
-  let p = Math.max(Math.min(c - f.length, 99), 0);
-  if (1 === p) {
-    let e = n[i];
-    f.push((0, l.jsx)(d, {
+  let h = Math.max(Math.min(c - p.length, 99), 0);
+  if (1 === h) {
+    let e = n[s];
+    p.push((0, i.jsx)(d, {
       member: e,
       guildId: r
     }, e.id))
   }
-  return (0, l.jsx)("div", {
+  return (0, i.jsx)("div", {
     className: u.wrapper,
-    children: (0, l.jsxs)("div", {
+    children: (0, i.jsxs)("div", {
       className: u.partyMembers,
-      children: [f, p > 1 ? (0, l.jsxs)("div", {
+      children: [p, h > 1 ? (0, i.jsxs)("div", {
         className: u.partyMemberOverflow,
-        children: ["+", p]
+        children: ["+", h]
       }) : null]
     })
   })

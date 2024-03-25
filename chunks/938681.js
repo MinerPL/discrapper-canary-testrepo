@@ -5,25 +5,25 @@ r.r(t), r.d(t, {
   }
 });
 var n = function(e, t, r, n) {
-  var o = n.clientWidth,
-    a = n.clientHeight,
+  var a = n.clientWidth,
+    o = n.clientHeight,
     i = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
     u = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
     l = i - (n.getBoundingClientRect().left + window.pageXOffset),
-    c = u - (n.getBoundingClientRect().top + window.pageYOffset);
+    s = u - (n.getBoundingClientRect().top + window.pageYOffset);
   if ("vertical" === t) {
-    var s = void 0;
-    if (s = c < 0 ? 359 : c > a ? 0 : 360 * (-(100 * c / a) + 100) / 100, r.h !== s) return {
-      h: s,
+    var f = void 0;
+    if (f = s < 0 ? 359 : s > o ? 0 : 360 * (-(100 * s / o) + 100) / 100, r.h !== f) return {
+      h: f,
       s: r.s,
       l: r.l,
       a: r.a,
       source: "hsl"
     }
   } else {
-    var f = void 0;
-    if (f = l < 0 ? 0 : l > o ? 359 : 360 * (100 * l / o) / 100, r.h !== f) return {
-      h: f,
+    var c = void 0;
+    if (c = l < 0 ? 0 : l > a ? 359 : 360 * (100 * l / a) / 100, r.h !== c) return {
+      h: c,
       s: r.s,
       l: r.l,
       a: r.a,

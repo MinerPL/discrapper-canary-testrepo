@@ -6,7 +6,7 @@ r.r(t), r.d(t, {
 });
 var n = r("37983"),
   l = r("884691"),
-  i = r("132710"),
+  i = r("404828"),
   a = r.n(i),
   s = r("77078"),
   u = r("812204"),
@@ -26,13 +26,13 @@ var n = r("37983"),
       analyticsLocations: E
     } = (0, d.default)(u.default.MASKED_LINK), C = l.useCallback(t => (0, o.handleClick)(e, t, E), [E, e]), I = l.useCallback(e => {
       1 === e.button && C(e)
-    }, [C]), R = a.sanitizeUrl(c);
+    }, [C]), p = a.sanitizeUrl(c);
     return (0, n.jsx)(s.Anchor, {
       ...h,
       title: i,
       target: "_blank",
       rel: "noreferrer noopener",
-      href: R,
+      href: p,
       onClick: C,
       onAuxClick: I,
       children: null != f ? f : i

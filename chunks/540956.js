@@ -16,12 +16,12 @@ var DataView = n("864259"),
   f = i(Promise),
   p = i(Set),
   h = i(WeakMap),
-  g = r;
-(DataView && g(new DataView(new ArrayBuffer(1))) != u || Map && g(new Map) != o || Promise && g(Promise.resolve()) != s || Set && g(new Set) != a || WeakMap && g(new WeakMap) != c) && (g = function(e) {
+  v = r;
+(DataView && v(new DataView(new ArrayBuffer(1))) != u || Map && v(new Map) != o || Promise && v(Promise.resolve()) != s || Set && v(new Set) != a || WeakMap && v(new WeakMap) != c) && (v = function(e) {
   var t = r(e),
     n = "[object Object]" == t ? e.constructor : void 0,
-    g = n ? i(n) : "";
-  if (g) switch (g) {
+    v = n ? i(n) : "";
+  if (v) switch (v) {
     case d:
       return u;
     case l:
@@ -34,4 +34,4 @@ var DataView = n("864259"),
       return c
   }
   return t
-}), e.exports = g
+}), e.exports = v

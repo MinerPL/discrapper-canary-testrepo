@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var a = n("42203");
+var i = n("42203");
 
 function l(e, t) {
-  let n = a.default.getChannel(t);
+  let n = i.default.getChannel(t);
   return null != n && e.bot && n.isPrivate() && null == n.rawRecipients.find(t => t.id === e.id)
 }

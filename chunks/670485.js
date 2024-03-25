@@ -1,27 +1,27 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return f
+    return c
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("123090"),
-  c = Object.assign || function(e) {
+  s = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var r = arguments[t];
       for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
     }
     return e
   },
-  s = function(e) {
+  f = function(e) {
     var t = e.colors,
       r = e.onClick,
       n = void 0 === r ? function() {} : r,
-      a = e.onSwatchHover,
+      o = e.onSwatchHover,
       i = (0, u.default)({
         default: {
           colors: {
@@ -50,13 +50,13 @@ var n = r("884691"),
       }, {
         "no-presets": !t || !t.length
       }),
-      s = function(e, t) {
+      f = function(e, t) {
         n({
           hex: e,
           source: "hex"
         }, t)
       };
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: i.colors,
       className: "flexbox-fix"
     }, t.map(function(e) {
@@ -64,23 +64,23 @@ var n = r("884691"),
           color: e
         } : e,
         r = "" + t.color + (t.title || "");
-      return o.createElement("div", {
+      return a.createElement("div", {
         key: r,
         style: i.swatchWrap
-      }, o.createElement(l.Swatch, c({}, t, {
+      }, a.createElement(l.Swatch, s({}, t, {
         style: i.swatch,
-        onClick: s,
-        onHover: a,
+        onClick: f,
+        onHover: o,
         focusStyle: {
           boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color
         }
       })))
     }))
   };
-s.propTypes = {
+f.propTypes = {
   colors: i.arrayOf(i.oneOfType([i.string, i.shape({
     color: i.string,
     title: i.string
   })])).isRequired
 };
-var f = s
+var c = f

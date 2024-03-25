@@ -1,37 +1,37 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   getDefaultLibraryApplicationAction: function() {
     return r
   }
 });
-var n = l("602043"),
-  a = l("49111");
+var i = n("602043"),
+  s = n("49111");
 
-function r(e, t, l) {
+function r(e, t, n) {
   let r = t.getState(e.id, e.branchId),
-    i = l.getQueuePosition(e.id, e.branchId),
-    u = l.paused;
+    a = n.getQueuePosition(e.id, e.branchId),
+    o = n.paused;
   if (null != r) {
-    if (null == i || -1 === i) switch (r.type) {
-      case a.LocalDispatchApplicationStates.INSTALLING:
-        return a.LibraryApplicationActions.INSTALL;
-      case a.LocalDispatchApplicationStates.UPDATING:
-      case a.LocalDispatchApplicationStates.UPDATE_REQUIRED:
-        return a.LibraryApplicationActions.UPDATE
+    if (null == a || -1 === a) switch (r.type) {
+      case s.LocalDispatchApplicationStates.INSTALLING:
+        return s.LibraryApplicationActions.INSTALL;
+      case s.LocalDispatchApplicationStates.UPDATING:
+      case s.LocalDispatchApplicationStates.UPDATE_REQUIRED:
+        return s.LibraryApplicationActions.UPDATE
     }
     switch (r.type) {
-      case a.LocalDispatchApplicationStates.INSTALLING:
-      case a.LocalDispatchApplicationStates.UPDATING:
-      case a.LocalDispatchApplicationStates.UPDATE_REQUIRED:
-      case a.LocalDispatchApplicationStates.REPAIRING:
-        if (i > 0) return a.LibraryApplicationActions.MOVE_UP;
-        if (u) return a.LibraryApplicationActions.RESUME;
-        return a.LibraryApplicationActions.PAUSE;
-      case a.LocalDispatchApplicationStates.UP_TO_DATE:
-        return a.LibraryApplicationActions.PLAY;
-      case a.LocalDispatchApplicationStates.UNINSTALLING:
+      case s.LocalDispatchApplicationStates.INSTALLING:
+      case s.LocalDispatchApplicationStates.UPDATING:
+      case s.LocalDispatchApplicationStates.UPDATE_REQUIRED:
+      case s.LocalDispatchApplicationStates.REPAIRING:
+        if (a > 0) return s.LibraryApplicationActions.MOVE_UP;
+        if (o) return s.LibraryApplicationActions.RESUME;
+        return s.LibraryApplicationActions.PAUSE;
+      case s.LocalDispatchApplicationStates.UP_TO_DATE:
+        return s.LibraryApplicationActions.PLAY;
+      case s.LocalDispatchApplicationStates.UNINSTALLING:
         return null
     }
   }
-  return null != i && i > 0 ? a.LibraryApplicationActions.MOVE_UP : (0, n.isSupportedPlatform)() ? a.LibraryApplicationActions.INSTALL : null
+  return null != a && a > 0 ? s.LibraryApplicationActions.MOVE_UP : (0, i.isSupportedPlatform)() ? s.LibraryApplicationActions.INSTALL : null
 }

@@ -1,9 +1,9 @@
-var n = e("921563"),
-  o = e("169828"),
-  i = e("227290"),
-  u = e("952133");
-t.exports = function(t, r, e) {
-  if (!u(e)) return !1;
-  var a = typeof r;
-  return ("number" == a ? !!(o(e) && i(r, e.length)) : "string" == a && r in e) && n(e[r], t)
+var r = n("921563"),
+  i = n("169828"),
+  o = n("227290"),
+  a = n("952133");
+t.exports = function(t, e, n) {
+  if (!a(n)) return !1;
+  var u = typeof e;
+  return ("number" == u ? !!(i(n) && o(e, n.length)) : "string" == u && e in n) && r(n[e], t)
 }

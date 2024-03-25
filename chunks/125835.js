@@ -1,34 +1,34 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return o
   }
 });
 var r = n("37983");
 n("884691");
-var i = n("414456"),
-  l = n.n(i),
-  o = n("642032"),
-  s = n("767964");
+var s = n("414456"),
+  i = n.n(s),
+  l = n("642032"),
+  a = n("625948");
 
-function a(e) {
+function o(e) {
   let {
     className: t,
     children: n,
-    forceUseColor: i = !1,
-    hideStars: a
+    forceUseColor: s = !1,
+    hideStars: o
   } = e;
   return (0, r.jsxs)("span", {
-    className: l(s.container, t, {
-      [s.containerColored]: i
+    className: i(a.container, t, {
+      [a.containerColored]: s
     }),
-    children: [n, a ? null : (0, r.jsxs)(r.Fragment, {
-      children: [(0, r.jsx)(o.default, {
-        foreground: s.sparkleStarTopRight
-      }), (0, r.jsx)(o.default, {
-        foreground: s.sparkleStarRight
-      }), (0, r.jsx)(o.default, {
-        foreground: s.sparkleStarBottomLeft
+    children: [n, o ? null : (0, r.jsxs)(r.Fragment, {
+      children: [(0, r.jsx)(l.default, {
+        foreground: a.sparkleStarTopRight
+      }), (0, r.jsx)(l.default, {
+        foreground: a.sparkleStarRight
+      }), (0, r.jsx)(l.default, {
+        foreground: a.sparkleStarBottomLeft
       })]
     })]
   })

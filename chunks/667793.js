@@ -78,9 +78,9 @@ function M(e) {
         }
       }
     }, [p]),
-    O = async () => {
+    v = async () => {
       await G(r, S.GuildJoinRequestApplicationStatuses.APPROVED)
-    }, v = async () => {
+    }, O = async () => {
       await G(r, S.GuildJoinRequestApplicationStatuses.REJECTED)
     };
   return (0, a.jsxs)(o.Clickable, {
@@ -105,12 +105,12 @@ function M(e) {
       })]
     }), j && (0, a.jsx)(N, {
       icon: E.default,
-      onClick: O,
+      onClick: v,
       submitting: p === S.GuildJoinRequestApplicationStatuses.APPROVED,
       disabled: null != p && p !== S.GuildJoinRequestApplicationStatuses.APPROVED
     }), j && (0, a.jsx)(N, {
       icon: I.default,
-      onClick: v,
+      onClick: O,
       submitting: p === S.GuildJoinRequestApplicationStatuses.REJECTED,
       disabled: null != p && p !== S.GuildJoinRequestApplicationStatuses.REJECTED
     }), (0, a.jsx)(o.Clickable, {

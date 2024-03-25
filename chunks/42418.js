@@ -1,34 +1,34 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   default: function() {
     return u
   }
-}), s("881410"), s("222007"), s("424973"), s("511434"), s("313619"), s("654714"), s("287168"), s("956660");
-var a = s("884691"),
-  n = s("65597"),
-  l = s("850391"),
-  r = s("585722"),
-  i = s("856220"),
-  o = s("891475");
+}), a("881410"), a("222007"), a("424973"), a("511434"), a("313619"), a("654714"), a("287168"), a("956660");
+var s = a("884691"),
+  n = a("65597"),
+  l = a("850391"),
+  r = a("585722"),
+  i = a("856220"),
+  o = a("891475");
 
 function u(e, t) {
-  var s, u;
+  var a, u;
   let {
     mediaAttachments: d,
     hasThumbnail: c
   } = function(e) {
-    let [t, s] = a.useState(null), o = (0, n.useStateFromStoresArray)([r.default], () => {
+    let [t, a] = s.useState(null), o = (0, n.useStateFromStoresArray)([r.default], () => {
       let t = r.default.getUploads(e.id, l.ChatInputTypes.CREATE_FORUM_POST.drafts.type),
-        s = t.find(e => e.isThumbnail);
-      return null != s ? [s] : t.filter(e => e.isVideo || e.isImage)
-    }), u = a.useMemo(() => o.some(e => e.isThumbnail), [o]);
-    return a.useEffect(() => {
+        a = t.find(e => e.isThumbnail);
+      return null != a ? [a] : t.filter(e => e.isVideo || e.isImage)
+    }), u = s.useMemo(() => o.some(e => e.isThumbnail), [o]);
+    return s.useEffect(() => {
       let e = [],
         t = o.slice(0, i.MAX_THUMBNAIL_COUNT).flatMap(t => {
-          var s;
-          let a = null == t ? void 0 : null === (s = t.item) || void 0 === s ? void 0 : s.file;
-          if (null == a) return [];
-          let n = URL.createObjectURL(a);
+          var a;
+          let s = null == t ? void 0 : null === (a = t.item) || void 0 === a ? void 0 : a.file;
+          if (null == s) return [];
+          let n = URL.createObjectURL(s);
           return e.push(n), {
             id: t.id,
             src: n,
@@ -39,16 +39,16 @@ function u(e, t) {
             isVideo: t.isVideo
           }
         });
-      return s(t), () => {
-        s(null), e.forEach(e => URL.revokeObjectURL(e))
+      return a(t), () => {
+        a(null), e.forEach(e => URL.revokeObjectURL(e))
       }
     }, [o]), {
       mediaAttachments: t,
       hasThumbnail: u
     }
-  }(e), m = Math.max(i.MAX_THUMBNAIL_COUNT - (null !== (s = null == d ? void 0 : d.length) && void 0 !== s ? s : 0), 0), {
+  }(e), m = Math.max(i.MAX_THUMBNAIL_COUNT - (null !== (a = null == d ? void 0 : d.length) && void 0 !== a ? a : 0), 0), {
     embeds: h
-  } = (0, o.useExtractEmbedPreview)(c, m, t), f = a.useMemo(() => null == h ? void 0 : h.flatMap(e => {
+  } = (0, o.useExtractEmbedPreview)(c, m, t), f = s.useMemo(() => null == h ? void 0 : h.flatMap(e => {
     let t = (0, i.getEmbedPreviewImageUrl)(e);
     return null == t ? [] : {
       id: t,

@@ -1,5 +1,5 @@
-var e = n("905577"),
-  o = n("890022");
-t.exports = function(t, r) {
-  return r.length < 2 ? t : e(t, o(r, 0, -1))
+var n = r("905577"),
+  u = r("890022");
+e.exports = function(e, t) {
+  return t.length < 2 ? e : n(e, u(t, 0, -1))
 }

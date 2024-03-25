@@ -8,8 +8,8 @@ var t = E("913144"),
   o = E("689988"),
   n = E("393414"),
   r = E("718517"),
-  i = E("799895"),
-  a = E("979268"),
+  a = E("799895"),
+  i = E("979268"),
   I = E("520899"),
   s = E("49111");
 class T extends o.default {
@@ -18,13 +18,13 @@ class T extends o.default {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
     }, this.handlePostConnectionOpen = () => {
       ! function e() {
-        a.default.getCurrentConfig({
+        i.default.getCurrentConfig({
           location: "8fe27d_1"
         }, {
           autoTrackExposure: !1
         }).showReminders && (I.default.getMessageReminders().filter(e => null != e.dueAt && new Date > e.dueAt).filter(e => !I.default.hasSentNotification(e.messageId)).forEach(e => {
           var _, E;
-          i.default.showNotification(null, "Overdue reminder in ".concat(e.channelSummary), null !== (E = null !== (_ = e.notes) && void 0 !== _ ? _ : e.messageSummary) && void 0 !== E ? E : "", {
+          a.default.showNotification(null, "Overdue reminder in ".concat(e.channelSummary), null !== (E = null !== (_ = e.notes) && void 0 !== _ ? _ : e.messageSummary) && void 0 !== E ? E : "", {
             notif_type: "OVERDUE_MESSAGE_REMINDER",
             notif_user_id: e.authorId,
             message_id: e.messageId,

@@ -1,11 +1,11 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = r("506289"),
-  o = function() {
+  a = function() {
     try {
       var e = (0, n.default)(Object, "defineProperty");
       return e({}, "", {}), e

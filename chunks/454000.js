@@ -1,36 +1,36 @@
 "use strict";
 t.r(n), t.d(n, {
   default: function() {
-    return s
+    return r
   }
 });
 var l = t("37983");
 t("884691");
-var i = t("77078"),
-  u = t("272030"),
-  o = t("861370"),
-  a = t("818059"),
-  c = t("782340");
+var u = t("77078"),
+  o = t("272030"),
+  i = t("861370"),
+  c = t("818059"),
+  s = t("782340");
 
-function s(e) {
+function r(e) {
   let {
     channel: n,
     channelId: t,
-    originalLink: s,
-    messageId: r,
+    originalLink: r,
+    messageId: a,
     onSelect: d
-  } = e, f = (0, a.default)(n, s, r), C = (0, o.default)({
+  } = e, f = (0, c.default)(n, r, a), C = (0, i.default)({
     id: t,
-    label: c.default.Messages.COPY_ID_CHANNEL
+    label: s.default.Messages.COPY_ID_CHANNEL
   });
-  return (0, l.jsxs)(i.Menu, {
+  return (0, l.jsxs)(u.Menu, {
     navId: "channel-mention-context",
-    onClose: u.closeContextMenu,
+    onClose: o.closeContextMenu,
     onSelect: d,
-    "aria-label": c.default.Messages.CHANNEL_MENTION_ACTIONS_MENU_LABEL,
-    children: [(0, l.jsx)(i.MenuGroup, {
+    "aria-label": s.default.Messages.CHANNEL_MENTION_ACTIONS_MENU_LABEL,
+    children: [(0, l.jsx)(u.MenuGroup, {
       children: f
-    }, "channel-mention-actions"), (0, l.jsx)(i.MenuGroup, {
+    }, "channel-mention-actions"), (0, l.jsx)(u.MenuGroup, {
       children: C
     }, "developer-actions")]
   })

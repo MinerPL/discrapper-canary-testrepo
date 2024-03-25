@@ -1,11 +1,11 @@
 "use strict";
-var n, r;
-l.r(t), l.d(t, {
+var i, o;
+n.r(t), n.d(t, {
   CreateGuildSlideTypes: function() {
-    return n
+    return i
   },
   CREATE_GUILD_MODAL_KEY: function() {
-    return a
+    return l
   }
-}), (r = n || (n = {})).GUILD_TEMPLATES = "guild-templates", r.CUSTOMIZE_GUILD = "customize-guild", r.CHANNEL_PROMPT = "channel-prompt", r.JOIN_GUILD = "join-guild", r.CREATION_INTENT = "creation-intent";
-let a = "create-guild"
+}), (o = i || (i = {})).GUILD_TEMPLATES = "guild-templates", o.CUSTOMIZE_GUILD = "customize-guild", o.CHANNEL_PROMPT = "channel-prompt", o.JOIN_GUILD = "join-guild", o.CREATION_INTENT = "creation-intent";
+let l = "create-guild"

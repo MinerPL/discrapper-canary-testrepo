@@ -4,9 +4,9 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var a = n("37983"),
-  l = n("884691"),
-  s = n("550410");
+var s = n("37983"),
+  u = n("884691"),
+  o = n("550410");
 
 function i(e) {
   let {
@@ -14,8 +14,8 @@ function i(e) {
   } = e, {
     preventIdle: n,
     allowIdle: i
-  } = (0, s.usePreventIdle)("popup");
-  return l.useEffect(() => (n(), () => i()), [i, n]), (0, a.jsx)(a.Fragment, {
+  } = (0, o.usePreventIdle)("popup");
+  return u.useEffect(() => (n(), () => i()), [i, n]), (0, s.jsx)(s.Fragment, {
     children: t
   })
 }

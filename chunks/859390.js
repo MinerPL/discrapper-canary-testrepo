@@ -5,14 +5,14 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = function(e) {
     var t = e.onClick,
       r = e.label,
       n = e.children,
       i = e.active,
-      u = (0, a.default)({
+      u = (0, o.default)({
         default: {
           button: {
             backgroundImage: "linear-gradient(-180deg, #FFFFFF 0%, #E6E6E6 100%)",
@@ -36,7 +36,7 @@ var n = r("884691"),
       }, {
         active: i
       });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: u.button,
       onClick: t
     }, r || n)

@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("77078"),
+  i = s.n(r),
+  n = s("77078"),
   l = s("599110"),
   o = s("907648"),
   u = s("646718"),
@@ -34,20 +34,20 @@ var T = e => {
     label: c.default.Messages.BASIC
   }];
   return (0, a.jsxs)("div", {
-    className: n(_.toggleSwitch, {
+    className: i(_.toggleSwitch, {
       [_.toggleSwitchStandard]: t === u.PremiumTypes.TIER_2,
       [_.toggleSwitchBasic]: t === u.PremiumTypes.TIER_0
     }),
-    children: [r.map(e => (0, a.jsx)(i.Clickable, {
+    children: [r.map(e => (0, a.jsx)(n.Clickable, {
       className: _.toggleOption,
       onClick: () => E(e.type, t, s),
-      children: (0, a.jsx)(i.Heading, {
+      children: (0, a.jsx)(n.Heading, {
         className: _.sectionHeader,
         variant: "heading-md/semibold",
         children: e.label
       })
     }, e.type)), (0, a.jsx)("div", {
-      className: n(_.slider, {
+      className: i(_.slider, {
         [_.sliderStandard]: t === u.PremiumTypes.TIER_2,
         [_.sliderBasic]: t === u.PremiumTypes.TIER_0
       })

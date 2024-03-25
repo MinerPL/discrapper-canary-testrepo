@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   UserTriggerAAExperiment: function() {
-    return i
+    return l
   },
   useGlobalTriggerDebugging: function() {
     return r
@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 });
 var a = n("862205"),
   s = n("565034");
-let i = (0, a.createExperiment)({
+let l = (0, a.createExperiment)({
     kind: "user",
     id: s.userTriggerExperimentId,
     label: "Trigger Debugging User AA Experiment",
@@ -24,7 +24,7 @@ let i = (0, a.createExperiment)({
       }
     }]
   }),
-  l = (0, a.createExperiment)({
+  i = (0, a.createExperiment)({
     kind: "guild",
     id: s.guildTriggerExperimentId,
     label: "Trigger Debugging Guild AA Experiment",
@@ -42,19 +42,19 @@ let i = (0, a.createExperiment)({
   r = e => {
     let t = "guild trigger debug",
       n = "user trigger debug";
-    l.useExperiment({
+    i.useExperiment({
       location: t,
       guildId: e
-    }, {
-      autoTrackExposure: !1
-    }), l.trackExposure({
-      location: t,
-      guildId: e
-    }), i.useExperiment({
-      location: n
     }, {
       autoTrackExposure: !1
     }), i.trackExposure({
+      location: t,
+      guildId: e
+    }), l.useExperiment({
+      location: n
+    }, {
+      autoTrackExposure: !1
+    }), l.trackExposure({
       location: n
     })
   }

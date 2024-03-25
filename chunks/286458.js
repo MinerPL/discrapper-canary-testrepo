@@ -6,54 +6,54 @@ var n = r("939724");
 Object.defineProperty(t, "Alpha", {
   enumerable: !0,
   get: function() {
-    return f(n).default
+    return c(n).default
   }
 });
-var o = r("355945");
+var a = r("355945");
 Object.defineProperty(t, "Checkboard", {
   enumerable: !0,
   get: function() {
-    return f(o).default
+    return c(a).default
   }
 });
-var a = r("357495");
+var o = r("357495");
 Object.defineProperty(t, "EditableInput", {
   enumerable: !0,
   get: function() {
-    return f(a).default
+    return c(o).default
   }
 });
 var i = r("217537");
 Object.defineProperty(t, "Hue", {
   enumerable: !0,
   get: function() {
-    return f(i).default
+    return c(i).default
   }
 });
 var u = r("214500");
 Object.defineProperty(t, "Raised", {
   enumerable: !0,
   get: function() {
-    return f(u).default
+    return c(u).default
   }
 });
-var l = r("143977");
+var l = r("104449");
 Object.defineProperty(t, "Saturation", {
   enumerable: !0,
   get: function() {
-    return f(l).default
+    return c(l).default
   }
 });
-var c = r("325096");
+var s = r("325096");
 Object.defineProperty(t, "ColorWrap", {
   enumerable: !0,
   get: function() {
-    return f(c).default
+    return c(s).default
   }
 });
-var s = r("414493");
+var f = r("414493");
 
-function f(e) {
+function c(e) {
   return e && e.__esModule ? e : {
     default: e
   }
@@ -61,6 +61,6 @@ function f(e) {
 Object.defineProperty(t, "Swatch", {
   enumerable: !0,
   get: function() {
-    return f(s).default
+    return c(f).default
   }
 })

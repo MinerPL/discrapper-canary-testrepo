@@ -51,7 +51,7 @@ let p = function(e, t) {
     for (e = n ? c(e / 700) : e >> 1, e += c(e / t); e > 26 * a >> 1; r += 36) e = c(e / a);
     return c(r + (a + 1) * e / (e + 38))
   },
-  g = function(e) {
+  v = function(e) {
     let t = [],
       n = e.length,
       r = 0,
@@ -77,7 +77,7 @@ let p = function(e, t) {
     }
     return String.fromCodePoint(...t)
   },
-  b = function(e) {
+  g = function(e) {
     let t = [],
       n = (e = f(e)).length,
       r = 128,
@@ -111,16 +111,16 @@ e.exports = {
     decode: f,
     encode: e => String.fromCodePoint(...e)
   },
-  decode: g,
-  encode: b,
+  decode: v,
+  encode: g,
   toASCII: function(e) {
     return l(e, function(e) {
-      return i.test(e) ? "xn--" + b(e) : e
+      return i.test(e) ? "xn--" + g(e) : e
     })
   },
   toUnicode: function(e) {
     return l(e, function(e) {
-      return r.test(e) ? g(e.slice(4).toLowerCase()) : e
+      return r.test(e) ? v(e.slice(4).toLowerCase()) : e
     })
   }
 }

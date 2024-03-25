@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("65597"),
   r = s("819855"),
-  n = s("79112"),
-  i = s("841098"),
+  i = s("79112"),
+  n = s("841098"),
   l = s("697218"),
   o = s("719923"),
   u = s("646718"),
@@ -32,8 +32,8 @@ var a = s("65597"),
   h = s("771116"),
   L = s("309920"),
   x = s("480905"),
-  D = s("761708"),
-  v = s("224456"),
+  v = s("761708"),
+  D = s("224456"),
   U = s("656564"),
   b = s("124989"),
   j = s("14528"),
@@ -44,7 +44,7 @@ let y = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
     let {
       styles: t,
       selectedPremiumType: s
-    } = e, r = (0, i.default)(), k = (0, a.useStateFromStores)([l.default], () => {
+    } = e, r = (0, n.default)(), k = (0, a.useStateFromStores)([l.default], () => {
       let e = l.default.getCurrentUser();
       return o.default.canUsePremiumProfileCustomization(e)
     }), H = s !== u.PremiumTypes.TIER_0 ? _.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE : _.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_0_CORRECTED, F = {
@@ -76,14 +76,14 @@ let y = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       emoji: {
         title: _.default.Messages.PREMIUM_MARKETING_FEATURE_EMOJI_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_EMOJI_PERK_TITLE,
-        imageSource: D,
+        imageSource: v,
         imageClassName: t.emojiImage
       },
       guildProfile: {
         title: _.default.Messages.PREMIUM_MARKETING_PER_GUILD_PROFILES_PERK_TITLE,
         description: e => {
           let t = () => {
-            n.default.open(d.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
+            i.default.open(d.UserSettingsSections.PROFILE_CUSTOMIZATION, null, {
               scrollPosition: c.ProfileCustomizationScrollPositions.TRY_IT_OUT,
               analyticsLocations: e
             })
@@ -100,7 +100,7 @@ let y = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       longerMessages: {
         title: _.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_TITLE,
         description: _.default.Messages.PREMIUM_MARKETING_LONGER_MESSAGES_PERK_DESCRIPTION,
-        imageSource: y(r, v, U),
+        imageSource: y(r, D, U),
         imageClassName: t.longerMessagesImage
       },
       moreGuilds: {

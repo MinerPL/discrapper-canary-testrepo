@@ -1,41 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 }), n("222007");
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("629109"),
-  l = n("990766"),
-  r = n("375202"),
-  o = n("727284"),
-  u = n("373469"),
-  d = n("42887"),
-  c = n("568307"),
+  l = n("629109"),
+  i = n("990766"),
+  r = n("161454"),
+  o = n("375202"),
+  u = n("727284"),
+  d = n("373469"),
+  c = n("42887"),
   f = n("703370"),
   E = n("773336"),
-  _ = n("716724"),
-  h = n("880553"),
+  h = n("716724"),
+  _ = n("880553"),
   C = n("492249"),
-  I = n("49111"),
-  T = {
-    [I.RPCCommands.TOGGLE_VIDEO]: {
+  S = n("49111"),
+  I = {
+    [S.RPCCommands.TOGGLE_VIDEO]: {
       scope: {
-        [C.RPC_SCOPE_CONFIG.ALL]: [I.OAuth2Scopes.RPC, I.OAuth2Scopes.RPC_VIDEO_WRITE]
+        [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VIDEO_WRITE]
       },
       handler() {
-        let e = d.default.isVideoEnabled(),
-          t = (0, h.default)();
-        null != t && (e ? i.default.setVideoEnabled(!1) : (0, o.default)(() => i.default.setVideoEnabled(!0), I.AppContext.APP))
+        let e = c.default.isVideoEnabled(),
+          t = (0, _.default)();
+        null != t && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), S.AppContext.APP))
       }
     },
-    [I.RPCCommands.TOGGLE_SCREENSHARE]: {
+    [S.RPCCommands.TOGGLE_SCREENSHARE]: {
       scope: {
-        [C.RPC_SCOPE_CONFIG.ALL]: [I.OAuth2Scopes.RPC, I.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
+        [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
       },
-      validation: e => (0, _.default)(e).optional().keys({
+      validation: e => (0, h.default)(e).optional().keys({
         pid: e.number().optional().min(0)
       }),
       handler(e) {
@@ -43,21 +43,21 @@ var s = n("77078"),
           args: {
             pid: t
           }
-        } = e, i = u.default.getCurrentUserActiveStream(), o = u.default.getStreamerActiveStreamMetadata(), d = (0, r.default)(c.default, f.default), _ = (0, h.default)();
-        null != _ && (null != t && null != o && o.pid !== t && (0, E.isWindows)() ? (0, l.startStream)(_.guild_id, _.id, {
+        } = e, l = d.default.getCurrentUserActiveStream(), u = d.default.getStreamerActiveStreamMetadata(), c = (0, o.default)(r.default, f.default), h = (0, _.default)();
+        null != h && (null != t && null != u && u.pid !== t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
           pid: t
-        }) : null != i ? (0, l.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, l.startStream)(_.guild_id, _.id, {
+        }) : null != l ? (0, i.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
           pid: t
-        }) : null != d ? (0, l.startStream)(_.guild_id, _.id, {
-          pid: d.pid
+        }) : null != c ? (0, i.startStream)(h.guild_id, h.id, {
+          pid: c.pid
         }) : (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await n.el("451863").then(n.bind(n, "451863"));
           return t => (0, a.jsx)(e, {
             ...t,
-            guildId: _.guild_id,
-            analyticsLocation: I.AnalyticsLocations.ACTIVITY_RPC
+            guildId: h.guild_id,
+            analyticsLocation: S.AnalyticsLocations.ACTIVITY_RPC
           })
         }))
       }

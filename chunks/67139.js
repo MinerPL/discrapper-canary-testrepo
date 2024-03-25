@@ -14,7 +14,7 @@ var l = n("37983");
 n("884691");
 var a = n("885590"),
   s = n("837979"),
-  i = n("732827");
+  i = n("211757");
 let r = {
   [s.STAGE_APPLICATION_ID]: new a.StageChannelNowPlayingDelegate
 };

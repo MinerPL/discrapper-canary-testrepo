@@ -52,17 +52,17 @@ function c(e) {
       })(d), h = d(p)
     }
     e.dispatch((0, i.setClientOffset)(u, h));
-    var g = f.getSource(p).beginDrag(l, p);
-    if (null != g) {
+    var v = f.getSource(p).beginDrag(l, p);
+    if (null != v) {
       (function(e) {
         (0, r.invariant)((0, o.isObject)(e), "Item must be an object.")
-      })(g), f.pinSource(p);
-      var b = f.getSourceType(p);
+      })(v), f.pinSource(p);
+      var g = f.getSourceType(p);
       return {
         type: s.BEGIN_DRAG,
         payload: {
-          itemType: b,
-          item: g,
+          itemType: g,
+          item: v,
           sourceId: p,
           clientOffset: u || null,
           sourceClientOffset: h || null,

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("450911"),
-  l = n("272030"),
+  l = n("450911"),
+  i = n("272030"),
   r = n("86621"),
   o = n("305961");
 
@@ -23,10 +23,10 @@ function u(e) {
       })
     }
     handleMessageUser(e, t) {
-      return i.default.openPrivateChannel(t.id)
+      return l.default.openPrivateChannel(t.id)
     }
     handleUserContextMenu(e, t, s) {
-      (0, l.openContextMenuLazy)(e, async () => {
+      (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("406784").then(n.bind(n, "406784"));
@@ -39,7 +39,7 @@ function u(e) {
       })
     }
     handleGuildContextMenu(e, t) {
-      (0, l.openContextMenuLazy)(e, async () => {
+      (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("374705").then(n.bind(n, "374705"));
@@ -52,7 +52,7 @@ function u(e) {
     handleChannelContextMenu(e, t) {
       let s = o.default.getGuild(t.getGuildId());
       if (null == s) return null;
-      (0, l.openContextMenuLazy)(e, async () => {
+      (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
         } = await n.el("754938").then(n.bind(n, "754938"));

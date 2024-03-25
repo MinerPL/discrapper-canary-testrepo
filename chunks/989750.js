@@ -6,8 +6,8 @@ i.r(e), i.d(e, {
 });
 var l = i("37983"),
   r = i("884691"),
-  n = i("77078"),
-  a = i("716241"),
+  a = i("77078"),
+  n = i("716241"),
   s = i("933629"),
   o = i("383161"),
   d = i("42203"),
@@ -16,7 +16,7 @@ var l = i("37983"),
   u = i("599110"),
   f = i("49111"),
   x = i("782340"),
-  m = i("966955"),
+  m = i("729521"),
   g = function(t) {
     let {
       guild: e,
@@ -41,23 +41,23 @@ var l = i("37983"),
               height: 40
             })
           }), (0, l.jsxs)("div", {
-            children: [(0, l.jsx)(n.Heading, {
+            children: [(0, l.jsx)(a.Heading, {
               variant: "heading-md/semibold",
               className: m.header,
               children: x.default.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT
-            }), (0, l.jsx)(n.Text, {
+            }), (0, l.jsx)(a.Text, {
               variant: "text-sm/normal",
               children: x.default.Messages.NEW_MEMBER_BADGE_POPOUT_TEXT
             })]
           })]
-        }), (0, l.jsx)(n.Button, {
-          size: n.Button.Sizes.SMALL,
-          color: n.Button.Colors.BRAND,
+        }), (0, l.jsx)(a.Button, {
+          size: a.Button.Sizes.SMALL,
+          color: a.Button.Colors.BRAND,
           className: m.ctaButton,
           innerClassName: m.ctaButtonContent,
           fullWidth: !0,
           onClick: () => {
-            a.default.trackWithMetadata(f.AnalyticEvents.NEW_MEMBER_MENTION_CTA_CLICKED, {
+            n.default.trackWithMetadata(f.AnalyticEvents.NEW_MEMBER_MENTION_CTA_CLICKED, {
               target_user_id: i.author.id
             }), g(), (0, o.mentionUser)(i.author, j.id)
           },

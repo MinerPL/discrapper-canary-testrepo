@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return c
+    return D
   }
 }), E("222007");
 var t = E("862337"),
@@ -19,8 +19,8 @@ var t = E("862337"),
 let A = new t.Timeout,
   R = new t.Timeout,
   l = 5 * S.default.Millis.SECOND,
-  L = 12 * S.default.Millis.SECOND,
-  u = null;
+  u = 12 * S.default.Millis.SECOND,
+  L = null;
 
 function C(e, _) {
   if (s.default.getVoiceChannelId() !== e) return !1;
@@ -31,19 +31,19 @@ function C(e, _) {
   let o = r.default.getStreamForUser(_, E.getGuildId());
   if (null == o) return !1;
   let a = (0, N.encodeStreamKey)(o);
-  return a !== u && (u = a, (0, n.watchStream)(o, {
+  return a !== L && (L = a, (0, n.watchStream)(o, {
     noFocus: !0
   }), !0)
 }
 
-function D(e, _) {
+function c(e, _) {
   let E = null != _ ? _ : I.default.getPreferredRegion();
   null != E && E !== I.default.getRegion(T.default.getHostname(T.default.getActiveStreamKey())) && (0, n.changeStreamRegion)(e, E)
 }
-var c = {
+var D = {
   init() {
     let e = (e, _) => {
-      !T.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? L : l, () => {
+      !T.default.getAllActiveStreamKeys().includes(e) && R.start(_ ? u : l, () => {
         o.default.dispatch({
           type: "STREAM_TIMED_OUT",
           streamKey: e
@@ -82,7 +82,7 @@ var c = {
         channelId: _
       } = e;
       if (null == _) return;
-      u = null;
+      L = null;
       let E = r.default.getAllApplicationStreamsForChannel(_).filter(e => {
         let {
           ownerId: _
@@ -117,13 +117,13 @@ var c = {
         channelId: _,
         region: E
       } = e, t = r.default.getCurrentUserActiveStream();
-      (null == t ? void 0 : t.channelId) === _ && D((0, N.encodeStreamKey)(t), E)
+      (null == t ? void 0 : t.channelId) === _ && c((0, N.encodeStreamKey)(t), E)
     }), o.default.subscribe("CHANNEL_UPDATES", e => {
       let {
         channels: _
       } = e, E = r.default.getCurrentUserActiveStream();
       if (null != E)
-        for (let e of _) E.channelId === e.id && D((0, N.encodeStreamKey)(E), e.rtcRegion)
+        for (let e of _) E.channelId === e.id && c((0, N.encodeStreamKey)(E), e.rtcRegion)
     })
   }
 }

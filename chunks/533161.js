@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("627445"),
-  l = s.n(n),
+var l = s("627445"),
+  n = s.n(l),
   i = s("446674"),
   r = s("218567"),
   o = s("835706"),
@@ -20,7 +20,7 @@ function _(e) {
   let {
     guildId: t
   } = e, s = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t));
-  return l(null != s, "Guild not found"), (0, a.jsxs)(r.CreatorMonetizationSettingsDisabledContextProvider, {
+  return n(null != s, "Guild not found"), (0, a.jsxs)(r.CreatorMonetizationSettingsDisabledContextProvider, {
     guildId: t,
     children: [(0, a.jsx)(o.default, {
       children: E.default.Messages.GUILD_PRODUCTS_BASIC_INFO_SYNC_DISCLAIMER

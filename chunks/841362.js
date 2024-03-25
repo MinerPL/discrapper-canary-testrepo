@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   numberParts: function() {
-    return l
+    return i
   }
 });
-let l = {
+let i = {
   __proto__: null,
   bg: {
     group: " ",

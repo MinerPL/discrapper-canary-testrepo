@@ -10,8 +10,8 @@ var l = n("414456"),
   s = n.n(l),
   i = n("77078"),
   r = n("772280"),
-  o = n("782340"),
-  u = n("317797");
+  u = n("782340"),
+  o = n("673224");
 
 function d(e) {
   let {
@@ -22,41 +22,41 @@ function d(e) {
     title: c,
     description: f,
     userCount: h,
-    onClick: p,
-    highlight: m
+    onClick: m,
+    highlight: p
   } = e;
   return (0, a.jsxs)(i.Clickable, {
-    className: s(u.container, t, null != m && {
-      [u.pulse]: m
+    className: s(o.container, t, null != p && {
+      [o.pulse]: p
     }),
-    onClick: p,
+    onClick: m,
     children: [(0, a.jsx)("div", {
       style: {
         backgroundColor: d
       },
-      className: s(u.icon, n),
+      className: s(o.icon, n),
       children: l
     }), (0, a.jsxs)("div", {
-      className: u.textContainer,
+      className: o.textContainer,
       children: [(0, a.jsx)(i.Heading, {
         variant: "heading-md/semibold",
         children: c
       }), (0, a.jsx)(i.Text, {
         variant: "text-xs/normal",
         color: "header-secondary",
-        className: u.inline,
+        className: o.inline,
         children: f
       }), null != h && h > 0 ? (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          className: u.dot,
+          className: o.dot,
           children: "•"
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          className: u.inline,
-          children: o.default.Messages.GUILD_EVENT_INTERESTED.format({
+          className: o.inline,
+          children: u.default.Messages.GUILD_EVENT_INTERESTED.format({
             count: h
           })
         })]
@@ -64,7 +64,7 @@ function d(e) {
     }), (0, a.jsx)(r.default, {
       height: 16,
       width: 16,
-      className: u.caret
+      className: o.caret
     })]
   })
 }

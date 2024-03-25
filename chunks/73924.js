@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var i = n("37983"),
   l = n("884691"),
-  u = n("446674"),
-  a = n("77078"),
+  a = n("446674"),
+  u = n("77078"),
   r = n("272030"),
   d = n("610174"),
   s = n("311340"),
@@ -21,25 +21,25 @@ var i = n("37983"),
 
 function E(e, t) {
   let E = t === D.AppContext.POPOUT,
-    S = (0, u.useStateFromStores)([A.default], () => A.default.getGuild(e), [e]),
+    S = (0, a.useStateFromStores)([A.default], () => A.default.getGuild(e), [e]),
     [m, M] = l.useState(!1),
     {
       showAlertMode: h
     } = (0, d.useGuildAlertModeEnabled)(e),
-    p = (0, u.useStateFromStores)([f.default], () => null != S ? f.default.getGuildIncident(S.id) : null),
+    p = (0, a.useStateFromStores)([f.default], () => null != S ? f.default.getGuildIncident(S.id) : null),
     R = (null == S ? void 0 : S.hasFeature(D.GuildFeatures.INVITES_DISABLED)) || h && (null == p ? void 0 : p.invitesDisabledUntil) != null && new Date(p.invitesDisabledUntil) > new Date,
-    [b, g] = l.useState(R),
-    G = async t => {
+    [b, v] = l.useState(R),
+    T = async t => {
       if (!m && null != S) {
         M(!0);
         try {
-          if (g(t), h) {
+          if (v(t), h) {
             if (t) {
               let t = {
                 source: o.GuildIncidentActionSources.MESSAGE,
                 alertType: (0, c.getIncidentAlertType)(p)
               };
-              (0, a.openModalLazy)(async () => {
+              (0, u.openModalLazy)(async () => {
                 let {
                   default: l
                 } = await n.el("186638").then(n.bind(n, "186638"));
@@ -52,17 +52,17 @@ function E(e, t) {
             } else await (0, s.setGuildIncidentActions)(S.id, !1, !1)
           } else await (0, _.setInvitesDisabled)(S, t)
         } catch (e) {
-          g(!t)
+          v(!t)
         } finally {
           M(!1), (0, r.closeContextMenu)()
         }
       }
     };
-  return E ? null : (0, i.jsx)(a.MenuCheckboxItem, {
+  return E ? null : (0, i.jsx)(u.MenuCheckboxItem, {
     id: "pause-invites",
     label: I.default.Messages.DISABLE_INVITES,
     action: () => {
-      G(!b)
+      T(!b)
     },
     checked: b
   })

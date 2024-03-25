@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("446674"),
@@ -19,7 +19,7 @@ let i = {},
   A = null,
   R = null,
   l = new Set;
-class L extends t.default.Store {
+class u extends t.default.Store {
   initialize() {
     var e;
     this.waitFor(r.default), this.syncWith([r.default], () => !0), A = null !== (e = o.default.get(N)) && void 0 !== e ? e : null;
@@ -68,8 +68,8 @@ class L extends t.default.Store {
     return l.size > 0
   }
 }
-L.displayName = "ChangelogStore";
-var u = new L(n.default, {
+u.displayName = "ChangelogStore";
+var L = new u(n.default, {
   CHANGE_LOG_LOCK: function(e) {
     let {
       key: _

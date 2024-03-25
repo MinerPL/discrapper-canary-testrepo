@@ -8,7 +8,7 @@ var i = l("37983");
 l("884691");
 var a = l("77078"),
   n = l("782340"),
-  s = l("496644");
+  s = l("437681");
 
 function r(e) {
   let {
@@ -19,8 +19,8 @@ function r(e) {
     mutualGuildCount: o,
     ctaLabel: d,
     onCtaClick: u,
-    children: p
-  } = e, m = (0, i.jsx)(i.Fragment, {
+    children: m
+  } = e, p = (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: s.topWrapper,
       children: [(0, i.jsx)("div", {
@@ -76,7 +76,7 @@ function r(e) {
           children: r
         }) : null, (0, i.jsx)("div", {
           className: s.children,
-          children: p
+          children: m
         })]
       })]
     })
@@ -84,7 +84,7 @@ function r(e) {
   return (0, i.jsx)(a.FocusRing, {
     children: (0, i.jsx)("div", {
       className: s.listing,
-      children: m
+      children: p
     })
   })
 }

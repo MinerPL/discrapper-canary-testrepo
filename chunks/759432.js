@@ -1,18 +1,18 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return n
+    return l
   }
 });
-var a = l("884691");
+var i = n("884691");
 
-function n(e) {
+function l(e) {
   let t = null == e ? void 0 : e.getBoundingClientRect(),
-    l = null == t ? void 0 : t.left,
-    n = null == t ? void 0 : t.top,
-    r = (0, a.useMemo)(() => null != l && null != n ? {
-      x: l,
-      y: n
-    } : null, [l, n]);
-  return r
+    n = null == t ? void 0 : t.left,
+    l = null == t ? void 0 : t.top,
+    a = (0, i.useMemo)(() => null != n && null != l ? {
+      x: n,
+      y: l
+    } : null, [n, l]);
+  return a
 }

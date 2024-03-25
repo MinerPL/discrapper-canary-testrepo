@@ -1,4 +1,4 @@
-var n = {
+var i = {
   "./spritesheet--32.png": "588202",
   "./spritesheet--40.png": "955348",
   "./spritesheet--48.png": "259453",
@@ -24,16 +24,16 @@ var n = {
 };
 
 function l(e) {
-  return i(s(e))
+  return n(a(e))
 }
 
-function s(e) {
-  if (!i.o(n, e)) {
+function a(e) {
+  if (!n.o(i, e)) {
     var t = Error("Cannot find module '" + e + "'");
     throw t.code = "MODULE_NOT_FOUND", t
   }
-  return n[e]
+  return i[e]
 }
 l.id = '"110126"', l.keys = function() {
-  return Object.keys(n)
-}, l.resolve = s, e.exports = l
+  return Object.keys(i)
+}, l.resolve = a, e.exports = l

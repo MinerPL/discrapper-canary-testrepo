@@ -6,50 +6,50 @@ s.r(t), s.d(t, {
 }), s("70102");
 var a = s("37983");
 s("884691");
-var n = s("868869"),
-  r = s("745279"),
-  l = s("701909"),
-  i = s("719923"),
+var r = s("868869"),
+  n = s("745279"),
+  i = s("701909"),
+  l = s("719923"),
   u = s("153160"),
   c = s("380186"),
   o = s("49111"),
   d = s("646718"),
   E = s("782340"),
-  _ = s("314502"),
+  _ = s("808965"),
   I = function(e) {
     let t, s, I;
     let {
-      subscriptionPlan: p,
-      isGift: T,
-      isEmbeddedIAP: L,
-      renewalInvoice: A,
-      paymentSourceType: M,
-      hide: f,
+      subscriptionPlan: T,
+      isGift: p,
+      isEmbeddedIAP: A,
+      renewalInvoice: L,
+      paymentSourceType: f,
+      hide: M,
       purchaseType: N,
       productLine: S,
-      basePrice: R,
-      currentSubscription: h
+      basePrice: P,
+      currentSubscription: R
     } = e;
-    if (f) return null;
-    let P = null == e.planGroup ? [] : e.planGroup;
-    if (null != A) {
-      let e = i.default.getIntervalForInvoice(A);
-      t = e.intervalType, s = e.intervalCount, I = (0, u.formatRate)((0, u.formatPrice)(A.total, A.currency), t, s)
-    } else null != p && (t = p.interval, s = p.intervalCount);
-    let C = (0, n.getReviewConfirmButtonLabel)({
+    if (M) return null;
+    let h = null == e.planGroup ? [] : e.planGroup;
+    if (null != L) {
+      let e = l.default.getIntervalForInvoice(L);
+      t = e.intervalType, s = e.intervalCount, I = (0, u.formatRate)((0, u.formatPrice)(L.total, L.currency), t, s)
+    } else null != T && (t = T.interval, s = T.intervalCount);
+    let C = (0, r.getReviewConfirmButtonLabel)({
         purchaseType: N || o.PurchaseTypes.SUBSCRIPTION,
-        plan: p,
-        premiumSubscription: null == h ? null : h,
-        isGift: !!T,
-        planGroup: P,
+        plan: T,
+        premiumSubscription: null == R ? null : R,
+        isGift: !!p,
+        planGroup: h,
         isPrepaidPaymentSource: !1
       }),
       U = "",
-      g = "";
-    if (L) {
-      if (null != I && (null == A ? void 0 : A.subscriptionPeriodEnd) != null) U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL.format({
+      m = "";
+    if (A) {
+      if (null != I && (null == L ? void 0 : L.subscriptionPeriodEnd) != null) U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_RATE_AND_RENEWAL.format({
         rate: I,
-        renewalDate: A.subscriptionPeriodEnd
+        renewalDate: L.subscriptionPeriodEnd
       });
       else switch (t) {
         case d.SubscriptionIntervalTypes.MONTH:
@@ -61,7 +61,7 @@ var n = s("868869"),
           U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE_SUBSCRIPTION_YEARLY;
           break;
         case void 0:
-          g = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+          m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
             primaryText: C,
             paidURL: o.MarketingURLs.PAID_TERMS
           }), U = E.default.Messages.EMBEDDED_ACTIVITIES_IAP_NON_REFUNDABLE.format({});
@@ -69,21 +69,21 @@ var n = s("868869"),
         default:
           throw Error("Unexpected interval: ".concat(t))
       }
-    } else if (N === o.PurchaseTypes.ONE_TIME) g = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+    } else if (N === o.PurchaseTypes.ONE_TIME) m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
       primaryText: C,
       paidURL: o.MarketingURLs.PAID_TERMS
-    }), U = S === o.SKUProductLines.COLLECTIBLES ? T ? E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : E.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
-    else if (null == p || T) switch (T && (g = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+    }), U = S === o.SKUProductLines.COLLECTIBLES ? p ? E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : E.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
+    else if (null == T || p) switch (p && (m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
         primaryText: C,
         paidURL: o.MarketingURLs.PAID_TERMS
       })), t) {
       case d.SubscriptionIntervalTypes.MONTH:
-        U = T ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY, U = T ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === s ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({
+        U = p ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY, U = p ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === s ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({
           intervalCount: s
         });
         break;
       case d.SubscriptionIntervalTypes.YEAR:
-        U = T ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;
+        U = p ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;
         break;
       case void 0:
         U = "";
@@ -92,49 +92,49 @@ var n = s("868869"),
         throw Error("Unexpected interval: ".concat(t))
     } else {
       let e;
-      let a = (0, n.getReviewConfirmButtonLabel)({
+      let a = (0, r.getReviewConfirmButtonLabel)({
         purchaseType: o.PurchaseTypes.SUBSCRIPTION,
-        plan: p,
-        premiumSubscription: null == h ? null : h,
+        plan: T,
+        premiumSubscription: null == R ? null : R,
         isGift: !1,
-        planGroup: P,
+        planGroup: h,
         isPrepaidPaymentSource: !1
       });
-      if (null != R && null != t && null != s && (e = (0, u.formatRate)((0, u.formatPrice)(R.amount, R.currency), t, s)), null == e) {
+      if (null != P && null != t && null != s && (e = (0, u.formatRate)((0, u.formatPrice)(P.amount, P.currency), t, s)), null == e) {
         let e = Error("Missing base rate for legal fine print");
-        (0, r.captureBillingException)(e, {
+        (0, n.captureBillingException)(e, {
           tags: {
-            planId: p.id
+            planId: T.id
           }
         })
       }
-      U = null != h && (0, c.subscriptionCanDowngrade)(h, p.id, P) ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
+      U = null != R && (0, c.subscriptionCanDowngrade)(R, T.id, h) ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
         primaryText: a,
         rate: e,
         paidURL: o.MarketingURLs.PAID_TERMS,
         contactLink: o.MarketingURLs.CONTACT,
-        helpdeskArticle: l.default.getArticleURL(o.HelpdeskArticles.BILLING)
+        helpdeskArticle: i.default.getArticleURL(o.HelpdeskArticles.BILLING)
       }) : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_V2.format({
         primaryText: a,
         rate: e,
         paidURL: o.MarketingURLs.PAID_TERMS,
         contactLink: o.MarketingURLs.CONTACT,
-        helpdeskArticle: l.default.getArticleURL(o.HelpdeskArticles.BILLING)
+        helpdeskArticle: i.default.getArticleURL(o.HelpdeskArticles.BILLING)
       })
     }
     return (0, a.jsxs)(a.Fragment, {
-      children: ["" !== g && (0, a.jsxs)("div", {
+      children: ["" !== m && (0, a.jsxs)("div", {
         children: [(0, a.jsx)("div", {
-          children: g
+          children: m
         }), (0, a.jsx)("div", {
           className: _.divider
         })]
       }), "" !== U && (0, a.jsx)("div", {
         children: U
-      }), M === o.PaymentSourceTypes.PAYSAFE_CARD && (0, a.jsx)("div", {
+      }), f === o.PaymentSourceTypes.PAYSAFE_CARD && (0, a.jsx)("div", {
         className: _.paymentSourceNoticeCopy,
         children: E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PAYSAFECARD
-      }), M === o.PaymentSourceTypes.SOFORT && (0, a.jsxs)("div", {
+      }), f === o.PaymentSourceTypes.SOFORT && (0, a.jsxs)("div", {
         className: _.paymentSourceNoticeCopy,
         children: [E.default.Messages.SOFORT_MANDATE_AGREEMENT, " "]
       })]

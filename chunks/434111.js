@@ -11,8 +11,8 @@ var t = s("782340"),
   i = s("624010"),
   o = s("49173"),
   _ = s("606627"),
-  d = s("379135"),
-  c = s("555002"),
+  c = s("379135"),
+  d = s("555002"),
   u = s("852245"),
   M = s("207418");
 
@@ -22,7 +22,7 @@ function E(e) {
     posts: [{
       user: {
         name: "pocketman",
-        avatarSrc: c
+        avatarSrc: d
       },
       tagId: 2,
       title: t.default.Messages.FORUM_UPSELL_DEMO_1_POST_TITLE_1,
@@ -35,7 +35,7 @@ function E(e) {
     }, {
       user: {
         name: "skaterdood12",
-        avatarSrc: d
+        avatarSrc: c
       },
       tagId: 1,
       title: t.default.Messages.FORUM_UPSELL_DEMO_1_POST_TITLE_2,
@@ -75,14 +75,14 @@ function E(e) {
       messages: [{
         author: {
           name: "skaterdood12",
-          avatarSrc: d,
+          avatarSrc: c,
           isOP: !0
         },
         content: t.default.Messages.FORUM_UPSELL_DEMO_1_MESSAGE_CONTENT_1
       }, {
         author: {
           name: "pocketman",
-          avatarSrc: c,
+          avatarSrc: d,
           isOP: !1
         },
         content: t.default.Messages.FORUM_UPSELL_DEMO_1_MESSAGE_CONTENT_2
@@ -114,7 +114,7 @@ function E(e) {
     }, {
       user: {
         name: "pocketman",
-        avatarSrc: c
+        avatarSrc: d
       },
       tagId: 1,
       title: t.default.Messages.FORUM_UPSELL_DEMO_2_POST_TITLE_2,
@@ -126,7 +126,7 @@ function E(e) {
     }, {
       user: {
         name: "skaterdood12",
-        avatarSrc: d
+        avatarSrc: c
       },
       tagId: 1,
       title: t.default.Messages.FORUM_UPSELL_DEMO_2_POST_TITLE_3,
@@ -154,14 +154,14 @@ function E(e) {
       messages: [{
         author: {
           name: "skaterdood12",
-          avatarSrc: d,
+          avatarSrc: c,
           isOP: !0
         },
         content: t.default.Messages.FORUM_UPSELL_DEMO_2_MESSAGE_CONTENT_1
       }, {
         author: {
           name: "pocketman",
-          avatarSrc: c,
+          avatarSrc: d,
           isOP: !1
         },
         content: t.default.Messages.FORUM_UPSELL_DEMO_2_MESSAGE_CONTENT_2
@@ -180,7 +180,7 @@ function E(e) {
     posts: [{
       user: {
         name: "skaterdood12",
-        avatarSrc: d
+        avatarSrc: c
       },
       tagId: null,
       title: t.default.Messages.FORUM_UPSELL_DEMO_3_POST_TITLE_1,
@@ -193,7 +193,7 @@ function E(e) {
     }, {
       user: {
         name: "pocketman",
-        avatarSrc: c
+        avatarSrc: d
       },
       tagId: 1,
       title: t.default.Messages.FORUM_UPSELL_DEMO_3_POST_TITLE_2,
@@ -233,14 +233,14 @@ function E(e) {
       messages: [{
         author: {
           name: "skaterdood12",
-          avatarSrc: d,
+          avatarSrc: c,
           isOP: !0
         },
         content: t.default.Messages.FORUM_UPSELL_DEMO_3_MESSAGE_CONTENT_1
       }, {
         author: {
           name: "pocketman",
-          avatarSrc: c,
+          avatarSrc: d,
           isOP: !1
         },
         content: t.default.Messages.FORUM_UPSELL_DEMO_3_MESSAGE_CONTENT_2

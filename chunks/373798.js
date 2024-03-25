@@ -20,21 +20,21 @@ function E() {
     t = e.length,
     s = (0, d.useIsPrepaidPaymentPastDue)(),
     E = (0, a.useStateFromStores)([c.default], () => c.default.getProps().impressionSource),
-    f = (0, o.usePendingRequestCount)(),
-    T = (0, i.useEnableClips)(),
-    [m] = (0, r.useGetDismissibleContent)(T ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-    _ = "useGenerateUserSettingsSections";
+    T = (0, o.usePendingRequestCount)(),
+    f = (0, i.useEnableClips)(),
+    [_] = (0, r.useGetDismissibleContent)(f ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    m = "useGenerateUserSettingsSections";
   return (0, l.useTriggerDebuggingAA)({
-    location: _ + " auto on",
+    location: m + " auto on",
     autoTrackExposure: !0
   }), (0, l.useTriggerDebuggingAA)({
-    location: _ + " auto off",
+    location: m + " auto off",
     autoTrackExposure: !1
   }), (0, S.default)({
     unseenGiftCount: t,
     showPrepaidPaymentPastDueWarning: s,
     impressionSource: E,
-    numOfPendingFamilyRequests: f,
-    isClipsBetaTagShowing: m === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
+    numOfPendingFamilyRequests: T,
+    isClipsBetaTagShowing: _ === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
   })
 }

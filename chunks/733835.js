@@ -28,7 +28,7 @@ var s = a("37983"),
   S = a("271560"),
   E = a("49111"),
   R = a("782340"),
-  m = a("146948");
+  m = a("277424");
 let g = () => [R.default.Messages.APPLICATION_STORE_PURCHASE_CONFIRMATION_TITLE_1, R.default.Messages.APPLICATION_STORE_PURCHASE_CONFIRMATION_TITLE_2, R.default.Messages.APPLICATION_STORE_PURCHASE_CONFIRMATION_TITLE_3, R.default.Messages.APPLICATION_STORE_PURCHASE_CONFIRMATION_TITLE_4];
 class M extends l.Component {
   fetchInstallSize() {

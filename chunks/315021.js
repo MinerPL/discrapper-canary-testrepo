@@ -14,8 +14,8 @@ var l = n("866227"),
   u = n("733160"),
   d = n("736393"),
   c = n("170213"),
-  f = n("782340"),
-  E = n("289487");
+  E = n("782340"),
+  f = n("749230");
 let _ = e => a().diff(a.unix(e), "days");
 
 function T(e) {
@@ -36,8 +36,8 @@ function T(e) {
         })
       })
     },
-    className: E.detailsButton,
-    children: f.default.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
+    className: f.detailsButton,
+    children: E.default.Messages.SAFETY_SYSTEM_NOTIFICATION_SEE_DETAILS_BUTTON
   })
 }
 
@@ -46,9 +46,9 @@ function I(e) {
     learnMoreLink: t
   } = e;
   return (0, s.jsx)(o.Anchor, {
-    className: E.detailsButton,
+    className: f.detailsButton,
     href: t,
-    children: f.default.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
+    children: E.default.Messages.SAFETY_SYSTEM_NOTIFICATION_LEARN_MORE_BUTTON
   })
 }
 
@@ -86,7 +86,7 @@ function N(e) {
     })
   };
   return null != t && t in n ? (0, s.jsx)("div", {
-    className: E.icon,
+    className: f.icon,
     children: n[t]
   }) : null
 }
@@ -96,8 +96,8 @@ function p(e) {
     children: t,
     theme: n
   } = e, l = {
-    default: E.defaultFooterContainer,
-    danger: E.dangerFooterContainer
+    default: f.defaultFooterContainer,
+    danger: f.dangerFooterContainer
   };
   return (0, s.jsx)("div", {
     className: l[null != n ? n : "default"],
@@ -110,11 +110,11 @@ function S(e) {
   if (null == e.embed || null == e.embed.fields) return null;
   let l = (0, d.parseMessageEmbedForProps)(e.embed);
   return null == l ? null : (0, s.jsxs)(o.Clickable, {
-    className: E.safetyPolicyNoticeContainer,
+    className: f.safetyPolicyNoticeContainer,
     children: [(0, s.jsxs)("div", {
-      className: E.noticeContent,
+      className: f.noticeContent,
       children: [(0, s.jsxs)("div", {
-        className: E.headerRow,
+        className: f.headerRow,
         children: [(0, s.jsx)(N, {
           iconType: l.icon
         }), (0, s.jsx)(o.Text, {
@@ -122,15 +122,15 @@ function S(e) {
           children: l.header
         })]
       }), (0, s.jsx)("div", {
-        className: E.incidentTiming,
+        className: f.incidentTiming,
         children: (0, s.jsx)(o.Text, {
           variant: "text-xs/medium",
-          children: f.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
+          children: E.default.Messages.SAFETY_POLICY_NOTICE_DAYS_AGO.format({
             daysAgo: _(null !== (n = l.timestamp) && void 0 !== n ? n : 0)
           })
         })
       }), (0, s.jsx)("div", {
-        className: E.noticeBody,
+        className: f.noticeBody,
         children: (0, s.jsx)(o.Text, {
           variant: "text-md/normal",
           color: "text-muted",

@@ -1,5 +1,5 @@
 "use strict";
-u.r(e), u.d(e, {
+r.r(e), r.d(e, {
   fetchGuildProductsForGuild: function() {
     return l
   },
@@ -13,55 +13,55 @@ u.r(e), u.d(e, {
     return a
   }
 });
-var n = u("913144"),
-  r = u("448993"),
-  i = u("242278");
+var u = r("913144"),
+  n = r("448993"),
+  i = r("242278");
 let l = async t => {
-  n.default.dispatch({
+  u.default.dispatch({
     type: "GUILD_PRODUCTS_FETCH",
     guildId: t
   });
   try {
     let e = await i.getGuildProductListingsForGuild(t);
-    n.default.dispatch({
+    u.default.dispatch({
       type: "GUILD_PRODUCTS_FETCH_SUCCESS",
       guildId: t,
       products: e
     })
   } catch (e) {
-    n.default.dispatch({
+    u.default.dispatch({
       type: "GUILD_PRODUCTS_FETCH_FAILURE",
       guildId: t
     })
   }
 }, o = async (t, e) => {
-  n.default.dispatch({
+  u.default.dispatch({
     type: "GUILD_PRODUCT_FETCH",
     productId: e
   });
   try {
-    let u = await i.getGuildProductListing(t, e);
-    return n.default.dispatch({
+    let r = await i.getGuildProductListing(t, e);
+    return u.default.dispatch({
       type: "GUILD_PRODUCT_FETCH_SUCCESS",
-      product: u
-    }), u
+      product: r
+    }), r
   } catch (t) {
-    throw n.default.dispatch({
+    throw u.default.dispatch({
       type: "GUILD_PRODUCT_FETCH_FAILURE",
       productId: e,
-      error: new r.APIError(t)
+      error: new n.APIError(t)
     }), t
   }
 };
-async function c(t, e, u) {
-  let r = await i.updateGuildProductListing(t, e, u);
-  return n.default.dispatch({
+async function c(t, e, r) {
+  let n = await i.updateGuildProductListing(t, e, r);
+  return u.default.dispatch({
     type: "GUILD_PRODUCT_UPDATE",
-    product: r
-  }), r
+    product: n
+  }), n
 }
 async function a(t, e) {
-  return await i.deleteGuildProductListing(t, e), n.default.dispatch({
+  return await i.deleteGuildProductListing(t, e), u.default.dispatch({
     type: "GUILD_PRODUCT_DELETE",
     productId: e
   }), !0

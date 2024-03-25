@@ -1,85 +1,85 @@
 "use strict";
 i.r(t), i.d(t, {
   LurkerModeUpsellPopoutTypes: function() {
-    return a
+    return n
   },
   default: function() {
-    return m
+    return T
   }
 }), i("222007");
-var a, l, n = i("37983"),
+var n, a, l = i("37983"),
   o = i("884691"),
   s = i("446674"),
   r = i("77078"),
   u = i("851387"),
-  d = i("476765"),
-  c = i("449008"),
-  p = i("267567"),
-  h = i("49111"),
+  c = i("476765"),
+  d = i("449008"),
+  h = i("267567"),
+  m = i("49111"),
   f = i("782340"),
-  T = i("404637");
-(l = a || (a = {}))[l.CHAT = 0] = "CHAT", l[l.REACTIONS = 1] = "REACTIONS";
-var m = e => {
+  p = i("194627");
+(a = n || (n = {}))[a.CHAT = 0] = "CHAT", a[a.REACTIONS = 1] = "REACTIONS";
+var T = e => {
   let {
     type: t,
-    guild: a,
-    closePopout: l,
-    ctaRef: m
-  } = e, E = (0, d.useUID)(), [g, _] = o.useState(!1), R = (0, s.useStateFromStores)([p.default], () => p.default.isLurking(a.id), [a.id]);
+    guild: n,
+    closePopout: a,
+    ctaRef: T
+  } = e, R = (0, c.useUID)(), [g, E] = o.useState(!1), I = (0, s.useStateFromStores)([h.default], () => h.default.isLurking(n.id), [n.id]);
   o.useEffect(() => {
-    g && !R && l()
-  }, [g, R, l]);
-  let I = null,
-    C = f.default.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
+    g && !I && a()
+  }, [g, I, a]);
+  let N = null,
+    S = f.default.Messages.LURKER_MODE_POPOUT_UPSELL_BODY;
   switch (t) {
     case 0:
-      I = f.default.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
+      N = f.default.Messages.LURKER_MODE_POPOUT_CHAT_HEADER;
       break;
     case 1:
-      I = f.default.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
+      N = f.default.Messages.LURKER_MODE_POPOUT_REACTIONS_HEADER;
       break;
     default:
-      return (0, c.assertNever)(t)
+      return (0, d.assertNever)(t)
   }
-  if (null == I) return null;
-  let O = async () => {
-    _(!0);
+  if (null == N) return null;
+  let _ = async () => {
+    E(!0);
     try {
-      await u.default.joinGuild(a.id, {
-        source: h.JoinGuildSources.CHAT_INPUT_BLOCKER
-      }), l()
+      await u.default.joinGuild(n.id, {
+        source: m.JoinGuildSources.CHAT_INPUT_BLOCKER
+      }), a()
     } catch {
-      _(!1)
+      E(!1)
     }
   };
-  return (0, n.jsxs)(r.Dialog, {
-    className: T.container,
-    "aria-labelledby": E,
-    children: [(0, n.jsx)("img", {
+  return (0, l.jsxs)(r.Dialog, {
+    className: p.container,
+    "aria-labelledby": R,
+    children: [(0, l.jsx)("img", {
       alt: "",
-      className: T.image,
+      className: p.image,
       src: i("748301")
-    }), (0, n.jsxs)("div", {
-      className: T.content,
-      children: [(0, n.jsx)(r.Heading, {
+    }), (0, l.jsxs)("div", {
+      className: p.content,
+      children: [(0, l.jsx)(r.Heading, {
         variant: "heading-md/semibold",
-        id: E,
-        children: I
-      }), (0, n.jsx)(r.Text, {
+        id: R,
+        children: N
+      }), (0, l.jsx)(r.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: C
-      }), (0, n.jsxs)("div", {
-        className: T.buttonContainer,
-        children: [(0, n.jsx)(r.Button, {
-          buttonRef: m,
-          onClick: O,
+        children: S
+      }), (0, l.jsxs)("div", {
+        className: p.buttonContainer,
+        children: [(0, l.jsx)(r.Button, {
+          buttonRef: T,
+          onClick: _,
           submitting: g,
           children: f.default.Messages.LURKER_MODE_POPOUT_JOIN
-        }), (0, n.jsx)(r.Button, {
-          onClick: l,
+        }), (0, l.jsx)(r.Button, {
+          onClick: a,
           look: r.Button.Looks.BLANK,
-          className: T.cancel,
+          className: p.cancel,
           children: f.default.Messages.LURKER_MODE_POPOUT_CANCEL
         })]
       })]

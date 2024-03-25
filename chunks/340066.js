@@ -1,17 +1,17 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
-var n = l("884691"),
-  a = (e, t) => {
-    let l = (0, n.useRef)(e);
-    (0, n.useEffect)(() => {
-      l.current = e
-    }, [e]), (0, n.useEffect)(() => {
+var i = n("884691"),
+  l = (e, t) => {
+    let n = (0, i.useRef)(e);
+    (0, i.useEffect)(() => {
+      n.current = e
+    }, [e]), (0, i.useEffect)(() => {
       if (null === t) return;
-      let e = setTimeout(() => l.current(), t);
+      let e = setTimeout(() => n.current(), t);
       return () => clearTimeout(e)
-    }, [t, l])
+    }, [t, n])
   }

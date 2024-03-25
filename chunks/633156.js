@@ -5,9 +5,9 @@ n.r(e), n.d(e, {
   }
 }), n("222007");
 var l = n("37983"),
-  a = n("884691"),
-  o = n("414456"),
-  r = n.n(o),
+  o = n("884691"),
+  a = n("414456"),
+  r = n.n(a),
   s = n("77078"),
   u = n("437822"),
   i = n("152584"),
@@ -19,17 +19,17 @@ var l = n("37983"),
   T = n("49111"),
   p = n("149806"),
   A = n("782340"),
-  S = n("528414");
+  S = n("314238");
 
 function N(t) {
   let {
     email: e,
     setEmail: n,
-    claimRequired: o,
+    claimRequired: a,
     onSuccess: _,
     onClose: f
-  } = t, [N, C] = a.useState(), [m, I] = a.useState(""), [g, U] = a.useState(""), [O, R] = a.useState(!1);
-  a.useEffect(() => c.default.flowStep(p.FlowType.ANY, p.ClaimAccountSteps.CLAIM_ACCOUNT), []);
+  } = t, [N, C] = o.useState(), [m, I] = o.useState(""), [g, U] = o.useState(""), [O, R] = o.useState(!1);
+  o.useEffect(() => c.default.flowStep(p.FlowType.ANY, p.ClaimAccountSteps.CLAIM_ACCOUNT), []);
   let h = async t => {
     t.preventDefault(), R(!0), C(""), U("");
     try {
@@ -58,7 +58,7 @@ function N(t) {
         className: S.formBody,
         variant: "text-md/normal",
         color: "header-secondary",
-        children: o ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : A.default.Messages.CLAIM_ACCOUNT_BODY_2
+        children: a ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_BODY : A.default.Messages.CLAIM_ACCOUNT_BODY_2
       }), (0, l.jsx)(s.ModalCloseButton, {
         className: S.closeButton,
         onClick: f
@@ -92,7 +92,7 @@ function N(t) {
           submitting: O,
           disabled: 0 === e.length || 0 === m.length,
           children: A.default.Messages.CLAIM_ACCOUNT
-        }), o && (0, l.jsx)(s.Button, {
+        }), a && (0, l.jsx)(s.Button, {
           className: S.logoutButton,
           color: s.Button.Colors.PRIMARY,
           look: s.Button.Looks.LINK,
@@ -111,7 +111,7 @@ function C(t) {
   let {
     email: e,
     claimRequired: n,
-    onClose: o
+    onClose: a
   } = t, u = n ? A.default.Messages.CLAIM_ACCOUNT_REQUIRED_EMAIL_TO : A.default.Messages.CLAIM_ACCOUNT_EMAIL_TO;
 
   function i() {
@@ -124,13 +124,13 @@ function C(t) {
       qr_code: !1
     })
   }
-  return a.useEffect(() => c.default.flowStep(p.FlowType.ANY, p.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS), []), (0, l.jsxs)("div", {
+  return o.useEffect(() => c.default.flowStep(p.FlowType.ANY, p.ClaimAccountSteps.CLAIM_ACCOUNT_SUCCESS), []), (0, l.jsxs)("div", {
     className: r(S.modalLight, (0, E.getThemeClass)(T.ThemeTypes.LIGHT)),
     children: [(0, l.jsxs)(s.ModalContent, {
       className: S.successContent,
       children: [!n && (0, l.jsx)(s.ModalCloseButton, {
         className: S.closeButton,
-        onClick: o
+        onClick: a
       }), (0, l.jsx)("div", {
         className: S.successImage
       }), (0, l.jsx)(s.Text, {
@@ -148,7 +148,7 @@ function C(t) {
       direction: d.default.Direction.VERTICAL,
       children: (0, l.jsx)(s.Button, {
         size: s.Button.Sizes.LARGE,
-        onClick: o,
+        onClick: a,
         children: A.default.Messages.OKAY
       })
     }) : (0, l.jsx)(s.ModalFooter, {
@@ -167,13 +167,13 @@ function m(t) {
   let {
     onClose: e,
     transitionState: n,
-    claimRequired: o = !1
-  } = t, [r, u] = a.useState(""), [i, c] = a.useState(!1);
+    claimRequired: a = !1
+  } = t, [r, u] = o.useState(""), [i, c] = o.useState(!1);
   return i ? (0, l.jsx)(s.ModalRoot, {
     transitionState: n,
     children: (0, l.jsx)(C, {
       email: r,
-      claimRequired: o,
+      claimRequired: a,
       onClose: e
     })
   }) : (0, l.jsx)(s.ModalRoot, {
@@ -181,7 +181,7 @@ function m(t) {
     children: (0, l.jsx)(N, {
       email: r,
       setEmail: u,
-      claimRequired: o,
+      claimRequired: a,
       onSuccess: () => c(!0),
       onClose: e
     })

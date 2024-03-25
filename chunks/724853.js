@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   InvalidMobileCodedLinkInner: function() {
-    return _
+    return I
   },
   default: function() {
-    return p
+    return h
   }
 });
 var s = n("37983");
@@ -17,11 +17,11 @@ var a = n("414456"),
   o = n("124969"),
   d = n("49111"),
   c = n("782340"),
-  f = n("723673"),
-  E = n("173791"),
-  I = n("926622");
+  f = n("243372"),
+  E = n("125047"),
+  _ = n("890957");
 
-function _(e) {
+function I(e) {
   let {
     text: t,
     buttonCta: a,
@@ -31,10 +31,10 @@ function _(e) {
     children: [(0, s.jsx)(o.Image, {
       src: n("781073")
     }), (0, s.jsx)(o.Title, {
-      className: l(I.marginTop20, I.marginBottom8, E.flexCenter),
+      className: l(_.marginTop20, _.marginBottom8, E.flexCenter),
       children: c.default.Messages.DISCORD_DESC_SHORT
     }), (0, s.jsx)(o.SubTitle, {
-      className: I.marginBottom40,
+      className: _.marginBottom40,
       children: c.default.Messages.DISCORD_DESC_LONG
     }), (0, s.jsxs)(r.Card, {
       className: f.card,
@@ -70,7 +70,7 @@ function _(e) {
   })
 }
 
-function p(e) {
+function h(e) {
   let {
     text: t,
     buttonCta: n,
@@ -79,7 +79,7 @@ function p(e) {
   } = e;
   return (0, s.jsx)(o.default, {
     theme: a,
-    children: (0, s.jsx)(_, {
+    children: (0, s.jsx)(I, {
       text: t,
       buttonCta: n,
       onClick: l

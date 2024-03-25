@@ -1,27 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
-  o = n("835906");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("165555");
 
-function s(e) {
+function r(e) {
   let {
     attributes: t,
     children: n,
-    leaf: i,
-    text: s
+    leaf: l,
+    text: r
   } = e;
-  if (i.commandName) {
-    let e = r(o.commandName, {
-      [o.emptyText]: "" === s.text
+  if (l.commandName) {
+    let e = a(s.commandName, {
+      [s.emptyText]: "" === r.text
     });
-    return (0, l.jsx)("span", {
+    return (0, i.jsx)("span", {
       ...t,
       className: e,
       spellCheck: !1,

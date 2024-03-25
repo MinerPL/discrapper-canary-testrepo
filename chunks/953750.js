@@ -1,37 +1,37 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return C
   }
 });
-var n = s("37983"),
-  a = s("884691"),
-  l = s("775560"),
-  r = s("151426"),
-  u = s("77078"),
-  o = s("10641"),
-  i = s("866380"),
-  d = s("599110"),
-  c = s("489505"),
-  E = s("732018"),
-  f = s("49111"),
-  I = s("782340");
+var s = n("37983"),
+  a = n("884691"),
+  l = n("775560"),
+  r = n("151426"),
+  u = n("77078"),
+  o = n("10641"),
+  i = n("866380"),
+  d = n("599110"),
+  c = n("489505"),
+  E = n("732018"),
+  f = n("49111"),
+  I = n("782340");
 
 function C(e) {
   let {
     transitionState: t,
     onClose: C,
-    guildId: T,
-    guildName: D
+    guildId: D,
+    guildName: T
   } = e, A = (0, l.useLazyValue)(E.getGuildLeaveReasons);
   return a.useEffect(() => {
     d.default.track(f.AnalyticEvents.OPEN_MODAL, {
       type: "Guild Leave Report"
     })
-  }, []), (0, n.jsx)(i.default, {
+  }, []), (0, s.jsx)(i.default, {
     header: I.default.Messages.GUILD_LEAVE_FEEDBACK_HEADER,
     body: I.default.Messages.GUILD_LEAVE_FEEDBACK_BODY.format({
-      server: D
+      server: T
     }),
     problems: A,
     onSubmit: function(e) {
@@ -42,11 +42,11 @@ function C(e) {
       } = e;
       a && (0, o.markDismissibleContentAsDismissed)(r.DismissibleContent.GUILD_LEAVE_FEEDBACK);
       let i = null == t;
-      (0, c.default)(T, t, l, i), !i && (0, u.openModalLazy)(async () => {
+      (0, c.default)(D, t, l, i), !i && (0, u.openModalLazy)(async () => {
         let {
           default: e
-        } = await s.el("874600").then(s.bind(s, "874600"));
-        return t => (0, n.jsx)(e, {
+        } = await n.el("874600").then(n.bind(n, "874600"));
+        return t => (0, s.jsx)(e, {
           body: I.default.Messages.GUILD_LEAVE_FEEDBACK_REPORT,
           ...t
         })

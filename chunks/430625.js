@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("446674"),
   d = n("769846"),
   c = n("77078"),
-  f = n("970728"),
-  E = n("191225"),
+  E = n("970728"),
+  f = n("191225"),
   _ = n("969380"),
   T = n("817039"),
   I = n("812204"),
@@ -29,15 +29,15 @@ var s = n("37983"),
   M = n("174622"),
   O = n("98292"),
   R = n("811305"),
-  L = n("159885"),
-  v = n("793079"),
+  v = n("159885"),
+  L = n("793079"),
   P = n("49111"),
   D = n("91366"),
   x = n("782340"),
-  y = n("420515");
-let U = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-  j = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  b = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+  y = n("257752");
+let U = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  j = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+  b = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
 function G(e) {
   let {
@@ -130,7 +130,7 @@ function F(e) {
     } = e,
     {
       approximate_member_count: O,
-      approximate_presence_count: L,
+      approximate_presence_count: v,
       target_type: F,
       target_application: k
     } = d;
@@ -151,13 +151,13 @@ function F(e) {
   }, [w, V, W]);
   let K = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
     z = (0, N.default)([k.id])[0],
-    Z = (0, u.useStateFromStores)([E.default], () => {
+    Q = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = E.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
     }),
-    J = (0, u.useStateFromStores)([E.default], () => {
+    Z = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? E.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
+      let t = (null === (e = d.channel) || void 0 === e ? void 0 : e.id) != null ? f.default.getEmbeddedActivitiesForChannel(d.channel.id) : [];
       return t.some(e => {
         let {
           applicationId: t
@@ -165,8 +165,8 @@ function F(e) {
         return k.id === t
       })
     }),
-    Q = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    X = (0, u.useStateFromStores)([h.default], () => null != Q && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, Q), [Q]),
+    J = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    X = (0, u.useStateFromStores)([h.default], () => null != J && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
     {
       analyticsLocations: q
     } = (0, m.default)(I.default.INVITE_EMBED),
@@ -174,23 +174,23 @@ function F(e) {
       applicationId: k.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([E.default], () => null != Q ? E.default.getEmbeddedActivitiesForChannel(Q.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [Q, k.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != J ? f.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [J, k.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
     es = null != K;
   if (null == K) {
-    if (null == d.guild) return (0, s.jsx)(v.default, {});
+    if (null == d.guild) return (0, s.jsx)(L.default, {});
     K = new S.default(d.guild)
   }
-  let el = es && !X || es && Z,
+  let el = es && !X || es && Q,
     ea = () => {
-      f.default.acceptInviteAndTransitionToInviteChannel({
+      E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: p("Invite Button Embed"),
         analyticsLocations: q
       })
     };
-  return (es && Z && (a = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Z ? x.default.Messages.INVITE_EMBED_JOINED : J || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (a = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (a = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {
@@ -224,17 +224,17 @@ function F(e) {
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
-          channel: Q,
+          channel: J,
           guild: K,
           isStacked: Y,
-          hasEnded: !J
+          hasEnded: !Z
         })]
       }), (0, s.jsxs)("div", {
         className: i(y.currentState, {
           [y.large]: H,
-          [y.split]: !J && Y
+          [y.split]: !Z && Y
         }),
-        children: [!J && es ? (0, s.jsxs)("div", {
+        children: [!Z && es ? (0, s.jsxs)("div", {
           className: i(y.endedNote, {
             [y.large]: H
           }),
@@ -247,12 +247,12 @@ function F(e) {
           })]
         }) : null, es ? null : (0, s.jsx)(G, {
           members: O,
-          membersOnline: L,
+          membersOnline: v,
           isLarge: H,
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
-          children: [null != K && J ? (0, s.jsx)("div", {
+          children: [null != K && Z ? (0, s.jsx)("div", {
             className: y.avatars,
             children: (0, s.jsx)(R.default, {
               guildId: K.id,

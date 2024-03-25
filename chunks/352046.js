@@ -1,31 +1,31 @@
 "use strict";
 i.r(t), i.d(t, {
   getTopAndNewlyAddedEmojis: function() {
-    return s
+    return a
   },
   default: function() {
-    return u
+    return s
   }
 });
 var n = i("65597"),
   r = i("385976"),
-  a = i("958706");
-let o = [];
+  o = i("958706");
+let u = [];
 
-function s(e) {
+function a(e) {
   let {
     emojiStoreInstance: t = r.default,
     guildId: i,
     pickerIntention: n
   } = e;
   return {
-    topEmojis: n !== a.EmojiIntention.REACTION ? t.getTopEmoji(i) : o,
-    newlyAddedEmojis: n !== a.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(i) : o
+    topEmojis: n !== o.EmojiIntention.REACTION ? t.getTopEmoji(i) : u,
+    newlyAddedEmojis: n !== o.EmojiIntention.REACTION ? t.getNewlyAddedEmoji(i) : u
   }
 }
 
-function u(e, t) {
-  return (0, n.useStateFromStoresObject)([r.default], () => s({
+function s(e, t) {
+  return (0, n.useStateFromStoresObject)([r.default], () => a({
     emojiStoreInstance: r.default,
     guildId: e,
     pickerIntention: t

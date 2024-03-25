@@ -1,6 +1,6 @@
 "use strict";
 
-function a(e) {
+function r(e) {
   return Object.entries(e).filter(function(e) {
     e[0];
     var t = e[1];
@@ -12,7 +12,7 @@ function a(e) {
   }).join("&")
 }
 
-function r(e) {
+function a(e) {
   var t = e && e.ownerDocument || document,
     n = t.defaultView || t.parentWindow || window;
   return {
@@ -26,10 +26,10 @@ function i(e) {
 }
 n.r(t), n.d(t, {
   generateQuery: function() {
-    return a
+    return r
   },
   getFrame: function() {
-    return r
+    return a
   },
   getMountElement: function() {
     return i

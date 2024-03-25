@@ -6,8 +6,8 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("772871"),
-  l = s("974724"),
+var l = s("772871"),
+  n = s("974724"),
   i = s("495454"),
   r = s("380993"),
   o = s("281239"),
@@ -16,7 +16,7 @@ var n = s("772871"),
   c = s("49111"),
   E = s("782340");
 let _ = e => ({
-  [n.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]: [{
+  [l.GuildSettingsSafetyPage.CAPTCHA_AND_RAID_PROTECTION]: [{
     renderComponent: () => (0, a.jsx)(r.default, {
       guild: e
     }, "raid-alerts"),
@@ -32,7 +32,7 @@ let _ = e => ({
     }, "captcha-raid-joins"),
     enabled: !0
   }],
-  [n.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]: [{
+  [l.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION]: [{
     renderComponent: () => (0, a.jsx)(u.default, {
       guild: e
     }, "verification-level"),
@@ -65,8 +65,8 @@ let _ = e => ({
     }, "delete-spam"),
     enabled: !0
   }],
-  [n.GuildSettingsSafetyPage.PERMISSIONS]: [{
-    renderComponent: () => (0, a.jsx)(l.default, {
+  [l.GuildSettingsSafetyPage.PERMISSIONS]: [{
+    renderComponent: () => (0, a.jsx)(n.default, {
       guild: e
     }, "guild-mfa"),
     enabled: e.mfaLevel === c.MFALevels.ELEVATED

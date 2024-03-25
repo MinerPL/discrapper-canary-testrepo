@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("37983"),
   s = n("884691"),
-  i = n("414456"),
-  l = n.n(i),
+  l = n("414456"),
+  i = n.n(l),
   r = n("917351"),
   o = n.n(r),
   u = n("458960"),
@@ -15,21 +15,21 @@ var a = n("37983"),
   c = n("95410"),
   f = n("77078"),
   E = n("167359"),
-  _ = n("206230"),
-  h = n("619443"),
+  h = n("206230"),
+  _ = n("619443"),
   C = n("488284"),
-  I = n("870696"),
-  T = n("168851"),
-  S = n("50647"),
-  m = n("15435"),
-  p = n("637888"),
-  A = n("718517"),
-  g = n("773336"),
+  S = n("870696"),
+  I = n("168851"),
+  m = n("50647"),
+  p = n("15435"),
+  T = n("637888"),
+  g = n("718517"),
+  A = n("773336"),
   N = n("709681"),
   R = n("50885"),
   O = n("49111"),
-  L = n("782340"),
-  v = n("923075");
+  v = n("782340"),
+  L = n("782260");
 class M extends s.PureComponent {
   createSound() {
     let {
@@ -45,31 +45,31 @@ class M extends s.PureComponent {
       ready: n,
       hide: a,
       problems: s,
-      opacity: i
+      opacity: l
     } = this.state, {
-      connected: l,
+      connected: i,
       soundpack: r,
       reducedMotion: o
-    } = this.props, d = l && n && !a && !s;
-    if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== l || d) {
-      if (l && null != this.videoRef) {
-        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * A.default.Millis.SECOND), 600);
+    } = this.props, d = i && n && !a && !s;
+    if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
+      if (i && null != this.videoRef) {
+        let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * g.default.Millis.SECOND), 600);
         clearTimeout(this._noProblemsTimeout), c.default.get(O.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
-          hide: l
+          hide: i
         }) : this._noProblemsTimeout = setTimeout(() => {
           this.setState({
             problems: !1,
-            hide: l
+            hide: i
           })
         }, e)
       } else this.setState({
         problems: !1,
-        hide: l
+        hide: i
       })
     } else t.hide !== a ? (a ? this.clearProblemsTimeout() : this.setProblemsTimeout(), this.setState({
       shouldRender: !0
-    }), u.default.timing(i, {
+    }), u.default.timing(l, {
       toValue: a ? 0 : 1,
       duration: 200
     }).start(() => this.setState({
@@ -89,53 +89,53 @@ class M extends s.PureComponent {
       let n = this._loadingText,
         s = null;
       return null != this._eventLoadingText && (n = this._eventLoadingText), null != t && (n = t.name, s = t.incident_updates[0].body), (0, a.jsxs)(u.default.div, {
-        className: v.container,
+        className: L.container,
         style: {
           opacity: this.state.opacity
         },
         children: [(0, a.jsxs)("div", {
-          className: v.content,
-          children: [(0, a.jsx)(p.default, {
+          className: L.content,
+          children: [(0, a.jsx)(T.default, {
             autoPlay: !0,
             loop: !e,
             setRef: this.setVideoRef,
             onReady: this.handleReady,
-            className: this.state.ready ? v.ready : ""
+            className: this.state.ready ? L.ready : ""
           }), (0, a.jsxs)("div", {
-            className: v.text,
+            className: L.text,
             children: [null != t ? null : (0, a.jsx)("div", {
-              className: v.tipTitle,
-              children: L.default.Messages.LOADING_DID_YOU_KNOW
+              className: L.tipTitle,
+              children: v.default.Messages.LOADING_DID_YOU_KNOW
             }), (0, a.jsx)("div", {
-              className: null != t ? v.title : v.tip,
+              className: null != t ? L.title : L.tip,
               children: n
             }), (0, a.jsx)("div", {
-              className: v.body,
+              className: L.body,
               children: s
             })]
           })]
         }), (0, a.jsxs)("div", {
-          className: l(v.problems, {
-            [v.slideIn]: this.state.problems
+          className: i(L.problems, {
+            [L.slideIn]: this.state.problems
           }),
           children: [(0, a.jsx)("div", {
-            className: v.problemsText,
-            children: L.default.Messages.CONNECTING_PROBLEMS_CTA
+            className: L.problemsText,
+            children: v.default.Messages.CONNECTING_PROBLEMS_CTA
           }), (0, a.jsxs)("div", {
             children: [(0, a.jsxs)(f.Anchor, {
-              className: v.twitterLink,
+              className: L.twitterLink,
               href: O.Links.TWITTER_SUPPORT,
               target: "_blank",
-              children: [(0, a.jsx)(m.default, {
-                className: v.icon
-              }), L.default.Messages.TWEET_US]
+              children: [(0, a.jsx)(p.default, {
+                className: L.icon
+              }), v.default.Messages.TWEET_US]
             }), (0, a.jsxs)(f.Anchor, {
-              className: v.statusLink,
+              className: L.statusLink,
               href: O.Links.STATUS,
               target: "_blank",
-              children: [(0, a.jsx)(S.default, {
-                className: v.icon
-              }), L.default.Messages.SERVER_STATUS]
+              children: [(0, a.jsx)(m.default, {
+                className: L.icon
+              }), v.default.Messages.SERVER_STATUS]
             })]
           })]
         })]
@@ -144,65 +144,65 @@ class M extends s.PureComponent {
   }
   constructor(e) {
     super(e), this.videoRef = null, this._noProblemsTimeout = null, this._problemsTimeout = null, this._connectedSound = this.createSound(), this._loadingText = function() {
-      let e = [L.default.Messages.ACCESSIBILITY_LOADING_TIP_1, L.default.Messages.ACCESSIBILITY_LOADING_TIP_2, L.default.Messages.ACCESSIBILITY_LOADING_TIP_3, L.default.Messages.ACCESSIBILITY_LOADING_TIP_4, L.default.Messages.ACCESSIBILITY_LOADING_TIP_5, L.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
+      let e = [v.default.Messages.ACCESSIBILITY_LOADING_TIP_1, v.default.Messages.ACCESSIBILITY_LOADING_TIP_2, v.default.Messages.ACCESSIBILITY_LOADING_TIP_3, v.default.Messages.ACCESSIBILITY_LOADING_TIP_4, v.default.Messages.ACCESSIBILITY_LOADING_TIP_5, v.default.Messages.ACCESSIBILITY_LOADING_TIP_6.format({
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.ACCESSIBILITY_LOADING_TIP_7, L.default.Messages.ACCESSIBILITY_LOADING_TIP_8, L.default.Messages.ACCESSIBILITY_LOADING_TIP_9, L.default.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
+      }), v.default.Messages.ACCESSIBILITY_LOADING_TIP_7, v.default.Messages.ACCESSIBILITY_LOADING_TIP_8, v.default.Messages.ACCESSIBILITY_LOADING_TIP_9, v.default.Messages.ACCESSIBILITY_LOADING_TIP_10.format({
         F6Hook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "f6",
-          className: v.keybind
+          className: L.keybind
         }, t),
         tabHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "tab",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_LINE_1, L.default.Messages.LOADING_LINE_2, L.default.Messages.LOADING_LINE_4, L.default.Messages.LOADING_LINE_5, L.default.Messages.LOADING_LINE_6, L.default.Messages.LOADING_LINE_7, L.default.Messages.LOADING_LINE_8, L.default.Messages.LOADING_LINE_9, L.default.Messages.LOADING_LINE_10, L.default.Messages.LOADING_LINE_11, L.default.Messages.LOADING_LINE_12, L.default.Messages.LOADING_LINE_13, L.default.Messages.LOADING_LINE_14, L.default.Messages.LOADING_LINE_15, L.default.Messages.LOADING_TIP_1, L.default.Messages.LOADING_TIP_2, L.default.Messages.LOADING_TIP_3, L.default.Messages.LOADING_TIP_4, L.default.Messages.LOADING_TIP_5, L.default.Messages.LOADING_TIP_6, L.default.Messages.LOADING_TIP_7, L.default.Messages.LOADING_TIP_8, L.default.Messages.LOADING_TIP_9, L.default.Messages.LOADING_TIP_10, L.default.Messages.LOADING_TIP_11, L.default.Messages.LOADING_TIP_12, L.default.Messages.LOADING_TIP_13, L.default.Messages.LOADING_TIP_14, L.default.Messages.LOADING_TIP_15, L.default.Messages.LOADING_TIP_16, L.default.Messages.LOADING_TIP_17, L.default.Messages.LOADING_TIP_18, L.default.Messages.LOADING_TIP_19, L.default.Messages.LOADING_TIP_20, L.default.Messages.LOADING_TIP_21, L.default.Messages.LOADING_TIP_22, L.default.Messages.LOADING_TIP_23, L.default.Messages.LOADING_TIP_24, L.default.Messages.LOADING_TIP_25, L.default.Messages.LOADING_TIP_26, L.default.Messages.LOADING_TIP_27.format({
+      }), v.default.Messages.LOADING_LINE_1, v.default.Messages.LOADING_LINE_2, v.default.Messages.LOADING_LINE_4, v.default.Messages.LOADING_LINE_5, v.default.Messages.LOADING_LINE_6, v.default.Messages.LOADING_LINE_7, v.default.Messages.LOADING_LINE_8, v.default.Messages.LOADING_LINE_9, v.default.Messages.LOADING_LINE_10, v.default.Messages.LOADING_LINE_11, v.default.Messages.LOADING_LINE_12, v.default.Messages.LOADING_LINE_13, v.default.Messages.LOADING_LINE_14, v.default.Messages.LOADING_LINE_15, v.default.Messages.LOADING_TIP_1, v.default.Messages.LOADING_TIP_2, v.default.Messages.LOADING_TIP_3, v.default.Messages.LOADING_TIP_4, v.default.Messages.LOADING_TIP_5, v.default.Messages.LOADING_TIP_6, v.default.Messages.LOADING_TIP_7, v.default.Messages.LOADING_TIP_8, v.default.Messages.LOADING_TIP_9, v.default.Messages.LOADING_TIP_10, v.default.Messages.LOADING_TIP_11, v.default.Messages.LOADING_TIP_12, v.default.Messages.LOADING_TIP_13, v.default.Messages.LOADING_TIP_14, v.default.Messages.LOADING_TIP_15, v.default.Messages.LOADING_TIP_16, v.default.Messages.LOADING_TIP_17, v.default.Messages.LOADING_TIP_18, v.default.Messages.LOADING_TIP_19, v.default.Messages.LOADING_TIP_20, v.default.Messages.LOADING_TIP_21, v.default.Messages.LOADING_TIP_22, v.default.Messages.LOADING_TIP_23, v.default.Messages.LOADING_TIP_24, v.default.Messages.LOADING_TIP_25, v.default.Messages.LOADING_TIP_26, v.default.Messages.LOADING_TIP_27.format({
         asterisks: "**"
-      }), L.default.Messages.LOADING_KEYBIND_TIP_1.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_1.format({
         quickSwitcherHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "mod+k",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_2.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_2.format({
         markUnreadHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "alt+click",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_3.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_3.format({
         markServerUnreadHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift+esc",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_4.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_4.format({
         navigateUnreadHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift+alt+up",
-          className: v.keybind
+          className: L.keybind
         }, t),
         downHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "down",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_5.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_5.format({
         keyboardShortcutsHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "mod+/",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_6.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_6.format({
         messageNewlineHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift+return",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_7.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_7.format({
         shiftHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "shift",
-          className: v.keybind
+          className: L.keybind
         }, t)
-      }), L.default.Messages.LOADING_KEYBIND_TIP_8.format({
+      }), v.default.Messages.LOADING_KEYBIND_TIP_8.format({
         upHook: (e, t) => (0, a.jsx)(f.KeyCombo, {
           shortcut: "up",
-          className: v.keybind
+          className: L.keybind
         }, t)
       })];
       return e[o.random(e.length - 1)]
@@ -212,7 +212,7 @@ class M extends s.PureComponent {
     }(), this.handleReady = () => {
       this.setState({
         ready: !0
-      }), (0, g.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
+      }), (0, A.isDesktop)() && (R.default.send("UPDATED_QUOTES", ["Hold Tight — Loading Discord"]), R.default.send("UPDATE_OPEN_ON_STARTUP"))
     }, this.setVideoRef = e => {
       this.videoRef = e
     }, this.setProblemsTimeout = () => {
@@ -234,23 +234,23 @@ class M extends s.PureComponent {
     }, this._connectedSound.volume = 1
   }
 }
-var P = d.default.connectStores([h.default, T.default, I.default, _.default], () => ({
-  isTryingToConnect: h.default.isTryingToConnect(),
-  connected: h.default.isConnected(),
-  incident: T.default.getIncident(),
-  soundpack: I.default.getSoundpack(),
-  reducedMotion: _.default.useReducedMotion
+var P = d.default.connectStores([_.default, I.default, S.default, h.default], () => ({
+  isTryingToConnect: _.default.isTryingToConnect(),
+  connected: _.default.isConnected(),
+  incident: I.default.getIncident(),
+  soundpack: S.default.getSoundpack(),
+  reducedMotion: h.default.useReducedMotion
 }))(e => {
   let {
     isTryingToConnect: t,
     connected: n,
     incident: s,
-    soundpack: i,
-    reducedMotion: l
+    soundpack: l,
+    reducedMotion: i
   } = e;
   return t ? (0, a.jsx)(M, {
-    reducedMotion: l,
-    soundpack: i,
+    reducedMotion: i,
+    soundpack: l,
     connected: n,
     incident: s
   }) : null

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   },
   getAllMessagesFromFeedItem: function() {
-    return l
+    return r
   },
   getAllMessageIdsFromFeedItem: function() {
     return u
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
 var d = n("611221"),
   i = n("449008");
 
-function r(e) {
+function l(e) {
   switch (e.type) {
     case d.GuildFeedItemTypes.MESSAGE:
     case d.GuildFeedItemTypes.FORUM_POST:
@@ -27,7 +27,7 @@ function r(e) {
   }
 }
 
-function l(e) {
+function r(e) {
   switch (e.type) {
     case d.GuildFeedItemTypes.MESSAGE:
     case d.GuildFeedItemTypes.FORUM_POST:
@@ -45,5 +45,5 @@ function l(e) {
 }
 
 function u(e) {
-  return new Set(Array.from(l(e)).map(e => e.id))
+  return new Set(Array.from(r(e)).map(e => e.id))
 }

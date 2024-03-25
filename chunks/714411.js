@@ -13,10 +13,10 @@ let r = e => {
     width: t = 24,
     height: a = 24,
     color: r = n.default.colors.INTERACTIVE_NORMAL,
-    ...i
+    ...o
   } = e;
   return (0, l.jsxs)("svg", {
-    ...(0, s.default)(i),
+    ...(0, s.default)(o),
     xmlns: "http://www.w3.org/2000/svg",
     width: t,
     height: a,

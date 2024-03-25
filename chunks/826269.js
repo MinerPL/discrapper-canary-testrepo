@@ -8,8 +8,8 @@ var e = r("37983");
 r("884691");
 var i = r("77078"),
   a = r("476765"),
-  s = r("782340"),
-  o = r("677029"),
+  o = r("782340"),
+  s = r("606077"),
   u = t => {
     let {
       onClose: n
@@ -19,28 +19,28 @@ var i = r("77078"),
       "aria-labelledby": r,
       children: [(0, e.jsxs)(i.ModalHeader, {
         separator: !1,
-        className: o.modalHeader,
+        className: s.modalHeader,
         children: [(0, e.jsx)(i.Heading, {
           id: r,
           variant: "heading-xl/extrabold",
-          children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
+          children: o.default.Messages.LIMITED_ACCESS_INFO_MODAL_HEADING
         }), (0, e.jsx)(i.ModalCloseButton, {
-          className: o.closeButton,
+          className: s.closeButton,
           onClick: n
         })]
       }), (0, e.jsx)(i.ModalContent, {
-        className: o.modalContent,
+        className: s.modalContent,
         children: (0, e.jsx)(i.Text, {
           variant: "text-md/normal",
-          className: o.contentText,
-          children: s.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
+          className: s.contentText,
+          children: o.default.Messages.LIMITED_ACCESS_INFO_MODAL_DESCRIPTION_V2
         })
       }), (0, e.jsx)(i.ModalFooter, {
         children: (0, e.jsx)(i.Button, {
-          className: o.button,
+          className: s.button,
           size: i.Button.Sizes.MIN,
           onClick: n,
-          children: s.default.Messages.OKAY
+          children: o.default.Messages.OKAY
         })
       })]
     })

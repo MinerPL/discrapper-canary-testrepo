@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
-var s = n("37983");
+var r = n("37983");
 n("884691");
-var a = n("414456"),
-  l = n.n(a),
-  r = n("77078"),
-  i = n("978679"),
-  u = n("265469");
+var i = n("414456"),
+  s = n.n(i),
+  l = n("77078"),
+  a = n("978679"),
+  o = n("249121");
 
-function o(e) {
+function u(e) {
   let {
     className: t,
     copy: n,
-    bannerImage: a,
-    textColor: o = "always-white"
+    bannerImage: i,
+    textColor: u = "always-white"
   } = e;
-  return (0, s.jsxs)("div", {
-    className: l(u.bannerContainer, t),
-    children: [null == a ? null : (0, s.jsx)("img", {
+  return (0, r.jsxs)("div", {
+    className: s(o.bannerContainer, t),
+    children: [null == i ? null : (0, r.jsx)("img", {
       alt: "",
-      className: u.banner,
-      src: a
-    }), (0, s.jsxs)("div", {
-      className: u.textContainer,
-      children: [(0, s.jsx)(i.default, {
-        className: u.giftIcon
-      }), (0, s.jsx)(r.Heading, {
-        className: u.textHeader,
-        color: o,
+      className: o.banner,
+      src: i
+    }), (0, r.jsxs)("div", {
+      className: o.textContainer,
+      children: [(0, r.jsx)(a.default, {
+        className: o.giftIcon
+      }), (0, r.jsx)(l.Heading, {
+        className: o.textHeader,
+        color: u,
         variant: "eyebrow",
         children: n
       })]

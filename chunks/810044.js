@@ -13,8 +13,8 @@ var s = n("37983"),
   u = n("446674"),
   d = n("77078"),
   c = n("716241"),
-  f = n("428958"),
-  E = n("442379"),
+  E = n("428958"),
+  f = n("442379"),
   _ = n("537325"),
   T = n("305961"),
   I = n("476263"),
@@ -26,7 +26,7 @@ var s = n("37983"),
   C = n("907038"),
   h = n("49111"),
   g = n("782340"),
-  M = n("431607");
+  M = n("697755");
 
 function O(e) {
   var t;
@@ -36,22 +36,22 @@ function O(e) {
     loading: O,
     subscriptionsSettings: R
   } = (0, S.useMonetizationSettings)(n), {
-    listingsLoaded: L
-  } = (0, E.useFetchGuildProductListingsForGuild)(n), v = (0, E.useGuildProductsForGuild)(n, {
+    listingsLoaded: v
+  } = (0, f.useFetchGuildProductListingsForGuild)(n), L = (0, f.useGuildProductsForGuild)(n, {
     publishedOnly: !0
   }), P = l.useCallback(async () => {
     p.default.track(h.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
     }), await (0, _.default)(h.Routes.SERVER_SHOP(n))
   }, [n]);
-  (0, f.default)({
+  (0, E.default)({
     type: r.ImpressionTypes.VIEW,
     name: r.ImpressionNames.GUILD_SHOP_EMBED
   }, {
     disableTrack: null == a
   });
-  let D = v.length > 0 ? new Date(Math.min(...v.map(e => Date.parse(e.published_at)))) : void 0;
-  return O || !L ? (0, s.jsx)("div", {
+  let D = L.length > 0 ? new Date(Math.min(...L.map(e => Date.parse(e.published_at)))) : void 0;
+  return O || !v ? (0, s.jsx)("div", {
     className: i(M.guildShopEmbed, M.spinnerContainer),
     children: (0, s.jsx)(d.Spinner, {})
   }) : null == a || null == R ? null : (0, s.jsxs)("div", {
@@ -102,7 +102,7 @@ function O(e) {
             variant: "text-sm/normal",
             color: "text-muted",
             children: g.default.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
-              listingCount: v.length
+              listingCount: L.length
             })
           })
         }), null != D && (0, s.jsx)("li", {

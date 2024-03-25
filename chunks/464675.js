@@ -1,4 +1,4 @@
-var n = r("199135");
+var r = n("199135");
 e.exports = function(e) {
-  return n(e, 5)
+  return r(e, 5)
 }

@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return M
   },
   ClientThemesSidebarButton: function() {
-    return v
+    return D
   }
 });
 var a = s("37983"),
@@ -18,21 +18,21 @@ var a = s("37983"),
   c = s("32531"),
   S = s("714657"),
   E = s("648114"),
-  f = s("10641"),
-  T = s("154889"),
-  m = s("917247"),
-  _ = s("956597"),
+  T = s("10641"),
+  f = s("154889"),
+  _ = s("917247"),
+  m = s("956597"),
   g = s("635956"),
   h = s("632892"),
-  I = s("599110"),
-  N = s("49111"),
+  N = s("599110"),
+  I = s("49111"),
   p = s("994428"),
   C = s("646718"),
   A = s("782340"),
-  O = s("415341"),
-  x = s("926622");
+  O = s("654261"),
+  x = s("890957");
 let R = () => {
-    (0, f.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW, {
+    (0, T.markDismissibleContentAsDismissed)(i.DismissibleContent.CLIENT_THEMES_SPARKLE_PREVIEW, {
       dismissAction: p.ContentDismissActionType.PRIMARY,
       forceTrack: !0
     }), (0, c.openEditor)(), (0, o.popLayer)()
@@ -41,9 +41,9 @@ let R = () => {
     var e, t;
     let {
       analyticsLocations: s
-    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, m.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, T.usePremiumDiscountOffer)(), f = (0, T.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
+    } = (0, u.default)(d.default.USER_SETTINGS), i = (0, l.useStateFromStores)([S.default], () => S.default.isPreview), o = (null === (t = (0, _.usePremiumTrialOffer)()) || void 0 === t ? void 0 : null === (e = t.subscription_trial) || void 0 === e ? void 0 : e.sku_id) === C.PremiumSubscriptionSKUs.TIER_2, c = (0, f.usePremiumDiscountOffer)(), T = (0, f.discountOfferHasTier)(c, C.PremiumSubscriptionSKUs.TIER_2);
     return n.useEffect(() => {
-      i && I.default.track(N.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+      i && N.default.track(I.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
         location_stack: s
       })
@@ -66,7 +66,7 @@ let R = () => {
                 children: A.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
               }), (0, a.jsx)(g.default, {
                 subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2,
-                buttonText: f ? A.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+                buttonText: T ? A.default.Messages.PREMIUM_DISCOUNT_CTA.format({
                   percent: null == c ? void 0 : c.discount.amount
                 }) : A.default.Messages.USER_SETTINGS_CUSTOMIZATION_UPSELL,
                 className: O.premiumCta
@@ -80,7 +80,7 @@ let R = () => {
               children: A.default.Messages.USER_SETTINGS_APPEARANCE_PREVIEW_THEME_TITLE
             }), (0, a.jsx)("div", {
               className: O.premiumTier2Divider
-            }), (0, a.jsx)(_.default, {
+            }), (0, a.jsx)(m.default, {
               type: C.PremiumUpsellTypes.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
               subscriptionTier: C.PremiumSubscriptionSKUs.TIER_2
             })]
@@ -91,7 +91,7 @@ let R = () => {
       })]
     })
   },
-  v = () => {
+  D = () => {
     let e = (0, l.useStateFromStores)([S.default], () => S.default.isPreview);
     return e ? null : (0, a.jsx)(r.Button, {
       size: r.ButtonSizes.SMALL,

@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
     return c
   }
@@ -8,52 +8,52 @@ var n = i("37983");
 i("884691");
 var l = i("77078"),
   a = i("913144"),
-  u = i("135230"),
-  r = i("550766"),
+  r = i("135230"),
+  u = i("550766"),
   d = i("648456"),
-  o = i("782340");
-class s extends d.default {
-  showErrorModal(e) {
+  s = i("782340");
+class o extends d.default {
+  showErrorModal(t) {
     let {
-      code: t,
+      code: e,
       message: i
-    } = e;
-    (0, l.openModalLazy)(async () => e => (0, n.jsx)(u.default, {
-      title: o.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
-        code: t
+    } = t;
+    (0, l.openModalLazy)(async () => t => (0, n.jsx)(r.default, {
+      title: s.default.Messages.EMBEDDED_ACTIVITIES_ERROR_TITLE.format({
+        code: e
       }),
       body: i,
-      ...e
-    }))
-  }
-  showLaunchErrorModal(e) {
-    (0, l.openModalLazy)(async () => t => (0, n.jsx)(u.default, {
-      title: o.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
-      body: e,
       ...t
     }))
   }
-  leaveActivity(e) {
+  showLaunchErrorModal(t) {
+    (0, l.openModalLazy)(async () => e => (0, n.jsx)(r.default, {
+      title: s.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAILURE,
+      body: t,
+      ...e
+    }))
+  }
+  leaveActivity(t) {
     let {
-      channelId: t,
+      channelId: e,
       applicationId: i
-    } = e;
-    a.default.wait(() => (0, r.stopEmbeddedActivity)({
-      channelId: t,
+    } = t;
+    a.default.wait(() => (0, u.stopEmbeddedActivity)({
+      channelId: e,
       applicationId: i
     }))
   }
-  constructor(...e) {
-    super(...e), this.handleRPCDisconnect = e => {
+  constructor(...t) {
+    super(...t), this.handleRPCDisconnect = t => {
       let {
-        reason: t,
+        reason: e,
         application: i
-      } = e;
+      } = t;
       this.superHandleRPCDisconnect({
-        reason: t,
+        reason: e,
         application: i
       })
     }
   }
 }
-var c = new s
+var c = new o

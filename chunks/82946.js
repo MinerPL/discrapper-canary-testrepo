@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return I
   }
 }), n("222007");
 var s, a, l = n("37983"),
@@ -13,9 +13,9 @@ var s, a, l = n("37983"),
   c = n("393414"),
   f = n("124969"),
   E = n("782340"),
-  I = n("926622");
+  _ = n("890957");
 (a = s || (s = {}))[a.INITIAL = 0] = "INITIAL", a[a.RPC_CONNECTED = 1] = "RPC_CONNECTED", a[a.APP_OPENING = 2] = "APP_OPENING", a[a.APP_OPENED = 3] = "APP_OPENED";
-var _ = function(e) {
+var I = function(e) {
   let {
     match: t,
     location: n,
@@ -32,7 +32,7 @@ var _ = function(e) {
     let e = setTimeout(() => (0, c.transitionTo)((0, d.getRedirectPath)()), 3e3);
     return () => clearTimeout(e)
   }, [a]);
-  let _ = i.useCallback(async (e, t) => {
+  let I = i.useCallback(async (e, t) => {
     try {
       r(2), await s(e, t), r(3)
     } catch (e) {
@@ -44,16 +44,16 @@ var _ = function(e) {
     case 1:
       return (0, l.jsxs)(f.default, {
         children: [(0, l.jsx)(f.Title, {
-          className: I.marginBottom8,
+          className: _.marginBottom8,
           children: E.default.Messages.DEEPLINK_BROWSER_TITLE
         }), (0, l.jsx)(f.SubTitle, {
           children: E.default.Messages.DEEPLINK_BROWSER_PROMPT
         }), (0, l.jsx)(f.Button, {
-          className: I.marginTop40,
-          onClick: () => _(t, n),
+          className: _.marginTop40,
+          onClick: () => I(t, n),
           children: E.default.Messages.OPEN_IN_APP
         }), (0, l.jsx)(f.Button, {
-          className: u(I.marginTop8, I.marginCenterHorz),
+          className: u(_.marginTop8, _.marginCenterHorz),
           color: f.Button.Colors.LINK,
           look: f.Button.Looks.LINK,
           onClick: () => (0, c.transitionTo)((0, d.getRedirectPath)()),
@@ -70,7 +70,7 @@ var _ = function(e) {
     case 3:
       return (0, l.jsxs)(f.default, {
         children: [(0, l.jsx)(f.Title, {
-          className: I.marginBottom8,
+          className: _.marginBottom8,
           children: E.default.Messages.APP_OPENED_TITLE
         }), (0, l.jsx)(f.SubTitle, {
           children: E.default.Messages.DEEPLINK_BROWSER_APP_OPENED

@@ -42,7 +42,7 @@ function a(e, t, n) {
     return u
   }
 
-  function g(e) {
+  function v(e) {
     if ("function" != typeof e) throw Error(r(4));
     if (f) throw Error(r(5));
     var t = !0;
@@ -57,7 +57,7 @@ function a(e, t, n) {
       }
   }
 
-  function b(e) {
+  function g(e) {
     if (! function(e) {
         if ("object" != typeof e || null === e) return !1;
         for (var t = e; null !== Object.getPrototypeOf(t);) t = Object.getPrototypeOf(t);
@@ -73,15 +73,15 @@ function a(e, t, n) {
     for (var t = d = l, n = 0; n < t.length; n++)(0, t[n])();
     return e
   }
-  return b({
+  return g({
     type: s.INIT
   }), (o = {
-    dispatch: b,
-    subscribe: g,
+    dispatch: g,
+    subscribe: v,
     getState: h,
     replaceReducer: function(e) {
       if ("function" != typeof e) throw Error(r(10));
-      c = e, b({
+      c = e, g({
         type: s.REPLACE
       })
     }
@@ -95,7 +95,7 @@ function a(e, t, n) {
           e.next && e.next(h())
         }
         return t(), {
-          unsubscribe: g(t)
+          unsubscribe: v(t)
         }
       }
     })[i] = function() {

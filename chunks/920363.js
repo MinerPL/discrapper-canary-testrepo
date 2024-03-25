@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i, r = n("811022"),
-  s = n("773364"),
+var i, s = n("811022"),
+  r = n("773364"),
   a = n("353927");
-let o = new r.default("ConnectionEventFramerateReducer");
+let o = new s.default("ConnectionEventFramerateReducer");
 i = class {
   initialize() {
     this.userSpeakingChange(!0)
@@ -37,6 +37,6 @@ i = class {
       e === this.connection.ids.userId && this.userSpeakingChange(t === a.SpeakingFlags.NONE)
     }, this.handleSelfMute = e => {
       !this.connection.hasDesktopSource() && (this.destroyFramerateScaleFactorTimers(), this.sinkWants.isMuted = e, this.updateRemoteWantsFramerate())
-    }, e.on(s.BaseConnectionEvent.Speaking, this.handleSpeaking), e.on(s.BaseConnectionEvent.Mute, this.handleSelfMute), this.initialize()
+    }, e.on(r.BaseConnectionEvent.Speaking, this.handleSpeaking), e.on(r.BaseConnectionEvent.Mute, this.handleSelfMute), this.initialize()
   }
 }

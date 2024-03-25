@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   setShowPremiumUpsell: function() {
-    return o
+    return s
   },
   useStickerPickerUpsellStore: function() {
-    return s
+    return r
   }
 });
-var l = n("308503");
-let i = Object.freeze({
+var i = n("308503");
+let l = Object.freeze({
     showPremiumUpsell: !1
   }),
-  r = (0, l.default)(e => i),
-  o = e => {
-    r.setState({
+  a = (0, i.default)(e => l),
+  s = e => {
+    a.setState({
       showPremiumUpsell: e
     })
   },
-  s = r
+  r = a

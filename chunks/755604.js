@@ -1,25 +1,25 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 }), n("222007"), n("424973");
-var l = n("385887");
+var i = n("385887");
 
-function i(e, t) {
-  if (l.EditorUtils.areStylesDisabled(e)) return [];
-  let [n, i] = t, r = [];
-  if (!l.TextUtils.isText(n)) return r;
-  let [o] = l.EditorUtils.node(e, l.PathUtils.parent(i));
-  return l.NodeUtils.isType(o, "applicationCommand") ? (n === o.children[0] && r.push({
+function l(e, t) {
+  if (i.EditorUtils.areStylesDisabled(e)) return [];
+  let [n, l] = t, a = [];
+  if (!i.TextUtils.isText(n)) return a;
+  let [s] = i.EditorUtils.node(e, i.PathUtils.parent(l));
+  return i.NodeUtils.isType(s, "applicationCommand") ? (n === s.children[0] && a.push({
     anchor: {
-      path: i,
+      path: l,
       offset: 0
     },
     focus: {
-      path: i,
-      offset: 0 + o.command.displayName.length + 1
+      path: l,
+      offset: 0 + s.command.displayName.length + 1
     },
     commandName: !0
-  }), r) : r
+  }), a) : a
 }

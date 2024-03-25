@@ -1,84 +1,84 @@
 "use strict";
-s.r(t), s.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return T
+    return I
   }
-}), s("222007");
-var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
-  r = s("907002"),
-  o = s("446674"),
-  d = s("77078"),
-  u = s("731898"),
-  c = s("206230"),
-  E = s("782340"),
-  _ = s("610990"),
-  T = n.memo(function(e) {
+}), i("222007");
+var n = i("37983"),
+  a = i("884691"),
+  l = i("414456"),
+  s = i.n(l),
+  r = i("146606"),
+  o = i("446674"),
+  d = i("77078"),
+  u = i("731898"),
+  c = i("206230"),
+  f = i("782340"),
+  E = i("398277"),
+  I = a.memo(function(e) {
     let {
       renderHeader: t,
-      children: s,
+      children: i,
       isExpanded: l,
-      isStuck: T,
-      onExpand: I
-    } = e, S = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [N, g] = n.useState(!0), [f, A] = n.useState(!1), {
-      ref: L,
-      height: m = 0
+      isStuck: I,
+      onExpand: T
+    } = e, m = (0, o.useStateFromStores)([c.default], () => c.default.useReducedMotion), [_, x] = a.useState(!0), [h, p] = a.useState(!1), {
+      ref: M,
+      height: R = 0
     } = (0, u.default)(), {
-      ref: C,
-      height: O = 0
-    } = (0, u.default)(), [h, R] = n.useState(l), D = (0, r.useSpring)({
-      height: h ? O + m : m,
-      immediate: N || S,
+      ref: F,
+      height: v = 0
+    } = (0, u.default)(), [N, S] = a.useState(l), C = (0, r.useSpring)({
+      height: N ? v + R : R,
+      immediate: _ || m,
       config: {
         ...r.config.stiff,
         clamp: !0
       },
       onStart: () => {
-        A(!1)
+        p(!1)
       },
       onRest: () => {
-        A(!0)
+        p(!0)
       }
     });
-    n.useLayoutEffect(() => {
-      A(!1), R(l)
+    a.useLayoutEffect(() => {
+      p(!1), S(l)
     }, [l]);
-    let [M, G] = n.useState(!1), x = () => {
-      G(!1)
+    let [g, A] = a.useState(!1), L = () => {
+      A(!1)
     };
-    return n.useLayoutEffect(() => {
+    return a.useLayoutEffect(() => {
       let e = setTimeout(() => {
-        g(!1)
+        x(!1)
       }, 100);
       return () => clearTimeout(e)
-    }, []), (0, a.jsx)(d.Clickable, {
-      className: i(_.editCard, {
-        [_.toggled]: l,
-        [_.active]: M
+    }, []), (0, n.jsx)(d.Clickable, {
+      className: s(E.editCard, {
+        [E.toggled]: l,
+        [E.active]: g
       }),
-      onMouseLeave: x,
+      onMouseLeave: L,
       onMouseDown: () => {
-        G(!0)
+        A(!0)
       },
-      onMouseUp: x,
-      children: (0, a.jsxs)(r.animated.div, {
-        className: i(_.contentExpandContainer, {
-          [_.showOverflow]: l && f
+      onMouseUp: L,
+      children: (0, n.jsxs)(r.animated.div, {
+        className: s(E.contentExpandContainer, {
+          [E.showOverflow]: l && h
         }),
-        style: D,
-        children: [(0, a.jsx)(d.Clickable, {
-          innerRef: L,
-          onClick: T ? void 0 : I,
-          className: i(_.innerHeader, {
-            [_.toggled]: l && T
+        style: C,
+        children: [(0, n.jsx)(d.Clickable, {
+          innerRef: M,
+          onClick: I ? void 0 : T,
+          className: s(E.innerHeader, {
+            [E.toggled]: l && I
           }),
-          "aria-label": E.default.Messages.EXPAND,
+          "aria-label": f.default.Messages.EXPAND,
           children: t
-        }), (0, a.jsx)("div", {
-          ref: C,
-          children: s
+        }), (0, n.jsx)("div", {
+          ref: F,
+          children: i
         })]
       })
     })

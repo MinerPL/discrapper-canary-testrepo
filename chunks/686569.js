@@ -1,11 +1,11 @@
 "use strict";
-i.r(t), i.d(t, {
+l.r(t), l.d(t, {
   ExperimentShelfToDetailPage: function() {
     return a
   }
 });
-var l = i("862205");
-let a = (0, l.createExperiment)({
+var i = l("862205");
+let a = (0, i.createExperiment)({
   kind: "user",
   id: "2023-06_activity_shelf_to_detail_page",
   label: "Activity Shelf to Detail Page",

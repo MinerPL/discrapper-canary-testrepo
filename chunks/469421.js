@@ -8,8 +8,8 @@ var n = l("884691"),
   a = l("917351"),
   s = l.n(a),
   i = l("446674"),
-  d = l("913144"),
-  r = l("986003"),
+  r = l("913144"),
+  d = l("986003"),
   o = l("282109"),
   u = l("568734"),
   c = l("449008"),
@@ -18,7 +18,7 @@ var n = l("884691"),
   m = l("397336");
 
 function C(e) {
-  d.default.dispatch({
+  r.default.dispatch({
     type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES",
     guildId: e
   })
@@ -39,19 +39,19 @@ function x(e) {
         addedRoleIds: i,
         removedRoleIds: C
       } = function(e, t, l, n) {
-        var a, i, d, r, o;
+        var a, i, r, d, o;
         let u = [],
           h = [];
         if (e.singleSelect && l) {
           let l = e.options.find(e => n.includes(e.id));
-          u = s.difference(null !== (a = t.roleIds) && void 0 !== a ? a : [], null !== (i = null == l ? void 0 : l.roleIds) && void 0 !== i ? i : []), h = s.difference(null !== (d = null == l ? void 0 : l.roleIds) && void 0 !== d ? d : [], null !== (r = t.roleIds) && void 0 !== r ? r : [])
+          u = s.difference(null !== (a = t.roleIds) && void 0 !== a ? a : [], null !== (i = null == l ? void 0 : l.roleIds) && void 0 !== i ? i : []), h = s.difference(null !== (r = null == l ? void 0 : l.roleIds) && void 0 !== r ? r : [], null !== (d = t.roleIds) && void 0 !== d ? d : [])
         } else if (l) u = null !== (o = t.roleIds) && void 0 !== o ? o : [], h = [];
         else {
           let l = e.options.filter(e => n.includes(e.id)),
             a = l.filter(e => t.id !== e.id),
             i = l.map(e => e.roleIds).flat().filter(c.isNotNullish),
-            d = a.map(e => e.roleIds).flat().filter(c.isNotNullish);
-          u = [], h = s.difference(i, d)
+            r = a.map(e => e.roleIds).flat().filter(c.isNotNullish);
+          u = [], h = s.difference(i, r)
         }
         return {
           addedRoleIds: u,
@@ -64,7 +64,7 @@ function x(e) {
       } = function(e) {
         var t, l, n, a, i;
         let {
-          guildId: d,
+          guildId: r,
           prompt: o,
           option: u,
           selected: h,
@@ -81,7 +81,7 @@ function x(e) {
             n = t.map(e => e.channelIds).flat().filter(c.isNotNullish);
           C = [], N = s.difference(l, n)
         }
-        return (0, r.hasNotSetUpChannelOptIn)(d) && C.push(...f.default.getDefaultChannelIds(d)), {
+        return (0, d.hasNotSetUpChannelOptIn)(r) && C.push(...f.default.getDefaultChannelIds(r)), {
           addedChannelIds: C,
           removedChannelIds: N
         }
@@ -108,7 +108,7 @@ function x(e) {
         ...g,
         ...p
       };
-    h.default.selectOption(e, t.id, l.id, n), d.default.dispatch({
+    h.default.selectOption(e, t.id, l.id, n), r.default.dispatch({
       type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK",
       guildId: e,
       overrides: S

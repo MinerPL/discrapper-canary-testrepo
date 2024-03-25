@@ -51,8 +51,8 @@ var n = a("37983"),
   U = a("39644"),
   H = a("843455"),
   V = a("782340"),
-  G = a("483397"),
-  W = a("129429");
+  G = a("497691"),
+  W = a("540700");
 let Z = new C.default("AddPaymentStep.tsx"),
   z = [M.Step.PAYMENT_TYPE],
   K = [M.Step.PAYMENT_TYPE, M.Step.CREDIT_CARD_INFORMATION, M.Step.ADDRESS],
@@ -590,7 +590,7 @@ function eA(e) {
       });
       break;
     case M.Step.ADDRESS:
-      let e2 = async () => {
+      let e3 = async () => {
         ej(!0);
         let e = eC.methodType;
         switch (e) {
@@ -735,7 +735,7 @@ function eA(e) {
         primaryText: V.default.Messages.NEXT,
         primarySubmitting: eD,
         primaryDisabled: !eY.isValid || eV,
-        onPrimary: e2
+        onPrimary: e3
       });
       break;
     case M.Step.AWAITING_AUTHENTICATION:
@@ -744,7 +744,7 @@ function eA(e) {
     default:
       throw Error("Unexpected step: ".concat(eN))
   }
-  let e3 = (0, n.jsx)(u.Sequencer, {
+  let e2 = (0, n.jsx)(u.Sequencer, {
       className: W.sequencer,
       staticClassName: W.sequencerStatic,
       animatedNodeClassName: W.sequencerAnimatedNode,
@@ -762,7 +762,7 @@ function eA(e) {
       className: G.paymentModalBreadcrumbs,
       isEligibleForTrial: w
     }), (0, n.jsx)(b.PaymentPortalBody, {
-      children: e3
+      children: e2
     }), (0, n.jsx)(b.PaymentPortalFooter, {
       children: e8
     })]
@@ -772,7 +772,7 @@ function eA(e) {
     paymentError: E.paymentError,
     header: D,
     hideBreadcrumbs: j,
-    body: e3,
+    body: e2,
     footer: e8
   })
 }

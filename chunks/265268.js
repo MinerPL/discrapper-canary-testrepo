@@ -14,7 +14,7 @@ var a = n("446674"),
   d = n("18494"),
   u = n("360782"),
   c = n("846325"),
-  f = n("739840");
+  f = n("198043");
 
 function h() {
   let [e, t] = (0, a.useStateFromStoresArray)([l.default], () => [l.default.enabled, l.default.keepOpen]), n = (0, a.useStateFromStores)([d.default], () => d.default.getVoiceChannelId()), h = (0, a.useStateFromStores)([r.default], () => r.default.getChannel(n), [n]), p = null == h ? void 0 : h.getGuildId();

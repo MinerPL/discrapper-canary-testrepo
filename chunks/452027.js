@@ -9,20 +9,20 @@ var a = n("37983"),
   s = n("151426"),
   i = n("255397"),
   r = n("264732"),
-  o = n("176347"),
-  u = n("665182"),
+  u = n("176347"),
+  o = n("665182"),
   d = n("850391"),
   c = n("10641"),
   f = n("474643"),
   h = n("109264"),
-  p = n("945330"),
-  m = n("664336"),
+  m = n("945330"),
+  p = n("664336"),
   E = n("659500"),
-  C = n("412090"),
-  g = n("49111"),
-  S = n("994428"),
+  g = n("412090"),
+  S = n("49111"),
+  C = n("994428"),
   _ = n("782340"),
-  I = n("176692"),
+  I = n("370835"),
   T = function(e) {
     let {
       channel: t,
@@ -31,37 +31,37 @@ var a = n("37983"),
     } = e;
     l.useEffect(() => {
       (0, c.markDismissibleContentAsDismissed)(s.DismissibleContent.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, {
-        dismissAction: S.ContentDismissActionType.AUTO
+        dismissAction: C.ContentDismissActionType.AUTO
       })
     }, []);
     let v = l.useCallback(() => {
-        i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(g.ComponentActions.FOCUS_CHAT_BUTTON)
+        i.default.updateChatOpen(t.id, !1), E.ComponentDispatch.safeDispatch(S.ComponentActions.FOCUS_CHAT_BUTTON)
       }, [t.id]),
-      x = (0, a.jsx)(m.default.Icon, {
-        icon: p.default,
+      x = (0, a.jsx)(p.default.Icon, {
+        icon: m.default,
         tooltip: _.default.Messages.CLOSE,
         onClick: v
       });
-    return (0, a.jsxs)(u.default, {
-      sidebarType: u.ChatSidebarType.CallChatSidebar,
+    return (0, a.jsxs)(o.default, {
+      sidebarType: o.ChatSidebarType.CallChatSidebar,
       maxWidth: T,
-      floatingLayer: C.default,
+      floatingLayer: g.default,
       children: [(0, a.jsx)(r.default, {
         channel: t,
         draftType: f.DraftType.ChannelMessage
-      }), (0, a.jsxs)(m.default, {
+      }), (0, a.jsxs)(p.default, {
         toolbar: x,
         "aria-label": _.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-        children: [(0, a.jsx)(m.default.Icon, {
+        children: [(0, a.jsx)(p.default.Icon, {
           icon: h.default,
           disabled: !0,
           "aria-label": _.default.Messages.VOICE_CHAT_TEXT_CHANNEL
-        }), (0, a.jsx)(m.default.Title, {
+        }), (0, a.jsx)(p.default.Title, {
           children: t.name
         })]
       }), (0, a.jsx)("div", {
         className: I.chat,
-        children: (0, a.jsx)(o.default, {
+        children: (0, a.jsx)(u.default, {
           channel: t,
           guild: n,
           chatInputType: d.ChatInputTypes.SIDEBAR

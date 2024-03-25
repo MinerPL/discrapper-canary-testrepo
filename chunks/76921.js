@@ -1,26 +1,26 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("480583"),
-  c = r("882982"),
-  s = r("145330"),
-  f = r("123090"),
+  s = r("882982"),
+  f = r("145330"),
+  c = r("123090"),
   d = r("966446"),
   p = function(e) {
     var t = e.width,
       r = e.onChange,
       n = e.onSwatchHover,
-      a = e.colors,
+      o = e.colors,
       i = e.hex,
-      s = e.circleSize,
-      f = e.styles,
+      f = e.circleSize,
+      c = e.styles,
       p = e.circleSpacing,
       h = e.className,
-      b = (0, u.default)((0, c.default)({
+      b = (0, u.default)((0, s.default)({
         default: {
           card: {
             width: t,
@@ -30,24 +30,24 @@ var n = r("884691"),
             marginBottom: -p
           }
         }
-      }, void 0 === f ? {} : f)),
+      }, void 0 === c ? {} : c)),
       v = function(e, t) {
         return r({
           hex: e,
           source: "hex"
         }, t)
       };
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: b.card,
       className: "circle-picker " + (void 0 === h ? "" : h)
-    }, (0, l.default)(a, function(e) {
-      return o.createElement(d.default, {
+    }, (0, l.default)(o, function(e) {
+      return a.createElement(d.default, {
         key: e,
         color: e,
         onClick: v,
         onSwatchHover: n,
         active: i === e.toLowerCase(),
-        circleSize: s,
+        circleSize: f,
         circleSpacing: p
       })
     }))
@@ -61,6 +61,6 @@ p.propTypes = {
   width: 252,
   circleSize: 28,
   circleSpacing: 14,
-  colors: [s.red["500"], s.pink["500"], s.purple["500"], s.deepPurple["500"], s.indigo["500"], s.blue["500"], s.lightBlue["500"], s.cyan["500"], s.teal["500"], s.green["500"], s.lightGreen["500"], s.lime["500"], s.yellow["500"], s.amber["500"], s.orange["500"], s.deepOrange["500"], s.brown["500"], s.blueGrey["500"]],
+  colors: [f.red["500"], f.pink["500"], f.purple["500"], f.deepPurple["500"], f.indigo["500"], f.blue["500"], f.lightBlue["500"], f.cyan["500"], f.teal["500"], f.green["500"], f.lightGreen["500"], f.lime["500"], f.yellow["500"], f.amber["500"], f.orange["500"], f.deepOrange["500"], f.brown["500"], f.blueGrey["500"]],
   styles: {}
-}, (0, f.ColorWrap)(p)
+}, (0, c.ColorWrap)(p)

@@ -54,8 +54,8 @@ var d = [],
   p = 1,
   m = null,
   h = 3,
-  _ = !1,
   y = !1,
+  _ = !1,
   g = !1,
   v = "function" == typeof setTimeout ? setTimeout : null,
   b = "function" == typeof clearTimeout ? clearTimeout : null,
@@ -71,17 +71,17 @@ function w(e) {
 }
 
 function k(e) {
-  if (g = !1, w(e), !y) {
-    if (null !== a(d)) y = !0, C(L);
+  if (g = !1, w(e), !_) {
+    if (null !== a(d)) _ = !0, C(L);
     else {
       var t = a(f);
-      null !== t && H(k, t.startTime - e)
+      null !== t && A(k, t.startTime - e)
     }
   }
 }
 
 function L(e, n) {
-  y = !1, g && (g = !1, b(S), S = -1), _ = !0;
+  _ = !1, g && (g = !1, b(S), S = -1), y = !0;
   var r = h;
   try {
     for (w(n), m = a(d); null !== m && (!(m.expirationTime > n) || e && !O());) {
@@ -96,11 +96,11 @@ function L(e, n) {
     if (null !== m) var u = !0;
     else {
       var l = a(f);
-      null !== l && H(k, l.startTime - n), u = !1
+      null !== l && A(k, l.startTime - n), u = !1
     }
     return u
   } finally {
-    m = null, h = r, _ = !1
+    m = null, h = r, y = !1
   }
 }
 "undefined" != typeof navigator && void 0 !== navigator.scheduling && void 0 !== navigator.scheduling.isInputPending && navigator.scheduling.isInputPending.bind(navigator.scheduling);
@@ -143,7 +143,7 @@ function C(e) {
   T = e, D || (D = !0, s())
 }
 
-function H(e, n) {
+function A(e, n) {
   S = v(function() {
     e(t.unstable_now())
   }, n)
@@ -151,7 +151,7 @@ function H(e, n) {
 t.unstable_IdlePriority = 5, t.unstable_ImmediatePriority = 1, t.unstable_LowPriority = 4, t.unstable_NormalPriority = 3, t.unstable_Profiling = null, t.unstable_UserBlockingPriority = 2, t.unstable_cancelCallback = function(e) {
   e.callback = null
 }, t.unstable_continueExecution = function() {
-  y || _ || (y = !0, C(L))
+  _ || y || (_ = !0, C(L))
 }, t.unstable_forceFrameRate = function(e) {
   0 > e || 125 < e ? console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported") : Y = 0 < e ? Math.floor(1e3 / e) : 5
 }, t.unstable_getCurrentPriorityLevel = function() {
@@ -218,7 +218,7 @@ t.unstable_IdlePriority = 5, t.unstable_ImmediatePriority = 1, t.unstable_LowPri
     startTime: o,
     expirationTime: s,
     sortIndex: -1
-  }, o > i ? (e.sortIndex = o, r(f, e), null === a(d) && e === a(f) && (g ? (b(S), S = -1) : g = !0, H(k, o - i))) : (e.sortIndex = s, r(d, e), y || _ || (y = !0, C(L))), e
+  }, o > i ? (e.sortIndex = o, r(f, e), null === a(d) && e === a(f) && (g ? (b(S), S = -1) : g = !0, A(k, o - i))) : (e.sortIndex = s, r(d, e), _ || y || (_ = !0, C(L))), e
 }, t.unstable_shouldYield = O, t.unstable_wrapCallback = function(e) {
   var t = h;
   return function() {

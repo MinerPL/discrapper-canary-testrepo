@@ -21,9 +21,9 @@ var l = n("446674"),
   v = n("49111"),
   I = n("99795"),
   P = n("782340"),
-  S = n("374142");
+  C = n("735276");
 
-function C(e) {
+function S(e) {
   let {
     closePopout: t,
     idle: n,
@@ -32,8 +32,8 @@ function C(e) {
     onSelect: h
   } = e;
   n && t();
-  let S = (0, l.useStateFromStores)([d.default], () => d.default.getSelfEmbeddedActivityForChannel(m)),
-    C = (0, l.useStateFromStores)([f.default], () => f.default.pipWindow),
+  let C = (0, l.useStateFromStores)([d.default], () => d.default.getSelfEmbeddedActivityForChannel(m)),
+    S = (0, l.useStateFromStores)([f.default], () => f.default.pipWindow),
     g = (0, l.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(m)),
     y = (0, l.useStateFromStores)([c.default], () => c.default.getStreamParticipants(m));
   return (0, a.jsx)(o.Menu, {
@@ -45,11 +45,11 @@ function C(e) {
       let e = i.find(e => e.component === v.PictureInPictureComponents.EMBED_IFRAME),
         t = i.find(e => e.component === v.PictureInPictureComponents.VIDEO),
         n = [];
-      return null != e && (null == C ? void 0 : C.id) !== e.id && n.push({
+      return null != e && (null == S ? void 0 : S.id) !== e.id && n.push({
         pipWindow: e
       }), null != t && y.forEach(e => {
         let a = p.default.getActiveStreamForApplicationStream(e.stream),
-          l = e.id === (null == g ? void 0 : g.id) && (null == C ? void 0 : C.id) === t.id;
+          l = e.id === (null == g ? void 0 : g.id) && (null == S ? void 0 : S.id) === t.id;
         null != a && !l && n.push({
           pipWindow: t,
           participant: e,
@@ -61,9 +61,9 @@ function C(e) {
       let n = e.pipWindow.id,
         l = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
         i = function(e) {
-          if (e.pipWindow.component === v.PictureInPictureComponents.EMBED_IFRAME && null != S) {
+          if (e.pipWindow.component === v.PictureInPictureComponents.EMBED_IFRAME && null != C) {
             var t;
-            let e = null === (t = u.default.getApplication(S.applicationId)) || void 0 === t ? void 0 : t.name;
+            let e = null === (t = u.default.getApplication(C.applicationId)) || void 0 === t ? void 0 : t.name;
             return null == e ? P.default.Messages.SWITCH_PIP_TO_ACTIVITY : P.default.Messages.SWITCH_PIP_TO_ACTIVITY_NAME.format({
               activityName: e
             })
@@ -77,7 +77,7 @@ function C(e) {
         id: d,
         label: i,
         action: () => (function(e) {
-          (null == C ? void 0 : C.id) !== e.pipWindow.id && (0, s.switchPIPFocus)(e.pipWindow.id);
+          (null == S ? void 0 : S.id) !== e.pipWindow.id && (0, s.switchPIPFocus)(e.pipWindow.id);
           let t = e.participant;
           null != t && t.type !== I.ParticipantTypes.ACTIVITY && r.default.selectParticipant(m, t.id)
         })(e)
@@ -95,14 +95,14 @@ var g = function(e) {
   }), c = 1 === s.length && s[0].component === v.PictureInPictureComponents.EMBED_IFRAME || 0 === u.length, I = 1 === s.length && u.length <= 1;
   return c || I ? null : (0, a.jsx)(o.Popout, {
     position: "bottom",
-    renderPopout: e => (0, a.jsx)(C, {
+    renderPopout: e => (0, a.jsx)(S, {
       voiceChannelId: t,
       pipWindows: s,
       idle: n,
       ...e
     }),
     children: e => (0, a.jsx)(o.Clickable, {
-      className: S.menuIcon,
+      className: C.menuIcon,
       ...e,
       children: (0, a.jsx)(h.default, {
         color: i.default.unsafe_rawColors.WHITE_500.css

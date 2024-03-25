@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 });
 var a = s("37983");
@@ -16,18 +16,18 @@ var n = s("414456"),
   c = s("829536"),
   S = s("49111"),
   E = s("782340"),
-  f = s("933661");
-let T = (0, d.uid)();
+  T = s("933726");
+let f = (0, d.uid)();
 
-function m() {
+function _() {
   let e = (0, o.getAmplitudinalSoundboardVolume)();
   return (0, a.jsxs)("div", {
-    className: l(f.soundboardRow),
+    className: l(T.soundboardRow),
     children: [(0, a.jsxs)("div", {
-      className: l(f.soundboardColumn, f.leftColumn),
+      className: l(T.soundboardColumn, T.leftColumn),
       children: [(0, a.jsx)(i.FormTitle, {
         tag: i.FormTitleTags.H5,
-        className: f.soundboardTitle,
+        className: T.soundboardTitle,
         children: E.default.Messages.USER_SETTINGS_SOUNDBOARD
       }), (0, a.jsx)(i.Text, {
         color: "header-secondary",
@@ -37,11 +37,11 @@ function m() {
         })
       })]
     }), (0, a.jsxs)("div", {
-      className: l(f.soundboardColumn, f.rightColumn),
+      className: l(T.soundboardColumn, T.rightColumn),
       children: [(0, a.jsx)(i.FormTitle, {
-        id: T,
+        id: f,
         tag: i.FormTitleTags.H5,
-        className: f.soundboardSubtitle,
+        className: T.soundboardSubtitle,
         children: E.default.Messages.USER_SETTINGS_SOUNDBOARD_VOLUME
       }), (0, a.jsx)(i.Slider, {
         initialValue: (0, c.amplitudeToPerceptual)(e),
@@ -50,7 +50,7 @@ function m() {
         asValueChanges: function(t) {
           e = (0, c.perceptualToAmplitude)(t), (0, r.updateUserSoundboardVolume)(e)
         },
-        "aria-labelledby": T
+        "aria-labelledby": f
       })]
     })]
   })

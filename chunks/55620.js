@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return p
   },
   fetchStoreListingForApplication: function() {
-    return h
+    return m
   },
   matureAgree: function() {
-    return m
+    return h
   },
   matureDisagree: function() {
     return S
@@ -75,7 +75,7 @@ function p(e) {
   })
 }
 
-function h(e) {
+function m(e) {
   return (0, u.httpGetWithCountryCodeQuery)(c.Endpoints.STORE_PUBLISHED_LISTINGS_APPLICATION(e)).then(e => {
     a.default.dispatch({
       type: "STORE_LISTING_FETCH_SUCCESS",
@@ -84,7 +84,7 @@ function h(e) {
   })
 }
 
-function m() {
+function h() {
   a.default.dispatch({
     type: "APPLICATION_STORE_MATURE_AGREE"
   })

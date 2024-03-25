@@ -1,60 +1,60 @@
 "use strict";
-let n;
-l.r(t), l.d(t, {
+let i;
+n.r(t), n.d(t, {
   default: function() {
     return m
   }
 });
-var a = l("917351"),
-  r = l.n(a),
-  i = l("446674"),
-  u = l("95410"),
-  o = l("913144"),
-  s = l("49111");
-let c = "GameLibraryViewStore",
-  d = s.TableSortDirections.ASCENDING,
-  f = s.GameTableListKeys.LAST_PLAYED,
-  p = !1,
+var s = n("917351"),
+  r = n.n(s),
+  a = n("446674"),
+  o = n("95410"),
+  l = n("913144"),
+  u = n("49111");
+let d = "GameLibraryViewStore",
+  c = u.TableSortDirections.ASCENDING,
+  _ = u.GameTableListKeys.LAST_PLAYED,
+  f = !1,
   E = r.debounce(() => {
-    p = !1, g.emitChange()
+    f = !1, g.emitChange()
   }, 200);
-class h extends i.default.Store {
+class h extends a.default.Store {
   initialize() {
     var e;
-    let t = null !== (e = u.default.get(c)) && void 0 !== e ? e : {};
-    null != t.sortDirection && null != t.sortKey && (d = t.sortDirection, f = t.sortKey)
+    let t = null !== (e = o.default.get(d)) && void 0 !== e ? e : {};
+    null != t.sortDirection && null != t.sortKey && (c = t.sortDirection, _ = t.sortKey)
   }
   get sortDirection() {
-    return d
+    return c
   }
   get sortKey() {
-    return f
+    return _
   }
   get activeRowKey() {
-    return n
+    return i
   }
   get isNavigatingByKeyboard() {
-    return p
+    return f
   }
 }
 h.displayName = "GameLibraryViewStore";
-let g = new h(o.default, {
+let g = new h(l.default, {
   LIBRARY_TABLE_SORT_UPDATE: function(e) {
     let {
       direction: t,
-      key: l
+      key: n
     } = e;
-    d = t, f = l, u.default.set(c, {
-      sortDirection: d,
-      sortKey: f
+    c = t, _ = n, o.default.set(d, {
+      sortDirection: c,
+      sortKey: _
     })
   },
   LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: function(e) {
     let {
       key: t,
-      isKeyboardEvent: l
+      isKeyboardEvent: n
     } = e;
-    l && (p = !0, E()), n = t
+    n && (f = !0, E()), i = t
   }
 });
 var m = g

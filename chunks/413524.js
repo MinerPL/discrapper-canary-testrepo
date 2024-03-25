@@ -1,17 +1,17 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   STATUS_MAX_LENGTH: function() {
-    return l
+    return s
   },
   ClearAfterValues: function() {
-    return n
+    return l
   }
 });
-let s = 36e5,
-  l = 128,
-  n = Object.freeze({
+let a = 36e5,
+  s = 128,
+  l = Object.freeze({
     MINUTES_30: 18e5,
-    HOURS_1: 1 * s,
-    HOURS_4: 4 * s,
+    HOURS_1: 1 * a,
+    HOURS_4: 4 * a,
     TODAY: "TODAY"
   })

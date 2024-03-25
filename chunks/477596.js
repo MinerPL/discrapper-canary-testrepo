@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 });
 var a = s("37983"),
@@ -15,17 +15,17 @@ var a = s("37983"),
   c = s("12013"),
   S = s("353802"),
   E = s("697218"),
-  f = s("701909"),
-  T = s("392409"),
-  m = s("49111"),
-  _ = s("782340"),
-  g = s("231771");
+  T = s("701909"),
+  f = s("392409"),
+  _ = s("49111"),
+  m = s("782340"),
+  g = s("384234");
 class h extends n.PureComponent {
   renderIntroHeader() {
     let {
       houseMembership: e
     } = this.props;
-    return null == e ? _.default.Messages.HYPESQUAD_HEADING : _.default.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER
+    return null == e ? m.default.Messages.HYPESQUAD_HEADING : m.default.Messages.HYPESQUAD_HEADING_EXISTING_MEMBER
   }
   render() {
     let {
@@ -42,13 +42,13 @@ class h extends n.PureComponent {
           children: this.renderIntroHeader()
         }), (0, a.jsx)(o.Text, {
           variant: "text-lg/normal",
-          children: _.default.Messages.HYPESQUAD_SUBHEADING
+          children: m.default.Messages.HYPESQUAD_SUBHEADING
         })]
       }),
-      children: [(0, a.jsx)(T.default, {
+      children: [(0, a.jsx)(f.default, {
         className: g.verificationNotice,
-        unclaimedNotice: _.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
-        unverifiedNotice: _.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
+        unclaimedNotice: m.default.Messages.HYPESQUAD_UNCLAIMED_ACCOUNT_NOTICE,
+        unverifiedNotice: m.default.Messages.HYPESQUAD_UNVERIFIED_EMAIL_NOTICE
       }), (0, a.jsx)(u.default, {
         houseMembership: e,
         isClaimed: t,
@@ -57,14 +57,14 @@ class h extends n.PureComponent {
         isHypeSquadOnlineMember: null != e
       }), (0, a.jsx)(o.Card, {
         className: g.attendeeCTA,
-        children: _.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
-          url: f.default.getArticleURL(m.HelpdeskArticles.PROFILE_BADGES)
+        children: m.default.Messages.HYPESQUAD_ATTENDEE_CTA.format({
+          url: T.default.getArticleURL(_.HelpdeskArticles.PROFILE_BADGES)
         })
       })]
     })
   }
 }
-var I = r.default.connectStores([E.default, S.default], () => {
+var N = r.default.connectStores([E.default, S.default], () => {
   let e = E.default.getCurrentUser();
   return i(null != e, "UserSettingsHypeSquad: currentUser cannot be undefined"), {
     houseMembership: S.default.getHouseMembership(),

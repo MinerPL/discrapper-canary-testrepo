@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("748802"),
-  n = s("77078"),
-  i = s("181114"),
+  i = s("77078"),
+  n = s("181114"),
   l = s("599110"),
   o = s("907648"),
   u = s("49111"),
@@ -19,10 +19,10 @@ var r = s("748802"),
       setIsAllPerksVisible: t,
       previousComponent: s
     } = e;
-    return (0, a.jsx)(i.default, {
-      color: n.ButtonColors.CUSTOM,
+    return (0, a.jsx)(n.default, {
+      color: i.ButtonColors.CUSTOM,
       onlyShineOnHover: !0,
-      shineSize: i.ShineSizes.SMALL,
+      shineSize: n.ShineSizes.SMALL,
       className: c.seeAllPerksButton,
       onClick: () => {
         t(!0), l.default.track(u.AnalyticEvents.NITRO_HOME_NAVIGATION, {

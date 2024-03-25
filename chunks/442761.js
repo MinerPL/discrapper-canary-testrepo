@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   Popout: function() {
-    return f
+    return _
   },
   LazyPopout: function() {
-    return _
+    return f
   }
 }), n("70102"), n("222007");
 var i, s, r = n("37983"),
@@ -12,14 +12,14 @@ var i, s, r = n("37983"),
   o = n("242670"),
   l = n("533785"),
   u = n("276335"),
-  d = n("423530");
+  d = n("569365");
 (s = i || (i = {})).NONE = "1", s.TRANSLATE = "2", s.SCALE = "3", s.FADE = "4";
 let c = Object.freeze({
   2: u.PopoutCSSAnimator.Types.TRANSLATE,
   3: u.PopoutCSSAnimator.Types.SCALE,
   4: u.PopoutCSSAnimator.Types.FADE
 });
-class f extends a.Component {
+class _ extends a.Component {
   render() {
     let {
       children: e,
@@ -32,19 +32,19 @@ class f extends a.Component {
       fixed: u,
       nudgeAlignIntoViewport: d,
       spacing: c,
-      onShiftClick: f,
-      positionKey: _,
-      preload: h,
-      disablePointerEvents: g,
-      ignoreModalClicks: m,
-      closeOnScroll: E,
+      onShiftClick: _,
+      positionKey: f,
+      preload: E,
+      disablePointerEvents: h,
+      ignoreModalClicks: g,
+      closeOnScroll: m,
       useMouseEnter: p,
-      renderPopout: v,
-      layerContext: S
+      renderPopout: S,
+      layerContext: T
     } = this.props;
     return (0, r.jsx)(l.BasePopout, {
       ref: this.ref,
-      preload: h,
+      preload: E,
       position: n,
       align: null != a ? a : function(e) {
         switch (e) {
@@ -65,16 +65,16 @@ class f extends a.Component {
       nudgeAlignIntoViewport: d,
       renderPopout: this.renderPopout,
       spacing: c,
-      shouldShow: null != v && t,
+      shouldShow: null != S && t,
       onRequestOpen: i,
       onRequestClose: s,
-      onShiftClick: f,
-      positionKey: _,
-      disablePointerEvents: g,
-      ignoreModalClicks: m,
-      closeOnScroll: E,
+      onShiftClick: _,
+      positionKey: f,
+      disablePointerEvents: h,
+      ignoreModalClicks: g,
+      closeOnScroll: m,
       useMouseEnter: p,
-      layerContext: S,
+      layerContext: T,
       children: e
     })
   }
@@ -102,14 +102,14 @@ class f extends a.Component {
   }
 }
 
-function _(e) {
+function f(e) {
   let {
     renderPopout: t,
     ...n
   } = e, i = a.useRef(null), [s, l] = a.useState(0);
 
   function u() {
-    return _(), (0, r.jsx)(r.Fragment, {})
+    return f(), (0, r.jsx)(r.Fragment, {})
   }
   a.useLayoutEffect(() => {
     if (s > 0) {
@@ -121,18 +121,18 @@ function _(e) {
     return () => clearTimeout(e)
   }, []);
   let c = a.useRef(!1);
-  async function _() {
+  async function f() {
     if (!c.current) {
       c.current = !0;
       let e = setTimeout(() => {
-          m(() => h), l(e => e + 1)
+          g(() => E), l(e => e + 1)
         }, 300),
         n = await t();
-      m(() => n), l(e => e + 1), clearTimeout(e)
+      g(() => n), l(e => e + 1), clearTimeout(e)
     }
   }
 
-  function h() {
+  function E() {
     var e, t, n, s;
     let a = null === (s = i.current) || void 0 === s ? void 0 : null === (n = s.ref) || void 0 === n ? void 0 : null === (t = n.current) || void 0 === t ? void 0 : null === (e = t.domElementRef) || void 0 === e ? void 0 : e.current,
       l = Math.max(100, null == a ? 100 : a.offsetWidth - 20);
@@ -144,22 +144,22 @@ function _(e) {
       children: (0, r.jsx)(o.Spinner, {})
     })
   }
-  let [g, m] = a.useState(() => u);
+  let [h, g] = a.useState(() => u);
   return a.useEffect(() => {
     c.current ? t().then(e => {
-      m(() => e), l(e => e + 1)
-    }) : m(u)
-  }, [t]), (0, r.jsx)(f, {
+      g(() => e), l(e => e + 1)
+    }) : g(u)
+  }, [t]), (0, r.jsx)(_, {
     ref: i,
     ...n,
-    renderPopout: g
+    renderPopout: h
   })
 }
-f.Animation = i, f.defaultProps = {
+_.Animation = i, _.defaultProps = {
   position: "right",
   autoInvert: !0,
   nudgeAlignIntoViewport: !0,
   spacing: 8,
   animation: "2",
   positionKey: void 0
-}, _.Animation = i
+}, f.Animation = i

@@ -5,21 +5,21 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("414456"),
-  i = s.n(l),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
   r = s("145131"),
-  o = s("166499"),
-  d = s("926622");
-class u extends n.PureComponent {
+  o = s("564534"),
+  d = s("890957");
+class u extends l.PureComponent {
   render() {
     let {
       focused: e
     } = this.state, {
       value: t,
       placeholder: s,
-      error: n,
-      className: l,
+      error: l,
+      className: n,
       maxLength: u,
       autoFocus: c,
       prefix: E,
@@ -28,9 +28,9 @@ class u extends n.PureComponent {
     return (0, a.jsxs)(r.default, {
       align: r.default.Align.CENTER,
       justify: r.default.Justify.START,
-      className: i(o.prefixInput, l, {
+      className: i(o.prefixInput, n, {
         [o.focused]: e,
-        [o.error]: n
+        [o.error]: l
       }),
       onClick: this.handleFocusInput,
       children: [(0, a.jsx)(r.default.Child, {

@@ -1,42 +1,42 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return c
+    return u
   }
 });
-var l = s("37983");
+var r = s("37983");
 s("884691");
-var n = s("77078"),
-  a = s("292687"),
-  o = s("974889"),
-  r = s("599110"),
+var o = s("77078"),
+  l = s("292687"),
+  a = s("974889"),
+  n = s("599110"),
   i = s("49111");
 
-function c(e, t) {
-  let c = null != t ? t : "".concat(i.AnalyticsSections.PREMIUM_GUILD_UPSELL_MODAL);
-  null != e.targetBoostedGuildTier && (c += " - Tier ".concat(e.targetBoostedGuildTier));
-  r.default.track(i.AnalyticEvents.OPEN_MODAL, {
-    type: c,
+function u(e, t) {
+  let u = null != t ? t : "".concat(i.AnalyticsSections.PREMIUM_GUILD_UPSELL_MODAL);
+  null != e.targetBoostedGuildTier && (u += " - Tier ".concat(e.targetBoostedGuildTier));
+  n.default.track(i.AnalyticEvents.OPEN_MODAL, {
+    type: u,
     location: e.analyticsSourceLocation
   });
   let {
-    openInPopoutEnabled: u,
-    ...d
-  } = e, f = a.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && null != u && u;
-  f && (0, o.default)(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let _ = f ? n.POPOUT_MODAL_CONTEXT : n.DEFAULT_MODAL_CONTEXT;
-  (0, n.openModalLazy)(async () => {
+    openInPopoutEnabled: d,
+    ...c
+  } = e, f = l.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT) && null != d && d;
+  f && (0, a.default)(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  let _ = f ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
+  (0, o.openModalLazy)(async () => {
     let {
       default: e
     } = await s.el("874642").then(s.bind(s, "874642"));
-    return t => (0, l.jsx)(e, {
-      ...d,
+    return t => (0, r.jsx)(e, {
+      ...c,
       ...t
     })
   }, {
     onCloseCallback: () => {
-      r.default.track(i.AnalyticEvents.MODAL_DISMISSED, {
-        type: c,
+      n.default.track(i.AnalyticEvents.MODAL_DISMISSED, {
+        type: u,
         location: e.analyticsSourceLocation
       })
     },

@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, {
+a.r(t), a.d(t, {
   makeEmptyTitleError: function() {
     return u
   },
@@ -13,8 +13,8 @@ s.r(t), s.d(t, {
     return m
   }
 });
-var a, n, l = s("600798"),
-  r = s("782340");
+var s, n, l = a("600798"),
+  r = a("782340");
 
 function i(e, t) {
   return {
@@ -40,6 +40,6 @@ function c(e, t) {
 }
 
 function m(e, t) {
-  var s;
-  return null == e || 0 === e.type && null != t.content && t.content.trim().length > 0 || 2 === e.type && null != t.tags && t.tags.length > 0 ? null : null !== (s = e.message) && void 0 !== s ? s : null
-}(a = n || (n = {}))[a.EmptyContent = 0] = "EmptyContent", a[a.AutomodViolation = 1] = "AutomodViolation", a[a.EmptyTags = 2] = "EmptyTags"
+  var a;
+  return null == e || 0 === e.type && null != t.content && t.content.trim().length > 0 || 2 === e.type && null != t.tags && t.tags.length > 0 ? null : null !== (a = e.message) && void 0 !== a ? a : null
+}(s = n || (n = {}))[s.EmptyContent = 0] = "EmptyContent", s[s.AutomodViolation = 1] = "AutomodViolation", s[s.EmptyTags = 2] = "EmptyTags"

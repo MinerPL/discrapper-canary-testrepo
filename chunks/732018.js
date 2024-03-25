@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   GuildLeaveReasons: function() {
     return a
   },
@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
     return r
   }
 });
-var n, a, l = s("782340");
+var s, a, l = n("782340");
 
 function r() {
   return [{
@@ -35,4 +35,4 @@ function r() {
     value: "OTHER",
     label: l.default.Messages.GUILD_DELETE_FEEDBACK_OTHER
   }]
-}(n = a || (a = {})).UNINTERESTED = "UNINTERESTED", n.ACCIDENT = "ACCIDENT", n.INACTIVE = "INACTIVE", n.UNCOMFORTABLE = "UNCOMFORTABLE", n.DISRUPTIVE = "DISRUPTIVE", n.OVERACTIVE = "OVERACTIVE", n.CONFUSING = "CONFUSING", n.OTHER = "OTHER"
+}(s = a || (a = {})).UNINTERESTED = "UNINTERESTED", s.ACCIDENT = "ACCIDENT", s.INACTIVE = "INACTIVE", s.UNCOMFORTABLE = "UNCOMFORTABLE", s.DISRUPTIVE = "DISRUPTIVE", s.OVERACTIVE = "OVERACTIVE", s.CONFUSING = "CONFUSING", s.OTHER = "OTHER"

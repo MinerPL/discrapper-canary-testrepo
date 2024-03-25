@@ -7,9 +7,9 @@ s.r(t), s.d(t, {
     return $
   }
 });
-var a, r, n = s("37983");
+var a, r, i = s("37983");
 s("884691");
-var i = s("65597"),
+var n = s("65597"),
   l = s("151426"),
   o = s("79112"),
   u = s("841098"),
@@ -34,8 +34,8 @@ var i = s("65597"),
   h = s("574211"),
   L = s("982784"),
   x = s("19530"),
-  D = s("215541"),
-  v = s("571685"),
+  v = s("215541"),
+  D = s("571685"),
   U = s("994679"),
   b = s("620826"),
   j = s("333078"),
@@ -60,14 +60,14 @@ var i = s("65597"),
 var $ = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = M.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, i.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), r = null != a ? S.default.getPremiumPlanItem(a) : null, $ = null != r ? S.default.getSkuIdForPlan(r.planId) : null, ee = $ === g.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = M.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([f.default], () => f.default.getPremiumTypeSubscription()), r = null != a ? S.default.getPremiumPlanItem(a) : null, $ = null != r ? S.default.getSkuIdForPlan(r.planId) : null, ee = $ === g.PremiumSubscriptionSKUs.TIER_2, {
     flipped: et
   } = (0, m.useWhatsNewAvatarDecoRollout)(), {
     flipped: es
-  } = (0, m.useWhatsNewProfileFXRollout)(), ea = (0, _.default)(I.default), er = (0, N.default)(), en = (0, T.default)({
+  } = (0, m.useWhatsNewProfileFXRollout)(), ea = (0, _.default)(I.default), er = (0, N.default)(), ei = (0, T.default)({
     scrollPosition: P.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
-  }), ei = () => {
+  }), en = () => {
     o.default.open(O.UserSettingsSections.VOICE, P.SOUNDBOARD_SUBSECTION, {
       openWithoutBackstack: !0,
       analyticsLocations: e
@@ -111,7 +111,7 @@ var $ = () => {
           analyticsLocations: e
         })
       },
-      perkImage: v
+      perkImage: D
     },
     clips: ee ? {
       name: "clips",
@@ -171,7 +171,7 @@ var $ = () => {
       subtitle: M.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: M.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: M.default.Messages.TAKE_ME_THERE,
-      onCtaClick: ei,
+      onCtaClick: en,
       perkImage: F
     } : {
       name: "entranceSounds",
@@ -186,7 +186,7 @@ var $ = () => {
       subtitle: M.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: M.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: M.default.Messages.TAKE_ME_THERE,
-      onCtaClick: ei,
+      onCtaClick: en,
       perkImage: w
     } : {
       name: "entranceSoundsSeeAllVariation",
@@ -222,7 +222,7 @@ var $ = () => {
       subtitle: M.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_SUBTITLE,
       description: M.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
       descriptionCta: M.default.Messages.TAKE_ME_THERE,
-      onCtaClick: en,
+      onCtaClick: ei,
       perkImage: U
     },
     remixing: ee ? {
@@ -371,7 +371,7 @@ var $ = () => {
       name: "specialStickerAccess",
       title: M.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
       subtitle: M.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, C.getThemedImage)(t, D, X),
+      perkImage: (0, C.getThemedImage)(t, v, X),
       description: M.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {
@@ -397,15 +397,15 @@ var $ = () => {
       subtitle: s,
       description: a,
       pillText: r,
-      ctaDescription: i
+      ctaDescription: n
     } = er;
     eo.freeBoost = {
       name: "freeBoost",
       title: t,
       subtitle: s,
       description: a,
-      perkComponent: (0, n.jsx)(A.default, {}),
-      descriptionCta: i,
+      perkComponent: (0, i.jsx)(A.default, {}),
+      descriptionCta: n,
       onCtaClick: () => {
         o.default.open(O.UserSettingsSections.GUILD_BOOSTING, null, {
           analyticsLocations: e

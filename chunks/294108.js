@@ -7,14 +7,14 @@ var n = function(e) {
       default: e
     }
   }(r("511414")),
-  o = Object.assign || function(e) {
+  a = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var r = arguments[t];
       for (var n in r) Object.prototype.hasOwnProperty.call(r, n) && (e[n] = r[n])
     }
     return e
   },
-  a = {
+  o = {
     borderRadius: function(e) {
       return {
         msBorderRadius: e,
@@ -104,8 +104,8 @@ var n = function(e) {
     return (0, n.default)(e, function(e, r) {
       var i = {};
       (0, n.default)(e, function(e, t) {
-        var r = a[t];
-        r ? i = o({}, i, r(e)) : i[t] = e
+        var r = o[t];
+        r ? i = a({}, i, r(e)) : i[t] = e
       }), t[r] = i
     }), t
   };

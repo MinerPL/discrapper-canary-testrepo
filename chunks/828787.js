@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return u
+    return L
   }
 }), E("222007");
 var t = E("37983");
@@ -9,8 +9,8 @@ E("884691");
 var o = E("77078"),
   n = E("299285"),
   r = E("374014"),
-  i = E("582415"),
-  a = E("643130"),
+  a = E("582415"),
+  i = E("643130"),
   I = E("292687"),
   s = E("271938"),
   T = E("42203"),
@@ -20,9 +20,9 @@ var o = E("77078"),
   A = E("722333"),
   R = E("200521"),
   l = E("49111");
-class L extends A.default {
+class u extends A.default {
   _initialize() {
-    a.default.init()
+    i.default.init()
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -50,15 +50,15 @@ class L extends A.default {
       var _;
       let {
         streamKey: n,
-        canShowFeedback: a
-      } = e, I = (0, r.decodeStreamKey)(n), T = (0, i.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
+        canShowFeedback: i
+      } = e, I = (0, r.decodeStreamKey)(n), T = (0, a.getStreamerApplication)(I, S.default), N = null !== (_ = O.default.getVideoStats(n)) && void 0 !== _ ? _ : {}, A = {
         media_session_id: O.default.getMediaSessionId(n),
         rtc_connection_id: O.default.getRtcConnectionId(n),
         stream_region: O.default.getRegion(n),
         max_viewers: O.default.getMaxViewers(n),
         ...N
       };
-      a && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
+      i && this.possiblyShowFeedbackModal(R.FeedbackType.STREAM, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
@@ -91,19 +91,19 @@ class L extends A.default {
       let {
         applicationId: _,
         channelId: r,
-        showFeedback: i
-      } = e, a = n.default.getApplication(_), s = T.default.getChannel(r), S = {
+        showFeedback: a
+      } = e, i = n.default.getApplication(_), s = T.default.getChannel(r), S = {
         rtc_connection_id: N.default.getRTCConnectionId(),
         media_session_id: N.default.getMediaSessionId()
       }, O = I.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), A = O ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT;
-      null != a && null != s && i && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
+      null != i && null != s && a && this.possiblyShowFeedbackModal(R.FeedbackType.ACTIVITY, () => {
         (0, o.openModalLazy)(async () => {
           let {
             default: e
           } = await E.el("959350").then(E.bind(E, "959350"));
           return _ => (0, t.jsx)(e, {
             ..._,
-            activityApplication: a,
+            activityApplication: i,
             channel: s,
             analyticsData: S
           })
@@ -131,4 +131,4 @@ class L extends A.default {
     }
   }
 }
-var u = new L
+var L = new u

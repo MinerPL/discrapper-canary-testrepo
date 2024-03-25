@@ -4,10 +4,10 @@ l.r(t), l.d(t, {
     return o
   },
   filesExceedUploadLimits: function() {
-    return d
+    return u
   },
   getWebUploadFiles: function() {
-    return u
+    return d
   }
 }), l("808653"), l("424973");
 var a = l("966724"),
@@ -27,10 +27,10 @@ function o(e, t) {
   })
 }
 
-function d(e, t) {
+function u(e, t) {
   return n.anyFileTooLarge(e, t) || n.uploadSumTooLarge(e)
 }
 
-function u(e) {
+function d(e) {
   return e.reduce((e, t) => (t.item.platform === a.UploadPlatform.WEB && e.push(t.item.file), e), [])
 }

@@ -1,60 +1,60 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return F
+    return I
   }
-}), n("222007");
-var r = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
-  u = n("77078"),
-  s = n("960476"),
-  c = n("140331"),
-  o = n("118849"),
-  d = n("671434"),
-  I = n("659500"),
-  f = n("49111"),
-  _ = n("782340"),
-  E = n("414763"),
-  F = l.memo(function(e) {
+}), r("222007");
+var s = r("37983"),
+  n = r("884691"),
+  l = r("414456"),
+  i = r.n(l),
+  a = r("77078"),
+  o = r("960476"),
+  u = r("140331"),
+  c = r("118849"),
+  d = r("671434"),
+  h = r("659500"),
+  f = r("49111"),
+  m = r("782340"),
+  p = r("420804"),
+  I = n.memo(function(e) {
     let {
       width: t,
-      height: n,
-      src: a,
-      url: F,
-      format: S,
-      className: p
-    } = e, [G, h] = l.useState(!1), R = (0, c.useIsFavoriteGIF)(F), T = R ? _.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : _.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, g = R ? d.default : o.default;
-    l.useEffect(() => {
-      if (!G) return;
+      height: r,
+      src: l,
+      url: I,
+      format: g,
+      className: _
+    } = e, [E, R] = n.useState(!1), S = (0, u.useIsFavoriteGIF)(I), y = S ? m.default.Messages.GIF_TOOLTIP_REMOVE_FROM_FAVORITES : m.default.Messages.GIF_TOOLTIP_ADD_TO_FAVORITES, v = S ? d.default : c.default;
+    n.useEffect(() => {
+      if (!E) return;
       let e = setTimeout(() => {
-        h(!1)
+        R(!1)
       }, 500);
       return () => clearTimeout(e)
-    }, [G]);
-    let m = e => {
-      e.preventDefault(), e.stopPropagation(), h(!0), R ? (0, s.removeFavoriteGIF)(F) : ((0, s.addFavoriteGIF)({
-        url: F,
-        src: a,
+    }, [E]);
+    let F = e => {
+      e.preventDefault(), e.stopPropagation(), R(!0), S ? (0, o.removeFavoriteGIF)(I) : ((0, o.addFavoriteGIF)({
+        url: I,
+        src: l,
         width: t,
-        height: n,
-        format: S
-      }), I.ComponentDispatch.dispatch(f.ComponentActions.FAVORITE_GIF))
+        height: r,
+        format: g
+      }), h.ComponentDispatch.dispatch(f.ComponentActions.FAVORITE_GIF))
     };
-    return (0, r.jsx)(u.Tooltip, {
-      text: T,
-      children: e => (0, r.jsx)(u.Clickable, {
+    return (0, s.jsx)(a.Tooltip, {
+      text: y,
+      children: e => (0, s.jsx)(a.Clickable, {
         ...e,
-        className: i(p, E.size, E.gifFavoriteButton, {
-          [E.selected]: R,
-          [E.showPulse]: G
+        className: i(_, p.size, p.gifFavoriteButton, {
+          [p.selected]: S,
+          [p.showPulse]: E
         }),
         onMouseDown: e => e.preventDefault(),
-        onClick: m,
+        onClick: F,
         onDoubleClick: e => e.preventDefault(),
-        children: (0, r.jsx)(g, {
-          className: E.icon
+        children: (0, s.jsx)(v, {
+          className: p.icon
         })
       })
     })

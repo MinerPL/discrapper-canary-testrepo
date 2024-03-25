@@ -13,8 +13,8 @@ var i = l("37983"),
   o = l("412707"),
   d = l("646186"),
   u = l("49111"),
-  p = l("782340"),
-  m = l("417722"),
+  m = l("782340"),
+  p = l("410580"),
   _ = l("885634");
 
 function f() {
@@ -33,15 +33,15 @@ function f() {
       })
     }, [e, t]);
   return (0, i.jsxs)("div", {
-    className: m.container,
+    className: p.container,
     children: [(0, i.jsxs)("div", {
-      className: m.searchBarContainer,
+      className: p.searchBarContainer,
       children: [(0, i.jsx)(n.Heading, {
         variant: "display-lg",
-        className: m.heading,
-        children: p.default.Messages.APP_DIRECTORY_HERO_HEADING
+        className: p.heading,
+        children: m.default.Messages.APP_DIRECTORY_HERO_HEADING
       }), (0, i.jsx)(c.default, {
-        className: m.searchBar,
+        className: p.searchBar,
         query: t,
         onChange: l,
         onSubmit: f,
@@ -50,7 +50,7 @@ function f() {
     }), (0, i.jsx)("img", {
       src: _,
       alt: "",
-      className: m.rightImage
+      className: p.rightImage
     })]
   })
 }

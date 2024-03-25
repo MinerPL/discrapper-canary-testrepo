@@ -4,33 +4,33 @@ n.r(t), n.d(t, {
     return u
   }
 });
-var l = n("446674"),
-  i = n("913144"),
-  r = n("49111");
-let o = {},
-  s = {
+var i = n("446674"),
+  l = n("913144"),
+  a = n("49111");
+let s = {},
+  r = {
     integration: "",
     query: ""
   };
-class a extends l.default.Store {
+class o extends i.default.Store {
   getResults(e, t) {
     if (null == e || null == t) return null;
-    let n = o[e];
+    let n = s[e];
     return null != n && null != n[t] ? n[t] : null
   }
   getQuery() {
-    return s
+    return r
   }
 }
-a.displayName = "IntegrationQueryStore";
-var u = new a(i.default, {
+o.displayName = "IntegrationQueryStore";
+var u = new o(l.default, {
   INTEGRATION_QUERY: function(e) {
     var t;
     let {
       integration: n,
-      query: l
+      query: i
     } = e;
-    o[n] = null !== (t = o[n]) && void 0 !== t ? t : {}, o[n][l] = {
+    s[n] = null !== (t = s[n]) && void 0 !== t ? t : {}, s[n][i] = {
       loading: !0,
       results: []
     }
@@ -39,15 +39,15 @@ var u = new a(i.default, {
     let {
       integration: t,
       query: n,
-      results: l
+      results: i
     } = e;
-    o[t][n] = {
+    s[t][n] = {
       loading: !1,
-      results: l.map(e => ({
-        type: r.ChannelTextAreaIntegrations[t].type,
+      results: i.map(e => ({
+        type: a.ChannelTextAreaIntegrations[t].type,
         meta: e
       }))
-    }, s = {
+    }, r = {
       query: n,
       integration: t
     }
@@ -57,6 +57,6 @@ var u = new a(i.default, {
       integration: t,
       query: n
     } = e;
-    delete o[t][n]
+    delete s[t][n]
   }
 })

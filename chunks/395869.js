@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return s
   },
   hideUpcomingEventNotice: function() {
-    return i
+    return l
   },
   markUpcomingEventNoticeAsSeen: function() {
-    return l
+    return i
   }
 });
 var a = n("913144");
@@ -24,14 +24,14 @@ function s(e) {
   })
 }
 
-function i(e) {
+function l(e) {
   a.default.dispatch({
     type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE",
     eventId: e
   })
 }
 
-function l(e) {
+function i(e) {
   a.default.dispatch({
     type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN",
     guildEventId: e

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   Lru: function() {
-    return a
+    return i
   }
 }), n("222007");
-class a {
+class i {
   get length() {
     return this.items.size
   }

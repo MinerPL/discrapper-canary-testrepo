@@ -20,7 +20,7 @@ var a = n("151426"),
   f = n("6791"),
   h = n("994428"),
   p = n("782340"),
-  g = n("672294");
+  g = n("372476");
 
 function m() {
   let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {

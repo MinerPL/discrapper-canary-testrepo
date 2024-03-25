@@ -36,11 +36,11 @@ function d() {
 
 function c(e) {}
 
-function f(e) {}
-
 function _(e) {}
 
-function h(e) {
+function f(e) {}
+
+function E(e) {
   return !1
 }
 n.r(t), n.d(t, {
@@ -72,12 +72,12 @@ n.r(t), n.d(t, {
     return c
   },
   coerceGuildsRoute: function() {
-    return f
-  },
-  coerceModalRoute: function() {
     return _
   },
+  coerceModalRoute: function() {
+    return f
+  },
   useIsModalOpen: function() {
-    return h
+    return E
   }
 })

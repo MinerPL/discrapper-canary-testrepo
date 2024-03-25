@@ -10,24 +10,24 @@ var i = l("37983"),
   s = l("998944"),
   r = l("288914"),
   c = l("721908"),
-  o = l("401709");
+  o = l("608700");
 
 function d(e) {
-  var t, l, d, u, p;
+  var t, l, d, u, m;
   let {
-    application: m,
+    application: p,
     onClick: _,
     imageSrc: f,
     className: h,
     animatesOnHover: C
   } = e, g = (0, c.default)({
-    application: m
-  }), I = null === (t = m.categories) || void 0 === t ? void 0 : t[0], A = (null !== (u = null === (l = m.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== u ? u : 0) > 0 || g.length > 0, E = a.useCallback(() => {
+    application: p
+  }), I = null === (t = p.categories) || void 0 === t ? void 0 : t[0], A = (null !== (u = null === (l = p.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== u ? u : 0) > 0 || g.length > 0, E = a.useCallback(() => {
     _({
       mutualGuilds: g
     })
   }, [_, g]), v = (0, i.jsx)(s.default, {
-    application: m,
+    application: p,
     textVariant: "text-xs/normal",
     mutualGuilds: g,
     mutualGuildShownMax: 3,
@@ -38,7 +38,7 @@ function d(e) {
     className: h,
     imageSrc: f,
     onClick: E,
-    header: m.name,
+    header: p.name,
     subheader: (0, i.jsxs)("div", {
       className: o.subheader,
       children: [null != I && (0, i.jsx)(n.Text, {
@@ -54,13 +54,13 @@ function d(e) {
       })]
     }),
     animatesOnHover: C,
-    children: null != m.description && (0, i.jsx)("div", {
+    children: null != p.description && (0, i.jsx)("div", {
       className: o.children,
       children: (0, i.jsx)(n.Text, {
         className: o.listingDescription,
         variant: "text-sm/normal",
         lineClamp: 2,
-        children: null !== (p = null === (d = m.directory_entry) || void 0 === d ? void 0 : d.short_description) && void 0 !== p ? p : m.description
+        children: null !== (m = null === (d = p.directory_entry) || void 0 === d ? void 0 : d.short_description) && void 0 !== m ? m : p.description
       })
     })
   })

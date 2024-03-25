@@ -20,9 +20,9 @@ function a(e, t) {
     f = t.coefficient,
     p = t.prime1,
     h = t.prime2,
-    g = d.redPow(t.exponent1).fromRed(),
-    b = l.redPow(t.exponent2).fromRed(),
-    v = g.isub(b).imul(f).umod(p).imul(h);
-  return b.iadd(v).imul(a.unblinder).umod(t.modulus).toArrayLike(r, "be", c)
+    v = d.redPow(t.exponent1).fromRed(),
+    g = l.redPow(t.exponent2).fromRed(),
+    b = v.isub(g).imul(f).umod(p).imul(h);
+  return g.iadd(b).imul(a.unblinder).umod(t.modulus).toArrayLike(r, "be", c)
 }
 a.getr = s, e.exports = a

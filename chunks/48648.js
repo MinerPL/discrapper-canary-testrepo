@@ -140,15 +140,15 @@ var i = function() {
   }, {
     quantize: function(s, a) {
       if (!s.length || a < 2 || a > 256) return !1;
-      var c, u, d, l, f, p, h, g, b, v, m, y, x, w, S, k, _ = (c = s, f = Array(32768), c.forEach(function(n) {
+      var c, u, d, l, f, p, h, v, g, b, m, y, x, w, S, k, E = (c = s, f = Array(32768), c.forEach(function(n) {
           d = n[0] >> e, l = n[1] >> e, f[u = t(d, l, n[2] >> e)] = (f[u] || 0) + 1
         }), f),
-        E = 0;
-      _.forEach(function() {
-        E++
+        _ = 0;
+      E.forEach(function() {
+        _++
       });
-      var M = (p = s, h = _, m = 1e6, y = 0, x = 1e6, w = 0, S = 1e6, k = 0, p.forEach(function(t) {
-          g = t[0] >> e, b = t[1] >> e, v = t[2] >> e, g < m ? m = g : g > y && (y = g), b < x ? x = b : b > w && (w = b), v < S ? S = v : v > k && (k = v)
+      var M = (p = s, h = E, m = 1e6, y = 0, x = 1e6, w = 0, S = 1e6, k = 0, p.forEach(function(t) {
+          v = t[0] >> e, g = t[1] >> e, b = t[2] >> e, v < m ? m = v : v > y && (y = v), g < x ? x = g : g > w && (w = g), b < S ? S = b : b > k && (k = b)
         }), new i(m, y, x, w, S, k, h)),
         D = new n(function(e, t) {
           return r.naturalOrder(e.count(), t.count())
@@ -169,7 +169,7 @@ var i = function() {
                 if (1 == n.count()) return [n.copy()];
                 var c, u, d, l, f, p = 0,
                   h = [],
-                  g = [];
+                  v = [];
                 if (a == i)
                   for (c = n.r1; c <= n.r2; c++) {
                     for (l = 0, u = n.g1; u <= n.g2; u++)
@@ -187,22 +187,22 @@ var i = function() {
                         p += l, h[c] = p
                       }
                 return h.forEach(function(e, t) {
-                  g[t] = p - e
-                }), b(a == i ? "r" : a == o ? "g" : "b")
+                  v[t] = p - e
+                }), g(a == i ? "r" : a == o ? "g" : "b")
               }
 
-              function b(e) {
+              function g(e) {
                 var t, r, i, o, s, a = e + "1",
                   u = e + "2",
                   d = 0;
                 for (c = n[a]; c <= n[u]; c++)
                   if (h[c] > p / 2) {
                     for (i = n.copy(), o = n.copy(), t = c - n[a], s = t <= (r = n[u] - c) ? Math.min(n[u] - 1, ~~(c + r / 2)) : Math.max(n[a], ~~(c - 1 - t / 2)); !h[s];) s++;
-                    for (d = g[s]; !d && h[s - 1];) d = g[--s];
+                    for (d = v[s]; !d && h[s - 1];) d = v[--s];
                     return i[u] = s, o[a] = i[u] + 1, [i, o]
                   }
               }
-            }(_, i),
+            }(E, i),
             c = a[0],
             u = a[1];
           if (!c) return;

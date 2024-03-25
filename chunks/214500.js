@@ -3,8 +3,8 @@ Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.Raised = void 0;
 var n = u(r("884691")),
-  o = u(r("416037")),
-  a = u(r("849122")),
+  a = u(r("416037")),
+  o = u(r("849122")),
   i = u(r("427796"));
 
 function u(e) {
@@ -15,10 +15,10 @@ function u(e) {
 var l = t.Raised = function(e) {
   var t = e.zDepth,
     r = e.radius,
-    o = e.background,
+    a = e.background,
     u = e.children,
     l = e.styles,
-    c = (0, a.default)((0, i.default)({
+    s = (0, o.default)((0, i.default)({
       default: {
         wrap: {
           position: "relative",
@@ -31,7 +31,7 @@ var l = t.Raised = function(e) {
           absolute: "0px 0px 0px 0px",
           boxShadow: "0 " + t + "px " + 4 * t + "px rgba(0,0,0,.24)",
           borderRadius: r,
-          background: o
+          background: a
         }
       },
       "zDepth-0": {
@@ -78,18 +78,18 @@ var l = t.Raised = function(e) {
       "zDepth-1": 1 === t
     });
   return n.default.createElement("div", {
-    style: c.wrap
+    style: s.wrap
   }, n.default.createElement("div", {
-    style: c.bg
+    style: s.bg
   }), n.default.createElement("div", {
-    style: c.content
+    style: s.content
   }, u))
 };
 l.propTypes = {
-  background: o.default.string,
-  zDepth: o.default.oneOf([0, 1, 2, 3, 4, 5]),
-  radius: o.default.number,
-  styles: o.default.object
+  background: a.default.string,
+  zDepth: a.default.oneOf([0, 1, 2, 3, 4, 5]),
+  radius: a.default.number,
+  styles: a.default.object
 }, l.defaultProps = {
   background: "#fff",
   zDepth: 1,

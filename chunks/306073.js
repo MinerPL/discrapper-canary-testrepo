@@ -1,28 +1,28 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
-var l = s("37983"),
-  n = s("884691");
-let r = e => t => {
+var n = s("37983"),
+  l = s("884691");
+let o = e => t => {
   null == t || t.stopPropagation(), e()
 };
 
-function o(e) {
+function a(e) {
   let {
     onClick: t,
     className: s,
-    children: o
-  } = e, a = n.useRef(null);
-  return (0, l.jsx)("div", {
+    children: a
+  } = e, r = l.useRef(null);
+  return (0, n.jsx)("div", {
     onClick: t,
-    ref: a,
+    ref: r,
     className: s,
-    children: o({
-      areaRef: a,
-      handleStopPropagation: r
+    children: a({
+      areaRef: r,
+      handleStopPropagation: o
     })
   })
 }

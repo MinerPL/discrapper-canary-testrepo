@@ -1,24 +1,24 @@
 "use strict";
 r.r(t), r("781738");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("480583"),
-  c = r("882982"),
-  s = r("281859"),
-  f = r("123090"),
+  s = r("882982"),
+  f = r("281859"),
+  c = r("123090"),
   d = function(e) {
     var t = e.onChange,
       r = e.onSwatchHover,
       n = e.hex,
-      a = e.colors,
+      o = e.colors,
       i = e.width,
       d = e.triangle,
       p = e.styles,
       h = e.className,
-      b = (0, u.default)((0, c.default)({
+      b = (0, u.default)((0, s.default)({
         default: {
           card: {
             width: i,
@@ -120,22 +120,22 @@ var n = r("884691"),
         "top-right-triangle": "top-right" === d
       }),
       v = function(e, r) {
-        s.isValidHex(e) && t({
+        f.isValidHex(e) && t({
           hex: e,
           source: "hex"
         }, r)
       };
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: b.card,
       className: "twitter-picker " + (void 0 === h ? "" : h)
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: b.triangleShadow
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: b.triangle
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: b.body
-    }, (0, l.default)(a, function(e, t) {
-      return o.createElement(f.Swatch, {
+    }, (0, l.default)(o, function(e, t) {
+      return a.createElement(c.Swatch, {
         key: t,
         color: e,
         hex: e,
@@ -146,16 +146,16 @@ var n = r("884691"),
           boxShadow: "0 0 4px " + e
         }
       })
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: b.hash
-    }, "#"), o.createElement(f.EditableInput, {
+    }, "#"), a.createElement(c.EditableInput, {
       label: null,
       style: {
         input: b.input
       },
       value: n.replace("#", ""),
       onChange: v
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: b.clear
     })))
   };
@@ -169,4 +169,4 @@ d.propTypes = {
   colors: ["#FF6900", "#FCB900", "#7BDCB5", "#00D084", "#8ED1FC", "#0693E3", "#ABB8C3", "#EB144C", "#F78DA7", "#9900EF"],
   triangle: "top-left",
   styles: {}
-}, (0, f.ColorWrap)(d)
+}, (0, c.ColorWrap)(d)

@@ -1,10 +1,10 @@
 "use strict";
 
-function a(e) {
+function i(e) {
   return null == e.guild_id
 }
 n.r(t), n.d(t, {
   isPrivateChannel: function() {
-    return a
+    return i
   }
 })

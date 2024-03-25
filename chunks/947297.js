@@ -1,16 +1,16 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   XBOX_APPLICATION_ID_PREFIX: function() {
     return l
   },
   default: function() {
-    return r
+    return n
   }
 });
-var r, i = n("376556"),
-  s = n("653047");
+var n, i = r("376556"),
+  s = r("653047");
 let l = "xbox:";
-r = class extends s.default {
+n = class extends s.default {
   getIconURL() {
     return i.default.get("xbox").icon.lightPNG
   }

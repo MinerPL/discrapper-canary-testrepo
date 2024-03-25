@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var a = n("37983");
@@ -10,17 +10,17 @@ var l = n("77078"),
   r = n("545158"),
   s = n("758710"),
   i = n("782340"),
-  d = n("272980");
-let u = e => {
+  d = n("446204");
+let o = e => {
   let {
     data: {
       url: t,
       link_text: n,
       link_description: i,
-      is_localized: u
+      is_localized: o
     }
   } = e;
-  return u ? (0, a.jsxs)(l.Clickable, {
+  return o ? (0, a.jsxs)(l.Clickable, {
     role: "link",
     className: d.linkButton,
     onClick: () => {
@@ -43,7 +43,7 @@ let u = e => {
   }) : null
 };
 
-function o(e) {
+function u(e) {
   let {
     elements: t
   } = e;
@@ -57,7 +57,7 @@ function o(e) {
       let {
         data: n
       } = e;
-      return (0, a.jsx)(u, {
+      return (0, a.jsx)(o, {
         data: n
       }, "external-link+".concat(t))
     }),

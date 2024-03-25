@@ -1,19 +1,19 @@
 "use strict";
-s.r(t), s.d(t, {
+t.r(r), t.d(r, {
   DevToolsLayerContainer: function() {
-    return o
+    return s
   },
   DevToolsLayerProvider: function() {
-    return d
+    return c
   },
   devToolsLayerContext: function() {
-    return u
+    return d
   }
 });
-var a = s("77078");
+var a = t("77078");
 let {
   Layer: n,
-  LayerContainer: l,
-  LayerProvider: i,
-  layerContext: r
-} = (0, a.createLayer)("DevTools"), o = l, d = i, u = r
+  LayerContainer: i,
+  LayerProvider: o,
+  layerContext: l
+} = (0, a.createLayer)("DevTools"), s = i, c = o, d = l

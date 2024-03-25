@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("37983"),
-  n = s("884691"),
-  l = s("37785"),
+  l = s("884691"),
+  n = s("37785"),
   i = s("323877");
 
 function r(e) {
@@ -20,9 +20,9 @@ function o(e) {
   } = e, {
     isUserMFAEnabled: o,
     isModerationMFAEnabled: d
-  } = (0, i.useIsMFAEnabled)(), u = n.useCallback(async () => {
+  } = (0, i.useIsMFAEnabled)(), u = l.useCallback(async () => {
     await t(), null == s || s()
-  }, [t, s]), c = n.useCallback(e => (0, a.jsx)(l.default, {
+  }, [t, s]), c = l.useCallback(e => (0, a.jsx)(n.default, {
     onClick: u,
     children: e
   }), [u]);

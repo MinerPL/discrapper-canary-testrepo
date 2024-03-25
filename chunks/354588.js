@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("446674"),
+  i = s.n(r),
+  n = s("446674"),
   l = s("206230"),
   o = s("359499"),
   u = s("672950"),
@@ -23,16 +23,16 @@ var r = s("414456"),
       innerCircleClassName: E,
       progressCircleStrokeSize: T,
       gemBackgroundCircleSize: I
-    } = e, f = (0, o.useFreeBoostUserTenureReward)(), R = (0, i.useStateFromStores)([l.default], () => l.default.useReducedMotion), S = t && !R;
+    } = e, f = (0, o.useFreeBoostUserTenureReward)(), R = (0, n.useStateFromStores)([l.default], () => l.default.useReducedMotion), S = t && !R;
     if (null == f) return null;
     let {
       redeemableInDays: m = 0,
       tenureRewardSkuId: N
     } = f, A = c.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH === N ? c.NUM_DAYS_REQUIRED_1_MONTH_VARIANT : c.NUM_DAYS_3_REQUIRED_MONTH_VARIANT, p = Math.min(A, Math.max(A - m, 0)), C = 100 * p / A, g = S ? 100 * Math.max(p - .25 * A, 0) / A : C;
     return (0, a.jsx)("div", {
-      className: n(_.gemProgressCircle, s),
+      className: i(_.gemProgressCircle, s),
       children: (0, a.jsx)(d.default, {
-        animationClassName: n(_.activeProgressCircle, {
+        animationClassName: i(_.activeProgressCircle, {
           [_.activeProgressCircleAnimation]: S
         }),
         progressCircleStrokeSize: T,
@@ -40,7 +40,7 @@ var r = s("414456"),
         initialPercentage: null != r ? r : g,
         children: (0, a.jsx)(u.default, {
           className: S ? _.nitroGemAnimation : void 0,
-          backgroundColor: n(_.gemBackgroundFill, E),
+          backgroundColor: i(_.gemBackgroundFill, E),
           backgroundCircleSize: I
         })
       })

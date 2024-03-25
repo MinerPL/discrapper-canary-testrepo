@@ -8,7 +8,7 @@ var a = s("37983");
 s("884691");
 var n = s("77078"),
   l = s("782340"),
-  i = s("245117"),
+  i = s("340455"),
   r = function(e) {
     let {
       hasGuildBoostSlots: t,

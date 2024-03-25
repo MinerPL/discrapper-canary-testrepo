@@ -1,6 +1,6 @@
-var Symbol = r("506264"),
-  n = Symbol ? Symbol.prototype : void 0,
-  o = n ? n.valueOf : void 0;
+var Symbol = n("506264"),
+  r = Symbol ? Symbol.prototype : void 0,
+  i = r ? r.valueOf : void 0;
 e.exports = function(e) {
-  return o ? Object(o.call(e)) : {}
+  return i ? Object(i.call(e)) : {}
 }

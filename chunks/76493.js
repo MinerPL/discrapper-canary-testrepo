@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return i
   }
 }), n("424973");
-var s = new class e {
+var i = new class e {
   enqueue(e) {
     this.queue.push(e)
   }

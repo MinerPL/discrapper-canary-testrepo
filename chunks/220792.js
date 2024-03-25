@@ -4,9 +4,9 @@ n.r(e), n.d(e, {
     return c
   }
 });
-var a = n("37983");
+var r = n("37983");
 n("884691");
-var r = n("77078"),
+var a = n("77078"),
   i = n("272030"),
   u = n("525402"),
   d = n("782340");
@@ -17,7 +17,7 @@ function c(t) {
     onPlay: n,
     onSelect: c
   } = t, o = (0, u.default)(e, n);
-  return (0, a.jsx)(r.Menu, {
+  return (0, r.jsx)(a.Menu, {
     navId: "launch-context",
     onClose: i.closeContextMenu,
     "aria-label": d.default.Messages.APPLICATION_ACTIONS_MENU_LABEL,

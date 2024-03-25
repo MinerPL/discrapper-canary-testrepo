@@ -2,37 +2,37 @@ e("424973");
 var n = e("236260"),
   o = e("10120"),
   i = e("712294");
-t.exports = function(t, r, e, u, a, c) {
-  var s = 1 & e,
-    f = t.length,
-    p = r.length;
-  if (f != p && !(s && p > f)) return !1;
-  var v = c.get(t),
-    l = c.get(r);
-  if (v && l) return v == r && l == t;
-  var h = -1,
-    _ = !0,
-    y = 2 & e ? new n : void 0;
-  for (c.set(t, r), c.set(r, t); ++h < f;) {
-    var b = t[h],
-      x = r[h];
-    if (u) var d = s ? u(x, b, h, r, t, c) : u(b, x, h, t, r, c);
-    if (void 0 !== d) {
-      if (d) continue;
-      _ = !1;
+t.exports = function(t, r, e, a, u, s) {
+  var f = 1 & e,
+    c = t.length,
+    l = r.length;
+  if (c != l && !(f && l > c)) return !1;
+  var h = s.get(t),
+    p = s.get(r);
+  if (h && p) return h == r && p == t;
+  var v = -1,
+    d = !0,
+    g = 2 & e ? new n : void 0;
+  for (s.set(t, r), s.set(r, t); ++v < c;) {
+    var b = t[v],
+      y = r[v];
+    if (a) var m = f ? a(y, b, v, r, t, s) : a(b, y, v, t, r, s);
+    if (void 0 !== m) {
+      if (m) continue;
+      d = !1;
       break
     }
-    if (y) {
+    if (g) {
       if (!o(r, function(t, r) {
-          if (!i(y, r) && (b === t || a(b, t, e, u, c))) return y.push(r)
+          if (!i(g, r) && (b === t || u(b, t, e, a, s))) return g.push(r)
         })) {
-        _ = !1;
+        d = !1;
         break
       }
-    } else if (!(b === x || a(b, x, e, u, c))) {
-      _ = !1;
+    } else if (!(b === y || u(b, y, e, a, s))) {
+      d = !1;
       break
     }
   }
-  return c.delete(t), c.delete(r), _
+  return s.delete(t), s.delete(r), d
 }

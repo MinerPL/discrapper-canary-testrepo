@@ -1,84 +1,84 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return f
   }
 });
-var n = i("37983"),
-  l = i("884691"),
-  s = i("414456"),
-  a = i.n(s),
-  r = i("124299"),
-  o = i("538282"),
-  u = i("49111"),
-  c = i("742773");
-let d = e => {
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("124299"),
+  o = n("538282"),
+  u = n("49111"),
+  d = n("956117");
+let c = e => {
   let {
     activeIndex: t,
-    categoryListRef: i,
-    getScrollOffsetForIndex: n
-  } = e, s = l.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), a = l.useRef(t);
+    categoryListRef: n,
+    getScrollOffsetForIndex: i
+  } = e, a = l.useRef(u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID), s = l.useRef(t);
   return l.useEffect(() => {
-    null != t && t !== a.current && (s.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(s.current), s.current = window.requestAnimationFrame(() => {
+    null != t && t !== s.current && (a.current !== u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID && window.cancelAnimationFrame(a.current), a.current = window.requestAnimationFrame(() => {
       var e;
-      if (null == i.current) return;
-      let l = t > (null !== (e = a.current) && void 0 !== e ? e : -1),
-        r = null != n ? n(t, l) : 0;
-      i.current.scrollRowIntoView(t, {
+      if (null == n.current) return;
+      let l = t > (null !== (e = s.current) && void 0 !== e ? e : -1),
+        r = null != i ? i(t, l) : 0;
+      n.current.scrollRowIntoView(t, {
         animate: !0,
         offset: r
-      }), s.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, a.current = t
+      }), a.current = u.UNREACHABLE_REQUEST_ANIMATION_FRAME_ID, s.current = t
     }))
-  }, [t, i, n]), {
-    categoryListRef: i
+  }, [t, n, i]), {
+    categoryListRef: n
   }
 };
 var f = function(e) {
   let {
     categoryListRef: t,
-    expressionsListRef: i,
-    categories: s,
+    expressionsListRef: n,
+    categories: a,
     store: u,
     children: f,
-    className: E,
+    className: p,
     listPadding: m,
-    rowCount: I,
-    getScrollOffsetForIndex: p,
-    categoryHeight: g,
-    onScroll: _,
-    renderCategoryListItem: S,
-    rowCountBySection: h,
+    rowCount: h,
+    getScrollOffsetForIndex: x,
+    categoryHeight: E,
+    onScroll: y,
+    renderCategoryListItem: g,
+    rowCountBySection: S,
     renderSection: C
   } = e, T = u.useStore(e => e.activeCategoryIndex);
-  d({
+  c({
     activeIndex: T,
     categoryListRef: t,
-    getScrollOffsetForIndex: p
+    getScrollOffsetForIndex: x
   });
-  let N = l.useCallback(e => {
+  let _ = l.useCallback(e => {
       let {
         searchQuery: t
       } = o.useExpressionPickerStore.getState();
       if (u.setActiveCategoryIndex(e), "" !== t)(0, o.setSearchQuery)("");
       else {
-        var n;
-        null === (n = i.current) || void 0 === n || n.scrollToSectionTop(e)
+        var i;
+        null === (i = n.current) || void 0 === i || i.scrollToSectionTop(e)
       }
-    }, [i, u]),
-    A = l.useCallback(e => S(s[e], e, () => N(e), T === e), [T, s, N, S]),
-    y = l.useMemo(() => "function" == typeof g ? e => g(s[e], e) : g, [s, g]);
-  return (0, n.jsxs)("div", {
-    className: a(c.wrapper, E),
-    children: [(0, n.jsx)(r.default, {
+    }, [n, u]),
+    I = l.useCallback(e => g(a[e], e, () => _(e), T === e), [T, a, _, g]),
+    v = l.useMemo(() => "function" == typeof E ? e => E(a[e], e) : E, [a, E]);
+  return (0, i.jsxs)("div", {
+    className: s(d.wrapper, p),
+    children: [(0, i.jsx)(r.default, {
       listPadding: m,
-      onScroll: _,
+      onScroll: y,
       ref: t,
-      renderRow: A,
-      rowCount: I,
-      rowHeight: y,
+      renderRow: I,
+      rowCount: h,
+      rowHeight: v,
       hideScrollbar: !0,
-      rowCountBySection: h,
+      rowCountBySection: S,
       renderSection: C
-    }), null == f ? void 0 : f(N)]
+    }), null == f ? void 0 : f(_)]
   })
 }

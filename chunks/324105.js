@@ -1,152 +1,152 @@
 "use strict";
-a.r(s), a.d(s, {
+s.r(t), s.d(t, {
   default: function() {
     return g
   }
-}), a("222007");
-var l = a("37983"),
-  t = a("884691"),
-  n = a("414456"),
-  i = a.n(n),
-  d = a("819855"),
-  r = a("77078"),
-  c = a("841098"),
-  o = a("407063"),
-  u = a("580357"),
-  m = a("587974"),
-  h = a("315102"),
-  f = a("159885"),
-  x = a("782340"),
-  v = a("583810"),
-  N = a("68422"),
-  S = a("578817");
-let j = [16, 16, 14, 14, 12, 10, 8];
+}), s("222007");
+var a = s("37983"),
+  l = s("884691"),
+  n = s("414456"),
+  i = s.n(n),
+  r = s("819855"),
+  o = s("77078"),
+  d = s("841098"),
+  u = s("407063"),
+  c = s("580357"),
+  E = s("587974"),
+  _ = s("315102"),
+  I = s("159885"),
+  T = s("782340"),
+  S = s("534045"),
+  f = s("68422"),
+  m = s("578817");
+let N = [16, 16, 14, 14, 12, 10, 8];
 var g = function(e) {
-  var s, a;
+  var t, s;
   let {
     guild: n,
     disabled: g,
-    small: C,
-    loading: E = !1,
-    description: p,
-    memberCount: I,
-    presenceCount: _,
-    className: M
-  } = e, R = (0, c.default)(), [T, O] = t.useState(!1);
-  if (null == n || E) return (0, l.jsx)("div", {
-    className: i(M, v.card, v.cardPlaceholder, {
-      [v.cardSmall]: C,
-      [v.cardDisabled]: g
+    small: h,
+    loading: C = !1,
+    description: R,
+    memberCount: x,
+    presenceCount: L,
+    className: O
+  } = e, A = (0, d.default)(), [p, M] = l.useState(!1);
+  if (null == n || C) return (0, a.jsx)("div", {
+    className: i(O, S.card, S.cardPlaceholder, {
+      [S.cardSmall]: h,
+      [S.cardDisabled]: g
     })
   });
   let {
     name: D
-  } = n, A = null != n.discoverySplash && /^data:/.test(n.discoverySplash) ? n.discoverySplash : h.default.getGuildDiscoverySplashURL({
+  } = n, v = null != n.discoverySplash && /^data:/.test(n.discoverySplash) ? n.discoverySplash : _.default.getGuildDiscoverySplashURL({
     id: n.id,
     splash: n.discoverySplash,
-    size: 240 * (0, o.getDevicePixelRatio)()
-  }), b = (0, d.isThemeDark)(R) ? N : S, y = null !== (s = h.default.getGuildIconURL({
+    size: 240 * (0, u.getDevicePixelRatio)()
+  }), G = (0, r.isThemeDark)(A) ? f : m, j = null !== (t = _.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
-  })) && void 0 !== s ? s : void 0, k = null != n.description ? n.description : p, L = null != I ? I : null == n ? void 0 : n.memberCount, U = null != _ ? _ : null == n ? void 0 : n.presenceCount, V = null;
-  if (null != y) V = (0, l.jsx)("img", {
-    src: y,
+  })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, B = null;
+  if (null != j) B = (0, a.jsx)("img", {
+    src: j,
     alt: "",
-    className: v.avatar
+    className: S.avatar
   });
   else {
-    let e = (0, f.getAcronym)(n.name);
-    V = (0, l.jsx)("div", {
-      className: v.defaultIcon,
-      children: (0, l.jsx)(r.Text, {
-        className: v.acronym,
+    let e = (0, I.getAcronym)(n.name);
+    B = (0, a.jsx)("div", {
+      className: S.defaultIcon,
+      children: (0, a.jsx)(o.Text, {
+        className: S.acronym,
         style: {
-          fontSize: null !== (a = j[e.length]) && void 0 !== a ? a : j[j.length - 1]
+          fontSize: null !== (s = N[e.length]) && void 0 !== s ? s : N[N.length - 1]
         },
         variant: "text-sm/normal",
         children: e
       })
     })
   }
-  return (0, l.jsxs)("div", {
-    className: i(M, v.card, {
-      [v.cardSmall]: C,
-      [v.cardDisabled]: g,
-      [v.splashLoaded]: T
+  return (0, a.jsxs)("div", {
+    className: i(O, S.card, {
+      [S.cardSmall]: h,
+      [S.cardDisabled]: g,
+      [S.splashLoaded]: p
     }),
-    children: [(0, l.jsxs)("div", {
-      className: v.cardHeader,
-      children: [(0, l.jsx)("div", {
-        className: v.splash,
-        children: (0, l.jsx)("img", {
-          src: null != A ? A : b,
+    children: [(0, a.jsxs)("div", {
+      className: S.cardHeader,
+      children: [(0, a.jsx)("div", {
+        className: S.splash,
+        children: (0, a.jsx)("img", {
+          src: null != v ? v : G,
           alt: "",
-          className: v.splashImage,
-          onLoad: () => O(!0)
+          className: S.splashImage,
+          onLoad: () => M(!0)
         })
-      }), (0, l.jsx)("div", {
-        className: v.guildIcon,
-        children: (0, l.jsx)(m.default, {
-          mask: m.default.Masks.SQUIRCLE,
+      }), (0, a.jsx)("div", {
+        className: S.guildIcon,
+        children: (0, a.jsx)(E.default, {
+          mask: E.default.Masks.SQUIRCLE,
           width: 48,
           height: 48,
-          children: (0, l.jsx)("div", {
-            className: v.iconMask,
-            children: (0, l.jsx)(m.default, {
-              mask: m.default.Masks.SQUIRCLE,
+          children: (0, a.jsx)("div", {
+            className: S.iconMask,
+            children: (0, a.jsx)(E.default, {
+              mask: E.default.Masks.SQUIRCLE,
               width: 40,
               height: 40,
-              children: null != V ? V : null
+              children: null != B ? B : null
             })
           })
         })
       })]
-    }), (0, l.jsxs)("div", {
-      className: v.guildInfo,
-      children: [(0, l.jsxs)("div", {
-        className: v.title,
-        children: [(0, l.jsx)(u.default, {
-          className: v.verifiedIcon,
+    }), (0, a.jsxs)("div", {
+      className: S.guildInfo,
+      children: [(0, a.jsxs)("div", {
+        className: S.title,
+        children: [(0, a.jsx)(c.default, {
+          className: S.verifiedIcon,
           guild: n,
-          tooltipColor: r.Tooltip.Colors.PRIMARY
-        }), (0, l.jsx)(r.Text, {
-          className: v.guildName,
+          tooltipColor: o.Tooltip.Colors.PRIMARY
+        }), (0, a.jsx)(o.Text, {
+          className: S.guildName,
           variant: "text-md/normal",
-          children: (0, l.jsx)("span", {
+          children: (0, a.jsx)("span", {
             children: D
           })
         })]
-      }), (0, l.jsx)(r.Text, {
-        className: v.description,
+      }), (0, a.jsx)(o.Text, {
+        className: S.description,
         variant: "text-sm/normal",
-        children: (0, l.jsx)("span", {
-          children: k
+        children: (0, a.jsx)("span", {
+          children: U
         })
-      }), (0, l.jsxs)("div", {
-        className: v.memberInfo,
-        children: [null != U && (0, l.jsxs)("div", {
-          className: v.memberCount,
-          children: [(0, l.jsx)("div", {
-            className: v.dotOnline
-          }), (0, l.jsx)(r.Text, {
+      }), (0, a.jsxs)("div", {
+        className: S.memberInfo,
+        children: [null != b && (0, a.jsxs)("div", {
+          className: S.memberCount,
+          children: [(0, a.jsx)("div", {
+            className: S.dotOnline
+          }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
-            children: C ? x.default.Messages.NUMBERS_ONLY.format({
-              count: U
-            }) : x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-              membersOnline: U
+            children: h ? T.default.Messages.NUMBERS_ONLY.format({
+              count: b
+            }) : T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+              membersOnline: b
             })
           })]
-        }), null != L && (0, l.jsxs)("div", {
-          className: v.memberCount,
-          children: [(0, l.jsx)("div", {
-            className: v.dotOffline
-          }), (0, l.jsx)(r.Text, {
+        }), null != P && (0, a.jsxs)("div", {
+          className: S.memberCount,
+          children: [(0, a.jsx)("div", {
+            className: S.dotOffline
+          }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
-            children: C ? x.default.Messages.NUMBERS_ONLY.format({
-              count: L
-            }) : x.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-              count: L
+            children: h ? T.default.Messages.NUMBERS_ONLY.format({
+              count: P
+            }) : T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+              count: P
             })
           })]
         })]

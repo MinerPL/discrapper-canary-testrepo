@@ -14,23 +14,23 @@ var l = a("37983"),
   u = a("85448"),
   _ = a("49111"),
   c = a("782340"),
-  R = a("452446");
+  R = a("341695");
 
 function A(e) {
   let {
     guildId: t,
     messageId: s,
     transitionState: A,
-    onClose: f
-  } = e, [E, I] = o.useState([]), [M, S] = o.useState(), D = o.useCallback(() => {
+    onClose: E
+  } = e, [I, f] = o.useState([]), [M, S] = o.useState(), T = o.useCallback(() => {
     let e = {
       raid_alert_type: u.RaidAlertType.JOIN_RAID,
       raid_alert_id: s,
-      false_alarm_type: E.map(e => e.toString()),
+      false_alarm_type: I.map(e => e.toString()),
       false_alarm_other_reason: M,
       guild_id: t
     };
-    (0, i.trackWithMetadata)(_.AnalyticEvents.GUILD_RAID_FEEDBACK, e), (0, d.handleResolveRaid)(t, s, (0, u.getMostImportantRaidResolutionType)(E)), f(), (0, r.openModalLazy)(async () => {
+    (0, i.trackWithMetadata)(_.AnalyticEvents.GUILD_RAID_FEEDBACK, e), (0, d.handleResolveRaid)(t, s, (0, u.getMostImportantRaidResolutionType)(I)), E(), (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await a.el("938899").then(a.bind(a, "938899"));
@@ -38,7 +38,7 @@ function A(e) {
         ...t
       })
     })
-  }, [f, s, t, M, E]), h = [{
+  }, [E, s, t, M, I]), D = [{
     text: c.default.Messages.GUILD_ANTIRAID_RESOLVE_REASON_LEGITIMATE_ACTIVITY,
     value: u.RaidResolutionType.LEGITIMATE_ACTIVITY
   }, {
@@ -52,9 +52,9 @@ function A(e) {
     value: u.RaidResolutionType.OTHER
   }];
 
-  function T(e) {
-    let t = E.includes(e);
-    t ? I(t => t.filter(t => t !== e)) : I(t => [...t, e])
+  function h(e) {
+    let t = I.includes(e);
+    t ? f(t => t.filter(t => t !== e)) : f(t => [...t, e])
   }
   return (0, l.jsxs)(r.ModalRoot, {
     transitionState: A,
@@ -76,7 +76,7 @@ function A(e) {
         children: c.default.Messages.GUILD_ANTIRAID_RESOLVE_DESCRIPTION
       }), (0, l.jsx)("div", {
         className: R.options,
-        children: h.map(e => {
+        children: D.map(e => {
           let {
             text: t,
             value: a
@@ -87,20 +87,20 @@ function A(e) {
             }),
             children: [(0, l.jsxs)(r.Clickable, {
               className: R.optionText,
-              onClick: () => T(a),
+              onClick: () => h(a),
               children: [(0, l.jsx)("div", {
                 children: (0, l.jsx)(r.Checkbox, {
                   type: r.Checkbox.Types.INVERTED,
                   size: 20,
-                  value: E.includes(a),
-                  onChange: () => T(a)
+                  value: I.includes(a),
+                  onChange: () => h(a)
                 })
               }), (0, l.jsx)(r.Text, {
                 variant: "text-md/semibold",
                 color: "header-primary",
                 children: t
               })]
-            }), a === u.RaidResolutionType.OTHER && E.includes(u.RaidResolutionType.OTHER) && (0, l.jsx)("div", {
+            }), a === u.RaidResolutionType.OTHER && I.includes(u.RaidResolutionType.OTHER) && (0, l.jsx)("div", {
               className: R.textboxContainer,
               children: (0, l.jsx)(r.TextArea, {
                 className: R.falseAlarmReasonText,
@@ -120,13 +120,13 @@ function A(e) {
       children: [(0, l.jsx)("div", {
         className: R.button,
         children: (0, l.jsx)(r.Button, {
-          onClick: D,
+          onClick: T,
           color: r.Button.Colors.BRAND_NEW,
           look: r.Button.Looks.FILLED,
           children: c.default.Messages.GUILD_AUTOMOD_NOTIFICATION_MARK_AS_RESOLVED
         })
       }), (0, l.jsx)(r.Button, {
-        onClick: f,
+        onClick: E,
         color: r.Button.Colors.PRIMARY,
         look: r.Button.Looks.LINK,
         children: c.default.Messages.CANCEL

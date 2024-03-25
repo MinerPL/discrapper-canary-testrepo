@@ -1,10 +1,10 @@
 "use strict";
 
-function s() {
+function i() {
   return !1
 }
 n.r(t), n.d(t, {
   isCacheEnabled: function() {
-    return s
+    return i
   }
 })

@@ -1,12 +1,12 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var a = s("446674"),
-  n = s("913144"),
-  l = s("305961"),
+  l = s("913144"),
+  n = s("305961"),
   i = s("49111");
 let r = {
     description: "",
@@ -22,11 +22,11 @@ function E(e) {
   let {
     welcomeScreen: t,
     guildId: s
-  } = e, a = l.default.getGuild(s);
+  } = e, a = n.default.getGuild(s);
   if (null != t) {
-    var n, d;
+    var l, d;
     c = o = {
-      description: null !== (n = t.description) && void 0 !== n ? n : "",
+      description: null !== (l = t.description) && void 0 !== l ? l : "",
       channels: null !== (d = t.welcome_channels) && void 0 !== d ? d : [],
       enabled: null == a ? void 0 : a.hasFeature(i.GuildFeatures.WELCOME_SCREEN_ENABLED)
     }
@@ -35,7 +35,7 @@ function E(e) {
 }
 class _ extends a.default.Store {
   initialize() {
-    this.waitFor(l.default)
+    this.waitFor(n.default)
   }
   get() {
     return c
@@ -53,7 +53,7 @@ class _ extends a.default.Store {
   }
 }
 _.displayName = "WelcomeScreenSettingsStore";
-var T = new _(n.default, {
+var I = new _(l.default, {
   WELCOME_SCREEN_FETCH_SUCCESS: E,
   WELCOME_SCREEN_UPDATE: E,
   WELCOME_SCREEN_SETTINGS_RESET: function() {

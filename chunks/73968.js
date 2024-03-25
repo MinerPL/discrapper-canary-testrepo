@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   openGuildSettingsPickerModal: function() {
-    return i
+    return l
   }
 });
 var a = n("37983");
 n("884691");
 var s = n("77078");
 
-function i(e) {
+function l(e) {
   (0, s.openModalLazy)(async () => {
     let {
       default: t

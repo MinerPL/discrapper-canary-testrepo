@@ -1,37 +1,37 @@
 "use strict";
-n.r(e), n.d(e, {
+s.r(t), s.d(t, {
   default: function() {
-    return r
+    return i
   }
 });
-var o = n("37983");
-n("884691");
-var i = n("469563"),
-  s = n("779807"),
-  a = n("75196"),
-  r = (0, i.replaceIcon)(function(t) {
+var n = s("37983");
+s("884691");
+var r = s("469563"),
+  l = s("779807"),
+  a = s("75196"),
+  i = (0, r.replaceIcon)(function(e) {
     let {
-      width: e = 16,
-      height: n = 16,
-      color: i = "currentColor",
-      foreground: s,
-      ...r
-    } = t;
-    return (0, o.jsx)("svg", {
-      ...(0, a.default)(r),
-      width: e,
-      height: n,
+      width: t = 16,
+      height: s = 16,
+      color: r = "currentColor",
+      foreground: l,
+      ...i
+    } = e;
+    return (0, n.jsx)("svg", {
+      ...(0, a.default)(i),
+      width: t,
+      height: s,
       viewBox: "0 0 24 24",
-      children: (0, o.jsx)("g", {
+      children: (0, n.jsx)("g", {
         fill: "none",
         fillRule: "evenodd",
-        children: (0, o.jsx)("path", {
-          className: s,
-          fill: i,
+        children: (0, n.jsx)("path", {
+          className: l,
+          fill: r,
           d: "M1,21 L23,21 L12,2 L1,21 L1,21 Z M13,18 L11,18 L11,16 L13,16 L13,18 L13,18 Z M13,14 L11,14 L11,10 L13,10 L13,14 L13,14 Z"
         })
       })
     })
-  }, s.WarningIcon, void 0, {
+  }, l.WarningIcon, void 0, {
     size: 16
   })

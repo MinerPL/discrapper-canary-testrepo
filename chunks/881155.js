@@ -1,69 +1,69 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 });
 var a = s("37983");
 s("884691");
-var n = s("819855"),
-  l = s("77078"),
-  r = s("841098"),
-  i = s("719923"),
-  u = s("154889"),
-  o = s("917247"),
+var r = s("819855"),
+  i = s("77078"),
+  n = s("841098"),
+  l = s("719923"),
+  o = s("154889"),
+  u = s("917247"),
   d = s("635956"),
   c = s("646718"),
   _ = s("782340"),
-  E = s("204859");
-let I = e => {
+  E = s("947111");
+let T = e => {
     let {
       showTrialCTA: t,
       subscriptionTier: s,
       shouldShowUpsells: a,
-      trialDurationCopy: n,
-      isPersistentCTA: l,
-      subscriptionTrial: r
+      trialDurationCopy: r,
+      isPersistentCTA: i,
+      subscriptionTrial: n
     } = e;
-    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || l)) return (0, i.formatTrialCtaIntervalDuration)({
-      intervalType: null == r ? void 0 : r.interval,
-      intervalCount: null == r ? void 0 : r.interval_count
+    if (t && (s === c.PremiumSubscriptionSKUs.TIER_2 || i)) return (0, l.formatTrialCtaIntervalDuration)({
+      intervalType: null == n ? void 0 : n.interval,
+      intervalCount: null == n ? void 0 : n.interval_count
     });
     if (t) return _.default.Messages.GET_FREE_TRIAL.format({
-      freeTrialText: n
+      freeTrialText: r
     });
     if (a && s === c.PremiumSubscriptionSKUs.TIER_2) return _.default.Messages.BOGO_CHANGE_LOG_REDEEM
   },
-  f = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+  I = (e, t, s, a) => t || s ? _.default.Messages.PREMIUM_DISCOUNT_CTA_WITHOUT_PERCENT : e === c.PremiumSubscriptionSKUs.TIER_2 ? _.default.Messages.PREMIUM_DISCOUNT_CTA.format({
     percent: a
   }) : void 0;
-var T = e => {
+var f = e => {
   var t;
   let {
     forceInverted: s,
     subscriptionTier: c,
-    isEligibleForBogoPromotion: T = !1,
-    isPersistentCTA: S = !1,
-    useShorterCTA: R = !1,
+    isEligibleForBogoPromotion: f = !1,
+    isPersistentCTA: R = !1,
+    useShorterCTA: S = !1,
     ...m
-  } = e, p = (0, r.default)(), N = (0, n.isThemeDark)(p) || s, g = null === (t = (0, o.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, A = (0, i.formatTrialOfferIntervalDuration)({
-    intervalType: null == g ? void 0 : g.interval,
-    intervalCount: null == g ? void 0 : g.interval_count
-  }), P = (0, u.usePremiumDiscountOffer)(), C = null != g && c === g.sku_id, O = T ? _.default.Messages.BOGO_CLAIM_OFFER : null != P ? f(c, R, S, P.discount.amount) : I({
-    showTrialCTA: C,
+  } = e, N = (0, n.default)(), A = (0, r.isThemeDark)(N) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, C = (0, l.formatTrialOfferIntervalDuration)({
+    intervalType: null == p ? void 0 : p.interval,
+    intervalCount: null == p ? void 0 : p.interval_count
+  }), g = (0, o.usePremiumDiscountOffer)(), O = null != p && c === p.sku_id, P = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != g ? I(c, S, R, g.discount.amount) : T({
+    showTrialCTA: O,
     subscriptionTier: c,
     shouldShowUpsells: !1,
-    trialDurationCopy: A,
-    isPersistentCTA: S,
-    subscriptionTrial: g
+    trialDurationCopy: C,
+    isPersistentCTA: R,
+    subscriptionTrial: p
   });
   return (0, a.jsx)(d.default, {
-    color: l.ButtonColors.BRAND,
-    look: N ? l.ButtonLooks.INVERTED : void 0,
-    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
-    trialId: null == g ? void 0 : g.id,
-    buttonText: O,
-    buttonTextClassName: C ? E.freeTrialText : void 0,
+    color: i.ButtonColors.BRAND,
+    look: A ? i.ButtonLooks.INVERTED : void 0,
+    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : A ? E.brandShine : void 0,
+    trialId: null == p ? void 0 : p.id,
+    buttonText: P,
+    buttonTextClassName: O ? E.freeTrialText : void 0,
     onlyShineOnHover: !0,
     subscriptionTier: c,
     ...m

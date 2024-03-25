@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   Int64Value: function() {
-    return i
+    return a
   },
   UInt64Value: function() {
     return I
@@ -45,8 +45,8 @@ class o extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -91,8 +91,8 @@ class n extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -137,8 +137,8 @@ class r extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -157,8 +157,8 @@ class r extends t.MessageType {
     }])
   }
 }
-let i = new r;
-class a extends t.MessageType {
+let a = new r;
+class i extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(t.ScalarType.UINT64, e.value, "value", !1, !0)
   }
@@ -183,8 +183,8 @@ class a extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -203,7 +203,7 @@ class a extends t.MessageType {
     }])
   }
 }
-let I = new a;
+let I = new i;
 class s extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(5, e.value, "value", !1, !0)
@@ -229,8 +229,8 @@ class s extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -275,8 +275,8 @@ class S extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -321,8 +321,8 @@ class O extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -367,8 +367,8 @@ class R extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -388,7 +388,7 @@ class R extends t.MessageType {
   }
 }
 let l = new R;
-class L extends t.MessageType {
+class u extends t.MessageType {
   internalJsonWrite(e, _) {
     return this.refJsonWriter.scalar(12, e.value, "value", !1, !0)
   }
@@ -413,8 +413,8 @@ class L extends t.MessageType {
       else {
         let r = E.readUnknownField;
         if ("throw" === r) throw new globalThis.Error("Unknown field ".concat(_, " (wire type ").concat(o, ") for ").concat(this.typeName));
-        let i = e.skip(o);
-        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, i)
+        let a = e.skip(o);
+        !1 !== r && (!0 === r ? t.UnknownFieldHandler.onRead : r)(this.typeName, n, _, o, a)
       }
     }
     return n
@@ -433,4 +433,4 @@ class L extends t.MessageType {
     }])
   }
 }
-new L
+new u

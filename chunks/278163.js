@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   getSystemAnalyticsInfo: function() {
-    return h
+    return E
   }
 }), n("222007");
 var i = n("446674"),
@@ -34,10 +34,10 @@ async function c() {
         ...u.hashes
       }
     }).hashes[e] = n;
-    t.length > 0 && _.emitChange()
+    t.length > 0 && f.emitChange()
   } catch (e) {}
 }
-class f extends i.default.PersistedStore {
+class _ extends i.default.PersistedStore {
   initialize(e) {
     u = null != e && "object" == typeof e.hashes ? e : {
       hashes: {}
@@ -55,13 +55,13 @@ class f extends i.default.PersistedStore {
     } catch (e) {}
   }
 }
-f.displayName = "SystemAnalyticsStore", f.persistKey = "SystemAnalyticsStore";
-let _ = new f(s.default, {
+_.displayName = "SystemAnalyticsStore", _.persistKey = "SystemAnalyticsStore";
+let f = new _(s.default, {
   START_SESSION: function() {
     return c(), !1
   }
 });
 
-function h() {
-  return _.info()
+function E() {
+  return f.info()
 }

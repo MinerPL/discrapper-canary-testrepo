@@ -1,6 +1,6 @@
-var n = r("981203"),
-  o = r("453129"),
-  a = r("912178"),
-  i = a && a.isMap,
-  u = i ? o(i) : n;
-e.exports = u
+var r = n("981203"),
+  i = n("453129"),
+  o = n("912178"),
+  s = o && o.isMap,
+  a = s ? i(s) : r;
+e.exports = a

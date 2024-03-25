@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var a = n("37983"),
-  i = n("884691"),
+var i = n("37983"),
+  a = n("884691"),
   o = n("77078"),
   l = n("357412"),
   r = n("592407"),
@@ -14,24 +14,24 @@ var a = n("37983"),
   c = n("338807"),
   u = n("219772"),
   E = n("49111"),
-  f = n("782340"),
-  _ = n("410402"),
+  _ = n("782340"),
+  f = n("306671"),
   M = n("246369");
 
 function A() {
-  return (0, a.jsxs)("div", {
-    className: _.eligibilityHeader,
-    children: [(0, a.jsx)(o.Heading, {
-      className: _.eligibilityHeaderText,
+  return (0, i.jsxs)("div", {
+    className: f.eligibilityHeader,
+    children: [(0, i.jsx)(o.Heading, {
+      className: f.eligibilityHeaderText,
       variant: "heading-lg/extrabold",
       color: "header-primary",
-      children: f.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_NOT_ELIGIBLE_TITLE_V2
-    }), (0, a.jsx)("img", {
-      className: _.eligibilityHeaderImage,
+      children: _.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_NOT_ELIGIBLE_TITLE_V2
+    }), (0, i.jsx)("img", {
+      className: f.eligibilityHeaderImage,
       src: M,
       alt: ""
-    }), (0, a.jsx)(o.ModalCloseButton, {
-      className: _.eligibilityHeaderCloseButton,
+    }), (0, i.jsx)(o.ModalCloseButton, {
+      className: f.eligibilityHeaderCloseButton,
       onClick: () => {
         (0, o.closeModal)(u.ELIGIBILITY_MODAL_KEY)
       }
@@ -43,10 +43,10 @@ function S(e) {
   let {
     eligibility: t,
     eligibilityLoading: n,
-    eligibilityError: f,
+    eligibilityError: _,
     guildId: M,
     onEligibilityBecameStale: A
-  } = e, S = i.useMemo(() => ({
+  } = e, S = a.useMemo(() => ({
     onEligibilityBecameStale: A,
     sortedByIneligible: !0,
     actions: {
@@ -56,23 +56,23 @@ function S(e) {
       }
     }
   }), [M, A]), h = (0, l.default)(t, S);
-  return null != f ? (0, a.jsx)("div", {
-    className: _.paddedContainer,
-    children: (0, a.jsx)(d.default, {
-      children: f.message
+  return null != _ ? (0, i.jsx)("div", {
+    className: f.paddedContainer,
+    children: (0, i.jsx)(d.default, {
+      children: _.message
     })
-  }) : null == h || n ? (0, a.jsx)("div", {
-    className: _.paddedContainer,
-    children: (0, a.jsx)(o.Spinner, {})
-  }) : (0, a.jsx)("div", {
-    children: h.map((e, t) => (0, a.jsxs)(i.Fragment, {
-      children: [(0, a.jsx)(c.ChecklistItem, {
+  }) : null == h || n ? (0, i.jsx)("div", {
+    className: f.paddedContainer,
+    children: (0, i.jsx)(o.Spinner, {})
+  }) : (0, i.jsx)("div", {
+    children: h.map((e, t) => (0, i.jsxs)(a.Fragment, {
+      children: [(0, i.jsx)(c.ChecklistItem, {
         name: e.checked ? e.checkedLabel : e.uncheckedLabel,
         description: e.description,
         checked: e.checked,
         actionLabel: e.actionLabel,
         actionHandler: e.actionHandler
-      }), t < h.length - 1 ? (0, a.jsx)(o.FormDivider, {}) : null]
+      }), t < h.length - 1 ? (0, i.jsx)(o.FormDivider, {}) : null]
     }, e.checkedLabel))
   })
 }
@@ -81,20 +81,20 @@ function h(e) {
   let {
     eligibility: t,
     eligibilityLoading: n,
-    eligibilityError: i,
+    eligibilityError: a,
     refreshEligibility: l,
     guildId: r,
     transitionState: s
   } = e;
-  return (0, a.jsxs)(o.ModalRoot, {
-    className: _.eligibilityModal,
+  return (0, i.jsxs)(o.ModalRoot, {
+    className: f.eligibilityModal,
     size: o.ModalSize.MEDIUM,
     transitionState: s,
-    children: [(0, a.jsx)(A, {}), (0, a.jsx)(o.ModalContent, {
-      children: (0, a.jsx)(S, {
+    children: [(0, i.jsx)(A, {}), (0, i.jsx)(o.ModalContent, {
+      children: (0, i.jsx)(S, {
         eligibility: t,
         eligibilityLoading: n,
-        eligibilityError: i,
+        eligibilityError: a,
         guildId: r,
         onEligibilityBecameStale: l
       })

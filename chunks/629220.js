@@ -4,19 +4,19 @@ n.r(t), n.d(t, {
     return h
   },
   updateOptInChannelsImmediate: function() {
-    return O
+    return C
   },
   updateOptInChannelsBatched: function() {
     return I
   },
   bulkOptInChannels: function() {
-    return A
+    return T
   },
   setGuildOptIn: function() {
-    return G
+    return A
   },
   setIsFavorite: function() {
-    return T
+    return G
   },
   dimissFavoriteSuggestion: function() {
     return L
@@ -70,7 +70,7 @@ function h(e, t, n, a) {
   })
 }
 
-function O(e, t, n, a) {
+function C(e, t, n, a) {
   if (null == e) return;
   if (o.default.isFullServerPreview(e)) {
     (0, r.updateImpersonatedChannels)(e, n ? [t] : [], n ? [] : [t]), (0, r.updateImpersonatedData)(e, {
@@ -107,7 +107,7 @@ function O(e, t, n, a) {
     location: a
   })
 }
-async function C(e, t) {
+async function O(e, t) {
   if (!(null == e || o.default.isFullServerPreview(e))) await u.default.saveUserGuildSettingsBulk({
     [e]: {
       channel_overrides: t
@@ -118,9 +118,9 @@ async function C(e, t) {
     updates: t
   })
 }
-let I = (0, a.debounce)((e, t) => C(e, t), 1e3);
+let I = (0, a.debounce)((e, t) => O(e, t), 1e3);
 
-function A(e, t) {
+function T(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     a = arguments.length > 3 ? arguments[3] : void 0;
   if (null == e) return;
@@ -153,7 +153,7 @@ function A(e, t) {
   })
 }
 
-function G(e, t, n) {
+function A(e, t, n) {
   if (o.default.isFullServerPreview(e)) {
     (0, r.updateImpersonatedData)(e, {
       optInEnabled: t
@@ -170,7 +170,7 @@ function G(e, t, n) {
   })
 }
 
-function T(e, t, n, a) {
+function G(e, t, n, a) {
   if (null == e || o.default.isFullServerPreview(e)) return;
   let l = c.default.getChannelIdFlags(e, t);
   !(0, p.hasFlag)(l, S.ChannelNotificationSettingsFlags.OPT_IN_ENABLED) && n && (l = (0, p.setFlag)(l, S.ChannelNotificationSettingsFlags.OPT_IN_ENABLED, !0)), d.default.updateChannelOverrideSettings(e, t, {

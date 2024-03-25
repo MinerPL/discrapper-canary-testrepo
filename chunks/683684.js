@@ -1,14 +1,14 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("882982"),
-  c = r("123090"),
-  s = r("987152"),
-  f = r("670485"),
+  s = r("123090"),
+  f = r("987152"),
+  c = r("670485"),
   d = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
       var r = arguments[t];
@@ -20,7 +20,7 @@ var n = r("884691"),
     var t = e.width,
       r = e.rgb,
       n = e.hex,
-      a = e.hsv,
+      o = e.hsv,
       i = e.hsl,
       p = e.onChange,
       h = e.onSwatchHover,
@@ -105,46 +105,46 @@ var n = r("884691"),
       }, y), {
         disableAlpha: b
       });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: w.picker,
       className: "sketch-picker " + (void 0 === m ? "" : m)
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: w.saturation
-    }, o.createElement(c.Saturation, {
+    }, a.createElement(s.Saturation, {
       style: w.Saturation,
       hsl: i,
-      hsv: a,
+      hsv: o,
       onChange: p
-    })), o.createElement("div", {
+    })), a.createElement("div", {
       style: w.controls,
       className: "flexbox-fix"
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: w.sliders
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: w.hue
-    }, o.createElement(c.Hue, {
+    }, a.createElement(s.Hue, {
       style: w.Hue,
       hsl: i,
       onChange: p
-    })), o.createElement("div", {
+    })), a.createElement("div", {
       style: w.alpha
-    }, o.createElement(c.Alpha, {
+    }, a.createElement(s.Alpha, {
       style: w.Alpha,
       rgb: r,
       hsl: i,
       renderers: g,
       onChange: p
-    }))), o.createElement("div", {
+    }))), a.createElement("div", {
       style: w.color
-    }, o.createElement(c.Checkboard, null), o.createElement("div", {
+    }, a.createElement(s.Checkboard, null), a.createElement("div", {
       style: w.activeColor
-    }))), o.createElement(s.default, {
+    }))), a.createElement(f.default, {
       rgb: r,
       hsl: i,
       hex: n,
       onChange: p,
       disableAlpha: b
-    }), o.createElement(f.default, {
+    }), a.createElement(c.default, {
       colors: v,
       onClick: p,
       onSwatchHover: h
@@ -159,4 +159,4 @@ p.propTypes = {
   width: 200,
   styles: {},
   presetColors: ["#D0021B", "#F5A623", "#F8E71C", "#8B572A", "#7ED321", "#417505", "#BD10E0", "#9013FE", "#4A90E2", "#50E3C2", "#B8E986", "#000000", "#4A4A4A", "#9B9B9B", "#FFFFFF"]
-}, (0, c.ColorWrap)(p)
+}, (0, s.ColorWrap)(p)

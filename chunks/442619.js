@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("592407"),
-  i = n("5667"),
-  l = n("58608"),
+  l = n("5667"),
+  i = n("58608"),
   r = n("49111"),
   o = n("782340"),
-  u = n("992703");
+  u = n("559645");
 
 function d(e) {
   let {
@@ -20,10 +20,10 @@ function d(e) {
   } = e;
   return (0, a.jsx)("div", {
     className: u.container,
-    children: (0, a.jsx)(i.default, {
+    children: (0, a.jsx)(l.default, {
       header: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_UPSELL_TITLE,
       content: o.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_TEMPLATE_UPSELL_BODY,
-      asset: (0, a.jsx)(l.default, {
+      asset: (0, a.jsx)(i.default, {
         className: u.video,
         src: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov",
         autoPlay: !0,

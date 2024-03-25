@@ -20,8 +20,8 @@ var a = n("37983"),
   v = n("457112"),
   I = n("449008"),
   P = n("49111"),
-  S = n("272505");
-let C = {
+  C = n("272505");
+let S = {
   [P.PictureInPictureComponents.VIDEO]: p.default,
   [P.PictureInPictureComponents.EMBED_IFRAME]: d.default
 };
@@ -38,7 +38,7 @@ class g extends l.PureComponent {
       roundCorners: s
     } = this.props;
     return (0, a.jsx)(v.default, {
-      pictureInPictureComponents: C,
+      pictureInPictureComponents: S,
       selectedPIPWindow: e,
       pipWindows: t,
       maxX: n,
@@ -65,9 +65,9 @@ var y = i.default.connectStores([u.default, r.default, h.default, c.default, f.d
     } = e,
     p = u.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     v = r.default.getCurrentEmbeddedActivity(),
-    C = null != v && !(0, s.default)(v.channelId, f.default),
+    S = null != v && !(0, s.default)(v.channelId, f.default),
     g = r.default.getActivityPanelMode(),
-    y = null != v && C && g === S.ActivityPanelModes.PANEL,
+    y = null != v && S && g === C.ActivityPanelModes.PANEL,
     E = h.default.windowSize();
   if (p && (d && y || !y)) {
     let e = u.default.getWindow(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
@@ -75,7 +75,7 @@ var y = i.default.connectStores([u.default, r.default, h.default, c.default, f.d
       width: e.innerWidth,
       height: e.innerHeight
     }
-  }!d && y ? l = P.AppContext.APP : o && (l = P.AppContext.POPOUT), i = d && C ? null : C || !p || o ? null != v && g === S.ActivityPanelModes.PANEL && C ? null !== (t = m.default.pipActivityWindow) && void 0 !== t ? t : m.default.pipVideoWindow : null !== (n = m.default.pipVideoWindow) && void 0 !== n ? n : m.default.pipActivityWindow : null;
+  }!d && y ? l = P.AppContext.APP : o && (l = P.AppContext.POPOUT), i = d && S ? null : S || !p || o ? null != v && g === C.ActivityPanelModes.PANEL && S ? null !== (t = m.default.pipActivityWindow) && void 0 !== t ? t : m.default.pipVideoWindow : null !== (n = m.default.pipVideoWindow) && void 0 !== n ? n : m.default.pipActivityWindow : null;
   let T = Array.from(m.default.pipWindows.values()),
     A = T.find(e => e.component === P.PictureInPictureComponents.VIDEO),
     x = T.find(e => e.component === P.PictureInPictureComponents.EMBED_IFRAME),

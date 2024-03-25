@@ -3,7 +3,7 @@
 function a(e) {
   return e
 }
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   defineColorTokens: function() {
     return a
   }

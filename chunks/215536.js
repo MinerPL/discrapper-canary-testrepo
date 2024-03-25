@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 });
 var a = n("37983"),
@@ -9,14 +9,14 @@ var a = n("37983"),
   s = n("414456"),
   i = n.n(s),
   r = n("77078"),
-  o = n("272030"),
-  u = n("899633"),
+  u = n("272030"),
+  o = n("899633"),
   d = n("244201"),
   c = n("506885"),
   f = n("981601"),
   h = n("533403"),
-  p = n("315102"),
-  m = n("324328");
+  m = n("315102"),
+  p = n("893127");
 
 function E(e) {
   let {
@@ -24,11 +24,11 @@ function E(e) {
     speaker: s,
     className: h
   } = e, E = (0, d.useAppContext)(), {
-    reducedMotion: C
-  } = l.useContext(r.AccessibilityPreferencesContext), g = (0, u.default)({
+    reducedMotion: g
+  } = l.useContext(r.AccessibilityPreferencesContext), S = (0, o.default)({
     userId: s.id
-  }), S = null != s.member ? (0, p.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
-    (0, o.openContextMenuLazy)(e, async () => {
+  }), C = null != s.member ? (0, m.getGuildMemberAvatarURL)(s.member) : null, _ = e => {
+    (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("834247").then(n.bind(n, "834247"));
@@ -69,24 +69,24 @@ function E(e) {
         },
         onContextMenu: _,
         children: (0, a.jsx)(r.Avatar, {
-          src: null != S ? S : s.user.getAvatarURL(t.guild_id, 24),
+          src: null != C ? C : s.user.getAvatarURL(t.guild_id, 24),
           size: r.AvatarSizes.SIZE_24,
-          className: i(m.avatar, h),
+          className: i(p.avatar, h),
           "aria-label": s.userNick,
-          isSpeaking: g && !C.enabled
+          isSpeaking: S && !g.enabled
         })
       })
     })
   })
 }
 
-function C(e) {
+function g(e) {
   let {
     speakers: t,
     channel: n
   } = e;
   return (0, a.jsx)(h.default, {
-    className: m.summary,
+    className: p.summary,
     guildId: n.guild_id,
     users: t,
     max: 10,
@@ -96,7 +96,7 @@ function C(e) {
       className: t
     }, l),
     renderMoreUsers: (e, t, n) => (0, a.jsx)("div", {
-      className: i(m.speakers, t),
+      className: i(p.speakers, t),
       children: e
     }, n)
   })

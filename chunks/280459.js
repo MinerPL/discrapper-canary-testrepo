@@ -60,8 +60,8 @@ var c = r("985804"),
   x = r("568355"),
   C = r("952352"),
   E = r("265943"),
-  O = r("707736"),
-  D = r("808598"),
+  D = r("707736"),
+  O = r("808598"),
   K = r("41112"),
   T = r("893147"),
   M = w.isBrowser("IE"),
@@ -105,11 +105,11 @@ var c = r("985804"),
             a = t || E(o),
             u = a.x,
             s = a.y;
-          K(i) || D(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), !n && r.update(m.forceSelection(e, e.getSelection()))
+          K(i) || O(!1), i.focus(), o === window ? window.scrollTo(u, s) : b.setTop(o, s), !n && r.update(m.forceSelection(e, e.getSelection()))
         }
       }), u(a(r), "blur", function() {
         var t = r.editor;
-        t && (K(t) || D(!1), t.blur())
+        t && (K(t) || O(!1), t.blur())
       }), u(a(r), "setMode", function(t) {
         var e = r.props,
           n = e.onPaste,
@@ -264,7 +264,7 @@ var c = r("985804"),
         key: "contents" + this.state.contentsKey
       })))))
     }, n.componentDidMount = function() {
-      this._blockSelectEvents = !1, !B && O("draft_ods_enabled") && (B = !0, v.initODS()), this.setMode("edit"), M && (this.editor ? this.editor.ownerDocument.execCommand("AutoUrlDetect", !1, !1) : r.g.execCommand("AutoUrlDetect", !1, !1))
+      this._blockSelectEvents = !1, !B && D("draft_ods_enabled") && (B = !0, v.initODS()), this.setMode("edit"), M && (this.editor ? this.editor.ownerDocument.execCommand("AutoUrlDetect", !1, !1) : r.g.execCommand("AutoUrlDetect", !1, !1))
     }, n.componentDidUpdate = function() {
       this._blockSelectEvents = !1, this._latestEditorState = this.props.editorState, this._latestCommittedEditorState = this.props.editorState
     }, e

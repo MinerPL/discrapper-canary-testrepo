@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
 var s = n("37983");
 n("884691");
 var a = n("124969"),
-  l = n("5487"),
-  r = n("473759"),
+  r = n("5487"),
+  l = n("473759"),
   i = n("579033"),
-  o = n("685991");
+  o = n("223369");
 let u = {
   [i.InternalTemplateCodes.CLASSROOM]: n("251834"),
   [i.InternalTemplateCodes.LOCAL_COMMUNITIES]: n("787762"),
@@ -30,12 +30,12 @@ function d(e) {
     guildTemplate: n
   } = e, d = n.code, c = u[d];
   if (null != c) {
-    var f;
+    var E;
     let {
       header: e,
       description: u,
-      author: E
-    } = (0, l.default)(d);
+      author: f
+    } = (0, r.default)(d);
     return (0, s.jsxs)("div", {
       children: [(0, s.jsx)("img", {
         className: o.image,
@@ -47,14 +47,14 @@ function d(e) {
         children: e
       }), (0, s.jsx)(a.SubTitle, {
         children: u
-      }), n.state === i.GuildTemplateStates.RESOLVED ? (0, s.jsx)(r.UsagePill, {
+      }), n.state === i.GuildTemplateStates.RESOLVED ? (0, s.jsx)(l.UsagePill, {
         className: o.usagePill,
-        count: null !== (f = n.usageCount) && void 0 !== f ? f : 0,
-        verifiedName: E
+        count: null !== (E = n.usageCount) && void 0 !== E ? E : 0,
+        verifiedName: f
       }) : null]
     })
   }
-  return (0, s.jsx)(r.default, {
+  return (0, s.jsx)(l.default, {
     pillClassName: o.usagePill,
     guildTemplate: n,
     tall: !0

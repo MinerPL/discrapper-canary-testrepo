@@ -21,17 +21,17 @@ var l = a("37983"),
   I = a("387111"),
   _ = a("713810"),
   x = a("60036"),
-  v = a("339274"),
-  S = a("605143"),
+  S = a("339274"),
+  v = a("605143"),
   C = a("782340"),
-  N = a("327797");
+  N = a("641401");
 
 function p(e) {
   let {
     guildId: t,
     feedItem: a,
     onSendFeedback: n
-  } = e, s = (0, x.default)(a), g = s.channel_id, v = (0, d.useStateFromStores)([c.default], () => c.default.getChannel(g)), S = (0, u.default)(v), p = (0, o.getChannelIconComponent)(v), T = (0, d.useStateFromStores)([h.default], () => h.default.getUser(s.author.id)), A = (0, d.useStateFromStores)([c.default, f.default, m.default], () => I.default.getName(t, g, T)), j = e => {
+  } = e, s = (0, x.default)(a), g = s.channel_id, S = (0, d.useStateFromStores)([c.default], () => c.default.getChannel(g)), v = (0, u.default)(S), p = (0, o.getChannelIconComponent)(S), T = (0, d.useStateFromStores)([h.default], () => h.default.getUser(s.author.id)), A = (0, d.useStateFromStores)([c.default, f.default, m.default], () => I.default.getName(t, g, T)), j = e => {
     (0, _.setFeedItemPreference)(t, e), n()
   };
   return (0, l.jsxs)("div", {
@@ -58,7 +58,7 @@ function p(e) {
         variant: "text-md/normal",
         color: "interactive-active",
         children: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_FEEDBACK_SHOW_LESS_CHANNEL.format({
-          channelName: S,
+          channelName: v,
           channelNameHook: (e, t) => (0, l.jsxs)("span", {
             children: [null != p && (0, l.jsx)(p, {
               className: N.mentionIcon,
@@ -100,10 +100,10 @@ function T(e) {
     guildId: t,
     feedItem: a
   } = e, [i, d] = n.useState(!1), u = (0, s.useListItem)(a.id);
-  return (0, l.jsxs)(v.default, {
+  return (0, l.jsxs)(S.default, {
     ariaLabel: C.default.Messages.GUILD_FEED_HIDDEN_MESSAGE_ITEM,
     listItemProps: u,
-    children: [(0, l.jsxs)(S.default, {
+    children: [(0, l.jsxs)(v.default, {
       hideBorder: i,
       children: [(0, l.jsx)(g.default, {
         className: N.icon,

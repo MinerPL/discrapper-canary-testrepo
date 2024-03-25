@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return h
   },
   placements: function() {
-    return _
+    return y
   },
   modifierPhases: function() {
-    return y
+    return _
   }
 }), n("808653");
 var r = "top",
@@ -61,7 +61,7 @@ var r = "top",
   h = u.reduce(function(e, t) {
     return e.concat([t + "-" + l, t + "-" + c])
   }, []),
-  _ = [].concat(u, [s]).reduce(function(e, t) {
+  y = [].concat(u, [s]).reduce(function(e, t) {
     return e.concat([t, t + "-" + l, t + "-" + c])
   }, []),
-  y = ["beforeRead", "read", "afterRead", "beforeMain", "main", "afterMain", "beforeWrite", "write", "afterWrite"]
+  _ = ["beforeRead", "read", "afterRead", "beforeMain", "main", "afterMain", "beforeWrite", "write", "afterWrite"]

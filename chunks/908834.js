@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MonotonicInterpolant: function() {
-    return a
+    return o
   }
 }), n("70102"), n("424973");
 
@@ -12,7 +12,7 @@ function r(e, t) {
   }
 }
 
-function o(e, t, n) {
+function i(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -20,60 +20,60 @@ function o(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-var a = function() {
+var o = function() {
   var e, t, n;
 
-  function a(e, t) {
+  function o(e, t) {
     ! function(e, t) {
       if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
-    }(this, a), o(this, "xs", void 0), o(this, "ys", void 0), o(this, "c1s", void 0), o(this, "c2s", void 0), o(this, "c3s", void 0);
-    for (var n, r, i, s = e.length, c = [], l = 0; l < s; l++) c.push(l);
+    }(this, o), i(this, "xs", void 0), i(this, "ys", void 0), i(this, "c1s", void 0), i(this, "c2s", void 0), i(this, "c3s", void 0);
+    for (var n, r, s, a = e.length, c = [], u = 0; u < a; u++) c.push(u);
     c.sort(function(t, n) {
       return e[t] < e[n] ? -1 : 1
     });
-    for (var u = [], d = [], p = [], f = 0; f < s - 1; f++) n = e[f + 1] - e[f], r = t[f + 1] - t[f], d.push(n), u.push(r), p.push(r / n);
-    for (var m = [p[0]], h = 0; h < d.length - 1; h++) {
-      var g = p[h],
-        v = p[h + 1];
-      if (g * v <= 0) m.push(0);
+    for (var d = [], l = [], f = [], p = 0; p < a - 1; p++) n = e[p + 1] - e[p], r = t[p + 1] - t[p], l.push(n), d.push(r), f.push(r / n);
+    for (var h = [f[0]], v = 0; v < l.length - 1; v++) {
+      var g = f[v],
+        b = f[v + 1];
+      if (g * b <= 0) h.push(0);
       else {
-        n = d[h];
-        var y = d[h + 1],
-          b = n + y;
-        m.push(3 * b / ((b + y) / g + (b + n) / v))
+        n = l[v];
+        var m = l[v + 1],
+          y = n + m;
+        h.push(3 * y / ((y + m) / g + (y + n) / b))
       }
     }
-    m.push(p[p.length - 1]);
-    for (var x = [], S = [], w = 0; w < m.length - 1; w++) {
-      i = p[w];
-      var D = m[w],
-        C = 1 / d[w],
-        P = D + m[w + 1] - i - i;
-      x.push((i - D - P) * C), S.push(P * C * C)
+    h.push(f[f.length - 1]);
+    for (var x = [], w = [], S = 0; S < h.length - 1; S++) {
+      s = f[S];
+      var k = h[S],
+        E = 1 / l[S],
+        _ = k + h[S + 1] - s - s;
+      x.push((s - k - _) * E), w.push(_ * E * E)
     }
-    this.xs = e, this.ys = t, this.c1s = m, this.c2s = x, this.c3s = S
+    this.xs = e, this.ys = t, this.c1s = h, this.c2s = x, this.c3s = w
   }
-  return e = a, t = [{
+  return e = o, t = [{
     key: "interpolate",
     value: function(e) {
       var t, n = this.xs,
         r = this.ys,
-        o = this.c1s,
-        a = this.c2s,
-        i = this.c3s,
-        s = n.length - 1;
-      if (e === n[s]) return r[s];
-      for (var c = 0, l = i.length - 1; c <= l;) {
-        var u = n[t = Math.floor(.5 * (c + l))];
-        if (u < e) c = t + 1;
+        i = this.c1s,
+        o = this.c2s,
+        s = this.c3s,
+        a = n.length - 1;
+      if (e === n[a]) return r[a];
+      for (var c = 0, u = s.length - 1; c <= u;) {
+        var d = n[t = Math.floor(.5 * (c + u))];
+        if (d < e) c = t + 1;
         else {
-          if (!(u > e)) return r[t];
-          l = t - 1
+          if (!(d > e)) return r[t];
+          u = t - 1
         }
       }
-      var d = e - n[s = Math.max(0, l)],
-        p = d * d;
-      return r[s] + o[s] * d + a[s] * p + i[s] * d * p
+      var l = e - n[a = Math.max(0, u)],
+        f = l * l;
+      return r[a] + i[a] * l + o[a] * f + s[a] * l * f
     }
-  }], r(e.prototype, t), n && r(e, n), a
+  }], r(e.prototype, t), n && r(e, n), o
 }()

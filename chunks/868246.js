@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return c
   },
   default: function() {
-    return E
+    return m
   }
 }), n("424973"), n("222007");
 var r = n("917351"),
@@ -22,7 +22,7 @@ let d = null,
   f = [],
   p = [],
   _ = {};
-class m extends s.default.Store {
+class E extends s.default.Store {
   getPrimaryCategories() {
     return f
   }
@@ -44,8 +44,8 @@ class m extends s.default.Store {
     return e === o.DISCOVERY_ALL_CATEGORIES_ID ? u.default.Messages.HOME : _[e]
   }
 }
-m.displayName = "GuildDiscoveryCategoryStore";
-var E = new m(a.default, {
+E.displayName = "GuildDiscoveryCategoryStore";
+var m = new E(a.default, {
   GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
     let t, {
         categories: n,

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return s
   },
   hide: function() {
-    return l
+    return i
   },
   show: function() {
-    return i
+    return l
   },
   moveTo: function() {
     return u
@@ -41,14 +41,14 @@ function s(e) {
   })
 }
 
-function l(e) {
+function i(e) {
   a.default.dispatch({
     type: "PICTURE_IN_PICTURE_HIDE",
     id: e
   })
 }
 
-function i(e) {
+function l(e) {
   a.default.dispatch({
     type: "PICTURE_IN_PICTURE_SHOW",
     id: e

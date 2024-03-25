@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+n.r(t), n.d(t, {
   MESSAGE_NICKNAME_PAUSE_LABEL_SEGMENT_ID: function() {
     return a
   },
@@ -7,23 +7,23 @@ i.r(t), i.d(t, {
     return l
   },
   MESSAGE_REACTIONS_LABEL_SEGMENT_ID: function() {
-    return r
+    return s
   },
   IMAGE_OPEN_DIALOG_DESCRIPTION: function() {
-    return u
+    return o
   },
   insertAccessibilityLabelElements: function() {
-    return o
+    return u
   }
 });
-var n = i("476765"),
-  s = i("782340");
-let a = (0, n.uid)(),
-  l = (0, n.uid)(),
-  r = (0, n.uid)(),
-  u = (0, n.uid)();
+var r = n("476765"),
+  i = n("782340");
+let a = (0, r.uid)(),
+  l = (0, r.uid)(),
+  s = (0, r.uid)(),
+  o = (0, r.uid)();
 
-function o() {
+function u() {
   [{
     id: a,
     text: ","
@@ -31,16 +31,16 @@ function o() {
     id: l,
     text: ","
   }, {
-    id: r,
-    text: s.default.Messages.REACTIONS
+    id: s,
+    text: i.default.Messages.REACTIONS
   }, {
-    id: u,
-    text: s.default.Messages.OPEN_ORIGIANL_IMAGE_BUTTON_A11Y_DESCRIPTION
+    id: o,
+    text: i.default.Messages.OPEN_ORIGIANL_IMAGE_BUTTON_A11Y_DESCRIPTION
   }].forEach(e => {
     let {
       id: t,
-      text: i
-    } = e, n = document.getElementById(t);
-    null == n && ((n = document.createElement("div")).setAttribute("id", t), n.innerText = i, n.style.display = "none", document.body.appendChild(n))
+      text: n
+    } = e, r = document.getElementById(t);
+    null == r && ((r = document.createElement("div")).setAttribute("id", t), r.innerText = n, r.style.display = "none", document.body.appendChild(r))
   })
 }

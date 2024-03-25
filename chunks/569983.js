@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 }), n("222007"), n("781738");
 var i, s = n("446674"),
@@ -12,17 +12,17 @@ var i, s = n("446674"),
   u = n("450484");
 let d = "MaskedLinkStore",
   c = new Set,
-  f = new Set,
-  _ = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
+  _ = new Set,
+  f = null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.replace("//", "");
 
-function h(e) {
+function E(e) {
   let t = (0, l.getHostname)(e);
   switch (t) {
     case window.GLOBAL_ENV.CDN_HOST:
     case window.GLOBAL_ENV.INVITE_HOST:
     case window.GLOBAL_ENV.GIFT_CODE_HOST:
     case window.GLOBAL_ENV.GUILD_TEMPLATE_HOST:
-    case _:
+    case f:
     case location.hostname:
       return !0;
     default:
@@ -30,50 +30,50 @@ function h(e) {
   }
 }
 
-function g(e) {
+function h(e) {
   let t = (0, l.getProtocol)(e);
-  return f.has(t)
+  return _.has(t)
 }
-class m extends s.default.Store {
+class g extends s.default.Store {
   initialize() {
     var e;
     let t = null !== (e = r.default.get(d)) && void 0 !== e ? e : {};
-    if (Array.isArray(t)) c = new Set(null != t ? Array.from(t) : null), f = new Set;
+    if (Array.isArray(t)) c = new Set(null != t ? Array.from(t) : null), _ = new Set;
     else {
       let {
         trustedDomains: e,
         trustedProtocols: n
       } = t;
-      c = new Set(null != e ? Array.from(e) : null), f = new Set(null != n ? Array.from(n) : null)
+      c = new Set(null != e ? Array.from(e) : null), _ = new Set(null != n ? Array.from(n) : null)
     }
   }
   isTrustedDomain(e) {
-    return h(e)
+    return E(e)
   }
   isTrustedProtocol(e) {
-    return g(e)
+    return h(e)
   }
 }
-m.displayName = "MaskedLinkStore";
-var E = new m(a.default, {
+g.displayName = "MaskedLinkStore";
+var m = new g(a.default, {
   MASKED_LINK_ADD_TRUSTED_DOMAIN: function(e) {
     let {
       url: t
     } = e;
-    if (h(t)) return !1;
+    if (E(t)) return !1;
     c.add((0, l.getHostname)(t)), r.default.set(d, {
       trustedDomains: c,
-      trustedProtocols: f
+      trustedProtocols: _
     })
   },
   MASKED_LINK_ADD_TRUSTED_PROTOCOL: function(e) {
     let {
       url: t
     } = e;
-    if (g(t)) return !1;
-    f.add((0, l.getProtocol)(t)), r.default.set(d, {
+    if (h(t)) return !1;
+    _.add((0, l.getProtocol)(t)), r.default.set(d, {
       trustedDomains: c,
-      trustedProtocols: f
+      trustedProtocols: _
     })
   }
 })

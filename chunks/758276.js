@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   DiscoverySettingsViews: function() {
-    return n
+    return l
   },
   getSettingsView: function() {
     return u
@@ -13,7 +13,7 @@ s.r(t), s.d(t, {
     return E
   }
 }), s("222007"), s("884691"), s("446674"), s("305961");
-var a, n, l, i, r = s("599110");
+var a, l, n, i, r = s("599110");
 s("271889"), s("75766");
 var o = s("447621"),
   d = s("49111");
@@ -21,12 +21,12 @@ var o = s("447621"),
 function u(e, t) {
   let s = e.hasFeature(d.GuildFeatures.VERIFIED),
     a = e.hasFeature(d.GuildFeatures.DISCOVERABLE),
-    n = e.hasFeature(d.GuildFeatures.ENABLED_DISCOVERABLE_BEFORE);
+    l = e.hasFeature(d.GuildFeatures.ENABLED_DISCOVERABLE_BEFORE);
   if (s) return "settings";
-  if (!a && !n) return "intro";
+  if (!a && !l) return "intro";
   if (null == t) return "settings";
-  let l = t.sufficientWithoutGracePeriod && null != t.gracePeriodEndDate && t.gracePeriodEndDate > new Date;
-  return t.sufficient || l || !a ? t.sufficient || l ? "settings" : "intro" : "disqualified"
+  let n = t.sufficientWithoutGracePeriod && null != t.gracePeriodEndDate && t.gracePeriodEndDate > new Date;
+  return t.sufficient || n || !a ? t.sufficient || n ? "settings" : "intro" : "disqualified"
 }
 
 function c(e, t) {
@@ -41,4 +41,4 @@ function c(e, t) {
 function E(e) {
   var t, s;
   return null !== (s = null === (t = o.SUGGESTED_TAGS_FOR_CATEGORIES[e]) || void 0 === t ? void 0 : t.map(e => e())) && void 0 !== s ? s : []
-}(l = a || (a = {})).UPLOADED = "uploaded", l.REMOVED = "removed", (i = n || (n = {})).INTRO = "intro", i.DISQUALIFIED = "disqualified", i.SETTINGS = "settings"
+}(n = a || (a = {})).UPLOADED = "uploaded", n.REMOVED = "removed", (i = l || (l = {})).INTRO = "intro", i.DISQUALIFIED = "disqualified", i.SETTINGS = "settings"

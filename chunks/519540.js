@@ -18,8 +18,8 @@ var a = n("37983"),
   E = n("272030"),
   m = n("819689"),
   p = n("843962"),
-  g = n("679653"),
-  S = n("931318"),
+  S = n("679653"),
+  g = n("931318"),
   N = n("520899"),
   _ = n("988864"),
   T = n("960808"),
@@ -28,18 +28,18 @@ var a = n("37983"),
   A = n("393414"),
   M = n("845579"),
   v = n("42203"),
-  x = n("305961"),
-  R = n("377253"),
+  R = n("305961"),
+  x = n("377253"),
   L = n("476263"),
   O = n("93393"),
   b = n("11539"),
   y = n("672571"),
   j = n("805614"),
-  D = n("64318"),
-  F = n("49111"),
+  F = n("64318"),
+  D = n("49111"),
   U = n("782340"),
-  k = n("533370"),
-  P = n("228146");
+  P = n("923624"),
+  k = n("126343");
 let w = {
   offset: {
     left: 4,
@@ -53,17 +53,17 @@ function G(e) {
     closePopout: n
   } = e, s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders());
   l.useEffect(() => () => {
-    (0, S.cleanupMessageReminders)()
+    (0, g.cleanupMessageReminders)()
   }, []);
   let [i, r] = l.useState(!1), o = l.useMemo(() => s.filter(e => null == e.dueAt || e.dueAt < new Date), [s]), u = i ? s : o, d = u.filter(e => !(0, _.savedMessageHasMetadata)(e));
   return (0, T.useMessageRemindersLoader)(d), (0, a.jsxs)("div", {
-    className: k.container,
-    children: [(0, a.jsx)(D.default, {
+    className: P.container,
+    children: [(0, a.jsx)(F.default, {
       tab: f.InboxTab.TODOS,
       setTab: t,
       closePopout: n
     }), (0, a.jsxs)("div", {
-      className: k.headerText,
+      className: P.headerText,
       children: [(0, a.jsx)(h.Heading, {
         variant: "heading-lg/bold",
         children: i ? U.default.Messages.MESSAGE_REMINDERS_HEADER_ALL : U.default.Messages.MESSAGE_REMINDERS_HEADER_OVERDUE
@@ -96,15 +96,15 @@ function B(e) {
     s = (0, c.useStateFromStores)([N.default], () => N.default.getMessageReminders().find(e => e.messageId === l));
   o(null != s, "should not be rendering a to-do message without a to-do message");
   let r = s.complete,
-    u = (0, c.useStateFromStores)([R.default], () => R.default.getMessage(s.channelId, s.messageId)),
+    u = (0, c.useStateFromStores)([x.default], () => x.default.getMessage(s.channelId, s.messageId)),
     {
       message: f,
       channel: _
     } = (0, I.getSavedMessageAndChannel)(s),
     T = v.default.getChannel(_.id),
-    b = (0, g.default)(T, !0),
+    b = (0, S.default)(T, !0),
     j = null != b ? b : _.name,
-    D = (0, c.useStateFromStores)([x.default], () => x.default.getGuild(null == _ ? void 0 : _.guild_id)),
+    F = (0, c.useStateFromStores)([R.default], () => R.default.getGuild(null == _ ? void 0 : _.guild_id)),
     G = null != _ ? (0, p.getChannelIconURL)(_) : null,
     B = null;
   return null != s.dueAt && (s.dueAt > new Date ? (t = "text-muted", B = U.default.Messages.MESSAGE_REMINDERS_DUE_IN.format({
@@ -112,15 +112,15 @@ function B(e) {
   })) : (t = "text-danger", B = U.default.Messages.MESSAGE_REMINDERS_OVERDUE.format({
     duration: d.duration(Date.now() - s.dueAt.getTime(), "millisecond").humanize()
   }))), (0, a.jsxs)("div", {
-    className: P.container,
+    className: k.container,
     children: [(0, a.jsxs)("div", {
-      className: k.messageHeader,
+      className: P.messageHeader,
       children: [(0, a.jsxs)("div", {
         children: [(0, a.jsxs)("div", {
-          className: k.messageInfo,
-          children: [null != D ? (0, a.jsx)(L.default, {
-            className: k.guildIcon,
-            guild: D,
+          className: P.messageInfo,
+          children: [null != F ? (0, a.jsx)(L.default, {
+            className: P.guildIcon,
+            guild: F,
             size: L.default.Sizes.SMALL,
             active: !0
           }) : (0, a.jsx)(h.Avatar, {
@@ -136,7 +136,7 @@ function B(e) {
         }), null != s.notes && s.notes.length > 0 ? (0, a.jsxs)(h.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: k.notes,
+          className: P.notes,
           selectable: !0,
           children: [(0, a.jsx)(y.default, {
             width: 12,
@@ -151,7 +151,7 @@ function B(e) {
           children: B
         }) : null]
       }), (0, a.jsxs)("div", {
-        className: k.reminderActions,
+        className: P.reminderActions,
         children: [(0, a.jsx)(h.TooltipContainer, {
           text: U.default.Messages.MESSAGE_REMINDERS_SNOOZE,
           children: (0, a.jsx)(h.Clickable, {
@@ -164,31 +164,31 @@ function B(e) {
                 message: f
               })
             }),
-            className: k.clock,
+            className: P.clock,
             children: (0, a.jsx)(O.default, {})
           })
         }), (0, a.jsx)(h.Checkbox, {
           type: h.Checkbox.Types.INVERTED,
           value: r,
           onChange: (e, t) => {
-            (0, S.toggleMessageReminders)(s.messageId, t)
+            (0, g.toggleMessageReminders)(s.messageId, t)
           }
         })]
       })]
     }), (0, a.jsxs)("div", {
-      className: i(P.messageContainer, k.unloadedMessage, {
-        [k.disabledMessage]: r
+      className: i(k.messageContainer, P.unloadedMessage, {
+        [P.disabledMessage]: r
       }),
       children: [(0, a.jsx)(C.default, {
         message: f,
         channel: _,
-        className: P.message,
+        className: k.message,
         compact: M.MessageDisplayCompact.getSetting(),
         animateAvatar: !1,
         focusProps: w,
         trackAnnouncementViews: !0
       }, f.id), (0, a.jsxs)("div", {
-        className: k.actions,
+        className: P.actions,
         children: [null == u ? (0, a.jsx)(h.Button, {
           onClick: () => {
             m.default.fetchMessages({
@@ -203,18 +203,18 @@ function B(e) {
           },
           size: h.Button.Sizes.MIN,
           color: h.Button.Colors.TRANSPARENT,
-          className: k.loadButton,
+          className: P.loadButton,
           children: (0, a.jsx)(h.Text, {
             variant: "text-xs/normal",
             children: "Load"
           })
         }) : null, (0, a.jsx)(h.Button, {
           onClick: () => {
-            (0, A.transitionTo)(F.Routes.CHANNEL(null == _ ? void 0 : _.getGuildId(), s.channelId, s.messageId))
+            (0, A.transitionTo)(D.Routes.CHANNEL(null == _ ? void 0 : _.getGuildId(), s.channelId, s.messageId))
           },
           size: h.Button.Sizes.MIN,
           color: h.Button.Colors.TRANSPARENT,
-          className: k.loadButton,
+          className: P.loadButton,
           children: (0, a.jsx)(h.Text, {
             variant: "text-xs/normal",
             children: U.default.Messages.JUMP

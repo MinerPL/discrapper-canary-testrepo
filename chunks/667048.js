@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return h
   }
 }), n("222007");
 var a = n("37983"),
   s = n("884691"),
-  i = n("446674"),
-  l = n("963662"),
+  l = n("446674"),
+  i = n("963662"),
   r = n("95039"),
   o = n("525065"),
   u = n("49111"),
@@ -21,7 +21,7 @@ class E extends s.PureComponent {
       memberCount: t,
       markAsDismissed: n
     } = this.props;
-    return (0, a.jsx)(l.default, {
+    return (0, a.jsx)(i.default, {
       guild: e,
       onDismissed: () => n(d.ContentDismissActionType.UNKNOWN),
       onClick: this.handleButtonClick,
@@ -48,7 +48,7 @@ class E extends s.PureComponent {
     }
   }
 }
-var _ = i.default.connectStores([o.default], e => {
+var h = l.default.connectStores([o.default], e => {
   let {
     guild: t
   } = e;

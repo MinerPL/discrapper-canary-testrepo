@@ -32,8 +32,8 @@ e.exports = function(e, t, n, a, u, d, l) {
       var h = l.get(e);
       if (h) return h == t;
       a |= 2, l.set(e, t);
-      var g = i(f(e), f(t), a, u, d, l);
-      return l.delete(e), g;
+      var v = i(f(e), f(t), a, u, d, l);
+      return l.delete(e), v;
     case "[object Symbol]":
       if (c) return c.call(e) == c.call(t)
   }

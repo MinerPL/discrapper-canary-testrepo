@@ -1,13 +1,13 @@
 "use strict";
 A.r(I), A.d(I, {
   closeContextMenu: function() {
-    return n
+    return i
   },
   openContextMenu: function() {
     return t
   },
   openContextMenuLazy: function() {
-    return i
+    return n
   }
 }), A("506083");
 var O = A("913144"),
@@ -23,7 +23,7 @@ function V(N) {
   })
 }
 
-function n(N) {
+function i(N) {
   {
     let {
       flushSync: I
@@ -39,12 +39,12 @@ function n(N) {
 }
 
 function t(N, I, A, O) {
-  var n, t, i;
+  var i, t, n;
   if (N.stopPropagation(), null != N.currentTarget.contains && !N.currentTarget.contains(N.target)) return;
   let R = 0,
     G = 0;
   if ("pageX" in N && (R = N.pageX, G = N.pageY), 0 === R && 0 === G) {
-    let I = null === (n = N.target) || void 0 === n ? void 0 : n.getBoundingClientRect(),
+    let I = null === (i = N.target) || void 0 === i ? void 0 : i.getBoundingClientRect(),
       {
         left: A = 0,
         top: O = 0,
@@ -59,7 +59,7 @@ function t(N, I, A, O) {
     target: null !== (t = N.target) && void 0 !== t ? t : N.currentTarget,
     rect: new DOMRect(R, G, 0, 0),
     config: {
-      context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (i = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== i ? i : E.AppContext.APP,
+      context: __OVERLAY__ ? E.AppContext.OVERLAY : null !== (n = (0, T.getCurrentlyInteractingAppContext)()) && void 0 !== n ? n : E.AppContext.APP,
       ...A
     }
   };
@@ -70,6 +70,6 @@ function t(N, I, A, O) {
   } else N.preventDefault(), V(r)
 }
 
-function i(N, I, A) {
+function n(N, I, A) {
   t(N, void 0, A, I)
 }

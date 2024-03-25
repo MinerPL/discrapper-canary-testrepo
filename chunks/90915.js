@@ -130,8 +130,8 @@ b(function(t, e) {
     w = t.strict,
     O = t.style,
     k = t.to,
-    S = t.innerRef,
-    E = (0, c.default)(t, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
+    E = t.innerRef,
+    S = (0, c.default)(t, ["aria-current", "activeClassName", "activeStyle", "className", "exact", "isActive", "location", "sensitive", "strict", "style", "to", "innerRef"]);
   return a.createElement(r.__RouterContext.Consumer, null, function(t) {
     t || (0, l.default)(!1);
     var n = _ || t.location,
@@ -157,7 +157,7 @@ b(function(t, e) {
         className: j,
         style: R,
         to: o
-      }, E);
-    return g !== b ? T.ref = e || S : T.innerRef = S, a.createElement(m, T)
+      }, S);
+    return g !== b ? T.ref = e || E : T.innerRef = E, a.createElement(m, T)
   })
 })

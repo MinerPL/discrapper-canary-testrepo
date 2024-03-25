@@ -10,17 +10,17 @@ n.r(t), n.d(t, {
     return c
   },
   mobileNativeUpdateAvailableLocalItem: function() {
-    return f
-  },
-  isMentionItem: function() {
     return _
   },
+  isMentionItem: function() {
+    return f
+  },
   inNotificationCenterEnabled: function() {
-    return h
+    return E
   }
 });
-var i = n("249654"),
-  s = n("845579"),
+var i = n("845579"),
+  s = n("299039"),
   r = n("913796"),
   a = n("360191"),
   o = n("581091"),
@@ -32,28 +32,28 @@ let u = function(e) {
       getFormatter: t ? o.getAbbreviatedFormatter : o.getFullFormatter
     })
   },
-  d = (e, t) => e.acked || t !== s.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET && i.default.compare(t, e.id) >= 0;
+  d = (e, t) => e.acked || t !== i.NOTIFICATION_CENTER_ACKED_BEFORE_ID_UNSET && s.default.compare(t, e.id) >= 0;
 
 function c(e, t) {
   var n;
-  let s = i.default.fromTimestamp(new Date(t).getTime());
+  let i = s.default.fromTimestamp(new Date(t).getTime());
   return {
     acked: !1,
     forceUnacked: !0,
     other_user: e,
     kind: "notification-center-item",
-    local_id: "incoming_friend_requests_".concat(e.id, "_").concat(s),
+    local_id: "incoming_friend_requests_".concat(e.id, "_").concat(i),
     deeplink: "https://discord.com/users/".concat(e.id),
     type: a.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS,
-    id: s,
+    id: i,
     body: l.default.Messages.NOTIFICATION_CENTER_INCOMING_FRIEND_REQUEST.format({
       username: "**".concat(null !== (n = e.globalName) && void 0 !== n ? n : e.username, "**")
     })
   }
 }
 
-function f(e) {
-  let t = i.default.fromTimestamp(new Date().getTime());
+function _(e) {
+  let t = s.default.fromTimestamp(new Date().getTime());
   return {
     acked: !1,
     enableBadge: !0,
@@ -65,8 +65,8 @@ function f(e) {
     deeplink: e.urls.install.toString()
   }
 }
-let _ = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
+let f = e => e.type === a.NotificationCenterItems.RECENT_MENTION || e.type === a.NotificationCenterItems.REPLY_MENTION;
 
-function h() {
+function E() {
   return (0, r.inDesktopNotificationCenterExperiment)()
 }

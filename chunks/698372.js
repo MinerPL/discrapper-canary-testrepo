@@ -1,5 +1,5 @@
 "use strict";
-i.r(t), i.d(t, {
+i.r(e), i.d(e, {
   default: function() {
     return a
   }
@@ -8,7 +8,7 @@ var n = i("442939"),
   l = i("577261");
 
 function a() {
-  let e = (0, l.default)(),
-    [t] = (0, n.default)(null == e ? [] : [e.applicationId]);
-  return null != t ? t : void 0
+  let t = (0, l.default)(),
+    [e] = (0, n.default)(null == t ? [] : [t.applicationId]);
+  return null != e ? e : void 0
 }

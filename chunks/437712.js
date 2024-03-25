@@ -1,12 +1,12 @@
 "use strict";
 n.r(e), n.d(e, {
   default: function() {
-    return U
+    return h
   }
 }), n("222007");
-var u = n("917351"),
-  i = n.n(u),
-  r = n("446674"),
+var i = n("917351"),
+  r = n.n(i),
+  u = n("446674"),
   l = n("913144"),
   a = n("984273"),
   o = n("686470"),
@@ -19,11 +19,11 @@ let S = {},
   _ = !1,
   T = !1,
   I = new Set,
-  A = new Set,
-  p = {};
+  p = new Set,
+  A = {};
 
 function C(t) {
-  S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == p[t.subscription_id] && (p[t.subscription_id] = new Set), p[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
+  S[t.id] = a.default.createFromServer(t), null == E[t.sku_id] && (E[t.sku_id] = new Set), null == f[t.application_id] && (f[t.application_id] = new Set), null != t.subscription_id && (null == A[t.subscription_id] && (A[t.subscription_id] = new Set), A[t.subscription_id].add(t.id)), f[t.application_id].add(t.id), E[t.sku_id].add(t.id)
 }
 
 function P(t) {
@@ -33,7 +33,7 @@ function P(t) {
 function N(t) {
   return C(t.entitlement)
 }
-class R extends r.default.Store {
+class R extends u.default.Store {
   initialize() {
     this.syncWith([o.default], () => !0)
   }
@@ -41,7 +41,7 @@ class R extends r.default.Store {
     return S[t]
   }
   getGiftable() {
-    return i.values(d)
+    return r.values(d)
   }
   getForApplication(t) {
     let e = f[t];
@@ -67,7 +67,7 @@ class R extends r.default.Store {
     return I
   }
   get applicationIdsFetched() {
-    return A
+    return p
   }
   isFetchingForApplication(t) {
     return this.fetchingAllEntitlements || null != t && this.applicationIdsFetching.has(t)
@@ -76,30 +76,30 @@ class R extends r.default.Store {
     return this.fetchedAllEntitlements || null != t && this.applicationIdsFetched.has(t)
   }
   getForSubscription(t) {
-    let e = p[t];
+    let e = A[t];
     if (null == e) return null;
     let n = new Set;
     for (let t of e) n.add(S[t]);
     return n
   }
   isEntitledToSku(t, e, n) {
-    let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-      i = E[e];
-    if (null != i)
-      for (let e of i) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+      r = E[e];
+    if (null != r)
+      for (let e of r) {
         let n = S[e];
-        if (null != n && n.isValid(t, c.default, u)) return !0
+        if (null != n && n.isValid(t, c.default, i)) return !0
       }
-    if (A.has(n)) return !1;
-    let r = null != u ? o.default.getLibraryApplication(n, u) : o.default.getActiveLibraryApplication(n);
-    return !!(null != r && r.sku.id === e && (0, s.isUserEntitledToLibraryApplication)(r)) || null
+    if (p.has(n)) return !1;
+    let u = null != i ? o.default.getLibraryApplication(n, i) : o.default.getActiveLibraryApplication(n);
+    return !!(null != u && u.sku.id === e && (0, s.isUserEntitledToLibraryApplication)(u)) || null
   }
   hasFetchedForApplicationIds(t) {
-    return t.every(t => A.has(t))
+    return t.every(t => p.has(t))
   }
 }
 R.displayName = "EntitlementStore";
-var U = new R(l.default, {
+var h = new R(l.default, {
   ENTITLEMENT_FETCH_APPLICATION_START: function(t) {
     let {
       applicationId: e
@@ -111,7 +111,7 @@ var U = new R(l.default, {
       applicationId: e,
       entitlements: n
     } = t;
-    for (let t of (I.delete(e), A.add(e), n)) !0 !== t.consumed && C(t)
+    for (let t of (I.delete(e), p.add(e), n)) !0 !== t.consumed && C(t)
   },
   ENTITLEMENT_FETCH_APPLICATION_FAIL: function() {},
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function(t) {
@@ -143,13 +143,13 @@ var U = new R(l.default, {
       null != e && e.delete(t.id);
       let n = E[t.sku_id];
       if (null != n && n.delete(t.id), null != t.subscription_id) {
-        let e = p[t.subscription_id];
+        let e = A[t.subscription_id];
         null != e && e.delete(t.id)
       }
     }(t.entitlement)
   },
   LOGOUT: function() {
-    S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, A = new Set
+    S = {}, E = {}, f = {}, _ = !1, T = !1, I = new Set, p = new Set
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function() {
     _ = !0

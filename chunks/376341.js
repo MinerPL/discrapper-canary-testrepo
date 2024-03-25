@@ -1,19 +1,19 @@
-var e = n("626785"),
-  o = n("809408"),
-  c = n("168850"),
-  u = n("446288"),
-  a = n("330124"),
-  i = n("701389"),
-  f = n("702820"),
-  s = n("552647"),
-  p = f(function(t, r) {
-    var n = {};
-    if (null == t) return n;
-    var f = !1;
-    r = e(r, function(r) {
-      return r = u(r, t), f || (f = r.length > 1), r
-    }), a(t, s(t), n), f && (n = o(n, 7, i));
-    for (var p = r.length; p--;) c(n, r[p]);
-    return n
+var n = r("626785"),
+  u = r("809408"),
+  a = r("168850"),
+  o = r("446288"),
+  i = r("330124"),
+  s = r("701389"),
+  l = r("702820"),
+  c = r("552647"),
+  f = l(function(e, t) {
+    var r = {};
+    if (null == e) return r;
+    var l = !1;
+    t = n(t, function(t) {
+      return t = o(t, e), l || (l = t.length > 1), t
+    }), i(e, c(e), r), l && (r = u(r, 7, s));
+    for (var f = t.length; f--;) a(r, t[f]);
+    return r
   });
-t.exports = p
+e.exports = f

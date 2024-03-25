@@ -13,8 +13,8 @@ var n = function() {
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  o = r("884691"),
-  a = u(o),
+  a = r("884691"),
+  o = u(a),
   i = u(r("849122"));
 
 function u(e) {
@@ -23,8 +23,8 @@ function u(e) {
   }
 }
 var l = [38, 40],
-  c = 1,
-  s = t.EditableInput = function(e) {
+  s = 1,
+  f = t.EditableInput = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -43,9 +43,9 @@ var l = [38, 40],
       }, r.handleKeyDown = function(e) {
         var t, n = Number(String(e.target.value).replace(/%/g, ""));
         if (!isNaN(n) && (t = e.keyCode, l.indexOf(t) > -1)) {
-          var o = r.getArrowOffset(),
-            a = 38 === e.keyCode ? n + o : n - o;
-          r.setUpdatedValue(a, e)
+          var a = r.getArrowOffset(),
+            o = 38 === e.keyCode ? n + a : n - a;
+          r.setUpdatedValue(o, e)
         }
       }, r.handleDrag = function(e) {
         if (r.props.dragLabel) {
@@ -61,7 +61,7 @@ var l = [38, 40],
       }, r.state = {
         value: String(e.value).toUpperCase(),
         blurValue: String(e.value).toUpperCase()
-      }, r.inputId = "rc-editable-input-" + c++, r
+      }, r.inputId = "rc-editable-input-" + s++, r
     }
     return ! function(e, t) {
       if ("function" != typeof t && null !== t) throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -135,9 +135,9 @@ var l = [38, 40],
           }, {
             "user-override": !0
           }, this.props);
-        return a.default.createElement("div", {
+        return o.default.createElement("div", {
           style: t.wrap
-        }, a.default.createElement("input", {
+        }, o.default.createElement("input", {
           id: this.inputId,
           style: t.input,
           ref: function(t) {
@@ -149,12 +149,12 @@ var l = [38, 40],
           onBlur: this.handleBlur,
           placeholder: this.props.placeholder,
           spellCheck: "false"
-        }), this.props.label && !this.props.hideLabel ? a.default.createElement("label", {
+        }), this.props.label && !this.props.hideLabel ? o.default.createElement("label", {
           htmlFor: this.inputId,
           style: t.label,
           onMouseDown: this.handleMouseDown
         }, this.props.label) : null)
       }
     }]), t
-  }(o.PureComponent || o.Component);
-t.default = s
+  }(a.PureComponent || a.Component);
+t.default = f

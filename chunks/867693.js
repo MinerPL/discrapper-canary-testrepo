@@ -13,10 +13,10 @@ var s = n("37983"),
   E = n("697218"),
   _ = n("330355"),
   u = n("893044"),
-  d = n("509943"),
-  T = n("457818"),
+  T = n("509943"),
+  d = n("457818"),
   S = n("397336"),
-  N = n("679012"),
+  N = n("917908"),
   c = n("92693");
 
 function C(e) {
@@ -51,7 +51,7 @@ function C(e) {
         id: S.ChangeEmailSteps.CONFIRM_START,
         impressionName: a.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
         impressionProperties: L,
-        children: (0, s.jsx)(d.default, {
+        children: (0, s.jsx)(T.default, {
           onNext: () => O(S.ChangeEmailSteps.CONFIRM_CODE),
           onClose: C
         })
@@ -74,7 +74,7 @@ function C(e) {
           ...L,
           email_verified: I.current
         },
-        children: (0, s.jsx)(T.default, {
+        children: (0, s.jsx)(d.default, {
           emailToken: M,
           isSlideReady: m === S.ChangeEmailSteps.EMAIL_AND_PASSWORD,
           onBack: f ? () => O(S.ChangeEmailSteps.CONFIRM_CODE) : null,

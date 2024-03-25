@@ -1,11 +1,11 @@
 "use strict";
-n.r(t), n.d(t, {
+E.r(t), E.d(t, {
   FamilyCenterGuild: function() {
-    return s
+    return T
   }
 });
-var a = n("813006");
-class s extends a.default {
+var _ = E("813006");
+class T extends _.default {
   constructor(e) {
     super(e), this.approximateMemberCount = e.approximate_member_count
   }

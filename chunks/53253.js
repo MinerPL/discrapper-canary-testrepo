@@ -11,13 +11,13 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var i = n("884691"),
-  r = n("866227"),
-  l = n.n(r),
-  a = n("862337"),
-  s = n("296892");
+  a = n("866227"),
+  s = n.n(a),
+  r = n("862337"),
+  l = n("296892");
 let o = new Date("2024-01-04T07:59:59.000Z"),
-  u = l(o),
-  c = (0, s.default)({
+  u = s(o),
+  c = (0, l.default)({
     id: "2023-11_seasonal_gifting",
     label: "Seasonal Gifting 2023",
     kind: "user",
@@ -32,7 +32,7 @@ let o = new Date("2024-01-04T07:59:59.000Z"),
       }
     }]
   }),
-  d = (0, s.default)({
+  d = (0, l.default)({
     id: "2023-11_seasonal_gifting_marketing_2023",
     label: "Seasonal Gifting Marketing 2023",
     kind: "user",
@@ -51,7 +51,7 @@ let o = new Date("2024-01-04T07:59:59.000Z"),
 function f() {
   let [e, t] = i.useState(() => u.isAfter(Date.now()));
   return i.useEffect(() => {
-    let n = new a.Timeout,
+    let n = new r.Timeout,
       i = () => {
         let e = Math.min(u.diff(Date.now(), "millisecond"), 864e5);
         null == n || n.start(e, () => {

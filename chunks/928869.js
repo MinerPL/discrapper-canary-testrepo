@@ -24,24 +24,24 @@ var r = n("195548"),
         p = n.elements.arrow,
         m = n.modifiersData.popperOffsets,
         h = (0, r.default)(n.placement),
-        _ = (0, s.default)(h),
-        y = [(0, d.left), (0, d.right)].indexOf(h) >= 0 ? "height" : "width";
+        y = (0, s.default)(h),
+        _ = [(0, d.left), (0, d.right)].indexOf(h) >= 0 ? "height" : "width";
       if (p && m) {
         var g, v, b = (g = f.padding, v = n, g = "function" == typeof g ? g(Object.assign({}, v.rects, {
             placement: v.placement
           })) : g, (0, l.default)("number" != typeof g ? g : (0, c.default)(g, d.basePlacements))),
           M = (0, a.default)(p),
-          w = "y" === _ ? d.top : d.left,
-          k = "y" === _ ? d.bottom : d.right,
-          L = n.rects.reference[y] + n.rects.reference[_] - m[_] - n.rects.popper[y],
-          D = m[_] - n.rects.reference[_],
+          w = "y" === y ? d.top : d.left,
+          k = "y" === y ? d.bottom : d.right,
+          L = n.rects.reference[_] + n.rects.reference[y] - m[y] - n.rects.popper[_],
+          D = m[y] - n.rects.reference[y],
           T = (0, i.default)(p),
-          S = T ? "y" === _ ? T.clientHeight || 0 : T.clientWidth || 0 : 0,
+          S = T ? "y" === y ? T.clientHeight || 0 : T.clientWidth || 0 : 0,
           Y = b[w],
-          x = S - M[y] - b[k],
-          O = S / 2 - M[y] / 2 + (L / 2 - D / 2),
+          x = S - M[_] - b[k],
+          O = S / 2 - M[_] / 2 + (L / 2 - D / 2),
           E = (0, u.within)(Y, O, x);
-        n.modifiersData[o] = ((t = {})[_] = E, t.centerOffset = E - O, t)
+        n.modifiersData[o] = ((t = {})[y] = E, t.centerOffset = E - O, t)
       }
     },
     effect: function(e) {

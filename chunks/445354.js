@@ -17,7 +17,7 @@ c.prototype._update = function(e) {
     t[l] = (((p = t[l - 2]) >>> 17 | p << 15) ^ (p >>> 19 | p << 13) ^ p >>> 10) + t[l - 7] + (((h = t[l - 15]) >>> 7 | h << 25) ^ (h >>> 18 | h << 14) ^ h >>> 3) + t[l - 16] | 0
   }
   for (var f = 0; f < 64; ++f) {
-    var p, h, g, b, v, m, y, x, w, S = d + (((g = a) >>> 6 | g << 26) ^ (g >>> 11 | g << 21) ^ (g >>> 25 | g << 7)) + (b = a, v = c, (m = u) ^ b & (v ^ m)) + s[f] + t[f] | 0;
+    var p, h, v, g, b, m, y, x, w, S = d + (((v = a) >>> 6 | v << 26) ^ (v >>> 11 | v << 21) ^ (v >>> 25 | v << 7)) + (g = a, b = c, (m = u) ^ g & (b ^ m)) + s[f] + t[f] | 0;
     var k = (((y = n) >>> 2 | y << 30) ^ (y >>> 13 | y << 19) ^ (y >>> 22 | y << 10)) + ((x = n) & (w = r) | i & (x | w)) | 0;
     d = u, u = c, c = a, a = o + S | 0, o = i, i = r, r = n, n = S + k | 0
   }

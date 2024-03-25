@@ -29,24 +29,24 @@ function h(e, t) {
   return e && e.state ? (r = e.state, t < 0 ? (n = 0, t = -t) : (n = (t >> 4) + 1, t < 48 && (t &= 15)), t && (t < 8 || t > 15)) ? -2 : (null !== r.window && r.wbits !== t && (r.window = null), r.wrap = n, r.wbits = t, p(e)) : -2
 }
 
-function g(e, t) {
+function v(e, t) {
   var n, r;
   return e ? (r = new l, e.state = r, r.window = null, 0 !== (n = h(e, t)) && (e.state = null), n) : -2
 }
-var b = !0;
+var g = !0;
 
-function v(e, t, n, r) {
+function b(e, t, n, r) {
   var i, s = e.state;
   return null === s.window && (s.wsize = 1 << s.wbits, s.wnext = 0, s.whave = 0, s.window = new o.Buf8(s.wsize)), r >= s.wsize ? (o.arraySet(s.window, t, n - s.wsize, s.wsize, 0), s.wnext = 0, s.whave = s.wsize) : ((i = s.wsize - s.wnext) > r && (i = r), o.arraySet(s.window, t, n - r, i, s.wnext), (r -= i) ? (o.arraySet(s.window, t, n - r, r, 0), s.wnext = r, s.whave = s.wsize) : (s.wnext += i, s.wnext === s.wsize && (s.wnext = 0), s.whave < s.wsize && (s.whave += i))), 0
 }
 t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit = function(e) {
-  return g(e, 15)
-}, t.inflateInit2 = g, t.inflate = function(e, t) {
-  var n, l, f, p, h, g, m, y, x, w, S, k, _, E, M, D, C, P, T, A, R, I, O, j, N = 0,
-    L = new o.Buf8(4),
+  return v(e, 15)
+}, t.inflateInit2 = v, t.inflate = function(e, t) {
+  var n, l, f, p, h, v, m, y, x, w, S, k, E, _, M, D, C, P, T, A, R, I, O, j, L = 0,
+    N = new o.Buf8(4),
     F = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
   if (!e || !e.state || !e.output || !e.input && 0 !== e.avail_in) return -2;
-  12 === (n = e.state).mode && (n.mode = 13), h = e.next_out, f = e.output, m = e.avail_out, p = e.next_in, l = e.input, g = e.avail_in, y = n.hold, x = n.bits, w = g, S = m, I = 0;
+  12 === (n = e.state).mode && (n.mode = 13), h = e.next_out, f = e.output, m = e.avail_out, p = e.next_in, l = e.input, v = e.avail_in, y = n.hold, x = n.bits, w = v, S = m, I = 0;
   n: for (;;) switch (n.mode) {
     case 1:
       if (0 === n.wrap) {
@@ -54,11 +54,11 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
         break
       }
       for (; x < 16;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       if (2 & n.wrap && 35615 === y) {
-        n.check = 0, L[0] = 255 & y, L[1] = y >>> 8 & 255, n.check = a(n.check, L, 2, 0), y = 0, x = 0, n.mode = 2;
+        n.check = 0, N[0] = 255 & y, N[1] = y >>> 8 & 255, n.check = a(n.check, N, 2, 0), y = 0, x = 0, n.mode = 2;
         break
       }
       if (n.flags = 0, n.head && (n.head.done = !1), !(1 & n.wrap) || (((255 & y) << 8) + (y >> 8)) % 31) {
@@ -78,8 +78,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       break;
     case 2:
       for (; x < 16;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       if (n.flags = y, (255 & n.flags) != 8) {
         e.msg = "unknown compression method", n.mode = 30;
@@ -89,52 +89,52 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
         e.msg = "unknown header flags set", n.mode = 30;
         break
       }
-      n.head && (n.head.text = y >> 8 & 1), 512 & n.flags && (L[0] = 255 & y, L[1] = y >>> 8 & 255, n.check = a(n.check, L, 2, 0)), y = 0, x = 0, n.mode = 3;
+      n.head && (n.head.text = y >> 8 & 1), 512 & n.flags && (N[0] = 255 & y, N[1] = y >>> 8 & 255, n.check = a(n.check, N, 2, 0)), y = 0, x = 0, n.mode = 3;
     case 3:
       for (; x < 32;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
-      n.head && (n.head.time = y), 512 & n.flags && (L[0] = 255 & y, L[1] = y >>> 8 & 255, L[2] = y >>> 16 & 255, L[3] = y >>> 24 & 255, n.check = a(n.check, L, 4, 0)), y = 0, x = 0, n.mode = 4;
+      n.head && (n.head.time = y), 512 & n.flags && (N[0] = 255 & y, N[1] = y >>> 8 & 255, N[2] = y >>> 16 & 255, N[3] = y >>> 24 & 255, n.check = a(n.check, N, 4, 0)), y = 0, x = 0, n.mode = 4;
     case 4:
       for (; x < 16;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
-      n.head && (n.head.xflags = 255 & y, n.head.os = y >> 8), 512 & n.flags && (L[0] = 255 & y, L[1] = y >>> 8 & 255, n.check = a(n.check, L, 2, 0)), y = 0, x = 0, n.mode = 5;
+      n.head && (n.head.xflags = 255 & y, n.head.os = y >> 8), 512 & n.flags && (N[0] = 255 & y, N[1] = y >>> 8 & 255, n.check = a(n.check, N, 2, 0)), y = 0, x = 0, n.mode = 5;
     case 5:
       if (1024 & n.flags) {
         for (; x < 16;) {
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
-        n.length = y, n.head && (n.head.extra_len = y), 512 & n.flags && (L[0] = 255 & y, L[1] = y >>> 8 & 255, n.check = a(n.check, L, 2, 0)), y = 0, x = 0
+        n.length = y, n.head && (n.head.extra_len = y), 512 & n.flags && (N[0] = 255 & y, N[1] = y >>> 8 & 255, n.check = a(n.check, N, 2, 0)), y = 0, x = 0
       } else n.head && (n.head.extra = null);
       n.mode = 6;
     case 6:
-      if (1024 & n.flags && ((k = n.length) > g && (k = g), k && (n.head && (R = n.head.extra_len - n.length, !n.head.extra && (n.head.extra = Array(n.head.extra_len)), o.arraySet(n.head.extra, l, p, k, R)), 512 & n.flags && (n.check = a(n.check, l, k, p)), g -= k, p += k, n.length -= k), n.length)) break n;
+      if (1024 & n.flags && ((k = n.length) > v && (k = v), k && (n.head && (R = n.head.extra_len - n.length, !n.head.extra && (n.head.extra = Array(n.head.extra_len)), o.arraySet(n.head.extra, l, p, k, R)), 512 & n.flags && (n.check = a(n.check, l, k, p)), v -= k, p += k, n.length -= k), n.length)) break n;
       n.length = 0, n.mode = 7;
     case 7:
       if (2048 & n.flags) {
-        if (0 === g) break n;
+        if (0 === v) break n;
         k = 0;
-        do R = l[p + k++], n.head && R && n.length < 65536 && (n.head.name += String.fromCharCode(R)); while (R && k < g);
-        if (512 & n.flags && (n.check = a(n.check, l, k, p)), g -= k, p += k, R) break n
+        do R = l[p + k++], n.head && R && n.length < 65536 && (n.head.name += String.fromCharCode(R)); while (R && k < v);
+        if (512 & n.flags && (n.check = a(n.check, l, k, p)), v -= k, p += k, R) break n
       } else n.head && (n.head.name = null);
       n.length = 0, n.mode = 8;
     case 8:
       if (4096 & n.flags) {
-        if (0 === g) break n;
+        if (0 === v) break n;
         k = 0;
-        do R = l[p + k++], n.head && R && n.length < 65536 && (n.head.comment += String.fromCharCode(R)); while (R && k < g);
-        if (512 & n.flags && (n.check = a(n.check, l, k, p)), g -= k, p += k, R) break n
+        do R = l[p + k++], n.head && R && n.length < 65536 && (n.head.comment += String.fromCharCode(R)); while (R && k < v);
+        if (512 & n.flags && (n.check = a(n.check, l, k, p)), v -= k, p += k, R) break n
       } else n.head && (n.head.comment = null);
       n.mode = 9;
     case 9:
       if (512 & n.flags) {
         for (; x < 16;) {
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         if (y !== (65535 & n.check)) {
           e.msg = "header crc mismatch", n.mode = 30;
@@ -146,12 +146,12 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       break;
     case 10:
       for (; x < 32;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       e.adler = n.check = d(y), y = 0, x = 0, n.mode = 11;
     case 11:
-      if (0 === n.havedict) return e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = g, n.hold = y, n.bits = x, 2;
+      if (0 === n.havedict) return e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = v, n.hold = y, n.bits = x, 2;
       e.adler = n.check = 1, n.mode = 12;
     case 12:
       if (5 === t || 6 === t) break n;
@@ -161,8 +161,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
         break
       }
       for (; x < 3;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       switch (n.last = 1 & y, x -= 1, 3 & (y >>>= 1)) {
         case 0:
@@ -170,7 +170,7 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
           break;
         case 1:
           if (! function(e) {
-              if (b) {
+              if (g) {
                 var t;
                 for (r = new o.Buf32(512), i = new o.Buf32(32), t = 0; t < 144;) e.lens[t++] = 8;
                 for (; t < 256;) e.lens[t++] = 9;
@@ -181,7 +181,7 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
                   }), t = 0; t < 32;) e.lens[t++] = 5;
                 u(2, e.lens, 0, 32, i, 0, e.work, {
                   bits: 5
-                }), b = !1
+                }), g = !1
               }
               e.lencode = r, e.lenbits = 9, e.distcode = i, e.distbits = 5
             }(n), n.mode = 20, 6 === t) {
@@ -199,8 +199,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       break;
     case 14:
       for (y >>>= 7 & x, x -= 7 & x; x < 32;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       if ((65535 & y) != (y >>> 16 ^ 65535)) {
         e.msg = "invalid stored block lengths", n.mode = 30;
@@ -211,16 +211,16 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       n.mode = 16;
     case 16:
       if (k = n.length) {
-        if (k > g && (k = g), k > m && (k = m), 0 === k) break n;
-        o.arraySet(f, l, p, k, h), g -= k, p += k, m -= k, h += k, n.length -= k;
+        if (k > v && (k = v), k > m && (k = m), 0 === k) break n;
+        o.arraySet(f, l, p, k, h), v -= k, p += k, m -= k, h += k, n.length -= k;
         break
       }
       n.mode = 12;
       break;
     case 17:
       for (; x < 14;) {
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       if (n.nlen = (31 & y) + 257, y >>>= 5, x -= 5, n.ndist = (31 & y) + 1, y >>>= 5, x -= 5, n.ncode = (15 & y) + 4, y >>>= 4, x -= 4, n.nlen > 286 || n.ndist > 30) {
         e.msg = "too many length or distance symbols", n.mode = 30;
@@ -230,8 +230,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     case 18:
       for (; n.have < n.ncode;) {
         for (; x < 3;) {
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         n.lens[F[n.have++]] = 7 & y, y >>>= 3, x -= 3
       }
@@ -245,17 +245,17 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
       n.have = 0, n.mode = 19;
     case 19:
       for (; n.have < n.nlen + n.ndist;) {
-        for (; M = (N = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = N >>> 16 & 255, C = 65535 & N, !(M <= x);) {
+        for (; M = (L = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(M <= x);) {
           ;
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         if (C < 16) y >>>= M, x -= M, n.lens[n.have++] = C;
         else {
           if (16 === C) {
             for (j = M + 2; x < j;) {
-              if (0 === g) break n;
-              g--, y += l[p++] << x, x += 8
+              if (0 === v) break n;
+              v--, y += l[p++] << x, x += 8
             }
             if (y >>>= M, x -= M, 0 === n.have) {
               e.msg = "invalid bit length repeat", n.mode = 30;
@@ -264,14 +264,14 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
             R = n.lens[n.have - 1], k = 3 + (3 & y), y >>>= 2, x -= 2
           } else if (17 === C) {
             for (j = M + 3; x < j;) {
-              if (0 === g) break n;
-              g--, y += l[p++] << x, x += 8
+              if (0 === v) break n;
+              v--, y += l[p++] << x, x += 8
             }
             y >>>= M, x -= M, R = 0, k = 3 + (7 & y), y >>>= 3, x -= 3
           } else {
             for (j = M + 7; x < j;) {
-              if (0 === g) break n;
-              g--, y += l[p++] << x, x += 8
+              if (0 === v) break n;
+              v--, y += l[p++] << x, x += 8
             }
             y >>>= M, x -= M, R = 0, k = 11 + (127 & y), y >>>= 7, x -= 7
           }
@@ -303,20 +303,20 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     case 20:
       n.mode = 21;
     case 21:
-      if (g >= 6 && m >= 258) {
-        e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = g, n.hold = y, n.bits = x, c(e, S), h = e.next_out, f = e.output, m = e.avail_out, p = e.next_in, l = e.input, g = e.avail_in, y = n.hold, x = n.bits, 12 === n.mode && (n.back = -1);
+      if (v >= 6 && m >= 258) {
+        e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = v, n.hold = y, n.bits = x, c(e, S), h = e.next_out, f = e.output, m = e.avail_out, p = e.next_in, l = e.input, v = e.avail_in, y = n.hold, x = n.bits, 12 === n.mode && (n.back = -1);
         break
       }
-      for (n.back = 0; M = (N = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = N >>> 16 & 255, C = 65535 & N, !(M <= x);) {
+      for (n.back = 0; M = (L = n.lencode[y & (1 << n.lenbits) - 1]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(M <= x);) {
         ;
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       if (D && (240 & D) == 0) {
-        for (P = M, T = D, A = C; M = (N = n.lencode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = N >>> 16 & 255, C = 65535 & N, !(P + M <= x);) {
+        for (P = M, T = D, A = C; M = (L = n.lencode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(P + M <= x);) {
           ;
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         y >>>= P, x -= P, n.back += P
       }
@@ -336,23 +336,23 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     case 22:
       if (n.extra) {
         for (j = n.extra; x < j;) {
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         n.length += y & (1 << n.extra) - 1, y >>>= n.extra, x -= n.extra, n.back += n.extra
       }
       n.was = n.length, n.mode = 23;
     case 23:
-      for (; M = (N = n.distcode[y & (1 << n.distbits) - 1]) >>> 24, D = N >>> 16 & 255, C = 65535 & N, !(M <= x);) {
+      for (; M = (L = n.distcode[y & (1 << n.distbits) - 1]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(M <= x);) {
         ;
-        if (0 === g) break n;
-        g--, y += l[p++] << x, x += 8
+        if (0 === v) break n;
+        v--, y += l[p++] << x, x += 8
       }
       if ((240 & D) == 0) {
-        for (P = M, T = D, A = C; M = (N = n.distcode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = N >>> 16 & 255, C = 65535 & N, !(P + M <= x);) {
+        for (P = M, T = D, A = C; M = (L = n.distcode[A + ((y & (1 << P + T) - 1) >> P)]) >>> 24, D = L >>> 16 & 255, C = 65535 & L, !(P + M <= x);) {
           ;
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         y >>>= P, x -= P, n.back += P
       }
@@ -364,8 +364,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     case 24:
       if (n.extra) {
         for (j = n.extra; x < j;) {
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         n.offset += y & (1 << n.extra) - 1, y >>>= n.extra, x -= n.extra, n.back += n.extra
       }
@@ -381,10 +381,10 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
           e.msg = "invalid distance too far back", n.mode = 30;
           break
         }
-        k > n.wnext ? (k -= n.wnext, _ = n.wsize - k) : _ = n.wnext - k, k > n.length && (k = n.length), E = n.window
-      } else E = f, _ = h - n.offset, k = n.length;
+        k > n.wnext ? (k -= n.wnext, E = n.wsize - k) : E = n.wnext - k, k > n.length && (k = n.length), _ = n.window
+      } else _ = f, E = h - n.offset, k = n.length;
       k > m && (k = m), m -= k, n.length -= k;
-      do f[h++] = E[_++]; while (--k);
+      do f[h++] = _[E++]; while (--k);
       0 === n.length && (n.mode = 21);
       break;
     case 26:
@@ -394,8 +394,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     case 27:
       if (n.wrap) {
         for (; x < 32;) {
-          if (0 === g) break n;
-          g--, y |= l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y |= l[p++] << x, x += 8
         }
         if (S -= m, e.total_out += S, n.total += S, S && (e.adler = n.check = n.flags ? a(n.check, f, S, h - S) : s(n.check, f, S, h - S)), S = m, (n.flags ? y : d(y)) !== n.check) {
           e.msg = "incorrect data check", n.mode = 30;
@@ -407,8 +407,8 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     case 28:
       if (n.wrap && n.flags) {
         for (; x < 32;) {
-          if (0 === g) break n;
-          g--, y += l[p++] << x, x += 8
+          if (0 === v) break n;
+          v--, y += l[p++] << x, x += 8
         }
         if (y !== (4294967295 & n.total)) {
           e.msg = "incorrect length check", n.mode = 30;
@@ -428,7 +428,7 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
     default:
       return -2
   }
-  return (e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = g, n.hold = y, n.bits = x, (n.wsize || S !== e.avail_out && n.mode < 30 && (n.mode < 27 || 4 !== t)) && v(e, e.output, e.next_out, S - e.avail_out)) ? (n.mode = 31, -4) : (w -= e.avail_in, S -= e.avail_out, e.total_in += w, e.total_out += S, n.total += S, n.wrap && S && (e.adler = n.check = n.flags ? a(n.check, f, S, e.next_out - S) : s(n.check, f, S, e.next_out - S)), e.data_type = n.bits + (n.last ? 64 : 0) + (12 === n.mode ? 128 : 0) + (20 === n.mode || 15 === n.mode ? 256 : 0), (0 === w && 0 === S || 4 === t) && 0 === I && (I = -5), I)
+  return (e.next_out = h, e.avail_out = m, e.next_in = p, e.avail_in = v, n.hold = y, n.bits = x, (n.wsize || S !== e.avail_out && n.mode < 30 && (n.mode < 27 || 4 !== t)) && b(e, e.output, e.next_out, S - e.avail_out)) ? (n.mode = 31, -4) : (w -= e.avail_in, S -= e.avail_out, e.total_in += w, e.total_out += S, n.total += S, n.wrap && S && (e.adler = n.check = n.flags ? a(n.check, f, S, e.next_out - S) : s(n.check, f, S, e.next_out - S)), e.data_type = n.bits + (n.last ? 64 : 0) + (12 === n.mode ? 128 : 0) + (20 === n.mode || 15 === n.mode ? 256 : 0), (0 === w && 0 === S || 4 === t) && 0 === I && (I = -5), I)
 }, t.inflateEnd = function(e) {
   if (!e || !e.state) return -2;
   var t = e.state;
@@ -438,5 +438,5 @@ t.inflateReset = p, t.inflateReset2 = h, t.inflateResetKeep = f, t.inflateInit =
   return e && e.state && (2 & (n = e.state).wrap) != 0 ? (n.head = t, t.done = !1, 0) : -2
 }, t.inflateSetDictionary = function(e, t) {
   var n, r, i = t.length;
-  return e && e.state && (0 === (n = e.state).wrap || 11 === n.mode) ? 11 === n.mode && (r = s(r = 1, t, i, 0)) !== n.check ? -3 : v(e, t, i, i) ? (n.mode = 31, -4) : (n.havedict = 1, 0) : -2
+  return e && e.state && (0 === (n = e.state).wrap || 11 === n.mode) ? 11 === n.mode && (r = s(r = 1, t, i, 0)) !== n.check ? -3 : b(e, t, i, i) ? (n.mode = 31, -4) : (n.havedict = 1, 0) : -2
 }, t.inflateInfo = "pako inflate (from Nodeca project)"

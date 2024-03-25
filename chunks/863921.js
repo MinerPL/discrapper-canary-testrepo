@@ -8,21 +8,21 @@ var i = n("37983");
 n("884691");
 var r = n("414456"),
   l = n.n(r),
-  u = n("931138"),
-  o = n("206453"),
-  s = n("49111"),
-  a = n("323755");
+  s = n("931138"),
+  u = n("206453"),
+  o = n("49111"),
+  a = n("666703");
 let d = {
-    [s.BoostedGuildTiers.NONE]: a.iconBackgroundTierNone,
-    [s.BoostedGuildTiers.TIER_1]: a.iconBackgroundTierOne,
-    [s.BoostedGuildTiers.TIER_2]: a.iconBackgroundTierTwo,
-    [s.BoostedGuildTiers.TIER_3]: a.iconBackgroundTierThree
+    [o.BoostedGuildTiers.NONE]: a.iconBackgroundTierNone,
+    [o.BoostedGuildTiers.TIER_1]: a.iconBackgroundTierOne,
+    [o.BoostedGuildTiers.TIER_2]: a.iconBackgroundTierTwo,
+    [o.BoostedGuildTiers.TIER_3]: a.iconBackgroundTierThree
   },
   c = {
-    [s.BoostedGuildTiers.NONE]: a.iconTierNone,
-    [s.BoostedGuildTiers.TIER_1]: a.iconTierOne,
-    [s.BoostedGuildTiers.TIER_2]: a.iconTierTwo,
-    [s.BoostedGuildTiers.TIER_3]: a.iconTierThree
+    [o.BoostedGuildTiers.NONE]: a.iconTierNone,
+    [o.BoostedGuildTiers.TIER_1]: a.iconTierOne,
+    [o.BoostedGuildTiers.TIER_2]: a.iconTierTwo,
+    [o.BoostedGuildTiers.TIER_3]: a.iconTierThree
   };
 
 function f(e) {
@@ -30,12 +30,12 @@ function f(e) {
     premiumTier: t,
     iconBackgroundClassName: n,
     iconClassName: r,
-    size: s
+    size: o
   } = e;
-  return (0, i.jsx)(u.default, {
+  return (0, i.jsx)(s.default, {
     className: l(n, d[t]),
-    size: s,
-    children: (0, i.jsx)(o.default, {
+    size: o,
+    children: (0, i.jsx)(u.default, {
       tier: t,
       className: l(r, a.boostedGuildIconGem, c[t])
     })

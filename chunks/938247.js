@@ -1,12 +1,12 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = r("308253"),
-  o = function(e, t) {
+  a = function(e, t) {
     var r = (0, n.default)(this, e),
-      o = r.size;
-    return r.set(e, t), this.size += r.size == o ? 0 : 1, this
+      a = r.size;
+    return r.set(e, t), this.size += r.size == a ? 0 : 1, this
   }

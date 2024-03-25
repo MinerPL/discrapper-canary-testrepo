@@ -4,40 +4,40 @@ n.r(t), n.d(t, {
     return c
   }
 }), n("222007"), n("881410"), n("70102");
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var i = n("414456"),
-  r = n.n(i),
-  o = n("385887"),
-  s = n("328634"),
-  a = n("835906"),
-  u = n("145719");
+var l = n("414456"),
+  a = n.n(l),
+  s = n("385887"),
+  r = n("785217"),
+  o = n("165555"),
+  u = n("731574");
 let d = {
-  strong: s.bold,
-  em: s.italics,
-  u: s.underline,
-  s: s.strikethrough,
-  inlineCode: s.inlineCode,
-  link: s.fakeLink,
-  url: s.fakeLink,
-  autolink: s.fakeLink,
-  spoiler: r(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, s.spoiler),
-  staticRouteLink: s.fakeLink,
-  syntaxBefore: s.syntaxBefore,
-  syntaxAfter: s.syntaxAfter,
-  codeBlockText: s.codeBlockText,
-  codeBlockSyntax: s.codeBlockSyntax,
-  codeBlockLang: s.codeBlockLang
+  strong: r.bold,
+  em: r.italics,
+  u: r.underline,
+  s: r.strikethrough,
+  inlineCode: r.inlineCode,
+  link: r.fakeLink,
+  url: r.fakeLink,
+  autolink: r.fakeLink,
+  spoiler: a(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, r.spoiler),
+  staticRouteLink: r.fakeLink,
+  syntaxBefore: r.syntaxBefore,
+  syntaxAfter: r.syntaxAfter,
+  codeBlockText: r.codeBlockText,
+  codeBlockSyntax: r.codeBlockSyntax,
+  codeBlockLang: r.codeBlockLang
 };
 
 function c(e, t) {
   let n;
   let {
-    attributes: i,
+    attributes: l,
     children: u,
     leaf: c,
     text: f
-  } = t, p = !1, [m] = o.EditorUtils.node(e, o.PathUtils.parent(o.EditorUtils.findPath(e, f))), h = o.EditorUtils.isEditor(m) ? "editor" : m.type;
+  } = t, p = !1, [m] = s.EditorUtils.node(e, s.PathUtils.parent(s.EditorUtils.findPath(e, f))), h = s.EditorUtils.isEditor(m) ? "editor" : m.type;
   switch (h) {
     case "line":
     case "blockQuote": {
@@ -49,20 +49,20 @@ function c(e, t) {
         let [t, n] = e;
         if ("hljsTypes" === t) return n;
         if (!0 === n) {
-          if (("codeBlockLang" === t || "codeBlockSyntax" === t) && (p = !1), t.startsWith("before_") || t.startsWith("after_")) return [s[t]];
+          if (("codeBlockLang" === t || "codeBlockSyntax" === t) && (p = !1), t.startsWith("before_") || t.startsWith("after_")) return [r[t]];
           if (t in d) return [d[t]];
           throw Error("Slate: Unknown decoration attribute: ".concat(t))
         }
       }).filter(e => null != e).join(" ");
-      n = r(e, {
-        [s.syntaxOverride]: "||" === c.text || "\\" === c.text
+      n = a(e, {
+        [r.syntaxOverride]: "||" === c.text || "\\" === c.text
       })
     }
   }
-  return n = r(n, {
-    [a.emptyText]: "" === f.text
-  }), (0, l.jsx)("span", {
-    ...i,
+  return n = a(n, {
+    [o.emptyText]: "" === f.text
+  }), (0, i.jsx)("span", {
+    ...l,
     className: n,
     spellCheck: p,
     children: u

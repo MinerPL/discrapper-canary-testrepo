@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("37983"),
-  s = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  s = n("414456"),
+  i = n.n(s),
   u = n("146606"),
   r = n("65597"),
   o = n("77078"),
@@ -22,7 +22,7 @@ var l = n("37983"),
 function x(e) {
   let {
     guild: t
-  } = e, n = (0, d.useIsMakingRequest)(t.id), s = (0, u.useSpring)({
+  } = e, n = (0, d.useIsMakingRequest)(t.id), a = (0, u.useSpring)({
     height: n ? 3 : 0,
     config: u.config.stiff
   });
@@ -30,7 +30,7 @@ function x(e) {
     className: g.loaderContainer,
     children: (0, l.jsx)(u.animated.div, {
       className: g.loaderBar,
-      style: s
+      style: a
     })
   })
 }
@@ -39,13 +39,13 @@ function E(e) {
   let {
     guild: t,
     className: n,
-    onPageChange: a,
+    onPageChange: s,
     onMemberSelect: u
-  } = e, E = t.id, T = (0, r.useStateFromStores)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), p = (0, d.useIsMakingRequest)(E), C = (0, d.useIsStillIndexing)(E), I = s.useCallback(e => {
+  } = e, E = t.id, T = (0, r.useStateFromStores)([c.default], () => c.default.getEstimatedMemberSearchCountByGuildId(E), [E]), p = (0, d.useIsMakingRequest)(E), C = (0, d.useIsStillIndexing)(E), A = a.useCallback(e => {
     null != e && (null == u || u(e))
-  }, [u]), M = (0, f.getSearchState)(C, p, T), A = s.useRef(null), N = s.useRef(null), b = s.useCallback(() => {
+  }, [u]), I = (0, f.getSearchState)(C, p, T), M = a.useRef(null), N = a.useRef(null), b = a.useCallback(() => {
     var e;
-    null === (e = A.current) || void 0 === e || e.resetSearchText()
+    null === (e = M.current) || void 0 === e || e.resetSearchText()
   }, []);
   return (0, l.jsx)("div", {
     className: i(g.mainTableContainer, n),
@@ -55,17 +55,17 @@ function E(e) {
       orientation: "horizontal",
       children: [(0, l.jsx)(S.default, {
         guild: t,
-        ref: A
+        ref: M
       }), (0, l.jsx)(x, {
         guild: t
       }), (0, l.jsx)(h.default, {
         guild: t,
-        onSelectRow: I,
-        searchState: M,
+        onSelectRow: A,
+        searchState: I,
         onResetForNewMembers: b
-      }), M !== f.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(m.default, {
+      }), I !== f.SearchState.SUCCESS_STILL_INDEXING && (0, l.jsx)(m.default, {
         guildId: t.id,
-        onPageChange: a
+        onPageChange: s
       })]
     })
   })

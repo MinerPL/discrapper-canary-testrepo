@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("398604"),
   _ = a("534222"),
   x = a("316133"),
-  v = a("461380"),
-  S = a("599110"),
+  S = a("461380"),
+  v = a("599110"),
   C = a("558130"),
   N = a("887446"),
   p = a("241094"),
@@ -33,15 +33,15 @@ var l = a("37983"),
   D = a("821435"),
   F = a("49111"),
   L = a("782340"),
-  R = a("382756"),
+  R = a("597603"),
   b = a("897142"),
   G = a("352791");
-let O = {
+let y = {
   overflowX: void 0,
   overflowY: void 0
 };
 
-function y() {
+function O() {
   let e = (0, m.default)();
   return (0, l.jsxs)("div", {
     className: R.emptyStateContainer,
@@ -87,7 +87,7 @@ function H(e) {
           orientation: "horizontal",
           paddingFix: !1,
           onScroll: n,
-          style: t ? void 0 : O,
+          style: t ? void 0 : y,
           ref: e => {
             var t;
             a.current = e, d.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null, n()
@@ -104,7 +104,7 @@ function k(e) {
   let {
     guildId: t,
     isUsingCollapsedLayout: a
-  } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getActiveChannelsFetchStatus(t)), r = (0, p.useActiveTextChannels)(t), u = (0, _.useGuildActiveEvent)(t), m = (0, o.useStateFromStores)([x.default], () => x.default.getVoiceStates(t)), h = (0, p.useActiveVoiceChannels)(t, u), T = r.length + h.length + (null != u ? 1 : 0), b = T > 0, G = n.useRef(null), O = (0, _.default)(t), k = O.filter(e => !(0, I.isGuildScheduledEventActive)(e)), [U, w] = n.useState(0 === k.length), [B, P] = n.useState(!0), [V, W] = n.useState(!1), {
+  } = e, s = (0, o.useStateFromStores)([C.default], () => C.default.getActiveChannelsFetchStatus(t)), r = (0, p.useActiveTextChannels)(t), u = (0, _.useGuildActiveEvent)(t), m = (0, o.useStateFromStores)([x.default], () => x.default.getVoiceStates(t)), h = (0, p.useActiveVoiceChannels)(t, u), T = r.length + h.length + (null != u ? 1 : 0), b = T > 0, G = n.useRef(null), y = (0, _.default)(t), k = y.filter(e => !(0, I.isGuildScheduledEventActive)(e)), [U, w] = n.useState(0 === k.length), [B, P] = n.useState(!0), [V, W] = n.useState(!1), {
     ref: K,
     width: z
   } = (0, f.default)(), Y = n.useCallback(() => {
@@ -147,7 +147,7 @@ function k(e) {
     C.default.shouldFetch(t) && (0, E.fetchActiveChannels)(t)
   }, [t]), (0, g.default)(t, r, h);
   let J = n.useCallback(e => {
-      S.default.track(F.AnalyticEvents.ACTIVE_CHANNEL_CLICKED, {
+      v.default.track(F.AnalyticEvents.ACTIVE_CHANNEL_CLICKED, {
         guild_id: e.guild_id,
         channel_id: e.id,
         channel_type: e.type,
@@ -215,12 +215,12 @@ function k(e) {
         handleScroll: Y,
         activeChannels: $,
         totalActiveChannels: T
-      }) : (0, l.jsx)(y, {}), a && b && !B && (0, l.jsx)(c.Clickable, {
+      }) : (0, l.jsx)(O, {}), a && b && !B && (0, l.jsx)(c.Clickable, {
         className: i(R.scrollIcon, R.left),
         onClick: Z,
         "aria-hidden": !0,
-        children: (0, l.jsx)(v.default, {
-          direction: v.default.Directions.LEFT,
+        children: (0, l.jsx)(S.default, {
+          direction: S.default.Directions.LEFT,
           height: 12,
           width: 12
         })
@@ -228,8 +228,8 @@ function k(e) {
         className: i(R.scrollIcon, R.right),
         onClick: X,
         "aria-hidden": !0,
-        children: (0, l.jsx)(v.default, {
-          direction: v.default.Directions.RIGHT,
+        children: (0, l.jsx)(S.default, {
+          direction: S.default.Directions.RIGHT,
           height: 12,
           width: 12
         })

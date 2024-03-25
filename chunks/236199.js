@@ -1,19 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
 var a = n("913144"),
   s = n("597517"),
-  i = n("533613"),
-  l = {
+  l = n("533613"),
+  i = {
     init() {
       a.default.subscribe("VOICE_CHANNEL_SELECT", e => {
         let {
           channelId: t
         } = e;
-        null == t && s.hideHotspot(i.HotspotLocations.VOICE_PANEL_INTRODUCTION)
+        null == t && s.hideHotspot(l.HotspotLocations.VOICE_PANEL_INTRODUCTION)
       })
     }
   }

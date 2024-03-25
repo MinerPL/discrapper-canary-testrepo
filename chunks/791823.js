@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return u
+    return a
   }
 }), n("70102");
 var i = n("446674"),
   o = n("913144");
 let l = null;
-class a extends i.default.Store {
+class u extends i.default.Store {
   getCurrentPath() {
     return null != l ? l.pathname : null
   }
@@ -21,8 +21,8 @@ class a extends i.default.Store {
     throw Error("Should not reset the store this way outside of a test environment")
   }
 }
-a.displayName = "ApplicationStoreLocationStore";
-var u = new a(o.default, {
+u.displayName = "ApplicationStoreLocationStore";
+var a = new u(o.default, {
   APPLICATION_STORE_LOCATION_CHANGE: function(e) {
     let {
       location: t

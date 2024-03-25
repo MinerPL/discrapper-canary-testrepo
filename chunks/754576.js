@@ -1,18 +1,18 @@
 "use strict";
-t.r(l), t.d(l, {
+l.r(t), l.d(t, {
   default: function() {
     return r
   }
 });
-var s = t("37983");
-t("884691");
-var a = t("469563"),
-  n = t("292915"),
-  i = t("75196"),
+var s = l("37983");
+l("884691");
+var a = l("469563"),
+  n = l("292915"),
+  i = l("75196"),
   r = (0, a.replaceIcon)(function(e) {
     let {
-      width: l = 24,
-      height: t = 24,
+      width: t = 24,
+      height: l = 24,
       color: a = "currentColor",
       ...n
     } = e;
@@ -20,8 +20,8 @@ var a = t("469563"),
       ...(0, i.default)(n),
       fill: "none",
       xmlns: "http://www.w3.org/2000/svg",
-      width: l,
-      height: t,
+      width: t,
+      height: l,
       viewBox: "0 0 24 24",
       children: [(0, s.jsxs)("g", {
         clipPath: "url(#clip0_414_20322)",

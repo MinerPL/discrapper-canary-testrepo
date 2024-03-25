@@ -1,27 +1,27 @@
 "use strict";
 s.r(t), s.d(t, {
   CopyInputModes: function() {
-    return f
+    return p
   },
   default: function() {
-    return I
+    return h
   }
 }), s("222007");
 var n = s("37983"),
-  l = s("884691"),
-  o = s("414456"),
-  r = s.n(o),
-  a = s("77078"),
-  i = s("474293"),
-  c = s("145131"),
-  u = s("782340"),
-  d = s("863448");
-let f = {
+  r = s("884691"),
+  a = s("414456"),
+  l = s.n(a),
+  i = s("77078"),
+  o = s("474293"),
+  u = s("145131"),
+  d = s("782340"),
+  c = s("704524");
+let p = {
   DEFAULT: "default",
   SUCCESS: "success",
   ERROR: "error"
 };
-class h extends l.PureComponent {
+class S extends r.PureComponent {
   select() {
     var e;
     null === (e = this.inputRef.current) || void 0 === e || e.select()
@@ -30,65 +30,65 @@ class h extends l.PureComponent {
     var t;
     let {
       value: s,
-      mode: l
-    } = this.props, o = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
+      mode: r
+    } = this.props, a = null === (t = this.context) || void 0 === t ? void 0 : t.titleId;
     return (0, n.jsx)("input", {
-      className: r((0, i.getClass)(d, "input", l), {
-        [d.inputHidden]: e
+      className: l((0, o.getClass)(c, "input", r), {
+        [c.inputHidden]: e
       }),
       ref: this.inputRef,
       type: "text",
       value: s,
       onClick: this.handleInputClick,
       readOnly: !0,
-      "aria-labelledby": o
+      "aria-labelledby": a
     })
   }
   render() {
     let e;
     let {
-      text: t = u.default.Messages.COPY,
+      text: t = d.default.Messages.COPY,
       mode: s,
-      hideMessage: l,
-      className: o,
-      buttonLook: h
-    } = this.props, I = null != l;
+      hideMessage: r,
+      className: a,
+      buttonLook: S
+    } = this.props, h = null != r;
     switch (s) {
-      case f.SUCCESS:
-        e = a.ButtonColors.GREEN;
+      case p.SUCCESS:
+        e = i.ButtonColors.GREEN;
         break;
-      case f.ERROR:
-        e = a.ButtonColors.RED;
+      case p.ERROR:
+        e = i.ButtonColors.RED;
         break;
       default:
         e = this.props.buttonColor
     }
-    return (0, n.jsx)(a.FocusRing, {
+    return (0, n.jsx)(i.FocusRing, {
       focusTarget: this.inputRef,
       ringTarget: this.containerRef,
       children: (0, n.jsx)("div", {
-        className: r((0, i.getClass)(d, "copyInput", s), o),
+        className: l((0, o.getClass)(c, "copyInput", s), a),
         ref: this.containerRef,
-        children: (0, n.jsxs)(c.default, {
-          className: d.layout,
-          children: [(0, n.jsxs)(c.default, {
-            className: d.inputWrapper,
-            children: [this.renderInput(I), I ? (0, n.jsx)("div", {
-              className: d.hiddenMessage,
-              children: l
+        children: (0, n.jsxs)(u.default, {
+          className: c.layout,
+          children: [(0, n.jsxs)(u.default, {
+            className: c.inputWrapper,
+            children: [this.renderInput(h), h ? (0, n.jsx)("div", {
+              className: c.hiddenMessage,
+              children: r
             }) : null]
-          }), (0, n.jsx)(c.default, {
+          }), (0, n.jsx)(u.default, {
             shrink: 1,
             grow: 0,
             style: {
               margin: 0
             },
-            children: (0, n.jsx)(a.Button, {
-              className: d.button,
+            children: (0, n.jsx)(i.Button, {
+              className: c.button,
               onClick: this.handleButtonClick,
-              size: a.ButtonSizes.MIN,
+              size: i.ButtonSizes.MIN,
               color: e,
-              look: h,
+              look: S,
               children: t
             })
           })]
@@ -97,7 +97,7 @@ class h extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this.inputRef = l.createRef(), this.containerRef = l.createRef(), this.handleButtonClick = () => {
+    super(...e), this.inputRef = r.createRef(), this.containerRef = r.createRef(), this.handleButtonClick = () => {
       this.select();
       let {
         onCopy: e,
@@ -109,10 +109,10 @@ class h extends l.PureComponent {
     }
   }
 }
-h.contextType = a.FormContext, h.defaultProps = {
+S.contextType = i.FormContext, S.defaultProps = {
   supportsCopy: !0,
-  buttonColor: a.ButtonColors.PRIMARY,
-  buttonLook: a.ButtonLooks.FILLED,
-  mode: f.DEFAULT
-}, h.Modes = f, h.ButtonColors = a.ButtonColors, h.ButtonLooks = a.ButtonLooks;
-var I = h
+  buttonColor: i.ButtonColors.PRIMARY,
+  buttonLook: i.ButtonLooks.FILLED,
+  mode: p.DEFAULT
+}, S.Modes = p, S.ButtonColors = i.ButtonColors, S.ButtonLooks = i.ButtonLooks;
+var h = S

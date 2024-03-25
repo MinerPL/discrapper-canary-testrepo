@@ -1,67 +1,67 @@
 "use strict";
 n.r(t), n.d(t, {
   useIsEligibleForBogoPromotion: function() {
-    return U
+    return v
   },
   maybeFetchActiveBogoPromotion: function() {
-    return N
-  },
-  isEligibleForBOGOAnnouncementModal: function() {
     return x
   },
-  getBOGOPillCopy: function() {
+  isEligibleForBOGOAnnouncementModal: function() {
     return A
+  },
+  getBOGOPillCopy: function() {
+    return U
   }
 });
-var i = n("866227"),
-  r = n.n(i),
-  l = n("65597"),
-  s = n("151426"),
-  a = n("850068"),
+var r = n("866227"),
+  i = n.n(r),
+  a = n("65597"),
+  l = n("151426"),
+  s = n("850068"),
   o = n("174727"),
   u = n("619935"),
-  d = n("10641"),
-  c = n("915639"),
-  m = n("697218"),
-  f = n("521012"),
+  c = n("10641"),
+  d = n("915639"),
+  f = n("697218"),
+  m = n("521012"),
   _ = n("340412"),
   E = n("719923"),
-  T = n("982457"),
-  I = n("433947"),
-  P = n("705337"),
-  p = n("935566"),
-  S = n("917247"),
+  I = n("982457"),
+  T = n("433947"),
+  p = n("705337"),
+  S = n("935566"),
+  P = n("917247"),
   R = n("538620"),
   C = n("694540"),
   O = n("807345"),
-  M = n("646718"),
-  g = n("49111"),
-  L = n("782340");
+  g = n("646718"),
+  M = n("49111"),
+  h = n("782340");
 
-function v(e) {
-  var t, n, i;
+function L(e) {
+  var t, n, r;
   let {
-    experimentEnabled: l,
-    premiumSubscription: s,
-    mostRecentSubscription: a
+    experimentEnabled: a,
+    premiumSubscription: l,
+    mostRecentSubscription: s
   } = e, o = !1, u = !1;
-  if (null != a && a.status === g.SubscriptionStatusTypes.ENDED) {
-    let e = (null === (t = a.metadata) || void 0 === t ? void 0 : t.ended_at) != null ? r(a.metadata.ended_at) : null,
-      i = null === (n = (0, E.getPremiumPlanItem)(a)) || void 0 === n ? void 0 : n.planId,
-      l = null != i && E.default.getPremiumType(i) === M.PremiumTypes.TIER_2;
-    u = null != e && l && e.add(10, "days").isAfter(r())
+  if (null != s && s.status === M.SubscriptionStatusTypes.ENDED) {
+    let e = (null === (t = s.metadata) || void 0 === t ? void 0 : t.ended_at) != null ? i(s.metadata.ended_at) : null,
+      r = null === (n = (0, E.getPremiumPlanItem)(s)) || void 0 === n ? void 0 : n.planId,
+      a = null != r && E.default.getPremiumType(r) === g.PremiumTypes.TIER_2;
+    u = null != e && a && e.add(10, "days").isAfter(i())
   }
-  if (null != s) {
-    let e = null === (i = (0, E.getPremiumPlanItem)(s)) || void 0 === i ? void 0 : i.planId,
-      t = null != e && E.default.getPremiumType(e) === M.PremiumTypes.TIER_2,
-      n = m.default.getCurrentUser(),
-      r = (null == s ? void 0 : s.trialId) != null && E.default.isPremiumExactly(n, M.PremiumTypes.TIER_0);
-    o = t || r
+  if (null != l) {
+    let e = null === (r = (0, E.getPremiumPlanItem)(l)) || void 0 === r ? void 0 : r.planId,
+      t = null != e && E.default.getPremiumType(e) === g.PremiumTypes.TIER_2,
+      n = f.default.getCurrentUser(),
+      i = (null == l ? void 0 : l.trialId) != null && E.default.isPremiumExactly(n, g.PremiumTypes.TIER_0);
+    o = t || i
   }
-  return !l || o || u
+  return !a || o || u
 }
 
-function U() {
+function v() {
   var e;
   let {
     paymentsBlocked: t
@@ -72,73 +72,73 @@ function U() {
   }), {
     promotion: n
   } = (0, C.useBogoPromotion)(), {
-    enabled: i
-  } = (0, p.default)(), {
-    mostRecentSubscription: r,
-    premiumSubscription: s
-  } = (0, l.useStateFromStoresObject)([f.default], () => ({
-    mostRecentSubscription: f.default.getMostRecentPremiumTypeSubscription(),
-    premiumSubscription: f.default.getPremiumTypeSubscription()
-  })), a = (0, S.usePremiumTrialOffer)(), d = new Date(null !== (e = null == n ? void 0 : n.endDate) && void 0 !== e ? e : 0).valueOf();
-  (0, o.default)(d, 1e3, void 0, d + 2e3 < Date.now());
-  let c = !v({
-      experimentEnabled: i,
-      premiumSubscription: s,
-      mostRecentSubscription: r
+    enabled: r
+  } = (0, S.default)(), {
+    mostRecentSubscription: i,
+    premiumSubscription: l
+  } = (0, a.useStateFromStoresObject)([m.default], () => ({
+    mostRecentSubscription: m.default.getMostRecentPremiumTypeSubscription(),
+    premiumSubscription: m.default.getPremiumTypeSubscription()
+  })), s = (0, P.usePremiumTrialOffer)(), c = new Date(null !== (e = null == n ? void 0 : n.endDate) && void 0 !== e ? e : 0).valueOf();
+  (0, o.default)(c, 1e3, void 0, c + 2e3 < Date.now());
+  let d = !L({
+      experimentEnabled: r,
+      premiumSubscription: l,
+      mostRecentSubscription: i
     }),
-    m = c && null == a && null != n && !t,
+    f = d && null == s && null != n && !t,
     _ = Date.now(),
     {
       enabled: E
-    } = P.default.useExperiment({
+    } = p.default.useExperiment({
       location: "153d31_2"
     }, {
-      autoTrackExposure: m,
-      disable: !m
+      autoTrackExposure: f,
+      disable: !f
     });
-  return !(_ > d) && E
+  return !(_ > c) && E
 }
-async function h() {
+async function N() {
   var e;
-  let t = m.default.getCurrentUser(),
+  let t = f.default.getCurrentUser(),
     n = !(null == t ? void 0 : t.isClaimed()),
     {
-      paymentsBlocked: i
+      paymentsBlocked: r
     } = u.default.getCurrentConfig({
       location: "153d31_3"
     }, {
       autoTrackExposure: !1
     }),
     {
-      enabled: r
-    } = (0, p.isBogoPromotionExperimentEnabled)(),
+      enabled: i
+    } = (0, S.isBogoPromotionExperimentEnabled)(),
     {
-      enabled: l
-    } = P.default.getCurrentConfig({
+      enabled: a
+    } = p.default.getCurrentConfig({
       location: "153d31_4"
     }, {
       autoTrackExposure: !1
     }),
     {
-      enabled: s
-    } = I.BOGOAnnouncementModalExperiment.getCurrentConfig({
+      enabled: l
+    } = T.BOGOAnnouncementModalExperiment.getCurrentConfig({
       location: "153d31_5"
     }, {
       autoTrackExposure: !1
     });
-  if (n || i || !r || !s && !l) return !1;
-  if (_.default.shouldFetchOffer() && await T.default.fetchUserTrialOffer(), _.default.hasFetchedOffer() && _.default.hasAnyUnexpiredOffer()) return !1;
-  !f.default.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = m.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(M.PremiumSubscriptionSKUs.TIER_2)) && await (0, a.fetchMostRecentSubscription)(), !f.default.hasFetchedSubscriptions() && await (0, a.fetchSubscriptions)();
-  let o = f.default.getMostRecentPremiumTypeSubscription(),
-    d = f.default.getPremiumTypeSubscription();
-  return !v({
-    experimentEnabled: r,
-    premiumSubscription: d,
+  if (n || r || !i || !l && !a) return !1;
+  if (_.default.shouldFetchOffer() && await I.default.fetchUserTrialOffer(), _.default.hasFetchedOffer() && _.default.hasAnyUnexpiredOffer()) return !1;
+  !m.default.hasFetchedMostRecentPremiumTypeSubscription() && (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.hasHadSKU(g.PremiumSubscriptionSKUs.TIER_2)) && await (0, s.fetchMostRecentSubscription)(), !m.default.hasFetchedSubscriptions() && await (0, s.fetchSubscriptions)();
+  let o = m.default.getMostRecentPremiumTypeSubscription(),
+    c = m.default.getPremiumTypeSubscription();
+  return !L({
+    experimentEnabled: i,
+    premiumSubscription: c,
     mostRecentSubscription: o
   })
 }
-async function N() {
-  let e = await h();
+async function x() {
+  let e = await N();
   if (!e) return;
   let t = O.default.bogoPromotion;
   if (null != t) {
@@ -147,30 +147,30 @@ async function N() {
   }
   await (0, R.fetchActiveBogoPromotion)()
 }
-async function x() {
+async function A() {
   let e = O.default.bogoPromotion,
     t = null != e && new Date(e.endDate).valueOf() >= Date.now() && new Date(e.startDate).valueOf() <= Date.now(),
-    n = (0, d.isDismissibleContentDismissed)(s.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
-    i = await h(),
+    n = (0, c.isDismissibleContentDismissed)(l.DismissibleContent.SUMMER_2023_BOGO_ANNOUNCEMENT_MODAL),
+    r = await N(),
     {
-      enabled: r
-    } = p.BogoPromotionExperiment.getCurrentConfig({
+      enabled: i
+    } = S.BogoPromotionExperiment.getCurrentConfig({
       location: "153d31_6"
     }, {
       autoTrackExposure: !1
     }),
     {
-      enabled: l
-    } = I.BOGOAnnouncementModalExperiment.getCurrentConfig({
+      enabled: a
+    } = T.BOGOAnnouncementModalExperiment.getCurrentConfig({
       location: "153d31_7"
     }, {
-      autoTrackExposure: t && r && !n && i
+      autoTrackExposure: t && i && !n && r
     });
-  return t && l && r && !n && i
+  return t && a && i && !n && r
 }
 
-function A() {
-  let e = c.default.locale;
+function U() {
+  let e = d.default.locale;
   switch (e) {
     case "de":
     case "es-ES":
@@ -192,8 +192,8 @@ function A() {
     case "uk":
     case "ja":
     case "ko":
-      return L.default.Messages.NITRO_BADGE_TEXT;
+      return h.default.Messages.NITRO_BADGE_TEXT;
     default:
-      return L.default.Messages.BOGO_PILL
+      return h.default.Messages.BOGO_PILL
   }
 }

@@ -1,8 +1,8 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("882982"),
   u = r("281859"),
   l = r("123090");
@@ -10,10 +10,10 @@ var n = r("884691"),
   var t = e.onChange,
     r = e.hex,
     n = e.rgb,
-    c = e.styles,
-    s = void 0 === c ? {} : c,
-    f = e.className,
-    d = (0, a.default)((0, i.default)({
+    s = e.styles,
+    f = void 0 === s ? {} : s,
+    c = e.className,
+    d = (0, o.default)((0, i.default)({
       default: {
         material: {
           width: "98px",
@@ -78,7 +78,7 @@ var n = r("884691"),
           paddingRight: "10px"
         }
       }
-    }, s)),
+    }, f)),
     p = function(e, r) {
       e.hex ? u.isValidHex(e.hex) && t({
         hex: e.hex,
@@ -90,12 +90,12 @@ var n = r("884691"),
         source: "rgb"
       }, r)
     };
-  return o.createElement(l.Raised, {
-    styles: s
-  }, o.createElement("div", {
+  return a.createElement(l.Raised, {
+    styles: f
+  }, a.createElement("div", {
     style: d.material,
-    className: "material-picker " + (void 0 === f ? "" : f)
-  }, o.createElement(l.EditableInput, {
+    className: "material-picker " + (void 0 === c ? "" : c)
+  }, a.createElement(l.EditableInput, {
     style: {
       wrap: d.HEXwrap,
       input: d.HEXinput,
@@ -104,12 +104,12 @@ var n = r("884691"),
     label: "hex",
     value: r,
     onChange: p
-  }), o.createElement("div", {
+  }), a.createElement("div", {
     style: d.split,
     className: "flexbox-fix"
-  }, o.createElement("div", {
+  }, a.createElement("div", {
     style: d.third
-  }, o.createElement(l.EditableInput, {
+  }, a.createElement(l.EditableInput, {
     style: {
       wrap: d.RGBwrap,
       input: d.RGBinput,
@@ -118,9 +118,9 @@ var n = r("884691"),
     label: "r",
     value: n.r,
     onChange: p
-  })), o.createElement("div", {
+  })), a.createElement("div", {
     style: d.third
-  }, o.createElement(l.EditableInput, {
+  }, a.createElement(l.EditableInput, {
     style: {
       wrap: d.RGBwrap,
       input: d.RGBinput,
@@ -129,9 +129,9 @@ var n = r("884691"),
     label: "g",
     value: n.g,
     onChange: p
-  })), o.createElement("div", {
+  })), a.createElement("div", {
     style: d.third
-  }, o.createElement(l.EditableInput, {
+  }, a.createElement(l.EditableInput, {
     style: {
       wrap: d.RGBwrap,
       input: d.RGBinput,

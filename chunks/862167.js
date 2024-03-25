@@ -1,5 +1,5 @@
-t.exports = function(t, r) {
-  for (var n = -1, e = null == t ? 0 : t.length; ++n < e;)
-    if (r(t[n], n, t)) return !0;
+e.exports = function(e, t) {
+  for (var n = -1, r = null == e ? 0 : e.length; ++n < r;)
+    if (t(e[n], n, e)) return !0;
   return !1
 }

@@ -1,14 +1,14 @@
 "use strict";
-t.r(n), t.d(n, {
+n.r(t), n.d(t, {
   recentlyHeardExperiment: function() {
-    return i
+    return a
   },
   useRecentlyHeardExperiment: function() {
-    return o
+    return s
   }
 });
-var u = t("862205");
-let l = (0, u.createExperiment)({
+var i = n("862205");
+let l = (0, i.createExperiment)({
   kind: "user",
   id: "2023-11_soundboard_recently_heard_frequently_played",
   label: "Soundboard Recently Heard & Frequently Played",
@@ -40,26 +40,26 @@ let l = (0, u.createExperiment)({
   }]
 });
 
-function i(e) {
+function a(e) {
   let {
-    location: n,
-    autoTrackExposure: t
+    location: t,
+    autoTrackExposure: n
   } = e;
   return l.getCurrentConfig({
-    location: n
-  }, {
-    autoTrackExposure: t
-  })
-}
-
-function o(e) {
-  let {
-    autoTrackExposure: n,
-    location: t
-  } = e;
-  return l.useExperiment({
     location: t
   }, {
     autoTrackExposure: n
+  })
+}
+
+function s(e) {
+  let {
+    autoTrackExposure: t,
+    location: n
+  } = e;
+  return l.useExperiment({
+    location: n
+  }, {
+    autoTrackExposure: t
   })
 }

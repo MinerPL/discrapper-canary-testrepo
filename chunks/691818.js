@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("446674"),
   s = n("913144"),
-  i = n("718517");
-let l = 12 * i.default.Millis.HOUR,
+  l = n("718517");
+let i = 12 * l.default.Millis.HOUR,
   r = {
     profileThemesRelevanceExceeded: null,
     savedAt: null
@@ -21,7 +21,7 @@ class c extends a.default.PersistedStore {
   initialize(e) {
     d = o, u = r;
     let t = new Date;
-    null != e && null != e.savedAt && t.getTime() - e.savedAt < l && (u = e)
+    null != e && null != e.savedAt && t.getTime() - e.savedAt < i && (u = e)
   }
   get hasFetchedRelevance() {
     return d.hasFetchedRelevance

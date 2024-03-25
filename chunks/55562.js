@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   CHANNEL_NEXT: function() {
-    return r
+    return E
   },
   CHANNEL_PREV: function() {
-    return _
+    return c
   },
   TOGGLE_PREVIOUS_GUILD: function() {
-    return A
+    return _
   },
   NAVIGATE_BACK: function() {
-    return c
+    return A
   },
   NAVIGATE_FORWARD: function() {
     return C
@@ -19,42 +19,42 @@ n.r(t), n.d(t, {
 var i = n("473532"),
   o = n("722525"),
   l = n("393414"),
-  a = n("239380"),
-  u = n("18494"),
-  d = n("162771"),
-  s = n("773336"),
-  E = n("49111");
-let r = {
+  u = n("239380"),
+  a = n("18494"),
+  s = n("162771"),
+  d = n("773336"),
+  r = n("49111");
+let E = {
     binds: ["alt+down"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(), !1)
   },
-  _ = {
+  c = {
     binds: ["alt+up"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(-1), !1)
   },
-  A = {
+  _ = {
     binds: ["mod+alt+right"],
     comboKeysBindGlobal: !0,
     action() {
       let e;
-      let t = d.default.getGuildId();
-      if (null != t) e = E.ME;
+      let t = s.default.getGuildId();
+      if (null != t) e = r.ME;
       else {
-        let t = d.default.getLastSelectedGuildId();
-        null != t && (e = t, (0, o.transitionToChannel)(t, u.default.getChannelId(t)))
+        let t = s.default.getLastSelectedGuildId();
+        null != t && (e = t, (0, o.transitionToChannel)(t, a.default.getChannelId(t)))
       }
-      return null != e && (0, a.transitionToGuild)(e), !1
+      return null != e && (0, u.transitionToGuild)(e), !1
     }
   },
-  c = {
-    binds: (0, s.isMac)() ? ["mod+["] : ["alt+left"],
+  A = {
+    binds: (0, d.isMac)() ? ["mod+["] : ["alt+left"],
     comboKeysBindGlobal: !0,
     action: () => ((0, l.back)(), !1)
   },
   C = {
-    binds: (0, s.isMac)() ? ["mod+]"] : ["alt+right"],
+    binds: (0, d.isMac)() ? ["mod+]"] : ["alt+right"],
     comboKeysBindGlobal: !0,
     action: () => ((0, l.forward)(), !1)
   }

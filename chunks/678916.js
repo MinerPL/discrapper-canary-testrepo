@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 });
 var s = n("160679"),
   a = n("446674"),
-  l = n("913144"),
-  r = n("773336"),
+  r = n("913144"),
+  l = n("773336"),
   i = n("586391");
 let o = null,
   u = "underage";
 class d extends a.default.Store {
   isUnderageAnonymous() {
-    if (r.isPlatformEmbedded) {
+    if (l.isPlatformEmbedded) {
       if (null != o && o + i.AGE_GATE_REGISTER_TIMEOUT_MS > Date.now()) return !0
     } else {
       let e = s.parse(document.cookie)[u];
@@ -23,7 +23,7 @@ class d extends a.default.Store {
   }
 }
 d.displayName = "AgeGateStore";
-var c = new d(l.default, {
+var c = new d(r.default, {
   AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function() {
     o = Date.now(), document.cookie = "".concat(u, "=1;path=/")
   },

@@ -1,9 +1,9 @@
 "use strict";
 n("781738"), n("424973"), n("70102");
 var r = n("380756"),
-  i = Object.prototype.hasOwnProperty,
+  a = Object.prototype.hasOwnProperty,
   o = Array.isArray,
-  s = {
+  i = {
     allowDots: !1,
     allowPrototypes: !1,
     allowSparse: !1,
@@ -21,97 +21,97 @@ var r = n("380756"),
     plainObjects: !1,
     strictNullHandling: !1
   },
-  a = function(e, t) {
+  s = function(e, t) {
     return e && "string" == typeof e && t.comma && e.indexOf(",") > -1 ? e.split(",") : e
   },
-  c = function(e, t) {
+  u = function(e, t) {
     var n = {
         __proto__: null
       },
-      c = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e,
-      u = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-      d = c.split(t.delimiter, u),
-      l = -1,
+      u = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e,
+      l = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
+      c = u.split(t.delimiter, l),
+      d = -1,
       f = t.charset;
     if (t.charsetSentinel)
-      for (p = 0; p < d.length; ++p) 0 === d[p].indexOf("utf8=") && ("utf8=%E2%9C%93" === d[p] ? f = "utf-8" : "utf8=%26%2310003%3B" === d[p] && (f = "iso-8859-1"), l = p, p = d.length);
-    for (p = 0; p < d.length; ++p)
-      if (p !== l) {
-        var p, h, g, b = d[p],
-          v = b.indexOf("]="),
-          m = -1 === v ? b.indexOf("=") : v + 1;
-        if (-1 === m ? (h = t.decoder(b, s.decoder, f, "key"), g = t.strictNullHandling ? null : "") : (h = t.decoder(b.slice(0, m), s.decoder, f, "key"), g = r.maybeMap(a(b.slice(m + 1), t), function(e) {
-            return t.decoder(e, s.decoder, f, "value")
-          })), g && t.interpretNumericEntities && "iso-8859-1" === f) g = g.replace(/&#(\d+);/g, function(e, t) {
+      for (p = 0; p < c.length; ++p) 0 === c[p].indexOf("utf8=") && ("utf8=%E2%9C%93" === c[p] ? f = "utf-8" : "utf8=%26%2310003%3B" === c[p] && (f = "iso-8859-1"), d = p, p = c.length);
+    for (p = 0; p < c.length; ++p)
+      if (p !== d) {
+        var p, m, h, y = c[p],
+          _ = y.indexOf("]="),
+          g = -1 === _ ? y.indexOf("=") : _ + 1;
+        if (-1 === g ? (m = t.decoder(y, i.decoder, f, "key"), h = t.strictNullHandling ? null : "") : (m = t.decoder(y.slice(0, g), i.decoder, f, "key"), h = r.maybeMap(s(y.slice(g + 1), t), function(e) {
+            return t.decoder(e, i.decoder, f, "value")
+          })), h && t.interpretNumericEntities && "iso-8859-1" === f) h = h.replace(/&#(\d+);/g, function(e, t) {
           return String.fromCharCode(parseInt(t, 10))
         });
-        b.indexOf("[]=") > -1 && (g = o(g) ? [g] : g), i.call(n, h) ? n[h] = r.combine(n[h], g) : n[h] = g
+        y.indexOf("[]=") > -1 && (h = o(h) ? [h] : h), a.call(n, m) ? n[m] = r.combine(n[m], h) : n[m] = h
       } return n
   },
-  u = function(e, t, n, r) {
-    for (var i = r ? t : a(t, n), o = e.length - 1; o >= 0; --o) {
-      var s, c = e[o];
-      if ("[]" === c && n.parseArrays) s = [].concat(i);
+  l = function(e, t, n, r) {
+    for (var a = r ? t : s(t, n), o = e.length - 1; o >= 0; --o) {
+      var i, u = e[o];
+      if ("[]" === u && n.parseArrays) i = [].concat(a);
       else {
-        s = n.plainObjects ? Object.create(null) : {};
-        var u = "[" === c.charAt(0) && "]" === c.charAt(c.length - 1) ? c.slice(1, -1) : c,
-          d = parseInt(u, 10);
-        n.parseArrays || "" !== u ? !isNaN(d) && c !== u && String(d) === u && d >= 0 && n.parseArrays && d <= n.arrayLimit ? (s = [])[d] = i : "__proto__" !== u && (s[u] = i) : s = {
-          0: i
+        i = n.plainObjects ? Object.create(null) : {};
+        var l = "[" === u.charAt(0) && "]" === u.charAt(u.length - 1) ? u.slice(1, -1) : u,
+          c = parseInt(l, 10);
+        n.parseArrays || "" !== l ? !isNaN(c) && u !== l && String(c) === l && c >= 0 && n.parseArrays && c <= n.arrayLimit ? (i = [])[c] = a : "__proto__" !== l && (i[l] = a) : i = {
+          0: a
         }
       }
-      i = s
+      a = i
     }
-    return i
+    return a
   },
-  d = function(e, t, n, r) {
+  c = function(e, t, n, r) {
     if (e) {
       var o = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
-        s = /(\[[^[\]]*])/g,
-        a = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
-        c = a ? o.slice(0, a.index) : o,
-        d = [];
-      if (c) {
-        if (!n.plainObjects && i.call(Object.prototype, c) && !n.allowPrototypes) return;
-        d.push(c)
+        i = /(\[[^[\]]*])/g,
+        s = n.depth > 0 && /(\[[^[\]]*])/.exec(o),
+        u = s ? o.slice(0, s.index) : o,
+        c = [];
+      if (u) {
+        if (!n.plainObjects && a.call(Object.prototype, u) && !n.allowPrototypes) return;
+        c.push(u)
       }
-      for (var l = 0; n.depth > 0 && null !== (a = s.exec(o)) && l < n.depth;) {
-        if (l += 1, !n.plainObjects && i.call(Object.prototype, a[1].slice(1, -1)) && !n.allowPrototypes) return;
-        d.push(a[1])
+      for (var d = 0; n.depth > 0 && null !== (s = i.exec(o)) && d < n.depth;) {
+        if (d += 1, !n.plainObjects && a.call(Object.prototype, s[1].slice(1, -1)) && !n.allowPrototypes) return;
+        c.push(s[1])
       }
-      return a && d.push("[" + o.slice(a.index) + "]"), u(d, t, n, r)
+      return s && c.push("[" + o.slice(s.index) + "]"), l(c, t, n, r)
     }
   },
-  l = function(e) {
-    if (!e) return s;
+  d = function(e) {
+    if (!e) return i;
     if (null !== e.decoder && void 0 !== e.decoder && "function" != typeof e.decoder) throw TypeError("Decoder has to be a function.");
     if (void 0 !== e.charset && "utf-8" !== e.charset && "iso-8859-1" !== e.charset) throw TypeError("The charset option must be either utf-8, iso-8859-1, or undefined");
-    var t = void 0 === e.charset ? s.charset : e.charset;
+    var t = void 0 === e.charset ? i.charset : e.charset;
     return {
-      allowDots: void 0 === e.allowDots ? s.allowDots : !!e.allowDots,
-      allowPrototypes: "boolean" == typeof e.allowPrototypes ? e.allowPrototypes : s.allowPrototypes,
-      allowSparse: "boolean" == typeof e.allowSparse ? e.allowSparse : s.allowSparse,
-      arrayLimit: "number" == typeof e.arrayLimit ? e.arrayLimit : s.arrayLimit,
+      allowDots: void 0 === e.allowDots ? i.allowDots : !!e.allowDots,
+      allowPrototypes: "boolean" == typeof e.allowPrototypes ? e.allowPrototypes : i.allowPrototypes,
+      allowSparse: "boolean" == typeof e.allowSparse ? e.allowSparse : i.allowSparse,
+      arrayLimit: "number" == typeof e.arrayLimit ? e.arrayLimit : i.arrayLimit,
       charset: t,
-      charsetSentinel: "boolean" == typeof e.charsetSentinel ? e.charsetSentinel : s.charsetSentinel,
-      comma: "boolean" == typeof e.comma ? e.comma : s.comma,
-      decoder: "function" == typeof e.decoder ? e.decoder : s.decoder,
-      delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : s.delimiter,
-      depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : s.depth,
+      charsetSentinel: "boolean" == typeof e.charsetSentinel ? e.charsetSentinel : i.charsetSentinel,
+      comma: "boolean" == typeof e.comma ? e.comma : i.comma,
+      decoder: "function" == typeof e.decoder ? e.decoder : i.decoder,
+      delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : i.delimiter,
+      depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : i.depth,
       ignoreQueryPrefix: !0 === e.ignoreQueryPrefix,
-      interpretNumericEntities: "boolean" == typeof e.interpretNumericEntities ? e.interpretNumericEntities : s.interpretNumericEntities,
-      parameterLimit: "number" == typeof e.parameterLimit ? e.parameterLimit : s.parameterLimit,
+      interpretNumericEntities: "boolean" == typeof e.interpretNumericEntities ? e.interpretNumericEntities : i.interpretNumericEntities,
+      parameterLimit: "number" == typeof e.parameterLimit ? e.parameterLimit : i.parameterLimit,
       parseArrays: !1 !== e.parseArrays,
-      plainObjects: "boolean" == typeof e.plainObjects ? e.plainObjects : s.plainObjects,
-      strictNullHandling: "boolean" == typeof e.strictNullHandling ? e.strictNullHandling : s.strictNullHandling
+      plainObjects: "boolean" == typeof e.plainObjects ? e.plainObjects : i.plainObjects,
+      strictNullHandling: "boolean" == typeof e.strictNullHandling ? e.strictNullHandling : i.strictNullHandling
     }
   };
 e.exports = function(e, t) {
-  var n = l(t);
+  var n = d(t);
   if ("" === e || null == e) return n.plainObjects ? Object.create(null) : {};
-  for (var i = "string" == typeof e ? c(e, n) : e, o = n.plainObjects ? Object.create(null) : {}, s = Object.keys(i), a = 0; a < s.length; ++a) {
-    var u = s[a],
-      f = d(u, i[u], n, "string" == typeof e);
+  for (var a = "string" == typeof e ? u(e, n) : e, o = n.plainObjects ? Object.create(null) : {}, i = Object.keys(a), s = 0; s < i.length; ++s) {
+    var l = i[s],
+      f = c(l, a[l], n, "string" == typeof e);
     o = r.merge(o, f, n)
   }
   return !0 === n.allowSparse ? o : r.compact(o)

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   TestModeSKUButtonEnums: function() {
-    return E
+    return f
   },
   default: function() {
     return T
@@ -16,8 +16,8 @@ var s = n("37983"),
   u = n("299285"),
   d = n("552712"),
   c = n("271560"),
-  f = n("782340");
-let E = {
+  E = n("782340");
+let f = {
   DropdownSizes: o.default.DropdownSizes,
   Sizes: o.default.Sizes,
   Colors: o.default.Colors,
@@ -51,7 +51,7 @@ class _ extends l.PureComponent {
       return (0, s.jsx)(i.Menu, {
         onSelect: n,
         navId: "test-skus",
-        "aria-label": f.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
+        "aria-label": E.default.Messages.GENERIC_ACTIONS_MENU_LABEL,
         onClose: r.closeContextMenu,
         children: e.map(e => (0, s.jsx)(i.MenuItem, {
           id: "".concat(e.id),

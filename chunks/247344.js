@@ -1,12 +1,12 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return c
+    return s
   }
 }), r("70102"), r("854508");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("964020"),
+  a = r.n(n),
+  o = r("964020"),
   i = r("281859"),
   u = Object.assign || function(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -26,7 +26,7 @@ var n = r("884691"),
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  c = function(e) {
+  s = function(e) {
     var t = function(t) {
       function r(e) {
         ! function(e, t) {
@@ -46,7 +46,7 @@ var n = r("884691"),
             var n = i.toState(e, e.h || t.state.oldHue);
             t.props.onSwatchHover && t.props.onSwatchHover(n, r)
           }
-        }, t.state = u({}, i.toState(e.color, 0)), t.debounce = (0, a.default)(function(e, t, r) {
+        }, t.state = u({}, i.toState(e.color, 0)), t.debounce = (0, o.default)(function(e, t, r) {
           e(t, r)
         }, 100), t
       }
@@ -64,7 +64,7 @@ var n = r("884691"),
         key: "render",
         value: function() {
           var t = {};
-          return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), o.createElement(e, u({}, this.props, this.state, {
+          return this.props.onSwatchHover && (t.onSwatchHover = this.handleSwatchHover), a.createElement(e, u({}, this.props, this.state, {
             onChange: this.handleChange
           }, t))
         }

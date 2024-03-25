@@ -6,20 +6,20 @@ s.r(t), s.d(t, {
 });
 var i = s("37983");
 s("884691");
-var l = s("446674"),
-  n = s("225389"),
-  a = s("77078"),
+var n = s("446674"),
+  a = s("225389"),
+  l = s("77078"),
   r = s("519705"),
   d = s("282109"),
   o = s("34676"),
   u = s("49111"),
   c = s("782340"),
-  h = s("775247");
+  h = s("690787");
 
 function N(e) {
   let {
     guildId: t
-  } = e, s = (0, l.useStateFromStoresObject)([d.default], () => ({
+  } = e, s = (0, n.useStateFromStoresObject)([d.default], () => ({
     highligths: d.default.getNotifyHighlights(t),
     mobilePush: d.default.isMobilePushEnabled(t),
     suppressRoles: d.default.isSuppressRolesEnabled(t),
@@ -27,34 +27,34 @@ function N(e) {
     muteScheduledEvents: d.default.isMuteScheduledEventsEnabled(t)
   })), N = r.default.updateGuildNotificationSettings;
   return (0, i.jsxs)("div", {
-    children: [(0, i.jsx)(f, {
+    children: [(0, i.jsx)(S, {
       value: s.suppressEveryone,
       title: c.default.Messages.FORM_LABEL_SUPPRESS_EVERYONE.format(),
       onChange: e => N(t, {
         suppress_everyone: e
       }, o.NotificationLabel.suppressEveryone(e))
-    }), (0, i.jsx)(f, {
+    }), (0, i.jsx)(S, {
       value: s.suppressRoles,
       title: c.default.Messages.FORM_LABEL_SUPPRESS_ROLES,
       onChange: e => N(t, {
         suppress_roles: e
       }, o.NotificationLabel.suppressRoles(e))
-    }), (0, i.jsx)(f, {
+    }), (0, i.jsx)(S, {
       title: (0, i.jsxs)("div", {
         className: h.advanceSettingTitle,
-        children: [c.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS, (0, i.jsx)(a.Tooltip, {
+        children: [c.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS, (0, i.jsx)(l.Tooltip, {
           text: c.default.Messages.HIGHLIGHTS_NOTE_SUBTEXT,
           children: e => {
             let {
               onMouseEnter: t,
               onMouseLeave: s
             } = e;
-            return (0, i.jsx)(n.CircleInformationIcon, {
+            return (0, i.jsx)(a.CircleInformationIcon, {
               width: 14,
               height: 14,
               onMouseEnter: t,
               onMouseLeave: s,
-              color: a.tokens.colors.ICON_MUTED,
+              color: l.tokens.colors.ICON_MUTED,
               className: h.settingTitleIcon
             })
           }
@@ -64,13 +64,13 @@ function N(e) {
       onChange: e => N(t, {
         notify_highlights: e ? u.HighlightSettings.ENABLED : u.HighlightSettings.DISABLED
       }, o.NotificationLabel.highlights(e))
-    }), (0, i.jsx)(f, {
+    }), (0, i.jsx)(S, {
       value: s.muteScheduledEvents,
       title: c.default.Messages.FORM_LABEL_MUTE_SCHEDULED_EVENTS,
       onChange: e => N(t, {
         mute_scheduled_events: e
       }, o.NotificationLabel.mutedEvents(e))
-    }), (0, i.jsx)(f, {
+    }), (0, i.jsx)(S, {
       value: s.mobilePush,
       title: c.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
       onChange: e => N(t, {
@@ -80,8 +80,8 @@ function N(e) {
   })
 }
 
-function f(e) {
-  return (0, i.jsx)(a.FormSwitch, {
+function S(e) {
+  return (0, i.jsx)(l.FormSwitch, {
     hideBorder: !0,
     className: h.advanceSetting,
     value: e.value,

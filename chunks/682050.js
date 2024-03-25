@@ -32,8 +32,8 @@ function s(e) {
 }
 
 function a(e, t, n, s, a) {
-  var c, u, d, l, f, p, h, g, b, v = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(c))),
-    m = o(v ? e : t),
+  var c, u, d, l, f, p, h, v, g, b = "IMG" === (c = t).nodeName && ((0, r.isFirefox)() || !(null !== (u = document.documentElement) && void 0 !== u && u.contains(c))),
+    m = o(b ? e : t),
     y = {
       x: n.x - m.x,
       y: n.y - m.y
@@ -42,16 +42,16 @@ function a(e, t, n, s, a) {
     w = e.offsetHeight,
     S = s.anchorX,
     k = s.anchorY;
-  var _ = (d = v, l = t, f = x, p = w, h = d ? l.width : f, g = d ? l.height : p, (0, r.isSafari)() && d && (g /= window.devicePixelRatio, h /= window.devicePixelRatio), {
+  var E = (d = b, l = t, f = x, p = w, h = d ? l.width : f, v = d ? l.height : p, (0, r.isSafari)() && d && (v /= window.devicePixelRatio, h /= window.devicePixelRatio), {
       dragPreviewWidth: h,
-      dragPreviewHeight: g
+      dragPreviewHeight: v
     }),
-    E = _.dragPreviewWidth,
-    M = _.dragPreviewHeight,
+    _ = E.dragPreviewWidth,
+    M = E.dragPreviewHeight,
     D = a.offsetX,
     C = a.offsetY;
   return {
-    x: 0 === D || D ? D : new i.MonotonicInterpolant([0, .5, 1], [y.x, y.x / x * E, y.x + E - x]).interpolate(S),
-    y: 0 === C || C ? C : (b = new i.MonotonicInterpolant([0, .5, 1], [y.y, y.y / w * M, y.y + M - w]).interpolate(k), (0, r.isSafari)() && v && (b += (window.devicePixelRatio - 1) * M), b)
+    x: 0 === D || D ? D : new i.MonotonicInterpolant([0, .5, 1], [y.x, y.x / x * _, y.x + _ - x]).interpolate(S),
+    y: 0 === C || C ? C : (g = new i.MonotonicInterpolant([0, .5, 1], [y.y, y.y / w * M, y.y + M - w]).interpolate(k), (0, r.isSafari)() && b && (g += (window.devicePixelRatio - 1) * M), g)
   }
 }

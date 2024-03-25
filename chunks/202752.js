@@ -4,52 +4,52 @@ n.r(t), n.d(t, {
     return a
   },
   updateContent: function() {
-    return y
+    return M
   },
   deleteContent: function() {
-    return b
-  },
-  miscCommand: function() {
-    return F
-  },
-  getFirstTextBlock: function() {
-    return I
-  },
-  applyTokensAsEntities: function() {
-    return N
-  },
-  createEmptyEditorState: function() {
-    return L
-  },
-  clearContent: function() {
-    return _
-  },
-  replaceAllContent: function() {
-    return j
-  },
-  setCollapsedSelection: function() {
-    return O
-  },
-  setCollapsedEndSelection: function() {
-    return R
-  },
-  setCollapsedStartSelection: function() {
     return k
   },
-  setToStartSelection: function() {
+  miscCommand: function() {
+    return T
+  },
+  getFirstTextBlock: function() {
+    return N
+  },
+  applyTokensAsEntities: function() {
+    return A
+  },
+  createEmptyEditorState: function() {
+    return F
+  },
+  clearContent: function() {
+    return I
+  },
+  replaceAllContent: function() {
     return w
   },
+  setCollapsedSelection: function() {
+    return R
+  },
+  setCollapsedEndSelection: function() {
+    return L
+  },
+  setCollapsedStartSelection: function() {
+    return _
+  },
+  setToStartSelection: function() {
+    return B
+  },
   setToEndSelection: function() {
-    return P
+    return O
   },
   truncateContent: function() {
     return H
   },
   scrollCursorIntoView: function() {
-    return B
+    return z
   },
   isEmpty: function() {
-    return D
+    return Z
   }
 }), n("222007"), n("424973");
 var l = n("98159"),
@@ -57,90 +57,90 @@ var l = n("98159"),
   a = n.n(r),
   i = n("401816"),
   s = n.n(i),
-  u = n("958551"),
-  o = n.n(u),
-  c = n("661183"),
-  d = n.n(c),
+  o = n("958551"),
+  c = n.n(o),
+  u = n("661183"),
+  d = n.n(u),
   f = n("823821"),
   m = n.n(f),
-  g = n("928429"),
-  E = n.n(g),
-  h = n("234553"),
-  C = n.n(h),
-  p = n("65994"),
-  S = n.n(p),
-  T = n("718144"),
-  A = n.n(T),
-  v = n("640330"),
-  x = n.n(v);
+  h = n("928429"),
+  g = n.n(h),
+  p = n("234553"),
+  x = n.n(p),
+  C = n("65994"),
+  b = n.n(C),
+  v = n("718144"),
+  S = n.n(v),
+  j = n("640330"),
+  E = n.n(j);
 
-function M(e, t, n, r) {
+function y(e, t, n, r) {
   let a = r.getCurrentContent(),
     i = null;
   null != e && (i = (a = a.createEntity(...e)).getLastCreatedEntityKey());
   let s = a.getFirstBlock(),
-    u = new l.SelectionState({
+    o = new l.SelectionState({
       anchorKey: s.getKey(),
       anchorOffset: t,
       focusKey: s.getKey(),
       focusOffset: n
     });
-  return a = l.Modifier.applyEntity(a, u, i), l.EditorState.set(r, {
+  return a = l.Modifier.applyEntity(a, o, i), l.EditorState.set(r, {
     currentContent: a
   })
 }
 
-function y(e, t, n, r) {
+function M(e, t, n, r) {
   let a, i;
-  let u = t.getCurrentContent(),
-    o = u.getFirstBlock(),
-    c = o.getText();
-  "number" == typeof n ? (n > c.length && (n = c.length), null != r && r > c.length && (r = c.length), a = new l.SelectionState({
-    anchorKey: o.getKey(),
+  let o = t.getCurrentContent(),
+    c = o.getFirstBlock(),
+    u = c.getText();
+  "number" == typeof n ? (n > u.length && (n = u.length), null != r && r > u.length && (r = u.length), a = new l.SelectionState({
+    anchorKey: c.getKey(),
     anchorOffset: n,
-    focusKey: o.getKey(),
+    focusKey: c.getKey(),
     focusOffset: null != r && 0 !== r ? r : n
   })) : a = t.getSelection();
   let d = t.getCurrentInlineStyle(),
-    f = s(u, a);
-  return a.isCollapsed() ? (u = l.Modifier.insertText(u, a, e, d, f), i = "insert-characters") : (u = l.Modifier.replaceText(u, a, e, d, f), i = "replace-characters"), l.EditorState.push(t, u, i)
+    f = s(o, a);
+  return a.isCollapsed() ? (o = l.Modifier.insertText(o, a, e, d, f), i = "insert-characters") : (o = l.Modifier.replaceText(o, a, e, d, f), i = "replace-characters"), l.EditorState.push(t, o, i)
 }
 
-function b(e, t) {
+function k(e, t) {
   switch (e) {
     case "delete":
-      return A(t);
+      return S(t);
     case "delete-word":
       return m(t);
     case "backspace":
-      return S(t);
+      return b(t);
     case "backspace-word":
       return d(t);
     case "backspace-to-start-of-line":
-      return o(t);
+      return c(t);
     default:
       return t
   }
 }
 
-function F(e, t) {
+function T(e, t) {
   switch (e) {
     case "transpose-characters":
-      return x(t);
-    case "move-selection-to-start-of-block":
-      return C(t);
-    case "move-selection-to-end-of-block":
       return E(t);
+    case "move-selection-to-start-of-block":
+      return x(t);
+    case "move-selection-to-end-of-block":
+      return g(t);
     default:
       return t
   }
 }
 
-function I(e) {
+function N(e) {
   return e.getCurrentContent().getFirstBlock().getText()
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
     l = t.getCurrentContent(),
     r = l.getFirstBlock(),
@@ -164,68 +164,68 @@ function N(e, t) {
           start: a,
           end: i
         } = e, s = e.getFullMatch();
-        !n.processed && (n.type === r && n.start === a && n.text === s ? (n.processed = !0, l = !0) : (a >= n.start && a < n.end || i > n.start && i <= n.end) && (n.processed = !0, t = M(null, n.start, n.end, t)))
+        !n.processed && (n.type === r && n.start === a && n.text === s ? (n.processed = !0, l = !0) : (a >= n.start && a < n.end || i > n.start && i <= n.end) && (n.processed = !0, t = y(null, n.start, n.end, t)))
       }), l) return;
     let r = n[e.type];
-    t = M([e.type, null != r && r.mutable ? "MUTABLE" : "IMMUTABLE", {
+    t = y([e.type, null != r && r.mutable ? "MUTABLE" : "IMMUTABLE", {
       token: e
     }], e.start, e.end, t)
   }), i.forEach(e => {
-    !e.processed && (t = M(null, e.start, e.end, t))
+    !e.processed && (t = y(null, e.start, e.end, t))
   }), t
 }
 
-function L(e) {
+function F(e) {
   return l.EditorState.createEmpty(new l.CompositeDecorator(e))
 }
 
-function _(e) {
+function I(e) {
   let t = l.EditorState.push(e, l.ContentState.createFromText("")),
     n = e.getSelection();
   return null != n && n.hasFocus && (t = l.EditorState.moveFocusToEnd(t)), t
 }
 
-function j(e, t) {
-  let n = I(t);
-  return y(e, t, 0, n.length)
+function w(e, t) {
+  let n = N(t);
+  return M(e, t, 0, n.length)
 }
 
-function O(e, t) {
+function R(e, t) {
   let n = t.getSelection();
   return n = (n = n.set("focusOffset", e)).set("anchorOffset", e), l.EditorState.forceSelection(t, n)
 }
 
-function R(e) {
+function L(e) {
   let t = e.getCurrentContent().getFirstBlock().getText();
-  return O(t.length, e)
+  return R(t.length, e)
 }
 
-function k(e) {
-  return O(0, e)
+function _(e) {
+  return R(0, e)
 }
 
-function w(e) {
+function B(e) {
   let t = e.getSelection();
   return t = (t = t.set("focusOffset", 0)).set("isBackward", !0), l.EditorState.forceSelection(e, t)
 }
 
-function P(e) {
-  let t = I(e),
+function O(e) {
+  let t = N(e),
     n = e.getSelection();
   return n = (n = n.set("focusOffset", t.length)).set("isBackward", !1), l.EditorState.forceSelection(e, n)
 }
 
 function H(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
-    n = I(e);
+    n = N(e);
   if (n.length > t) {
     let r = e.getSelection();
-    e = y("", e, t, n.length), r.getAnchorOffset() > t && (r = r.set("anchorOffset", t)), r.getFocusOffset() > t && (r = r.set("focusOffset", t)), e = l.EditorState.forceSelection(e, r)
+    e = M("", e, t, n.length), r.getAnchorOffset() > t && (r = r.set("anchorOffset", t)), r.getFocusOffset() > t && (r = r.set("focusOffset", t)), e = l.EditorState.forceSelection(e, r)
   }
   return e
 }
 
-function B(e) {
+function z(e) {
   let t = window.getSelection();
   if (null == t || "Caret" !== t.type || null == e) return;
   let n = t.getRangeAt(0);
@@ -244,6 +244,6 @@ function B(e) {
   i < e.scrollLeft ? e.scrollLeft = i - 10 : i > e.scrollLeft + e.offsetWidth && (e.scrollLeft = i - e.offsetWidth + 3)
 }
 
-function D(e) {
-  return 0 === I(e).length
+function Z(e) {
+  return 0 === N(e).length
 }

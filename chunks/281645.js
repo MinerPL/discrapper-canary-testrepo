@@ -1,68 +1,68 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return T
   }
 });
 var a = n("37983");
 n("884691");
-var l = n("77078"),
-  s = n("987317"),
-  i = n("476765"),
-  u = n("674083"),
-  r = n("244480"),
-  d = n("119184"),
-  o = n("782340"),
-  c = n("225946");
+var s = n("77078"),
+  i = n("987317"),
+  l = n("476765"),
+  r = n("674083"),
+  u = n("244480"),
+  o = n("119184"),
+  c = n("782340"),
+  d = n("549797");
 
-function f(e) {
+function T(e) {
   let {
     channel: t,
     transitionState: n,
-    onClose: f
-  } = e, E = (0, i.useUID)();
+    onClose: T
+  } = e, E = (0, l.useUID)();
 
   function _() {
-    s.default.disconnect(), f()
+    i.default.disconnect(), T()
   }
-  return (0, a.jsxs)(l.ModalRoot, {
+  return (0, a.jsxs)(s.ModalRoot, {
     transitionState: n,
     "aria-labelledby": E,
-    children: [(0, a.jsxs)(l.ModalContent, {
-      className: c.content,
-      children: [(0, a.jsx)(d.default, {
+    children: [(0, a.jsxs)(s.ModalContent, {
+      className: d.content,
+      children: [(0, a.jsx)(o.default, {
         children: (0, a.jsx)("div", {
-          className: c.iconBackground,
-          children: (0, a.jsx)(u.default, {
+          className: d.iconBackground,
+          children: (0, a.jsx)(r.default, {
             width: 40,
             height: 40,
-            className: c.headerIcon
+            className: d.headerIcon
           })
         })
-      }), (0, a.jsx)(l.Heading, {
+      }), (0, a.jsx)(s.Heading, {
         id: E,
         variant: "heading-xl/semibold",
         color: "header-primary",
-        className: c.title,
-        children: o.default.Messages.EXPLICIT_END_STAGE_TITLE
-      }), (0, a.jsx)(l.Text, {
+        className: d.title,
+        children: c.default.Messages.EXPLICIT_END_STAGE_TITLE
+      }), (0, a.jsx)(s.Text, {
         variant: "text-md/normal",
         color: "header-secondary",
-        className: c.subtitle,
-        children: o.default.Messages.EXPLICIT_END_STAGE_SUBTITLE
+        className: d.subtitle,
+        children: c.default.Messages.EXPLICIT_END_STAGE_SUBTITLE
       })]
-    }), (0, a.jsxs)(l.ModalFooter, {
-      children: [(0, a.jsx)(l.Button, {
-        color: l.Button.Colors.RED,
+    }), (0, a.jsxs)(s.ModalFooter, {
+      children: [(0, a.jsx)(s.Button, {
+        color: s.Button.Colors.RED,
         onClick: function() {
-          (0, r.endStage)(t), _()
+          (0, u.endStage)(t), _()
         },
-        children: o.default.Messages.EXPLICIT_END_STAGE_CONFIRM
-      }), (0, a.jsx)(l.Button, {
-        color: l.Button.Colors.PRIMARY,
-        className: c.cancelButton,
+        children: c.default.Messages.EXPLICIT_END_STAGE_CONFIRM
+      }), (0, a.jsx)(s.Button, {
+        color: s.Button.Colors.PRIMARY,
+        className: d.cancelButton,
         onClick: _,
-        children: o.default.Messages.EXPLICIT_END_STAGE_CANCEL
+        children: c.default.Messages.EXPLICIT_END_STAGE_CANCEL
       })]
     })]
   })

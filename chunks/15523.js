@@ -5,13 +5,13 @@ r.r(t), r.d(t, {
   }
 }), r("70102"), r("854508"), r("781738");
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("281859"),
   u = r("876912"),
   l = r("123090"),
-  c = r("217809"),
-  s = function() {
+  s = r("217809"),
+  f = function() {
     function e(e, t) {
       for (var r = 0; r < t.length; r++) {
         var n = t[r];
@@ -22,7 +22,7 @@ var n = r("884691"),
       return r && e(t.prototype, r), n && e(t, n), t
     }
   }(),
-  f = function(e) {
+  c = function(e) {
     function t(e) {
       ! function(e, t) {
         if (!(e instanceof t)) throw TypeError("Cannot call a class as a function")
@@ -82,11 +82,11 @@ var n = r("884691"),
           configurable: !0
         }
       }), t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : e.__proto__ = t)
-    }(t, e), s(t, [{
+    }(t, e), f(t, [{
       key: "render",
       value: function() {
         var e = this,
-          t = (0, a.default)({
+          t = (0, o.default)({
             default: {
               wrap: {
                 paddingTop: "16px",
@@ -160,12 +160,12 @@ var n = r("884691"),
             }
           }, this.props, this.state),
           r = void 0;
-        return "hex" === this.state.view ? r = o.createElement("div", {
+        return "hex" === this.state.view ? r = a.createElement("div", {
           style: t.fields,
           className: "flexbox-fix"
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -173,12 +173,12 @@ var n = r("884691"),
           label: "hex",
           value: this.props.hex,
           onChange: this.handleChange
-        }))) : "rgb" === this.state.view ? r = o.createElement("div", {
+        }))) : "rgb" === this.state.view ? r = a.createElement("div", {
           style: t.fields,
           className: "flexbox-fix"
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -186,9 +186,9 @@ var n = r("884691"),
           label: "r",
           value: this.props.rgb.r,
           onChange: this.handleChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -196,9 +196,9 @@ var n = r("884691"),
           label: "g",
           value: this.props.rgb.g,
           onChange: this.handleChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -206,9 +206,9 @@ var n = r("884691"),
           label: "b",
           value: this.props.rgb.b,
           onChange: this.handleChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: t.alpha
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -217,12 +217,12 @@ var n = r("884691"),
           value: this.props.rgb.a,
           arrowOffset: .01,
           onChange: this.handleChange
-        }))) : "hsl" === this.state.view && (r = o.createElement("div", {
+        }))) : "hsl" === this.state.view && (r = a.createElement("div", {
           style: t.fields,
           className: "flexbox-fix"
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -230,9 +230,9 @@ var n = r("884691"),
           label: "h",
           value: Math.round(this.props.hsl.h),
           onChange: this.handleChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -240,9 +240,9 @@ var n = r("884691"),
           label: "s",
           value: Math.round(100 * this.props.hsl.s) + "%",
           onChange: this.handleChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: t.field
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -250,9 +250,9 @@ var n = r("884691"),
           label: "l",
           value: Math.round(100 * this.props.hsl.l) + "%",
           onChange: this.handleChange
-        })), o.createElement("div", {
+        })), a.createElement("div", {
           style: t.alpha
-        }, o.createElement(l.EditableInput, {
+        }, a.createElement(l.EditableInput, {
           style: {
             input: t.input,
             label: t.label
@@ -261,18 +261,18 @@ var n = r("884691"),
           value: this.props.hsl.a,
           arrowOffset: .01,
           onChange: this.handleChange
-        })))), o.createElement("div", {
+        })))), a.createElement("div", {
           style: t.wrap,
           className: "flexbox-fix"
-        }, r, o.createElement("div", {
+        }, r, a.createElement("div", {
           style: t.toggle
-        }, o.createElement("div", {
+        }, a.createElement("div", {
           style: t.icon,
           onClick: this.toggleViews,
           ref: function(t) {
             return e.icon = t
           }
-        }, o.createElement(c.default, {
+        }, a.createElement(s.default, {
           style: t.svg,
           onMouseOver: this.showHighlight,
           onMouseEnter: this.showHighlight,
@@ -287,8 +287,8 @@ var n = r("884691"),
         } : null
       }
     }]), t
-  }(o.Component);
-f.defaultProps = {
+  }(a.Component);
+c.defaultProps = {
   view: "hex"
 };
-var d = f
+var d = c

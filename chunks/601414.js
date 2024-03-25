@@ -68,17 +68,17 @@ function I(e) {
     guildId: t,
     guildFeedItem: a,
     setOnDismissFeedback: r
-  } = e, [o, h] = l.useState(), [E, I] = l.useState(new Set), [_, x] = l.useState(), [v, S] = l.useState(!1), [C, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
-    h(e), T(!0), S(!1), setTimeout(() => {
+  } = e, [o, h] = l.useState(), [E, I] = l.useState(new Set), [_, x] = l.useState(), [S, v] = l.useState(!1), [C, N] = l.useState(!1), [p, T] = l.useState(!1), A = l.useCallback(e => {
+    h(e), T(!0), v(!1), setTimeout(() => {
       T(!1)
     }, f.GUILD_FEED_FEEDBACK_ANIMATION_DURATION + 150)
-  }, [h, S, T]), j = l.useCallback(e => {
+  }, [h, v, T]), j = l.useCallback(e => {
     e === f.GuildFeedFeedbackReason.OTHER && E.has(f.GuildFeedFeedbackReason.OTHER) && x(null);
     let t = new Set(E);
     t.has(e) ? t.delete(e) : t.add(e), I(t)
   }, [E, x, I]), M = l.useCallback(() => {
-    S(!0), I(new Set)
-  }, [S, I]), D = l.useCallback(e => {
+    v(!0), I(new Set)
+  }, [v, I]), D = l.useCallback(e => {
     (function(e) {
       let {
         guildId: t,
@@ -127,7 +127,7 @@ function I(e) {
     selectedReasons: E,
     setSelectedReasons: j,
     setUserFeedback: x,
-    backPressed: v,
+    backPressed: S,
     onBackPressed: M,
     onSubmitPressed: L,
     onClosePressed: F,

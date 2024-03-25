@@ -1,23 +1,23 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return a
+    return n
   }
 });
-var a = e => {
+var n = e => {
   let {
     channel: t,
     canChat: i,
-    renderReactions: a,
-    canAddNewReactions: l,
-    isLurking: n,
+    renderReactions: n,
+    canAddNewReactions: a,
+    isLurking: l,
     isGuest: o,
     communicationDisabled: s,
     isActiveChannelOrUnarchivableThread: r
-  } = e, u = t.isPrivate(), d = t.isSystemDM(), c = (i || u) && r;
+  } = e, u = t.isPrivate(), c = t.isSystemDM(), d = (i || u) && r;
   return {
-    disableReactionReads: !a,
-    disableReactionCreates: n || o || !c || !((!0 === l || u) && !d && r),
-    disableReactionUpdates: n || o || !c || !0 === s
+    disableReactionReads: !n,
+    disableReactionCreates: l || o || !d || !((!0 === a || u) && !c && r),
+    disableReactionUpdates: l || o || !d || !0 === s
   }
 }

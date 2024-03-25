@@ -4,26 +4,26 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var i = n("37983"),
-  l = n("884691"),
-  s = n("129722"),
-  a = n("477633"),
-  r = l.memo(function(e) {
+var l = n("37983"),
+  a = n("884691"),
+  i = n("129722"),
+  s = n("477633"),
+  r = a.memo(function(e) {
     let {
       fineTuning: t,
       fineTuningResolution: n,
-      duration: l
+      duration: a
     } = e, {
       file: r,
-      audio: o
-    } = (0, s.useAudioTrimmerStore)();
-    return (0, i.jsx)(a.default, {
+      audio: u
+    } = (0, i.useAudioTrimmerStore)();
+    return (0, l.jsx)(s.default, {
       file: r,
-      audio: o,
+      audio: u,
       waveformSettings: {
         fineTuning: t,
         fineTuningResolution: n,
-        duration: l
+        duration: a
       }
     })
   })

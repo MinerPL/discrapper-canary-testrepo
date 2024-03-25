@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return T
   }
 }), n("222007");
 var s = n("37983"),
@@ -12,13 +12,13 @@ var s = n("37983"),
   i = n("790618"),
   E = n("648661"),
   _ = n("782340"),
-  u = n("679012");
+  u = n("917908");
 
-function d(e) {
+function T(e) {
   var t, n;
   let {
-    emailToken: d,
-    isSlideReady: T,
+    emailToken: T,
+    isSlideReady: d,
     onClose: S,
     onBack: N,
     onNext: c
@@ -27,7 +27,7 @@ function d(e) {
     e.preventDefault(), U(!0);
     let t = await (0, l.saveAccountChanges)({
       email: C,
-      emailToken: d,
+      emailToken: T,
       password: I
     });
     if (U(!1), null == t ? void 0 : t.ok) c(C);
@@ -37,11 +37,11 @@ function d(e) {
     }
   }
   return o.useEffect(() => {
-    if (T) {
+    if (d) {
       var e;
       null === (e = m.current) || void 0 === e || e.focus()
     }
-  }, [T]), (0, s.jsxs)("form", {
+  }, [d]), (0, s.jsxs)("form", {
     onSubmit: p,
     children: [(0, s.jsxs)(r.ModalHeader, {
       separator: !1,

@@ -21,13 +21,13 @@ function l(e) {
       notClaimed: d
     } = n.getCheck(e),
     c = i.getCurrentUser(),
-    f = !1;
+    _ = !1;
   if (null != c) {
-    var _, h;
-    f = null !== (h = null === (_ = l.getMember(e, c.id)) || void 0 === _ ? void 0 : _.isPending) && void 0 !== h && h
+    var f, E;
+    _ = null !== (E = null === (f = l.getMember(e, c.id)) || void 0 === f ? void 0 : f.isPending) && void 0 !== E && E
   }
-  let g = f || d;
-  return g && !!(null == u ? void 0 : u.hasVerificationGate())
+  let h = _ || d;
+  return h && !!(null == u ? void 0 : u.hasVerificationGate())
 }
 
 function u(e) {

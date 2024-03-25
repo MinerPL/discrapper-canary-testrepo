@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return T
   }
 }), n("222007");
-var i = n("446674"),
-  r = n("913144"),
-  l = n("374363");
+var r = n("446674"),
+  i = n("913144"),
+  a = n("374363");
 
-function s() {
+function l() {
   return {
     hasFetchedConsumedInboundPromotionId: !1,
     consumedInboundPromotionId: null,
@@ -16,51 +16,51 @@ function s() {
     bogoPromotion: null
   }
 }
-let a = s(),
+let s = l(),
   o = !1,
   u = null,
-  d = !1,
-  c = null,
-  m = [],
-  f = null;
+  c = !1,
+  d = null,
+  f = [],
+  m = null;
 
 function _() {
   let e = null;
-  for (let t of m)(null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
+  for (let t of f)(null == e || new Date(t.startDate) > new Date(e)) && (e = t.startDate);
   return e
 }
 
 function E() {
   var e, t, n;
-  f = null !== (n = null === (t = l.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
+  m = null !== (n = null === (t = a.default.settings.userContent) || void 0 === t ? void 0 : null === (e = t.lastDismissedOutboundPromotionStartDate) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : null
 }
-class T extends i.default.PersistedStore {
+class I extends r.default.PersistedStore {
   initialize(e) {
-    null != e && (a = e), this.waitFor(l.default), this.syncWith([l.default], E)
+    null != e && (s = e), this.waitFor(a.default), this.syncWith([a.default], E)
   }
   get outboundPromotions() {
-    return m
-  }
-  get lastSeenOutboundPromotionStartDate() {
-    return a.lastSeenOutboundPromotionStartDate
-  }
-  get lastDismissedOutboundPromotionStartDate() {
     return f
   }
-  get lastFetchedActivePromotions() {
-    return c
+  get lastSeenOutboundPromotionStartDate() {
+    return s.lastSeenOutboundPromotionStartDate
   }
-  get isFetchingActiveOutboundPromotions() {
+  get lastDismissedOutboundPromotionStartDate() {
+    return m
+  }
+  get lastFetchedActivePromotions() {
     return d
   }
+  get isFetchingActiveOutboundPromotions() {
+    return c
+  }
   get hasFetchedConsumedInboundPromotionId() {
-    return a.hasFetchedConsumedInboundPromotionId
+    return s.hasFetchedConsumedInboundPromotionId
   }
   get consumedInboundPromotionId() {
-    return a.consumedInboundPromotionId
+    return s.consumedInboundPromotionId
   }
   get bogoPromotion() {
-    return a.bogoPromotion
+    return s.bogoPromotion
   }
   get isFetchingActiveBogoPromotion() {
     return o
@@ -69,47 +69,47 @@ class T extends i.default.PersistedStore {
     return u
   }
   getState() {
-    return a
+    return s
   }
 }
-T.displayName = "PromotionsStore", T.persistKey = "PromotionsPersistedStore";
-var I = new T(r.default, {
+I.displayName = "PromotionsStore", I.persistKey = "PromotionsPersistedStore";
+var T = new I(i.default, {
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH_SUCCESS: function(e) {
     let {
       activeOutboundPromotions: t,
       consumedInboundPromotionId: n
     } = e;
-    m = t, c = Date.now(), d = !1, !a.hasFetchedConsumedInboundPromotionId && (a.hasFetchedConsumedInboundPromotionId = !0, a.consumedInboundPromotionId = n)
+    f = t, d = Date.now(), c = !1, !s.hasFetchedConsumedInboundPromotionId && (s.hasFetchedConsumedInboundPromotionId = !0, s.consumedInboundPromotionId = n)
   },
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH: function() {
-    d = !0
+    c = !0
   },
   ACTIVE_OUTBOUND_PROMOTIONS_FETCH_FAIL: function() {
-    m = [], d = !1
+    f = [], c = !1
   },
   ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: function(e) {
     let {
       activePromotion: t
     } = e;
-    a.bogoPromotion = t, u = Date.now(), o = !1
+    s.bogoPromotion = t, u = Date.now(), o = !1
   },
   ACTIVE_BOGO_PROMOTION_FETCH: function() {
     o = !0
   },
   ACTIVE_BOGO_PROMOTION_FETCH_FAIL: function() {
-    a.bogoPromotion = null, o = !1
+    s.bogoPromotion = null, o = !1
   },
   OUTBOUND_PROMOTION_NOTICE_DISMISS: function() {
-    if (0 === m.length) return !1;
+    if (0 === f.length) return !1;
     let e = _();
-    null != e && (f = e)
+    null != e && (m = e)
   },
   OUTBOUND_PROMOTIONS_SEEN: function() {
-    if (0 === m.length) return !1;
+    if (0 === f.length) return !1;
     let e = _();
-    null != e && (f = e, a.lastSeenOutboundPromotionStartDate = e)
+    null != e && (m = e, s.lastSeenOutboundPromotionStartDate = e)
   },
   LOGOUT: function() {
-    a = s(), d = !1, c = null, o = !1, u = null, m = []
+    s = l(), c = !1, d = null, o = !1, u = null, f = []
   }
 })

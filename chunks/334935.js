@@ -15,8 +15,8 @@ var n = r("252089"),
   s = r("344502"),
   l = new WeakMap,
   c = /auto|scroll/,
-  d = /^tb|vertical/,
-  f = /msie|trident/i.test(s.global.navigator && s.global.navigator.userAgent),
+  f = /^tb|vertical/,
+  d = /msie|trident/i.test(s.global.navigator && s.global.navigator.userAgent),
   D = function(e) {
     return parseFloat(e || "0")
   },
@@ -34,8 +34,8 @@ var n = r("252089"),
     if ((0, o.isHidden)(e)) return l.set(e, v), v;
     var r = getComputedStyle(e),
       n = (0, o.isSVG)(e) && e.ownerSVGElement && e.getBBox(),
-      u = !f && "border-box" === r.boxSizing,
-      s = d.test(r.writingMode || ""),
+      u = !d && "border-box" === r.boxSizing,
+      s = f.test(r.writingMode || ""),
       p = !n && c.test(r.overflowY || ""),
       C = !n && c.test(r.overflowX || ""),
       g = n ? 0 : D(r.paddingTop),
@@ -51,18 +51,18 @@ var n = r("252089"),
       x = y + F,
       k = A + b,
       P = C ? e.offsetHeight - k - e.clientHeight : 0,
-      R = p ? e.offsetWidth - x - e.clientWidth : 0,
-      S = n ? n.width : D(r.width) - (u ? w + x : 0) - R,
-      T = n ? n.height : D(r.height) - (u ? O + k : 0) - P,
-      j = S + w + R + x,
-      N = T + O + P + k,
-      M = (0, i.freeze)({
-        devicePixelContentBoxSize: h(Math.round(S * devicePixelRatio), Math.round(T * devicePixelRatio), s),
-        borderBoxSize: h(j, N, s),
-        contentBoxSize: h(S, T, s),
-        contentRect: new a.DOMRectReadOnly(m, g, S, T)
+      j = p ? e.offsetWidth - x - e.clientWidth : 0,
+      S = n ? n.width : D(r.width) - (u ? w + x : 0) - j,
+      R = n ? n.height : D(r.height) - (u ? O + k : 0) - P,
+      T = S + w + j + x,
+      M = R + O + P + k,
+      N = (0, i.freeze)({
+        devicePixelContentBoxSize: h(Math.round(S * devicePixelRatio), Math.round(R * devicePixelRatio), s),
+        borderBoxSize: h(T, M, s),
+        contentBoxSize: h(S, R, s),
+        contentRect: new a.DOMRectReadOnly(m, g, S, R)
       });
-    return l.set(e, M), M
+    return l.set(e, N), N
   },
   C = function(e, t, r) {
     var u = p(e, r),

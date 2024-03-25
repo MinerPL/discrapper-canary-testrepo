@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var i = n("627445"),
   s = n.n(i),
-  r = n("249654");
+  r = n("299039");
 
 function a(e) {
   s(e.length <= 2 || r.default.compare(e[0].id, e[e.length - 1].id) >= 0, "messages must be sorted in descending order.")

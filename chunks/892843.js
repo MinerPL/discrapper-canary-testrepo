@@ -1,15 +1,15 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
 var a = s("37983");
 s("884691");
 var n = s("77078"),
-  i = s("695421");
+  i = s("466645");
 
-function r(e) {
+function l(e) {
   let {
     children: t,
     ...s

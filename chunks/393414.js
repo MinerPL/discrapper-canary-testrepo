@@ -2,28 +2,28 @@
 let i, s, r;
 n.r(t), n.d(t, {
   transitionTo: function() {
-    return E
+    return m
   },
   transitionToGuild: function() {
     return p
   },
   currentRouteHasBackNavigation: function() {
-    return v
-  },
-  replaceWith: function() {
     return S
   },
-  getHistory: function() {
+  replaceWith: function() {
     return T
+  },
+  getHistory: function() {
+    return v
   },
   getLastRouteChangeSource: function() {
     return I
   },
   getLastRouteChangeSourceLocationStack: function() {
-    return C
+    return A
   },
   isValidFingerprintRoute: function() {
-    return A
+    return C
   },
   getFingerprintLocation: function() {
     return y
@@ -44,23 +44,23 @@ var a = n("294094"),
   u = n("877275"),
   d = n("49111");
 let c = new o.default("Routing/Utils"),
-  f = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
+  _ = [d.RelativeMarketingURLs.DEVELOPER_PORTAL];
 i = __OVERLAY__ ? (0, a.createMemoryHistory)() : (0, a.createBrowserHistory)();
-let _ = !1,
-  h = i.listen((e, t) => {
-    "REPLACE" !== t && (_ = !0, h())
+let f = !1,
+  E = i.listen((e, t) => {
+    "REPLACE" !== t && (f = !0, E())
   });
 
-function g() {
+function h() {
   return !l.ComponentDispatch.hasSubscribers(d.ComponentActions.MODAL_CLOSE) && (n("144747").default.close(), !0)
 }
 
-function m(e, t) {
-  return !!("string" == typeof e && f.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
+function g(e, t) {
+  return !!("string" == typeof e && _.some(t => e.startsWith(t))) && (c.log("".concat(t, " - route to external path ").concat(e)), window.dispatchEvent(new Event("beforeunload")), window.location[t](e), !0)
 }
 
-function E(e, t, n, a) {
-  !m(e, "assign") && (c.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
+function m(e, t, n, a) {
+  !g(e, "assign") && (c.log("transitionTo - Transitioning to ".concat(e)), null != n && (null == t ? t = {
     source: n
   } : t.source = n), null == t ? i.push(e) : i.push({
     pathname: e,
@@ -73,18 +73,18 @@ function p(e, t, n, i, s) {
     guildId: e,
     channelId: t,
     messageId: n
-  }))), E(d.Routes.CHANNEL(e, t, n), null != s ? s : null, i)
+  }))), m(d.Routes.CHANNEL(e, t, n), null != s ? s : null, i)
 }
 
-function v() {
+function S() {
   return null != s && u.ChannelBackNavigationSources.has(s)
 }
 
-function S(e, t, n) {
-  !m(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), s = n)
+function T(e, t, n) {
+  !g(e, "replace") && (c.log("Replacing route with ".concat(e)), "string" == typeof e ? i.replace(e, t) : i.replace(e), s = n)
 }
 
-function T() {
+function v() {
   return i
 }
 
@@ -92,11 +92,11 @@ function I() {
   return s
 }
 
-function C() {
+function A() {
   return r
 }
 
-function A(e) {
+function C(e) {
   if (null == e) {
     var t;
     e = null !== (t = i.location.pathname) && void 0 !== t ? t : ""
@@ -126,13 +126,13 @@ function y(e) {
 }
 
 function N() {
-  return _
+  return f
 }
 
 function R() {
-  g() && (s = null, i.goBack())
+  h() && (s = null, i.goBack())
 }
 
 function O() {
-  g() && (s = null, i.goForward())
+  h() && (s = null, i.goForward())
 }

@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return c
   },
   isStageActivity: function() {
-    return f
+    return _
   },
   shouldShowActivity: function() {
-    return _
+    return f
   }
 }), n("222007");
 var i = n("271938"),
@@ -55,11 +55,11 @@ function c(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   return (null == e ? void 0 : e.application_id) === o.STAGE_APPLICATION_ID
 }
 
-function _(e) {
+function f(e) {
   let t = c(e);
   if (null == t) return !1;
   let {

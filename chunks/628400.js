@@ -10,13 +10,13 @@ n.r(t), n.d(t, {
     return c
   },
   TableBody: function() {
-    return f
-  },
-  TableHeader: function() {
     return _
   },
+  TableHeader: function() {
+    return f
+  },
   Table: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -24,7 +24,7 @@ var i = n("37983"),
   r = n("999013"),
   a = n("605451"),
   o = n("577776"),
-  l = n("262417");
+  l = n("474496");
 
 function u(e) {
   return (0, i.jsx)(r.Cell, {
@@ -56,21 +56,21 @@ function c(e) {
   })
 }
 
-function f(e) {
+function _(e) {
   return (0, i.jsx)(r.TableBody, {
     ...e,
     className: l.body
   })
 }
 
-function _(e) {
+function f(e) {
   return (0, i.jsx)(r.TableHeader, {
     ...e,
     className: l.header
   })
 }
 
-function h(e) {
+function E(e) {
   let {
     title: t,
     header: n,

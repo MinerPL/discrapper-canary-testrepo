@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return g
   }
 }), n("424973");
 var a = n("884691"),
@@ -9,19 +9,19 @@ var a = n("884691"),
   s = n("669491"),
   i = n("77078"),
   r = n("462274"),
-  o = n("800762"),
-  u = n("760679"),
+  u = n("800762"),
+  o = n("760679"),
   d = n("242260"),
   c = n("315841"),
   f = n("52477"),
   h = n("553930"),
-  p = n("717482"),
-  m = n("827520");
+  m = n("717482"),
+  p = n("827520");
 let E = 1e3 / 60;
 
-function C(e, t, n, C) {
-  let g = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
-    S = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
+function g(e, t, n, g) {
+  let S = (0, i.useToken)(s.default.unsafe_rawColors.BRAND_500).hex(),
+    C = (0, i.useToken)(s.default.unsafe_rawColors.BLACK_500).hex(),
     _ = (0, i.useToken)(s.default.unsafe_rawColors.WHITE_500).hex(),
     I = a.useRef({}),
     T = a.useRef(new l.Interval),
@@ -41,16 +41,16 @@ function C(e, t, n, C) {
         if (0 === n.length) return;
         let f = t.current;
         if (null == f) return;
-        let m = f.getContext("2d");
-        if (null == m) return;
+        let p = f.getContext("2d");
+        if (null == p) return;
         let {
           width: E,
-          height: C
-        } = f.getBoundingClientRect(), g = [];
+          height: g
+        } = f.getBoundingClientRect(), S = [];
         n.forEach(e => {
-          let t = null != o.default.getVoiceStateForChannel(i, e.userId);
+          let t = null != u.default.getVoiceStateForChannel(i, e.userId);
           if (!t) {
-            g.push(e);
+            S.push(e);
             return
           }! function(e) {
             let {
@@ -61,13 +61,13 @@ function C(e, t, n, C) {
               fallbackColor: s,
               outlineColorDark: i,
               outlineColorLight: r,
-              linesDrawnAt: o,
-              streamerId: u,
+              linesDrawnAt: u,
+              streamerId: o,
               deadDrawables: d
             } = e;
             switch (t.type) {
               case c.DrawableType.LINE:
-                return (0, p.default)({
+                return (0, m.default)({
                   line: t,
                   context: n,
                   canvasWidth: a,
@@ -75,7 +75,7 @@ function C(e, t, n, C) {
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
-                  linesDrawnAt: o,
+                  linesDrawnAt: u,
                   deadDrawables: d
                 });
               case c.DrawableType.EMOJI_HOSE:
@@ -87,34 +87,34 @@ function C(e, t, n, C) {
                   fallbackColor: s,
                   outlineColorDark: i,
                   outlineColorLight: r,
-                  streamerId: u,
+                  streamerId: o,
                   deadDrawables: d
                 })
             }
           }({
             drawable: e,
-            context: m,
+            context: p,
             canvasWidth: E,
-            canvasHeight: C,
+            canvasHeight: g,
             fallbackColor: a,
             outlineColorDark: r,
             outlineColorLight: d,
             linesDrawnAt: l,
-            deadDrawables: g,
+            deadDrawables: S,
             streamerId: s
           })
-        }), g.length > 0 && (0, u.clearDrawables)(g, s)
+        }), S.length > 0 && (0, o.clearDrawables)(S, s)
       }({
         canvasRef: e,
         drawables: n,
-        fallbackColor: g,
+        fallbackColor: S,
         linesDrawnAt: I,
         streamerId: t,
-        outlineColorDark: S,
+        outlineColorDark: C,
         outlineColorLight: _,
-        channelId: C
+        channelId: g
       })
-    }, [e, C, g, S, _]);
+    }, [e, g, S, C, _]);
   a.useEffect(() => {
     let t = new ResizeObserver(() => {
       let t = e.current;
@@ -135,7 +135,7 @@ function C(e, t, n, C) {
   }, [e, v, n]);
   a.useEffect(() => {
     let e = T.current;
-    return d.default.addChangeListener(x), x(), (0, r.maybeFetchColors)(t.getAvatarURL(null, m.AVATAR_COLOR_AVATAR_SIZE)), () => {
+    return d.default.addChangeListener(x), x(), (0, r.maybeFetchColors)(t.getAvatarURL(null, p.AVATAR_COLOR_AVATAR_SIZE)), () => {
       d.default.removeChangeListener(x), e.stop()
     }
   })

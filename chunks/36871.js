@@ -23,8 +23,8 @@ function c(e) {
     p = void 0 === f ? l : f,
     m = e.referenceElement,
     h = e.onFirstUpdate,
-    _ = e.innerRef,
-    y = e.children,
+    y = e.innerRef,
+    _ = e.children,
     g = r.useContext(a.ManagerReferenceNodeContext),
     v = r.useState(null),
     b = v[0],
@@ -33,8 +33,8 @@ function c(e) {
     k = w[0],
     L = w[1];
   r.useEffect(function() {
-    (0, o.setRef)(_, b)
-  }, [_, b]);
+    (0, o.setRef)(y, b)
+  }, [y, b]);
   var D = r.useMemo(function() {
       return {
         placement: n,
@@ -69,5 +69,5 @@ function c(e) {
         update: O || u
       }
     }, [M, L, n, S, Y, O, x]);
-  return (0, o.unwrapArray)(y)(E)
+  return (0, o.unwrapArray)(_)(E)
 }

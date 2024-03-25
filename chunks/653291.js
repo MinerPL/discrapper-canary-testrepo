@@ -27,9 +27,9 @@ var a = n("37983"),
   C = n("26989"),
   A = n("27618"),
   M = n("712611"),
-  x = n("18494"),
-  v = n("162771"),
-  R = n("102985"),
+  v = n("18494"),
+  R = n("162771"),
+  x = n("102985"),
   L = n("697218"),
   O = n("834179"),
   b = n("689476"),
@@ -38,10 +38,10 @@ var a = n("37983"),
   F = n("701909"),
   D = n("751520"),
   U = n("158998"),
-  k = n("200745"),
-  P = n("49111"),
+  P = n("200745"),
+  k = n("49111"),
   w = n("782340"),
-  G = n("813069");
+  G = n("484354");
 let B = f("2015-05-15").local(),
   H = (0, h.makeLazy)({
     createPromise: () => n.el("201959").then(n.bind(n, "201959")),
@@ -71,7 +71,7 @@ let B = f("2015-05-15").local(),
     }, "display-nick-".concat(t, "-").concat(r.id)), (0, a.jsx)("span", {
       className: G.displayUsername,
       children: U.default.getUserTag(r, {
-        identifiable: R.default.enabled && R.default.hidePersonalInformation ? "never" : "always"
+        identifiable: x.default.enabled && x.default.hidePersonalInformation ? "never" : "always"
       })
     }, "display-username-".concat(t, "-").concat(r.id))]
   },
@@ -97,7 +97,7 @@ let B = f("2015-05-15").local(),
       }) : null]
     })
   },
-  K = e => {
+  z = e => {
     let t, n, {
       id: l,
       searchId: s,
@@ -135,37 +135,37 @@ let B = f("2015-05-15").local(),
       })]
     })
   },
-  z = e => (0, a.jsx)(K, {
+  K = e => (0, a.jsx)(z, {
     ...e,
     className: G.user,
     renderResult: V
   }),
-  Q = {
-    [P.SearchTokenTypes.FILTER_FROM]: {
+  W = {
+    [k.SearchTokenTypes.FILTER_FROM]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_FROM,
-      component: z
+      component: K
     },
-    [P.SearchTokenTypes.FILTER_MENTIONS]: {
+    [k.SearchTokenTypes.FILTER_MENTIONS]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_MENTIONS,
-      component: z
+      component: K
     },
-    [P.SearchTokenTypes.FILTER_HAS]: {
+    [k.SearchTokenTypes.FILTER_HAS]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_HAS
     },
-    [P.SearchTokenTypes.FILTER_FILE_TYPE]: {
+    [k.SearchTokenTypes.FILTER_FILE_TYPE]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_FILE_TYPE
     },
-    [P.SearchTokenTypes.FILTER_IN]: {
+    [k.SearchTokenTypes.FILTER_IN]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_CHANNELS,
-      component: e => (0, a.jsx)(K, {
+      component: e => (0, a.jsx)(z, {
         ...e,
         renderResult: Y
       })
     },
-    [P.SearchAutocompleteGroups.DATES]: {
+    [k.SearchAutocompleteGroups.DATES]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_DATES
     },
-    [P.SearchAutocompleteGroups.HISTORY]: {
+    [k.SearchAutocompleteGroups.HISTORY]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_HISTORY,
       groupTip(e) {
         let {
@@ -207,8 +207,8 @@ let B = f("2015-05-15").local(),
         })(s.text), [s.text]), E = h.map(e => {
           let t = e.getFullMatch();
           if ("" === t.trim()) return null;
-          let n = P.IS_SEARCH_FILTER_TOKEN.test(e.type),
-            l = P.IS_SEARCH_ANSWER_TOKEN.test(e.type);
+          let n = k.IS_SEARCH_FILTER_TOKEN.test(e.type),
+            l = k.IS_SEARCH_ANSWER_TOKEN.test(e.type);
           return f += t, (0, a.jsx)("span", {
             className: i({
               [G.filter]: n,
@@ -232,7 +232,7 @@ let B = f("2015-05-15").local(),
         })
       }
     },
-    [P.SearchAutocompleteGroups.SEARCH_OPTIONS]: {
+    [k.SearchAutocompleteGroups.SEARCH_OPTIONS]: {
       titleText: () => w.default.Messages.SEARCH_GROUP_HEADER_SEARCH_OPTIONS,
       groupTip: () => (0, a.jsx)(m.Tooltip, {
         text: w.default.Messages.LEARN_MORE,
@@ -241,7 +241,7 @@ let B = f("2015-05-15").local(),
           className: G.searchLearnMore,
           ...e,
           children: (0, a.jsx)(m.Anchor, {
-            href: F.default.getArticleURL(P.HelpdeskArticles.USING_SEARCH),
+            href: F.default.getArticleURL(k.HelpdeskArticles.USING_SEARCH),
             title: w.default.Messages.LEARN_MORE,
             children: (0, a.jsx)(O.default, {})
           })
@@ -277,7 +277,7 @@ let B = f("2015-05-15").local(),
       }
     }
   };
-class W extends l.PureComponent {
+class Q extends l.PureComponent {
   componentDidUpdate(e, t) {
     let {
       resultsState: n,
@@ -287,7 +287,7 @@ class W extends l.PureComponent {
     } = n, {
       resultsState: s
     } = e;
-    null != l.filter && null == s.mode.filter && a > 0 ? this.setSelectedIndex(0) : l.type === P.SearchPopoutModes.FILTER_ALL && s.mode.type !== l.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t)
+    null != l.filter && null == s.mode.filter && a > 0 ? this.setSelectedIndex(0) : l.type === k.SearchPopoutModes.FILTER_ALL && s.mode.type !== l.type ? this.setSelectedIndex(-1) : this.keepCurrentOptionSelected(e, t)
   }
   setSelectedIndex(e) {
     this.setState({
@@ -317,7 +317,7 @@ class W extends l.PureComponent {
         searchEverywhere: !0
       }),
       renderNoResults: () => null,
-      searchFavorites: s === P.FAVORITES && (0, k.isFavoriteSearchEnabled)()
+      searchFavorites: s === k.FAVORITES && (0, P.isFavoriteSearchEnabled)()
     })
   }
   constructor(...e) {
@@ -326,7 +326,7 @@ class W extends l.PureComponent {
       dateHint: (0, N.getRandomDateShortcut)(),
       selectedIndex: -1
     }, this.handleDateChange = e => {
-      this.setSearchQuery(e.format(P.SEARCH_DATE_FORMAT) + " ", !0)
+      this.setSearchQuery(e.format(k.SEARCH_DATE_FORMAT) + " ", !0)
     }, this.keepCurrentOptionSelected = (e, t) => {
       let {
         selectedIndex: n
@@ -392,7 +392,7 @@ class W extends l.PureComponent {
         s = 0;
       null != a.token ? s = a.token.start : (null == l ? void 0 : l.currentToken) != null && (s = l.currentToken.end);
       let i = null != a.token ? a.token.end : s;
-      j.ComponentDispatch.dispatch(P.ComponentActions.SET_SEARCH_QUERY, {
+      j.ComponentDispatch.dispatch(k.ComponentActions.SET_SEARCH_QUERY, {
         query: e,
         anchor: s,
         focus: i,
@@ -402,7 +402,7 @@ class W extends l.PureComponent {
       let {
         mode: e
       } = this.props.resultsState;
-      return e.type !== P.SearchPopoutModes.FILTER && e.type !== P.SearchPopoutModes.EMPTY && !D.showDatePicker(e.filter)
+      return e.type !== k.SearchPopoutModes.FILTER && e.type !== k.SearchPopoutModes.EMPTY && !D.showDatePicker(e.filter)
     }, this.renderDatePicker = () => (0, a.jsxs)("div", {
       className: G.datePicker,
       children: [(0, a.jsx)(H, {
@@ -424,7 +424,7 @@ class W extends l.PureComponent {
     }), this.handleHintClick = () => {
       this.setSearchQuery(this.state.dateHint, !0)
     }, this.performSearch = e => {
-      j.ComponentDispatch.dispatch(P.ComponentActions.PERFORM_SEARCH, null != e ? e : {})
+      j.ComponentDispatch.dispatch(k.ComponentActions.PERFORM_SEARCH, null != e ? e : {})
     }, this.renderAutocompletes = () => {
       let {
         selectedIndex: e
@@ -441,7 +441,7 @@ class W extends l.PureComponent {
         var r, o, u;
         let d, c;
         if (null == l || 0 === l.results.length) return null;
-        let f = null !== (r = Q[l.group]) && void 0 !== r ? r : {};
+        let f = null !== (r = W[l.group]) && void 0 !== r ? r : {};
         null != f.titleText && (c = "".concat(l.group, "-header"), d = (0, a.jsx)("div", {
           id: c,
           className: G.header,
@@ -451,8 +451,8 @@ class W extends l.PureComponent {
           E = null != h ? (0, a.jsx)(h, {
             searchId: n
           }) : null,
-          m = null !== (u = f.component) && void 0 !== u ? u : K,
-          p = s.type === P.SearchPopoutModes.FILTER_ALL;
+          m = null !== (u = f.component) && void 0 !== u ? u : z,
+          p = s.type === k.SearchPopoutModes.FILTER_ALL;
         return (0, a.jsxs)("ul", {
           role: "group",
           "aria-labelledby": c,
@@ -478,16 +478,16 @@ class W extends l.PureComponent {
   }
 }
 var X = l.forwardRef((e, t) => {
-  let [n, l, s] = (0, E.useStateFromStoresArray)([v.default, x.default, M.default], () => {
-    let e = v.default.getGuildId(),
-      t = x.default.getChannelId(),
+  let [n, l, s] = (0, E.useStateFromStoresArray)([R.default, v.default, M.default], () => {
+    let e = R.default.getGuildId(),
+      t = v.default.getChannelId(),
       n = null != e ? e : t;
     o(null != n, "SearchPopout.getStateFromStores - invalid searchId");
     let a = M.default.getState(n),
       l = D.getTotalResults(a.autocompletes);
     return [n, a, l]
   });
-  return (0, a.jsx)(W, {
+  return (0, a.jsx)(Q, {
     ...e,
     searchId: n,
     resultsState: l,

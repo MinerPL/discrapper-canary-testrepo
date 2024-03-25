@@ -38,14 +38,14 @@ function v() {
       })) || void 0 === r ? void 0 : r[0]) && (e = null != l ? l : null === (v = n.first()) || void 0 === v ? void 0 : null === (s = v.user) || void 0 === s ? void 0 : s.id)
     }
   }
-  l !== e && (l = e, t && C.emitChange())
+  l !== e && (l = e, t && S.emitChange())
 }
 let I = o.debounce(v, 300);
 
 function P() {
   return I(), !1
 }
-class S extends r.default.Store {
+class C extends r.default.Store {
   initialize() {
     this.waitFor(d.default, p.default, m.default, c.default, f.default), this.syncWith([d.default, c.default], P)
   }
@@ -53,8 +53,8 @@ class S extends r.default.Store {
     return a !== e && (a = e, v(!1)), null != l ? l : p.default.getId()
   }
 }
-S.displayName = "VideoSpeakerStore";
-let C = new S(s.default, {
+C.displayName = "VideoSpeakerStore";
+let S = new C(s.default, {
   AUDIO_SET_LOCAL_VIDEO_DISABLED: P
 });
-var g = C
+var g = S

@@ -62,20 +62,20 @@ var o = {
     if (e = o.resolve(e), e === (t = o.resolve(t))) return "";
     for (var r = 1; r < e.length && 47 === e.charCodeAt(r); ++r);
     for (var n = e.length, a = n - r, i = 1; i < t.length && 47 === t.charCodeAt(i); ++i);
-    for (var s = t.length - i, l = a < s ? a : s, c = -1, d = 0; d <= l; ++d) {
-      if (d === l) {
+    for (var s = t.length - i, l = a < s ? a : s, c = -1, f = 0; f <= l; ++f) {
+      if (f === l) {
         if (s > l) {
-          if (47 === t.charCodeAt(i + d)) return t.slice(i + d + 1);
-          if (0 === d) return t.slice(i + d)
-        } else a > l && (47 === e.charCodeAt(r + d) ? c = d : 0 === d && (c = 0));
+          if (47 === t.charCodeAt(i + f)) return t.slice(i + f + 1);
+          if (0 === f) return t.slice(i + f)
+        } else a > l && (47 === e.charCodeAt(r + f) ? c = f : 0 === f && (c = 0));
         break
       }
-      var f = e.charCodeAt(r + d);
-      if (f !== t.charCodeAt(i + d)) break;
-      47 === f && (c = d)
+      var d = e.charCodeAt(r + f);
+      if (d !== t.charCodeAt(i + f)) break;
+      47 === d && (c = f)
     }
     var D = "";
-    for (d = r + c + 1; d <= n; ++d)(d === n || 47 === e.charCodeAt(d)) && (0 === D.length ? D += ".." : D += "/..");
+    for (f = r + c + 1; f <= n; ++f)(f === n || 47 === e.charCodeAt(f)) && (0 === D.length ? D += ".." : D += "/..");
     return D.length > 0 ? D + t.slice(i + c) : (i += c, 47 === t.charCodeAt(i) && ++i, t.slice(i))
   },
   _makeLong: function(e) {
@@ -154,16 +154,16 @@ var o = {
     var n = e.charCodeAt(0),
       a = 47 === n;
     a ? (r.root = "/", t = 1) : t = 0;
-    for (var o = -1, i = 0, s = -1, l = !0, c = e.length - 1, d = 0; c >= t; --c) {
+    for (var o = -1, i = 0, s = -1, l = !0, c = e.length - 1, f = 0; c >= t; --c) {
       if (47 === (n = e.charCodeAt(c))) {
         if (!l) {
           i = c + 1;
           break
         }
         continue
-      } - 1 === s && (l = !1, s = c + 1), 46 === n ? -1 === o ? o = c : 1 !== d && (d = 1) : -1 !== o && (d = -1)
+      } - 1 === s && (l = !1, s = c + 1), 46 === n ? -1 === o ? o = c : 1 !== f && (f = 1) : -1 !== o && (f = -1)
     }
-    return -1 === o || -1 === s || 0 === d || 1 === d && o === s - 1 && o === i + 1 ? -1 !== s && (0 === i && a ? r.base = r.name = e.slice(1, s) : r.base = r.name = e.slice(i, s)) : (0 === i && a ? (r.name = e.slice(1, o), r.base = e.slice(1, s)) : (r.name = e.slice(i, o), r.base = e.slice(i, s)), r.ext = e.slice(o, s)), i > 0 ? r.dir = e.slice(0, i - 1) : a && (r.dir = "/"), r
+    return -1 === o || -1 === s || 0 === f || 1 === f && o === s - 1 && o === i + 1 ? -1 !== s && (0 === i && a ? r.base = r.name = e.slice(1, s) : r.base = r.name = e.slice(i, s)) : (0 === i && a ? (r.name = e.slice(1, o), r.base = e.slice(1, s)) : (r.name = e.slice(i, o), r.base = e.slice(i, s)), r.ext = e.slice(o, s)), i > 0 ? r.dir = e.slice(0, i - 1) : a && (r.dir = "/"), r
   },
   sep: "/",
   delimiter: ":",

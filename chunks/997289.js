@@ -5,5 +5,5 @@ n.r(t), n.d(t, {
   }
 });
 var l = n("884691"),
-  i = n("599110");
-let a = () => l.useContext(i.AnalyticsContext)
+  u = n("599110");
+let a = () => l.useContext(u.AnalyticsContext)

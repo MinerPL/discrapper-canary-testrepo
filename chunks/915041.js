@@ -1,8 +1,8 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("123090"),
   u = r("78914"),
   l = Object.assign || function(e) {
@@ -12,18 +12,18 @@ var n = r("884691"),
     }
     return e
   },
-  c = function(e) {
+  s = function(e) {
     var t = e.rgb,
       r = e.hsl,
       n = e.width,
       u = e.height,
-      c = e.onChange,
-      s = e.direction,
-      f = e.style,
+      s = e.onChange,
+      f = e.direction,
+      c = e.style,
       d = e.renderers,
       p = e.pointer,
       h = e.className,
-      b = (0, a.default)({
+      b = (0, o.default)({
         default: {
           picker: {
             position: "relative",
@@ -32,25 +32,25 @@ var n = r("884691"),
           },
           alpha: {
             radius: "2px",
-            style: f
+            style: c
           }
         }
       });
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: b.picker,
       className: "alpha-picker " + (void 0 === h ? "" : h)
-    }, o.createElement(i.Alpha, l({}, b.alpha, {
+    }, a.createElement(i.Alpha, l({}, b.alpha, {
       rgb: t,
       hsl: r,
       pointer: p,
       renderers: d,
-      onChange: c,
-      direction: s
+      onChange: s,
+      direction: f
     })))
   };
-c.defaultProps = {
+s.defaultProps = {
   width: "316px",
   height: "16px",
   direction: "horizontal",
   pointer: u.default
-}, (0, i.ColorWrap)(c)
+}, (0, i.ColorWrap)(s)

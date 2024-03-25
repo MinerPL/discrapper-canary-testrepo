@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   EMPTY_DISCOVERABLE_GUILDS_SECTION: function() {
-    return _
+    return g
   },
   default: function() {
-    return y
+    return D
   }
 }), n("222007"), n("424973");
-var i, r, s = n("627445"),
-  a = n.n(s),
+var i, s, r = n("627445"),
+  a = n.n(r),
   o = n("917351"),
   l = n.n(o),
   u = n("446674");
 n("233736");
-var c = n("913144"),
-  d = n("197231"),
-  f = n("271938"),
-  E = n("251013"),
-  h = n("49111"),
-  p = n("447621");
-(r = i || (i = {})).UNSET = "unset", r.FETCHING = "fetching", r.FAILED = "failed", r.SUCCEEDED = "succeeded";
-let _ = {
+var d = n("913144"),
+  c = n("197231"),
+  _ = n("271938"),
+  f = n("251013"),
+  E = n("49111"),
+  h = n("447621");
+(s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
+let g = {
     guilds: [],
     total: 0,
     offset: 0,
@@ -28,32 +28,32 @@ let _ = {
     loading: !1,
     isFirstLoad: !0
   },
-  S = {
-    [h.GuildDiscoverySections.FEATURED]: {
-      ..._
+  m = {
+    [E.GuildDiscoverySections.FEATURED]: {
+      ...g
     },
-    [h.GuildDiscoverySections.GAMES_YOU_PLAY]: {
-      ..._
+    [E.GuildDiscoverySections.GAMES_YOU_PLAY]: {
+      ...g
     },
-    [h.GuildDiscoverySections.MISC]: {
-      ..._
+    [E.GuildDiscoverySections.MISC]: {
+      ...g
     },
-    [h.GuildDiscoverySections.SEARCH]: {},
-    [p.DISCOVERY_ALL_CATEGORIES_ID]: {
-      ..._
+    [E.GuildDiscoverySections.SEARCH]: {},
+    [h.DISCOVERY_ALL_CATEGORIES_ID]: {
+      ...g
     }
   },
-  m = "",
-  T = !1,
-  g = "unset",
-  I = null,
-  C = p.DISCOVERY_ALL_CATEGORIES_ID,
-  v = p.DISCOVERY_ALL_CATEGORIES_ID,
-  A = null,
-  R = [],
-  N = (0, d.makeAnalyticsID)();
+  p = "",
+  S = !1,
+  T = "unset",
+  v = null,
+  I = h.DISCOVERY_ALL_CATEGORIES_ID,
+  A = h.DISCOVERY_ALL_CATEGORIES_ID,
+  C = null,
+  y = [],
+  N = (0, c.makeAnalyticsID)();
 
-function O(e) {
+function R(e) {
   return {
     id: e.id,
     name: e.name,
@@ -72,61 +72,61 @@ function O(e) {
     keywords: e.keywords
   }
 }
-class D extends u.default.Store {
+class O extends u.default.Store {
   initialize() {
-    this.waitFor(f.default)
+    this.waitFor(_.default)
   }
   isFetching() {
-    return T || null == I || null == E.default.lastFetched
+    return S || null == v || null == f.default.lastFetched
   }
   isFetchingSearch() {
-    return "fetching" === g
+    return "fetching" === T
   }
   hasSearchError() {
-    return "failed" === g
+    return "failed" === T
   }
   getDiscoverableGuilds() {
-    return S
+    return m
   }
   getCurrentCategoryId() {
-    return C
+    return I
   }
   getCurrentHomepageCategoryId() {
-    return v
-  }
-  getSearchIndex() {
     return A
   }
+  getSearchIndex() {
+    return C
+  }
   getMostRecentQuery() {
-    return m
+    return p
   }
   getTopCategoryCounts(e) {
     var t;
-    return null === (t = S[h.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
+    return null === (t = m[E.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
   }
   getSeenGuildIds() {
-    return R
+    return y
   }
   getLoadId() {
     return N
   }
 }
-D.displayName = "GuildDiscoveryStore";
-var y = new D(c.default, {
+O.displayName = "GuildDiscoveryStore";
+var D = new O(d.default, {
   GUILD_DISCOVERY_SEARCH_INIT: function(e) {
     let {
       index: t
     } = e;
-    A = t
+    C = t
   },
   GUILD_DISCOVERY_FETCH_START: function(e) {
     let {
       section: t
     } = e;
-    T = !0, S = {
-      ...S,
+    S = !0, m = {
+      ...m,
       [t]: {
-        ...S[t],
+        ...m[t],
         loading: !0
       }
     }
@@ -136,17 +136,17 @@ var y = new D(c.default, {
       guilds: t,
       section: n,
       total: i,
-      offset: r,
-      limit: s
+      offset: s,
+      limit: r
     } = e;
-    T = !1, I = Date.now(), N = (0, d.makeAnalyticsID)();
-    let a = l.map(t, O);
-    S = {
-      ...S,
+    S = !1, v = Date.now(), N = (0, c.makeAnalyticsID)();
+    let a = l.map(t, R);
+    m = {
+      ...m,
       [n]: {
         guilds: a,
-        offset: r,
-        limit: s,
+        offset: s,
+        limit: r,
         total: i,
         loading: !1,
         isFirstLoad: !1
@@ -157,10 +157,10 @@ var y = new D(c.default, {
     let {
       section: t
     } = e;
-    T = !1, S = {
-      ...S,
+    S = !1, m = {
+      ...m,
       [t]: {
-        ..._,
+        ...g,
         loading: !1
       }
     }
@@ -169,11 +169,11 @@ var y = new D(c.default, {
     let {
       categoryId: t
     } = e;
-    T = !0, S = {
-      ...S,
+    S = !0, m = {
+      ...m,
       [t]: {
-        ..._,
-        ...S[t],
+        ...g,
+        ...m[t],
         loading: !0
       }
     }
@@ -183,12 +183,12 @@ var y = new D(c.default, {
       categoryId: t,
       guilds: n
     } = e;
-    T = !1, I = Date.now();
-    let i = l.map(n, O);
-    S = {
-      ...S,
+    S = !1, v = Date.now();
+    let i = l.map(n, R);
+    m = {
+      ...m,
       [t]: {
-        ..._,
+        ...g,
         guilds: i,
         loading: !1,
         isFirstLoad: !1
@@ -199,10 +199,10 @@ var y = new D(c.default, {
     let {
       categoryId: t
     } = e;
-    T = !1, S = {
-      ...S,
+    S = !1, m = {
+      ...m,
       [t]: {
-        ..._,
+        ...g,
         loading: !1
       }
     }
@@ -212,68 +212,68 @@ var y = new D(c.default, {
     let {
       section: n,
       query: i,
-      categoryId: r
+      categoryId: s
     } = e;
-    a("search" === n, "This action only supports search it seems"), g = "fetching", S = {
-      ...S,
+    a("search" === n, "This action only supports search it seems"), T = "fetching", m = {
+      ...m,
       [n]: {
-        ...S[n],
+        ...m[n],
         [i]: {
-          ...S[n][i],
-          [r]: {
-            ...null === (t = S[n][i]) || void 0 === t ? void 0 : t[r],
+          ...m[n][i],
+          [s]: {
+            ...null === (t = m[n][i]) || void 0 === t ? void 0 : t[s],
             loading: !0
           }
         }
       }
-    }, m = i
+    }, p = i
   },
   GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS: function(e) {
     var t;
     let {
       section: n,
       guilds: i,
-      total: r,
-      offset: s,
+      total: s,
+      offset: r,
       limit: o,
       query: l,
       categoryId: u
     } = e;
     a("search" === n, "This action only supports search it seems");
-    let c = i.map(O);
-    S = {
-      ...S,
+    let d = i.map(R);
+    m = {
+      ...m,
       [n]: {
-        ...S[n],
+        ...m[n],
         [l]: {
-          ...S[n][l],
+          ...m[n][l],
           [u]: {
-            ...null === (t = S[n][l]) || void 0 === t ? void 0 : t[u],
-            guilds: c,
-            total: r,
-            offset: s,
+            ...null === (t = m[n][l]) || void 0 === t ? void 0 : t[u],
+            guilds: d,
+            total: s,
+            offset: r,
             limit: o,
             loading: !1
           }
         }
       }
-    }, m = l, g = "succeeded"
+    }, p = l, T = "succeeded"
   },
   GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function(e) {
     var t;
     let {
       section: n,
       query: i,
-      categoryId: r
+      categoryId: s
     } = e;
-    a("search" === n, "This action only supports search it seems"), g = "failed", S = {
-      ...S,
+    a("search" === n, "This action only supports search it seems"), T = "failed", m = {
+      ...m,
       [n]: {
-        ...S[n],
+        ...m[n],
         [i]: {
-          ...S[n][i],
-          [r]: {
-            ...null === (t = S[n][i]) || void 0 === t ? void 0 : t[r],
+          ...m[n][i],
+          [s]: {
+            ...null === (t = m[n][i]) || void 0 === t ? void 0 : t[s],
             loading: !1
           }
         }
@@ -285,33 +285,33 @@ var y = new D(c.default, {
       categoryId: t,
       isHomepage: n
     } = e;
-    C = t, n && (v = t)
+    I = t, n && (A = t)
   },
   GUILD_DISCOVERY_CLEAR_SEARCH: function() {
-    m = ""
+    p = ""
   },
   GUILD_DISCOVERY_SEARCH_UPDATE_COUNTS: function(e) {
     let {
       nbHits: t,
       facets: n,
       query: i
-    } = e, r = [];
+    } = e, s = [];
     if (null != n) {
-      var s;
-      let e = null !== (s = n["categories.id"]) && void 0 !== s ? s : {};
-      delete e[p.DEFAULT_DISCOVERY_CATEGORY_ID], r = Object.entries(e).map(e => {
+      var r;
+      let e = null !== (r = n["categories.id"]) && void 0 !== r ? r : {};
+      delete e[h.DEFAULT_DISCOVERY_CATEGORY_ID], s = Object.entries(e).map(e => {
         let [t, n] = e;
         return [parseInt(t, 10), n]
       }).sort((e, t) => t[1] - e[1]).slice(0, 7)
     }
-    S = {
-      ...S,
-      [h.GuildDiscoverySections.SEARCH]: {
-        ...S[h.GuildDiscoverySections.SEARCH],
+    m = {
+      ...m,
+      [E.GuildDiscoverySections.SEARCH]: {
+        ...m[E.GuildDiscoverySections.SEARCH],
         [i]: {
-          ...S[h.GuildDiscoverySections.SEARCH][i],
+          ...m[E.GuildDiscoverySections.SEARCH][i],
           resultCounts: [
-            [p.DISCOVERY_ALL_CATEGORIES_ID, Math.min(p.MAX_ALGOLIA_PAGINATOR_RESULTS, t)], ...r
+            [h.DISCOVERY_ALL_CATEGORIES_ID, Math.min(h.MAX_ALGOLIA_PAGINATOR_RESULTS, t)], ...s
           ]
         }
       }
@@ -321,12 +321,12 @@ var y = new D(c.default, {
     let {
       query: t
     } = e;
-    S = {
-      ...S,
-      [h.GuildDiscoverySections.SEARCH]: {
-        ...S[h.GuildDiscoverySections.SEARCH],
+    m = {
+      ...m,
+      [E.GuildDiscoverySections.SEARCH]: {
+        ...m[E.GuildDiscoverySections.SEARCH],
         [t]: {
-          ...S[h.GuildDiscoverySections.SEARCH][t],
+          ...m[E.GuildDiscoverySections.SEARCH][t],
           resultCounts: null
         }
       }
@@ -336,9 +336,9 @@ var y = new D(c.default, {
     let {
       guildId: t
     } = e;
-    !R.includes(t) && R.push(t)
+    !y.includes(t) && y.push(t)
   },
   GUILD_DISCOVERY_CLEAR_SEEN_GUILDS: function() {
-    R = []
+    y = []
   }
 })

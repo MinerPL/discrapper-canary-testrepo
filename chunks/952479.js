@@ -1,15 +1,15 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("37983");
 n("884691");
 var r = n("469563"),
   l = n("49097"),
-  u = n("75196"),
-  o = (0, r.replaceIcon)(function(e) {
+  s = n("75196"),
+  u = (0, r.replaceIcon)(function(e) {
     let {
       width: t = 16,
       height: n = 16,
@@ -17,7 +17,7 @@ var r = n("469563"),
       ...l
     } = e;
     return (0, i.jsxs)("svg", {
-      ...(0, u.default)(l),
+      ...(0, s.default)(l),
       width: t,
       height: n,
       viewBox: "0 0 24 24",

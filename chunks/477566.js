@@ -20,10 +20,10 @@ var s = n("551042"),
         onConfirm: u,
         onCancel: d,
         onCloseCallback: c,
-        secondaryConfirmText: f,
-        onConfirmSecondary: _,
-        className: h,
-        titleClassName: g
+        secondaryConfirmText: _,
+        onConfirmSecondary: f,
+        className: E,
+        titleClassName: h
       } = e;
       (0, s.openModal)(e => (0, i.jsx)(r.default, {
         ...e,
@@ -34,10 +34,10 @@ var s = n("551042"),
         cancelText: l,
         onConfirm: u,
         onCancel: d,
-        secondaryConfirmText: f,
-        onConfirmSecondary: _,
-        className: h,
-        titleClassName: g
+        secondaryConfirmText: _,
+        onConfirmSecondary: f,
+        className: E,
+        titleClassName: h
       }), {
         onCloseCallback: c
       })

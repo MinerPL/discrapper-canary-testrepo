@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var a = n("191225"),
   s = n("499031"),
-  i = n("601222"),
-  l = n("710768"),
+  l = n("601222"),
+  i = n("710768"),
   r = n("65810"),
   o = n("49111"),
   u = n("954016");
@@ -29,7 +29,7 @@ async function d(e, t, n) {
       } : null
     }
     case o.RPCEvents.THERMAL_STATE_UPDATE: {
-      let e = await (0, i.default)();
+      let e = await (0, l.default)();
       if (null == e) return null;
       let t = (0, s.default)(e);
       return {
@@ -37,7 +37,7 @@ async function d(e, t, n) {
       }
     }
     case o.RPCEvents.ORIENTATION_UPDATE: {
-      let e = l.default.isScreenLandscape();
+      let e = i.default.isScreenLandscape();
       if (null == e) return null;
       {
         let t = e ? u.ActivityScreenOrientation.LANDSCAPE : u.ActivityScreenOrientation.PORTRAIT,

@@ -17,15 +17,15 @@ var i = n("611221"),
 
 function f(e, t, f) {
   let E = t.getGuildId(),
-    M = (0, l.useStateFromStores)([r.default], () => null !== E && r.default.getIsItemFeatured({
+    m = (0, l.useStateFromStores)([r.default], () => null !== E && r.default.getIsItemFeatured({
       guildId: E,
       entity: e,
       entityType: i.GuildFeedItemTypes.MESSAGE
     }), [e, E]),
-    m = (0, u.default)(t, f);
-  if (e.isFirstMessageInForumPost(t)) return m;
+    M = (0, u.default)(t, f);
+  if (e.isFirstMessageInForumPost(t)) return M;
   let g = (0, o.canGuildFeedFeatureMessage)(t, e);
-  return g ? M ? (0, a.jsx)(s.MenuItem, {
+  return g ? m ? (0, a.jsx)(s.MenuItem, {
     id: "guild-feed-unfeature",
     label: c.default.Messages.GUILD_FEED_UNFEATURE_MESSAGE,
     action: () => null == E ? null : (0, s.openModalLazy)(async () => {

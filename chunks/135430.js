@@ -11,13 +11,13 @@ var t = s("37983"),
   i = s("305961"),
   o = s("957255"),
   _ = s("476765"),
-  d = s("867965"),
-  c = s("237053"),
+  c = s("867965"),
+  d = s("237053"),
   u = s("953371"),
   M = s("49111"),
   E = s("994428"),
   m = s("782340"),
-  T = s("311943");
+  T = s("642501");
 let g = () => [{
   id: 0,
   name: m.default.Messages.FORUM_UPSELL_DEMO_TAG_NAME_1
@@ -62,7 +62,7 @@ function S(e) {
             selectedItem: A,
             type: "top",
             onItemSelect: e => {
-              R(e), (0, d.trackForumUpsellModalClicked)({
+              R(e), (0, c.trackForumUpsellModalClicked)({
                 forumDemoId: e
               })
             },
@@ -72,7 +72,7 @@ function S(e) {
               children: e.name
             }, a))
           })
-        }), (0, t.jsx)(c.default, {
+        }), (0, t.jsx)(d.default, {
           id: A
         })]
       })

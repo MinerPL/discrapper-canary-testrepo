@@ -5,16 +5,16 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("884691"),
-  i = r("890503"),
-  u = r("784410"),
+  u = r("890503"),
+  o = r("784410"),
   l = (e, t) => {
-    let r = (0, i.default)("profile_effect_debug_controls"),
+    let r = (0, u.default)("profile_effect_debug_controls"),
       {
         id: l,
-        preset: o,
+        preset: i,
         increment: a,
         decrement: s
-      } = (0, u.default)(e);
+      } = (0, o.default)(e);
     return n.useEffect(() => {
       if (!r) return;
       let e = e => {
@@ -25,6 +25,6 @@ var n = r("884691"),
       }
     }, []), {
       id: null != l ? l : null,
-      preset: o
+      preset: i
     }
   }

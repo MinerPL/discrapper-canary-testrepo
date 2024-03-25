@@ -6,12 +6,12 @@ n.r(t), n.d(t, {
 }), n("222007"), n("424973");
 var a = n("862337"),
   s = n("913144"),
-  i = n("316272"),
-  l = n("462274"),
+  l = n("316272"),
+  i = n("462274"),
   r = n("697218"),
   o = n("760679"),
   u = n("827520");
-class d extends i.default {
+class d extends l.default {
   _initialize() {
     !__OVERLAY__ && (s.default.subscribe("SHARED_CANVAS_DRAW_LINE_POINT", this._handleDrawLinePoint), s.default.subscribe("VOICE_CHANNEL_EFFECT_SEND", this._handleVoiceChannelEffectReceived))
   }
@@ -24,14 +24,14 @@ class d extends i.default {
       lineId: n,
       points: a,
       userId: s,
-      streamerId: i,
+      streamerId: l,
       emojiHose: d
     } = e;
-    if (null != i && s !== (null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
+    if (null != l && s !== (null === (t = r.default.getCurrentUser()) || void 0 === t ? void 0 : t.id)) {
       if (null != a && null != n) {
         let e = r.default.getUser(s);
-        null != e && (0, l.maybeFetchColors)(e.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE)), (0, o.updateLinePoints)(n, s, i, a)
-      } else null != d && (d.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(d, s, i))
+        null != e && (0, i.maybeFetchColors)(e.getAvatarURL(null, u.AVATAR_COLOR_AVATAR_SIZE)), (0, o.updateLinePoints)(n, s, l, a)
+      } else null != d && (d.lastUpdatedAt = Date.now(), (0, o.updateEmojiHose)(d, s, l))
     }
   }
   constructor(...e) {

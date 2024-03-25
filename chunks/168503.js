@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return u
   }
 });
 var o = n("37983");
@@ -13,12 +13,12 @@ var s = n("79528"),
   l = n("850046"),
   d = n("229394");
 
-function C(e) {
+function u(e) {
   let {
     isWaitingForConnection: t,
     onWaitingForConnection: n,
-    expectedCallbackState: C,
-    onAuthToken: u,
+    expectedCallbackState: u,
+    onAuthToken: C,
     onError: c,
     onClose: L
   } = e, f = t ? (0, o.jsx)("img", {
@@ -36,8 +36,8 @@ function C(e) {
     platformType: r.PlatformTypes.CRUNCHYROLL,
     isWaitingForConnection: t,
     onWaitingForConnection: n,
-    expectedCallbackState: C,
-    onAuthToken: u,
+    expectedCallbackState: u,
+    onAuthToken: C,
     onError: c,
     onClose: L,
     img: f,

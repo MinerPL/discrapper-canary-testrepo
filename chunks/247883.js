@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return i
   }
 });
-var l, a = n("188904");
-l = class {
+var i, l = n("188904");
+i = class {
   getCurrentValue() {
     if (null == this.animationDetails) return this.value;
     let e = performance.now() - this.animationDetails.animationStart,
       t = this.value < this.animationDetails.lastValue ? 150 : 500;
-    return e > t ? (this.animationDetails = null, this.value) : this.value < this.animationDetails.lastValue ? a.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : a.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4)
+    return e > t ? (this.animationDetails = null, this.value) : this.value < this.animationDetails.lastValue ? l.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : l.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4)
   }
   animateTo(e) {
     this.isReset = !1, this.value !== e && (this.animationDetails = {

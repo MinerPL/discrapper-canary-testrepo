@@ -7,8 +7,8 @@ l.r(t), l.d(t, {
 var n = l("37983"),
   r = l("884691"),
   a = l("446674"),
-  o = l("77078"),
-  s = l("679653"),
+  s = l("77078"),
+  o = l("679653"),
   u = l("42203"),
   i = l("923959"),
   c = l("27618"),
@@ -16,7 +16,7 @@ var n = l("37983"),
   A = l("476765"),
   L = l("462392"),
   C = l("782340"),
-  _ = l("643286");
+  _ = l("315759");
 let f = e => {
   let {
     guildId: t,
@@ -33,14 +33,14 @@ let f = e => {
     } = e;
     return t
   }), [t]);
-  return (0, n.jsx)(o.FormItem, {
+  return (0, n.jsx)(s.FormItem, {
     className: _.channelSelector,
     required: !0,
-    children: (0, n.jsx)(o.SearchableSelect, {
+    children: (0, n.jsx)(s.SearchableSelect, {
       value: null == l ? void 0 : l.id,
       options: u.map(e => ({
         value: e.id,
-        label: (0, s.computeChannelName)(e, d.default, c.default, !0)
+        label: (0, o.computeChannelName)(e, d.default, c.default, !0)
       })),
       onChange: e => {
         let t = u.find(t => t.id === e);
@@ -55,7 +55,7 @@ function N(e) {
   let {
     action: t,
     triggerType: l,
-    guildId: s,
+    guildId: o,
     isEdit: i,
     onEditChannel: c,
     onClose: d,
@@ -65,39 +65,39 @@ function N(e) {
   let {
     headerText: v
   } = S;
-  return (0, n.jsxs)(o.ModalRoot, {
+  return (0, n.jsxs)(s.ModalRoot, {
     transitionState: N,
     "aria-labelledby": T,
-    size: o.ModalSize.SMALL,
-    children: [(0, n.jsxs)(o.ModalContent, {
+    size: s.ModalSize.SMALL,
+    children: [(0, n.jsxs)(s.ModalContent, {
       className: _.actionContentContainer,
-      children: [(0, n.jsx)(o.Heading, {
+      children: [(0, n.jsx)(s.Heading, {
         id: T,
         color: "header-primary",
         variant: "heading-lg/semibold",
         className: _.header,
         children: v
-      }), (0, n.jsx)(o.Text, {
+      }), (0, n.jsx)(s.Text, {
         color: "header-secondary",
         variant: "text-sm/normal",
         children: C.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_DESCRIPTION
       }), (0, n.jsx)(f, {
-        guildId: s,
+        guildId: o,
         channel: M,
         onSelectChannel: e => {
           null != e && O(e.id)
         }
-      }), null != h ? (0, n.jsx)(o.Text, {
+      }), null != h ? (0, n.jsx)(s.Text, {
         color: "text-danger",
         variant: "text-sm/normal",
         children: h
-      }) : (0, n.jsx)(o.Text, {
+      }) : (0, n.jsx)(s.Text, {
         color: "text-muted",
         variant: "text-sm/normal",
         children: C.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_CHANNEL_HELPER
       })]
-    }), (0, n.jsxs)(o.ModalFooter, {
-      children: [(0, n.jsx)(o.Button, {
+    }), (0, n.jsxs)(s.ModalFooter, {
+      children: [(0, n.jsx)(s.Button, {
         onClick: () => {
           if (null == I) {
             E(C.default.Messages.GUILD_AUTOMOD_ACTIONS_FLAG_TO_CHANNEL_MODAL_ERROR_NO_CHANNEL);
@@ -105,15 +105,15 @@ function N(e) {
           }
           c(I)
         },
-        color: o.Button.Colors.BRAND,
-        size: o.Button.Sizes.SMALL,
+        color: s.Button.Colors.BRAND,
+        size: s.Button.Sizes.SMALL,
         children: i ? C.default.Messages.EDIT : C.default.Messages.SAVE
-      }), (0, n.jsx)(o.Button, {
+      }), (0, n.jsx)(s.Button, {
         onClick: () => {
           d()
         },
-        color: o.Button.Colors.TRANSPARENT,
-        look: o.Button.Looks.LINK,
+        color: s.Button.Colors.TRANSPARENT,
+        look: s.Button.Looks.LINK,
         children: C.default.Messages.CANCEL
       })]
     })]

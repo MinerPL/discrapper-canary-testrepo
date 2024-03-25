@@ -15,6 +15,6 @@ function r(e) {
   let r = null === (t = e.member) || void 0 === t ? void 0 : t.joinedAt;
   if (null == r) return s.default.Messages.REQUEST_TO_SPEAK_MEMBER_INFO_NON_MEMBER;
   if (null != e.member && e.member.roles.length > 0) return null !== (a = null === (n = e.role) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : s.default.Messages.REQUEST_TO_SPEAK_MEMBER_INFO_MEMBER_ROLES;
-  let o = new Date().getTime() - Date.parse(r);
-  return o < i ? s.default.Messages.REQUEST_TO_SPEAK_MEMBER_INFO_NEW_MEMBER : s.default.Messages.REQUEST_TO_SPEAK_MEMBER_INFO_MEMBER
+  let u = new Date().getTime() - Date.parse(r);
+  return u < i ? s.default.Messages.REQUEST_TO_SPEAK_MEMBER_INFO_NEW_MEMBER : s.default.Messages.REQUEST_TO_SPEAK_MEMBER_INFO_MEMBER
 }

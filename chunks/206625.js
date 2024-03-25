@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
 var i = n("884691");
 
-function r(e, t) {
+function l(e, t) {
   let n = i.useRef(e);
   return i.useEffect(() => {
     function e(e) {

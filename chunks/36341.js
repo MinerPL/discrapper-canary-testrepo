@@ -1,67 +1,67 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return v
+    return _
   }
 });
-var n = l("37983"),
-  a = l("884691"),
-  s = l("414456"),
-  i = l.n(s),
-  r = l("627445"),
-  o = l.n(r),
-  u = l("446674"),
-  d = l("77078"),
-  c = l("450911"),
-  f = l("54239"),
-  m = l("819689"),
-  p = l("850391"),
-  T = l("884351"),
-  E = l("42203"),
-  _ = l("27618"),
-  S = l("158998"),
-  h = l("718422"),
-  I = l("49111"),
-  A = l("782340"),
-  g = l("22531");
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("627445"),
+  o = n.n(r),
+  u = n("446674"),
+  d = n("77078"),
+  c = n("450911"),
+  f = n("54239"),
+  p = n("819689"),
+  m = n("850391"),
+  h = n("884351"),
+  x = n("42203"),
+  E = n("27618"),
+  y = n("158998"),
+  g = n("718422"),
+  S = n("49111"),
+  C = n("782340"),
+  T = n("925063");
 
-function v(e) {
+function _(e) {
   let {
     user: t,
-    autoFocus: l = !1,
-    onClose: s,
-    className: r,
-    inputClassName: v
-  } = e, C = a.useRef(null), N = (0, u.useStateFromStores)([_.default], () => _.default.isBlocked(t.id)), y = a.useCallback(e => {
+    autoFocus: n = !1,
+    className: a,
+    inputClassName: r,
+    onSend: _
+  } = e, I = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), o(null != C.current, "Keypress on Input when not mounted");
-      let l = C.current.value.trim();
-      return (0, h.applyChatRestrictions)({
-        type: p.ChatInputTypes.NORMAL,
-        content: l,
+      e.preventDefault(), o(null != I.current, "Keypress on Input when not mounted");
+      let n = I.current.value.trim();
+      return (0, g.applyChatRestrictions)({
+        type: m.ChatInputTypes.NORMAL,
+        content: n,
         channel: null
       }).then(e => {
         let {
-          valid: n
+          valid: i
         } = e;
-        n && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
-          let t = E.default.getChannel(e);
-          o(null != t, "Newly created PrivateChannel is null"), m.default.sendMessage(t.id, T.default.parse(t, l)), (0, f.popLayer)()
-        }), null == s || s())
+        i && (c.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
+          let t = x.default.getChannel(e);
+          o(null != t, "Newly created PrivateChannel is null"), p.default.sendMessage(t.id, h.default.parse(t, n)), (0, f.popLayer)()
+        }), null == _ || _())
       }), !0
     }
-    e.which === I.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [s, t]), O = N ? A.default.Messages.QUICK_DM_BLOCKED : A.default.Messages.QUICK_DM_USER.format({
-    name: S.default.getName(t)
+    e.which === S.KeyboardKeys.SPACE && e.stopPropagation()
+  }, [t, _]), A = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
+    name: y.default.getName(t)
   });
-  return (0, n.jsx)(d.TextInput, {
-    className: r,
-    inputClassName: i(v, g.input),
-    inputRef: C,
-    autoFocus: l,
-    placeholder: O,
-    "aria-label": O,
-    onKeyPress: y,
-    disabled: N
+  return (0, i.jsx)(d.TextInput, {
+    className: a,
+    inputClassName: s(r, T.input),
+    inputRef: I,
+    autoFocus: n,
+    placeholder: A,
+    "aria-label": A,
+    onKeyPress: N,
+    disabled: v
   })
 }

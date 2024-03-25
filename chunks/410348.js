@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007"), n("808653");
 var a = n("917351"),
@@ -9,8 +9,8 @@ var a = n("917351"),
   s = n("446674"),
   i = n("913144"),
   r = n("990766"),
-  o = n("374014"),
-  u = n("706530");
+  u = n("374014"),
+  o = n("706530");
 let d = {},
   c = {},
   f = new Set;
@@ -18,10 +18,10 @@ let d = {},
 function h() {
   d = {}, c = {}
 }
-class p extends s.default.Store {
+class m extends s.default.Store {
   getPreviewURL(e, t, n) {
-    let a = (0, o.encodeStreamKey)({
-        streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+    let a = (0, u.encodeStreamKey)({
+        streamType: null != e ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
         guildId: e,
         channelId: t,
         ownerId: n
@@ -36,12 +36,12 @@ class p extends s.default.Store {
       guildId: t,
       channelId: n,
       ownerId: a
-    } = (0, o.decodeStreamKey)(e);
+    } = (0, u.decodeStreamKey)(e);
     return this.getPreviewURL(t, n, a)
   }
   getIsPreviewLoading(e, t, n) {
-    let a = (0, o.encodeStreamKey)({
-      streamType: null != e ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+    let a = (0, u.encodeStreamKey)({
+      streamType: null != e ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
       guildId: e,
       channelId: t,
       ownerId: n
@@ -49,8 +49,8 @@ class p extends s.default.Store {
     return f.has(a)
   }
 }
-p.displayName = "ApplicationStreamPreviewStore";
-var m = new p(i.default, {
+m.displayName = "ApplicationStreamPreviewStore";
+var p = new m(i.default, {
   CONNECTION_OPEN: h,
   LOGOUT: h,
   STREAM_PREVIEW_FETCH_START: function(e) {
@@ -92,8 +92,8 @@ var m = new p(i.default, {
         selfStream: s
       } = t;
       if (s) return e;
-      let i = (0, o.encodeStreamKey)({
-        streamType: null != a ? u.StreamTypes.GUILD : u.StreamTypes.CALL,
+      let i = (0, u.encodeStreamKey)({
+        streamType: null != a ? o.StreamTypes.GUILD : o.StreamTypes.CALL,
         guildId: a,
         channelId: l,
         ownerId: n

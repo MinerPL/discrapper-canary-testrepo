@@ -1,6 +1,2 @@
 "use strict";
-e.exports = {
-  channelInfoWrapper: "channelInfoWrapper__2162d",
-  channelSelectScrollerInner: "channelSelectScrollerInner__21055",
-  channelTitleWrapper: "channelTitleWrapper__15a4c"
-}
+e.exports = n.p + "c86d1e3ed620d49e41d6.svg"

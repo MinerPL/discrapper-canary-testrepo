@@ -1,10 +1,10 @@
 "use strict";
-r.r(t), r.d(t, {
+t.r(r), t.d(r, {
   default: function() {
     return a
   }
 });
-var a = (0, r("237436").defineColorTokens)({
+var a = (0, t("237436").defineColorTokens)({
   "android-navigation-bar-background": {
     dark: "primary.830",
     light: "primary.100"

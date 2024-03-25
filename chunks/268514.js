@@ -2,10 +2,10 @@
 r("781738"), Object.defineProperty(t, "__esModule", {
   value: !0
 }), t.isvalidColorString = t.red = t.getContrastingColor = t.isValidHex = t.toState = t.simpleCheckForValidColor = void 0;
-var n = a(r("853511")),
-  o = a(r("656280"));
+var n = o(r("853511")),
+  a = o(r("656280"));
 
-function a(e) {
+function o(e) {
   return e && e.__esModule ? e : {
     default: e
   }
@@ -18,16 +18,16 @@ t.simpleCheckForValidColor = function(e) {
   }), t === r && e
 };
 var i = t.toState = function(e, t) {
-  var r = e.hex ? (0, o.default)(e.hex) : (0, o.default)(e),
+  var r = e.hex ? (0, a.default)(e.hex) : (0, a.default)(e),
     n = r.toHsl(),
-    a = r.toHsv(),
+    o = r.toHsv(),
     i = r.toRgb(),
     u = r.toHex();
-  return 0 === n.s && (n.h = t || 0, a.h = t || 0), {
+  return 0 === n.s && (n.h = t || 0, o.h = t || 0), {
     hsl: n,
     hex: "000000" === u && 0 === i.a ? "transparent" : "#" + u,
     rgb: i,
-    hsv: a,
+    hsv: o,
     oldHue: e.h || t || n.h,
     source: e.source
   }
@@ -35,7 +35,7 @@ var i = t.toState = function(e, t) {
 t.isValidHex = function(e) {
   if ("transparent" === e) return !0;
   var t = "#" === String(e).charAt(0) ? 1 : 0;
-  return e.length !== 4 + t && e.length < 7 + t && (0, o.default)(e).isValid()
+  return e.length !== 4 + t && e.length < 7 + t && (0, a.default)(e).isValid()
 }, t.getContrastingColor = function(e) {
   if (!e) return "#fff";
   var t = i(e);
@@ -62,5 +62,5 @@ t.isValidHex = function(e) {
   }
 }, t.isvalidColorString = function(e, t) {
   var r = e.replace("\xb0", "");
-  return (0, o.default)(t + " (" + r + ")")._ok
+  return (0, a.default)(t + " (" + r + ")")._ok
 }

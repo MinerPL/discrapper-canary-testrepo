@@ -17,7 +17,7 @@ var n = s("37983"),
   h = s("843455"),
   N = s("53452"),
   m = s("352220"),
-  g = s("569683");
+  g = s("510590");
 let k = h.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
   f = () => [{
     route: (0, r.getLocalizedLink)(h.LocalizedLinks.TWITTER),

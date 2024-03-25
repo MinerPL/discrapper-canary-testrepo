@@ -7,9 +7,9 @@ i.r(e), i.d(e, {
 var l = i("37983");
 i("884691");
 var r = i("414456"),
-  n = i.n(r),
-  a = i("77078"),
-  s = i("741566"),
+  a = i.n(r),
+  n = i("77078"),
+  s = i("356296"),
   o = function(t) {
     let {
       className: e,
@@ -33,12 +33,12 @@ var r = i("414456"),
       },
       hasThread: p,
       isSystemMessage: v,
-      hasReply: N,
-      ...C
-    } = t, y = (0, l.jsx)(a.FocusRing, {
+      hasReply: C,
+      ...N
+    } = t, y = (0, l.jsx)(n.FocusRing, {
       ...w,
       children: (0, l.jsxs)("div", {
-        className: n(e, {
+        className: a(e, {
           [s.wrapper]: !0,
           [s.contentOnly]: r,
           [s.compact]: i,
@@ -46,10 +46,10 @@ var r = i("414456"),
           [s.zalgo]: o,
           [s.hasThread]: p,
           [s.isSystemMessage]: v,
-          [s.hasReply]: N
+          [s.hasReply]: C
         }),
         ref: j,
-        ...C,
+        ...N,
         role: "article",
         children: [c, h, (0, l.jsxs)("div", {
           className: s.contents,
@@ -60,7 +60,7 @@ var r = i("414456"),
         }) : null]
       })
     });
-    return d ? (0, l.jsx)(a.FocusBlock, {
+    return d ? (0, l.jsx)(n.FocusBlock, {
       children: y
     }) : y
   }

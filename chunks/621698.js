@@ -13,10 +13,10 @@ var s = n("37983"),
   u = n("811425"),
   d = n("102873"),
   c = n("738107"),
-  f = n("875978"),
-  E = n("350134"),
-  _ = n("550244"),
-  T = n("314934");
+  E = n("875978"),
+  f = n("350134"),
+  _ = n("159441"),
+  T = n("450076");
 let I = l.memo(function(e) {
     let t, n, {
         useChatFontScaling: l,
@@ -34,21 +34,21 @@ let I = l.memo(function(e) {
         isPendingMember: M,
         type: O
       } = e,
-      R = O === f.ReactionTypes.BURST,
-      L = (0, E.isMeReaction)(N, p, O),
-      v = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
+      R = O === E.ReactionTypes.BURST,
+      v = (0, f.isMeReaction)(N, p, O),
+      L = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
       P = l ? T : _,
       D = R ? S : m,
-      x = (0, c.getMinCounterWidth)(D, E.REACTION_MIN_WIDTH_DIGITS),
+      x = (0, c.getMinCounterWidth)(D, f.REACTION_MIN_WIDTH_DIGITS),
       y = {};
-    if (R && null != v) {
+    if (R && null != L) {
       var U;
       let {
         accentColor: e,
         backgroundColor: s,
         opacity: l
-      } = v, a = null !== (U = (0, r.hex2rgb)(null != s ? s : "", l)) && void 0 !== U ? U : "";
-      L && (y.borderColor = s), y.background = a, t = e, n = e
+      } = L, a = null !== (U = (0, r.hex2rgb)(null != s ? s : "", l)) && void 0 !== U ? U : "";
+      v && (y.borderColor = s), y.background = a, t = e, n = e
     }
     let j = {
       minWidth: x,
@@ -57,7 +57,7 @@ let I = l.memo(function(e) {
     };
     return (0, s.jsxs)("div", {
       className: i(P.reaction, P.reactionInner, I, {
-        [P.reactionMe]: L,
+        [P.reactionMe]: v,
         [P.reactionReadOnly]: C && !h && !M && !g
       }),
       style: y,
@@ -85,7 +85,7 @@ let I = l.memo(function(e) {
       e && !i && !o && d(() => {
         r(!0)
       })
-    }, [i, o]), _ = (0, u.useIsVisible)(c), T = (!i || o) && !t, m = T ? I : E.Reaction;
+    }, [i, o]), _ = (0, u.useIsVisible)(c), T = (!i || o) && !t, m = T ? I : f.Reaction;
     return (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)("div", {
         ref: _
@@ -94,7 +94,7 @@ let I = l.memo(function(e) {
         return (0, s.jsx)(m, {
           ...a,
           ...e
-        }, (t = e, "".concat(t.type === f.ReactionTypes.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
+        }, (t = e, "".concat(t.type === E.ReactionTypes.BURST ? "burst:" : "").concat(null !== (n = t.emoji.id) && void 0 !== n ? n : 0, ":").concat(t.emoji.name)))
       })]
     })
   })

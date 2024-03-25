@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return c
   },
   unparseTimestamp: function() {
-    return f
+    return _
   }
 });
 var i = n("866227"),
@@ -59,6 +59,6 @@ function c(e, t) {
   }
 }
 
-function f(e, t) {
+function _(e, t) {
   return null != t ? "<t:".concat(e, ":").concat(t, ">") : "<t:".concat(e, ">")
 }

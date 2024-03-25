@@ -12,18 +12,18 @@ var l = n("446674"),
   r = n("959097"),
   o = n("304198"),
   u = n("782340"),
-  d = n("829583");
+  d = n("291391");
 
 function c(e) {
   var t;
   let {
     message: n,
     compact: c,
-    usernameHook: f,
-    onClickThread: E,
+    usernameHook: E,
+    onClickThread: f,
     onClickViewThreads: _,
     onContextMenuThread: T
-  } = e, I = (0, a.default)(n), m = f(I), N = (0, l.useStateFromStores)([i.default], () => {
+  } = e, I = (0, a.default)(n), m = E(I), N = (0, l.useStateFromStores)([i.default], () => {
     var e;
     return i.default.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id)
   }), p = u.default.Messages.SYSTEM_MESSAGE_THREAD_CREATED.format({
@@ -31,7 +31,7 @@ function c(e) {
     actorHook: m,
     threadName: null !== (t = null == N ? void 0 : N.name) && void 0 !== t ? t : n.content,
     threadOnClick: {
-      onClick: E,
+      onClick: f,
       onContextMenu: T
     },
     viewThreadsOnClick: _

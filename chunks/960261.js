@@ -11,7 +11,7 @@ var a = s("37983"),
   r = s("452804"),
   o = s("915639"),
   d = s("782340"),
-  u = s("982110"),
+  u = s("295592"),
   c = s("390493"),
   S = l.default.connectStores([o.default], () => ({
     currentLocale: o.default.locale

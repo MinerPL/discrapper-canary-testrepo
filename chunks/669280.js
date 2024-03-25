@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
 var s = n("446674"),
@@ -21,7 +21,7 @@ class c extends s.default.Store {
   }
 }
 c.displayName = "PremiumPromoStore";
-var f = new c(l.default, {
+var E = new c(l.default, {
   CONNECTION_OPEN: function() {
     let e = d;
     return e !== (d = o.default.getFriendIDs().length >= 10 && i.default.extractTimestamp(r.default.getId()) < Date.now() - u)

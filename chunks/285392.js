@@ -5,7 +5,7 @@ r.r(t), r.d(t, {
   }
 });
 var n = r("465152"),
-  o = r("35067"),
-  a = r("876989"),
-  i = a.default && a.default.isTypedArray,
-  u = i ? (0, o.default)(i) : n.default
+  a = r("35067"),
+  o = r("876989"),
+  i = o.default && o.default.isTypedArray,
+  u = i ? (0, a.default)(i) : n.default

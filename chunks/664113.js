@@ -4,36 +4,36 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var i = n("37983"),
-  l = n("884691"),
-  s = n("77078"),
-  a = n("460029"),
+var l = n("37983"),
+  a = n("884691"),
+  i = n("77078"),
+  s = n("460029"),
   r = n("129722"),
-  o = n("723961"),
-  u = n("782340"),
-  d = n("341479"),
-  c = l.memo(function(e) {
+  u = n("723961"),
+  o = n("782340"),
+  d = n("340853"),
+  c = a.memo(function(e) {
     let {
       sound: t,
       volume: n,
-      disabled: l = !1,
+      disabled: a = !1,
       onChange: c
     } = e, {
       file: f
     } = (0, r.useAudioTrimmerStore)();
-    return (0, i.jsx)(s.FormSection, {
+    return (0, l.jsx)(i.FormSection, {
       className: d.section,
-      title: u.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_PREVIEW,
-      children: (0, i.jsxs)("div", {
+      title: o.default.Messages.SOUNDBOARD_SOUND_UPLOAD_MODAL_PREVIEW,
+      children: (0, l.jsxs)("div", {
         className: d.fakeInput,
-        children: [null != t && (0, i.jsx)(o.default, {
+        children: [null != t && (0, l.jsx)(u.default, {
           sound: t,
           volume: n,
-          disabled: l
-        }), null == t && null != f && (0, i.jsx)(a.default, {
+          disabled: a
+        }), null == t && null != f && (0, l.jsx)(s.default, {
           className: d.audioTrimmer,
           volume: n,
-          disabled: l,
+          disabled: a,
           onChange: c
         })]
       })

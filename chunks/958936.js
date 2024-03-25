@@ -10,15 +10,15 @@ var i = n("446674"),
   l = n("77078"),
   u = n("255397"),
   s = n("393414"),
-  d = n("957255"),
-  o = n("49111"),
-  r = n("782340");
+  o = n("957255"),
+  r = n("49111"),
+  d = n("782340");
 
 function c(e, t) {
-  let n = (0, i.useStateFromStores)([d.default], () => d.default.can(o.Permissions.CONNECT, e), [e]);
+  let n = (0, i.useStateFromStores)([o.default], () => o.default.can(r.Permissions.CONNECT, e), [e]);
   return n && e.isGuildVocal() ? (0, a.jsx)(l.MenuItem, {
     id: "open-chat",
-    label: r.default.Messages.OPEN_CHAT,
+    label: d.default.Messages.OPEN_CHAT,
     action: () => {
       u.default.updateChatOpen(e.id, !0), (0, s.transitionToGuild)(t.id, e.id)
     }

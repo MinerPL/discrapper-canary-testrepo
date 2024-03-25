@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return s
   }
 });
-var l = n("884691");
-let a = {
-    currentPreviewRef: l.createRef()
+var i = n("884691");
+let l = {
+    currentPreviewRef: i.createRef()
   },
-  s = l.createContext(a);
-var i = s
+  a = i.createContext(l);
+var s = a

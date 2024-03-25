@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return c
   }
 });
-var l = n("37983"),
-  a = n("884691"),
-  s = n("143435"),
-  i = n("77078"),
+var i = n("37983"),
+  l = n("884691"),
+  a = n("143435"),
+  s = n("77078"),
   r = n("599110"),
   o = n("195812"),
   u = n("49111"),
@@ -17,39 +17,39 @@ var l = n("37983"),
       href: t,
       className: n,
       iconClassName: c,
-      rel: m,
-      target: f,
-      mimeType: h,
-      fileName: p,
-      focusProps: g,
+      rel: f,
+      target: p,
+      mimeType: m,
+      fileName: h,
+      focusProps: x,
       onClick: E,
-      ...v
-    } = e, C = a.useMemo(() => s.designConfig.getDefaultLinkInterceptor(t), [t]), I = a.useCallback(e => {
+      ...y
+    } = e, g = l.useMemo(() => a.designConfig.getDefaultLinkInterceptor(t), [t]), S = l.useCallback(e => {
       r.default.track(u.AnalyticEvents.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
-        attachment_type: null == h ? void 0 : h[0],
-        attachment_subtype: null == h ? void 0 : h[1]
-      }), null == E || E(), null == C || C(e)
-    }, [C, h, E]);
-    return null != p ? (0, l.jsx)(i.Anchor, {
+        attachment_type: null == m ? void 0 : m[0],
+        attachment_subtype: null == m ? void 0 : m[1]
+      }), null == E || E(), null == g || g(e)
+    }, [g, m, E]);
+    return null != h ? (0, i.jsx)(s.Anchor, {
       href: t,
-      onClick: I,
-      target: f,
-      rel: m,
+      onClick: S,
+      target: p,
+      rel: f,
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
-      focusProps: g,
-      ...v,
-      children: p
-    }) : (0, l.jsx)(i.Anchor, {
+      focusProps: x,
+      ...y,
+      children: h
+    }) : (0, i.jsx)(s.Anchor, {
       href: t,
-      onClick: I,
-      target: f,
-      rel: m,
+      onClick: S,
+      target: p,
+      rel: f,
       className: n,
       "aria-label": d.default.Messages.DOWNLOAD,
-      focusProps: g,
-      ...v,
-      children: (0, l.jsx)(o.default, {
+      focusProps: x,
+      ...y,
+      children: (0, i.jsx)(o.default, {
         className: c
       })
     })

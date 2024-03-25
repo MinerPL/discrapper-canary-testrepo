@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   showGuildHeaderPopout: function() {
-    return l
+    return i
   },
   useGuildHeaderPopoutStore: function() {
     return r
@@ -11,10 +11,10 @@ var a = n("308503");
 let s = Object.freeze({
     isPopoutOpen: !1
   }),
-  i = (0, a.default)(e => s),
-  l = e => {
-    i.setState(() => ({
+  l = (0, a.default)(e => s),
+  i = e => {
+    l.setState(() => ({
       isPopoutOpen: e
     }))
   },
-  r = i
+  r = l

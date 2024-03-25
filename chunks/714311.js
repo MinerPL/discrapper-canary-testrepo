@@ -1,9 +1,9 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return a
+    return o
   }
 }), r("854508");
 var n = r("914655"),
-  o = "object" == typeof self && self && self.Object === Object && self,
-  a = n.default || o || Function("return this")()
+  a = "object" == typeof self && self && self.Object === Object && self,
+  o = n.default || a || Function("return this")()

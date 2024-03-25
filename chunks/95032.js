@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return f
   }
 });
-var l = n("37983");
+var i = n("37983");
 n("884691");
-var a = n("446674"),
-  s = n("292687"),
-  i = n("471671"),
+var l = n("446674"),
+  a = n("292687"),
+  s = n("471671"),
   r = n("2770"),
   o = n("45622"),
   u = n("563680"),
   d = n("981913"),
   c = n("782340"),
-  m = a.default.connectStores([i.default, s.default], e => {
+  f = l.default.connectStores([s.default, a.default], e => {
     let {
       node: t,
       guestWindow: n
@@ -26,10 +26,10 @@ var a = n("446674"),
     let {
       enabled: t,
       ...n
-    } = e, a = t ? c.default.Messages.EXIT_FULL_SCREEN : c.default.Messages.FULL_SCREEN, s = t ? o.default : r.default;
-    return (0, l.jsx)(d.default, {
-      label: a,
-      iconComponent: s,
+    } = e, l = t ? c.default.Messages.EXIT_FULL_SCREEN : c.default.Messages.FULL_SCREEN, a = t ? o.default : r.default;
+    return (0, i.jsx)(d.default, {
+      label: l,
+      iconComponent: a,
       ...n
     })
   })

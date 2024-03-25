@@ -1,26 +1,26 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return s
   }
 }), n("222007");
-var l = n("939563"),
-  i = n("385887"),
-  r = n("566819");
+var i = n("939563"),
+  l = n("385887"),
+  a = n("566819");
 
-function o(e) {
+function s(e) {
   let {
     apply: t,
     onChange: n
   } = e;
   return e.apply = n => {
-    t(n), i.SelectionUtils.isValid(e, e.selection) && (e.lastGoodSelection = e.selection)
+    t(n), l.SelectionUtils.isValid(e, e.selection) && (e.lastGoodSelection = e.selection)
   }, e.onChange = () => {
-    if (!i.SelectionUtils.isValid(e, e.selection) && (e.selection = function(e) {
+    if (!l.SelectionUtils.isValid(e, e.selection) && (e.selection = function(e) {
         let t;
-        if (i.SelectionUtils.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
+        if (l.SelectionUtils.isValid(e, e.lastGoodSelection)) t = e.lastGoodSelection;
         else {
-          let n = i.EditorUtils.end(e, []);
+          let n = l.EditorUtils.end(e, []);
           t = {
             anchor: n,
             focus: n
@@ -28,20 +28,20 @@ function o(e) {
         }
         return t
       }(e)), null != e.selection) {
-      let t, n, [o, s] = i.RangeUtils.edges(e.selection),
-        a = !1;
-      for (; null != o && null != (t = i.EditorUtils.getParentVoid(e, o)) && !r.SELECTABLE_VOIDS.includes(t[0].type);) o = i.EditorUtils.before(e, o, {
+      let t, n, [s, r] = l.RangeUtils.edges(e.selection),
+        o = !1;
+      for (; null != s && null != (t = l.EditorUtils.getParentVoid(e, s)) && !a.SELECTABLE_VOIDS.includes(t[0].type);) s = l.EditorUtils.before(e, s, {
         unit: "offset"
-      }), a = !0;
-      for (; null != s && null != (n = i.EditorUtils.getParentVoid(e, s)) && !r.SELECTABLE_VOIDS.includes(n[0].type);) s = i.EditorUtils.after(e, s, {
+      }), o = !0;
+      for (; null != r && null != (n = l.EditorUtils.getParentVoid(e, r)) && !a.SELECTABLE_VOIDS.includes(n[0].type);) r = l.EditorUtils.after(e, r, {
         unit: "offset"
-      }), a = !0;
-      a && null != o && null != s && (i.RangeUtils.isForward(e.selection) ? l.SlateTransforms.select(e, {
-        anchor: o,
-        focus: s
-      }) : l.SlateTransforms.select(e, {
+      }), o = !0;
+      o && null != s && null != r && (l.RangeUtils.isForward(e.selection) ? i.SlateTransforms.select(e, {
         anchor: s,
-        focus: o
+        focus: r
+      }) : i.SlateTransforms.select(e, {
+        anchor: r,
+        focus: s
       }))
     }
     n()

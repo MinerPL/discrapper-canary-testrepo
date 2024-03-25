@@ -21,9 +21,9 @@ var s, a, l, i, r, o, u = n("37983"),
   E = n("145131"),
   g = n("49111"),
   S = n("782340"),
-  A = n("816456");
+  T = n("778548");
 (r = a || (a = {})).CENTER = "center", r.LEFT = "left", (o = l || (l = {})).TOP = "top", o.MIDDLE = "middle";
-class _ extends d.PureComponent {
+class A extends d.PureComponent {
   componentDidMount() {
     let {
       uniqueId: e
@@ -50,25 +50,25 @@ class _ extends d.PureComponent {
       onClickSkipAll: r
     } = this.props, o = "left" === t || n, d = "center" === t || !o;
     return (0, u.jsxs)(C.Dialog, {
-      className: f(A.popoutRoot, l),
+      className: f(T.popoutRoot, l),
       children: [null != e && (0, u.jsx)(E.default, {
-        className: A.mediaContainer,
+        className: T.mediaContainer,
         justify: o ? E.default.Justify.START : E.default.Justify.CENTER,
         children: e()
       }), (0, u.jsx)(C.H, {
         className: f({
-          [A.titleCenter]: d,
-          [A.titleLeft]: o
+          [T.titleCenter]: d,
+          [T.titleLeft]: o
         }),
         children: s
       }), (0, u.jsx)("string" == typeof a ? "p" : "div", {
         className: f({
-          [A.bodyCenter]: d,
-          [A.bodyLeft]: o
+          [T.bodyCenter]: d,
+          [T.bodyLeft]: o
         }),
         children: a
       }), (0, u.jsxs)(E.default, {
-        className: A.buttonContainer,
+        className: T.buttonContainer,
         justify: o ? E.default.Justify.BETWEEN : E.default.Justify.CENTER,
         children: [(0, u.jsx)(C.Button, {
           size: C.ButtonSizes.SMALL,
@@ -79,7 +79,7 @@ class _ extends d.PureComponent {
           look: C.Button.Looks.BLANK,
           onClick: r,
           color: (0, h.isThemeLight)(i) ? C.Button.Colors.PRIMARY : C.Button.Colors.WHITE,
-          className: o ? A.buttonSkipLeftAlign : A.buttonSkipCenterAlign,
+          className: o ? T.buttonSkipLeftAlign : T.buttonSkipCenterAlign,
           children: S.default.Messages.SKIP_ALL_TIPS
         })]
       })]
@@ -142,19 +142,19 @@ class _ extends d.PureComponent {
         arrowAlignment: l,
         renderMedia: i
       } = this.props, r = null != i;
-      return (0, u.jsx)(_, {
+      return (0, u.jsx)(A, {
         ...this.props,
         className: f({
-          [A.bottom]: "bottom" === n,
-          [A.contentNarrowNoMedia]: !a && !r,
-          [A.contentNarrowWithMedia]: !a && r,
-          [A.contentWideNoMedia]: a && !r,
-          [A.contentWideWithMedia]: a && r,
-          [A.right]: "right" === n,
-          [A.top]: "top" === n,
-          [A.left]: "left" === n,
-          [A.arrowAlignmentTop]: "top" === l,
-          [A.arrowAlignmentMiddle]: "middle" === l,
+          [T.bottom]: "bottom" === n,
+          [T.contentNarrowNoMedia]: !a && !r,
+          [T.contentNarrowWithMedia]: !a && r,
+          [T.contentWideNoMedia]: a && !r,
+          [T.contentWideWithMedia]: a && r,
+          [T.right]: "right" === n,
+          [T.top]: "top" === n,
+          [T.left]: "left" === n,
+          [T.arrowAlignmentTop]: "top" === l,
+          [T.arrowAlignmentMiddle]: "middle" === l,
           "force-theme": null != s
         }, (0, m.getThemeClass)(s)),
         onClickComplete: () => this.onClickComplete(t),

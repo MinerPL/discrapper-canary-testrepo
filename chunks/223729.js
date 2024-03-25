@@ -5,15 +5,15 @@ s.r(t), s.d(t, {
   }
 }), s("424973");
 var a = s("446674"),
-  n = s("648747"),
-  l = s("161188"),
+  l = s("648747"),
+  n = s("161188"),
   i = s("42203"),
   r = s("49111");
 
 function o(e) {
-  return (0, a.useStateFromStoresArray)([l.default, i.default], () => {
+  return (0, a.useStateFromStoresArray)([n.default, i.default], () => {
     var t;
-    let s = (null !== (t = l.default.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map(e => i.default.getChannel(e)).filter(t => null == t || t.id !== e.rulesChannelId),
+    let s = (null !== (t = n.default.getTopChannelIds(e.id)) && void 0 !== t ? t : []).map(e => i.default.getChannel(e)).filter(t => null == t || t.id !== e.rulesChannelId),
       a = [],
       o = 0;
     return s.forEach(e => {
@@ -22,6 +22,6 @@ function o(e) {
         o++
       }
       a.length < 5 && !a.includes(e) && a.push(e)
-    }), a.sort((t, s) => ((0, n.canChannelBeDefault)(e.id, s.id) ? 1 : 0) - ((0, n.canChannelBeDefault)(e.id, t.id) ? 1 : 0)), a
+    }), a.sort((t, s) => ((0, l.canChannelBeDefault)(e.id, s.id) ? 1 : 0) - ((0, l.canChannelBeDefault)(e.id, t.id) ? 1 : 0)), a
   })
 }

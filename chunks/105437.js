@@ -1,39 +1,39 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var a = n("884691"),
   s = n("386411"),
-  i = n.n(s),
-  l = n("597755"),
-  r = n.n(l),
+  l = n.n(s),
+  i = n("597755"),
+  r = n.n(i),
   o = n("446674"),
   u = n("952451"),
   d = n("385649"),
   c = n("27618"),
   f = n("31957"),
   E = n("773336"),
-  _ = n("50885"),
-  h = n("69927"),
+  h = n("50885"),
+  _ = n("69927"),
   C = n("49111"),
-  I = n("782340");
-let T = new Set(["Blink", "Gecko", "WebKit"]),
-  S = C.NOOP;
-if (E.isPlatformEmbedded) S = e => _.default.setBadge(e);
-else if (T.has(r.layout)) {
-  let e = new i({
+  S = n("782340");
+let I = new Set(["Blink", "Gecko", "WebKit"]),
+  m = C.NOOP;
+if (E.isPlatformEmbedded) m = e => h.default.setBadge(e);
+else if (I.has(r.layout)) {
+  let e = new l({
     animation: "none"
   });
-  S = t => {
+  m = t => {
     try {
-      (0, h.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
+      (0, _.setPageTitleNotificationCount)(t), e.badge(-1 === t ? "•" : t)
     } catch (e) {}
   }
 }
 
-function m() {
+function p() {
   let e = (0, o.useStateFromStores)([f.default], () => f.default.hasIncomingCalls()),
     t = (0, o.useStateFromStores)([u.default, c.default, d.default], () => {
       let e = u.default.getTotalMentionCount(),
@@ -45,15 +45,15 @@ function m() {
     });
   a.useEffect(() => {
     if (!e) return;
-    let t = _.default.bounceDock("critical"),
-      n = (0, h.flashPageTitle)({
-        messages: [I.default.Messages.INCOMING_CALL],
+    let t = h.default.bounceDock("critical"),
+      n = (0, _.flashPageTitle)({
+        messages: [S.default.Messages.INCOMING_CALL],
         count: 50
       });
     return () => {
       null == t || t(), n()
     }
   }, [e]), a.useEffect(() => {
-    S(t)
-  }, [t]), a.useEffect(() => () => S(0), [])
+    m(t)
+  }, [t]), a.useEffect(() => () => m(0), [])
 }

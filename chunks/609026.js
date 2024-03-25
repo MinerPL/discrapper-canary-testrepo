@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   MenuSearchControl: function() {
-    return h
+    return E
   }
 });
 var i = n("37983"),
@@ -13,18 +13,18 @@ var i = n("37983"),
   u = n("242670"),
   d = n("945330"),
   c = n("229915"),
-  f = n("782340"),
-  _ = n("571271");
-let h = s.forwardRef(function(e, t) {
-  var n, r, h;
+  _ = n("782340"),
+  f = n("523634");
+let E = s.forwardRef(function(e, t) {
+  var n, r, E;
   let {
-    query: g,
-    onChange: m,
-    loading: E = !1,
+    query: h,
+    onChange: g,
+    loading: m = !1,
     disabled: p = !1,
-    placeholder: v = f.default.Messages.SEARCH,
-    "aria-label": S
-  } = e, T = s.useRef(null), I = s.useRef(null);
+    placeholder: S = _.default.Messages.SEARCH,
+    "aria-label": T
+  } = e, v = s.useRef(null), I = s.useRef(null);
   s.useImperativeHandle(t, () => ({
     focus: () => {
       var e;
@@ -36,17 +36,17 @@ let h = s.forwardRef(function(e, t) {
     },
     activate: () => !1
   }), []);
-  let C = (n = g, r = E, h = m, r ? (0, i.jsx)("div", {
-    className: _.iconContainer,
+  let A = (n = h, r = m, E = g, r ? (0, i.jsx)("div", {
+    className: f.iconContainer,
     children: (0, i.jsx)(u.Spinner, {
       type: u.Spinner.Type.SPINNING_CIRCLE,
-      className: a(_.icon)
+      className: a(f.icon)
     })
   }) : n.length > 0 ? (0, i.jsx)(o.Clickable, {
-    "aria-label": f.default.Messages.SEARCH_CLEAR,
-    className: a(_.iconContainer, _.iconClickable),
+    "aria-label": _.default.Messages.SEARCH_CLEAR,
+    className: a(f.iconContainer, f.iconClickable),
     onClick: e => {
-      e.stopPropagation(), h("")
+      e.stopPropagation(), E("")
     },
     onMouseDown: e => {
       e.preventDefault(), e.stopPropagation()
@@ -62,21 +62,21 @@ let h = s.forwardRef(function(e, t) {
     children: (0, i.jsx)(d.default, {
       width: 18,
       height: 18,
-      className: _.icon,
-      "aria-label": f.default.Messages.CLOSE
+      className: f.icon,
+      "aria-label": _.default.Messages.CLOSE
     })
   }) : (0, i.jsx)("div", {
-    className: _.iconContainer,
+    className: f.iconContainer,
     children: (0, i.jsx)(c.default, {
       width: 18,
       height: 18,
-      className: _.icon,
-      "aria-label": f.default.Messages.SEARCH
+      className: f.icon,
+      "aria-label": _.default.Messages.SEARCH
     })
   }));
   return (0, i.jsx)(l.FocusRing, {
     focusTarget: I,
-    ringTarget: T,
+    ringTarget: v,
     offset: {
       top: 2,
       bottom: 2,
@@ -84,19 +84,19 @@ let h = s.forwardRef(function(e, t) {
       right: 4
     },
     children: (0, i.jsxs)("div", {
-      className: _.container,
-      ref: T,
+      className: f.container,
+      ref: v,
       children: [(0, i.jsx)("input", {
         role: "searchbox",
-        "aria-busy": E,
+        "aria-busy": m,
         ref: I,
-        className: _.input,
-        value: g,
-        onChange: e => m(e.currentTarget.value),
-        "aria-label": S,
-        placeholder: v,
+        className: f.input,
+        value: h,
+        onChange: e => g(e.currentTarget.value),
+        "aria-label": T,
+        placeholder: S,
         disabled: p
-      }), C]
+      }), A]
     })
   })
 })

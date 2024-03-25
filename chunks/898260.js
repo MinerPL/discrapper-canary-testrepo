@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return d
   }
 });
-var r = n("37983"),
-  a = n("884691"),
-  s = n("414456"),
-  i = n.n(s),
-  l = n("841559"),
-  u = n("782340"),
-  c = n("359027"),
-  o = a.forwardRef(function(e, t) {
+var i = n("37983"),
+  l = n("884691"),
+  a = n("414456"),
+  s = n.n(a),
+  r = n("841559"),
+  o = n("782340"),
+  u = n("101439"),
+  d = l.forwardRef(function(e, t) {
     let {
       className: n,
-      contentClassName: a,
-      isUnread: s,
-      children: o,
-      id: d,
+      contentClassName: l,
+      isUnread: a,
+      children: d,
+      id: c,
       role: f,
-      "aria-label": E
+      "aria-label": p
     } = e;
-    return (0, r.jsxs)("div", {
-      className: i(n, {
-        [c.divider]: !0,
-        [c.isUnread]: s,
-        [c.hasContent]: null != o
+    return (0, i.jsxs)("div", {
+      className: s(n, {
+        [u.divider]: !0,
+        [u.isUnread]: a,
+        [u.hasContent]: null != d
       }),
       ref: t,
-      id: d,
+      id: c,
       role: f,
-      "aria-label": E,
-      children: [null != o ? (0, r.jsx)("span", {
-        className: i(c.content, a),
-        children: o
-      }) : null, s ? (0, r.jsxs)("span", {
-        className: c.unreadPill,
-        children: [(0, r.jsx)(l.default, {
-          foreground: c.unreadPillCapStroke,
-          className: c.unreadPillCap
-        }), u.default.Messages.NEW]
+      "aria-label": p,
+      children: [null != d ? (0, i.jsx)("span", {
+        className: s(u.content, l),
+        children: d
+      }) : null, a ? (0, i.jsxs)("span", {
+        className: u.unreadPill,
+        children: [(0, i.jsx)(r.default, {
+          foreground: u.unreadPillCapStroke,
+          className: u.unreadPillCap
+        }), o.default.Messages.NEW]
       }) : null]
     })
   })

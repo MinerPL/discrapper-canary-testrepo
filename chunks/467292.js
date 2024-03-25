@@ -1,17 +1,17 @@
 "use strict";
 n.r(e), n.d(e, {
   PurchaseTokenAuthState: function() {
-    return i
+    return r
   },
   default: function() {
     return _
   }
 });
-var u, i, r = n("446674"),
+var i, r, u = n("446674"),
   l = n("913144"),
   a = n("736978"),
   o = n("619443");
-(u = i || (i = {}))[u.UNKNOWN = 0] = "UNKNOWN", u[u.PENDING = 1] = "PENDING", u[u.SUCCESS = 2] = "SUCCESS", u[u.ERROR = 3] = "ERROR";
+(i = r || (r = {}))[i.UNKNOWN = 0] = "UNKNOWN", i[i.PENDING = 1] = "PENDING", i[i.SUCCESS = 2] = "SUCCESS", i[i.ERROR = 3] = "ERROR";
 let s = 0,
   c = null,
   S = null;
@@ -26,7 +26,7 @@ function d(t) {
 function E() {
   s = 0, c = null, S = null
 }
-class f extends r.default.Store {
+class f extends u.default.Store {
   get purchaseTokenAuthState() {
     return s
   }

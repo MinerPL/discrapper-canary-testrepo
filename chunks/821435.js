@@ -21,8 +21,8 @@ var l = a("37983"),
   I = a("93550"),
   _ = a("267567"),
   x = a("393414"),
-  v = a("716214"),
-  S = a("488464"),
+  S = a("716214"),
+  v = a("488464"),
   C = a("998716"),
   N = a("42203"),
   p = a("957255"),
@@ -36,9 +36,9 @@ var l = a("37983"),
   R = a("154925"),
   b = a("49111"),
   G = a("515631"),
-  O = a("745049"),
-  y = a("782340"),
-  H = a("53176");
+  y = a("745049"),
+  O = a("782340"),
+  H = a("93286");
 
 function k(e) {
   let {
@@ -61,9 +61,9 @@ function k(e) {
   }, []);
   let I = r,
     _ = "header-secondary";
-  return d ? (I = y.default.Messages.STAGE_CHANNEL_LIVE_NOW, _ = "text-positive") : c ? (I = y.default.Messages.STARTING_SOON, _ = "text-brand") : f ? (I = h > 0 ? y.default.Messages.STARTING_IN_MINUTES.format({
+  return d ? (I = O.default.Messages.STAGE_CHANNEL_LIVE_NOW, _ = "text-positive") : c ? (I = O.default.Messages.STARTING_SOON, _ = "text-brand") : f ? (I = h > 0 ? O.default.Messages.STARTING_IN_MINUTES.format({
     minutes: h
-  }) : y.default.Messages.STARTING_SOON, _ = "text-brand") : null != o && "" !== o && (I = y.default.Messages.START_DATE_TO_END_DATE.format({
+  }) : O.default.Messages.STARTING_SOON, _ = "text-brand") : null != o && "" !== o && (I = O.default.Messages.START_DATE_TO_END_DATE.format({
     start: r,
     end: o
   })), (0, l.jsxs)("div", {
@@ -93,8 +93,8 @@ function U(e) {
     isCollapsedSize: s,
     onEventClick: i
   } = e, d = (0, r.useStateFromStores)([p.default], () => p.default.can(b.Permissions.CONNECT, a)), o = n.useCallback(() => {
-    null != a && null != a.getGuildId() && d && ((0, v.connectAndOpen)(a), (0, x.transitionToGuild)(a.getGuildId(), a.id))
-  }, [a, d]), c = (0, I.default)(t), f = t.entity_type === O.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? y.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : y.default.Messages.JOIN;
+    null != a && null != a.getGuildId() && d && ((0, S.connectAndOpen)(a), (0, x.transitionToGuild)(a.getGuildId(), a.id))
+  }, [a, d]), c = (0, I.default)(t), f = t.entity_type === y.GuildScheduledEventEntityTypes.STAGE_INSTANCE ? O.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : O.default.Messages.JOIN;
   if (null == t.image || s) return null != a && d ? (0, l.jsx)("div", {
     className: H.eventJoinContainer,
     children: (0, l.jsx)(u.Button, {
@@ -194,8 +194,8 @@ function B(e) {
       user: t
     } = e;
     return t
-  }), [c]), I = (0, r.useStateFromStores)([S.default], () => {
-    if (null != c && c.type === d.ChannelTypes.GUILD_STAGE_VOICE) return S.default.getParticipantCount(null == c ? void 0 : c.id, C.StageChannelParticipantNamedIndex.AUDIENCE)
+  }), [c]), I = (0, r.useStateFromStores)([v.default], () => {
+    if (null != c && c.type === d.ChannelTypes.GUILD_STAGE_VOICE) return v.default.getParticipantCount(null == c ? void 0 : c.id, C.StageChannelParticipantNamedIndex.AUDIENCE)
   }, [c]);
   return (0, l.jsx)(R.ActiveNowBase, {
     listItemId: a ? t.id : void 0,
@@ -207,7 +207,7 @@ function B(e) {
       width: R.ACTIVE_NOW_ICON_SIZE,
       height: R.ACTIVE_NOW_ICON_SIZE
     }),
-    iconTooltipText: y.default.Messages.GUILD_HOME_EVENTS_TOOLTIP_TEXT,
+    iconTooltipText: O.default.Messages.GUILD_HOME_EVENTS_TOOLTIP_TEXT,
     header: t.name,
     textNode: (0, l.jsx)(w, {
       event: t,

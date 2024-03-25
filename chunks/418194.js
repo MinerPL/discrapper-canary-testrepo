@@ -6,13 +6,13 @@ n.r(t), n.d(t, {
 }), n("222007");
 var a = n("913144"),
   s = n("861309"),
-  i = n("716724"),
-  l = n("492249"),
+  l = n("716724"),
+  i = n("492249"),
   r = n("49111"),
   o = {
     [r.RPCCommands.SET_CONFIG]: {
-      scope: l.RPC_AUTHENTICATED_SCOPE,
-      validation: e => (0, i.default)(e).required().keys({
+      scope: i.RPC_AUTHENTICATED_SCOPE,
+      validation: e => (0, l.default)(e).required().keys({
         use_interactive_pip: e.boolean()
       }),
       handler(e) {
@@ -22,7 +22,7 @@ var a = n("913144"),
             use_interactive_pip: n
           }
         } = e;
-        if (t.transport !== l.TransportTypes.POST_MESSAGE) throw new s.default({
+        if (t.transport !== i.TransportTypes.POST_MESSAGE) throw new s.default({
           errorCode: r.RPCErrors.INVALID_COMMAND
         }, 'command not available from "'.concat(t.transport, " transport"));
         if (null == t.application.id) throw new s.default({

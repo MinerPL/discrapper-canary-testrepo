@@ -7,35 +7,35 @@ n.r(t), n.d(t, {
 var a = n("297726");
 n("216391");
 var s = n("260320"),
-  i = n("861309"),
-  l = n("716724"),
+  l = n("861309"),
+  i = n("716724"),
   r = n("492249"),
   o = n("49111");
 
 function u(e) {
   if (e instanceof s.LobbyError) switch (e.code) {
     case o.LobbyErrors.FULL:
-      throw new i.default({
+      throw new l.default({
         errorCode: o.RPCErrors.LOBBY_FULL
       }, "Lobby is full.");
     case o.LobbyErrors.INVALID_SECRET:
-      throw new i.default({
+      throw new l.default({
         errorCode: o.RPCErrors.INVALID_LOBBY_SECRET
       }, "Lobby secret is invalid.");
     case o.LobbyErrors.NOT_FOUND:
-      throw new i.default({
+      throw new l.default({
         errorCode: o.RPCErrors.INVALID_LOBBY
       }, "Lobby does not exist.");
     case o.LobbyErrors.SERVICE_UNAVAILABLE:
-      throw new i.default({
+      throw new l.default({
         errorCode: o.RPCErrors.SERVICE_UNAVAILABLE
       }, "Lobby service is unavailable.");
     case o.LobbyErrors.ALREADY_CONNECTING:
-      throw new i.default({
+      throw new l.default({
         errorCode: o.RPCErrors.INVALID_COMMAND
       }, "Already connecting to lobby.");
     default:
-      throw new i.default({
+      throw new l.default({
         errorCode: o.RPCErrors.UNKNOWN_ERROR
       }, "Unknown error has occured.")
   }
@@ -46,7 +46,7 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       type: e.number().valid(Object.values(o.LobbyTypes)),
       capacity: e.number(),
       locked: e.boolean(),
@@ -58,17 +58,17 @@ var d = {
         args: {
           type: n,
           capacity: s,
-          locked: l,
+          locked: i,
           metadata: r
         }
       } = e;
-      if (null == t.application.id) throw new i.default({
+      if (null == t.application.id) throw new l.default({
         errorCode: o.RPCErrors.INVALID_COMMAND
       }, "No application.");
       return (0, a.createLobby)(t.id, t.application.id, {
         type: n,
         capacity: s,
-        locked: l,
+        locked: i,
         metadata: r
       }).catch(u)
     }
@@ -77,13 +77,13 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       id: e.string().required(),
       type: e.number().valid(Object.values(o.LobbyTypes)),
       owner_id: e.string(),
       capacity: e.number(),
       locked: e.boolean(),
-      metadata: (0, l.default)(e)
+      metadata: (0, i.default)(e)
     }),
     handler(e) {
       let {
@@ -91,16 +91,16 @@ var d = {
           id: t,
           type: n,
           owner_id: s,
-          capacity: i,
-          locked: l,
+          capacity: l,
+          locked: i,
           metadata: r
         }
       } = e;
       return (0, a.updateLobby)(t, {
         type: n,
         owner_id: s,
-        capacity: i,
-        locked: l,
+        capacity: l,
+        locked: i,
         metadata: r
       }).catch(u)
     }
@@ -109,7 +109,7 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       id: e.string().required()
     }),
     handler(e) {
@@ -125,10 +125,10 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       lobby_id: e.string().required(),
       user_id: e.string().required(),
-      metadata: (0, l.default)(e)
+      metadata: (0, i.default)(e)
     }),
     handler(e) {
       let {
@@ -147,7 +147,7 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       id: e.string().required(),
       secret: e.string().required()
     }),
@@ -166,7 +166,7 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       id: e.string().required()
     }),
     handler(e) {
@@ -182,7 +182,7 @@ var d = {
     scope: {
       [r.RPC_SCOPE_CONFIG.ANY]: [r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       lobby_id: e.string().required(),
       data: e.string().required()
     }),
@@ -198,14 +198,14 @@ var d = {
   },
   [o.RPCCommands.SEARCH_LOBBIES]: {
     scope: r.RPC_LOCAL_SCOPE,
-    validation: e => (0, l.default)(e).required().keys({
-      filter: e.array().items((0, l.default)(e).keys({
+    validation: e => (0, i.default)(e).required().keys({
+      filter: e.array().items((0, i.default)(e).keys({
         key: e.string().required(),
         comparison: e.number().required(),
         cast: e.number().required(),
         value: e.string().required()
       })),
-      sort: e.array().items((0, l.default)(e).keys({
+      sort: e.array().items((0, i.default)(e).keys({
         key: e.string().required(),
         cast: e.number().required(),
         near_value: e.string()
@@ -219,22 +219,22 @@ var d = {
         args: {
           filter: n,
           sort: s,
-          limit: i,
-          distance: l
+          limit: l,
+          distance: i
         }
       } = e;
       return (0, a.search)({
         application_id: t.application.id,
         filter: n,
         sort: s,
-        limit: i,
-        distance: l
+        limit: l,
+        distance: i
       }).catch(u)
     }
   },
   [o.RPCCommands.CONNECT_TO_LOBBY_VOICE]: {
     scope: r.RPC_LOCAL_SCOPE,
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       id: e.string().required()
     }),
     handler(e) {
@@ -248,7 +248,7 @@ var d = {
   },
   [o.RPCCommands.DISCONNECT_FROM_LOBBY_VOICE]: {
     scope: r.RPC_LOCAL_SCOPE,
-    validation: e => (0, l.default)(e).required().keys({
+    validation: e => (0, i.default)(e).required().keys({
       id: e.string().required()
     }),
     handler(e) {

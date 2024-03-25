@@ -1,36 +1,36 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return f
+    return E
   }
-}), n("222007");
-var l = n("689988"),
-  s = n("21121"),
-  u = n("162771"),
-  i = n("398604"),
-  a = n("322224");
+}), l("222007");
+var n = l("689988"),
+  s = l("21121"),
+  u = l("162771"),
+  a = l("398604"),
+  i = l("322224");
 let o = {},
   r = new Set,
   d = async e => {
-    let t = i.default.getGuildScheduledEventsForGuild(e);
+    let t = a.default.getGuildScheduledEventsForGuild(e);
     if (0 !== t.length) {
       if (!r.has(e)) try {
-        await a.default.getGuildEventsForCurrentUser(e), r.add(e)
+        await i.default.getGuildEventsForCurrentUser(e), r.add(e)
       } catch (e) {}
     }
   };
-class c extends l.default {
-  async getGuildEventUserCounts(e, t, n) {
-    let l = n.filter(n => null == o["".concat(e, "-").concat(t, "-").concat(n)] || Date.now() - o["".concat(e, "-").concat(t, "-").concat(n)] > 18e5);
-    if (!(Date.now() - o["".concat(e, "-").concat(t)] < 18e5) || 0 !== l.length) {
-      o["".concat(e, "-").concat(t)] = Date.now(), l.forEach(n => o["".concat(e, "-").concat(t, "-").concat(n)] = Date.now());
+class c extends n.default {
+  async getGuildEventUserCounts(e, t, l) {
+    let n = l.filter(l => null == o["".concat(e, "-").concat(t, "-").concat(l)] || Date.now() - o["".concat(e, "-").concat(t, "-").concat(l)] > 18e5);
+    if (!(Date.now() - o["".concat(e, "-").concat(t)] < 18e5) || 0 !== n.length) {
+      o["".concat(e, "-").concat(t)] = Date.now(), n.forEach(l => o["".concat(e, "-").concat(t, "-").concat(l)] = Date.now());
       try {
-        await a.default.fetchGuildEventUserCounts(e, t, l)
+        await i.default.fetchGuildEventUserCounts(e, t, n)
       } catch (e) {}
     }
   }
-  getGuildEventUsers(e, t, n) {
-    return a.default.fetchUsersForGuildEvent(e, t, n)
+  getGuildEventUsers(e, t, l) {
+    return i.default.fetchUsersForGuildEvent(e, t, l)
   }
   getGuildEventsForCurrentUser(e) {
     return d(e)
@@ -40,7 +40,7 @@ class c extends l.default {
     let e = (0, s.isInMainTabsExperiment)(),
       t = u.default.getLastSelectedGuildId();
     if (e && null != t) {
-      let e = i.default.getGuildScheduledEventsForGuild(t);
+      let e = a.default.getGuildScheduledEventsForGuild(t);
       e.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
     }
   }
@@ -53,23 +53,23 @@ class c extends l.default {
   handleGuildDelete(e) {
     let {
       guild: t
-    } = e, n = t.id;
-    r.delete(n), delete o[n]
+    } = e, l = t.id;
+    r.delete(l), delete o[l]
   }
   handleInviteResolveSuccess(e) {
     var t;
     let {
-      invite: n
-    } = e, l = n.guild_scheduled_event, s = null === (t = n.guild) || void 0 === t ? void 0 : t.id;
-    null != l && null != s && d(s)
+      invite: l
+    } = e, n = l.guild_scheduled_event, s = null === (t = l.guild) || void 0 === t ? void 0 : t.id;
+    null != n && null != s && d(s)
   }
   handleChannelSelect(e) {
     let {
       guildId: t
     } = e;
     if (null == t) return;
-    let n = i.default.getGuildScheduledEventsForGuild(t);
-    n.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
+    let l = a.default.getGuildScheduledEventsForGuild(t);
+    l.forEach(e => this.getGuildEventUserCounts(t, e.id, []))
   }
   constructor(...e) {
     super(...e), this.actions = {
@@ -81,4 +81,4 @@ class c extends l.default {
     }
   }
 }
-var f = new c
+var E = new c

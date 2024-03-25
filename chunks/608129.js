@@ -13,12 +13,12 @@ var i = l("37983"),
   o = l("109264"),
   d = l("155207"),
   u = l("849483"),
-  p = l("701909"),
-  m = l("128259"),
+  m = l("701909"),
+  p = l("128259"),
   _ = l("49111"),
   f = l("782340"),
-  h = l("420163");
-let C = p.default.getArticleURL(_.HelpdeskArticles.BOT_DATA_ACCESS);
+  h = l("537582");
+let C = m.default.getArticleURL(_.HelpdeskArticles.BOT_DATA_ACCESS);
 
 function g(e) {
   let {
@@ -59,12 +59,12 @@ function I(e) {
   } = e, {
     hasMessageContent: l,
     hasGuildPresences: n,
-    hasGuildMembers: p,
+    hasGuildMembers: m,
     hasIntents: _
   } = (0, c.useBotDataAccess)({
     flags: null == t ? void 0 : t.flags
   }), I = a.useCallback(() => {
-    (null == t ? void 0 : t.privacy_policy_url) != null && (0, m.handleClick)({
+    (null == t ? void 0 : t.privacy_policy_url) != null && (0, p.handleClick)({
       href: t.privacy_policy_url
     })
   }, [null == t ? void 0 : t.privacy_policy_url]);
@@ -87,7 +87,7 @@ function I(e) {
           icon: u.default,
           heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_HEADING,
           body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_PRESENCES_BODY
-        }), p && (0, i.jsx)(g, {
+        }), m && (0, i.jsx)(g, {
           icon: d.default,
           heading: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_HEADING,
           body: f.default.Messages.APP_DIRECTORY_PROFILE_DATA_ACCESS_GUILD_MEMBERS_BODY

@@ -88,8 +88,8 @@ function R(e) {
   }, []), l.useEffect(() => (h.default.subscribe("CONNECTION_OPEN", R), () => {
     h.default.unsubscribe("CONNECTION_OPEN", R)
   }), [R]);
-  let k = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
-    P = (0, m.default)("unreads", O);
+  let P = (0, d.useStateFromStores)([E.default], () => E.default.messageGroupSpacing),
+    k = (0, m.default)("unreads", O);
   if (0 === F.length) {
     var w;
     return (0, a.jsxs)("div", {
@@ -107,7 +107,7 @@ function R(e) {
     })
   }
   return (0, a.jsxs)("div", {
-    className: i(v.container, "group-spacing-".concat(k)),
+    className: i(v.container, "group-spacing-".concat(P)),
     "aria-label": M.default.Messages.UNREADS_TAB_LABEL,
     children: [(0, a.jsx)(T.default, {
       tab: c.InboxTab.UNREADS,
@@ -119,7 +119,7 @@ function R(e) {
         onClick: U
       })
     }), (0, a.jsx)(u.ListNavigatorProvider, {
-      navigator: P,
+      navigator: k,
       children: (0, a.jsx)(u.ListNavigatorContainer, {
         children: e => {
           let {

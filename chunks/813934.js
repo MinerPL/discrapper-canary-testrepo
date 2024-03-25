@@ -20,16 +20,16 @@ var l = n("37983"),
   _ = n("697218"),
   S = n("228427"),
   v = n("599110"),
-  R = n("887143"),
-  m = n("834052"),
+  m = n("887143"),
+  R = n("834052"),
   C = n("151642"),
-  N = n("29846"),
-  T = n("837979"),
+  T = n("29846"),
+  N = n("837979"),
   p = n("49111"),
-  I = n("745049"),
-  x = n("533613"),
+  x = n("745049"),
+  I = n("533613"),
   L = n("782340"),
-  A = n("529555");
+  A = n("873206");
 
 function y(e) {
   let {
@@ -72,12 +72,12 @@ function D(e) {
     onEventSave: B,
     onClose: P,
     onSelectChannel: V,
-    isEvent: b = !1,
-    defaultOptions: H,
+    isEvent: H = !1,
+    defaultOptions: b,
     isSlideReady: Y = !0
-  } = e, F = a.useMemo(() => m.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == H ? void 0 : H.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == H ? void 0 : H.description) && void 0 !== r ? r : ""), [q] = a.useState(b), [X, J] = a.useState(null !== (g = null == H ? void 0 : H.schedule) && void 0 !== g ? g : {
+  } = e, F = a.useMemo(() => R.default.getStageInstanceByChannel(j.id), [j.id]), [W, Z] = a.useState(null !== (n = null !== (t = null == b ? void 0 : b.topic) && void 0 !== t ? t : null == F ? void 0 : F.topic) && void 0 !== n ? n : ""), [K, z] = a.useState(null !== (r = null == b ? void 0 : b.description) && void 0 !== r ? r : ""), [q] = a.useState(H), [X, J] = a.useState(null !== (g = null == b ? void 0 : b.schedule) && void 0 !== g ? g : {
     startDate: (0, d.getInitialEventStartDate)()
-  }), [Q, $] = a.useState(q && (null == H ? void 0 : H.schedule) != null), ee = (0, R.useCanSendStageStartNotification)(j), et = (0, R.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(x.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = I.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (S = null !== (_ = null == H ? void 0 : H.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== S ? S : es), [eu, eo] = a.useState(null == H ? void 0 : H.recurrenceRule), ec = (0, C.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != V, e_ = eh.length > 1;
+  }), [Q, $] = a.useState(q && (null == b ? void 0 : b.schedule) != null), ee = (0, m.useCanSendStageStartNotification)(j), et = (0, m.useDefaultSendStartStageNotificationToggle)(j), en = null == F && ee && !q, [el, ea] = a.useState(en && et), er = (0, i.useStateFromStores)([h.default], () => h.default.hasHotspot(I.HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE)), es = x.GuildScheduledEventPrivacyLevel.GUILD_ONLY, [ei] = a.useState(null !== (S = null !== (_ = null == b ? void 0 : b.privacyLevel) && void 0 !== _ ? _ : null == F ? void 0 : F.privacy_level) && void 0 !== S ? S : es), [eu, eo] = a.useState(null == b ? void 0 : b.recurrenceRule), ec = (0, C.useStageBlockedUsersCount)(j.id), [ed, ef] = a.useState(!1), eE = (0, o.default)(j), eh = (0, c.useChannelsUserCanStartStageIn)(O), eg = null != V, e_ = eh.length > 1;
   a.useEffect(() => {
     v.default.track(p.AnalyticEvents.START_STAGE_OPENED, {
       stage_instance_id: null == F ? void 0 : F.id,
@@ -86,7 +86,7 @@ function D(e) {
     })
   }, []);
   let eS = e => {
-    if (e.preventDefault(), ei === I.GuildScheduledEventPrivacyLevel.PUBLIC && W.length < 20 && !ed) {
+    if (e.preventDefault(), ei === x.GuildScheduledEventPrivacyLevel.PUBLIC && W.length < 20 && !ed) {
       ef(!0);
       return
     }
@@ -101,7 +101,7 @@ function D(e) {
         ...t,
         schedule: X,
         description: K,
-        entityType: I.GuildScheduledEventEntityTypes.STAGE_INSTANCE
+        entityType: x.GuildScheduledEventEntityTypes.STAGE_INSTANCE
       });
       return
     }
@@ -109,11 +109,11 @@ function D(e) {
   };
   let {
     color: ev,
-    text: eR
+    text: em
   } = (D = F, M = ei, q ? {
     color: u.Button.Colors.BRAND,
     text: L.default.Messages.SCHEDULE_EVENT
-  } : M === I.GuildScheduledEventPrivacyLevel.PUBLIC && (null == D ? void 0 : D.privacy_level) !== I.GuildScheduledEventPrivacyLevel.PUBLIC ? {
+  } : M === x.GuildScheduledEventPrivacyLevel.PUBLIC && (null == D ? void 0 : D.privacy_level) !== x.GuildScheduledEventPrivacyLevel.PUBLIC ? {
     color: u.Button.Colors.BRAND,
     text: L.default.Messages.CONTINUE
   } : null == D ? {
@@ -122,10 +122,10 @@ function D(e) {
   } : {
     color: u.Button.Colors.BRAND,
     text: L.default.Messages.SAVE_CHANGES
-  }), em = a.useRef(null);
+  }), eR = a.useRef(null);
   a.useEffect(() => {
     var e;
-    Y && (null === (e = em.current) || void 0 === e || e.focus())
+    Y && (null === (e = eR.current) || void 0 === e || e.focus())
   }, [Y]);
   let eC = Q && null != X.startDate && X.startDate >= s();
   return (0, l.jsxs)(l.Fragment, {
@@ -133,24 +133,24 @@ function D(e) {
       className: A.modalContent,
       children: [w, (0, l.jsx)("div", {
         className: A.blockedUsersContainer,
-        children: null == F && ec > 0 && (0, l.jsx)(N.BlockedUsersNotice, {
+        children: null == F && ec > 0 && (0, l.jsx)(T.BlockedUsersNotice, {
           channelId: j.id
         })
       }), (0, l.jsxs)("form", {
         onSubmit: eS,
         className: A.form,
         children: [(0, l.jsxs)(u.FormItem, {
-          title: b ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
+          title: H ? L.default.Messages.GUILD_EVENT_CREATE_TOPIC_LABEL : L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_LABEL,
           className: A.topicFormItem,
           required: !0,
           children: [(0, l.jsx)(u.TextInput, {
             className: A.textInput,
             onChange: e => Z(e),
             placeholder: L.default.Messages.START_STAGE_CHANNEL_EVENT_MODAL_TOPIC_PLACEHOLDER,
-            maxLength: T.MAX_STAGE_TOPIC_LENGTH,
+            maxLength: N.MAX_STAGE_TOPIC_LENGTH,
             value: W,
             autoComplete: "off",
-            inputRef: em
+            inputRef: eR
           }), ed && (0, l.jsx)(u.Text, {
             variant: "text-xs/normal",
             color: "text-warning",
@@ -186,14 +186,14 @@ function D(e) {
             className: A.warning,
             children: L.default.Messages.GUILD_EVENT_PAST_START_DATE
           }) : null]
-        }), b && (0, l.jsx)(u.FormItem, {
+        }), H && (0, l.jsx)(u.FormItem, {
           title: L.default.Messages.CREATE_STAGE_INSTANCE_DESCRIPTION_INPUT_LABEL,
           className: A.formItem,
           children: (0, l.jsx)(u.TextArea, {
             placeholder: L.default.Messages.GUILD_EVENT_CREATE_DESCRIPTION_PLACEHOLDER,
             value: K,
             onChange: e => z(e),
-            maxLength: I.GUILD_EVENT_MAX_DESCRIPTION_LENGTH
+            maxLength: x.GUILD_EVENT_MAX_DESCRIPTION_LENGTH
           })
         }), en ? (0, l.jsx)(f.default, {
           sendStartNotification: el,
@@ -216,9 +216,9 @@ function D(e) {
       children: [(0, l.jsx)(u.Button, {
         color: ev,
         onClick: eS,
-        disabled: "" === W || null == ei || b && !eC,
+        disabled: "" === W || null == ei || H && !eC,
         submitting: G,
-        children: eR
+        children: em
       }), (0, l.jsx)(u.Button, {
         color: u.Button.Colors.PRIMARY,
         className: A.cancelButton,

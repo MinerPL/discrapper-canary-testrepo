@@ -6,31 +6,31 @@ n.r(t), n.d(t, {
 }), n("781738");
 var i = n("627445"),
   s = n.n(i),
-  r = n("132710"),
+  r = n("404828"),
   a = n.n(r);
 let o = /\n{2,}$/,
   l = /(?:^|\n)( *)$/,
   u = "(?:[*-]|\\d+\\.)",
   d = "( *)(" + u + ") +",
   c = RegExp("^" + d),
-  f = RegExp(d + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
-  _ = / *\n$/,
-  h = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
-  g = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-  m = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
-  E = {
+  _ = RegExp(d + "[^\\n]*(?:\\n(?!\\1" + u + " )[^\\n]*)*(\n|$)", "gm"),
+  f = / *\n$/,
+  E = RegExp("^( *)(" + u + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + u + " )|$)"),
+  h = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
+  g = e => e.map(e => ("text" === e.type && null != e.content && (e.content = e.content.replace(/\n+\s*$/, "")), e)),
+  m = {
     ...a.defaultRules.list,
     requiredFirstCharacters: " *-0123456789".split(""),
     match: (e, t) => {
       if (!t.allowList || t._listLevel >= 11) return null;
       let n = null == t.prevCapture ? "" : t.prevCapture[0],
         i = l.exec(n);
-      return null == i || g.test(i[0]) ? null : h.exec(e)
+      return null == i || h.test(i[0]) ? null : E.exec(e)
     },
     parse: (e, t, n) => {
       let i = e[2],
         r = i.length > 1,
-        a = e[0].replace(o, "\n").match(f);
+        a = e[0].replace(o, "\n").match(_);
       s(null != a, "markup list items can not be parsed.");
       let l = !1,
         u = a.map((e, i) => {
@@ -39,19 +39,19 @@ let o = /\n{2,}$/,
             o = null != r ? r[0].length : 0,
             u = RegExp("^ {1," + o + "}", "gm"),
             d = e.replace(u, "").replace(c, ""),
-            f = i === a.length - 1,
-            h = -1 !== d.indexOf("\n\n"),
-            g = h || f && l;
-          l = g;
-          let E = n.inline,
+            _ = i === a.length - 1,
+            E = -1 !== d.indexOf("\n\n"),
+            h = E || _ && l;
+          l = h;
+          let m = n.inline,
             p = n._list,
-            v = n._listLevel;
-          n._list = !0, n._listLevel = (null != v ? v : 0) + 1, g ? (n.inline = !1, s = d.replace(_, "\n\n")) : (n.inline = !0, s = d.replace(_, ""));
-          let S = m(t(s, {
+            S = n._listLevel;
+          n._list = !0, n._listLevel = (null != S ? S : 0) + 1, h ? (n.inline = !1, s = d.replace(f, "\n\n")) : (n.inline = !0, s = d.replace(f, ""));
+          let T = g(t(s, {
             ...n,
             allowHeading: !1
           }));
-          return n.inline = E, n._list = p, n._listLevel = v, S
+          return n.inline = m, n._list = p, n._listLevel = S, T
         });
       return {
         ordered: r,
@@ -60,4 +60,4 @@ let o = /\n{2,}$/,
       }
     }
   };
-var p = E
+var p = m

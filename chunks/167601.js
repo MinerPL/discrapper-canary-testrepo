@@ -1,10 +1,10 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return o
+    return a
   }
 });
 var n = r("656946"),
-  o = function(e) {
+  a = function(e) {
     return "function" == typeof e ? e : n.default
   }

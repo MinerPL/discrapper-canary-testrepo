@@ -1,76 +1,76 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(s), t.d(s, {
   default: function() {
-    return u
+    return d
   }
 });
-var r = n("37983");
-n("884691");
-var s = n("77078"),
-  l = n("476765"),
-  o = n("151642"),
-  a = n("29846"),
-  i = n("782340"),
-  c = n("699141");
+var n = t("37983");
+t("884691");
+var a = t("77078"),
+  r = t("476765"),
+  l = t("151642"),
+  o = t("29846"),
+  c = t("782340"),
+  i = t("634759");
 
-function u(e) {
+function d(e) {
   let {
-    channel: t,
-    onAccept: n,
-    transitionState: u,
-    onClose: d,
+    channel: s,
+    onAccept: t,
+    transitionState: d,
+    onClose: u,
     ...h
-  } = e, f = (0, l.useUID)(), x = (0, o.useStageBlockedUsers)(t.id);
-  return (0, r.jsxs)(s.ModalRoot, {
-    transitionState: u,
+  } = e, f = (0, r.useUID)(), x = (0, l.useStageBlockedUsers)(s.id);
+  return (0, n.jsxs)(a.ModalRoot, {
+    transitionState: d,
     "aria-labelledby": f,
     ...h,
-    size: s.ModalSize.SMALL,
-    children: [(0, r.jsxs)(s.ModalHeader, {
-      className: c.header,
-      children: [(0, r.jsx)(s.Heading, {
+    size: a.ModalSize.SMALL,
+    children: [(0, n.jsxs)(a.ModalHeader, {
+      className: i.header,
+      children: [(0, n.jsx)(a.Heading, {
         variant: "heading-xl/semibold",
-        children: i.default.Messages.STAGE_BLOCKED_USERS_TITLE_PLURAL.format({
+        children: c.default.Messages.STAGE_BLOCKED_USERS_TITLE_PLURAL.format({
           number: x.length
         })
-      }), (0, r.jsx)(s.Text, {
+      }), (0, n.jsx)(a.Text, {
         color: "header-secondary",
-        className: c.description,
+        className: i.description,
         variant: "text-sm/normal",
-        children: i.default.Messages.STAGE_BLOCKED_USERS_BODY.format({
+        children: c.default.Messages.STAGE_BLOCKED_USERS_BODY.format({
           number: x.length
         })
       })]
-    }), (0, r.jsx)(s.ModalContent, {
-      className: c.content,
+    }), (0, n.jsx)(a.ModalContent, {
+      className: i.content,
       children: x.map(e => {
         let {
-          user: n,
-          id: s,
-          speaker: l
+          user: t,
+          id: a,
+          speaker: r
         } = e;
-        return (0, r.jsx)(a.BlockedUser, {
-          user: n,
-          speaker: l,
+        return (0, n.jsx)(o.BlockedUser, {
+          user: t,
+          speaker: r,
           showStatus: !0,
-          channelId: t.id
-        }, s)
+          channelId: s.id
+        }, a)
       })
-    }), (0, r.jsxs)(s.ModalFooter, {
-      className: c.footer,
-      children: [(0, r.jsx)(s.Button, {
+    }), (0, n.jsxs)(a.ModalFooter, {
+      className: i.footer,
+      children: [(0, n.jsx)(a.Button, {
         onClick: () => {
-          n(t), d()
+          t(s), u()
         },
-        color: s.Button.Colors.BRAND,
-        children: i.default.Messages.STAGE_BLOCKED_USERS_ACCEPT
-      }), (0, r.jsx)(s.Button, {
+        color: a.Button.Colors.BRAND,
+        children: c.default.Messages.STAGE_BLOCKED_USERS_ACCEPT
+      }), (0, n.jsx)(a.Button, {
         onClick: () => {
-          d()
+          u()
         },
-        color: s.Button.Colors.PRIMARY,
-        look: s.Button.Looks.LINK,
-        children: i.default.Messages.STAGE_BLOCKED_USERS_CANCEL
+        color: a.Button.Colors.PRIMARY,
+        look: a.Button.Looks.LINK,
+        children: c.default.Messages.STAGE_BLOCKED_USERS_CANCEL
       })]
     })]
   })

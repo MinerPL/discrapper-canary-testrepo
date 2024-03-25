@@ -7,8 +7,8 @@ s.r(t), s.d(t, {
 var a = s("37983");
 s("884691");
 var r = s("414456"),
-  n = s.n(r),
-  i = s("146606"),
+  i = s.n(r),
+  n = s("146606"),
   l = s("65597"),
   o = s("206230"),
   u = s("154889"),
@@ -24,7 +24,7 @@ var r = s("414456"),
       isVisible: r,
       isFullscreen: f,
       subscriptionTier: R
-    } = e, S = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), N = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, A = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, i.useSpring)({
+    } = e, S = null === (t = (0, d.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, m = (0, u.usePremiumDiscountOffer)(), N = (0, u.discountOfferHasTier)(m, E.PremiumSubscriptionSKUs.TIER_2) ? E.PremiumSubscriptionSKUs.TIER_2 : void 0, A = (0, l.useStateFromStores)([o.default], () => o.default.useReducedMotion), p = (0, n.useSpring)({
       transform: r ? "translateY(-100%)" : "translateY(0%)",
       opacity: r ? 1 : 0,
       config: {
@@ -35,8 +35,8 @@ var r = s("414456"),
     }), C = {
       section: T.AnalyticsSections.MARKETING_FLOATING_CTA
     };
-    return (0, a.jsx)(i.animated.div, {
-      className: n(I.wrapper, {
+    return (0, a.jsx)(n.animated.div, {
+      className: i(I.wrapper, {
         [I.fullscreenWrapper]: f,
         [I.invisible]: !r
       }),

@@ -1,5 +1,5 @@
 "use strict";
-u.r(e), u.d(e, {
+r.r(e), r.d(e, {
   NoticeColors: function() {
     return _
   },
@@ -7,29 +7,29 @@ u.r(e), u.d(e, {
     return E
   },
   PrimaryCTANoticeButton: function() {
-    return C
-  },
-  NoticeButtonAnchor: function() {
     return T
   },
+  NoticeButtonAnchor: function() {
+    return C
+  },
   NoticeCloseButton: function() {
-    return D
+    return P
   },
   default: function() {
-    return P
+    return D
   }
 });
-var n = u("37983");
-u("884691");
-var r = u("414456"),
-  i = u.n(r),
-  l = u("394846"),
-  o = u("77078"),
-  c = u("945330"),
-  a = u("599110"),
-  d = u("49111"),
-  s = u("782340"),
-  f = u("105029");
+var u = r("37983");
+r("884691");
+var n = r("414456"),
+  i = r.n(n),
+  l = r("394846"),
+  o = r("77078"),
+  c = r("945330"),
+  a = r("599110"),
+  d = r("49111"),
+  s = r("782340"),
+  f = r("125792");
 let _ = Object.freeze({
   DEFAULT: f.colorDefault,
   NEUTRAL: f.colorNeutral,
@@ -49,14 +49,14 @@ let _ = Object.freeze({
 function E(t) {
   let {
     children: e,
-    className: u,
-    minor: r = !1,
+    className: r,
+    minor: n = !1,
     ...l
   } = t;
-  return (0, n.jsx)(o.FocusRing, {
-    children: (0, n.jsx)("button", {
-      className: i(f.button, u, {
-        [f.buttonMinor]: r
+  return (0, u.jsx)(o.FocusRing, {
+    children: (0, u.jsx)("button", {
+      className: i(f.button, r, {
+        [f.buttonMinor]: n
       }),
       ...l,
       children: e
@@ -64,58 +64,58 @@ function E(t) {
   })
 }
 
-function C(t) {
+function T(t) {
   let {
     children: e,
-    noticeType: u,
-    additionalTrackingProps: r,
+    noticeType: r,
+    additionalTrackingProps: n,
     ...i
   } = t;
-  return (0, n.jsx)(E, {
+  return (0, u.jsx)(E, {
     ...i,
     onClick: t => {
-      var e, n;
-      null != i.onClick && i.onClick(t), e = u, n = r, null != e && a.default.track(d.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+      var e, u;
+      null != i.onClick && i.onClick(t), e = r, u = n, null != e && a.default.track(d.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
         notice_type: e,
-        ...n
+        ...u
       })
     },
     children: e
   })
 }
 
-function T(t) {
+function C(t) {
   let {
     children: e,
-    href: u,
-    ...r
+    href: r,
+    ...n
   } = t;
-  return (0, n.jsx)(o.Anchor, {
-    ...r,
+  return (0, u.jsx)(o.Anchor, {
+    ...n,
     className: f.button,
-    href: u,
+    href: r,
     children: e
   })
 }
 
-function D(t) {
+function P(t) {
   let {
     onClick: e,
-    noticeType: u
+    noticeType: r
   } = t;
-  return (0, n.jsx)(o.Clickable, {
+  return (0, u.jsx)(o.Clickable, {
     focusProps: {
       offset: 6
     },
     className: f.closeButton,
     onClick: () => {
       var t;
-      e(), null != (t = u) && a.default.track(d.AnalyticEvents.APP_NOTICE_CLOSED, {
+      e(), null != (t = r) && a.default.track(d.AnalyticEvents.APP_NOTICE_CLOSED, {
         notice_type: t
       })
     },
     "aria-label": s.default.Messages.DISMISS,
-    children: (0, n.jsx)(c.default, {
+    children: (0, u.jsx)(c.default, {
       className: f.closeIcon,
       width: 18,
       height: 18
@@ -123,18 +123,18 @@ function D(t) {
   })
 }
 
-function P(t) {
+function D(t) {
   let {
     color: e = _.DEFAULT,
-    className: u,
-    style: r,
+    className: r,
+    style: n,
     children: o
   } = t;
-  return (0, n.jsx)("div", {
+  return (0, u.jsx)("div", {
     className: i(f.notice, {
       [f.isMobile]: l.isMobile
-    }, u, e),
-    style: null != r ? r : void 0,
+    }, r, e),
+    style: null != n ? n : void 0,
     children: o
   })
 }

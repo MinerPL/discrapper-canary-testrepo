@@ -10,15 +10,15 @@ var i = l("37983"),
   s = l.n(n),
   r = l("355262"),
   c = l("77078"),
-  o = l("650509"),
+  o = l("991254"),
   d = l("8161"),
   u = l("315102"),
-  p = l("146691"),
-  m = l("998944"),
+  m = l("146691"),
+  p = l("998944"),
   _ = l("412707"),
   f = l("721908"),
   h = l("782340"),
-  C = l("884704");
+  C = l("496391");
 
 function g(e) {
   var t, l, n;
@@ -43,12 +43,12 @@ function g(e) {
   }), {
     canInstall: M,
     install: b
-  } = (0, p.useInstallApplication)(g), Y = (0, f.default)({
+  } = (0, m.useInstallApplication)(g), Y = (0, f.default)({
     application: g,
     showMutualGuilds: v
   }), k = a.useCallback(e => {
     e.stopPropagation(), b(O)
-  }, [b, O]), H = null === (t = g.categories) || void 0 === t ? void 0 : t[0], G = (null !== (n = null === (l = g.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== n ? n : 0) > 0 || Y.length > 0, F = (0, i.jsx)(m.default, {
+  }, [b, O]), H = null === (t = g.categories) || void 0 === t ? void 0 : t[0], G = (null !== (n = null === (l = g.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== n ? n : 0) > 0 || Y.length > 0, F = (0, i.jsx)(p.default, {
     application: g,
     textVariant: P,
     mutualGuilds: Y,

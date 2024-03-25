@@ -1,16 +1,16 @@
 "use strict";
 
-function i(e) {
+function i(t) {
   return {
-    id: e.id,
-    filename: e.filename,
-    size: e.size,
-    width: e.width,
-    height: e.height,
-    mimeType: e.mime_type
+    id: t.id,
+    filename: t.filename,
+    size: t.size,
+    width: t.width,
+    height: t.height,
+    mimeType: t.mime_type
   }
 }
-n.r(t), n.d(t, {
+n.r(e), n.d(e, {
   transformStoreAssetFromServer: function() {
     return i
   }

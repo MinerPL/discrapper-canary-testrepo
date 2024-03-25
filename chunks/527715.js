@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useMarketingOptimizationExperiment: function() {
-    return n
+    return i
   }
 });
 var a = s("862205");
@@ -20,7 +20,7 @@ let r = (0, a.createExperiment)({
       }
     }]
   }),
-  n = function() {
+  i = function() {
     let {
       autoTrackExposure: e
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {

@@ -38,18 +38,18 @@ function h(e) {
     B = u.default.canUseCustomBackgrounds(R),
     U = (0, l.useStateFromStoresObject)([E.default], () => B ? E.default.videoFilterAssets : {}),
     j = n.useMemo(() => Object.values(U).filter(e => e.type === f.VideoFilterType.BACKGROUND), [U]),
-    V = (0, c.useAnalyticsContext)();
+    L = (0, c.useAnalyticsContext)();
   n.useEffect(() => {
     D ? (0, g.applyBackgroundOptionPreview)(h, C, {
       track: !1
     }).catch(() => x(null)) : null != h && x(null)
   }, [C]);
-  let L = e => {
+  let V = e => {
     x(e), (0, g.applyBackgroundOptionPreview)(e, C, {
-      location: V.location
+      location: L.location
     }).then(() => k(null)).catch(() => {
       k(I.default.Messages.VIDEO_BACKGROUND_ERROR_APPLY), (0, g.applyBackgroundOptionPreview)(null, C, {
-        location: V.location
+        location: L.location
       })
     })
   };
@@ -66,7 +66,7 @@ function h(e) {
       canUseCustomBackgrounds: B,
       customBackgroundOptions: j,
       selectedOption: h,
-      onSelectOption: L,
+      onSelectOption: V,
       onUpsellClick: () => {
         (0, o.openModalLazy)(async () => {
           let {
@@ -76,7 +76,7 @@ function h(e) {
             ...a,
             onLearnMore: t,
             analyticsSource: {
-              ...V.location,
+              ...L.location,
               object: M.AnalyticsObjects.BUTTON_CTA
             }
           })
@@ -87,7 +87,7 @@ function h(e) {
         return new Promise(async s => {
           try {
             let s = await (0, O.uploadVideoFilterAsset)(e, f.VideoFilterType.BACKGROUND);
-            L(s), (0, _.trackBackgroundOptionAdded)(s, t.type === m.FileTypes.MP4, a), k(null)
+            V(s), (0, _.trackBackgroundOptionAdded)(s, t.type === m.FileTypes.MP4, a), k(null)
           } catch (e) {
             k(e.message)
           }

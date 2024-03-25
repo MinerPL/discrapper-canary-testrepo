@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return l
   }
 });
-var a = n("782340");
+var i = n("782340");
 
 function l(e) {
-  return null != e && "" !== e ? e : a.default.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY
+  return null != e && "" !== e ? e : i.default.Messages.EMBEDDED_ACTIVITIES_IN_ACTIVITY
 }

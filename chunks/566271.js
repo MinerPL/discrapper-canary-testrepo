@@ -43,8 +43,8 @@ function l(e) {
     }
   }
   if (null == d) return null;
-  let f = d.split(".");
-  if (f.length < 2) return null;
-  let _ = null === (t = f.pop()) || void 0 === t ? void 0 : t.toLowerCase();
-  return null != _ && a.has(_) ? _ : null
+  let _ = d.split(".");
+  if (_.length < 2) return null;
+  let f = null === (t = _.pop()) || void 0 === t ? void 0 : t.toLowerCase();
+  return null != f && a.has(f) ? f : null
 }

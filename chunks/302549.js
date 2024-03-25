@@ -1,18 +1,18 @@
-var n = r("127704"),
-  o = r("663008"),
-  a = r("697244"),
-  i = r("646767"),
-  u = r("260333");
-e.exports = function(e, t, r) {
-  var l = e.constructor;
+var r = n("127704"),
+  i = n("663008"),
+  o = n("697244"),
+  s = n("646767"),
+  a = n("260333");
+e.exports = function(e, t, n) {
+  var c = e.constructor;
   switch (t) {
     case "[object ArrayBuffer]":
-      return n(e);
+      return r(e);
     case "[object Boolean]":
     case "[object Date]":
-      return new l(+e);
+      return new c(+e);
     case "[object DataView]":
-      return o(e, r);
+      return i(e, n);
     case "[object Float32Array]":
     case "[object Float64Array]":
     case "[object Int8Array]":
@@ -22,16 +22,16 @@ e.exports = function(e, t, r) {
     case "[object Uint8ClampedArray]":
     case "[object Uint16Array]":
     case "[object Uint32Array]":
-      return u(e, r);
+      return a(e, n);
     case "[object Map]":
     case "[object Set]":
-      return new l;
+      return new c;
     case "[object Number]":
     case "[object String]":
-      return new l(e);
+      return new c(e);
     case "[object RegExp]":
-      return a(e);
+      return o(e);
     case "[object Symbol]":
-      return i(e)
+      return s(e)
   }
 }

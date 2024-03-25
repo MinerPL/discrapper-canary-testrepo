@@ -1,28 +1,28 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
     return o
   }
 });
-var n = l("37983");
-l("884691");
-var a = l("287585"),
-  s = l("502651"),
-  i = l("295999"),
-  r = l("782340");
+var i = n("37983");
+n("884691");
+var l = n("287585"),
+  a = n("502651"),
+  s = n("295999"),
+  r = n("782340");
 
 function o(e) {
   let {
     activity: t,
-    color: l,
+    color: n,
     look: o
-  } = e, u = (0, s.default)(t);
-  return u ? (0, n.jsx)(i.default, {
+  } = e, u = (0, a.default)(t);
+  return u ? (0, i.jsx)(s.default, {
     onClick: () => {
-      let e = (0, a.default)(t);
+      let e = (0, l.default)(t);
       return window.open(null != e ? e : void 0)
     },
-    color: l,
+    color: n,
     look: o,
     fullWidth: !0,
     children: r.default.Messages.WATCH

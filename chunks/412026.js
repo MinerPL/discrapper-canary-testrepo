@@ -20,7 +20,7 @@ var l = n("37983"),
   m = n("687609"),
   E = n("331306"),
   g = n("49111"),
-  I = n("115022");
+  I = n("362792");
 let S = {
     [g.RTCConnectionQuality.UNKNOWN]: f.Tooltip.Colors.BLACK,
     [g.RTCConnectionQuality.BAD]: f.Tooltip.Colors.RED,

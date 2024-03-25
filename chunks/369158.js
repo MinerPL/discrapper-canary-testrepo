@@ -6,48 +6,48 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("414456"),
-  l = s.n(n),
+var l = s("414456"),
+  n = s.n(l),
   i = s("77078"),
   r = s("36694"),
   o = s("987772"),
   d = s("782340"),
-  u = s("442316");
+  u = s("819581");
 
 function c(e) {
   let {
     className: t,
     enabled: s,
-    previewCTA: n,
+    previewCTA: l,
     onPreview: c,
     onToggle: E,
     animateStatus: _,
-    firstLine: T,
-    secondLine: I,
+    firstLine: I,
+    secondLine: T,
     disabled: S
   } = e;
   return (0, a.jsxs)("div", {
-    className: l(t, u.enableContainer),
+    className: n(t, u.enableContainer),
     children: [s ? (0, a.jsx)(r.default, {
       width: 24,
       height: 24,
-      className: l(u.activeCircle, {
+      className: n(u.activeCircle, {
         [u.animate]: _
       })
     }) : (0, a.jsx)(o.default, {
       width: 24,
       height: 24,
-      className: l(u.editCircle, {
+      className: n(u.editCircle, {
         [u.animate]: _
       })
     }), (0, a.jsxs)("div", {
       className: u.enableDescription,
       children: [(0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: T
+        children: I
       }), (0, a.jsx)(i.Text, {
         variant: "text-sm/normal",
-        children: I
+        children: T
       })]
     }), (0, a.jsxs)("div", {
       className: u.buttonContainer,
@@ -58,7 +58,7 @@ function c(e) {
         onClick: c,
         disabled: S,
         color: i.Button.Colors.PRIMARY,
-        children: null != n ? n : d.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
+        children: null != l ? l : d.default.Messages.GUILD_SETTINGS_PUBLIC_WELCOME_PREVIEW
       }), (0, a.jsx)(i.Button, {
         disabled: null == E || S,
         size: i.Button.Sizes.SMALL,

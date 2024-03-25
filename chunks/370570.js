@@ -13,8 +13,8 @@ var i = l("37983"),
   o = l("340616"),
   d = l("841098"),
   u = l("376556"),
-  p = l("83900"),
-  m = l("45029"),
+  m = l("83900"),
+  p = l("45029"),
   _ = l("599110"),
   f = l("599994"),
   h = l("598981"),
@@ -22,7 +22,7 @@ var i = l("37983"),
   g = l("675945"),
   I = l("49111"),
   A = l("782340"),
-  E = l("478318");
+  E = l("908720");
 let v = A.default.getAvailableLocales();
 
 function x(e) {
@@ -31,13 +31,13 @@ function x(e) {
     onClick: n,
     url: s,
     children: c
-  } = e, o = (0, d.default)(), m = u.default.getByUrl(s), _ = (0, r.isThemeDark)(o) ? null == m ? void 0 : null === (t = m.icon) || void 0 === t ? void 0 : t.darkSVG : null == m ? void 0 : null === (l = m.icon) || void 0 === l ? void 0 : l.lightSVG;
+  } = e, o = (0, d.default)(), p = u.default.getByUrl(s), _ = (0, r.isThemeDark)(o) ? null == p ? void 0 : null === (t = p.icon) || void 0 === t ? void 0 : t.darkSVG : null == p ? void 0 : null === (l = p.icon) || void 0 === l ? void 0 : l.lightSVG;
   return (0, i.jsx)(R, {
-    icon: void 0 === _ ? p.default : void 0,
+    icon: void 0 === _ ? m.default : void 0,
     imageSrc: _,
     onClick: n,
     url: s,
-    type: null !== (a = null == m ? void 0 : m.name) && void 0 !== a ? a : "website",
+    type: null !== (a = null == p ? void 0 : p.name) && void 0 !== a ? a : "website",
     children: c
   })
 }
@@ -51,19 +51,19 @@ function R(e) {
     type: r,
     children: d,
     onClick: u
-  } = e, p = (0, h.default)(), m = null;
-  null != t ? m = (0, i.jsx)(t, {
+  } = e, m = (0, h.default)(), p = null;
+  null != t ? p = (0, i.jsx)(t, {
     className: E.listIcon,
     color: a,
     width: 20,
     height: 20
-  }) : null != l && (m = (0, i.jsx)("img", {
+  }) : null != l && (p = (0, i.jsx)("img", {
     className: E.listImage,
     src: l,
     alt: ""
   }));
   let _ = (0, i.jsxs)(i.Fragment, {
-    children: [m, (0, i.jsx)(c.Text, {
+    children: [p, (0, i.jsx)(c.Text, {
       className: E.listText,
       variant: "text-md/normal",
       selectable: !0,
@@ -74,7 +74,7 @@ function R(e) {
     href: n,
     className: s(E.listItem, E.linkItem),
     onClick: () => (u(n, r), !1),
-    trusted: !p,
+    trusted: !m,
     useDefaultUnderlineStyles: !1,
     children: _
   })
@@ -146,13 +146,13 @@ function T(e) {
       onClick: j,
       children: e.name
     }, t)), null != r.terms_of_service_url ? (0, i.jsx)(R, {
-      icon: p.default,
+      icon: m.default,
       onClick: j,
       url: r.terms_of_service_url,
       type: "tos",
       children: A.default.Messages.APP_DIRECTORY_PROFILE_TERMS_LINK
     }) : null, null != r.privacy_policy_url ? (0, i.jsx)(R, {
-      icon: m.default,
+      icon: p.default,
       onClick: j,
       url: r.privacy_policy_url,
       type: "policy",

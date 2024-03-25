@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
     return c
   },
   CUTOUT_BORDER_RADIUS: function() {
-    return f
+    return _
   },
   AvatarSizes: function() {
     return i
@@ -23,21 +23,21 @@ n.r(t), n.d(t, {
     return r
   },
   AvatarSizeSpecs: function() {
-    return _
+    return f
   },
   getAvatarSpecs: function() {
-    return h
+    return E
   },
   getAvatarSize: function() {
-    return g
+    return h
   }
 }), n("70102");
 let u = 1.5,
   d = 2.5,
   c = .125,
-  f = .2;
+  _ = .2;
 (a = i || (i = {})).SIZE_16 = "SIZE_16", a.SIZE_20 = "SIZE_20", a.SIZE_24 = "SIZE_24", a.SIZE_32 = "SIZE_32", a.SIZE_40 = "SIZE_40", a.SIZE_48 = "SIZE_48", a.SIZE_56 = "SIZE_56", a.SIZE_80 = "SIZE_80", a.SIZE_120 = "SIZE_120", a.SIZE_152 = "SIZE_152", a.DEPRECATED_SIZE_30 = "DEPRECATED_SIZE_30", a.DEPRECATED_SIZE_60 = "DEPRECATED_SIZE_60", a.DEPRECATED_SIZE_100 = "DEPRECATED_SIZE_100", (o = s || (s = {})).BLACK = "black", o.WHITE = "white", (l = r || (r = {}))[l.HIGH = .7] = "HIGH", l[l.LOW = .45] = "LOW";
-let _ = Object.freeze({
+let f = Object.freeze({
   SIZE_16: Object.freeze({
     size: 16,
     status: 6,
@@ -118,11 +118,11 @@ let _ = Object.freeze({
   })
 });
 
-function h(e) {
-  return _[e]
+function E(e) {
+  return f[e]
 }
 
-function g(e) {
-  if ("number" != typeof e) return _[e].size;
+function h(e) {
+  if ("number" != typeof e) return f[e].size;
   return e
 }

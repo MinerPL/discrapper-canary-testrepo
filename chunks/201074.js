@@ -5,8 +5,8 @@ s.r(t), s.d(t, {
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("917351"),
-  l = s("454686"),
+  l = s("917351"),
+  n = s("454686"),
   i = s("314865");
 
 function r(e) {
@@ -17,10 +17,10 @@ function r(e) {
       errorMessage: d,
       handleValidateKeywords: u
     } = function(e) {
-      let [t, s] = a.useState(null), i = a.useRef(null), r = a.useCallback(() => (0, n.debounce)(t => {
+      let [t, s] = a.useState(null), i = a.useRef(null), r = a.useCallback(() => (0, l.debounce)(t => {
         clearTimeout(i.current), i.current = setTimeout(() => {
           try {
-            (0, l.validateKeywordsOrThrow)(t, e), s(null)
+            (0, n.validateKeywordsOrThrow)(t, e), s(null)
           } catch (e) {
             s(e.message)
           }
@@ -40,8 +40,8 @@ function r(e) {
       let s = t.currentTarget.value,
         a = "insertFromPaste" === t.nativeEvent.inputType;
       a && (s = c(s));
-      let n = (0, i.getKeywordsFromString)(s);
-      o(s), e(n), u()(n)
+      let l = (0, i.getKeywordsFromString)(s);
+      o(s), e(l), u()(l)
     }, [u, c, e]);
   return {
     value: r,

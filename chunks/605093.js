@@ -1,23 +1,23 @@
 "use strict";
 r.r(t);
 var n = r("884691"),
-  o = r.n(n),
-  a = r("416037"),
-  i = r.n(a),
+  a = r.n(n),
+  o = r("416037"),
+  i = r.n(o),
   u = r("849122"),
   l = r("480583"),
-  c = r("882982"),
-  s = r("123090"),
-  f = r("723123"),
+  s = r("882982"),
+  f = r("123090"),
+  c = r("723123"),
   d = function(e) {
     var t = e.width,
       r = e.colors,
       n = e.onChange,
-      a = e.onSwatchHover,
+      o = e.onSwatchHover,
       i = e.triangle,
-      s = e.styles,
+      f = e.styles,
       d = e.className,
-      p = (0, u.default)((0, c.default)({
+      p = (0, u.default)((0, s.default)({
         default: {
           card: {
             width: t,
@@ -93,7 +93,7 @@ var n = r("884691"),
             transform: "rotate(180deg)"
           }
         }
-      }, void 0 === s ? {} : s), {
+      }, void 0 === f ? {} : f), {
         "hide-triangle": "hide" === i,
         "top-left-triangle": "top-left" === i,
         "top-right-triangle": "top-right" === i,
@@ -106,19 +106,19 @@ var n = r("884691"),
           source: "hex"
         }, t)
       };
-    return o.createElement("div", {
+    return a.createElement("div", {
       style: p.card,
       className: "github-picker " + (void 0 === d ? "" : d)
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: p.triangleShadow
-    }), o.createElement("div", {
+    }), a.createElement("div", {
       style: p.triangle
     }), (0, l.default)(r, function(e) {
-      return o.createElement(f.default, {
+      return a.createElement(c.default, {
         color: e,
         key: e,
         onClick: h,
-        onSwatchHover: a
+        onSwatchHover: o
       })
     }))
   };
@@ -132,4 +132,4 @@ d.propTypes = {
   colors: ["#B80000", "#DB3E00", "#FCCB00", "#008B02", "#006B76", "#1273DE", "#004DCF", "#5300EB", "#EB9694", "#FAD0C3", "#FEF3BD", "#C1E1C5", "#BEDADC", "#C4DEF6", "#BED3F3", "#D4C4FB"],
   triangle: "top-left",
   styles: {}
-}, (0, s.ColorWrap)(d)
+}, (0, f.ColorWrap)(d)

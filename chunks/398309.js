@@ -39,7 +39,7 @@ function T(e) {
       discountedPrice: y,
       regularPrice: D
     }),
-    b = (0, a.jsx)("div", {
+    v = (0, a.jsx)("div", {
       className: I.whatYouLoseButtonContainer,
       children: (0, a.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
@@ -70,7 +70,7 @@ function T(e) {
           }), (0, a.jsx)("div", {
             className: I.bodyString,
             children: O
-          }), b]
+          }), v]
         }) : (0, a.jsx)(r.Spinner, {})
       })
     }), !U && L && (0, a.jsx)(d.default, {

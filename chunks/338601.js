@@ -12,19 +12,19 @@ var i = s("414456"),
   d = s("819855"),
   u = s("77078"),
   c = s("629109"),
-  S = s("881719"),
+  S = s("533222"),
   E = s("42887"),
-  f = s("145131"),
-  T = s("476765"),
-  m = s("599110"),
-  _ = s("701909"),
+  T = s("145131"),
+  f = s("476765"),
+  _ = s("599110"),
+  m = s("701909"),
   g = s("161778"),
   h = s("49111"),
-  I = s("782340"),
-  N = s("926622");
+  N = s("782340"),
+  I = s("890957");
 let p = s("247431"),
   C = s("529115"),
-  A = (0, T.uid)();
+  A = (0, f.uid)();
 (n = a || (a = {}))[n.NONE = 0] = "NONE", n[n.STANDARD = 1] = "STANDARD", n[n.KRISP = 2] = "KRISP";
 let O = {
   page: h.AnalyticsPages.USER_SETTINGS,
@@ -33,7 +33,7 @@ let O = {
 
 function x(e) {
   let t = e.currentTarget;
-  m.default.track(h.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
+  _.default.track(h.AnalyticEvents.NOISE_CANCELLATION_LINK_CLICKED, {
     text: t.text,
     href: t.href,
     location: {
@@ -59,25 +59,25 @@ function R() {
   if (!a && !n) return null;
   let i = [];
   return n && i.push({
-    name: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
+    name: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_KRISP,
     value: 2
   }), a && i.push({
-    name: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
+    name: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_STANDARD,
     value: 1
   }), i.push({
-    name: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
+    name: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DISABLED,
     value: 0
   }), (0, l.jsxs)(u.FormSection, {
-    className: N.marginBottom20,
+    className: I.marginBottom20,
     children: [(0, l.jsx)(u.FormTitle, {
       id: A,
       tag: u.FormTitleTags.H3,
-      className: N.marginBottom8,
-      children: I.default.Messages.NOISE_SUPPRESSION
+      className: I.marginBottom8,
+      children: N.default.Messages.NOISE_SUPPRESSION
     }), (0, l.jsx)(u.FormText, {
       type: u.FormText.Types.DESCRIPTION,
-      className: N.marginBottom8,
-      children: I.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
+      className: I.marginBottom8,
+      children: N.default.Messages.USER_SETTINGS_NOISE_CANCELLATION_DESCRIPTION
     }), (0, l.jsx)(u.RadioGroup, {
       options: i,
       onChange: e => {
@@ -85,18 +85,18 @@ function R() {
       },
       value: t ? 2 : s ? 1 : 0
     }), n && (0, l.jsx)(u.FormNotice, {
-      className: N.marginBottom8,
+      className: I.marginBottom8,
       type: u.FormNoticeTypes.PRIMARY,
       imageData: {
         src: (0, d.isThemeLight)(e) ? p : C,
         width: 70,
         height: 40
       },
-      align: f.default.Align.CENTER,
+      align: T.default.Align.CENTER,
       body: (0, l.jsx)(u.Anchor, {
-        href: _.default.getArticleURL(h.HelpdeskArticles.NOISE_SUPPRESSION),
+        href: m.default.getArticleURL(h.HelpdeskArticles.NOISE_SUPPRESSION),
         onClick: x,
-        children: I.default.Messages.LEARN_MORE
+        children: N.default.Messages.LEARN_MORE
       })
     }), (0, l.jsx)(u.FormDivider, {})]
   })
@@ -111,7 +111,7 @@ function M() {
     vadAutoThreshold: n,
     vadUseKrisp: i,
     advancedVoiceActivitySupported: d,
-    automaticGainControlSupported: f
+    automaticGainControlSupported: T
   } = (0, o.useStateFromStoresObject)([E.default], () => ({
     inputMode: E.default.getMode(),
     inputDeviceId: E.default.getInputDeviceId(),
@@ -122,47 +122,47 @@ function M() {
     advancedVoiceActivitySupported: E.default.isAdvancedVoiceActivitySupported(),
     automaticGainControlSupported: E.default.isAutomaticGainControlSupported()
   })), {
-    hasEchoCancellation: T,
-    hasNoiseSuppression: m,
-    hasAutomaticGainControl: _
+    hasEchoCancellation: f,
+    hasNoiseSuppression: _,
+    hasAutomaticGainControl: m
   } = (0, o.useStateFromStoresObject)([S.default], () => ({
     hasEchoCancellation: S.default.hasEchoCancellation(t),
     hasNoiseSuppression: S.default.hasNoiseSuppression(t),
     hasAutomaticGainControl: S.default.hasAutomaticGainControl(t)
-  }), [t]), g = T || m || _, p = e === h.InputModes.VOICE_ACTIVITY && n;
+  }), [t]), g = f || _ || m, p = e === h.InputModes.VOICE_ACTIVITY && n;
   return (0, l.jsxs)(u.FormSection, {
-    className: N.marginBottom20,
-    title: I.default.Messages.FORM_LABEL_VOICE_PROCESSING,
+    className: I.marginBottom20,
+    title: N.default.Messages.FORM_LABEL_VOICE_PROCESSING,
     children: [g && (0, l.jsx)(u.FormText, {
-      className: N.marginBottom20,
+      className: I.marginBottom20,
       type: u.FormText.Types.DESCRIPTION,
-      children: I.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
+      children: N.default.Messages.FORM_HELP_CERTIFIED_VOICE_PROCESSING
     }), (0, l.jsx)(u.FormSwitch, {
-      className: r(N.marginTop8, N.marginBottom20),
+      className: r(I.marginTop8, I.marginBottom20),
       value: s,
       onChange: e => c.default.setEchoCancellation(e, {
         page: h.AnalyticsPages.USER_SETTINGS,
         section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
-      disabled: T,
-      children: I.default.Messages.ECHO_CANCELLATION
+      disabled: f,
+      children: N.default.Messages.ECHO_CANCELLATION
     }), (0, l.jsx)(R, {}), d && (0, l.jsx)(u.FormSwitch, {
       value: i,
       onChange: t => c.default.setMode(e, {
         vadUseKrisp: t
       }),
-      note: I.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
+      note: N.default.Messages.USER_SETTINGS_DISABLE_ADVANCED_VOICE_ACTIVITY,
       disabled: !p,
-      children: I.default.Messages.ADVANCED_VOICE_ACTIVITY
-    }), f && (0, l.jsx)(u.FormSwitch, {
+      children: N.default.Messages.ADVANCED_VOICE_ACTIVITY
+    }), T && (0, l.jsx)(u.FormSwitch, {
       className: "",
       value: a,
       onChange: e => c.default.setAutomaticGainControl(e, {
         page: h.AnalyticsPages.USER_SETTINGS,
         section: h.AnalyticsSections.SETTINGS_VOICE_AND_VIDEO
       }),
-      disabled: _,
-      children: I.default.Messages.AUTOMATIC_GAIN_CONTROL
+      disabled: m,
+      children: N.default.Messages.AUTOMATIC_GAIN_CONTROL
     })]
   })
 }

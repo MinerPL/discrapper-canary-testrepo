@@ -1,17 +1,17 @@
 "use strict";
 n.r(t), n.d(t, {
   VisibilityObserver: function() {
-    return o
+    return s
   }
 }), n("222007");
-var r = n("817736"),
-  i = n("118810");
-let s = {
+var i = n("817736"),
+  r = n("118810");
+let l = {
   root: null,
   rootMargin: "0px",
   threshold: .5
 };
-class o {
+class s {
   isVisible(e) {
     return null == this._observer || this._visibleComponents.has(e)
   }
@@ -19,8 +19,8 @@ class o {
     let t = this._observer;
     if (null == t) return;
     this.unobserve(e);
-    let n = (0, r.findDOMNode)(e);
-    (0, i.isElement)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
+    let n = (0, i.findDOMNode)(e);
+    (0, r.isElement)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), t.observe(n))
   }
   unobserve(e) {
     let t = this._observer;
@@ -28,7 +28,7 @@ class o {
     let n = this._components.get(e);
     null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n))
   }
-  constructor(e = s) {
+  constructor(e = l) {
     this._nodes = new WeakMap, this._components = new WeakMap, this._visibleComponents = new WeakSet, this._handleEntries = e => {
       e.forEach(e => {
         let t;

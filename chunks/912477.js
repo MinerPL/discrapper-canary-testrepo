@@ -6,17 +6,17 @@ s.r(t), s.d(t, {
 });
 var a = s("37983");
 s("884691");
-var n = s("446674"),
-  l = s("102985"),
+var l = s("446674"),
+  n = s("102985"),
   i = s("900938"),
   r = s("758085");
 
 function o() {
-  let e = (0, n.useStateFromStores)([l.default], () => l.default.hideInstantInvites),
+  let e = (0, l.useStateFromStores)([n.default], () => n.default.hideInstantInvites),
     {
       invites: t,
       guild: s
-    } = (0, n.useStateFromStoresObject)([i.default], () => i.default.getProps(), []);
+    } = (0, l.useStateFromStoresObject)([i.default], () => i.default.getProps(), []);
   return (0, a.jsx)(r.default, {
     invites: t,
     guild: s,

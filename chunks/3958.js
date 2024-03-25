@@ -4,28 +4,28 @@ s.r(t), s.d(t, {
     return n
   },
   default: function() {
-    return T
+    return _
   }
 }), s("222007");
 var n, l, i = s("37983"),
   a = s("884691"),
-  o = s("414456"),
-  r = s.n(o),
+  r = s("414456"),
+  o = s.n(r),
   d = s("800648"),
   u = s.n(d),
-  c = s("917351"),
-  h = s.n(c),
+  h = s("917351"),
+  c = s.n(h),
   m = s("77078"),
   p = s("13798"),
   f = s("145131"),
   g = s("782340"),
-  E = s("523192");
+  E = s("363172");
 (l = n || (n = {})).DEFAULT = "DEFAULT", l.RECORDING = "RECORDING";
-let _ = {
+let R = {
   DEFAULT: E.default,
   RECORDING: E.recording
 };
-class R extends a.PureComponent {
+class T extends a.PureComponent {
   componentWillUnmount() {
     null != this._unregisterNativeRecorder && this._unregisterNativeRecorder()
   }
@@ -61,7 +61,7 @@ class R extends a.PureComponent {
         onClick: this.handleClick,
         onMouseDown: this.handleMouseDown,
         ref: this._containerRef,
-        className: r(E.container, _[t], {
+        className: o(E.container, R[t], {
           [E.hasValue]: a,
           [E.disabled]: n
         }),
@@ -105,7 +105,7 @@ class R extends a.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), this._inputId = h.uniqueId("key-recorder-"), this._unregisterNativeRecorder = null, this._mousedownMode = null, this._inputRef = a.createRef(), this._containerRef = a.createRef(), this.setInputRef = e => {
+    super(...e), this._inputId = c.uniqueId("key-recorder-"), this._unregisterNativeRecorder = null, this._mousedownMode = null, this._inputRef = a.createRef(), this._containerRef = a.createRef(), this.setInputRef = e => {
       var t;
       let {
         registerNativeRecorder: s,
@@ -130,4 +130,4 @@ class R extends a.PureComponent {
     }
   }
 }
-var T = R
+var _ = T

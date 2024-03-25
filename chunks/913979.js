@@ -1,79 +1,79 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return S
+    return v
   }
 });
-var s = a("37983"),
-  r = a("884691"),
-  l = a("446674"),
-  n = a("77078"),
-  d = a("272030"),
-  u = a("42203"),
-  i = a("124948"),
-  o = a("697218"),
-  c = a("811305"),
-  f = a("800843"),
-  h = a("442184"),
-  m = a("648564"),
-  g = a("140407"),
-  S = r.memo(function(e) {
+var l = n("37983"),
+  a = n("884691"),
+  r = n("446674"),
+  s = n("77078"),
+  i = n("272030"),
+  u = n("42203"),
+  o = n("124948"),
+  d = n("697218"),
+  c = n("811305"),
+  f = n("800843"),
+  C = n("442184"),
+  h = n("648564"),
+  m = n("963906"),
+  v = a.memo(function(e) {
     let {
       threadId: t,
-      goToThread: r,
-      showChannelName: i
-    } = e, o = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(t)), c = (0, l.useStateFromStores)([u.default], () => u.default.getChannel(o.parent_id));
-    return (0, s.jsxs)(n.Clickable, {
-      className: g.container,
-      onClick: e => r(o, e.shiftKey),
-      onContextMenu: e => (0, d.openContextMenuLazy)(e, async () => {
+      goToThread: a,
+      showChannelName: o
+    } = e, d = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(t)), c = (0, r.useStateFromStores)([u.default], () => u.default.getChannel(d.parent_id));
+    return (0, l.jsxs)(s.Clickable, {
+      className: m.container,
+      onClick: e => a(d, e.shiftKey),
+      onContextMenu: e => (0, i.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await a.el("994827").then(a.bind(a, "994827"));
-        return t => (0, s.jsx)(e, {
+        } = await n.el("994827").then(n.bind(n, "994827"));
+        return t => (0, l.jsx)(e, {
           ...t,
-          channel: o
+          channel: d
         })
       }),
-      children: [(0, s.jsxs)("div", {
-        className: g.left,
-        children: [(0, s.jsxs)(n.Heading, {
-          className: g.threadNameLine,
+      children: [(0, l.jsxs)("div", {
+        className: m.left,
+        children: [(0, l.jsxs)(s.Heading, {
+          className: m.threadNameLine,
           variant: "heading-md/semibold",
-          children: [(0, s.jsx)("span", {
-            className: g.threadName,
-            children: o.name
-          }), i && null != c ? (0, s.jsx)("span", {
-            className: g.parentName,
+          children: [(0, l.jsx)("span", {
+            className: m.threadName,
+            children: d.name
+          }), o && null != c ? (0, l.jsx)("span", {
+            className: m.parentName,
             children: "#".concat(c.name)
           }) : null]
-        }), (0, h.default)(o)]
-      }), (0, s.jsx)(T, {
-        channel: o
+        }), (0, C.default)(d)]
+      }), (0, l.jsx)(p, {
+        channel: d
       })]
     })
   });
 
-function T(e) {
+function p(e) {
   let {
     channel: t
-  } = e, a = (0, l.useStateFromStores)([f.default], () => {
+  } = e, n = (0, r.useStateFromStores)([f.default], () => {
     var e;
     return null !== (e = f.default.getMemberIdsPreview(t.id)) && void 0 !== e ? e : []
-  }), n = (0, l.useStateFromStores)([f.default], () => {
+  }), s = (0, r.useStateFromStores)([f.default], () => {
     var e;
     return null !== (e = f.default.getMemberCount(t.id)) && void 0 !== e ? e : 0
-  }), d = (0, l.useStateFromStoresArray)([o.default], () => a.map(e => o.default.getUser(e)));
-  return (r.useEffect(() => {
-    a.filter((e, t) => null == d[t]).forEach(e => {
-      i.default.requestMember(t.guild_id, e)
+  }), i = (0, r.useStateFromStoresArray)([d.default], () => n.map(e => d.default.getUser(e)));
+  return (a.useEffect(() => {
+    n.filter((e, t) => null == i[t]).forEach(e => {
+      o.default.requestMember(t.guild_id, e)
     })
-  }, []), 0 === a.length) ? null : (0, s.jsx)(c.default, {
-    className: g.facepile,
+  }, []), 0 === n.length) ? null : (0, l.jsx)(c.default, {
+    className: m.facepile,
     showDefaultAvatarsForNullUsers: !0,
     guildId: t.guild_id,
-    users: d,
-    count: n,
-    max: m.MAX_THREAD_MEMBERS_PREVIEW
+    users: i,
+    count: s,
+    max: h.MAX_THREAD_MEMBERS_PREVIEW
   })
 }

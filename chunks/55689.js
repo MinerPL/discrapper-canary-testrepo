@@ -1,13 +1,13 @@
 "use strict";
 l.r(t), l.d(t, {
   clearPurchaseTokenAuthState: function() {
-    return s
+    return n
   }
 });
-var n = l("913144");
+var s = l("913144");
 
-function s() {
-  n.default.dispatch({
+function n() {
+  s.default.dispatch({
     type: "BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE"
   })
 }

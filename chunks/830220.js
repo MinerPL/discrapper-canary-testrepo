@@ -14,9 +14,9 @@ var l = n("414456"),
   u = n("93332"),
   d = n("304198"),
   c = n("250375"),
-  f = n("988268"),
-  E = n("782340"),
-  _ = n("413362");
+  E = n("988268"),
+  f = n("782340"),
+  _ = n("950912");
 
 function T(e) {
   let {
@@ -59,9 +59,9 @@ function T(e) {
               color: "text-brand",
               tag: "span",
               className: _.username,
-              children: E.default.Messages.GUILD_AUTOMOD_USERNAME
+              children: f.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(o.default, {
-              type: f.BotTagTypes.SYSTEM_DM,
+              type: E.BotTagTypes.SYSTEM_DM,
               className: _.systemTag
             })]
           }),
@@ -71,7 +71,7 @@ function T(e) {
           className: a(_.messageContent, {
             [_.compact]: n
           }),
-          children: E.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
+          children: f.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({
             username: T.nick,
             usernameHook: I
           })

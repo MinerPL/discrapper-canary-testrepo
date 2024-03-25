@@ -1,56 +1,56 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return f
+    return E
   }
 });
-var l = n("37983");
-n("884691");
-var s = n("414456"),
-  u = n.n(s),
-  i = n("249654"),
-  a = n("77078"),
-  o = n("276676"),
-  r = n("123030"),
-  d = n("782340"),
-  c = n("849882");
+var n = l("37983");
+l("884691");
+var s = l("414456"),
+  u = l.n(s),
+  a = l("77078"),
+  i = l("299039"),
+  o = l("276676"),
+  r = l("123030"),
+  d = l("782340"),
+  c = l("912215");
 
-function f(e) {
+function E(e) {
   let {
     guildId: t,
-    recurrenceRule: n,
+    recurrenceRule: l,
     guildEventId: s,
-    onRecurrenceClick: f,
-    hideScroller: E = !1,
+    onRecurrenceClick: E,
+    hideScroller: f = !1,
     activeRecurrenceId: h
   } = e, {
     recurrenceStartTimes: C,
-    canViewMoreRecurrences: v,
-    updateRecurrenceStartTimes: N
-  } = (0, o.default)(s, t, n);
-  return (0, l.jsxs)("div", {
+    canViewMoreRecurrences: g,
+    updateRecurrenceStartTimes: v
+  } = (0, o.default)(s, t, l);
+  return (0, n.jsxs)("div", {
     className: c.recurrences,
-    children: [(0, l.jsx)(a.Heading, {
+    children: [(0, n.jsx)(a.Heading, {
       variant: "heading-sm/medium",
       className: c.heading,
       children: d.default.Messages.GUILD_SCHEDULED_EVENT_REPEATS
-    }), (0, l.jsxs)(a.Scroller, {
+    }), (0, n.jsxs)(a.Scroller, {
       className: u(c.scroller, {
-        [c.showScroller]: !E
+        [c.showScroller]: !f
       }),
       children: [C.map(e => {
         let t = i.default.fromTimestamp(e.getTime());
-        return (0, l.jsx)(r.default, {
+        return (0, n.jsx)(r.default, {
           recurrenceId: t,
           originalScheduledStartTime: e,
           guildEventId: s,
-          onClick: f,
+          onClick: E,
           isActive: t === h
         }, t)
-      }), v && (0, l.jsx)(a.Button, {
+      }), g && (0, n.jsx)(a.Button, {
         grow: !1,
         onClick: e => {
-          e.stopPropagation(), N()
+          e.stopPropagation(), v()
         },
         look: a.Button.Looks.LINK,
         size: a.Button.Sizes.MIN,

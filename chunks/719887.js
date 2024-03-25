@@ -1,23 +1,23 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return l
+    return n
   }
 }), s("222007");
 var a = s("884691"),
-  n = s("3245"),
-  l = function() {
+  l = s("3245"),
+  n = function() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
       {
         refreshOnDepChange: t
       } = e,
-      [s, l] = a.useState([]),
+      [s, n] = a.useState([]),
       [i, r] = a.useState(!0),
       o = async () => {
         r(!0);
         try {
-          let e = await n.default.fetchTeams(!0);
-          l(e.body)
+          let e = await l.default.fetchTeams(!0);
+          n(e.body)
         } catch (e) {}
         r(!1)
       }, d = a.useRef(!0);

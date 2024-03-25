@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return R
   }
 });
 var l = n("37983"),
@@ -19,9 +19,9 @@ var l = n("37983"),
   g = n("249873"),
   _ = n("837979"),
   S = n("782340"),
-  v = n("636843");
+  v = n("652809");
 
-function R(e) {
+function m(e) {
   let {
     guild: t,
     channel: n,
@@ -71,29 +71,29 @@ function R(e) {
   })
 }
 
-function m(e) {
+function R(e) {
   let {
     channel: t,
     onClose: n,
     transitionState: o,
     ...d
-  } = e, E = (0, u.useUID)(), S = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), m = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
+  } = e, E = (0, u.useUID)(), S = (0, r.useStateFromStores)([i.default], () => i.default.getGuild(t.guild_id)), R = a.useMemo(() => c.default.getStageInstanceByChannel(t.id), [t.id]), {
     loading: C,
-    error: N,
-    onSave: T
+    error: T,
+    onSave: N
   } = (0, h.default)(t, n), {
     modalStep: p,
-    setModalStep: I,
-    readySlide: x,
+    setModalStep: x,
+    readySlide: I,
     handleSlideReady: L,
     savedOptions: A,
     handleSettingsSave: y,
     handleDelayedSave: D
   } = (0, g.default)({
-    stageInstance: m,
+    stageInstance: R,
     defaultStep: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
-    error: N,
-    onSave: T
+    error: T,
+    onSave: N
   });
   return (a.useEffect(() => {
     null == S && n()
@@ -110,17 +110,17 @@ function m(e) {
         id: _.StartStageSteps.STAGE_CHANNEL_SETTINGS,
         children: (0, l.jsx)("div", {
           className: v.slideContainer,
-          children: (0, l.jsx)(R, {
+          children: (0, l.jsx)(m, {
             guild: S,
             channel: t,
-            stageInstance: m,
+            stageInstance: R,
             headerId: E,
             onClose: n,
             loading: C,
-            error: N,
+            error: T,
             onSave: y,
             defaultOptions: A,
-            isSlideReady: x === _.StartStageSteps.STAGE_CHANNEL_SETTINGS
+            isSlideReady: I === _.StartStageSteps.STAGE_CHANNEL_SETTINGS
           })
         })
       }), (0, l.jsx)(s.Slide, {
@@ -135,7 +135,7 @@ function m(e) {
             loading: C,
             onNext: D,
             onCancel: n,
-            onBack: () => I(_.StartStageSteps.STAGE_CHANNEL_SETTINGS)
+            onBack: () => x(_.StartStageSteps.STAGE_CHANNEL_SETTINGS)
           })
         })
       })]

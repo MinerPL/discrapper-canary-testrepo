@@ -1,15 +1,15 @@
 "use strict";
 i.r(t), i.d(t, {
   maybeFetchTopEmojisByGuild: function() {
-    return s
+    return a
   }
 });
 var n = i("697218"),
   r = i("385976"),
-  a = i("26430"),
-  o = i("305781");
+  o = i("26430"),
+  u = i("305781");
 
-function s(e) {
+function a(e) {
   if (null == e) return;
   let t = n.default.getCurrentUser();
   if (null == t) return;
@@ -19,5 +19,5 @@ function s(e) {
       topEmojisTTL: e
     } = i;
     if (null == e || Date.now() < e) return
-  }!a.default.getIsFetching(e) && (0, o.fetchTopEmojis)(e)
+  }!o.default.getIsFetching(e) && (0, u.fetchTopEmojis)(e)
 }

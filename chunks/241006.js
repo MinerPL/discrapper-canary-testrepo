@@ -1,14 +1,14 @@
 "use strict";
 n.r(e), n.d(e, {
   default: function() {
-    return i
+    return r
   }
 }), n("222007");
-var u = n("884691");
+var i = n("884691");
 
-function i() {
-  let [t, e] = u.useState(null), n = u.useRef(null);
-  return u.useEffect(() => {
+function r() {
+  let [t, e] = i.useState(null), n = i.useRef(null);
+  return i.useEffect(() => {
     null != t && null != n.current && n.current.scrollIntoView({
       behavior: "smooth"
     })

@@ -1,21 +1,21 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return T
+    return f
   }
 }), s("70102");
-var a, n, l = s("37983");
+var a, r, i = s("37983");
 s("884691");
-var r = s("414456"),
-  i = s.n(r),
-  u = s("446674"),
-  o = s("77078"),
+var n = s("414456"),
+  l = s.n(n),
+  o = s("446674"),
+  u = s("77078"),
   d = s("87657"),
   c = s("471671"),
   _ = s("782340"),
-  E = s("898555");
-(n = a || (a = {}))[n.STAFF_NOTES = 1] = "STAFF_NOTES";
-let I = u.default.connectStores([c.default], () => ({
+  E = s("289557");
+(r = a || (a = {}))[r.STAFF_NOTES = 1] = "STAFF_NOTES";
+let T = o.default.connectStores([c.default], () => ({
     animate: c.default.isFocused()
   }))(e => {
     let {
@@ -23,25 +23,25 @@ let I = u.default.connectStores([c.default], () => ({
       className: s,
       animate: a
     } = e;
-    return (0, l.jsxs)("div", {
-      className: i(E.staffReviewHeader, s),
-      children: [(0, l.jsx)(d.default, {
-        size: o.AvatarSizes.SIZE_32,
+    return (0, i.jsxs)("div", {
+      className: l(E.staffReviewHeader, s),
+      children: [(0, i.jsx)(d.default, {
+        size: u.AvatarSizes.SIZE_32,
         user: t,
         animate: a
-      }), (0, l.jsxs)("div", {
+      }), (0, i.jsxs)("div", {
         className: E.headerText,
-        children: [(0, l.jsx)("div", {
+        children: [(0, i.jsx)("div", {
           className: E.label,
           children: _.default.Messages.APPLICATION_STORE_STAFF_PICK
-        }), (0, l.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: E.username,
           children: t.username
         })]
       })]
     })
   }),
-  f = e => {
+  I = e => {
     let {
       data: t,
       className: s
@@ -52,12 +52,12 @@ let I = u.default.connectStores([c.default], () => ({
         user: e,
         content: a
       } = t.staffNotes;
-      return null == e ? null : (0, l.jsxs)("div", {
+      return null == e ? null : (0, i.jsxs)("div", {
         className: s,
-        children: [(0, l.jsx)(I, {
+        children: [(0, i.jsx)(T, {
           user: e,
           className: E.header
-        }), (0, l.jsx)("div", {
+        }), (0, i.jsx)("div", {
           className: E.notes,
           children: a
         })]
@@ -65,5 +65,5 @@ let I = u.default.connectStores([c.default], () => ({
     }
     throw Error("Unknown type")
   };
-f.Types = a;
-var T = f
+I.Types = a;
+var f = I

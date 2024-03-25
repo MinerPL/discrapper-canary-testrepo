@@ -11,9 +11,9 @@ e.exports = function(e, t, n, r) {
   var a = e.length;
   s > 0 && a > s && (a = s);
   for (var c = 0; c < a; ++c) {
-    var u, d, l, f, p, h, g = e[c].replace(o, "%20"),
-      b = g.indexOf(n);
-    if (b >= 0 ? (l = g.substr(0, b), f = g.substr(b + 1)) : (l = g, f = ""), p = decodeURIComponent(l), h = decodeURIComponent(f), u = i, d = p, Object.prototype.hasOwnProperty.call(u, d)) Array.isArray(i[p]) ? i[p].push(h) : i[p] = [i[p], h];
+    var u, d, l, f, p, h, v = e[c].replace(o, "%20"),
+      g = v.indexOf(n);
+    if (g >= 0 ? (l = v.substr(0, g), f = v.substr(g + 1)) : (l = v, f = ""), p = decodeURIComponent(l), h = decodeURIComponent(f), u = i, d = p, Object.prototype.hasOwnProperty.call(u, d)) Array.isArray(i[p]) ? i[p].push(h) : i[p] = [i[p], h];
     else i[p] = h
   }
   return i

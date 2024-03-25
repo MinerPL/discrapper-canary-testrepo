@@ -4,15 +4,15 @@ n.r(e), n.d(e, {
     return l
   }
 }), n("222007");
-var u = n("884691"),
-  i = n("745279"),
-  r = n("520713");
+var i = n("884691"),
+  r = n("745279"),
+  u = n("520713");
 
 function l() {
-  let [t, e] = u.useState(null);
-  return u.useEffect(() => {
-    (0, r.getStripe)().then(t => e(t)).catch(t => {
-      (0, i.captureBillingException)(t)
+  let [t, e] = i.useState(null);
+  return i.useEffect(() => {
+    (0, u.getStripe)().then(t => e(t)).catch(t => {
+      (0, r.captureBillingException)(t)
     })
   }, []), t
 }

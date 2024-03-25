@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   useSortedMemberApplications: function() {
-    return u
+    return r
   }
 }), s("222007");
 var a = s("884691"),
@@ -9,12 +9,12 @@ var a = s("884691"),
   i = s("90490"),
   n = s("567054");
 
-function u(e) {
+function r(e) {
   let {
     guildId: t,
     applicationStatus: s,
-    sortOrder: u
-  } = e, r = (0, l.useStateFromStores)([i.default], () => i.default.getRequests(t, s), [s, t]), o = a.useMemo(() => u === n.GuildJoinRequestSortOrders.TIMESTAMP_DESC ? [...r].reverse() : r, [u, r]);
+    sortOrder: r
+  } = e, u = (0, l.useStateFromStores)([i.default], () => i.default.getRequests(t, s), [s, t]), o = a.useMemo(() => r === n.GuildJoinRequestSortOrders.TIMESTAMP_DESC ? [...u].reverse() : u, [r, u]);
   return {
     guildJoinRequests: o
   }

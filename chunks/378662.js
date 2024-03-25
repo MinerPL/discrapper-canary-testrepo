@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoveryInAppReportingExperiment: function() {
-    return l
+    return i
   },
   useCanSeeDiscoveryContextMenu: function() {
     return r
@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var a = n("884691"),
   s = n("862205"),
-  i = n("845579");
-let l = (0, s.createExperiment)({
+  l = n("845579");
+let i = (0, s.createExperiment)({
   kind: "user",
   id: "2022-01_discovery_iar",
   label: "Ability to report servers in Server Discovery",
@@ -29,13 +29,13 @@ let l = (0, s.createExperiment)({
 function r() {
   let {
     canSeeInAppReportingButtons: e
-  } = l.useExperiment({
+  } = i.useExperiment({
     location: "7a11e2_1"
   }, {
     autoTrackExposure: !1
-  }), t = i.DeveloperMode.useSetting();
+  }), t = l.DeveloperMode.useSetting();
   return a.useEffect(() => {
-    l.trackExposure({
+    i.trackExposure({
       location: "7a11e2_2"
     })
   }, []), e || t

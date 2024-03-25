@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   joinRequestFromServer: function() {
-    return d
+    return c
   },
   default: function() {
-    return h
+    return E
   }
 });
 var i = n("446674"),
-  r = n("913144"),
-  s = n("813006"),
+  s = n("913144"),
+  r = n("813006"),
   a = n("697218"),
   o = n("591023");
 let l = {},
   u = !1,
-  c = {};
+  d = {};
 
-function d(e) {
+function c(e) {
   return {
     id: e.id,
     guildId: e.guild_id,
@@ -32,18 +32,18 @@ function d(e) {
   }
 }
 
-function f(e) {
+function _(e) {
   let {
     guildId: t,
     request: n
   } = e;
   if (null == n) return;
-  let i = d(n),
-    r = a.default.getCurrentUser();
-  if (null != r && i.userId !== r.id) return !1;
+  let i = c(n),
+    s = a.default.getCurrentUser();
+  if (null != s && i.userId !== s.id) return !1;
   (0, o.isApprovedAndAcked)(i) ? delete l[t]: l[t] = i
 }
-class E extends i.default.Store {
+class f extends i.default.Store {
   getRequest(e) {
     return l[e]
   }
@@ -51,27 +51,27 @@ class E extends i.default.Store {
     return Object.values(l).map(e => null == e ? void 0 : e.guildId).filter(e => null != e)
   }
   getJoinRequestGuild(e) {
-    return null != c[e] ? new s.default(c[e]) : null
+    return null != d[e] ? new r.default(d[e]) : null
   }
   get hasFetchedRequestToJoinGuilds() {
     return u
   }
 }
-E.displayName = "UserGuildJoinRequestStore";
-var h = new E(r.default, {
+f.displayName = "UserGuildJoinRequestStore";
+var E = new f(s.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
     } = e;
-    u = !1, c = {}, l = {}, t.forEach(e => {
+    u = !1, d = {}, l = {}, t.forEach(e => {
       let {
         guild_id: t
       } = e;
-      null != t && (l[t] = d(e))
+      null != t && (l[t] = c(e))
     })
   },
-  GUILD_JOIN_REQUEST_UPDATE: f,
-  GUILD_JOIN_REQUEST_CREATE: f,
+  GUILD_JOIN_REQUEST_UPDATE: _,
+  GUILD_JOIN_REQUEST_CREATE: _,
   USER_GUILD_JOIN_REQUEST_UPDATE: function(e) {
     let {
       request: t,
@@ -81,7 +81,7 @@ var h = new E(r.default, {
       delete l[n];
       return
     }
-    let i = d(t);
+    let i = c(t);
     (0, o.isApprovedAndAcked)(i) ? delete l[n]: l[n] = i
   },
   GUILD_DELETE: function(e) {
@@ -99,13 +99,13 @@ var h = new E(r.default, {
         id: t,
         name: n,
         features: i,
-        icon: r
+        icon: s
       } = e;
-      c[t] = {
+      d[t] = {
         id: t,
         name: n,
         features: i,
-        icon: r
+        icon: s
       }
     })
   },
@@ -118,14 +118,14 @@ var h = new E(r.default, {
       let {
         id: e,
         name: i,
-        icon: r,
-        features: s
+        icon: s,
+        features: r
       } = t.guild;
-      c[n] = {
+      d[n] = {
         id: e,
         name: i,
-        icon: r,
-        features: null != s ? s : []
+        icon: s,
+        features: null != r ? r : []
       }
     }
   },
@@ -140,17 +140,17 @@ var h = new E(r.default, {
       let {
         guild_id: e
       } = i;
-      l[e] = d(i);
+      l[e] = c(i);
       let {
         id: t,
-        name: r,
-        icon: s,
+        name: s,
+        icon: r,
         features: a
       } = n;
-      c[t] = {
+      d[t] = {
         id: t,
-        name: r,
-        icon: s,
+        name: s,
+        icon: r,
         features: null != a ? a : []
       }
     }

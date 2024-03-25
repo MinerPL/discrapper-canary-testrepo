@@ -14,15 +14,15 @@ var l = n("414456"),
   u = n("77078"),
   d = n("305961"),
   c = n("162771"),
-  f = n("549103"),
-  E = n("233322"),
+  E = n("549103"),
+  f = n("233322"),
   _ = n("567054"),
   T = n("982527"),
   I = n("49111"),
   m = n("724210"),
   N = n("782340"),
-  p = n("884938"),
-  S = n("105029"),
+  p = n("155363"),
+  S = n("125792"),
   A = () => {
     var e, t;
     let l = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
@@ -34,16 +34,16 @@ var l = n("414456"),
     let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
       O = null,
       R = null,
-      L = null,
-      v = [p.notice, S.notice];
+      v = null,
+      L = [p.notice, S.notice];
     switch (M) {
       case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-        O = N.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, L = () => {
+        O = N.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
           (0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
             header: N.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
             confirmText: N.default.Messages.CONFIRM,
             cancelText: N.default.Messages.CANCEL,
-            onConfirm: () => f.default.removeGuildJoinRequest(A.id),
+            onConfirm: () => E.default.removeGuildJoinRequest(A.id),
             confirmButtonColor: u.Button.Colors.BRAND,
             ...e,
             children: (0, s.jsx)(u.Text, {
@@ -54,7 +54,7 @@ var l = n("414456"),
         };
         break;
       case _.GuildJoinRequestApplicationStatuses.REJECTED:
-        O = N.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, L = () => {
+        O = N.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, v = () => {
           (0, u.openModalLazy)(async () => {
             let {
               default: e
@@ -64,15 +64,15 @@ var l = n("414456"),
               ...t
             })
           })
-        }, v.push(p.error);
+        }, L.push(p.error);
         break;
       default:
-        O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, L = () => {
-          (0, E.openMemberVerificationModal)(A.id)
+        O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
+          (0, f.openMemberVerificationModal)(A.id)
         }
     }
     return (0, s.jsxs)("div", {
-      className: a(...v),
+      className: a(...L),
       children: [(0, s.jsx)(u.Text, {
         className: p.header,
         variant: "text-sm/normal",
@@ -82,7 +82,7 @@ var l = n("414456"),
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         size: u.Button.Sizes.NONE,
-        onClick: L,
+        onClick: v,
         children: R
       })]
     })

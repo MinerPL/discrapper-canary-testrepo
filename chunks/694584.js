@@ -5,12 +5,12 @@ r.r(t), r.d(t, {
   }
 }), r("222007");
 var n = r("447960"),
-  o = r("84991"),
-  a = r("976762"),
+  a = r("84991"),
+  o = r("976762"),
   i = function() {
     this.size = 0, this.__data__ = {
       hash: new n.default,
-      map: new(a.default || o.default),
+      map: new(o.default || a.default),
       string: new n.default
     }
   }

@@ -1,12 +1,12 @@
 "use strict";
-n.r(e), n.d(e, {
+s.r(t), s.d(t, {
   default: function() {
-    return c
+    return o
   }
 });
-var s = n("773336"),
-  a = n("50885");
+var a = s("773336"),
+  n = s("50885");
 
-function c(t) {
-  s.isPlatformEmbedded ? a.default.focus(t) : window.focus()
+function o(e) {
+  a.isPlatformEmbedded ? n.default.focus(e) : window.focus()
 }

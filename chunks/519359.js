@@ -14,12 +14,12 @@ var a = l("414456"),
   o = l("813006"),
   d = l("580357"),
   u = l("476263"),
-  p = l("781896"),
-  m = l("587974"),
+  m = l("781896"),
+  p = l("587974"),
   _ = l("315102"),
   f = l("49111"),
   h = l("782340"),
-  C = l("722142"),
+  C = l("575486"),
   g = l("68422"),
   I = l("578817");
 
@@ -59,8 +59,8 @@ function A(e) {
         className: C.splashImage
       }), (0, i.jsx)("div", {
         className: C.guildIcon,
-        children: (0, i.jsx)(m.default, {
-          mask: m.default.Masks.AVATAR_DEFAULT,
+        children: (0, i.jsx)(p.default, {
+          mask: p.default.Masks.AVATAR_DEFAULT,
           width: 58,
           height: 58,
           children: (0, i.jsx)("div", {
@@ -97,7 +97,7 @@ function A(e) {
         className: C.memberInfo,
         children: (0, i.jsxs)("div", {
           className: C.memberCountWrapper,
-          children: [(0, i.jsx)(p.default, {
+          children: [(0, i.jsx)(m.default, {
             className: C.memberCountIcon,
             width: "16",
             height: "16"

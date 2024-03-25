@@ -1,58 +1,58 @@
 "use strict";
-i.r(t), i.d(t, {
+_.r(t), _.d(t, {
   default: function() {
     return l
   }
-}), i("222007");
-var _ = i("446674"),
-  s = i("913144"),
-  o = i("521012");
-let I = !1,
-  u = {};
+}), _("222007");
+var i = _("446674"),
+  s = _("913144"),
+  I = _("521012");
+let T = !1,
+  o = {};
 
-function r(e) {
+function u(e) {
   let {
     guildBoostSlot: t
   } = e;
-  u = {
-    ...u,
+  o = {
+    ...o,
     [t.id]: t
   }
 }
 
-function T() {
+function E() {
   let e = {};
-  for (let t of Object.values(u)) e[t.id] = t, t.subscription = o.default.getSubscriptionById(t.subscriptionId);
-  u = e
+  for (let t of Object.values(o)) e[t.id] = t, t.subscription = I.default.getSubscriptionById(t.subscriptionId);
+  o = e
 }
-class d extends _.default.Store {
+class r extends i.default.Store {
   initialize() {
-    this.syncWith([o.default], T)
+    this.syncWith([I.default], E)
   }
   get hasFetched() {
-    return I
+    return T
   }
   get boostSlots() {
-    return u
+    return o
   }
   getGuildBoostSlot(e) {
-    return u[e]
+    return o[e]
   }
 }
-d.displayName = "GuildBoostSlotStore";
-var l = new d(s.default, {
+r.displayName = "GuildBoostSlotStore";
+var l = new r(s.default, {
   GUILD_BOOST_SLOTS_FETCH_SUCCESS: function(e) {
     let {
       guildBoostSlots: t
     } = e;
-    u = {}, t.forEach(e => {
-      u[e.id] = e
-    }), I = !0
+    o = {}, t.forEach(e => {
+      o[e.id] = e
+    }), T = !0
   },
-  GUILD_BOOST_SLOT_UPDATE_SUCCESS: r,
-  GUILD_BOOST_SLOT_CREATE: r,
-  GUILD_BOOST_SLOT_UPDATE: r,
+  GUILD_BOOST_SLOT_UPDATE_SUCCESS: u,
+  GUILD_BOOST_SLOT_CREATE: u,
+  GUILD_BOOST_SLOT_UPDATE: u,
   LOGOUT: function() {
-    u = {}, I = !1
+    o = {}, T = !1
   }
 })

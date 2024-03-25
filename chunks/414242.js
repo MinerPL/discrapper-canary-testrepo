@@ -23,7 +23,7 @@ function u(t) {
     }
   });
   return (0, s.jsx)(i.default, {
-    artURL: n("433809"),
+    artURL: n("696475"),
     type: o.PremiumUpsellTypes.PREMIUM_GUILD_IDENTITY_MODAL,
     title: r.default.Messages.GUILD_IDENTITY_UPSELL_MODAL_TITLE,
     body: L,

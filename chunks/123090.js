@@ -4,10 +4,10 @@ r.r(t), r.d(t, {
     return n.default
   },
   Checkboard: function() {
-    return o.default
+    return a.default
   },
   EditableInput: function() {
-    return a.default
+    return o.default
   },
   Hue: function() {
     return i.default
@@ -19,17 +19,17 @@ r.r(t), r.d(t, {
     return l.default
   },
   ColorWrap: function() {
-    return c.default
+    return s.default
   },
   Swatch: function() {
-    return s.default
+    return f.default
   }
 });
 var n = r("887102"),
-  o = r("892023"),
-  a = r("505164"),
+  a = r("892023"),
+  o = r("505164"),
   i = r("302447"),
   u = r("899735"),
   l = r("153795"),
-  c = r("247344"),
-  s = r("903920")
+  s = r("247344"),
+  f = r("903920")

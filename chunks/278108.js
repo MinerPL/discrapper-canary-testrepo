@@ -8,12 +8,12 @@ var n = s("37983"),
   l = s("884691"),
   i = s("499032"),
   a = s.n(i),
-  o = s("312165"),
-  r = s("3958"),
+  r = s("312165"),
+  o = s("3958"),
   d = s("773336"),
   u = s("50885"),
-  c = s("49111");
-let h = d.isPlatformEmbedded && null != u.default.getDiscordUtils().inputCaptureRegisterElement;
+  h = s("49111");
+let c = d.isPlatformEmbedded && null != u.default.getDiscordUtils().inputCaptureRegisterElement;
 class m extends l.PureComponent {
   componentDidMount() {
     this._mounted = !0
@@ -35,7 +35,7 @@ class m extends l.PureComponent {
     } = this.state, {
       onChange: s
     } = this.props;
-    t === r.RecordModes.RECORDING && (null != s && s(e), this.setState({
+    t === o.RecordModes.RECORDING && (null != s && s(e), this.setState({
       codes: e
     }))
   }
@@ -47,37 +47,37 @@ class m extends l.PureComponent {
     } = this.state, {
       disabled: i
     } = this.props;
-    return h ? (t = u.default.getDiscordUtils().inputCaptureRegisterElement, e = this.handleNativeChange) : !d.isPlatformEmbedded && (e = this.handleComboKeys), (0, n.jsx)(r.default, {
+    return c ? (t = u.default.getDiscordUtils().inputCaptureRegisterElement, e = this.handleNativeChange) : !d.isPlatformEmbedded && (e = this.handleComboKeys), (0, n.jsx)(o.default, {
       disabled: i,
       value: s,
       mode: l,
       onClick: this.toggleRecordMode,
       onChange: e,
       registerNativeRecorder: t,
-      disableOnClickWhileRecording: h
+      disableOnClickWhileRecording: c
     })
   }
   constructor(e) {
     super(e), this._mounted = !1, this.recordStart = () => {
-      d.isPlatformEmbedded && !h && (this.gs = new o.default, this.gs.on("change", this.handleGSChange)), this.setState({
-        mode: r.RecordModes.RECORDING
+      d.isPlatformEmbedded && !c && (this.gs = new r.default, this.gs.on("change", this.handleGSChange)), this.setState({
+        mode: o.RecordModes.RECORDING
       })
     }, this.recordEnd = () => {
       this.cleanUp(), this.setState({
-        mode: r.RecordModes.DEFAULT
+        mode: o.RecordModes.DEFAULT
       })
     }, this.toggleRecordMode = () => {
-      this.state.mode === r.RecordModes.DEFAULT ? this.recordStart() : this.recordEnd()
+      this.state.mode === o.RecordModes.DEFAULT ? this.recordStart() : this.recordEnd()
     }, this.handleComboKeys = (e, t, s) => {
       if (s.preventDefault(), "keydown" === s.type) {
-        let e = t.map(e => [c.KeyboardDeviceTypes.KEYBOARD_KEY, a(e), c.KeyboardEnvs.BROWSER]),
+        let e = t.map(e => [h.KeyboardDeviceTypes.KEYBOARD_KEY, a(e), h.KeyboardEnvs.BROWSER]),
           {
             keyCode: n
           } = s;
         null == e.find(e => {
           let [, t] = e;
           return n === t
-        }) && e.push([c.KeyboardDeviceTypes.KEYBOARD_KEY, n, c.KeyboardEnvs.BROWSER]), this.handleComboChange(e)
+        }) && e.push([h.KeyboardDeviceTypes.KEYBOARD_KEY, n, h.KeyboardEnvs.BROWSER]), this.handleComboChange(e)
       }
     }, this.handleGSChange = e => {
       if (!1 === this._mounted) return;
@@ -91,7 +91,7 @@ class m extends l.PureComponent {
     } = e;
     this.state = {
       codes: t,
-      mode: r.RecordModes.DEFAULT
+      mode: o.RecordModes.DEFAULT
     }
   }
 }

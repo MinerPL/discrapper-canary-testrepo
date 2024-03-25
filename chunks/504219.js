@@ -19,29 +19,29 @@ var n = l("37983"),
   C = l("13798"),
   E = l("386045"),
   h = l("30591"),
-  _ = l("803725"),
+  N = l("803725"),
   g = l("49111"),
-  p = l("994428"),
-  N = l("782340"),
-  I = l("173266"),
-  x = l("770420");
+  _ = l("994428"),
+  p = l("782340"),
+  I = l("942175"),
+  x = l("961523");
 let v = e => {
   let {
     clipsEnabled: t,
     isAnimationDone: l,
     guildId: s,
     children: r
-  } = e, m = (0, i.useStateFromStores)([E.default], () => E.default.getHardwareClassification()), C = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, x = m === h.ClipsHardwareClassification.BELOW_MINIMUM, v = l && (C || x) && !t, [A, R] = (0, c.useGetDismissibleContent)(v ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), T = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
+  } = e, m = (0, i.useStateFromStores)([E.default], () => E.default.getHardwareClassification()), C = m === h.ClipsHardwareClassification.MEETS_MINIMUM || m === h.ClipsHardwareClassification.UNKNOWN, x = m === h.ClipsHardwareClassification.BELOW_MINIMUM, v = l && (C || x) && !t, [A, T] = (0, c.useGetDismissibleContent)(v ? [u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK] : []), R = A === u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK;
   a.useEffect(() => {
     t && (0, d.markDismissibleContentAsDismissed)(u.DismissibleContent.CLIPS_ONBOARDING_GO_LIVE_COACHMARK, {
       forceTrack: !0
     })
   }, [t]);
   let L = (e, t) => {
-    e.stopPropagation(), e.preventDefault(), null == t || t(), R(p.ContentDismissActionType.UNKNOWN)
+    e.stopPropagation(), e.preventDefault(), null == t || t(), T(_.ContentDismissActionType.UNKNOWN)
   };
   return (0, n.jsx)(o.Popout, {
-    shouldShow: T,
+    shouldShow: R,
     position: "right",
     align: "center",
     renderPopout: e => {
@@ -54,25 +54,25 @@ let v = e => {
         inlineArt: !0,
         artClassName: I.clipsEducationArt,
         position: "right",
-        header: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
+        header: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_TITLE,
         headerClassName: I.clipsEducationHeader,
         body: (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
-            children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
+            children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_BODY
           }), x ? (0, n.jsx)(o.Text, {
             variant: "text-sm/normal",
             color: "always-white",
             className: I.warningText,
-            children: N.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
+            children: p.default.Messages.CLIPS_ONBOARDING_GO_LIVE_DEFAULT_DISABLED_COACHMARK_HARDWARE_IMPACT_WARNING.format({
               url: S.default.getArticleURL(g.HelpdeskArticles.CLIPS)
             })
           }) : null]
         }),
-        tryItText: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
+        tryItText: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS,
         onTryFeature: e => {
-          (0, _.updateClipsEnabled)({
+          (0, N.updateClipsEnabled)({
             clipsEnabled: !0,
             guildId: s,
             trackAnalytics: !0
@@ -94,7 +94,7 @@ var A = function(e) {
   r(null != s, "Clips keybind should be set");
   let u = C.toString(s.shortcut, !0);
   return (0, n.jsx)(o.FormItem, {
-    title: N.default.Messages.CLIPS_SETTINGS,
+    title: p.default.Messages.CLIPS_SETTINGS,
     titleClassName: x.formItemTitle,
     className: x.modalContent,
     children: (0, n.jsxs)("div", {
@@ -106,19 +106,19 @@ var A = function(e) {
         children: (0, n.jsx)(o.FormSwitch, {
           className: I.formSwitch,
           value: a,
-          onChange: e => (0, _.updateClipsEnabled)({
+          onChange: e => (0, N.updateClipsEnabled)({
             clipsEnabled: e,
             guildId: l,
             trackAnalytics: !0
           }),
           hideBorder: !0,
-          children: N.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
+          children: p.default.Messages.CLIPS_SETTINGS_ENABLE_CLIPS
         })
       }), (0, n.jsx)(o.Text, {
         variant: "text-xs/normal",
         color: "interactive-normal",
         className: I.description,
-        children: N.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
+        children: p.default.Messages.CLIPS_SETTINGS_HELP_IN_GO_LIVE_CTA.format({
           keybind: u,
           keybindHook: () => (0, n.jsx)("span", {
             className: I.keybindHintKeys,

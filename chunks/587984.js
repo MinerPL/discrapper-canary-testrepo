@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
 var a = n("37983");
 n("884691");
 var s = n("77078"),
-  i = n("870346"),
-  l = n("49111");
+  l = n("870346"),
+  i = n("49111");
 
 function r(e) {
   let {
     applicationId: t,
     channelId: r,
     mediaUrl: o
-  } = e, u = i.default.getWindowOpen(l.PopoutWindowKeys.CHANNEL_CALL_POPOUT), d = u ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
+  } = e, u = l.default.getWindowOpen(i.PopoutWindowKeys.CHANNEL_CALL_POPOUT), d = u ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT;
   (0, s.openModalLazy)(async () => {
     let {
       default: e

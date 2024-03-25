@@ -163,9 +163,9 @@ var m = function(t, e) {
         x = r.direction,
         C = r.forceSelection,
         E = r.selection,
-        O = r.tree,
-        D = null;
-      n.children.size && (D = n.children.reduce(function(r, n) {
+        D = r.tree,
+        O = null;
+      n.children.size && (O = n.children.reduce(function(r, n) {
         var i = s.encode(n, 0, 0),
           u = p.getBlockForKey(n),
           h = w(u, l),
@@ -193,7 +193,7 @@ var m = function(t, e) {
           block: n
         })) : c.createElement(u, {
           block: n,
-          children: D,
+          children: O,
           contentState: p,
           customStyleFn: y,
           customStyleMap: v,
@@ -202,7 +202,7 @@ var m = function(t, e) {
           forceSelection: C,
           hasSelection: m(E, K),
           selection: E,
-          tree: O
+          tree: D
         });
       if (n.getParentKey()) return I;
       var Element = S(n, a).Element,

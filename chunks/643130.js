@@ -1,7 +1,7 @@
 "use strict";
 E.r(_), E.d(_, {
   default: function() {
-    return D
+    return c
   }
 });
 var t = E("37983");
@@ -20,21 +20,21 @@ var o = E("917351"),
   A = E("451772"),
   R = E("374014"),
   l = E("16916"),
-  L = E("706530"),
-  u = E("49111");
+  u = E("706530"),
+  L = E("49111");
 let C = (0, o.debounce)(i.notifyStreamStart, 1e3);
-var D = {
+var c = {
   init() {
     A.default.init(), r.default.subscribe("MEDIA_ENGINE_VIDEO_STATE_CHANGED", e => {
       let {
         videoState: _
       } = e, E = s.default.getCurrentUserActiveStream();
       if (null != E) {
-        let e = _ === u.MediaEngineVideoStates.PAUSED;
+        let e = _ === L.MediaEngineVideoStates.PAUSED;
         (0, i.setStreamPaused)(E, e)
       }
     }), r.default.subscribe("STREAM_DELETE", e => {
-      e.reason === u.ApplicationStreamDeleteReasons.STREAM_FULL && ((0, i.closeStream)(e.streamKey, !1), (0, n.openModalLazy)(async () => {
+      e.reason === L.ApplicationStreamDeleteReasons.STREAM_FULL && ((0, i.closeStream)(e.streamKey, !1), (0, n.openModalLazy)(async () => {
         let {
           default: e
         } = await E.el("748168").then(E.bind(E, "748168"));
@@ -77,7 +77,7 @@ var D = {
       } = (0, R.decodeStreamKey)(E);
       if (null == o || null == t || t !== (null === (_ = O.default.getCurrentUser()) || void 0 === _ ? void 0 : _.id)) return;
       let n = S.default.getMemberCount(o);
-      null != n && !(n < 2) && !(n > L.STREAM_NOTIFY_GUILD_MAX_SIZE) && I.NotifyFriendsOnGoLive.getSetting() && C(E)
+      null != n && !(n < 2) && !(n > u.STREAM_NOTIFY_GUILD_MAX_SIZE) && I.NotifyFriendsOnGoLive.getSetting() && C(E)
     })
   }
 }

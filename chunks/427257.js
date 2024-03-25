@@ -1,23 +1,23 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return c
+    return s
   }
 });
 var n = r("884691"),
-  o = r.n(n),
-  a = r("849122"),
+  a = r.n(n),
+  o = r("849122"),
   i = r("281859"),
   u = r("123090"),
   l = r("479023"),
-  c = function(e) {
+  s = function(e) {
     var t = e.color,
       r = e.onClick,
       n = e.onSwatchHover,
-      c = e.first,
-      s = e.last,
-      f = e.active,
-      d = (0, a.default)({
+      s = e.first,
+      f = e.last,
+      c = e.active,
+      d = (0, o.default)({
         default: {
           color: {
             width: "40px",
@@ -63,13 +63,13 @@ var n = r("884691"),
           }
         }
       }, {
-        first: c,
-        last: s,
-        active: f,
+        first: s,
+        last: f,
+        active: c,
         "color-#FFFFFF": "#FFFFFF" === t,
         transparent: "transparent" === t
       });
-    return o.createElement(u.Swatch, {
+    return a.createElement(u.Swatch, {
       color: t,
       style: d.color,
       onClick: void 0 === r ? function() {} : r,
@@ -77,7 +77,7 @@ var n = r("884691"),
       focusStyle: {
         boxShadow: "0 0 4px " + t
       }
-    }, o.createElement("div", {
+    }, a.createElement("div", {
       style: d.check
-    }, o.createElement(l.default, null)))
+    }, a.createElement(l.default, null)))
   }

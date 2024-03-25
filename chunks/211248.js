@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   CircleIconButtonColors: function() {
-    return u
-  },
-  CircleIconButtonSizes: function() {
     return o
   },
-  default: function() {
+  CircleIconButtonSizes: function() {
     return c
+  },
+  default: function() {
+    return u
   }
 });
 var l = n("37983");
@@ -15,25 +15,25 @@ n("884691");
 var r = n("414456"),
   a = n.n(r),
   i = n("77078"),
-  s = n("739926");
-let u = {
+  s = n("762409");
+let o = {
     TERTIARY: s.tertiary,
     SECONDARY: s.secondary,
     PRIMARY: s.primary
   },
-  o = {
+  c = {
     SIZE_24: s.size24,
     SIZE_32: s.size32,
     SIZE_36: s.size36
   };
 
-function c(e) {
+function u(e) {
   let {
     className: t,
     tooltip: n,
     color: r,
-    size: u = o.SIZE_32,
-    icon: c,
+    size: o = c.SIZE_32,
+    icon: u,
     onClick: d,
     disabled: f,
     focusProps: m
@@ -43,21 +43,21 @@ function c(e) {
     shouldShow: !f,
     children: e => {
       let {
-        onClick: o,
-        ...g
+        onClick: c,
+        ...h
       } = e;
       return (0, l.jsx)(i.Clickable, {
-        ...g,
+        ...h,
         "aria-label": n,
         "aria-disabled": f,
-        className: a(t, s.button, r, u, {
+        className: a(t, s.button, r, o, {
           [s.disabled]: f
         }),
         onClick: e => {
-          null == o || o(), d(e)
+          null == c || c(), d(e)
         },
         focusProps: m,
-        children: c
+        children: u
       })
     }
   })

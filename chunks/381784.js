@@ -1,23 +1,23 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 }), n("808653");
-var l = n("884691"),
-  i = n("369010"),
-  r = n("342564"),
-  o = n("938767");
+var i = n("884691"),
+  l = n("369010"),
+  a = n("342564"),
+  s = n("938767");
 
-function s(e) {
+function r(e) {
   let {
     channel: t,
     commands: n,
-    limit: s = n.length
-  } = e, a = (0, o.useCommandContext)(t), u = (0, i.useTopCommands)(a), d = l.useMemo(() => n.reduce((e, t) => (e[t.id] = t, e), {}), [n]), c = l.useMemo(() => u.map(e => d[e]).filter(e => null != e).sort((e, t) => {
-    let n = r.default.getScoreWithoutLoadingLatest(a, e),
-      l = r.default.getScoreWithoutLoadingLatest(a, t);
-    return l - n
-  }).slice(0, s), [u, d, a, s]);
+    limit: r = n.length
+  } = e, o = (0, s.useCommandContext)(t), u = (0, l.useTopCommands)(o), d = i.useMemo(() => n.reduce((e, t) => (e[t.id] = t, e), {}), [n]), c = i.useMemo(() => u.map(e => d[e]).filter(e => null != e).sort((e, t) => {
+    let n = a.default.getScoreWithoutLoadingLatest(o, e),
+      i = a.default.getScoreWithoutLoadingLatest(o, t);
+    return i - n
+  }).slice(0, r), [u, d, o, r]);
   return c
 }

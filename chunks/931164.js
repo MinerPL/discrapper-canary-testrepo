@@ -9,8 +9,8 @@ var a = A("917351"),
   n = A("270926"),
   r = A("888198"),
   s = A("367376");
-let o = l.omit(r.default.RULES, ["codeBlock", "heading"]),
-  i = {
+let i = l.omit(r.default.RULES, ["codeBlock", "heading"]),
+  o = {
     ...n.default,
     parse: function(e, t, A) {
       var a;
@@ -23,8 +23,8 @@ let o = l.omit(r.default.RULES, ["codeBlock", "heading"]),
       }
     }
   },
-  u = s.default.combineAndInjectMentionRule(o, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
-    header: i
+  d = s.default.combineAndInjectMentionRule(i, [s.default.createReactRules(s.default.defaultReactRuleOptions), {
+    header: o
   }]),
-  d = s.default.reactParserFor(u);
-var c = d
+  u = s.default.reactParserFor(d);
+var c = u
