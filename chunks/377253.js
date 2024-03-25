@@ -272,7 +272,7 @@ var B = new x(a.default, {
     } = e, s = o.default.getOrCreate(t);
     if (null == s || !s.has(n)) return !1;
     let r = s.get(n, !0);
-    s = (null == r ? void 0 : r.isPoll()) === !0 ? s.remove(n) : s.update(n, e => ((e = e.set("state", P.MessageStates.SEND_FAILED)).isCommandType() && (e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, m.addFlag)(e.flags, P.MessageFlags.EPHEMERAL))), e)), o.default.commit(s)
+    s = (null == r ? void 0 : r.isPoll()) === !0 ? s.remove(n) : s.update(n, e => ((e = e.set("state", P.MessageStates.SEND_FAILED)).isCommandType() ? e = (e = e.set("interactionError", null != i ? i : "")).set("flags", (0, m.addFlag)(e.flags, P.MessageFlags.EPHEMERAL)) : null != i && (e = e.set("interactionError", null != i ? i : "")), e)), o.default.commit(s)
   },
   MESSAGE_SEND_FAILED_AUTOMOD: F,
   MESSAGE_EDIT_FAILED_AUTOMOD: F,
