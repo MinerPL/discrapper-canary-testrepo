@@ -119,7 +119,7 @@ let O = e => {
         location: "Home"
       }),
       [a] = (0, c.useSelectedDismissibleContent)([l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI]);
-    return !!s && null != t && t === A.NitroRewardStatus.REDEEMABLE && null != t && a === l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
+    return !!s && null != t && t === A.NitroRewardStatus.REDEEMABLE && a === l.DismissibleContent.TENURE_REWARD_REDEEMABLE_CONFETTI
   },
   h = () => {
     let e = p(),

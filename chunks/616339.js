@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return S
+    return R
   }
 });
 var a = s("37983");
@@ -13,52 +13,51 @@ var r = s("414456"),
   o = s("837797"),
   u = s("154889"),
   d = s("917247"),
-  c = s("907648"),
-  _ = s("598739"),
-  E = s("449881"),
-  T = s("881155"),
-  I = s("646718"),
-  f = s("782340"),
-  R = s("635650"),
-  S = e => {
+  c = s("159764"),
+  _ = s("449881"),
+  E = s("881155"),
+  T = s("646718"),
+  I = s("782340"),
+  f = s("635650"),
+  R = e => {
     var t, s;
     let {
       title: r,
-      titleClassName: S = "",
-      subtitle: m = "",
-      description: N = "",
-      descriptionCta: A = "",
-      isPremiumGetCta: p,
-      onCtaClick: C,
-      cardVariant: g
-    } = e, O = (0, d.usePremiumTrialOffer)(), P = null == O ? void 0 : O.subscription_trial, M = (0, u.usePremiumDiscountOffer)(), h = (0, l.formatTrialCtaIntervalDuration)({
-      intervalType: null == P ? void 0 : P.interval,
-      intervalCount: null == P ? void 0 : P.interval_count
-    }), L = (0, o.useResponseOnUserState)({
-      defaultResponse: f.default.Messages.PREMIUM_SETTINGS_GET,
-      onNonTier2Subscriber: f.default.Messages.BILLING_SWITCH_PLAN_UPGRADE,
-      onTier2TrialOffer: h,
-      onTier0TrialOffer: h,
-      onDiscountOffer: f.default.Messages.PREMIUM_DISCOUNT_CTA.format({
-        percent: null == M ? void 0 : M.discount.amount
+      titleClassName: R = "",
+      subtitle: S = "",
+      description: m = "",
+      descriptionCta: N = "",
+      isPremiumGetCta: A,
+      onCtaClick: p,
+      cardVariant: C
+    } = e, g = (0, d.usePremiumTrialOffer)(), O = null == g ? void 0 : g.subscription_trial, P = (0, u.usePremiumDiscountOffer)(), M = (0, l.formatTrialCtaIntervalDuration)({
+      intervalType: null == O ? void 0 : O.interval,
+      intervalCount: null == O ? void 0 : O.interval_count
+    }), h = (0, o.useResponseOnUserState)({
+      defaultResponse: I.default.Messages.PREMIUM_SETTINGS_GET,
+      onNonTier2Subscriber: I.default.Messages.BILLING_SWITCH_PLAN_UPGRADE,
+      onTier2TrialOffer: M,
+      onTier0TrialOffer: M,
+      onDiscountOffer: I.default.Messages.PREMIUM_DISCOUNT_CTA.format({
+        percent: null == P ? void 0 : P.discount.amount
       })
-    }), x = null != g ? _.CardVariantsInfo[g] : _.CardVariantsInfo[c.CardVariants.DEFAULT];
+    }), L = (0, c.useCardVariantsInfo)(C);
     return (0, a.jsxs)("div", {
-      className: n(R.cardDescription, null == x ? void 0 : null === (t = x.description) || void 0 === t ? void 0 : t.className),
-      children: [(0, a.jsx)(E.default, {
+      className: n(f.cardDescription, null == L ? void 0 : null === (t = L.description) || void 0 === t ? void 0 : t.className),
+      children: [(0, a.jsx)(_.default, {
         title: r,
-        cardVariantStyleInfo: x,
-        titleClassName: S,
-        subtitle: m,
-        description: N
-      }), p && (0, a.jsx)(T.default, {
-        subscriptionTier: I.PremiumSubscriptionSKUs.TIER_2,
-        buttonText: L,
+        cardVariantStyleInfo: L,
+        titleClassName: R,
+        subtitle: S,
+        description: m
+      }), A && (0, a.jsx)(E.default, {
+        subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
+        buttonText: h,
         color: i.Button.Colors.GREEN,
         look: i.Button.Looks.FILLED
-      }), 0 !== A.length && (s = null == x ? void 0 : x.descriptionCta, (null == s ? void 0 : s.hideOnHoverComponent) !== !0) && null != C && (0, a.jsx)(i.Button, {
-        onClick: C,
-        children: A
+      }), 0 !== N.length && (s = null == L ? void 0 : L.descriptionCta, (null == s ? void 0 : s.hideOnHoverComponent) !== !0) && null != p && (0, a.jsx)(i.Button, {
+        onClick: p,
+        children: N
       })]
     })
   }

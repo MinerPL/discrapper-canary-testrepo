@@ -1,28 +1,25 @@
 "use strict";
 s.r(t), s.d(t, {
   getRewardingTenureTitle: function() {
-    return E
+    return _
   },
   getRewardingTenureSubtitle: function() {
-    return T
+    return E
   },
   getRewardingTenureDescription: function() {
-    return I
+    return T
   },
   getRewardingTenureCtaDescription: function() {
-    return f
-  },
-  CardVariantsInfo: function() {
-    return S
+    return I
   },
   getThemedImage: function() {
-    return m
+    return f
   },
   getFilteredPerksDiscoverabilityCards: function() {
-    return N
+    return R
   },
   usePerksDiscoverabilityStrings: function() {
-    return A
+    return S
   }
 }), s("424973");
 var a = s("446674"),
@@ -33,9 +30,8 @@ var a = s("446674"),
   o = s("907648"),
   u = s("646718"),
   d = s("511143"),
-  c = s("782340"),
-  _ = s("617487");
-let E = e => {
+  c = s("782340");
+let _ = e => {
     switch (e) {
       case d.NitroRewardStatus.PENDING:
         return c.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
@@ -47,7 +43,7 @@ let E = e => {
         return ""
     }
   },
-  T = (e, t) => {
+  E = (e, t) => {
     switch (e) {
       case d.NitroRewardStatus.PENDING:
         return t === d.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
@@ -59,7 +55,7 @@ let E = e => {
         return
     }
   },
-  I = e => {
+  T = e => {
     switch (e) {
       case d.NitroRewardStatus.PENDING:
         return c.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
@@ -72,7 +68,7 @@ let E = e => {
     }
   };
 
-function f(e, t) {
+function I(e, t) {
   switch (e) {
     case d.NitroRewardStatus.PENDING:
       return null != t ? c.default.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
@@ -86,41 +82,8 @@ function f(e, t) {
       return ""
   }
 }
-let R = {
-    subtitle: {
-      onlyShowOnHover: !1
-    },
-    description: {
-      onlyShowOnHover: !0,
-      className: _.cardDescription
-    },
-    descriptionCta: {
-      onlyShowOnHover: !0
-    }
-  },
-  S = {
-    [o.CardVariants.DEFAULT]: R,
-    [o.CardVariants.REWARD]: {
-      subtitle: {
-        onlyShowOnHover: !0,
-        textVariant: "text-sm/semibold"
-      },
-      description: {
-        onlyShowOnHover: !0,
-        className: _.cardDescriptionTenureReward
-      },
-      descriptionCta: {
-        onlyShowOnHover: !1,
-        hideOnHoverComponent: !0,
-        className: _.descriptionCTATenureReward
-      },
-      cardContainer: {
-        className: _.glowingCardContainer
-      }
-    }
-  },
-  m = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  N = (e, t, s, a, r) => {
+let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
+  R = (e, t, s, a, r) => {
     let i = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
@@ -140,7 +103,7 @@ let R = {
     }
     return !a && (i = i.filter(e => !e.hideOnNarrowScreen)), i
   },
-  A = e => {
+  S = e => {
     let t = (0, a.useStateFromStores)([i.default], () => i.default.getPremiumTypeSubscription()),
       s = null != t ? l.default.getPremiumPlanItem(t) : null,
       r = null != s ? l.default.getSkuIdForPlan(s.planId) : null,

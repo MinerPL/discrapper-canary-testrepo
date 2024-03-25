@@ -10,7 +10,7 @@ var a = n("77078");
 
 function s(e) {
   let {
-    application: t,
+    applicationName: t,
     onConfirm: s,
     onCancel: r
   } = e;
@@ -20,11 +20,11 @@ function s(e) {
     } = await n.el("754768").then(n.bind(n, "754768"));
     return n => (0, i.jsx)(e, {
       ...n,
-      application: t,
+      applicationName: t,
       onConfirm: s,
       onCancel: r
     })
   }, {
     modalKey: "application-user-subscribe-no-shared-server-warning"
-  }), Promise.resolve()
+  })
 }

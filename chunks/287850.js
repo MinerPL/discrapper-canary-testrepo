@@ -23,7 +23,7 @@ var l, a, u = r("866227"),
   b = r("299039"),
   I = r("724210");
 (a = l || (l = {})).DEFAULT = "DEFAULT", a.FAVORITE = "FAVORITE";
-let C = new c.default(e => {
+let C = new c.SecondaryIndexMap(e => {
   let {
     isRequest: t,
     isFavorite: r

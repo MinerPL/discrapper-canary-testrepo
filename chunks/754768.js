@@ -1,20 +1,20 @@
 "use strict";
-s.r(a), s.d(a, {
+a.r(s), a.d(s, {
   ConfirmNoSharedServerSubscribeWarningModal: function() {
     return d
   }
 });
-var t = s("37983");
-s("884691");
-var n = s("77078"),
-  o = s("782340"),
-  i = s("526980"),
-  r = s("631222");
+var t = a("37983");
+a("884691");
+var n = a("77078"),
+  o = a("782340"),
+  r = a("526980"),
+  i = a("631222");
 
 function d(e) {
   let {
-    application: a,
-    onConfirm: s,
+    applicationName: s,
+    onConfirm: a,
     onClose: d,
     onCancel: l,
     ...c
@@ -22,17 +22,17 @@ function d(e) {
   return (0, t.jsxs)(n.ModalRoot, {
     ...c,
     children: [(0, t.jsxs)(n.ModalContent, {
-      className: i.body,
+      className: r.body,
       children: [(0, t.jsx)("img", {
         alt: "",
-        src: r,
-        className: i.img,
+        src: i,
+        className: r.img,
         "aria-hidden": !0
       }), (0, t.jsx)(n.Heading, {
         variant: "heading-xl/extrabold",
-        className: i.title,
+        className: r.title,
         children: o.default.Messages.APPLICATION_USER_SUBSCRIPTION_NO_SHARED_SERVER_WARNING_TITLE.format({
-          applicationName: a.name
+          applicationName: s
         })
       }), (0, t.jsx)(n.Text, {
         variant: "text-md/medium",
@@ -41,11 +41,11 @@ function d(e) {
     }), (0, t.jsxs)(n.ModalFooter, {
       children: [(0, t.jsx)(n.Button, {
         onClick: () => {
-          s(), d()
+          a(), d()
         },
         children: o.default.Messages.CONTINUE
       }), (0, t.jsx)(n.Button, {
-        className: i.cancel,
+        className: r.cancel,
         onClick: () => {
           l(), d()
         },

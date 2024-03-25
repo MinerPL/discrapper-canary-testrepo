@@ -49,16 +49,16 @@ function x(e) {
   let t = [];
   return t.push(_.GUILD_JOIN_REQUESTS_BY_ID(e.id)), t.push(_.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
 }
-let h = new a.default(x, e => "".concat(e.id)),
-  p = new a.default(x, e => "".concat(e.id)),
-  R = new a.default(x, e => "".concat(e.actionedAt));
+let h = new a.SecondaryIndexMap(x, e => "".concat(e.id)),
+  p = new a.SecondaryIndexMap(x, e => "".concat(e.id)),
+  M = new a.SecondaryIndexMap(x, e => "".concat(e.actionedAt));
 
-function M(e) {
+function R(e) {
   return h.get(e)
 }
 
 function F(e) {
-  h.set(e.id, e), (0, o.isSubmittedApplicationStatus)(e.applicationStatus) && (R.delete(e.id), p.set(e.id, e)), (0, o.isActionedApplicationStatus)(e.applicationStatus) && (p.delete(e.id), R.set(e.id, e))
+  h.set(e.id, e), (0, o.isSubmittedApplicationStatus)(e.applicationStatus) && (M.delete(e.id), p.set(e.id, e)), (0, o.isActionedApplicationStatus)(e.applicationStatus) && (p.delete(e.id), M.set(e.id, e))
 }
 
 function v(e) {
@@ -77,7 +77,7 @@ let N = {},
 class g extends n.default.Store {
   getRequests(e, t) {
     let i = _.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
-    return (0, o.isActionedApplicationStatus)(t) ? R.values(i) : (0, o.isSubmittedApplicationStatus)(t) ? p.values(i) : h.values(i)
+    return (0, o.isActionedApplicationStatus)(t) ? M.values(i) : (0, o.isSubmittedApplicationStatus)(t) ? p.values(i) : h.values(i)
   }
   getSubmittedGuildJoinRequestTotal(e) {
     return E(e)
@@ -147,7 +147,7 @@ var A = new g(l.default, {
     let l = (t = n, h.get(t));
     if (null != l) {
       ;
-      T(a, null, l.applicationStatus), i = n, h.delete(i), p.delete(i), R.delete(i)
+      T(a, null, l.applicationStatus), i = n, h.delete(i), p.delete(i), M.delete(i)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {
@@ -166,7 +166,7 @@ var A = new g(l.default, {
     if (n === S[i]) return;
     S[i] = n;
     let a = null !== (t = N[i]) && void 0 !== t ? t : d.GuildJoinRequestApplicationStatuses.SUBMITTED;
-    "REVIEW_APPLICATION" !== a && ((0, o.isActionedApplicationStatus)(a) && R.clear(), (0, o.isSubmittedApplicationStatus)(a) && p.clear())
+    "REVIEW_APPLICATION" !== a && ((0, o.isActionedApplicationStatus)(a) && M.clear(), (0, o.isSubmittedApplicationStatus)(a) && p.clear())
   },
   GUILD_JOIN_REQUESTS_SET_SELECTED: function(e) {
     let {

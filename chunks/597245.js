@@ -8,8 +8,8 @@ var s = l("37983"),
   a = l("884691"),
   n = l("414456"),
   i = l.n(n),
-  r = l("458960"),
-  o = l("772279"),
+  o = l("146606"),
+  r = l("772279"),
   c = l("823527"),
   d = l("77078"),
   u = l("446674"),
@@ -18,8 +18,8 @@ var s = l("37983"),
   p = l("824326"),
   h = l("599110"),
   v = l("439932"),
-  f = l("199132"),
-  y = l("124150"),
+  y = l("199132"),
+  f = l("124150"),
   j = l("49111"),
   k = l("782340"),
   C = l("804763");
@@ -30,14 +30,14 @@ function E(e) {
     selectedOption: t,
     targetKey: l,
     data: n
-  } = e, [i, r] = a.useState(""), [o, c] = a.useState(null), u = a.useCallback(e => {
-    null != n.current && (n.current.email = e, r(e), c(null))
+  } = e, [i, o] = a.useState(""), [r, c] = a.useState(null), u = a.useCallback(e => {
+    null != n.current && (n.current.email = e, o(e), c(null))
   }, [n, c]), m = a.useCallback(() => {
     if (null != t && null != n.current) {
       if (i.length < 3 || -1 === i.indexOf("@")) {
         c(k.default.Messages.SIGNUP_EMAIL_ERROR);
         return
-      }(0, f.completeSignUp)({
+      }(0, y.completeSignUp)({
         targetKey: l,
         data: n.current,
         completed: !0
@@ -57,7 +57,7 @@ function E(e) {
         value: i,
         onChange: u,
         placeholder: k.default.Messages.SIGNUP_EMAIL_PLACEHOLDER,
-        error: o
+        error: r
       }), (0, s.jsx)(d.Button, {
         onClick: m,
         children: (0, s.jsx)(d.Text, {
@@ -76,7 +76,7 @@ function N(e) {
   } = e, l = null;
   switch (t) {
     case "compass":
-      l = (0, s.jsx)(o.CompassIcon, {
+      l = (0, s.jsx)(r.CompassIcon, {
         className: C.icon
       });
       break;
@@ -104,10 +104,10 @@ function T(e) {
     option: t,
     selectedOption: l,
     setSelectedOption: n
-  } = e, r = a.useCallback(() => {
+  } = e, o = a.useCallback(() => {
     n(t)
-  }, [n, t]), [o, c] = a.useState(!1), u = t.key === (null == l ? void 0 : l.key), m = (0, d.useToken)(d.tokens.colors.BACKGROUND_TERTIARY), x = m.hsl({
-    opacity: o && !u ? .9 : .8
+  }, [n, t]), [r, c] = a.useState(!1), u = t.key === (null == l ? void 0 : l.key), m = (0, d.useToken)(d.tokens.colors.BACKGROUND_TERTIARY), x = m.hsl({
+    opacity: r && !u ? .9 : .8
   });
   return (0, s.jsxs)(d.Clickable, {
     className: i(C.option, {
@@ -118,7 +118,7 @@ function T(e) {
     style: {
       backgroundColor: x
     },
-    onClick: r,
+    onClick: o,
     children: [(0, s.jsx)(N, {
       iconName: t.icon
     }), (0, s.jsxs)("div", {
@@ -141,14 +141,22 @@ function g(e) {
     target: t,
     transitionState: l,
     onClose: n
-  } = e, o = (0, x.useUID)(), c = a.useRef({}), [p, v] = a.useState(null), N = (0, u.useStateFromStores)([y.default], () => y.default.hasCompletedTarget(t.key)), g = a.useRef(null), _ = (0, u.useStateFromStores)([m.default], () => m.default.useReducedMotion), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), b = a.useRef(new r.default.Value(1));
+  } = e, r = (0, x.useUID)(), c = a.useRef({}), [p, v] = a.useState(null), N = (0, u.useStateFromStores)([f.default], () => f.default.hasCompletedTarget(t.key)), g = a.useRef(null), _ = (0, u.useStateFromStores)([m.default], () => m.default.useReducedMotion), I = "url(".concat(t.backgroundAssetUrl, ") black top / cover no-repeat"), b = (0, o.useSpring)({
+    from: {
+      opacity: 1
+    },
+    to: {
+      opacity: null == p ? 1 : 0
+    },
+    immediate: _
+  });
   a.useEffect(() => {
     h.default.track(j.AnalyticEvents.SIGNUP_VIEWED, {
       target_key: t.key
     });
     let e = c.current;
     return () => {
-      (0, f.completeSignUp)({
+      (0, y.completeSignUp)({
         targetKey: t.key,
         data: e,
         completed: !1
@@ -156,10 +164,7 @@ function g(e) {
     }
   }, [t.key, c]);
   let M = a.useCallback(e => {
-      null != c.current && (r.default.timing(b.current, {
-        toValue: 0,
-        duration: _ ? 0 : 200
-      }).start(), c.current.selectedOptionKey = e.key, v(e), setTimeout(() => {
+      null != c.current && (c.current.selectedOptionKey = e.key, v(e), setTimeout(() => {
         var e, t, l;
         let s = null !== (l = null === (e = g.current) || void 0 === e ? void 0 : e.scrollTop) && void 0 !== l ? l : 0;
         !(s >= 100) && (null === (t = g.current) || void 0 === t || t.scrollTo({
@@ -167,9 +172,9 @@ function g(e) {
           behavior: _ ? "auto" : "smooth"
         }))
       }, 0))
-    }, [v, g, _, c, b]),
+    }, [v, g, _, c]),
     O = null;
-  return O = N ? (0, s.jsxs)("div", {
+  if (N) O = (0, s.jsxs)("div", {
     className: C.content,
     children: [(0, s.jsx)("div", {
       style: {
@@ -202,24 +207,11 @@ function g(e) {
         })
       })]
     })]
-  }) : (0, s.jsxs)(d.Scroller, {
-    ref: g,
-    className: C.content,
-    children: [(0, s.jsx)("div", {
-      style: {
-        background: I,
-        position: "absolute",
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-        zIndex: -1
-      }
-    }), (0, s.jsxs)(r.default.div, {
+  });
+  else {
+    let e = (0, s.jsxs)(o.animated.div, {
       className: C.header,
-      style: {
-        opacity: b.current
-      },
+      style: b,
       children: [(0, s.jsx)(d.Heading, {
         variant: "heading-xxl/medium",
         color: "header-primary",
@@ -229,30 +221,46 @@ function g(e) {
         color: "always-white",
         children: t.subtitle
       })]
-    }), (0, s.jsxs)("div", {
-      className: C.question,
-      children: [(0, s.jsx)(d.Text, {
-        variant: "text-lg/medium",
-        color: "header-primary",
-        children: t.question
-      }), (0, s.jsx)("div", {
-        className: C.options,
-        children: t.options.map(e => (0, s.jsx)(T, {
-          option: e,
-          selectedOption: p,
-          setSelectedOption: M
-        }, e.key))
+    });
+    O = (0, s.jsxs)(d.Scroller, {
+      ref: g,
+      className: C.content,
+      children: [(0, s.jsx)("div", {
+        style: {
+          background: I,
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: -1
+        }
+      }), e, (0, s.jsxs)("div", {
+        className: C.question,
+        children: [(0, s.jsx)(d.Text, {
+          variant: "text-lg/medium",
+          color: "header-primary",
+          children: t.question
+        }), (0, s.jsx)("div", {
+          className: C.options,
+          children: t.options.map(e => (0, s.jsx)(T, {
+            option: e,
+            selectedOption: p,
+            setSelectedOption: M
+          }, e.key))
+        })]
+      }), (0, s.jsx)(E, {
+        selectedOption: p,
+        targetKey: t.key,
+        data: c
       })]
-    }), (0, s.jsx)(E, {
-      selectedOption: p,
-      targetKey: t.key,
-      data: c
-    })]
-  }), (0, s.jsx)(d.ThemeContextProvider, {
+    })
+  }
+  return (0, s.jsx)(d.ThemeContextProvider, {
     theme: j.ThemeTypes.DARK,
     children: (0, s.jsxs)(d.ModalRoot, {
       transitionState: l,
-      "aria-labelledby": o,
+      "aria-labelledby": r,
       size: d.ModalSize.LARGE,
       className: i(C.modal, S),
       children: [O, (0, s.jsx)("div", {

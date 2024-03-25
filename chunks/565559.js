@@ -1,42 +1,42 @@
 "use strict";
 u.r(e), u.d(e, {
   FetchState: function() {
-    return n
+    return l
   },
   default: function() {
-    return h
+    return F
   }
 }), u("424973"), u("222007");
-var n, r, i = u("249654"),
-  l = u("446674"),
-  o = u("407846"),
-  c = u("913144"),
-  a = u("718517");
-(r = n || (n = {}))[r.NOT_FETCHED = 0] = "NOT_FETCHED", r[r.FETCHING = 1] = "FETCHING", r[r.FETCHED = 2] = "FETCHED";
-let d = {},
+var l, n, d = u("446674"),
+  i = u("407846"),
+  r = u("913144"),
+  a = u("718517"),
+  o = u("299039");
+(n = l || (l = {}))[n.NOT_FETCHED = 0] = "NOT_FETCHED", n[n.FETCHING = 1] = "FETCHING", n[n.FETCHED = 2] = "FETCHED";
+let c = {},
   s = {},
-  f = {},
-  _ = 10 * a.default.Millis.MINUTE;
+  E = {},
+  C = 10 * a.default.Millis.MINUTE;
 
-function E(t) {
+function _(t) {
   return "guild:".concat(t)
 }
 
-function C(t) {
+function f(t) {
   return "guild:".concat(t, ":published")
 }
-let T = new o.default(t => {
-    let e = [E(t.guild_id)];
-    return t.published && e.push(C(t.guild_id)), e
+let T = new i.SecondaryIndexMap(t => {
+    let e = [_(t.guild_id)];
+    return t.published && e.push(f(t.guild_id)), e
   }, t => (function(t) {
-    let e = i.default.extractTimestamp(t.id);
+    let e = o.default.extractTimestamp(t.id);
     return t.published ? -e : -e + 1e12
   })(t)),
   D = [];
-class P extends l.default.Store {
+class U extends d.default.Store {
   getGuildProductsForGuildFetchState(t) {
     var e;
-    return null !== (e = d[t]) && void 0 !== e ? e : 0
+    return null !== (e = c[t]) && void 0 !== e ? e : 0
   }
   getGuildProduct(t) {
     return T.get(t)
@@ -45,7 +45,7 @@ class P extends l.default.Store {
     let {
       publishedOnly: u
     } = e;
-    return null == t ? D : T.values(u ? C(t) : E(t))
+    return null == t ? D : T.values(u ? f(t) : _(t))
   }
   getGuildProductFetchState(t) {
     var e;
@@ -53,20 +53,20 @@ class P extends l.default.Store {
   }
   isGuildProductsCacheExpired(t) {
     var e;
-    return Date.now() - (null !== (e = f[t]) && void 0 !== e ? e : 0) > _
+    return Date.now() - (null !== (e = E[t]) && void 0 !== e ? e : 0) > C
   }
 }
-P.displayName = "GuildProductsStore";
-var h = new P(c.default, {
+U.displayName = "GuildProductsStore";
+var F = new U(r.default, {
   CONNECTION_OPEN: function() {
-    T.clear(), d = {}, s = {}, f = {}
+    T.clear(), c = {}, s = {}, E = {}
   },
   GUILD_PRODUCTS_FETCH: function(t) {
     let {
       guildId: e
     } = t;
-    d[e] = 1;
-    let u = [...T.values(E(e))];
+    c[e] = 1;
+    let u = [...T.values(_(e))];
     u.forEach(t => {
       T.delete(t.id)
     })
@@ -76,7 +76,7 @@ var h = new P(c.default, {
       guildId: e,
       products: u
     } = t;
-    d[e] = 2, f[e] = Date.now(), u.forEach(t => {
+    c[e] = 2, E[e] = Date.now(), u.forEach(t => {
       T.set(t.id, t), s[t.id] = 2
     })
   },
@@ -84,7 +84,7 @@ var h = new P(c.default, {
     let {
       guildId: e
     } = t;
-    d[e] = 2
+    c[e] = 2
   },
   GUILD_PRODUCT_CREATE: function(t) {
     let {

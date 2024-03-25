@@ -23,7 +23,7 @@ let A = new Set,
     BROADCASTS_BY_CHANNEL_ID: e => "channel:".concat(e),
     BROADCASTS_BY_VALIDITY: e => "validity:".concat(e)
   },
-  g = new i.default(function(e) {
+  g = new i.SecondaryIndexMap(function(e) {
     let t = A.has(e.userId) ? 1 : 0;
     return null != e.viewers && (t = 2), [I.BROADCASTS_BY_USER_ID(e.userId), I.BROADCASTS_BY_CHANNEL_ID(e.channelId), I.BROADCASTS_BY_VALIDITY(t)]
   }, e => e.channelId);
