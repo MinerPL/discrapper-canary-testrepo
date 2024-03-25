@@ -2,43 +2,40 @@
 let i, r;
 n.r(t), n.d(t, {
   analyticsTrackingStoreMaker: function() {
-    return h.analyticsTrackingStoreMaker
+    return m.analyticsTrackingStoreMaker
   },
   AnalyticsActionHandlers: function() {
-    return h.AnalyticsActionHandlers
+    return m.AnalyticsActionHandlers
   },
   Impression: function() {
-    return p.Impression
+    return h.Impression
   },
   ImpressionTypes: function() {
-    return p.ImpressionTypes
+    return h.ImpressionTypes
   },
   TypedEventProperties: function() {
-    return p.TypedEventProperties
+    return h.TypedEventProperties
   },
   StandardAnalyticsLocation: function() {
-    return p.StandardAnalyticsLocation
+    return h.StandardAnalyticsLocation
   },
   ImpressionGroups: function() {
-    return p.ImpressionGroups
+    return h.ImpressionGroups
   },
   ImpressionNames: function() {
-    return E.ImpressionNames
+    return p.ImpressionNames
   },
   NetworkActionNames: function() {
-    return E.NetworkActionNames
+    return p.NetworkActionNames
   },
   StandardAnalyticsSchemaNameMap: function() {
-    return E.StandardAnalyticsSchemaNameMap
+    return p.StandardAnalyticsSchemaNameMap
   },
   ImpressionSchema: function() {
-    return E.ImpressionSchema
+    return p.ImpressionSchema
   },
   encodeProperties: function() {
-    return m.encodeProperties
-  },
-  CommonAnalyticsSchema: function() {
-    return E
+    return g.encodeProperties
   },
   getCampaignParams: function() {
     return O
@@ -74,11 +71,11 @@ var o, s = n("714617"),
   _ = n("429030"),
   f = n("95410"),
   S = n("444095"),
-  E = n("33112"),
-  g = n("375492"),
-  m = n("612481"),
-  h = n("615582"),
-  p = n("660516");
+  E = n("375492"),
+  g = n("612481"),
+  m = n("615582"),
+  h = n("660516"),
+  p = n("33112");
 let I = "deviceProperties",
   T = "referralProperties",
   v = {},
@@ -248,14 +245,14 @@ function M(e) {
   i = {
     ...i,
     ...e
-  }, r = (0, m.encodeProperties)(i)
+  }, r = (0, g.encodeProperties)(i)
 }
 M(function() {
   var e, t, n;
   let i = {},
     r = window.GLOBAL_ENV.RELEASE_CHANNEL;
   r && (i.release_channel = r.split("-")[0]);
-  let o = parseInt((n = "278328", "278328"), 10);
+  let o = parseInt((n = "278355", "278355"), 10);
   !isNaN(o) && (i.client_build_number = o);
   let s = null == N ? void 0 : null === (e = (t = N.remoteApp).getBuildNumber) || void 0 === e ? void 0 : e.call(t);
   return !isNaN(s) && (i.native_build_number = s), i.client_event_source = function() {
@@ -270,7 +267,7 @@ let U = e => {
     analyticEventConfigs: t,
     dispatcher: i,
     TRACK_ACTION_NAME: r
-  } = e, o = (0, g.queueTrackingEventMaker)(i, r);
+  } = e, o = (0, E.queueTrackingEventMaker)(i, r);
   return function(e, i) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (null != n.g.isServerRendering && !0 === n.g.isServerRendering) return Promise.resolve();

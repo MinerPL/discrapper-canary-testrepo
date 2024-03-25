@@ -16,7 +16,7 @@ var n, l, a = s("37983"),
 let N = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
 (n = class extends i.PureComponent {
   render() {
-    let e = c.isActiveCreator(this.context.router),
+    let e = (0, c.isActiveCreator)(this.context.router),
       {
         isOpen: t,
         dropdownLinks: s,

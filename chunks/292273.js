@@ -102,7 +102,7 @@ let m = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
         links: e,
         TrackClick: t,
         avoidRouter: s
-      } = this.props, n = c.isActiveCreator(this.context.router);
+      } = this.props, n = (0, c.isActiveCreator)(this.context.router);
       return e.map(e => e.external ? (0, a.jsx)("li", {
         className: N.subListItemInactive,
         children: (0, a.jsx)(t, {

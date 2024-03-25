@@ -2,7 +2,7 @@
 let i, r, o;
 n.r(t), n.d(t, {
   AnalyticsActionHandlers: function() {
-    return E
+    return S
   },
   analyticsTrackingStoreMaker: function() {
     return m
@@ -14,14 +14,14 @@ var s, l = n("391679"),
   c = n("166745");
 let d = 1500,
   _ = null !== (s = window.requestIdleCallback) && void 0 !== s ? s : e => setImmediate(() => e()),
-  f = new c.default,
-  E = {
+  f = new c.IdGenerator,
+  S = {
     handleConnectionOpen: () => {},
     handleConnectionClosed: () => {},
     handleFingerprint: () => {},
     handleTrack: () => {}
   },
-  S = [],
+  E = [],
   g = () => Promise.resolve({
     sessionId: void 0
   }),
@@ -38,7 +38,7 @@ let d = 1500,
     d = null != h ? h : 1500;
 
     function I() {
-      return 0 !== S.length && (null != r ? null != i : null != s())
+      return 0 !== E.length && (null != r ? null != i : null != s())
     }
 
     function T() {
@@ -49,8 +49,8 @@ let d = 1500,
 
     function v() {
       if (o = null, !I()) return;
-      let e = S.slice();
-      S = [];
+      let e = E.slice();
+      E = [];
       let t = A(e);
       t.then(() => {
         e.forEach(e => {
@@ -58,7 +58,7 @@ let d = 1500,
           null === (t = e.resolve) || void 0 === t || t.call(e)
         })
       }, t => {
-        S.unshift(...e);
+        E.unshift(...e);
         let {
           message: n
         } = t.body || t;
@@ -84,17 +84,17 @@ let d = 1500,
         retries: 3
       })
     }
-    E.handleConnectionOpen = function(e) {
+    S.handleConnectionOpen = function(e) {
       let {
         analyticsToken: t,
         user: n
       } = e;
       return null != t && (i = t), null != n.id && (r = n.id), T(), !1
-    }, E.handleConnectionClosed = function() {
+    }, S.handleConnectionClosed = function() {
       return v(), i = null, r = null, !1
-    }, E.handleFingerprint = function() {
+    }, S.handleFingerprint = function() {
       return v(), !1
-    }, E.handleTrack = function(e) {
+    }, S.handleTrack = function(e) {
       let {
         event: t,
         properties: n,
@@ -119,10 +119,10 @@ let d = 1500,
           let t = e.fingerprint || s();
           return null != t ? (0, l.extractId)(t) : null
         }(c);
-        null != d && (c.properties.client_uuid = f.generate(d)), S.push(c), S.length > 1e4 && (S = S.slice(-1e4)), i ? v() : T()
+        null != d && (c.properties.client_uuid = f.generate(d)), E.push(c), E.length > 1e4 && (E = E.slice(-1e4)), i ? v() : T()
       }), !1
     };
-    class N extends a.default.Store {
+    class N extends a.Store {
       initialize() {
         null != p && this.waitFor(...p)
       }

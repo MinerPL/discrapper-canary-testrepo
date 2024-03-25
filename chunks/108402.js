@@ -166,7 +166,7 @@ let k = "Footer Navigation",
 class x extends a.PureComponent {
   componentDidMount() {
     this.setState({
-      token: c.getToken(),
+      token: (0, c.getToken)(),
       isAppCompatible: N.IS_APP_COMPATIBLE_BROWSER
     })
   }
