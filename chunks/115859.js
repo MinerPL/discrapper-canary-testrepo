@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("849197"),
-  a = n("723931");
+var a = n("849197"),
+  l = n("723931");
 
 function i(e) {
   let {
@@ -29,9 +29,9 @@ function i(e) {
     forceAddReactions: _,
     className: T
   } = e;
-  return d ? null : (0, s.jsx)(l.default, {
+  return d ? null : (0, s.jsx)(a.default, {
     message: t,
-    children: (0, s.jsx)(a.default, {
+    children: (0, s.jsx)(l.default, {
       className: T,
       isInteracting: u,
       message: t,
@@ -50,15 +50,15 @@ function i(e) {
 function r(e, t) {
   let {
     message: n,
-    channel: l,
+    channel: a,
     compact: i = !1,
     renderThreadAccessory: r,
     disableReactionCreates: o,
     disableReactionUpdates: u
   } = e;
-  return (0, s.jsx)(a.SimpleMessageAccessories, {
+  return (0, s.jsx)(l.SimpleMessageAccessories, {
     message: n,
-    channel: l,
+    channel: a,
     compact: i,
     hasSpoilerEmbeds: t,
     renderThreadAccessory: r,

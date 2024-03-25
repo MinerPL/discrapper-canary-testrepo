@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("862205");
-let l = (0, s.createExperiment)({
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2024-03_premium_offer_generic_endpoint",
   label: "Premium Offer Generic Endpoint",
@@ -20,4 +20,4 @@ let l = (0, s.createExperiment)({
     }
   }]
 });
-var a = l
+var l = a

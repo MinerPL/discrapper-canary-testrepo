@@ -367,7 +367,7 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
   WINDOW_HIDDEN: function() {
     let e = (0, U.isWindows)(),
       t = (0, U.isLinux)(),
-      l = s.default.get(Y, !1),
+      l = s.Storage.get(Y, !1),
       a = !l && U.isPlatformEmbedded && (e || t);
     if (!a) return !1;
     let i = !1;
@@ -379,12 +379,12 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
         (0, E.transitionTo)(F.Routes.SETTINGS(e ? "windows" : "linux"))
       },
       onShown: () => {
-        s.default.set(Y, !0)
+        s.Storage.set(Y, !0)
       }
     }), !1)
   },
   LOGOUT: function() {
-    return s.default.remove(Y), !1
+    return s.Storage.remove(Y), !1
   },
   CONNECTION_OPEN: function(e) {
     let {

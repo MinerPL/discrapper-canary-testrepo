@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 }), n("222007");
 var s = n("913144"),
-  l = {
+  a = {
     setEnabled(e) {
       this.update({
         enabled: e

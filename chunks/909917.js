@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("627445"),
-  a = n.n(l),
+var a = n("627445"),
+  l = n.n(a),
   i = n("246060"),
   r = n("730541"),
   o = n("407972"),
@@ -21,17 +21,17 @@ function E(e, t) {
     let {
       guild_id: e,
       channel_id: n,
-      message_id: l
+      message_id: a
     } = t.messageReference;
     if (null != e) return (0, s.jsx)(i.default, {
       guildId: e,
       channelId: n,
-      messageId: l
+      messageId: a
     })
   }
   if (null != t.interaction && "SENDING" === t.state) return (0, s.jsx)(s.Fragment, {});
   let n = d.default.getChannel(t.channel_id);
-  return a(null != n, "renderUserGuildPopout: channel should never be null"), (0, s.jsx)(u.default, {
+  return l(null != n, "renderUserGuildPopout: channel should never be null"), (0, s.jsx)(u.default, {
     ...e,
     channelId: t.channel_id,
     messageId: t.id,

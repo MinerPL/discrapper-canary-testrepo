@@ -5,30 +5,30 @@ a.r(t), a.d(t, {
   }
 }), a("222007");
 var n = a("811022"),
-  l = a("872717"),
-  o = a("448993"),
+  o = a("872717"),
+  l = a("448993"),
   s = a("42887"),
   r = a("254490"),
   i = a("49671"),
-  u = a("49111");
-let c = new n.default("uploadRtcLogFiles");
+  c = a("49111");
+let u = new n.default("uploadRtcLogFiles");
 async function d(e, t) {
   let a;
-  if (null == i.default.fileManager.readLogFiles) throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.GENERAL);
+  if (null == i.default.fileManager.readLogFiles) throw new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.GENERAL);
   let n = [];
   try {
     n = (n = await i.default.fileManager.readLogFiles(e)).map(e => (0, r.transformNativeFile)(e, "application/octet-stream"))
   } catch (e) {
-    throw c.error("uploadDebugFiles: read error '".concat(e, "'")), new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.READ)
+    throw u.error("uploadDebugFiles: read error '".concat(e, "'")), new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.READ)
   }
-  if (0 === n.length) throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.NO_FILE);
+  if (0 === n.length) throw new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.NO_FILE);
   try {
     let e = {
       extraInfo: t,
       mediaEngineState: s.default.getState()
     };
-    a = await l.HTTP.post({
-      url: u.Endpoints.DEBUG_LOGS(u.DebugLogCategory.RTC),
+    a = await o.HTTP.post({
+      url: c.Endpoints.DEBUG_LOGS(c.DebugLogCategory.RTC),
       attachments: [...n.map(e => ({
         name: e.name,
         file: e,
@@ -40,10 +40,10 @@ async function d(e, t) {
       }]
     })
   } catch (e) {
-    if (429 === e.status) throw new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.PROGRESS);
-    throw c.error("Debug log upload error: status: ".concat(e.status, ", message: ").concat(e.message)), new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.UPLOAD)
+    if (429 === e.status) throw new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.PROGRESS);
+    throw u.error("Debug log upload error: status: ".concat(e.status, ", message: ").concat(e.message)), new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.UPLOAD)
   }
   let d = n.length + 1;
-  if ("success_count" in a.body && a.body.success_count !== d) throw c.error("Debug log upload: stored files ".concat(a.body.success_count, " !== ").concat(d)), new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.GENERAL);
-  if ("store_success" in a.body && !a.body.store_success || "id_match" in a.body && !a.body.id_match || "all_success" in a.body && !a.body.all_success) throw c.error("Debug log upload: store_success: ".concat(a.body.store_success, " / ") + "id_match: ".concat(a.body.id_match, " / ") + "all_success: ".concat(a.body.all_success)), new o.UploadVoiceDebugLogsError(o.UploadErrorCodes.GENERAL)
+  if ("success_count" in a.body && a.body.success_count !== d) throw u.error("Debug log upload: stored files ".concat(a.body.success_count, " !== ").concat(d)), new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.GENERAL);
+  if ("store_success" in a.body && !a.body.store_success || "id_match" in a.body && !a.body.id_match || "all_success" in a.body && !a.body.all_success) throw u.error("Debug log upload: store_success: ".concat(a.body.store_success, " / ") + "id_match: ".concat(a.body.id_match, " / ") + "all_success: ".concat(a.body.all_success)), new l.UploadVoiceDebugLogsError(l.UploadErrorCodes.GENERAL)
 }

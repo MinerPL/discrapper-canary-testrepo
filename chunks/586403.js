@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("77078"),
-  i = n("1339"),
-  r = n("914169"),
+  r = n("1339"),
+  i = n("914169"),
   u = n("931874"),
   o = n("745049"),
   d = n("409295");
@@ -18,7 +18,7 @@ function c(e) {
     guildScheduledEvent: t,
     channel: n,
     onClose: c
-  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, r.createEventLocationClickHandler)(t, c)(e), [t, c]), _ = (0, u.getLocationDataForEvent)(t, n);
+  } = e, f = t.entity_type === o.GuildScheduledEventEntityTypes.EXTERNAL, E = a.useCallback(e => (0, i.createEventLocationClickHandler)(t, c)(e), [t, c]), _ = (0, u.getLocationDataForEvent)(t, n);
   if (null == _) return null;
   let {
     IconComponent: I,
@@ -32,7 +32,7 @@ function c(e) {
       color: "header-secondary",
       variant: "text-sm/normal",
       className: d.locationText,
-      children: (0, i.guildEventDetailsParser)(h, !0)
+      children: (0, r.guildEventDetailsParser)(h, !0)
     })]
   });
   return (0, s.jsx)("div", {

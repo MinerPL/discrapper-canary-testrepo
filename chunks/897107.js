@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("862205");
-let l = (0, s.createExperiment)({
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2023-09_window_32_deprecation_message",
   label: "show deprecation message for 32-bit Windows",
@@ -20,4 +20,4 @@ let l = (0, s.createExperiment)({
     }
   }]
 });
-var a = l
+var l = a

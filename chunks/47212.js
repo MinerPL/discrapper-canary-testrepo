@@ -4,56 +4,56 @@ s.r(a), s.d(a, {
     return t
   },
   getGuildTemplatesMap: function() {
-    return d
+    return i
   }
 });
 var n, t, l = s("316693"),
   E = s("991170"),
   _ = s("49111"),
-  i = s("782340");
+  d = s("782340");
 
-function d() {
+function i() {
   return {
     CREATE: {
       id: "CREATE",
       code: "2TffvPucqHkN",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_CREATE,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_CREATE,
       channels: [],
       system_channel_id: null
     },
     GAMING: {
       id: "GAMING",
       code: "hvtBQMfw6uSJ",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_GAMING,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_GAMING,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CLIPS_AND_HIGHLIGHTS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CLIPS_AND_HIGHLIGHTS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOBBY,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOBBY,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_GAMING,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_GAMING,
         type: _.ChannelTypes.GUILD_VOICE
       }],
       system_channel_id: "01"
@@ -61,41 +61,41 @@ function d() {
     FRIENDS: {
       id: "FRIENDS",
       code: "hgM48av5Q69A",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_FRIEND,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_FRIEND,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GAME,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GAME,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "03",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_MUSIC,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_MUSIC,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
         type: _.ChannelTypes.GUILD_VOICE
       }],
       system_channel_id: "01"
@@ -103,68 +103,68 @@ function d() {
     STUDY: {
       id: "STUDY",
       code: "FbwUwRp4j8Es",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_STUDY,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_STUDY,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_NOTES_RESOURCES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_NOTES_RESOURCES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_HOMEWORK_HELP,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_HOMEWORK_HELP,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "13",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_SESSION_PLANNING,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_SESSION_PLANNING,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "14",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "20",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "21",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "22",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format({
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format({
           number: 1
         }),
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "23",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format({
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STUDY_ROOM.format({
           number: 2
         }),
         type: _.ChannelTypes.GUILD_VOICE
@@ -174,51 +174,51 @@ function d() {
     CLUBS: {
       id: "CLUBS",
       code: "s4WNnBxTDPsY",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_CLUBS,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_CLUBS,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "20",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "21",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "22",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
         type: _.ChannelTypes.GUILD_VOICE
       }],
       system_channel_id: "11"
@@ -226,61 +226,61 @@ function d() {
     CREATORS: {
       id: "CREATORS",
       code: "6exdzMgjZgah",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_CREATOR,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_CREATOR,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_EVENTS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_EVENTS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "13",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_IDEAS_AND_FEEDBACK,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_IDEAS_AND_FEEDBACK,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "20",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "21",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "22",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_COMMUNITY_HANGOUT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_COMMUNITY_HANGOUT,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "23",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_STREAM_ROOM,
         type: _.ChannelTypes.GUILD_VOICE
       }],
       system_channel_id: "11"
@@ -288,61 +288,61 @@ function d() {
     LOCAL_COMMUNITY: {
       id: "LOCAL_COMMUNITY",
       code: "64UDvRNCC52Y",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_COMMUNITY,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_COMMUNITY,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "03",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "13",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "20",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "21",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "22",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM,
         type: _.ChannelTypes.GUILD_VOICE
       }],
       system_channel_id: "11"
@@ -350,66 +350,66 @@ function d() {
     SCHOOL_CLUB: {
       id: "SCHOOL_CLUB",
       code: "Ctg7PUHcQmZu",
-      label: i.default.Messages.GUILD_TEMPLATE_HEADER_SCHOOL_CLUB,
+      label: d.default.Messages.GUILD_TEMPLATE_HEADER_SCHOOL_CLUB,
       channels: [{
         id: "00",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_INFORMATION,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "01",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_WELCOME_AND_RULES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "02",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_ANNOUNCEMENTS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "03",
         parent_id: "00",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_RESOURCES,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "10",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_TEXT,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "11",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_GENERAL,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "12",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_MEETING_PLANS,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "13",
         parent_id: "10",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_OFF_TOPIC,
         type: _.ChannelTypes.GUILD_TEXT
       }, {
         id: "20",
         parent_id: null,
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_CATEGORY_VOICE,
         type: _.ChannelTypes.GUILD_CATEGORY
       }, {
         id: "21",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_LOUNGE,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "22",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_1,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_1,
         type: _.ChannelTypes.GUILD_VOICE
       }, {
         id: "22",
         parent_id: "20",
-        name: i.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_2,
+        name: d.default.Messages.GUILD_TEMPLATE_NAME_VOICE_MEETING_ROOM_2,
         type: _.ChannelTypes.GUILD_VOICE
       }],
       roles: [{

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("574073"),
-  a = n("304198"),
+var a = n("574073"),
+  l = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -18,13 +18,13 @@ function r(e) {
     actorUsernameHook: u,
     targetUsernameHook: d,
     compact: c
-  } = e, E = (0, l.default)(t), f = (0, l.useNullableUserAuthor)(o, r), _ = u(E), T = d(null != f ? f : void 0), I = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
+  } = e, E = (0, a.default)(t), f = (0, a.useNullableUserAuthor)(o, r), _ = u(E), T = d(null != f ? f : void 0), I = i.default.Messages.SYSTEM_MESSAGE_THREAD_MEMBER_ADD.format({
     actorName: E.nick,
     actorHook: _,
     targetName: null == f ? void 0 : f.nick,
     targetHook: T
   });
-  return (0, s.jsx)(a.default, {
+  return (0, s.jsx)(l.default, {
     icon: n("127067"),
     timestamp: t.timestamp,
     compact: c,

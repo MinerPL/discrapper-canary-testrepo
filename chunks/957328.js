@@ -54,7 +54,7 @@ class M extends s.PureComponent {
     if (e.soundpack !== r && (this._connectedSound = this.createSound()), e.connected !== i || d) {
       if (i && null != this.videoRef) {
         let e = Math.max(Math.ceil((this.videoRef.duration - this.videoRef.currentTime) * g.default.Millis.SECOND), 600);
-        clearTimeout(this._noProblemsTimeout), c.default.get(O.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
+        clearTimeout(this._noProblemsTimeout), c.Storage.get(O.DISCODO_STORAGE_KEY) && this._connectedSound.play(), o ? this.setState({
           problems: !1,
           hide: i
         }) : this._noProblemsTimeout = setTimeout(() => {

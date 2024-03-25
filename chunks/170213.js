@@ -43,14 +43,14 @@ n.r(t), n.d(t, {
     return h
   }
 });
-var s, l, a, i, r, o, u, d, c, E, f, _, T = n("49111");
+var s, a, l, i, r, o, u, d, c, E, f, _, T = n("49111");
 (s = u || (u = {})).SETTINGS = "SETTINGS", s.ACCOUNT_STANDING = "ACCOUNT_STANDING";
 class I {}
 I.TOS_LINK = "https://discord.com/terms", I.COMMUNITY_GUIDELINES = "https://discord.com/guidelines", I.APPEALS_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731", I.WARNING_SYSTEM_HELPCENTER_LINK = "https://support.discord.com/hc/articles/18210965981847", I.AGE_VERIFICATION_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731", I.SPAM_LINK = "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
 class m {}
-m.CLASSIFICATION_ID = "classification_id", m.INCIDENT_TIMESTAMP = "incident_time", (l = d || (d = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", l.LEARN_MORE_LINK = "learn_more_link";
+m.CLASSIFICATION_ID = "classification_id", m.INCIDENT_TIMESTAMP = "incident_time", (a = d || (d = {})).POLICY_VIOLATION_DETAIL = "policy_violation_detail", a.LEARN_MORE_LINK = "learn_more_link";
 class N {}
-N.ICON_TYPE = "icon_type", N.HEADER = "header", N.BODY = "body", N.CTAS = "ctas", N.TIMESTAMP = "timestamp", N.THEME = "theme", N.CLIENT_VERSION_MESSAGE = "client_version_message", N.LEARN_MORE_LINK = "learn_more_link", N.CLASSIFICATION_ID = "classification_id", (a = c || (c = {}))[a.ViewViolationDetail = 0] = "ViewViolationDetail", a[a.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", a[a.ClickLetUsKnow = 2] = "ClickLetUsKnow", a[a.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", a[a.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", a[a.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", a[a.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", a[a.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (i = E || (E = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", i[i.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
+N.ICON_TYPE = "icon_type", N.HEADER = "header", N.BODY = "body", N.CTAS = "ctas", N.TIMESTAMP = "timestamp", N.THEME = "theme", N.CLIENT_VERSION_MESSAGE = "client_version_message", N.LEARN_MORE_LINK = "learn_more_link", N.CLASSIFICATION_ID = "classification_id", (l = c || (c = {}))[l.ViewViolationDetail = 0] = "ViewViolationDetail", l[l.ViewViolationsDropdown = 1] = "ViewViolationsDropdown", l[l.ClickLetUsKnow = 2] = "ClickLetUsKnow", l[l.ClickAgeVerificationLink = 3] = "ClickAgeVerificationLink", l[l.ClickSpamWebformLink = 4] = "ClickSpamWebformLink", l[l.ClickLearnMoreLink = 5] = "ClickLearnMoreLink", l[l.ClickCommunityGuidelinesLink = 6] = "ClickCommunityGuidelinesLink", l[l.ClickWarningSystemHelpcenterLink = 7] = "ClickWarningSystemHelpcenterLink", (i = E || (E = {}))[i.SystemDM = 0] = "SystemDM", i[i.StandingTab = 1] = "StandingTab", i[i.AppealIngestion = 2] = "AppealIngestion", Object.freeze({
   SPEED_BUMP: T.AnalyticsSections.APPEAL_INGESTION_SPEED_BUMP,
   COLLECT_SIGNAL: T.AnalyticsSections.APPEAL_INGESTION_COLLECT_SIGNAL,
   CONFIRM_SUBMISSION: T.AnalyticsSections.APPEAL_INGESTION_CONFIRM_SUBMISSION,

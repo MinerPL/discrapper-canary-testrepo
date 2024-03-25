@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("730290"),
-  i = n("446674"),
-  r = n("872717"),
+  r = n("446674"),
+  i = n("872717"),
   u = n("970366"),
   o = n("813006"),
   d = n("476108"),
@@ -17,12 +17,12 @@ var s = n("37983"),
   E = n("49111"),
   _ = n("782340"),
   I = n("890957");
-i.default.initialize();
+r.default.initialize();
 class h extends a.PureComponent {
   componentDidMount() {
     let e = (0, f.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
-    r.HTTP.post({
+    i.HTTP.post({
       url: E.Endpoints.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
       body: {
         token: e,
@@ -120,6 +120,6 @@ class h extends a.PureComponent {
 h.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var p = i.default.connectStores([d.default], () => ({
+var p = r.default.connectStores([d.default], () => ({
   defaultRoute: d.default.defaultRoute
 }))(h)

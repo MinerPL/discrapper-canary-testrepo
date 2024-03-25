@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("862205"),
-  l = n("49111");
-let a = (0, s.createExperiment)({
+  a = n("49111");
+let l = (0, s.createExperiment)({
   kind: "guild",
   id: "2023-03_guild_media_channel",
   label: "Media Channel",
@@ -29,8 +29,8 @@ function i(e) {
   var t;
   let {
     enabled: n
-  } = a.useExperiment({
-    guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : l.EMPTY_STRING_SNOWFLAKE_ID,
+  } = l.useExperiment({
+    guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : a.EMPTY_STRING_SNOWFLAKE_ID,
     location: "96e84c_1"
   }, {
     autoTrackExposure: !0

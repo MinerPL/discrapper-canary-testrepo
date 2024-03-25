@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("808653"), n("424973");
 var s = n("37983");
 n("884691");
-var l = n("627445"),
-  a = n.n(l),
+var a = n("627445"),
+  l = n.n(a),
   i = n("446674"),
   r = n("233069"),
   o = n("42203"),
@@ -22,15 +22,15 @@ var l = n("627445"),
 function I(e) {
   let t, {
       invite: n,
-      author: l,
+      author: a,
       currentUserId: I,
       onTransitionToInviteChannel: m,
       onAcceptInstantInvite: N
     } = e,
-    p = I === l.id,
+    p = I === a.id,
     S = n.state === f.InviteStates.ACCEPTING,
     A = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
-  a(null == A || A.isPrivate(), "must be a private channel");
+  l(null == A || A.isPrivate(), "must be a private channel");
   let C = null != A;
   if (null == A) {
     if (null == n.channel) return (0, s.jsx)(E.default, {});

@@ -7,30 +7,30 @@ n.r(t), n.d(t, {
 var s = n("446674"),
   a = n("913144"),
   l = n("49111");
-let i = {};
-class r extends s.default.Store {
+let r = {};
+class i extends s.default.Store {
   getState(e) {
-    return i[e]
+    return r[e]
   }
 }
-r.displayName = "CodedLinkNativeAppStateStore";
-var u = new r(a.default, {
+i.displayName = "CodedLinkNativeAppStateStore";
+var u = new i(a.default, {
   NATIVE_APP_MODAL_OPENING: function(e) {
     let {
       code: t
     } = e;
-    i[t] = l.NativeAppStates.OPENING
+    r[t] = l.NativeAppStates.OPENING
   },
   NATIVE_APP_MODAL_OPENED: function(e) {
     let {
       code: t
     } = e;
-    i[t] = l.NativeAppStates.OPEN
+    r[t] = l.NativeAppStates.OPEN
   },
   NATIVE_APP_MODAL_OPEN_FAILED: function(e) {
     let {
       code: t
     } = e;
-    i[t] = l.NativeAppStates.OPEN_FAIL
+    r[t] = l.NativeAppStates.OPEN_FAIL
   }
 })

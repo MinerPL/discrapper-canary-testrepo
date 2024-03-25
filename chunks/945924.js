@@ -23,7 +23,7 @@ let c = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "A
       var n;
       let T = null === (n = (0, d.eventOwnerDocument)(e)) || void 0 === n ? void 0 : n.activeElement;
       if ((0, d.isInputLikeElement)(T) || i.LOCK_STACK.isActive() || _.has(t) || A.has(t) || C.has(t)) return !1;
-      let S = null != T && "BODY" === T.tagName;
-      return !(o.default.keyboardModeEnabled && !S && !/^[a-zA-Z0-9]$/.test(t) || s.ComponentDispatch.hasSubscribers(E.ComponentActions.MODAL_CLOSE) || l.default.hasLayers()) && ("Tab" === t && s.ComponentDispatch.hasSubscribers(E.ComponentActions.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), s.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), !1) : !(a.default.isConnected() && u.default.getMode() === E.InputModes.PUSH_TO_TALK && !u.default.isSelfMute() && Object.values(u.default.getShortcuts()).map(r.toBrowserEvents).some(t => t.map(e => e.keyCode).includes(e.keyCode))) && void(!e.metaKey && !e.ctrlKey && !c.has(t) && s.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.TEXTAREA_FOCUS)))
+      let I = null != T && "BODY" === T.tagName;
+      return !(o.default.keyboardModeEnabled && !I && !/^[a-zA-Z0-9]$/.test(t) || s.ComponentDispatch.hasSubscribers(E.ComponentActions.MODAL_CLOSE) || l.default.hasLayers()) && ("Tab" === t && s.ComponentDispatch.hasSubscribers(E.ComponentActions.TEXTAREA_FOCUS) && null != document.querySelector('[data-can-focus="true"]') ? (e.preventDefault(), s.ComponentDispatch.dispatch(E.ComponentActions.TEXTAREA_FOCUS), !1) : !(a.default.isConnected() && u.default.getMode() === E.InputModes.PUSH_TO_TALK && !u.default.isSelfMute() && Object.values(u.default.getShortcuts()).map(r.toBrowserEvents).some(t => t.map(e => e.keyCode).includes(e.keyCode))) && void(!e.metaKey && !e.ctrlKey && !c.has(t) && s.ComponentDispatch.dispatchToLastSubscribed(E.ComponentActions.TEXTAREA_FOCUS)))
     }
   }

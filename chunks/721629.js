@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("37983"),
-  l = n("884691"),
-  a = n("446674"),
+  a = n("884691"),
+  l = n("446674"),
   i = n("305961"),
   r = n("105017"),
   o = n("568734"),
@@ -19,10 +19,10 @@ function E(e) {
   let {
     channel: E,
     message: f
-  } = e, _ = null !== (n = null === (t = f.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n, T = _ ? (0, d.getRenewButtonLabels)() : (0, d.getJoinButtonLabels)(), I = E.guild_id, m = (0, a.useStateFromStores)([i.default], () => {
+  } = e, _ = null !== (n = null === (t = f.roleSubscriptionData) || void 0 === t ? void 0 : t.is_renewal) && void 0 !== n && n, T = _ ? (0, d.getRenewButtonLabels)() : (0, d.getJoinButtonLabels)(), I = E.guild_id, m = (0, l.useStateFromStores)([i.default], () => {
     var e;
     return null === (e = i.default.getGuild(I)) || void 0 === e ? void 0 : e.systemChannelFlags
-  }, [I]), N = null != m && (0, o.hasFlag)(m, c.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES), p = l.useMemo(() => (0, u.getRoleSubscriptionPurchaseSystemMessageEventProperties)(E, f), [E, f]);
+  }, [I]), N = null != m && (0, o.hasFlag)(m, c.SystemChannelFlags.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES), p = a.useMemo(() => (0, u.getRoleSubscriptionPurchaseSystemMessageEventProperties)(E, f), [E, f]);
   return N ? null : (0, s.jsx)(r.default, {
     channel: E,
     message: f,

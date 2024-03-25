@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("446674"),
-  i = n("437822"),
-  r = n("457108"),
+  r = n("437822"),
+  i = n("457108"),
   u = n("970366"),
   o = n("271938"),
   d = n("124969"),
@@ -25,8 +25,8 @@ var s = n("37983"),
       verifySucceeded: o.default.didVerifySucceed()
     }));
     return (a.useEffect(() => {
-      let e = (0, r.default)(t);
-      null != e && i.default.authorizePayment(e), (0, u.trackAppUIViewed)("authorize_payment")
+      let e = (0, i.default)(t);
+      null != e && r.default.authorizePayment(e), (0, u.trackAppUIViewed)("authorize_payment")
     }, [t]), E) ? (0, s.jsxs)(d.default, {
       children: [(0, s.jsx)("img", {
         alt: "",

@@ -10,11 +10,11 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var s, l = n("376556"),
-  a = n("653047");
+var s, a = n("376556"),
+  l = n("653047");
 let i = "spotify",
-  r = l.default.get(i);
-s = class extends a.default {
+  r = a.default.get(i);
+s = class extends l.default {
   getIconURL(e) {
     return r.icon.lightPNG
   }

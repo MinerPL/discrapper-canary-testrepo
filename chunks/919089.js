@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("37983"),
-  l = n("884691"),
-  a = n("65597"),
+  a = n("884691"),
+  l = n("65597"),
   i = n("151426"),
   r = n("10641"),
   o = n("592407"),
@@ -21,8 +21,8 @@ var s = n("37983"),
 function I(e) {
   let {
     dismissCurrentNotice: t
-  } = e, n = (0, a.useStateFromStores)([d.default], () => d.default.getGuildId(), []), I = (0, a.useStateFromStores)([u.default], () => u.default.getGuild(n), [n]);
-  return (l.useEffect(() => {
+  } = e, n = (0, l.useStateFromStores)([d.default], () => d.default.getGuildId(), []), I = (0, l.useStateFromStores)([u.default], () => u.default.getGuild(n), [n]);
+  return (a.useEffect(() => {
     (0, r.requestMarkDismissibleContentAsShown)(i.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR)
   }, []), null == I) ? null : (0, s.jsxs)(c.default, {
     color: c.NoticeColors.DEFAULT,

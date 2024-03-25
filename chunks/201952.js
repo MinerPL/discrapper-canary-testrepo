@@ -17,7 +17,7 @@ let d = {
 class c extends a.default.Store {
   initialize() {
     var e;
-    this.waitFor(o.default, r.default, i.default), this.syncWith([o.default, r.default, i.default], u.NOOP), s.default.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_100), s.default.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_250), e = new Set(s.default.get(u.ChannelNoticeTypes.MAX_MEMBER_COUNT)), d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set
+    this.waitFor(o.default, r.default, i.default), this.syncWith([o.default, r.default, i.default], u.NOOP), s.Storage.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_100), s.Storage.remove(u.ChannelNoticeTypes.MAX_MEMBER_COUNT_250), e = new Set(s.Storage.get(u.ChannelNoticeTypes.MAX_MEMBER_COUNT)), d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT] = void 0 !== e ? e : new Set
   }
   isVisible(e) {
     var t;
@@ -31,6 +31,6 @@ c.displayName = "MaxMemberCountChannelNoticeStore";
 var f = new c(l.default, {
   MAX_MEMBER_COUNT_NOTICE_DISMISS: function(e) {
     let t = e.guildId;
-    if (!d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(t)) return d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].add(t), s.default.set(u.ChannelNoticeTypes.MAX_MEMBER_COUNT, d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT]), !0
+    if (!d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(t)) return d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT].add(t), s.Storage.set(u.ChannelNoticeTypes.MAX_MEMBER_COUNT, d[u.ChannelNoticeTypes.MAX_MEMBER_COUNT]), !0
   }
 })

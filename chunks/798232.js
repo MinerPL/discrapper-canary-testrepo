@@ -18,8 +18,8 @@ var i = n("118810"),
   A = n("467094"),
   C = n("982108"),
   T = n("42203"),
-  S = n("474643"),
-  I = n("836417"),
+  I = n("474643"),
+  S = n("836417"),
   f = n("377253"),
   N = n("660478"),
   O = n("18494"),
@@ -59,9 +59,9 @@ let g = {
 
 function b(e) {
   if (null != e) {
-    if (I.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
+    if (S.default.isEditingAny(e)) return l.default.endEditMessage(e), !1;
     if (null != r.default.getPendingReply(e)) return (0, d.deletePendingReply)(e), !1;
-    if (null != _.default.getStickerPreview(e, S.DraftType.ChannelMessage)) return (0, A.clearStickerPreview)(e, S.DraftType.ChannelMessage), !1
+    if (null != _.default.getStickerPreview(e, I.DraftType.ChannelMessage)) return (0, A.clearStickerPreview)(e, I.DraftType.ChannelMessage), !1
   }
 }
 

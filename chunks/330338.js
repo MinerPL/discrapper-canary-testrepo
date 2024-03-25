@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return I
   }
 });
 var i, o, l, u = n("446674"),
@@ -30,7 +30,7 @@ class T extends u.default.Store {
   }
 }
 T.displayName = "AppViewStore";
-var S = new T(a.default, {
+var I = new T(a.default, {
   OVERLAY_INITIALIZE: function() {
     let e = c.default.getPrivateChannelIds(),
       t = E.default.getChannelId(_.ME);

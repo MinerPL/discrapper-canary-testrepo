@@ -1,7 +1,7 @@
 "use strict";
 s.r(a), s.d(a, {
   default: function() {
-    return i
+    return d
   }
 });
 var n = s("37983");
@@ -11,7 +11,7 @@ var t = s("77078"),
   E = s("782340"),
   _ = s("350335");
 
-function i(e) {
+function d(e) {
   let {
     icon: a,
     onChange: s

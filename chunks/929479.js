@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("70102"), n("222007");
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("913144"),
+var a = n("77078"),
+  l = n("913144"),
   i = n("316272"),
   r = n("812204"),
   o = n("649844"),
@@ -22,23 +22,23 @@ var l = n("77078"),
   m = n("646718");
 class N extends i.default {
   _initialize() {
-    __OVERLAY__ ? a.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (a.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), a.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), a.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), a.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining))
+    __OVERLAY__ ? l.default.subscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (l.default.subscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), l.default.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), l.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), l.default.subscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining))
   }
   _terminate() {
-    __OVERLAY__ ? a.default.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (a.default.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), a.default.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), a.default.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), a.default.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining))
+    __OVERLAY__ ? l.default.unsubscribe("PREMIUM_PAYMENT_MODAL_OPEN", this._handlePremiumPaymentModalOpen) : (l.default.unsubscribe("PREMIUM_PAYMENT_MODAL_CLOSE", this._handlePremiumPaymentModalClose), l.default.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell), l.default.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer), l.default.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchReferralsRemaining))
   }
   handleMessageLengthUpsell(e) {
     let {
       channel: t,
-      content: a
+      content: l
     } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("571034").then(n.bind(n, "571034"));
       return n => (0, s.jsx)(e, {
         channel: t,
-        content: a,
+        content: l,
         ...n
       })
     })
@@ -60,15 +60,15 @@ class N extends i.default {
       initialPlanId: t,
       subscriptionTier: n,
       followupSKUInfo: s,
-      analyticsObject: l
+      analyticsObject: a
     } = null != e ? e : {};
     return new Promise((e, i) => {
-      this._premiumPaymentModalCloseResolve = e, this._premiumPaymentModalCloseReject = i, a.default.dispatch({
+      this._premiumPaymentModalCloseResolve = e, this._premiumPaymentModalCloseReject = i, l.default.dispatch({
         type: "PREMIUM_PAYMENT_MODAL_OPEN",
         initialPlanId: t,
         subscriptionTier: n,
         followupSKUInfo: s,
-        analyticsObject: l
+        analyticsObject: a
       })
     })
   }
@@ -94,7 +94,7 @@ class N extends i.default {
         ...e,
         analyticsLocations: [r.default.OVERLAY],
         onClose: e => {
-          a.default.dispatch({
+          l.default.dispatch({
             type: "PREMIUM_PAYMENT_MODAL_CLOSE",
             didSucceed: e
           })

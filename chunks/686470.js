@@ -18,7 +18,7 @@ let f = "LibraryApplicationStore";
 
 function E() {
   var e;
-  return null !== (e = a.default.get(f)) && void 0 !== e ? e : {}
+  return null !== (e = a.Storage.get(f)) && void 0 !== e ? e : {}
 }
 let h = !1,
   g = {},
@@ -29,14 +29,14 @@ let h = !1,
   v = !1;
 
 function I() {
-  a.default.set(f, {
+  a.Storage.set(f, {
     ...E(),
     activeLaunchOptionIds: T
   })
 }
 
 function A() {
-  a.default.set(f, {
+  a.Storage.set(f, {
     ...E(),
     activeLibraryApplicationBranchIds: S
   })
@@ -72,7 +72,7 @@ function R() {
 class O extends r.default.Store {
   initialize() {
     this.waitFor(c.default);
-    let e = a.default.get(f);
+    let e = a.Storage.get(f);
     null != e && (null == e.activeLaunchOptionIds ? I() : T = e.activeLaunchOptionIds, null == e.activeLibraryApplicationBranchIds ? A() : S = e.activeLibraryApplicationBranchIds)
   }
   get libraryApplications() {

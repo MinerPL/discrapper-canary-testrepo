@@ -84,11 +84,11 @@ function A(e) {
 
 function R(e, r) {
   let [t, a] = i.useState(() => {
-    let t = p.default.get(e);
+    let t = p.Storage.get(e);
     return null != t ? t : r
   });
   return i.useEffect(() => {
-    p.default.set(e, t)
+    p.Storage.set(e, t)
   }, [e, t]), [t, a]
 }
 

@@ -24,7 +24,7 @@ function S() {
 }
 
 function T() {
-  s = null, p.stop(), m = !1, l.default.set(g, m)
+  s = null, p.stop(), m = !1, l.Storage.set(g, m)
 }
 
 function v() {
@@ -32,7 +32,7 @@ function v() {
 }
 class I extends o.default.Store {
   initialize() {
-    !1 !== l.default.get(g) && (m = E.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
+    !1 !== l.Storage.get(g) && (m = E.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL)
   }
   isHandoffAvailable() {
     return !h.ProcessArgs.isDisallowPopupsSet() && m

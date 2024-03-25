@@ -8,10 +8,10 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("65597"),
-  l = n("697218"),
-  a = n("553257");
-let i = () => o(l.default.getCurrentUser(), (0, a.getPomeloEligibility)()),
-  r = () => o((0, s.useStateFromStores)([l.default], () => l.default.getCurrentUser()), (0, a.usePomeloEligibility)());
+  a = n("697218"),
+  l = n("553257");
+let i = () => o(a.default.getCurrentUser(), (0, l.getPomeloEligibility)()),
+  r = () => o((0, s.useStateFromStores)([a.default], () => a.default.getCurrentUser()), (0, l.usePomeloEligibility)());
 
 function o(e, t) {
   return !(null == e || e.isPomelo()) && !!e.hasVerifiedEmailOrPhone() && !!t && !0

@@ -69,7 +69,7 @@ let h = [{
     return n.favorites.length > 0 && (e.favoriteStickers = i.FavoriteStickers.create(), e.favoriteStickers.stickerIds = s.uniq(n.favorites).slice(0, d.MAX_FAVORITES), a = !0), s.size(n.usageHistory) > 0 && (e.stickerFrecency = i.StickerFrecency.create(), e.stickerFrecency.stickers = (0, u.serializeUsageHistory)(n.usageHistory, 100), a = !0), a
   },
   cleanup() {
-    r.default.remove("StickersPersistedStore")
+    r.Storage.remove("StickersPersistedStore")
   }
 }, {
   version: 4,
@@ -77,14 +77,14 @@ let h = [{
     let {
       state: t
     } = l.default.PersistedStore.migrateAndReadStoreState("EmojiStore", [() => ({
-      usageHistory: r.default.get("EmojiUsageHistory") || {}
+      usageHistory: r.Storage.get("EmojiUsageHistory") || {}
     })]);
     if (null == t) return !1;
     let n = !1;
     return null != t.favorites && t.favorites.length > 0 && (e.favoriteEmojis = i.FavoriteEmojis.create(), e.favoriteEmojis.emojis = s.uniq(t.favorites).slice(0, d.MAX_FAVORITES), n = !0), s.size(t.usageHistory) > 0 && (e.emojiFrecency = i.EmojiFrecency.create(), e.emojiFrecency.emojis = (0, u.serializeUsageHistory)(t.usageHistory, 100), n = !0), n
   },
   cleanup() {
-    r.default.remove("EmojiStore"), r.default.remove("EmojiUsageHistory"), r.default.remove("EmojiDiversitySurrogate")
+    r.Storage.remove("EmojiStore"), r.Storage.remove("EmojiUsageHistory"), r.Storage.remove("EmojiDiversitySurrogate")
   }
 }, {
   version: 6,
@@ -127,7 +127,7 @@ let h = [{
     return s.size(t.usageHistory) > 0 && (e.applicationCommandFrecency = i.ApplicationCommandFrecency.create(), e.applicationCommandFrecency.applicationCommands = (0, u.serializeUsageHistory)(t.usageHistory, 500), n = !0), n
   },
   cleanup() {
-    r.default.remove("ApplicationCommandFrecency")
+    r.Storage.remove("ApplicationCommandFrecency")
   }
 }, {
   version: 8,
@@ -146,18 +146,18 @@ let h = [{
     }), n = !0), n
   },
   cleanup() {
-    r.default.remove("SoundboardFavoriteStore")
+    r.Storage.remove("SoundboardFavoriteStore")
   }
 }, {
   version: 9,
   run(e) {
-    let t = r.default.get(f);
+    let t = r.Storage.get(f);
     if (null == t) return !1;
     for (let e in t) !c.ID_REGEX.test(e) && delete t[e];
     return e.guildAndChannelFrecency = i.GuildAndChannelFrecency.create(), e.guildAndChannelFrecency.guildAndChannels = (0, u.serializeUsageHistory)(t, 100), !0
   },
   cleanup() {
-    r.default.remove(f)
+    r.Storage.remove(f)
   }
 }];
 var _ = h

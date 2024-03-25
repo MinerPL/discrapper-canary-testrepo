@@ -71,7 +71,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       discoveryEnabled: t,
       onboardingEnabled: s,
       guild: n
-    } = e, [i, c] = l.useState(!0 === d.default.get(D)), E = (0, r.useStateFromStores)([S.default], () => {
+    } = e, [i, c] = l.useState(!0 === d.Storage.get(D)), E = (0, r.useStateFromStores)([S.default], () => {
       var e;
       return null !== (e = S.default.getMemberCount(n.id)) && void 0 !== e ? e : 0
     }), [_, T] = l.useState(!1);
@@ -117,7 +117,7 @@ let D = "dismissedCommunityFeaturesUpsell",
         size: u.Button.Sizes.NONE,
         className: p.upsellClose,
         onClick: () => {
-          d.default.set(D, !0), c(!0)
+          d.Storage.set(D, !0), c(!0)
         },
         children: (0, a.jsx)(h.default, {
           width: 24,
@@ -169,7 +169,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       })),
       o = (0, r.useStateFromStores)([T.default], () => null != t ? T.default.getChannels(t.id) : null),
       c = l.useMemo(O.calculateLocaleOptions, []),
-      I = !0 !== d.default.get(D),
+      I = !0 !== d.Storage.get(D),
       {
         enableRaidAlerts: S
       } = _.RaidAlertExperiment.useExperiment({

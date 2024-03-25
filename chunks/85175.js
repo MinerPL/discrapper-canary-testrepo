@@ -1,28 +1,28 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("37983");
 n("884691");
-var l = n("75196");
+var a = n("75196");
 
-function a(e) {
+function l(e) {
   let {
     width: t = 16,
     height: n = 16,
-    color: a = "currentColor",
+    color: l = "currentColor",
     foreground: i,
     ...r
   } = e;
   return (0, s.jsx)("svg", {
-    ...(0, l.default)(r),
+    ...(0, a.default)(r),
     width: t,
     height: n,
     viewBox: "0 0 24 24",
     children: (0, s.jsx)("g", {
-      fill: a,
+      fill: l,
       className: i,
       fillRule: "evenodd",
       transform: "translate(7 4)",

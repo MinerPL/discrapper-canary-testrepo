@@ -34,8 +34,8 @@ var a = n("37983"),
   _ = n("550410"),
   L = n("598873"),
   w = n("54727"),
-  O = n("336971"),
-  b = n("954519"),
+  b = n("336971"),
+  O = n("954519"),
   D = n("857398"),
   R = n("373469"),
   F = n("271938"),
@@ -271,7 +271,7 @@ class eo extends l.PureComponent {
       let {
         isSelf: e
       } = this.viewProperties;
-      return (0, a.jsx)(b.default, {
+      return (0, a.jsx)(O.default, {
         isSelfStream: e,
         className: el.rightTrayIcon,
         onClick: this.handleStopStream
@@ -290,7 +290,7 @@ class eo extends l.PureComponent {
           compact: !0
         })
       })
-    }, this.renderPopoutIcon = () => (0, a.jsx)(O.default, {
+    }, this.renderPopoutIcon = () => (0, a.jsx)(b.default, {
       className: el.rightTrayIcon,
       popoutOpen: !1,
       onOpenPopout: this.handleOpenPopout,

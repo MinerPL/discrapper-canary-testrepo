@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("446674"),
-  a = n("271938"),
+var a = n("446674"),
+  l = n("271938"),
   i = n("174622"),
   r = n("883029"),
   o = n("782340");
@@ -17,7 +17,7 @@ function u(e) {
   let {
     author: u,
     inviteError: d
-  } = e, c = (0, l.useStateFromStores)([a.default], () => a.default.getId()), E = c === u.id, f = E ? o.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, _ = (0, r.getDescriptiveInviteError)(null == d ? void 0 : d.code);
+  } = e, c = (0, a.useStateFromStores)([l.default], () => l.default.getId()), E = c === u.id, f = E ? o.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID : o.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, _ = (0, r.getDescriptiveInviteError)(null == d ? void 0 : d.code);
   return (0, s.jsxs)(i.default, {
     children: [(0, s.jsx)(i.default.Header, {
       text: f

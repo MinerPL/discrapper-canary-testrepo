@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("272030"),
@@ -23,7 +23,7 @@ var s = n("37983"),
   p = n("49111"),
   S = n("782340"),
   A = n("434118");
-class C extends l.PureComponent {
+class C extends a.PureComponent {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -48,8 +48,8 @@ class C extends l.PureComponent {
   renderDisabledButton(e, t) {
     let {
       className: n,
-      fullWidth: l,
-      size: a,
+      fullWidth: a,
+      size: l,
       customDisabledColor: i,
       tooltipPosition: r
     } = this.props;
@@ -57,8 +57,8 @@ class C extends l.PureComponent {
       className: A.disabledButtonWrapper,
       children: [(0, s.jsx)(o.Button, {
         className: n,
-        fullWidth: l,
-        size: a,
+        fullWidth: a,
+        size: l,
         color: null != i ? i : A.disabledButtonColor,
         disabled: !0,
         children: e
@@ -77,14 +77,14 @@ class C extends l.PureComponent {
       className: e,
       fullWidth: t,
       size: n,
-      color: l,
-      isLaunchable: a,
+      color: a,
+      isLaunchable: l,
       isLaunching: r,
       isRunning: u,
       isShiny: d,
       hideNotLaunchable: c
     } = this.props;
-    if (!a) return c ? null : this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? S.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : S.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
+    if (!l) return c ? null : this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_PLAY, m.isPlatformEmbedded ? S.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : S.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
     if (u) return this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
     let E = d ? T.default : o.Button;
     return (0, s.jsxs)(E, {
@@ -92,8 +92,8 @@ class C extends l.PureComponent {
       innerClassName: A.playButtonContents,
       fullWidth: t,
       size: n,
-      color: null != l ? l : o.Button.Colors.GREEN,
-      hover: null != l ? o.Button.Hovers.GREEN : o.Button.Hovers.DEFAULT,
+      color: null != a ? a : o.Button.Colors.GREEN,
+      hover: null != a ? o.Button.Hovers.GREEN : o.Button.Hovers.DEFAULT,
       submitting: r,
       onClick: this.handleClick,
       children: [(0, s.jsx)("div", {
@@ -107,10 +107,10 @@ class C extends l.PureComponent {
       e.stopPropagation();
       let {
         libraryApplication: t,
-        onDropdownOpen: l,
-        onDropdownClose: a
+        onDropdownOpen: a,
+        onDropdownClose: l
       } = this.props;
-      if (null == l || l(e), null == t) throw Error("Unexpected missing libraryApplication");
+      if (null == a || a(e), null == t) throw Error("Unexpected missing libraryApplication");
       u.openContextMenuLazy(e, async () => {
         let {
           default: e
@@ -121,7 +121,7 @@ class C extends l.PureComponent {
           onPlay: this.handleClick
         })
       }, {
-        onClose: a
+        onClose: l
       })
     }, this.handleClick = () => {
       let {
@@ -145,11 +145,11 @@ function h(e) {
   let {
     applicationId: t,
     libraryApplication: n
-  } = e, l = (0, d.useAnalyticsContext)(), [a, i] = (0, r.useStateFromStoresArray)([f.default, E.default, _.default], () => [f.default.isConnected(t) || E.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([c.default], () => new Set(c.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
+  } = e, a = (0, d.useAnalyticsContext)(), [l, i] = (0, r.useStateFromStoresArray)([f.default, E.default, _.default], () => [f.default.isConnected(t) || E.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([c.default], () => new Set(c.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
   return (0, s.jsx)(C, {
     ...e,
-    analyticsContext: l,
-    isLaunchable: a,
+    analyticsContext: a,
+    isLaunchable: l,
     isLaunching: i,
     isRunning: o,
     dispatchState: u

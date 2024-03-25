@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("884691"),
-  l = n("298386"),
-  a = n("446674"),
+  a = n("298386"),
+  l = n("446674"),
   i = n("811425"),
   r = n("305961"),
   o = n("333363"),
@@ -19,11 +19,11 @@ function c(e) {
     message: c,
     channel: E,
     enabled: f = !0
-  } = e, _ = (0, a.useStateFromStores)([r.default], () => {
+  } = e, _ = (0, l.useStateFromStores)([r.default], () => {
     var e;
     let t = r.default.getGuild(E.guild_id);
     return null !== (e = null == t ? void 0 : t.hasFeature(d.GuildFeatures.COMMUNITY)) && void 0 !== e && e
-  }, [E.guild_id]), T = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != E.guild_id, I = E.type === l.ChannelTypes.GUILD_ANNOUNCEMENT && _, m = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (T || I), N = T && null != c.messageReference ? c.messageReference.message_id : c.id, p = T && null != c.messageReference ? c.messageReference.channel_id : E.id, S = T && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : E.guild_id, A = s.useCallback(e => {
+  }, [E.guild_id]), T = (null === (t = c.messageReference) || void 0 === t ? void 0 : t.guild_id) != null && null != c.webhookId && c.hasFlag(d.MessageFlags.IS_CROSSPOST) && null != E.guild_id, I = E.type === a.ChannelTypes.GUILD_ANNOUNCEMENT && _, m = !c.hasFlag(d.MessageFlags.EPHEMERAL) && (T || I), N = T && null != c.messageReference ? c.messageReference.message_id : c.id, p = T && null != c.messageReference ? c.messageReference.channel_id : E.id, S = T && (null === (n = c.messageReference) || void 0 === n ? void 0 : n.guild_id) != null ? c.messageReference.guild_id : E.guild_id, A = s.useCallback(e => {
     e ? u.default.handleMessageBecameVisible({
       messageId: N,
       channelId: E.id,

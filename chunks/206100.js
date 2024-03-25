@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("70102");
 var s = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
+var a = n("414456"),
+  l = n.n(a),
   i = n("77078"),
   r = n("84084"),
   o = n("260162"),
@@ -34,12 +34,12 @@ function _(e) {
   let {
     operatingSystem: t,
     className: n
-  } = e, l = f[t];
-  if (null == l) throw Error("Unexpected operating system: ".concat(t));
-  let a = l.icon;
+  } = e, a = f[t];
+  if (null == a) throw Error("Unexpected operating system: ".concat(t));
+  let l = a.icon;
   return (0, s.jsx)(i.Tooltip, {
-    text: l.getLabel(),
-    children: e => (0, s.jsx)(a, {
+    text: a.getLabel(),
+    children: e => (0, s.jsx)(l, {
       ...e,
       className: n
     })
@@ -49,13 +49,13 @@ let T = e => {
   let {
     systems: t,
     className: n,
-    iconClassName: l
+    iconClassName: a
   } = e;
   return (0, s.jsx)("div", {
-    className: a(E.OSSection, n),
+    className: l(E.OSSection, n),
     children: t.map(e => (0, s.jsx)(_, {
       operatingSystem: e,
-      className: a(E.purchaseUnitOperatingSystem, l)
+      className: l(E.purchaseUnitOperatingSystem, a)
     }, e))
   })
 }

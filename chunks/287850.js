@@ -36,7 +36,7 @@ let C = new c.SecondaryIndexMap(e => {
   return -t
 });
 
-function N(e) {
+function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(e) {
     var t, r;
     let n = null !== (r = null !== (t = y.default.lastMessageId(e.id)) && void 0 !== t ? t : e.lastMessageId) && void 0 !== r ? r : e.id,
@@ -56,18 +56,18 @@ function N(e) {
   }
 }
 
-function S() {
+function N() {
   C.clear(), Object.values(m.default.getMutablePrivateChannels()).forEach(e => {
-    C.set(e.id, N(e))
+    C.set(e.id, S(e))
   }), (0, p.isInMainTabsExperiment)() && (0, E.isSplitMessagesTab)() && T.default.getAddedToMessages().forEach(e => {
     let t = m.default.getChannel(e);
-    null != t && (0, v.isGuildTextChannelType)(t.type) && C.set(t.id, N(t))
+    null != t && (0, v.isGuildTextChannelType)(t.type) && C.set(t.id, S(t))
   })
 }
 
 function P() {
   let e = m.default.getMutablePrivateChannels();
-  for (let t in e) C.set(t, N(e[t]))
+  for (let t in e) C.set(t, S(e[t]))
 }
 let R = (n = [], i = [], s = [], () => {
   let e = C.values("FAVORITE"),
@@ -86,7 +86,7 @@ let R = (n = [], i = [], s = [], () => {
 });
 class x extends d.default.Store {
   initialize() {
-    this.waitFor(m.default, g.default, A.default, _.default, T.default), this.syncWith([T.default, _.default], S)
+    this.waitFor(m.default, g.default, A.default, _.default, T.default), this.syncWith([T.default, _.default], N)
   }
   getPrivateChannelIds() {
     return R()
@@ -107,9 +107,9 @@ class x extends d.default.Store {
 }
 x.displayName = "PrivateChannelSortStore";
 var O = new x(f.default, {
-  CONNECTION_OPEN: S,
-  CONNECTION_OPEN_SUPPLEMENTAL: S,
-  OVERLAY_INITIALIZE: S,
+  CONNECTION_OPEN: N,
+  CONNECTION_OPEN_SUPPLEMENTAL: N,
+  OVERLAY_INITIALIZE: N,
   CACHE_LOADED: P,
   CACHE_LOADED_LAZY: P,
   CHANNEL_UPDATES: function(e) {
@@ -117,7 +117,7 @@ var O = new x(f.default, {
       channels: t
     } = e;
     t.forEach(e => {
-      ((0, v.isPrivate)(e.type) || C.has(e.id)) && C.set(e.id, N(e))
+      ((0, v.isPrivate)(e.type) || C.has(e.id)) && C.set(e.id, S(e))
     })
   },
   CHANNEL_CREATE: function(e) {
@@ -125,7 +125,7 @@ var O = new x(f.default, {
       channel: t
     } = e;
     if (!(0, v.isPrivate)(t.type) || t.id === I.FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) return !1;
-    C.set(t.id, N(t))
+    C.set(t.id, S(t))
   },
   CHANNEL_DELETE: function(e) {
     let {
@@ -140,7 +140,7 @@ var O = new x(f.default, {
     } = e;
     if (!C.has(t)) return !1;
     let n = m.default.getChannel(t);
-    return null != n && C.set(t, N(n, r.id))
+    return null != n && C.set(t, S(n, r.id))
   },
   GUILD_CREATE: function(e) {
     let t = e.guild.id;

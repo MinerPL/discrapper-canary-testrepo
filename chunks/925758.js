@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("917351"),
-  l = n.n(s),
-  a = n("446674"),
+  a = n.n(s),
+  l = n("446674"),
   i = n("913144"),
   r = n("271938"),
   o = n("27618"),
@@ -25,26 +25,26 @@ function _(e, t) {
   let n = f(e, t);
   if (null == n) return;
   let s = c[e];
-  delete s[t], l.isEmpty(s) && delete c[e];
-  let a = E[n];
-  null != a && (a.delete(e), 0 === a.size && delete E[n])
+  delete s[t], a.isEmpty(s) && delete c[e];
+  let l = E[n];
+  null != l && (l.delete(e), 0 === l.size && delete E[n])
 }
 
 function T(e, t, n, s) {
-  let l = n.find(e => null != e.party && e.party.id),
-    a = null != l && null != l.party ? l.party.id : null,
+  let a = n.find(e => null != e.party && e.party.id),
+    l = null != a && null != a.party ? a.party.id : null,
     i = f(t, e);
-  if (null == a || s === d.StatusTypes.OFFLINE) return null != i && (_(t, e), void 0);
+  if (null == l || s === d.StatusTypes.OFFLINE) return null != i && (_(t, e), void 0);
   if (null != i) {
-    if (i === a) return !1;
+    if (i === l) return !1;
     _(t, e)
   }! function(e, t, n) {
     var s;
-    let l = c[e];
-    if (null == l && (l = c[e] = {}), l[t] = n, o.default.isBlocked(e)) return;
-    let a = null !== (s = E[n]) && void 0 !== s ? s : new Set;
-    E[n] = a, a.add(e)
-  }(t, e, a)
+    let a = c[e];
+    if (null == a && (a = c[e] = {}), a[t] = n, o.default.isBlocked(e)) return;
+    let l = null !== (s = E[n]) && void 0 !== s ? s : new Set;
+    E[n] = l, l.add(e)
+  }(t, e, l)
 }
 
 function I(e) {
@@ -54,9 +54,9 @@ function I(e) {
   for (let {
       user: e,
       status: s,
-      activities: l
+      activities: a
     }
-    of t.presences) !1 !== T(t.id, e.id, l, s) && (n = !0);
+    of t.presences) !1 !== T(t.id, e.id, a, s) && (n = !0);
   return n
 }
 
@@ -72,7 +72,7 @@ function N() {
     t = u.default.getActivities();
   return T(d.ME, e, t)
 }
-class p extends a.default.Store {
+class p extends l.default.Store {
   initialize() {
     this.syncWith([u.default], N), this.waitFor(u.default, o.default)
   }
@@ -96,9 +96,9 @@ var S = new p(i.default, {
     for (let {
         user: e,
         status: t,
-        activities: l
+        activities: a
       }
-      of n) null != e && !1 !== T(d.ME, e.id, l, t) && (s = !0);
+      of n) null != e && !1 !== T(d.ME, e.id, a, t) && (s = !0);
     for (let e of t) !1 !== I({
       guild: e
     }) && (s = !0);
@@ -134,9 +134,9 @@ var S = new p(i.default, {
         guildId: t,
         user: n,
         status: s,
-        activities: l
+        activities: a
       } = e;
-      return T(null != t ? t : d.ME, n.id, l, s)
+      return T(null != t ? t : d.ME, n.id, a, s)
     }).some(e => e)
   },
   THREAD_MEMBER_LIST_UPDATE: function(e) {
@@ -160,7 +160,7 @@ var S = new p(i.default, {
     if (!o.default.isBlocked(t.id)) return !1;
     let n = c[t.id];
     if (null == n) return !1;
-    for (let e of l.values(n)) {
+    for (let e of a.values(n)) {
       let n = E[e];
       null != n && n.delete(t.id)
     }
@@ -170,7 +170,7 @@ var S = new p(i.default, {
       relationship: t
     } = e, n = c[t.id];
     if (null == n) return !1;
-    for (let e of l.values(n)) {
+    for (let e of a.values(n)) {
       let n = E[e];
       null != n && n.add(t.id)
     }

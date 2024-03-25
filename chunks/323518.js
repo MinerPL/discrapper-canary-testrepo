@@ -5,13 +5,13 @@ a.r(t), a.d(t, {
   }
 }), a("222007");
 var n = a("37983"),
-  l = a("884691"),
-  o = a("748820"),
+  o = a("884691"),
+  l = a("748820"),
   s = a("446674"),
   r = a("819855"),
   i = a("77078"),
-  u = a("371642"),
-  c = a("966724"),
+  c = a("371642"),
+  u = a("966724"),
   d = a("9560"),
   m = a("761354"),
   f = a("161778"),
@@ -36,7 +36,7 @@ function O(e) {
   let {
     transitionState: C,
     onClose: P
-  } = e, U = l.useRef(null), y = l.useRef(null), [B, M] = l.useState(""), [w, D] = l.useState(""), [F, G] = l.useState(), [A, V] = l.useState(""), [k, H] = l.useState([]), [Y, W] = l.useState(), [K, z] = l.useState(), [J, X] = l.useState(!1), [Q, q] = l.useState(""), [Z, $] = l.useState(function(e) {
+  } = e, U = o.useRef(null), y = o.useRef(null), [B, M] = o.useState(""), [w, D] = o.useState(""), [F, G] = o.useState(), [A, V] = o.useState(""), [k, H] = o.useState([]), [Y, W] = o.useState(), [K, z] = o.useState(), [J, X] = o.useState(!1), [Q, q] = o.useState(""), [Z, $] = o.useState(function(e) {
     switch (e) {
       case "windows":
         return "Windows";
@@ -46,7 +46,7 @@ function O(e) {
         return "Linux"
     }
     return ""
-  }((0, v.getOS)())), [ee, et] = l.useState(""), [ea, en] = l.useState(""), [el, eo] = l.useState(""), [es, er] = l.useState(""), [ei, eu] = l.useState(!1), [ec, ed] = l.useState(!1), [em, ef] = l.useState(!1), eg = () => {
+  }((0, v.getOS)())), [ee, et] = o.useState(""), [ea, en] = o.useState(""), [eo, el] = o.useState(""), [es, er] = o.useState(""), [ei, ec] = o.useState(!1), [eu, ed] = o.useState(!1), [em, ef] = o.useState(!1), eg = () => {
     null == P || P()
   }, ep = e => {
     H(k.filter(t => t.id !== e))
@@ -54,24 +54,24 @@ function O(e) {
   async function eh() {
     var e;
     if (ef(!1), "" === B || null == F) {
-      eu(!0);
+      ec(!0);
       return
     }
     let t = null == Y ? void 0 : null === (e = Y.features) || void 0 === e ? void 0 : e.find(e => (0, E.getFeatureId)(e) === K);
-    ed(!0), eu(!1);
-    let l = (0, R.getAttachments)(k.map(e => {
+    ed(!0), ec(!1);
+    let o = (0, R.getAttachments)(k.map(e => {
         let {
           item: t
         } = e;
         return t
       })),
-      o = !0 === J ? {
+      l = !0 === J ? {
         overridePlatformInformation: J,
         device: Q,
         operatingSystem: Z,
         operatingSystemVersion: ee,
         clientVersion: ea,
-        clientBuildNumber: el,
+        clientBuildNumber: eo,
         locale: es
       } : {
         overridePlatformInformation: J
@@ -82,7 +82,7 @@ function O(e) {
         priority: F,
         feature: t,
         url: A
-      }, o, l).catch(() => ef(!0));
+      }, l, o).catch(() => ef(!0));
     ed(!1), null != s && s.ok ? (window.open(s.body.permalink_url, "_blank"), eg(), (0, i.openModalLazy)(async () => {
       let {
         default: e
@@ -93,12 +93,12 @@ function O(e) {
       })
     })) : ef(!0)
   }
-  l.useEffect(() => {
+  o.useEffect(() => {
     (async function e() {
       let e = await (0, E.fetchBugReportConfig)();
       W(e)
     })()
-  }, []), l.useEffect(() => {
+  }, []), o.useEffect(() => {
     if (k.length > 0) {
       var e;
       null === (e = y.current) || void 0 === e || e.scrollIntoView({
@@ -280,8 +280,8 @@ function O(e) {
                   className: x.formInput,
                   children: (0, n.jsx)(i.TextInput, {
                     placeholder: "Client Build Number",
-                    value: el,
-                    onChange: e => eo(e)
+                    value: eo,
+                    onChange: e => el(e)
                   })
                 }), (0, n.jsx)(i.FormItem, {
                   title: T.default.Messages.BUG_REPORT_LOCALE,
@@ -294,15 +294,15 @@ function O(e) {
                 })]
               }) : null, (0, n.jsxs)(i.Button, {
                 className: x.uploadButton,
-                children: [T.default.Messages.BUG_REPORT_ADD_ATTACHMENTS, (0, n.jsx)(u.default, {
+                children: [T.default.Messages.BUG_REPORT_ADD_ATTACHMENTS, (0, n.jsx)(c.default, {
                   ref: U,
                   onChange: e => {
                     var t, a;
                     if ((null === (a = e.currentTarget) || void 0 === a ? void 0 : null === (t = a.files) || void 0 === t ? void 0 : t[0]) != null) {
-                      let t = Array.from(e.currentTarget.files).map(e => new c.default({
-                        id: (0, o.v4)(),
+                      let t = Array.from(e.currentTarget.files).map(e => new u.default({
+                        id: (0, l.v4)(),
                         file: e,
-                        platform: c.UploadPlatform.WEB
+                        platform: u.UploadPlatform.WEB
                       }));
                       H([...k, ...t])
                     }
@@ -357,7 +357,7 @@ function O(e) {
                   children: T.default.Messages.CANCEL
                 })
               }), (0, n.jsx)(i.Button, {
-                submitting: ec,
+                submitting: eu,
                 className: x.formButton,
                 onClick: eh,
                 children: "Submit and Open Report"

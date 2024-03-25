@@ -37,7 +37,7 @@ function b(e) {
 }
 
 function U() {
-  !__OVERLAY__ && f.default.set(O, {
+  !__OVERLAY__ && f.Storage.set(O, {
     selectedChannelId: r,
     selectedVoiceChannelId: o,
     lastChannelFollowingDestination: a,
@@ -108,7 +108,7 @@ class B extends _.default.Store {
   initialize() {
     if (!__OVERLAY__) {
       var e, t;
-      let n = null !== (e = f.default.get(O)) && void 0 !== e ? e : {
+      let n = null !== (e = f.Storage.get(O)) && void 0 !== e ? e : {
         selectedChannelId: r,
         selectedVoiceChannelId: o,
         lastChannelFollowingDestination: a,
@@ -253,6 +253,6 @@ var H = new B(E.default, {
     }, U())
   },
   LOGOUT: function() {
-    D = {}, r = null, s = void 0, L = {}, a = {}, o = null, f.default.remove(O)
+    D = {}, r = null, s = void 0, L = {}, a = {}, o = null, f.Storage.remove(O)
   }
 })

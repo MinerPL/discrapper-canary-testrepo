@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("446674"),
-  a = n("352674"),
+var a = n("446674"),
+  l = n("352674"),
   i = n("271938"),
   r = n("18494"),
   o = n("174622"),
@@ -22,8 +22,8 @@ function _(e) {
       author: T,
       banned: I
     } = e,
-    m = (0, l.useStateFromStores)([i.default], () => i.default.getId()),
-    N = (0, l.useStateFromStores)([r.default], () => r.default.getChannelId()),
+    m = (0, a.useStateFromStores)([i.default], () => i.default.getId()),
+    N = (0, a.useStateFromStores)([r.default], () => r.default.getChannelId()),
     p = d.default.useName(T),
     S = m === T.id;
   return S ? (t = E.default.Messages.INVITE_BUTTON_INVALID_OWNER, _ = E.default.Messages.INVITE_BUTTON_TITLE_INVITER_INVALID) : (_ = E.default.Messages.INVITE_BUTTON_TITLE_INVITED_INVALID, I ? t = E.default.Messages.INSTANT_INVITE_BANNED_INFO : null != p ? (t = E.default.Messages.INSTANT_INVITE_ASK_USER_FOR_NEW_INVITE.format({
@@ -38,7 +38,7 @@ function _(e) {
       u.ComponentDispatch.dispatchToLastSubscribed(c.ComponentActions.INSERT_TEXT, {
         plainText: t,
         rawText: "<@".concat(e, ">")
-      }), null != N && a.default.startTyping(N)
+      }), null != N && l.default.startTyping(N)
     },
     children: E.default.Messages.MENTION
   })) : t = E.default.Messages.INSTANT_INVITE_ASK_FOR_NEW_INVITE), (0, s.jsxs)(o.default, {

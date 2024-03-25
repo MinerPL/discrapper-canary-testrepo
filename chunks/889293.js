@@ -5,19 +5,19 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("446674"),
-  l = n("913144");
-let a = [];
+  a = n("913144");
+let l = [];
 class i extends s.default.Store {
   getEligibleGuildsForNagActivate() {
-    return a
+    return l
   }
 }
 i.displayName = "CreatorMonetizationMarketingStore";
-var r = new i(l.default, {
+var r = new i(a.default, {
   CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS: function(e) {
     let {
       eligibleGuilds: t
     } = e;
-    a = t
+    l = t
   }
 })

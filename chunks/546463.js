@@ -15,7 +15,7 @@ let c = "GameStoreReportedGames",
   _ = {},
   f = {},
   E = {},
-  h = null !== (s = a.default.get(c)) && void 0 !== s ? s : {},
+  h = null !== (s = a.Storage.get(c)) && void 0 !== s ? s : {},
   g = "";
 let m = null;
 
@@ -103,7 +103,7 @@ class T extends r.default.PersistedStore {
     return l.ShowCurrentGame.getSetting() && !i && !(t || n)
   }
   markGameReported(e) {
-    h[e] = !0, a.default.set(c, h)
+    h[e] = !0, a.Storage.set(c, h)
   }
 }
 T.displayName = "GameStore", T.persistKey = "GameStore", T.migrations = [e => {

@@ -1,14 +1,14 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumTier2TrialOfferNoticeExperiment: function() {
-    return l
+    return a
   },
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("862205");
-let l = (0, s.createExperiment)({
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2023-10_premium_tier_2_trial_offer_expiring_notice",
   label: "Premium Tier 2 Trial Offer Expiring Notice",
@@ -23,10 +23,10 @@ let l = (0, s.createExperiment)({
     }
   }]
 });
-var a = function() {
+var l = function() {
   let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  return l.useExperiment({
+  return a.useExperiment({
     location: "experiment_hook"
   }, {
     autoTrackExposure: e,

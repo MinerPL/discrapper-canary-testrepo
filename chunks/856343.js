@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   s = n("446674"),
-  i = n("77078"),
-  l = n("629109"),
+  l = n("77078"),
+  i = n("629109"),
   u = n("997289"),
   o = n("773356"),
   d = n("268491"),
@@ -17,8 +17,8 @@ var a = n("37983"),
   h = n("697218"),
   E = n("49111"),
   p = n("686298"),
-  m = n("353927"),
-  C = n("782340");
+  C = n("353927"),
+  m = n("782340");
 
 function S(e, t) {
   let {
@@ -39,7 +39,7 @@ function S(e, t) {
             resolution: r,
             frameRate: s
           },
-          context: m.MediaEngineContextTypes.STREAM
+          context: C.MediaEngineContextTypes.STREAM
         };
         null != T.desktopSource ? e.desktopSettings = {
           sourceId: T.desktopSource.id,
@@ -47,7 +47,7 @@ function S(e, t) {
         } : null != T.cameraSource && (e.cameraSettings = {
           videoDeviceGuid: T.cameraSource.videoDeviceGuid,
           audioDeviceGuid: T.cameraSource.audioDeviceGuid
-        }), l.default.setGoLiveSource(e)
+        }), i.default.setGoLiveSource(e)
       }
     } else {
       var o, d;
@@ -55,7 +55,7 @@ function S(e, t) {
         ...A,
         object: E.AnalyticsObjects.RADIO_ITEM,
         objectType: u
-      }, (0, i.openModalLazy)(async () => {
+      }, (0, l.openModalLazy)(async () => {
         let {
           default: e
         } = await n.el("754534").then(n.bind(n, "754534"));
@@ -64,7 +64,7 @@ function S(e, t) {
           analyticsSource: d
         })
       }, {
-        contextKey: o === E.AppContext.POPOUT ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
+        contextKey: o === E.AppContext.POPOUT ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT
       })
     }
   }, [t, A, T]);
@@ -75,7 +75,7 @@ function S(e, t) {
         value: t,
         label: n
       } = e, r = (0, o.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, g, t, v, I);
-      return (0, a.jsx)(i.MenuRadioItem, {
+      return (0, a.jsx)(l.MenuRadioItem, {
         group: "stream-settings-fps",
         id: "stream-settings-fps-".concat(t),
         label: n,
@@ -88,7 +88,7 @@ function S(e, t) {
         value: t,
         label: n
       } = e, r = (0, o.default)(p.ApplicationStreamPresets.PRESET_CUSTOM, t, R, v, I);
-      return (0, a.jsx)(i.MenuRadioItem, {
+      return (0, a.jsx)(l.MenuRadioItem, {
         group: "stream-settings-resolution",
         id: "stream-settings-resolution-".concat(t),
         label: n,
@@ -97,11 +97,11 @@ function S(e, t) {
       }, "stream-settings-resolution-".concat(t))
     });
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(i.MenuGroup, {
-      label: C.default.Messages.SCREENSHARE_FRAME_RATE,
+    children: [(0, a.jsx)(l.MenuGroup, {
+      label: m.default.Messages.SCREENSHARE_FRAME_RATE,
       children: N
-    }), (0, a.jsx)(i.MenuGroup, {
-      label: C.default.Messages.STREAM_RESOLUTION,
+    }), (0, a.jsx)(l.MenuGroup, {
+      label: m.default.Messages.STREAM_RESOLUTION,
       children: y
     })]
   })

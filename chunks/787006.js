@@ -22,7 +22,7 @@ async function S() {
     return
   }
   let E = await _(),
-    n = o.default.get(T, {}),
+    n = o.Storage.get(T, {}),
     {
       didCrashReporterSeeCrash: r,
       didCrashOrUncleanExit: i
@@ -84,7 +84,7 @@ async function S() {
         ...M
       }
     }(r, i, E);
-  a.default.track(I.AnalyticEvents.APP_NATIVE_CRASH, S), o.default.set(T, {
+  a.default.track(I.AnalyticEvents.APP_NATIVE_CRASH, S), o.Storage.set(T, {
     lastId: null == E ? void 0 : E.id
   }), i && setTimeout(async () => await N(), 1e4)
 }

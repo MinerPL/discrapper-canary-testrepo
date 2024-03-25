@@ -24,7 +24,7 @@ var i = n("37983"),
   S = n("782340"),
   C = n("669821");
 let T = "premiumRetentionEmojiPickerNotice",
-  _ = o.default.get(T);
+  _ = o.Storage.get(T);
 var I = e => {
   let {
     closePopout: t,
@@ -67,7 +67,7 @@ var I = e => {
       })]
     }), (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        o.default.set(T, R), _ = R, I(!0)
+        o.Storage.set(T, R), _ = R, I(!0)
       },
       children: (0, i.jsx)(m.default, {
         className: C.premiumRetentionNoticeClose

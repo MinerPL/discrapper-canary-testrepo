@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return O
   }
 }), n("222007"), n("866227");
-var s, l, a = n("316693"),
+var s, a, l = n("316693"),
   i = n("446674");
 n("95410");
 var r = n("913144"),
@@ -29,7 +29,7 @@ let I = {
   N = {},
   p = null,
   S = 864e5;
-(l = s || (s = {})).IS_OWNER = "is_owner", l.IS_ADMIN = "is_admin", l.IS_COMMUNITY = "is_community", l.GUILD_SIZE = "guild_size", l.IS_HUB = "is_hub", l.IS_VIEWING = "is_viewing", l.GUILD_PERMISSIONS = "guild_permissions", l.GUILD_SIZE_ALL = "guild_size_all";
+(a = s || (s = {})).IS_OWNER = "is_owner", a.IS_ADMIN = "is_admin", a.IS_COMMUNITY = "is_community", a.GUILD_SIZE = "guild_size", a.IS_HUB = "is_hub", a.IS_VIEWING = "is_viewing", a.GUILD_PERMISSIONS = "guild_permissions", a.GUILD_SIZE_ALL = "guild_size_all";
 let A = new Set(Object.values(s));
 
 function C(e) {
@@ -44,11 +44,11 @@ function C(e) {
     if (0 === t.length) return !0;
     for (let e of t)
       if (!A.has(e)) return !1;
-    let l = t.includes("guild_size_all"),
+    let a = t.includes("guild_size_all"),
       i = !0,
       r = Object.values(c.default.getGuilds());
     for (let o of r) {
-      if (l || t.includes("guild_size")) {
+      if (a || t.includes("guild_size")) {
         let e = d.default.getMemberCount(o.id);
         if (null == e || null != n[0] && e < n[0] || null != n[1] && e > n[1]) {
           i = !1;
@@ -60,7 +60,7 @@ function C(e) {
         if (0 === s.length) continue;
         let e = !1;
         for (let t of s) try {
-          let n = a.deserialize(t);
+          let n = l.deserialize(t);
           if (E.default.can(n, o)) {
             e = !0;
             break
@@ -75,9 +75,9 @@ function C(e) {
       null == (N = null != N ? N : {})[e.key] && (N[e.key] = e);
       let I = f.default.getGuildId(),
         m = null != I && I === o.id;
-      if ((!t.includes("is_viewing") || m) && !l) return !0
+      if ((!t.includes("is_viewing") || m) && !a) return !0
     }
-    return !!l && !!i || !1
+    return !!a && !!i || !1
   }(e)
 }
 

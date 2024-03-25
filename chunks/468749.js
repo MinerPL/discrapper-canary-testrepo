@@ -31,7 +31,7 @@ function c(e) {
       type: n.Checkbox.Types.INVERTED,
       value: t,
       onChange: () => {
-        a.default.set("doNotShowReorderModal", JSON.stringify(!0)), o(!0)
+        a.Storage.set("doNotShowReorderModal", JSON.stringify(!0)), o(!0)
       },
       children: (0, r.jsx)(n.Text, {
         variant: "text-md/normal",

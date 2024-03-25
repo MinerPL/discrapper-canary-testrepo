@@ -8,8 +8,8 @@ var s = n("37983");
 n("884691");
 var a = n("77078"),
   l = n("653047"),
-  i = n("233069"),
-  r = n("813006"),
+  r = n("233069"),
+  i = n("813006"),
   u = n("766274"),
   o = n("800118"),
   d = n("570683"),
@@ -36,8 +36,8 @@ function I(e) {
     disableUser: I = !1
   } = e;
   if (null == t) return null;
-  let h = null != t.guild ? new r.default(t.guild) : null,
-    p = null != t.channel ? (0, i.createChannelRecordFromInvite)(t.channel) : null,
+  let h = null != t.guild ? new i.default(t.guild) : null,
+    p = null != t.channel ? (0, r.createChannelRecordFromInvite)(t.channel) : null,
     T = null != t.target_application ? new l.default(t.target_application) : null,
     m = I || null == t.inviter ? null : new u.default(t.inviter),
     N = null != t.approximate_member_count && t.approximate_member_count > o.LARGE_SERVER_MEMBER_THRESHOLD || null != h && h.hasFeature(c.GuildFeatures.COMMUNITY),

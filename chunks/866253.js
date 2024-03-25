@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("996866");
+var a = n("77078"),
+  l = n("996866");
 
 function i(e) {
   let {
@@ -21,17 +21,17 @@ function i(e) {
     loading: d,
     disabled: c,
     onClick: E
-  } = (0, a.useSpotifyJoinAction)(t, n, i);
-  return (0, s.jsx)(l.Tooltip, {
+  } = (0, l.useSpotifyJoinAction)(t, n, i);
+  return (0, s.jsx)(a.Tooltip, {
     text: u,
     children: e => {
       let {
         onMouseEnter: t,
         onMouseLeave: n
       } = e;
-      return (0, s.jsx)(l.Button, {
+      return (0, s.jsx)(a.Button, {
         ...r,
-        color: c ? l.Button.Colors.PRIMARY : l.Button.Colors.GREEN,
+        color: c ? a.Button.Colors.PRIMARY : a.Button.Colors.GREEN,
         onClick: E,
         onMouseEnter: t,
         onMouseLeave: n,

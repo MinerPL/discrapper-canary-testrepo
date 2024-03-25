@@ -173,25 +173,25 @@ function p(e, t) {
               }
               return ! function(e, t, n, a) {
                 var s;
-                let l = null !== (s = o.default.get(S)) && void 0 !== s ? s : {};
+                let l = null !== (s = o.Storage.get(S)) && void 0 !== s ? s : {};
                 l[e] = {
                   accessToken: t,
                   scope: n,
                   expires: Date.now() + a
-                }, o.default.set(S, l)
+                }, o.Storage.set(S, l)
               }(n, l.access_token, l.scope, l.expires_in), m(s, l.access_token)
             });
           return null != (l = function(e, t) {
-            let n = o.default.get(S);
+            let n = o.Storage.get(S);
             if (null != n && null != n[e]) {
               let a = n[e];
               if (!(a.scope !== t || a.expires <= Date.now())) return a.accessToken;
-              delete n[e], o.default.set(S, n)
+              delete n[e], o.Storage.set(S, n)
             }
           }(n, i)) ? m(s, l).catch(() => (! function(e) {
             var t;
-            let n = null !== (t = o.default.get(S)) && void 0 !== t ? t : {};
-            delete n[e], o.default.set(S, n)
+            let n = null !== (t = o.Storage.get(S)) && void 0 !== t ? t : {};
+            delete n[e], o.Storage.set(S, n)
           }(n), r())) : r()
         }
         if (null == l) throw new h.default({

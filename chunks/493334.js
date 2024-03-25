@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return C
   },
   MENTION_NEXT: function() {
-    return S
+    return I
   },
   MENTION_PREV: function() {
-    return I
+    return S
   }
 });
 var i = n("592864"),
@@ -57,7 +57,7 @@ let c = (e, t) => {
     }
   },
   T = (e, t) => s.default.getMentionCount(t) > 0,
-  S = {
+  I = {
     binds: ["mod+shift+alt+down"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(1, {
@@ -65,7 +65,7 @@ let c = (e, t) => {
       withVoiceChannels: !0
     }), !1)
   },
-  I = {
+  S = {
     binds: ["mod+shift+alt+up"],
     comboKeysBindGlobal: !0,
     action: () => ((0, i.default)(-1, {

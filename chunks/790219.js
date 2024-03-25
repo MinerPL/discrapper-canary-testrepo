@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("702976"), n("222007"), n("70102");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("730290"),
   o = n("446674"),
   u = n("77078"),
@@ -38,7 +38,7 @@ var s = n("37983"),
   U = n("49111"),
   j = n("782340"),
   b = n("683372");
-class G extends l.Component {
+class G extends a.Component {
   get analyticsLocation() {
     let {
       storeListingAnalyticsProperties: e,
@@ -79,21 +79,21 @@ class G extends l.Component {
       let n = await E.grantChannelBranchEntitlement(e.applicationId, t, e.id);
       return n
     }
-    let l = await E.purchaseSKU(e.applicationId, e.id, {
+    let a = await E.purchaseSKU(e.applicationId, e.id, {
       analyticsLoadId: s.loadId
     });
-    return l.entitlements
+    return a.entitlements
   }
   wrapWithDisabledTooltip(e, t) {
     let {
       className: n,
-      tooltipPosition: l
+      tooltipPosition: a
     } = this.props;
     return (0, s.jsxs)("div", {
       className: i(b.disabledButtonWrapper, n),
       children: [e, (0, s.jsx)(u.Tooltip, {
         text: t,
-        position: l,
+        position: a,
         children: e => (0, s.jsx)("div", {
           className: b.disabledButtonOverlay,
           ...e
@@ -104,8 +104,8 @@ class G extends l.Component {
   renderButton(e) {
     let t, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
       {
-        isPurchasing: l,
-        wrapperClassName: a,
+        isPurchasing: a,
+        wrapperClassName: l,
         className: r,
         fullWidth: o,
         size: d,
@@ -124,7 +124,7 @@ class G extends l.Component {
       C = !0 === n.disabled || null != m && !m.available && !(null != N) && !p || A && !I,
       h = n.disabledTooltipText,
       g = {
-        wrapperClassName: a,
+        wrapperClassName: l,
         className: r,
         fullWidth: o,
         size: d,
@@ -132,7 +132,7 @@ class G extends l.Component {
         hover: this.hover,
         innerClassName: i(null != S ? S : null, b.applicationBuyButton),
         disabled: C,
-        submitting: l || !0 === n.submitting,
+        submitting: a || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
       };
     return (t = !0 === n.useShinyButton ? (0, s.jsxs)(v.default, {
@@ -148,13 +148,13 @@ class G extends l.Component {
     let {
       isEntitled: n,
       isUserPremium: s,
-      isInTestMode: l,
-      forceDistribution: a,
+      isInTestMode: a,
+      forceDistribution: l,
       entitlementBranchId: i
     } = this.props;
     if (null != i) return (0, y.canUserInstall)(e) && !n ? this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_INSTALL) : this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY);
     let r = e.getPrice();
-    if (e.premium && !a && (s || l)) return (0, y.canUserInstall)(e) && !n ? this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_INSTALL, t) : this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY, t);
+    if (e.premium && !l && (s || a)) return (0, y.canUserInstall)(e) && !n ? this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_INSTALL, t) : this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY, t);
     if (null != r && 0 === r.amount && (!e.premium || (0, D.hasFlag)(e.flags, U.SKUFlags.PREMIUM_AND_DISTRIBUTION))) return (0, y.canUserInstall)(e) && !n ? this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_INSTALL) : this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_ADD_TO_LIBRARY)
   }
   render() {
@@ -162,8 +162,8 @@ class G extends l.Component {
       isAuthenticated: e,
       sku: t,
       onStoreListing: n,
-      shouldRenderPrice: l,
-      forceDistribution: a,
+      shouldRenderPrice: a,
+      forceDistribution: l,
       asGift: i,
       isInTestMode: r
     } = this.props, o = {
@@ -184,9 +184,9 @@ class G extends l.Component {
     let d = t.getPrice();
     return (t.available || r) && (t.premium || null != d) ? t.restricted ? this.renderButton(j.default.Messages.APPLICATION_STORE_BUY, {
       disabledTooltipText: j.default.Messages.GAME_ACTION_BUTTON_RESTRICTED_IN_REGION
-    }) : t.premium && !a ? this.renderButton(j.default.Messages.APPLICATION_STORE_GET_PREMIUM, o) : e || null != t.externalPurchaseUrl ? t.isPreorder() ? this.renderButton(l ? j.default.Messages.APPLICATION_STORE_PREORDER_FOR_PRICE.format({
+    }) : t.premium && !l ? this.renderButton(j.default.Messages.APPLICATION_STORE_GET_PREMIUM, o) : e || null != t.externalPurchaseUrl ? t.isPreorder() ? this.renderButton(a ? j.default.Messages.APPLICATION_STORE_PREORDER_FOR_PRICE.format({
       price: (0, p.default)(t, !0, !0)
-    }) : j.default.Messages.APPLICATION_STORE_PREORDER) : this.renderButton(l ? j.default.Messages.APPLICATION_STORE_BUY_FOR_PRICE.format({
+    }) : j.default.Messages.APPLICATION_STORE_PREORDER) : this.renderButton(a ? j.default.Messages.APPLICATION_STORE_BUY_FOR_PRICE.format({
       price: (0, p.default)(t, !0, !0)
     }) : j.default.Messages.APPLICATION_STORE_BUY) : this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_LOGIN_TO_BUY) : this.renderButton(j.default.Messages.GAME_ACTION_BUTTON_UNAVAILABLE, {
       disabled: !0
@@ -198,10 +198,10 @@ class G extends l.Component {
         sku: t,
         skuId: n,
         application: s,
-        onClick: l
+        onClick: a
       } = this.props;
       if (null == t) throw Error("Unexpected missing sku");
-      null != l && l(e), null != n ? (0, f.goToSKUStoreListing)(t.id, {
+      null != a && a(e), null != n ? (0, f.goToSKUStoreListing)(t.id, {
         analyticsSource: this.analyticsLocation,
         slug: t.slug
       }) : null != s && (0, f.goToApplicationStoreListing)(s.id, {
@@ -213,8 +213,8 @@ class G extends l.Component {
         isAuthenticated: t,
         applicationId: n,
         sku: s,
-        targetSkuId: l,
-        entitlementBranchId: a,
+        targetSkuId: a,
+        entitlementBranchId: l,
         isUserPremium: i,
         onClick: o,
         isInTestMode: u,
@@ -236,11 +236,11 @@ class G extends l.Component {
         });
         return
       }
-      let m = null != a;
+      let m = null != l;
       if (!s.premium || I || i || u || m) {
         if ((s.requiresPayment || I) && !m) {
-          if (null != l) try {
-            await (0, T.openSKUPaymentModal)(n, l, this.analyticsLocation, {
+          if (null != a) try {
+            await (0, T.openSKUPaymentModal)(n, a, this.analyticsLocation, {
               promotionId: null != E ? E.promotionId : null,
               isGift: f
             })
@@ -274,30 +274,30 @@ G.defaultProps = {
   asGift: !1,
   forceDistribution: !1
 };
-var B = l.forwardRef((e, t) => {
+var B = a.forwardRef((e, t) => {
   let {
     entitlementBranchId: n,
-    applicationId: l,
-    channelId: a,
+    applicationId: a,
+    channelId: l,
     skuId: i,
     ...r
-  } = e, u = (0, o.useStateFromStores)([m.default, O.default], () => O.default.inTestModeForApplication(l) || m.default.inDevModeForApplication(l), [l]), [d, c, E, f, _, T] = (0, o.useStateFromStoresArray)([N.default, C.default, M.default, h.default], () => {
-    let e = N.default.getApplication(l),
+  } = e, u = (0, o.useStateFromStores)([m.default, O.default], () => O.default.inTestModeForApplication(a) || m.default.inDevModeForApplication(a), [a]), [d, c, E, f, _, T] = (0, o.useStateFromStoresArray)([N.default, C.default, M.default, h.default], () => {
+    let e = N.default.getApplication(a),
       t = C.default.getCurrentUser(),
       s = null == i && null != e ? e.destinationSkuId : i,
-      a = null != s ? M.default.get(s) : null,
-      r = null != n ? n : l,
-      o = null != s ? h.default.isEntitledToSku(t, s, l, r) : null,
+      l = null != s ? M.default.get(s) : null,
+      r = null != n ? n : a,
+      o = null != s ? h.default.isEntitledToSku(t, s, a, r) : null,
       u = x.default.canInstallPremiumApplications(t);
-    return [e, t, a, o, u, s]
+    return [e, t, l, o, u, s]
   }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), S = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), v = (0, o.useStateFromStores)([A.default], () => A.default.locale), L = (0, I.useAnalyticsContext)();
-  if (null != n && null == a) throw Error("Unexpected entitlementBranchId without a channelId");
+  if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, s.jsx)(G, {
     ...r,
-    applicationId: l,
+    applicationId: a,
     skuId: i,
     entitlementBranchId: n,
-    channelId: a,
+    channelId: l,
     application: d,
     sku: E,
     isAuthenticated: null != c,

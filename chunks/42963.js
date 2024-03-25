@@ -7,15 +7,15 @@ n.r(t), n.d(t, {
 var s = n("308503"),
   a = n("95410"),
   l = n("605250"),
-  i = n("599110"),
-  r = n("149806"),
+  r = n("599110"),
+  i = n("149806"),
   u = n("49111");
 let o = "UserFlowAnalyticsStore_current",
   d = "UserFlowAnalyticsStore";
 
 function c(e) {
-  if (e === r.FlowType.UNKNOWN) return null;
-  let t = a.default.get("".concat(d, "-").concat(e));
+  if (e === i.FlowType.UNKNOWN) return null;
+  let t = a.Storage.get("".concat(d, "-").concat(e));
   if (null == t) return null;
   let {
     version: n,
@@ -29,7 +29,7 @@ let f = (0, s.default)((e, t) => ({
   currentFlow: null,
   activeFlow: () => {
     var e;
-    let n = null !== (e = t().currentFlow) && void 0 !== e ? e : a.default.get(o);
+    let n = null !== (e = t().currentFlow) && void 0 !== e ? e : a.Storage.get(o);
     if (null == n) return null;
     let {
       [n]: s
@@ -61,16 +61,16 @@ function E(e, t) {
 function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     s = e;
-  if (e === r.FlowType.ANY) {
+  if (e === i.FlowType.ANY) {
     var a;
-    s = null !== (a = f.getState().activeFlow()) && void 0 !== a ? a : r.FlowType.UNKNOWN
+    s = null !== (a = f.getState().activeFlow()) && void 0 !== a ? a : i.FlowType.UNKNOWN
   }
   let {
-    [s]: l, ...i
+    [s]: l, ...r
   } = f.getState().flows, u = null != l ? l : c(s);
   if (null != u && null != u.currentStep) u.currentStep !== t && f.setState({
     flows: {
-      ...i,
+      ...r,
       [s]: {
         ...u,
         lastStep: u.currentStep,
@@ -86,13 +86,13 @@ function _(e, t) {
 f.subscribe(e => {
   var t;
   if (null != e && (! function(e) {
-      if (e.type === r.FlowType.UNKNOWN) return;
+      if (e.type === i.FlowType.UNKNOWN) return;
       let t = "".concat(d, "-").concat(e.type);
-      e.ended ? (a.default.remove(t), a.default.remove(o)) : (a.default.set("".concat(d, "-").concat(e.type), {
+      e.ended ? (a.Storage.remove(t), a.Storage.remove(o)) : (a.Storage.set("".concat(d, "-").concat(e.type), {
         ...e,
         version: 1
-      }), a.default.set(o, e.type))
-    }(e), i.default.track(u.AnalyticEvents.NUO_TRANSITION, {
+      }), a.Storage.set(o, e.type))
+    }(e), r.default.track(u.AnalyticEvents.NUO_TRANSITION, {
       flow_type: e.type,
       from_step: e.lastStep,
       to_step: e.currentStep,

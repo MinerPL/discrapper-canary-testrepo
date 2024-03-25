@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   NitroBrandedAttachmentExperiment: function() {
-    return l
+    return a
   }
 });
 var s = n("862205");
-let l = (0, s.createExperiment)({
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2024-03_nitro_branded_attachment",
   label: "Nitro branded border and pill on large attachment hover",

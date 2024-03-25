@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("446674"),
-  i = n("142833"),
-  r = n("457108"),
+  r = n("142833"),
+  i = n("457108"),
   u = n("393414"),
   o = n("970366"),
   d = n("124969"),
@@ -27,8 +27,8 @@ function h(e) {
     redirectGuildId: N
   } = (0, l.useStateFromStores)([c.default], () => c.default.getState());
   a.useEffect(() => {
-    let e = (0, r.default)(t);
-    i.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
+    let e = (0, i.default)(t);
+    r.default.verify(e), (0, o.trackAppUIViewed)("verify_hub_email")
   }, [t]);
   let g = () => {
     (0, f.default)(N), p(!0)

@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("77078"),
   u = n("851387"),
@@ -25,7 +25,7 @@ var s = n("37983"),
     let e = (0, r.useStateFromStores)([E.default], () => E.default.getGuildId(), []),
       t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),
       n = (0, r.useStateFromStores)([T.default], () => T.default.getHistorySnapshot(), []),
-      [a, S] = l.useState(!1);
+      [l, S] = a.useState(!1);
     if (null == t) return null;
     let A = async () => {
       S(!0);
@@ -65,7 +65,7 @@ var s = n("37983"),
         look: o.Button.Looks.OUTLINED,
         color: o.Button.Colors.WHITE,
         size: o.Button.Sizes.NONE,
-        submitting: a,
+        submitting: l,
         onClick: A,
         children: m.default.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
           guild: t.name

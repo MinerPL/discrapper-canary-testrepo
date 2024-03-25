@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("574073"),
-  a = n("304198"),
+var a = n("574073"),
+  l = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -18,11 +18,11 @@ function r(e) {
     joinable: u,
     usernameHook: d,
     onClickJoinCall: c
-  } = e, E = (0, l.default)(t), f = E.nick, _ = d(E), T = function(e) {
+  } = e, E = (0, a.default)(t), f = E.nick, _ = d(E), T = function(e) {
     let t = null != e.call ? e.call.duration : null;
     return null != t ? t.humanize() : null
   }(t);
-  return o ? (0, s.jsx)(a.default, {
+  return o ? (0, s.jsx)(l.default, {
     icon: n("349745"),
     timestamp: t.timestamp,
     compact: r,
@@ -34,7 +34,7 @@ function r(e) {
       username: f,
       usernameHook: _
     })
-  }) : (0, s.jsxs)(a.default, {
+  }) : (0, s.jsxs)(l.default, {
     icon: n("309541"),
     timestamp: t.timestamp,
     compact: r,
@@ -45,7 +45,7 @@ function r(e) {
     }) : i.default.Messages.SYSTEM_MESSAGE_CALL_STARTED_HOOK.format({
       username: f,
       usernameHook: _
-    }), u ? (0, s.jsx)(a.default.Action, {
+    }), u ? (0, s.jsx)(l.default.Action, {
       onClick: c,
       children: i.default.Messages.SYSTEM_MESSAGE_JOIN_CALL
     }) : null]

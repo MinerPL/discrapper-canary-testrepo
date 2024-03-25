@@ -221,14 +221,14 @@ function er(e) {
     analyticsLocations: v
   } = (0, p.default)(m.default.STAGE_CHANNEL_CALL), x = (0, h.useAppContext)(), N = (0, u.useStateFromStores)([E.default], () => E.default.getChatOpen(t.id), [t.id]), A = (0, u.useStateFromStores)([y.default], () => y.default.getGuild(t.guild_id), [t.guild_id]);
   l.useEffect(() => {
-    null == o.default.get(ee) && ((0, d.openModalLazy)(async () => {
+    null == o.Storage.get(ee) && ((0, d.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("108838").then(n.bind(n, "108838"));
       return t => (0, a.jsx)(e, {
         ...t
       })
-    }), o.default.set(ee, Date.now()))
+    }), o.Storage.set(ee, Date.now()))
   }, []);
   let {
     width: M = 0,

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("446674"),
-  i = n("77078"),
-  r = n("569808"),
+  r = n("77078"),
+  i = n("569808"),
   u = n("913645"),
   o = n("473759"),
   d = n("970366"),
@@ -36,11 +36,11 @@ function m(e, t, n) {
 function N(e) {
   let {
     code: t
-  } = e, n = (0, l.useStateFromStores)([r.default], () => r.default.getGuildTemplate(t));
+  } = e, n = (0, l.useStateFromStores)([i.default], () => i.default.getGuildTemplate(t));
   return (a.useEffect(() => {
     (0, d.trackAppUIViewed)("guild_template_mobile")
   }, []), null == n || n.state === h.GuildTemplateStates.RESOLVING) ? (0, s.jsx)(f.default, {
-    children: (0, s.jsx)(i.Spinner, {})
+    children: (0, s.jsx)(r.Spinner, {})
   }) : n.state === h.GuildTemplateStates.RESOLVED ? (0, s.jsxs)(f.default, {
     children: [(0, s.jsx)(o.default, {
       guildTemplate: n,

@@ -75,7 +75,7 @@ class U extends a.default {
 
 function M() {
   var e;
-  d = null !== (e = r.default.get(L)) && void 0 !== e ? e : Date.now(), m(!1)
+  d = null !== (e = r.Storage.get(L)) && void 0 !== e ? e : Date.now(), m(!1)
 }
 
 function h() {
@@ -88,7 +88,7 @@ async function P() {
 }
 
 function m(e) {
-  e && (d = Date.now(), r.default.set(L, d)), null != D && clearTimeout(D);
+  e && (d = Date.now(), r.Storage.set(L, d)), null != D && clearTimeout(D);
   let _ = Date.now() - d;
   D = setTimeout(P, Math.max(C, c - _))
 }

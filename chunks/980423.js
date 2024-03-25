@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   LiveIndicatorLooks: function() {
-    return l
+    return a
   },
   LiveIndicatorShapes: function() {
     return f
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var s, l, a = n("37983");
+var s, a, l = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
@@ -18,7 +18,7 @@ var i = n("414456"),
   u = n("956089"),
   d = n("782340"),
   c = n("895925");
-(s = l || (l = {})).RED = "RED", s.GRAY = "GRAY";
+(s = a || (a = {})).RED = "RED", s.GRAY = "GRAY";
 let E = {
     LARGE: c.liveLarge,
     SMALL: c.liveSmall
@@ -35,16 +35,16 @@ function _(e) {
     className: t,
     style: n,
     shape: s = u.BadgeShapes.ROUND,
-    look: l = "RED",
+    look: a = "RED",
     size: i = E.LARGE
   } = e;
-  return "RED" === l ? (0, a.jsx)(u.TextBadge, {
+  return "RED" === a ? (0, l.jsx)(u.TextBadge, {
     text: d.default.Messages.LIVE,
     className: r(t, c.live, i),
     color: o.default.unsafe_rawColors.RED_400.css,
     shape: f[s],
     style: n
-  }) : (0, a.jsx)(u.TextBadge, {
+  }) : (0, l.jsx)(u.TextBadge, {
     text: d.default.Messages.LIVE,
     className: r(t, c.live, i, c.grey),
     disableColor: !0,
@@ -52,5 +52,5 @@ function _(e) {
     style: n
   })
 }
-_.Looks = l, _.Sizes = E;
+_.Looks = a, _.Sizes = E;
 var T = _

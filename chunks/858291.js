@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("65597"),
-  a = n("801765"),
+var a = n("65597"),
+  l = n("801765"),
   i = n("228035"),
   r = n("465869"),
   o = n("305961"),
@@ -35,10 +35,10 @@ function p(e) {
     thumbnailHeight: M,
     descriptionTextVariant: O = "text-sm/normal",
     showOpaqueBackground: R = !1
-  } = e, v = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, l.useStateFromStores)([o.default], () => {
+  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, a.useStateFromStores)([o.default], () => {
     var e;
     return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID)
-  }), P = (0, a.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(v), {
+  }), P = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(v), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
   if (null == v || y) return null;

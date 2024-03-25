@@ -21,8 +21,8 @@ var i = n("884691"),
   A = n("870691"),
   C = n("42203"),
   T = n("816092"),
-  S = n("546463"),
-  I = n("957255"),
+  I = n("546463"),
+  S = n("957255"),
   f = n("660478"),
   N = n("18494"),
   O = n("282109"),
@@ -30,7 +30,7 @@ var i = n("884691"),
   L = n("319839"),
   p = n("695838"),
   D = n("843455");
-let h = [a.default, s.default, r.default, E.default, c.default, A.default, C.default, S.default, I.default, f.default, N.default, O.default];
+let h = [a.default, s.default, r.default, E.default, c.default, A.default, C.default, I.default, S.default, f.default, N.default, O.default];
 
 function g() {
   let [e, t] = i.useState(() => b());
@@ -66,12 +66,12 @@ function b() {
     } = u;
     return l(n).map(n => {
       var d;
-      if (!n.isPrivate() && !I.default.can(D.Permissions.VIEW_CHANNEL, n)) return null;
+      if (!n.isPrivate() && !S.default.can(D.Permissions.VIEW_CHANNEL, n)) return null;
       let r = null != i && (i.id === n.id || o === n.id),
         c = null != i && i.isThread() && i.parent_id === n.id,
         A = null !== (d = r || c || !a ? E.default.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : E.default.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) && void 0 !== d ? d : {},
         C = (0, L.computeThreadIds)(n, A, i, o, t),
-        S = T.default.isCollapsed(n.id),
+        I = T.default.isCollapsed(n.id),
         N = O.default.isChannelMuted(n.guild_id, n.id),
         R = {
           id: n.id,
@@ -80,10 +80,10 @@ function b() {
           position: e[n.id].order,
           threadIds: C,
           threadCount: l.size(C),
-          isCollapsed: S,
+          isCollapsed: I,
           isMuted: N,
           isFirstVoiceChannel: !1,
-          subtitle: (0, L.computeSubtitle)(n, S, !1)
+          subtitle: (0, L.computeSubtitle)(n, I, !1)
         };
       return r || c || f.default.getMentionCount(n.id) > 0 ? R : t && N || a && (N || s || (0, _.isVoiceChannel)(n.type) || (0, _.isGuildReadableType)(n.type) && !1 === f.default.hasUnread(n.id)) ? null : R
     }).filter(R.isNotNullish).sortBy(e => {
@@ -93,7 +93,7 @@ function b() {
       return t.isGuildVocal() ? t.position + 1e4 : t.position
     }).value()
   }
-  let S = null,
+  let I = null,
     h = {
       isMuted: !1,
       isCollapsed: !1,
@@ -103,7 +103,7 @@ function b() {
       getShownChannelAndThreadIds: () => a.map(e => e.id),
       isEmpty: () => 0 === a.length,
       get channelList() {
-        return null == S && (S = c(a, this)), S
+        return null == I && (I = c(a, this)), I
       }
     },
     g = l(e).values().filter(e => e.type === u.FavoriteChannelType.CATEGORY).sortBy(e => e.order).map(e => {

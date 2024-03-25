@@ -5,10 +5,10 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("446674"),
-  l = n("913144"),
-  a = n("718517"),
+  a = n("913144"),
+  l = n("718517"),
   i = n("299039");
-let r = 14 * a.default.Millis.DAY,
+let r = 14 * l.default.Millis.DAY,
   o = Object.freeze([]),
   u = {},
   d = {};
@@ -30,7 +30,7 @@ class E extends s.default.Store {
   }
 }
 E.displayName = "FalsePositiveStore";
-var f = new E(l.default, {
+var f = new E(a.default, {
   LOGOUT: function() {
     (function() {
       u = {}, d = {}
@@ -46,14 +46,14 @@ var f = new E(l.default, {
     let {
       messageId: n,
       channelId: s,
-      attachments: l
-    } = e, a = {
+      attachments: a
+    } = e, l = {
       messageId: n,
       channelId: s,
-      attachments: l,
+      attachments: a,
       reportSubmit: !1
     }, i = null !== (t = d[s]) && void 0 !== t ? t : o;
-    d[s] = [...i, a], u[n] = a
+    d[s] = [...i, l], u[n] = l
   },
   MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function(e) {
     let {

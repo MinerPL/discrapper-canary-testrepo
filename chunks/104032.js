@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("866227"),
-  l = n.n(s),
-  a = n("446674"),
+  a = n.n(s),
+  l = n("446674"),
   i = n("913144"),
   r = n("388290"),
   o = n("697218"),
   u = n("719923");
 let d = !1;
-class c extends a.default.Store {
+class c extends l.default.Store {
   shouldShowReactivateNotice() {
     let e = o.default.getCurrentUser();
     return !(0, u.isPremium)(e) && d
@@ -29,8 +29,8 @@ var E = new c(i.default, {
       let e = r.default.createFromServer(t),
         s = (0, u.getPremiumPlanItem)(e);
       if (null == s || (null === (n = e.metadata) || void 0 === n ? void 0 : n.ended_at) == null) return;
-      let a = l(e.metadata.ended_at);
-      l().isBetween(a.clone().add(4, "days"), a.clone().add(11, "days")) && (d = !0)
+      let l = a(e.metadata.ended_at);
+      a().isBetween(l.clone().add(4, "days"), l.clone().add(11, "days")) && (d = !0)
     }
   }
 })

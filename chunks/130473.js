@@ -16,7 +16,7 @@ let s = "hideSuppressWarning",
   N = !1;
 class O extends n.default.Store {
   initialize() {
-    N = r.default.get(s) || N
+    N = r.Storage.get(s) || N
   }
   isAFKChannel() {
     let e = i.default.getChannel(o);
@@ -47,6 +47,6 @@ var A = new O(a.default, {
     let {
       forever: _
     } = e;
-    S = !0, _ && (N = !0, r.default.set(s, N))
+    S = !0, _ && (N = !0, r.Storage.set(s, N))
   }
 })

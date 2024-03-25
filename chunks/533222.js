@@ -26,7 +26,7 @@ function E(e, t) {
 }
 class h extends r.default.Store {
   initialize() {
-    let e = a.default.get(u);
+    let e = a.Storage.get(u);
     null != e && s.forEach(e, (e, t) => {
       e.forEach(e => {
         "audioinput" === e.type && e.hardwareMute && (e.hardwareMute = !1)
@@ -75,6 +75,6 @@ var g = new h(o.default, {
       applicationId: t,
       devices: n
     } = e;
-    E(t, n), a.default.set(u, d), _++
+    E(t, n), a.Storage.set(u, d), _++
   }
 })

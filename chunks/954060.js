@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("574073"),
-  a = n("985622"),
+var a = n("574073"),
+  l = n("985622"),
   i = n("304198"),
   r = n("980423"),
   o = n("782340");
@@ -21,7 +21,7 @@ function u(e) {
     onJoinStream: c,
     usernameHook: E,
     compact: f
-  } = e, _ = (0, l.default)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, I = E(_), m = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
+  } = e, _ = (0, a.default)(n), T = null === (t = n.call) || void 0 === t ? void 0 : t.duration, I = E(_), m = o.default.Messages.SYSTEM_MESSAGE_GUILD_STREAM_ACTIVE.format({
     username: _.nick,
     activityName: null != d ? d.name : "unknown",
     onJoinStream: c,
@@ -33,7 +33,7 @@ function u(e) {
     channelName: u.name,
     usernameHook: I
   })), (0, s.jsx)(i.default, {
-    iconNode: null != T ? (0, s.jsx)(a.default, {
+    iconNode: null != T ? (0, s.jsx)(l.default, {
       width: 20,
       height: 20
     }) : (0, s.jsx)(r.default, {

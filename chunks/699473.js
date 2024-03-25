@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("702976");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("974667"),
   o = n("446674"),
   u = n("405645"),
@@ -31,12 +31,12 @@ var s = n("37983"),
   R = n("554372"),
   v = n("49111"),
   L = n("5762"),
-  P = l.memo(function(e) {
+  P = a.memo(function(e) {
     var t;
     let {
       message: n,
-      compact: l = !1,
-      className: a,
+      compact: a = !1,
+      className: l,
       onContextMenu: P,
       onClick: D,
       disableInteraction: x = !1,
@@ -69,14 +69,14 @@ var s = n("37983"),
     let $ = (0, p.getMessageAriaLabelledBy)(n),
       ee = (0, p.getMessageAriaDescribedBy)(n);
     return (0, s.jsx)(_.default, {
-      compact: l,
-      className: i(a, {
+      compact: a,
+      className: i(l, {
         [L.ephemeral]: (0, T.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
         [L.disableInteraction]: x
       }),
       disableInteraction: x,
-      childrenRepliedMessage: (0, R.default)(n, U, W, K, l),
-      childrenExecutedCommand: (0, O.default)(n, U, l),
+      childrenRepliedMessage: (0, R.default)(n, U, W, K, a),
+      childrenExecutedCommand: (0, O.default)(n, U, a),
       childrenHeader: (0, g.default)({
         ...e,
         guildId: U.guild_id,

@@ -50,7 +50,7 @@ function g(e) {
     T(t)
   }
 }! function() {
-  let e = s.default.get(f);
+  let e = s.Storage.get(f);
   if (null != e) I = +e.x, m = +e.y;
   else {
     let e = n("471671").default.windowSize();
@@ -99,7 +99,7 @@ var R = new N(l.default, {
       x: t,
       y: n
     } = e;
-    return I = t, m = n, s.default.set(f, {
+    return I = t, m = n, s.Storage.set(f, {
       x: I,
       y: m
     }), !1

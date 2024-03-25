@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("759843"),
   o = n("171210"),
   u = n("446674"),
@@ -32,14 +32,14 @@ function O(e) {
   var t;
   let {
     guildId: n
-  } = e, a = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(n)), {
+  } = e, l = (0, u.useStateFromStores)([T.default], () => T.default.getGuild(n)), {
     loading: O,
     subscriptionsSettings: R
   } = (0, S.useMonetizationSettings)(n), {
     listingsLoaded: v
   } = (0, f.useFetchGuildProductListingsForGuild)(n), L = (0, f.useGuildProductsForGuild)(n, {
     publishedOnly: !0
-  }), P = l.useCallback(async () => {
+  }), P = a.useCallback(async () => {
     p.default.track(h.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
       ...(0, c.collectGuildAnalyticsMetadata)(n)
     }), await (0, _.default)(h.Routes.SERVER_SHOP(n))
@@ -48,13 +48,13 @@ function O(e) {
     type: r.ImpressionTypes.VIEW,
     name: r.ImpressionNames.GUILD_SHOP_EMBED
   }, {
-    disableTrack: null == a
+    disableTrack: null == l
   });
   let D = L.length > 0 ? new Date(Math.min(...L.map(e => Date.parse(e.published_at)))) : void 0;
   return O || !v ? (0, s.jsx)("div", {
     className: i(M.guildShopEmbed, M.spinnerContainer),
     children: (0, s.jsx)(d.Spinner, {})
-  }) : null == a || null == R ? null : (0, s.jsxs)("div", {
+  }) : null == l || null == R ? null : (0, s.jsxs)("div", {
     className: M.guildShopEmbed,
     children: [(0, s.jsx)(A.HeroImage, {
       coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
@@ -78,7 +78,7 @@ function O(e) {
       variant: "heading-md/semibold",
       color: "text-normal",
       children: g.default.Messages.GUILD_STORE_HERO_TITLE.format({
-        guildName: a.name
+        guildName: l.name
       })
     }), (0, s.jsx)(m.default, {
       size: 4
@@ -94,7 +94,7 @@ function O(e) {
     }), (0, s.jsxs)("div", {
       className: M.guildShopEmbedFooter,
       children: [(0, s.jsx)(I.default, {
-        guild: a
+        guild: l
       }), (0, s.jsxs)("ul", {
         className: M.guildShopSummary,
         children: [(0, s.jsx)("li", {

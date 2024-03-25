@@ -16,10 +16,10 @@ n.r(t), n.d(t, {
     return f
   },
   useThemeContext: function() {
-    return E
+    return S
   },
   UseThemeContext: function() {
-    return S
+    return E
   }
 }), n("702976"), n("70102");
 var i, r, o = n("37983"),
@@ -58,7 +58,7 @@ function d(e) {
     flags: d = 0,
     contrast: _ = 1,
     saturation: f = 1
-  } = e, E = s.useMemo(() => u({
+  } = e, S = s.useMemo(() => u({
     theme: n,
     primaryColor: i,
     secondaryColor: r,
@@ -68,7 +68,7 @@ function d(e) {
     saturation: f
   }), [n, i, r, a, d, _, f]);
   return (0, o.jsx)(c.Provider, {
-    value: E,
+    value: S,
     children: t
   })
 }
@@ -83,7 +83,7 @@ function _(e) {
     flags: a,
     contrast: d,
     saturation: _
-  } = e, f = s.useContext(c), E = s.useMemo(() => u({
+  } = e, f = s.useContext(c), S = s.useMemo(() => u({
     theme: null != n ? n : f.theme,
     primaryColor: null != i ? i : f.primaryColor,
     secondaryColor: null != r ? r : f.secondaryColor,
@@ -93,13 +93,13 @@ function _(e) {
     saturation: null != _ ? _ : f.saturation
   }), [n, f.theme, f.primaryColor, f.secondaryColor, f.gradient, f.flags, f.contrast, f.saturation, i, r, l, a, d, _]);
   return (0, o.jsx)(c.Provider, {
-    value: E,
+    value: S,
     children: t
   })
 }
 
 function f(e) {
-  let t = E(),
+  let t = S(),
     n = s.useMemo(() => u({
       ...t,
       primaryColor: null,
@@ -111,16 +111,16 @@ function f(e) {
   })
 }
 
-function E() {
+function S() {
   let e = s.useContext(c);
   if (null == e) throw Error("useThemeContext must be used within a ThemeContext.Provider");
   return e
 }
 
-function S(e) {
+function E(e) {
   let {
     children: t
-  } = e, n = E();
+  } = e, n = S();
   return (0, o.jsx)(o.Fragment, {
     children: t(n)
   })

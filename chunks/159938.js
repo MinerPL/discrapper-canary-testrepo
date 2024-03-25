@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("884691"),
-  l = n("65597"),
-  a = n("203288"),
+  a = n("65597"),
+  l = n("203288"),
   i = n("361572"),
   r = n("271938"),
   o = n("42203"),
@@ -23,11 +23,11 @@ var s = n("884691"),
 function N(e, t) {
   let n = (0, _.useEligibleForGuildMediaChannelPostPreviewEmbed)(),
     N = (0, I.getMediaPostEmbedChannelPath)(e),
-    p = (0, l.useStateFromStores)([u.default, r.default], () => {
+    p = (0, a.useStateFromStores)([u.default, r.default], () => {
       let e = r.default.getId();
       return u.default.isMember(null == N ? void 0 : N.guildId, e)
     }, [N]),
-    S = (0, l.useStateFromStores)([a.default], () => null != N && (null == N ? void 0 : N.channelId) != null && a.default.isChannelGated(N.guildId, N.channelId), [N]),
+    S = (0, a.useStateFromStores)([l.default], () => null != N && (null == N ? void 0 : N.channelId) != null && l.default.isChannelGated(N.guildId, N.channelId), [N]),
     A = t.hasFlag(m.MessageFlags.IS_CROSSPOST),
     {
       rawMediaPostEmbedData: C,
@@ -36,20 +36,20 @@ function N(e, t) {
       user: M,
       selectedGuildId: O,
       canAccess: R
-    } = (0, l.useStateFromStoresObject)([T.default, d.default, o.default, E.default, c.default], () => {
+    } = (0, a.useStateFromStoresObject)([T.default, d.default, o.default, E.default, c.default], () => {
       var e;
       let t = null === (e = T.default.getMediaPostEmbed(null == N ? void 0 : N.threadId)) || void 0 === e ? void 0 : e.media,
         n = d.default.getGuild(null == N ? void 0 : N.guildId),
         s = o.default.getChannel(null == N ? void 0 : N.channelId),
-        l = E.default.getUser(null == t ? void 0 : t.author_id),
-        a = c.default.getGuildId(),
+        a = E.default.getUser(null == t ? void 0 : t.author_id),
+        l = c.default.getGuildId(),
         r = null != s && (0, i.canViewChannel)(s);
       return {
         rawMediaPostEmbedData: t,
         guild: n,
         parentChannel: s,
-        user: l,
-        selectedGuildId: a,
+        user: a,
+        selectedGuildId: l,
         canAccess: r
       }
     }, [N]),

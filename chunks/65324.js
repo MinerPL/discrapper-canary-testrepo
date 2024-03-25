@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("446674"),
-  i = n("206230"),
-  r = n("491605"),
+  r = n("206230"),
+  i = n("491605"),
   u = n("642716"),
   o = n("646718");
 
@@ -19,7 +19,7 @@ function d(e) {
     shouldAnimate: d = !0,
     defaultAnimationState: c,
     idleAnimationState: f
-  } = e, E = (0, l.useStateFromStores)([i.default], () => i.default.useReducedMotion), [_, I] = a.useState(c), h = a.useRef((0, u.getGiftAnimationData)(t, _)), [p, T] = a.useState(null == f), [m, N] = a.useState(!1), [g, A] = a.useState(-1), S = () => {
+  } = e, E = (0, l.useStateFromStores)([r.default], () => r.default.useReducedMotion), [_, I] = a.useState(c), h = a.useRef((0, u.getGiftAnimationData)(t, _)), [p, T] = a.useState(null == f), [m, N] = a.useState(!1), [g, A] = a.useState(-1), S = () => {
     h.current = (0, u.getGiftAnimationData)(t, _), A(e => e + 1)
   }, C = () => {
     T(!1), N(!0), A(-1), I(c)
@@ -38,7 +38,7 @@ function d(e) {
     m && (T(null == f), N(!1), S())
   }, [m]);
   if (!o.PremiumGiftStyles.hasOwnProperty(t)) throw Error("Unexpected giftStyle ".concat(t));
-  return (0, s.jsx)(r.default, {
+  return (0, s.jsx)(i.default, {
     importData: h.current,
     shouldAnimate: !E && d,
     className: n,

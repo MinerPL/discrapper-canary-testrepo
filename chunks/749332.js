@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("446674"),
   o = n("862337"),
   u = n("77078"),
@@ -29,8 +29,8 @@ let g = e => {
   let {
     quest: t,
     location: n
-  } = e, [a, i] = l.useState(!1), r = l.useRef(new o.Timeout);
-  l.useEffect(() => {
+  } = e, [l, i] = a.useState(!1), r = a.useRef(new o.Timeout);
+  a.useEffect(() => {
     let e = r.current;
     return function() {
       e.stop()
@@ -40,8 +40,8 @@ let g = e => {
     (0, I.trackQuestContentClicked)(t.id, n, I.QuestContentCTA.COPY_QUEST_URL), (0, T.copy)((0, p.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
   };
   return (0, s.jsx)(u.Tooltip, {
-    forceOpen: a,
-    shouldShow: a,
+    forceOpen: l,
+    shouldShow: l,
     color: u.Tooltip.Colors.GREEN,
     text: C.default.Messages.COPY_SUCCESS_1,
     children: () => (0, s.jsx)(u.Button, {
@@ -55,11 +55,11 @@ let g = e => {
 var M = e => {
   var t;
   let {
-    isFocused: a,
+    isFocused: l,
     quest: o,
     location: T,
     size: M
-  } = e, O = (0, r.useStateFromStores)([E.default], () => E.default.getState().theme), R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), v = l.useMemo(() => o.config.videoAssets.includes(T), [o, T]), L = l.useRef(null), P = (0, m.useIsQuestExpired)(o), D = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
+  } = e, O = (0, r.useStateFromStores)([E.default], () => E.default.getState().theme), R = (0, r.useStateFromStores)([c.default], () => c.default.useReducedMotion), v = a.useMemo(() => o.config.videoAssets.includes(T), [o, T]), L = a.useRef(null), P = (0, m.useIsQuestExpired)(o), D = (null === (t = o.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, x = (0, m.useQuestFormattedDate)(o.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
@@ -68,9 +68,9 @@ var M = e => {
     month: "long",
     day: "numeric"
   });
-  return l.useEffect(() => {
-    null != L.current && (a ? L.current.play() : (L.current.pause(), L.current.currentTime = 0))
-  }, [a]), (0, s.jsxs)("div", {
+  return a.useEffect(() => {
+    null != L.current && (l ? L.current.play() : (L.current.pause(), L.current.currentTime = 0))
+  }, [l]), (0, s.jsxs)("div", {
     className: i(h.outerContainer, {
       [h.outerContainerGiftInventory]: T === N.QuestContent.QUEST_INVENTORY_CARD,
       [h.outerContainerEmbed]: T === N.QuestContent.QUESTS_EMBED

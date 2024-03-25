@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("65597"),
-  a = n("77078"),
+var a = n("65597"),
+  l = n("77078"),
   i = n("290226"),
   r = n("695681"),
   o = n("447435"),
@@ -22,7 +22,7 @@ function f(e) {
     messageId: n,
     transitionState: f,
     onClose: _
-  } = e, T = (0, l.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), I = T.attachments.map(e => e.id), m = T.attachments.map(e => e.filename), {
+  } = e, T = (0, a.useStateFromStores)([u.default], () => u.default.getFpMessageInfo(n)), I = T.attachments.map(e => e.id), m = T.attachments.map(e => e.filename), {
     reportFalsePositive: N,
     isReportFalsePositiveLoading: p
   } = (0, d.useExplicitMediaActions)({
@@ -30,7 +30,7 @@ function f(e) {
       (0, c.handleSuccess)(_), i.default.disableFalsePositiveButton(t, n)
     },
     onError: () => {
-      (0, a.showToast)((0, a.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, a.ToastType.FAILURE))
+      (0, l.showToast)((0, l.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, l.ToastType.FAILURE))
     },
     report: () => {
       (0, r.reportFailedSendFalsePositive)(t, n, I, m)

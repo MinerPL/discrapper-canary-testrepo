@@ -34,10 +34,10 @@ let _ = [{
     if ((a = l || (l = {})).Mentions = "Recent Mentions", a.Unreads = "Inbox", null != e.inbox) return !1;
     let r = !1,
       u = s.InboxSettings.create();
-    e.inbox = u, i.default.get("seenInboxTutorial", !1) && (u.viewedTutorial = !0, r = !0);
-    let c = i.default.get("recentsButtonTab2");
+    e.inbox = u, i.Storage.get("seenInboxTutorial", !1) && (u.viewedTutorial = !0, r = !0);
+    let c = i.Storage.get("recentsButtonTab2");
     null != c && (u.currentTab = "Recent Mentions" === c ? s.InboxTab.MENTIONS : s.InboxTab.UNREADS, r = !0);
-    let f = null !== (t = i.default.get("unread-messages-collapsed-channels")) && void 0 !== t ? t : {};
+    let f = null !== (t = i.Storage.get("unread-messages-collapsed-channels")) && void 0 !== t ? t : {};
     for (let t in f) {
       if (!f[t]) continue;
       let a = o.default.getChannel(t);
@@ -48,7 +48,7 @@ let _ = [{
     return r
   },
   cleanup() {
-    i.default.remove("seenInboxTutorial"), i.default.remove("recentsButtonTab2"), i.default.remove("unread-messages-collapsed-channels")
+    i.Storage.remove("seenInboxTutorial"), i.Storage.remove("recentsButtonTab2"), i.Storage.remove("unread-messages-collapsed-channels")
   }
 }, {
   version: 3,
@@ -56,7 +56,7 @@ let _ = [{
     let {
       state: t
     } = a.default.PersistedStore.migrateAndReadStoreState("EmojiStore", [() => ({
-      diversitySurrogate: i.default.get("EmojiDiversitySurrogate") || ""
+      diversitySurrogate: i.Storage.get("EmojiDiversitySurrogate") || ""
     })]);
     if (null == t) return !1;
     let n = !1;
@@ -67,11 +67,11 @@ let _ = [{
   version: 4,
   run(e) {
     let t = !1,
-      n = !0 === i.default.get("HAS_SEEN_HUB_UPSELL") || r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
+      n = !0 === i.Storage.get("HAS_SEEN_HUB_UPSELL") || r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.HUB_SECOND_EMAIL_CONNECTION_UPSELL);
     return n && (t = E(e, s.DismissibleContent.HUB_WAITLIST_UPSELL)), t
   },
   cleanup() {
-    i.default.remove("HAS_SEEN_HUB_UPSELL")
+    i.Storage.remove("HAS_SEEN_HUB_UPSELL")
   }
 }, {
   version: 5,
@@ -79,7 +79,7 @@ let _ = [{
     var t, n, a, r, o, u, d;
     let c = !1;
     e.textAndImages = null !== (t = e.textAndImages) && void 0 !== t ? t : s.TextAndImagesSettings.create(), e.notifications = null !== (n = e.notifications) && void 0 !== n ? n : s.NotificationSettings.create(), e.privacy = null !== (a = e.privacy) && void 0 !== a ? a : s.PrivacySettings.create(), e.voiceAndVideo = null !== (r = e.voiceAndVideo) && void 0 !== r ? r : s.VoiceAndVideoSettings.create(), e.gameLibrary = null !== (o = e.gameLibrary) && void 0 !== o ? o : s.GameLibrarySettings.create(), e.debug = null !== (u = e.debug) && void 0 !== u ? u : s.DebugSettings.create();
-    let f = null !== (d = i.default.get("UserSettingsStore")) && void 0 !== d ? d : {};
+    let f = null !== (d = i.Storage.get("UserSettingsStore")) && void 0 !== d ? d : {};
     return "boolean" == typeof f.useRichChatTextBox && (e.textAndImages.useRichChatInput = l.BoolValue.create({
       value: f.useRichChatTextBox
     }), c = !0), "string" == typeof f.renderSpoilers && (e.textAndImages.renderSpoilers = l.StringValue.create({
@@ -119,18 +119,18 @@ let _ = [{
   cleanup() {}
 }, {
   version: 9,
-  run: e => (r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && i.default.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), h(e, r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
+  run: e => (r.HotspotStore.hasHiddenHotspot(r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP) && i.Storage.set(f.MULTIACCOUNT_TOOLTIP_SEEN_KEY, "true"), h(e, r.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, s.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP)),
   cleanup() {}
 }, {
   version: 10,
   run(e) {
     var t;
     let n = h(e, r.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, s.DismissibleContent.CHANNEL_NOTICE_HUBLINK),
-      a = null !== (t = i.default.get("channelNotices")) && void 0 !== t ? t : {};
+      a = null !== (t = i.Storage.get("channelNotices")) && void 0 !== t ? t : {};
     return !1 === a[c.ChannelNoticeTypes.INVITE] && E(e, s.DismissibleContent.CHANNEL_NOTICE_INVITE) && (n = !0), !1 === a[c.ChannelNoticeTypes.QUICKSWITCHER] && E(e, s.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER) && (n = !0), !1 === a[c.ChannelNoticeTypes.GUILD_BOOSTING] && E(e, s.DismissibleContent.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION) && (n = !0), n
   },
   cleanup() {
-    i.default.remove("channelNotices")
+    i.Storage.remove("channelNotices")
   }
 }, {
   version: 11,
@@ -143,19 +143,19 @@ let _ = [{
   version: 12,
   run(e) {
     let t = !1;
-    return i.default.get("hideNag") && E(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), i.default.get("hideConnectSpotify") && E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), i.default.get("hideConnectPlayStation") && E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), i.default.get("hideMFASMSNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t
+    return i.Storage.get("hideNag") && E(e, s.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD) && (t = !0), i.Storage.get("hideConnectSpotify") && E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0), i.Storage.get("hideConnectPlayStation") && E(e, s.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0), i.Storage.get("hideMFASMSNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP) && (t = !0), t
   },
   cleanup() {
-    i.default.remove("hideNag"), i.default.remove("hideConnectSpotify"), i.default.remove("hideConnectPlayStation"), i.default.remove("hideMFASMSNotice")
+    i.Storage.remove("hideNag"), i.Storage.remove("hideConnectSpotify"), i.Storage.remove("hideConnectPlayStation"), i.Storage.remove("hideMFASMSNotice")
   }
 }, {
   version: 13,
   run(e) {
     let t = !1;
-    return i.default.get("hidePremiumPromo") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), i.default.get("hidePremiumTier2TrialEnding") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), i.default.get("hidePremiumReactivateNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), h(e, r.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
+    return i.Storage.get("hidePremiumPromo") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO) && (t = !0), i.Storage.get("hidePremiumTier2TrialEnding") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) && (t = !0), i.Storage.get("hidePremiumReactivateNotice") && E(e, s.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE) && (t = !0), h(e, r.HotspotLocations.INVITE_SPLASH_GUILD_HEADER_TOOLTIP, s.DismissibleContent.GUILD_HEADER_INVITE_SPLASH) && (t = !0), t
   },
   cleanup() {
-    i.default.remove("hidePremiumPromo"), i.default.remove("hidePremiumTier2TrialEnding"), i.default.remove("hidePremiumReactivateNotice")
+    i.Storage.remove("hidePremiumPromo"), i.Storage.remove("hidePremiumTier2TrialEnding"), i.Storage.remove("hidePremiumReactivateNotice")
   }
 }, {
   version: 14,
@@ -168,7 +168,7 @@ let _ = [{
 }, {
   version: 16,
   run(e) {
-    let t = i.default.get("PromotionsPersistedStore");
+    let t = i.Storage.get("PromotionsPersistedStore");
     if (null == t) return !1;
     let n = t._state.lastDismissedOutboundPromotionStartDate;
     return null != n && (null == e.userContent && (e.userContent = s.UserContentSettings.create()), null == e.userContent.lastDismissedOutboundPromotionStartDate) && (e.userContent.lastDismissedOutboundPromotionStartDate = l.StringValue.create({
@@ -189,7 +189,7 @@ let _ = [{
     }), !0)
   },
   cleanup() {
-    i.default.remove("ExpressionSuggestionsPersistedStore")
+    i.Storage.remove("ExpressionSuggestionsPersistedStore")
   }
 }, {
   version: 18,
@@ -203,11 +203,11 @@ let _ = [{
   run(e) {
     var t;
     let n = !1,
-      a = null !== (t = i.default.get("forumHelperCardStorageKey")) && void 0 !== t && t;
+      a = null !== (t = i.Storage.get("forumHelperCardStorageKey")) && void 0 !== t && t;
     return a && (n = E(e, s.DismissibleContent.FORUM_CHANNEL_HELPER_CARD)), n
   },
   cleanup() {
-    i.default.remove("forumHelperCardStorageKey")
+    i.Storage.remove("forumHelperCardStorageKey")
   }
 }];
 var C = _

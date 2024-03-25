@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("574073"),
-  a = n("304198"),
+var a = n("574073"),
+  l = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -19,10 +19,10 @@ function r(e) {
       compact: c,
       channel: E
     } = e,
-    f = (0, l.default)(r),
+    f = (0, a.default)(r),
     _ = f.nick,
     T = o(f),
-    I = (0, l.useNullableUserAuthor)(u, E);
+    I = (0, a.useNullableUserAuthor)(u, E);
   if (null != I && null != d) {
     let e = d(I);
     t = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_HOOK.format({
@@ -35,7 +35,7 @@ function r(e) {
     username: _,
     usernameHook: T
   });
-  return (0, s.jsx)(a.default, {
+  return (0, s.jsx)(l.default, {
     icon: n("226315"),
     timestamp: r.timestamp,
     compact: c,

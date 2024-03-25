@@ -37,7 +37,7 @@ function h(e) {
 class g extends s.default.Store {
   initialize() {
     var e;
-    let t = null !== (e = r.default.get(d)) && void 0 !== e ? e : {};
+    let t = null !== (e = r.Storage.get(d)) && void 0 !== e ? e : {};
     if (Array.isArray(t)) c = new Set(null != t ? Array.from(t) : null), _ = new Set;
     else {
       let {
@@ -61,7 +61,7 @@ var m = new g(a.default, {
       url: t
     } = e;
     if (E(t)) return !1;
-    c.add((0, l.getHostname)(t)), r.default.set(d, {
+    c.add((0, l.getHostname)(t)), r.Storage.set(d, {
       trustedDomains: c,
       trustedProtocols: _
     })
@@ -71,7 +71,7 @@ var m = new g(a.default, {
       url: t
     } = e;
     if (h(t)) return !1;
-    _.add((0, l.getProtocol)(t)), r.default.set(d, {
+    _.add((0, l.getProtocol)(t)), r.Storage.set(d, {
       trustedDomains: c,
       trustedProtocols: _
     })

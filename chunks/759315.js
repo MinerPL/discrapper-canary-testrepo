@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("414456"),
-  i = n.n(l),
-  r = n("446674"),
+  r = n.n(l),
+  i = n("446674"),
   u = n("878720"),
   o = n("345327"),
   d = n("25033"),
@@ -20,7 +20,7 @@ var s = n("37983"),
   h = n("125047"),
   p = n("890957"),
   T = () => {
-    let [e, t] = a.useState(""), [l, T] = a.useState(""), [m, N] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, O] = a.useState(null), R = (0, r.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], x = async () => {
+    let [e, t] = a.useState(""), [l, T] = a.useState(""), [m, N] = a.useState(!1), [g, A] = a.useState(!1), [S, C] = a.useState(null), [v, O] = a.useState(null), R = (0, i.useStateFromStores)([d.default], () => d.default.getCountryCode()), L = R.code.split(" ")[0], x = async () => {
       try {
         await u.default.resendCode(e)
       } catch (e) {
@@ -42,7 +42,7 @@ var s = n("37983"),
       children: [(0, s.jsx)(f.Image, {
         src: n("229483")
       }), (0, s.jsxs)(f.Title, {
-        className: i(p.marginTop20, h.flex, h.justifyCenter, h.alignCenter),
+        className: r(p.marginTop20, h.flex, h.justifyCenter, h.alignCenter),
         children: [I.default.Messages.MEMBER_VERIFICATION_PHONE_VERIFIED, (0, s.jsx)(E.default, {
           className: p.marginLeft8
         })]

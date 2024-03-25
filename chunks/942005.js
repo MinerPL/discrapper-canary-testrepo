@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return f.default
   },
   useScrollSpring: function() {
-    return E.default
+    return S.default
   },
   getScrollbarSpecs: function() {
-    return S.default
+    return E.default
   }
 });
 var i = n("628793"),
@@ -66,5 +66,5 @@ var a = n("451078"),
   _ = n("266913");
 n("776341");
 var f = n("542809"),
-  E = n("517448"),
-  S = n("853338")
+  S = n("517448"),
+  E = n("853338")

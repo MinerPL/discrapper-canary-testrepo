@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 }), n("446674"), n("139321");
 var s = n("305961"),
-  l = n("697218"),
-  a = n("719923"),
+  a = n("697218"),
+  l = n("719923"),
   i = n("49111");
 
 function r() {
   let e = s.default.getGuildCount() >= i.MAX_USER_GUILDS,
-    t = a.default.canUseIncreasedGuildCap(l.default.getCurrentUser());
+    t = l.default.canUseIncreasedGuildCap(a.default.getCurrentUser());
   return e && !t
 }

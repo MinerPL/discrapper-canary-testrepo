@@ -7,10 +7,10 @@ n.r(t), n.d(t, {
     return G
   },
   search: function() {
-    return m
+    return M
   },
   selectResult: function() {
-    return M
+    return m
   },
   switchToResult: function() {
     return P
@@ -30,8 +30,8 @@ var i = n("913144"),
   A = n("686470"),
   C = n("18494"),
   T = n("162771"),
-  S = n("599110"),
-  I = n("340454"),
+  I = n("599110"),
+  S = n("340454"),
   f = n("116460"),
   N = n("49111"),
   O = n("724210");
@@ -68,7 +68,7 @@ function h(e, t) {
     queryMode: i,
     query: o,
     maxQueryLength: l
-  } = f.default.getProps(), u = T.default.getGuildId(), a = C.default.getChannelId(u), d = n[(0, s.findNextSelectedResult)(s.FindResultDirections.DOWN, -1, n)], r = I.default.isEmail(o), E = I.default.isPhoneNumber(o), A = I.default.isUserTagLike(o), N = null != a && (0, O.isStaticChannelRoute)(a), R = {
+  } = f.default.getProps(), u = T.default.getGuildId(), a = C.default.getChannelId(u), d = n[(0, s.findNextSelectedResult)(s.FindResultDirections.DOWN, -1, n)], r = S.default.isEmail(o), E = S.default.isPhoneNumber(o), A = S.default.isUserTagLike(o), N = null != a && (0, O.isStaticChannelRoute)(a), R = {
     current_channel_id: N ? void 0 : a,
     current_channel_static_route: N ? a : void 0,
     current_guild_id: u,
@@ -113,7 +113,7 @@ function h(e, t) {
         R.selected_user_id = o.id
     }
   }
-  S.default.track(e, R)
+  I.default.track(e, R)
 }
 
 function g() {
@@ -134,7 +134,7 @@ function b() {
       let e = _.default.getChannel(i);
       t = null != e ? e.type : null
     }
-    S.default.track(N.AnalyticEvents.QUICKSWITCHER_OPENED, {
+    I.default.track(N.AnalyticEvents.QUICKSWITCHER_OPENED, {
       source: e,
       current_guild_id: n,
       current_channel_id: i,
@@ -150,14 +150,14 @@ function G() {
   h(N.AnalyticEvents.QUICKSWITCHER_CLOSED), g()
 }
 
-function m(e) {
+function M(e) {
   i.default.dispatch({
     type: "QUICKSWITCHER_SEARCH",
     ...D(e)
   })
 }
 
-function M(e) {
+function m(e) {
   i.default.dispatch({
     type: "QUICKSWITCHER_SELECT",
     selectedIndex: e
@@ -204,8 +204,8 @@ function P(e) {
       }), u.default.channelListScrollTo(N.ME, C.id);
       break;
     case s.AutocompleterResultTypes.APPLICATION:
-      let S = A.default.getActiveLibraryApplication(C.id);
-      R(C.id, S, {
+      let I = A.default.getActiveLibraryApplication(C.id);
+      R(C.id, I, {
         analyticsParams: {
           source: N.AnalyticsLocations.QUICK_SWITCHER,
           location: N.AnalyticsLocations.QUICK_SWITCHER

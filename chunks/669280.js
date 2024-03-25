@@ -5,12 +5,12 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("446674"),
-  l = n("913144"),
-  a = n("718517"),
+  a = n("913144"),
+  l = n("718517"),
   i = n("299039"),
   r = n("271938"),
   o = n("27618");
-let u = 180 * a.default.Millis.DAY,
+let u = 180 * l.default.Millis.DAY,
   d = !1;
 class c extends s.default.Store {
   initialize() {
@@ -21,7 +21,7 @@ class c extends s.default.Store {
   }
 }
 c.displayName = "PremiumPromoStore";
-var E = new c(l.default, {
+var E = new c(a.default, {
   CONNECTION_OPEN: function() {
     let e = d;
     return e !== (d = o.default.getFriendIDs().length >= 10 && i.default.extractTimestamp(r.default.getId()) < Date.now() - u)

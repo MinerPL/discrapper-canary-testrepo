@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("879364"),
+var a = n("77078"),
+  l = n("879364"),
   i = n("588025"),
   r = n("301259"),
   o = n("987099"),
@@ -19,10 +19,10 @@ function d(e) {
   } = e, {
     quests: n,
     isFetchingCurrentQuests: d
-  } = (0, a.useQuests)([t], {
+  } = (0, l.useQuests)([t], {
     fetch: !0
   });
-  if (d) return (0, s.jsx)(l.Spinner, {
+  if (d) return (0, s.jsx)(a.Spinner, {
     className: u.spinner
   });
   if (0 === n.length) return (0, s.jsx)(o.InvalidQuestsEmbed, {});

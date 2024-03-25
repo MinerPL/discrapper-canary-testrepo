@@ -8,9 +8,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("424973");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("266491"),
   o = n("77078"),
   u = n("875978"),
@@ -28,7 +28,7 @@ let m = (e, t) => null == e && null == t || e === t,
     let n = N(e, t);
     return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)]
   };
-class S extends l.PureComponent {
+class S extends a.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let n = e.message.reactions.length;
     return 0 === t.reactionsCount && n > 0 ? {
@@ -43,8 +43,8 @@ class S extends l.PureComponent {
       message: e,
       disableReactionCreates: t,
       disableReactionUpdates: n,
-      isLurking: l,
-      isGuest: a,
+      isLurking: a,
+      isGuest: l,
       isPendingMember: m,
       isForumToolbar: N,
       channel: p,
@@ -76,8 +76,8 @@ class S extends l.PureComponent {
         reactions: O,
         message: e,
         readOnly: n,
-        isLurking: l,
-        isGuest: a,
+        isLurking: a,
+        isGuest: l,
         isPendingMember: m,
         isForumToolbar: N,
         useChatFontScaling: h,
@@ -118,16 +118,16 @@ var A = e => {
   let {
     message: t,
     maxReactions: n,
-    hoistReaction: a
+    hoistReaction: l
   } = e, {
     combinedReactions: i,
     remainingReactions: r,
     visibleReactionsCount: o
-  } = l.useMemo(() => {
+  } = a.useMemo(() => {
     let e = [],
-      s = p(t.reactions, a),
-      l = null != n && n < s.length,
-      i = l ? s.slice(0, n) : s,
+      s = p(t.reactions, l),
+      a = null != n && n < s.length,
+      i = a ? s.slice(0, n) : s,
       r = s.length - i.length,
       o = s.length;
     return i.forEach(t => {
@@ -143,7 +143,7 @@ var A = e => {
       visibleReactionsCount: o,
       remainingReactions: r
     }
-  }, [a, n, t.reactions]);
+  }, [l, n, t.reactions]);
   return (0, s.jsx)(S, {
     ...e,
     visibleReactionsCount: o,

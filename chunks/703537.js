@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("866227"),
-  l = n.n(s),
-  a = n("801340"),
+  a = n.n(s),
+  l = n("801340"),
   i = n("872173"),
   r = n("374363"),
   o = n("93015");
@@ -17,8 +17,8 @@ let u = e => {
     var t;
     if (!d(e)) return !1;
     let n = null === (t = r.default.settings.userContent) || void 0 === t ? void 0 : t.safetyUserSentimentNoticeDismissedAt,
-      s = null != n ? a.Timestamp.toDate(n) : void 0,
-      i = null != s ? l().diff(s, "days") : null,
+      s = null != n ? l.Timestamp.toDate(n) : void 0,
+      i = null != s ? a().diff(s, "days") : null,
       u = null != n;
     if (u && !(null != i && i > 30)) return !1;
     let {
@@ -32,7 +32,7 @@ let u = e => {
   },
   d = e => null != e && Date.now() - e.createdAt.getTime() > 2592e6,
   c = () => {
-    let e = a.Timestamp.now();
+    let e = l.Timestamp.now();
     i.PreloadedUserSettingsActionCreators.updateAsync("userContent", t => {
       t.safetyUserSentimentNoticeDismissedAt = e
     }, i.UserSettingsDelay.INFREQUENT_USER_ACTION)

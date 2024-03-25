@@ -10,8 +10,8 @@ var u = l("730290"),
   a = l("90915"),
   i = l("446674"),
   r = l("987317"),
-  d = l("393414"),
-  o = l("42203"),
+  o = l("393414"),
+  d = l("42203"),
   s = l("476108"),
   f = l("50885"),
   c = l("49111");
@@ -24,7 +24,7 @@ var h = e => {
   return (0, n.jsx)(a.Redirect, {
     to: null !== (t = function e(t) {
       let l = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n = o.default.getChannel(t);
+        n = d.default.getChannel(t);
       if (null != n) {
         f.default.focus();
         let e = n.guild_id,
@@ -37,11 +37,11 @@ var h = e => {
       }
       if (l) {
         let l = () => {
-          o.default.removeChangeListener(l);
+          d.default.removeChangeListener(l);
           let n = e(t, !1);
-          null != n && (0, d.transitionTo)(n)
+          null != n && (0, o.transitionTo)(n)
         };
-        o.default.addChangeListener(l)
+        d.default.addChangeListener(l)
       }
       return null
     }((0, u.parse)(l.search).channelId)) && void 0 !== t ? t : s.default.fallbackRoute

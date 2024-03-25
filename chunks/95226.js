@@ -26,7 +26,7 @@ var s = n("37983"),
   A = n("597550");
 let g = (0, a.cssValueToNumber)(r.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_IMAGE_SIZE),
   N = "start_application_subscription",
-  R = e => {
+  S = e => {
     let {
       listing: t
     } = e, n = t.image_asset;
@@ -40,7 +40,7 @@ let g = (0, a.cssValueToNumber)(r.default.APPLICATION_SUBSCRIPTION_CARD_LISTING_
       })
     })
   },
-  S = e => {
+  R = e => {
     let {
       children: t
     } = e;
@@ -92,7 +92,7 @@ function L(e) {
     className: A.container,
     children: [(0, s.jsxs)("div", {
       className: A.cardHeader,
-      children: [(0, s.jsx)(R, {
+      children: [(0, s.jsx)(S, {
         listing: t
       }), (0, s.jsx)(u.Text, {
         variant: "text-lg/medium",
@@ -109,10 +109,10 @@ function L(e) {
           })
         }), (() => {
           var e;
-          if (w) return (0, s.jsx)(S, {
+          if (w) return (0, s.jsx)(R, {
             children: (null == x ? void 0 : x.status) === C.SubscriptionStatusTypes.CANCELED ? m.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : m.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           });
-          if (b) return null == P ? (0, s.jsx)(S, {
+          if (b) return null == P ? (0, s.jsx)(R, {
             children: m.default.Messages.APPLICATION_SUBSCRIPTION_TIER_REVIEW_CURRENT_TIER_LABEL
           }) : null;
           return (0, s.jsx)(u.Tooltip, {

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("627445"),
-  a = n.n(l),
+var a = n("627445"),
+  l = n.n(a),
   i = n("65597"),
   r = n("77078"),
   o = n("206230"),
@@ -24,9 +24,9 @@ function m(e) {
   let {
     guildId: t,
     guildProductListingId: n,
-    sourceAnalyticsLocations: l
+    sourceAnalyticsLocations: a
   } = e, m = (0, i.useStateFromStores)([f.default], () => f.default.getGuildProduct(n)), N = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), p = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), S = (0, c.useIsWindowFocused)();
-  a(null != N, "guild cannot be null"), a(null != m, "guildProductListing cannot be null");
+  l(null != N, "guild cannot be null"), l(null != m, "guildProductListing cannot be null");
   let A = (0, E.useCanManageGuildProduct)(N);
   if (A) return (0, s.jsx)(r.Tooltip, {
     text: I.default.Messages.GUILD_PRODUCT_PURCHASE_DISABLED_TOOLTIP,
@@ -43,7 +43,7 @@ function m(e) {
     onClick: () => (0, _.openGuildProductPurchaseModal)({
       guildProductListing: m,
       guildId: N.id,
-      sourceAnalyticsLocations: l
+      sourceAnalyticsLocations: a
     }),
     children: I.default.Messages.GUILD_PRODUCT_CARD_PURCHASE_BUTTON
   });

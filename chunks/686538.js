@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("477566"),
+var a = n("77078"),
+  l = n("477566"),
   i = n("290226"),
   r = n("447435"),
   o = n("817892"),
@@ -21,17 +21,17 @@ function d(e, t) {
   });
   let d = o.default.canSubmitFpReport(t);
   if (!d) {
-    a.default.show({
+    l.default.show({
       title: u.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_HEADER,
       body: u.default.Messages.SENDER_BLOCKED_MEDIA_EXPIRED_ERROR_BODY,
       confirmText: u.default.Messages.OKAY
     }), i.default.disableFalsePositiveButton(e, t);
     return
-  }(0, l.openModalLazy)(async () => {
+  }(0, a.openModalLazy)(async () => {
     let {
-      default: l
+      default: a
     } = await n("492996");
-    return n => (0, s.jsx)(l, {
+    return n => (0, s.jsx)(a, {
       channelId: e,
       messageId: t,
       ...n

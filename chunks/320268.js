@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("424973");
 var s = n("917351"),
-  l = n.n(s),
-  a = n("446674"),
+  a = n.n(s),
+  l = n("446674"),
   i = n("95410"),
   r = n("913144"),
   o = n("316718"),
@@ -29,32 +29,32 @@ function A() {
       skuId: t,
       applicationId: n
     }
-    of l.values(p)) {
+    of a.values(p)) {
     if (S.includes(t)) continue;
     let s = c.default.getApplication(n);
     if (null == s) {
       !c.default.isFetchingApplication(n) && !c.default.didFetchingApplicationFail(n) && d.default.fetchApplication(n);
       continue
     }
-    let l = T.default.get(t);
-    if (null == l) {
+    let a = T.default.get(t);
+    if (null == a) {
       !T.default.isFetching(t) && !T.default.didFetchingSkuFail(t) && u.fetchSKU(s.id, t);
       continue
     }
-    _.default.applicationIdsFetching.has(s.id) || _.default.isEntitledToSku(f.default.getCurrentUser(), t, s.id, s.id) || !l.available ? null != N[t] && (delete N[t], e = !0) : (N[t] = {
+    _.default.applicationIdsFetching.has(s.id) || _.default.isEntitledToSku(f.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != N[t] && (delete N[t], e = !0) : (N[t] = {
       skuId: t,
       applicationId: n
     }, e = !0)
   }
   return e
 }
-class C extends a.default.Store {
+class C extends l.default.Store {
   initialize() {
     var e;
-    this.waitFor(E.default, T.default, _.default), S = null !== (e = i.default.get(m)) && void 0 !== e ? e : S
+    this.waitFor(E.default, T.default, _.default), S = null !== (e = i.Storage.get(m)) && void 0 !== e ? e : S
   }
   getDetectedOffPlatformPremiumPerks() {
-    return l.values(N)
+    return a.values(N)
   }
 }
 C.displayName = "DetectedOffPlatformPremiumPerksStore";
@@ -71,7 +71,7 @@ var h = new C(r.default, {
       skuId: t
     } = e;
     if (delete N[t], S.includes(t)) return !1;
-    S.push(t), i.default.set(m, S)
+    S.push(t), i.Storage.set(m, S)
   },
   RUNNING_GAMES_CHANGE: function() {
     let e = !1;

@@ -17,29 +17,29 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("81594"),
-  l = n("783480"),
-  a = n("966724"),
+  a = n("783480"),
+  l = n("966724"),
   i = n("474643"),
   r = n("314743");
 async function o(e, t, n) {
   let s = (0, r.getFileNameFromGifUrl)(t, n),
-    l = await fetch(n),
-    a = await l.blob(),
-    i = new File([a], s, {
+    a = await fetch(n),
+    l = await a.blob(),
+    i = new File([l], s, {
       type: "image/gif"
     });
   return u(e, t, i), n
 }
 
 function u(e, t, n) {
-  let l = {
+  let a = {
     id: t,
     channelId: e,
     file: n,
-    platform: a.UploadPlatform.WEB
+    platform: l.UploadPlatform.WEB
   };
   s.default.addFile({
-    file: l,
+    file: a,
     channelId: e,
     draftType: i.DraftType.Poll
   })
@@ -55,10 +55,10 @@ async function E(e) {
     channel: t,
     items: n,
     poll: s,
-    nonce: a,
+    nonce: l,
     maxSizeCallback: r
   } = e;
-  return l.default.uploadFiles({
+  return a.default.uploadFiles({
     channelId: t.id,
     uploads: n,
     draftType: i.DraftType.Poll,
@@ -69,7 +69,7 @@ async function E(e) {
       validNonShortcutEmojis: []
     },
     options: {
-      nonce: a,
+      nonce: l,
       poll: s
     },
     raiseEndpointErrors: !0

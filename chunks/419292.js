@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("448881"),
+var a = n("77078"),
+  l = n("448881"),
   i = n("473603"),
   r = e => {
     let {
@@ -15,26 +15,26 @@ var l = n("77078"),
     } = e;
     return t.preview ? (0, s.jsxs)("div", {
       className: i.questControls,
-      children: [(0, s.jsx)(l.Text, {
+      children: [(0, s.jsx)(a.Text, {
         variant: "text-sm/medium",
         className: i.questControlsTitle,
         children: "Preview Controls:"
-      }), (0, s.jsx)(l.Button, {
-        color: l.Button.Colors.PRIMARY,
+      }), (0, s.jsx)(a.Button, {
+        color: a.Button.Colors.PRIMARY,
         onClick: () => {
-          (0, a.resetQuestDismissibilityStatus)(t.id)
+          (0, l.resetQuestDismissibilityStatus)(t.id)
         },
         children: "Reset Dismissibility"
-      }), (0, s.jsx)(l.Button, {
-        color: l.Button.Colors.PRIMARY,
+      }), (0, s.jsx)(a.Button, {
+        color: a.Button.Colors.PRIMARY,
         onClick: () => {
-          (0, a.resetQuestPreviewStatus)(t.id)
+          (0, l.resetQuestPreviewStatus)(t.id)
         },
         children: "Reset Enrollment"
-      }), (0, s.jsx)(l.Button, {
-        color: l.Button.Colors.PRIMARY,
+      }), (0, s.jsx)(a.Button, {
+        color: a.Button.Colors.PRIMARY,
         onClick: () => {
-          (0, a.completeQuestPreview)(t.id)
+          (0, l.completeQuestPreview)(t.id)
         },
         children: "Complete Quest"
       })]

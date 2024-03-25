@@ -24,9 +24,9 @@ function m(e) {
     channel: m,
     participants: p
   } = e, [E, g] = function() {
-    let [e, t] = l.useState(() => r.default.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
+    let [e, t] = l.useState(() => r.Storage.get(h, d.PictureInPicturePositions.BOTTOM_RIGHT));
     return [e, l.useCallback(e => {
-      r.default.set(h, e), t(e)
+      r.Storage.set(h, e), t(e)
     }, [])]
   }(), S = l.useRef(null), C = null == m.getGuildId() ? 70 : 50;
   return l.useLayoutEffect(() => {

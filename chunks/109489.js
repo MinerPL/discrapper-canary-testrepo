@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("37983"),
   r = n("884691"),
   s = n("414456"),
-  i = n.n(s),
-  l = n("255397"),
+  l = n.n(s),
+  i = n("255397"),
   u = n("256170"),
   o = n("155207"),
   d = n("981913"),
@@ -23,9 +23,9 @@ function h(e) {
   return (0, a.jsxs)("div", {
     className: f.iconContainer,
     children: [(0, a.jsx)(u.default, {
-      className: i(n ? f.upCaret : f.leftCaret, t)
+      className: l(n ? f.upCaret : f.leftCaret, t)
     }), (0, a.jsx)(o.default, {
-      className: i(f.members, t)
+      className: l(f.members, t)
     })]
   })
 }
@@ -38,9 +38,9 @@ function E(e) {
   return (0, a.jsxs)("div", {
     className: f.iconContainer,
     children: [(0, a.jsx)(u.default, {
-      className: i(n ? f.downCaret : f.rightCaret, t)
+      className: l(n ? f.downCaret : f.rightCaret, t)
     }), n && (0, a.jsx)(o.default, {
-      className: i(f.members, t)
+      className: l(f.members, t)
     })]
   })
 }
@@ -66,9 +66,9 @@ function p(e) {
   }, [s, u]);
   return (0, a.jsx)(d.default, {
     label: s ? c.default.Messages.VIDEO_CALL_HIDE_MEMBERS : c.default.Messages.VIDEO_CALL_SHOW_MEMBERS,
-    className: i(f.participantsButton, n),
+    className: l(f.participantsButton, n),
     onClick: function() {
-      l.default.toggleParticipants(t, !s)
+      i.default.toggleParticipants(t, !s)
     },
     iconComponent: p,
     shouldShowTooltip: !o

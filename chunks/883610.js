@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("77078"),
   o = n("790219"),
   u = n("359606"),
@@ -20,23 +20,23 @@ var s = n("37983"),
   I = n("458331"),
   m = n("49111"),
   N = n("705853");
-class p extends l.PureComponent {
+class p extends a.PureComponent {
   render() {
     let {
       sku: e,
       storeListing: t,
       isHorizontal: n,
-      className: l,
-      renderCustomTagline: a,
+      className: a,
+      renderCustomTagline: l,
       renderCustomTitle: i,
       renderCustomMedia: r,
       isEmbed: o
     } = this.props, u = o ? T.ResponsiveEmbedTile : I.default;
     return (0, s.jsx)(u, {
-      className: l,
+      className: a,
       renderMedia: null != r ? r : this.renderMedia,
       renderTitle: null != i ? i : () => e.name,
-      renderTagline: null != a ? a : () => t.tagline,
+      renderTagline: null != l ? l : () => t.tagline,
       renderActions: this.renderActions,
       isHorizontal: n
     })
@@ -47,9 +47,9 @@ class p extends l.PureComponent {
         inLibrary: e,
         sku: t,
         renderCustomActions: n,
-        isMouseOver: l,
-        showBuyInline: a
-      } = this.props, i = (a || !t.requiresPayment) && !e, c = i && l;
+        isMouseOver: a,
+        showBuyInline: l
+      } = this.props, i = (l || !t.requiresPayment) && !e, c = i && a;
       return null != n ? n() : (0, s.jsxs)("div", {
         className: N.priceOs,
         children: [(0, s.jsx)(u.default, {
@@ -75,12 +75,12 @@ class p extends l.PureComponent {
         playing: e,
         muted: t,
         showMediaPlaceholder: n,
-        onToggleMute: a,
+        onToggleMute: l,
         sku: r,
         isHorizontal: o,
         storeListing: u
       } = this.props;
-      return (0, s.jsxs)(l.Fragment, {
+      return (0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsx)(f.default, {
           className: i(N.splashContainer, {
             [N.splashContainerHorizontal]: o
@@ -91,7 +91,7 @@ class p extends l.PureComponent {
           playing: e,
           muted: t,
           placeholder: n,
-          onToggleMute: a,
+          onToggleMute: l,
           splashClassName: N.splashVideo,
           splashPlaceholderClassName: N.splashPlaceholder
         }), r.exclusive ? (0, s.jsx)(c.default, {

@@ -33,9 +33,9 @@ class c extends o.default.PersistedStore {
 }
 c.displayName = "SelectivelySyncedUserSettingsStore", c.persistKey = "SelectivelySyncedUserSettingsStore", c.migrations = [() => {
   var e, t;
-  let n = null !== (e = s.default.get("UserSettingsSync")) && void 0 !== e ? e : {},
-    i = null !== (t = s.default.get("UserSettingsStore")) && void 0 !== t ? t : {};
-  s.default.remove("UserSettingsSync");
+  let n = null !== (e = s.Storage.get("UserSettingsSync")) && void 0 !== e ? e : {},
+    i = null !== (t = s.Storage.get("UserSettingsStore")) && void 0 !== t ? t : {};
+  s.Storage.remove("UserSettingsSync");
   let o = {};
   return !1 === n[a.UserSettingsSections.TEXT] && (o.text = {
     shouldSync: !1,

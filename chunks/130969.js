@@ -21,9 +21,9 @@ let u = r.createContext(void 0),
       impression: d,
       disableTrack: _,
       returnRef: f,
-      ...E
-    } = e, S = r.useRef(null);
-    (0, o.useFocusLock)(S, {
+      ...S
+    } = e, E = r.useRef(null);
+    (0, o.useFocusLock)(E, {
       returnRef: f
     });
     let g = r.useContext(a.default);
@@ -33,18 +33,18 @@ let u = r.createContext(void 0),
       properties: null == d ? void 0 : d.impressionProperties
     }, {
       disableTrack: _
-    }), r.useImperativeHandle(t, () => S.current), (0, i.jsx)(u.Provider, {
+    }), r.useImperativeHandle(t, () => E.current), (0, i.jsx)(u.Provider, {
       value: !0,
       children: (0, i.jsx)("div", {
-        ...E,
-        ref: S,
+        ...S,
+        ref: E,
         role: "dialog",
         tabIndex: -1,
         "aria-modal": !0,
         children: (0, i.jsx)(l.HeadingLevel, {
           forceLevel: 1,
           children: (0, i.jsx)(s.FocusRingScope, {
-            containerRef: S,
+            containerRef: E,
             children: n
           })
         })

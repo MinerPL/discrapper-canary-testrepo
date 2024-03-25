@@ -20,8 +20,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("884691"),
-  l = n("446674"),
-  a = n("913144"),
+  a = n("446674"),
+  l = n("913144"),
   i = n("428958"),
   r = n("862853"),
   o = n("10641"),
@@ -38,26 +38,26 @@ function T(e) {
     location: "59cc4b_1"
   });
   if (null == e) return null;
-  let l = (0, f.getDrop)(e);
-  if (null == l) return null;
-  if (l.dropsQuestId === _.FORTNITE_QUEST_ID) t = c.DropsForGoLiveFortniteExperiment, n = s;
+  let a = (0, f.getDrop)(e);
+  if (null == a) return null;
+  if (a.dropsQuestId === _.FORTNITE_QUEST_ID) t = c.DropsForGoLiveFortniteExperiment, n = s;
   else t = null, n = null;
   return null == t || null == n ? null : {
     experiment: t,
     config: n,
-    drop: l
+    drop: a
   }
 }
 
 function I(e) {
   var t;
-  let n = (0, l.useStateFromStores)([E.default], () => E.default.serverEligibleByQuestIds),
+  let n = (0, a.useStateFromStores)([E.default], () => E.default.serverEligibleByQuestIds),
     i = T(e),
     r = function(e) {
-      let t = (0, l.useStateFromStoresArray)([u.default], () => u.default.getGamesSeen(!1)),
+      let t = (0, a.useStateFromStoresArray)([u.default], () => u.default.getGamesSeen(!1)),
         n = s.useMemo(() => (0, f.getEligibleGameLastSeenStartTimeSeconds)(), []),
-        a = (0, f.isDropGameDetected)(e, t, n);
-      return a
+        l = (0, f.isDropGameDetected)(e, t, n);
+      return l
     }(e),
     o = null != i && n[i.drop.dropsQuestId];
   null != i && o && r && i.experiment.trackExposure({
@@ -67,7 +67,7 @@ function I(e) {
     _ = null == i ? void 0 : i.drop,
     I = null == _ || (0, f.getDropExpired)(_);
   return s.useEffect(() => {
-    c && !I && r && null != _ && a.default.wait(() => {
+    c && !I && r && null != _ && l.default.wait(() => {
       null == o && (0, d.fetchDropsEligibility)(_.dropsQuestId)
     })
   }, [o, _, c, I, r]), null != _ && !!c && !I && o && r
@@ -81,20 +81,20 @@ function m() {
 function N(e) {
   let t = T(e),
     n = null == t ? void 0 : t.drop,
-    a = (0, l.useStateFromStores)([E.default], () => null != n && E.default.serverEligibleByQuestIds[n.dropsQuestId]),
-    i = (0, l.useStateFromStores)([E.default], () => E.default.hasInitialProgressFetched);
+    l = (0, a.useStateFromStores)([E.default], () => null != n && E.default.serverEligibleByQuestIds[n.dropsQuestId]),
+    i = (0, a.useStateFromStores)([E.default], () => E.default.hasInitialProgressFetched);
   s.useEffect(() => {
-    null != n && a && !i && (0, d.fetchProgress)(n.dropsQuestId)
-  }, [n, a, i])
+    null != n && l && !i && (0, d.fetchProgress)(n.dropsQuestId)
+  }, [n, l, i])
 }
 
 function p(e, t, n, s) {
-  var a;
+  var l;
   let i = T(e),
     u = null == i ? void 0 : i.drop,
-    d = (0, l.useStateFromStores)([E.default], () => null != u && E.default.serverEligibleByQuestIds[u.dropsQuestId]),
-    c = (0, l.useStateFromStores)([E.default], () => E.default.getIsPartnerGameQuestComplete(e)),
-    _ = (0, f.doesGameTitleMatchList)(null == t ? void 0 : t.name, null !== (a = null == u ? void 0 : u.gameSearchTerm) && void 0 !== a ? a : []),
+    d = (0, a.useStateFromStores)([E.default], () => null != u && E.default.serverEligibleByQuestIds[u.dropsQuestId]),
+    c = (0, a.useStateFromStores)([E.default], () => E.default.getIsPartnerGameQuestComplete(e)),
+    _ = (0, f.doesGameTitleMatchList)(null == t ? void 0 : t.name, null !== (l = null == u ? void 0 : u.gameSearchTerm) && void 0 !== l ? l : []),
     I = (0, r.useIsAnyContentShown)([n, s]),
     m = (0, o.useIsDismissibleContentDismissed)(s),
     N = null == u || (0, f.getDropExpired)(u),

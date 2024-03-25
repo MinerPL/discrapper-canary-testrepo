@@ -38,8 +38,8 @@ function M(e) {
   var t;
   let {
     guild: n
-  } = e, [d, E] = s.useState(null !== (t = r.default.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
-    r.default.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e)
+  } = e, [d, E] = s.useState(null !== (t = r.Storage.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
+    r.Storage.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e)
   }, C = (0, l.useStateFromStoresArray)(O.CHANNEL_NOTICE_STORES, () => O.CHANNEL_NOTICES.filter(e => {
     let {
       store: t

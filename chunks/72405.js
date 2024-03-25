@@ -1,7 +1,7 @@
 "use strict";
 s.r(a), s.d(a, {
   default: function() {
-    return M
+    return C
   }
 });
 var n = s("37983"),
@@ -9,14 +9,14 @@ var n = s("37983"),
   l = s("414456"),
   E = s.n(l),
   _ = s("77078"),
-  i = s("145131"),
-  d = s("718394"),
+  d = s("145131"),
+  i = s("718394"),
   T = s("350956"),
   r = s("47212"),
   u = s("782340"),
   L = s("31784");
 
-function C(e) {
+function M(e) {
   let {
     guildTemplate: a,
     onClick: s,
@@ -25,24 +25,24 @@ function C(e) {
     s(a)
   }, [a, s]);
   return (0, n.jsx)(T.default, {
-    icon: d.GUILD_TEMPLATE_ICONS[a.id],
+    icon: i.GUILD_TEMPLATE_ICONS[a.id],
     message: a.label,
     onClick: E,
     autoFocus: l
   })
 }
 
-function M(e) {
+function C(e) {
   let {
     className: a,
     isNewUser: s,
     onClose: t,
     onChooseTemplate: l,
-    onJoin: d
+    onJoin: i
   } = e, T = (0, r.getGuildTemplatesMap)();
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(_.ModalHeader, {
-      direction: i.default.Direction.VERTICAL,
+      direction: d.default.Direction.VERTICAL,
       className: L.header,
       separator: !1,
       children: [(0, n.jsx)(_.Heading, {
@@ -61,7 +61,7 @@ function M(e) {
     }), (0, n.jsxs)(_.ModalContent, {
       className: E(L.templatesList, a),
       paddingFix: !1,
-      children: [(0, n.jsx)(C, {
+      children: [(0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.CREATE],
         onClick: l,
         autoFocus: !0
@@ -70,26 +70,26 @@ function M(e) {
         color: "header-secondary",
         variant: "text-xs/bold",
         children: u.default.Messages.GUILD_TEMPLATE_SELECTOR_OPTION_HEADER
-      }), (0, n.jsx)(C, {
+      }), (0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.GAMING],
         onClick: l
-      }), (0, n.jsx)(C, {
+      }), (0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.SCHOOL_CLUB],
         onClick: l
-      }), (0, n.jsx)(C, {
+      }), (0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.STUDY],
         onClick: l
-      }), (0, n.jsx)(C, {
+      }), (0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.FRIENDS],
         onClick: l
-      }), (0, n.jsx)(C, {
+      }), (0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.CREATORS],
         onClick: l
-      }), (0, n.jsx)(C, {
+      }), (0, n.jsx)(M, {
         guildTemplate: T[r.GuildTemplateId.LOCAL_COMMUNITY],
         onClick: l
       })]
-    }), null != d && (0, n.jsxs)(_.ModalFooter, {
+    }), null != i && (0, n.jsxs)(_.ModalFooter, {
       className: L.footer,
       children: [(0, n.jsx)(_.Heading, {
         variant: "heading-lg/semibold",
@@ -98,7 +98,7 @@ function M(e) {
       }), (0, n.jsx)(_.Button, {
         className: L.footerButton,
         color: _.Button.Colors.PRIMARY,
-        onClick: d,
+        onClick: i,
         children: u.default.Messages.JOIN_SERVER_TITLE
       })]
     })]

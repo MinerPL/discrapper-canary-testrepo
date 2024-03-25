@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return I
   }
 });
 var a = n("866227"),
@@ -17,7 +17,7 @@ var a = n("866227"),
   N = n("229929"),
   E = n("49111"),
   m = n("994428"),
-  f = {
+  I = {
     init(e) {
       let {
         hasModalOpen: t,
@@ -30,8 +30,8 @@ var a = n("866227"),
           o = Object.values(c.default.getGuilds()),
           u = null != o.find(e => e.hasFeature(E.GuildFeatures.HUB)),
           m = !(0, r.isDismissibleContentDismissed)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL),
-          f = a || t() || u || !m;
-        !f && (0, N.backToSchoolEnabled)() && (N.default.trackExposure({
+          I = a || t() || u || !m;
+        !I && (0, N.backToSchoolEnabled)() && (N.default.trackExposure({
           location: "8b792a_1"
         }), n(), (0, r.requestMarkDismissibleContentAsShown)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL))
       })

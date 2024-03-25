@@ -227,7 +227,7 @@ function en(e) {
 }
 
 function ei() {
-  u.default.set(L, H)
+  u.Storage.set(L, H)
 }
 
 function es(e) {
@@ -376,7 +376,7 @@ function el() {
 class eu extends l.default.Store {
   initialize() {
     var e, t, n, i;
-    let s = null !== (e = u.default.get(L)) && void 0 !== e ? e : {
+    let s = null !== (e = u.Storage.get(L)) && void 0 !== e ? e : {
       gamesSeen: [],
       gameOverrides: {},
       enableOverlay: {},

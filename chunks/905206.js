@@ -14,8 +14,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("794252");
 var s = n("506838"),
-  l = n("418009"),
-  a = n("385976"),
+  a = n("418009"),
+  l = n("385976"),
   i = n("867805"),
   r = n("42203"),
   o = n("377253"),
@@ -81,13 +81,13 @@ function g(e) {
 function M(e, t) {
   var n, s;
   let {
-    formattedExpirationLabel: l
+    formattedExpirationLabel: a
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
-    poll: a
+    poll: l
   } = e;
-  if (null == a) return;
+  if (null == l) return;
   let i = e.state === p.MessageStates.SENT,
-    r = i ? null != l ? l : (0, N.formatExpirationLabel)(a.expiry) : "",
+    r = i ? null != a ? a : (0, N.formatExpirationLabel)(l.expiry) : "",
     u = null == r && i,
     {
       selectedAnswerIds: d,
@@ -106,7 +106,7 @@ function M(e, t) {
     C = !E && S,
     h = I && (C || u || _);
   return {
-    poll: a,
+    poll: l,
     canTapAnswers: i && (!S || E || h),
     canRemoveVote: C && i && !u,
     canShowVoteCounts: h,
@@ -198,8 +198,8 @@ function O(e, t) {
           if (null == e) return;
           let s = e.animated;
           if (null == s && null != e.id) {
-            var l, r;
-            s = null !== (r = null === (l = a.default.getCustomEmojiById(e.id)) || void 0 === l ? void 0 : l.animated) && void 0 !== r && r
+            var a, r;
+            s = null !== (r = null === (a = l.default.getCustomEmojiById(e.id)) || void 0 === a ? void 0 : a.animated) && void 0 !== r && r
           }
           let o = t && null != s && s;
           return {
@@ -225,7 +225,7 @@ function O(e, t) {
       style: m,
       shouldAnimateTransition: V,
       votesPercentage: Math.round(100 * (0 === K ? 0 : E / K)),
-      votes: (0, s.match)(L).with(l.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => S.default.Messages.POLL_VOTES_COUNT.format({
+      votes: (0, s.match)(L).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => S.default.Messages.POLL_VOTES_COUNT.format({
         count: String(E)
       }))
     }

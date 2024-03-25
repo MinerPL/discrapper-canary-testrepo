@@ -9,14 +9,14 @@ var s = a("95410"),
 let l = "formGuidelinesStorageKey";
 class r extends n.default {
   _initialize() {
-    let e = s.default.get(l);
+    let e = s.Storage.get(l);
     null != e && (this.seenForumGuidelines = new Set(e))
   }
   _terminate() {
-    s.default.set(l, this.seenForumGuidelines)
+    s.Storage.set(l, this.seenForumGuidelines)
   }
   markAsSeen(e) {
-    this.seenForumGuidelines.add(e), s.default.set(l, this.seenForumGuidelines)
+    this.seenForumGuidelines.add(e), s.Storage.set(l, this.seenForumGuidelines)
   }
   hasSeen(e) {
     return this.seenForumGuidelines.has(e)

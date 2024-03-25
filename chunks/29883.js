@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var s, l, a = n("884691"),
+var s, a, l = n("884691"),
   i = n("501260"),
   r = n("782340");
 
@@ -14,19 +14,19 @@ function o(e) {
     joinability: n,
     currentEmbeddedActivity: s
   } = e;
-  return a.useMemo(() => (function(e) {
+  return l.useMemo(() => (function(e) {
     let {
       embeddedActivity: t,
       joinability: n,
       currentEmbeddedActivity: s
-    } = e, l = null == t, a = {
+    } = e, a = null == t, l = {
       disabled: !1,
-      isJoinAction: !l,
-      text: l ? r.default.Messages.START : r.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
+      isJoinAction: !a,
+      text: a ? r.default.Messages.START : r.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
       tooltip: void 0
     }, o = null != t && null != s && t.instanceId === s.instanceId;
     if (o) return {
-      ...a,
+      ...l,
       disabled: !0,
       text: r.default.Messages.EMBEDDED_ACTIVITIES_JOINED,
       tooltip: r.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
@@ -59,15 +59,15 @@ function o(e) {
           e = r.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
       }
       return {
-        ...a,
+        ...l,
         disabled: !0,
         tooltip: e
       }
     }
-    return a
+    return l
   })({
     embeddedActivity: t,
     joinability: n,
     currentEmbeddedActivity: s
   }), [t, n, s])
-}(s = l || (l = {}))[s.ACTIVE = 0] = "ACTIVE", s[s.ENDED = 1] = "ENDED"
+}(s = a || (a = {}))[s.ACTIVE = 0] = "ACTIVE", s[s.ENDED = 1] = "ENDED"

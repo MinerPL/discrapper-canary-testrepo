@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var s = n("759843"),
   a = n("627929"),
   l = n("913144"),
-  i = n("840707"),
-  r = n("49111"),
+  r = n("840707"),
+  i = n("49111"),
   u = {
-    signup: (e, t) => i.default.post({
-      url: r.Endpoints.HUB_WAITLIST_SIGNUP,
+    signup: (e, t) => r.default.post({
+      url: i.Endpoints.HUB_WAITLIST_SIGNUP,
       body: {
         email: e,
         school: t
@@ -33,8 +33,8 @@ var s = n("759843"),
       }
     }),
     async sendVerificationEmail(e, t, n) {
-      let l = await i.default.post({
-        url: r.Endpoints.HUB_EMAIL_VERIFY_SEND,
+      let l = await r.default.post({
+        url: i.Endpoints.HUB_EMAIL_VERIFY_SEND,
         body: {
           email: e,
           guild_id: n,
@@ -57,8 +57,8 @@ var s = n("759843"),
     async verify(e) {
       if (null != e) try {
         var t;
-        let n = await i.default.post({
-            url: r.Endpoints.HUB_EMAIL_VERIFY,
+        let n = await r.default.post({
+            url: i.Endpoints.HUB_EMAIL_VERIFY,
             body: {
               token: e
             },
@@ -81,8 +81,8 @@ var s = n("759843"),
     async verifyCode(e, t, n) {
       if (null != e) try {
         var a;
-        let u = await i.default.post({
-            url: r.Endpoints.HUB_EMAIL_VERIFY_CODE,
+        let u = await r.default.post({
+            url: i.Endpoints.HUB_EMAIL_VERIFY_CODE,
             body: {
               code: e,
               guild_id: t,

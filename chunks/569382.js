@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("574073"),
-  a = n("232259"),
+var a = n("574073"),
+  l = n("232259"),
   i = n("8161"),
   r = n("304198"),
   o = n("998603"),
@@ -18,7 +18,7 @@ function d(e) {
     message: t,
     channel: n,
     compact: d
-  } = e, c = (0, l.default)(t), E = t.application, f = (0, a.useUsernameHook)({
+  } = e, c = (0, a.default)(t), E = t.application, f = (0, l.useUsernameHook)({
     user: t.author,
     channelId: n.id,
     guildId: n.guild_id,

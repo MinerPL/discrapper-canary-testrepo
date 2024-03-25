@@ -28,7 +28,7 @@ let I = "recentMentionFilterSettings",
   A = {},
   M = !1,
   v = !0,
-  R = i.default.get(I, {
+  R = i.Storage.get(I, {
     guildFilter: T.RecentMentionsFilters.ALL_SERVERS,
     everyoneFilter: !0,
     roleFilter: !0
@@ -91,7 +91,7 @@ function U(e) {
   let t = {
     ...R
   };
-  R = l.defaults(l.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), R), i.default.set(I, R);
+  R = l.defaults(l.pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), R), i.Storage.set(I, R);
   let n = (e, n) => t[e] !== R[e] && R[e] === n,
     a = n("guildFilter", T.RecentMentionsFilters.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
   A = {};

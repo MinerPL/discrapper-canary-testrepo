@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("627445"),
   a = n.n(s),
   l = n("597755"),
-  i = n.n(l),
-  r = n("742270"),
+  r = n.n(l),
+  i = n("742270"),
   u = n("815157"),
   o = n("391679"),
   d = n("393414"),
@@ -21,11 +21,11 @@ var s = n("627445"),
 function h(e) {
   let t = function(e) {
       var t;
-      let n = null === (t = i.os) || void 0 === t ? void 0 : t.family;
+      let n = null === (t = r.os) || void 0 === t ? void 0 : t.family;
       if ("Android" === n || "iOS" === n) {
         let t = c.default.getFingerprint(),
           n = (0, u.generateAttemptId)();
-        return a(null != e, "generateAppPath: guildId cannot be null"), (0, u.default)((0, r.getInviteDynamicLinkTemplate)(e), {
+        return a(null != e, "generateAppPath: guildId cannot be null"), (0, u.default)((0, i.getInviteDynamicLinkTemplate)(e), {
           utmSource: "verify_hub_email",
           fingerprint: t,
           attemptId: n

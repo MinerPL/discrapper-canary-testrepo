@@ -18,8 +18,8 @@ var i = n("917351"),
   A = n("870691"),
   C = n("42203"),
   T = n("816092"),
-  S = n("546463"),
-  I = n("957255"),
+  I = n("546463"),
+  S = n("957255"),
   f = n("660478"),
   N = n("18494"),
   O = n("282109"),
@@ -37,7 +37,7 @@ function G() {
   return h = e, g = t, b.clear()
 }
 
-function m(e) {
+function M(e) {
   let {
     guild: {
       id: t
@@ -46,7 +46,7 @@ function m(e) {
   return b.clearGuildId(t)
 }
 
-function M(e) {
+function m(e) {
   let {
     channel: {
       guild_id: t
@@ -122,7 +122,7 @@ function Y(e) {
 }
 class w extends l.default.Store {
   initialize() {
-    this.waitFor(r.default, _.default, A.default, C.default, T.default, a.default, S.default, s.default, d.default, E.default, I.default, f.default, N.default, O.default, c.default)
+    this.waitFor(r.default, _.default, A.default, C.default, T.default, a.default, I.default, s.default, d.default, E.default, S.default, f.default, N.default, O.default, c.default)
   }
   getGuild(e, t) {
     let n = b.getGuild(e, t);
@@ -179,8 +179,8 @@ var W = new w(u.default, {
     } = e;
     return b.clearGuildId(null === (t = C.default.getChannel(n)) || void 0 === t ? void 0 : t.guild_id)
   },
-  CHANNEL_CREATE: M,
-  CHANNEL_DELETE: M,
+  CHANNEL_CREATE: m,
+  CHANNEL_DELETE: m,
   CHANNEL_LOCAL_ACK: U,
   CHANNEL_MUTE_EXPIRED: P,
   CHANNEL_RTC_UPDATE_CHAT_OPEN: U,
@@ -232,8 +232,8 @@ var W = new w(u.default, {
   GAMES_DATABASE_FETCH: F,
   GAMES_DATABASE_UPDATE: F,
   GUILD_APPLICATIONS_FETCH_SUCCESS: F,
-  GUILD_CREATE: m,
-  GUILD_DELETE: m,
+  GUILD_CREATE: M,
+  GUILD_DELETE: M,
   GUILD_FEED_FETCH_SUCCESS: F,
   GUILD_MEMBER_UPDATE: function(e) {
     let {
@@ -252,7 +252,7 @@ var W = new w(u.default, {
   GUILD_SCHEDULED_EVENT_DELETE: Y,
   GUILD_SCHEDULED_EVENT_UPDATE: Y,
   GUILD_TOGGLE_COLLAPSE_MUTED: P,
-  GUILD_UPDATE: m,
+  GUILD_UPDATE: M,
   IMPERSONATE_STOP: P,
   IMPERSONATE_UPDATE: P,
   LOAD_CHANNELS: function(e) {

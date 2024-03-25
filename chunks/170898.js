@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("298386"),
   o = n("77078"),
   u = n("812204"),
@@ -26,18 +26,18 @@ function S(e) {
   let {
     attachmentProps: t,
     channelType: n,
-    children: a
-  } = e, [S, A] = l.useState(!1), C = l.useRef(null), h = E.default.getCurrentUser(), g = (0, T.isPremiumExactly)(h, m.PremiumTypes.TIER_2), M = I.NitroBrandedAttachmentExperiment.useExperiment({
+    children: l
+  } = e, [S, A] = a.useState(!1), C = a.useRef(null), h = E.default.getCurrentUser(), g = (0, T.isPremiumExactly)(h, m.PremiumTypes.TIER_2), M = I.NitroBrandedAttachmentExperiment.useExperiment({
     location: "PremiumAttachmentWrapper"
   }, {
     autoTrackExposure: !1
   }).enabled, {
     analyticsLocations: O
   } = (0, d.default)(u.default.CHANNEL_TEXT_AREA, u.default.MESSAGE_ATTACHMENT), R = t.map(e => e.attachment.size).sort().pop(), v = r.ChannelTypesSets.GUILD.has(n) ? 104857600 : 26214400;
-  if (l.useEffect(() => () => {
+  if (a.useEffect(() => () => {
       null != C.current && clearTimeout(C.current)
     }, []), null == R || R < v) return (0, s.jsx)(s.Fragment, {
-    children: a
+    children: l
   });
   let L = t.filter(e => (0, _.isMediaAttachment)((0, _.getAttachmentKind)(e.attachment, e.inlineMedia))).length > 0,
     P = e => {
@@ -61,9 +61,9 @@ function S(e) {
       onMouseEnter: () => P(!0),
       onBlur: D,
       onMouseLeave: D,
-      children: L ? a : (0, s.jsx)("div", {
+      children: L ? l : (0, s.jsx)("div", {
         className: p.negativeTop,
-        children: a
+        children: l
       })
     }), (0, s.jsx)("div", {
       className: p.extraNitroPill,

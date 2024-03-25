@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("446674"),
-  a = n("803816"),
+var a = n("446674"),
+  l = n("803816"),
   i = n("685665"),
   r = n("653047"),
   o = n("671071"),
@@ -24,7 +24,7 @@ var l = n("446674"),
       hideParty: T
     } = e, {
       analyticsLocations: I
-    } = (0, i.default)(), m = (0, l.useStateFromStores)([u.default], () => u.default.getId()), N = (0, l.useStateFromStores)([d.default], () => {
+    } = (0, i.default)(), m = (0, a.useStateFromStores)([u.default], () => u.default.getId()), N = (0, a.useStateFromStores)([d.default], () => {
       if (null == _.application) return d.default.findActivity(_.author.id, e => e.type === c.ActivityTypes.LISTENING);
       {
         var e;
@@ -32,7 +32,7 @@ var l = n("446674"),
         return (null === (e = _.activity) || void 0 === e ? void 0 : e.type) === c.ActivityActionTypes.JOIN_REQUEST && (t = t === m && n.isPrivate() ? n.getRecipientId() : m), d.default.getApplicationActivity(t, _.application.id)
       }
     }, [_, n, m]);
-    return (0, s.jsx)(a.default, {
+    return (0, s.jsx)(l.default, {
       className: f.container,
       activity: N,
       activityActionType: null != _.activity ? _.activity.type : null,

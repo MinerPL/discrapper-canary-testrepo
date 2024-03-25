@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return P
   }
 }), n("70102"), n("222007");
-var s, l, a = n("37983"),
+var s, a, l = n("37983"),
   i = n("884691"),
   r = n("446674"),
   o = n("669491"),
@@ -26,7 +26,7 @@ var s, l, a = n("37983"),
   g = n("49111"),
   M = n("782340"),
   O = n("176153");
-(l = s || (s = {})).PLAY = "play", l.NOW_PLAYING = "now_playing", l.INSTALL = "install", l.UPDATE = "update", l.PAUSED = "paused", l.LOCATE = "locate", l.UNINSTALLING = "uninstalling", l.QUEUED = "queued", l.DOWNLOADING = "downloading", l.UNSUPPORTED_OS = "unsupported_os", l.ADD_TO_LIBRARY = "add_to_library", l.PREORDER_WAIT = "preorder_wait";
+(a = s || (s = {})).PLAY = "play", a.NOW_PLAYING = "now_playing", a.INSTALL = "install", a.UPDATE = "update", a.PAUSED = "paused", a.LOCATE = "locate", a.UNINSTALLING = "uninstalling", a.QUEUED = "queued", a.DOWNLOADING = "downloading", a.UNSUPPORTED_OS = "unsupported_os", a.ADD_TO_LIBRARY = "add_to_library", a.PREORDER_WAIT = "preorder_wait";
 let R = Object.freeze({
     [g.LibraryApplicationActions.PLAY]: "play",
     [g.LibraryApplicationActions.INSTALL]: "install",
@@ -86,20 +86,20 @@ class L extends i.Component {
       fullWidth: t,
       size: n,
       color: s,
-      customDisabledColor: l,
+      customDisabledColor: a,
       isPlayShiny: i,
       onDropdownOpen: r,
       onDropdownClose: o,
       analyticsListSort: u,
       analyticsListIndex: d
     } = this.props;
-    return (0, a.jsx)(h.default, {
+    return (0, l.jsx)(h.default, {
       applicationId: e.id,
       libraryApplication: e,
       fullWidth: t,
       size: n,
       color: s,
-      customDisabledColor: l,
+      customDisabledColor: a,
       isShiny: i,
       onDropdownOpen: r,
       onDropdownClose: o,
@@ -111,23 +111,23 @@ class L extends i.Component {
     let {
       className: n,
       fullWidth: s,
-      size: l,
+      size: a,
       customDisabledColor: i,
       tooltipPosition: r
     } = this.props;
-    return (0, a.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: O.disabledButtonWrapper,
-      children: [(0, a.jsxs)(u.Button, {
+      children: [(0, l.jsxs)(u.Button, {
         className: n,
         fullWidth: s,
-        size: l,
+        size: a,
         color: null != i ? i : O.disabledButtonColor,
         disabled: !0,
         children: [this.getText(e), this.renderProgressBar()]
-      }), (0, a.jsx)(u.Tooltip, {
+      }), (0, l.jsx)(u.Tooltip, {
         text: t,
         position: r,
-        children: e => (0, a.jsx)("div", {
+        children: e => (0, l.jsx)("div", {
           className: O.disabledButtonOverlay,
           ...e
         })
@@ -143,7 +143,7 @@ class L extends i.Component {
     let n = p.convertToTransitionState(t);
     if (null == n) return null;
     let s = n.type === g.LocalDispatchApplicationStates.UNINSTALLING ? u.Progress.INDETERMINATE : p.calculateProgressPercentage(Number(n.progress), Number(n.total));
-    return (0, a.jsx)(u.Progress, {
+    return (0, l.jsx)(u.Progress, {
       percent: s,
       size: u.Progress.Sizes.XSMALL,
       foregroundColor: n.paused ? o.default.unsafe_rawColors.PRIMARY_500.css : o.default.unsafe_rawColors.GREEN_360.css,
@@ -155,14 +155,14 @@ class L extends i.Component {
     let {
       className: n,
       fullWidth: s,
-      size: l,
+      size: a,
       color: i,
       isCloudSyncing: r
     } = this.props;
-    return (0, a.jsxs)(u.Button, {
+    return (0, l.jsxs)(u.Button, {
       className: n,
       fullWidth: s,
-      size: l,
+      size: a,
       color: null != i ? i : u.Button.Colors.GREEN,
       hover: null != i ? u.Button.Hovers.GREEN : u.Button.Hovers.DEFAULT,
       submitting: "uninstalling" === e || r,
@@ -226,12 +226,12 @@ class L extends i.Component {
 function P(e) {
   let {
     libraryApplication: t
-  } = e, n = (0, c.useAnalyticsContext)(), [s, l] = (0, r.useStateFromStoresArray)([m.default, N.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, m.default, N.default), m.default.getState(t.id, t.branchId)], [t]), i = (0, r.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), o = (0, r.useStateFromStores)([_.default], () => _.default.hasNoBuild(t.id, t.branchId), [t]);
-  return (0, a.jsx)(L, {
+  } = e, n = (0, c.useAnalyticsContext)(), [s, a] = (0, r.useStateFromStoresArray)([m.default, N.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, m.default, N.default), m.default.getState(t.id, t.branchId)], [t]), i = (0, r.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), o = (0, r.useStateFromStores)([_.default], () => _.default.hasNoBuild(t.id, t.branchId), [t]);
+  return (0, l.jsx)(L, {
     ...e,
     analyticsContext: n,
     actionState: s,
-    dispatchState: l,
+    dispatchState: a,
     isCloudSyncing: i,
     hasNoBuild: o
   })

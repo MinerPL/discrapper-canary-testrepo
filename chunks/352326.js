@@ -38,7 +38,7 @@ function b() {
     paused: N,
     userActions: Array.from(P)
   };
-  d.default.set(A, e)
+  d.Storage.set(A, e)
 }
 
 function U() {
@@ -112,7 +112,7 @@ function B() {
 class H extends u.default.Store {
   initialize() {
     var e;
-    let t = null !== (e = d.default.get(A)) && void 0 !== e ? e : {
+    let t = null !== (e = d.Storage.get(A)) && void 0 !== e ? e : {
       queue: null,
       paused: null,
       userActions: null
@@ -239,6 +239,6 @@ var Y = new H(c.default, {
     (0, p.isDesktop)() && x()
   },
   LOGOUT: function() {
-    d.default.remove(A), (0, p.isDesktop)() && m.default.pause()
+    d.Storage.remove(A), (0, p.isDesktop)() && m.default.pause()
   }
 })

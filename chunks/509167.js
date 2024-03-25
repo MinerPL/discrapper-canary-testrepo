@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("748820"),
-  a = n("77078"),
+var a = n("748820"),
+  l = n("77078"),
   i = n("112679"),
   r = n("55689"),
   o = n("599110"),
@@ -22,25 +22,25 @@ function d(e) {
     analyticsLocations: f,
     analyticsLocationObject: _,
     contextKey: T
-  } = e, I = !1, m = (0, l.v4)();
-  (0, a.openModalLazy)(async () => {
+  } = e, I = !1, m = (0, a.v4)();
+  (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("405314").then(n.bind(n, "405314"));
     return n => {
       let {
-        onClose: l,
-        ...a
+        onClose: a,
+        ...l
       } = n;
       return (0, s.jsx)(e, {
-        ...a,
+        ...l,
         loadId: m,
         applicationId: t,
         skuId: d,
         analyticsLocations: f,
         analyticsLocationObject: _,
         onClose: e => {
-          l(), null == c || c(e)
+          a(), null == c || c(e)
         },
         onComplete: e => {
           I = !0, null == E || E(e)

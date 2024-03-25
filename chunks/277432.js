@@ -45,7 +45,7 @@ var i = n("37983"),
       name: b.emoji_name
     } : null), [k, W] = r.useState(!1), Z = (0, l.useStateFromStores)([E.default], () => (null == B ? void 0 : B.id) != null ? E.default.getUsableCustomEmojiById(B.id) : null), z = (0, l.useStateFromStores)([v.default], () => v.default.getChannels(y)[v.GUILD_SELECTABLE_CHANNELS_KEY], [y]), Y = (0, l.useStateFromStores)([g.default], () => g.default.get(y)), K = null !== (n = null == Y ? void 0 : null === (t = Y.welcome_channels) || void 0 === t ? void 0 : t.map(e => e.channel_id)) && void 0 !== n ? n : [], [J, X] = r.useState(!1);
     r.useEffect(() => {
-      !s.default.get(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => X(!0), 300)
+      !s.Storage.get(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY) && setTimeout(() => X(!0), 300)
     }, []);
     let q = [];
     z.forEach(e => {
@@ -76,7 +76,7 @@ var i = n("37983"),
         })
       },
       et = r.useCallback(() => {
-        s.default.set(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1)
+        s.Storage.set(x.WELCOME_EMOJI_TOOLTIP_STORAGE_KEY, !0), X(!1)
       }, []);
     return (0, i.jsx)(u.default, {
       page: L.AnalyticsPages.CHANNEL_WELCOME_CREATE_MODAL,

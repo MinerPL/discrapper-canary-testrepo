@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("446674"),
-  a = n("151426"),
+var a = n("446674"),
+  l = n("151426"),
   i = n("77078"),
   r = n("327037"),
   o = n("79112"),
@@ -38,23 +38,23 @@ let x = e => {
   let {
     dismissibleContent: t,
     noticeType: x
-  } = e, y = (0, l.useStateFromStores)([A.default], () => A.default.getNotice()), U = (0, l.useStateFromStores)([S.default], () => S.default.locale);
+  } = e, y = (0, a.useStateFromStores)([A.default], () => A.default.getNotice()), U = (0, a.useStateFromStores)([S.default], () => S.default.locale);
   return (0, s.jsx)(M.default, {
     contentTypes: [t],
     groupName: O.DismissibleContentGroupName.NOTICE_BAR,
     bypassAutoDismiss: !0,
     children: e => {
-      var t, l;
+      var t, a;
       let {
         visibleContent: S,
         markAsDismissed: A
       } = e;
       switch (S) {
-        case a.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR:
+        case l.DismissibleContent.GUILD_ONBOARDING_UPSELL_NAGBAR:
           return (0, s.jsx)(_.default, {
             dismissCurrentNotice: () => A(O.ContentDismissActionType.UNKNOWN)
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD:
+        case l.DismissibleContent.NAGBAR_NOTICE_DOWNLOAD:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.DEFAULT,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -82,7 +82,7 @@ let x = e => {
               children: P.default.Messages.DOWNLOAD
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY:
+        case l.DismissibleContent.NAGBAR_NOTICE_CONNECT_SPOTIFY:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.SPOTIFY,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -96,7 +96,7 @@ let x = e => {
               children: P.default.Messages.CONNECT
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
+        case l.DismissibleContent.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.PLAYSTATION,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -110,7 +110,7 @@ let x = e => {
               children: P.default.Messages.CONNECT
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP:
+        case l.DismissibleContent.NAGBAR_NOTICE_MFA_SMS_BACKUP:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.DEFAULT,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -122,7 +122,7 @@ let x = e => {
               children: P.default.Messages.NOTICE_MFA_SMS_BACKUP_BUTTON
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO:
+        case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.PREMIUM_TIER_2,
             children: [(0, s.jsx)("span", {
@@ -147,17 +147,17 @@ let x = e => {
               noticeType: x
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
+        case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
           return (0, s.jsx)(N.default, {
             dismissCurrentNotice: () => A(O.ContentDismissActionType.UNKNOWN),
             subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
+        case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
           return (0, s.jsx)(N.default, {
             dismissCurrentNotice: () => A(O.ContentDismissActionType.UNKNOWN),
             subscriptionTier: L.PremiumSubscriptionSKUs.TIER_0
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
+        case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.PREMIUM_TIER_2,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -171,27 +171,27 @@ let x = e => {
               children: P.default.Messages.PREMIUM_SUBSCRIPTION_REACTIVATION_NOTICE_BUTTON_TEXT
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_LOCALIZED_PRICING:
+        case l.DismissibleContent.NAGBAR_NOTICE_LOCALIZED_PRICING:
           return (0, s.jsx)(m.default, {
             notice: y,
             noticeType: x,
             dismissCurrentNotice: () => A(O.ContentDismissActionType.UNKNOWN)
           });
-        case a.DismissibleContent.QUEST_1_GO_LIVE_BANNER:
+        case l.DismissibleContent.QUEST_1_GO_LIVE_BANNER:
           let M = null == y ? void 0 : null === (t = y.metadata) || void 0 === t ? void 0 : t.partnerGame;
           return (0, s.jsx)(f.default, {
             noticeType: x,
             markAsDismissed: () => A(O.ContentDismissActionType.UNKNOWN),
             partnerGame: M
           });
-        case a.DismissibleContent.QUEST_1_ENDED_INCOMPLETE:
-          let j = null == y ? void 0 : null === (l = y.metadata) || void 0 === l ? void 0 : l.partnerGame;
+        case l.DismissibleContent.QUEST_1_ENDED_INCOMPLETE:
+          let j = null == y ? void 0 : null === (a = y.metadata) || void 0 === a ? void 0 : a.partnerGame;
           return (0, s.jsx)(E.default, {
             noticeType: x,
             markAsDismissed: () => A(O.ContentDismissActionType.UNKNOWN),
             partnerGame: j
           });
-        case a.DismissibleContent.NAGBAR_BOUNCED_EMAIL_NOTICE:
+        case l.DismissibleContent.NAGBAR_BOUNCED_EMAIL_NOTICE:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.DANGER,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -205,7 +205,7 @@ let x = e => {
               children: P.default.Messages.CHANGE_EMAIL_SHORT
             })]
           });
-        case a.DismissibleContent.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
+        case l.DismissibleContent.NAGBAR_ACTIVATE_SERVER_SUBSCRIPTION:
           let b = c.default.getEligibleGuildsForNagActivate();
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.DEFAULT,
@@ -220,7 +220,7 @@ let x = e => {
               children: P.default.Messages.LETS_GO
             })]
           });
-        case a.DismissibleContent.NAGBAR_NOTICE_POMELO:
+        case l.DismissibleContent.NAGBAR_NOTICE_POMELO:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.WARNING,
             children: [(0, s.jsx)(h.NoticeCloseButton, {
@@ -232,7 +232,7 @@ let x = e => {
               children: P.default.Messages.GET_STARTED
             })]
           });
-        case a.DismissibleContent.UU_MIGRATION_NOTICE:
+        case l.DismissibleContent.UU_MIGRATION_NOTICE:
           return (0, s.jsxs)(h.default, {
             color: h.NoticeColors.WARNING,
             children: [(0, s.jsx)(h.NoticeCloseButton, {

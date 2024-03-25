@@ -17,7 +17,7 @@ let c = "publicUpsellChannelNoticeGuilds",
 class E extends a.default.Store {
   initialize() {
     var e;
-    this.waitFor(o.default, r.default, i.default), this.syncWith([o.default, r.default, i.default], d.NOOP), f = (e = new Set(s.default.get(c)), e)
+    this.waitFor(o.default, r.default, i.default), this.syncWith([o.default, r.default, i.default], d.NOOP), f = (e = new Set(s.Storage.get(c)), e)
   }
   isVisible(e) {
     if (null == e) return;
@@ -29,6 +29,6 @@ E.displayName = "EnablePublicGuildUpsellNoticeStore";
 var h = new E(l.default, {
   PUBLIC_UPSELL_NOTICE_DISMISS: function(e) {
     let t = e.guildId;
-    if (!f.has(t)) return f.add(t), s.default.set(c, f), !0
+    if (!f.has(t)) return f.add(t), s.Storage.set(c, f), !0
   }
 })

@@ -12,7 +12,7 @@ let a = "GuildNSFWAgreeStore",
 class l extends i.default.Store {
   initialize() {
     var e;
-    o = null !== (e = s.default.get(a)) && void 0 !== e ? e : o
+    o = null !== (e = s.Storage.get(a)) && void 0 !== e ? e : o
   }
   didAgree(e) {
     return null != e && (o[e] || !1)
@@ -24,6 +24,6 @@ var u = new l(r.default, {
     let {
       guildId: t
     } = e;
-    o[t] = !0, s.default.set(a, o)
+    o[t] = !0, s.Storage.set(a, o)
   }
 })

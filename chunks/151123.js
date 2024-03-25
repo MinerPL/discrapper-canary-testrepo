@@ -73,8 +73,8 @@ function j(e) {
     selectedUserIds: E,
     addUsers: j,
     clearSelection: v
-  } = (0, _.default)(t), D = n.requireUnusualDmActivity || n.requireCommunicationDisabled || n.requireUnusualAccountActivity || n.requireUsernameQuarantined, b = n.selectedRoleIds.size > 0, O = null != n.selectedJoinDateOption.afterDate, B = n.selectedSort === f.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, V = null != n.selectedAccountAgeOption.afterDate, F = n.selectedSort === f.OrderBy.ORDER_BY_USER_ID_ASC || n.selectedSort === f.OrderBy.ORDER_BY_USER_ID_DESC, y = null != n.selectedSourceInviteCode && "" !== n.selectedSourceInviteCode, U = null != n.selectedJoinSourceType, w = y || U, [k, P] = s.useState(null == u.default.get(R, null)), Z = s.useCallback(() => {
-    u.default.set(R, Date.now()), P(!1)
+  } = (0, _.default)(t), D = n.requireUnusualDmActivity || n.requireCommunicationDisabled || n.requireUnusualAccountActivity || n.requireUsernameQuarantined, b = n.selectedRoleIds.size > 0, O = null != n.selectedJoinDateOption.afterDate, B = n.selectedSort === f.OrderBy.ORDER_BY_GUILD_JOINED_AT_ASC, V = null != n.selectedAccountAgeOption.afterDate, F = n.selectedSort === f.OrderBy.ORDER_BY_USER_ID_ASC || n.selectedSort === f.OrderBy.ORDER_BY_USER_ID_DESC, y = null != n.selectedSourceInviteCode && "" !== n.selectedSourceInviteCode, U = null != n.selectedJoinSourceType, w = y || U, [k, P] = s.useState(null == u.Storage.get(R, null)), Z = s.useCallback(() => {
+    u.Storage.set(R, Date.now()), P(!1)
   }, []), Y = (0, M.useCanAccessBulkBanningFeature)(t), G = s.useMemo(() => l.filter(e => (0, M.canBulkBanUser)(t, Y, e)), [Y, l, t]), J = G.length > 0, q = G.filter(e => !E.has(e)), z = 0 === q.length, K = s.useCallback(() => {
     J && (z ? v() : j(G))
   }, [J, z, v, j, G]);

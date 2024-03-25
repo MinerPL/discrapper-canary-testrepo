@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("550368"),
-  l = n("954016");
+  a = n("954016");
 
-function a(e, t) {
-  return null == e || null == e.assets || null == e.assets.large_image ? null : (0, s.getAssetImage)(t, e.assets.large_image, [l.ACTIVITY_INVITE_COVER_IMAGE_SIZE, l.ACTIVITY_INVITE_COVER_IMAGE_SIZE])
+function l(e, t) {
+  return null == e || null == e.assets || null == e.assets.large_image ? null : (0, s.getAssetImage)(t, e.assets.large_image, [a.ACTIVITY_INVITE_COVER_IMAGE_SIZE, a.ACTIVITY_INVITE_COVER_IMAGE_SIZE])
 }

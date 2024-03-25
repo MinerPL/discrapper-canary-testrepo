@@ -6,25 +6,25 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
+var a = n("414456"),
+  l = n.n(a),
   i = n("77078"),
   r = n("503496"),
   o = e => {
     let {
       renderTitle: t,
       renderTagline: n,
-      renderActions: l,
+      renderActions: a,
       renderMedia: o,
       className: u,
       isHorizontal: d = !1
     } = e;
     return (0, s.jsxs)("div", {
-      className: a(r.tile, {
+      className: l(r.tile, {
         [r.tileHorizontal]: d
       }, u),
       children: [(0, s.jsx)("div", {
-        className: a(r.media, {
+        className: l(r.media, {
           [r.mediaHorizontal]: d
         }),
         children: null == o ? void 0 : o()
@@ -38,7 +38,7 @@ var l = n("414456"),
           children: null == n ? void 0 : n()
         }), (0, s.jsx)("div", {
           className: r.actions,
-          children: null == l ? void 0 : l()
+          children: null == a ? void 0 : a()
         })]
       })]
     })

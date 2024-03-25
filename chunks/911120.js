@@ -20,13 +20,13 @@ var a = n("37983"),
 let C = "isHideDevBanner";
 var S = () => {
   var e;
-  let [t, n] = (0, s.useState)((null === (e = o.default.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), l = (0, r.useStateFromStores)([d.default], () => {
+  let [t, n] = (0, s.useState)((null === (e = o.Storage.get(C, "false")) || void 0 === e ? void 0 : e.toString()) === "true"), l = (0, r.useStateFromStores)([d.default], () => {
     var e;
     return (0, c.probablyHasBuildOverride)() ? null === (e = d.default.getCurrentBuildOverride().overrides) || void 0 === e ? void 0 : e.discord_web : null
   });
   if (t) return null;
   let S = () => {
-      o.default.set(C, !0), n(!0)
+      o.Storage.set(C, !0), n(!0)
     },
     I = () => (0, a.jsx)(u.Clickable, {
       onClick: S,
@@ -48,7 +48,7 @@ var S = () => {
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "278320"
+      buildNumber: "278409"
     }), (0, a.jsx)(I, {})]
   }) : null
 }

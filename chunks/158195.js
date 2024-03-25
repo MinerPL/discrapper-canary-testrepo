@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("884691"),
-  l = n("404118"),
-  a = n("448993"),
+  a = n("404118"),
+  l = n("448993"),
   i = n("242278"),
   r = n("153587"),
   o = n("782340");
@@ -25,8 +25,8 @@ function u(e, t) {
         });
         await r.download(s)
       } catch (t) {
-        let e = t instanceof a.APIError ? t.getAnyErrorMessage() : void 0;
-        l.default.show({
+        let e = t instanceof l.APIError ? t.getAnyErrorMessage() : void 0;
+        a.default.show({
           title: o.default.Messages.ERROR_GENERIC_TITLE,
           body: null != e ? e : o.default.Messages.GENERIC_ERROR_BODY
         })

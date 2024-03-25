@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return h
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,19 +17,19 @@ var a = n("37983"),
   N = n("476263"),
   E = n("466857"),
   m = n("587974"),
-  f = n("315102"),
-  I = n("238055"),
+  I = n("315102"),
+  f = n("238055"),
   C = n("782340"),
   T = n("69012"),
   S = n("529861");
 
-function h(e) {
+function g(e) {
   var t;
   let {
     guildInfo: n,
     onClick: s,
     submitting: l
-  } = e, i = null !== (t = f.default.getGuildIconURL({
+  } = e, i = null !== (t = I.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
@@ -60,24 +60,24 @@ function h(e) {
     })]
   })
 }
-var g = e => {
+var h = e => {
   let {
     setStep: t,
     email: n,
     guildsInfo: l,
     setGuildId: r,
     forceGuildScrollHeight: _
-  } = e, [N, m] = s.useState(null), [f, S] = s.useState(void 0), [g, p] = s.useState(null), x = e => async () => {
+  } = e, [N, m] = s.useState(null), [I, S] = s.useState(void 0), [h, p] = s.useState(null), x = e => async () => {
     m(null), r(e), p(e);
     try {
-      await d.default.sendVerificationEmail(n, !0, e), t(I.HubEmailConnectionSteps.VERIFY_PIN)
+      await d.default.sendVerificationEmail(n, !0, e), t(f.HubEmailConnectionSteps.VERIFY_PIN)
     } catch (e) {
       m(new u.APIError(e))
     } finally {
       p(null)
     }
-  }, v = () => t(I.HubEmailConnectionSteps.SUBMIT_SCHOOL), A = l;
-  return null != f && "" !== f && (A = l.filter(e => o(f.toLowerCase(), e.name.toLowerCase()))), (0, a.jsxs)("div", {
+  }, v = () => t(f.HubEmailConnectionSteps.SUBMIT_SCHOOL), A = l;
+  return null != I && "" !== I && (A = l.filter(e => o(I.toLowerCase(), e.name.toLowerCase()))), (0, a.jsxs)("div", {
     className: T.container,
     children: [(0, a.jsx)(c.Heading, {
       className: i(T.centerText, T.header),
@@ -109,7 +109,7 @@ var g = e => {
             S(e)
           },
           label: C.default.Messages.SEARCH,
-          searchTerm: f,
+          searchTerm: I,
           onClear: () => {
             S(void 0)
           }
@@ -120,10 +120,10 @@ var g = e => {
         })]
       }), A.length > 0 ? (0, a.jsx)(c.ScrollerThin, {
         className: T.scroller,
-        children: A.map(e => void 0 === e ? null : (0, a.jsx)(h, {
+        children: A.map(e => void 0 === e ? null : (0, a.jsx)(g, {
           guildInfo: e,
           onClick: x(e.id),
-          submitting: g === e.id
+          submitting: h === e.id
         }, e.id))
       }) : (0, a.jsx)("div", {
         className: T.noResultsContainer,

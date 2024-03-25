@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return a
   }
 });
 var s = n("913144"),
-  l = {
+  a = {
     clearRemoteDisconnectVoiceChannelId() {
       s.default.dispatch({
         type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID"

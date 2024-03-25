@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("158195");
+var a = n("77078"),
+  l = n("158195");
 
 function i(e) {
   let {
@@ -18,8 +18,8 @@ function i(e) {
   } = e, {
     isLoading: o,
     downloadAttachment: u
-  } = (0, a.default)(t, n);
-  return (0, s.jsx)(l.Button, {
+  } = (0, l.default)(t, n);
+  return (0, s.jsx)(a.Button, {
     ...r,
     submitting: o,
     onClick: function() {

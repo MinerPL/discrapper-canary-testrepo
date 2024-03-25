@@ -11,8 +11,8 @@ var a = n("37983");
 n("884691");
 var r = n("77078"),
   s = n("913144"),
-  i = n("697218"),
-  l = n("599110"),
+  l = n("697218"),
+  i = n("599110"),
   u = n("773336"),
   o = n("180748"),
   d = n("206230"),
@@ -21,8 +21,8 @@ let f = window.matchMedia("(prefers-reduced-motion: reduce)"),
   h = window.matchMedia("(prefers-contrast: more)"),
   E = window.matchMedia("(prefers-contrast: less)"),
   p = window.matchMedia("(prefers-color-scheme: dark)"),
-  m = window.matchMedia("(prefers-color-scheme: light)"),
-  C = window.matchMedia("(forced-colors: active)"),
+  C = window.matchMedia("(prefers-color-scheme: light)"),
+  m = window.matchMedia("(forced-colors: active)"),
   S = 5;
 
 function g() {
@@ -30,22 +30,22 @@ function g() {
 }
 var _ = {
   initBasic() {
-    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
+    f.addListener(this.handleSystemPrefersReducedMotionChanged), this.handleSystemPrefersReducedMotionChanged(f), p.addListener(this.handleSystemColorPreferencesChanged), C.addListener(this.handleSystemColorPreferencesChanged), m.addListener(this.handleSystemColorPreferencesChanged), this.handleSystemColorPreferencesChanged(), h.addListener(this.handleSystemPrefersContrastChanged), E.addListener(this.handleSystemPrefersContrastChanged), this.handleSystemPrefersContrastChanged()
   },
   init() {
     this.initBasic(), s.default.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
-      l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+      i.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
         colorblind_enabled: d.default.colorblindMode
       })
     }), s.default.subscribe("ACCESSIBILITY_SET_SATURATION", e => {
-      l.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
+      i.default.track(c.AnalyticEvents.LOCAL_SETTINGS_UPDATED, {
         saturation_level: e.saturation
       })
     })
   },
   maybeShowKeyboardNavigationExplainerModal() {
     S = Math.max(S - 1, 0), ! function() {
-      let e = i.default.getCurrentUser();
+      let e = l.default.getCurrentUser();
       return null == e || Date.now() - +e.createdAt < 864e5
     }() && !d.default.keyboardNavigationExplainerModalSeen && 0 === S && (0, r.openModalLazy)(async () => {
       let {
@@ -63,9 +63,9 @@ var _ = {
   },
   handleSystemColorPreferencesChanged() {
     let e;
-    p.matches ? e = c.ThemeTypes.DARK : m.matches && (e = c.ThemeTypes.LIGHT);
+    p.matches ? e = c.ThemeTypes.DARK : C.matches && (e = c.ThemeTypes.LIGHT);
     let t = !u.isPlatformEmbedded || g(),
-      n = t && C.matches ? "active" : "none";
+      n = t && m.matches ? "active" : "none";
     s.default.wait(() => {
       o.systemColorPreferencesChanged(e, n)
     })

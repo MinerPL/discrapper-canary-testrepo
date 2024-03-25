@@ -33,7 +33,7 @@ function E(e, t, s) {
   null != e && (e[t] = null != s && "" !== s ? s : null)
 }
 
-function C(e) {
+function g(e) {
   let t = [];
   if (null == e || !(0, o.isPrivate)(e.type)) return t;
   let {
@@ -45,7 +45,7 @@ function C(e) {
   }), t
 }
 
-function g(e, t) {
+function C(e, t) {
   let s = [];
   return e.forEach(e => {
     let l = y(e.user);
@@ -168,7 +168,7 @@ class A extends a.default {
         guilds: t
       } = e;
       setTimeout(() => {
-        let e = n.flatMap(t, e => g(e.members, e.id));
+        let e = n.flatMap(t, e => C(e.members, e.id));
         this.updateUsers(e)
       }, 3e3)
     }, this._handleOverlayInitialize = e => {
@@ -200,13 +200,13 @@ class A extends a.default {
       } = e, {
         members: s
       } = t;
-      this.updateUsers(g(s, t.id))
+      this.updateUsers(C(s, t.id))
     }, this._handleGuildMembersChunk = e => {
       let {
         members: t,
         guildId: s
       } = e;
-      this.updateUsers(g(t, s))
+      this.updateUsers(C(t, s))
     }, this._handleGuildMemberUpdate = e => {
       let {
         guildId: t,
@@ -215,7 +215,7 @@ class A extends a.default {
       } = e, i = y(s);
       null != i && (E(i, t, l), this.updateUsers([i]))
     }, this._handlePassiveUpdateV1 = e => {
-      null != e.members && this.updateUsers(g(e.members, e.guildId))
+      null != e.members && this.updateUsers(C(e.members, e.guildId))
     }, this._handleRelationshipAdd = e => {
       let t = y(e.relationship.user);
       this.updateUsers([t])
@@ -230,7 +230,7 @@ class A extends a.default {
         channel: {
           id: t
         }
-      } = e, s = C(h.default.getChannel(t));
+      } = e, s = g(h.default.getChannel(t));
       if (0 === s.length) return;
       let l = y(p.default.getCurrentUser());
       E(l, t), s.push(l), this.updateUsers(s)
@@ -239,7 +239,7 @@ class A extends a.default {
         channels: t
       } = e;
       for (let e of t) {
-        let t = C(h.default.getChannel(e.id));
+        let t = g(h.default.getChannel(e.id));
         if (0 === t.length) continue;
         let s = y(p.default.getCurrentUser());
         E(s, e.id), t.push(s), this.updateUsers(t)

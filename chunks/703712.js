@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   EasterEggPosition: function() {
-    return l
+    return a
   },
   EasterEggAnimation: function() {
     return k
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return w
   }
 }), n("222007");
-var s, l, a, i, r = n("37983"),
+var s, a, l, i, r = n("37983"),
   o = n("884691"),
   u = n("414456"),
   d = n.n(u),
@@ -32,7 +32,7 @@ var s, l, a, i, r = n("37983"),
   O = n("49111"),
   R = n("782340"),
   v = n("363790");
-(a = s || (s = {})).ENTER = "enter", a.CONFETTI = "confetti", a.LEAF_PEEL = "leaf_peel", a.LEAF_FALL = "leaf_fall", a.EXIT = "exit";
+(l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
 let L = {
   enter: {
     BEG: 0,
@@ -55,7 +55,7 @@ let L = {
     END: 200
   }
 };
-(i = l || (l = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
+(i = a || (a = {})).TOP_LEFT = "TOP_LEFT", i.TOP_RIGHT = "TOP_RIGHT", i.BOTTOM_LEFT = "BOTTOM_LEFT", i.BOTTOM_RIGHT = "BOTTOM_RIGHT";
 let P = ["TOP_LEFT", "TOP_RIGHT"],
   D = (0, f.cssValueToNumber)(_.default.USER_PREMIUM_GUILD_SUBSCRIPTION_EASTER_EGG_SIZE),
   x = {
@@ -139,9 +139,9 @@ function k(e) {
     onAnimationComplete: t,
     onClick: n,
     position: s,
-    size: a
+    size: l
   } = e, i = o.useRef(null), [u, f] = o.useState(null), [_] = o.useState(null != s ? s : function() {
-    let e = Math.floor(Math.random() * Object.keys(l).length);
+    let e = Math.floor(Math.random() * Object.keys(a).length);
     switch (e) {
       case 0:
         return "TOP_LEFT";
@@ -188,13 +188,13 @@ function k(e) {
           x: 0,
           y: 0
         };
-        let l = y[t],
-          a = l.getConfettiPosition(n);
+        let a = y[t],
+          l = a.getConfettiPosition(n);
         return {
-          x: s.left + a.x,
-          y: s.top + a.y
+          x: s.left + l.x,
+          y: s.top + l.y
         }
-      }(i.current, _, a);
+      }(i.current, _, l);
       I(t.x, t.y, {
         velocity: {
           type: "static-random",
@@ -209,7 +209,7 @@ function k(e) {
         }
       })
     }
-  }, [I, _, u, a]), o.useEffect(() => {
+  }, [I, _, u, l]), o.useEffect(() => {
     if (g && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
       C.createConfetti({
@@ -295,8 +295,8 @@ function w(e) {
   let t, {
       message: n,
       compact: s,
-      guild: l,
-      usernameHook: a,
+      guild: a,
+      usernameHook: l,
       onClickMessage: i
     } = e,
     u = function(e) {
@@ -322,8 +322,8 @@ function w(e) {
     } = o.useContext(T.AccessibilityPreferencesContext),
     P = (0, N.getMessageAuthor)(n),
     D = P.nick,
-    x = a(P);
-  t = null == u || null == l ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
+    x = l(P);
+  t = null == u || null == a ? d > 1 ? R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_MANY_HOOK.format({
     username: D,
     usernameHook: x,
     numSubscriptions: d
@@ -334,12 +334,12 @@ function w(e) {
     username: D,
     usernameHook: x,
     numSubscriptions: d,
-    guildName: l.name,
+    guildName: a.name,
     newTierName: (0, M.getTierName)(u)
   }) : R.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED_ACHIEVED_TIER_HOOK.format({
     username: D,
     usernameHook: x,
-    guildName: l.name,
+    guildName: a.name,
     newTierName: (0, M.getTierName)(u)
   });
   let y = o.useCallback(() => {

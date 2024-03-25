@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("305961");
+var a = n("77078"),
+  l = n("305961");
 
 function i(e) {
   let {
@@ -15,7 +15,7 @@ function i(e) {
     analyticsLocations: i,
     ...r
   } = e;
-  (0, l.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("341334").then(n.bind(n, "341334"));
@@ -23,7 +23,7 @@ function i(e) {
       ...t,
       ...r,
       analyticsLocations: i,
-      guildCount: a.default.getGuildCount(),
+      guildCount: l.default.getGuildCount(),
       "aria-labelledby": "nitro-guild-cap-upsell"
     })
   }, {

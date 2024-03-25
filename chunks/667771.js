@@ -125,7 +125,7 @@ function A(e) {
       let a = m.default.getGuild(t.getGuildId());
       if (null == a) return !1;
       if ((0, c.isOptInEnabledForGuild)(a.id) && E.default.can(_.Permissions.MANAGE_CHANNELS, a)) {
-        let e = "true" === s.default.get("doNotShowReorderModal");
+        let e = "true" === s.Storage.get("doNotShowReorderModal");
         return !e && (0, i.openModalLazy)(async () => {
           let {
             default: e

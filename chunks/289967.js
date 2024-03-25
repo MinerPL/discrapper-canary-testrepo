@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("65597"),
-  a = n("77078"),
+var a = n("65597"),
+  l = n("77078"),
   i = n("206230"),
   r = n("574073"),
   o = n("232259"),
@@ -23,7 +23,7 @@ function T(e) {
     guildId: t,
     user: n,
     username: r
-  } = e, o = (0, l.useStateFromStores)([i.default], () => !i.default.useReducedMotion), u = n.getAvatarURL(t, 56, o), d = (0, s.jsx)("img", {
+  } = e, o = (0, a.useStateFromStores)([i.default], () => !i.default.useReducedMotion), u = n.getAvatarURL(t, 56, o), d = (0, s.jsx)("img", {
     src: u,
     className: _.userAvatar,
     alt: ""
@@ -36,14 +36,14 @@ function T(e) {
     }),
     children: [(0, s.jsx)(c.default, {
       avatar: d
-    }), (0, s.jsx)(a.Text, {
+    }), (0, s.jsx)(l.Text, {
       className: _.thankYouText,
       tag: "p",
       color: "status-positive-text",
       variant: "heading-xl/medium",
       children: f.default.Messages.GUILD_PRODUCT_PURCHASE_THANK_YOU_CARD_TEXT.format({
         username: r,
-        usernameHook: (e, t) => (0, s.jsx)(a.Text, {
+        usernameHook: (e, t) => (0, s.jsx)(l.Text, {
           tag: "span",
           color: "status-positive-text",
           variant: "heading-xxl/extrabold",
@@ -56,7 +56,7 @@ function T(e) {
 }
 
 function I(e) {
-  var t, l, a;
+  var t, a, l;
   let {
     channel: i,
     message: c,
@@ -69,7 +69,7 @@ function I(e) {
   })(I), N = f.default.Messages.SYSTEM_MESSAGE_GUILD_PRODUCT_PURCHASE.format({
     username: I.nick,
     usernameHook: m,
-    productName: null !== (a = null === (l = c.purchaseNotification) || void 0 === l ? void 0 : null === (t = l.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== a ? a : "",
+    productName: null !== (l = null === (a = c.purchaseNotification) || void 0 === a ? void 0 : null === (t = a.guild_product_purchase) || void 0 === t ? void 0 : t.product_name) && void 0 !== l ? l : "",
     handleProductListingClick: () => {
       var e, t, n;
       (0, u.transitionTo)(E.Routes.GUILD_PRODUCT(i.guild_id, null !== (n = null === (t = c.purchaseNotification) || void 0 === t ? void 0 : null === (e = t.guild_product_purchase) || void 0 === e ? void 0 : e.listing_id) && void 0 !== n ? n : ""))

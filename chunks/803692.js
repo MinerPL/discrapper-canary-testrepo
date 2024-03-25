@@ -90,7 +90,7 @@ function O(e) {
     setSelectedTab: r,
     categoryTabs: _,
     handlePreviewDismiss: h
-  } = (0, L.useGuildShopDisplayContext)(), O = "false" === n.default.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"), v = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), G = _.map(e => {
+  } = (0, L.useGuildShopDisplayContext)(), O = "false" === n.Storage.get(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "false"), v = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), G = _.map(e => {
     switch (e) {
       case x.GuildShopTab.GUILD_PRODUCTS:
         return (0, l.jsx)(j, {
@@ -131,7 +131,7 @@ function O(e) {
           body: R.default.Messages.GUILD_STORE_PREVIEW_TAB_SELECTOR_BODY,
           selected: i === x.GuildShopTab.GUILD_PRODUCTS_PREVIEW,
           onClick: () => {
-            r(x.GuildShopTab.GUILD_PRODUCTS_PREVIEW), n.default.set(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "true")
+            r(x.GuildShopTab.GUILD_PRODUCTS_PREVIEW), n.Storage.set(g.GUILD_SHOP_PRODUCT_PREVIEW_TAB_CLICK, "true")
           },
           onPreviewDismiss: h,
           isNew: O

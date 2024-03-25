@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
+var a = n("414456"),
+  l = n.n(a),
   i = n("77078"),
   r = n("79112"),
   o = n("301259"),
@@ -39,7 +39,7 @@ function _() {
   } = (0, o.useQuestCardSize)();
   return (0, s.jsxs)("div", {
     ref: t => e.current = t,
-    className: a(c.container, {
+    className: l(c.container, {
       [c.wide]: "lg" === t,
       [c.tall]: "lg" !== t
     }),

@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("730290"),
-  i = n("759843"),
-  r = n("394846"),
+  r = n("759843"),
+  i = n("394846"),
   u = n("446674"),
   o = n("913144"),
   d = n("437822"),
@@ -62,8 +62,8 @@ let $ = (0, U.default)(w.default),
   es = (0, U.default)(F.default),
   ea = (0, U.default)(A.default),
   el = (0, U.default)(K.default),
-  ei = (0, U.default)(b.default),
-  er = (0, U.default)(G.default),
+  er = (0, U.default)(b.default),
+  ei = (0, U.default)(G.default),
   eu = (0, U.default)(J.default),
   eo = (0, U.default)(p.default),
   ed = (0, U.default)(Z.default),
@@ -81,8 +81,8 @@ class eT extends a.PureComponent {
       invite: s,
       location: a
     } = e, {
-      backgroundId: i
-    } = t, r = (0, l.parse)(a.search), u = null !== (n = r.redirect_to) && void 0 !== n ? n : null;
+      backgroundId: r
+    } = t, i = (0, l.parse)(a.search), u = null !== (n = i.redirect_to) && void 0 !== n ? n : null;
     (null == u || "" === u || !(0, P.isSafeRedirect)(u) || u.startsWith(q.Routes.ME)) && (u = null);
     let o = null;
     if (null == s) o = (0, x.getArtForPath)(u);
@@ -91,7 +91,7 @@ class eT extends a.PureComponent {
         guild: e,
         target_application: t
       } = s;
-      null != t ? null != i && (o = (0, L.getAssetImage)(t.id, i, 1024)) : null != e && "string" == typeof e.splash && (o = M.default.getGuildSplashURL({
+      null != t ? null != r && (o = (0, L.getAssetImage)(t.id, r, 1024)) : null != e && "string" == typeof e.splash && (o = M.default.getGuildSplashURL({
         id: e.id,
         splash: e.splash
       }))
@@ -185,14 +185,14 @@ class eT extends a.PureComponent {
           redirectTo: t
         })
       }), (0, s.jsx)(_.default, {
-        impressionName: i.ImpressionNames.USER_LOGIN,
+        impressionName: r.ImpressionNames.USER_LOGIN,
         path: q.Routes.LOGIN,
         render: e => (0, s.jsx)($, {
           ...e,
           redirectTo: t
         })
       }), (0, s.jsx)(_.default, {
-        impressionName: i.ImpressionNames.USER_REGISTRATION,
+        impressionName: r.ImpressionNames.USER_REGISTRATION,
         path: q.Routes.REGISTER,
         render: e => Q.CONFERENCE_MODE_ENABLED ? (0, s.jsx)(et, {
           ...e,
@@ -225,12 +225,12 @@ class eT extends a.PureComponent {
             },
             location: a,
             transitionTo: l
-          } = e, i = (0, g.generateInviteKeyFromUrlParams)(t, a.search);
-          return r.isMobile || r.isTablet ? (0, s.jsx)(ea, {
-            inviteKey: i,
+          } = e, r = (0, g.generateInviteKeyFromUrlParams)(t, a.search);
+          return i.isMobile || i.isTablet ? (0, s.jsx)(ea, {
+            inviteKey: r,
             transitionTo: l
-          }, i) : (0, s.jsx)(et, {
-            inviteKey: i,
+          }, r) : (0, s.jsx)(et, {
+            inviteKey: r,
             location: a,
             transitionTo: l,
             login: n === q.Routes.INVITE_LOGIN(":inviteCode")
@@ -249,7 +249,7 @@ class eT extends a.PureComponent {
             location: a,
             transitionTo: l
           } = e;
-          return r.isMobile || r.isTablet ? (0, s.jsx)(k.default, {
+          return i.isMobile || i.isTablet ? (0, s.jsx)(k.default, {
             code: t
           }, t) : (0, s.jsx)(en, {
             code: t,
@@ -285,7 +285,7 @@ class eT extends a.PureComponent {
         })
       }), (0, s.jsx)(_.default, {
         path: q.Routes.AUTHORIZE_IP,
-        render: e => (0, s.jsx)(ei, {
+        render: e => (0, s.jsx)(er, {
           ...e
         })
       }), (0, s.jsx)(_.default, {
@@ -302,7 +302,7 @@ class eT extends a.PureComponent {
         })
       }), (0, s.jsx)(_.default, {
         path: q.Routes.AUTHORIZE_PAYMENT,
-        render: e => (0, s.jsx)(er, {
+        render: e => (0, s.jsx)(ei, {
           ...e
         })
       }), (0, s.jsx)(_.default, {
@@ -347,7 +347,7 @@ var em = u.default.connectStores([S.default, O.default, v.default, C.default, T.
   let {
     match: a,
     location: l
-  } = e, i = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, r = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != i ? (0, g.generateInviteKeyFromUrlParams)(i, l.search) : r, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
+  } = e, r = null == a ? void 0 : null === (t = a.params) || void 0 === t ? void 0 : t.inviteCode, i = Q.CONFERENCE_MODE_ENABLED ? Q.DEFAULT_INVITE_CODE : void 0, u = null != r ? (0, g.generateInviteKeyFromUrlParams)(r, l.search) : i, o = null == a ? void 0 : null === (n = a.params) || void 0 === n ? void 0 : n.giftCode, d = null == a ? void 0 : null === (s = a.params) || void 0 === s ? void 0 : s.guildTemplateCode;
   return {
     inviteKey: u,
     isAuthenticated: S.default.isAuthenticated(),

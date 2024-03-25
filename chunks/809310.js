@@ -42,7 +42,7 @@ let P = new m.default("CacheStore"),
   j = !1;
 
 function w(e) {
-  P.log("Clearing cache store"), b = Date.now(), i.default.remove(M.CACHE_STORE_KEY), i.default.remove(M.CACHE_STORE_LAZY_KEY), i.default.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY), x = "no-cache", "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (D = !0)
+  P.log("Clearing cache store"), b = Date.now(), i.Storage.remove(M.CACHE_STORE_KEY), i.Storage.remove(M.CACHE_STORE_LAZY_KEY), i.Storage.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY), x = "no-cache", "CLEAR_CACHES" === e.type && e.preventWritingCachesAgainThisSession && (D = !0)
 }
 async function k(e, t, n) {
   let a = performance.now();
@@ -337,6 +337,6 @@ K.displayName = "CacheStore", new K(r.default, y ? {
   },
   CLEAR_CACHES: w,
   WRITE_CACHES: function() {
-    P.verbose("Writing cache now"), b = Date.now(), U = !0, i.default.remove(M.CACHE_STORE_KEY), i.default.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY), i.default.remove(M.CACHE_STORE_LAZY_KEY)
+    P.verbose("Writing cache now"), b = Date.now(), U = !0, i.Storage.remove(M.CACHE_STORE_KEY), i.Storage.remove(M.CACHE_STORE_CHANNELS_LAZY_KEY), i.Storage.remove(M.CACHE_STORE_LAZY_KEY)
   }
 } : {})

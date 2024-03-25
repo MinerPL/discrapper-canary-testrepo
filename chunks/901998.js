@@ -24,7 +24,7 @@ let _ = new Set,
   T = null,
   g = null,
   A = null,
-  N = o.default.get(h.ADVANCED_MODE_ON_KEY) || !1;
+  N = o.Storage.get(h.ADVANCED_MODE_ON_KEY) || !1;
 
 function R(e) {
   let t = e.getGuildId(),
@@ -154,6 +154,6 @@ var L = new v(u.default, {
     let {
       advancedMode: t
     } = e;
-    N = t, o.default.set(h.ADVANCED_MODE_ON_KEY, t)
+    N = t, o.Storage.set(h.ADVANCED_MODE_ON_KEY, t)
   }
 })

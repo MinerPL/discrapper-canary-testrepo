@@ -14,10 +14,10 @@ let a = "purchase_token",
   o = 60 * r.default.Millis.DAY;
 
 function l() {
-  let e = s.default.get(a);
+  let e = s.Storage.get(a);
   if (null != e && e.expires >= Date.now()) return e.purchaseToken;
   let t = (0, i.v4)();
-  return s.default.set(a, {
+  return s.Storage.set(a, {
     purchaseToken: t,
     expires: Date.now() + o
   }), t

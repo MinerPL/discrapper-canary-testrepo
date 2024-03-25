@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("574073"),
-  a = n("304198"),
+var a = n("574073"),
+  l = n("304198"),
   i = n("782340");
 
 function r(e) {
@@ -19,13 +19,13 @@ function r(e) {
     compact: d
   } = e, {
     nick: c
-  } = (0, l.default)(t), E = o(), f = u(), _ = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
+  } = (0, a.default)(t), E = o(), f = u(), _ = i.default.Messages.SYSTEM_MESSAGE_RECIPIENT_ADD_HOOK.format({
     username: c,
     usernameHook: E,
     otherUsername: r,
     otherUsernameHook: f
   });
-  return (0, s.jsx)(a.default, {
+  return (0, s.jsx)(l.default, {
     icon: n("127067"),
     timestamp: t.timestamp,
     compact: d,

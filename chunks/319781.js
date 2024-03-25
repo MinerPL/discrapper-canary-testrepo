@@ -37,7 +37,7 @@ let f = 100,
   y = null,
   E = null;
 
-function C(e) {
+function g(e) {
   let {
     guildId: t,
     channelId: s
@@ -51,7 +51,7 @@ function C(e) {
   }))), l
 }
 
-function g() {
+function C() {
   var e;
   let t = null === (e = a.default.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
   if (null == t) return !1;
@@ -65,7 +65,7 @@ let T = {
 };
 class A extends u.default.PersistedStore {
   initialize(e) {
-    this.waitFor(c.default, d.default), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && p.ID_REGEX.test(e.key)), T = e), this.syncWith([a.default], g)
+    this.waitFor(c.default, d.default), null != e && (e.pendingUsages = e.pendingUsages.filter(e => null != e && p.ID_REGEX.test(e.key)), T = e), this.syncWith([a.default], C)
   }
   getState() {
     return T
@@ -96,8 +96,8 @@ class A extends u.default.PersistedStore {
 }
 A.displayName = "FrecencyStore", A.persistKey = "FrecencyStore";
 var m = new A(n.default, {
-  CHANNEL_SELECT: C,
-  VOICE_CHANNEL_SELECT: C,
+  CHANNEL_SELECT: g,
+  VOICE_CHANNEL_SELECT: g,
   USER_SETTINGS_PROTO_UPDATE: function(e) {
     let {
       settings: {

@@ -5,16 +5,16 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("446674"),
-  l = n("913144");
-let a = !1;
+  a = n("913144");
+let l = !1;
 class i extends s.default.Store {
   get blockedByProxy() {
-    return a
+    return l
   }
 }
 i.displayName = "ProxyBlockStore";
-var r = new i(l.default, {
+var r = new i(a.default, {
   PROXY_BLOCKED_REQUEST: function(e) {
-    a = !0
+    l = !0
   }
 })

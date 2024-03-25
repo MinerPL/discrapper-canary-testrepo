@@ -16,7 +16,7 @@ var a, s = n("446674"),
 let S = "ActivityTrackingStore",
   I = 30 * f.default.Millis.MINUTE,
   m = 5 * f.default.Millis.MINUTE,
-  p = null !== (a = l.default.get(S)) && void 0 !== a ? a : {},
+  p = null !== (a = l.Storage.get(S)) && void 0 !== a ? a : {},
   T = {},
   g = !1;
 
@@ -24,7 +24,7 @@ function A(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   t && N(e, !0);
   let n = T[e.applicationId];
-  null != n && (n.stop(), delete T[e.applicationId]), delete p[e.applicationId], l.default.set(S, p)
+  null != n && (n.stop(), delete T[e.applicationId]), delete p[e.applicationId], l.Storage.set(S, p)
 }
 
 function N(e) {
@@ -41,7 +41,7 @@ function N(e) {
     exePath: e.exePath
   }), e.updatedAt = n;
   let s = T[e.applicationId];
-  null == s && (s = T[e.applicationId] = new i.Interval).start(I, () => N(e)), !t && (p[e.applicationId] = e, l.default.set(S, p))
+  null == s && (s = T[e.applicationId] = new i.Interval).start(I, () => N(e)), !t && (p[e.applicationId] = e, l.Storage.set(S, p))
 }
 
 function R() {
@@ -97,13 +97,13 @@ v.displayName = "ActivityTrackingStore", new v(r.default, {
       token: n
     } = e, a = p[t];
     if (null == a) return !1;
-    a.token = n, l.default.set(S, p)
+    a.token = n, l.Storage.set(S, p)
   },
   ACTIVITY_UPDATE_FAIL: function(e) {
     let {
       applicationId: t
     } = e, n = p[t];
     if (null == n) return !1;
-    n.token = null, n.updatedAt = null, l.default.set(S, p)
+    n.token = null, n.updatedAt = null, l.Storage.set(S, p)
   }
 })

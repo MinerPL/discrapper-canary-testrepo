@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("446674"),
-  i = n("77078"),
-  r = n("437822"),
+  r = n("77078"),
+  i = n("437822"),
   u = n("327037"),
   o = n("457108"),
   d = n("965153"),
@@ -48,7 +48,7 @@ var m = e => {
       withAnalyticsToken: !0
     }).then(() => O(!1)).catch(() => O(!1))) : O(!1)
   }, [n]), a.useEffect(() => {
-    !m && !N && r.default.getExperiments()
+    !m && !N && i.default.getExperiments()
   }, [m, N]), a.useEffect(() => {
     let e = async e => {
       var t, n;
@@ -68,6 +68,6 @@ var m = e => {
     children: [(0, s.jsx)(I.Title, {
       className: T.marginBottom8,
       children: S
-    }), g && (0, s.jsx)(i.Spinner, {})]
+    }), g && (0, s.jsx)(r.Spinner, {})]
   })
 }

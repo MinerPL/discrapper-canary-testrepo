@@ -47,11 +47,11 @@ let I = [{
 
 function p(e, t) {
   let [s, a] = n.useState(() => {
-    let s = o.default.get(e);
+    let s = o.Storage.get(e);
     return null != s ? s : t
   });
   return n.useEffect(() => {
-    o.default.set(e, s)
+    o.Storage.set(e, s)
   }, [e, s]), [s, a]
 }
 

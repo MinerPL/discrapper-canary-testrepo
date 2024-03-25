@@ -69,11 +69,11 @@ function m(e) {
     ...h,
     ...g,
     ...e
-  }, f.set(g.sourceMapsEnabled), o.default.set(E, g)
+  }, f.set(g.sourceMapsEnabled), o.Storage.set(E, g)
 }
 class p extends r.default.Store {
   initialize() {
-    let e = o.default.get(E);
+    let e = o.Storage.get(E);
     null != e && (g = {
       ...h,
       ...e

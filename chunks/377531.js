@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return g
   }
 }), n("222007");
 var a = n("37983"),
-  l = n("884691"),
-  r = n("759843"),
+  r = n("884691"),
+  l = n("759843"),
   o = n("446674"),
   s = n("77078"),
   i = n("42963"),
@@ -21,23 +21,23 @@ var a = n("37983"),
   m = n("782340"),
   h = n("868469");
 
-function v(e) {
+function g(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [v, g] = l.useState(null), [T, y] = l.useState(null), [S, G] = l.useState(!1), b = l.createRef(), N = (0, o.useStateFromStores)([u.default], () => u.default.getCurrentUser()), C = l.createRef();
-  l.useEffect(() => {
+  } = e, [g, v] = r.useState(null), [T, y] = r.useState(null), [S, G] = r.useState(!1), b = r.createRef(), N = (0, o.useStateFromStores)([u.default], () => u.default.getCurrentUser()), C = r.createRef();
+  r.useEffect(() => {
     i.default.flowStep(_.FlowType.ANY, _.AgeGateSteps.AGE_GATE), c.default.track(E.AnalyticEvents.OPEN_MODAL, {
       type: "Claim Age Gate"
     })
-  }, []), l.useEffect(() => {
+  }, []), r.useEffect(() => {
     (null == N ? void 0 : N.nsfwAllowed) != null && n()
   }, [N, n]);
   let O = async e => {
-    if (e.preventDefault(), null != v) {
+    if (e.preventDefault(), null != g) {
       G(!0);
       try {
-        await f.submitDateOfBirth(v, E.AnalyticsSections.CLAIM_ACCOUNT_MODAL)
+        await f.submitDateOfBirth(g, E.AnalyticsSections.CLAIM_ACCOUNT_MODAL)
       } catch (e) {
         if (null != e.body && null != e.body.date_of_birth) i.default.flowStep(_.FlowType.ANY, _.AgeGateSteps.AGE_GATE_UNDERAGE), f.preventUnderageRegistration(A.AgeGateSource.CLAIM_ACCOUNT), f.logoutUnderageNewUser(A.AgeGateSource.CLAIM_ACCOUNT), n();
         else {
@@ -47,7 +47,7 @@ function v(e) {
       }
       G(!1)
     }
-  }, M = l.useCallback(() => {
+  }, M = r.useCallback(() => {
     var e;
     null === (e = C.current) || void 0 === e || e.focus()
   }, [C]);
@@ -57,7 +57,7 @@ function v(e) {
     "aria-label": m.default.Messages.AGE_GATE_HEADER,
     className: h.modal,
     impression: {
-      impressionName: r.ImpressionNames.USER_AGE_GATE,
+      impressionName: l.ImpressionNames.USER_AGE_GATE,
       impressionProperties: {
         existing_user: !1
       }
@@ -85,17 +85,17 @@ function v(e) {
           wrapperClassName: h.formItem,
           label: m.default.Messages.AGE_GATE_YOUR_BIRTHDAY,
           name: "birthday",
-          onChange: e => g(e),
+          onChange: e => v(e),
           onPopulated: M,
           error: T,
-          value: v,
+          value: g,
           ref: b
         }), (0, a.jsx)(s.Button, {
           buttonRef: C,
           type: "submit",
           size: s.Button.Sizes.LARGE,
           submitting: S,
-          disabled: null == v,
+          disabled: null == g,
           fullWidth: !0,
           children: m.default.Messages.DONE
         })]

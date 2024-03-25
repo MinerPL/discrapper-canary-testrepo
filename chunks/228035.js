@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   openGuildShopReportModal: function() {
-    return a
+    return l
   }
 });
 var s = n("37983");
 n("884691");
-var l = n("77078");
+var a = n("77078");
 
-function a(e) {
+function l(e) {
   let {
     listing: t
   } = e;
-  (0, l.openModalLazy)(async () => {
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("754559").then(n.bind(n, "754559"));

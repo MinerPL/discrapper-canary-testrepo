@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
+var a = n("414456"),
+  l = n.n(a),
   i = n("782340"),
   r = n("56401"),
   o = e => {
@@ -15,7 +15,7 @@ var l = n("414456"),
       className: t
     } = e;
     return (0, s.jsx)("div", {
-      className: a(r.tag, t),
+      className: l(r.tag, t),
       children: (0, s.jsx)("span", {
         className: r.text,
         children: i.default.Messages.APPLICATION_STORE_FIRST_ON_DISCORD

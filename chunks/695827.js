@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("79112"),
-  a = n("216422"),
+var a = n("79112"),
+  l = n("216422"),
   i = n("489622"),
   r = n("909469"),
   o = n("959905"),
@@ -31,11 +31,11 @@ var l = n("79112"),
       children: [(0, s.jsx)(i.NoticeCloseButton, {
         onClick: () => _(c.ContentDismissActionType.UNKNOWN),
         noticeType: n
-      }), !T && (0, s.jsx)(a.default, {
+      }), !T && (0, s.jsx)(l.default, {
         className: f.premiumIcon
       }), (0, r.getLocalizedPricingNotice)(m, N, p, T), (0, s.jsx)(i.PrimaryCTANoticeButton, {
         onClick: () => {
-          _(c.ContentDismissActionType.UNKNOWN), l.default.open(d.UserSettingsSections.PREMIUM)
+          _(c.ContentDismissActionType.UNKNOWN), a.default.open(d.UserSettingsSections.PREMIUM)
         },
         noticeType: n,
         children: E.default.Messages.LEARN_MORE

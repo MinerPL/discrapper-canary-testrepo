@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return f
   },
   ButtonColors: function() {
-    return E
+    return S
   },
   ButtonBorderColors: function() {
-    return S
+    return E
   },
   ButtonHovers: function() {
     return g
@@ -42,7 +42,7 @@ let f = {
     LINK: _.lookLink,
     BLANK: _.lookBlank
   },
-  E = {
+  S = {
     BRAND: _.colorBrand,
     RED: _.colorRed,
     GREEN: _.colorGreen,
@@ -54,7 +54,7 @@ let f = {
     BRAND_NEW: _.colorBrandNew,
     CUSTOM: ""
   },
-  S = {
+  E = {
     BRAND: _.borderBrand,
     RED: _.borderRed,
     GREEN: _.borderGreen,
@@ -93,7 +93,7 @@ let f = {
 function h() {
   let {
     look: e = f.FILLED,
-    color: t = E.BRAND,
+    color: t = S.BRAND,
     borderColor: n,
     hover: i,
     size: r = m.MEDIUM,
@@ -113,10 +113,10 @@ function h() {
 function p(e) {
   let {
     look: t = f.FILLED,
-    color: n = E.BRAND,
+    color: n = S.BRAND,
     borderColor: o,
     hover: l,
-    size: S = m.MEDIUM,
+    size: E = m.MEDIUM,
     fullWidth: g = !1,
     grow: p = !0,
     disabled: I = !1,
@@ -181,7 +181,7 @@ function p(e) {
         color: n,
         borderColor: o,
         hover: l,
-        size: S,
+        size: E,
         fullWidth: g,
         grow: p,
         submitting: T,
@@ -198,7 +198,7 @@ function p(e) {
     })
   });
   return W ? (0, i.jsxs)("span", {
-    className: s(_.disabledButtonWrapper, N, S, {
+    className: s(_.disabledButtonWrapper, N, E, {
       [_.grow]: p,
       [_.fullWidth]: g
     }),
@@ -213,14 +213,14 @@ function p(e) {
 function I(e) {
   let {
     look: t = f.FILLED,
-    color: n = E.BRAND,
+    color: n = S.BRAND,
     borderColor: r,
     hover: o,
     size: a = m.MEDIUM,
     fullWidth: u = !1,
     grow: c = !0,
     style: d,
-    className: S,
+    className: E,
     innerClassName: h,
     to: p,
     onClick: I,
@@ -238,7 +238,7 @@ function I(e) {
     onMouseDown: T,
     style: d,
     rel: N,
-    className: s(S, _.button, t, n, r, o, a, {
+    className: s(E, _.button, t, n, r, o, a, {
       [_.fullWidth]: u,
       [_.grow]: c,
       [_.hasHover]: null != o && o !== g.DEFAULT
@@ -249,4 +249,4 @@ function I(e) {
     })
   })
 }
-p.Looks = f, p.Colors = E, p.BorderColors = S, p.Hovers = g, p.Sizes = m, p.Link = I
+p.Looks = f, p.Colors = S, p.BorderColors = E, p.Hovers = g, p.Sizes = m, p.Link = I

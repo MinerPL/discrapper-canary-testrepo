@@ -1,5 +1,5 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   openCreateGuildModal: function() {
     return I
   },
@@ -7,18 +7,18 @@ l.r(t), l.d(t, {
     return p
   }
 });
-var n = l("37983");
-l("884691");
-var r = l("77078"),
-  s = l("42963"),
-  a = l("599110"),
-  i = l("169626"),
-  o = l("243338"),
-  u = l("49111"),
-  c = l("149806");
+var l = n("37983");
+n("884691");
+var r = n("77078"),
+  s = n("42963"),
+  a = n("599110"),
+  i = n("169626"),
+  o = n("243338"),
+  u = n("49111"),
+  c = n("149806");
 
-function d(e, t, l, r) {
-  return (0, n.jsx)(i.default, {
+function d(e, t, n, r) {
+  return (0, l.jsx)(i.default, {
     onSuccess: t => {
       s.default.flowStep(c.FlowType.CREATE_GUILD, c.CreateGuildSteps.SUCCESS), e.onClose(), null == r || r(t)
     },
@@ -48,7 +48,7 @@ function d(e, t, l, r) {
             location: t
           })
       }
-    })(e, l),
+    })(e, n),
     initialSlide: t,
     hasJoinButton: !0,
     ...e
@@ -57,17 +57,17 @@ function d(e, t, l, r) {
 let I = e => {
     let {
       initialSlide: t,
-      location: l,
-      onSuccess: n
+      location: n,
+      onSuccess: l
     } = e;
-    (0, r.openModal)(e => d(e, t, l, n), {
+    (0, r.openModal)(e => d(e, t, n, l), {
       modalKey: o.CREATE_GUILD_MODAL_KEY
     })
   },
   p = e => {
     let {
       slide: t,
-      location: l
+      location: n
     } = e;
-    (0, r.updateModal)(o.CREATE_GUILD_MODAL_KEY, e => d(e, t, l))
+    (0, r.updateModal)(o.CREATE_GUILD_MODAL_KEY, e => d(e, t, n))
   }

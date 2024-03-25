@@ -7,14 +7,14 @@ n.r(t), n.d(t, {
 var s = n("446674"),
   a = n("913144");
 let l = !1,
-  i = null,
-  r = null;
+  r = null,
+  i = null;
 class u extends s.default.Store {
   getState() {
     return {
       verifySuccess: l,
-      verifyErrors: i,
-      redirectGuildId: r
+      verifyErrors: r,
+      redirectGuildId: i
     }
   }
 }
@@ -24,12 +24,12 @@ var o = new u(a.default, {
     let {
       guildId: t
     } = e;
-    l = !0, i = null, r = t
+    l = !0, r = null, i = t
   },
   HUB_VERIFY_EMAIL_FAILURE: function(e) {
     let {
       errors: t
     } = e;
-    l = !1, i = t
+    l = !1, r = t
   }
 })

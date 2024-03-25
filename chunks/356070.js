@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("424973");
 var s = n("37983");
 n("884691");
-var l = n("917351"),
-  a = n.n(l),
+var a = n("917351"),
+  l = n.n(a),
   i = n("77078"),
   r = n("86621"),
   o = n("812204"),
@@ -21,8 +21,8 @@ let T = (0, r.default)(e => {
   let {
     member: t,
     empty: n,
-    analyticsContext: l,
-    guildId: a
+    analyticsContext: a,
+    guildId: l
   } = e;
   if (n) return (0, s.jsx)("div", {
     className: _.partyMemberEmpty
@@ -35,15 +35,15 @@ let T = (0, r.default)(e => {
   });
   let r = {
     location: {
-      ...l.location,
+      ...a.location,
       object: f.AnalyticsObjects.AVATAR
     }
   };
   return (0, s.jsx)("div", {
     className: _.partyMemberKnown,
     children: (0, s.jsx)(i.Popout, {
-      preload: () => (0, u.default)(t.id, t.getAvatarURL(a, 80), {
-        guildId: a
+      preload: () => (0, u.default)(t.id, t.getAvatarURL(l, 80), {
+        guildId: l
       }),
       renderPopout: e => (0, s.jsx)(d.default, {
         ...e,
@@ -54,7 +54,7 @@ let T = (0, r.default)(e => {
       position: "left",
       children: e => (0, s.jsx)(i.Avatar, {
         ...e,
-        src: t.getAvatarURL(a, 24),
+        src: t.getAvatarURL(l, 24),
         "aria-label": t.username,
         size: i.AvatarSizes.SIZE_24,
         className: _.partyMember
@@ -66,7 +66,7 @@ var I = e => {
   let {
     partySize: t,
     members: n,
-    minAvatarsShown: l = 1,
+    minAvatarsShown: a = 1,
     maxAvatarsShown: i = 2,
     guildId: r
   } = e, {
@@ -74,8 +74,8 @@ var I = e => {
     totalSize: u,
     knownSize: d
   } = t;
-  if (u < l) return null;
-  let c = a(n).filter(E.isNotNullish).take(i).map(e => (0, s.jsx)(T, {
+  if (u < a) return null;
+  let c = l(n).filter(E.isNotNullish).take(i).map(e => (0, s.jsx)(T, {
     member: e,
     guildId: r
   }, e.id)).value();

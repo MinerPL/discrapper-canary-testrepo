@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PIPOverlay: function() {
-    return b
+    return O
   },
   TextActivityPIPOverlay: function() {
     return D
@@ -45,7 +45,7 @@ var l = n("414456"),
   L = n("278121"),
   w = n("735276");
 
-function O(e) {
+function b(e) {
   let {
     onClick: t,
     isExpanded: n
@@ -60,7 +60,7 @@ function O(e) {
   })
 }
 
-function b(e) {
+function O(e) {
   var t, n;
   let {
     channel: l,
@@ -71,7 +71,7 @@ function b(e) {
     onJumpToChannel: T,
     idle: A,
     selectedParticipant: x
-  } = e, _ = (0, d.useAppContext)(), O = _ === M.AppContext.POPOUT, b = (0, o.useStateFromStores)([y.default], () => y.default.isVideoEnabled()), D = (0, o.useStateFromStores)([y.default], () => Object.values(y.default.getVideoDevices())[0]), R = null === (t = null == D ? void 0 : D.disabled) || void 0 === t || t, F = !1 === R, W = (0, u.default)([i])[0], U = (0, f.default)(l), k = e => {
+  } = e, _ = (0, d.useAppContext)(), b = _ === M.AppContext.POPOUT, O = (0, o.useStateFromStores)([y.default], () => y.default.isVideoEnabled()), D = (0, o.useStateFromStores)([y.default], () => Object.values(y.default.getVideoDevices())[0]), R = null === (t = null == D ? void 0 : D.disabled) || void 0 === t || t, F = !1 === R, W = (0, u.default)([i])[0], U = (0, f.default)(l), k = e => {
     s.default.setVideoEnabled(e)
   };
   return (0, a.jsxs)("div", {
@@ -96,7 +96,7 @@ function b(e) {
         align: E.default.Align.CENTER,
         children: [(0, a.jsx)(g.default, {
           className: L.leftPipIcon,
-          enabled: b,
+          enabled: O,
           cameraUnavailable: !F,
           hasPermission: U,
           onChange: k,
@@ -118,7 +118,7 @@ function b(e) {
         justify: E.default.Justify.END,
         basis: "50%",
         align: E.default.Align.CENTER,
-        children: [O ? null : (0, a.jsx)(C.default, {
+        children: [b ? null : (0, a.jsx)(C.default, {
           className: L.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
@@ -227,7 +227,7 @@ function F(e) {
           preventIdleComponent: h.default
         }), (0, a.jsxs)("div", {
           className: L.pipHeaderButtonsRight,
-          children: [m ? null : (0, a.jsx)(O, {
+          children: [m ? null : (0, a.jsx)(b, {
             isExpanded: f,
             onClick: p
           }), (0, a.jsx)(P.default, {

@@ -77,11 +77,11 @@ function A() {
     })) && void 0 !== e ? e : new Uint8Array,
     [A, O] = function(e, t) {
       let [s, a] = n.useState(() => {
-        let s = d.default.get(e);
+        let s = d.Storage.get(e);
         return null != s ? s : t
       });
       return n.useEffect(() => {
-        d.default.set(e, s)
+        d.Storage.set(e, s)
       }, [e, s]), [s, a]
     }("RecentDismissibleOverrides", []),
     x = e => {

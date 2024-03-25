@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   GameTileSizes: function() {
-    return l
+    return a
   },
   default: function() {
     return E
   }
 });
-var s, l, a = n("37983");
+var s, a, l = n("37983");
 n("884691");
 var i = n("414456"),
   r = n.n(i),
@@ -15,17 +15,17 @@ var i = n("414456"),
   u = n("227231"),
   d = n("49111"),
   c = n("194829");
-(s = l || (l = {}))[s.SMALL = 24] = "SMALL", s[s.MEDIUM = 32] = "MEDIUM";
+(s = a || (a = {}))[s.SMALL = 24] = "SMALL", s[s.MEDIUM = 32] = "MEDIUM";
 var E = function(e) {
   let {
     className: t,
     gameTileSize: n = 24,
     quest: s,
-    theme: l = d.ThemeTypes.DARK
+    theme: a = d.ThemeTypes.DARK
   } = e;
-  return (0, a.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: r(c.partnerBranding, t),
-    children: [(0, a.jsx)("img", {
+    children: [(0, l.jsx)("img", {
       className: c.partnerBrandingGameTile,
       alt: "",
       src: (0, u.getGameTileAssetUrl)(s.id),
@@ -41,10 +41,10 @@ var E = function(e) {
         width: n,
         height: n
       }
-    }), (0, a.jsx)("img", {
+    }), (0, l.jsx)("img", {
       className: c.partnerBrandingLogotype,
       alt: s.config.messages.gameTitle,
-      src: (0, u.getGameLogotypeAssetUrl)(s.id, (0, o.isThemeDark)(l) ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT)
+      src: (0, u.getGameLogotypeAssetUrl)(s.id, (0, o.isThemeDark)(a) ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT)
     })]
   })
 }

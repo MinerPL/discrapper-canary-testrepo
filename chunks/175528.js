@@ -1,20 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("884691"),
-  l = n("240249");
+  a = n("240249");
 
-function a(e, t) {
+function l(e, t) {
   let n = s.useRef(null),
-    a = s.useCallback((e, t) => {
-      var s, l, a;
-      e.preventDefault(), e.clipboardData.setData("application/x-discord-interaction-data", JSON.stringify(t)), e.clipboardData.setData("text/plain", null !== (a = null === (l = n.current) || void 0 === l ? void 0 : null === (s = l.textContent) || void 0 === s ? void 0 : s.trim()) && void 0 !== a ? a : "")
+    l = s.useCallback((e, t) => {
+      var s, a, l;
+      e.preventDefault(), e.clipboardData.setData("application/x-discord-interaction-data", JSON.stringify(t)), e.clipboardData.setData("text/plain", null !== (l = null === (a = n.current) || void 0 === a ? void 0 : null === (s = a.textContent) || void 0 === s ? void 0 : s.trim()) && void 0 !== l ? l : "")
     }, []);
-  return l.useCommand(e, t), {
-    onCopy: a,
+  return a.useCommand(e, t), {
+    onCopy: l,
     copyRef: n
   }
 }

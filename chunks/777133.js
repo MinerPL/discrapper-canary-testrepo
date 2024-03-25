@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("748820"),
-  a = n("77078"),
+var a = n("748820"),
+  l = n("77078"),
   i = n("112679"),
   r = n("55689"),
   o = n("599110"),
@@ -18,10 +18,10 @@ function d(e) {
     guildProductListing: t,
     guildId: d,
     sourceAnalyticsLocations: c
-  } = e, E = !1, f = (0, l.v4)(), _ = () => {
+  } = e, E = !1, f = (0, a.v4)(), _ = () => {
     E = !0
   };
-  (0, a.openModalLazy)(async () => {
+  (0, l.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("191131").then(n.bind(n, "191131"));

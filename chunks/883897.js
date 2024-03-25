@@ -20,7 +20,7 @@
 
     function u() {
       return s.useEffect(() => {
-        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.default.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), c.default.userDataCache.getCached().then(e => {
+        window.location.origin === window.GLOBAL_ENV.MIGRATION_DESTINATION_ORIGIN && !0 !== n.Storage.get(d.DOMAIN_MIGRATION_SUCCESS_KEY) && r.default.supportsFeature(f.NativeFeatures.USER_DATA_CACHE) && (o.migrate(), c.default.userDataCache.getCached().then(e => {
           if (null == e) {
             o.failMigration(), i.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
               success: !1,
@@ -34,11 +34,11 @@
             t = 0 !== a.length,
             s = null != e.token,
             r = null == e.RTCRegionStore ? null : JSON.parse(e.RTCRegionStore),
-            u = null == r || null == l(r) || l(r) <= l(n.default.get("RTCRegionStore"));
-          t && s && !u && (n.default.clear(), a.forEach(a => {
+            u = null == r || null == l(r) || l(r) <= l(n.Storage.get("RTCRegionStore"));
+          t && s && !u && (n.Storage.clear(), a.forEach(a => {
             let t = e[a];
             try {
-              n.default.set(a, JSON.parse(t))
+              n.Storage.set(a, JSON.parse(t))
             } catch (e) {}
           })), i.default.track(f.AnalyticEvents.DOMAIN_MIGRATED, {
             success: !0,
@@ -46,7 +46,7 @@
             has_data: t
           }, {
             flush: !0
-          }), n.default.set(d.DOMAIN_MIGRATION_SUCCESS_KEY, !0), c.default.userDataCache.deleteCache(), o.finishMigration()
+          }), n.Storage.set(d.DOMAIN_MIGRATION_SUCCESS_KEY, !0), c.default.userDataCache.deleteCache(), o.finishMigration()
         }))
       }, []), null
     }

@@ -11,18 +11,18 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("872717"),
-  l = n("913144"),
-  a = n("448993"),
+  a = n("913144"),
+  l = n("448993"),
   i = n("49111");
 
 function r(e) {
-  l.default.dispatch({
+  a.default.dispatch({
     type: "DISMISS_MEDIA_POST_SHARE_PROMPT",
     threadId: e
   })
 }
 async function o(e) {
-  l.default.dispatch({
+  a.default.dispatch({
     type: "MEDIA_POST_EMBED_FETCH",
     threadId: e
   });
@@ -31,13 +31,13 @@ async function o(e) {
         url: i.Endpoints.MEDIA_POST_RESHARE_GET_PREVIEW(e)
       }),
       n = t.body;
-    l.default.dispatch({
+    a.default.dispatch({
       type: "MEDIA_POST_EMBED_FETCH_SUCCESS",
       threadId: e,
       mediaPostEmbed: n
     })
   } catch (t) {
-    l.default.dispatch({
+    a.default.dispatch({
       type: "MEDIA_POST_EMBED_FETCH_FAILURE",
       threadId: e
     })
@@ -53,6 +53,6 @@ async function u(e) {
     });
     return t.body
   } catch (e) {
-    throw new a.APIError(e)
+    throw new l.APIError(e)
   }
 }

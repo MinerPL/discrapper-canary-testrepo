@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("414456"),
-  i = n.n(l),
-  r = n("917351"),
-  u = n.n(r),
+  r = n.n(l),
+  i = n("917351"),
+  u = n.n(i),
   o = n("509043"),
   d = n("669491"),
   c = n("77078"),
@@ -31,7 +31,7 @@ var s = n("37983"),
 function O(e) {
   let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
     [n, l] = a.useState(""),
-    [i, r] = a.useState(null),
+    [r, i] = a.useState(null),
     [u, o] = a.useState(null),
     d = (0, N.default)(e.code);
   a.useEffect(() => {
@@ -54,8 +54,8 @@ function O(e) {
       }) : null, (0, s.jsx)("div", {
         className: v.icon,
         children: (0, s.jsx)(_.default, {
-          icon: i,
-          onChange: r
+          icon: r,
+          onChange: i
         })
       }), (0, s.jsx)(c.FormItem, {
         title: d.nameLabel,
@@ -106,7 +106,7 @@ function O(e) {
   return {
     form: h,
     preview: T,
-    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, i).catch(e => o(e))
+    handleSubmit: () => m.default.acceptGuildTemplate(e.code, n, r).catch(e => o(e))
   }
 }
 
@@ -121,7 +121,7 @@ function R(e) {
       return t === S.ChannelTypes.GUILD_VOICE ? T.default : t === S.ChannelTypes.GUILD_CATEGORY ? h.default : p.default
     }(e);
     return (0, s.jsxs)("div", {
-      className: i(v.channel, {
+      className: r(v.channel, {
         [v.category]: e.type === S.ChannelTypes.GUILD_CATEGORY
       }),
       children: [(0, s.jsx)(t, {

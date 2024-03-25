@@ -26,7 +26,7 @@ async function p() {
   m = !0, (0, E.setSessionExtendingEnabled)(!0), f.default.addBreadcrumb({
     message: "Start Analytics Heartbeat"
   });
-  let e = await a.default.getAfterRefresh(_).then(E.timestampOrZero);
+  let e = await a.Storage.getAfterRefresh(_).then(E.timestampOrZero);
   if (!m) return;
   let t = Date.now(),
     n = 15 * d.default.Millis.MINUTE + e - t;
@@ -77,7 +77,7 @@ async function g() {
     let e = r.default.getCurrentGameForAnalytics();
     null != e && (s.client_heartbeat_current_game_id = e.id, s.client_heartbeat_current_game_name = e.name, s.client_heartbeat_current_game_executable = (0, i.removeExecutablePathPrefix)(e.exePath), s.client_heartbeat_current_game_distributor = e.distributor)
   }
-  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.default.set(_, Date.now().toString()), (0, l.drainClickstream)()
+  u.default.track(h.AnalyticEvents.CLIENT_HEARTBEAT, s), a.Storage.set(_, Date.now().toString()), (0, l.drainClickstream)()
 }
 let A = null,
   N = !0;

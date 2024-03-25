@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("414456"),
-  i = n.n(a),
+  a = n("884691"),
+  l = n("414456"),
+  i = n.n(l),
   r = n("627445"),
   o = n.n(r),
   u = n("748820"),
@@ -42,14 +42,14 @@ var s = n("37983"),
   B = n("760238");
 
 function F(e) {
-  var t, n, a;
+  var t, n, l;
   let {
     embedUrl: r,
     message: F,
     channel: k
   } = e, w = (0, y.useMediaPostEmbedData)(r, F), {
     setPopout: H
-  } = (0, A.default)(F.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), W = (0, D.useIsWindowFocused)(), [K, z] = l.useState(!1), [Q, Z] = l.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, O.default], () => {
+  } = (0, A.default)(F.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), W = (0, D.useIsWindowFocused)(), [K, z] = a.useState(!1), [Q, Z] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, O.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [w]), [q, $] = (0, c.useStateFromStoresArray)([M.default], () => {
@@ -58,11 +58,11 @@ function F(e) {
     return [null !== (e = null == t ? void 0 : t.colorString) && void 0 !== e ? e : "inherit", null == t ? void 0 : t.colorRoleId]
   }), {
     reducedMotion: ee
-  } = l.useContext(E.AccessibilityPreferencesContext), [et, en] = l.useState(!1), es = l.useCallback(() => {
+  } = a.useContext(E.AccessibilityPreferencesContext), [et, en] = a.useState(!1), es = a.useCallback(() => {
     z(!0)
-  }, [z]), el = l.useCallback(() => {
+  }, [z]), ea = a.useCallback(() => {
     z(!1)
-  }, [z]), ea = l.useCallback(async () => {
+  }, [z]), el = a.useCallback(async () => {
     null != w && ((0, T.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: w.threadId,
       channel_id: k.id,
@@ -71,7 +71,7 @@ function F(e) {
     }), w.canAccess ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : X ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await P.startLurking(w.guildId, {}, {
       channelId: w.parentChannelId
     }))
-  }, [w, k, X]), ei = l.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
+  }, [w, k, X]), ei = a.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
     guildId: w.guildId,
     channelId: k.id
   })), [w, k]);
@@ -101,7 +101,7 @@ function F(e) {
     children: [(0, s.jsxs)("div", {
       className: G.thumbnailContainer,
       onMouseEnter: es,
-      onMouseLeave: el,
+      onMouseLeave: ea,
       children: [!Q && (!0 === w.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
         src: B,
         alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
@@ -122,7 +122,7 @@ function F(e) {
         onContextMenu: V,
         onError: () => Z(!0)
       })), null != w.coverImageOverlayText && (0, s.jsx)(E.Clickable, {
-        onClick: ea,
+        onClick: el,
         children: (0, s.jsx)("div", {
           className: G.thumbnailOverlay,
           children: (0, s.jsxs)("div", {
@@ -177,12 +177,12 @@ function F(e) {
             children: [null != w.channelName && (0, s.jsx)(v.default, {
               className: G.mediaChannelIcon
             }), (0, s.jsx)(E.Clickable, {
-              onClick: ea,
+              onClick: el,
               className: G.channelName,
               children: (0, s.jsx)(E.Heading, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
-                children: null !== (a = w.channelName) && void 0 !== a ? a : w.guildName
+                children: null !== (l = w.channelName) && void 0 !== l ? l : w.guildName
               })
             })]
           }), null != w.authorName && (0, s.jsx)(E.Text, {
@@ -206,7 +206,7 @@ function F(e) {
           })]
         }), w.canAccess ? (0, s.jsx)(E.Button, {
           color: E.ButtonColors.BRAND,
-          onClick: ea,
+          onClick: el,
           children: (0, s.jsx)(E.Text, {
             variant: "text-sm/medium",
             color: "always-white",
@@ -214,7 +214,7 @@ function F(e) {
           })
         }) : (0, s.jsx)(R.default, {
           pauseAnimation: J,
-          onClick: ea,
+          onClick: el,
           className: i(G.ctaButtonContent, G.subscribeButton),
           color: E.Button.Colors.CUSTOM,
           children: (0, s.jsx)(E.Text, {

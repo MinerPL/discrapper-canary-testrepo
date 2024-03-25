@@ -19,8 +19,8 @@ n.r(t), n.d(t, {
 var s = n("627445"),
   a = n.n(s),
   l = n("866227"),
-  i = n.n(l),
-  r = n("216721");
+  r = n.n(l),
+  i = n("216721");
 n("446674");
 var u = n("775433"),
   o = n("10514"),
@@ -56,7 +56,7 @@ function h(e, t) {
 }
 
 function p(e) {
-  let t = Object.keys(r.PauseDuration).filter(e => isNaN(Number(e)));
+  let t = Object.keys(i.PauseDuration).filter(e => isNaN(Number(e)));
   if (e.status !== c.SubscriptionStatusTypes.PAUSED) return {
     durations: t,
     currentDaysPaused: 0
@@ -66,12 +66,12 @@ function p(e) {
     currentDaysPaused: 0
   };
   {
-    let n = i(e.currentPeriodStart),
-      s = i(e.pauseEndsAt),
+    let n = r(e.currentPeriodStart),
+      s = r(e.pauseEndsAt),
       a = Math.round(s.diff(n, "days", !0)),
       l = [];
     for (let e of t) {
-      let t = r.PauseDuration[e];
+      let t = i.PauseDuration[e];
       t > a && l.push(e)
     }
     return {

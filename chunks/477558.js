@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s = n("37983"),
-  l = n("884691"),
-  a = n("446674"),
+  a = n("884691"),
+  l = n("446674"),
   i = n("233322"),
   r = n("157186"),
   o = n("716214"),
@@ -28,20 +28,20 @@ function N(e) {
     guild: A,
     channel: C,
     isMember: h
-  } = (0, a.useStateFromStoresObject)([_.default, c.default, u.default, d.default, E.default], () => {
+  } = (0, l.useStateFromStoresObject)([_.default, c.default, u.default, d.default, E.default], () => {
     var e, t;
     let s = null !== (t = _.default.getGuildScheduledEvent(N)) && void 0 !== t ? t : void 0,
-      l = c.default.getGuild(n),
-      a = u.default.getChannel(null == s ? void 0 : s.channel_id),
+      a = c.default.getGuild(n),
+      l = u.default.getChannel(null == s ? void 0 : s.channel_id),
       i = d.default.isMember(n, null === (e = E.default.getCurrentUser()) || void 0 === e ? void 0 : e.id);
     return {
       guildScheduledEvent: s,
-      guild: l,
-      channel: a,
+      guild: a,
+      channel: l,
       isMember: i
     }
   }, [n, N]);
-  return l.useEffect(() => {
+  return a.useEffect(() => {
     (null == S ? void 0 : S.id) == null && T.default.fetchGuildEvent(n, N), f.default.getGuildEventUserCounts(n, N, null != p ? [p] : []), f.default.getGuildEventsForCurrentUser(n)
   }, [N, n, null == S ? void 0 : S.id, p]), (0, s.jsx)(I.default, {
     guild: A,

@@ -21,7 +21,7 @@ let d = "GameLibraryViewStore",
 class h extends a.default.Store {
   initialize() {
     var e;
-    let t = null !== (e = o.default.get(d)) && void 0 !== e ? e : {};
+    let t = null !== (e = o.Storage.get(d)) && void 0 !== e ? e : {};
     null != t.sortDirection && null != t.sortKey && (c = t.sortDirection, _ = t.sortKey)
   }
   get sortDirection() {
@@ -44,7 +44,7 @@ let g = new h(l.default, {
       direction: t,
       key: n
     } = e;
-    c = t, _ = n, o.default.set(d, {
+    c = t, _ = n, o.Storage.set(d, {
       sortDirection: c,
       sortKey: _
     })

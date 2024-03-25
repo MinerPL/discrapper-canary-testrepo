@@ -12,14 +12,14 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
+var a = n("414456"),
+  l = n.n(a),
   i = n("458331"),
   r = n("300391");
 let o = 660,
   u = e => (0, s.jsx)(i.default, {
     ...e,
-    className: a(e.className, {
+    className: l(e.className, {
       [r.embedVertical]: !e.isHorizontal,
       [r.embedHorizontal]: e.isHorizontal
     })
@@ -31,9 +31,9 @@ let o = 660,
     return (0, s.jsx)(u, {
       ...e,
       media: () => (0, s.jsx)("div", {
-        className: a(r.loadingDescription),
+        className: l(r.loadingDescription),
         children: (0, s.jsx)("div", {
-          className: a(r.loadingBackgroundWrapper, {
+          className: l(r.loadingBackgroundWrapper, {
             [r.loadingBackgroundWrapperHorizontal]: t
           }),
           children: (0, s.jsx)("div", {
@@ -42,7 +42,7 @@ let o = 660,
         })
       }),
       title: () => (0, s.jsx)("div", {
-        className: a(r.loadingImage, {
+        className: l(r.loadingImage, {
           [r.loadingImageHorizontal]: t
         })
       })

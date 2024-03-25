@@ -18,17 +18,17 @@ var a = n("37983"),
       invite: n,
       forceGuildScrollHeight: u = !0,
       isNUXFlow: _
-    } = e, [N, E] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]), [m, f] = s.useState(""), [I, C] = s.useState(""), [T, S] = s.useState(void 0), [h, g] = s.useState([]), p = e => {
+    } = e, [N, E] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]), [m, I] = s.useState(""), [f, C] = s.useState(""), [T, S] = s.useState(void 0), [g, h] = s.useState([]), p = e => {
       let t = N.concat(e);
       E(t.slice(-4))
     }, x = N[N.length - 1];
     switch (x) {
       case d.HubEmailConnectionSteps.VERIFY_EMAIL:
         return (0, a.jsx)(l.default, {
-          setGuildsInfo: g,
+          setGuildsInfo: h,
           setStep: p,
           email: m,
-          setEmail: f,
+          setEmail: I,
           setGuildId: S,
           invite: n,
           onClose: t,
@@ -36,7 +36,7 @@ var a = n("37983"),
         });
       case d.HubEmailConnectionSteps.SELECT_SCHOOL:
         return (0, a.jsx)(i.default, {
-          guildsInfo: h,
+          guildsInfo: g,
           setStep: p,
           email: m,
           setGuildId: S,
@@ -52,7 +52,7 @@ var a = n("37983"),
           },
           setStep: p,
           email: m,
-          school: I,
+          school: f,
           setSchool: C
         });
       case d.HubEmailConnectionSteps.VERIFY_PIN:
@@ -64,7 +64,7 @@ var a = n("37983"),
       case d.HubEmailConnectionSteps.EMAIL_WAITLIST:
         return (0, a.jsx)(c.default, {
           setStep: p,
-          school: I
+          school: f
         });
       default:
         return null

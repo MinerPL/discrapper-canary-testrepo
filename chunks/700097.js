@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("933805"),
-  l = n("277683"),
-  a = n("843257"),
+  a = n("277683"),
+  l = n("843257"),
   i = n("692038"),
   r = n("574073"),
   o = n("846564"),
@@ -44,8 +44,8 @@ function h(e) {
 function g(e, t) {
   let n = E.default.getChannel(t);
   if (null == n) return h(e);
-  let l = f.default.getGuild(n.getGuildId());
-  return null == l ? h(e) : (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
+  let a = f.default.getGuild(n.getGuildId());
+  return null == a ? h(e) : (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_GUILD_MEMBER_SUBSCRIBED.astFormat({
     username: e,
     usernameOnClick: m.NOOP
   }))
@@ -124,14 +124,14 @@ var M = {
         });
       case m.MessageTypes.ROLE_SUBSCRIPTION_PURCHASE:
         if (e instanceof d.default) return null;
-        return (0, s.astToString)((0, a.getRoleSubscriptionPurchaseSystemMessageContentMobile)({
+        return (0, s.astToString)((0, l.getRoleSubscriptionPurchaseSystemMessageContentMobile)({
           username: R,
           guildId: t.guild_id,
           roleSubscriptionData: e.role_subscription_data
         }));
       case m.MessageTypes.PURCHASE_NOTIFICATION:
         if (e instanceof d.default || (null === (p = e.purchase_notification) || void 0 === p ? void 0 : null === (I = p.guild_product_purchase) || void 0 === I ? void 0 : I.product_name) == null) return null;
-        return (0, s.astToString)((0, l.getGuildProductPurchaseSystemMessageContentMobile)({
+        return (0, s.astToString)((0, a.getGuildProductPurchaseSystemMessageContentMobile)({
           username: R,
           productName: e.purchase_notification.guild_product_purchase.product_name
         }));
@@ -171,12 +171,12 @@ var M = {
         return e.content;
       case m.MessageTypes.GUILD_INCIDENT_ALERT_MODE_ENABLED:
         return function(e, t, n) {
-          let l = E.default.getChannel(t);
-          if (null == l) return null;
-          let a = f.default.getGuild(l.getGuildId());
-          return null == a ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
+          let a = E.default.getChannel(t);
+          if (null == a) return null;
+          let l = f.default.getGuild(a.getGuildId());
+          return null == l ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_ENABLED_NOTIFICATION.astFormat({
             username: e,
-            guildName: a.name,
+            guildName: l.name,
             time: "" !== n ? new Date(n).toLocaleString(N.default.getLocale(), {
               hour: "numeric",
               minute: "2-digit"
@@ -187,10 +187,10 @@ var M = {
         return function(e, t) {
           let n = E.default.getChannel(t);
           if (null == n) return null;
-          let l = f.default.getGuild(n.getGuildId());
-          return null == l ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
+          let a = f.default.getGuild(n.getGuildId());
+          return null == a ? null : (0, s.astToString)(N.default.Messages.GUILD_SERVER_LOCKDOWN_DISABLED_NOTIFICATION.astFormat({
             username: e,
-            guildName: l.name
+            guildName: a.name
           }))
         }(R, O);
       default:

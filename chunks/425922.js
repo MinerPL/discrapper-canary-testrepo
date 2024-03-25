@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   fetchWebAuthnConditionalChallenge: function() {
-    return i
+    return r
   },
   fetchWebAuthnCredentials: function() {
-    return r
+    return i
   },
   deleteWebAuthnCredential: function() {
     return u
@@ -22,12 +22,12 @@ n.r(t), n.d(t, {
 var s = n("872717"),
   a = n("913144"),
   l = n("49111");
-async function i() {
+async function r() {
   let e = await s.HTTP.post(l.Endpoints.WEBAUTHN_CONDITIONAL_UI_CHALLENGE);
   return e.body
 }
 
-function r() {
+function i() {
   a.default.dispatch({
     type: "MFA_WEBAUTHN_CREDENTIALS_LOADING"
   }), s.HTTP.get(l.Endpoints.MFA_WEBAUTHN_CREDENTIALS).then(e => {
@@ -74,7 +74,7 @@ async function d() {
   }
 }
 async function c(e, t, n) {
-  let i = await s.HTTP.post({
+  let r = await s.HTTP.post({
     url: l.Endpoints.MFA_WEBAUTHN_CREDENTIALS,
     body: {
       name: e,
@@ -84,9 +84,9 @@ async function c(e, t, n) {
   });
   a.default.dispatch({
     type: "AUTHENTICATOR_CREATE",
-    credential: i.body
+    credential: r.body
   }), a.default.dispatch({
     type: "MFA_ENABLE_SUCCESS",
-    codes: i.body.backup_codes
+    codes: r.body.backup_codes
   })
 }

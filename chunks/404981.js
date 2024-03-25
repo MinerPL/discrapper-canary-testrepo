@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("759843"),
-  i = n("446674"),
-  r = n("77078"),
+  r = n("446674"),
+  i = n("77078"),
   u = n("437822"),
   o = n("327037"),
   d = n("143618"),
@@ -23,13 +23,13 @@ var s = n("37983"),
   m = n("782340"),
   N = n("43434"),
   g = n("890957");
-i.default.initialize();
+r.default.initialize();
 let A = e => {
   let {
     title: t,
     menuType: a
-  } = e, i = () => {
-    (0, r.openModalLazy)(async () => {
+  } = e, r = () => {
+    (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("650672").then(n.bind(n, "650672"));
@@ -38,48 +38,48 @@ let A = e => {
         onSuccess: u,
         headerText: m.default.Messages.ENTER_EMAIL,
         confirmButtonText: m.default.Messages.NEXT,
-        confirmButtonColor: r.Button.Colors.BRAND_NEW,
+        confirmButtonColor: i.Button.Colors.BRAND_NEW,
         impressionName: l.ImpressionNames.URF_ENTER_EMAIL
       })
     })
   }, u = e => {
     let t = async () => {
       await (0, f.sendUnauthenticatedReportPincode)(a, e)
-    }, i = async t => await (0, f.verifyUnauthenticatedReport)(a, e, t), u = e => {
+    }, r = async t => await (0, f.verifyUnauthenticatedReport)(a, e, t), u = e => {
       let t = null == e ? void 0 : e.token;
       a === d.UnauthenticatedReportNames.MESSAGE ? (0, c.showUnauthenticatedReportModalForMessage)(t) : a === d.UnauthenticatedReportNames.USER && (0, c.showUnauthenticatedReportModalForUser)(t)
     };
-    t(), (0, r.openModalLazy)(async () => {
+    t(), (0, i.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("644512").then(n.bind(n, "644512"));
       return n => (0, s.jsx)(e, {
         ...n,
-        onFormSubmit: i,
+        onFormSubmit: r,
         onResend: t,
         onSuccess: u,
         headerText: m.default.Messages.MEMBER_VERIFICATION_EMAIL_VERIFICATION_EMAIL_SENT,
         confirmButtonText: m.default.Messages.VERIFY,
-        confirmButtonColor: r.Button.Colors.BRAND_NEW,
+        confirmButtonColor: i.Button.Colors.BRAND_NEW,
         impressionName: l.ImpressionNames.URF_CONFIRM_EMAIL_CODE
       })
     })
   };
   return (0, s.jsx)("div", {
     className: N.buttonColumn,
-    children: (0, s.jsx)(r.Button, {
+    children: (0, s.jsx)(i.Button, {
       className: g.reportButton,
       fullWidth: !0,
-      color: r.Button.Colors.BRAND_NEW,
-      hover: r.Button.Colors.BRAND_NEW,
-      onClick: () => i(),
+      color: i.Button.Colors.BRAND_NEW,
+      hover: i.Button.Colors.BRAND_NEW,
+      onClick: () => r(),
       children: t
     })
   })
 };
 var S = () => {
-  let e = (0, i.useStateFromStores)([_.default], () => _.default.isAuthenticated()),
-    t = (0, i.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments),
+  let e = (0, r.useStateFromStores)([_.default], () => _.default.isAuthenticated()),
+    t = (0, r.useStateFromStores)([I.default], () => I.default.hasLoadedExperiments),
     n = (0, E.useIsUnauthenticatedReportFormEnabled)("RSL - Landing Page"),
     [l, c] = a.useState(!0);
   return a.useEffect(() => {
@@ -92,7 +92,7 @@ var S = () => {
     };
     e()
   }, [t, n]), l ? (0, s.jsx)(h.default, {
-    children: (0, s.jsx)(r.Spinner, {})
+    children: (0, s.jsx)(i.Spinner, {})
   }) : n && (0, s.jsxs)(h.default, {
     children: [(0, s.jsx)(h.Title, {
       className: g.marginBottom8,

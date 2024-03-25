@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return f
+    return I
   }
 }), n("222007");
 var a = n("37983"),
@@ -17,14 +17,14 @@ var a = n("37983"),
   N = n("782340"),
   E = n("291115");
 let m = (0, d.uid)();
-var f = e => {
+var I = e => {
   let {
     email: t,
     setStep: n,
     onBack: l,
     school: d,
-    setSchool: f
-  } = e, [I, C] = s.useState(null), [T, S] = s.useState(!1), h = async () => {
+    setSchool: I
+  } = e, [f, C] = s.useState(null), [T, S] = s.useState(!1), g = async () => {
     C(null), S(!0);
     try {
       await o.default.signup(t, d), n(u.HubEmailConnectionSteps.EMAIL_WAITLIST)
@@ -33,8 +33,8 @@ var f = e => {
     } finally {
       S(!1)
     }
-  }, g = async e => {
-    null != d && "" !== d && e.charCode === _.KeyboardKeys.ENTER && await h()
+  }, h = async e => {
+    null != d && "" !== d && e.charCode === _.KeyboardKeys.ENTER && await g()
   };
   return (0, a.jsxs)("div", {
     className: E.container,
@@ -58,12 +58,12 @@ var f = e => {
         id: m,
         children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER
       }), (0, a.jsx)(r.TextInput, {
-        onKeyPress: g,
+        onKeyPress: h,
         placeholder: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
         onChange: e => {
-          f(e)
+          I(e)
         },
-        error: null == I ? void 0 : I.getAnyErrorMessage(),
+        error: null == f ? void 0 : f.getAnyErrorMessage(),
         "aria-labelledby": m
       })]
     }), (0, a.jsxs)("div", {
@@ -76,7 +76,7 @@ var f = e => {
         color: r.Button.Colors.PRIMARY,
         children: N.default.Messages.BACK
       }), (0, a.jsx)(r.Button, {
-        onClick: h,
+        onClick: g,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
         className: E.submitButton,

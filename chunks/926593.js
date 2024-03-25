@@ -7,9 +7,9 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("414456"),
-  i = n.n(l),
-  r = n("627445"),
-  u = n.n(r),
+  r = n.n(l),
+  i = n("627445"),
+  u = n.n(i),
   o = n("446674"),
   d = n("208620"),
   c = n("569808"),
@@ -65,7 +65,7 @@ class j extends a.PureComponent {
         src: n("653240"),
         className: U.marginBottom8
       }), (0, s.jsx)(g.Title, {
-        className: i(U.marginTop8, U.marginBottom8),
+        className: r(U.marginTop8, U.marginBottom8),
         children: D.default.Messages.GUILD_TEMPLATE_INVALID_TITLE
       }), (0, s.jsx)(g.SubTitle, {
         children: D.default.Messages.GUILD_TEMPLATE_INVALID_SUBTITLE

@@ -5,8 +5,8 @@ n.r(t), n.d(t, {
   }
 }), n("222007");
 var s, a, l = n("37983"),
-  i = n("884691"),
-  r = n("146606"),
+  r = n("884691"),
+  i = n("146606"),
   u = n("446674"),
   o = n("77078"),
   d = n("970728"),
@@ -82,20 +82,20 @@ function M(e) {
     ...u
   } = e, {
     invite: o
-  } = u, [d, c] = i.useState(L(o)), {
+  } = u, [d, c] = r.useState(L(o)), {
     ref: E,
     height: _
-  } = (0, f.default)(), I = (0, r.useSpring)({
+  } = (0, f.default)(), I = (0, i.useSpring)({
     height: null != _ && 0 !== _ ? "".concat(_, "px") : "".concat(s, "px"),
-    config: r.config.stiff
+    config: i.config.stiff
   });
-  return i.useEffect(() => {
+  return r.useEffect(() => {
     let e = L(o);
     e !== d && c(e)
-  }, [o, d]), (0, l.jsxs)(r.animated.div, {
+  }, [o, d]), (0, l.jsxs)(i.animated.div, {
     className: O.inviteCard,
     style: I,
-    children: [(0, l.jsx)(r.animated.div, {
+    children: [(0, l.jsx)(i.animated.div, {
       className: O.inviteChildContainer,
       style: I,
       children: (0, l.jsx)("section", {
@@ -192,9 +192,9 @@ function j(e) {
     inviteKey: t,
     transitionTo: n
   } = e, s = (0, u.useStateFromStores)([I.default], () => I.default.getInvite(t));
-  return i.useEffect(() => {
+  return r.useEffect(() => {
     (0, E.trackAppUIViewed)("invite_mobile")
-  }, []), i.useEffect(() => {
+  }, []), r.useEffect(() => {
     null != s && s.state === C.InviteStates.RESOLVED && p.default.track(C.AnalyticEvents.INVITE_VIEWED, {
       invite_code: t,
       friends_count: null == s ? void 0 : s.friends_count
@@ -212,11 +212,11 @@ function j(e) {
           channel_id: null == n ? void 0 : null === (a = n.channel) || void 0 === a ? void 0 : a.id,
           inviter_id: null == n ? void 0 : null === (l = n.inviter) || void 0 === l ? void 0 : l.id
         });
-        let i = null != n && n.state !== C.InviteStates.EXPIRED && n.state !== C.InviteStates.BANNED ? t : void 0,
-          r = _.default.getFingerprint(),
-          u = null != r ? r : _.default.getId(),
+        let r = null != n && n.state !== C.InviteStates.EXPIRED && n.state !== C.InviteStates.BANNED ? t : void 0,
+          i = _.default.getFingerprint(),
+          u = null != i ? i : _.default.getId(),
           o = null != n && (null == n ? void 0 : n.type) != null ? Number(null == n ? void 0 : n.type) : void 0;
-        d.default.openApp(i, void 0, u, void 0, o)
+        d.default.openApp(r, void 0, u, void 0, o)
       }(e, t, s)
     },
     transitionTo: n

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("222007");
 var s = n("37983");
 n("884691");
-var l = n("759843"),
-  a = n("65597"),
+var a = n("759843"),
+  l = n("65597"),
   i = n("812204"),
   r = n("428958"),
   o = n("162771"),
@@ -18,10 +18,10 @@ var l = n("759843"),
 function E(e) {
   let {
     code: t
-  } = e, [n, E] = t.split("-"), f = (0, u.useFetchGuildProductListing)(n, E), _ = (0, a.useStateFromStores)([o.default], () => o.default.getGuildId());
+  } = e, [n, E] = t.split("-"), f = (0, u.useFetchGuildProductListing)(n, E), _ = (0, l.useStateFromStores)([o.default], () => o.default.getGuildId());
   return ((0, r.default)({
     type: c.ImpressionTypes.VIEW,
-    name: l.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
+    name: a.ImpressionNames.GUILD_PRODUCT_LISTING_EMBED,
     properties: {
       guild_product_listing_id: E,
       has_entitlement: (null == f ? void 0 : f.has_entitlement) === !0

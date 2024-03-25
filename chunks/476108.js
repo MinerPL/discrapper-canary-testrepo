@@ -34,8 +34,8 @@ class d extends n.default.PersistedStore {
   }
 }
 d.displayName = "DefaultRouteStore", d.persistKey = "DefaultRouteStore", d.migrations = [() => {
-  let e = i.default.get(o, null);
-  return i.default.remove(o), {
+  let e = i.Storage.get(o, null);
+  return i.Storage.remove(o), {
     lastViewedPath: e
   }
 }];

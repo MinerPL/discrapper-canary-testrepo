@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("730290"),
-  i = n("446674"),
-  r = n("872717"),
+  r = n("446674"),
+  i = n("872717"),
   u = n("77078"),
   o = n("457108"),
   d = n("970366"),
@@ -19,12 +19,12 @@ var s = n("37983"),
   I = n("853994"),
   h = n("782340"),
   p = n("890957");
-i.default.initialize();
+r.default.initialize();
 class T extends a.PureComponent {
   componentDidMount() {
     let e = (0, o.default)(this.props.location),
       t = (0, l.parse)(this.props.location.search);
-    r.HTTP.post({
+    i.HTTP.post({
       url: _.Endpoints.DISABLE_EMAIL_NOTIFICATIONS,
       body: {
         token: e,
@@ -150,6 +150,6 @@ class T extends a.PureComponent {
 T.defaultProps = {
   transitionTo: e => n.g.location.assign(e)
 };
-var m = i.default.connectStores([f.default], () => ({
+var m = r.default.connectStores([f.default], () => ({
   defaultRoute: f.default.defaultRoute
 }))(T)

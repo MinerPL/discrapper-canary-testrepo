@@ -9,7 +9,7 @@ var a = n("446674"),
   l = n("913144");
 let i = "hasSeenGuildTemplatePromotionTooltip",
   r = {},
-  o = !0 === s.default.get(i);
+  o = !0 === s.Storage.get(i);
 
 function u(e) {
   let {
@@ -41,7 +41,7 @@ var c = new d(l.default, {
     }
   },
   GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE: function() {
-    s.default.set(i, !0), o = !0
+    s.Storage.set(i, !0), o = !0
   },
   GUILD_TEMPLATE_SYNC_SUCCESS: function(e) {
     r = {

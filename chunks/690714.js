@@ -8,8 +8,8 @@ n.r(t), n.d(t, {
   }
 });
 var s = n("872717"),
-  l = n("448993"),
-  a = n("49111");
+  a = n("448993"),
+  l = n("49111");
 async function i(e) {
   let {
     channelId: t,
@@ -18,13 +18,13 @@ async function i(e) {
   } = e;
   try {
     await s.HTTP.put({
-      url: a.Endpoints.POLL_ANSWERS(t, n),
+      url: l.Endpoints.POLL_ANSWERS(t, n),
       body: {
         answer_ids: i
       }
     })
   } catch (e) {
-    throw new l.APIError(e)
+    throw new a.APIError(e)
   }
 }
 async function r(e) {
@@ -34,9 +34,9 @@ async function r(e) {
   } = e;
   try {
     await s.HTTP.post({
-      url: a.Endpoints.POLL_EXPIRE(t, n)
+      url: l.Endpoints.POLL_EXPIRE(t, n)
     })
   } catch (e) {
-    throw new l.APIError(e)
+    throw new a.APIError(e)
   }
 }

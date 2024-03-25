@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("222007"), n("70102");
 var s, a, l = n("37983"),
-  i = n("884691"),
-  r = n("414456"),
-  u = n.n(r),
+  r = n("884691"),
+  i = n("414456"),
+  u = n.n(i),
   o = n("446674"),
   d = n("913144"),
   c = n("437822"),
@@ -32,7 +32,7 @@ var s, a, l = n("37983"),
   M = n("782340"),
   D = n("890957");
 o.default.initialize(), (a = s || (s = {})).REGISTER = "register", a.LOGIN = "login";
-class P extends i.PureComponent {
+class P extends r.PureComponent {
   componentDidMount() {
     let {
       authenticated: e,
@@ -189,8 +189,8 @@ class P extends i.PureComponent {
       authenticated: n,
       giftCode: s,
       isResolved: a,
-      isAccepting: i,
-      transitionTo: r,
+      isAccepting: r,
+      transitionTo: i,
       location: u
     } = this.props, {
       fetchingUser: o,
@@ -198,7 +198,7 @@ class P extends i.PureComponent {
     } = this.state;
     if (e === x.NativeAppStates.OPEN && !d) return this.renderAppOpened();
     if (e === x.NativeAppStates.OPENING) return this.renderSpinner(M.default.Messages.APP_OPENING);
-    if (i) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
+    if (r) return this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_ACCEPTING);
     if (null == s) return a ? this.renderExpiredInvite() : this.renderSpinner(M.default.Messages.GIFT_CODE_AUTH_RESOLVING);
     if (a) {
       if (n) {
@@ -208,12 +208,12 @@ class P extends i.PureComponent {
       return "login" === this.getMode() ? (0, l.jsx)(R.default, {
         giftCodeSKU: t,
         giftCode: s,
-        transitionTo: r,
+        transitionTo: i,
         location: u
       }) : (0, l.jsx)(L.default, {
         giftCodeSKU: t,
         giftCode: s,
-        transitionTo: r,
+        transitionTo: i,
         location: u
       })
     }

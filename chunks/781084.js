@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("862205");
-let l = (0, s.createExperiment)({
+let a = (0, s.createExperiment)({
   kind: "user",
   id: "2023-09_premium_likelihood_discount_offers",
   label: "Premium Likelihood Discount Offers",
@@ -32,4 +32,4 @@ let l = (0, s.createExperiment)({
     }
   }]
 });
-var a = l
+var l = a

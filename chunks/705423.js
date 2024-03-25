@@ -6,23 +6,23 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("866227"),
-  a = n.n(l),
+var a = n("866227"),
+  l = n.n(a),
   i = n("669491"),
   r = n("779807"),
   o = n("77078"),
   u = n("170213"),
   d = n("782340"),
   c = n("743582");
-let E = e => a().diff(a.unix(e), "days");
+let E = e => l().diff(l.unix(e), "days");
 
 function f(e) {
-  var t, l, a, f, _;
+  var t, a, l, f, _;
   if (null == e.message.embeds || null == e.message.embeds[0].fields) return null;
   let T = e.message.embeds[0],
-    I = null !== (a = null === (t = T.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== a ? a : void 0,
+    I = null !== (l = null === (t = T.fields) || void 0 === t ? void 0 : t.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.CLASSIFICATION_ID)) && void 0 !== l ? l : void 0,
     m = null !== (f = null == I ? void 0 : I.rawValue) && void 0 !== f ? f : void 0,
-    N = null !== (_ = null === (l = T.fields) || void 0 === l ? void 0 : l.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
+    N = null !== (_ = null === (a = T.fields) || void 0 === a ? void 0 : a.find(e => e.rawName === u.SafetyHubPolicyNoticeKeys.INCIDENT_TIMESTAMP)) && void 0 !== _ ? _ : void 0,
     p = null == N || null == N.rawValue ? void 0 : parseFloat(N.rawValue);
   return null == m || null == p ? null : (0, s.jsxs)(o.Clickable, {
     onClick: () => {

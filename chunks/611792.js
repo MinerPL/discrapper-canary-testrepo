@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("446674"),
-  a = n("27618"),
+var a = n("446674"),
+  l = n("27618"),
   i = n("341716");
 
 function r(e) {
@@ -15,7 +15,7 @@ function r(e) {
     message: t,
     channel: n,
     compact: r
-  } = e, o = (0, l.useStateFromStores)([a.default], () => null != t.interaction && a.default.isBlocked(t.interaction.user.id), [t.interaction]);
+  } = e, o = (0, a.useStateFromStores)([l.default], () => null != t.interaction && l.default.isBlocked(t.interaction.user.id), [t.interaction]);
   return (0, s.jsx)(i.default, {
     message: t,
     channel: n,

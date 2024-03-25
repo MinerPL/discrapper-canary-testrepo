@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var a = n("446674"),
   r = n("913144");
 let s = new Map,
-  i = !1;
-class l extends a.default.Store {
+  l = !1;
+class i extends a.default.Store {
   getFeed(e) {
     return s.get(e)
   }
@@ -17,13 +17,13 @@ class l extends a.default.Store {
     return null === (t = this.getFeed(e)) || void 0 === t ? void 0 : t.request_id
   }
   get hidden() {
-    return i
+    return l
   }
 }
-l.displayName = "ContentInventoryStore";
-var u = new l(r.default, {
+i.displayName = "ContentInventoryStore";
+var u = new i(r.default, {
   CONNECTION_OPEN: function() {
-    s.clear(), i = !1
+    s.clear(), l = !1
   },
   CONTENT_INVENTORY_SET_FEED: function(e) {
     let {
@@ -33,6 +33,6 @@ var u = new l(r.default, {
     s.set(t, n)
   },
   CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: function() {
-    i = !i
+    l = !l
   }
 })

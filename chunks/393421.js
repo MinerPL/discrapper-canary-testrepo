@@ -17,8 +17,8 @@ var a = n("37983"),
   N = n("476765"),
   E = n("49111"),
   m = n("782340"),
-  f = n("398096");
-let I = (0, N.uid)();
+  I = n("398096");
+let f = (0, N.uid)();
 var C = e => {
   let {
     email: t,
@@ -31,42 +31,42 @@ var C = e => {
     } catch (e) {
       T(new u.APIError(e))
     }
-  }, [r, t, n, l]), h = o.throttle(() => {
+  }, [r, t, n, l]), g = o.throttle(() => {
     d.default.sendVerificationEmail(t, !0, n)
-  }, 1e3), g = async e => {
+  }, 1e3), h = async e => {
     null != r && "" !== r && e.charCode === E.KeyboardKeys.ENTER && await S()
   };
   return (0, a.jsxs)("div", {
-    className: f.container,
+    className: I.container,
     children: [(0, a.jsx)("div", {
-      className: f.topImage
+      className: I.topImage
     }), (0, a.jsx)(c.Heading, {
-      className: i(f.centerText, f.header),
+      className: i(I.centerText, I.header),
       variant: "heading-xl/semibold",
       children: m.default.Messages.HUB_VERIFY_EMAIL_ADDRESS
     }), (0, a.jsx)("div", {
-      className: f.descriptionWidth,
+      className: I.descriptionWidth,
       children: (0, a.jsx)(c.Text, {
-        className: f.centerText,
+        className: I.centerText,
         variant: "text-sm/normal",
         color: "header-secondary",
         children: m.default.Messages.HUB_PIN_DESCRIPTION.format({
           email: t,
-          onClick: h
+          onClick: g
         })
       })
     }), (0, a.jsxs)(c.FormItem, {
-      className: f.formItem,
+      className: I.formItem,
       children: [(0, a.jsx)(c.FormTitle, {
-        id: I,
+        id: f,
         children: m.default.Messages.HUB_ENTER_PIN
       }), (0, a.jsx)(c.TextInput, {
-        onKeyPress: g,
+        onKeyPress: h,
         onChange: e => {
           null != e && "" !== e && N(e)
         },
         error: null == C ? void 0 : C.getAnyErrorMessage(),
-        "aria-labelledby": I
+        "aria-labelledby": f
       })]
     }), (0, a.jsx)(c.Button, {
       fullWidth: !0,
@@ -74,7 +74,7 @@ var C = e => {
       size: c.Button.Sizes.LARGE,
       color: c.Button.Colors.BRAND,
       children: (0, a.jsx)(c.Text, {
-        className: f.submitText,
+        className: I.submitText,
         variant: "text-sm/normal",
         children: m.default.Messages.SUBMIT
       })

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("414456"),
-  a = n.n(l),
+var a = n("414456"),
+  l = n.n(a),
   i = n("77078"),
   r = n("574073"),
   o = n("79798"),
@@ -22,8 +22,8 @@ function T(e) {
   let {
     message: t,
     compact: n,
-    usernameHook: l
-  } = e, T = (0, r.default)(t), I = l(T), {
+    usernameHook: a
+  } = e, T = (0, r.default)(t), I = a(T), {
     avatarSrc: m,
     eventHandlers: {
       onMouseEnter: N,
@@ -34,7 +34,7 @@ function T(e) {
     onMouseEnter: N,
     onMouseLeave: p,
     children: (0, s.jsx)(d.default, {
-      className: a(_.mainContainer, {
+      className: l(_.mainContainer, {
         [_.compact]: n
       }),
       iconNode: n ? null : (0, s.jsx)(c.AutomodAvatar, {
@@ -43,13 +43,13 @@ function T(e) {
       iconContainerClassName: _.iconContainer,
       compact: n,
       children: (0, s.jsxs)("div", {
-        className: a(_.content, {
+        className: l(_.content, {
           [_.compact]: n
         }),
         children: [(0, s.jsx)(u.BaseMessageHeader, {
           message: t,
           messageClassname: _.spanCorrection,
-          className: a(_.usernameContainer, _.spanCorrection, {
+          className: l(_.usernameContainer, _.spanCorrection, {
             [_.compact]: n
           }),
           username: (0, s.jsxs)("div", {
@@ -68,7 +68,7 @@ function T(e) {
           compact: n,
           showTimestamp: !0
         }), (0, s.jsx)("div", {
-          className: a(_.messageContent, {
+          className: l(_.messageContent, {
             [_.compact]: n
           }),
           children: f.default.Messages.GUILD_REPORT_FALSE_ALARM_SYSTEM_MESSAGE_SHORT.format({

@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return l
   }
 });
 var s = n("37983");
 n("884691");
-var l = n("75196");
+var a = n("75196");
 
-function a(e) {
+function l(e) {
   let {
     width: t = 440,
     height: n = 200,
-    avatar: a,
+    avatar: l,
     ...i
   } = e;
   return (0, s.jsxs)("svg", {
-    ...(0, l.default)(i),
+    ...(0, a.default)(i),
     width: t,
     height: n,
     viewBox: "0 0 ".concat(t, " ").concat(n),
@@ -82,7 +82,7 @@ function a(e) {
       y: "100",
       width: "56",
       height: "56",
-      children: a
+      children: l
     })]
   })
 }

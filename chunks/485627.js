@@ -28,7 +28,7 @@ class S extends o.default {
           let _ = n.default.getCurrentUser();
           if (null == _ || _.isPomelo() || !_.hasVerifiedEmailOrPhone()) return !1;
           let E = (0, i.getForceMigration)(),
-            o = t.default.get(E ? "lastSawPomeloMigration" : T);
+            o = t.Storage.get(E ? "lastSawPomeloMigration" : T);
           return !(null != o && Date.now() - o < 6048e5) && !0
         }()) {
         let e = I.UUOneClickExperiment.getCurrentConfig({
@@ -37,7 +37,7 @@ class S extends o.default {
             autoTrackExposure: !1
           }).enabled,
           _ = (0, a.openPomeloModal)(s.PomeloEntrypoints.APP_START, e, !1);
-        _ && t.default.set(T, Date.now())
+        _ && t.Storage.set(T, Date.now())
       }
     }
   }

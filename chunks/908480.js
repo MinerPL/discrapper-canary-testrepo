@@ -1,30 +1,30 @@
 "use strict";
 n.r(t), n.d(t, {
   useExplicitMediaActions: function() {
-    return a
+    return l
   }
 }), n("222007");
 var s = n("884691"),
-  l = n("448993");
+  a = n("448993");
 
-function a(e) {
+function l(e) {
   let {
     onError: t,
     onSuccess: n,
-    report: a
+    report: l
   } = e, [i, r] = s.useState(!1), o = s.useCallback(async () => {
     if (!i) {
       r(!0);
       try {
-        await a(), null == n || n()
+        await l(), null == n || n()
       } catch (n) {
-        let e = new l.APIError(n);
+        let e = new a.APIError(n);
         null == t || t(e)
       } finally {
         r(!1)
       }
     }
-  }, [i, t, n, a]);
+  }, [i, t, n, l]);
   return {
     reportFalsePositive: o,
     isReportFalsePositiveLoading: i

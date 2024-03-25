@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("246053"),
+var a = n("77078"),
+  l = n("246053"),
   i = n("489622"),
   r = n("49111"),
   o = n("895984");
@@ -24,17 +24,17 @@ function u(e) {
     children: [d && (0, s.jsx)(i.NoticeCloseButton, {
       onClick: u,
       noticeType: r.NoticeTypes.BACK_TO_PREVIOUS_SCREEN
-    }), (0, s.jsxs)(l.Button, {
+    }), (0, s.jsxs)(a.Button, {
       className: o.backButton,
       innerClassName: o.backButtonInner,
-      look: l.Button.Looks.OUTLINED,
-      color: l.Button.Colors.WHITE,
-      size: l.Button.Sizes.NONE,
+      look: a.Button.Looks.OUTLINED,
+      color: a.Button.Colors.WHITE,
+      size: a.Button.Sizes.NONE,
       onClick: n,
-      children: [(0, s.jsx)(a.default, {
+      children: [(0, s.jsx)(l.default, {
         width: 16,
         height: 16,
-        direction: a.default.Directions.LEFT,
+        direction: l.default.Directions.LEFT,
         className: o.backArrow
       }), t]
     })]
