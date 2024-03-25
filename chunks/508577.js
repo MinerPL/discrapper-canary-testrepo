@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), s("222007");
 var a = s("37983"),
@@ -10,122 +10,128 @@ var a = s("37983"),
   i = s("882039"),
   r = s("862337"),
   o = s("77078"),
-  d = s("4452"),
-  u = s("782340"),
-  c = s("114602");
-let S = l.config.stiff;
+  d = s("599110"),
+  u = s("4452"),
+  c = s("49111"),
+  S = s("782340"),
+  E = s("114602");
+let T = l.config.stiff;
 
-function E(e) {
+function f(e) {
   let {
     image: t,
     name: s,
-    sound: E,
-    openedCount: T
-  } = e, f = T > 0, _ = n.useRef(null), m = n.useRef(null), [g, h] = n.useState(!1), [N, I] = n.useState({
+    sound: f,
+    openedCount: _,
+    index: m
+  } = e, g = _ > 0, h = n.useRef(null), N = n.useRef(null), [I, p] = n.useState(!1), [C, A] = n.useState({
     x: 0,
     y: 0
-  }), [p] = n.useState(new r.Interval), [C, A] = (0, l.useSpring)(() => ({
+  }), [O] = n.useState(new r.Interval), [x, R] = (0, l.useSpring)(() => ({
     x: 0,
     y: 0,
-    config: S
-  })), [O, x] = (0, l.useSpring)(() => ({
+    config: T
+  })), [M, D] = (0, l.useSpring)(() => ({
     value: 1,
-    config: S
+    config: T
   }));
   n.useEffect(() => {
-    if (f && g && null != _.current) {
-      let e = _.current.getBoundingClientRect(),
-        t = N.x - e.x,
-        s = N.y - e.y,
+    if (g && I && null != h.current) {
+      let e = h.current.getBoundingClientRect(),
+        t = C.x - e.x,
+        s = C.y - e.y,
         a = e.width / 2,
         n = e.height / 2;
-      A({
+      R({
         x: (t - a) / a * 25,
         y: -((s - n) / n * 25)
       })
     }
-  }, [g, f, N.x, N.y, A]), n.useEffect(() => {
-    x({
-      value: f && g ? 1.2 : 1
+  }, [I, g, C.x, C.y, R]), n.useEffect(() => {
+    D({
+      value: g && I ? 1.2 : 1
     })
-  }, [g, f, x]);
-  let R = n.useCallback(e => {
-      I({
+  }, [I, g, D]);
+  let v = n.useCallback(e => {
+      A({
         x: e.clientX,
         y: e.clientY
       })
     }, []),
-    M = n.useCallback(e => {
-      h(!0), R(e)
-    }, [R]),
-    D = n.useCallback(() => {
-      h(!1), I({
+    L = n.useCallback(e => {
+      p(!0), v(e)
+    }, [v]),
+    P = n.useCallback(() => {
+      p(!1), A({
         x: 0,
         y: 0
-      }), A({
+      }), R({
         x: 0,
         y: 0
       })
-    }, [A]),
-    v = n.useCallback(() => {
-      if (null != m.current) {
-        let e = m.current.currentTime / m.current.duration,
-          t = (0, d.default)(1, 1.2, e);
-        x({
+    }, [R]),
+    j = n.useCallback(() => {
+      if (null != N.current) {
+        let e = N.current.currentTime / N.current.duration,
+          t = (0, u.default)(1, 1.2, e);
+        D({
           value: t
-        }), e >= 1 && (!g && x({
+        }), e >= 1 && (!I && D({
           value: 1
-        }), p.stop())
+        }), O.stop())
       }
-    }, [p, g, x]);
+    }, [O, I, D]);
   n.useEffect(() => {
-    null != p._ref && p.start(30, v)
-  }, [p, v]);
-  let L = n.useCallback(() => {
-    null != m.current && (m.current.currentTime = 0, m.current.play(), p.start(30, v))
-  }, [p, v]);
+    null != O._ref && O.start(30, j)
+  }, [O, j]);
+  let b = n.useCallback(() => {
+    d.default.track(c.AnalyticEvents.EASTER_EGG_INTERACTED, {
+      type: "packages_item_click",
+      position: m
+    }), null != N.current && (N.current.currentTime = 0, N.current.play(), O.start(30, j))
+  }, [O, j, m]);
   return (0, a.jsxs)(o.Clickable, {
-    onClick: f ? L : void 0,
+    onClick: g ? b : void 0,
     children: [(0, a.jsx)("audio", {
-      src: E,
-      ref: m
+      src: f,
+      ref: N
     }), (0, a.jsx)(l.animated.div, {
-      ref: _,
-      className: f ? c.containerOwned : void 0,
+      ref: h,
+      className: g ? E.containerOwned : void 0,
       style: {
-        transform: (0, l.to)([O.value], e => "scale(".concat(e, ")"))
+        transform: (0, l.to)([M.value], e => "scale(".concat(e, ")"))
       },
-      onMouseEnter: M,
-      onMouseLeave: D,
-      onMouseMove: R,
+      onMouseEnter: L,
+      onMouseLeave: P,
+      onMouseMove: v,
       children: (0, a.jsxs)(l.animated.div, {
-        className: c.item,
+        className: E.item,
         style: {
-          transform: (0, l.to)([C.x, C.y], (e, t) => "rotateY(".concat(e, "deg) rotateX(").concat(t, "deg)"))
+          transform: (0, l.to)([x.x, x.y], (e, t) => "rotateY(".concat(e, "deg) rotateX(").concat(t, "deg)"))
         },
-        children: [f && (0, a.jsxs)(a.Fragment, {
+        children: [g && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(o.Text, {
             variant: "text-xxs/bold",
-            className: c.count,
-            children: u.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format({
-              count: T
+            className: E.count,
+            children: S.default.Messages.USER_SETTINGS_PACKAGE_COUNT.format({
+              count: _
             })
           }), (0, a.jsx)(i.VoiceNormalIcon, {
-            className: c.audioIndicator,
+            className: E.audioIndicator,
             color: o.tokens.colors.INTERACTIVE_ACTIVE
           })]
         }), (0, a.jsx)(o.Heading, {
           variant: "display-md",
-          className: c.imageContainer,
+          className: E.imageContainer,
           color: "text-muted",
-          children: f ? (0, a.jsx)("img", {
+          children: g ? (0, a.jsx)("img", {
             src: t,
             alt: "",
-            className: c.image
+            className: E.image
           }) : "?"
-        }), f && (0, a.jsx)(o.Text, {
+        }), g && (0, a.jsx)(o.Text, {
           variant: "text-xxs/bold",
-          className: c.name,
+          className: E.name,
           children: s
         })]
       })
