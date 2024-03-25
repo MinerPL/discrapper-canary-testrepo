@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var s = n("37983"),
   a = n("884691"),
   l = n("414456"),
-  i = n.n(l),
-  r = n("498574"),
+  r = n.n(l),
+  i = n("498574"),
   u = n("391679"),
   o = n("446674"),
   d = n("444095"),
@@ -123,7 +123,7 @@ class Y extends a.PureComponent {
       } = this.props,
       a = this.getInviteKey(),
       l = (0, m.parseInviteCodeFromInviteKey)(a),
-      i = t ? {
+      r = t ? {
         guild_id: null != s.guild ? s.guild.id : null,
         channel_id: null != s.channel ? s.channel.id : null,
         inviter_id: null != s.inviter ? s.inviter.id : null,
@@ -132,7 +132,7 @@ class Y extends a.PureComponent {
         invite_code: l
       };
     R.default.track(e, {
-      ...i,
+      ...r,
       ...n
     })
   }
@@ -150,7 +150,7 @@ class Y extends a.PureComponent {
         src: n("653240"),
         className: V.marginBottom8
       }), (0, s.jsx)(O.Title, {
-        className: i(V.marginTop8, V.marginBottom8),
+        className: r(V.marginTop8, V.marginBottom8),
         children: F.default.Messages.AUTH_INVALID_INVITE_TITLE
       }), (0, s.jsx)(O.SubTitle, {
         children: e ? F.default.Messages.AUTH_BANNED_INVITE_BODY : F.default.Messages.AUTH_INVALID_INVITE_BODY
@@ -251,8 +251,8 @@ class Y extends a.PureComponent {
       case b.InviteStates.APP_OPENING:
         return this.renderSpinner(F.default.Messages.APP_OPENING);
       case b.InviteStates.RESOLVED:
-        var i;
-        if (n && (0, L.hasFlag)(null !== (i = e.flags) && void 0 !== i ? i : 0, r.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.default.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(b.Routes.APP));
+        var r;
+        if (n && (0, L.hasFlag)(null !== (r = e.flags) && void 0 !== r ? r : 0, i.GuildInviteFlags.IS_GUEST_INVITE)) return c.default.openApp(e.code), d.SessionStorage.set(T.GUEST_INVITE_KEY, e.code), this.renderAppOpened(() => a(b.Routes.APP));
         if (n || !B.IS_APP_COMPATIBLE_BROWSER) return this.renderAuthenticatedOrDownload();
         else if (this.getMode() === H.LOGIN) return (0, s.jsx)(U.default, {
           invite: e,

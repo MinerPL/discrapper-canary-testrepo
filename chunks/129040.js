@@ -21,7 +21,7 @@ class T extends r.default {
       POST_CONNECTION_OPEN: () => this.handleConnectionOpen()
     }, this.handleConnectionOpen = async () => {
       if ((0, i.isWeb)()) {
-        let e = t.default.get(s);
+        let e = t.SessionStorage.get(s);
         if (null != e && "string" == typeof e && a.default.isAuthenticated()) {
           let {
             invite: _
@@ -31,7 +31,7 @@ class T extends r.default {
             invite: _,
             code: e,
             context: I.AppContext.APP
-          }), t.default.remove(s))
+          }), t.SessionStorage.remove(s))
         }
       }
     }
