@@ -154,7 +154,7 @@ function A(e) {
     }))
   }, [t, i.store_listing_benefits]), h = r.useMemo(() => {
     var e;
-    return null != i.image_asset && null !== (e = y.default.toURLSafe((0, I.getAssetURL)(t, i.image_asset))) && void 0 !== e ? e : void 0
+    return null != i.image_asset && null !== (e = y.default.toURLSafe((0, I.getAssetURL)(t, i.image_asset, 64))) && void 0 !== e ? e : void 0
   }, [t, i.image_asset]), m = i.subscription_plans.length > 0 ? i.subscription_plans[0] : null;
   if (null === m) return null;
   let x = (0, l.jsx)(v.Button, {
@@ -229,7 +229,7 @@ function w(e) {
     appId: r
   } = e, {
     analyticsLocations: a
-  } = (0, g.default)(p.default.APP_STOREFRONT), c = (0, h.useStateFromStores)([N.default], () => N.default.getForSKU(i.id), [i]), u = i.name, m = null !== (n = null == c ? void 0 : null === (t = c.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== n ? n : void 0, x = (null == c ? void 0 : c.headerBackground) != null && null !== (s = y.default.toURLSafe((0, I.getAssetURL)(r, c.headerBackground))) && void 0 !== s ? s : void 0, C = i.type === M.SKUTypes.DURABLE ? O.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0, {
+  } = (0, g.default)(p.default.APP_STOREFRONT), c = (0, h.useStateFromStores)([N.default], () => N.default.getForSKU(i.id), [i]), u = i.name, m = null !== (n = null == c ? void 0 : null === (t = c.description) || void 0 === t ? void 0 : t.trim()) && void 0 !== n ? n : void 0, x = (null == c ? void 0 : c.headerBackground) != null && null !== (s = y.default.toURLSafe((0, I.getAssetURL)(r, c.headerBackground, 256))) && void 0 !== s ? s : void 0, C = i.type === M.SKUTypes.DURABLE ? O.default.Messages.STOREFRONT_DURABLE_AVAILABILITY : void 0, {
     price: S
   } = i;
   if (null == S) return null;
