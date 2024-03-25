@@ -9,7 +9,7 @@ var n = s("759843"),
   l = s("840707"),
   E = s("49111"),
   _ = {
-    createGuildFromTemplate: async function e(e, a, s, _, i, d) {
+    createGuildFromTemplate: async function e(e, a, s, _, d) {
       try {
         let t = await l.default.post({
           url: E.Endpoints.GUILDS,
@@ -20,8 +20,7 @@ var n = s("759843"),
             system_channel_id: s.system_channel_id,
             roles: s.roles,
             guild_template_code: s.code,
-            staff_only: !!i || void 0,
-            is_clan: !!d || void 0
+            staff_only: !!d || void 0
           },
           trackedActionData: {
             event: n.NetworkActionNames.GUILD_CREATE,

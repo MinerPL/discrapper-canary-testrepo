@@ -1,10 +1,10 @@
 "use strict";
 s.r(a), s.d(a, {
   useCreationIntentSlide: function() {
-    return o
+    return I
   },
   default: function() {
-    return c
+    return A
   }
 });
 var n = s("37983");
@@ -13,99 +13,100 @@ var t = s("414456"),
   l = s.n(t),
   E = s("77078"),
   _ = s("145131"),
-  i = s("599110"),
-  d = s("350956"),
-  T = s("49111"),
-  r = s("782340"),
-  u = s("517981"),
-  L = s("819963"),
+  d = s("599110"),
+  i = s("350956"),
+  T = s("243338"),
+  r = s("49111"),
+  u = s("782340"),
+  L = s("517981"),
+  M = s("819963"),
   C = s("20264");
-let M = .5 > Math.random();
+let o = .5 > Math.random();
 
-function o(e) {
+function I(e) {
   let {
     onClose: a,
     onBack: s,
     onCreationIntentChosen: t,
-    hasFooter: o = !0
-  } = e, c = (0, n.jsx)(n.Fragment, {
+    hasFooter: I = !0
+  } = e, A = (0, n.jsx)(n.Fragment, {
     children: (0, n.jsx)(E.Button, {
-      className: u.backButton,
+      className: L.backButton,
       look: E.Button.Looks.BLANK,
       size: E.Button.Sizes.MIN,
       onClick: s,
-      children: r.default.Messages.BACK
+      children: u.default.Messages.BACK
     })
   });
 
-  function I(e) {
-    i.default.track(T.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
+  function c(e) {
+    d.default.track(r.AnalyticEvents.GUILD_CREATION_INTENT_SELECTED, {
       skipped: null == e,
-      is_community: !!e
-    }), t(!!e)
+      is_community: e === T.GuildCreationIntents.COMMUNITY
+    }), t(e)
   }
-  let A = (0, n.jsxs)(n.Fragment, {
+  let N = (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsxs)(E.ModalHeader, {
       direction: _.default.Direction.VERTICAL,
-      className: u.header,
+      className: L.header,
       separator: !1,
       children: [(0, n.jsx)(E.Heading, {
-        className: l(u.title),
+        className: l(L.title),
         variant: "heading-xl/semibold",
-        children: r.default.Messages.CREATION_INTENT_TITLE
+        children: u.default.Messages.CREATION_INTENT_TITLE
       }), (0, n.jsx)(E.Text, {
-        className: u.subtitle,
+        className: L.subtitle,
         color: "header-secondary",
         variant: "text-md/normal",
-        children: r.default.Messages.CREATION_INTENT_DESCRIPTION
+        children: u.default.Messages.CREATION_INTENT_DESCRIPTION
       }), null != a && (0, n.jsx)(E.ModalCloseButton, {
-        className: u.closeButton,
+        className: L.closeButton,
         onClick: a
       })]
     }), (0, n.jsxs)(E.ModalContent, {
-      className: u.optionsList,
-      children: [M ? (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(d.default, {
-          icon: L,
-          message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-          onClick: () => I(!1)
-        }), (0, n.jsx)(d.default, {
+      className: L.optionsList,
+      children: [o ? (0, n.jsxs)(n.Fragment, {
+        children: [(0, n.jsx)(i.default, {
+          icon: M,
+          message: u.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
+          onClick: () => c(T.GuildCreationIntents.FRIENDS)
+        }), (0, n.jsx)(i.default, {
           icon: C,
-          message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-          onClick: () => I(!0)
+          message: u.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
+          onClick: () => c(T.GuildCreationIntents.COMMUNITY)
         })]
       }) : (0, n.jsxs)(n.Fragment, {
-        children: [(0, n.jsx)(d.default, {
+        children: [(0, n.jsx)(i.default, {
           icon: C,
-          message: r.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
-          onClick: () => I(!0)
-        }), (0, n.jsx)(d.default, {
-          icon: L,
-          message: r.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
-          onClick: () => I(!1)
+          message: u.default.Messages.CREATION_INTENT_OPTION_COMMUNITY,
+          onClick: () => c(T.GuildCreationIntents.COMMUNITY)
+        }), (0, n.jsx)(i.default, {
+          icon: M,
+          message: u.default.Messages.CREATION_INTENT_OPTION_FRIENDS,
+          onClick: () => c(T.GuildCreationIntents.FRIENDS)
         })]
       }), (0, n.jsx)(E.Text, {
-        className: u.skip,
+        className: L.skip,
         color: "header-secondary",
         variant: "text-sm/normal",
-        children: r.default.Messages.CREATION_INTENT_SKIP.format({
-          onSkip: () => I(null)
+        children: u.default.Messages.CREATION_INTENT_SKIP.format({
+          onSkip: () => c(null)
         })
       })]
-    }), o && (0, n.jsx)(E.ModalFooter, {
+    }), I && (0, n.jsx)(E.ModalFooter, {
       justify: _.default.Justify.BETWEEN,
-      children: c
+      children: A
     })]
   });
   return {
-    content: A,
-    footer: c
+    content: N,
+    footer: A
   }
 }
 
-function c(e) {
+function A(e) {
   let {
     content: a
-  } = o(e);
+  } = I(e);
   return a
 }
