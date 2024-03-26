@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return y
+    return N
   }
 }), n("222007"), n("424973");
 var i = n("446674"),
@@ -153,7 +153,7 @@ class C extends i.default.PersistedStore {
   }
 }
 C.displayName = "NotificationCenterItemsStore", C.persistKey = "NotificationCenterItemsStore_v2";
-var y = new C(s.default, {
+let y = new C(s.default, {
   CONNECTION_OPEN: function(e) {
     p(), h.default.initialLanguageLoad.then(() => {
       let t = [];
@@ -172,7 +172,7 @@ var y = new C(s.default, {
         e.guild_scheduled_events.forEach(e => {
           A(e)
         })
-      }), g.notifCenterLocalItems = t
+      }), g.notifCenterLocalItems = t, y.emitChange()
     })
   },
   LOGOUT: p,
@@ -288,4 +288,5 @@ var y = new C(s.default, {
       void 0 === g.notifCenterLocalItems.find(t => t.local_id === e.local_id) && (g.notifCenterLocalItems = [...g.notifCenterLocalItems.filter(t => t.kind !== e.kind), e])
     }
   }
-})
+});
+var N = y
