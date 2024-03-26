@@ -43,12 +43,12 @@ function S(e) {
     hidePersonalInformation: c,
     isUsingGuildBio: S,
     lastSection: C = !1,
-    animateOnHover: T = !1,
-    isHovering: _ = !1,
+    animateOnHover: _ = !1,
+    isHovering: T = !1,
     lineClamp: I
   } = e, {
     location: v
-  } = (0, o.useAnalyticsContext)(), N = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), A = f.default.canUsePremiumGuildMemberProfile(N);
+  } = (0, o.useAnalyticsContext)(), A = (0, s.useStateFromStores)([u.default], () => u.default.getCurrentUser()), N = f.default.canUsePremiumGuildMemberProfile(A);
   return c || null == l || "" === l ? null : (0, i.jsxs)(m.default, {
     lastSection: C,
     children: [(0, i.jsxs)(r.Heading, {
@@ -67,7 +67,7 @@ function S(e) {
           ...e,
           onClick: () => {
             var t;
-            null == (t = e.onClick) || t(), null != N && !A && (0, r.openModalLazy)(async () => {
+            null == (t = e.onClick) || t(), null != A && !N && (0, r.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.el("414242").then(n.bind(n, "414242"));
@@ -83,14 +83,14 @@ function S(e) {
           guild: t,
           size: d.default.Sizes.SMOL,
           className: a(E.aboutMeGuildIcon, {
-            [E.nonPremiumHoverState]: !A
+            [E.nonPremiumHoverState]: !N
           })
         })
       })]
     }), (0, i.jsx)(p.default, {
       userBio: l,
-      animateOnHover: T,
-      isHovering: _,
+      animateOnHover: _,
+      isHovering: T,
       lineClamp: I
     })]
   })

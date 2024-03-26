@@ -26,14 +26,14 @@ var i = n("37983"),
   g = n("672724"),
   S = n("392284"),
   C = n("468482"),
-  T = n("316680"),
-  _ = n("830837"),
+  _ = n("316680"),
+  T = n("830837"),
   I = n("132755"),
   v = n("73034"),
-  N = n("58608"),
-  A = n("719347"),
-  O = n("49111"),
-  R = n("782340"),
+  A = n("58608"),
+  N = n("719347"),
+  R = n("49111"),
+  O = n("782340"),
   M = n("273818"),
   k = n("125047");
 let L = "-:--",
@@ -131,15 +131,15 @@ class w extends l.Component {
       className: M.videoButton,
       onClick: l,
       tabIndex: s ? -1 : 0,
-      "aria-label": R.default.Messages.PAUSE,
-      children: (0, i.jsx)(_.default, {
+      "aria-label": O.default.Messages.PAUSE,
+      children: (0, i.jsx)(T.default, {
         className: M.controlIcon
       }, "pause")
     }) : null != t && t === n ? (0, i.jsx)(d.Clickable, {
       className: M.videoButton,
       onClick: a,
       tabIndex: s ? -1 : 0,
-      "aria-label": R.default.Messages.PLAY_AGAIN,
+      "aria-label": O.default.Messages.PLAY_AGAIN,
       children: (0, i.jsx)(v.default, {
         className: M.controlIcon
       }, "replay")
@@ -147,7 +147,7 @@ class w extends l.Component {
       className: M.videoButton,
       onClick: a,
       tabIndex: s ? -1 : 0,
-      "aria-label": R.default.Messages.PLAY,
+      "aria-label": O.default.Messages.PLAY,
       children: (0, i.jsx)(I.default, {
         className: M.controlIcon
       }, "play")
@@ -188,7 +188,7 @@ class w extends l.Component {
         ref: this.setDurationRef
       }), (0, i.jsx)("div", {
         className: k.flex,
-        children: (0, i.jsx)(T.default, {
+        children: (0, i.jsx)(_.default, {
           ref: this.setVolumeButtonRef,
           muted: a,
           value: m,
@@ -278,7 +278,7 @@ class G extends l.Component {
   render() {
     let {
       play: e
-    } = this.state, t = e ? I.default : _.default;
+    } = this.state, t = e ? I.default : T.default;
     return (0, i.jsx)(u.default.div, {
       className: M.playPausePop,
       style: this.getAnimatedStyle(),
@@ -337,7 +337,7 @@ class B {
     throw Error("uhoh")
   }
   sendEvent() {
-    this.analyticsEnabled && m.default.track(O.AnalyticEvents.MEDIA_PLAY_FINISHED, {
+    this.analyticsEnabled && m.default.track(R.AnalyticEvents.MEDIA_PLAY_FINISHED, {
       play_time_sec: this.playTimeSec,
       play_wall_time_ms: this.playWallTimeMs,
       first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -601,7 +601,7 @@ class V extends l.PureComponent {
       playing: r,
       fullscreen: o
     } = this.state, u = this.getWidth(), d = this.getHeight();
-    return n ? (0, i.jsx)(N.default, {
+    return n ? (0, i.jsx)(A.default, {
       className: M.video,
       controls: !1,
       height: d,
@@ -611,14 +611,14 @@ class V extends l.PureComponent {
       mediaLayoutType: s,
       playsInline: !0,
       autoPlay: r
-    }) : (0, i.jsx)(N.default, {
+    }) : (0, i.jsx)(A.default, {
       className: M.video,
       controls: !1,
       playsInline: !0,
       autoPlay: r,
       height: d,
       responsive: a && !o,
-      mediaLayoutType: o ? A.MediaLayoutType.STATIC : s,
+      mediaLayoutType: o ? N.MediaLayoutType.STATIC : s,
       onClick: this.handleVideoClick,
       onEnded: this.handleEnded,
       onError: l,
@@ -699,7 +699,7 @@ class V extends l.PureComponent {
       width: h ? window.screen.width : C,
       disabled: !l,
       children: t === b.VIDEO ? (0, i.jsx)(f.default, {
-        "aria-label": R.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
+        "aria-label": O.default.Messages.TITLE_BAR_FULLSCREEN_WINDOW,
         className: M.videoButton,
         guestWindow: window,
         onClick: this.toggleFullscreen,
@@ -769,7 +769,7 @@ class V extends l.PureComponent {
       let t = this.getWidth();
       return (0, i.jsxs)("div", {
         className: s(m, {
-          [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+          [M.wrapperMediaMosaic]: u === N.MediaLayoutType.MOSAIC
         }),
         style: o ? void 0 : {
           width: t,
@@ -787,7 +787,7 @@ class V extends l.PureComponent {
     }
     return (0, i.jsxs)("div", {
       className: s(m, M.newMosaicStyle, a, {
-        [M.wrapperMediaMosaic]: u === A.MediaLayoutType.MOSAIC
+        [M.wrapperMediaMosaic]: u === N.MediaLayoutType.MOSAIC
       }),
       "data-fullscreen": c,
       onMouseEnter: this.handleMouseEnter,
@@ -969,10 +969,10 @@ class V extends l.PureComponent {
       let {
         current: t
       } = this.mediaRef;
-      if (e.which === O.KeyboardKeys.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
-      else if (e.which >= O.KeyboardKeys.DIGIT_0 && e.which <= O.KeyboardKeys.DIGIT_9 && null != t) {
+      if (e.which === R.KeyboardKeys.SPACE) e.preventDefault(), this.setPlay(!this.state.playing);
+      else if (e.which >= R.KeyboardKeys.DIGIT_0 && e.which <= R.KeyboardKeys.DIGIT_9 && null != t) {
         e.preventDefault();
-        let n = (e.which - O.KeyboardKeys.DIGIT_0) / 10;
+        let n = (e.which - R.KeyboardKeys.DIGIT_0) / 10;
         t.currentTime = t.duration * n, this.setPlay(!0)
       }
     }, this._analytics = new B({

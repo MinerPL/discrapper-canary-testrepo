@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return R
   },
   useClickInteractionUserUsername: function() {
-    return v
+    return L
   },
   useClickMessageAuthorAvatar: function() {
     return P
@@ -37,10 +37,10 @@ n.r(t), n.d(t, {
     return B
   },
   useFocusInside: function() {
-    return F
+    return k
   },
   useClickReply: function() {
-    return k
+    return F
   },
   useClickInteractionCommandName: function() {
     return w
@@ -105,12 +105,12 @@ function R(e, t, n, s) {
   return M(null == e ? void 0 : e.author.id, t.id, a)
 }
 
-function v(e, t, n, s) {
+function L(e, t, n, s) {
   let a = g("interactionUsernameProfile", n, s);
   return M(null == e ? void 0 : e.user.id, t.id, a)
 }
 
-function L(e) {
+function v(e) {
   return a.useCallback(t => {
     t.preventDefault(), t.stopPropagation(), e()
   }, [e])
@@ -118,17 +118,17 @@ function L(e) {
 
 function P(e, t) {
   let n = g("avatarProfile", e, t);
-  return L(n)
+  return v(n)
 }
 
 function D(e, t) {
   let n = g("referencedAvatarProfile", e, t);
-  return L(n)
+  return v(n)
 }
 
 function x(e, t) {
   let n = g("interactionAvatarProfile", e, t);
-  return L(n)
+  return v(n)
 }
 
 function y(e, t, l, r) {
@@ -241,7 +241,7 @@ function B(e, t, n) {
   }
 }
 
-function F(e, t) {
+function k(e, t) {
   let [n, s] = a.useState(!1), [l, i] = a.useState(!1), r = a.useCallback(t => {
     var n, a;
     let l = null !== (a = null === (n = (0, T.eventOwnerDocument)(t)) || void 0 === n ? void 0 : n.activeElement) && void 0 !== a ? a : null;
@@ -259,7 +259,7 @@ function F(e, t) {
   }
 }
 
-function k(e, t) {
+function F(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   return a.useCallback(() => {
     null != t && (n ? l.default.show({

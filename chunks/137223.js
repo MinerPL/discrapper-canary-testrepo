@@ -166,7 +166,7 @@ class g extends s.Component {
       className: g,
       inputProps: S,
       focusAfterReady: C
-    } = this.props, T = null != t && t.length > 0, _ = !1, I = [];
+    } = this.props, _ = null != t && t.length > 0, T = !1, I = [];
     return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
       focusProps: {
         offset: 4
@@ -177,7 +177,7 @@ class g extends s.Component {
         className: x.close,
         "aria-label": h.default.Messages.REMOVE
       })]
-    }, t))) : (_ = !0, m.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
+    }, t))) : (T = !0, m.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
       className: o(x.tag, x.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
       children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, a.jsx)(u.Avatar, {
@@ -215,7 +215,7 @@ class g extends s.Component {
           },
           children: [I, (0, a.jsx)("input", {
             className: o(x.input, {
-              [x.richTagInput]: _
+              [x.richTagInput]: T
             }),
             type: "text",
             ref: this.ref,
@@ -234,7 +234,7 @@ class g extends s.Component {
           }), null != s ? (0, a.jsx)(y, {
             size: r,
             themeOverride: i,
-            hasContent: T,
+            hasContent: _,
             onClear: this.handleClear
           }) : null]
         })

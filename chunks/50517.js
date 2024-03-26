@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   AwaitingPurchaseTokenAuthStepFooter: function() {
-    return c
+    return o
   }
 });
 var s = n("37983");
@@ -44,7 +44,7 @@ let u = e => {
       })
     })
   },
-  c = () => (0, s.jsx)("div", {
+  o = () => (0, s.jsx)("div", {
     children: (0, s.jsx)(r.ModalFooter, {
       justify: a.default.Justify.BETWEEN,
       align: a.default.Align.CENTER,

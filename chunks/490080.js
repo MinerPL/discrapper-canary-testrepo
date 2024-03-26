@@ -13,23 +13,23 @@ var i = l("37983"),
   c = l("272030"),
   d = l("811425"),
   u = l("845579"),
-  f = l("697218"),
-  v = l("167726"),
+  v = l("697218"),
+  f = l("167726"),
   h = l("604525"),
   m = l("811305"),
   I = l("58608"),
   E = l("449008"),
   x = l("387111"),
-  C = l("159885"),
-  T = l("84460"),
-  p = l("549548"),
-  S = l("607573"),
-  g = l("555584"),
-  A = l("817039"),
+  T = l("159885"),
+  C = l("84460"),
+  S = l("549548"),
+  p = l("607573"),
+  A = l("555584"),
+  g = l("817039"),
   _ = l("687292"),
   N = l("141962"),
-  j = l("639028"),
-  D = l("782340"),
+  D = l("639028"),
+  j = l("782340"),
   y = l("453193"),
   M = l("728791");
 
@@ -56,17 +56,17 @@ function b(e) {
     channel: a,
     guildId: n,
     large: s = !1
-  } = e, c = (0, r.useStateFromStoresArray)([f.default], () => {
+  } = e, c = (0, r.useStateFromStoresArray)([v.default], () => {
     var e;
     return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : []).map(e => {
       let [t] = e;
-      return f.default.getUser(t)
+      return v.default.getUser(t)
     }).filter(E.isNotNullish)
   }), d = x.default.getName(n, null == a ? void 0 : a.id, null == c ? void 0 : c[0]);
-  if (d = (0, C.truncateText)(d, 15), null == t || 0 === c.length) {
-    var u, v;
-    let e = "".concat((0, p.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
-    return s && (e = null !== (v = l.description) && void 0 !== v ? v : ""), (0, i.jsx)(o.Text, {
+  if (d = (0, T.truncateText)(d, 15), null == t || 0 === c.length) {
+    var u, f;
+    let e = "".concat((0, S.default)(null !== (u = l.maxParticipants) && void 0 !== u ? u : 0));
+    return s && (e = null !== (f = l.description) && void 0 !== f ? f : ""), (0, i.jsx)(o.Text, {
       className: y.activitySubtitleText,
       variant: "text-xs/normal",
       color: "interactive-normal",
@@ -78,10 +78,10 @@ function b(e) {
     children: [(0, i.jsx)(o.Text, {
       className: y.usersArePlayingText,
       variant: "text-xs/normal",
-      children: c.length > 1 ? D.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+      children: c.length > 1 ? j.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
         username: d,
         count: c.length - 1
-      }) : D.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
+      }) : j.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
         username: d
       })
     }), (0, i.jsx)(m.default, {
@@ -98,11 +98,11 @@ function V(e) {
   let {
     activityItem: l,
     channel: n,
-    guildId: f,
+    guildId: v,
     locationObject: m,
     onActivityItemVisible: E,
     onActivityItemSelected: x,
-    large: C = !1
+    large: T = !1
   } = e, {
     imageBackground: V,
     videoUrl: R,
@@ -111,58 +111,58 @@ function V(e) {
     onActivityItemSelected: B,
     labelType: F,
     staffReleasePhase: P
-  } = (0, S.default)({
+  } = (0, p.default)({
     activityItem: l,
     channel: n,
-    guildId: f,
+    guildId: v,
     locationObject: m,
     onActivityItemVisible: E,
     onActivityItemSelected: x,
     embeddedActivitiesManager: N.default
-  }), w = (0, r.useStateFromStores)([T.default, v.default], () => T.default.inDevModeForApplication(l.application.id) || v.default.inTestModeForApplication(l.application.id), [l.application.id]), {
+  }), w = (0, r.useStateFromStores)([C.default, f.default], () => C.default.inDevModeForApplication(l.application.id) || f.default.inTestModeForApplication(l.application.id), [l.application.id]), {
     application: Y
   } = l, k = a.useCallback(e => e && (null == E ? void 0 : E({
     applicationId: l.application.id
-  })), [l.application.id, E]), U = (0, d.useIsVisible)(k, .8, !0), [G, Z] = a.useState(!1), [W, z] = a.useState(G);
+  })), [l.application.id, E]), U = (0, d.useIsVisible)(k, .8, !0), [G, W] = a.useState(!1), [z, Z] = a.useState(G);
   a.useEffect(() => {
-    G && z(!0)
+    G && Z(!0)
   }, [G]);
-  let K = () => Z(!0),
-    X = () => Z(!1),
+  let K = () => W(!0),
+    X = () => W(!1),
     q = u.DeveloperMode.useSetting();
   return (0, i.jsxs)(o.Clickable, {
-    onClick: O === S.ActivityAction.START ? B : void 0,
+    onClick: O === p.ActivityAction.START ? B : void 0,
     onContextMenu: q ? e => {
-      (0, c.openContextMenu)(e, e => (0, i.jsx)(j.default, {
+      (0, c.openContextMenu)(e, e => (0, i.jsx)(D.default, {
         application: Y,
         ...e
       }))
     } : void 0,
     className: s(y.activityItem, {
-      [y.large]: !0 === C,
-      [y.disabled]: O !== S.ActivityAction.START
+      [y.large]: !0 === T,
+      [y.disabled]: O !== p.ActivityAction.START
     }),
     children: [(0, i.jsxs)("div", {
       ref: U,
       className: s(y.activityImageContainer, {
-        [y.large]: !0 === C
+        [y.large]: !0 === T
       }),
       onMouseEnter: K,
       onFocus: K,
       onMouseLeave: X,
       onBlur: X,
-      children: [(0, i.jsx)(A.default, {
+      children: [(0, i.jsx)(g.default, {
         imageBackground: V,
         applicationName: Y.name,
         imageClassName: s(y.activityImage, {
-          [y.large]: !0 === C
+          [y.large]: !0 === T
         }),
         imageNotFoundClassName: y.brokenImageIconWrapper
-      }), null != R && W && O === S.ActivityAction.START ? (0, i.jsx)("div", {
+      }), null != R && z && O === p.ActivityAction.START ? (0, i.jsx)("div", {
         className: s(y.activityVideo, {
           [y.videoFadeOut]: !G
         }),
-        onAnimationEnd: () => G ? null : z(!1),
+        onAnimationEnd: () => G ? null : Z(!1),
         children: (0, i.jsx)(I.default, {
           className: y.activityVideo,
           src: R,
@@ -170,7 +170,7 @@ function V(e) {
           autoPlay: !0,
           muted: !0
         })
-      }) : null, O !== S.ActivityAction.START ? (0, i.jsx)(g.ActivityActionOverlayButton, {
+      }) : null, O !== p.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
         action: O,
         onClick: B
       }) : null, (0, i.jsx)("div", {
@@ -183,7 +183,7 @@ function V(e) {
           })
         })
       }), w ? (0, i.jsx)(o.Tooltip, {
-        text: D.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
+        text: j.default.Messages.EMBEDDED_ACTIVITIES_DEVELOPER_ACTIVITY,
         children: e => (0, i.jsx)("div", {
           className: y.devShelfBadge,
           ...e,
@@ -194,13 +194,13 @@ function V(e) {
       }) : null]
     }), (0, i.jsxs)("div", {
       className: s(y.activityTextContainer, {
-        [y.large]: C
+        [y.large]: T
       }),
-      children: [C ? (0, i.jsx)(o.Text, {
+      children: [T ? (0, i.jsx)(o.Text, {
         className: y.activityMaxParticipantsLarge,
         variant: "text-xs/normal",
         color: "interactive-normal",
-        children: (0, p.default)(null !== (t = Y.maxParticipants) && void 0 !== t ? t : 0)
+        children: (0, S.default)(null !== (t = Y.maxParticipants) && void 0 !== t ? t : 0)
       }) : null, (0, i.jsxs)("div", {
         className: y.activityName,
         children: [(0, i.jsx)(o.Heading, {
@@ -221,8 +221,8 @@ function V(e) {
         activity: null == H ? void 0 : H.embeddedActivity,
         application: Y,
         channel: n,
-        guildId: f,
-        large: C
+        guildId: v,
+        large: T
       }), (0, i.jsx)("div", {
         className: y.activityTagsContainer,
         children: Y.tags.slice(0, 3).map(e => (0, i.jsx)(L, {

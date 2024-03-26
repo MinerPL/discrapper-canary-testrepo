@@ -141,8 +141,8 @@ function O(e, t) {
   if (null == g) return;
   let O = null === (o = r.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
     R = (0, I.getAvatarUrl)(g, O),
-    v = A.answers,
-    L = A.layout_type,
+    L = A.answers,
+    v = A.layout_type,
     P = M(e, t, {
       formattedExpirationLabel: p
     });
@@ -156,20 +156,20 @@ function O(e, t) {
     hasSelectedAnswer: b,
     hasVoted: G,
     isEditingVote: B,
-    isExpired: F,
-    isInteractive: k,
+    isExpired: k,
+    isInteractive: F,
     reactions: w,
     selectedAnswerIds: H,
     submitting: V,
     tapShouldOpenVotersModal: Y,
-    showResults: W
-  } = P, K = (0, _.getTotalVotes)(w), z = S.default.Messages.POLL_VOTES_COUNT.format({
-    count: String(K)
-  }), Q = Math.max(...v.map(e => {
+    showResults: K
+  } = P, W = (0, _.getTotalVotes)(w), z = S.default.Messages.POLL_VOTES_COUNT.format({
+    count: String(W)
+  }), Q = Math.max(...L.map(e => {
     var t, n;
     let s = C(w, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
-  })), Z = v.map(e => {
+  })), Z = L.map(e => {
     var t, n, r;
     let o = "".concat(e.answer_id),
       u = C(w, o),
@@ -180,11 +180,11 @@ function O(e, t) {
       m = h({
         didSelfVote: I,
         hasVoted: G,
-        isExpired: F,
-        isInteractive: k,
+        isExpired: k,
+        isInteractive: F,
         isSelected: _,
         isLeader: T,
-        showResults: W
+        showResults: K
       });
     return {
       answerId: o,
@@ -220,23 +220,23 @@ function O(e, t) {
         attachmentIds: e.poll_media.attachment_ids
       },
       isSelected: _,
-      isVictor: F && T,
+      isVictor: k && T,
       didSelfVote: I,
       style: m,
       shouldAnimateTransition: V,
-      votesPercentage: Math.round(100 * (0 === K ? 0 : E / K)),
-      votes: (0, s.match)(L).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => S.default.Messages.POLL_VOTES_COUNT.format({
+      votesPercentage: Math.round(100 * (0 === W ? 0 : E / W)),
+      votes: (0, s.match)(v).with(a.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(".concat(String(E), ")")).otherwise(() => S.default.Messages.POLL_VOTES_COUNT.format({
         count: String(E)
       }))
     }
   }), J = (0, s.match)({
-    isExpired: F,
+    isExpired: k,
     canSubmitVote: U,
     hasVoted: G,
     isEditingVote: B,
     canRemoveVote: x,
-    isInteractive: k,
-    showResults: W
+    isInteractive: F,
+    showResults: K
   }).with({
     isInteractive: !1
   }, () => void 0).with({
@@ -269,7 +269,7 @@ function O(e, t) {
     enabled: U,
     type: "submit"
   })), X = (0, s.match)({
-    isInteractive: k,
+    isInteractive: F,
     isEditingVote: B
   }).with({
     isInteractive: !1
@@ -290,14 +290,14 @@ function O(e, t) {
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), q = !k || F || G || W ? void 0 : {
+  })), q = !F || k || G || K ? void 0 : {
     label: S.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"
   }, $ = A.allow_multiselect, ee = (0, s.match)({
-    isInteractive: k,
-    isExpired: F,
+    isInteractive: F,
+    isExpired: k,
     canSelectMultipleAnswers: $
   }).with({
     isInteractive: !1
@@ -336,10 +336,10 @@ function O(e, t) {
       tapShouldOpenVotersModal: !0,
       platform: "web"
     }, () => S.default.Messages.POLL_TAP_FOR_VOTERS_A11Y_ANDROID).otherwise(() => void 0),
-    layoutType: L,
+    layoutType: v,
     resources: (0, m.default)({
       theme: N,
-      layoutType: L
+      layoutType: v
     }),
     containerStyle: "normal",
     primaryAction: J,
@@ -348,7 +348,7 @@ function O(e, t) {
     hasSelectedAnswer: b,
     canShowVoteCounts: y,
     hasVoted: G,
-    isExpired: F,
+    isExpired: k,
     myAvatarUrl: R,
     secondaryAction: X,
     tertiaryAction: q

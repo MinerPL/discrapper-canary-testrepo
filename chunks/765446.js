@@ -73,8 +73,8 @@ let g = e => {
     S = (0, r.useFocused)(),
     C = (0, r.useSlateStatic)(),
     {
-      optionType: T,
-      errored: _
+      optionType: _,
+      errored: T
     } = (0, o.useStateFromStoresObject)([d.default], () => {
       var e, t, i;
       return {
@@ -84,15 +84,15 @@ let g = e => {
     }, [n, a.optionName]),
     I = (0, o.useStateFromStores)([f.default], () => f.default.getUpload(n, a.optionName, c.DraftType.SlashCommand), [n, a.optionName]),
     v = a.children[a.children.length - 1],
-    N = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
-    A = s(E.inlineElement, E.optionPill, {
+    A = null != v && h.TextUtils.isText(v) && v.text.endsWith("\n"),
+    N = s(E.inlineElement, E.optionPill, {
       [E.selectedPill]: S && g,
-      [E.erroredPill]: (!S || !g) && _
+      [E.erroredPill]: (!S || !g) && T
     }),
-    O = l.useCallback(() => {
+    R = l.useCallback(() => {
       !h.EditorUtils.isVoid(C, a) && m.SlateTransforms.selectCommandOption(C, a.optionName, !0)
     }, [C, a]);
-  return t = T === u.ApplicationCommandOptionType.ATTACHMENT ? (null == I ? void 0 : I.filename) != null ? (0, i.jsxs)("span", {
+  return t = _ === u.ApplicationCommandOptionType.ATTACHMENT ? (null == I ? void 0 : I.filename) != null ? (0, i.jsxs)("span", {
     className: s(E.optionPillValue, E.attachmentFilename),
     contentEditable: !1,
     children: [I.filename, y]
@@ -102,17 +102,17 @@ let g = e => {
     children: [x.default.Messages.APPLICATION_COMMAND_FILE_ATTACHMENT, y]
   }) : (0, i.jsxs)("span", {
     className: E.optionPillValue,
-    children: [y, N ? (0, i.jsx)("span", {
+    children: [y, A ? (0, i.jsx)("span", {
       className: E.newLine,
       contentEditable: !1
     }) : null]
   }), (0, i.jsxs)("span", {
     ...p,
-    className: A,
+    className: N,
     children: [(0, i.jsxs)("span", {
       className: E.optionPillKey,
       contentEditable: !1,
-      onClick: O,
+      onClick: R,
       children: [a.optionDisplayName, "​"]
     }), t, (0, i.jsx)("span", {
       contentEditable: !1,

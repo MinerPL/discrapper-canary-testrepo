@@ -1,20 +1,20 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return s
+    return i
   }
 });
-var i = n("37983");
-n("884691");
-var r = n("77078"),
-  l = n("49111");
+var a = s("37983");
+s("884691");
+var n = s("77078"),
+  l = s("49111");
 
-function s() {
-  (0, r.openModalLazy)(async () => {
+function i() {
+  (0, n.openModalLazy)(async () => {
     let {
       default: e
-    } = await n.el("920067").then(n.bind(n, "920067"));
-    return t => (0, i.jsx)(e, {
+    } = await s.el("920067").then(s.bind(s, "920067"));
+    return t => (0, a.jsx)(e, {
       ...t,
       source: {
         page: l.AnalyticsPages.USER_SETTINGS,

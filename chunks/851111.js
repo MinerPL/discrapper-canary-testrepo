@@ -23,26 +23,26 @@ var i = n("37983"),
   g = n("646718"),
   S = n("782340"),
   C = n("669821");
-let T = "premiumRetentionEmojiPickerNotice",
-  _ = o.Storage.get(T);
+let _ = "premiumRetentionEmojiPickerNotice",
+  T = o.Storage.get(_);
 var I = e => {
   let {
     closePopout: t,
     channel: n
   } = e, [a, I] = l.useState(!1), {
     subscription: v,
-    hasFetchedSubscriptions: N
+    hasFetchedSubscriptions: A
   } = (0, r.useStateFromStoresObject)([f.default], () => ({
     subscription: f.default.getPremiumSubscription(),
     hasFetchedSubscriptions: f.default.hasFetchedSubscriptions()
   }));
   if (l.useEffect(() => {
-      !N && (0, d.fetchSubscriptions)()
-    }, [N]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
-  let A = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
-    O = s(v.currentPeriodStart).add(A, "days"),
-    R = "".concat(v.id, ":").concat(O.toISOString());
-  if (_ === R) return null;
+      !A && (0, d.fetchSubscriptions)()
+    }, [A]), null == v || !(0, x.isSubscriptionStatusFailedPayment)(v.status) || a) return null;
+  let N = v.status === y.SubscriptionStatusTypes.PAST_DUE ? (0, x.getBillingGracePeriodDays)(v) : g.MAX_ACCOUNT_HOLD_DAYS,
+    R = s(v.currentPeriodStart).add(N, "days"),
+    O = "".concat(v.id, ":").concat(R.toISOString());
+  if (T === O) return null;
   let M = x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_0 ? p.GradientCssUrls.PREMIUM_TIER_0 : x.default.getPremiumType(v.planId) === g.PremiumTypes.TIER_1 ? p.GradientCssUrls.PREMIUM_TIER_1 : p.GradientCssUrls.PREMIUM_TIER_2;
   return (0, i.jsxs)("div", {
     className: C.premiumRetentionNotice,
@@ -55,7 +55,7 @@ var I = e => {
         variant: "text-xs/normal",
         children: S.default.Messages.PREMIUM_RETENTION_EMOJI_PICKER_DESCRIPTION.format({
           planName: x.default.getDisplayPremiumType(v.planId),
-          endsAt: O
+          endsAt: R
         })
       }), (0, i.jsx)("div", {
         children: (0, i.jsx)(u.Anchor, {
@@ -67,7 +67,7 @@ var I = e => {
       })]
     }), (0, i.jsx)(u.Clickable, {
       onClick: () => {
-        o.Storage.set(T, R), _ = R, I(!0)
+        o.Storage.set(_, O), T = O, I(!0)
       },
       children: (0, i.jsx)(m.default, {
         className: C.premiumRetentionNoticeClose

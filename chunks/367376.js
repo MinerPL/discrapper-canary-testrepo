@@ -52,14 +52,14 @@ let c = {
     }
   })]),
   C = d(r.default.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, s.default)(c)]),
-  T = l.omit(d(r.default.RULES, [(0, s.default)({
+  _ = l.omit(d(r.default.RULES, [(0, s.default)({
     ...c,
     emoji: {
       height: 14,
       width: 14
     }
   })]), "paragraph", "newline", "strong", "codeBlock", "inlineCode", "u", "link", "url", "autolink", "list", "heading"),
-  _ = {
+  T = {
     text: r.default.RULES.text
   };
 var I = {
@@ -68,8 +68,8 @@ var I = {
   defaultReactRuleOptions: c,
   defaultRules: f,
   guildEventRules: g,
-  notifCenterV2MessagePreviewRules: T,
-  lockscreenWidgetMessageRules: _,
+  notifCenterV2MessagePreviewRules: _,
+  lockscreenWidgetMessageRules: T,
   astParserFor: a.astParserFor,
   reactParserFor: a.reactParserFor,
   parse: a.reactParserFor(f),
@@ -82,7 +82,7 @@ var I = {
   parseAutoModerationSystemMessage: a.reactParserFor(C),
   parseForumPostGuidelines: a.reactParserFor(p),
   parseForumPostMostRecentMessage: a.reactParserFor(S),
-  parseNotifCenterMessagePreview: a.reactParserFor(T),
+  parseNotifCenterMessagePreview: a.reactParserFor(_),
   parseToAST: a.astParserFor(f),
   parseTopicToAST: a.astParserFor(m),
   parseEmbedTitleToAST: a.astParserFor(x),

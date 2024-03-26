@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return u
   }
 });
-var i = n("845579"),
-  r = n("217513");
+var l = n("845579"),
+  i = n("217513");
 
-function l(e, t) {
+function u(e, t) {
   if ("undefined" == typeof Image) return;
-  let n = (0, r.getDisplayProfile)(e.user.id, t);
+  let n = (0, i.getDisplayProfile)(e.user.id, t);
   if (null == n) return;
-  let l = i.GifAutoPlay.getSetting(),
-    s = n.getBannerURL({
-      canAnimate: l,
+  let u = l.GifAutoPlay.getSetting(),
+    r = n.getBannerURL({
+      canAnimate: u,
       size: 480
     });
-  if (null == s) return;
-  let o = new Image;
-  o.src = s
+  if (null == r) return;
+  let a = new Image;
+  a.src = r
 }

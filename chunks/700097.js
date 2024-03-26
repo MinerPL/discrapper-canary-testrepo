@@ -68,8 +68,8 @@ var M = {
         }));
       case m.MessageTypes.RECIPIENT_REMOVE:
         if (null == M) return;
-        let v = e.author;
-        if (null == v || v.id === M.id) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
+        let L = e.author;
+        if (null == L || L.id === M.id) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_RECIPIENT_REMOVE_SELF.astFormat({
           username: R,
           usernameOnClick: m.NOOP
         }));
@@ -81,9 +81,9 @@ var M = {
         }));
       case m.MessageTypes.CALL:
         let {
-          call: L
+          call: v
         } = e;
-        if (null != L && -1 === L.participants.indexOf(c.default.getId())) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
+        if (null != v && -1 === v.participants.indexOf(c.default.getId())) return (0, s.astToString)(N.default.Messages.SYSTEM_MESSAGE_CALL_STARTED.astFormat({
           username: R,
           usernameOnClick: m.NOOP
         }));

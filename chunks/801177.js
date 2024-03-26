@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return k
   }
 }), n("222007");
 var s = n("37983"),
@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("26989"),
   O = n("697218"),
   R = n("181114"),
-  v = n("752531"),
-  L = n("315102"),
+  L = n("752531"),
+  v = n("315102"),
   P = n("794818"),
   D = n("866190"),
   x = n("781083"),
@@ -41,15 +41,15 @@ var s = n("37983"),
   G = n("960392"),
   B = n("760238");
 
-function F(e) {
+function k(e) {
   var t, n, l;
   let {
     embedUrl: r,
-    message: F,
-    channel: k
-  } = e, w = (0, y.useMediaPostEmbedData)(r, F), {
+    message: k,
+    channel: F
+  } = e, w = (0, y.useMediaPostEmbedData)(r, k), {
     setPopout: H
-  } = (0, A.default)(F.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), W = (0, D.useIsWindowFocused)(), [K, z] = a.useState(!1), [Q, Z] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, O.default], () => {
+  } = (0, A.default)(k.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(k, F, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, Z] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, O.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
   }, [w]), [q, $] = (0, c.useStateFromStoresArray)([M.default], () => {
@@ -65,27 +65,27 @@ function F(e) {
   }, [z]), el = a.useCallback(async () => {
     null != w && ((0, T.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: w.threadId,
-      channel_id: k.id,
+      channel_id: F.id,
       can_access: w.canAccess,
       is_member: X
     }), w.canAccess ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : X ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await P.startLurking(w.guildId, {}, {
       channelId: w.parentChannelId
     }))
-  }, [w, k, X]), ei = a.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
+  }, [w, F, X]), ei = a.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
     guildId: w.guildId,
-    channelId: k.id
-  })), [w, k]);
+    channelId: F.id
+  })), [w, F]);
   if (null == w) return null;
   let er = (e, t) => (o(null != w.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(h.default, {
       ...e,
       userId: w.authorId,
       guildId: w.guildId,
-      channelId: k.id,
-      messageId: F.id,
+      channelId: F.id,
+      messageId: k.id,
       roleId: $,
       newAnalyticsLocations: t
     })),
-    eo = (0, L.getAvatarDecorationURL)({
+    eo = (0, v.getAvatarDecorationURL)({
       avatarDecoration: null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration,
       size: (0, I.getDecorationSizeForAvatarSize)(E.AvatarSizes.SIZE_40),
       canAnimate: et
@@ -111,7 +111,7 @@ function F(e) {
         onContextMenu: V,
         onError: () => Z(!0)
       }) : (0, s.jsx)(m.default, {
-        src: !(W && (Y || K)) && eE ? "".concat(ec, "?format=png") : ec,
+        src: !(K && (Y || W)) && eE ? "".concat(ec, "?format=png") : ec,
         backgroundSrc: "".concat(ec, "?format=png"),
         alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
@@ -174,7 +174,7 @@ function F(e) {
           className: G.descriptionFooterContainer,
           children: [(0, s.jsxs)("div", {
             className: G.descriptionFooterChannelName,
-            children: [null != w.channelName && (0, s.jsx)(v.default, {
+            children: [null != w.channelName && (0, s.jsx)(L.default, {
               className: G.mediaChannelIcon
             }), (0, s.jsx)(E.Clickable, {
               onClick: el,

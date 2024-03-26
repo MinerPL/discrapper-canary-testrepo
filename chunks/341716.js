@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("195483"),
   O = n("49111"),
   R = n("406291"),
-  v = n("782340"),
-  L = n("356296");
+  L = n("782340"),
+  v = n("356296");
 
 function P(e) {
   let {
@@ -96,9 +96,9 @@ function D(e) {
           onPopoutRequestClose: f
         } = e;
         if (l && null == a.activityInstance || o) return (0, s.jsx)("div", {
-          className: L.replyBadge,
+          className: v.replyBadge,
           children: (0, s.jsx)(P, {
-            className: L.commandIcon
+            className: v.commandIcon
           })
         });
         if (null != a.interaction) {
@@ -126,8 +126,8 @@ function D(e) {
             onContextMenu: r,
             onMouseDown: o,
             className: i({
-              [L.executedCommandAvatar]: !0,
-              [L.clickable]: null != l
+              [v.executedCommandAvatar]: !0,
+              [v.clickable]: null != l
             })
           })
         }({
@@ -190,20 +190,20 @@ function D(e) {
         guildId: r.guild_id
       })
     };
-    n = j ? v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
+    n = j ? L.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED.format({
       userHook: B,
       activityHook: () => (0, s.jsx)(c.Clickable, {
         tag: "span",
         onClick: e,
         children: (0, s.jsx)("div", {
-          className: i(L.commandName, L.clickable),
-          children: v.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
+          className: i(v.commandName, v.clickable),
+          children: L.default.Messages.EMBEDDED_ACTIVITIES_ACTIVITY
         })
       })
-    }) : v.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
+    }) : L.default.Messages.APPLICATION_COMMAND_PRIMARY_ENTRY_POINT_USED_CANNOT_LAUNCH.format({
       userHook: B
     })
-  } else n = v.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
+  } else n = L.default.Messages.APPLICATION_COMMAND_USED_SHORT.format({
     userHook: B,
     commandHook: () => {
       let t = function(e, t, n) {
@@ -232,18 +232,18 @@ function D(e) {
               onClick: r,
               children: (0, s.jsxs)("div", {
                 className: i({
-                  [L.commandName]: !n
+                  [v.commandName]: !n
                 }, {
-                  [L.appLauncherOnboardingCommandName]: n
-                }, L.clickable),
+                  [v.appLauncherOnboardingCommandName]: n
+                }, v.clickable),
                 children: [n && (0, s.jsx)(A.default, {
                   height: 10,
                   width: 10,
-                  className: L.appsIcon
+                  className: v.appsIcon
                 }), n ? u : R.COMMAND_SENTINEL + u]
               })
             }) : (0, s.jsx)("div", {
-              className: L.commandName,
+              className: v.commandName,
               children: u
             })
           }
@@ -257,7 +257,7 @@ function D(e) {
   return (0, s.jsx)(I.AnalyticsLocationProvider, {
     value: u,
     children: (0, s.jsx)("div", {
-      className: i(L.repliedMessage, L.executedCommand, U),
+      className: i(v.repliedMessage, v.executedCommand, U),
       "aria-hidden": !e.compact,
       children: n
     })

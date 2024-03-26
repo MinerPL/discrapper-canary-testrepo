@@ -33,13 +33,13 @@ function S(e) {
     autoTrackExposure: !1
   }).enabled, {
     analyticsLocations: O
-  } = (0, d.default)(u.default.CHANNEL_TEXT_AREA, u.default.MESSAGE_ATTACHMENT), R = t.map(e => e.attachment.size).sort().pop(), v = r.ChannelTypesSets.GUILD.has(n) ? 104857600 : 26214400;
+  } = (0, d.default)(u.default.CHANNEL_TEXT_AREA, u.default.MESSAGE_ATTACHMENT), R = t.map(e => e.attachment.size).sort().pop(), L = r.ChannelTypesSets.GUILD.has(n) ? 104857600 : 26214400;
   if (a.useEffect(() => () => {
       null != C.current && clearTimeout(C.current)
-    }, []), null == R || R < v) return (0, s.jsx)(s.Fragment, {
+    }, []), null == R || R < L) return (0, s.jsx)(s.Fragment, {
     children: l
   });
-  let L = t.filter(e => (0, _.isMediaAttachment)((0, _.getAttachmentKind)(e.attachment, e.inlineMedia))).length > 0,
+  let v = t.filter(e => (0, _.isMediaAttachment)((0, _.getAttachmentKind)(e.attachment, e.inlineMedia))).length > 0,
     P = e => {
       I.NitroBrandedAttachmentExperiment.trackExposure({
         location: "PremiumAttachmentWrapper_handleMouseOver"
@@ -61,7 +61,7 @@ function S(e) {
       onMouseEnter: () => P(!0),
       onBlur: D,
       onMouseLeave: D,
-      children: L ? l : (0, s.jsx)("div", {
+      children: v ? l : (0, s.jsx)("div", {
         className: p.negativeTop,
         children: l
       })

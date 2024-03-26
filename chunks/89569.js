@@ -7,9 +7,9 @@ a.r(t), a.d(t, {
     return C
   }
 }), a("781738"), a("222007"), a("424973");
-var l = a("884691"),
+var r = a("884691"),
   s = a("803182"),
-  r = a("446674"),
+  l = a("446674"),
   n = a("812204"),
   i = a("685665"),
   o = a("216719"),
@@ -20,7 +20,7 @@ let d = "".concat("#").concat("itemSkuId", "="),
   m = [u.Routes.COLLECTIBLES_SHOP, u.Routes.COLLECTIBLES_SHOP_FULLSCREEN],
   p = e => {
     let t = (0, s.useLocation)();
-    l.useEffect(() => {
+    r.useEffect(() => {
       if (null != e && m.includes(t.pathname)) return window.location.replace("".concat(d).concat(e.skuId)), () => {
         window.location.hash.startsWith(d) && window.location.replace("#")
       }
@@ -30,15 +30,15 @@ let d = "".concat("#").concat("itemSkuId", "="),
     let {
       categories: t,
       productSkuId: a,
-      analyticsLocations: l,
+      analyticsLocations: r,
       analyticsSource: s,
-      initialItemCardRef: r
+      initialItemCardRef: l
     } = e;
     for (let e of t.values()) {
       let t = e.products.find(e => e.skuId === a);
       if (null != t) {
         var n;
-        null === (n = r.current) || void 0 === n || n.scrollIntoView({
+        null === (n = l.current) || void 0 === n || n.scrollIntoView({
           behavior: "smooth",
           block: "center",
           inline: "center"
@@ -49,8 +49,8 @@ let d = "".concat("#").concat("itemSkuId", "="),
             product: t,
             category: e,
             analyticsSource: s,
-            analyticsLocations: l,
-            returnRef: r
+            analyticsLocations: r,
+            returnRef: l
           })
         }, 750);
         return () => clearTimeout(a)
@@ -64,10 +64,10 @@ let d = "".concat("#").concat("itemSkuId", "="),
       isFetchingCategories: a,
       isLayer: c,
       initialItemCardRef: d
-    } = e, m = l.useRef(null), p = (0, s.useLocation)(), C = p.pathname === u.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : p.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
+    } = e, m = r.useRef(null), p = (0, s.useLocation)(), C = p.pathname === u.Routes.COLLECTIBLES_SHOP ? n.default.HOME_PAGE_SHOP_TAB : p.pathname === u.Routes.COLLECTIBLES_SHOP_FULLSCREEN ? n.default.COLLECTIBLES_SHOP_FULLSCREEN : n.default.COLLECTIBLES_SHOP, {
       analyticsLocations: h
     } = (0, i.default)(C);
-    l.useEffect(() => {
+    r.useEffect(() => {
       if (c) return;
       let e = f.exec(p.hash);
       if (null != e) {
@@ -75,23 +75,23 @@ let d = "".concat("#").concat("itemSkuId", "="),
         m.current = t
       }
     }, []);
-    let E = (0, r.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
-    l.useEffect(() => {
+    let E = (0, l.useStateFromStores)([o.default], () => o.default.initialProductSkuId);
+    r.useEffect(() => {
       if (a) return;
       let e = null;
       if (c && null != E && (e = E), !c && null != m.current && (e = m.current), null != e) {
         let a = [],
-          l = setTimeout(() => {
-            let l = g({
+          r = setTimeout(() => {
+            let r = g({
               categories: t,
               productSkuId: e,
               analyticsLocations: h,
               analyticsSource: C,
               initialItemCardRef: d
             });
-            a.push(l)
+            a.push(r)
           }, 250);
-        return a.push(() => clearTimeout(l)), () => {
+        return a.push(() => clearTimeout(r)), () => {
           a.forEach(e => e())
         }
       }

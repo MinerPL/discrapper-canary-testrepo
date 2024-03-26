@@ -36,11 +36,11 @@ function m(e) {
     R = null != m && null != M && null != m.channel && null != m.guild && M.channelId === m.channel.id && M.guildId === m.guild.id;
   l(null != m, "Invite cannot be null");
   let {
-    target_type: v,
-    target_user: L
+    target_type: L,
+    target_user: v
   } = m;
-  l(v === _.InviteTargetTypes.STREAM && null != L, "invalid streaming invite");
-  let P = N === L.id,
+  l(L === _.InviteTargetTypes.STREAM && null != v, "invalid streaming invite");
+  let P = N === v.id,
     D = m.state === f.InviteStates.ACCEPTING,
     x = null != p;
   if (null == p) {
@@ -50,9 +50,9 @@ function m(e) {
   let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,
     U = O ? S : A;
   x && !R ? a = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
-    name: L.username
+    name: v.username
   }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({
-    name: L.username
+    name: v.username
   }));
   let j = h === p.id && null != y ? (0, s.jsx)(c.default.Channel, {
     channel: y

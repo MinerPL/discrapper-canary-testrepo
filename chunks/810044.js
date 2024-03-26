@@ -36,8 +36,8 @@ function O(e) {
     loading: O,
     subscriptionsSettings: R
   } = (0, S.useMonetizationSettings)(n), {
-    listingsLoaded: v
-  } = (0, f.useFetchGuildProductListingsForGuild)(n), L = (0, f.useGuildProductsForGuild)(n, {
+    listingsLoaded: L
+  } = (0, f.useFetchGuildProductListingsForGuild)(n), v = (0, f.useGuildProductsForGuild)(n, {
     publishedOnly: !0
   }), P = a.useCallback(async () => {
     p.default.track(h.AnalyticEvents.GUILD_SHOP_EMBED_CLICKED, {
@@ -50,8 +50,8 @@ function O(e) {
   }, {
     disableTrack: null == l
   });
-  let D = L.length > 0 ? new Date(Math.min(...L.map(e => Date.parse(e.published_at)))) : void 0;
-  return O || !v ? (0, s.jsx)("div", {
+  let D = v.length > 0 ? new Date(Math.min(...v.map(e => Date.parse(e.published_at)))) : void 0;
+  return O || !L ? (0, s.jsx)("div", {
     className: i(M.guildShopEmbed, M.spinnerContainer),
     children: (0, s.jsx)(d.Spinner, {})
   }) : null == l || null == R ? null : (0, s.jsxs)("div", {
@@ -102,7 +102,7 @@ function O(e) {
             variant: "text-sm/normal",
             color: "text-muted",
             children: g.default.Messages.GUILD_SHOP_EMBED_LISTINGS_AVAILABLE.format({
-              listingCount: L.length
+              listingCount: v.length
             })
           })
         }), null != D && (0, s.jsx)("li", {

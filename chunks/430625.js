@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return k
   }
 }), n("424973"), n("222007"), n("881410");
 var s = n("37983"),
@@ -29,15 +29,15 @@ var s = n("37983"),
   M = n("174622"),
   O = n("98292"),
   R = n("811305"),
-  v = n("159885"),
-  L = n("793079"),
+  L = n("159885"),
+  v = n("793079"),
   P = n("49111"),
   D = n("91366"),
   x = n("782340"),
   y = n("257752");
-let U = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
-  j = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
-  b = (0, v.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
+let U = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_LARGE),
+  j = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_IMAGE_WIDTH_SMALL),
+  b = (0, L.cssValueToNumber)(d.default.EMBEDDED_APPLICATION_INVITE_CONTENT_WIDTH);
 
 function G(e) {
   let {
@@ -122,7 +122,7 @@ function B(e) {
   }) : null
 }
 
-function F(e) {
+function k(e) {
   var t, n;
   let l, r, {
       invite: d,
@@ -130,30 +130,30 @@ function F(e) {
     } = e,
     {
       approximate_member_count: O,
-      approximate_presence_count: v,
-      target_type: F,
-      target_application: k
+      approximate_presence_count: L,
+      target_type: k,
+      target_application: F
     } = d;
-  o(F === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != k, "invalid application invite");
+  o(k === D.InviteTargetTypes.EMBEDDED_APPLICATION && null != F, "invalid application invite");
   let w = a.useRef(null),
     [H, V] = a.useState(!1),
-    [Y, W] = a.useState(!1);
+    [Y, K] = a.useState(!1);
   a.useEffect(() => {
     let e = new ResizeObserver(() => (function() {
         var e;
         let t = null === (e = w.current) || void 0 === e ? void 0 : e.offsetWidth;
-        null != t && (V(t < b + j), W(t <= 2 * U))
+        null != t && (V(t < b + j), K(t <= 2 * U))
       })()),
       t = w.current;
     return null != t && e.observe(t), () => {
       e.disconnect()
     }
-  }, [w, V, W]);
-  let K = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
-    z = (0, N.default)([k.id])[0],
+  }, [w, V, K]);
+  let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
+    z = (0, N.default)([F.id])[0],
     Q = (0, u.useStateFromStores)([f.default], () => {
       var e;
-      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === k.id
+      return (null == d ? void 0 : d.channel) != null && (null === (e = f.default.getSelfEmbeddedActivityForChannel(d.channel.id)) || void 0 === e ? void 0 : e.applicationId) === F.id
     }),
     Z = (0, u.useStateFromStores)([f.default], () => {
       var e;
@@ -162,7 +162,7 @@ function F(e) {
         let {
           applicationId: t
         } = e;
-        return k.id === t
+        return F.id === t
       })
     }),
     J = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
@@ -171,16 +171,16 @@ function F(e) {
       analyticsLocations: q
     } = (0, m.default)(I.default.INVITE_EMBED),
     $ = (0, _.default)({
-      applicationId: k.id,
+      applicationId: F.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([f.default], () => null != J ? f.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === k.id).flatMap(e => Array.from(e.userIds)) : [], [J, k.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != J ? f.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [J, F.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
-    es = null != K;
-  if (null == K) {
-    if (null == d.guild) return (0, s.jsx)(L.default, {});
-    K = new S.default(d.guild)
+    es = null != W;
+  if (null == W) {
+    if (null == d.guild) return (0, s.jsx)(v.default, {});
+    W = new S.default(d.guild)
   }
   let ea = es && !X || es && Q,
     el = () => {
@@ -225,7 +225,7 @@ function F(e) {
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
           channel: J,
-          guild: K,
+          guild: W,
           isStacked: Y,
           hasEnded: !Z
         })]
@@ -247,15 +247,15 @@ function F(e) {
           })]
         }) : null, es ? null : (0, s.jsx)(G, {
           members: O,
-          membersOnline: v,
+          membersOnline: L,
           isLarge: H,
           isStacked: Y
         }), (0, s.jsxs)("div", {
           className: y.cta,
-          children: [null != K && Z ? (0, s.jsx)("div", {
+          children: [null != W && Z ? (0, s.jsx)("div", {
             className: y.avatars,
             children: (0, s.jsx)(R.default, {
-              guildId: K.id,
+              guildId: W.id,
               users: et,
               max: 4
             })

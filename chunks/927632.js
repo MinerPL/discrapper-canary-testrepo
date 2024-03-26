@@ -44,8 +44,8 @@ function M(e) {
 }
 var O = a.memo(function(e) {
   var t, n, l, i, O, R;
-  let v, {
-      channel: L,
+  let L, {
+      channel: v,
       messageId: P,
       interactionData: D
     } = e,
@@ -55,11 +55,11 @@ var O = a.memo(function(e) {
     {
       onCopy: y,
       copyRef: U
-    } = (0, c.default)(L, null == D ? void 0 : null === (t = D.application_command) || void 0 === t ? void 0 : t.id),
-    j = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(L.guild_id), [L.guild_id]);
+    } = (0, c.default)(v, null == D ? void 0 : null === (t = D.application_command) || void 0 === t ? void 0 : t.id),
+    j = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(v.guild_id), [v.guild_id]);
   if (a.useEffect(() => {
-      (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && E.fetchMessageInteractionData(L.id, P)
-    }, [L.id, P, D]), null == D) v = (0, s.jsx)(o.Spinner, {
+      (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && E.fetchMessageInteractionData(v.id, P)
+    }, [v.id, P, D]), null == D) L = (0, s.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
     className: C.spinner
   });
@@ -71,8 +71,8 @@ var O = a.memo(function(e) {
       let C, {
           option: O,
           channel: R,
-          guild: v,
-          messageId: L,
+          guild: L,
+          messageId: v,
           parentOptionKey: P,
           commandOptionSpec: D,
           sourceAnalyticsLocations: x
@@ -89,8 +89,8 @@ var O = a.memo(function(e) {
         for (let n of null !== (r = O.options) && void 0 !== r ? r : []) t = t.concat(e({
           option: n,
           channel: R,
-          guild: v,
-          messageId: L,
+          guild: L,
+          messageId: v,
           parentOptionKey: y,
           commandOptionSpec: u[n.name],
           sourceAnalyticsLocations: x
@@ -110,7 +110,7 @@ var O = a.memo(function(e) {
                 userId: t.id,
                 guildId: R.guild_id,
                 channelId: R.id,
-                messageId: L,
+                messageId: v,
                 sourceAnalyticsLocations: x,
                 analyticsLocation: {
                   section: p.AnalyticsSections.CHANNEL_TEXT_AREA_AUTOCOMPLETE
@@ -132,7 +132,7 @@ var O = a.memo(function(e) {
         }
         case u.ApplicationCommandOptionType.ROLE: {
           let e = O.value.toString(),
-            t = null != v ? I.default.getRole(v.id, e) : void 0;
+            t = null != L ? I.default.getRole(L.id, e) : void 0;
           null != t && (C = (0, s.jsxs)(N.default, {
             ...g,
             children: [S.MENTION_SENTINEL, t.name]
@@ -141,7 +141,7 @@ var O = a.memo(function(e) {
         }
         case u.ApplicationCommandOptionType.MENTIONABLE: {
           let e = O.value.toString(),
-            t = null != v ? I.default.getRole(v.id, e) : void 0;
+            t = null != L ? I.default.getRole(L.id, e) : void 0;
           if (null != t) C = (0, s.jsxs)(N.default, {
             children: [S.MENTION_SENTINEL, t.name]
           });
@@ -180,14 +180,14 @@ var O = a.memo(function(e) {
       }, y)]
     }({
       option: n,
-      channel: L,
+      channel: v,
       guild: j,
       messageId: P,
       parentOptionKey: null,
       commandOptionSpec: t[n.name],
       sourceAnalyticsLocations: x
     }));
-    v = (0, s.jsxs)(s.Fragment, {
+    L = (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsxs)(o.Text, {
         ...h,
         children: ["/", null !== (R = null === (l = D.application_command) || void 0 === l ? void 0 : l.name_localized) && void 0 !== R ? R : D.name]
@@ -204,7 +204,7 @@ var O = a.memo(function(e) {
     children: [(0, s.jsx)("div", {
       className: C.tooltip,
       ref: U,
-      children: v
+      children: L
     }), (0, s.jsx)("div", {
       className: C.tooltipPointer
     })]

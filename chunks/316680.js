@@ -46,9 +46,9 @@ class m extends l.PureComponent {
     } = this.props, {
       hovered: S,
       focused: C,
-      dragging: T
-    } = this.state, _ = u.default;
-    return m || E === h ? _ = d.default : E < x / 2 && (_ = c.default), (0, i.jsxs)("div", {
+      dragging: _
+    } = this.state, T = u.default;
+    return m || E === h ? T = d.default : E < x / 2 && (T = c.default), (0, i.jsxs)("div", {
       className: s(t, p.container),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({
@@ -71,7 +71,7 @@ class m extends l.PureComponent {
       onKeyDown: this.handleKeyDown,
       children: [(0, i.jsx)("div", {
         className: s(p.volumeButtonSlider, n, {
-          [p.sliderVisible]: S || C || T
+          [p.sliderVisible]: S || C || _
         }),
         onMouseEnter: () => {
           clearTimeout(this._hoverTimeout), this.setState({
@@ -99,7 +99,7 @@ class m extends l.PureComponent {
         size: r.Button.Sizes.NONE,
         look: r.Button.Looks.BLANK,
         onClick: this.handleToggleMute,
-        children: (0, i.jsx)(_, {
+        children: (0, i.jsx)(T, {
           className: e
         })
       })]

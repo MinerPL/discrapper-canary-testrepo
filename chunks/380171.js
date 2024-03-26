@@ -4,28 +4,28 @@ a.r(t), a.d(t, {
     return s
   }
 });
-var l = a("635058");
+var r = a("635058");
 let s = {
-  [l.CollectiblesCategorySkuId.SPRINGTOONS]: {
+  [r.CollectiblesCategorySkuId.SPRINGTOONS]: {
     assetUrlOverride: a("266772"),
     logoMaxWidth: "48%",
     addGradient: !1,
     showDarkBannerText: !0
   },
-  [l.CollectiblesCategorySkuId.ANIME_V2]: {
+  [r.CollectiblesCategorySkuId.ANIME_V2]: {
     assetUrlOverride: a("482500"),
     addGradient: !1,
     showDarkBannerText: !0
   },
-  [l.CollectiblesCategorySkuId.ELEMENTS]: {
+  [r.CollectiblesCategorySkuId.ELEMENTS]: {
     assetUrlOverride: a("530514"),
     addGradient: !0
   },
-  [l.CollectiblesCategorySkuId.LUNAR_NEW_YEAR]: {
+  [r.CollectiblesCategorySkuId.LUNAR_NEW_YEAR]: {
     assetUrlOverride: a("162332"),
     addGradient: !0
   },
-  [l.CollectiblesCategorySkuId.CYBERPUNK]: {
+  [r.CollectiblesCategorySkuId.CYBERPUNK]: {
     assetUrlOverride: a("818127"),
     addGradient: !0
   }

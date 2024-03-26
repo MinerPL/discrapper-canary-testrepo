@@ -45,8 +45,8 @@ function m(e) {
     O = E.default.Button.Colors.GREEN;
   A ? (M = T.default.Messages.INVITE_BUTTON_ALREADY_FRIENDS, O = E.default.Button.Colors.PRIMARY) : p && (M = T.default.Messages.INVITE_BUTTON_ADD_FRIEND, O = E.default.Button.Colors.PRIMARY);
   let R = p ? T.default.Messages.INVITE_BUTTON_TITLE_INVITER_FRIEND : T.default.Messages.INVITE_BUTTON_TITLE_INVITED_FRIEND,
-    v = null != n.inviter ? "".concat(n.inviter.username) : "",
-    L = null != n.inviter ? f.default.getUserTag(n.inviter) : "";
+    L = null != n.inviter ? "".concat(n.inviter.username) : "",
+    v = null != n.inviter ? f.default.getUserTag(n.inviter) : "";
   return (0, s.jsxs)(E.default, {
     children: [(0, s.jsx)(E.default.Header, {
       text: R
@@ -57,9 +57,9 @@ function m(e) {
           user: new o.default(n.inviter),
           onClick: A ? g : void 0
         }), (0, s.jsx)(E.default.Info, {
-          title: v,
+          title: L,
           onClick: A ? g : void 0,
-          children: L
+          children: v
         })]
       }), (0, s.jsx)(E.default.Button, {
         onClick: g,

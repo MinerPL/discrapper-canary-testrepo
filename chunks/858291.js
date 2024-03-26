@@ -35,13 +35,13 @@ function p(e) {
     thumbnailHeight: M,
     descriptionTextVariant: O = "text-sm/normal",
     showOpaqueBackground: R = !1
-  } = e, v = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), L = (0, a.useStateFromStores)([o.default], () => {
+  } = e, L = (0, a.useStateFromStores)([o.default], () => o.default.getGuild(n), [n]), v = (0, a.useStateFromStores)([o.default], () => {
     var e;
     return o.default.getRole(n, null !== (e = null == t ? void 0 : t.role_id) && void 0 !== e ? e : N.EMPTY_STRING_SNOWFLAKE_ID)
-  }), P = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(v), {
+  }), P = (0, l.useListingThumbnailUrl)(t, 600), D = (0, _.useProductType)(t), x = (0, d.useCanManageGuildProduct)(L), {
     shouldHideGuildPurchaseEntryPoints: y
   } = (0, r.useShouldHideGuildPurchaseEntryPoints)(n), U = (0, _.usePrice)(t);
-  if (null == v || y) return null;
+  if (null == L || y) return null;
   let j = () => (0, I.openGuildProductInfoModal)({
       guildId: n,
       guildProductListingId: t.id,
@@ -57,7 +57,7 @@ function p(e) {
       showDeleteProduct: !1,
       showReportProduct: !0,
       onEditProduct: x ? () => {
-        E.openModal(v.id, t.id)
+        E.openModal(L.id, t.id)
       } : () => {},
       onUnpublishProduct: () => {},
       onDeleteProduct: () => {},
@@ -76,7 +76,7 @@ function p(e) {
     name: t.name,
     description: t.description,
     formattedPrice: U,
-    role: L,
+    role: v,
     ctaComponent: (0, s.jsx)(m.default, {
       guildId: n,
       guildProductListingId: t.id,

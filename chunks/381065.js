@@ -29,17 +29,17 @@ function h(e) {
   var t, h;
   let {
     onDismiss: g
-  } = e, M = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, l.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), R = null != M ? M : null, v = (0, l.useStateFromStores)([u.default], () => null != R ? u.default.getGuild(R) : null, [R]), {
-    shouldShowIncidentActions: L,
+  } = e, M = (0, l.useStateFromStores)([c.default], () => c.default.getGuildId()), O = (0, l.useStateFromStores)([d.default], () => null != M ? d.default.getChannelId(M) : null, [M]), R = null != M ? M : null, L = (0, l.useStateFromStores)([u.default], () => null != R ? u.default.getGuild(R) : null, [R]), {
+    shouldShowIncidentActions: v,
     incidentData: P,
     isUnderLockdown: D
-  } = (0, I.useGuildIncidentsState)(R), x = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == v ? void 0 : v.id) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != v && (0, o.goToMemberSafetyDashboard)(v.id), [v]);
-  if (null == v || null == P || !L) return null;
+  } = (0, I.useGuildIncidentsState)(R), x = (0, r.useCanAccessMemberSafetyPage)(null !== (t = null == L ? void 0 : L.id) && void 0 !== t ? t : p.EMPTY_STRING_SNOWFLAKE_ID), y = a.useCallback(() => null != L && (0, o.goToMemberSafetyDashboard)(L.id), [L]);
+  if (null == L || null == P || !v) return null;
   let U = e => {
       if (e && x && O !== S.StaticChannelRoute.MEMBER_SAFETY && y()) {
         T.default.track(p.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
           notice_type: p.NoticeTypes.GUILD_RAID_NOTIFICATION,
-          guild_id: v.id
+          guild_id: L.id
         });
         return
       }(0, i.openModalLazy)(async () => {
@@ -52,17 +52,17 @@ function h(e) {
           } = await n.el("186638").then(n.bind(n, "186638"));
         return n => (0, s.jsx)(t, {
           ...n,
-          guildId: v.id,
+          guildId: L.id,
           analyticsData: e
         })
       })
     },
     j = (0, s.jsx)(E.default, {
       className: C.guildIcon,
-      guild: v,
+      guild: L,
       size: E.default.Sizes.MINI
     }),
-    b = (0, N.getSecurityActionDetailsString)(P, v.name),
+    b = (0, N.getSecurityActionDetailsString)(P, L.name),
     G = null !== (h = P.dmsDisabledUntil) && void 0 !== h ? h : P.invitesDisabledUntil;
   if (null != G && D) return (0, s.jsxs)(_.default, {
     className: C.notice,
@@ -85,20 +85,20 @@ function h(e) {
     })]
   });
   let B = (0, N.hasDetectedRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
-      guildName: v.name
+      guildName: L.name
     }) : (0, N.hasDetectedDMRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
-      guildName: v.name
+      guildName: L.name
     }) : A.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
-      guildName: v.name
+      guildName: L.name
     }),
-    F = x && O === S.StaticChannelRoute.MEMBER_SAFETY;
+    k = x && O === S.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(_.default, {
     className: C.notice,
     color: _.NoticeColors.WARNING,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
       onClick: g,
       noticeType: p.NoticeTypes.GUILD_RAID_NOTIFICATION
-    }), j, B, !F && (0, s.jsx)(_.NoticeButton, {
+    }), j, B, !k && (0, s.jsx)(_.NoticeButton, {
       className: C.actionButton,
       onClick: () => U(!0),
       children: (0, s.jsx)("div", {

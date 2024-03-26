@@ -45,14 +45,14 @@ function C(e) {
   if (0 !== f) t = s, n = 6 * d * r, i = (o / 2 - f / 2) * r, l = f * r, a = 1 * r, t.moveTo(n, i + a), t.lineTo(n, i + l - a), t.arc(n + a, i + l - a, a, Math.PI, 0, !0), t.lineTo(n + 2 * a, i + a), t.arc(n + a, i + a, a, 0, Math.PI, !0), t.closePath()
 }
 
-function T(e, t, n) {
+function _(e, t, n) {
   let [i, a] = l.useState(e), [s, r] = l.useState(e);
   return l.useLayoutEffect(() => {
     a(s), r(e)
   }, [e, t, n]), [i, s]
 }
 
-function _(e, t, n, i) {
+function T(e, t, n, i) {
   if (null == i) return [t, !1];
   let l = Math.min((n - i) / 200, 1);
   if (1 === l) return [t, !1];
@@ -69,11 +69,11 @@ function I(e) {
     played: y,
     playing: I,
     onDrag: v,
-    onDragStart: N,
-    onDragEnd: A
+    onDragStart: A,
+    onDragEnd: N
   } = e, {
-    ref: O,
-    width: R
+    ref: R,
+    width: O
   } = (0, u.default)(), M = l.useMemo(() => {
     var e;
     let t;
@@ -107,7 +107,7 @@ function I(e) {
         }(null != n ? n : [], i)) && void 0 !== e ? e : g
       }, [n, i]);
     return a
-  }(n, R), P = l.useRef(y), b = l.useRef(I), j = l.useRef(null), U = window.devicePixelRatio, {
+  }(n, O), P = l.useRef(y), b = l.useRef(I), j = l.useRef(null), U = window.devicePixelRatio, {
     lastBackgroundFillColor: D,
     backgroundFillColor: w,
     lastActiveFillColor: F,
@@ -121,11 +121,11 @@ function I(e) {
       a = (0, o.useToken)(r.default.unsafe_rawColors.BRAND_430).hex(),
       s = (0, o.useToken)(r.default.unsafe_rawColors.WHITE_500).hex(),
       u = t ? a : n,
-      [d, c] = T(u, t, e),
+      [d, c] = _(u, t, e),
       f = t ? s : e ? l : i,
-      [p, m] = T(f, t, e),
+      [p, m] = _(f, t, e),
       h = e ? u : i,
-      [x, E] = T(h, t, e);
+      [x, E] = _(h, t, e);
     return {
       lastBackgroundFillColor: d,
       backgroundFillColor: c,
@@ -163,7 +163,7 @@ function I(e) {
   }, [L, a, c, y]), l.useEffect(() => {
     let e = null;
     return e = requestAnimationFrame(function t(n) {
-      let i = O.current,
+      let i = R.current,
         l = null == i ? void 0 : i.getContext("2d"),
         a = k.current;
       if (null == i || null == l || null == a) return;
@@ -171,7 +171,7 @@ function I(e) {
       (P.current !== y || b.current !== I) && (P.current = y, b.current = I, j.current = n), null != j.current && n > j.current + 200 && (j.current = null);
       let r = i.height / U;
       l.clearRect(0, 0, i.width, i.height), l.beginPath();
-      let [o, u] = _(D, w, n, j.current);
+      let [o, u] = T(D, w, n, j.current);
       s = s || u, l.fillStyle = o;
       for (let e = 0; e < L.length; e++) C({
         context: l,
@@ -182,9 +182,9 @@ function I(e) {
         constrainMin: !0
       });
       l.fill();
-      let [d, c] = _(H, B, n, j.current);
+      let [d, c] = T(H, B, n, j.current);
       s = s || c;
-      let [f, p] = _(F, G, n, j.current);
+      let [f, p] = T(F, G, n, j.current);
       s = s || p;
       for (let e = 0; e < a.length; e++) {
         let t = a[e],
@@ -202,12 +202,12 @@ function I(e) {
     }), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [O, U, L, R, a, c, y, I, D, w, F, G, H, B]);
+  }, [R, U, L, O, a, c, y, I, D, w, F, G, H, B]);
   let [, V] = (0, d.default)({
-    ref: O,
+    ref: R,
     onDrag: v,
-    onDragStart: N,
-    onDragEnd: A
+    onDragStart: A,
+    onDragEnd: N
   });
   return (0, i.jsx)("canvas", {
     onMouseDown: V,
@@ -215,8 +215,8 @@ function I(e) {
     style: {
       width: M
     },
-    ref: O,
+    ref: R,
     height: 32 * window.devicePixelRatio,
-    width: (null != R ? R : 0) * window.devicePixelRatio
+    width: (null != O ? O : 0) * window.devicePixelRatio
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 });
 var i = n("37983"),
@@ -122,7 +122,7 @@ function C(e, t, n, l) {
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     soundboardListRef: t,
     categories: n,

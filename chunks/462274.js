@@ -1,56 +1,56 @@
 "use strict";
 n.r(t), n.d(t, {
   useColorStore: function() {
-    return d
+    return c
   },
   maybeFetchColors: function() {
     return f
   },
   default: function() {
-    return v
+    return _
   },
   useAvatarColors: function() {
-    return m
+    return h
   }
 }), n("222007");
-var i = n("884691"),
-  r = n("656280"),
-  l = n.n(r),
-  s = n("308503"),
-  o = n("446674"),
-  u = n("206230"),
-  a = n("284679"),
-  c = n("103603");
-let d = (0, s.default)(() => ({
+var l = n("884691"),
+  i = n("656280"),
+  u = n.n(i),
+  r = n("308503"),
+  a = n("446674"),
+  o = n("206230"),
+  s = n("284679"),
+  d = n("103603");
+let c = (0, r.default)(() => ({
   palette: {},
   fetching: {}
 }));
 async function f(e) {
-  null == d.getState().palette[e] && await h(e)
+  null == c.getState().palette[e] && await g(e)
 }
-async function h(e) {
-  if (!d.getState().fetching[e]) {
-    d.setState(t => ({
+async function g(e) {
+  if (!c.getState().fetching[e]) {
+    c.setState(t => ({
       fetching: {
         ...t.fetching,
         [e]: !0
       }
     }));
     try {
-      let t = await (0, c.getPaletteForAvatar)(e),
-        n = (0, a.getComplimentaryPaletteForColor)(t[0]);
-      d.setState(i => ({
+      let t = await (0, d.getPaletteForAvatar)(e),
+        n = (0, s.getComplimentaryPaletteForColor)(t[0]);
+      c.setState(l => ({
         fetching: {
-          ...i.fetching,
+          ...l.fetching,
           [e]: !1
         },
         palette: {
-          ...i.palette,
+          ...l.palette,
           [e]: [...t.slice(0, 2), ...n]
         }
       }))
     } catch (t) {
-      d.setState(t => ({
+      c.setState(t => ({
         fetching: {
           ...t.fetching,
           [e]: !1
@@ -60,34 +60,34 @@ async function h(e) {
   }
 }
 
-function v(e, t) {
+function _(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    [i] = m(e, t, n);
-  return i
+    [l] = h(e, t, n);
+  return l
 }
 
-function m(e, t) {
+function h(e, t) {
   let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-    r = d(t => null == e ? void 0 : t.palette[e]),
-    s = (0, o.useStateFromStores)([u.default], () => n && u.default.desaturateUserColors ? u.default.saturation : 1);
-  i.useEffect(() => {
-    null != e && null == r && h(e)
-  }, [e, r]);
-  let a = i.useMemo(() => null == r ? void 0 : r.map(e => {
-    let [t, n, i] = e, {
-      h: r,
-      s: o,
-      l: u
-    } = l({
+    i = c(t => null == e ? void 0 : t.palette[e]),
+    r = (0, a.useStateFromStores)([o.default], () => n && o.default.desaturateUserColors ? o.default.saturation : 1);
+  l.useEffect(() => {
+    null != e && null == i && g(e)
+  }, [e, i]);
+  let s = l.useMemo(() => null == i ? void 0 : i.map(e => {
+    let [t, n, l] = e, {
+      h: i,
+      s: a,
+      l: o
+    } = u({
       r: t,
       g: n,
-      b: i
+      b: l
     }).toHsl();
-    return l({
-      h: r,
-      s: o * s,
-      l: u
+    return u({
+      h: i,
+      s: a * r,
+      l: o
     }).toHexString()
-  }), [r, s]);
-  return null != a ? a : [t, t]
+  }), [i, r]);
+  return null != s ? s : [t, t]
 }

@@ -13,23 +13,23 @@ var i = l("37983"),
   c = l("272030"),
   d = l("811425"),
   u = l("206230"),
-  f = l("697218"),
-  v = l("155207"),
+  v = l("697218"),
+  f = l("155207"),
   h = l("772280"),
   m = l("811305"),
   I = l("58608"),
   E = l("659500"),
   x = l("449008"),
-  C = l("387111"),
-  T = l("159885"),
-  p = l("191225"),
-  S = l("686569"),
-  g = l("607573"),
-  A = l("555584"),
+  T = l("387111"),
+  C = l("159885"),
+  S = l("191225"),
+  p = l("686569"),
+  A = l("607573"),
+  g = l("555584"),
   _ = l("817039"),
   N = l("687292"),
-  j = l("141962"),
-  D = l("905647"),
+  D = l("141962"),
+  j = l("905647"),
   y = l("49111"),
   M = l("782340"),
   L = l("962529"),
@@ -50,28 +50,28 @@ function V(e) {
     staffReleasePhase: w,
     onActivityItemSelected: Y,
     labelType: k
-  } = (0, g.default)({
+  } = (0, A.default)({
     activityItem: t,
     channel: n,
     guildId: V,
     locationObject: R,
     onActivityItemVisible: O,
     onActivityItemSelected: H,
-    embeddedActivitiesManager: j.default
+    embeddedActivitiesManager: D.default
   }), {
     enableShelfToDetailPage: U,
     enableMinimalActivityDetails: G
-  } = S.ExperimentShelfToDetailPage.useExperiment({
+  } = p.ExperimentShelfToDetailPage.useExperiment({
     location: "05846b_1"
-  }), Z = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), W = (0, r.useStateFromStoresArray)([p.default, f.default], () => p.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
+  }), W = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion), z = (0, r.useStateFromStoresArray)([S.default, v.default], () => S.default.getUsersHavePlayedByApp(t.application.id).filter(e => {
     var t;
-    return (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
-  }).map(e => f.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), z = null != W[0] ? (0, T.truncateText)(C.default.getName(null, null, W[0]), 25) : null, K = null;
-  null != z && W.length > 1 ? K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
-    username1: z,
-    extras: W.length - 1
-  }) : null != z && (K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
-    username1: z
+    return (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) !== e
+  }).map(e => v.default.getUser(e)).filter(x.isNotNullish), [t.application.id]), Z = null != z[0] ? (0, C.truncateText)(T.default.getName(null, null, z[0]), 25) : null, K = null;
+  null != Z && z.length > 1 ? K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
+    username1: Z,
+    extras: z.length - 1
+  }) : null != Z && (K = M.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
+    username1: Z
   }));
   let X = a.useCallback(e => e && (null == O ? void 0 : O({
       applicationId: t.application.id
@@ -90,13 +90,13 @@ function V(e) {
     ea = a.useCallback(() => {
       U ? E.ComponentDispatch.dispatch(y.ComponentActions.SHOW_ACTIVITY_DETAILS, {
         applicationId: t.application.id
-      }) : P === g.ActivityAction.START && Y()
+      }) : P === A.ActivityAction.START && Y()
     }, [P, t, U, Y]),
-    en = D.ACTIVITIES_EXTRA_DETAILS[t.application.id],
+    en = j.ACTIVITIES_EXTRA_DETAILS[t.application.id],
     es = (null == en ? void 0 : en.playersSuggestionMin) != null && (null == en ? void 0 : en.playersSuggestionMax) != null ? "".concat(en.playersSuggestionMin, " - ").concat(en.playersSuggestionMax) : void 0;
   return (0, i.jsxs)(o.Clickable, {
     className: s(L.activityCard, {
-      [L.activityCardReducedMotion]: Z,
+      [L.activityCardReducedMotion]: W,
       [L.activityCardWithoutDetailPageRoute]: !U
     }),
     onClick: ea,
@@ -123,7 +123,7 @@ function V(e) {
         applicationName: t.application.name,
         imageClassName: L.activityImage,
         imageNotFoundClassName: L.brokenImageIconWrapper
-      }), !Z && null != F && $ ? (0, i.jsx)("div", {
+      }), !W && null != F && $ ? (0, i.jsx)("div", {
         className: s(L.video, {
           [L.videoFadeOut]: !J
         }),
@@ -135,14 +135,14 @@ function V(e) {
           autoPlay: !0,
           muted: !0
         })
-      }) : null, P !== g.ActivityAction.START ? (0, i.jsx)(A.ActivityActionOverlayButton, {
+      }) : null, P !== A.ActivityAction.START ? (0, i.jsx)(g.ActivityActionOverlayButton, {
         action: P,
         onClick: Y
       }) : null, G && null != es ? (0, i.jsx)("div", {
         className: L.minimalDetailsContainer,
         children: (0, i.jsxs)("div", {
           className: L.minimalDetails,
-          children: [(0, i.jsx)(v.default, {
+          children: [(0, i.jsx)(f.default, {
             width: 16,
             height: 16
           }), (0, i.jsx)(o.Text, {
@@ -179,12 +179,12 @@ function V(e) {
           className: L.activityCardParticipants,
           children: ei
         })]
-      }), W.length > 0 ? (0, i.jsx)("div", {
+      }), z.length > 0 ? (0, i.jsx)("div", {
         className: L.activityCardSocialProofContainer,
         children: (0, i.jsxs)("div", {
           className: L.activityCardUsersHavePlayedContainer,
           children: [(0, i.jsx)(m.default, {
-            users: W,
+            users: z,
             guildId: void 0,
             max: 4
           }), null != K ? (0, i.jsx)(o.Text, {
@@ -206,7 +206,7 @@ function V(e) {
         }) : null
       }), U ? (0, i.jsxs)("div", {
         className: s(L.activityCardHoverHint, {
-          [L.activityCardHoverHintReducedMotion]: Z
+          [L.activityCardHoverHintReducedMotion]: W
         }),
         children: [(0, i.jsx)(o.Text, {
           variant: "text-sm/semibold",

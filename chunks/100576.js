@@ -80,9 +80,9 @@ function g(e, t, n, i) {
           path: x,
           offset: m.index
         };
-        if (T(e, o, l, a)) continue;
+        if (_(e, o, l, a)) continue;
         let s = (0, r.resolvePlaintextInlineVoid)(m[0], n, i);
-        null != s && _(i, t[0], s) ? E.push({
+        null != s && T(i, t[0], s) ? E.push({
           index: m.index,
           length: m[0].length,
           node: s
@@ -139,7 +139,7 @@ function S(e, t, n, i) {
           path: f.PathUtils.child(l, 0),
           offset: 0
         };
-      (n || null != i && T(e, a, o, i)) && (c.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(r, {
+      (n || null != i && _(e, a, o, i)) && (c.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(r, {
         mode: "plain",
         preventEmojiSurrogates: !0
       }), l), s = !0)
@@ -249,7 +249,7 @@ function C(e, t, n, i) {
       default:
         continue
     }
-    if (!_(n, t[0], s)) continue;
+    if (!T(n, t[0], s)) continue;
     let o = (0, u.getPointFromPosition)(e, l, i.serializedChildren, r.start),
       d = (0, u.getPointFromPosition)(e, l, i.serializedChildren, r.start + r.text.length);
     c.SlateTransforms.textToVoid(e, s, {
@@ -260,7 +260,7 @@ function C(e, t, n, i) {
   return a
 }
 
-function T(e, t, n, i) {
+function _(e, t, n, i) {
   let l = 0;
   for (let [i, a] of f.EditorUtils.nodes(e, {
       at: {
@@ -278,7 +278,7 @@ function T(e, t, n, i) {
   return !1
 }
 
-function _(e, t, n) {
+function T(e, t, n) {
   if ("applicationCommandOption" !== t.type) return !0;
   switch (t.optionType) {
     case a.ApplicationCommandOptionType.CHANNEL:

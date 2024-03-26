@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return m
   }
 });
-var l = a("37983");
+var r = a("37983");
 a("884691");
 var s = a("414456"),
-  r = a.n(s),
+  l = a.n(s),
   n = a("77078"),
   i = a("782340"),
   o = a("859155"),
@@ -19,42 +19,42 @@ var s = a("414456"),
     let {
       isFullScreen: t
     } = e;
-    return (0, l.jsxs)("div", {
-      className: r(o.heroBanner, t ? o.heroBannerFullScreen : o.heroBannerWithSidebar),
-      children: [(0, l.jsxs)("div", {
+    return (0, r.jsxs)("div", {
+      className: l(o.heroBanner, t ? o.heroBannerFullScreen : o.heroBannerWithSidebar),
+      children: [(0, r.jsxs)("div", {
         className: o.heroDescription,
-        children: [(0, l.jsx)(n.Heading, {
+        children: [(0, r.jsx)(n.Heading, {
           className: o.bannerTitle,
           color: "always-white",
           variant: "display-lg",
           children: i.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_TITLE
-        }), (0, l.jsx)(n.Text, {
+        }), (0, r.jsx)(n.Text, {
           className: o.heroSubtitle,
           color: "always-white",
           variant: "text-lg/normal",
           children: i.default.Messages.COLLECTIBLES_SHOP_HERO_BANNER_SUBTITLE_ALT
         })]
-      }), (0, l.jsxs)("div", {
+      }), (0, r.jsxs)("div", {
         className: o.bannerArt,
-        children: [(0, l.jsx)("img", {
+        children: [(0, r.jsx)("img", {
           className: o.bannerGrid,
           alt: "",
           src: c,
           width: "484",
           height: "402"
-        }), (0, l.jsx)("img", {
+        }), (0, r.jsx)("img", {
           className: o.bannerGridSmol,
           alt: "",
           src: d,
           width: "85",
           height: "60"
-        }), (0, l.jsx)("img", {
+        }), (0, r.jsx)("img", {
           className: o.bannerGridMedium,
           alt: "",
           src: u,
           width: "178",
           height: "106"
-        }), (0, l.jsx)("img", {
+        }), (0, r.jsx)("img", {
           className: o.bannerHand,
           alt: "",
           src: f,

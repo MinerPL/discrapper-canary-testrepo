@@ -23,14 +23,14 @@ var i = n("37983"),
   g = n("873218"),
   S = n("250832"),
   C = n("22248"),
-  T = n("28236"),
-  _ = n("306160"),
+  _ = n("28236"),
+  T = n("306160"),
   I = n("794818"),
   v = n("844659"),
-  N = n("657057"),
-  A = n("886125"),
-  O = n("180161"),
-  R = n("781423"),
+  A = n("657057"),
+  N = n("886125"),
+  R = n("180161"),
+  O = n("781423"),
   M = n("47677"),
   k = n("49111"),
   L = n("724210"),
@@ -46,7 +46,7 @@ function U(e) {
   return (0, i.jsx)(o.Clickable, {
     onClick: () => {
       try {
-        (0, _.copy)(t), a(!0)
+        (0, T.copy)(t), a(!0)
       } catch (e) {
         a(!1)
       }
@@ -102,7 +102,7 @@ let D = {
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
           className: j.codeContainer,
-          children: [_.SUPPORTS_COPY ? (0, i.jsx)("div", {
+          children: [T.SUPPORTS_COPY ? (0, i.jsx)("div", {
             className: j.codeActions,
             children: (0, i.jsx)(U, {
               text: e.content
@@ -146,7 +146,7 @@ let D = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, i.jsx)(T.default, {
+    react: e => (0, i.jsx)(_.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -209,7 +209,7 @@ let D = {
     }
   },
   timestamp: {
-    react: (e, t, n) => (0, i.jsx)(N.default, {
+    react: (e, t, n) => (0, i.jsx)(A.default, {
       node: e
     }, n.key)
   },
@@ -317,8 +317,8 @@ function w(e) {
         }
       }
     }(e),
-    channelMention: (0, O.default)(e),
-    commandMention: (0, R.default)(e),
-    attachmentLink: (0, A.default)(e)
+    channelMention: (0, R.default)(e),
+    commandMention: (0, O.default)(e),
+    attachmentLink: (0, N.default)(e)
   }
 }

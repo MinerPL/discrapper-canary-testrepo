@@ -1,19 +1,19 @@
 "use strict";
-n.r(t), n.d(t, {
+t.r(n), t.d(n, {
   default: function() {
-    return s
+    return l
   }
 });
-var a = n("913144"),
-  s = {
+var i = t("913144"),
+  l = {
     startTyping(e) {
-      a.default.dispatch({
+      i.default.dispatch({
         type: "TYPING_START_LOCAL",
         channelId: e
       })
     },
     stopTyping(e) {
-      a.default.dispatch({
+      i.default.dispatch({
         type: "TYPING_STOP_LOCAL",
         channelId: e
       })

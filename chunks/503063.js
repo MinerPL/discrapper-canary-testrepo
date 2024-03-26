@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 });
 var i = n("37983"),
@@ -63,7 +63,7 @@ function C(e) {
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     reply: t,
     chatInputType: n
@@ -73,8 +73,8 @@ function T(e) {
     shouldMention: u,
     showMentionToggle: m
   } = t, {
-    nick: T,
-    colorString: _,
+    nick: _,
+    colorString: T,
     colorRoleName: I
   } = (0, d.default)(a), v = function(e, t) {
     let n = e.id,
@@ -88,9 +88,9 @@ function T(e) {
       }
       return 10
     }, [n, i])
-  }(l, a), N = (0, p.useCanStartPublicThread)(l, a), A = n.showThreadPromptOnReply && v >= 2 && N;
+  }(l, a), A = (0, p.useCanStartPublicThread)(l, a), N = n.showThreadPromptOnReply && v >= 2 && A;
 
-  function O(e) {
+  function R(e) {
     e.stopPropagation(), (0, c.setPendingReplyShouldMention)(l.id, !u)
   }
   return (0, i.jsx)("div", {
@@ -116,8 +116,8 @@ function T(e) {
             children: g.default.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(o.NameWithRole, {
                 className: S.name,
-                name: T,
-                color: _,
+                name: _,
+                color: T,
                 roleName: I
               }, t)
             })
@@ -137,7 +137,7 @@ function T(e) {
                 return (0, i.jsx)(o.Clickable, {
                   role: "switch",
                   "aria-checked": u,
-                  onClick: O,
+                  onClick: R,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   onFocus: l,
@@ -167,7 +167,7 @@ function T(e) {
             })
           })]
         })]
-      }), A && (0, i.jsx)(C, {
+      }), N && (0, i.jsx)(C, {
         channel: l,
         message: a,
         replyChainLength: v

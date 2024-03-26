@@ -23,14 +23,14 @@ var i = n("37983"),
   g = n("765698"),
   S = n("906889"),
   C = n("840211"),
-  T = n("779479"),
-  _ = n("10532"),
+  _ = n("779479"),
+  T = n("10532"),
   I = n("648149"),
   v = n("915712"),
-  N = n("261523"),
-  A = n("369869"),
-  O = n("545590"),
-  R = n("316095"),
+  A = n("261523"),
+  N = n("369869"),
+  R = n("545590"),
+  O = n("316095"),
   M = n("802279"),
   k = n("577172"),
   L = n("465215"),
@@ -55,9 +55,9 @@ function B(e) {
     guildMember: z,
     channelId: Z,
     onClose: J,
-    setNote: q = !1,
-    canDM: X,
-    hideNote: Q = !1,
+    setNote: Q = !1,
+    canDM: q,
+    hideNote: X = !1,
     showCopiableUsername: $ = !1,
     analyticsParams: ee
   } = e, et = (0, r.useStateFromStores)([m.default], () => m.default.hidePersonalInformation), en = (0, r.useStateFromStores)([y.default], () => {
@@ -127,7 +127,7 @@ function B(e) {
       children: [(0, i.jsx)(M.default, {
         className: G.customStatusSection,
         customStatusActivity: V
-      }), (0, i.jsx)(_.default, {
+      }), (0, i.jsx)(T.default, {
         className: G.divider
       }), (0, i.jsxs)(o.AdvancedScroller, {
         className: s(G.scroller, {
@@ -135,10 +135,10 @@ function B(e) {
         }),
         onScroll: ep,
         ref: ed,
-        children: [(0, i.jsx)(O.default, {
+        children: [(0, i.jsx)(R.default, {
           user: K,
           guildId: null == Y ? void 0 : Y.id
-        }), (0, i.jsx)(A.default, {
+        }), (0, i.jsx)(N.default, {
           isUsingGuildBio: null !== (n = null == W ? void 0 : W.isUsingGuildMemberBio()) && void 0 !== n && n,
           bio: null == W ? void 0 : W.bio,
           guild: Y,
@@ -151,7 +151,7 @@ function B(e) {
           userId: K.id,
           guild: Y,
           guildMember: z
-        }), ey && (0, i.jsx)(T.default, {
+        }), ey && (0, i.jsx)(_.default, {
           user: K
         }), er && es && (0, i.jsx)(w.default, {
           voiceChannel: el.voiceChannel,
@@ -170,7 +170,7 @@ function B(e) {
           channel: eo,
           guildId: null == Y ? void 0 : Y.id,
           onClick: J
-        }) : null, (0, i.jsx)(N.default, {
+        }) : null, (0, i.jsx)(A.default, {
           user: K,
           guildId: null == Y ? void 0 : Y.id
         }), (0, i.jsx)(U.default, {
@@ -178,7 +178,7 @@ function B(e) {
           guild: Y,
           guildMember: z,
           showBorder: null !== (a = null == W ? void 0 : W.canEditThemes) && void 0 !== a && a
-        }), (0, i.jsx)(R.default, {
+        }), (0, i.jsx)(O.default, {
           userId: K.id,
           channelId: Z,
           guild: Y,
@@ -187,15 +187,15 @@ function B(e) {
         }), null != en && void 0 !== Z && (0, i.jsx)(j.default, {
           channelId: Z,
           applicationId: en.id
-        }), !et && !Q && (0, i.jsx)(P.default, {
+        }), !et && !X && (0, i.jsx)(P.default, {
           user: K,
-          setNote: q,
-          autoFocus: !X,
-          lastSection: !X
-        }), !K.isNonUserBot() && X && (0, i.jsx)(k.default, {
+          setNote: Q,
+          autoFocus: !q,
+          lastSection: !q
+        }), !K.isNonUserBot() && q && (0, i.jsx)(k.default, {
           user: K,
-          setNote: q,
-          canDM: X,
+          setNote: Q,
+          canDM: q,
           onClose: J
         })]
       })]

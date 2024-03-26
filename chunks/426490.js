@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return b
   },
   PollEmojiMediaView: function() {
-    return F
+    return k
   },
   PollMediaView: function() {
     return w
@@ -42,8 +42,8 @@ var s, a, l = n("37983"),
   M = n("214400"),
   O = n("74232"),
   R = n("316350"),
-  v = n("49111"),
-  L = n("782340"),
+  L = n("49111"),
+  v = n("782340"),
   P = n("193169");
 
 function D(e) {
@@ -52,7 +52,7 @@ function D(e) {
     children: n
   } = e;
   return (0, l.jsx)("ul", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     className: t,
     children: n
   })
@@ -64,7 +64,7 @@ function x(e) {
     children: n
   } = e;
   return (0, l.jsx)("div", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     role: "group",
     className: t,
     children: n
@@ -79,7 +79,7 @@ function y(e) {
     orientation: "vertical"
   });
   return (0, l.jsx)("div", {
-    "aria-label": L.default.Messages.POLL_OPTIONS_ARIA,
+    "aria-label": v.default.Messages.POLL_OPTIONS_ARIA,
     ...s,
     className: t,
     children: n
@@ -245,7 +245,7 @@ function B(e) {
   })
 }
 
-function F(e) {
+function k(e) {
   var t;
   let {
     className: n,
@@ -263,7 +263,7 @@ function F(e) {
   })
 }
 
-function k(e, t) {
+function F(e, t) {
   return null != e ? (0, l.jsx)("div", {
     className: e,
     children: t
@@ -287,12 +287,12 @@ function w(e) {
       var n;
       return e.id === (null === (n = t.attachmentIds) || void 0 === n ? void 0 : n[0])
     });
-    if (null != e) return k(n, (0, l.jsx)(B, {
+    if (null != e) return F(n, (0, l.jsx)(B, {
       className: s,
       attachment: e
     }))
   }
-  return null != t.emoji ? k(n, (0, l.jsx)(F, {
+  return null != t.emoji ? F(n, (0, l.jsx)(k, {
     className: a,
     emoji: t.emoji
   })) : void 0 !== i ? (0, l.jsx)(l.Fragment, {
@@ -317,7 +317,7 @@ function H(e) {
     isVictor: !0
   }, () => ({
     color: _.default.BUTTON_POSITIVE_BACKGROUND,
-    backgroundColor: (0, f.getColor)(v.Color.WHITE_500)
+    backgroundColor: (0, f.getColor)(L.Color.WHITE_500)
   })).with({
     isExpired: !0,
     isVictor: !1
@@ -325,8 +325,8 @@ function H(e) {
     color: _.default.ICON_PRIMARY,
     backgroundColor: _.default.BG_MOD_FAINT
   })).otherwise(() => ({
-    color: (0, f.getColor)(v.Color.BRAND_500),
-    backgroundColor: (0, f.getColor)(v.Color.WHITE_500)
+    color: (0, f.getColor)(L.Color.BRAND_500),
+    backgroundColor: (0, f.getColor)(L.Color.WHITE_500)
   }));
   return (0, l.jsx)(p.default, {
     width: s,
@@ -377,7 +377,7 @@ function Y(e) {
     children: t && (0, l.jsx)(N.default, {
       width: a,
       height: a,
-      color: (0, f.getColor)(v.Color.WHITE_500)
+      color: (0, f.getColor)(L.Color.WHITE_500)
     })
   })
 }(a = s || (s = {}))[a.LIST_ITEM = 0] = "LIST_ITEM", a[a.RADIO = 1] = "RADIO", a[a.CHECKBOX = 2] = "CHECKBOX", a[a.LIST_ITEM_BUTTON = 3] = "LIST_ITEM_BUTTON"

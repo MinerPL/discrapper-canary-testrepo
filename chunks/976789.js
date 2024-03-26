@@ -68,7 +68,7 @@ a = class {
         },
         oldFormErrors: !0
       }).then(e => {
-        if (null == e.body || "275146b7094914f50242580137cafd55b209b2e9" === e.body.hash) return this._handleUpdateNotAvailable();
+        if (null == e.body || "85f5bf2738b3ae2c02cd3c9ba12ff94dc3fc2243" === e.body.hash) return this._handleUpdateNotAvailable();
         if (e.body.required || (0, r.probablyHasBuildOverride)()) return this._handleUpdateDownloaded(!1);
         let t = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL ? E : m;
         if (Date.now() - p > t) return s.Storage.set("lastNonRequiredUpdateShown", Date.now()), this._handleUpdateDownloaded(!1)

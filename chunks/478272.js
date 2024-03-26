@@ -4,11 +4,11 @@ n.r(t), n.d(t, {
     return o
   }
 });
-var i = n("37983");
+var s = n("37983");
 n("884691");
-var l = n("77078"),
-  a = n("974889"),
-  s = n("954016"),
+var a = n("77078"),
+  l = n("974889"),
+  i = n("954016"),
   r = n("49111");
 
 function o(e) {
@@ -18,28 +18,28 @@ function o(e) {
     locationObject: u,
     openInPopout: d,
     initialSelectedApplicationId: c,
-    initialSlide: f = s.ActivityShelfSlides.DIRECTORY,
-    enableSelectedTextChannelInvite: p = !1,
-    analyticsLocations: m
+    initialSlide: E = i.ActivityShelfSlides.DIRECTORY,
+    enableSelectedTextChannelInvite: f = !1,
+    analyticsLocations: _
   } = e;
-  d && (0, a.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
-  let h = d ? l.POPOUT_MODAL_CONTEXT : l.DEFAULT_MODAL_CONTEXT;
-  return (0, l.openModalLazy)(async () => {
+  d && (0, l.default)(r.PopoutWindowKeys.CHANNEL_CALL_POPOUT);
+  let T = d ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
+  return (0, a.openModalLazy)(async () => {
     let {
       default: e
     } = await n.el("605455").then(n.bind(n, "605455"));
-    return n => (0, i.jsx)(e, {
+    return n => (0, s.jsx)(e, {
       ...n,
       channel: t,
       guildId: o,
       locationObject: u,
-      initialSlide: f,
+      initialSlide: E,
       initialSelectedApplicationId: c,
-      enableSelectedTextChannelInvite: p,
-      analyticsLocations: m
+      enableSelectedTextChannelInvite: f,
+      analyticsLocations: _
     })
   }, {
-    modalKey: s.ACTIVITY_SHELF_WEB_MODAL_KEY,
-    contextKey: h
+    modalKey: i.ACTIVITY_SHELF_WEB_MODAL_KEY,
+    contextKey: T
   })
 }

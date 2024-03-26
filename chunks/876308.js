@@ -23,9 +23,9 @@ var i = n("37983"),
   g = n("49111"),
   S = n("782340"),
   C = n("722552");
-let T = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
+let _ = l.lazy(() => n.el("403130").then(n.bind(n, "403130")));
 
-function _(e) {
+function T(e) {
   let {
     played: t,
     duration: n,
@@ -40,10 +40,10 @@ function _(e) {
 }
 var I = l.memo(function(e) {
   var t, n, a, c, I, v;
-  let N, {
-      src: A,
-      volume: O = 1,
-      onVolumeChange: R,
+  let A, {
+      src: N,
+      volume: R = 1,
+      onVolumeChange: O,
       onMute: M,
       waveform: k,
       durationSecs: L,
@@ -59,15 +59,15 @@ var I = l.memo(function(e) {
     [V, K] = l.useState(!1),
     [W, Y] = l.useState(!1),
     [z, Z] = l.useState(!1),
-    [J, q] = l.useState(!1),
-    [X, Q] = l.useState("none"),
-    [$, ee] = l.useState(() => "function" == typeof O ? O() : O),
+    [J, Q] = l.useState(!1),
+    [q, X] = l.useState("none"),
+    [$, ee] = l.useState(() => "function" == typeof R ? R() : R),
     et = l.useRef(void 0),
     en = l.useCallback(() => {
       Y(e => !e)
     }, []),
     ei = l.useCallback(() => {
-      Q("metadata")
+      X("metadata")
     }, []),
     el = l.useCallback(e => {
       let t = e.currentTarget.duration;
@@ -75,7 +75,7 @@ var I = l.memo(function(e) {
     }, []),
     ea = l.useCallback(() => {
       Y(!1), null == et.current && (et.current = setTimeout(() => {
-        q(!1), et.current = void 0
+        Q(!1), et.current = void 0
       }, 500))
     }, []),
     es = l.useCallback(() => {
@@ -89,8 +89,8 @@ var I = l.memo(function(e) {
     }, [D]),
     eo = l.useCallback(e => {
       let t = (0, E.perceptualToAmplitude)(e, 1);
-      K(0 === t), ee(t), null == R || R(t)
-    }, [R]),
+      K(0 === t), ee(t), null == O || O(t)
+    }, [O]),
     eu = l.useCallback(() => {
       K(!V), null == M || M(!V)
     }, [V, M]),
@@ -104,10 +104,10 @@ var I = l.memo(function(e) {
       let t = w.current;
       if (null == H || null == t) return;
       let n = e * H;
-      G(n), t.currentTime = n, q(!0), clearTimeout(et.current), et.current = void 0
+      G(n), t.currentTime = n, Q(!0), clearTimeout(et.current), et.current = void 0
     }, [H]);
   l.useEffect(() => {
-    !J && W && q(!0)
+    !J && W && Q(!0)
   }, [W, J]);
   let ep = l.useRef(null);
   l.useEffect(() => {
@@ -129,7 +129,7 @@ var I = l.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, a]), c = A, I = W, v = Y, l.useEffect(() => {
+  }, [t, n, a]), c = N, I = W, v = Y, l.useEffect(() => {
     if (I) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: c
     }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
@@ -145,12 +145,12 @@ var I = l.memo(function(e) {
   }, [c, I, v]);
   let em = W ? p.default : m.default,
     eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
-  N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
-    children: (0, i.jsx)(T, {
+  A = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
+    children: (0, i.jsx)(_, {
       ref: w,
       className: C.audioElement,
-      src: A,
-      preload: X,
+      src: N,
+      preload: q,
       playing: W && !z,
       onEnded: es,
       onLoadedMetadata: el,
@@ -162,7 +162,7 @@ var I = l.memo(function(e) {
     ref: w,
     className: C.audioElement,
     controls: !1,
-    preload: X,
+    preload: q,
     onEnded: es,
     onLoadedMetadata: el,
     onError: er,
@@ -170,7 +170,7 @@ var I = l.memo(function(e) {
     volume: $,
     playing: W && !z,
     children: (0, i.jsx)("source", {
-      src: A
+      src: N
     })
   });
   let ex = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion),
@@ -210,7 +210,7 @@ var I = l.memo(function(e) {
       onDrag: ef,
       onDragStart: ed,
       onDragEnd: ec
-    }), (0, i.jsx)(_, {
+    }), (0, i.jsx)(T, {
       played: J,
       currentTime: F,
       duration: H
@@ -227,6 +227,6 @@ var I = l.memo(function(e) {
       onToggleMute: eu,
       onVolumeShow: P,
       onVolumeHide: b
-    }), N]
+    }), A]
   })
 })

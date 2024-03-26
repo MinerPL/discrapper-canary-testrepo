@@ -81,11 +81,11 @@ var O = e => {
     quest: E,
     location: O,
     size: R
-  } = e, v = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, L = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, P = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, D = L && !P && O !== T.QuestContent.QUESTS_EMBED, x = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), y = L ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, U = A(v, L, P), j = C(v, L), b = h(E, O), G = L && !v, B = (0, f.useQuestFormattedDate)(null === (c = E.userStatus) || void 0 === c ? void 0 : c.completedAt, {
+  } = e, L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, P = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, D = v && !P && O !== T.QuestContent.QUESTS_EMBED, x = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), y = v ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, U = A(L, v, P), j = C(L, v), b = h(E, O), G = v && !L, B = (0, f.useQuestFormattedDate)(null === (c = E.userStatus) || void 0 === c ? void 0 : c.completedAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), F = (0, i.useStateFromStores)([_.default], () => _.default.isEnrolling(E.id)), k = O === T.QuestContent.QUESTS_EMBED, w = O === T.QuestContent.QUEST_INVENTORY_CARD;
+  }), k = (0, i.useStateFromStores)([_.default], () => _.default.isEnrolling(E.id)), F = O === T.QuestContent.QUESTS_EMBED, w = O === T.QuestContent.QUEST_INVENTORY_CARD;
   return (0, s.jsxs)("div", {
     className: l(S.outerContainer, {
       [S.outerContainerSm]: "sm" === R,
@@ -96,14 +96,14 @@ var O = e => {
       alt: "",
       className: l(S.questReward, S.gridImg, {
         [S.questRewardGiftInventory]: w && "lg" === R,
-        [S.questRewardEmbed]: k && "lg" === R,
+        [S.questRewardEmbed]: F && "lg" === R,
         [S.questRewardEmbedSm]: "sm" === R,
         [S.questRewardEmbedXs]: "xs" === R
       })
     }), (0, s.jsxs)("div", {
       className: l(S.gridText, S.taskDetails),
       children: [(0, s.jsx)(r.Text, {
-        variant: g(O, R, L),
+        variant: g(O, R, v),
         className: S.taskInstructions,
         children: p.default.Messages.QUESTS_STREAM_TASK.format({
           minutes: E.config.streamDurationRequirementMinutes,
@@ -112,7 +112,7 @@ var O = e => {
       }), (0, s.jsx)(r.Text, {
         variant: "lg" === R ? "text-sm/medium" : "text-xs/medium",
         color: "text-muted",
-        children: v ? p.default.Messages.QUEST_REWARD_COMPLETED.format({
+        children: L ? p.default.Messages.QUEST_REWARD_COMPLETED.format({
           reward: E.config.messages.rewardNameWithArticle,
           date: B
         }) : p.default.Messages.QUEST_REWARD.format({
@@ -123,7 +123,7 @@ var O = e => {
       className: l(S.ctaButtonContainer, S.gridCtaButtons),
       children: [(0, s.jsx)(M, {
         location: O,
-        isQuestAccepted: L,
+        isQuestAccepted: v,
         containerSize: R,
         onClick: () => {
           (0, u.transitionTo)(N.Routes.SETTINGS("inventory"))
@@ -133,12 +133,12 @@ var O = e => {
         text: j,
         tooltipContentClassName: S.ctaTooltipCopy,
         shouldShow: !P,
-        children: e => v && !x ? (0, s.jsx)(d.default, {
+        children: e => L && !x ? (0, s.jsx)(d.default, {
           ...e,
           wrapperClassName: S.ctaButtonWrapper,
           color: y,
           disabled: G,
-          submitting: F,
+          submitting: k,
           onClick: b,
           children: U
         }) : (0, s.jsx)(r.Button, {
@@ -146,14 +146,14 @@ var O = e => {
           wrapperClassName: S.ctaButtonWrapper,
           color: y,
           disabled: G,
-          submitting: F,
+          submitting: k,
           onClick: b,
           children: U
         })
       })]
     }), D && (0, s.jsx)(m.default, {
       className: S.gridProgressBar,
-      color: v ? r.tokens.colors.TEXT_POSITIVE : r.tokens.colors.BG_BRAND,
+      color: L ? r.tokens.colors.TEXT_POSITIVE : r.tokens.colors.BG_BRAND,
       quest: E,
       isInventory: w
     })]

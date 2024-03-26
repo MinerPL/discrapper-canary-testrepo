@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   GiftNote: function() {
-    return o
+    return c
   }
 });
 var s = n("37983");
@@ -11,17 +11,17 @@ var r = n("812952"),
   i = n("659632"),
   l = n("635357"),
   u = n("782340"),
-  c = n("771776");
+  o = n("771776");
 
-function o(e) {
+function c(e) {
   let {
     giftMessage: t = u.default.Messages.PREMIUM_PAYMENT_IS_GIFT
   } = e, {
     isGift: n,
-    giftRecipient: o
+    giftRecipient: c
   } = (0, l.useGiftContext)();
-  return !n || (0, i.shouldShowCustomGiftExperience)(o) ? null : (0, s.jsx)(r.default, {
-    className: c.paymentNote,
+  return !n || (0, i.shouldShowCustomGiftExperience)(c) ? null : (0, s.jsx)(r.default, {
+    className: o.paymentNote,
     iconSize: r.default.Sizes.SMALL,
     icon: a.default,
     color: null == t ? r.default.Colors.PRIMARY : r.default.Colors.SECONDARY,

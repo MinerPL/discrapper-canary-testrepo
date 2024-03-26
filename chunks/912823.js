@@ -27,8 +27,8 @@ var i = n("37983"),
   T = n("108486"),
   I = n("923582"),
   v = n("80921"),
-  N = n("646718"),
-  A = n("350583");
+  A = n("646718"),
+  N = n("350583");
 
 function R(e) {
   let {
@@ -81,7 +81,7 @@ var O = l.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), W = E.default.getCurrentUser(), Y = null !== (f = (0, s.useStateFromStores)([c.default], () => K && y.default.isPremiumExactly(W, N.PremiumTypes.TIER_2) ? c.default.getReferralsRemaining() : 0)) && void 0 !== f ? f : 0, z = (0, s.useStateFromStores)([c.default], () => {
+  }), W = E.default.getCurrentUser(), Y = null !== (f = (0, s.useStateFromStores)([c.default], () => K && y.default.isPremiumExactly(W, A.PremiumTypes.TIER_2) ? c.default.getReferralsRemaining() : 0)) && void 0 !== f ? f : 0, z = (0, s.useStateFromStores)([c.default], () => {
     if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1 || !K) return !1;
     let e = P.recipients[0],
       t = c.default.getSentUserIds();
@@ -99,7 +99,7 @@ var O = l.memo(function(e) {
     return [K && l && a, a]
   });
   if (!a.isMobile) {
-    if (P.isDM() && (null === (C = k.gifts) || void 0 === C ? void 0 : C.button) != null && null == G && (y.default.isPremiumExactly(W, N.PremiumTypes.TIER_2) && J && m.default.trackExposure({
+    if (P.isDM() && (null === (C = k.gifts) || void 0 === C ? void 0 : C.button) != null && null == G && (y.default.isPremiumExactly(W, A.PremiumTypes.TIER_2) && J && m.default.trackExposure({
         location: "dc120b_5"
       }), Z && V.push((0, i.jsx)(_.default, {
         disabled: L,
@@ -133,7 +133,7 @@ var O = l.memo(function(e) {
     onClick: b,
     disabled: L || 0 === F.length && j && !w
   }, "submit")), 0 === V.length) ? null : (0, i.jsx)("div", {
-    className: A.buttons,
+    className: N.buttons,
     children: V
   })
 })

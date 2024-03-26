@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), n("222007");
 var i = n("37983"),
@@ -111,7 +111,7 @@ function C(e) {
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     language: t,
     setLanguage: n
@@ -155,7 +155,7 @@ function T(e) {
   })
 }
 
-function _(e) {
+function T(e) {
   return (0, i.jsx)(o.Tooltip, {
     text: x.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, i.jsx)(o.Clickable, {
@@ -189,8 +189,8 @@ function I(e) {
   }) : v += " " + x.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(f)
   }));
-  let N = (null == m ? void 0 : m.slice(0, y).join("\n")) + v,
-    A = a || y < h;
+  let A = (null == m ? void 0 : m.slice(0, y).join("\n")) + v,
+    N = a || y < h;
   return (0, i.jsxs)("div", {
     className: s(p, E.container),
     children: [(0, i.jsx)("div", {
@@ -200,20 +200,20 @@ function I(e) {
       children: null == l ? (0, i.jsx)(o.Spinner, {
         className: E.spinner
       }) : (0, i.jsx)(g, {
-        text: N,
+        text: A,
         language: u
       })
     }), (0, i.jsxs)(o.Text, {
       color: "header-secondary",
       className: E.footer,
       variant: "text-sm/normal",
-      children: [A ? (0, i.jsxs)(i.Fragment, {
+      children: [N ? (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(S, {
           expanded: a,
           setExpanded: r,
           isWholeFile: I,
           numLines: h
-        }), (0, i.jsx)(_, {
+        }), (0, i.jsx)(T, {
           language: u,
           fileContents: l,
           bytesLeft: f,
@@ -223,7 +223,7 @@ function I(e) {
         className: E.footerGap
       }), (0, i.jsx)(C, {
         attachment: n
-      }), (0, i.jsx)(T, {
+      }), (0, i.jsx)(_, {
         language: u,
         setLanguage: c
       })]
@@ -264,7 +264,7 @@ function v(e) {
           className: E.footerGap
         }), (0, i.jsx)(C, {
           attachment: r
-        }), (0, i.jsx)(T, {
+        }), (0, i.jsx)(_, {
           language: u,
           setLanguage: c
         })]
@@ -272,7 +272,7 @@ function v(e) {
     })
   })
 }
-var N = l.memo(function(e) {
+var A = l.memo(function(e) {
   let {
     attachment: t,
     className: n,

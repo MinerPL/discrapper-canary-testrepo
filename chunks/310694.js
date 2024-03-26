@@ -1,7 +1,7 @@
 "use strict";
-var s, i;
+var i, l;
 n.r(t), n.d(t, {
   Quests: function() {
-    return s
+    return i
   }
-}), (i = s || (s = {}))[i.ConsecutiveHeartbeatPeriodMinutes = 2] = "ConsecutiveHeartbeatPeriodMinutes", i[i.StatusLookbackPeriodDays = 30] = "StatusLookbackPeriodDays"
+}), (l = i || (i = {}))[l.ConsecutiveHeartbeatPeriodMinutes = 2] = "ConsecutiveHeartbeatPeriodMinutes", l[l.StatusLookbackPeriodDays = 30] = "StatusLookbackPeriodDays"

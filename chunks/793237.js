@@ -13,16 +13,16 @@ n.r(t), n.d(t, {
     return C
   },
   updateVisibleMessages: function() {
-    return T
-  },
-  setSummaryFeedback: function() {
     return _
   },
+  setSummaryFeedback: function() {
+    return T
+  },
   deleteSummary: function() {
-    return N
+    return A
   },
   default: function() {
-    return A
+    return N
   }
 });
 var i = n("884691"),
@@ -112,7 +112,7 @@ function C(e, t) {
   })
 }
 
-function T(e, t) {
+function _(e, t) {
   o.default.dispatch({
     type: "UPDATE_VISIBLE_MESSAGES",
     topVisibleMessage: null != e ? e : null,
@@ -120,7 +120,7 @@ function T(e, t) {
   })
 }
 
-function _(e, t) {
+function T(e, t) {
   o.default.dispatch({
     type: "SET_SUMMARY_FEEDBACK",
     summary: e,
@@ -197,7 +197,7 @@ async function v(e) {
     error: t
   })
 }
-async function N(e) {
+async function A(e) {
   try {
     await r.HTTP.del(h.Routes.CHANNEL_SUMMARY(e.channelId, e.id)), o.default.dispatch({
       type: "DELETE_SUMMARY",
@@ -207,9 +207,9 @@ async function N(e) {
     throw new u.APIError(e)
   }
 }
-var A = {
-  setSummaryFeedback: _,
-  updateVisibleMessages: T,
+var N = {
+  setSummaryFeedback: T,
+  updateVisibleMessages: _,
   setSelectedSummary: C,
   setHighlightedSummary: g,
   fetchSummaries: y,
@@ -233,5 +233,5 @@ var A = {
       }, [n, t])
     }(t), (0, s.useStateFromStoresArray)([m.default], () => m.default.topSummaries(), [])
   },
-  deleteSummary: N
+  deleteSummary: A
 }

@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   sendVoiceChannelCustomCallSoundEffect: function() {
-    return _
+    return T
   },
   sendVoiceChannelSoundboardEffect: function() {
     return I
@@ -31,7 +31,7 @@ var i, l, a = n("917351"),
   S = n("49111"),
   C = n("846325");
 
-function T(e) {
+function _(e) {
   let t = new AbortController,
     n = (0, a.throttle)(n => {
       p.default.getVoiceChannelId() !== e && t.abort()
@@ -42,12 +42,12 @@ function T(e) {
   }
 }
 
-function _(e, t, n) {
+function T(e, t, n) {
   var i;
   let {
     abortController: l,
     onRequestProgress: a
-  } = T(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
+  } = _(e), r = null !== (i = x.default.getState().animationType) && void 0 !== i ? i : g.VoiceChannelEffectAnimationType.BASIC, u = {
     animation_type: r,
     animation_id: (0, y.sampleAnimationId)(r, y.CUSTOM_CALL_SOUND_ANIMATION_RANGE)
   };
@@ -67,7 +67,7 @@ function I(e, t, n, i) {
     {
       abortController: o,
       onRequestProgress: u
-    } = T(e),
+    } = _(e),
     p = {
       sound_id: t.soundId,
       emoji_id: t.emojiId,
@@ -108,7 +108,7 @@ let v = async e => {
     await s.HTTP.post({
       url: S.Endpoints.VOICE_CHANNEL_EFFECTS(t.id),
       body: e
-    }), A(t, n, i, u), r.default.dispatch({
+    }), N(t, n, i, u), r.default.dispatch({
       type: "VOICE_CHANNEL_EFFECT_SENT_LOCAL"
     })
   } catch (e) {
@@ -120,10 +120,10 @@ let v = async e => {
       })
     }
   }
-}, N = {
+}, A = {
   [g.VoiceChannelEffectAnimationType.BASIC]: "Basic",
   [g.VoiceChannelEffectAnimationType.PREMIUM]: "Premium"
-}, A = (e, t, n, i) => {
+}, N = (e, t, n, i) => {
   let {
     unicode: l,
     custom: a,
@@ -131,7 +131,7 @@ let v = async e => {
     managed: r,
     managedExternal: o,
     animated: d
-  } = (0, h.countEmoji)([t], e.getGuildId()), c = N[i];
+  } = (0, h.countEmoji)([t], e.getGuildId()), c = A[i];
   u.default.trackWithMetadata(S.AnalyticEvents.VOICE_CHANNEL_EFFECT_SENT, {
     channel_id: e.id,
     guild_id: e.getGuildId(),

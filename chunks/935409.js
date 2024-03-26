@@ -32,14 +32,14 @@ var x = n("423487"),
   g = n("719923"),
   S = n("50885"),
   C = n("756507"),
-  T = n("713135"),
-  _ = n("106435"),
+  _ = n("713135"),
+  T = n("106435"),
   I = n("289918"),
   v = n("878569"),
-  N = n("590006"),
-  A = n("430312"),
-  O = n("401642"),
-  R = n("590456"),
+  A = n("590006"),
+  N = n("430312"),
+  R = n("401642"),
+  O = n("590456"),
   M = n("49111"),
   k = n("646718"),
   L = n("782340"),
@@ -53,7 +53,7 @@ function U(e) {
     guildId: n,
     isTryItOutFlow: l,
     forProfileEffectModal: a
-  } = e, s = (0, o.useStateFromStores)([T.default], () => T.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
+  } = e, s = (0, o.useStateFromStores)([_.default], () => _.default.getUserProfile(t.id), [t]), r = (0, o.useStateFromStores)([h.default], () => h.default.getGuild(n), [n]), c = (0, f.useClydeProfilesEnabled)(r);
   return (0, i.jsxs)(i.Fragment, {
     children: [(null == s ? void 0 : s.profileFetchFailed) && (!t.isClyde() || c) && (0, i.jsx)(d.Tooltip, {
       text: L.default.Messages.USER_PROFILE_LOAD_ERROR,
@@ -63,12 +63,12 @@ function U(e) {
         className: P.warningCircleIcon,
         color: u.default.unsafe_rawColors.YELLOW_300.css
       })
-    }), (0, i.jsx)(N.default, {
+    }), (0, i.jsx)(A.default, {
       className: a ? P.profileBadgesCompactNoTouch : P.profileBadges,
       user: t,
       guildId: n,
       isTryItOutFlow: l,
-      size: N.BadgeSizes.SIZE_22
+      size: A.BadgeSizes.SIZE_22
     })]
   })
 }
@@ -87,11 +87,11 @@ function w(e) {
     onClose: h,
     disableUserProfileLink: x,
     profileType: S,
-    animateOnHover: T,
+    animateOnHover: _,
     hasProfileEffect: I
   } = e, {
-    profileTheme: N
-  } = l.useContext(A.UserProfileContext), U = l.useContext(y.AnalyticsContext), w = t.isNonUserBot() && !t.isClyde(), F = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), G = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), {
+    profileTheme: A
+  } = l.useContext(N.UserProfileContext), U = l.useContext(y.AnalyticsContext), w = t.isNonUserBot() && !t.isClyde(), F = g.default.isPremiumAtLeast(null == n ? void 0 : n.premiumType, k.PremiumTypes.TIER_2), G = l.useMemo(() => (0, p.shouldDisableUserPresenceInChannel)(t, m), [t, m]), {
     trackUserProfileAction: H,
     analyticsLocations: B,
     messageId: V,
@@ -100,11 +100,11 @@ function w(e) {
     avatarDecorationSrc: Y,
     avatarSrc: z,
     eventHandlers: Z
-  } = (0, _.default)({
+  } = (0, T.default)({
     user: t,
     guildId: f,
     size: b,
-    animateOnHover: T
+    animateOnHover: _
   }), J = (0, i.jsx)("div", {
     className: P.avatarHoverTarget,
     ...Z,
@@ -114,11 +114,11 @@ function w(e) {
       size: b,
       "aria-label": t.username,
       status: G ? M.StatusTypes.UNKNOWN : u,
-      statusBackdropColor: null != N && F && !G ? (0, d.getStatusBackdropColor)(N) : void 0,
+      statusBackdropColor: null != A && F && !G ? (0, d.getStatusBackdropColor)(A) : void 0,
       isMobile: c,
       statusTooltip: !0
     })
-  }), q = (0, r.match)(S).with(R.UserProfileTypes.POPOUT, () => {
+  }), Q = (0, r.match)(S).with(O.UserProfileTypes.POPOUT, () => {
     let e = (0, v.buildGetPremiumUserBannerStyles)({
       premiumUserWithBanner: P.avatarPositionPremiumBanner,
       premiumUserWithoutBanner: P.avatarPositionPremiumNoBanner,
@@ -129,18 +129,18 @@ function w(e) {
       hasBanner: o,
       hasProfileEffect: I
     })
-  }).with(R.UserProfileTypes.POMELO_POPOUT, () => P.avatarPositionPomelo).with(R.UserProfileTypes.PANEL, () => P.avatarPositionPanel).exhaustive();
+  }).with(O.UserProfileTypes.POMELO_POPOUT, () => P.avatarPositionPomelo).with(O.UserProfileTypes.PANEL, () => P.avatarPositionPanel).exhaustive();
   return (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)(d.Clickable, {
       className: s({
         [P.clickable]: !W,
         [P.avatarWrapperNonUserBot]: w,
         [P.avatarWrapperNormal]: !w
-      }, q),
+      }, Q),
       onClick: w || W ? void 0 : function() {
         H({
           action: "PRESS_VIEW_PROFILE"
-        }), (0, O.openUserProfileModal)({
+        }), (0, R.openUserProfileModal)({
           userId: t.id,
           guildId: null != f ? f : void 0,
           channelId: null != m ? m : void 0,
@@ -192,7 +192,7 @@ function F(e) {
       displayProfile: n,
       onClose: s,
       guildId: l,
-      profileType: R.UserProfileTypes.POPOUT,
+      profileType: O.UserProfileTypes.POPOUT,
       showPremiumBadgeUpsell: f,
       isHovering: c,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null
@@ -211,7 +211,7 @@ function F(e) {
       disableUserProfileLink: d,
       hasBanner: (null == n ? void 0 : n.banner) != null,
       hasProfileEffect: (null == n ? void 0 : n.profileEffectId) != null,
-      profileType: R.UserProfileTypes.POPOUT
+      profileType: O.UserProfileTypes.POPOUT
     }), (0, i.jsx)(U, {
       user: t,
       guildId: l

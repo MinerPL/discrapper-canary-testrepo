@@ -34,11 +34,11 @@ var a = n("414456"),
     let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
       O = null,
       R = null,
-      v = null,
-      L = [p.notice, S.notice];
+      L = null,
+      v = [p.notice, S.notice];
     switch (M) {
       case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-        O = N.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
+        O = N.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, L = () => {
           (0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
             header: N.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
             confirmText: N.default.Messages.CONFIRM,
@@ -54,7 +54,7 @@ var a = n("414456"),
         };
         break;
       case _.GuildJoinRequestApplicationStatuses.REJECTED:
-        O = N.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, v = () => {
+        O = N.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, R = N.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, L = () => {
           (0, u.openModalLazy)(async () => {
             let {
               default: e
@@ -64,15 +64,15 @@ var a = n("414456"),
               ...t
             })
           })
-        }, L.push(p.error);
+        }, v.push(p.error);
         break;
       default:
-        O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
+        O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, L = () => {
           (0, f.openMemberVerificationModal)(A.id)
         }
     }
     return (0, s.jsxs)("div", {
-      className: l(...L),
+      className: l(...v),
       children: [(0, s.jsx)(u.Text, {
         className: p.header,
         variant: "text-sm/normal",
@@ -82,7 +82,7 @@ var a = n("414456"),
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         size: u.Button.Sizes.NONE,
-        onClick: v,
+        onClick: L,
         children: R
       })]
     })

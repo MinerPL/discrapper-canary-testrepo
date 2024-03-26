@@ -1,18 +1,18 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
 }), n("222007");
-var i, r = n("906932"),
-  l = n("315102"),
-  s = n("719923"),
-  o = n("646718");
+var l, i = n("906932"),
+  u = n("315102"),
+  r = n("719923"),
+  a = n("646718");
 
-function u(e, t) {
+function o(e, t) {
   return null == t || "" === t ? e : t
 }
-i = class {
+l = class {
   get premiumSince() {
     return this._userProfile.premiumSince
   }
@@ -27,7 +27,7 @@ i = class {
     return null !== (t = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== t ? t : this.accentColor
   }
   get canUsePremiumProfileCustomization() {
-    return s.default.isPremiumAtLeast(this.premiumType, o.PremiumTypes.TIER_2)
+    return r.default.isPremiumAtLeast(this.premiumType, a.PremiumTypes.TIER_2)
   }
   get canEditThemes() {
     return this.canUsePremiumProfileCustomization
@@ -62,13 +62,13 @@ i = class {
       canAnimate: t,
       size: n
     } = e;
-    return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, l.getGuildMemberBannerURL)({
+    return null != this.guildId && this.isUsingGuildMemberBanner() ? (0, u.getGuildMemberBannerURL)({
       id: this.userId,
       guildId: this.guildId,
       banner: this.banner,
       canAnimate: t,
       size: n
-    }) : (0, l.getUserBannerURL)({
+    }) : (0, u.getUserBannerURL)({
       id: this.userId,
       banner: this.banner,
       canAnimate: t,
@@ -77,7 +77,7 @@ i = class {
   }
   getPreviewBanner(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
-    return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, l.getUserBannerURL)({
+    return null != e ? e : null === e ? this.isUsingGuildMemberBanner() ? (0, u.getUserBannerURL)({
       id: this.userId,
       banner: this._userProfile.banner,
       canAnimate: t,
@@ -89,7 +89,7 @@ i = class {
   }
   getPreviewBio(e) {
     var t;
-    return (0, r.getProfilePreviewField)(e, null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.bio, this._userProfile.bio, null != this.guildId)
+    return (0, i.getProfilePreviewField)(e, null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.bio, this._userProfile.bio, null != this.guildId)
   }
   getPreviewThemeColors(e) {
     return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null ? e : void 0 !== e ? this._userProfile.themeColors : this.themeColors
@@ -102,7 +102,7 @@ i = class {
     return this._userProfile.legacyUsername
   }
   constructor(e, t) {
-    var n, i, r, l;
-    this.userId = e.userId, this.guildId = null == t ? void 0 : t.guildId, this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner, this.bio = u(e.bio, null == t ? void 0 : t.bio), this.pronouns = u(e.pronouns, null == t ? void 0 : t.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (i = null == t ? void 0 : t.themeColors) && void 0 !== i ? i : e.themeColors, this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType, this.profileEffectId = null !== (l = null == t ? void 0 : t.profileEffectId) && void 0 !== l ? l : e.profileEffectId, this._userProfile = e, this._guildMemberProfile = t
+    var n, l, i, u;
+    this.userId = e.userId, this.guildId = null == t ? void 0 : t.guildId, this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner, this.bio = o(e.bio, null == t ? void 0 : t.bio), this.pronouns = o(e.pronouns, null == t ? void 0 : t.pronouns), this.accentColor = e.accentColor, this.themeColors = null !== (l = null == t ? void 0 : t.themeColors) && void 0 !== l ? l : e.themeColors, this.popoutAnimationParticleType = null !== (i = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== i ? i : e.popoutAnimationParticleType, this.profileEffectId = null !== (u = null == t ? void 0 : t.profileEffectId) && void 0 !== u ? u : e.profileEffectId, this._userProfile = e, this._guildMemberProfile = t
   }
 }

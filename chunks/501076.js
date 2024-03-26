@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   },
   StoreEmbedWithoutDimensions: function() {
     return P
@@ -191,6 +191,6 @@ function R(e) {
     libraryApplication: null != n ? m.default.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
   }
 }
-let v = (0, T.default)((0, _.default)(M));
-var L = i.default.connectStores(O, R)(v);
+let L = (0, T.default)((0, _.default)(M));
+var v = i.default.connectStores(O, R)(L);
 let P = (0, _.default)(i.default.connectStores(O, R)(M))

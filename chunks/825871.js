@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return O
+    return R
   }
 });
 var i = n("37983");
@@ -27,8 +27,8 @@ var l = n("271841"),
   g = n("200294"),
   S = n("851745"),
   C = n("406291"),
-  T = n("317041"),
-  _ = n("782340"),
+  _ = n("317041"),
+  T = n("782340"),
   I = n("826214");
 let v = {
   results: {
@@ -36,7 +36,7 @@ let v = {
   }
 };
 
-function N() {
+function A() {
   (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -46,7 +46,7 @@ function N() {
     })
   })
 }
-let A = {
+let N = {
   sentinel: C.COMMAND_SENTINEL,
   stores: [f.default, u.default, x.default],
   matches: (e, t, n, i, l) => l.commands !== S.CommandMode.DISABLED && null == f.default.getActiveCommand(e.id) && (i || l.commands !== S.CommandMode.OLD_BUILT_INS),
@@ -59,7 +59,7 @@ let A = {
           channel: e,
           guild: t
         }, S.MAX_COMMAND_AUTOCOMPLETE_RESULTS),
-        r = o.BUILT_IN_SECTIONS[T.BuiltInSectionId.BUILT_IN];
+        r = o.BUILT_IN_SECTIONS[_.BuiltInSectionId.BUILT_IN];
       return 0 === a.length ? v : {
         results: {
           entries: a.map(e => ({
@@ -116,8 +116,8 @@ let A = {
       autocompletes: t,
       onHover: o,
       onClick: u,
-      titleWithQuery: _.default.Messages.COMMANDS_MATCHING,
-      titleWithoutQuery: _.default.Messages.COMMANDS,
+      titleWithQuery: T.default.Messages.COMMANDS_MATCHING,
+      titleWithoutQuery: T.default.Messages.COMMANDS,
       getQuery: e => "".concat(C.COMMAND_SENTINEL).concat(e),
       Component: c ? E.default.Command : E.default.NewCommand,
       getProps: e => {
@@ -141,8 +141,8 @@ let A = {
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.MIN,
-        onClick: N,
-        children: _.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
+        onClick: A,
+        children: T.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
       }) : null
     })
   },
@@ -180,4 +180,4 @@ let A = {
     }
   }
 };
-var O = A
+var R = N

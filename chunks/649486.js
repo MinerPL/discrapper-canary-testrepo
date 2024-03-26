@@ -59,7 +59,7 @@ let M = [{
     platformKey: 4
   }],
   R = (0, A.getThemeClass)(C.ThemeTypes.LIGHT),
-  v = e => {
+  L = e => {
     let {
       url: t,
       text: n,
@@ -73,7 +73,7 @@ let M = [{
       children: n
     })
   },
-  L = e => {
+  v = e => {
     let t, {
         platform: n,
         onClick: s,
@@ -91,7 +91,7 @@ let M = [{
       T = o(g.icon, d);
     if (Array.isArray(c)) t = c.map((e, t) => {
       let n = r ? e.url() : "";
-      return (0, l.jsx)(v, {
+      return (0, l.jsx)(L, {
         url: n,
         onClick: () => s(f),
         text: e.getText()
@@ -99,7 +99,7 @@ let M = [{
     });
     else {
       let e = r ? c() : void 0;
-      t = (0, l.jsx)(v, {
+      t = (0, l.jsx)(L, {
         url: e,
         onClick: () => s(f),
         text: h.default.Messages.DOWNLOAD
@@ -163,7 +163,7 @@ function P(e) {
     }
   }());
 
-  function v(e) {
+  function L(e) {
     (null != E.getToken() || null != r) && p.default.track(C.AnalyticEvents.DOWNLOAD_APP, {
       platform: e,
       ptb: !1,
@@ -212,10 +212,10 @@ function P(e) {
             }),
             children: (0, l.jsx)("ul", {
               className: g.platforms,
-              children: M.map(e => (0, l.jsx)(L, {
+              children: M.map(e => (0, l.jsx)(v, {
                 isActive: S === e.platformKey,
                 platform: e,
-                onClick: v,
+                onClick: L,
                 onMouseEnter: P,
                 claimed: u
               }, e.platformKey))
@@ -233,10 +233,10 @@ function P(e) {
             }),
             children: [(0, l.jsx)("ul", {
               className: g.platforms,
-              children: O.map(e => (0, l.jsx)(L, {
+              children: O.map(e => (0, l.jsx)(v, {
                 isActive: S === e.platformKey,
                 platform: e,
-                onClick: v,
+                onClick: L,
                 onMouseEnter: P,
                 claimed: u
               }, e.platformKey))

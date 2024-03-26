@@ -26,14 +26,14 @@ var i = n("37983"),
   g = n("697218"),
   S = n("551305"),
   C = n("978679"),
-  T = n("953957"),
-  _ = n("762974"),
+  _ = n("953957"),
+  T = n("762974"),
   I = n("718517"),
   v = n("299039"),
-  N = n("158998"),
-  A = n("49111"),
-  O = n("994428"),
-  R = n("646718"),
+  A = n("158998"),
+  N = n("49111"),
+  R = n("994428"),
+  O = n("646718"),
   M = n("782340"),
   k = n("240497"),
   L = n("350583");
@@ -83,8 +83,8 @@ let P = [{
   }],
   j = 1 / 300,
   U = I.default.Millis.DAYS_30,
-  D = (0, a.animated)(T.default),
-  w = (0, a.animated)(_.default),
+  D = (0, a.animated)(_.default),
+  w = (0, a.animated)(T.default),
   F = (0, a.animated)(C.default);
 
 function G(e) {
@@ -136,7 +136,7 @@ var H = l.memo(function(e) {
     channel: n
   } = e, {
     analyticsLocations: a
-  } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), T = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), _ = null != T ? v.default.age(T.id) : 0, I = !t && C && _ >= U, {
+  } = (0, p.default)(f.default.GIFT_BUTTON), [o, c] = l.useState(!1), C = (0, s.useStateFromStores)([y.default], () => !(null === y.default || void 0 === y.default ? void 0 : y.default.hasLayers())), _ = (0, s.useStateFromStores)([g.default], () => g.default.getCurrentUser()), T = null != _ ? v.default.age(_.id) : 0, I = !t && C && T >= U, {
     enabled: P
   } = E.SeasonalGiftingMarketingExperiment.useExperiment({
     location: "ChannelPremiumGiftButton"
@@ -144,20 +144,20 @@ var H = l.memo(function(e) {
     autoTrackExposure: I
   }), b = [];
   P && I && b.push(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023);
-  let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, N.useDirectMessageRecipient)(n), H = null != F;
+  let [j, D] = (0, h.useSelectedDismissibleContent)(b), w = null != j, F = (0, A.useDirectMessageRecipient)(n), H = null != F;
   if (t) return null;
   let B = () => {
       (0, x.default)({
         isGift: !0,
         giftRecipient: null == F ? void 0 : F,
         initialPlanId: null,
-        subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: O.PremiumSubscriptionSKUs.TIER_2,
         analyticsLocations: a,
         analyticsObject: {
-          page: n.isPrivate() ? A.AnalyticsPages.DM_CHANNEL : A.AnalyticsPages.GUILD_CHANNEL,
-          section: A.AnalyticsSections.CHANNEL_TEXT_AREA,
-          object: A.AnalyticsObjects.SEASONAL_BUTTON_ICON,
-          objectType: A.AnalyticsObjectTypes.GIFT
+          page: n.isPrivate() ? N.AnalyticsPages.DM_CHANNEL : N.AnalyticsPages.GUILD_CHANNEL,
+          section: N.AnalyticsSections.CHANNEL_TEXT_AREA,
+          object: N.AnalyticsObjects.SEASONAL_BUTTON_ICON,
+          objectType: N.AnalyticsObjectTypes.GIFT
         }
       })
     },
@@ -180,7 +180,7 @@ var H = l.memo(function(e) {
         isActive: !1,
         onClick: () => {
           c(!1), (0, m.markDismissibleContentAsDismissed)(r.DismissibleContent.SEASONAL_GIFTING_COACHMARK_2023, {
-            dismissAction: O.ContentDismissActionType.TAKE_ACTION
+            dismissAction: R.ContentDismissActionType.TAKE_ACTION
           }), B()
         },
         children: (0, i.jsx)("div", {

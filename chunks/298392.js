@@ -11,21 +11,21 @@ var r = n("627445"),
   i = n("976979"),
   l = n("65597"),
   u = n("77078"),
-  c = n("703332"),
-  o = n("812952"),
+  o = n("703332"),
+  c = n("812952"),
   d = n("740055"),
   m = n("545876"),
   f = n("84460"),
   p = n("883662"),
   _ = n("623003"),
-  I = n("617223"),
-  S = n("102985"),
+  S = n("617223"),
+  I = n("102985"),
   E = n("160299"),
   P = n("622839"),
   T = n("167726"),
   N = n("953109"),
-  A = n("315585"),
-  C = n("659632"),
+  C = n("315585"),
+  A = n("659632"),
   h = n("153160"),
   v = n("635357"),
   g = n("642906"),
@@ -105,7 +105,7 @@ function j(e) {
   } = (0, g.usePaymentContext)(), {
     isGift: H,
     giftRecipient: Y
-  } = (0, v.useGiftContext)(), W = H && (0, C.shouldShowCustomGiftExperience)(Y);
+  } = (0, v.useGiftContext)(), W = H && (0, A.shouldShowCustomGiftExperience)(Y);
   a(null != B, "Expected selectedSkuId");
   let Z = U[B],
     K = F[B],
@@ -113,16 +113,16 @@ function j(e) {
     z = null != K ? K[V] : null;
   a(null != Z, "SKU must exist and be fetched."), a(null != N, "Application must exist.");
   let J = (0, l.useStateFromStores)([f.default, T.default], () => T.default.inTestModeForApplication(N.id) || f.default.inDevModeForApplication(N.id), [N.id]),
-    X = (0, l.useStateFromStores)([S.default], () => S.default.enabled),
+    X = (0, l.useStateFromStores)([I.default], () => I.default.enabled),
     q = i.CountryCodesSets.EEA_COUNTRIES.has(E.default.ipCountryCodeWithFallback),
     Q = h === x.PurchaseState.PURCHASING || h === x.PurchaseState.COMPLETED,
     $ = null != G ? j[G].type : null;
   return (0, s.jsxs)("div", {
     className: R.stepBody,
-    children: [J && (0, s.jsx)(o.default, {
-      icon: A.default,
-      iconSize: o.default.Sizes.SMALL,
-      color: o.default.Colors.WARNING,
+    children: [J && (0, s.jsx)(c.default, {
+      icon: C.default,
+      iconSize: c.default.Sizes.SMALL,
+      color: c.default.Colors.WARNING,
       className: R.errorBlock,
       children: M.default.Messages.APPLICATION_STORE_PURCHASE_TEST_MODE
     }, "TEST_MODE"), (0, s.jsx)(b, {
@@ -131,7 +131,7 @@ function j(e) {
       isEmbeddedIAP: w
     }), W && (0, s.jsx)(y.default, {
       sku: Z
-    }), null != Y ? (0, s.jsx)(I.SendGiftToUser, {
+    }), null != Y ? (0, s.jsx)(S.SendGiftToUser, {
       giftRecipient: Y
     }) : null, (0, s.jsx)(u.FormTitle, {
       tag: u.FormTitleTags.H5,
@@ -169,7 +169,7 @@ function j(e) {
         checkboxLabel: Z.productLine === O.SKUProductLines.COLLECTIBLES ? M.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_SIMPLE.format({
           paidURL: O.MarketingURLs.PAID_TERMS
         }) : void 0,
-        finePrint: (0, s.jsx)(c.default, {
+        finePrint: (0, s.jsx)(o.default, {
           paymentSourceType: $,
           isEmbeddedIAP: w,
           purchaseType: k,

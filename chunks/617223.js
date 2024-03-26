@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SendGiftToUser: function() {
-    return c
+    return o
   }
 });
 var s = n("37983");
@@ -11,7 +11,7 @@ var r = n("77078"),
   i = n("158998"),
   l = n("782340"),
   u = n("995777");
-let c = e => {
+let o = e => {
   let {
     giftRecipient: t
   } = e;

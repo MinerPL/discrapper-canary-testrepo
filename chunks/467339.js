@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var i = n("37983"),
@@ -83,7 +83,7 @@ class C extends l.Component {
     })
   }
 }
-class T extends l.Component {
+class _ extends l.Component {
   componentDidMount() {
     var e;
     (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && p.default.track(x.AnalyticEvents.OPEN_MODAL, {
@@ -244,9 +244,9 @@ class T extends l.Component {
   }
 }
 
-function _(e) {
+function T(e) {
   let t = (0, c.default)();
-  return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(T, {
+  return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(_, {
     ...e,
     file: e.upload.item.file,
     messageMaxLength: t

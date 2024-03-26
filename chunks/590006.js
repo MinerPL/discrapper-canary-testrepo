@@ -33,14 +33,14 @@ function C(e) {
     shrinkAtCount: l,
     shrinkToSize: s,
     isTryItOutFlow: C,
-    size: T = 0
-  } = e, _ = (0, h.default)(t.id, n), I = (0, m.default)(_).map(e => ({
+    size: _ = 0
+  } = e, T = (0, h.default)(t.id, n), I = (0, m.default)(T).map(e => ({
     ...e,
     src: (0, x.getBadgeAsset)(e.icon)
   })), {
     trackUserProfileAction: v,
-    ...N
-  } = (0, f.useUserProfileAnalyticsContext)(), A = (0, d.useWindowDispatch)();
+    ...A
+  } = (0, f.useUserProfileAnalyticsContext)(), N = (0, d.useWindowDispatch)();
   if (t.isClyde()) return (0, a.jsx)("div", {
     className: r(i, g.container, g.clydeBadgeList),
     "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -55,7 +55,7 @@ function C(e) {
       date: new Date
     })
   });
-  let O = null != l && null != s && I.length > l ? s : T;
+  let R = null != l && null != s && I.length > l ? s : _;
   return (0, a.jsx)("div", {
     className: r(i, I.length > 0 ? g.containerWithContent : g.container),
     "aria-label": y.default.Messages.PROFILE_USER_BADGES,
@@ -72,10 +72,10 @@ function C(e) {
             action: "PRESS_BADGE"
           }), (0, p.trackUserProfileBadgePressed)({
             badge: e.id,
-            ...N
+            ...A
           }), null === (i = t.onClick) || void 0 === i || i.call(t);
           let l = null != e.link ? (0, u.default)(e.link) : null;
-          if (null != l) return A.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
+          if (null != l) return N.dispatch(E.ComponentActions.POPOUT_CLOSE), l(n)
         },
         href: e.link,
         children: (0, a.jsx)("img", {
@@ -83,9 +83,9 @@ function C(e) {
           "aria-hidden": !0,
           src: e.src,
           className: r({
-            [g.profileBadge24]: 0 === O,
-            [g.profileBadge22]: 1 === O,
-            [g.profileBadge18]: 2 === O
+            [g.profileBadge24]: 0 === R,
+            [g.profileBadge22]: 1 === R,
+            [g.profileBadge18]: 2 === R
           })
         })
       })

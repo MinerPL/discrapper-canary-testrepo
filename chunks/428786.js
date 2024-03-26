@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return L
   }
 }), n("222007");
 var s = n("37983"),
@@ -156,7 +156,7 @@ class R extends a.Component {
   }
 }
 
-function v(e) {
+function L(e) {
   let {
     userTrialOfferId: t,
     canRenderReferralEmbed: n

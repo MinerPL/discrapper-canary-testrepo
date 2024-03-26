@@ -30,8 +30,8 @@ var a = n("446674"),
   M = n("384997"),
   O = n("994428"),
   R = n("49111"),
-  v = n("935583"),
-  L = n("646718"),
+  L = n("935583"),
+  v = n("646718"),
   P = n("782340"),
   D = n("231537");
 let x = e => {
@@ -150,12 +150,12 @@ let x = e => {
         case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
           return (0, s.jsx)(N.default, {
             dismissCurrentNotice: () => A(O.ContentDismissActionType.UNKNOWN),
-            subscriptionTier: L.PremiumSubscriptionSKUs.TIER_2
+            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_2
           });
         case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
           return (0, s.jsx)(N.default, {
             dismissCurrentNotice: () => A(O.ContentDismissActionType.UNKNOWN),
-            subscriptionTier: L.PremiumSubscriptionSKUs.TIER_0
+            subscriptionTier: v.PremiumSubscriptionSKUs.TIER_0
           });
         case l.DismissibleContent.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
           return (0, s.jsxs)(h.default, {
@@ -227,7 +227,7 @@ let x = e => {
               onClick: () => A(O.ContentDismissActionType.UNKNOWN),
               noticeType: x
             }), P.default.Messages.POMELO_ACTION_NEEDED.format(), (0, s.jsx)(h.PrimaryCTANoticeButton, {
-              onClick: () => (0, I.default)(v.PomeloEntrypoints.NOTICE),
+              onClick: () => (0, I.default)(L.PomeloEntrypoints.NOTICE),
               noticeType: x,
               children: P.default.Messages.GET_STARTED
             })]
@@ -241,7 +241,7 @@ let x = e => {
             }), P.default.Messages.POMELO_ACTION_NEEDED_FORCE.format({
               date: (0, T.getLocalizedForcedUUDate)(U)
             }), (0, s.jsx)(h.PrimaryCTANoticeButton, {
-              onClick: () => (0, I.default)(v.PomeloEntrypoints.NOTICE),
+              onClick: () => (0, I.default)(L.PomeloEntrypoints.NOTICE),
               noticeType: x,
               children: P.default.Messages.GET_STARTED
             })]

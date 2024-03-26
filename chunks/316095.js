@@ -23,17 +23,17 @@ var i = n("37983"),
   g = n("590456"),
   S = n("49111"),
   C = n("782340"),
-  T = n("715392"),
-  _ = n("862939");
+  _ = n("715392"),
+  T = n("862939");
 
 function I(e) {
   var t, n;
   let a, I, {
       userId: v,
-      channelId: N,
-      guild: A,
-      theme: O,
-      onClose: R,
+      channelId: A,
+      guild: N,
+      theme: R,
+      onClose: O,
       className: M
     } = e,
     {
@@ -41,7 +41,7 @@ function I(e) {
       messageId: L,
       roleId: P
     } = (0, m.useUserProfileAnalyticsContext)(),
-    b = (0, d.default)(A, v, N),
+    b = (0, d.default)(N, v, A),
     [j, U] = l.useState(new Set),
     D = (0, r.useStateFromStores)([h.default], () => h.default.getUserProfile(v)),
     w = null !== (t = null == D ? void 0 : D.connectedAccounts) && void 0 !== t ? t : [],
@@ -49,7 +49,7 @@ function I(e) {
     G = (0, r.useStateFromStores)([f.default], () => f.default.hidePersonalInformation),
     H = (0, r.useStateFromStores)([c.default], () => c.default.locale);
   if (l.useEffect(() => {
-      (null == A ? void 0 : A.id) != null && (null == b ? void 0 : b.id) != null && u.default.fetchGuildRoleConnectionsEligibility(A.id, b.id).then(e => {
+      (null == N ? void 0 : N.id) != null && (null == b ? void 0 : b.id) != null && u.default.fetchGuildRoleConnectionsEligibility(N.id, b.id).then(e => {
         let t = new Set;
         for (let n of e)
           for (let {
@@ -58,12 +58,12 @@ function I(e) {
             of n) t.add(e);
         U(t)
       })
-    }, [null == A ? void 0 : A.id, null == b ? void 0 : b.id]), G || null == b) return null;
+    }, [null == N ? void 0 : N.id, null == b ? void 0 : b.id]), G || null == b) return null;
   let B = Array.from(j).map(e => {
     let t = w.find(t => t.type === e);
     return null == t ? null : (0, i.jsx)(x.ConnectedUserAccount, {
       connectedAccount: t,
-      theme: O,
+      theme: R,
       locale: H,
       userId: v
     }, "".concat(t.type, ":").concat(t.id))
@@ -71,16 +71,16 @@ function I(e) {
   return (B.length > 0 && (a = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.Heading, {
       variant: "eyebrow",
-      className: _.title,
+      className: T.title,
       children: C.default.Messages.CONNECTIONS
     }), (0, i.jsxs)("div", {
-      className: s(T.connectionsContainer, M),
+      className: s(_.connectionsContainer, M),
       children: [B, (0, i.jsxs)(o.Clickable, {
         onClick: function() {
           (0, E.openUserProfileModal)({
             userId: v,
-            channelId: N,
-            guildId: null == A ? void 0 : A.id,
+            channelId: A,
+            guildId: null == N ? void 0 : N.id,
             messageId: null != L ? L : void 0,
             roleId: null != P ? P : void 0,
             section: g.UserProfileSections.USER_INFO_CONNECTIONS,
@@ -88,27 +88,27 @@ function I(e) {
             analyticsLocation: {
               section: S.AnalyticsSections.PROFILE_POPOUT
             }
-          }), null == R || R()
+          }), null == O || O()
         },
-        className: T.connections,
+        className: _.connections,
         children: [(0, i.jsx)(o.Text, {
           variant: "text-md/semibold",
           color: "interactive-active",
-          className: T.connectionsText,
+          className: _.connectionsText,
           children: C.default.Messages.CONNECTIONS_ROLE_POPOUT_VIEW_ALL
         }), (0, i.jsx)(p.default, {
           direction: p.default.Directions.RIGHT,
-          className: T.connectionsCaret
+          className: _.connectionsCaret
         })]
       })]
     })]
   })), F.length > 0 && (I = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(o.Heading, {
       variant: "eyebrow",
-      className: _.title,
+      className: T.title,
       children: C.default.Messages.APPS
     }), (0, i.jsx)("div", {
-      className: s(T.connectionsContainer, M),
+      className: s(_.connectionsContainer, M),
       children: F.map(e => (0, i.jsx)(x.ConnectedApplicationUserRoleAccount, {
         applicationRoleConnection: e,
         locale: H

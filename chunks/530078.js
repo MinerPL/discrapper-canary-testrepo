@@ -31,32 +31,32 @@ function N(e) {
       author: O,
       currentUserId: R
     } = e,
-    v = R === O.id,
+    L = R === O.id,
     {
-      channel: L,
+      channel: v,
       approximate_member_count: P,
       approximate_presence_count: D
     } = M,
     x = M.state === T.InviteStates.ACCEPTING,
-    y = null != L ? (0, r.createChannelRecordFromInvite)(L) : null,
+    y = null != v ? (0, r.createChannelRecordFromInvite)(v) : null,
     U = null != g,
     j = null != y,
     b = null != y && y.isGuildVocal(),
     G = null != y && y.isGuildStageVoice(),
     B = (0, d.hasFlag)(null !== (t = M.flags) && void 0 !== t ? t : 0, a.GuildInviteFlags.IS_GUEST_INVITE),
-    F = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
+    k = null !== (N = null == g ? void 0 : g.hasFeature(T.GuildFeatures.HUB)) && void 0 !== N && N;
   if (null == g) {
     if (null == M.guild) return (0, s.jsx)(_.default, {});
     g = E.fromInviteGuild(M.guild);
     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
     g.premiumTier = e
   }
-  let k = U ? C : h,
+  let F = U ? C : h,
     w = (0, f.getHeaderTextForInvite)({
       isVoiceChannel: b,
-      isOwnInvite: v,
+      isOwnInvite: L,
       isGuest: B,
-      isHubGuild: F,
+      isHubGuild: k,
       isStage: G,
       isStream: !1
     });
@@ -110,11 +110,11 @@ function N(e) {
           guild: g
         }), (0, s.jsx)(o.default.Info, {
           title: S,
-          onClick: U ? k : null,
+          onClick: U ? F : null,
           children: p
         })]
       }), (0, s.jsx)(o.default.Button, {
-        onClick: k,
+        onClick: F,
         submitting: x,
         color: o.default.Button.Colors.GREEN,
         children: b ? G ? I.default.Messages.STAGE_CHANNEL_JOIN : I.default.Messages.INVITE_VOICE_CHANNEL_JOIN : U ? I.default.Messages.JOINED_GUILD : I.default.Messages.JOIN_GUILD

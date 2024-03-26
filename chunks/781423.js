@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return N
+    return A
   }
 });
 var i = n("37983"),
@@ -26,9 +26,9 @@ var i = n("37983"),
   g = n("317041"),
   S = n("406291"),
   C = n("782340"),
-  T = n("816411");
+  _ = n("816411");
 
-function _(e, t, n, l) {
+function T(e, t, n, l) {
   if (null == e) return;
   let a = () => {
     let i = f.default.getChannel(e);
@@ -91,7 +91,7 @@ function I(e) {
     return f.default.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : h.default.getChannelId())
   }, [n.channelId]), {
     hasSendMessagePerm: C,
-    hasUseAppCommandsPerm: T
+    hasUseAppCommandsPerm: _
   } = (0, a.useStateFromStoresObject)([m.default], () => {
     let e = m.default.can(y.Permissions.SEND_MESSAGES, E),
       t = m.default.can(y.Permissions.USE_APPLICATION_COMMANDS, E);
@@ -101,17 +101,17 @@ function I(e) {
     }
   }), {
     command: I
-  } = o.useCommand(E, null !== (t = n.commandKey) && void 0 !== t ? t : ""), v = c.UseLegacyChatInput.useSetting(), N = l.useMemo(() => {
+  } = o.useCommand(E, null !== (t = n.commandKey) && void 0 !== t ? t : ""), v = c.UseLegacyChatInput.useSetting(), A = l.useMemo(() => {
     if (null == I || null == E || I.name !== n.commandName || v) return !1;
     let e = E.isPrivate(),
       t = (0, d.computeIsReadOnlyThread)(E);
     if (t || !e && !C) return !1;
     let i = (null == I ? void 0 : I.applicationId) === g.BuiltInSectionId.BUILT_IN;
-    return !!e || !!i || !!T || !1
-  }, [E, I, C, T, n.commandName, v]), A = l.useCallback(e => {
-    null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && _(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
+    return !!e || !!i || !!_ || !1
+  }, [E, I, C, _, n.commandName, v]), N = l.useCallback(e => {
+    null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && T(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
   }, [E, n.commandKey, n.commandName]);
-  return N ? (0, i.jsx)(s.Tooltip, {
+  return A ? (0, i.jsx)(s.Tooltip, {
     text: n.output,
     position: "top",
     children: e => {
@@ -121,7 +121,7 @@ function I(e) {
       } = e;
       return (0, i.jsxs)(x.default, {
         role: "link",
-        onClick: A,
+        onClick: N,
         onMouseEnter: t,
         onMouseLeave: l,
         children: [S.COMMAND_SENTINEL, r(n.content, p)]
@@ -139,12 +139,12 @@ function v(e) {
     commandDescription: l,
     onClick: r
   } = e, o = (0, a.useStateFromStores)([h.default], () => h.default.getChannelId()), d = e => {
-    null == e || e.stopPropagation(), _(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
+    null == e || e.stopPropagation(), T(o, n, t, u.ApplicationCommandTriggerLocations.POPULAR_COMMANDS), null == r || r(t)
   };
   return (0, i.jsx)(s.Tooltip, {
     text: l,
     position: "top",
-    tooltipContentClassName: T.tooltip,
+    tooltipContentClassName: _.tooltip,
     children: e => {
       let {
         onMouseEnter: t,
@@ -162,7 +162,7 @@ function v(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   return {
     react: (e, t, n) => (0, i.jsx)(I, {
       node: e,

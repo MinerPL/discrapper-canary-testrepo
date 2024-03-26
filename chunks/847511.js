@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return y
   },
   default: function() {
-    return k
+    return F
   }
 }), n("70102"), n("222007"), n("881410"), n("808653");
 var s = n("627445"),
@@ -32,8 +32,8 @@ var s = n("627445"),
   M = n("914271"),
   O = n("690714"),
   R = n("641126"),
-  v = n("905206"),
-  L = n("49111"),
+  L = n("905206"),
+  v = n("49111"),
   P = n("782340");
 
 function D(e, t) {
@@ -65,7 +65,7 @@ function x(e) {
     cancelText: P.default.Messages.LURKER_MODE_POPOUT_CANCEL,
     onConfirm: () => {
       c.default.joinGuild(t, {
-        source: L.JoinGuildSources.POLL_ALERT
+        source: v.JoinGuildSources.POLL_ALERT
       })
     }
   })
@@ -238,7 +238,7 @@ async function B(e) {
     })
   }
 }
-async function F(e) {
+async function k(e) {
   let {
     channelId: t,
     messageId: n,
@@ -278,7 +278,7 @@ async function F(e) {
               var n, s;
               return e + (null !== (s = null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) && void 0 !== s ? s : 0)
             }, 0) : 0;
-          return _.default.trackWithMetadata(L.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
+          return _.default.trackWithMetadata(v.AnalyticEvents.POLL_SHOW_RESULTS_CLICKED, {
             channel_id: t,
             message_id: n,
             show_results: l,
@@ -306,7 +306,7 @@ async function F(e) {
       a(!1, "Unknown poll action type: ".concat(s))
   }
 }
-var k = {
+var F = {
   handlePollAnswerTapped: function(e) {
     var t, n;
     let {
@@ -335,7 +335,7 @@ var k = {
       throw a(null != s, "Tapped on a non-existent poll message"), Error()
     }(l), {
       tapShouldOpenVotersModal: u
-    } = null !== (n = (0, v.computeBasicPollChatData)(o)) && void 0 !== n ? n : {};
+    } = null !== (n = (0, L.computeBasicPollChatData)(o)) && void 0 !== n ? n : {};
     if (!0 === u) {
       y({
         channelId: i,
@@ -354,7 +354,7 @@ var k = {
             selectedTextAnswersCount: a,
             selectedEmojiAnswersCount: l
           } = D(null === (n = o.poll) || void 0 === n ? void 0 : n.answers, e);
-        return _.default.trackWithMetadata(L.AnalyticEvents.POLL_VOTE_SELECTED, {
+        return _.default.trackWithMetadata(v.AnalyticEvents.POLL_VOTE_SELECTED, {
           channel_id: i,
           message_id: r,
           selected_answer_ids: t,
@@ -383,7 +383,7 @@ var k = {
         selectedTextAnswersCount: c,
         selectedEmojiAnswersCount: E
       } = D(null === (t = o.poll) || void 0 === t ? void 0 : t.answers, l);
-      return _.default.trackWithMetadata(L.AnalyticEvents.POLL_VOTE_SELECTED, {
+      return _.default.trackWithMetadata(v.AnalyticEvents.POLL_VOTE_SELECTED, {
         channel_id: i,
         message_id: r,
         selected_answer_ids: u,
@@ -394,7 +394,7 @@ var k = {
   },
   handlePollSubmitVote: G,
   handleUpdateVoteEditingState: U,
-  handlePollActionTapped: F,
+  handlePollActionTapped: k,
   createPoll: async function e(e) {
     let {
       channel: t,

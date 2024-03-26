@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   openIAPPurchaseModal: function() {
-    return L
+    return v
   },
   openSKUPaymentModal: function() {
     return D
@@ -48,12 +48,12 @@ function R(e, t) {
   })
 }
 
-function v() {
+function L() {
   let e = m.default.getWindow(O.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     t = null != e && !e.closed;
   return t ? i.POPOUT_MODAL_CONTEXT : i.DEFAULT_MODAL_CONTEXT
 }
-async function L(e) {
+async function v(e) {
   let {
     applicationId: t,
     skuId: n,
@@ -69,7 +69,7 @@ async function L(e) {
     l(null != s, "Could not find store listing for sku"), s.sku.type === O.SKUTypes.SUBSCRIPTION_GROUP && await (0, p.fetchAllSubscriptionListingsDataForApplication)(t, s.id)
   }
   l(null != (c = null != c ? c : g.default.get(n)) && c.applicationId === t, "SKU must belong to application"), c.type === O.SKUTypes.SUBSCRIPTION && !(0, _.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
-  let m = v(),
+  let m = L(),
     C = A.default.getCurrentUser();
   if (c.premium) {
     if (M.default.canInstallPremiumApplications(C)) return R(c, d);
@@ -154,7 +154,7 @@ function D(e, t, a) {
   } = {
     ...P,
     ...l
-  }, _ = v();
+  }, _ = L();
   return u.then(() => new Promise((l, o) => {
     r.default.dispatch({
       type: "SKU_PURCHASE_MODAL_OPEN",

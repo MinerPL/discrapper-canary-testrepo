@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ImageModal: function() {
-    return T
+    return _
   },
   VideoModal: function() {
-    return _
+    return T
   }
 }), n("222007");
 var i = n("37983"),
@@ -80,7 +80,7 @@ let C = e => {
   })
 };
 
-function T(e) {
+function _(e) {
   let {
     src: t,
     original: n,
@@ -92,15 +92,15 @@ function T(e) {
     responsive: p,
     renderLinkComponent: h,
     maxWidth: x,
-    maxHeight: T,
-    shouldAnimate: _,
+    maxHeight: _,
+    shouldAnimate: T,
     onClose: I,
     shouldHideMediaOptions: v = !1,
-    obscure: N = !1,
-    ...A
+    obscure: A = !1,
+    ...N
   } = e, {
-    width: O,
-    height: R
+    width: R,
+    height: O
   } = (0, f.zoomFit)(s, o), M = r.isMobile && null != I;
   l.useEffect(() => {
     if (null != I) return c.ComponentDispatch.subscribe(E.ComponentActions.MEDIA_MODAL_CLOSE, I), () => {
@@ -109,13 +109,13 @@ function T(e) {
   }, [I]);
   let k = v ? e => {
     e.stopPropagation(), e.preventDefault()
-  } : A.onContextMenu;
+  } : N.onContextMenu;
   return (0, i.jsxs)("div", {
     className: g.wrapper,
     children: [M ? (0, i.jsx)(S, {
       onClose: I
     }) : null, (0, i.jsx)(C, {
-      isObscured: N,
+      isObscured: A,
       src: t,
       children: e => (0, i.jsx)(m.default, {
         src: t,
@@ -123,14 +123,14 @@ function T(e) {
         shouldLink: !1,
         width: s,
         height: o,
-        maxWidth: O,
-        maxHeight: R,
+        maxWidth: R,
+        maxHeight: O,
         children: d,
         animated: !e && u,
         autoPlay: !e,
         responsive: p,
         onContextMenu: k,
-        ...A
+        ...N
       }, t)
     }), null != n && !v && h({
       href: n,
@@ -142,7 +142,7 @@ function T(e) {
   })
 }
 
-function _(e) {
+function T(e) {
   let {
     src: t,
     width: n,
@@ -155,7 +155,7 @@ function _(e) {
   } = e, {
     width: m,
     height: x
-  } = (0, f.zoomFit)(n, l), E = r.isMobile && null != a, T = u ? e => {
+  } = (0, f.zoomFit)(n, l), E = r.isMobile && null != a, _ = u ? e => {
     e.stopPropagation(), e.preventDefault()
   } : c.onContextMenu;
   return (0, i.jsxs)("div", {
@@ -178,7 +178,7 @@ function _(e) {
         onVolumeChange: p.setVolume,
         onMute: p.setMuted,
         autoPlay: !e,
-        onContextMenu: T,
+        onContextMenu: _,
         ...c
       }, t)
     }), !u && o({

@@ -28,15 +28,15 @@ let d = l.forwardRef(function(e, t) {
     innerClassName: g,
     wrapContent: S,
     highlighted: C,
-    focusProps: T,
-    ..._
+    focusProps: _,
+    ...T
   } = e;
-  _.className = s(_.className, u.container, {
+  T.className = s(T.className, u.container, {
     [u.selected]: m,
     [u.highlighted]: C,
     [null != y ? y : ""]: m,
     [u.clickable]: !m && (null != x || null != p)
-  }), _["aria-selected"] = null !== (n = _["aria-selected"]) && void 0 !== n ? n : m;
+  }), T["aria-selected"] = null !== (n = T["aria-selected"]) && void 0 !== n ? n : m;
   let I = (0, i.jsxs)("div", {
     className: s(g, u.layout, {
       [u.muted]: !m && h,
@@ -65,26 +65,26 @@ let d = l.forwardRef(function(e, t) {
     }) : null]
   });
   return null != x ? (0, i.jsx)(o.FocusRing, {
-    ...T,
+    ..._,
     children: (0, i.jsx)(r.Link, {
       to: x,
       onClick: p,
-      ..._,
+      ...T,
       role: "listitem",
       ref: t,
       children: I
     })
   }) : null != p ? (0, i.jsx)(o.Clickable, {
     onClick: p,
-    focusProps: T,
-    ..._,
+    focusProps: _,
+    ...T,
     role: "listitem",
     innerRef: t,
     children: I
   }) : (0, i.jsx)(o.FocusRing, {
-    ...T,
+    ..._,
     children: (0, i.jsx)("div", {
-      ..._,
+      ...T,
       role: "listitem",
       ref: t,
       children: I

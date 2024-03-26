@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return o
+    return u
   }
 });
 var i = n("37983");
@@ -9,7 +9,7 @@ n("884691");
 var r = n("469563"),
   l = n("504318"),
   s = n("75196"),
-  o = (0, r.replaceIcon)(function(e) {
+  u = (0, r.replaceIcon)(function(e) {
     let {
       color: t = "currentColor",
       height: n = 24,

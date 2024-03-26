@@ -55,14 +55,14 @@ var x = s.memo(function(e) {
     onMouseEnter: g,
     onMouseLeave: S,
     onFocus: C,
-    onBlur: T,
-    pulse: _,
+    onBlur: _,
+    pulse: T,
     sparkle: I,
     notification: v,
-    "aria-label": N,
-    "aria-expanded": A,
-    "aria-haspopup": O,
-    "aria-controls": R
+    "aria-label": A,
+    "aria-expanded": N,
+    "aria-haspopup": R,
+    "aria-controls": O
   } = e, M = (0, u.useTransition)(null != x, {
     ...h,
     keys: e => e ? "children" : "icon"
@@ -86,22 +86,22 @@ var x = s.memo(function(e) {
   return (0, a.jsxs)(d.Button, {
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
-    "aria-label": N,
-    "aria-expanded": A,
-    "aria-haspopup": O,
-    "aria-controls": R,
+    "aria-label": A,
+    "aria-expanded": N,
+    "aria-haspopup": R,
+    "aria-controls": O,
     disabled: n,
     className: o(t, {
       [m.active]: y
     }),
     innerClassName: o(m.button, i, {
-      [m.pulseButton]: _
+      [m.pulseButton]: T
     }),
     onClick: E,
     onMouseEnter: g,
     onMouseLeave: S,
     onFocus: C,
-    onBlur: T,
+    onBlur: _,
     focusProps: {
       offset: {
         top: 4,
@@ -124,7 +124,7 @@ var x = s.memo(function(e) {
         children: k({
           component: (0, a.jsx)(r, {
             className: o(m.icon, s, {
-              [m.pulseIcon]: _
+              [m.pulseIcon]: T
             })
           })
         })

@@ -30,8 +30,8 @@ var a = n("90915"),
   M = n("706508"),
   O = n("986214"),
   R = n("549548"),
-  v = n("969380"),
-  L = n("141962"),
+  L = n("969380"),
+  v = n("141962"),
   P = n("478272"),
   D = n("954016"),
   x = n("49111"),
@@ -46,7 +46,7 @@ function b(e) {
     message: G
   } = e, {
     analyticsLocations: B
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), k = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(k), [k]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(k)), W = (null == Y ? void 0 : Y.applicationId) === b, [K, z] = (0, E.default)([b, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, R.default)(null !== (i = null == K ? void 0 : K.maxParticipants) && void 0 !== i ? i : 0), [Z] = (0, l.useStateFromStoresArray)([h.default], () => V ? h.default.getEmbeddedActivitiesForChannel(k).filter(e => e.applicationId === b) : [], [b, k, V]), J = Array.from(null !== (A = null == Z ? void 0 : Z.userIds) && void 0 !== A ? A : []), X = (0, l.useStateFromStoresArray)([I.default], () => J.map(e => I.default.getUser(e)).filter(S.isNotNullish), [J]), q = (0, v.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), k = (0, u.useAnalyticsContext)(), F = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(F), [F]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(F)), K = (null == Y ? void 0 : Y.applicationId) === b, [W, z] = (0, E.default)([b, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, R.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [Z] = (0, l.useStateFromStoresArray)([h.default], () => V ? h.default.getEmbeddedActivitiesForChannel(F).filter(e => e.applicationId === b) : [], [b, F, V]), J = Array.from(null !== (A = null == Z ? void 0 : Z.userIds) && void 0 !== A ? A : []), X = (0, l.useStateFromStoresArray)([I.default], () => J.map(e => I.default.getUser(e)).filter(S.isNotNullish), [J]), q = (0, L.default)({
     applicationId: b,
     size: j
   }), $ = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = X.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {
@@ -64,19 +64,19 @@ function b(e) {
       if (null != Z && X.length > 0) await (0, M.default)({
         applicationId: Z.applicationId,
         currentEmbeddedApplication: z,
-        activityChannelId: k,
-        embeddedActivitiesManager: L.default,
-        locationObject: F.location,
+        activityChannelId: F,
+        embeddedActivitiesManager: v.default,
+        locationObject: k.location,
         analyticsLocations: B
       });
       else {
-        let e = w.isPrivate() && !_.default.isCallActive(k),
+        let e = w.isPrivate() && !_.default.isCallActive(F),
           t = () => (0, O.default)({
             activityItem: n,
             currentEmbeddedApplication: z,
-            channelId: k,
+            channelId: F,
             guildId: H,
-            embeddedActivitiesManager: L.default,
+            embeddedActivitiesManager: v.default,
             analyticsLocations: B
           });
         e ? o.default.show({
@@ -89,14 +89,14 @@ function b(e) {
       }
     } else(0, P.default)({
       guildId: H,
-      locationObject: F.location,
+      locationObject: k.location,
       openInPopout: $,
       initialSelectedApplicationId: b,
       initialSlide: D.ActivityShelfSlides.SELECT_CHANNEL,
       analyticsLocations: B
     })
   };
-  return null != K && (0, p.hasFlag)(K.flags, x.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
+  return null != W && (0, p.hasFlag)(W.flags, x.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
     value: B,
     children: (0, s.jsxs)("div", {
       className: U.container,
@@ -104,7 +104,7 @@ function b(e) {
         className: U.imgContainer,
         children: (0, s.jsx)("img", {
           className: U.img,
-          alt: K.name,
+          alt: W.name,
           src: q.url
         })
       }), (0, s.jsxs)("div", {
@@ -112,11 +112,11 @@ function b(e) {
         children: [(0, s.jsx)(r.Heading, {
           className: U.heading,
           variant: "heading-xl/semibold",
-          children: K.name
+          children: W.name
         }), (0, s.jsx)(r.Heading, {
           className: U.description,
           variant: "heading-sm/medium",
-          children: null === (t = K.description) || void 0 === t ? void 0 : t.trim()
+          children: null === (t = W.description) || void 0 === t ? void 0 : t.trim()
         }), (0, s.jsx)(r.Heading, {
           className: U.learnMore,
           variant: "heading-sm/medium",
@@ -147,7 +147,7 @@ function b(e) {
               onClick: et,
               className: U.button,
               color: r.ButtonColors.GREEN,
-              disabled: W,
+              disabled: K,
               children: ee
             })
           })]

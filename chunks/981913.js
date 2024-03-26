@@ -38,8 +38,8 @@ function m(e) {
     tooltipPosition: g = "top",
     shouldShowTooltip: S = !0,
     forceTooltipOpen: C = !1,
-    buttonRef: T,
-    grow: _,
+    buttonRef: _,
+    grow: T,
     "aria-label": I
   } = e;
   return (0, i.jsx)(d.default, {
@@ -87,8 +87,8 @@ function m(e) {
             [p.active]: y
           }, c),
           wrapperClassName: f,
-          buttonRef: T,
-          grow: _,
+          buttonRef: _,
+          grow: T,
           "aria-label": I,
           ...C,
           children: (0, i.jsx)(h, {
@@ -122,20 +122,20 @@ function x(e) {
     onPopoutClick: E,
     popoutOpen: y = !1,
     ...g
-  } = e, S = (0, c.default)(t, n), C = (0, r.default)("(max-width: 456px)"), T = (0, i.jsx)(m, {
+  } = e, S = (0, c.default)(t, n), C = (0, r.default)("(max-width: 456px)"), _ = (0, i.jsx)(m, {
     ...g,
     grow: !1,
     onContextMenu: E,
     iconClassName: a(x, p.centerIcon),
     className: a(C ? l : null, p.staticButton, p.centerButton, h[S])
   });
-  return C ? T : (0, i.jsxs)("div", {
+  return C ? _ : (0, i.jsxs)("div", {
     className: a(l, p.contextMenuContainer),
     children: [(0, i.jsx)(u.default, {
       mask: null == E ? null : u.MaskIDs.CHANNEL_CALL_CONTROL_BUTTON,
       width: 56,
       height: 56,
-      children: T
+      children: _
     }), null != E ? (0, i.jsx)(d.default, {
       children: (0, i.jsx)(s.Clickable, {
         "aria-label": f.default.Messages.MORE_OPTIONS,

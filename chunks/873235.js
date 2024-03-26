@@ -48,7 +48,7 @@ let u = (e, t, n) => ({
           y: 0,
           h: i.imageHeight,
           w: i.imageWidth
-        }, 8), e.setColor("white"), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
+        }, 8), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
           x: i.imageWidth - i.imagePadding - i.betaTagWidth,
           y: i.imagePadding,
           w: i.betaTagWidth,
@@ -61,7 +61,7 @@ let u = (e, t, n) => ({
         }), e.drawText(r.default.Messages.BETA, {
           x: i.imageWidth - i.imagePadding - 29,
           y: 26
-        }, !0);
+        }, !0), e.setColor("white");
         let n = e.drawRoundedImage("MediaImage", {
           x: i.imagePadding,
           y: i.imagePadding

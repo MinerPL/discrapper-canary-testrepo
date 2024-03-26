@@ -53,7 +53,7 @@ function N(e, t) {
         canAccess: r
       }
     }, [N]),
-    v = s.useMemo(() => {
+    L = s.useMemo(() => {
       let e = (0, I.getMediaPostEmbedCommonData)({
         mediaPostEmbedData: C,
         guild: h,
@@ -72,5 +72,5 @@ function N(e, t) {
       let e = T.default.getEmbedFetchState(N.threadId);
       !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, f.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
     }
-  }, [N, n, p, S, A]), v
+  }, [N, n, p, S, A]), L
 }

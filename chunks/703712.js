@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return a
   },
   EasterEggAnimation: function() {
-    return k
+    return F
   },
   default: function() {
     return w
@@ -31,9 +31,9 @@ var s, a, l, i, r = n("37983"),
   M = n("427459"),
   O = n("49111"),
   R = n("782340"),
-  v = n("363790");
+  L = n("363790");
 (l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
-let L = {
+let v = {
   enter: {
     BEG: 0,
     END: 22
@@ -125,7 +125,7 @@ let P = ["TOP_LEFT", "TOP_RIGHT"],
   G = n("689888"),
   B = [b, G];
 
-function F() {
+function k() {
   return n.el("510370").then(n.t.bind(n, "510370", 19)).then(e => {
     let {
       default: t
@@ -134,7 +134,7 @@ function F() {
   })
 }
 
-function k(e) {
+function F(e) {
   let {
     onAnimationComplete: t,
     onClick: n,
@@ -269,22 +269,22 @@ function k(e) {
       spriteHeight: 45
     }), (0, r.jsx)(T.Clickable, {
       onClick: n,
-      className: d(v.easterEggAnimationClickTarget, {
-        [v.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === _,
-        [v.easterEggAnimationClickTargetTopRight]: "TOP_RIGHT" === _,
-        [v.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === _,
-        [v.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === _
+      className: d(L.easterEggAnimationClickTarget, {
+        [L.easterEggAnimationClickTargetTopLeft]: "TOP_LEFT" === _,
+        [L.easterEggAnimationClickTargetTopRight]: "TOP_RIGHT" === _,
+        [L.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === _,
+        [L.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === _
       }),
       children: (0, r.jsx)(A.default, {
         animationRef: x,
-        className: d(v.easterEggAnimation, {
-          [v.easterEggAnimationHideLeaf]: M
+        className: d(L.easterEggAnimation, {
+          [L.easterEggAnimationHideLeaf]: M
         }),
         nextScene: h,
-        sceneSegments: L,
+        sceneSegments: v,
         onScenePlay: O,
         onSceneComplete: R,
-        importData: F,
+        importData: k,
         pauseWhileUnfocused: !1
       })
     })]
@@ -318,7 +318,7 @@ function w(e) {
     [f, _] = o.useState(!1),
     A = o.useRef(null),
     {
-      reducedMotion: L
+      reducedMotion: v
     } = o.useContext(T.AccessibilityPreferencesContext),
     P = (0, N.getMessageAuthor)(n),
     D = P.nick,
@@ -343,14 +343,14 @@ function w(e) {
     newTierName: (0, M.getTierName)(u)
   });
   let y = o.useCallback(() => {
-      if (!L.enabled) {
+      if (!v.enabled) {
         if (f || 0 !== Math.floor(50 * Math.random())) {
           var e;
           let t = null === (e = A.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
-    }, [c, L, f]),
+    }, [c, v, f]),
     j = o.useCallback(() => {
       _(!1)
     }, []),
@@ -367,11 +367,11 @@ function w(e) {
     return e
   });
   let B = (0, r.jsx)(T.Clickable, {
-    className: v.iconWrapper,
+    className: L.iconWrapper,
     innerRef: A,
     onClick: i,
     children: (0, r.jsx)(C.default, {
-      className: v.icon,
+      className: L.icon,
       onMouseEnter: y
     })
   });
@@ -381,12 +381,12 @@ function w(e) {
     compact: s,
     children: [(0, r.jsx)("div", {
       onClick: i,
-      className: v.message,
+      className: L.message,
       children: t
     }), f ? (0, r.jsx)(h.default, {
       children: (0, r.jsx)("div", {
-        className: v.cannonWrapper,
-        children: (0, r.jsx)(k, {
+        className: L.cannonWrapper,
+        children: (0, r.jsx)(F, {
           onAnimationComplete: j,
           onClick: b
         })

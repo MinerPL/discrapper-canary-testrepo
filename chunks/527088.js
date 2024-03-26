@@ -31,7 +31,7 @@ function g(e) {
   let {
     code: g,
     message: M
-  } = e, [O, R, v] = (0, i.useStateFromStoresArray)([N.default], () => [N.default.getApplication(g), N.default.isInvalidApplication(g), N.default.getApplicationFetchState(g)], [g]), L = (0, i.useStateFromStores)([u.default], () => u.default.locale), P = (0, i.useStateFromStores)([c.default], () => {
+  } = e, [O, R, L] = (0, i.useStateFromStoresArray)([N.default], () => [N.default.getApplication(g), N.default.isInvalidApplication(g), N.default.getApplicationFetchState(g)], [g]), v = (0, i.useStateFromStores)([u.default], () => u.default.locale), P = (0, i.useStateFromStores)([c.default], () => {
     var e;
     return null !== (e = c.default.getGuildId()) && void 0 !== e ? e : void 0
   }), D = (0, i.useStateFromStores)([E.default], () => E.default.getCurrentUser()), [x, y] = a.useState(!1), U = a.useCallback(e => {
@@ -40,14 +40,14 @@ function g(e) {
   a.useEffect(() => {
     (0, m.getEmbedApplication)(g)
   }, [g]), a.useEffect(() => {
-    x && v === N.FetchState.FETCHED && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    x && L === N.FetchState.FETCHED && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: g,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: P,
       channel_id: M.channel_id
     })
-  }, [x, g, null == D ? void 0 : D.id, M.channel_id, P, M.author.id, v]), a.useEffect(() => {
+  }, [x, g, null == D ? void 0 : D.id, M.channel_id, P, M.author.id, L]), a.useEffect(() => {
     x && R && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
@@ -88,7 +88,7 @@ function g(e) {
       })
     })]
   });
-  if (null == O || v === N.FetchState.FETCHING) return (0, s.jsxs)(f.default, {
+  if (null == O || L === N.FetchState.FETCHING) return (0, s.jsxs)(f.default, {
     containerRef: j,
     children: [(0, s.jsx)(f.default.Header, {
       text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
@@ -96,7 +96,7 @@ function g(e) {
       resolving: !0
     })]
   });
-  let G = new Intl.NumberFormat(L, {
+  let G = new Intl.NumberFormat(v, {
       notation: "compact",
       compactDisplay: "short"
     }),

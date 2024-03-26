@@ -23,14 +23,14 @@ var i = n("37983"),
   g = n("552917"),
   S = n("917247"),
   C = n("845579"),
-  T = n("697218"),
-  _ = n("599110"),
+  _ = n("697218"),
+  T = n("599110"),
   I = n("159885"),
   v = n("570759"),
-  N = n("866353"),
-  A = n("178207"),
-  O = n("256860"),
-  R = n("364685"),
+  A = n("866353"),
+  N = n("178207"),
+  R = n("256860"),
+  O = n("364685"),
   M = n("161585"),
   k = n("585948"),
   L = n("234175"),
@@ -51,9 +51,9 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
   z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
   Z = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_PADDING),
   J = Y + 2 * Z,
-  q = z + 2 * Z,
-  X = s(A.trackStickerSearchEmpty, 200),
-  Q = s(A.trackStickerSearchResultsViewed, 200),
+  Q = z + 2 * Z,
+  q = s(N.trackStickerSearchEmpty, 200),
+  X = s(N.trackStickerSearchResultsViewed, 200),
   $ = l.forwardRef(function(e, t) {
     var a;
     let {
@@ -77,7 +77,7 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
     l.useImperativeHandle(t, () => ({
       onPickerOpen: eP
     }));
-    let er = (0, O.useFilteredStickerPackCategories)(u),
+    let er = (0, R.useFilteredStickerPackCategories)(u),
       eo = 0 === er.filter(e => e.type !== M.StickerCategoryTypes.EMPTY_GUILD_UPSELL).length,
       eu = (0, x.useExpressionPickerGridWidth)({
         gridWrapperRef: ee,
@@ -88,42 +88,42 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       }),
       ed = C.StickerPickerCollapsedSections.useSetting(),
       ec = l.useMemo(() => new Set(ed), [ed]),
-      ef = (0, o.useStateFromStores)([T.default], () => T.default.getCurrentUser()),
+      ef = (0, o.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
       ep = l.useMemo(() => (0, D.getFilteredStickers)(el, ef, u), [el, ef, u]),
-      em = (0, O.useFavoriteStickers)(),
-      eh = (0, O.useLatestFrecentStickers)(),
-      ex = (0, o.useStateFromStoresObject)([R.default], () => R.default.getAllGuildStickers()),
+      em = (0, R.useFavoriteStickers)(),
+      eh = (0, R.useLatestFrecentStickers)(),
+      ex = (0, o.useStateFromStoresObject)([O.default], () => O.default.getAllGuildStickers()),
       {
         sendable: eE = [],
         sendableWithPremium: ey = []
       } = null != ep ? ep : {},
       eg = eE.length + ey.length,
       eS = l.useCallback(e => {
-        "" === el ? (0, A.trackStickerSelect)(e) : (0, A.trackStickerSearchSelect)(e, el, eg), I(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
+        "" === el ? (0, N.trackStickerSelect)(e) : (0, N.trackStickerSearchSelect)(e, el, eg), I(e.sticker, M.StickerSelectLocation.STICKER_PICKER)
       }, [I, el, eg]),
       eC = null != eu && eu > H,
       {
-        rowCount: eT,
-        rowCountBySection: e_,
+        rowCount: e_,
+        rowCountBySection: eT,
         stickersGrid: eI,
         gutterWidth: ev,
-        columnCounts: eN
-      } = (0, O.useStickersGrid)({
+        columnCounts: eA
+      } = (0, R.useStickersGrid)({
         filteredStickers: ep,
         stickersCategories: er,
         collapsedStickersCategories: ec,
         listWidth: eu,
         listPaddingRight: V,
         stickerNodeMargin: eC ? K : W,
-        stickerNodeWidth: eC ? J : q
+        stickerNodeWidth: eC ? J : Q
       }),
-      eA = l.useCallback((e, t) => {
+      eN = l.useCallback((e, t) => {
         let {
           location: l
         } = t;
         switch (e.type) {
           case M.StickerGridItemTypes.CREATE_STICKER:
-            _.default.track(F.AnalyticEvents.OPEN_MODAL, {
+            T.default.track(F.AnalyticEvents.OPEN_MODAL, {
               type: F.AnalyticsSections.CREATE_STICKER_MODAL,
               location: z
             }), (0, d.openModalLazy)(async () => {
@@ -137,20 +137,20 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             });
             break;
           case M.StickerGridItemTypes.STICKER:
-            null != e.sticker && (0, N.isSendableSticker)(e.sticker, ef, u) && eS(e)
+            null != e.sticker && (0, A.isSendableSticker)(e.sticker, ef, u) && eS(e)
         }
       }, [z, ef, u, eS]),
       {
-        getItemProps: eO,
-        getRowProps: eR,
+        getItemProps: eR,
+        getRowProps: eO,
         gridContainerProps: eM,
         handleGridContainerKeyDown: ek,
         isUsingKeyboardNavigation: eL
       } = (0, k.useKeyboardNavigation)({
-        columnCounts: eN,
+        columnCounts: eA,
         stickersListRef: et,
         stickersGrid: eI,
-        onGridItemSelect: eA,
+        onGridItemSelect: eN,
         store: m.StickerPickerStore,
         setInspectedStickerPosition: m.StickerPickerStore.setInspectedExpressionPosition,
         gridNavigatorId: w.GRID_NAVIGATOR_ID
@@ -161,12 +161,12 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         t = [];
       if (null !== e) {
         var n;
-        t = null !== (n = R.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
+        t = null !== (n = O.default.getStickersByGuildId(e)) && void 0 !== n ? n : []
       }
       let i = 0;
       null != ex && [...ex.values()].forEach(e => {
         i += e.length
-      }), (0, A.trackStickerPickerOpen)({
+      }), (0, N.trackStickerPickerOpen)({
         containerWidth: s,
         favoriteStickers: em,
         frequentlyUsedStickers: eh,
@@ -175,15 +175,15 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       })
     };
     l.useEffect(() => {
-      "" === es.current && "" !== el && (0, A.trackStickerSearchStart)(), es.current = el
+      "" === es.current && "" !== el && (0, N.trackStickerSearchStart)(), es.current = el
     }, [el]), l.useEffect(() => {
-      0 === eg ? X(el) : Q(el, eg, ea)
+      0 === eg ? q(el) : X(el, eg, ea)
     }, [el, eg, ea]), l.useLayoutEffect(() => {
       var e;
       null === (e = en.current) || void 0 === e || e.focus()
     }, []);
     let eb = l.useCallback(() => {
-      Y(), _.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+      Y(), T.default.track(F.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
         location_section: F.AnalyticsSections.STICKER_PICKER_UPSELL
       }), (0, E.navigateToPremiumMarketingPage)()
     }, [Y]);
@@ -210,14 +210,14 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
             ref: et,
             collapsedStickersCategories: ec,
             filteredStickers: ep,
-            getStickerItemProps: eO,
-            getStickerRowProps: eR,
+            getStickerItemProps: eR,
+            getStickerRowProps: eO,
             gridWidth: eu,
             gutterWidth: ev,
             isUsingKeyboardNavigation: eL,
             onSelectSticker: eS,
-            rowCount: eT,
-            rowCountBySection: e_,
+            rowCount: e_,
+            rowCountBySection: eT,
             stickersCategories: er,
             stickersGrid: eI,
             channel: u
@@ -231,7 +231,7 @@ let H = (0, I.cssValueToNumber)(u.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
       })]
     })
   });
-var ee = l.forwardRef((e, t) => ((0, O.useFetchStickerPacks)(), (0, i.jsx)("div", {
+var ee = l.forwardRef((e, t) => ((0, R.useFetchStickerPacks)(), (0, i.jsx)("div", {
   className: G.wrapper,
   id: w.STICKER_PICKER_TAB_PANEL_ID,
   "aria-labelledby": w.STICKER_PICKER_TAB_ID,

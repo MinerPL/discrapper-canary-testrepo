@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return C
   },
   uploadSound: function() {
-    return T
+    return _
   },
   updateSound: function() {
-    return _
+    return T
   },
   deleteSound: function() {
     return I
@@ -16,16 +16,16 @@ n.r(t), n.d(t, {
     return v
   },
   removeFavoriteSound: function() {
-    return N
-  },
-  playSoundLocally: function() {
     return A
   },
+  playSoundLocally: function() {
+    return N
+  },
   reportSoundStartedPlaying: function() {
-    return O
+    return R
   },
   reportSoundFinishedPlaying: function() {
-    return R
+    return O
   },
   updateUserSoundboardVolume: function() {
     return M
@@ -91,7 +91,7 @@ let E = async e => {
 }, C = () => __OVERLAY__ ? (s.default.dispatch({
   type: "OVERLAY_SOUNDBOARD_SOUNDS_FETCH_REQUEST"
 }), Promise.all([])) : Promise.all([g(), S()]);
-async function T(e) {
+async function _(e) {
   let {
     guildId: t,
     name: n,
@@ -111,7 +111,7 @@ async function T(e) {
   }), u = (0, c.soundboardSoundFromAPI)(o.body, t);
   return u
 }
-async function _(e) {
+async function T(e) {
   let {
     guildId: t,
     soundId: n,
@@ -146,13 +146,13 @@ function v(e) {
   }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function N(e) {
+function A(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
     t.soundIds = t.soundIds.filter(t => t !== e)
   }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
     sound: t,
@@ -161,7 +161,7 @@ function A(e, t, n) {
   })
 }
 
-function O(e, t) {
+function R(e, t) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
     soundId: e,
@@ -169,7 +169,7 @@ function O(e, t) {
   })
 }
 
-function R(e, t) {
+function O(e, t) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
     soundId: e,

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   HeroImage: function() {
-    return v
+    return L
   },
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var s = n("37983"),
@@ -53,7 +53,7 @@ function R(e) {
   })
 }
 
-function v(e) {
+function L(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
@@ -80,7 +80,7 @@ function v(e) {
   })
 }
 
-function L(e) {
+function v(e) {
   var t, n, l;
   let {
     guild: c,
@@ -99,7 +99,7 @@ function L(e) {
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
     }
   }, [l])), {
-    isTruncated: L,
+    isTruncated: v,
     ExpandableTextContainer: P
   } = (0, A.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
     selectedTab: j,
@@ -112,7 +112,7 @@ function L(e) {
         color: "text-normal",
         children: null == E ? void 0 : E.description
       })
-    }), L && (0, s.jsxs)(s.Fragment, {
+    }), v && (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(I.default, {
         size: 4
       }), (0, s.jsx)(R, {
@@ -174,7 +174,7 @@ function L(e) {
           }), B]
         })]
       })]
-    }), (0, s.jsx)(v, {
+    }), (0, s.jsx)(L, {
       coverImageAsset: null == E ? void 0 : E.cover_image_asset,
       isPreview: b
     })]

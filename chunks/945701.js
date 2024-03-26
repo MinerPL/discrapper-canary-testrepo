@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ReplyInput: function() {
-    return T
+    return _
   },
   ReactionPickerButton: function() {
     return I
@@ -55,7 +55,7 @@ let S = (0, m.createChannelRecord)({
               variant: "text-xs/bold",
               className: g.replyHeader,
               children: null != l ? l : y.default.Messages.CHAT
-            }), (0, i.jsx)(T, {
+            }), (0, i.jsx)(_, {
               onEnter: e => {
                 a(e), c()
               },
@@ -67,7 +67,7 @@ let S = (0, m.createChannelRecord)({
       children: () => d
     })
   }),
-  T = e => {
+  _ = e => {
     let {
       placeholder: t,
       onEnter: n,
@@ -108,7 +108,7 @@ let S = (0, m.createChannelRecord)({
       disabled: !1
     })
   },
-  _ = (e, t) => {
+  T = (e, t) => {
     l.useEffect(() => {
       let n = t => {
           "Escape" === t.key && e()
@@ -127,7 +127,7 @@ let S = (0, m.createChannelRecord)({
       onSelectEmoji: t,
       onClick: n
     } = e, a = (0, u.default)(), [s, r] = l.useState(!1), d = l.useRef(null);
-    return _(() => r(!1), d), (0, i.jsx)(o.Popout, {
+    return T(() => r(!1), d), (0, i.jsx)(o.Popout, {
       align: "right",
       position: "top",
       shouldShow: s,
@@ -170,7 +170,7 @@ var v = e => {
     showReact: u = !0,
     showReply: d = !0
   } = e, [c, f] = l.useState(!1), p = l.useRef(null);
-  return _(() => f(!1), p), (0, i.jsx)(i.Fragment, {
+  return T(() => f(!1), p), (0, i.jsx)(i.Fragment, {
     children: (0, i.jsxs)("div", {
       className: g.reactions,
       children: [u && (0, i.jsx)(I, {

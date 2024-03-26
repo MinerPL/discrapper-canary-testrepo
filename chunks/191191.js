@@ -29,14 +29,14 @@ function S(e) {
     containerWidth: a,
     onClose: S,
     onSelect: C,
-    analyticsSource: T,
-    suppressPlaySound: _,
+    analyticsSource: _,
+    suppressPlaySound: T,
     shouldShowUpsell: I = !0,
     gridNotice: v,
-    autoWidth: N = !1,
-    soundButtonOverlay: A,
-    listPadding: O,
-    renderHeader: R,
+    autoWidth: A = !1,
+    soundButtonOverlay: N,
+    listPadding: R,
+    renderHeader: O,
     defaultSoundsOnly: M
   } = e, k = (0, o.useStateFromStores)([E.default], () => E.default.isFetchingSounds() || E.default.isFetchingDefaultSounds()), L = (0, o.useStateFromStores)([h.default], () => h.default.getMediaSessionId()), {
     analyticsLocations: P
@@ -45,7 +45,7 @@ function S(e) {
     type: r.ImpressionTypes.POPOUT,
     name: r.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {
-      source: T,
+      source: _,
       guild_id: t,
       media_session_id: L
     }
@@ -56,7 +56,7 @@ function S(e) {
     children: (0, i.jsx)("div", {
       className: s(g.picker, {
         [g.fetching]: k,
-        [g.autoWidth]: N
+        [g.autoWidth]: A
       }),
       children: k ? (0, i.jsx)(u.Spinner, {}) : (0, i.jsx)(y.default, {
         guildId: t,
@@ -64,12 +64,12 @@ function S(e) {
         onClose: S,
         onSelect: C,
         containerWidth: a,
-        suppressPlaySound: _,
+        suppressPlaySound: T,
         shouldShowUpsell: I,
         gridNotice: v,
-        soundButtonOverlay: A,
-        listPadding: O,
-        renderHeader: R,
+        soundButtonOverlay: N,
+        listPadding: R,
+        renderHeader: O,
         defaultSoundsOnly: M
       })
     })

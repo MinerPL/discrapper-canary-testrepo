@@ -22,7 +22,7 @@ n.r(t), n.d(t, {
     return C
   },
   findTextOptions: function() {
-    return T
+    return _
   }
 }), n("424973"), n("222007");
 var i = n("798609"),
@@ -152,7 +152,7 @@ function C(e, t, n, i, r) {
   }), p
 }
 
-function T(e, t) {
+function _(e, t) {
   if (null == t.options || 0 === t.options.length) return [];
   let n = f.EditorUtils.richValue(e),
     i = [],

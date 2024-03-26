@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return L
+    return v
   }
 }), n("222007");
 var s = n("37983"),
@@ -29,45 +29,45 @@ var s = n("37983"),
   M = n("29883"),
   O = n("954016"),
   R = n("782340"),
-  v = n("75644");
+  L = n("75644");
 
-function L(e) {
+function v(e) {
   var t;
   let {
     application: n,
-    activityInstance: L,
+    activityInstance: v,
     channelId: P,
     guildId: D
   } = e, [x, y] = a.useState(!1), {
     analyticsLocations: U
-  } = (0, m.default)(I.default.ACTIVITY_INSTANCE_EMBED), j = (0, r.useAnalyticsContext)(), b = (0, _.default)(), G = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(P)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : P, F = (0, l.useStateFromStores)([p.default], () => p.default.getId()), {
-    embeddedActivity: k,
+  } = (0, m.default)(I.default.ACTIVITY_INSTANCE_EMBED), j = (0, r.useAnalyticsContext)(), b = (0, _.default)(), G = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(P)), B = (null == G ? void 0 : null === (t = G.isThread) || void 0 === t ? void 0 : t.call(G)) ? null == G ? void 0 : G.parent_id : P, k = (0, l.useStateFromStores)([p.default], () => p.default.getId()), {
+    embeddedActivity: F,
     currentEmbeddedActivity: w
   } = (0, l.useStateFromStoresObject)([u.default], () => ({
-    embeddedActivity: u.default.getEmbeddedActivitiesForChannel(null != B ? B : "").find(e => e.instanceId === L.id),
+    embeddedActivity: u.default.getEmbeddedActivitiesForChannel(null != B ? B : "").find(e => e.instanceId === v.id),
     currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity()
   })), H = (0, l.useStateFromStoresArray)([C.default], () => {
     var e;
-    return Array.from(null !== (e = null == k ? void 0 : k.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(g.isNotNullish)
+    return Array.from(null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(g.isNotNullish)
   }), V = (0, l.useStateFromStores)([A.default], () => {
     var e;
-    let t = null == k ? void 0 : k.userIds.values().next().value;
+    let t = null == F ? void 0 : F.userIds.values().next().value;
     return null == t ? null : null === (e = A.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
   }), Y = a.useMemo(() => {
     let e = new N.default(n);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = O.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e
-  }, [n]), W = (0, f.useEmbeddedActivityJoinability)({
-    userId: F,
+  }, [n]), K = (0, f.useEmbeddedActivityJoinability)({
+    userId: k,
     channelId: P,
     application: Y
-  }), K = null == k, z = (0, M.useJoinOrStartButtonState)({
-    embeddedActivity: k,
-    joinability: W,
+  }), W = null == F, z = (0, M.useJoinOrStartButtonState)({
+    embeddedActivity: F,
+    joinability: K,
     currentEmbeddedActivity: w
   }), Q = async () => {
     y(!0);
     try {
-      if (K) {
+      if (W) {
         let {
           activityConfigs: e,
           applications: t
@@ -88,7 +88,7 @@ function L(e) {
           analyticsLocations: U
         })
       } else await (0, c.default)({
-        applicationId: k.applicationId,
+        applicationId: F.applicationId,
         currentEmbeddedApplication: b,
         activityChannelId: P,
         locationObject: j.location,
@@ -100,13 +100,13 @@ function L(e) {
     }
   };
   return (0, s.jsx)("div", {
-    className: v.container,
+    className: L.container,
     children: (0, s.jsxs)("div", {
-      className: v.contentContainer,
+      className: L.contentContainer,
       children: [(0, s.jsx)("div", {
-        className: v.headerContainer,
-        children: K ? (0, s.jsx)("div", {
-          className: v.endedNote,
+        className: L.headerContainer,
+        children: W ? (0, s.jsx)("div", {
+          className: L.endedNote,
           children: (0, s.jsx)(i.Text, {
             variant: "text-md/medium",
             children: R.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_ENDED
@@ -118,7 +118,7 @@ function L(e) {
           children: null != V ? V : R.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_PRESENCE
         })
       }), (0, s.jsxs)("div", {
-        className: v.footerContainer,
+        className: L.footerContainer,
         children: [(0, s.jsx)(i.Tooltip, {
           text: z.tooltip,
           children: e => {
@@ -137,7 +137,7 @@ function L(e) {
               disabled: z.disabled
             }, z.text)
           }
-        }), !K && (0, s.jsx)(h.default, {
+        }), !W && (0, s.jsx)(h.default, {
           guildId: D,
           users: H,
           max: 4,

@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("862451"),
   O = n("611792"),
   R = n("554372"),
-  v = n("49111"),
-  L = n("5762"),
+  L = n("49111"),
+  v = n("5762"),
   P = a.memo(function(e) {
     var t;
     let {
@@ -46,8 +46,8 @@ var s = n("37983"),
       animateAvatar: b,
       subscribeToComponentDispatch: G,
       renderThreadAccessory: B,
-      trackAnnouncementViews: F = !1,
-      ...k
+      trackAnnouncementViews: k = !1,
+      ...F
     } = e, w = n.isFirstMessageInForumPost(U), H = (0, d.isMessageNewerThanImprovedMarkdownEpoch)((null !== (t = n.editedTimestamp) && void 0 !== t ? t : n.timestamp).valueOf()), {
       content: V,
       hasSpoilerEmbeds: Y
@@ -57,13 +57,13 @@ var s = n("37983"),
       allowHeading: w || H,
       allowLinks: !0,
       previewLinkTarget: !0
-    }), W = n.type === v.MessageTypes.REPLY ? n.messageReference : void 0, K = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(W)), z = (0, r.useListItem)(n.id), Q = (0, N.default)(n), Z = (0, o.useStateFromStores)([E.default], () => n.hasFlag(v.MessageFlags.HAS_THREAD) && E.default.getChannel(I.default.castMessageIdAsChannelId(n.id))), J = (0, u.useRoleIcon)({
+    }), K = n.type === L.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, N.default)(n), Z = (0, o.useStateFromStores)([E.default], () => n.hasFlag(L.MessageFlags.HAS_THREAD) && E.default.getChannel(I.default.castMessageIdAsChannelId(n.id))), J = (0, u.useRoleIcon)({
       guildId: U.guild_id,
       roleId: Q.iconRoleId
-    }), X = (0, o.useStateFromStores)([f.default], () => f.default.can(v.Permissions.CREATE_INSTANT_INVITE, U)), q = (0, A.default)({
+    }), X = (0, o.useStateFromStores)([f.default], () => f.default.can(L.Permissions.CREATE_INSTANT_INVITE, U)), q = (0, A.default)({
       message: n,
       channel: U,
-      enabled: F
+      enabled: k
     });
     if ((0, m.default)(n, X)) return null;
     let $ = (0, p.getMessageAriaLabelledBy)(n),
@@ -71,11 +71,11 @@ var s = n("37983"),
     return (0, s.jsx)(_.default, {
       compact: a,
       className: i(l, {
-        [L.ephemeral]: (0, T.hasFlag)(n.flags, v.MessageFlags.EPHEMERAL),
-        [L.disableInteraction]: x
+        [v.ephemeral]: (0, T.hasFlag)(n.flags, L.MessageFlags.EPHEMERAL),
+        [v.disableInteraction]: x
       }),
       disableInteraction: x,
-      childrenRepliedMessage: (0, R.default)(n, U, W, K, a),
+      childrenRepliedMessage: (0, R.default)(n, U, K, W, a),
       childrenExecutedCommand: (0, O.default)(n, U, a),
       childrenHeader: (0, g.default)({
         ...e,
@@ -88,12 +88,12 @@ var s = n("37983"),
       childrenSystemMessage: (0, M.default)(e),
       onContextMenu: P,
       onClick: D,
-      hasThread: B && null != Z && n.hasFlag(v.MessageFlags.HAS_THREAD),
-      hasReply: n.type === v.MessageTypes.REPLY,
+      hasThread: B && null != Z && n.hasFlag(L.MessageFlags.HAS_THREAD),
+      hasReply: n.type === L.MessageTypes.REPLY,
       "aria-labelledby": $,
       "aria-describedby": ee,
       messageRef: q,
       ...z,
-      ...k
+      ...F
     })
   })

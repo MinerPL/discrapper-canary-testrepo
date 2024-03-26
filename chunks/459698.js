@@ -4,13 +4,13 @@ n.r(t), n.d(t, {
     return J
   },
   GuildDetails: function() {
-    return q
+    return Q
   },
   MessageCustomEmojiPopout: function() {
-    return X
+    return q
   },
   CustomGuildEmojiPopout: function() {
-    return Q
+    return X
   },
   EmojiPopoutList: function() {
     return $
@@ -35,14 +35,14 @@ var i = n("37983"),
   g = n("865453"),
   S = n("153043"),
   C = n("256941"),
-  T = n("270295"),
-  _ = n("626301"),
+  _ = n("270295"),
+  T = n("626301"),
   I = n("505233"),
   v = n("635956"),
-  N = n("393414"),
-  A = n("324929"),
-  O = n("18494"),
-  R = n("162771"),
+  A = n("393414"),
+  N = n("324929"),
+  R = n("18494"),
+  O = n("162771"),
   M = n("697218"),
   k = n("145131"),
   L = n("580357"),
@@ -62,7 +62,7 @@ var i = n("37983"),
   Y = n("782340"),
   z = n("325417");
 let Z = () => {
-    let e = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId());
+    let e = (0, o.useStateFromStores)([O.default], () => O.default.getGuildId());
     return {
       page: null != e ? V.AnalyticsPages.GUILD_CHANNEL : V.AnalyticsPages.DM_CHANNEL,
       section: V.AnalyticsSections.EMOJI_UPSELL_POPOUT
@@ -74,7 +74,7 @@ let Z = () => {
     } = e;
     return (0, g.useTrackOpenPopout)({
       emojiId: t.emojiId,
-      currentGuildId: R.default.getGuildId()
+      currentGuildId: O.default.getGuildId()
     }), (0, i.jsx)(u.Dialog, {
       children: (0, i.jsx)(B.MessagePopoutContent, {
         children: (0, i.jsxs)(k.default, {
@@ -104,7 +104,7 @@ let Z = () => {
       })
     })
   },
-  q = e => {
+  Q = e => {
     let {
       expressionSourceGuild: t,
       hasJoinedExpressionSourceGuild: n,
@@ -122,7 +122,7 @@ let Z = () => {
     n = null == n || n;
     let c = n || t.isDiscoverable(),
       f = () => {
-        t.isDiscoverable() ? (0, F.startLurking)(a, {}) : n && (0, N.transitionTo)(V.Routes.CHANNEL(a, O.default.getChannelId(a)))
+        t.isDiscoverable() ? (0, F.startLurking)(a, {}) : n && (0, A.transitionTo)(V.Routes.CHANNEL(a, R.default.getChannelId(a)))
       },
       p = t.isDiscoverable() && null != t.presenceCount,
       m = () => {
@@ -209,7 +209,7 @@ let Z = () => {
       })]
     })
   },
-  X = e => {
+  q = e => {
     let {
       node: t,
       closePopout: n,
@@ -226,7 +226,7 @@ let Z = () => {
     });
     return d ? (0, i.jsx)(B.PopoutLoadingAnimation, {}) : (0, i.jsx)(u.Dialog, {
       "aria-label": t.name,
-      children: (0, i.jsx)(Q, {
+      children: (0, i.jsx)(X, {
         node: t,
         guildEmoji: null != o ? o : void 0,
         expressionSourceGuild: s,
@@ -238,19 +238,19 @@ let Z = () => {
       })
     })
   },
-  Q = e => {
+  X = e => {
     var t, n, a;
     let {
       node: u,
       expressionSourceGuild: E,
-      joinedEmojiSourceGuildRecord: N,
-      closePopout: O,
+      joinedEmojiSourceGuildRecord: A,
+      closePopout: R,
       onToggleShowMoreEmojis: L,
       guildEmoji: P,
       demoMode: U = !1,
       nonce: w
-    } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([R.default], () => R.default.getGuildId()), X = G.default.isPremium(F), Q = null != J && (J === (null == E ? void 0 : E.id) || J === (null == N ? void 0 : N.id)), ee = null != N, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
-    U && (X = !0, et = !0, ee = !1, Q = !1);
+    } = e, F = (0, o.useStateFromStores)([M.default], () => M.default.getCurrentUser()), J = (0, o.useStateFromStores)([O.default], () => O.default.getGuildId()), q = G.default.isPremium(F), X = null != J && (J === (null == E ? void 0 : E.id) || J === (null == A ? void 0 : A.id)), ee = null != A, et = null !== (t = null == E ? void 0 : E.isDiscoverable()) && void 0 !== t && t;
+    U && (q = !0, et = !0, ee = !1, X = !1);
     let {
       enabled: en
     } = I.NitroBadgeOnEmojiHoverExperiment.useExperiment({
@@ -283,24 +283,24 @@ let Z = () => {
     }, {
       disableTrack: !el
     });
-    let eu = R.default.getGuildId(),
+    let eu = O.default.getGuildId(),
       ed = (0, H.getEmojiPopoutData)({
-        isPremium: X,
+        isPremium: q,
         hasJoinedEmojiSourceGuild: ee,
         isRoleSubscriptionEmoji: el,
         isUnusableRoleSubscriptionEmoji: ea,
         userIsRoleSubscriber: es,
-        emojiComesFromCurrentGuild: Q,
+        emojiComesFromCurrentGuild: X,
         isDiscoverable: et,
         shouldHideRoleSubscriptionCTA: er,
         onOpenPremiumSettings: () => {
-          O(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+          R(), D.default.track(V.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
             location_page: ei.page,
             location_section: ei.section
-          }), (0, _.navigateToPremiumMarketingPage)()
+          }), (0, T.navigateToPremiumMarketingPage)()
         }
       }),
-      ec = ee && ea && !er && (X && el || !X),
+      ec = ee && ea && !er && (q && el || !q),
       ef = ed.emojiDescription,
       ep = (0, g.useTrackOpenPopout)({
         emojiId: u.emojiId,
@@ -313,13 +313,13 @@ let Z = () => {
       em = ed.type === H.EmojiPopoutType.JOIN_GUILD,
       eh = ed.type === H.EmojiPopoutType.GET_PREMIUM,
       [ex, eE] = l.useState(!1),
-      ey = et || ee && !Q || null != E;
+      ey = et || ee && !X || null != E;
     return (0, i.jsxs)(B.MessagePopoutContent, {
       className: z.popoutContent,
       children: [(() => {
         let e = async () => {
           if (U || null == E || ee) return;
-          O();
+          R();
           let e = E.id;
           try {
             await c.default.joinGuild(e), c.default.transitionToGuildSync(e)
@@ -345,7 +345,7 @@ let Z = () => {
                 })
               }), en && (0, i.jsxs)("div", {
                 className: z.nitroTextAndBadge,
-                children: [(0, i.jsx)(A.default, {
+                children: [(0, i.jsx)(N.default, {
                   isSelected: !1
                 }), (0, i.jsx)(d.Text, {
                   className: z.nitroText,
@@ -363,7 +363,7 @@ let Z = () => {
             size: d.Button.Sizes.SMALL,
             fullWidth: !0,
             buttonText: ed.text,
-            onSubscribeModalClose: t => t ? e() : O(),
+            onSubscribeModalClose: t => t ? e() : R(),
             postSuccessGuild: t && null != E ? E : void 0,
             premiumModalAnalyticsLocation: ei
           }) : em ? (0, i.jsx)(d.Button, {
@@ -373,12 +373,12 @@ let Z = () => {
             fullWidth: !0,
             onClick: e,
             children: ed.text
-          }) : void 0, ec && (0, i.jsx)(T.default, {
+          }) : void 0, ec && (0, i.jsx)(_.default, {
             className: z.ctaButton,
             size: d.Button.Sizes.SMALL,
             fullWidth: !0,
             onClick: () => {
-              O(), (null == N ? void 0 : N.id) != null && c.default.transitionToGuildSync(N.id, void 0, K.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [p.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
+              R(), (null == A ? void 0 : A.id) != null && c.default.transitionToGuildSync(A.id, void 0, K.StaticChannelRoute.ROLE_SUBSCRIPTIONS, [p.default.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL])
             },
             children: es ? Y.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_UPGRADE_UPSELL_BUTTON : Y.default.Messages.ROLE_SUBSCRIPTION_EMOJI_POPOUT_PURCHASE_UPSELL_BUTTON
           })]
@@ -393,8 +393,8 @@ let Z = () => {
           children: [(0, i.jsx)(d.FormTitle, {
             className: z.guildTitle,
             children: ee ? Y.default.Messages.EMOJI_POPOUT_JOINED_GUILD_EMOJI_DESCRIPTION : Y.default.Messages.EMOJI_POPOUT_UNJOINED_GUILD_EMOJI_DESCRIPTION
-          }), (0, i.jsx)(q, {
-            expressionSourceGuild: null != E ? E : y.default.createFromGuildRecord(N),
+          }), (0, i.jsx)(Q, {
+            expressionSourceGuild: null != E ? E : y.default.createFromGuildRecord(A),
             hasJoinedExpressionSourceGuild: ee,
             isDisplayingJoinGuildButtonInPopout: em
           }), e && (0, i.jsxs)(i.Fragment, {
@@ -421,7 +421,7 @@ let Z = () => {
               emojiId: u.emojiId,
               expressionSourceGuild: E,
               popoutData: ed,
-              onClose: O,
+              onClose: R,
               hasJoinedEmojiSourceGuild: ee,
               isDisplayingButtonInTopSection: em || eh
             })]

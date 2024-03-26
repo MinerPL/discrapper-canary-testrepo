@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   ButtonAddReaction: function() {
-    return L
+    return v
   }
 }), n("702976"), n("222007");
 var s = n("37983"),
@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("646718"),
   O = n("782340"),
   R = n("159441"),
-  v = n("450076");
-class L extends a.Component {
+  L = n("450076");
+class v extends a.Component {
   render() {
     let {
       type: e,
@@ -48,7 +48,7 @@ class L extends a.Component {
     !_ && u && (T = (0, s.jsx)(E.NitroTooltipLabel, {
       tooltipText: O.default.Messages.ADD_BURST_REACTION
     }));
-    let I = l ? v : R;
+    let I = l ? L : R;
     return (0, s.jsx)(d.Popout, {
       shouldShow: r,
       onRequestClose: this.handleReactionPickerToggle,

@@ -23,8 +23,8 @@ var i = n("37983"),
   g = n("49111"),
   S = n("646718"),
   C = n("782340"),
-  T = n("163448"),
-  _ = n("187971");
+  _ = n("163448"),
+  T = n("187971");
 
 function I(e) {
   var t;
@@ -32,8 +32,8 @@ function I(e) {
     onClose: a,
     closePopout: I,
     sound: v,
-    channel: N
-  } = e, A = (0, d.default)(), [O, R] = l.useState(!1), {
+    channel: A
+  } = e, N = (0, d.default)(), [R, O] = l.useState(!1), {
     location: M
   } = (0, u.useAnalyticsContext)(), k = l.useMemo(() => ({
     ...M,
@@ -42,11 +42,11 @@ function I(e) {
     analyticsLocations: L
   } = (0, f.default)(c.default.PREMIUM_UPSELL), {
     previewSound: P
-  } = (0, E.default)(v, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
+  } = (0, E.default)(v, null !== (t = null == A ? void 0 : A.id) && void 0 !== t ? t : null), b = (0, y.PreviewButton)({
     sound: v,
     previewSound: P,
     tooltipPosition: "left"
-  }), j = (0, r.isThemeLight)(A) ? n("602291") : n("609708");
+  }), j = (0, r.isThemeLight)(N) ? n("602291") : n("609708");
   l.useEffect(() => {
     h.default.track(g.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: S.PremiumUpsellTypes.SOUND_PICKER_SOUND_CLICKED,
@@ -65,36 +65,36 @@ function I(e) {
     }), (0, p.navigateToPremiumMarketingPage)(), I()
   }, [I]);
   return (0, i.jsxs)("div", {
-    className: s(_.premiumPromo, T.container),
+    className: s(T.premiumPromo, _.container),
     children: [(0, i.jsx)(o.Clickable, {
-      className: _.premiumPromoClose,
+      className: T.premiumPromoClose,
       onClick: a,
       children: C.default.Messages.CLOSE
     }), (0, i.jsx)("img", {
       "aria-hidden": !0,
       alt: "",
-      className: s(_.premiumPromoImage, _.premiumPromoImageSmaller, T.image),
+      className: s(T.premiumPromoImage, T.premiumPromoImageSmaller, _.image),
       src: j
     }), (0, i.jsx)(o.Heading, {
       variant: "heading-lg/normal",
       color: "header-primary",
-      className: _.premiumPromoTitle,
+      className: T.premiumPromoTitle,
       children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_TITLE
     }), (0, i.jsx)(o.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: _.premiumPromoDescription,
+      className: T.premiumPromoDescription,
       children: C.default.Messages.SOUNDBOARD_NITRO_UPSELL_BODY.format({
         onClick: U
       })
     }), (0, i.jsxs)("div", {
-      className: T.buttonContainer,
+      className: _.buttonContainer,
       children: [(0, i.jsx)("div", {
-        className: T.previewButtonContainer,
+        className: _.previewButtonContainer,
         children: b
       }), (0, i.jsx)(m.default, {
         subscriptionTier: S.PremiumSubscriptionSKUs.TIER_2,
-        submitting: O,
+        submitting: R,
         premiumModalAnalyticsLocation: {
           section: g.AnalyticsSections.SOUNDBOARD_SOUND_PICKER,
           object: g.AnalyticsObjects.BUTTON_CTA
@@ -102,10 +102,10 @@ function I(e) {
         size: o.Button.Sizes.SMALL,
         color: o.Button.Colors.GREEN,
         onClick: () => {
-          R(!0)
+          O(!0)
         },
         onSubscribeModalClose: e => {
-          R(!1), e && a()
+          O(!1), e && a()
         }
       })]
     })]

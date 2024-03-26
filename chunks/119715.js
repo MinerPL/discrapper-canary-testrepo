@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("380986"),
   O = n("981601"),
   R = n("106435"),
-  v = n("42203"),
-  L = n("26989"),
+  L = n("42203"),
+  v = n("26989"),
   P = n("697218"),
   D = n("79798"),
   x = n("45029"),
@@ -40,8 +40,8 @@ var s = n("37983"),
   b = n("304198"),
   G = n("250375"),
   B = n("49111"),
-  F = n("988268"),
-  k = n("782340"),
+  k = n("988268"),
+  F = n("782340"),
   w = n("950912");
 
 function H() {
@@ -60,7 +60,7 @@ function V(e) {
   switch (a) {
     case A.IS_BACKWARDS_COMPAT_RAID_TYPE:
     case d.AutomodNotificationEmbedTypeKeys.RAID:
-      return (0, s.jsx)(K, {
+      return (0, s.jsx)(W, {
         message: t,
         compact: n
       });
@@ -70,7 +70,7 @@ function V(e) {
         compact: n
       });
     case d.AutomodNotificationEmbedTypeKeys.ACTIVITY_ALERTS_ENABLED:
-      return (0, s.jsx)(W, {
+      return (0, s.jsx)(K, {
         message: t,
         compact: n
       });
@@ -95,23 +95,23 @@ function Y(e) {
       }), (0, s.jsx)(I.Text, {
         variant: "text-md/semibold",
         color: "header-secondary",
-        children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
+        children: F.default.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_TITLE
       })]
     }),
     content: (0, s.jsx)(I.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
+      children: F.default.Messages.GUILD_AUTOMOD_NOTFICATION_UNSUPPORTED_DESCRIPTION
     })
   })
 }
 
-function W(e) {
+function K(e) {
   var t;
   let {
     message: n,
     compact: l
-  } = e, i = P.default.getUser((0, A.getUserIdOfAutomodAction)(n)), r = null === (t = v.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i, d = u ? L.default.getMember(r, i.id) : null, {
+  } = e, i = P.default.getUser((0, A.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i, d = u ? v.default.getMember(r, i.id) : null, {
     avatarSrc: c,
     avatarDecorationSrc: E,
     eventHandlers: _
@@ -130,7 +130,7 @@ function W(e) {
       }), (0, s.jsx)(I.Text, {
         variant: "text-md/semibold",
         color: "text-positive",
-        children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
+        children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_TITLE
       })]
     }),
     subheader: (0, s.jsxs)("div", {
@@ -141,7 +141,7 @@ function W(e) {
           children: [(0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-normal",
-            children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
+            children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_BY_PREFIX
           }), (0, s.jsx)(I.Popout, {
             renderPopout: function(e) {
               return null == i ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(O.default, {
@@ -183,12 +183,12 @@ function W(e) {
     content: (0, s.jsx)(I.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
+      children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_ACTIVITY_ALERTS_ENABLED_DESCRIPTION
     })
   })
 }
 
-function K(e) {
+function W(e) {
   var t;
   let {
     message: l,
@@ -199,9 +199,9 @@ function K(e) {
     dmsSent: T,
     raidType: m,
     resolvedReason: h
-  } = (0, A.extractAutomodNotificationFields)(l), g = (0, E.useStateFromStores)([v.default], () => v.default.getChannel(l.channel_id), [l.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
+  } = (0, A.extractAutomodNotificationFields)(l), g = (0, E.useStateFromStores)([L.default], () => L.default.getChannel(l.channel_id), [l.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
     incidentData: R,
-    shouldShowIncidentActions: L
+    shouldShowIncidentActions: v
   } = (0, N.useGuildIncidentsState)(O), P = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == g ? void 0 : g.guild_id;
     null != e && (0, C.openRaidResolveModal)(l.id, e)
@@ -216,7 +216,7 @@ function K(e) {
       }), (0, s.jsx)(I.Text, {
         variant: "text-md/semibold",
         color: "text-danger",
-        children: j ? k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
+        children: j ? F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_DM_RAID_TITLE : F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_TITLE
       })]
     }),
     subheader: (0, s.jsxs)("div", {
@@ -224,13 +224,13 @@ function K(e) {
       children: [null != r && (0, s.jsx)(I.Text, {
         variant: "text-xs/medium",
         color: "text-normal",
-        children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({
+        children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_JOINS.format({
           joinCount: r
         })
       }), null != T && (0, s.jsx)(I.Text, {
         variant: "text-xs/medium",
         color: "text-normal",
-        children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({
+        children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_DMS.format({
           dmsSent: T
         })
       }), null != d && (0, s.jsxs)(a.Fragment, {
@@ -244,15 +244,15 @@ function K(e) {
     content: null != d ? (0, s.jsx)(I.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
-        dateTime: d.toLocaleString(k.default.getLocale(), S.DATE_CONFIG)
+      children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_RAID_ACTION_DESCRIPTION.format({
+        dateTime: d.toLocaleString(F.default.getLocale(), S.DATE_CONFIG)
       })
     }) : null,
     footerButtons: (0, s.jsxs)("div", {
       className: w.dotSeparatedRow,
       children: [(0, s.jsx)(I.Button, {
         onClick: e => {
-          if (null != O && L) {
+          if (null != O && v) {
             let e = {
               source: p.GuildIncidentActionSources.MESSAGE,
               messageId: l.id,
@@ -276,7 +276,7 @@ function K(e) {
         className: w.buttonStyle,
         children: (0, s.jsx)("div", {
           className: w.footerAction,
-          children: L ? (0, s.jsxs)(s.Fragment, {
+          children: v ? (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(x.default, {
               width: 16,
               height: 16,
@@ -285,7 +285,7 @@ function K(e) {
             }), (0, s.jsx)(I.Text, {
               variant: "text-xs/medium",
               color: "text-link",
-              children: k.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
+              children: F.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION
             })]
           }) : (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(y.default, {
@@ -296,7 +296,7 @@ function K(e) {
             }), (0, s.jsx)(I.Text, {
               variant: "text-xs/medium",
               color: "text-link",
-              children: k.default.Messages.ACTIONS
+              children: F.default.Messages.ACTIONS
             })]
           })
         })
@@ -324,7 +324,7 @@ function z(e) {
   let {
     message: n,
     compact: l
-  } = e, i = null === (t = v.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, {
+  } = e, i = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, {
     raidDatetime: r,
     decisionId: u,
     suspiciousMentionActivityUntil: d
@@ -339,7 +339,7 @@ function z(e) {
       }), (0, s.jsx)(I.Text, {
         variant: "text-md/semibold",
         color: "text-danger",
-        children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_TITLE
+        children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_TITLE
       })]
     }),
     subheader: (0, s.jsx)("div", {
@@ -353,7 +353,7 @@ function z(e) {
     content: (0, s.jsx)(I.Text, {
       variant: "text-md/normal",
       color: "text-muted",
-      children: k.default.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
+      children: F.default.Messages.GUILD_AUTOMOD_NOTIFICATION_MENTION_RAID_DESCRIPTION
     }),
     footerButtons: (0, s.jsxs)("div", {
       className: w.dotSeparatedRow,
@@ -372,7 +372,7 @@ function z(e) {
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: k.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
+            children: F.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_REMOVE_RESTRICTION
           })
         })
       }), (0, s.jsx)(H, {}), (0, s.jsx)(I.Button, {
@@ -388,7 +388,7 @@ function z(e) {
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: k.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
+            children: F.default.Messages.GUILD_AUTOMOD_MENTION_SPAM_NOTICE_CONFIGURE_SETTINGS
           })
         })
       })]
@@ -475,16 +475,16 @@ function Z(e) {
               color: "text-brand",
               tag: "span",
               className: w.username,
-              children: k.default.Messages.GUILD_AUTOMOD_USERNAME
+              children: F.default.Messages.GUILD_AUTOMOD_USERNAME
             }), (0, s.jsx)(D.default, {
-              type: F.BotTagTypes.SYSTEM_DM,
+              type: k.BotTagTypes.SYSTEM_DM,
               className: w.systemTag
             }), E && (0, s.jsx)(I.Text, {
               variant: "text-md/normal",
               color: "header-primary",
               tag: "span",
               className: w.spanCorrection,
-              children: k.default.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
+              children: F.default.Messages.GUILD_AUTOMOD_NOTFICATION_ALERT_TITLE
             })]
           }),
           compact: n,

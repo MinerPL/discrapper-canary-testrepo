@@ -52,10 +52,10 @@ n.r(t), n.d(t, {
     return v
   },
   isDismissible: function() {
-    return N
+    return A
   },
   isDismissed: function() {
-    return A
+    return N
   },
   includesTarget: function() {
     return R
@@ -204,12 +204,12 @@ function v(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   return Object.keys(s.DismissibleQuestContentFlags).includes(a.QuestContent[e])
 }
 
-function A(e, t) {
-  if (!N(t)) return !1;
+function N(e, t) {
+  if (!A(t)) return !1;
   let n = a.QuestContent[t];
   return (0, i.hasFlag)(e.dismissedQuestContent, s.DismissibleQuestContentFlags[n])
 }

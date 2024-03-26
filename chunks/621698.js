@@ -35,20 +35,20 @@ let I = a.memo(function(e) {
         type: O
       } = e,
       R = O === E.ReactionTypes.BURST,
-      v = (0, f.isMeReaction)(N, p, O),
-      L = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
+      L = (0, f.isMeReaction)(N, p, O),
+      v = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
       P = a ? T : _,
       D = R ? S : m,
       x = (0, c.getMinCounterWidth)(D, f.REACTION_MIN_WIDTH_DIGITS),
       y = {};
-    if (R && null != L) {
+    if (R && null != v) {
       var U;
       let {
         accentColor: e,
         backgroundColor: s,
         opacity: a
-      } = L, l = null !== (U = (0, r.hex2rgb)(null != s ? s : "", a)) && void 0 !== U ? U : "";
-      v && (y.borderColor = s), y.background = l, t = e, n = e
+      } = v, l = null !== (U = (0, r.hex2rgb)(null != s ? s : "", a)) && void 0 !== U ? U : "";
+      L && (y.borderColor = s), y.background = l, t = e, n = e
     }
     let j = {
       minWidth: x,
@@ -57,7 +57,7 @@ let I = a.memo(function(e) {
     };
     return (0, s.jsxs)("div", {
       className: i(P.reaction, P.reactionInner, I, {
-        [P.reactionMe]: v,
+        [P.reactionMe]: L,
         [P.reactionReadOnly]: C && !h && !M && !g
       }),
       style: y,

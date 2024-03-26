@@ -35,8 +35,8 @@ let R = Object.freeze({
     [g.LibraryApplicationActions.MOVE_UP]: "queued",
     [g.LibraryApplicationActions.RESUME]: "paused"
   }),
-  v = () => [M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
-class L extends i.Component {
+  L = () => [M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_1, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_2, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_3, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_4, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_5, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_6, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_7, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_8, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_9, M.default.Messages.GAME_ACTION_BUTTON_UNINSTALLING_10];
+class v extends i.Component {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -55,7 +55,7 @@ class L extends i.Component {
       case "locate":
         return M.default.Messages.GAME_ACTION_BUTTON_LOCATE;
       case "uninstalling":
-        let t = v();
+        let t = L();
         return null == this._uninstallStringIndex && (this._uninstallStringIndex = Math.floor(Math.random() * t.length)), t[this._uninstallStringIndex];
       case "queued":
         return M.default.Messages.GAME_ACTION_BUTTON_QUEUED;
@@ -227,7 +227,7 @@ function P(e) {
   let {
     libraryApplication: t
   } = e, n = (0, c.useAnalyticsContext)(), [s, a] = (0, r.useStateFromStoresArray)([m.default, N.default], () => [(0, T.getDefaultLibraryApplicationAction)(t, m.default, N.default), m.default.getState(t.id, t.branchId)], [t]), i = (0, r.useStateFromStores)([I.default], () => I.default.isSyncing(t.id, t.branchId), [t]), o = (0, r.useStateFromStores)([_.default], () => _.default.hasNoBuild(t.id, t.branchId), [t]);
-  return (0, l.jsx)(L, {
+  return (0, l.jsx)(v, {
     ...e,
     analyticsContext: n,
     actionState: s,
@@ -236,10 +236,10 @@ function P(e) {
     hasNoBuild: o
   })
 }
-L.defaultProps = {
+v.defaultProps = {
   fullWidth: !1,
   size: u.Button.Sizes.LARGE,
   hideProgress: !1,
   isPlayShiny: !1,
   tooltipPosition: "top"
-}, L.ButtonStates = s
+}, v.ButtonStates = s

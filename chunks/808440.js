@@ -35,23 +35,23 @@ function R(e) {
     author: n,
     getAcceptInviteContext: R
   } = e, {
-    invite: v,
-    inviteError: L
+    invite: L,
+    inviteError: v
   } = (0, l.useStateFromStoresObject)([I.default], () => ({
     invite: I.default.getInvite(t),
     inviteError: I.default.getInviteError(t)
   }), [t]);
   a.useEffect(() => {
-    null == v && i.default.resolveInvite(t)
+    null == L && i.default.resolveInvite(t)
   }, [t]);
-  let P = null != v ? v : {
+  let P = null != L ? L : {
       state: O.InviteStates.RESOLVING,
       code: ""
     },
     {
       analyticsLocations: D
     } = (0, o.default)(),
-    x = (0, l.useStateFromStores)([T.default], () => (null == v ? void 0 : v.guild) != null ? T.default.getGuild(v.guild.id) : null, [v]),
+    x = (0, l.useStateFromStores)([T.default], () => (null == L ? void 0 : L.guild) != null ? T.default.getGuild(L.guild.id) : null, [L]),
     y = (0, l.useStateFromStores)([_.default], () => _.default.getId()),
     U = (0, l.useStateFromStores)([u.default], () => {
       var e;
@@ -97,7 +97,7 @@ function R(e) {
     case O.InviteStates.ERROR:
       G = (0, s.jsx)(N.default, {
         author: n,
-        inviteError: L
+        inviteError: v
       });
       break;
     default:

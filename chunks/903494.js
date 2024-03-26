@@ -11,8 +11,8 @@ var r = n("422244"),
   i = n("54239"),
   l = n("812204"),
   u = n("685665"),
-  c = n("393414"),
-  o = n("21526"),
+  o = n("393414"),
+  c = n("21526"),
   d = n("49111"),
   m = n("782340"),
   f = n("24171"),
@@ -22,7 +22,7 @@ var r = n("422244"),
     } = e, {
       analyticsLocations: n
     } = (0, u.default)(), p = () => {
-      t(), (0, c.transitionTo)(d.Routes.COLLECTIBLES_SHOP), (0, o.openCollectiblesShop)({
+      t(), (0, o.transitionTo)(d.Routes.COLLECTIBLES_SHOP), (0, c.openCollectiblesShop)({
         openInLayer: !1,
         analyticsSource: l.default.PREMIUM_PAYMENT_MODAL,
         analyticsLocations: n

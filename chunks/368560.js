@@ -1,50 +1,50 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return r
+    return l
   }
 });
-var l = a("37983");
+var r = a("37983");
 a("884691");
 var s = a("232482");
 
-function r() {
-  return (0, l.jsxs)("div", {
+function l() {
+  return (0, r.jsxs)("div", {
     className: s.snowflakes,
-    children: [(0, l.jsx)("div", {
+    children: [(0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
-    }), (0, l.jsx)("div", {
+    }), (0, r.jsx)("div", {
       className: s.snowflake,
       children: "❅"
     })]

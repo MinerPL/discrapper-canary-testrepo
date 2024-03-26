@@ -34,31 +34,31 @@ var g = s.forwardRef(function(e, t) {
     handleEditModal: g,
     keyboardModeEnabled: S,
     onKeyDown: C,
-    draftType: T,
-    size: _ = 1
+    draftType: _,
+    size: T = 1
   } = e, {
     onFocus: I,
     ...v
   } = (0, u.useListItem)(n), {
-    handleFocus: N,
-    handleBlur: A
-  } = (0, m.useFocusInside)(I), O = 0 === _, R = null != r;
+    handleFocus: A,
+    handleBlur: N
+  } = (0, m.useFocusInside)(I), R = 0 === T, O = null != r;
   return (0, a.jsx)(d.FocusRing, {
     children: (0, a.jsx)("li", {
       ...v,
-      onFocus: N,
-      onBlur: A,
+      onFocus: A,
+      onBlur: N,
       onKeyDown: e => {
         if (S) {
           switch (e.which) {
             case h.KeyboardKeys.D:
-              e.preventDefault(), c.default.remove(i, n, T);
+              e.preventDefault(), c.default.remove(i, n, _);
               return;
             case h.KeyboardKeys.E:
               null != g && (e.preventDefault(), g(e));
               return;
             case h.KeyboardKeys.BACKSPACE:
-              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(i, T)) : (e.preventDefault(), c.default.remove(i, n, T));
+              e.ctrlKey ? (e.preventDefault(), c.default.clearAll(i, _)) : (e.preventDefault(), c.default.remove(i, n, _));
               return;
             case h.KeyboardKeys.ARROW_UP:
               let t = e.shiftKey || e.altKey || e.ctrlKey || e.metaKey;
@@ -71,22 +71,22 @@ var g = s.forwardRef(function(e, t) {
         }
       },
       className: o(E.upload, l, {
-        [E.sizeClip]: 2 === _
+        [E.sizeClip]: 2 === T
       }),
       ref: t,
       children: (0, a.jsxs)("div", {
         className: E.uploadContainer,
-        children: [s, R ? (0, a.jsx)("div", {
+        children: [s, O ? (0, a.jsx)("div", {
           className: E.actionBarContainer,
           children: (0, a.jsx)("div", {
             className: o(E.actionBar, {
-              [E.smallActionBar]: O
+              [E.smallActionBar]: R
             }),
             onContextMenu: y,
             "aria-label": x.default.Messages.ATTACHMENT_UTILITIES,
             children: (0, a.jsx)(f.default, {
               className: o({
-                [E.miniPopover]: O
+                [E.miniPopover]: R
               }),
               children: r
             })

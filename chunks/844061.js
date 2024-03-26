@@ -29,8 +29,8 @@ var s = n("37983"),
   M = n("244480"),
   O = n("488464"),
   R = n("808422"),
-  v = n("120252"),
-  L = n("967241"),
+  L = n("120252"),
+  v = n("967241"),
   P = n("936436"),
   D = n("271938"),
   x = n("950104"),
@@ -40,14 +40,14 @@ var s = n("37983"),
   b = n("824563"),
   G = n("18494"),
   B = n("697218"),
-  F = n("800762"),
-  k = n("277174"),
+  k = n("800762"),
+  F = n("277174"),
   w = n("497880"),
   H = n("944662"),
   V = n("748880"),
   Y = n("888393"),
-  W = n("548703"),
-  K = n("859316"),
+  K = n("548703"),
+  W = n("859316"),
   z = n("427655"),
   Q = n("161225"),
   Z = n("41163"),
@@ -213,7 +213,7 @@ let eM = Object.freeze({
     } = e, {
       id: r,
       author: o
-    } = t, d = D.default.getId(), c = t.getChannelId(), E = (0, l.useStateFromStores)([x.default], () => x.default.isCallActive(c, r), [c, r]), f = (0, l.useStateFromStores)([F.default], () => F.default.getVoiceState(ep.ME, d)), _ = !E && null != t.call && !t.call.participants.includes(d), T = E && (null == f || f.channelId !== c), I = a.useCallback(() => u.default.selectVoiceChannel(c), [c]), m = (0, eN.useUsernameHook)({
+    } = t, d = D.default.getId(), c = t.getChannelId(), E = (0, l.useStateFromStores)([x.default], () => x.default.isCallActive(c, r), [c, r]), f = (0, l.useStateFromStores)([k.default], () => k.default.getVoiceState(ep.ME, d)), _ = !E && null != t.call && !t.call.participants.includes(d), T = E && (null == f || f.channelId !== c), I = a.useCallback(() => u.default.selectVoiceChannel(c), [c]), m = (0, eN.useUsernameHook)({
       user: o,
       channelId: c,
       guildId: i.guild_id,
@@ -241,7 +241,7 @@ let eM = Object.freeze({
       guildId: a.guild_id,
       messageId: t.id
     });
-    return (0, s.jsx)(K.default, {
+    return (0, s.jsx)(W.default, {
       compact: n,
       message: t,
       usernameHook: r,
@@ -261,7 +261,7 @@ let eM = Object.freeze({
       guildId: a.guild_id,
       messageId: t.id
     });
-    return (0, s.jsx)(W.default, {
+    return (0, s.jsx)(K.default, {
       compact: n,
       message: t,
       usernameHook: r
@@ -403,9 +403,9 @@ let eM = Object.freeze({
       var n;
       let s = null === (n = t.messageReference) || void 0 === n ? void 0 : n.channel_id;
       if (null != s) {
-        await v.default.loadThread(s);
+        await L.default.loadThread(s);
         let t = y.default.getChannel(s);
-        null != t && (0, L.openThreadSidebarForViewing)(t, e.shiftKey)
+        null != t && (0, v.openThreadSidebarForViewing)(t, e.shiftKey)
       }
     }, [t]), c = a.useCallback(() => {
       (0, i.openModalLazy)(async () => {
@@ -601,7 +601,7 @@ let eM = Object.freeze({
         onClick: () => {
           (0, M.setUserSuppress)(r, a.author.id, !1), o.default.deleteMessage(r.id, a.id, !0)
         },
-        children: [(0, s.jsx)(k.default, {
+        children: [(0, s.jsx)(F.default, {
           height: 20,
           width: 20
         }), eA.default.Messages.REQUEST_TO_SPEAK_ACCEPT]

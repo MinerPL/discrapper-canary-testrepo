@@ -1,37 +1,37 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   subscribeMembers: function() {
-    return i
+    return l
   },
   unsubscribeMembers: function() {
-    return r
+    return u
   },
   subscribeToMemberUpdates: function() {
     return o
   },
   unsubscribeFromMemberUpdates: function() {
-    return a
+    return s
   },
   subscribeChannel: function() {
-    return s
+    return a
   },
   subscribeChannelDimensions: function() {
     return d
   }
-}), n("424973");
-var l = n("913144"),
-  u = n("696605");
+}), i("424973");
+var n = i("913144"),
+  r = i("696605");
 
-function i(e, t) {
-  l.default.dispatch({
+function l(e, t) {
+  n.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD",
     guildId: e,
     userIds: t
   })
 }
 
-function r(e, t) {
-  l.default.dispatch({
+function u(e, t) {
+  n.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE",
     guildId: e,
     userIds: t
@@ -39,50 +39,50 @@ function r(e, t) {
 }
 
 function o(e) {
-  l.default.dispatch({
+  n.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES",
     guildId: e
   })
 }
 
-function a(e) {
-  l.default.dispatch({
+function s(e) {
+  n.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES",
     guildId: e
   })
 }
 
-function s(e, t, n) {
-  l.default.dispatch({
+function a(e, t, i) {
+  n.default.dispatch({
     type: "GUILD_SUBSCRIPTIONS_CHANNEL",
     guildId: e,
     channelId: t,
-    ranges: n
+    ranges: i
   })
 }
 
 function d(e) {
   let {
     guildId: t,
-    channelId: n,
-    y: l,
-    height: i,
-    rowHeight: r
+    channelId: i,
+    y: n,
+    height: l,
+    rowHeight: u
   } = e;
 
   function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return Math.max(0, Math.ceil(Math.ceil(e / r)) + t)
+    return Math.max(0, Math.ceil(Math.ceil(e / u)) + t)
   }
-  let a = [];
+  let s = [];
 
   function d(e) {
-    let t = e + (u.MINIMUM_RANGE - 1);
-    return a.push([e, t]), t + 1
+    let t = e + (r.MINIMUM_RANGE - 1);
+    return s.push([e, t]), t + 1
   }
-  let c = o(.5 * i),
-    f = o(l, -c),
-    E = o(l + i, c);
-  for (f > 0 && (f = Math.max(d(0), f)), f = Math.floor(f / u.MINIMUM_RANGE) * u.MINIMUM_RANGE; f <= E;) f = d(f);
-  s(t, n, a)
+  let f = o(.5 * l),
+    c = o(n, -f),
+    h = o(n + l, f);
+  for (c > 0 && (c = Math.max(d(0), c)), c = Math.floor(c / r.MINIMUM_RANGE) * r.MINIMUM_RANGE; c <= h;) c = d(c);
+  a(t, i, s)
 }

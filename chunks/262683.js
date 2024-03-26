@@ -10,8 +10,8 @@ var s = n("627445"),
   i = n("917247"),
   l = n("724522"),
   u = n("599110"),
-  c = n("635357"),
-  o = n("642906"),
+  o = n("635357"),
+  c = n("642906"),
   d = n("85336"),
   m = n("49111"),
   f = n("646718");
@@ -23,30 +23,30 @@ function p(e) {
     breadcrumbSteps: s,
     handleStepChange: p,
     referralTrialOfferId: _,
-    onReturn: I
+    onReturn: S
   } = e, {
-    contextMetadata: S,
+    contextMetadata: I,
     step: E,
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
-    purchaseError: A,
-    setPurchaseError: C,
+    purchaseError: C,
+    setPurchaseError: A,
     purchaseErrorBlockRef: h,
     paymentAuthenticationState: v,
     selectedSkuId: g
-  } = (0, o.usePaymentContext)(), {
+  } = (0, c.usePaymentContext)(), {
     isGift: x
-  } = (0, c.useGiftContext)(), y = {
+  } = (0, o.useGiftContext)(), y = {
     ...(0, l.useSharedPaymentModal)(),
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
-    purchaseError: A,
-    setPurchaseError: C,
+    purchaseError: C,
+    setPurchaseError: A,
     purchaseErrorBlockRef: h,
     paymentAuthenticationState: v
-  }, O = (0, i.usePremiumTrialOffer)(_), M = !x && null != O && null != g && (0, f.SubscriptionTrials)[O.trial_id].skus.includes(g), R = null != I ? I : () => {
+  }, O = (0, i.usePremiumTrialOffer)(_), M = !x && null != O && null != g && (0, f.SubscriptionTrials)[O.trial_id].skus.includes(g), R = null != S ? S : () => {
     let e = Object.values(P).length < 1 && null == n ? d.Step.PLAN_SELECT : d.Step.REVIEW;
     p(e, {
       trackedFromStep: d.Step.PAYMENT_TYPE
@@ -78,7 +78,7 @@ function p(e) {
         from_step: n,
         to_step: s,
         step_duration_ms: r - L,
-        flow_duration_ms: r - S.startTime
+        flow_duration_ms: r - I.startTime
       })
     },
     isEligibleForTrial: M

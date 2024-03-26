@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return C
   },
   trackUserProfileActivityJoined: function() {
-    return T
+    return _
   },
   trackUserProfileBadgePressed: function() {
-    return _
+    return T
   }
 }), n("424973");
 var i = n("716241"),
@@ -122,7 +122,7 @@ let x = e => {
       source_role_id: s
     })
   },
-  T = e => {
+  _ = e => {
     let {
       userId: t,
       guildId: n,
@@ -148,7 +148,7 @@ let x = e => {
       voice_channel_id: d
     })
   },
-  _ = e => {
+  T = e => {
     let {
       userId: t,
       guildId: n,
