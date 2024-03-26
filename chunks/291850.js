@@ -22,8 +22,8 @@ var s = n("37983"),
   h = n("49671"),
   g = n("524824"),
   m = n("21572"),
-  T = n("791160"),
-  p = n("434824"),
+  p = n("791160"),
+  T = n("434824"),
   I = n("24287"),
   A = n("382236"),
   S = n("770032"),
@@ -37,8 +37,8 @@ var s = n("37983"),
   D = n("271938"),
   x = n("72177"),
   U = n("476108"),
-  y = n("145131"),
-  b = n("124969"),
+  b = n("145131"),
+  y = n("124969"),
   P = n("980428"),
   G = n("599110"),
   F = n("659500"),
@@ -54,7 +54,7 @@ var s = n("37983"),
   z = n("890957");
 
 function q() {
-  return (0, s.jsx)(b.default, {
+  return (0, s.jsx)(y.default, {
     children: (0, s.jsx)(c.Spinner, {})
   })
 }
@@ -80,7 +80,7 @@ class Z extends a.PureComponent {
       location: null != s ? "Invite Login Page" : "Non-Invite Login Page",
       login_source: this.loginSource,
       authenticated: t,
-      ...null != n ? (0, T.default)(n, !1, !1) : {}
+      ...null != n ? (0, p.default)(n, !1, !1) : {}
     }, {
       flush: !0
     }), null == h.default && this.props.hasPasswordlessExperiment && window.PublicKeyCredential && PublicKeyCredential.isConditionalMediationAvailable && PublicKeyCredential.isConditionalMediationAvailable().then(e => {
@@ -174,12 +174,12 @@ class Z extends a.PureComponent {
     let {
       authBoxClassName: e
     } = this.props;
-    return (0, s.jsxs)(b.default, {
+    return (0, s.jsxs)(y.default, {
       className: e,
-      children: [(0, s.jsx)(b.AuthSpinner, {}), (0, s.jsx)(b.Title, {
+      children: [(0, s.jsx)(y.AuthSpinner, {}), (0, s.jsx)(y.Title, {
         className: z.marginBottom8,
         children: W.default.Messages.BROWSER_HANDOFF_DETECTING_TITLE
-      }), (0, s.jsx)(b.SubTitle, {
+      }), (0, s.jsx)(y.SubTitle, {
         children: W.default.Messages.AUTH_BROWSER_HANDOFF_DETECTING_DESCRIPTION
       })]
     })
@@ -190,30 +190,30 @@ class Z extends a.PureComponent {
       transitionTo: t,
       authBoxClassName: n
     } = this.props;
-    return null == e ? null : (0, s.jsxs)(b.default, {
+    return null == e ? null : (0, s.jsxs)(y.default, {
       className: n,
-      children: [(0, s.jsx)(b.Avatar, {
+      children: [(0, s.jsx)(y.Avatar, {
         src: e.getAvatarURL(void 0, 100),
         size: c.AvatarSizes.DEPRECATED_SIZE_100,
         className: z.marginBottom20
-      }), (0, s.jsx)(b.Title, {
+      }), (0, s.jsx)(y.Title, {
         className: z.marginBottom8,
         children: W.default.Messages.BROWSER_HANDOFF_SUCCESS_TITLE.format({
           name: e.toString()
         })
-      }), (0, s.jsx)(b.SubTitle, {
+      }), (0, s.jsx)(y.SubTitle, {
         className: z.marginBottom40,
         children: W.default.Messages._BROWSER_HANDOFF_SUCCESS_BODY
-      }), (0, s.jsxs)(b.Block, {
-        children: [(0, s.jsx)(b.Button, {
+      }), (0, s.jsxs)(y.Block, {
+        children: [(0, s.jsx)(y.Button, {
           onClick: () => t(V.Routes.APP),
           className: z.marginBottom8,
           children: W.default.Messages.BROWSER_HANDOFF_SUCCESS_ACTION.format({
             name: e.toString()
           })
-        }), (0, s.jsx)(b.Button, {
-          look: b.Button.Looks.LINK,
-          color: b.Button.Colors.LINK,
+        }), (0, s.jsx)(y.Button, {
+          look: y.Button.Looks.LINK,
+          color: y.Button.Colors.LINK,
           onClick: this.handleReset,
           children: W.default.Messages.BROWSER_HANDOFF_SUCCESS_CANCEL
         })]
@@ -224,21 +224,21 @@ class Z extends a.PureComponent {
     let {
       authBoxClassName: e
     } = this.props, t = this.props.loginStatus === V.LoginStates.ACCOUNT_DISABLED, n = t ? W.default.Messages.ACCOUNT_DISABLED_TITLE : W.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_TITLE, a = t ? W.default.Messages.ACCOUNT_DISABLED_DESCRIPTION : W.default.Messages.ACCOUNT_SCHEDULED_FOR_DELETION_DESCRIPTION;
-    return (0, s.jsx)(b.default, {
+    return (0, s.jsx)(y.default, {
       tag: "form",
       onSubmit: this.handleReset,
       className: e,
       children: (0, s.jsxs)(c.HeadingLevel, {
-        component: (0, s.jsx)(b.Title, {
+        component: (0, s.jsx)(y.Title, {
           className: z.marginBottom8,
           children: n
         }),
-        children: [(0, s.jsx)(b.SubTitle, {
+        children: [(0, s.jsx)(y.SubTitle, {
           className: z.marginBottom20,
           children: a
-        }), (0, s.jsxs)(b.Block, {
-          children: [(0, s.jsx)(b.Button, {
-            color: b.Button.Colors.BRAND,
+        }), (0, s.jsxs)(y.Block, {
+          children: [(0, s.jsx)(y.Button, {
+            color: y.Button.Colors.BRAND,
             type: "submit",
             children: W.default.Messages._RETURN_TO_LOGIN
           }), (0, s.jsx)("div", {
@@ -256,9 +256,9 @@ class Z extends a.PureComponent {
       authBoxClassName: e,
       country: t
     } = this.props;
-    return (0, s.jsxs)(b.default, {
+    return (0, s.jsxs)(y.default, {
       className: e,
-      children: [(0, s.jsx)(w.InviteResolvingHeader, {}), (0, s.jsxs)(b.Block, {
+      children: [(0, s.jsx)(w.InviteResolvingHeader, {}), (0, s.jsxs)(y.Block, {
         className: z.marginTop20,
         children: [(0, s.jsx)(O.default, {
           className: z.marginBottom20,
@@ -277,7 +277,7 @@ class Z extends a.PureComponent {
           value: this.state.login,
           autoFocus: !0,
           required: !0
-        }), (0, s.jsx)(b.Input, {
+        }), (0, s.jsx)(y.Input, {
           className: z.marginBottom20,
           label: W.default.Messages.FORM_LABEL_PASSWORD,
           onChange: e => this.setState({
@@ -289,21 +289,21 @@ class Z extends a.PureComponent {
           spellCheck: "false",
           value: this.state.password,
           required: !0
-        }), (0, s.jsx)(b.Button, {
+        }), (0, s.jsx)(y.Button, {
           className: z.marginBottom8,
           type: "submit",
           disabled: !0,
           children: W.default.Messages._LOGIN
-        }), (0, s.jsx)(b.Button, {
+        }), (0, s.jsx)(y.Button, {
           disabled: !0,
-          look: b.Button.Looks.LINK,
-          color: b.Button.Colors.LINK,
+          look: y.Button.Looks.LINK,
+          color: y.Button.Colors.LINK,
           children: W.default.Messages.FORGOT_PASSWORD
-        }), (0, s.jsx)(b.Button, {
+        }), (0, s.jsx)(y.Button, {
           disabled: !0,
           className: z.marginTop4,
-          look: b.Button.Looks.LINK,
-          color: b.Button.Colors.LINK,
+          look: y.Button.Looks.LINK,
+          color: y.Button.Colors.LINK,
           children: W.default.Messages.NEED_ACCOUNT
         })]
       })]
@@ -324,28 +324,28 @@ class Z extends a.PureComponent {
       giftCode: r
     }) : (0, s.jsxs)("div", {
       className: K.header,
-      children: [(0, s.jsx)(b.Title, {
+      children: [(0, s.jsx)(y.Title, {
         className: z.marginBottom8,
         children: W.default.Messages.LOGIN_TITLE
-      }, "title"), !1 === (0, B.isAndroidWeb)() ? (0, s.jsx)(b.SubTitle, {
+      }, "title"), !1 === (0, B.isAndroidWeb)() ? (0, s.jsx)(y.SubTitle, {
         children: W.default.Messages.AUTH_LOGIN_BODY
       }, "subtitle") : null]
     }) : (0, s.jsx)(w.default, {
       invite: a
-    }), (0, s.jsxs)(y.default, {
-      direction: y.default.Direction.HORIZONTAL,
-      align: y.default.Align.CENTER,
+    }), (0, s.jsxs)(b.default, {
+      direction: b.default.Direction.HORIZONTAL,
+      align: b.default.Align.CENTER,
       children: [(0, s.jsxs)("div", {
         className: K.mainLoginContainer,
-        children: [this.canShowChooseAccount && this.state.dismissedChooseAccount && (0, s.jsx)(b.Button, {
+        children: [this.canShowChooseAccount && this.state.dismissedChooseAccount && (0, s.jsx)(y.Button, {
           onClick: () => {
             this.setState(e => ({
               ...e,
               dismissedChooseAccount: !1
             }))
           },
-          look: b.Button.Looks.LINK,
-          color: b.Button.Colors.PRIMARY,
+          look: y.Button.Looks.LINK,
+          color: y.Button.Colors.PRIMARY,
           className: K.goBackButton,
           children: (0, s.jsxs)("div", {
             className: K.content,
@@ -359,7 +359,7 @@ class Z extends a.PureComponent {
             })]
           })
         }), n, (0, s.jsx)(c.HeadingLevel, {
-          children: (0, s.jsxs)(b.Block, {
+          children: (0, s.jsxs)(y.Block, {
             className: z.marginTop20,
             children: [(0, s.jsx)(O.default, {
               alpha2: o.alpha2,
@@ -379,7 +379,7 @@ class Z extends a.PureComponent {
               value: this.state.login,
               autoFocus: !E && !u && !d,
               required: !0
-            }), (0, s.jsx)(b.Input, {
+            }), (0, s.jsx)(y.Input, {
               label: W.default.Messages.FORM_LABEL_PASSWORD,
               error: this.renderError("password"),
               onChange: e => this.setState({
@@ -393,16 +393,16 @@ class Z extends a.PureComponent {
               autoFocus: E && !u && !d,
               value: this.state.password,
               required: !0
-            }), (0, s.jsx)(b.Button, {
+            }), (0, s.jsx)(y.Button, {
               onClick: this.handleForgotPassword,
-              look: b.Button.Looks.LINK,
-              color: b.Button.Colors.LINK,
+              look: y.Button.Looks.LINK,
+              color: y.Button.Colors.LINK,
               className: i(z.marginBottom20, z.marginTop4),
               children: W.default.Messages.FORGOT_PASSWORD
-            }), (0, s.jsx)(b.Button, {
+            }), (0, s.jsx)(y.Button, {
               type: "submit",
               submitting: l === V.LoginStates.LOGGING_IN,
-              color: f ? b.Button.Colors.GREEN : b.Button.Colors.BRAND,
+              color: f ? y.Button.Colors.GREEN : y.Button.Colors.BRAND,
               className: z.marginBottom8,
               children: f ? W.default.Messages._LOGIN_STAGE : W.default.Messages._LOGIN
             }), (0, s.jsxs)("div", {
@@ -410,10 +410,10 @@ class Z extends a.PureComponent {
               children: [(0, s.jsx)("span", {
                 className: K.needAccount,
                 children: W.default.Messages.NEED_ACCOUNT
-              }), (0, s.jsx)(b.Button, {
+              }), (0, s.jsx)(y.Button, {
                 onClick: this.handleGotoRegister,
-                look: b.Button.Looks.LINK,
-                color: b.Button.Colors.LINK,
+                look: y.Button.Looks.LINK,
+                color: y.Button.Colors.LINK,
                 className: K.smallRegisterLink,
                 children: W.default.Messages.REGISTER
               })]
@@ -422,7 +422,9 @@ class Z extends a.PureComponent {
         })]
       }), (0, s.jsx)(c.HeadingLevel, {
         children: e ? (0, s.jsx)(k.default, {
-          authTokenCallback: this.handleAuthToken
+          authTokenCallback: this.handleAuthToken,
+          hasPasswordlessExperiment: this.props.hasPasswordlessExperiment,
+          conditionalMediationAbortController: this.state.conditionalMediationAbortController
         }) : null
       })]
     }, "form-wrapper")
@@ -434,7 +436,7 @@ class Z extends a.PureComponent {
     } = this.props;
     return (0, s.jsxs)("div", {
       className: K.pageContainer,
-      children: [(0, s.jsx)(b.default, {
+      children: [(0, s.jsx)(y.default, {
         onSubmit: this.handleLogin,
         tag: "form",
         className: e,
@@ -448,7 +450,7 @@ class Z extends a.PureComponent {
       onSubmit: this.handleLogin,
       tag: "form",
       className: i(this.props.authBoxClassName, K.horizontalAuthBox),
-      children: () => [(0, s.jsx)(p.default, {
+      children: () => [(0, s.jsx)(T.default, {
         guildTemplate: e
       }, "template"), this.renderDefaultForm(!1)]
     })
@@ -458,7 +460,7 @@ class Z extends a.PureComponent {
       ticket: this.props.mfaTicket,
       methods: this.props.mfaMethods
     };
-    return (0, s.jsx)(b.default, {
+    return (0, s.jsx)(y.default, {
       style: {
         padding: 0
       },
@@ -480,7 +482,7 @@ class Z extends a.PureComponent {
     } = this.props, {
       phoneVerifyError: t
     } = this.state;
-    return (0, s.jsx)(b.default, {
+    return (0, s.jsx)(y.default, {
       tag: "form",
       className: e,
       children: (0, s.jsx)(m.default, {
@@ -500,7 +502,7 @@ class Z extends a.PureComponent {
     } = this.props, {
       phoneVerifyError: t
     } = this.state;
-    return (0, s.jsx)(b.default, {
+    return (0, s.jsx)(y.default, {
       tag: "form",
       className: e,
       children: (0, s.jsx)(m.default, {
@@ -669,7 +671,7 @@ class Z extends a.PureComponent {
         F.ComponentDispatch.dispatch(V.ComponentActions.WAVE_EMPHASIZE), await f.default.forgotPassword(t), (0, c.openModal)(e => (0, s.jsx)(c.ConfirmModal, {
           header: W.default.Messages.EMAIL_VERIFICATION_INSTRUCTIONS_HEADER,
           confirmText: W.default.Messages.OKAY,
-          confirmButtonColor: b.Button.Colors.BRAND,
+          confirmButtonColor: y.Button.Colors.BRAND,
           className: u.isMobile ? K.mobile : "",
           ...e,
           children: (0, s.jsx)(c.Text, {
