@@ -4,6 +4,7 @@ e.exports = {
   benefitsBenefit: "benefitsBenefit__78143",
   benefitsContainer: "benefitsContainer__356cd",
   benefitsList: "benefitsList_ee3831",
+  benefitsSummary: "benefitsSummary__05ead",
   body: "body__1e5ed",
   card: "card__3135c",
   cardBenefit: "cardBenefit__5c2e7",
@@ -12,5 +13,6 @@ e.exports = {
   container: "container_a98e7e",
   description: "description__6afbb",
   image: "image__2e834",
-  purchaseBtn: "purchaseBtn_e85930"
+  purchaseBtn: "purchaseBtn_e85930",
+  short: "short__40ab3"
 }

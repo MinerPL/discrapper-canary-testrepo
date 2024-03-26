@@ -28,11 +28,12 @@ function h(e) {
     subscriptionType: m,
     title: x,
     onDetails: v,
-    benefitItems: p
+    benefitItems: p,
+    benefitsSummary: g
   } = e;
   return (0, s.jsx)(r.FocusRing, {
     children: (0, s.jsxs)("div", {
-      className: l(u.container, f.hoverCard),
+      className: l(u.container, f.hoverCard, null != g ? u.short : void 0),
       tabIndex: 0,
       onClick: () => {
         null != v ? v() : null != h && h()
@@ -69,6 +70,15 @@ function h(e) {
             children: t
           })]
         })]
+      }), null != g && (0, s.jsx)("div", {
+        className: u.benefitsSummary,
+        children: (0, s.jsx)(o.Text, {
+          color: "interactive-normal",
+          variant: "text-sm/medium",
+          children: d.default.Messages.Storefront.BENEFITS_SUMMARY.format({
+            count: g
+          })
+        })
       }), null != p && (0, s.jsx)("div", {
         className: u.benefits,
         children: (0, s.jsx)("div", {
