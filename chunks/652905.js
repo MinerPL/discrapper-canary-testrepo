@@ -24,7 +24,8 @@ let E = (e, t, n) => {
       i = e.extra.media_title,
       r = a.plainFormat({
         mediaTitle: i,
-        userName: s
+        userName: s,
+        episodeDescription: e.extra.media_assets_large_text
       });
     return r.replaceAll("*", "")
   },
@@ -34,7 +35,8 @@ let E = (e, t, n) => {
       i = e.extra.media_title;
     return a.format({
       userName: s,
-      mediaTitle: i
+      mediaTitle: i,
+      episodeDescription: e.extra.media_assets_large_text
     })
   },
   S = (e, t) => m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({

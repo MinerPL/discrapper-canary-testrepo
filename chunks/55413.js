@@ -28,31 +28,32 @@ let h = e => {
   }
 };
 var m = l.memo(e => {
+  var t;
   let {
-    entry: t,
-    channel: n,
-    selected: l
+    entry: n,
+    channel: l,
+    selected: s
   } = e, {
-    mediaImageSrc: s
-  } = h(t);
+    mediaImageSrc: i
+  } = h(n);
   return (0, a.jsxs)(o.Card, {
-    selected: l,
+    selected: s,
     children: [(0, a.jsxs)(o.CardInfoSection, {
       children: [(0, a.jsx)(o.CardUser, {
-        userId: t.author_id,
-        channelId: n.id,
-        guildId: n.guild_id
+        userId: n.author_id,
+        channelId: l.id,
+        guildId: l.guild_id
       }), (0, a.jsx)(o.CardTitle, {
         children: f.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCHED_MEDIA.format({
-          mediaTitle: t.extra.media_title
+          mediaTitle: n.extra.media_title
         })
       }), (0, a.jsx)(o.CardSubtitle, {
-        children: t.extra.media_subtitle
+        children: null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : n.extra.media_subtitle
       })]
     }), (0, a.jsx)(d.ContentImage, {
-      src: s,
+      src: i,
       size: 48,
-      alt: t.extra.media_assets_large_text
+      alt: n.extra.media_title
     })]
   })
 })
