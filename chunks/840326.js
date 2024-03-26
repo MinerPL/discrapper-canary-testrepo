@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return A
+    return p
   }
 }), s("222007");
 var a = s("37983"),
@@ -13,76 +13,77 @@ var a = s("37983"),
   u = s("594098"),
   d = s("599110"),
   c = s("359499"),
-  _ = s("627474"),
-  E = s("835618"),
-  T = s("554083"),
-  I = s("907648"),
-  f = s("326881"),
-  R = s("228967"),
-  S = s("49111"),
-  m = s("390553"),
-  N = s("679324"),
-  A = () => {
+  _ = s("134132"),
+  E = s("627474"),
+  T = s("835618"),
+  I = s("554083"),
+  f = s("907648"),
+  R = s("326881"),
+  S = s("228967"),
+  m = s("49111"),
+  N = s("390553"),
+  A = s("679324"),
+  p = () => {
     let e = r.useRef(null),
       [t, s] = r.useState(!1),
       {
-        analyticsLocations: A
+        analyticsLocations: p
       } = (0, o.default)(l.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
-      [p, C] = r.useState(!1);
-    return (0, c.useFetchEntitlementsForTenureReward)(), (0, a.jsxs)(a.Fragment, {
+      [C, g] = r.useState(!1);
+    return (0, c.useFetchEntitlementsForTenureReward)(), (0, _.useMaybeFetchReferralsRemaining)("SubscriberNitroHome"), (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(n.AdvancedScrollerAuto, {
-        className: m.mainPageScroller,
+        className: N.mainPageScroller,
         ref: e,
         children: (0, a.jsx)("div", {
-          className: m.container,
+          className: N.container,
           children: (0, a.jsxs)(o.AnalyticsLocationProvider, {
-            value: A,
-            children: [(0, a.jsx)(T.default, {
-              className: m.heroHeading
-            }), (0, a.jsx)(_.default, {
-              variant: I.PerksDiscoverabilityCardSection.WHATS_NEW,
-              className: m.whatsNew,
+            value: p,
+            children: [(0, a.jsx)(I.default, {
+              className: N.heroHeading
+            }), (0, a.jsx)(E.default, {
+              variant: f.PerksDiscoverabilityCardSection.WHATS_NEW,
+              className: N.whatsNew,
               noBackground: !0,
               leftAlignHeaders: !0
-            }), (0, a.jsx)(_.default, {
-              className: m.perksDiscoverability,
+            }), (0, a.jsx)(E.default, {
+              className: N.perksDiscoverability,
               noBackground: !0,
               leftAlignHeaders: !0,
-              showAllPerksButton: (0, a.jsx)(R.default, {
+              showAllPerksButton: (0, a.jsx)(S.default, {
                 setIsAllPerksVisible: s,
-                previousComponent: I.NitroLandingPages.HOME
+                previousComponent: f.NitroLandingPages.HOME
               })
-            }), (0, a.jsx)(E.default, {
-              className: m.giftNitro,
+            }), (0, a.jsx)(T.default, {
+              className: N.giftNitro,
               location: l.default.PREMIUM_MARKETING_GIFT_SECTION,
               analyticsLocation: {
-                page: S.AnalyticsPages.NITRO_HOME,
-                section: S.AnalyticsSections.GIFT_BANNER
+                page: m.AnalyticsPages.NITRO_HOME,
+                section: m.AnalyticsSections.GIFT_BANNER
               }
             }), (0, a.jsx)("div", {
-              className: m.footerSpacing
+              className: N.footerSpacing
             }), (0, a.jsx)(i.VisibilitySensor, {
               onChange: e => {
-                e && !p && (d.default.track(S.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                  location_stack: A
-                }), C(!0))
+                e && !C && (d.default.track(m.AnalyticEvents.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                  location_stack: p
+                }), g(!0))
               },
               children: (0, a.jsx)("div", {
-                className: m.bottomOfPageVisibilitySensor
+                className: N.bottomOfPageVisibilitySensor
               })
             }), (0, a.jsx)(u.default, {
-              src: N,
-              className: m.bottomIllustration,
+              src: A,
+              className: N.bottomIllustration,
               width: 112,
               height: 85,
               zoomable: !1
             })]
           })
         })
-      }), (0, a.jsx)(f.default, {
+      }), (0, a.jsx)(R.default, {
         isAllPerksVisible: t,
         setIsAllPerksVisible: s,
-        previousComponent: I.NitroLandingPages.HOME
+        previousComponent: f.NitroLandingPages.HOME
       })]
     })
   }
