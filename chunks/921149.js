@@ -20,5 +20,5 @@ function S() {
     s = (0, l.useStateFromStores)([i.default], () => null != e && null != e.paymentSourceId ? i.default.getPaymentSource(e.paymentSourceId) : null, [e]),
     a = null != s && c.PREPAID_PAYMENT_SOURCES.has(s.type),
     S = (null == e ? void 0 : e.status) === u.SubscriptionStatusTypes.PAST_DUE ? n().diff(n(e.currentPeriodStart), "days") : 0;
-  return !!(null != e && null != t && (0, d.isPremiumBaseSubscriptionPlan)(t.id)) && a && S >= 0 && S <= (0, d.getBillingGracePeriodDays)(e) && e.status === u.SubscriptionStatusTypes.PAST_DUE && !e.isPurchasedExternally
+  return !!(null != e && null != t && (0, d.isPremiumBaseSubscriptionPlan)(t.id)) && a && S >= 0 && S <= (0, d.getBillingGracePeriodDaysAndExpiresDate)(e).days && e.status === u.SubscriptionStatusTypes.PAST_DUE && !e.isPurchasedExternally
 }

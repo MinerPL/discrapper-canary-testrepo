@@ -584,10 +584,18 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       metadata: e => {
         let {
           premiumSubscription: t
-        } = e, n = (null == t ? void 0 : t.status) === eh.SubscriptionStatusTypes.PAST_DUE ? a().diff(a(t.currentPeriodStart), "days") : 0, s = a(null == t ? void 0 : t.currentPeriodStart).add((0, ep.getBillingGracePeriodDays)(t), "days").toDate();
-        return {
-          daysPastDue: n,
-          dismissUntil: s
+        } = e;
+        if (null == t) return {
+          daysPastDue: 0,
+          dismissUntil: a().toDate()
+        };
+        {
+          let e = t.status === eh.SubscriptionStatusTypes.PAST_DUE ? a().diff(t.currentPeriodStart, "days") : 0,
+            n = (0, ep.getBillingGracePeriodDaysAndExpiresDate)(t).expiresDate.toDate();
+          return {
+            daysPastDue: e,
+            dismissUntil: n
+          }
         }
       }
     },
