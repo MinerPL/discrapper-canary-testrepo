@@ -115,6 +115,7 @@ function P(e) {
         }) : (0, i.jsx)(I.SubTitle, {
           children: L.default.Messages.LOGIN_WITH_QR_DESCRIPTION.format()
         }), a && (0, S.getPlatform)() !== S.PlatformTypes.OSX && (0, i.jsx)(E.Button, {
+          size: E.ButtonSizes.XLARGE,
           look: E.ButtonLooks.LINK,
           color: E.ButtonColors.LINK,
           onClick: () => y(r),
