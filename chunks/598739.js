@@ -16,10 +16,10 @@ s.r(t), s.d(t, {
     return f
   },
   getFilteredPerksDiscoverabilityCards: function() {
-    return R
+    return S
   },
   usePerksDiscoverabilityStrings: function() {
-    return S
+    return m
   }
 }), s("424973");
 var a = s("446674"),
@@ -83,27 +83,60 @@ function I(e, t) {
   }
 }
 let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  R = (e, t, s, a, r) => {
-    let n = [];
+  R = e => {
+    let {
+      cards: t,
+      perksCards: s,
+      isFullScreen: a,
+      showTenureNotification: r,
+      shopMarketingVariation: n
+    } = e, l = a ? 3 : 2, o = e => {
+      let {
+        card: s
+      } = e;
+      t.length < l && t.push(s)
+    };
+    return null != s.shyProject && o({
+      card: s.shyProject
+    }), null != s.freeBoost && r && o({
+      card: s.freeBoost
+    }), o({
+      card: s.earlyAccess
+    }), o(n !== i.CollectiblesShopMarketingVariants.DEFAULT ? {
+      card: s.specialShopPerks
+    } : {
+      card: s.specialMemberPricing
+    }), o({
+      card: s.unlimitedSuperReactions
+    }), t
+  },
+  S = (e, t, s, a, r) => {
+    let i = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
-        n = [e.profiles, e.clientThemes, e.serverBoosts];
+        i = [e.profiles, e.clientThemes, e.serverBoosts];
         break;
       case o.PerksDiscoverabilityCardSection.WHATS_NEW:
-        null != e.freeBoost && r && n.push(e.freeBoost), n.push(e.earlyAccess, s !== i.CollectiblesShopMarketingVariants.DEFAULT ? e.specialShopPerks : e.specialMemberPricing), (n.length < 3 && a || n.length < 3 && !a) && n.push(e.unlimitedSuperReactions);
+        i = R({
+          cards: i,
+          perksCards: e,
+          isFullScreen: a,
+          showTenureNotification: r,
+          shopMarketingVariation: s
+        });
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
-        n = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
+        i = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
-        n = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
+        i = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
         break;
       case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
-        n = [e.entranceSoundsSeeAllVariation, e.badge]
+        i = [e.entranceSoundsSeeAllVariation, e.badge]
     }
-    return !a && (n = n.filter(e => !e.hideOnNarrowScreen)), n
+    return !a && (i = i.filter(e => !e.hideOnNarrowScreen)), i
   },
-  S = e => {
+  m = e => {
     let t = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()),
       s = null != t ? l.default.getPremiumPlanItem(t) : null,
       r = null != s ? l.default.getSkuIdForPlan(s.planId) : null,
