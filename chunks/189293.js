@@ -1,44 +1,50 @@
 "use strict";
-n.r(t), n.d(t, {
+i.r(t), i.d(t, {
   fetchUserProfileEffects: function() {
-    return o
+    return a
   }
 });
-var a = n("872717"),
-  s = n("913144"),
-  l = n("448993");
-n("845962");
-var i = n("49111");
-let r = e => {
+var l = i("872717"),
+  r = i("913144"),
+  n = i("448993"),
+  u = i("845962"),
+  o = i("49111");
+let s = e => {
     let {
       sku_id: t,
-      ...n
+      ...i
     } = e;
     return {
-      id: n.id,
+      id: i.id,
       skuId: t,
       config: {
-        ...n,
+        ...i,
         skuId: t
       }
     }
   },
-  o = async () => {
-    s.default.dispatch({
-      type: "USER_PROFILE_EFFECTS_FETCH"
-    });
-    try {
-      let {
-        body: e
-      } = await a.HTTP.get(i.Endpoints.USER_PROFILE_EFFECTS), t = null == e ? void 0 : e.profile_effect_configs, n = t.map(r);
-      s.default.dispatch({
-        type: "USER_PROFILE_EFFECTS_FETCH_SUCCESS",
-        profileEffects: n
-      })
-    } catch (e) {
-      throw s.default.dispatch({
-        type: "USER_PROFILE_EFFECTS_FETCH_FAILURE",
-        error: e
-      }), new l.APIError(e)
+  a = async function() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+      t = u.default.isFetching,
+      i = u.default.profileEffects,
+      a = 0 === i.length;
+    if (!t && (e || a)) {
+      r.default.dispatch({
+        type: "USER_PROFILE_EFFECTS_FETCH"
+      });
+      try {
+        let {
+          body: e
+        } = await l.HTTP.get(o.Endpoints.USER_PROFILE_EFFECTS), t = null == e ? void 0 : e.profile_effect_configs, i = t.map(s);
+        r.default.dispatch({
+          type: "USER_PROFILE_EFFECTS_FETCH_SUCCESS",
+          profileEffects: i
+        })
+      } catch (e) {
+        throw r.default.dispatch({
+          type: "USER_PROFILE_EFFECTS_FETCH_FAILURE",
+          error: e
+        }), new n.APIError(e)
+      }
     }
   }
