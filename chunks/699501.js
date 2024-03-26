@@ -170,7 +170,7 @@ function w() {
       })
     })
   };
-  return (0, l.jsxs)("div", {
+  return !n && o ? (0, l.jsxs)("div", {
     className: y.banner,
     children: [(0, l.jsxs)("div", {
       className: y.inline,
@@ -194,7 +194,7 @@ function w() {
         color: _.tokens.colors.WHITE
       }), U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA]
     })]
-  })
+  }) : null
 }
 
 function V() {
