@@ -1,28 +1,31 @@
 "use strict";
 a.r(t), a.d(t, {
   completeSignUp: function() {
-    return c
+    return d
   }
 });
-var s = a("917351"),
-  n = a("151426"),
-  l = a("913144"),
+var l = a("917351"),
+  s = a("151426"),
+  n = a("913144"),
   i = a("10641"),
   r = a("599110"),
+  c = a("874595"),
   o = a("49111");
 
-function c(e) {
+function d(e) {
   let {
     targetKey: t,
     data: a,
-    completed: c
+    completed: d
   } = e;
-  !(0, s.isEmpty)(a) && (!(0, i.isDismissibleContentDismissed)(n.DismissibleContent.GAME_ONE_USER_SIGNUPS) && r.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
+  !(0, l.isEmpty)(a) && (!(0, i.isDismissibleContentDismissed)(s.DismissibleContent.GAME_ONE_USER_SIGNUPS) && r.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
     target_key: t,
     selected_option_key: a.selectedOptionKey,
     email: a.email,
-    completed: c
-  }), (0, i.markDismissibleContentAsDismissed)(n.DismissibleContent.GAME_ONE_USER_SIGNUPS), l.default.dispatch({
+    guild_id: a.guildId,
+    metadata: (0, c.extractMetadata)(a),
+    completed: d
+  }), (0, i.markDismissibleContentAsDismissed)(s.DismissibleContent.GAME_ONE_USER_SIGNUPS), n.default.dispatch({
     type: "COMPLETE_USER_SIGN_UP",
     email: a.email,
     targetKey: t,

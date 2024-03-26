@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return P
+    return y
   }
 }), n("222007");
 var a = n("37983"),
@@ -20,27 +20,28 @@ var a = n("37983"),
   C = n("519440"),
   S = n("600177"),
   I = n("947337"),
-  m = n("197881"),
-  p = n("401774"),
-  T = n("607894"),
-  g = n("746504"),
-  A = n("107153"),
-  N = n("32505"),
-  R = n("731681"),
-  O = n("427474"),
-  v = n("994428");
+  m = n("488445"),
+  p = n("197881"),
+  T = n("401774"),
+  g = n("607894"),
+  A = n("746504"),
+  N = n("107153"),
+  R = n("32505"),
+  O = n("731681"),
+  v = n("427474"),
+  L = n("994428");
 
-function L(e) {
+function M(e) {
   e.stopPropagation()
 }
 
-function M(e) {
+function P(e) {
   var t;
   let {
     guild: n
-  } = e, [d, E] = s.useState(null !== (t = r.Storage.get(O.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
-    r.Storage.set(O.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e)
-  }, C = (0, l.useStateFromStoresArray)(O.CHANNEL_NOTICE_STORES, () => O.CHANNEL_NOTICES.filter(e => {
+  } = e, [d, E] = s.useState(null !== (t = r.Storage.get(v.LAST_HIDDEN_CHANNEL_NOTICE)) && void 0 !== t ? t : 0), _ = e => {
+    r.Storage.set(v.LAST_HIDDEN_CHANNEL_NOTICE, e), E(e)
+  }, C = (0, l.useStateFromStoresArray)(v.CHANNEL_NOTICE_STORES, () => v.CHANNEL_NOTICES.filter(e => {
     let {
       store: t
     } = e;
@@ -48,13 +49,13 @@ function M(e) {
   }).map(e => e.dismissibleContentType));
   return (0, a.jsx)(u.default, {
     contentTypes: C,
-    groupName: v.DismissibleContentGroupName.CHANNEL_NOTICES,
+    groupName: L.DismissibleContentGroupName.CHANNEL_NOTICES,
     children: e => {
       let {
         visibleContent: t,
         markAsDismissed: s
       } = e, l = () => {
-        _(Date.now()), s(v.ContentDismissActionType.UNKNOWN)
+        _(Date.now()), s(L.ContentDismissActionType.UNKNOWN)
       }, r = (() => {
         switch (t) {
           case i.DismissibleContent.CHANNEL_NOTICE_HUBLINK:
@@ -63,7 +64,7 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_INVITE:
-            return (0, a.jsx)(g.default, {
+            return (0, a.jsx)(A.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -73,7 +74,7 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.CHANNEL_NOTICE_QUICKSWITCHER:
-            return (0, a.jsx)(N.default, {
+            return (0, a.jsx)(R.default, {
               guild: n,
               markAsDismissed: l
             });
@@ -83,65 +84,69 @@ function M(e) {
               markAsDismissed: l
             });
           case i.DismissibleContent.GUILD_ONBOARDING_UPSELL_CHANNEL_NOTICE:
-            return (0, a.jsx)(T.default, {
+            return (0, a.jsx)(g.default, {
               guild: n,
               markAsDismissed: l
             });
           case i.DismissibleContent.LINKED_ROLE_ADMIN_GUILD:
             return (0, a.jsx)(o.default, {
               guild: n,
-              markAsDismissed: () => s(v.ContentDismissActionType.UNKNOWN)
+              markAsDismissed: () => s(L.ContentDismissActionType.UNKNOWN)
             });
           default:
             return null
         }
       })();
       return null == r ? null : (0, a.jsx)("div", {
-        onContextMenu: L,
+        onContextMenu: M,
         children: r
       })
     }
   })
 }
-var P = e => {
+var y = e => {
   let {
     guild: t
-  } = e, n = (0, R.default)(t);
+  } = e, n = (0, O.default)(t);
   switch (n) {
-    case R.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
+    case O.ConnectedChannelNotices.ENABLE_PUBLIC_GUILD:
       return (0, a.jsx)(I.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
+    case O.ConnectedChannelNotices.APPLIED_GUILD_BOOST_GRACE_PERIOD:
       return (0, a.jsx)(d.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.MAX_MEMBER_COUNT:
-      return (0, a.jsx)(A.default, {
+    case O.ConnectedChannelNotices.MAX_MEMBER_COUNT:
+      return (0, a.jsx)(N.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
+    case O.ConnectedChannelNotices.GUILD_LIVE_CHANNEL:
       return (0, a.jsx)(E.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.GUILD_MFA_WARNING:
-      return (0, a.jsx)(p.default, {
+    case O.ConnectedChannelNotices.GUILD_MFA_WARNING:
+      return (0, a.jsx)(T.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.COMMANDS_MIGRATION:
+    case O.ConnectedChannelNotices.COMMANDS_MIGRATION:
       return (0, a.jsx)(C.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
+    case O.ConnectedChannelNotices.APPLICATION_SUBSCRIPTION_EXPIRATION:
       return (0, a.jsx)(S.default, {
         guild: t
       });
-    case R.ConnectedChannelNotices.HUB_STUDY_ROOM:
+    case O.ConnectedChannelNotices.HUB_STUDY_ROOM:
       return (0, a.jsx)(_.default, {
+        guild: t
+      });
+    case O.ConnectedChannelNotices.SIGNUP:
+      return (0, a.jsx)(m.default, {
         guild: t
       })
   }
-  return m.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(M, {
+  return p.ProcessArgs.isDisallowPopupsSet() ? null : (0, a.jsx)(P, {
     guild: e.guild
   })
 }

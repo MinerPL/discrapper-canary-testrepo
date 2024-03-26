@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return s
   },
   default: function() {
-    return N
+    return R
   }
 });
 var a, s, l = n("884691"),
@@ -18,73 +18,76 @@ var a, s, l = n("884691"),
   E = n("702411"),
   h = n("991254"),
   _ = n("226511"),
-  C = n("735201"),
-  S = n("957255"),
-  I = n("833781"),
-  m = n("572182"),
-  p = n("201952"),
-  T = n("718517"),
-  g = n("427459"),
-  A = n("49111");
+  C = n("124150"),
+  S = n("735201"),
+  I = n("957255"),
+  m = n("833781"),
+  p = n("572182"),
+  T = n("201952"),
+  g = n("718517"),
+  A = n("427459"),
+  N = n("49111");
 
-function N(e) {
+function R(e) {
   var t;
-  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : A.EMPTY_STRING_SNOWFLAKE_ID,
+  let n = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : N.EMPTY_STRING_SNOWFLAKE_ID,
     {
       lastFetchedAt: a
-    } = (0, i.useStateFromStoresObject)([C.default], () => ({
-      appliedGuildBoosts: C.default.getAppliedGuildBoostsForGuild(n),
-      lastFetchedAt: C.default.getLastFetchedAtForGuild(n)
+    } = (0, i.useStateFromStoresObject)([S.default], () => ({
+      appliedGuildBoosts: S.default.getAppliedGuildBoostsForGuild(n),
+      lastFetchedAt: S.default.getLastFetchedAtForGuild(n)
     })),
     {
       lastDismissedGracePeriod: s,
-      isGracePeriodVisible: N
-    } = (0, i.useStateFromStoresObject)([I.default], () => ({
-      lastDismissedGracePeriod: I.default.getLastDismissedGracePeriodForGuild(n),
-      isGracePeriodVisible: I.default.isVisible(n)
+      isGracePeriodVisible: R
+    } = (0, i.useStateFromStoresObject)([m.default], () => ({
+      lastDismissedGracePeriod: m.default.getLastDismissedGracePeriodForGuild(n),
+      isGracePeriodVisible: m.default.isVisible(n)
     })),
-    R = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
-    O = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
-    v = (0, i.useStateFromStores)([S.default], () => S.default.can(A.Permissions.ADMINISTRATOR, e)),
-    L = null != s && Date.now() - s <= A.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
-    M = null != e ? e.premiumSubscriberCount : 0,
-    P = (0, g.getGuildTierFromAppliedBoostCount)(M, n) !== A.BoostedGuildTiers.NONE,
-    y = null != a && Date.now() - a <= 432e5,
-    D = !y && !L && v && P,
-    x = (0, d.useGuildHasLiveChannelNotice)(n),
-    b = (0, i.useStateFromStores)([m.default], () => m.default.isVisible(e)),
-    U = E.default.useShouldShowChannelNotice(n),
-    G = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
+    O = (0, i.useStateFromStores)([_.default], () => _.default.isVisible(e)),
+    v = (0, i.useStateFromStores)([T.default], () => T.default.isVisible(e)),
+    L = (0, i.useStateFromStores)([I.default], () => I.default.can(N.Permissions.ADMINISTRATOR, e)),
+    M = null != s && Date.now() - s <= N.GRACE_PERIOD_CHANNEL_NOTICE_SHOW_DELAY,
+    P = null != e ? e.premiumSubscriberCount : 0,
+    y = (0, A.getGuildTierFromAppliedBoostCount)(P, n) !== N.BoostedGuildTiers.NONE,
+    D = null != a && Date.now() - a <= 432e5,
+    x = !D && !M && L && y,
+    b = (0, d.useGuildHasLiveChannelNotice)(n),
+    U = (0, i.useStateFromStores)([p.default], () => p.default.isVisible(e)),
+    G = E.default.useShouldShowChannelNotice(n),
+    j = (0, h.useUnseenEndedApplicationSubscriptionEntitlements)(e),
     {
-      enableStudyGroup: j
+      enableStudyGroup: w
     } = (0, f.useHubStudyGroupExperiment)(e),
-    w = G.length > 0,
-    k = j && !(null == e ? void 0 : e.hasFeature(A.GuildFeatures.HUB)),
+    k = j.length > 0,
+    F = w && !(null == e ? void 0 : e.hasFeature(N.GuildFeatures.HUB)),
     {
-      canSeeUpcomingEventsNotices: F
+      canSeeUpcomingEventsNotices: B
     } = u.default.useExperiment({
       guildId: n,
       location: "useVisibleConnectedNotice"
     }, {
       autoTrackExposure: !1
     }),
-    B = (0, c.useGuildUpcomingEventsNotice)(n);
+    H = (0, c.useGuildUpcomingEventsNotice)(n),
+    V = (0, i.useStateFromStores)([C.default], () => null != C.default.getActiveGuildSignUp(n));
   if (l.useEffect(() => {
       o.default.getGuildEventsForCurrentUser(n)
     }, [n]), l.useEffect(() => {
       let e = -1;
-      return D && (e = window.setTimeout(() => {
+      return x && (e = window.setTimeout(() => {
         null != n && (0, r.fetchAppliedGuildBoostsForGuild)(n)
-      }, 30 * Math.random() * T.default.Millis.SECOND)), () => {
+      }, 30 * Math.random() * g.default.Millis.SECOND)), () => {
         window.clearTimeout(e)
       }
-    }, [n, D]), R) return 0;
-  if (N) return 1;
-  if (O) return 2;
-  else if (x || F && null != B) return 3;
-  else if (b) return 4;
-  else if (U) return 5;
-  else if (w) return 6;
-  else if (k) return 7;
+    }, [n, x]), O) return 0;
+  if (R) return 1;
+  if (v) return 2;
+  else if (b || B && null != H) return 3;
+  else if (U) return 4;
+  else if (G) return 5;
+  else if (k) return 6;
+  else if (F) return 7;
+  else if (V) return 8;
   return null
-}(a = s || (s = {}))[a.ENABLE_PUBLIC_GUILD = 0] = "ENABLE_PUBLIC_GUILD", a[a.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1] = "APPLIED_GUILD_BOOST_GRACE_PERIOD", a[a.MAX_MEMBER_COUNT = 2] = "MAX_MEMBER_COUNT", a[a.GUILD_LIVE_CHANNEL = 3] = "GUILD_LIVE_CHANNEL", a[a.GUILD_MFA_WARNING = 4] = "GUILD_MFA_WARNING", a[a.COMMANDS_MIGRATION = 5] = "COMMANDS_MIGRATION", a[a.APPLICATION_SUBSCRIPTION_EXPIRATION = 6] = "APPLICATION_SUBSCRIPTION_EXPIRATION", a[a.HUB_STUDY_ROOM = 7] = "HUB_STUDY_ROOM"
+}(a = s || (s = {}))[a.ENABLE_PUBLIC_GUILD = 0] = "ENABLE_PUBLIC_GUILD", a[a.APPLIED_GUILD_BOOST_GRACE_PERIOD = 1] = "APPLIED_GUILD_BOOST_GRACE_PERIOD", a[a.MAX_MEMBER_COUNT = 2] = "MAX_MEMBER_COUNT", a[a.GUILD_LIVE_CHANNEL = 3] = "GUILD_LIVE_CHANNEL", a[a.GUILD_MFA_WARNING = 4] = "GUILD_MFA_WARNING", a[a.COMMANDS_MIGRATION = 5] = "COMMANDS_MIGRATION", a[a.APPLICATION_SUBSCRIPTION_EXPIRATION = 6] = "APPLICATION_SUBSCRIPTION_EXPIRATION", a[a.HUB_STUDY_ROOM = 7] = "HUB_STUDY_ROOM", a[a.SIGNUP = 8] = "SIGNUP"
