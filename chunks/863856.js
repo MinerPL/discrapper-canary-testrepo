@@ -25,7 +25,7 @@ let u = (0, a.createExperiment)({
       }
     }]
   }),
-  d = new i.default("GatewayZstdStore"),
+  d = new i.Logger("GatewayZstdStore"),
   c = !1,
   _ = !1,
   f = 0;

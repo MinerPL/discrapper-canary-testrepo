@@ -22,7 +22,7 @@ var t, o, n = E("811022"),
   C = E("84970"),
   c = E("49111"),
   D = E("6791");
-let d = new n.default("OverlayUsageStatsManager");
+let d = new n.Logger("OverlayUsageStatsManager");
 d.verbose = () => {};
 class U {
   increment(e) {

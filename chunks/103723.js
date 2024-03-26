@@ -62,6 +62,6 @@ class p {
     })
   }
   constructor(e) {
-    this.spinnerVisibleStart = null, this.logger = new s.default(e)
+    this.spinnerVisibleStart = null, this.logger = new s.Logger(e)
   }
 }

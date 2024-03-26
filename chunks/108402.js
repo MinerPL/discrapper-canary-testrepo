@@ -1,8 +1,8 @@
 "use strict";
 let n;
 s.r(t), s.d(t, {
-  default: function() {
-    return R
+  Footer: function() {
+    return A
   }
 });
 var l = s("37983"),
@@ -16,14 +16,14 @@ var l = s("37983"),
   p = s("146230"),
   h = s("843455"),
   N = s("53452"),
-  m = s("792788"),
-  g = s("161934");
+  g = s("792788"),
+  m = s("161934");
 let k = "Footer Navigation",
-  f = {
+  C = {
     BLURPLE: "Blurple",
     PRIMARY: "Primary"
   },
-  C = e => [{
+  x = e => [{
     title: e.PRODUCT,
     routes: [{
       link: h.WebRoutes.DOWNLOAD,
@@ -143,27 +143,27 @@ let k = "Footer Navigation",
       tracking: "open_source"
     }]
   }],
-  A = e => {
+  f = e => {
     let {
       colorVariant: t,
       animate: s
     } = e;
     return (0, l.jsx)("svg", {
-      className: (0, u.getClass)(g, "footerBackground", t),
+      className: (0, u.getClass)(m, "footerBackground", t),
       preserveAspectRatio: "none",
       width: "1920",
       height: "100%",
       viewBox: "0 0 1920 330",
       version: "1.1",
       children: (0, l.jsx)("path", {
-        className: (0, u.getClass)(g, "footerBackground", s ? "Play" : "Paused"),
+        className: (0, u.getClass)(m, "footerBackground", s ? "Play" : "Paused"),
         fill: "#1a1c1e",
         fillOpacity: "0.3",
         d: "M140.881198,194.260295 C257.600568,129.32862 342.939626,119.84993 418.009939,203.154617 C493.080251,286.459305 545.728689,70.9046172 636.439626,63.9593047 C727.150564,57.0139922 768.99822,139.670242 858.802907,119.431961 C948.607595,99.1936797 1071.91228,-32.9977266 1243.91228,7.75227342 C1415.91228,48.5022734 1404.10369,208.584305 1508.27166,178.709305 C1612.43963,148.834305 1633.73291,79.913472 1711.63588,98.8569055 C1776.28676,114.577866 1819.96778,221.391836 1889.37253,185.808108 C2017.32661,120.206212 2004.01952,336.769569 2004.01952,336.769569 L271.635881,337 L-149.063338,337 C-149.063338,337 -245.850307,175.637635 -58.0633382,228.867188 C33.8652851,254.92501 64.1722713,236.933925 140.881198,194.260295 Z"
       })
     })
   };
-class x extends a.PureComponent {
+class A extends a.PureComponent {
   componentDidMount() {
     this.setState({
       token: (0, c.getToken)(),
@@ -192,7 +192,7 @@ class x extends a.PureComponent {
       },
       alt: "Download Discord",
       target: "_blank",
-      className: (0, u.getClass)(g, "button", r),
+      className: (0, u.getClass)(m, "button", r),
       href: t,
       children: a
     });
@@ -205,15 +205,15 @@ class x extends a.PureComponent {
         "Referring Location": "Footer"
       },
       alt: "Download Discord",
-      className: (0, u.getClass)(g, "button", r),
+      className: (0, u.getClass)(m, "button", r),
       href: h.WebRoutes.DOWNLOAD,
-      children: m.default.Messages.Navigation.DOWNLOAD
+      children: g.default.Messages.Navigation.DOWNLOAD
     });
     let d = null != o ? h.AppRoutes.REGISTER_WITH_REDIRECT(o) : h.AppRoutes.REGISTER,
-      p = m.default.Messages.Common.SIGN_UP_NOW;
-    return e && (d = h.AppRoutes.ME, p = m.default.Messages.Common.OPEN_DISCORD), (0, l.jsx)(n, {
+      p = g.default.Messages.Common.SIGN_UP_NOW;
+    return e && (d = h.AppRoutes.ME, p = g.default.Messages.Common.OPEN_DISCORD), (0, l.jsx)(n, {
       eventName: k,
-      className: (0, u.getClass)(g, "button", this.props.variant),
+      className: (0, u.getClass)(m, "button", this.props.variant),
       data: {
         linkClicked: e ? "open" : "login",
         googleAnalytics: !0
@@ -232,9 +232,9 @@ class x extends a.PureComponent {
     } = this.props, {
       animateBackground: d,
       token: N
-    } = this.state, f = C(m.default.Messages.Navigation).map(e => {
+    } = this.state, C = x(g.default.Messages.Navigation).map(e => {
       let t = e.routes.map((e, t) => e.external ? (0, l.jsx)(n, {
-        className: g.route,
+        className: m.route,
         eventName: k,
         data: {
           linkClicked: e.tracking
@@ -245,7 +245,7 @@ class x extends a.PureComponent {
         avoidRouter: i,
         to: e.link,
         from: "footer_navigation",
-        className: g.route,
+        className: m.route,
         children: (0, l.jsx)(n, {
           tag: "span",
           eventName: k,
@@ -256,9 +256,9 @@ class x extends a.PureComponent {
         })
       }, e.link));
       return (0, l.jsxs)("div", {
-        className: g.navigationSection,
+        className: m.navigationSection,
         children: [(0, l.jsx)("h3", {
-          className: g.navigationHeader,
+          className: m.navigationHeader,
           children: e.title
         }), t]
       }, e.title)
@@ -266,42 +266,42 @@ class x extends a.PureComponent {
     return (0, l.jsx)(o.VisibilitySensor, {
       onChange: this.handleVisibility,
       children: (0, l.jsxs)("footer", {
-        className: r((0, u.getClass)(g, "footer", e), a),
+        className: r((0, u.getClass)(m, "footer", e), a),
         style: t,
-        children: [c ? (0, l.jsx)(A, {
+        children: [c ? (0, l.jsx)(f, {
           colorVariant: e,
           animate: d
         }) : null, (0, l.jsxs)("div", {
-          className: g.footerContent,
+          className: m.footerContent,
           children: [(0, l.jsxs)("div", {
-            className: g.navigation,
+            className: m.navigation,
             children: [(0, l.jsx)("div", {
-              className: g.logoWrap,
+              className: m.logoWrap,
               children: (0, l.jsx)(n, {
-                className: g.logo,
+                className: m.logo,
                 href: h.WebRoutes.INDEX,
                 eventName: k,
                 data: {
                   linkClicked: "logo"
                 },
                 children: (0, l.jsx)("img", {
-                  alt: m.default.Messages.Navigation.HOME,
+                  alt: g.default.Messages.Navigation.HOME,
                   src: s("188890")
                 })
               })
-            }), f]
+            }), C]
           }), (0, l.jsx)("div", {
-            className: g.separator
+            className: m.separator
           }), (0, l.jsxs)("div", {
-            className: g.joinDiscord,
+            className: m.joinDiscord,
             children: [(0, l.jsxs)("div", {
-              className: g.stats,
+              className: m.stats,
               children: [(0, l.jsx)("h2", {
-                className: g.readyToJoin,
-                children: m.default.Messages.Footer.READY_TO_TRY_DISCORD
+                className: m.readyToJoin,
+                children: g.default.Messages.Footer.READY_TO_TRY_DISCORD
               }), (0, l.jsx)("h3", {
-                className: g.joinOtherPlayers,
-                children: m.default.Messages.Footer.JOIN_OVER_PLAYERS_TODAY.format({
+                className: m.joinOtherPlayers,
+                children: g.default.Messages.Footer.JOIN_OVER_PLAYERS_TODAY.format({
                   num: h.ROUGH_COUNT_MILLION_PLAYERS
                 })
               })]
@@ -321,15 +321,14 @@ class x extends a.PureComponent {
       this.setState({
         animateBackground: e
       })
-    }, null != e.locale && m.default.setLocale(e.locale), n = t => (0, l.jsx)(d.default, {
+    }, null != e.locale && g.default.setLocale(e.locale), n = t => (0, l.jsx)(d.default, {
       track: e.track,
       trackOutboundLink: e.trackOutboundLink,
       ...t
     })
   }
 }
-x.Variants = f, x.defaultProps = {
-  variant: f.PRIMARY,
+A.Variants = C, A.defaultProps = {
+  variant: C.PRIMARY,
   showWave: !0
-};
-var R = x
+}

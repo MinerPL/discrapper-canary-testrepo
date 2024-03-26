@@ -854,6 +854,6 @@ i = class e extends E.default {
         }
         this.stats = e
       }
-    }, this.logger = new f.default("Connection(".concat(e, ")")), this.videoSupported = n
+    }, this.logger = new f.Logger("Connection(".concat(e, ")")), this.videoSupported = n
   }
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
-  default: function() {
-    return A
+  DesktopHeader: function() {
+    return x
   }
 }), s("222007"), s("424973");
 var n = s("37983"),
@@ -16,26 +16,26 @@ var n = s("37983"),
   p = s("156713"),
   h = s("843455"),
   N = s("53452"),
-  m = s("352220"),
-  g = s("510590");
+  g = s("352220"),
+  m = s("510590");
 let k = h.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
-  f = () => [{
+  C = () => [{
     route: (0, r.getLocalizedLink)(h.LocalizedLinks.TWITTER),
     linkClicked: "twitter",
     alt: "Discord's Twitter",
-    img: m.Images.ASSET_SOCIAL_TWITTER
+    img: g.Images.ASSET_SOCIAL_TWITTER
   }, {
     route: h.SOCIAL_LINKS.FACEBOOK_URL,
     linkClicked: "facebook",
     alt: "Discord's Facebook",
-    img: m.Images.ASSET_SOCIAL_FACEBOOK
+    img: g.Images.ASSET_SOCIAL_FACEBOOK
   }, {
     route: h.SOCIAL_LINKS.INSTAGRAM_URL,
     linkClicked: "instagram",
     alt: "Discord's Instagram",
-    img: m.Images.ASSET_SOCIAL_INSTAGRAM
+    img: g.Images.ASSET_SOCIAL_INSTAGRAM
   }];
-class C extends l.PureComponent {
+class x extends l.PureComponent {
   componentDidMount() {
     this.setState({
       isAppCompatible: N.IS_APP_COMPATIBLE_BROWSER
@@ -52,11 +52,11 @@ class C extends l.PureComponent {
       avoidRouter: o
     } = this.props;
     return (0, n.jsxs)("header", {
-      className: i(g.header, e),
+      className: i(m.header, e),
       children: [(0, n.jsxs)("nav", {
-        className: g.headerInner,
+        className: m.headerInner,
         children: [(0, n.jsxs)("div", {
-          className: g.headerLogo,
+          className: m.headerLogo,
           children: [(0, n.jsx)(r, {
             tag: "div",
             eventName: k,
@@ -67,24 +67,24 @@ class C extends l.PureComponent {
               avoidRouter: o,
               to: h.WebRoutes.INDEX,
               from: h.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
-              children: (0, n.jsx)(u.default, {})
+              children: (0, n.jsx)(u.DesktopHeaderLogo, {})
             })
           }), null != t ? (0, n.jsx)("a", {
-            className: g.skipToContent,
+            className: m.skipToContent,
             href: "#".concat(t),
             children: s
           }) : null]
         }), (0, n.jsx)("ul", {
-          className: g.headerNav,
-          children: (0, n.jsx)(p.default, {
+          className: m.headerNav,
+          children: (0, n.jsx)(p.MainNavigation, {
             avoidRouter: o,
             TrackClick: r,
-            styles: g,
+            styles: m,
             NavigationMessages: l
           })
         }), (0, n.jsxs)("ul", {
-          className: g.headerNavRight,
-          children: [this.renderSocialMediaNav(), (0, n.jsx)(d.default, {
+          className: m.headerNavRight,
+          children: [this.renderSocialMediaNav(), (0, n.jsx)(d.LocalePicker, {
             onChange: a
           })]
         })]
@@ -107,10 +107,10 @@ class C extends l.PureComponent {
         isAppCompatible: a
       } = this.state, i = (0, o.getLoginPath)(l), r = t.LOGIN;
       return null != e && (i = h.AppRoutes.ME, r = t.OPEN), a ? (0, n.jsx)("li", {
-        className: g.listItemInactive,
+        className: m.listItemInactive,
         children: (0, n.jsx)(s, {
           eventName: k,
-          className: g.appButton,
+          className: m.appButton,
           data: {
             linkClicked: e ? "open" : "login",
             googleAnalytics: !0
@@ -122,11 +122,11 @@ class C extends l.PureComponent {
     }, this.renderSocialMediaNav = () => {
       let {
         TrackClick: e
-      } = this.props, t = f().map(t => (0, n.jsx)("li", {
-        className: i(g.listItemInactive, g.listItemSocialMedia),
+      } = this.props, t = C().map(t => (0, n.jsx)("li", {
+        className: i(m.listItemInactive, m.listItemSocialMedia),
         children: (0, n.jsx)(e, {
           eventName: k,
-          className: g.rightNavLink,
+          className: m.rightNavLink,
           data: {
             linkClicked: t.linkClicked
           },
@@ -143,4 +143,3 @@ class C extends l.PureComponent {
     }
   }
 }
-var A = C

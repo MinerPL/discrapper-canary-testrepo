@@ -1,10 +1,10 @@
 "use strict";
 t.r(a), t.d(a, {
-  default: function() {
+  States: function() {
     return l
   }
 });
-var l = [{
+let l = [{
   label: "Alabama",
   value: "AL"
 }, {

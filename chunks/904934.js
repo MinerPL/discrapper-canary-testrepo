@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
-  default: function() {
-    return h
+  LocalePicker: function() {
+    return p
   }
 }), s("222007");
 var n = s("37983"),
@@ -47,8 +47,8 @@ class p extends l.PureComponent {
       onMouseEnter: this.open,
       onMouseLeave: this.close,
       onClick: this.toggle,
-      children: [(0, n.jsxs)(r.default, {
-        align: r.default.Align.CENTER,
+      children: [(0, n.jsxs)(r.Flex, {
+        align: r.Flex.Align.CENTER,
         className: (0, o.getClass)(d, "opener", e ? "Open" : null),
         children: [(0, n.jsx)("span", {
           className: d.line
@@ -97,4 +97,3 @@ class p extends l.PureComponent {
     }
   }
 }
-var h = p

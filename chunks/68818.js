@@ -48,9 +48,9 @@ var a = n("37983"),
         className: p.enableCard,
         type: d.Card.Types.CUSTOM,
         outline: !0,
-        children: (0, a.jsxs)(o.default, {
-          justify: o.default.Justify.END,
-          children: [(0, a.jsx)(o.default.Child, {
+        children: (0, a.jsxs)(o.Flex, {
+          justify: o.Flex.Justify.END,
+          children: [(0, a.jsx)(o.Flex.Child, {
             children: (0, a.jsx)(d.Text, {
               variant: "text-sm/semibold",
               color: "text-normal",

@@ -7,7 +7,7 @@ E.r(_), E.d(_, {
 var t = E("44170"),
   o = E("811022"),
   n = E("279295");
-let r = new o.default("Flux");
+let r = new o.Logger("Flux");
 class a extends t.EventEmitter {
   log(e, _) {
     let E = new I(e);

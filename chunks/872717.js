@@ -35,7 +35,7 @@ var r = E("811022"),
 E("353015");
 var I = E("644642"),
   s = E("446825").Buffer;
-let T = new r.default("HTTPUtils"),
+let T = new r.Logger("HTTPUtils"),
   S = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 
 function N(e, _, E, t, r) {

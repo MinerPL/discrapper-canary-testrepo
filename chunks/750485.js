@@ -1,6 +1,6 @@
 "use strict";
 s.r(t), s.d(t, {
-  default: function() {
+  Flex: function() {
     return g
   }
 });
@@ -76,7 +76,7 @@ N.defaultProps = {
   style: {},
   wrap: !1
 };
-class m extends l.PureComponent {
+class g extends l.PureComponent {
   render() {
     let {
       children: e,
@@ -91,21 +91,21 @@ class m extends l.PureComponent {
       style: p,
       gutter: h,
       ...N
-    } = this.props, m = {
+    } = this.props, g = {
       flexShrink: c,
       flexGrow: u,
       flexBasis: d,
       ...p
     };
     return (0, n.jsx)("div", {
-      style: m,
+      style: g,
       className: i(o.flex, s, l, a, r, h, t),
       ...N,
       children: e
     })
   }
 }
-m.Child = N, m.Direction = c, m.Align = p, m.Justify = u, m.Wrap = d, m.Gutter = h, m.defaultProps = {
+g.Child = N, g.Direction = c, g.Align = p, g.Justify = u, g.Wrap = d, g.Gutter = h, g.defaultProps = {
   direction: c.HORIZONTAL,
   justify: u.START,
   align: p.STRETCH,
@@ -114,5 +114,4 @@ m.Child = N, m.Direction = c, m.Align = p, m.Justify = u, m.Wrap = d, m.Gutter =
   grow: 1,
   basis: "auto",
   style: {}
-};
-var g = m
+}

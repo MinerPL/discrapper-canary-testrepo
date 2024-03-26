@@ -1,10 +1,10 @@
 "use strict";
 t.r(a), t.d(a, {
-  default: function() {
+  CanadaProvinces: function() {
     return l
   }
 });
-var l = [{
+let l = [{
   label: "Alberta",
   value: "AB"
 }, {

@@ -29,7 +29,7 @@ var i = n("627445"),
   d = n("697218"),
   c = n("840707"),
   _ = n("49111");
-let f = new a.default("UserProfileModalActionCreators");
+let f = new a.Logger("UserProfileModalActionCreators");
 
 function E() {
   let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

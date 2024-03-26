@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return g
+    return m
   }
 }), s("222007");
 var n = s("37983"),
@@ -16,7 +16,7 @@ var n = s("37983"),
   p = s("49111"),
   h = s("782340"),
   N = s("504659");
-class m extends l.Component {
+class g extends l.Component {
   shouldScrollToTop(e) {
     let {
       location: t
@@ -34,7 +34,7 @@ class m extends l.Component {
       className: t,
       shouldScrollToTop: this.shouldScrollToTop,
       render: (t, r) => (0, n.jsxs)(l.Fragment, {
-        children: [(0, n.jsx)(i.default, {
+        children: [(0, n.jsx)(i.Header, {
           avoidRouter: !0,
           locale: o,
           authRedirectTo: e.pathname,
@@ -45,7 +45,7 @@ class m extends l.Component {
           openNavAriaLabel: h.default.Messages.OPEN_NAVIGATION,
           hideNavAriaLabel: h.default.Messages.HIDE_NAVIGATION,
           skipToContentLabel: h.default.Messages.SKIP_TO_CONTENT
-        }), s(t, r), (0, n.jsx)(a.default, {
+        }), s(t, r), (0, n.jsx)(a.Footer, {
           locale: o,
           authRedirectTo: e.pathname,
           avoidRouter: !0,
@@ -61,6 +61,6 @@ class m extends l.Component {
     }
   }
 }
-var g = o.default.connectStores([u.default], () => ({
+var m = o.default.connectStores([u.default], () => ({
   locale: u.default.locale
-}))(m)
+}))(g)

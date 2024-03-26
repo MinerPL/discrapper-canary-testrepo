@@ -37,7 +37,7 @@ var i, s, r, a, o = n("798680"),
   g = n("811022"),
   m = n("353927"),
   p = n("53452");
-let S = new g.default("SDP");
+let S = new g.Logger("SDP");
 (r = i || (i = {})).AUDIO = "a", r.VIDEO = "v", (a = s || (s = {})).SENDRECV = "sendrecv", a.SENDONLY = "sendonly", a.RECVONLY = "recvonly", a.INACTIVE = "inactive";
 let T = "UDP/TLS/RTP/SAVPF";
 

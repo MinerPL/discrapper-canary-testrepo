@@ -14,7 +14,7 @@ var n, l, a = s("37983"),
   p = s("843455"),
   h = s("352220"),
   N = s("517018");
-let m = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
+let g = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
 (n = class extends i.PureComponent {
   render() {
     let {
@@ -68,7 +68,7 @@ let m = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
           className: N.iconArrow,
           alt: "Open Nav"
         })]
-      }, "more"), (0, a.jsx)(d.default, {
+      }, "more"), (0, a.jsx)(d.DropdownMenu, {
         id: this._dropdownId,
         avoidRouter: i,
         TrackClick: l,
@@ -106,7 +106,7 @@ let m = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
       return e.map(e => e.external ? (0, a.jsx)("li", {
         className: N.subListItemInactive,
         children: (0, a.jsx)(t, {
-          eventName: m,
+          eventName: g,
           className: N.subListItemLink,
           data: {
             linkClicked: "mobile-".concat(e.linkClicked)
@@ -124,7 +124,7 @@ let m = p.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
           children: (0, a.jsx)(t, {
             className: N.subListItemLink,
             tag: "span",
-            eventName: m,
+            eventName: g,
             data: {
               linkClicked: "mobile-".concat(e.linkClicked)
             },

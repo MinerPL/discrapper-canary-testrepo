@@ -21,8 +21,8 @@ t.r(a), t.d(a, {
 }), t("222007"), t("70102");
 var l, s, n, i, o, r, u = t("37983"),
   d = t("884691"),
-  I = t("549471"),
-  c = t("592861"),
+  c = t("549471"),
+  I = t("592861"),
   h = t("612562"),
   S = t("77078"),
   m = t("821879"),
@@ -35,7 +35,7 @@ let D = "US",
   C = "CA",
   R = 5,
   L = ["AE", "AG", "AN", "AO", "AW", "BF", "BI", "BJ", "BM", "BO", "BQ", "BS", "BW", "BZ", "CD", "CF", "CG", "CI", "CK", "CM", "CW", "DJ", "DM", "ER", "FJ", "GA", "GD", "GH", "GM", "GQ", "GY", "HK", "HM", "IE", "JM", "KE", "KI", "KM", "KN", "KP", "LY", "ML", "MO", "MR", "MW", "NA", "NR", "NU", "QA", "RW", "SB", "SC", "SL", "SR", "ST", "SX", "SY", "TD", "TF", "TG", "TK", "TL", "TO", "TV", "UG", "VU", "YE", "ZA", "ZW"],
-  A = c.default.map(e => ({
+  A = I.default.map(e => ({
     value: e.alpha2,
     label: e.name
   })).filter(e => "KP" !== e.value && "SY" !== e.value),
@@ -48,8 +48,8 @@ let D = "US",
   y = (0, N.uid)();
 (i = l || (l = {})).NAME = "name", i.COUNTRY = "country", i.LINE1 = "line1", i.LINE2 = "line2", i.CITY = "city", i.POSTAL_CODE = "postalCode", i.STATE = "state", (o = s || (s = {})).MODAL_US = "modalUS", o.MODAL_INTL = "modalInternational", o.MODAL_US_WITH_NAME = "modalUSWithName", o.MODAL_INTL_WITH_NAME = "modalInternationalWithName", o.MODAL_US_REDUCED = "modalUSReduced", o.SETTINGS_US = "settingsUS", o.SETTINGS_INTL = "settingsInternational", o.SETTINGS_INTL_NO_NAME = "settingsInternationalWithoutName", o.SETTINGS_US_MOBILE = "settingsUSMobile", o.SETTINGS_INTL_MOBILE = "settingsInternationalMobile", o.SETTINGS_INTL_NO_NAME_MOBILE = "settingsInternationalWithoutNameMobile", (r = n || (n = {})).EDIT = "edit", r.CREATE = "create";
 let U = {
-    [D]: h.default,
-    [C]: I.default
+    [D]: h.States,
+    [C]: c.CanadaProvinces
   },
   B = {
     name: e => ({

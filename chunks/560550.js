@@ -23,7 +23,7 @@ function g(e) {
 
 function m(e, t, n, s) {
   let o = "".concat(null != r.name && "" !== r.name ? r.name : "unknown", " ").concat(null != r.version && "" !== r.version ? r.version : "unknown"),
-    l = new a.default("Connection(".concat(e, ")"));
+    l = new a.Logger("Connection(".concat(e, ")"));
   return h.BROWSER_SUPPORTS_UNIFIED_PLAN ? (l.info("Using Unified Plan (".concat(o, ")")), new f.default(e, t, n, s)) : (l.info("Using Plan B (".concat(o, ")")), new i(e, t, n, s))
 }
 i = class extends l.default {
@@ -63,7 +63,7 @@ i = class extends l.default {
   }
   setVideoEncoderParameters(e) {}
   constructor(e, t, n, i) {
-    super(e, t, n, i), this.codecs = [], this.logger = new a.default("Connection(".concat(e, ")"));
+    super(e, t, n, i), this.codecs = [], this.logger = new a.Logger("Connection(".concat(e, ")"));
     let s = new u.default;
     s.on("answer", e => this.pc.setRemoteDescription(e).catch(e => this.logger.error("Failed to set remote description (answer): ".concat(e)))), s.on("offer", e => {
       this.pc.setRemoteDescription(e).then(() => this.pc.createAnswer()).then(e => this.fpc.setRemoteDescription(e)).catch(e => this.logger.error("Failed to set remote description (offer): ".concat(e)))

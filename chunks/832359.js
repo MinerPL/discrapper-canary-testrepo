@@ -10,7 +10,7 @@ var i = n("37983"),
   a = n.n(r),
   o = n("811022"),
   l = n("784063");
-let u = new o.default("DirectVideo");
+let u = new o.Logger("DirectVideo");
 class d {
   addref() {
     this.refcount++

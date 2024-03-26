@@ -158,7 +158,7 @@ let g = e => {
               [m.scrollable]: b
             }),
             onDoubleClick: p,
-            children: [s.isMobile && null != v ? (0, a.jsx)(l.default, {
+            children: [s.isMobile && null != v ? (0, a.jsx)(l.HamburgerButton, {
               onClick: v,
               className: m.hamburger
             }) : null, i]

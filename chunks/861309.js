@@ -4,4 +4,4 @@ n.r(t), n.d(t, {
     return i
   }
 });
-var i = n("631734").default
+var i = n("631734").RPCError

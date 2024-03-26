@@ -11,7 +11,7 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("811022");
-let s = new i.default("FAST CONNECT");
+let s = new i.Logger("FAST CONNECT");
 
 function r() {
   return !1

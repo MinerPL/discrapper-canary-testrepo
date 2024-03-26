@@ -1,49 +1,49 @@
 "use strict";
 s.r(t), s.d(t, {
-  default: function() {
-    return l
+  MainNavigation: function() {
+    return p
   }
 }), s("222007");
-var n, l, a = s("37983"),
-  i = s("884691"),
-  r = s("701800"),
-  o = s("146230"),
-  c = s("292273"),
-  u = s("843455"),
-  d = s("792788");
-let p = u.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
-  h = (e, t) => [{
-    route: u.WebRoutes.DOWNLOAD,
+var n = s("37983"),
+  l = s("884691"),
+  a = s("701800"),
+  i = s("146230"),
+  r = s("292273"),
+  o = s("843455"),
+  c = s("792788");
+let u = o.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
+  d = (e, t) => [{
+    route: o.WebRoutes.DOWNLOAD,
     linkClicked: "download",
     title: t.DOWNLOAD
   }, {
-    route: u.WebRoutes.NITRO,
+    route: o.WebRoutes.NITRO,
     linkClicked: "nitro",
     title: t.NITRO,
     external: !0
   }, {
-    route: u.WebRoutes.JOBS,
+    route: o.WebRoutes.JOBS,
     linkClicked: "jobs",
     title: t.JOBS,
     external: !0
   }, {
     title: t.DEVELOPERS,
     links: [{
-      route: u.WebRoutes.RICH_PRESENCE,
+      route: o.WebRoutes.RICH_PRESENCE,
       linkClicked: "rich_presence",
       title: t.RICH_PRESENCE
     }, {
-      route: u.WebRoutes.VERIFICATION,
+      route: o.WebRoutes.VERIFICATION,
       linkClicked: "verification",
       title: t.VERIFICATION,
       external: !0
     }, {
-      route: u.Links.DEV_PORTAL,
+      route: o.Links.DEV_PORTAL,
       linkClicked: "developers",
       title: t.DEVELOPER_PORTAL,
       external: !0
     }, {
-      route: u.Links.DEV_PORTAL_DOCUMENTATION,
+      route: o.Links.DEV_PORTAL_DOCUMENTATION,
       linkClicked: "documentation",
       title: t.DOCUMENTATION,
       external: !0
@@ -51,21 +51,21 @@ let p = u.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
   }, {
     title: t.COMMUNITY,
     links: [{
-      route: u.WebRoutes.OPEN_SOURCE,
+      route: o.WebRoutes.OPEN_SOURCE,
       linkClicked: "open_source",
       title: t.OPEN_SOURCE
     }, {
-      route: u.WebRoutes.PARTNERS,
+      route: o.WebRoutes.PARTNERS,
       linkClicked: "partners",
       title: t.PARTNERS,
       external: !0
     }, {
-      route: u.WebRoutes.HYPESQUAD,
+      route: o.WebRoutes.HYPESQUAD,
       linkClicked: "hypesquad",
       title: t.HYPESQUAD,
       external: !0
     }, {
-      route: u.WebRoutes.GUIDELINES,
+      route: o.WebRoutes.GUIDELINES,
       linkClicked: "guidelines",
       title: t.GUIDELINES,
       external: !0
@@ -78,77 +78,77 @@ let p = u.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
       title: t.HELP_AND_SUPPORT,
       external: !0
     }, {
-      route: u.Links.STATUS,
+      route: o.Links.STATUS,
       linkClicked: "status",
       title: t.STATUS,
       external: !0
     }, {
-      route: u.WebRoutes.SAFETY_LANDING,
+      route: o.WebRoutes.SAFETY_LANDING,
       linkClicked: "safetycenter",
       title: t.SAFETY_CENTER,
       external: !0
     }]
   }];
-(n = class extends i.PureComponent {
+class p extends l.PureComponent {
   render() {
-    let e = (0, r.isActiveCreator)(this.context.router),
+    let e = (0, a.isActiveCreator)(this.context.router),
       {
         isMobile: t,
         isVisible: s,
-        styles: n,
-        NavigationMessages: l,
-        TrackClick: i,
+        styles: l,
+        NavigationMessages: p,
+        TrackClick: h,
         avoidRouter: N
       } = this.props,
       {
-        sectionShown: m
+        sectionShown: g
       } = this.state,
-      g = null != d.default ? d.default.getLocale().toLowerCase() : "";
-    return h(g, l).map(l => {
-      if (null != l.links) return (0, a.jsx)(c.default, {
-        title: l.title,
-        links: l.links,
-        isOpen: m === l.title,
+      m = null != c.default ? c.default.getLocale().toLowerCase() : "";
+    return d(m, p).map(a => {
+      if (null != a.links) return (0, n.jsx)(r.default, {
+        title: a.title,
+        links: a.links,
+        isOpen: g === a.title,
         isMobile: t,
         avoidRouter: N,
-        TrackClick: i,
+        TrackClick: h,
         onClose: this.closeSubNav,
         onOpen: this.openSubNav
-      }, l.title);
-      if (l.external && null != l.route) return (0, a.jsx)("li", {
-        className: n.listItemInactive,
+      }, a.title);
+      if (a.external && null != a.route) return (0, n.jsx)("li", {
+        className: l.listItemInactive,
         role: "none",
-        children: (0, a.jsx)(i, {
-          className: n.mainNavLink,
-          eventName: p,
-          data: l.linkClicked ? {
-            linkClicked: l.linkClicked
+        children: (0, n.jsx)(h, {
+          className: l.mainNavLink,
+          eventName: u,
+          data: a.linkClicked ? {
+            linkClicked: a.linkClicked
           } : {},
-          href: l.route,
+          href: a.route,
           rel: "me",
-          children: l.title
+          children: a.title
         })
-      }, "external_link_".concat(l.route));
-      if (null != l.route) return (0, a.jsx)("li", {
-        className: e(l.route) ? n.listItemActive : n.listItemInactive,
+      }, "external_link_".concat(a.route));
+      if (null != a.route) return (0, n.jsx)("li", {
+        className: e(a.route) ? l.listItemActive : l.listItemInactive,
         role: "none",
-        children: (0, a.jsx)(o.default, {
+        children: (0, n.jsx)(i.default, {
           avoidRouter: N,
-          to: l.route,
-          from: u.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
+          to: a.route,
+          from: o.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
           tabIndex: s ? 0 : -1,
           role: "menuitem",
-          children: (0, a.jsx)(i, {
+          children: (0, n.jsx)(h, {
             tag: "span",
-            className: n.mainNavLink,
-            eventName: p,
+            className: l.mainNavLink,
+            eventName: u,
             data: {
-              linkClicked: l.linkClicked
+              linkClicked: a.linkClicked
             },
-            children: l.title
+            children: a.title
           })
         })
-      }, "link_".concat(l.route));
+      }, "link_".concat(a.route));
       return []
     })
   }
@@ -171,7 +171,8 @@ let p = u.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
       })
     }
   }
-}).defaultProps = {
+}
+p.defaultProps = {
   isMobile: !1,
   isVisible: !0
-}, l = n
+}

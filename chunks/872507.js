@@ -8,7 +8,7 @@ var i = n("811022"),
   s = n("49671"),
   r = n("921278"),
   a = n("50885");
-let o = new i.default("ProcessUtilsElectron");
+let o = new i.Logger("ProcessUtilsElectron");
 class l extends r.ProcessUtils {
   setupReportingTimer() {
     var e, t;

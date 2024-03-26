@@ -188,7 +188,7 @@ var I = function(e) {
             className: a(v.mobileContentHeader, {
               [v.hideHamburger]: !e
             }),
-            children: [e && (0, l.jsx)(u.default, {
+            children: [e && (0, l.jsx)(u.HamburgerButton, {
               onClick: j
             }), O]
           });

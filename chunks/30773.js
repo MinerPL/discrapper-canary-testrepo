@@ -8,7 +8,7 @@ var i = n("811022"),
   s = n("350798"),
   r = n("390493");
 let a = "1" === r.env.KV_STORAGE_LOGGING,
-  o = new i.default("Runtime");
+  o = new i.Logger("Runtime");
 class l {
   static nextId() {
     return ++this.counter

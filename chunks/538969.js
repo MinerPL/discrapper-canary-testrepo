@@ -7,30 +7,30 @@ i.r(t), i.d(t, {
 var l = i("37983");
 i("884691");
 var s = i("750485"),
-  a = i("77078"),
-  n = i("887657"),
+  n = i("77078"),
+  a = i("887657"),
   r = i("549586"),
   o = i("564875"),
-  d = i("404158"),
-  c = i("671088"),
-  u = i("368874"),
-  h = i("775032"),
+  c = i("404158"),
+  d = i("671088"),
+  h = i("368874"),
+  u = i("775032"),
   C = i("821586"),
   f = i("922832"),
-  T = i("782340"),
-  p = i("782962"),
-  x = i("392963");
+  x = i("782340"),
+  T = i("782962"),
+  p = i("392963");
 let A = {
     [f.TeenActionDisplayType.USER_INTERACTION]: (0, l.jsx)(C.default, {
       width: 18,
       height: 18
     }),
-    [f.TeenActionDisplayType.USER_CALLED]: (0, l.jsx)(n.default, {
+    [f.TeenActionDisplayType.USER_CALLED]: (0, l.jsx)(a.default, {
       width: 22,
       height: 22
     }),
     [f.TeenActionDisplayType.USER_ADD]: (0, l.jsx)(o.default, {
-      className: p.personWavingIcon,
+      className: T.personWavingIcon,
       width: 22,
       height: 22
     }),
@@ -38,8 +38,8 @@ let A = {
       width: 22,
       height: 22
     }),
-    [f.TeenActionDisplayType.GUILD_INTERACTION]: (0, l.jsx)(d.default, {
-      className: p.threadIcon,
+    [f.TeenActionDisplayType.GUILD_INTERACTION]: (0, l.jsx)(c.default, {
+      className: T.threadIcon,
       width: 22,
       height: 22
     })
@@ -48,21 +48,21 @@ let A = {
     let {
       header: t,
       description: i,
-      icon: n
+      icon: a
     } = e;
-    return (0, l.jsxs)(s.default, {
-      className: p.row,
+    return (0, l.jsxs)(s.Flex, {
+      className: T.row,
       grow: 0,
       children: [(0, l.jsx)("div", {
-        className: p.iconContainer,
-        children: n
+        className: T.iconContainer,
+        children: a
       }), (0, l.jsxs)("div", {
-        className: p.rowContent,
-        children: [(0, l.jsx)(a.Text, {
-          className: p.rowHeader,
+        className: T.rowContent,
+        children: [(0, l.jsx)(n.Text, {
+          className: T.rowHeader,
           variant: "text-sm/bold",
           children: t
-        }), (0, l.jsx)(a.Text, {
+        }), (0, l.jsx)(n.Text, {
           variant: "text-xs/medium",
           children: i
         })]
@@ -73,43 +73,43 @@ var _ = e => {
   let {
     transitionState: t,
     onClose: i
-  } = e, n = (0, u.useAgeSpecificText)(T.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN, T.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT), r = (0, h.default)(), o = Array.from(f.ACTION_TO_TEXT.entries()), d = (0, c.useIsEligibleForFamilyCenterVCJoin)({
+  } = e, a = (0, h.useAgeSpecificText)(x.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_TEEN, x.default.Messages.FAMILY_CENTER_TOOLTIP_MODAL_HEADER_PARENT), r = (0, u.default)(), o = Array.from(f.ACTION_TO_TEXT.entries()), c = (0, d.useIsEligibleForFamilyCenterVCJoin)({
     location: "family_center_tooltip_modal_web"
   });
-  return (0, l.jsxs)(a.ModalRoot, {
+  return (0, l.jsxs)(n.ModalRoot, {
     transitionState: t,
     children: [(0, l.jsx)("img", {
-      className: p.art,
-      src: x,
-      alt: T.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
-    }), (0, l.jsx)(a.ModalContent, {
-      className: p.content,
-      children: (0, l.jsxs)(s.default, {
-        direction: s.default.Direction.VERTICAL,
-        align: s.default.Align.CENTER,
-        children: [(0, l.jsx)(a.Heading, {
-          className: p.header,
+      className: T.art,
+      src: p,
+      alt: x.default.Messages.FAMILY_CENTER_ACTIVITY_BANNER_IMAGE_ALT
+    }), (0, l.jsx)(n.ModalContent, {
+      className: T.content,
+      children: (0, l.jsxs)(s.Flex, {
+        direction: s.Flex.Direction.VERTICAL,
+        align: s.Flex.Align.CENTER,
+        children: [(0, l.jsx)(n.Heading, {
+          className: T.header,
           color: "header-primary",
           variant: "heading-lg/semibold",
-          children: (0, l.jsx)(a.HeadingLevel, {
-            children: n
+          children: (0, l.jsx)(n.HeadingLevel, {
+            children: a
           })
         }), o.map(e => {
           let [t, i] = e;
           return (0, l.jsx)(g, {
             icon: A[t],
             header: i.tooltipHeader(),
-            description: i.tooltipDescription(null != r ? r : void 0, d)
+            description: i.tooltipDescription(null != r ? r : void 0, c)
           }, t)
         })]
       })
-    }), (0, l.jsx)(a.ModalFooter, {
-      children: (0, l.jsx)(a.Button, {
-        className: p.button,
+    }), (0, l.jsx)(n.ModalFooter, {
+      children: (0, l.jsx)(n.Button, {
+        className: T.button,
         type: "button",
-        color: a.Button.Colors.BRAND,
+        color: n.Button.Colors.BRAND,
         onClick: i,
-        children: T.default.Messages.GOT_IT
+        children: x.default.Messages.GOT_IT
       })
     })]
   })

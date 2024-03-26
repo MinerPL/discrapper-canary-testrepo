@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
-  default: function() {
-    return l
+  FileInput: function() {
+    return o
   }
 }), n("222007");
 var i = n("37983"),
@@ -73,5 +73,4 @@ o.defaultProps = {
   multiple: !1,
   disabled: !1,
   tabIndex: 0
-};
-var l = o
+}

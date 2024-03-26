@@ -29,7 +29,7 @@ var n = l("803182"),
   T = l("49111"),
   R = l("724210"),
   O = l("782340");
-let b = new u.default("MessageManager");
+let b = new u.Logger("MessageManager");
 
 function L(e) {
   let {
