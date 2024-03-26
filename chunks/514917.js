@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return er
+    return ei
   }
 }), n("222007");
 var a = n("37983"),
@@ -20,317 +20,313 @@ var a = n("37983"),
   E = n("635792"),
   g = n("252063"),
   S = n("724110"),
-  C = n("501768"),
-  _ = n("373469"),
-  I = n("271938"),
-  T = n("42203"),
-  v = n("957255"),
-  x = n("824563"),
-  N = n("102985"),
-  A = n("697218"),
-  M = n("800762"),
-  R = n("387111"),
-  j = n("158998"),
-  L = n("337487"),
-  y = n("756507"),
-  O = n("713135"),
-  P = n("765698"),
-  D = n("506885"),
-  b = n("217513"),
-  U = n("893980"),
-  w = n("58351"),
-  F = n("430312"),
-  V = n("840211"),
-  k = n("789321"),
-  H = n("627601"),
-  B = n("10532"),
-  G = n("915712"),
-  W = n("369869"),
-  Y = n("802279"),
-  z = n("465215"),
-  K = n("301998"),
-  Z = n("491250"),
-  X = n("453649"),
-  Q = n("849674"),
-  q = n("817080"),
-  J = n("390413"),
-  $ = n("104649"),
-  ee = n("80615"),
-  et = n("80531"),
-  en = n("590456"),
-  ea = n("49111"),
-  el = n("646718"),
-  es = n("782340"),
-  ei = n("620310"),
-  er = e => {
+  C = n("373469"),
+  _ = n("271938"),
+  I = n("42203"),
+  T = n("957255"),
+  v = n("824563"),
+  x = n("102985"),
+  N = n("697218"),
+  A = n("800762"),
+  M = n("387111"),
+  R = n("158998"),
+  j = n("337487"),
+  L = n("756507"),
+  y = n("713135"),
+  O = n("765698"),
+  P = n("506885"),
+  D = n("217513"),
+  b = n("893980"),
+  U = n("58351"),
+  w = n("430312"),
+  F = n("840211"),
+  V = n("789321"),
+  k = n("627601"),
+  H = n("10532"),
+  B = n("915712"),
+  G = n("369869"),
+  W = n("802279"),
+  Y = n("465215"),
+  z = n("301998"),
+  K = n("491250"),
+  Z = n("453649"),
+  X = n("849674"),
+  Q = n("817080"),
+  q = n("390413"),
+  J = n("104649"),
+  $ = n("80615"),
+  ee = n("80531"),
+  et = n("590456"),
+  en = n("49111"),
+  ea = n("646718"),
+  el = n("782340"),
+  es = n("620310"),
+  ei = e => {
     var t;
     let {
       channel: n,
       showCall: s
-    } = e, r = n.recipients[0], [er, eu] = l.useState(!1), eo = l.useRef(0), ed = (0, w.default)();
-    (0, C.default)();
-    let ec = (0, o.useStateFromStores)([A.default], () => A.default.getUser(r)),
-      ef = null == ec ? void 0 : ec.isNonUserBot();
-    u(null != ec, "Profile Panel: user cannot be undefined");
-    let eh = (0, b.default)(ec.id),
+    } = e, r = n.recipients[0], [ei, er] = l.useState(!1), eu = l.useRef(0), eo = (0, U.default)(), ed = (0, o.useStateFromStores)([N.default], () => N.default.getUser(r)), ec = null == ed ? void 0 : ed.isNonUserBot();
+    u(null != ed, "Profile Panel: user cannot be undefined");
+    let ef = (0, D.default)(ed.id),
       {
-        installedIntegrations: em,
-        fetched: ep,
-        appsInGDMEnabled: eE,
-        availableApplications: eg
+        installedIntegrations: eh,
+        fetched: em,
+        appsInGDMEnabled: ep,
+        availableApplications: eE
       } = (0, g.usePrivateChannelIntegrationState)({
         channelId: n.id
       }),
-      eS = !ed && !s,
+      eg = !eo && !s,
       {
-        UserProfileAnalyticsProvider: eC,
-        trackUserProfileAction: e_
-      } = (0, y.useUserProfileAnalyticsProvider)({
+        UserProfileAnalyticsProvider: eS,
+        trackUserProfileAction: eC
+      } = (0, L.useUserProfileAnalyticsProvider)({
         layout: "DM_PANEL",
         newAnalyticsLocations: [h.default.PROFILE_PANEL],
-        userId: ec.id,
+        userId: ed.id,
         channelId: n.id
-      }, eS),
-      eI = (0, o.useStateFromStores)([M.default, T.default], () => {
+      }, eg),
+      e_ = (0, o.useStateFromStores)([A.default, I.default], () => {
         var e;
-        return null != ec ? T.default.getChannel(null === (e = M.default.getVoiceStateForUser(ec.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return null != ed ? I.default.getChannel(null === (e = A.default.getVoiceStateForUser(ed.id)) || void 0 === e ? void 0 : e.channelId) : null
       }),
       {
-        enableHangStatus: eT
+        enableHangStatus: eI
       } = m.HangStatusExperiment.useExperiment({
-        guildId: null == eI ? void 0 : eI.guild_id,
+        guildId: null == e_ ? void 0 : e_.guild_id,
         location: "ActivityStatus"
       }, {
         autoTrackExposure: !1
       }),
       {
-        activity: ev,
-        customStatusActivity: ex,
-        isApplicationStreaming: eN,
-        isMobile: eA,
-        status: eM,
-        hangStatusActivity: eR,
-        isHangStatusPrimaryActivity: ej
-      } = (0, o.useStateFromStoresObject)([_.default, x.default, v.default], () => {
+        activity: eT,
+        customStatusActivity: ev,
+        isApplicationStreaming: ex,
+        isMobile: eN,
+        status: eA,
+        hangStatusActivity: eM,
+        isHangStatusPrimaryActivity: eR
+      } = (0, o.useStateFromStoresObject)([C.default, v.default, T.default], () => {
         var e;
-        let t = null != _.default.getAnyStreamForUser(ec.id);
+        let t = null != C.default.getAnyStreamForUser(ed.id);
         return {
-          activity: x.default.findActivity(ec.id, e => {
+          activity: v.default.findActivity(ed.id, e => {
             let {
               type: n
             } = e;
-            return t ? n === ea.ActivityTypes.PLAYING : n !== ea.ActivityTypes.CUSTOM_STATUS && n !== ea.ActivityTypes.HANG_STATUS
+            return t ? n === en.ActivityTypes.PLAYING : n !== en.ActivityTypes.CUSTOM_STATUS && n !== en.ActivityTypes.HANG_STATUS
           }),
-          customStatusActivity: x.default.findActivity(ec.id, e => {
+          customStatusActivity: v.default.findActivity(ed.id, e => {
             let {
               type: t
             } = e;
-            return t === ea.ActivityTypes.CUSTOM_STATUS
+            return t === en.ActivityTypes.CUSTOM_STATUS
           }),
           isApplicationStreaming: t,
-          isMobile: x.default.isMobileOnline(ec.id),
-          status: ef ? null : x.default.getStatus(ec.id),
-          isHangStatusPrimaryActivity: (null === (e = x.default.findActivity(ec.id, e => {
+          isMobile: v.default.isMobileOnline(ed.id),
+          status: ec ? null : v.default.getStatus(ed.id),
+          isHangStatusPrimaryActivity: (null === (e = v.default.findActivity(ed.id, e => {
             let {
               type: n
             } = e;
-            return t ? n === ea.ActivityTypes.PLAYING : n !== ea.ActivityTypes.CUSTOM_STATUS
-          })) || void 0 === e ? void 0 : e.type) === ea.ActivityTypes.HANG_STATUS,
-          hangStatusActivity: eT && null != eI && v.default.can(ea.Permissions.CONNECT, eI) ? x.default.findActivity(ec.id, e => {
+            return t ? n === en.ActivityTypes.PLAYING : n !== en.ActivityTypes.CUSTOM_STATUS
+          })) || void 0 === e ? void 0 : e.type) === en.ActivityTypes.HANG_STATUS,
+          hangStatusActivity: eI && null != e_ && T.default.can(en.Permissions.CONNECT, e_) ? v.default.findActivity(ed.id, e => {
             let {
               type: t
             } = e;
-            return t === ea.ActivityTypes.HANG_STATUS
+            return t === en.ActivityTypes.HANG_STATUS
           }) : null
         }
       }),
-      eL = null != ev || null != eR || eN,
-      ey = null !== (t = R.default.getNickname(null, n.id, ec)) && void 0 !== t ? t : j.default.getName(ec),
-      eO = (0, o.useStateFromStores)([N.default], () => N.default.hidePersonalInformation),
-      [eP, eD, eb, eU, ew] = (0, o.useStateFromStoresArray)([O.default], () => [O.default.getMutualFriendsCount(ec.id), O.default.getMutualFriends(ec.id), O.default.getMutualGuilds(ec.id), O.default.isFetchingProfile(ec.id), O.default.isFetchingFriends(ec.id)]),
-      eF = (0, X.useGetVoiceChannelInfoForVoiceActivitySection)(ec.id),
-      eV = null != eF && !eN && !ej,
+      ej = null != eT || null != eM || ex,
+      eL = null !== (t = M.default.getNickname(null, n.id, ed)) && void 0 !== t ? t : R.default.getName(ed),
+      ey = (0, o.useStateFromStores)([x.default], () => x.default.hidePersonalInformation),
+      [eO, eP, eD, eb, eU] = (0, o.useStateFromStoresArray)([y.default], () => [y.default.getMutualFriendsCount(ed.id), y.default.getMutualFriends(ed.id), y.default.getMutualGuilds(ed.id), y.default.isFetchingProfile(ed.id), y.default.isFetchingFriends(ed.id)]),
+      ew = (0, Z.useGetVoiceChannelInfoForVoiceActivitySection)(ed.id),
+      eF = null != ew && !ex && !eR,
       {
-        showVoiceActivityInProfile: ek
-      } = P.VoiceActivityProfileExperiment.useExperiment({
+        showVoiceActivityInProfile: eV
+      } = O.VoiceActivityProfileExperiment.useExperiment({
         location: "user DM panel"
       }, {
-        autoTrackExposure: eV && eS
+        autoTrackExposure: eF && eg
       }),
       {
-        enabled: eH
+        enabled: ek
       } = p.default.useExperiment({
         location: "user DM panel"
       }, {
-        autoTrackExposure: eS
+        autoTrackExposure: eg
       }),
-      eB = !ec.bot && null != eb && eb.length > 0,
-      eG = !ec.bot && null != eP && eP > 0,
-      eW = (0, Q.useShouldShowUserPopoutCollectiblesUpsell)({
-        popoutUser: ec,
-        source: H.UserPopoutUpsellSource.PROFILE_PANEL
+      eH = !ed.bot && null != eD && eD.length > 0,
+      eB = !ed.bot && null != eO && eO > 0,
+      eG = (0, X.useShouldShowUserPopoutCollectiblesUpsell)({
+        popoutUser: ed,
+        source: k.UserPopoutUpsellSource.PROFILE_PANEL
       }),
-      eY = (0, f.default)();
+      eW = (0, f.default)();
     l.useEffect(() => {
-      eo.current = Date.now()
+      eu.current = Date.now()
     }, []), l.useEffect(() => {
-      (0, D.default)(ec.id, ec.getAvatarURL(void 0, 80), {
-        withMutualGuilds: !ec.bot,
-        withMutualFriendsCount: !ec.bot
+      (0, P.default)(ed.id, ed.getAvatarURL(void 0, 80), {
+        withMutualGuilds: !ed.bot,
+        withMutualFriendsCount: !ed.bot
       })
-    }, [ec]), l.useEffect(() => {
-      null != eh && eS && (0, U.trackProfilePanelViewed)({
-        displayProfile: eh,
-        isMobile: eA,
-        loadDurationMs: Date.now() - eo.current,
-        activity: ev,
-        customStatusActivity: ex,
-        status: eM
+    }, [ed]), l.useEffect(() => {
+      null != ef && eg && (0, b.trackProfilePanelViewed)({
+        displayProfile: ef,
+        isMobile: eN,
+        loadDurationMs: Date.now() - eu.current,
+        activity: eT,
+        customStatusActivity: ev,
+        status: eA
       })
-    }, [eh, eA, ev, ex, eM, eS]);
-    let ez = null == eb ? void 0 : eb.map(e => (0, a.jsx)(ee.default, {
+    }, [ef, eN, eT, ev, eA, eg]);
+    let eY = null == eD ? void 0 : eD.map(e => (0, a.jsx)($.default, {
         connection: e,
-        user: ec,
-        theme: eY
+        user: ed,
+        theme: eW
       }, e.guild.id)),
-      eK = null == eD ? void 0 : eD.map(e => (0, a.jsx)($.default, {
+      ez = null == eP ? void 0 : eP.map(e => (0, a.jsx)(J.default, {
         connection: e,
         channelId: n.id
       }, e.key)),
-      eZ = em.map(e => (0, a.jsx)(q.default, {
+      eK = eh.map(e => (0, a.jsx)(Q.default, {
         channel: n,
         integration: e
       }, e.application.id)),
-      eX = l.useCallback(() => {
-        !ec.bot && !ew && null == eK && (0, c.fetchMutualFriends)(ec.id)
-      }, [ew, eK, ec.id, ec.bot]),
-      eQ = l.useCallback(() => eu(!0), []),
-      eq = l.useCallback(() => eu(!1), []),
-      eJ = (0, o.useStateFromStores)([I.default], () => I.default.getId()),
-      e$ = ec.id === eJ,
-      e0 = ec.bot || e$,
+      eZ = l.useCallback(() => {
+        !ed.bot && !eU && null == ez && (0, c.fetchMutualFriends)(ed.id)
+      }, [eU, ez, ed.id, ed.bot]),
+      eX = l.useCallback(() => er(!0), []),
+      eQ = l.useCallback(() => er(!1), []),
+      eq = (0, o.useStateFromStores)([_.default], () => _.default.getId()),
+      eJ = ed.id === eq,
+      e$ = ed.bot || eJ,
       {
-        enabled: e1
-      } = (0, L.useProfileMutualsExperiment)({
+        enabled: e0
+      } = (0, j.useProfileMutualsExperiment)({
         autoTrackExposure: !0,
         location: h.default.PROFILE,
-        disable: e0
+        disable: e$
       });
-    return eS ? (0, a.jsx)(eC, {
+    return eg ? (0, a.jsx)(eS, {
       children: (0, a.jsx)("aside", {
-        className: ei.profilePanel,
-        onMouseEnter: eQ,
-        onMouseLeave: eq,
-        children: (0, a.jsxs)(F.default, {
-          user: ec,
-          profileType: en.UserProfileTypes.PANEL,
+        className: es.profilePanel,
+        onMouseEnter: eX,
+        onMouseLeave: eQ,
+        children: (0, a.jsxs)(w.default, {
+          user: ed,
+          profileType: et.UserProfileTypes.PANEL,
           useDefaultClientTheme: !0,
-          children: [eW.shouldShow && (0, a.jsx)(k.default, {
-            user: ec,
-            upsellSource: H.UserPopoutUpsellSource.PROFILE_PANEL,
-            displayProfile: eh,
+          children: [eG.shouldShow && (0, a.jsx)(V.default, {
+            user: ed,
+            upsellSource: k.UserPopoutUpsellSource.PROFILE_PANEL,
+            displayProfile: ef,
             isInSidebar: !0,
-            ...eW
-          }, ec.id), (0, a.jsxs)(d.ScrollerNone, {
-            children: [(0, a.jsx)(et.default, {
-              user: ec,
-              displayProfile: eh,
+            ...eG
+          }, ed.id), (0, a.jsxs)(d.ScrollerNone, {
+            children: [(0, a.jsx)(ee.default, {
+              user: ed,
+              displayProfile: ef,
               channel: n,
-              animateAssets: er,
-              forceShowPremiumBadge: er
-            }), (0, a.jsxs)(F.default.Inner, {
-              children: [(0, a.jsx)(Z.default, {
-                user: ec,
-                nickname: ey,
-                pronouns: null == eh ? void 0 : eh.pronouns
-              }), (0, a.jsx)(Y.default, {
-                customStatusActivity: ex,
-                animate: er
-              }), (0, a.jsx)(B.default, {}), (0, a.jsx)(W.default, {
-                bio: null == eh ? void 0 : eh.bio,
-                hidePersonalInformation: eO,
+              animateAssets: ei,
+              forceShowPremiumBadge: ei
+            }), (0, a.jsxs)(w.default.Inner, {
+              children: [(0, a.jsx)(K.default, {
+                user: ed,
+                nickname: eL,
+                pronouns: null == ef ? void 0 : ef.pronouns
+              }), (0, a.jsx)(W.default, {
+                customStatusActivity: ev,
+                animate: ei
+              }), (0, a.jsx)(H.default, {}), (0, a.jsx)(G.default, {
+                bio: null == ef ? void 0 : ef.bio,
+                hidePersonalInformation: ey,
                 animateOnHover: !0,
-                isHovering: er
-              }), e1 && (0, a.jsx)(V.default, {
-                className: ei.profileMutuals,
-                user: ec
-              }), !ec.isSystemUser() && (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(z.default, {
+                isHovering: ei
+              }), e0 && (0, a.jsx)(F.default, {
+                className: es.profileMutuals,
+                user: ed
+              }), !ed.isSystemUser() && (0, a.jsxs)(a.Fragment, {
+                children: [(0, a.jsx)(Y.default, {
                   userId: r
-                }), (0, a.jsx)(B.default, {})]
-              }), (0, a.jsx)(K.default, {
-                user: ec,
+                }), (0, a.jsx)(H.default, {})]
+              }), (0, a.jsx)(z.default, {
+                user: ed,
                 setNote: !1
               })]
-            }), ek && eV ? (0, a.jsx)(F.default.Inner, {
-              children: (0, a.jsx)(X.default, {
-                voiceGuild: eF.voiceGuild,
-                voiceChannel: eF.voiceChannel,
-                color: ei.appButtonColor
+            }), eV && eF ? (0, a.jsx)(w.default.Inner, {
+              children: (0, a.jsx)(Z.default, {
+                voiceGuild: ew.voiceGuild,
+                voiceChannel: ew.voiceChannel,
+                color: es.appButtonColor
               })
-            }) : null, eL ? (0, a.jsx)(F.default.Inner, {
-              children: (0, a.jsx)(G.default, {
-                activity: null != ev ? ev : eR,
-                user: ec,
+            }) : null, ej ? (0, a.jsx)(w.default.Inner, {
+              children: (0, a.jsx)(B.default, {
+                activity: null != eT ? eT : eM,
+                user: ed,
                 channelId: n.id,
                 analyticsParams: {
                   location: {
-                    page: ea.AnalyticsPages.USER_PROFILE,
-                    section: ea.AnalyticsSections.DM_PROFILE
+                    page: en.AnalyticsPages.USER_PROFILE,
+                    section: en.AnalyticsSections.DM_PROFILE
                   }
                 }
               })
-            }) : null, (eB || eG) && (0, a.jsxs)(F.default.Inner, {
-              className: ei.profilePanelConnections,
-              children: [eB ? (0, a.jsx)(J.default, {
-                className: ei.mutualGuildsList,
-                header: es.default.Messages.MUTUAL_GUILDS_COUNT.format({
-                  count: null == eb ? void 0 : eb.length
+            }) : null, (eH || eB) && (0, a.jsxs)(w.default.Inner, {
+              className: es.profilePanelConnections,
+              children: [eH ? (0, a.jsx)(q.default, {
+                className: es.mutualGuildsList,
+                header: el.default.Messages.MUTUAL_GUILDS_COUNT.format({
+                  count: null == eD ? void 0 : eD.length
                 }),
-                isLoadingHeader: eU,
+                isLoadingHeader: eb,
                 onExpand: () => {
-                  e_({
+                  eC({
                     action: "PRESS_SECTION",
                     section: "MUTUAL_GUILDS"
                   })
                 },
-                children: ez
-              }) : null, eG ? (0, a.jsx)(J.default, {
-                className: i(ei.mutualFriendsList, {
-                  [ei.mutualFriendsDivider]: eB
+                children: eY
+              }) : null, eB ? (0, a.jsx)(q.default, {
+                className: i(es.mutualFriendsList, {
+                  [es.mutualFriendsDivider]: eH
                 }),
-                header: es.default.Messages.MUTUAL_FRIENDS_COUNT.format({
-                  count: eP
+                header: el.default.Messages.MUTUAL_FRIENDS_COUNT.format({
+                  count: eO
                 }),
-                isLoadingHeader: eU,
-                isLoadingContents: ew,
-                loadingContentsCount: eP,
-                onFocus: eX,
-                onHover: eX,
-                itemType: J.ListType.MutualFriendsList,
+                isLoadingHeader: eb,
+                isLoadingContents: eU,
+                loadingContentsCount: eO,
+                onFocus: eZ,
+                onHover: eZ,
+                itemType: q.ListType.MutualFriendsList,
                 onExpand: () => {
-                  e_({
+                  eC({
                     action: "PRESS_SECTION",
                     section: "MUTUAL_FRIENDS"
                   })
                 },
-                children: eK
+                children: ez
               }) : null]
-            }), eE && (0, a.jsx)(F.default.Inner, {
-              className: i(ei.profilePanelConnections, ei.appListThemedContainer),
-              children: (0, a.jsxs)(J.default, {
-                header: eZ.length > 0 ? es.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                  count: eZ.length
-                }) : es.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
-                isLoadingContents: !ep,
+            }), ep && (0, a.jsx)(w.default.Inner, {
+              className: i(es.profilePanelConnections, es.appListThemedContainer),
+              children: (0, a.jsxs)(q.default, {
+                header: eK.length > 0 ? el.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                  count: eK.length
+                }) : el.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
+                isLoadingContents: !em,
                 isLoadingHeader: !1,
-                itemType: J.ListType.AppsList,
-                children: [eZ, eg.length > 0 && (0, a.jsxs)("div", {
-                  className: ei.appButtonContainer,
-                  children: [0 === em.length && (0, a.jsx)(d.Text, {
+                itemType: q.ListType.AppsList,
+                children: [eK, eE.length > 0 && (0, a.jsxs)("div", {
+                  className: es.appButtonContainer,
+                  children: [0 === eh.length && (0, a.jsx)(d.Text, {
                     variant: "text-xs/normal",
                     color: "header-secondary",
-                    children: es.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
+                    children: el.default.Messages.PRIVATE_CHANNEL_ADD_APPS_INFO
                   }), (0, a.jsx)(d.Button, {
                     onClick: () => {
                       (0, d.openModal)(e => (0, a.jsx)(S.default, {
@@ -338,28 +334,28 @@ var a = n("37983"),
                         ...e
                       }))
                     },
-                    color: ei.appButtonColor,
-                    className: ei.appButton,
+                    color: es.appButtonColor,
+                    className: es.appButton,
                     fullWidth: !0,
                     size: d.ButtonSizes.SMALL,
-                    children: es.default.Messages.PRIVATE_CHANNEL_ADD_APPS
+                    children: el.default.Messages.PRIVATE_CHANNEL_ADD_APPS
                   })]
                 })]
               })
-            }), eH && (0, a.jsx)("div", {
-              className: ei.giftButtonContainer,
+            }), ek && (0, a.jsx)("div", {
+              className: es.giftButtonContainer,
               children: (0, a.jsx)(E.default, {
-                className: ei.giftButton,
+                className: es.giftButton,
                 look: d.Button.Looks.FILLED,
-                buttonText: es.default.Messages.GIFT_NITRO,
-                buttonTextClassName: ei.giftButtonCTA,
+                buttonText: el.default.Messages.GIFT_NITRO,
+                buttonTextClassName: es.giftButtonCTA,
                 color: d.Button.Colors.CUSTOM,
-                giftRecipient: ec,
-                subscriptionTier: el.PremiumSubscriptionSKUs.TIER_2,
+                giftRecipient: ed,
+                subscriptionTier: ea.PremiumSubscriptionSKUs.TIER_2,
                 premiumModalAnalyticsLocation: {
-                  section: ea.AnalyticsSections.DM_PROFILE
+                  section: en.AnalyticsSections.DM_PROFILE
                 },
-                onClick: () => e_({
+                onClick: () => eC({
                   action: "GIFT_PREMIUM"
                 })
               })
