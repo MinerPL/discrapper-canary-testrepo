@@ -176,12 +176,15 @@ function M(e) {
                 onClick: t,
                 onMouseEnter: a,
                 onMouseLeave: s,
-                ...i
+                onBlur: i,
+                onFocus: r,
+                ...o
               } = e;
               return (0, n.jsx)(d.Button, {
-                ...i,
+                ...o,
+                "aria-label": "",
                 onClick: () => {
-                  null == t || t(), j(!0), b.start(1e3, () => j(!1)), D()
+                  null == t || t(), j(!0), d.AccessibilityAnnouncer.announce(A.default.Messages.INTEGRATIONS_WEBHOOK_COPIED_URL), b.start(1e3, () => j(!1)), D()
                 },
                 size: d.Button.Sizes.SMALL,
                 color: d.Button.Colors.PRIMARY,
