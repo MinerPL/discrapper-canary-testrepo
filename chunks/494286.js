@@ -43,8 +43,8 @@ var a = n("37983"),
   V = n("292687"),
   k = n("393414"),
   H = n("168973"),
-  B = n("581389"),
-  G = n("103738"),
+  G = n("581389"),
+  B = n("103738"),
   W = n("486030"),
   Y = n("908583"),
   z = n("550410"),
@@ -230,7 +230,7 @@ class eF extends l.PureComponent {
       screenMessage: this.screenMessage,
       disableGradients: E,
       idle: !m && n && !E && e.idle,
-      children: n && this.popoutOpen && !this.inPopout ? null : (0, a.jsx)(G.default, {
+      children: n && this.popoutOpen && !this.inPopout ? null : (0, a.jsx)(B.default, {
         ref: this._contentRef,
         inCall: n,
         paused: this.paused,
@@ -470,7 +470,7 @@ class eF extends l.PureComponent {
         inCall: t,
         layout: n
       } = this.props;
-      return t || n === eP.ChannelLayouts.MINIMUM || n === eP.ChannelLayouts.NORMAL ? (0, a.jsx)(B.default, {
+      return t || n === eP.ChannelLayouts.MINIMUM || n === eP.ChannelLayouts.NORMAL ? (0, a.jsx)(G.default, {
         exitFullScreen: this.maybeLeaveFullScreen,
         channel: e,
         onDisconnectCall: this.handleDisconnect,
@@ -678,7 +678,7 @@ var eV = function(e) {
     layout: w,
     participantsOpen: F,
     chatOpen: k,
-    selectedParticipant: B
+    selectedParticipant: G
   } = (0, o.useStateFromStoresObject)([eT.default], () => {
     let e = E === eP.AppContext.POPOUT,
       t = eT.default.getMode(n.id);
@@ -694,11 +694,11 @@ var eV = function(e) {
       chatOpen: eT.default.getChatOpen(n.id),
       participantsVersion: eT.default.getParticipantsVersion(n.id)
     }
-  }, [E, n.id]), G = (0, o.useStateFromStoresArray)([ea.default], () => ea.default.getAllActiveStreams()), {
+  }, [E, n.id]), B = (0, o.useStateFromStoresArray)([ea.default], () => ea.default.getAllActiveStreams()), {
     selectedStream: W
   } = (0, o.useStateFromStoresObject)([ea.default], () => ({
-    selectedStream: null != B ? ea.default.getActiveStreamForStreamKey(B.id) : null
-  }), [B]), Y = (0, o.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, o.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), K = (0, o.useStateFromStores)([eo.default], () => eo.default.getMentionCount(n.id), [n.id]), Z = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
+    selectedStream: null != G ? ea.default.getActiveStreamForStreamKey(G.id) : null
+  }), [G]), Y = (0, o.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, o.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), K = (0, o.useStateFromStores)([eo.default], () => eo.default.getMentionCount(n.id), [n.id]), Z = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
     popoutWindow: X,
     popoutWindowAlwaysOnTop: Q
   } = (0, o.useStateFromStoresObject)([V.default], () => ({
@@ -758,8 +758,8 @@ var eV = function(e) {
             maxSidebarWidth: r - 550,
             shouldUseVoiceEffectsActionBar: ep,
             currentUserId: Z,
-            selectedParticipant: B,
-            allActiveStreams: G,
+            selectedParticipant: G,
+            allActiveStreams: B,
             useNewInviteButton: ec,
             connectedToEmbeddedActivity: em,
             showChatToasts: J,

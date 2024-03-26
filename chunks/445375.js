@@ -43,8 +43,8 @@ var a = n("37983"),
   V = n("730498"),
   k = n("24337"),
   H = n("967241"),
-  B = n("517141"),
-  G = n("49111"),
+  G = n("517141"),
+  B = n("49111"),
   W = n("782340"),
   Y = n("303283"),
   z = n("247703");
@@ -149,7 +149,7 @@ function X(e) {
       privateThreadMode: s,
       textAreaState: i,
       location: r
-    } = e, [u, o] = l.useState(null), [d, c] = l.useState(null), f = (0, B.default)({
+    } = e, [u, o] = l.useState(null), [d, c] = l.useState(null), f = (0, G.default)({
       parentChannel: t,
       parentMessageId: n,
       threadSettings: a,
@@ -185,7 +185,7 @@ function X(e) {
       try {
         await f(e, l, s)
       } catch (e) {
-        return (null === (d = e.body) || void 0 === d ? void 0 : d.code) === G.AbortCodes.AUTOMOD_TITLE_BLOCKED && o((0, F.makeAutomodViolationError)(e.body, t)), {
+        return (null === (d = e.body) || void 0 === d ? void 0 : d.code) === B.AbortCodes.AUTOMOD_TITLE_BLOCKED && o((0, F.makeAutomodViolationError)(e.body, t)), {
           shouldClear: !1,
           shouldRefocus: !0
         }
@@ -237,7 +237,7 @@ function X(e) {
                 threadSettings: m,
                 updateThreadSettings: E,
                 error: x
-              }), t.type === G.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(Q, {
+              }), t.type === B.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(Q, {
                 startedFromMessage: null != n,
                 threadSettings: m,
                 updateThreadSettings: E,
@@ -324,7 +324,7 @@ function q(e) {
       value: o,
       id: m,
       placeholder: "" !== f ? f : W.default.Messages.FORM_THREAD_NAME_PLACEHOLDER,
-      maxLength: G.MAX_CHANNEL_NAME_LENGTH,
+      maxLength: B.MAX_CHANNEL_NAME_LENGTH,
       onChange: e => {
         i({
           name: (0, k.default)(e, !1)
@@ -362,13 +362,13 @@ function J(e) {
     return c(t, a, n)
   }, [c]);
   (0, b.useComponentAction)({
-    event: G.ComponentActions.TEXTAREA_FOCUS,
+    event: B.ComponentActions.TEXTAREA_FOCUS,
     handler: p
   }), (0, b.useComponentAction)({
-    event: G.ComponentActions.TEXTAREA_BLUR,
+    event: B.ComponentActions.TEXTAREA_BLUR,
     handler: E
   });
-  let I = (0, r.useStateFromStores)([R.default], () => R.default.can(G.Permissions.ATTACH_FILES, t)),
+  let I = (0, r.useStateFromStores)([R.default], () => R.default.can(B.Permissions.ATTACH_FILES, t)),
     T = (0, F.renderError)(f, {
       content: n.textValue
     });

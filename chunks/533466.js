@@ -43,8 +43,8 @@ var a = n("37983"),
   V = n("928265"),
   k = n("744568"),
   H = n("257869"),
-  B = n("848848"),
-  G = n("93252"),
+  G = n("848848"),
+  B = n("93252"),
   W = n("661455"),
   Y = n("230035"),
   z = n("155832"),
@@ -97,8 +97,8 @@ var a = n("37983"),
   eV = n("980423"),
   ek = n("439932"),
   eH = n("679653"),
-  eB = n("176347"),
-  eG = n("665182"),
+  eG = n("176347"),
+  eB = n("665182"),
   eW = n("61918"),
   eY = n("656612"),
   ez = n("624027"),
@@ -212,7 +212,7 @@ class e2 extends l.PureComponent {
       nsfwAllowed: l,
       needSubscriptionToAccess: s
     } = this.props;
-    if (u(null != e, "Missing channel in Channel.renderChat"), s) return (u(null != n, "premium channels must exist within a guild"), null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel()) ? (0, a.jsx)(G.default, {
+    if (u(null != e, "Missing channel in Channel.renderChat"), s) return (u(null != n, "premium channels must exist within a guild"), null == e ? void 0 : e.isRoleSubscriptionTemplatePreviewChannel()) ? (0, a.jsx)(B.default, {
       guildId: n.id
     }) : (0, a.jsx)(H.GroupListingsFetchContextProvider, {
       guildId: n.id,
@@ -241,7 +241,7 @@ class e2 extends l.PureComponent {
         sidebarState: t
       }, e.id)
     }
-    return (0, a.jsx)(eB.default, {
+    return (0, a.jsx)(eG.default, {
       channel: e,
       guild: n,
       chatInputType: j.ChatInputTypes.NORMAL
@@ -387,8 +387,8 @@ class e2 extends l.PureComponent {
     if (null == e) return null;
     let o = (null == t ? void 0 : t.type) != null && eK.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
       d = u - eK.CHANNEL_SIDEBAR_WIDTH - o;
-    return (0, a.jsx)(eG.default, {
-      sidebarType: (null == t ? void 0 : t.type) != null && eK.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? eG.ChatSidebarType.PostSidebar : eG.ChatSidebarType.ThreadSidebar,
+    return (0, a.jsx)(eB.default, {
+      sidebarType: (null == t ? void 0 : t.type) != null && eK.ChannelTypesSets.GUILD_THREADS_ONLY.has(t.type) ? eB.ChatSidebarType.PostSidebar : eB.ChatSidebarType.ThreadSidebar,
       maxWidth: d,
       onWidthChange: this.handleThreadSidebarResize,
       children: e
@@ -719,7 +719,7 @@ var e3 = l.memo(function(e) {
     providedChannel: n
   } = e, [s, i] = l.useState(null), r = (0, f.useStateFromStores)([eb.default], () => eb.default.getChannelId()), u = (0, f.useStateFromStores)([eb.default], () => eb.default.getVoiceChannelId()), o = (0, f.useStateFromStores)([eR.default], () => null != n ? n : eR.default.getChannel(r), [r, n]), p = (0, f.useStateFromStores)([eR.default], () => eR.default.getChannel(u), [u]), E = null == o ? void 0 : o.parent_id, g = (0, f.useStateFromStores)([eR.default], () => eR.default.getChannel(E), [E]), S = (0, f.useStateFromStores)([eO.default], () => eO.default.getGuild(null == o ? void 0 : o.guild_id), [o]), {
     needSubscriptionToAccess: C
-  } = (0, B.default)(null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
+  } = (0, G.default)(null !== (t = null == o ? void 0 : o.id) && void 0 !== t ? t : void 0), _ = (0, f.useStateFromStores)([M.default], () => {
     let e = null != r ? M.default.getParticipants(r) : [],
       t = null != r ? M.default.getActivityParticipants(r) : [];
     return e.length - t.length > 0
@@ -734,7 +734,7 @@ var e3 = l.memo(function(e) {
   } = (0, f.useStateFromStoresObject)([eM.default], () => ({
     section: eM.default.getSection(r, null == o ? void 0 : o.isDM()),
     channelSidebarState: eM.default.getSidebarState(r)
-  }), [r, o]), G = null == S ? void 0 : S.id, W = (0, f.useStateFromStores)([eM.default], () => eM.default.getGuildSidebarState(G), [G]), Y = (0, f.useStateFromStores)([eU.default], () => eU.default.getGuildId()), z = Y === eK.FAVORITES, K = (0, eH.default)(o), Z = (0, eH.default)(o, !0), X = null != o && u === o.id, Q = null != o && o.isGuildStageVoice();
+  }), [r, o]), B = null == S ? void 0 : S.id, W = (0, f.useStateFromStores)([eM.default], () => eM.default.getGuildSidebarState(B), [B]), Y = (0, f.useStateFromStores)([eU.default], () => eU.default.getGuildId()), z = Y === eK.FAVORITES, K = (0, eH.default)(o), Z = (0, eH.default)(o, !0), X = null != o && u === o.id, Q = null != o && o.isGuildStageVoice();
   l.useEffect(() => {
     var e, t, n;
     let a = (0, eu.getHistory)();

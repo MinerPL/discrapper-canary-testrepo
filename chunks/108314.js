@@ -191,7 +191,7 @@ var k = e => {
   } = (0, y.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
-  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, k = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [H, B] = l.useState(!1), [G, W] = l.useState(!1), Y = l.useCallback(e => {
+  } = (0, I.default)(h), w = (null == U ? void 0 : U.id) === n, k = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [H, G] = l.useState(!1), [B, W] = l.useState(!1), Y = l.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
   }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), Q = (0, T.default)(s, n), q = null != Z && null == R && Q, J = (0, o.default)(O.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
@@ -253,14 +253,14 @@ var k = e => {
           }), (0, a.jsx)(u.Text, {
             variant: "text-sm/normal",
             color: "text-normal",
-            className: i((!G || !H) && b.tierDescriptionTruncate),
+            className: i((!B || !H) && b.tierDescriptionTruncate),
             children: (0, a.jsx)("div", {
               ref: Y,
               children: K
             })
-          }), G && (0, a.jsx)(V, {
+          }), B && (0, a.jsx)(V, {
             isViewAll: H,
-            onToggle: () => B(e => !e),
+            onToggle: () => G(e => !e),
             showMoreText: es
           })]
         })]

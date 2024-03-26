@@ -1,33 +1,33 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return c
+    return u
   }
 });
-var r = a("37983");
+var s = a("37983");
 a("884691");
-var s = a("414456"),
-  l = a.n(s),
+var l = a("414456"),
+  r = a.n(l),
   n = a("77078"),
-  i = a("153160"),
-  o = a("468437"),
-  c = e => {
+  o = a("153160"),
+  i = a("468437"),
+  u = e => {
     var t;
     let {
       price: {
         amount: a,
-        currency: s
+        currency: l
       },
-      renderPrice: c,
-      icon: u,
+      renderPrice: u,
+      icon: c,
       className: d,
       variant: f = "heading-md/semibold",
       alwaysWhiteText: m = !0
-    } = e, p = (0, i.formatPrice)(a, s);
-    return (0, r.jsxs)(n.Heading, {
+    } = e, p = (0, o.formatPrice)(a, l);
+    return (0, s.jsxs)(n.Heading, {
       variant: f,
       color: m ? "always-white" : "none",
-      className: l(o.heading, d),
-      children: [u, null !== (t = null == c ? void 0 : c(p)) && void 0 !== t ? t : p]
+      className: r(i.heading, d),
+      children: [c, null !== (t = null == u ? void 0 : u(p)) && void 0 !== t ? t : p]
     })
   }

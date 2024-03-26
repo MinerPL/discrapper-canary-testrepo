@@ -41,8 +41,8 @@ function g(e) {
     globalName: h,
     consent: g,
     password: m,
-    guildTemplateCode: T,
-    birthday: p,
+    guildTemplateCode: p,
+    birthday: T,
     invite: I = null,
     giftCodeSKUId: A = null,
     multiStep: S = !1,
@@ -51,8 +51,8 @@ function g(e) {
   } = e;
   return l.default.dispatch({
     type: "REGISTER",
-    birthday: S ? p : null
-  }), null != p && ((0, E.default)(p, f.AnalyticsSections.REGISTER), d.default.track(f.AnalyticEvents.AGE_GATE_ACTION, {
+    birthday: S ? T : null
+  }), null != T && ((0, E.default)(T, f.AnalyticsSections.REGISTER), d.default.track(f.AnalyticEvents.AGE_GATE_ACTION, {
     source: _.AgeGateSource.REGISTER,
     action: _.AgeGateAnalyticAction.AGE_GATE_SUBMITTED
   }), ! function(e) {
@@ -61,7 +61,7 @@ function g(e) {
     !(n < 13) && (t = n >= 13 && n <= 17 ? "13-17" : n >= 18 && n <= 22 ? "18-22" : "23+", d.default.track(f.AnalyticEvents.USER_AGE_SUBMITTED, {
       age_bucket: t
     }))
-  }(p)), c.default.post({
+  }(T)), c.default.post({
     url: f.Endpoints.REGISTER,
     body: {
       fingerprint: u.default.getFingerprint(),
@@ -72,9 +72,9 @@ function g(e) {
       invite: I,
       consent: g,
       phone_token: n,
-      date_of_birth: null == p ? void 0 : p.format("YYYY-MM-DD"),
+      date_of_birth: null == T ? void 0 : T.format("YYYY-MM-DD"),
       gift_code_sku_id: A,
-      guild_template_code: T,
+      guild_template_code: p,
       promotional_email_opt_in: null == R ? void 0 : R.checked
     },
     trackedActionData: {

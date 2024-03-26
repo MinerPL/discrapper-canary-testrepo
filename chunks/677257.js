@@ -1,21 +1,21 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return u
+    return c
   }
 });
-var r = a("656280"),
-  s = a.n(r),
-  l = a("669491"),
+var s = a("656280"),
+  l = a.n(s),
+  r = a("669491"),
   n = a("546483");
-let i = s(l.default.unsafe_rawColors.WHITE_500.resolve({
+let o = l(r.default.unsafe_rawColors.WHITE_500.resolve({
     saturation: 1
   }).hex()),
-  o = s(l.default.unsafe_rawColors.BLACK_500.resolve({
+  i = l(r.default.unsafe_rawColors.BLACK_500.resolve({
     saturation: 1
   }).hex()),
-  c = (0, n.default)({
-    dark: o,
-    light: i
+  u = (0, n.default)({
+    dark: i,
+    light: o
   });
-var u = c
+var c = u

@@ -27,8 +27,8 @@ function T(e) {
     premiumSubscription: t,
     premiumType: s,
     onClose: T,
-    confettiCanvas: C,
-    userWasChurned: P = !1,
+    confettiCanvas: P,
+    userWasChurned: C = !1,
     userDiscountOffer: R
   } = e, A = (0, u.default)(), M = (0, l.isThemeDark)(A) ? N : S, h = n.useRef(null), [L, g] = n.useState(!1), y = (0, f.useChurnDiscountedPrice)(t, p.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), x = (0, c.getPrice)(p.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, E.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   if (n.useEffect(() => {
@@ -39,7 +39,7 @@ function T(e) {
       discountedPrice: y,
       regularPrice: D
     }),
-    v = (0, a.jsx)("div", {
+    b = (0, a.jsx)("div", {
       className: I.whatYouLoseButtonContainer,
       children: (0, a.jsx)(r.Button, {
         color: r.Button.Colors.BRAND,
@@ -65,17 +65,17 @@ function T(e) {
               className: I.nitroIcon
             }), (0, a.jsx)(r.Heading, {
               variant: "heading-xl/bold",
-              children: P ? m.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : m.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
+              children: C ? m.default.Messages.PREMIUM_TRIAL_TUTORIAL_WELCOME_BACK : m.default.Messages.PREMIUM_TIER_CARD_DISCOUNT_APPLIED_PUNCTUATED
             })]
           }), (0, a.jsx)("div", {
             className: I.bodyString,
             children: O
-          }), v]
+          }), b]
         }) : (0, a.jsx)(r.Spinner, {})
       })
     }), !U && L && (0, a.jsx)(d.default, {
       confettiTarget: h.current,
-      confettiCanvas: C,
+      confettiCanvas: P,
       confettiVelocityMultiplier: .75
     })]
   })

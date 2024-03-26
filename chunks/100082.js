@@ -43,8 +43,8 @@ var a = n("37983"),
   V = n("96151"),
   k = n("49111"),
   H = n("646718"),
-  B = n("782340"),
-  G = n("225243");
+  G = n("782340"),
+  B = n("225243");
 
 function W(e) {
   let {
@@ -79,18 +79,18 @@ function W(e) {
           ...e,
           key: "more-options",
           isActive: n,
-          className: G.button,
-          iconClassName: G.buttonIcon
+          className: B.button,
+          iconClassName: B.buttonIcon
         })
       }
     }, "more-options-popout"), !t && (0, a.jsx)(m.default, {
-      className: G.button
+      className: B.button
     }, "clips"), (0, a.jsx)(S.default, {
       onOpen: x,
       onClose: N,
-      className: G.button
+      className: B.button
     }, "recents"), !u && g ? (0, a.jsx)("div", {
-      className: G.button,
+      className: B.button,
       children: (0, a.jsx)(w.default, {
         toggleRequestToSpeakSidebar: () => {
           E && d.default.updateChatOpen(n.id, !1), s()
@@ -99,14 +99,14 @@ function W(e) {
         numRequestToSpeak: v
       })
     }) : null, !E && (0, a.jsx)("div", {
-      className: i(G.button, {
-        [G.sidebarOpen]: u
+      className: i(B.button, {
+        [B.sidebarOpen]: u
       }),
       children: (0, a.jsx)(I.ChatButton, {
         channelId: n.id,
         showRequestToSpeakSidebar: u,
         toggleRequestToSpeakSidebar: s,
-        iconClassName: G.buttonIcon
+        iconClassName: B.buttonIcon
       })
     })]
   })
@@ -144,19 +144,19 @@ function Y(e) {
     }),
     onDoubleClick: g.handleDoubleClick,
     transparent: !0,
-    className: i((0, y.getThemeClass)(k.ThemeTypes.DARK), G.participants),
+    className: i((0, y.getThemeClass)(k.ThemeTypes.DARK), B.participants),
     children: [(0, a.jsx)(j.default.Icon, {
       icon: R.default,
       disabled: !0,
-      "aria-label": B.default.Messages.STAGE_CHANNEL,
-      className: G.icon,
+      "aria-label": G.default.Messages.STAGE_CHANNEL,
+      className: B.icon,
       color: null != S ? u.default.unsafe_rawColors.GREEN_360.css : void 0
     }), (0, a.jsx)(j.default.Title, {
-      className: G.channelName,
-      wrapperClassName: G.channelNameWrapper,
+      className: B.channelName,
+      wrapperClassName: B.channelNameWrapper,
       children: null !== (n = null == S ? void 0 : S.topic) && void 0 !== n ? n : p
     }), (0, a.jsx)(j.default.Divider, {
-      className: G.divider
+      className: B.divider
     }), (0, a.jsxs)(j.default.Title, {
       children: [(0, a.jsx)(A.default, {
         width: 16,
@@ -164,8 +164,8 @@ function Y(e) {
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        className: G.speakerCount,
-        children: B.default.Messages.SPEAKING_COUNT.format({
+        className: B.speakerCount,
+        children: G.default.Messages.SPEAKING_COUNT.format({
           count: C
         })
       }), (0, a.jsx)(M.default, {
@@ -174,8 +174,8 @@ function Y(e) {
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/medium",
         color: "header-secondary",
-        className: G.speakerCount,
-        children: B.default.Messages.LISTENING_COUNT.format({
+        className: B.speakerCount,
+        children: G.default.Messages.LISTENING_COUNT.format({
           count: _
         })
       })]
@@ -183,27 +183,27 @@ function Y(e) {
   });
   return w ? (0, a.jsxs)("div", {
     children: [K, (0, a.jsxs)("div", {
-      className: G.boostUpsell,
+      className: B.boostUpsell,
       children: [(0, a.jsx)(z, {}), (0, a.jsxs)("div", {
-        className: G.text,
+        className: B.text,
         children: [(0, a.jsx)(o.Text, {
           variant: "text-md/medium",
           color: "header-primary",
-          children: D ? B.default.Messages.STAGE_FULL_MODERATOR_TITLE : B.default.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
+          children: D ? G.default.Messages.STAGE_FULL_MODERATOR_TITLE : G.default.Messages.STAGE_FULL_MODERATOR_MAX_TITLE
         }), (0, a.jsx)(o.Text, {
           variant: "text-xs/medium",
           color: "text-normal",
-          children: D ? B.default.Messages.STAGE_FULL_MODERATOR_BODY : B.default.Messages.STAGE_FULL_MAX_BODY
+          children: D ? G.default.Messages.STAGE_FULL_MODERATOR_BODY : G.default.Messages.STAGE_FULL_MAX_BODY
         })]
       }), (0, a.jsx)("div", {
-        className: G.buttons,
+        className: B.buttons,
         children: D ? (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(o.Button, {
-            className: G.notNowButton,
+            className: B.notNowButton,
             onClick: Y,
             look: o.Button.Looks.BLANK,
             size: o.Button.Sizes.SMALL,
-            children: B.default.Messages.NOT_NOW
+            children: G.default.Messages.NOT_NOW
           }), (0, a.jsx)(N.default, {
             size: o.Button.Sizes.SMALL,
             onClick: () => {
@@ -219,15 +219,15 @@ function Y(e) {
                 action: H.BoostingUpsellAction.BOOST
               })
             },
-            className: G.boostButton,
-            children: B.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
+            className: B.boostButton,
+            children: G.default.Messages.PREMIUM_GUILD_SUBSCRIPTION
           })]
         }) : (0, a.jsx)(o.Button, {
-          className: G.notNowButton,
+          className: B.notNowButton,
           onClick: Y,
           look: o.Button.Looks.BLANK,
           size: o.Button.Sizes.SMALL,
-          children: B.default.Messages.DISMISS
+          children: G.default.Messages.DISMISS
         })
       })]
     })]

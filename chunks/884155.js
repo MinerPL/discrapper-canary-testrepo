@@ -52,7 +52,7 @@ let D = l.memo(e => {
       userIds: t
     } = e;
     return t.has(A)
-  }), [A, i.id]), H = (0, f.default)(null != k ? [k.applicationId] : []), B = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = G.find(e => null != e.application_id && e.type === y.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
+  }), [A, i.id]), H = (0, f.default)(null != k ? [k.applicationId] : []), G = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), B = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = B.find(e => null != e.application_id && e.type === y.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
@@ -88,7 +88,7 @@ let D = l.memo(e => {
       showHangStatus: J && q && (g.default.getId() === s.id || null != ee),
       hangStatusActivity: P ? $ : ee,
       isSelf: g.default.getId() === s.id,
-      application: q || B ? Y : void 0
+      application: q || G ? Y : void 0
     })
   })
 });

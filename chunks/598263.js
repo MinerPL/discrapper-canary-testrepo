@@ -72,7 +72,7 @@ function N(e) {
       })
     }, [N, s, L, O]),
     H = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
-    B = (0, u.useStateFromStores)([c.default], () => {
+    G = (0, u.useStateFromStores)([c.default], () => {
       if (null == D.result) return [];
       let e = D.result.messages,
         t = (0, d.createASTHighlighter)("");
@@ -89,7 +89,7 @@ function N(e) {
         })) : a
       }))
     }, [D.result]),
-    G = l.useMemo(() => {
+    B = l.useMemo(() => {
       var e, t, n, a;
       return null == D.result ? {
         documentsIndexed: 0,
@@ -113,7 +113,7 @@ function N(e) {
         showNoResultsAlt: !1
       }
     }, [D.result, H]);
-  return null == b || null == U || null == G ? null : (0, a.jsxs)("div", {
+  return null == b || null == U || null == B ? null : (0, a.jsxs)("div", {
     className: i(v.container, M),
     style: {
       backgroundColor: w
@@ -127,8 +127,8 @@ function N(e) {
       ref: j,
       onScroll: V,
       children: (0, a.jsx)(m.default, {
-        searchResults: B,
-        search: G,
+        searchResults: G,
+        search: B,
         searchId: s,
         renderEmbeds: !0,
         blockCount: 0,

@@ -20,8 +20,8 @@ var a, n, i = s("37983"),
   N = s("545158"),
   S = s("299285"),
   T = s("609190"),
-  C = s("442379"),
-  P = s("565559"),
+  P = s("442379"),
+  C = s("565559"),
   R = s("928576"),
   A = s("407417"),
   M = s("246421"),
@@ -33,8 +33,8 @@ var a, n, i = s("37983"),
   D = s("865146"),
   U = s("305961"),
   O = s("357957"),
-  v = s("10514"),
-  b = s("251013"),
+  b = s("10514"),
+  v = s("251013"),
   B = s("145131"),
   j = s("953109"),
   G = s("37785"),
@@ -137,7 +137,7 @@ function eE(e) {
   let {
     guildId: t,
     guildProductListingId: s
-  } = e, a = (0, C.useFetchGuildProductListing)(t, s, {
+  } = e, a = (0, P.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
   }), n = (0, R.useProductType)(a), r = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = l.useCallback(async () => {
     (null == r ? void 0 : r.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, L.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, L.default)(ee.Routes.CHANNEL(t)), (0, I.popLayer)()
@@ -161,9 +161,9 @@ function ef(e) {
   let {
     guildId: a,
     guildProductListingId: n
-  } = e, l = (0, C.useFetchGuildProductListing)(a, n, {
+  } = e, l = (0, P.useFetchGuildProductListing)(a, n, {
     requireCurrentGuild: !1
-  }), r = (0, p.useStateFromStores)([P.default], () => P.default.getGuildProductFetchState(n) === P.FetchState.FETCHING), u = null == l ? void 0 : l.role_id, o = (0, p.useStateFromStores)([U.default], () => null != u ? U.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == l ? void 0 : null === (t = l.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
+  }), r = (0, p.useStateFromStores)([C.default], () => C.default.getGuildProductFetchState(n) === C.FetchState.FETCHING), u = null == l ? void 0 : l.role_id, o = (0, p.useStateFromStores)([U.default], () => null != u ? U.default.getRole(a, u) : void 0, [a, u]), d = (null !== (s = null == l ? void 0 : null === (t = l.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== s ? s : 0) > 0, c = null != o;
   return r ? (0, i.jsx)("div", {
     className: en.guildProductBenefits,
     children: (0, i.jsx)(m.Spinner, {})
@@ -509,14 +509,14 @@ class e_ extends l.PureComponent {
         (0, X.isPremiumBaseSubscriptionPlan)(t) ? (s.push(X.default.getDisplayName(t, !1, _)), a = (0, X.castPremiumSubscriptionAsSkuId)(et.SubscriptionPlanInfo[t].skuId)) : (s.push("".concat(n > 1 ? "".concat(n, "x ") : "").concat(X.default.getDisplayName(t, !1, _))), null == a && (a = (0, X.castPremiumSubscriptionAsSkuId)(et.SubscriptionPlanInfo[t].skuId)))
       });
       else if (f.type === ee.SubscriptionTypes.GUILD) {
-        let e = v.default.get(f.items[0].planId);
+        let e = b.default.get(f.items[0].planId);
         d(null != e, "Guild subscription plan should already have been loaded");
         let t = e.interval === et.SubscriptionIntervalTypes.YEAR ? ea.default.Messages.YEARLY_GUILD_SUBSCRIPTION : ea.default.Messages.MONTHLY_GUILD_SUBSCRIPTION;
         s.push(t.format({
           planName: e.name
         })), a = e.skuId
       } else if (f.type === ee.SubscriptionTypes.APPLICATION) {
-        let e = v.default.get(f.items[0].planId);
+        let e = b.default.get(f.items[0].planId);
         d(null != e, "Application subscription plan should already have been loaded"), null != n ? s.push(ea.default.Messages.MONTHLY_APPLICATION_SUBSCRIPTION_V2.format({
           tier: null == c ? void 0 : c.name
         })) : s.push(ea.default.Messages.APPLICATION_SUBSCRIPTION_FROM_DELETED_APPLICATION), a = e.skuId
@@ -742,10 +742,10 @@ function ep(e) {
     applicationStatistics: f,
     gameApplication: _,
     paymentSources: m
-  } = (0, p.useStateFromStoresObject)([O.default, b.default, S.default], () => {
+  } = (0, p.useStateFromStoresObject)([O.default, v.default, S.default], () => {
     var e, t;
     return {
-      applicationStatistics: null != d ? b.default.getCurrentUserStatisticsForApplication(d) : null,
+      applicationStatistics: null != d ? v.default.getCurrentUserStatisticsForApplication(d) : null,
       gameApplication: null !== (t = S.default.getApplication(null != d ? d : "")) && void 0 !== t ? t : null === (e = a.sku) || void 0 === e ? void 0 : e.application,
       paymentSources: O.default.paymentSources
     }

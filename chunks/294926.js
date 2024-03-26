@@ -45,7 +45,7 @@ function O(e) {
     renderExternalHeader: D
   } = e, b = (0, v.default)(), U = (0, r.useStateFromStoresArray)([I.default], () => null != P ? I.default.getEmbeddedActivitiesForChannel(P) : [], [P]), w = (0, T.useEmbeddedApps)(U), F = (0, T.useEmbeddedAppsWithPresence)(w), V = l.useCallback(() => {
     (0, _.updateActivityPanelMode)(M.ActivityPanelModes.PIP)
-  }, []), k = l.useRef(null), H = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), B = H !== M.FocusedActivityLayouts.NO_CHAT, [G, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = l.useCallback(e => {
+  }, []), k = l.useRef(null), H = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), G = H !== M.FocusedActivityLayouts.NO_CHAT, [B, W] = l.useState(null !== (s = c.default.activityPanelHeight) && void 0 !== s ? s : O), Y = l.useCallback(e => {
     o.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -79,14 +79,14 @@ function O(e) {
   return null != en && (ea = Array.from(en.embeddedActivity.userIds).map(e => p.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
     className: i(L.wrapper, y[H], (0, C.getThemeClass)(R.ThemeTypes.DARK)),
     ref: k,
-    style: B && null != G ? {
+    style: G && null != B ? {
       minHeight: 200,
       maxHeight: O,
-      height: G
+      height: B
     } : void 0,
     children: [null == D ? void 0 : D(), (0, a.jsxs)("div", {
       className: L.activityPanelContainer,
-      children: [B ? null : (0, a.jsx)("div", {
+      children: [G ? null : (0, a.jsx)("div", {
         className: L.header,
         children: (0, a.jsx)(u.Text, {
           color: "header-primary",
@@ -137,7 +137,7 @@ function O(e) {
           className: L.flex
         })]
       }) : null]
-    }), B ? (0, a.jsx)(d.default, {
+    }), G ? (0, a.jsx)(d.default, {
       minHeight: 480,
       maxHeight: O,
       resizableNode: k,

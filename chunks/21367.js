@@ -23,8 +23,8 @@ var a, n, i = s("37983"),
   N = s("685665"),
   S = s("619935"),
   T = s("10514"),
-  C = s("145131"),
-  P = s("599110"),
+  P = s("145131"),
+  C = s("599110"),
   R = s("745279"),
   A = s("701909"),
   M = s("719923"),
@@ -36,8 +36,8 @@ var a, n, i = s("37983"),
   D = s("471131"),
   U = s("398309"),
   O = s("249718"),
-  v = s("360262"),
-  b = s("177998"),
+  b = s("360262"),
+  v = s("177998"),
   B = s("146163"),
   j = s("510928"),
   G = s("661128"),
@@ -83,7 +83,7 @@ function V(e) {
     whatYouLoseExperienceEnabled: u,
     analyticsLocation: o
   } = e, d = (0, S.useBlockedPaymentsConfig)(), [c, E] = l.useState(!1), [p, I] = l.useState(!1), T = (0, m.default)(), {
-    analyticsLocations: P
+    analyticsLocations: C
   } = (0, N.default)(), R = null;
   switch (s.status) {
     case w.SubscriptionStatusTypes.PAST_DUE:
@@ -141,7 +141,7 @@ function V(e) {
           onClose: r,
           premiumSubscription: s,
           setIsCancelling: E,
-          analyticsLocations: P,
+          analyticsLocations: C,
           analyticsLocation: o
         })
       },
@@ -181,7 +181,7 @@ function V(e) {
         children: R
       })]
     }), (0, i.jsxs)(_.ModalFooter, {
-      justify: C.default.Justify.START,
+      justify: P.default.Justify.START,
       children: [g, y]
     })]
   })
@@ -258,8 +258,8 @@ function z(e) {
         premiumSubscription: t
       })]
     }), (0, i.jsxs)(_.ModalFooter, {
-      align: C.default.Align.CENTER,
-      justify: C.default.Justify.BETWEEN,
+      align: P.default.Align.CENTER,
+      justify: P.default.Justify.BETWEEN,
       children: [(0, i.jsx)(_.Button, {
         color: _.Button.Colors.RED,
         disabled: o,
@@ -276,7 +276,7 @@ function z(e) {
         children: H.default.Messages.PREMIUM_CANCEL_CONFIRM_NEW.format({
           planPremiumType: M.default.getDisplayPremiumType(t.planId)
         })
-      }), (0, i.jsx)(b.default, {
+      }), (0, i.jsx)(v.default, {
         onClick: a
       })]
     })]
@@ -314,22 +314,22 @@ function q(e) {
     } = e,
     p = l.useRef(new o.Environment),
     [S, T] = l.useState(null),
-    C = (0, y.useFreeBoostUserTenureReward)(),
-    A = (null == C ? void 0 : C.showNotification) === !0,
+    P = (0, y.useFreeBoostUserTenureReward)(),
+    A = (null == P ? void 0 : P.showNotification) === !0,
     h = null === (t = (0, M.getPremiumPlanItem)(a)) || void 0 === t ? void 0 : t.planId,
     L = null != h ? M.default.getPremiumType(h) : null;
   c(null != L, "Should not be cancelling Nitro without premiumType");
   let x = (0, m.default)();
   l.useEffect(() => {
-    P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a))
+    C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STARTED, Z(a))
   }, [a]);
-  let b = L === k.PremiumTypes.TIER_0 || L === k.PremiumTypes.TIER_1 || L === k.PremiumTypes.TIER_2;
-  null == E && (E = b ? 1 : 2);
+  let v = L === k.PremiumTypes.TIER_0 || L === k.PremiumTypes.TIER_1 || L === k.PremiumTypes.TIER_2;
+  null == E && (E = v ? 1 : 2);
   let {
     analyticsLocations: B
   } = (0, N.default)(u, I.default.PREMIUM_SUBSCRIPTION_CANCELLATION_MODAL), [j, W, K, q] = function(e, t, s) {
     let [a, n] = l.useState(e), [i, r] = l.useState(Date.now()), [u] = l.useState(Date.now()), o = l.useCallback(e => {
-      P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+      C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
         from_step: X[a],
         to_step: X[e],
         step_duration_ms: Date.now() - i,
@@ -342,7 +342,7 @@ function q(e) {
   }(E, a, u), [J, Q] = l.useState(null);
   (0, G.useUnsupportedExternalSubscriptionModalHandler)(a, r, !1);
   let $ = e => {
-      r(), P.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
+      r(), C.default.track(w.AnalyticEvents.CANCELLATION_FLOW_STEP, {
         from_step: X[e],
         to_step: null,
         step_duration_ms: Date.now() - K,
@@ -403,7 +403,7 @@ function q(e) {
       });
       break;
     case 1:
-      s = (0, i.jsx)(v.default, {
+      s = (0, i.jsx)(b.default, {
         premiumType: L,
         titleText: H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_TITLE,
         subtitleText: A ? H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE_TENURE_REWARD : H.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_SUBTITLE.format(),
@@ -445,7 +445,7 @@ function q(e) {
         premiumType: L,
         setStep: W,
         onClose: () => $(j),
-        whatYouLoseExperienceEnabled: b,
+        whatYouLoseExperienceEnabled: v,
         analyticsLocation: d
       });
       break;

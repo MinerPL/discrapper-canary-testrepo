@@ -26,8 +26,8 @@ var n = s("414456"),
   N = s("745279"),
   S = s("719923"),
   T = s("713518"),
-  C = s("380186"),
-  P = s("182650"),
+  P = s("380186"),
+  C = s("182650"),
   R = s("70578"),
   A = s("154889"),
   M = s("892843"),
@@ -43,9 +43,9 @@ let U = new E.default("SubscriptionHeader.tsx"),
     section: y.AnalyticsSections.SETTINGS_PREMIUM,
     object: y.AnalyticsObjects.CARD
   },
-  v = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING];
+  b = [y.SubscriptionStatusTypes.PAUSED, y.SubscriptionStatusTypes.PAUSE_PENDING];
 
-function b(e) {
+function v(e) {
   let {
     wordMark: t,
     subscriptionInfo: s,
@@ -137,7 +137,7 @@ function G() {
   let {
     analyticsLocations: e
   } = (0, c.default)(d.default.ACCOUNT_CREDIT_BANNER);
-  return (0, a.jsx)(b, {
+  return (0, a.jsx)(v, {
     wordMark: (0, a.jsx)(j, {}),
     subscriptionInfo: (0, a.jsx)("div", {
       className: D.planInfo,
@@ -171,7 +171,7 @@ var F = function(e) {
     enabled: w
   } = (0, R.default)({
     location: "subscription_header"
-  }), H = (0, A.usePremiumDiscountOffer)(), Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount, W = (0, P.useHasDiscountApplied)(), V = (0, P.useActiveDiscountInfo)(), K = () => {
+  }), H = (0, A.usePremiumDiscountOffer)(), Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount, W = (0, C.useHasDiscountApplied)(), V = (0, C.useActiveDiscountInfo)(), K = () => {
     (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSED) && Z(h.Steps.PAUSE_SELECT)
   }, z = () => {
     (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSE_PENDING) && Z()
@@ -207,7 +207,7 @@ var F = function(e) {
       })
     }
   }, q = () => {
-    if (!v.includes(l.status) || null == l.pauseEndsAt) {
+    if (!b.includes(l.status) || null == l.pauseEndsAt) {
       (0, N.captureBillingException)(Error("Invalid subscription to resume"), {
         extra: {
           subscriptionId: l.id,
@@ -257,7 +257,7 @@ var F = function(e) {
         "aria-label": x.default.Messages.PREMIUM_TITLE
       })
   }
-  let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : b;
+  let en = l.status === y.SubscriptionStatusTypes.PAUSED ? B : v;
   return (0, a.jsx)(en, {
     wordMark: ea,
     subscriptionInfo: (n = $, r(null != E, "Expected renewalInvoicePreview"), (0, a.jsx)("div", {
@@ -321,7 +321,7 @@ var F = function(e) {
       if (e === y.SubscriptionStatusTypes.PAUSED) {
         let {
           durations: e
-        } = (0, C.getSubscriptionPauseDurations)(l);
+        } = (0, P.getSubscriptionPauseDurations)(l);
         return (0, a.jsxs)("div", {
           className: D.toolsButtons,
           children: [e.length > 0 ? (0, a.jsx)(u.Button, {

@@ -41,9 +41,9 @@ function g(e) {
     })),
     {
       location: m,
-      redirectTo: T
+      redirectTo: p
     } = e,
-    [p, I] = a.useState(n);
+    [T, I] = a.useState(n);
 
   function A(e) {
     let {
@@ -64,8 +64,8 @@ function g(e) {
         handoff_token: t
       } = (0, r.parse)(m.search);
       if (null != e && null != t) {
-        let n = null != T ? (0, d.getLoginHandoffSourceFromRedirectTo)(T) : void 0;
-        p ? o.default.logout(null).finally(() => {
+        let n = null != p ? (0, d.getLoginHandoffSourceFromRedirectTo)(p) : void 0;
+        T ? o.default.logout(null).finally(() => {
           A({
             handoffKey: e,
             handoffToken: t,
@@ -78,7 +78,7 @@ function g(e) {
         })
       }
     }
-  }, []), p || g === _.LoginStates.LOGGING_IN) ? (0, s.jsx)(f.LoginSpinner, {}) : (0, s.jsx)(f.default, {
+  }, []), T || g === _.LoginStates.LOGGING_IN) ? (0, s.jsx)(f.LoginSpinner, {}) : (0, s.jsx)(f.default, {
     ...e,
     transitionTo: t
   })

@@ -59,14 +59,14 @@ let O = "vc-activities-".concat((0, u.v4)()),
     }, [k, H]), l.useEffect(() => {
       !s && u()
     }, [u, s]);
-    let B = (0, f.useAppContext)(),
+    let G = (0, f.useAppContext)(),
       {
-        analyticsLocations: G
+        analyticsLocations: B
       } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
       {
         analyticsLocations: W
-      } = (0, p.default)([...G, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      Y = B === M.AppContext.POPOUT,
+      } = (0, p.default)([...B, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
+      Y = G === M.AppContext.POPOUT,
       z = (0, c.useAnalyticsContext)(),
       K = function(e) {
         let t = (0, v.default)({
@@ -85,9 +85,9 @@ let O = "vc-activities-".concat((0, u.v4)()),
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: z.location,
           openInPopout: Y,
-          analyticsLocations: G
+          analyticsLocations: B
         }), D(), b()
-      }, [z, G, n, b, D, Y]),
+      }, [z, B, n, b, D, Y]),
       X = l.useCallback(e => {
         P(), _.default.track(M.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
@@ -105,7 +105,7 @@ let O = "vc-activities-".concat((0, u.v4)()),
         })]
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
-      value: G,
+      value: B,
       children: (0, a.jsx)(g.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,

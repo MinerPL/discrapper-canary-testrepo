@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   UsagePill: function() {
-    return T
+    return p
   },
   default: function() {
-    return p
+    return T
   }
 });
 var s = n("37983");
@@ -47,7 +47,7 @@ function m(e) {
   })
 }
 
-function T(e) {
+function p(e) {
   let {
     className: t,
     count: n,
@@ -69,7 +69,7 @@ function T(e) {
   })
 }
 
-function p(e) {
+function T(e) {
   var t;
   let {
     guildTemplate: n,
@@ -114,7 +114,7 @@ function p(e) {
     }), null != n.description && "" !== n.description && (0, s.jsx)(o.SubTitle, {
       className: r(_.subtitle, _.userText, h.marginTop8),
       children: n.description
-    }), (0, s.jsx)(T, {
+    }), (0, s.jsx)(p, {
       className: u,
       count: null !== (t = n.usageCount) && void 0 !== t ? t : 0,
       creator: n.creator.username,

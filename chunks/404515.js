@@ -22,8 +22,8 @@ var a = s("37983"),
   N = s("10514"),
   S = s("521012"),
   T = s("145131"),
-  C = s("251752"),
-  P = s("719923"),
+  P = s("251752"),
+  C = s("719923"),
   R = s("942456"),
   A = s("646718"),
   M = s("843455"),
@@ -58,7 +58,7 @@ function y(e) {
           ref: t,
           ...n
         } = e;
-        return (0, a.jsx)(C.default, {
+        return (0, a.jsx)(P.default, {
           className: l(L.verticalFit, L.paginator),
           currentPageIndex: d,
           onChangePage: N,
@@ -101,7 +101,7 @@ class x extends n.PureComponent {
         className: L.externalRowBody,
         children: h.default.Messages.BILLING_EXTERNAL_DESCRIPTION.format({
           paymentGatewayName: M.PaymentGatewayToFriendlyName[e.paymentGateway],
-          billingHistoryLink: (0, P.getExternalSubscriptionMethodUrl)(e.paymentGateway, "BILLING_HISTORY")
+          billingHistoryLink: (0, C.getExternalSubscriptionMethodUrl)(e.paymentGateway, "BILLING_HISTORY")
         })
       })]
     })
@@ -150,7 +150,7 @@ function D(e) {
   var t;
   let s = e.skuId,
     a = null === (t = e.subscription) || void 0 === t ? void 0 : t.items[0].planId;
-  return !(null == s || null == a || Object.values(A.PremiumSubscriptionSKUs).includes(s) || (0, P.isPremiumSubscriptionPlan)(a))
+  return !(null == s || null == a || Object.values(A.PremiumSubscriptionSKUs).includes(s) || (0, C.isPremiumSubscriptionPlan)(a))
 }
 
 function U(e) {

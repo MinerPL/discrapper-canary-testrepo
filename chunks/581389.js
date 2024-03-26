@@ -47,8 +47,8 @@ var a, l, s = n("37983"),
   V = n("16916"),
   k = n("534222"),
   H = n("147257"),
-  B = n("109526"),
-  G = n("550410"),
+  G = n("109526"),
+  B = n("550410"),
   W = n("124824"),
   Y = n("213943"),
   z = n("742683"),
@@ -136,7 +136,7 @@ function e_(e) {
       onClick: null != c ? A : T
     })
   };
-  return C ? R() : (0, s.jsx)(G.default, {
+  return C ? R() : (0, s.jsx)(B.default, {
     children: (0, s.jsx)(h.Popout, {
       renderPopout: e => {
         let {
@@ -394,7 +394,7 @@ var ex = function(e) {
       section: eE.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eS.eventPromptsContainer,
-        children: (0, s.jsx)(B.default, {
+        children: (0, s.jsx)(G.default, {
           channelId: t.id
         })
       }), (0, s.jsxs)("div", {

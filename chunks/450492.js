@@ -4,14 +4,14 @@ a.r(t), a.d(t, {
     return C
   }
 });
-var r = a("37983"),
-  s = a("884691"),
-  l = a("77078"),
+var s = a("37983"),
+  l = a("884691"),
+  r = a("77078"),
   n = a("252744"),
-  i = a("685665"),
-  o = a("108486"),
-  c = a("946964"),
-  u = a("978679"),
+  o = a("685665"),
+  i = a("108486"),
+  u = a("946964"),
+  c = a("978679"),
   d = a("677257"),
   f = a("843455"),
   m = a("782340"),
@@ -72,27 +72,27 @@ var C = e => {
     disableCustomColor: b = !1
   } = e, {
     analyticsLocations: S
-  } = (0, i.default)(), x = s.useRef(null), T = (0, n.default)(x), {
+  } = (0, o.default)(), x = l.useRef(null), T = (0, n.default)(x), {
     buttonColors: v
   } = (0, d.default)(t.styles), L = null == v || b ? void 0 : {
     background: v.secondary.toHslString(),
     color: v.text.toHslString()
   }, I = b || (null == v ? void 0 : v.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
-  return (0, r.jsx)(l.Tooltip, {
+  return (0, s.jsx)(r.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,
-    children: e => (0, r.jsx)(l.Button, {
+    children: e => (0, s.jsx)(r.Button, {
       ...e,
       buttonRef: x,
       style: L,
       className: p.giftButton,
-      color: b ? l.ButtonColors.BRAND : l.ButtonColors.CUSTOM,
-      look: l.Button.Looks.FILLED,
-      size: l.ButtonSizes.ICON,
+      color: b ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
+      look: r.Button.Looks.FILLED,
+      size: r.ButtonSizes.ICON,
       innerClassName: p.giftButtonInner,
       "aria-label": m.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
-        e.stopPropagation(), (0, c.default)({
+        e.stopPropagation(), (0, u.default)({
           skuId: t.skuId,
           isGift: !0,
           analyticsLocations: S,
@@ -102,12 +102,12 @@ var C = e => {
           } : void 0
         })
       },
-      children: E ? (0, r.jsx)(o.SeasonalGiftIcon, {
+      children: E ? (0, s.jsx)(i.SeasonalGiftIcon, {
         hovered: T,
         isContentDismissed: !0,
         themeOverride: I,
         boxColors: g
-      }) : (0, r.jsx)(u.default, {
+      }) : (0, s.jsx)(c.default, {
         width: 24,
         height: 24
       })

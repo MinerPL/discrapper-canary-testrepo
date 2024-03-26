@@ -22,8 +22,8 @@ var s = n("37983"),
   h = n("124969"),
   g = n("587974"),
   m = n("158998"),
-  T = n("49111"),
-  p = n("238055"),
+  p = n("49111"),
+  T = n("238055"),
   I = n("91366"),
   A = n("782340"),
   S = n("985551");
@@ -89,17 +89,17 @@ var C = e => {
   let D = null != g.guild ? new d.default(g.guild) : null,
     x = null != g.channel ? (0, u.createChannelRecordFromInvite)(g.channel) : null,
     U = null != g.target_application ? new o.default(g.target_application) : null,
-    y = R || null == g.inviter ? null : new c.default(g.inviter),
-    b = null != g.approximate_member_count && g.approximate_member_count > 100 || null != D && D.hasFeature(T.GuildFeatures.COMMUNITY),
-    P = !b && null != y,
+    b = R || null == g.inviter ? null : new c.default(g.inviter),
+    y = null != g.approximate_member_count && g.approximate_member_count > 100 || null != D && D.hasFeature(p.GuildFeatures.COMMUNITY),
+    P = !y && null != b,
     G = null,
     F = !1;
-  if (null != D) G = null == y ? A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
-    username: m.default.getFormattedName(y)
+  if (null != D) G = null == b ? A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN : A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
+    username: m.default.getFormattedName(b)
   }), g.target_type === I.InviteTargetTypes.STREAM && null != g.target_user && (G = A.default.Messages.AUTH_MESSAGE_INVITED_TO_STREAM.format({
     username: m.default.getFormattedName(g.target_user)
-  })), g.target_type === I.InviteTargetTypes.EMBEDDED_APPLICATION && null != g.target_application && (G = null != y ? A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
-    username: m.default.getFormattedName(y)
+  })), g.target_type === I.InviteTargetTypes.EMBEDDED_APPLICATION && null != g.target_application && (G = null != b ? A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY_USERNAME.format({
+    username: m.default.getFormattedName(b)
   }) : A.default.Messages.AUTH_MESSAGE_INVITED_TO_PLAY), P && null == U && (n = (0, s.jsx)(h.GuildIcon, {
     className: S.icon,
     guild: D,
@@ -123,16 +123,16 @@ var C = e => {
     })]
   }));
   else if (null != x) {
-    if (null == y) throw Error("no inviter in group DM invite");
-    let e = m.default.getFormattedName(y);
+    if (null == b) throw Error("no inviter in group DM invite");
+    let e = m.default.getFormattedName(b);
     null != x.name && "" !== x.name ? (G = A.default.Messages.AUTH_MESSAGE_INVITED_BY.format({
       username: e
     }), a = x.name, null != x.icon && (n = (0, s.jsx)(h.ChannelIcon, {
       channel: x,
       size: l.AvatarSizes.SIZE_32
     }))) : (G = A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_JOIN_GROUP_DM, a = e)
-  } else if (null != y) {
-    let e = m.default.getFormattedName(y, !0);
+  } else if (null != b) {
+    let e = m.default.getFormattedName(b, !0);
     a = A.default.Messages.INSTANT_INVITE_YOU_HAVE_BEEN_INVITED_TO_CHAT.format({
       username: e
     }), F = !0, f = null != C ? null : (0, s.jsx)(h.SubTitle, {
@@ -149,7 +149,7 @@ var C = e => {
     children: [(0, s.jsx)(N, {
       application: U,
       guild: D,
-      user: P ? y : null,
+      user: P ? b : null,
       compact: F
     }), null != C ? (0, s.jsxs)(s.Fragment, {
       children: [(0, s.jsx)(h.SubTitle, {
@@ -168,7 +168,7 @@ var C = e => {
           tooltipPosition: "left"
         }) : null, n, a]
       })]
-    }), f, null != U || F || (null == g ? void 0 : null === (t = g.guild) || void 0 === t ? void 0 : t.id) === p.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(h.ActivityCount, {
+    }), f, null != U || F || (null == g ? void 0 : null === (t = g.guild) || void 0 === t ? void 0 : t.id) === T.INVITE_ROUTING_HUB_GUILD_ID ? null : (0, s.jsx)(h.ActivityCount, {
       className: S.activityCount,
       online: g.approximate_presence_count,
       total: g.approximate_member_count,

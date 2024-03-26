@@ -19,8 +19,8 @@ var s = n("37983"),
   h = n("953109"),
   g = n("124969"),
   m = n("380186"),
-  T = n("49111"),
-  p = n("646718"),
+  p = n("49111"),
+  T = n("646718"),
   I = n("782340"),
   A = n("173494"),
   S = n("125047"),
@@ -48,7 +48,7 @@ var s = n("37983"),
     } = e, f = null == r ? I.default.Messages.GIFT_CODE_AUTH_GIFTED : I.default.Messages.GIFT_CODE_AUTH_GIFTED_BY.format({
       username: r.username
     }), _ = i.name;
-    return null != E && (_ = (E.interval === p.SubscriptionIntervalTypes.MONTH ? I.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : I.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
+    return null != E && (_ = (E.interval === T.SubscriptionIntervalTypes.MONTH ? I.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_MONTHLY : I.default.Messages.GIFT_CODE_AUTH_GIFTED_SUBSCRIPTION_YEARLY).format({
       skuName: i.name,
       intervalCount: E.intervalCount
     })), (0, s.jsxs)(a.Fragment, {
@@ -71,7 +71,7 @@ var s = n("37983"),
           children: f
         }), (0, s.jsxs)(g.Title, {
           className: l(R.marginTop8, S.flexCenter),
-          children: [i.productLine !== T.SKUProductLines.COLLECTIBLES && (0, s.jsx)(h.default, {
+          children: [i.productLine !== p.SKUProductLines.COLLECTIBLES && (0, s.jsx)(h.default, {
             size: h.default.Sizes.MEDIUM,
             className: A.applicationIcon,
             game: u,

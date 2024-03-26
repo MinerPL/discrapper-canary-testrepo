@@ -54,8 +54,8 @@ function x(e) {
     V = A.userLimit <= 0 || A.userLimit > 1,
     k = (0, i.useStateFromStores)([o.default], () => o.default.getEmbeddedActivitiesForChannel(A.id).length <= 0),
     H = (0, h.useIsDismissibleContentTypeDismissed)(r.DismissibleContent.VC_TILE_ACTIVITIES_ENTRY_POINT),
-    B = (0, d.useEmbeddedActivityLaunchability)(A.id),
-    G = B !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
+    G = (0, d.useEmbeddedActivityLaunchability)(A.id),
+    B = G !== d.EmbeddedActivityLaunchability.CAN_LAUNCH,
     W = null != D && D === A.id,
     Y = t.map(e => t => (0, a.jsx)(C.default, {
       participant: e,
@@ -80,7 +80,7 @@ function x(e) {
     }
   }, {
     trackOnInitialLoad: !0
-  }, []), null != P && !F && (!(b >= 2) || !k || G || H || W ? V && 1 === b && w && (k && !G ? Y.push(e => (0, a.jsx)(S.ActivityEntryPointTile, {
+  }, []), null != P && !F && (!(b >= 2) || !k || B || H || W ? V && 1 === b && w && (k && !B ? Y.push(e => (0, a.jsx)(S.ActivityEntryPointTile, {
     channel: A,
     guild: P,
     width: e,

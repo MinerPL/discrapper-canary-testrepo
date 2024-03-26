@@ -51,8 +51,8 @@ function N(e) {
     })
   }, [U.location, V, t, F]), H = [];
   !M && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-  let B = (0, m.default)(t.id);
-  return B && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(C.default, {
+  let G = (0, m.default)(t.id);
+  return G && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(C.default, {
     contentTypes: H,
     children: e => {
       let {

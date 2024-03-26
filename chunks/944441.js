@@ -1,35 +1,35 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return i
+    return o
   }
 });
-var r = a("37983");
+var s = a("37983");
 a("884691");
-var s = a("469563"),
-  l = a("237020"),
+var l = a("469563"),
+  r = a("237020"),
   n = a("75196"),
-  i = (0, s.replaceIcon)(function(e) {
+  o = (0, l.replaceIcon)(function(e) {
     let {
       width: t = 24,
       height: a = 24,
-      color: s = "currentColor",
-      foreground: l,
-      ...i
+      color: l = "currentColor",
+      foreground: r,
+      ...o
     } = e;
-    return (0, r.jsx)("svg", {
-      ...(0, n.default)(i),
+    return (0, s.jsx)("svg", {
+      ...(0, n.default)(o),
       width: t,
       height: a,
       viewBox: "0 0 24 24",
-      children: (0, r.jsx)("path", {
-        className: l,
-        fill: s,
+      children: (0, s.jsx)("path", {
+        className: r,
+        fill: l,
         fillRule: "evenodd",
         clipRule: "evenodd",
         d: "M9.00043 14.0491L19.5904 3.46912L23.1212 6.99994L8.99993 21.1213L1.28485 13.4062L4.83367 9.88236L9.00043 14.0491Z"
       })
     })
-  }, l.CheckmarkBoldIcon, void 0, {
+  }, r.CheckmarkBoldIcon, void 0, {
     size: 24
   })

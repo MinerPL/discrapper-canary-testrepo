@@ -48,7 +48,7 @@ function j(e) {
     user: F,
     streamId: V,
     speaking: k
-  } = t, H = F.id === w, B = (0, T.default)(t), G = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([g.default], () => null != F.id && g.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = k && (W || G), X = u < 124 ? R : M, {
+  } = t, H = F.id === w, G = (0, T.default)(t), B = (0, r.useStateFromStores)([S.default], () => S.default.isFocused()), W = (0, r.useStateFromStores)([h.default], () => h.default.getWindowFocused(v.PopoutWindowKeys.CHANNEL_CALL_POPOUT)), Y = (0, r.useStateFromStores)([g.default], () => null != F.id && g.default.isLocalVideoDisabled(F.id, (0, f.default)(t.type)), [F.id, t.type]), z = (0, r.useStateFromStores)([E.default], () => E.default.isGuestOrLurker(n.guild_id, F.id)), K = I.default.getName(n.getGuildId(), n.id, F) + (z ? " ".concat(N.default.Messages.GUEST_NAME_SUFFIX) : ""), Z = k && (W || B), X = u < 124 ? R : M, {
     avatarSrc: Q,
     avatarDecorationSrc: q
   } = (0, m.default)({
@@ -58,8 +58,8 @@ function j(e) {
     animateOnHover: !Z
   }), J = (0, r.useStateFromStores)([c.default], () => c.default.getSelectedParticipant(n.id));
   return (l.useEffect(() => {
-    n.isGuildStageVoice() && !B && (null == J ? void 0 : J.id) === F.id && o.default.selectParticipant(n.id, null)
-  }, [B]), s && !Y && !D && B && !L && null != U && g.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
+    n.isGuildStageVoice() && !G && (null == J ? void 0 : J.id) === F.id && o.default.selectParticipant(n.id, null)
+  }, [G]), s && !Y && !D && G && !L && null != U && g.default.supports(x.Features.VIDEO)) ? (0, a.jsx)(_.default, {
     onResize: O,
     wrapperClassName: A.videoWrapper,
     className: A.content,

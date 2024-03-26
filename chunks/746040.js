@@ -19,10 +19,10 @@ var s = n("37983"),
   h = n("49111"),
   g = n("513680");
 let m = (0, f.cssValueToNumber)(g.responsiveWidthMobile),
-  T = [h.Routes.LOGIN, h.Routes.LOGIN_HANDOFF, h.Routes.REGISTER, h.Routes.INVITE(""), h.Routes.GIFT_CODE(""), h.Routes.GUILD_TEMPLATE_LOGIN(""), h.Routes.GUILD_TEMPLATE(""), h.Routes.DISABLE_EMAIL_NOTIFICATIONS, h.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, h.Routes.BILLING_PREMIUM_SUBSCRIBE, h.Routes.BILLING_PAYMENT_SOURCES_CREATE, h.Routes.BILLING_PAYMENTS, h.Routes.BILLING_PREMIUM_SWITCH_PLAN, h.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, h.Routes.VERIFY, h.Routes.VERIFY_HUB_EMAIL, h.Routes.REJECT_IP, h.Routes.REJECT_MFA, h.Routes.AUTHORIZE_IP, h.Routes.AUTHORIZE_PAYMENT, h.Routes.RESET, h.Routes.HANDOFF, h.Routes.REPORT, h.Routes.REPORT_SECOND_LOOK];
+  p = [h.Routes.LOGIN, h.Routes.LOGIN_HANDOFF, h.Routes.REGISTER, h.Routes.INVITE(""), h.Routes.GIFT_CODE(""), h.Routes.GUILD_TEMPLATE_LOGIN(""), h.Routes.GUILD_TEMPLATE(""), h.Routes.DISABLE_EMAIL_NOTIFICATIONS, h.Routes.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, h.Routes.BILLING_PREMIUM_SUBSCRIBE, h.Routes.BILLING_PAYMENT_SOURCES_CREATE, h.Routes.BILLING_PAYMENTS, h.Routes.BILLING_PREMIUM_SWITCH_PLAN, h.Routes.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, h.Routes.VERIFY, h.Routes.VERIFY_HUB_EMAIL, h.Routes.REJECT_IP, h.Routes.REJECT_MFA, h.Routes.AUTHORIZE_IP, h.Routes.AUTHORIZE_PAYMENT, h.Routes.RESET, h.Routes.HANDOFF, h.Routes.REPORT, h.Routes.REPORT_SECOND_LOOK];
 
-function p(e) {
-  return T.some(t => e.startsWith(t))
+function T(e) {
+  return p.some(t => e.startsWith(t))
 }
 class I extends a.Component {
   componentDidMount() {
@@ -32,14 +32,14 @@ class I extends a.Component {
     window.removeEventListener("resize", this.handleResize)
   }
   mobileTransitionTo(e, t) {
-    if (p(e))(0, d.transitionTo)(e, t);
+    if (T(e))(0, d.transitionTo)(e, t);
     else {
       let n = null != t && null != t.search ? t.search : null;
       window.location = null == n ? e : "".concat(e, "?").concat(n)
     }
   }
   mobileReplaceWith(e) {
-    p(e) ? (0, d.replaceWith)(e) : window.location = e
+    T(e) ? (0, d.replaceWith)(e) : window.location = e
   }
   renderDefault() {
     let {

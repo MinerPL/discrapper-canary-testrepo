@@ -46,9 +46,9 @@ var a = n("37983"),
       k = (0, o.useStateFromStores)([_.default], () => null != w ? _.default.get(w) : null),
       {
         activeSubscription: H,
-        activeSubscriptionPlanFromStore: B
+        activeSubscriptionPlanFromStore: G
       } = (0, N.default)(n),
-      G = null == H || null != B,
+      B = null == H || null != G,
       W = (0, v.useSubscriptionListingsForGroup)(n, {
         includeSoftDeleted: !0
       }),
@@ -124,7 +124,7 @@ var a = n("37983"),
       }, [t]);
     return {
       openModal: P ? en : et,
-      canOpenModal: !O && null != k && G && !b && !K && !Z && !$,
+      canOpenModal: !O && null != k && B && !b && !K && !Z && !$,
       cannotOpenReason: r,
       isCheckingTrialEligibility: X
     }

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   StreamTileIndicators: function() {
-    return B
+    return G
   },
   default: function() {
-    return G
+    return B
   }
 });
 var a = n("37983"),
@@ -47,7 +47,7 @@ var a = n("37983"),
   k = n("532351");
 let H = new f.default("StreamTile");
 
-function B(e) {
+function G(e) {
   let {
     participant: t,
     selected: n,
@@ -68,7 +68,7 @@ function B(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let {
     participant: t,
     selected: n,
@@ -78,20 +78,20 @@ function G(e) {
     inPopout: A,
     width: D,
     focused: b
-  } = e, B = T.default.getVideoComponent(), G = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
+  } = e, G = T.default.getVideoComponent(), B = (0, r.useStateFromStores)([_.default], () => _.default.getId()), W = (0, h.default)(), {
     stream: Y,
     user: z,
     streamId: K
-  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([C.default], () => C.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), Q = (0, r.useStateFromStores)([C.default], () => C.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), J = (null == X ? void 0 : X.ownerId) === G, $ = J && !q && !A, ee = null != X ? (0, m.default)(X, z, z.id === G, $) : null, et = D < 195;
+  } = t, Z = (0, r.useStateFromStores)([I.default], () => I.default.getChannel(Y.channelId)), X = (0, r.useStateFromStores)([C.default], () => C.default.getActiveStreamForUser(z.id, Y.guildId), [z.id, Y.guildId]), Q = (0, r.useStateFromStores)([C.default], () => C.default.getAllActiveStreams().length > 0), q = (0, r.useStateFromStores)([v.default], () => v.default.isFocused()), J = (null == X ? void 0 : X.ownerId) === B, $ = J && !q && !A, ee = null != X ? (0, m.default)(X, z, z.id === B, $) : null, et = D < 195;
   if (l.useEffect(() => {
       !Q && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), o.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
-      H.info("Stream Tile State - activeStream: ".concat(null != X, " | selected: ").concat(n, " | Video: ").concat(null != B, " | MediaEngine: ").concat(T.default.supports(F.Features.VIDEO)))
-    }, [B, X, n]), W) return (0, a.jsx)(P.default, {
+      H.info("Stream Tile State - activeStream: ".concat(null != X, " | selected: ").concat(n, " | Video: ").concat(null != G, " | MediaEngine: ").concat(T.default.supports(F.Features.VIDEO)))
+    }, [G, X, n]), W) return (0, a.jsx)(P.default, {
     stream: t.stream,
     isSmall: et,
     selected: n,
-    isSelfStream: z.id === G
+    isSelfStream: z.id === B
   });
   if ((null == X ? void 0 : X.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(L.default, {
     selected: n,
@@ -108,7 +108,7 @@ function G(e) {
     participant: t,
     width: D
   });
-  else if (null != X && !n && null != B && T.default.supports(F.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
+  else if (null != X && !n && null != G && T.default.supports(F.Features.VIDEO)) return (0, a.jsxs)(a.Fragment, {
     children: [null != Z ? (0, a.jsx)(g.default, {
       focused: b,
       channelId: Z.id,
@@ -121,7 +121,7 @@ function G(e) {
       wrapperClassName: k.videoWrapper,
       className: k.content,
       streamId: K,
-      videoComponent: B,
+      videoComponent: G,
       fit: E,
       paused: f || $,
       videoSpinnerContext: J ? c.VideoSpinnerContext.SELF_STREAM : c.VideoSpinnerContext.REMOTE_STREAM,

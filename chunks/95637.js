@@ -22,8 +22,8 @@ var a = s("37983"),
   N = s("145131"),
   S = s("423487"),
   T = s("719923"),
-  C = s("153160"),
-  P = s("782340"),
+  P = s("153160"),
+  C = s("782340"),
   R = s("264188");
 
 function A(e) {
@@ -45,25 +45,25 @@ function A(e) {
       paymentSourceId: t.paymentSourceId,
       currency: t.currency
     }),
-    L = (0, C.formatRate)((0, C.formatPrice)(h.amount, h.currency), M.interval, M.intervalCount);
+    L = (0, P.formatRate)((0, P.formatPrice)(h.amount, h.currency), M.interval, M.intervalCount);
   return (0, a.jsxs)(c.ModalRoot, {
     transitionState: n,
-    "aria-label": P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
+    "aria-label": C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER,
     children: [(0, a.jsxs)(c.ModalHeader, {
       justify: N.default.Justify.BETWEEN,
       separator: !1,
       children: [(0, a.jsx)(c.FormTitle, {
         tag: c.FormTitleTags.H4,
-        children: P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
+        children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_HEADER
       }), (0, a.jsx)(c.ModalCloseButton, {
         onClick: i
       })]
     }), (0, a.jsx)(c.ModalContent, {
       className: R.modalBody,
-      children: (0, m.isNoneSubscription)(t.planId) ? P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
+      children: (0, m.isNoneSubscription)(t.planId) ? C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
         downgradedPlan: T.default.getDisplayName(s.planId),
         existingRate: L
-      }) : P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
+      }) : C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY.format({
         existingPlan: T.default.getDisplayName(t.planId),
         downgradedPlan: T.default.getDisplayName(s.planId),
         existingRate: L
@@ -71,12 +71,12 @@ function A(e) {
     }), (0, a.jsxs)(c.ModalFooter, {
       children: [(0, a.jsx)(c.Button, {
         onClick: A,
-        children: P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
+        children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
       }), (0, a.jsx)(c.Button, {
         look: c.Button.Looks.LINK,
         color: (0, d.isThemeLight)(r) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
         onClick: i,
-        children: P.default.Messages.NEVERMIND
+        children: C.default.Messages.NEVERMIND
       })]
     })]
   })
@@ -95,7 +95,7 @@ function M(e) {
       className: R.infoIcon
     }), (0, a.jsx)("div", {
       className: R.text,
-      children: P.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
+      children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
         planName: t.hasExternalPlanChange ? (0, T.getExternalPlanDisplayName)(s) : T.default.getDisplayName(s.planId),
         date: t.currentPeriodEnd
       })
@@ -104,7 +104,7 @@ function M(e) {
         o(!0), e.preventDefault()
       },
       className: R.cancelLink,
-      children: P.default.Messages.CANCEL
+      children: C.default.Messages.CANCEL
     }), u ? (0, a.jsx)(c.Modal, {
       renderModal: e => {
         let {

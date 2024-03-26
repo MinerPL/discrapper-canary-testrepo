@@ -152,7 +152,7 @@ function O(e) {
     U(e), V(e)
   }, [V]), H = l.useCallback(() => {
     U(""), F("")
-  }, []), B = l.useMemo(() => {
+  }, []), G = l.useMemo(() => {
     if (null == h || null == P || null == m) return null;
     if (0 === O) return (0, a.jsx)("div", {
       className: i(j.permissionChiplet, j.noModPerms),
@@ -223,7 +223,7 @@ function O(e) {
               autoCorrect: "off",
               spellCheck: "false"
             }
-          }), B]
+          }), G]
         })
       })
     })]

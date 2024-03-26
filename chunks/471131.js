@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return P
+    return C
   }
 }), s("222007");
 var a = s("37983"),
@@ -22,13 +22,13 @@ var a = s("37983"),
   N = s("782340"),
   S = s("893643"),
   T = s("940420"),
-  C = s("591726"),
-  P = function(e) {
+  P = s("591726"),
+  C = function(e) {
     let {
       premiumSubscription: t,
       premiumType: s,
       onClose: i,
-      onConfirm: P,
+      onConfirm: C,
       userDiscountOffer: R
     } = e, [A, M] = n.useState(!1), [h, L] = n.useState(!1), g = async e => {
       try {
@@ -37,12 +37,12 @@ var a = s("37983"),
           body: {
             user_discount_offer_id: e
           }
-        }), P()
+        }), C()
       } catch (e) {
         M(!0)
       }
       L(!1)
-    }, y = (0, d.default)(), x = (0, u.isThemeDark)(y) ? T : C, D = (0, _.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), O = (0, f.formatPrice)(U.amount, U.currency);
+    }, y = (0, d.default)(), x = (0, u.isThemeDark)(y) ? T : P, D = (0, _.useChurnDiscountedPrice)(t, m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), U = (0, E.getPrice)(m.SubscriptionPlans.PREMIUM_MONTH_TIER_2), O = (0, f.formatPrice)(U.amount, U.currency);
     return null == R ? null : (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(p.default, {
         premiumType: s,

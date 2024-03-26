@@ -9,8 +9,8 @@ l("884691");
 var s = l("414456"),
   i = l.n(s),
   n = l("506838"),
-  o = l("265586"),
-  r = l("77078"),
+  r = l("265586"),
+  o = l("77078"),
   d = l("782340"),
   u = l("483665");
 
@@ -20,8 +20,8 @@ function c(e) {
     item: l,
     isDarkText: s = !1
   } = e;
-  let c = (t = null == l ? void 0 : l.type, (0, n.match)(t).with(o.CollectiblesItemType.AVATAR_DECORATION, () => d.default.Messages.USER_SETTINGS_AVATAR_DECORATION).with(o.CollectiblesItemType.PROFILE_EFFECT, () => d.default.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
-  return null === c ? null : (0, a.jsx)(r.Text, {
+  let c = (t = null == l ? void 0 : l.type, (0, n.match)(t).with(r.CollectiblesItemType.AVATAR_DECORATION, () => d.default.Messages.USER_SETTINGS_AVATAR_DECORATION).with(r.CollectiblesItemType.PROFILE_EFFECT, () => d.default.Messages.USER_SETTINGS_PROFILE_EFFECT).otherwise(() => null));
+  return null === c ? null : (0, a.jsx)(o.Text, {
     variant: "text-xxs/normal",
     className: i([u.container, s ? u.darkText : u.lightText]),
     children: c

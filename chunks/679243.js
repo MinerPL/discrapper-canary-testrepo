@@ -46,8 +46,8 @@ var a = n("37983"),
   V = n("437825"),
   k = n("142303"),
   H = n("200639"),
-  B = n("97347"),
-  G = n("216947"),
+  G = n("97347"),
+  B = n("216947"),
   W = n("267675"),
   Y = n("433487"),
   z = n("998564"),
@@ -79,8 +79,8 @@ let eo = l.memo(e => {
     className: F,
     style: k,
     channel: H,
-    width: B,
-    inPopout: G,
+    width: G,
+    inPopout: B,
     onVideoResize: W,
     inCall: Y = !1,
     selected: z = !1,
@@ -161,26 +161,26 @@ let eo = l.memo(e => {
       null == f || f(d, e)
     }, [f, d]),
     eH = null,
-    eB = null,
-    eG = "";
+    eG = null,
+    eB = "";
   switch (d.type) {
     case el.ParticipantTypes.STREAM:
       eH = (0, a.jsx)($.default, {
         participant: d,
         selected: z,
-        width: B,
+        width: G,
         fit: eo,
         onVideoResize: W,
         paused: ed,
-        inPopout: G,
+        inPopout: B,
         focused: X
-      }), eB = (0, a.jsx)($.StreamTileIndicators, {
+      }), eG = (0, a.jsx)($.StreamTileIndicators, {
         participant: d,
         selected: z,
-        width: B,
+        width: G,
         focused: X,
         idle: eh
-      }), eG = er.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
+      }), eB = er.default.Messages.CALL_TILE_A11Y_LABEL_STREAM.format({
         streamerName: d.user.username
       });
       break;
@@ -193,11 +193,11 @@ let eo = l.memo(e => {
         onVideoResize: W,
         paused: ed,
         selected: z,
-        width: B,
+        width: G,
         blocked: et,
         noVideoRender: Z || eT,
         pulseSpeakingIndicator: ef
-      }), eG = er.default.Messages.CALL_TILE_A11Y_LABEL_USER.format({
+      }), eB = er.default.Messages.CALL_TILE_A11Y_LABEL_USER.format({
         username: d.user.username
       });
       break;
@@ -207,8 +207,8 @@ let eo = l.memo(e => {
         participant: d,
         selected: z,
         channel: H,
-        width: B
-      }), eG = er.default.Messages.CALL_TILE_A11Y_LABEL_ACTIVITY.format({
+        width: G
+      }), eB = er.default.Messages.CALL_TILE_A11Y_LABEL_ACTIVITY.format({
         activityName: null == eS ? void 0 : eS.name
       });
       break;
@@ -216,11 +216,11 @@ let eo = l.memo(e => {
       eH = (0, a.jsx)($.default, {
         participant: d,
         selected: z,
-        width: B,
+        width: G,
         fit: eo,
         onVideoResize: W,
         paused: ed,
-        inPopout: G,
+        inPopout: B,
         focused: X
       })
   }
@@ -246,7 +246,7 @@ let eo = l.memo(e => {
           style: k,
           participantUserId: eg,
           children: (0, a.jsxs)(h.ClickableContainer, {
-            "aria-label": eG,
+            "aria-label": eB,
             className: eu.tileChild,
             onDoubleClick: eV,
             onContextMenu: ek,
@@ -273,7 +273,7 @@ let eo = l.memo(e => {
               })
             }) : null, eH, K ? null : (0, a.jsx)("div", {
               className: eu.indicators,
-              children: eB
+              children: eG
             }), z ? (0, a.jsx)("div", {
               className: eu.selectedScreen,
               children: (0, a.jsx)(V.default, {
@@ -281,7 +281,7 @@ let eo = l.memo(e => {
               })
             }) : null, d.type !== el.ParticipantTypes.ACTIVITY ? (0, a.jsx)(ec, {
               focused: X,
-              width: B,
+              width: G,
               inCall: Y,
               participantType: d.type,
               hasVideo: null != eN && eN,
@@ -331,7 +331,7 @@ function ed(e) {
   });
   switch (n) {
     case el.VoicePlatforms.MOBILE:
-      return (0, a.jsx)(G.default, {
+      return (0, a.jsx)(B.default, {
         className: l
       });
     case el.VoicePlatforms.XBOX:
@@ -372,9 +372,9 @@ let ec = l.memo(e => {
     hangStatusActivity: D,
     application: b,
     speaking: w
-  } = e, G = null, W = null, z = null, K = null, Q = (0, et.isVideoCompact)(g), q = (0, et.isNamesCompact)(g), J = (0, r.useStateFromStores)([P.default], () => null != j && P.default.isLocalVideoAutoDisabled(j, (0, S.default)(R)), [j, R]), $ = (0, h.useRedesignIconContext)().enabled;
+  } = e, B = null, W = null, z = null, K = null, Q = (0, et.isVideoCompact)(g), q = (0, et.isNamesCompact)(g), J = (0, r.useStateFromStores)([P.default], () => null != j && P.default.isLocalVideoAutoDisabled(j, (0, S.default)(R)), [j, R]), $ = (0, h.useRedesignIconContext)().enabled;
   if (!M) {
-    if (l && R === el.ParticipantTypes.STREAM && C && !N) G = (0, a.jsx)(h.Tooltip, {
+    if (l && R === el.ParticipantTypes.STREAM && C && !N) B = (0, a.jsx)(h.Tooltip, {
       text: er.default.Messages.UNMUTE,
       children: e => {
         let {
@@ -394,18 +394,18 @@ let ec = l.memo(e => {
     else if (l || R !== el.ParticipantTypes.STREAM || !C || Q || N) {
       if ($) {
         let e;
-        m ? e = o.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), G = null != e ? (0, a.jsx)(e, {
+        m ? e = o.HeadphonesDenyIcon : s ? e = c.MicrophoneDenyIcon : n ? e = d.HeadphonesSlashIcon : l ? e = c.MicrophoneDenyIcon : t && (e = f.MicrophoneSlashIcon), B = null != e ? (0, a.jsx)(e, {
           color: u.default.colors.WHITE
         }) : null
       } else if (n || t || l) {
-        let e = n ? H.default : B.default;
-        G = (0, a.jsx)(e, {
+        let e = n ? H.default : G.default;
+        B = (0, a.jsx)(e, {
           foreground: i({
             [eu.localMuteStrikethrough]: l && !n
           })
         })
       }
-    } else G = (0, a.jsx)(h.Tooltip, {
+    } else B = (0, a.jsx)(h.Tooltip, {
       text: er.default.Messages.MUTE,
       children: e => {
         let {
@@ -518,9 +518,9 @@ let ec = l.memo(e => {
         children: [null != W && (0, a.jsx)("div", {
           className: eu.status,
           children: W
-        }), null != G && (0, a.jsx)("div", {
+        }), null != B && (0, a.jsx)("div", {
           className: eu.status,
-          children: G
+          children: B
         }), z, K]
       })]
     })]

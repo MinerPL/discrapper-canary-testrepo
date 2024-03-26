@@ -69,9 +69,9 @@ var a = n("37983"),
       })
     }, [b]), H = l.useCallback(() => {
       null != b && ((0, E.trackQuestContentClicked)(b.id, _.QuestContent.QUEST_LIVE_STREAM, E.QuestContentCTA.TRACK_PROGRESS), o.default.open(R.UserSettingsSections.INVENTORY))
-    }, [b]), B = l.useCallback(() => {
+    }, [b]), G = l.useCallback(() => {
       null != b && ((0, E.trackQuestContentClicked)(b.id, _.QuestContent.QUEST_LIVE_STREAM, E.QuestContentCTA.LEARN_MORE), o.default.open(R.UserSettingsSections.INVENTORY))
-    }, [b]), G = (0, A.useHandleClaimQuestsReward)({
+    }, [b]), B = (0, A.useHandleClaimQuestsReward)({
       quest: b,
       location: _.QuestContent.QUEST_LIVE_STREAM
     }), W = (0, S.useIsQuestExpired)(b);
@@ -156,7 +156,7 @@ var a = n("37983"),
                   color: u.Button.Colors.PRIMARY,
                   fullWidth: !0,
                   size: u.Button.Sizes.SMALL,
-                  onClick: B,
+                  onClick: G,
                   children: L.default.Messages.QUESTS_LEARN_MORE_V2
                 }), (0, a.jsx)(u.Button, {
                   className: y.cta,
@@ -181,7 +181,7 @@ var a = n("37983"),
                 className: y.cta,
                 color: u.Button.Colors.BRAND,
                 fullWidth: !0,
-                onClick: G,
+                onClick: B,
                 size: u.Button.Sizes.SMALL,
                 children: L.default.Messages.QUESTS_CLAIM_REWARD
               })]

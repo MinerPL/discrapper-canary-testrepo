@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return T
   },
   PremiumSubscriptionPauseModalConfirm: function() {
-    return C
+    return P
   }
 }), s("424973"), s("222007");
 var a = s("37983"),
@@ -111,7 +111,7 @@ function T(e) {
   })
 }
 
-function C(e) {
+function P(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
@@ -119,8 +119,8 @@ function C(e) {
     pauseDuration: r,
     analyticsLocation: d
   } = e, [_, T] = n.useState(!1), {
-    analyticsLocations: C
-  } = (0, E.default)(), [P, R] = n.useState(!1), A = (0, c.default)(), M = null, h = null, L = [m.SubscriptionStatusTypes.PAST_DUE, m.SubscriptionStatusTypes.PAUSED], g = L.includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, y = l(g).add(r, "days").toDate();
+    analyticsLocations: P
+  } = (0, E.default)(), [C, R] = n.useState(!1), A = (0, c.default)(), M = null, h = null, L = [m.SubscriptionStatusTypes.PAST_DUE, m.SubscriptionStatusTypes.PAUSED], g = L.includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, y = l(g).add(r, "days").toDate();
   switch (t.status) {
     case m.SubscriptionStatusTypes.PAST_DUE:
       h = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
@@ -169,7 +169,7 @@ function C(e) {
         className: N.whatYouLoseButtonContainer,
         children: [(0, a.jsx)(o.Button, {
           color: o.Button.Colors.RED,
-          disabled: P || null == r,
+          disabled: C || null == r,
           onClick: async () => {
             await S({
               premiumSubscription: t,
@@ -177,7 +177,7 @@ function C(e) {
               setIsCancelling: R,
               setHasError: T,
               onClose: i,
-              analyticsLocations: C,
+              analyticsLocations: P,
               analyticsLocation: d
             })
           },
