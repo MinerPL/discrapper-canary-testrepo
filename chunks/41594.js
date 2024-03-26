@@ -192,6 +192,7 @@ function O(e) {
     className: i({
       [x.favoritesSuggestion]: K
     }),
+    ref: X,
     children: (0, l.jsxs)(m.default, {
       role: ee && !c ? "button" : "link",
       href: ee ? void 0 : J,
