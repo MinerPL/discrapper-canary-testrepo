@@ -148,11 +148,11 @@ function O(e) {
     location: s,
     className: r,
     onNavigate: d
-  } = e, f = (0, o.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, o.useStateFromStores)([S.default], () => S.default.getGuild(n), [n]), m = (0, o.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), p = (0, x.useProfileThemedPanelBackground)(t, n), C = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS), O = Object.keys(C).length, P = l.useMemo(() => null != h ? T.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? T.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [w, F] = l.useState(""), V = l.useCallback(u(F, 300), []), k = l.useCallback(e => {
+  } = e, f = (0, o.useStateFromStores)([_.default], () => _.default.getUser(t), [t]), h = (0, o.useStateFromStores)([S.default], () => S.default.getGuild(n), [n]), m = (0, o.useStateFromStores)([g.default], () => g.default.getMember(n, t), [n, t]), p = (0, x.useProfileThemedPanelBackground)(t, n), C = (0, N.useUserPermissionsAndRoles)(t, n, N.ALL_PERMISSIONS), O = Object.keys(C).length, P = l.useMemo(() => null != h ? T.default.getGuildPermissionSpecMap(h) : null, [h]), D = l.useMemo(() => null != h ? T.default.generateGuildPermissionSpec(h) : null, [h]), [b, U] = l.useState(""), [w, F] = l.useState(""), V = l.useCallback(u(F, 300), []), H = l.useCallback(e => {
     U(e), V(e)
-  }, [V]), H = l.useCallback(() => {
+  }, [V]), k = l.useCallback(() => {
     U(""), F("")
-  }, []), G = l.useMemo(() => {
+  }, []), B = l.useMemo(() => {
     if (null == h || null == P || null == m) return null;
     if (0 === O) return (0, a.jsx)("div", {
       className: i(j.permissionChiplet, j.noModPerms),
@@ -215,15 +215,15 @@ function O(e) {
             className: j.searchBar,
             query: b,
             placeholder: M.default.Messages.GUILD_MEMBER_MOD_VIEW_PERMISSIONS_SEARCH_PLACEHOLDER,
-            onChange: k,
-            onClear: H,
+            onChange: H,
+            onClear: k,
             autoComplete: "off",
             inputProps: {
               autoCapitalize: "none",
               autoCorrect: "off",
               spellCheck: "false"
             }
-          }), G]
+          }), B]
         })
       })
     })]

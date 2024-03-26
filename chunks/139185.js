@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("635956"),
   p = n("305961"),
   S = n("697218"),
-  A = n("145131"),
-  C = n("98292"),
+  C = n("145131"),
+  A = n("98292"),
   h = n("256170"),
   g = n("599110"),
   M = n("719923"),
@@ -62,19 +62,19 @@ function k(e) {
     sticker: t,
     description: n
   } = e;
-  return (0, s.jsxs)(A.default, {
+  return (0, s.jsxs)(C.default, {
     children: [(0, s.jsx)(v.default, {
       sticker: t,
       size: 48,
       isInteracting: !0
-    }), (0, s.jsxs)(A.default, {
-      direction: A.default.Direction.VERTICAL,
-      justify: A.default.Justify.CENTER,
+    }), (0, s.jsxs)(C.default, {
+      direction: C.default.Direction.VERTICAL,
+      justify: C.default.Justify.CENTER,
       className: j.truncatingText,
       children: [(0, s.jsx)(o.Text, {
         className: j.emojiName,
         variant: "text-md/semibold",
-        children: (0, s.jsx)(C.default, {
+        children: (0, s.jsx)(A.default, {
           children: t.name
         })
       }), null != n && (0, s.jsx)(o.Text, {
@@ -145,7 +145,7 @@ let F = e => {
         closePopout: T,
         refreshPositionKey: I
       } = e,
-      [m, C] = a.useState(null),
+      [m, A] = a.useState(null),
       [O, R] = a.useState(!1),
       L = S.default.getCurrentUser(),
       P = M.default.canUseCustomStickersEverywhere(L),
@@ -168,7 +168,7 @@ let F = e => {
         let e = null == b || b.hasFeature(D.GuildFeatures.DISCOVERABLE);
         if (e) {
           let e = await (0, E.default)(n.id);
-          C(e)
+          A(e)
         }
         R(!0)
       };
@@ -244,7 +244,7 @@ let F = e => {
                 I(), w(!F)
               },
               className: j.showMoreEmojis,
-              children: (0, s.jsxs)(A.default, {
+              children: (0, s.jsxs)(C.default, {
                 children: [(0, s.jsx)(o.Text, {
                   className: j.showMoreEmojisLabel,
                   variant: "text-xs/normal",
@@ -256,10 +256,10 @@ let F = e => {
                   })
                 })]
               })
-            }), F && (0, s.jsx)(A.default, {
-              wrap: A.default.Wrap.WRAP,
-              align: A.default.Align.START,
-              justify: A.default.Justify.START,
+            }), F && (0, s.jsx)(C.default, {
+              wrap: C.default.Wrap.WRAP,
+              align: C.default.Align.START,
+              justify: C.default.Justify.START,
               className: j.otherEmojisContainer,
               children: t.map(e => (0, s.jsx)(o.Tooltip, {
                 text: e.name,

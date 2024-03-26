@@ -23,8 +23,8 @@ var a = n("498574"),
 
 function N(e) {
   var t, N;
-  let p, S, A, {
-      onTransitionToInviteChannel: C,
+  let p, S, C, {
+      onTransitionToInviteChannel: A,
       onAcceptInstantInvite: h,
       guild: g,
       invite: M,
@@ -51,7 +51,7 @@ function N(e) {
     let e = (0, c.getGuildTierFromAppliedBoostCount)(M.guild.premium_subscription_count, M.guild.id);
     g.premiumTier = e
   }
-  let F = U ? C : h,
+  let F = U ? A : h,
     w = (0, f.getHeaderTextForInvite)({
       isVoiceChannel: b,
       isOwnInvite: L,
@@ -72,7 +72,7 @@ function N(e) {
         disableBoostClick: !0
       })
     })]
-  }), B && (A = (0, s.jsx)(l.TooltipContainer, {
+  }), B && (C = (0, s.jsx)(l.TooltipContainer, {
     className: m.tooltipContainer,
     text: I.default.Messages.GUEST_MEMBERSHIP_EXPLANATION,
     children: (0, s.jsx)(u.default, {
@@ -102,7 +102,7 @@ function N(e) {
       guild: g
     }), (0, s.jsx)(o.default.Header, {
       text: w,
-      extra: A
+      extra: C
     }), (0, s.jsxs)(o.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: m.headerLine,

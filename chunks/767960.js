@@ -1,23 +1,23 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return S
+    return h
   }
 });
-var n = l("446674"),
-  a = l("913144"),
-  s = l("773336"),
-  r = l("50885"),
-  i = l("288207"),
-  u = l("439792"),
-  o = l("709496");
+var a = n("446674"),
+  s = n("913144"),
+  l = n("773336"),
+  i = n("50885"),
+  r = n("288207"),
+  o = n("439792"),
+  u = n("709496");
 let d = !1,
   c = !0,
   f = !1;
-class m extends n.default.Store {
+class E extends a.default.Store {
   initialize() {
-    !(!s.isPlatformEmbedded || __OVERLAY__) && r.default.getGPUDriverVersions().then(e => {
-      d = (0, o.default)(e), c = (0, i.default)(e), f = (0, u.default)(e), this.emitChange()
+    !(!l.isPlatformEmbedded || __OVERLAY__) && i.default.getGPUDriverVersions().then(e => {
+      d = (0, u.default)(e), c = (0, r.default)(e), f = (0, o.default)(e), this.emitChange()
     })
   }
   get GPUDriversOutdated() {
@@ -37,8 +37,8 @@ class m extends n.default.Store {
     }
   }
 }
-m.displayName = "StreamingCapabilitiesStore";
-var S = new m(a.default, {
+E.displayName = "StreamingCapabilitiesStore";
+var h = new E(s.default, {
   OVERLAY_INITIALIZE: function(e) {
     let {
       streamingCapabilitiesStoreState: t

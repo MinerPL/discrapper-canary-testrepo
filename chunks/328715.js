@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return G
   }
 }), n("222007");
 var a = n("37983");
@@ -43,7 +43,7 @@ var l = n("414456"),
   F = n("434225"),
   V = n("919163");
 
-function k(e) {
+function H(e) {
   let {
     focusedParticipant: t,
     channel: n
@@ -60,7 +60,7 @@ function k(e) {
   })
 }
 
-function H(e) {
+function k(e) {
   let {
     user: t,
     channel: n,
@@ -82,7 +82,7 @@ function H(e) {
   })
 }
 
-function G(e) {
+function B(e) {
   let t, {
       focusedApplication: n,
       focusedParticipant: l,
@@ -103,7 +103,7 @@ function G(e) {
       variant: "text-md/normal",
       color: "none",
       children: (0, d.default)(n.name)
-    }), i && (0, a.jsx)(k, {
+    }), i && (0, a.jsx)(H, {
       channel: s,
       focusedParticipant: l
     })]
@@ -114,12 +114,12 @@ function G(e) {
     t = (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(M.default.Divider, {
         className: F.divider
-      }), (0, a.jsx)(H, {
+      }), (0, a.jsx)(k, {
         user: e,
         channel: s,
         stream: n,
         color: i ? "header-primary" : "none"
-      }), i && (0, a.jsx)(k, {
+      }), i && (0, a.jsx)(H, {
         channel: s,
         focusedParticipant: l
       })]
@@ -134,7 +134,7 @@ function G(e) {
   })
 }
 
-function B(e) {
+function G(e) {
   let {
     channel: t,
     guild: l,
@@ -151,27 +151,27 @@ function B(e) {
   t.isDM() ? N = w.default.Messages.DM : t.isGroupDM() && (N = w.default.Messages.GROUP_DM);
   let L = (0, i.useStateFromStores)([f.default], () => f.default.getChannelStatus(t)),
     O = t.isGuildVoice() && o && null != L && L.length > 0,
-    k = (0, i.useStateFromStores)([x.default], () => x.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
-    H = O ? (0, a.jsx)(r.Tooltip, {
+    H = (0, i.useStateFromStores)([x.default], () => x.default.can(b.Permissions.SET_VOICE_CHANNEL_STATUS, t)),
+    k = O ? (0, a.jsx)(r.Tooltip, {
       text: w.default.Messages.VOICE_CHANNEL_SET_STATUS,
       delay: 500,
       position: "bottom",
-      shouldShow: k,
+      shouldShow: H,
       children: e => (0, a.jsxs)(r.Clickable, {
         ...e,
         className: s(F.channelStatusClickable, {
-          [F.hoverable]: k
+          [F.hoverable]: H
         }),
-        onClick: k ? B : void 0,
+        onClick: H ? G : void 0,
         children: [(0, a.jsx)(r.Text, {
           variant: "text-xs/normal",
           className: s(F.channelStatus, V.markup, {
-            [F.hoverable]: k
+            [F.hoverable]: H
           }),
           children: _.default.parseVoiceChannelStatus(L, !0, {
             channelId: t.id
           })
-        }), k && (0, a.jsx)(A.default, {
+        }), H && (0, a.jsx)(A.default, {
           className: s(F.pencilIcon, F.hoverable),
           width: 14,
           height: 14
@@ -179,7 +179,7 @@ function B(e) {
       })
     }) : null;
 
-  function B() {
+  function G() {
     (0, r.openModalLazy)(async () => {
       let {
         default: e
@@ -198,7 +198,7 @@ function B(e) {
       onDoubleClick: S.handleDoubleClick,
       transparent: !0,
       className: (0, R.getThemeClass)(U.ThemeTypes.DARK),
-      childrenBottom: H,
+      childrenBottom: k,
       toolbar: (0, a.jsx)(y.default, {
         inPopout: u === b.AppContext.POPOUT,
         channel: t,
@@ -216,7 +216,7 @@ function B(e) {
       }), (0, a.jsx)(C.HeaderGuildBreadcrumb, {
         channel: t,
         guild: l
-      }), (0, a.jsx)(G, {
+      }), (0, a.jsx)(B, {
         focusedApplication: v,
         focusedParticipant: E,
         channel: t

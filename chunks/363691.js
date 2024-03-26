@@ -27,7 +27,7 @@ var s = n("37983"),
       n = (0, r.useStateFromStores)([T.default], () => T.default.getHistorySnapshot(), []),
       [l, S] = a.useState(!1);
     if (null == t) return null;
-    let A = async () => {
+    let C = async () => {
       S(!0);
       try {
         _.trackGuildJoinClicked(t.id), await u.default.joinGuild(t.id, {
@@ -66,7 +66,7 @@ var s = n("37983"),
         color: o.Button.Colors.WHITE,
         size: o.Button.Sizes.NONE,
         submitting: l,
-        onClick: A,
+        onClick: C,
         children: m.default.Messages.LURKER_MODE_NAG_BAR_BUTTON.format({
           guild: t.name
         })

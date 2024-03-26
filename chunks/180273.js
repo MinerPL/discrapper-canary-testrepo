@@ -22,29 +22,29 @@ let T = null,
   N = {},
   p = _.TooltipActions.LOADING_INITIAL_PROGRESS,
   S = new i.Timeout,
-  A = {
+  C = {
     completed: !1,
     initialProgressFetched: !1,
     interrupted: !1,
     retries: 0
   },
-  C = e => {
+  A = e => {
     let {
       dropsQuestId: t,
       streamKey: n,
       game: s,
       completed: a,
       gameTitle: l
-    } = A;
+    } = C;
     !(null == t || null == l || a || null == s || null == n || S.isStarted()) && (e ? (0, E.sendHeartbeat)(t, n, s.pid) : S.start(1 * c.default.Millis.MINUTE, () => {
       (0, E.sendHeartbeat)(t, n, s.pid)
     }))
   },
   h = e => {
-    A.retries = 0, A.completed = e.completed, A.initialProgressFetched = !0, A.progress = e.progress, A.lastCheckedAt = a.now(), p = A.completed ? _.TooltipActions.QUEST_COMPLETION : _.TooltipActions.TRACK_PROGRESS
+    C.retries = 0, C.completed = e.completed, C.initialProgressFetched = !0, C.progress = e.progress, C.lastCheckedAt = a.now(), p = C.completed ? _.TooltipActions.QUEST_COMPLETION : _.TooltipActions.TRACK_PROGRESS
   },
   g = (e, t, n) => {
-    (!A.completed || e.dropsQuestId !== A.dropsQuestId) && (A.game = t, A.dropsQuestId = e.dropsQuestId, A.gameTitle = e.title, A.completed = !1, A.interrupted = !1, A.streamKey = n, A.retries = 0, A.lastCheckedAt = a.now(), S.start(5e3, () => C(!0)))
+    (!C.completed || e.dropsQuestId !== C.dropsQuestId) && (C.game = t, C.dropsQuestId = e.dropsQuestId, C.gameTitle = e.title, C.completed = !1, C.interrupted = !1, C.streamKey = n, C.retries = 0, C.lastCheckedAt = a.now(), S.start(5e3, () => A(!0)))
   };
 class M extends l.default.Store {
   initialize() {
@@ -58,7 +58,7 @@ class M extends l.default.Store {
     let n = (0, f.getDrop)(e);
     if (null == n || null == I) return !1;
     let s = !!(null === (t = I[n.dropsQuestId]) || void 0 === t ? void 0 : t.completed_at),
-      a = A.completed && A.gameTitle === n.title || s;
+      a = C.completed && C.gameTitle === n.title || s;
     return a
   }
   get serverEligibleByQuestIds() {
@@ -77,19 +77,19 @@ class M extends l.default.Store {
     return N
   }
   get hasInitialProgressFetched() {
-    return A.initialProgressFetched
+    return C.initialProgressFetched
   }
   get isCurrentQuestCompleted() {
-    return A.completed
+    return C.completed
   }
   get isCurrentQuestInterrupted() {
-    return A.interrupted
+    return C.interrupted
   }
   get currentDropQuestGameTitle() {
-    return A.gameTitle
+    return C.gameTitle
   }
   get currentDropQuestStreamProgress() {
-    let e = A.progress;
+    let e = C.progress;
     if (null == e || null == e.steps || 0 === e.steps.length) return 0;
     let t = e.steps.find(e => "stream_length" === e.name);
     return null == t ? 0 : t.percent
@@ -118,28 +118,28 @@ var O = new M(r.default, {
   },
   DROPS_FETCH_PROGRESS_SUCCESS: h,
   DROPS_FETCH_PROGRESS_FAILURE: e => {
-    !A.initialProgressFetched && (A.initialProgressFetched = !0, p = _.TooltipActions.STREAM_CTA)
+    !C.initialProgressFetched && (C.initialProgressFetched = !0, p = _.TooltipActions.STREAM_CTA)
   },
   DROPS_HEARTBEAT_SUCCESS: e => {
-    h(e), m[e.dropsQuestId] = !0, C()
+    h(e), m[e.dropsQuestId] = !0, A()
   },
   DROPS_HEARTBEAT_FAILURE: e => {
     let {
       dropsQuestId: t,
       statusCode: n
     } = e;
-    if (A.completed = !1, A.initialProgressFetched = !0, A.lastCheckedAt = a.now(), 429 === n && 0 === A.retries) {
-      A.retries = A.retries + 1, C();
+    if (C.completed = !1, C.initialProgressFetched = !0, C.lastCheckedAt = a.now(), 429 === n && 0 === C.retries) {
+      C.retries = C.retries + 1, A();
       return
     }
-    p = _.TooltipActions.STREAM_CTA, 403 === n ? m[t] = !1 : A.interrupted = !0
+    p = _.TooltipActions.STREAM_CTA, 403 === n ? m[t] = !1 : C.interrupted = !0
   },
   DROPS_UNENROLL_USER: e => {
     I = null, m = {
       ...m
     }, delete m[e.dropsQuestId], N = {
       ...N
-    }, delete N[e.dropsQuestId], A.dropsQuestId === e.dropsQuestId && (A = {
+    }, delete N[e.dropsQuestId], C.dropsQuestId === e.dropsQuestId && (C = {
       completed: !1,
       initialProgressFetched: !1,
       interrupted: !1,
@@ -147,7 +147,7 @@ var O = new M(r.default, {
     })
   },
   STREAM_CLOSE: () => {
-    A.completed && (p = _.TooltipActions.QUEST_COMPLETION), A.interrupted = !1, A.retries = 0, S.stop()
+    C.completed && (p = _.TooltipActions.QUEST_COMPLETION), C.interrupted = !1, C.retries = 0, S.stop()
   },
   STREAM_START: function(e) {
     var t;

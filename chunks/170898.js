@@ -27,7 +27,7 @@ function S(e) {
     attachmentProps: t,
     channelType: n,
     children: l
-  } = e, [S, A] = a.useState(!1), C = a.useRef(null), h = E.default.getCurrentUser(), g = (0, T.isPremiumExactly)(h, m.PremiumTypes.TIER_2), M = I.NitroBrandedAttachmentExperiment.useExperiment({
+  } = e, [S, C] = a.useState(!1), A = a.useRef(null), h = E.default.getCurrentUser(), g = (0, T.isPremiumExactly)(h, m.PremiumTypes.TIER_2), M = I.NitroBrandedAttachmentExperiment.useExperiment({
     location: "PremiumAttachmentWrapper"
   }, {
     autoTrackExposure: !1
@@ -35,7 +35,7 @@ function S(e) {
     analyticsLocations: O
   } = (0, d.default)(u.default.CHANNEL_TEXT_AREA, u.default.MESSAGE_ATTACHMENT), R = t.map(e => e.attachment.size).sort().pop(), L = r.ChannelTypesSets.GUILD.has(n) ? 104857600 : 26214400;
   if (a.useEffect(() => () => {
-      null != C.current && clearTimeout(C.current)
+      null != A.current && clearTimeout(A.current)
     }, []), null == R || R < L) return (0, s.jsx)(s.Fragment, {
     children: l
   });
@@ -43,13 +43,13 @@ function S(e) {
     P = e => {
       I.NitroBrandedAttachmentExperiment.trackExposure({
         location: "PremiumAttachmentWrapper_handleMouseOver"
-      }), M && (null != C.current && clearTimeout(C.current), A(!0), e && (C.current = setTimeout(() => {
-        A(!1)
+      }), M && (null != A.current && clearTimeout(A.current), C(!0), e && (A.current = setTimeout(() => {
+        C(!1)
       }, 3e3)))
     },
     D = () => {
-      M && (null != C.current && clearTimeout(C.current), C.current = setTimeout(() => {
-        A(!1)
+      M && (null != A.current && clearTimeout(A.current), A.current = setTimeout(() => {
+        C(!1)
       }, 300))
     };
   return (0, s.jsxs)("div", {

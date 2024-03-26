@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 }), n("424973"), n("222007");
 var s = n("37983");
@@ -23,15 +23,15 @@ var a = n("414456"),
   N = n("782340"),
   p = n("155363"),
   S = n("125792"),
-  A = () => {
+  C = () => {
     var e, t;
     let a = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
-      A = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(a), [a]),
-      C = (0, o.useStateFromStores)([T.default], () => null != a ? T.default.getRequest(a) : null, [a]),
+      C = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(a), [a]),
+      A = (0, o.useStateFromStores)([T.default], () => null != a ? T.default.getRequest(a) : null, [a]),
       h = (0, r.useLocation)(),
-      g = (null === (e = (0, i.matchPath)(h.pathname, I.Routes.CHANNEL(null == A ? void 0 : A.id, m.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
-    if (null == A || !A.hasVerificationGate() || g) return null;
-    let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
+      g = (null === (e = (0, i.matchPath)(h.pathname, I.Routes.CHANNEL(null == C ? void 0 : C.id, m.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    if (null == C || !C.hasVerificationGate() || g) return null;
+    let M = null !== (t = null == A ? void 0 : A.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
       O = null,
       R = null,
       L = null,
@@ -43,7 +43,7 @@ var a = n("414456"),
             header: N.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
             confirmText: N.default.Messages.CONFIRM,
             cancelText: N.default.Messages.CANCEL,
-            onConfirm: () => E.default.removeGuildJoinRequest(A.id),
+            onConfirm: () => E.default.removeGuildJoinRequest(C.id),
             confirmButtonColor: u.Button.Colors.BRAND,
             ...e,
             children: (0, s.jsx)(u.Text, {
@@ -60,7 +60,7 @@ var a = n("414456"),
               default: e
             } = await n.el("388435").then(n.bind(n, "388435"));
             return t => (0, s.jsx)(e, {
-              guildId: A.id,
+              guildId: C.id,
               ...t
             })
           })
@@ -68,7 +68,7 @@ var a = n("414456"),
         break;
       default:
         O = N.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, R = N.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, L = () => {
-          (0, f.openMemberVerificationModal)(A.id)
+          (0, f.openMemberVerificationModal)(C.id)
         }
     }
     return (0, s.jsxs)("div", {

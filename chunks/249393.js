@@ -23,8 +23,8 @@ var a = n("414456"),
   N = n("368121"),
   p = n("759885"),
   S = n("387111"),
-  A = n("49111"),
-  C = n("782340"),
+  C = n("49111"),
+  A = n("782340"),
   h = n("532112");
 
 function g(e) {
@@ -47,21 +47,21 @@ function g(e) {
       rawName: t
     } = e;
     return "voice_user_ids" === t
-  })) || void 0 === L ? void 0 : L.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([I.default], () => W.map(e => I.default.getUser(e)).filter(Boolean)), Q = B && null != F ? C.default.Messages.WAVED_AT_USER.format({
+  })) || void 0 === L ? void 0 : L.rawValue, W = null != K ? K.split(",") : [], z = (0, i.useStateFromStoresArray)([I.default], () => W.map(e => I.default.getUser(e)).filter(Boolean)), Q = B && null != F ? A.default.Messages.WAVED_AT_USER.format({
     username: H
-  }) : C.default.Messages.WAVED_AT_YOU.format({
+  }) : A.default.Messages.WAVED_AT_YOU.format({
     username: w.nick
   }), Z = null != j && null != b, J = null;
-  J = Z ? B || Y ? C.default.Messages.YOU_ARE_IN_CHANNEL.format({
+  J = Z ? B || Y ? A.default.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
-  }) : C.default.Messages.THEY_ARE_IN_CHANNEL.format({
+  }) : A.default.Messages.THEY_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
-  }) : C.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (J = B ? C.default.Messages.HANGOUT_OVER_SENDER : C.default.Messages.HANGOUT_OVER_RECEIVER);
-  let X = B ? C.default.Messages.WAVE_AGAIN : C.default.Messages.WAVE_BACK;
+  }) : A.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (J = B ? A.default.Messages.HANGOUT_OVER_SENDER : A.default.Messages.HANGOUT_OVER_RECEIVER);
+  let q = B ? A.default.Messages.WAVE_AGAIN : A.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
       className: h.card,
@@ -103,19 +103,19 @@ function g(e) {
       children: [(0, s.jsxs)(r.Button, {
         color: r.Button.Colors.BRAND,
         onClick: () => {
-          null != U && null != y && ((0, f.transitionTo)(A.Routes.CHANNEL(y, U)), u.default.selectVoiceChannel(U))
+          null != U && null != y && ((0, f.transitionTo)(C.Routes.CHANNEL(y, U)), u.default.selectVoiceChannel(U))
         },
         className: h.button,
         innerClassName: h.buttonInner,
         disabled: Y || !Z,
-        children: [(0, s.jsx)(N.default, {}), C.default.Messages.JOIN_HANGOUT]
+        children: [(0, s.jsx)(N.default, {}), A.default.Messages.JOIN_HANGOUT]
       }), (0, s.jsx)(r.Button, {
         color: r.Button.Colors.PRIMARY,
         onClick: () => {
           o.default.sendMessage(x.id, d.default.parse(x, "\uD83D\uDC4B"))
         },
         className: h.button,
-        children: X
+        children: q
       })]
     })]
   })

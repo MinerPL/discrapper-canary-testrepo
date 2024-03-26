@@ -48,8 +48,8 @@ var l = n("37983"),
   Y = n("822485"),
   K = n("798573"),
   W = n("795853"),
-  Z = n("357762"),
-  z = n("504957"),
+  z = n("357762"),
+  Z = n("504957"),
   X = n("199218"),
   Q = n("624531"),
   q = n("785343"),
@@ -226,7 +226,7 @@ function er(e) {
             ref: eg.guildDiscoveryRef,
             selected: e_,
             tooltip: ee.default.Messages.GUILD_DISCOVERY_TOOLTIP
-          }) : null, (0, l.jsx)(Z.default, {}), (0, l.jsx)("div", {
+          }) : null, (0, l.jsx)(z.default, {}), (0, l.jsx)("div", {
             "aria-label": ee.default.Messages.SERVERS,
             children: eA.map(function e(t) {
               switch (t.type) {
@@ -259,8 +259,8 @@ function er(e) {
           }), n || eT ? null : (0, l.jsx)(Y.default, {
             ref: eg.guildDiscoveryRef,
             selected: e_
-          }), (0, l.jsx)(z.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
-            children: [(0, l.jsx)(Z.default, {}), (0, l.jsx)(B.default, {})]
+          }), (0, l.jsx)(Z.default, {}), t ? null : (0, l.jsxs)(l.Fragment, {
+            children: [(0, l.jsx)(z.default, {}), (0, l.jsx)(B.default, {})]
           })]
         }), (0, l.jsx)(w.default, {
           reverse: !0,

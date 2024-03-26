@@ -41,10 +41,10 @@ var a = n("37983"),
   w = n("293137"),
   F = n("381546"),
   V = n("293499"),
-  k = n("277174"),
-  H = n("711486"),
-  G = n("394640"),
-  B = n("343571"),
+  H = n("277174"),
+  k = n("711486"),
+  B = n("394640"),
+  G = n("343571"),
   W = n("751661"),
   Y = n("244480"),
   z = n("716214"),
@@ -85,7 +85,7 @@ function eo(e) {
   return (0, a.jsx)(R.CenterControlButton, {
     isActive: i,
     label: (t = i, n = o, t ? ei.default.Messages.AUDIENCE_LOWER_HAND : n ? ei.default.Messages.AUDIENCE_RAISE_HAND_CTA : ei.default.Messages.AUDIENCE_RAISE_HAND_NO_PERMISSION),
-    iconComponent: () => (0, a.jsx)(H.default, {
+    iconComponent: () => (0, a.jsx)(k.default, {
       className: i ? er.raisedHandButtonIconActive : er.raisedHandButtonIcon
     }),
     onClick: u,
@@ -120,7 +120,7 @@ function ec(e) {
     onClick: t,
     children: (0, a.jsxs)("div", {
       className: er.buttonWithTextInnerContainer,
-      children: [(0, a.jsx)(k.default, {
+      children: [(0, a.jsx)(H.default, {
         height: 24,
         width: 24,
         className: er.buttonWithTextIcon
@@ -275,10 +275,10 @@ function em(e) {
     isActive: n,
     className: er.buttonSpacing,
     label: n ? ei.default.Messages.STAGE_MUSIC_UNMUTE : ei.default.Messages.STAGE_MUSIC_MUTE,
-    iconComponent: () => n ? (0, a.jsx)(B.default, {
+    iconComponent: () => n ? (0, a.jsx)(G.default, {
       height: 24,
       width: 24
-    }) : (0, a.jsx)(G.default, {
+    }) : (0, a.jsx)(B.default, {
       height: 24,
       width: 24
     }),
@@ -287,10 +287,10 @@ function em(e) {
     isActive: s,
     className: er.buttonSpacing,
     label: s ? ei.default.Messages.STAGE_MUSIC_MUTE : ei.default.Messages.STAGE_MUSIC_UNMUTE,
-    iconComponent: () => s ? (0, a.jsx)(G.default, {
+    iconComponent: () => s ? (0, a.jsx)(B.default, {
       height: 24,
       width: 24
-    }) : (0, a.jsx)(B.default, {
+    }) : (0, a.jsx)(G.default, {
       height: 24,
       width: 24
     }),
@@ -310,9 +310,9 @@ let ep = l.memo(function(e) {
   } = (0, I.default)(), C = (0, v.default)(t), {
     limit: _,
     reachedLimit: R
-  } = (0, T.default)(t), y = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), V = _ > 0, k = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
+  } = (0, T.default)(t), y = (0, r.useStateFromStores)([b.default], () => b.default.getCurrentUser()), P = (0, r.useStateFromStores)([O.default], () => (0, E.default)(O.default)), U = (0, r.useStateFromStores)([D.default], () => D.default.getVoiceChannelId() === t.id, [t.id]), w = (0, r.useStateFromStores)([c.default], () => c.default.getStreamParticipants(t.id)[0], [t.id]), F = (0, q.useStageHasMedia)(t.id), V = _ > 0, H = R && !F || null != w && w.user.id !== (null == y ? void 0 : y.id);
   if (null == y) return null;
-  let H = (0, a.jsxs)(a.Fragment, {
+  let k = (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)(u.Popout, {
       renderPopout: e => {
         let {
@@ -352,7 +352,7 @@ let ep = l.memo(function(e) {
       exitFullScreen: () => null,
       canGoLive: P,
       hasPermission: C,
-      disabled: k
+      disabled: H
     })]
   });
   return (0, a.jsxs)("div", {
@@ -363,7 +363,7 @@ let ep = l.memo(function(e) {
       channel: t
     }), U && !n ? (0, a.jsxs)("div", {
       className: i(er.avControls, er.buttonSpacing),
-      children: [V && _ > 0 && H, (0, a.jsx)(u.Popout, {
+      children: [V && _ > 0 && k, (0, a.jsx)(u.Popout, {
         renderPopout: e => {
           let {
             closePopout: t

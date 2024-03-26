@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("299285"),
   p = n("661579"),
   S = n("393414"),
-  A = n("915639"),
-  C = n("697218"),
+  C = n("915639"),
+  A = n("697218"),
   h = n("437712"),
   g = n("622839"),
   M = n("552712"),
@@ -120,18 +120,18 @@ class G extends a.Component {
         isInTestMode: p,
         innerClassName: S
       } = this.props,
-      A = !0 === T && (null == m || m.type !== U.SKUTypes.CONSUMABLE),
-      C = !0 === n.disabled || null != m && !m.available && !(null != N) && !p || A && !I,
+      C = !0 === T && (null == m || m.type !== U.SKUTypes.CONSUMABLE),
+      A = !0 === n.disabled || null != m && !m.available && !(null != N) && !p || C && !I,
       h = n.disabledTooltipText,
       g = {
         wrapperClassName: l,
         className: r,
         fullWidth: o,
         size: d,
-        color: C && null != f ? f : null != E ? E : u.Button.Colors.GREEN,
+        color: A && null != f ? f : null != E ? E : u.Button.Colors.GREEN,
         hover: this.hover,
         innerClassName: i(null != S ? S : null, b.applicationBuyButton),
-        disabled: C,
+        disabled: A,
         submitting: a || !0 === n.submitting,
         onClick: null != n.onClick ? n.onClick : this.handleClick
       };
@@ -281,16 +281,16 @@ var B = a.forwardRef((e, t) => {
     channelId: l,
     skuId: i,
     ...r
-  } = e, u = (0, o.useStateFromStores)([m.default, O.default], () => O.default.inTestModeForApplication(a) || m.default.inDevModeForApplication(a), [a]), [d, c, E, f, _, T] = (0, o.useStateFromStoresArray)([N.default, C.default, M.default, h.default], () => {
+  } = e, u = (0, o.useStateFromStores)([m.default, O.default], () => O.default.inTestModeForApplication(a) || m.default.inDevModeForApplication(a), [a]), [d, c, E, f, _, T] = (0, o.useStateFromStoresArray)([N.default, A.default, M.default, h.default], () => {
     let e = N.default.getApplication(a),
-      t = C.default.getCurrentUser(),
+      t = A.default.getCurrentUser(),
       s = null == i && null != e ? e.destinationSkuId : i,
       l = null != s ? M.default.get(s) : null,
       r = null != n ? n : a,
       o = null != s ? h.default.isEntitledToSku(t, s, a, r) : null,
       u = x.default.canInstallPremiumApplications(t);
     return [e, t, l, o, u, s]
-  }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), S = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), L = (0, o.useStateFromStores)([A.default], () => A.default.locale), v = (0, I.useAnalyticsContext)();
+  }), p = (0, o.useStateFromStores)([R.default], () => R.default.isFocused()), S = (0, o.useStateFromStores)([g.default], () => g.default.isPurchasingSKU), L = (0, o.useStateFromStores)([C.default], () => C.default.locale), v = (0, I.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
   return (0, s.jsx)(G, {
     ...r,

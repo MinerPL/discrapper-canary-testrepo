@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return m
   }
 });
-var l = a("37983");
+var s = a("37983");
 a("884691");
 var r = a("414456"),
-  s = a.n(r),
+  l = a.n(r),
   n = a("65597"),
   o = a("854588"),
   i = a("206230"),
@@ -25,8 +25,8 @@ var r = a("414456"),
       style: p,
       children: g
     } = e, h = (0, n.useStateFromStores)([i.default], () => i.default.saturation);
-    return (0, l.jsx)("div", {
-      className: s(f.banner, C),
+    return (0, s.jsx)("div", {
+      className: l(f.banner, C),
       style: (() => {
         if (null == t) return p;
         if (1 === h) return null != a ? {

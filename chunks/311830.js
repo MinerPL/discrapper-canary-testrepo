@@ -23,7 +23,7 @@ var s = n("37983"),
   p = n("782340"),
   S = n("831797");
 
-function A(e) {
+function C(e) {
   let {
     media: t
   } = e;
@@ -35,7 +35,7 @@ function A(e) {
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     className: t
   } = e;
@@ -181,9 +181,9 @@ function O(e) {
     children: (0, s.jsxs)(u.HeadingLevel, {
       children: [(0, s.jsxs)("div", {
         className: S.header,
-        children: [(0, s.jsx)(C, {
+        children: [(0, s.jsx)(A, {
           className: S.infoButton
-        }), (0, s.jsx)(A, {
+        }), (0, s.jsx)(C, {
           media: n.question
         }), null != n.promptLabel && (0, s.jsx)(u.Text, {
           variant: "text-sm/normal",

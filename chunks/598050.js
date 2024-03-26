@@ -58,12 +58,12 @@ var A = (0, u.default)(e => {
     [f.StageChannelParticipantNamedIndex.SPEAKER]: b,
     [f.StageChannelParticipantNamedIndex.AUDIENCE]: D,
     [f.StageChannelParticipantNamedIndex.SELECTED]: 1
-  }, w = (0, h.useThrottleDurationForChannel)(a.id), [F, V] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, w), k = [Math.max(null !== (t = F[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = F[1]) && void 0 !== n ? n : 1, 1), F[2]], {
-    speakerTileWidth: H,
-    speakerTileHeight: G
-  } = T(l, b), B = A ? l - 32 : Math.min(l - 64, 3 * H + 8), W = e => e === F.length - 1 || 0 === j && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
+  }, w = (0, h.useThrottleDurationForChannel)(a.id), [F, V] = (0, h.useStageChannelParticipantsListThrottled)(a.id, U, w), H = [Math.max(null !== (t = F[0]) && void 0 !== t ? t : 1, 1), Math.max(null !== (n = F[1]) && void 0 !== n ? n : 1, 1), F[2]], {
+    speakerTileWidth: k,
+    speakerTileHeight: B
+  } = T(l, b), G = A ? l - 32 : Math.min(l - 64, 3 * k + 8), W = e => e === F.length - 1 || 0 === j && 1 === e, [Y, z] = i.useState(!1), [K, Z] = i.useState(!1);
   return (0, s.jsx)(p.default, {
-    sections: k,
+    sections: H,
     renderSection: e => {
       let {
         section: t
@@ -103,14 +103,14 @@ var A = (0, u.default)(e => {
             children: (0, s.jsx)(S.default, {
               channel: a,
               participant: l[0],
-              width: B
+              width: G
             })
           }, "selected-participant");
         case 1:
           if (Y) return null;
           return (0, s.jsx)(i.Fragment, {
             children: (0, s.jsx)(E.default, {
-              tileWidth: H,
+              tileWidth: k,
               channel: a,
               participants: l,
               selectedParticipant: L
@@ -129,7 +129,7 @@ var A = (0, u.default)(e => {
     },
     rowHeight: e => {
       let t = null == V[e][0];
-      return t ? 0 : 0 === e ? B / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : G : K ? 0 : 98
+      return t ? 0 : 0 === e ? G / S.SPEAKER_TILE_ASPECT_RATIO + 8 : 1 === e ? Y ? 0 : B : K ? 0 : 98
     },
     renderFooter: e => {
       let {

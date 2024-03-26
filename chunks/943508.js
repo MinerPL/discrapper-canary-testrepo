@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return C
+    return A
   }
 }), n("222007");
 var s = n("37983"),
@@ -22,7 +22,7 @@ var s = n("37983"),
   N = n("646718"),
   p = n("170503");
 let S = (0, E.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
-  A = e => {
+  C = e => {
     null != e && o.default.trackWithMetadata(m.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
       type: N.PremiumUpsellTypes.STICKER_IN_MESSAGE_HOVER,
       expression_id: e.id,
@@ -31,13 +31,13 @@ let S = (0, E.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
       is_custom: (0, _.isCustomSticker)(e.type)
     })
   };
-var C = e => {
+var A = e => {
   let {
     renderableSticker: t,
     channel: n,
     isInteracting: l
   } = e, [o, E] = a.useState(!0), [_, m] = a.useState(String(Date.now())), [N] = (0, f.useStickerForRenderableSticker)(t, l), {
-    analyticsLocations: C
+    analyticsLocations: A
   } = (0, u.default)(r.default.STICKER_MESSAGE), h = (0, s.jsxs)("span", {
     className: p.stickerName,
     children: [(0, s.jsx)(c.default, {
@@ -45,7 +45,7 @@ var C = e => {
     }), (null != N ? N : t).name]
   });
   return (0, s.jsx)(u.AnalyticsLocationProvider, {
-    value: C,
+    value: A,
     children: (0, s.jsx)(i.Popout, {
       align: "center",
       animation: i.Popout.Animation.TRANSLATE,
@@ -69,7 +69,7 @@ var C = e => {
           text: (0, d.renderClickableTooltipNode)(h),
           "aria-label": !1,
           onTooltipShow: () => {
-            A(N)
+            C(N)
           },
           children: e => (0, s.jsx)(i.Clickable, {
             ...e,

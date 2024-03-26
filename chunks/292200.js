@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("537325"),
   p = n("95045"),
   S = n("909917"),
-  A = n("380986"),
-  C = n("969706"),
+  C = n("380986"),
+  A = n("969706"),
   h = n("957255"),
   g = n("697218"),
   M = n("79798"),
@@ -178,11 +178,11 @@ function Q(e) {
     isFocused: U,
     handleFocus: j,
     handleBlur: K
-  } = (0, A.useFocusInside)(R), W = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
+  } = (0, C.useFocusInside)(R), W = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: Z,
     embedChannel: J,
-    decisionId: X,
-    keywordMatchedContent: q,
+    decisionId: q,
+    keywordMatchedContent: X,
     keyword: $,
     content: ee,
     flaggedMessageId: et,
@@ -190,7 +190,7 @@ function Q(e) {
     decisionReason: es,
     alertActionsExecution: ea,
     quarantineType: el
-  } = (0, T.default)(l), ei = a.useMemo(() => (0, p.renderAutomodMessageMarkup)(ee, q, r.id), [ee, q, r]), {
+  } = (0, T.default)(l), ei = a.useMemo(() => (0, p.renderAutomodMessageMarkup)(ee, X, r.id), [ee, X, r]), {
     selected: er,
     ...eo
   } = function(e, t) {
@@ -198,10 +198,10 @@ function Q(e) {
       popouts: n,
       selected: s,
       setPopout: l
-    } = (0, C.default)(e.id, F.DEFAULT_POPOUTS), {
+    } = (0, A.default)(e.id, F.DEFAULT_POPOUTS), {
       usernameProfile: i,
       avatarProfile: r
-    } = n, o = (0, A.useContextMenuUser)(e.author.id, t.id), u = (0, A.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, A.useClickMessageAuthorUsername)(e, t, i, l), c = (0, A.useClickMessageAuthorAvatar)(r, l), E = a.useCallback(() => l({
+    } = n, o = (0, C.useContextMenuUser)(e.author.id, t.id), u = (0, C.useContextMenuModerateUser)(e.author.id, t.id, e.id), d = (0, C.useClickMessageAuthorUsername)(e, t, i, l), c = (0, C.useClickMessageAuthorAvatar)(r, l), E = a.useCallback(() => l({
       usernameProfile: !1,
       avatarProfile: !1,
       referencedUsernameProfile: !1
@@ -218,8 +218,8 @@ function Q(e) {
       showUsernamePopout: i
     }
   }(l, r), eu = a.useCallback(() => {
-    (0, I.openSubmitFeedback)(l.id, ee, X, r)
-  }, [l.id, ee, X, r]), ed = a.useCallback(e => {
+    (0, I.openSubmitFeedback)(l.id, ee, q, r)
+  }, [l.id, ee, q, r]), ed = a.useCallback(e => {
     null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
   }, [J, et]), ec = a.useCallback(() => {
     (0, m.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)

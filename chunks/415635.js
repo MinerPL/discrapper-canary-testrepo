@@ -20,9 +20,9 @@ function u(e, t, n, u, c) {
   let {
     icon: p,
     title: g,
-    body: m
+    body: E
   } = (0, s.makeTextChatNotification)(e, t, n), {
-    trackView: E,
+    trackView: m,
     trackClick: S
   } = (0, o.makeAnalyticsTrackers)(r.OverlayNotificationType.ActivityInvite, {
     notif_type: r.OverlayNotificationType.ActivityInvite,
@@ -39,10 +39,10 @@ function u(e, t, n, u, c) {
     colorScheme: l.default.ColorSchemes.PRIMARY,
     icon: p,
     title: g,
-    body: m,
+    body: E,
     hint: e => (0, l.renderKeybindHint)(e, (0, o.getOverlayKeybind)(), d.default.Messages.OVERLAY_UNLOCK_TO_JOIN),
     onNotificationShow: () => {
-      E()
+      m()
     },
     confirmText: d.default.Messages.JOIN,
     onConfirmClick: (l, s) => {

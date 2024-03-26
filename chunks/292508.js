@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return G
   }
 }), n("222007");
 var a = n("37983"),
@@ -41,8 +41,8 @@ var a = n("37983"),
   w = n("292687"),
   F = n("49111"),
   V = n("782340"),
-  k = n("928319");
-class H extends l.Component {
+  H = n("928319");
+class k extends l.Component {
   componentDidMount() {
     let {
       guestWindow: e
@@ -152,14 +152,14 @@ class H extends l.Component {
                       renderWindow: C,
                       children: (0, a.jsxs)(y.AppLayerProvider, {
                         children: [(0, a.jsxs)("div", {
-                          className: k.popout,
+                          className: H.popout,
                           children: [S && null != N ? (0, a.jsx)(v.default, {
                             focused: n,
                             type: N,
                             windowKey: r,
                             macOSFrame: !0
                           }) : null, (0, a.jsx)("div", {
-                            className: i(k.content, x),
+                            className: i(H.content, x),
                             children: s
                           })]
                         }), (0, a.jsx)(c.Modals, {}), (0, a.jsx)(f.default, {}), (0, a.jsx)(y.AppLayerContainer, {})]
@@ -187,10 +187,10 @@ class H extends l.Component {
     }
   }
 }
-H.defaultProps = {
+k.defaultProps = {
   withTitleBar: !0
 };
-let G = l.forwardRef(function(e, t) {
+let B = l.forwardRef(function(e, t) {
   let {
     guestWindow: n,
     focused: l
@@ -234,7 +234,7 @@ let G = l.forwardRef(function(e, t) {
   return null == n ? null : (0, a.jsx)(c.DnDProvider, {
     children: (0, a.jsx)(C.AnalyticsLocationProvider, {
       value: A,
-      children: (0, a.jsx)(H, {
+      children: (0, a.jsx)(k, {
         ref: t,
         ...e,
         guestWindow: n,
@@ -256,4 +256,4 @@ let G = l.forwardRef(function(e, t) {
     })
   })
 });
-var B = G
+var G = B

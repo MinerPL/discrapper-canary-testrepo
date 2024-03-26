@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return N
   },
   default: function() {
-    return A
+    return C
   }
 }), n("222007"), n("424973");
 var s = n("37983"),
@@ -49,8 +49,8 @@ class S extends a.PureComponent {
       isForumToolbar: N,
       channel: p,
       className: S,
-      forceAddReactions: A,
-      reactionClassName: C,
+      forceAddReactions: C,
+      reactionClassName: A,
       useChatFontScaling: h,
       forceHideReactionCreates: g,
       remainingReactions: M,
@@ -59,7 +59,7 @@ class S extends a.PureComponent {
     } = this.props, {
       disableTransitionAppear: L
     } = this.state, v = h ? I : T, P = R > 0;
-    return P || A ? (0, s.jsxs)(r.TransitionGroup, {
+    return P || C ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
       className: i(v.reactions, S),
       transitionAppear: !L,
@@ -81,12 +81,12 @@ class S extends a.PureComponent {
         isPendingMember: m,
         isForumToolbar: N,
         useChatFontScaling: h,
-        className: C
+        className: A
       }), M > 0 && (0, s.jsx)(o.Clickable, {
         onClick: t => {
           t.stopPropagation(), (0, f.showReactionsModal)(p, e)
         },
-        className: i(v.reaction, C, v.remainingReactions),
+        className: i(v.reaction, A, v.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
         children: (0, s.jsxs)(o.Text, {
           className: v.reactionInner,
@@ -100,8 +100,8 @@ class S extends a.PureComponent {
         useChatFontScaling: h,
         isHovered: this.state.isHovered,
         className: i({
-          [v.forceShow]: A && !P,
-          [v.forceShowLook]: A
+          [v.forceShow]: C && !P,
+          [v.forceShowLook]: C
         })
       })]
     }) : null
@@ -114,7 +114,7 @@ class S extends a.PureComponent {
     }
   }
 }
-var A = e => {
+var C = e => {
   let {
     message: t,
     maxReactions: n,

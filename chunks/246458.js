@@ -17,16 +17,16 @@ var i = n("37983"),
   h = n("393027"),
   p = n("870691"),
   g = n("816092"),
-  m = n("162805"),
-  E = n("245997"),
+  E = n("162805"),
+  m = n("245997"),
   S = n("923959"),
   v = n("952451"),
   y = n("305961"),
   O = n("957255"),
-  C = n("18494"),
-  N = n("282109"),
-  T = n("316133"),
-  I = n("474571"),
+  T = n("18494"),
+  C = n("282109"),
+  I = n("316133"),
+  N = n("474571"),
   _ = n("560995"),
   A = n("637842"),
   x = n("758547"),
@@ -50,7 +50,7 @@ class k extends a.PureComponent {
       guildId: e
     } = this.props, {
       scrollTop: t
-    } = m.default.getGuildDimensions(e);
+    } = E.default.getGuildDimensions(e);
     this.setAnimatedValue(null != t ? t : 0)
   }
   componentDidUpdate(e) {
@@ -61,7 +61,7 @@ class k extends a.PureComponent {
     if (e.guild !== t) {
       let {
         scrollTop: e
-      } = m.default.getGuildDimensions(n);
+      } = E.default.getGuildDimensions(n);
       this.setAnimatedValue(null != e ? e : 0)
     }
   }
@@ -134,7 +134,7 @@ class k extends a.PureComponent {
           position: "right",
           renderPopout: this.renderSettings,
           children: e => (0, i.jsx)(_.default.Icon, {
-            icon: I.default,
+            icon: N.default,
             label: M.default.Messages.SETTINGS,
             ...e
           })
@@ -179,20 +179,20 @@ function b(e) {
   var t;
   let {
     guildId: n
-  } = e, a = (0, s.useStateFromStores)([y.default], () => y.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([E.default], () => E.default.getCategories(n)), {
+  } = e, a = (0, s.useStateFromStores)([y.default], () => y.default.getGuild(n)), l = (0, s.useStateFromStores)([S.default], () => S.default.getChannels(n)), o = (0, s.useStateFromStores)([m.default], () => m.default.getCategories(n)), {
     mutedChannels: u,
     collapseMuted: c
-  } = (0, s.useStateFromStoresObject)([N.default], () => ({
-    mutedChannels: N.default.getMutedChannels(n),
-    collapseMuted: N.default.isGuildCollapsed(n)
-  })), f = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceStates(n)), I = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
+  } = (0, s.useStateFromStoresObject)([C.default], () => ({
+    mutedChannels: C.default.getMutedChannels(n),
+    collapseMuted: C.default.isGuildCollapsed(n)
+  })), f = (0, s.useStateFromStores)([I.default], () => I.default.getVoiceStates(n)), N = (0, s.useStateFromStores)([g.default], () => g.default.getCollapsed()), {
     scrollTo: _
-  } = (0, s.useStateFromStores)([m.default], () => m.default.getGuildDimensions(n)), A = (0, h.default)(e => {
+  } = (0, s.useStateFromStores)([E.default], () => E.default.getGuildDimensions(n)), A = (0, h.default)(e => {
     let {
       channelId: t
     } = e;
     return t
-  }), x = (0, s.useStateFromStores)([C.default], () => C.default.getVoiceChannelId()), L = (0, s.useStateFromStores)([O.default], () => O.default.getGuildVersion(n)), M = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), j = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), b = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), w = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
+  }), x = (0, s.useStateFromStores)([T.default], () => T.default.getVoiceChannelId()), L = (0, s.useStateFromStores)([O.default], () => O.default.getGuildVersion(n)), M = (0, s.useStateFromStores)([p.default], () => p.default.version), D = (0, s.useStateFromStores)([v.default], () => v.default.getGuildChangeSentinel(n)), j = (0, r.useEmbeddedAppsByChannel)(null == a ? void 0 : a.id), b = (0, d.useActiveEventsByChannel)(null == a ? void 0 : a.id), P = null !== (t = null == a ? void 0 : a.hasFeature(R.GuildFeatures.COMMUNITY)) && void 0 !== t && t;
   return (0, i.jsx)(k, {
     guildId: n,
     guild: a,
@@ -203,14 +203,14 @@ function b(e) {
     selectedChannelId: A,
     selectedVoiceChannelId: x,
     voiceStates: f,
-    collapsedChannels: I,
+    collapsedChannels: N,
     collapseMuted: c,
     guildReadStateSentinel: D,
     permissionVersion: L,
     categoryCollapseVersion: M,
     embeddedAppsByChannel: j,
     activeEventsByChannel: b,
-    showNewUnreadsBar: w,
+    showNewUnreadsBar: P,
     optInEnabled: !1
   })
 }

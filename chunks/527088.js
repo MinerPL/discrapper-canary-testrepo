@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("349503"),
   p = n("412707"),
   S = n("646186"),
-  A = n("49111"),
-  C = n("782340"),
+  C = n("49111"),
+  A = n("782340"),
   h = n("332530");
 
 function g(e) {
@@ -40,7 +40,7 @@ function g(e) {
   a.useEffect(() => {
     (0, m.getEmbedApplication)(g)
   }, [g]), a.useEffect(() => {
-    x && L === N.FetchState.FETCHED && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
+    x && L === N.FetchState.FETCHED && T.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_VIEWED, {
       application_id: g,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
@@ -48,7 +48,7 @@ function g(e) {
       channel_id: M.channel_id
     })
   }, [x, g, null == D ? void 0 : D.id, M.channel_id, P, M.author.id, L]), a.useEffect(() => {
-    x && R && T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
+    x && R && T.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       sender_user_id: M.author.id,
       guild_id: P,
@@ -56,7 +56,7 @@ function g(e) {
     })
   }, [x, P, R, M.author.id, M.channel_id]);
   let b = e => {
-    T.default.track(A.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
+    T.default.track(C.AnalyticEvents.APP_DIRECTORY_PROFILE_EMBED_APP_INFO_CLICKED, {
       application_id: g,
       device_platform: l.isMobile ? "mobile_web" : "desktop_web",
       clicked_section: e,
@@ -74,7 +74,7 @@ function g(e) {
   if (R) return (0, s.jsxs)(f.default, {
     containerRef: j,
     children: [(0, s.jsx)(f.default.Header, {
-      text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
+      text: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_HEADER
     }), (0, s.jsx)(f.default.Body, {
       children: (0, s.jsxs)("div", {
         className: h.invalidBody,
@@ -82,8 +82,8 @@ function g(e) {
           expired: !0
         }), (0, s.jsx)(f.default.Info, {
           expired: !0,
-          title: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE,
-          children: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_BODY
+          title: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_TITLE,
+          children: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_INVALID_INFO_BODY
         })]
       })
     })]
@@ -91,7 +91,7 @@ function g(e) {
   if (null == O || L === N.FetchState.FETCHING) return (0, s.jsxs)(f.default, {
     containerRef: j,
     children: [(0, s.jsx)(f.default.Header, {
-      text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
+      text: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_RESOLVING_HEADER
     }), (0, s.jsx)(f.default.Body, {
       resolving: !0
     })]
@@ -104,7 +104,7 @@ function g(e) {
   return (0, s.jsxs)(f.default, {
     containerRef: j,
     children: [(0, s.jsx)(f.default.Header, {
-      text: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER
+      text: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_HEADER
     }), (0, s.jsxs)(f.default.Body, {
       children: [(0, s.jsxs)("div", {
         className: h.applicationInfoContainer,
@@ -124,7 +124,7 @@ function g(e) {
               width: 16,
               height: 16,
               className: h.guildCountIcon
-            }), C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
+            }), A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_GUILD_COUNT.format({
               guildCount: B
             })]
           })
@@ -141,7 +141,7 @@ function g(e) {
           })
         },
         color: f.default.Button.Colors.GREEN,
-        children: C.default.Messages.APP_DIRECTORY_PROFILE_EMBED_BUTTON
+        children: A.default.Messages.APP_DIRECTORY_PROFILE_EMBED_BUTTON
       })]
     })]
   })

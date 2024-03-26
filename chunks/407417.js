@@ -24,7 +24,7 @@ function I(e) {
   let {
     guildId: m,
     productId: N
-  } = e, p = (0, i.useStateFromStores)([c.default], () => c.default.getGuildProduct(N)), S = (null !== (I = null == p ? void 0 : null === (t = p.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1, A = null == p ? void 0 : null === (a = p.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
+  } = e, p = (0, i.useStateFromStores)([c.default], () => c.default.getGuildProduct(N)), S = (null !== (I = null == p ? void 0 : null === (t = p.attachments) || void 0 === t ? void 0 : t.length) && void 0 !== I ? I : 0) > 1, C = null == p ? void 0 : null === (a = p.attachments) || void 0 === a ? void 0 : null === (n = a[0]) || void 0 === n ? void 0 : n.id;
   return S ? (0, s.jsxs)(r.Button, {
     onClick: function() {
       E.default.open({
@@ -43,10 +43,10 @@ function I(e) {
       height: 16,
       direction: u.default.Directions.RIGHT
     })]
-  }) : (l(null != A, "No attachment"), (0, s.jsxs)(f.default, {
+  }) : (l(null != C, "No attachment"), (0, s.jsxs)(f.default, {
     guildId: m,
     productId: N,
-    attachmentId: A,
+    attachmentId: C,
     innerClassName: T.textWithIcon,
     children: [(0, s.jsx)("div", {
       children: _.default.Messages.GUILD_PRODUCT_DOWNLOAD_BUTTON_SINGLE_FILE

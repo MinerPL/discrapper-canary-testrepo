@@ -16,7 +16,7 @@ s.r(t), s.d(t, {
     return f
   },
   getFilteredPerksDiscoverabilityCards: function() {
-    return S
+    return R
   },
   usePerksDiscoverabilityStrings: function() {
     return m
@@ -83,7 +83,7 @@ function I(e, t) {
   }
 }
 let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
-  R = e => {
+  S = e => {
     let {
       cards: t,
       perksCards: s,
@@ -110,14 +110,14 @@ let f = (e, t, s) => (0, r.isThemeDark)(e) ? t : s,
       card: s.unlimitedSuperReactions
     }), t
   },
-  S = (e, t, s, a, r) => {
+  R = (e, t, s, a, r) => {
     let i = [];
     switch (t) {
       case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
         i = [e.profiles, e.clientThemes, e.serverBoosts];
         break;
       case o.PerksDiscoverabilityCardSection.WHATS_NEW:
-        i = R({
+        i = S({
           cards: i,
           perksCards: e,
           isFullScreen: a,

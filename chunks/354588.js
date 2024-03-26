@@ -1,47 +1,47 @@
 "use strict";
-s.r(t), s.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return E
+    return _
   }
 });
-var a = s("37983");
-s("884691");
-var r = s("414456"),
-  i = s.n(r),
-  n = s("446674"),
-  l = s("206230"),
-  o = s("359499"),
-  u = s("672950"),
-  d = s("594455"),
-  c = s("511143"),
-  _ = s("627887"),
-  E = e => {
+var n = r("37983");
+r("884691");
+var i = r("414456"),
+  s = r.n(i),
+  u = r("446674"),
+  l = r("206230"),
+  a = r("359499"),
+  o = r("672950"),
+  c = r("594455"),
+  d = r("511143"),
+  E = r("627887"),
+  _ = e => {
     let {
       showAnimations: t = !0,
-      iconClassName: s,
-      staticPercentage: r,
-      innerCircleClassName: E,
-      progressCircleStrokeSize: T,
-      gemBackgroundCircleSize: I
-    } = e, f = (0, o.useFreeBoostUserTenureReward)(), R = (0, n.useStateFromStores)([l.default], () => l.default.useReducedMotion), S = t && !R;
+      iconClassName: r,
+      staticPercentage: i,
+      innerCircleClassName: _,
+      progressCircleStrokeSize: R,
+      gemBackgroundCircleSize: C
+    } = e, f = (0, a.useFreeBoostUserTenureReward)(), S = (0, u.useStateFromStores)([l.default], () => l.default.useReducedMotion), T = t && !S;
     if (null == f) return null;
     let {
       redeemableInDays: m = 0,
       tenureRewardSkuId: N
-    } = f, A = c.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH === N ? c.NUM_DAYS_REQUIRED_1_MONTH_VARIANT : c.NUM_DAYS_3_REQUIRED_MONTH_VARIANT, p = Math.min(A, Math.max(A - m, 0)), C = 100 * p / A, g = S ? 100 * Math.max(p - .25 * A, 0) / A : C;
-    return (0, a.jsx)("div", {
-      className: i(_.gemProgressCircle, s),
-      children: (0, a.jsx)(d.default, {
-        animationClassName: i(_.activeProgressCircle, {
-          [_.activeProgressCircleAnimation]: S
+    } = f, h = d.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH === N ? d.NUM_DAYS_REQUIRED_1_MONTH_VARIANT : d.NUM_DAYS_3_REQUIRED_MONTH_VARIANT, D = Math.min(h, Math.max(h - m, 0)), I = 100 * D / h, w = T ? 100 * Math.max(D - .25 * h, 0) / h : I;
+    return (0, n.jsx)("div", {
+      className: s(E.gemProgressCircle, r),
+      children: (0, n.jsx)(c.default, {
+        animationClassName: s(E.activeProgressCircle, {
+          [E.activeProgressCircleAnimation]: T
         }),
-        progressCircleStrokeSize: T,
-        percentage: null != r ? r : C,
-        initialPercentage: null != r ? r : g,
-        children: (0, a.jsx)(u.default, {
-          className: S ? _.nitroGemAnimation : void 0,
-          backgroundColor: i(_.gemBackgroundFill, E),
-          backgroundCircleSize: I
+        progressCircleStrokeSize: R,
+        percentage: null != i ? i : I,
+        initialPercentage: null != i ? i : w,
+        children: (0, n.jsx)(o.default, {
+          className: T ? E.nitroGemAnimation : void 0,
+          backgroundColor: s(E.gemBackgroundFill, _),
+          backgroundCircleSize: C
         })
       })
     })

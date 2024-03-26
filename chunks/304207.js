@@ -39,11 +39,11 @@ var k = t("556857"),
   M = t("238161"),
   O = t("20950"),
   I = t("724209"),
-  D = t("782340"),
-  B = t("34693"),
+  B = t("782340"),
+  D = t("34693"),
   G = t("699412");
 
-function F(e) {
+function H(e) {
   let {
     resizableNode: r,
     onResize: t,
@@ -57,11 +57,11 @@ function F(e) {
   });
   return (0, a.jsx)("div", {
     onMouseDown: i,
-    className: B.resizeHandle
+    className: D.resizeHandle
   })
 }
 
-function H() {
+function F() {
   var e;
   let r = n.useMemo(() => {
       let e = [{
@@ -159,7 +159,7 @@ function H() {
       className: G.headerBar,
       toolbar: (0, a.jsx)(f.default.Icon, {
         icon: m.default,
-        tooltip: D.default.Messages.CLOSE,
+        tooltip: B.default.Messages.CLOSE,
         onClick: y.toggleDisplayDevTools
       }),
       children: [(0, a.jsx)(f.default.Icon, {
@@ -169,7 +169,7 @@ function H() {
         children: "DevTools"
       })]
     }), (0, a.jsx)(t, {}), i(), (0, a.jsx)(N.DevToolsLayerContainer, {
-      className: B.layerContainer
+      className: D.layerContainer
     })]
   })
 }
@@ -185,18 +185,18 @@ function U() {
     null === t && null !== r && i(r)
   }, [r, t]), null === t) ? null : (0, a.jsxs)("div", {
     ref: e,
-    className: o(B.container),
+    className: o(D.container),
     style: {
       minWidth: b.DEVTOOLS_SIDEBAR_MIN_WIDTH,
       width: t
     },
-    children: [(0, a.jsx)(F, {
+    children: [(0, a.jsx)(H, {
       resizableNode: e,
       onResize: i,
       onResizeEnd: l
     }), (0, a.jsx)("div", {
-      className: B.sidebarContent,
-      children: (0, a.jsx)(H, {})
+      className: D.sidebarContent,
+      children: (0, a.jsx)(F, {})
     })]
   })
 }
@@ -204,17 +204,17 @@ function U() {
 function z() {
   let e = (0, s.useStateFromStores)([b.default], () => b.default.displayTools);
   return e ? (0, a.jsx)("div", {
-    className: o(B.container, B.mobileContainerExpanded),
+    className: o(D.container, D.mobileContainerExpanded),
     children: (0, a.jsx)("div", {
-      className: B.sidebarContent,
-      children: (0, a.jsx)(H, {})
+      className: D.sidebarContent,
+      children: (0, a.jsx)(F, {})
     })
   }) : (0, a.jsx)("div", {
-    className: B.container,
+    className: D.container,
     children: (0, a.jsx)(c.Clickable, {
       onClick: y.toggleDisplayDevTools,
       children: (0, a.jsxs)(f.default, {
-        className: o(G.headerBar, B.mobileHeaderCollapsed),
+        className: o(G.headerBar, D.mobileHeaderCollapsed),
         toolbar: (0, a.jsx)(p.default, {
           direction: p.default.Directions.UP
         }),

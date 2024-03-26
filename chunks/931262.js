@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return c
   }
 }), a("313619"), a("654714"), a("287168"), a("956660"), a("222007");
-var l, r, s = a("884691"),
+var s, r, l = a("884691"),
   n = a("90915"),
   o = a("54239"),
   i = a("393414"),
@@ -13,7 +13,7 @@ var l, r, s = a("884691"),
 function c() {
   let {
     search: e
-  } = (0, n.useLocation)(), t = (0, n.useParams)(), a = s.useMemo(() => new URLSearchParams(e), [e]), l = a.get("source"), r = null != l ? parseInt(l, 10) : null, c = s.useCallback(() => {
+  } = (0, n.useLocation)(), t = (0, n.useParams)(), a = l.useMemo(() => new URLSearchParams(e), [e]), s = a.get("source"), r = null != s ? parseInt(s, 10) : null, c = l.useCallback(() => {
     if (0 === r) {
       (0, i.back)(), (0, o.pushLayer)(u.Layers.USER_SETTINGS);
       return
@@ -28,4 +28,4 @@ function c() {
     source: r,
     ...t
   }
-}(r = l || (l = {}))[r.SETTINGS = 0] = "SETTINGS", r[r.CHANGELOG = 1] = "CHANGELOG", r[r.DM_LIST = 2] = "DM_LIST"
+}(r = s || (s = {}))[r.SETTINGS = 0] = "SETTINGS", r[r.CHANGELOG = 1] = "CHANGELOG", r[r.DM_LIST = 2] = "DM_LIST"

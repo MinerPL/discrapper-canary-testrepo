@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("398654"),
   p = n("712125"),
   S = n("311161"),
-  A = n("201131"),
-  C = n("928098"),
+  C = n("201131"),
+  A = n("928098"),
   h = n("702873"),
   g = n("592407"),
   M = n("380986"),
@@ -56,9 +56,9 @@ function V(e) {
     compact: n
   } = e, {
     notificationType: a
-  } = (0, A.extractAutomodNotificationFields)(t);
+  } = (0, C.extractAutomodNotificationFields)(t);
   switch (a) {
-    case A.IS_BACKWARDS_COMPAT_RAID_TYPE:
+    case C.IS_BACKWARDS_COMPAT_RAID_TYPE:
     case d.AutomodNotificationEmbedTypeKeys.RAID:
       return (0, s.jsx)(W, {
         message: t,
@@ -111,7 +111,7 @@ function K(e) {
   let {
     message: n,
     compact: l
-  } = e, i = P.default.getUser((0, A.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i, d = u ? v.default.getMember(r, i.id) : null, {
+  } = e, i = P.default.getUser((0, C.getUserIdOfAutomodAction)(n)), r = null === (t = L.default.getBasicChannel(n.channel_id)) || void 0 === t ? void 0 : t.guild_id, u = null != r && null != i, d = u ? v.default.getMember(r, i.id) : null, {
     avatarSrc: c,
     avatarDecorationSrc: E,
     eventHandlers: _
@@ -199,12 +199,12 @@ function W(e) {
     dmsSent: T,
     raidType: m,
     resolvedReason: h
-  } = (0, A.extractAutomodNotificationFields)(l), g = (0, E.useStateFromStores)([L.default], () => L.default.getChannel(l.channel_id), [l.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
+  } = (0, C.extractAutomodNotificationFields)(l), g = (0, E.useStateFromStores)([L.default], () => L.default.getChannel(l.channel_id), [l.channel_id]), O = null !== (t = null == g ? void 0 : g.guild_id) && void 0 !== t ? t : null, {
     incidentData: R,
     shouldShowIncidentActions: v
   } = (0, N.useGuildIncidentsState)(O), P = (0, M.useContextMenuRaidAlert)(l.author.id, l.channel_id), D = a.useCallback(() => {
     let e = null == g ? void 0 : g.guild_id;
-    null != e && (0, C.openRaidResolveModal)(l.id, e)
+    null != e && (0, A.openRaidResolveModal)(l.id, e)
   }, [l.id, g]), j = m === c.AutomodRaidAlertTypes.DM_RAID, b = j ? U.default : _.ChatAlertIcon;
   return (0, s.jsx)(Q, {
     compact: i,
@@ -311,7 +311,7 @@ function W(e) {
           children: (0, s.jsx)(I.Text, {
             variant: "text-xs/medium",
             color: "text-link",
-            children: (0, A.getRaidAlertResolveCTAText)(h)
+            children: (0, C.getRaidAlertResolveCTAText)(h)
           })
         })
       })]
@@ -328,7 +328,7 @@ function z(e) {
     raidDatetime: r,
     decisionId: u,
     suspiciousMentionActivityUntil: d
-  } = (0, A.extractAutomodNotificationFields)(n);
+  } = (0, C.extractAutomodNotificationFields)(n);
   return (0, s.jsx)(Q, {
     compact: l,
     header: (0, s.jsxs)(a.Fragment, {
@@ -445,7 +445,7 @@ function Z(e) {
     }
   } = (0, G.useAutomodAvatar)(!0), {
     notificationType: c
-  } = (0, A.extractAutomodNotificationFields)(a), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
+  } = (0, C.extractAutomodNotificationFields)(a), E = null == c || c === d.AutomodNotificationEmbedTypeKeys.RAID;
   return (0, s.jsx)("div", {
     onMouseEnter: o,
     onMouseLeave: u,

@@ -25,8 +25,8 @@ function N(e) {
     code: t
   } = e, [n, N, p] = t.split("-"), {
     guildScheduledEvent: S,
-    guild: A,
-    channel: C,
+    guild: C,
+    channel: A,
     isMember: h
   } = (0, l.useStateFromStoresObject)([_.default, c.default, u.default, d.default, E.default], () => {
     var e, t;
@@ -44,8 +44,8 @@ function N(e) {
   return a.useEffect(() => {
     (null == S ? void 0 : S.id) == null && T.default.fetchGuildEvent(n, N), f.default.getGuildEventUserCounts(n, N, null != p ? [p] : []), f.default.getGuildEventsForCurrentUser(n)
   }, [N, n, null == S ? void 0 : S.id, p]), (0, s.jsx)(I.default, {
-    guild: A,
-    channel: C,
+    guild: C,
+    channel: A,
     guildScheduledEvent: S,
     isMember: h,
     onAcceptInstantInvite: m.NOOP,
@@ -53,7 +53,7 @@ function N(e) {
       if ((0, r.shouldShowMembershipVerificationGate)(n)) {
         (0, i.openMemberVerificationModal)(n);
         return
-      }(null == C ? void 0 : C.isGuildStageVoice()) ? (0, o.connectAndOpen)(C) : (null == C ? void 0 : C.isGuildVoice()) && T.default.joinVoiceEvent(C.guild_id, C.id)
+      }(null == A ? void 0 : A.isGuildStageVoice()) ? (0, o.connectAndOpen)(A) : (null == A ? void 0 : A.isGuildVoice()) && T.default.joinVoiceEvent(A.guild_id, A.id)
     },
     recurrenceId: p
   })

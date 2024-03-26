@@ -22,11 +22,11 @@ var r = s("414456"),
     let s, r, {
         title: I,
         titleClassName: f,
-        perkImage: R,
-        isCarousel: S,
+        perkImage: S,
+        isCarousel: R,
         onCtaClick: m,
-        perkComponent: N,
-        subtitle: A = "",
+        perkComponent: A,
+        subtitle: N = "",
         descriptionCta: p = "",
         cardVariant: C,
         subtitleClassName: g
@@ -56,21 +56,21 @@ var r = s("414456"),
         shouldShowElement: e => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
         cardVariantStyleInfo: O,
         titleClassName: f,
-        subtitle: A,
+        subtitle: N,
         subtitleClassName: g
-      }), null != R && (0, a.jsx)("img", {
-        src: R,
+      }), null != S && (0, a.jsx)("img", {
+        src: S,
         alt: "",
         className: i({
-          [c.cardImage]: !S,
-          [c.carouselCardImage]: S
+          [c.cardImage]: !R,
+          [c.carouselCardImage]: R
         })
-      }), null != N && (0, a.jsx)(a.Fragment, {
+      }), null != A && (0, a.jsx)(a.Fragment, {
         children: (0, a.jsxs)("div", {
           className: c.cardIllustrationNoHover,
           children: [(0, a.jsx)("div", {
             className: c.cardComponent,
-            children: N
+            children: A
           }), 0 !== p.length && null != m && (0, a.jsx)(n.Button, {
             disabled: !M,
             fullWidth: !0,

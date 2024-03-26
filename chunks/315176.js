@@ -31,9 +31,9 @@ async function m(e, t) {
   let S = c.default.getCurrentUser();
   if (null == S) return;
   await (0, r.fetchStickerPacks)();
-  let A = Array.from(o.default.getAllStickersIterator()),
-    C = A.filter(e => e.type === u.MetaStickerType.GUILD),
-    h = C.filter(e => I(e.guild_id) && (0, i.isSendableSticker)(e, S, t)).sort((e, t) => -f.default.compare(e.id, t.id));
+  let C = Array.from(o.default.getAllStickersIterator()),
+    A = C.filter(e => e.type === u.MetaStickerType.GUILD),
+    h = A.filter(e => I(e.guild_id) && (0, i.isSendableSticker)(e, S, t)).sort((e, t) => -f.default.compare(e.id, t.id));
   if (h.length > 5) {
     let a = [h[Math.floor(Math.pow(Math.random(), 2) * h.length)].id];
     s.default.sendStickers(t.id, a, "", {
@@ -62,7 +62,7 @@ async function m(e, t) {
     });
     return
   }
-  let M = A.filter(e => e.type === u.MetaStickerType.STANDARD),
+  let M = C.filter(e => e.type === u.MetaStickerType.STANDARD),
     O = [M[Math.floor(Math.random() * M.length)].id];
   s.default.sendStickers(t.id, O, "", {
     messageReference: {

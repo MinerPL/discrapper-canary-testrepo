@@ -43,24 +43,24 @@ var f = e => {
     forceInverted: s,
     subscriptionTier: c,
     isEligibleForBogoPromotion: f = !1,
-    isPersistentCTA: R = !1,
-    useShorterCTA: S = !1,
+    isPersistentCTA: S = !1,
+    useShorterCTA: R = !1,
     ...m
-  } = e, N = (0, n.default)(), A = (0, r.isThemeDark)(N) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, C = (0, l.formatTrialOfferIntervalDuration)({
+  } = e, A = (0, n.default)(), N = (0, r.isThemeDark)(A) || s, p = null === (t = (0, u.usePremiumTrialOffer)()) || void 0 === t ? void 0 : t.subscription_trial, C = (0, l.formatTrialOfferIntervalDuration)({
     intervalType: null == p ? void 0 : p.interval,
     intervalCount: null == p ? void 0 : p.interval_count
-  }), g = (0, o.usePremiumDiscountOffer)(), O = null != p && c === p.sku_id, P = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != g ? I(c, S, R, g.discount.amount) : T({
+  }), g = (0, o.usePremiumDiscountOffer)(), O = null != p && c === p.sku_id, P = f ? _.default.Messages.BOGO_CLAIM_OFFER : null != g ? I(c, R, S, g.discount.amount) : T({
     showTrialCTA: O,
     subscriptionTier: c,
     shouldShowUpsells: !1,
     trialDurationCopy: C,
-    isPersistentCTA: R,
+    isPersistentCTA: S,
     subscriptionTrial: p
   });
   return (0, a.jsx)(d.default, {
     color: i.ButtonColors.BRAND,
-    look: A ? i.ButtonLooks.INVERTED : void 0,
-    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : A ? E.brandShine : void 0,
+    look: N ? i.ButtonLooks.INVERTED : void 0,
+    buttonShineClassName: "buttonShineClassName" in m ? m.buttonShineClassName : N ? E.brandShine : void 0,
     trialId: null == p ? void 0 : p.id,
     buttonText: P,
     buttonTextClassName: O ? E.freeTrialText : void 0,

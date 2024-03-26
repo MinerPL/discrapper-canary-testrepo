@@ -1,7 +1,7 @@
 "use strict";
 t.r(s), t.d(s, {
   default: function() {
-    return f
+    return E
   }
 });
 var a = t("37983");
@@ -14,19 +14,19 @@ var l = t("116788"),
   o = t("701909"),
   d = t("588025"),
   u = t("49111"),
-  h = t("782340"),
+  S = t("782340"),
   m = t("916183"),
-  S = t("647924");
+  h = t("647924");
 
-function f(e) {
+function E(e) {
   let {
     transitionState: s,
     onClose: t,
     questContent: l,
     questConfig: n
-  } = e, r = l === d.QuestContent.QUEST_BAR ? h.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
+  } = e, r = l === d.QuestContent.QUEST_BAR ? S.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_TARGETING.format({
     gamePublisher: n.messages.gamePublisher
-  }) : h.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
+  }) : S.default.Messages.QUESTS_DISCLOSURE_PUBLISHER_PROMOTING.format({
     gamePublisher: n.messages.gamePublisher,
     gameTitle: n.messages.gameTitle
   });
@@ -45,7 +45,7 @@ function f(e) {
           children: (0, a.jsx)("img", {
             className: m.icon,
             alt: "",
-            src: S
+            src: h
           })
         }), (0, a.jsx)(c.ModalCloseButton, {
           className: m.closeBtn,
@@ -53,7 +53,7 @@ function f(e) {
         })]
       }), (0, a.jsx)(c.Heading, {
         variant: "heading-xl/bold",
-        children: h.default.Messages.QUESTS_DISCLOSURE_LABEL
+        children: S.default.Messages.QUESTS_DISCLOSURE_LABEL
       })]
     }), (0, a.jsxs)(c.ModalContent, {
       className: m.modalContent,
@@ -67,7 +67,7 @@ function f(e) {
       }), (0, a.jsx)(c.Text, {
         variant: "text-xs/medium",
         color: "text-muted",
-        children: h.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
+        children: S.default.Messages.QUESTS_DISCLOSURE_LEARN_MORE.format({
           privacySettingsUrl: o.default.getArticleURL(u.HelpdeskArticles.QUESTS_PRIVACY_CONTROLS)
         })
       })]
@@ -75,7 +75,7 @@ function f(e) {
       className: m.footer,
       children: (0, a.jsx)(c.Button, {
         onClick: t,
-        children: h.default.Messages.CLOSE
+        children: S.default.Messages.CLOSE
       })
     })]
   })
@@ -89,15 +89,15 @@ function x(e) {
     case d.QuestContent.QUEST_BAR:
       return (0, a.jsxs)("ul", {
         className: m.targetList,
-        children: [(0, a.jsx)(E, {
+        children: [(0, a.jsx)(T, {
           icon: n.GlobeEarthIcon,
-          children: h.default.Messages.QUESTS_DISCLOSURE_LOCATION
-        }), (0, a.jsx)(E, {
+          children: S.default.Messages.QUESTS_DISCLOSURE_LOCATION
+        }), (0, a.jsx)(T, {
           icon: r.UserIcon,
-          children: h.default.Messages.QUESTS_DISCLOSURE_AGE
-        }), (0, a.jsx)(E, {
+          children: S.default.Messages.QUESTS_DISCLOSURE_AGE
+        }), (0, a.jsx)(T, {
           icon: l.GameControllerIcon,
-          children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
+          children: S.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })]
       });
     case d.QuestContent.ACTIVITY_PANEL:
@@ -105,9 +105,9 @@ function x(e) {
     case d.QuestContent.QUEST_LIVE_STREAM:
       return (0, a.jsx)("ul", {
         className: m.targetList,
-        children: (0, a.jsx)(E, {
+        children: (0, a.jsx)(T, {
           icon: l.GameControllerIcon,
-          children: h.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
+          children: S.default.Messages.QUESTS_DISCLOSURE_ACTIVITY
         })
       });
     default:
@@ -115,7 +115,7 @@ function x(e) {
   }
 }
 
-function E(e) {
+function T(e) {
   let {
     icon: s,
     children: t

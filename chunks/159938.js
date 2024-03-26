@@ -28,9 +28,9 @@ function N(e, t) {
       return u.default.isMember(null == N ? void 0 : N.guildId, e)
     }, [N]),
     S = (0, a.useStateFromStores)([l.default], () => null != N && (null == N ? void 0 : N.channelId) != null && l.default.isChannelGated(N.guildId, N.channelId), [N]),
-    A = t.hasFlag(m.MessageFlags.IS_CROSSPOST),
+    C = t.hasFlag(m.MessageFlags.IS_CROSSPOST),
     {
-      rawMediaPostEmbedData: C,
+      rawMediaPostEmbedData: A,
       guild: h,
       parentChannel: g,
       user: M,
@@ -55,7 +55,7 @@ function N(e, t) {
     }, [N]),
     L = s.useMemo(() => {
       let e = (0, I.getMediaPostEmbedCommonData)({
-        mediaPostEmbedData: C,
+        mediaPostEmbedData: A,
         guild: h,
         parentChannel: g,
         user: M,
@@ -66,11 +66,11 @@ function N(e, t) {
         ...e,
         user: M
       }
-    }, [C, h, g, M, O, R]);
+    }, [A, h, g, M, O, R]);
   return s.useEffect(() => {
     if ((null == N ? void 0 : N.threadId) != null) {
       let e = T.default.getEmbedFetchState(N.threadId);
-      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !A) && (0, f.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
+      !0 === n && e === T.FetchState.NOT_FETCHED && (!p || !1 !== S) && (p || !C) && (0, f.fetchMediaPostEmbed)(null == N ? void 0 : N.threadId)
     }
-  }, [N, n, p, S, A]), L
+  }, [N, n, p, S, C]), L
 }

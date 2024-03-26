@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   fetchActivityStatistics: function() {
-    return u
+    return o
   }
 });
-var a = n("872717"),
-  s = n("913144"),
-  l = n("251013"),
-  i = n("718517"),
-  r = n("49111");
-let o = 6 * i.default.Millis.HOUR;
-async function u() {
-  let e = l.default.lastFetched;
-  if (!(null != e && Date.now() - e < o)) try {
-    let e = await a.HTTP.get({
-      url: r.Endpoints.USER_ACTIVITY_STATISTICS,
+var n = r("872717"),
+  i = r("913144"),
+  s = r("251013"),
+  u = r("718517"),
+  l = r("49111");
+let a = 6 * u.default.Millis.HOUR;
+async function o() {
+  let e = s.default.lastFetched;
+  if (!(null != e && Date.now() - e < a)) try {
+    let e = await n.HTTP.get({
+      url: l.Endpoints.USER_ACTIVITY_STATISTICS,
       oldFormErrors: !0
     });
-    s.default.dispatch({
+    i.default.dispatch({
       type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS",
       statistics: e.body
     })

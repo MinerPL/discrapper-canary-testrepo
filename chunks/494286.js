@@ -41,10 +41,10 @@ var a = n("37983"),
   w = n("223913"),
   F = n("383294"),
   V = n("292687"),
-  k = n("393414"),
-  H = n("168973"),
-  G = n("581389"),
-  B = n("103738"),
+  H = n("393414"),
+  k = n("168973"),
+  B = n("581389"),
+  G = n("103738"),
   W = n("486030"),
   Y = n("908583"),
   z = n("550410"),
@@ -230,7 +230,7 @@ class eF extends l.PureComponent {
       screenMessage: this.screenMessage,
       disableGradients: E,
       idle: !m && n && !E && e.idle,
-      children: n && this.popoutOpen && !this.inPopout ? null : (0, a.jsx)(B.default, {
+      children: n && this.popoutOpen && !this.inPopout ? null : (0, a.jsx)(G.default, {
         ref: this._contentRef,
         inCall: n,
         paused: this.paused,
@@ -312,7 +312,7 @@ class eF extends l.PureComponent {
   }
   constructor(...e) {
     super(...e), this._prevLayout = eP.ChannelLayouts.MINIMUM, this._wrapperRef = l.createRef(), this._callContainerRef = l.createRef(), this._channelChatRef = l.createRef(), this._contentRef = l.createRef(), this._videoBackgroundTooltipTimeout = new c.Timeout, this._lastIdleProps = null, this.state = {
-      resizedHeight: H.default.callHeaderHeight
+      resizedHeight: k.default.callHeaderHeight
     }, this.handleFullScreenChange = () => {
       let e = this.getRootNode();
       null != e && !(0, eI.isFullScreen)(e, this.currentDocument) && this.props.layout === eP.ChannelLayouts.FULL_SCREEN && this.handleFullScreen()
@@ -438,7 +438,7 @@ class eF extends l.PureComponent {
         connectedToEmbeddedActivity: t
       } = this.props, n = () => {
         let t = e.getGuildId();
-        null != t && (0, k.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), F.openChannelCallPopout(e)
+        null != t && (0, H.transitionTo)((0, eE.previousTextChannelRouteForGuild)(t)), F.openChannelCallPopout(e)
       };
       t ? (0, R.default)(n) : n()
     }, this.handleStayOnTop = e => {
@@ -470,7 +470,7 @@ class eF extends l.PureComponent {
         inCall: t,
         layout: n
       } = this.props;
-      return t || n === eP.ChannelLayouts.MINIMUM || n === eP.ChannelLayouts.NORMAL ? (0, a.jsx)(G.default, {
+      return t || n === eP.ChannelLayouts.MINIMUM || n === eP.ChannelLayouts.NORMAL ? (0, a.jsx)(B.default, {
         exitFullScreen: this.maybeLeaveFullScreen,
         channel: e,
         onDisconnectCall: this.handleDisconnect,
@@ -677,8 +677,8 @@ var eV = function(e) {
     mode: U,
     layout: w,
     participantsOpen: F,
-    chatOpen: k,
-    selectedParticipant: G
+    chatOpen: H,
+    selectedParticipant: B
   } = (0, o.useStateFromStoresObject)([eT.default], () => {
     let e = E === eP.AppContext.POPOUT,
       t = eT.default.getMode(n.id);
@@ -694,17 +694,17 @@ var eV = function(e) {
       chatOpen: eT.default.getChatOpen(n.id),
       participantsVersion: eT.default.getParticipantsVersion(n.id)
     }
-  }, [E, n.id]), B = (0, o.useStateFromStoresArray)([ea.default], () => ea.default.getAllActiveStreams()), {
+  }, [E, n.id]), G = (0, o.useStateFromStoresArray)([ea.default], () => ea.default.getAllActiveStreams()), {
     selectedStream: W
   } = (0, o.useStateFromStoresObject)([ea.default], () => ({
-    selectedStream: null != G ? ea.default.getActiveStreamForStreamKey(G.id) : null
-  }), [G]), Y = (0, o.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, o.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), K = (0, o.useStateFromStores)([eo.default], () => eo.default.getMentionCount(n.id), [n.id]), Z = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
+    selectedStream: null != B ? ea.default.getActiveStreamForStreamKey(B.id) : null
+  }), [B]), Y = (0, o.useStateFromStores)([er.default], () => er.default.getGuild(n.getGuildId())), z = (0, o.useStateFromStores)([ei.default], () => ei.default.getCall(n.id), [n.id]), K = (0, o.useStateFromStores)([eo.default], () => eo.default.getMentionCount(n.id), [n.id]), Z = (0, o.useStateFromStores)([el.default], () => el.default.getId()), {
     popoutWindow: X,
     popoutWindowAlwaysOnTop: Q
   } = (0, o.useStateFromStoresObject)([V.default], () => ({
     popoutWindow: V.default.getWindow(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT),
     popoutWindowAlwaysOnTop: V.default.getIsAlwaysOnTop(eP.PopoutWindowKeys.CHANNEL_CALL_POPOUT)
-  })), q = (0, o.useStateFromStores)([eu.default], () => eu.default.can(eP.Permissions.CONNECT, n)), J = (0, o.useStateFromStores)([es.default], () => es.default.getToastsEnabled(n.id)), $ = (0, o.useStateFromStores)([P.default], () => P.default.getAwaitingRemoteSessionInfo()), ee = (0, o.useStateFromStores)([H.default], () => H.default.callHeaderHeight), et = l.useCallback(e => {
+  })), q = (0, o.useStateFromStores)([eu.default], () => eu.default.can(eP.Permissions.CONNECT, n)), J = (0, o.useStateFromStores)([es.default], () => es.default.getToastsEnabled(n.id)), $ = (0, o.useStateFromStores)([P.default], () => P.default.getAwaitingRemoteSessionInfo()), ee = (0, o.useStateFromStores)([k.default], () => k.default.callHeaderHeight), et = l.useCallback(e => {
     S.default.updatedUnsyncedSettings({
       callHeaderHeight: e
     })
@@ -754,12 +754,12 @@ var eV = function(e) {
             filteredParticipants: L,
             participantsVersion: b,
             layout: w,
-            chatOpen: k,
+            chatOpen: H,
             maxSidebarWidth: r - 550,
             shouldUseVoiceEffectsActionBar: ep,
             currentUserId: Z,
-            selectedParticipant: G,
-            allActiveStreams: B,
+            selectedParticipant: B,
+            allActiveStreams: G,
             useNewInviteButton: ec,
             connectedToEmbeddedActivity: em,
             showChatToasts: J,

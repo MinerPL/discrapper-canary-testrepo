@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("311161"),
   p = n("49111"),
   S = n("724210"),
-  A = n("782340"),
-  C = n("932466");
+  C = n("782340"),
+  A = n("932466");
 
 function h(e) {
   var t, h;
@@ -58,53 +58,53 @@ function h(e) {
       })
     },
     j = (0, s.jsx)(E.default, {
-      className: C.guildIcon,
+      className: A.guildIcon,
       guild: L,
       size: E.default.Sizes.MINI
     }),
     b = (0, N.getSecurityActionDetailsString)(P, L.name),
     G = null !== (h = P.dmsDisabledUntil) && void 0 !== h ? h : P.invitesDisabledUntil;
   if (null != G && D) return (0, s.jsxs)(_.default, {
-    className: C.notice,
+    className: A.notice,
     color: _.NoticeColors.NEUTRAL,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
       onClick: g,
       noticeType: p.NoticeTypes.GUILD_RAID_NOTIFICATION
     }), j, b, (0, s.jsx)(_.NoticeButton, {
-      className: C.actionButton,
+      className: A.actionButton,
       onClick: () => U(!1),
       children: (0, s.jsxs)("div", {
-        className: C.actionButtonInner,
+        className: A.actionButtonInner,
         children: [(0, s.jsx)(f.default, {
           width: 16,
           height: 16
         }), (0, s.jsx)("span", {
-          children: A.default.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION
+          children: C.default.Messages.GUILD_ANTIRAID_LOCKDOWN_NAGBAR_ACTION
         })]
       })
     })]
   });
-  let B = (0, N.hasDetectedRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
+  let B = (0, N.hasDetectedRaid)(P) ? C.default.Messages.GUILD_ANTIRAID_NAGBAR_RAID_MESSAGE_2_NEW.format({
       guildName: L.name
-    }) : (0, N.hasDetectedDMRaid)(P) ? A.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
+    }) : (0, N.hasDetectedDMRaid)(P) ? C.default.Messages.GUILD_ANTIRAID_NAGBAR_DM_RAID_MESSAGE_2_NEW.format({
       guildName: L.name
-    }) : A.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
+    }) : C.default.Messages.GUILD_ANTIRAID_NAGBAR_MESSAGE_2_NEW.format({
       guildName: L.name
     }),
     k = x && O === S.StaticChannelRoute.MEMBER_SAFETY;
   return (0, s.jsxs)(_.default, {
-    className: C.notice,
+    className: A.notice,
     color: _.NoticeColors.WARNING,
     children: [(0, s.jsx)(_.NoticeCloseButton, {
       onClick: g,
       noticeType: p.NoticeTypes.GUILD_RAID_NOTIFICATION
     }), j, B, !k && (0, s.jsx)(_.NoticeButton, {
-      className: C.actionButton,
+      className: A.actionButton,
       onClick: () => U(!0),
       children: (0, s.jsx)("div", {
-        className: C.actionButtonInner,
+        className: A.actionButtonInner,
         children: (0, s.jsx)("span", {
-          children: A.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
+          children: C.default.Messages.GUILD_ANTIRAID_NAGBAR_ACTION_VIEW
         })
       })
     })]

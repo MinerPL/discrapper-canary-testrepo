@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("888400"),
   p = n("719923"),
   S = n("158998"),
-  A = n("540692"),
-  C = n("166960"),
+  C = n("540692"),
+  A = n("166960"),
   h = n("833516"),
   g = n("646718"),
   M = n("782340"),
@@ -163,9 +163,9 @@ function L(e) {
   } = e, {
     trialOffer: a,
     isResolving: l
-  } = (0, d.useStateFromStoresObject)([A.default], () => ({
-    trialOffer: n ? A.default.getRelevantUserTrialOffer(t) : null,
-    isResolving: !!n && A.default.isResolving(t)
+  } = (0, d.useStateFromStoresObject)([C.default], () => ({
+    trialOffer: n ? C.default.getRelevantUserTrialOffer(t) : null,
+    isResolving: !!n && C.default.isResolving(t)
   }), [n, t]), i = I.default.getCurrentUser(), r = (0, d.useStateFromStores)([I.default], () => null != a && (0, p.isPremium)(void 0 !== i && a.user_id === i.id ? i : I.default.getUser(a.user_id))), o = (0, d.useStateFromStores)([m.default], () => {
     var e;
     return r ? null === (e = m.default.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt : null
@@ -173,7 +173,7 @@ function L(e) {
     analyticsLocations: c
   } = (0, _.default)(f.default.SHARE_NITRO_EMBED), {
     enabled: T
-  } = C.default.useExperiment({
+  } = A.default.useExperiment({
     location: "f4ff1d_1"
   }, {
     autoTrackExposure: !0

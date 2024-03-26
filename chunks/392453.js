@@ -74,14 +74,14 @@ function W(e) {
   }), B[e]
 }
 
-function Z(e) {
+function z(e) {
   !H.has(e) && V.add(e)
 }
 
-function z(e) {
+function Z(e) {
   if ((0, d.default)(e)) return I.SpotifyApplication;
   let t = null != e.application_id ? C.default.getApplication(e.application_id) : null;
-  return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && Z(e.application_id), t)
+  return null != t ? t : (0, c.default)(e) ? K(e.name) : (0, f.default)(e) && null != e.url ? W(e.url) : (null != e.application_id && z(e.application_id), t)
 }
 
 function X(e) {
@@ -124,7 +124,7 @@ function q(e, t, n) {
           tags: {
             source: "ACTIVITIES"
           }
-        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(_.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(_.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(S.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(S.TWITCH_APPLICATION_ID_PREFIX.length)) : (Z(e), null)
+        }), null) : e === I.SPOTIFY_APPLICATION_ID ? I.SpotifyApplication : e.startsWith(_.XBOX_APPLICATION_ID_PREFIX) ? K(e.slice(_.XBOX_APPLICATION_ID_PREFIX.length)) : e.startsWith(S.TWITCH_APPLICATION_ID_PREFIX) ? W(e.slice(S.TWITCH_APPLICATION_ID_PREFIX.length)) : (z(e), null)
       }(c),
       m = null === (l = d.timestamps) || void 0 === l ? void 0 : l.start;
     if ((0, u.default)(d)) {
@@ -144,7 +144,7 @@ function q(e, t, n) {
       if (n) continue
     } else if (null == m) continue;
     if (!g.shouldShowActivity(d) || null == f || j.has(f.id)) continue;
-    let A = null != d ? z(d) : null;
+    let A = null != d ? Z(d) : null;
     (null == A || A.id !== f.id) && (d = null);
     let R = [];
     if (null != d && null != d.party && null != d.party.id) {
@@ -155,7 +155,7 @@ function q(e, t, n) {
       }, [])
     } else R = t.filter(e => {
       let t = Y(e.id),
-        n = null != t ? z(t) : null;
+        n = null != t ? Z(t) : null;
       return null != n && n.id === f.id
     });
     (R = a.orderBy(R, [Q], ["desc"])).length !== t.length && (M = !0), j.add(f.id), O.push({

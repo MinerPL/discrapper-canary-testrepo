@@ -11,8 +11,8 @@ var s, i, l = n("37983"),
   c = n("55620"),
   d = n("651057"),
   u = n("299285"),
-  f = n("907038"),
-  h = n("552712"),
+  h = n("907038"),
+  f = n("552712"),
   m = n("131233"),
   x = n("49111"),
   v = n("782340"),
@@ -47,7 +47,7 @@ function g(e) {
       })
     }))
   }, [s, C.status]);
-  let T = (0, a.useStateFromStoresArray)([h.default], () => h.default.getForApplication(s).filter(e => {
+  let T = (0, a.useStateFromStoresArray)([f.default], () => f.default.getForApplication(s).filter(e => {
     switch (e.type) {
       case x.SKUTypes.DURABLE:
       case x.SKUTypes.CONSUMABLE:
@@ -71,7 +71,7 @@ function g(e) {
       className: p.modalHeader,
       children: [(0, l.jsxs)("div", {
         className: p.modalTitle,
-        children: [(0, l.jsx)(f.default, {}), (0, l.jsx)(o.Heading, {
+        children: [(0, l.jsx)(h.default, {}), (0, l.jsx)(o.Heading, {
           variant: "heading-md/semibold",
           children: N
         })]

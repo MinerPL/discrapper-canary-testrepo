@@ -28,14 +28,14 @@ function S(e) {
     message: t,
     compact: n
   } = e, a = (0, i.useStateFromStores)([d.default], () => d.default.getChannel(c.default.castMessageIdAsChannelId(t.id)));
-  return null == a ? null : (0, s.jsx)(A, {
+  return null == a ? null : (0, s.jsx)(C, {
     channel: a,
     compact: n,
     isSystemMessage: (0, u.default)(t)
   })
 }
 
-function A(e) {
+function C(e) {
   let {
     channel: t,
     compact: a,

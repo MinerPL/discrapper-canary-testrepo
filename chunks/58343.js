@@ -41,10 +41,10 @@ var a = n("37983"),
   w = n("716214"),
   F = n("567469"),
   V = n("998716"),
-  k = n("834052"),
-  H = n("534471"),
-  G = n("145635"),
-  B = n("277354"),
+  H = n("834052"),
+  k = n("534471"),
+  B = n("145635"),
+  G = n("277354"),
   W = n("100082"),
   Y = n("598050"),
   z = n("977026"),
@@ -107,7 +107,7 @@ function el(e) {
 function es(e) {
   let {
     channel: t
-  } = e, n = (0, h.useAppContext)(), l = (0, u.useStateFromStores)([O.default], () => O.default.can(Q.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, u.useStateFromStores)([y.default], () => y.default.getGuild(t.guild_id)), i = (0, u.useStateFromStores)([k.default], () => k.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
+  } = e, n = (0, h.useAppContext)(), l = (0, u.useStateFromStores)([O.default], () => O.default.can(Q.Permissions.CREATE_INSTANT_INVITE, t)), s = (0, u.useStateFromStores)([y.default], () => y.default.getGuild(t.guild_id)), i = (0, u.useStateFromStores)([H.default], () => H.default.getStageInstanceByChannel(t.id)), r = l || (null == i ? void 0 : i.invite_code) != null;
   return null != s && r ? (0, a.jsx)(v.default, {
     channel: t,
     appContext: n,
@@ -135,15 +135,15 @@ function ei(e) {
     [v, A] = l.useState(0),
     {
       isOnStartStageScreen: M
-    } = (0, H.default)();
-  (0, H.useUpdateIsOnStartStageScreenEffect)(n);
+    } = (0, k.default)();
+  (0, k.useUpdateIsOnStartStageScreenEffect)(n);
   let R = (0, u.useStateFromStores)([L.default], () => L.default.getToastsEnabled(n.id)),
     j = (0, X.default)(n),
     y = j ? null != I ? "84px" : "124px" : null != I ? "0px" : "48px";
   return t = M ? (0, a.jsx)(K.default, {
     channel: n,
     onContinueClick: () => {
-      (0, H.setIsOnStartStageScreen)(!1), !g && (0, w.connectToStage)(n)
+      (0, k.setIsOnStartStageScreen)(!1), !g && (0, w.connectToStage)(n)
     }
   }) : g ? (0, a.jsx)(Y.default, {
     channel: n,
@@ -155,7 +155,7 @@ function ei(e) {
         leading: !0
       })()
     }
-  }) : (0, a.jsx)(B.default, {
+  }) : (0, a.jsx)(G.default, {
     participants: _,
     channel: n,
     hasConnectPermission: C
@@ -254,7 +254,7 @@ function er(e) {
             popoutOpen: T,
             chatOpen: N
           })
-        }), s ? (0, a.jsx)(G.default, {
+        }), s ? (0, a.jsx)(B.default, {
           channel: t,
           toggleRequestToSpeakSidebar: c,
           chatOpen: N

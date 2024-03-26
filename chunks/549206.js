@@ -103,7 +103,7 @@ function P(e) {
     focusedIndex: 0,
     setFocus: U,
     onSelect: w
-  }), V = v.default.getQuery(f), k = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, H = (0, d.createASTHighlighter)(null !== (t = null == V ? void 0 : V.content) && void 0 !== t ? t : ""), G = j.map(e => {
+  }), V = v.default.getQuery(f), H = v.default.getSearchType(f) === L.SearchTypes.FAVORITES, k = (0, d.createASTHighlighter)(null !== (t = null == V ? void 0 : V.content) && void 0 !== t ? t : ""), B = j.map(e => {
     let {
       channel: t,
       results: n,
@@ -112,7 +112,7 @@ function P(e) {
     return (0, a.jsx)(D, {
       channel: t,
       results: n,
-      highlighter: H,
+      highlighter: k,
       startIndex: l,
       resultRefs: P,
       totalResults: I,
@@ -122,23 +122,23 @@ function P(e) {
       offset: _,
       jumpToMessage: M,
       listNavigator: F,
-      favoriteSearch: k
+      favoriteSearch: H
     }, "".concat(t.id, "-").concat(l))
   });
-  G.push();
-  let B = l.useRef(null);
+  B.push();
+  let G = l.useRef(null);
   l.useLayoutEffect(() => {
     var e;
-    null === (e = B.current) || void 0 === e || e.focus()
+    null === (e = G.current) || void 0 === e || e.focus()
   }, [p]);
   let W = (0, i.useFocusJumpSection)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
-      ref: B,
+      ref: G,
       ...F.getContainerProps(),
       ...W,
       "aria-busy": x,
-      children: G
+      children: B
     }), g > 0 ? (0, a.jsxs)(i.Clickable, {
       tag: "div",
       className: O.resultsBlocked,
@@ -153,7 +153,7 @@ function P(e) {
           count: g
         })
       })]
-    }) : null, !x && !k && (0, a.jsx)(R.default, {
+    }) : null, !x && !H && (0, a.jsx)(R.default, {
       changePage: A,
       offset: _,
       totalResults: I,
@@ -182,7 +182,7 @@ function D(e) {
     if (e === x.default.getChannelId()) return;
     let t = C.default.getChannel(e);
     if (null != t) I.default.can(L.Permissions.VIEW_CHANNEL, t) && (0, g.transitionToChannel)(t.id)
-  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", V = b && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, k = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, H = null != k ? k.name : null, G = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, B = null != k ? (0, h.default)(k) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
+  }, []), F = null != s ? (0, f.computeChannelName)(s, N.default, T.default, !1) : "???", V = b && null != s.guild_id ? null === (t = _.default.getGuild(s.guild_id)) || void 0 === t ? void 0 : t.name : null, H = (null == s ? void 0 : s.parent_id) != null ? C.default.getChannel(s.parent_id) : null, k = null != H ? H.name : null, B = null !== (n = (0, h.default)(s)) && void 0 !== n ? n : M.default, G = null != H ? (0, h.default)(H) : null, W = I.default.can(L.Permissions.MANAGE_MESSAGES, s), {
     content: Y
   } = (0, p.default)({
     content: F,
@@ -194,7 +194,7 @@ function D(e) {
     let e = z.current;
     null != e && null != e.offsetWidth && null != e.scrollWidth && Z(e.offsetWidth < e.scrollWidth)
   }, []);
-  let X = [F, H, V].filter(e => null != e).join(", ");
+  let X = [F, k, V].filter(e => null != e).join(", ");
   return (0, a.jsx)(A.ObscuredDisplayContext.Provider, {
     value: (0, m.default)(U, W),
     children: (0, a.jsxs)("ul", {
@@ -205,7 +205,7 @@ function D(e) {
         onClick: () => w(s.id),
         children: (0, a.jsxs)("div", {
           className: O.channelNameContainer,
-          children: [(0, a.jsx)(G, {
+          children: [(0, a.jsx)(B, {
             className: O.channelNameIcon,
             width: 16,
             height: 16
@@ -218,12 +218,12 @@ function D(e) {
               className: O.channelNameText,
               children: [b && null !== V && "".concat(V, " : "), Y]
             })
-          }), null != k && null != H && null != B ? (0, a.jsxs)(i.Clickable, {
+          }), null != H && null != k && null != G ? (0, a.jsxs)(i.Clickable, {
             className: O.parentChannelNameClickable,
             onClick: e => {
-              e.stopPropagation(), w(k.id)
+              e.stopPropagation(), w(H.id)
             },
-            children: [(0, a.jsx)(B, {
+            children: [(0, a.jsx)(G, {
               className: O.parentChannelNameIcon,
               width: 12,
               height: 12
@@ -231,7 +231,7 @@ function D(e) {
               className: O.parentChannelNameText,
               variant: "text-xs/medium",
               color: "header-secondary",
-              children: H
+              children: k
             })]
           }) : null]
         })

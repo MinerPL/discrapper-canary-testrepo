@@ -23,7 +23,7 @@ let m = "DetectedOffPlatformPremiumPerksStore",
   p = {},
   S = [];
 
-function A() {
+function C() {
   let e = !1;
   for (let {
       skuId: t,
@@ -48,7 +48,7 @@ function A() {
   }
   return e
 }
-class C extends l.default.Store {
+class A extends l.default.Store {
   initialize() {
     var e;
     this.waitFor(E.default, T.default, _.default), S = null !== (e = i.Storage.get(m)) && void 0 !== e ? e : S
@@ -57,15 +57,15 @@ class C extends l.default.Store {
     return a.values(N)
   }
 }
-C.displayName = "DetectedOffPlatformPremiumPerksStore";
-var h = new C(r.default, {
+A.displayName = "DetectedOffPlatformPremiumPerksStore";
+var h = new A(r.default, {
   LOGOUT: function() {
     N = {}, p = {}
   },
-  SKU_FETCH_SUCCESS: A,
-  ENTITLEMENT_FETCH_APPLICATION_SUCCESS: A,
-  ENTITLEMENT_CREATE: A,
-  APPLICATION_FETCH_SUCCESS: A,
+  SKU_FETCH_SUCCESS: C,
+  ENTITLEMENT_FETCH_APPLICATION_SUCCESS: C,
+  ENTITLEMENT_CREATE: C,
+  APPLICATION_FETCH_SUCCESS: C,
   DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function(e) {
     let {
       skuId: t
@@ -91,6 +91,6 @@ var h = new C(r.default, {
             applicationId: s
           }, e = !0)
         }
-    return e && A(), e
+    return e && C(), e
   }
 })

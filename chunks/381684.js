@@ -30,9 +30,9 @@ let I = {
   p = null,
   S = 864e5;
 (a = s || (s = {})).IS_OWNER = "is_owner", a.IS_ADMIN = "is_admin", a.IS_COMMUNITY = "is_community", a.GUILD_SIZE = "guild_size", a.IS_HUB = "is_hub", a.IS_VIEWING = "is_viewing", a.GUILD_PERMISSIONS = "guild_permissions", a.GUILD_SIZE_ALL = "guild_size_all";
-let A = new Set(Object.values(s));
+let C = new Set(Object.values(s));
 
-function C(e) {
+function A(e) {
   return function(e) {
     return "1213250669327286303" === e.key || "1213251044474232852" === e.key ? (0, u.daysSinceYouBarFirstSeen)() >= 7 : "1213254060338319402" !== e.key && "1213254481224015954" !== e.key || (0, u.daysSinceYouBarFirstSeen)() >= 14
   }(e) && function(e) {
@@ -43,7 +43,7 @@ function C(e) {
     } = e;
     if (0 === t.length) return !0;
     for (let e of t)
-      if (!A.has(e)) return !1;
+      if (!C.has(e)) return !1;
     let a = t.includes("guild_size_all"),
       i = !0,
       r = Object.values(c.default.getGuilds());
@@ -86,17 +86,17 @@ function h(e) {
     survey: t
   } = e;
   if (m.lastFetched = Date.now(), null == m.hiddenSurveys && (m.hiddenSurveys = {}), null != t && null == m.hiddenSurveys[t.key]) {
-    if (!C(t)) return;
+    if (!A(t)) return;
     p = t
   }
 }
 
 function g() {
-  if (null != p && (C(p) || (p = null, 0))) return !1;
+  if (null != p && (A(p) || (p = null, 0))) return !1;
   ! function() {
     N = null != N ? N : {};
     let e = Object.values(N)[0];
-    if (null != e && C(e)) {
+    if (null != e && A(e)) {
       h({
         type: "SURVEY_FETCHED",
         survey: e

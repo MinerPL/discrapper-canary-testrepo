@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 }), n("222007");
 var s = n("37983"),
@@ -43,11 +43,11 @@ function S(e) {
     assets: c,
     currentUser: t,
     message: l
-  }), [c, t, l]), A = a.useMemo(() => p({
+  }), [c, t, l]), C = a.useMemo(() => p({
     assets: d,
     currentUser: t,
     message: l
-  }), [d, t, l]), C = a.useCallback(async () => {
+  }), [d, t, l]), A = a.useCallback(async () => {
     let {
       valid: e
     } = await (0, I.applyChatRestrictions)({
@@ -93,17 +93,17 @@ function S(e) {
     color: i.ButtonColors.PRIMARY,
     onMouseEnter: () => m(!0),
     onMouseLeave: () => m(!1),
-    onClick: C,
+    onClick: A,
     children: [(0, s.jsx)(u.default, {
       className: N.CTAMessageSticker,
       isInteracting: T,
       sticker: S,
       size: 28
-    }), A]
+    }), C]
   })
 }
 
-function A(e) {
+function C(e) {
   let {
     channel: t,
     message: n,

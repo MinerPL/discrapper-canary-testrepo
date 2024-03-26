@@ -20,8 +20,8 @@ var s, a, l = n("37983"),
   N = n("476765"),
   p = n("599110"),
   S = n("98013"),
-  A = n("439932"),
-  C = n("49111"),
+  C = n("439932"),
+  A = n("49111"),
   h = n("782340"),
   g = n("847674");
 (a = s || (s = {}))[a.OSX = 0] = "OSX", a[a.WINDOWS = 1] = "WINDOWS", a[a.LINUX = 2] = "LINUX", a[a.IOS = 3] = "IOS", a[a.ANDROID = 4] = "ANDROID";
@@ -50,15 +50,15 @@ let M = [{
   O = [{
     getOs: () => h.default.Messages.PLATFORM_IOS,
     icon: g.ios,
-    url: () => C.DownloadLinks.IOS,
+    url: () => A.DownloadLinks.IOS,
     platformKey: 3
   }, {
     getOs: () => h.default.Messages.PLATFORM_ANDROID,
     icon: g.android,
-    url: () => C.DownloadLinks.ANDROID,
+    url: () => A.DownloadLinks.ANDROID,
     platformKey: 4
   }],
-  R = (0, A.getThemeClass)(C.ThemeTypes.LIGHT),
+  R = (0, C.getThemeClass)(A.ThemeTypes.LIGHT),
   L = e => {
     let {
       url: t,
@@ -140,7 +140,7 @@ function P(e) {
     source: t,
     onClose: n,
     transitionState: s
-  } = e, a = (0, f.useStateFromStores)([m.default], () => m.default.getCurrentUser()), r = (0, f.useStateFromStores)([I.default], () => I.default.getFingerprint()), u = null == a || a.isClaimed(), [S, A] = i.useState(function() {
+  } = e, a = (0, f.useStateFromStores)([m.default], () => m.default.getCurrentUser()), r = (0, f.useStateFromStores)([I.default], () => I.default.getFingerprint()), u = null == a || a.isClaimed(), [S, C] = i.useState(function() {
     var e;
     switch (null === (e = d.os) || void 0 === e ? void 0 : e.family) {
       case "OS X":
@@ -164,7 +164,7 @@ function P(e) {
   }());
 
   function L(e) {
-    (null != E.getToken() || null != r) && p.default.track(C.AnalyticEvents.DOWNLOAD_APP, {
+    (null != E.getToken() || null != r) && p.default.track(A.AnalyticEvents.DOWNLOAD_APP, {
       platform: e,
       ptb: !1,
       released: !0,
@@ -175,10 +175,10 @@ function P(e) {
   }
 
   function P(e) {
-    A(e)
+    C(e)
   }
   i.useEffect(() => {
-    p.default.track(C.AnalyticEvents.OPEN_MODAL, {
+    p.default.track(A.AnalyticEvents.OPEN_MODAL, {
       type: "Download App",
       source: {
         location: t

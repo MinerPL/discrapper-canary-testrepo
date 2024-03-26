@@ -27,8 +27,8 @@ let I = a.memo(function(e) {
         me: N,
         me_burst: p,
         burst_count: S,
-        burst_colors: A,
-        readOnly: C,
+        burst_colors: C,
+        readOnly: A,
         isLurking: h,
         isGuest: g,
         isPendingMember: M,
@@ -36,7 +36,7 @@ let I = a.memo(function(e) {
       } = e,
       R = O === E.ReactionTypes.BURST,
       L = (0, f.isMeReaction)(N, p, O),
-      v = (0, d.useEmojiColorPalette)(R && null != A ? A : []),
+      v = (0, d.useEmojiColorPalette)(R && null != C ? C : []),
       P = a ? T : _,
       D = R ? S : m,
       x = (0, c.getMinCounterWidth)(D, f.REACTION_MIN_WIDTH_DIGITS),
@@ -58,7 +58,7 @@ let I = a.memo(function(e) {
     return (0, s.jsxs)("div", {
       className: i(P.reaction, P.reactionInner, I, {
         [P.reactionMe]: L,
-        [P.reactionReadOnly]: C && !h && !M && !g
+        [P.reactionReadOnly]: A && !h && !M && !g
       }),
       style: y,
       children: [(0, s.jsx)(o.default, {

@@ -22,15 +22,15 @@ var s = n("37983"),
   N = n("666897"),
   p = n("49111"),
   S = n("406291"),
-  A = n("782340"),
-  C = n("607602");
+  C = n("782340"),
+  A = n("607602");
 let h = {
     tag: "span",
     variant: "text-md/normal",
     color: "header-secondary"
   },
   g = {
-    className: i("mention", C.mention)
+    className: i("mention", A.mention)
   };
 
 function M(e) {
@@ -61,14 +61,14 @@ var O = a.memo(function(e) {
       (null == D || D.type === u.ApplicationCommandType.CHAT && void 0 === D.application_command) && E.fetchMessageInteractionData(v.id, P)
     }, [v.id, P, D]), null == D) L = (0, s.jsx)(o.Spinner, {
     type: o.Spinner.Type.SPINNING_CIRCLE,
-    className: C.spinner
+    className: A.spinner
   });
   else {
     let e = [],
       t = Object.fromEntries((null !== (i = null === (n = D.application_command) || void 0 === n ? void 0 : n.options) && void 0 !== i ? i : []).map(e => [e.name, e]));
     for (let n of null !== (O = D.options) && void 0 !== O ? O : []) e = e.concat(function e(t) {
       var n, l, i, r, d, c, E;
-      let C, {
+      let A, {
           option: O,
           channel: R,
           guild: L,
@@ -104,7 +104,7 @@ var O = a.memo(function(e) {
             t = m.default.getUser(e);
           if (null != t) {
             let e = (0, f.getUserAuthor)(t, R);
-            C = (0, s.jsxs)(N.default, {
+            A = (0, s.jsxs)(N.default, {
               ...g,
               onClick: () => (0, _.openUserProfileModal)({
                 userId: t.id,
@@ -124,7 +124,7 @@ var O = a.memo(function(e) {
         case u.ApplicationCommandOptionType.CHANNEL: {
           let e = O.value.toString(),
             t = T.default.getChannel(e);
-          null != t && (C = (0, s.jsxs)(N.default, {
+          null != t && (A = (0, s.jsxs)(N.default, {
             ...g,
             children: [S.CHANNEL_SENTINEL, t.name]
           }));
@@ -133,7 +133,7 @@ var O = a.memo(function(e) {
         case u.ApplicationCommandOptionType.ROLE: {
           let e = O.value.toString(),
             t = null != L ? I.default.getRole(L.id, e) : void 0;
-          null != t && (C = (0, s.jsxs)(N.default, {
+          null != t && (A = (0, s.jsxs)(N.default, {
             ...g,
             children: [S.MENTION_SENTINEL, t.name]
           }));
@@ -142,14 +142,14 @@ var O = a.memo(function(e) {
         case u.ApplicationCommandOptionType.MENTIONABLE: {
           let e = O.value.toString(),
             t = null != L ? I.default.getRole(L.id, e) : void 0;
-          if (null != t) C = (0, s.jsxs)(N.default, {
+          if (null != t) A = (0, s.jsxs)(N.default, {
             children: [S.MENTION_SENTINEL, t.name]
           });
           else {
             let t = m.default.getUser(e);
             if (null != t) {
               let e = (0, f.getUserAuthor)(t, R);
-              C = (0, s.jsxs)(N.default, {
+              A = (0, s.jsxs)(N.default, {
                 ...g,
                 onClick: () => (0, _.openUserProfileModal)({
                   userId: t.id,
@@ -165,18 +165,18 @@ var O = a.memo(function(e) {
           break
         }
         case u.ApplicationCommandOptionType.ATTACHMENT:
-          C = M(A.default.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
+          A = M(C.default.Messages.EXECUTED_COMMAND_POPOUT_ATTACHMENT_OPTION_VALUE);
           break;
         default: {
           let e = null == D ? void 0 : null === (d = D.choices) || void 0 === d ? void 0 : d.find(e => e.value === O.value);
           null != e && (U = null !== (c = e.name_localized) && void 0 !== c ? c : e.name)
         }
       }
-      return null == C && (C = M(null == U ? void 0 : U.toString())), [(0, s.jsxs)(a.Fragment, {
+      return null == A && (A = M(null == U ? void 0 : U.toString())), [(0, s.jsxs)(a.Fragment, {
         children: [(0, s.jsxs)(o.Text, {
           ...h,
           children: [" ", null !== (E = null == D ? void 0 : D.name_localized) && void 0 !== E ? E : O.name, ": "]
-        }), C]
+        }), A]
       }, y)]
     }({
       option: n,
@@ -195,18 +195,18 @@ var O = a.memo(function(e) {
     })
   }
   return (0, s.jsxs)("div", {
-    className: C.container,
+    className: A.container,
     onCopy: e => {
       var t, n, s;
       let a = null !== (s = null === (n = window) || void 0 === n ? void 0 : null === (t = n.getSelection()) || void 0 === t ? void 0 : t.toString()) && void 0 !== s ? s : "";
       a.startsWith("/") && a.endsWith("\n") && y(e, D)
     },
     children: [(0, s.jsx)("div", {
-      className: C.tooltip,
+      className: A.tooltip,
       ref: U,
       children: L
     }), (0, s.jsx)("div", {
-      className: C.tooltipPointer
+      className: A.tooltipPointer
     })]
   })
 })

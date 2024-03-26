@@ -25,10 +25,10 @@ n.r(t), n.d(t, {
     return S
   },
   getDropExpired: function() {
-    return A
+    return C
   },
   getDrop: function() {
-    return C
+    return A
   },
   getDropByQuestId: function() {
     return h
@@ -51,7 +51,7 @@ var s = n("866227"),
   c = n("782340");
 
 function E(e) {
-  let t = C(e);
+  let t = A(e);
   return null == t ? null : f(t)
 }
 
@@ -75,7 +75,7 @@ function T() {
 
 function I(e, t, n) {
   var s, a, l, i;
-  let r = C(e);
+  let r = A(e);
   if (null == r) return !1;
   let u = (s = t, a = d.PartnerGameNameToSearchTermMapping[e], null !== (l = s.find(e => _(e.name, a))) && void 0 !== l ? l : null);
   if (null != u) {
@@ -100,7 +100,7 @@ function N(e, t) {
 
 function p(e) {
   var t;
-  let n = C(e);
+  let n = A(e);
   if (null == n || !(null === (t = E(e)) || void 0 === t ? void 0 : t.getCurrentConfig({
       location: "1"
     }, {
@@ -113,7 +113,7 @@ function p(e) {
 
 function S(e) {
   var t, n;
-  let s = C(e);
+  let s = A(e);
   if (null == s || !(null === (n = E(e)) || void 0 === n ? void 0 : null === (t = n.getCurrentConfig({
       location: "2"
     }, {
@@ -121,17 +121,17 @@ function S(e) {
     })) || void 0 === t ? void 0 : t.dropsEnabled)) return !1;
   let a = i.DropsOptedOut.getSetting(),
     l = N(s, !1);
-  return A(s) && !a && l
+  return C(s) && !a && l
 }
 
-function A(e) {
+function C(e) {
   let {
     endDate: t
   } = e, n = a(t, "YYYY-MM-DD HH:mm"), s = a();
   return s > n
 }
 
-function C(e) {
+function A(e) {
   let t = d.DROPS_GAMES[e];
   return t
 }

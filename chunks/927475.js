@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return N
   },
   HubEmailConnectionModalView: function() {
-    return m
+    return I
   }
 });
 var a = n("37983"),
@@ -17,18 +17,18 @@ var a = n("37983"),
   d = n("21873"),
   u = n("149806"),
   _ = n("782340"),
-  N = n("353990");
+  E = n("353990");
 
-function E(e) {
+function N(e) {
   let {
     transitionState: t,
     onClose: n,
-    isNUXFlow: E
+    isNUXFlow: N
   } = e;
   return s.useEffect(() => {
-    o.default.hideHubUpsell(), E && r.default.flowStep(u.FlowType.ORGANIC, u.RegistrationSteps.HUB_CONNECTION)
-  }, [E]), (0, a.jsx)(i.ModalRoot, {
-    className: N.modalRoot,
+    o.default.hideHubUpsell(), N && r.default.flowStep(u.FlowType.ORGANIC, u.RegistrationSteps.HUB_CONNECTION)
+  }, [N]), (0, a.jsx)(i.ModalRoot, {
+    className: E.modalRoot,
     transitionState: t,
     "aria-label": _.default.Messages.HUB_WAITLIST_MODAL_JOIN_HEADER,
     impression: {
@@ -40,19 +40,19 @@ function E(e) {
         paddingRight: "0px"
       },
       paddingFix: !1,
-      className: N.modalContent,
+      className: E.modalContent,
       children: (0, a.jsxs)("div", {
-        className: N.container,
+        className: E.container,
         children: [(0, a.jsx)("div", {
-          className: N.sidebarContainer,
+          className: E.sidebarContainer,
           children: (0, a.jsx)(d.default, {})
         }), (0, a.jsxs)("div", {
-          className: N.contentContainer,
+          className: E.contentContainer,
           children: [(0, a.jsx)(i.ModalCloseButton, {
             onClick: n,
-            className: N.closeButton
+            className: E.closeButton
           }), (0, a.jsx)(c.default, {
-            isNUXFlow: E,
+            isNUXFlow: N,
             onClose: n
           })]
         })]
@@ -60,17 +60,17 @@ function E(e) {
     })
   })
 }
-let m = e => {
+let I = e => {
   let {
     invite: t
   } = e;
   return (0, a.jsxs)("div", {
-    className: N.container,
+    className: E.container,
     children: [(0, a.jsx)("div", {
-      className: N.sidebarContainer,
+      className: E.sidebarContainer,
       children: (0, a.jsx)(d.default, {})
     }), (0, a.jsx)("div", {
-      className: N.contentContainer,
+      className: E.contentContainer,
       children: (0, a.jsx)(c.default, {
         invite: t
       })

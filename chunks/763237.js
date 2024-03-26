@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("963422"),
   p = n("533403"),
   S = n("85175"),
-  A = n("49111"),
-  C = n("450484"),
+  C = n("49111"),
+  A = n("450484"),
   h = n("782340"),
   g = n("434641");
 class M extends a.PureComponent {
@@ -85,7 +85,7 @@ class O extends a.PureComponent {
     return null == e || null == e.party || null == e.party.size || e.party.size.length < 2 ? [-1, -1] : e.party.size
   }
   getActionableMode() {
-    return [A.ActivityActionTypes.LISTEN, (0, A.ActivityActionTypes)].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? "Actionable" : "NotActionable"
+    return [C.ActivityActionTypes.LISTEN, (0, C.ActivityActionTypes)].includes(this.props.activityActionType) || this.props.isPreview || this.canJoin() ? "Actionable" : "NotActionable"
   }
   isInParty() {
     let {
@@ -113,14 +113,14 @@ class O extends a.PureComponent {
       isGameLaunchable: n,
       isInBrowser: s
     } = this.props;
-    return !!t || !(this.isDeadInvite() || !this.isActionType(A.ActivityActionTypes.JOIN) || !(0, u.default)(e, A.ActivityFlags.JOIN) || !this.hasPartySize() || this.isPartyFull() || s || !n || this.isInParty()) && !0
+    return !!t || !(this.isDeadInvite() || !this.isActionType(C.ActivityActionTypes.JOIN) || !(0, u.default)(e, C.ActivityFlags.JOIN) || !this.hasPartySize() || this.isPartyFull() || s || !n || this.isInParty()) && !0
   }
   canSendInvite() {
     let {
       activity: e,
       isPreview: t
     } = this.props;
-    return !!t || !(this.isDeadInvite() || !this.isActionType(A.ActivityActionTypes.JOIN_REQUEST) || !(0, u.default)(e, A.ActivityFlags.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0
+    return !!t || !(this.isDeadInvite() || !this.isActionType(C.ActivityActionTypes.JOIN_REQUEST) || !(0, u.default)(e, C.ActivityFlags.JOIN) || !this.hasPartySize() || this.isPartyFull()) && !0
   }
   canSync() {
     let {
@@ -129,13 +129,13 @@ class O extends a.PureComponent {
       isSyncable: n,
       isInBrowser: s
     } = this.props;
-    return !!t || !(!this.isActionType(A.ActivityActionTypes.LISTEN) && !this.isActionType(A.ActivityActionTypes.WATCH) || this.isDeadInvite() || !(0, u.default)(e, A.ActivityFlags.SYNC) || s || !n || this.isInParty()) && !0
+    return !!t || !(!this.isActionType(C.ActivityActionTypes.LISTEN) && !this.isActionType(C.ActivityActionTypes.WATCH) || this.isDeadInvite() || !(0, u.default)(e, C.ActivityFlags.SYNC) || s || !n || this.isInParty()) && !0
   }
   getHelpdeskArticleURL() {
     let {
       partyId: e
     } = this.props;
-    return null != e && (0, C.isSpotifyParty)(e) ? A.HelpdeskArticles.SPOTIFY_CONNECTION : A.HelpdeskArticles.RICH_PRESENCE_INTRODUCTION
+    return null != e && (0, A.isSpotifyParty)(e) ? C.HelpdeskArticles.SPOTIFY_CONNECTION : C.HelpdeskArticles.RICH_PRESENCE_INTRODUCTION
   }
   renderHeaderText() {
     let {
@@ -143,17 +143,17 @@ class O extends a.PureComponent {
       name: t
     } = this.props;
     switch (e) {
-      case A.ActivityActionTypes.LISTEN:
+      case C.ActivityActionTypes.LISTEN:
         return h.default.Messages.INVITE_EMBED_INVITE_TO_LISTEN.format({
           name: t
         });
-      case A.ActivityActionTypes.WATCH:
+      case C.ActivityActionTypes.WATCH:
         return h.default.Messages.INVITE_EMBED_INVITE_TO_WATCH.format({
           name: t
         });
-      case A.ActivityActionTypes.JOIN:
+      case C.ActivityActionTypes.JOIN:
         return h.default.Messages.INVITE_EMBED_INVITE_TO_JOIN_GROUP;
-      case A.ActivityActionTypes.JOIN_REQUEST:
+      case C.ActivityActionTypes.JOIN_REQUEST:
       default:
         return h.default.Messages.INVITE_EMBED_ASK_TO_JOIN
     }
@@ -169,17 +169,17 @@ class O extends a.PureComponent {
       activity: r
     } = this.props, [u, d] = this.getPartySize();
     if (this.isDeadInvite()) switch (e) {
-      case A.ActivityActionTypes.LISTEN:
+      case C.ActivityActionTypes.LISTEN:
         return h.default.Messages.INVITE_EMBED_LISTEN_HAS_ENDED;
-      case A.ActivityActionTypes.WATCH:
+      case C.ActivityActionTypes.WATCH:
         return h.default.Messages.INVITE_EMBED_WATCH_HAS_ENDED;
-      case A.ActivityActionTypes.JOIN:
-      case A.ActivityActionTypes.JOIN_REQUEST:
+      case C.ActivityActionTypes.JOIN:
+      case C.ActivityActionTypes.JOIN_REQUEST:
       default:
         return h.default.Messages.INVITE_EMBED_GAME_HAS_ENDED
     }
-    if (l && !a && e === A.ActivityActionTypes.JOIN) return h.default.Messages.INVITE_EMBED_JOIN_VIA_DESKTOP_APP;
-    if (this.isActionType(A.ActivityActionTypes.LISTEN) || this.isActionType(A.ActivityActionTypes.WATCH)) return null != r && null != r.details && null != r.state && (0, c.default)(r) ? [(0, s.jsx)("div", {
+    if (l && !a && e === C.ActivityActionTypes.JOIN) return h.default.Messages.INVITE_EMBED_JOIN_VIA_DESKTOP_APP;
+    if (this.isActionType(C.ActivityActionTypes.LISTEN) || this.isActionType(C.ActivityActionTypes.WATCH)) return null != r && null != r.details && null != r.state && (0, c.default)(r) ? [(0, s.jsx)("div", {
       className: g.details,
       children: (0, s.jsx)(o.Anchor, {
         className: g.textLink,
@@ -197,8 +197,8 @@ class O extends a.PureComponent {
           onOpenSpotifyArtist: this.handleOpenSpotifyArtist
         }, t) : null
       })
-    }, "state")] : this.isActionType(A.ActivityActionTypes.LISTEN) ? h.default.Messages.USER_ACTIVITY_LISTEN_ALONG : h.default.Messages.USER_ACTIVITY_WATCH_ALONG;
-    return this.isActionType(A.ActivityActionTypes.JOIN_REQUEST) ? this.isPartyFull() ? h.default.Messages.INVITE_EMBED_FULL_GROUP : h.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
+    }, "state")] : this.isActionType(C.ActivityActionTypes.LISTEN) ? h.default.Messages.USER_ACTIVITY_LISTEN_ALONG : h.default.Messages.USER_ACTIVITY_WATCH_ALONG;
+    return this.isActionType(C.ActivityActionTypes.JOIN_REQUEST) ? this.isPartyFull() ? h.default.Messages.INVITE_EMBED_FULL_GROUP : h.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
       number: d - u
     }) : this.isInParty() ? h.default.Messages.INVITE_EMBED_IN_GROUP : t || n || a ? this.isPartyFull() ? h.default.Messages.INVITE_EMBED_FULL_GROUP : this.hasPartySize() ? h.default.Messages.INVITE_EMBED_NUM_OPEN_SLOTS.format({
       number: d - u
@@ -221,7 +221,7 @@ class O extends a.PureComponent {
       className: g.actionButton,
       size: o.Button.Sizes.SMALL
     }, E = null != d ? d(c) : null;
-    return null != E ? E : !this.isDeadInvite() && this.isActionType(A.ActivityActionTypes.LISTEN) && null != l && null != r && null != i && (0, C.isSpotifyParty)(l) ? u({
+    return null != E ? E : !this.isDeadInvite() && this.isActionType(C.ActivityActionTypes.LISTEN) && null != l && null != r && null != i && (0, A.isSpotifyParty)(l) ? u({
       ...c,
       activity: i,
       user: r.author
@@ -246,7 +246,7 @@ class O extends a.PureComponent {
           disabled: a
         };
         return {
-          children: this.isActionType(A.ActivityActionTypes.JOIN_REQUEST) ? h.default.Messages.INVITE_EMBED_INVITE_TO_JOIN : h.default.Messages.JOIN,
+          children: this.isActionType(C.ActivityActionTypes.JOIN_REQUEST) ? h.default.Messages.INVITE_EMBED_INVITE_TO_JOIN : h.default.Messages.JOIN,
           disabled: !0
         }
       })(),
@@ -266,7 +266,7 @@ class O extends a.PureComponent {
       partyMembers: t,
       hideParty: n,
       guildId: a
-    } = this.props, [l, i] = this.getPartySize(), r = this.hasPartySize() || this.isActionType(A.ActivityActionTypes.LISTEN) || this.isActionType(A.ActivityActionTypes.WATCH);
+    } = this.props, [l, i] = this.getPartySize(), r = this.hasPartySize() || this.isActionType(C.ActivityActionTypes.LISTEN) || this.isActionType(C.ActivityActionTypes.WATCH);
     if (null == e || this.isDeadInvite() || !r || n) return null;
     let o = [...t],
       u = Math.min(l, 6);
@@ -293,7 +293,7 @@ class O extends a.PureComponent {
       coverImage: t,
       name: n,
       activity: a
-    } = this.props, l = this.isActionType(A.ActivityActionTypes.JOIN) || this.isActionType(A.ActivityActionTypes.JOIN_REQUEST), u = this.isDeadInvite(), d = null;
+    } = this.props, l = this.isActionType(C.ActivityActionTypes.JOIN) || this.isActionType(C.ActivityActionTypes.JOIN_REQUEST), u = this.isDeadInvite(), d = null;
     null == t || null == a || l ? !l && u && (d = (0, s.jsx)("div", {
       className: g.artworkSpotifySessionEnded
     })) : d = (0, s.jsx)("img", {

@@ -24,8 +24,8 @@ var s, a, l, i, r = n("37983"),
   N = n("574073"),
   p = n("28007"),
   S = n("367594"),
-  A = n("273108"),
-  C = n("118503"),
+  C = n("273108"),
+  A = n("118503"),
   h = n("659186"),
   g = n("304198"),
   M = n("427459"),
@@ -155,7 +155,7 @@ function F(e) {
   }()), {
     createMultipleConfettiAt: I,
     confettiCanvas: N
-  } = o.useContext(m.ConfettiCannonContext), [p, S] = o.useState(null), C = (0, c.useConfettiCannon)(N, p), h = function(e, t) {
+  } = o.useContext(m.ConfettiCannonContext), [p, S] = o.useState(null), A = (0, c.useConfettiCannon)(N, p), h = function(e, t) {
     if (null == e) return "enter";
     switch (e) {
       case "enter":
@@ -212,7 +212,7 @@ function F(e) {
   }, [I, _, u, l]), o.useEffect(() => {
     if (g && "leaf_fall" === u) {
       let e = y[_].leafRotationDirection;
-      C.createConfetti({
+      A.createConfetti({
         id: "".concat(U, "-").concat((0, E.v4)()),
         position: {
           type: "static",
@@ -260,7 +260,7 @@ function F(e) {
         sprite: "TOP_LEFT" === _ ? b : G
       })
     }
-  }, [g, C, _, u]), (0, r.jsxs)(r.Fragment, {
+  }, [g, A, _, u]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(c.SpriteCanvas, {
       ref: S,
       sprites: B,
@@ -275,7 +275,7 @@ function F(e) {
         [L.easterEggAnimationClickTargetBottomLeft]: "BOTTOM_LEFT" === _,
         [L.easterEggAnimationClickTargetBottomRight]: "BOTTOM_RIGHT" === _
       }),
-      children: (0, r.jsx)(A.default, {
+      children: (0, r.jsx)(C.default, {
         animationRef: x,
         className: d(L.easterEggAnimation, {
           [L.easterEggAnimationHideLeaf]: M
@@ -316,7 +316,7 @@ function w(e) {
       addClickListener: E
     } = o.useContext(m.ConfettiCannonContext),
     [f, _] = o.useState(!1),
-    A = o.useRef(null),
+    C = o.useRef(null),
     {
       reducedMotion: v
     } = o.useContext(T.AccessibilityPreferencesContext),
@@ -346,7 +346,7 @@ function w(e) {
       if (!v.enabled) {
         if (f || 0 !== Math.floor(50 * Math.random())) {
           var e;
-          let t = null === (e = A.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+          let t = null === (e = C.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
           if (null != t) c(t.left + t.width / 2, t.top + t.height / 2)
         } else _(!0)
       }
@@ -368,9 +368,9 @@ function w(e) {
   });
   let B = (0, r.jsx)(T.Clickable, {
     className: L.iconWrapper,
-    innerRef: A,
+    innerRef: C,
     onClick: i,
-    children: (0, r.jsx)(C.default, {
+    children: (0, r.jsx)(A.default, {
       className: L.icon,
       onMouseEnter: y
     })

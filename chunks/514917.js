@@ -41,10 +41,10 @@ var a = n("37983"),
   w = n("789321"),
   F = n("627601"),
   V = n("10532"),
-  k = n("915712"),
-  H = n("369869"),
-  G = n("802279"),
-  B = n("465215"),
+  H = n("915712"),
+  k = n("369869"),
+  B = n("802279"),
+  G = n("465215"),
   W = n("301998"),
   Y = n("491250"),
   z = n("453649"),
@@ -156,7 +156,7 @@ var a = n("37983"),
         popoutUser: er,
         source: F.UserPopoutUpsellSource.PROFILE_PANEL
       }),
-      ek = (0, f.default)();
+      eH = (0, f.default)();
     l.useEffect(() => {
       es.current = Date.now()
     }, []), l.useEffect(() => {
@@ -174,22 +174,22 @@ var a = n("37983"),
         status: ev
       })
     }, [eo, eT, eC, e_, ev, em]);
-    let eH = null == ey ? void 0 : ey.map(e => (0, a.jsx)(q.default, {
+    let ek = null == ey ? void 0 : ey.map(e => (0, a.jsx)(q.default, {
         connection: e,
         user: er,
-        theme: ek
+        theme: eH
       }, e.guild.id)),
-      eG = null == eL ? void 0 : eL.map(e => (0, a.jsx)(Q.default, {
+      eB = null == eL ? void 0 : eL.map(e => (0, a.jsx)(Q.default, {
         connection: e,
         channelId: n.id
       }, e.key)),
-      eB = ed.map(e => (0, a.jsx)(Z.default, {
+      eG = ed.map(e => (0, a.jsx)(Z.default, {
         channel: n,
         integration: e
       }, e.application.id)),
       eW = l.useCallback(() => {
-        !er.bot && !eP && null == eG && (0, c.fetchMutualFriends)(er.id)
-      }, [eP, eG, er.id, er.bot]),
+        !er.bot && !eP && null == eB && (0, c.fetchMutualFriends)(er.id)
+      }, [eP, eB, er.id, er.bot]),
       eY = l.useCallback(() => el(!0), []),
       ez = l.useCallback(() => el(!1), []),
       eK = (0, o.useStateFromStores)([S.default], () => S.default.getId()),
@@ -229,10 +229,10 @@ var a = n("37983"),
                 user: er,
                 nickname: eM,
                 pronouns: null == eo ? void 0 : eo.pronouns
-              }), (0, a.jsx)(G.default, {
+              }), (0, a.jsx)(B.default, {
                 customStatusActivity: e_,
                 animate: ea
-              }), (0, a.jsx)(V.default, {}), (0, a.jsx)(H.default, {
+              }), (0, a.jsx)(V.default, {}), (0, a.jsx)(k.default, {
                 bio: null == eo ? void 0 : eo.bio,
                 hidePersonalInformation: eR,
                 animateOnHover: !0,
@@ -241,7 +241,7 @@ var a = n("37983"),
                 className: en.profileMutuals,
                 user: er
               }), !er.isSystemUser() && (0, a.jsxs)(a.Fragment, {
-                children: [(0, a.jsx)(B.default, {
+                children: [(0, a.jsx)(G.default, {
                   userId: r
                 }), (0, a.jsx)(V.default, {})]
               }), (0, a.jsx)(W.default, {
@@ -255,7 +255,7 @@ var a = n("37983"),
                 color: en.appButtonColor
               })
             }) : null, eA ? (0, a.jsx)(b.default.Inner, {
-              children: (0, a.jsx)(k.default, {
+              children: (0, a.jsx)(H.default, {
                 activity: null != eC ? eC : ex,
                 user: er,
                 channelId: n.id,
@@ -280,7 +280,7 @@ var a = n("37983"),
                     section: "MUTUAL_GUILDS"
                   })
                 },
-                children: eH
+                children: ek
               }) : null, eF ? (0, a.jsx)(X.default, {
                 className: i(en.mutualFriendsList, {
                   [en.mutualFriendsDivider]: ew
@@ -300,18 +300,18 @@ var a = n("37983"),
                     section: "MUTUAL_FRIENDS"
                   })
                 },
-                children: eG
+                children: eB
               }) : null]
             }), ef && (0, a.jsx)(b.default.Inner, {
               className: i(en.profilePanelConnections, en.appListThemedContainer),
               children: (0, a.jsxs)(X.default, {
-                header: eB.length > 0 ? et.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
-                  count: eB.length
+                header: eG.length > 0 ? et.default.Messages.PRIVATE_CHANNEL_APPS_HEADER_COUNT.format({
+                  count: eG.length
                 }) : et.default.Messages.PRIVATE_CHANNEL_APPS_HEADER,
                 isLoadingContents: !ec,
                 isLoadingHeader: !1,
                 itemType: X.ListType.AppsList,
-                children: [eB, eh.length > 0 && (0, a.jsxs)("div", {
+                children: [eG, eh.length > 0 && (0, a.jsxs)("div", {
                   className: en.appButtonContainer,
                   children: [0 === ed.length && (0, a.jsx)(d.Text, {
                     variant: "text-xs/normal",

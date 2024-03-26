@@ -1,17 +1,17 @@
 "use strict";
-t.r(s), t.d(s, {
+n.r(t), n.d(t, {
   useIsMassMentionsDefaultDisabledExperiment: function() {
     return o
   },
   useCanCurrentUserViewDisableUnsafeGuildSettingsNotice: function() {
-    return d
+    return u
   }
 });
-var a = t("446674"),
-  l = t("862205"),
-  i = t("957255"),
-  n = t("49111");
-let r = (0, l.createExperiment)({
+var a = n("446674"),
+  s = n("862205"),
+  l = n("957255"),
+  i = n("49111");
+let r = (0, s.createExperiment)({
   kind: "guild",
   id: "2022-11_default_disable_mass_mention",
   label: "Disable mass mentions for communities by default",
@@ -36,18 +36,18 @@ function o(e) {
   })
 }
 
-function d(e) {
-  var s;
-  let t = (0, a.useStateFromStores)([i.default], () => i.default.can(n.Permissions.MANAGE_GUILD, e)),
+function u(e) {
+  var t;
+  let n = (0, a.useStateFromStores)([l.default], () => l.default.can(i.Permissions.MANAGE_GUILD, e)),
     {
-      enabled: l
+      enabled: s
     } = r.useExperiment({
-      guildId: null !== (s = null == e ? void 0 : e.id) && void 0 !== s ? s : n.EMPTY_STRING_SNOWFLAKE_ID,
+      guildId: null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : i.EMPTY_STRING_SNOWFLAKE_ID,
       location: "dd4beb_3"
     }, {
       autoTrackExposure: !0
     });
   if (null == e) return !1;
-  let o = e.hasFeature(n.GuildFeatures.COMMUNITY);
-  return t && o && l
+  let o = e.hasFeature(i.GuildFeatures.COMMUNITY);
+  return n && o && s
 }

@@ -72,12 +72,12 @@ function k(e) {
   }), Y = (0, E.default)(), K = Y.length > 0 && k;
   (0, m.useTrackNewBroadcastDetected)();
   let W = (0, s.useTreeItem)("home"),
-    Z = () => {
+    z = () => {
       v(null), D(0), clearTimeout(L)
     };
   if (null == n) return null;
-  let z = B.default.Messages.DIRECT_MESSAGES;
-  T && (z = r.Storage.get(w.DISCODO_STORAGE_KEY) ? B.default.Messages.DISCODO_ENABLED : B.default.Messages.DISCODO_DISABLED), Y.length > 0 && h.default.trackExposure({
+  let Z = B.default.Messages.DIRECT_MESSAGES;
+  T && (Z = r.Storage.get(w.DISCODO_STORAGE_KEY) ? B.default.Messages.DISCODO_ENABLED : B.default.Messages.DISCODO_DISABLED), Y.length > 0 && h.default.trackExposure({
     location: "home_button"
   });
   let X = null;
@@ -98,8 +98,8 @@ function k(e) {
         onMouseEnter: () => N(!0),
         onMouseLeave: () => N(!1),
         onClick: () => {
-          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(Z, 500)), D(x + 1), 15 === x)) {
-            Z();
+          if (!__OVERLAY__ && (null != L && clearTimeout(L), v(setTimeout(z, 500)), D(x + 1), 15 === x)) {
+            z();
             let e = !r.Storage.get(w.DISCODO_STORAGE_KEY);
             r.Storage.set(w.DISCODO_STORAGE_KEY, e), e ? (0, b.playSound)("discodo") : (0, b.playSound)("user_leave"), A(!0), setTimeout(() => {
               A(!1)
@@ -161,7 +161,7 @@ function k(e) {
         }), null != J ? J : (0, l.jsx)(U.default, {
           color: o.Tooltip.Colors.PRIMARY,
           hideOnClick: !0,
-          text: z,
+          text: Z,
           selected: t,
           children: q
         })]

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   handleSuccess: function() {
-    return A
+    return C
   },
   ExplicitMediaFalsePositiveModal: function() {
-    return C
+    return A
   }
 });
 var s = n("37983"),
@@ -64,14 +64,14 @@ let N = e => {
     })
   };
 
-function A(e) {
+function C(e) {
   u.default.pop(), (0, c.showSafetyToast)({
     id: "explicit-media-false-positive-modal",
     text: I.default.Messages.OBSCURED_CONTENT_MARK_FALSE_POSITIVE_SUCCESS
   }), e()
 }
 
-function C(e) {
+function A(e) {
   let {
     channelId: t,
     messageId: n,
@@ -89,7 +89,7 @@ function C(e) {
       messageId: n,
       context: i
     }), f()
-  }, [t, n, i, f]), A = a.useCallback(() => {
+  }, [t, n, i, f]), C = a.useCallback(() => {
     null == d || d(), (0, _.trackMediaRedactionAction)({
       action: _.TrackMediaRedactionActionType.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
       channelId: t,
@@ -135,7 +135,7 @@ function C(e) {
         submitting: l,
         size: o.Button.Sizes.MEDIUM,
         color: o.Button.Colors.BRAND,
-        onClick: A,
+        onClick: C,
         children: I.default.Messages.CONFIRM
       }), (0, s.jsx)(o.Button, {
         className: m.button,

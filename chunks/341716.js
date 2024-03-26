@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("574073"),
   p = n("38600"),
   S = n("981601"),
-  A = n("64791"),
-  C = n("315102"),
+  C = n("64791"),
+  A = n("315102"),
   h = n("888400"),
   g = n("927632"),
   M = n("195483"),
@@ -104,7 +104,7 @@ function D(e) {
         if (null != a.interaction) {
           var _, T, I;
           let e = (0, N.getUserAuthor)(a.interaction.user, r);
-          n = null !== (I = C.default.getGuildMemberAvatarURL({
+          n = null !== (I = A.default.getGuildMemberAvatarURL({
             avatar: null !== (_ = e.guildMemberAvatar) && void 0 !== _ ? _ : void 0,
             userId: a.interaction.user.id,
             guildId: null !== (T = null == r ? void 0 : r.guild_id) && void 0 !== T ? T : ""
@@ -236,7 +236,7 @@ function D(e) {
                 }, {
                   [v.appLauncherOnboardingCommandName]: n
                 }, v.clickable),
-                children: [n && (0, s.jsx)(A.default, {
+                children: [n && (0, s.jsx)(C.default, {
                   height: 10,
                   width: 10,
                   className: v.appsIcon

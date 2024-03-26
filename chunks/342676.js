@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return f
   }
 }), a("794252");
-var l, r, s = a("37983");
+var s, r, l = a("37983");
 a("884691");
 var n = a("414456"),
   o = a.n(n),
@@ -12,26 +12,26 @@ var n = a("414456"),
   u = a("956089"),
   c = a("782340"),
   d = a("53248");
-(r = l || (l = {})).BANNER = "banner", r.MODAL = "modal", r.CARD = "card";
+(r = s || (s = {})).BANNER = "banner", r.MODAL = "modal", r.CARD = "card";
 var f = e => {
   let {
     category: t,
     display: a,
-    className: l
+    className: s
   } = e;
   if (null == t.unpublishedAt) return null;
   let r = function(e) {
     let t = new Date,
       a = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate()),
-      l = Date.UTC(e.getFullYear(), e.getMonth(), e.getDate());
-    return Math.floor((l - a) / 864e5)
+      s = Date.UTC(e.getFullYear(), e.getMonth(), e.getDate());
+    return Math.floor((s - a) / 864e5)
   }(t.unpublishedAt);
 
   function n(e) {
-    return (0, s.jsx)(u.TextBadge, {
+    return (0, l.jsx)(u.TextBadge, {
       disableColor: !0,
       text: e,
-      className: o(d.badge, l)
+      className: o(d.badge, s)
     })
   }
   return (0, i.match)([a, r > 1]).with(["card", !0], () => null).with(["banner", !0], () => {

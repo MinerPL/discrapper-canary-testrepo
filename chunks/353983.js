@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return m
   }
 });
 var a = n("866227"),
@@ -14,10 +14,10 @@ var a = n("866227"),
   d = n("697218"),
   u = n("197881"),
   _ = n("299039"),
-  N = n("229929"),
-  E = n("49111"),
-  m = n("994428"),
-  I = {
+  E = n("229929"),
+  N = n("49111"),
+  I = n("994428"),
+  m = {
     init(e) {
       let {
         hasModalOpen: t,
@@ -28,17 +28,17 @@ var a = n("866227"),
         let e = d.default.getCurrentUser(),
           a = null != e && 7 > s().diff(s(_.default.extractTimestamp(e.id)), "days"),
           o = Object.values(c.default.getGuilds()),
-          u = null != o.find(e => e.hasFeature(E.GuildFeatures.HUB)),
-          m = !(0, r.isDismissibleContentDismissed)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL),
-          I = a || t() || u || !m;
-        !I && (0, N.backToSchoolEnabled)() && (N.default.trackExposure({
+          u = null != o.find(e => e.hasFeature(N.GuildFeatures.HUB)),
+          I = !(0, r.isDismissibleContentDismissed)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL),
+          m = a || t() || u || !I;
+        !m && (0, E.backToSchoolEnabled)() && (E.default.trackExposure({
           location: "8b792a_1"
         }), n(), (0, r.requestMarkDismissibleContentAsShown)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL))
       })
     },
     hideHubUpsell() {
       (0, r.markDismissibleContentAsDismissed)(l.DismissibleContent.HUB_BACK_TO_SCHOOL_UPSELL, {
-        dismissAction: m.ContentDismissActionType.AUTO
+        dismissAction: I.ContentDismissActionType.AUTO
       })
     }
   }

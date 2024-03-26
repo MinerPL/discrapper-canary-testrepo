@@ -51,8 +51,8 @@ let H = "message1",
   Y = "discord_dismissed_notification_shown",
   K = document.hasFocus(),
   W = null,
-  Z = ["FR", "GF", "PF", "TF", "RE", "GP", "MQ", "YT", "NC", "PM", "WF"],
-  z = new class {
+  z = ["FR", "GF", "PF", "TF", "RE", "GP", "MQ", "YT", "NC", "PM", "WF"],
+  Z = new class {
     track(e, t) {
       let n = this._channels[e];
       for (null == n && (n = [], this._channels[e] = n), n.push(t); n.length > 1;) {
@@ -112,7 +112,7 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
   WINDOW_FOCUS: function(e) {
     if (K = e.focused) {
       let e = R.default.getChannelId();
-      null != e && z.clearChannel(e)
+      null != e && Z.clearChannel(e)
     }
   },
   MESSAGE_CREATE: function(e) {
@@ -165,19 +165,19 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
         (0, g.transitionToChannel)(u.id), (u.type === F.ChannelTypes.GUILD_VOICE || u.type === F.ChannelTypes.GUILD_STAGE_VOICE) && o.default.updateChatOpen(u.id, !0), d.default.clickedNotification()
       }
     });
-    null != A && z.track(u.id, A)
+    null != A && Z.track(u.id, A)
   },
   CHANNEL_SELECT: function(e) {
     let {
       channelId: t
     } = e;
-    return null != t && z.clearChannel(t), !1
+    return null != t && Z.clearChannel(t), !1
   },
   MESSAGE_ACK: function(e) {
     let {
       channelId: t
     } = e;
-    return z.clearChannel(t), !1
+    return Z.clearChannel(t), !1
   },
   ACTIVITY_START: function(e) {
     let {
@@ -371,7 +371,7 @@ q.displayName = "NotificationStore", new q(i.default, __OVERLAY__ ? {} : {
       a = !l && U.isPlatformEmbedded && (e || t);
     if (!a) return !1;
     let i = !1;
-    return null != W && (i = Z.includes(W)), !!i && (G.default.showNotification(n("599964"), V.default.Messages.NOTIFICATION_TITLE_DISCORD, V.default.Messages.NOTIFICATION_BODY_DISCORD_HIDDEN, {
+    return null != W && (i = z.includes(W)), !!i && (G.default.showNotification(n("599964"), V.default.Messages.NOTIFICATION_TITLE_DISCORD, V.default.Messages.NOTIFICATION_BODY_DISCORD_HIDDEN, {
       notif_type: "WINDOW_HIDDEN"
     }, {
       overrideStreamerMode: !0,

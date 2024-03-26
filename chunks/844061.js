@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("866027"),
   p = n("398604"),
   S = n("477558"),
-  A = n("592407"),
-  C = n("569382"),
+  C = n("592407"),
+  A = n("569382"),
   h = n("86456"),
   g = n("393414"),
   M = n("244480"),
@@ -52,8 +52,8 @@ var s = n("37983"),
   Q = n("161225"),
   Z = n("41163"),
   J = n("830220"),
-  X = n("924399"),
-  q = n("954060"),
+  q = n("924399"),
+  X = n("954060"),
   $ = n("178889"),
   ee = n("52538"),
   et = n("879033"),
@@ -76,8 +76,8 @@ var s = n("37983"),
   eN = n("232259"),
   ep = n("49111"),
   eS = n("706530"),
-  eA = n("782340"),
-  eC = n("714478");
+  eC = n("782340"),
+  eA = n("714478");
 
 function eh(e) {
   let {
@@ -364,7 +364,7 @@ let eM = Object.freeze({
         guildId: _
       })
     }, [o, f, _]);
-    return null != u && null != f && null != u.guild_id ? (0, s.jsx)(q.default, {
+    return null != u && null != f && null != u.guild_id ? (0, s.jsx)(X.default, {
       message: t,
       compact: n,
       channel: f,
@@ -382,7 +382,7 @@ let eM = Object.freeze({
       message: t,
       compact: n,
       onClick: () => {
-        null != r && A.default.open(r, ep.GuildSettingsSections.DISCOVERY)
+        null != r && C.default.open(r, ep.GuildSettingsSections.DISCOVERY)
       }
     })
   },
@@ -481,7 +481,7 @@ let eM = Object.freeze({
       guildId: a.guild_id,
       messageId: t.id
     });
-    return (0, s.jsx)(X.default, {
+    return (0, s.jsx)(q.default, {
       message: t,
       compact: n,
       channel: a,
@@ -594,8 +594,8 @@ let eM = Object.freeze({
         compact: u,
         usernameHook: d
       }), _ ? (0, s.jsxs)(i.Button, {
-        wrapperClassName: eC.inviteToSpeakButtonWrapper,
-        innerClassName: eC.inviteToSpeakButtonInner,
+        wrapperClassName: eA.inviteToSpeakButtonWrapper,
+        innerClassName: eA.inviteToSpeakButtonInner,
         look: i.Button.Looks.FILLED,
         color: i.Button.Colors.PRIMARY,
         onClick: () => {
@@ -604,7 +604,7 @@ let eM = Object.freeze({
         children: [(0, s.jsx)(F.default, {
           height: 20,
           width: 20
-        }), eA.default.Messages.REQUEST_TO_SPEAK_ACCEPT]
+        }), eC.default.Messages.REQUEST_TO_SPEAK_ACCEPT]
       }) : null]
     })
   },
@@ -625,7 +625,7 @@ let eM = Object.freeze({
       usernameHook: l
     })
   },
-  [ep.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: C.default,
+  [ep.MessageTypes.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: A.default,
   [ep.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_ADDED]: h.PrivateChannelIntegrationAddedSystemMessage,
   [ep.MessageTypes.PRIVATE_CHANNEL_INTEGRATION_REMOVED]: h.PrivateChannelIntegrationRemovedSystemMessage,
   [ep.MessageTypes.PREMIUM_REFERRAL]: void 0,

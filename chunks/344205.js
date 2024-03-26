@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return c
   }
 });
-var l = a("37983");
+var s = a("37983");
 a("884691");
-var s = a("146606"),
-  r = a("65597"),
+var r = a("146606"),
+  l = a("65597"),
   n = a("77078"),
   o = a("174727"),
   i = a("206230"),
@@ -23,7 +23,7 @@ function c(e) {
     hours: f,
     minutes: m,
     seconds: C
-  } = (0, o.default)(t), p = (0, r.useStateFromStores)([i.default], () => i.default.useReducedMotion), g = (0, s.useSpring)({
+  } = (0, o.default)(t), p = (0, l.useStateFromStores)([i.default], () => i.default.useReducedMotion), g = (0, r.useSpring)({
     transform: "translateX(-50%) ".concat(a ? "translateY(-100%)" : "translateY(0%)"),
     opacity: a ? 1 : 0,
     config: {
@@ -32,7 +32,7 @@ function c(e) {
     },
     immediate: p
   });
-  return (0, l.jsxs)(s.animated.div, {
+  return (0, s.jsxs)(r.animated.div, {
     className: u.countDownWrapper,
     style: {
       backgroundColor: c.backgroundColor,
@@ -40,18 +40,18 @@ function c(e) {
       color: c.labelColor,
       ...g
     },
-    children: [null != c.iconSrc && (0, l.jsx)("img", {
+    children: [null != c.iconSrc && (0, s.jsx)("img", {
       src: c.iconSrc,
       alt: "shy"
-    }), (0, l.jsx)(n.Heading, {
+    }), (0, s.jsx)(n.Heading, {
       variant: "heading-md/medium",
       className: u.countdownLabel,
       children: c.label()
-    }), (0, l.jsx)(n.Heading, {
+    }), (0, s.jsx)(n.Heading, {
       variant: "heading-md/medium",
       className: u.countdown,
       children: "—"
-    }), (0, l.jsxs)(n.Heading, {
+    }), (0, s.jsxs)(n.Heading, {
       variant: "heading-md/medium",
       className: u.countdown,
       children: [d, ".", f, ".", m, ".", C]

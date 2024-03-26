@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("537325"),
   p = n("651693"),
   S = n("380986"),
-  A = n("969706"),
-  C = n("506885"),
+  C = n("969706"),
+  A = n("506885"),
   h = n("981601"),
   g = n("845579"),
   M = n("26989"),
@@ -49,10 +49,10 @@ function k(e) {
     channel: F
   } = e, w = (0, y.useMediaPostEmbedData)(r, k), {
     setPopout: H
-  } = (0, A.default)(k.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(k, F, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, Z] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, O.default], () => {
+  } = (0, C.default)(k.id, j.DEFAULT_POPOUTS), V = (0, S.useContextMenuMessage)(k, F, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, Z] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([f.default], () => f.default.useReducedMotion), q = (0, c.useStateFromStores)([M.default, O.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = O.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
-  }, [w]), [q, $] = (0, c.useStateFromStoresArray)([M.default], () => {
+  }, [w]), [X, $] = (0, c.useStateFromStoresArray)([M.default], () => {
     var e;
     let t = (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null;
     return [null !== (e = null == t ? void 0 : t.colorString) && void 0 !== e ? e : "inherit", null == t ? void 0 : t.colorRoleId]
@@ -67,11 +67,11 @@ function k(e) {
       media_post_id: w.threadId,
       channel_id: F.id,
       can_access: w.canAccess,
-      is_member: X
-    }), w.canAccess ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : X ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await P.startLurking(w.guildId, {}, {
+      is_member: q
+    }), w.canAccess ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : q ? (0, N.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await P.startLurking(w.guildId, {}, {
       channelId: w.parentChannelId
     }))
-  }, [w, F, X]), ei = a.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
+  }, [w, F, q]), ei = a.useCallback(() => (o((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, A.default)(w.authorId, w.avatarUrl, {
     guildId: w.guildId,
     channelId: F.id
   })), [w, F]);
@@ -198,7 +198,7 @@ function k(e) {
                 children: e => (0, s.jsx)(E.NameWithRoleAnchor, {
                   ...e,
                   name: w.authorName,
-                  color: q,
+                  color: X,
                   className: G.authorName
                 })
               }, (0, u.v4)())

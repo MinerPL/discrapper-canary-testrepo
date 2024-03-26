@@ -35,8 +35,8 @@ var s, a, l = n("37983"),
   N = n("36694"),
   p = n("578706"),
   S = n("904276"),
-  A = n("875436"),
-  C = n("866190"),
+  C = n("875436"),
+  A = n("866190"),
   h = n("847511"),
   g = n("562228"),
   M = n("214400"),
@@ -230,7 +230,7 @@ function B(e) {
   let {
     attachment: n,
     className: s
-  } = e, a = (0, C.useIsWindowFocused)(), i = I.GifAutoPlay.useSetting();
+  } = e, a = (0, A.useIsWindowFocused)(), i = I.GifAutoPlay.useSetting();
   return (0, l.jsx)(m.default, {
     className: s,
     imageClassName: P.attachmentImage,
@@ -349,7 +349,7 @@ function V(e) {
     background: P.radioBackground,
     "aria-hidden": !0
   };
-  return t ? (0, l.jsx)(A.default, {
+  return t ? (0, l.jsx)(C.default, {
     ...a,
     foreground: P.radioForeground,
     className: s

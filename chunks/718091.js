@@ -41,10 +41,10 @@ var a = n("37983"),
   w = n("102985"),
   F = n("697218"),
   V = n("145131"),
-  k = n("476765"),
-  H = n("570443"),
-  G = n("76539"),
-  B = n("664336"),
+  H = n("476765"),
+  k = n("570443"),
+  B = n("76539"),
+  G = n("664336"),
   W = n("599110"),
   Y = n("306160"),
   z = n("659500"),
@@ -58,8 +58,8 @@ var a = n("37983"),
   ee = n("366160"),
   et = n("182893"),
   en = n("890957");
-let ea = (0, k.uid)(),
-  el = (0, k.uid)();
+let ea = (0, H.uid)(),
+  el = (0, H.uid)();
 
 function es(e) {
   let {
@@ -677,10 +677,10 @@ function ed(e) {
     align: o,
     onRequestClose: () => f(!1),
     animation: h.Popout.Animation.NONE,
-    children: e => (0, a.jsx)(B.default.Icon, {
+    children: e => (0, a.jsx)(G.default.Icon, {
       ...e,
       onClick: p,
-      icon: null != s ? s : null == t ? H.default : G.default,
+      icon: null != s ? s : null == t ? k.default : B.default,
       className: n,
       iconClassName: n,
       tooltip: i,

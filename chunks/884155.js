@@ -47,12 +47,12 @@ let D = l.memo(e => {
   } = e, A = s.id, P = (0, r.useStateFromStores)([g.default], () => g.default.getId() === A, [A]), [D, b, U] = (0, r.useStateFromStoresArray)([C.default], () => P ? [!C.default.isSupported() || C.default.isSelfMute() || C.default.isSelfMutedTemporarily(), C.default.isSelfDeaf(), !1] : [!C.default.isSupported() || C.default.isLocalMute(A), !1, C.default.isLocalVideoDisabled(A)], [P, A]), w = (0, r.useStateFromStores)([x.default], () => x.default.isPrioritySpeaker(A)), F = (0, o.default)({
     userId: A,
     checkSoundSharing: !0
-  }), V = (0, r.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(i.guild_id, A)), k = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
+  }), V = (0, r.useStateFromStores)([S.default], () => S.default.isGuestOrLurker(i.guild_id, A)), H = (0, r.useStateFromStores)([d.default], () => d.default.getEmbeddedActivitiesForChannel(i.id).find(e => {
     let {
       userIds: t
     } = e;
     return t.has(A)
-  }), [A, i.id]), H = (0, f.default)(null != k ? [k.applicationId] : []), G = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), B = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = B.find(e => null != e.application_id && e.type === y.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
+  }), [A, i.id]), k = (0, f.default)(null != H ? [H.applicationId] : []), B = (0, j.useIsVoiceUserGameActivityEnabled)("voice_users_eligibility_check", !1), G = (0, r.useStateFromStores)([I.default, T.default], () => P ? T.default.getActivities() : I.default.getActivities(A, i.guild_id)), W = G.find(e => null != e.application_id && e.type === y.ActivityTypes.PLAYING), Y = (0, r.useStateFromStores)([c.default], () => (null == W ? void 0 : W.application_id) != null ? c.default.getApplication(null == W ? void 0 : W.application_id) : void 0);
   null != Y && j.default.trackExposure({
     location: "voice_users"
   });
@@ -81,14 +81,14 @@ let D = l.memo(e => {
       deaf: l || b,
       speaking: F,
       priority: w,
-      embeddedApplication: H[0],
+      embeddedApplication: k[0],
       isStreaming: null != z && z.channelId === i.id,
       isWatching: null != K && K.state !== y.ApplicationStreamStates.ENDED,
       isGuest: V,
       showHangStatus: J && q && (g.default.getId() === s.id || null != ee),
       hangStatusActivity: P ? $ : ee,
       isSelf: g.default.getId() === s.id,
-      application: q || G ? Y : void 0
+      application: q || B ? Y : void 0
     })
   })
 });

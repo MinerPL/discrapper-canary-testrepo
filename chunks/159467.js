@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("780009"),
   p = n("49111"),
   S = n("782340"),
-  A = n("434118");
-class C extends a.PureComponent {
+  C = n("434118");
+class A extends a.PureComponent {
   get analyticsLocation() {
     return {
       ...this.props.analyticsContext.location,
@@ -36,12 +36,12 @@ class C extends a.PureComponent {
     } = this.props, t = null != e && null != e.launchOptions && Object.keys(e.launchOptions).length > 1;
     return t ? (0, s.jsxs)(o.Clickable, {
       "aria-label": S.default.Messages.APPLICATION_CONTEXT_MENU_LAUNCH_OPTIONS,
-      className: A.dropdownArrowHitbox,
+      className: C.dropdownArrowHitbox,
       onClick: this.handleDropdownClick,
       children: [(0, s.jsx)("div", {
-        className: A.arrowSeparator
+        className: C.arrowSeparator
       }), (0, s.jsx)(I.default, {
-        className: A.dropdownArrow
+        className: C.dropdownArrow
       })]
     }) : null
   }
@@ -54,19 +54,19 @@ class C extends a.PureComponent {
       tooltipPosition: r
     } = this.props;
     return (0, s.jsxs)("div", {
-      className: A.disabledButtonWrapper,
+      className: C.disabledButtonWrapper,
       children: [(0, s.jsx)(o.Button, {
         className: n,
         fullWidth: a,
         size: l,
-        color: null != i ? i : A.disabledButtonColor,
+        color: null != i ? i : C.disabledButtonColor,
         disabled: !0,
         children: e
       }), (0, s.jsx)(o.Tooltip, {
         text: t,
         position: r,
         children: e => (0, s.jsx)("div", {
-          className: A.disabledButtonOverlay,
+          className: C.disabledButtonOverlay,
           ...e
         })
       })]
@@ -88,8 +88,8 @@ class C extends a.PureComponent {
     if (u) return this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
     let E = d ? T.default : o.Button;
     return (0, s.jsxs)(E, {
-      className: i(A.playButton, e),
-      innerClassName: A.playButtonContents,
+      className: i(C.playButton, e),
+      innerClassName: C.playButtonContents,
       fullWidth: t,
       size: n,
       color: null != a ? a : o.Button.Colors.GREEN,
@@ -97,7 +97,7 @@ class C extends a.PureComponent {
       submitting: r,
       onClick: this.handleClick,
       children: [(0, s.jsx)("div", {
-        className: A.buttonText,
+        className: C.buttonText,
         children: S.default.Messages.GAME_ACTION_BUTTON_PLAY
       }), this.renderDropdown()]
     })
@@ -146,7 +146,7 @@ function h(e) {
     applicationId: t,
     libraryApplication: n
   } = e, a = (0, d.useAnalyticsContext)(), [l, i] = (0, r.useStateFromStoresArray)([f.default, E.default, _.default], () => [f.default.isConnected(t) || E.default.isLaunchable(t) || null != n && _.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), o = (0, r.useStateFromStores)([c.default], () => new Set(c.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, r.useStateFromStores)([_.default], () => null != n ? _.default.getState(n.id, n.branchId) : null, [n]);
-  return (0, s.jsx)(C, {
+  return (0, s.jsx)(A, {
     ...e,
     analyticsContext: a,
     isLaunchable: l,
@@ -155,7 +155,7 @@ function h(e) {
     dispatchState: u
   })
 }
-C.defaultProps = {
+A.defaultProps = {
   fullWidth: !1,
   size: o.Button.Sizes.LARGE,
   tooltipPosition: "top",

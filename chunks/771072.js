@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return f
+    return h
   }
 }), n("222007");
 var s = n("37983"),
@@ -14,16 +14,16 @@ var s = n("37983"),
   d = n("792788"),
   u = n("769274");
 
-function f(e) {
+function h(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: f,
-    title: h,
+    imgSrc: h,
+    title: f,
     onClose: m,
     tag: x
-  } = e, v = i.useRef(null), [p, g] = i.useState(!0), j = null != f ? {
-    "--custom-background-url": "url(".concat(f.toString(), ")")
+  } = e, v = i.useRef(null), [p, g] = i.useState(!0), j = null != h ? {
+    "--custom-background-url": "url(".concat(h.toString(), ")")
   } : void 0, C = () => {
     var e;
     (null === (e = v.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
@@ -53,8 +53,8 @@ function f(e) {
         })]
       }), (0, s.jsx)("div", {
         className: u.headerImage,
-        children: null != f ? (0, s.jsx)("img", {
-          src: f.toString(),
+        children: null != h ? (0, s.jsx)("img", {
+          src: h.toString(),
           alt: ""
         }) : (0, s.jsx)(a.TicketIcon, {
           color: "white",
@@ -75,7 +75,7 @@ function f(e) {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: h
+          children: f
         }), (null != n && "" !== n || null != t) && (0, s.jsxs)("div", {
           className: u.details,
           children: [(0, s.jsx)(c.Text, {

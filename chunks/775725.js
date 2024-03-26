@@ -23,8 +23,8 @@ var a = n("414456"),
   N = n("49111"),
   p = n("782340"),
   S = n("199890");
-let A = (e, t, n) => n ? p.default.Messages.QUESTS_SEE_CODE : e || t ? p.default.Messages.QUESTS_CLAIM_REWARD : p.default.Messages.QUESTS_ACCEPT,
-  C = (e, t) => e ? p.default.Messages.QUESTS_COMPLETE_TOOLTIP : t ? p.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : p.default.Messages.QUESTS_ACCEPT_TOOLTIP,
+let C = (e, t, n) => n ? p.default.Messages.QUESTS_SEE_CODE : e || t ? p.default.Messages.QUESTS_CLAIM_REWARD : p.default.Messages.QUESTS_ACCEPT,
+  A = (e, t) => e ? p.default.Messages.QUESTS_COMPLETE_TOOLTIP : t ? p.default.Messages.QUESTS_IN_PROGRESS_TOOLTIP : p.default.Messages.QUESTS_ACCEPT_TOOLTIP,
   h = (e, t) => {
     var a, l, i;
     return (null === (a = e.userStatus) || void 0 === a ? void 0 : a.enrolledAt) != null || (null === (l = e.userStatus) || void 0 === l ? void 0 : l.completedAt) != null || (null === (i = e.userStatus) || void 0 === i ? void 0 : i.claimedAt) != null ? () => {
@@ -81,7 +81,7 @@ var O = e => {
     quest: E,
     location: O,
     size: R
-  } = e, L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, P = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, D = v && !P && O !== T.QuestContent.QUESTS_EMBED, x = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), y = v ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, U = A(L, v, P), j = C(L, v), b = h(E, O), G = v && !L, B = (0, f.useQuestFormattedDate)(null === (c = E.userStatus) || void 0 === c ? void 0 : c.completedAt, {
+  } = e, L = (null === (t = E.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, v = (null === (n = E.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null, P = (null === (a = E.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null, D = v && !P && O !== T.QuestContent.QUESTS_EMBED, x = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), y = v ? r.ButtonColors.BRAND_NEW : r.ButtonColors.GREEN, U = C(L, v, P), j = A(L, v), b = h(E, O), G = v && !L, B = (0, f.useQuestFormattedDate)(null === (c = E.userStatus) || void 0 === c ? void 0 : c.completedAt, {
     year: "numeric",
     month: "long",
     day: "numeric"

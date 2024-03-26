@@ -29,26 +29,26 @@ function I(e) {
     } = e,
     p = I === a.id,
     S = n.state === f.InviteStates.ACCEPTING,
-    A = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
-  l(null == A || A.isPrivate(), "must be a private channel");
-  let C = null != A;
-  if (null == A) {
+    C = (0, i.useStateFromStores)([o.default], () => null != n.channel ? o.default.getChannel(n.channel.id) : null, [n]);
+  l(null == C || C.isPrivate(), "must be a private channel");
+  let A = null != C;
+  if (null == C) {
     if (null == n.channel) return (0, s.jsx)(E.default, {});
-    A = (0, r.createChannelRecordFromInvite)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []
+    C = (0, r.createChannelRecordFromInvite)(n.channel), t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []
   } else {
-    t = A.recipients.reduce((e, t) => {
+    t = C.recipients.reduce((e, t) => {
       let n = u.default.getUser(t);
       return null != n && e.push(n), e
     }, []);
     let e = u.default.getCurrentUser();
-    C && null != e && t.push(e)
+    A && null != e && t.push(e)
   }
-  let h = A.name;
+  let h = C.name;
   (null == h || "" === h) && (h = t.length > 0 ? t.filter(c.isNotNullish).map(e => e.username).join(", ") : _.default.Messages.UNNAMED);
-  let g = C ? m : N,
+  let g = A ? m : N,
     M = _.default.Messages.JOIN_GUILD,
     O = d.default.Button.Colors.GREEN;
-  C && (M = _.default.Messages.JOINED_GUILD, O = d.default.Button.Colors.PRIMARY);
+  A && (M = _.default.Messages.JOINED_GUILD, O = d.default.Button.Colors.PRIMARY);
   let R = _.default.Messages.INVITE_BUTTON_TITLE_INVITED_GROUP_DM;
   return p && (R = _.default.Messages.INVITE_BUTTON_TITLE_INVITER_GROUP_DM), (0, s.jsxs)(d.default, {
     children: [(0, s.jsx)(d.default.Header, {
@@ -57,11 +57,11 @@ function I(e) {
       children: [(0, s.jsxs)("div", {
         className: T.headerLine,
         children: [(0, s.jsx)(d.default.Icon, {
-          channel: A,
-          onClick: C ? g : void 0
+          channel: C,
+          onClick: A ? g : void 0
         }), (0, s.jsx)(d.default.Info, {
           title: h,
-          onClick: C ? g : void 0,
+          onClick: A ? g : void 0,
           children: (0, s.jsx)(d.default.Data, {
             members: t.length
           })
@@ -69,7 +69,7 @@ function I(e) {
       }), (0, s.jsx)(d.default.Button, {
         onClick: g,
         submitting: S,
-        isDisabled: C,
+        isDisabled: A,
         color: O,
         children: M
       })]

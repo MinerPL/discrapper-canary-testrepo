@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("740589"),
   p = n("472315"),
   S = n("783940"),
-  A = n("530078"),
-  C = n("649112"),
+  C = n("530078"),
+  A = n("649112"),
   h = n("793079"),
   g = n("135666"),
   M = n("158783"),
@@ -75,7 +75,7 @@ function R(e) {
         context: R("Invite Button Embed")
       })
     },
-    G = (0, s.jsx)(A.default, {
+    G = (0, s.jsx)(C.default, {
       onTransitionToInviteChannel: j,
       onAcceptInstantInvite: b,
       currentUserId: y,
@@ -89,7 +89,7 @@ function R(e) {
       break;
     case O.InviteStates.EXPIRED:
     case O.InviteStates.BANNED:
-      G = (0, s.jsx)(C.default, {
+      G = (0, s.jsx)(A.default, {
         banned: P.state === O.InviteStates.BANNED,
         author: n
       });

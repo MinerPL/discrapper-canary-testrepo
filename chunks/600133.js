@@ -25,8 +25,8 @@ var s = n("866227"),
   N = n("789563"),
   p = n("161454"),
   S = n("619443"),
-  A = n("374014"),
-  C = n("875037"),
+  C = n("374014"),
+  A = n("875037"),
   h = n("398654"),
   g = n("54346"),
   M = n("681937"),
@@ -55,8 +55,8 @@ var s = n("866227"),
   Q = n("42203"),
   Z = n("47319"),
   J = n("320268"),
-  X = n("26989"),
-  q = n("305961"),
+  q = n("26989"),
+  X = n("305961"),
   $ = n("42887"),
   ee = n("385649"),
   et = n("957255"),
@@ -79,8 +79,8 @@ var s = n("866227"),
   eN = n("773336"),
   ep = n("719923"),
   eS = n("189459"),
-  eA = n("316661"),
-  eC = n("352326"),
+  eC = n("316661"),
+  eA = n("352326"),
   eh = n("49111"),
   eg = n("492397"),
   eM = n("411511"),
@@ -192,7 +192,7 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           selectedGuildId: n
         } = e;
         if (null == n) return !1;
-        let s = X.default.getMember(n, t.id);
+        let s = q.default.getMember(n, t.id);
         return null != s && !s.isPending && (0, M.hasAutomodQuarantinedProfile)(s)
       }
     },
@@ -270,8 +270,8 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       })
     },
     [eh.NoticeTypes.DISPATCH_INSTALL_SCRIPT_PROGRESS]: {
-      predicate: () => null != eA.default.getLastProgress(),
-      metadata: () => eA.default.getLastProgress()
+      predicate: () => null != eC.default.getLastProgress(),
+      metadata: () => eC.default.getLastProgress()
     },
     [eh.NoticeTypes.SPOTIFY_AUTO_PAUSED]: {
       predicate: () => w.default.wasAutoPaused()
@@ -296,14 +296,14 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           selectedGuildId: a,
           currentUser: l
         } = e;
-        return null !== (s = null != a && null != l && !(null === (t = q.default.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(eh.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = X.default.getMember(a, l.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
+        return null !== (s = null != a && null != l && !(null === (t = X.default.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(eh.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = q.default.getMember(a, l.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
       }
     },
     [eh.NoticeTypes.OUTBOUND_PROMOTION]: {
       predicate: () => (0, j.shouldShowOutboundPromotionNotice)()
     },
     [eh.NoticeTypes.CORRUPT_INSTALLATION]: {
-      predicate: () => eN.isPlatformEmbedded && (!i.default.supported() || eC.default.isCorruptInstallation())
+      predicate: () => eN.isPlatformEmbedded && (!i.default.supported() || eA.default.isCorruptInstallation())
     },
     [eh.NoticeTypes.VIDEO_UNSUPPORTED_BROWSER]: {
       predicate: e => {
@@ -358,7 +358,7 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           selectedGuildId: t
         } = e;
-        return null != t && C.default.getCurrentConfig({
+        return null != t && A.default.getCurrentConfig({
           location: "notice_store"
         }).showSurvey && !eB(eh.NoticeTypes.SERVER_USAGE_SURVEY)
       },
@@ -628,7 +628,7 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: e => {
         let {
           selectedGuildId: t
-        } = e, n = null != t ? q.default.getGuild(t) : null;
+        } = e, n = null != t ? X.default.getGuild(t) : null;
         return null != t && null != O.default.getMentionRaidDetected(t) && (null == n ? void 0 : n.hasFeature(eh.GuildFeatures.COMMUNITY)) && !eB(eh.NoticeTypes.AUTO_MODERATION_MENTION_RAID_DETECTION) || !1
       },
       metadata: e => {
@@ -667,14 +667,14 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
       predicate: () => {
         let e = Y.default.getCurrentUserActiveStream();
         if (null == e) return !1;
-        let t = (0, A.encodeStreamKey)(e),
+        let t = (0, C.encodeStreamKey)(e),
           n = k.default.getStreamHeartbeatFailure(t);
         return null != n && Date.now() - n.firstFailedAt >= eR.CONSECUTIVE_HEARTBEAT_PERIOD_MS
       },
       metadata: () => {
         let e = Y.default.getCurrentUserActiveStream();
         return {
-          streamKey: null != e ? (0, A.encodeStreamKey)(e) : null
+          streamKey: null != e ? (0, C.encodeStreamKey)(e) : null
         }
       }
     }
@@ -720,7 +720,7 @@ function eV() {
 }
 class eY extends l.default.Store {
   initialize() {
-    this.syncWith([eo.default, en.default, J.default, el.default, b.default, eT.default, W.default, Z.default, V.default, g.default, k.default, Y.default], eH), this.waitFor(ed.default, ei.default, q.default, X.default, es.default, $.default, er.default, N.default, el.default, eu.default, w.default, p.default, en.default, eS.default, eA.default, em.default, ee.default, e_.default, eC.default, J.default, ef.default, et.default, b.default, eI.default, eT.default, Z.default, v.default, I.default, _.default, B.default, k.default, Y.default)
+    this.syncWith([eo.default, en.default, J.default, el.default, b.default, eT.default, W.default, Z.default, V.default, g.default, k.default, Y.default], eH), this.waitFor(ed.default, ei.default, X.default, q.default, es.default, $.default, er.default, N.default, el.default, eu.default, w.default, p.default, en.default, eS.default, eC.default, em.default, ee.default, e_.default, eA.default, J.default, ef.default, et.default, b.default, eI.default, eT.default, Z.default, v.default, I.default, _.default, B.default, k.default, Y.default)
   }
   hasNotice() {
     return null != ej && null != ej.type

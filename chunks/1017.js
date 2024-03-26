@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return m
+    return T
   }
 });
 var n = r("446674"),
@@ -15,14 +15,14 @@ let d = !1,
   c = {},
   f = {};
 
-function p(e) {
+function E(e) {
   let t = !1;
   return e.forEach(e => {
-    t = !1 !== _(e) || t
+    t = !1 !== p(e) || t
   }), t
 }
 
-function E(e) {
+function _(e) {
   let t = f[e];
   if (null == t) return !1;
   let r = t.gameId;
@@ -33,22 +33,22 @@ function E(e) {
   }, delete f[e], !0
 }
 
-function _(e) {
+function p(e) {
   let {
     user: t,
     activities: r
   } = e;
   if (null == t) return !1;
   let n = r.filter(e => e.type !== o.ActivityTypes.CUSTOM_STATUS);
-  if (0 === n.length) return E(t.id);
+  if (0 === n.length) return _(t.id);
   let i = !1;
   return n.forEach(e => {
     (function(e, t) {
       var r, n, i, l;
       let a = (0, s.default)(e);
-      if (null == a) return E(t.id);
+      if (null == a) return _(t.id);
       let u = f[t.id];
-      null != u && u.gameId !== a && E(t.id);
+      null != u && u.gameId !== a && _(t.id);
       let o = null !== (n = null === (r = e.timestamps) || void 0 === r ? void 0 : r.start) && void 0 !== n ? n : Date.now(),
         d = {
           userId: t.id,
@@ -72,13 +72,13 @@ function _(e) {
   }), i
 }
 
-function h() {
+function m() {
   let e = !1;
   if (!a.default.needsRefresh() && !d) {
     let t;
     c = {}, f = {}, t = !1, l.default.getUserIds().forEach(e => {
       let r = u.default.getUser(e);
-      null != r && (t = _({
+      null != r && (t = p({
         user: r,
         activities: l.default.getActivities(e)
       }) || t)
@@ -86,9 +86,9 @@ function h() {
   }
   return d = !a.default.needsRefresh(), e
 }
-class v extends n.default.Store {
+class h extends n.default.Store {
   initialize() {
-    this.waitFor(a.default), this.syncWith([a.default], h)
+    this.waitFor(a.default), this.syncWith([a.default], m)
   }
   get games() {
     return c
@@ -106,8 +106,8 @@ class v extends n.default.Store {
     return f[e]
   }
 }
-v.displayName = "NowPlayingStore";
-var m = new v(i.default, {
+h.displayName = "NowPlayingStore";
+var T = new h(i.default, {
   CONNECTION_OPEN: function() {
     c = {}, f = {}
   },
@@ -117,8 +117,8 @@ var m = new v(i.default, {
       presences: r
     } = e, n = !1;
     return t.forEach(e => {
-      p(e.presences) && (n = !0)
-    }), p(r) && (n = !0), n
+      E(e.presences) && (n = !0)
+    }), E(r) && (n = !0), n
   },
   LOGOUT: function() {
     c = {}, f = {}
@@ -127,12 +127,12 @@ var m = new v(i.default, {
     let {
       updates: t
     } = e;
-    return t.map(e => _(e)).some(e => e)
+    return t.map(e => p(e)).some(e => e)
   },
   PRESENCES_REPLACE: function(e) {
     let {
       presences: t
     } = e;
-    return p(t)
+    return E(t)
   }
 })

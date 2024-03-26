@@ -20,11 +20,11 @@ var n = s("65597"),
   T = s("411691"),
   I = s("38766"),
   f = s("42887"),
-  R = s("521012"),
-  S = s("701909"),
+  S = s("521012"),
+  R = s("701909"),
   m = s("719923"),
-  N = s("184684"),
-  A = s("502381"),
+  A = s("184684"),
+  N = s("502381"),
   p = s("354588"),
   C = s("907648"),
   g = s("598739"),
@@ -36,25 +36,25 @@ var n = s("65597"),
   x = s("982784"),
   v = s("19530"),
   D = s("215541"),
-  U = s("571685"),
-  b = s("994679"),
+  b = s("571685"),
+  U = s("994679"),
   j = s("620826"),
-  B = s("333078"),
-  G = s("156591"),
-  y = s("480905"),
+  G = s("333078"),
+  y = s("156591"),
+  B = s("480905"),
   k = s("913204"),
   H = s("198326"),
   F = s("761708"),
-  w = s("174433"),
-  K = s("828015"),
-  W = s("62414"),
+  K = s("174433"),
+  W = s("828015"),
+  w = s("62414"),
   V = s("613697"),
   Y = s("907511"),
   z = s("214523"),
   X = s("165870"),
   Q = s("186590"),
-  Z = s("14528"),
-  J = s("925094"),
+  J = s("14528"),
+  Z = s("925094"),
   q = s("832085"),
   $ = s("443646"),
   ee = s("759308");
@@ -62,11 +62,11 @@ var n = s("65597"),
 var et = () => {
   let {
     analyticsLocations: e
-  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([R.default], () => R.default.getPremiumTypeSubscription()), r = null != a ? m.default.getPremiumPlanItem(a) : null, et = null != r ? m.default.getSkuIdForPlan(r.planId) : null, es = et === O.PremiumSubscriptionSKUs.TIER_2, {
+  } = (0, c.default)(d.default.PREMIUM_MARKETING_PERK_CARD), t = (0, u.default)(), s = h.default.Messages.FILE_UPLOAD_LIMIT_PREMIUM_TIER_2_INCREASE, a = (0, n.useStateFromStores)([S.default], () => S.default.getPremiumTypeSubscription()), r = null != a ? m.default.getPremiumPlanItem(a) : null, et = null != r ? m.default.getSkuIdForPlan(r.planId) : null, es = et === O.PremiumSubscriptionSKUs.TIER_2, {
     flipped: ea
-  } = (0, N.useWhatsNewAvatarDecoRollout)(), {
+  } = (0, A.useWhatsNewAvatarDecoRollout)(), {
     flipped: er
-  } = (0, N.useWhatsNewProfileFXRollout)(), ei = (0, _.default)(f.default), en = (0, A.default)(), el = (0, I.default)({
+  } = (0, A.useWhatsNewProfileFXRollout)(), ei = (0, _.default)(f.default), en = (0, N.default)(), el = (0, I.default)({
     scrollPosition: M.ProfileCustomizationScrollPositions.TRY_IT_OUT,
     analyticsLocations: e
   }), eo = () => {
@@ -88,7 +88,7 @@ var et = () => {
       descriptionCta: h.default.Messages.VISIT_THE_SHOP_CTA,
       onCtaClick: eu,
       pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: B,
+      perkImage: G,
       canReveal: ea,
       dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     } : {
@@ -97,7 +97,7 @@ var et = () => {
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_SUBTITLE_NON_SUB,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_AVATAR_DECO_DESCRIPTION_NON_SUB,
       pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: B,
+      perkImage: G,
       canReveal: ea,
       dismissibleContentType: l.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP
     },
@@ -113,7 +113,7 @@ var et = () => {
           analyticsLocations: e
         })
       },
-      perkImage: U
+      perkImage: b
     },
     clips: es ? {
       name: "clips",
@@ -128,16 +128,16 @@ var et = () => {
           analyticsLocations: e
         })
       } : () => {
-        window.open(S.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
+        window.open(R.default.getArticleURL(P.HelpdeskArticles.CLIPS), "_blank")
       },
-      perkImage: G
+      perkImage: y
     } : {
       name: "clips",
       title: h.default.Messages.CLIPS,
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_SUBTITLE,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_CLIPS_DESCRIPTION_NON_SUB,
       pillText: h.default.Messages.EARLY_ACCESS,
-      perkImage: G
+      perkImage: y
     },
     earlyAccess: es ? {
       name: "earlyAccess",
@@ -174,13 +174,13 @@ var et = () => {
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: eo,
-      perkImage: w
+      perkImage: K
     } : {
       name: "entranceSounds",
       title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-      perkImage: w
+      perkImage: K
     },
     entranceSoundsSeeAllVariation: es ? {
       name: "entranceSoundsSeeAllVariation",
@@ -189,13 +189,13 @@ var et = () => {
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_SUB,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: eo,
-      perkImage: K
+      perkImage: W
     } : {
       name: "entranceSoundsSeeAllVariation",
       title: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_SUBTITLE,
       description: h.default.Messages.PREMIUM_MARKETING_WHATS_NEW_ENTRANCE_SOUNDS_DESCRIPTION_NON_SUB,
-      perkImage: K
+      perkImage: W
     },
     profileEffects: es ? {
       name: "profileEffects",
@@ -225,7 +225,7 @@ var et = () => {
       description: h.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_PROFILES_DESCRIPTION,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: el,
-      perkImage: b
+      perkImage: U
     },
     remixing: es ? {
       name: "remixing",
@@ -333,7 +333,7 @@ var et = () => {
       name: "upcomingDropUntimed",
       title: h.default.Messages.NEW_DROP,
       pillText: h.default.Messages.COMING_SOON,
-      backgroundImage: W
+      backgroundImage: w
     },
     badge: {
       name: "badge",
@@ -346,7 +346,7 @@ var et = () => {
       name: "customAppIcons",
       title: h.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_FEATURE_CUSTOM_APP_ICONS_DESCRIPTION,
-      perkImage: y,
+      perkImage: B,
       description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO,
       descriptionCta: h.default.Messages.TAKE_ME_THERE,
       onCtaClick: () => {
@@ -373,7 +373,7 @@ var et = () => {
       name: "specialStickerAccess",
       title: h.default.Messages.PREMIUM_MARKETING_STICKER_PERK_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_STICKER_PERK_LONG_DESCRIPTION,
-      perkImage: (0, g.getThemedImage)(t, D, Z),
+      perkImage: (0, g.getThemedImage)(t, D, J),
       description: h.default.Messages.NITRO_HOME_CARD_INCLUDED_WITH_BASIC_AND_NITRO
     },
     largeUploads: {
@@ -389,7 +389,7 @@ var et = () => {
       name: "hdVideo",
       title: h.default.Messages.PREMIUM_MARKETING_FEATURE_PREMIUM_GO_LIVE_TITLE,
       subtitle: h.default.Messages.PREMIUM_MARKETING_STREAMING_SMALL_PERK_DESCRIPTION,
-      perkImage: J,
+      perkImage: Z,
       description: h.default.Messages.NITRO_HOME_STREAM_UP_TO_4K
     }
   };

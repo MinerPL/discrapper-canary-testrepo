@@ -48,8 +48,8 @@ var l = n("37983"),
   Y = n("271938"),
   K = n("42203"),
   W = n("923959"),
-  Z = n("305961"),
-  z = n("42887"),
+  z = n("305961"),
+  Z = n("42887"),
   X = n("957255"),
   Q = n("824563"),
   q = n("27618"),
@@ -466,10 +466,10 @@ var ev = (0, g.default)(function(e) {
     partnerGame: m,
     dropsActivityPanelExperienceBlocked: E,
     showDropsSparkles: g
-  } = (0, M.useActivityPanelDrop)(e_.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), S = (0, u.useStateFromStores)([_.default], () => null != c ? _.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, u.useStateFromStores)([Z.default, X.default, W.default], () => {
-    if (null != r) return U.canStreamInChannel(r, Z.default, X.default, !1);
+  } = (0, M.useActivityPanelDrop)(e_.PartnerGame.FORTNITE, i, d.DismissibleContent.QUEST_2_ENROLLMENT_TOOLTIP, d.DismissibleContent.QUEST_2_COMPLETION_TOOLTIP), S = (0, u.useStateFromStores)([_.default], () => null != c ? _.default.getSelfEmbeddedActivityForChannel(c.id) : null), N = (0, u.useStateFromStores)([z.default, X.default, W.default], () => {
+    if (null != r) return U.canStreamInChannel(r, z.default, X.default, !1);
     if (null != n) {
-      let e = U.getStreamEligibleChannels(W.default.getChannels(n), Z.default, X.default);
+      let e = U.getStreamEligibleChannels(W.default.getChannels(n), z.default, X.default);
       return e.length > 0
     }
     return !1
@@ -477,7 +477,7 @@ var ev = (0, g.default)(function(e) {
     if (null != h && null != h.id) return h.id;
     if (null != i && null != i.id) return i.id;
     if (null != S) return S.applicationId
-  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([z.default], () => (0, P.default)(z.default) && (0, em.isWindows)()), R = (0, u.useStateFromStores)([Q.default], () => null != s ? Q.default.findActivity(s, e => e.type === eI.ActivityTypes.PLAYING) : null), y = null != f && f.ownerId === s && f.state !== eI.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, q.default) : void 0), w = (0, u.useStateFromStores)([Z.default], () => Z.default.getGuild(n));
+  }()) && void 0 !== t ? t : ""]), v = (0, u.useStateFromStores)([Z.default], () => (0, P.default)(Z.default) && (0, em.isWindows)()), R = (0, u.useStateFromStores)([Q.default], () => null != s ? Q.default.findActivity(s, e => e.type === eI.ActivityTypes.PLAYING) : null), y = null != f && f.ownerId === s && f.state !== eI.ApplicationStreamStates.ENDED, D = (0, u.useStateFromStores)([$.default], () => $.default.getBroadcast()), b = (0, L.default)() && null != i, G = (0, u.useStateFromStores)([ee.default, q.default], () => null != c ? (0, x.computeChannelName)(c, ee.default, q.default) : void 0), w = (0, u.useStateFromStores)([z.default], () => z.default.getGuild(n));
   return (0, l.jsx)(eL, {
     ...a,
     guildId: n,

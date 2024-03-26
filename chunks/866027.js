@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 });
 var s = n("37983"),
@@ -68,13 +68,13 @@ function S(e) {
   })
 }
 
-function A(e) {
+function C(e) {
   var t, l;
   let {
     channel: _,
     message: m,
     compact: N
-  } = e, p = (0, o.default)(m), A = function(e) {
+  } = e, p = (0, o.default)(m), C = function(e) {
     let {
       author: t,
       channel: n,
@@ -100,14 +100,14 @@ function A(e) {
     channel: _,
     message: m,
     author: p
-  }), C = (null === (t = m.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = m.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
-  return null == A ? null : (0, s.jsxs)(s.Fragment, {
+  }), A = (null === (t = m.roleSubscriptionData) || void 0 === t ? void 0 : t.total_months_subscribed) != null && (null === (l = m.roleSubscriptionData) || void 0 === l ? void 0 : l.total_months_subscribed) <= 1;
+  return null == C ? null : (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(c.default, {
       icon: n("127067"),
       timestamp: m.timestamp,
       compact: N,
-      children: A
-    }), C && (0, s.jsx)(S, {
+      children: C
+    }), A && (0, s.jsx)(S, {
       guildId: _.guild_id,
       user: m.author,
       username: p.nick

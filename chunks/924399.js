@@ -27,8 +27,8 @@ function m(e) {
     compact: a,
     usernameHook: m,
     channel: N
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), S = (0, o.default)(n), A = m(S), {
-    avatarSrc: C,
+  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(N.guild_id)), S = (0, o.default)(n), C = m(S), {
+    avatarSrc: A,
     eventHandlers: {
       onMouseEnter: h,
       onMouseLeave: g
@@ -42,7 +42,7 @@ function m(e) {
         [I.compact]: a
       }),
       iconNode: a ? null : (0, s.jsx)(f.AutomodAvatar, {
-        src: C
+        src: A
       }),
       iconContainerClassName: I.iconContainer,
       compact: a,
@@ -77,7 +77,7 @@ function m(e) {
           }),
           children: T.default.Messages.GUILD_RAID_REPORT_SYSTEM_MESSAGE.format({
             username: S.nick,
-            usernameHook: A,
+            usernameHook: C,
             guildName: null !== (t = null == p ? void 0 : p.name) && void 0 !== t ? t : ""
           })
         })]

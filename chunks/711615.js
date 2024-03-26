@@ -11,13 +11,13 @@ var i = "\ud800-\udfff",
   h = "[\ud800-\udbff][\udc00-\udfff]",
   p = "[" + s + "]",
   g = "(?:" + u + "|" + c + ")",
-  m = "(?:" + r + "(?:d|ll|m|re|s|t|ve))?",
-  E = "(?:" + r + "(?:D|LL|M|RE|S|T|VE))?",
+  E = "(?:" + r + "(?:d|ll|m|re|s|t|ve))?",
+  m = "(?:" + r + "(?:D|LL|M|RE|S|T|VE))?",
   S = "(?:[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]|\ud83c[\udffb-\udfff])?",
   v = "[\\ufe0e\\ufe0f]?",
   y = "(?:\\u200d(?:" + ["[^" + i + "]", f, h].join("|") + ")" + v + S + ")*",
   O = "(?:" + ["[" + a + "]", f, h].join("|") + ")" + (v + S + y),
-  C = RegExp([p + "?" + u + "+" + m + "(?=" + [d, p, "$"].join("|") + ")", "(?:" + p + "|" + c + ")+" + E + "(?=" + [d, p + g, "$"].join("|") + ")", p + "?" + g + "+" + m, p + "+" + E, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", "\\d+", O].join("|"), "g");
+  T = RegExp([p + "?" + u + "+" + E + "(?=" + [d, p, "$"].join("|") + ")", "(?:" + p + "|" + c + ")+" + m + "(?=" + [d, p + g, "$"].join("|") + ")", p + "?" + g + "+" + E, p + "+" + m, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", "\\d+", O].join("|"), "g");
 e.exports = function(e) {
-  return e.match(C) || []
+  return e.match(T) || []
 }

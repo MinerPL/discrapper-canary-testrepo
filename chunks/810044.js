@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("898260"),
   p = n("599110"),
   S = n("741515"),
-  A = n("3081"),
-  C = n("907038"),
+  C = n("3081"),
+  A = n("907038"),
   h = n("49111"),
   g = n("782340"),
   M = n("697755");
@@ -56,13 +56,13 @@ function O(e) {
     children: (0, s.jsx)(d.Spinner, {})
   }) : null == l || null == R ? null : (0, s.jsxs)("div", {
     className: M.guildShopEmbed,
-    children: [(0, s.jsx)(A.HeroImage, {
+    children: [(0, s.jsx)(C.HeroImage, {
       coverImageAsset: null !== (t = R.cover_image_asset) && void 0 !== t ? t : null
     }), (0, s.jsx)(m.default, {
       size: 16
     }), (0, s.jsxs)("div", {
       className: M.serverShopLabel,
-      children: [(0, s.jsx)(C.default, {
+      children: [(0, s.jsx)(A.default, {
         height: "16px",
         width: "16px",
         color: o.default.INTERACTIVE_NORMAL
@@ -119,7 +119,7 @@ function O(e) {
         onClick: P,
         children: (0, s.jsxs)("div", {
           className: M.guildShopEmbedCtaContent,
-          children: [(0, s.jsx)(C.default, {
+          children: [(0, s.jsx)(A.default, {
             height: "18px",
             width: "18px"
           }), (0, s.jsx)(d.Text, {

@@ -1,12 +1,12 @@
 "use strict";
 a.r(t), a.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var l = a("862205");
+var s = a("862205");
 a("773336");
-let r = (0, l.createExperiment)({
+let r = (0, s.createExperiment)({
   kind: "user",
   id: "2024-01_mobile_shop",
   label: "Mobile Shop Experiment",
@@ -54,7 +54,7 @@ let r = (0, l.createExperiment)({
     }
   }]
 });
-var s = e => {
+var l = e => {
   let {
     location: t
   } = e;

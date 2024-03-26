@@ -67,8 +67,8 @@ var j = a.memo(function(e) {
     mediaState: Y,
     unavailable: K = !1,
     badge: W = 0,
-    contextMenu: Z = b,
-    draggable: z = !1,
+    contextMenu: z = b,
+    draggable: Z = !1,
     sorting: X = !1,
     preloadOnClick: Q = !0,
     guildJoinRequestStatus: q
@@ -121,8 +121,8 @@ var j = a.memo(function(e) {
     }, [F, B, K, Q]),
     em = (0, u.useStateFromStores)([E.default], () => E.default.isCurrentUserGuest(J)),
     eE = a.useCallback(e => {
-      null != B && !em && Z(e, B)
-    }, [B, Z, em]),
+      null != B && !em && z(e, B)
+    }, [B, z, em]),
     eg = a.useCallback(e => {
       if ("ArrowLeft" === e.key && null != $) {
         var t;
@@ -174,7 +174,7 @@ var j = a.memo(function(e) {
     eN = el ? (0, l.jsx)(A.PlaceholderDropTarget, {
       children: (0, l.jsx)(v.default, {})
     }) : (0, l.jsx)("div", {
-      ref: z ? ea : void 0,
+      ref: Z ? ea : void 0,
       "data-dnd-name": B.toString(),
       className: i(y.blobContainer, {
         [y.sorting]: X,
@@ -200,7 +200,7 @@ var j = a.memo(function(e) {
       guild: B,
       disabled: X,
       children: eN
-    }), z ? (0, l.jsx)(A.default, {
+    }), Z ? (0, l.jsx)(A.default, {
       name: B.name,
       targetNode: G,
       onDragOverChanged: eI

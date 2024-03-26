@@ -23,8 +23,8 @@ var a = n("90915"),
   N = n("811305"),
   p = n("568734"),
   S = n("449008"),
-  A = n("159885"),
-  C = n("550766"),
+  C = n("159885"),
+  A = n("550766"),
   h = n("191225"),
   g = n("602718"),
   M = n("706508"),
@@ -37,31 +37,31 @@ var a = n("90915"),
   x = n("49111"),
   y = n("782340"),
   U = n("462813");
-let j = (0, A.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+let j = (0, C.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function b(e) {
-  var t, n, i, A;
+  var t, n, i, C;
   let {
     applicationId: b,
     message: G
   } = e, {
     analyticsLocations: B
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), k = (0, u.useAnalyticsContext)(), F = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(F), [F]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(F)), K = (null == Y ? void 0 : Y.applicationId) === b, [W, z] = (0, E.default)([b, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, R.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [Z] = (0, l.useStateFromStoresArray)([h.default], () => V ? h.default.getEmbeddedActivitiesForChannel(F).filter(e => e.applicationId === b) : [], [b, F, V]), J = Array.from(null !== (A = null == Z ? void 0 : Z.userIds) && void 0 !== A ? A : []), X = (0, l.useStateFromStoresArray)([I.default], () => J.map(e => I.default.getUser(e)).filter(S.isNotNullish), [J]), q = (0, L.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), k = (0, u.useAnalyticsContext)(), F = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(F), [F]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([h.default], () => h.default.getSelfEmbeddedActivityForChannel(F)), K = (null == Y ? void 0 : Y.applicationId) === b, [W, z] = (0, E.default)([b, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, R.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [Z] = (0, l.useStateFromStoresArray)([h.default], () => V ? h.default.getEmbeddedActivitiesForChannel(F).filter(e => e.applicationId === b) : [], [b, F, V]), J = Array.from(null !== (C = null == Z ? void 0 : Z.userIds) && void 0 !== C ? C : []), q = (0, l.useStateFromStoresArray)([I.default], () => J.map(e => I.default.getUser(e)).filter(S.isNotNullish), [J]), X = (0, L.default)({
     applicationId: b,
     size: j
-  }), $ = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = X.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {
+  }), $ = f.default.getWindowOpen(x.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = q.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {
     if (V) {
       let {
         activityConfigs: e,
         applications: t
-      } = await (0, C.fetchShelf)({
+      } = await (0, A.fetchShelf)({
         guildId: H
       }), n = (0, g.default)({
         applicationId: b,
         activityConfigs: e,
         applications: t
       });
-      if (null != Z && X.length > 0) await (0, M.default)({
+      if (null != Z && q.length > 0) await (0, M.default)({
         applicationId: Z.applicationId,
         currentEmbeddedApplication: z,
         activityChannelId: F,
@@ -105,7 +105,7 @@ function b(e) {
         children: (0, s.jsx)("img", {
           className: U.img,
           alt: W.name,
-          src: q.url
+          src: X.url
         })
       }), (0, s.jsxs)("div", {
         className: U.content,
@@ -126,11 +126,11 @@ function b(e) {
           })
         }), (0, s.jsxs)("div", {
           className: U.cta,
-          children: [X.length > 0 ? (0, s.jsx)("div", {
+          children: [q.length > 0 ? (0, s.jsx)("div", {
             className: U.avatars,
             children: (0, s.jsx)(N.default, {
               guildId: H,
-              users: X,
+              users: q,
               max: 4
             })
           }) : (0, s.jsxs)("div", {

@@ -41,10 +41,10 @@ var a = n("37983"),
   w = n("412861"),
   F = n("910927"),
   V = n("730498"),
-  k = n("24337"),
-  H = n("967241"),
-  G = n("517141"),
-  B = n("49111"),
+  H = n("24337"),
+  k = n("967241"),
+  B = n("517141"),
+  G = n("49111"),
   W = n("782340"),
   Y = n("303283"),
   z = n("247703");
@@ -71,7 +71,7 @@ function Z(e) {
           toolbar: (0, a.jsx)(D.default.Icon, {
             icon: y.default,
             tooltip: W.default.Messages.CLOSE,
-            onClick: () => (0, H.closeAndClearThreadSidebar)(t)
+            onClick: () => (0, k.closeAndClearThreadSidebar)(t)
           }),
           children: [(0, a.jsx)(D.default.Icon, {
             icon: P.default,
@@ -149,13 +149,13 @@ function X(e) {
       privateThreadMode: s,
       textAreaState: i,
       location: r
-    } = e, [u, o] = l.useState(null), [d, c] = l.useState(null), f = (0, G.default)({
+    } = e, [u, o] = l.useState(null), [d, c] = l.useState(null), f = (0, B.default)({
       parentChannel: t,
       parentMessageId: n,
       threadSettings: a,
       privateThreadMode: s,
       location: r,
-      onThreadCreated: H.openThreadSidebarForViewing,
+      onThreadCreated: k.openThreadSidebarForViewing,
       useDefaultThreadName: !0
     }), h = l.useCallback(async (e, l, s) => {
       var r, u, d;
@@ -185,7 +185,7 @@ function X(e) {
       try {
         await f(e, l, s)
       } catch (e) {
-        return (null === (d = e.body) || void 0 === d ? void 0 : d.code) === B.AbortCodes.AUTOMOD_TITLE_BLOCKED && o((0, F.makeAutomodViolationError)(e.body, t)), {
+        return (null === (d = e.body) || void 0 === d ? void 0 : d.code) === G.AbortCodes.AUTOMOD_TITLE_BLOCKED && o((0, F.makeAutomodViolationError)(e.body, t)), {
           shouldClear: !1,
           shouldRefocus: !0
         }
@@ -237,7 +237,7 @@ function X(e) {
                 threadSettings: m,
                 updateThreadSettings: E,
                 error: x
-              }), t.type === B.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(Q, {
+              }), t.type === G.ChannelTypes.GUILD_TEXT ? (0, a.jsx)(Q, {
                 startedFromMessage: null != n,
                 threadSettings: m,
                 updateThreadSettings: E,
@@ -324,14 +324,14 @@ function q(e) {
       value: o,
       id: m,
       placeholder: "" !== f ? f : W.default.Messages.FORM_THREAD_NAME_PLACEHOLDER,
-      maxLength: B.MAX_CHANNEL_NAME_LENGTH,
+      maxLength: G.MAX_CHANNEL_NAME_LENGTH,
       onChange: e => {
         i({
-          name: (0, k.default)(e, !1)
+          name: (0, H.default)(e, !1)
         }), "" !== e ? d.default.startTyping(n.id) : d.default.stopTyping(n.id)
       },
       onBlur: () => {
-        let e = (0, k.default)(o, !0);
+        let e = (0, H.default)(o, !0);
         e !== o && i({
           name: e
         })
@@ -362,13 +362,13 @@ function J(e) {
     return c(t, a, n)
   }, [c]);
   (0, b.useComponentAction)({
-    event: B.ComponentActions.TEXTAREA_FOCUS,
+    event: G.ComponentActions.TEXTAREA_FOCUS,
     handler: p
   }), (0, b.useComponentAction)({
-    event: B.ComponentActions.TEXTAREA_BLUR,
+    event: G.ComponentActions.TEXTAREA_BLUR,
     handler: E
   });
-  let I = (0, r.useStateFromStores)([R.default], () => R.default.can(B.Permissions.ATTACH_FILES, t)),
+  let I = (0, r.useStateFromStores)([R.default], () => R.default.can(G.Permissions.ATTACH_FILES, t)),
     T = (0, F.renderError)(f, {
       content: n.textValue
     });

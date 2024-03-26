@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return g
   }
 });
-var l = a("37983"),
+var s = a("37983"),
   r = a("884691"),
-  s = a("77078"),
+  l = a("77078"),
   n = a("252744"),
   o = a("685665"),
   i = a("108486"),
@@ -72,23 +72,23 @@ var g = e => {
     disableCustomColor: b = !1
   } = e, {
     analyticsLocations: S
-  } = (0, o.default)(), T = r.useRef(null), v = (0, n.default)(T), {
-    buttonColors: L
-  } = (0, d.default)(t.styles), x = null == L || b ? void 0 : {
-    background: L.secondary.toHslString(),
-    color: L.text.toHslString()
-  }, I = b || (null == L ? void 0 : L.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
-  return (0, l.jsx)(s.Tooltip, {
+  } = (0, o.default)(), x = r.useRef(null), v = (0, n.default)(x), {
+    buttonColors: T
+  } = (0, d.default)(t.styles), L = null == T || b ? void 0 : {
+    background: T.secondary.toHslString(),
+    color: T.text.toHslString()
+  }, I = b || (null == T ? void 0 : T.text.isDark()) ? f.ThemeTypes.DARK : f.ThemeTypes.LIGHT;
+  return (0, s.jsx)(l.Tooltip, {
     text: m.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
     delay: h,
-    children: e => (0, l.jsx)(s.Button, {
+    children: e => (0, s.jsx)(l.Button, {
       ...e,
-      buttonRef: T,
-      style: x,
+      buttonRef: x,
+      style: L,
       className: C.giftButton,
-      color: b ? s.ButtonColors.BRAND : s.ButtonColors.CUSTOM,
-      look: s.Button.Looks.FILLED,
-      size: s.ButtonSizes.ICON,
+      color: b ? l.ButtonColors.BRAND : l.ButtonColors.CUSTOM,
+      look: l.Button.Looks.FILLED,
+      size: l.ButtonSizes.ICON,
       innerClassName: C.giftButtonInner,
       "aria-label": m.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
@@ -102,12 +102,12 @@ var g = e => {
           } : void 0
         })
       },
-      children: E ? (0, l.jsx)(i.SeasonalGiftIcon, {
+      children: E ? (0, s.jsx)(i.SeasonalGiftIcon, {
         hovered: v,
         isContentDismissed: !0,
         themeOverride: I,
         boxColors: p
-      }) : (0, l.jsx)(c.default, {
+      }) : (0, s.jsx)(c.default, {
         width: 24,
         height: 24
       })

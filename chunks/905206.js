@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   reactionForId: function() {
-    return C
+    return A
   },
   isPollMessageDirectlyInteractive: function() {
     return g
@@ -31,7 +31,7 @@ var s = n("506838"),
   N = n("973799"),
   p = n("49111"),
   S = n("782340");
-let A = {
+let C = {
   channelId: p.EMPTY_STRING_SNOWFLAKE_ID,
   selectedAnswerIds: new Set,
   submitting: !1,
@@ -39,7 +39,7 @@ let A = {
   showResults: !1
 };
 
-function C(e, t) {
+function A(e, t) {
   for (let n of e) {
     let e = "number" == typeof n.emoji.id ? "".concat(n.emoji.id) : n.emoji.id;
     if (e === t) return n
@@ -94,7 +94,7 @@ function M(e, t) {
       submitting: c,
       editing: E,
       showResults: _
-    } = null !== (n = null != t ? t : (0, f.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : A,
+    } = null !== (n = null != t ? t : (0, f.getPollState)(e.getChannelId(), e.id)) && void 0 !== n ? n : C,
     T = e.reactions,
     I = !0;
   if (!g(e)) {
@@ -103,17 +103,17 @@ function M(e, t) {
   }
   let m = d.size > 0,
     S = T.some(e => !0 === e.me_vote),
-    C = !E && S,
-    h = I && (C || u || _);
+    A = !E && S,
+    h = I && (A || u || _);
   return {
     poll: l,
     canTapAnswers: i && (!S || E || h),
-    canRemoveVote: C && i && !u,
+    canRemoveVote: A && i && !u,
     canShowVoteCounts: h,
-    canSubmitVote: !c && m && !C && i,
+    canSubmitVote: !c && m && !A && i,
     expirationLabel: r,
     hasSelectedAnswer: m,
-    hasVoted: C,
+    hasVoted: A,
     hasVoteRecorded: S,
     isEditingVote: E,
     isExpired: u,
@@ -134,15 +134,15 @@ function O(e, t) {
     theme: N = "dark",
     formattedExpirationLabel: p
   } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, {
-    poll: A
+    poll: C
   } = e;
-  if (null == A) return;
+  if (null == C) return;
   let g = u.default.getCurrentUser();
   if (null == g) return;
   let O = null === (o = r.default.getChannel(e.getChannelId())) || void 0 === o ? void 0 : null === (n = o.getGuildId) || void 0 === n ? void 0 : n.call(o),
     R = (0, I.getAvatarUrl)(g, O),
-    L = A.answers,
-    v = A.layout_type,
+    L = C.answers,
+    v = C.layout_type,
     P = M(e, t, {
       formattedExpirationLabel: p
     });
@@ -167,12 +167,12 @@ function O(e, t) {
     count: String(W)
   }), Q = Math.max(...L.map(e => {
     var t, n;
-    let s = C(w, "".concat(e.answer_id));
+    let s = A(w, "".concat(e.answer_id));
     return null !== (n = null == s ? void 0 : null === (t = s.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0
   })), Z = L.map(e => {
     var t, n, r;
     let o = "".concat(e.answer_id),
-      u = C(w, o),
+      u = A(w, o),
       E = null !== (n = null == u ? void 0 : null === (t = u.count_details) || void 0 === t ? void 0 : t.vote) && void 0 !== n ? n : 0,
       _ = H.has(o),
       T = E >= Q && 0 !== E,
@@ -268,7 +268,7 @@ function O(e, t) {
     presentation: "button",
     enabled: U,
     type: "submit"
-  })), X = (0, s.match)({
+  })), q = (0, s.match)({
     isInteractive: F,
     isEditingVote: B
   }).with({
@@ -290,12 +290,12 @@ function O(e, t) {
     presentation: "text",
     enabled: !0,
     type: "showVoterDetails"
-  })), q = !F || k || G || K ? void 0 : {
+  })), X = !F || k || G || K ? void 0 : {
     label: S.default.Messages.POLL_SHOW_VOTES,
     presentation: "textButton",
     enabled: !0,
     type: "showVotes"
-  }, $ = A.allow_multiselect, ee = (0, s.match)({
+  }, $ = C.allow_multiselect, ee = (0, s.match)({
     isInteractive: F,
     isExpired: k,
     canSelectMultipleAnswers: $
@@ -307,7 +307,7 @@ function O(e, t) {
     canSelectMultipleAnswers: !0
   }, () => S.default.Messages.POLL_SELECT_MULTIPLE_ANSWERS).otherwise(() => S.default.Messages.POLL_SELECT_ONE_ANSWER);
   return {
-    question: A.question,
+    question: C.question,
     promptLabel: ee,
     answers: Z,
     answersInteraction: (0, s.match)({
@@ -350,7 +350,7 @@ function O(e, t) {
     hasVoted: G,
     isExpired: k,
     myAvatarUrl: R,
-    secondaryAction: X,
-    tertiaryAction: q
+    secondaryAction: q,
+    tertiaryAction: X
   }
 }

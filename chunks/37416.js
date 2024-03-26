@@ -49,8 +49,8 @@ var a = n("414456"),
   Y = n("884155"),
   K = n("49111"),
   W = n("695838"),
-  Z = n("782340"),
-  z = n("65369");
+  z = n("782340"),
+  Z = n("65369");
 class X extends F.default {
   componentWillUnmount() {
     this.activitiesHideTimeout.stop()
@@ -74,9 +74,9 @@ class X extends F.default {
       sortingPosition: t,
       isUserOver: n
     } = this.props;
-    if (n) return z.containerUserOver;
-    if (null != t) return e > t ? z.containerDragAfter : z.containerDragBefore;
-    return z.containerDefault
+    if (n) return Z.containerUserOver;
+    if (null != t) return e > t ? Z.containerDragAfter : Z.containerDragBefore;
+    return Z.containerDefault
   }
   renderSubtitle() {
     var e;
@@ -121,7 +121,7 @@ class X extends F.default {
       channelInfo: e
     } = this.props;
     return null == e ? null : (0, l.jsx)("div", {
-      className: z.channelInfo,
+      className: Z.channelInfo,
       children: e
     })
   }
@@ -153,7 +153,7 @@ class X extends F.default {
       shouldShowGuildVerificationPopout: x
     } = this.state, M = this.getVoiceStatesCount(), O = (0, l.jsxs)("li", {
       className: s(this.getModeClass(), {
-        [z.disabled]: this.isDisabled()
+        [Z.disabled]: this.isDisabled()
       }),
       "data-dnd-name": e.name,
       children: [(0, l.jsx)("div", {
@@ -174,9 +174,9 @@ class X extends F.default {
                 ...f
               } = o;
               return (0, l.jsxs)(V.default, {
-                className: z.iconVisibility,
+                className: Z.iconVisibility,
                 iconClassName: s({
-                  [z.iconLive]: _
+                  [Z.iconLive]: _
                 }),
                 channel: e,
                 selected: !A && t,
@@ -332,7 +332,7 @@ class X extends F.default {
         forceShowButtons: n
       } = this.props;
       if (!t) return (0, l.jsx)(o.Tooltip, {
-        text: Z.default.Messages.OPEN_CHAT,
+        text: z.default.Messages.OPEN_CHAT,
         children: t => {
           let {
             onMouseEnter: a,
@@ -341,11 +341,11 @@ class X extends F.default {
             onBlur: d
           } = t;
           return (0, l.jsx)(o.Clickable, {
-            className: s(z.iconItem, n ? z.alwaysShown : null),
+            className: s(Z.iconItem, n ? Z.alwaysShown : null),
             onClick: () => {
               u.default.updateChatOpen(e.id, !0), (0, x.transitionToChannel)(e.id)
             },
-            "aria-label": Z.default.Messages.OPEN_CHAT,
+            "aria-label": z.default.Messages.OPEN_CHAT,
             onMouseEnter: a,
             onMouseLeave: i,
             onFocus: r,
@@ -353,7 +353,7 @@ class X extends F.default {
             children: (0, l.jsx)(P.default, {
               width: 16,
               height: 16,
-              className: z.actionIcon
+              className: Z.actionIcon
             })
           })
         }
@@ -362,7 +362,7 @@ class X extends F.default {
       let {
         connected: e
       } = this.props;
-      return this.isFull() && !e ? Z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
+      return this.isFull() && !e ? z.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL : null
     }
   }
 }

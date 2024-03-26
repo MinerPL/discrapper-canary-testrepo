@@ -51,8 +51,8 @@ var l = n("37983"),
   Y = n("522342"),
   K = n("738552"),
   W = n("630062"),
-  Z = n("873774"),
-  z = n("677777"),
+  z = n("873774"),
+  Z = n("677777"),
   X = n("579095"),
   Q = n("333896"),
   q = n("446380"),
@@ -528,12 +528,12 @@ class eu extends a.PureComponent {
               selected: r === el.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS
             }, el.ChannelListCommunityRow.GUILD_SCHEDULED_EVENTS);
           case el.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS:
-            return (0, l.jsx)(Z.default, {
+            return (0, l.jsx)(z.default, {
               guild: s,
               selected: r === ei.StaticChannelRoute.ROLE_SUBSCRIPTIONS
             }, el.ChannelListCommunityRow.GUILD_ROLE_SUBSCRIPTIONS);
           case el.ChannelListCommunityRow.GUILD_SHOP:
-            return (0, l.jsx)(z.default, {
+            return (0, l.jsx)(Z.default, {
               guild: s,
               selected: r === ei.StaticChannelRoute.GUILD_SHOP
             }, el.ChannelListCommunityRow.GUILD_SHOP);

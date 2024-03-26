@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return B
   },
   setToEndSelection: function() {
-    return O
+    return H
   },
   truncateContent: function() {
-    return H
+    return O
   },
   scrollCursorIntoView: function() {
     return z
@@ -209,13 +209,13 @@ function B(e) {
   return t = (t = t.set("focusOffset", 0)).set("isBackward", !0), l.EditorState.forceSelection(e, t)
 }
 
-function O(e) {
+function H(e) {
   let t = N(e),
     n = e.getSelection();
   return n = (n = n.set("focusOffset", t.length)).set("isBackward", !1), l.EditorState.forceSelection(e, n)
 }
 
-function H(e) {
+function O(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 512,
     n = N(e);
   if (n.length > t) {

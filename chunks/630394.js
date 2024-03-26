@@ -20,8 +20,8 @@ function u(e) {
     description: n,
     headerImage: i,
     onDetails: u,
-    onPurchase: f,
-    PurchaseButton: h,
+    onPurchase: h,
+    PurchaseButton: f,
     availabilityLabel: m
   } = e;
   return (0, s.jsx)(r.FocusRing, {
@@ -29,7 +29,7 @@ function u(e) {
       className: l(c.wrapper, d.hoverCard),
       tabIndex: 0,
       onClick: () => {
-        null != u ? u() : null != f && f()
+        null != u ? u() : null != h && h()
       },
       children: [(0, s.jsx)("div", {
         className: c.cardHeaderImg,
@@ -53,15 +53,15 @@ function u(e) {
           variant: "text-sm/normal",
           children: n
         })]
-      }), null != h && (0, s.jsxs)("div", {
+      }), null != f && (0, s.jsxs)("div", {
         className: c.footer,
         children: [(0, s.jsx)(o.Text, {
           color: "interactive-normal",
           variant: "text-sm/normal",
           children: m
-        }), (0, s.jsx)(h, {
+        }), (0, s.jsx)(f, {
           onClick: e => {
-            e.stopPropagation(), null == f || f()
+            e.stopPropagation(), null == h || h()
           }
         })]
       })]

@@ -25,8 +25,8 @@ var s = n("37983"),
   N = n("551254"),
   p = n("991148"),
   S = n("893399"),
-  A = n("874146"),
-  C = n("500307"),
+  C = n("874146"),
+  A = n("500307"),
   h = n("49111");
 let g = a.createContext(void 0);
 
@@ -42,7 +42,7 @@ function O(e) {
     initialTab: l,
     guildId: i
   } = e, M = (0, r.useStateFromStores)([I.default], () => I.default.getGuild(i)), O = (0, r.useStateFromStores)([f.default], () => f.default.isViewingServerShop(i)), R = (0, p.useGuildShopPreviewVisible)(M, "guild_shop_page"), L = (0, N.useIsEligibleForSubscriptionsInGuildShop)(i, "guild_shop_page"), v = (null == M ? void 0 : M.hasFeature(h.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0, P = (0, E.useRoleSubscriptionsVisibleInGuild)(null == M ? void 0 : M.id), D = null === (t = (0, c.useSubscriptionsSettings)(i)) || void 0 === t ? void 0 : t.server_shop_tab_order, x = [], y = S.GuildShopTab.GUILD_SHOP_FULL_PREVIEW;
-  O || v && P ? (x.push(D === A.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_PRODUCTS : S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), x.push(D === A.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS : S.GuildShopTab.GUILD_PRODUCTS), y = x[0]) : v && !P ? (x.push(S.GuildShopTab.GUILD_PRODUCTS), y = S.GuildShopTab.GUILD_PRODUCTS) : !v && P && (x.push(S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), y = S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS, R && x.push(S.GuildShopTab.GUILD_PRODUCTS_PREVIEW)), l = null != l ? l : y;
+  O || v && P ? (x.push(D === C.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_PRODUCTS : S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), x.push(D === C.ServerShopTabOrder.PRODUCTS_FIRST ? S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS : S.GuildShopTab.GUILD_PRODUCTS), y = x[0]) : v && !P ? (x.push(S.GuildShopTab.GUILD_PRODUCTS), y = S.GuildShopTab.GUILD_PRODUCTS) : !v && P && (x.push(S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), y = S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS, R && x.push(S.GuildShopTab.GUILD_PRODUCTS_PREVIEW)), l = null != l ? l : y;
   let [U, j] = a.useState(l), b = R && !(P && L) || U === S.GuildShopTab.GUILD_PRODUCTS_PREVIEW;
   return a.useEffect(() => {
     j(l)
@@ -57,10 +57,10 @@ function O(e) {
         let t = {
           ...(0, u.collectGuildAnalyticsMetadata)(i)
         };
-        if (U === S.GuildShopTab.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), j(S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), t.action_taken = C.GuildShopPreviewClickActions.DISMISS_TAB_PREVIEW;
+        if (U === S.GuildShopTab.GUILD_PRODUCTS_PREVIEW) e.stopPropagation(), j(S.GuildShopTab.GUILD_ROLE_SUBSCRIPTIONS), t.action_taken = A.GuildShopPreviewClickActions.DISMISS_TAB_PREVIEW;
         else {
           var n;
-          (0, _.replaceWith)(h.Routes.CHANNEL(i, null === (n = T.default.getDefaultChannel(i)) || void 0 === n ? void 0 : n.id)), t.action_taken = C.GuildShopPreviewClickActions.DISMISS_FULL_PREVIEW
+          (0, _.replaceWith)(h.Routes.CHANNEL(i, null === (n = T.default.getDefaultChannel(i)) || void 0 === n ? void 0 : n.id)), t.action_taken = A.GuildShopPreviewClickActions.DISMISS_FULL_PREVIEW
         }
         m.default.track(h.AnalyticEvents.GUILD_SHOP_PREVIEW_CLICK, t)
       }

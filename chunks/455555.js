@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return eS
   },
   default: function() {
-    return eC
+    return eA
   }
 });
 var s = n("37983"),
@@ -25,8 +25,8 @@ var s = n("37983"),
   N = n("55620"),
   p = n("52289"),
   S = n("518888"),
-  A = n("70614"),
-  C = n("79112"),
+  C = n("70614"),
+  A = n("79112"),
   h = n("376556"),
   g = n("812204"),
   M = n("685665"),
@@ -55,8 +55,8 @@ var s = n("37983"),
   Q = n("55282"),
   Z = n("42203"),
   J = n("305961"),
-  X = n("42887"),
-  q = n("945956"),
+  q = n("42887"),
+  X = n("945956"),
   $ = n("162771"),
   ee = n("697218"),
   et = n("552712"),
@@ -95,7 +95,7 @@ let eN = () => (0, s.jsxs)(ei.default, {
       }
     }), eI.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS, (0, s.jsx)(ei.NoticeButton, {
       onClick: () => {
-        (0, f.pushLayer)(eE.Layers.USER_SETTINGS), C.default.setSection(eE.UserSettingsSections.VOICE)
+        (0, f.pushLayer)(eE.Layers.USER_SETTINGS), A.default.setSection(eE.UserSettingsSections.VOICE)
       },
       children: eI.default.Messages.NOTICE_NO_INPUT_DETECTED_SETTINGS_LINK_TEXT
     })]
@@ -106,14 +106,14 @@ function eS(e) {
     untilAtLeast: i(e)
   } : void 0)
 }
-let eA = a.memo(function() {
+let eC = a.memo(function() {
   var e, t, l;
   let _ = (0, o.useStateFromStores)([ee.default], () => ee.default.getCurrentUser()),
     g = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
     ec = (0, o.useStateFromStores)([es.default], () => es.default.getNotice()),
-    eA = (0, o.useStateFromStores)([J.default], () => J.default.getGuild(g)),
+    eC = (0, o.useStateFromStores)([J.default], () => J.default.getGuild(g)),
     {
-      analyticsLocations: eC
+      analyticsLocations: eA
     } = (0, M.default)(),
     eh = null == ec ? void 0 : ec.type,
     eg = (0, b.useShowMemberVerificationGate)(g);
@@ -236,7 +236,7 @@ let eA = a.memo(function() {
           noticeType: eE.NoticeTypes.VOICE_DISABLED
         }), eI.default.Messages.NOTICE_CONNECTION_CONFLICT, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           onClick: () => {
-            let e = q.default.getRemoteDisconnectVoiceChannelId();
+            let e = X.default.getRemoteDisconnectVoiceChannelId();
             if (null != e) {
               let t = Z.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
@@ -256,7 +256,7 @@ let eA = a.memo(function() {
           noticeType: eE.NoticeTypes.VOICE_CONNECTED_LAST_SESSION
         }), eI.default.Messages.NOTICE_VOICE_CONNECTED_LAST_SESSION, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           onClick: () => {
-            let e = q.default.getLastSessionVoiceChannelId();
+            let e = X.default.getLastSessionVoiceChannelId();
             if (null != e) {
               let t = Z.default.getChannel(e);
               null != t && I.default.selectVoiceChannel(e)
@@ -278,7 +278,7 @@ let eA = a.memo(function() {
           className: em.platformIcon,
           src: eD.icon.whiteSVG
         }), eI.default.Messages.NOTICE_SPOTIFY_AUTO_PAUSED, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
-          onClick: () => C.default.open(eE.UserSettingsSections.VOICE),
+          onClick: () => A.default.open(eE.UserSettingsSections.VOICE),
           noticeType: eE.NoticeTypes.SPOTIFY_AUTO_PAUSED,
           children: eI.default.Messages.VOICE_SETTINGS
         }), (0, s.jsx)(u.Anchor, {
@@ -328,7 +328,7 @@ let eA = a.memo(function() {
         })]
       });
     case eE.NoticeTypes.NO_INPUT_DETECTED:
-      if (!X.default.supports(eT.Features.LOOPBACK)) return (0, s.jsx)(eN, {});
+      if (!q.default.supports(eT.Features.LOOPBACK)) return (0, s.jsx)(eN, {});
       return (0, s.jsx)(ep, {});
     case eE.NoticeTypes.HARDWARE_MUTE:
       if (null == ec.metadata) return null;
@@ -368,7 +368,7 @@ let eA = a.memo(function() {
           }
         }), eI.default.Messages.NOTICE_H264_DISABLED_SETTINGS, (0, s.jsx)(ei.NoticeButton, {
           onClick: () => {
-            (0, f.pushLayer)(eE.Layers.USER_SETTINGS), C.default.setSection(eE.UserSettingsSections.VOICE)
+            (0, f.pushLayer)(eE.Layers.USER_SETTINGS), A.default.setSection(eE.UserSettingsSections.VOICE)
           },
           children: eI.default.Messages.NOTICE_H264_DISABLED_SETTINGS_LINK_TEXT
         })]
@@ -401,11 +401,11 @@ let eA = a.memo(function() {
               (0, H.default)({
                 initialPlanId: null,
                 subscriptionTier: ef.PremiumSubscriptionSKUs.TIER_2,
-                analyticsLocations: eC,
+                analyticsLocations: eA,
                 analyticsObject: eB
               })
             },
-            analyticsLocations: eC,
+            analyticsLocations: eA,
             analyticsLocationObject: eB,
             context: __OVERLAY__ ? eE.AppContext.OVERLAY : eE.AppContext.APP
           }).then(() => E.dismiss(eb.id)),
@@ -477,14 +477,14 @@ let eA = a.memo(function() {
             eS()
           }
         }), eI.default.Messages.SERVER_USAGE_SURVEY_BODY.format({
-          guildName: null !== (t = null == eA ? void 0 : eA.name) && void 0 !== t ? t : "this server"
+          guildName: null !== (t = null == eC ? void 0 : eC.name) && void 0 !== t ? t : "this server"
         }), (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: eE.NoticeTypes.SERVER_USAGE_SURVEY,
           onClick: () => {
-            window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == _ ? void 0 : _.id, "&guild_id=").concat(null == eA ? void 0 : eA.id), "_blank"), eS()
+            window.open("https://discord.sjc1.qualtrics.com/jfe/form/SV_9AHPmGasQ0EvpdQ?user_id=".concat(null == _ ? void 0 : _.id, "&guild_id=").concat(null == eC ? void 0 : eC.id), "_blank"), eS()
           },
           additionalTrackingProps: {
-            guild_id: null == eA ? void 0 : eA.id
+            guild_id: null == eC ? void 0 : eC.id
           },
           children: eI.default.Messages.SERVER_USAGE_SURVEY_CTA
         })]
@@ -580,7 +580,7 @@ let eA = a.memo(function() {
               applicationName: ec.metadata.applicationName
             })
           }), (0, s.jsx)(ei.NoticeCloseButton, {
-            onClick: A.reset,
+            onClick: C.reset,
             noticeType: eE.NoticeTypes.APPLICATION_TEST_MODE
           })]
         })
@@ -610,7 +610,7 @@ let eA = a.memo(function() {
             applicationId: ec.metadata.applicationId,
             children: eI.default.Messages.NOTICE_APPLICATION_TEST_MODE_GO_TO_LISTING
           }), (0, s.jsx)(ei.NoticeCloseButton, {
-            onClick: A.reset,
+            onClick: C.reset,
             noticeType: eE.NoticeTypes.APPLICATION_TEST_MODE
           })]
         })
@@ -628,7 +628,7 @@ let eA = a.memo(function() {
         }), eI.default.Messages.OUTBOUND_PROMOTION_NOTICE, (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: eE.NoticeTypes.OUTBOUND_PROMOTION,
           onClick: () => {
-            er.default.track(eE.AnalyticEvents.OUTBOUND_PROMOTION_NOTICE_CLICKED), C.default.open(eE.UserSettingsSections.INVENTORY), Y.default.dismissOutboundPromotionNotice()
+            er.default.track(eE.AnalyticEvents.OUTBOUND_PROMOTION_NOTICE_CLICKED), A.default.open(eE.UserSettingsSections.INVENTORY), Y.default.dismissOutboundPromotionNotice()
           },
           children: eI.default.Messages.TAKE_ME_THERE
         })]
@@ -688,7 +688,7 @@ let eA = a.memo(function() {
         }), (0, s.jsx)(ei.PrimaryCTANoticeButton, {
           noticeType: eE.NoticeTypes.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
           onClick: () => {
-            eS(eY), C.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
+            eS(eY), A.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
           },
           children: eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_RENEW_NOW_BUTTON_TEXT
         })]
@@ -706,7 +706,7 @@ let eA = a.memo(function() {
           noticeType: eE.NoticeTypes.PREMIUM_PAST_DUE_INVALID_PAYMENT,
           onClick: () => {
             var e, t;
-            eS(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
+            eS(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
           },
           children: eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_INVALID_PAYMENT_NOTICE_BUTTON_TEXT
         })]
@@ -724,7 +724,7 @@ let eA = a.memo(function() {
           noticeType: eE.NoticeTypes.PREMIUM_PAST_DUE_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
-            eS(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
+            eS(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
           },
           children: eI.default.Messages.PREMIUM_SUBSCRIPTION_PAST_DUE_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
@@ -748,7 +748,7 @@ let eA = a.memo(function() {
           noticeType: eE.NoticeTypes.PREMIUM_MISSING_PAYMENT,
           onClick: () => {
             var e, t;
-            eS(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), C.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
+            eS(null === (t = ec.metadata) || void 0 === t ? void 0 : null === (e = t.premiumSubscription) || void 0 === e ? void 0 : e.currentPeriodEnd), A.default.open(eE.UserSettingsSections.SUBSCRIPTIONS)
           },
           children: eO === ef.PremiumTypes.TIER_1 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_1_NOTICE_BUTTON_TEXT : eO === ef.PremiumTypes.TIER_0 ? eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_TIER_0_NOTICE_BUTTON_TEXT : eI.default.Messages.PREMIUM_SUBSCRIPTION_ENDING_MISSING_PAYMENT_NOTICE_BUTTON_TEXT
         })]
@@ -766,7 +766,7 @@ let eA = a.memo(function() {
       };
       return (0, s.jsx)(U.default, {
         guildId: g,
-        analyticsLocations: eC,
+        analyticsLocations: eA,
         analyticsLocation: e
       })
     }
@@ -876,12 +876,12 @@ let eA = a.memo(function() {
   }
 });
 
-function eC() {
+function eA() {
   let {
     analyticsLocations: e
   } = (0, M.default)(g.default.NOTICE);
   return (0, s.jsx)(M.AnalyticsLocationProvider, {
     value: e,
-    children: (0, s.jsx)(eA, {})
+    children: (0, s.jsx)(eC, {})
   })
 }

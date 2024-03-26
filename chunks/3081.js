@@ -25,8 +25,8 @@ var s = n("37983"),
   N = n("58608"),
   p = n("158998"),
   S = n("866190"),
-  A = n("662960"),
-  C = n("634388"),
+  C = n("662960"),
+  A = n("634388"),
   h = n("893399"),
   g = n("744917"),
   M = n("782340"),
@@ -101,10 +101,10 @@ function v(e) {
   }, [l])), {
     isTruncated: v,
     ExpandableTextContainer: P
-  } = (0, A.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
+  } = (0, C.useExpandableTextContainer)(), D = (null !== (n = null == E ? void 0 : null === (t = E.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [x, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(O.twoColumnWidth, ")")), {
     selectedTab: j,
     isPhantomPreview: b
-  } = (0, C.useGuildShopDisplayContext)(), G = j === h.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
+  } = (0, A.useGuildShopDisplayContext)(), G = j === h.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)(P, {
       lineClamp: U || 2 === x ? 2 : 3,
       children: (0, s.jsx)(o.Text, {

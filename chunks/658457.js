@@ -28,8 +28,8 @@ function E(e) {
     className: N,
     source: p,
     storeListingAnalyticsProperties: S,
-    pauseAnimation: A,
-    hover: C,
+    pauseAnimation: C,
+    hover: A,
     innerClassName: h
   } = e, g = {
     fullWidth: n,
@@ -39,7 +39,7 @@ function E(e) {
     tooltipPosition: I,
     onClick: m,
     className: N,
-    hover: C,
+    hover: A,
     innerClassName: h
   }, M = (0, a.useStateFromStores)([i.default], () => i.default.getActiveLibraryApplication(t.id)), O = null != M ? M.sku.id : null, R = null != O ? O : t.primarySkuId, L = (0, a.useStateFromStores)([r.default], () => null != R && !r.default.didFetchingSkuFail(R));
   return null != M && (0, o.isUserEntitledToLibraryApplication)(M) ? (0, s.jsx)(c.default, {
@@ -50,7 +50,7 @@ function E(e) {
     ...g,
     skuId: null != M ? M.sku.id : null,
     applicationId: t.id,
-    pauseAnimation: A,
+    pauseAnimation: C,
     storeListingAnalyticsProperties: S
   }) : (0, s.jsx)(d.default, {
     ...g,

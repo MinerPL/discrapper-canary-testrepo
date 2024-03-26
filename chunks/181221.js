@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return m
   }
 }), n("222007");
 var a = n("37983"),
@@ -14,16 +14,16 @@ var a = n("37983"),
   d = n("476765"),
   u = n("238055"),
   _ = n("49111"),
-  N = n("782340"),
-  E = n("291115");
-let m = (0, d.uid)();
-var I = e => {
+  E = n("782340"),
+  N = n("291115");
+let I = (0, d.uid)();
+var m = e => {
   let {
     email: t,
     setStep: n,
     onBack: l,
     school: d,
-    setSchool: I
+    setSchool: m
   } = e, [f, C] = s.useState(null), [T, S] = s.useState(!1), g = async () => {
     C(null), S(!0);
     try {
@@ -37,51 +37,51 @@ var I = e => {
     null != d && "" !== d && e.charCode === _.KeyboardKeys.ENTER && await g()
   };
   return (0, a.jsxs)("div", {
-    className: E.container,
+    className: N.container,
     children: [(0, a.jsx)("div", {
-      className: E.topImage
+      className: N.topImage
     }), (0, a.jsx)(r.Heading, {
-      className: i(E.centerText, E.header),
+      className: i(N.centerText, N.header),
       variant: "heading-xl/semibold",
-      children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER
+      children: E.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_HEADER
     }), (0, a.jsx)("div", {
-      className: E.descriptionWidth,
+      className: N.descriptionWidth,
       children: (0, a.jsx)(r.Text, {
-        className: E.centerText,
+        className: N.centerText,
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_DESCRIPTION
+        children: E.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_DESCRIPTION
       })
     }), (0, a.jsxs)(r.FormItem, {
-      className: E.formItem,
+      className: N.formItem,
       children: [(0, a.jsx)(r.FormTitle, {
-        id: m,
-        children: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER
+        id: I,
+        children: E.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_HEADER
       }), (0, a.jsx)(r.TextInput, {
         onKeyPress: h,
-        placeholder: N.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
+        placeholder: E.default.Messages.HUB_EMAIL_CONNECTION_SCHOOL_SUBMIT_INPUT_PLACEHOLDER,
         onChange: e => {
-          I(e)
+          m(e)
         },
         error: null == f ? void 0 : f.getAnyErrorMessage(),
-        "aria-labelledby": m
+        "aria-labelledby": I
       })]
     }), (0, a.jsxs)("div", {
-      className: E.footer,
+      className: N.footer,
       children: [(0, a.jsx)(r.Button, {
-        className: E.backButton,
+        className: N.backButton,
         onClick: l,
         look: r.Button.Looks.LINK,
         size: r.Button.Sizes.NONE,
         color: r.Button.Colors.PRIMARY,
-        children: N.default.Messages.BACK
+        children: E.default.Messages.BACK
       }), (0, a.jsx)(r.Button, {
         onClick: g,
         size: r.Button.Sizes.MEDIUM,
         color: r.Button.Colors.BRAND,
-        className: E.submitButton,
+        className: N.submitButton,
         submitting: T,
-        children: N.default.Messages.JOIN_WAITLIST
+        children: E.default.Messages.JOIN_WAITLIST
       })]
     })]
   })

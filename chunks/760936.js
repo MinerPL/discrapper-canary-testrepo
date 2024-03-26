@@ -18,7 +18,7 @@ var a = s("37983"),
   T = s("49111"),
   I = s("782340"),
   f = s("496743");
-let R = {
+let S = {
   [T.StoreRecommendationTypes.NOW_PLAYING]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
       user1: e.username,
@@ -65,9 +65,9 @@ let R = {
     })
   }
 };
-class S extends r.PureComponent {
+class R extends r.PureComponent {
   renderDescription(e, t) {
-    let s = R[e];
+    let s = S[e];
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
   }
   renderActivityDiscordTag(e) {
@@ -158,4 +158,4 @@ class S extends r.PureComponent {
     }, s)
   }
 }
-var m = S
+var m = R

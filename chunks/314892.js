@@ -30,9 +30,9 @@ let h = 0,
         return u.default.Messages.OVERLAY_NOTIFICATIONS_DISABLED
     }
   },
-  m = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
+  E = [d.OverlayNotificationPositions.DISABLED, d.OverlayNotificationPositions.TOP_LEFT, d.OverlayNotificationPositions.TOP_RIGHT, d.OverlayNotificationPositions.BOTTOM_LEFT, d.OverlayNotificationPositions.BOTTOM_RIGHT];
 
-function E(e) {
+function m(e) {
   let {
     position: t,
     onChange: n
@@ -47,7 +47,7 @@ function E(e) {
         className: s(c.wrapper, {
           [c.disabledSelected]: t === d.OverlayNotificationPositions.DISABLED
         }),
-        children: m.map(e => (0, i.jsxs)("label", {
+        children: E.map(e => (0, i.jsxs)("label", {
           className: s({
             [c.selected]: e === t,
             [c.disabled]: e === d.OverlayNotificationPositions.DISABLED,
@@ -74,5 +74,5 @@ function E(e) {
     })]
   })
 }
-E.Positions = d.OverlayNotificationPositions;
-var S = E
+m.Positions = d.OverlayNotificationPositions;
+var S = m

@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return z
   }
 }), a("222007");
-var l = a("37983"),
+var s = a("37983"),
   r = a("884691"),
-  s = a("414456"),
-  n = a.n(s),
+  l = a("414456"),
+  n = a.n(l),
   o = a("265586"),
   i = a("65597"),
   u = a("77078"),
@@ -22,26 +22,26 @@ var l = a("37983"),
   E = a("38766"),
   b = a("601095"),
   S = a("493390"),
-  T = a("697218"),
+  x = a("697218"),
   v = a("944441"),
-  L = a("462579"),
-  x = a("216422"),
+  T = a("462579"),
+  L = a("216422"),
   I = a("956089"),
-  _ = a("50885"),
+  y = a("50885"),
   N = a("21526"),
-  y = a("775416"),
-  O = a("491232"),
-  k = a("677257"),
+  _ = a("775416"),
+  k = a("491232"),
+  O = a("677257"),
   A = a("342676"),
   P = a("450492"),
   R = a("920580"),
-  F = a("54809"),
-  j = a("408381"),
-  D = a("264579"),
-  B = a("646718"),
+  j = a("54809"),
+  F = a("408381"),
+  B = a("264579"),
+  D = a("646718"),
   M = a("782340"),
   w = a("682123");
-let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
+let H = y.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
   U = u.AvatarSizes.SIZE_120,
   W = (0, C.getDecorationSizeForAvatarSize)(U),
   G = e => {
@@ -50,7 +50,7 @@ let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       onClick: a,
       ...r
     } = e;
-    return (0, l.jsx)(u.Button, {
+    return (0, s.jsx)(u.Button, {
       fullWidth: !0,
       look: u.Button.Looks.FILLED,
       onClick: e => {
@@ -65,7 +65,7 @@ let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       className: t,
       ...a
     } = e;
-    return (0, l.jsx)(u.Button, {
+    return (0, s.jsx)(u.Button, {
       color: u.ButtonColors.CUSTOM,
       look: u.Button.Looks.FILLED,
       size: u.ButtonSizes.ICON,
@@ -73,7 +73,7 @@ let H = _.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       innerClassName: w.previewButtonInner,
       "aria-label": M.default.Messages.PREVIEW,
       ...a,
-      children: (0, l.jsx)(L.default, {
+      children: (0, s.jsx)(T.default, {
         width: 24,
         height: 24
       })
@@ -83,12 +83,12 @@ var z = function(e) {
   let {
     product: t,
     category: a,
-    onMount: s,
-    isPremiumUser: L = !1,
-    isGiftEasterEggEnabled: _
+    onMount: l,
+    isPremiumUser: T = !1,
+    isGiftEasterEggEnabled: y
   } = e, {
     analyticsLocations: z
-  } = (0, m.default)(f.default.COLLECTIBLES_SHOP_CARD), K = r.useRef(null), Y = (0, d.default)(K), [X, Z] = r.useState(!1), q = Y || X, $ = (0, i.useStateFromStores)([T.default], () => T.default.getCurrentUser()), [J] = t.items, {
+  } = (0, m.default)(f.default.COLLECTIBLES_SHOP_CARD), Y = r.useRef(null), K = (0, d.default)(Y), [X, Z] = r.useState(!1), q = K || X, $ = (0, i.useStateFromStores)([x.default], () => x.default.getCurrentUser()), [J] = t.items, {
     avatarDecorationSrc: Q,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
@@ -99,12 +99,12 @@ var z = function(e) {
     animateOnHover: !q
   }), {
     buttonColors: ea,
-    backgroundColors: el
-  } = (0, k.default)(t.styles), er = (0, O.getFormattedPriceForCollectiblesProduct)(t, L), es = (0, O.isPremiumCollectiblesProduct)(t), en = (0, O.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([y.default], () => [y.default.getPurchase(t.skuId), y.default.isClaiming === t.skuId, null != y.default.isClaiming && y.default.isClaiming !== t.skuId]), ec = r.useRef(null);
+    backgroundColors: es
+  } = (0, O.default)(t.styles), er = (0, k.getFormattedPriceForCollectiblesProduct)(t, T), el = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([_.default], () => [_.default.getPurchase(t.skuId), _.default.isClaiming === t.skuId, null != _.default.isClaiming && _.default.isClaiming !== t.skuId]), ec = r.useRef(null);
   r.useEffect(() => {
     let {
       current: e
-    } = K;
+    } = Y;
     if (null == e) return;
     let t = () => Z(!0);
     return e.addEventListener("focusin", t), e.blur(), () => {
@@ -126,8 +126,8 @@ var z = function(e) {
         analyticsLocations: z
       })
     },
-    em = e => l => {
-      ec.current = l.currentTarget, (0, F.openCollectiblesShopProductDetailsModal)({
+    em = e => s => {
+      ec.current = s.currentTarget, (0, j.openCollectiblesShopProductDetailsModal)({
         product: t,
         category: a,
         analyticsLocations: z,
@@ -137,60 +137,60 @@ var z = function(e) {
     },
     eC = em(f.default.COLLECTIBLES_SHOP_CARD),
     ep = em(f.default.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON),
-    eg = () => (0, l.jsx)("div", {
+    eg = () => (0, s.jsx)("div", {
       className: w.hoverUpsellContainer,
-      children: (0, l.jsx)(h.default, {
+      children: (0, s.jsx)(h.default, {
         fullWidth: !0,
         className: w.premiumSubscribeButton,
         disabled: eu,
         onClick: e => e.stopPropagation(),
         buttonText: M.default.Messages.UNLOCK_WITH_NITRO,
-        subscriptionTier: B.PremiumSubscriptionSKUs.TIER_2
+        subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2
       })
     });
   r.useEffect(() => {
-    null == s || s(K)
-  }, [s]);
-  let eh = () => null != eo ? (0, l.jsx)(u.Text, {
+    null == l || l(Y)
+  }, [l]);
+  let eh = () => null != eo ? (0, s.jsx)(u.Text, {
       color: "always-white",
       variant: "text-md/semibold",
       className: w.priceTag,
       children: M.default.Messages.COLLECTIBLES_ALREADY_OWNED
-    }) : es ? (0, l.jsx)(u.Text, {
+    }) : el ? (0, s.jsx)(u.Text, {
       color: "always-white",
       variant: "text-md/semibold",
       className: w.priceTag,
       children: M.default.Messages.COLLECTIBLES_INCLUDED_WITH_PREMIUM
-    }) : (0, l.jsx)(R.default, {
+    }) : (0, s.jsx)(R.default, {
       product: t,
       className: w.priceTag,
       disableTooltipPointerEvents: !0
     }),
-    eE = () => es ? null : en ? (0, l.jsx)(V, {
+    eE = () => el ? null : en ? (0, s.jsx)(V, {
       style: null != ea ? {
         background: ea.secondary.toHslString(),
         color: ea.text.toHslString()
       } : void 0,
       className: w.defaultPreviewButtonColor,
       onClick: ep
-    }) : (0, l.jsx)(P.default, {
+    }) : (0, s.jsx)(P.default, {
       product: t,
-      returnRef: K,
-      isGiftEasterEggEnabled: _,
+      returnRef: Y,
+      isGiftEasterEggEnabled: y,
       tooltipDelay: 250
     }),
     eb = () => {
-      if (es && !L && !en) return eg();
+      if (el && !T && !en) return eg();
       let e = null != ea ? {
-          background: (0, j.getBackgroundGradient)(ea, 90),
+          background: (0, F.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
         } : void 0,
-        a = es ? {
+        a = el ? {
           submitting: ei,
           submittingStartedLabel: M.default.Messages.COLLECTIBLES_COLLECTING,
           submittingFinishedLabel: M.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
           onClick: async () => {
-            await (0, N.claimPremiumCollectiblesProduct)(t.skuId), (0, D.default)({
+            await (0, N.claimPremiumCollectiblesProduct)(t.skuId), (0, B.default)({
               product: t,
               analyticsLocations: z
             })
@@ -199,20 +199,20 @@ var z = function(e) {
           onClick: () => (0, g.default)({
             skuId: t.skuId,
             analyticsLocations: z,
-            returnRef: K
+            returnRef: Y
           })
         };
-      return (0, l.jsxs)("div", {
+      return (0, s.jsxs)("div", {
         className: w.buttonsContainer,
-        children: [null == eo ? (0, l.jsx)(G, {
+        children: [null == eo ? (0, s.jsx)(G, {
           style: e,
           disabled: eu,
           className: w.purchaseButton,
           ...a,
-          children: es ? M.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : M.default.Messages.COLLECTIBLES_PURCHASE.format({
+          children: el ? M.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : M.default.Messages.COLLECTIBLES_PURCHASE.format({
             price: er
           })
-        }) : (0, l.jsx)(G, {
+        }) : (0, s.jsx)(G, {
           style: e,
           disabled: eu,
           onClick: ef,
@@ -220,38 +220,38 @@ var z = function(e) {
         }), eE()]
       })
     },
-    eS = null != el ? {
-      background: "".concat((0, j.getBackgroundGradient)(el), " border-box border-box"),
-      borderColor: el.border.toHslString(),
-      boxShadow: q ? "0 0 25px 1px ".concat(el.primary.toHslString()) : "none"
+    eS = null != es ? {
+      background: "".concat((0, F.getBackgroundGradient)(es), " border-box border-box"),
+      borderColor: es.border.toHslString(),
+      boxShadow: q ? "0 0 25px 1px ".concat(es.primary.toHslString()) : "none"
     } : void 0;
-  return (0, l.jsx)(u.FocusRing, {
-    children: (0, l.jsxs)(u.Clickable, {
-      innerRef: K,
+  return (0, s.jsx)(u.FocusRing, {
+    children: (0, s.jsxs)(u.Clickable, {
+      innerRef: Y,
       className: w.shopCard,
       onBlur: () => Z(!1),
       onClick: eC,
       style: eS,
       id: "shop-item-".concat(t.skuId),
-      children: [es && (0, l.jsx)(u.Tooltip, {
+      children: [el && (0, s.jsx)(u.Tooltip, {
         tooltipContentClassName: w.premiumWheelTooltipContent,
         color: u.Tooltip.Colors.PRIMARY,
         text: M.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
-        children: e => (0, l.jsx)(I.TextBadge, {
+        children: e => (0, s.jsx)(I.TextBadge, {
           ...e,
           className: w.premiumWheelBadge,
-          text: (0, l.jsx)(x.default, {
+          text: (0, s.jsx)(L.default, {
             className: w.premiumWheel
           })
         })
-      }), (null == J ? void 0 : J.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)("div", {
+      }), (null == J ? void 0 : J.type) === o.CollectiblesItemType.PROFILE_EFFECT && (0, s.jsx)("div", {
         className: w.profileEffectShopPreview,
-        children: (0, l.jsx)(b.default, {
+        children: (0, s.jsx)(b.default, {
           isHovering: q,
           profileEffectId: J.id,
           isPurchased: null != eo
         })
-      }), (null == J ? void 0 : J.type) === o.CollectiblesItemType.AVATAR_DECORATION && (0, l.jsx)(H, {
+      }), (null == J ? void 0 : J.type) === o.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)(H, {
         ...ee,
         avatarDecoration: Q,
         src: et,
@@ -260,38 +260,38 @@ var z = function(e) {
         }),
         size: U,
         "aria-label": M.default.Messages.USER_SETTINGS_AVATAR
-      }), null != eo ? (0, l.jsx)("div", {
+      }), null != eo ? (0, s.jsx)("div", {
         className: (null == J ? void 0 : J.type) === o.CollectiblesItemType.PROFILE_EFFECT ? w.profileEffectCheckmarkWrapper : w.checkmarkWrapper,
-        children: (0, l.jsx)(v.default, {
+        children: (0, s.jsx)(v.default, {
           width: 38,
           height: 38,
           className: w.checkmark
         })
-      }) : null, (0, l.jsxs)("div", {
+      }) : null, (0, s.jsxs)("div", {
         className: n(w.cardText, {
           [w.cardTextProfileEffect]: (null == J ? void 0 : J.type) === o.CollectiblesItemType.PROFILE_EFFECT
         }),
-        children: [(0, l.jsx)(u.Text, {
+        children: [(0, s.jsx)(u.Text, {
           color: "always-white",
           variant: "text-lg/bold",
           className: w.productName,
           children: t.name
-        }), (0, l.jsxs)("div", {
+        }), (0, s.jsxs)("div", {
           className: w.detailsWrapper,
-          children: [(0, l.jsxs)("div", {
+          children: [(0, s.jsxs)("div", {
             className: w.innerBlur,
-            children: [(0, l.jsx)(u.Text, {
+            children: [(0, s.jsx)(u.Text, {
               color: "always-white",
               className: w.description,
               variant: "text-md/normal",
               children: t.summary
             }), eh()]
-          }), (0, l.jsx)("div", {
+          }), (0, s.jsx)("div", {
             className: w.innerHover,
             children: eb()
           })]
         })]
-      }), (0, l.jsx)(A.default, {
+      }), (0, s.jsx)(A.default, {
         category: a,
         className: w.limitedTimeBadge,
         display: "card"

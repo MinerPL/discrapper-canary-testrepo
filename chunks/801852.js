@@ -48,25 +48,25 @@ let O = "vc-activities-".concat((0, u.v4)()),
     } = I.BirthdayActivitiesExperiment.useExperiment({
       location: "8009ca_3"
     }), F = (0, o.useStateFromStores)([E.default], () => E.default.getState().theme), V = (0, o.useStateFromStores)([h.default], () => h.default.useReducedMotion), {
-      id: k,
-      guild_id: H
+      id: H,
+      guild_id: k
     } = n;
     l.useEffect(() => {
       _.default.track(M.AnalyticEvents.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, {
-        channel_id: k,
-        guild_id: H
+        channel_id: H,
+        guild_id: k
       })
-    }, [k, H]), l.useEffect(() => {
+    }, [H, k]), l.useEffect(() => {
       !s && u()
     }, [u, s]);
-    let G = (0, f.useAppContext)(),
+    let B = (0, f.useAppContext)(),
       {
-        analyticsLocations: B
+        analyticsLocations: G
       } = (0, p.default)(m.default.ACTIVITIES_MINI_SHELF),
       {
         analyticsLocations: W
-      } = (0, p.default)([...B, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
-      Y = G === M.AppContext.POPOUT,
+      } = (0, p.default)([...G, m.default.ACTIVITIES_MINI_SHELF_BANNER]),
+      Y = B === M.AppContext.POPOUT,
       z = (0, c.useAnalyticsContext)(),
       K = function(e) {
         let t = (0, v.default)({
@@ -85,9 +85,9 @@ let O = "vc-activities-".concat((0, u.v4)()),
           guildId: null !== (e = n.getGuildId()) && void 0 !== e ? e : void 0,
           locationObject: z.location,
           openInPopout: Y,
-          analyticsLocations: B
+          analyticsLocations: G
         }), D(), b()
-      }, [z, B, n, b, D, Y]),
+      }, [z, G, n, b, D, Y]),
       X = l.useCallback(e => {
         P(), _.default.track(M.AnalyticEvents.ACTIVITIES_MINI_SHELF_HOVERED, {
           channel_id: n.id,
@@ -105,7 +105,7 @@ let O = "vc-activities-".concat((0, u.v4)()),
         })]
       }) : null;
     return (0, a.jsx)(p.AnalyticsLocationProvider, {
-      value: B,
+      value: G,
       children: (0, a.jsx)(g.default, {
         children: (0, a.jsxs)(d.Dialog, {
           ref: t,

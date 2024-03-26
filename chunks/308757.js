@@ -26,8 +26,8 @@ var a = n("627445"),
   N = n("929479"),
   p = n("927078"),
   S = n("713536"),
-  A = n("697218"),
-  C = n("357957"),
+  C = n("697218"),
+  A = n("357957"),
   h = n("521012"),
   g = n("552712"),
   M = n("719923"),
@@ -70,9 +70,9 @@ async function v(e) {
   }
   l(null != (c = null != c ? c : g.default.get(n)) && c.applicationId === t, "SKU must belong to application"), c.type === O.SKUTypes.SUBSCRIPTION && !(0, _.getSubscriptionPlansLoaded)([c.id]) && await (0, f.fetchSubscriptionPlansForSKU)(c.id);
   let m = L(),
-    C = A.default.getCurrentUser();
+    A = C.default.getCurrentUser();
   if (c.premium) {
-    if (M.default.canInstallPremiumApplications(C)) return R(c, d);
+    if (M.default.canInstallPremiumApplications(A)) return R(c, d);
     await u.openModal(d), await
 
     function(e, t, n, s, a) {
@@ -145,7 +145,7 @@ let P = {
 function D(e, t, a) {
   let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
     u = Promise.resolve();
-  !C.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
+  !A.default.hasFetchedPaymentSources && (u = o.fetchPaymentSources());
   let {
     isIAP: d,
     context: c,

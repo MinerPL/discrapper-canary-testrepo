@@ -44,9 +44,9 @@ function P(e) {
     maxHeight: P,
     connectedChannelId: D,
     renderExternalHeader: b
-  } = e, U = (0, x.default)(), w = (0, r.useStateFromStoresArray)([T.default], () => null != D ? T.default.getEmbeddedActivitiesForChannel(D) : [], [D]), F = (0, v.useEmbeddedApps)(w), V = (0, v.useEmbeddedAppsWithPresence)(F), k = l.useCallback(() => {
+  } = e, U = (0, x.default)(), w = (0, r.useStateFromStoresArray)([T.default], () => null != D ? T.default.getEmbeddedActivitiesForChannel(D) : [], [D]), F = (0, v.useEmbeddedApps)(w), V = (0, v.useEmbeddedAppsWithPresence)(F), H = l.useCallback(() => {
     (0, I.updateActivityPanelMode)(R.ActivityPanelModes.PIP)
-  }, []), H = l.useRef(null), G = (0, r.useStateFromStores)([T.default], () => T.default.getFocusedLayout()), B = G !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
+  }, []), k = l.useRef(null), B = (0, r.useStateFromStores)([T.default], () => T.default.getFocusedLayout()), G = B !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
     o.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
@@ -81,16 +81,16 @@ function P(e) {
   let en = V.get(null === (n = F[0]) || void 0 === n ? void 0 : null === (t = n.application) || void 0 === t ? void 0 : t.id),
     ea = [];
   return null != en && (ea = Array.from(en.embeddedActivity.userIds).map(e => E.default.getUser(e)).filter(e => null != e && void 0 !== e)), (0, a.jsxs)("div", {
-    className: i(y.wrapper, O[G], (0, _.getThemeClass)(j.ThemeTypes.DARK)),
-    ref: H,
-    style: B && null != W ? {
+    className: i(y.wrapper, O[B], (0, _.getThemeClass)(j.ThemeTypes.DARK)),
+    ref: k,
+    style: G && null != W ? {
       minHeight: 200,
       maxHeight: P,
       height: W
     } : void 0,
     children: [null == b ? void 0 : b(), (0, a.jsxs)("div", {
       className: y.activityPanelContainer,
-      children: [B ? null : (0, a.jsx)("div", {
+      children: [G ? null : (0, a.jsx)("div", {
         className: y.header,
         children: (0, a.jsx)(u.Text, {
           color: "header-primary",
@@ -135,7 +135,7 @@ function P(e) {
             })
           }), (0, a.jsx)(h.CenterControlButton, {
             label: L.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
-            onClick: k,
+            onClick: H,
             iconComponent: g.default,
             themeable: !0
           })]
@@ -143,10 +143,10 @@ function P(e) {
           className: y.flex
         })]
       }) : null]
-    }), B ? (0, a.jsx)(d.default, {
+    }), G ? (0, a.jsx)(d.default, {
       minHeight: 480,
       maxHeight: P,
-      resizableNode: H,
+      resizableNode: k,
       onResize: e => {
         C.ComponentDispatch.dispatch(j.ComponentActions.MANUAL_IFRAME_RESIZING, {
           resizing: !0

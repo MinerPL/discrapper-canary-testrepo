@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("442939"),
   p = n("419830"),
   S = n("813006"),
-  A = n("42203"),
-  C = n("305961"),
+  C = n("42203"),
+  A = n("305961"),
   h = n("957255"),
   g = n("697218"),
   M = n("174622"),
@@ -149,7 +149,7 @@ function k(e) {
       e.disconnect()
     }
   }, [w, V, K]);
-  let W = (0, u.useStateFromStores)([C.default], () => null != d.guild ? C.default.getGuild(d.guild.id) : null, [d]),
+  let W = (0, u.useStateFromStores)([A.default], () => null != d.guild ? A.default.getGuild(d.guild.id) : null, [d]),
     z = (0, N.default)([F.id])[0],
     Q = (0, u.useStateFromStores)([f.default], () => {
       var e;
@@ -165,10 +165,10 @@ function k(e) {
         return F.id === t
       })
     }),
-    J = A.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    X = (0, u.useStateFromStores)([h.default], () => null != J && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
+    J = C.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    q = (0, u.useStateFromStores)([h.default], () => null != J && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
     {
-      analyticsLocations: q
+      analyticsLocations: X
     } = (0, m.default)(I.default.INVITE_EMBED),
     $ = (0, _.default)({
       applicationId: F.id,
@@ -182,15 +182,15 @@ function k(e) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
     W = new S.default(d.guild)
   }
-  let ea = es && !X || es && Q,
+  let ea = es && !q || es && Q,
     el = () => {
       E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
         context: p("Invite Button Embed"),
-        analyticsLocations: q
+        analyticsLocations: X
       })
     };
-  return (es && Q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !X && (l = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {

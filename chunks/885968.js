@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("653047"),
   p = n("271938"),
   S = n("42203"),
-  A = n("824563"),
-  C = n("697218"),
+  C = n("824563"),
+  A = n("697218"),
   h = n("811305"),
   g = n("449008"),
   M = n("29883"),
@@ -46,13 +46,13 @@ function v(e) {
   } = (0, l.useStateFromStoresObject)([u.default], () => ({
     embeddedActivity: u.default.getEmbeddedActivitiesForChannel(null != B ? B : "").find(e => e.instanceId === v.id),
     currentEmbeddedActivity: u.default.getCurrentEmbeddedActivity()
-  })), H = (0, l.useStateFromStoresArray)([C.default], () => {
+  })), H = (0, l.useStateFromStoresArray)([A.default], () => {
     var e;
-    return Array.from(null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e ? e : []).map(e => C.default.getUser(e)).filter(g.isNotNullish)
-  }), V = (0, l.useStateFromStores)([A.default], () => {
+    return Array.from(null !== (e = null == F ? void 0 : F.userIds) && void 0 !== e ? e : []).map(e => A.default.getUser(e)).filter(g.isNotNullish)
+  }), V = (0, l.useStateFromStores)([C.default], () => {
     var e;
     let t = null == F ? void 0 : F.userIds.values().next().value;
-    return null == t ? null : null === (e = A.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
+    return null == t ? null : null === (e = C.default.findActivity(t, e => e.application_id === n.id)) || void 0 === e ? void 0 : e.details
   }), Y = a.useMemo(() => {
     let e = new N.default(n);
     return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = O.DEFAULT_EMBEDDED_ACTIVITY_CONFIG), e

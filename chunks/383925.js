@@ -186,7 +186,7 @@ function P() {
       }).join(",\n"))
     }, []),
     I = i.useCallback(e => c(T(), Object.keys(e).map(r => '"'.concat(r, '": {hex: "').concat(e[r].hex, '"}'))), []),
-    D = i.useCallback(e => {
+    B = i.useCallback(e => {
       let r = {};
       Object.keys(e).forEach(t => {
         Object.keys(e[t]).map(a => {
@@ -236,7 +236,7 @@ function P() {
           size: b.Button.Sizes.MIN,
           onClick: () => {
             navigator.clipboard.readText().then(e => {
-              D(JSON.parse(e))
+              B(JSON.parse(e))
             })
           },
           children: "Import"

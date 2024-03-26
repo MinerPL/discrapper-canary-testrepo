@@ -22,8 +22,8 @@ var s = n("37983"),
   N = n("866253"),
   p = n("981601"),
   S = n("671071"),
-  A = n("766274"),
-  C = n("86878"),
+  C = n("766274"),
+  A = n("86878"),
   h = n("925758"),
   g = n("26989"),
   M = n("686470"),
@@ -238,7 +238,7 @@ class B extends a.PureComponent {
 B.defaultProps = {
   isPreview: !1
 };
-var k = l.default.connectStores([m.default, h.default, O.default, M.default, T.default, v.default, C.default, L.default, R.default, g.default], e => {
+var k = l.default.connectStores([m.default, h.default, O.default, M.default, T.default, v.default, A.default, L.default, R.default, g.default], e => {
   let {
     activity: t,
     analyticsLocations: n,
@@ -255,7 +255,7 @@ var k = l.default.connectStores([m.default, h.default, O.default, M.default, T.d
         n = null != t ? t.nick : null,
         s = R.default.getUser(e),
         a = null == s;
-      return null == s && (s = new A.default({
+      return null == s && (s = new C.default({
         discriminator: "0005"
       })), {
         user: s,
@@ -269,7 +269,7 @@ var k = l.default.connectStores([m.default, h.default, O.default, M.default, T.d
   return {
     analyticsLocations: n,
     partyMembers: c,
-    connectedApplication: null != r ? C.default.getApplication(r) : null,
+    connectedApplication: null != r ? A.default.getApplication(r) : null,
     myPartyId: null != u && null != u.party ? u.party.id : null,
     isLaunching: d,
     isSyncable: E && !_,
@@ -277,7 +277,7 @@ var k = l.default.connectStores([m.default, h.default, O.default, M.default, T.d
       LibraryApplicationStore: M.default,
       LaunchableGameStore: T.default,
       DispatchApplicationStore: v.default,
-      ConnectedAppsStore: C.default,
+      ConnectedAppsStore: A.default,
       applicationId: r
     })
   }

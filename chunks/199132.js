@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 });
 var s = a("917351"),
-  l = a("151426"),
-  n = a("913144"),
+  n = a("151426"),
+  l = a("913144"),
   i = a("10641"),
   r = a("599110"),
   o = a("49111");
@@ -17,12 +17,12 @@ function c(e) {
     data: a,
     completed: c
   } = e;
-  !(0, s.isEmpty)(a) && (!(0, i.isDismissibleContentDismissed)(l.DismissibleContent.GAME_ONE_USER_SIGNUPS) && r.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
+  !(0, s.isEmpty)(a) && (!(0, i.isDismissibleContentDismissed)(n.DismissibleContent.GAME_ONE_USER_SIGNUPS) && r.default.track(o.AnalyticEvents.SIGNUP_COMPLETED, {
     target_key: t,
     selected_option_key: a.selectedOptionKey,
     email: a.email,
     completed: c
-  }), (0, i.markDismissibleContentAsDismissed)(l.DismissibleContent.GAME_ONE_USER_SIGNUPS), n.default.dispatch({
+  }), (0, i.markDismissibleContentAsDismissed)(n.DismissibleContent.GAME_ONE_USER_SIGNUPS), l.default.dispatch({
     type: "COMPLETE_USER_SIGN_UP",
     email: a.email,
     targetKey: t,

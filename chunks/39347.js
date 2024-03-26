@@ -77,9 +77,9 @@ function R(e) {
     color: "text-muted",
     children: (0, m.getBadgeCountString)(K)
   });
-  let Z = null !== (t = null == O ? void 0 : O.length) && void 0 !== t ? t : 0;
+  let z = null !== (t = null == O ? void 0 : O.length) && void 0 !== t ? t : 0;
   return null != y && y && k ? (0, l.jsx)(N.default, {
-    userCount: Z,
+    userCount: z,
     video: V || H,
     channel: n
   }) : M && (0, E.hasStream)(O) && W ? (0, l.jsx)(m.TextBadge, {

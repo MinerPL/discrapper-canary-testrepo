@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 }), n("222007"), n("834022");
 var s = n("37983"),
@@ -23,15 +23,15 @@ var s = n("37983"),
   p = n("782340"),
   S = n("232979");
 
-function A(e) {
+function C(e) {
   let {
     message: t,
     channel: l,
-    compact: A
-  } = e, C = (0, r.useStateFromStoresArray)([d.default], () => {
+    compact: C
+  } = e, A = (0, r.useStateFromStoresArray)([d.default], () => {
     let e = d.default.getAllGuildStickers();
     return Array.from(e.values()).flat()
-  }), h = C.slice(0, 20), [g, M] = a.useState(null);
+  }), h = A.slice(0, 20), [g, M] = a.useState(null);
   return (a.useEffect(() => {
     let e = setInterval(() => {
       h.length > 0 && M(h[Math.floor(Math.random() * h.length)])
@@ -40,17 +40,17 @@ function A(e) {
   }, [h]), null == l.guild_id) ? null : (0, s.jsxs)("div", {
     children: [(0, s.jsx)(_.default, {
       className: i(S.mainContainer, {
-        [S.compact]: A
+        [S.compact]: C
       }),
       icon: n("127067"),
-      compact: A,
+      compact: C,
       children: (0, s.jsx)("div", {
         className: i(S.content, {
-          [S.compact]: A
+          [S.compact]: C
         }),
         children: (0, s.jsx)("div", {
           className: i(S.messageContent, {
-            [S.compact]: A
+            [S.compact]: C
           }),
           children: "" !== t.content ? t.content : p.default.Messages.DEADCHAT_PROMPT_1
         })

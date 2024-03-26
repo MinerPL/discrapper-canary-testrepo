@@ -1,7 +1,7 @@
 "use strict";
 t.r(a), t.d(a, {
   default: function() {
-    return I
+    return c
   }
 }), t("222007");
 var l = t("37983"),
@@ -65,8 +65,8 @@ class d extends s.PureComponent {
         ...u
       } = this.props, {
         getClassNameForLayout: d,
-        renderInput: I,
-        title: c,
+        renderInput: c,
+        title: I,
         name: h,
         id: S,
         placeholder: m,
@@ -85,9 +85,9 @@ class d extends s.PureComponent {
       };
       return (0, l.jsx)(o.FormSection, {
         className: i(null == d ? void 0 : d(r)),
-        title: c(),
+        title: I(),
         titleId: S,
-        children: I(E, u)
+        children: c(E, u)
       }, h)
     }, this.renderFormRow = e => {
       let a = e.fields.map(this.renderFormSection);
@@ -98,4 +98,4 @@ class d extends s.PureComponent {
     }
   }
 }
-var I = d
+var c = d

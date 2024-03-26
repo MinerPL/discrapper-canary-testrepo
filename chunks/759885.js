@@ -28,10 +28,10 @@ function p(e) {
     onClick: n,
     beforeTransition: p,
     className: S,
-    openChatWithoutConnecting: A
-  } = e, C = (0, a.useStateFromStores)([_.default, f.default], () => null == t ? "" : (0, o.computeChannelName)(t, _.default, f.default), [t]);
+    openChatWithoutConnecting: C
+  } = e, A = (0, a.useStateFromStores)([_.default, f.default], () => null == t ? "" : (0, o.computeChannelName)(t, _.default, f.default), [t]);
   return (0, s.jsx)(l.Tooltip, {
-    text: C,
+    text: A,
     position: "top",
     children: e => {
       let {
@@ -61,12 +61,12 @@ function p(e) {
               r.default.selectVoiceChannel(a.id);
               return
             }(0, u.transitionTo)(N.Routes.CHANNEL(e, t))
-          }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, A))
+          }(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, C))
         },
         onMouseEnter: a,
         onMouseLeave: o,
         iconType: (0, I.getMentionIconType)(t),
-        children: C
+        children: A
       })
     }
   })

@@ -26,7 +26,7 @@ var s = n("37983"),
       color: l = o.default.colors.WHITE,
       quest: N,
       isInventory: p
-    } = e, S = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, A = (0, r.useStateFromStores)([c.default], () => c.default.locale), C = a.useMemo(() => (0, T.calculatePercentComplete)(N), [N]), h = 100 * C, g = (0, _.isWeb)() && !S, M = () => (0, s.jsxs)("div", {
+    } = e, S = (null === (t = N.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, C = (0, r.useStateFromStores)([c.default], () => c.default.locale), A = a.useMemo(() => (0, T.calculatePercentComplete)(N), [N]), h = 100 * A, g = (0, _.isWeb)() && !S, M = () => (0, s.jsxs)("div", {
       className: m.desktopTooltip,
       style: {
         marginTop: p ? 8 : 0
@@ -54,7 +54,7 @@ var s = n("37983"),
           variant: "text-xs/semibold",
           className: m.percentCompleteLabel,
           color: "none",
-          children: (0, f.formatPercent)(A, C, {
+          children: (0, f.formatPercent)(C, A, {
             roundingMode: "floor"
           })
         }), (0, s.jsx)("div", {

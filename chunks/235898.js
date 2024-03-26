@@ -4,9 +4,9 @@ a.r(t), a.d(t, {
     return c
   }
 }), a("222007");
-var l = a("884691"),
+var s = a("884691"),
   r = a("65597"),
-  s = a("875212"),
+  l = a("875212"),
   n = a("21526"),
   o = a("853987"),
   i = a("12480"),
@@ -15,10 +15,10 @@ var l = a("884691"),
 function c(e) {
   var t;
   let a = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, s.useTriggerDebuggingAA)({
+  (0, l.useTriggerDebuggingAA)({
     location: a + " auto on",
     autoTrackExposure: !0
-  }), (0, s.useTriggerDebuggingAA)({
+  }), (0, l.useTriggerDebuggingAA)({
     location: a + " auto off",
     autoTrackExposure: !1
   });
@@ -28,10 +28,10 @@ function c(e) {
     error: f
   } = function(e) {
     let t = "useMaybeFetchCollectiblesCategories";
-    (0, s.useTriggerDebuggingAA)({
+    (0, l.useTriggerDebuggingAA)({
       location: t + " auto on",
       autoTrackExposure: !0
-    }), (0, s.useTriggerDebuggingAA)({
+    }), (0, l.useTriggerDebuggingAA)({
       location: t + " auto off",
       autoTrackExposure: !1
     });
@@ -39,7 +39,7 @@ function c(e) {
       var e;
       return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
     });
-    return (0, l.useEffect)(() => {
+    return (0, s.useEffect)(() => {
       !(a || i || Date.now() - u < 6e5) && (0, n.fetchCollectiblesCategories)(e)
     }, [a, u, i, e]), {
       isFetching: a,
@@ -54,10 +54,10 @@ function c(e) {
     purchases: h
   } = function() {
     let e = "useFetchPurchases";
-    (0, s.useTriggerDebuggingAA)({
+    (0, l.useTriggerDebuggingAA)({
       location: e + " auto on",
       autoTrackExposure: !0
-    }), (0, s.useTriggerDebuggingAA)({
+    }), (0, l.useTriggerDebuggingAA)({
       location: e + " auto off",
       autoTrackExposure: !1
     });
@@ -66,7 +66,7 @@ function c(e) {
     } = (0, i.default)({
       location: "useFetchPurchases"
     });
-    return (0, l.useEffect)(() => {
+    return (0, s.useEffect)(() => {
       (!f || !(d.size > 0)) && (0, n.fetchCollectiblesPurchases)()
     }, [f]), {
       isClaiming: a,

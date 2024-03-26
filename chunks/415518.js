@@ -24,13 +24,13 @@ var i, a, l = n("37983"),
   h = n("699602"),
   p = n("890957");
 let g = e => e.stopPropagation(),
-  m = () => (0, l.jsx)("div", {
+  E = () => (0, l.jsx)("div", {
     className: h.clickBlocker,
     onClick: g,
     onMouseEnter: g,
     onMouseOver: g
   }),
-  E = () => (0, l.jsx)("div", {
+  m = () => (0, l.jsx)("div", {
     className: h.divider
   }),
   S = (e, t, n) => (0, l.jsx)("div", {
@@ -99,11 +99,11 @@ class Notification extends s.PureComponent {
     if ("function" == typeof e) {
       let i = e(n, t);
       return null != i ? (0, l.jsxs)(s.Fragment, {
-        children: [(0, l.jsx)(E, {}), i]
+        children: [(0, l.jsx)(m, {}), i]
       }, "hint-custom") : null
     }
     return (0, l.jsxs)(s.Fragment, {
-      children: [(0, l.jsx)(E, {}), (0, l.jsx)("div", {
+      children: [(0, l.jsx)(m, {}), (0, l.jsx)("div", {
         className: "string" == typeof e ? h.hintText : void 0,
         children: e
       }, "hint-text")]
@@ -128,7 +128,7 @@ class Notification extends s.PureComponent {
     if (null != e) {
       let t = e(u, r);
       return null != t ? (0, l.jsxs)(s.Fragment, {
-        children: [(0, l.jsx)(E, {}), t]
+        children: [(0, l.jsx)(m, {}), t]
       }, "footer-custom-content") : null
     }
     if (null != i || null != a) {
@@ -141,7 +141,7 @@ class Notification extends s.PureComponent {
           e = o = d.Button.Colors.WHITE, u = d.Button.Looks.OUTLINED
       }
       return (0, l.jsxs)(s.Fragment, {
-        children: [(0, l.jsx)(E, {}), (0, l.jsxs)("div", {
+        children: [(0, l.jsx)(m, {}), (0, l.jsxs)("div", {
           className: h.buttonContainer,
           children: [null != i ? (0, l.jsx)(d.Button, {
             fullWidth: !0,
@@ -224,7 +224,7 @@ class Notification extends s.PureComponent {
         [h.themeDanger]: "DANGER" === t,
         [h.clickable]: null != e && !n
       }),
-      children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, l.jsx)(m, {}) : null]
+      children: [this.renderCloseButton(), this.renderContent(), this.renderFooter(), n ? (0, l.jsx)(E, {}) : null]
     })
   }
   constructor(e) {

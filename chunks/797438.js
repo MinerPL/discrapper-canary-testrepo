@@ -57,8 +57,8 @@ function x(e) {
     D && k(!1)
   }, [D]);
   let [{
-    dragging: Z
-  }, z] = (0, r.useDrag)({
+    dragging: z
+  }, Z] = (0, r.useDrag)({
     type: p.GuildsNodeType.FOLDER,
     item: () => (null == b || b(), {
       type: p.GuildsNodeType.FOLDER,
@@ -74,7 +74,7 @@ function x(e) {
     K(e)
   }, []), Q = a.useCallback(e => {
     ("ArrowRight" === e.key && !d || "ArrowLeft" === e.key && d) && G()
-  }, [G, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!Z && d, {
+  }, [G, d]), q = null != B && "" !== B ? B : null != M && "" !== M ? M : _.default.Messages.SERVER_FOLDER_PLACEHOLDER, J = (0, u.useTreeItem)("".concat(F)), $ = "folder-items-".concat(F), ee = V.length * (L + v), et = (0, o.useTransition)(!z && d, {
     from: {
       height: 0
     },
@@ -89,7 +89,7 @@ function x(e) {
     }
   }), en = a.useCallback(e => null == n ? void 0 : n(F, e), [n, F]), el = (0, l.jsxs)(I.ListItem, {
     children: [(0, l.jsx)(h.default, {
-      disabled: Z || d,
+      disabled: z || d,
       hovered: H,
       selected: s,
       unread: R,
@@ -100,12 +100,12 @@ function x(e) {
       selected: s,
       disableWrapper: !0,
       children: (0, l.jsx)("div", {
-        ref: y ? z : void 0,
+        ref: y ? Z : void 0,
         className: i({
-          [T.wobble]: !Z && Y && !d
+          [T.wobble]: !z && Y && !d
         }),
         "data-dnd-name": q,
-        children: Z ? (0, l.jsx)(g.default, {}) : (0, l.jsx)(m.default, {
+        children: z ? (0, l.jsx)(g.default, {}) : (0, l.jsx)(m.default, {
           folderNode: t,
           expanded: d,
           forceCircular: O,
@@ -131,7 +131,7 @@ function x(e) {
   return (0, l.jsxs)("div", {
     ref: en,
     className: N.wrapper,
-    children: [!Z && (0, l.jsx)("span", {
+    children: [!z && (0, l.jsx)("span", {
       className: i(N.expandedFolderBackground, {
         [N.collapsed]: !d,
         [N.hover]: W

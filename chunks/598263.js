@@ -59,7 +59,7 @@ function N(e) {
       })
     }, [N, s, L, O]),
     V = (0, r.throttle)(F, 300),
-    k = l.useCallback(e => {
+    H = l.useCallback(e => {
       if (null == L) return;
       let t = {
         ...O,
@@ -71,8 +71,8 @@ function N(e) {
         scrollOffset: y.current
       })
     }, [N, s, L, O]),
-    H = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
-    G = (0, u.useStateFromStores)([c.default], () => {
+    k = null !== (n = null == O ? void 0 : O.offset) && void 0 !== n ? n : 0,
+    B = (0, u.useStateFromStores)([c.default], () => {
       if (null == D.result) return [];
       let e = D.result.messages,
         t = (0, d.createASTHighlighter)("");
@@ -89,14 +89,14 @@ function N(e) {
         })) : a
       }))
     }, [D.result]),
-    B = l.useMemo(() => {
+    G = l.useMemo(() => {
       var e, t, n, a;
       return null == D.result ? {
         documentsIndexed: 0,
         isSearching: !0,
         isIndexing: !1,
         isHistoricalIndexing: !1,
-        offset: H,
+        offset: k,
         totalResults: 0,
         hasError: !1,
         showBlockedResults: !1,
@@ -106,14 +106,14 @@ function N(e) {
         isSearching: !1,
         isIndexing: null !== (t = D.result.doing_deep_historical_index) && void 0 !== t && t,
         isHistoricalIndexing: null !== (n = D.result.doing_deep_historical_index) && void 0 !== n && n,
-        offset: H,
+        offset: k,
         totalResults: null !== (a = D.result.total_results) && void 0 !== a ? a : 0,
         hasError: !1,
         showBlockedResults: !1,
         showNoResultsAlt: !1
       }
-    }, [D.result, H]);
-  return null == b || null == U || null == B ? null : (0, a.jsxs)("div", {
+    }, [D.result, k]);
+  return null == b || null == U || null == G ? null : (0, a.jsxs)("div", {
     className: i(v.container, M),
     style: {
       backgroundColor: w
@@ -127,13 +127,13 @@ function N(e) {
       ref: j,
       onScroll: V,
       children: (0, a.jsx)(m.default, {
-        searchResults: G,
-        search: B,
+        searchResults: B,
+        search: G,
         searchId: s,
         renderEmbeds: !0,
         blockCount: 0,
         scrollTo: () => {},
-        onChangePage: k
+        onChangePage: H
       })
     })]
   })

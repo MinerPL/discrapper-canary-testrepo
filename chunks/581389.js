@@ -45,10 +45,10 @@ var a, l, s = n("37983"),
   w = n("479788"),
   F = n("375202"),
   V = n("16916"),
-  k = n("534222"),
-  H = n("147257"),
-  G = n("109526"),
-  B = n("550410"),
+  H = n("534222"),
+  k = n("147257"),
+  B = n("109526"),
+  G = n("550410"),
   W = n("124824"),
   Y = n("213943"),
   z = n("742683"),
@@ -136,7 +136,7 @@ function e_(e) {
       onClick: null != c ? A : T
     })
   };
-  return C ? R() : (0, s.jsx)(B.default, {
+  return C ? R() : (0, s.jsx)(G.default, {
     children: (0, s.jsx)(h.Popout, {
       renderPopout: e => {
         let {
@@ -194,7 +194,7 @@ let eT = i.memo(function(e) {
       ownerId: t
     } = e;
     return t !== (null == n ? void 0 : n.id)
-  })), _ = (0, k.useActiveEvent)(l.id), I = (0, N.useIsBroadcastingInChannel)(l.id), T = i.useCallback(() => {
+  })), _ = (0, H.useActiveEvent)(l.id), I = (0, N.useIsBroadcastingInChannel)(l.id), T = i.useCallback(() => {
     if ((null == r ? void 0 : r.type) === eg.ParticipantTypes.ACTIVITY && r.id === t) return "ACTIVITY";
     if (S) return "STREAM";
     if (null != _) return "EVENT";
@@ -257,7 +257,7 @@ let eT = i.memo(function(e) {
             channel: l
           });
         case "EVENT":
-          return (0, s.jsx)(H.default, {
+          return (0, s.jsx)(k.default, {
             channelId: l.id,
             onClick: () => {
               p.default.disconnect(), null == a || a()
@@ -394,7 +394,7 @@ var ex = function(e) {
       section: eE.AnalyticsSections.VOICE_CONTROL_TRAY,
       children: [(0, s.jsx)("div", {
         className: eS.eventPromptsContainer,
-        children: (0, s.jsx)(G.default, {
+        children: (0, s.jsx)(B.default, {
           channelId: t.id
         })
       }), (0, s.jsxs)("div", {

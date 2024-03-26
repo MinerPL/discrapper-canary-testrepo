@@ -41,7 +41,7 @@ function N(e) {
     "focus" !== e.type && L()
   }, [L]), U = (0, u.useAnalyticsContext)(), w = (0, o.useAppContext)(), F = w === T.AppContext.POPOUT, {
     analyticsLocations: V
-  } = (0, S.default)(), k = l.useCallback(() => {
+  } = (0, S.default)(), H = l.useCallback(() => {
     (0, g.default)({
       channel: t,
       guildId: t.guild_id,
@@ -49,11 +49,11 @@ function N(e) {
       openInPopout: F,
       analyticsLocations: V
     })
-  }, [U.location, V, t, F]), H = [];
-  !M && H.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
-  let G = (0, m.default)(t.id);
-  return G && !M && H.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(C.default, {
-    contentTypes: H,
+  }, [U.location, V, t, F]), k = [];
+  !M && k.push(i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES);
+  let B = (0, m.default)(t.id);
+  return B && !M && k.push(i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE), (0, a.jsx)(C.default, {
+    contentTypes: k,
     children: e => {
       let {
         visibleContent: n,
@@ -92,7 +92,7 @@ function N(e) {
             isActivityActive: P || R,
             className: x.controlButton,
             onClick: () => {
-              k(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(v.ContentDismissActionType.UNKNOWN)
+              H(), (n === i.DismissibleContent.ACTIVITIES_MINI_SHELF_SPARKLES || n === i.DismissibleContent.ACTIVITY_GDM_ROCKET_SPARKLE || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || n === i.DismissibleContent.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES) && l(v.ContentDismissActionType.UNKNOWN)
             },
             onMouseEnter: b,
             onMouseLeave: y

@@ -17,8 +17,8 @@ var i = n("37983"),
   h = n("637842"),
   p = n("890291"),
   g = n("758547"),
-  m = n("782340"),
-  E = n("369313");
+  E = n("782340"),
+  m = n("369313");
 
 function S(e) {
   let {
@@ -38,14 +38,14 @@ class v extends a.PureComponent {
       guildId: e,
       onDragStart: this.onDragStart
     }, e) : (0, i.jsx)(g.default, {
-      title: m.default.Messages.DIRECT_MESSAGES,
+      title: E.default.Messages.DIRECT_MESSAGES,
       renderSettings: S,
       onDragStart: this.onDragStart,
       children: (0, i.jsx)(p.default, {})
     }), l = n ? "div" : c.default;
     return (0, i.jsxs)(l, {
-      className: s(E.base, {
-        [E.widget]: !n
+      className: s(m.base, {
+        [m.widget]: !n
       }),
       children: [(0, i.jsx)(r.default, {
         isOverlay: !0,

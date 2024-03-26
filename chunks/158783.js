@@ -26,12 +26,12 @@ function m(e) {
       currentUserId: N,
       guild: p,
       onTransitionToInviteChannel: S,
-      onAcceptInstantInvite: A
+      onAcceptInstantInvite: C
     } = e,
-    C = null == p ? void 0 : p.id,
+    A = null == p ? void 0 : p.id,
     h = (0, i.useStateFromStores)([d.default], () => d.default.getGuildId()),
-    g = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getActiveStreamForUser(m.target_user.id, C) : null, [m, C]),
-    M = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getStreamForUser(m.target_user.id, C) : null, [m, C]),
+    g = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getActiveStreamForUser(m.target_user.id, A) : null, [m, A]),
+    M = (0, i.useStateFromStores)([u.default], () => null != m && null != m.target_user ? u.default.getStreamForUser(m.target_user.id, A) : null, [m, A]),
     O = null != m && m.target_type === _.InviteTargetTypes.STREAM && null != m.target_user && null != g,
     R = null != m && null != M && null != m.channel && null != m.guild && M.channelId === m.channel.id && M.guildId === m.guild.id;
   l(null != m, "Invite cannot be null");
@@ -48,7 +48,7 @@ function m(e) {
     p = new o.default(m.guild)
   }
   let y = null != m.channel ? (0, r.createChannelRecordFromInvite)(m.channel) : null,
-    U = O ? S : A;
+    U = O ? S : C;
   x && !R ? a = P ? T.default.Messages.INVITE_BUTTON_STREAM_ENDED_STREAMER : T.default.Messages.INVITE_BUTTON_STREAM_ENDED.format({
     name: v.username
   }) : (t = T.default.Messages.WATCH, n = c.default.Button.Colors.GREEN, O && (t = T.default.Messages.INVITE_BUTTON_STREAM_WATCHING, n = c.default.Button.Colors.PRIMARY), a = P ? T.default.Messages.INVITE_BUTTON_STREAMER : T.default.Messages.INVITE_BUTTON_STREAMING.format({

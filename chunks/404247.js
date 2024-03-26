@@ -21,11 +21,11 @@ var a = s("37983"),
   T = s("493765"),
   I = s("485328"),
   f = s("269936"),
-  R = s("967889"),
-  S = s("393414"),
+  S = s("967889"),
+  R = s("393414"),
   m = s("970366"),
-  N = s("592433"),
-  A = s("489749"),
+  A = s("592433"),
+  N = s("489749"),
   p = s("75576"),
   C = s("49111"),
   g = s("782340"),
@@ -41,7 +41,7 @@ function M(e) {
 l.default.initialize();
 class h extends r.PureComponent {
   componentDidMount() {
-    (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, S.getHistory)().listen(e => {
+    (0, o.updateLocation)(this.props.location), this.stopListeningToHistory = (0, R.getHistory)().listen(e => {
       e.pathname.startsWith(C.Routes.APPLICATION_STORE) && (0, o.updateLocation)(e)
     }), this.props.isAuthenticated && (0, u.fetchPaymentSources)(), I.default.disable(), I.default.setLayout(E.APPLICATION_STORE_LAYOUT), I.default.enable(), (0, m.trackAppUIViewed)("application_store")
   }
@@ -69,7 +69,7 @@ class h extends r.PureComponent {
       location: t,
       render: this.renderContent
     });
-    return (0, a.jsx)(R.default, {
+    return (0, a.jsx)(S.default, {
       renderCustomMessage: this.renderCustomErrorMessage,
       children: s
     })
@@ -91,7 +91,7 @@ class h extends r.PureComponent {
       return (0, a.jsx)(d.default, {
         page: C.AnalyticsPages.STORE_LISTING,
         root: !0,
-        children: (0, a.jsx)(A.default, {
+        children: (0, a.jsx)(N.default, {
           skuId: t,
           applicationId: s,
           slug: r,
@@ -107,7 +107,7 @@ class h extends r.PureComponent {
         render: () => (0, a.jsx)(d.default, {
           page: C.AnalyticsPages.STORE_DIRECTORY_HOME,
           root: !0,
-          children: (0, a.jsx)(N.default, {})
+          children: (0, a.jsx)(A.default, {})
         })
       }), (0, a.jsx)(n.Route, {
         path: C.Routes.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),

@@ -20,8 +20,8 @@ var s, a, l = n("37983"),
   N = n("352326"),
   p = n("964889"),
   S = n("773336"),
-  A = n("882941"),
-  C = n("780009"),
+  C = n("882941"),
+  A = n("780009"),
   h = n("159467"),
   g = n("49111"),
   M = n("782340"),
@@ -177,7 +177,7 @@ class v extends i.Component {
     } = this.props, n = this.getButtonState();
     if ("play" === n) return this.renderPlayButton();
     if ("preorder_wait" === n) return this.renderDisabledButton(n, function(e) {
-      let t = A.getReadablePreorderReleaseDate(e.sku);
+      let t = C.getReadablePreorderReleaseDate(e.sku);
       return null != t ? M.default.Messages.GAME_ACTION_BUTTON_PREORDER_WAIT_TOOLTIP.format({
         date: t
       }) : null
@@ -204,12 +204,12 @@ class v extends i.Component {
         libraryApplication: e,
         source: t
       } = this.props;
-      C.installApplication(e.id, e.branchId, t)
+      A.installApplication(e.id, e.branchId, t)
     }, this.handleUpdate = () => {
       let {
         libraryApplication: e
       } = this.props;
-      C.updateApplication(e.id, e.branchId)
+      A.updateApplication(e.id, e.branchId)
     }, this.onClickHandlers = {
       add_to_library: this.handleAddToLibrary,
       install: this.handleInstall,

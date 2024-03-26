@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SubscriptionCard: function() {
-    return h
+    return f
   },
   SubscriptionCardBenefit: function() {
     return m
@@ -17,14 +17,14 @@ var i = n("421898"),
   c = n("478715"),
   d = n("792788"),
   u = n("484687"),
-  f = n("35589");
+  h = n("35589");
 
-function h(e) {
+function f(e) {
   let {
     description: t,
     imgSrc: n,
     PurchaseButton: i,
-    onPurchase: h,
+    onPurchase: f,
     subscriptionType: m,
     title: x,
     onDetails: v,
@@ -33,10 +33,10 @@ function h(e) {
   } = e;
   return (0, s.jsx)(r.FocusRing, {
     children: (0, s.jsxs)("div", {
-      className: l(u.container, f.hoverCard, null != g ? u.short : void 0),
+      className: l(u.container, h.hoverCard, null != g ? u.short : void 0),
       tabIndex: 0,
       onClick: () => {
-        null != v ? v() : null != h && h()
+        null != v ? v() : null != f && f()
       },
       children: [(0, s.jsxs)("div", {
         className: u.card,
@@ -61,7 +61,7 @@ function h(e) {
           }), null != i && (0, s.jsx)(i, {
             className: u.purchaseBtn,
             onClick: e => {
-              e.stopPropagation(), null == h || h()
+              e.stopPropagation(), null == f || f()
             }
           }), null != t && "" !== t && (0, s.jsx)(o.Text, {
             className: u.description,

@@ -19,11 +19,11 @@ var r = s("140944"),
   T = s("325793"),
   I = s("180790"),
   f = s("167990"),
-  R = s("886676"),
-  S = s("972956"),
+  S = s("886676"),
+  R = s("972956"),
   m = s("521507"),
-  N = s("175949"),
-  A = s("837861"),
+  A = s("175949"),
+  N = s("837861"),
   p = s("664803"),
   C = s("854299"),
   g = s("700684"),
@@ -35,23 +35,23 @@ var r = s("140944"),
   x = s("398683"),
   v = s("816571"),
   D = s("114244"),
-  U = s("991119");
-let b = new Map([
+  b = s("991119");
+let U = new Map([
   ["BG", n],
   ["CZ", u],
-  ["HU", R],
+  ["HU", S],
   ["RO", x],
   ["SE", v],
   ["CY", o],
   ["EE", c],
   ["IS", m],
-  ["IE", S],
+  ["IE", R],
   ["LV", g],
-  ["LI", A],
+  ["LI", N],
   ["LT", p],
   ["LU", C],
   ["MT", O],
-  ["SK", U],
+  ["SK", b],
   ["SI", D],
   ["GR", I],
   ["FI", E],
@@ -63,7 +63,7 @@ let b = new Map([
   ["FR", T],
   ["DE", d],
   ["ES", _],
-  ["IT", N],
+  ["IT", A],
   ["NL", P],
   ["PL", h],
   ["HR", f]
@@ -74,8 +74,8 @@ function j(e) {
     className: t,
     countryCode: s
   } = e;
-  if (null == s || !b.has(s)) return null;
-  let r = b.get(s);
+  if (null == s || !U.has(s)) return null;
+  let r = U.get(s);
   return (0, a.jsx)("img", {
     className: t,
     "aria-hidden": !0,

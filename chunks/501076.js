@@ -25,8 +25,8 @@ var s = n("37983"),
   N = n("290877"),
   p = n("552712"),
   S = n("698041"),
-  A = n("271560"),
-  C = n("49111"),
+  C = n("271560"),
+  A = n("49111"),
   h = n("782340"),
   g = n("728495");
 class M extends a.Component {
@@ -39,8 +39,8 @@ class M extends a.Component {
     } = this.props;
     return {
       ...e,
-      section: null != t ? t : C.AnalyticsSections.APPLICATION_EMBED,
-      object: C.AnalyticsObjects.CARD
+      section: null != t ? t : A.AnalyticsSections.APPLICATION_EMBED,
+      object: A.AnalyticsObjects.CARD
     }
   }
   componentDidMount() {
@@ -71,11 +71,11 @@ class M extends a.Component {
     if (null == e || null == t) return a ? i() : (0, s.jsx)(f.ResponsiveLoadingEmbedTile, {
       isHorizontal: r
     });
-    return e.productLine === C.SKUProductLines.COLLECTIBLES ? (0, s.jsx)(u.default, {
-      section: C.AnalyticsSections.APPLICATION_EMBED,
+    return e.productLine === A.SKUProductLines.COLLECTIBLES ? (0, s.jsx)(u.default, {
+      section: A.AnalyticsSections.APPLICATION_EMBED,
       children: this.renderApplicationTile(e, t)
     }) : (0, s.jsx)(u.default, {
-      section: C.AnalyticsSections.APPLICATION_EMBED,
+      section: A.AnalyticsSections.APPLICATION_EMBED,
       children: (0, s.jsx)(l.Link, {
         onClick: this.handleLinkClick,
         to: this.getStoreListingLocation(),
@@ -106,7 +106,7 @@ class M extends a.Component {
         sku: e
       } = this.props;
       if (null == e) throw Error("Should not be link to ApplicationStoreListing without SKU");
-      return (0, A.getStoreListingLocation)(e.id, {
+      return (0, C.getStoreListingLocation)(e.id, {
         slug: e.slug,
         analyticsSource: this.analyticsLocation
       })
@@ -154,7 +154,7 @@ class M extends a.Component {
       });
       if (null == n) return null;
       let o = null != n && n.primarySkuId === a,
-        u = null != l && l.hasFlag(C.LibraryApplicationFlags.HIDDEN);
+        u = null != l && l.hasFlag(A.LibraryApplicationFlags.HIDDEN);
       return (0, s.jsxs)("div", {
         className: g.tileActions,
         children: [!o || u ? this.renderViewInStoreButton() : (0, s.jsx)(d.default, {
@@ -162,7 +162,7 @@ class M extends a.Component {
           customDisabledColor: r.Button.Colors.PRIMARY,
           size: r.Button.Sizes.SMALL,
           className: g.actionButton,
-          source: C.AnalyticsLocations.MESSAGE_EMBED,
+          source: A.AnalyticsLocations.MESSAGE_EMBED,
           onClick: this.handleActionButtonClick
         }), t && !u || e.premium ? null : (0, s.jsx)(c.default, {
           type: c.default.Types.EMBED,
@@ -174,7 +174,7 @@ class M extends a.Component {
   }
 }
 M.defaultProps = {
-  renderFallback: C.NOOP
+  renderFallback: A.NOOP
 };
 let O = [p.default, N.default, m.default, S.default];
 
