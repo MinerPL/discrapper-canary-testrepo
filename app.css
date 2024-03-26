@@ -19658,6 +19658,10 @@ input[type=checkbox]:focus-visible+.label_ee78c3 {
     margin: 24px
 }
 
+.activityContainerNoMargin__85545 {
+    margin: 0
+}
+
 .leaveActivityIcon__38dcc {
     height: 20px;
     width: 20px
@@ -89412,7 +89416,8 @@ html .tabBadge__002b3 {
 }
 
 .container__9c7cc {
-    padding: 10px
+    padding: 10px;
+    overflow-y: scroll
 }
 
 .rowsContainer__3c06b {
