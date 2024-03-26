@@ -33,6 +33,14 @@ function r(e) {
     location: e
   }, {
     autoTrackExposure: !0
+  }), a.getCurrentConfig({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  }), i.getCurrentConfig({
+    location: e
+  }, {
+    autoTrackExposure: !0
   });
   let {
     enabled: _
@@ -43,3 +51,25 @@ function r(e) {
   });
   return _
 }
+let a = (0, t.createExperiment)({
+    kind: "user",
+    id: "2024-03_holdout_bug_main_wrong_way",
+    label: "Holdout Bug Experiment Right Way (pls ignore)",
+    defaultConfig: {},
+    treatments: [{
+      id: 1,
+      label: "Treament",
+      config: {}
+    }]
+  }),
+  i = (0, t.createExperiment)({
+    kind: "user",
+    id: "2024-03_holdout_bug_main_right_way",
+    label: "Holdout Bug Experiment Wrong Way (pls ignore)",
+    defaultConfig: {},
+    treatments: [{
+      id: 1,
+      label: "Treament",
+      config: {}
+    }]
+  })
