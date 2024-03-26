@@ -18,11 +18,11 @@ var a = s("37983"),
   T = s("55620"),
   I = s("901582"),
   f = s("790219"),
-  S = s("151540"),
-  R = s("86621"),
+  R = s("151540"),
+  S = s("86621"),
   m = s("984376"),
-  A = s("84460"),
-  N = s("299285"),
+  N = s("84460"),
+  A = s("299285"),
   p = s("69927"),
   C = s("791160"),
   g = s("661579"),
@@ -34,25 +34,25 @@ var a = s("37983"),
   x = s("71010"),
   v = s("290877"),
   D = s("437712"),
-  b = s("552712"),
-  U = s("698041"),
+  U = s("552712"),
+  b = s("698041"),
   j = s("167726"),
-  G = s("471671"),
-  y = s("895530"),
-  B = s("145131"),
+  B = s("471671"),
+  G = s("895530"),
+  y = s("145131"),
   k = s("519311"),
   H = s("83900"),
   F = s("216422"),
-  K = s("547896"),
+  w = s("547896"),
   W = s("599110"),
-  w = s("306160"),
+  K = s("306160"),
   V = s("568734"),
   Y = s("153160"),
   z = s("271560"),
   X = s("778043"),
   Q = s("128430"),
-  J = s("824021"),
-  Z = s("542480"),
+  Z = s("824021"),
+  J = s("542480"),
   q = s("308518"),
   $ = s("590177"),
   ee = s("704861"),
@@ -157,7 +157,7 @@ class e_ extends r.PureComponent {
       toolbar: this.renderHeaderToolbar(e, t),
       children: null != s ? (0, a.jsxs)(r.Fragment, {
         children: [(0, a.jsx)(O.default.Icon, {
-          icon: K.default,
+          icon: w.default,
           "aria-label": ed.default.Messages.STORE_CHANNEL
         }), (0, a.jsx)(O.default.Title, {
           children: s.name
@@ -171,7 +171,7 @@ class e_ extends r.PureComponent {
         })]
       }) : null != t ? (0, a.jsxs)(r.Fragment, {
         children: [(0, a.jsx)(O.default.Icon, {
-          icon: K.default,
+          icon: w.default,
           "aria-label": ed.default.Messages.STORE_CHANNEL
         }), (0, a.jsx)(O.default.Title, {
           children: t.name
@@ -254,7 +254,7 @@ class e_ extends r.PureComponent {
     })
   }
   renderFeatures(e) {
-    return (0, a.jsx)(Z.default, {
+    return (0, a.jsx)(J.default, {
       sku: e
     })
   }
@@ -271,12 +271,12 @@ class e_ extends r.PureComponent {
     } = t;
     if (null == i) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(y.default, {
+      children: [(0, a.jsx)(G.default, {
         tag: "h1",
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
         })
-      }), (0, a.jsx)(S.default, {}), (0, a.jsx)(J.default, {
+      }), (0, a.jsx)(R.default, {}), (0, a.jsx)(Z.default, {
         applicationId: e.id,
         blurb: t.summary,
         description: i,
@@ -366,9 +366,9 @@ class e_ extends r.PureComponent {
       isAuthenticated: n
     } = this.props;
     if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(r.Fragment, {
-      children: [this.renderHeader(e, t), (0, a.jsx)(B.default, {
-        align: B.default.Align.CENTER,
-        justify: B.default.Justify.CENTER,
+      children: [this.renderHeader(e, t), (0, a.jsx)(y.default, {
+        align: y.default.Align.CENTER,
+        justify: y.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {
           className: ec.spinner
         })
@@ -422,7 +422,7 @@ class e_ extends r.PureComponent {
       let {
         location: t
       } = this.props;
-      (0, w.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
+      (0, K.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
         showLinkCopied: !0
       }, () => {
         this.showCopyLinkTextTimeout.start(1500, () => {
@@ -571,15 +571,15 @@ class e_ extends r.PureComponent {
         sku: s,
         pageSize: r
       } = this.props;
-      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(B.default, {
-        align: B.default.Align.CENTER,
-        justify: B.default.Justify.CENTER,
+      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(y.default, {
+        align: y.default.Align.CENTER,
+        justify: y.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {})
       }) : r === el.PageSizes.SMALL ? this.renderSmall(e, t, s) : this.renderLarge(e, t, s)
     }
   }
 }
-var eE = (0, R.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, G.default, U.default, b.default, j.default, A.default, N.default, x.default, h.default, D.default], e => {
+var eE = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, P.default, B.default, b.default, U.default, j.default, N.default, A.default, x.default, h.default, D.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: i,
@@ -589,21 +589,21 @@ var eE = (0, R.default)((0, m.default)(l.default.connectStores([v.default, M.def
   } = e;
   if (null == i) {
     if (null == r) throw Error("Needs applicationId or skuId");
-    t = r, null != (i = null != (s = b.default.get(r)) ? s.applicationId : null) && (a = N.default.getApplication(i))
+    t = r, null != (i = null != (s = U.default.get(r)) ? s.applicationId : null) && (a = A.default.getApplication(i))
   } else if (null == r) {
     if (null == i) throw Error("Needs applicationId or skuId");
-    null != (a = N.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? b.default.get(t) : null
+    null != (a = A.default.getApplication(i)) && (t = a.destinationSkuId), s = null != t ? U.default.get(t) : null
   }(null == s ? void 0 : s.flags) != null && (0, V.hasFlag)(s.flags, eo.SKUFlags.STICKER_PACK) && (s = null);
-  let u = null != i && (j.default.inTestModeForApplication(i) || A.default.inDevModeForApplication(i));
+  let u = null != i && (j.default.inTestModeForApplication(i) || N.default.inDevModeForApplication(i));
   return {
     skuId: t,
-    application: null != i ? N.default.getApplication(i) : null,
+    application: null != i ? A.default.getApplication(i) : null,
     isFetchingEntitlements: null != i && D.default.applicationIdsFetching.has(i),
     didFetchEntitlements: null != i && D.default.applicationIdsFetched.has(i),
     shouldFetchStatistics: l && null != i && x.default.shouldFetchStatisticsForApplication(i),
     sku: s,
-    isFocused: G.default.isFocused(),
-    storeListing: U.default.getStoreListing({
+    isFocused: B.default.isFocused(),
+    storeListing: b.default.getStoreListing({
       storeListingId: n,
       skuId: t,
       channelId: null != o ? o.id : null,

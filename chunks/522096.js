@@ -32,10 +32,10 @@ function d(e) {
     renderEmptySearchState: T,
     renderCategoryList: I,
     renderHeaderAccessories: v,
-    rowHeight: A,
-    sectionHeaderHeight: N,
-    sectionFooterHeight: R,
-    itemNodeWidth: O,
+    rowHeight: N,
+    sectionHeaderHeight: A,
+    sectionFooterHeight: O,
+    itemNodeWidth: R,
     listPaddingRight: M,
     itemNodeMargin: k,
     listPadding: L,
@@ -57,7 +57,7 @@ function d(e) {
     collapsedCategories: n,
     gridWidth: B,
     listPaddingRight: M,
-    itemNodeWidth: O,
+    itemNodeWidth: R,
     itemNodeMargin: k
   }), {
     getItemProps: Z,
@@ -127,9 +127,9 @@ function d(e) {
           renderEmptySearchState: T,
           rowCount: K,
           rowCountBySection: W,
-          rowHeight: A,
-          sectionHeaderHeight: N,
-          sectionFooterHeight: R
+          rowHeight: N,
+          sectionHeaderHeight: A,
+          sectionFooterHeight: O
         }) : null
       })]
     })]

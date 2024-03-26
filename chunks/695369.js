@@ -27,7 +27,7 @@ var i = n("37983"),
     } = e, [g, S] = l.useState(!1), C = (0, o.useStateFromStores)([f.default], () => {
       var e, t;
       return g && Object.values(null !== (t = null === (e = f.default.frecencyWithoutFetchingLatest.favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : {}).length <= 2
-    }), [_, T, I] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), A = l.useCallback(() => {
+    }), [_, T, I] = (0, c.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), v = l.useRef(0), N = l.useCallback(() => {
       S(!0), clearTimeout(v.current), v.current = setTimeout(() => {
         S(!1)
       }, 1500)
@@ -36,14 +36,14 @@ var i = n("37983"),
       clearTimeout(v.current)
     }), (0, m.useComponentAction)({
       event: h.ComponentActions.FAVORITE_GIF,
-      handler: A
+      handler: N
     });
-    let N = l.useCallback(() => {
+    let A = l.useCallback(() => {
         (0, c.toggleExpressionPicker)(x.ExpressionPickerViewType.GIF, a)
       }, [a]),
       {
-        Component: R,
-        events: O,
+        Component: O,
+        events: R,
         play: M
       } = (0, u.useGifLottie)();
     if (n) return null;
@@ -57,10 +57,10 @@ var i = n("37983"),
         ...e,
         children: (0, i.jsx)(p.default, {
           innerClassName: y.button,
-          onMouseEnter: O.onMouseEnter,
-          onMouseLeave: O.onMouseLeave,
+          onMouseEnter: R.onMouseEnter,
+          onMouseLeave: R.onMouseLeave,
           onClick: () => {
-            N(), M()
+            A(), M()
           },
           isActive: k,
           pulse: g,
@@ -68,7 +68,7 @@ var i = n("37983"),
           "aria-expanded": k,
           "aria-haspopup": "dialog",
           "aria-controls": I,
-          children: (0, i.jsx)(R, {
+          children: (0, i.jsx)(O, {
             color: "currentColor"
           })
         })

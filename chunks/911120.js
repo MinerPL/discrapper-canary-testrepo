@@ -48,7 +48,7 @@ var S = () => {
     children: [(0, a.jsx)(E.default, {
       className: _.icon
     }), h.default.Messages.DEV_NOTICE_STAGING.format({
-      buildNumber: "278811"
+      buildNumber: "278863"
     }), (0, a.jsx)(I, {})]
   }) : null
 }

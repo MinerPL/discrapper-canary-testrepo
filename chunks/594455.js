@@ -1,74 +1,74 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return u
+    return n
   }
-}), r("222007");
-var n = r("37983"),
-  i = r("884691"),
-  s = r("43837"),
-  u = e => {
+}), s("222007");
+var a = s("37983"),
+  r = s("884691"),
+  i = s("43837"),
+  n = e => {
     let {
       percentage: t = 0,
-      children: r,
-      animationClassName: u,
+      children: s,
+      animationClassName: n,
       initialPercentage: l = 0,
-      progressCircleStrokeSize: a = 2
-    } = e, o = 43 + a / 2, c = 2 * Math.PI * o, [d, E] = i.useState(l);
-    return i.useEffect(() => {
+      progressCircleStrokeSize: o = 2
+    } = e, u = 43 + o / 2, d = 2 * Math.PI * u, [c, _] = r.useState(l);
+    return r.useEffect(() => {
       let e = setTimeout(() => {
-        E(t)
+        _(t)
       }, 200);
       return () => clearTimeout(e)
-    }, [t]), (0, n.jsxs)("div", {
-      className: s.circleContainer,
-      children: [(0, n.jsxs)("svg", {
+    }, [t]), (0, a.jsxs)("div", {
+      className: i.circleContainer,
+      children: [(0, a.jsxs)("svg", {
         viewBox: "0 0 100 100",
-        className: s.circleSVG,
-        children: [(0, n.jsx)("circle", {
-          className: s.baseProgressCircle,
+        className: i.circleSVG,
+        children: [(0, a.jsx)("circle", {
+          className: i.baseProgressCircle,
           fill: "transparent",
-          strokeWidth: a,
-          r: "".concat(o),
+          strokeWidth: o,
+          r: "".concat(u),
           cx: "50%",
           cy: "50%"
-        }), (0, n.jsx)("circle", {
+        }), (0, a.jsx)("circle", {
           stroke: "url(#gradient)",
-          strokeWidth: a,
+          strokeWidth: o,
           strokeLinecap: "round",
-          strokeDasharray: "".concat(c, " ").concat(c),
-          className: u,
+          strokeDasharray: "".concat(d, " ").concat(d),
+          className: n,
           style: {
-            strokeDashoffset: (1 - d / 100) * c
+            strokeDashoffset: (1 - c / 100) * d
           },
-          r: "".concat(o),
+          r: "".concat(u),
           cx: "50%",
           cy: "50%"
         })]
-      }), (0, n.jsx)("svg", {
+      }), (0, a.jsx)("svg", {
         width: "0",
         height: "0",
-        children: (0, n.jsxs)("linearGradient", {
+        children: (0, a.jsxs)("linearGradient", {
           id: "gradient",
           x1: "0%",
           y1: "0%",
           x2: "100%",
           y2: "100%",
-          children: [(0, n.jsx)("stop", {
+          children: [(0, a.jsx)("stop", {
             offset: "0%",
             style: {
               stopColor: "#FFBDF2"
             }
-          }), (0, n.jsx)("stop", {
+          }), (0, a.jsx)("stop", {
             offset: "100%",
             style: {
               stopColor: "#E742E1"
             }
           })]
         })
-      }), (0, n.jsx)("div", {
-        className: s.childrenContainer,
-        children: r
+      }), (0, a.jsx)("div", {
+        className: i.childrenContainer,
+        children: s
       })]
     })
   }

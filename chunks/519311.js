@@ -47,10 +47,10 @@ function f(e) {
   return E("Offer", e)
 }
 
-function S(e) {
+function R(e) {
   return E("QuantitativeValue", e)
-}(o = r || (r = {})).DAMAGED = "http://schema.org/DamagedCondition", o.NEW = "http://schema.org/NewCondition", o.REFURBISHED = "http://schema.org/RefurbishedCondition", o.USED = "http://schema.org/UsedCondition", (u = i || (i = {})).DISCONTINUED = "http://schema.org/Discontinued", u.IN_STOCK = "http://schema.org/InStock", u.IN_STORE_ONLY = "http://schema.org/InStoreOnly", u.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", u.ONLINE_ONLY = "http://schema.org/OnlineOnly", u.OUT_OF_STOCK = "http://schema.org/OutOfStock", u.PREORDER = "http://schema.org/PreOrder", u.PRESALE = "http://schema.org/PreSale", u.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = r, f.ItemAvailability = i, (d = n || (n = {})).YEARLY = "ANN", d.MONTHLY = "MON", S.UnitCodes = n;
-class R extends _.Component {
+}(o = r || (r = {})).DAMAGED = "http://schema.org/DamagedCondition", o.NEW = "http://schema.org/NewCondition", o.REFURBISHED = "http://schema.org/RefurbishedCondition", o.USED = "http://schema.org/UsedCondition", (u = i || (i = {})).DISCONTINUED = "http://schema.org/Discontinued", u.IN_STOCK = "http://schema.org/InStock", u.IN_STORE_ONLY = "http://schema.org/InStoreOnly", u.LIMITED_AVAILABILITY = "http://schema.org/LimitedAvailability", u.ONLINE_ONLY = "http://schema.org/OnlineOnly", u.OUT_OF_STOCK = "http://schema.org/OutOfStock", u.PREORDER = "http://schema.org/PreOrder", u.PRESALE = "http://schema.org/PreSale", u.SOLD_OUT = "http://schema.org/SoldOut", f.ItemConditions = r, f.ItemAvailability = i, (d = n || (n = {})).YEARLY = "ANN", d.MONTHLY = "MON", R.UnitCodes = n;
+class S extends _.Component {
   render() {
     let {
       debug: e,
@@ -65,19 +65,19 @@ class R extends _.Component {
     })
   }
 }
-R.Thing = T, R.Brand = T, R.Person = function(e) {
+S.Thing = T, S.Brand = T, S.Person = function(e) {
   return E("Person", e)
-}, R.Organization = function(e) {
+}, S.Organization = function(e) {
   return E("Organization", e)
-}, R.ItemPage = function(e) {
+}, S.ItemPage = function(e) {
   return E("ItemPage", e)
-}, R.Product = I, R.Offer = f, R.Rating = function(e) {
+}, S.Product = I, S.Offer = f, S.Rating = function(e) {
   return E("Rating", e)
-}, R.AggregateRating = function(e) {
+}, S.AggregateRating = function(e) {
   return E("AggregateRating", e)
-}, R.AggregateOffer = function(e) {
+}, S.AggregateOffer = function(e) {
   return E("AggregateOffer", e)
-}, R.QuantitativeValue = S, R.UnitPriceSpecification = function(e) {
+}, S.QuantitativeValue = R, S.UnitPriceSpecification = function(e) {
   return E("UnitPriceSpecification", e)
 };
-var m = R
+var m = S

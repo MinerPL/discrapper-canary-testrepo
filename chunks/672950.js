@@ -1,20 +1,20 @@
 "use strict";
-r.r(t), r.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return s
+    return i
   }
 });
-var n = r("37983");
-r("884691");
-var i = r("75196"),
-  s = e => {
+var a = s("37983");
+s("884691");
+var r = s("75196"),
+  i = e => {
     let {
       className: t,
-      backgroundColor: r,
-      backgroundCircleSize: s,
-      ...u
+      backgroundColor: s,
+      backgroundCircleSize: i,
+      ...n
     } = e;
-    return (0, n.jsxs)("svg", {
+    return (0, a.jsxs)("svg", {
       width: "100%",
       height: "100%",
       viewBox: "0 0 100 100",
@@ -23,24 +23,24 @@ var i = r("75196"),
         overflow: "visible"
       },
       xmlns: "http://www.w3.org/2000/svg",
-      ...(0, i.default)({
-        ...u
+      ...(0, r.default)({
+        ...n
       }),
-      children: [(0, n.jsx)("circle", {
-        r: null != s ? s : "40%",
+      children: [(0, a.jsx)("circle", {
+        r: null != i ? i : "40%",
         cx: "50%",
         cy: "50%",
-        className: r
-      }), (0, n.jsxs)("g", {
+        className: s
+      }), (0, a.jsxs)("g", {
         transform: "translate(50, 50) scale(0.6) translate(-51, -52)",
-        children: [(0, n.jsx)("path", {
+        children: [(0, a.jsx)("path", {
           d: "M52.0002 11.7556L28.3402 35.4156V68.6956L52.0002 92.3556L75.6602 68.6956V35.4156L52.0002 11.7556ZM63.8302 63.7556L52.0002 75.6289L40.1702 63.7989V40.3122L52.0002 28.4822L63.8302 40.3122V63.7556Z",
           fill: "#FF6BFA",
           className: t
-        }), (0, n.jsx)("path", {
+        }), (0, a.jsx)("path", {
           d: "M40.1702 40.3122V63.7989L52.0002 75.6289L63.8302 63.7989V40.3122L52.0002 28.4822L40.1702 40.3122Z",
           fill: "#FFDEF9"
-        }), (0, n.jsx)("path", {
+        }), (0, a.jsx)("path", {
           d: "M52.0002 11.7556V28.4822L63.8302 40.3122L75.6602 35.4156L52.0002 11.7556Z",
           fill: "#FFB0FF"
         })]

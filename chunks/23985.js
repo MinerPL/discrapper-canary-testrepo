@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 });
 var a = s("37983"),
@@ -18,10 +18,10 @@ var a = s("37983"),
   T = s("764206"),
   I = s("271560"),
   f = s("760936"),
-  S = s("697092"),
-  R = s("782340"),
+  R = s("697092"),
+  S = s("782340"),
   m = s("250244");
-class A extends r.Component {
+class N extends r.Component {
   renderReasons(e, t, s) {
     return 0 === e.length && 0 === t.length ? null : (0, a.jsx)("div", {
       className: m.section,
@@ -47,7 +47,7 @@ class A extends r.Component {
       storeListing: e
     } = this.props;
     return null != e.staffNotes ? {
-      type: S.default.Types.STAFF_NOTES,
+      type: R.default.Types.STAFF_NOTES,
       staffNotes: e.staffNotes
     } : null
   }
@@ -65,15 +65,15 @@ class A extends r.Component {
       className: n(m.root, i),
       children: [(0, a.jsx)("div", {
         className: m.header,
-        children: R.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
-      }), this.renderReasons(e, t, r), null != l ? (0, a.jsx)(S.default, {
+        children: S.default.Messages.APPLICATION_STORE_SECTION_TITLE_RECOMMENDATION
+      }), this.renderReasons(e, t, r), null != l ? (0, a.jsx)(R.default, {
         data: l,
         className: m.review
       }) : null]
     })
   }
 }
-var N = l.default.connectStores([_.default, d.default, E.default, o.default, c.default, u.default], e => {
+var A = l.default.connectStores([_.default, d.default, E.default, o.default, c.default, u.default], e => {
   let {
     sku: t
   } = e;
@@ -82,4 +82,4 @@ var N = l.default.connectStores([_.default, d.default, E.default, o.default, c.d
     nonSocialReasons: (0, I.getNonSocialRecommendationReasons)(t.id, _.default, E.default),
     hidePersonalInformation: u.default.hidePersonalInformation
   }
-})(A)
+})(N)

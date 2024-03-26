@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return _
+    return E
   }
 }), r("222007");
 var n = r("37983"),
@@ -14,7 +14,7 @@ var n = r("37983"),
   d = r("49111"),
   c = r("782340"),
   f = r("44026");
-class E extends i.Component {
+class p extends i.Component {
   render() {
     return (0, n.jsxs)("div", {
       className: f.streamerModeEnabled,
@@ -35,7 +35,7 @@ class E extends i.Component {
     }
   }
 }
-E.defaultProps = {
+p.defaultProps = {
   disableButton: !1
 };
-var _ = E
+var E = p

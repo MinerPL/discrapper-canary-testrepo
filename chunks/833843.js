@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("267567"),
   c = n("42203"),
   f = n("476765"),
-  h = n("599110"),
-  v = n("686904"),
+  v = n("599110"),
+  h = n("686904"),
   E = n("933326"),
   m = n("398604"),
   C = n("152475"),
@@ -45,7 +45,7 @@ function w(e) {
     isHub: a,
     isMember: u,
     recurrenceId: o
-  } = e, c = (0, m.isGuildScheduledEventActive)(t), f = (0, r.useStateFromStores)([m.default], () => m.default.isInterestedInEventRecurrence(t.id, o), [o, t]), h = (0, C.default)(t), v = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(n.id), [n.id]), E = (0, g.useIsChannelPublic)(null == l ? void 0 : l.id, t.id), _ = (0, L.default)({
+  } = e, c = (0, m.isGuildScheduledEventActive)(t), f = (0, r.useStateFromStores)([m.default], () => m.default.isInterestedInEventRecurrence(t.id, o), [o, t]), v = (0, C.default)(t), h = (0, r.useStateFromStores)([d.default], () => d.default.isLurking(n.id), [n.id]), E = (0, g.useIsChannelPublic)(null == l ? void 0 : l.id, t.id), _ = (0, L.default)({
     guild: n,
     channel: l,
     guildScheduledEvent: t,
@@ -57,20 +57,20 @@ function w(e) {
   } = t;
   return a ? (0, i.jsx)(R.default, {
     isActive: c,
-    isUserLurking: v,
+    isUserLurking: h,
     rsvped: f,
     isMember: u,
     isDetailsView: !0,
     guildName: null == n ? void 0 : n.name,
     isChannelPublic: E,
-    canInvite: h,
+    canInvite: v,
     ..._
   }) : (0, i.jsx)(T.default, {
     isActive: c,
-    isUserLurking: v,
+    isUserLurking: h,
     rsvped: f,
     isChannelPublic: E,
-    canInvite: h,
+    canInvite: v,
     entityType: p,
     ..._
   })
@@ -90,9 +90,9 @@ var V = e => {
   } = (0, _.default)(O, D), F = (0, o.default)(n), H = null == V ? void 0 : V.channel_id, k = (0, r.useStateFromStores)([c.default], () => c.default.getChannel(H), [H]), B = (0, f.useUID)(), [Z, z] = l.useState(j.EventDetailSections.EVENT_INFO), W = (0, S.default)(D, R), Y = (0, p.default)(O, D, R), [X, {
     loading: K,
     error: J
-  }] = (0, v.default)(() => E.default.getGuildEventUsers(null == V ? void 0 : V.id, R, O));
+  }] = (0, h.default)(() => E.default.getGuildEventUsers(null == V ? void 0 : V.id, R, O));
   l.useEffect(() => {
-    null == V ? g() : h.default.track(b.AnalyticEvents.OPEN_MODAL, {
+    null == V ? g() : v.default.track(b.AnalyticEvents.OPEN_MODAL, {
       type: j.ANALYTICS_GUILD_EVENTS_MODAL_NAME,
       guild_id: V.guild_id
     })

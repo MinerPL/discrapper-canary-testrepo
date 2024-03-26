@@ -20,8 +20,8 @@ function f(e) {
     selectedTab: n,
     onTabSelected: r,
     userCount: f,
-    hasBanner: h,
-    isHub: v = !1
+    hasBanner: v,
+    isHub: h = !1
   } = e, E = l.useRef(null);
   l.useEffect(() => {
     var e, t, n;
@@ -35,7 +35,7 @@ function f(e) {
       id: o.EventDetailSections.EVENT_INFO,
       children: d.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE
     }, "event-details")];
-  return !v && C.push((0, i.jsx)(a.TabBar.Item, {
+  return !h && C.push((0, i.jsx)(a.TabBar.Item, {
     className: c.tabBarItem,
     id: o.EventDetailSections.RSVP_LIST,
     children: m
@@ -47,7 +47,7 @@ function f(e) {
       className: c.closeButton,
       "aria-label": d.default.Messages.CLOSE,
       children: (0, i.jsx)(u.default, {
-        className: s(c.closeIcon, h && c.closeIconBanner)
+        className: s(c.closeIcon, v && c.closeIconBanner)
       })
     }), (0, i.jsx)(a.TabBar, {
       className: c.tabBar,

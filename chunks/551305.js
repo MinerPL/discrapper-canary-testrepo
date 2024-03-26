@@ -59,10 +59,10 @@ var x = s.memo(function(e) {
     pulse: T,
     sparkle: I,
     notification: v,
-    "aria-label": A,
-    "aria-expanded": N,
-    "aria-haspopup": R,
-    "aria-controls": O
+    "aria-label": N,
+    "aria-expanded": A,
+    "aria-haspopup": O,
+    "aria-controls": R
   } = e, M = (0, u.useTransition)(null != x, {
     ...h,
     keys: e => e ? "children" : "icon"
@@ -86,10 +86,10 @@ var x = s.memo(function(e) {
   return (0, a.jsxs)(d.Button, {
     look: d.Button.Looks.BLANK,
     size: d.Button.Sizes.NONE,
-    "aria-label": A,
-    "aria-expanded": N,
-    "aria-haspopup": R,
-    "aria-controls": O,
+    "aria-label": N,
+    "aria-expanded": A,
+    "aria-haspopup": O,
+    "aria-controls": R,
     disabled: n,
     className: o(t, {
       [m.active]: y

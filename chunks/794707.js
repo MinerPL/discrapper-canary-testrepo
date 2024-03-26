@@ -26,7 +26,7 @@ let u = l.forwardRef(function(e, t) {
     rowHeight: g,
     sectionHeaderHeight: S,
     sectionFooterHeight: C
-  } = e, _ = l.useRef(!1), T = l.useRef(null), I = (0, s.useExpressionPickerStore)(e => e.searchQuery), v = n.useStore(e => e.activeCategoryIndex), A = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  } = e, _ = l.useRef(!1), T = l.useRef(null), I = (0, s.useExpressionPickerStore)(e => e.searchQuery), v = n.useStore(e => e.activeCategoryIndex), N = (0, r.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: v,
     isScrolling: _,
     listRef: T,
@@ -79,7 +79,7 @@ let u = l.forwardRef(function(e, t) {
     children: [I.length > 0 && !u && null != x ? x() : (0, i.jsx)(a.default, {
       role: "none presentation",
       listPadding: d,
-      onScroll: A,
+      onScroll: N,
       renderRow: c,
       renderSection: f,
       renderSectionHeader: p,

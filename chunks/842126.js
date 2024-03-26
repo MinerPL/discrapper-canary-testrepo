@@ -32,10 +32,10 @@ var i = n("37983"),
       onInspect: T,
       surrogateCodePoint: I,
       getEmojiItemProps: v,
-      getEmojiRowProps: A,
-      isScrolling: N,
-      isUsingKeyboardNavigation: R,
-      rowIndex: O,
+      getEmojiRowProps: N,
+      isScrolling: A,
+      isUsingKeyboardNavigation: O,
+      rowIndex: R,
       allowAnimatedEmoji: M,
       showEmojiFavoriteTooltip: k,
       channelGuildId: L,
@@ -64,12 +64,12 @@ var i = n("37983"),
               visibleRowIndex: n,
               columnIndex: o
             } = e, u = G.rowIndex === n && G.columnIndex === o, d = t => {
-              t.stopPropagation(), !N.current && !R.current && (a(e, {
+              t.stopPropagation(), !A.current && !O.current && (a(e, {
                 isFinalSelection: !0,
                 toggleFavorite: !1
               }), f.default.open(e.guildId, S.GuildSettingsSections.EMOJI, S.AnalyticsSections.EMOJI_PICKER_POPOUT))
             }, c = () => {
-              !N.current && !R.current && T(e)
+              !A.current && !O.current && T(e)
             };
             return function() {
               var e;
@@ -81,7 +81,7 @@ var i = n("37983"),
                 tabIndex: p,
                 onFocus: h,
                 ...x
-              } = null !== (e = v(o, O)) && void 0 !== e ? e : {};
+              } = null !== (e = v(o, R)) && void 0 !== e ? e : {};
               return (0, l.createElement)("li", {
                 ...x,
                 key: t
@@ -119,12 +119,12 @@ var i = n("37983"),
               visibleRowIndex: s
             } = e, r = G.rowIndex === s && G.columnIndex === l;
             return (0, i.jsx)(y.default, {
-              rowIndex: O,
+              rowIndex: R,
               descriptor: e,
               emojiItemKey: t,
               isInspected: r,
-              isScrolling: N,
-              isUsingKeyboardNavigation: R,
+              isScrolling: A,
+              isUsingKeyboardNavigation: O,
               surrogateCodePoint: I,
               allowAnimatedEmoji: M,
               selectedItemClassName: b,
@@ -146,7 +146,7 @@ var i = n("37983"),
         }
       },
       Z = e => (0, i.jsx)("ul", {
-        ...A(O),
+        ...N(R),
         className: s(_.emojiListRow, {
           [_.emojiListRowLargeSize]: W,
           [_.emojiListRowMediumSize]: Y

@@ -18,11 +18,11 @@ var a = s("37983"),
   T = s("393414"),
   I = s("239380"),
   f = s("813006"),
-  S = s("305961"),
-  R = s("895530"),
+  R = s("305961"),
+  S = s("895530"),
   m = s("145131"),
-  A = s("476263"),
-  N = s("36694"),
+  N = s("476263"),
+  A = s("36694"),
   p = s("75576"),
   C = s("49111"),
   g = s("782340"),
@@ -73,21 +73,21 @@ class P extends r.PureComponent {
       align: m.default.Align.CENTER,
       children: [(0, a.jsx)("div", {
         children: g.default.Messages.JOINED_GUILD
-      }), (0, a.jsx)(N.default, {
+      }), (0, a.jsx)(A.default, {
         className: O.joinedCheckmark
       })]
     })) : r && t && (c = g.default.Messages.JOIN_GUILD) : (c = g.default.Messages._LOGIN, _ = this.handleLogin), (0, a.jsxs)("div", {
       className: n(l, o === p.PageSizes.SMALL ? O.inviteSmall : O.inviteLarge),
-      children: [(0, a.jsx)(R.default, {
+      children: [(0, a.jsx)(S.default, {
         children: g.default.Messages.APPLICATION_STORE_SECTION_TITLE_VERIFIED_GUILD
       }), (0, a.jsxs)("div", {
         className: O.content,
         children: [(0, a.jsxs)("div", {
           className: O.info,
-          children: [(0, a.jsx)(A.default, {
+          children: [(0, a.jsx)(N.default, {
             guild: d,
             active: !0,
-            size: A.default.Sizes.LARGE,
+            size: N.default.Sizes.LARGE,
             className: O.guildIcon
           }), (0, a.jsxs)("div", {
             className: O.infoText,
@@ -134,12 +134,12 @@ class P extends r.PureComponent {
     }
   }
 }
-var M = (0, _.default)(o.default.connectStores([S.default, E.default], e => {
+var M = (0, _.default)(o.default.connectStores([R.default, E.default], e => {
   let {
     guild: t
   } = e, s = E.default.isLurking(t.id);
   return {
-    isInGuild: null != S.default.getGuild(t.id) && !s,
+    isInGuild: null != R.default.getGuild(t.id) && !s,
     isLurking: s
   }
 })(P))

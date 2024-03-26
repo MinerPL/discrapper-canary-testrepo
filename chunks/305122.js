@@ -16,16 +16,16 @@ n.r(t), n.d(t, {
     return v
   },
   removeFavoriteSound: function() {
-    return A
-  },
-  playSoundLocally: function() {
     return N
   },
+  playSoundLocally: function() {
+    return A
+  },
   reportSoundStartedPlaying: function() {
-    return R
+    return O
   },
   reportSoundFinishedPlaying: function() {
-    return O
+    return R
   },
   updateUserSoundboardVolume: function() {
     return M
@@ -146,13 +146,13 @@ function v(e) {
   }), !1) : !t.soundIds.includes(e) && void t.soundIds.push(e), h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function A(e) {
+function N(e) {
   u.FrecencyUserSettingsActionCreators.updateAsync("favoriteSoundboardSounds", t => {
     t.soundIds = t.soundIds.filter(t => t !== e)
   }, h.UserSettingsDelay.INFREQUENT_USER_ACTION)
 }
 
-function N(e, t, n) {
+function A(e, t, n) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY",
     sound: t,
@@ -161,7 +161,7 @@ function N(e, t, n) {
   })
 }
 
-function R(e, t) {
+function O(e, t) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_START",
     soundId: e,
@@ -169,7 +169,7 @@ function R(e, t) {
   })
 }
 
-function O(e, t) {
+function R(e, t) {
   s.default.dispatch({
     type: "GUILD_SOUNDBOARD_SOUND_PLAY_END",
     soundId: e,

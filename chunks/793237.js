@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return T
   },
   deleteSummary: function() {
-    return A
+    return N
   },
   default: function() {
-    return N
+    return A
   }
 });
 var i = n("884691"),
@@ -197,7 +197,7 @@ async function v(e) {
     error: t
   })
 }
-async function A(e) {
+async function N(e) {
   try {
     await r.HTTP.del(h.Routes.CHANNEL_SUMMARY(e.channelId, e.id)), o.default.dispatch({
       type: "DELETE_SUMMARY",
@@ -207,7 +207,7 @@ async function A(e) {
     throw new u.APIError(e)
   }
 }
-var N = {
+var A = {
   setSummaryFeedback: T,
   updateVisibleMessages: _,
   setSelectedSummary: C,
@@ -233,5 +233,5 @@ var N = {
       }, [n, t])
     }(t), (0, s.useStateFromStoresArray)([m.default], () => m.default.topSummaries(), [])
   },
-  deleteSummary: A
+  deleteSummary: N
 }

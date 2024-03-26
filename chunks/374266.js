@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), s("222007");
 var a = s("37983"),
@@ -18,12 +18,12 @@ var a = s("37983"),
   T = s("49111"),
   I = s("782340"),
   f = s("28918");
-let S = {
+let R = {
   [T.OperatingSystems.WINDOWS]: _.PlatformTypes.WINDOWS,
   [T.OperatingSystems.MACOS]: _.PlatformTypes.OSX,
   [T.OperatingSystems.LINUX]: _.PlatformTypes.LINUX
 };
-class R extends r.PureComponent {
+class S extends r.PureComponent {
   render() {
     let {
       active: e,
@@ -77,7 +77,7 @@ let m = e => [{
   key: I.default.Messages.APPLICATION_STORE_SPECS_NOTES,
   value: e.notes
 }];
-class A extends r.PureComponent {
+class N extends r.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       systemRequirements: s
@@ -99,7 +99,7 @@ class A extends r.PureComponent {
       className: f.tabs,
       children: [(0, a.jsx)("div", {
         className: f.separator
-      }), r.map(t => (0, a.jsx)(R, {
+      }), r.map(t => (0, a.jsx)(S, {
         active: t === s,
         onClick: () => this.handleSelectOperatingSystem(t),
         pageSize: e,
@@ -164,10 +164,10 @@ class A extends r.PureComponent {
     let t = (0, _.getPlatform)(),
       s = Object.keys(e.systemRequirements),
       a = s[0];
-    for (let e of s) S[e] === t && (a = e);
+    for (let e of s) R[e] === t && (a = e);
     this.state = {
       selectedOperatingSystem: a
     }
   }
 }
-var N = A
+var A = N

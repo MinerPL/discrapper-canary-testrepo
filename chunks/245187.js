@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   BlockedPaymentsContentSettings: function() {
-    return A
+    return N
   },
   BlockedPaymentsContentModal: function() {
-    return N
+    return A
   },
   BlockedPaymentsWarning: function() {
     return p
@@ -25,13 +25,13 @@ var r = s("414456"),
   T = s("49111"),
   I = s("782340"),
   f = s("872773"),
-  S = s("584503"),
-  R = s("45656");
+  R = s("584503"),
+  S = s("45656");
 
 function m(e) {
   let {
     className: t
-  } = e, s = (0, u.default)(), r = (0, l.isThemeDark)(s) ? S : R;
+  } = e, s = (0, u.default)(), r = (0, l.isThemeDark)(s) ? R : S;
   return (0, a.jsxs)("div", {
     className: i(f.container, t),
     children: [(0, a.jsx)(o.Heading, {
@@ -57,13 +57,13 @@ function m(e) {
   })
 }
 
-function A() {
+function N() {
   return (0, a.jsx)(m, {
     className: f.settings
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     onClose: t
   } = e;

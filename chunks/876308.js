@@ -40,10 +40,10 @@ function T(e) {
 }
 var I = l.memo(function(e) {
   var t, n, a, c, I, v;
-  let A, {
-      src: N,
-      volume: R = 1,
-      onVolumeChange: O,
+  let N, {
+      src: A,
+      volume: O = 1,
+      onVolumeChange: R,
       onMute: M,
       waveform: k,
       durationSecs: L,
@@ -61,7 +61,7 @@ var I = l.memo(function(e) {
     [z, Z] = l.useState(!1),
     [J, Q] = l.useState(!1),
     [q, X] = l.useState("none"),
-    [$, ee] = l.useState(() => "function" == typeof R ? R() : R),
+    [$, ee] = l.useState(() => "function" == typeof O ? O() : O),
     et = l.useRef(void 0),
     en = l.useCallback(() => {
       Y(e => !e)
@@ -89,8 +89,8 @@ var I = l.memo(function(e) {
     }, [D]),
     eo = l.useCallback(e => {
       let t = (0, E.perceptualToAmplitude)(e, 1);
-      K(0 === t), ee(t), null == O || O(t)
-    }, [O]),
+      K(0 === t), ee(t), null == R || R(t)
+    }, [R]),
     eu = l.useCallback(() => {
       K(!V), null == M || M(!V)
     }, [V, M]),
@@ -129,7 +129,7 @@ var I = l.memo(function(e) {
     }(), () => {
       null != e && cancelAnimationFrame(e)
     }
-  }, [t, n, a]), c = N, I = W, v = Y, l.useEffect(() => {
+  }, [t, n, a]), c = A, I = W, v = Y, l.useEffect(() => {
     if (I) return h.ComponentDispatch.dispatch(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, {
       src: c
     }), h.ComponentDispatch.subscribe(g.ComponentActions.VOICE_MESSAGE_PLAYBACK_STARTED, e), () => {
@@ -145,11 +145,11 @@ var I = l.memo(function(e) {
   }, [c, I, v]);
   let em = W ? p.default : m.default,
     eh = W ? S.default.Messages.PAUSE : S.default.Messages.PLAY;
-  A = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
+  N = "Safari" === platform.name ? (0, i.jsx)(l.Suspense, {
     children: (0, i.jsx)(_, {
       ref: w,
       className: C.audioElement,
-      src: N,
+      src: A,
       preload: q,
       playing: W && !z,
       onEnded: es,
@@ -170,7 +170,7 @@ var I = l.memo(function(e) {
     volume: $,
     playing: W && !z,
     children: (0, i.jsx)("source", {
-      src: N
+      src: A
     })
   });
   let ex = (0, r.useStateFromStores)([u.default], () => u.default.useReducedMotion),
@@ -227,6 +227,6 @@ var I = l.memo(function(e) {
       onToggleMute: eu,
       onVolumeShow: P,
       onVolumeHide: b
-    }), A]
+    }), N]
   })
 })

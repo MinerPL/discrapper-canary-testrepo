@@ -1,23 +1,23 @@
 "use strict";
-n.r(t), n.d(t, {
+r.r(t), r.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var s = n("446674"),
-  i = n("95410"),
-  a = n("913144"),
-  l = n("49111");
-let r = {
+var n = r("446674"),
+  i = r("95410"),
+  s = r("913144"),
+  l = r("49111");
+let a = {
     lastViewedPath: null,
     lastViewedNonVoicePath: null
   },
-  u = r,
+  u = a,
   o = "LAST_VIEWED_PATH";
-class c extends s.default.PersistedStore {
+class d extends n.default.PersistedStore {
   initialize() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : r;
-    u = null != e ? e : r
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a;
+    u = null != e ? e : a
   }
   get defaultRoute() {
     return l.Routes.ME
@@ -33,13 +33,13 @@ class c extends s.default.PersistedStore {
     return u
   }
 }
-c.displayName = "DefaultRouteStore", c.persistKey = "DefaultRouteStore", c.migrations = [() => {
+d.displayName = "DefaultRouteStore", d.persistKey = "DefaultRouteStore", d.migrations = [() => {
   let e = i.Storage.get(o, null);
   return i.Storage.remove(o), {
     lastViewedPath: e
   }
 }];
-var d = new c(a.default, {
+var c = new d(s.default, {
   SAVE_LAST_ROUTE: function(e) {
     let {
       path: t

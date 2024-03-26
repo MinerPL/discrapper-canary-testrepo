@@ -4,7 +4,7 @@ s.r(t), s.d(t, {
     return r
   },
   default: function() {
-    return S
+    return R
   }
 });
 var a, r, i = s("37983");
@@ -141,7 +141,7 @@ let o = "premium_tier_2_gradient",
       }), T]
     })
   };
-var S = e => {
+var R = e => {
   let {
     className: t,
     variant: s

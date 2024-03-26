@@ -111,8 +111,8 @@ var a = n("37983"),
   e$ = n("780009"),
   e0 = n("49111"),
   e1 = n("750947"),
-  e2 = n("724210"),
-  e4 = n("56235");
+  e4 = n("724210"),
+  e2 = n("56235");
 n("72177"), n("392453"), n("366679"), n("848872"), n("189857"), n("144747"), n("698041"), n("552712"), n("367530"), n("429464"), n("205817"), n("767960"), n("26092"), n("790618"), n("424562"), n("900938"), n("492114"), n("161810"), n("901998"), n("684442"), n("799286"), n("470055"), n("140596");
 let e9 = !1;
 (0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), em.default.loadServer(), eX.isPlatformEmbedded && (eJ.default.on("USER_SETTINGS_OPEN", () => {
@@ -184,7 +184,7 @@ let e7 = o.default.connectStores([Y.default, ek.default, eG.default], () => ({
   e5 = (0, L.makeAuthenticated)(function() {
     return (0, a.jsx)(v.default, {})
   }),
-  te = [e0.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e2.StaticChannelRoutes).map(e => e0.Routes.CHANNEL(":guildId", e))];
+  te = [e0.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e4.StaticChannelRoutes).map(e => e0.Routes.CHANNEL(":guildId", e))];
 
 function tt(e) {
   let {
@@ -371,7 +371,7 @@ let tn = [{
         guildId: n,
         channelId: s
       } = t.params;
-      (0, es.setNewUser)(e4.NewUserTypes.MARKETING_UNCLAIMED);
+      (0, es.setNewUser)(e2.NewUserTypes.MARKETING_UNCLAIMED);
       let l = e0.Routes.CHANNEL(n, s);
       return (0, a.jsx)(r.Redirect, {
         to: l
@@ -532,7 +532,7 @@ class ti extends s.PureComponent {
           }
         } else null != s && !i && eT.default.closeChannelSidebar(s);
         let u = ea.default.getIsOpen();
-        if (s === e2.StaticChannelRoute.ROLE_SUBSCRIPTIONS) en.default.closeSidebar();
+        if (s === e4.StaticChannelRoute.ROLE_SUBSCRIPTIONS) en.default.closeSidebar();
         else if (_ && u) {
           let t = null == h && a === e0.ME,
             n = e === e0.Routes.GUILD_DISCOVERY;
@@ -557,7 +557,7 @@ class ti extends s.PureComponent {
       guildId: a,
       channelId: s,
       threadId: l
-    } = tt(n), i = (0, eS.isValidGuildId)(a) && a !== e0.ME && a !== e0.FAVORITES, r = null != s && (0, eS.isValidChannelId)(s) && !(0, e2.isStaticChannelRoute)(s);
+    } = tt(n), i = (0, eS.isValidGuildId)(a) && a !== e0.ME && a !== e0.FAVORITES, r = null != s && (0, eS.isValidChannelId)(s) && !(0, e4.isStaticChannelRoute)(s);
     if (r && i) {
       let n = ew.default.getChannel(s);
       if (null == n) ev.default.loadThread(s).then(() => tl({
@@ -570,7 +570,7 @@ class ti extends s.PureComponent {
         state: e.state
       };
       if (null != l) {
-        let n = (0, eS.isValidChannelId)(l) && !(0, e2.isStaticChannelRoute)(s);
+        let n = (0, eS.isValidChannelId)(l) && !(0, e4.isStaticChannelRoute)(s);
         if (!n) return null;
         let i = ew.default.getChannel(l);
         if (null == i) ev.default.loadThread(l).then(() => tl({

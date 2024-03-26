@@ -28,10 +28,10 @@ var l = n("414456"),
   T = n("667618"),
   I = n("865677"),
   v = n("15874"),
-  A = n("774713"),
-  N = n("510788"),
-  R = n("756731"),
-  O = n("762806"),
+  N = n("774713"),
+  A = n("510788"),
+  O = n("756731"),
+  R = n("762806"),
   M = n("438278"),
   k = n("898481"),
   L = n("49111"),
@@ -78,7 +78,7 @@ var l = n("414456"),
       platform: f.default.get(L.PlatformTypes.PLAYSTATION)
     }, "ConnectPlatformActivityButton")];
     else if (Y) {
-      let e = (0, i.jsx)(O.default, {
+      let e = (0, i.jsx)(R.default, {
           activity: n,
           user: l,
           color: D,
@@ -87,7 +87,7 @@ var l = n("414456"),
           channelId: j,
           source: U
         }, "spotify-activity-sync-button"),
-        a = (0, i.jsx)(R.default, {
+        a = (0, i.jsx)(O.default, {
           activity: n,
           user: l,
           color: D,
@@ -99,7 +99,7 @@ var l = n("414456"),
       t = [a, e]
     } else if (z) {
       let e = (0, p.unpackStageChannelParty)(n);
-      null != e && (t = [(0, i.jsx)(A.default, {
+      null != e && (t = [(0, i.jsx)(N.default, {
         guildId: e.guildId,
         channelId: e.channelId,
         color: D,
@@ -136,7 +136,7 @@ var l = n("414456"),
           look: w,
           isEmbedded: H
         }, "join-activity-button"),
-        s = (0, i.jsx)(N.default, {
+        s = (0, i.jsx)(A.default, {
           activity: n,
           user: l,
           color: D,

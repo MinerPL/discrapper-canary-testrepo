@@ -1,4 +1,4 @@
 "use strict";
 e.exports = {
-  wrapper: "wrapper__168a8 " + o("356410").scrollbarGhost
+  wrapper: "wrapper__168a8 " + n("356410").scrollbarGhost
 }

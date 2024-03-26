@@ -7,16 +7,16 @@ n.r(t), n.d(t, {
     return v
   },
   playSound: function() {
-    return A
-  },
-  maybePlayCustomJoinSound: function() {
     return N
   },
+  maybePlayCustomJoinSound: function() {
+    return A
+  },
   useSoundBoardDismissContentTypes: function() {
-    return R
+    return O
   },
   removeCustomJoinSound: function() {
-    return O
+    return R
   },
   updateCustomJoinSound: function() {
     return M
@@ -61,10 +61,10 @@ function v(e, t, n) {
   return (m.default.canUseSoundboardEverywhere(e) || t.guildId === (null == n ? void 0 : n.guild_id) || t.guildId === C.DEFAULT_SOUND_GUILD_ID) && I(t, n) && (!i || t.available)
 }
 
-function A(e, t, n) {
+function N(e, t, n) {
   (0, x.playSoundLocally)(t, e, y.LocalSoundTrigger.SOUNDBOARD), (0, u.sendVoiceChannelSoundboardEffect)(t, e, __OVERLAY__, n)
 }
-async function N(e) {
+async function A(e) {
   let t = f.default.getCurrentUser(),
     n = (0, a.default)(),
     i = (0, S.getCustomJoinSound)(e);
@@ -79,7 +79,7 @@ async function N(e) {
   }
 }
 
-function R(e) {
+function O(e) {
   let {
     isSoundboardButtonDisabled: t = !1
   } = e, n = (0, i.useStateFromStores)([f.default], () => f.default.getCurrentUser()), a = [l.DismissibleContent.SOUNDBOARD_EDUCATION];
@@ -95,7 +95,7 @@ function R(e) {
   return a
 }
 
-function O(e, t) {
+function R(e, t) {
   (0, r.updateUserGuildSettings)(e, n => {
     n.joinSound = void 0, k({
       guildId: e,

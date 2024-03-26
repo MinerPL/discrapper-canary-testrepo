@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return O
   }
 });
 var i = n("37983"),
@@ -27,9 +27,9 @@ var i = n("37983"),
   T = n("317041"),
   I = n("782340"),
   v = n("23429"),
-  A = n("919163");
+  N = n("919163");
 
-function N(e) {
+function A(e) {
   let {
     channel: t,
     command: n,
@@ -58,7 +58,7 @@ function N(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   var t, n;
   let {
     channel: a,
@@ -81,17 +81,17 @@ function R(e) {
   l.useEffect(() => {
     c(u.id)
   }, [u.id, c]);
-  let R = E.default.getApplicationIconSource({
+  let O = E.default.getApplicationIconSource({
       id: u.id,
       icon: u.icon,
       bot: null === (t = u.application) || void 0 === t ? void 0 : t.bot,
       botIconFirst: !0
     }),
-    O = l.useCallback(() => {
+    R = l.useCallback(() => {
       g.dismissAppDetail()
     }, []),
     M = (0, r.useToken)(r.tokens.colors.BG_BASE_PRIMARY).hex(),
-    k = (0, p.default)("number" == typeof R ? "" : null == R ? void 0 : R.uri, null != M ? M : ""),
+    k = (0, p.default)("number" == typeof O ? "" : null == O ? void 0 : O.uri, null != M ? M : ""),
     L = (0, f.getIconComponent)(u),
     P = l.useMemo(() => {
       var e, t;
@@ -107,7 +107,7 @@ function R(e) {
       },
       children: (0, i.jsx)(r.Clickable, {
         "aria-label": I.default.Messages.CLOSE,
-        onClick: O,
+        onClick: R,
         className: v.headerCloseButton,
         children: (0, i.jsx)(h.default, {})
       })
@@ -129,7 +129,7 @@ function R(e) {
           variant: "heading-lg/bold",
           children: u.name
         }), (0, i.jsx)(r.Text, {
-          className: s(v.appDescription, A.markup),
+          className: s(v.appDescription, N.markup),
           variant: "text-sm/medium",
           lineClamp: 3,
           children: P
@@ -148,7 +148,7 @@ function R(e) {
           children: ["Popular", (0, i.jsx)(x.default, {})]
         })]
       }), (0, i.jsx)("ul", {
-        children: _.map(e => (0, i.jsx)(N, {
+        children: _.map(e => (0, i.jsx)(A, {
           channel: a,
           command: e,
           section: u

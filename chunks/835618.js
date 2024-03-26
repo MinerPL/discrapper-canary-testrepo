@@ -25,13 +25,13 @@ var r = s("414456"),
       analyticsLocation: I
     } = e, {
       analyticsLocations: f
-    } = (0, l.default)(T), S = (0, o.useIsSeasonalGiftingActive)(), {
-      enabled: R
+    } = (0, l.default)(T), R = (0, o.useIsSeasonalGiftingActive)(), {
+      enabled: S
     } = o.SeasonalGiftingMarketingExperiment.useExperiment({
       location: "GiftNitro"
     }, {
-      autoTrackExposure: S
-    }), m = R && S;
+      autoTrackExposure: R
+    }), m = S && R;
     return (0, a.jsx)(l.AnalyticsLocationProvider, {
       value: f,
       children: (0, a.jsxs)("div", {

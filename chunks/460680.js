@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return R
+    return S
   }
 });
 var a = s("37983");
@@ -19,28 +19,28 @@ var r = s("414456"),
   T = s("646718"),
   I = s("49111"),
   f = s("782340"),
-  S = s("334081"),
-  R = function(e) {
+  R = s("334081"),
+  S = function(e) {
     let {
       isFullscreen: t
     } = e, {
       promotion: s
-    } = (0, E.useBogoPromotion)(), r = (0, n.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()), R = (0, c.useIsEligibleForBogoPromotion)();
-    if (!R) return null;
+    } = (0, E.useBogoPromotion)(), r = (0, n.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()), S = (0, c.useIsEligibleForBogoPromotion)();
+    if (!S) return null;
     let m = new Date(s.endDate);
     return (0, a.jsx)("div", {
-      className: i(S.banner, {
-        [S.bannerFullscreen]: t
+      className: i(R.banner, {
+        [R.bannerFullscreen]: t
       }),
       children: (0, a.jsxs)("div", {
-        className: S.bannerContent,
+        className: R.bannerContent,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsx)(l.Heading, {
             variant: "display-sm",
             color: "always-white",
             children: null == r ? f.default.Messages.BOGO_BUY_HEADLINE : f.default.Messages.BOGO_UPGRADE_HEADLINE
           }), (0, a.jsx)(l.Text, {
-            className: S.countdown,
+            className: R.countdown,
             variant: "text-sm/medium",
             children: (0, a.jsx)(d.default, {
               endDate: m
@@ -56,9 +56,9 @@ var r = s("414456"),
           })]
         }), (0, a.jsx)(_.default, {
           buttonText: f.default.Messages.BOGO_CLAIM_OFFER,
-          buttonTextClassName: S.subscribeButtonText,
+          buttonTextClassName: R.subscribeButtonText,
           subscriptionTier: T.PremiumSubscriptionSKUs.TIER_2,
-          className: S.subscribeButton,
+          className: R.subscribeButton,
           forceInverted: !0
         })]
       })

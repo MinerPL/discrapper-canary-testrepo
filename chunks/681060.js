@@ -27,10 +27,10 @@ var i = n("37983"),
   T = n("529190"),
   I = n("829290"),
   v = n("842343"),
-  A = n("200197"),
-  N = n("538282"),
-  R = n("241488"),
-  O = n("292936"),
+  N = n("200197"),
+  A = n("538282"),
+  O = n("241488"),
+  R = n("292936"),
   M = n("791234"),
   k = n("267567"),
   L = n("217535"),
@@ -72,10 +72,10 @@ var i = n("37983"),
       className: eT,
       innerClassName: eI,
       editorClassName: ev,
-      id: eA,
-      required: eN,
-      disabled: eR,
-      placeholder: eO,
+      id: eN,
+      required: eA,
+      disabled: eO,
+      placeholder: eR,
       accessibilityLabel: eM,
       channel: ek,
       type: eL,
@@ -161,7 +161,7 @@ var i = n("37983"),
         isPendingMember: s,
         ...r
       }
-    }(ek, eL, tn, eR), td = eL.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eP || eC !== es.COMMAND_SENTINEL, tp = (0, L.default)(), {
+    }(ek, eL, tn, eO), td = eL.toolbarType === J.SlateToolbarTypes.STATIC, tc = !w.UseLegacyChatInput.useSetting() && !(0, z.isAndroidWeb)() && null != window.ResizeObserver, tf = !tc || !(null === (a = eL.commands) || void 0 === a ? void 0 : a.enabled) || !eP || eC !== es.COMMAND_SENTINEL, tp = (0, L.default)(), {
       isSubmitButtonEnabled: tm,
       fontSize: th
     } = (0, p.useStateFromStoresObject)([x.default], () => ({
@@ -170,15 +170,15 @@ var i = n("37983"),
     })), tx = (0, p.useStateFromStores)([B.default], () => B.default.isEnabled());
     ! function(e, t) {
       let n = l.useCallback(() => {
-          !t && (0, N.toggleExpressionPicker)(er.ExpressionPickerViewType.EMOJI, e)
+          !t && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.EMOJI, e)
         }, [t, e]),
         i = l.useCallback(() => {
           var n;
-          !t && (null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending) && (0, N.toggleExpressionPicker)(er.ExpressionPickerViewType.GIF, e)
+          !t && (null === (n = e.gifs) || void 0 === n ? void 0 : n.allowSending) && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.GIF, e)
         }, [t, e]),
         a = l.useCallback(() => {
           var n;
-          !t && (null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending) && (0, N.toggleExpressionPicker)(er.ExpressionPickerViewType.STICKER, e)
+          !t && (null === (n = e.stickers) || void 0 === n ? void 0 : n.allowSending) && (0, A.toggleExpressionPicker)(er.ExpressionPickerViewType.STICKER, e)
         }, [t, e]);
       (0, W.useComponentAction)({
         event: ea.ComponentActions.TOGGLE_EMOJI_POPOUT,
@@ -248,7 +248,7 @@ var i = n("37983"),
             if (s !== H.default.getChannelId()) h.default.saveDraft(s, "", t.drafts.type);
             else f && a.current.clearValue()
           }
-          f && (o(!1), (0, N.closeExpressionPicker)(), d && a.current.focus())
+          f && (o(!1), (0, A.closeExpressionPicker)(), d && a.current.focus())
         })
       }, [a, e, r, t, s]), d = l.useCallback(e => {
         var t;
@@ -281,14 +281,14 @@ var i = n("37983"),
     }();
     let tv = (ex = tS, eE = eL, ey = e9, l.useCallback(e => {
       var t, n;
-      eE === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = ey.current) || void 0 === n || n.insertGIF(e) : ex(e.url, void 0, void 0, !0), (0, N.closeExpressionPicker)(), null === (t = ey.current) || void 0 === t || t.focus()
+      eE === J.ChatInputTypes.CREATE_FORUM_POST ? null === (n = ey.current) || void 0 === n || n.insertGIF(e) : ex(e.url, void 0, void 0, !0), (0, A.closeExpressionPicker)(), null === (t = ey.current) || void 0 === t || t.focus()
     }, [ey, ex, eE]));
-    let tA = (eg = e9, l.useCallback(function(e, t) {
+    let tN = (eg = e9, l.useCallback(function(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
           i = eg.current;
-        null != e && null != i && i.insertEmoji(e, t, n), t && (0, N.closeExpressionPicker)()
+        null != e && null != i && i.insertEmoji(e, t, n), t && (0, A.closeExpressionPicker)()
       }, [eg])),
-      tN = function(e) {
+      tA = function(e) {
         let {
           editorRef: t,
           disabled: n,
@@ -310,7 +310,7 @@ var i = n("37983"),
             value: "",
             uploads: void 0,
             stickers: [e.id]
-          }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, N.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
+          }), null === (d = t.current) || void 0 === d || d.clearValue()), (0, A.closeExpressionPicker)(), null === (u = t.current) || void 0 === u || u.focus())
         }, [n, i, a, s.drafts.type, t, o, r])
       }({
         editorRef: e9,
@@ -320,11 +320,11 @@ var i = n("37983"),
         chatInputType: eL,
         submit: eV
       });
-    let tR = (eS = e9, l.useCallback(e => {
+    let tO = (eS = e9, l.useCallback(e => {
         let t = eS.current;
-        null != e && null != t && t.insertSound(e), (0, N.closeExpressionPicker)()
+        null != e && null != t && t.insertSound(e), (0, A.closeExpressionPicker)()
       }, [eS])),
-      tO = l.useCallback(() => {
+      tR = l.useCallback(() => {
         var e;
         return null == tt ? void 0 : null === (e = tt.current) || void 0 === e ? void 0 : e.hide()
       }, []),
@@ -369,12 +369,12 @@ var i = n("37983"),
         handleAutocompleteVisibilityChange: tD,
         handleOuterClick: tw
       } = function(e, t, n) {
-        let [i, a] = (0, N.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
+        let [i, a] = (0, A.useExpressionPickerStore)(e => [e.activeView, e.activeViewType], d.default);
         l.useEffect(() => () => {
-          (0, N.closeExpressionPicker)(e)
+          (0, A.closeExpressionPicker)(e)
         }, [e]);
         let s = l.useCallback(e => {
-            t.emit("autocomplete-visibility-change", e), e && (0, N.closeExpressionPicker)()
+            t.emit("autocomplete-visibility-change", e), e && (0, A.closeExpressionPicker)()
           }, [t]),
           r = l.useCallback(() => {
             var e;
@@ -412,7 +412,7 @@ var i = n("37983"),
       tZ = (0, I.useShouldShowPTONotice)(ek),
       tJ = null != tn || null != eD || tZ,
       tQ = !!(null === (eu = eL.emojis) || void 0 === eu ? void 0 : eu.button) && tM <= 44;
-    return (0, i.jsx)(A.EventEmitterProvider, {
+    return (0, i.jsx)(N.EventEmitterProvider, {
       value: tE,
       children: (0, i.jsxs)(y.AnalyticsLocationProvider, {
         value: e8,
@@ -441,7 +441,7 @@ var i = n("37983"),
             pendingReply: eD
           }), (0, i.jsxs)("div", {
             ref: te,
-            onScroll: tO,
+            onScroll: tR,
             className: s(eI, {
               [eo.scrollableContainer]: !0,
               [eo.themedBackground]: !e7,
@@ -467,14 +467,14 @@ var i = n("37983"),
                 ringClassName: eo.focusRing,
                 children: (0, i.jsx)(Q.default, {
                   ref: e9,
-                  id: eA,
+                  id: eN,
                   focused: eP,
                   useSlate: tc,
                   textValue: eC,
                   richValue: e_,
                   disabled: ts,
-                  placeholder: eO,
-                  required: eN,
+                  placeholder: eR,
+                  required: eA,
                   accessibilityLabel: eM,
                   isPreviewing: (tl || ta) && tu,
                   channel: ek,
@@ -532,7 +532,7 @@ var i = n("37983"),
             type: eL,
             editorRef: e9,
             onSendMessage: tS,
-            onSendSticker: tN,
+            onSendSticker: tA,
             onVisibilityChange: tD,
             editorHeight: tM,
             setValue: (e, t) => null == ew ? void 0 : ew(null, e, t),
@@ -548,21 +548,21 @@ var i = n("37983"),
             }),
             maxCharacterCount: eZ,
             showRemainingCharsAfterCount: eJ
-          }) : null, tz ? (0, i.jsx)(O.default, {
+          }) : null, tz ? (0, i.jsx)(R.default, {
             editorRef: e9,
             channel: ek,
             isEditorFocused: eP,
-            onSelectSticker: tN,
+            onSelectSticker: tA,
             submitButtonVisible: (null === (ec = eL.submit) || void 0 === ec ? void 0 : ec.button) && (null !== (em = null === (ef = eL.submit) || void 0 === ef ? void 0 : ef.ignorePreference) && void 0 !== em ? em : tm),
             stickerIconVisible: null !== (eh = null === (ep = eL.stickers) || void 0 === ep ? void 0 : ep.button) && void 0 !== eh && eh
           }) : null, e3]
-        }), tU ? null : (0, i.jsx)(R.default, {
+        }), tU ? null : (0, i.jsx)(O.default, {
           positionTargetRef: e4,
           type: eL,
           onSelectGIF: tv,
-          onSelectEmoji: tA,
-          onSelectSticker: tN,
-          onSelectSound: tR,
+          onSelectEmoji: tN,
+          onSelectSticker: tA,
+          onSelectSound: tO,
           channel: ek,
           closeOnModalOuterClick: e6,
           parentModalKey: e2,

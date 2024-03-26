@@ -39,19 +39,19 @@ function I(e) {
   } = e, o = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor();
   return null == o ? null : (0, i.jsxs)("div", {
     className: T.buttons,
-    children: [(0, i.jsx)(A, {
+    children: [(0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "bold",
       children: (0, i.jsx)(c.default, {
         className: s(T.icon, a)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "italics",
       children: (0, i.jsx)(p.default, {
         className: s(T.icon, a)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "strikethrough",
       children: (0, i.jsx)(h.default, {
@@ -59,19 +59,19 @@ function I(e) {
       })
     }), (0, i.jsx)("div", {
       className: s(T.divider, r)
-    }), !(null == l ? void 0 : l.disableBlockQuotes) && (0, i.jsx)(N, {
+    }), !(null == l ? void 0 : l.disableBlockQuotes) && (0, i.jsx)(A, {
       slateEditor: o,
       blockType: "blockQuote",
       children: (0, i.jsx)(d.default, {
         className: s(T.icon, a)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "inlineCode",
       children: (0, i.jsx)(f.default, {
         className: s(T.icon, a)
       })
-    }), (0, i.jsx)(A, {
+    }), (0, i.jsx)(N, {
       slateEditor: o,
       markdownSyntax: "spoiler",
       children: (0, i.jsx)(m.default, {
@@ -151,11 +151,11 @@ var v = l.forwardRef(function(e, t) {
       x: y + (g - y) / 2,
       y: _
     }
-  }, [s, c, a]), [v, A] = l.useState(0), [N, O] = l.useState(0);
+  }, [s, c, a]), [v, N] = l.useState(0), [A, R] = l.useState(0);
   if (l.useLayoutEffect(() => {
       if (null == S || null == _ || null == d.current) return;
       let e = d.current.getBoundingClientRect();
-      O(e.width / 2), A(e.height + 12)
+      R(e.width / 2), N(e.height + 12)
     }, [S, _]), null == S || null == _) return null;
   let M = null === (n = a.current) || void 0 === n ? void 0 : n.getSlateEditor();
   return null == M ? null : (0, i.jsx)(x.default, {
@@ -165,7 +165,7 @@ var v = l.forwardRef(function(e, t) {
       className: T.toolbar,
       style: {
         top: _ - v,
-        left: S - N
+        left: S - A
       },
       onMouseDown: e => {
         e.stopPropagation()
@@ -173,7 +173,7 @@ var v = l.forwardRef(function(e, t) {
       onMouseUp: e => {
         e.stopPropagation()
       },
-      children: [(0, i.jsx)(R, {
+      children: [(0, i.jsx)(O, {
         slateEditor: M
       }), (0, i.jsx)(I, {
         editorRef: a,
@@ -183,7 +183,7 @@ var v = l.forwardRef(function(e, t) {
   })
 });
 
-function A(e) {
+function N(e) {
   let {
     slateEditor: t,
     markdownSyntax: n,
@@ -207,7 +207,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     blockType: t,
     slateEditor: n,
@@ -227,7 +227,7 @@ function N(e) {
   })
 }
 
-function R(e) {
+function O(e) {
   var t;
   let {
     slateEditor: n

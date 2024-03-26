@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("685665"),
   c = n("401642"),
   f = n("26989"),
-  h = n("305961"),
-  v = n("580357"),
+  v = n("305961"),
+  h = n("580357"),
   E = n("476263"),
   m = n("155207"),
   C = n("158998"),
@@ -94,7 +94,7 @@ function P(e) {
       size: E.default.Sizes.MINI,
       active: !0,
       className: s(j.guildIcon, j.icon)
-    }), (0, i.jsx)(v.default, {
+    }), (0, i.jsx)(h.default, {
       guild: t,
       tooltipPosition: "top",
       tooltipColor: u.Tooltip.Colors.PRIMARY,
@@ -152,10 +152,10 @@ function V(e) {
     onClose: d,
     onClickInterestedCount: c,
     isHub: f = !1,
-    containerRef: v,
+    containerRef: h,
     recurrenceId: E,
     setRecurrenceId: m
-  } = e, C = (0, a.useStateFromStores)([h.default], () => null != h.default.getGuild(n.id), [n.id]), {
+  } = e, C = (0, a.useStateFromStores)([v.default], () => null != v.default.getGuild(n.id), [n.id]), {
     startTime: M,
     endTime: L
   } = (0, g.default)(t.id, E), V = (0, I.default)(t.guild_id, t.id, E), D = l.useCallback(e => {
@@ -167,7 +167,7 @@ function V(e) {
   let G = (0, N.recurrenceRuleFromServer)(t.recurrence_rule),
     F = (null == t ? void 0 : t.scheduled_start_time) != null ? (0, T.getRecurrenceStatus)(O, M, new Date(null == t ? void 0 : t.scheduled_start_time)) : null;
   return (0, i.jsxs)("div", {
-    ref: v,
+    ref: h,
     children: [(0, i.jsxs)("div", {
       className: j.header,
       children: [(0, i.jsx)(A.GuildEventTimeStatus, {

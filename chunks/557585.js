@@ -85,14 +85,14 @@ function C(e) {
       let n = r.default.getGuild(t);
       null != n && e.push(n)
     }), e
-  }), v = d.default.canUseSoundboardEverywhere(c), A = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(null == e ? void 0 : e.guild_id)), N = (0, l.useStateFromStores)([o.default], () => {
+  }), v = d.default.canUseSoundboardEverywhere(c), N = (0, l.useStateFromStores)([r.default], () => r.default.getGuild(null == e ? void 0 : e.guild_id)), A = (0, l.useStateFromStores)([o.default], () => {
     let {
       canCreateExpressions: e
-    } = (0, a.getManageResourcePermissions)(A);
+    } = (0, a.getManageResourcePermissions)(N);
     return e
-  }, [A]), {
-    canSeeRecentlyHeard: R,
-    canSeeFrequentlyPlayed: O
+  }, [N]), {
+    canSeeRecentlyHeard: O,
+    canSeeFrequentlyPlayed: R
   } = (0, f.useRecentlyHeardExperiment)({
     location: "soundboard-useSoundGrid",
     autoTrackExposure: !0
@@ -115,14 +115,14 @@ function C(e) {
       potentialSoundIdsForSection: Array.from(C),
       sectionType: h.SoundboardSoundGridSectionType.FAVORITES,
       sortById: !0
-    }), R && g({
+    }), O && g({
       sections: e,
       guildIds: T,
       allSounds: E,
       potentialSoundIdsForSection: k,
       sectionType: h.SoundboardSoundGridSectionType.RECENTLY_HEARD,
       sortById: !1
-    }), O && g({
+    }), R && g({
       sections: e,
       guildIds: T,
       allSounds: E,
@@ -148,7 +148,7 @@ function C(e) {
         key: t.id,
         items: r
       })
-    }(e, A, N, E, t), !v && S(e, E), ! function(e, t, n, i) {
+    }(e, N, A, E, t), !v && S(e, E), ! function(e, t, n, i) {
       for (let a of t) {
         var l;
         if (a.id === n) continue;
@@ -163,11 +163,11 @@ function C(e) {
           items: s
         })
       }
-    }(e, I, null == A ? void 0 : A.id, E), v && S(e, E), {
+    }(e, I, null == N ? void 0 : N.id, E), v && S(e, E), {
       categories: e,
       isFetching: _
     })
-  }, [T, E, C, k, M, O, R, A, N, t, v, I, n, _])
+  }, [T, E, C, k, M, R, O, N, A, t, v, I, n, _])
 }
 
 function _(e, t, n) {

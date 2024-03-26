@@ -26,10 +26,10 @@ var i, l = n("37983"),
   T = n("254490"),
   I = n("850391"),
   v = n("149022"),
-  A = n("296141"),
-  N = n("606013"),
-  R = n("32647"),
-  O = n("970153"),
+  N = n("296141"),
+  A = n("606013"),
+  O = n("32647"),
+  R = n("970153"),
   M = n("49111"),
   k = n("782340"),
   L = n("350583");
@@ -54,7 +54,7 @@ i = class extends a.Component {
     if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
       var t, n;
       let e;
-      e = this.props.useSlate ? this.props.textValue : (0, O.toTextValue)(this.props.richValue, {
+      e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
         mode: "plain"
       }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -174,8 +174,8 @@ i = class extends a.Component {
       spellcheckEnabled: S,
       useNewSlashCommands: C,
       canOnlyUseTextCommands: T,
-      className: A,
-      id: O,
+      className: N,
+      id: R,
       required: k,
       maxCharacterCount: P,
       allowNewLines: j,
@@ -187,11 +187,11 @@ i = class extends a.Component {
       popup: G
     } = this.state, H = {
       channel: x,
-      className: r(A, L.textArea, {
+      className: r(N, L.textArea, {
         [L.textAreaSlate]: g,
         [L.textAreaDisabled]: d || F
       }),
-      id: O,
+      id: R,
       placeholder: this.getPlaceholder(),
       required: k,
       accessibilityLabel: w,
@@ -228,14 +228,14 @@ i = class extends a.Component {
       "aria-describedby": U,
       "aria-labelledby": D,
       "aria-autocomplete": "list"
-    }, B = g ? (0, l.jsx)(R.default, {
+    }, B = g ? (0, l.jsx)(O.default, {
       ref: this.ref,
       ...H,
       type: E,
       value: d ? (0, v.toRichValue)("") : u,
       canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: T
-    }) : (0, l.jsx)(N.default, {
+    }) : (0, l.jsx)(A.default, {
       ref: this.ref,
       ...H,
       value: d ? "" : o
@@ -426,7 +426,7 @@ i = class extends a.Component {
           }
         })
       })(r), this.focus(), !0)
-    }, this._unsubscribe = A.channelEditorPopupStore.subscribe(e => {
+    }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -435,7 +435,7 @@ i = class extends a.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: A.channelEditorPopupStore.getState()
+      popup: N.channelEditorPopupStore.getState()
     }
   }
 }

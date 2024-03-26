@@ -27,10 +27,10 @@ var i = n("37983"),
   T = n("515059"),
   I = n("139321"),
   v = n("454655"),
-  A = n("635956"),
-  N = n("845579"),
-  R = n("697218"),
-  O = n("124299"),
+  N = n("635956"),
+  A = n("845579"),
+  O = n("697218"),
+  R = n("124299"),
   M = n("600785"),
   k = n("599110"),
   L = n("764364"),
@@ -73,10 +73,10 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       isScrolling: y,
       isUsingKeyboardNavigation: S,
       allowAnimatedEmoji: _,
-      channelGuildId: A,
-      messageId: N,
-      isBurstReaction: R,
-      listHeaderClassName: O,
+      channelGuildId: N,
+      messageId: A,
+      isBurstReaction: O,
+      listHeaderClassName: R,
       activeSectionIndex: M,
       upsellGlowOpacity: L,
       enableNitroUpsell: P
@@ -124,14 +124,14 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         rowIndex: e,
         allowAnimatedEmoji: _,
         showEmojiFavoriteTooltip: ea,
-        channelGuildId: A,
+        channelGuildId: N,
         category: l.sectionId,
         selectedItemClassName: Y.selectedItem,
-        messageId: N,
-        isBurstReaction: R,
+        messageId: A,
+        isBurstReaction: O,
         inNitroLockedSection: l.isNitroLocked
       }, e)
-    }), [a, p, r, W, el, u, h, E, y, S, _, ea, A, N, R]);
+    }), [a, p, r, W, el, u, h, E, y, S, _, ea, N, A, O]);
     l.useEffect(() => () => {
       var e, t;
       return null === (t = es.cache) || void 0 === t ? void 0 : null === (e = t.clear) || void 0 === e ? void 0 : e.call(t)
@@ -162,7 +162,7 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           m = P && f && !c,
           h = P && f && c;
         return (0, i.jsx)(T.default, {
-          className: s(Y.header, O, {
+          className: s(Y.header, R, {
             [Y.inactiveNitroHeader]: m,
             [Y.activeNitroHeader]: h
           }),
@@ -171,7 +171,7 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           onClick: () => ei(o, l),
           children: d
         }, o)
-      }), [p, t, ei, O, M, P]),
+      }), [p, t, ei, R, M, P]),
       eo = l.useCallback((e, n) => {
         let l = p[e],
           a = en(e),
@@ -239,7 +239,7 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       messageId: U,
       isBurstReaction: D,
       listHeaderClassName: w
-    } = e, F = l.useRef(!1), G = g.EmojiPickerStore.useStore(e => e.activeCategoryIndex), H = (0, S.useExpressionPickerStore)(e => e.searchQuery), V = N.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([R.default], () => R.default.getCurrentUser()), Z = (0, L.isPremium)(z), {
+    } = e, F = l.useRef(!1), G = g.EmojiPickerStore.useStore(e => e.activeCategoryIndex), H = (0, S.useExpressionPickerStore)(e => e.searchQuery), V = A.AnimateEmoji.useSetting(), z = (0, c.useStateFromStores)([O.default], () => O.default.getCurrentUser()), Z = (0, L.isPremium)(z), {
       location: J
     } = (0, x.useAnalyticsContext)(), {
       analyticsLocations: Q
@@ -323,7 +323,7 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
       "" !== H && (el(0), ee(!1))
     }, [H]), (0, i.jsxs)("div", {
       className: Y.listWrapper,
-      children: [eS ? (0, i.jsx)(O.default, {
+      children: [eS ? (0, i.jsx)(R.default, {
         role: "none presentation",
         className: Y.list,
         listPadding: eu,
@@ -358,7 +358,7 @@ let z = (0, P.cssValueToNumber)(p.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
           color: "header-primary",
           className: Y.upsellText,
           children: W.default.Messages.EMOJI_PICKER_PREMIUM_UPSELL_TITLE
-        }), (0, i.jsx)(A.default, {
+        }), (0, i.jsx)(N.default, {
           className: Y.upsellButton,
           size: m.ButtonSizes.TINY,
           shinyButtonClassName: Y.upsellButton,

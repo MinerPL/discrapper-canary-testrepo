@@ -32,7 +32,7 @@ function T(e) {
     className: a,
     inputClassName: r,
     onSend: T
-  } = e, I = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), A = l.useCallback(e => {
+  } = e, I = l.useRef(null), v = (0, u.useStateFromStores)([E.default], () => E.default.isBlocked(t.id)), N = l.useCallback(e => {
     if ("Enter" === e.key) {
       e.preventDefault(), o(null != I.current, "Keypress on Input when not mounted");
       let n = I.current.value.trim();
@@ -51,7 +51,7 @@ function T(e) {
       }), !0
     }
     e.which === S.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [t, T]), N = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
+  }, [t, T]), A = v ? C.default.Messages.QUICK_DM_BLOCKED : C.default.Messages.QUICK_DM_USER.format({
     name: y.default.getName(t)
   });
   return (0, i.jsx)(d.TextInput, {
@@ -59,9 +59,9 @@ function T(e) {
     inputClassName: s(r, _.input),
     inputRef: I,
     autoFocus: n,
-    placeholder: N,
-    "aria-label": N,
-    onKeyPress: A,
+    placeholder: A,
+    "aria-label": A,
+    onKeyPress: N,
     disabled: v
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return G
+    return B
   }
 }), s("222007");
 var a = s("37983"),
@@ -18,11 +18,11 @@ var a = s("37983"),
   T = s("812204"),
   I = s("685665"),
   f = s("619935"),
-  S = s("308592"),
-  R = s("245187"),
+  R = s("308592"),
+  S = s("245187"),
   m = s("102985"),
-  A = s("697218"),
-  N = s("521012"),
+  N = s("697218"),
+  A = s("521012"),
   p = s("599110"),
   C = s("764364"),
   g = s("446488"),
@@ -34,22 +34,22 @@ var a = s("37983"),
   x = s("157829"),
   v = s("254893"),
   D = s("840326"),
-  b = s("646718"),
-  U = s("49111"),
+  U = s("646718"),
+  b = s("49111"),
   j = s("666026"),
-  G = function(e) {
+  B = function(e) {
     let {
-      entrypoint: t = b.PremiumMarketingEntrypoints.UserSettings
+      entrypoint: t = U.PremiumMarketingEntrypoints.UserSettings
     } = e, s = (0, f.useBlockedPaymentsConfig)(), {
       sourceAnalyticsLocations: i,
-      analyticsLocations: G
-    } = (0, I.default)(T.default.PREMIUM_MARKETING), y = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), B = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), k = (0, L.usePremiumTrialOffer)(), H = (0, h.usePremiumDiscountOffer)(), F = (0, S.useSubscriptionPlansLoaded)(), [K, W] = r.useState(!0), w = r.useRef(0), V = (0, C.isPremiumExactly)(B, b.PremiumTypes.TIER_2), Y = (0, M.useLocalizedPromoQuery)(), z = null == Y ? void 0 : Y.countryCode, X = (0, l.useStateFromStores)([g.default], () => g.default.hasFetched);
+      analyticsLocations: B
+    } = (0, I.default)(T.default.PREMIUM_MARKETING), G = (0, l.useStateFromStores)([A.default], () => A.default.hasFetchedSubscriptions()), y = (0, l.useStateFromStores)([N.default], () => N.default.getCurrentUser()), k = (0, L.usePremiumTrialOffer)(), H = (0, h.usePremiumDiscountOffer)(), F = (0, R.useSubscriptionPlansLoaded)(), [w, W] = r.useState(!0), K = r.useRef(0), V = (0, C.isPremiumExactly)(y, U.PremiumTypes.TIER_2), Y = (0, M.useLocalizedPromoQuery)(), z = null == Y ? void 0 : Y.countryCode, X = (0, l.useStateFromStores)([g.default], () => g.default.hasFetched);
     r.useEffect(() => {
       !X && d.getNitroAffinity()
     }, [X]), r.useEffect(() => {
       u.default.wait(async () => {
         let e = Date.now();
-        await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(z, null, U.RevenueSurfaces.DISCOVERY)]), w.current = Date.now() - e, W(!1)
+        await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(z, null, b.RevenueSurfaces.DISCOVERY)]), K.current = Date.now() - e, W(!1)
       })
     }, [z]), r.useEffect(() => {
       if (s && (null != k || null != H)) {
@@ -57,20 +57,20 @@ var a = s("37983"),
         e ? (0, O.acknowledgeUserOffer)(k, H) : null != k && null == k.expires_at && P.default.acknowledgeUserTrialOffer(k)
       }
     }, [s, k, H]), r.useEffect(() => {
-      !K && p.default.track(U.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
+      !w && p.default.track(b.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
         location_stack: i,
-        load_duration_ms: w.current
+        load_duration_ms: K.current
       })
-    }, [i, K]);
+    }, [i, w]);
     let Q = (0, l.useStateFromStores)([m.default], () => m.default.enabled);
     if (Q) return (0, a.jsx)(E.default, {});
-    if (s) return (0, a.jsx)(R.BlockedPaymentsContentSettings, {});
-    let J = t === b.PremiumMarketingEntrypoints.ApplicationStoreHome;
-    return J && V ? (0, a.jsx)(I.AnalyticsLocationProvider, {
-      value: G,
+    if (s) return (0, a.jsx)(S.BlockedPaymentsContentSettings, {});
+    let Z = t === U.PremiumMarketingEntrypoints.ApplicationStoreHome;
+    return Z && V ? (0, a.jsx)(I.AnalyticsLocationProvider, {
+      value: B,
       children: (0, a.jsx)(D.default, {})
-    }) : y && F && !K ? (0, a.jsx)(I.AnalyticsLocationProvider, {
-      value: G,
+    }) : G && F && !w ? (0, a.jsx)(I.AnalyticsLocationProvider, {
+      value: B,
       children: (0, a.jsx)(v.default, {
         entrypoint: t
       })

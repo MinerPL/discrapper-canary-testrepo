@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return A
+    return N
   }
 });
 var i = n("37983"),
@@ -101,17 +101,17 @@ function I(e) {
     }
   }), {
     command: I
-  } = o.useCommand(E, null !== (t = n.commandKey) && void 0 !== t ? t : ""), v = c.UseLegacyChatInput.useSetting(), A = l.useMemo(() => {
+  } = o.useCommand(E, null !== (t = n.commandKey) && void 0 !== t ? t : ""), v = c.UseLegacyChatInput.useSetting(), N = l.useMemo(() => {
     if (null == I || null == E || I.name !== n.commandName || v) return !1;
     let e = E.isPrivate(),
       t = (0, d.computeIsReadOnlyThread)(E);
     if (t || !e && !C) return !1;
     let i = (null == I ? void 0 : I.applicationId) === g.BuiltInSectionId.BUILT_IN;
     return !!e || !!i || !!_ || !1
-  }, [E, I, C, _, n.commandName, v]), N = l.useCallback(e => {
+  }, [E, I, C, _, n.commandName, v]), A = l.useCallback(e => {
     null == e || e.stopPropagation(), null != E && null != n.commandName && null != n.commandKey && T(E.id, n.commandName, n.commandKey, u.ApplicationCommandTriggerLocations.MENTION)
   }, [E, n.commandKey, n.commandName]);
-  return A ? (0, i.jsx)(s.Tooltip, {
+  return N ? (0, i.jsx)(s.Tooltip, {
     text: n.output,
     position: "top",
     children: e => {
@@ -121,7 +121,7 @@ function I(e) {
       } = e;
       return (0, i.jsxs)(x.default, {
         role: "link",
-        onClick: N,
+        onClick: A,
         onMouseEnter: t,
         onMouseLeave: l,
         children: [S.COMMAND_SENTINEL, r(n.content, p)]
@@ -162,7 +162,7 @@ function v(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   return {
     react: (e, t, n) => (0, i.jsx)(I, {
       node: e,

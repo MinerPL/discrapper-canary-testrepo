@@ -28,7 +28,7 @@ let f = e => {
       })
     })
   },
-  S = e => {
+  R = e => {
     let {
       circle: t,
       smallHeader: s,
@@ -55,7 +55,7 @@ a = class extends i.Component {
       reason: e,
       className: t
     } = this.props;
-    if (e.type === E.StoreRecommendationTypes.RECENT_RELEASE_DATE) return (0, r.jsx)(S, {
+    if (e.type === E.StoreRecommendationTypes.RECENT_RELEASE_DATE) return (0, r.jsx)(R, {
       className: t,
       circle: (0, r.jsx)(f, {
         IconComponent: u.default
@@ -63,7 +63,7 @@ a = class extends i.Component {
       smallHeader: T.default.Messages.APPLICATION_STORE_NEW_RELEASE,
       text: (0, o.dateFormat)(e.releaseDate, "LL")
     });
-    if (e.type === E.StoreRecommendationTypes.RELEASE_DATE) return (0, r.jsx)(S, {
+    if (e.type === E.StoreRecommendationTypes.RELEASE_DATE) return (0, r.jsx)(R, {
       className: t,
       circle: (0, r.jsx)(f, {
         IconComponent: u.default
@@ -71,7 +71,7 @@ a = class extends i.Component {
       smallHeader: T.default.Messages.APPLICATION_STORE_DETAILS_RELEASE_DATE,
       text: (0, o.dateFormat)(e.releaseDate, "LL")
     });
-    if (e.type === E.StoreRecommendationTypes.EARLY_ACCESS) return null != e.releaseDate ? (0, r.jsx)(S, {
+    if (e.type === E.StoreRecommendationTypes.EARLY_ACCESS) return null != e.releaseDate ? (0, r.jsx)(R, {
       className: t,
       circle: (0, r.jsx)(f, {
         IconComponent: c.default,
@@ -79,7 +79,7 @@ a = class extends i.Component {
       }),
       smallHeader: T.default.Messages.APPLICATION_STORE_EARLY_ACCESS,
       text: (0, o.dateFormat)(e.releaseDate, "LL")
-    }) : (0, r.jsx)(S, {
+    }) : (0, r.jsx)(R, {
       className: t,
       circle: (0, r.jsx)(f, {
         IconComponent: c.default,
@@ -87,13 +87,13 @@ a = class extends i.Component {
       }),
       text: T.default.Messages.APPLICATION_STORE_EARLY_ACCESS
     });
-    return e.type === E.StoreRecommendationTypes.FLAVOR_TEXT ? (0, r.jsx)(S, {
+    return e.type === E.StoreRecommendationTypes.FLAVOR_TEXT ? (0, r.jsx)(R, {
       circle: (0, r.jsx)(f, {
         IconComponent: d.default
       }),
       text: e.flavorText,
       className: t
-    }) : e.type === E.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT ? (0, r.jsx)(S, {
+    }) : e.type === E.StoreRecommendationTypes.HAS_FREE_PREMIUM_CONTENT ? (0, r.jsx)(R, {
       className: t,
       circle: (0, r.jsx)(f, {
         IconComponent: _.default,

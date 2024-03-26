@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return v
   },
   default: function() {
-    return R
+    return O
   }
 });
 var i = n("37983");
@@ -36,7 +36,7 @@ let v = {
   }
 };
 
-function A() {
+function N() {
   (0, a.openModalLazy)(async () => {
     let {
       default: e
@@ -46,7 +46,7 @@ function A() {
     })
   })
 }
-let N = {
+let A = {
   sentinel: C.COMMAND_SENTINEL,
   stores: [f.default, u.default, x.default],
   matches: (e, t, n, i, l) => l.commands !== S.CommandMode.DISABLED && null == f.default.getActiveCommand(e.id) && (i || l.commands !== S.CommandMode.OLD_BUILT_INS),
@@ -141,7 +141,7 @@ let N = {
         look: l.Button.Looks.LINK,
         color: l.Button.Colors.BRAND,
         size: l.Button.Sizes.MIN,
-        onClick: A,
+        onClick: N,
         children: T.default.Messages.LEGACY_CHAT_INPUT_SLASH_COMMAND_MISSING_HELP_MESSAGE
       }) : null
     })
@@ -180,4 +180,4 @@ let N = {
     }
   }
 };
-var R = N
+var O = A
