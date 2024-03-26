@@ -37,7 +37,11 @@ let g = e => {
     }
   }, []);
   let d = () => {
-    (0, T.trackQuestContentClicked)(t.id, n, T.QuestContentCTA.COPY_QUEST_URL), (0, _.copy)((0, N.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
+    (0, T.trackQuestContentClicked)({
+      questId: t.id,
+      questContent: n,
+      questContentCTA: T.QuestContentCTA.COPY_QUEST_URL
+    }), (0, _.copy)((0, N.getQuestUrl)(t.id)), i(!0), r.current.start(1e3, () => i(!1))
   };
   return (0, s.jsx)(u.Tooltip, {
     forceOpen: l,

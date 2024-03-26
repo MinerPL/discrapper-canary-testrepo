@@ -42,7 +42,11 @@ function C(e) {
           (0, _.handleClick)({
             href: e.quest.config.getGameLink,
             onConfirm: () => {
-              (0, T.trackQuestContentClicked)(e.quest.id, e.questContent, T.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK), (0, c.default)(e.quest.config.getGameLink)
+              (0, T.trackQuestContentClicked)({
+                questId: e.quest.id,
+                questContent: e.questContent,
+                questContentCTA: T.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
+              }), (0, c.default)(e.quest.config.getGameLink)
             }
           })
         },
@@ -51,7 +55,11 @@ function C(e) {
         id: "share-link",
         label: S.default.Messages.QUESTS_SHARE_LINK,
         action: () => {
-          (0, T.trackQuestContentClicked)(e.quest.id, e.questContent, T.QuestContentCTA.CONTEXT_MENU_COPY_LINK), (0, f.copy)((0, m.getQuestUrl)(e.quest.id))
+          (0, T.trackQuestContentClicked)({
+            questId: e.quest.id,
+            questContent: e.questContent,
+            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_COPY_LINK
+          }), (0, f.copy)((0, m.getQuestUrl)(e.quest.id))
         },
         icon: l.CopyIcon
       })]
@@ -60,13 +68,21 @@ function C(e) {
         id: "learn-more",
         label: S.default.Messages.QUESTS_LEARN_MORE_V2,
         action: () => {
-          (0, T.trackQuestContentClicked)(e.quest.id, e.questContent, T.QuestContentCTA.CONTEXT_MENU_LEARN_MORE), d.default.open(N.UserSettingsSections.INVENTORY)
+          (0, T.trackQuestContentClicked)({
+            questId: e.quest.id,
+            questContent: e.questContent,
+            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
+          }), d.default.open(N.UserSettingsSections.INVENTORY)
         }
       }), e.shouldShowDisclosure && (0, s.jsx)(o.MenuItem, {
         id: "display-disclosure",
         label: S.default.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, T.trackQuestContentClicked)(e.quest.id, e.questContent, T.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE), (0, r.openModalLazy)(async () => {
+          (0, T.trackQuestContentClicked)({
+            questId: e.quest.id,
+            questContent: e.questContent,
+            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
+          }), (0, r.openModalLazy)(async () => {
             let {
               default: t
             } = await n.el("970143").then(n.bind(n, "970143"));
@@ -81,7 +97,11 @@ function C(e) {
         id: "hide-entrypoint",
         label: S.default.Messages.QUESTS_HIDE_THIS,
         action: () => {
-          (0, T.trackQuestContentClicked)(e.quest.id, e.questContent, T.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT), (0, m.isDismissible)(e.questContent) && (0, I.dismissQuestContent)(e.quest.id, e.questContent)
+          (0, T.trackQuestContentClicked)({
+            questId: e.quest.id,
+            questContent: e.questContent,
+            questContentCTA: T.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
+          }), (0, m.isDismissible)(e.questContent) && (0, I.dismissQuestContent)(e.quest.id, e.questContent)
         },
         subtext: S.default.Messages.QUESTS_FIND_QUEST
       })]
@@ -99,7 +119,11 @@ function A(e) {
     questContent: u,
     ...d
   } = e, c = a.useCallback(() => {
-    (0, T.trackQuestContentClicked)(r.id, u, T.QuestContentCTA.OPEN_CONTEXT_MENU), null != n && n()
+    (0, T.trackQuestContentClicked)({
+      questId: r.id,
+      questContent: u,
+      questContentCTA: T.QuestContentCTA.OPEN_CONTEXT_MENU
+    }), null != n && n()
   }, [n, r, u]);
   return (0, s.jsx)(o.Popout, {
     onRequestOpen: c,

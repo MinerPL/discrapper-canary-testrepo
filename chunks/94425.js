@@ -71,7 +71,10 @@ var a = n("37983"),
         if (window.clearTimeout(O.current), !H && !L) !v.current && y(!1)
       }, [L, H]),
       J = s.useCallback(() => {
-        null != R && (0, c.trackQuestEvent)(R.id, g.AnalyticEvents.QUEST_HOVER), v.current = !0, Z({
+        null != R && (0, c.trackQuestEvent)({
+          questId: R.id,
+          event: g.AnalyticEvents.QUEST_HOVER
+        }), v.current = !0, Z({
           withDelay: !0
         })
       }, [Z, R]),

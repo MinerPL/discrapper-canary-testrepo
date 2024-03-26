@@ -20,7 +20,11 @@ var a = n("37983"),
       className: t,
       quest: n
     } = e, l = s.useCallback(() => {
-      (0, u.trackQuestContentClicked)(n.id, e.questContent, u.QuestContentCTA.REWARD_LEARN_MORE), o.default.open(c.UserSettingsSections.INVENTORY)
+      (0, u.trackQuestContentClicked)({
+        questId: n.id,
+        questContent: e.questContent,
+        questContentCTA: u.QuestContentCTA.REWARD_LEARN_MORE
+      }), o.default.open(c.UserSettingsSections.INVENTORY)
     }, [n, e.questContent]);
     return (0, a.jsxs)(r.Clickable, {
       className: i(E.questRewardTile, t),

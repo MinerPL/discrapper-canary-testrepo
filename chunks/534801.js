@@ -1,83 +1,100 @@
 "use strict";
 n.r(t), n.d(t, {
   QuestContentImpressionTracker: function() {
-    return g
+    return E
   }
 }), n("222007");
 var i = n("37983"),
-  r = n("884691"),
-  l = n("748820"),
+  l = n("884691"),
+  a = n("748820"),
   s = n("432710"),
-  u = n("446674"),
+  r = n("446674"),
   o = n("811425"),
-  a = n("84339"),
+  u = n("84339"),
   d = n("155084"),
   c = n("471671"),
   f = n("815496"),
-  S = n("188649"),
-  E = n("2973"),
+  m = n("188649"),
+  p = n("2973"),
   h = n("49111");
-class _ {
-  constructor(e, t) {
-    var n = this;
+class x {
+  constructor(e, t, n) {
+    var i = this;
     this.onMinViewTimeReached = () => {
       this.questIds.forEach(e => {
-        (0, f.trackQuestEvent)(e, h.AnalyticEvents.QUEST_CONTENT_VIEWED, {
-          min_view_time_seconds: this.minViewTimeSecond,
-          min_viewport_percentage: this.minViewportPercentage,
-          ...this.commonProperties(e)
+        (0, f.trackQuestEvent)({
+          questId: e,
+          event: h.AnalyticEvents.QUEST_CONTENT_VIEWED,
+          properties: {
+            min_view_time_seconds: this.minViewTimeSecond,
+            min_viewport_percentage: this.minViewportPercentage,
+            ...this.commonProperties(e)
+          },
+          trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata
         })
       })
     }, this.heartbeat = function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      n.questIds.forEach(t => {
-        null != n.lastBeatTime && (0, f.trackQuestEvent)(t, h.AnalyticEvents.QUEST_CONTENT_VIEW_TIME, {
-          is_termination_beat: e,
-          viewed_time_ms: Date.now() - n.lastBeatTime,
-          ...n.commonProperties(t)
+      i.questIds.forEach(t => {
+        null != i.lastBeatTime && (0, f.trackQuestEvent)({
+          questId: t,
+          event: h.AnalyticEvents.QUEST_CONTENT_VIEW_TIME,
+          properties: {
+            is_termination_beat: e,
+            viewed_time_ms: Date.now() - i.lastBeatTime,
+            ...i.commonProperties(t)
+          },
+          trackGuildAndChannelMetadata: i.trackGuildAndChannelMetadata
         })
-      }), n.lastBeatTime = Date.now()
+      }), i.lastBeatTime = Date.now()
     }, this.commonProperties = e => ({
       impression_id: this.id,
-      quest_status: (0, f.getQuestStatus)(E.default.quests.get(e)),
+      quest_status: (0, f.getQuestStatus)(p.default.quests.get(e)),
       ...(0, f.getContentProperties)(this.questContent)
     }), this.start = () => {
       this.stop(!1), this.lastBeatTime = Date.now(), this.beatTimeout = setInterval(() => this.heartbeat(), 6e4), this.minViewTimeReachedTimeout = setTimeout(this.onMinViewTimeReached, 1e3 * this.minViewTimeSecond), this.questIds.forEach(e => {
-        (0, f.trackQuestEvent)(e, h.AnalyticEvents.QUEST_CONTENT_LOADED, this.commonProperties(e))
-      }), (0, S.isEligibleForQuestsClientMonitoring)("QuestImpressionTracker") && d.default.increment({
+        (0, f.trackQuestEvent)({
+          questId: e,
+          event: h.AnalyticEvents.QUEST_CONTENT_LOADED,
+          properties: {
+            ...this.commonProperties(e)
+          },
+          trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata
+        })
+      }), (0, m.isEligibleForQuestsClientMonitoring)("QuestImpressionTracker") && d.default.increment({
         name: s.MetricEvents.QUEST_CONTENT_IMPRESSION,
         tags: ["quest_content:".concat((0, f.getQuestContentName)(this.questContent))]
       })
     }, this.stop = function() {
       let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-      e && n.heartbeat(!0), n.lastBeatTime = void 0, clearInterval(n.beatTimeout), clearTimeout(n.minViewTimeReachedTimeout)
-    }, this.id = (0, l.v4)(), this.questContent = t, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.questIds = Array.isArray(e) ? e : [e]
+      e && i.heartbeat(!0), i.lastBeatTime = void 0, clearInterval(i.beatTimeout), clearTimeout(i.minViewTimeReachedTimeout)
+    }, this.id = (0, a.v4)(), this.questContent = t, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.questIds = Array.isArray(e) ? e : [e], this.trackGuildAndChannelMetadata = n
   }
 }
 
-function g(e) {
+function E(e) {
   let t = Array.isArray(e.questId) ? e.questId.sort().join("_") : e.questId;
-  return (0, i.jsx)(p, {
+  return (0, i.jsx)(y, {
     ...e
   }, "".concat(t, "_").concat(e.questContent))
 }
 
-function p(e) {
+function y(e) {
   var t;
-  let n = (0, u.useStateFromStores)([c.default], () => c.default.isFocused()),
-    l = n !== (0, a.default)(n),
-    [s, d] = r.useState(!1),
+  let n = (0, r.useStateFromStores)([c.default], () => c.default.isFocused()),
+    a = n !== (0, u.default)(n),
+    [s, d] = l.useState(!1),
     f = null !== (t = e.overrideVisibility) && void 0 !== t ? t : s,
-    S = f !== (0, a.default)(f),
-    E = r.useRef(null),
+    m = f !== (0, u.default)(f),
+    p = l.useRef(null),
     h = (0, o.useIsVisible)(e => d(e), .5);
-  return r.useEffect(() => () => {
-    null != E.current && E.current.stop()
-  }, []), r.useEffect(() => {
-    let t = S && f || l && n && f,
-      i = S && !f || l && !n;
-    (t || i) && null != E.current && E.current.stop(), t && (E.current = new _(e.questId, e.questContent), E.current.start())
-  }, [n, f, E, l, S, e.questId, e.questContent]), (0, i.jsx)(i.Fragment, {
+  return l.useEffect(() => () => {
+    null != p.current && p.current.stop()
+  }, []), l.useEffect(() => {
+    let t = m && f || a && n && f,
+      i = m && !f || a && !n;
+    (t || i) && null != p.current && p.current.stop(), t && (p.current = new x(e.questId, e.questContent, e.trackGuildAndChannelMetadata), p.current.start())
+  }, [n, f, p, a, m, e.questId, e.questContent, e.trackGuildAndChannelMetadata]), (0, i.jsx)(i.Fragment, {
     children: e.children(h)
   })
 }

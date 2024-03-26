@@ -15,7 +15,11 @@ function r(e) {
     location: r
   } = e;
   return l.useCallback(() => {
-    null != t && ((0, s.trackQuestContentClicked)(t.id, r, s.QuestContentCTA.CLAIM_REWARD), (0, a.openModalLazy)(async () => {
+    null != t && ((0, s.trackQuestContentClicked)({
+      questId: t.id,
+      questContent: r,
+      questContentCTA: s.QuestContentCTA.CLAIM_REWARD
+    }), (0, a.openModalLazy)(async () => {
       let {
         default: e
       } = await n.el("36170").then(n.bind(n, "36170"));

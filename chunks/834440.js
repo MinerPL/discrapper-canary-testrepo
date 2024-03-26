@@ -70,9 +70,17 @@ var O = function(e) {
       questContentCTA: c.QuestContentCTA.ACCEPT_QUEST
     })
   }, [O]), P = s.useCallback(() => {
-    null != O && ((0, c.trackQuestContentClicked)(O.id, _.QuestContent.ACTIVITY_PANEL, c.QuestContentCTA.TRACK_PROGRESS), u.default.open(g.UserSettingsSections.INVENTORY))
+    null != O && ((0, c.trackQuestContentClicked)({
+      questId: O.id,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
+      questContentCTA: c.QuestContentCTA.TRACK_PROGRESS
+    }), u.default.open(g.UserSettingsSections.INVENTORY))
   }, [O]), y = s.useCallback(() => {
-    (0, c.trackQuestContentClicked)(O.id, _.QuestContent.ACTIVITY_PANEL, c.QuestContentCTA.LEARN_MORE), u.default.open(g.UserSettingsSections.INVENTORY)
+    (0, c.trackQuestContentClicked)({
+      questId: O.id,
+      questContent: _.QuestContent.ACTIVITY_PANEL,
+      questContentCTA: c.QuestContentCTA.LEARN_MORE
+    }), u.default.open(g.UserSettingsSections.INVENTORY)
   }, [O]), D = (0, p.useHandleClaimQuestsReward)({
     quest: O,
     location: _.QuestContent.ACTIVITY_PANEL

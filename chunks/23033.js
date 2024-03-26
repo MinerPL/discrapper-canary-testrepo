@@ -68,9 +68,17 @@ var a = n("37983"),
         questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
       })
     }, [b]), k = l.useCallback(() => {
-      null != b && ((0, E.trackQuestContentClicked)(b.id, _.QuestContent.QUEST_LIVE_STREAM, E.QuestContentCTA.TRACK_PROGRESS), o.default.open(R.UserSettingsSections.INVENTORY))
+      null != b && ((0, E.trackQuestContentClicked)({
+        questId: b.id,
+        questContent: _.QuestContent.QUEST_LIVE_STREAM,
+        questContentCTA: E.QuestContentCTA.TRACK_PROGRESS
+      }), o.default.open(R.UserSettingsSections.INVENTORY))
     }, [b]), B = l.useCallback(() => {
-      null != b && ((0, E.trackQuestContentClicked)(b.id, _.QuestContent.QUEST_LIVE_STREAM, E.QuestContentCTA.LEARN_MORE), o.default.open(R.UserSettingsSections.INVENTORY))
+      null != b && ((0, E.trackQuestContentClicked)({
+        questId: b.id,
+        questContent: _.QuestContent.QUEST_LIVE_STREAM,
+        questContentCTA: E.QuestContentCTA.LEARN_MORE
+      }), o.default.open(R.UserSettingsSections.INVENTORY))
     }, [b]), G = (0, A.useHandleClaimQuestsReward)({
       quest: b,
       location: _.QuestContent.QUEST_LIVE_STREAM
