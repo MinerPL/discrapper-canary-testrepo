@@ -38,17 +38,21 @@ var a, n, l = s("37983"),
   y = s("449617");
 
 function B() {
-  let e = (0, S.useStateFromStores)([M.default], () => M.default.isFocused()),
-    t = (0, S.useStateFromStores)([m.default], () => m.default.useReducedMotion),
-    [s, a] = i.useState(0),
-    n = -1 === s;
+  let [e, t] = i.useState(!1), s = (0, S.useStateFromStores)([M.default], () => M.default.isFocused()), a = (0, S.useStateFromStores)([m.default], () => m.default.useReducedMotion), [n, r] = i.useState(0), o = -1 === n, d = async e => {
+    e.stopPropagation(), t(!0);
+    try {
+      await (0, N.openLootbox)()
+    } finally {
+      t(!1)
+    }
+  };
   return (0, l.jsxs)(_.Clickable, {
     className: y.headerContainer,
-    onClick: n ? void 0 : () => {
+    onClick: o ? void 0 : () => {
       L.default.track(j.AnalyticEvents.EASTER_EGG_INTERACTED, {
         type: "packages_header_click",
-        position: s
-      }), s > 0 && (s + 1) % 5 == 0 ? a(-1) : a(s + 1)
+        position: n
+      }), n > 0 && (n + 1) % 5 == 0 ? r(-1) : r(n + 1)
     },
     children: [(0, l.jsx)(R.default, {
       className: y.headerBackground,
@@ -63,23 +67,22 @@ function B() {
       children: (0, l.jsxs)(D.default, {
         className: y.headerButton,
         innerClassName: y.innerButton,
-        pauseAnimation: !e || t,
-        onClick: e => {
-          e.stopPropagation(), (0, N.openLootbox)()
-        },
+        pauseAnimation: !s || a,
+        onClick: d,
         size: _.ButtonSizes.SMALL,
         color: _.ButtonColors.CUSTOM,
+        submitting: e,
         children: [(0, l.jsx)(A.default, {
           className: y.buttonIcon,
           color: _.tokens.colors.WHITE
         }), U.default.Messages.USER_SETTINGS_PACKAGES_HEADER_CTA]
       })
-    }), n ? (0, l.jsx)("div", {
+    }), o ? (0, l.jsx)("div", {
       className: y.headerEasterEgg,
       children: (0, l.jsx)(v.EasterEggAnimation, {
         position: v.EasterEggPosition.BOTTOM_LEFT,
         onAnimationComplete: () => {
-          a(0)
+          r(0)
         },
         size: 120
       })
@@ -152,8 +155,13 @@ function H() {
 }
 
 function w() {
-  let [e, t] = (0, S.useStateFromStoresArray)([I.default], () => [I.default.openedItems, I.default.redeemedPrize]), a = (0, b.getLootboxes)(), n = i.useMemo(() => Object.keys(e).length === Object.keys(a).length && !Object.values(e).some(e => 0 === e), [e, a]), r = async () => {
-    await (0, N.redeemPrize)(), (0, _.openModalLazy)(async () => {
+  let [e, t] = i.useState(!1), [a, n] = (0, S.useStateFromStoresArray)([I.default], () => [I.default.openedItems, I.default.redeemedPrize]), r = (0, b.getLootboxes)(), o = i.useMemo(() => Object.keys(a).length === Object.keys(r).length && !Object.values(a).some(e => 0 === e), [a, r]), d = async () => {
+    t(!0);
+    try {
+      await (0, N.redeemPrize)()
+    } finally {
+      t(!1)
+    }(0, _.openModalLazy)(async () => {
       let {
         default: e
       } = await s.el("657437").then(s.bind(s, "657437"));
@@ -162,7 +170,7 @@ function w() {
       })
     })
   };
-  return !t && n ? (0, l.jsxs)("div", {
+  return (0, l.jsxs)("div", {
     className: y.banner,
     children: [(0, l.jsxs)("div", {
       className: y.inline,
@@ -177,15 +185,16 @@ function w() {
     }), (0, l.jsxs)(_.Button, {
       className: y.headerButton,
       innerClassName: y.innerButton,
-      onClick: r,
+      onClick: d,
       size: _.ButtonSizes.SMALL,
       color: _.ButtonColors.CUSTOM,
+      submitting: e,
       children: [(0, l.jsx)(f.GiftIcon, {
         className: y.buttonIcon,
         color: _.tokens.colors.WHITE
       }), U.default.Messages.USER_SETTINGS_PACKAGE_BANNER_CTA]
     })]
-  }) : null
+  })
 }
 
 function V() {
