@@ -112,6 +112,7 @@ let R = s.forwardRef(function(e, t) {
           children: e => (0, a.jsx)(u.Clickable, {
             ...e,
             className: N.submenuWrapper,
+            "aria-label": A.default.Messages.ACTIONS,
             children: (0, a.jsx)(d.default, {
               className: N.submenuIcon
             })
@@ -154,6 +155,7 @@ let R = s.forwardRef(function(e, t) {
             children: e => (0, a.jsx)(u.Clickable, {
               ...e,
               className: N.submenuWrapper,
+              "aria-label": A.default.Messages.ACTIONS,
               children: (0, a.jsx)(d.default, {
                 className: N.submenuIcon
               })

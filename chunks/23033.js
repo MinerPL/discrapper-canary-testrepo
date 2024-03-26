@@ -62,16 +62,16 @@ var a = n("37983"),
         isCurrentUserStreamingQuestApplication: n,
         quest: t
       }
-    }, [s, P]), U = (0, r.useStateFromStores)([C.default], () => null != b && C.default.isEnrolling(b.id), [b]), w = (0, r.useStateFromStores)([d.default], () => ((null == P ? void 0 : P.id) == null ? null : d.default.getParticipant(s, P.id)) != null, [s, P]), F = (0, S.useQuestFormattedDate)(null == b ? void 0 : b.config.expiresAt), V = (0, S.useQuestFormattedDate)(null == b ? void 0 : b.config.rewardCodeExpiresAt), k = l.useCallback(() => {
+    }, [s, P]), U = (0, r.useStateFromStores)([C.default], () => null != b && C.default.isEnrolling(b.id), [b]), w = (0, r.useStateFromStores)([d.default], () => ((null == P ? void 0 : P.id) == null ? null : d.default.getParticipant(s, P.id)) != null, [s, P]), F = (0, S.useQuestFormattedDate)(null == b ? void 0 : b.config.expiresAt), V = (0, S.useQuestFormattedDate)(null == b ? void 0 : b.config.rewardCodeExpiresAt), H = l.useCallback(() => {
       null != b && (0, g.enrollInQuest)(b.id, {
         questContent: _.QuestContent.QUEST_LIVE_STREAM,
         questContentCTA: E.QuestContentCTA.ACCEPT_QUEST
       })
-    }, [b]), H = l.useCallback(() => {
+    }, [b]), k = l.useCallback(() => {
       null != b && ((0, E.trackQuestContentClicked)(b.id, _.QuestContent.QUEST_LIVE_STREAM, E.QuestContentCTA.TRACK_PROGRESS), o.default.open(R.UserSettingsSections.INVENTORY))
-    }, [b]), G = l.useCallback(() => {
+    }, [b]), B = l.useCallback(() => {
       null != b && ((0, E.trackQuestContentClicked)(b.id, _.QuestContent.QUEST_LIVE_STREAM, E.QuestContentCTA.LEARN_MORE), o.default.open(R.UserSettingsSections.INVENTORY))
-    }, [b]), B = (0, A.useHandleClaimQuestsReward)({
+    }, [b]), G = (0, A.useHandleClaimQuestsReward)({
       quest: b,
       location: _.QuestContent.QUEST_LIVE_STREAM
     }), W = (0, S.useIsQuestExpired)(b);
@@ -131,6 +131,7 @@ var a = n("37983"),
                     children: e => (0, a.jsx)(u.Clickable, {
                       ...e,
                       className: y.submenuWrapper,
+                      "aria-label": L.default.Messages.ACTIONS,
                       children: (0, a.jsx)(p.default, {
                         className: y.submenuIcon
                       })
@@ -156,13 +157,13 @@ var a = n("37983"),
                   color: u.Button.Colors.PRIMARY,
                   fullWidth: !0,
                   size: u.Button.Sizes.SMALL,
-                  onClick: G,
+                  onClick: B,
                   children: L.default.Messages.QUESTS_LEARN_MORE_V2
                 }), (0, a.jsx)(u.Button, {
                   className: y.cta,
                   color: u.Button.Colors.GREEN,
                   fullWidth: !0,
-                  onClick: k,
+                  onClick: H,
                   size: u.Button.Sizes.SMALL,
                   submitting: U,
                   children: L.default.Messages.QUESTS_ACCEPT_QUEST
@@ -174,14 +175,14 @@ var a = n("37983"),
                 className: y.cta,
                 color: u.Button.Colors.BRAND,
                 fullWidth: !0,
-                onClick: H,
+                onClick: k,
                 size: u.Button.Sizes.SMALL,
                 children: L.default.Messages.QUESTS_TRACK_YOUR_PROGRESS
               }), z && (0, a.jsx)(u.Button, {
                 className: y.cta,
                 color: u.Button.Colors.BRAND,
                 fullWidth: !0,
-                onClick: B,
+                onClick: G,
                 size: u.Button.Sizes.SMALL,
                 children: L.default.Messages.QUESTS_CLAIM_REWARD
               })]
