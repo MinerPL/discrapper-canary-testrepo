@@ -154,7 +154,7 @@ class z extends s.PureComponent {
           B.default.track(W.AnalyticEvents.LAUNCH_GAME, {
             game: a,
             game_id: i,
-            verified: null != e,
+            verified: null != e && (0, S.isVerifiedGameExecutable)(u, null == e ? void 0 : e.executables),
             elevated: L.elevated,
             is_launcher: null !== (t = null == L ? void 0 : L.isLauncher) && void 0 !== t && t,
             game_platform: W.ActivityGamePlatforms.DESKTOP,
