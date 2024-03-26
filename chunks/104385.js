@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return p
+    return O
   }
 }), s("794252");
 var a = s("37983"),
@@ -18,8 +18,10 @@ var a = s("37983"),
   T = s("49111"),
   f = s("646718"),
   _ = s("782340"),
-  m = s("941147");
-let g = () => (0, a.jsxs)(a.Fragment, {
+  m = s("941147"),
+  g = s("481701"),
+  h = s("387649");
+let N = () => (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: m.artContainer,
       "aria-hidden": !0,
@@ -44,7 +46,7 @@ let g = () => (0, a.jsxs)(a.Fragment, {
       })]
     })]
   }),
-  h = () => (0, a.jsxs)(a.Fragment, {
+  I = () => (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: m.artContainer,
       "aria-hidden": !0,
@@ -70,7 +72,7 @@ let g = () => (0, a.jsxs)(a.Fragment, {
       })]
     })]
   }),
-  N = () => (0, a.jsxs)(a.Fragment, {
+  p = () => (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: m.artContainer,
       "aria-hidden": !0,
@@ -95,13 +97,38 @@ let g = () => (0, a.jsxs)(a.Fragment, {
       })]
     })]
   }),
-  I = e => {
+  C = () => (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)("div", {
+      className: m.artContainer,
+      "aria-hidden": !0,
+      role: "presentation",
+      children: (0, a.jsx)("img", {
+        src: s("404028"),
+        className: m.art,
+        alt: " "
+      })
+    }), (0, a.jsxs)("div", {
+      className: m.mainColumn,
+      children: [(0, a.jsx)(o.Heading, {
+        variant: "heading-lg/extrabold",
+        color: "always-white",
+        className: m.title,
+        children: _.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+      }), (0, a.jsx)(o.Text, {
+        className: m.textBody,
+        variant: "text-sm/normal",
+        color: "always-white",
+        children: _.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+      })]
+    })]
+  }),
+  A = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(h, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(N, {})).otherwise(() => (0, a.jsx)(g, {}))
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(I, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(C, {})).otherwise(() => (0, a.jsx)(N, {}))
   };
-var p = () => {
+var O = () => {
   let {
     analyticsLocations: e
   } = (0, u.default)(d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL), t = n.useRef(null), s = (0, E.default)("CollectiblesUpsellBanner");
@@ -112,8 +139,11 @@ var p = () => {
     })
   }, [e]), (0, a.jsxs)("div", {
     ref: t,
-    className: i(m.container, m.shopForAllBackgroundImage),
-    children: [(0, a.jsx)(I, {
+    className: i(m.container),
+    style: {
+      backgroundImage: "url(".concat(s === E.CollectiblesShopMarketingVariants.SHY ? h : g, ")")
+    },
+    children: [(0, a.jsx)(A, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {
