@@ -28,8 +28,8 @@ async function I(e) {
     setHasRedirectURL: P,
     isGift: T,
     baseAnalyticsData: N,
-    analyticsLocation: C,
-    analyticsLocations: A,
+    analyticsLocation: A,
+    analyticsLocations: C,
     flowStartTime: h,
     subscriptionPlan: v,
     planGroup: g,
@@ -88,11 +88,11 @@ async function I(e) {
     } else e = M && null != R && null != O && null != L ? _.PREPAID_PAYMENT_SOURCES.has(O.type) ? await (0, i.payInvoiceManually)(L, R, O, y.currency) : await (0, i.updateSubscription)(L, {
       paymentSource: O,
       currency: y.currency
-    }, A, C, B) : null != L ? await (0, i.updateSubscription)(L, {
+    }, C, A, B) : null != L ? await (0, i.updateSubscription)(L, {
       items: (0, f.getItemsWithUpsertedPlanIdForGroup)(L, v.id, 1, new Set(g)),
       paymentSource: O,
       currency: y.currency
-    }, A, C, B) : await (0, u.subscribe)({
+    }, C, A, B) : await (0, u.subscribe)({
       planId: v.id,
       currency: y.currency,
       paymentSource: O,

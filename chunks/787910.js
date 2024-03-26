@@ -4,7 +4,7 @@ A.r(I), A.d(I, {
     return V
   },
   default: function() {
-    return i
+    return n
   }
 });
 var O = A("446674"),
@@ -14,18 +14,18 @@ let _ = !1,
   E = null;
 
 function V(N) {
-  t({
+  i({
     locale: N
   })
 }
 
-function t(N) {
+function i(N) {
   let {
     locale: I
   } = N;
   _ = !0, e = I
 }
-class n extends O.default.Store {
+class t extends O.default.Store {
   isLoading() {
     return _
   }
@@ -33,9 +33,9 @@ class n extends O.default.Store {
     return E
   }
 }
-n.displayName = "I18nLoaderStore";
-var i = new n(T.default, {
-  I18N_LOAD_START: t,
+t.displayName = "I18nLoaderStore";
+var n = new t(T.default, {
+  I18N_LOAD_START: i,
   I18N_LOAD_SUCCESS: function(N) {
     let {
       locale: I

@@ -24,8 +24,8 @@ var r = n("627445"),
   P = n("622839"),
   T = n("167726"),
   N = n("953109"),
-  C = n("315585"),
-  A = n("659632"),
+  A = n("315585"),
+  C = n("659632"),
   h = n("153160"),
   v = n("635357"),
   g = n("642906"),
@@ -105,7 +105,7 @@ function j(e) {
   } = (0, g.usePaymentContext)(), {
     isGift: H,
     giftRecipient: Y
-  } = (0, v.useGiftContext)(), W = H && (0, A.shouldShowCustomGiftExperience)(Y);
+  } = (0, v.useGiftContext)(), W = H && (0, C.shouldShowCustomGiftExperience)(Y);
   a(null != B, "Expected selectedSkuId");
   let Z = U[B],
     K = F[B],
@@ -120,7 +120,7 @@ function j(e) {
   return (0, s.jsxs)("div", {
     className: R.stepBody,
     children: [J && (0, s.jsx)(c.default, {
-      icon: C.default,
+      icon: A.default,
       iconSize: c.default.Sizes.SMALL,
       color: c.default.Colors.WARNING,
       className: R.errorBlock,

@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return d
   }
 });
-var s = a("37983");
+var l = a("37983");
 a("884691");
-var l = a("819855"),
-  r = a("77078"),
+var r = a("819855"),
+  s = a("77078"),
   n = a("841098"),
   o = a("782340"),
   i = a("706055"),
@@ -17,23 +17,23 @@ var l = a("819855"),
     let {
       onRetry: t
     } = e, a = (0, n.default)();
-    return (0, s.jsxs)("div", {
+    return (0, l.jsxs)("div", {
       className: i.wrapper,
-      children: [(0, s.jsx)("img", {
+      children: [(0, l.jsx)("img", {
         className: i.loadIssueImg,
-        src: (0, l.isThemeDark)(a) ? u : c,
+        src: (0, r.isThemeDark)(a) ? u : c,
         alt: ""
-      }), (0, s.jsx)(r.Heading, {
+      }), (0, l.jsx)(s.Heading, {
         className: i.heading1,
         variant: "heading-xl/semibold",
         children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-      }), (0, s.jsx)(r.Text, {
+      }), (0, l.jsx)(s.Text, {
         variant: "text-md/normal",
         children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-      }), (0, s.jsx)(r.Button, {
+      }), (0, l.jsx)(s.Button, {
         className: i.reload,
-        size: r.Button.Sizes.MEDIUM,
-        color: r.Button.Colors.BRAND_NEW,
+        size: s.Button.Sizes.MEDIUM,
+        color: s.Button.Colors.BRAND_NEW,
         onClick: t,
         children: o.default.Messages.ERRORS_RELOAD
       })]

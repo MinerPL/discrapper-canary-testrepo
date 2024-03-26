@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   makeDesktopDownloadURL: function() {
-    return d
+    return r
   },
   getPlatformReadableName: function() {
     return c
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return h
   },
   getMobileDownloadLink: function() {
-    return E
+    return m
   }
 });
 var i = n("597755"),
@@ -18,9 +18,9 @@ var i = n("597755"),
   l = n("815157"),
   a = n("271938"),
   u = n("49111");
-let r = "linux";
+let d = "linux";
 
-function d(e) {
+function r(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     n = arguments.length > 2 ? arguments[2] : void 0;
   return "".concat(u.DownloadLinks.DESKTOP).concat(t ? "/ptb" : "", "?platform=").concat(e).concat(null != n ? "&format=".concat(n) : "")
@@ -29,23 +29,23 @@ function d(e) {
 function o() {
   var e;
   let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null === (e = s.os) || void 0 === e ? void 0 : e.family;
-  return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? r : -1 !== t.indexOf("OS X") ? "osx" : "win"
+  return null == t ? "win" : -1 !== t.indexOf("Ubuntu") || -1 !== t.indexOf("Debian") || -1 !== t.indexOf("Fedora") || -1 !== t.indexOf("Red Hat") || -1 !== t.indexOf("SuSE") || -1 !== t.indexOf("Linux") ? d : -1 !== t.indexOf("OS X") ? "osx" : "win"
 }
 
 function c(e) {
   return ({
     win: "Windows",
     osx: "Mac",
-    [r]: "Linux"
+    [d]: "Linux"
   })[o(e)]
 }
 
 function h() {
   let e = o();
-  return d(e, !1, e === r ? "tar.gz" : null)
+  return r(e, !1, e === d ? "tar.gz" : null)
 }
 
-function E(e, t, n) {
+function m(e, t, n) {
   let i = null != n ? n.toString() : null;
   switch (t) {
     case "iOS":

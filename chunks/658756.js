@@ -23,9 +23,9 @@ var a = r("37983"),
   b = r("685665"),
   v = r("606292"),
   y = r("688318"),
-  m = r("38766"),
-  E = r("601095"),
-  S = r("493390"),
+  S = r("38766"),
+  m = r("601095"),
+  E = r("493390"),
   x = r("697218"),
   T = r("677257"),
   I = r("923702"),
@@ -66,7 +66,7 @@ let A = e => {
     size: (0, v.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_120)
   }), V = n.useRef(null), {
     analyticsLocations: W
-  } = (0, b.default)([...M, p.default.COLLECTIBLES_COLLECTED_MODAL]), Y = (0, m.default)({
+  } = (0, b.default)([...M, p.default.COLLECTIBLES_COLLECTED_MODAL]), Y = (0, S.default)({
     analyticsLocations: W
   });
   return (0, a.jsxs)(b.AnalyticsLocationProvider, {
@@ -93,7 +93,7 @@ let A = e => {
           "aria-label": o.name
         }), (null == z ? void 0 : z.type) === u.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)("div", {
           className: _.profileEffectShopPreview,
-          children: (0, a.jsx)(E.default, {
+          children: (0, a.jsx)(m.default, {
             forCollectedModal: !0,
             profileEffectId: z.id
           })
@@ -123,7 +123,7 @@ let A = e => {
                 analyticsLocations: W
               });
               return
-            }(null == z ? void 0 : z.type) === u.CollectiblesItemType.PROFILE_EFFECT && (0, S.openProfileEffectModal)({
+            }(null == z ? void 0 : z.type) === u.CollectiblesItemType.PROFILE_EFFECT && (0, E.openProfileEffectModal)({
               initialSelectedEffectId: z.id,
               analyticsLocations: W
             })

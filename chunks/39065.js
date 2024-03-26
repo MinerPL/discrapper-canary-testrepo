@@ -23,8 +23,8 @@ var s = n("37983"),
   P = n("599110"),
   T = n("659632"),
   N = n("719923"),
-  C = n("635357"),
-  A = n("642906"),
+  A = n("635357"),
+  C = n("642906"),
   h = n("605886"),
   v = n("286350"),
   g = n("102492"),
@@ -67,14 +67,14 @@ function M(e) {
     skuPricePreviewsById: en,
     referralCode: es,
     contextMetadata: er
-  } = (0, A.usePaymentContext)(), {
+  } = (0, C.usePaymentContext)(), {
     isGift: ea,
     selectedGiftStyle: ei,
     customGiftMessage: el,
     emojiConfetti: eu,
     soundEffect: eo,
     giftRecipient: ec
-  } = (0, C.useGiftContext)(), ed = (0, T.getGiftExperience)(ec), em = {};
+  } = (0, A.useGiftContext)(), ed = (0, T.getGiftExperience)(ec), em = {};
   em.gift_style = ei, ed === T.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD && (i(null != ec, "Gift recipient must be set at purchase review step for these gift options."), em.recipient_id = ec.id, em.custom_message = el, em.emoji_id = null == eu ? void 0 : eu.id, em.emoji_name = null == eu ? void 0 : eu.surrogates, em.sound_id = null == eo ? void 0 : eo.soundId);
   let ef = null == V ? void 0 : V.id,
     ep = (0, g.checkNoPaymentTrialEnabled)(F, z.paymentSourceId, ef),
@@ -86,10 +86,10 @@ function M(e) {
     [eE, eP] = r.useState(ep),
     [eT, eN] = r.useState(!1),
     {
-      hasEntitlements: eC
+      hasEntitlements: eA
     } = (0, f.useSubscriptionEntitlements)(ef, ea),
-    eA = (0, N.isPrepaidPaymentSource)(z.paymentSourceId),
-    eh = eC || ep,
+    eC = (0, N.isPrepaidPaymentSource)(z.paymentSourceId),
+    eh = eA || ep,
     ev = (0, d.useIsPrepaidPaymentPastDue)(),
     eg = null,
     ex = null;
@@ -165,7 +165,7 @@ function M(e) {
       premiumSubscription: t,
       isGift: ea,
       planGroup: B,
-      isPrepaid: eA,
+      isPrepaid: eC,
       isTrial: K,
       makePurchase: eO,
       needsPaymentSource: null == eI && !eh

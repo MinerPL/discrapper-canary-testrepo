@@ -7,10 +7,10 @@ a.r(t), a.d(t, {
     return o
   }
 });
-var s = a("37983");
+var l = a("37983");
 a("884691");
-var l = a("77078");
-let r = "collectibles shop product details modal",
+var r = a("77078");
+let s = "collectibles shop product details modal",
   n = e => {
     let {
       product: t,
@@ -19,11 +19,11 @@ let r = "collectibles shop product details modal",
       analyticsLocations: i,
       returnRef: u
     } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, r.openModalLazy)(async () => {
       let {
         default: e
       } = await a.el("179047").then(a.bind(a, "179047"));
-      return a => (0, s.jsx)(e, {
+      return a => (0, l.jsx)(e, {
         ...a,
         product: t,
         category: n,
@@ -32,9 +32,9 @@ let r = "collectibles shop product details modal",
         returnRef: u
       })
     }, {
-      modalKey: r
+      modalKey: s
     })
   },
   o = () => {
-    (0, l.closeModal)(r)
+    (0, r.closeModal)(s)
   }

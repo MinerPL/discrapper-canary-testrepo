@@ -30,8 +30,8 @@ function p(e) {
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
-    purchaseError: C,
-    setPurchaseError: A,
+    purchaseError: A,
+    setPurchaseError: C,
     purchaseErrorBlockRef: h,
     paymentAuthenticationState: v,
     selectedSkuId: g
@@ -42,8 +42,8 @@ function p(e) {
     paymentSources: P,
     paymentSourceId: T,
     setPaymentSourceId: N,
-    purchaseError: C,
-    setPurchaseError: A,
+    purchaseError: A,
+    setPurchaseError: C,
     purchaseErrorBlockRef: h,
     paymentAuthenticationState: v
   }, O = (0, i.usePremiumTrialOffer)(_), M = !x && null != O && null != g && (0, f.SubscriptionTrials)[O.trial_id].skus.includes(g), R = null != S ? S : () => {

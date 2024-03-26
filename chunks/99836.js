@@ -23,8 +23,8 @@ var s = n("37983"),
   P = n("176108"),
   T = n("298392"),
   N = n("153727"),
-  C = n("39065"),
-  A = n("650484"),
+  A = n("39065"),
+  C = n("650484"),
   h = n("646718"),
   v = n("843455"),
   g = n("782340");
@@ -100,7 +100,7 @@ function x(e) {
     eP = null != Y ? W[Y] : null,
     eT = null != z && h.MULTI_MONTH_PLANS.has(z.id) && null != eP && !(0, u.isPaymentSourceEligibleForMultiMonthPlans)(eP) ? Error(g.default.Messages.BILLING_ERROR_INVALID_PLAN_FOR_PAYMENT_SOURCE) : null,
     eN = r.useRef(null),
-    [eC, eA] = r.useState(null),
+    [eA, eC] = r.useState(null),
     eh = !el && null != e_ && null != J && (0, h.SubscriptionTrials)[e_.trial_id].skus.includes(J),
     ev = null == eS ? void 0 : null === (t = eS.discount) || void 0 === t ? void 0 : t.plan_ids,
     eg = !el && null != eS && null != ev && null != z && ev.includes(z.id),
@@ -159,7 +159,7 @@ function x(e) {
     setHasAcceptedTerms: es,
     legalTermsNodeRef: eN,
     hasLegalTermsFlash: ed,
-    onInvoiceError: e => eA(e),
+    onInvoiceError: e => eC(e),
     planGroup: R,
     currencies: H,
     onCurrencyChange: e => X(e),
@@ -171,10 +171,10 @@ function x(e) {
       giftMessage: eu
     }), !ex && (0, s.jsx)(N.default, {
       isEligibleForTrial: eh
-    }), (0, s.jsxs)(A.PaymentPortalBody, {
+    }), (0, s.jsxs)(C.PaymentPortalBody, {
       children: [(0, s.jsx)(E.default, {}), a]
-    }), (0, s.jsx)(A.PaymentPortalFooter, {
-      children: (0, s.jsx)(C.default, {
+    }), (0, s.jsx)(C.PaymentPortalFooter, {
+      children: (0, s.jsx)(A.default, {
         premiumSubscription: null != B ? B : null,
         setPurchaseState: Q,
         onBack: eL,
@@ -182,7 +182,7 @@ function x(e) {
         onPurchaseError: e => $(e),
         legalTermsNodeRef: eN,
         flashLegalTerms: () => em(!0),
-        invoiceError: eC,
+        invoiceError: eA,
         planError: eT,
         analyticsLocation: j,
         baseAnalyticsData: b,

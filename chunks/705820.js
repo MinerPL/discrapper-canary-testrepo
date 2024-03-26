@@ -34,8 +34,8 @@ function E(e) {
     className: P,
     innerClassName: T,
     disabled: N = !1,
-    disableThemedBackground: C = !1
-  } = e, [A, h] = r.useState(null != m ? m : E), [v, g] = r.useState((0, o.toRichValue)(A)), x = r.useRef(!1);
+    disableThemedBackground: A = !1
+  } = e, [C, h] = r.useState(null != m ? m : E), [v, g] = r.useState((0, o.toRichValue)(C)), x = r.useRef(!1);
   return r.useEffect(() => {
     x.current = !0
   }, []), r.useEffect(() => {
@@ -54,11 +54,11 @@ function E(e) {
         editorClassName: S.editorTextArea,
         maxCharacterCount: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH,
         onChange: function(e, t, n) {
-          t !== A && (h(t), g(n), a(t))
+          t !== C && (h(t), g(n), a(t))
         },
         placeholder: p,
         channel: I,
-        textValue: A,
+        textValue: C,
         richValue: v,
         type: u.ChatInputTypes.CUSTOM_GIFT,
         onBlur: () => {
@@ -76,7 +76,7 @@ function E(e) {
             })
           })
         },
-        disableThemedBackground: C
+        disableThemedBackground: A
       }), (0, s.jsx)(l.HiddenVisually, {
         children: _.default.Messages.MAXIMUM_LENGTH.format({
           maxLength: f.CUSTOM_GIFT_MESSAGE_MAX_LENGTH

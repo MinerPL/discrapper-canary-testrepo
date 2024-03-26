@@ -4,10 +4,10 @@ a.r(t), a.d(t, {
     return m
   }
 });
-var s = a("37983");
+var l = a("37983");
 a("884691");
-var l = a("414456"),
-  r = a.n(l),
+var r = a("414456"),
+  s = a.n(r),
   n = a("65597"),
   o = a("854588"),
   i = a("206230"),
@@ -19,40 +19,40 @@ var l = a("414456"),
     let {
       asset: t,
       assetUrlOverride: a,
-      size: l = d.MAX_CONTENT_WIDTH,
+      size: r = d.MAX_CONTENT_WIDTH,
       addGradient: m = !0,
-      className: p,
-      style: g,
-      children: C
+      className: C,
+      style: p,
+      children: g
     } = e, h = (0, n.useStateFromStores)([i.default], () => i.default.saturation);
-    return (0, s.jsx)("div", {
-      className: r(f.banner, p),
+    return (0, l.jsx)("div", {
+      className: s(f.banner, C),
       style: (() => {
-        if (null == t) return g;
+        if (null == t) return p;
         if (1 === h) return null != a ? {
-          ...g,
+          ...p,
           backgroundImage: m ? "url(".concat(a, "), linear-gradient(180deg, rgba(0, 71, 94, 0.6) 5%, rgba(9, 33, 65, 0.6) 95%)") : "url(".concat(a, ")"),
           backgroundBlendMode: "multiply",
           backgroundSize: "cover"
         } : {
-          ...g,
+          ...p,
           backgroundImage: "url(".concat((0, c.getCollectiblesAssetURL)(t, {
-            size: l,
+            size: r,
             format: "jpg"
           }), ")"),
           backgroundSize: "cover"
         };
         let e = (0, u.hexOpacityToRgba)(o.default.unsafe_rawColors.BLACK_500, 1 - h);
         return {
-          ...g,
+          ...p,
           backgroundImage: "linear-gradient(".concat(e, ", ").concat(e, "), url(").concat((0, c.getCollectiblesAssetURL)(t, {
-            size: l,
+            size: r,
             format: "jpg"
           }), ")"),
           backgroundBlendMode: "saturation",
           backgroundSize: "cover"
         }
       })(),
-      children: C
+      children: g
     })
   }

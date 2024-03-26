@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return C
   }
 }), n("794252");
 var s = n("37983");
@@ -48,7 +48,7 @@ function N(e) {
   })
 }
 
-function C(e) {
+function A(e) {
   let {
     id: t
   } = e, n = (0, i.useStateFromStores)([f.default], () => {
@@ -67,7 +67,7 @@ function C(e) {
   })
 }
 
-function A(e) {
+function C(e) {
   let {
     sku: t
   } = e, {
@@ -80,7 +80,7 @@ function A(e) {
     avatarDecoration: e
   })).with({
     type: a.CollectiblesItemType.PROFILE_EFFECT
-  }, e => (0, s.jsx)(C, {
+  }, e => (0, s.jsx)(A, {
     id: e.id
   })).otherwise(() => null);
   return null != n && null == u ? (0, s.jsx)("div", {

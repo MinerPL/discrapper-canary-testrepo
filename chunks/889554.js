@@ -28,8 +28,8 @@ let I = e => {
     emojiConfetti: P,
     soundEffect: T,
     setEmojiConfetti: N,
-    setSoundEffect: C
-  } = (0, i.useGiftContext)(), [A, h] = r.useState(!1), v = r.useRef(null), g = (0, a.useRadioGroup)({
+    setSoundEffect: A
+  } = (0, i.useGiftContext)(), [C, h] = r.useState(!1), v = r.useRef(null), g = (0, a.useRadioGroup)({
     orientation: "horizontal"
   }), x = (0, u.getGiftExperience)(n, t), y = x === u.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD, O = x !== u.GiftExperience.DEFAULT, M = (0, c.useIsSeasonalGiftingActive)(), {
     enabled: R
@@ -56,7 +56,7 @@ let I = e => {
           children: (0, s.jsx)(l.default, {
             sound: T,
             onSelect: e => {
-              null != C && C(null == e ? void 0 : e)
+              null != A && A(null == e ? void 0 : e)
             }
           })
         }), (0, s.jsx)("div", {
@@ -68,7 +68,7 @@ let I = e => {
         })]
       })]
     }), (0, s.jsx)("div", {
-      tabIndex: null != I || A ? void 0 : 0,
+      tabIndex: null != I || C ? void 0 : 0,
       onFocus: e => {
         var t;
         e.target === e.currentTarget && (null === (t = v.current) || void 0 === t || t.focus())

@@ -4,14 +4,14 @@ a.r(t), a.d(t, {
     return c
   }
 });
-var s = a("656280"),
-  l = a.n(s),
-  r = a("669491"),
+var l = a("656280"),
+  r = a.n(l),
+  s = a("669491"),
   n = a("546483");
-let o = l(r.default.unsafe_rawColors.WHITE_500.resolve({
+let o = r(s.default.unsafe_rawColors.WHITE_500.resolve({
     saturation: 1
   }).hex()),
-  i = l(r.default.unsafe_rawColors.BLACK_500.resolve({
+  i = r(s.default.unsafe_rawColors.BLACK_500.resolve({
     saturation: 1
   }).hex()),
   u = (0, n.default)({

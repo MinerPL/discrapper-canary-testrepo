@@ -1,61 +1,61 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var a = l("37983"),
-  i = l("884691"),
-  n = l("118810"),
-  s = l("446674"),
-  r = l("206230"),
-  o = l("719347");
-let u = e => {
+var i = n("37983"),
+  r = n("884691"),
+  u = n("118810"),
+  s = n("446674"),
+  o = n("206230"),
+  a = n("719347");
+let l = e => {
   let {
     externalRef: t,
-    autoPlay: l,
-    playOnHover: u,
-    responsive: d,
-    mediaLayoutType: c,
+    autoPlay: n,
+    playOnHover: l,
+    responsive: c,
+    mediaLayoutType: d,
     ...E
-  } = e, I = (0, s.useStateFromStores)([r.default], () => r.default.useReducedMotion), _ = i.useRef(null);
+  } = e, f = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), _ = r.useRef(null);
 
-  function f() {
+  function I() {
     var e;
-    u && (null == _ || null === (e = _.current) || void 0 === e || e.play())
+    l && (null == _ || null === (e = _.current) || void 0 === e || e.play())
   }
 
-  function T() {
+  function h() {
     var e;
-    u && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
+    l && (null == _ || null === (e = _.current) || void 0 === e || e.pause())
   }
-  return i.useLayoutEffect(() => () => {
+  return r.useLayoutEffect(() => () => {
     let {
       current: e
     } = _;
     null != e && function(e) {
       e.removeAttribute("src"), Array.from(e.children).forEach(e => {
-        (0, n.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, n.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
+        (0, u.isElement)(e, HTMLSourceElement) && (e.removeAttribute("src"), e.removeAttribute("type")), (0, u.isElement)(e, HTMLImageElement) && e.removeAttribute("src")
       });
       try {
         e.load()
       } catch (e) {}
     }(e)
-  }, []), i.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
+  }, []), r.useLayoutEffect(() => ("function" == typeof t ? (t(null), t(_.current)) : null != t && (t.current = _.current), () => {
     "function" == typeof t ? t(null) : null != t && (t.current = null)
-  }), [t, _]), (0, a.jsx)("video", {
+  }), [t, _]), (0, i.jsx)("video", {
     ref: _,
-    autoPlay: !I && !u && l,
-    onMouseEnter: f,
-    onMouseLeave: T,
-    onFocus: f,
-    onBlur: T,
-    style: c === o.MediaLayoutType.MOSAIC ? {
+    autoPlay: !f && !l && n,
+    onMouseEnter: I,
+    onMouseLeave: h,
+    onFocus: I,
+    onBlur: h,
+    style: d === a.MediaLayoutType.MOSAIC ? {
       width: "100%",
       height: "100%",
       maxHeight: "inherit",
       objectFit: "cover"
-    } : d ? function() {
+    } : c ? function() {
       return {
         maxWidth: E.width,
         maxHeight: E.height,
@@ -66,7 +66,7 @@ let u = e => {
     ...E
   })
 };
-var d = i.forwardRef((e, t) => (0, a.jsx)(u, {
+var c = r.forwardRef((e, t) => (0, i.jsx)(l, {
   ...e,
   externalRef: t
 }))
