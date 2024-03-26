@@ -24,7 +24,7 @@ var s = n("37983"),
   S = n("380986"),
   C = n("969706"),
   A = n("506885"),
-  h = n("981601"),
+  h = n("340906"),
   g = n("845579"),
   M = n("26989"),
   O = n("697218"),
@@ -78,6 +78,7 @@ function k(e) {
   if (null == w) return null;
   let er = (e, t) => (o(null != w.authorId, "Author Id cannot be null when rendering user popout"), (0, s.jsx)(h.default, {
       ...e,
+      location: "MediaPostEmbed",
       userId: w.authorId,
       guildId: w.guildId,
       channelId: F.id,

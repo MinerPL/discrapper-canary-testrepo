@@ -15,7 +15,7 @@ var a = n("37983"),
   c = n("685665"),
   f = n("252063"),
   h = n("506885"),
-  m = n("981601"),
+  m = n("340906"),
   p = n("824563"),
   E = n("27618"),
   g = n("191542"),
@@ -63,6 +63,7 @@ function b(e) {
     preload: () => (0, h.default)(t.id, t.getAvatarURL(void 0, 80)),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
+      location: "PrivateChannelRecipients",
       userId: t.id,
       channelId: l.id
     }),
@@ -122,6 +123,7 @@ function U(e) {
     preload: () => (0, h.default)(c.id, f),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
+      location: "PrivateChannelRecipients",
       userId: c.id,
       channelId: o.id
     }),

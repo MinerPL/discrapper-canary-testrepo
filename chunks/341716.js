@@ -21,7 +21,7 @@ var s = n("37983"),
   m = n("996554"),
   N = n("574073"),
   p = n("38600"),
-  S = n("981601"),
+  S = n("340906"),
   C = n("64791"),
   A = n("315102"),
   h = n("888400"),
@@ -65,6 +65,7 @@ function D(e) {
     analyticsLocations: u
   } = (0, I.default)(T.default.EXECUTED_COMMAND), D = a.useMemo(() => (e, t, n) => (o(null != r && null != t, "ExecuteCommand: user and channel cannot be undefined"), (0, s.jsx)(S.default, {
     ...e,
+    location: "ExecutedCommand",
     channelId: r.id,
     messageId: l.id,
     guildId: r.guild_id,

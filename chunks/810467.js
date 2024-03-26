@@ -30,7 +30,7 @@ var a, s, l = n("37983"),
   L = n("834052"),
   M = n("160870"),
   P = n("506885"),
-  y = n("981601"),
+  y = n("340906"),
   D = n("957255"),
   x = n("697218"),
   b = n("945330"),
@@ -283,6 +283,7 @@ function Y(e) {
         }),
         renderPopout: t => (0, l.jsx)(y.default, {
           ...t,
+          location: "LiveChannelNotice",
           userId: e.id,
           newAnalyticsLocations: [E.default.AVATAR]
         }),

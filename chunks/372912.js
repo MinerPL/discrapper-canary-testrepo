@@ -15,7 +15,7 @@ var a = n("414456"),
   d = n("685665"),
   c = n("619335"),
   f = n("506885"),
-  h = n("981601"),
+  h = n("340906"),
   C = n("26989"),
   p = n("697218"),
   m = n("959097"),
@@ -61,6 +61,7 @@ function _(e) {
         channelId: m.id
       }),
       renderPopout: e => (0, s.jsx)(h.default, {
+        location: "ThreadEmptyMessage",
         userId: S.id,
         guildId: m.guild_id,
         channelId: m.id,

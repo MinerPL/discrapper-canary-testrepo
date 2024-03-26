@@ -27,7 +27,7 @@ var s = n("37983"),
   h = n("702873"),
   g = n("592407"),
   M = n("380986"),
-  O = n("981601"),
+  O = n("340906"),
   R = n("106435"),
   L = n("42203"),
   v = n("26989"),
@@ -146,6 +146,7 @@ function K(e) {
             renderPopout: function(e) {
               return null == i ? (0, s.jsx)(s.Fragment, {}) : (0, s.jsx)(O.default, {
                 ...e,
+                location: "AutomodNotification",
                 userId: i.id,
                 user: i,
                 guildId: r,

@@ -11,7 +11,7 @@ var a = n("627445"),
   i = n("246060"),
   r = n("730541"),
   o = n("407972"),
-  u = n("981601"),
+  u = n("340906"),
   d = n("42203"),
   c = n("25116");
 
@@ -33,6 +33,7 @@ function E(e, t) {
   let n = d.default.getChannel(t.channel_id);
   return l(null != n, "renderUserGuildPopout: channel should never be null"), (0, s.jsx)(u.default, {
     ...e,
+    location: "renderUserGuildPopout",
     channelId: t.channel_id,
     messageId: t.id,
     guildId: n.guild_id,

@@ -12,7 +12,7 @@ var a = n("917351"),
   r = n("86621"),
   o = n("812204"),
   u = n("506885"),
-  d = n("981601"),
+  d = n("340906"),
   c = n("479020"),
   E = n("449008"),
   f = n("49111"),
@@ -47,6 +47,7 @@ let T = (0, r.default)(e => {
       }),
       renderPopout: e => (0, s.jsx)(d.default, {
         ...e,
+        location: "PartyAvatars",
         userId: t.id,
         analyticsParams: r,
         newAnalyticsLocations: [o.default.AVATAR]

@@ -16,7 +16,7 @@ var a = s("37983"),
   E = s("812204"),
   _ = s("685665"),
   I = s("506885"),
-  T = s("981601"),
+  T = s("340906"),
   S = s("697218"),
   f = s("555158"),
   m = s("810567"),
@@ -114,6 +114,7 @@ function P(e) {
     className: j.contentWidth,
     children: (0, a.jsx)(o.Popout, {
       renderPopout: e => (0, a.jsx)(T.default, {
+        location: "GuildSettingsRolesEditMembers",
         guildId: n,
         userId: t.id,
         roleId: r,

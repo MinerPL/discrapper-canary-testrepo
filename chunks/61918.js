@@ -32,7 +32,7 @@ var a = n("37983"),
   R = n("405645"),
   j = n("12896"),
   L = n("506885"),
-  y = n("981601"),
+  y = n("340906"),
   O = n("19766"),
   P = n("305961"),
   D = n("191542"),
@@ -160,6 +160,7 @@ class X extends l.Component {
       }))
     }, this.renderUserPopout = e => (0, a.jsx)(y.default, {
       ...e,
+      location: "ChannelMembers",
       userId: this.props.user.id,
       guildId: this.props.guildId,
       channelId: this.props.channel.id,

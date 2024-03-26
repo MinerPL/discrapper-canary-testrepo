@@ -16,7 +16,7 @@ var a = s("37983"),
   E = s("812204"),
   _ = s("679653"),
   I = s("506885"),
-  T = s("981601"),
+  T = s("340906"),
   S = s("161778"),
   f = s("27618"),
   m = s("697218"),
@@ -137,6 +137,7 @@ class p extends l.PureComponent {
       }),
       renderPopout: e => (0, a.jsx)(T.default, {
         ...e,
+        location: "GuildSettingsAuditLogEntry",
         userId: n,
         guildId: t,
         newAnalyticsLocations: [E.default.AVATAR]

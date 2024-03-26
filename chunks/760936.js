@@ -11,14 +11,14 @@ var a = s("37983"),
   l = s("77078"),
   o = s("812204"),
   u = s("506885"),
-  d = s("981601"),
+  d = s("340906"),
   c = s("280174"),
   _ = s("533403"),
   E = s("158998"),
   T = s("49111"),
   I = s("782340"),
   f = s("496743");
-let S = {
+let R = {
   [T.StoreRecommendationTypes.NOW_PLAYING]: {
     single: (e, t) => I.default.Messages.APPLICATION_STORE_RECOMMENDATION_NOW_PLAYING_SINGLE.format({
       user1: e.username,
@@ -65,9 +65,9 @@ let S = {
     })
   }
 };
-class R extends r.PureComponent {
+class S extends r.PureComponent {
   renderDescription(e, t) {
-    let s = S[e];
+    let s = R[e];
     return 1 === t.length ? s.single(t[0].user, e => this.renderActivityDiscordTag(e)) : 2 === t.length ? s.double(t[0].user, t[1].user, e => this.renderActivityDiscordTag(e)) : s.other(t.length)
   }
   renderActivityDiscordTag(e) {
@@ -75,6 +75,7 @@ class R extends r.PureComponent {
       preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
       renderPopout: t => (0, a.jsx)(d.default, {
         ...t,
+        location: "ApplicationRecommendationActivity",
         userId: e.id,
         newAnalyticsLocations: [o.default.USERNAME]
       }),
@@ -131,6 +132,7 @@ class R extends r.PureComponent {
         preload: () => (0, u.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (0, a.jsx)(d.default, {
           ...t,
+          location: "ApplicationRecommendationActivity",
           userId: e.id,
           newAnalyticsLocations: [o.default.AVATAR]
         }),
@@ -158,4 +160,4 @@ class R extends r.PureComponent {
     }, s)
   }
 }
-var m = R
+var m = S

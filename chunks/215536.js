@@ -13,7 +13,7 @@ var a = n("37983"),
   o = n("899633"),
   d = n("244201"),
   c = n("506885"),
-  f = n("981601"),
+  f = n("340906"),
   h = n("533403"),
   m = n("315102"),
   p = n("893127");
@@ -52,6 +52,7 @@ function E(e) {
     }),
     renderPopout: e => (0, a.jsx)(f.default, {
       ...e,
+      location: "StageSpeakerSummary",
       guildId: t.guild_id,
       channelId: t.id,
       userId: s.id

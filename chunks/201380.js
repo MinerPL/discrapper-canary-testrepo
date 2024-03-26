@@ -30,7 +30,7 @@ var a = n("37983"),
   _ = n("264429"),
   I = n("930291"),
   T = n("506885"),
-  v = n("981601"),
+  v = n("340906"),
   x = n("271938"),
   N = n("305961"),
   A = n("957255"),
@@ -196,6 +196,7 @@ class w extends l.PureComponent {
         user: n
       } = this.props, l = t.getGuildId();
       return (0, a.jsx)(v.default, {
+        location: "VoiceUser",
         userId: n.id,
         guildId: null != l ? l : void 0,
         channelId: t.id,

@@ -15,7 +15,7 @@ var a = s("37983"),
   c = s("812204"),
   E = s("679653"),
   _ = s("506885"),
-  I = s("981601"),
+  I = s("340906"),
   T = s("242020"),
   S = s("27618"),
   f = s("697218"),
@@ -45,6 +45,7 @@ class O extends l.PureComponent {
       }),
       renderPopout: t => (0, a.jsx)(I.default, {
         ...t,
+        location: "GuildSettingsAuditLogEntry",
         userId: e.id,
         guildId: l,
         newAnalyticsLocations: [c.default.USERNAME]
@@ -359,6 +360,7 @@ class A extends l.PureComponent {
             }),
             renderPopout: e => (0, a.jsx)(I.default, {
               ...e,
+              location: "GuildSettingsAuditLogEntry",
               userId: t.userId,
               guildId: r,
               newAnalyticsLocations: [c.default.AVATAR]

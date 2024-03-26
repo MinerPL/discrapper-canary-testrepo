@@ -19,7 +19,7 @@ var a = n("37983"),
   f = n("272030"),
   h = n("244201"),
   m = n("506885"),
-  p = n("981601"),
+  p = n("340906"),
   E = n("26989"),
   g = n("328275"),
   S = n("118503"),
@@ -122,6 +122,7 @@ var A = l.memo(function(e) {
     }, [r, g, s, S]),
     I = l.useCallback(e => (0, a.jsx)(p.default, {
       ...e,
+      location: "AudienceTile",
       guildId: g,
       channelId: s.id,
       userId: r.id

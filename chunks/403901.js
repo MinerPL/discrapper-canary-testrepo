@@ -14,9 +14,9 @@ var l = n("414456"),
   o = n("145079"),
   d = n("119184"),
   c = n("506885"),
-  f = n("981601"),
-  h = n("271938"),
-  v = n("824563"),
+  f = n("340906"),
+  v = n("271938"),
+  h = n("824563"),
   E = n("101125"),
   m = n("697218"),
   C = n("155207"),
@@ -96,13 +96,14 @@ function R(e) {
   let {
     eventUser: n,
     onContextMenu: l
-  } = e, u = (0, s.useStateFromStores)([m.default], () => m.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, C = (0, s.useStateFromStores)([E.default, v.default, h.default], () => n.user_id === h.default.getId() ? E.default.getStatus() : v.default.getStatus(n.user_id, d), [n.user_id, d]);
+  } = e, u = (0, s.useStateFromStores)([m.default], () => m.default.getUser(n.user_id)), d = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, C = (0, s.useStateFromStores)([E.default, h.default, v.default], () => n.user_id === v.default.getId() ? E.default.getStatus() : h.default.getStatus(n.user_id, d), [n.user_id, d]);
   return null == u ? null : (0, i.jsx)(a.Popout, {
     preload: () => (0, c.default)(u.id, u.getAvatarURL(d, 80), {
       guildId: d
     }),
     renderPopout: e => (0, i.jsx)(f.default, {
       ...e,
+      location: "EventDetailRsvpTab",
       userId: n.user_id,
       guildId: d
     }),

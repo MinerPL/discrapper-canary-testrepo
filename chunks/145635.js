@@ -16,7 +16,7 @@ var a, l, s = n("37983"),
   m = n("308289"),
   p = n("750560"),
   E = n("506885"),
-  g = n("981601"),
+  g = n("340906"),
   S = n("26989"),
   C = n("957255"),
   _ = n("824563"),
@@ -111,6 +111,7 @@ let D = i.memo(function(e) {
         }),
         renderPopout: e => (0, s.jsx)(g.default, {
           ...e,
+          location: "RequestToSpeakSidebar",
           userId: a.user.id,
           guildId: C,
           channelId: t.id

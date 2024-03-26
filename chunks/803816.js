@@ -20,7 +20,7 @@ var s = n("37983"),
   I = n("769791"),
   m = n("662285"),
   N = n("866253"),
-  p = n("981601"),
+  p = n("340906"),
   S = n("671071"),
   C = n("766274"),
   A = n("86878"),
@@ -150,6 +150,7 @@ class B extends a.PureComponent {
       } = this.props;
       return null == n ? null : (0, s.jsx)(p.default, {
         ...t,
+        location: "ActivityInviteEmbed",
         userId: e.id,
         guildId: null != a ? a : void 0,
         channelId: n,

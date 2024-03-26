@@ -13,7 +13,7 @@ var a = n("37983"),
   u = n("77078"),
   d = n("812204"),
   c = n("506885"),
-  f = n("981601"),
+  f = n("340906"),
   E = n("145131"),
   h = n("533403"),
   _ = n("945330"),
@@ -97,6 +97,7 @@ class R extends s.PureComponent {
         preload: () => (0, c.default)(e.id, e.getAvatarURL(void 0, 80)),
         renderPopout: t => (o(null != e, ""), (0, a.jsx)(f.default, {
           ...t,
+          location: "ListeningAlong",
           userId: e.id,
           newAnalyticsLocations: [d.default.AVATAR]
         })),
