@@ -5,9 +5,9 @@ a.r(t), a.d(t, {
   }
 }), a("222007"), a("794252");
 var s = a("37983"),
-  r = a("884691"),
-  l = a("414456"),
-  n = a.n(l),
+  l = a("884691"),
+  r = a("414456"),
+  n = a.n(r),
   o = a("506838"),
   i = a("265586"),
   u = a("65597"),
@@ -53,7 +53,7 @@ let z = O.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
     let {
       children: t,
       onClick: a,
-      ...r
+      ...l
     } = e;
     return (0, s.jsx)(f.Button, {
       fullWidth: !0,
@@ -61,7 +61,7 @@ let z = O.default.getEnableHardwareAcceleration() ? f.AnimatedAvatar : f.Avatar,
       onClick: e => {
         e.stopPropagation(), a()
       },
-      ...r,
+      ...l,
       children: t
     })
   },
@@ -88,14 +88,14 @@ var q = function(e) {
   let {
     product: t,
     category: a,
-    onMount: l,
+    onMount: r,
     isPremiumUser: N = !1,
     isGiftEasterEggEnabled: O
   } = e, {
     analyticsLocations: q
-  } = (0, g.default)(p.default.COLLECTIBLES_SHOP_CARD), $ = r.useRef(null), J = (0, C.default)($), [Q, ee] = r.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [es] = t.items, {
-    avatarDecorationSrc: er,
-    eventHandlers: el,
+  } = (0, g.default)(p.default.COLLECTIBLES_SHOP_CARD), $ = l.useRef(null), J = (0, C.default)($), [Q, ee] = l.useState(!1), et = J || Q, ea = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser()), [es] = t.items, {
+    avatarDecorationSrc: el,
+    eventHandlers: er,
     avatarPlaceholderSrc: en
   } = (0, E.default)({
     user: ea,
@@ -104,10 +104,10 @@ var q = function(e) {
     animateOnHover: !et
   }), {
     backgroundColors: eo
-  } = (0, B.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), ep = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(es.skuId)), {
+  } = (0, B.default)(t.styles), ei = (0, j.getFormattedPriceForCollectiblesProduct)(t, N, !1), eu = (0, j.isPremiumCollectiblesProduct)(t), ec = (0, j.isFreeCollectiblesProduct)(t), [ed, ef, em] = (0, u.useStateFromStoresArray)([R.default], () => [R.default.getPurchase(t.skuId), R.default.isClaiming === t.skuId, null != R.default.isClaiming && R.default.isClaiming !== t.skuId]), eC = (0, u.useStateFromStores)([L.default], () => (0, d.isThemeDark)(L.default.theme)), ep = (0, u.useStateFromStores)([P.default], () => P.default.getIsProductNew(es.skuId)), {
     hoverVariant: eg
   } = (0, F.useShopCardHoverAnimationExperiment)("CollectiblesShopTallCard");
-  r.useEffect(() => {
+  l.useEffect(() => {
     let {
       current: e
     } = $;
@@ -120,7 +120,7 @@ var q = function(e) {
   let eh = (0, x.default)({
       analyticsLocations: q
     }),
-    eE = r.useRef(null),
+    eE = l.useRef(null),
     eb = () => {
       if ((0, m.popLayer)(), eh(), (null == es ? void 0 : es.type) === i.CollectiblesItemType.AVATAR_DECORATION) {
         (0, h.openAvatarDecorationModal)({
@@ -155,9 +155,9 @@ var q = function(e) {
         subscriptionTier: W.PremiumSubscriptionSKUs.TIER_2
       })
     });
-  r.useEffect(() => {
-    null == l || l($)
-  }, [l]);
+  l.useEffect(() => {
+    null == r || r($)
+  }, [r]);
   let eL = () => null != ed ? (0, s.jsx)(f.Text, {
       variant: "text-md/semibold",
       className: V.priceTag,
@@ -251,8 +251,8 @@ var q = function(e) {
       }), (null == es ? void 0 : es.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, s.jsx)("div", {
         className: V.avatarContainer,
         children: (0, s.jsx)(z, {
-          ...el,
-          avatarDecoration: er,
+          ...er,
+          avatarDecoration: el,
           src: en,
           className: n(V.avatar, {
             [V.avatarPurchased]: null != ed

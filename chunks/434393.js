@@ -5,9 +5,9 @@ a.r(t), a.d(t, {
   }
 }), a("222007");
 var s = a("37983"),
-  r = a("884691"),
-  l = a("414456"),
-  n = a.n(l),
+  l = a("884691"),
+  r = a("414456"),
+  n = a.n(r),
   o = a("265586"),
   i = a("65597"),
   u = a("77078"),
@@ -48,7 +48,7 @@ let H = y.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
     let {
       children: t,
       onClick: a,
-      ...r
+      ...l
     } = e;
     return (0, s.jsx)(u.Button, {
       fullWidth: !0,
@@ -56,7 +56,7 @@ let H = y.default.getEnableHardwareAcceleration() ? u.AnimatedAvatar : u.Avatar,
       onClick: e => {
         e.stopPropagation(), a()
       },
-      ...r,
+      ...l,
       children: t
     })
   },
@@ -83,12 +83,12 @@ var z = function(e) {
   let {
     product: t,
     category: a,
-    onMount: l,
+    onMount: r,
     isPremiumUser: T = !1,
     isGiftEasterEggEnabled: y
   } = e, {
     analyticsLocations: z
-  } = (0, m.default)(f.default.COLLECTIBLES_SHOP_CARD), Y = r.useRef(null), K = (0, d.default)(Y), [X, Z] = r.useState(!1), q = K || X, $ = (0, i.useStateFromStores)([x.default], () => x.default.getCurrentUser()), [J] = t.items, {
+  } = (0, m.default)(f.default.COLLECTIBLES_SHOP_CARD), Y = l.useRef(null), K = (0, d.default)(Y), [X, Z] = l.useState(!1), q = K || X, $ = (0, i.useStateFromStores)([x.default], () => x.default.getCurrentUser()), [J] = t.items, {
     avatarDecorationSrc: Q,
     eventHandlers: ee,
     avatarPlaceholderSrc: et
@@ -100,8 +100,8 @@ var z = function(e) {
   }), {
     buttonColors: ea,
     backgroundColors: es
-  } = (0, O.default)(t.styles), er = (0, k.getFormattedPriceForCollectiblesProduct)(t, T), el = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([_.default], () => [_.default.getPurchase(t.skuId), _.default.isClaiming === t.skuId, null != _.default.isClaiming && _.default.isClaiming !== t.skuId]), ec = r.useRef(null);
-  r.useEffect(() => {
+  } = (0, O.default)(t.styles), el = (0, k.getFormattedPriceForCollectiblesProduct)(t, T, !1), er = (0, k.isPremiumCollectiblesProduct)(t), en = (0, k.isFreeCollectiblesProduct)(t), [eo, ei, eu] = (0, i.useStateFromStoresArray)([_.default], () => [_.default.getPurchase(t.skuId), _.default.isClaiming === t.skuId, null != _.default.isClaiming && _.default.isClaiming !== t.skuId]), ec = l.useRef(null);
+  l.useEffect(() => {
     let {
       current: e
     } = Y;
@@ -148,15 +148,15 @@ var z = function(e) {
         subscriptionTier: D.PremiumSubscriptionSKUs.TIER_2
       })
     });
-  r.useEffect(() => {
-    null == l || l(Y)
-  }, [l]);
+  l.useEffect(() => {
+    null == r || r(Y)
+  }, [r]);
   let eh = () => null != eo ? (0, s.jsx)(u.Text, {
       color: "always-white",
       variant: "text-md/semibold",
       className: w.priceTag,
       children: M.default.Messages.COLLECTIBLES_ALREADY_OWNED
-    }) : el ? (0, s.jsx)(u.Text, {
+    }) : er ? (0, s.jsx)(u.Text, {
       color: "always-white",
       variant: "text-md/semibold",
       className: w.priceTag,
@@ -166,7 +166,7 @@ var z = function(e) {
       className: w.priceTag,
       disableTooltipPointerEvents: !0
     }),
-    eE = () => el ? null : en ? (0, s.jsx)(V, {
+    eE = () => er ? null : en ? (0, s.jsx)(V, {
       style: null != ea ? {
         background: ea.secondary.toHslString(),
         color: ea.text.toHslString()
@@ -180,12 +180,12 @@ var z = function(e) {
       tooltipDelay: 250
     }),
     eb = () => {
-      if (el && !T && !en) return eg();
+      if (er && !T && !en) return eg();
       let e = null != ea ? {
           background: (0, F.getBackgroundGradient)(ea, 90),
           color: ea.text.toHslString()
         } : void 0,
-        a = el ? {
+        a = er ? {
           submitting: ei,
           submittingStartedLabel: M.default.Messages.COLLECTIBLES_COLLECTING,
           submittingFinishedLabel: M.default.Messages.COLLECTIBLES_COLLECTING_FINISHED,
@@ -209,8 +209,8 @@ var z = function(e) {
           disabled: eu,
           className: w.purchaseButton,
           ...a,
-          children: el ? M.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : M.default.Messages.COLLECTIBLES_PURCHASE.format({
-            price: er
+          children: er ? M.default.Messages.COLLECTIBLES_ADD_TO_YOUR_COLLECTION : M.default.Messages.COLLECTIBLES_PURCHASE.format({
+            price: el
           })
         }) : (0, s.jsx)(G, {
           style: e,
@@ -233,7 +233,7 @@ var z = function(e) {
       onClick: eC,
       style: eS,
       id: "shop-item-".concat(t.skuId),
-      children: [el && (0, s.jsx)(u.Tooltip, {
+      children: [er && (0, s.jsx)(u.Tooltip, {
         tooltipContentClassName: w.premiumWheelTooltipContent,
         color: u.Tooltip.Colors.PRIMARY,
         text: M.default.Messages.COLLECTIBLES_DETAILS_MODAL_INCLUDED_WITH_PREMIUM_DISCLAIMER,
