@@ -5,31 +5,31 @@ n.r(t), n.d(t, {
   }
 });
 var i = n("37983"),
-  a = n("884691"),
+  r = n("884691"),
   l = n("93332"),
   s = n("913491");
-let r = a.memo(l.default);
+let u = r.memo(l.default);
 
 function o(e) {
   let {
     message: t,
     channel: n,
-    author: a,
+    author: r,
     compact: l,
     animateAvatar: o,
-    guildId: u,
-    isGroupStart: c = !0,
-    roleIcon: d,
+    guildId: a,
+    isGroupStart: d = !0,
+    roleIcon: c,
     hideTimestamp: f
   } = e;
-  return !(0, s.default)(t) && (c || l) ? (0, i.jsx)(r, {
+  return !(0, s.default)(t) && (d || l) ? (0, i.jsx)(u, {
     message: t,
     channel: n,
-    author: a,
-    guildId: u,
+    author: r,
+    guildId: a,
     compact: l,
     animate: o,
-    roleIcon: d,
+    roleIcon: c,
     hideTimestamp: f
   }) : void 0
 }

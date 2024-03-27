@@ -1,63 +1,63 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   useShouldShowLegacyPricingNotice: function() {
-    return E
+    return _
   },
   default: function() {
-    return S
+    return m
   }
 });
-var l = n("37983");
-n("884691");
-var a = n("414456"),
-  u = n.n(a),
-  r = n("627445"),
-  i = n.n(r),
-  s = n("423487"),
-  o = n("701909"),
-  c = n("35188"),
-  _ = n("391533"),
-  d = n("296253"),
-  I = n("49111"),
-  f = n("782340"),
-  N = n("816461");
+var a = s("37983");
+s("884691");
+var n = s("414456"),
+  l = s.n(n),
+  i = s("627445"),
+  r = s.n(i),
+  o = s("423487"),
+  d = s("701909"),
+  u = s("35188"),
+  c = s("391533"),
+  S = s("296253"),
+  E = s("49111"),
+  T = s("782340"),
+  f = s("816461");
 
-function E() {
-  let e = (0, d.default)(),
+function _() {
+  let e = (0, S.default)(),
     {
       enabled: t
-    } = c.default.useExperiment({
+    } = u.default.useExperiment({
       location: "5ebfcf_1"
     }, {
       autoTrackExposure: !1
     }),
     {
-      enabled: n
-    } = _.default.useExperiment({
+      enabled: s
+    } = c.default.useExperiment({
       location: "5ebfcf_2"
     }, {
       autoTrackExposure: !1
     });
-  return null != e && ("PL" === e ? t : "TR" === e && n)
+  return null != e && ("PL" === e ? t : "TR" === e && s)
 }
-var S = e => {
-  var t, n;
+var m = e => {
+  var t, s;
   let {
-    fromBoostCancelModal: a,
-    className: r
-  } = e, c = (0, d.default)(), _ = E();
-  if (!_) return null;
-  return i(null != c, "Subscription billing country should not be null"), (0, l.jsxs)("div", {
-    className: u(N.noticeRoot, r),
-    children: [(0, l.jsx)("div", {
-      className: N.iconContainer,
-      children: (0, l.jsx)(s.default, {
-        className: N.infoIcon
+    fromBoostCancelModal: n,
+    className: i
+  } = e, u = (0, S.default)(), c = _();
+  if (!c) return null;
+  return r(null != u, "Subscription billing country should not be null"), (0, a.jsxs)("div", {
+    className: l(f.noticeRoot, i),
+    children: [(0, a.jsx)("div", {
+      className: f.iconContainer,
+      children: (0, a.jsx)(o.default, {
+        className: f.infoIcon
       })
-    }), (0, l.jsx)("div", {
-      className: N.text,
-      children: (t = c, n = a, "PL" === t ? n ? f.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : f.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === t ? n ? f.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : f.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : n ? f.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : f.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
-        helpCenterLink: o.default.getArticleURL(I.HelpdeskArticles.LOCALIZED_PRICING)
+    }), (0, a.jsx)("div", {
+      className: f.text,
+      children: (t = u, s = n, "PL" === t ? s ? T.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_BOOST_WARNING : T.default.Messages.LOCALIZED_PRICING_PLN_LEGACY_PRICING_WARNING : "TR" === t ? s ? T.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_BOOST_WARNING : T.default.Messages.LOCALIZED_PRICING_TRY_LEGACY_PRICING_WARNING : s ? T.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_BOOST_WARNING : T.default.Messages.LOCALIZED_PRICING_LEGACY_PRICING_WARNING).format({
+        helpCenterLink: d.default.getArticleURL(E.HelpdeskArticles.LOCALIZED_PRICING)
       })
     })]
   })

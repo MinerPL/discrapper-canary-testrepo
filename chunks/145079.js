@@ -1,95 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return E
   }
 });
 var i = n("37983");
 n("884691");
-var a = n("414456"),
-  l = n.n(a),
+var r = n("414456"),
+  l = n.n(r),
   s = n("446674"),
-  r = n("77078"),
-  o = n("102985"),
-  u = n("79798"),
+  o = n("77078"),
+  u = n("102985"),
+  a = n("79798"),
   c = n("754474"),
   d = n("158998"),
   f = n("782340"),
-  E = n("168540");
+  h = n("168540");
 
-function _(e) {
+function v(e) {
   if (e.isSystemUser()) return c.BotTypes.SYSTEM_DM;
   if (e.isClyde()) return c.BotTypes.AI;
   if (e.bot) return c.BotTypes.BOT;
   return null
 }
-let h = e => {
+let m = e => {
   let {
     primary: t,
     secondary: n,
-    botType: a,
+    botType: r,
     botVerified: s,
-    discriminatorClass: o,
+    discriminatorClass: u,
     className: c,
     usernameClass: d,
-    color: _,
-    botClass: h,
-    showStreamerModeTooltip: S
+    color: v,
+    botClass: m,
+    showStreamerModeTooltip: E
   } = e;
   return (0, i.jsxs)("div", {
-    className: l(E.info, c),
-    children: [(0, i.jsx)(r.Tooltip, {
+    className: l(h.info, c),
+    children: [(0, i.jsx)(o.Tooltip, {
       text: f.default.Messages.STREAMER_MODE_ENABLED,
-      shouldShow: S,
-      "aria-label": !!S && void 0,
+      shouldShow: E,
+      "aria-label": !!E && void 0,
       children: e => (0, i.jsx)("span", {
         ...e,
-        className: l(E.username, d),
-        style: null != _ ? {
-          color: _
+        className: l(h.username, d),
+        style: null != v ? {
+          color: v
         } : void 0,
         children: t
       })
     }), null != n ? (0, i.jsx)("span", {
-      className: l(E.infoSpacing, o),
+      className: l(h.infoSpacing, u),
       children: n
-    }) : void 0, null != a && (0, i.jsx)(u.default, {
-      type: a,
-      className: l(E.infoSpacing, h),
+    }) : void 0, null != r && (0, i.jsx)(a.default, {
+      type: r,
+      className: l(h.infoSpacing, m),
       verified: s
     })]
   })
 };
-var S = e => {
+var E = e => {
   let {
     hideDiscriminator: t = !1,
     user: n,
-    nick: a,
+    nick: r,
     forceUsername: l,
-    showAccountIdentifier: r,
-    overrideDiscriminator: u,
+    showAccountIdentifier: o,
+    overrideDiscriminator: a,
     forcePomelo: f,
-    ...E
-  } = e, S = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation), m = S || t || n.isNonUserBot(), p = n.toString(), v = d.default.getName(n), A = l ? p : null != a ? a : v, C = n.isPomelo() || f;
-  if (C || A !== p) {
-    let e = A === p && C && l ? d.default.getUserTag(n, {
+    ...h
+  } = e, E = (0, s.useStateFromStores)([u.default], () => u.default.hidePersonalInformation), C = E || t || n.isNonUserBot(), g = n.toString(), p = d.default.getName(n), S = l ? g : null != r ? r : p, _ = n.isPomelo() || f;
+  if (_ || S !== g) {
+    let e = S === g && _ && l ? d.default.getUserTag(n, {
         forcePomelo: f
-      }) : A,
-      t = r && e !== "@".concat(p) ? d.default.getUserTag(n) : void 0;
-    return (0, i.jsx)(h, {
+      }) : S,
+      t = o && e !== "@".concat(g) ? d.default.getUserTag(n) : void 0;
+    return (0, i.jsx)(m, {
       primary: e,
       secondary: t,
       botVerified: n.isVerifiedBot(),
-      botType: _(n),
-      showStreamerModeTooltip: S && e !== v,
-      ...E
+      botType: v(n),
+      showStreamerModeTooltip: E && e !== p,
+      ...h
     })
   }
   return (0, i.jsx)(c.default, {
-    name: A,
-    botType: _(n),
+    name: S,
+    botType: v(n),
     botVerified: n.isVerifiedBot(),
-    discriminator: m || A !== p ? null : null != u ? u : n.discriminator,
-    ...E
+    discriminator: C || S !== g ? null : null != a ? a : n.discriminator,
+    ...h
   })
 }

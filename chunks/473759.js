@@ -1,124 +1,124 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   UsagePill: function() {
-    return I
+    return p
   },
   default: function() {
-    return p
+    return T
   }
 });
-var a = s("37983");
-s("884691");
-var n = s("414456"),
-  l = s.n(n),
-  i = s("77078"),
-  r = s("931138"),
-  u = s("124969"),
-  d = s("486952"),
-  o = s("819220"),
-  c = s("5487"),
-  E = s("579033"),
-  T = s("782340"),
-  _ = s("118243"),
-  f = s("890957");
+var s = n("37983");
+n("884691");
+var a = n("414456"),
+  r = n.n(a),
+  l = n("77078"),
+  i = n("931138"),
+  o = n("124969"),
+  u = n("486952"),
+  d = n("819220"),
+  c = n("5487"),
+  E = n("579033"),
+  f = n("782340"),
+  _ = n("118243"),
+  h = n("890957");
 
-function L() {
-  return (0, a.jsx)(r.default, {
+function g() {
+  return (0, s.jsx)(i.default, {
     className: _.verifiedIcon,
-    children: (0, a.jsx)("div", {
+    children: (0, s.jsx)("div", {
       className: _.verifiedCheckContainer,
-      children: (0, a.jsx)(d.default, {
+      children: (0, s.jsx)(u.default, {
         className: _.verifiedCheck
       })
     })
   })
 }
 
-function S(e) {
+function m(e) {
   let {
     verified: t,
-    text: s
+    text: n
   } = e;
-  return t ? (0, a.jsxs)("div", {
+  return t ? (0, s.jsxs)("div", {
     className: _.verifiedNameContainer,
-    children: [(0, a.jsx)(L, {}), s]
-  }) : (0, a.jsx)(a.Fragment, {
-    children: s
-  })
-}
-
-function I(e) {
-  let {
-    className: t,
-    count: s,
-    creator: n,
-    verifiedName: i
-  } = e;
-  return (0, a.jsx)("div", {
-    className: l(_.usagePill, t, _.userText),
-    children: null != n || null != i ? T.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
-      usageCount: s,
-      creator: null != i ? i : n,
-      creatorHook: (e, t) => (0, a.jsx)(S, {
-        text: e,
-        verified: null != i
-      }, t)
-    }) : T.default.Messages.GUILD_TEMPLATE_USAGES.format({
-      usageCount: s
-    })
+    children: [(0, s.jsx)(g, {}), n]
+  }) : (0, s.jsx)(s.Fragment, {
+    children: n
   })
 }
 
 function p(e) {
+  let {
+    className: t,
+    count: n,
+    creator: a,
+    verifiedName: l
+  } = e;
+  return (0, s.jsx)("div", {
+    className: r(_.usagePill, t, _.userText),
+    children: null != a || null != l ? f.default.Messages.GUILD_TEMPLATE_USAGES_BY_CREATOR2.format({
+      usageCount: n,
+      creator: null != l ? l : a,
+      creatorHook: (e, t) => (0, s.jsx)(m, {
+        text: e,
+        verified: null != l
+      }, t)
+    }) : f.default.Messages.GUILD_TEMPLATE_USAGES.format({
+      usageCount: n
+    })
+  })
+}
+
+function T(e) {
   var t;
   let {
-    guildTemplate: s,
-    error: n,
-    tall: r,
-    pillClassName: d
+    guildTemplate: n,
+    error: a,
+    tall: i,
+    pillClassName: u
   } = e;
-  if (null != n && "" !== n) return (0, a.jsxs)("div", {
+  if (null != a && "" !== a) return (0, s.jsxs)("div", {
     className: _.container,
-    children: [(0, a.jsx)(u.Title, {
-      children: T.default.Messages.INVITE_MODAL_ERROR_TITLE
-    }), (0, a.jsx)(u.SubTitle, {
-      children: n
+    children: [(0, s.jsx)(o.Title, {
+      children: f.default.Messages.INVITE_MODAL_ERROR_TITLE
+    }), (0, s.jsx)(o.SubTitle, {
+      children: a
     })]
   });
-  if (s.state === E.GuildTemplateStates.RESOLVING) return (0, a.jsx)("div", {
+  if (n.state === E.GuildTemplateStates.RESOLVING) return (0, s.jsx)("div", {
     className: _.container,
-    children: (0, a.jsx)(i.Spinner, {})
+    children: (0, s.jsx)(l.Spinner, {})
   });
-  let L = (0, c.default)(s.code).header;
-  if (!r) return (0, a.jsxs)("div", {
+  let g = (0, c.default)(n.code).header;
+  if (!i) return (0, s.jsxs)("div", {
     className: _.container,
-    children: [(0, a.jsx)(u.Title, {
+    children: [(0, s.jsx)(o.Title, {
       className: _.title,
-      children: L
-    }), (0, a.jsx)(u.SubTitle, {
-      className: l(_.subtitle, _.userText),
-      children: s.name
+      children: g
+    }), (0, s.jsx)(o.SubTitle, {
+      className: r(_.subtitle, _.userText),
+      children: n.name
     })]
   });
-  return (0, a.jsxs)("div", {
+  return (0, s.jsxs)("div", {
     className: _.container,
-    children: [(0, a.jsx)(u.Title, {
+    children: [(0, s.jsx)(o.Title, {
       className: _.title,
-      children: L
-    }), (0, a.jsx)(u.SubTitle, {
-      className: l(_.subtitle, f.marginTop2),
-      children: T.default.Messages.GUILD_TEMPLATE_BASED_ON
-    }), (0, a.jsx)(u.Title, {
-      className: l(_.title, _.userText),
-      children: s.name
-    }), null != s.description && "" !== s.description && (0, a.jsx)(u.SubTitle, {
-      className: l(_.subtitle, _.userText, f.marginTop8),
-      children: s.description
-    }), (0, a.jsx)(I, {
-      className: d,
-      count: null !== (t = s.usageCount) && void 0 !== t ? t : 0,
-      creator: s.creator.username,
-      verifiedName: (0, o.getVerifiedName)(s.code)
+      children: g
+    }), (0, s.jsx)(o.SubTitle, {
+      className: r(_.subtitle, h.marginTop2),
+      children: f.default.Messages.GUILD_TEMPLATE_BASED_ON
+    }), (0, s.jsx)(o.Title, {
+      className: r(_.title, _.userText),
+      children: n.name
+    }), null != n.description && "" !== n.description && (0, s.jsx)(o.SubTitle, {
+      className: r(_.subtitle, _.userText, h.marginTop8),
+      children: n.description
+    }), (0, s.jsx)(p, {
+      className: u,
+      count: null !== (t = n.usageCount) && void 0 !== t ? t : 0,
+      creator: n.creator.username,
+      verifiedName: (0, d.getVerifiedName)(n.code)
     })]
   })
 }

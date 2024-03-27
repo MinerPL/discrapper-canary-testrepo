@@ -1,13 +1,13 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(e), a.d(e, {
   useSafetyHubInitialized: function() {
-    return l
+    return s
   }
 });
-var i = n("446674"),
-  a = n("646356");
+var n = a("446674"),
+  i = a("646356");
 
-function l() {
-  let e = (0, i.useStateFromStores)([a.default], () => a.default.isInitialized());
-  return e
+function s() {
+  let t = (0, n.useStateFromStores)([i.default], () => i.default.isInitialized());
+  return t
 }

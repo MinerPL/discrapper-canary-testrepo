@@ -1,47 +1,47 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(e), n.d(e, {
   default: function() {
-    return d
+    return u
   }
 });
-var l = a("37983");
-a("884691");
-var s = a("77078"),
-  n = a("191814"),
-  i = a("903635"),
-  r = a("662833");
+var a = n("37983");
+n("884691");
+var r = n("77078"),
+  l = n("191814"),
+  i = n("903635"),
+  s = n("662833");
 
-function d(e) {
-  var t;
+function u(t) {
+  var e;
   let {
-    attachment: a
-  } = e, d = null !== (t = a.size) && void 0 !== t ? t : 0;
-  return (0, l.jsxs)("div", {
-    className: r.container,
-    children: [(0, l.jsx)(i.default, {
+    attachment: n
+  } = t, u = null !== (e = n.size) && void 0 !== e ? e : 0;
+  return (0, a.jsxs)("div", {
+    className: s.container,
+    children: [(0, a.jsx)(i.default, {
       width: 16,
       height: 16,
-      className: r.fileIcon
-    }), (0, l.jsx)(n.default, {
+      className: s.fileIcon
+    }), (0, a.jsx)(l.default, {
       size: 8,
       horizontal: !0
-    }), (0, l.jsx)(s.Text, {
+    }), (0, a.jsx)(r.Text, {
       variant: "text-sm/normal",
       color: "text-normal",
-      className: r.fileName,
-      children: a.filename
-    }), (0, l.jsx)(n.default, {
+      className: s.fileName,
+      children: n.filename
+    }), (0, a.jsx)(l.default, {
       size: 8,
       horizontal: !0
-    }), (0, l.jsx)("div", {
-      className: r.dot
-    }), (0, l.jsx)(n.default, {
+    }), (0, a.jsx)("div", {
+      className: s.dot
+    }), (0, a.jsx)(l.default, {
       size: 8,
       horizontal: !0
-    }), (0, l.jsxs)(s.Text, {
+    }), (0, a.jsxs)(r.Text, {
       variant: "text-sm/normal",
       color: "text-muted",
-      children: [Math.round(d / 1024 / 1024 * 100) / 100, "MB"]
+      children: [Math.round(u / 1024 / 1024 * 100) / 100, "MB"]
     })]
   })
 }

@@ -4,15 +4,15 @@ n.r(t), n.d(t, {
     return s
   },
   CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: function() {
-    return r
+    return o
   },
   CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: function() {
-    return o
+    return u
   }
 });
 var i = n("316693"),
-  a = n("923510"),
+  r = n("923510"),
   l = n("49111");
 let s = l.Permissions.VIEW_CHANNEL,
-  r = i.combine(s, l.Permissions.CONNECT),
-  o = i.combine(s, a.MODERATE_STAGE_CHANNEL_PERMISSIONS)
+  o = i.combine(s, l.Permissions.CONNECT),
+  u = i.combine(s, r.MODERATE_STAGE_CHANNEL_PERMISSIONS)

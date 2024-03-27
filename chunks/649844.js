@@ -1,102 +1,102 @@
 "use strict";
-n.r(t), n.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return h
+    return f
   }
 });
-var i = n("37983");
-n("884691");
-var a = n("748820"),
-  l = n("77078"),
-  s = n("112679"),
-  r = n("55689"),
-  o = n("676379"),
-  u = n("697218"),
-  c = n("599110"),
-  d = n("659500"),
-  f = n("719923"),
-  E = n("49111"),
-  _ = n("646718");
+var s = l("37983");
+l("884691");
+var n = l("748820"),
+  a = l("77078"),
+  i = l("112679"),
+  u = l("55689"),
+  o = l("676379"),
+  r = l("697218"),
+  c = l("599110"),
+  d = l("659500"),
+  T = l("719923"),
+  _ = l("49111"),
+  E = l("646718");
 
-function h(e) {
+function f(e) {
   let {
     initialPlanId: t,
-    followupSKUInfo: h,
-    onClose: S,
-    onComplete: m,
-    onSubscriptionConfirmation: p,
-    analyticsLocations: v,
-    analyticsObject: A,
-    analyticsLocation: C,
-    analyticsSourceLocation: T,
-    isGift: g = !1,
-    giftMessage: I,
-    subscriptionTier: N,
-    trialId: x,
-    postSuccessGuild: y,
-    openInvoiceId: b,
-    applicationId: L,
-    referralTrialOfferId: R,
-    giftRecipient: M,
-    returnRef: P,
-    subscription: F,
-    skipConfirm: H
-  } = null != e ? e : {}, U = !1, D = (0, a.v4)(), w = u.default.getCurrentUser(), O = (0, f.isPremiumExactly)(w, _.PremiumTypes.TIER_2);
-  (0, l.openModalLazy)(async () => {
+    followupSKUInfo: f,
+    onClose: p,
+    onComplete: S,
+    onSubscriptionConfirmation: I,
+    analyticsLocations: m,
+    analyticsObject: P,
+    analyticsLocation: M,
+    analyticsSourceLocation: C,
+    isGift: R = !1,
+    giftMessage: N,
+    subscriptionTier: A,
+    trialId: L,
+    postSuccessGuild: U,
+    openInvoiceId: O,
+    applicationId: h,
+    referralTrialOfferId: y,
+    giftRecipient: b,
+    returnRef: x,
+    subscription: g,
+    skipConfirm: v
+  } = null != e ? e : {}, B = !1, j = (0, n.v4)(), D = r.default.getCurrentUser(), G = (0, T.isPremiumExactly)(D, E.PremiumTypes.TIER_2);
+  (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await n.el("646139").then(n.bind(n, "646139"));
-    return n => {
+    } = await l.el("646139").then(l.bind(l, "646139"));
+    return l => {
       let {
-        onClose: a,
-        ...l
-      } = n;
-      return (0, i.jsx)(e, {
-        ...l,
-        loadId: D,
-        subscriptionTier: N,
-        skuId: (0, f.castPremiumSubscriptionAsSkuId)(N),
-        isGift: g,
-        giftMessage: I,
-        giftRecipient: M,
+        onClose: n,
+        ...a
+      } = l;
+      return (0, s.jsx)(e, {
+        ...a,
+        loadId: j,
+        subscriptionTier: A,
+        skuId: (0, T.castPremiumSubscriptionAsSkuId)(A),
+        isGift: R,
+        giftMessage: N,
+        giftRecipient: b,
         initialPlanId: t,
-        followupSKUInfo: h,
+        followupSKUInfo: f,
         onClose: (e, t) => {
-          a(), null == S || S(e), e && (null == p || p(), !g && null != t && t === _.PremiumSubscriptionSKUs.TIER_2 && !O && d.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+          n(), null == p || p(e), e && (null == I || I(), !R && null != t && t === E.PremiumSubscriptionSKUs.TIER_2 && !G && d.ComponentDispatch.dispatch(_.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
-          U = !0, null == m || m(), !g && (0, o.setCanPlayWowMoment)(!0)
+          B = !0, null == S || S(), !R && (0, o.setCanPlayWowMoment)(!0)
         },
-        onSubscriptionConfirmation: p,
-        analyticsLocations: v,
-        analyticsObject: A,
-        analyticsLocation: C,
-        analyticsSourceLocation: T,
-        trialId: x,
-        postSuccessGuild: y,
-        planGroup: _.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
-        openInvoiceId: b,
-        applicationId: L,
-        referralTrialOfferId: R,
-        returnRef: P,
-        subscription: F,
-        skipConfirm: !!H
+        onSubscriptionConfirmation: I,
+        analyticsLocations: m,
+        analyticsObject: P,
+        analyticsLocation: M,
+        analyticsSourceLocation: C,
+        trialId: L,
+        postSuccessGuild: U,
+        planGroup: E.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
+        openInvoiceId: O,
+        applicationId: h,
+        referralTrialOfferId: y,
+        returnRef: x,
+        subscription: g,
+        skipConfirm: !!v
       })
     }
   }, {
     modalKey: "payment-modal",
     onCloseCallback: () => {
-      !U && c.default.track(E.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
-        load_id: D,
-        payment_type: E.PurchaseTypeToAnalyticsPaymentType[E.PurchaseTypes.SUBSCRIPTION],
-        location: null != C ? C : A,
-        source: T,
-        subscription_type: E.SubscriptionTypes.PREMIUM,
-        is_gift: g,
-        eligible_for_trial: null != x,
-        application_id: L,
-        location_stack: v
-      }), (0, s.clearError)(), (0, r.clearPurchaseTokenAuthState)(), null == S || S(U), U && (null == p || p())
+      !B && c.default.track(_.AnalyticEvents.PAYMENT_FLOW_CANCELED, {
+        load_id: j,
+        payment_type: _.PurchaseTypeToAnalyticsPaymentType[_.PurchaseTypes.SUBSCRIPTION],
+        location: null != M ? M : P,
+        source: C,
+        subscription_type: _.SubscriptionTypes.PREMIUM,
+        is_gift: R,
+        eligible_for_trial: null != L,
+        application_id: h,
+        location_stack: m
+      }), (0, i.clearError)(), (0, u.clearPurchaseTokenAuthState)(), null == p || p(B), B && (null == I || I())
     }
   })
 }
