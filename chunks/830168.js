@@ -43,7 +43,7 @@ t.default = {
       var i;
       let _ = {
           environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-          build_number: "279108"
+          build_number: "279117"
         },
         c = l.default.getCurrentUser();
       null != c && (_.user_id = c.id, _.user_name = c.tag, null != c.email && (_.email = c.email));
