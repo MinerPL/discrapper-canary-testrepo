@@ -81,7 +81,8 @@ function G(e) {
       selectedSkuId: z,
       startedPaymentFlowWithPaymentSources: q.current
     }),
-    ea = r.useMemo(() => (0, C.getPremiumPlanOptions)({
+    ea = (null == a ? void 0 : a.status) === R.SubscriptionStatusTypes.PAUSED,
+    ei = r.useMemo(() => (0, C.getPremiumPlanOptions)({
       skuId: z,
       isPremium: X,
       multiMonthPlans: [],
@@ -93,12 +94,12 @@ function G(e) {
     }), [z, a, J, X, Q]);
   return (0, s.jsxs)("div", {
     className: j.stepBody,
-    children: [er && (0, s.jsxs)("div", {
+    children: [!ea && er && (0, s.jsxs)("div", {
       children: [(0, s.jsx)(g.PremiumInvoiceTableDivider, {
         negativeMarginBottom: !0,
         negativeMarginTop: !0
       }), (0, s.jsx)(O.PremiumSwitchPlanSelectBody, {
-        planOptions: ea,
+        planOptions: ei,
         eligibleForMultiMonthPlans: !1,
         selectedPlanId: M,
         showTotal: !1,

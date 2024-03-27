@@ -26,8 +26,8 @@ var r = n("37983"),
   P = n("385179"),
   E = n("262683"),
   _ = n("946359"),
-  x = n("307367"),
-  C = n("724269"),
+  C = n("307367"),
+  x = n("724269"),
   I = n("99836"),
   T = n("992049"),
   h = n("176108"),
@@ -49,8 +49,8 @@ function L(e) {
     transitionState: c,
     initialPlanId: E,
     subscriptionTier: _,
-    onClose: x,
-    trialId: C,
+    onClose: C,
+    trialId: x,
     trialFooterMessageOverride: I,
     reviewWarningMessage: T,
     openInvoiceId: h,
@@ -63,22 +63,23 @@ function L(e) {
     guildId: L,
     referralTrialOfferId: O,
     skuId: v,
-    returnRef: R
+    returnRef: R,
+    skipConfirm: B = !1
   } = e, {
-    analyticsLocations: B
+    analyticsLocations: U
   } = (0, u.default)();
   i.useEffect(() => {
     !d.default.isLoadedForPremiumSKUs() && l.default.wait(() => (0, a.fetchPremiumSubscriptionPlans)())
   }, []);
   let {
-    step: U
+    step: G
   } = (0, m.usePaymentContext)(), {
-    isGift: G,
-    giftMessage: w,
-    giftRecipient: F
-  } = (0, f.useGiftContext)(), D = G && (0, p.shouldShowCustomGiftExperience)(F) && U === S.Step.PLAN_SELECT;
+    isGift: w,
+    giftMessage: F,
+    giftRecipient: D
+  } = (0, f.useGiftContext)(), H = w && (0, p.shouldShowCustomGiftExperience)(D) && G === S.Step.PLAN_SELECT;
   return (0, r.jsx)(P.PaymentModal, {
-    analyticsLocations: B,
+    analyticsLocations: U,
     analyticsLocation: t,
     analyticsObject: n,
     analyticsSourceLocation: s,
@@ -86,11 +87,11 @@ function L(e) {
     onComplete: o,
     transitionState: c,
     initialPlanId: E,
-    giftMessage: w,
+    giftMessage: F,
     subscriptionTier: _,
-    onClose: x,
-    trialId: C,
-    isGift: G,
+    onClose: C,
+    trialId: x,
+    isGift: w,
     trialFooterMessageOverride: I,
     reviewWarningMessage: T,
     planGroup: A.ORDERED_PREMIUM_SUBSCRIPTION_PLANS,
@@ -105,8 +106,9 @@ function L(e) {
     referralTrialOfferId: O,
     skuId: v,
     shakeWhilePurchasing: !0,
-    isLargeModal: D,
-    returnRef: R
+    isLargeModal: H,
+    returnRef: R,
+    skipConfirm: B
   })
 }
 
@@ -204,12 +206,12 @@ let R = [{
   }
 }, {
   key: S.Step.AWAITING_BROWSER_CHECKOUT,
-  renderStep: e => (0, r.jsx)(x.default, {
+  renderStep: e => (0, r.jsx)(C.default, {
     ...e
   })
 }, {
   key: S.Step.AWAITING_PURCHASE_TOKEN_AUTH,
-  renderStep: () => (0, r.jsx)(C.default, {})
+  renderStep: () => (0, r.jsx)(x.default, {})
 }, {
   key: S.Step.AWAITING_AUTHENTICATION,
   renderStep: () => (0, r.jsx)(_.default, {})

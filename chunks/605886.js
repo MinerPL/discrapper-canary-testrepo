@@ -85,14 +85,18 @@ async function I(e) {
         loadId: B,
         giftInfoOptions: w
       })
-    } else e = M && null != R && null != O && null != L ? _.PREPAID_PAYMENT_SOURCES.has(O.type) ? await (0, i.payInvoiceManually)(L, R, O, y.currency) : await (0, i.updateSubscription)(L, {
+    } else if (M && null != R && null != O && null != L) e = _.PREPAID_PAYMENT_SOURCES.has(O.type) ? await (0, i.payInvoiceManually)(L, R, O, y.currency) : await (0, i.updateSubscription)(L, {
       paymentSource: O,
       currency: y.currency
-    }, C, A, B) : null != L ? await (0, i.updateSubscription)(L, {
-      items: (0, f.getItemsWithUpsertedPlanIdForGroup)(L, v.id, 1, new Set(g)),
-      paymentSource: O,
-      currency: y.currency
-    }, C, A, B) : await (0, u.subscribe)({
+    }, C, A, B);
+    else if (null != L) {
+      let t = (0, f.getItemsWithUpsertedPlanIdForGroup)(L, v.id, 1, new Set(g)),
+        n = {
+          paymentSource: O,
+          currency: y.currency
+        };
+      L.status === _.SubscriptionStatusTypes.PAUSED ? n.status = _.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, i.updateSubscription)(L, n, C, A, B)
+    } else e = await (0, u.subscribe)({
       planId: v.id,
       currency: y.currency,
       paymentSource: O,

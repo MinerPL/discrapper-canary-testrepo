@@ -1,10 +1,10 @@
 "use strict";
 s.r(t), s.d(t, {
   getReviewConfirmButtonLabel: function() {
-    return T
+    return p
   },
   default: function() {
-    return A
+    return L
   }
 });
 var a = s("37983");
@@ -16,12 +16,13 @@ var r = s("627445"),
   u = s("181114"),
   c = s("719923"),
   o = s("380186"),
-  d = s("843455"),
-  E = s("782340"),
-  _ = s("839330"),
-  I = s("121432");
+  d = s("49111"),
+  E = s("843455"),
+  _ = s("782340"),
+  I = s("839330"),
+  T = s("121432");
 
-function T(e) {
+function p(e) {
   let {
     purchaseType: t,
     plan: s,
@@ -30,19 +31,23 @@ function T(e) {
     planGroup: i,
     isPrepaidPaymentSource: l
   } = e;
-  if (t === d.PurchaseTypes.ONE_TIME) return r ? E.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : E.default.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
-  if (n(null != s, "Subscription plan must be selected to render SubscriptionReviewButton"), r) return E.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
-  if ((0, c.isPremiumSubscriptionPlan)(s.id)) return l ? E.default.Messages.BILLING_SELECT_PLAN : null != a ? (0, o.subscriptionCanSwitchImmediately)(a, s.id, i) ? E.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : E.default.Messages.BILLING_SWITCH_PLAN_CHANGE : (0, c.getBillingReviewSubheader)(null, s);
-  return E.default.Messages.BILLING_SUBSCRIBE_TO_PLAN
+  if (t === E.PurchaseTypes.ONE_TIME) return r ? _.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT : _.default.Messages.GUILD_PRODUCT_PURCHASE_MODAL_CTA;
+  if (n(null != s, "Subscription plan must be selected to render SubscriptionReviewButton"), r) return _.default.Messages.PAYMENT_MODAL_BUTTON_PREMIUM_GIFT;
+  if ((0, c.isPremiumSubscriptionPlan)(s.id)) {
+    if (l) return _.default.Messages.BILLING_SELECT_PLAN;
+    if (null != a) return a.status === d.SubscriptionStatusTypes.PAUSED ? _.default.Messages.RESUME : (0, o.subscriptionCanSwitchImmediately)(a, s.id, i) ? _.default.Messages.BILLING_SWITCH_PLAN_UPGRADE : _.default.Messages.BILLING_SWITCH_PLAN_CHANGE;
+    return (0, c.getBillingReviewSubheader)(null, s)
+  }
+  return _.default.Messages.BILLING_SUBSCRIBE_TO_PLAN
 }
 
-function p(e, t) {
+function A(e, t) {
   null != e.current && (e.current.scrollIntoView({
     behavior: "smooth"
   }), t())
 }
 
-function A(e) {
+function L(e) {
   let {
     legalTermsNodeRef: t,
     invoiceError: s,
@@ -51,7 +56,7 @@ function A(e) {
     flashLegalTerms: c,
     isSubmitting: o,
     premiumSubscription: d,
-    isGift: A,
+    isGift: E,
     planGroup: L,
     isPrepaid: f,
     isTrial: M,
@@ -61,11 +66,11 @@ function A(e) {
     selectedPlan: P,
     hasAcceptedTerms: R,
     purchaseType: h
-  } = (0, l.usePaymentContext)(), C = T({
+  } = (0, l.usePaymentContext)(), C = p({
     purchaseType: h,
     plan: P,
     premiumSubscription: d,
-    isGift: A,
+    isGift: E,
     planGroup: L,
     isPrepaidPaymentSource: f
   });
@@ -75,7 +80,7 @@ function A(e) {
     children: C
   });
   if (S) return (0, a.jsx)(i.Tooltip, {
-    text: E.default.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
+    text: _.default.Messages.BILLING_SELECT_PAYMENT_SOURCE_TOOLTIP,
     children: e => (0, a.jsx)(i.Button, {
       ...e,
       color: i.Button.Colors.GREEN,
@@ -86,24 +91,24 @@ function A(e) {
     })
   });
   if (M) return (0, a.jsxs)(u.default, {
-    innerClassName: _.innerButton,
+    innerClassName: I.innerButton,
     "data-testid": R ? "purchase" : "submitButton",
-    onClick: R ? N : () => p(t, c),
+    onClick: R ? N : () => A(t, c),
     color: i.Button.Colors.GREEN,
     submitting: o,
     children: [(0, a.jsx)("img", {
       alt: "",
-      className: _.nitroIcon,
-      src: I
+      className: I.nitroIcon,
+      src: T
     }), C]
   });
   else if (!R) return (0, a.jsx)(i.Tooltip, {
-    text: E.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
+    text: _.default.Messages.BILLING_ACCEPT_TERMS_PAID_SERVICES_TOOLTIP,
     children: e => (0, a.jsx)(i.Button, {
       ...e,
       color: i.Button.Colors.GREEN,
       type: "submit",
-      onClick: () => p(t, c),
+      onClick: () => A(t, c),
       "data-testid": "submitButton",
       children: C
     })

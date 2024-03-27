@@ -28,8 +28,8 @@ var n = s("414456"),
   T = s("713518"),
   P = s("380186"),
   C = s("182650"),
-  R = s("70578"),
-  A = s("154889"),
+  A = s("70578"),
+  R = s("154889"),
   M = s("892843"),
   h = s("21367"),
   L = s("400307"),
@@ -169,9 +169,9 @@ var F = function(e) {
     analyticsLocations: k
   } = (0, c.default)(d.default.SUBSCRIPTION_HEADER), {
     enabled: w
-  } = (0, R.default)({
+  } = (0, A.default)({
     location: "subscription_header"
-  }), H = (0, A.usePremiumDiscountOffer)(), Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount, W = (0, C.useHasDiscountApplied)(), V = (0, C.useActiveDiscountInfo)(), K = () => {
+  }), H = (0, R.usePremiumDiscountOffer)(), Y = null == H ? void 0 : null === (t = H.discount) || void 0 === t ? void 0 : t.amount, W = (0, C.useHasDiscountApplied)(), V = (0, C.useActiveDiscountInfo)(), K = () => {
     (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSED) && Z(h.Steps.PAUSE_SELECT)
   }, z = () => {
     (l.status === y.SubscriptionStatusTypes.ACTIVE || l.status === y.SubscriptionStatusTypes.PAST_DUE || l.status === y.SubscriptionStatusTypes.PAUSE_PENDING) && Z()
@@ -217,7 +217,14 @@ var F = function(e) {
       });
       return
     }
-    o.resume(l, k)
+    l.status === y.SubscriptionStatusTypes.PAUSED ? (0, f.default)({
+      initialPlanId: l.planIdFromItems,
+      analyticsLocations: k,
+      analyticsLocation: F,
+      analyticsObject: O,
+      subscription: l,
+      skipConfirm: !0
+    }) : o.resume(l, k)
   }, J = () => {
     l.status === y.SubscriptionStatusTypes.PAUSED && Z(h.Steps.PAUSE_SELECT)
   }, Q = () => {
