@@ -1,2 +1,2 @@
-var r = s("818477");
+var r = n("818477");
 t.encode = r.encode, t.decode = r.decode

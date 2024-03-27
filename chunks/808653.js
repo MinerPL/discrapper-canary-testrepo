@@ -1,16 +1,16 @@
-"use strict";
-var n = e("859514"),
-  o = e("383053").left,
-  i = e("528151"),
-  a = e("693523"),
-  u = e("106106");
-n({
-  target: "Array",
-  proto: !0,
-  forced: !u && a > 79 && a < 83 || !i("reduce")
-}, {
-  reduce: function(t) {
-    var r = arguments.length;
-    return o(this, t, r, r > 1 ? arguments[1] : void 0)
-  }
-})
+    "use strict";
+    var e = r("859514"),
+      o = r("383053").left,
+      u = r("528151"),
+      i = r("693523"),
+      c = r("106106");
+    e({
+      target: "Array",
+      proto: !0,
+      forced: !c && i > 79 && i < 83 || !u("reduce")
+    }, {
+      reduce: function(t) {
+        var n = arguments.length;
+        return o(this, t, n, n > 1 ? arguments[1] : void 0)
+      }
+    })

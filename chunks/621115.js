@@ -14,9 +14,9 @@ var r = n("37983");
 n("884691");
 var i = n("414456"),
   s = n.n(i),
-  l = n("77078"),
-  o = n("272460"),
-  a = n("394294"),
+  a = n("77078"),
+  l = n("272460"),
+  o = n("394294"),
   u = n("28551");
 
 function c(e) {
@@ -24,16 +24,16 @@ function c(e) {
     value: t,
     placeholder: n,
     onChange: i,
-    disabled: o,
+    disabled: l,
     className: c
   } = e;
-  return (0, r.jsx)(l.TextInput, {
+  return (0, r.jsx)(a.TextInput, {
     inputClassName: s(u.textInputFieldBodyInput, c),
-    maxLength: a.MAX_TEXT_RESPONSE_LENGTH,
+    maxLength: o.MAX_TEXT_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: n,
     onChange: i,
-    disabled: o
+    disabled: l
   })
 }
 
@@ -41,7 +41,7 @@ function d(e) {
   let {
     formField: t
   } = e;
-  return (0, r.jsx)(o.QuestionRenderer, {
+  return (0, r.jsx)(l.QuestionRenderer, {
     title: t.label,
     children: (0, r.jsx)(c, {
       className: u.fieldBackground,
@@ -56,7 +56,7 @@ function f(e) {
     formField: t,
     onChange: n
   } = e;
-  return (0, r.jsx)(o.QuestionRenderer, {
+  return (0, r.jsx)(l.QuestionRenderer, {
     title: t.label,
     children: (0, r.jsx)(c, {
       className: u.fieldBackground,

@@ -1,12 +1,12 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   setCanPlayWowMoment: function() {
-    return n
+    return a
   }
 });
-var s = l("913144");
-let n = e => {
-  s.default.dispatch({
+var i = n("913144");
+let a = e => {
+  i.default.dispatch({
     type: "PURCHASED_ITEMS_FESTIVITY_SET_CAN_PLAY_WOW_MOMENT",
     value: e
   })

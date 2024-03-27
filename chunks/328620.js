@@ -1,8 +1,8 @@
 "use strict";
-l.r(t), l.d(t, {
+n.r(t), n.d(t, {
   GIFAccessoryContext: function() {
-    return r
+    return a
   }
 });
-var n = l("884691");
-let r = n.createContext(() => null)
+var i = n("884691");
+let a = i.createContext(() => null)

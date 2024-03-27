@@ -1,116 +1,116 @@
 "use strict";
-n.r(e), n.d(e, {
+n.r(t), n.d(t, {
   createCreatorMonetizationEnableRequest: function() {
-    return T
+    return o
   },
   getCreatorMonetizationEligibility: function() {
-    return c
-  },
-  acceptCreatorMonetizationTerms: function() {
-    return l
-  },
-  acceptCreatorMonetizationTermsV2: function() {
     return u
   },
+  acceptCreatorMonetizationTerms: function() {
+    return c
+  },
+  acceptCreatorMonetizationTermsV2: function() {
+    return d
+  },
   getCreatorMonetizationOnboardingMarketing: function() {
-    return E
+    return f
   },
   fetchCreatorMonetizationNagActivateEligibility: function() {
-    return d
+    return p
   },
   ownershipTransferOnboard: function() {
     return _
   },
   acceptNewTerms: function() {
-    return C
+    return E
   },
   acceptNewTermsDemonetized: function() {
-    return R
+    return m
   },
   removeMonetization: function() {
-    return A
+    return I
   }
 });
-var i = n("872717"),
-  a = n("913144"),
-  o = n("651057"),
-  r = n("49111"),
-  s = n("988268");
-async function T(t) {
-  await i.HTTP.post({
-    url: r.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(t)
+var r = n("872717"),
+  i = n("913144"),
+  s = n("651057"),
+  a = n("49111"),
+  l = n("988268");
+async function o(e) {
+  await r.HTTP.post({
+    url: a.Endpoints.CREATOR_MONETIZATION_ENABLE_REQUESTS(e)
   })
 }
-async function c(t) {
-  let e = await i.HTTP.get({
-    url: r.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(t)
+async function u(e) {
+  let t = await r.HTTP.get({
+    url: a.Endpoints.CREATOR_MONETIZATION_ELIGIBILITY(e)
   });
-  return e.body
+  return t.body
 }
-async function l(t, e) {
-  await i.HTTP.post({
-    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(t, e)
+async function c(e, t) {
+  await r.HTTP.post({
+    url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS(e, t)
   })
 }
-async function u(t) {
-  await i.HTTP.post({
-    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(t)
+async function d(e) {
+  await r.HTTP.post({
+    url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_TERMS_V2(e)
   })
 }
-async function E(t) {
-  let e = await i.HTTP.get({
-    url: r.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(t)
+async function f(e) {
+  let t = await r.HTTP.get({
+    url: a.Endpoints.CREATOR_MONETIZATION_MARKETING_ONBOARDING(e)
   });
-  return e.body
+  return t.body
 }
-async function d(t) {
+async function p(e) {
   try {
-    let e = await i.HTTP.get({
-      url: r.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
+    let t = await r.HTTP.get({
+      url: a.Endpoints.CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY,
       query: {
-        nag_guild_ids: t
+        nag_guild_ids: e
       }
     });
-    a.default.dispatch({
+    i.default.dispatch({
       type: "CREATOR_MONETIZATION_NAG_ACTIVATE_ELIGIBLITY_FETCH_SUCCESS",
-      eligibleGuilds: e.body.eligible_guilds
+      eligibleGuilds: t.body.eligible_guilds
     })
-  } catch (t) {}
+  } catch (e) {}
 }
-async function _(t, e) {
-  let n = await i.HTTP.post({
-      url: r.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(t),
+async function _(e, t) {
+  let n = await r.HTTP.post({
+      url: a.Endpoints.CREATOR_MONETIZATION_OWNERSHIP_TRANSFER_ONBOARD(e),
       body: {
-        team_id: e
+        team_id: t
       }
     }),
-    o = n.body;
-  return null != o.application && a.default.dispatch({
+    s = n.body;
+  return null != s.application && i.default.dispatch({
     type: "APPLICATION_FETCH_SUCCESS",
-    application: o.application
-  }), o
+    application: s.application
+  }), s
 }
 
-function C(t) {
-  return i.HTTP.post({
-    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(t)
+function E(e) {
+  return r.HTTP.post({
+    url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS(e)
   })
 }
 
-function R(t) {
-  return i.HTTP.post({
-    url: r.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(t)
+function m(e) {
+  return r.HTTP.post({
+    url: a.Endpoints.CREATOR_MONETIZATION_ACCEPT_NEW_TERMS_DEMONETIZED(e)
   })
 }
-async function O(t) {
-  await i.HTTP.post({
-    url: r.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(t),
+async function T(e) {
+  await r.HTTP.post({
+    url: a.Endpoints.CREATOR_MONETIZATION_REMOVE_MONETIZATION(e),
     body: {}
   })
 }
-async function A(t) {
-  return await O(t), await o.default.getApplicationsForGuild(t, {
-    type: s.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
+async function I(e) {
+  return await T(e), await s.default.getApplicationsForGuild(e, {
+    type: l.ApplicationTypes.GUILD_ROLE_SUBSCRIPTIONS,
     includeTeam: !0
   })
 }

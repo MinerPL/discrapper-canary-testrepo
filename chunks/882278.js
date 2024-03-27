@@ -1,25 +1,25 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return u
+    return o
   }
 });
-var a = n("884691"),
-  s = n("446674"),
-  l = n("42203"),
-  i = n("697218"),
-  r = n("194051"),
-  o = n("754493");
+var l = a("884691"),
+  n = a("446674"),
+  r = a("42203"),
+  s = a("697218"),
+  i = a("194051"),
+  d = a("754493");
 
-function u(e) {
+function o(e) {
   var t;
-  let n = (0, s.useStateFromStores)([i.default], () => i.default.getCurrentUser()),
-    u = (0, s.useStateFromStores)([l.default], () => l.default.getChannel(e)),
-    d = (0, s.useStateFromStores)([r.default], () => null != e ? r.default.getBroadcastByChannel(e) : null),
-    c = (0, o.default)(),
-    f = a.useMemo(() => {
+  let a = (0, n.useStateFromStores)([s.default], () => s.default.getCurrentUser()),
+    o = (0, n.useStateFromStores)([r.default], () => r.default.getChannel(e)),
+    u = (0, n.useStateFromStores)([i.default], () => null != e ? i.default.getBroadcastByChannel(e) : null),
+    c = (0, d.default)(),
+    S = l.useMemo(() => {
       var e, t;
-      return null !== (t = null == u ? void 0 : null === (e = u.recipients) || void 0 === e ? void 0 : e.map(e => i.default.getUser(e)).filter(e => null != e && e.id !== (null == d ? void 0 : d.userId))) && void 0 !== t ? t : []
-    }, [null == d ? void 0 : d.userId, null == u ? void 0 : u.recipients]);
-  return null == n ? [] : c ? f : null !== (t = f.length > 0 ? [n].concat(f) : null == d ? void 0 : d.viewers) && void 0 !== t ? t : []
+      return null !== (t = null == o ? void 0 : null === (e = o.recipients) || void 0 === e ? void 0 : e.map(e => s.default.getUser(e)).filter(e => null != e && e.id !== (null == u ? void 0 : u.userId))) && void 0 !== t ? t : []
+    }, [null == u ? void 0 : u.userId, null == o ? void 0 : o.recipients]);
+  return null == a ? [] : c ? S : null !== (t = S.length > 0 ? [a].concat(S) : null == u ? void 0 : u.viewers) && void 0 !== t ? t : []
 }

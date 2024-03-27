@@ -1,28 +1,28 @@
 "use strict";
-n.r(e), n.d(e, {
+a.r(t), a.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
-var a = n("37983");
-n("884691");
-var r = n("77078"),
-  l = n("191814"),
-  i = n("843499");
+var l = a("37983");
+a("884691");
+var s = a("77078"),
+  n = a("191814"),
+  i = a("843499");
 
-function s(t) {
+function r(e) {
   let {
-    children: e,
-    label: n
-  } = t;
-  return (0, a.jsxs)("li", {
-    children: [(0, a.jsx)(r.Text, {
+    children: t,
+    label: a
+  } = e;
+  return (0, l.jsxs)("li", {
+    children: [(0, l.jsx)(s.Text, {
       variant: "text-xs/semibold",
       color: "header-secondary",
       className: i.benefitLabel,
-      children: n
-    }), (0, a.jsx)(l.default, {
+      children: a
+    }), (0, l.jsx)(n.default, {
       size: 12
-    }), e]
+    }), t]
   })
 }

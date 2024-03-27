@@ -1,11 +1,11 @@
 var i = n("60266"),
-  E = n("581628"),
-  o = n("698273"),
-  r = n("725502");
+  a = n("581628"),
+  l = n("698273"),
+  s = n("725502");
 e.exports = function(e, t) {
-  return function(n, s) {
-    var l = r(n) ? i : E,
-      c = t ? t() : {};
-    return l(n, e, o(s, 2), c)
+  return function(n, r) {
+    var o = s(n) ? i : a,
+      u = t ? t() : {};
+    return o(n, e, l(r, 2), u)
   }
 }
