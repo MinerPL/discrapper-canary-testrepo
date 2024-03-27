@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 });
 var i = n("37983"),
@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("77078"),
   c = n("901582"),
   f = n("244201"),
-  p = n("983782"),
-  m = n("659500"),
+  m = n("983782"),
+  p = n("659500"),
   h = n("791776"),
   x = n("82372"),
   E = n("426969"),
@@ -23,21 +23,21 @@ var i = n("37983"),
   g = n("634114"),
   S = n("49111"),
   C = n("13030"),
-  _ = n("942838"),
-  T = l.memo(function(e) {
+  T = n("942838"),
+  _ = l.memo(function(e) {
     let {
       positionTargetRef: t,
       channel: n,
       closeOnModalOuterClick: a = !1,
-      parentModalKey: T
+      parentModalKey: _
     } = e, I = l.useRef(null), v = l.useRef(null), {
-      renderWindow: N,
-      windowDispatch: A
-    } = l.useContext(f.default), O = null != T, R = (0, u.useIsModalAtTop)(null != T ? T : ""), M = () => {
+      renderWindow: A,
+      windowDispatch: N
+    } = l.useContext(f.default), R = null != _, O = (0, u.useIsModalAtTop)(null != _ ? _ : ""), M = () => {
       x.dismissAppLauncherPopup()
     }, k = l.useCallback(e => {
       var t;
-      if (!O && (0, u.hasAnyModalOpen)() || O && !(R && a)) return;
+      if (!R && (0, u.hasAnyModalOpen)() || R && !(O && a)) return;
       let {
         target: n
       } = e;
@@ -49,20 +49,20 @@ var i = n("37983"),
       }
       M();
       let i = null === (t = (0, h.eventOwnerDocument)(e)) || void 0 === t ? void 0 : t.activeElement;
-      (null == i || "BODY" === i.tagName) && m.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
-    }, [a, R, O]), L = l.useCallback(() => {
+      (null == i || "BODY" === i.tagName) && p.ComponentDispatch.dispatchToLastSubscribed(S.ComponentActions.TEXTAREA_FOCUS)
+    }, [a, O, R]), L = l.useCallback(() => {
       M()
     }, []);
-    l.useLayoutEffect(() => (N.addEventListener("mousedown", k), N.addEventListener("contextmenu", k), A.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
-      N.removeEventListener("mousedown", k), N.removeEventListener("contextmenu", k), A.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
-    }), [L, k, N, A]), (0, d.useFocusLock)(I), l.useEffect(() => {
-      (!O && (0, u.hasAnyModalOpen)() || O && !R) && M()
-    }, [R, O]);
+    l.useLayoutEffect(() => (A.addEventListener("mousedown", k), A.addEventListener("contextmenu", k), N.subscribe(S.ComponentActions.POPOUT_CLOSE, L), () => {
+      A.removeEventListener("mousedown", k), A.removeEventListener("contextmenu", k), N.unsubscribe(S.ComponentActions.POPOUT_CLOSE, L)
+    }), [L, k, A, N]), (0, d.useFocusLock)(I), l.useEffect(() => {
+      (!R && (0, u.hasAnyModalOpen)() || R && !O) && M()
+    }, [O, R]);
     let P = (0, o.useStateFromStores)([E.default], () => E.default.getCurrentAppDetail());
     return (0, i.jsx)(c.default, {
       section: S.AnalyticsSections.EXPRESSION_PICKER,
-      children: (0, i.jsx)(p.AppReferencePositionLayer, {
-        className: _.positionLayer,
+      children: (0, i.jsx)(m.AppReferencePositionLayer, {
+        className: T.positionLayer,
         reference: t,
         position: "top",
         align: "left",
@@ -73,17 +73,17 @@ var i = n("37983"),
             isPositioned: t
           } = e;
           return (0, i.jsx)("section", {
-            className: s(_.positionContainer),
+            className: s(T.positionContainer),
             ref: I,
             role: "dialog",
             "aria-label": "Application Launcher",
             children: t ? (0, i.jsxs)("div", {
-              className: _.drawerSizingWrapper,
+              className: T.drawerSizingWrapper,
               ref: v,
               children: [(0, i.jsx)("div", {
-                className: _.resizeHandle
+                className: T.resizeHandle
               }), (0, i.jsxs)("div", {
-                className: _.contentWrapper,
+                className: T.contentWrapper,
                 children: [(0, i.jsx)(g.default, {
                   channel: n,
                   isAppDetailPresent: null != P

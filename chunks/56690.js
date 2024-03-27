@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var s = a("37983");
 a("884691");
-var r = a("414456"),
-  l = a.n(r),
+var l = a("414456"),
+  r = a.n(l),
   n = a("77078"),
   o = a("153769"),
   i = a("751962"),
@@ -23,7 +23,7 @@ function p(e) {
     category: t
   } = e;
   return (0, s.jsxs)("div", {
-    className: l(i.banner, i.shyBanner),
+    className: r(i.banner, i.shyBanner),
     "aria-label": t.name,
     children: [(0, s.jsx)("div", {
       className: i.shyGridContainer,
@@ -35,12 +35,12 @@ function p(e) {
       })
     }), (0, s.jsx)("img", {
       src: c,
-      className: l(i.shyBannerImage, i.shyBannerRight),
+      className: r(i.shyBannerImage, i.shyBannerRight),
       alt: "",
       "aria-hidden": !0
     }), (0, s.jsx)("img", {
       src: u,
-      className: l(i.shyBannerImage, i.shyBannerLeft),
+      className: r(i.shyBannerImage, i.shyBannerLeft),
       alt: ""
     }), (0, s.jsxs)("div", {
       className: i.attributionLogos,

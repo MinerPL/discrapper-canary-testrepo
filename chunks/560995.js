@@ -23,8 +23,8 @@ let h = u.OverlayWidgetTypes.DEFAULT,
     type: h,
     opacity: p
   }),
-  E = a.createContext(void 0),
-  m = e => {
+  m = a.createContext(void 0),
+  E = e => {
     let {
       children: t,
       className: n,
@@ -35,7 +35,7 @@ let h = u.OverlayWidgetTypes.DEFAULT,
         let {
           type: l
         } = e;
-        return (0, i.jsx)(E.Consumer, {
+        return (0, i.jsx)(m.Consumer, {
           children: e => (0, i.jsx)("div", {
             className: s(n, c.bar, c[r(l)]),
             style: e,
@@ -53,7 +53,7 @@ class S extends a.PureComponent {
       children: t,
       className: n
     } = this.props;
-    return (0, i.jsx)(E.Consumer, {
+    return (0, i.jsx)(m.Consumer, {
       children: a => (0, i.jsx)(g.Consumer, {
         children: l => {
           let o = s(c.body, c[r(l.type)], n);
@@ -106,7 +106,7 @@ let v = e => {
       className: n,
       dynamicSize: a = !1
     } = e;
-    return (0, i.jsx)(E.Consumer, {
+    return (0, i.jsx)(m.Consumer, {
       children: e => (0, i.jsx)("div", {
         className: s(c.content, n, {
           [c.staticSize]: !a
@@ -122,7 +122,7 @@ v.Background = e => {
     opacityOverride: n
   } = e;
   if (null == t) return null;
-  let l = [m, S, y];
+  let l = [E, S, y];
   return (0, i.jsx)(g.Consumer, {
     children: e => {
       let {
@@ -134,7 +134,7 @@ v.Background = e => {
         style: o
       });
       {
-        if (l.includes(t.type)) return (0, i.jsx)(E.Provider, {
+        if (l.includes(t.type)) return (0, i.jsx)(m.Provider, {
           value: o,
           children: t
         });
@@ -186,5 +186,5 @@ v.Background = e => {
       })
     }
   })
-}, v.Bar = m;
+}, v.Bar = E;
 var O = v

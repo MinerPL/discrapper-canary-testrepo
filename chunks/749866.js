@@ -4,13 +4,13 @@ A.r(I), A.d(I, {
     return E
   },
   setEnabled: function() {
-    return i
-  },
-  setLearnedWords: function() {
     return t
   },
-  isMisspelled: function() {
+  setLearnedWords: function() {
     return n
+  },
+  isMisspelled: function() {
+    return i
   },
   getCorrections: function() {
     return R
@@ -37,15 +37,15 @@ function E() {
   return (0, _.isDesktop)() && e()
 }
 let V = E() ? (0, T.install)() : null;
-async function i(N) {
+async function t(N) {
   let I = await V;
   null != I && (I.enabled = N)
 }
-async function t(N) {
+async function n(N) {
   let I = await V;
   null != I && I.setLearnedWords(N)
 }
-async function n(N) {
+async function i(N) {
   let I = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
     A = await V;
   return null != A && A.isMisspelled(N, I)

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return _
   }
 }), n("222007"), n("511434"), n("313619"), n("654714"), n("287168"), n("956660");
 var i = n("37983"),
@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("149022"),
   c = n("217535"),
   f = n("474643"),
-  p = n("599110"),
-  m = n("773336"),
+  m = n("599110"),
+  p = n("773336"),
   h = n("50885"),
   x = n("49111"),
   E = n("782340"),
@@ -26,7 +26,7 @@ function S(e) {
   var t, n, a, r;
   let {
     file: o
-  } = e, [u, d] = l.useState(), [c, f] = l.useState(!1), [p, m] = l.useState({}), h = l.useRef(null);
+  } = e, [u, d] = l.useState(), [c, f] = l.useState(!1), [m, p] = l.useState({}), h = l.useRef(null);
   l.useEffect(() => {
     let e = h.current;
     if (null != e && f(!1), null == o) return;
@@ -39,13 +39,13 @@ function S(e) {
     null != e && (e.onload = () => {
       let t = e.naturalWidth / e.naturalHeight,
         n = Math.max(.66, Math.min(t, 4));
-      1 === n ? m({
+      1 === n ? p({
         width: 104,
         height: 104
-      }) : n > 1 ? m({
+      }) : n > 1 ? p({
         width: 104 * n,
         height: void 0
-      }) : m({
+      }) : p({
         width: void 0,
         height: 104 / n
       }), f(!0)
@@ -61,11 +61,11 @@ function S(e) {
     "aria-hidden": !0,
     alt: "",
     style: {
-      width: null !== (a = p.width) && void 0 !== a ? a : "initial",
-      height: null !== (r = p.height) && void 0 !== r ? r : 104,
+      width: null !== (a = m.width) && void 0 !== a ? a : "initial",
+      height: null !== (r = m.height) && void 0 !== r ? r : 104,
       marginLeft: x,
       marginRight: x,
-      marginTop: null != p.height ? 104 - p.height - 33 : -33
+      marginTop: null != m.height ? 104 - m.height - 33 : -33
     }
   })
 }
@@ -83,13 +83,13 @@ class C extends l.Component {
     })
   }
 }
-class _ extends l.Component {
+class T extends l.Component {
   componentDidMount() {
     var e;
-    (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && p.default.track(x.AnalyticEvents.OPEN_MODAL, {
+    (null === (e = this.props.upload) || void 0 === e ? void 0 : e.showLargeMessageDialog) && this.props.upload.item.platform === u.UploadPlatform.WEB && m.default.track(x.AnalyticEvents.OPEN_MODAL, {
       type: "Upload Large Message",
       message_content_length: this.props.upload.item.file.size
-    }), m.isPlatformEmbedded && h.default.focus()
+    }), p.isPlatformEmbedded && h.default.focus()
   }
   shouldComponentUpdate(e) {
     return null != e.upload
@@ -244,9 +244,9 @@ class _ extends l.Component {
   }
 }
 
-function T(e) {
+function _(e) {
   let t = (0, c.default)();
-  return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(_, {
+  return e.upload.item.platform !== u.UploadPlatform.WEB ? null : (0, i.jsx)(T, {
     ...e,
     file: e.upload.item.file,
     messageMaxLength: t

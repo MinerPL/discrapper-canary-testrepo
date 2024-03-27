@@ -120,7 +120,7 @@ function P(e) {
     analyticsLocation: d
   } = e, [_, T] = n.useState(!1), {
     analyticsLocations: P
-  } = (0, E.default)(), [C, R] = n.useState(!1), A = (0, c.default)(), M = null, h = null, L = [m.SubscriptionStatusTypes.PAST_DUE, m.SubscriptionStatusTypes.PAUSED], g = L.includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, y = l(g).add(r, "days").toDate();
+  } = (0, E.default)(), [C, A] = n.useState(!1), R = (0, c.default)(), M = null, h = null, L = [m.SubscriptionStatusTypes.PAST_DUE, m.SubscriptionStatusTypes.PAUSED], g = L.includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, y = l(g).add(r, "days").toDate();
   switch (t.status) {
     case m.SubscriptionStatusTypes.PAST_DUE:
       h = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
@@ -174,7 +174,7 @@ function P(e) {
             await S({
               premiumSubscription: t,
               pauseDuration: r,
-              setIsCancelling: R,
+              setIsCancelling: A,
               setHasError: T,
               onClose: i,
               analyticsLocations: P,
@@ -184,7 +184,7 @@ function P(e) {
           children: I.default.Messages.CONFIRM
         }), (0, a.jsx)(o.Button, {
           look: o.Button.Looks.LINK,
-          color: (0, u.isThemeDark)(A) ? o.Button.Colors.WHITE : o.Button.Colors.PRIMARY,
+          color: (0, u.isThemeDark)(R) ? o.Button.Colors.WHITE : o.Button.Colors.PRIMARY,
           onClick: i,
           children: I.default.Messages.PREMIUM_CANCEL_WHAT_YOU_LOSE_BACK
         })]

@@ -229,7 +229,7 @@ function O(e, t) {
         count: String(E)
       }))
     }
-  }), J = (0, s.match)({
+  }), q = (0, s.match)({
     isExpired: k,
     canSubmitVote: U,
     hasVoted: G,
@@ -268,7 +268,7 @@ function O(e, t) {
     presentation: "button",
     enabled: U,
     type: "submit"
-  })), q = (0, s.match)({
+  })), J = (0, s.match)({
     isInteractive: F,
     isEditingVote: B
   }).with({
@@ -342,7 +342,7 @@ function O(e, t) {
       layoutType: v
     }),
     containerStyle: "normal",
-    primaryAction: J,
+    primaryAction: q,
     canTapAnswers: D,
     canSelectMultipleAnswers: $,
     hasSelectedAnswer: b,
@@ -350,7 +350,7 @@ function O(e, t) {
     hasVoted: G,
     isExpired: k,
     myAvatarUrl: R,
-    secondaryAction: q,
+    secondaryAction: J,
     tertiaryAction: X
   }
 }

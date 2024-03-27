@@ -15,8 +15,8 @@ var l = n("414456"),
   d = n("442939"),
   c = n("730859"),
   f = n("697218"),
-  p = n("953109"),
-  m = n("449008"),
+  m = n("953109"),
+  p = n("449008"),
   h = n("782340"),
   x = n("291488"),
   E = function(e) {
@@ -29,11 +29,11 @@ var l = n("414456"),
       className: y
     } = e, g = (0, d.useGetOrFetchApplication)(l), S = (0, o.useStateFromStoresArray)([f.default], () => {
       var e;
-      return null !== (e = n.map(e => f.default.getUser(e)).filter(m.isNotNullish)) && void 0 !== e ? e : []
-    }), C = null == g ? void 0 : g.name, _ = r(t).fromNow();
+      return null !== (e = n.map(e => f.default.getUser(e)).filter(p.isNotNullish)) && void 0 !== e ? e : []
+    }), C = null == g ? void 0 : g.name, T = r(t).fromNow();
     return null == t ? null : (0, i.jsxs)("div", {
       className: a(y, x.container),
-      children: [(0, i.jsx)(p.default, {
+      children: [(0, i.jsx)(m.default, {
         game: g
       }), (0, i.jsxs)("div", {
         className: x.textSection,
@@ -49,7 +49,7 @@ var l = n("414456"),
           variant: "text-xs/medium",
           color: "text-muted",
           className: x.subtitle,
-          children: [null != C ? "".concat(C, " • ") : null, _]
+          children: [null != C ? "".concat(C, " • ") : null, T]
         }), (0, i.jsx)(u.Text, {
           variant: "text-xs/medium",
           color: "text-muted",

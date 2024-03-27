@@ -54,8 +54,8 @@ var s = n("37983"),
   z = n("703537"),
   Q = n("55282"),
   Z = n("42203"),
-  J = n("305961"),
-  q = n("42887"),
+  q = n("305961"),
+  J = n("42887"),
   X = n("945956"),
   $ = n("162771"),
   ee = n("697218"),
@@ -111,7 +111,7 @@ let eC = a.memo(function() {
   let _ = (0, o.useStateFromStores)([ee.default], () => ee.default.getCurrentUser()),
     g = (0, o.useStateFromStores)([$.default], () => $.default.getGuildId()),
     ec = (0, o.useStateFromStores)([es.default], () => es.default.getNotice()),
-    eC = (0, o.useStateFromStores)([J.default], () => J.default.getGuild(g)),
+    eC = (0, o.useStateFromStores)([q.default], () => q.default.getGuild(g)),
     {
       analyticsLocations: eA
     } = (0, M.default)(),
@@ -328,7 +328,7 @@ let eC = a.memo(function() {
         })]
       });
     case eE.NoticeTypes.NO_INPUT_DETECTED:
-      if (!q.default.supports(eT.Features.LOOPBACK)) return (0, s.jsx)(eN, {});
+      if (!J.default.supports(eT.Features.LOOPBACK)) return (0, s.jsx)(eN, {});
       return (0, s.jsx)(ep, {});
     case eE.NoticeTypes.HARDWARE_MUTE:
       if (null == ec.metadata) return null;

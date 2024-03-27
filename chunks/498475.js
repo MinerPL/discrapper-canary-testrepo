@@ -27,15 +27,15 @@ function E(e) {
   } = e, i = (0, o.default)(), {
     activeSubscription: E,
     selectedSkuId: _,
-    setSelectedPlanId: x,
-    startedPaymentFlowWithPaymentSourcesRef: C
+    setSelectedPlanId: C,
+    startedPaymentFlowWithPaymentSourcesRef: x
   } = (0, p.usePaymentContext)(), {
     isGift: I
   } = (0, c.useGiftContext)(), T = null != E ? (0, d.getPremiumPlanItem)(E) : null, h = null != T ? (0, d.getDisplayPremiumType)(T.planId) : null, g = null != T ? (0, d.getPremiumType)(T.planId) : null, y = (0, m.inOneStepSubscriptionCheckout)({
     isTrial: !1,
     isGift: I,
     selectedSkuId: _,
-    startedPaymentFlowWithPaymentSources: C.current
+    startedPaymentFlowWithPaymentSources: x.current
   });
   return s(null != g, "Expected premium type"), (0, r.jsx)(u.default, {
     premiumType: g,
@@ -49,7 +49,7 @@ function E(e) {
         onClick: () => {
           if (y) {
             let e = (0, m.getDefaultPlanOneStepCheckout)(_, E);
-            x(e), t(f.Step.REVIEW)
+            C(e), t(f.Step.REVIEW)
           } else t(f.Step.PLAN_SELECT)
         },
         children: S.default.Messages.CONTINUE

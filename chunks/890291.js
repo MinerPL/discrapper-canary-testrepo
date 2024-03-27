@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
+    return m
   }
 });
 var i = n("37983"),
@@ -17,7 +17,7 @@ var i = n("37983"),
   h = n("782340"),
   p = n("183374");
 let g = () => (0, r.show)("DM_SEARCH");
-var E = a.memo(function() {
+var m = a.memo(function() {
   let e = (0, l.useStateFromStores)([u.default], () => u.default.isUILocked((0, c.getPID)()) ? "true" : "false"),
     t = (0, d.default)(e => {
       let {

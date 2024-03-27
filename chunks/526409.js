@@ -17,12 +17,12 @@ var i = n("913144"),
   d = n("432173"),
   c = n("271938"),
   f = n("42203"),
-  p = n("474643"),
-  m = n("462495");
+  m = n("474643"),
+  p = n("462495");
 let h = e => {
-    let t = m.default.getFiles(e),
+    let t = p.default.getFiles(e),
       n = t[0],
-      l = m.default.getMessageForFile(n.id);
+      l = p.default.getMessageForFile(n.id);
     return null == l ? Promise.reject() : new Promise((e, t) => {
       let l = a => {
         a.file.id === n.id && (i.default.unsubscribe("UPLOAD_COMPLETE", l), i.default.unsubscribe("UPLOAD_FAIL", l), "UPLOAD_COMPLETE" === a.type ? e(a.messageRecord) : t(Error("Upload failed")))
@@ -35,8 +35,8 @@ let h = e => {
     let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
       u = arguments.length > 3 ? arguments[3] : void 0,
       d = arguments.length > 4 ? arguments[4] : void 0,
-      m = f.default.getChannel(t);
-    i = c.default.getToken(), o.default.parse(m, "");
+      p = f.default.getChannel(t);
+    i = c.default.getToken(), o.default.parse(p, "");
     let h = r.UploadPlatform.WEB;
     if (l) a.default.addFile({
       file: {
@@ -46,7 +46,7 @@ let h = e => {
         originalUri: ""
       },
       channelId: t,
-      draftType: p.DraftType.ChannelMessage
+      draftType: m.DraftType.ChannelMessage
     });
     else {
       let i = f.default.getChannel(t);
@@ -61,7 +61,7 @@ let h = e => {
         l.description = u, i.uploadFiles({
           channelId: t,
           uploads: [l],
-          draftType: p.DraftType.ChannelMessage,
+          draftType: m.DraftType.ChannelMessage,
           parsedMessage: d
         })
       }

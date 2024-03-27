@@ -15,8 +15,8 @@ var l = n("414456"),
   d = n("77078"),
   c = n("86621"),
   f = n("376556"),
-  p = n("118033"),
-  m = n("42203"),
+  m = n("118033"),
+  p = n("42203"),
   h = n("697218"),
   x = n("800762"),
   E = n("145131"),
@@ -24,14 +24,14 @@ var l = n("414456"),
   g = n("429928"),
   S = n("36539"),
   C = n("698372"),
-  _ = n("770370"),
-  T = n("667618"),
+  T = n("770370"),
+  _ = n("667618"),
   I = n("865677"),
   v = n("15874"),
-  N = n("774713"),
-  A = n("510788"),
-  O = n("756731"),
-  R = n("762806"),
+  A = n("774713"),
+  N = n("510788"),
+  R = n("756731"),
+  O = n("762806"),
   M = n("438278"),
   k = n("898481"),
   L = n("49111"),
@@ -59,26 +59,26 @@ var l = n("414456"),
       K = F === y.Types.PROFILE || F === y.Types.PROFILE_V2,
       W = F === y.Types.STREAM_PREVIEW || null != s,
       Y = (0, g.default)(n),
-      z = (0, p.isStageActivity)(n),
-      Z = K ? E.default.Align.END : E.default.Align.STRETCH,
-      J = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
-      Q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
-      q = (0, u.useStateFromStores)([x.default, m.default], () => {
+      z = (0, m.isStageActivity)(n),
+      Q = K ? E.default.Align.END : E.default.Align.STRETCH,
+      Z = Y || W ? E.default.Direction.HORIZONTAL : E.default.Direction.VERTICAL,
+      q = (null == n ? void 0 : n.type) === L.ActivityTypes.HANG_STATUS,
+      J = (0, u.useStateFromStores)([x.default, p.default], () => {
         var e;
-        return Q ? m.default.getChannel(null === (e = x.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null
+        return q ? p.default.getChannel(null === (e = x.default.getVoiceStateForUser(l.id)) || void 0 === e ? void 0 : e.channelId) : null
       });
-    if ((0, S.default)(n)) t = [(0, i.jsx)(_.default, {
+    if ((0, S.default)(n)) t = [(0, i.jsx)(T.default, {
       look: w,
       color: D,
       platform: f.default.get(L.PlatformTypes.XBOX)
     }, "ConnectPlatformActivityButton")];
-    else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(_.default, {
+    else if ((null == n ? void 0 : n.platform) != null && [L.ActivityGamePlatforms.PS4, L.ActivityGamePlatforms.PS5].includes(n.platform)) t = [(0, i.jsx)(T.default, {
       look: w,
       color: D,
       platform: f.default.get(L.PlatformTypes.PLAYSTATION)
     }, "ConnectPlatformActivityButton")];
     else if (Y) {
-      let e = (0, i.jsx)(R.default, {
+      let e = (0, i.jsx)(O.default, {
           activity: n,
           user: l,
           color: D,
@@ -87,7 +87,7 @@ var l = n("414456"),
           channelId: j,
           source: U
         }, "spotify-activity-sync-button"),
-        a = (0, i.jsx)(O.default, {
+        a = (0, i.jsx)(R.default, {
           activity: n,
           user: l,
           color: D,
@@ -98,8 +98,8 @@ var l = n("414456"),
         }, "spotify-activity-play-button");
       t = [a, e]
     } else if (z) {
-      let e = (0, p.unpackStageChannelParty)(n);
-      null != e && (t = [(0, i.jsx)(N.default, {
+      let e = (0, m.unpackStageChannelParty)(n);
+      null != e && (t = [(0, i.jsx)(A.default, {
         guildId: e.guildId,
         channelId: e.channelId,
         color: D,
@@ -114,11 +114,11 @@ var l = n("414456"),
         applicationStream: s
       }, "watch-button");
       t = [e]
-    } else if (Q && null != q) {
+    } else if (q && null != J) {
       let e = (0, i.jsx)(v.default, {
         color: D,
         look: w,
-        hangStatusChannel: q
+        hangStatusChannel: J
       }, "hang-status-button");
       t = [e]
     } else {
@@ -136,13 +136,13 @@ var l = n("414456"),
           look: w,
           isEmbedded: H
         }, "join-activity-button"),
-        s = (0, i.jsx)(A.default, {
+        s = (0, i.jsx)(N.default, {
           activity: n,
           user: l,
           color: D,
           look: w
         }, "notify-button"),
-        r = (0, i.jsx)(T.default, {
+        r = (0, i.jsx)(_.default, {
           user: l,
           color: D,
           look: w,
@@ -151,11 +151,11 @@ var l = n("414456"),
       if (null == a && null == s && null == e && null == r) return null;
       t = [a, s, e, r]
     }
-    let X = J === E.default.Direction.VERTICAL;
+    let X = Z === E.default.Direction.VERTICAL;
     return (0, i.jsx)(E.default, {
       grow: 0,
-      align: Z,
-      direction: J,
+      align: Q,
+      direction: Z,
       wrap: X ? E.default.Wrap.WRAP : E.default.Wrap.NO_WRAP,
       className: a(c, P.buttonsWrapper, X ? P.vertical : P.horizontal),
       onClick: function(e) {

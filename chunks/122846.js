@@ -21,8 +21,8 @@ var r = n("37983"),
   R = n("154889"),
   p = n("917247"),
   A = n("956597"),
-  S = n("635956"),
-  C = n("273619"),
+  C = n("635956"),
+  S = n("273619"),
   M = n("674158"),
   N = n("915639"),
   m = n("357957"),
@@ -133,7 +133,7 @@ let b = e => {
         color: o.Button.Colors.PRIMARY,
         look: o.Button.Looks.LINK,
         children: g.default.Messages.CLOSE
-      }), (0, r.jsx)(S.default, {
+      }), (0, r.jsx)(C.default, {
         buttonText: null != t || null != n ? l ? g.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : g.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0,
         premiumModalAnalyticsLocation: a,
         subscriptionTier: l ? x.PremiumSubscriptionSKUs.TIER_0 : x.PremiumSubscriptionSKUs.TIER_2,
@@ -150,7 +150,7 @@ function G(e) {
   let {
     onClose: t,
     ...n
-  } = e, s = (0, E.useSubscriptionPlansLoaded)(), a = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedPaymentSources), A = s && a, S = (0, p.usePremiumTrialOffer)(), M = (0, R.usePremiumDiscountOffer)(), {
+  } = e, s = (0, E.useSubscriptionPlansLoaded)(), a = (0, i.useStateFromStores)([m.default], () => m.default.hasFetchedPaymentSources), A = s && a, C = (0, p.usePremiumTrialOffer)(), M = (0, R.usePremiumDiscountOffer)(), {
     isLoading: N,
     suggestedPremiumType: P
   } = (0, I.default)({
@@ -172,10 +172,10 @@ function G(e) {
     children: (0, r.jsx)(o.ModalRoot, {
       ...n,
       "aria-labelledby": "sticker-pack-premium-upsell-modal-header",
-      children: (0, r.jsx)(C.default, {
+      children: (0, r.jsx)(S.default, {
         hideBreadcrumbs: !0,
         body: (0, r.jsx)(b, {
-          trialOffer: S,
+          trialOffer: C,
           discountOffer: M,
           isTier0Upsell: h,
           isLoading: !A || N,
@@ -183,7 +183,7 @@ function G(e) {
           onClose: t
         }),
         footer: (0, r.jsx)(B, {
-          trialOffer: S,
+          trialOffer: C,
           discountOffer: M,
           isTier0Upsell: h,
           onClose: t

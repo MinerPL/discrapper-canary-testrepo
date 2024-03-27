@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForQuestsClientMonitoring: function() {
-    return l
+    return a
   }
 });
 var i = n("862205");
-let r = (0, i.createExperiment)({
+let l = (0, i.createExperiment)({
     id: "2024-03_quests_client_monitoring",
     kind: "user",
     label: "Quests client monitoring experiment",
@@ -26,7 +26,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  l = e => r.getCurrentConfig({
+  a = e => l.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !1

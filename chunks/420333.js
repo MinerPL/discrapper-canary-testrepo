@@ -134,9 +134,9 @@ function F(e) {
     imageSpecifications: j,
     modalTitle: H = A.default.Messages.SELECT_IMAGE_MODAL_TITLE,
     uploadOptionTitle: w = A.default.Messages.UPLOAD_IMAGE
-  } = e, D = (0, l.useStateFromStores)([h.default], () => h.default.isFocused()), k = (0, l.useStateFromStores)([p.default], () => p.default.getCurrentUser()), G = (0, l.useStateFromStores)([f.default], () => f.default.getGuildId()), B = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(G)), {
+  } = e, k = (0, l.useStateFromStores)([h.default], () => h.default.isFocused()), D = (0, l.useStateFromStores)([p.default], () => p.default.getCurrentUser()), G = (0, l.useStateFromStores)([f.default], () => f.default.getGuildId()), B = (0, l.useStateFromStores)([d.default], () => d.default.getGuild(G)), {
     reducedMotion: V
-  } = r.useContext(i.AccessibilityPreferencesContext), z = (0, i.useModalContext)(), K = !_.default.canUseAnimatedAvatar(k) && y === g.UploadTypes.AVATAR, {
+  } = r.useContext(i.AccessibilityPreferencesContext), z = (0, i.useModalContext)(), K = !_.default.canUseAnimatedAvatar(D) && y === g.UploadTypes.AVATAR, {
     analyticsLocations: Z
   } = (0, u.default)(U, s.default.SELECT_IMAGE_MODAL);
 
@@ -238,7 +238,7 @@ function F(e) {
           children: [(0, a.jsxs)("div", {
             className: N.contentCircle,
             children: [(0, a.jsx)(P, {
-              shouldAnimate: D && !V.enabled
+              shouldAnimate: k && !V.enabled
             }), (0, a.jsx)("div", {
               className: N.gifIconContainer,
               children: (0, a.jsx)(m.default, {

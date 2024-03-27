@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return C
   },
   default: function() {
-    return _
+    return T
   }
 });
 var i = n("37983");
@@ -18,8 +18,8 @@ var l = n("446674"),
   d = n("945956"),
   c = n("800762"),
   f = n("476263"),
-  p = n("368121"),
-  m = n("756507"),
+  m = n("368121"),
+  p = n("756507"),
   h = n("4462"),
   x = n("777003"),
   E = n("49111"),
@@ -42,7 +42,7 @@ function C(e, t) {
   } : null
 }
 
-function _(e) {
+function T(e) {
   let {
     voiceGuild: t,
     voiceChannel: n,
@@ -50,7 +50,7 @@ function _(e) {
   } = e, {
     trackUserProfileAction: o,
     ...u
-  } = (0, m.useUserProfileAnalyticsContext)(), c = (0, l.useStateFromStores)([d.default], () => d.default.getChannelId() === n.id), E = c ? y.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? y.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : y.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
+  } = (0, p.useUserProfileAnalyticsContext)(), c = (0, l.useStateFromStores)([d.default], () => d.default.getChannelId() === n.id), E = c ? y.default.Messages.PROFILE_OPEN_VOICE_CHANNEL : n.isGuildStageVoice() ? y.default.Messages.STAGE_CHANNEL_JOIN_BUTTON : y.default.Messages.PROFILE_JOIN_VOICE_CHANNEL;
   return (0, i.jsxs)(x.default, {
     children: [(0, i.jsx)(a.Heading, {
       variant: "eyebrow",
@@ -66,7 +66,7 @@ function _(e) {
           guild: t
         }), (0, i.jsx)("div", {
           className: S.speakerIconContainer,
-          children: (0, i.jsx)(p.default, {
+          children: (0, i.jsx)(m.default, {
             className: S.speakerIcon
           })
         })]

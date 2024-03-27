@@ -24,8 +24,8 @@ var a = s("37983"),
   T = s("719923"),
   P = s("713518"),
   C = s("380186"),
-  R = s("809071"),
-  A = s("49111"),
+  A = s("809071"),
+  R = s("49111"),
   M = s("782340"),
   h = s("229647"),
   L = s("125047");
@@ -46,7 +46,7 @@ function g(e) {
     null == e ? await E.changeSubscriptionCurrency(t, s, j, x) : await E.changePaymentSource(t, e, s, j, x), k(!1), H(s)
   }, W = async (e, s, a) => {
     k(!0);
-    let n = await (0, R.updateSubscriptionInvoicePreview)({
+    let n = await (0, A.updateSubscriptionInvoicePreview)({
       subscriptionId: t.id,
       paymentSourceId: null == e ? void 0 : e.id,
       renewal: !0,
@@ -63,7 +63,7 @@ function g(e) {
     let s = S.default.get(t.planIdForCurrencies);
     u(null != e, "paymentSource not specified for change"), u(null != s, "Unable to fetch plan");
     let a = (0, P.getCurrencies)(s.id, e.id, !1),
-      n = a.length > 0 ? a[0] : A.CurrencyCodes.USD;
+      n = a.length > 0 ? a[0] : R.CurrencyCodes.USD;
     return n
   }, K = e => {
     null != e && W(e, V(e), Y)
@@ -85,7 +85,7 @@ function g(e) {
       onCloseCallback: () => {
         (0, c.clearError)()
       },
-      onCloseRequest: A.NOOP
+      onCloseRequest: R.NOOP
     })
   };
   if (t.isPurchasedExternally) return (e => {

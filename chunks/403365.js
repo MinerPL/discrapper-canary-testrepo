@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   PremiumPaymentSKUSelectStep: function() {
-    return C
+    return x
   }
 });
 var r = n("37983");
@@ -21,9 +21,9 @@ var i = n("414456"),
   P = n("254350"),
   E = n("646718"),
   _ = n("782340"),
-  x = n("63069");
+  C = n("63069");
 
-function C(e) {
+function x(e) {
   let {
     handleStepChange: t,
     handleClose: n,
@@ -35,8 +35,8 @@ function C(e) {
     setSelectedPlanId: d,
     priceOptions: _
   } = (0, f.usePaymentContext)(), {
-    isGift: x
-  } = (0, p.useGiftContext)(), C = (0, o.usePremiumTrialOffer)(i), T = (0, a.useIsInPremiumOfferExperience)();
+    isGift: C
+  } = (0, p.useGiftContext)(), x = (0, o.usePremiumTrialOffer)(i), T = (0, a.useIsInPremiumOfferExperience)();
   return (0, r.jsx)(I, {
     selectSku: e => (function(e) {
       let {
@@ -79,13 +79,13 @@ function C(e) {
       newSkuId: e,
       setSelectedSkuId: s,
       handleStepChange: t,
-      isGift: x,
-      userTrialOffer: C,
+      isGift: C,
+      userTrialOffer: x,
       startedPaymentFlowWithPaymentSources: u.current,
       setSelectedPlanId: d
     }),
     onClose: n,
-    isGift: x,
+    isGift: C,
     inOfferExperience: T,
     priceOptions: _
   })
@@ -101,7 +101,7 @@ function I(e) {
   } = e;
   return (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsxs)(l.ModalHeader, {
-      className: x.skuSelectModalHeader,
+      className: C.skuSelectModalHeader,
       separator: !1,
       children: [(0, r.jsx)(l.FormTitle, {
         tag: l.FormTitleTags.H4,
@@ -110,12 +110,12 @@ function I(e) {
         onClick: n
       })]
     }), (0, r.jsxs)(l.ModalContent, {
-      className: s(x.skuSelectModalContent, {
-        [x.modalPadding]: a
+      className: s(C.skuSelectModalContent, {
+        [C.modalPadding]: a
       }),
       children: [(0, r.jsx)(u.default, {
         fromBoostCancelModal: !1,
-        className: x.legacyPricingNotice
+        className: C.legacyPricingNotice
       }), (0, r.jsx)(d.default, {
         onSelectSku: e => t((0, c.castPremiumSubscriptionAsSkuId)(e)),
         isGift: i,

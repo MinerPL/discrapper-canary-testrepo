@@ -51,8 +51,8 @@ function g(e) {
     username: H
   }) : A.default.Messages.WAVED_AT_YOU.format({
     username: w.nick
-  }), Z = null != j && null != b, J = null;
-  J = Z ? B || Y ? A.default.Messages.YOU_ARE_IN_CHANNEL.format({
+  }), Z = null != j && null != b, q = null;
+  q = Z ? B || Y ? A.default.Messages.YOU_ARE_IN_CHANNEL.format({
     channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
@@ -60,8 +60,8 @@ function g(e) {
     channelHook: (e, t) => (0, s.jsx)(p.default, {
       channel: null != b ? b : void 0
     }, t)
-  }) : A.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (J = B ? A.default.Messages.HANGOUT_OVER_SENDER : A.default.Messages.HANGOUT_OVER_RECEIVER);
-  let q = B ? A.default.Messages.WAVE_AGAIN : A.default.Messages.WAVE_BACK;
+  }) : A.default.Messages.CANNOT_ACCESS_HANGOUT, 0 === V.length && (q = B ? A.default.Messages.HANGOUT_OVER_SENDER : A.default.Messages.HANGOUT_OVER_RECEIVER);
+  let J = B ? A.default.Messages.WAVE_AGAIN : A.default.Messages.WAVE_BACK;
   return (0, s.jsxs)("div", {
     children: [(0, s.jsxs)("div", {
       className: h.card,
@@ -72,7 +72,7 @@ function g(e) {
       }), (0, s.jsx)(r.Text, {
         variant: "text-sm/normal",
         color: "header-secondary",
-        children: J
+        children: q
       }), V.length > 0 ? (0, s.jsx)("div", {
         className: h.participants,
         children: (0, s.jsx)(E.default, {
@@ -115,7 +115,7 @@ function g(e) {
           o.default.sendMessage(x.id, d.default.parse(x, "\uD83D\uDC4B"))
         },
         className: h.button,
-        children: q
+        children: J
       })]
     })]
   })

@@ -49,12 +49,12 @@ function s(e) {
       max: l,
       cos: s,
       round: a
-    } = Math, i = e[0] | e[1] << 8 | e[2] << 16, o = e[3] | e[4] << 8, u = (63 & i) / 63, c = (i >> 6 & 63) / 31.5 - 1, d = (i >> 12 & 63) / 31.5 - 1, E = i >> 23, _ = o >> 15, f = l(3, _ ? E ? 5 : 7 : 7 & o), T = l(3, _ ? 7 & o : E ? 5 : 7), I = E ? (15 & e[5]) / 15 : 1, R = (e[5] >> 4) / 15, p = E ? 6 : 5, A = 0, S = (t, n, r) => {
+    } = Math, i = e[0] | e[1] << 8 | e[2] << 16, o = e[3] | e[4] << 8, u = (63 & i) / 63, c = (i >> 6 & 63) / 31.5 - 1, d = (i >> 12 & 63) / 31.5 - 1, E = i >> 23, _ = o >> 15, f = l(3, _ ? E ? 5 : 7 : 7 & o), T = l(3, _ ? 7 & o : E ? 5 : 7), I = E ? (15 & e[5]) / 15 : 1, R = (e[5] >> 4) / 15, p = E ? 6 : 5, A = 0, C = (t, n, r) => {
       let l = [];
       for (let s = 0; s < n; s++)
         for (let a = s ? 0 : 1; a * n < t * (n - s); a++) l.push(((e[p + (A >> 1)] >> ((1 & A++) << 2) & 15) / 7.5 - 1) * r);
       return l
-    }, C = S(f, T, (i >> 18 & 31) / 31), M = S(3, 3, 1.25 * ((o >> 3 & 63) / 63)), N = S(3, 3, 1.25 * ((o >> 9 & 63) / 63)), m = E && S(5, 5, R), P = r(e), h = a(P > 1 ? 32 : 32 * P), L = a(P > 1 ? 32 / P : 32), O = new Uint8Array(h * L * 4), U = [], D = [];
+    }, S = C(f, T, (i >> 18 & 31) / 31), M = C(3, 3, 1.25 * ((o >> 3 & 63) / 63)), N = C(3, 3, 1.25 * ((o >> 9 & 63) / 63)), m = E && C(5, 5, R), P = r(e), h = a(P > 1 ? 32 : 32 * P), L = a(P > 1 ? 32 / P : 32), O = new Uint8Array(h * L * 4), U = [], D = [];
     for (let e = 0, r = 0; e < L; e++)
       for (let a = 0; a < h; a++, r += 4) {
         let i = u,
@@ -64,7 +64,7 @@ function s(e) {
         for (let e = 0, n = l(f, E ? 5 : 3); e < n; e++) U[e] = s(t / h * (a + .5) * e);
         for (let n = 0, r = l(T, E ? 5 : 3); n < r; n++) D[n] = s(t / L * (e + .5) * n);
         for (let e = 0, t = 0; e < T; e++)
-          for (let n = e ? 0 : 1, r = 2 * D[e]; n * T < f * (T - e); n++, t++) i += C[t] * U[n] * r;
+          for (let n = e ? 0 : 1, r = 2 * D[e]; n * T < f * (T - e); n++, t++) i += S[t] * U[n] * r;
         for (let e = 0, t = 0; e < 3; e++)
           for (let n = e ? 0 : 1, r = 2 * D[e]; n < 3 - e; n++, t++) {
             let e = U[n] * r;
@@ -75,8 +75,8 @@ function s(e) {
             for (let n = e ? 0 : 1, r = 2 * D[e]; n < 5 - e; n++, t++) R += m[t] * U[n] * r;
         let p = i - 2 / 3 * o,
           A = (3 * i - p + _) / 2,
-          S = A - _;
-        O[r] = l(0, 255 * n(1, A)), O[r + 1] = l(0, 255 * n(1, S)), O[r + 2] = l(0, 255 * n(1, p)), O[r + 3] = l(0, 255 * n(1, R))
+          C = A - _;
+        O[r] = l(0, 255 * n(1, A)), O[r + 1] = l(0, 255 * n(1, C)), O[r + 2] = l(0, 255 * n(1, p)), O[r + 3] = l(0, 255 * n(1, R))
       }
     return {
       w: h,

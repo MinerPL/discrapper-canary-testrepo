@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 });
 var i = n("37983"),
@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("986632"),
   c = n("405607"),
   f = n("423080"),
-  p = n("93393"),
-  m = n("153769"),
+  m = n("93393"),
+  p = n("153769"),
   h = n("671434"),
   x = n("389480"),
   E = n("782340"),
@@ -87,7 +87,7 @@ function C(e, t, n, l) {
         case x.SoundboardSoundGridSectionType.RECENTLY_HEARD:
           return (0, i.jsx)(S, {
             ...l,
-            icon: p.default,
+            icon: m.default,
             onClick: t,
             isSelected: n
           }, e.key);
@@ -111,7 +111,7 @@ function C(e, t, n, l) {
         case x.SoundboardSoundGridSectionType.DEFAULTS:
           return (0, i.jsx)(S, {
             ...l,
-            icon: m.default,
+            icon: p.default,
             onClick: t,
             isSelected: n
           }, e.key);
@@ -122,7 +122,7 @@ function C(e, t, n, l) {
   })
 }
 
-function _(e) {
+function T(e) {
   let {
     soundboardListRef: t,
     categories: n,

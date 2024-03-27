@@ -165,8 +165,8 @@ function k(e) {
         return F.id === t
       })
     }),
-    J = C.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
-    q = (0, u.useStateFromStores)([h.default], () => null != J && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, J), [J]),
+    q = C.default.getChannel(null === (t = d.channel) || void 0 === t ? void 0 : t.id),
+    J = (0, u.useStateFromStores)([h.default], () => null != q && h.default.can(P.Permissions.USE_EMBEDDED_ACTIVITIES, q), [q]),
     {
       analyticsLocations: X
     } = (0, m.default)(I.default.INVITE_EMBED),
@@ -174,7 +174,7 @@ function k(e) {
       applicationId: F.id,
       size: U
     }),
-    ee = (0, u.useStateFromStoresArray)([f.default], () => null != J ? f.default.getEmbeddedActivitiesForChannel(J.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [J, F.id]),
+    ee = (0, u.useStateFromStoresArray)([f.default], () => null != q ? f.default.getEmbeddedActivitiesForChannel(q.id).filter(e => e.applicationId === F.id).flatMap(e => Array.from(e.userIds)) : [], [q, F.id]),
     et = (0, u.useStateFromStoresArray)([g.default], () => ee.map(e => g.default.getUser(e)), [ee]),
     en = d.state === P.InviteStates.ACCEPTING,
     es = null != W;
@@ -182,7 +182,7 @@ function k(e) {
     if (null == d.guild) return (0, s.jsx)(v.default, {});
     W = new S.default(d.guild)
   }
-  let ea = es && !q || es && Q,
+  let ea = es && !J || es && Q,
     el = () => {
       E.default.acceptInviteAndTransitionToInviteChannel({
         inviteKey: d.code,
@@ -190,7 +190,7 @@ function k(e) {
         analyticsLocations: X
       })
     };
-  return (es && Q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
+  return (es && Q && (l = x.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY), !J && (l = x.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS), r = Q ? x.default.Messages.INVITE_EMBED_JOINED : Z || !es ? x.default.Messages.JOIN : x.default.Messages.START, null == d.code || "" === d.code) ? null : (0, s.jsxs)("div", {
     className: y.container,
     ref: w,
     children: [(0, s.jsx)("div", {
@@ -224,7 +224,7 @@ function k(e) {
           variant: "heading-xl/semibold",
           children: null == z ? void 0 : z.name
         }), (0, s.jsx)(B, {
-          channel: J,
+          channel: q,
           guild: W,
           isStacked: Y,
           hasEnded: !Z

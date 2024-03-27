@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useQuests: function() {
-    return m
+    return p
   },
   useIsQuestExpired: function() {
     return x
@@ -29,9 +29,9 @@ var i = n("884691"),
   d = n("2973"),
   c = n("588025"),
   f = n("227231"),
-  p = n("166604");
+  m = n("166604");
 
-function m(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     [n, l] = i.useState(!1),
     s = (0, a.useStateFromStoresArray)([d.default], () => [...d.default.quests.values()]),
@@ -43,17 +43,17 @@ function m(e) {
       lastFetchedCurrentQuests: d.default.lastFetchedCurrentQuests
     })),
     f = (0, o.getIsEligibleForQuests)({
-      location: p.QuestsExperimentLocations.USE_QUESTS
+      location: m.QuestsExperimentLocations.USE_QUESTS
     });
   i.useEffect(() => {
     !0 === t.fetch && f && !n && !u && 0 === c && (l(!0), (0, r.fetchCurrentQuests)())
   }, [t.fetch, f, n, u, c]);
-  let m = i.useMemo(() => {
+  let p = i.useMemo(() => {
     let t = null != e ? new Set(e) : null;
     return s.filter(e => null == t || t.has(e.id))
   }, [e, s]);
   return {
-    quests: m,
+    quests: p,
     isFetchingCurrentQuests: u
   }
 }
@@ -62,7 +62,7 @@ function h() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = m(), [n, a] = i.useState(() => new Map(e.map(e => [e.id, (0, f.isQuestExpired)(e)])));
+  } = p(), [n, a] = i.useState(() => new Map(e.map(e => [e.id, (0, f.isQuestExpired)(e)])));
   return i.useEffect(() => {
     if (t) return;
     let n = [];
@@ -103,7 +103,7 @@ function y() {
   let {
     quests: e,
     isFetchingCurrentQuests: t
-  } = m(void 0, {
+  } = p(void 0, {
     fetch: !0
   }), n = h(), l = i.useMemo(() => {
     let i = [];
@@ -130,7 +130,7 @@ function y() {
 function g() {
   let {
     quests: e
-  } = m(), t = y().length > 0;
+  } = p(), t = y().length > 0;
   i.useEffect(() => {
     for (let n of e) t && (0, r.dismissQuestContent)(n.id, c.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE)
   }, [e, t])
@@ -138,7 +138,7 @@ function g() {
 
 function S(e) {
   let t = (0, u.useIsEligibleForMembersListQuestEntrypoint)({
-      location: p.QuestsExperimentLocations.MEMBERS_LIST
+      location: m.QuestsExperimentLocations.MEMBERS_LIST
     }),
     n = (0, a.useStateFromStores)([d.default], () => t ? d.default.quests : null),
     l = i.useMemo(() => (0, f.getQuestsFromActivities)(n, e), [e, n]),

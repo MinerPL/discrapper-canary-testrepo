@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return I
   },
   default: function() {
-    return m
+    return T
   }
 });
 var i = n("37983");
@@ -20,8 +20,8 @@ var r = n("414456"),
   f = n("663745"),
   S = n("153160"),
   E = n("928576"),
-  h = n("516770"),
-  _ = n("843455"),
+  _ = n("516770"),
+  h = n("843455"),
   g = n("782340"),
   p = n("303903");
 
@@ -37,8 +37,8 @@ function C(e) {
     onUnpublishProduct: f,
     onDeleteProduct: S,
     onCopyLink: E,
-    onTestDownload: h,
-    onReportProduct: _,
+    onTestDownload: _,
+    onReportProduct: h,
     closePopout: C,
     onSelect: I
   } = e;
@@ -63,7 +63,7 @@ function C(e) {
           id: "guild-product-test-download",
           label: g.default.Messages.GUILD_PRODUCT_TEST_DOWNLOAD,
           icon: d.default,
-          action: h
+          action: _
         })]
       }), (0, i.jsxs)(s.MenuGroup, {
         children: [n && (0, i.jsx)(s.MenuItem, {
@@ -81,7 +81,7 @@ function C(e) {
           id: "guild-product-report",
           label: g.default.Messages.GUILD_PRODUCT_REPORT,
           color: "danger",
-          action: _
+          action: h
         })
       })]
     })
@@ -101,8 +101,8 @@ function I(e) {
     onEditProduct: c,
     onUnpublishProduct: S,
     onDeleteProduct: E,
-    onCopyProductLink: h,
-    onTestDownload: _,
+    onCopyProductLink: _,
+    onTestDownload: h,
     onReportProduct: I
   } = e;
   return (0, i.jsx)("div", {
@@ -127,8 +127,8 @@ function I(e) {
         onEditProduct: c,
         onUnpublishProduct: S,
         onDeleteProduct: E,
-        onCopyLink: h,
-        onTestDownload: _,
+        onCopyLink: _,
+        onTestDownload: h,
         onReportProduct: I
       }),
       children: (e, n) => {
@@ -153,7 +153,7 @@ function I(e) {
   })
 }
 
-function m(e) {
+function T(e) {
   let {
     product: t,
     guildId: n,
@@ -161,15 +161,15 @@ function m(e) {
     onUnpublishProduct: d,
     onDeleteProduct: c,
     onCopyProductLink: f,
-    onTestDownload: m,
-    disabled: T = !1
-  } = e, v = (0, o.useListingThumbnailUrl)(t, 600), R = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, _.CurrencyCodes.USD) : void 0, N = (0, E.useProductType)(t);
+    onTestDownload: T,
+    disabled: m = !1
+  } = e, R = (0, o.useListingThumbnailUrl)(t, 600), N = null !== t.price_tier ? (0, S.formatPrice)(t.price_tier, h.CurrencyCodes.USD) : void 0, v = (0, E.useProductType)(t);
   return (0, i.jsxs)(s.ClickableContainer, {
     tag: "article",
     className: l(p.productCardClickable, p.productCard, {
-      [p.disabled]: T
+      [p.disabled]: m
     }),
-    onClick: T ? void 0 : r,
+    onClick: m ? void 0 : r,
     onContextMenu: function(e) {
       (0, u.openContextMenuLazy)(e, () => Promise.resolve(e => (0, i.jsx)(C, {
         ...e,
@@ -186,7 +186,7 @@ function m(e) {
         onUnpublishProduct: d,
         onDeleteProduct: c,
         onCopyLink: f,
-        onTestDownload: m,
+        onTestDownload: T,
         onReportProduct: () => {}
       })))
     },
@@ -195,7 +195,7 @@ function m(e) {
     }),
     children: [(0, i.jsx)("img", {
       alt: "",
-      src: v,
+      src: R,
       className: p.productThumbnail
     }), (0, i.jsxs)("div", {
       className: p.productInfo,
@@ -213,20 +213,20 @@ function m(e) {
           children: [(0, i.jsx)(s.Text, {
             variant: "text-md/normal",
             color: "header-secondary",
-            children: R
-          }), null != N ? (0, i.jsxs)(i.Fragment, {
+            children: N
+          }), null != v ? (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)("div", {
               className: p.dotSeparator
             }), (0, i.jsx)(s.Text, {
               variant: "text-md/normal",
               color: "header-secondary",
-              children: N
+              children: v
             })]
           }) : null]
         }), (0, i.jsx)(a.default, {
           size: 16
-        }), t.published ? (0, i.jsx)(h.PublishedBadge, {}) : (0, i.jsx)(h.DraftBadge, {})]
-      }), !T && (0, i.jsx)(I, {
+        }), t.published ? (0, i.jsx)(_.PublishedBadge, {}) : (0, i.jsx)(_.DraftBadge, {})]
+      }), !m && (0, i.jsx)(I, {
         product: t,
         guildId: n,
         showEditProduct: !0,
@@ -239,7 +239,7 @@ function m(e) {
         onUnpublishProduct: d,
         onDeleteProduct: c,
         onCopyProductLink: f,
-        onTestDownload: m,
+        onTestDownload: T,
         onReportProduct: () => {}
       })]
     })]

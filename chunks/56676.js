@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var l = n("446674"),
   s = n("913144");
 let r = {},
-  a = null,
-  u = null;
+  u = null,
+  a = null;
 
 function i(e, t) {
   null == t ? e in r && delete r[e] : null != e && (r[e] = t)
@@ -18,7 +18,7 @@ function o(e) {
   let {
     user: t
   } = e;
-  u = t.id
+  a = t.id
 }
 class c extends l.default.PersistedStore {
   initialize(e) {
@@ -33,7 +33,7 @@ class c extends l.default.PersistedStore {
     return null != n && t.reduce((e, t) => e || n.includes(t), !1)
   }
   wasLoginAttemptedInSession(e) {
-    return a === e
+    return u === e
   }
   getState() {
     return r
@@ -46,7 +46,7 @@ var d = new c(s.default, {
       required_actions: t,
       user_id: n
     } = e;
-    i(a = n, t)
+    i(u = n, t)
   },
   CONNECTION_OPEN: o,
   CURRENT_USER_UPDATE: o,
@@ -54,7 +54,7 @@ var d = new c(s.default, {
     let {
       isSwitchingAccount: t
     } = e;
-    !t && null != u && i(u, null)
+    !t && null != a && i(a, null)
   },
   PASSWORD_UPDATED: function(e) {
     let {

@@ -16,11 +16,11 @@ let u = new Map,
   d = new Map,
   c = [],
   f = 0,
-  p = [];
-class m extends a.default.Store {
+  m = [];
+class p extends a.default.Store {
   getIntegrations(e) {
     var t;
-    return null !== (t = u.get(e)) && void 0 !== t ? t : p
+    return null !== (t = u.get(e)) && void 0 !== t ? t : m
   }
   getIntegration(e, t) {
     var n;
@@ -44,8 +44,8 @@ class m extends a.default.Store {
 function h(e) {
   return e.sort((e, t) => e.application.name.localeCompare(t.application.name))
 }
-m.displayName = "PrivateChannelIntegrationStore";
-let x = new m(s.default, {
+p.displayName = "PrivateChannelIntegrationStore";
+let x = new p(s.default, {
   LOGOUT() {
     u.clear()
   },

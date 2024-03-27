@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return N
+    return A
   }
 }), n("222007");
 var i = n("37983"),
@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("993105"),
   c = n("410889"),
   f = n("461380"),
-  p = n("195812"),
-  m = n("967685"),
+  m = n("195812"),
+  p = n("967685"),
   h = n("204591"),
   x = n("782340"),
   E = n("482211"),
@@ -101,7 +101,7 @@ function C(e) {
         href: t.url,
         target: "_blank",
         rel: "noreferrer noopener",
-        children: (0, i.jsx)(p.default, {
+        children: (0, i.jsx)(m.default, {
           className: E.downloadButton,
           width: 24,
           height: 24
@@ -111,7 +111,7 @@ function C(e) {
   })
 }
 
-function _(e) {
+function T(e) {
   let {
     language: t,
     setLanguage: n
@@ -155,7 +155,7 @@ function _(e) {
   })
 }
 
-function T(e) {
+function _(e) {
   return (0, i.jsx)(o.Tooltip, {
     text: x.default.Messages.PREVIEW_WHOLE_FILE,
     children: t => (0, i.jsx)(o.Clickable, {
@@ -167,7 +167,7 @@ function T(e) {
           ...t
         }))
       },
-      children: (0, i.jsx)(m.default, {})
+      children: (0, i.jsx)(p.default, {})
     })
   })
 }
@@ -182,17 +182,17 @@ function I(e) {
     language: u,
     setLanguage: c,
     bytesLeft: f,
-    className: p
-  } = e, m = null == l ? void 0 : l.split("\n"), h = null !== (t = null == m ? void 0 : m.length) && void 0 !== t ? t : 0, y = a ? 100 : 6, I = 0 === f, v = "";
+    className: m
+  } = e, p = null == l ? void 0 : l.split("\n"), h = null !== (t = null == p ? void 0 : p.length) && void 0 !== t ? t : 0, y = a ? 100 : 6, I = 0 === f, v = "";
   I && a && h > y ? v = "\n..." : !I && (v = "..."), "" !== v && (I ? v += " " + x.default.Messages.PREVIEW_LINES_LEFT.format({
     lines: h - y
   }) : v += " " + x.default.Messages.PREVIEW_BYTES_LEFT.format({
     formattedBytes: (0, d.formatKbSize)(f)
   }));
-  let N = (null == m ? void 0 : m.slice(0, y).join("\n")) + v,
-    A = a || y < h;
+  let A = (null == p ? void 0 : p.slice(0, y).join("\n")) + v,
+    N = a || y < h;
   return (0, i.jsxs)("div", {
-    className: s(p, E.container),
+    className: s(m, E.container),
     children: [(0, i.jsx)("div", {
       className: s(E.textContainer, {
         [E.expanded]: a
@@ -200,20 +200,20 @@ function I(e) {
       children: null == l ? (0, i.jsx)(o.Spinner, {
         className: E.spinner
       }) : (0, i.jsx)(g, {
-        text: N,
+        text: A,
         language: u
       })
     }), (0, i.jsxs)(o.Text, {
       color: "header-secondary",
       className: E.footer,
       variant: "text-sm/normal",
-      children: [A ? (0, i.jsxs)(i.Fragment, {
+      children: [N ? (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)(S, {
           expanded: a,
           setExpanded: r,
           isWholeFile: I,
           numLines: h
-        }), (0, i.jsx)(T, {
+        }), (0, i.jsx)(_, {
           language: u,
           fileContents: l,
           bytesLeft: f,
@@ -223,7 +223,7 @@ function I(e) {
         className: E.footerGap
       }), (0, i.jsx)(C, {
         attachment: n
-      }), (0, i.jsx)(_, {
+      }), (0, i.jsx)(T, {
         language: u,
         setLanguage: c
       })]
@@ -264,7 +264,7 @@ function v(e) {
           className: E.footerGap
         }), (0, i.jsx)(C, {
           attachment: r
-        }), (0, i.jsx)(_, {
+        }), (0, i.jsx)(T, {
           language: u,
           setLanguage: c
         })]
@@ -272,15 +272,15 @@ function v(e) {
     })
   })
 }
-var N = l.memo(function(e) {
+var A = l.memo(function(e) {
   let {
     attachment: t,
     className: n,
     onClick: a,
     onContextMenu: r
   } = e, [o, u] = l.useState(!1), [d, f] = l.useState(t.filename.split(".").slice(-1)[0]), {
-    fileContents: p,
-    bytesLeft: m,
+    fileContents: m,
+    bytesLeft: p,
     hadError: h
   } = function(e, t) {
     let [n, i] = l.useState(!1), [a, s] = l.useState(null), [r, o] = l.useState(1);
@@ -309,8 +309,8 @@ var N = l.memo(function(e) {
             d = null !== (n = a.headers.get("content-range")) && void 0 !== n ? n : "0",
             c = null !== (l = a.headers.get("content-length")) && void 0 !== l ? l : "1",
             f = parseInt(d.split("/")[1]),
-            p = f - parseInt(c);
-          s(0 === p ? u : u.slice(0, -1)), o(p), i(!1)
+            m = f - parseInt(c);
+          s(0 === m ? u : u.slice(0, -1)), o(m), i(!1)
         } catch (e) {
           o(0), i(!0)
         }
@@ -330,8 +330,8 @@ var N = l.memo(function(e) {
     className: n
   }) : (0, i.jsx)(I, {
     attachment: t,
-    fileContents: p,
-    bytesLeft: m,
+    fileContents: m,
+    bytesLeft: p,
     expanded: o,
     setExpanded: u,
     language: d,

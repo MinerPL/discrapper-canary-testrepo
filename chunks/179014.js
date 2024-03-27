@@ -20,7 +20,7 @@ function c(e) {
     displayProfile: n,
     guild: c,
     channelId: f
-  } = e, p = l.default.getName(null == c ? void 0 : c.id, f, t), m = (0, a.default)(t.id, null == c ? void 0 : c.id);
+  } = e, m = l.default.getName(null == c ? void 0 : c.id, f, t), p = (0, a.default)(t.id, null == c ? void 0 : c.id);
   return t.isSystemUser() ? null : t.isNonUserBot() ? (0, i.jsx)(u.default, {
     user: t,
     nickname: null,
@@ -31,18 +31,18 @@ function c(e) {
     children: [(0, i.jsx)(u.default, {
       className: d.usernameSection,
       user: t,
-      nickname: p,
+      nickname: m,
       pronouns: null == n ? void 0 : n.pronouns,
       usernameIcon: t.hasAvatarForGuild(null == c ? void 0 : c.id) && (0, i.jsx)(s.default, {
         user: t,
-        nickname: p
+        nickname: m
       })
     }), (0, i.jsx)(o.default, {
       user: t,
-      isLastSection: !m
+      isLastSection: !p
     }), (0, i.jsx)(r.default, {
       user: t,
-      canDM: m
+      canDM: p
     })]
   })
 }

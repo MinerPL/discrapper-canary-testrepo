@@ -29,13 +29,13 @@ function T(e) {
     onClose: T,
     confettiCanvas: P,
     userWasChurned: C = !1,
-    userDiscountOffer: R
-  } = e, A = (0, u.default)(), M = (0, l.isThemeDark)(A) ? N : S, h = n.useRef(null), [L, g] = n.useState(!1), y = (0, f.useChurnDiscountedPrice)(t, p.SubscriptionPlans.PREMIUM_MONTH_TIER_2, R), x = (0, c.getPrice)(p.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, E.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
+    userDiscountOffer: A
+  } = e, R = (0, u.default)(), M = (0, l.isThemeDark)(R) ? N : S, h = n.useRef(null), [L, g] = n.useState(!1), y = (0, f.useChurnDiscountedPrice)(t, p.SubscriptionPlans.PREMIUM_MONTH_TIER_2, A), x = (0, c.getPrice)(p.SubscriptionPlans.PREMIUM_MONTH_TIER_2), D = (0, E.formatPrice)(x.amount, x.currency), U = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion);
   if (n.useEffect(() => {
       null != h.current && null != y && g(!0)
-    }, [h, L, y]), null == R || null == y) return null;
+    }, [h, L, y]), null == A || null == y) return null;
   let O = m.default.Messages.PREMIUM_TIER_SUBSCRIPTION_DESCRIPTION_AFTER_REDEMPTION_WITH_ACTIVE_SUB.format({
-      numMonths: R.discount.user_usage_limit,
+      numMonths: A.discount.user_usage_limit,
       discountedPrice: y,
       regularPrice: D
     }),

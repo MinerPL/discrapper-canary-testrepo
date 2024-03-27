@@ -1,37 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 });
 var l = n("37983");
 n("884691");
-var i = n("446674"),
-  u = n("77078"),
-  r = n("629109"),
-  a = n("42887"),
-  o = n("697218"),
-  s = n("829536"),
-  d = n("773336"),
+var u = n("446674"),
+  a = n("77078"),
+  i = n("629109"),
+  d = n("42887"),
+  s = n("697218"),
+  o = n("829536"),
+  r = n("773336"),
   c = n("353927"),
   f = n("782340");
 
-function g(e) {
+function E(e) {
   var t;
   let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.MediaEngineContextTypes.DEFAULT,
-    g = (0, i.useStateFromStores)([a.default], () => a.default.getLocalVolume(e, n), [e, n]),
-    _ = e === (null === (t = o.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-    h = n === c.MediaEngineContextTypes.STREAM;
-  return _ ? null : (0, l.jsx)(u.MenuControlItem, {
+    E = (0, u.useStateFromStores)([d.default], () => d.default.getLocalVolume(e, n), [e, n]),
+    _ = e === (null === (t = s.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+    S = n === c.MediaEngineContextTypes.STREAM;
+  return _ ? null : (0, l.jsx)(a.MenuControlItem, {
     id: "user-volume",
-    label: h ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME,
-    control: (t, i) => (0, l.jsx)(u.MenuSliderControl, {
+    label: S ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME,
+    control: (t, u) => (0, l.jsx)(a.MenuSliderControl, {
       ...t,
-      ref: i,
-      value: (0, s.amplitudeToPerceptual)(g),
-      maxValue: d.isPlatformEmbedded ? 200 : 100,
-      onChange: t => r.default.setLocalVolume(e, (0, s.perceptualToAmplitude)(t), n),
-      "aria-label": h ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME
+      ref: u,
+      value: (0, o.amplitudeToPerceptual)(E),
+      maxValue: r.isPlatformEmbedded ? 200 : 100,
+      onChange: t => i.default.setLocalVolume(e, (0, o.perceptualToAmplitude)(t), n),
+      "aria-label": S ? f.default.Messages.STREAM_VOLUME : f.default.Messages.USER_VOLUME
     })
   })
 }

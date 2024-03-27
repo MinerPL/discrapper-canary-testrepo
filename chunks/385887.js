@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return f
   },
   TextUtils: function() {
-    return p
+    return m
   },
   PathUtils: function() {
-    return m
+    return p
   },
   PointUtils: function() {
     return h
@@ -57,7 +57,7 @@ let d = {
     },
     getFirstText(e) {
       let t = d.node(e, o.FIRST_TEXT_PATH);
-      return p.isText(t[0]) ? t[0] : null
+      return m.isText(t[0]) ? t[0] : null
     },
     getCurrentBlock(e) {
       return null == e.selection ? null : this.getParentBlock(e, e.selection)
@@ -140,11 +140,11 @@ let d = {
       let [n, i] = x.edges(t), l = d.nodes(e, {
         at: t,
         mode: "lowest",
-        match: e => p.isText(e)
+        match: e => m.isText(e)
       }), a = "";
       for (let [e, t] of l) {
-        let l = m.equals(t, n.path) ? n.offset : 0,
-          s = m.equals(t, i.path) ? i.offset : 0;
+        let l = p.equals(t, n.path) ? n.offset : 0,
+          s = p.equals(t, i.path) ? i.offset : 0;
         a += e.text.substring(l, s)
       }
       return a
@@ -164,7 +164,7 @@ let d = {
       let n = d.richValue(e),
         i = n[0],
         l = (null == i ? void 0 : i.type) === "line" ? i.children[0] : null;
-      if (null == l || !p.isText(l)) return !1;
+      if (null == l || !m.isText(l)) return !1;
       let a = e.chatInputType,
         s = l.text;
       return 1 === n.length && 1 === i.children.length && (!0 === a.sedReplace && s.startsWith("s/") || (null === (t = a.autocomplete) || void 0 === t ? void 0 : t.reactions) === !0 && s.startsWith("+"))
@@ -177,7 +177,7 @@ let d = {
         anchor: null,
         focus: null
       };
-      if (m.isPath(t)) {
+      if (p.isPath(t)) {
         let n = d.range(e, t),
           [i] = d.node(e, t);
         if (f.isElement(i)) {
@@ -210,7 +210,7 @@ let d = {
     markdown(e, t, n) {
       var i;
       let l = "line" === e.type && (null === (i = e.codeBlockState) || void 0 === i ? void 0 : i.wasInCodeBlock) === !0,
-        a = e.children.map(e => p.isText(e) ? e.text : " "),
+        a = e.children.map(e => m.isText(e) ? e.text : " "),
         s = a.join(""),
         o = r.parse(s, null != t ? t : null, l, n);
       return {
@@ -222,17 +222,17 @@ let d = {
       if (e.children.length > 1) return !1;
       if (0 === e.children.length) return !0;
       let t = e.children[0];
-      return p.isText(t) && 0 === t.text.length
+      return m.isText(t) && 0 === t.text.length
     }
   },
-  p = {
+  m = {
     ...a.Text
   },
-  m = {
+  p = {
     ...a.Path,
-    isFirstEditorBlock: e => m.equals(e, o.FIRST_BLOCK_PATH),
-    isFirstEditorText: e => m.equals(e, o.FIRST_TEXT_PATH),
-    isFirstChild: (e, t) => m.equals(t, m.child(e, 0)),
+    isFirstEditorBlock: e => p.equals(e, o.FIRST_BLOCK_PATH),
+    isFirstEditorText: e => p.equals(e, o.FIRST_TEXT_PATH),
+    isFirstChild: (e, t) => p.equals(t, p.child(e, 0)),
     child: (e, t) => [...e, t]
   },
   h = {
@@ -240,15 +240,15 @@ let d = {
     start(e) {
       let [, t] = e;
       return {
-        path: m.child(t, 0),
+        path: p.child(t, 0),
         offset: 0
       }
     },
     end(e) {
       let [t, n] = e, i = t.children[t.children.length - 1];
       return {
-        path: m.child(n, t.children.length - 1),
-        offset: p.isText(i) ? i.text.length : 0
+        path: p.child(n, t.children.length - 1),
+        offset: m.isText(i) ? i.text.length : 0
       }
     },
     isAtStart(e, t) {
@@ -269,12 +269,12 @@ let d = {
       let [t, n] = e, i = t.children[t.children.length - 1];
       return {
         anchor: {
-          path: m.child(n, 0),
+          path: p.child(n, 0),
           offset: 0
         },
         focus: {
-          path: m.child(n, t.children.length - 1),
-          offset: p.isText(i) ? i.text.length : 0
+          path: p.child(n, t.children.length - 1),
+          offset: m.isText(i) ? i.text.length : 0
         }
       }
     },
@@ -299,7 +299,7 @@ let d = {
       } = t;
       if (!d.hasPath(e, n.path) || !d.hasPath(e, i.path)) return !1;
       let [l] = d.node(e, n.path), [a] = d.node(e, i.path);
-      return p.isText(l) && p.isText(a) && n.offset <= l.text.length && i.offset <= a.text.length
+      return m.isText(l) && m.isText(a) && n.offset <= l.text.length && i.offset <= a.text.length
     }
   },
   y = (e, t) => {

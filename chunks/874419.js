@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("5667"),
   c = n("783142"),
   f = n("713135"),
-  p = n("49111"),
-  m = n("994428"),
+  m = n("49111"),
+  p = n("994428"),
   h = n("397336"),
   x = n("782340"),
   E = n("779614");
@@ -33,7 +33,7 @@ var S = e => {
   } = e, {
     analyticsLocations: s
   } = (0, o.default)(), u = (0, a.useStateFromStores)([f.default], () => f.default.getIsAccessibilityTooltipViewed());
-  return l.useEffect(() => u ? () => g(m.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, i.jsx)(d.default, {
+  return l.useEffect(() => u ? () => g(p.ContentDismissActionType.AUTO) : () => (0, c.handleProfileAccessibilityTooltipViewed)(), [u]), (0, i.jsx)(d.default, {
     markAsDismissed: g,
     header: x.default.Messages.PROFILE_THEMES_ACCESSIBILITY_TOOLTIP_TITLE,
     headerClassName: E.header,
@@ -43,7 +43,7 @@ var S = e => {
     }),
     buttonCTA: x.default.Messages.TAKE_ME_THERE,
     onClick: () => {
-      null == n || n(), r.default.open(p.UserSettingsSections.ACCESSIBILITY, null, {
+      null == n || n(), r.default.open(m.UserSettingsSections.ACCESSIBILITY, null, {
         scrollPosition: h.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME,
         analyticsLocations: s
       })

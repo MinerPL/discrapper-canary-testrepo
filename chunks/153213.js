@@ -19,12 +19,12 @@ function f(e) {
   let {
     editorRef: n,
     options: f,
-    channel: p
-  } = e, m = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = l.useCallback((e, t) => {
+    channel: m
+  } = e, p = null === (t = n.current) || void 0 === t ? void 0 : t.getSlateEditor(), h = l.useCallback((e, t) => {
     let i = n.current;
     null != e && null != i && i.insertEmoji(e, t, !1), t && (0, r.closeExpressionPicker)()
   }, [n]);
-  return null == m ? null : (0, i.jsxs)("div", {
+  return null == p ? null : (0, i.jsxs)("div", {
     id: "slate-toolbar",
     className: c.staticToolbar,
     children: [(0, i.jsx)("div", {
@@ -42,7 +42,7 @@ function f(e) {
         } = e;
         return (0, i.jsx)(s.default, {
           persistSearch: !0,
-          channel: p,
+          channel: m,
           closePopout: t,
           onSelectEmoji: (e, n) => {
             h(e, n), n && t()

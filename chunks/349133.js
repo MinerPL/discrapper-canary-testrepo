@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var n = s("37983");
@@ -15,11 +15,11 @@ var l = s("446674"),
   d = s("158998"),
   c = s("21526"),
   S = s("782340"),
-  E = e => {
+  f = e => {
     let {
       selectedSkuId: t,
       className: s
-    } = e, E = (0, l.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), f = (0, l.useStateFromStoresArray)([o.default], () => o.default.filter(e => E.includes(e.id) && !e.bot), [E]), {
+    } = e, f = (0, l.useStateFromStoresArray)([u.default], () => u.default.getFriendIDs()), E = (0, l.useStateFromStoresArray)([o.default], () => o.default.filter(e => f.includes(e.id) && !e.bot), [f]), {
       giftRecipient: I,
       setGiftRecipient: _,
       giftRecipientError: p,
@@ -44,7 +44,7 @@ var l = s("446674"),
         }),
         value: I,
         onChange: m,
-        options: f.map(e => ({
+        options: E.map(e => ({
           value: e,
           label: "".concat(d.default.getUserTag(e))
         }))

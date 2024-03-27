@@ -5,21 +5,21 @@ r("424973"), t.exports.parse = function(t) {
   n.shift();
   var r = null,
     e = [];
-  n[2] && (r = (o = n[2].split("-")).shift(), e = o);
+  n[2] && (r = (s = n[2].split("-")).shift(), e = s);
   var i = [];
   n[5] && (i = n[5].split("-")).shift();
   var a = [];
   if (n[6]) {
-    (o = n[6].split("-")).shift();
-    for (var o, s, u = []; o.length;) {
-      var l = o.shift();
-      1 === l.length ? s ? (a.push({
-        singleton: s,
+    (s = n[6].split("-")).shift();
+    for (var s, o, u = []; s.length;) {
+      var l = s.shift();
+      1 === l.length ? o ? (a.push({
+        singleton: o,
         extension: u
-      }), s = l, u = []) : s = l : u.push(l)
+      }), o = l, u = []) : o = l : u.push(l)
     }
     a.push({
-      singleton: s,
+      singleton: o,
       extension: u
     })
   }

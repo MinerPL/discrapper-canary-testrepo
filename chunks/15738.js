@@ -34,7 +34,7 @@ function d(e) {
       height: t ? 40 : n ? 20 : 8,
       x: 0
     },
-    p = (0, s.useTransition)(t || n || l, {
+    m = (0, s.useTransition)(t || n || l, {
       config: o,
       keys: e => e ? "pill" : "empty",
       immediate: !n && !document.hasFocus(),
@@ -47,7 +47,7 @@ function d(e) {
   return (0, i.jsx)("div", {
     className: a(c, r.wrapper),
     "aria-hidden": !0,
-    children: p((e, t) => t && (0, i.jsx)(s.animated.span, {
+    children: m((e, t) => t && (0, i.jsx)(s.animated.span, {
       className: r.item,
       style: e
     }))

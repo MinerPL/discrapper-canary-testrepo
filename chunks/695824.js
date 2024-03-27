@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var s = a("37983");
 a("884691");
-var r = a("414456"),
-  l = a.n(r),
+var l = a("414456"),
+  r = a.n(l),
   n = a("922063"),
   o = a("858422"),
   i = a("682123"),
@@ -18,14 +18,14 @@ var f = () => (0, s.jsx)(s.Fragment, {
   children: d.map(e => (0, s.jsxs)("div", {
     className: n.cardsContainer,
     children: [(0, s.jsx)("div", {
-      className: l(u.skeleton, o.shopBanner),
+      className: r(u.skeleton, o.shopBanner),
       children: (0, s.jsx)("div", {
         className: u.bannerBody
       })
     }), Array.from({
       length: e
     }, (e, t) => t).map(e => (0, s.jsx)("div", {
-      className: l(u.skeleton, i.shopCard),
+      className: r(u.skeleton, i.shopCard),
       children: (0, s.jsxs)("div", {
         className: u.cardBody,
         children: [(0, s.jsx)("div", {

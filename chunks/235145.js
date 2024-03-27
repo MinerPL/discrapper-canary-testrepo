@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   useGetDismissibleContent: function() {
-    return p
+    return m
   }
 });
 var i = n("884691"),
@@ -15,21 +15,21 @@ var i = n("884691"),
   c = n("846614"),
   f = n("397336");
 
-function p(e, t, n) {
-  let p = (0, l.useStateFromStores)([a.default], () => {
+function m(e, t, n) {
+  let m = (0, l.useStateFromStores)([a.default], () => {
       var e;
       return null === (e = a.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     }),
-    m = (0, l.useStateFromStores)([s.default], () => s.default.getGuildId()),
+    p = (0, l.useStateFromStores)([s.default], () => s.default.getGuildId()),
     h = (0, c.useNewUserDismissibleContent)(e),
     x = null;
-  a.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? x = h.find(e => null == p || !(0, r.hasBit)(p, e)) : null != p && (x = h.find(e => !(0, r.hasBit)(p, e)));
+  a.default.hasLoaded(f.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? x = h.find(e => null == m || !(0, r.hasBit)(m, e)) : null != m && (x = h.find(e => !(0, r.hasBit)(m, e)));
   let E = (0, u.default)(e => null != x && e.currentlyShown.has(x)),
     y = (0, l.useStateFromStores)([o.default], () => null != x && o.default.hasUserHitDCCap(x));
   i.useEffect(() => {
     if (null != x) return (0, d.requestMarkDismissibleContentAsShown)(x, {
       groupName: t,
-      guildId: m
+      guildId: p
     }, n), () => {
       if (null == x) return;
       let e = !o.default.hasUserHitDCCap();
@@ -38,13 +38,13 @@ function p(e, t, n) {
         groupName: t
       }, e)
     }
-  }, [x, t, m, y, n]);
+  }, [x, t, p, y, n]);
   let g = i.useCallback(e => {
     null != x && (0, d.markDismissibleContentAsDismissed)(x, {
       dismissAction: e,
       groupName: t,
-      guildId: m
+      guildId: p
     })
-  }, [x, t, m]);
+  }, [x, t, p]);
   return [E && null != x ? x : null, g]
 }

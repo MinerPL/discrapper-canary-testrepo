@@ -54,8 +54,8 @@ var s = n("866227"),
   z = n("533222"),
   Q = n("42203"),
   Z = n("47319"),
-  J = n("320268"),
-  q = n("26989"),
+  q = n("320268"),
+  J = n("26989"),
   X = n("305961"),
   $ = n("42887"),
   ee = n("385649"),
@@ -192,7 +192,7 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           selectedGuildId: n
         } = e;
         if (null == n) return !1;
-        let s = q.default.getMember(n, t.id);
+        let s = J.default.getMember(n, t.id);
         return null != s && !s.isPending && (0, M.hasAutomodQuarantinedProfile)(s)
       }
     },
@@ -296,7 +296,7 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
           selectedGuildId: a,
           currentUser: l
         } = e;
-        return null !== (s = null != a && null != l && !(null === (t = X.default.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(eh.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = q.default.getMember(a, l.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
+        return null !== (s = null != a && null != l && !(null === (t = X.default.getGuild(a)) || void 0 === t ? void 0 : t.hasFeature(eh.GuildFeatures.GUILD_ONBOARDING)) && (null === (n = J.default.getMember(a, l.id)) || void 0 === n ? void 0 : n.isPending)) && void 0 !== s && s
       }
     },
     [eh.NoticeTypes.OUTBOUND_PROMOTION]: {
@@ -318,17 +318,17 @@ let ek = [eh.NoticeTypes.QUARANTINED, eh.NoticeTypes.AUTOMOD_QUARANTINED_USER_PR
         let {
           currentUser: t
         } = e;
-        return ep.default.canRedeemPremiumPerks(t) && J.default.getDetectedOffPlatformPremiumPerks().length > 0
+        return ep.default.canRedeemPremiumPerks(t) && q.default.getDetectedOffPlatformPremiumPerks().length > 0
       },
       metadata: () => {
-        let e = J.default.getDetectedOffPlatformPremiumPerks();
+        let e = q.default.getDetectedOffPlatformPremiumPerks();
         return e[0]
       }
     },
     [eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL]: {
-      predicate: () => !eB(eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && J.default.getDetectedOffPlatformPremiumPerks().length > 0,
+      predicate: () => !eB(eh.NoticeTypes.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL) && q.default.getDetectedOffPlatformPremiumPerks().length > 0,
       metadata: () => {
-        let e = J.default.getDetectedOffPlatformPremiumPerks();
+        let e = q.default.getDetectedOffPlatformPremiumPerks();
         return e[0]
       }
     },
@@ -720,7 +720,7 @@ function eV() {
 }
 class eY extends l.default.Store {
   initialize() {
-    this.syncWith([eo.default, en.default, J.default, el.default, b.default, eT.default, W.default, Z.default, V.default, g.default, k.default, Y.default], eH), this.waitFor(ed.default, ei.default, X.default, q.default, es.default, $.default, er.default, N.default, el.default, eu.default, w.default, p.default, en.default, eS.default, eC.default, em.default, ee.default, e_.default, eA.default, J.default, ef.default, et.default, b.default, eI.default, eT.default, Z.default, v.default, I.default, _.default, B.default, k.default, Y.default)
+    this.syncWith([eo.default, en.default, q.default, el.default, b.default, eT.default, W.default, Z.default, V.default, g.default, k.default, Y.default], eH), this.waitFor(ed.default, ei.default, X.default, J.default, es.default, $.default, er.default, N.default, el.default, eu.default, w.default, p.default, en.default, eS.default, eC.default, em.default, ee.default, e_.default, eA.default, q.default, ef.default, et.default, b.default, eI.default, eT.default, Z.default, v.default, I.default, _.default, B.default, k.default, Y.default)
   }
   hasNotice() {
     return null != ej && null != ej.type

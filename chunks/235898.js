@@ -5,8 +5,8 @@ a.r(t), a.d(t, {
   }
 }), a("222007");
 var s = a("884691"),
-  r = a("65597"),
-  l = a("875212"),
+  l = a("65597"),
+  r = a("875212"),
   n = a("21526"),
   o = a("853987"),
   i = a("12480"),
@@ -15,10 +15,10 @@ var s = a("884691"),
 function c(e) {
   var t;
   let a = "useFetchCollectiblesCategoriesAndPurchases";
-  (0, l.useTriggerDebuggingAA)({
+  (0, r.useTriggerDebuggingAA)({
     location: a + " auto on",
     autoTrackExposure: !0
-  }), (0, l.useTriggerDebuggingAA)({
+  }), (0, r.useTriggerDebuggingAA)({
     location: a + " auto off",
     autoTrackExposure: !1
   });
@@ -28,14 +28,14 @@ function c(e) {
     error: f
   } = function(e) {
     let t = "useMaybeFetchCollectiblesCategories";
-    (0, l.useTriggerDebuggingAA)({
+    (0, r.useTriggerDebuggingAA)({
       location: t + " auto on",
       autoTrackExposure: !0
-    }), (0, l.useTriggerDebuggingAA)({
+    }), (0, r.useTriggerDebuggingAA)({
       location: t + " auto off",
       autoTrackExposure: !1
     });
-    let [a, i, u, c] = (0, r.useStateFromStoresArray)([o.default], () => {
+    let [a, i, u, c] = (0, l.useStateFromStoresArray)([o.default], () => {
       var e;
       return [o.default.isFetching, o.default.error, null !== (e = o.default.lastFetched) && void 0 !== e ? e : 0, o.default.categories]
     });
@@ -54,14 +54,14 @@ function c(e) {
     purchases: h
   } = function() {
     let e = "useFetchPurchases";
-    (0, l.useTriggerDebuggingAA)({
+    (0, r.useTriggerDebuggingAA)({
       location: e + " auto on",
       autoTrackExposure: !0
-    }), (0, l.useTriggerDebuggingAA)({
+    }), (0, r.useTriggerDebuggingAA)({
       location: e + " auto off",
       autoTrackExposure: !1
     });
-    let [t, a, o, c, d] = (0, r.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.isClaiming, u.default.fetchError, u.default.claimError, u.default.purchases]), {
+    let [t, a, o, c, d] = (0, l.useStateFromStoresArray)([u.default], () => [u.default.isFetching, u.default.isClaiming, u.default.fetchError, u.default.claimError, u.default.purchases]), {
       shouldFakePurchaseSuccessFlowLocally: f
     } = (0, i.default)({
       location: "useFetchPurchases"

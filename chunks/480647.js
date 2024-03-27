@@ -69,13 +69,13 @@ i = class extends s.default {
       f = (e, t) => {
         null != this.context && (n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y))
       },
-      p = e => {
+      m = e => {
         if (null == this.context || u.width <= r.TEXT_TRUNCATION_PADDING_PX) return "";
         let t = "".concat(e);
         for (; u.width + r.TEXT_TRUNCATION_PADDING_PX > s;) t = t.slice(0, -4), u = this.context.measureText(t), d = !0;
         return d && (t += "..."), t
       };
-    if (this.font.truncate === o.TextTruncationMethod.None && f(e, t), this.font.truncate === o.TextTruncationMethod.Truncate && f(e = p(e), t), this.font.truncate === o.TextTruncationMethod.Wrap) {
+    if (this.font.truncate === o.TextTruncationMethod.None && f(e, t), this.font.truncate === o.TextTruncationMethod.Truncate && f(e = m(e), t), this.font.truncate === o.TextTruncationMethod.Wrap) {
       let n = e.split(" "),
         i = 1 / 0,
         r = "",
@@ -83,12 +83,12 @@ i = class extends s.default {
       for (null != t.h && a((i = t.h / c) > 0, "DiscordCavas: boundingBox.h of ".concat(t.h, " results in 0 visible lines with font size of ").concat(c)); n.length > 0;)
         if ((u = this.context.measureText(r + " " + n[0])).width > s) {
           let e = !1;
-          if (o + 1 >= i && n.length > 0 && (e = !0), "" !== r) f(e ? p(r + "...") : r, {
+          if (o + 1 >= i && n.length > 0 && (e = !0), "" !== r) f(e ? m(r + "...") : r, {
             x: t.x,
             y: t.y + c * o
           }), r = "";
           else {
-            let e = p(null !== (l = n.shift()) && void 0 !== l ? l : "");
+            let e = m(null !== (l = n.shift()) && void 0 !== l ? l : "");
             f(e, {
               x: t.x,
               y: t.y + c * o
@@ -201,9 +201,9 @@ i = class extends s.default {
             h: s.height
           },
           f = +(a.w / a.h).toFixed(1),
-          p = +(n.w / n.h).toFixed(1);
-        if (p > f) {
-          let e = a.w / p,
+          m = +(n.w / n.h).toFixed(1);
+        if (m > f) {
+          let e = a.w / m,
             t = {
               x: 0,
               y: (a.h - e) * (null !== (u = null == i ? void 0 : null === (r = i.focus) || void 0 === r ? void 0 : r.y) && void 0 !== u ? u : .5)
@@ -214,7 +214,7 @@ i = class extends s.default {
             h: e
           }
         } else {
-          let e = a.h * p,
+          let e = a.h * m,
             t = {
               x: (s.width - e) * (null !== (c = null == i ? void 0 : null === (d = i.focus) || void 0 === d ? void 0 : d.x) && void 0 !== c ? c : .5),
               y: 0
@@ -265,9 +265,9 @@ i = class extends s.default {
       x: d,
       y: c,
       w: f,
-      h: p
+      h: m
     } = n;
-    return this.context.drawImage(l, a, s, r, u, d, c, f, p), o.DrawResultStatus.Success
+    return this.context.drawImage(l, a, s, r, u, d, c, f, m), o.DrawResultStatus.Success
   }
   drawPath(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],

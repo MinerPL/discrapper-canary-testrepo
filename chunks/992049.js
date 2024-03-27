@@ -24,8 +24,8 @@ function S(e) {
       planGroup: P,
       onSubscriptionConfirmation: E,
       renderPurchaseConfirmation: _,
-      postSuccessGuild: x,
-      followupSKUInfo: C
+      postSuccessGuild: C,
+      followupSKUInfo: x
     } = e,
     {
       activeSubscription: I,
@@ -62,11 +62,11 @@ function S(e) {
     onClose: R
   }) : b.current === g.id ? (0, r.jsx)(o.default, {
     planId: g.id,
-    postSuccessGuild: x,
+    postSuccessGuild: C,
     onClose: R,
     paymentSourceType: null === (t = T[null != h ? h : ""]) || void 0 === t ? void 0 : t.type
   }) : (0, r.jsx)(o.default, {
-    followupSKUInfo: C,
+    followupSKUInfo: x,
     startingPremiumSubscriptionPlanId: b.current,
     planId: g.id,
     onClose: R,

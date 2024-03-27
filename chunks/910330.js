@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("349649"),
   c = n("102985"),
   f = n("49111"),
-  p = n("782340"),
-  m = n("380571");
+  m = n("782340"),
+  p = n("380571");
 class h extends l.PureComponent {
   componentDidMount() {
     if (this.props.autoFocus && !this.props.hideNote) {
@@ -34,10 +34,10 @@ class h extends l.PureComponent {
       className: e,
       children: (0, i.jsx)(o.TextAreaAutosize, {
         ref: this.noteRef,
-        className: m.textarea,
+        className: p.textarea,
         disabled: t,
-        placeholder: t ? p.default.Messages.LOADING_NOTE : p.default.Messages.NOTE_PLACEHOLDER,
-        "aria-label": p.default.Messages.NOTE,
+        placeholder: t ? m.default.Messages.LOADING_NOTE : m.default.Messages.NOTE_PLACEHOLDER,
+        "aria-label": m.default.Messages.NOTE,
         onBlur: this.handleBlur,
         onKeyPress: this.handleKeyPress,
         defaultValue: null != n ? n : void 0,

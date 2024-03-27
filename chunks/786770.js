@@ -13,16 +13,16 @@ var i, a, l, s, o = n("627445"),
   h = n("415635"),
   p = n("387129"),
   g = n("981253"),
-  E = n("931237"),
-  m = n("37359"),
+  m = n("931237"),
+  E = n("37359"),
   S = n("364864"),
   v = n("523505"),
   y = n("47271"),
   O = n("386045"),
-  T = n("969416"),
-  C = n("827922"),
-  I = n("845579"),
-  N = n("271938"),
+  C = n("969416"),
+  N = n("827922"),
+  T = n("845579"),
+  I = n("271938"),
   _ = n("42203"),
   A = n("385649"),
   x = n("824563"),
@@ -33,16 +33,16 @@ var i, a, l, s, o = n("627445"),
   j = n("189857"),
   k = n("901165"),
   b = n("718517"),
-  P = n("189771"),
-  w = n("686069"),
+  w = n("189771"),
+  P = n("686069"),
   V = n("703370"),
   U = n("49111"),
   B = n("6791"),
   F = n("782340");
 (l = i || (i = {}))[l.GENERIC = 0] = "GENERIC", l[l.TEXT = 1] = "TEXT", l[l.INCOMING_CALL = 2] = "INCOMING_CALL", (s = a || (a = {}))[s.NORMAL = 0] = "NORMAL", s[s.HIGH = 1] = "HIGH", s[s.URGENT = 2] = "URGENT";
 let G = 5 * b.default.Millis.SECOND,
-  H = 8 * b.default.Millis.SECOND,
-  W = 30 * b.default.Millis.SECOND,
+  W = 8 * b.default.Millis.SECOND,
+  H = 30 * b.default.Millis.SECOND,
   z = Object.freeze({
     priority: 0,
     duration: G,
@@ -104,13 +104,13 @@ function Q(e) {
   let {
     channelId: t,
     ringing: n
-  } = e, i = J(t), a = n.includes(N.default.getId());
+  } = e, i = J(t), a = n.includes(I.default.getId());
   if (!a) return Z(i);
   if (null != i) return !1;
   let l = _.default.getChannel(t);
-  if (null == l || !l.isPrivate() || L.default.getStatus() === U.StatusTypes.DND || I.FocusMode.getSetting()) return !1;
+  if (null == l || !l.isPrivate() || L.default.getStatus() === U.StatusTypes.DND || T.FocusMode.getSetting()) return !1;
   let s = Y.find(e => 1 === e.type && e.channelId === t && e.messageType === U.MessageTypes.CALL);
-  null != s && Z(s.id), q((0, E.default)(l), {
+  null != s && Z(s.id), q((0, m.default)(l), {
     priority: 1,
     expirationExternallyManaged: !0,
     type: 2,
@@ -145,7 +145,7 @@ var ee = new $(c.default, __OVERLAY__ ? {
         case B.OverlayNudgeTypes.GO_LIVE_NON_VOICE:
           return (0, g.default)(e);
         case B.OverlayNudgeTypes.KEYBIND_INDICATORS:
-          return (0, C.default)(e);
+          return (0, N.default)(e);
         case B.OverlayNudgeTypes.NEWS:
         default:
           return (0, v.default)(e)
@@ -153,7 +153,7 @@ var ee = new $(c.default, __OVERLAY__ ? {
     }(t);
     null != n && q(n, {
       priority: 2,
-      duration: H
+      duration: W
     })
   },
   OVERLAY_SET_INPUT_LOCKED: function(e) {
@@ -174,10 +174,10 @@ var ee = new $(c.default, __OVERLAY__ ? {
     } = e, s = _.default.getChannel(a), o = D.default.getUser(null === (t = l.author) || void 0 === t ? void 0 : t.id);
     if (null == s || null == o) return !1;
     if ((null === (n = l.activity) || void 0 === n ? void 0 : n.type) === U.ActivityActionTypes.JOIN || (null === (i = l.activity) || void 0 === i ? void 0 : i.type) === U.ActivityActionTypes.JOIN_REQUEST) {
-      if (!(0, P.shouldNotify)(l, a, !0, !0)) return !1;
+      if (!(0, w.shouldNotify)(l, a, !0, !0)) return !1;
       let e = function(e, t, n) {
         let i, a;
-        if (r(null != t.activity, "received null message activity"), n.id === N.default.getId()) return !1;
+        if (r(null != t.activity, "received null message activity"), n.id === I.default.getId()) return !1;
         let l = V.default.getGame();
         if (null == l) return !1;
         switch (t.activity.type) {
@@ -187,7 +187,7 @@ var ee = new $(c.default, __OVERLAY__ ? {
             break;
           case U.ActivityActionTypes.JOIN_REQUEST:
             if (null == (i = L.default.getApplicationActivity(l.id)) || null == i.party || i.party.id !== t.activity.party_id) return !1;
-            a = (0, m.default)(e, n, l, i)
+            a = (0, E.default)(e, n, l, i)
         }
         if (null == a) return !1;
         let s = q(a, {
@@ -195,11 +195,11 @@ var ee = new $(c.default, __OVERLAY__ ? {
           expirationExternallyManaged: !0,
           channelId: e.id
         });
-        return null != s && K(s, !1, W), !0
+        return null != s && K(s, !1, H), !0
       }(s, l, o);
       if (!1 !== e) return e
     }
-    if ((!k.default.isInstanceUILocked() || k.default.isPinned(U.OverlayWidgets.TEXT)) && a === R.default.getChannelId() || k.default.getTextChatNotificationMode() === U.OverlayNotificationTextChatTypes.DISABLED || M.default.disableNotifications || !(0, P.shouldNotify)(l, a)) return !1;
+    if ((!k.default.isInstanceUILocked() || k.default.isPinned(U.OverlayWidgets.TEXT)) && a === R.default.getChannelId() || k.default.getTextChatNotificationMode() === U.OverlayNotificationTextChatTypes.DISABLED || M.default.disableNotifications || !(0, w.shouldNotify)(l, a)) return !1;
     let d = !A.default.isSoundDisabled(j.MESSAGE_SOUND);
     q((0, S.default)(s, l, o, d), {
       type: 1,
@@ -243,18 +243,18 @@ var ee = new $(c.default, __OVERLAY__ ? {
     })
   },
   CLIPS_SAVE_CLIP_START: function() {
-    q((0, T.createClipsNotification)(F.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
+    q((0, C.createClipsNotification)(F.default.Messages.CLIPS_SAVE_START_NOTIFICATION_TITLE))
   },
   CLIPS_SAVE_CLIP: function() {
-    q((0, T.createClipsNotification)(F.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
-      duration: (0, w.getSecondsSliderLabel)(O.default.getSettings().clipsLength / 1e3, !0)
+    q((0, C.createClipsNotification)(F.default.Messages.CLIPS_NOTIFICATION_TITLE.format({
+      duration: (0, P.getSecondsSliderLabel)(O.default.getSettings().clipsLength / 1e3, !0)
     })))
   },
   CLIPS_SAVE_CLIP_ERROR: function() {
-    q((0, T.createClipsNotification)(F.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
+    q((0, C.createClipsNotification)(F.default.Messages.CLIPS_SAVE_ERROR_NOTIFICATION_TITLE))
   },
   STREAM_START: function(e) {
-    let t = (0, T.createClipsReminderNotification)();
+    let t = (0, C.createClipsReminderNotification)();
     null != t && q(t)
   }
 } : {})

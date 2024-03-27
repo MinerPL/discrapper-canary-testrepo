@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return D
+    return G
   },
   ViewingRolesSettingsNotice: function() {
-    return G
+    return D
   }
 });
 var i = n("37983");
@@ -20,17 +20,17 @@ var r = n("414456"),
   f = n("432153"),
   S = n("592407"),
   E = n("393414"),
-  h = n("18494"),
-  _ = n("162771"),
+  _ = n("18494"),
+  h = n("162771"),
   g = n("246053"),
   p = n("461380"),
   C = n("423487"),
   I = n("489622"),
-  m = n("773336"),
-  T = n("479756"),
-  v = n("38654"),
-  R = n("593916"),
-  N = n("49111"),
+  T = n("773336"),
+  m = n("479756"),
+  R = n("38654"),
+  N = n("593916"),
+  v = n("49111"),
   M = n("724210"),
   O = n("307785"),
   A = n("677795"),
@@ -64,40 +64,40 @@ function P(e) {
   })
 }
 
-function D() {
-  let e = (0, s.useStateFromStores)([_.default], () => _.default.getGuildId()),
-    t = (0, s.useStateFromStores)([h.default], () => h.default.getChannelId(e)),
+function G() {
+  let e = (0, s.useStateFromStores)([h.default], () => h.default.getGuildId()),
+    t = (0, s.useStateFromStores)([_.default], () => _.default.getChannelId(e)),
     {
       viewingRoles: n,
       backNavigationSection: r,
       isFullServerPreview: l,
-      isServerShopPreview: m
-    } = (0, s.useStateFromStoresObject)([v.default], () => ({
-      viewingRoles: null != e ? v.default.getViewingRoles(e) : null,
-      backNavigationSection: v.default.getBackNavigationSection(e),
-      isFullServerPreview: null != e && v.default.isFullServerPreview(e),
-      isServerShopPreview: null != e && v.default.isViewingServerShop(e)
+      isServerShopPreview: T
+    } = (0, s.useStateFromStoresObject)([R.default], () => ({
+      viewingRoles: null != e ? R.default.getViewingRoles(e) : null,
+      backNavigationSection: R.default.getBackNavigationSection(e),
+      isFullServerPreview: null != e && R.default.isFullServerPreview(e),
+      isServerShopPreview: null != e && R.default.isViewingServerShop(e)
     }));
   if (null == n || null == e) return null;
-  let D = function(e) {
+  let G = function(e) {
       switch (e) {
-        case N.GuildSettingsSections.INTEGRATIONS:
+        case v.GuildSettingsSections.INTEGRATIONS:
           return L.default.Messages.VIEWING_AS_ROLES_BACK_INTEGRATIONS;
-        case N.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
+        case v.GuildSettingsSections.ROLE_SUBSCRIPTIONS:
           return L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_BACK;
-        case N.GuildSettingsSections.ONBOARDING:
+        case v.GuildSettingsSections.ONBOARDING:
           return L.default.Messages.VIEWING_AS_ONBOARDING_MEMBER_BACK;
         default:
           return L.default.Messages.VIEWING_AS_ROLES_BACK
       }
     }(r),
-    G = r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : L.default.Messages.VIEWING_AS_ROLES_SELECT,
+    D = r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? L.default.Messages.VIEWING_AS_SUBSCRIPTION_ROLES_SELECT : L.default.Messages.VIEWING_AS_ROLES_SELECT,
     w = t === M.StaticChannelRoute.GUILD_ONBOARDING,
     F = t => {
       let {
         backToSettings: n
       } = t;
-      null != e && (v.default.isFullServerPreview(e) && (0, E.transitionTo)(N.Routes.CHANNEL(e)), d.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, c.discardOnboardingPromise)(e)), (0, T.stopImpersonating)(e), n && S.default.open(e, r), r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
+      null != e && (R.default.isFullServerPreview(e) && (0, E.transitionTo)(v.Routes.CHANNEL(e)), d.default.shouldShowOnboarding(e) && (a.default.finishOnboarding(e), (0, c.discardOnboardingPromise)(e)), (0, m.stopImpersonating)(e), n && S.default.open(e, r), r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS && (0, f.announceDeleteTemplateChannels)(e))
     };
   return (0, i.jsxs)(I.default, {
     color: I.NoticeColors.BRAND,
@@ -112,7 +112,7 @@ function D() {
         height: 16,
         direction: g.default.Directions.LEFT,
         className: b.backArrow
-      }), D]
+      }), G]
     }), w && l ? (0, i.jsx)("div", {
       className: b.noticeContents,
       children: (0, i.jsx)("div", {
@@ -130,7 +130,7 @@ function D() {
         })
       }), (0, i.jsx)(o.Popout, {
         position: "bottom",
-        renderPopout: () => (0, i.jsx)(R.default, {
+        renderPopout: () => (0, i.jsx)(N.default, {
           guildId: e
         }),
         children: e => {
@@ -139,7 +139,7 @@ function D() {
           } = e;
           return (0, i.jsxs)(x, {
             onClick: t,
-            children: [G, (0, i.jsx)(p.default, {
+            children: [D, (0, i.jsx)(p.default, {
               width: 16,
               height: 16,
               direction: p.default.Directions.DOWN,
@@ -155,7 +155,7 @@ function D() {
           height: 16,
           color: u.default.unsafe_rawColors.YELLOW_300.css
         })
-      }), m && (0, i.jsx)(o.TooltipContainer, {
+      }), T && (0, i.jsx)(o.TooltipContainer, {
         className: b.previewWarning,
         text: L.default.Messages.SERVER_SHOP_PREVIEW_DISCLAIMER.format({
           maxTiers: A.MAX_SUBSCRIPTION_TIERS,
@@ -167,7 +167,7 @@ function D() {
           color: u.default.unsafe_rawColors.YELLOW_300.css
         })
       })]
-    }), l || r === N.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(P, {
+    }), l || r === v.GuildSettingsSections.ROLE_SUBSCRIPTIONS ? null : (0, i.jsx)(P, {
       onClick: () => F({
         backToSettings: !1
       })
@@ -175,15 +175,15 @@ function D() {
   })
 }
 
-function G(e) {
+function D(e) {
   let {
     guildId: t
-  } = e, n = (0, s.useStateFromStores)([v.default], () => v.default.isViewingRoles(t));
+  } = e, n = (0, s.useStateFromStores)([R.default], () => R.default.isViewingRoles(t));
   return n ? (0, i.jsx)("div", {
     className: l(b.settingsWrapper, {
-      [b.windows]: (0, m.isWindows)(),
-      [b.osx]: (0, m.isMac)()
+      [b.windows]: (0, T.isWindows)(),
+      [b.osx]: (0, T.isMac)()
     }),
-    children: (0, i.jsx)(D, {})
+    children: (0, i.jsx)(G, {})
   }) : null
 }

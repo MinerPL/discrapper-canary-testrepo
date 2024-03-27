@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
 var i = n("37983"),
@@ -14,14 +14,14 @@ var i = n("37983"),
   d = n("524768"),
   c = n("355263"),
   f = n("960510");
-let p = [16, 12, 8, 12];
+let m = [16, 12, 8, 12];
 
-function m(e) {
+function p(e) {
   let {
     className: t,
     channel: n,
     sections: a,
-    activeCategoryIndex: m,
+    activeCategoryIndex: p,
     filteredSectionId: h,
     onSectionClick: x,
     applicationCommandListRef: E
@@ -39,10 +39,10 @@ function m(e) {
     let s = (0, c.getIconComponent)(l),
       o = l.type === d.ApplicationCommandSectionType.BUILT_IN ? 4 : 0,
       u = 32 - 2 * o,
-      p = (0, i.jsx)(s, {
+      m = (0, i.jsx)(s, {
         channel: n,
         section: l,
-        isSelected: null != h ? l.id === h : m === t,
+        isSelected: null != h ? l.id === h : p === t,
         padding: o,
         width: u,
         height: u,
@@ -65,14 +65,14 @@ function m(e) {
               x(l), null == t || t()
             },
             ...n,
-            children: p
+            children: m
           })
         }
       }), E ? (0, i.jsx)("hr", {
         className: f.builtInSeparator
       }) : null]
     }, l.id)
-  }, [m, n, x, a, h]);
+  }, [p, n, x, a, h]);
   return 0 === a.length ? null : (0, i.jsx)("div", {
     className: s(t, f.wrapper),
     children: (0, i.jsx)(u.default, {
@@ -84,7 +84,7 @@ function m(e) {
       renderCategoryListItem: C,
       rowCount: a.length,
       categoryHeight: g,
-      listPadding: p,
+      listPadding: m,
       getScrollOffsetForIndex: S
     })
   })

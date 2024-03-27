@@ -22,8 +22,8 @@ function f(e, t, n, f) {
     }),
     g = t.getAvatarURL(e.guild_id, 80),
     {
-      trackView: E,
-      trackClick: m
+      trackView: m,
+      trackClick: E
     } = (0, r.makeAnalyticsTrackers)(u.OverlayNotificationType.ActivityInvite, {
       notif_type: u.OverlayNotificationType.ActivityInvite,
       notif_user_id: t.id,
@@ -39,7 +39,7 @@ function f(e, t, n, f) {
     confirmText: c.default.Messages.USER_ACTIVITY_RESPOND_YEAH,
     cancelText: c.default.Messages.USER_ACTIVITY_RESPOND_NOPE,
     onNotificationShow: () => {
-      E()
+      m()
     },
     onConfirmClick: (t, n) => {
       i.default.sendActivityInvite({
@@ -47,13 +47,13 @@ function f(e, t, n, f) {
         type: d.ActivityActionTypes.JOIN,
         activity: f,
         location: s.default.isInstanceUILocked() ? d.AnalyticsLocations.LOCKED_OVERLAY : d.AnalyticsLocations.UNLOCKED_OVERLAY
-      }), m("join"), a.default.updateNotificationStatus(n)
+      }), E("join"), a.default.updateNotificationStatus(n)
     },
     onCancelClick: (t, n) => {
-      (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), m("decline")
+      (0, l.ack)(e.id, !0, !0), a.default.updateNotificationStatus(n), E("decline")
     },
     onDismissClick: () => {
-      m("dismiss")
+      E("dismiss")
     }
   }
 }

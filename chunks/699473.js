@@ -57,15 +57,15 @@ var s = n("37983"),
       allowHeading: w || H,
       allowLinks: !0,
       previewLinkTarget: !0
-    }), K = n.type === L.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, N.default)(n), Z = (0, o.useStateFromStores)([E.default], () => n.hasFlag(L.MessageFlags.HAS_THREAD) && E.default.getChannel(I.default.castMessageIdAsChannelId(n.id))), J = (0, u.useRoleIcon)({
+    }), K = n.type === L.MessageTypes.REPLY ? n.messageReference : void 0, W = (0, o.useStateFromStores)([c.default], () => c.default.getMessageByReference(K)), z = (0, r.useListItem)(n.id), Q = (0, N.default)(n), Z = (0, o.useStateFromStores)([E.default], () => n.hasFlag(L.MessageFlags.HAS_THREAD) && E.default.getChannel(I.default.castMessageIdAsChannelId(n.id))), q = (0, u.useRoleIcon)({
       guildId: U.guild_id,
       roleId: Q.iconRoleId
-    }), q = (0, o.useStateFromStores)([f.default], () => f.default.can(L.Permissions.CREATE_INSTANT_INVITE, U)), X = (0, C.default)({
+    }), J = (0, o.useStateFromStores)([f.default], () => f.default.can(L.Permissions.CREATE_INSTANT_INVITE, U)), X = (0, C.default)({
       message: n,
       channel: U,
       enabled: k
     });
-    if ((0, m.default)(n, q)) return null;
+    if ((0, m.default)(n, J)) return null;
     let $ = (0, p.getMessageAriaLabelledBy)(n),
       ee = (0, p.getMessageAriaDescribedBy)(n);
     return (0, s.jsx)(_.default, {
@@ -81,7 +81,7 @@ var s = n("37983"),
         ...e,
         guildId: U.guild_id,
         author: Q,
-        roleIcon: J
+        roleIcon: q
       }),
       childrenAccessories: e.hideAccessories ? void 0 : (0, A.renderSimpleAccessories)(e, Y),
       childrenMessageContent: (0, h.default)(e, V),

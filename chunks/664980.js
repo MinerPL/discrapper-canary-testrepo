@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return w
+    return P
   }
 }), n("222007");
 var i = n("37983"),
@@ -17,16 +17,16 @@ var i = n("37983"),
   h = n("412026"),
   p = n("331306"),
   g = n("679653"),
-  E = n("305961"),
-  m = n("42887"),
+  m = n("305961"),
+  E = n("42887"),
   S = n("27618"),
   v = n("697218"),
   y = n("800762"),
   O = n("783419"),
-  T = n("145131"),
-  C = n("293137"),
-  I = n("272339"),
-  N = n("200639"),
+  C = n("145131"),
+  N = n("293137"),
+  T = n("272339"),
+  I = n("200639"),
   _ = n("849467"),
   A = n("97347"),
   x = n("560995"),
@@ -52,7 +52,7 @@ function b(e) {
     ...n
   })
 }
-class P extends a.PureComponent {
+class w extends a.PureComponent {
   handleDisconnect() {
     f.default.selectVoiceChannel(null)
   }
@@ -115,7 +115,7 @@ class P extends a.PureComponent {
               })
             })
           })
-        }), (0, i.jsxs)(T.default, {
+        }), (0, i.jsxs)(C.default, {
           grow: 0,
           children: [(0, i.jsx)(R.default, {
             tooltipText: p ? D.default.Messages.UNMUTE : D.default.Messages.MUTE,
@@ -124,13 +124,13 @@ class P extends a.PureComponent {
             onClick: this.handleToggleSelfMute
           }), (0, i.jsx)(R.default, {
             tooltipText: f ? D.default.Messages.UNDEAFEN : D.default.Messages.DEAFEN,
-            icon: f ? N.default : I.default,
+            icon: f ? I.default : T.default,
             onClick: this.handleToggleSelfDeaf,
             iconForeground: f ? j.strikethrough : null
           }), null == a && (0, i.jsx)(R.default, {
             tooltipText: D.default.Messages.DISCONNECT_SELF,
             onClick: this.handleDisconnect,
-            icon: C.default
+            icon: N.default
           })]
         })]
       })
@@ -162,14 +162,14 @@ class P extends a.PureComponent {
   }
 }
 
-function w(e) {
+function P(e) {
   let {
     context: t,
     lobbyId: n,
     channel: a,
     ...l
-  } = e, s = (0, r.useStateFromStores)([E.default], () => E.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([m.default], () => [m.default.isSelfMute(t) || m.default.isSelfMutedTemporarily(t), m.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([O.default], () => [O.default.getConnectionState(n), O.default.getLastPing(n), O.default.getQuality(n)]);
-  return (0, i.jsx)(P, {
+  } = e, s = (0, r.useStateFromStores)([m.default], () => m.default.getGuild(null == a ? void 0 : a.getGuildId())), o = (0, r.useStateFromStores)([y.default], () => null != a && y.default.hasVideo(a.id)), [d, u] = (0, r.useStateFromStoresArray)([E.default], () => [E.default.isSelfMute(t) || E.default.isSelfMutedTemporarily(t), E.default.isSelfDeaf(t)]), [c, f, h] = (0, r.useStateFromStoresArray)([O.default], () => [O.default.getConnectionState(n), O.default.getLastPing(n), O.default.getQuality(n)]);
+  return (0, i.jsx)(w, {
     ...l,
     context: t,
     lobbyId: n,

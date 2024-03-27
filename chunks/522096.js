@@ -19,8 +19,8 @@ function d(e) {
     containerWidth: d,
     store: c,
     onSelectItem: f,
-    onSearchExpressions: p,
-    hasSearchResults: m,
+    onSearchExpressions: m,
+    hasSearchResults: p,
     defaultSearchPlaceholder: h,
     emptySearchPlaceholder: x,
     renderEmptyState: E,
@@ -28,14 +28,14 @@ function d(e) {
     renderSection: g,
     renderSectionHeader: S,
     renderSectionFooter: C,
-    renderInspector: _,
-    renderEmptySearchState: T,
+    renderInspector: T,
+    renderEmptySearchState: _,
     renderCategoryList: I,
     renderHeaderAccessories: v,
-    rowHeight: N,
-    sectionHeaderHeight: A,
-    sectionFooterHeight: O,
-    itemNodeWidth: R,
+    rowHeight: A,
+    sectionHeaderHeight: N,
+    sectionFooterHeight: R,
+    itemNodeWidth: O,
     listPaddingRight: M,
     itemNodeMargin: k,
     listPadding: L,
@@ -57,13 +57,13 @@ function d(e) {
     collapsedCategories: n,
     gridWidth: B,
     listPaddingRight: M,
-    itemNodeWidth: R,
+    itemNodeWidth: O,
     itemNodeMargin: k
   }), {
-    getItemProps: Z,
-    getRowProps: J,
-    gridContainerProps: Q,
-    handleGridContainerKeyDown: q,
+    getItemProps: Q,
+    getRowProps: Z,
+    gridContainerProps: q,
+    handleGridContainerKeyDown: J,
     isUsingKeyboardNavigation: X
   } = (0, s.useKeyboardNavigation)({
     columnCounts: Y,
@@ -74,18 +74,18 @@ function d(e) {
     gridNavigatorId: P
   }), $ = l.useCallback(e => {
     let t = V[e];
-    return y(t, J(e), {
+    return y(t, Z(e), {
       isUsingKeyboardNavigation: X.current,
       gutterWidth: z,
       rowIndex: e
-    }, t => Z(e, t), t => c.setInspectedExpressionPosition(t, e))
-  }, [V, Z, J, z, X, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
+    }, t => Q(e, t), t => c.setInspectedExpressionPosition(t, e))
+  }, [V, Q, Z, z, X, y, c]), ee = l.useCallback(e => null == g ? void 0 : g(t[e]), [t, g]), et = l.useCallback(e => null == S ? void 0 : S(t[e], e), [t, S]), en = l.useCallback(e => null == C ? void 0 : C(t[e]), [t, C]), ei = l.useCallback(() => {
     var e;
-    return null == _ ? void 0 : _(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
-  }, [V, H.columnIndex, H.rowIndex, _]);
+    return null == T ? void 0 : T(null == V ? void 0 : null === (e = V[H.rowIndex]) || void 0 === e ? void 0 : e[H.columnIndex])
+  }, [V, H.columnIndex, H.rowIndex, T]);
   l.useEffect(() => {
-    p(G)
-  }, [p, G]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
+    m(G)
+  }, [m, G]), l.useEffect(() => c.resetStoreState, [c.resetStoreState]), l.useLayoutEffect(() => {
     var e;
     null === (e = w.current) || void 0 === e || e.focus()
   }, []);
@@ -94,7 +94,7 @@ function d(e) {
       ref: w,
       store: c,
       hasSendableExpressions: !0,
-      onKeyDown: q,
+      onKeyDown: J,
       expressionsListRef: D,
       gridNavigatorId: P,
       defaultSearchPlaceholder: h,
@@ -113,23 +113,23 @@ function d(e) {
         ref: U,
         className: u.listWrapper,
         id: P,
-        ...Q,
+        ...q,
         children: null != B ? (0, i.jsx)(r.default, {
           ref: D,
           store: c,
-          hasSearchResults: m,
+          hasSearchResults: p,
           listPadding: L,
           renderRow: $,
           renderSection: null != g ? ee : void 0,
           renderSectionHeader: null != S ? et : void 0,
           renderSectionFooter: null != C ? en : void 0,
-          renderInspector: null != _ ? ei : void 0,
-          renderEmptySearchState: T,
+          renderInspector: null != T ? ei : void 0,
+          renderEmptySearchState: _,
           rowCount: K,
           rowCountBySection: W,
-          rowHeight: N,
-          sectionHeaderHeight: A,
-          sectionFooterHeight: O
+          rowHeight: A,
+          sectionHeaderHeight: N,
+          sectionFooterHeight: R
         }) : null
       })]
     })]

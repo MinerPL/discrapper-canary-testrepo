@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("570511"),
   c = n("974261"),
   f = n("782340"),
-  p = n("851535");
-class m extends l.PureComponent {
+  m = n("851535");
+class p extends l.PureComponent {
   componentDidMount() {
     this.updateMediaBar()
   }
@@ -37,7 +37,7 @@ class m extends l.PureComponent {
       sliderWrapperClassName: n,
       sliderClassName: l,
       currentWindow: a,
-      muted: m,
+      muted: p,
       minValue: h,
       maxValue: x,
       value: E,
@@ -46,10 +46,10 @@ class m extends l.PureComponent {
     } = this.props, {
       hovered: S,
       focused: C,
-      dragging: _
-    } = this.state, T = u.default;
-    return m || E === h ? T = d.default : E < x / 2 && (T = c.default), (0, i.jsxs)("div", {
-      className: s(t, p.container),
+      dragging: T
+    } = this.state, _ = u.default;
+    return p || E === h ? _ = d.default : E < x / 2 && (_ = c.default), (0, i.jsxs)("div", {
+      className: s(t, m.container),
       onMouseEnter: () => {
         clearTimeout(this._hoverTimeout), this.setState({
           hovered: !0
@@ -70,8 +70,8 @@ class m extends l.PureComponent {
       }),
       onKeyDown: this.handleKeyDown,
       children: [(0, i.jsx)("div", {
-        className: s(p.volumeButtonSlider, n, {
-          [p.sliderVisible]: S || C || _
+        className: s(m.volumeButtonSlider, n, {
+          [m.sliderVisible]: S || C || T
         }),
         onMouseEnter: () => {
           clearTimeout(this._hoverTimeout), this.setState({
@@ -94,12 +94,12 @@ class m extends l.PureComponent {
           ref: this._mediaBar
         })
       }), (0, i.jsx)(r.Button, {
-        className: p.volumeButton,
+        className: m.volumeButton,
         "aria-label": f.default.Messages.CONTROL_VOLUME,
         size: r.Button.Sizes.NONE,
         look: r.Button.Looks.BLANK,
         onClick: this.handleToggleMute,
-        children: (0, i.jsx)(T, {
+        children: (0, i.jsx)(_, {
           className: e
         })
       })]
@@ -150,9 +150,9 @@ class m extends l.PureComponent {
     }
   }
 }
-m.defaultProps = {
+p.defaultProps = {
   minValue: 0,
   maxValue: 100,
   handleSize: 16
 };
-var h = m
+var h = p

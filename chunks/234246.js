@@ -113,13 +113,13 @@ i = class extends l.EventEmitter {
     let {
       type: c,
       typeInfo: f,
-      query: p
-    } = a, m = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== p || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f), h = r.IncludeStickersInAutocomplete.getSetting();
+      query: m
+    } = a, p = i || n && ((null === (e = this.state.query) || void 0 === e ? void 0 : e.queryText) !== m || (null === (t = this.state.query) || void 0 === t ? void 0 : t.typeInfo) !== f), h = r.IncludeStickersInAutocomplete.getSetting();
     l.allowStickers = l.allowStickers ? h : l.allowStickers;
     let {
       results: x,
       metadata: E
-    } = f.queryResults(this.props.channel, this.props.guild, p, l, m), y = 0;
+    } = f.queryResults(this.props.channel, this.props.guild, m, l, p), y = 0;
     for (let e of Object.values(x)) Array.isArray(e) && (y += e.length);
     let g = !0 === x.isLoading,
       S = this.shouldShow(y, g, f),
@@ -128,7 +128,7 @@ i = class extends l.EventEmitter {
       query: {
         type: c,
         typeInfo: f,
-        queryText: p,
+        queryText: m,
         results: x,
         resultCount: y,
         options: l,
@@ -152,7 +152,7 @@ i = class extends l.EventEmitter {
       options: f
     } = this.state.query;
     if (e >= c) return !1;
-    let p = null === (l = u.onSelect) || void 0 === l ? void 0 : l.call(u, {
+    let m = null === (l = u.onSelect) || void 0 === l ? void 0 : l.call(u, {
       results: d,
       index: e,
       type: t ? o.SelectType.SEND : o.SelectType.INSERT,
@@ -161,7 +161,7 @@ i = class extends l.EventEmitter {
       tabOrEnter: n,
       queryText: null === (i = this.state.query) || void 0 === i ? void 0 : i.queryText
     });
-    return null != p && (0, s.trackAutocompleteSelect)(r, null !== (a = p.type) && void 0 !== a ? a : null, this.props.channel, p.metadata), !0
+    return null != m && (0, s.trackAutocompleteSelect)(r, null !== (a = m.type) && void 0 !== a ? a : null, this.props.channel, m.metadata), !0
   }
   setState(e) {
     for (let t in e)

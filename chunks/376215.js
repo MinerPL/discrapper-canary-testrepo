@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return N
   }
 }), n("222007"), n("424973");
 var i = n("37983"),
@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("913144"),
   c = n("81594"),
   f = n("798609"),
-  p = n("206230"),
-  m = n("302437"),
+  m = n("206230"),
+  p = n("302437"),
   h = n("383018"),
   x = n("474643"),
   E = n("585722"),
@@ -23,18 +23,18 @@ var i = n("37983"),
   g = n("378765"),
   S = n("393377"),
   C = n("761354"),
-  _ = n("49111"),
-  T = n("986548"),
+  T = n("49111"),
+  _ = n("986548"),
   I = n("356410");
 let v = [];
 
-function N(e) {
+function A(e) {
   let {
     channelId: t,
     type: n
-  } = e, a = (0, u.useStateFromStores)([p.default], () => p.default.keyboardModeEnabled), N = (0, m.default)("attachments", o.Orientations.HORIZONTAL), A = (0, u.useStateFromStores)([E.default], () => E.default.getUploads(t, n.drafts.type)), {
-    isApplicationCommand: O,
-    commandOptions: R,
+  } = e, a = (0, u.useStateFromStores)([m.default], () => m.default.keyboardModeEnabled), A = (0, p.default)("attachments", o.Orientations.HORIZONTAL), N = (0, u.useStateFromStores)([E.default], () => E.default.getUploads(t, n.drafts.type)), {
+    isApplicationCommand: R,
+    commandOptions: O,
     commandOptionStates: M
   } = (0, u.useStateFromStoresObject)([h.default], () => {
     let e = h.default.getActiveCommand(t);
@@ -51,11 +51,11 @@ function N(e) {
     }
   }), k = l.useMemo(() => {
     var e;
-    return null !== (e = null == R ? void 0 : R.filter(e => {
+    return null !== (e = null == O ? void 0 : O.filter(e => {
       var t;
       return e.type === f.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
     })) && void 0 !== e ? e : []
-  }, [R, M]), [L, P] = l.useState([]);
+  }, [O, M]), [L, P] = l.useState([]);
   l.useEffect(() => {
     let e = () => {
       c.default.clearAll(t, n.drafts.type)
@@ -63,13 +63,13 @@ function N(e) {
     return d.default.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e), () => d.default.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
   }, [t, n]);
   let b = l.useCallback(() => {
-    N.focusFirstVisibleItem()
-  }, [N]);
+    A.focusFirstVisibleItem()
+  }, [A]);
   return ((0, g.useComponentAction)({
-    event: _.ComponentActions.FOCUS_ATTACHMENT_AREA,
+    event: T.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: b
   }), l.useEffect(() => {
-    if (O) {
+    if (R) {
       let e = [];
       L.forEach(t => {
         !k.some(e => t.name === e.name) && e.push(t)
@@ -77,9 +77,9 @@ function N(e) {
         c.default.remove(t, e.name, n.drafts.type)
       }), P(k)
     }
-  }, [t, k.length, n]), !O && 0 === A.length || O && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
+  }, [t, k.length, n]), !R && 0 === N.length || R && 0 === k.length) ? null : (0, i.jsxs)(l.Fragment, {
     children: [(0, i.jsx)(r.ListNavigatorProvider, {
-      navigator: N,
+      navigator: A,
       children: (0, i.jsx)(r.ListNavigatorContainer, {
         children: e => {
           let {
@@ -89,12 +89,12 @@ function N(e) {
           return (0, i.jsx)("ul", {
             ref: l,
             ...r,
-            className: s(T.channelAttachmentArea, I.scrollbarGhost),
-            children: O ? k.map(e => (0, i.jsx)(S.default, {
+            className: s(_.channelAttachmentArea, I.scrollbarGhost),
+            children: R ? k.map(e => (0, i.jsx)(S.default, {
               channelId: t,
               keyboardModeEnabled: a,
               option: e
-            }, e.name)) : A.map(e => (0, i.jsx)(C.default, {
+            }, e.name)) : N.map(e => (0, i.jsx)(C.default, {
               channelId: t,
               draftType: n.drafts.type,
               upload: e,
@@ -107,13 +107,13 @@ function N(e) {
     }), n.drafts.type === x.DraftType.FirstThreadMessage ? null : (0, i.jsx)(y.default, {})]
   })
 }
-var A = l.memo(function(e) {
+var N = l.memo(function(e) {
   let {
     channelId: t,
     type: n,
     canAttachFiles: l
   } = e;
-  return l ? (0, i.jsx)(N, {
+  return l ? (0, i.jsx)(A, {
     channelId: t,
     type: n
   }) : null

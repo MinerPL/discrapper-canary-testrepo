@@ -4,7 +4,7 @@ a.r(t), a.d(t, {
     return f
   }
 }), a("794252");
-var s, r, l = a("37983");
+var s, l, r = a("37983");
 a("884691");
 var n = a("414456"),
   o = a.n(n),
@@ -12,7 +12,7 @@ var n = a("414456"),
   u = a("956089"),
   c = a("782340"),
   d = a("53248");
-(r = s || (s = {})).BANNER = "banner", r.MODAL = "modal", r.CARD = "card";
+(l = s || (s = {})).BANNER = "banner", l.MODAL = "modal", l.CARD = "card";
 var f = e => {
   let {
     category: t,
@@ -20,7 +20,7 @@ var f = e => {
     className: s
   } = e;
   if (null == t.unpublishedAt) return null;
-  let r = function(e) {
+  let l = function(e) {
     let t = new Date,
       a = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate()),
       s = Date.UTC(e.getFullYear(), e.getMonth(), e.getDate());
@@ -28,20 +28,20 @@ var f = e => {
   }(t.unpublishedAt);
 
   function n(e) {
-    return (0, l.jsx)(u.TextBadge, {
+    return (0, r.jsx)(u.TextBadge, {
       disableColor: !0,
       text: e,
       className: o(d.badge, s)
     })
   }
-  return (0, i.match)([a, r > 1]).with(["card", !0], () => null).with(["banner", !0], () => {
+  return (0, i.match)([a, l > 1]).with(["card", !0], () => null).with(["banner", !0], () => {
     let e = c.default.Messages.COLLECTIBLES_DAYS_LEFT_IN_SHOP.format({
-      days: r
+      days: l
     });
     return n(e)
   }).with(["modal", !0], () => {
     let e = c.default.Messages.COLLECTIBLES_DAYS_LEFT.format({
-      days: r
+      days: l
     });
     return n(e)
   }).otherwise(() => {

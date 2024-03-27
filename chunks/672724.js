@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 }), n("222007");
 var i = n("37983"),
@@ -224,4 +224,4 @@ class f extends l.Component {
 f.Types = d, f.defaultProps = {
   currentWindow: window
 };
-var p = f
+var m = f

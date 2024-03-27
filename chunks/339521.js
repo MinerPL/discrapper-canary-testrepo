@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var i = n("37983"),
@@ -42,7 +42,7 @@ function f(e) {
   } = e, i = Math.floor(t) % 60, l = Math.floor(t / 60) % 60, a = Math.floor(t / 3600);
   return 0 === a ? n ? "".concat(c(l), ":").concat(c(i)) : "".concat(l, ":").concat(c(i)) : n ? "".concat(c(a), ":").concat(c(l), ":").concat(c(i)) : "".concat(a, ":").concat(c(l), ":").concat(c(i))
 }
-class p extends l.PureComponent {
+class m extends l.PureComponent {
   componentDidMount() {
     this.timer.start(500, () => {
       this.setState({
@@ -62,7 +62,7 @@ class p extends l.PureComponent {
       singleLine: a = !1
     } = this.props, {
       now: r
-    } = this.state, c = (t - e) / 1e3, p = Math.max(Math.min((r - e) / 1e3, c), 0);
+    } = this.state, c = (t - e) / 1e3, m = Math.max(Math.min((r - e) / 1e3, c), 0);
     return a ? (0, i.jsxs)("div", {
       className: s(n, {
         [u.themed]: l
@@ -70,13 +70,13 @@ class p extends l.PureComponent {
       children: [(0, i.jsx)("div", {
         className: u.textLeftInSingleLine,
         children: f({
-          time: p,
+          time: m,
           padLargestUnit: !0
         })
       }), (0, i.jsx)("div", {
         className: u.barInSingleLine,
         children: (0, i.jsx)(d, {
-          percentage: p / c,
+          percentage: m / c,
           isSingleLine: !0
         })
       }), (0, i.jsx)("div", {
@@ -91,14 +91,14 @@ class p extends l.PureComponent {
         [u.themed]: l
       }),
       children: [(0, i.jsx)(d, {
-        percentage: p / c,
+        percentage: m / c,
         isSingleLine: !1
       }), (0, i.jsxs)(o.default, {
         children: [(0, i.jsx)(o.default.Child, {
           grow: 1,
           className: u.textLeft,
           children: f({
-            time: p,
+            time: m,
             padLargestUnit: !1
           })
         }), (0, i.jsx)(o.default.Child, {
@@ -118,7 +118,7 @@ class p extends l.PureComponent {
     }
   }
 }
-p.defaultProps = {
+m.defaultProps = {
   themed: !1
 };
-var m = p
+var p = m

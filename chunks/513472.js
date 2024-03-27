@@ -4,62 +4,62 @@ n.r(t), n.d(t, {
     return E
   }
 });
-var a = n("37983");
+var i = n("37983");
 n("884691");
-var l = n("866227"),
-  s = n.n(l),
-  i = n("446674"),
-  r = n("77078"),
-  o = n("519705"),
-  u = n("531674"),
-  d = n("319165"),
+var s = n("866227"),
+  a = n.n(s),
+  l = n("446674"),
+  u = n("77078"),
+  d = n("519705"),
+  o = n("531674"),
+  r = n("319165"),
   c = n("282109"),
   f = n("34676"),
-  h = n("782340");
+  S = n("782340");
 
 function E(e, t) {
   let n = null == e ? void 0 : e.id,
     {
-      muted: l,
+      muted: s,
       muteConfig: E
-    } = (0, i.useStateFromStoresObject)([c.default], () => ({
+    } = (0, l.useStateFromStoresObject)([c.default], () => ({
       muted: null != n ? c.default.isMuted(n) : void 0,
       muteConfig: null != n ? c.default.getMuteConfig(n) : void 0
     }), [n]),
-    m = (0, d.useMutedUntilText)(E);
-  return null == n ? null : l ? (0, a.jsx)(r.MenuItem, {
+    g = (0, r.useMutedUntilText)(E);
+  return null == n ? null : s ? (0, i.jsx)(u.MenuItem, {
     id: "unmute-guild",
-    label: h.default.Messages.UNMUTE_SERVER,
-    subtext: m,
-    action: () => o.default.updateGuildNotificationSettings(n, {
+    label: S.default.Messages.UNMUTE_SERVER,
+    subtext: g,
+    action: () => d.default.updateGuildNotificationSettings(n, {
       muted: !1
     }, f.NotificationLabels.Unmuted)
-  }) : (0, a.jsx)(r.MenuItem, {
+  }) : (0, i.jsx)(u.MenuItem, {
     id: "mute-guild",
-    label: h.default.Messages.MUTE_SERVER,
-    action: () => o.default.updateGuildNotificationSettings(n, {
+    label: S.default.Messages.MUTE_SERVER,
+    action: () => d.default.updateGuildNotificationSettings(n, {
       muted: !0
     }, f.NotificationLabels.Muted),
-    children: (0, u.getMuteTimes)().map(e => {
+    children: (0, o.getMuteTimes)().map(e => {
       let {
-        value: l,
-        label: i
+        value: s,
+        label: l
       } = e;
-      return (0, a.jsx)(r.MenuItem, {
-        id: "".concat(l),
-        label: i,
+      return (0, i.jsx)(u.MenuItem, {
+        id: "".concat(s),
+        label: l,
         action: () => (function(e) {
           if (null == n) return;
-          let a = e > 0 ? s().add(e, "second").toISOString() : null;
-          o.default.updateGuildNotificationSettings(n, {
+          let i = e > 0 ? a().add(e, "second").toISOString() : null;
+          d.default.updateGuildNotificationSettings(n, {
             muted: !0,
             mute_config: {
               selected_time_window: e,
-              end_time: a
+              end_time: i
             }
           }, f.NotificationLabels.Muted, t)
-        })(l)
-      }, l)
+        })(s)
+      }, s)
     })
   })
 }

@@ -50,14 +50,14 @@ function c(e, t) {
   for (let e = a; e < i.length && o.has(i.charAt(e)); e++) a++;
   let s = i.substring(l, a),
     u = {};
-  return p({
+  return m({
     result: u,
     text: s,
     startIndex: l,
     syntax: "***",
     type1: "italics",
     type2: "bold"
-  }), p({
+  }), m({
     result: u,
     text: s,
     startIndex: l,
@@ -68,14 +68,14 @@ function c(e, t) {
 }
 
 function f(e, t, n, i, l) {
-  let a = m(t, i);
+  let a = p(t, i);
   a >= 0 && (e[l] = {
     chars: i,
     location: n + a
   })
 }
 
-function p(e) {
+function m(e) {
   let {
     result: t,
     text: n,
@@ -83,7 +83,7 @@ function p(e) {
     syntax: l,
     type1: a,
     type2: s
-  } = e, r = m(n, l);
+  } = e, r = p(n, l);
   r >= 0 && (t[a] = {
     chars: l.substring(0, 1),
     location: r + i
@@ -93,7 +93,7 @@ function p(e) {
   })
 }
 
-function m(e, t) {
+function p(e, t) {
   let n = e.indexOf(t);
   if (n >= 0) {
     let i = t.charAt(0);
@@ -106,9 +106,9 @@ function h(e, t) {
   a.HistoryUtils.withSingleEntry(e, () => {
     r.EditorUtils.withoutNormalizing(e, () => {
       l(null != e.selection, "Editor has no selection");
-      let [n, i] = r.RangeUtils.edges(e.selection), a = d(e, n, i), o = a.before[t], c = a.after[t], f = r.EditorUtils.node(e, n.path), p = r.EditorUtils.node(e, i.path);
-      if (null == f || null == p || !r.TextUtils.isText(f[0]) || !r.TextUtils.isText(p[0])) return;
-      let m = r.PathUtils.equals(f[1], p[1]);
+      let [n, i] = r.RangeUtils.edges(e.selection), a = d(e, n, i), o = a.before[t], c = a.after[t], f = r.EditorUtils.node(e, n.path), m = r.EditorUtils.node(e, i.path);
+      if (null == f || null == m || !r.TextUtils.isText(f[0]) || !r.TextUtils.isText(m[0])) return;
+      let p = r.PathUtils.equals(f[1], m[1]);
       if (null != o && null != c) {
         let t = {
             path: n.path,
@@ -127,7 +127,7 @@ function h(e, t) {
         });
         let a = n.offset,
           u = i.offset;
-        !r.PointUtils.isBefore(n, t) && (a -= o.chars.length), m && !r.PointUtils.isBefore(i, t) && (u -= o.chars.length), r.PointUtils.isAfter(i, l) && (u -= c.chars.length), s.SlateTransforms.select(e, {
+        !r.PointUtils.isBefore(n, t) && (a -= o.chars.length), p && !r.PointUtils.isBefore(i, t) && (u -= o.chars.length), r.PointUtils.isAfter(i, l) && (u -= c.chars.length), s.SlateTransforms.select(e, {
           anchor: {
             path: n.path,
             offset: Math.max(0, a)
@@ -145,7 +145,7 @@ function h(e, t) {
           at: n
         });
         let a = f[0].text.length + l.length,
-          r = p[0].text.length + (m ? 2 * l.length : l.length);
+          r = m[0].text.length + (p ? 2 * l.length : l.length);
         s.SlateTransforms.select(e, {
           anchor: {
             path: n.path,
@@ -153,7 +153,7 @@ function h(e, t) {
           },
           focus: {
             path: i.path,
-            offset: Math.min(r, i.offset + (m ? l.length : 0))
+            offset: Math.min(r, i.offset + (p ? l.length : 0))
           }
         })
       }

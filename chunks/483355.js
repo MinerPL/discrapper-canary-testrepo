@@ -15,8 +15,8 @@ var i, a, l = n("884691"),
   h = n("658530"),
   p = n("773336"),
   g = n("50885"),
-  E = n("819068");
-let m = {
+  m = n("819068");
+let E = {
     x: 0,
     y: 0
   },
@@ -27,7 +27,7 @@ function v(e) {
     clientX: t,
     clientY: n
   } = e;
-  S = !0, m.x = t, m.y = n
+  S = !0, E.x = t, E.y = n
 }
 let y = new Map;
 
@@ -39,7 +39,7 @@ function O(e, t) {
     0 === y.size && window.addEventListener("mousemove", v), y.set(e, t)
   }
   if (p.isPlatformEmbedded) {
-    if ((0, E.isOutOfProcess)()) f.default.setClickZones(Array.from(y.values()).map(e => {
+    if ((0, m.isOutOfProcess)()) f.default.setClickZones(Array.from(y.values()).map(e => {
       let {
         zone: t
       } = e, n = {
@@ -63,17 +63,17 @@ function O(e, t) {
           })
         }),
         function() {
-          if (T) return;
+          if (C) return;
           let e = g.default.requireModule("discord_overlay2");
           e.setClickZoneCallback((e, t, n) => {
             let i = y.get(e);
-            null != i && (!S && (m.x = t, m.y = n), i.instance.click())
-          }), T = !0
+            null != i && (!S && (E.x = t, E.y = n), i.instance.click())
+          }), C = !0
         }()
     }
   }
 }
-let T = !1;
+let C = !1;
 (i = class extends l.PureComponent {
   componentDidMount() {
     this.props.observe ? this.observeZone() : this.updateZone()
@@ -94,8 +94,8 @@ let T = !1;
     this.updateZone(), this.interval.start(this.props.observeInterval, this.updateZone)
   }
   click() {
-    let e = (0, h.createMouseEvent)("click", m.x, m.y);
-    (0, h.dispatchEventToPoint)(e, m.x, m.y)
+    let e = (0, h.createMouseEvent)("click", E.x, E.y);
+    (0, h.dispatchEventToPoint)(e, E.x, E.y)
   }
   constructor(...e) {
     super(...e), this.zone = o.uniqueId("ClickArea"), this.interval = new c.Interval, this.updateZone = () => {

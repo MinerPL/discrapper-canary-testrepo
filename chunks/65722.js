@@ -10,10 +10,10 @@ n.r(t), n.d(t, {
     return E
   },
   useCanManageGuildRoleSubscriptions: function() {
-    return h
+    return _
   },
   canManageGuildRoleSubscriptions: function() {
-    return _
+    return h
   }
 });
 var i, r, l = n("446674"),
@@ -58,7 +58,7 @@ function E(e) {
   let t = (0, d.useGuildEligibleForRoleSubscriptions)(null == e ? void 0 : e.id),
     n = (0, s.useIsExpeditedOnboardingGuild)(e),
     i = (0, s.useIsMonetizationWaitlistEnabledForGuild)(null == e ? void 0 : e.id),
-    r = h(e),
+    r = _(e),
     o = (0, l.useStateFromStores)([a.default], () => {
       let t = a.default.getCurrentUser();
       return null != t && (null == e ? void 0 : e.isOwner(t)) === !0
@@ -79,11 +79,11 @@ function E(e) {
   })
 }
 
-function h(e) {
-  let t = (0, l.useStateFromStores)([o.default], () => _(e), [e]);
+function _(e) {
+  let t = (0, l.useStateFromStores)([o.default], () => h(e), [e]);
   return t
 }
 
-function _(e) {
+function h(e) {
   return null != e && o.default.can(c.Permissions.ADMINISTRATOR, e)
 }

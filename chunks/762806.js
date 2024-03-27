@@ -20,10 +20,10 @@ function u(e) {
     look: d,
     guildId: c,
     channelId: f,
-    source: p
+    source: m
   } = e;
   if (null == t || !(0, a.default)(t, r.ActivityFlags.SYNC)) return null;
-  let m = {
+  let p = {
     key: "sync",
     className: o.button,
     size: o.buttonSize,
@@ -35,7 +35,7 @@ function u(e) {
   return (0, s.default)(t) ? (0, i.jsx)(l.default, {
     guildId: null != c ? c : void 0,
     channelId: f,
-    source: p,
-    ...m
+    source: m,
+    ...p
   }) : null
 }

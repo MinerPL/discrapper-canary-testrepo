@@ -4,10 +4,10 @@ n.r(t), n.d(t, {
     return f
   },
   getHangStatusDetails: function() {
-    return p
+    return m
   },
   getHangStatusText: function() {
-    return m
+    return p
   }
 });
 var i = n("49111"),
@@ -56,13 +56,13 @@ let f = () => ({
       color: "#7C5571"
     }
   }),
-  p = e => {
+  m = e => {
     if ((null == e ? void 0 : e.type) !== i.ActivityTypes.HANG_STATUS || (null == e ? void 0 : e.state) == null) return null;
     let t = e.state;
     return t === i.HangStatusTypes.CUSTOM ? null : f()[t]
   },
-  m = e => {
+  p = e => {
     var t;
     let n = (null == e ? void 0 : e.state) != null ? e.state : null;
-    return n === i.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = p(e)) || void 0 === t ? void 0 : t.title
+    return n === i.HangStatusTypes.CUSTOM ? null == e ? void 0 : e.details : null === (t = m(e)) || void 0 === t ? void 0 : t.title
   }

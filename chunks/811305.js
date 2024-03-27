@@ -17,8 +17,8 @@ var i = n("37983"),
   d = n("506885"),
   c = n("340906"),
   f = n("766274"),
-  p = n("697218"),
-  m = n("368121"),
+  m = n("697218"),
+  p = n("368121"),
   h = n("523096"),
   x = n("587974"),
   E = n("856614");
@@ -87,7 +87,7 @@ class S extends l.PureComponent {
     }
   }
   renderIcon() {
-    return this.props.renderIcon ? (0, i.jsx)(m.default, {
+    return this.props.renderIcon ? (0, i.jsx)(p.default, {
       foreground: E.foreground,
       className: E.icon
     }) : null
@@ -102,10 +102,10 @@ class S extends l.PureComponent {
       useFallbackUserForPopout: r
     } = this.props, {
       popoutUserId: f
-    } = this.state, m = n.find(e => null != e && e.id === f), h = r && null == p.default.getUser(f);
+    } = this.state, p = n.find(e => null != e && e.id === f), h = r && null == m.default.getUser(f);
     return (0, i.jsx)(u.Popout, {
       position: "right",
-      preload: null == m ? void 0 : () => (0, d.default)(m.id, m.getAvatarURL(l, 80), {
+      preload: null == p ? void 0 : () => (0, d.default)(p.id, p.getAvatarURL(l, 80), {
         guildId: l
       }),
       shouldShow: !0 === a && null != f,
@@ -113,7 +113,7 @@ class S extends l.PureComponent {
       renderPopout: e => (o(null != f, "UserSummaryItem.render - renderPopout: popoutUserId cannot be null"), (0, i.jsx)(c.default, {
         ...this.props,
         location: "UserSummaryItem",
-        user: h && null != m ? m : void 0,
+        user: h && null != p ? p : void 0,
         ...e,
         userId: f,
         guildId: this.props.guildId

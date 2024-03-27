@@ -20,8 +20,8 @@ var r = n("37983"),
   P = n("570727"),
   E = n("697218"),
   _ = n("10514"),
-  x = n("145131"),
-  C = n("659632"),
+  C = n("145131"),
+  x = n("659632"),
   I = n("701909"),
   T = n("719923"),
   h = n("635357"),
@@ -105,22 +105,22 @@ function R(e) {
       app_context: "billing"
     }
   });
-  let ex = null !== (s = null == e_ ? void 0 : e_.message) && void 0 !== s ? s : O.default.Messages.ERROR_GENERIC_TITLE,
-    eC = eu && null == e_,
+  let eC = null !== (s = null == e_ ? void 0 : e_.message) && void 0 !== s ? s : O.default.Messages.ERROR_GENERIC_TITLE,
+    ex = eu && null == e_,
     eI = eu && null != e_;
-  return eC && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null ? (0, r.jsx)(N.default, {}) : (l(null != J, "Step should be set"), l(ec.length > 0, "Premium plan options should be set"), (0, r.jsxs)(r.Fragment, {
+  return ex && (null == eE ? void 0 : eE.subscriptionPeriodEnd) == null ? (0, r.jsx)(N.default, {}) : (l(null != J, "Step should be set"), l(ec.length > 0, "Premium plan options should be set"), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(A.GiftNote, {
       giftMessage: $
-    }), !(Q && (0, C.shouldShowCustomGiftExperience)(Z)) && (0, r.jsx)(M.default, {
+    }), !(Q && (0, x.shouldShowCustomGiftExperience)(Z)) && (0, r.jsx)(M.default, {
       isEligibleForTrial: es
     }), (0, r.jsxs)(b.PaymentPortalBody, {
-      children: [eC && (0, r.jsx)("hr", {
+      children: [ex && (0, r.jsx)("hr", {
         className: v.planSelectSeparatorUpper
       }), (0, r.jsx)(S.default, {
         isGift: Q,
         plan: V
       }), (0, r.jsx)(j.default, {}), eI ? (0, r.jsx)(o.FormErrorBlock, {
-        children: ex
+        children: eC
       }) : (0, r.jsx)(P.PremiumSwitchPlanSelectBody, {
         planOptions: ec,
         eligibleForMultiMonthPlans: er,
@@ -129,7 +129,7 @@ function R(e) {
         subscriptionPeriodEnd: null == eE ? void 0 : eE.subscriptionPeriodEnd,
         discountInvoiceItems: eo ? null == eE ? void 0 : eE.invoiceItems : void 0,
         handleClose: F
-      }), eC && (0, r.jsxs)(r.Fragment, {
+      }), ex && (0, r.jsxs)(r.Fragment, {
         children: [(0, r.jsx)("hr", {
           className: v.planSelectSeparatorLower
         }), (0, r.jsx)(o.Text, {
@@ -141,14 +141,14 @@ function R(e) {
       })]
     }), (0, r.jsx)(b.PaymentPortalFooter, {
       children: (0, r.jsx)(o.ModalFooter, {
-        justify: x.default.Justify.BETWEEN,
-        align: x.default.Align.CENTER,
+        justify: C.default.Justify.BETWEEN,
+        align: C.default.Align.CENTER,
         children: (0, r.jsx)(P.PremiumSwitchPlanSelectFooter, {
           onStepChange: R,
           onBackClick: () => R(y.Step.SKU_SELECT),
           showBackButton: null == B && null == U,
           planOptions: ec,
-          shouldRenderUpdatedPaymentModal: eC,
+          shouldRenderUpdatedPaymentModal: ex,
           isTrial: es
         })
       })

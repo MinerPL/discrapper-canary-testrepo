@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return E
   },
   trackRoleSubscriptionPurchaseMessageTierClick: function() {
-    return h
+    return _
   },
   getRoleSubscriptionPurchaseSystemMessageEventProperties: function() {
-    return _
+    return h
   }
 });
 var i = n("716241"),
@@ -143,7 +143,7 @@ function E(e) {
   return (0, r.isCreatorMonetizationEnabledGuild)(e)
 }
 
-function h(e, t, n, r) {
+function _(e, t, n, r) {
   var l;
   i.default.trackWithMetadata(u.AnalyticEvents.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
     guild_id: e,
@@ -154,7 +154,7 @@ function h(e, t, n, r) {
   })
 }
 
-function _(e, t) {
+function h(e, t) {
   var n;
   return {
     guild_id: e.guild_id,

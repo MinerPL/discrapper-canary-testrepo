@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return i
   },
   useForumPostMediaThumbnail: function() {
-    return T
+    return _
   },
   useForumPostMediaProperties: function() {
     return I
@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return v
   },
   useFirstMediaIsEmbed: function() {
-    return N
-  },
-  shouldShowAddMediaToOriginalPostModal: function() {
     return A
   },
+  shouldShowAddMediaToOriginalPostModal: function() {
+    return N
+  },
   messageContainsGifOrVideo: function() {
-    return O
+    return R
   }
 }), n("702976"), n("222007"), n("808653");
 var i, l, a = n("884691"),
@@ -33,8 +33,8 @@ var i, l, a = n("884691"),
   d = n("377253"),
   c = n("697218"),
   f = n("568734"),
-  p = n("449008"),
-  m = n("299039"),
+  m = n("449008"),
+  p = n("299039"),
   h = n("253981"),
   x = n("49111");
 
@@ -84,15 +84,15 @@ function C(e) {
       } = e;
       if (null == r || null == o) return null;
       let c = (0, s.isVideoFile)(u),
-        p = null != e.flags && (0, f.hasFlag)(e.flags, x.MessageAttachmentFlags.IS_THUMBNAIL),
-        m = null != t ? t : n;
+        m = null != e.flags && (0, f.hasFlag)(e.flags, x.MessageAttachmentFlags.IS_THUMBNAIL),
+        p = null != t ? t : n;
       if (c) {
         let e = h.default.toURLSafe(t);
         if (null == e) return null;
-        e.searchParams.append("format", "jpeg"), m = e.toString()
+        e.searchParams.append("format", "jpeg"), p = e.toString()
       }
       return {
-        src: m,
+        src: p,
         width: r,
         height: o,
         spoiler: null != l && l,
@@ -100,14 +100,14 @@ function C(e) {
         contentScanVersion: d,
         alt: i,
         isVideo: c,
-        isThumbnail: p,
+        isThumbnail: m,
         type: "attachment"
       }
-    }).filter(p.isNotNullish)
+    }).filter(m.isNotNullish)
   }(e, t)
 }
 
-function _(e, t) {
+function T(e, t) {
   let n = o.InlineEmbedMedia.useSetting(),
     i = o.RenderEmbeds.useSetting();
   if (null == e) return [];
@@ -133,10 +133,10 @@ function _(e, t) {
         type: "embed"
       }
     }
-  }).filter(p.isNotNullish) : []
+  }).filter(m.isNotNullish) : []
 }
 
-function T(e, t) {
+function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
     i = I(e, n);
   return a.useMemo(() => {
@@ -151,32 +151,32 @@ function T(e, t) {
 
 function I(e, t) {
   let n = C(e),
-    i = _(e, t);
+    i = T(e, t);
   return [...n, ...i]
 }
 
 function v(e, t) {
   var n, i;
   let l = C(e),
-    a = _(e, t);
+    a = T(e, t);
   return null !== (i = null !== (n = l[0]) && void 0 !== n ? n : a[0]) && void 0 !== i ? i : null
 }
 
-function N(e, t) {
+function A(e, t) {
   let n = C(e),
-    i = _(e, t);
+    i = T(e, t);
   return null == n[0] && null != i[0]
 }
 
-function A(e, t) {
+function N(e, t) {
   var n;
   let i = u.default.getChannel(t);
   if (null == i) return !1;
-  let l = d.default.getMessage(i.id, m.default.castChannelIdAsMessageId(i.id));
+  let l = d.default.getMessage(i.id, p.default.castChannelIdAsMessageId(i.id));
   return null != l && e.length > 0 && null != e.find(e => e.isImage || e.isVideo) && i.isForumPost() && i.ownerId === (null === (n = c.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && 0 === r.default.getCount(i.id) && (0 === l.attachments.length || null == l.attachments.find(e => y(e) || g(e)))
 }
 
-function O(e) {
+function R(e) {
   return e.reduce((e, t) => ({
     containsVideo: e.containsVideo || t.isVideo,
     containsGif: e.containsGif || (0, s.isAnimatedImageUrl)(t.src)

@@ -17,7 +17,7 @@ var i = n("37983"),
     let {
       disabled: n,
       type: a
-    } = e, [f, p, m] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), h = l.useCallback(() => {
+    } = e, [f, m, p] = (0, o.useExpressionPickerStore)(e => [e.activeView, e.activeViewType, e.pickerId], r.default), h = l.useCallback(() => {
       (0, o.toggleExpressionPicker)(d.ExpressionPickerViewType.EMOJI, a)
     }, [a]);
     return n ? null : (0, i.jsx)("div", {
@@ -26,8 +26,8 @@ var i = n("37983"),
       children: (0, i.jsx)(u.default, {
         className: c.emojiButton,
         onClick: h,
-        active: f === d.ExpressionPickerViewType.EMOJI && p === a,
-        "aria-controls": m,
+        active: f === d.ExpressionPickerViewType.EMOJI && m === a,
+        "aria-controls": p,
         tabIndex: 0,
         focusProps: {
           offset: {

@@ -20,8 +20,8 @@ var l = n("414456"),
       externalURL: n,
       className: l,
       renderLinkComponent: f,
-      inactive: p,
-      messageId: m,
+      inactive: m,
+      messageId: p,
       channelId: h
     } = e;
     return (0, i.jsx)(r.MessagesInteractionContext.Consumer, {
@@ -29,7 +29,7 @@ var l = n("414456"),
         className: a(l, c.wrapper, {
           [c.disableInteractions]: e.disableInteractions
         }),
-        children: [p && null == t ? (0, i.jsx)("div", {
+        children: [m && null == t ? (0, i.jsx)("div", {
           className: c.iconWrapper,
           children: (0, i.jsx)(u.default, {
             className: c.iconPlay
@@ -37,7 +37,7 @@ var l = n("414456"),
         }) : null, null != t ? (0, i.jsx)(s.Clickable, {
           onClick: t,
           className: a(c.iconWrapperActive),
-          tabIndex: p ? -1 : 0,
+          tabIndex: m ? -1 : 0,
           "aria-label": d.default.Messages.PLAY,
           children: (0, i.jsx)(u.default, {
             className: c.iconPlay
@@ -51,7 +51,7 @@ var l = n("414456"),
             "aria-label": d.default.Messages.OPEN_LINK,
             className: null != t ? c.iconExternalMargins : c.iconExternal
           }),
-          messageId: m,
+          messageId: p,
           channelId: h
         }) : null]
       })

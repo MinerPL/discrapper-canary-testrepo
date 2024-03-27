@@ -20,8 +20,8 @@ var i = n("884691"),
   d = n("697218"),
   c = n("718517"),
   f = n("49111"),
-  p = n("894282");
-let m = {
+  m = n("894282");
+let p = {
     [f.PlatformTypes.INSTAGRAM]: ["1036753656588017764"]
   },
   h = new Map([
@@ -39,7 +39,7 @@ function E(e) {
   }).allowPlayStationStaging;
   return e => {
     var l;
-    return e.type === f.PlatformTypes.PLAYSTATION_STAGING ? i : !!(void 0 !== n && (null === (l = m[e.type]) || void 0 === l ? void 0 : l.includes(n.id))) || !!t || e.enabled
+    return e.type === f.PlatformTypes.PLAYSTATION_STAGING ? i : !!(void 0 !== n && (null === (l = p[e.type]) || void 0 === l ? void 0 : l.includes(n.id))) || !!t || e.enabled
   }
 }
 
@@ -65,14 +65,14 @@ function g(e) {
     let {
       key: t
     } = e;
-    t === p.KeyboardKeysUpdated.SHIFT && n(!0)
+    t === m.KeyboardKeysUpdated.SHIFT && n(!0)
   }
 
   function a(e) {
     let {
       key: t
     } = e;
-    t === p.KeyboardKeysUpdated.SHIFT && n(!1)
+    t === m.KeyboardKeysUpdated.SHIFT && n(!1)
   }
   return (i.useEffect(() => (window.addEventListener("keydown", l), window.addEventListener("keyup", a), () => {
     window.removeEventListener("keydown", l), window.removeEventListener("keyup", a)

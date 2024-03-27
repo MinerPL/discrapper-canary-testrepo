@@ -24,8 +24,8 @@ var a = s("37983"),
   T = s("145131"),
   P = s("251752"),
   C = s("719923"),
-  R = s("942456"),
-  A = s("646718"),
+  A = s("942456"),
+  R = s("646718"),
   M = s("843455"),
   h = s("782340"),
   L = s("99119"),
@@ -68,7 +68,7 @@ function y(e) {
           children: (0, a.jsx)(c.AdvancedScroller, {
             className: L.bottomDivider,
             ref: u,
-            children: I.map((e, t) => (0, a.jsx)(R.default, {
+            children: I.map((e, t) => (0, a.jsx)(A.default, {
               className: l(L.paymentRow, L.bottomDivider),
               payment: e,
               locale: s,
@@ -150,7 +150,7 @@ function D(e) {
   var t;
   let s = e.skuId,
     a = null === (t = e.subscription) || void 0 === t ? void 0 : t.items[0].planId;
-  return !(null == s || null == a || Object.values(A.PremiumSubscriptionSKUs).includes(s) || (0, C.isPremiumSubscriptionPlan)(a))
+  return !(null == s || null == a || Object.values(R.PremiumSubscriptionSKUs).includes(s) || (0, C.isPremiumSubscriptionPlan)(a))
 }
 
 function U(e) {

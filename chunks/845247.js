@@ -14,8 +14,8 @@ var i = n("798609"),
   d = n("501536"),
   c = n("387111"),
   f = n("511104"),
-  p = n("200294"),
-  m = n("851745"),
+  m = n("200294"),
+  p = n("851745"),
   h = n("825871"),
   x = n("782340");
 
@@ -40,9 +40,9 @@ function E(e) {
 let y = {
   ...h.default,
   sentinel: void 0,
-  focusMode: m.FocusMode.MANUAL,
+  focusMode: p.FocusMode.MANUAL,
   matches(e, t, n, i, l) {
-    if (l.commands === m.CommandMode.DISABLED || l.commands === m.CommandMode.OLD_BUILT_INS || n.length < 2 || !o.ShowCommandSuggestions.getSetting()) return !1;
+    if (l.commands === p.CommandMode.DISABLED || l.commands === p.CommandMode.OLD_BUILT_INS || n.length < 2 || !o.ShowCommandSuggestions.getSetting()) return !1;
     let a = E(n);
     return null != a && a.cleanedQuery.length > 0
   },
@@ -53,13 +53,13 @@ let y = {
     let c = (0, r.getCommandQuery)(e, d.cleanedQuery),
       {
         commands: f,
-        sections: p
+        sections: m
       } = l.executeQuery(e, {
         commandType: i.ApplicationCommandType.CHAT,
         text: c.text
       }, {
-        limit: m.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
-        placeholderCount: m.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
+        limit: p.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
+        placeholderCount: p.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
         scoreMethod: a.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: u
       });
@@ -72,9 +72,9 @@ let y = {
     }
     return 0 === x.length ? h.EMPTY_RESULTS : {
       results: {
-        entries: x.slice(0, m.MAX_COMMAND_AUTOCOMPLETE_RESULTS).map(e => ({
+        entries: x.slice(0, p.MAX_COMMAND_AUTOCOMPLETE_RESULTS).map(e => ({
           command: e,
-          section: null == p ? void 0 : p.find(t => t.id === e.applicationId)
+          section: null == m ? void 0 : m.find(t => t.id === e.applicationId)
         }))
       }
     }
@@ -92,7 +92,7 @@ let y = {
       onHover: r,
       onClick: o
     } = e;
-    return (0, p.renderAutocompleteGroup)({
+    return (0, m.renderAutocompleteGroup)({
       query: a,
       selectedIndex: n,
       autocompletes: t,
@@ -100,7 +100,7 @@ let y = {
       onClick: o,
       titleWithQuery: x.default.Messages.COMMANDS_MATCHING,
       titleWithoutQuery: x.default.Messages.COMMANDS,
-      Component: s.commands === m.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
+      Component: s.commands === p.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -141,7 +141,7 @@ let y = {
     });
     return null == r ? null : {
       ...r,
-      type: m.AutocompleteSelectionTypes.COMMAND_SUGGESTION
+      type: p.AutocompleteSelectionTypes.COMMAND_SUGGESTION
     }
   }
 };

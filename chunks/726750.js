@@ -1,45 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return h
+    return S
   }
 });
 var l = n("37983");
 n("884691");
-var i = n("446674"),
-  u = n("77078"),
-  r = n("305961"),
-  a = n("697218"),
-  o = n("800762"),
-  s = n("244480"),
-  d = n("619395"),
+var u = n("446674"),
+  a = n("77078"),
+  i = n("305961"),
+  d = n("697218"),
+  s = n("800762"),
+  o = n("244480"),
+  r = n("619395"),
   c = n("325861"),
   f = n("77445"),
-  g = n("130563"),
+  E = n("130563"),
   _ = n("782340");
 
-function h(e) {
+function S(e) {
   var t;
-  let n = (0, g.default)(),
-    h = null == n ? void 0 : n.id,
-    E = null == n ? void 0 : n.guild_id,
-    S = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(E), [E]),
-    m = (0, i.useStateFromStores)([o.default], () => null != h ? o.default.getVoiceStateForChannel(h, e.id) : null, [h, e.id]),
-    v = (null === (t = a.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
-    p = (0, f.default)(),
-    T = (0, i.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, h), [h, e.id]),
-    M = (0, d.useCanModerateRequestToSpeak)(h);
-  if (null == n || null == S || null == m || T.speaker) return null;
-  let C = () => {
-    v ? (0, s.audienceAckRequestToSpeak)(n, !1) : (0, s.inviteUserToStage)(n, e.id)
+  let n = (0, E.default)(),
+    S = null == n ? void 0 : n.id,
+    T = null == n ? void 0 : n.guild_id,
+    g = (0, u.useStateFromStores)([i.default], () => i.default.getGuild(T), [T]),
+    p = (0, u.useStateFromStores)([s.default], () => null != S ? s.default.getVoiceStateForChannel(S, e.id) : null, [S, e.id]),
+    M = (null === (t = d.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) === e.id,
+    A = (0, f.default)(),
+    v = (0, u.useStateFromStores)([c.default], () => c.default.getPermissionsForUser(e.id, S), [S, e.id]),
+    I = (0, r.useCanModerateRequestToSpeak)(S);
+  if (null == n || null == g || null == p || v.speaker) return null;
+  let m = () => {
+    M ? (0, o.audienceAckRequestToSpeak)(n, !1) : (0, o.inviteUserToStage)(n, e.id)
   };
-  return M ? (0, l.jsx)(u.MenuItem, {
+  return I ? (0, l.jsx)(a.MenuItem, {
     id: "invite-speaker",
-    label: v ? _.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : _.default.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
-    action: C
-  }) : p && v ? (0, l.jsx)(u.MenuItem, {
+    label: M ? _.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER : _.default.Messages.STAGE_CHANNEL_USER_INVITE_TO_SPEAK,
+    action: m
+  }) : A && M ? (0, l.jsx)(a.MenuItem, {
     id: "invite-speaker",
     label: _.default.Messages.STAGE_CHANNEL_USER_SET_MYSELF_TO_SPEAKER,
-    action: C
+    action: m
   }) : null
 }

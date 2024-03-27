@@ -4,8 +4,8 @@ r.r(t), r.d(t, {
     return n
   },
   RESET: function() {
-    return u
+    return o
   }
 });
 let n = 500,
-  u = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+  o = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="

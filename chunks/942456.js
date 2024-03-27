@@ -22,8 +22,8 @@ var a, n, i = s("37983"),
   T = s("609190"),
   P = s("442379"),
   C = s("565559"),
-  R = s("928576"),
-  A = s("407417"),
+  A = s("928576"),
+  R = s("407417"),
   M = s("246421"),
   h = s("264742"),
   L = s("537325"),
@@ -139,7 +139,7 @@ function eE(e) {
     guildProductListingId: s
   } = e, a = (0, P.useFetchGuildProductListing)(t, s, {
     requireCurrentGuild: !1
-  }), n = (0, R.useProductType)(a), r = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = l.useCallback(async () => {
+  }), n = (0, A.useProductType)(a), r = (0, p.useStateFromStores)([U.default], () => U.default.getGuild(t)), u = (null == a ? void 0 : a.role_id) != null && (null == a ? void 0 : a.attachments_count) === 0 ? ea.default.Messages.GUILD_PRODUCT_BILLING_TYPE_PREMIUM_ROLE : n, o = l.useCallback(async () => {
     (null == r ? void 0 : r.hasFeature(ee.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)) === !0 ? await (0, L.default)(ee.Routes.GUILD_PRODUCT(t, s)) : await (0, L.default)(ee.Routes.CHANNEL(t)), (0, I.popLayer)()
   }, [r, t, s]);
   return (0, i.jsxs)(i.Fragment, {
@@ -175,7 +175,7 @@ function ef(e) {
         color: "header-secondary",
         className: en.guildProductBenefitLabel,
         children: ea.default.Messages.GUILD_PRODUCT_BILLING_ACCESS_DOWNLOADABLES
-      }), (0, i.jsx)(A.default, {
+      }), (0, i.jsx)(R.default, {
         guildId: a,
         productId: l.id
       })]

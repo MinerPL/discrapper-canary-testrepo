@@ -18,17 +18,17 @@ var a = n("37983"),
       invite: n,
       forceGuildScrollHeight: u = !0,
       isNUXFlow: _
-    } = e, [E, N] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]), [I, m] = s.useState(""), [f, C] = s.useState(""), [T, S] = s.useState(void 0), [g, h] = s.useState([]), A = e => {
-      let t = E.concat(e);
-      N(t.slice(-4))
-    }, p = E[E.length - 1];
-    switch (p) {
+    } = e, [N, E] = s.useState([d.HubEmailConnectionSteps.VERIFY_EMAIL]), [m, I] = s.useState(""), [f, C] = s.useState(""), [T, S] = s.useState(void 0), [g, h] = s.useState([]), p = e => {
+      let t = N.concat(e);
+      E(t.slice(-4))
+    }, x = N[N.length - 1];
+    switch (x) {
       case d.HubEmailConnectionSteps.VERIFY_EMAIL:
         return (0, a.jsx)(l.default, {
           setGuildsInfo: h,
-          setStep: A,
-          email: I,
-          setEmail: m,
+          setStep: p,
+          email: m,
+          setEmail: I,
           setGuildId: S,
           invite: n,
           onClose: t,
@@ -37,33 +37,33 @@ var a = n("37983"),
       case d.HubEmailConnectionSteps.SELECT_SCHOOL:
         return (0, a.jsx)(i.default, {
           guildsInfo: g,
-          setStep: A,
-          email: I,
+          setStep: p,
+          email: m,
           setGuildId: S,
           forceGuildScrollHeight: u
         });
       case d.HubEmailConnectionSteps.SUBMIT_SCHOOL:
         return (0, a.jsx)(r.default, {
           onBack: () => {
-            if (E.length > 1) {
-              let e = E.slice(0, -1);
-              N(e.slice(-4))
+            if (N.length > 1) {
+              let e = N.slice(0, -1);
+              E(e.slice(-4))
             }
           },
-          setStep: A,
-          email: I,
+          setStep: p,
+          email: m,
           school: f,
           setSchool: C
         });
       case d.HubEmailConnectionSteps.VERIFY_PIN:
         return (0, a.jsx)(o.default, {
-          email: I,
+          email: m,
           onClose: t,
           guildId: T
         });
       case d.HubEmailConnectionSteps.EMAIL_WAITLIST:
         return (0, a.jsx)(c.default, {
-          setStep: A,
+          setStep: p,
           school: f
         });
       default:

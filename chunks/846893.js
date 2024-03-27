@@ -5,9 +5,9 @@ a.r(t), a.d(t, {
   }
 });
 var s = a("446674"),
-  r = a("913144");
+  l = a("913144");
 
-function l(e, t) {
+function r(e, t) {
   let a = {};
   return e.forEach(e => {
     a[e] = t
@@ -30,11 +30,11 @@ class d extends s.default.PersistedStore {
     return Date.now() < (null !== (t = n[e]) && void 0 !== t ? t : 0)
   }
 }
-d.displayName = "CollectiblesProductFreshnessStore", d.persistKey = "CollectiblesProductFreshnessStore", d.migrations = [() => l(u, o), () => l(c, i), e => ({
+d.displayName = "CollectiblesProductFreshnessStore", d.persistKey = "CollectiblesProductFreshnessStore", d.migrations = [() => r(u, o), () => r(c, i), e => ({
   ...e,
   "1217626219651006495": i
 })];
-var f = new d(r.default, {
+var f = new d(l.default, {
   COLLECTIBLES_PRODUCT_DETAILS_CLOSE: function(e) {
     delete n[e.item.skuId]
   }

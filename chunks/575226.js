@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var i = n("866227"),
@@ -55,7 +55,7 @@ f.displayName = "NewlyAddedEmojiStore", f.persistKey = "NewlyAddedEmojiStore", f
     lastSeenNewlyAddedEmojiIds: n
   }
 }];
-var p = new f(s.default, {
+var m = new f(s.default, {
   LOGOUT: function() {
     u = o, d = {}
   },

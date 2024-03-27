@@ -13,10 +13,10 @@ n.r(t), n.d(t, {
     return E
   },
   goToMemberSafetyDashboard: function() {
-    return h
+    return _
   },
   getMemberSupplemental: function() {
-    return _
+    return h
   }
 });
 var i = n("913144"),
@@ -60,12 +60,12 @@ async function E(e, t) {
   })
 }
 
-function h(e) {
+function _(e) {
   let t = (0, u.canAccessMemberSafetyPage)(e),
     n = s.default.getGuild(e);
   return !!t && null != n && (n.hasFeature(a.GuildFeatures.COMMUNITY) || n.hasFeature(a.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY) ? ((0, l.transitionTo)(a.Routes.CHANNEL(e, d.StaticChannelRoute.MEMBER_SAFETY)), !0) : (r.default.open(n.id, a.GuildSettingsSections.MEMBERS), !0))
 }
-async function _(e, t) {
+async function h(e, t) {
   let n = await (0, o.fetchMemberSupplemental)(e, t);
   return 0 === n.length ? [] : (await i.default.dispatch({
     type: "FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS",

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return m
   }
 });
 var i = n("37983");
@@ -16,14 +16,14 @@ var l = n("65597"),
   c = n("782340"),
   f = n("687941");
 
-function p(e) {
+function m(e) {
   let {
     userId: t,
     headingClassName: n,
-    textClassName: p,
-    guild: m,
+    textClassName: m,
+    guild: p,
     guildMember: h
-  } = e, x = (0, l.useStateFromStores)([r.default], () => r.default.locale), E = null != m && null != h;
+  } = e, x = (0, l.useStateFromStores)([r.default], () => r.default.locale), E = null != p && null != h;
   return (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(a.Heading, {
       variant: "eyebrow",
@@ -38,21 +38,21 @@ function p(e) {
           className: f.discordIcon
         })
       }), (0, i.jsx)(a.Text, {
-        className: p,
+        className: m,
         variant: "text-sm/normal",
         children: (0, s.getCreatedAtDate)(d.default.extractTimestamp(t), x)
-      }), null != m && null != h && (0, i.jsxs)(i.Fragment, {
+      }), null != p && null != h && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           className: f.divider
         }), (0, i.jsx)(a.Tooltip, {
-          text: m.name,
+          text: p.name,
           children: e => (0, i.jsx)(o.default, {
             ...e,
-            guild: m,
+            guild: p,
             size: o.default.Sizes.SMOL
           })
         }), (0, i.jsx)(a.Text, {
-          className: p,
+          className: m,
           variant: "text-sm/normal",
           children: (0, s.getCreatedAtDate)(h.joinedAt, x)
         })]

@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("849976"),
   c = n("742223"),
   f = n("877220"),
-  p = n("258752"),
-  m = n("216422"),
+  m = n("258752"),
+  p = n("216422"),
   h = n("290581"),
   x = n("742219"),
   E = n("115279");
@@ -36,7 +36,7 @@ let y = e => {
       case E.EmojiCategories.ACTIVITY:
         return a.default;
       case E.EmojiCategories.TRAVEL:
-        return p.default;
+        return m.default;
       case E.EmojiCategories.OBJECTS:
         return d.default;
       case E.EmojiCategories.SYMBOLS:
@@ -44,7 +44,7 @@ let y = e => {
       case E.EmojiCategories.FLAGS:
         return s.default;
       case E.EmojiCategories.PREMIUM_UPSELL:
-        return m.default;
+        return p.default;
       default:
         return
     }

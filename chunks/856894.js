@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return l
   },
   default: function() {
-    return p
+    return m
   }
 });
 var i, l, a = n("693566"),
@@ -56,7 +56,7 @@ class f extends r.default.Store {
   }
 }
 f.displayName = "ApplicationDirectorySearchStore";
-var p = new f(o.default, {
+var m = new f(o.default, {
   APPLICATION_DIRECTORY_FETCH_SEARCH: function(e) {
     let {
       query: t,

@@ -20,8 +20,8 @@ var i = n("627445"),
   d = n("970153"),
   c = n("939563"),
   f = n("385887");
-let p = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-  m = new Set(["emoji", "customEmoji", "textMention", "userMention", "roleMention", "channelMention", "staticRouteLink", "soundboard", "timestamp"]),
+let m = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+  p = new Set(["emoji", "customEmoji", "textMention", "userMention", "roleMention", "channelMention", "staticRouteLink", "soundboard", "timestamp"]),
   h = new Set(["line", "blockQuote"]),
   x = new Set(["applicationCommandOption"]);
 
@@ -31,7 +31,7 @@ function E(e, t, n) {
     isVoid: l,
     onChange: a
   } = e;
-  e.isVoid = e => !!m.has(e.type) || l(e), e.isInline = e => !!m.has(e.type) || i(e);
+  e.isVoid = e => !!p.has(e.type) || l(e), e.isInline = e => !!p.has(e.type) || i(e);
   let s = null,
     r = !0;
   return e.onChange = () => {
@@ -66,27 +66,27 @@ function g(e, t, n, i) {
   S(e, t, s, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), !s && (C(e, t, i, o) && (t = f.ElementUtils.updateElement(e, t), o = f.ElementUtils.markdown(t[0], n)), function(e, t, n, i, a) {
     let [s, o] = t, u = !1;
     for (let d = s.children.length - 1; d >= 0; d--) {
-      let m;
+      let p;
       let h = s.children[d];
       if (!f.TextUtils.isText(h)) continue;
       let x = f.PathUtils.child(o, d),
         E = [];
-      for (p.lastIndex = 0; null != (m = p.exec(h.text));) {
-        if (0 !== m.index && null == h.text.charAt(m.index - 1).match(/(\t|\s)/)) {
-          p.lastIndex = m.index + 1;
+      for (m.lastIndex = 0; null != (p = m.exec(h.text));) {
+        if (0 !== p.index && null == h.text.charAt(p.index - 1).match(/(\t|\s)/)) {
+          m.lastIndex = p.index + 1;
           continue
         }
         let l = {
           path: x,
-          offset: m.index
+          offset: p.index
         };
-        if (_(e, o, l, a)) continue;
-        let s = (0, r.resolvePlaintextInlineVoid)(m[0], n, i);
-        null != s && T(i, t[0], s) ? E.push({
-          index: m.index,
-          length: m[0].length,
+        if (T(e, o, l, a)) continue;
+        let s = (0, r.resolvePlaintextInlineVoid)(p[0], n, i);
+        null != s && _(i, t[0], s) ? E.push({
+          index: p.index,
+          length: p[0].length,
           node: s
-        }) : p.lastIndex = m.index + 1
+        }) : m.lastIndex = p.index + 1
       }
       for (let t of E.reverse()) {
         let n = [h, f.PathUtils.child(o, d)];
@@ -139,7 +139,7 @@ function S(e, t, n, i) {
           path: f.PathUtils.child(l, 0),
           offset: 0
         };
-      (n || null != i && _(e, a, o, i)) && (c.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(r, {
+      (n || null != i && T(e, a, o, i)) && (c.SlateTransforms.voidToText(e, (0, d.serializeDescendant)(r, {
         mode: "plain",
         preventEmojiSurrogates: !0
       }), l), s = !0)
@@ -249,7 +249,7 @@ function C(e, t, n, i) {
       default:
         continue
     }
-    if (!T(n, t[0], s)) continue;
+    if (!_(n, t[0], s)) continue;
     let o = (0, u.getPointFromPosition)(e, l, i.serializedChildren, r.start),
       d = (0, u.getPointFromPosition)(e, l, i.serializedChildren, r.start + r.text.length);
     c.SlateTransforms.textToVoid(e, s, {
@@ -260,7 +260,7 @@ function C(e, t, n, i) {
   return a
 }
 
-function _(e, t, n, i) {
+function T(e, t, n, i) {
   let l = 0;
   for (let [i, a] of f.EditorUtils.nodes(e, {
       at: {
@@ -278,7 +278,7 @@ function _(e, t, n, i) {
   return !1
 }
 
-function T(e, t, n) {
+function _(e, t, n) {
   if ("applicationCommandOption" !== t.type) return !0;
   switch (t.optionType) {
     case a.ApplicationCommandOptionType.CHANNEL:

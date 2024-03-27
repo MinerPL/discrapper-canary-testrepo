@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("222007");
 var i, l, a = n("37983"),
@@ -16,7 +16,7 @@ let f = {
   [u.AvatarSizes.SIZE_32]: c.avatarSmall,
   [u.AvatarSizes.SIZE_40]: c.avatarLarge
 };
-class p extends s.Component {
+class m extends s.Component {
   render() {
     let {
       type: e,
@@ -57,7 +57,7 @@ class p extends s.Component {
     super(...e), this.placeholderMaxWidth = "".concat(Math.floor(40 * Math.random()) + 40, "%")
   }
 }
-p.defaultProps = {
+m.defaultProps = {
   type: "1"
-}, p.Types = i;
-var m = p
+}, m.Types = i;
+var p = m

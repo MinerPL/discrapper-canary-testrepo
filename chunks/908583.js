@@ -34,13 +34,13 @@ function o(e) {
       var t;
       u(!1), d.current.add(e), null === (t = c.current) || void 0 === t || t.cancel()
     }, [d, c, u]),
-    p = l.useCallback(e => {
+    m = l.useCallback(e => {
       if (d.current.delete(e), 0 === d.current.size) {
         var t;
         null === (t = c.current) || void 0 === t || t.delay()
       }
     }, [d, c]),
-    m = l.useCallback(() => {
+    p = l.useCallback(() => {
       if (u(!1), 0 === d.current.size) {
         var e;
         null === (e = c.current) || void 0 === e || e.delay()
@@ -51,11 +51,11 @@ function o(e) {
       !(d.current.size > 0) && (null === (e = c.current) || void 0 === e || e.cancel(), u(!0))
     }, [c, u]),
     x = l.useMemo(() => ({
-      onAllowIdle: p,
+      onAllowIdle: m,
       onPreventIdle: f,
-      onActive: m,
+      onActive: p,
       onForceIdle: h
-    }), [p, f, m, h]);
+    }), [m, f, p, h]);
   return (0, i.jsx)(r.Provider, {
     value: o,
     children: (0, i.jsx)(s.Provider, {

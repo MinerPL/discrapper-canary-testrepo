@@ -19,8 +19,8 @@ function u(e) {
     onKeyDown: d,
     onKeyUp: c,
     onTab: f,
-    onEnter: p,
-    allowNewLines: m,
+    onEnter: m,
+    allowNewLines: p,
     submit: h,
     hideAutocomplete: x,
     moveSelection: E
@@ -70,7 +70,7 @@ function u(e) {
         }
         break;
       case o.KeyboardKeys.ENTER:
-        if ((0, r.checkModifiers)(e, {}) && (null == p ? void 0 : p(e))) {
+        if ((0, r.checkModifiers)(e, {}) && (null == m ? void 0 : m(e))) {
           e.preventDefault(), e.stopPropagation();
           return
         }
@@ -79,8 +79,8 @@ function u(e) {
       e.preventDefault(), e.stopPropagation();
       return
     }
-    e.which === o.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.hasOpenPlainTextCodeBlock)(t) || !m) && (e.preventDefault(), e.stopPropagation(), h()), null == d || d(e)
-  }, [m, n.id, u, t, x, E, p, d, f, h]), g = i.useCallback(e => {
+    e.which === o.KeyboardKeys.ENTER && (!e.altKey && !e.shiftKey && (!u || e.ctrlKey) && !(0, s.hasOpenPlainTextCodeBlock)(t) || !p) && (e.preventDefault(), e.stopPropagation(), h()), null == d || d(e)
+  }, [p, n.id, u, t, x, E, m, d, f, h]), g = i.useCallback(e => {
     null == c || c(e)
   }, [c]);
   return {

@@ -13,9 +13,9 @@ n.r(t), n.d(t, {
     return I
   }
 }), n("222007");
-var u = n("884691"),
-  r = n("627445"),
-  i = n.n(r),
+var r = n("884691"),
+  u = n("627445"),
+  i = n.n(u),
   a = n("913144"),
   o = n("775433"),
   s = n("308592"),
@@ -34,23 +34,23 @@ function E(e) {
 }
 
 function _(e, t, n) {
-  let u, r = [],
+  let r, u = [],
     a = [],
     o = {
       purchaseType: n ? d.PriceSetAssignmentPurchaseTypes.GIFT : d.PriceSetAssignmentPurchaseTypes.DEFAULT
     };
-  return i(u = "string" == typeof e ? c.default.get(e) : e, "subscription plan not loaded"), null != t && c.default.hasPaymentSourceForSKUId(t, u.skuId) && (o.paymentSourceId = t), (r = (a = (0, l.experimentalGetPrices)(u.id, o)).map(e => e.currency)).length < 1 && (r = [d.CurrencyCodes.USD]), r
+  return i(r = "string" == typeof e ? c.default.get(e) : e, "subscription plan not loaded"), null != t && c.default.hasPaymentSourceForSKUId(t, r.skuId) && (o.paymentSourceId = t), (u = (a = (0, l.experimentalGetPrices)(r.id, o)).map(e => e.currency)).length < 1 && (u = [d.CurrencyCodes.USD]), u
 }
 
 function S(e, t, n) {
-  let u = c.default.get(e);
-  i(null != u, "plan is undefined");
-  let r = _(u, n, !1);
-  return r.includes(t)
+  let r = c.default.get(e);
+  i(null != r, "plan is undefined");
+  let u = _(r, n, !1);
+  return u.includes(t)
 }
 
-function I(e, t, n, r, i) {
-  let [a, o] = u.useReducer((e, t) => ({
+function I(e, t, n, u, i) {
+  let [a, o] = r.useReducer((e, t) => ({
     ...e,
     ...t
   }), null != n ? {
@@ -61,11 +61,11 @@ function I(e, t, n, r, i) {
     currency: e,
     loaded: !1
   }), l = (0, s.useSubscriptionPlansLoaded)(i);
-  u.useEffect(() => {
+  r.useEffect(() => {
     let e = async () => {
       await E(n, i);
       let e = [];
-      null != t && null != c.default.get(t) && (e = _(t, n, r)), e.length > 0 ? o({
+      null != t && null != c.default.get(t) && (e = _(t, n, u)), e.length > 0 ? o({
         paymentSourceId: n,
         currency: e[0],
         loaded: !0
@@ -75,7 +75,7 @@ function I(e, t, n, r, i) {
       })
     };
     e()
-  }, [n, JSON.stringify(i), t, r, l]);
+  }, [n, JSON.stringify(i), t, u, l]);
   let d = a.paymentSourceId !== n || null == t || !l || !0 !== a.loaded;
   return {
     hasFetchedSubscriptionPlans: l,

@@ -48,8 +48,8 @@ function A(e) {
     paymentSources: B,
     priceOptions: w,
     purchaseError: V,
-    purchaseTokenAuthState: H,
-    selectedPlan: k,
+    purchaseTokenAuthState: k,
+    selectedPlan: H,
     selectedSku: F,
     setCurrency: G,
     setPaymentSourceId: W,
@@ -60,7 +60,7 @@ function A(e) {
     setSubscriptionMetadataRequest: X,
     setHasAcceptedTerms: J
   } = (0, d.usePaymentContext)();
-  l(null != k, "Expected plan to be selected"), l(null != y, "Expected application");
+  l(null != H, "Expected plan to be selected"), l(null != y, "Expected application");
   let q = r.useRef(null),
     [Q, $] = (0, u.default)(!1, 500),
     [ee, et] = r.useState(null == z ? void 0 : z.guild_id),
@@ -112,7 +112,7 @@ function A(e) {
           eligibleApplicationSubscriptionGuilds: M
         })]
       }), (0, i.jsx)(o.default, {
-        selectedPlanId: k.id,
+        selectedPlanId: H.id,
         paymentSources: B,
         onPaymentSourceChange: e => W(null != e ? e.id : null),
         priceOptions: w,
@@ -142,7 +142,7 @@ function A(e) {
         baseAnalyticsData: R,
         flowStartTime: D.startTime,
         planGroup: O,
-        purchaseTokenAuthState: H,
+        purchaseTokenAuthState: k,
         openInvoiceId: g,
         metadata: en ? void 0 : z,
         backButtonEligible: n,

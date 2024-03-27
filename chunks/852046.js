@@ -10,9 +10,9 @@ var O = A("78349"),
   e = A("118810"),
   E = A("49671"),
   V = A("605250"),
-  i = A("915639"),
-  t = A("449008"),
-  n = A("851234"),
+  t = A("915639"),
+  n = A("449008"),
+  i = A("851234"),
   R = A("648610");
 let G = new V.default("Spellchecker"),
   r = null === E.default || void 0 === E.default ? void 0 : E.default.spellCheck;
@@ -72,10 +72,10 @@ class S {
   }
   constructor(N) {
     this._enabled = !0, this.misspelledWord = "", this.corrections = [];
-    let [I, A] = i.default.locale.split("-");
+    let [I, A] = t.default.locale.split("-");
     this.regionPreference = A;
     let O = this.getAvailableLanguages(N);
-    this.languageDetector = new n.default(I, A => {
+    this.languageDetector = new i.default(I, A => {
       let T = "".concat(A, "-").concat(this.regionPreference);
       if (-1 !== N.indexOf(T)) this.setLocale(T);
       else {
@@ -97,7 +97,7 @@ let o = _.debounce((N, I) => {
 async function s() {
   var N, I;
   let A = null !== (N = await r.getAvailableDictionaries()) && void 0 !== N ? N : [],
-    O = A.map(a).filter(t.isNotNullish),
+    O = A.map(a).filter(n.isNotNullish),
     T = new S(O);
   return I = T, null != document.body && document.body.addEventListener("beforeinput", N => o(I, N.target), !0), T
 }

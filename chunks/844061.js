@@ -51,8 +51,8 @@ var s = n("37983"),
   z = n("427655"),
   Q = n("161225"),
   Z = n("41163"),
-  J = n("830220"),
-  q = n("924399"),
+  q = n("830220"),
+  J = n("924399"),
   X = n("954060"),
   $ = n("178889"),
   ee = n("52538"),
@@ -481,7 +481,7 @@ let eM = Object.freeze({
       guildId: a.guild_id,
       messageId: t.id
     });
-    return (0, s.jsx)(q.default, {
+    return (0, s.jsx)(J.default, {
       message: t,
       compact: n,
       channel: a,
@@ -499,7 +499,7 @@ let eM = Object.freeze({
       guildId: a.guild_id,
       messageId: t.id
     });
-    return (0, s.jsx)(J.default, {
+    return (0, s.jsx)(q.default, {
       message: t,
       compact: n,
       channel: a,

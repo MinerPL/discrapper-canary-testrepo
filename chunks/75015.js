@@ -40,10 +40,10 @@ n.r(t), n.d(t, {
     return A
   },
   HOME_HEADER_ASPECT_RATIO: function() {
-    return S
+    return C
   },
   MAX_BANNER_OVERLAY_HEIGHT: function() {
-    return C
+    return S
   },
   MAX_GUILD_BANNER_OVERLAY_HEIGHT: function() {
     return M
@@ -78,11 +78,11 @@ let o = 568,
   R = 17 / 6,
   p = 16 / 9,
   A = 2.5,
-  S = 4,
-  C = o / R,
+  C = 4,
+  S = o / R,
   M = o / p,
   N = o / A,
-  m = o / S,
+  m = o / C,
   P = i.BACKGROUND_REPLACEMENT_SIZE.width / i.BACKGROUND_REPLACEMENT_SIZE.height,
   h = o / P;
 (l = a || (a = {}))[l.CROP_GIF_START = 0] = "CROP_GIF_START", l[l.CROP_GIF_COMPLETE = 1] = "CROP_GIF_COMPLETE", l[l.CROP_GIF_ERROR = 2] = "CROP_GIF_ERROR"

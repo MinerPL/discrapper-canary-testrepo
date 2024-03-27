@@ -183,7 +183,7 @@ let F = e => {
         B(l), T()
       }
     }), Z = "Custom Sticker Popout (Soft Upsell)");
-    let J = !Q && !G && z && P;
+    let q = !Q && !G && z && P;
     return (a.useEffect(() => {
       I()
     }, [O, m]), a.useEffect(() => {
@@ -216,7 +216,7 @@ let F = e => {
             onSubscribeModalClose: t => t ? e() : T(),
             postSuccessGuild: G || null == m ? void 0 : m,
             premiumModalAnalyticsLocation: Y
-          }), J && (0, s.jsx)(o.Button, {
+          }), q && (0, s.jsx)(o.Button, {
             size: o.Button.Sizes.SMALL,
             className: j.ctaButton,
             fullWidth: !0,
@@ -237,7 +237,7 @@ let F = e => {
           }), (0, s.jsx)(f.GuildDetails, {
             expressionSourceGuild: a,
             hasJoinedExpressionSourceGuild: G,
-            isDisplayingJoinGuildButtonInPopout: J
+            isDisplayingJoinGuildButtonInPopout: q
           }), !G && (0, s.jsxs)(s.Fragment, {
             children: [(0, s.jsx)(o.Clickable, {
               onClick: () => {

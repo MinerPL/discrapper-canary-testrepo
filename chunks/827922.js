@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   useGetKeybindNotification: function() {
-    return E
+    return m
   },
   default: function() {
-    return m
+    return E
   }
 }), n("222007");
 var i = n("37983");
@@ -22,7 +22,7 @@ var a = n("151426"),
   p = n("782340"),
   g = n("372476");
 
-function E() {
+function m() {
   let [e, t] = (0, r.useGetDismissibleContent)([a.DismissibleContent.OVERLAY_KEYBIND_NOTIFICATION]), {
     showKeybindIndicators: n
   } = c.default.useExperiment({
@@ -36,7 +36,7 @@ function E() {
   }
 }
 
-function m(e) {
+function E(e) {
   let {
     markAsDismissed: t
   } = e, {

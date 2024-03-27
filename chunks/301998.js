@@ -21,7 +21,7 @@ function c(e) {
     autoFocus: c,
     lastSection: f
   } = e, {
-    trackUserProfileAction: p
+    trackUserProfileAction: m
   } = (0, s.useUserProfileAnalyticsContext)();
   return (0, i.jsxs)(r.default, {
     lastSection: f,
@@ -33,7 +33,7 @@ function c(e) {
       userId: t.id,
       autoFocus: n || c,
       className: u.note,
-      onUpdate: () => p({
+      onUpdate: () => m({
         action: "SET_NOTE"
       })
     }, "note")]

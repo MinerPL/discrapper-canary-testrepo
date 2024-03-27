@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return f
   },
   parseBioReactWithoutScrolling: function() {
-    return p
+    return m
   }
 });
 var i = n("917351"),
@@ -24,7 +24,7 @@ new s({
   max: 2e3
 });
 let f = r.reactParserFor(c),
-  p = r.reactParserFor((0, d.default)([l.omit(c, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
+  m = r.reactParserFor((0, d.default)([l.omit(c, ["link", "url", "autolink", "customEmoji", "emoji", "commandMention"]), {
     emoji: {
       react: () => null
     }

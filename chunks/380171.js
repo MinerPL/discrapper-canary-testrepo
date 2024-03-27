@@ -1,11 +1,11 @@
 "use strict";
 a.r(t), a.d(t, {
   categoryBannerOverrides: function() {
-    return r
+    return l
   }
 });
 var s = a("635058");
-let r = {
+let l = {
   [s.CollectiblesCategorySkuId.SPRINGTOONS]: {
     assetUrlOverride: a("266772"),
     logoMaxWidth: "48%",
@@ -31,6 +31,6 @@ let r = {
   },
   [s.CollectiblesCategorySkuId.SHY]: {
     assetUrlOverride: a("776204"),
-    addGradient: !0
+    addGradient: !1
   }
 }

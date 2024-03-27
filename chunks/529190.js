@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("798609"),
   c = n("716241"),
   f = n("296141"),
-  p = n("986632"),
-  m = n("45961"),
+  m = n("986632"),
+  p = n("45961"),
   h = n("515059"),
   x = n("501536"),
   E = n("124299"),
@@ -23,27 +23,27 @@ var i = n("37983"),
   g = n("507217"),
   S = n("240249"),
   C = n("972620"),
-  _ = n("524768"),
-  T = n("389153"),
+  T = n("524768"),
+  _ = n("389153"),
   I = n("586450"),
   v = n("41884"),
-  N = n("355263"),
-  A = n("317041"),
-  O = n("49111"),
-  R = n("782340"),
+  A = n("355263"),
+  N = n("317041"),
+  R = n("49111"),
+  O = n("782340"),
   M = n("847948"),
   k = n("327769");
 let L = [8, 8, 0, 8],
   P = o.debounce(() => {
-    (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
+    (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_SCROLLED)
   }, 300);
 var b = l.forwardRef(function(e, t) {
   let {
     channel: n,
     canOnlyUseTextCommands: a
-  } = e, r = l.useRef(!1), o = l.useRef(0), [b, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), G = p.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
+  } = e, r = l.useRef(!1), o = l.useRef(0), [b, U] = l.useState(0), D = l.useRef(null), [w, F] = l.useState(!1), G = m.ApplicationCommandDiscoveryPickerStore.useStore(e => e.activeCategoryIndex);
   l.useEffect(() => {
-    (0, c.trackWithMetadata)(O.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
+    (0, c.trackWithMetadata)(R.AnalyticEvents.APPLICATION_COMMAND_BROWSER_OPENED)
   }, []);
   let {
     sectionDescriptors: H,
@@ -53,16 +53,16 @@ var b = l.forwardRef(function(e, t) {
     commands: W,
     filteredSectionId: Y,
     scrollDown: z,
-    filterSection: Z
+    filterSection: Q
   } = S.useDiscovery(n, {
     commandType: d.ApplicationCommandType.CHAT,
     builtIns: a ? C.BuiltInCommandFilter.ONLY_TEXT : C.BuiltInCommandFilter.ALLOW,
     applicationCommands: !a
   }, {
     placeholderCount: 7,
-    limit: A.DISCOVERY_COMMANDS_QUERY_LIMIT,
+    limit: N.DISCOVERY_COMMANDS_QUERY_LIMIT,
     includeFrecency: !0
-  }), J = (0, m.useSynchronizedActiveCategoryIndexForScrollPosition)({
+  }), Z = (0, p.useSynchronizedActiveCategoryIndexForScrollPosition)({
     activeCategoryIndex: G,
     isScrolling: r,
     listRef: D,
@@ -70,20 +70,20 @@ var b = l.forwardRef(function(e, t) {
       let t = B[e];
       if (null != t) {
         let e = H.findIndex(e => e.id === t.id);
-        p.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
+        m.ApplicationCommandDiscoveryPickerStore.setActiveCategoryIndex(e)
       }
     },
     scrollOffset: 20,
     searchQuery: ""
-  }), Q = e => {
+  }), q = e => {
     let t = B.length,
       n = V.reduce((e, t) => e + t.data.length, 0) - (K ? 7 : 0);
-    K && e + 420 > 48 * t + 56 * n - 512 && z(), J(e), P(), o.current = e
+    K && e + 420 > 48 * t + 56 * n - 512 && z(), Z(e), P(), o.current = e
   };
   l.useEffect(() => {
-    Q(o.current)
+    q(o.current)
   }, [W]);
-  let q = l.useCallback(e => {
+  let J = l.useCallback(e => {
       let t = e === B.length - 1;
       return t && !K ? 0 : 16
     }, [B.length, K]),
@@ -97,17 +97,17 @@ var b = l.forwardRef(function(e, t) {
     }
   }, [W, Y]);
   let $ = l.useCallback(e => {
-      if (e.id === Y || e.id === A.BuiltInSectionId.FRECENCY) {
+      if (e.id === Y || e.id === N.BuiltInSectionId.FRECENCY) {
         var t;
-        Z(null), null === (t = D.current) || void 0 === t || t.scrollToSectionTop(0)
-      } else Z(e.id)
-    }, [Z, Y]),
+        Q(null), null === (t = D.current) || void 0 === t || t.scrollToSectionTop(0)
+      } else Q(e.id)
+    }, [Q, Y]),
     ee = l.useCallback((e, t, i) => {
       g.setActiveCommand({
         channelId: n.id,
         command: e,
         section: t,
-        location: _.ApplicationCommandTriggerLocations.DISCOVERY,
+        location: T.ApplicationCommandTriggerLocations.DISCOVERY,
         triggerSection: i
       })
     }, [n.id]);
@@ -121,7 +121,7 @@ var b = l.forwardRef(function(e, t) {
         if (t = n, b < (n += e.data.length)) {
           let n = e.data[b - t],
             i = H.find(e => e.id === n.applicationId);
-          ee(n, i, (0, T.getCommandTriggerSection)(e.section));
+          ee(n, i, (0, _.getCommandTriggerSection)(e.section));
           break
         } return !0
     },
@@ -136,7 +136,7 @@ var b = l.forwardRef(function(e, t) {
   let et = l.useCallback(e => {
       let t = B[e];
       if (null == t) return null;
-      let l = (0, N.getIconComponent)(t),
+      let l = (0, A.getIconComponent)(t),
         a = (0, i.jsx)(l, {
           channel: n,
           section: t,
@@ -163,7 +163,7 @@ var b = l.forwardRef(function(e, t) {
           [M.categorySectionLast]: n
         }),
         children: [t, 0 === a.length && (0, i.jsx)(u.default, {
-          message: R.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
+          message: O.default.Messages.APPLICATION_COMMAND_NO_PERMISSIONS.format({
             applicationName: l.name
           }),
           noResultsImageURL: k,
@@ -176,7 +176,7 @@ var b = l.forwardRef(function(e, t) {
       let a = V[t.sectionIndex],
         s = a.data[t.sectionRowIndex],
         r = "".concat(a.section.id, ":").concat(null !== (l = null == s ? void 0 : s.id) && void 0 !== l ? l : e);
-      if (null == s || a.section.id !== s.applicationId && a.section.id !== A.BuiltInSectionId.FRECENCY || s.inputType === _.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
+      if (null == s || a.section.id !== s.applicationId && a.section.id !== N.BuiltInSectionId.FRECENCY || s.inputType === T.ApplicationCommandInputType.PLACEHOLDER) return (0, i.jsx)(v.default, {}, r);
       let o = H.find(e => e.id === s.applicationId);
       return (0, i.jsx)(x.default.NewCommand, {
         index: e,
@@ -186,7 +186,7 @@ var b = l.forwardRef(function(e, t) {
         selected: b === e,
         showImage: a.section.id !== s.applicationId,
         section: o,
-        onClick: () => ee(s, o, (0, T.getCommandTriggerSection)(a.section)),
+        onClick: () => ee(s, o, (0, _.getCommandTriggerSection)(a.section)),
         onHover: () => {
           U(null), F(!1)
         }
@@ -212,7 +212,7 @@ var b = l.forwardRef(function(e, t) {
       role: "listbox",
       className: M.list,
       listPadding: L,
-      onScroll: Q,
+      onScroll: q,
       renderRow: ei,
       renderSection: en,
       renderSectionHeader: et,
@@ -220,7 +220,7 @@ var b = l.forwardRef(function(e, t) {
       rowCountBySection: X,
       rowHeight: 56,
       sectionHeaderHeight: 32,
-      sectionMarginBottom: q,
+      sectionMarginBottom: J,
       ref: D,
       stickyHeaders: !0
     })]

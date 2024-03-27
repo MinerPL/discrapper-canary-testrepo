@@ -46,8 +46,8 @@ function f(e) {
     }
     return e
   }(u(), e), {
-    trackView: E,
-    trackClick: m
+    trackView: m,
+    trackClick: E
   } = (0, o.makeAnalyticsTrackers)(g, {
     notif_type: g
   });
@@ -65,13 +65,13 @@ function f(e) {
       children: d.default.Messages.OVERLAY_CLICK_TO_UNLOCK
     }),
     onNotificationShow: () => {
-      E()
+      m()
     },
     onNotificationClick: (e, n) => {
-      m("unlock"), t === r.OverlayNudgeTypes.NEWS && a.default.updateNotificationStatus(n), l.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
+      E("unlock"), t === r.OverlayNudgeTypes.NEWS && a.default.updateNotificationStatus(n), l.default.isInstanceUILocked() && a.default.setInstanceLocked(!1)
     },
     onDismissClick: () => {
-      m("dismiss")
+      E("dismiss")
     }
   }
 }

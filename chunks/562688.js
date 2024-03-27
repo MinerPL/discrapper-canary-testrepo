@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return T
   }
 }), n("222007");
 var i = n("37983"),
@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("812204"),
   c = n("26989"),
   f = n("305961"),
-  p = n("697218"),
-  m = n("756507"),
+  m = n("697218"),
+  p = n("756507"),
   h = n("217513"),
   x = n("430312"),
   E = n("935409"),
@@ -32,23 +32,23 @@ function C(e) {
     guildId: n,
     channelId: a,
     messageId: s,
-    closePopout: p,
+    closePopout: m,
     setPopoutRef: C,
-    disableUserProfileLink: _ = __OVERLAY__,
-    newAnalyticsLocations: T = []
-  } = e, I = l.useRef(null), v = (0, h.default)(t.id, n), N = (0, u.default)(I), A = (0, r.useStateFromStores)([f.default], () => null != n ? f.default.getGuild(n) : null), O = (0, r.useStateFromStores)([c.default], () => null != n ? c.default.getMember(n, t.id) : null), {
-    UserProfileAnalyticsProvider: R
-  } = (0, m.useUserProfileAnalyticsProvider)({
+    disableUserProfileLink: T = __OVERLAY__,
+    newAnalyticsLocations: _ = []
+  } = e, I = l.useRef(null), v = (0, h.default)(t.id, n), A = (0, u.default)(I), N = (0, r.useStateFromStores)([f.default], () => null != n ? f.default.getGuild(n) : null), R = (0, r.useStateFromStores)([c.default], () => null != n ? c.default.getMember(n, t.id) : null), {
+    UserProfileAnalyticsProvider: O
+  } = (0, p.useUserProfileAnalyticsProvider)({
     layout: "BITE_SIZE_POPOUT",
-    newAnalyticsLocations: [...T, d.default.BITE_SIZE_PROFILE_POPOUT],
+    newAnalyticsLocations: [..._, d.default.BITE_SIZE_PROFILE_POPOUT],
     userId: t.id,
     guildId: n,
     channelId: a,
     messageId: s
-  }, null == O || null != O.fullProfileLoadedTimestamp);
+  }, null == R || null != R.fullProfileLoadedTimestamp);
   return l.useEffect(() => {
     null == C || C(null == I ? void 0 : I.current)
-  }, [I, C]), (0, i.jsx)(R, {
+  }, [I, C]), (0, i.jsx)(O, {
     children: (0, i.jsx)(o.Dialog, {
       ref: I,
       "aria-label": t.username,
@@ -63,14 +63,14 @@ function C(e) {
           displayProfile: v,
           guildId: n,
           channelId: a,
-          onClose: () => null == p ? void 0 : p(),
-          disableUserProfileLink: _,
-          isHovering: N
+          onClose: () => null == m ? void 0 : m(),
+          disableUserProfileLink: T,
+          isHovering: A
         }), (0, i.jsx)(x.default.Inner, {
           children: (0, i.jsx)(y.default, {
             user: t,
             displayProfile: v,
-            guild: A,
+            guild: N,
             channelId: a
           })
         })]
@@ -78,12 +78,12 @@ function C(e) {
     })
   })
 }
-var _ = l.memo(function(e) {
+var T = l.memo(function(e) {
   let {
     userId: t,
     user: n,
     ...l
-  } = e, a = (0, r.useStateFromStores)([p.default], () => p.default.getUser(t), [t]), o = null != n ? n : a;
+  } = e, a = (0, r.useStateFromStores)([m.default], () => m.default.getUser(t), [t]), o = null != n ? n : a;
   return s(null != o, "Unexpected missing user"), (0, i.jsx)(C, {
     user: o,
     ...l

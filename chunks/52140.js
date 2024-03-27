@@ -14,8 +14,8 @@ var i = n("37983"),
   d = n("269936"),
   c = n("385976"),
   f = n("855920"),
-  p = n("393414"),
-  m = n("305961"),
+  m = n("393414"),
+  p = n("305961"),
   h = n("666897"),
   x = n("505684"),
   E = n("36694"),
@@ -23,14 +23,14 @@ var i = n("37983"),
   g = n("873218"),
   S = n("250832"),
   C = n("22248"),
-  _ = n("28236"),
-  T = n("306160"),
+  T = n("28236"),
+  _ = n("306160"),
   I = n("794818"),
   v = n("844659"),
-  N = n("657057"),
-  A = n("886125"),
-  O = n("180161"),
-  R = n("781423"),
+  A = n("657057"),
+  N = n("886125"),
+  R = n("180161"),
+  O = n("781423"),
   M = n("47677"),
   k = n("49111"),
   L = n("724210"),
@@ -46,7 +46,7 @@ function U(e) {
   return (0, i.jsx)(o.Clickable, {
     onClick: () => {
       try {
-        (0, T.copy)(t), a(!0)
+        (0, _.copy)(t), a(!0)
       } catch (e) {
         a(!1)
       }
@@ -102,7 +102,7 @@ let D = {
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
           className: j.codeContainer,
-          children: [T.SUPPORTS_COPY ? (0, i.jsx)("div", {
+          children: [_.SUPPORTS_COPY ? (0, i.jsx)("div", {
             className: j.codeActions,
             children: (0, i.jsx)(U, {
               text: e.content
@@ -146,7 +146,7 @@ let D = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, i.jsx)(_.default, {
+    react: e => (0, i.jsx)(T.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -156,7 +156,7 @@ let D = {
     react(e, t, n) {
       let l = () => {
         ! function(e, t) {
-          let n = m.default.getGuild(e);
+          let n = p.default.getGuild(e);
           if (null == e || null == n || !n.hasFeature(k.GuildFeatures.COMMUNITY)) return;
           let i = {
               home: L.StaticChannelRoute.GUILD_HOME,
@@ -165,13 +165,13 @@ let D = {
               guide: L.StaticChannelRoute.GUILD_HOME
             },
             l = i[t],
-            a = m.default.getGuild(e);
+            a = p.default.getGuild(e);
           if ((null == a ? void 0 : a.joinedAt) == null) {
             I.startLurking(e, {}, {
               channelId: l
             });
             return
-          }(0, p.transitionTo)(k.Routes.CHANNEL(e, l))
+          }(0, m.transitionTo)(k.Routes.CHANNEL(e, l))
         }(e.guildId, e.channelId)
       };
       if (!(0, v.isStaticRouteIconType)(e.channelId)) return null;
@@ -209,7 +209,7 @@ let D = {
     }
   },
   timestamp: {
-    react: (e, t, n) => (0, i.jsx)(N.default, {
+    react: (e, t, n) => (0, i.jsx)(A.default, {
       node: e
     }, n.key)
   },
@@ -247,7 +247,7 @@ let D = {
   },
   guild: {
     react: (e, t, n) => {
-      let l = m.default.getGuild(e.guildId);
+      let l = p.default.getGuild(e.guildId);
       return (0, i.jsx)(S.default, {
         guild: l,
         children: (0, v.smartOutput)(e, t, n)
@@ -317,8 +317,8 @@ function w(e) {
         }
       }
     }(e),
-    channelMention: (0, O.default)(e),
-    commandMention: (0, R.default)(e),
-    attachmentLink: (0, A.default)(e)
+    channelMention: (0, R.default)(e),
+    commandMention: (0, O.default)(e),
+    attachmentLink: (0, N.default)(e)
   }
 }

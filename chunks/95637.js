@@ -24,9 +24,9 @@ var a = s("37983"),
   T = s("719923"),
   P = s("153160"),
   C = s("782340"),
-  R = s("264188");
+  A = s("264188");
 
-function A(e) {
+function R(e) {
   let {
     subscription: t,
     renewalMutations: s,
@@ -36,7 +36,7 @@ function A(e) {
   } = e, r = (0, o.useStateFromStores)([p.default], () => p.default.theme), {
     analyticsLocations: S
   } = (0, _.default)(f.default.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
-  async function A() {
+  async function R() {
     await (0, E.upgradeSubscription)(t, t.planId, S, l), i()
   }
   let M = I.default.get(t.planId);
@@ -59,7 +59,7 @@ function A(e) {
         onClick: i
       })]
     }), (0, a.jsx)(c.ModalContent, {
-      className: R.modalBody,
+      className: A.modalBody,
       children: (0, m.isNoneSubscription)(t.planId) ? C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BODY_NO_EXISTING_PLAN.format({
         downgradedPlan: T.default.getDisplayName(s.planId),
         existingRate: L
@@ -70,7 +70,7 @@ function A(e) {
       })
     }), (0, a.jsxs)(c.ModalFooter, {
       children: [(0, a.jsx)(c.Button, {
-        onClick: A,
+        onClick: R,
         children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_CANCEL_BUTTON
       }), (0, a.jsx)(c.Button, {
         look: c.Button.Looks.LINK,
@@ -90,11 +90,11 @@ function M(e) {
     analyticsLocation: r
   } = e, [u, o] = n.useState(!1);
   return (0, a.jsxs)("div", {
-    className: l(R.root, i),
+    className: l(A.root, i),
     children: [(0, a.jsx)(S.default, {
-      className: R.infoIcon
+      className: A.infoIcon
     }), (0, a.jsx)("div", {
-      className: R.text,
+      className: A.text,
       children: C.default.Messages.PREMIUM_PENDING_PLAN_CHANGE_NOTICE.format({
         planName: t.hasExternalPlanChange ? (0, T.getExternalPlanDisplayName)(s) : T.default.getDisplayName(s.planId),
         date: t.currentPeriodEnd
@@ -103,14 +103,14 @@ function M(e) {
       onClick: e => {
         o(!0), e.preventDefault()
       },
-      className: R.cancelLink,
+      className: A.cancelLink,
       children: C.default.Messages.CANCEL
     }), u ? (0, a.jsx)(c.Modal, {
       renderModal: e => {
         let {
           transitionState: n
         } = e;
-        return (0, a.jsx)(A, {
+        return (0, a.jsx)(R, {
           subscription: t,
           renewalMutations: s,
           transitionState: n,

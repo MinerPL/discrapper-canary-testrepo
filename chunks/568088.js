@@ -2,7 +2,7 @@
 let i;
 n.r(t), n.d(t, {
   clearVoiceChannelEffectForUser: function() {
-    return m
+    return p
   },
   default: function() {
     return g
@@ -17,8 +17,8 @@ var l = n("917351"),
   d = n("99795");
 let c = [],
   f = {},
-  p = [],
-  m = e => {
+  m = [],
+  p = e => {
     null != e && r.default.dispatch({
       type: "VOICE_CHANNEL_EFFECT_CLEAR",
       userId: e
@@ -27,8 +27,8 @@ let c = [],
   h = [],
   x = 10 * o.default.Millis.SECOND,
   E = (0, l.debounce)(() => {
-    let e = (0, u.getEffectAnnouncement)(p);
-    s.AccessibilityAnnouncer.announce(e, "polite"), p = []
+    let e = (0, u.getEffectAnnouncement)(m);
+    s.AccessibilityAnnouncer.announce(e, "polite"), m = []
   }, 500);
 class y extends a.default.Store {
   get recentlyUsedEmojis() {
@@ -68,7 +68,7 @@ var g = new y(r.default, {
       emoji: t,
       sentAt: Date.now(),
       animationType: i
-    }, p = [...p, {
+    }, m = [...m, {
       emojiName: t.name,
       userId: n
     }], E())

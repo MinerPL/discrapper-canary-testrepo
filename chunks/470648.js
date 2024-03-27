@@ -15,8 +15,8 @@ var l = n("627445"),
   d = n("812204"),
   c = n("685665"),
   f = n("980215"),
-  p = n("506885"),
-  m = n("340906"),
+  m = n("506885"),
+  p = n("340906"),
   h = n("42203"),
   x = n("26989"),
   E = n("305961"),
@@ -24,8 +24,8 @@ var l = n("627445"),
   g = n("697218"),
   S = n("666897"),
   C = n("387111"),
-  _ = n("158998"),
-  T = n("680894");
+  T = n("158998"),
+  _ = n("680894");
 
 function I(e) {
   let {
@@ -34,20 +34,20 @@ function I(e) {
     channelId: I,
     inlinePreview: v = !1
   } = e, {
-    analyticsLocations: N
-  } = (0, c.default)(d.default.USER_MENTION), A = (0, r.useStateFromStores)([g.default], () => g.default.getUser(l)), O = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(I)), R = null != O ? O.getGuildId() : null, M = v || null == A || null == R || null == I ? void 0 : e => {
-    null != O && (0, u.openContextMenuLazy)(e, async () => {
+    analyticsLocations: A
+  } = (0, c.default)(d.default.USER_MENTION), N = (0, r.useStateFromStores)([g.default], () => g.default.getUser(l)), R = (0, r.useStateFromStores)([h.default], () => h.default.getChannel(I)), O = null != R ? R.getGuildId() : null, M = v || null == N || null == O || null == I ? void 0 : e => {
+    null != R && (0, u.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.el("834247").then(n.bind(n, "834247"));
       return t => (0, i.jsx)(e, {
         ...t,
-        user: A,
-        channel: O,
-        guildId: R
+        user: N,
+        channel: R,
+        guildId: O
       })
     })
-  }, k = _.default.useName(A), L = (0, r.useStateFromStores)([h.default, x.default, y.default], () => C.default.getNickname(R, I, A)), P = E.default.getGuild(R), b = (0, f.useClydeEnabled)(P, O), j = b && l === T.CLYDE_AI_USER_ID ? T.CLYDE_AI_MENTION_COLOR : null, U = e => (0, i.jsx)(S.default, {
+  }, k = T.default.useName(N), L = (0, r.useStateFromStores)([h.default, x.default, y.default], () => C.default.getNickname(O, I, N)), P = E.default.getGuild(O), b = (0, f.useClydeEnabled)(P, R), j = b && l === _.CLYDE_AI_USER_ID ? _.CLYDE_AI_MENTION_COLOR : null, U = e => (0, i.jsx)(S.default, {
     className: t,
     onContextMenu: M,
     color: j,
@@ -55,19 +55,19 @@ function I(e) {
     children: "@".concat(null != L ? L : k)
   });
   return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
-    value: N,
+    value: A,
     children: U()
   }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
-    value: N,
+    value: A,
     children: (0, i.jsx)(o.Popout, {
-      preload: null == A ? void 0 : () => (0, p.default)(A.id, A.getAvatarURL(R, 80), {
-        guildId: null != R ? R : void 0,
+      preload: null == N ? void 0 : () => (0, m.default)(N.id, N.getAvatarURL(O, 80), {
+        guildId: null != O ? O : void 0,
         channelId: null != I ? I : void 0
       }),
-      renderPopout: e => (a(null != A, "Unexpected missing user"), (0, i.jsx)(m.default, {
+      renderPopout: e => (a(null != N, "Unexpected missing user"), (0, i.jsx)(p.default, {
         location: "UserMention",
-        userId: A.id,
-        guildId: null != R ? R : void 0,
+        userId: N.id,
+        guildId: null != O ? O : void 0,
         channelId: I,
         ...e
       })),

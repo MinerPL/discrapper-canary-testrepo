@@ -180,8 +180,8 @@ function Q(e) {
     handleBlur: K
   } = (0, C.useFocusInside)(R), W = (0, c.useStateFromStores)([f.default], () => f.default.keyboardModeEnabled), Q = (0, c.useStateFromStores)([h.default], () => h.default.can(G.Permissions.MANAGE_MESSAGES, r), [r]), {
     ruleName: Z,
-    embedChannel: J,
-    decisionId: q,
+    embedChannel: q,
+    decisionId: J,
     keywordMatchedContent: X,
     keyword: $,
     content: ee,
@@ -218,19 +218,19 @@ function Q(e) {
       showUsernamePopout: i
     }
   }(l, r), eu = a.useCallback(() => {
-    (0, I.openSubmitFeedback)(l.id, ee, q, r)
-  }, [l.id, ee, q, r]), ed = a.useCallback(e => {
-    null != et && null != J && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == J ? void 0 : J.guild_id, null == J ? void 0 : J.id, et)))
-  }, [J, et]), ec = a.useCallback(() => {
+    (0, I.openSubmitFeedback)(l.id, ee, J, r)
+  }, [l.id, ee, J, r]), ed = a.useCallback(e => {
+    null != et && null != q && (e.stopPropagation(), e.preventDefault(), (0, N.default)(G.Routes.CHANNEL(null == q ? void 0 : q.guild_id, null == q ? void 0 : q.id, et)))
+  }, [q, et]), ec = a.useCallback(() => {
     (0, m.executeAlertAction)(l.id, r, _.AutomodAlertActionType.DELETE_USER_MESSAGE)
-  }, [r, l.id]), eE = a.useMemo(() => (0, T.getActionHeaderText)(l, J, () => (0, s.jsx)("div", {
+  }, [r, l.id]), eE = a.useMemo(() => (0, T.getActionHeaderText)(l, q, () => (0, s.jsx)("div", {
     className: H.channelNameContainer,
     children: (0, s.jsx)(P.default, {
-      channel: J,
+      channel: q,
       className: H.channelName,
       openChatWithoutConnecting: !0
     })
-  })), [l, J]), ef = (0, k.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
+  })), [l, q]), ef = (0, k.getFriendlyDurationString)(Number(en)), e_ = null != es, eT = Q && null != et && (null == ea || !ea.actions.hasOwnProperty(_.AutomodAlertActionType.DELETE_USER_MESSAGE));
   return (0, s.jsx)("div", {
     onMouseEnter: g,
     onMouseLeave: O,
@@ -281,7 +281,7 @@ function Q(e) {
           children: (0, s.jsx)(D.default, {
             ...v,
             message: l,
-            channel: J,
+            channel: q,
             content: ei,
             compact: n,
             withFooter: !0,
@@ -289,7 +289,7 @@ function Q(e) {
             className: i(H.embedCard, {
               [H.compact]: n,
               [H.selected]: er || W && U,
-              [H.isClickable]: null != et && null != J
+              [H.isClickable]: null != et && null != q
             }),
             childrenAccessories: (0, s.jsxs)(s.Fragment, {
               children: [(0, s.jsxs)("div", {

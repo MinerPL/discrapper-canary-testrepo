@@ -18,9 +18,9 @@ let o = e => {
     gridNavigatorId: d,
     setInspectedStickerPosition: c,
     onGridItemSelect: f
-  } = e, p = (0, a.useAnalyticsContext)(), m = i.useCallback(e => {
-    f(e, p)
-  }, [f, p]), h = i.useCallback((e, t) => {
+  } = e, m = (0, a.useAnalyticsContext)(), p = i.useCallback(e => {
+    f(e, m)
+  }, [f, m]), h = i.useCallback((e, t) => {
     c(e, t, s.InspectedExpressionChangeSource.GRID_NAVIGATOR_EVENT)
   }, [c]), {
     gridDispatch: x,
@@ -34,7 +34,7 @@ let o = e => {
     gridNavigatorId: d,
     itemGrid: n,
     itemList: o,
-    onGridNavigatorItemSelect: m,
+    onGridNavigatorItemSelect: p,
     onGridNavigatorPositionChange: h
   });
   return i.useEffect(() => u.useStore.subscribe(e => {

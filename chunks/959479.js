@@ -30,7 +30,7 @@ function g(e, t, n) {
   }
 }
 
-function E(e) {
+function m(e) {
   let {
     top: t,
     left: n,
@@ -45,7 +45,7 @@ function E(e) {
   }
 }
 
-function m(e) {
+function E(e) {
   return "auto" === e || null == e ? "auto" : "".concat(e, "px")
 }
 
@@ -95,7 +95,7 @@ class y extends s.Component {
     return !(0, d.default)(t, this.state) || !(0, d.default)(e, this.props, ["anchor", "size", "minSize", "container"]) || !(0, d.default)(e.anchor, this.props.anchor) || !(0, d.default)(e.size, this.props.size) || !(0, d.default)(e.minSize, this.props.minSize) || !(0, d.default)(e.container, this.props.container)
   }
   componentDidUpdate(e, t) {
-    null == t.operation && (!(0, d.default)(this.props.anchor, e.anchor) && this.setDOMPositions(E(this.props.anchor)), !(0, d.default)(this.props.size, e.size) && this.setDOMSize(g(this.props.size, this.props.minSize.width, this.props.minSize.height)))
+    null == t.operation && (!(0, d.default)(this.props.anchor, e.anchor) && this.setDOMPositions(m(this.props.anchor)), !(0, d.default)(this.props.size, e.size) && this.setDOMSize(g(this.props.size, this.props.minSize.width, this.props.minSize.height)))
   }
   componentWillUnmount() {
     this.handleOperationEnd()
@@ -136,14 +136,14 @@ class y extends s.Component {
     e = Math.max(Math.min(a, e), s), t = Math.max(Math.min(l, t), o);
     let {
       width: g,
-      height: E
-    } = S(n, this.size), m = t - h, y = e - f, O = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
-      top: m,
+      height: m
+    } = S(n, this.size), E = t - h, y = e - f, O = (0, u.fitFullCoordsToContainer)((0, u.getFullCoordsFromAnchorCoords)({
+      top: E,
       left: y,
       bottom: null,
       right: null
-    }, a, l, g, E)), T = c ? (0, u.getAnchorCoordsFromFullCoords)(O) : v("RESIZE_SOUTH_EAST", O);
-    this.setDOMPositions(T), !p && (null != r && r(), this.setState({
+    }, a, l, g, m)), C = c ? (0, u.getAnchorCoordsFromFullCoords)(O) : v("RESIZE_SOUTH_EAST", O);
+    this.setDOMPositions(C), !p && (null != r && r(), this.setState({
       operationStarted: !0
     })), null != d && d(i, "MOVE", this.anchor, this.size)
   }
@@ -170,31 +170,31 @@ class y extends s.Component {
       startY: h,
       offsetWidth: p,
       offsetHeight: g
-    } = this.dragState, E = 0, m = 0;
+    } = this.dragState, m = 0, E = 0;
     if (null != u) {
       switch (e = Math.max(Math.min(a, e), s), t = Math.max(Math.min(l, t), o), u) {
         case "RESIZE_EAST":
         case "RESIZE_SOUTH_EAST":
         case "RESIZE_NORTH_EAST":
-          E -= f - e;
+          m -= f - e;
           break;
         case "RESIZE_WEST":
         case "RESIZE_SOUTH_WEST":
         case "RESIZE_NORTH_WEST":
-          E += f - e
+          m += f - e
       }
       switch (u) {
         case "RESIZE_SOUTH":
         case "RESIZE_SOUTH_WEST":
         case "RESIZE_SOUTH_EAST":
-          m -= h - t;
+          E -= h - t;
           break;
         case "RESIZE_NORTH":
         case "RESIZE_NORTH_WEST":
         case "RESIZE_NORTH_EAST":
-          m += h - t
+          E += h - t
       }
-      p = Math.max(p + E, i.width), g = Math.max(g + m, i.height), this.setDOMSize({
+      p = Math.max(p + m, i.width), g = Math.max(g + E, i.height), this.setDOMSize({
         width: p,
         height: g
       }), !c && (null != r && r(), this.setState({
@@ -216,7 +216,7 @@ class y extends s.Component {
       left: n,
       bottom: i,
       right: a
-    }, null != l && (l.style.top = m(t), l.style.bottom = m(i), l.style.left = m(n), l.style.right = m(a))
+    }, null != l && (l.style.top = E(t), l.style.bottom = E(i), l.style.left = E(n), l.style.right = E(a))
   }
   setDOMSize(e) {
     let {
@@ -228,7 +228,7 @@ class y extends s.Component {
     t = "auto" === this.size.width ? "auto" : t, n = "auto" === this.size.height ? "auto" : n, this.size = {
       width: t,
       height: n
-    }, null != i && (i.style.width = m(t), i.style.height = m(n))
+    }, null != i && (i.style.width = E(t), i.style.height = E(n))
   }
   renderResizeHandles() {
     let {
@@ -446,7 +446,7 @@ class y extends s.Component {
         operation: null,
         operationStarted: !1
       }, i)
-    }, this.anchor = E(e.anchor), this.size = g(e.size, e.minSize.width, e.minSize.height)
+    }, this.anchor = m(e.anchor), this.size = g(e.size, e.minSize.width, e.minSize.height)
   }
 }
 y.Operations = i, y.defaultProps = {

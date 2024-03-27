@@ -16,11 +16,11 @@ let s = Object.freeze([]),
 
 function f(e, t) {}
 
-function p() {
+function m() {
   c = {}
 }
 
-function m(e, t) {
+function p(e, t) {
   let n = r[e];
   return null != n && (r[e] = n.filter(e => e.id !== t), delete o[t], delete u[t], n.length !== r[e].length)
 }
@@ -102,14 +102,14 @@ var E = new x(l.default, {
       channelId: t,
       file: n
     } = e;
-    return m(t, n.id)
+    return p(t, n.id)
   },
   UPLOAD_FAIL: function(e) {
     let {
       channelId: t,
       file: n
     } = e;
-    return m(t, n.id)
+    return p(t, n.id)
   },
   UPLOAD_CANCEL_REQUEST: function(e) {
     let {

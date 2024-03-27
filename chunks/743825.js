@@ -13,8 +13,8 @@ var i, l = n("37983"),
   d = n("87682"),
   c = n.n(d),
   f = n("746379"),
-  p = n.n(f),
-  m = n("394846"),
+  m = n.n(f),
+  p = n("394846"),
   h = n("295426"),
   x = n("81594"),
   E = n("798609"),
@@ -22,14 +22,14 @@ var i, l = n("37983"),
   g = n("383018"),
   S = n("605250"),
   C = n("585722"),
-  _ = n("378765"),
-  T = n("254490"),
+  T = n("378765"),
+  _ = n("254490"),
   I = n("850391"),
   v = n("149022"),
-  N = n("296141"),
-  A = n("606013"),
-  O = n("32647"),
-  R = n("970153"),
+  A = n("296141"),
+  N = n("606013"),
+  R = n("32647"),
+  O = n("970153"),
   M = n("49111"),
   k = n("782340"),
   L = n("350583");
@@ -54,7 +54,7 @@ i = class extends a.Component {
     if (this.fixFocus(e), this.props.useSlate !== e.useSlate) {
       var t, n;
       let e;
-      e = this.props.useSlate ? this.props.textValue : (0, R.toTextValue)(this.props.richValue, {
+      e = this.props.useSlate ? this.props.textValue : (0, O.toTextValue)(this.props.richValue, {
         mode: "plain"
       }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, v.toRichValue)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
@@ -165,7 +165,7 @@ i = class extends a.Component {
       disabled: d,
       onChange: c,
       onKeyDown: f,
-      onResize: p,
+      onResize: m,
       onSubmit: h,
       channel: x,
       type: E,
@@ -173,9 +173,9 @@ i = class extends a.Component {
       useSlate: g,
       spellcheckEnabled: S,
       useNewSlashCommands: C,
-      canOnlyUseTextCommands: T,
-      className: N,
-      id: R,
+      canOnlyUseTextCommands: _,
+      className: A,
+      id: O,
       required: k,
       maxCharacterCount: P,
       allowNewLines: j,
@@ -187,11 +187,11 @@ i = class extends a.Component {
       popup: G
     } = this.state, H = {
       channel: x,
-      className: r(N, L.textArea, {
+      className: r(A, L.textArea, {
         [L.textAreaSlate]: g,
         [L.textAreaDisabled]: d || F
       }),
-      id: R,
+      id: O,
       placeholder: this.getPlaceholder(),
       required: k,
       accessibilityLabel: w,
@@ -208,7 +208,7 @@ i = class extends a.Component {
       hideAutocomplete: this.hideAutocomplete,
       allowNewLines: j,
       onChange: c,
-      onResize: p,
+      onResize: m,
       onKeyDown: f,
       onSubmit: h,
       textAreaPaddingClassName: r(b[y], {
@@ -218,7 +218,7 @@ i = class extends a.Component {
       }),
       spellcheckEnabled: S,
       useNewSlashCommands: C,
-      disableAutoFocus: m.isMobile || null !== (n = E.disableAutoFocus) && void 0 !== n && n,
+      disableAutoFocus: p.isMobile || null !== (n = E.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (i = null === (e = E.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== i && i,
       "aria-controls": null !== (a = G.id) && void 0 !== a ? a : void 0,
       "aria-haspopup": "listbox",
@@ -228,23 +228,23 @@ i = class extends a.Component {
       "aria-describedby": U,
       "aria-labelledby": D,
       "aria-autocomplete": "list"
-    }, B = g ? (0, l.jsx)(O.default, {
+    }, B = g ? (0, l.jsx)(R.default, {
       ref: this.ref,
       ...H,
       type: E,
       value: d ? (0, v.toRichValue)("") : u,
       canUseCommands: null === (t = E.commands) || void 0 === t ? void 0 : t.enabled,
-      canOnlyUseTextCommands: T
-    }) : (0, l.jsx)(A.default, {
+      canOnlyUseTextCommands: _
+    }) : (0, l.jsx)(N.default, {
       ref: this.ref,
       ...H,
       value: d ? "" : o
     });
     return (0, l.jsxs)(l.Fragment, {
-      children: [(0, l.jsx)(_.ComponentAction, {
+      children: [(0, l.jsx)(T.ComponentAction, {
         event: M.ComponentActions.INSERT_TEXT,
         handler: this.handleInsertText
-      }), (0, l.jsx)(_.ComponentAction, {
+      }), (0, l.jsx)(T.ComponentAction, {
         event: M.ComponentActions.CLEAR_TEXT,
         handler: this.handleClearText
       }), B]
@@ -359,14 +359,14 @@ i = class extends a.Component {
                   try {
                     let {
                       pathname: t
-                    } = p.parse(i.src);
+                    } = m.parse(i.src);
                     null != t && t.length > 0 && (e = c.basename(t).split(".")[0])
                   } catch (e) {}
                   if (null != e && e.length > 0) return "".concat(e, ".png")
                 }
               }(n)) && void 0 !== s ? s : t.name;
             return {
-              files: [(0, T.makeFile)(t, l, t.type)]
+              files: [(0, _.makeFile)(t, l, t.type)]
             }
           }
           return {
@@ -380,7 +380,7 @@ i = class extends a.Component {
               type: "text/plain"
             });
             return {
-              files: [(0, T.makeFile)(e, "message.txt")],
+              files: [(0, _.makeFile)(e, "message.txt")],
               convertedStringToFile: !0
             }
           }
@@ -426,7 +426,7 @@ i = class extends a.Component {
           }
         })
       })(r), this.focus(), !0)
-    }, this._unsubscribe = N.channelEditorPopupStore.subscribe(e => {
+    }, this._unsubscribe = A.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -435,7 +435,7 @@ i = class extends a.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: N.channelEditorPopupStore.getState()
+      popup: A.channelEditorPopupStore.getState()
     }
   }
 }

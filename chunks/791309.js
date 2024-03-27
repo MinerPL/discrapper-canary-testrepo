@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var s = a("37983");
 a("884691");
-var r = a("414456"),
-  l = a.n(r),
+var l = a("414456"),
+  r = a.n(l),
   n = a("77078"),
   o = a("153160"),
   i = a("468437"),
@@ -16,18 +16,18 @@ var r = a("414456"),
     let {
       price: {
         amount: a,
-        currency: r
+        currency: l
       },
       renderPrice: u,
       icon: c,
       className: d,
       variant: f = "heading-md/semibold",
       alwaysWhiteText: m = !0
-    } = e, C = (0, o.formatPrice)(a, r);
+    } = e, C = (0, o.formatPrice)(a, l);
     return (0, s.jsxs)(n.Heading, {
       variant: f,
       color: m ? "always-white" : "none",
-      className: l(i.heading, d),
+      className: r(i.heading, d),
       children: [c, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
     })
   }

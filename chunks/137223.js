@@ -18,8 +18,8 @@ var i, l, a = n("37983"),
   d = n("476263"),
   c = n("945330"),
   f = n("229915"),
-  p = n("439932"),
-  m = n("49111"),
+  m = n("439932"),
+  p = n("49111"),
   h = n("782340"),
   x = n("701588");
 let E = Object.freeze({
@@ -37,7 +37,7 @@ let y = e => {
     size: s = E.SMALL
   } = e;
   return (0, a.jsx)(u.Clickable, {
-    className: o(i, x.iconLayout, s, (0, p.getThemeClass)(l), {
+    className: o(i, x.iconLayout, s, (0, m.getThemeClass)(l), {
       [x.clear]: t
     }),
     onClick: e => {
@@ -90,26 +90,26 @@ class g extends s.Component {
     } = this.props;
     if (0 !== i.length) {
       switch (e.keyCode) {
-        case m.KeyboardKeys.BACKSPACE:
+        case p.KeyboardKeys.BACKSPACE:
           (null == l || 0 === l.length) && null != a && a.length > 0 && (e.preventDefault(), e.stopPropagation(), null == o || o(a.length - 1));
           break;
-        case m.KeyboardKeys.ARROW_DOWN:
+        case p.KeyboardKeys.ARROW_DOWN:
           e.preventDefault(), e.stopPropagation(), -1 === t ? (t = 0, n = 0) : ((t += 1) >= i.length && (t = i.length - 1), n >= i[t] && (n = i[t] - 1));
           break;
-        case m.KeyboardKeys.ARROW_UP:
+        case p.KeyboardKeys.ARROW_UP:
           e.preventDefault(), e.stopPropagation(), (t -= 1) < 0 ? (t = 0, n = 0) : n >= i[t] && (n = i[t] - 1);
           break;
-        case m.KeyboardKeys.ARROW_LEFT:
+        case p.KeyboardKeys.ARROW_LEFT:
           e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (n -= 1) < 0 && ((t -= 1) >= 0 ? n = i[t] - 1 : t < 0 && (t = 0, n = 0));
           break;
-        case m.KeyboardKeys.ARROW_RIGHT:
+        case p.KeyboardKeys.ARROW_RIGHT:
           e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), (n += 1) >= i[t] && (n = 0, (t += 1) >= i.length && (t = i.length - 1, n = i[t] - 1));
           break;
-        case m.KeyboardKeys.ENTER:
+        case p.KeyboardKeys.ENTER:
           if (e.preventDefault(), e.stopPropagation(), -1 === t && (t = 0), -1 === n && (n = 0), t >= i.length || n >= i[t]) return;
           null != r && r(t, n, e);
           return;
-        case m.KeyboardKeys.ESCAPE:
+        case p.KeyboardKeys.ESCAPE:
           e.preventDefault(), u && e.stopPropagation(), null != r && r(null, null, e);
           return;
         default:
@@ -132,22 +132,22 @@ class g extends s.Component {
       current: u
     } = this.ref;
     if (null != u) switch (e.keyCode) {
-      case m.KeyboardKeys.BACKSPACE:
+      case p.KeyboardKeys.BACKSPACE:
         if ((null == s || 0 === s.length) && null != r && r.length > 0) {
           var d, c;
           e.preventDefault(), e.stopPropagation(), null === (d = (c = this.props).onRemoveTag) || void 0 === d || d.call(c, r.length - 1)
         }
         break;
-      case m.KeyboardKeys.ARROW_DOWN:
+      case p.KeyboardKeys.ARROW_DOWN:
         e.preventDefault(), e.stopPropagation(), t.length > n && ++i >= t[n] && (++n >= t.length && (n = 0), i = 0), null == a || a(n, i);
         break;
-      case m.KeyboardKeys.ARROW_UP:
+      case p.KeyboardKeys.ARROW_UP:
         e.preventDefault(), e.stopPropagation(), --i < 0 && (--n < 0 && (n = t.length - 1), i = t[n] - 1), null == a || a(n, i);
         break;
-      case m.KeyboardKeys.ENTER:
+      case p.KeyboardKeys.ENTER:
         e.preventDefault(), e.stopPropagation(), t.length > n && t[n] > i && (null == l || l(n, i, e));
         break;
-      case m.KeyboardKeys.ESCAPE:
+      case p.KeyboardKeys.ESCAPE:
         e.preventDefault(), o && e.stopPropagation(), null == l || l(null, null, e), u.blur()
     }
   }
@@ -161,13 +161,13 @@ class g extends s.Component {
       onClear: s,
       size: r,
       maxHeight: f,
-      tags: m,
+      tags: p,
       onActivate: E,
       className: g,
       inputProps: S,
       focusAfterReady: C
-    } = this.props, _ = null != t && t.length > 0, T = !1, I = [];
-    return null != m && m.length > 0 && ("string" == typeof m[0] ? m.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
+    } = this.props, T = null != t && t.length > 0, _ = !1, I = [];
+    return null != p && p.length > 0 && ("string" == typeof p[0] ? p.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
       focusProps: {
         offset: 4
       },
@@ -177,7 +177,7 @@ class g extends s.Component {
         className: x.close,
         "aria-label": h.default.Messages.REMOVE
       })]
-    }, t))) : (T = !0, m.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
+    }, t))) : (_ = !0, p.forEach((e, t) => I.push((0, a.jsxs)(u.Anchor, {
       className: o(x.tag, x.richTag),
       onClick: this.handleRemoveTag.bind(this, t),
       children: [("MEMBER" === e.type || "USER" === e.type) && null != e.avatar && (0, a.jsx)(u.Avatar, {
@@ -205,7 +205,7 @@ class g extends s.Component {
       ringTarget: this.containerRef,
       children: (0, a.jsx)("div", {
         ref: this.containerRef,
-        className: o(g, x.container, r, (0, p.getThemeClass)(i), {
+        className: o(g, x.container, r, (0, m.getThemeClass)(i), {
           [x.disabled]: l
         }),
         children: (0, a.jsxs)(u.ScrollerThin, {
@@ -215,7 +215,7 @@ class g extends s.Component {
           },
           children: [I, (0, a.jsx)("input", {
             className: o(x.input, {
-              [x.richTagInput]: T
+              [x.richTagInput]: _
             }),
             type: "text",
             ref: this.ref,
@@ -234,7 +234,7 @@ class g extends s.Component {
           }), null != s ? (0, a.jsx)(y, {
             size: r,
             themeOverride: i,
-            hasContent: _,
+            hasContent: T,
             onClear: this.handleClear
           }) : null]
         })
@@ -258,10 +258,10 @@ class g extends s.Component {
         current: a
       } = this.ref;
       if (null == a || null != t) {
-        e.keyCode !== m.KeyboardKeys.TAB && null != t && t(e);
+        e.keyCode !== p.KeyboardKeys.TAB && null != t && t(e);
         return
       }
-      if (e.keyCode === m.KeyboardKeys.ESCAPE && null != a.value && "" !== a.value && a.value.length > 0) {
+      if (e.keyCode === p.KeyboardKeys.ESCAPE && null != a.value && "" !== a.value && a.value.length > 0) {
         a.value = "", null != i && i("");
         return
       }

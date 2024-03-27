@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var s = a("37983");
 a("884691");
-var r = a("819855"),
-  l = a("77078"),
+var l = a("819855"),
+  r = a("77078"),
   n = a("841098"),
   o = a("782340"),
   i = a("706055"),
@@ -21,19 +21,19 @@ var r = a("819855"),
       className: i.wrapper,
       children: [(0, s.jsx)("img", {
         className: i.loadIssueImg,
-        src: (0, r.isThemeDark)(a) ? u : c,
+        src: (0, l.isThemeDark)(a) ? u : c,
         alt: ""
-      }), (0, s.jsx)(l.Heading, {
+      }), (0, s.jsx)(r.Heading, {
         className: i.heading1,
         variant: "heading-xl/semibold",
         children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_HEADING
-      }), (0, s.jsx)(l.Text, {
+      }), (0, s.jsx)(r.Text, {
         variant: "text-md/normal",
         children: o.default.Messages.COLLECTIBLES_SHOP_ERROR_SHOP_LOAD
-      }), (0, s.jsx)(l.Button, {
+      }), (0, s.jsx)(r.Button, {
         className: i.reload,
-        size: l.Button.Sizes.MEDIUM,
-        color: l.Button.Colors.BRAND_NEW,
+        size: r.Button.Sizes.MEDIUM,
+        color: r.Button.Colors.BRAND_NEW,
         onClick: t,
         children: o.default.Messages.ERRORS_RELOAD
       })]

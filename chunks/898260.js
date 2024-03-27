@@ -19,7 +19,7 @@ var i = n("37983"),
       children: d,
       id: c,
       role: f,
-      "aria-label": p
+      "aria-label": m
     } = e;
     return (0, i.jsxs)("div", {
       className: s(n, {
@@ -30,7 +30,7 @@ var i = n("37983"),
       ref: t,
       id: c,
       role: f,
-      "aria-label": p,
+      "aria-label": m,
       children: [null != d ? (0, i.jsx)("span", {
         className: s(u.content, l),
         children: d

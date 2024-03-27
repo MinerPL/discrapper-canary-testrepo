@@ -17,8 +17,8 @@ var i = n("37983"),
   d = n("467339"),
   c = n("966724"),
   f = n("411723"),
-  p = n("20606"),
-  m = n("42203"),
+  m = n("20606"),
+  p = n("42203"),
   h = n("505684"),
   x = n("462579"),
   E = n("867544"),
@@ -26,15 +26,15 @@ var i = n("37983"),
   g = n("228220"),
   S = n("956089"),
   C = n("58608"),
-  _ = n("103603"),
-  T = n("299039"),
+  T = n("103603"),
+  _ = n("299039"),
   I = n("9560"),
   v = n("271972"),
-  N = n("782340"),
-  A = n("483099");
-let O = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
+  A = n("782340"),
+  N = n("483099");
+let R = ["image/jpeg", "image/png", "image/webp", "image/gif", "video/quicktime", "video/mp4"];
 
-function R(e) {
+function O(e) {
   let {
     alt: t,
     spoiler: n,
@@ -51,17 +51,17 @@ function R(e) {
       } : void 0,
       type: h.default.Types.ATTACHMENT,
       onReveal: () => o(!0),
-      className: A.spoilerContainer,
+      className: N.spoilerContainer,
       children: e => (0, i.jsxs)("div", {
-        className: A.spoilerWrapper,
+        className: N.spoilerWrapper,
         children: [a(e), (0, i.jsxs)("div", {
-          className: A.tags,
+          className: N.tags,
           children: [null != t && "" !== t ? (0, i.jsx)("span", {
-            className: A.altTag,
-            children: N.default.Messages.IMAGE_ALT
+            className: N.altTag,
+            children: A.default.Messages.IMAGE_ALT
           }) : null, r && n ? (0, i.jsx)("span", {
-            className: A.altTag,
-            children: N.default.Messages.SPOILER
+            className: N.altTag,
+            children: A.default.Messages.SPOILER
           }) : null]
         })]
       })
@@ -76,12 +76,12 @@ function M(e) {
     spoiler: a,
     size: r = v.AttachmentListItemSizes.MEDIUM,
     onMouseEnter: u
-  } = e, [d, c] = l.useState(), [f, p] = l.useState({
+  } = e, [d, c] = l.useState(), [f, m] = l.useState({
     width: 0,
     height: 0
-  }), m = r === v.AttachmentListItemSizes.SMALL;
+  }), p = r === v.AttachmentListItemSizes.SMALL;
   l.useEffect(() => {
-    if (null == t || !1 === O.includes(t.type)) return;
+    if (null == t || !1 === R.includes(t.type)) return;
     let e = URL.createObjectURL(t);
     c(e);
     let n = new Image;
@@ -89,13 +89,13 @@ function M(e) {
       let {
         width: e,
         height: t
-      } = (0, _.zoomFit)(n.width, n.height);
-      p({
+      } = (0, T.zoomFit)(n.width, n.height);
+      m({
         width: e,
         height: t
       })
     }, n.src = e, () => {
-      c(void 0), p({
+      c(void 0), m({
         width: 0,
         height: 0
       }), URL.revokeObjectURL(e)
@@ -105,33 +105,33 @@ function M(e) {
       let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
       return null == d ? (0, i.jsx)(i.Fragment, {}) : (0, i.jsx)("img", {
         src: d,
-        className: s(A.media, {
-          [A.spoiler]: e,
-          [A.imageSmall]: m
+        className: s(N.media, {
+          [N.spoiler]: e,
+          [N.imageSmall]: p
         }),
         "aria-hidden": !0,
         alt: null != n ? n : "",
         style: t ? f : {}
       })
-    }, [d, m, n, f]),
+    }, [d, p, n, f]),
     x = l.useCallback(() => {
       null != d && (0, o.openModal)(e => (0, i.jsx)(o.ModalRoot, {
-        className: A.modal,
+        className: N.modal,
         ...e,
         size: o.ModalSize.DYNAMIC,
-        "aria-label": N.default.Messages.IMAGE,
+        "aria-label": A.default.Messages.IMAGE,
         children: h(!1, !0)
       }))
     }, [d, h]);
   return (0, i.jsx)("div", {
     onMouseEnter: u,
-    className: s(A.mediaContainer, {
-      [A.imageSmall]: m
+    className: s(N.mediaContainer, {
+      [N.imageSmall]: p
     }),
     children: (0, i.jsx)(o.Clickable, {
       onClick: x,
-      className: A.clickableMedia,
-      children: (0, i.jsx)(R, {
+      className: N.clickableMedia,
+      children: (0, i.jsx)(O, {
         size: r,
         alt: n,
         spoiler: a,
@@ -158,17 +158,17 @@ function k(e) {
     }
   }, [t]), (0, i.jsx)("div", {
     onMouseEnter: o,
-    className: A.mediaContainer,
-    children: (0, i.jsx)(R, {
+    className: N.mediaContainer,
+    children: (0, i.jsx)(O, {
       size: r,
       alt: n,
       spoiler: a,
       renderContent: e => (0, i.jsx)(C.default, {
         ref: f,
         src: d,
-        className: s(A.media, {
-          [A.spoiler]: e,
-          [A.sizeClip]: r === v.AttachmentListItemSizes.CLIP
+        className: s(N.media, {
+          [N.spoiler]: e,
+          [N.sizeClip]: r === v.AttachmentListItemSizes.CLIP
         }),
         onError: u,
         preload: "none",
@@ -200,15 +200,15 @@ function L(e) {
     onVideoLoadError: () => u(!0)
   }) : (0, i.jsx)("div", {
     onMouseEnter: r,
-    className: s(A.icon, A.imageContainer, {
-      [A[null !== (t = n.classification) && void 0 !== t ? t : ""]]: !0,
-      [A.imageSmall]: d
+    className: s(N.icon, N.imageContainer, {
+      [N[null !== (t = n.classification) && void 0 !== t ? t : ""]]: !0,
+      [N.imageSmall]: d
     }),
     children: (0, i.jsx)("div", {
-      className: A.tags,
+      className: N.tags,
       children: n.spoiler ? (0, i.jsx)("span", {
-        className: A.altTag,
-        children: N.default.Messages.SPOILER
+        className: N.altTag,
+        children: A.default.Messages.SPOILER
       }) : null
     })
   })
@@ -222,15 +222,15 @@ function P(e) {
     keyboardModeEnabled: c,
     label: h,
     size: C = v.AttachmentListItemSizes.MEDIUM,
-    canEdit: _ = !0,
-    hideFileName: O = !1,
-    clip: R
-  } = e, M = null != R;
+    canEdit: T = !0,
+    hideFileName: R = !1,
+    clip: O
+  } = e, M = null != O;
   C = M ? v.AttachmentListItemSizes.CLIP : C;
   let k = C === v.AttachmentListItemSizes.SMALL,
-    P = (0, r.useStateFromStores)([m.default], () => {
+    P = (0, r.useStateFromStores)([p.default], () => {
       var e;
-      return null === (e = m.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
+      return null === (e = p.default.getChannel(t)) || void 0 === e ? void 0 : e.guild_id
     }),
     b = e => {
       e.stopPropagation(), (0, o.openModal)(e => (0, i.jsx)(d.default, {
@@ -254,44 +254,44 @@ function P(e) {
     };
   return (0, i.jsxs)(v.default, {
     actions: (0, i.jsxs)(l.Fragment, {
-      children: [_ ? (0, i.jsx)(I.default, {
+      children: [T ? (0, i.jsx)(I.default, {
         className: s({
-          [A.action]: k
+          [N.action]: k
         }),
-        tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : N.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
+        tooltip: M ? A.default.Messages.CLIPS_ATTACHMENT_UTILITIES_SPOILER : A.default.Messages.ATTACHMENT_UTILITIES_SPOILER,
         onClick: () => u.default.update(t, a.id, n, {
           spoiler: !a.spoiler
         }),
         children: a.spoiler ? (0, i.jsx)(E.default, {
           className: s({
-            [A.actionBarIcon]: k
+            [N.actionBarIcon]: k
           })
         }) : (0, i.jsx)(x.default, {
           className: s({
-            [A.actionBarIcon]: k
+            [N.actionBarIcon]: k
           })
         })
-      }) : null, _ && !M ? (0, i.jsx)(I.default, {
+      }) : null, T && !M ? (0, i.jsx)(I.default, {
         className: s({
-          [A.action]: k
+          [N.action]: k
         }),
-        tooltip: N.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
+        tooltip: A.default.Messages.ATTACHMENT_UTILITIES_MODIFY,
         onClick: b,
         children: (0, i.jsx)(y.default, {
           className: s({
-            [A.actionBarIcon]: k
+            [N.actionBarIcon]: k
           })
         })
       }) : null, (0, i.jsx)(I.default, {
         className: s({
-          [A.action]: k
+          [N.action]: k
         }),
-        tooltip: M ? N.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : N.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
+        tooltip: M ? A.default.Messages.CLIPS_ATTACHMENT_UTILITIES_REMOVE : A.default.Messages.ATTACHMENT_UTILITIES_REMOVE,
         onClick: () => u.default.remove(t, a.id, n),
         dangerous: !0,
         children: (0, i.jsx)(g.default, {
           className: s({
-            [A.actionBarIcon]: k
+            [N.actionBarIcon]: k
           })
         })
       })]
@@ -303,30 +303,30 @@ function P(e) {
     keyboardModeEnabled: c,
     size: C,
     className: s({
-      [A.attachmentItemSmall]: k
+      [N.attachmentItemSmall]: k
     }),
     children: [(0, i.jsx)(L, {
       upload: a,
       size: C
-    }), !O && !M && (0, i.jsx)("div", {
-      className: A.filenameContainer,
+    }), !R && !M && (0, i.jsx)("div", {
+      className: N.filenameContainer,
       children: (0, i.jsx)(o.Text, {
-        className: A.filename,
+        className: N.filename,
         variant: "text-sm/normal",
         children: null != h ? h : a.filename
       })
     }), M && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(f.default, {
-        className: A.clipsFooter,
-        createdAt: T.default.extractTimestamp(R.id),
-        participantIds: R.users,
-        applicationId: R.applicationId,
-        title: R.name,
+        className: N.clipsFooter,
+        createdAt: _.default.extractTimestamp(O.id),
+        participantIds: O.users,
+        applicationId: O.applicationId,
+        title: O.name,
         guildId: P
       }), (0, i.jsx)(S.TextBadge, {
-        color: p.default.BG_BRAND,
-        className: A.clipsBadge,
-        text: N.default.Messages.CLIP_TAG
+        color: m.default.BG_BRAND,
+        className: N.clipsBadge,
+        text: A.default.Messages.CLIP_TAG
       })]
     })]
   })

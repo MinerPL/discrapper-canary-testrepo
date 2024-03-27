@@ -10,16 +10,16 @@ n.r(t), n.d(t, {
     return I
   },
   announceDeleteTemplateChannels: function() {
-    return m
-  },
-  createChannelsFromTemplateTierBenefits: function() {
     return T
   },
+  createChannelsFromTemplateTierBenefits: function() {
+    return m
+  },
   getTemplateTierCreationAnalyticsContext: function() {
-    return v
+    return R
   },
   isEligibleForNewBadge: function() {
-    return R
+    return N
   }
 }), n("424973"), n("222007"), n("462568");
 var i = n("642852"),
@@ -34,9 +34,9 @@ var i = n("642852"),
   f = n("65722"),
   S = n("736880"),
   E = n("49111"),
-  h = n("724210");
+  _ = n("724210");
 r.shim();
-let _ = {};
+let h = {};
 
 function g(e) {
   let t = (0, l.useStateFromStores)([o.default], () => o.default.getChannel(e)),
@@ -90,8 +90,8 @@ function C(e) {
 
 function I(e) {
   let t = C(e);
-  _[e] = t, t.forEach(e => {
-    let t = e.set("flags", h.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+  h[e] = t, t.forEach(e => {
+    let t = e.set("flags", _.ChannelFlags.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     s.default.dispatch({
       type: "CHANNEL_CREATE",
       channel: t
@@ -99,9 +99,9 @@ function I(e) {
   })
 }
 
-function m(e) {
+function T(e) {
   var t;
-  let n = null !== (t = _[e]) && void 0 !== t ? t : C(e);
+  let n = null !== (t = h[e]) && void 0 !== t ? t : C(e);
   n.forEach(e => {
     s.default.dispatch({
       type: "CHANNEL_DELETE",
@@ -109,7 +109,7 @@ function m(e) {
     })
   })
 }
-async function T(e, t) {
+async function m(e, t) {
   let n = [],
     i = [];
   if (t.forEach(t => {
@@ -136,7 +136,7 @@ async function T(e, t) {
   })
 }
 
-function v(e, t) {
+function R(e, t) {
   var n, i;
   let r = c.useEditStateStore.getState().listings[e],
     l = null == r ? void 0 : r.usedTemplate;
@@ -176,6 +176,6 @@ function v(e, t) {
   }
 }
 
-function R(e) {
+function N(e) {
   return (0, f.canManageGuildRoleSubscriptions)(e) && e.hasFeature(E.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) && (0, a.isUserEligibleForTierTemplates)() && (0, a.isGuildEligibleForTierTemplates)(e.id)
 }

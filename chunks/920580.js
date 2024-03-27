@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var s = a("37983");
 a("884691");
-var r = a("414456"),
-  l = a.n(r),
+var l = a("414456"),
+  r = a.n(l),
   n = a("65597"),
   o = a("755854"),
   i = a("77078"),
@@ -25,35 +25,35 @@ function E(e) {
   let {
     product: t,
     className: a,
-    innerClassName: r,
+    innerClassName: l,
     disableTooltipPointerEvents: E,
     alwaysWhiteText: b = !0,
     nitroWheelColor: S
   } = e, x = (0, n.useStateFromStores)([c.default], () => c.default.getCurrentUser()), v = (0, n.useStateFromStores)([u.default], () => (0, o.isThemeDark)(u.default.theme)), T = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.DEFAULT);
   if (null == T) return null;
   if (T.amount <= 0) return (0, s.jsx)("div", {
-    className: l(h.priceTagsContainer, a),
+    className: r(h.priceTagsContainer, a),
     children: (0, s.jsx)(C.default, {
       alwaysWhiteText: b,
       price: T,
-      className: r
+      className: l
     })
   });
   let L = (0, m.extractPriceByPurchaseTypes)(t, p.PriceSetAssignmentPurchaseTypes.PREMIUM_TIER_2),
     I = !f.default.canUseCollectibles(x);
   return (0, s.jsxs)("div", {
-    className: l(h.priceTagsContainer, a),
+    className: r(h.priceTagsContainer, a),
     children: [(0, s.jsx)(C.default, {
       alwaysWhiteText: b,
       price: T,
-      className: l([r, I ? void 0 : h.strikedPrice])
+      className: r([l, I ? void 0 : h.strikedPrice])
     }), null != L && (0, s.jsx)(C.default, {
       price: L,
       alwaysWhiteText: b,
       renderPrice: I ? e => g.default.Messages.COLLECTIBLES_NON_PREMIUM_PRICE.format({
         price: e
       }) : void 0,
-      className: l([r, I ? h.fullPrice : void 0]),
+      className: r([l, I ? h.fullPrice : void 0]),
       variant: I ? "text-xs/semibold" : void 0,
       icon: (0, s.jsx)(i.Tooltip, {
         text: g.default.Messages.COLLECTIBLES_PREMIUM_DISCOUNT_TOOLTIP_TEXT,
@@ -65,7 +65,7 @@ function E(e) {
           } = e;
           return (0, s.jsx)(d.default, {
             ...t,
-            className: l(h.premiumIcon, {
+            className: r(h.premiumIcon, {
               [h.fullPrice]: I
             }),
             color: null != S ? S : b || v ? "white" : "black"
