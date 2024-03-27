@@ -1,2 +1,12 @@
 "use strict";
-e.exports = n.p + "6e72cca8dcf91e01fac8.svg"
+n.r(t), n.d(t, {
+  queueResizeObserver: function() {
+    return i
+  }
+});
+var r = n("554887"),
+  i = function(e) {
+    (0, r.queueMicroTask)(function() {
+      requestAnimationFrame(e)
+    })
+  }

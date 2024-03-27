@@ -1,31 +1,18 @@
 "use strict";
-a.r(t), a.d(t, {
-  stashTemplateChannels: function() {
-    return r
-  },
-  getTemplates: function() {
+n.r(t), n.d(t, {
+  default: function() {
     return i
   }
 });
-var s = a("872717"),
-  l = a("913144"),
-  n = a("49111");
+var r = {
+  left: "right",
+  right: "left",
+  bottom: "top",
+  top: "bottom"
+};
 
-function r(e, t) {
-  l.default.dispatch({
-    type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
-    selectedTemplate: e,
-    guildId: t
-  })
-}
-async function i(e) {
-  let t = await s.HTTP.get({
-      url: n.Endpoints.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e)
-    }),
-    a = t.body;
-  null != a.templates && l.default.dispatch({
-    type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES",
-    templates: a.templates,
-    guildId: e
+function i(e) {
+  return e.replace(/left|right|bottom|top/g, function(e) {
+    return r[e]
   })
 }

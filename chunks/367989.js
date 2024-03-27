@@ -1,33 +1,34 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return c
-  }
-}), n("222007");
-var l = n("37983");
-n("884691");
-var u = n("446674"),
-  a = n("77078"),
-  d = n("817963"),
-  i = n("398604"),
-  s = n("658202"),
-  r = n("397680"),
-  o = n("782340");
+n.r(t);
+var r = n("911331");
 
-function c(e) {
-  let {
-    guildEventId: t,
-    recurrenceId: n,
-    guild: c,
-    channel: E
-  } = e, f = null != n, {
-    canManageGuildEvent: _
-  } = (0, d.useManageResourcePermissions)(null != E ? E : c), [T, S] = (0, u.useStateFromStoresArray)([i.default], () => [i.default.isActive(t), i.default.getGuildScheduledEvent(t)]), v = (0, r.default)(n, null == S ? void 0 : S.id), g = null != S && _(S), I = f && (null == v ? void 0 : v.is_canceled) && g;
-  return I && (!T || f) ? (0, l.jsx)(a.MenuItem, {
-    id: o.default.Messages.RESTORE_EVENT,
-    label: o.default.Messages.RESTORE_EVENT,
-    action: () => {
-      null != n && null != v && (0, s.default)(v, c.id, t, n)
-    }
-  }) : null
+function i(e) {
+  return e === Object(e) && 0 !== Object.keys(e).length
+}
+t.default = function(e, t) {
+  var n = e.isConnected || e.ownerDocument.documentElement.contains(e);
+  if (i(t) && "function" == typeof t.behavior) return t.behavior(n ? (0, r.default)(e, t) : []);
+  if (n) {
+    var a, o = !1 === (a = t) ? {
+      block: "end",
+      inline: "nearest"
+    } : i(a) ? a : {
+      block: "start",
+      inline: "nearest"
+    };
+    return function(e, t) {
+      void 0 === t && (t = "auto");
+      var n = "scrollBehavior" in document.body.style;
+      e.forEach(function(e) {
+        var r = e.el,
+          i = e.top,
+          a = e.left;
+        r.scroll && n ? r.scroll({
+          top: i,
+          left: a,
+          behavior: t
+        }) : (r.scrollTop = i, r.scrollLeft = a)
+      })
+    }((0, r.default)(e, o), o.behavior)
+  }
 }

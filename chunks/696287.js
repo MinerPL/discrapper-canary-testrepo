@@ -1,65 +1,75 @@
 "use strict";
-n.r(t), n.d(t, {
-  default: function() {
-    return I
+n.r(t), n("47120");
+var i = n("846519"),
+  r = n("147913"),
+  s = n("77498"),
+  a = n("19780"),
+  o = n("626135"),
+  l = n("70956"),
+  u = n("581567"),
+  d = n("594190"),
+  _ = n("981631");
+
+function c(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[t] = n, e
+}
+let E = 5 * l.default.Millis.MINUTE;
+class I extends r.default {
+  _terminate() {
+    this.stopHeartbeat()
   }
-}), n("222007");
-var a = n("37983");
-n("884691");
-var s = n("77078"),
-  l = n("629109"),
-  i = n("990766"),
-  r = n("161454"),
-  o = n("375202"),
-  u = n("727284"),
-  d = n("373469"),
-  c = n("42887"),
-  f = n("703370"),
-  E = n("773336"),
-  h = n("716724"),
-  _ = n("880553"),
-  C = n("492249"),
-  S = n("49111"),
-  I = {
-    [S.RPCCommands.TOGGLE_VIDEO]: {
-      scope: {
-        [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_VIDEO_WRITE]
-      },
-      handler() {
-        let e = c.default.isVideoEnabled(),
-          t = (0, _.default)();
-        null != t && (e ? l.default.setVideoEnabled(!1) : (0, u.default)(() => l.default.setVideoEnabled(!0), S.AppContext.APP))
-      }
-    },
-    [S.RPCCommands.TOGGLE_SCREENSHARE]: {
-      scope: {
-        [C.RPC_SCOPE_CONFIG.ALL]: [S.OAuth2Scopes.RPC, S.OAuth2Scopes.RPC_SCREENSHARE_WRITE]
-      },
-      validation: e => (0, h.default)(e).optional().keys({
-        pid: e.number().optional().min(0)
-      }),
-      handler(e) {
-        let {
-          args: {
-            pid: t
-          }
-        } = e, l = d.default.getCurrentUserActiveStream(), u = d.default.getStreamerActiveStreamMetadata(), c = (0, o.default)(r.default, f.default), h = (0, _.default)();
-        null != h && (null != t && null != u && u.pid !== t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
-          pid: t
-        }) : null != l ? (0, i.stopOwnStream)(!1) : null != t && (0, E.isWindows)() ? (0, i.startStream)(h.guild_id, h.id, {
-          pid: t
-        }) : null != c ? (0, i.startStream)(h.guild_id, h.id, {
-          pid: c.pid
-        }) : (0, s.openModalLazy)(async () => {
-          let {
-            default: e
-          } = await n.el("451863").then(n.bind(n, "451863"));
-          return t => (0, a.jsx)(e, {
-            ...t,
-            guildId: h.guild_id,
-            analyticsLocation: S.AnalyticsLocations.ACTIVITY_RPC
-          })
-        }))
-      }
-    }
+  maybeStartHeartbeat() {
+    !this.heartbeatInterval.isStarted() && (this.logRunningGameHeartbeats(), this.heartbeatInterval.start(E, this.logRunningGameHeartbeats))
   }
+  stopHeartbeat() {
+    this.heartbeatInterval.stop(), this.runningGameKeys.clear()
+  }
+  handlePostConnectionOpen() {
+    d.default.getRunningGames().length > 0 && this.maybeStartHeartbeat()
+  }
+  constructor(...e) {
+    super(...e), c(this, "heartbeatInterval", new i.Interval), c(this, "runningGameKeys", new Set), c(this, "actions", {
+      RUNNING_GAMES_CHANGE: e => this.handleRunningGamesChanged(e),
+      LOGOUT: () => this.stopHeartbeat(),
+      CONNECTION_CLOSED: () => this.stopHeartbeat(),
+      POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
+    }), c(this, "handleRunningGamesChanged", e => {
+      let {
+        games: t
+      } = e;
+      if (0 === t.length) {
+        this.stopHeartbeat();
+        return
+      }
+      this.maybeStartHeartbeat()
+    }), c(this, "logRunningGameHeartbeats", () => {
+      let e = d.default.getRunningGames(),
+        t = {
+          rtc_connection_id: a.default.getRTCConnectionId(),
+          media_session_id: a.default.getMediaSessionId()
+        },
+        n = new Set;
+      e.forEach(e => {
+        var i, r;
+        let a = (0, d.gameKey)(e),
+          l = !this.runningGameKeys.has(a),
+          c = null !== (r = e.id) && void 0 !== r ? r : null === (i = s.default.getGameByName(e.name)) || void 0 === i ? void 0 : i.id;
+        o.default.track(_.AnalyticEvents.RUNNING_GAME_HEARTBEAT, {
+          game_id: c,
+          game_name: e.name,
+          game_distributor: e.distributor,
+          game_executable: (0, u.removeExecutablePathPrefix)(e.exePath),
+          game_detection_enabled: (0, d.isDetectionEnabled)(e),
+          initial_heartbeat: l,
+          ...t
+        }), n.add((0, d.gameKey)(e))
+      }), this.runningGameKeys = n
+    })
+  }
+}
+t.default = new I

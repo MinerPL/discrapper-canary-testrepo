@@ -1,2 +1,10 @@
 "use strict";
-e.exports = n.p + "81e00ae3bc00cc120481.svg"
+n.r(t), n.d(t, {
+  default: function() {
+    return r
+  }
+});
+var r = {};
+r = {
+  breadcrumbs: "Chemin de navigation"
+}

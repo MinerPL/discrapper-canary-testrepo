@@ -1,5 +1,11 @@
 "use strict";
 e.exports = {
-  disclaimer: "disclaimer__94d48",
-  modalContent: "modalContent_dd903e"
+  backButton: "backButton__91fb9",
+  banner: "banner__36618",
+  footer: "footer_cf774b",
+  productList: "productList_b12dd0",
+  subDetailsModal: "subDetailsModal_c2c023",
+  tabs: "tabs__88df8",
+  tabsText: "tabsText__00788",
+  wrapper: "wrapper__17603"
 }

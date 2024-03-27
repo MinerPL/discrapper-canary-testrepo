@@ -1,313 +1,77 @@
 "use strict";
-s.r(t), s.d(t, {
-  default: function() {
-    return H
+n.r(t);
+var i, r = n("442837"),
+  s = n("570140"),
+  a = n("41776"),
+  o = n("222677"),
+  l = n("598077"),
+  u = n("592125"),
+  d = n("594174");
+
+function _(e, t, n) {
+  return t in e ? Object.defineProperty(e, t, {
+    value: n,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[t] = n, e
+}
+let c = {};
+class E {
+  static ensure(e, t, n) {
+    var i, r;
+    let s = "".concat(e, ":").concat(t.name, ":").concat(null !== (i = t.id) && void 0 !== i ? i : "", ":").concat(n);
+    return c[s] = null !== (r = c[s]) && void 0 !== r ? r : new E
   }
-}), s("222007");
-var a = s("37983"),
-  l = s("884691"),
-  n = s("414456"),
-  i = s.n(n),
-  r = s("476042"),
-  o = s("509043"),
-  d = s("446674"),
-  u = s("77078"),
-  c = s("272030"),
-  E = s("534291"),
-  _ = s("339023"),
-  I = s("180243"),
-  T = s("726527"),
-  S = s("405645"),
-  f = s("915675"),
-  m = s("957255"),
-  N = s("211248"),
-  g = s("673220"),
-  h = s("462579"),
-  C = s("433487"),
-  R = s("987772"),
-  x = s("155207"),
-  L = s("781896"),
-  O = s("682344"),
-  A = s("483093"),
-  p = s("599110"),
-  M = s("895026"),
-  D = s("36402"),
-  v = s("986654"),
-  G = s("476324"),
-  j = s("983521"),
-  U = s("53948"),
-  P = s("49111"),
-  b = s("782340"),
-  B = s("693862"),
-  y = s("519078");
-let F = "DRAGGABLE_ROLE";
-
-function H(e) {
-  let {
-    setEditRoleId: t,
-    guild: s,
-    everyoneRole: n,
-    otherRoles: i,
-    setSelectedSection: r,
-    renderHeader: o,
-    headerHeight: u,
-    query: c
-  } = e, _ = (0, d.useStateFromStores)([D.default], () => D.default.getRoleMemberCount(s.id), [s.id]), I = (0, d.useStateFromStores)([m.default], () => m.default.getHighestRole(s), [s]), T = c.trim();
-  l.useEffect(() => {
-    (0, M.fetchMemberCounts)(s.id)
-  }, [s.id]);
-  let S = l.useRef(!1);
-  l.useEffect(() => {
-    !S.current && "" !== c.trimStart() && (p.default.track(P.AnalyticEvents.SEARCH_STARTED, {
-      search_type: "Roles"
-    }), S.current = !0)
-  }, [c]);
-  let f = l.useMemo(() => i.filter(e => (0, v.filterRole)(e, T)), [i, T]),
-    N = l.useMemo(() => [...i, n], [i, n]),
-    {
-      draggingId: g,
-      handleDragStart: h,
-      handleDragReset: C,
-      handleDragComplete: R
-    } = (0, j.default)(N),
-    x = l.useCallback(e => {
-      var l;
-      let {
-        row: n
-      } = e;
-      if (0 === f.length) return (0, a.jsx)(k, {}, "empty-role");
-      let o = f[n];
-      return (0, a.jsx)(w, {
-        role: o,
-        guild: s,
-        highestRole: I,
-        currentPosition: n,
-        memberCount: null !== (l = null == _ ? void 0 : _[o.id]) && void 0 !== l ? l : 0,
-        onDragStart: h,
-        onDragReset: C,
-        onDragComplete: R,
-        disableHover: null != g,
-        disableDrag: i.length !== f.length,
-        setEditRoleId: t,
-        setSelectedSection: r
-      }, o.id)
-    }, [f, s, I, _, h, C, R, g, i, t, r]);
-  return (0, a.jsx)(E.ListContentScroller, {
-    sections: [Math.max(f.length, 1)],
-    sectionHeight: u,
-    renderSection: o,
-    rowHeight: 61,
-    renderRow: x
-  })
+  constructor() {
+    _(this, "users", void 0), _(this, "fetched", void 0), this.fetched = !1, this.users = {}
+  }
 }
 
-function k() {
-  return (0, a.jsxs)("div", {
-    className: B.emptyRoles,
-    children: [(0, a.jsx)("div", {
-      className: y.dragSpacing
-    }), (0, a.jsx)(x.default, {}), (0, a.jsx)(u.Text, {
-      className: B.emptyRolesText,
-      variant: "text-md/semibold",
-      color: "text-muted",
-      children: b.default.Messages.ROLE_LIST_EMPTY
-    })]
-  })
-}
-
-function w(e) {
-  var t, n, o;
+function I(e) {
   let {
-    role: d,
-    guild: E,
-    highestRole: S,
-    currentPosition: m,
-    memberCount: x,
-    onDragStart: O,
-    onDragReset: A,
-    onDragComplete: p,
-    disableHover: M,
-    disableDrag: D,
-    setEditRoleId: v,
-    setSelectedSection: j
-  } = e, P = (0, G.useLockTooltip)(E, S, d), H = null != P, [k, w] = l.useState(!1), Y = l.useMemo(() => ({
-    type: F,
-    item: () => (O(d.id), {
-      id: d.id,
-      position: m
-    }),
-    canDrag: () => k && !H,
-    collect: e => ({
-      isDragging: e.isDragging()
-    }),
-    end: (e, t) => {
-      let s = t.getDropResult();
-      if (null == s) {
-        A();
-        return
-      }
-      p(s.roleId)
+    type: t,
+    messageId: n,
+    userId: i,
+    emoji: r,
+    reactionType: s
+  } = e, a = E.ensure(n, r, s);
+  if ("MESSAGE_REACTION_ADD" === t) {
+    let e = d.default.getUser(i);
+    null != e && (a.users[i] = e)
+  } else delete a.users[i]
+}
+class T extends(i = r.default.Store) {
+  getReactions(e, t, n, i, r) {
+    let s = E.ensure(t, n, r);
+    if (!s.fetched) {
+      let l = u.default.getChannel(e),
+        d = null != l ? l.getGuildId() : null;
+      if (null != d && a.default.isLurking(d)) return;
+      o.getReactors({
+        channelId: e,
+        messageId: t,
+        emoji: n,
+        limit: i,
+        type: r
+      }), s.fetched = !0
     }
-  }), [d, O, A, p, H, k]), [{
-    isDragging: W
-  }, z] = (0, r.useDrag)(Y), K = l.useMemo(() => ({
-    accept: F,
-    canDrop: () => !H,
-    collect: e => {
-      let t = e.getItem();
-      return null != t && e.isOver() && e.canDrop() ? {
-        dragSourcePosition: t.position
-      } : {
-        dragSourcePosition: null
-      }
-    },
-    drop: () => ({
-      roleId: d.id
-    })
-  }), [H, d]), [{
-    dragSourcePosition: Z
-  }, X] = (0, r.useDrop)(K), Q = l.useCallback(e => {
-    (0, c.openContextMenuLazy)(e, async () => {
-      let {
-        default: e
-      } = await s.el("726527").then(s.bind(s, "726527"));
-      return t => (0, a.jsx)(e, {
-        ...t,
-        role: d,
-        guild: E
-      })
-    })
-  }, [E, d]), J = (0, T.useHasGuildRoleItems)(E, d);
-  if (W) return (0, a.jsx)("div", {
-    ref: z,
-    className: i(B.roleRow, B.roleRowDragging)
-  });
-
-  function q() {
-    v(d.id)
+    return s.users
   }
-
-  function $() {
-    q(), j(U.GuildSettingsRoleEditSections.MEMBERS)
+}
+_(T, "displayName", "MessageReactionsStore"), t.default = new T(s.default, {
+  CONNECTION_OPEN: function() {
+    c = {}
+  },
+  MESSAGE_REACTION_ADD: I,
+  MESSAGE_REACTION_REMOVE: I,
+  MESSAGE_REACTION_ADD_USERS: function(e) {
+    let {
+      messageId: t,
+      users: n,
+      emoji: i,
+      reactionType: r
+    } = e, s = E.ensure(t, i, r);
+    n.forEach(e => s.users[e.id] = new l.default(e))
   }
-  return (0, a.jsxs)(u.Clickable, {
-    className: i(B.roleRow, {
-      [B.roleRowDisableHover]: M,
-      [B.containerDragBefore]: null != Z && m < Z,
-      [B.containerDragAfter]: null != Z && m > Z
-    }),
-    onClick: q,
-    onContextMenu: Q,
-    innerRef: e => z(X(e)),
-    "data-dnd-name": d.name,
-    "aria-label": b.default.Messages.ROLE_ROW_DESCRIPTION.format({
-      name: d.name,
-      count: "".concat(x)
-    }),
-    children: [(0, a.jsx)("div", {
-      className: i(B.dragIcon, y.dragSpacing, {
-        [B.dragIconHidden]: H || D
-      }),
-      onMouseEnter: () => w(!0),
-      onMouseLeave: () => w(!1),
-      children: (0, a.jsx)(g.default, {})
-    }), (0, a.jsxs)("div", {
-      className: i(B.roleNameContainer, y.roleNameSpacing),
-      children: [(null === (t = d.tags) || void 0 === t ? void 0 : t.guild_connections) === null ? (0, a.jsx)(_.default, {
-        className: B.roleFlowerStar,
-        color: d.colorString,
-        size: 24
-      }) : (0, a.jsx)(V, {
-        guildId: E.id,
-        role: d,
-        size: 24,
-        className: B.roleIcon,
-        defaultIconClassName: B.shield
-      }), null != P ? (0, a.jsx)(G.default, {
-        className: B.lock,
-        tooltipText: P
-      }) : null, (0, a.jsx)(u.Text, {
-        className: B.roleName,
-        color: "header-primary",
-        variant: "text-md/medium",
-        children: d.name
-      }), (null === (n = d.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null && (0, a.jsx)(f.default, {
-        className: B.subscriptionRoleIcon,
-        "aria-label": b.default.Messages.GUILD_ROLE_SUBSCRIPTION_PREMIUM_ROLE_ICON_LABEL
-      }), (null === (o = d.tags) || void 0 === o ? void 0 : o.is_guild_product_role) === !0 && (0, a.jsx)(I.default, {})]
-    }), (0, a.jsx)(u.Tooltip, {
-      text: b.default.Messages.ROLE_OVERVIEW_VIEW_MEMBERS,
-      "aria-label": b.default.Messages.ROLE_ROW_VIEW_MEMBERS.format({
-        count: "".concat(x)
-      }),
-      position: "right",
-      children: e => (0, a.jsxs)(u.Clickable, {
-        ...e,
-        className: i(B.memberCountContainer, y.memberSpacing),
-        onClick: $,
-        children: [(0, a.jsx)(u.Text, {
-          variant: "text-md/normal",
-          color: "none",
-          children: x
-        }), (0, a.jsx)(L.default, {
-          className: B.person,
-          width: 20,
-          height: 20
-        })]
-      })
-    }), (0, a.jsxs)("div", {
-      className: i(B.buttonsContainer, y.buttonsSpacing),
-      children: [(0, a.jsx)(N.default, {
-        className: i(B.circleButton, B.editButton),
-        tooltip: H ? b.default.Messages.VIEW : b.default.Messages.EDIT,
-        color: N.CircleIconButtonColors.SECONDARY,
-        size: N.CircleIconButtonSizes.SIZE_36,
-        icon: H ? (0, a.jsx)(h.default, {
-          width: 20,
-          height: 20
-        }) : (0, a.jsx)(R.default, {
-          width: 20,
-          height: 20
-        }),
-        onClick: q
-      }), (0, a.jsx)(N.default, {
-        className: B.circleButton,
-        tooltip: b.default.Messages.MORE,
-        color: N.CircleIconButtonColors.SECONDARY,
-        size: N.CircleIconButtonSizes.SIZE_36,
-        icon: (0, a.jsx)(C.default, {
-          width: 20,
-          height: 20
-        }),
-        onClick: Q,
-        disabled: !J
-      })]
-    })]
-  })
-}
-
-function V(e) {
-  var t;
-  let {
-    guildId: s,
-    role: l,
-    size: n,
-    enableTooltip: r,
-    className: d,
-    defaultIconClassName: u
-  } = e, c = (0, S.useRoleIcon)({
-    guildId: s,
-    roleId: l.id,
-    size: n
-  });
-  return null != c ? (0, a.jsx)(A.default, {
-    ...c,
-    className: d,
-    enableTooltip: r
-  }) : (0, a.jsx)(O.default, {
-    className: i(d, u),
-    color: null !== (t = l.colorString) && void 0 !== t ? t : (0, o.int2hex)(P.DEFAULT_ROLE_COLOR),
-    width: n,
-    height: n
-  })
-}
+})

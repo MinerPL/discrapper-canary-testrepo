@@ -1,30 +1,22 @@
 "use strict";
-t.r(u), t.d(u, {
-  default: function() {
-    return c
-  }
-});
-var n = t("37983");
-t("884691");
-var a = t("446674"),
-  l = t("77078"),
-  s = t("592407"),
-  r = t("817963"),
-  o = t("305961"),
-  d = t("49111"),
-  i = t("782340");
-
-function c(e, u) {
-  let t = (0, a.useStateFromStores)([o.default], () => null != e ? o.default.getGuild(e) : null),
-    {
-      canCreateExpressions: c,
-      canManageAllExpressions: S
-    } = (0, r.useManageResourcePermissions)(t);
-  return null != e && c && S ? (0, n.jsx)(l.MenuItem, {
-    id: i.default.Messages.SERVER_SETTINGS,
-    label: i.default.Messages.SERVER_SETTINGS,
-    action: () => {
-      s.default.open(e, d.GuildSettingsSections.SOUNDBOARD), null == u || u()
-    }
-  }) : null
+e.exports = {
+  bodyColumnMiddle: "bodyColumnMiddle__3b54b",
+  bodyColumnRight: "bodyColumnRight__9b982",
+  bodyText: "bodyText__3a7fe",
+  clickable: "clickable__2db4a",
+  giftNitroInfo: "giftNitroInfo__34003",
+  giftOptions: "giftOptions__0a52b",
+  giftRecipientInfo: "giftRecipientInfo__1fa09",
+  giftRecipientName: "giftRecipientName_dbbf6a",
+  interactiveColor: "interactiveColor_d7b551",
+  legacyPricingNotice: "legacyPricingNotice__6754c",
+  planSelectSeparator: "planSelectSeparator__6a5e3",
+  seasonalGiftBoxHeaderIcon: "seasonalGiftBoxHeaderIcon__1640f",
+  selectPlanChooseSubtitle: "selectPlanChooseSubtitle_ff0e1e",
+  selectPlanChooseTitle: "selectPlanChooseTitle__38b95",
+  selectPlanDivider: "selectPlanDivider_d482e7",
+  selectPlanTotalRow: "selectPlanTotalRow__5bf23",
+  stepBody: "stepBody__75621",
+  stepBodyCustomGift: "stepBodyCustomGift__19457",
+  trialPlanSelectHeader: "trialPlanSelectHeader__9a430"
 }

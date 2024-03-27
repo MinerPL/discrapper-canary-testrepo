@@ -1,17 +1,39 @@
 "use strict";
-
-function i(e) {
-  let t = document.body;
-  if (null == t) throw Error("[Utils] ClipboardUtils.copy(): assert failed: document.body != null");
-  let n = document.createRange(),
-    i = window.getSelection(),
-    r = document.createElement("textarea");
-  r.value = e, r.contentEditable = "true", r.style.visibility = "none", t.appendChild(r), n.selectNodeContents(r), null == i || i.removeAllRanges(), null == i || i.addRange(n), r.focus(), r.setSelectionRange(0, e.length);
-  let l = document.execCommand("copy");
-  return t.removeChild(r), l
-}
 n.r(t), n.d(t, {
-  copy: function() {
-    return i
+  default: function() {
+    return s
   }
-}), n("70102")
+});
+var i = n("735250");
+n("470079");
+var r = n("302454");
+
+function s(e) {
+  return e.heading = r.defaultRules.heading, e.lheading = r.defaultRules.lheading, e.list = r.defaultRules.list, e.paragraph = {
+    ...e.paragraph,
+    react: function(e, t, n) {
+      return (0, i.jsx)("p", {
+        children: t(e.content, n)
+      }, n.key)
+    }
+  }, e.link = {
+    ...e.link,
+    react: function(e, t, n) {
+      let s = {};
+      if (null != e.context) {
+        let t = e.context[e.target];
+        t && t.onClick ? (s.onClick = t.onClick, s.onContextMenu = t.onContextMenu) : s.onClick = t
+      }
+      if (null == s.onClick) {
+        var a;
+        s.href = null !== (a = (0, r.sanitizeUrl)(e.target)) && void 0 !== a ? a : void 0, s.target = "_blank"
+      }
+      return (0, i.jsx)("a", {
+        title: e.title,
+        ...s,
+        rel: "noreferrer",
+        children: t(e.content, n)
+      }, n.key)
+    }
+  }, e
+}

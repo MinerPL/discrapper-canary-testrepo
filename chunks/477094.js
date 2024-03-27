@@ -1,2 +1,4 @@
 "use strict";
-e.exports = n.p + "0edd70d963f125b17acd.svg"
+e.exports = {
+  wrapper: "wrapper_c4c084"
+}

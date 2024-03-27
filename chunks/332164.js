@@ -1,16 +1,12 @@
-"use strict";
-n.r(t), n.d(t, {
-  useUserIsInLargeGuilds: function() {
-    return l
-  }
-});
-var a = n("65597"),
-  s = n("525065");
+var r = n("138089"),
+  i = n("21358");
 
-function l() {
-  let e = (0, a.useStateFromStores)([s.default], () => {
-    let e = Object.values(s.default.getMemberCounts());
-    return e.some(e => e >= 200)
-  });
-  return e
+function a(t, n, o) {
+  return i() ? e.exports = a = Reflect.construct.bind() : e.exports = a = function(e, t, n) {
+    var i = [null];
+    i.push.apply(i, t);
+    var a = new(Function.bind.apply(e, i));
+    return n && r(a, n.prototype), a
+  }, e.exports.__esModule = !0, e.exports.default = e.exports, a.apply(null, arguments)
 }
+e.exports = a, e.exports.__esModule = !0, e.exports.default = e.exports

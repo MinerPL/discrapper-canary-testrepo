@@ -1,7 +1,9 @@
 "use strict";
-var s, r, n, i;
-a.r(t), a.d(t, {
-  TransferOwnershipVerificationTypes: function() {
-    return r
-  }
-}), (n = s || (s = {})).TRANFSER_OWNERSHIP = "TRANFSER_OWNERSHIP", n.CONFIRM_EMAIL_CODE = "CONFIRM_EMAIL_CODE", (i = r || (r = {})).MFA = "mfa", i.SMS = "sms", i.EMAIL = "email"
+e.exports = {
+  actions: "actions_a5a50a",
+  header: "header__35401",
+  infoMessage: "infoMessage__44330",
+  modal: "modal__20db0",
+  modalCloseButton: "modalCloseButton__5363e",
+  subheaderText: "subheaderText__87adb"
+}

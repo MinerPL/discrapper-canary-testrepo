@@ -1,37 +1,67 @@
 "use strict";
 n.r(t), n.d(t, {
+  ListActionType: function() {
+    return r
+  },
   default: function() {
-    return u
+    return a
   }
 });
-var a = n("37983");
-n("884691");
-var l = n("414456"),
-  s = n.n(l),
-  i = n("446674"),
-  r = n("386045"),
-  o = n("187004");
+var i, r, s = n("536895");
+(i = r || (r = {})).UPDATE_ITEM_COUNT = "UPDATE_ITEM_COUNT", i.SET_FOCUSED_INDEX = "SET_FOCUSED_INDEX";
 
-function u() {
-  let e = (0, i.useStateFromStoresArray)([r.default], () => {
-    var e;
-    let t = null === (e = r.default.getLastClipsSession()) || void 0 === e ? void 0 : e.newClipIds;
-    return null == t ? [] : r.default.getClips().slice(0, 4).filter(e => t.includes(e.id))
-  });
-  return (0, a.jsx)("div", {
-    className: s(o.thumbnailStack, {
-      [o["height-1"]]: 1 === e.length,
-      [o["height-2"]]: 2 === e.length,
-      [o["height-3"]]: 3 === e.length,
-      [o["height-max"]]: e.length >= 4
-    }),
-    children: Array.from({
-      ...e,
-      length: 4
-    }).map((e, t) => null != e ? (0, a.jsx)("img", {
-      alt: "",
-      className: o.thumbnail,
-      src: e.thumbnail
-    }, e.id) : (0, a.jsx)("div", {}, "placeholder-".concat(t))).reverse()
-  })
+function a(e, t) {
+  var n, i, r, a, o, l, u;
+  switch (t.type) {
+    case s.ActionType.NAVIGATE_UP:
+      ;
+      return i = 0, {
+        ...n = e,
+        focusedIndex: Math.max(0, n.focusedIndex - 1)
+      };
+    case s.ActionType.NAVIGATE_DOWN:
+      ;
+      return a = 0, {
+        ...r = e,
+        focusedIndex: Math.min(r.focusedIndex + 1, r.itemCount - 1)
+      };
+    case s.ActionType.NAVIGATE_START:
+      ;
+      return o = 0, {
+        ...e,
+        focusedIndex: 0
+      };
+    case s.ActionType.NAVIGATE_END:
+      ;
+      return u = 0, {
+        ...l = e,
+        focusedIndex: l.itemCount - 1
+      };
+    case "UPDATE_ITEM_COUNT":
+      return function(e, t) {
+        let {
+          itemCount: n
+        } = t;
+        return {
+          ...e,
+          itemCount: n,
+          focusedIndex: Math.min(n - 1, e.focusedIndex)
+        }
+      }(e, t);
+    case "SET_FOCUSED_INDEX":
+      return function(e, t) {
+        let {
+          index: n
+        } = t;
+        return {
+          ...e,
+          focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1))
+        }
+      }(e, t);
+    case s.ActionType.SELECT_FOCUSED_ITEM:
+      break;
+    default:
+      console.warn("Listbox navigator was given an unhandled action ".concat(t.type))
+  }
+  return e
 }

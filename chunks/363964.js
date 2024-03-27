@@ -1,12 +1,30 @@
 "use strict";
-var e = n("418689"),
-  o = n("345709");
-(t.exports = function(t, r) {
-  return o[t] || (o[t] = void 0 !== r ? r : {})
-})("versions", []).push({
-  version: "3.34.0",
-  mode: e ? "pure" : "global",
-  copyright: "\xa9 2014-2023 Denis Pushkarev (zloirock.ru)",
-  license: "https://github.com/zloirock/core-js/blob/v3.34.0/LICENSE",
-  source: "https://github.com/zloirock/core-js"
-})
+n.r(t), n.d(t, {
+  useSwitch: function() {
+    return i
+  }
+});
+var r = n("820002");
+
+function i(e, t, n) {
+  let {
+    labelProps: i,
+    inputProps: a,
+    isSelected: o,
+    isPressed: s,
+    isDisabled: u,
+    isReadOnly: c
+  } = (0, r.useToggle)(e, t, n);
+  return {
+    labelProps: i,
+    inputProps: {
+      ...a,
+      role: "switch",
+      checked: o
+    },
+    isSelected: o,
+    isPressed: s,
+    isDisabled: u,
+    isReadOnly: c
+  }
+}

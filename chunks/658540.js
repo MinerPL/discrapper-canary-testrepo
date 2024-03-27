@@ -1,2 +1,6 @@
 "use strict";
-e.exports = n.p + "b6214ab3caf86f14c4ca.svg"
+e.exports = {
+  welcomeCard: "welcomeCard__5834c",
+  welcomeCardBadge: "welcomeCardBadge_f54c35",
+  welcomeCardText: "welcomeCardText_fe7c5e"
+}

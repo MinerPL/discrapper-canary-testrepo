@@ -1,356 +1,183 @@
 "use strict";
-n.r(t), n.d(t, {
-  Title: function() {
-    return T
+n.r(e), n.d(e, {
+  BREADCRUMB_INTEGRATION_ID: function() {
+    return o
   },
-  SubTitle: function() {
-    return E
-  },
-  Image: function() {
-    return Image
-  },
-  Button: function() {
-    return b
-  },
-  Avatar: function() {
-    return _
-  },
-  GuildIcon: function() {
-    return I
-  },
-  ChannelIcon: function() {
-    return S
-  },
-  Input: function() {
-    return v
-  },
-  Block: function() {
-    return A
-  },
-  SubText: function() {
-    return O
-  },
-  AuthSpinner: function() {
-    return R
-  },
-  ActivityCount: function() {
-    return j
-  },
-  JoiningAs: function() {
-    return D
-  },
-  IncompatibleBrowser: function() {
-    return C
-  },
-  default: function() {
-    return L
+  Breadcrumbs: function() {
+    return s
   }
-}), n("834022");
-var s = n("37983");
-n("884691");
-var a = n("414456"),
-  i = n.n(a),
-  r = n("77078"),
-  l = n("843962"),
-  u = n("145131"),
-  o = n("476263"),
-  d = n("476765"),
-  c = n("637888"),
-  f = n("98013"),
-  p = n("701909"),
-  m = n("439932"),
-  g = n("49111"),
-  h = n("782340"),
-  x = n("2710");
-let N = r.Avatar;
-null == N && (N = () => null);
-let T = e => {
-    let {
-      className: t,
-      id: n,
-      children: a
-    } = e;
-    return (0, s.jsx)(r.Heading, {
-      variant: "heading-xl/semibold",
-      color: "header-primary",
-      className: i(x.title, t),
-      id: n,
-      children: a
-    })
-  },
-  E = e => {
-    let {
-      className: t,
-      children: n
-    } = e;
-    return (0, s.jsx)(r.Text, {
-      variant: "text-md/normal",
-      color: "header-secondary",
-      className: t,
-      children: n
-    })
-  },
-  Image = e => {
-    let {
-      className: t,
-      src: n
-    } = e;
-    return (0, s.jsx)("img", {
-      alt: "",
-      src: n,
-      className: i(x.image, t)
-    })
-  },
-  b = e => {
-    let {
-      className: t,
-      ...n
-    } = e, a = n.look === r.Button.Looks.LINK;
-    return (0, s.jsx)(r.Button, {
-      size: a ? r.Button.Sizes.MIN : r.Button.Sizes.LARGE,
-      fullWidth: !a,
-      className: i(t, {
-        [x.button]: !a,
-        [x.linkButton]: a
-      }),
-      ...n
-    })
-  };
-b.Looks = r.Button.Looks, b.Colors = r.Button.Colors, b.Sizes = r.Button.Sizes;
-let _ = e => {
-    let {
-      className: t,
-      src: n,
-      size: a
-    } = e;
-    return (0, s.jsx)(N, {
-      src: n,
-      size: a,
-      className: i(x.inviteLargeIcon, t),
-      "aria-hidden": !0
-    })
-  },
-  I = e => {
-    let {
-      guild: t,
-      size: n,
-      animate: a = !1,
-      className: i
-    } = e;
-    return (0, s.jsx)(o.default, {
-      active: !0,
-      guild: t,
-      size: n,
-      animate: a,
-      className: i
-    })
-  };
-I.Sizes = o.default.Sizes;
-let S = e => {
-  let {
-    className: t,
-    channel: n,
-    size: a
-  } = e;
-  return (0, s.jsx)(N, {
-    src: (0, l.getChannelIconURL)(n),
-    size: a,
-    className: i(x.inviteIcon, t),
-    "aria-hidden": !0
-  })
-};
-S.Sizes = r.AvatarSizes;
-let v = e => {
-    let {
-      label: t,
-      error: n,
-      placeholder: a,
-      value: l,
-      className: u,
-      inputClassName: o,
-      setRef: c,
-      type: f = "text",
-      onChange: p,
-      autoComplete: m,
-      autoFocus: g,
-      maxLength: h,
-      spellCheck: N,
-      name: T,
-      description: E,
-      required: b,
-      onFocus: _,
-      onBlur: I
-    } = e, S = (0, d.useUID)();
-    return (0, s.jsxs)(r.FormItem, {
-      title: t,
-      error: n,
-      className: u,
-      required: b,
-      tag: "label",
-      htmlFor: S,
-      children: [(0, s.jsx)(r.TextInput, {
-        name: T,
-        type: f,
-        value: l,
-        inputRef: c,
-        placeholder: a,
-        inputClassName: i(o, {
-          [x.inputError]: null != n
-        }),
-        "aria-label": t,
-        onChange: p,
-        autoComplete: m,
-        autoFocus: g,
-        maxLength: h,
-        spellCheck: N,
-        id: S,
-        onFocus: _,
-        onBlur: I
-      }), null != E ? (0, s.jsx)(r.FormText, {
-        type: r.FormText.Types.DESCRIPTION,
-        className: x.description,
-        children: E
-      }) : null]
-    })
-  },
-  A = e => {
-    let {
-      className: t,
-      children: n
-    } = e;
-    return (0, s.jsx)("div", {
-      className: i(x.block, t),
-      children: n
-    })
-  },
-  O = e => {
-    let {
-      className: t,
-      children: n,
-      isProminent: a
-    } = e;
-    return (0, s.jsx)(r.Text, {
-      variant: a ? "text-sm/normal" : "text-xs/normal",
-      className: i(x.subText, t),
-      children: n
-    })
-  },
-  R = e => {
-    let {
-      className: t
-    } = e;
-    return (0, s.jsx)(u.default, {
-      direction: u.default.Direction.VERTICAL,
-      align: u.default.Align.CENTER,
-      className: t,
-      children: (0, s.jsx)(c.default, {
-        className: x.spinnerVideo
-      })
-    })
-  },
-  j = e => {
-    let t, {
-      online: n,
-      total: a,
-      className: l,
-      flat: o,
-      textClassName: d
-    } = e;
-    return null == a ? null : (null != n && n > 0 && (t = (0, s.jsxs)("div", {
-      className: i(x.pill, x.pillOnline, o && x.pillFlat),
-      children: [(0, s.jsx)("i", {
-        className: x.pillIconOnline
-      }), (0, s.jsx)(r.Text, {
-        tag: "span",
-        className: i(x.pillMessage, d),
-        variant: "text-sm/normal",
-        children: h.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-          membersOnline: n
-        })
-      })]
-    })), (0, s.jsxs)(u.default, {
-      justify: u.default.Justify.CENTER,
-      className: l,
-      children: [t, (0, s.jsxs)("div", {
-        className: i(x.pill, o && x.pillFlat),
-        children: [(0, s.jsx)("i", {
-          className: x.pillIconTotal
-        }), (0, s.jsx)(r.Text, {
-          tag: "span",
-          className: i(x.pillMessage, d),
-          variant: "text-sm/normal",
-          children: h.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
-            count: a
+});
+var r = n("91320"),
+  i = n("648238"),
+  a = n("643487");
+let o = "Breadcrumbs";
+class s {
+  static __initStatic() {
+    this.id = o
+  }
+  __init() {
+    this.name = s.id
+  }
+  constructor(t) {
+    s.prototype.__init.call(this), this.options = {
+      console: !0,
+      dom: !0,
+      fetch: !0,
+      history: !0,
+      sentry: !0,
+      xhr: !0,
+      ...t
+    }
+  }
+  setupOnce() {
+    this.options.console && (0, i.addInstrumentationHandler)("console", u), this.options.dom && (0, i.addInstrumentationHandler)("dom", function(t) {
+      return function(e) {
+        let n;
+        let a = "object" == typeof t ? t.serializeAttribute : void 0,
+          o = "object" == typeof t && "number" == typeof t.maxStringLength ? t.maxStringLength : void 0;
+        o && o > 1024 && (("undefined" == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__) && i.logger.warn(`\`dom.maxStringLength\` cannot exceed 1024, but a value of ${o} was configured. Sentry will use 1024 instead.`), o = 1024), "string" == typeof a && (a = [a]);
+        try {
+          let t = e.event;
+          n = function(t) {
+            return !!t && !!t.target
+          }(t) ? (0, i.htmlTreeAsString)(t.target, {
+            keyAttrs: a,
+            maxStringLength: o
+          }) : (0, i.htmlTreeAsString)(t, {
+            keyAttrs: a,
+            maxStringLength: o
           })
-        })]
-      })]
-    }))
-  },
-  D = e => {
-    let {
-      user: t
-    } = e;
-    return null == t ? null : (0, s.jsxs)("div", {
-      className: x.joiningAs,
-      children: [(0, s.jsx)(r.Text, {
-        tag: "span",
-        variant: "text-md/normal",
-        color: "header-secondary",
-        children: h.default.Messages.MULTI_ACCOUNT_SERVER_INVITE_JOINING_AS
-      }), (0, s.jsx)(_, {
-        className: x.joiningAsAvatar,
-        src: t.getAvatarURL(void 0, 24),
-        size: r.AvatarSizes.SIZE_24,
-        "aria-label": t.username
-      }), (0, s.jsx)(r.Text, {
-        className: x.joiningAsUsername,
-        tag: "span",
-        variant: "text-md/semibold",
-        color: "header-primary",
-        children: t.username
-      })]
-    })
-  },
-  C = e => {
-    let {
-      className: t
-    } = e;
-    return (0, s.jsxs)(A, {
-      className: t,
-      children: [(0, s.jsx)(b, {
-        onClick: () => window.open((0, f.getCurrentPlatformDownloadURL)()),
-        children: h.default.Messages.NUF_DOWNLOAD_APP_BUTTON_PLATFORM.format({
-          platform: (0, f.getPlatformReadableName)()
+        } catch (t) {
+          n = "<unknown>"
+        }
+        0 !== n.length && (0, r.getCurrentHub)().addBreadcrumb({
+          category: `ui.${e.name}`,
+          message: n
+        }, {
+          event: e.event,
+          name: e.name,
+          global: e.global
         })
-      }), (0, s.jsx)(O, {
-        className: x.downloadButtonSubtext,
-        children: h.default.Messages.INCOMPATIBLE_BROWSER.format({
-          supportedBrowserURL: p.default.getArticleURL(g.HelpdeskArticles.SUPPORTED_BROWSERS)
-        })
-      })]
+      }
+    }(this.options.dom)), this.options.xhr && (0, i.addInstrumentationHandler)("xhr", c), this.options.fetch && (0, i.addInstrumentationHandler)("fetch", l), this.options.history && (0, i.addInstrumentationHandler)("history", d)
+  }
+  addSentryBreadcrumb(t) {
+    this.options.sentry && (0, r.getCurrentHub)().addBreadcrumb({
+      category: `sentry.${"transaction"===t.type?"transaction":"event"}`,
+      event_id: t.event_id,
+      level: t.level,
+      message: (0, i.getEventDescription)(t)
+    }, {
+      event: t
     })
+  }
+}
+s.__initStatic();
+
+function u(t) {
+  for (let e = 0; e < t.args.length; e++)
+    if ("ref=Ref<" === t.args[e]) {
+      t.args[e + 1] = "viewRef";
+      break
+    } let e = {
+    category: "console",
+    data: {
+      arguments: t.args,
+      logger: "console"
+    },
+    level: (0, i.severityLevelFromString)(t.level),
+    message: (0, i.safeJoin)(t.args, " ")
   };
-var L = e => {
+  if ("assert" === t.level) {
+    if (!1 !== t.args[0]) return;
+    e.message = `Assertion failed: ${(0,i.safeJoin)(t.args.slice(1)," ")||"console.assert"}`, e.data.arguments = t.args.slice(1)
+  }(0, r.getCurrentHub)().addBreadcrumb(e, {
+    input: t.args,
+    level: t.level
+  })
+}
+
+function c(t) {
   let {
-    className: t,
-    contentClassName: n,
-    tag: a = "section",
-    onSubmit: r,
-    children: l,
-    expanded: u = !1,
-    theme: o = g.ThemeTypes.DARK,
-    style: d
-  } = e;
-  return (0, s.jsxs)(a, {
-    "data-theme": o,
-    onSubmit: r,
-    style: d,
-    className: i(u ? x.authBoxExpanded : x.authBox, (0, m.getThemeClass)(o), t),
-    children: [(0, s.jsx)("div", {
-      className: x.discordLogo
-    }), (0, s.jsx)("div", {
-      className: i(x.centeringWrapper, n),
-      children: l
-    })]
+    startTimestamp: e,
+    endTimestamp: n
+  } = t, a = t.xhr[i.SENTRY_XHR_DATA_KEY];
+  if (!e || !n || !a) return;
+  let {
+    method: o,
+    url: s,
+    status_code: u,
+    body: c
+  } = a, l = {
+    xhr: t.xhr,
+    input: c,
+    startTimestamp: e,
+    endTimestamp: n
+  };
+  (0, r.getCurrentHub)().addBreadcrumb({
+    category: "xhr",
+    data: {
+      method: o,
+      url: s,
+      status_code: u
+    },
+    type: "http"
+  }, l)
+}
+
+function l(t) {
+  let {
+    startTimestamp: e,
+    endTimestamp: n
+  } = t;
+  if (!!n) {
+    if (!t.fetchData.url.match(/sentry_key/) || "POST" !== t.fetchData.method) {
+      if (t.error) {
+        let i = t.fetchData,
+          a = {
+            data: t.error,
+            input: t.args,
+            startTimestamp: e,
+            endTimestamp: n
+          };
+        (0, r.getCurrentHub)().addBreadcrumb({
+          category: "fetch",
+          data: i,
+          level: "error",
+          type: "http"
+        }, a)
+      } else {
+        let i = {
+            ...t.fetchData,
+            status_code: t.response && t.response.status
+          },
+          a = {
+            input: t.args,
+            response: t.response,
+            startTimestamp: e,
+            endTimestamp: n
+          };
+        (0, r.getCurrentHub)().addBreadcrumb({
+          category: "fetch",
+          data: i,
+          type: "http"
+        }, a)
+      }
+    }
+  }
+}
+
+function d(t) {
+  let e = t.from,
+    n = t.to,
+    o = (0, i.parseUrl)(a.WINDOW.location.href),
+    s = (0, i.parseUrl)(e),
+    u = (0, i.parseUrl)(n);
+  !s.path && (s = o), o.protocol === u.protocol && o.host === u.host && (n = u.relative), o.protocol === s.protocol && o.host === s.host && (e = s.relative), (0, r.getCurrentHub)().addBreadcrumb({
+    category: "navigation",
+    data: {
+      from: e,
+      to: n
+    }
   })
 }
