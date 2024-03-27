@@ -20,7 +20,7 @@ class S extends n.default {
       CHANNEL_SELECT: e => this.handleChannelSelect(e)
     }, this.handleConnectionOpen = e => {
       let _ = (0, s.getValorantUserSignupExperiment)("SignUpManager"),
-        E = (0, I.getValorantAdminSignupExperiment)("SignUpManager"),
+        E = (0, I.getValorantAdminSignupExperiment)("SignUpManager", !1),
         n = (0, r.isDismissibleContentDismissed)(t.DismissibleContent.GAME_ONE_USER_SIGNUPS);
       _ && !E && !n && o.default.dispatch({
         type: "ENABLE_USER_SIGN_UP",
@@ -31,9 +31,10 @@ class S extends n.default {
         guildId: _
       } = e;
       if (null == _) return;
-      let E = (0, I.getValorantAdminSignupExperiment)("SignUpManager"),
-        n = (0, r.isDismissibleContentDismissed)(t.DismissibleContent.GAME_ONE_USER_SIGNUPS);
-      if (!E || n) return;
+      let E = (0, r.isDismissibleContentDismissed)(t.DismissibleContent.GAME_ONE_USER_SIGNUPS);
+      if (E) return;
+      let n = (0, I.getValorantAdminSignupExperiment)("SignUpManager");
+      if (!n) return;
       let s = a.default.getGuild(_);
       if (null != s) s.hasFeature(T.GuildFeatures.VALORANT_L30) && i.default.can(T.Permissions.MANAGE_GUILD, s) && o.default.dispatch({
         type: "ENABLE_GUILD_SIGN_UP",
