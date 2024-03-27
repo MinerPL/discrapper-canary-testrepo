@@ -54,6 +54,7 @@ function I(e) {
       theme: m.ThemeTypes.DARK,
       children: (0, l.jsx)(f.default, {
         text: S,
+        tooltipClass: g.tooltip,
         children: (0, l.jsx)(r.ThemeContextProvider, {
           theme: _,
           children: (0, l.jsx)(r.BlobMask, {

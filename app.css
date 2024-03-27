@@ -43755,6 +43755,10 @@ html .invoiceCancelRow__75e19 {
     z-index: -1
 }
 
+.tooltip__13c08 {
+    max-width: 220px
+}
+
 .pill__357e7 {
     position: absolute;
     top: 0;
