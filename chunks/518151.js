@@ -26,7 +26,7 @@ function _(e) {
     content: t,
     isPreview: n
   } = e, a = l.PremiumMarketingComponentProperties.fromBinary((0, s.base64decode)(t));
-  return "announcementModalVariant1" !== a.properties.oneofKind ? null : !n && (0, c.isDismissibleContentDismissed)(Number(a.properties.announcementModalVariant1.dismissKey)) ? null : (n && (a.properties.announcementModalVariant1.dismissKey = ""), a)
+  return "announcementModalVariant1" !== a.properties.oneofKind ? null : 0 === a.properties.announcementModalVariant1.dismissKey.trim().length || !n && (0, c.isDismissibleContentDismissed)(Number(a.properties.announcementModalVariant1.dismissKey)) ? null : (n && (a.properties.announcementModalVariant1.dismissKey = ""), a)
 }
 
 function C(e) {
