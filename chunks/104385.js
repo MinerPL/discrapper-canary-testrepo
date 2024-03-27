@@ -113,12 +113,12 @@ let N = () => (0, a.jsxs)(a.Fragment, {
         variant: "heading-lg/extrabold",
         color: "always-white",
         className: m.title,
-        children: _.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+        children: _.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_TITLE
       }), (0, a.jsx)(o.Text, {
         className: m.textBody,
         variant: "text-sm/normal",
         color: "always-white",
-        children: _.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+        children: _.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_SUBTITLE
       })]
     })]
   }),

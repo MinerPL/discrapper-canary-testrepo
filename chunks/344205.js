@@ -6,8 +6,8 @@ a.r(t), a.d(t, {
 });
 var s = a("37983");
 a("884691");
-var r = a("146606"),
-  l = a("65597"),
+var l = a("146606"),
+  r = a("65597"),
   n = a("77078"),
   o = a("174727"),
   i = a("206230"),
@@ -23,7 +23,7 @@ function c(e) {
     hours: f,
     minutes: m,
     seconds: C
-  } = (0, o.default)(t), p = (0, l.useStateFromStores)([i.default], () => i.default.useReducedMotion), g = (0, r.useSpring)({
+  } = (0, o.default)(t), p = (0, r.useStateFromStores)([i.default], () => i.default.useReducedMotion), g = (0, l.useSpring)({
     transform: "translateX(-50%) ".concat(a ? "translateY(-100%)" : "translateY(0%)"),
     opacity: a ? 1 : 0,
     config: {
@@ -32,7 +32,7 @@ function c(e) {
     },
     immediate: p
   });
-  return (0, s.jsxs)(r.animated.div, {
+  return (0, s.jsxs)(l.animated.div, {
     className: u.countDownWrapper,
     style: {
       backgroundColor: c.backgroundColor,
@@ -42,7 +42,9 @@ function c(e) {
     },
     children: [null != c.iconSrc && (0, s.jsx)("img", {
       src: c.iconSrc,
-      alt: "shy"
+      className: u.countdownIcon,
+      alt: "",
+      "aria-hidden": !0
     }), (0, s.jsx)(n.Heading, {
       variant: "heading-md/medium",
       className: u.countdownLabel,
