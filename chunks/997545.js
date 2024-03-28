@@ -86,7 +86,13 @@ class L extends E.default {
   }
   initialize(e) {
     let t;
-    this.logger.info("Creating connection to ".concat(e.address, ":").concat(e.port, " with audio ssrc: ").concat(e.ssrc)), this.audioSSRC = e.ssrc, this.streamUserId = e.streamUserId, this.initializeStreamParameters(e.streamParameters), e.streamParameters = this.videoStreamParameters;
+    this.logger.info("Creating connection to ".concat(e.address, ":").concat(e.port, " with audio ssrc: ").concat(e.ssrc)), this.audioSSRC = e.ssrc, this.streamUserId = e.streamUserId, this.initializeStreamParameters(e.streamParameters), e.streamParameters = [{
+      type: O.MediaTypes.AUDIO,
+      ssrc: this.audioSSRC,
+      rid: "",
+      maxBitrate: 64e3,
+      soundshare: this.context === p.MediaEngineContextTypes.STREAM
+    }, ...this.videoStreamParameters];
     let n = (0, A.getVoiceEngine)(),
       i = null != n.getCodecCapabilities ? n.getCodecCapabilities : n.getSupportedVideoCodecs;
     if (null != n.createOwnStreamConnectionWithOptions) s = this.context === p.MediaEngineContextTypes.STREAM && this.streamUserId === this.ids.userId ? n.createOwnStreamConnectionWithOptions : n.createVoiceConnectionWithOptions;
@@ -407,7 +413,9 @@ class L extends E.default {
     let {
       resolution: t,
       frameRate: n
-    } = e.quality, i = t <= 480 ? t / 3 * 4 : t / 9 * 16, r = null;
+    } = e.quality, i = t <= 480 ? t / 3 * 4 : t / 9 * 16;
+    (0 === t || t > 1080) && this.handleVideoEncoderFallback("H265");
+    let r = null;
     if (null != e.desktopDescription ? r = e.desktopDescription.id : null != e.cameraDescription && (r = "".concat(e.cameraDescription.videoDeviceGuid, ":").concat(e.cameraDescription.audioDeviceGuid)), this.goLiveSourceIdentifier === r) {
       this.setDesktopEncodingOptions(i, t, n);
       return

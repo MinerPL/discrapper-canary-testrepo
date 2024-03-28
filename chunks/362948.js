@@ -246,7 +246,7 @@ t.default = function(e) {
         cellSpacing: 0,
         children: [(0, i.jsx)("thead", {
           children: (0, i.jsxs)("tr", {
-            className: T.tableRow,
+            className: T.__invalid_tableRow,
             children: [(0, i.jsx)(S, {
               className: T.tableRowHeading,
               children: I.default.Messages.BOOSTING_MARKETING_REDESIGN_EXPERIMENT_TIER_COMPARISON_TABLE_COLUMN_HEADING_PERKS
@@ -265,7 +265,7 @@ t.default = function(e) {
             })]
           })
         }), (0, i.jsx)("tbody", {
-          className: T.tableBody,
+          className: T.__invalid_tableBody,
           children: f.map((e, r) => {
             let u = n === r;
 
@@ -273,7 +273,7 @@ t.default = function(e) {
               s(r)
             }
             return void 0 === e.predicate ? (0, i.jsxs)("tr", {
-              className: T.tableRow,
+              className: T.__invalid_tableRow,
               children: [(0, i.jsx)("th", {
                 className: a()(T.tableCell, T.tableCellWrapper),
                 scope: "row",

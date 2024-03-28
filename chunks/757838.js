@@ -1,0 +1,31 @@
+"use strict";
+var n = r("118658"),
+  i = r("439927"),
+  o = r("195661"),
+  a = r("121197"),
+  u = r("201023"),
+  s = r("302606"),
+  c = r("316660"),
+  l = r("908723"),
+  f = r("947226"),
+  p = r("748442"),
+  h = r("651394"),
+  d = r("953495"),
+  g = r("758442"),
+  y = n.isBrowser("Chrome") ? g : function(t) {};
+t.exports = {
+  onBeforeInput: i,
+  onBlur: o,
+  onCompositionStart: a,
+  onCopy: u,
+  onCut: s,
+  onDragOver: c,
+  onDragStart: l,
+  onFocus: f,
+  onInput: p,
+  onKeyDown: h,
+  onPaste: d,
+  onSelect: g,
+  onMouseUp: y,
+  onKeyUp: y
+}

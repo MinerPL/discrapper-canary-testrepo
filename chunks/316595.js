@@ -1,0 +1,51 @@
+"use strict";
+n.r(t), n.d(t, {
+  default: function() {
+    return f
+  }
+}), n("653041");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("442837"),
+  i = n("524437"),
+  r = n("243778"),
+  o = n("79390"),
+  u = n("966153"),
+  d = n("375954"),
+  c = n("423490");
+
+function f(e) {
+  let {
+    channel: t,
+    isOmniMenuOpen: n,
+    openOmniMenu: f,
+    children: h
+  } = e, m = (0, s.useStateFromStores)([d.default], () => d.default.hasCurrentUserSentMessageSinceAppStart()), p = (0, c.useActivitiesInTextOnboardingVisibility)(t, "ChannelOmniButtonNux"), E = (0, o.useCanPostPollsInChannel)(t), C = (0, o.useCanShowPollsChatInputCoachmarkInGuild)(null == t ? void 0 : t.guild_id), g = l.useMemo(() => {
+    let e = [];
+    return m && (null == p ? void 0 : p.desktopThrobberEnabled) && e.push(i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX), E && C && e.push(i.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK), e
+  }, [m, null == p ? void 0 : p.desktopThrobberEnabled, E, C]);
+  return (0, a.jsx)(r.default, {
+    contentTypes: g,
+    children: e => {
+      let {
+        visibleContent: t,
+        markAsDismissed: l
+      } = e;
+      switch (t) {
+        case i.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX:
+          return (0, a.jsx)(c.OmniButtonNuxAnimation, {
+            children: h
+          });
+        case i.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK:
+          return (0, a.jsx)(u.default, {
+            markAsDismissed: l,
+            onClickCta: f,
+            shouldShow: !n,
+            children: h
+          });
+        default:
+          return h
+      }
+    }
+  })
+}

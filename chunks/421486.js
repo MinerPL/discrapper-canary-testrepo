@@ -61,7 +61,7 @@ let C = a.memo(function(e) {
       onClick: C,
       className: l()(R.avatarAndTextContainer, R.serverContainer),
       children: [(0, s.jsx)("div", {
-        className: R.avatars,
+        className: R.__invalid_avatars,
         children: (0, s.jsx)(E.default, {
           maxGuilds: r,
           guilds: S,
@@ -165,9 +165,9 @@ let g = a.memo(function(e) {
         children: e => (0, s.jsxs)(d.Clickable, {
           ...e,
           onClick: M,
-          className: l()(R.avatarAndTextContainer, R.friendsContainer),
+          className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
           children: [(0, s.jsx)("div", {
-            className: R.avatars,
+            className: R.__invalid_avatars,
             children: (0, s.jsx)(c.default, {
               maxUsers: u,
               users: A,
@@ -252,9 +252,9 @@ let g = a.memo(function(e) {
         children: e => (0, s.jsxs)(d.Clickable, {
           ...e,
           onClick: G(O.UserProfileSections.MUTUAL_FRIENDS),
-          className: l()(R.avatarAndTextContainer, R.friendsContainer),
+          className: l()(R.avatarAndTextContainer, R.__invalid_friendsContainer),
           children: [(0, s.jsx)("div", {
-            className: R.avatars,
+            className: R.__invalid_avatars,
             children: (0, s.jsx)(c.default, {
               maxUsers: _,
               users: C,
@@ -279,7 +279,7 @@ let g = a.memo(function(e) {
           onClick: G(O.UserProfileSections.MUTUAL_GUILDS),
           className: l()(R.avatarAndTextContainer, R.serverContainer),
           children: [!P && (0, s.jsx)("div", {
-            className: R.avatars,
+            className: R.__invalid_avatars,
             children: (0, s.jsx)(E.default, {
               maxGuilds: _,
               guilds: g,
@@ -322,7 +322,7 @@ t.default = a.memo(function(e) {
     className: l()(R.mainContainer, a),
     children: [(0, s.jsx)(d.Heading, {
       variant: "eyebrow",
-      className: R.title,
+      className: R.__invalid_title,
       children: p.default.Messages.USER_PROFILE_MUTUALS_TITLE
     }), N && (0, s.jsx)(L, {
       user: i,

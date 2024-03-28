@@ -205,7 +205,7 @@ function M(e) {
       closeOnScroll: !1,
       ignoreModalClicks: !0,
       children: () => (0, i.jsx)("div", {
-        className: O.popoutTarget
+        className: O.__invalid_popoutTarget
       })
     })
   }) : null

@@ -40,7 +40,7 @@ let T = e => {
       "aria-label": !!f && void 0,
       children: e => (0, i.jsx)("span", {
         ...e,
-        className: s()(E.username, _),
+        className: s()(E.__invalid_username, _),
         style: null != I ? {
           color: I
         } : void 0,

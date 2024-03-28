@@ -1,45 +1,45 @@
-    "use strict";
-    a.r(t), a.d(t, {
-      default: function() {
-        return o
-      },
-      getChannelVideoLimit: function() {
-        return r
-      }
-    });
-    var d = a("442837"),
-      n = a("430824"),
-      c = a("938475"),
-      i = a("981631");
+"use strict";
+n.r(t), n.d(t, {
+  default: function() {
+    return u
+  },
+  getChannelVideoLimit: function() {
+    return o
+  }
+});
+var i = n("442837"),
+  r = n("430824"),
+  a = n("938475"),
+  l = n("981631");
 
-    function o(e) {
-      return (0, d.useStateFromStoresObject)([c.default, n.default], () => {
-        let t = c.default.countVoiceStatesForChannel(e.id),
-          a = n.default.getGuild(e.getGuildId());
-        return null == a ? {
-          reachedLimit: !1,
-          limit: -1
-        } : e.type === i.ChannelTypes.GUILD_STAGE_VOICE ? {
-          reachedLimit: t > a.maxStageVideoChannelUsers,
-          limit: a.maxStageVideoChannelUsers
-        } : {
-          reachedLimit: a.maxVideoChannelUsers > 0 && t > a.maxVideoChannelUsers,
-          limit: a.maxVideoChannelUsers
-        }
-      }, [e])
+function u(e) {
+  return (0, i.useStateFromStoresObject)([a.default, r.default], () => {
+    let t = a.default.countVoiceStatesForChannel(e.id),
+      n = r.default.getGuild(e.getGuildId());
+    return null == n ? {
+      reachedLimit: !1,
+      limit: -1
+    } : e.type === l.ChannelTypes.GUILD_STAGE_VOICE ? {
+      reachedLimit: t > n.maxStageVideoChannelUsers,
+      limit: n.maxStageVideoChannelUsers
+    } : {
+      reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
+      limit: n.maxVideoChannelUsers
     }
+  }, [e])
+}
 
-    function r(e) {
-      let t = c.default.countVoiceStatesForChannel(e.id),
-        a = n.default.getGuild(e.getGuildId());
-      return null == a ? {
-        reachedLimit: !1,
-        limit: -1
-      } : e.type === i.ChannelTypes.GUILD_STAGE_VOICE ? {
-        reachedLimit: t > a.maxStageVideoChannelUsers,
-        limit: a.maxStageVideoChannelUsers
-      } : {
-        reachedLimit: a.maxVideoChannelUsers > 0 && t > a.maxVideoChannelUsers,
-        limit: a.maxVideoChannelUsers
-      }
-    }
+function o(e) {
+  let t = a.default.countVoiceStatesForChannel(e.id),
+    n = r.default.getGuild(e.getGuildId());
+  return null == n ? {
+    reachedLimit: !1,
+    limit: -1
+  } : e.type === l.ChannelTypes.GUILD_STAGE_VOICE ? {
+    reachedLimit: t > n.maxStageVideoChannelUsers,
+    limit: n.maxStageVideoChannelUsers
+  } : {
+    reachedLimit: n.maxVideoChannelUsers > 0 && t > n.maxVideoChannelUsers,
+    limit: n.maxVideoChannelUsers
+  }
+}

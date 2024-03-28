@@ -394,7 +394,7 @@ let H = (0, g.cssValueToNumber)(o.default.STICKERS_CONSTANTS_STICKER_PICKER_BREA
         className: F.wrapper,
         children: [null != l && 0 === l.sendable.length && 0 === l.sendableWithPremium.length ? (0, i.jsx)(u.default, {
           message: V.default.Messages.NO_STICKER_SEARCH_RESULTS_WITH_SUGGESTIONS,
-          className: F.noSearchResultsContainer,
+          className: F.__invalid_noSearchResultsContainer,
           noResultsImageURL: x,
           suggestions: (0, i.jsx)(eo, {
             onSuggestionClick: e => (0, T.setSearchQuery)(e, !0)

@@ -71,7 +71,7 @@ function C(e) {
   let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
     w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
   null != M && M ? d = (0, i.jsx)(A.default, {
-    className: a()(R.connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
+    className: a()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
     href: w,

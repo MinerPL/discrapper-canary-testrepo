@@ -1,4 +1,4 @@
-var r = e("544140");
-t.exports = function(t) {
-  return (null == t ? 0 : t.length) ? r(t, 1) : []
+var l = n("544140");
+e.exports = function(e) {
+  return (null == e ? 0 : e.length) ? l(e, 1) : []
 }

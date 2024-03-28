@@ -1,7 +1,7 @@
 "use strict";
-var n = r("24033");
+var e = r("24033");
 t.exports = function() {
-  var t = n(this),
-    e = "";
-  return t.hasIndices && (e += "d"), t.global && (e += "g"), t.ignoreCase && (e += "i"), t.multiline && (e += "m"), t.dotAll && (e += "s"), t.unicode && (e += "u"), t.unicodeSets && (e += "v"), t.sticky && (e += "y"), e
+  var t = e(this),
+    n = "";
+  return t.hasIndices && (n += "d"), t.global && (n += "g"), t.ignoreCase && (n += "i"), t.multiline && (n += "m"), t.dotAll && (n += "s"), t.unicode && (n += "u"), t.unicodeSets && (n += "v"), t.sticky && (n += "y"), n
 }

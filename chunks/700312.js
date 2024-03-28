@@ -1,17 +1,17 @@
 "use strict";
-var n = r("581031"),
+var e = r("581031"),
   i = r("959318"),
-  o = r("714050"),
-  u = r("676125"),
-  c = n("".charAt),
-  a = n("".charCodeAt),
-  s = n("".slice),
+  u = r("714050"),
+  c = r("676125"),
+  o = e("".charAt),
+  s = e("".charCodeAt),
+  a = e("".slice),
   f = function(t) {
-    return function(e, r) {
-      var n, f, l = o(u(e)),
-        v = i(r),
-        p = l.length;
-      return v < 0 || v >= p ? t ? "" : void 0 : (n = a(l, v)) < 55296 || n > 56319 || v + 1 === p || (f = a(l, v + 1)) < 56320 || f > 57343 ? t ? c(l, v) : n : t ? s(l, v, v + 2) : (n - 55296 << 10) + (f - 56320) + 65536
+    return function(n, r) {
+      var e, f, l = u(c(n)),
+        h = i(r),
+        v = l.length;
+      return h < 0 || h >= v ? t ? "" : void 0 : (e = s(l, h)) < 55296 || e > 56319 || h + 1 === v || (f = s(l, h + 1)) < 56320 || f > 57343 ? t ? o(l, h) : e : t ? a(l, h, h + 2) : (e - 55296 << 10) + (f - 56320) + 65536
     }
   };
 t.exports = {

@@ -34,7 +34,7 @@ function S(e) {
   }));
   return (0, i.jsx)("div", {
     className: s()(T.content, T.streamHidden, {
-      [T.small]: h
+      [T.__invalid_small]: h
     }),
     children: (0, i.jsx)(E.default, {
       className: T.streamHiddenEmptyState,

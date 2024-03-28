@@ -122,7 +122,7 @@ let z = (0, U.cssValueToNumber)(E.default.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADD
         showEmojiFavoriteTooltip: es,
         channelGuildId: g,
         category: r.sectionId,
-        selectedItemClassName: K.selectedItem,
+        selectedItemClassName: K.__invalid_selectedItem,
         messageId: L,
         isBurstReaction: D,
         inNitroLockedSection: r.isNitroLocked

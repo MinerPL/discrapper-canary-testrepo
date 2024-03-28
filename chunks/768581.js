@@ -314,7 +314,8 @@ function G(e) {
     id: t,
     hash: n,
     size: i = c.AVATAR_SIZE,
-    keepAspectRatio: r = !1
+    keepAspectRatio: r = !1,
+    format: s
   } = e;
   return h({
     endpoint: c.Endpoints.APPLICATION_ICON,
@@ -323,7 +324,8 @@ function G(e) {
     hash: n,
     size: i,
     canAnimate: !1,
-    keepAspectRatio: r
+    keepAspectRatio: r,
+    format: s
   })
 }
 

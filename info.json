@@ -1,10 +1,8 @@
 {
-  "buildNumber": "279124",
-  "versionHash": "8fabc81089e9f7dd92bb1a4898f3fc3abcd3dace",
-  "override": [
-    {
-      "id": "229353",
-      "name": "strings.js"
-    }
+  "buildNumber": "279519",
+  "versionHash": "0e6229f96f388a45d0ea4b965761b0728c44542b",
+  "strings": [
+    "375964",
+    "924658"
   ]
 }

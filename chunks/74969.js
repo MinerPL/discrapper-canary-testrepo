@@ -1,0 +1,121 @@
+"use strict";
+r.r(t);
+var n = r("470079"),
+  a = r.n(n),
+  o = r("476400"),
+  i = r.n(o),
+  l = r("844303"),
+  u = r("707850"),
+  s = r("13942"),
+  f = r("464854"),
+  c = r("465995"),
+  d = function(e) {
+    var t = e.onChange,
+      r = e.onSwatchHover,
+      n = e.hex,
+      o = e.colors,
+      i = e.width,
+      d = e.triangle,
+      p = e.styles,
+      h = e.className,
+      b = "transparent" === n,
+      v = function(e, r) {
+        s.isValidHex(e) && t({
+          hex: e,
+          source: "hex"
+        }, r)
+      },
+      g = (0, l.default)((0, u.default)({
+        default: {
+          card: {
+            width: i,
+            background: "#fff",
+            boxShadow: "0 1px rgba(0,0,0,.1)",
+            borderRadius: "6px",
+            position: "relative"
+          },
+          head: {
+            height: "110px",
+            background: n,
+            borderRadius: "6px 6px 0 0",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            position: "relative"
+          },
+          body: {
+            padding: "10px"
+          },
+          label: {
+            fontSize: "18px",
+            color: s.getContrastingColor(n),
+            position: "relative"
+          },
+          triangle: {
+            width: "0px",
+            height: "0px",
+            borderStyle: "solid",
+            borderWidth: "0 10px 10px 10px",
+            borderColor: "transparent transparent " + n + " transparent",
+            position: "absolute",
+            top: "-10px",
+            left: "50%",
+            marginLeft: "-10px"
+          },
+          input: {
+            width: "100%",
+            fontSize: "12px",
+            color: "#666",
+            border: "0px",
+            outline: "none",
+            height: "22px",
+            boxShadow: "inset 0 0 0 1px #ddd",
+            borderRadius: "4px",
+            padding: "0 7px",
+            boxSizing: "border-box"
+          }
+        },
+        "hide-triangle": {
+          triangle: {
+            display: "none"
+          }
+        }
+      }, void 0 === p ? {} : p), {
+        "hide-triangle": "hide" === d
+      });
+    return a().createElement("div", {
+      style: g.card,
+      className: "block-picker " + (void 0 === h ? "" : h)
+    }, a().createElement("div", {
+      style: g.triangle
+    }), a().createElement("div", {
+      style: g.head
+    }, b && a().createElement(f.Checkboard, {
+      borderRadius: "6px 6px 0 0"
+    }), a().createElement("div", {
+      style: g.label
+    }, n)), a().createElement("div", {
+      style: g.body
+    }, a().createElement(c.default, {
+      colors: o,
+      onClick: v,
+      onSwatchHover: r
+    }), a().createElement(f.EditableInput, {
+      style: {
+        input: g.input
+      },
+      value: n,
+      onChange: v
+    })))
+  };
+d.propTypes = {
+  width: i().oneOfType([i().string, i().number]),
+  colors: i().arrayOf(i().string),
+  triangle: i().oneOf(["top", "hide"]),
+  styles: i().object
+}, d.defaultProps = {
+  width: 170,
+  colors: ["#D9E3F0", "#F47373", "#697689", "#37D67A", "#2CCCE4", "#555555", "#dce775", "#ff8a65", "#ba68c8"],
+  triangle: "top",
+  styles: {}
+}, (0, f.ColorWrap)(d)

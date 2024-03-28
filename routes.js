@@ -1005,6 +1005,7 @@
                     GUILD_HOME_HEADER: (_, E) => "/guilds/".concat(_, "/home-headers/").concat(E, ".jpg"),
                     GUILD_WELCOME_SCREEN: _ => "/guilds/".concat(_, "/welcome-screen"),
                     GUILD_MEMBER_VERIFICATION: _ => "/guilds/".concat(_, "/member-verification"),
+                    GUILD_JOIN_REQUEST_BY_ID: _ => "/join-requests/".concat(_),
                     GUILD_JOIN_REQUESTS: _ => "/guilds/".concat(_, "/requests"),
                     USER_JOIN_REQUEST_GUILDS: "/users/@me/join-request-guilds",
                     GUILD_MEMBER_REQUEST_TO_JOIN: _ => "/guilds/".concat(_, "/requests/@me"),
@@ -1461,6 +1462,7 @@
                     GUILD_PRODUCTS: _ => "/guilds/".concat(_, "/products"),
                     GUILD_PRODUCT_LISTINGS: (_, E) => "/guilds/".concat(_, "/products/listings").concat(null != E ? "/".concat(E) : ""),
                     GUILD_PRODUCT_ATTACHMENT_DOWNLOAD: (_, E, e) => "/guilds/".concat(_, "/products/listings/").concat(E, "/attachments/").concat(e, "/download"),
+                    GUILD_CONVERT_TO_CLAN: _ => "/clan/".concat(_),
                     TENOR_ASSET_PATH: "/tenor",
                     EMAIL_SETTINGS: "/users/@me/email-settings",
                     ACCOUNT_NOTIFICATION_SETTINGS: "/users/@me/notification-settings",
@@ -2610,7 +2612,7 @@
                     dsn: "https://fa97a90475514c03a42f80cd36d147c4@sentry.io/140984",
                     autoSessionTracking: !1,
                     environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                    release: "discord_web-8fabc81089e9f7dd92bb1a4898f3fc3abcd3dace",
+                    release: "discord_web-0e6229f96f388a45d0ea4b965761b0728c44542b",
                     beforeSend: _ => {
                         var E, e;
                         return !(null != (E = _).exception && null != E.exception.values && E.exception.values.every(_ => null == _.stacktrace || null != _.stacktrace.frames && 1 === _.stacktrace.frames.length) && "canary" !== window.GLOBAL_ENV.RELEASE_CHANNEL || a.some(_ => window.navigator.appVersion.toLowerCase().indexOf(_) >= 0)) && !R() && !("Aborted" === (e = _).message || "cancel captcha" === e.message) && t() ? _ : null
@@ -2628,7 +2630,7 @@
                     })],
                     ignoreErrors: ["EADDRINUSE", "BetterDiscord", "EnhancedDiscord", "Powercord", "RecipeWebview", "jQuery", "localStorage", "has already been declared", "Cannot call hover while not dragging.", "Cannot call beginDrag while dragging.", "getHostNode", "setupCSS", "on missing remote object", "ChunkLoadError", "Cannot find module 'discord_utils'", "Failed to setup Krisp module", "Error invoking remote method 'DISCORD_NATIVE_MODULES_INSTALL': Error: Module updater is not available!", "Non-Error promise rejection captured with keys:", "Request has been terminated", "Cannot resolve a Slate point from DOM point", "Failed to fetch", "no suitable image found", "ResizeObserver loop limit exceeded", "ResizeObserver loop completed with undelivered notifications.", "The play() request was interrupted", "could not play audio", "notosans-400-normalitalic"],
                     denyUrls: [/recaptcha/, /mobilediscord\.com/, /betterdiscord:\/\//]
-                }), I.setTag("buildNumber", (_ = "279124", "279124")), I.setTag("builtAt", String("1711565762036"));
+                }), I.setTag("buildNumber", (_ = "279519", "279519")), I.setTag("builtAt", String("1711649983536"));
                 let E = window.GLOBAL_ENV.SENTRY_TAGS;
                 if (null != E && "object" == typeof E)
                     for (let _ in E) I.setTag(_, E[_]);
@@ -7617,16 +7619,6 @@
                     [I.DARKER]: {
                         raw: "BRAND_560",
                         opacity: 1
-                    },
-                    gradient: {
-                        light: {
-                            color: "BLACK_500",
-                            opacity: .1
-                        },
-                        dark: {
-                            color: "WHITE_500",
-                            opacity: .1
-                        }
                     }
                 },
                 REDESIGN_BUTTON_PRIMARY_TEXT: {
@@ -7668,12 +7660,12 @@
                     },
                     gradient: {
                         light: {
-                            color: "gradient.end",
-                            opacity: .1
+                            color: "WHITE_500",
+                            opacity: .72
                         },
                         dark: {
-                            color: "gradient.end",
-                            opacity: .1
+                            color: "WHITE_500",
+                            opacity: .24
                         }
                     }
                 },
@@ -7694,6 +7686,16 @@
                     [I.DARKER]: {
                         raw: "PLUM_11",
                         opacity: .12
+                    },
+                    gradient: {
+                        light: {
+                            color: "WHITE_500",
+                            opacity: 0
+                        },
+                        dark: {
+                            color: "WHITE_500",
+                            opacity: 0
+                        }
                     }
                 },
                 REDESIGN_BUTTON_SECONDARY_OVERLAY_BACKGROUND: {
@@ -7773,12 +7775,12 @@
                     },
                     gradient: {
                         light: {
-                            color: "gradient.end",
-                            opacity: .2
+                            color: "WHITE_500",
+                            opacity: .62
                         },
                         dark: {
-                            color: "gradient.end",
-                            opacity: .2
+                            color: "WHITE_500",
+                            opacity: .34
                         }
                     }
                 },
@@ -7799,6 +7801,16 @@
                     [I.DARKER]: {
                         raw: "PLUM_11",
                         opacity: .06
+                    },
+                    gradient: {
+                        light: {
+                            color: "WHITE_500",
+                            opacity: 0
+                        },
+                        dark: {
+                            color: "WHITE_500",
+                            opacity: 0
+                        }
                     }
                 },
                 REDESIGN_BUTTON_SECONDARY_TEXT: {
@@ -7894,6 +7906,16 @@
                     [I.DARKER]: {
                         raw: "PLUM_11",
                         opacity: .12
+                    },
+                    gradient: {
+                        light: {
+                            color: "gradient.secondary",
+                            opacity: .4
+                        },
+                        dark: {
+                            color: "WHITE_500",
+                            opacity: .1
+                        }
                     }
                 },
                 REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND: {
@@ -7913,6 +7935,16 @@
                     [I.DARKER]: {
                         raw: "PLUM_11",
                         opacity: .2
+                    },
+                    gradient: {
+                        light: {
+                            color: "gradient.secondary",
+                            opacity: .3
+                        },
+                        dark: {
+                            color: "WHITE_500",
+                            opacity: .2
+                        }
                     }
                 },
                 REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT: {

@@ -49,7 +49,7 @@ t.default = e => {
       })
     },
     children: () => (0, i.jsx)("span", {
-      className: f.hidden
+      className: f.__invalid_hidden
     })
   })
 }

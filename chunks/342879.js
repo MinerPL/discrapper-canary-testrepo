@@ -50,13 +50,18 @@ async function A() {
     c < 3 && (d = setTimeout(() => A(), 1e3 * Math.pow(5, c)), c += 1), _ = !1
   }
 }
-class m extends r.default {
+
+function m() {
+  h()
+}
+class N extends r.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
       POST_CONNECTION_OPEN: E,
       CONNECTION_CLOSED: I,
-      IDLE: T
+      IDLE: T,
+      CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: m
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -65,4 +70,4 @@ class m extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new m
+t.default = new N

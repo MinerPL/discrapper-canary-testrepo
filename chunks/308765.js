@@ -337,7 +337,7 @@ let r = {
     neverLoadBeforeConnectionOpen: !0
   },
   ContentInventoryManager: {
-    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE"],
+    actions: ["POST_CONNECTION_OPEN", "CONNECTION_CLOSED", "IDLE", "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN"],
     inlineRequire: () => n("342879").default,
     neverLoadBeforeConnectionOpen: !0
   },

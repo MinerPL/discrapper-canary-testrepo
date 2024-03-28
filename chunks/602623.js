@@ -94,7 +94,7 @@ class O extends(i = s.PureComponent) {
   }
   renderIcon() {
     return this.props.renderIcon ? (0, r.jsx)(T.default, {
-      foreground: h.foreground,
+      foreground: h.__invalid_foreground,
       className: h.icon
     }) : null
   }

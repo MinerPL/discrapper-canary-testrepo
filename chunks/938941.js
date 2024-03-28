@@ -82,7 +82,7 @@ function I(e) {
     children: [(0, i.jsxs)("div", {
       className: l.toolbar,
       children: [(0, i.jsx)(a.Heading, {
-        className: l.title,
+        className: l.__invalid_title,
         variant: "heading-md/semibold",
         id: d,
         children: t

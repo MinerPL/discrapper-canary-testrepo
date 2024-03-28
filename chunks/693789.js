@@ -62,7 +62,7 @@ let E = {
     PRIMARY: c.borderPrimary,
     LINK: c.borderLink,
     WHITE: c.borderWhite,
-    BLACK: c.borderBlack,
+    BLACK: c.__invalid_borderBlack,
     TRANSPARENT: c.borderTransparent,
     BRAND_NEW: c.borderBrandNew
   },
@@ -75,7 +75,7 @@ let E = {
     PRIMARY: c.hoverPrimary,
     LINK: c.hoverLink,
     WHITE: c.hoverWhite,
-    BLACK: c.hoverBlack,
+    BLACK: c.__invalid_hoverBlack,
     TRANSPARENT: c.hoverTransparent
   },
   S = {

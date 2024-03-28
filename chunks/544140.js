@@ -1,11 +1,11 @@
-var r = e("796581"),
-  i = e("149912");
-t.exports = function t(n, e, o, s, c) {
-  var a = -1,
-    u = n.length;
-  for (o || (o = i), c || (c = []); ++a < u;) {
-    var _ = n[a];
-    e > 0 && o(_) ? e > 1 ? t(_, e - 1, o, s, c) : r(c, _) : !s && (c[c.length] = _)
+var l = n("796581"),
+  r = n("149912");
+e.exports = function e(t, n, s, a, i) {
+  var u = -1,
+    o = t.length;
+  for (s || (s = r), i || (i = []); ++u < o;) {
+    var c = t[u];
+    n > 0 && s(c) ? n > 1 ? e(c, n - 1, s, a, i) : l(i, c) : !a && (i[i.length] = c)
   }
-  return c
+  return i
 }

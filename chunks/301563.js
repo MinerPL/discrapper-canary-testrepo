@@ -1,7 +1,7 @@
 "use strict";
-var n = r("147018"),
+var e = r("147018"),
   i = r("213265");
-n({
+e({
   target: "RegExp",
   proto: !0,
   forced: /./.exec !== i

@@ -136,7 +136,7 @@ let V = Object.freeze({
       value: o,
       children: (0, s.jsx)("div", {
         ...r,
-        className: B.container,
+        className: B.__invalid_container,
         children: n
       })
     })

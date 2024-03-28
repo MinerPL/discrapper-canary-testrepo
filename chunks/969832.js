@@ -81,7 +81,7 @@ function S(e) {
             className: f.childWrapper,
             children: A
           }), N ? (0, s.jsx)("div", {
-            className: f.copyIconWrapper,
+            className: f.__invalid_copyIconWrapper,
             children: (0, s.jsx)(E.default, {
               width: 18,
               height: 18,

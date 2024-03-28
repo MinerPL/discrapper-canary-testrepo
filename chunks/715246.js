@@ -784,7 +784,7 @@ class K extends(r = a.PureComponent) {
         children: [this.renderMetadata(), this.renderVideo(), (0, s.jsx)("div", {
           className: P.playCenter,
           children: (0, s.jsx)(p.default, {
-            className: P.playButton,
+            className: P.__invalid_playButton,
             externalURL: n,
             renderLinkComponent: a
           })

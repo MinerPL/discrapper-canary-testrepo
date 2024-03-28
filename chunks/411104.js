@@ -1,72 +1,72 @@
-"use strict";
-var r = n("147018"),
-  i = n("161581"),
-  a = n("197187"),
-  o = n("261987"),
-  s = "WebAssembly",
-  u = i[s],
-  c = 7 !== Error("e", {
-    cause: 7
-  }).cause,
-  l = function(t, e) {
-    var n = {};
-    n[t] = o(t, e, c), r({
-      global: !0,
-      constructor: !0,
-      arity: 1,
-      forced: c
-    }, n)
-  },
-  d = function(t, e) {
-    if (u && u[t]) {
-      var n = {};
-      n[t] = o(s + "." + t, e, c), r({
-        target: s,
-        stat: !0,
-        constructor: !0,
-        arity: 1,
-        forced: c
-      }, n)
-    }
-  };
-l("Error", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), l("EvalError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), l("RangeError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), l("ReferenceError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), l("SyntaxError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), l("TypeError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), l("URIError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), d("CompileError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), d("LinkError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-}), d("RuntimeError", function(t) {
-  return function(e) {
-    return a(t, this, arguments)
-  }
-})
+    "use strict";
+    var n = e("147018"),
+      o = e("161581"),
+      i = e("197187"),
+      u = e("261987"),
+      c = "WebAssembly",
+      s = o[c],
+      a = 7 !== Error("e", {
+        cause: 7
+      }).cause,
+      f = function(t, r) {
+        var e = {};
+        e[t] = u(t, r, a), n({
+          global: !0,
+          constructor: !0,
+          arity: 1,
+          forced: a
+        }, e)
+      },
+      p = function(t, r) {
+        if (s && s[t]) {
+          var e = {};
+          e[t] = u(c + "." + t, r, a), n({
+            target: c,
+            stat: !0,
+            constructor: !0,
+            arity: 1,
+            forced: a
+          }, e)
+        }
+      };
+    f("Error", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), f("EvalError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), f("RangeError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), f("ReferenceError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), f("SyntaxError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), f("TypeError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), f("URIError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), p("CompileError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), p("LinkError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    }), p("RuntimeError", function(t) {
+      return function(r) {
+        return i(t, this, arguments)
+      }
+    })

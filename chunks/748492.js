@@ -107,7 +107,7 @@ function b(e) {
           children: (0, i.jsx)(_.default, {
             channelId: r.id,
             guildId: r.getGuildId(),
-            className: P.leftTrayIcon,
+            className: P.__invalid_leftTrayIcon,
             participant: g,
             compact: !0
           })
@@ -168,7 +168,7 @@ function G(e) {
         users: E,
         size: 24,
         max: 3,
-        className: y.userSummaryContainer
+        className: y.__invalid_userSummaryContainer
       }), (0, i.jsx)(h.default, {
         applicationId: r,
         channelId: n.id,

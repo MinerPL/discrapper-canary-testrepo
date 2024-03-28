@@ -41,7 +41,7 @@ function S(e) {
     ref: m,
     children: (0, i.jsx)("div", {
       ...O,
-      className: f.container,
+      className: f.__invalid_container,
       children: (0, i.jsxs)("div", {
         className: t,
         children: [(0, i.jsxs)("div", {

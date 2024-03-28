@@ -5,7 +5,7 @@ n("470079");
 var r = n("524437"),
   s = n("952265"),
   a = n("468026"),
-  o = n("202120"),
+  o = n("231757"),
   l = n("605236"),
   u = n("131951"),
   d = n("626135"),
@@ -53,7 +53,9 @@ t.default = {
     });
 
     function I() {
-      null != l && ((0, o.default)(l), d.default.track(E.AnalyticEvents.ACCOUNT_LINK_STEP, {
+      null != l && ((0, o.default)({
+        platformType: l
+      }), d.default.track(E.AnalyticEvents.ACCOUNT_LINK_STEP, {
         previous_step: c.GAME_CONSOLE_ALERT_MODAL_LOCATION,
         current_step: "desktop oauth",
         platform_type: l

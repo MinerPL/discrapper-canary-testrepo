@@ -71,7 +71,7 @@ let I = r.memo(function(e) {
           return null
       }
     }(n), (0, i.jsx)(a.Text, {
-      className: c.content,
+      className: c.__invalid_content,
       color: "header-primary",
       variant: "text-md/normal",
       children: t

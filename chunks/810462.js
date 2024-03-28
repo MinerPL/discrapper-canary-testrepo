@@ -45,7 +45,7 @@ let _ = r.forwardRef(function(e, t) {
       onClear: p,
       onKeyDown: c,
       onQueryChange: O,
-      className: d.searchBar,
+      className: d.__invalid_searchBar,
       preventEscapePropagation: !1,
       useKeyboardNavigation: !1,
       inputProps: {

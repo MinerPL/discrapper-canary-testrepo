@@ -73,7 +73,7 @@ t.default = function(e) {
           className: a()(O.guildBoostCta, O.guildBoostCtaBoostWrapper),
           children: (0, i.jsx)(h.default, {
             className: O.guildBoostCtaBoost,
-            innerClassName: a()(O.guildBoostCtaContent, O.guildBoostCtaBoostContent),
+            innerClassName: a()(O.__invalid_guildBoostCtaContent, O.guildBoostCtaBoostContent),
             buttonShineClassName: O.guildBoostCtaBoostShine,
             guild: n,
             analyticsLocation: {
@@ -90,7 +90,7 @@ t.default = function(e) {
         })
       }), S.default.hasFreeBoosts(p) || S.default.isPremium(p, m.PremiumTypes.TIER_2) ? (0, i.jsxs)(u.Button, {
         className: a()(O.guildBoostCta, O.guildBoostCtaSecondary),
-        innerClassName: a()(O.guildBoostCtaContent, O.guildBoostCtaGiftContent),
+        innerClassName: a()(O.__invalid_guildBoostCtaContent, O.guildBoostCtaGiftContent),
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         onClick: function() {
@@ -114,7 +114,7 @@ t.default = function(e) {
         }), N.default.Messages.PREMIUM_GUILD_PERKS_MODAL_GIFT_NITRO]
       }) : (0, i.jsx)(u.Button, {
         className: a()(O.guildBoostCta, O.guildBoostCtaSecondary),
-        innerClassName: a()(O.guildBoostCtaContent, O.guildBoostCtaSubscribeContent),
+        innerClassName: a()(O.__invalid_guildBoostCtaContent, O.__invalid_guildBoostCtaSubscribeContent),
         look: u.Button.Looks.OUTLINED,
         color: u.Button.Colors.WHITE,
         onClick: function() {

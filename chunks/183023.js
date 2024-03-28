@@ -87,7 +87,7 @@ let X = () => ({
             justify: y.default.Justify.CENTER,
             className: z.truncatingText,
             children: [(0, i.jsx)(d.Text, {
-              className: z.emojiName,
+              className: z.__invalid_emojiName,
               variant: "text-md/semibold",
               children: (0, i.jsx)(b.default, {
                 children: t.name
@@ -149,7 +149,7 @@ let X = () => ({
         mask: w.default.Masks.SQUIRCLE,
         width: 32,
         height: 32,
-        className: z.guildIconContainer,
+        className: z.__invalid_guildIconContainer,
         children: null != u && _ ? (0, i.jsxs)(d.Clickable, {
           "aria-label": l,
           onClick: c,
@@ -165,7 +165,7 @@ let X = () => ({
         })
       }), (0, i.jsxs)(y.default, {
         direction: y.default.Direction.VERTICAL,
-        className: a()(z.guildInformation, z.truncatingText),
+        className: a()(z.__invalid_guildInformation, z.truncatingText),
         children: [(0, i.jsxs)(y.default, {
           align: y.default.Align.CENTER,
           children: [(0, i.jsx)(P.default, {
@@ -394,7 +394,7 @@ let X = () => ({
                 className: z.showMoreEmojis,
                 children: (0, i.jsxs)(y.default, {
                   children: [(0, i.jsx)(d.Text, {
-                    className: z.showMoreEmojisLabel,
+                    className: z.__invalid_showMoreEmojisLabel,
                     "aria-label": e,
                     variant: "text-xs/normal",
                     color: "none",

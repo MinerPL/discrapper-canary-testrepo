@@ -1,12 +1,12 @@
-"use strict";
-var r = n("581031"),
-  i = Error,
-  a = r("".replace),
-  o = String(i("zxcasd").stack),
-  s = /\n\s*at [^:]*:[^\n]*/,
-  u = s.test(o);
-t.exports = function(t, e) {
-  if (u && "string" == typeof t && !i.prepareStackTrace)
-    for (; e--;) t = a(t, s, "");
-  return t
-}
+    "use strict";
+    var n = e("581031"),
+      o = Error,
+      i = n("".replace),
+      u = String(o("zxcasd").stack),
+      c = /\n\s*at [^:]*:[^\n]*/,
+      s = c.test(u);
+    t.exports = function(t, r) {
+      if (s && "string" == typeof t && !o.prepareStackTrace)
+        for (; r--;) t = i(t, c, "");
+      return t
+    }

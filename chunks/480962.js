@@ -30,7 +30,7 @@ function _(e) {
     s && ((0, l.ensureItemVisible)(f), null === (e = h.current) || void 0 === e || e.focus())
   }, [s]), (0, i.jsxs)("div", {
     ref: f,
-    className: d.submenuContainer,
+    className: d.__invalid_submenuContainer,
     children: [(0, i.jsx)("div", {
       ref: S
     }), n, s ? (0, i.jsx)(o.ReferencePositionLayer, {
