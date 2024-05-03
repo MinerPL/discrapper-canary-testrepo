@@ -1,8 +1,2 @@
 "use strict";
-e.exports = {
-  icon: "icon__11372",
-  landingPageTabLink: "landingPageTabLink__20c8c",
-  messageFilterBetaTag: "messageFilterBetaTag__6f5a8",
-  roleSubLabel: "roleSubLabel_fab5ed",
-  serverBoostTabItem: "serverBoostTabItem_b19426"
-}
+e.exports = n.p + "e2e7aa8248d0ac9aec39.svg"

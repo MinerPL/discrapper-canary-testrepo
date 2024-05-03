@@ -1,5 +1,2 @@
 "use strict";
-e.exports = {
-  unownedStickerLockContainer: "unownedStickerLockContainer_c16458",
-  unownedStickerLockIcon: "unownedStickerLockIcon__4c241"
-}
+e.exports = n.p + "9c34d945c99f5d7f8b3a.svg"

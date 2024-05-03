@@ -1,4 +1,2 @@
 "use strict";
-n.r(t);
-var s = n("784793");
-n.es(s, t)
+e.exports = n.p + "55e0db84a489729e02c0.png"

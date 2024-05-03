@@ -1,14 +1,2 @@
 "use strict";
-n.r(t), n.d(t, {
-  userNeedsAgeGate: function() {
-    return i
-  }
-});
-var a = n("697218"),
-  s = n("299039");
-let l = new Date("06/16/2020");
-
-function i() {
-  let e = a.default.getCurrentUser();
-  return null != e && s.default.extractTimestamp(e.id) > l.getTime() && !e.isClaimed() && null == e.nsfwAllowed
-}
+e.exports = n.p + "259c9e517e54b637bc8b.webp"

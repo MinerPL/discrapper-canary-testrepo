@@ -1,2 +1,2 @@
 "use strict";
-n("157104")("replace")
+e.exports = n.p + "5da63dece599424a08cd.svg"

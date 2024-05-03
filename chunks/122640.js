@@ -1,4 +1,2 @@
 "use strict";
-e.exports = {
-  item: "item_cc935b"
-}
+e.exports = s.p + "da59fc99fb83c1f39871.svg"

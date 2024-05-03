@@ -1,2 +1,2 @@
 "use strict";
-n("157104")("iterator")
+e.exports = n.p + "4e8ecdcdf8fabab6db02.svg"

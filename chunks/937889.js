@@ -1,31 +1,27 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return E
-  },
-  getInitialParserState: function() {
     return _
   },
-  getInitialParserStateFromMessage: function() {
+  getInitialParserState: function() {
     return d
   },
-  renderAutomodMessageMarkup: function() {
-    return I
+  getInitialParserStateFromMessage: function() {
+    return u
   },
-  renderChangelogMessageMarkup: function() {
+  renderAutomodMessageMarkup: function() {
     return c
   }
 }), n("47120"), n("757143"), n("865427");
 var i = n("830121"),
   r = n("454585"),
-  a = n("55406"),
-  s = n("408433"),
-  o = n("981631");
-let l = new Set([o.MessageEmbedTypes.IMAGE, o.MessageEmbedTypes.GIFV]),
-  u = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
+  a = n("408433"),
+  s = n("981631");
+let o = new Set([s.MessageEmbedTypes.IMAGE, s.MessageEmbedTypes.GIFV]),
+  l = new Set(["strong", "em", "u", "text", "inlineCode", "s", "spoiler"]);
 
-function d(e, t) {
-  let n = _({
+function u(e, t) {
+  let n = d({
       channelId: e.channel_id,
       messageId: e.id,
       renderOptions: t
@@ -39,7 +35,7 @@ function d(e, t) {
   }
 }
 
-function _(e) {
+function d(e) {
   let {
     channelId: t,
     messageId: n,
@@ -65,30 +61,23 @@ function _(e) {
   }
 }
 
-function c(e, t) {
-  return {
-    hasSpoilerEmbeds: !1,
-    content: r.default.reactParserFor(a.default.getDefaultRules(t))(e.content, !1, {})
-  }
-}
-
-function E(e) {
+function _(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
   return function(e, t, n) {
     let {
       toAST: r = !1,
-      hideSimpleEmbedContent: a = !0,
-      formatInline: o = !1,
+      hideSimpleEmbedContent: s = !0,
+      formatInline: d = !1,
       postProcessor: _
-    } = n, c = !1, E = e(t.content, !0, d(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), a && (e = function(e, t) {
+    } = n, c = !1, T = e(t.content, !0, u(t, n), (e, n) => (!Array.isArray(e) && (e = [e]), s && (e = function(e, t) {
       if (1 !== e.length || 1 !== t.length) return e;
       let n = e[0],
         i = t[0];
-      return ("link" === n.type || "attachmentLink" === n.type) && l.has(i.type) && (0, s.isEmbedInline)(i) ? [] : e
-    }(e, t.embeds)), !o && (e = function(e, t) {
-      return t ? T(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = T(e[0].content)), e)
+      return ("link" === n.type || "attachmentLink" === n.type) && o.has(i.type) && (0, a.isEmbedInline)(i) ? [] : e
+    }(e, t.embeds)), !d && (e = function(e, t) {
+      return t ? E(e) : ("paragraph" === e[0].type && e[0].content instanceof Array && (e[0].content = E(e[0].content)), e)
     }(e, n)), c = function(e, t) {
-      return t ? f(e) : "paragraph" === e[0].type && e[0].content instanceof Array && f(e[0].content)
+      return t ? I(e) : "paragraph" === e[0].type && e[0].content instanceof Array && I(e[0].content)
     }(e = function(e) {
       let t = e.some(e => "link" !== e.type || !1);
       return e.filter(e => {
@@ -96,19 +85,19 @@ function E(e) {
           r = (0, i.parseQuestsEmbedCode)(e.target);
         return !(n && null != r && !t)
       })
-    }(e), n), o && (e = function e(t) {
+    }(e), n), d && (e = function e(t) {
       return t.forEach(t => {
-        u.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
+        l.has(t.type) && null != t.content && (Array.isArray(t.content) ? e(t.content) : t.content = t.content.replace(/\n/g, " "))
       }), t
     }(e)), null != _ && (e = _(e, n)), e));
     return {
       hasSpoilerEmbeds: c,
-      content: E
+      content: T
     }
   }(t.formatInline ? r.default.parseInlineReply : r.default.parse, e, t)
 }
 
-function I(e, t, n) {
+function c(e, t, n) {
   var i;
   return i = r.default.parseAutoModerationSystemMessage, i(e, !0, {
     allowLinks: !1,
@@ -128,7 +117,7 @@ function I(e, t, n) {
   }, e => (!Array.isArray(e) && (e = [e]), e))
 }
 
-function T(e) {
+function E(e) {
   if (e.some(e => "emoji" !== e.type && "customEmoji" !== e.type && "soundboard" !== e.type && ("string" != typeof e.content || "" !== e.content.trim()) && !0)) return e;
   let t = 0;
   return (e.forEach(e => {
@@ -138,6 +127,6 @@ function T(e) {
   }), e)
 }
 
-function f(e) {
+function I(e) {
   return e.some(e => "spoiler" === e.type && Array.isArray(e.content) && e.content.some(e => "link" === e.type || "attachmentLink" === e.type))
 }

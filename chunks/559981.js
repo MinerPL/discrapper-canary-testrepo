@@ -1,4 +1,2 @@
 "use strict";
-A.r(t);
-var a = A("392229");
-A.es(a, t)
+e.exports = n.p + "aa4b0fa0abbf6cc1ae82.svg"

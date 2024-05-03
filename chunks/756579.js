@@ -1,5 +1,2 @@
 "use strict";
-var e = n("100391");
-t.exports = function(t) {
-  return e(t.length)
-}
+e.exports = n.p + "341a82089722817b1c2a.svg"

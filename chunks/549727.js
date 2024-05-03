@@ -1,6 +1,2 @@
 "use strict";
-e.exports = {
-  leftPanel: "leftPanel_e31826",
-  sectionSubtitle: "sectionSubtitle__84686",
-  sectionTitle: "sectionTitle__42603"
-}
+e.exports = n.p + "d8e6d54b352c488f6487.png"
