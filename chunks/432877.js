@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return i
   }
 }), n("47120");
-var i, r, s, a = n("442837"),
+var i, r, a, s = n("442837"),
   o = n("570140");
 
 function l(e, t, n) {
@@ -14,7 +14,7 @@ function l(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(s = i || (i = {}))[s.MESSAGING = 0] = "MESSAGING", s[s.OVERLAYS = 1] = "OVERLAYS";
+}(a = i || (i = {}))[a.MESSAGING = 0] = "MESSAGING", a[a.OVERLAYS = 1] = "OVERLAYS", a[a.PREMIUM = 2] = "PREMIUM";
 let u = {
     visual_effect_view_overrides: {
       label: "Blur view overrides for designers to test with",
@@ -35,10 +35,14 @@ let u = {
     send_fail_100: {
       label: "Send: Fail with 500 status",
       category: 0
+    },
+    premium_roadblocks: {
+      label: "Enable all new premium roadblocks",
+      category: 2
     }
   },
   d = {};
-class _ extends(r = a.default.DeviceSettingsStore) {
+class _ extends(r = s.default.DeviceSettingsStore) {
   getUserAgnosticState() {
     return {
       toggleStates: d

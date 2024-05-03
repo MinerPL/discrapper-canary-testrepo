@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("873546"),
-  a = n("442837"),
+  a = n("873546"),
+  s = n("442837"),
   o = n("911969"),
   l = n("607070"),
   u = n("998698"),
@@ -19,28 +19,28 @@ var i = n("735250"),
   A = n("9277"),
   m = n("897291"),
   N = n("764794"),
-  O = n("241553"),
-  p = n("319417"),
+  p = n("241553"),
+  O = n("319417"),
   R = n("728386"),
   C = n("474936"),
-  g = n("23383");
+  g = n("414367");
 
 function L(e) {
   let {
     disabled: t,
     channel: n
   } = e, {
-    enabled: s
+    enabled: a
   } = c.default.useExperiment({
     location: "dc120b_1"
   }, {
     autoTrackExposure: !1
-  }), a = (0, c.useIsSeasonalGiftingActive)();
+  }), s = (0, c.useIsSeasonalGiftingActive)();
   return r.useEffect(() => {
-    a && c.default.trackExposure({
+    s && c.default.trackExposure({
       location: "dc120b_2"
     })
-  }, [a]), s && a ? (0, i.jsx)(O.default, {
+  }, [s]), a && s ? (0, i.jsx)(p.default, {
     disabled: t,
     channel: n
   }) : (0, i.jsx)(m.default, {
@@ -49,21 +49,21 @@ function L(e) {
   })
 }
 t.default = r.memo(function(e) {
-  var t, n, r, c, m, O, D, v;
+  var t, n, r, c, m, p, v, D;
   let {
     type: M,
     disabled: y,
     channel: P,
     handleSubmit: U,
     isEmpty: b
-  } = e, G = (0, a.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, a.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), k = null != w && w.length > 0, B = (0, a.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
+  } = e, G = (0, s.useStateFromStores)([l.default], () => l.default.isSubmitButtonEnabled), w = (0, s.useStateFromStores)([I.default], () => I.default.getStickerPreview(P.id, M.drafts.type)), B = null != w && w.length > 0, k = (0, s.useStateFromStores)([T.default], () => T.default.getUploads(P.id, M.drafts.type)), {
     activeCommand: V,
-    activeCommandOption: F
-  } = (0, a.useStateFromStoresObject)([u.default], () => ({
+    activeCommandOption: x
+  } = (0, s.useStateFromStoresObject)([u.default], () => ({
     activeCommand: u.default.getActiveCommand(P.id),
     activeCommandOption: u.default.getActiveOption(P.id)
   })), {
-    paymentsBlocked: x
+    paymentsBlocked: F
   } = d.default.useExperiment({
     location: "dc120b_3"
   }, {
@@ -74,11 +74,11 @@ t.default = r.memo(function(e) {
     location: "dc120b_4"
   }, {
     autoTrackExposure: !1
-  }), j = f.default.getCurrentUser(), W = null !== (c = (0, a.useStateFromStores)([_.default], () => Y && S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) ? _.default.getReferralsRemaining() : 0)) && void 0 !== c ? c : 0, K = (0, a.useStateFromStores)([_.default], () => {
+  }), j = f.default.getCurrentUser(), W = null !== (c = (0, s.useStateFromStores)([_.default], () => Y && S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) ? _.default.getReferralsRemaining() : 0)) && void 0 !== c ? c : 0, K = (0, s.useStateFromStores)([_.default], () => {
     if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1 || !Y) return !1;
     let e = P.recipients[0];
     return _.default.getSentUserIds().includes(e)
-  }), [z, X] = (0, a.useStateFromStoresArray)([_.default, f.default], () => {
+  }), [z, Z] = (0, s.useStateFromStoresArray)([_.default, f.default], () => {
     let e = [!1, !1];
     if (!P.isDM() || void 0 === P.recipients || P.recipients.length > 1) return e;
     let t = P.recipients[0],
@@ -88,28 +88,28 @@ t.default = r.memo(function(e) {
       r = _.default.getRecipientEligibility(t);
     return [Y && i && r, r]
   });
-  return (!s.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && X && E.default.trackExposure({
+  return (!a.isMobile && (P.isDM() && (null === (m = M.gifts) || void 0 === m ? void 0 : m.button) != null && null == V && (S.default.isPremiumExactly(j, C.PremiumTypes.TIER_2) && Z && E.default.trackExposure({
     location: "dc120b_5"
   }), z && H.push((0, i.jsx)(N.default, {
     disabled: y,
     referralsRemaining: W,
     channel: P,
     isResending: K
-  }, "referral"))), (null === (O = M.gifts) || void 0 === O ? void 0 : O.button) != null && null == V && !x && H.push((0, i.jsx)(L, {
+  }, "referral"))), (null === (p = M.gifts) || void 0 === p ? void 0 : p.button) != null && null == V && !F && H.push((0, i.jsx)(L, {
     disabled: y,
     channel: P
-  }, "gift")), (null === (D = M.gifs) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(A.default, {
+  }, "gift")), (null === (v = M.gifs) || void 0 === v ? void 0 : v.button) != null && null == V && H.push((0, i.jsx)(A.default, {
     disabled: y,
     type: M
-  }, "gif")), (null === (v = M.stickers) || void 0 === v ? void 0 : v.button) != null && null == V && H.push((0, i.jsx)(R.default, {
+  }, "gif")), (null === (D = M.stickers) || void 0 === D ? void 0 : D.button) != null && null == V && H.push((0, i.jsx)(R.default, {
     disabled: y,
     type: M
-  }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != F && F.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(h.default, {
+  }, "sticker"))), (null === (t = M.emojis) || void 0 === t ? void 0 : t.button) != null && (null == V || null != x && x.type !== o.ApplicationCommandOptionType.ATTACHMENT) && H.push((0, i.jsx)(h.default, {
     disabled: y,
     type: M
-  }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(p.default, {
+  }, "emoji")), (null === (n = M.submit) || void 0 === n ? void 0 : n.button) != null && ((null === (r = M.submit) || void 0 === r ? void 0 : r.ignorePreference) || G) && H.push((0, i.jsx)(O.default, {
     onClick: U,
-    disabled: y || 0 === B.length && b && !k
+    disabled: y || 0 === k.length && b && !B
   }, "submit")), 0 === H.length) ? null : (0, i.jsx)("div", {
     className: g.buttons,
     children: H

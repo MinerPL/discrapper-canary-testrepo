@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return a
   }
 });
 var i = n("871465");
@@ -49,9 +49,27 @@ let r = {
     stream_ended: "detune_stream_ended",
     stream_user_joined: "detune_stream_user_joined",
     stream_user_left: "detune_stream_user_left"
+  },
+  [i.Soundpacks.RETRO]: {
+    message1: "bit_message1"
+  },
+  [i.Soundpacks.BUBBLE]: {
+    message1: "bop_message1"
+  },
+  [i.Soundpacks.DUCKY]: {
+    message1: "ducky_message1"
+  },
+  [i.Soundpacks.LOFI]: {
+    message1: "lofi_message1"
+  },
+  [i.Soundpacks.ASMR]: {
+    message1: "asmr_message1"
+  },
+  [i.Soundpacks.DISCODO]: {
+    message1: "discodo"
   }
 };
 
-function s(e) {
+function a(e) {
   return r[e]
 }

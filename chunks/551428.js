@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t), n("47120"), n("411104");
-var r, s, a, o, l = n("442837"),
+var r, a, s, o, l = n("442837"),
   u = n("570140"),
   d = n("706454"),
   _ = n("156570"),
@@ -23,24 +23,17 @@ function h(e, t) {
   return "".concat(e, ":").concat(t)
 }
 
-function A(e) {
-  let {
-    storeListings: t
-  } = e;
-  for (let e of t) S(e)
-}
-
-function m() {
+function A() {
   E = {}, f = {}, T = {}, I = {}
 }
 
-function N() {
+function m() {
   if (i === d.default.locale) return !1;
-  m(), i = d.default.locale
+  A(), i = d.default.locale
 }
-class O extends(r = l.default.Store) {
+class N extends(r = l.default.Store) {
   initialize() {
-    this.waitFor(d.default), this.syncWith([d.default], N), i = d.default.locale
+    this.waitFor(d.default), this.syncWith([d.default], m), i = d.default.locale
   }
   get(e) {
     return E[e]
@@ -76,14 +69,18 @@ class O extends(r = l.default.Store) {
     return null
   }
 }
-o = "StoreListingStore", (a = "displayName") in(s = O) ? Object.defineProperty(s, a, {
+o = "StoreListingStore", (s = "displayName") in(a = N) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new O(u.default, {
-  STORE_LISTINGS_FETCH_SUCCESS: A,
-  APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: A,
+}) : a[s] = o, t.default = new N(u.default, {
+  STORE_LISTINGS_FETCH_SUCCESS: function(e) {
+    let {
+      storeListings: t
+    } = e;
+    for (let e of t) S(e)
+  },
   STORE_LISTING_FETCH_SUCCESS: function(e) {
     let {
       storeListing: t,
@@ -94,8 +91,8 @@ o = "StoreListingStore", (a = "displayName") in(s = O) ? Object.defineProperty(s
       I[h(n, e.skuId)] = e, f[e.skuId] = e.id
     } else S(t)
   },
-  USER_SETTINGS_PROTO_UPDATE: N,
-  APPLICATION_STORE_CLEAR_DATA: m,
+  USER_SETTINGS_PROTO_UPDATE: m,
+  APPLICATION_STORE_CLEAR_DATA: A,
   GIFT_CODE_RESOLVE_SUCCESS: function(e) {
     let {
       giftCode: t

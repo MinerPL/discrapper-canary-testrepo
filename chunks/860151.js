@@ -2,34 +2,43 @@
 n.r(t);
 var a = n("735250");
 n("470079");
-var l = n("803997"),
+var l = n("120356"),
   s = n.n(l),
   i = n("481060"),
   r = n("918701"),
-  o = n("689938"),
-  u = n("732553");
+  o = n("644646"),
+  u = n("689938"),
+  d = n("16353");
 t.default = function(e) {
   let {
     className: t,
-    quest: n
+    autoplay: n,
+    quest: l,
+    questContent: c
   } = e;
   return (0, a.jsxs)("div", {
-    className: s()(u.wrapper, t),
+    className: s()(d.wrapper, t),
     style: {
-      color: n.config.colors.primary
+      color: l.config.colors.primary
     },
-    children: [(0, a.jsx)("img", {
-      alt: n.config.messages.rewardName,
-      className: u.rewardTile,
-      src: (0, r.getRewardAssetUrl)(n)
+    children: [(0, a.jsx)(o.default, {
+      autoplay: n,
+      className: d.rewardTile,
+      quest: l,
+      questContent: c
     }), (0, a.jsx)(i.Text, {
-      className: u.instructions,
+      className: d.instructions,
       variant: "text-sm/normal",
       color: "text-normal",
-      children: o.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
-        gameTitle: n.config.messages.gameTitle,
-        questReward: n.config.messages.rewardNameWithArticle,
-        streamingDurationRequirement: n.config.streamDurationRequirementMinutes
+      children: (0, r.isTieredRewardCodeQuest)({
+        quest: l
+      }) ? u.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
+        gameTitle: l.config.messages.gameTitle,
+        streamingDurationRequirement: l.config.streamDurationRequirementMinutes
+      }) : u.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
+        gameTitle: l.config.messages.gameTitle,
+        questReward: l.config.messages.rewardNameWithArticle,
+        streamingDurationRequirement: l.config.streamDurationRequirementMinutes
       })
     })]
   })

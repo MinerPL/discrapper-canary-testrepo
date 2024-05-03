@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InteractivePIPHeader: function() {
-    return k
+    return B
   },
   PIPOverlay: function() {
     return b
@@ -15,9 +15,9 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("442837"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("481060"),
   l = n("846027"),
   u = n("40851"),
@@ -33,17 +33,17 @@ var r = n("803997"),
   A = n("800965"),
   m = n("157813"),
   N = n("25827"),
-  O = n("131951"),
-  p = n("285952"),
+  p = n("131951"),
+  O = n("285952"),
   R = n("605403"),
   C = n("808268"),
   g = n("602623"),
   L = n("349619"),
-  D = n("981631"),
-  v = n("231338"),
+  v = n("981631"),
+  D = n("231338"),
   M = n("689938"),
-  y = n("890789"),
-  P = n("438249");
+  y = n("55820"),
+  P = n("541702");
 
 function U(e) {
   let {
@@ -51,7 +51,7 @@ function U(e) {
     isExpanded: n
   } = e;
   return (0, i.jsx)(S.default, {
-    iconClassName: s()(y.arrowIcon, {
+    iconClassName: a()(y.arrowIcon, {
       [y.arrowIconExpanded]: n
     }),
     onClick: t,
@@ -64,14 +64,14 @@ function b(e) {
   var t, n;
   let {
     channel: r,
-    applicationId: s,
+    applicationId: a,
     onMouseDown: o,
     onMouseMove: S,
     onMouseLeave: m,
     onJumpToChannel: R,
     idle: C,
     selectedParticipant: g
-  } = e, M = (0, u.useAppContext)() === D.AppContext.POPOUT, U = (0, a.useStateFromStores)([O.default], () => O.default.isVideoEnabled()), b = (0, a.useStateFromStores)([O.default], () => Object.values(O.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([s])[0], k = (0, E.default)(r), B = e => {
+  } = e, M = (0, u.useAppContext)() === v.AppContext.POPOUT, U = (0, s.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, s.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([a])[0], B = (0, E.default)(r), k = e => {
     l.default.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
@@ -89,19 +89,19 @@ function b(e) {
       })
     }), (0, i.jsxs)("div", {
       className: P.bottomControls,
-      children: [(0, i.jsxs)(p.default, {
+      children: [(0, i.jsxs)(O.default, {
         grow: 0,
         shrink: 1,
         basis: "50%",
-        align: p.default.Align.CENTER,
+        align: O.default.Align.CENTER,
         children: [(0, i.jsx)(N.default, {
           className: y.leftPipIcon,
           enabled: U,
           cameraUnavailable: !G,
-          hasPermission: k,
-          onChange: B,
+          hasPermission: B,
+          onChange: k,
           onCameraUnavailable: () => {
-            G ? B(!0) : (0, I.default)()
+            G ? k(!0) : (0, I.default)()
           }
         }), (0, i.jsx)(T.default, {
           children: (0, i.jsx)(_.default, {
@@ -112,21 +112,21 @@ function b(e) {
             compact: !0
           })
         })]
-      }), (0, i.jsxs)(p.default, {
+      }), (0, i.jsxs)(O.default, {
         grow: 0,
         shrink: 1,
-        justify: p.default.Justify.END,
+        justify: O.default.Justify.END,
         basis: "50%",
-        align: p.default.Align.CENTER,
+        align: O.default.Align.CENTER,
         children: [M ? null : (0, i.jsx)(A.default, {
           className: y.rightPipIcon,
           popoutOpen: !1,
           onOpenPopout: () => {
             (0, L.default)(() => c.openChannelCallPopout(r))
           },
-          onClosePopout: v.NOOP_NULL
+          onClosePopout: D.NOOP_NULL
         }), (0, i.jsx)(h.default, {
-          applicationId: s,
+          applicationId: a,
           channelId: r.id,
           className: y.rightPipIcon
         })]
@@ -140,7 +140,7 @@ function G(e) {
   let {
     channel: n,
     applicationId: r,
-    onMouseDown: a,
+    onMouseDown: s,
     onMouseMove: l,
     onMouseLeave: u,
     onJumpToChannel: _,
@@ -148,13 +148,13 @@ function G(e) {
     users: E
   } = e, I = (0, d.default)([r])[0];
   return (0, i.jsxs)(o.Clickable, {
-    className: s()(P.videoControls, P.videoControlsTextActivity),
+    className: a()(P.videoControls, P.videoControlsTextActivity),
     onMouseMove: l,
-    onMouseDown: a,
+    onMouseDown: s,
     onMouseLeave: u,
     onDoubleClick: _,
     children: [(0, i.jsx)("div", {
-      className: s()(P.topControls),
+      className: a()(P.topControls),
       children: (0, i.jsx)(f.PictureInPictureHeader, {
         idle: c,
         title: null !== (t = null == I ? void 0 : I.name) && void 0 !== t ? t : n.name,
@@ -192,12 +192,12 @@ function w(e) {
   }) : null
 }
 
-function k(e) {
+function B(e) {
   var t;
   let {
     onMouseDown: n,
     onMouseMove: r,
-    onMouseLeave: a,
+    onMouseLeave: s,
     showControls: o,
     applicationId: l,
     channel: u,
@@ -210,9 +210,9 @@ function k(e) {
     className: y.pipHeader,
     onMouseMove: r,
     onMouseDown: n,
-    onMouseLeave: a,
+    onMouseLeave: s,
     children: (0, i.jsxs)("div", {
-      className: s()(P.topControls, y.pipHeaderContent, {
+      className: a()(P.topControls, y.pipHeaderContent, {
         [y.pipHeaderContentOpen]: o
       }),
       children: [!o && (0, i.jsx)(C.default, {

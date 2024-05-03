@@ -2,7 +2,7 @@
 s.r(t), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("780384"),
   o = s("481060"),
@@ -13,7 +13,7 @@ var a = s("735250"),
   _ = s("768581"),
   I = s("624138"),
   T = s("689938"),
-  S = s("916495"),
+  S = s("95392"),
   f = s("129512"),
   m = s("330065");
 let N = [16, 16, 14, 14, 12, 10, 8];
@@ -41,13 +41,13 @@ t.default = function(e) {
     id: n.id,
     splash: n.discoverySplash,
     size: 240 * (0, u.getDevicePixelRatio)()
-  }), j = (0, r.isThemeDark)(A) ? f : m, G = null !== (t = _.default.getGuildIconURL({
+  }), G = (0, r.isThemeDark)(A) ? f : m, j = null !== (t = _.default.getGuildIconURL({
     id: n.id,
     icon: n.icon,
     size: 40
   })) && void 0 !== t ? t : void 0, U = null != n.description ? n.description : R, P = null != x ? x : null == n ? void 0 : n.memberCount, b = null != L ? L : null == n ? void 0 : n.presenceCount, B = null;
-  if (null != G) B = (0, a.jsx)("img", {
-    src: G,
+  if (null != j) B = (0, a.jsx)("img", {
+    src: j,
     alt: "",
     className: S.avatar
   });
@@ -76,7 +76,7 @@ t.default = function(e) {
       children: [(0, a.jsx)("div", {
         className: S.splash,
         children: (0, a.jsx)("img", {
-          src: null != v ? v : j,
+          src: null != v ? v : G,
           alt: "",
           className: S.splashImage,
           onLoad: () => M(!0)

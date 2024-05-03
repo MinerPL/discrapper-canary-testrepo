@@ -1,89 +1,170 @@
 "use strict";
 n.r(t);
-var l = n("735250");
+var a = n("735250");
 n("470079");
-var a = n("481060"),
-  s = n("806519"),
-  i = n("525049"),
-  r = n("486101");
-let o = {};
-t.default = e => {
+var l = n("120356"),
+  s = n.n(l),
+  i = n("438784"),
+  r = n("481060"),
+  o = n("806519"),
+  u = n("525049"),
+  d = n("933379");
+let c = {},
+  f = 1 / 4;
+
+function h(e) {
+  let {
+    height: t,
+    fillColor: n
+  } = e;
+  return (0, a.jsx)("div", {
+    style: {
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      borderRadius: t / 2,
+      backgroundColor: n,
+      height: t,
+      width: t * u.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO
+    },
+    children: (0, a.jsx)(i.Dots, {
+      className: d.dots,
+      dotRadius: t * f
+    })
+  })
+}
+
+function m(e) {
+  let {
+    isTyping: t,
+    statusHeightPx: n,
+    statusCenterOffset: l,
+    status: s
+  } = e, i = (0, r.useStatusFillColor)(r.StatusTypes.ONLINE);
+  if (t) {
+    let e = n * u.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO;
+    return (0, a.jsx)("div", {
+      style: {
+        position: "absolute",
+        top: l - n / 2,
+        left: l - e / 2
+      },
+      children: (0, a.jsx)(h, {
+        height: n,
+        fillColor: i
+      })
+    })
+  }
+  if (null != s) {
+    let e = l - n / 2;
+    return (0, a.jsx)(r.Status, {
+      size: n,
+      status: s,
+      style: {
+        position: "absolute",
+        top: e,
+        left: e
+      }
+    })
+  }
+  return null
+}
+
+function p(e) {
+  let {
+    src: t,
+    size: n,
+    isTyping: l,
+    status: s
+  } = e, i = (0, a.jsx)("img", {
+    className: d.circularImage,
+    src: t,
+    alt: "",
+    width: n,
+    height: n
+  });
+  return l ? (0, a.jsx)(o.default, {
+    mask: o.MaskIDs.DIAGONAL_FACEPILE_TYPING_CUTOUT,
+    height: n,
+    width: n,
+    children: i
+  }) : null != s ? (0, a.jsx)(o.default, {
+    mask: o.MaskIDs.DIAGONAL_FACEPILE_STATUS_CUTOUT,
+    height: n,
+    width: n,
+    children: i
+  }) : i
+}
+t.default = function(e) {
   var t;
   let {
     backSrc: n,
-    frontSrc: u,
-    size: d,
-    status: c,
-    style: f,
-    ...h
+    frontSrc: l,
+    size: i,
+    status: r,
+    isTyping: f,
+    style: h,
+    className: E,
+    ...C
   } = e, {
-    statusCenter: C,
-    statusSizePx: p,
-    frontAvatarOffsetPx: m,
-    frontAvatarSizePx: g,
-    backAvatarSizePx: E
-  } = null !== (t = o[d]) && void 0 !== t ? t : function(e) {
-    let t = e / (i.DIAGONAL_FACEPILE_AVATAR_PROPORTION + i.DIAGONAL_FACEPILE_MASK_OFFSET),
-      n = t * i.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
-      l = t * i.DIAGONAL_FACEPILE_MASK_OFFSET,
-      a = i.DIAGONAL_FACEPILE_STATUS_TO_AVATAR_RATIO * n,
-      s = l + n / 2,
-      r = {
-        statusCenter: s + n * i.DIAGONAL_FACEPILE_MASK_STATUS_OFFSET,
-        statusSizePx: a,
+    statusCenter: g,
+    statusHeightPx: S,
+    frontAvatarOffsetPx: _,
+    frontAvatarSizePx: T,
+    backAvatarSizePx: I
+  } = null !== (t = c[i]) && void 0 !== t ? t : function(e) {
+    let t = e / (u.DIAGONAL_FACEPILE_AVATAR_PROPORTION + u.DIAGONAL_FACEPILE_MASK_OFFSET),
+      n = t * u.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
+      a = t * u.DIAGONAL_FACEPILE_MASK_OFFSET,
+      l = u.DIAGONAL_FACEPILE_STATUS_TO_AVATAR_RATIO * n,
+      s = a + n / 2,
+      i = {
+        statusCenter: s + n * u.DIAGONAL_FACEPILE_MASK_STATUS_OFFSET,
+        statusHeightPx: l,
         frontAvatarSizePx: n,
         backAvatarSizePx: t,
-        frontAvatarOffsetPx: l,
+        frontAvatarOffsetPx: a,
         frontAvatarCenter: s
       };
-    return o[e] = r, r
-  }(d), S = (0, l.jsx)("img", {
-    className: r.circularImage,
-    src: u,
-    alt: "",
-    width: g,
-    height: g
-  }), _ = C - p / 2, I = null != c ? (0, l.jsx)(a.Status, {
-    size: p,
-    status: c,
+    return c[e] = i, i
+  }(i);
+  return (0, a.jsxs)("div", {
+    "aria-label": C["aria-label"],
+    "aria-hidden": C["aria-hidden"],
+    className: s()(d.container, E),
     style: {
-      position: "absolute",
-      top: _,
-      left: _
-    }
-  }) : null;
-  return (0, l.jsxs)("div", {
-    "aria-label": h["aria-label"],
-    "aria-hidden": h["aria-hidden"],
-    className: r.container,
-    style: {
-      width: d,
-      height: d,
-      ...f
+      width: i,
+      height: i,
+      ...h
     },
-    children: [(0, l.jsx)(s.default, {
-      height: E,
-      width: E,
-      mask: s.MaskIDs.DIAGONAL_FACEPILE_BACK_AVATAR_CUTOUT,
-      children: (0, l.jsx)("img", {
-        className: r.circularImage,
+    children: [(0, a.jsx)(o.default, {
+      height: I,
+      width: I,
+      mask: o.MaskIDs.DIAGONAL_FACEPILE_BACK_AVATAR_CUTOUT,
+      children: (0, a.jsx)("img", {
+        className: d.circularImage,
         src: n,
         alt: "",
-        width: E,
-        height: E
+        width: I,
+        height: I
       })
-    }), (0, l.jsx)("div", {
+    }), (0, a.jsx)("div", {
       style: {
         position: "absolute",
-        top: m,
-        left: m
+        top: _,
+        left: _
       },
-      children: null != c ? (0, l.jsx)(s.default, {
-        mask: s.MaskIDs.DIAGONAL_FACEPILE_STATUS_CUTOUT,
-        height: g,
-        width: g,
-        children: S
-      }) : S
-    }), I]
+      children: (0, a.jsx)(p, {
+        src: l,
+        size: T,
+        isTyping: f,
+        status: r
+      })
+    }), (0, a.jsx)(m, {
+      status: r,
+      isTyping: f,
+      statusHeightPx: S,
+      statusCenterOffset: g
+    })]
   })
 }

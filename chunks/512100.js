@@ -1,105 +1,95 @@
 "use strict";
 n.r(t), n.d(t, {
   CardDetails: function() {
-    return m
+    return c
   }
-}), n("47120");
-var i = n("735250"),
-  s = n("470079"),
-  a = n("789978"),
-  r = n("727075"),
-  l = n("790472"),
-  o = n("349361"),
-  c = n("777207"),
-  d = n("330711"),
-  u = n("960016");
+});
+var i = n("735250");
+n("470079");
+var r = n("789978"),
+  l = n("727075"),
+  s = n("777207"),
+  a = n("541822"),
+  o = n("330711"),
+  d = n("89569");
 
-function m(e) {
+function c(e) {
   let {
     benefits: t,
     description: n,
-    imgSrc: m,
-    title: f,
-    onClose: h,
-    tag: x
-  } = e, v = s.useRef(null), [p, g] = s.useState(!0), j = null != m ? {
-    "--custom-background-url": "url(".concat(m.toString(), ")")
-  } : void 0, C = () => {
-    var e;
-    (null === (e = v.current) || void 0 === e ? void 0 : e.isScrolledToBottom()) === !0 ? g(!1) : g(!0)
-  };
+    imgSrc: c,
+    title: u,
+    onClose: f,
+    tag: m,
+    FallbackIcon: p
+  } = e, h = null != c ? {
+    "--custom-background-url": "url(".concat(c.toString(), ")")
+  } : void 0;
   return (0, i.jsxs)("div", {
-    className: u.container,
+    className: d.container,
     children: [(0, i.jsxs)("div", {
-      className: u.header,
+      className: d.header,
       children: [(0, i.jsx)("div", {
-        className: u.headerBackground,
-        style: j
+        className: d.headerBackground,
+        style: h
       }), (0, i.jsxs)("div", {
-        className: u.headerTop,
+        className: d.headerTop,
         children: [(0, i.jsx)("div", {
-          children: x
-        }), (0, i.jsx)(a.FocusRing, {
+          children: m
+        }), (0, i.jsx)(r.FocusRing, {
           children: (0, i.jsx)("button", {
-            onClick: h,
-            className: u.closeBtn,
+            onClick: f,
+            className: d.closeBtn,
             type: "button",
-            children: (0, i.jsx)(r.CloseSmallIcon, {
+            children: (0, i.jsx)(l.CloseSmallIcon, {
               height: 24,
               width: 24,
-              color: "var(--white)"
+              color: "var(--header-primary)"
             })
           })
         })]
       }), (0, i.jsx)("div", {
-        className: u.headerImage,
-        children: null != m ? (0, i.jsx)("img", {
-          src: m.toString(),
+        className: d.headerImage,
+        children: null != c ? (0, i.jsx)("img", {
+          src: c.toString(),
           alt: ""
-        }) : (0, i.jsx)(l.TicketIcon, {
-          color: "white",
+        }) : (0, i.jsx)(p, {
+          color: "var(--text-muted)",
           height: 96,
           width: 96
         })
       })]
-    }), (0, i.jsxs)(o.AdvancedScrollerThin, {
-      className: u.scroll,
-      fade: !0,
-      ref: e => {
-        null != e && (v.current = e, C())
-      },
-      onScroll: C,
+    }), (0, i.jsxs)(a.default, {
+      className: d.scroll,
       children: [(0, i.jsx)("br", {}), (0, i.jsxs)("div", {
-        className: u.scrollContent,
-        children: [(0, i.jsx)(c.Text, {
+        className: d.scrollContent,
+        children: [(0, i.jsx)(s.Text, {
           color: "header-primary",
           tag: "div",
           variant: "heading-xl/semibold",
-          children: f
+          children: u
         }), (null != n && "" !== n || null != t) && (0, i.jsxs)("div", {
-          className: u.details,
-          children: [(0, i.jsx)(c.Text, {
+          className: d.details,
+          children: [(0, i.jsx)(s.Text, {
             color: "header-primary",
             tag: "div",
             variant: "heading-lg/semibold",
-            children: d.default.Messages.Storefront.PRODUCT_DETAILS
-          }), (0, i.jsx)(c.Text, {
+            children: o.default.Messages.Storefront.PRODUCT_DETAILS
+          }), (0, i.jsx)(s.Text, {
             color: "text-muted",
             variant: "text-md/normal",
+            className: d.description,
             children: n
           }), null != t && (0, i.jsxs)("div", {
-            className: u.benefits,
-            children: [(0, i.jsx)(c.Text, {
+            className: d.benefits,
+            children: [(0, i.jsx)(s.Text, {
               color: "header-secondary",
               variant: "eyebrow",
-              children: d.default.Messages.Storefront.BENEFITS_TITLE
+              children: o.default.Messages.Storefront.BENEFITS_TITLE
             }), t]
           })]
         })]
       })]
-    }), (0, i.jsx)("div", {
-      className: u.containerScrollGradient,
-      "data-shown": p
     })]
   })
 }

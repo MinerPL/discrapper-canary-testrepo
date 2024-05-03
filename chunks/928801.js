@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return a
+    return s
   }
 }), n("47120");
 var i = n("348327"),
   r = n.n(i);
 
-function s(e, t, n) {
+function a(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -15,7 +15,7 @@ function s(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class a {
+class s {
   shouldCommit() {
     return !0
   }
@@ -41,12 +41,13 @@ class a {
     if (t) this.dirty = !r()(n, this.getInitialState());
     else
       for (let e of Object.keys(n)) this.dirty = this.dirty || !r()(this.state[e], n[e]);
-    return this.state = n, !!(this.dirty && this.shouldCommit()) && (this.dirty = !1, this.didCommit(this.state), !0)
+    let i = this.dirty && this.shouldCommit();
+    return (i || this.alwaysUpdateState) && (this.state = n), !!i && (this.dirty = !1, this.didCommit(this.state), !0)
   }
   forceUpdate() {
     this.dirty = !1, this.didCommit(this.state)
   }
-  constructor() {
-    s(this, "dirty", !1), s(this, "state", this.getInitialState())
+  constructor(e = !0) {
+    a(this, "alwaysUpdateState", void 0), a(this, "dirty", void 0), a(this, "state", void 0), this.alwaysUpdateState = e, this.dirty = !1, this.state = this.getInitialState()
   }
 }

@@ -2,7 +2,7 @@
 n.r(t);
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("112724"),
   o = n("351248"),
@@ -16,7 +16,7 @@ var a = n("735250"),
   E = n("236564"),
   C = n("981631"),
   g = n("354459"),
-  S = n("328363");
+  S = n("142181");
 t.default = (0, r.default)(e => {
   let {
     participants: t,
@@ -27,8 +27,8 @@ t.default = (0, r.default)(e => {
     onSelectParticipant: T,
     onContextMenuParticipant: I,
     onFullscreenParticipant: A,
-    channel: v,
-    hasConnectPermission: N,
+    channel: N,
+    hasConnectPermission: v,
     className: x,
     inCall: M,
     showParticipants: R = !0,
@@ -38,22 +38,23 @@ t.default = (0, r.default)(e => {
     idle: j,
     mode: P,
     popoutWindow: D,
-    awaitingRemoteSessionInfo: b
+    awaitingRemoteSessionInfo: b,
+    forceShowToggleParticipants: U
   } = e;
   l.useEffect(() => {
     c.ComponentDispatch.dispatch(C.ComponentActions.REMEASURE_TARGET)
   }, [y, O]);
-  let U = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
-  if ((null == b ? void 0 : b.channelId) === v.id) return (0, a.jsx)(h.default, {
+  let F = l.useMemo(() => n.filter(e => e.type !== g.ParticipantTypes.ACTIVITY || !e.participants.has(u.default.getId())), [n, r]);
+  if ((null == b ? void 0 : b.channelId) === N.id) return (0, a.jsx)(h.default, {
     height: O
   });
-  if ((null == v ? void 0 : v.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
-    channel: v,
+  if ((null == N ? void 0 : N.isGuildVocal()) && !M) return (0, a.jsx)(f.default, {
+    channel: N,
     participants: t,
-    hasConnectPermission: N
+    hasConnectPermission: v
   });
   if (P === C.ChannelModes.VOICE) return (0, a.jsx)(o.default, {
-    guildId: v.guild_id,
+    guildId: N.guild_id,
     width: y,
     className: S.voiceCallWrapper,
     participants: t,
@@ -61,16 +62,16 @@ t.default = (0, r.default)(e => {
   });
   if (n = M ? n : t, null == s) return 0 === n.length ? (0, a.jsx)(E.default, {
     className: i()(S.videoGrid, S.hiddenParticipants),
-    channelId: v.id,
+    channelId: N.id,
     width: y
   }) : (0, a.jsx)(d.default, {
     className: S.videoGridWrapper,
     justify: d.default.Justify.CENTER,
     align: d.default.Align.CENTER,
     children: (0, a.jsx)(m.default, {
-      channel: v,
+      channel: N,
       className: S.videoGrid,
-      participants: U,
+      participants: F,
       totalNumberOfParticipants: t.length,
       onClick: T,
       onDoubleClick: A,
@@ -84,7 +85,7 @@ t.default = (0, r.default)(e => {
     onContextMenuParticipant: I,
     onSelectParticipant: T,
     selectedParticipant: s,
-    filteredParticipants: U,
+    filteredParticipants: F,
     participants: t,
     popoutWindow: D,
     className: x,
@@ -93,7 +94,8 @@ t.default = (0, r.default)(e => {
     width: y,
     layout: _,
     inCall: M,
-    channel: v,
-    showParticipants: R
+    channel: N,
+    showParticipants: R,
+    forceShowToggleParticipants: U
   })
 })

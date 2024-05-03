@@ -2,7 +2,7 @@
 s.r(t), s("47120"), s("724458");
 var l = s("735250"),
   a = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("442837"),
   o = s("481060"),
@@ -39,7 +39,7 @@ var l = s("735250"),
   H = s("981631"),
   B = s("231338"),
   G = s("689938"),
-  V = s("494518");
+  V = s("391897");
 
 function k(e) {
   let {
@@ -260,8 +260,8 @@ function Y(e) {
       label: E.title,
       onChange: function() {
         let e = a.accessPermissions,
-          s = x.default.getCurrentUser();
-        F.toggleChannelEveryonePermission(a, e, n), !n && null != s && !(null == t ? void 0 : t.isOwner(s)) && !c && F.grantUserChannelAccess(a, e)
+          t = x.default.getCurrentUser();
+        F.toggleChannelEveryonePermission(a, e, n), !n && null != t && !c && F.grantUserChannelAccess(a, e)
       },
       value: n
     }), (0, l.jsxs)("div", {

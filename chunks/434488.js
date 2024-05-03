@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("524437"),
   o = n("692547"),
@@ -25,12 +25,12 @@ var a = n("735250"),
   T = n("944581"),
   I = n("36113"),
   A = n("626135"),
-  v = n("792125"),
-  N = n("607187"),
+  N = n("792125"),
+  v = n("607187"),
   x = n("981631"),
   M = n("701488"),
   R = n("689938"),
-  L = n("619727"),
+  L = n("970363"),
   y = n("334732");
 
 function O(e) {
@@ -96,7 +96,7 @@ function j(e) {
             onClick: () => {
               null == t || t(), f()
             },
-            children: (0, a.jsx)(N.default, {
+            children: (0, a.jsx)(v.default, {
               className: L.root,
               children: (0, a.jsx)("div", {
                 className: L.iconContainer,
@@ -110,7 +110,7 @@ function j(e) {
         }
       }), (0, a.jsx)(u.Clickable, {
         onClick: l,
-        className: i()((0, v.getThemeClass)(x.ThemeTypes.DARK), L.shelfButtonCloseButton),
+        className: i()((0, N.getThemeClass)(x.ThemeTypes.DARK), L.shelfButtonCloseButton),
         children: (0, a.jsx)(S.default, {
           width: 24,
           height: 24,
@@ -141,7 +141,7 @@ function P(e) {
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_INVITE);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: c,
-    children: (0, a.jsxs)(N.default, {
+    children: (0, a.jsxs)(v.default, {
       className: L.root,
       children: [r > 400 ? (0, a.jsx)("img", {
         src: y,
@@ -208,19 +208,21 @@ function P(e) {
 let D = e => {
   let {
     userParticipantCount: t,
-    guildId: n
-  } = e, a = (0, c.default)({
-    guildId: n
+    guildId: n,
+    channel: a
+  } = e, l = (0, c.default)({
+    guildId: n,
+    channel: a
   });
   if (2 === t) {
     let e = [],
       t = [(0, M.WATCH_YOUTUBE_PROD_APP_ID), (0, M.PUTT_PARTY_APPLICATION_ID), (0, M.CHESS_IN_THE_PARK_APP_ID)].filter(Boolean).slice(0, 3);
-    return a.forEach(n => {
+    return l.forEach(n => {
       let a = t.indexOf(n.application.id);
       !(a < 0) && (e[a] = n)
     }), e
   }
-  return a.slice(0, 3)
+  return l.slice(0, 3)
 };
 
 function b(e) {
@@ -239,14 +241,15 @@ function b(e) {
   }, []);
   let c = D({
       userParticipantCount: d,
-      guildId: n.id
+      guildId: n.id,
+      channel: t
     }),
     {
       analyticsLocations: h
     } = (0, p.default)(m.default.VC_TILE_ACTIVITY_SUGGESTION);
   return (0, a.jsx)(p.AnalyticsLocationProvider, {
     value: h,
-    children: (0, a.jsxs)(N.default, {
+    children: (0, a.jsxs)(v.default, {
       className: L.root,
       children: [o > 480 ? (0, a.jsx)("img", {
         className: L.art,

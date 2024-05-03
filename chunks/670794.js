@@ -1,15 +1,82 @@
 "use strict";
-e.exports = {
-  button: "button__690aa",
-  buttons: "buttons__7952d",
-  content: "content_ccdeb6",
-  errorMessage: "errorMessage__4bf19",
-  header: "header_a63b7e",
-  icon: "icon__59e29",
-  inline: "inline_ac2a16",
-  previewCard: "previewCard_d892d0",
-  privacyLevel: "privacyLevel__7ff69 inline_ac2a16",
-  publicIcon: "publicIcon_fc03a9",
-  spacing: "spacing_f95781",
-  verticalSpacing: "verticalSpacing__6b554"
+s.r(t), s.d(t, {
+  default: function() {
+    return c
+  }
+}), s("47120");
+var a = s("735250"),
+  l = s("470079"),
+  n = s("481060"),
+  o = s("194359"),
+  u = s("153124"),
+  i = s("51144"),
+  d = s("689938"),
+  r = s("87647");
+
+function c(e) {
+  let {
+    user: t,
+    nickname: s,
+    transitionState: c,
+    onClose: N
+  } = e, h = (0, u.useUID)(), [f, I] = l.useState(!1), [M, p] = l.useState(s), C = l.useRef(null), E = async e => {
+    e.preventDefault(), I(!0);
+    try {
+      await o.default.updateRelationship(t.id, M), N()
+    } catch (e) {} finally {
+      I(!1)
+    }
+  }, x = null == s ? d.default.Messages.ADD_FRIEND_NICKNAME : d.default.Messages.CHANGE_FRIEND_NICKNAME;
+  return (0, a.jsx)(n.ModalRoot, {
+    transitionState: c,
+    size: n.ModalSize.SMALL,
+    "aria-labelledby": h,
+    children: (0, a.jsxs)("form", {
+      onSubmit: E,
+      children: [(0, a.jsx)(n.ModalHeader, {
+        separator: !1,
+        children: (0, a.jsx)(n.Heading, {
+          variant: "heading-lg/semibold",
+          children: x
+        })
+      }), (0, a.jsxs)(n.ModalContent, {
+        children: [(0, a.jsx)(n.Text, {
+          variant: "text-md/normal",
+          className: r.description,
+          children: d.default.Messages.FRIEND_NICKNAME_DESCRIPTION
+        }), (0, a.jsx)(n.FormItem, {
+          title: d.default.Messages.FRIEND_NICKNAME,
+          children: (0, a.jsx)(n.TextInput, {
+            inputRef: C,
+            value: null != M ? M : "",
+            placeholder: i.default.getName(t),
+            onChange: p,
+            className: r.input,
+            autoFocus: !0
+          })
+        }), (0, a.jsx)(n.Button, {
+          look: n.Button.Looks.LINK,
+          color: n.Button.Colors.LINK,
+          size: n.Button.Sizes.NONE,
+          onClick: () => {
+            var e;
+            p(null), null === (e = C.current) || void 0 === e || e.focus()
+          },
+          className: r.reset,
+          children: d.default.Messages.RESET_FRIEND_NICKNAME
+        })]
+      }), (0, a.jsxs)(n.ModalFooter, {
+        children: [(0, a.jsx)(n.Button, {
+          type: "submit",
+          disabled: f,
+          children: d.default.Messages.SAVE
+        }), (0, a.jsx)(n.Button, {
+          onClick: N,
+          look: n.Button.Looks.LINK,
+          color: n.Button.Colors.PRIMARY,
+          children: d.default.Messages.CANCEL
+        })]
+      })]
+    })
+  })
 }

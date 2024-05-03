@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("570140"),
   r = n("340332"),
-  s = n("672339"),
-  a = n("463395"),
+  a = n("672339"),
+  s = n("463395"),
   o = n("131951"),
   l = n("626135"),
   u = n("557177"),
@@ -17,13 +17,13 @@ function E() {
 
 function I(e, t, n, i, r) {
   if (t === n) return;
-  let s = e[t],
+  let a = e[t],
     o = e[n];
   l.default.track(_.AnalyticEvents.MEDIA_DEVICE_CHANGED, {
-    device_from_name: a.default.getCertifiedDeviceName(t, null != s ? s.name : ""),
-    device_to_name: a.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
+    device_from_name: s.default.getCertifiedDeviceName(t, null != a ? a.name : ""),
+    device_to_name: s.default.getCertifiedDeviceName(n, null != o ? o.name : ""),
     device_type: i,
-    device_is_certified: a.default.isCertified(n),
+    device_is_certified: s.default.isCertified(n),
     location: r
   })
 }
@@ -54,6 +54,13 @@ t.default = {
       syncRemote: t,
       skipMuteUnmuteSoundEffect: !r
     }) : this.enable(!0)
+  },
+  setSelfMute(e, t) {
+    !S() && i.default.dispatch({
+      type: "AUDIO_SET_SELF_MUTE",
+      context: e,
+      mute: t
+    })
   },
   setTemporarySelfMute(e) {
     !S() && i.default.dispatch({
@@ -91,14 +98,14 @@ t.default = {
   setDisableLocalVideo(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.MediaEngineContextTypes.DEFAULT,
       r = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
-      s = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     !S() && i.default.dispatch({
       type: "AUDIO_SET_LOCAL_VIDEO_DISABLED",
       context: n,
       userId: e,
       videoToggleState: t,
       persist: r,
-      isAutomatic: s
+      isAutomatic: a
     })
   },
   setLocalVolume(e, t) {
@@ -281,7 +288,7 @@ t.default = {
     })
   },
   setVideoEnabled(e) {
-    (0, s.applyInitialVideoBackgroundOption)(), i.default.dispatch({
+    (0, a.applyInitialVideoBackgroundOption)(), i.default.dispatch({
       type: "MEDIA_ENGINE_SET_VIDEO_ENABLED",
       enabled: e
     })
@@ -295,18 +302,6 @@ t.default = {
   setOpenH264(e) {
     !S() && i.default.dispatch({
       type: "MEDIA_ENGINE_SET_OPEN_H264",
-      enabled: e
-    })
-  },
-  setAV1Enabled(e) {
-    !S() && i.default.dispatch({
-      type: "MEDIA_ENGINE_SET_AV1",
-      enabled: e
-    })
-  },
-  setH265Enabled(e) {
-    !S() && i.default.dispatch({
-      type: "MEDIA_ENGINE_SET_H265",
       enabled: e
     })
   },

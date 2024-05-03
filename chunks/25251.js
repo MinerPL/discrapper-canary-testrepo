@@ -1,66 +1,75 @@
 "use strict";
-let i;
+let i, r;
 n.r(t);
-var r, s, a, o, l = n("392711"),
-  u = n("442837"),
-  d = n("570140");
-let _ = [],
-  c = !1;
-let E = _,
-  I = {},
-  T = null,
-  f = e => {
-    E = (0, l.cloneDeep)(e);
+var a, s, o, l, u = n("392711"),
+  d = n("442837"),
+  _ = n("570140"),
+  c = n("358085"),
+  E = n("729436");
+let I = [],
+  T = !1;
+let f = I,
+  S = {},
+  h = null;
+let A = 0,
+  m = e => {
+    f = (0, u.cloneDeep)(e);
     let t = {};
-    E.forEach(e => {
-      t[e.id] = e
-    }), I = t
+    f.forEach(e => {
+      t[e.id] = (0, c.isAndroid)() ? (0, E.applyPatches)(e) : e
+    }), S = t
   };
-class S extends(o = u.default.Store) {
+class N extends(l = d.default.Store) {
   get isFetching() {
-    return c
+    return T
   }
   get fetchError() {
     return i
   }
   get profileEffects() {
-    return E
+    return f
   }
   get tryItOutId() {
-    return T
+    return h
+  }
+  canFetch() {
+    return null == r || Date.now() >= r
+  }
+  hasFetched() {
+    return null != r && null == i
   }
   getProfileEffectById(e) {
-    return null != e ? I[e] : void 0
+    return null != e ? S[e] : void 0
   }
 }
-a = "ProfileEffectStore", (s = "displayName") in(r = S) ? Object.defineProperty(r, s, {
-  value: a,
+o = "ProfileEffectStore", (s = "displayName") in(a = N) ? Object.defineProperty(a, s, {
+  value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new S(d.default, {
+}) : a[s] = o, t.default = new N(_.default, {
   USER_PROFILE_EFFECTS_FETCH: () => {
-    c = !0
+    T = !0
   },
   USER_PROFILE_EFFECTS_FETCH_SUCCESS: e => {
     let {
       profileEffects: t
     } = e;
-    c = !1, f(0 === t.length ? _ : t)
+    T = !1, i = void 0, r = Date.now() + 3e5, A = 0, m(0 === t.length ? I : t)
   },
   USER_PROFILE_EFFECTS_FETCH_FAILURE: e => {
     let {
       error: t
     } = e;
-    c = !1, i = t, f(_)
+    T = !1, i = t, r = Date.now() + Math.min(6e4 * 2 ** A, 36e5), ++A, m(I)
   },
   PROFILE_EFFECTS_SET_TRY_IT_OUT: e => {
     let {
       id: t
     } = e;
-    T = t
+    h = t
   },
   LOGOUT: e => {
-    c = !1, f(_), T = null
+    T = !1, m(I), h = null
   }
 })

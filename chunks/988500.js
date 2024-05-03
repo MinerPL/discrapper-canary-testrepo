@@ -28,9 +28,9 @@ let o = {
   })
 };
 
-function d(e, t) {
-  let n = (0, u.default)(e, t);
-  return 0 === n.length ? null : (0, a.jsx)(a.Fragment, {
-    children: n.map(t => o[t](e))
+function d(e) {
+  let t = (0, u.default)(e);
+  return 0 === t.length ? null : (0, a.jsx)(a.Fragment, {
+    children: t.map(t => o[t](e))
   })
 }

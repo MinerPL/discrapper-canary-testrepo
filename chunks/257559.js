@@ -2,7 +2,7 @@
 s.r(t), s("789020"), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("803997"),
+  l = s("120356"),
   i = s.n(l),
   d = s("481060"),
   r = s("332148"),
@@ -14,11 +14,11 @@ var a = s("735250"),
   g = s("699516"),
   M = s("594174"),
   _ = s("387204"),
-  h = s("630388"),
-  m = s("970257"),
+  m = s("630388"),
+  h = s("970257"),
   N = s("981631"),
   S = s("689938"),
-  A = s("131865");
+  A = s("214705");
 
 function I(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -38,11 +38,11 @@ class C extends n.PureComponent {
       message: l,
       showContextMenuHint: i,
       ...r
-    } = this.props, u = n.type === N.ChannelTypes.GUILD_ANNOUNCEMENT && (0, h.hasFlag)(l.flags, N.MessageFlags.CROSSPOSTED);
+    } = this.props, u = n.type === N.ChannelTypes.GUILD_ANNOUNCEMENT && (0, m.hasFlag)(l.flags, N.MessageFlags.CROSSPOSTED);
     return i && (e = (0, a.jsx)(_.default, {
       className: A.spacingTop,
       children: S.default.Messages.DELETE_MESSAGE_CONTEXT_MENU_HINT.format()
-    })), (0, m.canDeleteAndReportMessage)(l) && (t = (0, a.jsx)(d.FormSwitch, {
+    })), (0, h.canDeleteAndReportMessage)(l) && (t = (0, a.jsx)(d.FormSwitch, {
       value: s,
       onChange: this.handleToggleReport,
       hideBorder: !0,
@@ -81,7 +81,7 @@ class C extends n.PureComponent {
         channel: t,
         message: s
       } = this.props;
-      e ? (0, f.showReportModalForMessage)(s, () => u.default.deleteMessage(t.id, s.id)) : u.default.deleteMessage(t.id, s.id)
+      e ? (0, f.showReportModalForMessage)(s, "message_delete_alert", () => u.default.deleteMessage(t.id, s.id)) : u.default.deleteMessage(t.id, s.id)
     }), I(this, "handleToggleReport", e => {
       this.setState({
         report: e

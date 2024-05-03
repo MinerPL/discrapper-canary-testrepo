@@ -12,8 +12,8 @@ var a = n("392711"),
   c = n("463618"),
   f = n("823379"),
   E = n("981631"),
-  _ = n("425557");
-let T = (0, r.default)(e => {
+  _ = n("624902");
+let m = (0, r.default)(e => {
   let {
     member: t,
     empty: n,
@@ -38,7 +38,7 @@ let T = (0, r.default)(e => {
   return (0, s.jsx)("div", {
     className: _.partyMemberKnown,
     children: (0, s.jsx)(i.Popout, {
-      preload: () => (0, u.default)(t.id, t.getAvatarURL(l, 80), {
+      preload: () => (0, u.maybeFetchUserProfileForPopout)(t.id, t.getAvatarURL(l, 80), {
         guildId: l
       }),
       renderPopout: e => (0, s.jsx)(d.default, {
@@ -72,22 +72,22 @@ t.default = e => {
     knownSize: d
   } = t;
   if (u < a) return null;
-  let c = l()(n).filter(f.isNotNullish).take(i).map(e => (0, s.jsx)(T, {
+  let c = l()(n).filter(f.isNotNullish).take(i).map(e => (0, s.jsx)(m, {
     member: e,
     guildId: r
   }, e.id)).value();
-  for (let e = 0; e < o && c.length < i; e++) c.push((0, s.jsx)(T, {
+  for (let e = 0; e < o && c.length < i; e++) c.push((0, s.jsx)(m, {
     guildId: r
   }, "unknown-member-".concat(e)));
   let E = u - d - o;
-  for (let e = 0; e < E && c.length < i; e++) c.push((0, s.jsx)(T, {
+  for (let e = 0; e < E && c.length < i; e++) c.push((0, s.jsx)(m, {
     empty: !0,
     guildId: r
   }, "empty-member-".concat(e)));
-  let m = Math.max(Math.min(u - c.length, 99), 0);
-  if (1 === m) {
+  let T = Math.max(Math.min(u - c.length, 99), 0);
+  if (1 === T) {
     let e = n[i];
-    c.push((0, s.jsx)(T, {
+    c.push((0, s.jsx)(m, {
       member: e,
       guildId: r
     }, e.id))
@@ -96,9 +96,9 @@ t.default = e => {
     className: _.wrapper,
     children: (0, s.jsxs)("div", {
       className: _.partyMembers,
-      children: [c, m > 1 ? (0, s.jsxs)("div", {
+      children: [c, T > 1 ? (0, s.jsxs)("div", {
         className: _.partyMemberOverflow,
-        children: ["+", m]
+        children: ["+", T]
       }) : null]
     })
   })

@@ -1,68 +1,67 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return d
   }
 }), n("47120");
 var l = n("512722"),
-  a = n.n(l),
-  s = n("911969"),
-  u = n("689938");
-let o = (e, t) => {
+  u = n.n(l),
+  a = n("911969"),
+  o = n("689938");
+let i = (e, t) => {
     let {
       minValues: n,
       maxValues: l
     } = e;
-    if (null == t) return 0 === n ? null : u.default.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({
+    if (null == t) return 0 === n ? null : o.default.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({
       count: n
     });
-    if (t.type === s.ComponentType.STRING_SELECT) {
-      if (t.values.length < n) return u.default.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({
+    if (t.type === a.ComponentType.STRING_SELECT) {
+      if (t.values.length < n) return o.default.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({
         count: n
       });
-      if (t.values.length > l) return u.default.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({
+      if (t.values.length > l) return o.default.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({
         count: l
       })
     } else {
-      if (t.selectedOptions.length < n) return u.default.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({
+      if (t.selectedOptions.length < n) return o.default.Messages.MESSAGE_SELECT_COMPONENT_SELECT_REQUIREMENT.format({
         count: n
       });
-      if (t.selectedOptions.length > l) return u.default.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({
+      if (t.selectedOptions.length > l) return o.default.Messages.MESSAGE_SELECT_COMPONENT_MAX_SELECT_REQUIREMENT.format({
         count: l
       })
     }
     return null
   },
-  i = (e, t) => {
+  r = (e, t) => {
     let {
       minLength: n,
       maxLength: l,
-      required: a
+      required: u
     } = e;
-    if (null == t || 0 === t.value.length) return a ? u.default.Messages.FORM_LENGTH_ERROR.format({
+    if (null == t || 0 === t.value.length) return u ? o.default.Messages.FORM_LENGTH_ERROR.format({
       min: n,
       max: l
     }) : null;
-    return t.value.length < n || t.value.length > l ? u.default.Messages.FORM_LENGTH_ERROR.format({
+    return t.value.length < n || t.value.length > l ? o.default.Messages.FORM_LENGTH_ERROR.format({
       min: n,
       max: l
     }) : null
   };
 
-function r(e, t) {
-  switch (null != t && a()(t.type === e.type, "component type matches state"), e.type) {
-    case s.ComponentType.ACTION_ROW:
-    case s.ComponentType.BUTTON:
+function d(e, t) {
+  switch (null != t && u()(t.type === e.type, "component type matches state"), e.type) {
+    case a.ComponentType.BUTTON:
       return null;
-    case s.ComponentType.STRING_SELECT:
-    case s.ComponentType.USER_SELECT:
-    case s.ComponentType.ROLE_SELECT:
-    case s.ComponentType.MENTIONABLE_SELECT:
-    case s.ComponentType.CHANNEL_SELECT:
-      return o(e, t);
-    case s.ComponentType.INPUT_TEXT:
+    case a.ComponentType.STRING_SELECT:
+    case a.ComponentType.USER_SELECT:
+    case a.ComponentType.ROLE_SELECT:
+    case a.ComponentType.MENTIONABLE_SELECT:
+    case a.ComponentType.CHANNEL_SELECT:
       return i(e, t);
+    case a.ComponentType.INPUT_TEXT:
+      return r(e, t);
     default:
-      a()(!1, "missing validator for this component")
+      u()(!1, "missing validator for this component")
   }
 }

@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var a, s = n("735250"),
   l = n("470079"),
-  i = n("803997"),
+  i = n("120356"),
   r = n.n(i),
   o = n("873546"),
   u = n("481060"),
@@ -12,10 +12,10 @@ var a, s = n("735250"),
   E = n("672705"),
   h = n("981631"),
   _ = n("689938"),
-  C = n("804722"),
-  m = n("794711");
+  C = n("56651"),
+  S = n("949086");
 
-function S(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -23,8 +23,8 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let I = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
-class p extends(a = l.PureComponent) {
+let p = c.default.getArticleURL(h.HelpdeskArticles.VERIFICATION_FAQ);
+class I extends(a = l.PureComponent) {
   renderFields() {
     let {
       types: e,
@@ -37,7 +37,7 @@ class p extends(a = l.PureComponent) {
         onVerify: a,
         theme: n
       }, t) : (0, s.jsx)(u.Button, {
-        className: r()(m.marginBottom20),
+        className: r()(S.marginBottom20),
         onClick: () => this.handleClick(e),
         children: d.default.getButtonTitle(e)
       }, e))
@@ -58,12 +58,12 @@ class p extends(a = l.PureComponent) {
         children: [(0, s.jsx)("div", {
           className: C.image
         }), (0, s.jsx)("div", {
-          className: r()(C.title, m.marginTop20),
+          className: r()(C.title, S.marginTop20),
           children: _.default.Messages.VERIFICATION_TITLE
         }), (0, s.jsx)("div", {
-          className: r()(C.body, m.marginTop4, m.marginBottom20),
+          className: r()(C.body, S.marginTop4, S.marginBottom20),
           children: _.default.Messages.VERIFICATION_BODY_WITH_HELP_LINK.format({
-            helpCenterURL: I
+            helpCenterURL: p
           })
         }), (0, s.jsx)(f.default, {
           grow: 0,
@@ -72,10 +72,10 @@ class p extends(a = l.PureComponent) {
           children: this.renderFields()
         })]
       }), (0, s.jsx)("div", {
-        className: r()(C.footer, m.marginTop20),
+        className: r()(C.footer, S.marginTop20),
         children: _.default.Messages.VERIFICATION_FOOTER
       }), (0, s.jsxs)(f.default, {
-        className: r()(m.marginTop4, m.marginBottom20),
+        className: r()(S.marginTop4, S.marginBottom20),
         grow: 0,
         children: [(0, s.jsx)("div", {
           className: r()(C.footer, C.footerAction),
@@ -95,7 +95,7 @@ class p extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), S(this, "handleClick", e => {
+    super(...e), m(this, "handleClick", e => {
       let {
         onClick: t
       } = this.props;
@@ -103,8 +103,8 @@ class p extends(a = l.PureComponent) {
     })
   }
 }
-S(p, "defaultProps", {
+m(I, "defaultProps", {
   types: [h.VerificationTypes.CAPTCHA],
   onCaptchaVerify: h.NOOP,
   onLogout: h.NOOP
-}), t.default = p
+}), t.default = I

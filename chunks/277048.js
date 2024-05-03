@@ -2,7 +2,7 @@
 n.r(t);
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("653603"),
   o = n.n(r),
@@ -19,10 +19,10 @@ var a = n("735250"),
   S = n("534761"),
   _ = n("981631"),
   T = n("689938"),
-  I = n("567657"),
-  A = n("931093"),
-  v = n("50182");
-let N = l.memo(function(e) {
+  I = n("366055"),
+  A = n("990291"),
+  N = n("904335");
+let v = l.memo(function(e) {
   let {
     message: t,
     notice: n,
@@ -86,8 +86,8 @@ t.default = l.memo(function(e) {
   }, [C, d.content, E, _, p]), (0, a.jsxs)("div", {
     id: (0, m.getMessageContentId)(d),
     className: i()(s, A.markup, {
-      [v.messageContent]: !0,
-      [v.markupRtl]: "rtl" === o()(d.content),
+      [N.messageContent]: !0,
+      [N.markupRtl]: "rtl" === o()(d.content),
       [I.blockedEdit]: null == M ? void 0 : M.isBlockedEdit,
       [I.blockedSend]: !(null == M ? void 0 : M.isBlockedEdit)
     }),
@@ -97,11 +97,11 @@ t.default = l.memo(function(e) {
         isEdited: !0,
         isInline: !1,
         children: (0, a.jsxs)("span", {
-          className: v.edited,
+          className: N.edited,
           children: ["(", T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_EDIT_POSTFIX, ")"]
         })
       })]
-    }), (0, a.jsx)(N, {
+    }), (0, a.jsx)(v, {
       notice: null !== (n = null == M ? void 0 : M.errorMessage) && void 0 !== n ? n : T.default.Messages.GUILD_AUTOMOD_BLOCKED_MESSAGE_SEND_NOTICE,
       message: d,
       compact: r,

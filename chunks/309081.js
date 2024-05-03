@@ -6,7 +6,7 @@ a.r(t), a.d(t, {
 }), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   r = a.n(s),
   o = a("263568"),
   i = a("442837"),
@@ -28,10 +28,10 @@ var l = a("735250"),
   P = a("885001"),
   I = a("35463"),
   g = a("489887"),
-  x = a("185923"),
-  p = a("957825"),
+  p = a("185923"),
+  x = a("957825"),
   M = a("689938"),
-  S = a("387785");
+  S = a("558429");
 let v = {
   offset: {
     top: -4,
@@ -58,7 +58,7 @@ function j(e) {
   }) : null != r ? (0, l.jsx)(c.default, {
     className: o,
     emojiId: r.id,
-    emojiName: r.type === A.EmojiTypes.UNICODE ? r.surrogates : r.name,
+    emojiName: r.type === A.EmojiTypes.UNICODE ? r.optionallyDiverseSequence : r.name,
     animated: r.animated
   }) : (0, l.jsx)(l.Fragment, {
     children: i
@@ -134,7 +134,7 @@ function b(e) {
       className: S.emojiPicker,
       children: (0, l.jsx)(_.default, {
         channel: R,
-        pickerIntention: x.EmojiIntention.POLLS,
+        pickerIntention: p.EmojiIntention.POLLS,
         closePopout: t,
         onNavigateAway: t,
         onSelectEmoji: (e, a) => {
@@ -164,7 +164,7 @@ function b(e) {
     fallback: (0, l.jsx)(N.default, {
       className: b ? S.expressionPickerIconDefault : S.expressionPickerIconImageOnly
     })
-  }), H = r()(p.CHAT_INPUT_BUTTON_CLASSNAME, d === o.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? S.expressionPickerButtonImageOnly : S.expressionPickerButtonDefault, {
+  }), H = r()(x.CHAT_INPUT_BUTTON_CLASSNAME, d === o.PollLayoutTypes.IMAGE_ONLY_ANSWERS ? S.expressionPickerButtonImageOnly : S.expressionPickerButtonDefault, {
     [S.canEditMedia]: w
   });
   return (0, l.jsx)(u.Popout, {
@@ -244,8 +244,8 @@ t.default = n.forwardRef(function(e, t) {
     onAnswerTextChange: C,
     onEmojiSelect: N,
     onEmojiRemove: I,
-    canRemoveAnswer: x,
-    onRemoveAnswer: p,
+    canRemoveAnswer: p,
+    onRemoveAnswer: x,
     addAnswer: j,
     submitPoll: D,
     answerTextInputRefs: U,
@@ -295,7 +295,7 @@ t.default = n.forwardRef(function(e, t) {
   return (0, l.jsx)(l.Fragment, {
     children: A === o.PollLayoutTypes.DEFAULT ? (0, l.jsxs)("div", {
       className: r()(S.answerRow, {
-        [S.hasDeleteButton]: x
+        [S.hasDeleteButton]: p
       }),
       children: [(0, l.jsxs)("div", {
         className: r()(S.defaultTextInputWrapper, {
@@ -325,8 +325,8 @@ t.default = n.forwardRef(function(e, t) {
           value: c.text,
           id: H
         })]
-      }), x && (0, l.jsx)(u.Clickable, {
-        onClick: () => p(_),
+      }), p && (0, l.jsx)(u.Clickable, {
+        onClick: () => x(_),
         className: S.removeAnswerButtonDefault,
         "aria-label": M.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({
           answerNumber: _ + 1
@@ -383,7 +383,7 @@ t.default = n.forwardRef(function(e, t) {
           "aria-label": M.default.Messages.CREATE_POLL_REMOVE_ANSWER_A11Y.format({
             answerNumber: _ + 1
           }),
-          onClick: () => p(_),
+          onClick: () => x(_),
           dangerous: !0,
           children: (0, l.jsx)(T.default, {
             "aria-hidden": !0

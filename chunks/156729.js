@@ -2,7 +2,7 @@
 s.r(t), s("47120");
 var a, n = s("735250"),
   l = s("470079"),
-  i = s("803997"),
+  i = s("120356"),
   r = s.n(i),
   o = s("873546"),
   d = s("442837"),
@@ -11,13 +11,13 @@ var a, n = s("735250"),
   S = s("355467"),
   E = s("117938"),
   T = s("46141"),
-  _ = s("351402"),
-  f = s("823379"),
-  m = s("464179"),
+  f = s("351402"),
+  m = s("823379"),
+  _ = s("464179"),
   g = s("211667"),
   h = s("244526"),
-  N = s("689938"),
-  I = s("946255");
+  I = s("689938"),
+  N = s("249054");
 
 function p(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -42,10 +42,10 @@ class A extends(a = l.PureComponent) {
       removeError: t
     } = this.props;
     return null == e || e.hasCardError() || e.hasAddressError() ? null != t ? (0, n.jsx)(u.FormErrorBlock, {
-      className: I.formError,
+      className: N.formError,
       children: t.message
     }) : null : (0, n.jsx)(u.FormErrorBlock, {
-      className: I.formError,
+      className: N.formError,
       children: e.message
     })
   }
@@ -57,14 +57,14 @@ class A extends(a = l.PureComponent) {
       paymentSource: s
     } = this.props, a = (0, E.getBillingAddressLayout)(s);
     return (0, n.jsxs)("div", {
-      className: I.addressSection,
+      className: N.addressSection,
       children: [(0, n.jsx)(u.Text, {
-        className: I.sectionHeader,
+        className: N.sectionHeader,
         variant: "text-sm/normal",
-        children: N.default.Messages.BILLING_ADDRESS
-      }), (0, n.jsx)(m.default, {
+        children: I.default.Messages.BILLING_ADDRESS
+      }), (0, n.jsx)(_.default, {
         ...e,
-        mode: m.default.Modes.EDIT,
+        mode: _.default.Modes.EDIT,
         layout: a,
         onBillingAddressChange: this.handleAddressUpdate,
         error: t
@@ -79,11 +79,11 @@ class A extends(a = l.PureComponent) {
     if (null == e || null == t) return null;
     let s = "".concat(e.toString().padStart(2, "0"), "/").concat(t.toString().padStart(2, "0").slice(-2));
     return (0, n.jsxs)("div", {
-      className: I.addressSection,
+      className: N.addressSection,
       children: [(0, n.jsx)(u.Text, {
-        className: I.sectionHeader,
+        className: N.sectionHeader,
         variant: "text-sm/normal",
-        children: N.default.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
+        children: I.default.Messages.BILLING_STEP_CREDIT_CARD_INFORMATION
       }), (0, n.jsx)(g.default, {
         expirationDate: s,
         onCardInfoChange: this.handleExpirationDateUpdate,
@@ -101,16 +101,16 @@ class A extends(a = l.PureComponent) {
       expirationValid: l
     } = this.state;
     return (0, n.jsxs)("div", {
-      className: I.formActions,
+      className: N.formActions,
       children: [(0, n.jsx)("div", {
-        className: I.__invalid_leftAlignedButtons,
+        className: N.__invalid_leftAlignedButtons,
         children: (0, n.jsxs)("div", {
-          className: I.disabledTooltipWrapper,
+          className: N.disabledTooltipWrapper,
           children: [s ? (0, n.jsx)(u.Tooltip, {
-            text: N.default.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
+            text: I.default.Messages.PAYMENT_SOURCE_DELETE_DISABLED_TOOLTIP,
             children: e => (0, n.jsx)("div", {
               "aria-hidden": !0,
-              className: I.disabledTooltipTarget,
+              className: N.disabledTooltipTarget,
               ...e
             })
           }) : null, (0, n.jsx)(u.Button, {
@@ -121,11 +121,11 @@ class A extends(a = l.PureComponent) {
             look: u.Button.Looks.OUTLINED,
             color: u.Button.Colors.RED,
             size: o.isMobile ? u.ButtonSizes.SMALL : u.ButtonSizes.MEDIUM,
-            children: o.isMobile ? N.default.Messages.DELETE : N.default.Messages.PAYMENT_SOURCE_DELETE
+            children: o.isMobile ? I.default.Messages.DELETE : I.default.Messages.PAYMENT_SOURCE_DELETE
           })]
         })
       }), (0, n.jsxs)("div", {
-        className: I.rightAlignedButtons,
+        className: N.rightAlignedButtons,
         children: [(0, n.jsx)(u.Button, {
           type: "button",
           disabled: e || t,
@@ -133,14 +133,14 @@ class A extends(a = l.PureComponent) {
           look: u.Button.Looks.LINK,
           color: u.Button.Colors.PRIMARY,
           size: o.isMobile ? u.ButtonSizes.SMALL : u.ButtonSizes.MEDIUM,
-          children: N.default.Messages.CANCEL
+          children: I.default.Messages.CANCEL
         }), (0, n.jsx)(u.Button, {
           submitting: e,
           disabled: !a || t || !l,
           type: "submit",
           color: u.Button.Colors.GREEN,
           size: o.isMobile ? u.ButtonSizes.SMALL : u.ButtonSizes.MEDIUM,
-          children: N.default.Messages.SAVE
+          children: I.default.Messages.SAVE
         })]
       })]
     })
@@ -157,36 +157,38 @@ class A extends(a = l.PureComponent) {
     } = this.state, o = e instanceof T.PaypalSourceRecord;
     return (0, n.jsx)(u.Card, {
       editable: !0,
-      className: r()(I.card, a),
+      className: r()(N.card, a),
       children: (0, n.jsxs)("form", {
         onSubmit: this.handleSubmit,
         noValidate: !0,
         children: [this.renderError(), (0, n.jsxs)("div", {
-          className: I.__invalid_paymentSection,
+          className: N.__invalid_paymentSection,
           children: [(0, n.jsx)(h.default, {
             paymentSource: e,
             isDefault: t,
             isForSubscription: l,
-            locale: s
+            locale: s,
+            showDefaultLabel: !0,
+            showPaymentSourceIcon: !0
           }), e.invalid ? (0, n.jsx)("div", {
-            className: I.errorSubText,
-            children: N.default.Messages.PAYMENT_SOURCE_INVALID_HELP
+            className: N.errorSubText,
+            children: I.default.Messages.PAYMENT_SOURCE_INVALID_HELP
           }) : null, (0, n.jsx)("div", {
-            className: I.subText,
-            children: o ? N.default.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({
+            className: N.subText,
+            children: o ? I.default.Messages.PAYMENT_SOURCE_EDIT_HELP_PAYPAL.format({
               paypalURL: "https://www.paypal.com"
-            }) : N.default.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
+            }) : I.default.Messages.PAYMENT_SOURCE_EDIT_HELP_CARD
           })]
         }), this.renderCardExpirationSection(), this.renderBillingAddressSection(), (0, n.jsx)(u.Checkbox, {
           name: C.IS_DEFAULT,
           value: i,
           onChange: (e, t) => this.handleFieldChange(t, C.IS_DEFAULT),
           type: u.Checkbox.Types.INVERTED,
-          className: I.defaultSection,
+          className: N.defaultSection,
           children: (0, n.jsx)(u.Text, {
-            className: I.defaultCheckboxLabel,
+            className: N.defaultCheckboxLabel,
             variant: "text-sm/normal",
-            children: N.default.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
+            children: I.default.Messages.PAYMENT_SOURCE_MAKE_DEFAULT
           })
         }), (0, n.jsx)(u.FormDivider, {}), this.renderActions()]
       })
@@ -195,7 +197,7 @@ class A extends(a = l.PureComponent) {
   constructor(e) {
     var t, s, a, n, l, i, r;
     super(e), p(this, "handleSubmit", e => {
-      if (e.preventDefault(), e.stopPropagation(), 0 === Object.values(this.state.dirtyFields).filter(f.isNotNullish).length) this.props.onCancel();
+      if (e.preventDefault(), e.stopPropagation(), 0 === Object.values(this.state.dirtyFields).filter(m.isNotNullish).length) this.props.onCancel();
       else {
         let {
           billingAddress: e,
@@ -272,7 +274,7 @@ p(A, "defaultProps", {
   onDelete: () => {},
   onSubmit: () => {},
   onCancel: () => {}
-}), t.default = d.default.connectStores([_.default], () => ({
-  updateError: _.default.editSourceError,
-  removeError: _.default.removeSourceError
+}), t.default = d.default.connectStores([f.default], () => ({
+  updateError: f.default.editSourceError,
+  removeError: f.default.removeSourceError
 }))(A)

@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var s = n("735250"),
   a = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("512722"),
   o = n.n(r),
@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("481060"),
   E = n("607070"),
   _ = n("100527"),
-  T = n("367907"),
-  m = n("1585"),
+  m = n("367907"),
+  T = n("1585"),
   I = n("841762"),
   p = n("336197"),
   h = n("118139"),
@@ -28,18 +28,18 @@ var s = n("735250"),
   g = n("695346"),
   M = n("271383"),
   R = n("594174"),
-  O = n("976644"),
-  v = n("806361"),
-  L = n("768581"),
-  x = n("900849"),
+  v = n("976644"),
+  O = n("806361"),
+  x = n("768581"),
+  L = n("900849"),
   D = n("506071"),
   P = n("495114"),
   y = n("170140"),
   U = n("981631"),
-  b = n("959517"),
-  j = n("689938"),
-  G = n("75497"),
-  B = n("527455");
+  j = n("959517"),
+  b = n("689938"),
+  B = n("876498"),
+  G = n("527455");
 
 function F(e) {
   var t, n, l;
@@ -49,10 +49,10 @@ function F(e) {
     channel: k
   } = e, w = (0, y.useMediaPostEmbedData)(r, F), {
     setPopout: H
-  } = (0, S.default)(F.id, b.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), J = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), X = (0, c.useStateFromStores)([M.default, R.default], () => {
+  } = (0, S.default)(F.id, j.DEFAULT_POPOUTS), V = (0, N.useContextMenuMessage)(F, k, H, !0), Y = g.GifAutoPlay.useSetting(), K = (0, D.useIsWindowFocused)(), [W, z] = a.useState(!1), [Q, q] = a.useState((null == w ? void 0 : w.coverImage) == null), X = (0, c.useStateFromStores)([E.default], () => E.default.useReducedMotion), Z = (0, c.useStateFromStores)([M.default, R.default], () => {
     var e;
     return M.default.isMember(null == w ? void 0 : w.guildId, null === (e = R.default.getCurrentUser()) || void 0 === e ? void 0 : e.id)
-  }, [w]), [Z, $] = (0, c.useStateFromStoresArray)([M.default], () => {
+  }, [w]), [J, $] = (0, c.useStateFromStoresArray)([M.default], () => {
     var e;
     let t = (null == w ? void 0 : w.authorId) != null ? M.default.getMember(w.guildId, w.authorId) : null;
     return [null !== (e = null == t ? void 0 : t.colorString) && void 0 !== e ? e : "inherit", null == t ? void 0 : t.colorRoleId]
@@ -63,15 +63,15 @@ function F(e) {
   }, [z]), ea = a.useCallback(() => {
     z(!1)
   }, [z]), el = a.useCallback(async () => {
-    null != w && ((0, T.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
+    null != w && ((0, m.trackWithMetadata)(U.AnalyticEvents.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
       media_post_id: w.threadId,
       channel_id: k.id,
       can_access: w.canAccess,
-      is_member: X
-    }), w.canAccess ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : X ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await x.startLurking(w.guildId, {}, {
+      is_member: Z
+    }), w.canAccess ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.threadId, w.messageId)) : Z ? (0, p.default)(U.Routes.CHANNEL(w.guildId, w.parentChannelId)) : await L.startLurking(w.guildId, {}, {
       channelId: w.parentChannelId
     }))
-  }, [w, k, X]), ei = a.useCallback(() => (o()((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.default)(w.authorId, w.avatarUrl, {
+  }, [w, k, Z]), ei = a.useCallback(() => (o()((null == w ? void 0 : w.authorId) != null, "Author Id cannot be null when loading user profile"), (0, C.maybeFetchUserProfileForPopout)(w.authorId, w.avatarUrl, {
     guildId: w.guildId,
     channelId: k.id
   })), [w, k]);
@@ -86,9 +86,9 @@ function F(e) {
       roleId: $,
       newAnalyticsLocations: t
     })),
-    eo = (0, L.getAvatarDecorationURL)({
+    eo = (0, x.getAvatarDecorationURL)({
       avatarDecoration: null === (t = w.user) || void 0 === t ? void 0 : t.avatarDecoration,
-      size: (0, m.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
+      size: (0, T.getDecorationSizeForAvatarSize)(f.AvatarSizes.SIZE_40),
       canAnimate: et
     }),
     eu = null === (n = w.user) || void 0 === n ? void 0 : n.getAvatarURL(w.guildId, 40, et),
@@ -98,36 +98,36 @@ function F(e) {
     ec = w.coverImage,
     ef = null != ec && (0, h.isAnimatedImageUrl)(ec);
   return (0, s.jsxs)("div", {
-    className: G.postPreviewContainer,
+    className: B.postPreviewContainer,
     children: [(0, s.jsxs)("div", {
-      className: G.thumbnailContainer,
+      className: B.thumbnailContainer,
       onMouseEnter: es,
       onMouseLeave: ea,
       children: [!Q && (!0 === w.shouldShowBlurredThumbnailImage ? (0, s.jsx)("img", {
-        src: B,
-        alt: j.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
-        className: i()(G.thumbnail, {
-          [G.spoiler]: w.shouldSpoiler
+        src: G,
+        alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        className: i()(B.thumbnail, {
+          [B.spoiler]: w.shouldSpoiler
         }),
         onContextMenu: V,
         onError: () => q(!0)
       }) : (0, s.jsx)(I.default, {
         src: !(K && (Y || W)) && ef ? "".concat(ec, "?format=png") : ec,
         backgroundSrc: "".concat(ec, "?format=png"),
-        alt: j.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
+        alt: b.default.Messages.MEDIA_POST_EMBED_THUMBNAIL_ALT,
         aspectRatio: 16 / 9,
-        className: i()(G.thumbnail, {
-          [G.spoiler]: w.shouldSpoiler
+        className: i()(B.thumbnail, {
+          [B.spoiler]: w.shouldSpoiler
         }),
-        imageChildClassName: G.thumbnailImage,
+        imageChildClassName: B.thumbnailImage,
         onContextMenu: V,
         onError: () => q(!0)
       })), null != w.coverImageOverlayText && (0, s.jsx)(f.Clickable, {
         onClick: el,
         children: (0, s.jsx)("div", {
-          className: G.thumbnailOverlay,
+          className: B.thumbnailOverlay,
           children: (0, s.jsxs)("div", {
-            className: G.thumbnailOverlayCta,
+            className: B.thumbnailOverlayCta,
             children: [(0, s.jsx)(P.default, {
               color: d.default.WHITE
             }), (0, s.jsx)(f.Text, {
@@ -139,22 +139,22 @@ function F(e) {
         })
       })]
     }), (0, s.jsxs)("div", {
-      className: G.descriptionContainer,
+      className: B.descriptionContainer,
       children: [(0, s.jsxs)("div", {
-        className: G.descriptionHeader,
+        className: B.descriptionHeader,
         children: [(0, s.jsx)(f.Text, {
           variant: "text-md/semibold",
           color: "text-normal",
-          className: G.descriptionHeaderText,
+          className: B.descriptionHeaderText,
           children: w.title
         }), (0, s.jsx)(f.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
-          className: i()(G.descriptionHeaderText, G.descriptionSubtitle),
+          className: i()(B.descriptionHeaderText, B.descriptionSubtitle),
           children: w.subtitle
         })]
       }), (0, s.jsxs)("div", {
-        className: G.descriptionFooter,
+        className: B.descriptionFooter,
         children: [null != eu && (0, s.jsx)(f.Popout, {
           renderPopout: e => er(e, [_.default.AVATAR]),
           position: "right",
@@ -167,19 +167,19 @@ function F(e) {
               ...e,
               size: f.AvatarSizes.SIZE_40,
               src: eu,
-              "aria-label": j.default.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
+              "aria-label": b.default.Messages.MEDIA_POST_EMBED_AUTHOR_AVATAR_ALT,
               avatarDecoration: eo
             })
           })
         }), (0, s.jsxs)("div", {
-          className: G.descriptionFooterContainer,
+          className: B.descriptionFooterContainer,
           children: [(0, s.jsxs)("div", {
-            className: G.descriptionFooterChannelName,
-            children: [null != w.channelName && (0, s.jsx)(v.default, {
-              className: G.mediaChannelIcon
+            className: B.descriptionFooterChannelName,
+            children: [null != w.channelName && (0, s.jsx)(O.default, {
+              className: B.mediaChannelIcon
             }), (0, s.jsx)(f.Clickable, {
               onClick: el,
-              className: G.channelName,
+              className: B.channelName,
               children: (0, s.jsx)(f.Heading, {
                 variant: "heading-md/semibold",
                 color: "header-primary",
@@ -189,8 +189,8 @@ function F(e) {
           }), null != w.authorName && (0, s.jsx)(f.Text, {
             variant: "text-sm/medium",
             color: "text-muted",
-            className: G.descriptionFooterAuthorContainer,
-            children: j.default.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
+            className: B.descriptionFooterAuthorContainer,
+            children: b.default.Messages.MEDIA_POST_EMBED_FOOTER_WEB.format({
               authorName: w.authorName,
               authorNameHook: () => (0, s.jsx)(f.Popout, {
                 renderPopout: e => er(e, [_.default.USERNAME]),
@@ -199,8 +199,8 @@ function F(e) {
                 children: e => (0, s.jsx)(f.NameWithRoleAnchor, {
                   ...e,
                   name: w.authorName,
-                  color: Z,
-                  className: G.authorName
+                  color: J,
+                  className: B.authorName
                 })
               }, (0, u.v4)())
             })
@@ -213,10 +213,10 @@ function F(e) {
             color: "always-white",
             children: w.ctaText
           })
-        }) : (0, s.jsx)(O.default, {
-          pauseAnimation: J,
+        }) : (0, s.jsx)(v.default, {
+          pauseAnimation: X,
           onClick: el,
-          className: i()(G.__invalid_ctaButtonContent, G.subscribeButton),
+          className: i()(B.__invalid_ctaButtonContent, B.subscribeButton),
           color: f.Button.Colors.CUSTOM,
           children: (0, s.jsx)(f.Text, {
             variant: "text-sm/medium",

@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a, l, s = n("735250"),
   i = n("470079"),
-  r = n("803997"),
+  r = n("120356"),
   o = n.n(r),
   u = n("392711"),
   d = n("692547"),
@@ -17,7 +17,7 @@ var a, l, s = n("735250"),
   f = n("347469"),
   h = n("740492"),
   m = n("36645"),
-  p = n("4527");
+  p = n("518144");
 (l = a || (a = {}))[l.PostSidebar = 0] = "PostSidebar", l[l.ThreadSidebar = 1] = "ThreadSidebar", l[l.CallChatSidebar = 2] = "CallChatSidebar", l[l.MessageRequestSidebar = 3] = "MessageRequestSidebar", l[l.HomeSidebar = 4] = "HomeSidebar";
 
 function E(e) {
@@ -70,7 +70,7 @@ function C(e) {
   i.useEffect(() => {
     null == a || a(I, T)
   }, [I, a, T]);
-  let v = (0, s.jsxs)(s.Fragment, {
+  let N = (0, s.jsxs)(s.Fragment, {
     children: [(0, s.jsx)("div", {
       className: o()(p.chatTarget, {
         [p.floating]: T,
@@ -100,11 +100,11 @@ function C(e) {
     return (0, s.jsx)(e, {
       children: (0, s.jsx)("div", {
         className: p.chatLayerWrapper,
-        children: v
+        children: N
       })
     })
   }
   return (0, s.jsx)(s.Fragment, {
-    children: v
+    children: N
   })
 }

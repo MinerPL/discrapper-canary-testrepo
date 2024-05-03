@@ -1,102 +1,135 @@
 "use strict";
 n.r(t), n.d(t, {
   Card: function() {
-    return h
+    return g
   },
   CardInfoSection: function() {
-    return m
+    return S
   },
-  CardSubtitle: function() {
-    return C
+  CardParticipants: function() {
+    return T
   },
   CardTitle: function() {
-    return E
-  },
-  CardUser: function() {
-    return p
+    return I
   }
-});
-var a = n("735250");
-n("470079");
-var l = n("803997"),
-  s = n.n(l),
-  i = n("442837"),
-  r = n("481060"),
-  o = n("271383"),
-  u = n("430824"),
-  d = n("594174"),
-  c = n("5192"),
-  f = n("138317");
+}), n("47120");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  r = n("442837"),
+  o = n("481060"),
+  u = n("271383"),
+  d = n("430824"),
+  c = n("594174"),
+  f = n("351167"),
+  h = n("806519"),
+  m = n("823379"),
+  p = n("5192"),
+  E = n("687694"),
+  C = n("288564");
 
-function h(e) {
+function g(e) {
   let {
     children: t,
     selected: n
-  } = e;
-  return (0, a.jsx)("div", {
-    className: s()(f.container, {
-      [f.selected]: n
-    }),
-    children: t
-  })
-}
-
-function m(e) {
-  let {
-    children: t
-  } = e;
-  return (0, a.jsx)("div", {
-    className: f.infoSection,
-    children: t
-  })
-}
-
-function p(e) {
-  let {
-    userId: t,
-    guildId: n,
-    channelId: l
-  } = e, s = (0, i.useStateFromStores)([d.default], () => d.default.getUser(t)), h = (0, i.useStateFromStores)([o.default], () => o.default.getMember(n, t)), m = (0, i.useStateFromStores)([u.default], () => {
-    var e;
-    return (null == h ? void 0 : h.colorRoleId) != null ? null === (e = u.default.getRole(n, h.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-  }, [n, h]);
-  if (null == s) return null;
-  let p = null == h ? void 0 : h.colorString,
-    E = c.default.getName(n, l, s);
+  } = e, {
+    showReplyIcon: l
+  } = (0, E.useMemberListHoverInteractions)({
+    location: "ContentCard"
+  });
   return (0, a.jsxs)("div", {
-    className: f.userSection,
-    children: [(0, a.jsx)(r.Avatar, {
-      src: s.getAvatarURL(n, 80),
-      size: r.AvatarSizes.SIZE_16,
-      "aria-label": "avatar"
-    }), (0, a.jsx)(r.NameWithRole, {
-      color: null != p ? p : void 0,
-      roleName: m,
-      name: E,
-      className: f.userName
+    className: i()(C.container, {
+      [C.selected]: n
+    }),
+    children: [t, l && (0, a.jsx)("div", {
+      className: C.reply,
+      children: (0, a.jsx)(f.default, {
+        className: C.icon
+      })
     })]
   })
 }
 
-function E(e) {
+function S(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)(r.Heading, {
-    variant: "heading-sm/normal",
-    className: f.contentDescription,
-    lineClamp: 1,
+  return (0, a.jsx)("div", {
+    className: C.infoSection,
     children: t
   })
 }
 
-function C(e) {
+function _(e) {
+  let {
+    users: t,
+    guildId: n
+  } = e;
+  return (0, a.jsx)("div", {
+    className: C.facePile,
+    children: t.map((e, l) => {
+      let s = (0, a.jsx)(o.Avatar, {
+        src: e.getAvatarURL(n, 80),
+        size: o.AvatarSizes.SIZE_16,
+        "aria-label": "avatar"
+      });
+      return l === t.length - 1 ? (0, a.jsx)("div", {
+        className: C.facePileItem,
+        children: s
+      }, e.id) : (0, a.jsx)(h.default, {
+        width: 16,
+        height: 16,
+        className: C.facePileItem,
+        mask: h.default.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+        children: s
+      }, e.id)
+    })
+  })
+}
+
+function T(e) {
+  let {
+    guildId: t,
+    channelId: n,
+    entry: s,
+    maxAvatars: i = 3
+  } = e, f = s.author_id, h = (0, r.useStateFromStores)([c.default], () => c.default.getUser(f)), E = (0, r.useStateFromStoresArray)([c.default], () => s.participants.map(e => c.default.getUser(e)).filter(m.isNotNullish), [s.participants]), g = l.useMemo(() => null == h ? [] : [...E.filter(e => e.id !== h.id), h].slice(-i), [i, E, h]), S = E.length - 1, T = (0, r.useStateFromStores)([u.default], () => u.default.getMember(t, f)), I = (0, r.useStateFromStores)([d.default], () => {
+    var e;
+    return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = d.default.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+  }, [t, T]);
+  if (null == h) return null;
+  let A = null == T ? void 0 : T.colorString,
+    N = p.default.getName(t, n, h);
+  return (0, a.jsxs)("div", {
+    className: C.userSection,
+    children: [(0, a.jsx)(_, {
+      users: g,
+      guildId: t
+    }), (0, a.jsx)(o.NameWithRole, {
+      color: null != A ? A : void 0,
+      roleName: I,
+      name: N,
+      className: C.userName
+    }), S > 0 ? (0, a.jsx)("div", {
+      className: C.additionalParticipantBadge,
+      children: (0, a.jsxs)(o.Text, {
+        variant: "text-xxs/medium",
+        color: "text-normal",
+        className: C.additionalParticipantBadgeText,
+        children: ["+", S]
+      })
+    }) : null]
+  })
+}
+
+function I(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)(r.Text, {
-    variant: "text-sm/normal",
-    className: f.contentDescription,
+  return (0, a.jsx)(o.Heading, {
+    variant: "heading-sm/normal",
+    className: C.contentDescription,
     lineClamp: 1,
     children: t
   })

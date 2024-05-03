@@ -10,9 +10,9 @@ var s = n("735250"),
   i = n.n(a),
   r = n("435935"),
   o = n("982905"),
-  c = n("431138"),
+  c = n("36517"),
   u = n("330711"),
-  d = n("974003");
+  d = n("712881");
 
 function p(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ class h extends l.PureComponent {
     return null != t && (u = t.sort((e, t) => e.code < t.code ? -1 : e.code > t.code ? 1 : 0).map(e => {
       let t = function(e) {
         try {
-          return n("202701")("../../images/flags/".concat(e, ".png").replace("../../images/flags/", "./"))
+          return n("365322")("../../images/flags/".concat(e, ".png").replace("../../images/flags/", "./"))
         } catch (e) {
           return null
         }

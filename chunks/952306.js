@@ -10,7 +10,7 @@ t.default = {
     (0, n.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([s.e("49237"), s.e("99387"), s.e("66635"), s.e("20727")]).then(s.bind(s, "298237"));
+      } = await Promise.all([s.e("99387"), s.e("36968")]).then(s.bind(s, "298237"));
       return t => (0, a.jsx)(e, {
         ...t
       })

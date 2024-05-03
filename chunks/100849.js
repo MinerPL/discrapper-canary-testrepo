@@ -1,83 +1,85 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return N
+    return v
   }
 });
-var a = s("735250"),
-  l = s("470079"),
+var l = s("735250"),
+  a = s("470079"),
   i = s("442837"),
-  o = s("481060"),
+  n = s("481060"),
   r = s("717881"),
-  n = s("199902"),
-  u = s("158776"),
-  c = s("785717"),
-  d = s("221292"),
-  f = s("895618"),
-  S = s("58307"),
+  o = s("906732"),
+  u = s("199902"),
+  d = s("158776"),
+  c = s("543595"),
+  f = s("785717"),
+  S = s("221292"),
   m = s("981631"),
-  E = s("970903"),
-  T = s("521170");
+  I = s("583483"),
+  E = s("613398");
 
-function N(e) {
+function v(e) {
   let {
-    user: t
-  } = e, s = (0, i.useStateFromStores)([n.default], () => null != n.default.getAnyStreamForUser(t.id)), N = (0, i.useStateFromStores)([u.default], () => u.default.getActivities(t.id)), p = l.useMemo(() => N.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [N]), _ = N.some(e => e.type === m.ActivityTypes.HANG_STATUS), I = l.useMemo(() => s ? p.find(e => e.type === m.ActivityTypes.PLAYING) : null, [p, s]), A = l.useMemo(() => p.filter(e => e !== I), [I, p]), v = (0, S.useGetVoiceChannelInfoForVoiceActivitySection)(t.id), x = null != v && !s && !_, {
-    showVoiceActivityInProfile: U
-  } = f.VoiceActivityProfileExperiment.useExperiment({
-    location: "user profile modal"
-  }, {
-    autoTrackExposure: x
-  }), {
-    trackUserProfileAction: h,
+    user: t,
+    type: s
+  } = e, v = (0, i.useStateFromStores)([u.default], () => null != u.default.getAnyStreamForUser(t.id)), _ = (0, i.useStateFromStores)([d.default], () => d.default.getActivities(t.id)), T = a.useMemo(() => _.filter(e => e.type !== m.ActivityTypes.CUSTOM_STATUS), [_]), x = a.useMemo(() => v ? T.find(e => e.type === m.ActivityTypes.PLAYING) : null, [T, v]), N = a.useMemo(() => T.filter(e => e !== x), [x, T]), {
+    analyticsLocations: A,
+    newestAnalyticsLocation: U
+  } = (0, o.default)(), {
+    trackUserProfileAction: g,
     ...C
-  } = (0, c.useUserProfileAnalyticsContext)(), y = {
+  } = (0, f.useUserProfileAnalyticsContext)(), h = {
     location: {
       page: m.AnalyticsPages.USER_PROFILE,
       section: m.AnalyticsSections.PROFILE_MODAL
     }
   };
-  return (0, a.jsxs)(o.ScrollerThin, {
-    className: T.listScroller,
+  return (0, l.jsxs)(n.ScrollerThin, {
+    className: E.listScroller,
     fade: !0,
-    children: [U && x ? (0, a.jsx)("div", {
-      className: E.voiceActivity,
-      children: (0, a.jsx)(S.default, {
-        ...v,
-        color: E.actionColor
-      })
-    }) : null, s ? (0, a.jsx)(r.default, {
-      type: r.UserActivityTypes.PROFILE_V2,
+    children: [v ? (0, l.jsx)(r.default, {
+      type: s,
       user: t,
-      source: "Profile Modal",
-      className: E.userProfileActivity,
-      activity: I,
-      actionColor: E.actionColor,
-      analyticsParams: y,
+      source: U,
+      className: I.userProfileActivity,
+      hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      activity: x,
+      actionColor: I.actionColor,
+      analyticsParams: h,
       onAction: () => {
-        h({
+        g({
           action: "JOIN_ACTIVITY"
-        }), (0, d.trackUserProfileActivityJoined)({
-          activityType: null == I ? void 0 : I.type,
-          applicationId: null == I ? void 0 : I.application_id,
+        }), (0, S.trackUserProfileActivityJoined)({
+          activityType: m.ActivityTypes.STREAMING,
+          activityName: null == x ? void 0 : x.name,
+          activityPlatform: null == x ? void 0 : x.platform,
+          activitySessionId: null == x ? void 0 : x.session_id,
+          applicationId: null == x ? void 0 : x.application_id,
+          analyticsLocations: A,
           ...C
         })
       }
-    }) : null, A.map(e => (0, a.jsx)(r.default, {
-      type: r.UserActivityTypes.PROFILE_V2,
+    }) : null, N.map(e => (0, l.jsx)(r.default, {
+      type: s,
       activity: e,
       user: t,
       useStoreStream: !1,
-      source: "Profile Modal",
-      className: E.userProfileActivity,
-      actionColor: E.actionColor,
-      analyticsParams: y,
+      source: U,
+      className: I.userProfileActivity,
+      hideHeader: s === c.Types.SIMPLIFIED_PROFILE,
+      actionColor: I.actionColor,
+      analyticsParams: h,
       onAction: () => {
-        h({
+        g({
           action: "JOIN_ACTIVITY"
-        }), (0, d.trackUserProfileActivityJoined)({
+        }), (0, S.trackUserProfileActivityJoined)({
           activityType: e.type,
+          activityName: e.name,
+          activityPlatform: e.platform,
+          activitySessionId: e.session_id,
           applicationId: e.application_id,
+          analyticsLocations: A,
           ...C
         })
       }

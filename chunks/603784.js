@@ -2,7 +2,7 @@
 s.r(t);
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("924826"),
   o = s("442837"),
@@ -23,7 +23,7 @@ var a = s("735250"),
   R = s("501801"),
   x = s("981631"),
   L = s("689938"),
-  O = s("445385");
+  O = s("313633");
 class A extends l.PureComponent {
   render() {
     let {
@@ -128,7 +128,7 @@ class p extends l.PureComponent {
       }
     } = e;
     if (null != l && null != n) return (0, a.jsx)(u.Popout, {
-      preload: () => (0, I.default)(n, l.getAvatarURL(t, 80), {
+      preload: () => (0, I.maybeFetchUserProfileForPopout)(n, l.getAvatarURL(t, 80), {
         guildId: t
       }),
       renderPopout: e => (0, a.jsx)(T.default, {

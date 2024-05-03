@@ -1,58 +1,68 @@
 "use strict";
-t.r(a), t.d(a, {
+a.r(t), a.d(t, {
   default: function() {
-    return c
+    return C
   }
 });
-var n = t("735250");
-t("470079");
-var s = t("481060"),
-  d = t("239091"),
-  l = t("299206"),
-  u = t("693546"),
-  o = t("703656"),
-  i = t("914010"),
-  r = t("981631"),
-  E = t("689938");
+var s = a("735250");
+a("470079");
+var n = a("442837"),
+  l = a("481060"),
+  u = a("239091"),
+  d = a("299206"),
+  i = a("693546"),
+  o = a("246364"),
+  I = a("937111"),
+  r = a("703656"),
+  E = a("914010"),
+  M = a("981631"),
+  _ = a("689938");
 
-function c(e) {
+function C(e) {
   let {
-    guild: a,
-    onSelect: t
-  } = e, c = a.id, f = (0, l.default)({
-    id: a.id,
-    label: E.default.Messages.COPY_ID_GUILD
-  }), M = () => {
-    u.default.removeGuildJoinRequest(c), i.default.getGuildId() === c && (0, o.transitionTo)(r.Routes.ME)
+    guild: t,
+    onSelect: a
+  } = e, C = t.id, A = (0, d.default)({
+    id: t.id,
+    label: _.default.Messages.COPY_ID_GUILD
+  }), c = (0, n.useStateFromStores)([I.default], () => I.default.getRequest(C)), f = () => {
+    i.default.removeGuildJoinRequest(C), E.default.getGuildId() === C && (0, r.transitionTo)(M.Routes.ME)
   };
-  return (0, n.jsxs)(s.Menu, {
+  return (0, s.jsxs)(l.Menu, {
     navId: "join-request-guild-context",
-    onClose: d.closeContextMenu,
-    "aria-label": E.default.Messages.GUILD_ACTIONS_MENU_LABEL,
-    onSelect: t,
-    children: [(0, n.jsx)(s.MenuItem, {
-      id: "leave-guild",
-      label: E.default.Messages.LEAVE_SERVER,
+    onClose: u.closeContextMenu,
+    "aria-label": _.default.Messages.GUILD_ACTIONS_MENU_LABEL,
+    onSelect: a,
+    children: [(null == c ? void 0 : c.applicationStatus) === o.GuildJoinRequestApplicationStatuses.REJECTED && (0, s.jsx)(l.MenuItem, {
+      id: "reapply",
+      label: _.default.Messages.MEMBER_VERIFICATION_PENDING_APPLICATION_MODAL_REAPPLY,
       action: () => {
-        (0, s.openModal)(e => (0, n.jsx)(s.ConfirmModal, {
-          header: E.default.Messages.LEAVE_SERVER_TITLE.format({
-            name: a.name
-          }),
-          confirmText: E.default.Messages.LEAVE_SERVER,
-          cancelText: E.default.Messages.CANCEL,
-          onConfirm: M,
+        i.default.resetGuildJoinRequest(C).then(() => {
+          (0, r.transitionTo)(M.Routes.GUILD_MEMBER_VERIFICATION(C))
+        })
+      },
+      color: "default"
+    }), (0, s.jsx)(l.MenuItem, {
+      id: "withdraw",
+      label: _.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+      action: () => {
+        (0, l.openModal)(e => (0, s.jsx)(l.ConfirmModal, {
+          header: _.default.Messages.MEMBER_VERIFICATION_CONFIRM_LEAVE_TITLE,
+          confirmText: _.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION,
+          cancelText: _.default.Messages.CANCEL,
+          onConfirm: f,
           ...e,
-          children: (0, n.jsx)(s.Text, {
+          children: (0, s.jsx)(l.Text, {
             variant: "text-md/normal",
-            children: E.default.Messages.LEAVE_SERVER_BODY.format({
-              name: a.name
+            children: _.default.Messages.MEMBER_VERIFICATION_WITHDRAW_APPLICATION_CONFIRMATION.format({
+              name: t.name
             })
           })
         }))
       },
       color: "danger"
-    }), (0, n.jsx)(s.MenuGroup, {
-      children: f
+    }), (0, s.jsx)(l.MenuGroup, {
+      children: A
     })]
   })
 }

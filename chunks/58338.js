@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return N
+    return g
   }
 }), i("47120"), i("789020");
 var s = i("735250"),
@@ -14,12 +14,12 @@ var s = i("735250"),
   r = i("686660"),
   c = i("9156"),
   S = i("621600"),
-  E = i("981631"),
-  f = i("490897"),
-  g = i("526761"),
+  f = i("981631"),
+  E = i("490897"),
+  N = i("526761"),
   _ = i("689938");
 
-function N(e) {
+function g(e) {
   return (0, s.jsxs)(l.MenuItem, {
     id: "notification",
     label: _.default.Messages.NOTIFICATIONS,
@@ -27,7 +27,7 @@ function N(e) {
       (0, l.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([i.e("99387"), i.e("5863")]).then(i.bind(i, "751212"));
+        } = await Promise.all([i.e("99387"), i.e("5863"), i.e("82321")]).then(i.bind(i, "751212"));
         return i => (0, s.jsx)(t, {
           ...i,
           guildId: e
@@ -35,17 +35,17 @@ function N(e) {
       })
     },
     children: [function(e) {
-      let [t, i] = n.useState(!1), [N, M] = n.useState(!1), h = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), I = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), L = N ? r.Presets.CUSTOM : (0, r.presetFromSettings)(h, I), A = t => {
+      let [t, i] = n.useState(!1), [g, M] = n.useState(!1), I = (0, a.useStateFromStores)([c.default], () => c.default.getGuildUnreadSetting(e)), A = (0, a.useStateFromStores)([c.default], () => c.default.getMessageNotifications(e)), h = g ? r.Presets.CUSTOM : (0, r.presetFromSettings)(I, A), T = t => {
         M(!1);
         let i = {
           message_notifications: t
         };
-        t === E.UserNotificationSettings.ALL_MESSAGES && h !== f.UnreadSetting.ALL_MESSAGES && (i.flags = (0, o.withGuildUnreadFlags)(c.default.getGuildFlags(e), g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), u.default.updateGuildNotificationSettings(e, i, S.NotificationLabel.notifications(t))
-      }, p = t => {
+        t === f.UserNotificationSettings.ALL_MESSAGES && I !== E.UnreadSetting.ALL_MESSAGES && (i.flags = (0, o.withGuildUnreadFlags)(c.default.getGuildFlags(e), N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES)), u.default.updateGuildNotificationSettings(e, i, S.NotificationLabel.notifications(t))
+      }, L = t => {
         M(!1);
         let i = c.default.getGuildFlags(e);
         u.default.updateGuildNotificationSettings(e, {
-          flags: (0, o.withGuildUnreadFlags)(i, t === f.UnreadSetting.ALL_MESSAGES ? g.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES : g.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
+          flags: (0, o.withGuildUnreadFlags)(i, t === E.UnreadSetting.ALL_MESSAGES ? N.GuildNotificationSettingsFlags.UNREADS_ALL_MESSAGES : N.GuildNotificationSettingsFlags.UNREADS_ONLY_MENTIONS)
         }, S.NotificationLabel.unreads(t))
       };
       return (0, s.jsxs)(s.Fragment, {
@@ -53,46 +53,46 @@ function N(e) {
           children: [(0, s.jsx)(l.MenuRadioItem, {
             id: "everything",
             group: "notification-preset",
-            checked: L === r.Presets.ALL_MESSAGES,
+            checked: h === r.Presets.ALL_MESSAGES,
             label: _.default.Messages.NOTIFICATION_PRESET_1,
             action: () => ((0, d.updateGuildPreset)(e, r.Presets.ALL_MESSAGES), M(!1))
           }), (0, s.jsx)(l.MenuRadioItem, {
             id: "essentials",
             group: "notification-preset",
-            checked: L === r.Presets.MENTIONS,
+            checked: h === r.Presets.MENTIONS,
             label: _.default.Messages.NOTIFICATION_PRESET_2,
             action: () => ((0, d.updateGuildPreset)(e, r.Presets.MENTIONS), M(!1))
           }), (0, s.jsx)(l.MenuRadioItem, {
             id: "nothing",
             group: "notification-preset",
-            checked: L === r.Presets.NOTHING,
+            checked: h === r.Presets.NOTHING,
             label: _.default.Messages.NOTIFICATION_PRESET_3,
             action: () => ((0, d.updateGuildPreset)(e, r.Presets.NOTHING), M(!1))
           }), (0, s.jsx)(l.MenuRadioItem, {
             id: "custom",
             group: "notification-preset",
-            checked: L === r.Presets.CUSTOM,
+            checked: h === r.Presets.CUSTOM,
             action: () => (i(!0), M(!0)),
             label: _.default.Messages.NOTIFICATION_PRESET_CUSTOM
           })]
-        }), (L === r.Presets.CUSTOM || t) && (0, s.jsxs)(l.MenuGroup, {
+        }), (h === r.Presets.CUSTOM || t) && (0, s.jsxs)(l.MenuGroup, {
           children: [(0, s.jsxs)(l.MenuItem, {
             id: "unread_setting",
             label: "Unread Badges",
             children: [(0, s.jsx)(l.MenuRadioItem, {
               id: "unread_setting_all_messages",
               group: "unread_setting",
-              checked: h === f.UnreadSetting.ALL_MESSAGES,
+              checked: I === E.UnreadSetting.ALL_MESSAGES,
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-              action: () => p(f.UnreadSetting.ALL_MESSAGES)
+              action: () => L(E.UnreadSetting.ALL_MESSAGES)
             }), (0, s.jsx)(l.MenuRadioItem, {
               id: "unread_setting_mention_only",
               group: "unread_setting",
-              checked: h === f.UnreadSetting.ONLY_MENTIONS,
+              checked: I === E.UnreadSetting.ONLY_MENTIONS,
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-              action: () => p(f.UnreadSetting.ONLY_MENTIONS),
-              disabled: h !== f.UnreadSetting.ONLY_MENTIONS && I === E.UserNotificationSettings.ALL_MESSAGES,
-              subtext: h !== f.UnreadSetting.ONLY_MENTIONS && I === E.UserNotificationSettings.ALL_MESSAGES ? _.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0
+              action: () => L(E.UnreadSetting.ONLY_MENTIONS),
+              disabled: I !== E.UnreadSetting.ONLY_MENTIONS && A === f.UserNotificationSettings.ALL_MESSAGES,
+              subtext: I !== E.UnreadSetting.ONLY_MENTIONS && A === f.UserNotificationSettings.ALL_MESSAGES ? _.default.Messages.NOTIFICATION_SETTINGS_UNREAD_MENTION_ONLY_DISABLED : void 0
             })]
           }, "unread_setting"), (0, s.jsxs)(l.MenuItem, {
             id: "push_settings",
@@ -101,21 +101,21 @@ function N(e) {
               group: "notification-preset",
               id: "push_settings_everything",
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_ALL_MESSAGES,
-              checked: I === E.UserNotificationSettings.ALL_MESSAGES,
-              action: () => A(E.UserNotificationSettings.ALL_MESSAGES),
-              subtext: h !== f.UnreadSetting.ALL_MESSAGES && I !== E.UserNotificationSettings.ALL_MESSAGES ? _.default.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0
+              checked: A === f.UserNotificationSettings.ALL_MESSAGES,
+              action: () => T(f.UserNotificationSettings.ALL_MESSAGES),
+              subtext: I !== E.UnreadSetting.ALL_MESSAGES && A !== f.UserNotificationSettings.ALL_MESSAGES ? _.default.Messages.NOTIFICATION_SETTINGS_UNREAD_UPDATE_WARNING : void 0
             }), (0, s.jsx)(l.MenuRadioItem, {
               group: "notification-preset",
               id: "push_settings_everything_mention",
-              checked: I === E.UserNotificationSettings.ONLY_MENTIONS,
+              checked: A === f.UserNotificationSettings.ONLY_MENTIONS,
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_MENTION_ONLY,
-              action: () => A(E.UserNotificationSettings.ONLY_MENTIONS)
+              action: () => T(f.UserNotificationSettings.ONLY_MENTIONS)
             }), (0, s.jsx)(l.MenuRadioItem, {
               group: "notification-preset",
               id: "push_settings_everything_nothing",
               label: _.default.Messages.NOTIFICATION_SETTINGS_PRESETS_NONE,
-              checked: I === E.UserNotificationSettings.NO_MESSAGES,
-              action: () => A(E.UserNotificationSettings.NO_MESSAGES)
+              checked: A === f.UserNotificationSettings.NO_MESSAGES,
+              action: () => T(f.UserNotificationSettings.NO_MESSAGES)
             })]
           }, "push_settings")]
         })]
@@ -148,10 +148,10 @@ function N(e) {
           }), (0, s.jsx)(l.MenuCheckboxItem, {
             id: "hightlight",
             label: _.default.Messages.FORM_LABEL_SUPPRESS_HIGHLIGHTS,
-            checked: t.highligths === E.HighlightSettings.ENABLED,
+            checked: t.highligths === f.HighlightSettings.ENABLED,
             action: () => i(e, {
-              notify_highlights: t.highligths === E.HighlightSettings.ENABLED ? E.HighlightSettings.DISABLED : E.HighlightSettings.ENABLED
-            }, S.NotificationLabel.highlights(t.highligths !== E.HighlightSettings.ENABLED))
+              notify_highlights: t.highligths === f.HighlightSettings.ENABLED ? f.HighlightSettings.DISABLED : f.HighlightSettings.ENABLED
+            }, S.NotificationLabel.highlights(t.highligths !== f.HighlightSettings.ENABLED))
           })]
         }), (0, s.jsxs)(l.MenuGroup, {
           children: [(0, s.jsx)(l.MenuCheckboxItem, {

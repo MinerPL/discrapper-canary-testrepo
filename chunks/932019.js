@@ -1,7 +1,7 @@
 "use strict";
-var o, u;
+var o, _;
 n.r(t), n.d(t, {
   AutomodQuarantineUserMessageEmbedKeys: function() {
     return o
   }
-}), (u = o || (o = {})).BIO = "bio", u.USERNAME = "username", u.NICKNAME = "nickname", u.GLOBAL_NAME = "display_name"
+}), (_ = o || (o = {})).BIO = "bio", _.USERNAME = "username", _.NICKNAME = "nickname", _.GLOBAL_NAME = "display_name", _.CLAN_TAG = "clan_tag"

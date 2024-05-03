@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return E
+    return f
   }
 }), s("47120");
 var a = s("442837"),
@@ -13,27 +13,38 @@ var a = s("442837"),
   d = s("160913"),
   u = s("725727"),
   c = s("663389"),
-  S = s("202022");
+  S = s("202527"),
+  E = s("168308"),
+  T = s("202022");
 
-function E() {
+function f() {
   let e = (0, u.useUnseenOutboundPromotions)().length,
     t = (0, d.useIsPrepaidPaymentPastDue)(),
     s = (0, a.useStateFromStores)([c.default], () => c.default.getProps().impressionSource),
-    E = (0, o.usePendingRequestCount)(),
-    T = (0, i.useEnableClips)(),
-    [_] = (0, r.useGetDismissibleContent)(T ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
-    f = "useGenerateUserSettingsSections";
-  return (0, l.useTriggerDebuggingAA)({
-    location: f + " auto on",
+    f = (0, o.usePendingRequestCount)(),
+    m = (0, E.useShouldShowOverlaySettings)(),
+    _ = (0, i.useEnableClips)(),
+    [g] = (0, r.useGetDismissibleContent)(_ ? [n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG] : []),
+    h = "useGenerateUserSettingsSections";
+  (0, l.useTriggerDebuggingAA)({
+    location: h + " auto on",
     autoTrackExposure: !0
   }), (0, l.useTriggerDebuggingAA)({
-    location: f + " auto off",
+    location: h + " auto off",
     autoTrackExposure: !1
-  }), (0, S.default)({
+  });
+  let {
+    shouldMergeGameSettings: I
+  } = S.GameSettingsMergeExperiment.useExperiment({
+    location: "settings"
+  });
+  return (0, T.default)({
     unseenGiftCount: e,
     showPrepaidPaymentPastDueWarning: t,
     impressionSource: s,
-    numOfPendingFamilyRequests: E,
-    isClipsBetaTagShowing: _ === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG
+    numOfPendingFamilyRequests: f,
+    isOverlaySupported: m,
+    isClipsBetaTagShowing: g === n.DismissibleContent.CLIPS_SETTINGS_BETA_TAG,
+    shouldMergeGameSettings: I
   })
 }

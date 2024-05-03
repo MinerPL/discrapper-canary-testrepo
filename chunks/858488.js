@@ -1,36 +1,38 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return i
+    return l
   }
-}), a("47120");
-var l = a("735250");
-a("470079");
-var n = a("442837"),
-  u = a("481060"),
-  d = a("699516"),
-  s = a("689938");
+}), n("47120");
+var i = n("735250");
+n("470079");
+var r = n("442837"),
+  a = n("481060"),
+  s = n("699516"),
+  o = n("689938");
 
-function i(e) {
-  let t = e.id,
-    [i, o] = (0, n.useStateFromStoresArray)([d.default], () => {
-      var e;
-      return [d.default.isFriend(t), null !== (e = d.default.getNickname(t)) && void 0 !== e ? e : null]
-    }, [t]);
-  if (!i) return null;
-  let r = null == o ? s.default.Messages.ADD_FRIEND_NICKNAME : s.default.Messages.CHANGE_FRIEND_NICKNAME;
-  return (0, l.jsx)(u.MenuItem, {
-    id: null == o ? "add-friend-nickname" : "edit-friend-nickname",
-    label: r,
+function l(e) {
+  let {
+    user: t,
+    onAction: l
+  } = e, u = t.id, [d, _] = (0, r.useStateFromStoresArray)([s.default], () => {
+    var e;
+    return [s.default.isFriend(u), null !== (e = s.default.getNickname(u)) && void 0 !== e ? e : null]
+  }, [u]);
+  if (!d) return null;
+  let c = null == _ ? o.default.Messages.ADD_FRIEND_NICKNAME : o.default.Messages.CHANGE_FRIEND_NICKNAME;
+  return (0, i.jsx)(a.MenuItem, {
+    id: null == _ ? "add-friend-nickname" : "edit-friend-nickname",
+    label: c,
     action: () => {
-      (0, u.openModalLazy)(async () => {
+      null == l || l(), (0, a.openModalLazy)(async () => {
         let {
-          default: t
-        } = await Promise.all([a.e("99387"), a.e("25070")]).then(a.bind(a, "599633"));
-        return a => (0, l.jsx)(t, {
-          user: e,
-          nickname: o,
-          ...a
+          default: e
+        } = await Promise.all([n.e("99387"), n.e("25070")]).then(n.bind(n, "670794"));
+        return n => (0, i.jsx)(e, {
+          user: t,
+          nickname: _,
+          ...n
         })
       })
     }

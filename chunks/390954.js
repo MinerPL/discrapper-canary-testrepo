@@ -11,13 +11,13 @@ var a, n = s("735250"),
   S = s("242411"),
   E = s("212895"),
   T = s("709054"),
-  _ = s("156729"),
-  f = s("244526"),
-  m = s("981631"),
+  f = s("156729"),
+  m = s("244526"),
+  _ = s("981631"),
   g = s("689938"),
-  h = s("551165");
+  h = s("558667");
 
-function N(e, t, s) {
+function I(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -25,7 +25,7 @@ function N(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class I extends(a = l.PureComponent) {
+class N extends(a = l.PureComponent) {
   render() {
     let {
       paymentSource: e,
@@ -41,7 +41,7 @@ class I extends(a = l.PureComponent) {
       onCancel: E,
       onDelete: T
     } = this.props;
-    return s ? (0, n.jsx)(_.default, {
+    return s ? (0, n.jsx)(f.default, {
       paymentSource: e,
       isDefault: t,
       removing: d,
@@ -59,12 +59,14 @@ class I extends(a = l.PureComponent) {
         align: c.default.Align.CENTER,
         justify: c.default.Justify.BETWEEN,
         className: h.paymentSourceRow,
-        children: [(0, n.jsx)(f.default, {
+        children: [(0, n.jsx)(m.default, {
           paymentSource: e,
           isDefault: t,
           isForSubscription: i,
           locale: r,
-          showSubtext: !0
+          showSubtext: !0,
+          showDefaultLabel: !0,
+          showPaymentSourceIcon: !0
         }), s ? null : (0, n.jsx)(o.Button, {
           color: o.Button.Colors.PRIMARY,
           onClick: this.handleEditClick,
@@ -75,12 +77,12 @@ class I extends(a = l.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "handleEditClick", () => {
+    super(...e), I(this, "handleEditClick", () => {
       this.props.onEditClick(this.props.paymentSource.id)
     })
   }
 }
-N(I, "defaultProps", {
+I(N, "defaultProps", {
   isEditing: !1,
   hideDivider: !1,
   onEditClick: () => {}
@@ -115,7 +117,7 @@ class p extends l.PureComponent {
       removing: a,
       submitting: l,
       premiumSubscriptionPaymentSourceId: i
-    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), _ = d.map((t, r) => (0, n.jsx)(I, {
+    } = this.props, d = r().values(t).sort((t, s) => t.id === e ? -1 : s.id === e ? 1 : T.default.compare(t.id, s.id)), u = this.state.editingPayment, E = d.findIndex(e => e.id === u), f = d.map((t, r) => (0, n.jsx)(N, {
       locale: s,
       paymentSource: t,
       isDefault: e === t.id,
@@ -144,41 +146,41 @@ class p extends l.PureComponent {
             })
           }), g.default.Messages.BILLING_PAYMENT_SOURCES]
         })
-      }), _, E !== d.length - 1 ? (0, n.jsx)(o.FormDivider, {
+      }), f, E !== d.length - 1 ? (0, n.jsx)(o.FormDivider, {
         className: h.__invalid_sourceDivider
       }) : null, this.renderFooter()]
     })
   }
   constructor(...e) {
-    super(...e), N(this, "state", {
+    super(...e), I(this, "state", {
       editingPayment: null
-    }), N(this, "handleEditClick", e => {
+    }), I(this, "handleEditClick", e => {
       this.setState({
         editingPayment: e
       })
-    }), N(this, "handleCancel", () => {
+    }), I(this, "handleCancel", () => {
       this.setState({
         editingPayment: null
       })
-    }), N(this, "handleDelete", async e => {
+    }), I(this, "handleDelete", async e => {
       try {
         await d.deletePaymentSource(e), this.setState({
           editingPayment: null
         })
       } catch (e) {}
-    }), N(this, "handleSubmit", async (e, t) => {
+    }), I(this, "handleSubmit", async (e, t) => {
       if (null != e) try {
         await d.updatePaymentSource(e, t), this.setState({
           editingPayment: null
         })
       } catch (e) {}
-    }), N(this, "handlePaymentSourceAdded", async e => {
+    }), I(this, "handlePaymentSourceAdded", async e => {
       await (0, E.fetchSubscriptionPlansOnNewPaymentSource)(e.id)
-    }), N(this, "handleAddPaymentMethod", () => {
+    }), I(this, "handleAddPaymentMethod", () => {
       (0, o.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([s.e("49237"), s.e("99387"), s.e("66635"), s.e("40326"), s.e("23357"), s.e("61247"), s.e("58600"), s.e("52619")]).then(s.bind(s, "623573"));
+        } = await Promise.resolve().then(s.bind(s, "623573"));
         return t => (0, n.jsx)(e, {
           ...t,
           onAddPaymentSource: this.handlePaymentSourceAdded
@@ -187,7 +189,7 @@ class p extends l.PureComponent {
         onCloseCallback: () => {
           (0, u.clearError)()
         },
-        onCloseRequest: m.NOOP
+        onCloseRequest: _.NOOP
       })
     })
   }

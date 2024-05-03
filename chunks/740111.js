@@ -151,7 +151,8 @@ class d extends l.MessageType {
       dismissKey: "",
       heroArtVideoLinkLightTheme: "",
       heroArtImageLinkDarkTheme: "",
-      heroArtImageLinkLightTheme: ""
+      heroArtImageLinkLightTheme: "",
+      modalTopPill: ""
     };
     return globalThis.Object.defineProperty(t, l.MESSAGE_TYPE, {
       enumerable: !1,
@@ -194,6 +195,9 @@ class d extends l.MessageType {
         case 10:
           s.heroArtImageLinkLightTheme = e.string();
           break;
+        case 11:
+          s.modalTopPill = e.string();
+          break;
         default:
           let i = n.readUnknownField;
           if ("throw" === i) throw new globalThis.Error("Unknown field ".concat(t, " (wire type ").concat(a, ") for ").concat(this.typeName));
@@ -206,7 +210,7 @@ class d extends l.MessageType {
   internalBinaryWrite(e, t, n) {
     "" !== e.header && t.tag(1, l.WireType.LengthDelimited).string(e.header), "" !== e.subheader && t.tag(2, l.WireType.LengthDelimited).string(e.subheader), "" !== e.videoLink && t.tag(3, l.WireType.LengthDelimited).string(e.videoLink), "" !== e.helpArticleId && t.tag(4, l.WireType.LengthDelimited).string(e.helpArticleId);
     for (let a = 0; a < e.featureCards.length; a++) r.internalBinaryWrite(e.featureCards[a], t.tag(5, l.WireType.LengthDelimited).fork(), n).join();
-    e.button && u.internalBinaryWrite(e.button, t.tag(6, l.WireType.LengthDelimited).fork(), n).join(), "" !== e.dismissKey && t.tag(7, l.WireType.LengthDelimited).string(e.dismissKey), "" !== e.heroArtVideoLinkLightTheme && t.tag(8, l.WireType.LengthDelimited).string(e.heroArtVideoLinkLightTheme), "" !== e.heroArtImageLinkDarkTheme && t.tag(9, l.WireType.LengthDelimited).string(e.heroArtImageLinkDarkTheme), "" !== e.heroArtImageLinkLightTheme && t.tag(10, l.WireType.LengthDelimited).string(e.heroArtImageLinkLightTheme);
+    e.button && u.internalBinaryWrite(e.button, t.tag(6, l.WireType.LengthDelimited).fork(), n).join(), "" !== e.dismissKey && t.tag(7, l.WireType.LengthDelimited).string(e.dismissKey), "" !== e.heroArtVideoLinkLightTheme && t.tag(8, l.WireType.LengthDelimited).string(e.heroArtVideoLinkLightTheme), "" !== e.heroArtImageLinkDarkTheme && t.tag(9, l.WireType.LengthDelimited).string(e.heroArtImageLinkDarkTheme), "" !== e.heroArtImageLinkLightTheme && t.tag(10, l.WireType.LengthDelimited).string(e.heroArtImageLinkLightTheme), "" !== e.modalTopPill && t.tag(11, l.WireType.LengthDelimited).string(e.modalTopPill);
     let a = n.writeUnknownFields;
     return !1 !== a && (!0 == a ? l.UnknownFieldHandler.onWrite : a)(this.typeName, e, t), t
   }
@@ -260,6 +264,11 @@ class d extends l.MessageType {
     }, {
       no: 10,
       name: "hero_art_image_link_light_theme",
+      kind: "scalar",
+      T: 9
+    }, {
+      no: 11,
+      name: "modal_top_pill",
       kind: "scalar",
       T: 9
     }])

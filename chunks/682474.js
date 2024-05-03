@@ -1,6 +1,6 @@
 "use strict";
 n.r(t);
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("786761"),
   d = n("592125"),
@@ -43,7 +43,7 @@ function A(e) {
     f(e.channel_id, e)
   })
 }
-class m extends(a = o.default.Store) {
+class m extends(s = o.default.Store) {
   initialize() {
     this.waitFor(d.default, _.default)
   }
@@ -54,12 +54,12 @@ class m extends(a = o.default.Store) {
     }), I[e]
   }
 }
-s = "ForumPostRecentMessageStore", (r = "displayName") in(i = m) ? Object.defineProperty(i, r, {
-  value: s,
+a = "ForumPostRecentMessageStore", (r = "displayName") in(i = m) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new m(l.default, {
+}) : i[r] = a, new m(l.default, {
   CONNECTION_OPEN: function() {
     I = {}
   },

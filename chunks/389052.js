@@ -1,59 +1,64 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return _
   }
 });
-var l = a("735250");
-a("470079");
-var n = a("442837"),
-  u = a("481060"),
-  d = a("194359"),
-  s = a("699516"),
-  i = a("594174"),
-  o = a("981631"),
-  r = a("689938");
+var i = n("735250");
+n("470079");
+var r = n("442837"),
+  a = n("481060"),
+  s = n("194359"),
+  o = n("699516"),
+  l = n("594174"),
+  u = n("981631"),
+  d = n("689938");
 
-function f(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ContextMenu",
-    {
-      id: a
-    } = e,
-    f = (0, n.useStateFromStores)([i.default], () => {
-      var e;
-      return (null === (e = i.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === a
-    }, [a]),
-    c = (0, n.useStateFromStores)([s.default], () => s.default.isBlocked(a), [a]);
-  if (f) return null;
-
-  function M() {
-    d.default.addRelationship({
-      userId: a,
-      context: {
-        location: t
-      },
-      type: o.RelationshipTypes.BLOCKED
-    })
-  }
-  return (0, l.jsx)(u.MenuItem, {
+function _(e) {
+  let {
+    user: t,
+    color: n,
+    onBlock: _,
+    onUnblock: c,
+    location: E = "ContextMenu"
+  } = e, {
+    id: I
+  } = t, T = (0, r.useStateFromStores)([l.default], () => {
+    var e;
+    return (null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === I
+  }, [I]), f = (0, r.useStateFromStores)([o.default], () => o.default.isBlocked(I), [I]);
+  return T ? null : (0, i.jsx)(a.MenuItem, {
     id: "block",
-    label: c ? r.default.Messages.UNBLOCK : r.default.Messages.BLOCK,
-    action: () => c ? d.default.unblockUser(a, {
-      location: t
-    }) : (0, u.openModal)(t => (0, l.jsx)(u.ConfirmModal, {
-      header: r.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
-        name: e.username
-      }),
-      confirmText: r.default.Messages.BLOCK,
-      cancelText: r.default.Messages.CANCEL,
-      onConfirm: M,
-      ...t,
-      children: (0, l.jsx)(u.Text, {
-        variant: "text-md/normal",
-        children: r.default.Messages.CONFIRM_USER_BLOCK_BODY.format({
-          name: e.username
-        })
+    color: n,
+    label: f ? d.default.Messages.UNBLOCK : d.default.Messages.BLOCK,
+    action: f ? () => {
+      null == c || c(), s.default.unblockUser(I, {
+        location: E
       })
-    }))
+    } : () => {
+      (0, a.openModal)(e => (0, i.jsx)(a.ConfirmModal, {
+        header: d.default.Messages.CONFIRM_USER_BLOCK_TITLE.format({
+          name: t.username
+        }),
+        confirmText: d.default.Messages.BLOCK,
+        cancelText: d.default.Messages.CANCEL,
+        onConfirm: () => {
+          null == _ || _(), s.default.addRelationship({
+            userId: I,
+            context: {
+              location: E
+            },
+            type: u.RelationshipTypes.BLOCKED
+          })
+        },
+        ...e,
+        children: (0, i.jsx)(a.Text, {
+          variant: "text-md/normal",
+          children: d.default.Messages.CONFIRM_USER_BLOCK_BODY.format({
+            name: t.username
+          })
+        })
+      }))
+    }
   })
 }

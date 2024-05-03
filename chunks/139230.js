@@ -35,7 +35,7 @@ var i = a("735250"),
   b = a("226799"),
   O = a("981631"),
   L = a("689938"),
-  k = a("315222");
+  k = a("200525");
 
 function B(e) {
   var l, a;
@@ -55,7 +55,7 @@ function B(e) {
       applicationId: null != T ? T : "",
       size: 2048
     }),
-    y = (0, _.useActivityShelfItemData)(null, null != T && "" !== T ? T : null);
+    y = (0, _.useActivityShelfItemData)(null, null != T && "" !== T ? T : null, void 0);
   if (null == T || null == y) return null;
   if (!(0, I.hasFlag)(y.application.flags, O.ApplicationFlags.EMBEDDED)) return (0, i.jsx)(s.Redirect, {
     to: O.Routes.ACTIVITIES
@@ -205,8 +205,9 @@ function R(e) {
   } = (0, r.default)(), u = (0, T.default)(), [o, v] = t.useState(null !== (l = (0, S.getActivityGuildSuggestion)()) && void 0 !== l ? l : void 0), [h, m] = t.useState(null !== (s = (0, C.getActivityVoiceChannelSuggestion)({
     guildId: o
   })) && void 0 !== s ? s : void 0), x = (0, S.useSelectGuildOptions)(), g = (0, C.useSelectVoiceChannelOptions)(o), p = t.useCallback(() => {
+    var e;
     null != h && null != o && (0, f.default)({
-      activityItem: n,
+      targetApplicationId: null == n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: u,
       channelId: h,
       guildId: o,

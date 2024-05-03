@@ -25,16 +25,16 @@ var a = n("735250"),
   T = n("360048"),
   I = n("151827"),
   A = n("626135"),
-  v = n("768581"),
-  N = n("585483"),
+  N = n("768581"),
+  v = n("585483"),
   x = n("233870"),
   M = n("51144"),
   R = n("998502"),
   L = n("276264"),
   y = n("981631"),
   O = n("689938"),
-  j = n("581477"),
-  P = n("652985");
+  j = n("495929"),
+  P = n("354811");
 let D = R.default.getEnableHardwareAcceleration();
 
 function b(e) {
@@ -51,7 +51,7 @@ function b(e) {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("60677")]).then(n.bind(n, "354589"));
+      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("60677")]).then(n.bind(n, "354589"));
       return n => (0, a.jsx)(e, {
         ...n,
         user: t,
@@ -60,7 +60,7 @@ function b(e) {
     })
   };
   return (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.default)(t.id, t.getAvatarURL(void 0, 80)),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(t),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -74,7 +74,7 @@ function b(e) {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      N.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
+      v.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
@@ -113,14 +113,14 @@ function U(e) {
         integration: i
       })
     })
-  }, [i, u]), c = i.application.bot, f = v.default.getApplicationIconURL({
+  }, [i, u]), c = i.application.bot, f = N.default.getApplicationIconURL({
     id: i.application.id,
     icon: i.application.icon,
     bot: null === (t = i.application) || void 0 === t ? void 0 : t.bot,
     botIconFirst: !0
   });
   return null != c ? (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.default)(c.id, f),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(c.id, f),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -169,14 +169,14 @@ function F(e) {
     installedIntegrations: p,
     applicationsShelf: E,
     fetched: C,
-    appsInGDMEnabled: v,
-    availableApplications: N
+    appsInGDMEnabled: N,
+    availableApplications: v
   } = (0, f.usePrivateChannelIntegrationState)({
     channelId: t.id
   });
   l.useEffect(() => {
     if (o)
-      for (let e of m)(0, h.default)(e.id, e.getAvatarURL(void 0, 80), {
+      for (let e of m)(0, h.maybeFetchUserProfileForPopout)(e, {
         dispatchWait: !0
       })
   }, [o, m]), l.useEffect(() => {
@@ -203,14 +203,14 @@ function F(e) {
         }), m.map(e => (0, a.jsx)(b, {
           user: e,
           channel: t
-        }, e.id)), v && (p.length > 0 || C && E.length > 0) && (0, a.jsxs)(a.Fragment, {
+        }, e.id)), N && (p.length > 0 || C && E.length > 0) && (0, a.jsxs)(a.Fragment, {
           children: [(0, a.jsx)(I.default, {
             className: P.membersGroup,
             children: "".concat(O.default.Messages.APPS, "—").concat(p.length)
           }), p.map(e => (0, a.jsx)(U, {
             integration: e,
             channel: t
-          }, e.application.id)), N.length > 0 && (0, a.jsx)(T.default, {
+          }, e.application.id)), v.length > 0 && (0, a.jsx)(T.default, {
             className: j.member,
             onClick: () => {
               (0, r.openModalLazy)(async () => {

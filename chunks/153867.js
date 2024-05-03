@@ -9,17 +9,17 @@ n.r(t), n.d(t, {
 });
 var i = n("524437"),
   r = n("381499"),
-  s = n("780384"),
   a = n("570140"),
-  o = n("514361"),
-  l = n("238514"),
-  u = n("210887"),
-  d = n("695346"),
-  _ = n("675478"),
+  s = n("514361"),
+  o = n("238514"),
+  l = n("210887"),
+  u = n("695346"),
+  d = n("675478"),
+  _ = n("981631"),
   c = n("874893");
 
 function E(e) {
-  return _.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
+  return d.PreloadedUserSettingsActionCreators.updateAsync("guildFolders", t => {
     t.folders = e.map(e => {
       let t = i.GuildFolder.create({
         guildIds: e.guildIds
@@ -32,18 +32,29 @@ function E(e) {
         value: String(e.folderName)
       })), t
     })
-  }, _.UserSettingsDelay.SLOW_USER_ACTION)
+  }, d.UserSettingsDelay.SLOW_USER_ACTION)
 }
 
 function I(e) {
-  return (0, s.isThemeLight)(e) ? i.Theme.LIGHT : i.Theme.DARK
+  switch (e) {
+    case _.ThemeTypes.DARK:
+      return i.Theme.DARK;
+    case _.ThemeTypes.LIGHT:
+      return i.Theme.LIGHT;
+    case _.ThemeTypes.DARKER:
+      return i.Theme.DARKER;
+    case _.ThemeTypes.MIDNIGHT:
+      return i.Theme.MIDNIGHT;
+    default:
+      return i.Theme.DARK
+  }
 }
 
 function T(e) {
   let {
     backgroundGradientPresetId: t,
     theme: n
-  } = e, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.UserSettingsDelay.INFREQUENT_USER_ACTION;
+  } = e, i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.UserSettingsDelay.INFREQUENT_USER_ACTION;
   if (a.default.dispatch({
       type: "UNSYNCED_USER_SETTINGS_UPDATE",
       settings: {
@@ -61,7 +72,7 @@ function T(e) {
           }
         }
       }
-    }), l.default.shouldSync("appearance")) return _.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
+    }), o.default.shouldSync("appearance")) return d.PreloadedUserSettingsActionCreators.updateAsync("appearance", e => {
     var i;
     e.theme = I(n), e.clientThemeSettings = {
       backgroundGradientPresetId: null != (i = {
@@ -92,13 +103,13 @@ t.default = {
         text: {
           shouldSync: e,
           settings: e ? {} : {
-            inlineAttachmentMedia: d.InlineAttachmentMedia.getSetting(),
-            inlineEmbedMedia: d.InlineEmbedMedia.getSetting(),
-            renderEmbeds: d.RenderEmbeds.getSetting(),
-            renderReactions: d.RenderReactions.getSetting(),
-            animateEmoji: d.AnimateEmoji.getSetting(),
-            animateStickers: d.AnimateStickers.getSetting(),
-            gifAutoPlay: d.GifAutoPlay.getSetting()
+            inlineAttachmentMedia: u.InlineAttachmentMedia.getSetting(),
+            inlineEmbedMedia: u.InlineEmbedMedia.getSetting(),
+            renderEmbeds: u.RenderEmbeds.getSetting(),
+            renderReactions: u.RenderReactions.getSetting(),
+            animateEmoji: u.AnimateEmoji.getSetting(),
+            animateStickers: u.AnimateStickers.getSetting(),
+            gifAutoPlay: u.GifAutoPlay.getSetting()
           }
         }
       }
@@ -112,11 +123,11 @@ t.default = {
         appearance: {
           shouldSync: e,
           settings: e ? {} : {
-            theme: u.default.theme,
+            theme: l.default.theme,
             clientThemeSettings: {
-              backgroundGradientPresetId: null === (t = o.default.gradientPreset) || void 0 === t ? void 0 : t.id
+              backgroundGradientPresetId: null === (t = s.default.gradientPreset) || void 0 === t ? void 0 : t.id
             },
-            developerMode: d.DeveloperMode.getSetting()
+            developerMode: u.DeveloperMode.getSetting()
           }
         }
       }
@@ -135,11 +146,11 @@ t.default = {
       settings: t
     })
   },
-  updateLocale: e => _.PreloadedUserSettingsActionCreators.updateAsync("localization", t => {
+  updateLocale: e => d.PreloadedUserSettingsActionCreators.updateAsync("localization", t => {
     t.locale = r.StringValue.create({
       value: e
     })
-  }, _.UserSettingsDelay.INFREQUENT_USER_ACTION),
+  }, d.UserSettingsDelay.INFREQUENT_USER_ACTION),
   updateTheme(e) {
     a.default.dispatch({
       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
@@ -150,8 +161,8 @@ t.default = {
           }
         }
       }
-    }), l.default.shouldSync("appearance") && _.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
+    }), o.default.shouldSync("appearance") && d.PreloadedUserSettingsActionCreators.updateAsync("appearance", t => {
       t.theme = I(e)
-    }, _.UserSettingsDelay.INFREQUENT_USER_ACTION)
+    }, d.UserSettingsDelay.INFREQUENT_USER_ACTION)
   }
 }

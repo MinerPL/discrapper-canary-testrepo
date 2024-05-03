@@ -20,7 +20,7 @@ class _ extends(a = r.default.Store) {
     if (null == e) return !1;
     let n = null !== (t = d.default.getMemberCount(e.id)) && void 0 !== t ? t : 0,
       a = f.default.can(E.Permissions.ADMINISTRATOR, e);
-    return !h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(e.id) && a && e.maxMembers > 0 && e.maxMembers - n <= 1e4
+    return !e.hasFeature(E.GuildFeatures.CLAN) && !h[E.ChannelNoticeTypes.MAX_MEMBER_COUNT].has(e.id) && a && e.maxMembers > 0 && e.maxMembers - n <= 1e4
   }
 }
 i = "MaxMemberCountChannelNoticeStore", (l = "displayName") in(s = _) ? Object.defineProperty(s, l, {

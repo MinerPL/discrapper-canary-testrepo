@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("669079"),
   E = s("981631"),
   T = s("689938"),
-  _ = s("282846");
+  f = s("70327");
 
-function f(e, t, s) {
+function m(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -26,7 +26,7 @@ function f(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class m extends n.Component {
+class _ extends n.Component {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -61,7 +61,7 @@ class m extends n.Component {
             onChange: this.handleChange,
             placeholder: "WUMP-AAAAA-BBBBB-CCCCC",
             error: !l && n ? T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_INVALID : null,
-            className: _.codeRedemptionInput
+            className: f.codeRedemptionInput
           }), (0, a.jsx)(i.Button, {
             type: "submit",
             submitting: s,
@@ -69,7 +69,7 @@ class m extends n.Component {
           })]
         })
       }), l ? (0, a.jsx)(i.Text, {
-        className: _.errorMessage,
+        className: f.errorMessage,
         variant: "text-sm/normal",
         children: T.default.Messages.APPLICATION_ENTITLEMENT_CODE_REDEMPTION_PROMOTION.format({
           promoLink: () => {
@@ -80,17 +80,17 @@ class m extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "state", {
+    super(...e), m(this, "state", {
       codeInput: "",
       submitting: !1,
       hasError: !1,
       isPromoCode: !1
-    }), f(this, "handleChange", e => {
+    }), m(this, "handleChange", e => {
       this.setState({
         codeInput: e,
         hasError: !1
       })
-    }), f(this, "handleSubmit", async e => {
+    }), m(this, "handleSubmit", async e => {
       e.preventDefault();
       let {
         codeInput: t
@@ -138,7 +138,7 @@ class m extends n.Component {
 function g() {
   let e = n.useContext(c.AnalyticsContext),
     t = (0, l.useStateFromStores)([d.default], () => d.default.enabled);
-  return (0, a.jsx)(m, {
+  return (0, a.jsx)(_, {
     analyticsContext: e,
     obscureInput: t
   })

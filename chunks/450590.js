@@ -1,9 +1,9 @@
 "use strict";
 n.r(t);
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("692547"),
   u = n("477690"),
   d = n("481060"),
@@ -14,7 +14,7 @@ var i, r = n("735250"),
   T = n("520687"),
   f = n("756286"),
   S = n("981631"),
-  h = n("991506");
+  h = n("4722");
 
 function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function A(e, t, n) {
 }
 let m = (0, c.cssValueToNumber)(u.default.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
   N = 1 / 120;
-class O extends(i = s.Component) {
+class p extends(i = a.Component) {
   componentDidMount() {
     this.initialize()
   }
@@ -80,9 +80,9 @@ class O extends(i = s.Component) {
     return (0, r.jsx)(d.AccessibilityPreferencesContext.Consumer, {
       children: i => {
         let {
-          reducedMotion: s
+          reducedMotion: a
         } = i;
-        return s.enabled ? (0, r.jsx)("div", {
+        return a.enabled ? (0, r.jsx)("div", {
           className: o()(h.fallbackImage, {
             [h.embedded]: n,
             [h.visible]: !t && e >= f.WaveStates.ENTERED
@@ -145,12 +145,12 @@ class O extends(i = s.Component) {
     }), this.wave = new T.default(this.updateWaveState), this.children = [new E.default, new I.default, this.wave]
   }
 }
-A(O, "defaultProps", {
+A(p, "defaultProps", {
   embedded: !1
 });
 t.default = e => {
   let t = (0, d.useToken)(l.default.unsafe_rawColors.PRIMARY_630).hex();
-  return (0, r.jsx)(O, {
+  return (0, r.jsx)(p, {
     canvasFillStyle: t,
     ...e
   })

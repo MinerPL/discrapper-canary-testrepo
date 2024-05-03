@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("803997"),
+  l = s("120356"),
   i = s.n(l),
   r = s("153832"),
   o = s("866442"),
@@ -16,10 +16,10 @@ var a = s("735250"),
   S = s("44315"),
   E = s("703685"),
   T = s("586791"),
-  _ = s("654904"),
-  f = s("981631"),
-  m = s("689938"),
-  g = s("238938");
+  f = s("654904"),
+  m = s("981631"),
+  _ = s("689938"),
+  g = s("11376");
 
 function h(e) {
   let {
@@ -27,12 +27,12 @@ function h(e) {
     onClose: s,
     color: l,
     suggestedColors: h,
-    disabled: N,
-    label: I,
+    disabled: I,
+    label: N,
     colorPickerMiddle: p,
     colorPickerFooter: C,
     showEyeDropper: A
-  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, _.isColorDark)(l), v = (0, o.int2hex)(l), D = v === x ? R : v, L = (0, S.getColor)(M ? f.Color.WHITE_500 : f.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
+  } = e, O = n.useRef(null), x = (0, u.useToken)(d.default.colors.BACKGROUND_PRIMARY).hex(), R = d.default.colors.BACKGROUND_ACCENT.css, M = (0, f.isColorDark)(l), v = (0, o.int2hex)(l), D = v === x ? R : v, L = (0, S.getColor)(M ? m.Color.WHITE_500 : m.Color.PRIMARY_530), P = (0, c.default)(p), j = (0, c.default)(C), [b, U] = n.useState((0, r.v4)());
   return n.useEffect(() => {
     (P !== p || j !== C) && U((0, r.v4)())
   }, [C, p, j, P]), (0, a.jsx)(u.Popout, {
@@ -55,18 +55,18 @@ function h(e) {
       return (0, a.jsxs)("div", {
         ref: O,
         className: i()(g.colorSwatch, {
-          [g.disabled]: N
+          [g.disabled]: I
         }),
         children: [(0, a.jsx)(u.Clickable, {
           ...s,
-          tabIndex: N ? -1 : 0,
-          onClick: N ? f.NOOP : t,
+          tabIndex: I ? -1 : 0,
+          onClick: I ? m.NOOP : t,
           style: {
             backgroundColor: v,
             borderColor: D
           },
           className: g.swatch,
-          "aria-label": m.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
+          "aria-label": _.default.Messages.USER_SETTINGS_PROFILE_COLOR_SELECT_COLOR,
           focusProps: {
             ringTarget: O
           },
@@ -76,7 +76,7 @@ function h(e) {
             height: 14,
             color: L
           })
-        }), I]
+        }), N]
       })
     }
   })

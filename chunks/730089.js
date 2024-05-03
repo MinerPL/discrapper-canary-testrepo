@@ -63,7 +63,8 @@ let I = (e, t, s, a) => (r.default.track(c.AnalyticEvents.EMOJI_UPLOAD_FILE_SIZE
         upload_id: S
       })
     } catch (o) {
-      let e, s, {
+      let e, s;
+      let {
         body: l,
         status: n
       } = o;

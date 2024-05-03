@@ -16,17 +16,17 @@ var s = n("735250"),
   f = n("502568"),
   E = n("280763"),
   _ = n("178088"),
-  T = n("222940"),
-  m = n("490897"),
+  m = n("222940"),
+  T = n("490897"),
   I = n("689938"),
-  p = n("77658");
+  p = n("940713");
 
 function h(e) {
   let {
     onOpen: t,
     onClose: n,
     className: h
-  } = e, N = (0, o.useInDesktopNotificationCenterExperiment)(), S = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), C = a.useRef(null), A = (0, l.useStateFromStores)([u.default], () => !!N && (null == S ? void 0 : S.id) != null && u.default.getMentionCount(S.id, m.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
+  } = e, N = (0, o.useInDesktopNotificationCenterExperiment)(), S = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), C = a.useRef(null), A = (0, l.useStateFromStores)([u.default], () => !!N && (null == S ? void 0 : S.id) != null && u.default.getMentionCount(S.id, T.ReadStateTypes.NOTIFICATION_CENTER) > 0), {
     enabled: g
   } = r.default.useExperiment({
     location: "RecentsButton"
@@ -44,7 +44,7 @@ function h(e) {
     children: (e, t, n) => (0, s.jsxs)("div", {
       ref: C,
       className: p.recentsIcon,
-      children: [g && (0, s.jsx)(T.default, {
+      children: [g && (0, s.jsx)(m.default, {
         inboxIconRef: C,
         recentsPopoutShown: t
       }), (0, s.jsx)(f.Icon, {

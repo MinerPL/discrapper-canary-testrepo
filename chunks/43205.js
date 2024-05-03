@@ -6,11 +6,11 @@ n.r(t), n.d(t, {
 });
 var a = n("735250");
 n("470079");
-var l = n("803997"),
+var l = n("120356"),
   s = n.n(l),
   i = n("410030"),
   r = n("438071"),
-  o = n("820401");
+  o = n("92661");
 
 function u(e) {
   let {
@@ -26,7 +26,7 @@ function u(e) {
     className: s()(o.contentImage, l)
   }) : (0, a.jsx)("img", {
     style: {
-      width: "".concat(n, "px"),
+      maxWidth: "".concat(n, "px"),
       height: "".concat(n, "px")
     },
     className: s()(o.contentImage, l),

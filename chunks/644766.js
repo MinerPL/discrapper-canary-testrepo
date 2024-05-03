@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   NoticeButton: function() {
-    return A
+    return u
   },
   NoticeButtonAnchor: function() {
-    return u
+    return N
   },
   NoticeCloseButton: function() {
     return T
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return _
   },
   PrimaryCTANoticeButton: function() {
-    return N
+    return A
   },
   default: function() {
     return L
@@ -21,15 +21,15 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var o = n("803997"),
-  E = n.n(o),
-  r = n("873546"),
-  s = n("481060"),
-  l = n("465670"),
+var E = n("120356"),
+  r = n.n(E),
+  o = n("873546"),
+  l = n("481060"),
+  s = n("465670"),
   c = n("626135"),
-  I = n("981631"),
-  a = n("689938"),
-  S = n("15499");
+  a = n("981631"),
+  I = n("689938"),
+  S = n("497748");
 let _ = Object.freeze({
   DEFAULT: S.colorDefault,
   NEUTRAL: S.colorNeutral,
@@ -46,36 +46,36 @@ let _ = Object.freeze({
   PREMIUM_TIER_2: S.colorPremiumTier2
 });
 
-function A(e) {
+function u(e) {
   let {
     children: t,
     className: n,
-    minor: o = !1,
-    ...r
+    minor: E = !1,
+    ...o
   } = e;
-  return (0, i.jsx)(s.FocusRing, {
+  return (0, i.jsx)(l.FocusRing, {
     children: (0, i.jsx)("button", {
-      className: E()(S.button, n, {
-        [S.buttonMinor]: o
+      className: r()(S.button, n, {
+        [S.buttonMinor]: E
       }),
-      ...r,
+      ...o,
       children: t
     })
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     children: t,
     noticeType: n,
-    additionalTrackingProps: o,
-    ...E
+    additionalTrackingProps: E,
+    ...r
   } = e;
-  return (0, i.jsx)(A, {
-    ...E,
+  return (0, i.jsx)(u, {
+    ...r,
     onClick: e => {
       var t, i;
-      null != E.onClick && E.onClick(e), t = n, i = o, null != t && c.default.track(I.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+      null != r.onClick && r.onClick(e), t = n, i = E, null != t && c.default.track(a.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
         notice_type: t,
         ...i
       })
@@ -84,14 +84,14 @@ function N(e) {
   })
 }
 
-function u(e) {
+function N(e) {
   let {
     children: t,
     href: n,
-    ...o
+    ...E
   } = e;
-  return (0, i.jsx)(s.Anchor, {
-    ...o,
+  return (0, i.jsx)(l.Anchor, {
+    ...E,
     className: S.button,
     href: n,
     children: t
@@ -103,19 +103,19 @@ function T(e) {
     onClick: t,
     noticeType: n
   } = e;
-  return (0, i.jsx)(s.Clickable, {
+  return (0, i.jsx)(l.Clickable, {
     focusProps: {
       offset: 6
     },
     className: S.closeButton,
     onClick: () => {
       var e;
-      t(), null != (e = n) && c.default.track(I.AnalyticEvents.APP_NOTICE_CLOSED, {
+      t(), null != (e = n) && c.default.track(a.AnalyticEvents.APP_NOTICE_CLOSED, {
         notice_type: e
       })
     },
-    "aria-label": a.default.Messages.DISMISS,
-    children: (0, i.jsx)(l.default, {
+    "aria-label": I.default.Messages.DISMISS,
+    children: (0, i.jsx)(s.default, {
       className: S.closeIcon,
       width: 18,
       height: 18
@@ -127,14 +127,14 @@ function L(e) {
   let {
     color: t = _.DEFAULT,
     className: n,
-    style: o,
-    children: s
+    style: E,
+    children: l
   } = e;
   return (0, i.jsx)("div", {
-    className: E()(S.notice, {
-      [S.isMobile]: r.isMobile
+    className: r()(S.notice, {
+      [S.isMobile]: o.isMobile
     }, n, t),
-    style: null != o ? o : void 0,
-    children: s
+    style: null != E ? E : void 0,
+    children: l
   })
 }

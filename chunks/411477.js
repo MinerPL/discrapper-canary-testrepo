@@ -1,40 +1,40 @@
 "use strict";
-i.r(t), i.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return d
+    return c
   }
 });
-var l = i("735250");
-i("470079");
-var a = i("803997"),
-  s = i.n(a),
-  n = i("672752"),
-  o = i("466111"),
-  r = i("154921"),
-  u = i("443393");
+var n = a("735250");
+a("470079");
+var s = a("120356"),
+  l = a.n(s),
+  r = a("672752"),
+  i = a("466111"),
+  u = a("154921"),
+  o = a("74989");
 
-function d(e) {
+function c(e) {
   let {
     text: t,
-    textSize: i = r.default.Sizes.SIZE_12,
-    textColor: a = r.default.Colors.STANDARD,
-    className: d,
-    button: c,
-    reducedRightPadding: f = !1
+    textSize: a = u.default.Sizes.SIZE_12,
+    textColor: s = u.default.Colors.STANDARD,
+    className: c,
+    button: d,
+    reducedRightPadding: A = !1
   } = e;
-  return (0, l.jsxs)("div", {
-    className: s()(f ? u.noticeWithoutRightPadding : u.noticeWithRightPadding, d),
-    children: [(0, l.jsxs)("div", {
-      className: u.noticeLeft,
-      children: [(0, l.jsx)(o.default, {
-        className: u.icon,
-        color: n.GradientCssUrls.PREMIUM_TIER_2
-      }), (0, l.jsx)(r.default, {
-        className: u.text,
-        size: i,
-        color: a,
+  return (0, n.jsxs)("div", {
+    className: l()(A ? o.noticeWithoutRightPadding : o.noticeWithRightPadding, c),
+    children: [(0, n.jsxs)("div", {
+      className: o.noticeLeft,
+      children: [(0, n.jsx)(i.default, {
+        className: o.icon,
+        color: r.GradientCssUrls.PREMIUM_TIER_2
+      }), (0, n.jsx)(u.default, {
+        className: o.text,
+        size: a,
+        color: s,
         children: t
       })]
-    }), c]
+    }), d]
   })
 }

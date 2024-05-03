@@ -1,28 +1,28 @@
 "use strict";
-i.r(s);
-var t = i("735250"),
-  n = i("470079"),
-  a = i("481060"),
-  l = i("239091"),
-  o = i("547280"),
-  d = i("689938");
+t.r(s);
+var i = t("735250"),
+  n = t("470079"),
+  a = t("481060"),
+  c = t("239091"),
+  l = t("547280"),
+  d = t("689938");
 s.default = function(e) {
   let {
     signupTarget: s,
-    onSelect: i
-  } = e, c = n.useCallback(() => {
-    (0, o.dismissSignUp)(s.key)
+    onSelect: t
+  } = e, o = n.useCallback(() => {
+    (0, l.dismissSignUp)(s.key, s.dismissibleContent)
   }, [s]);
-  return (0, t.jsx)(a.Menu, {
+  return (0, i.jsx)(a.Menu, {
     navId: "signup-button-context",
-    onClose: l.closeContextMenu,
+    onClose: c.closeContextMenu,
     "aria-label": d.default.Messages.DISMISS,
-    onSelect: i,
-    children: (0, t.jsx)(a.MenuGroup, {
-      children: (0, t.jsx)(a.MenuItem, {
+    onSelect: t,
+    children: (0, i.jsx)(a.MenuGroup, {
+      children: (0, i.jsx)(a.MenuItem, {
         id: "dismiss",
         label: d.default.Messages.DISMISS,
-        action: c
+        action: o
       })
     })
   })

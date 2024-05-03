@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("442837"),
   o = n("481060"),
@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("934826"),
   I = n("768318"),
   A = n("570533"),
-  v = n("971792"),
-  N = n("629262"),
+  N = n("971792"),
+  v = n("629262"),
   x = n("761966"),
   M = n("893729"),
   R = n("838940"),
@@ -36,7 +36,7 @@ var a = n("735250"),
   j = n("293810"),
   P = n("981631"),
   D = n("689938"),
-  b = n("817620");
+  b = n("87063");
 let U = e => {
     let {
       benefits: t,
@@ -119,7 +119,7 @@ let U = e => {
       listingId: t,
       guildId: n,
       className: l
-    } = e, s = (0, v.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, N.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
+    } = e, s = (0, N.default)(n, t), [r] = _.useChannelBenefits(t), u = (0, v.default)(r), [d] = _.useIntangibleBenefits(t), c = _.useRole(t, n), [h] = _.useTierEmojiIds(t, n);
     return null == s && 0 === u.length && 0 === d.length && 0 === h.size ? null : (0, a.jsxs)("div", {
       className: i()(b.subscriptionPerks, l),
       children: [null != s && (0, a.jsxs)(o.HeadingLevel, {
@@ -183,15 +183,15 @@ t.default = e => {
   } = e, p = (0, S.useSubscriptionListing)(n), {
     openModal: C,
     canOpenModal: A,
-    cannotOpenReason: v,
-    isCheckingTrialEligibility: N
+    cannotOpenReason: N,
+    isCheckingTrialEligibility: v
   } = (0, O.default)(p, s, h, m), M = (0, r.useStateFromStores)([c.default], () => c.default.isSyncing), {
     activeSubscription: R,
     activeSubscriptionListing: U
   } = (0, T.default)(h), F = (null == U ? void 0 : U.id) === n, H = (null == R ? void 0 : R.status) === P.SubscriptionStatusTypes.CANCELED, [B, G] = l.useState(!1), [V, W] = l.useState(!1), Y = l.useCallback(e => {
     let t = !1;
     null != e && (t = e.scrollHeight - e.clientHeight > 1), W(t)
-  }, []), [z] = _.useName(n), [Z] = _.useDescription(n), [K] = _.useTrialInterval(n), [X] = _.useTrialLimit(n), q = (0, I.default)(s, n), Q = null != K && null == R && q, J = (0, u.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
+  }, []), [z] = _.useName(n), [K] = _.useDescription(n), [Z] = _.useTrialInterval(n), [q] = _.useTrialLimit(n), X = (0, I.default)(s, n), Q = null != Z && null == R && X, J = (0, u.default)(j.RESPONSIVE_MOBILE_WIDTH_SIZE_QUERY), [$, ee] = l.useState(!1), et = $ || !J, en = (0, r.useStateFromStores)([d.default], () => d.default.isViewingServerShop(s)), ea = (null == p ? void 0 : p.published) === !0, el = (null == p ? void 0 : p.soft_deleted) === !0, es = D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_SHOW_MORE_DESCRIPTION;
   return (ea || en) && !el ? (0, a.jsxs)("article", {
     className: b.container,
     "aria-label": z,
@@ -199,13 +199,13 @@ t.default = e => {
       className: i()(b.tierTrialIndicator, b.tierTopIndicator),
       children: [D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_PERIOD.format({
         trialPeriodDuration: (0, g.formatPlanIntervalDuration)({
-          interval: K.interval,
-          interval_count: K.interval_count
+          interval: Z.interval,
+          interval_count: Z.interval_count
         })
       }), (0, a.jsx)(o.Tooltip, {
         clickableOnMobile: !0,
         text: D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TRIAL_DISCLAIMER.format({
-          activeTrialUserLimit: null != X ? X : 0
+          activeTrialUserLimit: null != q ? q : 0
         }),
         children: e => (0, a.jsx)(E.default, {
           className: b.tierTrialIndicatorIcon,
@@ -234,13 +234,13 @@ t.default = e => {
             disabled: !0,
             children: H ? D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_CANCELED_LABEL : D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBED_LABEL
           }) : (0, a.jsx)(o.Tooltip, {
-            text: A ? null : v,
-            "aria-label": null !== (t = A && v) && void 0 !== t && t,
+            text: A ? null : N,
+            "aria-label": null !== (t = A && N) && void 0 !== t && t,
             children: e => (0, a.jsx)(x.default, {
               ...e,
               fullWidth: !0,
               disabled: !A || M,
-              submitting: N,
+              submitting: v,
               onClick: C,
               onlyShineOnHover: !0,
               children: D.default.Messages.GUILD_ROLE_SUBSCRIPTION_TIER_REVIEW_SUBSCRIBE_LABEL
@@ -253,7 +253,7 @@ t.default = e => {
             className: i()((!V || !B) && b.tierDescriptionTruncate),
             children: (0, a.jsx)("div", {
               ref: Y,
-              children: Z
+              children: K
             })
           }), V && (0, a.jsx)(k, {
             isViewAll: B,

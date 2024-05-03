@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   ReferencePositionLayer: function() {
-    return R
+    return C
   },
   referencePortalAwareContains: function() {
     return m
   }
 }), n("47120"), n("411104");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("512722"),
   u = n.n(l),
   d = n("84735"),
@@ -20,7 +20,7 @@ var i, r = n("735250"),
   I = n("872801"),
   T = n("302901"),
   f = n("981631"),
-  S = n("260064");
+  S = n("344535");
 
 function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -53,7 +53,7 @@ function N(e) {
   return null != t ? t : "".concat(n, ":").concat(i)
 }
 
-function O(e, t, n, i) {
+function p(e, t, n, i) {
   switch (e) {
     case "top":
       return u()(null != t.bottom, "Missing bottom"), i.offsetHeight - (t.bottom + n.offsetHeight);
@@ -71,7 +71,7 @@ function O(e, t, n, i) {
   }
 }
 
-function p(e, t, n) {
+function O(e, t, n) {
   if (null != e && e < 0 && ("top" === n.position || "bottom" === n.position) && null != t && Math.abs(e) < (null == t ? void 0 : t.offsetHeight) && null != n.style) {
     let t = "top" === n.position ? "bottom" : "top",
       i = n.style[t];
@@ -85,15 +85,26 @@ function p(e, t, n) {
   }
   return n
 }
-class R extends(i = s.Component) {
+
+function R(e) {
+  let {
+    targetRef: t,
+    overrideTargetRect: n
+  } = e;
+  return null != n ? n : (u()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect())
+}
+class C extends(i = a.Component) {
+  formatDimension(e) {
+    return this.props.useRawTargetDimensions ? e : Math.ceil(e)
+  }
   nudgeLeftAlignment(e, t, n) {
     let {
       nudgeAlignIntoViewport: i
     } = this.props;
     if (!i) return e;
     let r = n.offsetWidth,
-      s = e + t.offsetWidth - r + 12;
-    return s > 0 ? Math.max(12, e - s) : e
+      a = e + t.offsetWidth - r + 12;
+    return a > 0 ? Math.max(12, e - a) : e
   }
   getHorizontalAlignmentStyle(e, t, n, i) {
     let {
@@ -101,18 +112,18 @@ class R extends(i = s.Component) {
     } = this.props;
     switch (r) {
       case "left": {
-        let r = Math.ceil(this.nudgeLeftAlignment(e.left, t, n)),
-          s = Math.ceil(e.left) - r;
+        let r = this.formatDimension(this.nudgeLeftAlignment(e.left, t, n)),
+          a = this.formatDimension(e.left) - r;
         return {
           style: {
             ...i,
             left: r
           },
-          nudge: s
+          nudge: a
         }
       }
       case "right": {
-        let t = Math.ceil(n.offsetWidth - e.right);
+        let t = this.formatDimension(n.offsetWidth - e.right);
         return {
           style: {
             ...i,
@@ -123,14 +134,14 @@ class R extends(i = s.Component) {
       }
       case "center": {
         let r = e.left + (e.width - t.offsetWidth) / 2,
-          s = Math.ceil(this.nudgeLeftAlignment(r, t, n)),
-          a = Math.ceil(r) - s;
+          a = this.formatDimension(this.nudgeLeftAlignment(r, t, n)),
+          s = this.formatDimension(r) - a;
         return {
           style: {
             ...i,
-            left: s
+            left: a
           },
-          nudge: a
+          nudge: s
         }
       }
       default:
@@ -144,17 +155,17 @@ class R extends(i = s.Component) {
     if (!i) return e;
     if (e < 0) return 0;
     let r = t.getBoundingClientRect().height,
-      s = n.offsetHeight,
-      a = e + r - s + 12;
-    return a > 0 ? Math.max(12, e - a) : e
+      a = n.offsetHeight,
+      s = e + r - a + 12;
+    return s > 0 ? Math.max(12, e - s) : e
   }
   nudgeBottomAlignment(e, t, n) {
     let {
       nudgeAlignIntoViewport: i
-    } = this.props, r = n.offsetHeight, s = r - e;
-    if (!i) return s;
-    let a = s + t.offsetHeight - r + 12;
-    return a > 0 ? Math.max(12, s - a) : s
+    } = this.props, r = n.offsetHeight, a = r - e;
+    if (!i) return a;
+    let s = a + t.offsetHeight - r + 12;
+    return s > 0 ? Math.max(12, a - s) : a
   }
   getVerticalAlignmentStyle(e, t, n, i) {
     let {
@@ -162,37 +173,37 @@ class R extends(i = s.Component) {
     } = this.props;
     switch (r) {
       case "top": {
-        let r = Math.ceil(this.nudgeTopAlignment(e.top, t, n)),
-          s = Math.ceil(e.top) - r;
+        let r = this.formatDimension(this.nudgeTopAlignment(e.top, t, n)),
+          a = this.formatDimension(e.top) - r;
         return {
           style: {
             ...i,
             top: r
           },
-          nudge: s
+          nudge: a
         }
       }
       case "bottom": {
-        let r = Math.ceil(this.nudgeBottomAlignment(e.bottom, t, n)),
-          s = Math.ceil(e.bottom) - r;
+        let r = this.formatDimension(this.nudgeBottomAlignment(e.bottom, t, n)),
+          a = this.formatDimension(e.bottom) - r;
         return {
           style: {
             ...i,
             bottom: r
           },
-          nudge: s
+          nudge: a
         }
       }
       case "center": {
         let r = e.top + (e.height - t.offsetHeight) / 2,
-          s = Math.ceil(this.nudgeTopAlignment(r, t, n)),
-          a = Math.ceil(r) - s;
+          a = this.formatDimension(this.nudgeTopAlignment(r, t, n)),
+          s = this.formatDimension(r) - a;
         return {
           style: {
             ...i,
-            top: s
+            top: a
           },
-          nudge: a
+          nudge: s
         }
       }
       default:
@@ -200,44 +211,41 @@ class R extends(i = s.Component) {
     }
   }
   calculatePositionStyle(e, t, n) {
-    var i, r, s, a;
+    var i, r, a;
     let {
-      reference: o,
-      spacing: l = 0
-    } = this.props;
-    let d = "function" == typeof(i = o) ? i() : (u()(null != i.current, "Invalid ref"), i.current.getBoundingClientRect()),
-      _ = n.getBoundingClientRect();
-    let c = (r = d, s = _.left, a = _.top, {
-      top: r.top - a,
-      left: r.left - s,
-      bottom: r.bottom - a,
-      right: r.right - s,
-      width: r.width,
-      height: r.height
+      spacing: s = 0
+    } = this.props, o = R(this.props), l = n.getBoundingClientRect();
+    let u = (i = o, r = l.left, a = l.top, {
+      top: i.top - a,
+      left: i.left - r,
+      bottom: i.bottom - a,
+      right: i.right - r,
+      width: i.width,
+      height: i.height
     });
     switch (e) {
       case "top":
-        return this.getHorizontalAlignmentStyle(c, t, n, {
-          bottom: n.offsetHeight - c.top + l
+        return this.getHorizontalAlignmentStyle(u, t, n, {
+          bottom: n.offsetHeight - u.top + s
         });
       case "bottom":
-        return this.getHorizontalAlignmentStyle(c, t, n, {
-          top: c.bottom + l
+        return this.getHorizontalAlignmentStyle(u, t, n, {
+          top: u.bottom + s
         });
       case "left":
-        return this.getVerticalAlignmentStyle(c, t, n, {
-          right: n.offsetWidth - c.left + l
+        return this.getVerticalAlignmentStyle(u, t, n, {
+          right: n.offsetWidth - u.left + s
         });
       case "right":
-        return this.getVerticalAlignmentStyle(c, t, n, {
-          left: c.right + l
+        return this.getVerticalAlignmentStyle(u, t, n, {
+          left: u.right + s
         });
       case "center":
-        return this.getVerticalAlignmentStyle(c, t, n, {
-          left: c.left + c.width / 2 - t.offsetWidth / 2 + l
+        return this.getVerticalAlignmentStyle(u, t, n, {
+          left: u.left + u.width / 2 - t.offsetWidth / 2 + s
         });
       case "window_center":
-        return this.getVerticalAlignmentStyle(c, t, n, {
+        return this.getVerticalAlignmentStyle(u, t, n, {
           left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0)
         });
       default:
@@ -253,11 +261,11 @@ class R extends(i = s.Component) {
     let i = (0, T.getParentLayerContainer)(n),
       {
         style: r,
-        nudge: s
+        nudge: a
       } = this.calculatePositionStyle(e, n, i),
-      a = null,
+      s = null,
       o = null;
-    if (t && (a = O(e, r, n, i)) < 0) {
+    if (t && (s = p(e, r, n, i)) < 0) {
       let t = function(e) {
           switch (e) {
             case "top":
@@ -278,24 +286,24 @@ class R extends(i = s.Component) {
         }(e),
         {
           style: r,
-          nudge: s
+          nudge: a
         } = this.calculatePositionStyle(t, n, i);
-      if ((o = O(t, r, n, i)) > a) return p(o, n, {
+      if ((o = p(t, r, n, i)) > s) return O(o, n, {
         position: t,
-        nudge: s,
+        nudge: a,
         style: r
       })
     }
-    return p(a, n, {
+    return O(s, n, {
       position: e,
-      nudge: s,
+      nudge: a,
       style: r
     })
   }
   componentDidMount() {
     var e, t;
     let {
-      reference: n,
+      targetRef: n,
       onMount: i
     } = this.props;
     this.setState({
@@ -303,17 +311,14 @@ class R extends(i = s.Component) {
       ...this.calculateState()
     });
     let r = this.elementRef.current;
-    u()(null != r, "Missing elementRef"), "function" != typeof n && null != n.current && A.set(r, n.current), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
+    u()(null != r, "Missing elementRef"), null != n.current && A.set(r, n.current), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_START, this.handleLayerPopStart), c.ComponentDispatch.subscribe(f.ComponentActions.LAYER_POP_COMPLETE, this.handleLayerPopComplete), null == r || null === (t = r.ownerDocument) || void 0 === t || null === (e = t.defaultView) || void 0 === e || e.addEventListener("resize", this.handleLayerPopComplete), null == i || i()
   }
   componentDidUpdate(e, t) {
-    if (N(e) !== N(this.props) ? this.updatePosition() : ! function(e, t) {
-        if ("function" == typeof e && "function" == typeof t) {
-          let n = e(),
-            i = t();
-          return n.top === i.top && n.left === i.left
-        }
-        return e === t
-      }(e.reference, this.props.reference) && this.updatePosition(), t.position !== this.state.position) {
+    if ((N(e) !== N(this.props) || ! function(e, t) {
+        let n = R(e),
+          i = R(t);
+        return n.top === i.top && n.left === i.left
+      }(e, this.props)) && this.updatePosition(), t.position !== this.state.position) {
       var n, i;
       null === (n = (i = this.props).onPositionChange) || void 0 === n || n.call(i, this.state.position)
     }
@@ -329,9 +334,9 @@ class R extends(i = s.Component) {
       className: t,
       children: n,
       fixed: i,
-      disablePointerEvents: s
+      disablePointerEvents: a
     } = this.props, {
-      position: a,
+      position: s,
       isPositioned: l,
       isSettingsLayerTransitioning: u,
       nudge: c
@@ -346,7 +351,7 @@ class R extends(i = s.Component) {
           className: o()(t, (0, E.getThemeClass)(I), S.layer, {
             [S.emptyError]: !1,
             [S.layerHidden]: u,
-            [S.disabledPointerEvents]: s
+            [S.disabledPointerEvents]: a
           }),
           style: {
             position: i ? "fixed" : "absolute",
@@ -356,7 +361,7 @@ class R extends(i = s.Component) {
           children: (0, r.jsx)(d.FocusRingScope, {
             containerRef: this.elementRef,
             children: n({
-              position: a,
+              position: s,
               nudge: c,
               isPositioned: l
             }, this.updatePosition)
@@ -366,7 +371,7 @@ class R extends(i = s.Component) {
     })
   }
   constructor(...e) {
-    super(...e), h(this, "elementRef", s.createRef()), h(this, "state", {
+    super(...e), h(this, "elementRef", a.createRef()), h(this, "state", {
       style: Object.freeze({}),
       position: this.props.autoInvert ? null : this.props.position,
       nudge: 0,
@@ -387,7 +392,7 @@ class R extends(i = s.Component) {
     })
   }
 }
-h(R, "defaultProps", {
+h(C, "defaultProps", {
   nudgeAlignIntoViewport: !1,
   spacing: 0,
   autoInvert: !1,

@@ -21,25 +21,25 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("481060"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("41959"),
   l = n("245561"),
-  u = n("899670");
+  u = n("7027");
 let d = e => {
     let {
       application: t,
       asset: n,
       className: r,
-      ...s
+      ...a
     } = e;
     return (0, i.jsx)(o.default, {
       application: t,
       size: o.ApplicationIconSize.MEDIUM,
       asset: n,
       className: r,
-      ...s
+      ...a
     })
   },
   _ = e => {
@@ -49,8 +49,8 @@ let d = e => {
       id: r,
       ...o
     } = e;
-    return (0, i.jsx)(a.Heading, {
-      className: s()(u.header, n),
+    return (0, i.jsx)(s.Heading, {
+      className: a()(u.header, n),
       variant: "heading-xl/extrabold",
       id: r,
       ...o,
@@ -68,16 +68,16 @@ let E = e => {
       className: t,
       title: n,
       description: r,
-      ...s
+      ...a
     } = e;
     return (0, i.jsxs)("div", {
       className: t,
-      ...s,
-      children: [(0, i.jsx)(a.Heading, {
+      ...a,
+      children: [(0, i.jsx)(s.Heading, {
         variant: "heading-md/bold",
         color: "header-primary",
         children: n
-      }), (0, i.jsx)(a.Heading, {
+      }), (0, i.jsx)(s.Heading, {
         variant: "heading-sm/normal",
         color: "header-secondary",
         children: r
@@ -89,11 +89,11 @@ let E = e => {
       applicationId: t,
       storeListingBenefits: n,
       skuBenefits: r,
-      className: a,
+      className: s,
       ...o
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(u.benefitsContainer, a),
+      className: a()(u.benefitsContainer, s),
       ...o,
       children: (0, i.jsx)(l.SubscriptionListingBenefits, {
         applicationId: t,
@@ -110,7 +110,7 @@ let E = e => {
       ...r
     } = e;
     return (0, i.jsx)("div", {
-      className: s()(u.container, n),
+      className: a()(u.container, n),
       ...r,
       children: t
     })

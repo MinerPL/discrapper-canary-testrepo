@@ -1,178 +1,182 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return D
+    return F
   }
 });
-var a = s("735250"),
-  l = s("470079"),
+var l = s("735250"),
+  a = s("470079"),
   i = s("442837"),
-  o = s("692547"),
+  n = s("692547"),
   r = s("481060"),
-  n = s("493683"),
+  o = s("493683"),
   u = s("239091"),
-  c = s("37234"),
-  d = s("194359"),
+  d = s("37234"),
+  c = s("194359"),
   f = s("726521"),
   S = s("233440"),
   m = s("314897"),
-  E = s("158776"),
-  T = s("699516"),
-  N = s("621113"),
-  p = s("759231"),
-  _ = s("998502"),
-  I = s("785717"),
-  A = s("621853"),
-  v = s("204197"),
-  x = s("358794"),
+  I = s("158776"),
+  E = s("699516"),
+  v = s("621113"),
+  _ = s("759231"),
+  T = s("998502"),
+  x = s("785717"),
+  N = s("621853"),
+  A = s("204197"),
   U = s("735336"),
-  h = s("520978"),
+  g = s("520978"),
   C = s("184325"),
-  y = s("496206"),
-  j = s("228168"),
-  R = s("981631"),
+  h = s("652853"),
+  p = s("496206"),
+  R = s("228168"),
+  j = s("981631"),
   M = s("231338"),
   P = s("689938"),
-  g = s("950114");
+  y = s("370386");
 let O = r.AvatarSizes.SIZE_120,
-  F = _.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
+  L = T.default.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar;
 
-function D(e) {
+function F(e) {
   let {
     displayProfile: t,
-    user: _,
-    guildId: D,
-    channelId: B,
-    friendToken: L,
-    isStreaming: b,
-    hasProfileEffect: G,
-    onClose: k
-  } = e, w = (0, i.useStateFromStores)([T.default], () => T.default.getRelationshipType(_.id)), H = (0, i.useStateFromStores)([E.default], () => E.default.isMobileOnline(_.id)), V = (0, i.useStateFromStores)([E.default], () => E.default.getStatus(_.id)), Y = (0, i.useStateFromStores)([A.default], () => A.default.getUserProfile(_.id)), z = (0, i.useStateFromStores)([m.default], () => m.default.getId() === _.id), {
-    profileTheme: J
-  } = (0, x.default)(_, t), {
+    user: T,
+    guildId: F,
+    channelId: D,
+    friendToken: b,
+    className: B,
+    isStreaming: G,
+    hasProfileEffect: k,
+    onClose: w
+  } = e, V = (0, i.useStateFromStores)([E.default], () => E.default.getRelationshipType(T.id)), H = (0, i.useStateFromStores)([I.default], () => I.default.isMobileOnline(T.id)), Y = (0, i.useStateFromStores)([I.default], () => I.default.getStatus(T.id)), z = (0, i.useStateFromStores)([N.default], () => N.default.getUserProfile(T.id)), W = (0, i.useStateFromStores)([m.default], () => m.default.getId() === T.id), {
+    theme: Z
+  } = (0, h.useUserProfileThemeContext)(), {
     trackUserProfileAction: K
-  } = (0, I.useUserProfileAnalyticsContext)(), {
-    avatarSrc: Q,
-    eventHandlers: W,
-    avatarDecorationSrc: Z
-  } = (0, v.default)({
-    user: _,
+  } = (0, x.useUserProfileAnalyticsContext)(), {
+    avatarSrc: J,
+    eventHandlers: Q,
+    avatarDecorationSrc: q
+  } = (0, A.default)({
+    user: T,
     size: O
-  }), q = l.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(_, B), [_, B]);
-
-  function X() {
-    k(), (0, c.popLayer)()
-  }
+  }), X = a.useMemo(() => (0, S.shouldDisableUserPresenceInChannel)(T, D), [T, D]);
 
   function $() {
+    w(), (0, d.popLayer)()
+  }
+
+  function ee() {
     K({
       action: "REMOVE_FRIEND"
-    }), d.default.removeFriend(_.id, {
+    }), c.default.removeFriend(T.id, {
       location: "User Profile"
     })
   }
 
-  function ee(e) {
+  function et(e) {
     K({
       action: "SEND_MESSAGE"
-    }), n.default.openPrivateChannel(_.id, !1, !1, e), X()
-  }
-
-  function et() {
-    try {
-      K({
-        action: "BLOCK"
-      }), d.default.addRelationship({
-        userId: _.id,
-        context: {
-          location: "User Profile"
-        },
-        type: R.RelationshipTypes.BLOCKED
-      })
-    } catch (e) {
-      X()
-    }
+    }), o.default.openPrivateChannel(T.id, !1, !1, e), $()
   }
 
   function es() {
-    let e = "@me" === D ? void 0 : D;
+    try {
+      K({
+        action: "BLOCK"
+      }), c.default.addRelationship({
+        userId: T.id,
+        context: {
+          location: "User Profile"
+        },
+        type: j.RelationshipTypes.BLOCKED
+      })
+    } catch (e) {
+      $()
+    }
+  }
+
+  function el() {
+    let e = "@me" === F ? void 0 : F;
     K({
       action: "REPORT"
-    }), (0, f.showReportModalForUser)(_, e)
+    }), (0, f.showReportModalForUser)(T, e)
   }
-  return (0, a.jsxs)("header", {
-    children: [(0, a.jsx)(U.default, {
+  return (0, l.jsxs)("header", {
+    className: B,
+    children: [(0, l.jsx)(U.default, {
       displayProfile: t,
-      onClose: X,
-      user: _,
-      profileType: j.UserProfileTypes.MODAL,
-      hasProfileEffect: G
-    }), (0, a.jsxs)("div", {
-      className: g.header,
-      children: [(0, a.jsx)("div", {
-        ...W,
-        children: (0, a.jsx)(F, {
-          src: Q,
-          avatarDecoration: Z,
+      onClose: $,
+      user: T,
+      profileType: R.UserProfileTypes.MODAL,
+      hasProfileEffect: k
+    }), (0, l.jsxs)("div", {
+      className: y.header,
+      children: [(0, l.jsx)("div", {
+        ...Q,
+        children: (0, l.jsx)(L, {
+          src: J,
+          avatarDecoration: q,
           size: O,
-          className: g.avatar,
-          status: q ? M.StatusTypes.UNKNOWN : b ? M.StatusTypes.STREAMING : V,
-          statusBackdropColor: (0, r.getStatusBackdropColor)(J),
+          className: y.avatar,
+          status: X ? M.StatusTypes.UNKNOWN : G ? M.StatusTypes.STREAMING : Y,
+          statusBackdropColor: (0, r.getStatusBackdropColor)(Z),
           isMobile: H,
           statusTooltip: !0,
-          "aria-label": _.username
+          "aria-label": T.username
         })
-      }), (0, a.jsxs)("div", {
-        className: g.headerTop,
-        children: [(null == Y ? void 0 : Y.profileFetchFailed) && !_.isClyde() ? (0, a.jsx)(r.Tooltip, {
+      }), (0, l.jsxs)("div", {
+        className: y.headerTop,
+        children: [(null == z ? void 0 : z.profileFetchFailed) && !T.isClyde() ? (0, l.jsx)(r.Tooltip, {
           text: P.default.Messages.USER_PROFILE_LOAD_ERROR,
           spacing: 20,
-          children: e => (0, a.jsx)(p.default, {
+          color: r.TooltipColors.NESTED,
+          children: e => (0, l.jsx)(_.default, {
             ...e,
-            className: g.warningCircleIcon,
-            color: o.default.unsafe_rawColors.YELLOW_300.css
+            className: y.warningCircleIcon,
+            color: n.default.unsafe_rawColors.YELLOW_300.css
           })
-        }) : (0, a.jsx)(C.default, {
-          user: _,
-          className: g.badgeList,
-          guildId: D,
+        }) : (0, l.jsx)(C.default, {
+          user: T,
+          className: y.badgeList,
+          guildId: F,
           size: C.BadgeSizes.SIZE_24,
           shrinkAtCount: 8,
-          shrinkToSize: C.BadgeSizes.SIZE_18
-        }), (0, a.jsxs)("div", {
-          className: g.relationshipButtons,
-          children: [(0, a.jsx)(h.default, {
-            className: g.applicationInstallButton,
-            application: null == Y ? void 0 : Y.application
-          }), (0, a.jsx)(y.default, {
-            user: _,
-            isCurrentUser: z,
-            relationshipType: w,
+          shrinkToSize: C.BadgeSizes.SIZE_18,
+          onBadgeClick: w
+        }), (0, l.jsxs)("div", {
+          className: y.relationshipButtons,
+          children: [(0, l.jsx)(g.default, {
+            className: y.applicationInstallButton,
+            application: null == z ? void 0 : z.application
+          }), (0, l.jsx)(p.default, {
+            user: T,
+            isCurrentUser: W,
+            relationshipType: V,
             onAddFriend: function() {
               try {
                 K({
                   action: "SEND_FRIEND_REQUEST"
-                }), d.default.addRelationship({
-                  userId: _.id,
+                }), c.default.addRelationship({
+                  userId: T.id,
                   context: {
                     location: "User Profile"
                   },
                   type: void 0,
-                  friendToken: L
+                  friendToken: b
                 })
               } catch (e) {
-                X()
+                $()
               }
             },
             onIgnoreFriend: function() {
               K({
                 action: "CANCEL_FRIEND_REQUEST"
-              }), d.default.cancelFriendRequest(_.id, {
+              }), c.default.cancelFriendRequest(T.id, {
                 location: "User Profile"
               })
             },
-            onSendMessage: () => ee("User Profile Modal - Send Message Button")
-          }), z || _.isNonUserBot() ? null : (0, a.jsx)(r.Clickable, {
+            onSendMessage: () => et("User Profile Modal - Send Message Button")
+          }), W || T.isNonUserBot() ? null : (0, l.jsx)(r.Clickable, {
             focusProps: {
               offset: {
                 left: 8
@@ -185,22 +189,22 @@ function D(e) {
                 let {
                   default: e
                 } = await s.e("29136").then(s.bind(s, "193646"));
-                return t => (0, a.jsx)(e, {
+                return t => (0, l.jsx)(e, {
                   ...t,
-                  relationshipType: w,
-                  onRemoveFriend: $,
-                  onBlock: et,
-                  onReport: es,
+                  relationshipType: V,
+                  onRemoveFriend: ee,
+                  onBlock: es,
+                  onReport: el,
                   onCopyId: () => K({
                     action: "COPY_USER_ID"
                   }),
-                  onMessage: () => ee("User Profile Modal - Context Menu"),
-                  user: _
+                  onMessage: () => et("User Profile Modal - Context Menu"),
+                  user: T
                 })
               })
             },
-            children: (0, a.jsx)(N.default, {
-              className: g.additionalActionsIcon
+            children: (0, l.jsx)(v.default, {
+              className: y.additionalActionsIcon
             })
           })]
         })]

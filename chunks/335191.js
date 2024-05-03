@@ -12,8 +12,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("692547"),
   l = n("780384"),
   u = n("481060"),
@@ -29,27 +29,27 @@ var i = n("735250"),
   A = n("880008"),
   m = n("49012"),
   N = n("981631"),
-  O = n("856651"),
-  p = n("689938"),
-  R = n("815639");
+  p = n("856651"),
+  O = n("689938"),
+  R = n("677592");
 
 function C(e) {
   var t, n;
-  let r, s, d, {
+  let r, a, d, {
     connectedAccount: S,
     theme: C,
     locale: g,
     userId: L,
-    className: D,
-    showMetadata: v,
+    className: v,
+    showMetadata: D,
     showInvisibleIcon: M
   } = e;
-  null == v && (v = !0);
+  null == D && (D = !0);
   let y = null !== (n = S.metadata) && void 0 !== n ? n : {},
-    P = v ? (0, I.getCreatedAtDate)(y[O.MetadataFields.CREATED_AT], g) : null,
+    P = D ? (0, I.getCreatedAtDate)(y[p.MetadataFields.CREATED_AT], g) : null,
     U = (0, u.useToken)(o.default.unsafe_rawColors.TWITTER).hex(),
-    b = p.default.Messages.CONNECTION_VERIFIED;
-  if (v) switch (S.type) {
+    b = O.default.Messages.CONNECTION_VERIFIED;
+  if (D) switch (S.type) {
     case N.PlatformTypes.REDDIT:
       r = (0, T.generateRedditMetadataItems)(y);
       break;
@@ -57,7 +57,7 @@ function C(e) {
       r = (0, T.generateSteamMetadataItems)(y);
       break;
     case N.PlatformTypes.TWITTER:
-      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[O.MetadataFields.TWITTER_VERIFIED] && (s = U, b = p.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
+      r = (0, T.generateTwitterMetadataItems)(y), "1" === y[p.MetadataFields.TWITTER_VERIFIED] && (a = U, b = O.default.Messages.CONNECTION_VERIFIED_ON_TWITTER);
       break;
     case N.PlatformTypes.PAYPAL:
       r = (0, T.generatePaypalMetadataItems)(y);
@@ -71,7 +71,7 @@ function C(e) {
   let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
     w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
   null != M && M ? d = (0, i.jsx)(A.default, {
-    className: a()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
+    className: s()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
     href: w,
@@ -90,24 +90,25 @@ function C(e) {
       direction: h.default.Directions.RIGHT
     })
   }));
-  let k = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
-    B = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
+  let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
+    k = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
     V = S.verified ? (0, i.jsx)(f.default, {
       className: R.connectedAccountVerifiedIcon,
-      color: null != s ? s : k,
-      forcedIconColor: B,
+      color: null != a ? a : B,
+      forcedIconColor: k,
       size: 16,
       tooltipText: b
     }) : null;
   return (0, i.jsxs)("div", {
-    className: a()(R.connectedAccountContainer, null != r && r.length > 0 || null != P ? R.connectedAccountContainerWithMetadata : null, D),
+    className: s()(R.connectedAccountContainer, null != r && r.length > 0 || null != P ? R.connectedAccountContainerWithMetadata : null, v),
     children: [(0, i.jsxs)("div", {
       className: R.connectedAccount,
       children: [(0, i.jsx)(u.Tooltip, {
         text: null == G ? void 0 : G.name,
+        color: u.TooltipColors.NESTED,
         children: e => (0, i.jsx)("img", {
           ...e,
-          alt: p.default.Messages.IMG_ALT_LOGO.format({
+          alt: O.default.Messages.IMG_ALT_LOGO.format({
             name: null == G ? void 0 : G.name
           }),
           className: R.connectedAccountIcon,
@@ -122,6 +123,7 @@ function C(e) {
             children: [(0, i.jsx)(u.Tooltip, {
               overflowOnly: !0,
               text: S.name,
+              color: u.TooltipColors.NESTED,
               children: e => (0, i.jsx)(u.Text, {
                 ...e,
                 variant: "text-md/semibold",
@@ -134,7 +136,7 @@ function C(e) {
         }), null != P ? (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "header-secondary",
-          children: p.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
+          children: O.default.Messages.CONNECTIONS_PROFILE_MEMBER_SINCE.format({
             date: P
           })
         }) : null]
@@ -151,9 +153,9 @@ function g(e) {
     applicationRoleConnection: t,
     className: n,
     locale: r
-  } = e, s = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
+  } = e, a = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
   return (0, i.jsxs)("div", {
-    className: a()(R.connectedAccountContainer, null != s && s.length > 0 ? R.connectedAccountContainerWithMetadata : null, n),
+    className: s()(R.connectedAccountContainer, null != a && a.length > 0 ? R.connectedAccountContainerWithMetadata : null, n),
     children: [(0, i.jsx)("div", {
       className: R.connectedAccount,
       children: (0, i.jsxs)("div", {
@@ -175,16 +177,16 @@ function g(e) {
           })
         }) : null]
       })
-    }), null != s && s.length > 0 ? (0, i.jsx)("div", {
-      className: a()(R.connectedAccountChildren, R.connectedAccountChildrenNoIcon),
-      children: s
+    }), null != a && a.length > 0 ? (0, i.jsx)("div", {
+      className: s()(R.connectedAccountChildren, R.connectedAccountChildrenNoIcon),
+      children: a
     }) : null, (0, i.jsx)("div", {
       children: (0, i.jsx)("div", {
         className: R.connectedAccountPoweredBy,
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
-          children: p.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
+          children: O.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
             applicationHook: () => (0, i.jsxs)("div", {
               className: R.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(d.default, {
@@ -206,7 +208,7 @@ let L = r.forwardRef(function(e, t) {
   let {
     connectedAccounts: n,
     theme: r,
-    locale: s,
+    locale: a,
     className: o,
     userId: l
   } = e;
@@ -214,7 +216,7 @@ let L = r.forwardRef(function(e, t) {
   let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(C, {
       connectedAccount: e,
       theme: r,
-      locale: s,
+      locale: a,
       userId: l
     }, "".concat(e.type, ":").concat(e.id))),
     d = [],
@@ -225,7 +227,7 @@ let L = r.forwardRef(function(e, t) {
   }
   return (0, i.jsxs)("div", {
     ref: t,
-    className: a()(R.connectedAccounts, o),
+    className: s()(R.connectedAccounts, o),
     children: [(0, i.jsx)("div", {
       className: R.connectedAccountsColumn,
       children: d

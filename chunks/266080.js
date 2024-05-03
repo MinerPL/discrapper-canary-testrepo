@@ -1,76 +1,76 @@
 "use strict";
 n.r(t), n("47120");
-var a = n("735250"),
-  l = n("470079"),
-  r = n("481060"),
+var i = n("735250"),
+  r = n("470079"),
+  a = n("481060"),
   s = n("367907"),
-  i = n("434404"),
-  d = n("430824"),
-  o = n("346656"),
-  u = n("981631"),
-  c = n("689938"),
-  m = n("903851");
+  o = n("434404"),
+  l = n("430824"),
+  u = n("346656"),
+  d = n("981631"),
+  _ = n("689938"),
+  c = n("53560");
 t.default = e => {
   let {
     guildId: t,
     reportId: n
-  } = e, [_, f] = l.useState(!1), E = d.default.getGuild(t), h = null != E;
-  l.useEffect(() => {
-    f(!h)
-  }, [h]);
-  let v = l.useCallback(() => {
-    f(!0), s.default.trackWithMetadata(u.AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+  } = e, [E, I] = r.useState(!1), T = l.default.getGuild(t), f = null != T;
+  r.useEffect(() => {
+    I(!f)
+  }, [f]);
+  let S = r.useCallback(() => {
+    I(!0), s.default.trackWithMetadata(d.AnalyticEvents.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
       guild_id: t,
       report_id: n
-    }), i.default.leaveGuild(t)
+    }), o.default.leaveGuild(t)
   }, [t, n]);
-  if (null == E) return null;
-  let R = () => {
-    (0, r.openModal)(e => (0, a.jsx)(r.ConfirmModal, {
-      header: c.default.Messages.LEAVE_SERVER_TITLE.format({
-        name: E.name
+  if (null == T) return null;
+  let h = () => {
+    (0, a.openModal)(e => (0, i.jsx)(a.ConfirmModal, {
+      header: _.default.Messages.LEAVE_SERVER_TITLE.format({
+        name: T.name
       }),
-      confirmText: c.default.Messages.LEAVE_SERVER,
-      cancelText: c.default.Messages.CANCEL,
-      onConfirm: v,
+      confirmText: _.default.Messages.LEAVE_SERVER,
+      cancelText: _.default.Messages.CANCEL,
+      onConfirm: S,
       ...e,
-      children: (0, a.jsx)(r.Text, {
+      children: (0, i.jsx)(a.Text, {
         variant: "text-md/normal",
-        children: c.default.Messages.LEAVE_SERVER_BODY.format({
-          name: E.name
+        children: _.default.Messages.LEAVE_SERVER_BODY.format({
+          name: T.name
         })
       })
     }))
   };
-  return (0, a.jsxs)("div", {
-    className: m.container,
-    children: [(0, a.jsx)(r.Text, {
-      className: m.description,
+  return (0, i.jsxs)("div", {
+    className: c.container,
+    children: [(0, i.jsx)(a.Text, {
+      className: c.description,
       variant: "text-sm/normal",
-      children: c.default.Messages.MOBILE_REPORTS_LEAVE_ELEMENT_DESCRIPTION
-    }), (0, a.jsxs)("div", {
-      className: m.guildContainer,
-      children: [(0, a.jsxs)("div", {
-        className: m.guildInfo,
-        children: [(0, a.jsx)(o.default, {
-          guild: E,
+      children: _.default.Messages.MOBILE_REPORTS_LEAVE_ELEMENT_DESCRIPTION
+    }), (0, i.jsxs)("div", {
+      className: c.guildContainer,
+      children: [(0, i.jsxs)("div", {
+        className: c.guildInfo,
+        children: [(0, i.jsx)(u.default, {
+          guild: T,
           showBadge: !1,
           animate: !1,
-          size: o.default.Sizes.SMALL,
-          "aria-label": E.name,
-          className: m.icon,
+          size: u.default.Sizes.SMALL,
+          "aria-label": T.name,
+          className: c.icon,
           active: !0
-        }), (0, a.jsx)(r.Text, {
-          className: m.guildName,
+        }), (0, i.jsx)(a.Text, {
+          className: c.guildName,
           variant: "text-sm/semibold",
-          children: E.name
+          children: T.name
         })]
-      }), (0, a.jsx)(r.Button, {
-        onClick: () => R(),
-        disabled: _,
-        size: r.Button.Sizes.SMALL,
-        color: r.Button.Colors.RED,
-        children: _ ? c.default.Messages.MOBILE_REPORTS_LEFT_SERVER : c.default.Messages.LEAVE_SERVER
+      }), (0, i.jsx)(a.Button, {
+        onClick: () => h(),
+        disabled: E,
+        size: a.Button.Sizes.SMALL,
+        color: a.Button.Colors.RED,
+        children: E ? _.default.Messages.MOBILE_REPORTS_LEFT_SERVER : _.default.Messages.LEAVE_SERVER
       })]
     })]
   })

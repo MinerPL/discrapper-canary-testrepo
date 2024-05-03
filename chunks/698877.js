@@ -18,26 +18,30 @@ function o(e) {
       centerButton: d,
       onMouseEnter: c,
       onMouseLeave: f,
-      ...h
+      premiumGlow: h,
+      buttonRef: m,
+      ...p
     } = e,
-    m = d ? i.CenterControlButton : i.default;
+    E = d ? i.CenterControlButton : i.default;
   t = o ? u ? r.default.Messages.STOP_STREAMING : r.default.Messages.STOP_WATCHING : n ? r.default.Messages.SHARE_YOUR_SCREEN : r.default.Messages.ACTIVITY_PANEL_GO_LIVE_TOOLTIP_NO_PERMISSION_IN_VOICE;
   let {
-    Component: p,
-    events: E,
-    play: C
+    Component: C,
+    events: g,
+    play: S
   } = (0, s.useScreenshareLottie)(o ? "disable" : "enable");
-  return l.useEffect(() => () => C(), [o, C]), (0, a.jsx)(m, {
+  return l.useEffect(() => () => S(), [o, S]), (0, a.jsx)(E, {
+    buttonRef: m,
     label: t,
     disabled: !n,
-    iconComponent: p,
+    iconComponent: C,
     isActive: o,
     onMouseEnter: e => {
-      null == c || c(e), E.onMouseEnter()
+      null == c || c(e), g.onMouseEnter()
     },
     onMouseLeave: e => {
-      null == f || f(e), E.onMouseLeave()
+      null == f || f(e), g.onMouseLeave()
     },
-    ...h
+    premiumGlow: h,
+    ...p
   })
 }

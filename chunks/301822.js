@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var i, r, s, a = n("735250"),
+var i, r, a, s = n("735250"),
   o = n("470079"),
   l = n("846519");
 
@@ -11,7 +11,7 @@ function u(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(s = i || (i = {})).SVG = "svg", s.CANVAS = "canvas";
+}(a = i || (i = {})).SVG = "svg", a.CANVAS = "canvas";
 class d extends(r = o.Component) {
   componentDidMount() {
     (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation()
@@ -26,7 +26,7 @@ class d extends(r = o.Component) {
     null != this.animation && (this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play() : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0)))
   }
   render() {
-    return (0, a.jsx)("div", {
+    return (0, s.jsx)("div", {
       className: this.props.className,
       ref: this.animationRef
     })
@@ -38,19 +38,21 @@ class d extends(r = o.Component) {
         loop: t,
         autoplay: i,
         delay: r,
-        renderer: s,
-        shouldAnimate: a
+        renderer: a,
+        rendererSettings: s,
+        shouldAnimate: o
       } = this.props;
       null != this.animation && this.animation.destroy();
-      let [o, {
-        default: l
+      let [l, {
+        default: u
       }] = await Promise.all([e(), n.e("23755").then(n.t.bind(n, "500923", 23))]);
-      null != this.animationRef.current && (this.animation = l.loadAnimation({
+      null != this.animationRef.current && (this.animation = u.loadAnimation({
         container: this.animationRef.current,
-        renderer: s,
+        renderer: a,
         loop: t,
-        autoplay: i && null == r && a,
-        animationData: o
+        autoplay: i && null == r && o,
+        animationData: l,
+        rendererSettings: s
       }), null != r ? this.delayTimeout.start(r, () => {
         var e;
         null === (e = this.animation) || void 0 === e || e.play()

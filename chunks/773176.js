@@ -2,7 +2,7 @@
 n.r(t);
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("954955"),
   o = n.n(r),
@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("665906"),
   I = n("695346"),
   A = n("314897"),
-  v = n("323873"),
-  N = n("271383"),
+  N = n("323873"),
+  v = n("271383"),
   x = n("430824"),
   M = n("607744"),
   R = n("496675"),
@@ -44,17 +44,17 @@ var a = n("735250"),
   W = n("404975"),
   Y = n("626135"),
   z = n("572004"),
-  Z = n("970257"),
-  K = n("418476"),
-  X = n("151007"),
-  q = n("432376"),
+  K = n("970257"),
+  Z = n("418476"),
+  q = n("151007"),
+  X = n("432376"),
   Q = n("996861"),
   J = n("603490"),
   $ = n("225138"),
   ee = n("717680"),
   et = n("981631"),
   en = n("689938"),
-  ea = n("886335");
+  ea = n("360487");
 
 function el(e) {
   e.stopPropagation()
@@ -151,7 +151,7 @@ function er(e) {
     canReact: C,
     canConfigureJoin: g,
     canReply: S,
-    canStartThread: v,
+    canStartThread: N,
     canViewThread: L,
     isExpanded: B,
     showMoreUtilities: W,
@@ -173,29 +173,29 @@ function er(e) {
       isFocused: r
     } = e, {
       author: o
-    } = n, d = (0, u.useStateFromStores)([x.default], () => x.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([A.default], () => A.default.getId()), h = (0, T.useIsActiveChannelOrUnarchivableThread)(t), C = (0, T.useIsNonModInLockedThread)(t), g = I.RenderReactions.useSetting(), S = I.DeveloperMode.useSetting(), v = (0, u.useStateFromStores)([M.default], () => null == t.guild_id || M.default.canChatInGuild(t.guild_id), [t]), {
+    } = n, d = (0, u.useStateFromStores)([x.default], () => x.default.getGuild(t.guild_id), [t.guild_id]), f = (0, u.useStateFromStores)([A.default], () => A.default.getId()), h = (0, T.useIsActiveChannelOrUnarchivableThread)(t), C = (0, T.useIsNonModInLockedThread)(t), g = I.RenderReactions.useSetting(), S = I.DeveloperMode.useSetting(), N = (0, u.useStateFromStores)([M.default], () => null == t.guild_id || M.default.canChatInGuild(t.guild_id), [t]), {
       canManageMessages: L,
       canAddNewReactions: y
     } = (0, u.useStateFromStoresObject)([R.default], () => ({
-      canAddNewReactions: v && R.default.can(et.Permissions.ADD_REACTIONS, t),
+      canAddNewReactions: N && R.default.can(et.Permissions.ADD_REACTIONS, t),
       canManageMessages: R.default.can(et.Permissions.MANAGE_MESSAGES, t)
-    }), [t, v]), O = (0, _.useCanReplyToMessage)(t, n), j = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), D = (0, u.useStateFromStores)([m.default], () => null != t.guild_id && m.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([N.default], () => null != t.guild_id && N.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (L || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
+    }), [t, N]), O = (0, _.useCanReplyToMessage)(t, n), j = (0, T.useCanStartPublicThread)(t, n), P = (0, T.useCanViewThreadForMessage)(n), D = (0, u.useStateFromStores)([m.default], () => null != t.guild_id && m.default.isLurking(t.guild_id), [t]), b = (0, u.useStateFromStores)([v.default], () => null != t.guild_id && v.default.isCurrentUserGuest(t.guild_id), [t]), U = o.id === f, F = (L || n.canDeleteOwnMessage(f)) && h && !et.MessageTypesSets.UNDELETABLE.has(n.type);
     n.type === et.MessageTypes.AUTO_MODERATION_ACTION && (F = F && L);
-    let w = (0, Z.canReportMessage)(n),
-      k = (0, X.default)(n, t, L),
-      H = !t.isSystemDM() && (0, K.default)(n, f) && h && !C,
+    let w = (0, K.canReportMessage)(n),
+      k = (0, q.default)(n, t, L),
+      H = !t.isSystemDM() && (0, Z.default)(n, f) && h && !C,
       {
         disableReactionCreates: B
-      } = (0, q.default)({
+      } = (0, X.default)({
         channel: t,
-        canChat: v,
+        canChat: N,
         renderReactions: g,
         canAddNewReactions: y,
         isLurking: D,
         isGuest: b,
         isActiveChannelOrUnarchivableThread: h
       }),
-      G = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (U || L) && n.type === et.MessageTypes.DEFAULT,
+      G = t.type === et.ChannelTypes.GUILD_ANNOUNCEMENT && null != d && d.hasFeature(et.GuildFeatures.NEWS) && (U || L) && n.type === et.MessageTypes.DEFAULT && !n.isPoll(),
       V = t.getGuildId(),
       W = null != V && (n.type === et.MessageTypes.USER_JOIN || n.type === et.MessageTypes.GUILD_INVITE_REMINDER) && R.default.canWithPartialContext(et.Permissions.MANAGE_GUILD, {
         guildId: V
@@ -320,14 +320,14 @@ function er(e) {
       label: en.default.Messages.EDIT,
       icon: w.default,
       onClick: Q.editMessage
-    }) : null, v ? ei({
+    }) : null, N ? ei({
       key: "thread",
       channel: t,
       message: n,
       label: en.default.Messages.CREATE_THREAD,
       icon: G.default,
       onClick: Q.createThread
-    }) : null, !v && L ? ei({
+    }) : null, !N && L ? ei({
       key: "view-thread",
       channel: t,
       message: n,
@@ -447,7 +447,7 @@ t.default = l.memo(function(e) {
     channel: t,
     message: n,
     isHeader: l
-  } = e, s = (0, u.useStateFromStores)([v.default], () => v.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
+  } = e, s = (0, u.useStateFromStores)([N.default], () => N.default.isEditing(t.id, n.id), [t.id, n.id]), r = function(e) {
     let {
       channel: t,
       message: n

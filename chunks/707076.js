@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 });
 var a = n("735250");
 n("470079");
-var l = n("803997"),
+var l = n("120356"),
   s = n.n(l),
   i = n("442837"),
   r = n("481060"),
@@ -21,8 +21,8 @@ var l = n("803997"),
   _ = n("150512"),
   I = n("430824"),
   E = n("594174"),
-  f = n("93879"),
-  O = n("263704"),
+  O = n("93879"),
+  f = n("263704"),
   S = n("481479"),
   T = n("316949"),
   m = n("626135"),
@@ -31,7 +31,7 @@ var l = n("803997"),
   g = n("84658"),
   G = n("981631"),
   h = n("689938"),
-  L = n("1004");
+  L = n("856274");
 let R = () => [{
     emoji: "\uD83E\uDDD9",
     emojiDescription: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,
@@ -55,13 +55,13 @@ let R = () => [{
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_1,
     selected: !0
   }, {
-    channelIcon: () => (0, a.jsx)(f.default, {
+    channelIcon: () => (0, a.jsx)(O.default, {
       className: L.channelIcon
     }),
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_2,
     selected: !0
   }, {
-    channelIcon: () => (0, a.jsx)(f.default, {
+    channelIcon: () => (0, a.jsx)(O.default, {
       className: L.channelIcon
     }),
     channel: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_LANDING_3,
@@ -121,7 +121,7 @@ function P(e) {
             children: i
           }), d && (0, a.jsx)("div", {
             className: L.checkboxCircle,
-            children: (0, a.jsx)(O.default, {
+            children: (0, a.jsx)(f.default, {
               className: L.checkmark
             })
           })]
@@ -234,13 +234,13 @@ function M() {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_TITLE,
             subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_1_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default,
+            Icon: O.default,
             variant: "static"
           }), (0, a.jsx)(c.NewMemberAction, {
             title: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_TITLE,
             subtitle: h.default.Messages.GUILD_ONBOARDING_SETUP_LANDING_GUIDE_TODO_2_CHANNEL_NAME,
             completed: !0,
-            Icon: f.default,
+            Icon: O.default,
             variant: "static"
           })]
         })]
@@ -269,7 +269,7 @@ function M() {
                 className: s()(L.checkbox, {
                   [L.selected]: i
                 }),
-                children: i && (0, a.jsx)(O.default, {
+                children: i && (0, a.jsx)(f.default, {
                   className: L.checkmark
                 })
               })]

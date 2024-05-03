@@ -6,90 +6,91 @@ n.r(t), n.d(t, {
 }), n("789020"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("389507"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("389507"),
   o = n("993365"),
-  l = n("497309"),
-  u = n("950463"),
-  d = n("757698"),
-  _ = n("630641"),
-  c = n("912527"),
-  E = n("833571"),
-  I = n("630388"),
-  T = n("709054"),
-  f = n("941532"),
-  S = n("713938"),
-  h = n("981631"),
-  A = n("231338"),
-  m = n("689938"),
-  N = n("645392");
+  l = n("979200"),
+  u = n("497309"),
+  d = n("950463"),
+  _ = n("757698"),
+  c = n("630641"),
+  E = n("912527"),
+  I = n("833571"),
+  T = n("630388"),
+  f = n("709054"),
+  S = n("941532"),
+  h = n("713938"),
+  A = n("981631"),
+  m = n("231338"),
+  N = n("689938"),
+  p = n("854351");
 
 function O(e) {
   var t;
   let n, {
       application: r,
-      scopes: s,
+      scopes: a,
       redirectUri: o,
       approximateGuildCount: O,
-      isEmbeddedFlow: R,
-      embeddedActivityConfig: C
+      isEmbeddedFlow: C,
+      disclosures: g
     } = e,
-    g = new Date(T.default.extractTimestamp(r.id)),
-    L = (0, S.getSecurityMessage)(s),
-    D = (0, I.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, h.ApplicationFlags.EMBEDDED);
-  if (null != o && !D && !R) {
+    L = new Date(f.default.extractTimestamp(r.id)),
+    v = (0, h.getSecurityMessage)(a),
+    D = (0, T.hasFlag)(null !== (t = r.flags) && void 0 !== t ? t : 0, A.ApplicationFlags.EMBEDDED);
+  if (null != o && !D && !C) {
     let e = new URL(o);
     n = null != e.host && e.host.length > 0 ? e.origin : e.href
   }
   return (0, i.jsxs)("div", {
-    className: N.applicationDetails,
-    children: [null != n ? (0, i.jsx)(p, {
-      className: N.redirectWarning,
-      icon: d.default,
-      text: m.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
+    className: p.applicationDetails,
+    children: [null != n ? (0, i.jsx)(R, {
+      className: p.redirectWarning,
+      icon: _.default,
+      text: N.default.Messages.OAUTH2_DETAILS_REDIRECT.format({
         origin: n
       })
-    }) : null, (0, i.jsx)(p, {
-      icon: _.default,
-      text: (0, f.getApplicationDetailsText)(r)
-    }), (0, i.jsx)(p, {
-      icon: l.default,
-      text: m.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
-        date: g
-      })
-    }), s.includes(A.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(p, {
+    }) : null, (0, i.jsx)(R, {
       icon: c.default,
-      text: m.default.Messages.OAUTH2_DETAILS_GUILDS.format({
+      text: (0, S.getApplicationDetailsText)(r)
+    }), (0, i.jsx)(R, {
+      icon: u.default,
+      text: N.default.Messages.OAUTH2_DETAILS_CREATION_DATE.format({
+        date: L
+      })
+    }), a.includes(m.OAuth2Scopes.BOT) && null != O ? (0, i.jsx)(R, {
+      icon: E.default,
+      text: N.default.Messages.OAUTH2_DETAILS_GUILDS.format({
         guildCount: O
       })
-    }) : null, (0, i.jsx)(p, {
-      icon: E.default,
-      text: L
-    }), (null == C ? void 0 : C.has_csp_exception) ? (0, i.jsx)(p, {
-      icon: u.default,
-      text: m.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
-    }) : null, (null == C ? void 0 : C.displays_advertisements) ? (0, i.jsx)(p, {
-      icon: a.EmbedIcon,
-      text: m.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
+    }) : null, (0, i.jsx)(R, {
+      icon: I.default,
+      text: v
+    }), null != g && g.includes(l.ApplicationDisclosure.IP_LOCATION) ? (0, i.jsx)(R, {
+      icon: d.default,
+      text: N.default.Messages.OAUTH2_IP_LOCATION_DISCLOSURE
+    }) : null, null != g && g.includes(l.ApplicationDisclosure.DISPLAYS_ADVERTISEMENTS) ? (0, i.jsx)(R, {
+      icon: s.EmbedIcon,
+      text: N.default.Messages.OAUTH2_ADVERTISEMENTS_DISCLOSURE
     }) : null]
   })
 }
 
-function p(e) {
+function R(e) {
   let {
     icon: t,
     text: n,
     className: r
   } = e;
   return (0, i.jsxs)("div", {
-    className: s()(N.entry, r),
+    className: a()(p.entry, r),
     children: [(0, i.jsx)(t, {
-      className: N.entryIcon
+      className: p.entryIcon
     }), (0, i.jsx)(o.Text, {
       variant: "text-xs/medium",
       color: "text-muted",
-      className: N.entryInner,
+      className: p.entryInner,
       children: n
     })]
   })

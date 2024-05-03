@@ -13,7 +13,7 @@ var s = n("26290"),
 
 function a(e) {
   return (0, i.jsx)(r.QuestContentImpressionTracker, {
-    questId: e.questIds,
+    questOrQuests: e.quests,
     questContent: l.QuestContent.GIFT_INVENTORY_SETTINGS_BADGE,
     children: e => (0, i.jsx)("span", {
       ref: e,

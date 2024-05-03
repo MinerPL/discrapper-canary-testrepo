@@ -7,7 +7,7 @@ n.r(t), n.d(t, {
     return o
   },
   getExperimentCodecs: function() {
-    return a
+    return s
   }
 }), n("653041"), n("733860");
 var i = n("65154");
@@ -25,7 +25,7 @@ let r = [{
   decode: !0
 }];
 
-function s(e, t) {
+function a(e, t) {
   let n = t.concat(r),
     i = [];
   return n.forEach(t => {
@@ -38,29 +38,29 @@ function s(e, t) {
   }), i
 }
 
-function a(e, t) {
-  let n = [];
-  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t === i.MediaEngineContextTypes.STREAM && n.unshift({
+function s(e) {
+  let t = [];
+  return e.has(i.ExperimentFlags.SIGNAL_H265_SUPPORT) ? t.unshift({
     name: "H265",
     encode: !0,
     decode: !0
-  }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t === i.MediaEngineContextTypes.STREAM && n.unshift({
+  }) : e.has(i.ExperimentFlags.SIGNAL_H265_DECODE_SUPPORT) && t.unshift({
     name: "H265",
     encode: !1,
     decode: !0
-  }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && n.unshift({
+  }), e.has(i.ExperimentFlags.SIGNAL_AV1_SUPPORT) && t.unshift({
     name: "AV1",
     encode: !0,
     decode: !0
-  }), n
+  }), t
 }
 
 function o(e, t) {
-  return "string" == typeof e ? s(JSON.parse(e).map(e => ({
+  return "string" == typeof e ? a(JSON.parse(e).map(e => ({
     codec: l(e.codec),
     encode: e.encode,
     decode: e.decode
-  })), t) : s(e.map(e => ({
+  })), t) : a(e.map(e => ({
     codec: l(e),
     encode: !0,
     decode: !0

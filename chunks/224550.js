@@ -6,38 +6,38 @@ var l = s("858987"),
   r = s("122289"),
   i = s("63063"),
   n = s("74538"),
-  u = s("937615"),
-  c = s("296848"),
+  c = s("937615"),
+  u = s("296848"),
   o = s("981631"),
   d = s("474936"),
   E = s("689938"),
-  _ = s("345905");
+  _ = s("336516");
 t.default = function(e) {
   let t, s, I;
   let {
-    subscriptionPlan: T,
-    isGift: L,
+    subscriptionPlan: L,
+    isGift: T,
     isEmbeddedIAP: A,
     renewalInvoice: p,
     paymentSourceType: M,
     hide: N,
-    purchaseType: S,
-    productLine: f,
+    purchaseType: f,
+    productLine: S,
     basePrice: R,
-    currentSubscription: h
+    currentSubscription: P
   } = e;
   if (N) return null;
-  let P = null == e.planGroup ? [] : e.planGroup;
+  let h = null == e.planGroup ? [] : e.planGroup;
   if (null != p) {
     let e = n.default.getIntervalForInvoice(p);
-    t = e.intervalType, s = e.intervalCount, I = (0, u.formatRate)((0, u.formatPrice)(p.total, p.currency), t, s)
-  } else null != T && (t = T.interval, s = T.intervalCount);
+    t = e.intervalType, s = e.intervalCount, I = (0, c.formatRate)((0, c.formatPrice)(p.total, p.currency), t, s)
+  } else null != L && (t = L.interval, s = L.intervalCount);
   let C = (0, l.getReviewConfirmButtonLabel)({
-      purchaseType: S || o.PurchaseTypes.SUBSCRIPTION,
-      plan: T,
-      premiumSubscription: null == h ? null : h,
-      isGift: !!L,
-      planGroup: P,
+      purchaseType: f || o.PurchaseTypes.SUBSCRIPTION,
+      plan: L,
+      premiumSubscription: null == P ? null : P,
+      isGift: !!T,
+      planGroup: h,
       isPrepaidPaymentSource: !1
     }),
     U = "",
@@ -65,21 +65,21 @@ t.default = function(e) {
       default:
         throw Error("Unexpected interval: ".concat(t))
     }
-  } else if (S === o.PurchaseTypes.ONE_TIME) m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+  } else if (f === o.PurchaseTypes.ONE_TIME) m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
     primaryText: C,
     paidURL: o.MarketingURLs.PAID_TERMS
-  }), U = f === o.SKUProductLines.COLLECTIBLES ? L ? E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : E.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
-  else if (null == T || L) switch (L && (m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
+  }), U = S === o.SKUProductLines.COLLECTIBLES ? T ? E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_GIFT_PAYMENT : E.default.Messages.COLLECTIBLES_PURCHASE_DISCLAIMER_PAYMENT : E.default.Messages.ONE_TIME_PURCHASE_FINE_PRINT;
+  else if (null == L || T) switch (T && (m = E.default.Messages.BILLING_LEGAL_MUMBO_JUMBO_TERMS_LABEL_V2.format({
       primaryText: C,
       paidURL: o.MarketingURLs.PAID_TERMS
     })), t) {
     case d.SubscriptionIntervalTypes.MONTH:
-      U = L ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY, U = L ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === s ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({
+      U = T ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY, U = T ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_MONTHLY : 1 === s ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MONTHLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_MULTI_MONTH.format({
         intervalCount: s
       });
       break;
     case d.SubscriptionIntervalTypes.YEAR:
-      U = L ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;
+      U = T ? E.default.Messages.PREMIUM_PAYMENT_GIFT_SUBTEXT_YEARLY : E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_YEARLY;
       break;
     case void 0:
       U = "";
@@ -90,21 +90,27 @@ t.default = function(e) {
     let e;
     let a = (0, l.getReviewConfirmButtonLabel)({
       purchaseType: o.PurchaseTypes.SUBSCRIPTION,
-      plan: T,
-      premiumSubscription: null == h ? null : h,
+      plan: L,
+      premiumSubscription: null == P ? null : P,
       isGift: !1,
-      planGroup: P,
+      planGroup: h,
       isPrepaidPaymentSource: !1
     });
-    if (null != R && null != t && null != s && (e = (0, u.formatRate)((0, u.formatPrice)(R.amount, R.currency), t, s)), null == e) {
+    if (null != R && null != t && null != s && (e = (0, c.formatRate)((0, c.formatPrice)(R.amount, R.currency), t, s)), null == e) {
       let e = Error("Missing base rate for legal fine print");
       (0, r.captureBillingException)(e, {
         tags: {
-          planId: T.id
+          planId: L.id
         }
       })
     }
-    U = null != h && (0, c.subscriptionCanDowngrade)(h, T.id, P) ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
+    U = (null == P ? void 0 : P.isPaused) ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_RESUME.format({
+      primaryText: a,
+      rate: e,
+      paidURL: o.MarketingURLs.PAID_TERMS,
+      contactLink: o.MarketingURLs.CONTACT,
+      helpdeskArticle: i.default.getArticleURL(o.HelpdeskArticles.BILLING)
+    }) : null != P && (0, u.subscriptionCanDowngrade)(P, L.id, h) ? E.default.Messages.SUBSCRIPTION_PAYMENT_LEGALESE_PLAN_CHANGE_V2.format({
       primaryText: a,
       rate: e,
       paidURL: o.MarketingURLs.PAID_TERMS,

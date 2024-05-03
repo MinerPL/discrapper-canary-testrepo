@@ -13,12 +13,12 @@ a.r(t), a.d(t, {
     return S
   },
   DISPLAYED_PARTICIPANT_AVATARS: function() {
-    return E
+    return g
   }
 });
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("924826"),
   r = a("481060"),
@@ -27,9 +27,9 @@ var l = a("735250"),
   c = a("602623"),
   f = a("369701"),
   m = a("689938"),
-  h = a("37007"),
-  g = a("571805");
-let E = 3,
+  h = a("240217"),
+  E = a("571805");
+let g = 3,
   _ = 16,
   I = n.forwardRef(function(e, t) {
     let {
@@ -39,8 +39,8 @@ let E = 3,
       icon: o,
       iconTooltipText: c,
       textNode: m,
-      header: g,
-      accessoryNode: E,
+      header: E,
+      accessoryNode: g,
       children: _
     } = e, I = (0, u.default)(f.COLLAPSED_SIZE_MEDIA_QUERY), x = (0, d.useListItem)(null != n ? n : "");
     return (0, l.jsxs)("div", {
@@ -67,14 +67,14 @@ let E = 3,
             className: h.title,
             variant: "heading-sm/semibold",
             lineClamp: 1,
-            children: g
+            children: E
           }), (0, l.jsx)("div", {
             className: h.subtitle,
             children: m
           })]
-        }), null != E && (0, l.jsx)("div", {
+        }), null != g && (0, l.jsx)("div", {
           className: h.accessoryContainer,
-          children: E
+          children: g
         })]
       }), _]
     })
@@ -87,7 +87,7 @@ let E = 3,
       text: i,
       activityIndicator: d,
       usersInSummary: m,
-      onChannelClick: g,
+      onChannelClick: E,
       channelIconOptions: x
     } = e, S = (0, u.default)(f.COLLAPSED_SIZE_MEDIA_QUERY), v = (0, o.getChannelIconComponent)(s, null, x);
     return (0, l.jsx)(I, {
@@ -102,10 +102,10 @@ let E = 3,
         guildId: n,
         users: m,
         size: S ? c.Sizes.SIZE_24 : c.Sizes.SIZE_16,
-        max: S ? 5 : E,
+        max: S ? 5 : g,
         extraDetail: d
       }),
-      onClick: g,
+      onClick: E,
       icon: null != v && (0, l.jsx)(v, {
         width: _,
         height: _
@@ -120,7 +120,7 @@ function S() {
   return (0, l.jsxs)("div", {
     className: i()(h.container, h.containerCard, h.fillerCard),
     children: [(0, l.jsx)("img", {
-      src: g,
+      src: E,
       className: h.__invalid_spacerChannelImg,
       alt: "",
       "aria-hidden": !0

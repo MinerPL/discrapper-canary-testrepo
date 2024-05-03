@@ -12,7 +12,7 @@ var a = s("735250"),
   r = s("393869"),
   d = s("25990"),
   u = s("689938"),
-  c = s("92190");
+  c = s("414899");
 
 function E(e) {
   var t;
@@ -23,26 +23,26 @@ function E(e) {
     setError: _,
     onNext: N,
     onClose: m
-  } = e, [S, T] = l.useState(!1), [f, A] = l.useState(""), [M, I] = l.useState(!1), h = (0, n.useStateFromStores)([d.default], () => d.default.getErrors()), x = l.useRef(null);
+  } = e, [S, T] = l.useState(!1), [A, f] = l.useState(""), [M, I] = l.useState(!1), h = (0, n.useStateFromStores)([d.default], () => d.default.getErrors()), x = l.useRef(null);
   l.useEffect(() => {
     if (s) {
       var e;
       null === (e = x.current) || void 0 === e || e.focus()
     }
   }, [s]);
-  let p = async e => {
+  let R = async e => {
     e.preventDefault(), _(null), T(!0);
     try {
       let {
         token: e
-      } = await (0, r.confirmEmailChange)(f);
+      } = await (0, r.confirmEmailChange)(A);
       C(e), N()
     } catch (e) {
       _(new i.default(e).getAnyErrorMessage())
     } finally {
       T(!1)
     }
-  }, R = async () => {
+  }, p = async () => {
     if (!M) {
       I(!0);
       try {
@@ -56,7 +56,7 @@ function E(e) {
     }
   };
   return (0, a.jsxs)("form", {
-    onSubmit: p,
+    onSubmit: R,
     children: [(0, a.jsxs)(o.ModalHeader, {
       separator: !1,
       className: c.header,
@@ -79,15 +79,15 @@ function E(e) {
         title: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_PROMPT,
         error: null != E ? E : null == h ? void 0 : null === (t = h.email_token) || void 0 === t ? void 0 : t[0],
         children: (0, a.jsx)(o.TextInput, {
-          value: f,
-          onChange: A,
+          value: A,
+          onChange: f,
           inputRef: x
         })
       }), (0, a.jsx)(o.Text, {
         className: c.help,
         variant: "text-sm/normal",
         children: u.default.Messages.USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_RESEND.format({
-          onResend: R
+          onResend: p
         })
       })]
     }), (0, a.jsx)(o.ModalFooter, {

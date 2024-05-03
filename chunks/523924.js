@@ -5,7 +5,7 @@ n("470079");
 var s = n("481060"),
   l = n("346656"),
   i = n("689938"),
-  r = n("815431"),
+  r = n("891054"),
   o = n("364632");
 t.default = e => {
   let {
@@ -13,7 +13,7 @@ t.default = e => {
     reapplyText: n,
     onReapply: u,
     confirmText: d,
-    onConfirm: c,
+    onWithdrawApplication: c,
     rejectionReason: f = null,
     guild: E = null
   } = e;
@@ -57,7 +57,7 @@ t.default = e => {
         children: n
       }), (0, a.jsx)(s.Button, {
         onClick: c,
-        color: s.Button.Colors.PRIMARY,
+        color: s.Button.Colors.RED,
         className: r.confirmationButton,
         children: d
       })]

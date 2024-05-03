@@ -4,18 +4,21 @@ n.r(t), n.d(t, {
     return d
   },
   ListNavigatorContainer: function() {
-    return f
+    return S
   },
   ListNavigatorItem: function() {
     return E
   },
   ListNavigatorProvider: function() {
-    return S
+    return h
   },
   getContainerPropsFromNavigator: function() {
-    return T
+    return f
   },
   useListContainerProps: function() {
+    return T
+  },
+  useListContainerScrollerRef: function() {
     return I
   },
   useListItem: function() {
@@ -27,13 +30,13 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("25441"),
-  a = n("536895"),
+  a = n("25441"),
+  s = n("536895"),
   o = n("260866");
 let l = {
     id: "NO_LIST",
     onKeyDown() {},
-    orientation: a.Orientations.VERTICAL,
+    orientation: s.Orientations.VERTICAL,
     ref: r.createRef(),
     tabIndex: -1
   },
@@ -46,9 +49,9 @@ let l = {
 function _(e) {
   let [t, n] = r.useState(-1), {
     id: i,
-    setFocus: a
-  } = r.useContext(u), l = r.useCallback(() => a(e), [e, a]);
-  return r.useLayoutEffect(() => (0, s.addFocusSubscriber)(i, (t, i) => {
+    setFocus: s
+  } = r.useContext(u), l = r.useCallback(() => s(e), [e, s]);
+  return r.useLayoutEffect(() => (0, a.addFocusSubscriber)(i, (t, i) => {
     n(i && t === e ? 0 : -1)
   }), [e, i]), {
     role: "listitem",
@@ -74,6 +77,10 @@ function E(e) {
 }
 
 function I() {
+  return r.useContext(d).ref
+}
+
+function T() {
   let {
     id: e,
     onKeyDown: t,
@@ -89,7 +96,7 @@ function I() {
   }
 }
 
-function T(e) {
+function f(e) {
   let {
     id: t,
     containerProps: {
@@ -97,7 +104,7 @@ function T(e) {
       ref: i,
       tabIndex: r
     },
-    orientation: s
+    orientation: a
   } = e;
   return {
     role: "list",
@@ -108,20 +115,20 @@ function T(e) {
   }
 }
 
-function f(e) {
+function S(e) {
   let {
     children: t
   } = e;
-  return t(I())
+  return t(T())
 }
 
-function S(e) {
+function h(e) {
   let {
     children: t,
     navigator: n
   } = e, {
-    id: s,
-    setFocus: a,
+    id: a,
+    setFocus: s,
     containerProps: {
       onKeyDown: o,
       ref: l,
@@ -129,15 +136,15 @@ function S(e) {
     },
     orientation: c
   } = n, E = r.useMemo(() => ({
-    id: s,
-    setFocus: a
-  }), [s, a]), I = r.useMemo(() => ({
+    id: a,
+    setFocus: s
+  }), [a, s]), I = r.useMemo(() => ({
     onKeyDown: o,
     orientation: c,
     ref: l,
-    id: s,
+    id: a,
     tabIndex: _
-  }), [o, c, l, s, _]);
+  }), [o, c, l, a, _]);
   return (0, i.jsxs)(d.Provider, {
     value: I,
     children: [(0, i.jsx)(u.Provider, {

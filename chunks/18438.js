@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   clearErrors: function() {
-    return p
+    return O
   },
   closeGuildIdentitySettings: function() {
     return d
@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
     return u
   },
   resetAllPending: function() {
-    return O
+    return p
   },
   resetAndCloseGuildIdentityForm: function() {
     return _
@@ -26,9 +26,6 @@ n.r(t), n.d(t, {
   },
   setCurrentGuild: function() {
     return l
-  },
-  setDisableSubmit: function() {
-    return R
   },
   setPendingAvatar: function() {
     return c
@@ -57,12 +54,12 @@ n.r(t), n.d(t, {
 }), n("411104");
 var i = n("544891"),
   r = n("570140"),
-  s = n("37234"),
-  a = n("981631");
+  a = n("37234"),
+  s = n("981631");
 async function o(e, t) {
   let {
     nick: n,
-    avatar: s,
+    avatar: a,
     avatarDecoration: o
   } = t;
   if (null == e) throw Error("Need guildId");
@@ -71,13 +68,13 @@ async function o(e, t) {
   });
   let l = {
     nick: n,
-    avatar: s,
+    avatar: a,
     avatar_decoration_id: null === o ? null : null == o ? void 0 : o.id,
     avatar_decoration_sku_id: null === o ? null : null == o ? void 0 : o.skuId
   };
   try {
     let t = await i.HTTP.patch({
-      url: a.Endpoints.SET_GUILD_MEMBER(e),
+      url: s.Endpoints.SET_GUILD_MEMBER(e),
       body: l,
       oldFormErrors: !0
     });
@@ -115,7 +112,7 @@ function u(e, t) {
 function d() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLOSE"
-  }), (0, s.popLayer)()
+  }), (0, a.popLayer)()
 }
 
 function _() {
@@ -192,21 +189,14 @@ function N() {
   })
 }
 
-function O() {
+function p() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_RESET_ALL_PENDING"
   })
 }
 
-function p() {
+function O() {
   r.default.dispatch({
     type: "GUILD_IDENTITY_SETTINGS_CLEAR_ERRORS"
-  })
-}
-
-function R(e) {
-  r.default.dispatch({
-    type: "GUILD_IDENTITY_SETTINGS_SET_DISABLE_SUBMIT",
-    disable: e
   })
 }

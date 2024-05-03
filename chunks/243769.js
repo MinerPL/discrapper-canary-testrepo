@@ -2,7 +2,7 @@
 n.r(t), n("47120"), n("653041");
 var s = n("735250"),
   a = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("692547"),
   o = n("481060"),
@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("484459"),
   E = n("598077"),
   _ = n("63063"),
-  T = n("153066"),
-  m = n("51144"),
+  m = n("153066"),
+  T = n("51144"),
   I = n("285952"),
   p = n("936195"),
   h = n("409216"),
@@ -21,7 +21,7 @@ var s = n("735250"),
   S = n("981631"),
   C = n("616922"),
   A = n("689938"),
-  g = n("33945");
+  g = n("981146");
 
 function M(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -41,13 +41,13 @@ class R extends a.PureComponent {
     return (0, s.jsx)(o.Popout, {
       renderPopout: this.renderUserPopout,
       position: "left",
-      preload: () => (0, f.default)(e.user.id, e.user.getAvatarURL(n, 80), {
+      preload: () => (0, f.maybeFetchUserProfileForPopout)(e.user.id, e.user.getAvatarURL(n, 80), {
         guildId: n
       }),
       children: a => {
         var l;
         return (0, s.jsx)(o.Tooltip, {
-          text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : m.default.getName(e.user),
+          text: e.unknownUser ? null : null !== (l = e.nick) && void 0 !== l ? l : T.default.getName(e.user),
           children: l => (0, s.jsx)(o.Clickable, {
             className: e.unknownUser ? g.partyMember : g.partyMemberKnown,
             ...l,
@@ -73,7 +73,7 @@ class R extends a.PureComponent {
     })
   }
 }
-class O extends a.PureComponent {
+class v extends a.PureComponent {
   isDeadInvite() {
     let {
       isPreview: e,
@@ -304,7 +304,7 @@ class O extends a.PureComponent {
     })) : d = (0, s.jsx)("img", {
       alt: "",
       src: t,
-      className: (0, T.getClass)(g, "artwork", this.getActionableMode())
+      className: (0, m.getClass)(g, "artwork", this.getActionableMode())
     });
     let f = null != a && null != d && null != a.assets && null != a.assets.large_text && "" !== a.assets.large_text && !u && (0, c.default)(a) ? a.assets.large_text : null,
       E = null != f ? (0, s.jsx)(o.Tooltip, {
@@ -327,7 +327,7 @@ class O extends a.PureComponent {
       children: [(0, s.jsx)("div", {
         className: g.coverImageWrapper,
         children: (0, s.jsx)("div", {
-          className: i()((0, T.getClass)(g, "coverImage", this.getActionableMode()), null != d ? g.blurred : null),
+          className: i()((0, m.getClass)(g, "coverImage", this.getActionableMode()), null != d ? g.blurred : null),
           style: {
             backgroundImage: null != t ? "url('".concat(t, "')") : void 0
           }
@@ -426,4 +426,4 @@ class O extends a.PureComponent {
     })
   }
 }
-t.default = O
+t.default = v

@@ -13,7 +13,7 @@ var a, s = n("735250"),
   d = n("186095"),
   c = n("981631"),
   f = n("689938"),
-  E = n("521063");
+  E = n("95408");
 
 function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -103,7 +103,7 @@ let _ = Object.freeze({
       })
     })
   };
-class m extends l.PureComponent {
+class S extends l.PureComponent {
   render() {
     let {
       type: e,
@@ -170,4 +170,4 @@ t.default = r.default.connectStores([u.default], () => ({
   theme: u.default.theme
 }), {
   forwardRef: !0
-})(m)
+})(S)

@@ -16,7 +16,7 @@ var a = s("735250"),
   E = s("22150"),
   C = s("361833"),
   _ = s("526761"),
-  N = s("92190"),
+  N = s("414899"),
   m = s("800010");
 
 function S(e) {
@@ -24,13 +24,13 @@ function S(e) {
   let {
     transitionState: s,
     onClose: S
-  } = e, T = (0, o.useStateFromStores)([d.default], () => d.default.getCurrentUser()), f = l.useRef(null !== (t = null == T ? void 0 : T.verified) && void 0 !== t && t);
+  } = e, T = (0, o.useStateFromStores)([d.default], () => d.default.getCurrentUser()), A = l.useRef(null !== (t = null == T ? void 0 : T.verified) && void 0 !== t && t);
   l.useEffect(() => () => (0, r.accountDetailsClose)(), []);
-  let A = null == T ? void 0 : T.verified,
-    M = A ? _.ChangeEmailSteps.CONFIRM_START : _.ChangeEmailSteps.EMAIL_AND_PASSWORD,
+  let f = null == T ? void 0 : T.verified,
+    M = f ? _.ChangeEmailSteps.CONFIRM_START : _.ChangeEmailSteps.EMAIL_AND_PASSWORD,
     [I, h] = l.useState(M),
-    [x, p] = l.useState(null),
-    [R, g] = l.useState(null),
+    [x, R] = l.useState(null),
+    [p, g] = l.useState(null),
     [v, O] = l.useState(null),
     [U, j] = l.useState(""),
     L = {
@@ -46,7 +46,7 @@ function S(e) {
     }), (0, a.jsxs)(i.Slides, {
       activeSlide: I,
       width: 440,
-      onSlideReady: e => p(e),
+      onSlideReady: e => R(e),
       children: [(0, a.jsx)(i.Slide, {
         id: _.ChangeEmailSteps.CONFIRM_START,
         impressionName: n.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE,
@@ -72,12 +72,12 @@ function S(e) {
         impressionName: n.ImpressionNames.USER_ACCOUNT_EMAIL_CHANGE_ENTER_EMAIL,
         impressionProperties: {
           ...L,
-          email_verified: f.current
+          email_verified: A.current
         },
         children: (0, a.jsx)(C.default, {
-          emailToken: R,
+          emailToken: p,
           isSlideReady: x === _.ChangeEmailSteps.EMAIL_AND_PASSWORD,
-          onBack: A ? () => h(_.ChangeEmailSteps.CONFIRM_CODE) : null,
+          onBack: f ? () => h(_.ChangeEmailSteps.CONFIRM_CODE) : null,
           onNext: e => {
             j(e), h(_.ChangeEmailSteps.COMPLETE)
           },

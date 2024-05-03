@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("442837"),
   o = n("481060"),
   u = n("239091"),
   d = n("749210"),
   c = n("134432"),
-  f = n("920440"),
+  f = n("769654"),
   h = n("601964"),
   m = n("430824"),
   p = n("940627"),
@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("768581"),
   I = n("683818"),
   A = n("16853"),
-  v = n("981631"),
-  N = n("689938"),
-  x = n("88566"),
+  N = n("981631"),
+  v = n("689938"),
+  x = n("106017"),
   M = n("883760");
 let R = e => {
   let {
@@ -43,7 +43,7 @@ let R = e => {
       variant: "text-sm/semibold",
       color: "header-primary",
       className: x.addServerText,
-      children: N.default.Messages.HUB_ADD_SERVER_CTA
+      children: v.default.Messages.HUB_ADD_SERVER_CTA
     })]
   })
 };
@@ -60,7 +60,7 @@ function L(e) {
     }),
     children: (0, a.jsxs)(_.default, {
       children: [u ? (0, a.jsx)(o.Tooltip, {
-        text: N.default.Messages.HUB_ENTRY_UPDATE,
+        text: v.default.Messages.HUB_ENTRY_UPDATE,
         hideOnClick: !0,
         children: e => {
           let {
@@ -80,7 +80,7 @@ function L(e) {
                 })
               })
             },
-            "aria-label": N.default.Messages.HUB_ENTRY_UPDATE,
+            "aria-label": v.default.Messages.HUB_ENTRY_UPDATE,
             children: (0, a.jsx)(g.default, {
               className: x.overflowIcon
             })
@@ -97,7 +97,7 @@ function L(e) {
             ...n
           } = e;
           return (0, a.jsx)(o.Tooltip, {
-            text: N.default.Messages.MORE,
+            text: v.default.Messages.MORE,
             hideOnClick: !0,
             children: e => {
               let {
@@ -110,7 +110,7 @@ function L(e) {
                 onClick: e => {
                   null == l || l(), t(e)
                 },
-                "aria-label": N.default.Messages.MORE,
+                "aria-label": v.default.Messages.MORE,
                 children: (0, a.jsx)(C.default, {
                   className: x.overflowIcon
                 })
@@ -130,7 +130,7 @@ t.default = e => {
     C(!0);
     try {
       g ? (0, f.transitionToGuild)(s.guildId) : await d.default.joinGuild(s.guildId, {
-        source: v.JoinGuildSources.DIRECTORY_ENTRY
+        source: N.JoinGuildSources.DIRECTORY_ENTRY
       })
     } finally {
       C(!1)
@@ -143,8 +143,8 @@ t.default = e => {
     id: s.guildId,
     icon: s.icon,
     size: 40
-  })) && void 0 !== t ? t : void 0, M = N.default.Messages.JOIN;
-  return g && (M = N.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
+  })) && void 0 !== t ? t : void 0, M = v.default.Messages.JOIN;
+  return g && (M = v.default.Messages.HUB_DIRECTORY_CARD_JOINED_GUILD_BUTTON), (0, a.jsxs)("div", {
     className: x.card,
     onContextMenu: e => {
       (0, u.openContextMenuLazy)(e, async () => {
@@ -212,7 +212,7 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
-            children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+            children: v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
               membersOnline: s.approximatePresenceCount
             })
           })]
@@ -223,7 +223,7 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-xs/normal",
             color: "header-secondary",
-            children: N.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+            children: v.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
               count: s.approximateMemberCount
             })
           })]

@@ -1,51 +1,51 @@
 "use strict";
 n.r(t);
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var r = n("803997"),
-  i = n.n(r),
+var r = n("120356"),
+  a = n.n(r),
   s = n("481060"),
-  l = n("223021"),
-  o = n("55935"),
+  o = n("223021"),
+  l = n("55935"),
   u = n("689938"),
-  c = n("50182");
+  d = n("904335");
 t.default = function(e) {
   let {
     children: t,
     className: n,
     compact: r = !1,
-    timestamp: d,
-    isVisibleOnlyOnHover: m = !1,
-    cozyAlt: f = !1,
-    isInline: g = !0,
-    id: p,
-    isEdited: E = !1
-  } = e, S = (0, o.accessibilityLabelCalendarFormat)(d), A = r ? (0, o.dateFormat)(d, "LT") : (0, o.calendarFormat)(d), h = r ? (0, l.default)(A) : null, I = E ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
+    timestamp: _,
+    isVisibleOnlyOnHover: c = !1,
+    cozyAlt: E = !1,
+    isInline: I = !0,
+    id: T,
+    isEdited: f = !1
+  } = e, S = (0, l.accessibilityLabelCalendarFormat)(_), h = r ? (0, l.dateFormat)(_, "LT") : (0, l.calendarFormat)(_), A = r ? (0, o.default)(h) : null, m = f ? u.default.Messages.MESSAGE_EDITED_TIMESTAMP_A11Y_LABEL.format({
     timeFormatted: S
   }) : S;
-  return (0, a.jsx)("span", {
-    className: i()(n, h, {
-      [c.timestamp]: !0,
-      [c.timestampVisibleOnHover]: m,
-      [c.timestampInline]: g,
-      [c.alt]: f
+  return (0, i.jsx)("span", {
+    className: a()(n, A, {
+      [d.timestamp]: !0,
+      [d.timestampVisibleOnHover]: c,
+      [d.timestampInline]: I,
+      [d.alt]: E
     }),
-    children: (0, a.jsx)(s.Tooltip, {
-      text: (0, o.dateFormat)(d, "LLLL"),
-      "aria-label": I,
-      tooltipClassName: c.timestampTooltip,
+    children: (0, i.jsx)(s.Tooltip, {
+      text: (0, l.dateFormat)(_, "LLLL"),
+      "aria-label": m,
+      tooltipClassName: d.timestampTooltip,
       delay: 750,
-      children: e => (0, a.jsx)("time", {
+      children: e => (0, i.jsx)("time", {
         ...e,
-        id: p,
-        dateTime: d.toISOString(),
-        children: null != t ? t : (0, a.jsxs)(a.Fragment, {
-          children: [(0, a.jsx)("i", {
-            className: c.separator,
+        id: T,
+        dateTime: _.toISOString(),
+        children: null != t ? t : (0, i.jsxs)(i.Fragment, {
+          children: [(0, i.jsx)("i", {
+            className: d.separator,
             "aria-hidden": !0,
             children: r ? "[" : " — "
-          }), A, r && (0, a.jsxs)("i", {
-            className: c.separator,
+          }), h, r && (0, i.jsxs)("i", {
+            className: d.separator,
             "aria-hidden": !0,
             children: ["]", " "]
           })]

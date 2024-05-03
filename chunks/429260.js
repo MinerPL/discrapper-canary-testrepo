@@ -16,7 +16,7 @@ function o(e) {
   return (0, u.canReportMessage)(e) ? (0, a.jsx)(i.MenuItem, {
     id: "report",
     label: r.default.Messages.REPORT_MESSAGE_MENU_OPTION,
-    action: () => (0, l.showReportModalForMessage)(e),
+    action: () => (0, l.showReportModalForMessage)(e, "web_message_context_menu"),
     icon: s.default,
     color: "danger"
   }) : null

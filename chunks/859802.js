@@ -21,8 +21,8 @@ n.r(t), n.d(t, {
 });
 var i = n("442837"),
   r = n("430198"),
-  s = n("818083"),
-  a = n("57132"),
+  a = n("818083"),
+  s = n("57132"),
   o = n("781157"),
   l = n("984933"),
   u = n("430824"),
@@ -39,16 +39,17 @@ function _(e, t, n) {
 
 function c(e) {
   arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-  let t = (0, i.useStateFromStores)([l.default, r.default], () => null != e && _(e.id, l.default, r.default));
-  return !__OVERLAY__ && !!t && null != e && e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
+  let t = null == e ? void 0 : e.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE),
+    n = (0, i.useStateFromStores)([l.default, r.default], () => null != e && t && _(e.id, l.default, r.default));
+  return !__OVERLAY__ && !!n && null != e && !0 === t
 }
 
 function E(e) {
-  if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, a.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
+  if (__OVERLAY__ || e === d.ME || e === d.FAVORITES || (0, s.isInMainTabsExperiment)() && !(0, o.isOnNewPanels)()) return !1;
   let t = u.default.getGuild(e);
   return !!(null != t && _(e, l.default, r.default)) && t.hasFeature(d.GuildFeatures.GUILD_HOME_DEPRECATION_OVERRIDE)
 }
-let I = (0, s.createExperiment)({
+let I = (0, a.createExperiment)({
     kind: "user",
     id: "2022-01_home_feed_toggle",
     label: "Show Guild Feed Sorting Selector",
@@ -63,7 +64,7 @@ let I = (0, s.createExperiment)({
       }
     }]
   }),
-  T = (0, s.createExperiment)({
+  T = (0, a.createExperiment)({
     kind: "user",
     id: "2022-08_home_badge",
     label: "Show badge on home channel",
@@ -78,7 +79,7 @@ let I = (0, s.createExperiment)({
       }
     }]
   });
-(0, s.createExperiment)({
+(0, a.createExperiment)({
   kind: "user",
   id: "2022-08_home_drawer_autoclose",
   label: "Auto close home drawer",
@@ -128,7 +129,7 @@ let I = (0, s.createExperiment)({
       delay: 500
     }
   }]
-}), (0, s.createExperiment)({
+}), (0, a.createExperiment)({
   kind: "user",
   id: "2022-09_welcome_header",
   label: "Show welcome header for home",
@@ -143,7 +144,7 @@ let I = (0, s.createExperiment)({
     }
   }]
 });
-let f = (0, s.createExperiment)({
+let f = (0, a.createExperiment)({
     kind: "user",
     id: "2022-12_home_feedback_ux",
     label: "Show post feedback for home",
@@ -158,7 +159,7 @@ let f = (0, s.createExperiment)({
       }
     }]
   }),
-  S = (0, s.createExperiment)({
+  S = (0, a.createExperiment)({
     kind: "guild",
     id: "2023-03_home_deprecation",
     label: "Home Deprecation",

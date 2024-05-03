@@ -12,7 +12,7 @@ var a = s("735250"),
   r = s("25990"),
   d = s("155433"),
   u = s("689938"),
-  c = s("92190");
+  c = s("414899");
 
 function E(e) {
   var t, s;
@@ -22,13 +22,13 @@ function E(e) {
     onClose: _,
     onBack: N,
     onNext: m
-  } = e, [S, T] = l.useState(""), [f, A] = l.useState(""), [M, I] = l.useState(!1), h = (0, n.useStateFromStores)([r.default], () => r.default.getErrors()), x = l.useRef(null);
-  async function p(e) {
+  } = e, [S, T] = l.useState(""), [A, f] = l.useState(""), [M, I] = l.useState(!1), h = (0, n.useStateFromStores)([r.default], () => r.default.getErrors()), x = l.useRef(null);
+  async function R(e) {
     e.preventDefault(), I(!0);
     let t = await (0, i.saveAccountChanges)({
       email: S,
       emailToken: E,
-      password: f
+      password: A
     });
     if (I(!1), null == t ? void 0 : t.ok) m(S);
     else {
@@ -42,7 +42,7 @@ function E(e) {
       null === (e = x.current) || void 0 === e || e.focus()
     }
   }, [C]), (0, a.jsxs)("form", {
-    onSubmit: p,
+    onSubmit: R,
     children: [(0, a.jsxs)(o.ModalHeader, {
       separator: !1,
       className: c.header,
@@ -76,8 +76,8 @@ function E(e) {
         error: null == h ? void 0 : null === (s = h.password) || void 0 === s ? void 0 : s[0],
         children: (0, a.jsx)(o.TextInput, {
           type: "password",
-          value: f,
-          onChange: A
+          value: A,
+          onChange: f
         })
       })]
     }), (0, a.jsxs)(o.ModalFooter, {

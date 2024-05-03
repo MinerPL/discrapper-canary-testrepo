@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("653041"), n("47120"), n("411104"), n("724458");
-var s, a, o, l = n("392711"),
+var a, s, o, l = n("392711"),
   u = n.n(l),
   d = n("153832"),
   _ = n("442837"),
@@ -19,7 +19,7 @@ function h(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(o = s || (s = {})).REQUIRED = "REQUIRED", o.OPTIONAL = "OPTIONAL", o.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
+}(o = a || (a = {})).REQUIRED = "REQUIRED", o.OPTIONAL = "OPTIONAL", o.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT";
 let A = "migrated",
   m = {
     [S.OverlayWidgets.GUILDS]: {
@@ -113,44 +113,21 @@ let A = "migrated",
         },
         pinned: !1
       }
-    },
-    [S.OverlayWidgets.LOBBY_VOICE]: {
-      minSize: {
-        width: 272,
-        height: 100
-      },
-      resizeX: !1,
-      resizeY: !1,
-      dragAnywhere: !0,
-      layoutPolicy: "REQUIRED",
-      defaultSettings: {
-        anchor: {
-          left: null,
-          top: .011,
-          bottom: null,
-          right: .011
-        },
-        size: {
-          width: "auto",
-          height: "auto"
-        },
-        pinned: !0
-      }
     }
   };
 
 function N(e, t) {
   let n = r[e];
   if (null == n) return !1;
-  let s = i[n.layoutId];
-  return null != s && t(n, s)
+  let a = i[n.layoutId];
+  return null != a && t(n, a)
 }
 
-function O(e) {
+function p(e) {
   var t;
   return null === (t = m[e]) || void 0 === t ? void 0 : t.defaultSettings
 }
-class p extends(a = _.default.PersistedStore) {
+class O extends(s = _.default.PersistedStore) {
   initialize(e) {
     null != e && null != e.layouts && null != e.widgets ? (i = function(e) {
       let t = {};
@@ -167,11 +144,11 @@ class p extends(a = _.default.PersistedStore) {
       n = [];
     u().forEach(m, (e, t) => {
       "REQUIRED" === e.layoutPolicy && n.push(t)
-    }), u().forEach(i, (e, s) => {
-      let a = this.getWidgetsForLayout(s),
+    }), u().forEach(i, (e, a) => {
+      let s = this.getWidgetsForLayout(a),
         o = !1;
       for (let e of n) {
-        let n = a.find(t => t.type === e);
+        let n = s.find(t => t.type === e);
         if (null != n) continue;
         o = t = !0;
         let i = (0, d.v4)();
@@ -179,25 +156,25 @@ class p extends(a = _.default.PersistedStore) {
           ...this.getWidgetDefaultSettings(e),
           type: e,
           id: i,
-          layoutId: s,
-          zIndex: a.length
-        }), a.push(n), r = {
+          layoutId: a,
+          zIndex: s.length
+        }), s.push(n), r = {
           ...r,
           [i]: n
         }
       }
-      o && (e = e.set("widgets", a.map(e => {
+      o && (e = e.set("widgets", s.map(e => {
         let {
           id: t
         } = e;
         return t
       })), i = {
         ...i,
-        [s]: e
+        [a]: e
       })
     }), u().forEach(r, (e, n) => {
-      let s = i[e.layoutId];
-      (null == s || 0 > s.widgets.indexOf(n)) && (r = {
+      let a = i[e.layoutId];
+      (null == a || 0 > a.widgets.indexOf(n)) && (r = {
         ...r
       }, delete r[n], t = !0)
     }), t && (this.persist(), this.emitChange())
@@ -231,7 +208,7 @@ class p extends(a = _.default.PersistedStore) {
     return m[e]
   }
   getWidgetDefaultSettings(e) {
-    return O(e)
+    return p(e)
   }
   getWidgetType(e) {
     let t = r[e];
@@ -256,7 +233,7 @@ class p extends(a = _.default.PersistedStore) {
     }), t
   }
 }
-h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "migrations", [() => {
+h(O, "displayName", "LayoutStore"), h(O, "persistKey", "LayoutStore"), h(O, "migrations", [() => {
   let {
     pinnedWidgets: e,
     positions: t,
@@ -269,8 +246,8 @@ h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "mig
     let i = [],
       r = e.map(e => {
         let r = null != t ? t[e] : null,
-          s = null != n ? n[e] : null,
-          a = {
+          a = null != n ? n[e] : null,
+          s = {
             id: e,
             layoutId: A,
             type: e,
@@ -280,14 +257,14 @@ h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "mig
               bottom: null,
               right: null
             },
-            size: s || {
+            size: a || {
               width: -1,
               height: -1
             },
             pinned: !0,
             zIndex: 0
           };
-        return i.push([a.id, a]), a.id
+        return i.push([s.id, s]), s.id
       });
     return {
       layouts: [
@@ -310,30 +287,30 @@ h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "mig
   } = e, i = new Set(Object.keys(S.OverlayWidgets)), r = Array.from(n).filter(e => {
     let [t] = e;
     return !i.has(t)
-  }), s = Array.from(t).filter(e => {
+  }), a = Array.from(t).filter(e => {
     let [t] = e;
     return t !== A
   });
-  return s.forEach(e => {
-    let [t, n] = e, i = null, s = null;
+  return a.forEach(e => {
+    let [t, n] = e, i = null, a = null;
     if (n.widgets.find(e => {
         let n = r.find(n => {
           let [i, r] = n;
           return i === e && r.layoutId === t
         });
-        return null != n && (null == s && n[1].type === S.OverlayWidgets.VOICE && (s = n[0]), null == i && n[1].type === S.OverlayWidgets.TEXT && (i = n[1].pinned), null != i && null != s || void 0)
-      }), i || null == s) return;
-    let a = (0, d.v4)();
-    n.widgets = [s, a], r.push([a, {
-      ...O(S.OverlayWidgets.GUILDS_TEXT),
+        return null != n && (null == a && n[1].type === S.OverlayWidgets.VOICE && (a = n[0]), null == i && n[1].type === S.OverlayWidgets.TEXT && (i = n[1].pinned), null != i && null != a || void 0)
+      }), i || null == a) return;
+    let s = (0, d.v4)();
+    n.widgets = [a, s], r.push([s, {
+      ...p(S.OverlayWidgets.GUILDS_TEXT),
       type: S.OverlayWidgets.GUILDS_TEXT,
-      id: a,
+      id: s,
       layoutId: t,
       zIndex: 2
     }])
   }), {
     widgets: r,
-    layouts: s
+    layouts: a
   }
 }, e => {
   let {
@@ -350,15 +327,15 @@ h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "mig
       return e[n] = i, e
     }, {})
   }
-}]), t.default = new p(E.default, {
+}]), t.default = new O(E.default, {
   LAYOUT_CREATE: function(e) {
     let {
       layoutId: t,
       widgets: n,
-      defaultResolution: s
+      defaultResolution: a
     } = e;
     if (null != i[t]) return !1;
-    let a = [];
+    let s = [];
     n.forEach((e, t) => {
       let n = function(e) {
           let t = i[A];
@@ -373,15 +350,15 @@ h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "mig
           ...e,
           zIndex: t
         };
-      "" === o.id && (o.id = (0, d.v4)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, f.getAnchorPercentageFromLayoutSize)(n.anchor, s)), -1 !== n.size.width && (o.size = (0, f.getSizePercentageFromSize)(n.size, s))), r = {
+      "" === o.id && (o.id = (0, d.v4)()), null != n && (o.pinned = n.pinned, -1 !== n.anchor.left && (o.anchor = (0, f.getAnchorPercentageFromLayoutSize)(n.anchor, a)), -1 !== n.size.width && (o.size = (0, f.getSizePercentageFromSize)(n.size, a))), r = {
         ...r,
         [o.id]: new T.default(o)
-      }, a.push(o.id)
+      }, s.push(o.id)
     }), i = {
       ...i,
       [t]: new I.default({
         id: t,
-        widgets: a
+        widgets: s
       })
     }
   },
@@ -483,10 +460,10 @@ h(p, "displayName", "LayoutStore"), h(p, "persistKey", "LayoutStore"), h(p, "mig
         ...r,
         [t.id]: t
       };
-      let s = [...n.widgets, t.id];
+      let a = [...n.widgets, t.id];
       i = {
         ...i,
-        [n.id]: n.set("widgets", s)
+        [n.id]: n.set("widgets", a)
       }
     })
   }

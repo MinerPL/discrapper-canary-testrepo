@@ -4,120 +4,137 @@ n.r(t), n.d(t, {
     return r
   },
   default: function() {
-    return M
+    return C
   }
 });
-var a, r, i = n("735250"),
+var i, r, a = n("735250"),
   s = n("470079"),
-  l = n("803997"),
-  o = n.n(l),
+  o = n("120356"),
+  l = n.n(o),
   u = n("873546"),
-  c = n("442837"),
-  d = n("481060"),
-  m = n("607070"),
-  f = n("100527"),
-  g = n("906732"),
-  p = n("372900"),
-  E = n("463396"),
-  S = n("477734"),
+  d = n("442837"),
+  _ = n("481060"),
+  c = n("607070"),
+  E = n("100527"),
+  I = n("906732"),
+  T = n("979264"),
+  f = n("372900"),
+  S = n("463396"),
+  h = n("477734"),
   A = n("484459"),
-  h = n("467679"),
-  I = n("768581"),
-  T = n("50182");
+  m = n("467679"),
+  N = n("768581"),
+  p = n("981631"),
+  O = n("904335");
 
-function y(e) {
+function R(e) {
   let {
     compact: t
   } = e;
-  return (0, i.jsx)(h.default, {
-    className: t ? T.botTagCompact : T.botTagCozy,
-    type: h.default.Types.REMIX,
+  return (0, a.jsx)(m.default, {
+    className: t ? O.botTagCompact : O.botTagCozy,
+    type: m.default.Types.REMIX,
     useRemSizes: !0
   })
 }
 
-function M(e) {
+function C(e) {
   let t, {
       author: n,
-      message: a,
+      message: i,
       userOverride: r,
-      compact: l = !1,
-      withMentionPrefix: h = !1,
-      showPopout: M = !1,
-      className: v,
-      onClick: x,
-      onContextMenu: _,
-      onPopoutRequestClose: b,
-      renderPopout: N,
-      renderRemixTag: L = !1,
-      decorations: R
+      compact: o = !1,
+      withMentionPrefix: m = !1,
+      showPopout: C = !1,
+      className: g,
+      onClick: L,
+      onContextMenu: v,
+      onPopoutRequestClose: D,
+      renderPopout: M,
+      renderRemixTag: y = !1,
+      decorations: P
     } = e,
-    C = s.useContext(p.default),
+    U = s.useContext(f.default),
     {
-      analyticsLocations: k
-    } = (0, g.default)(f.default.USERNAME),
+      analyticsLocations: b
+    } = (0, I.default)(E.default.USERNAME),
+    G = m ? "@" : "",
     {
-      nick: D,
-      colorString: j,
-      colorRoleName: w
+      nick: w,
+      colorString: B,
+      colorRoleName: k
     } = n,
-    F = null != a.messageReference && null != a.webhookId,
-    P = (0, c.useStateFromStores)([m.default], () => m.default.roleStyle),
-    B = (0, S.useCanSeeRemixBadge)(),
-    G = {
-      className: T.username,
-      style: "username" === P && null != j ? {
-        color: j
+    V = null != i.messageReference && null != i.webhookId,
+    x = (0, d.useStateFromStores)([c.default], () => c.default.roleStyle),
+    F = (0, h.useCanSeeRemixBadge)(),
+    H = {
+      className: O.username,
+      style: "username" === x && null != B ? {
+        color: B
       } : void 0,
-      onClick: x,
-      onContextMenu: _,
-      children: (h ? "@" : "") + D
+      onClick: L,
+      onContextMenu: v,
+      children: o ? (0, a.jsxs)(a.Fragment, {
+        children: [G + w, (0, a.jsx)(T.default, {
+          clan: n.clan,
+          userId: i.author.id,
+          className: O.clanTagChiplet,
+          source: p.AnalyticsSections.CHANNEL
+        })]
+      }) : (0, a.jsx)(a.Fragment, {
+        children: G + w
+      })
     };
-  t = null != N && null != M ? (0, i.jsx)(d.Popout, {
-    preload: F ? void 0 : function() {
-      let e = null != r ? r : a.author;
-      return (0, A.default)(e.id, null != n.guildMemberAvatar && null != C ? (0, I.getGuildMemberAvatarURLSimple)({
-        guildId: C,
+  t = null != M && null != C ? (0, a.jsx)(_.Popout, {
+    preload: V ? void 0 : function() {
+      let e = null != r ? r : i.author;
+      return (0, A.maybeFetchUserProfileForPopout)(e.id, null != n.guildMemberAvatar && null != U ? (0, N.getGuildMemberAvatarURLSimple)({
+        guildId: U,
         userId: e.id,
         avatar: n.guildMemberAvatar,
         size: 80
-      }) : e.getAvatarURL(C, 80), {
-        guildId: C,
-        channelId: a.channel_id
+      }) : e.getAvatarURL(U, 80), {
+        guildId: U,
+        channelId: i.channel_id
       })
     },
-    renderPopout: N,
-    shouldShow: M,
+    renderPopout: M,
+    shouldShow: C,
     position: u.isMobile ? "window_center" : "right",
-    onRequestClose: b,
+    onRequestClose: D,
     children: e => {
       let {
         onClick: t,
         ...n
       } = e;
-      return (0, i.jsx)(d.Clickable, {
+      return (0, a.jsx)(_.Clickable, {
         tag: "span",
         ...n,
-        ...G,
-        className: o()(G.className, T.clickable, v)
+        ...H,
+        className: l()(H.className, O.clickable, g)
       })
     }
-  }) : (0, i.jsx)(d.Clickable, {
-    ...G,
-    className: o()(G.className, v)
+  }) : (0, a.jsx)(_.Clickable, {
+    ...H,
+    className: l()(H.className, g)
   });
-  let U = null != R ? R[0] : null,
-    O = null != R ? R[1] : null;
-  return (0, i.jsxs)(g.AnalyticsLocationProvider, {
-    value: k,
-    children: [null != U && l ? (0, i.jsxs)(i.Fragment, {
-      children: [" ", U, " "]
-    }) : null, "dot" === P ? (0, i.jsx)(d.RoleDot, {
-      color: j,
-      name: w,
-      className: T.roleDot
-    }) : null, t, null != O ? (0, i.jsx)(i.Fragment, {
-      children: O
-    }) : null, null == U || l ? null : U, null != a && (0, E.default)(a) && B && L ? (0, i.jsx)(y, {}) : null]
+  let Y = null != P ? P[0] : null,
+    j = null != P ? P[1] : null;
+  return (0, a.jsxs)(I.AnalyticsLocationProvider, {
+    value: b,
+    children: [null != Y && o ? (0, a.jsxs)(a.Fragment, {
+      children: [" ", Y, " "]
+    }) : null, "dot" === x ? (0, a.jsx)(_.RoleDot, {
+      color: B,
+      name: k,
+      className: O.roleDot
+    }) : null, t, !o && (0, a.jsx)(T.default, {
+      clan: n.clan,
+      userId: i.author.id,
+      className: O.clanTagChiplet,
+      source: p.AnalyticsSections.CHANNEL
+    }), null != j ? (0, a.jsx)(a.Fragment, {
+      children: j
+    }) : null, null == Y || o ? null : Y, null != i && (0, S.default)(i) && F && y ? (0, a.jsx)(R, {}) : null]
   })
-}(a = r || (r = {}))[a.SYSTEM_TAG = 0] = "SYSTEM_TAG", a[a.BADGES = 1] = "BADGES"
+}(i = r || (r = {}))[i.SYSTEM_TAG = 0] = "SYSTEM_TAG", i[i.BADGES = 1] = "BADGES"

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("218887"),
@@ -23,15 +23,15 @@ var i = n("735250"),
   A = n("117530"),
   m = n("459273"),
   N = n("403182"),
-  O = n("541716"),
-  p = n("752305"),
+  p = n("541716"),
+  O = n("752305"),
   R = n("30465"),
   C = n("140963"),
   g = n("4484"),
   L = n("925994"),
-  D = n("981631"),
-  v = n("689938"),
-  M = n("23383");
+  v = n("981631"),
+  D = n("689938"),
+  M = n("414367");
 
 function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -64,7 +64,7 @@ class b extends r.Component {
       let e;
       e = this.props.useSlate ? this.props.textValue : (0, L.toTextValue)(this.props.richValue, {
         mode: "plain"
-      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, p.toRichValue)(e))
+      }), null === (t = (n = this.props).onChange) || void 0 === t || t.call(n, null, e, (0, O.toRichValue)(e))
     } else this.props.textValue !== e.textValue && this.saveCurrentTextThrottled()
   }
   componentWillUnmount() {
@@ -163,10 +163,10 @@ class b extends r.Component {
       placeholder: t,
       isPreviewing: n
     } = this.props;
-    return e && !n ? v.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
+    return e && !n ? D.default.Messages.NO_SEND_MESSAGES_PERMISSION_PLACEHOLDER : t
   }
   render() {
-    var e, t, n, r, s, o;
+    var e, t, n, r, a, o;
     let {
       textValue: l,
       richValue: u,
@@ -182,30 +182,30 @@ class b extends r.Component {
       spellcheckEnabled: N,
       useNewSlashCommands: R,
       canOnlyUseTextCommands: L,
-      className: v,
+      className: D,
       id: y,
       required: P,
       maxCharacterCount: b,
       allowNewLines: G,
       "aria-describedby": w,
-      "aria-labelledby": k,
-      accessibilityLabel: B
+      "aria-labelledby": B,
+      accessibilityLabel: k
     } = this.props, {
       submitting: V,
-      popup: F
-    } = this.state, x = {
+      popup: x
+    } = this.state, F = {
       channel: f,
-      className: a()(v, M.textArea, {
+      className: s()(D, M.textArea, {
         [M.textAreaSlate]: A,
         [M.textAreaDisabled]: d || V
       }),
       id: y,
       placeholder: this.getPlaceholder(),
       required: P,
-      accessibilityLabel: B,
+      accessibilityLabel: k,
       disabled: d || !1,
       submitting: V,
-      isEdit: S === O.ChatInputTypes.EDIT,
+      isEdit: S === p.ChatInputTypes.EDIT,
       onFocus: this.handleFocus,
       onBlur: this.handleBlur,
       onPaste: this.handlePaste,
@@ -219,41 +219,41 @@ class b extends r.Component {
       onResize: I,
       onKeyDown: E,
       onSubmit: T,
-      textAreaPaddingClassName: a()(U[h], {
-        [M.textAreaWithoutAttachmentButton]: S !== O.ChatInputTypes.NORMAL && S !== O.ChatInputTypes.OVERLAY && S !== O.ChatInputTypes.THREAD_CREATION && S !== O.ChatInputTypes.SIDEBAR,
-        [M.textAreaForPostCreation]: S === O.ChatInputTypes.CREATE_FORUM_POST,
-        [M.textAreaCustomGift]: S === O.ChatInputTypes.CUSTOM_GIFT
+      textAreaPaddingClassName: s()(U[h], {
+        [M.textAreaWithoutAttachmentButton]: S !== p.ChatInputTypes.NORMAL && S !== p.ChatInputTypes.OVERLAY && S !== p.ChatInputTypes.THREAD_CREATION && S !== p.ChatInputTypes.SIDEBAR,
+        [M.textAreaForPostCreation]: S === p.ChatInputTypes.CREATE_FORUM_POST,
+        [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT
       }),
       spellcheckEnabled: N,
       useNewSlashCommands: R,
       disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
-      "aria-controls": null !== (s = F.id) && void 0 !== s ? s : void 0,
+      "aria-controls": null !== (a = x.id) && void 0 !== a ? a : void 0,
       "aria-haspopup": "listbox",
-      "aria-expanded": null !== F.id || void 0,
-      "aria-activedescendant": null !== (o = F.activeDescendant) && void 0 !== o ? o : void 0,
+      "aria-expanded": null !== x.id || void 0,
+      "aria-activedescendant": null !== (o = x.activeDescendant) && void 0 !== o ? o : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
-      "aria-labelledby": k,
+      "aria-labelledby": B,
       "aria-autocomplete": "list"
     }, H = A ? (0, i.jsx)(g.default, {
       ref: this.ref,
-      ...x,
+      ...F,
       type: S,
-      value: d ? (0, p.toRichValue)("") : u,
+      value: d ? (0, O.toRichValue)("") : u,
       canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: L
     }) : (0, i.jsx)(C.default, {
       ref: this.ref,
-      ...x,
+      ...F,
       value: d ? "" : l
     });
     return (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(m.ComponentAction, {
-        event: D.ComponentActions.INSERT_TEXT,
+        event: v.ComponentActions.INSERT_TEXT,
         handler: this.handleInsertText
       }), (0, i.jsx)(m.ComponentAction, {
-        event: D.ComponentActions.CLEAR_TEXT,
+        event: v.ComponentActions.CLEAR_TEXT,
         handler: this.handleClearText
       }), H]
     })
@@ -301,7 +301,7 @@ class b extends r.Component {
       E.default.saveDraft(e, this.props.textValue, this.props.type.drafts.type)
     }), y(this, "handleClearText", () => {
       var e, t;
-      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, p.toRichValue)(""))
+      null === (e = (t = this.props).onChange) || void 0 === e || e.call(t, null, "", (0, O.toRichValue)(""))
     }), y(this, "handleInsertText", e => {
       let {
         plainText: t,
@@ -333,8 +333,8 @@ class b extends r.Component {
         canPasteFiles: n,
         uploadPromptCharacterCount: i,
         promptToUpload: r,
-        maxCharacterCount: s,
-        type: a
+        maxCharacterCount: a,
+        type: s
       } = this.props;
       if (null == r || !t.isPrivate() && !n || t.isPrivate() && t.isManaged()) return !1;
       let {
@@ -343,21 +343,21 @@ class b extends r.Component {
         let n = [],
           i = [],
           r = null,
-          s = null;
+          a = null;
         for (let t of e.items)
           if ("file" === t.kind) {
             let e = t.getAsFile();
             if (null == e) continue;
             null != e.path && e.path.length > 0 ? n.push(e) : i.push(e)
-          } else "string" === t.kind && ("text/plain" === t.type && null == r ? r = t : "text/html" === t.type && null == s && (s = t));
+          } else "string" === t.kind && ("text/plain" === t.type && null == r ? r = t : "text/html" === t.type && null == a && (a = t));
         if (n.length > 0) return {
           files: n
         };
         if (i.length > 0) {
-          if (1 === i.length && "image/png" === i[0].type && null != s) {
-            var a;
+          if (1 === i.length && "image/png" === i[0].type && null != a) {
+            var s;
             let t = i[0],
-              n = null !== (a = function(e) {
+              n = null !== (s = function(e) {
                 let t = new DOMParser().parseFromString(e, "text/html").querySelector("img");
                 if (null != t) {
                   let e;
@@ -369,7 +369,7 @@ class b extends r.Component {
                   } catch (e) {}
                   if (null != e && e.length > 0) return "".concat(e, ".png")
                 }
-              }(e.getData(s.type))) && void 0 !== a ? a : t.name;
+              }(e.getData(a.type))) && void 0 !== s ? s : t.name;
             return {
               files: [(0, N.makeFile)(t, n, t.type)]
             }
@@ -393,7 +393,7 @@ class b extends r.Component {
         return {
           files: []
         }
-      }(e.clipboardData, a.uploadLongMessages ? null != i ? i : s : null);
+      }(e.clipboardData, s.uploadLongMessages ? null != i ? i : a : null);
       return P("onPaste", [...e.clipboardData.items].map(e => {
         if ("file" !== e.kind) return {
           kind: e.kind,
@@ -409,16 +409,16 @@ class b extends r.Component {
           }
         }
       })), 0 !== o.length && (e.preventDefault(), e.stopPropagation(), this.saveCurrentText(), ((e, n) => {
-        var i, s;
+        var i, a;
         let o = S.default.getActiveCommand(t.id);
-        if (null == o) return r(e, t, a.drafts.type, {
+        if (null == o) return r(e, t, s.drafts.type, {
           requireConfirm: !0,
           showLargeMessageDialog: void 0
         });
-        let l = null !== (i = a.drafts.commandType) && void 0 !== i ? i : a.drafts.type,
+        let l = null !== (i = s.drafts.commandType) && void 0 !== i ? i : s.drafts.type,
           u = null,
           d = S.default.getActiveOption(t.id);
-        null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (s = o.options) || void 0 === s ? void 0 : s.find(e => {
+        null != (u = (null == d ? void 0 : d.type) === T.ApplicationCommandOptionType.ATTACHMENT ? d : null === (a = o.options) || void 0 === a ? void 0 : a.find(e => {
           if (e.type === T.ApplicationCommandOptionType.ATTACHMENT) return null == A.default.getUpload(t.id, e.name, l)
         })) && I.default.setFile({
           channelId: t.id,

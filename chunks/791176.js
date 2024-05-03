@@ -2,7 +2,7 @@
 n.r(t), n("653041");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("399606"),
   o = n("465270"),
@@ -17,7 +17,7 @@ var a = n("735250"),
   C = n("50493"),
   g = n("981631"),
   S = n("689938"),
-  _ = n("754542");
+  _ = n("11220");
 
 function T(e) {
   var t, n;
@@ -72,7 +72,7 @@ t.default = l.memo(function(e) {
   let {
     member: t,
     onNavigate: n
-  } = e, s = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.guildId), [t.guildId]), u = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.MOD_PERMISSIONS), c = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.ALL_PERMISSIONS), f = Object.keys(u).length, I = Object.keys(c).length, A = l.useMemo(() => null != s ? m.default.getGuildPermissionSpecMap(s) : null, [s]), v = l.useMemo(() => null != s ? m.default.generateGuildPermissionSpec(s) : null, [s]), N = l.useMemo(() => {
+  } = e, s = (0, r.useStateFromStores)([h.default], () => h.default.getGuild(t.guildId), [t.guildId]), u = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.MOD_PERMISSIONS), c = (0, E.useUserPermissionsAndRoles)(t.userId, t.guildId, E.ALL_PERMISSIONS), f = Object.keys(u).length, I = Object.keys(c).length, A = l.useMemo(() => null != s ? m.default.getGuildPermissionSpecMap(s) : null, [s]), N = l.useMemo(() => null != s ? m.default.generateGuildPermissionSpec(s) : null, [s]), v = l.useMemo(() => {
     if (null == s || null == A) return null;
     if (0 === f) return (0, a.jsx)("div", {
       className: i()(_.permissionChiplet, _.noModPerms),
@@ -83,7 +83,7 @@ t.default = l.memo(function(e) {
       })
     });
     let e = [];
-    return null == v || v.forEach(t => {
+    return null == N || N.forEach(t => {
       t.permissions.forEach(t => {
         let n = t.flag,
           l = E.ALL_PERMISSIONS.find(e => g.Permissions[e] === n);
@@ -97,7 +97,7 @@ t.default = l.memo(function(e) {
         }, l))
       })
     }), e
-  }, [s, f, u, v, A]);
+  }, [s, f, u, N, A]);
   return null == s ? null : (0, a.jsx)(d.FormItem, {
     title: (0, a.jsxs)("div", {
       className: _.headerContainer,
@@ -125,7 +125,7 @@ t.default = l.memo(function(e) {
       children: (0, a.jsx)(p.UserModInfoItem, {
         description: (0, a.jsx)("div", {
           className: _.permissionsContainer,
-          children: N
+          children: v
         })
       })
     })

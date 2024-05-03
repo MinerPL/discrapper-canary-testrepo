@@ -1,54 +1,60 @@
 "use strict";
 n.r(t), n.d(t, {
   Banner: function() {
-    return l
+    return a
   }
 });
 var i = n("735250"),
-  s = n("470079"),
-  a = n("777207"),
-  r = n("764254");
+  r = n("470079"),
+  l = n("777207"),
+  s = n("81228");
 
-function l(e) {
+function a(e) {
   let {
     title: t,
     subtitle: n,
-    iconSrc: l,
-    backgroundSrc: o
-  } = e, c = s.useMemo(() => {
-    let e = null != o ? o : l;
+    iconSrc: a,
+    backgroundSrc: o,
+    animatedBackgroundSrc: d,
+    prefersReducedMotion: c = !0
+  } = e, u = r.useMemo(() => {
+    let e = null != o ? o : a;
     if (null != e) return {
       "--custom-background-url": "url(".concat(e.toString(), ")")
     }
-  }, [o, l]);
+  }, [o, a]), f = r.useMemo(() => {
+    if (null == o) return;
+    let e = {
+      "--custom-background-static": "url(".concat(o.toString())
+    };
+    return !c && null != d && (e["--custom-background-animated"] = "url(".concat(d.toString(), ")")), e
+  }, [d, o, c]);
   return (0, i.jsxs)("div", {
-    className: r.wrapper,
+    className: s.wrapper,
     children: [(0, i.jsx)("div", {
-      className: r.background,
-      style: c
+      className: s.background,
+      style: u
     }), (0, i.jsxs)("div", {
-      className: r.content,
-      children: [null != l && (0, i.jsx)("div", {
-        className: r.icon,
+      className: s.content,
+      children: [null != a && (0, i.jsx)("div", {
+        className: s.icon,
         children: (0, i.jsx)("img", {
-          src: l.toString(),
+          src: a.toString(),
           alt: ""
         })
       }), (0, i.jsxs)("div", {
-        children: [(0, i.jsx)(a.Text, {
+        children: [(0, i.jsx)(l.Text, {
           variant: "heading-xl/bold",
           tag: "div",
           children: t
-        }), null != n && (0, i.jsxs)(a.Text, {
+        }), null != n && (0, i.jsxs)(l.Text, {
           variant: "text-sm/normal",
           children: ["“", n, "”"]
         })]
       })]
     }), null != o ? (0, i.jsx)("div", {
-      className: r.image,
-      style: {
-        backgroundImage: "url(".concat(o.toString(), ")")
-      }
+      className: s.image,
+      style: f
     }) : null]
   })
 }

@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return x
+    return I
   }
 });
 var i = s("735250");
@@ -10,8 +10,8 @@ var a = s("392711"),
   n = s.n(a),
   l = s("442837"),
   r = s("481060"),
-  d = s("740504"),
-  o = s("933557"),
+  o = s("740504"),
+  d = s("933557"),
   u = s("471445"),
   c = s("131704"),
   h = s("592125"),
@@ -19,19 +19,19 @@ var a = s("392711"),
   N = s("699516"),
   g = s("594174"),
   f = s("353872"),
-  E = s("981631"),
-  m = s("689938"),
-  _ = s("19560");
-let T = e => {
+  m = s("981631"),
+  E = s("689938"),
+  T = s("636907");
+let _ = e => {
   let {
     channel: {
       type: t
     }
   } = e;
-  return (0, c.isGuildSelectableChannelType)(t) || t === E.ChannelTypes.GUILD_CATEGORY
+  return (0, c.isGuildSelectableChannelType)(t) || t === m.ChannelTypes.GUILD_CATEGORY
 };
 
-function x(e) {
+function I(e) {
   var t;
   let {
     guildId: s,
@@ -39,37 +39,37 @@ function x(e) {
   } = e;
   let {
     channels: c,
-    categories: x
+    categories: I
   } = (t = s, (0, l.useStateFromStoresObject)([S.default], () => {
     let e = S.default.getCategories(t);
     return {
-      channels: (0, d.default)(e._categories, e, T),
+      channels: (0, o.default)(e._categories, e, _),
       categories: e
     }
-  })), I = n()(c).filter(e => {
+  })), x = n()(c).filter(e => {
     let {
       channel: t
     } = e;
-    return t.type !== E.ChannelTypes.GUILD_CATEGORY || null != x[t.id] && x[t.id].length > 0
+    return t.type !== m.ChannelTypes.GUILD_CATEGORY || null != I[t.id] && I[t.id].length > 0
   }).map(e => {
     let {
       channel: t
     } = e;
     return {
       value: t.id,
-      label: (0, o.computeChannelName)(t, g.default, N.default)
+      label: (0, d.computeChannelName)(t, g.default, N.default)
     }
   }).value();
   return (0, i.jsxs)(r.FormItem, {
     children: [(0, i.jsx)(r.FormText, {
       type: r.FormText.Types.DESCRIPTION,
-      children: m.default.Messages.ADD_CHANNEL_TO_OVERRIDE
+      children: E.default.Messages.ADD_CHANNEL_TO_OVERRIDE
     }), (0, i.jsx)("div", {
-      className: _.input,
+      className: T.input,
       children: (0, i.jsx)(r.SearchableSelect, {
-        value: E.EMPTY_STRING_SNOWFLAKE_ID,
+        value: m.EMPTY_STRING_SNOWFLAKE_ID,
         onChange: a,
-        options: I,
+        options: x,
         renderOptionLabel: e => {
           let t = h.default.getChannel(e.value);
           if (null == t) return e.label;
@@ -81,7 +81,7 @@ function x(e) {
             subtitle: a
           })
         },
-        placeholder: m.default.Messages.SELECT_CHANNEL_OR_CATEGORY
+        placeholder: E.default.Messages.SELECT_CHANNEL_OR_CATEGORY
       })
     })]
   })

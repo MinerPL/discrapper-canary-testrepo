@@ -5,7 +5,7 @@ function r() {
   return null != i ? i : i = (async () => {
     let {
       default: e
-    } = await n.e("20353").then(n.bind(n, "547478")), t = new e({
+    } = await n.e("20353").then(n.t.bind(n, "62994", 23)), t = new e({
       params: {
         logProcessStats: !1,
         useSharedArrayBuffer: !1,

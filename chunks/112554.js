@@ -14,7 +14,7 @@ let s = (e, t, n) => {
     var s, u;
     let r = (0, a.useStateFromStores)([i.default], () => i.default.getMessage(e, t));
     if (null == r) return [];
-    let o = void 0 !== n ? e => e.id === n : e => (0, l.isMediaObscured)({
+    let o = void 0 !== n ? e => e.url === n : e => (0, l.isMediaObscured)({
       type: l.ObscuredMediaTypes.Attachment,
       media: e
     }, (0, l.shouldRedactExplicitContent)(r));

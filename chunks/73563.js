@@ -9,11 +9,11 @@ n.r(t), n.d(t, {
 });
 var a, l, s = n("735250");
 n("470079");
-var i = n("803997"),
+var i = n("120356"),
   r = n.n(i),
   o = n("285952"),
   u = n("507675"),
-  d = n("592642");
+  d = n("757661");
 
 function c(e) {
   let {
@@ -38,7 +38,6 @@ function c(e) {
       children: [(0, s.jsx)(o.default, {
         grow: 0,
         shrink: 1,
-        basis: "50%",
         align: o.default.Align.CENTER,
         children: null == a ? void 0 : a()
       }), (0, s.jsx)(o.default, {
@@ -50,7 +49,6 @@ function c(e) {
         grow: 0,
         shrink: 1,
         justify: o.default.Justify.END,
-        basis: "50%",
         align: o.default.Align.CENTER,
         children: null == i ? void 0 : i()
       })]

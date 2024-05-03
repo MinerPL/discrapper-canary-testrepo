@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
-  CreateGDMPollsExperiment: function() {
-    return s
-  },
   CreateGuildPollsExperiment: function() {
     return r
   },
-  CreatePollsCoachmarkExperiment: function() {
+  CreatePollsGuildCoachmarkExperiment: function() {
+    return s
+  },
+  CreatePollsUserExperiment: function() {
     return a
   }
 });
@@ -26,7 +26,7 @@ let r = (0, i.createExperiment)({
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "user",
     id: "2024-01_create_gdm_polls",
     label: "Create GDM Polls",
@@ -35,22 +35,22 @@ let r = (0, i.createExperiment)({
     },
     treatments: [{
       id: 1,
-      label: "Enables creation of polls within a GDM",
+      label: "Enables creation of polls within a GDM or guild",
       config: {
         enabled: !0
       }
     }]
   }),
-  a = (0, i.createExperiment)({
+  s = (0, i.createExperiment)({
     kind: "guild",
     id: "2024-03_polls_coachmark",
-    label: "Show coachmark for poll creation entry point",
+    label: "Show coachmark for poll creation entry point in guild",
     defaultConfig: {
       enabled: !1
     },
     treatments: [{
       id: 1,
-      label: "Can show coachmark for poll creation entry point",
+      label: "Can show coachmark for poll creation entry point in guild",
       config: {
         enabled: !0
       }

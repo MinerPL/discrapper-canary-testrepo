@@ -4,13 +4,19 @@ n.r(t), n.d(t, {
     return C
   },
   ACTIVITY_SHELF_WEB_MODAL_KEY: function() {
-    return J
+    return $
   },
-  APPLICATIONS_WITH_ALLOWED_POPUPS: function() {
+  AM_HARMONY_PRD_APPLICATION_ID: function() {
+    return X
+  },
+  AM_HARMONY_STG_APPLICATION_ID: function() {
     return Z
   },
+  APPLICATIONS_WITH_ALLOWED_POPUPS: function() {
+    return ee
+  },
   APPLICATIONS_WITH_NO_REFFERER: function() {
-    return $
+    return et
   },
   ActivityFeedbackReasons: function() {
     return i
@@ -22,7 +28,7 @@ n.r(t), n.d(t, {
     return c
   },
   ActivityPlatform: function() {
-    return s
+    return a
   },
   ActivityScreenOrientation: function() {
     return _
@@ -31,10 +37,10 @@ n.r(t), n.d(t, {
     return u
   },
   BLAZIN_8S_APPLICATION_ID: function() {
-    return x
+    return F
   },
   BOBBLE_LEAGUE_APPLICATION_ID: function() {
-    return B
+    return k
   },
   BYS_LETTER_APP_ID: function() {
     return Y
@@ -49,19 +55,19 @@ n.r(t), n.d(t, {
     return W
   },
   CHESS_IN_THE_PARK_APP_ID: function() {
-    return F
+    return x
   },
   COLOR_TOGETHER_APPLICATION_ID: function() {
     return U
   },
   DEFAULT_EMBEDDED_ACTIVITY_CONFIG: function() {
-    return et
+    return ei
   },
   EMBEDDED_ACTIVITY_SURVEY_URL: function() {
-    return X
+    return Q
   },
   END_GAME_APPLICATION_ID: function() {
-    return D
+    return v
   },
   EmbeddedActivityUpdateCodes: function() {
     return o
@@ -70,7 +76,7 @@ n.r(t), n.d(t, {
     return P
   },
   ImageSizes: function() {
-    return Q
+    return q
   },
   JAM_SPACE_APPLICATION_ID: function() {
     return y
@@ -79,7 +85,7 @@ n.r(t), n.d(t, {
     return z
   },
   KWIM_APPLICATION_ID: function() {
-    return k
+    return B
   },
   LAND_IO_APPLICATION_ID: function() {
     return G
@@ -91,7 +97,7 @@ n.r(t), n.d(t, {
     return H
   },
   PRIVATE_APPS_HELP_ARTICLE: function() {
-    return ei
+    return ea
   },
   PUTT_PARTY_APPLICATION_ID: function() {
     return K
@@ -100,10 +106,10 @@ n.r(t), n.d(t, {
     return b
   },
   STAFF_RELEASE_PHASES: function() {
-    return q
+    return J
   },
   SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES: function() {
-    return en
+    return er
   },
   WATCH_YOUTUBE_PROD_APP_ID: function() {
     return w
@@ -118,13 +124,13 @@ n.r(t), n.d(t, {
     return g
   }
 }), n("47120");
-var i, r, s, a, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, O, p = n("911969"),
+var i, r, a, s, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O = n("911969"),
   R = n("981631");
 let C = 160,
   g = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
   L = "438122941302046720",
-  D = "773336526917861400",
-  v = "880218832743055411",
+  v = "773336526917861400",
+  D = "880218832743055411",
   M = "1050941315912835122",
   y = "1070087967294631976",
   P = "1007373802981822582",
@@ -132,46 +138,48 @@ let C = 160,
   b = "852509694341283871",
   G = "903769130790969345",
   w = "880218394199220334",
-  k = "1078728822972764312",
-  B = "947957217959759964",
+  B = "1078728822972764312",
+  k = "947957217959759964",
   V = "832013003968348200",
-  F = "832012774040141894",
-  x = "832025144389533716",
+  x = "832012774040141894",
+  F = "832025144389533716",
   H = "755827207812677713",
   Y = "879863686565621790",
   j = "902271654783242291",
   W = "1037680572660727838",
   K = "945737671223947305",
   z = "1011683823555199066",
-  X = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
-  Q = {
+  Z = "1234546995360694434",
+  X = "1214629548377768066",
+  Q = "https://discord.sjc1.qualtrics.com/jfe/form/SV_6SvWAOxlcSRWiEu",
+  q = {
     SMALL: 64,
     LARGE: 160
   },
-  q = ["in_development", "activities_team", "employee_release"];
-(E = i || (i = {})).FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = s || (s = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = a || (a = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
-let J = "activity-shelf",
-  Z = new Set(["755600276941176913", v, M, w, "1010174316991762534", z]),
-  $ = new Set([v, M, w]);
-(m = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", m.GDM_ACTIVITIES = "GDM_ACTIVITIES", m.PUTT_PARTY = "PUTT_PARTY", m.JAMSPACE_OLD = "JAMSPACE", m.JAMSPACE = "JAMSPACE2", m.POKER = "POKER", m.FREE = "FREE", (N = _ || (_ = {}))[N.PORTRAIT = 0] = "PORTRAIT", N[N.LANDSCAPE = 1] = "LANDSCAPE", (O = c || (c = {}))[O.FOCUSED = 0] = "FOCUSED", O[O.PIP = 1] = "PIP", O[O.GRID = 2] = "GRID";
-let ee = {
-    label_type: p.EmbeddedActivityLabelTypes.NONE,
+  J = ["in_development", "activities_team", "employee_release"];
+(E = i || (i = {})).ADS = "ADS", E.FAILED_LOAD = "FAILED_LOAD", E.LAGGING = "LAGGING", E.CONFUSING = "CONFUSING", E.NOT_FUN = "NOT_FUN", E.OTHER = "OTHER", (I = r || (r = {}))[I.PLAY = 0] = "PLAY", I[I.SPECTATE = 1] = "SPECTATE", (T = a || (a = {})).DESKTOP = "desktop", T.MOBILE = "mobile", (f = s || (s = {})).BETRAYAL_MARKETING_TOOLTIP = "BETRAYAL_MARKETING_TOOLTIP", f.FISHINGTON_MARKETING_TOOLTIP = "FISHINGTON_MARKETING_TOOLTIP", f.POKER_MARKETING_TOOLTIP = "POKER_MARKETING_TOOLTIP", f.YOUTUBE_MARKETING_TOOLTIP = "YOUTUBE_MARKETING_TOOLTIP", (S = o || (o = {}))[S.NO_UPDATE = 0] = "NO_UPDATE", S[S.ACTIVITY_STATE_UPDATE = 1] = "ACTIVITY_STATE_UPDATE", S[S.ACTIVITY_STARTED = 2] = "ACTIVITY_STARTED", S[S.ACTIVITY_ENDED = 3] = "ACTIVITY_ENDED", S[S.USER_JOINED = 4] = "USER_JOINED", S[S.USER_LEFT = 5] = "USER_LEFT", S[S.ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST = 6] = "ACTIVITY_TERMINATED_NO_ELIGIBLE_HOST", (h = l || (l = {}))[h.UNLOCKED = 1] = "UNLOCKED", h[h.PORTRAIT = 2] = "PORTRAIT", h[h.LANDSCAPE = 3] = "LANDSCAPE", (A = u || (u = {}))[A.DIRECTORY = 0] = "DIRECTORY", A[A.SELECT_CHANNEL = 1] = "SELECT_CHANNEL", A[A.DETAIL_PAGE = 2] = "DETAIL_PAGE";
+let $ = "activity-shelf",
+  ee = new Set(["755600276941176913", D, M, w]),
+  et = new Set([D, M, w]);
+(m = d || (d = {})).DISCORD_TURNS_8 = "DISCORD_TURNS_8", m.GDM_ACTIVITIES = "GDM_ACTIVITIES", m.PUTT_PARTY = "PUTT_PARTY", m.JAMSPACE_OLD = "JAMSPACE", m.JAMSPACE = "JAMSPACE2", m.POKER = "POKER", m.FREE = "FREE", (N = _ || (_ = {}))[N.PORTRAIT = 0] = "PORTRAIT", N[N.LANDSCAPE = 1] = "LANDSCAPE", (p = c || (c = {}))[p.FOCUSED = 0] = "FOCUSED", p[p.PIP = 1] = "PIP", p[p.GRID = 2] = "GRID";
+let en = {
+    label_type: O.EmbeddedActivityLabelTypes.NONE,
     release_phase: "",
     label_until: null
   },
-  et = {
+  ei = {
     application_id: "",
     requires_age_gate: !1,
     default_orientation_lock_state: 1,
     tablet_default_orientation_lock_state: 1,
-    supported_platforms: [p.EmbeddedActivitySupportedPlatforms.WEB],
+    supported_platforms: [O.EmbeddedActivitySupportedPlatforms.WEB],
     client_platform_config: {
-      [p.EmbeddedActivitySupportedPlatforms.WEB]: ee,
-      [p.EmbeddedActivitySupportedPlatforms.IOS]: ee,
-      [p.EmbeddedActivitySupportedPlatforms.ANDROID]: ee
+      [O.EmbeddedActivitySupportedPlatforms.WEB]: en,
+      [O.EmbeddedActivitySupportedPlatforms.IOS]: en,
+      [O.EmbeddedActivitySupportedPlatforms.ANDROID]: en
     },
     has_csp_exception: !1,
     displays_advertisements: !1
   },
-  en = [R.ChannelTypes.GUILD_TEXT, R.ChannelTypes.DM, R.ChannelTypes.GROUP_DM],
-  ei = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"
+  er = [R.ChannelTypes.GUILD_TEXT, R.ChannelTypes.DM, R.ChannelTypes.GROUP_DM],
+  ea = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety"

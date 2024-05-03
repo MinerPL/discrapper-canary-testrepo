@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("481060"),
   u = n("570140"),
@@ -19,9 +19,9 @@ var i = n("735250"),
   A = n("981631"),
   m = n("149203"),
   N = n("689938"),
-  O = n("39234");
+  p = n("714064");
 
-function p(e, t, n) {
+function O(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -54,18 +54,18 @@ class C extends r.PureComponent {
       case A.GIFPickerResultTypes.FAVORITES:
         return (0, i.jsx)(l.FormTitle, {
           tag: "h5",
-          className: O.searchHeader,
+          className: p.searchHeader,
           children: N.default.Messages.CATEGORY_FAVORITE
         });
       case A.GIFPickerResultTypes.TRENDING_GIFS:
         return (0, i.jsx)(l.FormTitle, {
           tag: "h5",
-          className: O.searchHeader,
+          className: p.searchHeader,
           children: N.default.Messages.GIF_PICKER_RESULT_TYPE_TRENDING_GIFS
         });
       default:
         return (0, i.jsx)(I.default, {
-          className: O.searchBar,
+          className: p.searchBar,
           size: I.default.Sizes.MEDIUM,
           query: e,
           onChange: this.handleChangeQuery,
@@ -83,7 +83,7 @@ class C extends r.PureComponent {
     } = this.state, t = null;
     return null != e && (t = (0, i.jsx)(l.Clickable, {
       onClick: this.handleClearQuery,
-      className: O.backButton,
+      className: p.backButton,
       "aria-label": N.default.Messages.BACK,
       children: (0, i.jsx)(T.default, {
         title: N.default.Messages.BACK
@@ -99,8 +99,8 @@ class C extends r.PureComponent {
       resultQuery: t,
       query: n,
       favorites: r,
-      searchOffset: s,
-      searchLimit: a,
+      searchOffset: a,
+      searchLimit: s,
       searchTotalResults: o,
       suggestions: l,
       hideFavorites: u
@@ -116,8 +116,8 @@ class C extends r.PureComponent {
       resultType: d,
       resultQuery: t,
       query: n,
-      searchOffset: s,
-      searchLimit: a,
+      searchOffset: a,
+      searchLimit: s,
       searchTotalResults: o,
       suggestions: l,
       onSelectSuggestion: this.handleSelectSuggestion
@@ -132,43 +132,43 @@ class C extends r.PureComponent {
       id: m.GIF_PICKER_TAB_PANEL_ID,
       role: "tabpanel",
       "aria-labelledby": m.GIF_PICKER_TAB_ID,
-      className: a()(O.container, e),
+      className: s()(p.container, e),
       onClick: R,
       ref: t,
       children: [(0, i.jsx)("div", {
-        className: O.header,
+        className: p.header,
         children: this.renderHeader()
       }), (0, i.jsx)("div", {
-        className: O.content,
+        className: p.content,
         children: this.renderContent()
       })]
     })
   }
   constructor(...e) {
-    super(...e), p(this, "state", {
+    super(...e), O(this, "state", {
       resultType: null
-    }), p(this, "searchBarRef", r.createRef()), p(this, "backToFrontPage", e => {
+    }), O(this, "searchBarRef", r.createRef()), O(this, "backToFrontPage", e => {
       let {
         resultType: t
       } = this.state;
       e.keyCode === A.KeyboardKeys.ESCAPE && null != t && (e.stopPropagation(), e.preventDefault(), this.handleClearQuery())
-    }), p(this, "handleChangeQuery", e => {
+    }), O(this, "handleChangeQuery", e => {
       (0, _.setSearchQuery)(e), this.search(e, A.GIFPickerResultTypes.SEARCH)
-    }), p(this, "handleSelectSuggestion", e => {
+    }), O(this, "handleSelectSuggestion", e => {
       (0, _.setSearchQuery)(""), d.resetSearch(), this.search(e, A.GIFPickerResultTypes.SEARCH_SUGGESTION, !0)
-    }), p(this, "handleClearQuery", () => {
+    }), O(this, "handleClearQuery", () => {
       let {
         current: e
       } = this.searchBarRef;
       (0, _.setSearchQuery)(""), d.resetSearch(), this.setState({
         resultType: null
       }), null != e && e.focus()
-    }), p(this, "handleSelectGIF", e => {
+    }), O(this, "handleSelectGIF", e => {
       let {
         onSelectGIF: t
       } = this.props;
       null != t && t(e)
-    }), p(this, "handleSelectItem", (e, t) => {
+    }), O(this, "handleSelectItem", (e, t) => {
       let {
         current: n
       } = this.searchBarRef;
@@ -190,8 +190,8 @@ t.default = r.forwardRef((e, t) => {
   let {
     query: n,
     resultQuery: r,
-    resultItems: s,
-    suggestions: a
+    resultItems: a,
+    suggestions: s
   } = (0, o.useStateFromStoresObject)([c.default], () => ({
     query: c.default.getQuery(),
     resultQuery: c.default.getResultQuery(),
@@ -203,8 +203,8 @@ t.default = r.forwardRef((e, t) => {
     forwardedRef: t,
     query: null != l && "" !== l ? l : n,
     resultQuery: r,
-    resultItems: s,
-    suggestions: a,
+    resultItems: a,
+    suggestions: s,
     favorites: u,
     searchOffset: 0,
     searchTotalResults: c.default.getResultItems().length,

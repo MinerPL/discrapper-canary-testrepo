@@ -13,7 +13,7 @@ class d extends i.default {
     s.default.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal), s.default.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
   }
   _terminate() {
-    (0, a.closeModal)(u), s.default.subscribe("INVITE_MODAL_OPEN", this.handleOpenModal), s.default.subscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
+    (0, a.closeModal)(u), s.default.unsubscribe("INVITE_MODAL_OPEN", this.handleOpenModal), s.default.unsubscribe("INVITE_MODAL_CLOSE", this.handleCloseModal)
   }
   handleOpenModal() {
     o.default.isOpen() && !(0, a.hasModalOpen)(u) && (0, a.openModal)(e => (0, l.jsx)(r.default, {

@@ -19,7 +19,8 @@ function c(e) {
     guild: t,
     selected: c
   } = e;
-  return (0, l.jsx)(r.default, {
+  return (0, l.jsx)(r.BasicChannelRow, {
+    id: "subscriptions-".concat(t.id),
     renderIcon: e => (0, l.jsx)(s.default, {
       className: e
     }),

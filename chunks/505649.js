@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("411104");
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("366939"),
   d = n("16084"),
@@ -46,14 +46,14 @@ async function N(e) {
   }
 }
 
-function O(e) {
+function p(e) {
   let {
     payment: t
   } = e;
   if (!f || t.id !== S || ![I.PaymentStatusTypes.COMPLETED, I.PaymentStatusTypes.CANCELED].includes(t.status)) return !1;
   f = !1, h = null, S = null, l.default.wait(u.clearError), l.default.wait(d.clearPurchaseError)
 }
-class p extends(i = o.default.Store) {
+class O extends(i = o.default.Store) {
   get isAwaitingAuthentication() {
     return f
   }
@@ -64,12 +64,12 @@ class p extends(i = o.default.Store) {
     return S
   }
 }
-a = "PaymentAuthenticationStore", (s = "displayName") in(r = p) ? Object.defineProperty(r, s, {
-  value: a,
+s = "PaymentAuthenticationStore", (a = "displayName") in(r = O) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a, t.default = new p(l.default, {
+}) : r[a] = s, t.default = new O(l.default, {
   BILLING_SUBSCRIPTION_UPDATE_START: A,
   PAYMENT_AUTHENTICATION_CLEAR_ERROR: A,
   PREMIUM_PAYMENT_ERROR_CLEAR: A,
@@ -93,6 +93,8 @@ a = "PaymentAuthenticationStore", (s = "displayName") in(r = p) ? Object.defineP
     } = e;
     h = t, f = !1
   },
-  PAYMENT_UPDATE: O,
-  BILLING_PAYMENT_FETCH_SUCCESS: O
+  PAYMENT_UPDATE: p,
+  BILLING_PAYMENT_FETCH_SUCCESS: p,
+  LIGHTNING_CHECKOUT_OPEN: A,
+  LIGHTNING_CHECKOUT_CLOSE: A
 })

@@ -2,13 +2,13 @@
 n.r(t);
 var i = n("392711"),
   r = n.n(i),
-  s = n("692547"),
-  a = n("591759"),
+  a = n("692547"),
+  s = n("591759"),
   o = n("981631");
 let l = [{
     type: o.PlatformTypes.TWITCH,
     name: "Twitch",
-    color: s.default.unsafe_rawColors.TWITCH.css,
+    color: a.default.unsafe_rawColors.TWITCH.css,
     icon: {
       lightPNG: n("635643"),
       darkPNG: n("635643"),
@@ -28,7 +28,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.YOUTUBE,
     name: "YouTube",
-    color: s.default.unsafe_rawColors.YOUTUBE.css,
+    color: a.default.unsafe_rawColors.YOUTUBE.css,
     icon: {
       lightPNG: n("459862"),
       darkPNG: n("459862"),
@@ -48,7 +48,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.BATTLENET,
     name: "Battle.net",
-    color: s.default.unsafe_rawColors.BATTLENET.css,
+    color: a.default.unsafe_rawColors.BATTLENET.css,
     icon: {
       lightPNG: n("414680"),
       darkPNG: n("414680"),
@@ -61,7 +61,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.BUNGIE,
     name: "Bungie.net",
-    color: s.default.unsafe_rawColors.BUNGIE.css,
+    color: a.default.unsafe_rawColors.BUNGIE.css,
     icon: {
       lightPNG: n("953522"),
       darkPNG: n("706264"),
@@ -74,7 +74,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.SKYPE,
     name: "Skype",
-    color: s.default.unsafe_rawColors.SKYPE.css,
+    color: a.default.unsafe_rawColors.SKYPE.css,
     icon: {
       lightPNG: n("575439"),
       darkPNG: n("575439"),
@@ -93,7 +93,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.LEAGUE_OF_LEGENDS,
     name: "League of Legends",
-    color: s.default.unsafe_rawColors.LOL.css,
+    color: a.default.unsafe_rawColors.LOL.css,
     icon: {
       lightPNG: n("275556"),
       darkPNG: n("275556"),
@@ -106,7 +106,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.STEAM,
     name: "Steam",
-    color: s.default.unsafe_rawColors.STEAM.css,
+    color: a.default.unsafe_rawColors.STEAM.css,
     icon: {
       lightPNG: n("929234"),
       darkPNG: n("170131"),
@@ -126,7 +126,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.REDDIT,
     name: "Reddit",
-    color: s.default.unsafe_rawColors.REDDIT.css,
+    color: a.default.unsafe_rawColors.REDDIT.css,
     icon: {
       lightPNG: n("211434"),
       darkPNG: n("211434"),
@@ -146,7 +146,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.FACEBOOK,
     name: "Facebook",
-    color: s.default.unsafe_rawColors.FACEBOOK.css,
+    color: a.default.unsafe_rawColors.FACEBOOK.css,
     icon: {
       lightPNG: n("762019"),
       darkPNG: n("762019"),
@@ -159,7 +159,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.TWITTER_LEGACY,
     name: "Twitter",
-    color: s.default.unsafe_rawColors.TWITTER.css,
+    color: a.default.unsafe_rawColors.TWITTER.css,
     icon: {
       lightPNG: n("954549"),
       darkPNG: n("954549"),
@@ -180,7 +180,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.TWITTER,
     name: "X",
-    color: s.default.unsafe_rawColors.TWITTER.css,
+    color: a.default.unsafe_rawColors.TWITTER.css,
     icon: {
       lightPNG: n("327555"),
       darkPNG: n("126776"),
@@ -201,7 +201,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.SPOTIFY,
     name: "Spotify",
-    color: s.default.unsafe_rawColors.SPOTIFY.css,
+    color: a.default.unsafe_rawColors.SPOTIFY.css,
     icon: {
       lightPNG: n("182553"),
       darkPNG: n("182553"),
@@ -220,7 +220,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.XBOX,
     name: "Xbox",
-    color: s.default.unsafe_rawColors.XBOX.css,
+    color: a.default.unsafe_rawColors.XBOX.css,
     icon: {
       lightPNG: n("979660"),
       darkPNG: n("157981"),
@@ -234,7 +234,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.SAMSUNG,
     name: "Samsung Galaxy",
-    color: s.default.unsafe_rawColors.SAMSUNG.css,
+    color: a.default.unsafe_rawColors.SAMSUNG.css,
     icon: {
       lightPNG: n("664982"),
       darkPNG: n("664982"),
@@ -247,7 +247,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.GITHUB,
     name: "GitHub",
-    color: s.default.unsafe_rawColors.GITHUB.css,
+    color: a.default.unsafe_rawColors.GITHUB.css,
     icon: {
       lightPNG: n("843605"),
       darkPNG: n("789822"),
@@ -267,7 +267,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.PLAYSTATION,
     name: "PlayStation Network",
-    color: s.default.unsafe_rawColors.PLAYSTATION.css,
+    color: a.default.unsafe_rawColors.PLAYSTATION.css,
     icon: {
       lightPNG: n("385751"),
       darkPNG: n("399592"),
@@ -280,7 +280,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.PLAYSTATION_STAGING,
     name: "PlayStation Network (Staging)",
-    color: s.default.unsafe_rawColors.PLAYSTATION.css,
+    color: a.default.unsafe_rawColors.PLAYSTATION.css,
     icon: {
       lightPNG: n("399592"),
       darkPNG: n("385751"),
@@ -398,7 +398,7 @@ let l = [{
   }, {
     type: o.PlatformTypes.CRUNCHYROLL,
     name: "Crunchyroll",
-    color: s.default.unsafe_rawColors.CRUNCHYROLL.css,
+    color: a.default.unsafe_rawColors.CRUNCHYROLL.css,
     icon: {
       lightPNG: n("469024"),
       darkPNG: n("469024"),
@@ -426,6 +426,18 @@ let l = [{
       return "https://".concat(t, "/")
     },
     enabled: !0
+  }, {
+    type: o.PlatformTypes.AMAZON_MUSIC,
+    name: "Amazon Music",
+    icon: {
+      lightPNG: n("495036"),
+      darkPNG: n("495036"),
+      whitePNG: n("495036"),
+      lightSVG: n("605098"),
+      darkSVG: n("605098"),
+      whiteSVG: n("605098")
+    },
+    enabled: !1
   }],
   u = r().keyBy(l, "type"),
   d = {};
@@ -440,7 +452,7 @@ l.forEach(e => {
     return null !== (t = u[e]) && void 0 !== t ? t : null
   },
   getByUrl(e) {
-    let t = a.default.toURLSafe(e);
+    let t = s.default.toURLSafe(e);
     if (null == t) return;
     let n = t.hostname;
     return d[n.startsWith("www.") ? n.slice(4) : n]

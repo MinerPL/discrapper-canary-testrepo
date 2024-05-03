@@ -9,11 +9,11 @@ var n, a, r = s("735250"),
   i = s("481060"),
   u = s("378298"),
   l = s("473092"),
-  c = s("684471"),
-  E = s("745982"),
-  T = s("463439"),
+  E = s("684471"),
+  T = s("745982"),
+  c = s("463439"),
   d = s("689938"),
-  N = s("67749");
+  N = s("801235");
 (a = n || (n = {}))[a.INTRO = 0] = "INTRO", a[a.SAFETY_TIPS = 1] = "SAFETY_TIPS", a[a.TAKE_ACTION = 2] = "TAKE_ACTION";
 t.default = e => {
   let {
@@ -35,13 +35,13 @@ t.default = e => {
       viewName: l.ViewNameTypes.SAFETY_TAKEOVER_MODAL
     })
   }, [R]);
-  let O = o.useCallback(e => {
+  let C = o.useCallback(e => {
       (0, l.trackCtaEvent)({
         ...R,
         cta: e
       })
     }, [R]),
-    [C, S] = o.useState(!1);
+    [O, S] = o.useState(!1);
 
   function f(e) {
     _(e)
@@ -58,27 +58,27 @@ t.default = e => {
         contentDisplay: "flex",
         children: [(0, r.jsx)(i.Slide, {
           id: 0,
-          children: (0, r.jsx)(c.default, {
+          children: (0, r.jsx)(E.default, {
             warningId: t,
             senderId: n,
-            trackAnalyticsEvent: O,
+            trackAnalyticsEvent: C,
             onNavigate: f
           })
         }), (0, r.jsx)(i.Slide, {
           id: 1,
-          children: (0, r.jsx)(E.default, {
-            warningId: t,
-            senderId: n,
-            trackAnalyticsEvent: O
-          })
-        }), (0, r.jsx)(i.Slide, {
-          id: 2,
           children: (0, r.jsx)(T.default, {
             warningId: t,
             senderId: n,
-            trackAnalyticsEvent: O,
+            trackAnalyticsEvent: C
+          })
+        }), (0, r.jsx)(i.Slide, {
+          id: 2,
+          children: (0, r.jsx)(c.default, {
+            warningId: t,
+            senderId: n,
+            trackAnalyticsEvent: C,
             channelId: I,
-            hasReported: C,
+            hasReported: O,
             onReport: function() {
               S(!0)
             }
@@ -93,7 +93,7 @@ t.default = e => {
         color: i.Button.Colors.CUSTOM,
         size: i.Button.Sizes.MIN,
         onClick: function() {
-          a.onClose(), (0, u.dismissChannelSafetyWarnings)(I, [t]), O(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
+          a.onClose(), (0, u.dismissChannelSafetyWarnings)(I, [t]), C(l.CtaEventTypes.USER_TAKEOVER_MODAL_DISMISS)
         },
         children: d.default.Messages.CLOSE
       }), 0 !== A && (0, r.jsx)(i.Button, {

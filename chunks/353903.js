@@ -8,12 +8,12 @@ n.r(t), n.d(t, {
   }
 }), n("47120"), n("724458");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("392711"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("392711"),
+  o = n.n(s),
   l = n("748780"),
   u = n("692547"),
-  d = n("11852");
+  d = n("344361");
 
 function _(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -24,7 +24,7 @@ function _(e, t, n) {
   }) : e[t] = n, e
 }
 let c = [u.default.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.default.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"];
-class E extends s.PureComponent {
+class E extends a.PureComponent {
   render() {
     let {
       props: {
@@ -48,7 +48,7 @@ class E extends s.PureComponent {
     })
   }
 }
-class I extends(i = s.Component) {
+class I extends(i = a.Component) {
   componentDidMount() {
     this.animateSlide()
   }
@@ -127,7 +127,7 @@ let T = e => {
     }, t))
   })
 };
-class f extends s.PureComponent {
+class f extends a.PureComponent {
   render() {
     let {
       columns: e,

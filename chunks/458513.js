@@ -6,7 +6,7 @@ a.r(t), a.d(t, {
 }), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("106351"),
   r = a("442837"),
@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("15274"),
   m = a("924301"),
   h = a("788229"),
-  g = a("230900"),
-  E = a("854698"),
+  E = a("230900"),
+  g = a("854698"),
   _ = a("405613"),
   I = a("41776"),
   x = a("703656"),
@@ -38,7 +38,7 @@ var l = a("735250"),
   G = a("369701"),
   O = a("765305"),
   y = a("689938"),
-  H = a("107348");
+  H = a("19692");
 
 function k(e) {
   let {
@@ -52,9 +52,9 @@ function k(e) {
     currentOrPastEvent: c,
     upcomingEvent: f,
     diffMinutes: h
-  }, g] = n.useState((0, E.getEventTimeData)(a, s));
+  }, E] = n.useState((0, g.getEventTimeData)(a, s));
   n.useEffect(() => {
-    let e = setInterval(() => g((0, E.getEventTimeData)(a, s)), 1e3);
+    let e = setInterval(() => E((0, g.getEventTimeData)(a, s)), 1e3);
     return () => {
       clearInterval(e)
     }
@@ -166,7 +166,7 @@ function w(e) {
         }), (0, l.jsx)(u.Text, {
           variant: "text-xs/normal",
           className: H.locationLabel,
-          children: (0, h.guildEventDetailsParser)(null !== (t = (0, g.getLocationFromEvent)(a)) && void 0 !== t ? t : void 0, !0)
+          children: (0, h.guildEventDetailsParser)(null !== (t = (0, E.getLocationFromEvent)(a)) && void 0 !== t ? t : void 0, !0)
         })]
       })
     })]
@@ -179,7 +179,7 @@ function P(e) {
     isInList: a
   } = e, {
     guild_id: s
-  } = t, i = (0, o.default)(G.COLLAPSED_SIZE_MEDIA_QUERY), u = (0, m.isGuildScheduledEventActive)(t), c = (0, r.useStateFromStores)([N.default], () => N.default.getChannel(t.channel_id)), h = (0, r.useStateFromStores)([I.default], () => I.default.isLurking(s), [s]), g = n.useCallback(() => {
+  } = t, i = (0, o.default)(G.COLLAPSED_SIZE_MEDIA_QUERY), u = (0, m.isGuildScheduledEventActive)(t), c = (0, r.useStateFromStores)([N.default], () => N.default.getChannel(t.channel_id)), h = (0, r.useStateFromStores)([I.default], () => I.default.isLurking(s), [s]), E = n.useCallback(() => {
     F.default.track(b.AnalyticEvents.HOME_EVENT_CLICKED, {
       guild_id: s,
       home_session_id: L.default.getHomeSessionId(s),
@@ -189,7 +189,7 @@ function P(e) {
       eventId: t.id,
       parentGuildId: s
     })
-  }, [t, s, u]), E = (0, r.useStateFromStoresArray)([T.default], () => null == c ? [] : T.default.getVoiceStatesForChannel(c).map(e => {
+  }, [t, s, u]), g = (0, r.useStateFromStoresArray)([T.default], () => null == c ? [] : T.default.getVoiceStatesForChannel(c).map(e => {
     let {
       user: t
     } = e;
@@ -200,7 +200,7 @@ function P(e) {
   return (0, l.jsx)(R.ActiveNowBase, {
     listItemId: a ? t.id : void 0,
     shouldUseCollapsedLayout: !1,
-    onClick: h ? void 0 : g,
+    onClick: h ? void 0 : E,
     icon: u ? (0, l.jsx)("div", {
       className: H.liveNowIcon
     }) : (0, l.jsx)(A.default, {
@@ -217,7 +217,7 @@ function P(e) {
     }),
     accessoryNode: u ? (0, l.jsx)(D.default, {
       guildId: s,
-      users: E,
+      users: g,
       count: _,
       size: D.Sizes.SIZE_16,
       max: R.DISPLAYED_PARTICIPANT_AVATARS
@@ -226,7 +226,7 @@ function P(e) {
       event: t,
       channel: c,
       isCollapsedSize: i,
-      onEventClick: g
+      onEventClick: E
     })
   })
 }

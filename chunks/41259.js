@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("974674"),
-  s = n("1561"),
-  a = n("993365"),
+  a = n("1561"),
+  s = n("993365"),
   o = n("467679"),
   l = n("768581"),
   u = n("630388"),
@@ -16,7 +16,7 @@ var r = n("974674"),
   _ = n("981631"),
   c = n("182294"),
   E = n("689938"),
-  I = n("95761");
+  I = n("253863");
 
 function T(e) {
   let {
@@ -31,7 +31,7 @@ function T(e) {
   } = e, N = l.default.getApplicationIconURL({
     id: T.id,
     icon: T.icon
-  }), O = l.default.getUserAvatarURL(n);
+  }), p = l.default.getUserAvatarURL(n);
   return (0, i.jsxs)("header", {
     id: t,
     className: I.header,
@@ -51,48 +51,48 @@ function T(e) {
           className: I.ellipse
         })]
       }), (0, i.jsx)(r.Avatar, {
-        src: O,
+        src: p,
         size: c.AvatarSizes.SIZE_80,
         "aria-label": n.username
       })]
-    }), !m && (0, i.jsx)(a.Text, {
+    }), !m && (0, i.jsx)(s.Text, {
       variant: "text-md/medium",
       color: "header-secondary",
       className: I.label,
       children: E.default.Messages.OAUTH2_THIRD_PARTY_APPLICATION
-    }), (0, i.jsxs)(a.Text, {
+    }), (0, i.jsxs)(s.Text, {
       variant: "text-lg/bold",
       color: "header-primary",
       children: [T.name, null != f ? (0, i.jsx)(o.default, {
         className: I.botTag,
         verified: null != f.public_flags && (0, u.hasFlag)(f.public_flags, _.UserFlags.VERIFIED_BOT)
       }) : null]
-    }), S.length > 0 ? (0, i.jsx)(a.Text, {
+    }), S.length > 0 ? (0, i.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: I.label,
       children: E.default.Messages.OAUTH2_REQUESTS_ACCOUNT_ACCESS
-    }) : (0, i.jsx)(a.Text, {
+    }) : (0, i.jsx)(s.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: I.label,
       children: E.default.Messages.OAUTH2_CONNECT_TO_DISCORD
     }), h ? (0, i.jsx)("div", {
       className: I.currentUser,
-      children: (0, i.jsxs)(a.Text, {
+      children: (0, i.jsxs)(s.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
         children: [E.default.Messages.OAUTH2_SIGNED_IN_AS.format({
-          userHook: () => (0, i.jsxs)(a.Text, {
+          userHook: () => (0, i.jsxs)(s.Text, {
             className: I.currentUserTag,
             variant: "text-sm/normal",
-            children: [n.username, !n.isPomelo() && (0, i.jsx)(a.Text, {
+            children: [n.username, !n.isPomelo() && (0, i.jsx)(s.Text, {
               className: I.currentUserDiscriminator,
               variant: "text-sm/normal",
               children: "#".concat(n.discriminator)
             })]
           }, n.id)
-        }), (0, i.jsx)(s.Clickable, {
+        }), (0, i.jsx)(a.Clickable, {
           tag: "a",
           className: I.logoutLink,
           onClick: () => (0, d.logoutWithRedirect)(A),

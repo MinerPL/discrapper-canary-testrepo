@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("81825"),
   r = n("768581"),
-  s = n("709054"),
-  a = n("624138"),
+  a = n("709054"),
+  s = n("624138"),
   o = n("981631"),
   l = n("185923"),
   u = n("474936");
@@ -71,7 +71,7 @@ class _ extends i.default {
     return null !== (e = this.name) && void 0 !== e ? e : ""
   }
   get acronym() {
-    return (0, a.getAcronym)(this.name)
+    return (0, s.getAcronym)(this.name)
   }
   isOwner(e) {
     let t = "string" == typeof e ? e : null != e ? e.id : null;
@@ -82,7 +82,7 @@ class _ extends i.default {
   }
   isNew() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 7,
-      t = s.default.extractTimestamp(this.id);
+      t = a.default.extractTimestamp(this.id);
     return Date.now() - t < 864e5 * e
   }
   isLurker() {
@@ -92,7 +92,7 @@ class _ extends i.default {
     return this.features.has(e)
   }
   getEveryoneRoleId() {
-    return s.default.castGuildIdAsEveryoneGuildRoleId(this.id)
+    return a.default.castGuildIdAsEveryoneGuildRoleId(this.id)
   }
   getMaxEmojiSlots() {
     return Math.max(this.hasFeature(o.GuildFeatures.MORE_EMOJI) ? 200 : l.EMOJI_MAX_SLOTS, u.BoostedGuildFeatures[this.premiumTier].limits.emoji)
@@ -119,10 +119,10 @@ class _ extends i.default {
     return this.set("joinedAt", "string" == typeof e ? new Date(e) : e)
   }
   constructor(e) {
-    var t, n;
-    super(), d(this, "id", void 0), d(this, "name", void 0), d(this, "description", void 0), d(this, "ownerId", void 0), d(this, "icon", void 0), d(this, "splash", void 0), d(this, "banner", void 0), d(this, "homeHeader", void 0), d(this, "preferredLocale", void 0), d(this, "features", void 0), d(this, "afkChannelId", void 0), d(this, "afkTimeout", void 0), d(this, "systemChannelId", void 0), d(this, "verificationLevel", void 0), d(this, "joinedAt", void 0), d(this, "defaultMessageNotifications", void 0), d(this, "mfaLevel", void 0), d(this, "application_id", void 0), d(this, "explicitContentFilter", void 0), d(this, "vanityURLCode", void 0), d(this, "premiumTier", void 0), d(this, "premiumSubscriberCount", void 0), d(this, "premiumProgressBarEnabled", void 0), d(this, "systemChannelFlags", void 0), d(this, "rulesChannelId", void 0), d(this, "safetyAlertsChannelId", void 0), d(this, "discoverySplash", void 0), d(this, "publicUpdatesChannelId", void 0), d(this, "maxStageVideoChannelUsers", void 0), d(this, "maxVideoChannelUsers", void 0), d(this, "maxMembers", void 0), d(this, "nsfwLevel", void 0), d(this, "hubType", void 0), d(this, "latestOnboardingQuestionId", void 0);
-    let i = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
-    this.id = e.id, this.name = e.name || "", this.description = e.description || null, this.ownerId = e.ownerId || null, this.icon = e.icon || null, this.splash = e.splash || null, this.banner = e.banner || null, this.homeHeader = e.homeHeader || null, this.features = i, this.preferredLocale = e.preferredLocale || "en-US", this.afkChannelId = e.afkChannelId || null, this.afkTimeout = e.afkTimeout, this.systemChannelId = e.systemChannelId || null, this.verificationLevel = e.verificationLevel || o.VerificationLevels.NONE, this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt), this.defaultMessageNotifications = e.defaultMessageNotifications || o.UserNotificationSettings.ALL_MESSAGES, this.mfaLevel = e.mfaLevel || o.MFALevels.NONE, this.application_id = e.application_id || null, this.explicitContentFilter = e.explicitContentFilter || o.GuildExplicitContentFilterTypes.DISABLED, this.vanityURLCode = e.vanityURLCode || void 0, this.premiumTier = e.premiumTier || o.BoostedGuildTiers.NONE, this.premiumSubscriberCount = e.premiumSubscriberCount || 0, this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1, this.systemChannelFlags = e.systemChannelFlags, this.discoverySplash = e.discoverySplash || null, this.rulesChannelId = e.rulesChannelId || null, this.safetyAlertsChannelId = e.safetyAlertsChannelId || null, this.publicUpdatesChannelId = e.publicUpdatesChannelId || null, this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1, this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1, this.maxMembers = e.maxMembers || -1, this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : o.GuildNSFWContentLevel.DEFAULT, this.hubType = e.hubType, this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null
+    var t, n, i;
+    super(), d(this, "id", void 0), d(this, "name", void 0), d(this, "description", void 0), d(this, "ownerId", void 0), d(this, "icon", void 0), d(this, "splash", void 0), d(this, "banner", void 0), d(this, "homeHeader", void 0), d(this, "preferredLocale", void 0), d(this, "features", void 0), d(this, "afkChannelId", void 0), d(this, "afkTimeout", void 0), d(this, "systemChannelId", void 0), d(this, "verificationLevel", void 0), d(this, "joinedAt", void 0), d(this, "defaultMessageNotifications", void 0), d(this, "mfaLevel", void 0), d(this, "application_id", void 0), d(this, "explicitContentFilter", void 0), d(this, "vanityURLCode", void 0), d(this, "premiumTier", void 0), d(this, "premiumSubscriberCount", void 0), d(this, "premiumProgressBarEnabled", void 0), d(this, "systemChannelFlags", void 0), d(this, "rulesChannelId", void 0), d(this, "safetyAlertsChannelId", void 0), d(this, "discoverySplash", void 0), d(this, "publicUpdatesChannelId", void 0), d(this, "maxStageVideoChannelUsers", void 0), d(this, "maxVideoChannelUsers", void 0), d(this, "maxMembers", void 0), d(this, "nsfwLevel", void 0), d(this, "hubType", void 0), d(this, "latestOnboardingQuestionId", void 0), d(this, "clan", void 0);
+    let r = e.features instanceof Set ? e.features : new Set(Array.from(e.features || []));
+    this.id = e.id, this.name = e.name || "", this.description = e.description || null, this.ownerId = e.ownerId || null, this.icon = e.icon || null, this.splash = e.splash || null, this.banner = e.banner || null, this.homeHeader = e.homeHeader || null, this.features = r, this.preferredLocale = e.preferredLocale || "en-US", this.afkChannelId = e.afkChannelId || null, this.afkTimeout = e.afkTimeout, this.systemChannelId = e.systemChannelId || null, this.verificationLevel = e.verificationLevel || o.VerificationLevels.NONE, this.joinedAt = e.joinedAt instanceof Date ? e.joinedAt : new Date(e.joinedAt), this.defaultMessageNotifications = e.defaultMessageNotifications || o.UserNotificationSettings.ALL_MESSAGES, this.mfaLevel = e.mfaLevel || o.MFALevels.NONE, this.application_id = e.application_id || null, this.explicitContentFilter = e.explicitContentFilter || o.GuildExplicitContentFilterTypes.DISABLED, this.vanityURLCode = e.vanityURLCode || void 0, this.premiumTier = e.premiumTier || o.BoostedGuildTiers.NONE, this.premiumSubscriberCount = e.premiumSubscriberCount || 0, this.premiumProgressBarEnabled = e.premiumProgressBarEnabled || !1, this.systemChannelFlags = e.systemChannelFlags, this.discoverySplash = e.discoverySplash || null, this.rulesChannelId = e.rulesChannelId || null, this.safetyAlertsChannelId = e.safetyAlertsChannelId || null, this.publicUpdatesChannelId = e.publicUpdatesChannelId || null, this.maxStageVideoChannelUsers = e.maxStageVideoChannelUsers || -1, this.maxVideoChannelUsers = e.maxVideoChannelUsers || -1, this.maxMembers = e.maxMembers || -1, this.nsfwLevel = null !== (t = e.nsfwLevel) && void 0 !== t ? t : o.GuildNSFWContentLevel.DEFAULT, this.hubType = e.hubType, this.latestOnboardingQuestionId = null !== (n = e.latestOnboardingQuestionId) && void 0 !== n ? n : null, this.clan = null !== (i = e.clan) && void 0 !== i ? i : null
   }
 }
 class c extends _ {

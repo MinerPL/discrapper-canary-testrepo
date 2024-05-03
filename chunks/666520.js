@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("699581"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("699581"),
+  o = n.n(s),
   l = n("442837"),
   u = n("481060"),
   d = n("34854"),
@@ -15,7 +15,7 @@ var i, r = n("735250"),
   c = n("246946"),
   E = n("981631"),
   I = n("689938"),
-  T = n("587153");
+  T = n("795820");
 
 function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -25,7 +25,7 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends(i = s.PureComponent) {
+class S extends(i = a.PureComponent) {
   componentDidMount() {
     if (this.props.autoFocus && !this.props.hideNote) {
       let e = o().findDOMNode(this.noteRef.current);
@@ -55,14 +55,14 @@ class S extends(i = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), f(this, "noteRef", s.createRef()), f(this, "handleBlur", e => {
+    super(...e), f(this, "noteRef", a.createRef()), f(this, "handleBlur", e => {
       let t = e.currentTarget.value,
         {
           note: n,
           userId: i,
           onUpdate: r
         } = this.props;
-      n !== t && (null == r || r(), d.default.updateNote(i, t))
+      (null != n ? n : "") !== t && (null == r || r(), d.default.updateNote(i, t))
     }), f(this, "handleKeyPress", e => {
       if (13 === e.which) {
         if (e.shiftKey) {

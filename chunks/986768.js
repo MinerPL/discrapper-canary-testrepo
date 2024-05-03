@@ -47,16 +47,6 @@ async function d(e, t, n) {
         }
       }
     }
-    case o.RPCEvents.ACTIVITY_INSTANCE_UPDATE: {
-      let e = a.default.getConnectedActivityChannelId();
-      if (null != e) {
-        let t = a.default.getSelfEmbeddedActivityForChannel(e);
-        if (null != t) return Promise.resolve({
-          instance_id: t.instanceId
-        })
-      }
-      return Promise.resolve(null)
-    }
     case o.RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
       return (0, r.activityInstanceConnectedParticipants)();
     default:

@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 let i = (0, n("818083").createExperiment)({
   kind: "guild",
-  id: "2023-11_enable_hang_status",
-  label: "Hang Statuses",
+  id: "2024-04_hang_status_v2",
+  label: "Hang Statuses - V2 experiment",
   defaultConfig: {
     enableHangStatus: !1,
     setDefaultStatus: !1,

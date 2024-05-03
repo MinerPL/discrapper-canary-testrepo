@@ -7,105 +7,106 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("442837"),
-  s = n("481060"),
-  a = n("395661"),
-  o = n("171246"),
-  l = n("359610"),
-  u = n("886491"),
-  d = n("696906"),
-  _ = n("682864"),
-  c = n("191741"),
-  E = n("135431"),
+  a = n("481060"),
+  s = n("395661"),
+  o = n("970321"),
+  l = n("171246"),
+  u = n("359610"),
+  d = n("886491"),
+  _ = n("696906"),
+  c = n("682864"),
+  E = n("191741"),
   I = n("621853"),
   T = n("873572"),
   f = n("520978"),
   S = n("659101"),
   h = n("981631"),
   A = n("689938"),
-  m = n("220862");
+  m = n("198197");
 
 function N(e) {
+  var t;
   let {
-    user: t,
-    guildId: n
-  } = e, s = (0, r.useStateFromStores)([I.default], () => {
+    user: n,
+    guildId: a
+  } = e, l = (0, r.useStateFromStores)([I.default], () => {
     var e;
-    return null === (e = I.default.getUserProfile(t.id)) || void 0 === e ? void 0 : e.application
-  }), o = null != s && (0, E.canInstallApplication)({
-    customInstallUrl: s.customInstallUrl,
-    installParams: s.installParams,
-    integrationTypesConfig: s.integrationTypesConfig
+    return null === (e = I.default.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application
   }), {
-    botUpgradeable: l,
-    subscriptionGroupListing: u
-  } = (0, T.default)({
-    user: t,
-    guildId: n
-  }), {
-    enabled: d
-  } = a.appStorefrontExperiment.useExperiment({
+    enabled: u
+  } = s.appStorefrontExperiment.useExperiment({
     location: "BotButtonsSection"
-  });
-  return o || l ? (0, i.jsx)(S.default, {
+  }), d = (0, o.useAppStorefrontAvailable)(null !== (t = null == l ? void 0 : l.id) && void 0 !== t ? t : "");
+  return (0, i.jsx)(S.default, {
     children: (0, i.jsxs)("div", {
       className: m.buttonsContainer,
       children: [(0, i.jsx)(f.default, {
-        application: s,
+        application: l,
         className: m.button
-      }), l && (d ? (0, i.jsx)(p, {
-        app: s,
-        listing: null != u ? u : void 0,
-        guildId: n
-      }) : (0, i.jsx)(O, {
-        guildId: n,
-        listing: u
-      }))]
-    })
-  }) : null
-}
-
-function O(e) {
-  let {
-    listing: t,
-    guildId: n
-  } = e, r = null != t ? (0, o.getPayableSubscriptionListing)(t) : null, {
-    openModal: s
-  } = (0, d.default)({
-    listing: r,
-    guildId: n,
-    groupListingId: null == t ? void 0 : t.id,
-    showBenefitsFirst: !0,
-    analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
-  });
-  return (0, i.jsx)(l.default, {
-    onClick: s,
-    className: m.button,
-    children: (0, i.jsxs)("div", {
-      className: m.botUpgradeButtonContent,
-      children: [(0, i.jsx)(c.default, {
-        width: 16,
-        height: 16
-      }), (0, i.jsx)(_.default, {
-        size: 4,
-        horizontal: !0
-      }), A.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+      }), u && d ? (0, i.jsx)(O, {
+        app: l,
+        user: n,
+        guildId: a
+      }) : (0, i.jsx)(p, {
+        guildId: a,
+        user: n
+      })]
     })
   })
 }
 
 function p(e) {
   let {
-    app: t,
-    listing: r,
-    guildId: a
-  } = e;
-  return null == t || null == a ? null : (0, i.jsx)(u.StorefrontButton, {
+    user: t,
+    guildId: n
+  } = e, {
+    botUpgradeable: r,
+    subscriptionGroupListing: a
+  } = (0, T.default)({
+    user: t,
+    guildId: n
+  }), s = null != a ? (0, l.getPayableSubscriptionListing)(a) : null, {
+    openModal: o
+  } = (0, _.default)({
+    listing: s,
+    guildId: n,
+    groupListingId: null == a ? void 0 : a.id,
+    showBenefitsFirst: !0,
+    analyticsLocation: h.AnalyticsLocations.BOT_PROFILE_POPOUT
+  });
+  return r && null != s ? (0, i.jsx)(u.default, {
+    onClick: o,
+    className: m.button,
+    children: (0, i.jsxs)("div", {
+      className: m.botUpgradeButtonContent,
+      children: [(0, i.jsx)(E.default, {
+        width: 16,
+        height: 16
+      }), (0, i.jsx)(c.default, {
+        size: 4,
+        horizontal: !0
+      }), A.default.Messages.BOT_PROFILE_UPGRADE_CTA]
+    })
+  }) : null
+}
+
+function O(e) {
+  var t;
+  let {
+    app: r,
+    user: s,
+    guildId: o
+  } = e, l = null !== (t = (0, T.default)({
+    user: s,
+    guildId: o
+  }).subscriptionGroupListing) && void 0 !== t ? t : void 0;
+  return null == r || null == o ? null : (0, i.jsx)(d.StorefrontButton, {
     onClick: () => (function(e, t, r) {
-      (0, s.openModalLazy)(async () => {
+      (0, a.openModalLazy)(async () => {
         let {
-          default: s
+          default: a
         } = await Promise.all([n.e("49237"), n.e("99387"), n.e("98538"), n.e("44516")]).then(n.bind(n, "7225"));
-        return n => (0, i.jsx)(s, {
+        return n => (0, i.jsx)(a, {
           transitionState: n.transitionState,
           onClose: n.onClose,
           appId: e.id,
@@ -113,8 +114,8 @@ function p(e) {
           guildId: r
         })
       })
-    })(t, r, a),
+    })(r, l, o),
     className: m.button,
-    size: s.ButtonSizes.SMALL
+    size: a.ButtonSizes.SMALL
   })
 }

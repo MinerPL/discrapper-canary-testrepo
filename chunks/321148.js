@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("481060"),
   u = n("129861"),
   d = n("730749"),
@@ -11,7 +11,7 @@ var i, r = n("735250"),
   c = n("103575"),
   E = n("285952"),
   I = n("981631"),
-  T = n("178250");
+  T = n("265299");
 
 function f(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function f(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class S extends(i = s.Component) {
+class S extends(i = a.Component) {
   render() {
     let {
       popoutOpen: e
@@ -29,23 +29,23 @@ class S extends(i = s.Component) {
       user: t,
       analyticsContext: n,
       disablePopout: i,
-      guildId: s
-    } = this.props, a = {
+      guildId: a
+    } = this.props, s = {
       location: {
         ...n.location,
         object: I.AnalyticsObjects.LIST_ITEM
       }
     };
     return (0, r.jsx)(l.Popout, {
-      preload: () => (0, _.default)(t.id, t.getAvatarURL(s, 80), {
-        guildId: s
+      preload: () => (0, _.maybeFetchUserProfileForPopout)(t.id, t.getAvatarURL(a, 80), {
+        guildId: a
       }),
       renderPopout: e => (0, r.jsx)(c.default, {
         ...e,
         location: "UserListItem",
-        guildId: s,
+        guildId: a,
         userId: t.id,
-        analyticsParams: a
+        analyticsParams: s
       }),
       position: "left",
       onRequestClose: this.handleUserPopoutClose,
@@ -75,8 +75,8 @@ class S extends(i = s.Component) {
         className: t,
         disablePopout: n,
         onContextMenu: i,
-        user: s,
-        status: a,
+        user: a,
+        status: s,
         textClassName: d,
         nick: _,
         guildId: c
@@ -91,16 +91,16 @@ class S extends(i = s.Component) {
         onKeyDown: e.onKeyDown,
         onClick: this.handleClickUser,
         children: [(0, r.jsx)(l.Avatar, {
-          src: s.getAvatarURL(c, 24),
+          src: a.getAvatarURL(c, 24),
           className: T.avatar,
-          "aria-label": s.username,
+          "aria-label": a.username,
           size: l.AvatarSizes.SIZE_24,
-          status: a
+          status: s
         }), (0, r.jsx)(l.Text, {
           className: o()(T.memberListItemTag, d),
           variant: "text-sm/normal",
           children: (0, r.jsx)(u.default, {
-            user: s,
+            user: a,
             nick: _,
             usernameClass: T.username,
             hideDiscriminator: !0

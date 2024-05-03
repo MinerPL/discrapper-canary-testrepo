@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("102172"),
   m = a("718805"),
   h = a("871118"),
-  g = a("66999"),
-  E = a("131704"),
+  E = a("66999"),
+  g = a("131704"),
   _ = a("199902"),
   I = a("314897"),
   x = a("496675"),
@@ -26,7 +26,7 @@ var l = a("735250"),
   C = a("51144"),
   N = a("679184"),
   p = a("981631"),
-  T = a("37007");
+  T = a("240217");
 
 function A(e) {
   var t;
@@ -34,12 +34,12 @@ function A(e) {
     channel: a,
     voiceStates: n,
     showPlaceholder: s
-  } = e, c = (0, d.useStateFromStores)([_.default], () => _.default.getAllApplicationStreamsForChannel(a.id)[0]), g = (0, d.useStateFromStores)([_.default], () => null != c ? _.default.getActiveStreamForApplicationStream(c) : null), E = (0, d.useStateFromStores)([I.default], () => I.default.getId()), [x, S] = (0, f.useCanWatchStream)(a);
+  } = e, c = (0, d.useStateFromStores)([_.default], () => _.default.getAllApplicationStreamsForChannel(a.id)[0]), E = (0, d.useStateFromStores)([_.default], () => null != c ? _.default.getActiveStreamForApplicationStream(c) : null), g = (0, d.useStateFromStores)([I.default], () => I.default.getId()), [x, S] = (0, f.useCanWatchStream)(a);
   if (null == c) return null;
   let N = i().chain(n).map("member").find(["userId", c.ownerId]).value(),
     A = i().chain(n).map("user").find(["id", c.ownerId]).value(),
     j = null !== (t = null == N ? void 0 : N.nick) && void 0 !== t ? t : C.default.getName(A),
-    M = null != g && null != c && g.state !== p.ApplicationStreamStates.ENDED && g.ownerId === c.ownerId;
+    M = null != E && null != c && E.state !== p.ApplicationStreamStates.ENDED && E.ownerId === c.ownerId;
   return (0, l.jsxs)(r.Clickable, {
     onClick: () => {
       u.default.selectVoiceChannel(a.id), !M && (0, o.watchStreamAndTransitionToStream)(c)
@@ -57,7 +57,7 @@ function A(e) {
         variant: "text-sm/normal",
         color: "none",
         className: T.previewButton,
-        children: (0, m.default)(c, g, E, S)
+        children: (0, m.default)(c, E, g, S)
       })
     }) : null, null != j ? (0, l.jsxs)("div", {
       className: T.previewName,
@@ -84,7 +84,7 @@ function j(e) {
     showPreview: o
   } = e, f = r.map(e => e.user), {
     needSubscriptionToAccess: m
-  } = (0, g.default)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : void 0), h = (0, d.useStateFromStores)([x.default], () => !x.default.can(p.Permissions.CONNECT, s)), _ = n.useRef(null), I = function(e) {
+  } = (0, E.default)(null !== (t = null == s ? void 0 : s.id) && void 0 !== t ? t : void 0), h = (0, d.useStateFromStores)([x.default], () => !x.default.can(p.Permissions.CONNECT, s)), _ = n.useRef(null), I = function(e) {
     let t = n.useRef(null),
       [a, l] = n.useState(!1);
     return n.useEffect(() => {
@@ -114,7 +114,7 @@ function j(e) {
     text: T,
     usersInSummary: f,
     onChannelClick: () => {
-      if (!(0, E.isGuildVocalChannelType)(s.type)) return;
+      if (!(0, g.isGuildVocalChannelType)(s.type)) return;
       let e = S.default.getVoiceChannelId(),
         t = !x.default.can(p.Permissions.CONNECT, s);
       u(s), c.default.handleVoiceConnect({

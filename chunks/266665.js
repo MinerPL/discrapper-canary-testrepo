@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("942389"),
   o = s("866442"),
@@ -28,7 +28,7 @@ var a = s("735250"),
   x = s("203377"),
   L = s("981631"),
   O = s("689938"),
-  A = s("512084");
+  A = s("62287");
 let p = "DRAGGABLE_ROLE";
 
 function M(e) {
@@ -66,8 +66,8 @@ function M(e) {
       }
     }),
     [{
-      dragSourcePosition: j
-    }, G] = (0, r.useDrop)({
+      dragSourcePosition: G
+    }, j] = (0, r.useDrop)({
       accept: p,
       canDrop: () => M,
       collect: e => {
@@ -95,8 +95,8 @@ function M(e) {
     color: U
   }), (0, a.jsxs)(u.TabBar.Item, {
     className: i()(A.row, {
-      [A.dragBefore]: null !== j && m < j,
-      [A.dragAfter]: null !== j && m > j
+      [A.dragBefore]: null !== G && m < G,
+      [A.dragAfter]: null !== G && m > G
     }),
     id: E.id,
     selectedItem: S,
@@ -117,7 +117,7 @@ function M(e) {
     "aria-label": E.name,
     clickableRef: e => {
       var t;
-      return v(G(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
+      return v(j(null !== (t = null == e ? void 0 : e.ref) && void 0 !== t ? t : null))
     },
     children: [n, null != x ? (0, a.jsx)(h.default, {
       className: A.lock,
@@ -143,11 +143,11 @@ function D(e) {
   } = (0, R.useScrolledToTop)(), {
     handleDragStart: D,
     handleDragReset: v,
-    handleDragComplete: j
-  } = (0, C.default)(o), G = l.useRef(null), U = l.useCallback(e => {
+    handleDragComplete: G
+  } = (0, C.default)(o), j = l.useRef(null), U = l.useCallback(e => {
     var t, s;
     let a = o.findIndex(t => t.id === e);
-    null === (s = G.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
+    null === (s = j.current) || void 0 === s || null === (t = s.getScrollerNode()) || void 0 === t || t.scrollTo({
       top: Math.max((a - 2) * 34, 0)
     })
   }, [o]);
@@ -198,7 +198,7 @@ function D(e) {
         })]
       }), (0, a.jsx)(u.AdvancedScroller, {
         className: A.list,
-        ref: G,
+        ref: j,
         onScroll: p,
         children: (0, a.jsx)(u.TabBar, {
           selectedItem: s,
@@ -213,7 +213,7 @@ function D(e) {
             currentPosition: l,
             onDragStart: D,
             onDragReset: v,
-            onDragComplete: j,
+            onDragComplete: G,
             roleStyle: I
           }, e.id))
         })

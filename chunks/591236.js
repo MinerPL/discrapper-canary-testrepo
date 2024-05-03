@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("496675"),
   r = n("156361"),
-  s = n("483360"),
-  a = n("877565"),
+  a = n("483360"),
+  s = n("877565"),
   o = n("590921"),
   l = n("665692"),
   u = n("981631"),
@@ -11,21 +11,21 @@ var i = n("496675"),
   _ = n("689938");
 let c = {
   sentinel: l.REACTION_START_SENTINEL,
-  matches(e, t, n, r, s) {
-    var a, o;
-    return r && null !== (o = null === (a = s.chatInputType.autocomplete) || void 0 === a ? void 0 : a.addReactionShortcut) && void 0 !== o && o && (i.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
+  matches(e, t, n, r, a) {
+    var s, o;
+    return r && null !== (o = null === (s = a.chatInputType.autocomplete) || void 0 === s ? void 0 : s.addReactionShortcut) && void 0 !== o && o && (i.default.can(u.Permissions.ADD_REACTIONS, e) || e.isPrivate())
   },
   queryResults(e, t, n, i, r) {
     let {
-      emojis: a
-    } = s.default.queryEmojiResults({
+      emojis: s
+    } = a.default.queryEmojiResults({
       query: n,
       channel: e,
       intention: d.EmojiIntention.REACTION
     });
     return {
       results: {
-        emojis: a.unlocked
+        emojis: s.unlocked
       }
     }
   },
@@ -36,14 +36,14 @@ let c = {
       },
       selectedIndex: n,
       query: i,
-      onHover: s,
+      onHover: a,
       onClick: o
     } = e;
-    return (0, a.renderAutocompleteGroup)({
+    return (0, s.renderAutocompleteGroup)({
       query: i,
       selectedIndex: n,
       autocompletes: t,
-      onHover: s,
+      onHover: a,
       onClick: o,
       titleWithQuery: _.default.Messages.REACTIONS_MATCHING,
       titleWithoutQuery: _.default.Messages.EMOJI,
@@ -51,8 +51,7 @@ let c = {
       getProps: e => ({
         emoji: e,
         key: e.id || e.uniqueName || e.name,
-        sentinel: l.EMOJI_SENTINEL,
-        isLocked: !1
+        sentinel: l.EMOJI_SENTINEL
       }),
       getQuery: e => "".concat(l.REACTION_START_SENTINEL).concat(e),
       key: "reactions"

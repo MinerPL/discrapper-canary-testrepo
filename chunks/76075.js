@@ -4,8 +4,8 @@ var s = a("735250");
 a("470079");
 var l = a("442837"),
   n = a("481060"),
-  o = a("271383"),
-  i = a("430824"),
+  i = a("271383"),
+  o = a("430824"),
   r = a("594174"),
   u = a("153124"),
   d = a("693546"),
@@ -20,11 +20,11 @@ t.default = function(e) {
     guildId: t,
     transitionState: a,
     ..._
-  } = e, C = (0, u.useUID)(), M = (0, l.useStateFromStores)([f.default], () => f.default.getRequest(t), [t]), N = (0, l.useStateFromStores)([i.default], () => i.default.getGuild(t), [t]), A = (0, l.useStateFromStores)([r.default], () => {
+  } = e, C = (0, u.useUID)(), N = (0, l.useStateFromStores)([f.default], () => f.default.getRequest(t), [t]), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t), [t]), h = (0, l.useStateFromStores)([r.default], () => {
     var e;
     return null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
-  }), h = (0, l.useStateFromStores)([o.default], () => null != A ? o.default.getMember(t, A) : null, [A, t]), T = async () => {
-    if (null == N ? void 0 : N.hasFeature(R.GuildFeatures.PREVIEW_ENABLED)) {
+  }), A = (0, l.useStateFromStores)([i.default], () => null != h ? i.default.getMember(t, h) : null, [h, t]), T = async () => {
+    if (null == M ? void 0 : M.hasFeature(R.GuildFeatures.PREVIEW_ENABLED)) {
       try {
         await d.default.removeGuildJoinRequest(t)
       } catch (e) {
@@ -43,11 +43,11 @@ t.default = function(e) {
       reapplyText: m.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
       onReapply: T,
       confirmText: m.default.Messages.OKAY,
-      onConfirm: () => {
-        _.onClose(), null == h && (0, E.default)()
+      onWithdrawApplication: () => {
+        _.onClose(), null == A && (0, E.default)()
       },
-      rejectionReason: null == M ? void 0 : M.rejectionReason,
-      guild: N
+      rejectionReason: null == N ? void 0 : N.rejectionReason,
+      guild: M
     })
   })
 }

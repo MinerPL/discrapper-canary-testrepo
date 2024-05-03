@@ -4,12 +4,13 @@ var a = s("735250");
 s("470079");
 var n = s("481060"),
   l = s("689938"),
-  i = s("425631");
+  i = s("976573");
 t.default = function(e) {
   let {
     hasGuildBoostSlots: t,
     hasAppliedGuildBoosts: r,
-    isUserPremiumTier2: o
+    isUserPremiumTier2: o,
+    subscriptionIsPausedOrPausePending: d
   } = e;
   return (0, a.jsxs)("div", {
     className: i.wrapper,
@@ -29,13 +30,15 @@ t.default = function(e) {
           let {
             hasGuildBoostSlots: t,
             hasAppliedGuildBoosts: s,
-            isUserPremiumTier2: a
+            isUserPremiumTier2: a,
+            subscriptionIsPausedOrPausePending: n
           } = e;
-          return t ? a && !s ? l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS
+          return n ? l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : t ? a && !s ? l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_HAS_UNAPPLIED_FREE_GUILD_BOOSTS.format() : l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_YOUR_GUILD_BOOSTS.format() : l.default.Messages.GUILD_BOOSTING_USER_SETTINGS_HEADING_NO_GUILD_BOOSTS
         }({
           hasGuildBoostSlots: t,
           isUserPremiumTier2: o,
-          hasAppliedGuildBoosts: r
+          hasAppliedGuildBoosts: r,
+          subscriptionIsPausedOrPausePending: d
         })
       }), (0, a.jsx)("svg", {
         viewBox: "0 0 660 210",

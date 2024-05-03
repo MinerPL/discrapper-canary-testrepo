@@ -2,7 +2,7 @@
 n.r(t), n("653041"), n("47120");
 var s = n("735250");
 n("470079");
-var a = n("803997"),
+var a = n("120356"),
   l = n.n(a),
   i = n("266067"),
   r = n("613828"),
@@ -13,28 +13,28 @@ var a = n("803997"),
   f = n("693546"),
   E = n("305325"),
   _ = n("246364"),
-  T = n("937111"),
-  m = n("981631"),
+  m = n("937111"),
+  T = n("981631"),
   I = n("176505"),
   p = n("689938"),
-  h = n("463318"),
-  N = n("15499");
+  h = n("636081"),
+  N = n("497748");
 t.default = () => {
   var e, t;
   let a = (0, o.useStateFromStores)([c.default], () => c.default.getGuildId(), []),
     S = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(a), [a]),
-    C = (0, o.useStateFromStores)([T.default], () => null != a ? T.default.getRequest(a) : null, [a]),
+    C = (0, o.useStateFromStores)([m.default], () => null != a ? m.default.getRequest(a) : null, [a]),
     A = (0, r.useLocation)(),
-    g = (null === (e = (0, i.matchPath)(A.pathname, m.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
+    g = (null === (e = (0, i.matchPath)(A.pathname, T.Routes.CHANNEL(null == S ? void 0 : S.id, I.StaticChannelRoute.GUILD_ONBOARDING))) || void 0 === e ? void 0 : e.isExact) === !0;
   if (null == S || !S.hasVerificationGate() || g) return null;
   let M = null !== (t = null == C ? void 0 : C.applicationStatus) && void 0 !== t ? t : _.GuildJoinRequestApplicationStatuses.STARTED,
     R = null,
-    O = null,
     v = null,
-    L = [h.notice, N.notice];
+    O = null,
+    x = [h.notice, N.notice];
   switch (M) {
     case _.GuildJoinRequestApplicationStatuses.SUBMITTED:
-      R = p.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, O = p.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, v = () => {
+      R = p.default.Messages.MEMBER_VERIFICATION_APPLICATION_CONFIRMATION_TITLE, v = p.default.Messages.MEMBER_VERIFICATION_CANCEL_APPLICATION, O = () => {
         (0, u.openModal)(e => (0, s.jsx)(u.ConfirmModal, {
           header: p.default.Messages.MODIFY_FOLLOWED_NEWS_HEADER,
           confirmText: p.default.Messages.CONFIRM,
@@ -50,7 +50,7 @@ t.default = () => {
       };
       break;
     case _.GuildJoinRequestApplicationStatuses.REJECTED:
-      R = p.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, O = p.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, v = () => {
+      R = p.default.Messages.MEMBER_VERIFICATION_REJECTED_TITLE, v = p.default.Messages.MEMBER_VERIFICATION_LEARN_MORE, O = () => {
         (0, u.openModalLazy)(async () => {
           let {
             default: e
@@ -60,15 +60,15 @@ t.default = () => {
             ...t
           })
         })
-      }, L.push(h.error);
+      }, x.push(h.error);
       break;
     default:
-      R = p.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, O = p.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, v = () => {
+      R = p.default.Messages.MEMBER_VERIFICATION_NOTICE_TEXT, v = p.default.Messages.MEMBER_VERIFICATION_NOTICE_CTA, O = () => {
         (0, E.openMemberVerificationModal)(S.id)
       }
   }
   return (0, s.jsxs)("div", {
-    className: l()(...L),
+    className: l()(...x),
     children: [(0, s.jsx)(u.Text, {
       className: h.header,
       variant: "text-sm/normal",
@@ -78,8 +78,8 @@ t.default = () => {
       look: u.Button.Looks.OUTLINED,
       color: u.Button.Colors.WHITE,
       size: u.Button.Sizes.NONE,
-      onClick: v,
-      children: O
+      onClick: O,
+      children: v
     })]
   })
 }

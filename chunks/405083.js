@@ -8,9 +8,9 @@ var a = n("735250");
 n("470079");
 var i = n("355467"),
   s = n("106976"),
-  l = n("703656"),
-  r = n("914010"),
-  u = n("598"),
+  r = n("703656"),
+  l = n("914010"),
+  u = n("563132"),
   o = n("791785"),
   d = n("981631");
 
@@ -29,7 +29,7 @@ function c(e) {
     onClose: e => {
       t(e);
       let a = null == f ? void 0 : f.guild_id;
-      e && null != a && (i.fetchSubscriptions(), (0, s.fetchEntitlementsForGuild)(a), null == n || n(), null != a && (c || r.default.getGuildId() !== a) && (0, l.transitionTo)(d.Routes.CHANNEL(a)))
+      e && null != a && (i.fetchSubscriptions(), (0, s.fetchEntitlementsForGuild)(a), null == n || n(), null != a && (c || l.default.getGuildId() !== a) && (0, r.transitionTo)(d.Routes.CHANNEL(a)))
     },
     forceNewPaymentModal: !0
   })

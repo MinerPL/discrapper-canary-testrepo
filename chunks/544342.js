@@ -1,5 +1,5 @@
 "use strict";
-t.r(r), t.d(r, {
+r.r(t), r.d(t, {
   gradients: function() {
     return a
   }
@@ -147,6 +147,16 @@ let a = {
       saturation: .2,
       lightness: .3,
       opacity: .7
+    }
+  },
+  "background-mobile-secondary": {
+    dark: {
+      color: "black.500",
+      opacity: .4
+    },
+    light: {
+      color: "white.500",
+      opacity: .6
     }
   },
   "redesign-button-secondary-background": {

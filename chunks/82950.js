@@ -12,9 +12,9 @@ var a = n("735250"),
   f = n("428695"),
   E = n("981631"),
   h = n("689938"),
-  _ = n("771853");
+  _ = n("85488");
 let C = i().debounce(o.default.trackWithMetadata, 500),
-  m = e => {
+  S = e => {
     let {
       guild: t,
       title: n,
@@ -22,10 +22,10 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       image: i,
       type: c,
       imageMarginX: f,
-      imageMarginTop: m,
-      trackingSource: S,
-      undismissable: I,
-      onDismissed: p,
+      imageMarginTop: S,
+      trackingSource: m,
+      undismissable: p,
+      onDismissed: I,
       onClick: T,
       cta: g,
       ctaColor: A
@@ -42,7 +42,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: S,
+          source: m,
           guild_id: t.id,
           notice_type: c
         }), null == T || T()
@@ -54,11 +54,11 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
       className: _.channelNotice,
-      children: [!0 === I ? null : (0, a.jsx)(r.Clickable, {
+      children: [!0 === p ? null : (0, a.jsx)(r.Clickable, {
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == p || p()
+          }), null == I || I()
         },
         className: _.close,
         "aria-label": h.default.Messages.DISMISS,
@@ -68,7 +68,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       }), (0, a.jsx)("div", {
         className: _.imageContainer,
         style: {
-          marginTop: "".concat(m, "px"),
+          marginTop: "".concat(S, "px"),
           marginLeft: v,
           marginRight: v
         },
@@ -96,7 +96,7 @@ t.default = function(e) {
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);
   return t ? (0, a.jsx)(f.default, {
     ...e
-  }) : (0, a.jsx)(m, {
+  }) : (0, a.jsx)(S, {
     ...e
   })
 }

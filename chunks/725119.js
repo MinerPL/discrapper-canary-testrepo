@@ -1,36 +1,36 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return f
   }
 });
-var l = a("735250"),
-  n = a("470079"),
-  u = a("481060"),
-  d = a("40851"),
-  s = a("906732"),
-  i = a("171368"),
-  o = a("626135"),
-  r = a("981631"),
-  f = a("689938");
+var l = n("735250"),
+  u = n("470079"),
+  a = n("481060"),
+  i = n("40851"),
+  o = n("906732"),
+  r = n("171368"),
+  s = n("626135"),
+  c = n("981631"),
+  d = n("689938");
 
-function c(e, t, a) {
-  let c = n.useContext(o.AnalyticsContext),
+function f(e, t, n) {
+  let f = u.useContext(s.AnalyticsContext),
     {
-      analyticsLocations: M
-    } = (0, s.default)(),
-    m = (0, d.useWindowDispatch)();
-  return (0, l.jsx)(u.MenuItem, {
+      analyticsLocations: _
+    } = (0, o.default)(),
+    E = (0, i.useWindowDispatch)();
+  return (0, l.jsx)(a.MenuItem, {
     id: "user-profile",
-    label: f.default.Messages.PROFILE,
+    label: d.default.Messages.PROFILE,
     action: () => {
-      (0, i.openUserProfileModal)({
+      (0, r.openUserProfileModal)({
         userId: e,
-        guildId: null != t ? t : void 0,
-        channelId: null != a ? a : void 0,
-        sourceAnalyticsLocations: M,
-        analyticsLocation: c.location
-      }), m.dispatch(r.ComponentActions.POPOUT_CLOSE)
+        guildId: t,
+        channelId: n,
+        sourceAnalyticsLocations: _,
+        analyticsLocation: f.location
+      }), E.dispatch(c.ComponentActions.POPOUT_CLOSE)
     }
   })
 }

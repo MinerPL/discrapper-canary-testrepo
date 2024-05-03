@@ -5,10 +5,10 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("442837"),
-  i = s("607070"),
-  r = s("314684"),
+  r = s("607070"),
+  i = s("314684"),
   n = s("391110"),
-  l = s("518400");
+  l = s("53549");
 let o = {
     subtitle: {
       onlyShowOnHover: !1
@@ -22,8 +22,8 @@ let o = {
     }
   },
   u = e => {
-    let t = (0, a.useStateFromStores)([i.default], () => i.default.useReducedMotion),
-      s = (0, r.useShouldShowConfettiAndGlow)() && !t,
+    let t = (0, a.useStateFromStores)([r.default], () => r.default.useReducedMotion),
+      s = (0, i.useShouldShowConfettiAndGlow)() && !t,
       u = {
         [n.CardVariants.DEFAULT]: o,
         [n.CardVariants.REWARD]: {

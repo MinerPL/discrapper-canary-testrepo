@@ -2,10 +2,10 @@
 n.r(t), n("724458");
 var i = n("259443"),
   r = n("579806"),
-  s = n("77450"),
-  a = n("998502");
+  a = n("77450"),
+  s = n("998502");
 let o = new i.Logger("ProcessUtilsElectron");
-class l extends s.ProcessUtils {
+class l extends a.ProcessUtils {
   setupReportingTimer() {
     var e, t;
     let n = null === r.default || void 0 === r.default ? void 0 : null === (e = r.default.processUtils) || void 0 === e ? void 0 : e.setMemoryInformation;
@@ -30,13 +30,17 @@ class l extends s.ProcessUtils {
     var e, t;
     return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCurrentCPUUsagePercent) || void 0 === e ? void 0 : e.call(t)
   }
+  getCumulativeCPUUsage() {
+    var e, t;
+    return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCumulativeCPUUsage) || void 0 === e ? void 0 : e.call(t)
+  }
   getCurrentMemoryUsageKB() {
     let e = l.getCurrentMemoryUsageKBCore();
     return this.lastMemoryUsageKB = e, e
   }
   static getCurrentMemoryUsageKBCore() {
     try {
-      let e = a.default.getDiscordMemoryUsage();
+      let e = s.default.getDiscordMemoryUsage();
       if (null == e) return 0;
       let t = Object.values(e).reduce((e, t) => e + t, 0);
       return Math.ceil(t / 1024)
@@ -45,11 +49,11 @@ class l extends s.ProcessUtils {
     }
   }
   getMemoryUsageDetails() {
-    return a.default.getDiscordMemoryUsage()
+    return s.default.getDiscordMemoryUsage()
   }
   getMemoryUsageElectronRenderer() {
     try {
-      return a.default.getDiscordMemoryUsageElectronRenderer()
+      return s.default.getDiscordMemoryUsageElectronRenderer()
     } catch (e) {
       return null
     }
@@ -59,13 +63,13 @@ class l extends s.ProcessUtils {
     return null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getUsedHeapSize) || void 0 === e ? void 0 : e.call(t)
   }
   constructor() {
-    var e, t, n, i, s;
-    super(), n = this, s = void 0, (i = "lastMemoryUsageKB") in n ? Object.defineProperty(n, i, {
-      value: s,
+    var e, t, n, i, a;
+    super(), n = this, a = void 0, (i = "lastMemoryUsageKB") in n ? Object.defineProperty(n, i, {
+      value: a,
       enumerable: !0,
       configurable: !0,
       writable: !0
-    }) : n[i] = s, this.cpuCoreCount = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t), this.setupReportingTimer()
+    }) : n[i] = a, this.cpuCoreCount = null === r.default || void 0 === r.default ? void 0 : null === (t = r.default.processUtils) || void 0 === t ? void 0 : null === (e = t.getCPUCoreCount) || void 0 === e ? void 0 : e.call(t), this.setupReportingTimer()
   }
 }
 t.default = new l

@@ -1,36 +1,41 @@
 "use strict";
 s.r(t), s.d(t, {
   useClearNewBadge: function() {
-    return T
+    return I
   },
   useShouldScrollToWhatsNew: function() {
-    return E
+    return T
   }
 }), s("47120");
 var a = s("470079"),
-  i = s("399606"),
-  r = s("524437"),
+  r = s("399606"),
+  i = s("524437"),
   n = s("211242"),
   l = s("605236"),
   o = s("706140"),
   u = s("581883"),
   d = s("494127"),
-  c = s("526761");
-let _ = [
-    [r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, r.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
-    [r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, r.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
+  c = s("687362"),
+  _ = s("526761");
+let E = [
+    [i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_NOTIF_BADGE, d.WhatsNewAvatarDecoRollout, i.DismissibleContent.WHATS_NEW_AVATAR_DECOS_FLIP],
+    [i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_NOTIF_BADGE, d.WhatsNewProfileFXRollout, i.DismissibleContent.WHATS_NEW_PROFILE_EFFECTS_FLIP]
   ],
-  E = () => _.some(e => {
-    let [t, s, a] = e, {
-      flipped: i
-    } = s.getCurrentConfig({
-      location: "useShouldShowNewBadge"
-    });
-    return !!i && !(0, l.isDismissibleContentDismissed)(t)
-  }),
-  T = () => {
+  T = e => {
+    let t = E.some(e => {
+        let [t, s, a] = e, {
+          flipped: r
+        } = s.getCurrentConfig({
+          location: "useShouldShowNewBadge"
+        });
+        return !!r && !(0, l.isDismissibleContentDismissed)(t)
+      }),
+      s = (0, c.useShouldScrollToTenureRewardContent)(e);
+    return t || !0 === s
+  },
+  I = () => {
     let e = (0, n.useBlockedPaymentsConfig)(),
-      t = _.map(e => {
+      t = E.map(e => {
         let [t, s] = e, {
           flipped: a
         } = s.getCurrentConfig({
@@ -43,21 +48,21 @@ let _ = [
   };
 t.default = () => {
   let e = (0, n.useBlockedPaymentsConfig)(),
-    t = (0, i.useStateFromStores)([u.default], () => u.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
-    s = _.map(e => {
+    t = (0, r.useStateFromStores)([u.default], () => u.default.hasLoaded(_.UserSettingsTypes.PRELOADED_USER_SETTINGS)),
+    s = E.map(e => {
       let [t, s, a] = e, {
-        flipped: i
+        flipped: r
       } = s.getCurrentConfig({
         location: "useShouldShowNewBadge"
-      }), r = null != a && (0, l.isDismissibleContentDismissed)(a);
-      return i && !r ? t : null
+      }), i = null != a && (0, l.isDismissibleContentDismissed)(a);
+      return r && !i ? t : null
     }).filter(e => null != e);
   a.useEffect(() => {
-    t && _.forEach(e => {
+    t && E.forEach(e => {
       let [t, s, a] = e;
       if (null != a)(0, l.isDismissibleContentDismissed)(a) && (0, l.markDismissibleContentAsDismissed)(t)
     })
   }, [s, t]);
-  let [r] = (0, o.useGetDismissibleContent)(e ? [] : s);
-  return null != r && s.includes(r) && !e
+  let [i] = (0, o.useGetDismissibleContent)(e ? [] : s);
+  return null != i && s.includes(i) && !e
 }

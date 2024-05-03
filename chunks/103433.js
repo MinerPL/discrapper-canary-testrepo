@@ -2,12 +2,12 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("803997"),
-  r = s.n(i),
+var r = s("120356"),
+  i = s.n(r),
   n = s("605260"),
   l = s("481060"),
   o = s("689938"),
-  u = s("589453"),
+  u = s("31334"),
   d = s("505944");
 t.default = e => {
   let {
@@ -15,7 +15,7 @@ t.default = e => {
     onBackClick: s
   } = e;
   return (0, a.jsxs)("div", {
-    className: r()(u.container, t),
+    className: i()(u.container, t),
     "data-testid": "all-perks-hero-header",
     children: [(0, a.jsx)("img", {
       src: d,

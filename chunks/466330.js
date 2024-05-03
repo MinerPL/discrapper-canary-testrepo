@@ -49,7 +49,7 @@ let E = (e, n, u) => (0, a.jsx)(l.MenuItem, {
     action: () => (0, l.openModalLazy)(async () => {
       let {
         default: e
-      } = await Promise.all([t.e("99387"), t.e("88358")]).then(t.bind(t, "598402"));
+      } = await Promise.all([t.e("99387"), t.e("88358")]).then(t.bind(t, "68477"));
       return n => (0, a.jsx)(e, {
         ...n
       })

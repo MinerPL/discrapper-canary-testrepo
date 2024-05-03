@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("700111"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("700111"),
   o = n("481060"),
   l = n("239091"),
   u = n("782568"),
@@ -17,8 +17,8 @@ var r = n("803997"),
   c = n("797053"),
   E = n("746878"),
   I = n("981631"),
-  T = n("863538"),
-  f = n("785232");
+  T = n("64637"),
+  f = n("203074");
 
 function S(e) {
   return {
@@ -44,8 +44,8 @@ function S(e) {
         onClick: h,
         onContextMenu: A,
         className: "attachmentLink",
-        children: [(0, i.jsx)(a.AttachmentIcon, {
-          className: s()(f.icon, T.icon),
+        children: [(0, i.jsx)(s.AttachmentIcon, {
+          className: a()(f.icon, T.icon),
           color: o.tokens.colors.MENTION_FOREGROUND,
           width: 16,
           height: 16

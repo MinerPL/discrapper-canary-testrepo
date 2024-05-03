@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("990547"),
   l = n("442837"),
   u = n("481060"),
@@ -20,23 +20,23 @@ var i = n("735250"),
   f = n("208049"),
   S = n("763296"),
   h = n("526617"),
-  A = n("919280");
+  A = n("592296");
 
 function m(e) {
   let {
     guildId: t,
     channel: n,
-    containerWidth: s,
+    containerWidth: a,
     onClose: m,
     onSelect: N,
-    analyticsSource: O,
-    suppressPlaySound: p,
+    analyticsSource: p,
+    suppressPlaySound: O,
     shouldShowUpsell: R = !0,
     gridNotice: C,
     autoWidth: g = !1,
     soundButtonOverlay: L,
-    listPadding: D,
-    renderHeader: v,
+    listPadding: v,
+    renderHeader: D,
     defaultSoundsOnly: M
   } = e, y = (0, l.useStateFromStores)([S.default], () => S.default.isFetchingSounds() || S.default.isFetchingDefaultSounds()), P = (0, l.useStateFromStores)([T.default], () => T.default.getMediaSessionId()), {
     analyticsLocations: U
@@ -45,7 +45,7 @@ function m(e) {
     type: o.ImpressionTypes.POPOUT,
     name: o.ImpressionNames.SOUNDBOARD_POPOUT,
     properties: {
-      source: O,
+      source: p,
       guild_id: t,
       media_session_id: P
     }
@@ -53,8 +53,8 @@ function m(e) {
     f.maybeFetchSoundboardSounds(), I.FrecencyUserSettingsActionCreators.loadIfNecessary(), (0, E.setSearchQuery)("")
   }, []), (0, i.jsx)(_.AnalyticsLocationProvider, {
     value: U,
-    children: (0, i.jsx)("div", {
-      className: a()(A.picker, {
+    children: (0, i.jsx)(u.Dialog, {
+      className: s()(A.picker, {
         [A.fetching]: y,
         [A.autoWidth]: g
       }),
@@ -63,13 +63,13 @@ function m(e) {
         channel: n,
         onClose: m,
         onSelect: N,
-        containerWidth: s,
-        suppressPlaySound: p,
+        containerWidth: a,
+        suppressPlaySound: O,
         shouldShowUpsell: R,
         gridNotice: C,
         soundButtonOverlay: L,
-        listPadding: D,
-        renderHeader: v,
+        listPadding: v,
+        renderHeader: D,
         defaultSoundsOnly: M
       })
     })

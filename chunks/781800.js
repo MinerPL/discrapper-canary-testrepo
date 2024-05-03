@@ -2,21 +2,21 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("465270"),
-  r = s("481060"),
+var r = s("465270"),
+  i = s("481060"),
   n = s("976644"),
   l = s("626135"),
   o = s("391110"),
   u = s("981631"),
   d = s("689938"),
-  c = s("379101");
+  c = s("3230");
 t.default = e => {
   let {
     setIsAllPerksVisible: t,
     previousComponent: s
   } = e;
   return (0, a.jsx)(n.default, {
-    color: r.ButtonColors.CUSTOM,
+    color: i.ButtonColors.CUSTOM,
     onlyShineOnHover: !0,
     shineSize: n.ShineSizes.SMALL,
     className: c.seeAllPerksButton,
@@ -29,7 +29,7 @@ t.default = e => {
     },
     children: (0, a.jsxs)("div", {
       className: c.seeAllPerksButtonContent,
-      children: [d.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(i.ChevronSmallRightIcon, {
+      children: [d.default.Messages.PREMIUM_MARKETING_PERKS_SEE_ALL, (0, a.jsx)(r.ChevronSmallRightIcon, {
         color: "currentColor"
       })]
     })

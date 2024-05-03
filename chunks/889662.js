@@ -1,65 +1,63 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return E
   }
 }), n("47120");
 var l = n("735250"),
   s = n("470079"),
   u = n("374470"),
   a = n("481060"),
-  c = n("239091"),
-  r = n("632120"),
-  i = n("886036"),
-  o = n("877794"),
-  d = n("358085"),
-  f = n("998502"),
-  E = n("689938");
+  r = n("239091"),
+  c = n("886036"),
+  i = n("877794"),
+  o = n("358085"),
+  d = n("998502"),
+  f = n("689938");
 
-function p(e) {
+function E(e) {
   let {
     text: t,
     target: n,
-    onHeightUpdate: p,
-    onSelect: M,
-    isChannelTextArea: C = !1
-  } = e, m = s.useCallback(() => {
-    (0, c.closeContextMenu)(), (0, u.isElement)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0))
-  }, [n]), [S, h] = (0, o.default)({
+    onHeightUpdate: E,
+    onSelect: p,
+    isChannelTextArea: M = !1
+  } = e, C = s.useCallback(() => {
+    (0, r.closeContextMenu)(), (0, u.isElement)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0))
+  }, [n]), [m, S] = (0, i.default)({
     text: t,
     target: n,
-    onHeightUpdate: p
-  }), g = (0, i.default)();
-  if (!d.isPlatformEmbedded || !((0, u.isElement)(n, HTMLInputElement) || (0, u.isElement)(n, HTMLTextAreaElement))) return null;
-  let L = "" !== t ? [(0, l.jsx)(a.MenuItem, {
+    onHeightUpdate: E
+  }), h = (0, c.default)();
+  if (!o.isPlatformEmbedded || !((0, u.isElement)(n, HTMLInputElement) || (0, u.isElement)(n, HTMLTextAreaElement))) return null;
+  let g = "" !== t ? [(0, l.jsx)(a.MenuItem, {
     id: "copy",
-    label: E.default.Messages.COPY,
-    hint: (0, d.isMac)() ? "⌘C" : "Ctrl+C",
-    action: () => f.default.copy(t)
+    label: f.default.Messages.COPY,
+    hint: (0, o.isMac)() ? "⌘C" : "Ctrl+C",
+    action: () => d.default.copy(t)
   }, "copy"), (0, l.jsx)(a.MenuItem, {
     id: "cut",
-    label: E.default.Messages.CUT,
-    hint: (0, d.isMac)() ? "⌘X" : "Ctrl+X",
-    action: () => setTimeout(() => f.default.cut(), 0)
+    label: f.default.Messages.CUT,
+    hint: (0, o.isMac)() ? "⌘X" : "Ctrl+X",
+    action: () => setTimeout(() => d.default.cut(), 0)
   }, "cut")] : null;
   return (0, l.jsxs)(a.Menu, {
-    className: r.ContextMenuClassName,
     navId: "textarea-context",
-    onClose: m,
-    "aria-label": E.default.Messages.TEXTAREA_ACTIONS_MENU_LABEL,
-    onSelect: M,
-    children: [C && (0, l.jsx)(a.MenuGroup, {
-      children: g
+    onClose: C,
+    "aria-label": f.default.Messages.TEXTAREA_ACTIONS_MENU_LABEL,
+    onSelect: p,
+    children: [M && (0, l.jsx)(a.MenuGroup, {
+      children: h
+    }), (0, l.jsx)(a.MenuGroup, {
+      children: m
     }), (0, l.jsx)(a.MenuGroup, {
       children: S
-    }), (0, l.jsx)(a.MenuGroup, {
-      children: h
     }), (0, l.jsxs)(a.MenuGroup, {
-      children: [L, (0, l.jsx)(a.MenuItem, {
+      children: [g, (0, l.jsx)(a.MenuItem, {
         id: "paste",
-        label: E.default.Messages.PASTE,
-        hint: (0, d.isMac)() ? "⌘V" : "Ctrl+V",
-        action: () => setTimeout(() => f.default.paste(), 0)
+        label: f.default.Messages.PASTE,
+        hint: (0, o.isMac)() ? "⌘V" : "Ctrl+V",
+        action: () => setTimeout(() => d.default.paste(), 0)
       })]
     })]
   })

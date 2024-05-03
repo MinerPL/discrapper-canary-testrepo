@@ -28,7 +28,7 @@ var a, l, n = s("735250"),
   O = s("981631"),
   A = s("176505"),
   p = s("689938"),
-  M = s("3562");
+  M = s("759092");
 
 function D(e) {
   let {
@@ -37,8 +37,8 @@ function D(e) {
   } = e, {
     listingsLoaded: a
   } = (0, C.useFetchGuildProductListingsForGuild)(t), l = (0, o.useStateFromStores)([N.default], () => N.default.getGuild(t)), D = (0, o.useStateFromStores)([g.default], () => g.default.getCurrentUser()), v = (null == l ? void 0 : l.isOwner(D)) === !0, {
-    loading: j
-  } = (0, u.useMonetizationSettings)(t), [G, U] = i.useState(s ? "manage_listings" : "payment");
+    loading: G
+  } = (0, u.useMonetizationSettings)(t), [j, U] = i.useState(s ? "manage_listings" : "payment");
   (0, _.useNewOwnerOnboardingRequired)(l);
   let P = i.useCallback(() => {
     if (null == l) return;
@@ -55,7 +55,7 @@ function D(e) {
       returnToSection: O.GuildSettingsSections.GUILD_PRODUCTS
     }), (0, m.transitionTo)(O.Routes.CHANNEL(l.id, A.StaticChannelRoute.GUILD_SHOP))
   }, [l]);
-  if (!a || j) return (0, n.jsx)(d.Spinner, {});
+  if (!a || G) return (0, n.jsx)(d.Spinner, {});
   if (null == l) return null;
   let b = (0, n.jsxs)(n.Fragment, {
       children: [(0, n.jsx)(d.FormTitle, {
@@ -74,7 +74,7 @@ function D(e) {
       look: "brand",
       className: M.tabBar,
       "aria-label": p.default.Messages.GUILD_PRODUCTS_TITLE,
-      selectedItem: G,
+      selectedItem: j,
       onItemSelect: U,
       children: [(0, n.jsx)(E.default, {
         id: "basic_info",
@@ -101,7 +101,7 @@ function D(e) {
         })
       }) : null]
     }),
-    y = (0, r.match)(G).with("basic_info", () => (0, n.jsx)(R.default, {
+    y = (0, r.match)(j).with("basic_info", () => (0, n.jsx)(R.default, {
       guildId: t
     })).with("manage_listings", () => (0, n.jsx)(x.default, {
       guildId: t
@@ -109,7 +109,7 @@ function D(e) {
       guildId: t
     })).exhaustive(),
     F = a ? (0, n.jsx)(d.TabBar.Panel, {
-      id: G,
+      id: j,
       children: y
     }) : (0, n.jsx)(d.Spinner, {});
   return (0, n.jsxs)(c.CreatorMonetizationSettingsDisabledContextProvider, {

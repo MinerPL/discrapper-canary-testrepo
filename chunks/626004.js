@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 }), l("789020");
 var i = l("735250"),
   a = l("470079"),
-  n = l("803997"),
+  n = l("120356"),
   s = l.n(n),
   r = l("481060"),
   c = l("860719"),
@@ -17,7 +17,7 @@ var i = l("735250"),
   _ = l("49012"),
   m = l("981631"),
   f = l("689938"),
-  h = l("601115");
+  h = l("49763");
 let C = p.default.getArticleURL(m.HelpdeskArticles.BOT_DATA_ACCESS);
 
 function g(e) {

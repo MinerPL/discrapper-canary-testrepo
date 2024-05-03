@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("526120"),
   m = a("563534"),
   h = a("736052"),
-  g = a("442336"),
-  E = a("910611"),
+  E = a("442336"),
+  g = a("910611"),
   _ = a("41776"),
   I = a("703656"),
   x = a("6025"),
@@ -33,7 +33,7 @@ var l = a("735250"),
   D = a("287746"),
   F = a("981631"),
   L = a("689938"),
-  R = a("571770");
+  R = a("63733");
 
 function b(e) {
   let {
@@ -54,7 +54,7 @@ function b(e) {
       }))
     }, [y, G]), null == y || null == H) return null;
   let z = [];
-  return (!B && z.push((0, l.jsx)(g.default, {
+  return (!B && z.push((0, l.jsx)(E.default, {
     channel: y
   }, "notifications")), z.push((0, l.jsx)(j.default.Icon, {
     icon: A.default,
@@ -67,7 +67,7 @@ function b(e) {
     }), (0, l.jsx)(j.default, {
       toolbar: z,
       "aria-label": L.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
-      children: (0, E.renderTitle)({
+      children: (0, g.renderTitle)({
         channel: y,
         channelName: V ? W : P,
         guild: H,

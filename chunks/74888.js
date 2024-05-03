@@ -1,60 +1,62 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return m
+    return _
   }
 });
 var i = s("735250"),
   a = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   l = s.n(n),
   r = s("481060"),
-  d = s("808602"),
-  o = s("413684"),
-  u = s("298812"),
-  c = s("200115"),
-  h = s("406205"),
-  S = s("689938"),
-  N = s("75217");
+  o = s("11352"),
+  d = s("610617"),
+  u = s("808602"),
+  c = s("413684"),
+  h = s("298812"),
+  S = s("200115"),
+  N = s("406205"),
+  g = s("689938"),
+  f = s("952091");
 
-function g(e) {
+function m(e) {
   return (0, i.jsx)("div", {
-    className: N.sectionHeader,
+    className: f.sectionHeader,
     children: (0, i.jsx)(r.Heading, {
       variant: "text-xs/bold",
-      className: N.sectionHeaderTitle,
+      className: f.sectionHeaderTitle,
       color: "text-muted",
       children: e.title
     })
   })
 }
 
-function f(e) {
+function E(e) {
   return (0, i.jsxs)("div", {
-    children: [null != e.title && (0, i.jsx)(g, {
+    children: [null != e.title && (0, i.jsx)(m, {
       title: e.title
     }), (0, i.jsx)("div", {
-      className: l()(N.sectionContent, {
-        [N.sectionContentPadding]: !0 !== e.noPadding
+      className: l()(f.sectionContent, {
+        [f.sectionContentPadding]: !0 !== e.noPadding
       }),
       children: e.children
     })]
   })
 }
 
-function E(e) {
+function T(e) {
   let {
     onClose: t
   } = e;
   return (0, i.jsxs)(r.ModalHeader, {
-    className: N.header,
+    className: f.header,
     children: [(0, i.jsxs)("div", {
-      className: N.headerLeft,
-      children: [(0, i.jsx)(d.default, {
-        className: N.headerBell
+      className: f.headerLeft,
+      children: [(0, i.jsx)(u.default, {
+        className: f.headerBell
       }), (0, i.jsx)(r.Heading, {
         variant: "heading-lg/semibold",
-        children: S.default.Messages.NOTIFICATION_SETTINGS
+        children: g.default.Messages.NOTIFICATION_SETTINGS
       })]
     }), (0, i.jsx)(r.ModalCloseButton, {
       onClick: t
@@ -62,35 +64,46 @@ function E(e) {
   })
 }
 
-function m(e) {
-  let t = a.useRef(null);
+function _(e) {
+  let t = a.useRef(null),
+    s = o.CustomNotificationSoundExperiment.useExperiment({
+      location: "notification_settings_modal_redesign"
+    }, {
+      autoTrackExposure: !0
+    }).enabled;
   return (0, i.jsxs)(r.ModalRoot, {
     size: r.ModalSize.MEDIUM,
     transitionState: e.transitionState,
-    "aria-label": S.default.Messages.NOTIFICATION_SETTINGS,
-    children: [(0, i.jsx)(E, {
+    "aria-label": g.default.Messages.NOTIFICATION_SETTINGS,
+    children: [(0, i.jsx)(T, {
       onClose: e.onClose
     }), (0, i.jsxs)(r.ModalContent, {
-      className: N.content,
+      className: f.content,
       scrollerRef: t,
-      children: [(0, i.jsx)(f, {
+      children: [(0, i.jsx)(E, {
+        children: (0, i.jsx)(S.default, {
+          guildId: e.guildId
+        })
+      }), (0, i.jsx)(E, {
+        title: g.default.Messages.NOTIFICATION_SETTINGS_PRESETS,
+        noPadding: !0,
+        children: (0, i.jsx)(N.default, {
+          guildId: e.guildId
+        })
+      }), s && (0, i.jsx)(E, {
+        children: (0, i.jsx)(d.default, {
+          onClose: e.onClose,
+          guildId: e.guildId,
+          isRedesign: !0
+        })
+      }), (0, i.jsx)(E, {
+        title: g.default.Messages.NOTIFICATION_SETTINGS_ADVANCED,
         children: (0, i.jsx)(c.default, {
           guildId: e.guildId
         })
-      }), (0, i.jsx)(f, {
-        title: S.default.Messages.NOTIFICATION_SETTINGS_PRESETS,
-        noPadding: !0,
-        children: (0, i.jsx)(h.default, {
-          guildId: e.guildId
-        })
-      }), (0, i.jsx)(f, {
-        title: S.default.Messages.NOTIFICATION_SETTINGS_ADVANCED,
-        children: (0, i.jsx)(o.default, {
-          guildId: e.guildId
-        })
-      }), (0, i.jsx)(g, {
-        title: S.default.Messages.CHANNEL_NOTIFICATION_OVERRIDES
-      }), (0, i.jsx)(u.default, {
+      }), (0, i.jsx)(m, {
+        title: g.default.Messages.CHANNEL_NOTIFICATION_OVERRIDES
+      }), (0, i.jsx)(h.default, {
         guildId: e.guildId,
         requestScrollToBottom: () => {
           null != t && null != t.current && t.current.scrollToBottom({

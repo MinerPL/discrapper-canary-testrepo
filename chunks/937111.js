@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return T
   }
 });
-var i, r, s, a, o = n("442837"),
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("601964"),
   d = n("594174"),
@@ -15,8 +15,7 @@ let c = {},
 
 function T(e) {
   return {
-    id: e.id,
-    join_request_id: e.join_request_id,
+    joinRequestId: e.join_request_id,
     guildId: e.guild_id,
     userId: e.user_id,
     user: e.user,
@@ -27,7 +26,7 @@ function T(e) {
     actionedAt: e.actioned_at,
     actionedByUser: e.actioned_by_user,
     lastSeen: e.last_seen,
-    interview_channel_id: e.interview_channel_id
+    interviewChannelId: e.interview_channel_id
   }
 }
 
@@ -42,7 +41,7 @@ function f(e) {
   if (null != r && i.userId !== r.id) return !1;
   (0, _.isApprovedAndAcked)(i) ? delete c[t]: c[t] = i
 }
-class S extends(a = o.default.Store) {
+class S extends(s = o.default.Store) {
   getRequest(e) {
     return c[e]
   }
@@ -56,12 +55,12 @@ class S extends(a = o.default.Store) {
     return E
   }
 }
-s = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
-  value: s,
+a = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.defineProperty(i, r, {
+  value: a,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : i[r] = s, t.default = new S(l.default, {
+}) : i[r] = a, t.default = new S(l.default, {
   CONNECTION_OPEN: function(e) {
     let {
       guildJoinRequests: t
@@ -122,13 +121,13 @@ s = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.definePr
         id: e,
         name: i,
         icon: r,
-        features: s
+        features: a
       } = t.guild;
       I[n] = {
         id: e,
         name: i,
         icon: r,
-        features: null != s ? s : []
+        features: null != a ? a : []
       }
     }
   },
@@ -147,14 +146,14 @@ s = "UserGuildJoinRequestStore", (r = "displayName") in(i = S) ? Object.definePr
       let {
         id: t,
         name: r,
-        icon: s,
-        features: a
+        icon: a,
+        features: s
       } = n;
       I[t] = {
         id: t,
         name: r,
-        icon: s,
-        features: null != a ? a : []
+        icon: a,
+        features: null != s ? s : []
       }
     }
   },

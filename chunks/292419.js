@@ -1,82 +1,20 @@
 "use strict";
-l.r(t), l.d(t, {
-  createComponents: function() {
-    return function e(t, l) {
-      let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : void 0,
-        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        {
-          includeEmojiSrc: s
-        } = a;
-      return t.map((t, m) => {
-        var f, C, _, N, L, y;
-        if (!S(t.type)) return null;
-        let O = i.concat(m);
-        switch (t.type) {
-          case u.ComponentType.ACTION_ROW:
-            let I = null != t.components ? e(t.components, l, n, a, O) : void 0;
-            return {
-              type: u.ComponentType.ACTION_ROW, indices: O, components: I
-            };
-          case u.ComponentType.BUTTON:
-            if (E.includes(l) && null != t.custom_id && p.test(t.custom_id) && !(0, d.default)(n)) return null;
-            let A = null != t.emoji ? T(t.emoji, s) : void 0;
-            return {
-              type: u.ComponentType.BUTTON, customId: t.custom_id, style: t.style, disabled: t.disabled, url: t.url, label: t.label, emoji: A, indices: O, applicationId: l
-            };
-          case u.ComponentType.STRING_SELECT:
-            return {
-              type: u.ComponentType.STRING_SELECT, customId: t.custom_id, disabled: t.disabled, options: t.options.map(e => ({
-                type: o.SelectOptionType.STRING,
-                label: e.label,
-                value: e.value,
-                default: e.default,
-                description: e.description,
-                emoji: null != e.emoji ? T(e.emoji, s) : void 0
-              })), placeholder: null !== (f = t.placeholder) && void 0 !== f ? f : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, indices: O, applicationId: l
-            };
-          case u.ComponentType.INPUT_TEXT:
-            return {
-              type: t.type, style: t.style, customId: t.custom_id, label: t.label, value: t.value, placeholder: t.placeholder, disabled: t.disabled, required: t.required, minLength: t.min_length, maxLength: t.max_length, indices: O
-            };
-          case u.ComponentType.USER_SELECT:
-            return {
-              type: u.ComponentType.USER_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (C = t.placeholder) && void 0 !== C ? C : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: O, applicationId: l, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, n)
-            };
-          case u.ComponentType.ROLE_SELECT:
-            return {
-              type: u.ComponentType.ROLE_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (_ = t.placeholder) && void 0 !== _ ? _ : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: O, applicationId: l, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, n)
-            };
-          case u.ComponentType.MENTIONABLE_SELECT:
-            return {
-              type: u.ComponentType.MENTIONABLE_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (N = t.placeholder) && void 0 !== N ? N : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values, indices: O, applicationId: l, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, n)
-            };
-          case u.ComponentType.CHANNEL_SELECT:
-            return {
-              type: u.ComponentType.CHANNEL_SELECT, customId: t.custom_id, disabled: t.disabled, placeholder: null !== (L = t.placeholder) && void 0 !== L ? L : c.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, indices: O, channelTypes: t.channel_types, defaultValues: t.default_values, applicationId: l, selectedOptions: (0, r.getSnowflakeSelectDefaultValues)(t.default_values, n, null !== (y = t.channel_types) && void 0 !== y ? y : [])
-            };
-          default:
-            return null
-        }
-      }).filter(e => null != e)
-    }
+n.r(t), n.d(t, {
+  getLayoutComponentErrorText: function() {
+    return c
   },
-  getActionRowErrorText: function() {
-    return f
+  transformComponents: function() {
+    return I
   }
-});
-var n = l("392711"),
-  a = l.n(n),
-  u = l("911969"),
-  i = l("622449"),
-  s = l("768581"),
-  o = l("280501"),
-  r = l("811654"),
-  d = l("978578"),
-  c = l("689938");
-let E = ["934240649153220678", "936929561302675456", "762275850782900254", "1022952195194359889"],
-  p = /MJ::Inpaint::\d(::[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12})?(::SOLO)?/,
-  T = (e, t) => ({
+}), n("47120");
+var i = n("911969"),
+  r = n("622449"),
+  a = n("768494"),
+  s = n("768581"),
+  o = n("823379"),
+  l = n("280501"),
+  u = n("689938");
+let d = (e, t) => ({
     id: e.id,
     name: e.name,
     animated: e.animated,
@@ -86,24 +24,122 @@ let E = ["934240649153220678", "936929561302675456", "762275850782900254", "1022
       size: 48
     }) : void 0
   }),
-  m = e => (null == e ? void 0 : e.errorCode) === 429 ? c.default.Messages.INTERACTION_RATE_LIMITED : c.default.Messages.APPLICATION_COMMAND_FAILED,
-  f = (e, t, l) => {
-    let n = (null == e ? void 0 : e.data.interactionType) === u.InteractionTypes.MESSAGE_COMPONENT && (null == e ? void 0 : e.state) === i.InteractionState.FAILED ? e.data.indices : null;
-    if (null != n && a().isEqual(n.slice(0, n.length - 1), l.indices)) {
+  _ = e => (null == e ? void 0 : e.errorCode) === 429 ? u.default.Messages.INTERACTION_RATE_LIMITED : u.default.Messages.APPLICATION_COMMAND_FAILED,
+  c = (e, t, n) => {
+    let a = (null == e ? void 0 : e.data.interactionType) === i.InteractionTypes.MESSAGE_COMPONENT && (null == e ? void 0 : e.state) === r.InteractionState.FAILED ? e.data.componentId : null;
+    if (null != (null != a ? function(e, t) {
+        if (e.type === i.ComponentType.ACTION_ROW) {
+          var n;
+          return null !== (n = e.components.find(e => e.id === t)) && void 0 !== n ? n : null
+        }
+      }(n, a) : null)) {
       var s;
-      return null !== (s = null == t ? void 0 : t.interactionError) && void 0 !== s ? s : m(e)
+      return null !== (s = null == t ? void 0 : t.interactionError) && void 0 !== s ? s : _(e)
     }
   },
-  S = e => {
+  E = e => {
     switch (e) {
-      case u.ComponentType.ACTION_ROW:
-      case u.ComponentType.BUTTON:
-      case u.ComponentType.STRING_SELECT:
-      case u.ComponentType.INPUT_TEXT:
-      case u.ComponentType.USER_SELECT:
-      case u.ComponentType.ROLE_SELECT:
-      case u.ComponentType.MENTIONABLE_SELECT:
-      case u.ComponentType.CHANNEL_SELECT:
+      case i.ComponentType.ACTION_ROW:
+      case i.ComponentType.BUTTON:
+      case i.ComponentType.STRING_SELECT:
+      case i.ComponentType.INPUT_TEXT:
+      case i.ComponentType.USER_SELECT:
+      case i.ComponentType.ROLE_SELECT:
+      case i.ComponentType.MENTIONABLE_SELECT:
+      case i.ComponentType.CHANNEL_SELECT:
+      case i.ComponentType.TEXT:
+      case i.ComponentType.MEDIA_GALLERY:
+      case i.ComponentType.SEPARATOR:
         return !0
     }
-  }
+  };
+
+function I(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+  return e.map((e, n) => (function e(t, n, r) {
+    var s, _, c, I, f, S, h, A;
+    if (!E(t.type)) return null;
+    let {
+      includeEmojiSrc: m
+    } = n;
+    switch (t.type) {
+      case i.ComponentType.ACTION_ROW: {
+        let a = t.components.map((t, i) => (function(t, i) {
+          let a = e(t, n, [...r, i]);
+          return null == a ? null : a
+        })(t, i)).filter(o.isNotNullish);
+        return {
+          type: i.ComponentType.ACTION_ROW,
+          id: T(r),
+          components: a
+        }
+      }
+      case i.ComponentType.BUTTON: {
+        let e = null != t.emoji ? d(t.emoji, m) : void 0;
+        return {
+          type: i.ComponentType.BUTTON,
+          id: T(r),
+          customId: t.custom_id,
+          style: t.style,
+          disabled: t.disabled,
+          url: t.url,
+          label: t.label,
+          emoji: e
+        }
+      }
+      case i.ComponentType.STRING_SELECT:
+        return {
+          type: i.ComponentType.STRING_SELECT, id: T(r), customId: t.custom_id, disabled: t.disabled, options: t.options.map(e => ({
+            type: l.SelectOptionType.STRING,
+            label: e.label,
+            value: e.value,
+            default: e.default,
+            description: e.description,
+            emoji: null != e.emoji ? d(e.emoji, m) : void 0
+          })), placeholder: null !== (s = t.placeholder) && void 0 !== s ? s : u.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values
+        };
+      case i.ComponentType.INPUT_TEXT:
+        return {
+          type: t.type, id: T(r), style: t.style, customId: t.custom_id, label: t.label, value: t.value, placeholder: t.placeholder, disabled: t.disabled, required: null !== (_ = t.required) && void 0 !== _ && _, minLength: t.min_length, maxLength: t.max_length
+        };
+      case i.ComponentType.USER_SELECT:
+        return {
+          type: i.ComponentType.USER_SELECT, id: T(r), customId: t.custom_id, disabled: t.disabled, placeholder: null !== (c = t.placeholder) && void 0 !== c ? c : u.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values
+        };
+      case i.ComponentType.ROLE_SELECT:
+        return {
+          type: i.ComponentType.ROLE_SELECT, id: T(r), customId: t.custom_id, disabled: t.disabled, placeholder: null !== (I = t.placeholder) && void 0 !== I ? I : u.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values
+        };
+      case i.ComponentType.MENTIONABLE_SELECT:
+        return {
+          type: i.ComponentType.MENTIONABLE_SELECT, id: T(r), customId: t.custom_id, disabled: t.disabled, placeholder: null !== (f = t.placeholder) && void 0 !== f ? f : u.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, defaultValues: t.default_values
+        };
+      case i.ComponentType.CHANNEL_SELECT:
+        return {
+          type: i.ComponentType.CHANNEL_SELECT, id: T(r), customId: t.custom_id, disabled: t.disabled, placeholder: null !== (S = t.placeholder) && void 0 !== S ? S : u.default.Messages.MESSAGE_SELECT_COMPONENT_DEFAULT_PLACEHOLDER, minValues: t.min_values, maxValues: t.max_values, channelTypes: t.channel_types, defaultValues: t.default_values
+        };
+      case i.ComponentType.TEXT:
+        return {
+          type: i.ComponentType.TEXT, id: T(r), content: t.content
+        };
+      case i.ComponentType.MEDIA_GALLERY:
+        return {
+          type: i.ComponentType.MEDIA_GALLERY, id: T(r), items: t.items.map(e => ({
+            media: (0, a.toUnfurledMediaItem)(e.media),
+            description: e.description,
+            spoiler: e.spoiler
+          }))
+        };
+      case i.ComponentType.SEPARATOR:
+        return {
+          type: i.ComponentType.SEPARATOR, id: T(r), divider: null === (h = t.divider) || void 0 === h || h, spacing: null !== (A = t.spacing) && void 0 !== A ? A : i.SeparatorSpacingSize.SMALL
+        };
+      default:
+        return null
+    }
+  })(e, t, [n])).filter(e => null != e)
+}
+
+function T(e) {
+  return (0, l.asComponentId)(e.join(","))
+}

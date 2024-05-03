@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n.d(t, {
   SearchContext: function() {
-    return O
+    return p
   }
 }), n("653041"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120"), n("411104"), n("312677"), n("390547");
-var i, r, s = n("392711"),
-  a = n.n(s),
+var i, r, a = n("392711"),
+  s = n.n(a),
   o = n("153832"),
   l = n("147913"),
   u = n("131704"),
@@ -58,7 +58,7 @@ function N(e, t) {
     null != i && (A(i, t, e.nick), n.push(i))
   }), n
 }(r = i || (i = {})).UPDATE_USERS = "UPDATE_USERS", r.USER_RESULTS = "USER_RESULTS", r.QUERY_SET = "QUERY_SET", r.QUERY_CLEAR = "QUERY_CLEAR";
-class O {
+class p {
   setLimit(e) {
     this._limit = e, null != this._nextQuery && (this._nextQuery.limit = e)
   }
@@ -100,7 +100,7 @@ class O {
     }), this._worker = e, this._uuid = (0, o.v4)(), this._callback = t, this._limit = n, this._currentQuery = null, this._nextQuery = null, this._subscribed = !1, this.subscribe()
   }
 }
-class p extends l.default {
+class O extends l.default {
   _initialize() {
     this.rebootWebworker()
   }
@@ -126,7 +126,7 @@ class p extends l.default {
       _worker: n
     } = this;
     if (null == n) throw Error("SearchContextManager: No webworker initialized");
-    return new O(n, e, t)
+    return new p(n, e, t)
   }
   constructor(...e) {
     super(...e), S(this, "_worker", void 0), S(this, "actions", {
@@ -136,7 +136,7 @@ class p extends l.default {
       OVERLAY_INITIALIZE: e => this._handleOverlayInitialize(e),
       CURRENT_USER_UPDATE: e => this._handleCurrentUserUpdate(e),
       GUILD_CREATE: e => this._handleGuildCreate(e),
-      GUILD_MEMBERS_CHUNK: e => this._handleGuildMembersChunk(e),
+      GUILD_MEMBERS_CHUNK_BATCH: e => this._handleGuildMembersChunkBatch(e),
       GUILD_MEMBER_ADD: e => this._handleGuildMemberUpdate(e),
       GUILD_MEMBER_UPDATE: e => this._handleGuildMemberUpdate(e),
       RELATIONSHIP_ADD: e => this._handleRelationshipAdd(e),
@@ -162,10 +162,10 @@ class p extends l.default {
         let i = _.default.getMutableAllGuildsAndMembers();
         for (let e in i)
           for (let t in i[e]) {
-            var r, s;
-            let a = n[t],
-              o = null !== (s = null === (r = i[e][t]) || void 0 === r ? void 0 : r.nick) && void 0 !== s ? s : f.default.getGlobalName(a);
-            null != a && (a[e] = null != o && "" !== o ? o : null)
+            var r, a;
+            let s = n[t],
+              o = null !== (a = null === (r = i[e][t]) || void 0 === r ? void 0 : r.nick) && void 0 !== a ? a : f.default.getGlobalName(s);
+            null != s && (s[e] = null != o && "" !== o ? o : null)
           }
         this.updateUsers(Object.values(n))
       }, 3e3)
@@ -174,7 +174,7 @@ class p extends l.default {
         guilds: t
       } = e;
       setTimeout(() => {
-        let e = a().flatMap(t, e => N(e.members, e.id));
+        let e = s().flatMap(t, e => N(e.members, e.id));
         this.updateUsers(e)
       }, 3e3)
     }), S(this, "_handleOverlayInitialize", e => {
@@ -188,8 +188,8 @@ class p extends l.default {
         if (null != t)
           for (let n of T.default.keys(t)) {
             let r = i.get(n),
-              s = t[n];
-            null != r && null != s && null != s.nick && (A(r, e, s.nick), i.set(n, r))
+              a = t[n];
+            null != r && null != a && null != a.nick && (A(r, e, a.nick), i.set(n, r))
           }
       }
       this.updateUsers(Array.from(i.values())), i.clear()
@@ -205,12 +205,12 @@ class p extends l.default {
         members: n
       } = t;
       this.updateUsers(N(n, t.id))
-    }), S(this, "_handleGuildMembersChunk", e => {
+    }), S(this, "_handleGuildMembersChunkBatch", e => {
       let {
-        members: t,
-        guildId: n
-      } = e;
-      this.updateUsers(N(t, n))
+        chunks: t
+      } = e, n = [];
+      for (let e of t) n.push(...N(e.members, e.guildId));
+      this.updateUsers(n)
     }), S(this, "_handleGuildMemberUpdate", e => {
       let {
         guildId: t,
@@ -260,4 +260,4 @@ class p extends l.default {
     })
   }
 }
-t.default = new p
+t.default = new O

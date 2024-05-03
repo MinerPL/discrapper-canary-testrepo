@@ -1,60 +1,60 @@
 "use strict";
-i.r(t), i.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return g
+    return I
   }
 });
-var l = i("735250"),
-  a = i("470079"),
-  s = i("442837"),
-  n = i("481060"),
-  o = i("100527"),
-  r = i("906732"),
-  u = i("411477"),
-  d = i("197115"),
-  c = i("594174"),
-  f = i("154921"),
-  E = i("626135"),
-  _ = i("74538"),
-  T = i("981631"),
-  N = i("486324"),
-  m = i("474936"),
-  p = i("689938"),
-  I = i("897370");
+var n = a("735250"),
+  s = a("470079"),
+  l = a("442837"),
+  r = a("481060"),
+  i = a("100527"),
+  u = a("906732"),
+  o = a("411477"),
+  c = a("197115"),
+  d = a("594174"),
+  A = a("154921"),
+  E = a("626135"),
+  f = a("74538"),
+  h = a("981631"),
+  _ = a("486324"),
+  R = a("474936"),
+  p = a("689938"),
+  g = a("17160");
 
-function g(e) {
+function I(e) {
   let {
     analyticsSection: t,
-    type: i
-  } = e, g = (0, s.useStateFromStores)([c.default], () => c.default.getCurrentUser()), R = _.default.canUseAnimatedAvatar(g), A = _.default.canUsePremiumProfileCustomization(g), h = i === N.UploadTypes.BANNER && A || i === N.UploadTypes.AVATAR && R, {
-    sourceAnalyticsLocations: B
-  } = (0, r.default)(o.default.PREMIUM_PREVIEW_UPSELL_HEADER);
-  if (a.useEffect(() => {
-      !h && E.default.track(T.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
+    type: a
+  } = e, I = (0, l.useStateFromStores)([d.default], () => d.default.getCurrentUser()), m = f.default.canUseAnimatedAvatar(I), N = f.default.canUsePremiumProfileCustomization(I), M = a === _.UploadTypes.BANNER && N || a === _.UploadTypes.AVATAR && m, {
+    sourceAnalyticsLocations: T
+  } = (0, u.default)(i.default.PREMIUM_PREVIEW_UPSELL_HEADER);
+  if (s.useEffect(() => {
+      !M && E.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         type: t,
-        location_stack: B
+        location_stack: T
       })
-    }, [h, t, B]), h) return null;
-  let x = (0, l.jsx)(d.default, {
-    className: I.__invalid_getNitroLink,
-    size: n.Button.Sizes.SMALL,
-    look: n.Button.Looks.LINK,
-    color: n.Button.Colors.LINK,
-    subscriptionTier: m.PremiumSubscriptionSKUs.TIER_2,
+    }, [M, t, T]), M) return null;
+  let S = (0, n.jsx)(c.default, {
+    className: g.__invalid_getNitroLink,
+    size: r.Button.Sizes.SMALL,
+    look: r.Button.Looks.LINK,
+    color: r.Button.Colors.LINK,
+    subscriptionTier: R.PremiumSubscriptionSKUs.TIER_2,
     buttonText: p.default.Messages.PREMIUM_PREVIEW_GET_NITRO.format(),
     showIcon: !1,
     premiumModalAnalyticsLocation: {
       section: t,
-      object: T.AnalyticsObjects.BUTTON_CTA
+      object: h.AnalyticsObjects.BUTTON_CTA
     },
     disableShine: !0
   });
-  return (0, l.jsx)(u.default, {
+  return (0, n.jsx)(o.default, {
     reducedRightPadding: !0,
-    className: I.nitroPreviewUpsell,
+    className: g.nitroPreviewUpsell,
     text: p.default.Messages.PREMIUM_PREVIEW.format(),
-    textSize: f.default.Sizes.SIZE_14,
-    textColor: f.default.Colors.HEADER_PRIMARY,
-    button: x
+    textSize: A.default.Sizes.SIZE_14,
+    textColor: A.default.Colors.HEADER_PRIMARY,
+    button: S
   })
 }

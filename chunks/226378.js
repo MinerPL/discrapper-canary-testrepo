@@ -1,73 +1,82 @@
 "use strict";
 n.r(t), n.d(t, {
   useJoinOrStartButtonState: function() {
-    return o
+    return u
   }
 });
 var s, a, l = n("470079"),
-  i = n("527805"),
-  r = n("689938");
+  i = n("867176"),
+  r = n("527805"),
+  o = n("689938");
 
-function o(e) {
+function u(e) {
   let {
     embeddedActivity: t,
     joinability: n,
-    currentEmbeddedActivity: s
+    currentEmbeddedActivity: s,
+    channel: a
   } = e;
   return l.useMemo(() => (function(e) {
     let {
       embeddedActivity: t,
       joinability: n,
-      currentEmbeddedActivity: s
-    } = e, a = null == t, l = {
+      currentEmbeddedActivity: s,
+      channel: a
+    } = e, l = null == t, u = {
       disabled: !1,
-      isJoinAction: !a,
-      text: a ? r.default.Messages.START : r.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
+      isJoinAction: !l,
+      text: l ? o.default.Messages.START : o.default.Messages.EMBEDDED_ACTIVITIES_JOIN,
       tooltip: void 0
-    };
-    if (null != t && null != s && t.instanceId === s.instanceId) return {
-      ...l,
+    }, d = (0, i.isActivitiesInTextEnabled)(a, l, "EmbeddedApplicationInstanceUtils");
+    if (null != t && null != s && t.launchId === s.launchId) return {
+      ...u,
       disabled: !0,
-      text: r.default.Messages.EMBEDDED_ACTIVITIES_JOINED,
-      tooltip: r.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
+      text: o.default.Messages.EMBEDDED_ACTIVITIES_JOINED,
+      tooltip: o.default.Messages.EMBEDDED_ACTIVITIES_ALREADY_IN_ACTIVITY
     };
-    if (null != n && n !== i.EmbeddedActivityJoinability.CAN_JOIN) {
+    if (l) return {
+      ...u,
+      disabled: !d,
+      tooltip: d ? void 0 : o.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_DISABLED_START
+    };
+    if (null != n && n !== r.EmbeddedActivityJoinability.CAN_JOIN) {
       let e;
       switch (n) {
-        case i.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-          e = r.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
+        case r.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+          e = o.default.Messages.EMBEDDED_ACTIVITIES_INVALID_PERMISSIONS;
           break;
-        case i.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
-          e = r.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
+        case r.EmbeddedActivityJoinability.ACTIVITY_AGE_GATED:
+          e = o.default.Messages.EMBEDDED_ACTIVITIES_LAUNCH_FAIL_AGE_GATE;
           break;
-        case i.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-          e = r.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS;
+        case r.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+          e = o.default.Messages.EMBEDDED_ACTIVITIES_APPLICATION_UNSUPPORTED_OS;
           break;
-        case i.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
-          e = r.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS;
+        case r.EmbeddedActivityJoinability.ACTIVITY_NOT_SUPPORTED_ON_OS:
+          e = o.default.Messages.EMBEDDED_ACTIVITIES_NOT_AVAILABLE_ON_OS;
           break;
-        case i.EmbeddedActivityJoinability.CHANNEL_FULL:
-          e = r.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL;
+        case r.EmbeddedActivityJoinability.CHANNEL_FULL:
+          e = o.default.Messages.UNABLE_TO_JOIN_CHANNEL_FULL;
           break;
-        case i.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
-          e = r.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION;
+        case r.EmbeddedActivityJoinability.NO_CHANNEL_CONNECT_PERMISSION:
+          e = o.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_NO_VOICE_PERMISSION;
           break;
-        case i.EmbeddedActivityJoinability.NO_CHANNEL:
-        case i.EmbeddedActivityJoinability.NO_GUILD:
-        case i.EmbeddedActivityJoinability.NO_USER:
-        case i.EmbeddedActivityJoinability.IS_AFK_CHANNEL:
-          e = r.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
+        case r.EmbeddedActivityJoinability.NO_CHANNEL:
+        case r.EmbeddedActivityJoinability.NO_GUILD:
+        case r.EmbeddedActivityJoinability.NO_USER:
+        case r.EmbeddedActivityJoinability.IS_AFK_CHANNEL:
+          e = o.default.Messages.EMBEDDED_ACTIVITIES_INSTANCE_EMBED_INVALID_CHANNEL
       }
       return {
-        ...l,
+        ...u,
         disabled: !0,
         tooltip: e
       }
     }
-    return l
+    return u
   })({
     embeddedActivity: t,
     joinability: n,
-    currentEmbeddedActivity: s
-  }), [t, n, s])
+    currentEmbeddedActivity: s,
+    channel: a
+  }), [t, n, s, a])
 }(s = a || (a = {}))[s.ACTIVE = 0] = "ACTIVE", s[s.ENDED = 1] = "ENDED"

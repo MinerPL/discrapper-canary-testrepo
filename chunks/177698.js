@@ -4,46 +4,66 @@ var a = n("735250");
 n("470079");
 var s = n("481060"),
   l = n("813615"),
-  i = n("69580"),
-  r = n("358085"),
-  o = n("998502"),
-  u = n("703912"),
-  d = n("981631");
-t.default = (0, u.default)((e, t, n, r, o, u, d, c, f, E, h, _, C) => {
-  let m = "OAuth2Authorize_".concat(e, "_").concat(E, "_").concat(h);
-  return new Promise(S => {
-    let I = e => {
+  i = n("812206"),
+  r = n("69580"),
+  o = n("358085"),
+  u = n("998502"),
+  d = n("703912"),
+  c = n("981631");
+t.default = (0, d.default)(e => {
+  var t;
+  let {
+    clientId: n,
+    authorizations: o,
+    scopes: u,
+    parsedPermissions: d,
+    responseType: c,
+    redirectUri: f,
+    codeChallenge: E,
+    codeChallengeMethod: h,
+    state: _,
+    guildId: C,
+    channelId: S,
+    prompt: m,
+    disableGuildSelect: p,
+    disclosures: I,
+    integrationType: T
+  } = e, g = "OAuth2Authorize_".concat(n, "_").concat(C, "_").concat(S), A = null != T ? null == o ? void 0 : o.get(T) : void 0, N = null !== (t = null == A ? void 0 : A.application) && void 0 !== t ? t : i.default.getApplication(n);
+  return new Promise(e => {
+    let t = t => {
       let {
-        location: t
-      } = e;
-      S(t)
+        location: n
+      } = t;
+      e(n)
     };
-    (0, s.openModal)(s => (0, a.jsx)(i.OAuth2AuthorizeModal, {
-      ...s,
-      authorization: t,
-      clientId: e,
-      scopes: null != n ? n : [],
-      callback: I,
-      responseType: o,
-      redirectUri: u,
-      codeChallenge: d,
-      codeChallengeMethod: c,
-      state: f,
-      permissions: r,
-      guildId: E,
-      channelId: h,
-      prompt: _,
-      disableGuildSelect: "boolean" == typeof C ? C : "true" === C
+    (0, s.openModal)(e => (0, a.jsx)(r.OAuth2AuthorizeModal, {
+      ...e,
+      authorizations: o,
+      clientId: n,
+      scopes: null != u ? u : [],
+      disclosures: null != I ? I : [],
+      callback: t,
+      responseType: c,
+      redirectUri: f,
+      codeChallenge: E,
+      codeChallengeMethod: h,
+      state: _,
+      permissions: d,
+      guildId: C,
+      channelId: S,
+      prompt: m,
+      disableGuildSelect: "boolean" == typeof p ? p : "true" === p,
+      integrationType: T
     }), {
-      modalKey: m,
+      modalKey: g,
       onCloseRequest: () => {
-        (0, s.closeModal)(m), S(void 0)
+        (0, s.closeModal)(g), e(void 0)
       }
-    }, (0, l.default)(t.application, h) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
+    }, null != N && (0, l.default)(N, S) ? s.POPOUT_MODAL_CONTEXT : s.DEFAULT_MODAL_CONTEXT)
   })
 }, function(e, t) {
-  if (r.isPlatformEmbedded) {
-    let n = (0, l.default)(e, t) ? d.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
-    (0, r.isWindows)() ? o.default.minimize(n): o.default.restore(n), o.default.focus(n)
+  if (o.isPlatformEmbedded) {
+    let n = (0, l.default)(e, t) ? c.PopoutWindowKeys.CHANNEL_CALL_POPOUT : null;
+    (0, o.isWindows)() ? u.default.minimize(n): u.default.restore(n), u.default.focus(n)
   }
 })

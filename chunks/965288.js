@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   AudienceEmptyTile: function() {
-    return N
+    return v
   }
 });
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("512722"),
   o = n.n(r),
@@ -23,7 +23,7 @@ var a = n("735250"),
   S = n("740624"),
   _ = n("5192"),
   T = n("590415"),
-  I = n("124689");
+  I = n("862536");
 let A = l.memo(function(e) {
     let {
       guildId: t,
@@ -48,7 +48,7 @@ let A = l.memo(function(e) {
       }) : null]
     })
   }),
-  v = l.memo(function(e) {
+  N = l.memo(function(e) {
     var t;
     let {
       participant: n,
@@ -84,7 +84,7 @@ let A = l.memo(function(e) {
       })]
     })
   }),
-  N = () => (0, a.jsx)("div", {
+  v = () => (0, a.jsx)("div", {
     className: I.tileBaseContainer
   });
 t.default = l.memo(function(e) {
@@ -103,7 +103,7 @@ t.default = l.memo(function(e) {
       (0, f.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
         return t => (0, a.jsx)(e, {
           ...t,
           user: r,
@@ -125,7 +125,7 @@ t.default = l.memo(function(e) {
       userId: r.id
     }), [s.id, C, r.id]);
   return (0, a.jsx)(c.Popout, {
-    preload: () => (0, m.default)(r.id, r.getAvatarURL(s.guild_id, 80), {
+    preload: () => (0, m.maybeFetchUserProfileForPopout)(r, {
       guildId: s.guild_id,
       channelId: s.id
     }),
@@ -139,7 +139,7 @@ t.default = l.memo(function(e) {
       }),
       onContextMenu: _,
       ...e,
-      children: (0, a.jsx)(v, {
+      children: (0, a.jsx)(N, {
         participant: t,
         guildId: C,
         channel: s,

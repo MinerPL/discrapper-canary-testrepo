@@ -1,36 +1,39 @@
-"use strict";
-n.r(t);
-var a = n("735250");
-n("470079");
-var s = n("399606"),
-  l = n("607070"),
-  i = n("970731"),
-  r = n("810090"),
-  o = n("19199"),
-  u = n("921944"),
-  d = n("689938"),
-  c = n("244647");
-t.default = e => {
-  let {
-    markAsDismissed: t
-  } = e, n = (0, s.useStateFromStores)([l.default], () => l.default.useReducedMotion);
-  return (0, o.useCanSeeSafetyEducationBlockMuteCoachmark)() ? (0, a.jsx)(i.default, {
-    asset: (0, a.jsx)(r.default, {
-      className: c.video,
-      src: "https://cdn.discordapp.com/attachments/1067194967979733053/1067195117439557712/Safety_BLOCK_Coachmark.mp4",
-      loop: !0,
-      autoPlay: !n,
-      width: "100%"
-    }),
-    header: d.default.Messages.SAFETY_CONSUMER_EDUCATION_BLOCK_HEADER,
-    content: d.default.Messages.SAFETY_CONSUMER_EDUCATION_BLOCK_CONTENT,
-    buttonCTA: d.default.Messages.GOT_IT,
-    className: c.__invalid_coachmark,
-    onClick: e => {
-      e.stopPropagation(), t(u.ContentDismissActionType.UNKNOWN)
-    },
-    markAsDismissed: t,
-    caretPosition: i.CaretPosition.BOTTOM_CENTER,
-    headerClassName: c.header
-  }) : null
+var i = {
+  "./2017-11-16.mp4": "221825",
+  "./2019-12-17.mp4": "666940",
+  "./channel-following.png": "247815",
+  "./discovery.jpg": "778608",
+  "./discriminator.mp4": "990860",
+  "./g250k-cl.mp4": "909851",
+  "./header.mp4": "568621",
+  "./hypesquad-hack-week/header.png": "819091",
+  "./hypesquad-hack-week/paladins-loot.png": "742305",
+  "./ko-new-year.jpg": "265921",
+  "./league-rp-cl.mp4": "566584",
+  "./polish-week.png": "560437",
+  "./special-template/desktop-cta.png": "846033",
+  "./special-template/update-badge.svg": "623904",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_BlogHdr_2500x1000.png": "928400",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_DesktopHero_Left_180x220.png": "148821",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_DesktopHero_Right_180x220.png": "982563",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_Desktop_Changelog_658X220.png": "331628",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_Desktop_FooterCTA_238x220.png": "765198",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_MobileHero_375x190.png": "199469",
+  "./stickers-launch/2020_PMM_STICKERS_Mrkt_Mobile_FooterCTA_343x78.png": "199612",
+  "./store.jpg": "926213"
+};
+
+function r(e) {
+  return n(a(e))
 }
+
+function a(e) {
+  if (!n.o(i, e)) {
+    var t = Error("Cannot find module '" + e + "'");
+    throw t.code = "MODULE_NOT_FOUND", t
+  }
+  return i[e]
+}
+r.id = '"866483"', r.keys = function() {
+  return Object.keys(i)
+}, r.resolve = a, e.exports = r

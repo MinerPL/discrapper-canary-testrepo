@@ -1,55 +1,17 @@
 "use strict";
-a.r(e), a.d(e, {
-  default: function() {
-    return o
-  }
-});
-var t = a("735250");
-a("470079");
-var n = a("481060"),
-  l = a("689938"),
-  c = a("554624"),
-  i = a("134519");
-
-function o(s) {
-  let {
-    transitionState: e,
-    onClose: a
-  } = s;
-  return (0, t.jsxs)(n.ModalRoot, {
-    transitionState: e,
-    className: c.root,
-    children: [(0, t.jsxs)(n.ModalHeader, {
-      separator: !1,
-      className: c.noScroll,
-      children: [(0, t.jsx)(n.ModalCloseButton, {
-        className: c.closeButton,
-        onClick: a
-      }), (0, t.jsx)("div", {
-        className: c.imageContainer,
-        children: (0, t.jsx)("img", {
-          src: i,
-          className: c.image,
-          alt: ""
-        })
-      })]
-    }), (0, t.jsx)(n.ModalContent, {
-      children: (0, t.jsxs)("div", {
-        className: c.content,
-        children: [(0, t.jsx)(n.Heading, {
-          variant: "heading-xl/semibold",
-          className: c.title,
-          children: l.default.Messages.INVITE_PERMISSION_MODAL_TITLE
-        }), (0, t.jsx)(n.Text, {
-          variant: "text-md/normal",
-          className: c.text,
-          children: l.default.Messages.INVITE_PERMISSION_MODAL_TEXT
-        }), (0, t.jsx)(n.Button, {
-          className: c.button,
-          onClick: a,
-          children: l.default.Messages.GOT_IT
-        })]
-      })
-    })]
-  })
+e.exports = {
+  amex: "amex__2207a",
+  amex_monochrome: "amex_monochrome__0b7e4",
+  cardBrands: "cardBrands__9327c",
+  cardFormHeader: "cardFormHeader_b9907c",
+  dinersclub: "dinersclub_fc2bee",
+  dinersclub_monochrome: "dinersclub_monochrome__610b4",
+  discover: "discover_f9979a",
+  discover_monochrome: "discover_monochrome_f87726",
+  jcb: "jcb__5cf91",
+  jcb_monochrome: "jcb_monochrome__25766",
+  mastercard: "mastercard_e9c107",
+  mastercard_monochrome: "mastercard_monochrome__528c3",
+  visa: "visa__5a17c",
+  visa_monochrome: "visa_monochrome__94780"
 }

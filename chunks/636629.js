@@ -8,7 +8,7 @@ var a = n("913527"),
   r = n("730417"),
   o = n("921944"),
   u = n("689938"),
-  d = n("50928");
+  d = n("784289");
 let c = (e, t) => ({
   bodyText: u.default.Messages.DROPS_BANNER_NOTICE.format({
     gameName: e.title,

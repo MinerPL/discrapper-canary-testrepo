@@ -16,7 +16,7 @@ n.r(t), n.d(t, {
     return A
   }
 });
-var i, r, s, a, o, l, u, d, _ = n("230711"),
+var i, r, a, s, o, l, u, d, _ = n("230711"),
   c = n("197062"),
   E = n("727866"),
   I = n("63063"),
@@ -203,6 +203,11 @@ function A(e, t, n, i) {
       title: f.default.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGE,
       description: r === T.ChannelTypes.GUILD_CATEGORY ? f.default.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGES_DESCRIPTION_CATEGORY : f.default.Messages.ROLE_PERMISSIONS_SEND_VOICE_MESSAGES_DESCRIPTION_TEXT,
       flag: T.Permissions.SEND_VOICE_MESSAGES
+    },
+    [T.Permissions.SEND_POLLS.toString()]: {
+      title: f.default.Messages.ROLE_PERMISSIONS_SEND_POLLS,
+      description: r === T.ChannelTypes.GUILD_CATEGORY ? f.default.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_CATEGORY : f.default.Messages.ROLE_PERMISSIONS_SEND_POLLS_DESCRIPTION_TEXT,
+      flag: T.Permissions.SEND_POLLS
     },
     [T.Permissions.USE_CLYDE_AI.toString()]: {
       title: f.default.Messages.ROLE_PERMISSIONS_USE_CLYDE_AI,
@@ -470,4 +475,4 @@ function A(e, t, n, i) {
       flag: T.Permissions.SET_VOICE_CHANNEL_STATUS
     }
   }
-}(s = u || (u = {})).SETTINGS_PAGE = "settings-page", s.MEMBERS_LIST = "members-list", s.EMPTY_STATE = "empty-state", s.CREATE_CHANNEL = "create-channel", (a = d || (d = {})).BASIC = "basic", a.ADVANCED = "advanced"
+}(a = u || (u = {})).SETTINGS_PAGE = "settings-page", a.MEMBERS_LIST = "members-list", a.EMPTY_STATE = "empty-state", a.CREATE_CHANNEL = "create-channel", (s = d || (d = {})).BASIC = "basic", s.ADVANCED = "advanced"

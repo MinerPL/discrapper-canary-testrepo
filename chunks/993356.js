@@ -1,7 +1,7 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return E
+    return f
   }
 });
 var s = i("735250");
@@ -28,22 +28,22 @@ function S() {
   }]
 }
 
-function E(e) {
-  var t, E;
-  let f = function(e) {
+function f(e) {
+  var t, f;
+  let E = function(e) {
       let {
         suppressEveryone: t,
         suppressRoles: i,
-        mobilePush: E,
-        messageNotifications: f,
-        notifyHighlights: g
+        mobilePush: f,
+        messageNotifications: E,
+        notifyHighlights: N
       } = (0, n.useStateFromStoresObject)([o.default], () => ({
         suppressEveryone: o.default.isSuppressEveryoneEnabled(e.id),
         suppressRoles: o.default.isSuppressRolesEnabled(e.id),
         mobilePush: o.default.isMobilePushEnabled(e.id),
         messageNotifications: o.default.getMessageNotifications(e.id),
         notifyHighlights: o.default.getNotifyHighlights(e.id)
-      }), [e.id]), _ = g === r.HighlightSettings.DISABLED, N = (0, u.default)(e.id);
+      }), [e.id]), _ = N === r.HighlightSettings.DISABLED, g = (0, u.default)(e.id);
 
       function M(t, i) {
         l.default.updateGuildNotificationSettings(e.id, t, i)
@@ -62,7 +62,7 @@ function E(e) {
               action: () => M({
                 message_notifications: t
               }, d.NotificationLabel.notifications(t)),
-              checked: t === f
+              checked: t === E
             }, t)
           })
         }), (0, s.jsxs)(a.MenuGroup, {
@@ -89,39 +89,39 @@ function E(e) {
               }, d.NotificationLabel.highlights(_))
             },
             checked: _
-          }), N]
+          }), g]
         }), (0, s.jsx)(a.MenuGroup, {
           children: (0, s.jsx)(a.MenuCheckboxItem, {
             id: "mobile-push",
             label: c.default.Messages.FORM_LABEL_MOBILE_PUSH_NOTIFICATIONS,
             action: () => M({
-              mobile_push: !E
-            }, d.NotificationLabel.mobilePush(!E)),
-            checked: E
+              mobile_push: !f
+            }, d.NotificationLabel.mobilePush(!f)),
+            checked: f
           })
         })]
       })
     }(e),
-    g = (0, n.useStateFromStores)([o.default], () => o.default.getMessageNotifications(e.id), [e.id]),
-    _ = null === (E = S()) || void 0 === E ? void 0 : null === (t = E.find(e => {
+    N = (0, n.useStateFromStores)([o.default], () => o.default.getMessageNotifications(e.id), [e.id]),
+    _ = null === (f = S()) || void 0 === f ? void 0 : null === (t = f.find(e => {
       let {
         setting: t
       } = e;
-      return t === g
+      return t === N
     })) || void 0 === t ? void 0 : t.label;
-  return null != f ? (0, s.jsx)(a.MenuItem, {
+  return null != E ? (0, s.jsx)(a.MenuItem, {
     id: "guild-notifications",
     label: c.default.Messages.NOTIFICATION_SETTINGS,
     subtext: _,
     action: () => (0, a.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([i.e("99387"), i.e("5863")]).then(i.bind(i, "751212"));
+      } = await Promise.all([i.e("99387"), i.e("5863"), i.e("82321")]).then(i.bind(i, "751212"));
       return i => (0, s.jsx)(t, {
         ...i,
         guildId: e.id
       })
     }),
-    children: f
+    children: E
   }) : null
 }

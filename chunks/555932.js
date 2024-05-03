@@ -6,24 +6,24 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("718017"),
-  a = n("442837"),
+  a = n("718017"),
+  s = n("442837"),
   o = n("607070"),
   l = n("267642"),
   u = n("198466"),
   d = n("436444"),
   _ = n("981631"),
   c = n("689938"),
-  E = n("75107");
+  E = n("372020");
 let I = [_.BoostedGuildTiers.NONE, _.BoostedGuildTiers.TIER_1, _.BoostedGuildTiers.TIER_2, _.BoostedGuildTiers.TIER_3];
 
 function T(e) {
   let {
     guild: t
-  } = e, n = (0, a.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, h] = r.useState(0), A = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], O = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], p = (t.premiumSubscriberCount - N) / (O - N), R = d.TierMarkerPositions[t.premiumTier], C = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
+  } = e, n = (0, s.useStateFromStores)([o.default], () => o.default.useReducedMotion), [T, f] = r.useState(!1), [S, h] = r.useState(0), A = r.useRef(null), m = Math.min(_.BoostedGuildTiers.TIER_3, t.premiumTier + 1), N = _.AppliedGuildBoostsRequiredForBoostedGuildTier[t.premiumTier], p = _.AppliedGuildBoostsRequiredForBoostedGuildTier[m], O = (t.premiumSubscriberCount - N) / (p - N), R = d.TierMarkerPositions[t.premiumTier], C = d.TierMarkerPositions[m], g = t.premiumTier === _.BoostedGuildTiers.TIER_3, {
     progressBarFillWidthFactor: L,
-    isProgressBarAnimationComplete: D,
-    setShouldFireConfetti: v,
+    isProgressBarAnimationComplete: v,
+    setShouldFireConfetti: D,
     shouldFireConfetti: M,
     tierMarkerAnimationPosition: y
   } = function(e) {
@@ -31,16 +31,16 @@ function T(e) {
       fillFactor: t,
       guildBoostCount: n,
       premiumTier: i,
-      isRevealed: a,
+      isRevealed: s,
       useReducedMotion: o
     } = e, [l, u] = r.useState(o ? i : -1), [c, E] = r.useState(0 === n), [I, T] = r.useState(!1), f = r.useRef(!0), {
       widthFactor: S
-    } = (0, s.useSpring)({
+    } = (0, a.useSpring)({
       from: {
         widthFactor: 0
       },
       to: {
-        widthFactor: a ? t : 0
+        widthFactor: s ? t : 0
       },
       config: {
         tension: 15,
@@ -77,7 +77,7 @@ function T(e) {
       tierMarkerAnimationPosition: l
     }
   }({
-    fillFactor: g ? 1 : p * (C - R) + R,
+    fillFactor: g ? 1 : O * (C - R) + R,
     isRevealed: T || n,
     useReducedMotion: n,
     premiumTier: t.premiumTier,
@@ -104,7 +104,7 @@ function T(e) {
     }),
     children: [(0, i.jsxs)("div", {
       className: E.progressBarScrubber,
-      children: [(0, i.jsx)(s.animated.div, {
+      children: [(0, i.jsx)(a.animated.div, {
         className: E.progressBarFill,
         style: {
           width: L.to({
@@ -118,9 +118,9 @@ function T(e) {
     }), I.map(e => (0, i.jsx)(d.default, {
       confettiTriggerRef: A,
       guild: t,
-      isProgressBarAnimationComplete: D,
+      isProgressBarAnimationComplete: v,
       setConfettiCount: h,
-      setShouldFireConfetti: v,
+      setShouldFireConfetti: D,
       tier: e,
       tierMarkerAnimationPosition: y,
       children: (0, l.getTierName)(e)

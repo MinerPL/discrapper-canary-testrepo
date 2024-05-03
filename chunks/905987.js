@@ -6,7 +6,7 @@ t.r(s), t.d(s, {
 }), t("47120");
 var a = t("735250"),
   l = t("470079"),
-  i = t("803997"),
+  i = t("120356"),
   n = t.n(i),
   d = t("442837"),
   r = t("481060"),
@@ -26,8 +26,8 @@ var a = t("735250"),
   g = t("186523"),
   M = t("553826"),
   O = t("689938"),
-  C = t("36808"),
-  A = t("762377");
+  C = t("816805"),
+  A = t("926966");
 
 function R(e) {
   let {
@@ -78,16 +78,16 @@ function R(e) {
       })]
     }), (0, a.jsxs)("div", {
       className: A.container,
-      children: [(0, a.jsx)(p, {
+      children: [(0, a.jsx)(E, {
         hidden: "channel" === t
-      }), (0, a.jsx)(E, {
+      }), (0, a.jsx)(p, {
         hidden: "server" === t
       })]
     })]
   })
 }
 
-function p(e) {
+function E(e) {
   let {
     hidden: s
   } = e, t = (0, d.useStateFromStores)([c.default, o.default], () => {
@@ -261,7 +261,7 @@ function p(e) {
   })
 }
 
-function E(e) {
+function p(e) {
   let {
     hidden: s
   } = e, [t, i] = l.useState(0);

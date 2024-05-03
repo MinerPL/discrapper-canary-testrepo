@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("912527"),
   S = l("191741"),
   g = l("202597"),
-  h = l("768581"),
-  p = l("709054"),
+  p = l("768581"),
+  h = l("709054"),
   _ = l("51144"),
   O = l("486199"),
   A = l("366598"),
@@ -30,7 +30,7 @@ var n = l("735250"),
   x = l("725875"),
   R = l("981631"),
   M = l("689938"),
-  v = l("97104");
+  v = l("171218");
 
 function L(e) {
   let {
@@ -87,7 +87,7 @@ function j(e) {
     let e = [{
       icon: T.default,
       text: M.default.Messages.INTEGRATION_ADDED_DATE.format({
-        timestamp: p.default.extractTimestamp(y.id)
+        timestamp: h.default.extractTimestamp(y.id)
       })
     }];
     return null != y.user && e.push({
@@ -96,7 +96,7 @@ function j(e) {
         user: _.default.getUserTag(y.user)
       })
     }), e
-  }, [y.id, y.user]), w = a.useMemo(() => null != D.bot ? (0, n.jsx)(C.default, {
+  }, [y.id, y.user]), W = a.useMemo(() => null != D.bot ? (0, n.jsx)(C.default, {
     guild: l,
     applicationIntegration: r
   }) : (0, n.jsx)(i.Card, {
@@ -108,7 +108,7 @@ function j(e) {
       children: M.default.Messages.INTEGRATIONS_APPLICATION_NO_BOT
     })
   }), [D.bot, r, l]), {
-    applicationSubscriptionListingsShown: W
+    applicationSubscriptionListingsShown: w
   } = (0, u.default)({
     applicationId: D.id,
     groupListingId: D.primarySkuId,
@@ -117,7 +117,7 @@ function j(e) {
   return (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(O.default, {
       name: D.name,
-      imageSrc: null !== (t = D.getIconURL(32)) && void 0 !== t ? t : h.DEFAULT_AVATARS["0"],
+      imageSrc: null !== (t = D.getIconURL(32)) && void 0 !== t ? t : p.DEFAULT_AVATARS["0"],
       details: F,
       isHeader: !0
     }), (null == D ? void 0 : D.description) != null ? (0, n.jsx)(f.default, {
@@ -134,8 +134,8 @@ function j(e) {
       children: [(0, n.jsx)(A.default, {
         icon: (0, n.jsx)(E.default, {}),
         title: M.default.Messages.INTEGRATIONS_APPLICATION_BOT
-      }), w]
-    }) : null, W && null != D.primarySkuId && (0, n.jsxs)("div", {
+      }), W]
+    }) : null, w && null != D.primarySkuId && (0, n.jsxs)("div", {
       className: v.section,
       children: [(0, n.jsx)(A.default, {
         icon: (0, n.jsx)(S.default, {}),

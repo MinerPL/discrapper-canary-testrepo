@@ -1,116 +1,78 @@
 "use strict";
 n.r(t), n.d(t, {
+  UserProfileAnalyticsProvider: function() {
+    return l
+  },
+  useTrackUserProfileAction: function() {
+    return u
+  },
   useUserProfileAnalyticsContext: function() {
     return d
-  },
-  useUserProfileAnalyticsProvider: function() {
-    return u
   }
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("906732"),
-  a = n("221292");
-let o = [],
-  l = r.createContext({
-    layout: null,
-    userId: null,
-    guildId: null,
-    channelId: null,
-    messageId: null,
-    roleId: null
-  }),
-  u = function(e) {
+  a = n("906732"),
+  s = n("221292");
+let o = r.createContext({}),
+  l = e => {
     let {
-      layout: t,
-      userId: n,
+      children: t,
+      layout: n,
+      userId: l,
       guildId: u,
       channelId: d,
       messageId: _,
       roleId: c,
-      newAnalyticsLocations: E = o
-    } = e, I = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1], {
-      analyticsLocations: T
-    } = (0, s.default)(E), f = r.useMemo(() => ({
-      layout: t,
-      userId: null != n ? n : null,
-      guildId: null != u ? u : null,
-      channelId: null != d ? d : null,
-      messageId: null != _ ? _ : null,
-      roleId: null != c ? c : null
-    }), [t, n, u, d, _, c]);
-    r.useEffect(() => {
-      I && (0, a.trackUserProfileAction)({
-        action: "VIEW",
-        analyticsLocations: T,
-        layout: t,
-        userId: n,
-        guildId: u,
-        channelId: d,
-        messageId: _,
-        roleId: c
-      })
-    }, [I]);
-    let S = r.useCallback(e => {
-      (0, a.trackUserProfileAction)({
-        layout: t,
-        userId: n,
-        guildId: u,
-        channelId: d,
-        messageId: _,
-        roleId: c,
-        analyticsLocations: T,
-        ...e
-      })
-    }, [t, n, u, d, _, c, T]);
-    return {
-      UserProfileAnalyticsProvider: r.useCallback(e => {
-        let {
-          children: t
-        } = e;
-        return (0, i.jsx)(l.Provider, {
-          value: f,
-          children: (0, i.jsx)(s.AnalyticsLocationProvider, {
-            value: T,
-            children: t
-          })
-        })
-      }, [f, T]),
-      analyticsLocations: T,
-      trackUserProfileAction: S
-    }
-  },
-  d = function() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let {
-      layout: i,
-      userId: o,
+      shouldTrackViewOnMount: E = !0
+    } = e, {
+      analyticsLocations: I
+    } = (0, a.default)(), T = r.useMemo(() => ({
+      layout: n,
+      userId: l,
       guildId: u,
       channelId: d,
       messageId: _,
       roleId: c
-    } = r.useContext(l), {
-      analyticsLocations: E
-    } = (0, s.default)(t), I = r.useCallback(e => {
-      null != i && null != o && (0, a.trackUserProfileAction)({
-        layout: i,
-        userId: o,
+    }), [n, l, u, d, _, c]);
+    return r.useEffect(() => {
+      E && null != n && null != l && (0, s.trackUserProfileAction)({
+        action: "VIEW",
+        layout: n,
+        userId: l,
         guildId: u,
         channelId: d,
         messageId: _,
         roleId: c,
-        analyticsLocations: E,
-        ...e
+        analyticsLocations: I
       })
-    }, [i, o, u, d, _, c, E]);
+    }, [E]), (0, i.jsx)(o.Provider, {
+      value: T,
+      children: t
+    })
+  },
+  u = e => {
+    let {
+      analyticsLocations: t
+    } = (0, a.default)();
+    return r.useCallback(n => {
+      let {
+        layout: i,
+        userId: r
+      } = e;
+      null != i && null != r && (0, s.trackUserProfileAction)({
+        analyticsLocations: t,
+        layout: i,
+        userId: r,
+        ...e,
+        ...n
+      })
+    }, [e, t])
+  },
+  d = () => {
+    let e = r.useContext(o);
     return {
-      layout: i,
-      userId: o,
-      guildId: u,
-      channelId: d,
-      messageId: _,
-      roleId: c,
-      analyticsLocations: E,
-      trackUserProfileAction: I
+      trackUserProfileAction: u(e),
+      ...e
     }
   }

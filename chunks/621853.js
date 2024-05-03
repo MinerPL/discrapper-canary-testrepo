@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("789020");
 var i = n("392711"),
   r = n.n(i),
-  s = n("726542"),
-  a = n("706454"),
+  a = n("726542"),
+  s = n("706454"),
   o = n("598077"),
   l = n("314897"),
   u = n("430824"),
@@ -27,9 +27,9 @@ let I = new Set,
   A = {},
   m = {},
   N = !1,
-  O = !1;
+  p = !1;
 
-function p() {
+function O() {
   I.clear(), T.clear(), f = {}, S = {}, h = {}, A = {}, m = {}, N = !1
 }
 
@@ -48,7 +48,7 @@ function C(e) {
 }
 
 function g(e) {
-  T.delete(e.userId), h[e.userId] = r()(e.mutualFriends).map(e => ({
+  return r()(e).map(e => ({
     key: e.id,
     user: new o.default(e),
     status: d.default.getStatus(e.id)
@@ -57,10 +57,14 @@ function g(e) {
       user: t
     } = e;
     return t.username.toLowerCase()
-  }).value(), A[e.userId] = e.mutualFriends.length
+  }).value()
 }
 
-function L() {
+function L(e) {
+  T.delete(e.userId), h[e.userId] = g(e.mutualFriends), A[e.userId] = e.mutualFriends.length
+}
+
+function v() {
   if (0 === Object.keys(m).length) return !1;
   m = {}
 }
@@ -70,8 +74,8 @@ function D(e) {
   delete m[e.user.id]
 }
 
-function v(e) {
-  var t, n, i, r, a, o, l, d, _, E, T, h, N, O, p, R, C;
+function M(e) {
+  var t, n, i, r, s, o, l, d, _, E, T, N, p, O, R, C, L;
   if (I.delete(e.user.id), null != e.mutual_guilds) {
     let t = {};
     e.mutual_guilds.forEach(e => {
@@ -92,33 +96,35 @@ function v(e) {
     let t = e.mutual_friends_count;
     A[e.user.id] = t
   }
-  let g = null !== (_ = e.premium_since) && void 0 !== _ ? _ : null,
-    L = e.application;
+  null != e.mutual_friends && (h[e.user.id] = g(e.mutual_friends), A[e.user.id] = e.mutual_friends.length);
+  let v = null !== (_ = e.premium_since) && void 0 !== _ ? _ : null,
+    D = e.application;
   if (f[e.user.id] = {
       userId: e.user.id,
       banner: null === (t = e.user_profile) || void 0 === t ? void 0 : t.banner,
       accentColor: null === (n = e.user_profile) || void 0 === n ? void 0 : n.accent_color,
       themeColors: null === (i = e.user_profile) || void 0 === i ? void 0 : i.theme_colors,
       popoutAnimationParticleType: null === (r = e.user_profile) || void 0 === r ? void 0 : r.popout_animation_particle_type,
-      bio: null !== (E = null === (a = e.user_profile) || void 0 === a ? void 0 : a.bio) && void 0 !== E ? E : "",
+      bio: null !== (E = null === (s = e.user_profile) || void 0 === s ? void 0 : s.bio) && void 0 !== E ? E : "",
       profileEffectId: null === (l = e.user_profile) || void 0 === l ? void 0 : null === (o = l.profile_effect) || void 0 === o ? void 0 : o.id,
       pronouns: null !== (T = null === (d = e.user_profile) || void 0 === d ? void 0 : d.pronouns) && void 0 !== T ? T : "",
-      connectedAccounts: null !== (h = e.connected_accounts.filter(e => s.default.isSupported(e.type))) && void 0 !== h ? h : [],
-      applicationRoleConnections: null !== (N = e.application_role_connections) && void 0 !== N ? N : [],
-      premiumSince: null != g ? new Date(g) : null,
+      connectedAccounts: null !== (N = e.connected_accounts.filter(e => a.default.isSupported(e.type))) && void 0 !== N ? N : [],
+      applicationRoleConnections: null !== (p = e.application_role_connections) && void 0 !== p ? p : [],
+      premiumSince: null != v ? new Date(v) : null,
       premiumType: e.premium_type,
       premiumGuildSince: null != e.premium_guild_since ? new Date(e.premium_guild_since) : null,
       lastFetched: Date.now(),
       legacyUsername: e.legacy_username,
       profileFetchFailed: !1,
-      application: null != L ? {
-        id: L.id,
-        primarySkuId: L.primary_sku_id,
-        customInstallUrl: L.custom_install_url,
-        installParams: L.install_params,
-        integrationTypesConfig: L.integration_types_config,
-        flags: L.flags,
-        popularApplicationCommandIds: L.popular_application_command_ids
+      application: null != D ? {
+        id: D.id,
+        primarySkuId: D.primary_sku_id,
+        customInstallUrl: D.custom_install_url,
+        installParams: D.install_params,
+        integrationTypesConfig: D.integration_types_config,
+        flags: D.flags,
+        popularApplicationCommandIds: D.popular_application_command_ids,
+        storefront_available: D.storefront_available
       } : null,
       badges: e.badges
     }, null != e.guild_member_profile) {
@@ -128,8 +134,8 @@ function v(e) {
       banner: e.guild_member_profile.banner,
       accentColor: e.guild_member_profile.accent_color,
       themeColors: null === (O = e.guild_member_profile) || void 0 === O ? void 0 : O.theme_colors,
-      popoutAnimationParticleType: null === (p = e.guild_member_profile) || void 0 === p ? void 0 : p.popout_animation_particle_type,
-      profileEffectId: null === (C = e.guild_member_profile) || void 0 === C ? void 0 : null === (R = C.profile_effect) || void 0 === R ? void 0 : R.id,
+      popoutAnimationParticleType: null === (R = e.guild_member_profile) || void 0 === R ? void 0 : R.popout_animation_particle_type,
+      profileEffectId: null === (L = e.guild_member_profile) || void 0 === L ? void 0 : null === (C = L.profile_effect) || void 0 === C ? void 0 : C.id,
       bio: e.guild_member_profile.bio,
       pronouns: e.guild_member_profile.pronouns,
       badges: e.guild_badges
@@ -140,14 +146,14 @@ function v(e) {
   }
 }
 
-function M(e) {
+function y(e) {
   let {
     userId: t
   } = e;
   I.add(t)
 }
 
-function y(e) {
+function P(e) {
   var t;
   let {
     userId: n
@@ -169,19 +175,19 @@ function y(e) {
   }, I.delete(n)
 }
 
-function P(e) {
+function U(e) {
   N = !0
 }
 
-function U(e) {
+function b(e) {
   N = !1, null != e.guild_id ? ! function(e) {
     let {
       userId: t,
       guild_id: n,
       accent_color: i,
       banner: r,
-      bio: s,
-      pronouns: a,
+      bio: a,
+      pronouns: s,
       popout_animation_particle_type: o,
       theme_colors: l,
       profileEffectId: u
@@ -193,8 +199,8 @@ function U(e) {
       ...d,
       accentColor: i,
       banner: r,
-      bio: s,
-      pronouns: a,
+      bio: a,
+      pronouns: s,
       popoutAnimationParticleType: o,
       themeColors: l,
       profileEffectId: u
@@ -205,8 +211,8 @@ function U(e) {
       accent_color: n,
       banner: i,
       bio: r,
-      pronouns: s,
-      popout_animation_particle_type: a,
+      pronouns: a,
+      popout_animation_particle_type: s,
       theme_colors: o,
       profileEffectId: l
     } = e, u = f[t];
@@ -216,23 +222,23 @@ function U(e) {
       accentColor: n,
       banner: i,
       bio: r,
-      pronouns: s,
-      popoutAnimationParticleType: a,
+      pronouns: a,
+      popoutAnimationParticleType: s,
       themeColors: o,
       profileEffectId: l
     }
   }(e)
 }
 
-function b(e) {
+function G(e) {
   N = !1
 }
 
-function G(e) {
-  O = !0
+function w(e) {
+  p = !0
 }
 
-function w(e) {
+function B(e) {
   let {
     user: t
   } = e;
@@ -243,9 +249,9 @@ function w(e) {
 function k() {
   I.clear(), f = {}, S = {}
 }
-class B extends _.default {
+class V extends _.default {
   initialize() {
-    this.waitFor(c.default), this.syncWith([a.default], k)
+    this.waitFor(c.default), this.syncWith([s.default], k)
   }
   isFetchingProfile(e) {
     return I.has(e)
@@ -273,12 +279,12 @@ class B extends _.default {
     return m[e]
   }
   getIsAccessibilityTooltipViewed() {
-    return O
+    return p
   }
   takeSnapshot() {
     let e = l.default.getId();
     return {
-      version: B.LATEST_SNAPSHOT_VERSION,
+      version: V.LATEST_SNAPSHOT_VERSION,
       data: [{
         userId: e,
         profile: f[e]
@@ -288,25 +294,25 @@ class B extends _.default {
   constructor() {
     super({
       CACHE_LOADED_LAZY: () => this.loadCache(),
-      USER_PROFILE_FETCH_START: M,
-      USER_PROFILE_FETCH_FAILURE: y,
-      USER_PROFILE_FETCH_SUCCESS: v,
-      USER_PROFILE_UPDATE_START: P,
-      USER_PROFILE_UPDATE_SUCCESS: U,
-      USER_PROFILE_UPDATE_FAILURE: b,
-      USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: G,
+      USER_PROFILE_FETCH_START: y,
+      USER_PROFILE_FETCH_FAILURE: P,
+      USER_PROFILE_FETCH_SUCCESS: M,
+      USER_PROFILE_UPDATE_START: U,
+      USER_PROFILE_UPDATE_SUCCESS: b,
+      USER_PROFILE_UPDATE_FAILURE: G,
+      USER_PROFILE_ACCESSIBILITY_TOOLTIP_VIEWED: w,
       MUTUAL_FRIENDS_FETCH_START: R,
-      MUTUAL_FRIENDS_FETCH_SUCCESS: g,
+      MUTUAL_FRIENDS_FETCH_SUCCESS: L,
       MUTUAL_FRIENDS_FETCH_FAILURE: C,
-      GUILD_JOIN: L,
-      GUILD_DELETE: L,
+      GUILD_JOIN: v,
+      GUILD_DELETE: v,
       GUILD_MEMBER_ADD: D,
       GUILD_MEMBER_REMOVE: D,
-      GUILD_MEMBER_UPDATE: w,
-      USER_UPDATE: w,
-      LOGOUT: p
+      GUILD_MEMBER_UPDATE: B,
+      USER_UPDATE: B,
+      LOGOUT: O
     }), E(this, "loadCache", () => {
-      let e = this.readSnapshot(B.LATEST_SNAPSHOT_VERSION);
+      let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION);
       null != e && e.forEach(e => {
         let {
           userId: t,
@@ -317,4 +323,4 @@ class B extends _.default {
     })
   }
 }
-E(B, "displayName", "UserProfileStore"), E(B, "LATEST_SNAPSHOT_VERSION", 1), t.default = new B
+E(V, "displayName", "UserProfileStore"), E(V, "LATEST_SNAPSHOT_VERSION", 1), t.default = new V

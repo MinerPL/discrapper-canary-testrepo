@@ -11,12 +11,11 @@ var E, _, a, n, T = s("442837"),
   L = s("981631");
 let d = {};
 
-function N(e) {
-  var t;
-  return null !== (t = d[e]) && void 0 !== t ? t : 0
+function S(e) {
+  return d[e]
 }
 
-function S(e, t) {
+function N(e, t) {
   d[e] = t
 }
 
@@ -25,12 +24,12 @@ function g(e, t, s) {
     var E, _, a, n;
     if (t === r.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       ;
-      let t = N(e);
+      let t = d[e];
       E = e, _ = t + 1, d[E] = _
     }
     if (s === r.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       ;
-      let t = N(e);
+      let t = d[e];
       a = e, n = Math.max(0, t - 1), d[a] = n
     }
   }
@@ -43,10 +42,10 @@ let D = !1,
 
 function G(e) {
   let t = [];
-  return t.push(c.GUILD_JOIN_REQUESTS_BY_ID(e.id)), t.push(c.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
+  return t.push(c.GUILD_JOIN_REQUESTS_BY_ID(e.joinRequestId)), t.push(c.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
 }
-let O = new i.SecondaryIndexMap(G, e => "".concat(e.id)),
-  U = new i.SecondaryIndexMap(G, e => "".concat(e.id)),
+let O = new i.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
+  U = new i.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
   C = new i.SecondaryIndexMap(G, e => "".concat(e.actionedAt));
 
 function M(e) {
@@ -54,7 +53,7 @@ function M(e) {
 }
 
 function R(e) {
-  P[e.join_request_id] = e, O.set(e.id, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.id), U.set(e.id, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.id), C.set(e.id, e))
+  P[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), U.set(e.joinRequestId, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.joinRequestId), C.set(e.joinRequestId, e))
 }
 
 function f(e) {
@@ -64,14 +63,14 @@ function f(e) {
     request: _
   } = e, a = (0, o.joinRequestFromServer)(_), n = l.default.getCurrentUser();
   if (null == n || a.userId === n.id) return !1;
-  let T = null === (s = a.id, t = O.get(s)) || void 0 === t ? void 0 : t.applicationStatus;
+  let T = null === (s = a.joinRequestId, t = O.get(s)) || void 0 === t ? void 0 : t.applicationStatus;
   return g(E, a.applicationStatus, T), R(a), !0
 }
 let h = {},
   p = {},
-  m = {},
+  y = {},
   P = {};
-class y extends(E = T.default.Store) {
+class m extends(E = T.default.Store) {
   getRequest(e) {
     return P[e]
   }
@@ -80,7 +79,7 @@ class y extends(E = T.default.Store) {
     return (0, I.isActionedApplicationStatus)(t) ? C.values(s) : (0, I.isSubmittedApplicationStatus)(t) ? U.values(s) : O.values(s)
   }
   getSubmittedGuildJoinRequestTotal(e) {
-    return N(e)
+    return d[e]
   }
   isFetching() {
     return D
@@ -97,16 +96,16 @@ class y extends(E = T.default.Store) {
   }
   getSelectedGuildJoinRequest(e) {
     var t;
-    let s = m[e];
-    return null != s ? (t = s.id, O.get(t)) : null
+    let s = y[e];
+    return null != s ? (t = s.joinRequestId, O.get(t)) : null
   }
 }
-n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = y) ? Object.defineProperty(_, a, {
+n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = m) ? Object.defineProperty(_, a, {
   value: n,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[a] = n, t.default = new y(u.default, {
+}) : _[a] = n, t.default = new m(u.default, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t
@@ -183,6 +182,6 @@ n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = y) ? Object.defineProp
       guildId: t,
       request: s
     } = e;
-    m[t] = s
+    y[t] = s
   }
 })

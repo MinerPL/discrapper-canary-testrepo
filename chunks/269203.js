@@ -1,82 +1,122 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return I
   }
 }), n("47120"), n("773603");
 var a = n("735250"),
   l = n("470079"),
   s = n("442837"),
   i = n("481060"),
-  r = n("933557"),
-  o = n("693546"),
-  u = n("826581"),
-  d = n("246364"),
-  c = n("666233"),
-  f = n("360328"),
-  h = n("430824"),
-  m = n("496675"),
-  p = n("709054"),
-  E = n("967128"),
-  C = n("981631"),
-  g = n("689938"),
-  S = n("591373");
+  r = n("693546"),
+  o = n("826581"),
+  u = n("246364"),
+  d = n("937111"),
+  c = n("705563"),
+  f = n("430824"),
+  h = n("496675"),
+  m = n("594174"),
+  p = n("346656"),
+  E = n("709054"),
+  C = n("967128"),
+  g = n("981631"),
+  S = n("689938"),
+  _ = n("17057");
 
-function _(e) {
+function T(e) {
   var t;
   let {
-    channel: n
-  } = e, [_, T] = l.useState(!1), I = p.default.cast(n.id), {
-    joinRequest: A,
-    isModmin: v
-  } = (0, s.useStateFromStoresObject)([u.default, h.default, m.default], () => {
-    let e = u.default.getRequest(I),
-      t = h.default.getGuild(null == e ? void 0 : e.guildId);
-    return {
-      joinRequest: e,
-      isModmin: null != t && m.default.can(C.Permissions.KICK_MEMBERS, t)
-    }
-  }), {
-    approveRequest: N,
-    rejectRequest: x,
-    submitting: M
-  } = (0, f.useJoinRequestButtonActions)(null == A ? void 0 : A.guildId, null == A ? void 0 : A.userId);
-  l.useEffect(() => {
-    null == A && (T(!0), o.default.fetchGuildJoinRequest(I).finally(() => {
-      T(!1)
-    }))
-  }, [A, I]);
-  let R = null !== (t = (0, r.default)(n)) && void 0 !== t ? t : "";
-  return (0, a.jsxs)(E.default, {
-    channelId: n.id,
-    className: S.container,
-    children: [(0, a.jsx)(E.EmptyMessageHeader, {
-      children: R
-    }), (0, a.jsx)(E.EmptyMessageBody, {
-      children: null != A && null != A.formResponses ? (0, a.jsxs)("div", {
-        className: S.formContainer,
-        children: [(0, a.jsx)("div", {
-          children: (0, a.jsx)(c.default, {
-            guildId: A.guildId,
-            formFields: A.formResponses.filter(e => e.field_type !== d.VerificationFormFieldTypes.TERMS),
-            showRequirements: !1
-          })
-        }), v && A.applicationStatus === d.GuildJoinRequestApplicationStatuses.SUBMITTED && (0, a.jsxs)("div", {
-          className: S.buttons,
-          children: [(0, a.jsx)(i.Button, {
-            color: i.Button.Colors.GREEN,
-            submitting: M,
-            disabled: A.applicationStatus !== d.GuildJoinRequestApplicationStatuses.SUBMITTED,
-            onClick: N,
-            children: g.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_APPROVE_APPLICATION
-          }), (0, a.jsx)(i.Button, {
-            color: i.Button.Colors.RED,
-            onClick: x,
-            disabled: M || A.applicationStatus !== d.GuildJoinRequestApplicationStatuses.SUBMITTED,
-            children: g.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_DENY_APPLICATION
+    joinRequest: n,
+    guild: l
+  } = e, r = (0, s.useStateFromStores)([m.default], () => m.default.getUser(n.userId));
+  return (0, a.jsxs)("div", {
+    className: _.summaryContainer,
+    children: [(0, a.jsxs)("div", {
+      className: _.summaryHeader,
+      children: [null != l && (0, a.jsxs)("div", {
+        className: _.summaryHeaderClanInfo,
+        children: [(0, a.jsx)(p.default, {
+          guild: l,
+          active: !0,
+          size: p.default.Sizes.SMOL,
+          className: _.guildIcon
+        }), (0, a.jsx)(i.Heading, {
+          variant: "heading-sm/semibold",
+          color: "header-primary",
+          children: l.name
+        })]
+      }), null != r && (0, a.jsx)(i.Heading, {
+        variant: "heading-xl/semibold",
+        color: "header-primary",
+        children: S.default.Messages.MEMBER_VERIFICATION_USERS_APPLICATION.format({
+          username: r.globalName
+        })
+      })]
+    }), null === (t = n.formResponses) || void 0 === t ? void 0 : t.filter(e => e.field_type !== u.VerificationFormFieldTypes.TERMS).map(e => {
+      let t = e.field_type === u.VerificationFormFieldTypes.MULTIPLE_CHOICE && null != e.response ? e.choices[e.response] : e.response;
+      return (0, a.jsxs)(a.Fragment, {
+        children: [(0, a.jsx)("hr", {
+          className: _.summarySeparator
+        }), (0, a.jsxs)("div", {
+          className: _.formResponseContainer,
+          children: [(0, a.jsx)(i.Text, {
+            variant: "text-xs/semibold",
+            color: "text-muted",
+            children: e.label
+          }), (0, a.jsx)(i.Text, {
+            variant: "text-md/medium",
+            color: "text-primary",
+            children: t
           })]
         })]
-      }) : _ ? (0, a.jsx)(i.Spinner, {}) : null
+      })
     })]
+  })
+}
+
+function I(e) {
+  let {
+    channel: t
+  } = e, [n, u] = l.useState(!1), [m, p] = l.useState(!1), S = E.default.cast(t.id), {
+    joinRequest: I,
+    guild: A
+  } = (0, s.useStateFromStoresObject)([o.default, d.default, f.default, h.default], () => {
+    var e;
+    let t = o.default.getRequest(S);
+    if (null == t) return {
+      joinRequest: null,
+      isModmin: !1,
+      guild: null
+    };
+    let n = null !== (e = f.default.getGuild(t.guildId)) && void 0 !== e ? e : d.default.getJoinRequestGuild(t.guildId);
+    return {
+      joinRequest: t,
+      isModmin: null != n && h.default.can(g.Permissions.KICK_MEMBERS, n),
+      guild: n
+    }
+  });
+  return l.useEffect(() => {
+    null == A && !m && (p(!0), r.default.fetchRequestToJoinGuilds())
+  }, [A, m]), l.useEffect(() => {
+    null == I && (u(!0), r.default.fetchGuildJoinRequest(S).finally(() => {
+      u(!1)
+    }))
+  }, [I, S]), (0, a.jsx)(C.default, {
+    channelId: t.id,
+    className: _.container,
+    children: (0, a.jsx)(C.EmptyMessageBody, {
+      children: null != I && null != I.formResponses ? (0, a.jsxs)("div", {
+        className: _.formContainer,
+        children: [(0, a.jsx)("div", {
+          children: (0, a.jsx)(T, {
+            guild: A,
+            joinRequest: I
+          })
+        }), (0, a.jsx)(c.default, {
+          channelId: t.id,
+          showProfile: !0
+        })]
+      }) : n ? (0, a.jsx)(i.Spinner, {}) : null
+    })
   })
 }

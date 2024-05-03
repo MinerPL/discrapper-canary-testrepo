@@ -1,46 +1,46 @@
 "use strict";
-i.r(t);
-var a = i("735250");
-i("470079");
-var l = i("481060"),
-  n = i("239091"),
-  s = i("282597"),
-  r = i("877715"),
-  o = i("729285"),
-  d = i("838221"),
-  c = i("246364"),
-  u = i("700833"),
-  f = i("689938"),
-  m = i("757607");
+n.r(t);
+var a = n("735250");
+n("470079");
+var i = n("481060"),
+  r = n("239091"),
+  s = n("282597"),
+  l = n("877715"),
+  o = n("729285"),
+  c = n("838221"),
+  d = n("246364"),
+  u = n("700833"),
+  f = n("689938"),
+  m = n("956655");
 
-function E(e) {
+function h(e) {
   let {
     addFormField: t,
-    onSelect: i,
+    onSelect: n,
     guild: o
   } = e;
-  return (0, a.jsx)(l.Menu, {
+  return (0, a.jsx)(i.Menu, {
     navId: "add-questions",
     className: m.menu,
-    onClose: n.closeContextMenu,
+    onClose: r.closeContextMenu,
     "aria-label": f.default.Messages.USER_ACTIONS_MENU_LABEL,
-    onSelect: i,
-    children: (0, a.jsxs)(l.MenuGroup, {
-      children: [(0, a.jsx)(l.MenuItem, {
+    onSelect: n,
+    children: (0, a.jsxs)(i.MenuGroup, {
+      children: [(0, a.jsx)(i.MenuItem, {
         id: "text-input",
-        icon: d.default,
+        icon: c.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_TEXT_INPUT,
-        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.TEXT_INPUT, t, o)
-      }), (0, a.jsx)(l.MenuItem, {
+        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.TEXT_INPUT, t, o)
+      }), (0, a.jsx)(i.MenuItem, {
         id: "paragraph",
-        icon: r.default,
+        icon: l.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_PARAGRAPH,
-        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.PARAGRAPH, t, o)
-      }), (0, a.jsx)(l.MenuItem, {
+        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.PARAGRAPH, t, o)
+      }), (0, a.jsx)(i.MenuItem, {
         id: "multiple-choice",
         icon: s.default,
         label: f.default.Messages.MEMBER_VERIFICATION_FORM_ITEM_MULTIPLE_CHOICE,
-        action: () => (0, u.openEmptyFormFieldModal)(c.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
+        action: () => (0, u.openEmptyFormFieldModal)(d.VerificationFormFieldTypes.MULTIPLE_CHOICE, t, o)
       })]
     })
   })
@@ -48,37 +48,32 @@ function E(e) {
 t.default = function(e) {
   let {
     addFormField: t,
-    guild: i
+    guild: n
   } = e, s = e => {
-    (0, n.openContextMenu)(e, e => (0, a.jsx)(E, {
+    (0, r.openContextMenu)(e, e => (0, a.jsx)(h, {
       ...e,
       addFormField: t,
-      guild: i
+      guild: n
     }), {
       position: "top",
       align: "center"
     })
   };
-  return (0, a.jsx)("div", {
-    className: m.container,
-    children: (0, a.jsx)(l.Tooltip, {
-      text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_QUESTION_LIMIT,
-      children: e => (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)(l.Clickable, {
-          ...e,
-          className: m.iconContainer,
-          onClick: s,
-          children: (0, a.jsx)(o.default, {
-            width: 18,
-            height: 20,
-            className: m.icon
-          })
-        }), (0, a.jsx)(l.Text, {
-          color: "interactive-normal",
-          variant: "text-sm/normal",
-          children: f.default.Messages.MEMBER_VERIFICATION_ADD_QUESTION
-        })]
-      })
+  return (0, a.jsx)(i.Tooltip, {
+    text: f.default.Messages.GUILD_SETTINGS_MEMBER_VERIFICATION_QUESTION_LIMIT,
+    children: e => (0, a.jsxs)(i.Clickable, {
+      ...e,
+      className: m.container,
+      onClick: s,
+      children: [(0, a.jsx)(o.default, {
+        width: 24,
+        height: 24,
+        className: m.icon
+      }), (0, a.jsx)(i.Text, {
+        color: "interactive-active",
+        variant: "text-md/semibold",
+        children: f.default.Messages.MEMBER_VERIFICATION_ADD_QUESTION
+      })]
     })
   })
 }

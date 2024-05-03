@@ -1,11 +1,11 @@
 "use strict";
 n.r(t), n("411104");
-var i, r, s = n("735250");
+var i, r, a = n("735250");
 n("470079");
-var a = n("803997"),
-  o = n.n(a),
+var s = n("120356"),
+  o = n.n(s),
   l = n("325767"),
-  u = n("33940");
+  u = n("731253");
 (r = i || (i = {})).LEFT = "LEFT", r.RIGHT = "RIGHT", r.UP = "UP", r.DOWN = "DOWN", r.UP_LEFT = "UP_LEFT", r.DOWN_RIGHT = "DOWN_RIGHT";
 let d = e => {
   let {
@@ -13,12 +13,12 @@ let d = e => {
     height: n = 24,
     color: i = "currentColor",
     direction: r,
-    foreground: a,
+    foreground: s,
     className: d,
     title: _,
     ...c
   } = e;
-  return (0, s.jsxs)("svg", {
+  return (0, a.jsxs)("svg", {
     ...(0, l.default)(c),
     width: t,
     height: n,
@@ -41,10 +41,10 @@ let d = e => {
       }
     }(r)),
     viewBox: "0 0 24 24",
-    children: [null != _ ? (0, s.jsx)("title", {
+    children: [null != _ ? (0, a.jsx)("title", {
       children: _
-    }) : null, (0, s.jsx)("polygon", {
-      className: a,
+    }) : null, (0, a.jsx)("polygon", {
+      className: s,
       fill: i,
       fillRule: "nonzero",
       points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"

@@ -13,7 +13,7 @@ var s = n("735250"),
   u = n("699516"),
   d = n("512665"),
   c = n("768760"),
-  f = n("50182");
+  f = n("904335");
 
 function E(e) {
   let {
@@ -23,7 +23,7 @@ function E(e) {
     [n.guild_id]: [t.author.id]
   }), [n.guild_id, t.author.id]);
   (0, i.useSubscribeGuildMembers)(_);
-  let T = a.useMemo(() => null != t.content && "" !== t.content ? (0, r.default)(t, {
+  let m = a.useMemo(() => null != t.content && "" !== t.content ? (0, r.default)(t, {
     formatInline: !0
   }).content : null, [t]);
   return (0, s.jsxs)("div", {
@@ -53,7 +53,7 @@ function E(e) {
             children: a
           }), i]
         })
-      }(t, T, E)
+      }(t, m, E)
     })]
   })
 }

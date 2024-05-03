@@ -32,7 +32,7 @@ var a = s("735250"),
   N = s("974513"),
   g = s("290511"),
   h = s("689938"),
-  C = s("583782");
+  C = s("761734");
 
 function R(e) {
   let t, {
@@ -131,9 +131,10 @@ function R(e) {
 }
 
 function x(e) {
-  let t = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(e)),
-    [s, a] = (0, o.useChattableDefaultChannels)(e, t);
-  return a.length >= g.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING && s.length >= g.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
+  let t = (0, n.useStateFromStores)([r.default], () => r.default.getDefaultChannelIds(e)),
+    s = l.useMemo(() => new Set(t), [t]),
+    [a, i] = (0, o.useChattableDefaultChannels)(e, s);
+  return i.length >= g.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING && a.length >= g.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
 }
 
 function L(e) {
@@ -143,32 +144,32 @@ function L(e) {
 }
 
 function O(e) {
-  var t, s, l, i;
+  var t, s, i, d;
   let {
-    guildId: d,
-    onEdit: u,
-    disableGoodStatus: c
-  } = e, _ = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(d)), I = (0, n.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(d, r.default.getDefaultChannelIds(d), r.default.getOnboardingPrompts(d)).length), [, T] = (0, o.useChattableDefaultChannels)(d, _), S = T.length, f = x(d), m = (0, N.useAdvancedModeReady)(d), L = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(d));
-  let O = (t = f, s = L, l = S, i = I, s ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
-    numDefaultChannels: l,
-    numFromQuestions: i - l
+    guildId: u,
+    onEdit: c,
+    disableGoodStatus: _
+  } = e, I = (0, n.useStateFromStoresArray)([r.default], () => r.default.getDefaultChannelIds(u)), T = (0, n.useStateFromStores)([r.default], () => (0, o.getMinimumSetOfDefaultChannelIds)(u, r.default.getDefaultChannelIds(u), r.default.getOnboardingPrompts(u)).length), S = l.useMemo(() => new Set(I), [I]), [, f] = (0, o.useChattableDefaultChannels)(u, S), m = f.length, L = x(u), O = (0, N.useAdvancedModeReady)(u), A = (0, n.useStateFromStores)([r.default], () => r.default.isAdvancedMode(u));
+  let p = (t = L, s = A, i = m, d = T, s ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS_ADVANCED.format({
+    numDefaultChannels: i,
+    numFromQuestions: d - i
   }) : t ? h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NUM_DEFAULT_CHANNELS.format({
-    numDefaultChannels: l
+    numDefaultChannels: i
   }) : h.default.Messages.GUILD_ONBOARDING_SETUP_REVIEW_NOT_ENOUGH_DEFAULT_CHANNELS.format({
     numDefaultChannels: g.MIN_NUMBER_OF_DEFAULT_CHANNELS_FOR_ONBOARDING,
     numChattableChannels: g.NUM_DEFAULT_CHATTABLE_CHANNELS_MIN
   }));
   return (0, a.jsx)(R, {
-    title: L ? h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
-    description: O,
+    title: A ? h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS_ADVANCED : h.default.Messages.GUILD_SETTINGS_DEFAULT_CHANNELS,
+    description: p,
     icon: (0, a.jsx)(E.default, {
       width: 24,
       height: 24,
       className: C.channelIcon
     }),
-    hasStarted: S > 0 || L,
-    status: f || m ? c ? "none" : "good" : "required",
-    onEdit: u
+    hasStarted: m > 0 || A,
+    status: L || O ? _ ? "none" : "good" : "required",
+    onEdit: c
   })
 }
 

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   FriendRow: function() {
-    return C
+    return g
   },
   default: function() {
-    return g
+    return S
   }
 });
 var a = n("735250"),
@@ -14,23 +14,24 @@ var a = n("735250"),
   r = n("239091"),
   o = n("232567"),
   u = n("129861"),
-  d = n("158776"),
-  c = n("785717"),
-  f = n("621853"),
-  h = n("171368"),
-  m = n("981631"),
-  p = n("689938"),
-  E = n("521170");
+  d = n("906732"),
+  c = n("158776"),
+  f = n("785717"),
+  h = n("621853"),
+  m = n("171368"),
+  p = n("981631"),
+  E = n("689938"),
+  C = n("613398");
 
-function C(e) {
+function g(e) {
   let {
     user: t,
     status: n,
     onSelect: l,
     onContextMenu: r
-  } = e, o = (0, s.useStateFromStores)([d.default], () => d.default.isMobileOnline(t.id));
+  } = e, o = (0, s.useStateFromStores)([c.default], () => c.default.isMobileOnline(t.id));
   return (0, a.jsxs)(i.Clickable, {
-    className: E.listRow,
+    className: C.listRow,
     onClick: () => l(t.id),
     onContextMenu: e => r(e, t),
     children: [(0, a.jsx)(i.Avatar, {
@@ -39,48 +40,50 @@ function C(e) {
       size: i.AvatarSizes.SIZE_40,
       status: n,
       isMobile: o,
-      className: E.listAvatar
+      className: C.listAvatar
     }), (0, a.jsx)(u.default, {
       user: t,
-      className: E.listName,
-      discriminatorClass: E.listDiscriminator
+      className: C.listName,
+      discriminatorClass: C.listDiscriminator
     })]
   })
 }
 
-function g(e) {
+function S(e) {
   let t, {
       user: u,
-      onClose: d
+      onClose: c
     } = e,
-    g = (0, s.useStateFromStores)([f.default], () => f.default.getMutualFriends(u.id)),
+    S = (0, s.useStateFromStores)([h.default], () => h.default.getMutualFriends(u.id)),
     {
-      analyticsLocations: S,
-      guildId: _,
-      channelId: T,
-      messageId: I,
-      roleId: A
-    } = (0, c.useUserProfileAnalyticsContext)();
+      analyticsLocations: _
+    } = (0, d.default)(),
+    {
+      guildId: T,
+      channelId: I,
+      messageId: A,
+      roleId: N
+    } = (0, f.useUserProfileAnalyticsContext)();
 
   function v(e) {
-    d(), (0, h.openUserProfileModal)({
+    c(), (0, m.openUserProfileModal)({
       userId: e,
-      guildId: null != _ ? _ : void 0,
-      channelId: null != T ? T : void 0,
-      messageId: null != I ? I : void 0,
-      roleId: null != A ? A : void 0,
-      sourceAnalyticsLocations: S,
+      guildId: T,
+      channelId: I,
+      messageId: A,
+      roleId: N,
+      sourceAnalyticsLocations: _,
       analyticsLocation: {
-        section: m.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
+        section: p.AnalyticsSections.USER_PROFILE_MUTUAL_FRIENDS
       }
     })
   }
 
-  function N(e, t) {
+  function x(e, t) {
     (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("64409")]).then(n.bind(n, "881351"));
+      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
       return n => (0, a.jsx)(e, {
         ...n,
         user: t
@@ -88,25 +91,25 @@ function g(e) {
     })
   }
   return l.useEffect(() => {
-    null == g && (0, o.fetchMutualFriends)(u.id)
-  }, [g, u.id]), t = null == g ? (0, a.jsx)("div", {
-    className: E.empty,
+    null == S && (0, o.fetchMutualFriends)(u.id)
+  }, [S, u.id]), t = null == S ? (0, a.jsx)("div", {
+    className: C.empty,
     children: (0, a.jsx)(i.Spinner, {})
-  }) : 0 === g.length ? (0, a.jsxs)("div", {
-    className: E.empty,
+  }) : 0 === S.length ? (0, a.jsxs)("div", {
+    className: C.empty,
     children: [(0, a.jsx)("div", {
-      className: E.emptyIconFriends
+      className: C.emptyIconFriends
     }), (0, a.jsx)("div", {
-      className: E.emptyText,
-      children: p.default.Messages.NO_MUTUAL_FRIENDS
+      className: C.emptyText,
+      children: E.default.Messages.NO_MUTUAL_FRIENDS
     })]
-  }) : g.map(e => (0, a.jsx)(C, {
+  }) : S.map(e => (0, a.jsx)(g, {
     user: e.user,
     status: e.status,
     onSelect: v,
-    onContextMenu: N
+    onContextMenu: x
   }, e.key)), (0, a.jsx)(i.ScrollerThin, {
-    className: E.listScroller,
+    className: C.listScroller,
     fade: !0,
     children: t
   })

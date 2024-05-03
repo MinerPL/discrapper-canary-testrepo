@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
     return h
   }
 }), n("47120"), n("411104"), n("177593");
-var i, r, s = n("874141"),
-  a = n.n(s),
+var i, r, a = n("874141"),
+  s = n.n(a),
   o = n("565925"),
   l = n.n(o),
   u = n("839548"),
@@ -73,8 +73,8 @@ class h extends u.default {
     if (null != t.capture && null != t.capture.width && null != t.capture.height && null != e.remoteSinkWantsPixelCount && 0 !== e.remoteSinkWantsPixelCount && 0 !== t.capture.height) {
       let i = t.capture.width / t.capture.height,
         r = Math.sqrt(e.remoteSinkWantsPixelCount * i),
-        s = t.capture.width / r;
-      n = s < 1 ? void 0 : s
+        a = t.capture.width / r;
+      n = a < 1 ? void 0 : a
     }
     this.logger.info("BaseWebRTCConnection.updateVideoQuality: resolutionScaleFactor: ".concat(n, ", ") + "encodingVideoWidth: ".concat(e.encodingVideoWidth, ", remoteSinkWantsMaxFramerate: ").concat(e.remoteSinkWantsMaxFramerate, ", ") + "encodingVideoMaxBitRate: ".concat(e.encodingVideoMaxBitRate, ", localWant: ").concat(this.getLocalWant())), this.setVideoEncoderParameters([{
       parameter: 1,
@@ -87,16 +87,16 @@ class h extends u.default {
       value: e.remoteSinkWantsMaxFramerate
     }]);
     let r = e.encodingVideoWidth,
-      s = e.encodingVideoHeight;
+      a = e.encodingVideoHeight;
     for (let e of i.getTracks()) {
-      var a, o;
+      var s, o;
       let t = e.getConstraints(),
-        n = null === (a = t.width) || void 0 === a ? void 0 : a.max,
+        n = null === (s = t.width) || void 0 === s ? void 0 : s.max,
         i = null === (o = t.height) || void 0 === o ? void 0 : o.max;
-      (n !== r || i !== s) && (this.logger.info("BaseWebRTCConnection.updateVideoQuality: old: ".concat(n, " x ").concat(i, ", new: ").concat(r, " x ").concat(s)), t.width = {
+      (n !== r || i !== a) && (this.logger.info("BaseWebRTCConnection.updateVideoQuality: old: ".concat(n, " x ").concat(i, ", new: ").concat(r, " x ").concat(a)), t.width = {
         max: r
       }, t.height = {
-        max: s
+        max: a
       }, e.applyConstraints(t))
     }
   }
@@ -136,7 +136,7 @@ class h extends u.default {
     })
   }
   recalculatePrioritySpeakers() {
-    this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), a()(this.outputs, (e, t) => {
+    this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter(e => this.canHavePriority.has(e))), s()(this.outputs, (e, t) => {
       e.volume = this.computeLocalVolume(t)
     })
   }
@@ -193,13 +193,9 @@ class h extends u.default {
   setPostponeDecodeLevel(e) {}
   setReconnectInterval(e) {}
   setKeyframeInterval(e) {}
-  startSamplesPlayback(e, t, n) {}
-  stopSamplesPlayback() {}
   startSamplesLocalPlayback(e, t, n, i) {}
   stopSamplesLocalPlayback(e) {}
   stopAllSamplesLocalPlayback() {}
-  setRtcLogEphemeralKey(e) {}
-  setRtcLogMarker(e) {}
   setVideoQualityMeasurement(e) {}
   setVideoEncoderExperiments(e) {}
   setBandwidthEstimationExperiments(e) {}
@@ -221,7 +217,7 @@ class h extends u.default {
       this.updateVideoQuality()
     }), S(this, "handleAudioPermission", e => this.emit(d.BaseConnectionEvent.AudioPermission, e)), S(this, "handleVideoPermission", e => this.emit(d.BaseConnectionEvent.VideoPermission, e)), S(this, "handleVideo", e => {
       var t;
-      return this.emit(d.BaseConnectionEvent.Video, this.ids.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters)
+      return this.emit(d.BaseConnectionEvent.Video, this.userId, e, this.audioSSRC, this.videoStreamParameters[0].ssrc, null !== (t = this.videoStreamParameters[0].rtxSsrc) && void 0 !== t ? t : 0, this.videoStreamParameters)
     }), S(this, "handleDesktopSourceEnd", () => this.emit(d.BaseConnectionEvent.DesktopSourceEnd)), S(this, "handleStream", e => this.setStream(e)), S(this, "handleVoiceActivity", e => {
       let t = e <= this.silenceThreshold;
       this.silenced !== t && !this.input.mute() && (this.silenced = t, this.emit(d.BaseConnectionEvent.Silence, t))
@@ -237,7 +233,7 @@ class h extends u.default {
           !this.interacted && "suspended" === this.input.getAudioState() && setImmediate(() => this.emit(e, !0))
       }
     }), S(this, "handleInputSpeaking", e => {
-      this.emit(d.BaseConnectionEvent.Speaking, this.ids.userId, e ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE, this.audioSSRC)
+      this.emit(d.BaseConnectionEvent.Speaking, this.userId, e ? T.SpeakingFlags.VOICE : T.SpeakingFlags.NONE, this.audioSSRC)
     }), S(this, "handleAudioContextStateChange", () => {
       !this.interacted && "running" === this.input.getAudioState() && (this.interact(), this.emit(d.BaseConnectionEvent.InteractionRequired, !1))
     }), S(this, "handleStats", e => {

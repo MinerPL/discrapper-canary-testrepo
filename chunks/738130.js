@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 });
 var i = l("735250"),
   a = l("470079"),
-  n = l("803997"),
+  n = l("120356"),
   s = l.n(n),
   r = l("392711"),
   c = l("153832"),
@@ -31,7 +31,7 @@ var i = l("735250"),
   P = l("981631"),
   y = l("420212"),
   j = l("689938"),
-  S = l("896759");
+  S = l("275614");
 let O = E.default.getArticleURL(P.HelpdeskArticles.APP_DIRECTORY_HEADER_LEARN_MORE);
 
 function L(e) {
@@ -44,9 +44,9 @@ function L(e) {
     children: (0, i.jsx)(d.FocusRingScope, {
       containerRef: l,
       children: (0, i.jsx)("div", {
-        className: s()(S.closeContent, o.isMobile ? S.closeContentMobile : S.closeContentNotMobile),
+        className: S.closeContent,
         children: (0, i.jsx)(u.default, {
-          className: s()(S.closeIcon, o.isMobile ? S.__invalid_closeIconMobile : S.closeIconNotMobile),
+          className: S.closeIcon,
           closeAction: t,
           keybind: "ESC"
         })
@@ -59,8 +59,9 @@ function D(e) {
   let {
     onTitleClick: t,
     showsLearnMoreCta: l,
-    guildId: n
-  } = e, r = (0, i.jsxs)(a.Fragment, {
+    guildId: n,
+    children: r
+  } = e, c = (0, i.jsxs)(a.Fragment, {
     children: [(0, i.jsx)(g.default, {
       title: j.default.Messages.APP_DIRECTORY
     }), l && (0, i.jsx)(d.Anchor, {
@@ -74,19 +75,19 @@ function D(e) {
       children: j.default.Messages.LEARN_MORE
     })]
   });
-  return (0, i.jsx)("div", {
+  return (0, i.jsxs)("div", {
     className: S.header,
-    children: null != t ? (0, i.jsx)(x.default, {
+    children: [null != t ? (0, i.jsx)(x.default, {
       href: P.Routes.APPLICATION_DIRECTORY,
       children: (0, i.jsx)(d.Clickable, {
         onClick: t,
         className: s()(S.titleContainer, S.clickable),
-        children: r
+        children: c
       })
     }) : (0, i.jsx)("div", {
       className: S.titleContainer,
-      children: r
-    })
+      children: c
+    }), r]
   })
 }
 
@@ -172,10 +173,8 @@ function k(e) {
     return document.addEventListener("keydown", e), () => {
       document.removeEventListener("keydown", e)
     }
-  }, [Y]), (0, i.jsxs)(i.Fragment, {
-    children: [n ? (0, i.jsx)(L, {
-      onClose: Y
-    }) : null, (0, i.jsx)(d.AdvancedScroller, {
+  }, [Y]), (0, i.jsx)(i.Fragment, {
+    children: (0, i.jsx)(d.AdvancedScroller, {
       className: s()(S.directoryContainer, {
         [S.directoryContainerMobile]: o.isMobile,
         [S.directoryContainerTablet]: o.isTablet
@@ -197,7 +196,10 @@ function k(e) {
         children: [(0, i.jsx)(D, {
           onTitleClick: x ? N.goHome : void 0,
           showsLearnMoreCta: (null == g ? void 0 : g.type) === T.ApplicationDirectoryViews.HOME,
-          guildId: r
+          guildId: r,
+          children: n ? (0, i.jsx)(L, {
+            onClose: Y
+          }) : null
         }), k && (0, i.jsx)(M, {
           view: I,
           onClick: () => {
@@ -205,6 +207,6 @@ function k(e) {
           }
         }), t]
       })
-    })]
+    })
   })
 }

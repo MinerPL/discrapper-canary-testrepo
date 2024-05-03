@@ -12,34 +12,34 @@ n.r(t), n.d(t, {
 });
 var i = n("442837"),
   r = n("430824"),
-  s = n("496675"),
-  a = n("9156"),
+  a = n("496675"),
+  s = n("9156"),
   o = n("594174"),
   l = n("981631");
 
 function u(e) {
-  let t = (0, i.useStateFromStores)([a.default], () => a.default.isOptInEnabled(e)),
-    n = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(e)),
-    s = (0, i.useStateFromStores)([o.default], () => o.default.getCurrentUser());
-  return null != e && null != n && null != s && (n.hasFeature(l.GuildFeatures.COMMUNITY) || s.isStaff()) && t
+  return (0, i.useStateFromStores)([s.default, r.default, o.default], () => {
+    var t, n, i, a;
+    let u = s.default.isOptInEnabled(e),
+      d = null !== (i = null === (t = r.default.getGuild(e)) || void 0 === t ? void 0 : t.hasFeature(l.GuildFeatures.COMMUNITY)) && void 0 !== i && i,
+      _ = null !== (a = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.isStaff()) && void 0 !== a && a;
+    return u && (d || _)
+  })
 }
 
 function d(e) {
   let t = r.default.getGuild(e),
     n = o.default.getCurrentUser();
-  return null != e && null != t && null != n && (t.hasFeature(l.GuildFeatures.COMMUNITY) || n.isStaff()) && a.default.isOptInEnabled(e)
+  return null != e && null != t && null != n && (t.hasFeature(l.GuildFeatures.COMMUNITY) || n.isStaff()) && s.default.isOptInEnabled(e)
 }
 
 function _(e) {
-  let t = (0, i.useStateFromStores)([r.default], () => r.default.getGuild(e)),
-    {
-      canManageGuild: n,
-      canManageRoles: a
-    } = (0, i.useStateFromStoresObject)([s.default], () => ({
-      canManageGuild: s.default.can(l.Permissions.MANAGE_GUILD, t),
-      canManageRoles: s.default.can(l.Permissions.MANAGE_ROLES, t)
-    }));
-  if (null == t) return !1;
-  let o = t.hasFeature(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED);
-  return n && a && !o
+  return (0, i.useStateFromStores)([r.default, a.default], () => {
+    var t;
+    let n = r.default.getGuild(e),
+      i = a.default.can(l.Permissions.MANAGE_GUILD, n),
+      s = a.default.can(l.Permissions.MANAGE_ROLES, n),
+      o = null !== (t = null == n ? void 0 : n.hasFeature(l.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED)) && void 0 !== t && t;
+    return null != n && i && s && !o
+  })
 }

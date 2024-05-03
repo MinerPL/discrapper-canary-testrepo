@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var a, l = n("735250"),
   s = n("470079"),
-  i = n("803997"),
+  i = n("120356"),
   r = n.n(i),
   o = n("512722"),
   u = n.n(o),
@@ -20,8 +20,8 @@ var a, l = n("735250"),
   T = n("168551"),
   I = n("597952"),
   A = n("628123"),
-  v = n("151851"),
-  N = n("587061"),
+  N = n("151851"),
+  v = n("587061"),
   x = n("392358"),
   M = n("892254"),
   R = n("706454"),
@@ -37,7 +37,7 @@ var a, l = n("735250"),
   w = n("928518"),
   k = n("981631"),
   H = n("689938"),
-  B = n("506675");
+  B = n("892876");
 
 function G(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -52,7 +52,7 @@ class V extends(a = s.Component) {
     let {
       guestWindow: e
     } = this.props, t = e.document;
-    null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), (0, F.setupWindow)(e), e.addEventListener("blur", this.handleBlur), t.addEventListener("contextmenu", this.handleContextMenu, !0), e.addEventListener("beforeunload", this.warnPopoutClose)
+    null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")), this.updateTitle(), this.updateFontScale(), this.updateLocale(), this.updateClientTheme(), this.updateSaturationFactor(), this.updateForcedColors(), (0, F.setupWindow)(e), e.addEventListener("blur", this.handleBlur), t.addEventListener("contextmenu", this.handleContextMenu, !0), e.addEventListener("beforeunload", this.warnPopoutClose)
   }
   componentDidUpdate(e) {
     let {
@@ -61,7 +61,7 @@ class V extends(a = s.Component) {
       locale: a,
       clientThemesCSS: l
     } = this.props;
-    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== a && this.updateLocale(), e.clientThemesCSS !== l && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor()
+    e.title !== t && this.updateTitle(), e.fontScale !== n && this.updateFontScale(), e.locale !== a && this.updateLocale(), e.clientThemesCSS !== l && this.updateClientTheme(), e.saturation !== this.props.saturation && this.updateSaturationFactor(), (e.forcedColors !== this.props.forcedColors || e.systemForcedColors !== this.props.systemForcedColors) && this.updateForcedColors()
   }
   componentWillUnmount() {
     let {
@@ -114,6 +114,14 @@ class V extends(a = s.Component) {
     let s = n.createElement("style");
     s.setAttribute(T.CLIENT_THEMES_DATA_ATTRIBUTE, "true"), s.textContent = e, a.appendChild(s)
   }
+  updateForcedColors() {
+    let {
+      useForcedColors: e,
+      systemForcedColors: t,
+      guestWindow: n
+    } = this.props;
+    n.document.documentElement.classList.toggle("disable-forced-colors", !e && "active" === t)
+  }
   render() {
     let {
       theme: e,
@@ -131,7 +139,7 @@ class V extends(a = s.Component) {
       guestWindow: S,
       clientThemesClassName: _,
       contentClassName: T
-    } = this.props, N = (0, D.getPlatform)(), x = r()(p, {
+    } = this.props, v = (0, D.getPlatform)(), x = r()(p, {
       "mouse-mode": o,
       "reduce-motion": c,
       "full-motion": !c,
@@ -158,9 +166,9 @@ class V extends(a = s.Component) {
                       children: (0, l.jsxs)(j.AppLayerProvider, {
                         children: [(0, l.jsxs)("div", {
                           className: B.popout,
-                          children: [g && null != N ? (0, l.jsx)(v.default, {
+                          children: [g && null != v ? (0, l.jsx)(N.default, {
                             focused: n,
-                            type: N,
+                            type: v,
                             windowKey: i,
                             macOSFrame: !0
                           }) : null, (0, l.jsx)("div", {
@@ -218,27 +226,31 @@ let W = s.forwardRef(function(e, t) {
       keyboardModeEnabled: h,
       reducedMotionEnabled: m,
       fontScaleClass: E,
-      saturation: g
+      saturation: g,
+      systemForcedColors: I,
+      useForcedColors: A
     } = (0, c.useStateFromStoresObject)([p.default], () => ({
       fontScale: p.default.fontScale,
       keyboardModeEnabled: p.default.keyboardModeEnabled,
       reducedMotionEnabled: p.default.useReducedMotion,
       fontScaleClass: p.default.fontScaleClass,
-      saturation: p.default.saturation
+      saturation: p.default.saturation,
+      systemForcedColors: p.default.systemForcedColors,
+      useForcedColors: p.default.useForcedColors
     })),
-    I = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
-  (0, N.default)(n, !1);
-  let A = (0, x.default)(n, a),
+    N = (0, c.useStateFromStores)([C.default], () => null != e.channelId && null !== C.default.getSelfEmbeddedActivityForChannel(e.channelId));
+  (0, v.default)(n, !1);
+  let M = (0, x.default)(n, a),
     {
-      analyticsLocations: v
+      analyticsLocations: y
     } = (0, _.default)(S.default.POPOUT_WINDOW),
     {
-      clientThemesClassName: M,
-      clientThemesCSS: y
+      clientThemesClassName: j,
+      clientThemesCSS: P
     } = (0, T.default)();
   return null == n ? null : (0, l.jsx)(f.DnDProvider, {
     children: (0, l.jsx)(_.AnalyticsLocationProvider, {
-      value: v,
+      value: y,
       children: (0, l.jsx)(V, {
         ref: t,
         ...e,
@@ -248,15 +260,17 @@ let W = s.forwardRef(function(e, t) {
         locale: i,
         theme: r,
         forcedColors: o,
+        useForcedColors: A,
+        systemForcedColors: I,
         fontScale: d,
         keyboardModeEnabled: h,
-        mouseModeEnabled: A,
+        mouseModeEnabled: M,
         reducedMotionEnabled: m,
-        connectedToEmbeddedActivity: I,
+        connectedToEmbeddedActivity: N,
         fontScaleClass: E,
         saturation: g,
-        clientThemesClassName: M,
-        clientThemesCSS: y
+        clientThemesClassName: j,
+        clientThemesCSS: P
       })
     })
   })

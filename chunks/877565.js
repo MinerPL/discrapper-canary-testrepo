@@ -4,26 +4,26 @@ n.r(t), n.d(t, {
     return o
   },
   renderHeader: function() {
-    return a
+    return s
   }
 });
 var i = n("735250"),
   r = n("470079");
 n("419922");
-var s = n("156361");
+var a = n("156361");
 
-function a(e) {
+function s(e) {
   let {
     titleWithQuery: t,
     titleWithoutQuery: n,
     query: r,
-    getQuery: a,
+    getQuery: s,
     headerClassName: o,
     headerTrailingContent: l
   } = e, u = r.length > 0 ? t.format({
-    prefix: a(r)
+    prefix: s(r)
   }) : n;
-  return (0, i.jsx)(s.default.Title, {
+  return (0, i.jsx)(a.default.Title, {
     className: o,
     title: u,
     children: l
@@ -34,7 +34,7 @@ function o(e) {
   let {
     query: t,
     selectedIndex: n,
-    autocompletes: s,
+    autocompletes: a,
     onHover: o,
     onClick: l,
     titleWithQuery: u,
@@ -46,30 +46,29 @@ function o(e) {
     indexOffset: T = 0,
     headerClassName: f,
     headerTrailingContent: S,
-    footer: h,
-    subHeader: A
+    footer: h
   } = e;
-  if (null == h && (null == s || 0 === s.length)) return null;
-  let m = null == s ? void 0 : s.map((e, t) => {
+  if (null == h && (null == a || 0 === a.length)) return null;
+  let A = null == a ? void 0 : a.map((e, t) => {
     let i = t + T,
-      s = c(e, i);
+      a = c(e, i);
     return (0, r.createElement)(_, {
       onClick: l,
       onHover: o,
       selected: n === i,
       index: i,
-      ...s,
-      key: s.key
+      ...a,
+      key: a.key
     })
   });
   return (0, i.jsxs)(r.Fragment, {
-    children: [null != u && null != d ? a({
+    children: [null != u && null != d ? s({
       titleWithQuery: u,
       titleWithoutQuery: d,
       query: t,
       getQuery: E,
       headerClassName: f,
       headerTrailingContent: S
-    }) : null, A, m, h]
+    }) : null, A, h]
   }, I)
 }

@@ -14,9 +14,9 @@ var a = n("735250"),
   h = n("594174"),
   _ = n("643126"),
   C = n("823379"),
-  m = n("689938");
+  S = n("689938");
 
-function S(e, t, n) {
+function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -24,7 +24,7 @@ function S(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class I extends s.PureComponent {
+class p extends s.PureComponent {
   hasParty(e) {
     return e.length > 1
   }
@@ -47,23 +47,23 @@ class I extends s.PureComponent {
     }) : null
   }
   constructor(...e) {
-    super(...e), S(this, "handleUserContextMenu", (e, t) => {
+    super(...e), m(this, "handleUserContextMenu", (e, t) => {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("64409")]).then(n.bind(n, "881351"));
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t
         })
       })
-    }), S(this, "renderOverflowPopout", () => {
+    }), m(this, "renderOverflowPopout", () => {
       let {
         party: e
       } = this.props;
       return (0, a.jsx)(u.default, {
         party: e,
-        header: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+        header: S.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
           count: e.length
         })
       })
@@ -85,4 +85,4 @@ t.default = r.default.connectStores([c.default, h.default, E.default, f.default]
     host: e,
     party: l
   }
-})(I)
+})(p)

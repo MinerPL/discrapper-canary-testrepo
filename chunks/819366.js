@@ -1,78 +1,115 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return R
+    return L
   }
 });
-var i = n("735250");
-n("470079");
-var r = n("512722"),
-  s = n.n(r),
-  a = n("873546"),
-  o = n("442837"),
-  l = n("481060"),
-  u = n("239091"),
-  d = n("100527"),
-  _ = n("906732"),
-  c = n("927723"),
-  E = n("484459"),
-  I = n("103575"),
-  T = n("592125"),
-  f = n("271383"),
-  S = n("430824"),
-  h = n("699516"),
-  A = n("594174"),
-  m = n("797053"),
-  N = n("5192"),
-  O = n("51144"),
-  p = n("377668");
+var i = n("735250"),
+  r = n("470079"),
+  a = n("512722"),
+  s = n.n(a),
+  o = n("873546"),
+  l = n("442837"),
+  u = n("481060"),
+  d = n("239091"),
+  _ = n("100527"),
+  c = n("906732"),
+  E = n("797610"),
+  I = n("927723"),
+  T = n("484459"),
+  f = n("103575"),
+  S = n("592125"),
+  h = n("271383"),
+  A = n("430824"),
+  m = n("699516"),
+  N = n("594174"),
+  p = n("797053"),
+  O = n("5192"),
+  R = n("51144"),
+  C = n("377668");
 
-function R(e) {
+function g(e) {
+  let {
+    userId: t,
+    className: a,
+    children: s
+  } = e, o = r.useCallback(() => {
+    (0, I.showInaccessibleLinkModal)({
+      kind: "user"
+    })
+  }, []), l = r.useCallback(e => {
+    null != t && (0, d.openContextMenuLazy)(e, async () => {
+      let {
+        default: e
+      } = await n.e("25073").then(n.bind(n, "80742"));
+      return n => (0, i.jsx)(e, {
+        ...n,
+        userId: t
+      })
+    })
+  }, [t]);
+  return (0, i.jsx)(p.default, {
+    className: a,
+    onClick: o,
+    onContextMenu: l,
+    children: s
+  })
+}
+
+function L(e) {
   let {
     className: t,
     userId: r,
-    channelId: R,
-    inlinePreview: C = !1
+    channelId: a,
+    parsedUserId: I,
+    content: L,
+    inlinePreview: v = !1
   } = e, {
-    analyticsLocations: g
-  } = (0, _.default)(d.default.USER_MENTION), L = (0, o.useStateFromStores)([A.default], () => A.default.getUser(r)), D = (0, o.useStateFromStores)([T.default], () => T.default.getChannel(R)), v = null != D ? D.getGuildId() : null, M = C || null == L || null == v || null == R ? void 0 : e => {
-    null != D && (0, u.openContextMenuLazy)(e, async () => {
+    analyticsLocations: D
+  } = (0, c.default)(_.default.USER_MENTION), M = (0, l.useStateFromStores)([N.default], () => N.default.getUser(r)), y = (0, l.useStateFromStores)([S.default], () => S.default.getChannel(a)), P = null != y ? y.getGuildId() : null, U = v || null == M || null == P || null == a ? void 0 : e => {
+    null != y && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("70866"), n.e("12435"), n.e("64578")]).then(n.bind(n, "757387"));
+      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
       return t => (0, i.jsx)(e, {
         ...t,
-        user: L,
-        channel: D,
-        guildId: v
+        user: M,
+        channel: y,
+        guildId: P
       })
     })
-  }, y = O.default.useName(L), P = (0, o.useStateFromStores)([T.default, f.default, h.default], () => N.default.getNickname(v, R, L)), U = S.default.getGuild(v), b = (0, c.useClydeEnabled)(U, D) && r === p.CLYDE_AI_USER_ID ? p.CLYDE_AI_MENTION_COLOR : null, G = e => (0, i.jsx)(m.default, {
+  }, b = R.default.useName(M), G = (0, l.useStateFromStores)([S.default, h.default, m.default], () => O.default.getNickname(P, a, M)), w = A.default.getGuild(P), B = (0, E.useClydeEnabled)(w, y) && r === C.CLYDE_AI_USER_ID ? C.CLYDE_AI_MENTION_COLOR : null;
+  if (null == M) return (0, i.jsx)(g, {
+    userId: I,
     className: t,
-    onContextMenu: M,
-    color: b,
-    ...e,
-    children: "@".concat(null != P ? P : y)
+    children: L
   });
-  return C ? (0, i.jsx)(_.AnalyticsLocationProvider, {
-    value: g,
-    children: G()
-  }) : (0, i.jsx)(_.AnalyticsLocationProvider, {
-    value: g,
-    children: (0, i.jsx)(l.Popout, {
-      preload: null == L ? void 0 : () => (0, E.default)(L.id, L.getAvatarURL(v, 80), {
-        guildId: null != v ? v : void 0,
-        channelId: null != R ? R : void 0
+  let k = e => (0, i.jsx)(p.default, {
+    className: t,
+    onContextMenu: U,
+    color: B,
+    ...e,
+    children: "@".concat(null != G ? G : b)
+  });
+  return v ? (0, i.jsx)(c.AnalyticsLocationProvider, {
+    value: D,
+    children: k()
+  }) : (0, i.jsx)(c.AnalyticsLocationProvider, {
+    value: D,
+    children: (0, i.jsx)(u.Popout, {
+      preload: null == M ? void 0 : () => (0, T.maybeFetchUserProfileForPopout)(M.id, M.getAvatarURL(P, 80), {
+        guildId: null != P ? P : void 0,
+        channelId: null != a ? a : void 0
       }),
-      renderPopout: e => (s()(null != L, "Unexpected missing user"), (0, i.jsx)(I.default, {
+      renderPopout: e => (s()(null != M, "Unexpected missing user"), (0, i.jsx)(f.default, {
         location: "UserMention",
-        userId: L.id,
-        guildId: null != v ? v : void 0,
-        channelId: R,
+        userId: M.id,
+        guildId: null != P ? P : void 0,
+        channelId: a,
         ...e
       })),
-      position: a.isMobile ? "top" : "right",
-      children: e => G(e)
+      position: o.isMobile ? "top" : "right",
+      children: e => k(e)
     })
   })
 }

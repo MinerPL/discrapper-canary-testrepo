@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   DiscoverSearchResultPlaceholder: function() {
-    return O
+    return R
   }
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("481060"),
   o = n("239091"),
@@ -18,39 +18,39 @@ var a = n("735250"),
   h = n("806519"),
   _ = n("768581"),
   C = n("900849"),
-  m = n("556017"),
-  S = n("879484"),
-  I = n("26580"),
-  p = n("206887"),
+  S = n("556017"),
+  m = n("879484"),
+  p = n("26580"),
+  I = n("206887"),
   T = n("981631"),
   g = n("689938"),
-  A = n("208596"),
+  A = n("37807"),
   N = n("129512"),
   v = n("330065");
-let O = () => (0, a.jsx)("div", {
+let R = () => (0, a.jsx)("div", {
   className: A.placeholder
 });
 t.default = e => {
   var t;
   let {
     guild: l,
-    theme: O,
-    onView: R,
-    onTagClick: L
+    theme: R,
+    onView: L,
+    onTagClick: O
   } = e, {
-    id: P,
-    discoverySplash: M,
+    id: M,
+    discoverySplash: P,
     icon: y,
-    name: D,
-    description: b,
-    presenceCount: x,
+    name: x,
+    description: D,
+    presenceCount: b,
     memberCount: U,
     keywords: j
   } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
     analyticsLocations: B
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
-    id: P,
-    splash: M,
+    id: M,
+    splash: P,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
@@ -59,8 +59,8 @@ t.default = e => {
       case T.ThemeTypes.LIGHT:
         return v
     }
-  }(O), Y = null !== (t = _.default.getGuildIconURL({
-    id: P,
+  }(R), Y = null !== (t = _.default.getGuildIconURL({
+    id: M,
     icon: y,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
@@ -83,22 +83,22 @@ t.default = e => {
       }
       F(!0);
       try {
-        null != R && await R(l.id)
+        null != L && await L(l.id)
       } finally {
         F(!1)
       }
     }
   };
-  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = S.DiscoveryTagsExperiment.useExperiment({
+  } = m.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
@@ -160,28 +160,28 @@ t.default = e => {
               }), (0, a.jsx)(r.Heading, {
                 variant: "heading-md/semibold",
                 className: A.headerTitle,
-                children: D
+                children: x
               })]
             })]
           }), (0, a.jsx)(r.Text, {
             className: A.description,
             variant: "text-sm/normal",
-            children: b
-          }), K && null != j && null != L && (0, a.jsx)(I.DiscoveryTags, {
+            children: D
+          }), K && null != j && null != O && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
-            discoveryTagStyle: I.DiscoveryTagStyle.ALT,
-            onTagClick: e => L(e, l.id),
+            discoveryTagStyle: p.DiscoveryTagStyle.ALT,
+            onTagClick: e => O(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
             className: A.memberInfo,
-            children: [null != x && (0, a.jsx)("div", {
+            children: [null != b && (0, a.jsx)("div", {
               className: A.memberCount,
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
                 children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
-                  membersOnline: x
+                  membersOnline: b
                 })
               })
             }), null != U && (0, a.jsxs)(a.Fragment, {
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(p.default, {
+          children: (0, a.jsx)(I.default, {
             guild: l
           })
         }) : null]

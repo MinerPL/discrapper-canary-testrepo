@@ -6,7 +6,7 @@ i.r(t), i.d(t, {
 }), i("47120"), i("653041"), i("177593"), i("411104");
 var n = i("735250"),
   a = i("470079"),
-  s = i("803997"),
+  s = i("120356"),
   l = i.n(s),
   o = i("392711"),
   r = i.n(o),
@@ -19,8 +19,8 @@ var n = i("735250"),
   p = i("700582"),
   g = i("607070"),
   T = i("633302"),
-  v = i("712057"),
-  S = i("660189"),
+  S = i("712057"),
+  v = i("660189"),
   E = i("372900"),
   R = i("642101"),
   I = i("566006"),
@@ -47,8 +47,8 @@ var n = i("735250"),
   G = i("91047"),
   z = i("981631"),
   W = i("689938"),
-  K = i("441584"),
-  J = i("794711");
+  K = i("79798"),
+  J = i("949086");
 
 function Y(e, t, i) {
   return t in e ? Object.defineProperty(e, t, {
@@ -184,7 +184,7 @@ function Q(e) {
     reactionType: o,
     onRemoveReactor: r,
     disableManage: u = !1
-  } = e, c = (0, d.useStateFromStores)([A.default], () => A.default.getId()), f = (0, d.useStateFromStores)([w.default], () => w.default.getUser(i.id), [i]), g = (0, O.useIsActiveChannelOrUnarchivableThread)(s), T = (0, d.useStateFromStores)([P.default], () => P.default.can(z.Permissions.MANAGE_MESSAGES, s) && g) || c === i.id, v = (0, d.useStateFromStores)([b.default, M.default, U.default], () => H.default.getName(l, s.id, i));
+  } = e, c = (0, d.useStateFromStores)([A.default], () => A.default.getId()), f = (0, d.useStateFromStores)([w.default], () => w.default.getUser(i.id), [i]), g = (0, O.useIsActiveChannelOrUnarchivableThread)(s), T = (0, d.useStateFromStores)([P.default], () => P.default.can(z.Permissions.MANAGE_MESSAGES, s) && g) || c === i.id, S = (0, d.useStateFromStores)([b.default, M.default, U.default], () => H.default.getName(l, s.id, i));
   return (0, n.jsxs)(F.default, {
     className: K.reactorDefault,
     onContextMenu: e => (0, G.openUserContextMenu)(e, i, s),
@@ -203,12 +203,12 @@ function Q(e) {
         tag: "strong",
         variant: "text-md/normal",
         className: K.name,
-        children: [null != v && "" !== v && (0, n.jsx)("span", {
+        children: [null != S && "" !== S && (0, n.jsx)("span", {
           className: i.isPomelo() ? "" : K.nickname,
-          children: v
+          children: S
         }), (0, n.jsx)(m.default, {
           user: i,
-          className: null != v && "" !== v ? K.tagFaded : null,
+          className: null != S && "" !== S ? K.tagFaded : null,
           usernameClass: K.username,
           discriminatorClass: K.discriminator,
           forceUsername: !0
@@ -378,9 +378,9 @@ function et(e) {
     onClose: r,
     transitionState: u,
     "aria-label": f = W.default.Messages.REACTIONS
-  } = e, m = (0, d.useStateFromStores)([M.default], () => M.default.getChannel(i.getChannelId())), p = null == m ? void 0 : m.getGuildId(), T = (0, d.useStateFromStores)([L.default, S.default, R.default], () => {
+  } = e, m = (0, d.useStateFromStores)([M.default], () => M.default.getChannel(i.getChannelId())), p = null == m ? void 0 : m.getGuildId(), T = (0, d.useStateFromStores)([L.default, v.default, R.default], () => {
     var e, t, n;
-    let a = null !== (n = null !== (t = L.default.getMessage(i.getChannelId(), i.id)) && void 0 !== t ? t : null === (e = S.default.getMessage(V.default.castMessageIdAsChannelId(i.id))) || void 0 === e ? void 0 : e.firstMessage) && void 0 !== n ? n : null != p ? R.default.getCachedMessage(p, i.getChannelId(), i.id) : void 0;
+    let a = null !== (n = null !== (t = L.default.getMessage(i.getChannelId(), i.id)) && void 0 !== t ? t : null === (e = v.default.getMessage(V.default.castMessageIdAsChannelId(i.id))) || void 0 === e ? void 0 : e.firstMessage) && void 0 !== n ? n : null != p ? R.default.getCachedMessage(p, i.getChannelId(), i.id) : void 0;
     return null != a ? a.reactions : []
   }, [i, p]);
   let N = (t = T, a.useMemo(() => {
@@ -440,7 +440,7 @@ function et(e) {
             reactionType: i ? I.ReactionTypes.BURST : I.ReactionTypes.NORMAL,
             emoji: e.emoji,
             count: i ? e.burst_count : e.count,
-            colors: null != e.burst_colors ? (0, v.buildEmojiColorPalette)(e.burst_colors, b, y) : void 0
+            colors: null != e.burst_colors ? (0, S.buildEmojiColorPalette)(e.burst_colors, b, y) : void 0
           }, "".concat(i ? "burst-" : "normal-").concat(null !== (t = e.emoji.id) && void 0 !== t ? t : "", ":").concat(e.emoji.name))
         })
       }), (0, n.jsx)(ee, {

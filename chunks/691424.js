@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return B
+    return V
   }
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("302454"),
   l = n("481060"),
   u = n("794295"),
@@ -23,32 +23,33 @@ var i = n("735250"),
   A = n("332870"),
   m = n("750156"),
   N = n("979516"),
-  O = n("671612"),
-  p = n("572004"),
+  p = n("671612"),
+  O = n("572004"),
   R = n("900849"),
   C = n("746878"),
   g = n("285063"),
   L = n("943362"),
-  D = n("551452"),
-  v = n("69626"),
-  M = n("532901"),
-  y = n("981631"),
-  P = n("176505"),
-  U = n("689938"),
-  b = n("633353");
-n("519308");
-var G = n("931093");
+  v = n("551452"),
+  D = n("69626"),
+  M = n("142990"),
+  y = n("532901"),
+  P = n("981631"),
+  U = n("176505"),
+  b = n("689938"),
+  G = n("819041");
+n("492009");
+var w = n("990291");
 
-function w(e) {
+function B(e) {
   let {
     text: t
-  } = e, [n, s] = r.useState(!1);
+  } = e, [n, a] = r.useState(!1);
   return (0, i.jsx)(l.Clickable, {
     onClick: () => {
       try {
-        (0, p.copy)(t), s(!0)
+        (0, O.copy)(t), a(!0)
       } catch (e) {
-        s(!1)
+        a(!1)
       }
     },
     children: n ? (0, i.jsx)(S.default, {
@@ -63,9 +64,9 @@ function w(e) {
 let k = {
   blockQuote: {
     react: (e, t, n) => (0, i.jsxs)("div", {
-      className: G.blockquoteContainer,
+      className: w.blockquoteContainer,
       children: [(0, i.jsx)("div", {
-        className: G.blockquoteDivider
+        className: w.blockquoteDivider
       }), (0, i.jsx)("blockquote", {
         children: t(e.content, n)
       })]
@@ -95,28 +96,28 @@ let k = {
   },
   codeBlock: {
     react(e, t, r) {
-      let s = () => (0, i.jsx)("code", {
-        className: a()(b.scrollbarGhostHairline, "hljs"),
+      let a = () => (0, i.jsx)("code", {
+        className: s()(G.scrollbarGhostHairline, "hljs"),
         children: (0, C.smartOutput)(e, t, r)
       });
       return (0, i.jsx)("pre", {
         children: (0, i.jsxs)("div", {
-          className: G.codeContainer,
-          children: [p.SUPPORTS_COPY ? (0, i.jsx)("div", {
-            className: G.codeActions,
-            children: (0, i.jsx)(w, {
+          className: w.codeContainer,
+          children: [O.SUPPORTS_COPY ? (0, i.jsx)("div", {
+            className: w.codeActions,
+            children: (0, i.jsx)(B, {
               text: e.content
             })
           }) : null, (0, i.jsx)(d.LazyLibrary, {
             createPromise: () => Promise.resolve().then(n.bind(n, "364964")),
             webpackId: "364964",
-            renderFallback: s,
+            renderFallback: a,
             render: t => {
-              if (!(e.lang && t.hasLanguage(e.lang))) return s();
+              if (!(e.lang && t.hasLanguage(e.lang))) return a();
               {
                 let n = t.highlight(e.lang, e.content, !0);
-                return null == n ? s() : (0, i.jsx)("code", {
-                  className: a()(b.scrollbarGhostHairline, "hljs", n.language),
+                return null == n ? a() : (0, i.jsx)("code", {
+                  className: s()(G.scrollbarGhostHairline, "hljs", n.language),
                   dangerouslySetInnerHTML: {
                     __html: n.value
                   }
@@ -146,7 +147,7 @@ let k = {
     }, n.key)
   },
   soundboard: {
-    react: e => (0, i.jsx)(O.default, {
+    react: e => (0, i.jsx)(p.default, {
       channelId: e.channelId,
       soundId: e.soundId,
       jumbo: e.jumboable
@@ -157,12 +158,12 @@ let k = {
       let r = () => {
         ! function(e, t) {
           let n = I.default.getGuild(e);
-          if (null == e || null == n || !n.hasFeature(y.GuildFeatures.COMMUNITY)) return;
+          if (null == e || null == n || !n.hasFeature(P.GuildFeatures.COMMUNITY)) return;
           let i = {
-              home: P.StaticChannelRoute.GUILD_HOME,
-              browse: P.StaticChannelRoute.CHANNEL_BROWSER,
-              customize: P.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
-              guide: P.StaticChannelRoute.GUILD_HOME
+              home: U.StaticChannelRoute.GUILD_HOME,
+              browse: U.StaticChannelRoute.CHANNEL_BROWSER,
+              customize: U.StaticChannelRoute.CUSTOMIZE_COMMUNITY,
+              guide: U.StaticChannelRoute.GUILD_HOME
             } [t],
             r = I.default.getGuild(e);
           if ((null == r ? void 0 : r.joinedAt) == null) {
@@ -170,34 +171,34 @@ let k = {
               channelId: i
             });
             return
-          }(0, E.transitionTo)(y.Routes.CHANNEL(e, i))
+          }(0, E.transitionTo)(P.Routes.CHANNEL(e, i))
         }(e.guildId, e.channelId)
       };
       if (!(0, C.isStaticRouteIconType)(e.channelId)) return null;
-      let s = "".concat(e.channelId);
+      let a = "".concat(e.channelId);
       switch (e.channelId) {
-        case P.StaticChannelId.GUILD_HOME:
-        case P.StaticChannelId.SERVER_GUIDE:
-          s = U.default.Messages.SERVER_GUIDE;
+        case U.StaticChannelId.GUILD_HOME:
+        case U.StaticChannelId.SERVER_GUIDE:
+          a = b.default.Messages.SERVER_GUIDE;
           break;
-        case P.StaticChannelId.CHANNEL_BROWSER:
-          s = U.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
+        case U.StaticChannelId.CHANNEL_BROWSER:
+          a = b.default.Messages.GUILD_SIDEBAR_CHANNEL_BROWSER;
           break;
-        case P.StaticChannelId.CUSTOMIZE_COMMUNITY:
-          s = U.default.Messages.CHANNELS_AND_ROLES
+        case U.StaticChannelId.CUSTOMIZE_COMMUNITY:
+          a = b.default.Messages.CHANNELS_AND_ROLES
       }
       return (0, i.jsx)(l.Tooltip, {
-        text: s,
+        text: a,
         position: "top",
-        children: s => {
+        children: a => {
           let {
-            onMouseEnter: a,
+            onMouseEnter: s,
             onMouseLeave: o
-          } = s;
+          } = a;
           return (0, i.jsx)(T.default, {
             role: "link",
             onClick: r,
-            onMouseEnter: a,
+            onMouseEnter: s,
             onMouseLeave: o,
             className: "channelMention",
             iconType: e.channelId,
@@ -218,7 +219,7 @@ let k = {
         r = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
       return (0, o.reactElement)(i, "".concat(n.key), {
         start: e.start,
-        className: n.formatInline ? G.inlineFormat : null,
+        className: n.formatInline ? w.inlineFormat : null,
         style: {
           "--totalCharacters": r
         },
@@ -240,7 +241,7 @@ let k = {
       });
       return (0, o.reactElement)("h" + e.level, (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
         children: i,
-        className: n.formatInline ? G.inlineFormat : null
+        className: n.formatInline ? w.inlineFormat : null
       })
     }
   },
@@ -261,30 +262,37 @@ let k = {
   },
   message: {
     react: (e, t, n) => (0, i.jsx)(N.default, {}, n.key)
+  },
+  subtext: {
+    react: (e, t, n) => (0, o.reactElement)("small", (null == n ? void 0 : n.key) != null ? "".concat(n.key) : null, {
+      children: t(e.content, n),
+      className: n.formatInline ? w.inlineFormat : null
+    })
   }
 };
 
-function B(e) {
+function V(e) {
   return {
     ...k,
-    link: (0, M.default)(e),
+    link: (0, y.default)(e),
+    devLink: (0, M.default)(e),
     emoji: function(e) {
       let {
         emojiTooltipPosition: t = "top",
         enableEmojiClick: n = !0
       } = e;
       return {
-        react(e, r, s) {
+        react(e, r, a) {
           let {
-            key: a
-          } = s;
+            key: s
+          } = a;
           return e.src ? (0, i.jsx)(c.MessageStandardEmoji, {
             node: e,
             tooltipPosition: t,
             enableClick: n
-          }, a) : (0, i.jsx)("span", {
+          }, s) : (0, i.jsx)("span", {
             children: e.surrogate
-          }, a)
+          }, s)
         }
       }
     }(e),
@@ -294,12 +302,12 @@ function B(e) {
         enableEmojiClick: n = !0
       } = e;
       return {
-        react(e, r, s) {
+        react(e, r, a) {
           let {
-            key: a,
+            key: s,
             guildId: o,
             isInteracting: l
-          } = s, u = _.default.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+          } = a, u = _.default.getDisambiguatedEmojiContext(o).getById(e.emojiId);
           if (null != u) {
             let t = u.require_colons;
             e = {
@@ -312,12 +320,12 @@ function B(e) {
             node: e,
             tooltipPosition: t,
             enableClick: n
-          }, a)
+          }, s)
         }
       }
     }(e),
-    channelMention: (0, D.default)(e),
-    commandMention: (0, v.default)(e),
+    channelMention: (0, v.default)(e),
+    commandMention: (0, D.default)(e),
     attachmentLink: (0, L.default)(e)
   }
 }

@@ -1,112 +1,87 @@
 "use strict";
-n.r(t), n("627494"), n("757143");
-var a = n("735250");
-n("470079");
-var l = n("481060"),
-  s = n("5192"),
-  i = n("561308"),
-  r = n("69259"),
-  o = n("919394"),
-  u = n("438226"),
-  d = n("206295"),
-  c = n("91140"),
-  f = n("43205"),
-  h = n("591853"),
-  m = n("206583"),
-  p = n("689938"),
-  E = n("522791");
-let C = e => {
-    let t = (0, i.isEntryActive)(e);
-    return (0, i.isEntryNew)(e) ? t ? p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_NEW_GAME : p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_NEW_GAME : t ? p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_IS_PLAYING_GAME : p.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_PLAYED_GAME
-  },
-  g = (e, t, n) => {
-    let a = C(e),
-      l = s.default.getName(t.guild_id, t.id, n),
-      i = e.extra.game_name;
-    return a.plainFormat({
-      gameName: i,
-      userName: l
-    }).replaceAll("*", "")
-  },
-  S = (e, t, n) => {
-    let a = C(e),
-      l = s.default.getName(t.guild_id, t.id, n),
-      i = e.extra.game_name;
-    return a.format({
-      userName: l,
-      gameName: i
-    })
-  },
-  _ = (e, t) => p.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.format({
-    username: t.username,
-    activity: e.extra.game_name
-  });
+n.r(t);
+var a = n("735250"),
+  l = n("470079"),
+  s = n("442837"),
+  i = n("706454"),
+  r = n("22211"),
+  o = n("561308"),
+  u = n("919394"),
+  d = n("438226"),
+  c = n("206295"),
+  f = n("91140"),
+  h = n("297781"),
+  m = n("591853"),
+  p = n("689938");
 t.default = e => {
   let {
-    closePopout: t,
-    channel: n,
-    entry: s,
-    requestId: p
+    channel: t,
+    entry: n,
+    requestId: E,
+    closePopout: C
   } = e, {
-    applicationImageSrc: C,
-    user: T
-  } = (0, c.useGamingContentData)(s), {
-    primaryColor: I,
-    secondaryColor: A
-  } = (0, d.default)(C);
-  if (null == T) return null;
-  let v = async e => {
-    try {
-      let t = await (0, o.generateGamingContentImage)({
-        entry: s,
-        applicationImageSrc: C,
-        avatarSrc: T.getAvatarURL(n.guild_id, 128),
-        description: g(s, n, T),
-        timestamp: (0, i.formatEntryTimestamp)(s, Date.now()),
-        colors: [I, A]
-      });
-      await (0, u.sendContentImageReply)({
-        file: t,
-        user: T,
-        altText: _(s, T),
-        reply: e
-      }), (0, r.trackInteraction)(m.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
-        entry: s,
-        channelId: n.id,
-        guildId: n.guild_id,
-        requestId: p
+    applicationImageSrc: g,
+    user: S
+  } = (0, f.useGamingContentData)(n), {
+    primaryColor: _,
+    secondaryColor: T
+  } = (0, c.default)(g), I = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
+    streamPreviewUrl: A,
+    channel: N
+  } = (0, r.default)(n), v = l.useCallback(e => {
+    if (null != g && null != t && null != S) return (0, u.generateGamingContentImage)({
+      entry: n,
+      applicationImageSrc: g,
+      avatarSrc: S.getAvatarURL(t.guild_id, 128),
+      description: (0, d.formatCanvasDescription)(n, t, S),
+      timestamp: (0, o.formatEntryTimestamp)(n, I),
+      colors: [_, T],
+      channelId: e
+    })
+  }, [g, t, n, I, _, T, S]);
+  if (null == S) return null;
+  let x = (0, a.jsx)(h.BadgesContainer, {
+      location: h.BadgeLocation.POPOUT,
+      children: f.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
+        entry: n
+      }, t))
+    }),
+    M = null == A ? (0, a.jsx)(m.PopoutContent, {
+      thumbnailSrc: g,
+      channel: t,
+      userDescription: (0, o.isEntryActive)(n) ? p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      title: n.extra.game_name,
+      badges: x,
+      entry: n
+    }) : (0, a.jsx)(m.StreamingPopoutContent, {
+      channel: t,
+      streamPreviewSrc: A,
+      title: n.extra.game_name,
+      badges: x,
+      userDescription: p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
+      entry: n
+    });
+  return (0, a.jsxs)(m.Popout, {
+    children: [M, (0, a.jsx)(m.PopoutInteractionsContainer, {
+      children: null != N ? (0, a.jsx)(m.VoiceChannelPopoutReactor, {
+        closePopout: C,
+        user: S,
+        channel: t,
+        generateReactionImage: v,
+        reactionImageAltText: (0, d.getContentAltText)(n, S),
+        entry: n,
+        requestId: E,
+        voiceChannel: N,
+        isStreaming: null != A
+      }) : (0, a.jsx)(m.PopoutReactor, {
+        closePopout: C,
+        user: S,
+        channel: t,
+        generateReactionImage: v,
+        reactionImageAltText: (0, d.getContentAltText)(n, S),
+        entry: n,
+        requestId: E
       })
-    } finally {
-      t()
-    }
-  };
-  return (0, a.jsxs)(h.Popout, {
-    children: [(0, a.jsxs)(h.PopoutHero, {
-      backgroundImgSrc: C,
-      children: [(0, a.jsxs)("div", {
-        className: E.heroDetails,
-        children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(h.PopoutAvatar, {
-            user: T,
-            guildId: n.guild_id
-          }), (0, a.jsx)(h.PopoutTitle, {
-            children: S(s, n, T)
-          })]
-        }), (0, a.jsx)(f.ContentImage, {
-          size: 80,
-          src: C,
-          className: E.contentImage
-        })]
-      }), (0, a.jsx)(c.ContentRowBadges, {
-        className: E.badgeContainer,
-        entry: s,
-        textColor: "always-white",
-        iconColor: l.tokens.colors.WHITE
-      })]
-    }), (0, a.jsx)(h.PopoutReactor, {
-      onMessageReact: v,
-      user: T,
-      channel: n
     })]
   })
 }

@@ -1,10 +1,17 @@
 "use strict";
-var n, a, u, i;
-l.r(t), l.d(t, {
+var i, r, a, s;
+
+function o(e) {
+  return e
+}
+n.r(t), n.d(t, {
   ActionComponentState: function() {
-    return n
+    return i
   },
   SelectOptionType: function() {
-    return a
+    return r
+  },
+  asComponentId: function() {
+    return o
   }
-}), (u = n || (n = {}))[u.NORMAL = 0] = "NORMAL", u[u.LOADING = 1] = "LOADING", u[u.DISABLED = 2] = "DISABLED", (i = a || (a = {}))[i.STRING = 1] = "STRING", i[i.USER = 2] = "USER", i[i.ROLE = 3] = "ROLE", i[i.CHANNEL = 4] = "CHANNEL", i[i.GUILD = 5] = "GUILD"
+}), (a = i || (i = {}))[a.NORMAL = 0] = "NORMAL", a[a.LOADING = 1] = "LOADING", a[a.DISABLED = 2] = "DISABLED", (s = r || (r = {}))[s.STRING = 1] = "STRING", s[s.USER = 2] = "USER", s[s.ROLE = 3] = "ROLE", s[s.CHANNEL = 4] = "CHANNEL", s[s.GUILD = 5] = "GUILD"

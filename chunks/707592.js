@@ -12,12 +12,12 @@ n.r(t), n.d(t, {
 });
 var r = n("735250");
 n("470079");
-var s = n("803997"),
+var s = n("120356"),
   o = n.n(s),
   i = n("481060"),
   a = n("489813"),
   l = n("592286"),
-  u = n("819104");
+  u = n("619452");
 
 function d(e) {
   let {
@@ -25,15 +25,17 @@ function d(e) {
     placeholder: n,
     onChange: s,
     disabled: a,
-    className: d
+    autofocus: d,
+    className: c
   } = e;
   return (0, r.jsx)(i.TextInput, {
-    inputClassName: o()(u.textInputFieldBodyInput, d),
+    inputClassName: o()(u.textInputFieldBodyInput, c),
     maxLength: l.MAX_TEXT_RESPONSE_LENGTH,
     value: null != t ? t : "",
     placeholder: n,
     onChange: s,
-    disabled: a
+    disabled: a,
+    autoFocus: d
   })
 }
 
@@ -43,10 +45,12 @@ function c(e) {
   } = e;
   return (0, r.jsx)(a.QuestionRenderer, {
     title: t.label,
-    children: (0, r.jsx)(d, {
-      className: u.fieldBackground,
+    children: (0, r.jsx)(i.TextArea, {
+      className: o()(u.textInputFieldBodyInput, u.fieldBackground),
       value: t.response,
-      disabled: !0
+      disabled: !0,
+      autoFocus: !0,
+      rows: 2
     })
   })
 }
@@ -54,14 +58,16 @@ function c(e) {
 function h(e) {
   let {
     formField: t,
-    onChange: n
+    autofocus: n,
+    onChange: s
   } = e;
   return (0, r.jsx)(a.QuestionRenderer, {
     title: t.label,
     children: (0, r.jsx)(d, {
       className: u.fieldBackground,
-      onChange: n,
-      value: t.response
+      onChange: s,
+      value: t.response,
+      autofocus: n
     })
   })
 }

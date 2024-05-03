@@ -1,33 +1,38 @@
 "use strict";
-i.r(e), i.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return s
+    return l
   }
 });
-var l = i("470079"),
-  r = i("937889"),
-  a = i("761910"),
-  n = i("981631");
+var i = n("470079"),
+  r = n("937889"),
+  a = n("761910"),
+  s = n("981631"),
+  o = n("126798");
 
-function s(t, e) {
+function l(e, t) {
   let {
-    hideSimpleEmbedContent: i,
-    formatInline: s = !1,
-    noStyleAndInteraction: o = !1,
+    hideSimpleEmbedContent: n,
+    formatInline: l = !1,
+    noStyleAndInteraction: u = !1,
     isInteracting: d = !1,
-    allowHeading: c = !1,
-    allowList: h = !1,
-    allowLinks: u = !1,
+    allowHeading: _ = !1,
+    allowList: c = !1,
+    allowLinks: E = !1,
+    allowDevLinks: I = !1,
+    allowSubtext: T = !1,
     previewLinkTarget: f = !1
-  } = e;
-  return l.useMemo(() => null != t.customRenderedContent ? t.customRenderedContent : t.isCommandType() && 0 === t.content.length || t.hasFlag(n.MessageFlags.LOADING) ? (0, a.default)(t) : (0, r.default)(t, {
-    hideSimpleEmbedContent: i,
-    formatInline: s,
-    noStyleAndInteraction: o,
+  } = t;
+  return i.useMemo(() => null != e.customRenderedContent ? e.customRenderedContent : e.isCommandType() && 0 === e.content.length || e.hasFlag(s.MessageFlags.LOADING) ? (0, a.default)(e) : e.type === s.MessageTypes.CHANGELOG ? (0, r.renderChangelogMessageMarkup)(e, o) : (0, r.default)(e, {
+    hideSimpleEmbedContent: n,
+    formatInline: l,
+    noStyleAndInteraction: u,
     isInteracting: d,
-    allowHeading: c,
-    allowList: h,
-    allowLinks: u,
+    allowHeading: _,
+    allowList: c,
+    allowLinks: E,
+    allowSubtext: T,
+    allowDevLinks: I,
     previewLinkTarget: f
-  }), [t.content, t.customRenderedContent, t.embeds, t.interaction, t.state, t.type, i, s, o, d, c, h, u, f])
+  }), [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, n, l, u, d, _, c, E, f, T])
 }

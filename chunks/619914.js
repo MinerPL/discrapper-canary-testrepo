@@ -1,10 +1,13 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
+  isUserRecentGamesExperimentEnabled: function() {
+    return r
+  },
   useUserIsRecentGamesExperimentEnabled: function() {
-    return n
+    return a
   }
 });
-let a = (0, s("818083").createExperiment)({
+let i = (0, n("818083").createExperiment)({
   id: "2024-03_user_recent_games",
   kind: "user",
   label: "Recent Games",
@@ -23,17 +26,35 @@ let a = (0, s("818083").createExperiment)({
     config: {
       enabled: !0
     }
+  }, {
+    id: 4,
+    label: "Enabled",
+    config: {
+      enabled: !0
+    }
   }]
 });
 
-function n(e) {
+function r(e) {
   let {
     location: t,
-    autoTrackExposure: s = !1
+    autoTrackExposure: n = !1
   } = e;
-  return a.useExperiment({
+  return i.getCurrentConfig({
     location: t
   }, {
-    autoTrackExposure: s
+    autoTrackExposure: n
+  }).enabled
+}
+
+function a(e) {
+  let {
+    location: t,
+    autoTrackExposure: n = !1
+  } = e;
+  return i.useExperiment({
+    location: t
+  }, {
+    autoTrackExposure: n
   }).enabled
 }

@@ -13,27 +13,35 @@ function l(e) {
     ...e
   };
   if ("object" == typeof(t = l).args && "string" == typeof t.cmd) l = function(e) {
-    if (e.cmd === a.RPCCommands.AUTHENTICATE) return {
-      ...e,
-      args: {
-        ...e.args,
-        access_token: s
-      }
-    };
-    return {
-      ...e
+    switch (e.cmd) {
+      case a.RPCCommands.AUTHENTICATE:
+      case a.RPCCommands.GET_PROVIDER_ACCESS_TOKEN:
+        return {
+          ...e, args: {
+            ...e.args,
+            access_token: s
+          }
+        };
+      default:
+        return {
+          ...e
+        }
     }
   }(l);
   if ("object" == typeof(n = l).data && "string" == typeof n.cmd) l = function(e) {
-    if (e.cmd === a.RPCCommands.AUTHENTICATE) return {
-      ...e,
-      data: {
-        ...e.data,
-        access_token: s
-      }
-    };
-    return {
-      ...e
+    switch (e.cmd) {
+      case a.RPCCommands.AUTHENTICATE:
+      case a.RPCCommands.GET_PROVIDER_ACCESS_TOKEN:
+        return {
+          ...e, data: {
+            ...e.data,
+            access_token: s
+          }
+        };
+      default:
+        return {
+          ...e
+        }
     }
   }(l);
   return l

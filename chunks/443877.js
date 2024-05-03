@@ -1,26 +1,29 @@
 "use strict";
 i.r(t), i.d(t, {
   default: function() {
-    return h
+    return f
   }
 }), i("47120");
 var n = i("442837"),
-  a = i("71619"),
-  s = i("41776"),
-  l = i("665906"),
-  o = i("271383"),
-  r = i("607744"),
-  u = i("496675"),
-  d = i("432376"),
-  c = i("981631");
+  a = i("715903"),
+  s = i("71619"),
+  l = i("41776"),
+  o = i("665906"),
+  r = i("271383"),
+  u = i("607744"),
+  d = i("496675"),
+  c = i("432376"),
+  h = i("981631");
 
-function h(e) {
-  let t = (0, n.useStateFromStores)([r.default], () => (null == e ? void 0 : e.guild_id) == null || r.default.canChatInGuild(e.guild_id), [e]),
-    i = (0, n.useStateFromStores)([s.default], () => (null == e ? void 0 : e.guild_id) != null && s.default.isLurking(e.guild_id), [e]),
-    h = (0, n.useStateFromStores)([o.default], () => (null == e ? void 0 : e.guild_id) != null && o.default.isCurrentUserGuest(e.guild_id), [e]),
-    f = (0, n.useStateFromStores)([u.default], () => t && u.default.can(c.Permissions.ADD_REACTIONS, e), [t, e]),
-    [, m] = (0, a.useCurrentUserCommunicationDisabled)(null == e ? void 0 : e.guild_id),
-    p = (0, l.useIsActiveChannelOrUnarchivableThread)(e);
+function f(e) {
+  let t = null == e ? void 0 : e.guild_id,
+    i = (0, n.useStateFromStores)([u.default], () => null == t || u.default.canChatInGuild(t), [t]),
+    f = (0, n.useStateFromStores)([l.default], () => null != t && l.default.isLurking(t), [t]),
+    m = (0, n.useStateFromStores)([r.default], () => null != t && r.default.isCurrentUserGuest(t), [t]),
+    p = (0, n.useStateFromStores)([d.default], () => i && d.default.can(h.Permissions.ADD_REACTIONS, e), [i, e]),
+    g = (0, a.useCurrentUserAutomodQuaratinedProfile)(t),
+    [, T] = (0, s.useCurrentUserCommunicationDisabled)(t),
+    S = (0, o.useIsActiveChannelOrUnarchivableThread)(e);
   return null == e ? {
     disableReactionReads: !0,
     disableReactionCreates: !0,
@@ -29,18 +32,19 @@ function h(e) {
     isGuest: !1,
     isPendingMember: !1
   } : {
-    ...(0, d.default)({
+    ...(0, c.default)({
       channel: e,
-      canChat: t,
+      canChat: i,
       renderReactions: !0,
-      canAddNewReactions: f,
-      isLurking: i,
-      isGuest: h,
-      communicationDisabled: m,
-      isActiveChannelOrUnarchivableThread: p
+      canAddNewReactions: p,
+      isLurking: f,
+      isGuest: m,
+      communicationDisabled: T,
+      isActiveChannelOrUnarchivableThread: S,
+      isAutomodQuarantined: g
     }),
-    isLurking: i,
-    isGuest: h,
+    isLurking: f,
+    isGuest: m,
     isPendingMember: !1
   }
 }

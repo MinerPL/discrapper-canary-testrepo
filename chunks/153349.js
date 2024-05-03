@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a, l, s = n("735250"),
   i = n("470079"),
-  r = n("803997"),
+  r = n("120356"),
   o = n.n(r),
   u = n("512722"),
   d = n.n(u),
@@ -23,8 +23,8 @@ var a, l, s = n("735250"),
   T = n("465670"),
   I = n("372662"),
   A = n("740624"),
-  v = n("502568"),
-  N = n("471253"),
+  N = n("502568"),
+  v = n("471253"),
   x = n("431328"),
   M = n("145834"),
   R = n("590415"),
@@ -32,26 +32,26 @@ var a, l, s = n("735250"),
   y = n("618896"),
   O = n("231338"),
   j = n("689938"),
-  P = n("852218");
+  P = n("990646");
 let D = i.memo(function(e) {
     let {
       toggleRequestToSpeakSidebar: t,
       chatOpen: n
-    } = e, a = (0, s.jsx)(v.default.Icon, {
+    } = e, a = (0, s.jsx)(N.default.Icon, {
       icon: T.default,
       tooltip: j.default.Messages.CLOSE,
       onClick: t
     });
-    return (0, s.jsxs)(v.default, {
+    return (0, s.jsxs)(N.default, {
       toolbar: a,
       className: o()(P.headerContainer, {
         [P.chatOpen]: n
       }),
-      children: [(0, s.jsx)(v.default.Icon, {
+      children: [(0, s.jsx)(N.default.Icon, {
         icon: A.default,
         disabled: !0,
         "aria-label": j.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
-      }), (0, s.jsx)(v.default.Title, {
+      }), (0, s.jsx)(N.default.Title, {
         children: j.default.Messages.REQUEST_TO_SPEAK_AREA_TITLE
       })]
     })
@@ -71,7 +71,7 @@ let D = i.memo(function(e) {
     d()(null != S, "Channel cannot be guildless");
     let {
       isMobile: A,
-      status: v
+      status: N
     } = (0, c.useStateFromStoresObject)([_.default], () => ({
       isMobile: _.default.isMobileOnline(a.user.id),
       status: _.default.getStatus(a.user.id, S)
@@ -82,17 +82,17 @@ let D = i.memo(function(e) {
     let y = a.rtsState === R.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 
     function O() {
-      (0, N.setUserSuppress)(t, a.user.id, !1)
+      (0, v.setUserSuppress)(t, a.user.id, !1)
     }
 
     function D() {
-      (0, N.setUserSuppress)(t, a.user.id, !0)
+      (0, v.setUserSuppress)(t, a.user.id, !0)
     }
     let b = e => {
       (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
         return n => (0, s.jsx)(e, {
           ...n,
           user: a.user,
@@ -129,7 +129,7 @@ let D = i.memo(function(e) {
               className: P.participantAvatar,
               user: a.user,
               isMobile: A,
-              status: v
+              status: N
             }), (0, s.jsxs)("div", {
               className: P.participantTextContainer,
               children: [(0, s.jsx)(f.NameWithRole, {

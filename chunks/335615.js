@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120"), n("724458");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("392711"),
   o = n.n(r),
@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("906732"),
   I = n("493324"),
   A = n("611064"),
-  v = n("677432"),
-  N = n("178762"),
+  N = n("677432"),
+  v = n("178762"),
   x = n("868671"),
   M = n("623624"),
   R = n("518738"),
@@ -46,7 +46,7 @@ var a = n("735250"),
   G = n("998502"),
   V = n("981631"),
   W = n("689938"),
-  Y = n("652985");
+  Y = n("354811");
 
 function z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -56,9 +56,9 @@ function z(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let Z = G.default.getEnableHardwareAcceleration(),
-  K = 44 + C.AVATAR_DECORATION_PADDING,
-  X = {
+let K = G.default.getEnableHardwareAcceleration(),
+  Z = 44 + C.AVATAR_DECORATION_PADDING,
+  q = {
     origin: {
       x: 38,
       y: 11
@@ -70,7 +70,7 @@ let Z = G.default.getEnableHardwareAcceleration(),
       y: 0
     }
   };
-class q extends l.Component {
+class X extends l.Component {
   shouldComponentUpdate(e) {
     return !(0, f.default)(this.props, e, ["channelId"])
   }
@@ -93,10 +93,7 @@ class q extends l.Component {
       ...g
     } = this.props, S = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
-      preload: () => (0, y.default)(s.id, s.getAvatarURL(f, 80), {
-        guildId: f,
-        channelId: c.id
-      }),
+      preload: () => (0, y.maybeFetchUserProfileForPopout)(s),
       renderPopout: this.renderUserPopout,
       position: d.isMobile ? "window_center" : "left",
       spacing: 16,
@@ -108,7 +105,7 @@ class q extends l.Component {
         return (0, a.jsx)(C.default, {
           className: Y.member,
           onContextMenu: this.renderUserContextMenu,
-          shouldAnimateStatus: Z,
+          shouldAnimateStatus: K,
           user: s,
           currentUser: i,
           nick: l,
@@ -136,7 +133,7 @@ class q extends l.Component {
       (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
         return t => (0, a.jsx)(e, {
           ...t,
           user: this.props.user,
@@ -195,7 +192,7 @@ let Q = l.memo(e => {
       var e;
       return null != t ? null === (e = P.default.getRole(l.guild_id, t)) || void 0 === e ? void 0 : e.name : void 0
     }, [l, t]);
-    return (0, a.jsx)(q, {
+    return (0, a.jsx)(X, {
       ...n,
       ...r,
       isTyping: o,
@@ -277,10 +274,10 @@ class ee extends l.Component {
     let {
       offsetHeight: t,
       scrollTop: n
-    } = e.getScrollerState(), a = Math.floor(t / K);
+    } = e.getScrollerState(), a = Math.floor(t / Z);
     return this.getContentFeedAdjustedDimensions({
       height: t,
-      rowHeight: K,
+      rowHeight: Z,
       rowsVisible: a,
       y: n
     })
@@ -357,7 +354,7 @@ class ee extends l.Component {
       }) : 0 === t ? (0, a.jsx)(L.default, {
         tutorialId: "whos-online",
         position: "left",
-        inlineSpecs: X,
+        inlineSpecs: q,
         children: (0, a.jsx)(J, {
           ...i,
           guildId: s.guild_id
@@ -415,12 +412,15 @@ class ee extends l.Component {
             index: l
           }, "member-".concat(i.user.id))
         }
-        if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) return (0, a.jsx)(N.default, {
-          ...i,
-          channel: this.props.channel,
-          index: l
-        }, "content-inventory-".concat(i.entry.id));
-        if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(v.default, {}, "content-inventory-hidden-entry")
+        if (i.type === j.MemberListRowTypes.CONTENT_INVENTORY) {
+          let e = "content-inventory-".concat(i.entry.id);
+          return null != i.entry.original_id && (e += "-".concat(i.entry.original_id)), (0, a.jsx)(v.default, {
+            ...i,
+            channel: this.props.channel,
+            index: l
+          }, e)
+        }
+        if (i.type === j.MemberListRowTypes.HIDDEN_CONTENT_INVENTORY) return (0, a.jsx)(N.default, {}, "content-inventory-hidden-entry")
       }
       return (0, a.jsx)($, {
         index: l
@@ -447,12 +447,12 @@ class ee extends l.Component {
         return function(e, a) {
           if (e === x.CONTENT_FEED_SECTION) {
             let e = t[n + 1 + a];
-            return (0, N.getContentRowHeight)(e)
+            return (0, v.getContentRowHeight)(e)
           }
-          return K
+          return Z
         }
       }
-      return K
+      return Z
     }), z(this, "getContentFeedHeight", () => {
       let e = this.getContentFeedGroup();
       return null != e ? e.feedHeight + 40 : 0
@@ -517,7 +517,7 @@ function et(e) {
     if (null == n) return;
     let a = parseInt(t, 10),
       [l, s] = n.getSectionRowFromIndex(a),
-      i = 0 === l && 0 === s ? K : 0;
+      i = 0 === l && 0 === s ? Z : 0;
     n.scrollToIndex({
       section: l,
       row: s,

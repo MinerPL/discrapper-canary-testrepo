@@ -3,8 +3,8 @@ n.r(t), n("47120"), n("411104"), n("570140");
 var i = n("147913");
 n("674588");
 var r = n("900489"),
-  s = n("751189"),
-  a = n("409059");
+  a = n("751189"),
+  s = n("409059");
 n("652898"), n("701190");
 var o = n("960904"),
   l = n("830121");
@@ -20,7 +20,7 @@ function d(e) {
       code: n
     } = e;
     if (t === o.CodedLinkType.INVITE);
-    else if (t === o.CodedLinkType.TEMPLATE) null == a.default.getGuildTemplate(n) && s.default.resolveGuildTemplate(n);
+    else if (t === o.CodedLinkType.TEMPLATE) null == s.default.getGuildTemplate(n) && a.default.resolveGuildTemplate(n);
     else if (t === o.CodedLinkType.BUILD_OVERRIDE || t === o.CodedLinkType.MANUAL_BUILD_OVERRIDE);
     else if (t === o.CodedLinkType.EVENT);
     else if (t === o.CodedLinkType.CHANNEL_LINK);
@@ -29,7 +29,6 @@ function d(e) {
     else if (t === o.CodedLinkType.EMBEDDED_ACTIVITY_INVITE);
     else if (t === o.CodedLinkType.GUILD_PRODUCT);
     else if (t === o.CodedLinkType.SERVER_SHOP);
-    else if (t === o.CodedLinkType.CLYDE_PROFILE);
     else if (t === o.CodedLinkType.QUESTS_EMBED);
     else throw Error("Unknown coded link type: ".concat(t))
   })

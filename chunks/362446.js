@@ -20,14 +20,7 @@ function f(e, t, n) {
   let i = u[e = null != e ? e : "null"];
   return null != i ? t(i) : n
 }
-
-function h(e) {
-  let {
-    lobbyId: t
-  } = e;
-  delete u[t]
-}
-class p extends(i = o.default.Store) {
+class h extends(i = o.default.Store) {
   getConnectionState(e) {
     return f(e, e => {
       let {
@@ -79,12 +72,12 @@ class p extends(i = o.default.Store) {
     }, null)
   }
 }
-s = "OverlayRTCConnectionStore", (l = "displayName") in(a = p) ? Object.defineProperty(a, l, {
+s = "OverlayRTCConnectionStore", (l = "displayName") in(a = h) ? Object.defineProperty(a, l, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[l] = s, t.default = new p(r.default, {
+}) : a[l] = s, t.default = new h(r.default, {
   OVERLAY_INITIALIZE: function(e) {
     u = e.rtcConnectionStates
   },
@@ -99,7 +92,5 @@ s = "OverlayRTCConnectionStore", (l = "displayName") in(a = p) ? Object.definePr
   },
   RTC_CONNECTION_LOSS_RATE: function(e) {
     c(e.lobbyId).lossRate = e.lossRate
-  },
-  LOBBY_DELETE: h,
-  LOBBY_DISCONNECT: h
+  }
 })

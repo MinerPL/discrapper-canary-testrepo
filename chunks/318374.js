@@ -6,84 +6,85 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("481060"),
   d = n("239091"),
   _ = n("321148"),
   c = n("51144"),
-  E = n("849056");
+  E = n("832645");
 
 function I(e) {
   let {
     className: t,
-    maxUsers: s,
-    users: o,
-    guildId: I,
-    onFocus: T,
-    size: f = u.AvatarSizes.SIZE_24,
-    hideOverflowCount: S = !1,
-    disableUsernameTooltip: h = !1
-  } = e, [A, m] = r.useState(!1);
+    avatarClassName: a,
+    maxUsers: o,
+    users: I,
+    guildId: T,
+    onFocus: f,
+    size: S = u.AvatarSizes.SIZE_24,
+    hideOverflowCount: h = !1,
+    disableUsernameTooltip: A = !1
+  } = e, [m, N] = r.useState(!1);
 
-  function N() {
+  function p() {
     return (0, i.jsx)(u.Dialog, {
       className: E.popoutWrapper,
       children: (0, i.jsx)(u.Scroller, {
         className: E.scroller,
-        children: o.map(e => (0, i.jsx)(_.default, {
-          guildId: I,
+        children: I.map(e => (0, i.jsx)(_.default, {
+          guildId: T,
           user: e,
           nick: c.default.getName(e),
           onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
             let {
               default: t
-            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("15421")]).then(n.bind(n, "881351"));
+            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("15421")]).then(n.bind(n, "881351"));
             return n => (0, i.jsx)(t, {
               ...n,
               user: e
             })
           }, {
-            onClose: () => m(!1)
+            onClose: () => N(!1)
           })
         }, e.id))
       })
     })
   }
-  return o.length <= 0 ? null : (0, i.jsx)("div", {
-    className: a()(t, E.avatars),
+  return I.length <= 0 ? null : (0, i.jsx)("div", {
+    className: s()(t, E.avatars),
     children: function() {
-      let e = l()(o).take(s).map(e => {
+      let e = l()(I).take(o).map(e => {
           let t = c.default.getName(e);
-          return h ? (0, i.jsx)("div", {
-            className: E.avatar,
+          return A ? (0, i.jsx)("div", {
+            className: s()(E.avatar, a),
             children: (0, i.jsx)(u.Avatar, {
-              src: e.getAvatarURL(I, 24),
+              src: e.getAvatarURL(T, 24),
               "aria-label": t,
-              size: f
+              size: S
             })
           }) : (0, i.jsx)(u.TooltipContainer, {
             text: t,
-            className: E.avatar,
+            className: s()(E.avatar, a),
             children: (0, i.jsx)(u.Avatar, {
-              src: e.getAvatarURL(I, 24),
+              src: e.getAvatarURL(T, 24),
               "aria-label": t,
-              size: f
+              size: S
             })
           }, e.id)
         }).value(),
-        t = o.length - s;
-      return t > 0 && !S && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
-        renderPopout: N,
-        shouldShow: A,
+        t = I.length - o;
+      return t > 0 && !h && (e[e.length - 1] = (0, i.jsx)(u.Popout, {
+        renderPopout: p,
+        shouldShow: m,
         position: "bottom",
-        onRequestClose: () => m(!1),
+        onRequestClose: () => N(!1),
         children: () => (0, i.jsxs)(u.Button, {
-          className: a()(E.avatar, E.overflow),
-          onFocus: T,
-          onClick: () => m(!0),
+          className: s()(E.avatar, E.overflow),
+          onFocus: f,
+          onClick: () => N(!0),
           look: u.Button.Looks.BLANK,
           size: u.Button.Sizes.NONE,
           children: ["+", t + 1]

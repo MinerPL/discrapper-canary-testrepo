@@ -4,23 +4,20 @@ n.r(t), n.d(t, {
     return a
   },
   default: function() {
-    return d
+    return r
   }
 }), n("653041");
 var a, i, l = n("442837"),
-  s = n("314897"),
-  u = n("496675"),
-  r = n("981631");
+  s = n("314897");
 (i = a || (a = {}))[i.END_EARLY = 0] = "END_EARLY";
-let o = [];
+let u = [];
 
-function d(e, t) {
-  let n = (0, l.useStateFromStores)([s.default], () => s.default.getId()),
-    a = (0, l.useStateFromStores)([u.default], () => !t.isPrivate() && u.default.can(r.Permissions.MANAGE_MESSAGES, t), [t]),
+function r(e) {
+  let t = (0, l.useStateFromStores)([s.default], () => s.default.getId()),
     {
-      poll: i
+      poll: n
     } = e;
-  if (!e.isPoll() || null == i) return o;
-  let d = [];
-  return !i.expiry.isSameOrBefore(Date.now()) && (e.author.id === n || a) && d.push(0), d
+  if (!e.isPoll() || null == n) return u;
+  let a = [];
+  return !n.expiry.isSameOrBefore(Date.now()) && e.author.id === t && a.push(0), a
 }

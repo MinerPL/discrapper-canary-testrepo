@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("481060"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("412899"),
   l = n("659101"),
   u = n("689938"),
-  d = n("180299"),
-  _ = n("989171");
+  d = n("21609"),
+  _ = n("795197");
 
 function c(e) {
   let {
@@ -23,14 +23,14 @@ function c(e) {
     showBorder: c
   } = e;
   return null == n || null == r ? null : (0, i.jsxs)(l.default, {
-    children: [(0, i.jsx)(a.Heading, {
+    children: [(0, i.jsx)(s.Heading, {
       variant: "eyebrow",
       className: _.title,
       children: u.default.Messages.ROLES_LIST.format({
         numRoles: r.roles.length
       })
     }), (0, i.jsx)(o.default, {
-      roleClassName: s()(d.rolePill, {
+      roleClassName: a()(d.rolePill, {
         [d.rolePillBorder]: c
       }),
       className: d.roles,

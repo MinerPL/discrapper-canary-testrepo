@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 });
 var s = n("735250");
@@ -10,43 +10,43 @@ var a = n("481060"),
   l = n("153124"),
   r = n("357727"),
   i = n("158010"),
-  o = n("170039"),
-  c = n("471253"),
-  d = n("930180"),
-  u = n("320596"),
+  d = n("170039"),
+  o = n("471253"),
+  c = n("930180"),
+  u = n("582019"),
   h = n("939863"),
   f = n("689938"),
-  _ = n("94700");
+  _ = n("112441");
 
-function g(e) {
+function E(e) {
   let {
     channel: t,
     transitionState: n,
-    onClose: g,
-    ...E
-  } = e, T = (0, l.useUID)(), p = (0, d.useStageBlockedUsersCount)(t.id), I = async () => {
-    await (0, c.moveSelfToAudience)(t), g()
-  }, S = async () => {
-    await (0, c.audienceAckRequestToSpeak)(t, !1), g()
+    onClose: E,
+    ...T
+  } = e, g = (0, l.useUID)(), p = (0, c.useStageBlockedUsersCount)(t.id), S = async () => {
+    await (0, o.moveSelfToAudience)(t), E()
+  }, I = async () => {
+    await (0, o.audienceAckRequestToSpeak)(t, !1), E()
   };
   return (0, s.jsx)(a.ModalRoot, {
     transitionState: n,
-    "aria-labelledby": T,
-    ...E,
+    "aria-labelledby": g,
+    ...T,
     size: a.ModalSize.SMALL,
     children: (0, s.jsxs)(a.ModalContent, {
       className: _.content,
       children: [(0, s.jsx)(h.default, {
         children: (0, s.jsx)("div", {
           className: _.stageIconBackground,
-          children: (0, s.jsx)(o.default, {
+          children: (0, s.jsx)(d.default, {
             width: 40,
             height: 40,
             className: _.stageIcon
           })
         })
       }), (0, s.jsx)(a.Heading, {
-        id: T,
+        id: g,
         variant: "heading-xl/semibold",
         color: "header-primary",
         className: _.headerTitle,
@@ -64,7 +64,7 @@ function g(e) {
           color: a.Button.Colors.PRIMARY,
           className: _.button,
           innerClassName: _.innerButton,
-          onClick: S,
+          onClick: I,
           children: [(0, s.jsx)("div", {
             className: _.icon,
             children: (0, s.jsx)(r.default, {
@@ -76,7 +76,7 @@ function g(e) {
           color: a.Button.Colors.PRIMARY,
           className: _.button,
           innerClassName: _.innerButton,
-          onClick: I,
+          onClick: S,
           children: [(0, s.jsx)("div", {
             className: _.icon,
             children: (0, s.jsx)(i.default, {

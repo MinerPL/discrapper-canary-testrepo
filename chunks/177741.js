@@ -10,7 +10,7 @@ n.r(t), n.d(t, {
 }), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("47120");
 var a, o, s = n("735250"),
   u = n("470079"),
-  r = n("803997"),
+  r = n("120356"),
   d = n.n(r),
   c = n("718017"),
   m = n("442837"),
@@ -27,7 +27,7 @@ var a, o, s = n("735250"),
   T = n("194077"),
   I = n("724688"),
   g = n("981631"),
-  y = n("816155"),
+  y = n("560584"),
   C = n("422138"),
   P = n("113386"),
   b = n("48547");
@@ -77,11 +77,11 @@ t.default = function() {
       } = W.NitroStandardWowMomentExperiment.getCurrentConfig({
         location: "PremumSubscriptionWowMoment.tsx"
       });
-      t && (r(!0), i = setTimeout(() => {
+      t && !e && E.default.canPlayWowMoment && (r(!0), i = setTimeout(() => {
         r(!1), P(!0), p.default.track(g.AnalyticEvents.PREMIUM_WOW_MOMENT_VIEWED, {
           wow_moment_type: "gradient_highlight"
         })
-      }, 2e3), e && (0, h.setCanPlayWowMoment)(!1))
+      }, 2e3))
     }
     return f.ComponentDispatch.subscribe(g.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t), () => {
       f.ComponentDispatch.unsubscribe(g.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED, t)

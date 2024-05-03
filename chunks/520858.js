@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("873546"),
   o = n("481060"),
@@ -14,9 +14,9 @@ var a = n("735250"),
   d = n("180828"),
   c = n("768581"),
   f = n("484459"),
-  h = n("788197"),
-  m = n("521170"),
-  p = n("312916");
+  h = n("103575"),
+  m = n("613398"),
+  p = n("603326");
 
 function E(e) {
   var t;
@@ -65,6 +65,7 @@ function E(e) {
   }) : (0, a.jsx)(o.Popout, {
     preload: () => (0, f.default)(_.id, C),
     renderPopout: e => (0, a.jsx)(h.default, {
+      location: "AppProfilePanelItem",
       ...e,
       userId: _.id,
       channelId: s.id

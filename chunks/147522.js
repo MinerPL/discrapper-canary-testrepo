@@ -12,7 +12,7 @@ var a = n("392711"),
   r = n("289481"),
   o = n("809780"),
   u = n("689938"),
-  d = n("7674");
+  d = n("569928");
 
 function c(e, t, n) {
   let {
@@ -21,10 +21,10 @@ function c(e, t, n) {
     deleteChannel: f,
     toggle: E,
     getNumUnreadChannels: _
-  } = t, T = null;
+  } = t, m = null;
   return l().flatMap(e, e => {
-    let t = e.sortOrder !== T;
-    T = e.sortOrder;
+    let t = e.sortOrder !== m;
+    m = e.sortOrder;
     let l = [];
     return t && (e.hasLoadedAnything && e.sortOrder === o.SortOrder.ReallyOldChannel ? l.push((0, s.jsx)(i.default, {
       className: d.divider,

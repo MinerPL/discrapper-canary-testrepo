@@ -1,6 +1,6 @@
 "use strict";
-n.r(t), n("724458"), n("653041"), n("47120");
-var i, r, s, a, o = n("442837"),
+n.r(t), n("47120"), n("724458"), n("653041");
+var i, r, a, s, o = n("442837"),
   l = n("570140"),
   u = n("314897"),
   d = n("271383"),
@@ -19,12 +19,12 @@ function N(e) {
   return null == m[e] && (m[e] = new I.GuildMemberSafetyPageStore(e)), m[e]
 }
 
-function O(e) {
+function p(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
   N(e).reset(t)
 }
 
-function p() {
+function O() {
   return !1
 }
 
@@ -108,17 +108,17 @@ class L extends(i = o.default.Store) {
     return N(e).lastCursorTimestamp
   }
 }
-a = "MemberSafetyStore", (s = "displayName") in(r = L) ? Object.defineProperty(r, s, {
-  value: a,
+s = "MemberSafetyStore", (a = "displayName") in(r = L) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[s] = a;
-let D = new L(l.default, {
+}) : r[a] = s;
+let v = new L(l.default, {
   CONNECTION_OPEN: function(e) {
     return A ? A = !1 : ! function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      for (let t in m) O(t, e)
+      for (let t in m) p(t, e)
     }(!0), g(e)
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function(e) {
@@ -156,7 +156,7 @@ let D = new L(l.default, {
     let {
       guild: t
     } = e, n = N(t.id);
-    O(t.id, n.isInitialized)
+    p(t.id, n.isInitialized)
   },
   GUILD_DELETE: function(e) {
     let {
@@ -164,17 +164,17 @@ let D = new L(l.default, {
         id: t
       }
     } = e;
-    O(t)
+    p(t)
   },
-  GUILD_MEMBERS_CHUNK: function(e) {
+  GUILD_MEMBERS_CHUNK_BATCH: function(e) {
     let {
-      guildId: t,
-      members: n
-    } = e;
-    return N(t).updateServerMembers(n)
+      chunks: t
+    } = e, n = !1;
+    for (let e of t) n = N(e.guildId).updateServerMembers(e.members) || n;
+    return n
   },
-  GUILD_MEMBER_ADD: p,
-  GUILD_MEMBER_UPDATE: p,
+  GUILD_MEMBER_ADD: O,
+  GUILD_MEMBER_UPDATE: O,
   GUILD_MEMBER_UPDATE_LOCAL: function(e) {
     let {
       guildId: t
@@ -248,14 +248,14 @@ let D = new L(l.default, {
     } = e, i = Object.values(n);
     if (0 === i.length) return !1;
     let r = N(t),
-      s = i.reduce((e, t) => {
+      a = i.reduce((e, t) => {
         if (null != t.owner) {
           let n = t.owner.user.id;
           e.push(n)
         }
         return e
       }, []);
-    return r.updateMembersByMemberIds(s)
+    return r.updateMembersByMemberIds(a)
   },
   INITIALIZE_MEMBER_SAFETY_STORE: function(e) {
     let {
@@ -298,7 +298,7 @@ let D = new L(l.default, {
     return i && N(t).updateMembersByMemberIds(n.map(e => e.userId)), i
   },
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function(e) {
-    var t, n, i, r, s, a;
+    var t, n, i, r, a, s;
     let o, l;
     let {
       guildId: u,
@@ -312,13 +312,13 @@ let D = new L(l.default, {
         member: n,
         source_invite_code: i,
         join_source_type: r,
-        inviter_id: s
-      } = t, a = n.user;
-      return e.memberIds.push(a.id), e.memberSupplementals.push({
-        userId: a.id,
+        inviter_id: a
+      } = t, s = n.user;
+      return e.memberIds.push(s.id), e.memberSupplementals.push({
+        userId: s.id,
         sourceInviteCode: i,
         joinSourceType: r,
-        inviterId: s
+        inviterId: a
       }), e
     }, {
       memberIds: [],
@@ -327,20 +327,20 @@ let D = new L(l.default, {
     (0, S.registerFetchedSupplementals)(u, E);
     let m = c.updateSearchedMembersByMemberIds(E);
     d.length > 0 && (o = d[0], l = d[d.length - 1]);
-    let [O] = c.updatePaginationState({
+    let [p] = c.updatePaginationState({
       totalResultsCount: _,
       elasticSearchCursor: {
         before: (0, T.createMemberSearchCursor)({
           joinedAt: null == o ? void 0 : null === (t = o.member) || void 0 === t ? void 0 : t.joined_at,
-          userId: null !== (s = null == o ? void 0 : null === (n = o.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== s ? s : h.EMPTY_STRING_SNOWFLAKE_ID
+          userId: null !== (a = null == o ? void 0 : null === (n = o.member) || void 0 === n ? void 0 : n.user.id) && void 0 !== a ? a : h.EMPTY_STRING_SNOWFLAKE_ID
         }),
         after: (0, T.createMemberSearchCursor)({
           joinedAt: null == l ? void 0 : null === (i = l.member) || void 0 === i ? void 0 : i.joined_at,
-          userId: null !== (a = null == l ? void 0 : null === (r = l.member) || void 0 === r ? void 0 : r.user.id) && void 0 !== a ? a : h.EMPTY_STRING_SNOWFLAKE_ID
+          userId: null !== (s = null == l ? void 0 : null === (r = l.member) || void 0 === r ? void 0 : r.user.id) && void 0 !== s ? s : h.EMPTY_STRING_SNOWFLAKE_ID
         })
       }
     }, !1);
-    return A || m || O
+    return A || m || p
   },
   MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function(e) {
     let {
@@ -350,4 +350,4 @@ let D = new L(l.default, {
     return N(t).updateMembersByMemberIds(n)
   }
 });
-t.default = D
+t.default = v

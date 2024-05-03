@@ -1,86 +1,87 @@
 "use strict";
-t.r(n);
-var a = t("735250");
-t("470079");
-var l = t("481060"),
-  u = t("493683"),
-  s = t("239091"),
-  r = t("883385"),
-  i = t("108843"),
-  d = t("947440"),
-  o = t("100527"),
-  f = t("299206"),
-  c = t("895563"),
-  M = t("212205"),
-  h = t("62420"),
-  _ = t("314897"),
-  E = t("858687"),
-  m = t("461535"),
-  C = t("776568"),
-  I = t("981631"),
-  v = t("689938");
-n.default = (0, i.default)((0, r.default)(function(e) {
+n.r(t);
+var a = n("735250");
+n("470079");
+var l = n("481060"),
+  u = n("493683"),
+  i = n("239091"),
+  s = n("883385"),
+  o = n("108843"),
+  r = n("947440"),
+  d = n("100527"),
+  c = n("299206"),
+  f = n("895563"),
+  M = n("212205"),
+  _ = n("62420"),
+  C = n("122074"),
+  I = n("314897"),
+  m = n("858687"),
+  h = n("461535"),
+  E = n("776568"),
+  N = n("981631"),
+  S = n("689938");
+t.default = (0, o.default)((0, s.default)(function(e) {
   let {
-    channel: n,
-    selected: r,
-    onSelect: i
-  } = e, o = n.isOwner(_.default.getId()), I = (0, m.default)(n), A = (0, C.default)(n), g = (0, E.default)(n, r), p = (0, f.default)({
-    id: n.id,
-    label: v.default.Messages.COPY_ID_CHANNEL
-  }), T = (0, d.default)(n), G = (0, c.useAddToFavoritesItem)(n), O = (0, c.useRemoveFromFavoritesItem)(n), F = (0, M.default)(n), N = (0, h.default)(n);
-  return null == n || n.isManaged() ? null : (0, a.jsxs)(l.Menu, {
+    channel: t,
+    selected: s,
+    onSelect: o
+  } = e, d = t.isOwner(I.default.getId()), T = (0, h.default)(t), v = (0, E.default)(t), A = (0, C.default)(N.ZERO_STRING_GUILD_ID, t.id), O = (0, m.default)(t, s), g = (0, c.default)({
+    id: t.id,
+    label: S.default.Messages.COPY_ID_CHANNEL
+  }), p = (0, r.default)(t), x = (0, f.useAddToFavoritesItem)(t), U = (0, f.useRemoveFromFavoritesItem)(t), G = (0, M.default)(t), F = (0, _.default)(t);
+  return null == t || t.isManaged() ? null : (0, a.jsxs)(l.Menu, {
     navId: "gdm-context",
-    "aria-label": v.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    onClose: s.closeContextMenu,
-    onSelect: i,
+    "aria-label": S.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    onClose: i.closeContextMenu,
+    onSelect: o,
     children: [(0, a.jsx)(l.MenuGroup, {
-      children: I
+      children: T
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [G, F, N]
+      children: [x, G, F]
     }), (0, a.jsxs)(l.MenuGroup, {
-      children: [o ? (0, a.jsx)(l.MenuItem, {
+      children: [d ? (0, a.jsx)(l.MenuItem, {
         id: "instant-invites",
-        label: v.default.Messages.INSTANT_INVITES,
+        label: S.default.Messages.INSTANT_INVITES,
         action: () => (0, l.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([t.e("49237"), t.e("99387"), t.e("6901")]).then(t.bind(t, "892382"));
-          return t => (0, a.jsx)(e, {
-            channelId: n.id,
-            ...t
+          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("6901")]).then(n.bind(n, "892382"));
+          return n => (0, a.jsx)(e, {
+            channelId: t.id,
+            ...n
           })
         })
       }) : null, (0, a.jsx)(l.MenuControlItem, {
         id: "change-icon",
         showDefaultFocus: !0,
-        control: (e, t) => (0, a.jsx)(l.MenuImageUploadControl, {
-          onChange: t => {
+        control: (e, n) => (0, a.jsx)(l.MenuImageUploadControl, {
+          onChange: n => {
             var a;
-            u.default.setIcon(n.id, t), null === (a = e.onClose) || void 0 === a || a.call(e)
+            u.default.setIcon(t.id, n), null === (a = e.onClose) || void 0 === a || a.call(e)
           },
           multiple: !1,
-          "aria-label": v.default.Messages.CHANGE_ICON,
+          "aria-label": S.default.Messages.CHANGE_ICON,
           ...e,
-          ref: t
+          ref: n
         }),
-        label: v.default.Messages.CHANGE_ICON
-      }), null != n.icon ? (0, a.jsx)(l.MenuItem, {
+        label: S.default.Messages.CHANGE_ICON
+      }), null != t.icon ? (0, a.jsx)(l.MenuItem, {
         id: "remove-icon",
-        label: v.default.Messages.REMOVE_ICON,
-        action: () => u.default.setIcon(n.id, null)
+        label: S.default.Messages.REMOVE_ICON,
+        action: () => u.default.setIcon(t.id, null)
       }) : null]
     }), (0, a.jsx)(l.MenuGroup, {
-      children: T
-    }), (0, a.jsx)(l.MenuGroup, {
-      children: A
-    }), (0, a.jsx)(l.MenuGroup, {
-      children: g
+      children: p
+    }), (0, a.jsxs)(l.MenuGroup, {
+      children: [v, A]
     }), (0, a.jsx)(l.MenuGroup, {
       children: O
     }), (0, a.jsx)(l.MenuGroup, {
-      children: p
+      children: U
+    }), (0, a.jsx)(l.MenuGroup, {
+      children: g
     })]
   })
 }, {
-  object: I.AnalyticsObjects.CONTEXT_MENU
-}), [o.default.CONTEXT_MENU, o.default.GROUP_DM_MENU])
+  object: N.AnalyticsObjects.CONTEXT_MENU
+}), [d.default.CONTEXT_MENU, d.default.GROUP_DM_MENU])

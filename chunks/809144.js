@@ -7,11 +7,11 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var s = n("609194"),
-  a = n("559629"),
-  l = n("669079"),
+  l = n("559629"),
+  a = n("669079"),
   r = n("987209"),
   u = n("689938"),
-  o = n("80308");
+  o = n("457609");
 
 function c(e) {
   let {
@@ -20,10 +20,10 @@ function c(e) {
     isGift: n,
     giftRecipient: c
   } = (0, r.useGiftContext)();
-  return !n || (0, l.shouldShowCustomGiftExperience)(c) ? null : (0, i.jsx)(s.default, {
+  return !n || (0, a.shouldShowCustomGiftExperience)(c) ? null : (0, i.jsx)(s.default, {
     className: o.paymentNote,
     iconSize: s.default.Sizes.SMALL,
-    icon: a.default,
+    icon: l.default,
     color: null == t ? s.default.Colors.PRIMARY : s.default.Colors.SECONDARY,
     children: t
   })

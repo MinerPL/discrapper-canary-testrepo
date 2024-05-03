@@ -1,124 +1,119 @@
 "use strict";
 n.r(t), n.d(t, {
   purchaseProduct: function() {
-    return I
+    return S
   }
-}), n("411104"), n("47120");
+}), n("47120");
 var i = n("512722"),
   s = n.n(i),
-  a = n("570140"),
-  l = n("355467"),
+  l = n("570140"),
+  a = n("355467"),
   r = n("976255"),
   u = n("366939"),
   o = n("16084"),
   c = n("255078"),
   d = n("626135"),
-  m = n("122289"),
-  f = n("74538"),
-  p = n("45572"),
-  S = n("981631"),
+  m = n("74538"),
+  f = n("45572"),
+  p = n("981631"),
   _ = n("474936");
-async function I(e) {
+async function S(e) {
   let {
     setPurchaseState: t,
     setHasAcceptedTerms: n,
     setIsSubmitting: i,
-    setPurchaseError: I,
-    hasRedirectURL: E,
+    setPurchaseError: S,
+    hasRedirectURL: I,
     setHasRedirectURL: P,
-    isGift: T,
-    baseAnalyticsData: N,
-    analyticsLocation: h,
-    analyticsLocations: x,
-    flowStartTime: v,
-    subscriptionPlan: A,
-    planGroup: C,
-    trialId: g,
+    isGift: E,
+    baseAnalyticsData: T,
+    analyticsLocation: N,
+    analyticsLocations: v,
+    flowStartTime: h,
+    subscriptionPlan: x,
+    planGroup: A,
+    trialId: C,
     priceOptions: y,
-    paymentSource: M,
-    isPrepaidPaymentPastDue: b,
-    openInvoiceId: O,
-    premiumSubscription: R,
+    paymentSource: g,
+    isPrepaidPaymentPastDue: M,
+    openInvoiceId: R,
+    premiumSubscription: b,
     onNext: L,
-    metadata: j,
-    sku: G,
-    skuPricePreview: D,
-    purchaseType: F,
+    metadata: O,
+    sku: j,
+    skuPricePreview: G,
+    purchaseType: D,
     referralCode: U,
-    loadId: w,
-    giftInfoOptions: B
+    loadId: F,
+    giftInfoOptions: w,
+    invoicePreview: B
   } = e;
-  t(p.PurchaseState.PURCHASING), n(!0), i(!0), a.default.wait(r.clearError), I(null);
+  t(f.PurchaseState.PURCHASING), n(!0), i(!0), l.default.wait(r.clearError), S(null);
   try {
     let e, n, i;
-    if (d.default.track(S.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
-        ...N,
-        duration_ms: Date.now() - v
-      }), E) return;
-    if (F === S.PurchaseTypes.ONE_TIME) s()(null != G, "SKU must exist and be fetched."), s()(null != D, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(G.applicationId, G.id, {
-      expectedAmount: D.amount,
-      expectedCurrency: D.currency,
-      isGift: T,
-      paymentSource: M,
-      loadId: w,
-      giftInfoOptions: B
+    if (d.default.track(p.AnalyticEvents.PAYMENT_FLOW_COMPLETED, {
+        ...T,
+        subtotal: null == B ? void 0 : B.subtotal,
+        tax: null == B ? void 0 : B.tax,
+        expected_amount: null == B ? void 0 : B.total,
+        expected_currency: null == B ? void 0 : B.currency,
+        duration_ms: Date.now() - h
+      }), I) return;
+    if (D === p.PurchaseTypes.ONE_TIME) s()(null != j, "SKU must exist and be fetched."), s()(null != G, "SKUPricePreview must exist."), e = await (0, o.purchaseSKU)(j.applicationId, j.id, {
+      expectedAmount: G.amount,
+      expectedCurrency: G.currency,
+      isGift: E,
+      paymentSource: g,
+      loadId: F,
+      giftInfoOptions: w
     });
-    else if (s()(null != A, "Missing subscriptionPlan"), T) {
-      let t = (0, f.getPrice)(A.id, !1, !0, y);
-      if ("usd" === t.currency && (null == M ? void 0 : M.type) === S.PaymentSourceTypes.GCASH) {
-        var k;
-        let e = Error("Invalid USD currency for GCash");
-        (0, m.captureBillingException)(e, {
-          tags: {
-            paymentSourceId: null !== (k = null == M ? void 0 : M.id) && void 0 !== k ? k : "",
-            subscriptionPlanId: A.id,
-            priceOptions: JSON.stringify(y)
-          }
-        })
-      }
-      e = await (0, o.purchaseSKU)(_.PREMIUM_SUBSCRIPTION_APPLICATION, A.skuId, {
-        expectedAmount: t.amount,
-        expectedCurrency: t.currency,
-        paymentSource: M,
-        subscriptionPlanId: A.id,
+    else if (s()(null != x, "Missing subscriptionPlan"), E) {
+      s()(null != B, "Missing invoicePreview");
+      let t = B.total,
+        n = B.currency;
+      e = await (0, o.purchaseSKU)(_.PREMIUM_SUBSCRIPTION_APPLICATION, x.skuId, {
+        expectedAmount: t,
+        expectedCurrency: n,
+        paymentSource: g,
+        subscriptionPlanId: x.id,
         isGift: !0,
-        loadId: w,
-        giftInfoOptions: B
+        loadId: F,
+        giftInfoOptions: w
       })
-    } else if (b && null != O && null != M && null != R) e = S.PREPAID_PAYMENT_SOURCES.has(M.type) ? await (0, l.payInvoiceManually)(R, O, M, y.currency) : await (0, l.updateSubscription)(R, {
-      paymentSource: M,
+    } else if (M && null != R && null != g && null != b) e = p.PREPAID_PAYMENT_SOURCES.has(g.type) ? await (0, a.payInvoiceManually)(b, R, g, y.currency) : await (0, a.updateSubscription)(b, {
+      paymentSource: g,
       currency: y.currency
-    }, x, h, w);
-    else if (null != R) {
-      let t = (0, f.getItemsWithUpsertedPlanIdForGroup)(R, A.id, 1, new Set(C)),
+    }, v, N, F);
+    else if (null != b) {
+      let t = (0, m.getItemsWithUpsertedPlanIdForGroup)(b, x.id, 1, new Set(A)),
         n = {
-          paymentSource: M,
+          paymentSource: g,
           currency: y.currency
         };
-      R.status === S.SubscriptionStatusTypes.PAUSED ? n.status = S.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, l.updateSubscription)(R, n, x, h, w)
+      b.status === p.SubscriptionStatusTypes.PAUSED ? n.status = p.SubscriptionStatusTypes.ACTIVE : n.items = t, e = await (0, a.updateSubscription)(b, n, v, N, F)
     } else e = await (0, u.subscribe)({
-      planId: A.id,
+      planId: x.id,
       currency: y.currency,
-      paymentSource: M,
-      trialId: g,
-      metadata: j,
+      paymentSource: g,
+      trialId: C,
+      metadata: O,
       referralCode: U,
-      loadId: w
+      loadId: F
     });
     if (e.redirectConfirmation) {
       P(null != e.redirectURL);
       return
     }
-    t(p.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0), L(n, i)
+    t(f.PurchaseState.COMPLETED), "subscription" in e ? n = null != e.subscription ? c.default.createFromServer(e.subscription) : null : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0), L(n, i)
   } catch (e) {
-    t(p.PurchaseState.FAIL), I(e), d.default.track(S.AnalyticEvents.PAYMENT_FLOW_FAILED, {
-      ...N,
+    t(f.PurchaseState.FAIL), S(e), d.default.track(p.AnalyticEvents.PAYMENT_FLOW_FAILED, {
+      ...T,
       payment_error_code: null == e ? void 0 : e.code,
-      payment_source_id: null == M ? void 0 : M.id,
-      payment_source_type: null == M ? void 0 : M.type,
-      duration_ms: Date.now() - v
+      payment_source_id: null == g ? void 0 : g.id,
+      payment_source_type: null == g ? void 0 : g.type,
+      duration_ms: Date.now() - h
     })
   } finally {
-    !E && i(!1)
+    !I && i(!1)
   }
 }

@@ -9,49 +9,52 @@ var a = s("735250"),
   S = s("584656"),
   _ = s("993750"),
   i = s("981631"),
-  E = s("689938"),
-  u = s("128830");
+  E = s("526761"),
+  u = s("689938"),
+  d = s("99122");
 t.default = function(e) {
   let {
     onClose: t,
     channelId: s
-  } = e, [d, O] = l.useState(!1), c = l.useCallback(() => {
-    n.default.open(i.UserSettingsSections.PRIVACY_AND_SAFETY), t()
-  }, [t]), A = l.useCallback(() => {
-    !d && (O(!0), (0, r.reportFalsePositive)(s).then(() => {
+  } = e, [O, c] = l.useState(!1), A = l.useCallback(() => {
+    n.default.open(i.UserSettingsSections.PRIVACY_AND_SAFETY, null, {
+      scrollPosition: E.PrivacyAndSafetyScrollPositions.DM_SAFETY_ALERTS
+    }), t()
+  }, [t]), C = l.useCallback(() => {
+    !O && (c(!0), (0, r.reportFalsePositive)(s).then(() => {
       t(), (0, S.showSafetyToast)({
-        text: E.default.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
+        text: u.default.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE_SUCCESS,
         id: "safety-tools-report-false-positive"
       })
     }).catch(() => {
-      O(!1), (0, T.showToast)((0, T.createToast)(E.default.Messages.ERROR_GENERIC_TITLE, T.ToastType.FAILURE))
+      c(!1), (0, T.showToast)((0, T.createToast)(u.default.Messages.ERROR_GENERIC_TITLE, T.ToastType.FAILURE))
     }))
-  }, [s, t, d]);
+  }, [s, t, O]);
   return (0, a.jsxs)(_.default, {
-    style: u.wrapperStyle,
+    style: d.wrapperStyle,
     children: [(0, a.jsx)(T.Text, {
       variant: "text-md/medium",
-      children: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
+      children: u.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_DESCRIPTION.format({
         learnMoreLink: o.default.getArticleURL(i.HelpdeskArticles.SAFETY_ALERTS)
       })
     }), (0, a.jsx)(T.Button, {
-      className: u.settingsButton,
-      onClick: c,
-      children: E.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
+      className: d.settingsButton,
+      onClick: A,
+      fullWidth: !0,
+      children: u.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_GO_TO_SETTINGS
     }), (0, a.jsx)("div", {
-      className: u.__invalid_reportFalsePositive,
       children: (0, a.jsx)(T.Text, {
         variant: "text-sm/normal",
         color: "text-muted",
-        className: u.reportFalsePositiveText,
-        children: E.default.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE.format({
+        className: d.reportFalsePositiveText,
+        children: u.default.Messages.SAFETY_TOOLS_REPORT_FALSE_POSITIVE.format({
           reportFalsePositiveHook: (e, t) => (0, a.jsx)(T.Button, {
-            className: u.reportFalsePositiveButton,
+            className: d.reportFalsePositiveButton,
             size: T.Button.Sizes.NONE,
             color: T.Button.Colors.LINK,
             look: T.Button.Looks.LINK,
-            disabled: d,
-            onClick: A,
+            disabled: O,
+            onClick: C,
             children: e
           }, t)
         })

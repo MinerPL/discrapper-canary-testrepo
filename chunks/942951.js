@@ -24,9 +24,9 @@ function h(e) {
     stopPropagation: g = !1,
     ariaLabel: T
   } = e, {
-    analyticsLocations: v
+    analyticsLocations: S
   } = (0, o.default)(l.default.USERNAME);
-  let S = (t = h, i = f, a.useCallback(e => {
+  let v = (t = h, i = f, a.useCallback(e => {
     let n = d.default.getChannel(i);
     null != n && null != t && (0, c.openUserContextMenu)(e, t, n)
   }, [t, i]));
@@ -34,7 +34,7 @@ function h(e) {
     let l = (i, n) => (0, a.createElement)(s.NameWithRoleAnchor, {
         ...null != i ? i : {},
         key: n,
-        onContextMenu: S,
+        onContextMenu: v,
         name: t,
         color: null == e ? void 0 : e.colorString,
         roleName: null == e ? void 0 : e.colorRoleName,
@@ -44,10 +44,10 @@ function h(e) {
         g && t.stopPropagation(), e(t)
       };
     return (0, n.jsx)(o.AnalyticsLocationProvider, {
-      value: v,
+      value: S,
       children: null != h ? (0, n.jsx)(s.Popout, {
         position: "right",
-        preload: () => (0, r.default)(h.id, h.getAvatarURL(m, 80), {
+        preload: () => (0, r.maybeFetchUserProfileForPopout)(h.id, h.getAvatarURL(m, 80), {
           guildId: m,
           channelId: f
         }),
@@ -72,5 +72,5 @@ function h(e) {
         }
       }, i) : l(void 0, i)
     })
-  }, [v, h, f, m, p, S, g, T])
+  }, [S, h, f, m, p, v, g, T])
 }

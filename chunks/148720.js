@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("668781"),
   r = n("728345"),
-  s = n("812206"),
-  a = n("835873"),
+  a = n("812206"),
+  s = n("835873"),
   o = n("973616"),
   l = n("592125"),
   u = n("430824"),
@@ -24,16 +24,16 @@ async function h(e) {
   let {
     channelId: n,
     applicationId: h,
-    instanceId: A,
+    launchId: A,
     inputApplication: m,
     analyticsLocations: N,
-    embeddedActivitiesManager: O
-  } = e, p = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.instanceId === A)), R = m;
+    embeddedActivitiesManager: p
+  } = e, O = E.default.getEmbeddedActivitiesForChannel(n).find(e => e.applicationId === h && (null == A || e.launchId === A)), R = m;
   if (null == R) {
     let e = await r.default.fetchApplication(h);
     R = o.default.createFromServer(e)
   }
-  if (null == p || null == R) return;
+  if (null == O || null == R) return;
   let C = _.default.getCurrentUser(),
     g = l.default.getChannel(n),
     L = (0, f.default)({
@@ -47,9 +47,9 @@ async function h(e) {
       PermissionStore: d.default,
       GuildStore: u.default
     }),
-    D = E.default.getSelfEmbeddedActivityForChannel(n),
-    v = null == D ? void 0 : D.applicationId,
-    M = null != v && null !== (t = s.default.getApplication(v)) && void 0 !== t ? t : void 0;
+    v = E.default.getSelfEmbeddedActivityForChannel(n),
+    D = null == v ? void 0 : v.applicationId,
+    M = null != D && null !== (t = a.default.getApplication(D)) && void 0 !== t ? t : void 0;
   ! function(e) {
     let {
       embeddedActivityJoinability: t,
@@ -60,7 +60,7 @@ async function h(e) {
         null == n || n();
         break;
       case f.EmbeddedActivityJoinability.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-        (0, a.showActivitiesInvalidPermissionsAlert)();
+        (0, s.showActivitiesInvalidPermissionsAlert)();
         break;
       case f.EmbeddedActivityJoinability.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
         i.default.show({
@@ -96,12 +96,12 @@ async function h(e) {
   }({
     embeddedActivityJoinability: L,
     handleCanJoin: async function e() {
-      null != p && await (0, I.default)({
-        applicationId: p.applicationId,
+      null != O && await (0, I.default)({
+        applicationId: O.applicationId,
         currentEmbeddedApplication: M,
         activityChannelId: n,
         locationObject: {},
-        embeddedActivitiesManager: O,
+        embeddedActivitiesManager: p,
         analyticsLocations: N
       })
     }

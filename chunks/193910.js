@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return F
+    return b
   }
 }), n("653041"), n("47120");
 var a = n("735250"),
@@ -20,23 +20,21 @@ var a = n("735250"),
   E = n("857185"),
   C = n("911200"),
   g = n("488131"),
-  S = n("592125"),
-  _ = n("375954"),
-  T = n("26290"),
-  I = n("626135"),
-  A = n("585483"),
-  v = n("403182"),
+  S = n("375954"),
+  _ = n("26290"),
+  T = n("626135"),
+  I = n("585483"),
+  A = n("403182"),
   N = n("127654"),
-  x = n("752305"),
-  M = n("423490"),
-  R = n("951211"),
-  L = n("981631"),
-  y = n("921944"),
-  O = n("489887"),
-  j = n("689938"),
-  P = n("604613");
+  v = n("752305"),
+  x = n("951211"),
+  M = n("981631"),
+  R = n("921944"),
+  L = n("489887"),
+  y = n("689938"),
+  O = n("34382");
 
-function D(e, t, l, s) {
+function j(e, t, l, s) {
   (0, o.openModalLazy)(async () => {
     let {
       default: i
@@ -52,33 +50,32 @@ function D(e, t, l, s) {
     modalKey: u.activityInviteKey
   })
 }
-let b = /(.*)```(\w+)\n(.*)```(.*)/s;
+let P = /(.*)```(\w+)\n(.*)```(.*)/s;
 
-function U(e) {
-  let {
-    channelId: t
-  } = e, n = (0, i.useStateFromStores)([S.default], () => S.default.getChannel(t)), o = (0, i.useStateFromStores)([_.default], () => _.default.hasCurrentUserSentMessageSinceAppStart()), u = (0, M.useActivitiesInTextOnboardingVisibility)(n, "ChannelAttachMenu"), d = [];
-  o && (null == u ? void 0 : u.desktopThrobberEnabled) && d.push(r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE);
-  let [c] = (0, m.useGetDismissibleContent)(d);
+function D() {
+  let e = (0, i.useStateFromStores)([S.default], () => S.default.hasCurrentUserSentMessageSinceAppStart()),
+    t = [];
+  e && t.push(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE);
+  let [n] = (0, m.useGetDismissibleContent)(t);
   return l.useEffect(() => () => {
-    c === r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE && (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE, {
-      dismissAction: y.ContentDismissActionType.TAKE_ACTION
+    n === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
+      dismissAction: R.ContentDismissActionType.TAKE_ACTION
     })
-  }, [c]), (0, a.jsx)(p.default, {
-    contentTypes: d,
+  }, [n]), (0, a.jsx)(p.default, {
+    contentTypes: t,
     children: e => {
       let {
         visibleContent: t
       } = e;
-      return t === r.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE ? (0, a.jsx)(T.TextBadge, {
-        text: j.default.Messages.NEW,
+      return t === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, a.jsx)(_.TextBadge, {
+        text: y.default.Messages.NEW,
         color: s.default.BUTTON_DANGER_BACKGROUND
       }) : null
     }
   })
 }
 
-function F(e) {
+function b(e) {
   let {
     channel: t,
     options: i,
@@ -86,8 +83,8 @@ function F(e) {
     onClose: m,
     onSelect: p,
     draftType: S,
-    editorTextContent: _,
-    setValue: M,
+    editorTextContent: b,
+    setValue: U,
     openClips: F
   } = e;
   (0, E.useMaybeFetchPremiumLikelihood)(C.default);
@@ -95,7 +92,7 @@ function F(e) {
     analyticsLocations: w
   } = (0, f.default)();
   l.useEffect(() => {
-    I.default.track(L.AnalyticEvents.OPEN_POPOUT, {
+    T.default.track(M.AnalyticEvents.OPEN_POPOUT, {
       type: "Send Attachment",
       channel_id: t.id,
       guild_id: t.guild_id
@@ -107,7 +104,7 @@ function F(e) {
   }
 
   function H() {
-    I.default.track(L.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), M("/", (0, x.toRichValue)("/"))
+    T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, v.toRichValue)("/"))
   }
 
   function B() {
@@ -116,7 +113,7 @@ function F(e) {
 
   function G() {
     (0, h.markDismissibleContentAsDismissed)(r.DismissibleContent.POLLS_CHAT_INPUT_COACHMARK, {
-      dismissAction: y.ContentDismissActionType.TAKE_ACTION
+      dismissAction: R.ContentDismissActionType.TAKE_ACTION
     }), (0, o.openModalLazy)(async () => {
       let {
         default: e
@@ -126,12 +123,12 @@ function F(e) {
         channel: t
       })
     }, {
-      modalKey: O.POLL_CREATION_MODAL_KEY
+      modalKey: L.POLL_CREATION_MODAL_KEY
     })
   }
 
   function V() {
-    I.default.track(L.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+    T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
       channel_type: t.type,
       channel_id: t.id,
       guild_id: t.guild_id
@@ -139,10 +136,10 @@ function F(e) {
       channel: t,
       guildId: t.guild_id,
       locationObject: {
-        page: t.isPrivate() ? L.AnalyticsPages.DM_CHANNEL : L.AnalyticsPages.GUILD_CHANNEL,
-        section: L.AnalyticsSections.CHANNEL_TEXT_AREA,
-        object: L.AnalyticsObjects.CONTEXT_MENU_ITEM,
-        objectType: L.AnalyticsObjectTypes.ACTIVITY
+        page: t.isPrivate() ? M.AnalyticsPages.DM_CHANNEL : M.AnalyticsPages.GUILD_CHANNEL,
+        section: M.AnalyticsSections.CHANNEL_TEXT_AREA,
+        object: M.AnalyticsObjects.CONTEXT_MENU_ITEM,
+        objectType: M.AnalyticsObjectTypes.ACTIVITY
       },
       openInPopout: !1,
       enableSelectedTextChannelInvite: !0,
@@ -153,13 +150,13 @@ function F(e) {
   }
 
   function W() {
-    let e = _,
+    let e = b,
       n = "txt",
       a = "",
-      l = _.match(b);
-    null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, N.promptToUpload)([(0, v.makeFile)(new Blob([e], {
+      l = b.match(P);
+    null != l && (a = l[1], n = l[2], e = l[3], a += l[4]), (0, N.promptToUpload)([(0, A.makeFile)(new Blob([e], {
       type: "text/plain"
-    }), "message.".concat(n))], t, S), A.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.CLEAR_TEXT), "" !== a && A.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.INSERT_TEXT, {
+    }), "message.".concat(n))], t, S), I.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.CLEAR_TEXT), "" !== a && I.ComponentDispatch.dispatchToLastSubscribed(M.ComponentActions.INSERT_TEXT, {
       plainText: a
     })
   }
@@ -167,106 +164,104 @@ function F(e) {
     onSelect: p,
     navId: "channel-attach",
     onClose: m,
-    "aria-label": j.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
-    className: P.menu,
+    "aria-label": y.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    className: O.menu,
     children: i.map(function(e) {
       var n;
       let l = (0, a.jsxs)("div", {
-        className: P.optionLabel,
+        className: O.optionLabel,
         children: [(0, a.jsx)(e.icon, {
-          className: P.optionIcon
+          className: O.optionIcon
         }), (0, a.jsx)("div", {
-          className: P.optionName,
+          className: O.optionName,
           children: e.display
-        }), null != e.badgeVal && e.badgeVal > 0 && (0, a.jsx)(T.NumberBadge, {
-          className: P.badge,
+        }), null != e.badgeVal && e.badgeVal > 0 && (0, a.jsx)(_.NumberBadge, {
+          className: O.badge,
           color: null !== (n = e.badgeColor) && void 0 !== n ? n : s.default.STATUS_DANGER,
           count: e.badgeVal
         })]
       });
       switch (e.type) {
-        case R.AttachmentTypes.UPLOAD_A_FILE:
+        case x.AttachmentTypes.UPLOAD_A_FILE:
           return (0, a.jsx)(o.MenuItem, {
             id: "upload-file",
             label: l,
             action: u
           }, "upload-file");
-        case R.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
-          if ("" === _) return null;
+        case x.AttachmentTypes.UPLOAD_TEXT_AS_FILE:
+          if ("" === b) return null;
           return (0, a.jsx)(o.MenuItem, {
             id: "upload-text-as-file",
             label: l,
             action: W
           }, "upload-text-as-file");
-        case R.AttachmentTypes.CLIPS:
+        case x.AttachmentTypes.CLIPS:
           return (0, a.jsx)(o.MenuItem, {
             id: "clips",
             label: l,
             action: B
           }, "clips");
-        case R.AttachmentTypes.POLL:
+        case x.AttachmentTypes.POLL:
           return (0, a.jsx)(o.MenuItem, {
             id: "poll",
             label: l,
             action: G
           }, "poll");
-        case R.AttachmentTypes.INVITE_TO_PLAY_GAME:
+        case x.AttachmentTypes.INVITE_TO_PLAY_GAME:
           return (0, a.jsx)(o.MenuItem, {
             id: "play",
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(T.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Join Invite",
                 application_id: n.application_id,
-                location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.JOIN, w))
+                location: M.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), j(n, t, M.ActivityActionTypes.JOIN, w))
             }
           }, "play");
-        case R.AttachmentTypes.INVITE_TO_LISTEN:
+        case x.AttachmentTypes.INVITE_TO_LISTEN:
           return (0, a.jsx)(o.MenuItem, {
             id: "listen",
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(T.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Listen Invite",
-                location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.LISTEN, w))
+                location: M.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), j(n, t, M.ActivityActionTypes.LISTEN, w))
             }
           }, "listen");
-        case R.AttachmentTypes.INVITE_TO_WATCH:
+        case x.AttachmentTypes.INVITE_TO_WATCH:
           return (0, a.jsx)(o.MenuItem, {
             id: "watch",
             label: l,
             action: () => {
               var n;
-              return n = e.activity, void(I.default.track(L.AnalyticEvents.OPEN_MODAL, {
+              return n = e.activity, void(T.default.track(M.AnalyticEvents.OPEN_MODAL, {
                 type: "Send Watch Invite",
-                location: L.AnalyticsSections.CHANNEL_TEXT_AREA
-              }), D(n, t, L.ActivityActionTypes.WATCH, w))
+                location: M.AnalyticsSections.CHANNEL_TEXT_AREA
+              }), j(n, t, M.ActivityActionTypes.WATCH, w))
             }
           }, "watch");
-        case R.AttachmentTypes.CREATE_THREAD:
+        case x.AttachmentTypes.CREATE_THREAD:
           return (0, a.jsx)(o.MenuItem, {
             id: "THREAD",
             label: l,
             action: k
           }, "THREAD");
-        case R.AttachmentTypes.SLASH_COMMAND:
+        case x.AttachmentTypes.SLASH_COMMAND:
           return (0, a.jsx)(o.MenuItem, {
             id: "SLASH_COMMAND",
             label: l,
             action: H
           }, "SLASH_COMMAND");
-        case R.AttachmentTypes.ACTIVITY:
+        case x.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(o.MenuItem, {
             id: "activity",
             label: l,
             action: V,
-            hint: (0, a.jsx)(U, {
-              channelId: t.id
-            })
+            hint: (0, a.jsx)(D, {})
           }, "activity");
         default:
           return null

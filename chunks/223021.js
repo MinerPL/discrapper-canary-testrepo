@@ -4,14 +4,14 @@ n.r(t), n.d(t, {
     return s
   }
 });
-var a = n("50182");
+var i = n("904335");
 let r = {
-    LATIN12: a.latin12CompactTimeStamp,
-    LATIN24: a.latin24CompactTimeStamp,
-    ASIAN: a.asianCompactTimeStamp
+    LATIN12: i.latin12CompactTimeStamp,
+    LATIN24: i.latin24CompactTimeStamp,
+    ASIAN: i.asianCompactTimeStamp
   },
-  i = /(AM|PM)$/;
+  a = /(AM|PM)$/;
 
 function s(e) {
-  return null != e.match(i) ? r.LATIN24 : e.length <= 5 ? r.LATIN12 : r.ASIAN
+  return null != e.match(a) ? r.LATIN24 : e.length <= 5 ? r.LATIN12 : r.ASIAN
 }

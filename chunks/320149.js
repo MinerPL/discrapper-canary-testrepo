@@ -18,44 +18,44 @@ var a = n("735250"),
   h = n("359110"),
   _ = n("6025"),
   C = n("433355"),
-  m = n("465670"),
-  S = n("502568"),
-  I = n("933557"),
-  p = n("287746"),
+  S = n("465670"),
+  m = n("502568"),
+  p = n("933557"),
+  I = n("287746"),
   T = n("689938"),
-  g = n("571770"),
-  A = n("783913");
+  g = n("63733"),
+  A = n("38156");
 
 function N(e) {
   let {
     channel: t,
     baseChannelId: n
-  } = e, N = (0, I.default)(t), v = (0, c.useListHasSingleMessageRequest)(), O = (0, c.useListHasSingleSpamMessageRequest)(), R = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), L = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), P = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), M = s.useCallback(() => {
-    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), R && v && (0, h.transitionToChannel)(t.id), L && O && (0, h.transitionToChannel)(t.id)
-  }, [t.id, L, O, R, v]), y = s.useCallback(() => {
+  } = e, N = (0, p.default)(t), v = (0, c.useListHasSingleMessageRequest)(), R = (0, c.useListHasSingleSpamMessageRequest)(), L = (0, l.useStateFromStores)([u.default], () => u.default.isMessageRequest(t.id)), O = (0, l.useStateFromStores)([d.default], () => d.default.isSpam(t.id)), M = (0, E.useLongestChannelMessageBeforeReply)(t.id, t.getRecipientId()), P = s.useCallback(() => {
+    _.default.closeChannelSidebar(C.MESSAGE_REQUESTS_BASE_CHANNEL_ID), L && v && (0, h.transitionToChannel)(t.id), O && R && (0, h.transitionToChannel)(t.id)
+  }, [t.id, O, R, L, v]), y = s.useCallback(() => {
     (0, i.showToast)((0, i.createToast)(T.default.Messages.MESSAGE_REQUESTS_SPAM_ERROR_ALERT_TITLE, i.ToastType.FAILURE))
   }, []), {
-    markAsNotSpam: D
+    markAsNotSpam: x
   } = (0, f.useMessageRequestActions)({
-    onAcceptSuccess: M,
+    onAcceptSuccess: P,
     onError: y
   });
   if (null == t || !t.isDM()) return null;
-  let b = [(0, a.jsx)(S.default.Icon, {
-    icon: m.default,
+  let D = [(0, a.jsx)(m.default.Icon, {
+    icon: S.default,
     tooltip: T.default.Messages.CLOSE,
     onClick: () => _.default.closeChannelSidebar(n)
   }, "close")];
   return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(S.default, {
-      toolbar: b,
+    children: [(0, a.jsx)(m.default, {
+      toolbar: D,
       "aria-label": T.default.Messages.CHANNEL_HEADER_BAR_A11Y_LABEL,
       children: (0, o.renderTitle)({
         channel: t,
         channelName: N,
         inSidebar: !0
       })
-    }), L && (0, a.jsxs)("div", {
+    }), O && (0, a.jsxs)("div", {
       className: A.hamBanner,
       children: [(0, a.jsx)(i.Text, {
         className: A.__invalid_hamBannerText,
@@ -64,12 +64,12 @@ function N(e) {
       }), (0, a.jsx)(i.Button, {
         className: A.hamBannerButton,
         size: i.ButtonSizes.SMALL,
-        onClick: () => D(t, P),
+        onClick: () => x(t, M),
         children: T.default.Messages.MESSAGE_REQUESTS_CHANNEL_SIDEBAR_HAM_BUTTON
       })]
     }), (0, a.jsx)("div", {
       className: g.chat,
-      children: (0, a.jsx)(p.default, {
+      children: (0, a.jsx)(I.default, {
         channel: t,
         guild: null,
         chatInputType: r.ChatInputTypes.SIDEBAR

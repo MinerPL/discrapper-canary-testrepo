@@ -12,11 +12,11 @@ var s = n("735250"),
   f = n("624138"),
   E = n("453070"),
   _ = n("373228"),
-  T = n("419922"),
-  m = n("217588"),
+  m = n("419922"),
+  T = n("217588"),
   I = n("981631"),
   p = n("474936"),
-  h = n("14949");
+  h = n("221940");
 let N = (0, f.cssValueToNumber)(l.default.STICKERS_CONSTANTS_STICKER_DIMENSION),
   S = e => {
     null != e && o.default.trackWithMetadata(I.AnalyticEvents.EXPRESSION_TOOLTIP_VIEWED, {
@@ -49,7 +49,7 @@ t.default = e => {
       onRequestClose: () => {
         f(!0)
       },
-      renderPopout: e => (0, s.jsx)(m.default, {
+      renderPopout: e => (0, s.jsx)(T.default, {
         ...e,
         renderableSticker: t,
         channel: n,
@@ -74,7 +74,7 @@ t.default = e => {
               f(!o), n(e)
             },
             tag: "span",
-            children: (0, s.jsx)(T.default, {
+            children: (0, s.jsx)(m.default, {
               isInteracting: l,
               size: N,
               sticker: null != p ? p : t

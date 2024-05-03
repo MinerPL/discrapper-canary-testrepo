@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return j
+    return U
   }
 }), n("47120"), n("789020");
 var s = n("735250");
@@ -17,138 +17,126 @@ var a = n("613828"),
   f = n("835473"),
   E = n("522474"),
   _ = n("523746"),
-  T = n("592125"),
-  m = n("594174"),
+  m = n("592125"),
+  T = n("594174"),
   I = n("158010"),
   p = n("602623"),
   h = n("630388"),
   N = n("823379"),
   S = n("624138"),
-  C = n("566620"),
-  A = n("317381"),
-  g = n("969345"),
-  M = n("638880"),
-  R = n("266820"),
-  O = n("147865"),
-  v = n("778569"),
-  L = n("513202"),
-  x = n("403404"),
-  D = n("701488"),
-  P = n("981631"),
-  y = n("689938"),
-  U = n("97661");
-let b = (0, S.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
+  C = n("317381"),
+  A = n("638880"),
+  g = n("266820"),
+  M = n("147865"),
+  R = n("778569"),
+  v = n("513202"),
+  O = n("403404"),
+  x = n("701488"),
+  L = n("981631"),
+  D = n("689938"),
+  P = n("50875");
+let y = (0, S.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
-function j(e) {
+function U(e) {
   var t, n, i, S;
   let {
-    applicationId: j,
-    message: G
+    applicationId: U,
+    message: j
   } = e, {
-    analyticsLocations: B
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), F = (0, u.useAnalyticsContext)(), k = G.channel_id, w = (0, l.useStateFromStores)([T.default], () => T.default.getChannel(k), [k]), H = null == w ? void 0 : w.guild_id, V = null != w && (w.isGuildVoice() || w.isPrivate()), Y = (0, l.useStateFromStores)([A.default], () => A.default.getSelfEmbeddedActivityForChannel(k)), K = (null == Y ? void 0 : Y.applicationId) === j, [W, z] = (0, f.default)([j, null !== (n = null == Y ? void 0 : Y.applicationId) && void 0 !== n ? n : ""]), Q = (0, O.default)(null !== (i = null == W ? void 0 : W.maxParticipants) && void 0 !== i ? i : 0), [q] = (0, l.useStateFromStoresArray)([A.default], () => V ? A.default.getEmbeddedActivitiesForChannel(k).filter(e => e.applicationId === j) : [], [j, k, V]), J = Array.from(null !== (S = null == q ? void 0 : q.userIds) && void 0 !== S ? S : []), X = (0, l.useStateFromStoresArray)([m.default], () => J.map(e => m.default.getUser(e)).filter(N.isNotNullish), [J]), Z = (0, v.default)({
-    applicationId: j,
-    size: b
-  }), $ = E.default.getWindowOpen(P.PopoutWindowKeys.CHANNEL_CALL_POPOUT), ee = X.length > 0 ? y.default.Messages.JOIN : y.default.Messages.START, et = async () => {
-    if (V) {
-      let {
-        activityConfigs: e,
-        applications: t
-      } = await (0, C.fetchShelf)({
-        guildId: H
-      }), n = (0, g.default)({
-        applicationId: j,
-        activityConfigs: e,
-        applications: t
-      });
-      if (null != q && X.length > 0) await (0, M.default)({
-        applicationId: q.applicationId,
-        currentEmbeddedApplication: z,
-        activityChannelId: k,
-        embeddedActivitiesManager: L.default,
-        locationObject: F.location,
-        analyticsLocations: B
+    analyticsLocations: b
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), B = (0, u.useAnalyticsContext)(), G = j.channel_id, F = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(G), [G]), k = null == F ? void 0 : F.guild_id, w = null != F && (F.isGuildVoice() || F.isPrivate()), H = (0, l.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivityForChannel(G)), V = (null == H ? void 0 : H.applicationId) === U, [Y, K] = (0, f.default)([U, null !== (n = null == H ? void 0 : H.applicationId) && void 0 !== n ? n : ""]), W = (0, M.default)(null !== (i = null == Y ? void 0 : Y.maxParticipants) && void 0 !== i ? i : 0), [z] = (0, l.useStateFromStoresArray)([C.default], () => w ? C.default.getEmbeddedActivitiesForChannel(G).filter(e => e.applicationId === U) : [], [U, G, w]), Q = Array.from(null !== (S = null == z ? void 0 : z.userIds) && void 0 !== S ? S : []), q = (0, l.useStateFromStoresArray)([T.default], () => Q.map(e => T.default.getUser(e)).filter(N.isNotNullish), [Q]), X = (0, R.default)({
+    applicationId: U,
+    size: y
+  }), Z = E.default.getWindowOpen(L.PopoutWindowKeys.CHANNEL_CALL_POPOUT), J = q.length > 0 ? D.default.Messages.JOIN : D.default.Messages.START, $ = async () => {
+    if (w) {
+      if (null != z && q.length > 0) await (0, A.default)({
+        applicationId: z.applicationId,
+        currentEmbeddedApplication: K,
+        activityChannelId: G,
+        embeddedActivitiesManager: v.default,
+        locationObject: B.location,
+        analyticsLocations: b
       });
       else {
-        let e = w.isPrivate() && !_.default.isCallActive(k),
-          t = () => (0, R.default)({
-            activityItem: n,
-            currentEmbeddedApplication: z,
-            channelId: k,
-            guildId: H,
-            embeddedActivitiesManager: L.default,
-            analyticsLocations: B
+        let e = F.isPrivate() && !_.default.isCallActive(G),
+          t = () => (0, g.default)({
+            targetApplicationId: U,
+            currentEmbeddedApplication: K,
+            channelId: G,
+            guildId: k,
+            embeddedActivitiesManager: v.default,
+            analyticsLocations: b
           });
         e ? o.default.show({
-          title: y.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
-          cancelText: y.default.Messages.CANCEL,
-          confirmText: y.default.Messages.CONFIRM,
+          title: D.default.Messages.DEFAULT_CONFIRMATION_MODAL_HEADER,
+          cancelText: D.default.Messages.CANCEL,
+          confirmText: D.default.Messages.CONFIRM,
           onConfirm: () => t(),
-          body: y.default.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
+          body: D.default.Messages.EMBEDDED_ACTIVITIES_DM_START_CONFIRMATION_TEXT
         }) : t()
       }
-    } else(0, x.default)({
-      guildId: H,
-      locationObject: F.location,
-      openInPopout: $,
-      initialSelectedApplicationId: j,
-      initialSlide: D.ActivityShelfSlides.SELECT_CHANNEL,
-      analyticsLocations: B
+    } else(0, O.default)({
+      guildId: k,
+      locationObject: B.location,
+      openInPopout: Z,
+      initialSelectedApplicationId: U,
+      initialSlide: x.ActivityShelfSlides.SELECT_CHANNEL,
+      analyticsLocations: b
     })
   };
-  return null != W && (0, h.hasFlag)(W.flags, P.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
-    value: B,
+  return null != Y && (0, h.hasFlag)(Y.flags, L.ApplicationFlags.EMBEDDED) ? (0, s.jsx)(c.AnalyticsLocationProvider, {
+    value: b,
     children: (0, s.jsxs)("div", {
-      className: U.container,
+      className: P.container,
       children: [(0, s.jsx)("div", {
-        className: U.imgContainer,
+        className: P.imgContainer,
         children: (0, s.jsx)("img", {
-          className: U.img,
-          alt: W.name,
-          src: Z.url
+          className: P.img,
+          alt: Y.name,
+          src: X.url
         })
       }), (0, s.jsxs)("div", {
-        className: U.content,
+        className: P.content,
         children: [(0, s.jsx)(r.Heading, {
-          className: U.heading,
+          className: P.heading,
           variant: "heading-xl/semibold",
-          children: W.name
+          children: Y.name
         }), (0, s.jsx)(r.Heading, {
-          className: U.description,
+          className: P.description,
           variant: "heading-sm/medium",
-          children: null === (t = W.description) || void 0 === t ? void 0 : t.trim()
+          children: null === (t = Y.description) || void 0 === t ? void 0 : t.trim()
         }), (0, s.jsx)(r.Heading, {
-          className: U.learnMore,
+          className: P.learnMore,
           variant: "heading-sm/medium",
           children: (0, s.jsx)(a.Link, {
-            to: P.Routes.ACTIVITY_DETAILS(j),
-            children: y.default.Messages.LEARN_MORE
+            to: L.Routes.ACTIVITY_DETAILS(U),
+            children: D.default.Messages.LEARN_MORE
           })
         }), (0, s.jsxs)("div", {
-          className: U.cta,
-          children: [X.length > 0 ? (0, s.jsx)("div", {
-            className: U.avatars,
+          className: P.cta,
+          children: [q.length > 0 ? (0, s.jsx)("div", {
+            className: P.avatars,
             children: (0, s.jsx)(p.default, {
-              guildId: H,
-              users: X,
+              guildId: k,
+              users: q,
               max: 4
             })
           }) : (0, s.jsxs)("div", {
-            className: U.maxParticipants,
+            className: P.maxParticipants,
             children: [(0, s.jsx)(I.default, {
-              className: U.peopleIcon
+              className: P.peopleIcon
             }), (0, s.jsx)(r.Text, {
               variant: "text-xs/semibold",
-              children: Q
+              children: W
             })]
           }), (0, s.jsx)("div", {
-            className: U.buttonWrapper,
+            className: P.buttonWrapper,
             children: (0, s.jsx)(r.Button, {
-              onClick: et,
-              className: U.button,
+              onClick: $,
+              className: P.button,
               color: r.ButtonColors.GREEN,
-              disabled: K,
-              children: ee
+              disabled: V,
+              children: J
             })
           })]
         })]

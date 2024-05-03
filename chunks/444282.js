@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("166459"),
   u = n("53281"),
@@ -17,15 +17,15 @@ var i = n("735250"),
   E = n("859235"),
   I = n("898463"),
   T = n("981631"),
-  f = n("117168"),
+  f = n("89749"),
   S = n("451328");
 
 function h(e) {
   let {
     channelId: t,
     option: n,
-    keyboardModeEnabled: s
-  } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), O = r.useRef(null), p = r.useCallback(() => {
+    keyboardModeEnabled: a
+  } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), p = r.useRef(null), O = r.useCallback(() => {
     m(!0)
   }, []), R = r.useCallback(() => {
     m(!1)
@@ -45,14 +45,14 @@ function h(e) {
     })
   }, [t, n]);
   return (r.useEffect(() => {
-    let e = O.current;
-    return null == N && (null == e || e.addEventListener("dragover", p, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", C, !1)), () => {
-      null == e || e.removeEventListener("dragover", p, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", C, !1)
+    let e = p.current;
+    return null == N && (null == e || e.addEventListener("dragover", O, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", C, !1)), () => {
+      null == e || e.removeEventListener("dragover", O, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", C, !1)
     }
-  }, [N, p, R, C]), null != N) ? (0, i.jsx)(I.default, {
+  }, [N, O, R, C]), null != N) ? (0, i.jsx)(I.default, {
     channelId: t,
     upload: N,
-    keyboardModeEnabled: s,
+    keyboardModeEnabled: a,
     draftType: _.DraftType.SlashCommand,
     label: (0, i.jsxs)(r.Fragment, {
       children: [(0, i.jsxs)(o.Text, {
@@ -70,20 +70,20 @@ function h(e) {
   }) : (0, i.jsxs)(E.default, {
     id: n.name,
     channelId: t,
-    keyboardModeEnabled: s,
+    keyboardModeEnabled: a,
     onKeyDown: e => {
       if (e.which === T.KeyboardKeys.ENTER) {
         var t;
         e.preventDefault(), null === (t = h.current) || void 0 === t || t.activateUploadDialogue()
       }
     },
-    className: a()(f.emptyOption, {
+    className: s()(f.emptyOption, {
       [f.emptyOptionActive]: A
     }),
     draftType: _.DraftType.SlashCommand,
-    ref: O,
+    ref: p,
     children: [(0, i.jsx)("span", {
-      className: a()(f.optionName, {
+      className: s()(f.optionName, {
         [f.optionNameActive]: A
       }),
       children: n.name

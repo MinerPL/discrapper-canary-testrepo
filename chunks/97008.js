@@ -1,7 +1,9 @@
 "use strict";
 n.r(t), n("411104");
-var i = n("956664"),
-  r = n("693824");
+var i = n("141795"),
+  r = n("476326"),
+  a = n("956664"),
+  s = n("693824");
 t.default = class e {
   toDataUrl(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "png",
@@ -11,18 +13,28 @@ t.default = class e {
   async exportCanvas(e, t) {
     let {
       format: n,
-      fileType: s = "png",
-      quality: a = 1,
-      fileName: o
+      fileType: o = "png",
+      quality: l = 1,
+      fileName: u
     } = t;
-    if (n === r.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, s, a);
-    if (n === r.DiscordCanvasExporterOutputFormats.Blob) {
-      let t = this.toDataUrl(e, s, a);
-      return (0, i.dataUrlToBlob)(t)
+    if (n === s.DiscordCanvasExporterOutputFormats.Base64) return this.toDataUrl(e, o, l);
+    if (n === s.DiscordCanvasExporterOutputFormats.Blob) {
+      let t = this.toDataUrl(e, o, l);
+      return (0, a.dataUrlToBlob)(t)
     }
-    if (n === r.DiscordCanvasExporterOutputFormats.File) {
-      let t = this.toDataUrl(e, s, a);
-      return await (0, i.dataUrlToFile)(t, o, "image/png")
+    if (n === s.DiscordCanvasExporterOutputFormats.File) {
+      let t = this.toDataUrl(e, o, l);
+      return await (0, a.dataUrlToFile)(t, u, "image/png")
+    }
+    if (n === s.DiscordCanvasExporterOutputFormats.CloudUpload) {
+      let {
+        channelId: n
+      } = t, s = this.toDataUrl(e, o, l), d = await (0, a.dataUrlToFile)(s, u, "image/png");
+      return new i.CloudUpload({
+        file: d,
+        platform: r.UploadPlatform.WEB,
+        isThumbnail: !1
+      }, n)
     }
     throw Error("DiscordCanvas: ".concat(n, " is not a valid export format."))
   }

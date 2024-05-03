@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120"), s("653041");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("392711"),
   o = s("442837"),
@@ -32,10 +32,10 @@ var a = s("735250"),
   p = s("1080"),
   M = s("981631"),
   D = s("689938"),
-  v = s("760739"),
-  j = s("850169");
+  v = s("58803"),
+  G = s("199100");
 
-function G(e, t, s) {
+function j(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -119,7 +119,7 @@ class P extends l.PureComponent {
       guild: s
     } = this.props;
     return (0, a.jsxs)(d.Clickable, {
-      className: i()(v.bannedUser, j.card),
+      className: i()(v.bannedUser, G.card),
       onClick: this.handleShowModal,
       onContextMenu: this.handleContextMenu,
       children: [(0, a.jsx)(d.Avatar, {
@@ -140,7 +140,7 @@ class P extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "handleShowModal", () => {
+    super(...e), j(this, "handleShowModal", () => {
       let {
         guild: e,
         user: t,
@@ -154,7 +154,7 @@ class P extends l.PureComponent {
         ban: l,
         hideDiscriminator: s
       }))
-    }), G(this, "handleContextMenu", e => {
+    }), j(this, "handleContextMenu", e => {
       (0, u.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -201,7 +201,7 @@ class b extends l.PureComponent {
     R.default.setSearchQuery("")
   }
   constructor(...e) {
-    super(...e), G(this, "getSortedBans", (0, g.cachedFunction)((e, t) => {
+    super(...e), j(this, "getSortedBans", (0, g.cachedFunction)((e, t) => {
       if (null == e) return [];
       let s = this.makeFilter(t),
         a = [];
@@ -210,7 +210,7 @@ class b extends l.PureComponent {
         null != e && s(e) && a.push(e)
       }
       return a.sort((e, t) => e.username.localeCompare(t.username))
-    })), G(this, "getRowHeight", (e, t) => {
+    })), j(this, "getRowHeight", (e, t) => {
       var s;
       if (e > 0) return 0;
       let {
@@ -221,7 +221,7 @@ class b extends l.PureComponent {
       let i = n[t],
         r = null == a ? void 0 : a.get(null !== (s = null == i ? void 0 : i.id) && void 0 !== s ? s : "");
       return null == i || null == r ? 0 : 56
-    }), G(this, "renderRow", e => {
+    }), j(this, "renderRow", e => {
       var t;
       let {
         section: s,
@@ -245,13 +245,13 @@ class b extends l.PureComponent {
         hideDiscriminator: i,
         guild: r
       }, u.id)
-    }), G(this, "getSectionHeight", e => {
+    }), j(this, "getSectionHeight", e => {
       if (e > 0) return 0;
       let {
         bans: t
       } = this.props;
       return null == t ? 462 : 120
-    }), G(this, "renderSection", () => {
+    }), j(this, "renderSection", () => {
       var e;
       let t;
       let {

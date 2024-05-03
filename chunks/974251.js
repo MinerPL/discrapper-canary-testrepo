@@ -2,7 +2,7 @@
 n.r(t), n("47120"), n("411104");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("442837"),
   o = n("524437"),
@@ -21,8 +21,8 @@ var a = n("735250"),
   T = n("536442"),
   I = n("79390"),
   A = n("628566"),
-  v = n("665906"),
-  N = n("695346"),
+  N = n("665906"),
+  v = n("695346"),
   x = n("433355"),
   M = n("819640"),
   R = n("375954"),
@@ -41,50 +41,50 @@ var a = n("735250"),
   B = n("356659"),
   G = n("921944"),
   V = n("689938"),
-  W = n("902952");
+  W = n("164841");
 t.default = l.memo(function(e) {
-  var t, s, Y;
-  let z, {
-      className: Z,
+  var t, s;
+  let Y, {
+      className: z,
       channel: K,
-      draftType: X,
+      draftType: Z,
       editorTextContent: q,
-      setValue: Q,
-      canOnlyUseTextCommands: J
+      setValue: X,
+      canOnlyUseTextCommands: Q
     } = e,
-    $ = (0, h.useAppContext)(),
-    ee = l.useRef(null),
-    et = (0, r.useStateFromStores)([y.default], () => y.default.getActivities()),
-    en = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
-    ea = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
-    el = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
-    es = (0, r.useStateFromStores)([x.default], () => null == x.default.getCurrentSidebarChannelId(K.id)),
+    J = (0, h.useAppContext)(),
+    $ = l.useRef(null),
+    ee = (0, r.useStateFromStores)([y.default], () => y.default.getActivities()),
+    et = (0, r.useStateFromStores)([g.default], () => g.default.getSettings().clipsEnabled),
+    en = (0, r.useStateFromStores)([g.default], () => g.default.getLastClipsSession()),
+    ea = (0, r.useStateFromStoresArray)([g.default], () => g.default.getNewClipIds()),
+    el = (0, r.useStateFromStores)([x.default], () => null == x.default.getCurrentSidebarChannelId(K.id)),
     {
-      showClipsHeaderEntrypoint: ei
+      showClipsHeaderEntrypoint: es
     } = C.ClipsExperiment.useExperiment({
       location: "ChannelAttachButton"
     }, {
       autoTrackExposure: !1
     }),
-    er = (0, r.useStateFromStores)([T.HotspotStore], () => T.HotspotStore.hasHotspot(T.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
-    eo = (0, d.useModalsStore)(e => (0, d.hasModalOpenSelector)(e, B.CLIPS_GALLERY_MODAL_KEY)),
-    eu = (0, r.useStateFromStores)([M.default], () => M.default.hasLayers()),
-    ed = (0, r.useStateFromStores)([g.default], () => g.default.hasClips()),
-    [ec, ef] = l.useState(null),
-    eh = (0, C.useEnableClips)() && (en || ed),
-    em = K.isPrivate(),
-    ep = (0, r.useStateFromStores)([L.default], () => em || L.default.can(H.Permissions.ATTACH_FILES, K) && L.default.can(H.Permissions.SEND_MESSAGES, K)),
-    eE = (0, f.default)(ea);
-  (null == eE ? void 0 : eE.newClipIds.length) !== (null == ea ? void 0 : ea.newClipIds.length) && (null !== (t = null == ea ? void 0 : ea.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ec && er && es && !eo && !ei && !eu && ef("recentClips");
-  let eC = (e, t, n) => {
-      null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(K, []) : (0, U.promptToUpload)(e, K, X, {
+    ei = (0, r.useStateFromStores)([T.HotspotStore], () => T.HotspotStore.hasHotspot(T.HotspotLocations.CLIPS_CHANNEL_ATTACH_REMINDER)),
+    er = (0, d.useModalsStore)(e => (0, d.hasModalOpenSelector)(e, B.CLIPS_GALLERY_MODAL_KEY)),
+    eo = (0, r.useStateFromStores)([M.default], () => M.default.hasLayers()),
+    eu = (0, r.useStateFromStores)([g.default], () => g.default.hasClips()),
+    [ed, ec] = l.useState(null),
+    ef = (0, C.useEnableClips)() && (et || eu),
+    eh = K.isPrivate(),
+    em = (0, r.useStateFromStores)([L.default], () => eh || L.default.can(H.Permissions.ATTACH_FILES, K) && L.default.can(H.Permissions.SEND_MESSAGES, K)),
+    ep = (0, f.default)(en);
+  (null == ep ? void 0 : ep.newClipIds.length) !== (null == en ? void 0 : en.newClipIds.length) && (null !== (t = null == en ? void 0 : en.newClipIds.length) && void 0 !== t ? t : 0) > 0 && null == ed && ei && el && !er && !es && !eo && ec("recentClips");
+  let eE = (e, t, n) => {
+      null != t && "ETOOLARGE" === t.code ? (0, U.showUploadFileSizeExceededError)(K, []) : (0, U.promptToUpload)(e, K, Z, {
         requireConfirm: !0,
         showLargeMessageDialog: n
       }), D.ComponentDispatch.dispatchToLastSubscribed(H.ComponentActions.TEXTAREA_FOCUS)
     },
-    eg = (0, r.useStateFromStores)([R.default], () => R.default.hasCurrentUserSentMessageSinceAppStart());
+    eC = (0, r.useStateFromStores)([R.default], () => R.default.hasCurrentUserSentMessageSinceAppStart());
 
-  function eS() {
+  function eg() {
     (0, d.openModalLazy)(async () => {
       let {
         default: e
@@ -95,51 +95,51 @@ t.default = l.memo(function(e) {
       })
     }, {
       modalKey: B.CLIPS_GALLERY_MODAL_KEY
-    }), ef(null)
+    }), ec(null)
   }
   l.useEffect(() => {
     let e = () => {
       var e;
-      return null === (e = ee.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+      return null === (e = $.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
     };
     return D.ComponentDispatch.subscribe(H.ComponentActions.UPLOAD_FILE, e), () => {
       D.ComponentDispatch.unsubscribe(H.ComponentActions.UPLOAD_FILE, e)
     }
   });
-  let e_ = (0, v.useCanStartPublicThread)(K),
-    eT = (0, v.useCanStartPrivateThread)(K),
-    eI = !N.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
-    eA = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, J, K)),
-    ev = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
+  let eS = (0, N.useCanStartPublicThread)(K),
+    e_ = (0, N.useCanStartPrivateThread)(K),
+    eT = !v.UseLegacyChatInput.useSetting() && !(0, b.isAndroidWeb)() && null != window.ResizeObserver,
+    eI = (0, r.useStateFromStores)([L.default, A.default], () => (0, E.canUseApplicationCommands)(L.default, A.default, Q, K)),
+    eA = (0, I.useCanPostPollsInChannel)(null != K ? K : void 0),
     eN = (0, d.useRedesignIconContext)().enabled,
-    ex = (0, m.useActivitiesInTextButtonVisibility)(K.id, "ChannelAttachButton"),
-    eM = null !== (s = null == el ? void 0 : el.length) && void 0 !== s ? s : 0,
-    eR = (0, k.default)({
-      canAttachFiles: ep,
-      canStartThreads: e_ || eT,
-      useSlate: eI,
-      hasClips: eh,
-      canUseApplicationCommands: eA,
+    ev = (0, m.useShowActivitiesInOmniButtonMenu)(K.id, "ChannelAttachButton"),
+    ex = null !== (s = null == ea ? void 0 : ea.length) && void 0 !== s ? s : 0,
+    eM = (0, k.default)({
+      canAttachFiles: em,
+      canStartThreads: eS || e_,
+      useSlate: eT,
+      hasClips: ef,
+      canUseApplicationCommands: eI,
       channel: K,
-      activities: et,
-      newClipsCount: eM,
-      canPostPolls: ev,
-      canLaunchActivities: null !== (Y = null == ex ? void 0 : ex.showInOmniButtonMenu) && void 0 !== Y && Y,
-      appContext: $
+      activities: ee,
+      newClipsCount: ex,
+      canPostPolls: eA,
+      canLaunchActivities: ev,
+      appContext: J
     });
-  if (0 === eR.length) return null;
-  let eL = et.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
-    ey = et.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eL;
-  z = eN ? (0, a.jsx)(u.CirclePlusIcon, {
+  if (0 === eM.length) return null;
+  let eR = ee.some(e => (0, p.default)(e, H.ActivityFlags.SYNC)),
+    eL = ee.some(e => (0, p.default)(e, H.ActivityFlags.JOIN) && !(0, p.default)(e, H.ActivityFlags.EMBEDDED)) || eR;
+  Y = eN ? (0, a.jsx)(u.CirclePlusIcon, {
     className: W.__invalid_attachButtonIcon,
     colorClass: W.attachButtonPlus
-  }) : ey ? (0, a.jsx)(P.default, {
+  }) : eL ? (0, a.jsx)(P.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonPlay,
     background: W.attachButtonPlus,
     width: 24,
     height: 24
-  }) : eM > 0 ? (0, a.jsx)(j.default, {
+  }) : ex > 0 ? (0, a.jsx)(j.default, {
     className: W.__invalid_attachButtonIcon,
     foreground: W.attachButtonClip,
     background: W.attachButtonPlus,
@@ -151,44 +151,44 @@ t.default = l.memo(function(e) {
     width: 24,
     height: 24
   });
-  let eO = (0, a.jsx)(d.Popout, {
-    shouldShow: null != ec,
+  let ey = (0, a.jsx)(d.Popout, {
+    shouldShow: null != ed,
     animation: d.Popout.Animation.NONE,
-    align: "recentClips" === ec ? "center" : "left",
+    align: "recentClips" === ed ? "center" : "left",
     position: "top",
-    positionKey: null != ec ? ec : "null",
+    positionKey: null != ed ? ed : "null",
     onRequestOpen: () => {
-      eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX, {
+      eC && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_BUTTON_NUX_V2, {
         dismissAction: G.ContentDismissActionType.TAKE_ACTION
-      }), ef("attachMenu")
+      }), ec("attachMenu")
     },
     onRequestClose: () => {
-      !(0, d.hasAnyModalOpen)() && (eg && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_OMNIMENU_NEW_BADGE, {
+      !(0, d.hasAnyModalOpen)() && (eC && (0, _.markDismissibleContentAsDismissed)(o.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE, {
         dismissAction: G.ContentDismissActionType.TAKE_ACTION
-      }), ef(null))
+      }), ec(null))
     },
     renderPopout: e => {
-      switch (ec) {
+      switch (ed) {
         case "recentClips":
           return (0, a.jsx)(S.default, {
             ...e,
-            onOpenClips: eS,
-            lastClipsSession: ea
+            onOpenClips: eg,
+            lastClipsSession: en
           });
         case "attachMenu":
           return (0, a.jsx)(w.default, {
             ...e,
-            onClose: () => ef(null),
-            options: eR,
+            onClose: () => ec(null),
+            options: eM,
             channel: K,
             onFileUpload: () => {
               var e;
-              return null === (e = ee.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+              return null === (e = $.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
             },
-            draftType: X,
+            draftType: Z,
             editorTextContent: q,
-            setValue: Q,
-            openClips: eS
+            setValue: X,
+            openClips: eg
           });
         default:
           throw Error("Invalid popout type provided")
@@ -197,24 +197,24 @@ t.default = l.memo(function(e) {
     children: e => (0, a.jsx)(d.Button, {
       look: d.Button.Looks.BLANK,
       size: d.Button.Sizes.NONE,
-      className: i()(W.attachButton, Z),
+      className: i()(W.attachButton, z),
       innerClassName: W.attachButtonInner,
       "aria-label": V.default.Messages.CHAT_ATTACH_UPLOAD_OR_INVITE,
-      onDoubleClick: ep ? () => {
+      onDoubleClick: em ? () => {
         var e;
-        return null === (e = ee.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
+        return null === (e = $.current) || void 0 === e ? void 0 : e.activateUploadDialogue()
       } : void 0,
       ...e,
-      children: z
+      children: Y
     })
   });
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsx)("div", {
       className: W.uploadInput,
       children: (0, a.jsx)(c.default, {
-        ref: ee,
+        ref: $,
         onChange: e => {
-          eC(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
+          eE(e.currentTarget.files, e.currentTarget.err), e.currentTarget.value = ""
         },
         multiple: K.rateLimitPerUser <= 0,
         tabIndex: -1,
@@ -224,9 +224,9 @@ t.default = l.memo(function(e) {
       className: W.attachWrapper,
       children: (0, a.jsx)(F.default, {
         channel: K,
-        isOmniMenuOpen: "attachMenu" === ec,
-        openOmniMenu: () => ef("attachMenu"),
-        children: eO
+        isOmniMenuOpen: "attachMenu" === ed,
+        openOmniMenu: () => ec("attachMenu"),
+        children: ey
       })
     })]
   })

@@ -1,7 +1,7 @@
 "use strict";
 let i, r;
 n.r(t), n("653041");
-var s, a, o, l, u = n("512722"),
+var a, s, o, l, u = n("512722"),
   d = n.n(u),
   _ = n("392711"),
   c = n.n(_),
@@ -14,34 +14,34 @@ var s, a, o, l, u = n("512722"),
   A = n("687516"),
   m = n("139656"),
   N = n("358085"),
-  O = n("199902"),
-  p = n("314897"),
+  p = n("199902"),
+  O = n("314897"),
   R = n("592125"),
   C = n("131951"),
   g = n("158776"),
   L = n("19780"),
-  D = n("981631"),
-  v = n("65154");
+  v = n("981631"),
+  D = n("65154");
 let M = {},
   y = {},
   P = {},
   U = {},
-  b = D.StreamLayouts.THEATRE,
+  b = v.StreamLayouts.THEATRE,
   G = {},
   w = [];
 
-function k() {
+function B() {
   c().forEach(G, (e, t) => {
     e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete G[t]
   })
 }
 
-function B(e) {
+function k(e) {
   e.filter(e => {
     let {
       connection: t
     } = e;
-    return t.context === v.MediaEngineContextTypes.STREAM
+    return t.context === D.MediaEngineContextTypes.STREAM
   }).forEach(e => {
     let {
       stats: t
@@ -56,7 +56,7 @@ function B(e) {
 function V() {
   return !0
 }
-class F extends(s = E.default.Store) {
+class x extends(a = E.default.Store) {
   getActiveStreamKey() {
     return (0, m.default)(C.default) ? r : null
   }
@@ -69,22 +69,22 @@ class F extends(s = E.default.Store) {
   getStatsHistory(e, t, n) {
     if (!(0, m.default)(C.default) || null == t) return null;
     if (n) {
-      let n = O.default.getActiveStreamForUser(t, e);
-      if (null == n || 0 === O.default.getViewerIds(n).length) return null
+      let n = p.default.getActiveStreamForUser(t, e);
+      if (null == n || 0 === p.default.getViewerIds(n).length) return null
     }
     return w.map(e => n ? function(e) {
-      var t, n, i, r, s;
-      let a = e.find(e => "video" === e.type);
-      return null != a && "video" === a.type ? {
+      var t, n, i, r, a;
+      let s = e.find(e => "video" === e.type);
+      return null != s && "video" === s.type ? {
         type: "streamer",
-        packetsSentOrReceived: null !== (n = a.packetsSent) && void 0 !== n ? n : 0,
-        packetsLost: null !== (i = a.packetsLost) && void 0 !== i ? i : 0,
-        frameRate: null !== (r = a.frameRateEncode) && void 0 !== r ? r : 0,
-        resolution: null !== (s = null === (t = a.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== s ? s : 0,
+        packetsSentOrReceived: null !== (n = s.packetsSent) && void 0 !== n ? n : 0,
+        packetsLost: null !== (i = s.packetsLost) && void 0 !== i ? i : 0,
+        frameRate: null !== (r = s.frameRateEncode) && void 0 !== r ? r : 0,
+        resolution: null !== (a = null === (t = s.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a ? a : 0,
         bitrate: 0
       } : null
     }(e.rtp.outbound) : function(e) {
-      var t, n, i, r, s, a;
+      var t, n, i, r, a, s;
       if (null == e) return null;
       let o = e.find(e => "video" === e.type);
       return null != o && "video" === o.type ? {
@@ -92,16 +92,16 @@ class F extends(s = E.default.Store) {
         packetsSentOrReceived: null !== (n = o.packetsReceived) && void 0 !== n ? n : 0,
         packetsLost: null !== (i = o.packetsLost) && void 0 !== i ? i : 0,
         frameRate: null !== (r = o.frameRateDecode) && void 0 !== r ? r : 0,
-        bitrate: null !== (s = o.bitrate) && void 0 !== s ? s : 0,
-        resolution: null !== (a = null === (t = o.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== a ? a : 0
+        bitrate: null !== (a = o.bitrate) && void 0 !== a ? a : 0,
+        resolution: null !== (s = null === (t = o.resolution) || void 0 === t ? void 0 : t.height) && void 0 !== s ? s : 0
       } : null
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, m.default)(C.default)) return D.RTCConnectionQuality.UNKNOWN;
+    if (!(0, m.default)(C.default)) return v.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? G[e] : null;
-    return null != t ? t.quality : D.RTCConnectionQuality.UNKNOWN
+    return null != t ? t.quality : v.RTCConnectionQuality.UNKNOWN
   }
   getMediaSessionId(e) {
     if (null == e) return null;
@@ -136,18 +136,23 @@ class F extends(s = E.default.Store) {
   getStreamSourceId(e) {
     return U[e]
   }
+  setFocusedGoLiveStream(e) {
+    c().forEach(G, (t, n) => {
+      t.setSelectedGoLiveStream(n === e ? n : null)
+    })
+  }
 }
-l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.defineProperty(a, o, {
+l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new F(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
+}) : s[o] = l, t.default = new x(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, r = null, k()
+    i = e.sessionId, r = null, B()
   },
   CONNECTION_CLOSED: function() {
-    i = null, r = null, k()
+    i = null, r = null, B()
   },
   RTC_CONNECTION_STATE: V,
   RTC_CONNECTION_PING: V,
@@ -161,21 +166,21 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
       guildId: n,
       channelId: i,
       appContext: r,
-      pid: s,
-      sourceId: a
+      pid: a,
+      sourceId: s
     } = e, o = (0, h.encodeStreamKey)({
       streamType: t,
       guildId: n,
       channelId: i,
-      ownerId: p.default.getId()
+      ownerId: O.default.getId()
     });
     if (M[o] = r, c().forEach(G, e => {
         let {
           analyticsContext: t
         } = e;
         t.setActionContext(r)
-      }), U[o] = a, P[o] = s, null != s) {
-      let e = f.default.getGameForPID(s);
+      }), U[o] = s, P[o] = a, null != a) {
+      let e = f.default.getGameForPID(a);
       null != e && (y[o] = {
         name: e.name,
         id: e.id,
@@ -200,8 +205,8 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
     let {
       streamKey: t,
       rtcServerId: n,
-      region: s,
-      viewerIds: a
+      region: a,
+      viewerIds: s
     } = e;
     r = t;
     let o = G[t];
@@ -213,7 +218,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
       let r = R.default.getChannel(e.channelId),
         c = null != r && r.isBroadcastChannel(),
         E = new S.StreamRTCAnalyticsContext({
-          streamRegion: s,
+          streamRegion: a,
           streamApplication: y[t],
           streamSourceType: function(e) {
             var t, n, i;
@@ -227,7 +232,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
             return "unknown"
           }(U[t]),
           actionContext: M[t],
-          numViewers: null != a ? a.length : 0,
+          numViewers: null != s ? s.length : 0,
           isBroadcast: c
         });
       l = t, u = n, _ = E, d()(null != i, "Creating RTCConnection without session."), o = new S.default({
@@ -240,7 +245,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
         parentMediaSessionId: L.default.getMediaSessionId()
       }), G[t] = o
     }
-    w = [], C.default.getMediaEngine().on(I.MediaEngineEvent.ConnectionStats, B)
+    w = [], C.default.getMediaEngine().on(I.MediaEngineEvent.ConnectionStats, k)
   },
   STREAM_SERVER_UPDATE: function(e) {
     let t = G[e.streamKey];
@@ -261,7 +266,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(a = F) ? Object.definePro
       streamKey: t
     } = e, n = G[t];
     if (null == n) return !1;
-    t === r && (r = null, C.default.getMediaEngine().off(I.MediaEngineEvent.ConnectionStats, B)), n.destroy("stream-end"), delete G[t]
+    t === r && (r = null, C.default.getMediaEngine().off(I.MediaEngineEvent.ConnectionStats, k)), n.destroy("stream-end"), delete G[t]
   },
   STREAM_STATS_UPDATE: function(e) {
     let {

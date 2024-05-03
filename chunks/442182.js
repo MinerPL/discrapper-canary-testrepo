@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("442837"),
   o = s("481060"),
@@ -33,8 +33,8 @@ var a = s("735250"),
   M = s("203377"),
   D = s("981631"),
   v = s("689938"),
-  j = s("921207"),
-  G = s("790492");
+  G = s("183223"),
+  j = s("635163");
 async function U(e, t, s) {
   let l = e.roles.filter(e => e !== s);
   try {
@@ -86,7 +86,7 @@ function P(e) {
               roleName: null == l ? void 0 : l.name
             })
           }), (0, a.jsx)(o.Text, {
-            className: j.removeTip,
+            className: G.removeTip,
             color: "text-muted",
             variant: "text-md/normal",
             children: v.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TIP
@@ -101,7 +101,7 @@ function P(e) {
     null != l && (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([s.e("99387"), s.e("79695"), s.e("85559"), s.e("12435"), s.e("94262")]).then(s.bind(s, "415118"));
+      } = await Promise.all([s.e("99387"), s.e("79695"), s.e("1502"), s.e("12435"), s.e("51068")]).then(s.bind(s, "415118"));
       return t => (0, a.jsx)(e, {
         ...t,
         user: l,
@@ -111,7 +111,7 @@ function P(e) {
     })
   }
   return (0, c.useSubscribeGuildMembers)(E), (0, a.jsx)("div", {
-    className: G.contentWidth,
+    className: j.contentWidth,
     children: (0, a.jsx)(o.Popout, {
       renderPopout: e => (0, a.jsx)(T.default, {
         location: "GuildSettingsRolesEditMembers",
@@ -121,29 +121,29 @@ function P(e) {
         ...e
       }),
       position: "left",
-      preload: () => (0, I.default)(t.id, t.avatarURL, {
+      preload: () => (0, I.maybeFetchUserProfileForPopout)(t.id, t.avatarURL, {
         guildId: n
       }),
       children: e => (0, a.jsxs)(o.Clickable, {
         ...e,
-        className: j.memberRow,
+        className: G.memberRow,
         onContextMenu: f,
         children: [(0, a.jsx)(p.default, {
-          className: j.memberDetails,
+          className: G.memberDetails,
           avatarURL: t.avatarURL,
           name: t.name,
           bot: t.bot,
           verifiedBot: t.verifiedBot,
           userTag: t.userTag
         }), (0, a.jsx)("div", {
-          className: j.removeButtonContainer,
+          className: G.removeButtonContainer,
           children: (0, a.jsx)(o.Tooltip, {
             text: u ? v.default.Messages.ROLE_REMOVE_MEMBER_MANAGED : v.default.Messages.ROLE_REMOVE_MEMBER_CONFIRM_TITLE,
             position: "top",
             children: e => (0, a.jsx)(o.Clickable, {
               ...e,
-              className: i()(j.removeButton, {
-                [j.removeButtonDisabled]: u
+              className: i()(G.removeButton, {
+                [G.removeButtonDisabled]: u
               }),
               onClick: _,
               children: (0, a.jsx)(N.default, {
@@ -164,11 +164,11 @@ function b(e) {
     locked: s
   } = e;
   return (0, a.jsx)("div", {
-    className: G.contentWidth,
+    className: j.contentWidth,
     children: (0, a.jsxs)("div", {
-      className: i()(j.memberRow, j.emptyRowContainer),
+      className: i()(G.memberRow, G.emptyRowContainer),
       children: [(0, a.jsx)(g.default, {}), (0, a.jsx)(o.Text, {
-        className: j.emptyRowText,
+        className: G.emptyRowText,
         variant: "text-sm/semibold",
         color: "text-muted",
         children: v.default.Messages.ROLE_EDIT_MEMBERS_NO_SEARCH_RESULTS.format({
@@ -203,7 +203,7 @@ function B(e) {
   return (0, a.jsx)(_.AnalyticsLocationProvider, {
     value: I,
     children: (0, a.jsx)(o.ListAuto, {
-      className: j.list,
+      className: G.list,
       sections: [Math.max(S.length, 1)],
       sectionHeight: i,
       renderSection: () => (0, a.jsx)("div", {
@@ -244,7 +244,7 @@ function y(e) {
     handleAddClick: n
   } = e;
   return (0, a.jsxs)("div", {
-    className: j.searchContainer,
+    className: G.searchContainer,
     children: [(0, a.jsx)(m.default, {
       size: m.default.Sizes.MEDIUM,
       query: t,
@@ -253,7 +253,7 @@ function y(e) {
       placeholder: v.default.Messages.SEARCH_MEMBERS,
       "aria-label": v.default.Messages.SEARCH_MEMBERS
     }), (0, a.jsx)(o.Button, {
-      className: j.addButton,
+      className: G.addButton,
       size: o.Button.Sizes.SMALL,
       onClick: n,
       disabled: l,
@@ -294,15 +294,15 @@ function F(e) {
     })
   };
   return (0, a.jsxs)("div", {
-    className: j.container,
+    className: G.container,
     children: [(0, a.jsx)("div", {
-      className: j.headerContainer,
+      className: G.headerContainer,
       ref: I,
       children: (0, a.jsx)("div", {
-        className: G.contentWidth,
+        className: j.contentWidth,
         children: (0, a.jsxs)("div", {
-          className: i()(G.header, {
-            [G.stickyHeaderElevated]: !T
+          className: i()(j.header, {
+            [j.stickyHeaderElevated]: !T
           }),
           children: [(0, a.jsx)(A.default, {
             guild: t,
@@ -315,7 +315,7 @@ function F(e) {
             locked: m,
             handleAddClick: R
           }), g ? (0, a.jsx)(f.default, {
-            className: j.searchWarning,
+            className: G.searchWarning,
             messageType: f.HelpMessageTypes.INFO,
             children: v.default.Messages.ROLE_EDIT_MEMBERS_MISSING
           }) : null]

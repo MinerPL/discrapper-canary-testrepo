@@ -1,55 +1,55 @@
 "use strict";
-s.r(t), s.d(t, {
+n.r(t), n.d(t, {
   default: function() {
-    return f
+    return d
   }
 });
-var n = s("735250");
-s("470079");
-var a = s("442837"),
-  u = s("481060"),
-  l = s("239091"),
-  i = s("230711"),
-  o = s("435064"),
-  r = s("621781"),
-  c = s("39604"),
-  d = s("981631"),
-  S = s("689938");
+var s = n("735250");
+n("470079");
+var a = n("442837"),
+  i = n("481060"),
+  r = n("239091"),
+  u = n("547972"),
+  l = n("435064"),
+  o = n("621781"),
+  S = n("39604"),
+  c = n("332325"),
+  g = n("689938");
 
-function f(e) {
+function d(e) {
   let {
     onSelect: t
   } = e, {
-    clipsLength: s
-  } = (0, a.useStateFromStoresObject)([o.default], () => o.default.getSettings()), f = (0, r.default)();
-  return (0, n.jsxs)(u.Menu, {
+    clipsLength: n
+  } = (0, a.useStateFromStoresObject)([l.default], () => l.default.getSettings()), d = (0, o.default)();
+  return (0, s.jsxs)(i.Menu, {
     navId: "clips-context",
-    "aria-label": S.default.Messages.CLIPS_SETTINGS,
-    onClose: l.closeContextMenu,
+    "aria-label": g.default.Messages.CLIPS_SETTINGS,
+    onClose: r.closeContextMenu,
     onSelect: t,
-    children: [(0, n.jsx)(u.MenuGroup, {
-      children: (0, n.jsx)(u.MenuItem, {
+    children: [(0, s.jsx)(i.MenuGroup, {
+      children: (0, s.jsx)(i.MenuItem, {
         id: "clips-duration",
-        label: S.default.Messages.CLIPS_SETTINGS_LENGTH,
-        children: f.map(e => {
+        label: g.default.Messages.CLIPS_SETTINGS_LENGTH,
+        children: d.map(e => {
           let {
             value: t,
             label: a
           } = e;
-          return (0, n.jsx)(u.MenuRadioItem, {
+          return (0, s.jsx)(i.MenuRadioItem, {
             id: "clips-duration-".concat(t),
             group: "clips-duration",
             label: a,
-            action: () => (0, c.updateClipsLength)(t),
-            checked: t === s
+            action: () => (0, S.updateClipsLength)(t),
+            checked: t === n
           }, t)
         })
       })
-    }), (0, n.jsx)(u.MenuGroup, {
-      children: (0, n.jsx)(u.MenuItem, {
+    }), (0, s.jsx)(i.MenuGroup, {
+      children: (0, s.jsx)(i.MenuItem, {
         id: "clips-settings",
-        label: S.default.Messages.CLIPS_SETTINGS,
-        action: () => i.default.open(d.UserSettingsSections.CLIPS)
+        label: g.default.Messages.CLIPS_SETTINGS,
+        action: () => (0, u.default)(c.GameSettingsTab.CLIPS)
       })
     })]
   })

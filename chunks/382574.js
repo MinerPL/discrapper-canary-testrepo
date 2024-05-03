@@ -1,35 +1,40 @@
 "use strict";
-i.r(t);
-var a = i("735250");
-i("470079");
-var l = i("73880"),
-  n = i("137158"),
-  s = i("482249");
+n.r(t);
+var a = n("735250");
+n("470079");
+var i = n("73880"),
+  r = n("137158"),
+  s = n("689938"),
+  l = n("915580");
 t.default = function(e) {
   let {
     formField: t,
-    index: i,
-    isDragEnabled: r,
-    isDropHovered: o,
+    index: n,
+    isDragEnabled: o,
+    isDropHovered: c,
     onDrop: d,
-    onEdit: c,
-    onRemove: u
+    onEdit: u,
+    onRemove: f,
+    canRemove: m,
+    actionsLocation: h
   } = e, {
-    label: f,
-    placeholder: m
+    label: E,
+    placeholder: T
   } = t;
-  return (0, a.jsx)(n.default, {
+  return (0, a.jsx)(r.default, {
     field: t,
-    index: i,
-    isDragEnabled: r,
-    isDropHovered: o,
+    index: n,
+    isDragEnabled: o,
+    isDropHovered: c,
     onDrop: d,
-    onEdit: c,
-    onRemove: u,
-    title: f,
-    children: (0, a.jsx)(l.ParagraphFieldBody, {
-      className: s.fieldBackground,
-      placeholder: m,
+    onEdit: u,
+    onRemove: f,
+    title: E,
+    canRemove: m,
+    actionsLocation: h,
+    children: (0, a.jsx)(i.ParagraphFieldBody, {
+      className: l.fieldBackground,
+      placeholder: null != T ? T : s.default.Messages.MEMBER_VERIFICATION_ANSWER_PLACEHOLDER,
       disabled: !0
     })
   })

@@ -16,8 +16,8 @@ var s = n("735250"),
   f = n("598077"),
   E = n("594174"),
   _ = n("626135"),
-  T = n("709054"),
-  m = n("591759"),
+  m = n("709054"),
+  T = n("591759"),
   I = n("833592"),
   p = n("497089"),
   h = n("178480"),
@@ -28,11 +28,11 @@ var s = n("735250"),
   g = n("11825"),
   M = n("981631"),
   R = n("689938"),
-  O = n("533342"),
-  v = n("756688"),
-  L = n("886765");
+  v = n("717043"),
+  O = n("756688"),
+  x = n("886765");
 
-function x(e) {
+function L(e) {
   var t, n, a;
   let {
     item: r
@@ -41,12 +41,12 @@ function x(e) {
   let d = null !== (a = E.default.getUser(null === (n = r.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== a ? a : new f.default(r.other_user),
     c = u.default.parse(o);
   return (0, s.jsxs)("div", {
-    className: O.messagePreviewContainer,
+    className: v.messagePreviewContainer,
     children: [(0, s.jsx)(i.default, {
       user: d,
       size: l.AvatarSizes.SIZE_24
     }), (0, s.jsx)(l.Text, {
-      className: O.messagePreviewText,
+      className: v.messagePreviewText,
       variant: "text-sm/normal",
       lineClamp: 2,
       children: c
@@ -63,7 +63,7 @@ function D(e) {
   if (null == t) return null;
   let n = u.default.parse(t);
   return (0, s.jsx)("div", {
-    className: O.calloutContainer,
+    className: v.calloutContainer,
     children: (0, s.jsx)(l.Text, {
       variant: "text-sm/normal",
       lineClamp: 2,
@@ -75,15 +75,15 @@ function D(e) {
 function P(e) {
   let {
     item: t
-  } = e, n = L, a = R.default.Messages.NOTIFICATION_CENTER_TODO;
-  return t.completed && (n = v, a = R.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
-    className: O.lifecycleContainer,
+  } = e, n = x, a = R.default.Messages.NOTIFICATION_CENTER_TODO;
+  return t.completed && (n = O, a = R.default.Messages.NOTIFICATION_CENTER_DONE), (0, s.jsxs)("div", {
+    className: v.lifecycleContainer,
     children: [(0, s.jsx)("img", {
-      className: O.checkbox,
+      className: v.checkbox,
       alt: "",
       src: n
     }), (0, s.jsx)(l.Text, {
-      className: O.lifecycleText,
+      className: v.lifecycleText,
       variant: "text-xs/bold",
       color: "header-secondary",
       children: a
@@ -111,12 +111,12 @@ let y = a.memo(function(e) {
         return
       }
       if (null != i.deeplink) {
-        let t = m.default.safeParseWithQuery(i.deeplink);
+        let t = T.default.safeParseWithQuery(i.deeplink);
         if (null == t) return;
         let n = t.hostname,
           s = t.path;
         if (null == n || null == s) return;
-        if (m.default.isDiscordHostname(n)) {
+        if (T.default.isDiscordHostname(n)) {
           let t = s.match("^/users/(\\d+)");
           if (null != t && 2 === t.length) {
             var e;
@@ -137,44 +137,44 @@ let y = a.memo(function(e) {
           acked: E
         })
       }
-    }, [i, E, f]), v = null;
-    i.type === p.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (v = (0, s.jsx)(A.default, {
+    }, [i, E, f]), O = null;
+    i.type === p.NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS && null != i.other_user && (O = (0, s.jsx)(A.default, {
       userId: i.other_user.id
     }));
-    let L = null != i.local_id,
+    let x = null != i.local_id,
       y = (0, N.default)(i);
     return (0, s.jsxs)("div", {
-      className: O.row,
+      className: v.row,
       children: [(0, s.jsxs)(l.ClickableContainer, {
-        className: O.rowContent,
+        className: v.rowContent,
         focusProps: {
           offset: 4
         },
         "aria-label": y,
         onClick: R,
         children: [E ? null : (0, s.jsx)("div", {
-          className: O.unread
+          className: v.unread
         }), (0, s.jsx)(C.ForYouItemImage, {
           item: i
         }), (0, s.jsxs)("div", {
-          className: O.body,
+          className: v.body,
           children: ["lifecycle_item" === i.type && null != i.item_enum && (0, s.jsx)(P, {
             item: i
           }), (0, s.jsx)(l.Text, {
             variant: "text-md/normal",
             color: E ? "text-muted" : "text-normal",
-            children: u.default.parse(y)
-          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, s.jsx)(x, {
+            children: "string" != typeof y ? y : u.default.parse(y)
+          }), (null === (t = i.message) || void 0 === t ? void 0 : t.content) != null ? (0, s.jsx)(L, {
             item: i
           }) : null, null != i.callout ? (0, s.jsx)(D, {
             item: i
           }) : null, (0, s.jsx)(l.Text, {
             variant: "text-xs/medium",
             color: E ? "text-muted" : "header-secondary",
-            children: (0, h.getRelativeTimestamp)(T.default.extractTimestamp(i.id))
-          }), v]
+            children: (0, h.getRelativeTimestamp)(m.default.extractTimestamp(i.id))
+          }), O]
         })]
-      }), L ? null : (0, s.jsx)(g.MoreButton, {
+      }), x ? null : (0, s.jsx)(g.MoreButton, {
         item: i
       })]
     })

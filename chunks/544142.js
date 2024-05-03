@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return v
+    return N
   }
 });
 var a = n("735250");
 n("470079");
-var l = n("803997"),
+var l = n("120356"),
   s = n.n(l),
   i = n("442837"),
   r = n("481060"),
@@ -23,7 +23,7 @@ var l = n("803997"),
   g = n("967128"),
   S = n("981631"),
   _ = n("689938"),
-  T = n("773065");
+  T = n("232024");
 
 function I(e) {
   var t, l;
@@ -49,14 +49,14 @@ function I(e) {
     })
   }
   let A = null !== (l = null !== (t = null == _ ? void 0 : _.nick) && void 0 !== t ? t : C.default.getName(S)) && void 0 !== l ? l : "???",
-    v = null == _ ? void 0 : _.colorString;
+    N = null == _ ? void 0 : _.colorString;
   return null == S ? (0, a.jsx)("span", {
     className: s()(T.threadCreatorName, T.unknownCreatorName),
     children: A
   }) : (0, a.jsx)(d.AnalyticsLocationProvider, {
     value: g,
     children: (0, a.jsx)(r.Popout, {
-      preload: () => (0, f.default)(S.id, S.getAvatarURL(E.guild_id, 80), {
+      preload: () => (0, f.maybeFetchUserProfileForPopout)(S, {
         guildId: E.guild_id,
         channelId: E.id
       }),
@@ -76,7 +76,7 @@ function I(e) {
         onContextMenu: I,
         children: (0, a.jsx)(r.NameWithRole, {
           name: A,
-          color: null != v ? v : void 0
+          color: null != N ? N : void 0
         })
       })
     })
@@ -114,7 +114,7 @@ function A(e) {
   })
 }
 
-function v(e) {
+function N(e) {
   var t;
   let {
     channel: n

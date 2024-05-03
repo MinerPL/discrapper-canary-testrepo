@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("411104");
 var i = n("264344"),
   r = n.n(i),
-  s = n("259443"),
-  a = n("47770"),
+  a = n("259443"),
+  s = n("47770"),
   o = n("46973"),
   l = n("734298"),
   u = n("997545"),
@@ -30,7 +30,7 @@ function f(e, t, n) {
 function S(e) {
   return (null != e ? e : T.DEFAULT_VOLUME) / T.DEFAULT_VOLUME
 }
-class h extends a.default {
+class h extends s.default {
   destroy() {
     this.eachConnection(e => e.destroy()), this.emit(o.MediaEngineEvent.Destroy), this.removeAllListeners()
   }
@@ -210,7 +210,7 @@ class h extends a.default {
       return
     }
     this.eachConnection(n => {
-      (t !== T.MediaEngineContextTypes.STREAM || n.streamUserId === n.ids.userId) && (n.setGoLiveSource(e), n.setVideoBroadcast(this.shouldConnectionBroadcastVideo(n)))
+      (t !== T.MediaEngineContextTypes.STREAM || n.streamUserId === n.userId) && (n.setGoLiveSource(e), n.setVideoBroadcast(this.shouldConnectionBroadcastVideo(n)))
     }, t)
   }
   setClipsSource(e) {
@@ -228,8 +228,8 @@ class h extends a.default {
     } = e.quality, {
       id: i,
       soundshareId: r,
-      useLoopback: s,
-      useVideoHook: a,
+      useLoopback: a,
+      useVideoHook: s,
       useGraphicsCapture: l,
       useQuartzCapturer: u,
       allowScreenCaptureKit: d,
@@ -238,12 +238,12 @@ class h extends a.default {
     (0, c.getVoiceEngine)().setOnClipsRecordingEvent(t => {
       this.logger.info("Clips recording event: ".concat(T.ClipsRecordingEvent[t], " received for stream ").concat(i, " and sound ").concat(r, ".")), t === T.ClipsRecordingEvent.GoLiveEnded ? this.emit(o.MediaEngineEvent.ClipsRecordingRestartNeeded) : t === T.ClipsRecordingEvent.Error ? this.emit(o.MediaEngineEvent.ClipsInitFailure, "Failed to set clips source in media engine", e.applicationName) : (t === T.ClipsRecordingEvent.Ended || t === T.ClipsRecordingEvent.StoppedByGoLive) && this.emit(o.MediaEngineEvent.ClipsRecordingEnded, i, r)
     }), (0, c.getVoiceEngine)().applyClipsSettings({
-      useVideoHook: a,
+      useVideoHook: s,
       useGraphicsCapture: l,
       useQuartzCapturer: u,
       allowScreenCaptureKit: d,
       hdrCaptureMode: _,
-      soundshareLoopback: s,
+      soundshareLoopback: a,
       frameRate: t,
       width: n <= 480 ? n / 3 * 4 : n / 9 * 16,
       height: n
@@ -260,7 +260,7 @@ class h extends a.default {
   }
   setSoundshareSource(e, t, n) {
     this.eachConnection(i => {
-      (n !== T.MediaEngineContextTypes.STREAM || i.streamUserId === i.ids.userId) && i.setSoundshareSource(e, t)
+      (n !== T.MediaEngineContextTypes.STREAM || i.streamUserId === i.userId) && i.setSoundshareSource(e, t)
     }, n)
   }
   getDesktopSource() {
@@ -296,11 +296,11 @@ class h extends a.default {
   }
   saveClipForUser(e, t, n) {
     let i = (0, c.getVoiceEngine)();
-    return null == i.saveClipForUser ? Promise.reject("unsupported") : new Promise((r, s) => {
+    return null == i.saveClipForUser ? Promise.reject("unsupported") : new Promise((r, a) => {
       i.saveClipForUser(e, t, n, (e, t, n) => r({
         duration: e,
         clipStats: JSON.parse(n)
-      }), e => s(JSON.parse(e)))
+      }), e => a(JSON.parse(e)))
     })
   }
   updateClipMetadata(e, t) {
@@ -477,7 +477,7 @@ class h extends a.default {
   }
   constructor() {
     var e, t;
-    super(), e = this, f(this, "Video", I.default), f(this, "Camera", E.default), f(this, "videoInputDeviceId", T.DISABLED_DEVICE_ID), f(this, "connections", new Set), f(this, "speedTesters", new Set), f(this, "lastVoiceActivity", -1), f(this, "audioSubsystem", "standard"), f(this, "audioLayer", ""), f(this, "deviceChangeGeneration", 0), f(this, "consecutiveWatchdogFailures", 0), f(this, "codecSurvey", null), f(this, "logger", new s.Logger("MediaEngineNative")), f(this, "handleDeviceChange", function() {
+    super(), e = this, f(this, "Video", I.default), f(this, "Camera", E.default), f(this, "videoInputDeviceId", T.DISABLED_DEVICE_ID), f(this, "connections", new Set), f(this, "speedTesters", new Set), f(this, "lastVoiceActivity", -1), f(this, "audioSubsystem", "standard"), f(this, "audioLayer", ""), f(this, "deviceChangeGeneration", 0), f(this, "consecutiveWatchdogFailures", 0), f(this, "codecSurvey", null), f(this, "logger", new a.Logger("MediaEngineNative")), f(this, "handleDeviceChange", function() {
       let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];

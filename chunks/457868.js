@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("392711"),
   o = n.n(r),
@@ -25,8 +25,8 @@ var a = n("735250"),
   T = n("159299"),
   I = n("484459"),
   A = n("103575"),
-  v = n("199902"),
-  N = n("271383"),
+  N = n("199902"),
+  v = n("271383"),
   x = n("430824"),
   M = n("158776"),
   R = n("885110"),
@@ -45,20 +45,20 @@ var a = n("735250"),
   B = n("276264"),
   G = n("981631"),
   V = n("689938"),
-  W = n("434417"),
-  Y = n("652985");
+  W = n("909864"),
+  Y = n("354811");
 let z = H.default.getEnableHardwareAcceleration(),
-  Z = 44 + B.AVATAR_DECORATION_PADDING,
-  K = l.memo(function(e) {
+  K = 44 + B.AVATAR_DECORATION_PADDING,
+  Z = l.memo(function(e) {
     let {
       channel: t,
       sectionId: s,
       userId: i,
       guildOwnerId: r
-    } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([N.default], () => N.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([x.default], () => {
+    } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([x.default], () => {
       var e;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (e = x.default.getRole(t.guild_id, p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([v.default], () => v.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
+    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([N.default], () => N.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
       null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
@@ -90,9 +90,9 @@ let z = H.default.getEnableHardwareAcceleration(),
       })
     }, [t.guild_id]);
     if (null == C) return null;
-    let Z = null == p ? void 0 : p.premiumSince;
+    let K = null == p ? void 0 : p.premiumSince;
     return (0, a.jsx)(f.Popout, {
-      preload: () => (0, I.default)(C.id, C.getAvatarURL(t.guild_id, 80), {
+      preload: () => (0, I.maybeFetchUserProfileForPopout)(C, {
         guildId: t.guild_id,
         channelId: t.id
       }),
@@ -132,7 +132,7 @@ let z = H.default.getEnableHardwareAcceleration(),
           isMobile: j,
           selected: l,
           applicationStream: D,
-          premiumSince: null == Z ? null : new Date(Z),
+          premiumSince: null == K ? null : new Date(K),
           onClickPremiumGuildIcon: Y,
           itemProps: b,
           lostPermissionTooltipText: U ? void 0 : V.default.Messages.THREAD_MEMBER_WITHOUT_ACCESS,
@@ -142,7 +142,7 @@ let z = H.default.getEnableHardwareAcceleration(),
       }
     })
   }),
-  X = l.memo(function(e) {
+  q = l.memo(function(e) {
     let {
       id: t,
       label: n,
@@ -173,7 +173,7 @@ let z = H.default.getEnableHardwareAcceleration(),
       })]
     })
   }),
-  q = l.memo(function(e) {
+  X = l.memo(function(e) {
     let {
       channel: t
     } = e;
@@ -255,7 +255,7 @@ function Q(e) {
       }),
       listRef: a
     }
-  }(s, Z), S = 0 === d.length || d.every(e => 0 === e.userIds.length);
+  }(s, K), S = 0 === d.length || d.every(e => 0 === e.userIds.length);
   if (l.useEffect(() => {
       U.default.track(G.AnalyticEvents.MEMBER_LIST_VIEWED, {
         channel_id: t.id,
@@ -283,14 +283,14 @@ function Q(e) {
               let {
                 section: t
               } = e, l = d[t];
-              return (0, a.jsx)(X, {
+              return (0, a.jsx)(q, {
                 id: l.id,
                 label: l.label,
                 count: l.userIds.length,
                 guildId: n.id
               }, l.id)
             },
-            rowHeight: Z,
+            rowHeight: K,
             renderRow: e => {
               let {
                 section: n,
@@ -299,7 +299,7 @@ function Q(e) {
                 userIds: s,
                 id: i
               } = d[n];
-              return (0, a.jsx)(K, {
+              return (0, a.jsx)(Z, {
                 channel: t,
                 sectionId: i,
                 userId: s[l],
@@ -307,7 +307,7 @@ function Q(e) {
               }, s[l])
             },
             footerHeight: e => d[e] === h && t.type === G.ChannelTypes.PRIVATE_THREAD ? 80 : 0,
-            renderFooter: e => d[e.section] === h ? (0, a.jsx)(q, {
+            renderFooter: e => d[e.section] === h ? (0, a.jsx)(X, {
               channel: t
             }, "footer") : null,
             innerAriaLabel: V.default.Messages.MEMBERS,

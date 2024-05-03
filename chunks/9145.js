@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("442837"),
   o = n("993365"),
@@ -25,14 +25,14 @@ var a = n("735250"),
   T = n("566620"),
   I = n("317381"),
   A = n("619915"),
-  v = n("952561"),
-  N = n("563218"),
+  N = n("952561"),
+  v = n("563218"),
   x = n("719296"),
   M = n("651612"),
   R = n("918559"),
   L = n("981631"),
   y = n("689938"),
-  O = n("136387");
+  O = n("986636");
 let j = {
   [R.FocusedActivityLayouts.NO_CHAT]: O.noChat,
   [R.FocusedActivityLayouts.RESIZABLE]: O.resizable
@@ -44,35 +44,35 @@ function P(e) {
     maxHeight: P,
     connectedChannelId: D,
     renderExternalHeader: b
-  } = e, U = (0, v.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
+  } = e, U = (0, N.default)(), F = (0, r.useStateFromStoresArray)([I.default], () => null != D ? I.default.getEmbeddedActivitiesForChannel(D) : [], [D]), w = (0, A.useEmbeddedApps)(F), k = (0, A.useEmbeddedAppsWithPresence)(w), H = l.useCallback(() => {
     (0, T.updateActivityPanelMode)(R.ActivityPanelModes.PIP)
   }, []), B = l.useRef(null), G = (0, r.useStateFromStores)([I.default], () => I.default.getFocusedLayout()), V = G !== R.FocusedActivityLayouts.NO_CHAT, [W, Y] = l.useState(null !== (s = f.default.activityPanelHeight) && void 0 !== s ? s : P), z = l.useCallback(e => {
     u.default.updatedUnsyncedSettings({
       activityPanelHeight: e
     })
-  }, []), Z = l.useRef(null), [K, X] = l.useState({
+  }, []), K = l.useRef(null), [Z, q] = l.useState({
     width: 0,
     height: 0
   });
   l.useLayoutEffect(() => {
-    if (null == Z.current) return;
+    if (null == K.current) return;
     let e = new ResizeObserver(() => {
       var e, t, n, a;
-      X({
-        width: null !== (n = null === (e = Z.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
-        height: null !== (a = null === (t = Z.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
+      q({
+        width: null !== (n = null === (e = K.current) || void 0 === e ? void 0 : e.clientWidth) && void 0 !== n ? n : 0,
+        height: null !== (a = null === (t = K.current) || void 0 === t ? void 0 : t.clientHeight) && void 0 !== a ? a : 0
       })
     });
-    return e.observe(Z.current), () => e.disconnect()
+    return e.observe(K.current), () => e.disconnect()
   }, []);
-  let q = K.width / Math.max(K.height, 1) < R.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
+  let X = Z.width / Math.max(Z.height, 1) < R.LANDSCAPE_ACTIVITY_ASPECT_RATIO,
     Q = 0,
     J = 0,
     $ = (0, c.default)("activity_panel_iframe_fills_container");
   if (!$) {
-    let e = K.width,
-      t = K.height;
-    q ? ((t = K.width / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > K.height && (e = (t = K.height) * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (K.height - t) / 2) : ((e = Math.min(K.height * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > K.width && (t = (e = K.width) / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (K.width - e) / 2)
+    let e = Z.width,
+      t = Z.height;
+    X ? ((t = Z.width / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO) > Z.height && (e = (t = Z.height) * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), J = (Z.height - t) / 2) : ((e = Math.min(Z.height * R.LANDSCAPE_ACTIVITY_ASPECT_RATIO)) > Z.width && (t = (e = Z.width) / R.LANDSCAPE_ACTIVITY_ASPECT_RATIO), Q = (Z.width - e) / 2)
   }
   let ee = (0, r.useStateFromStores)([p.default], () => p.default.getChannelId());
   if (null == U) return null;
@@ -106,8 +106,8 @@ function P(e) {
           paddingTop: J,
           paddingBottom: J
         },
-        ref: Z,
-        children: (0, a.jsx)(N.default, {
+        ref: K,
+        children: (0, a.jsx)(v.default, {
           className: O.iframe,
           embedId: (0, x.default)(D, U.id)
         })
@@ -122,20 +122,23 @@ function P(e) {
         }), (0, a.jsxs)("div", {
           className: O.footerButtons,
           children: [(0, a.jsx)(M.default, {
-            channelId: ee
+            channelId: ee,
+            className: O.circularButton
           }), (0, a.jsx)("div", {
             className: O.leaveButtonContainer,
             children: (0, a.jsx)(m.default, {
               applicationId: U.id,
               channelId: D,
               centerButton: !0,
-              color: "red"
+              color: "red",
+              className: O.leaveActivityButton
             })
           }), (0, a.jsx)(h.CenterControlButton, {
             label: y.default.Messages.EMBEDDED_ACTIVITIES_MINIMIZE_A11Y_LABEL,
             onClick: H,
             iconComponent: C.default,
-            themeable: !0
+            themeable: !0,
+            className: O.circularButton
           })]
         }), (0, a.jsx)("div", {
           className: O.flex

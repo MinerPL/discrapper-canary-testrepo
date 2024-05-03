@@ -1,5 +1,5 @@
 "use strict";
-var r = n("81021"),
+var r = n("690244"),
   i = n("49662"),
   a = r("%SyntaxError%"),
   o = r("%TypeError%"),

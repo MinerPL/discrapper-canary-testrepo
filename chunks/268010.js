@@ -1,104 +1,80 @@
 "use strict";
 n.r(t), n("627494"), n("757143");
-var a = n("735250");
-n("470079");
-var l = n("5192"),
-  s = n("561308"),
-  i = n("69259"),
-  r = n("438226"),
-  o = n("644810"),
-  u = n("206295"),
-  d = n("335326"),
-  c = n("43205"),
-  f = n("591853"),
-  h = n("206583"),
-  m = n("689938"),
-  p = n("522791");
-let E = (e, t, n) => {
+var a = n("735250"),
+  l = n("470079"),
+  s = n("442837"),
+  i = n("706454"),
+  r = n("5192"),
+  o = n("561308"),
+  u = n("644810"),
+  d = n("206295"),
+  c = n("335326"),
+  f = n("297781"),
+  h = n("591853"),
+  m = n("689938");
+let p = (e, t, n) => {
     let a = m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-      s = l.default.getName(t.guild_id, t.id, n),
-      i = e.extra.media_title;
+      l = r.default.getName(t.guild_id, t.id, n),
+      s = e.extra.media_title;
     return a.plainFormat({
-      mediaTitle: i,
-      userName: s,
-      episodeDescription: e.extra.media_assets_large_text
+      mediaTitle: s,
+      userName: l,
+      episodeDescription: e.extra.media_subtitle
     }).replaceAll("*", "")
   },
-  C = (e, t, n) => {
-    let a = m.default.Messages.MEMBER_LIST_CONTENT_FEED_USER_WATCHED_MEDIA,
-      s = l.default.getName(t.guild_id, t.id, n),
-      i = e.extra.media_title;
-    return a.format({
-      userName: s,
-      mediaTitle: i,
-      episodeDescription: e.extra.media_assets_large_text
-    })
-  },
-  g = (e, t) => m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
+  E = (e, t) => m.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_WATCHING.format({
     username: t.username,
     activity: e.extra.media_title
   });
 t.default = e => {
   let {
-    closePopout: t,
-    channel: n,
-    entry: l,
-    requestId: m
+    channel: t,
+    entry: n,
+    requestId: r,
+    closePopout: C
   } = e, {
-    user: S,
-    mediaImageSrc: _
-  } = (0, d.useWatchContentData)(l), {
+    user: g,
+    mediaImageSrc: S,
+    episodeDescription: _
+  } = (0, c.useWatchContentData)(n), {
     primaryColor: T,
     secondaryColor: I
-  } = (0, u.default)(_);
-  if (null == S) return null;
-  let A = async e => {
-    try {
-      let t = await (0, o.generateWatchContentImage)({
-        entry: l,
-        mediaImageSrc: _,
-        avatarSrc: S.getAvatarURL(n.guild_id, 128),
-        description: E(l, n, S),
-        timestamp: (0, s.formatEntryTimestamp)(l, Date.now()),
-        colors: [T, I]
-      });
-      await (0, r.sendContentImageReply)({
-        user: S,
-        altText: g(l, S),
-        file: t,
-        reply: e
-      }), (0, i.trackInteraction)(h.ContentInventoryInteractionTypes.REACTION_MESSAGE_SENT, {
-        entry: l,
-        channelId: n.id,
-        guildId: n.guild_id,
-        requestId: m
+  } = (0, d.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), N = l.useCallback(e => {
+    if (null != g && null != S) return (0, u.generateWatchContentImage)({
+      entry: n,
+      mediaImageSrc: S,
+      avatarSrc: g.getAvatarURL(t.guild_id, 128),
+      description: p(n, t, g),
+      timestamp: (0, o.formatEntryTimestamp)(n, A),
+      episodeDescription: _,
+      colors: [T, I],
+      channelId: e
+    })
+  }, [t, n, _, A, S, T, I, g]);
+  return null == g ? null : (0, a.jsxs)(h.Popout, {
+    children: [(0, a.jsx)(h.PopoutContent, {
+      thumbnailSrc: S,
+      channel: t,
+      entry: n,
+      userDescription: (0, o.isEntryActive)(n) ? m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHING : m.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_WATCHED,
+      title: n.extra.media_title,
+      subtitle: n.extra.media_subtitle,
+      badges: (0, a.jsx)(f.BadgesContainer, {
+        location: f.BadgeLocation.POPOUT,
+        children: c.WATCH_BADGES.map((e, t) => (0, a.jsx)(e, {
+          entry: n
+        }, t))
       })
-    } finally {
-      t()
-    }
-  };
-  return (0, a.jsxs)(f.Popout, {
-    children: [(0, a.jsx)(f.PopoutHero, {
-      backgroundImgSrc: _,
-      children: (0, a.jsxs)("div", {
-        className: p.heroDetails,
-        children: [(0, a.jsxs)("div", {
-          children: [(0, a.jsx)(f.PopoutAvatar, {
-            user: S,
-            guildId: n.guild_id
-          }), (0, a.jsx)(f.PopoutTitle, {
-            children: C(l, n, S)
-          })]
-        }), (0, a.jsx)(c.ContentImage, {
-          size: 80,
-          src: _,
-          className: p.contentImage
-        })]
+    }), (0, a.jsx)(h.PopoutInteractionsContainer, {
+      children: (0, a.jsx)(h.PopoutReactor, {
+        closePopout: C,
+        user: g,
+        channel: t,
+        generateReactionImage: N,
+        reactionImageAltText: E(n, g),
+        entry: n,
+        requestId: r
       })
-    }), (0, a.jsx)(f.PopoutReactor, {
-      onMessageReact: A,
-      user: S,
-      channel: n
     })]
   })
 }

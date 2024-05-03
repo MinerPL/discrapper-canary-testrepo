@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 }), n("653041");
 var i = n("593473"),
   r = n("149765"),
-  s = n("592125"),
-  a = n("914010"),
+  a = n("592125"),
+  s = n("914010"),
   o = n("700785"),
   l = n("713938"),
   u = n("231338");
@@ -30,7 +30,7 @@ function _(e) {
     E = r.deserialize(null != c.permissions && "" !== c.permissions ? c.permissions : "0")
   } catch (e) {}
   let I = c.channel_id,
-    T = null !== (u = null !== (l = null !== (n = c.guild_id) && void 0 !== n ? n : null === (t = s.default.getChannel(I)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : a.default.getGuildId()) && void 0 !== u ? u : void 0;
+    T = null !== (u = null !== (l = null !== (n = c.guild_id) && void 0 !== n ? n : null === (t = a.default.getChannel(I)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== l ? l : s.default.getGuildId()) && void 0 !== u ? u : void 0;
   return {
     clientId: null !== (d = c.client_id) && void 0 !== d ? d : "",
     scopes: (null !== (_ = c.scope) && void 0 !== _ ? _ : "").split(" ").filter(e => e.length > 0),
@@ -44,6 +44,7 @@ function _(e) {
     guildId: T,
     prompt: c.prompt,
     disableGuildSelect: "true" === c.disable_guild_select,
-    integrationType: null == c.integration_type ? void 0 : Number(c.integration_type)
+    integrationType: null == c.integration_type ? void 0 : Number(c.integration_type),
+    nonce: c.nonce
   }
 }

@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   punycodeLink: function() {
-    return O
+    return p
   }
 }), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648"), n("411104");
 var i = n("392711"),
   r = n.n(i),
-  s = n("31775"),
-  a = n.n(s);
+  a = n("31775"),
+  s = n.n(a);
 n("711739");
 var o = n("302454"),
   l = n.n(o),
@@ -15,7 +15,7 @@ var o = n("302454"),
   d = n("823379"),
   _ = n("172244"),
   c = n("571989");
-let E = new(a())({
+let E = new(s())({
   max: 50
 });
 
@@ -33,9 +33,9 @@ function I(e) {
 let T = ["http:", "https:", "discord:"],
   f = [_.AST_KEY.TEXT, _.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP],
   S = [...f, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI],
-  h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE],
+  h = [_.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE, _.AST_KEY.SUBTEXT],
   A = [_.AST_KEY.TEXT],
-  m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE];
+  m = [_.AST_KEY.UNDERLINE, _.AST_KEY.STRONG, _.AST_KEY.ITALICS, _.AST_KEY.STRIKETHROUGH, _.AST_KEY.INLINE_CODE, _.AST_KEY.SPOILER, _.AST_KEY.LINE_BREAK, _.AST_KEY.TIMESTAMP, _.AST_KEY.EMOJI, _.AST_KEY.CUSTOM_EMOJI, _.AST_KEY.LIST, _.AST_KEY.HEADING, _.AST_KEY.BLOCK_QUOTE, _.AST_KEY.SUBTEXT];
 
 function N(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
@@ -50,7 +50,7 @@ function N(e, t) {
   return e
 }
 
-function O(e) {
+function p(e) {
   try {
     var t;
     let n = new URL(e),
@@ -59,10 +59,10 @@ function O(e) {
     if (("http:" === i || "https:" === i) && (null == n.hostname || 0 === n.hostname.length)) throw Error("no hostname");
     let r = (0, c.safelyMakeUrlHumanReadable)(n);
     n.username = "", n.password = "";
-    let s = (0, c.safelyMakeUrlHumanReadable)(n);
+    let a = (0, c.safelyMakeUrlHumanReadable)(n);
     return {
       target: r,
-      displayTarget: s
+      displayTarget: a
     }
   } catch (e) {
     return null
@@ -72,14 +72,14 @@ t.default = {
   ...l().defaultRules.link,
   match: (e, t, n) => t.allowLinks ? l().defaultRules.link.match(e, t, n) : null,
   parse(e, t, n) {
-    let [i, s, a, o] = e, c = () => ({
+    let [i, a, s, o] = e, c = () => ({
       type: _.AST_KEY.TEXT,
       content: i
-    }), E = I(a), T = I(s), p = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = p.fullySanitized, L = C.trim();
+    }), E = I(s), T = I(a), O = I(null != o ? o : ""), R = E.whitespaceSanitized, C = T.fullySanitized, g = O.fullySanitized, L = C.trim();
     if (0 === R.trim().length || 0 === L.length) return c();
-    let D = O(l().unescapeUrl(a)),
-      v = (0, u.default)(s).length > 0 || (0, u.default)(o).length > 0;
-    if (null == D || v) return c();
+    let v = p(l().unescapeUrl(s)),
+      D = (0, u.default)(a).length > 0 || (0, u.default)(o).length > 0;
+    if (null == v || D) return c();
     let M = {
         ...n,
         allowEscape: !1,
@@ -119,6 +119,7 @@ t.default = {
           case _.AST_KEY.BLOCK_QUOTE:
           case _.AST_KEY.LIST:
           case _.AST_KEY.HEADING:
+          case _.AST_KEY.SUBTEXT:
             n += "<".concat(i.type, "Content>");
             break;
           default:
@@ -127,15 +128,15 @@ t.default = {
         return n
       })(b).trim().length) return c();
     let w = r().pick(t.rules, y),
-      k = l().parserFor(w)(T.whitespaceSanitized, M),
-      B = p.whitespaceSanitized,
+      B = l().parserFor(w)(T.whitespaceSanitized, M),
+      k = O.whitespaceSanitized,
       {
         target: V
-      } = D;
+      } = v;
     return {
-      content: k,
+      content: B,
       target: V,
-      title: B
+      title: k
     }
   }
 }

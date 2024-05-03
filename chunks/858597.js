@@ -2,7 +2,7 @@
 s.r(t);
 var a = s("735250"),
   l = s("470079"),
-  T = s("803997"),
+  T = s("120356"),
   n = s.n(T),
   o = s("442837"),
   r = s("692547"),
@@ -19,9 +19,9 @@ var a = s("735250"),
   I = s("473092"),
   L = s("611446"),
   f = s("993750"),
-  N = s("134612"),
-  R = s("689938"),
-  F = s("89591");
+  R = s("134612"),
+  N = s("689938"),
+  F = s("261935");
 
 function x(e) {
   let {
@@ -89,7 +89,7 @@ t.default = function(e) {
     warningId: n,
     warningType: r,
     transitionToSlide: S
-  } = e, F = (0, d.useShouldShowHelplineLink)(), Y = (0, c.useLastChannelMessage)(T), p = null != (0, A.useSafetyToolsButtonTooltipForChannel)(T), B = (0, o.useStateFromStores)([O.default], () => O.default.isBlocked(t)), m = l.useCallback(e => {
+  } = e, F = (0, d.useShouldShowHelplineLink)(), Y = (0, c.useLastChannelMessage)(T), p = null != (0, A.useSafetyToolsButtonTooltipForChannel)(T), B = (0, o.useStateFromStores)([O.default], () => O.default.isBlocked(t)), v = l.useCallback(e => {
     (0, I.trackCtaEvent)({
       channelId: T,
       warningId: n,
@@ -98,40 +98,40 @@ t.default = function(e) {
       cta: e,
       isNudgeWarning: p
     })
-  }, [T, n, t, r, p]), v = l.useCallback(() => {
-    (0, _.closeModal)(N.SAFETY_TOOLS_MODAL_KEY), m(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM)
-  }, [m]), g = l.useCallback(() => {
+  }, [T, n, t, r, p]), g = l.useCallback(() => {
+    (0, _.closeModal)(R.SAFETY_TOOLS_MODAL_KEY), v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CONFIRM)
+  }, [v]), m = l.useCallback(() => {
     i.default.unblockUser(t, {
-      location: N.MODAL_LOCATION_CONTEXT_WEB
-    }), m(I.CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK)
-  }, [t, m]), b = l.useCallback(() => {
-    (0, _.closeModal)(N.SAFETY_TOOLS_MODAL_KEY), m(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM)
-  }, [m]), P = l.useMemo(() => {
+      location: R.MODAL_LOCATION_CONTEXT_WEB
+    }), v(I.CtaEventTypes.USER_SAFETY_TOOLS_UNBLOCK)
+  }, [t, v]), P = l.useCallback(() => {
+    (0, _.closeModal)(R.SAFETY_TOOLS_MODAL_KEY), v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_AND_REPORT_CONFIRM)
+  }, [v]), b = l.useMemo(() => {
     let e = {
-        title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
-        subTitle: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
-        buttonText: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
+        title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_TITLE,
+        subTitle: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_TEXT_LINE_SUBTITLE,
+        buttonText: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_CRISIS_BUTTON,
         buttonColor: _.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, E.default)(N.CRISIS_TEXT_LINE_URL), m(I.CtaEventTypes.USER_SAFETY_TOOLS_CTL)
+          (0, E.default)(R.CRISIS_TEXT_LINE_URL), v(I.CtaEventTypes.USER_SAFETY_TOOLS_CTL)
         }
       },
       l = {
-        title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
-        subTitle: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
-        buttonText: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
+        title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_TITLE,
+        subTitle: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_SUBTITLE,
+        buttonText: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_NO_FILTR_BUTTON,
         buttonColor: _.ButtonColors.PRIMARY,
         onPress: () => {
-          (0, E.default)(N.NOFILTR_URL), m(I.CtaEventTypes.USER_SAFETY_TOOLS_NO_FILTR)
+          (0, E.default)(R.NOFILTR_URL), v(I.CtaEventTypes.USER_SAFETY_TOOLS_NO_FILTR)
         }
       };
     return [{
-      title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
-      subTitle: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
-      buttonText: B ? R.default.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK : R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+      title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
+      subTitle: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_SUBTITLE,
+      buttonText: B ? N.default.Messages.INAPPROPRIATE_CONVERSATION_UNBLOCK : N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BLOCK_TITLE,
       buttonColor: _.ButtonColors.BRAND,
       onPress: () => {
-        B ? g() : (0, _.openModalLazy)(async () => {
+        B ? m() : (0, _.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([s.e("99387"), s.e("41128")]).then(s.bind(s, "699783"));
@@ -142,10 +142,10 @@ t.default = function(e) {
             } = s;
             return (0, a.jsx)(e, {
               transitionState: l,
-              onBlock: v,
-              onBlockAndReport: b,
+              onBlock: g,
+              onBlockAndReport: P,
               onCancel: () => {
-                null == n || n(), m(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CANCEL)
+                null == n || n(), v(I.CtaEventTypes.USER_SAFETY_TOOLS_BLOCK_CANCEL)
               },
               onClose: n,
               userId: t,
@@ -155,36 +155,36 @@ t.default = function(e) {
         })
       }
     }, {
-      title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
-      subTitle: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
-      buttonText: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
+      title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
+      subTitle: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_SUBTITLE,
+      buttonText: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_REPORT_TITLE,
       buttonColor: _.ButtonColors.PRIMARY,
       onPress: () => {
-        (0, _.closeModal)(N.SAFETY_TOOLS_MODAL_KEY), (0, u.showReportModalForInappropriateConversationSafetyAlert)(Y), m(I.CtaEventTypes.USER_SAFETY_TOOLS_REPORT)
+        (0, _.closeModal)(R.SAFETY_TOOLS_MODAL_KEY), (0, u.showReportModalForInappropriateConversationSafetyAlert)(Y), v(I.CtaEventTypes.USER_SAFETY_TOOLS_REPORT)
       }
     }, F ? e : l, {
-      title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
-      subTitle: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
-      buttonText: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
+      title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_TITLE,
+      subTitle: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_SUBTITLE,
+      buttonText: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_BREAK_BUTTON,
       buttonColor: _.ButtonColors.PRIMARY,
       onPress: () => {
-        (0, C.default)(_.closeAllModals), m(I.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS)
+        (0, C.default)(_.closeAllModals), v(I.CtaEventTypes.USER_SAFETY_TOOLS_VIBING_WUMPUS)
       }
     }]
-  }, [B, F, m, g, v, b, t, T, Y]), j = l.useMemo(() => [{
-    title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
+  }, [B, F, v, m, g, P, t, T, Y]), j = l.useMemo(() => [{
+    title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_SAFETY_TIPS_TITLE,
     onPress: () => {
-      S(L.SafetyToolsSlides.SAFETY_TIPS), m(I.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS)
+      S(L.SafetyToolsSlides.SAFETY_TIPS), v(I.CtaEventTypes.USER_SAFETY_TOOLS_SAFETY_TIPS)
     }
   }, {
-    title: R.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
+    title: N.default.Messages.SAFETY_TOOLS_ACTION_SHEET_ABOUT_TITLE,
     onPress: () => {
-      S(L.SafetyToolsSlides.ABOUT_SAFETY_ALERTS), m(I.CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS)
+      S(L.SafetyToolsSlides.ABOUT_SAFETY_ALERTS), v(I.CtaEventTypes.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS)
     }
-  }], [S, m]);
+  }], [S, v]);
   return (0, a.jsxs)(f.default, {
     children: [(0, a.jsx)(x, {
-      children: P.map(e => {
+      children: b.map(e => {
         let {
           title: t,
           subTitle: s,

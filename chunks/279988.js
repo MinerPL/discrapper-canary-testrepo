@@ -1,50 +1,54 @@
 "use strict";
-i.r(t), i("47120");
-var a = i("735250");
-i("470079");
-var l = i("803997"),
-  n = i.n(l),
-  s = i("692547"),
-  r = i("481060"),
-  o = i("259580"),
-  d = i("196345"),
-  c = i("137158"),
-  u = i("689938"),
-  f = i("482249");
+n.r(t), n("47120");
+var a = n("735250");
+n("470079");
+var i = n("120356"),
+  r = n.n(i),
+  s = n("692547"),
+  l = n("481060"),
+  o = n("259580"),
+  c = n("196345"),
+  d = n("137158"),
+  u = n("689938"),
+  f = n("915580");
 t.default = function(e) {
   let {
     channelId: t,
-    formField: i,
-    index: l,
+    formField: n,
+    index: i,
     isDragEnabled: m,
-    isDropHovered: E,
-    onDrop: I,
-    onEdit: x,
-    onRemove: h,
-    title: T
-  } = e, M = i.values, F = M.slice(0, 1), _ = M.length - F.length;
-  return (0, a.jsxs)(c.default, {
-    field: i,
-    index: l,
+    isDropHovered: h,
+    onDrop: E,
+    onEdit: T,
+    onRemove: p,
+    canRemove: _,
+    title: C,
+    actionsLocation: g
+  } = e, x = n.values, I = x.slice(0, 1), v = x.length - I.length;
+  return (0, a.jsxs)(d.default, {
+    field: n,
+    index: i,
     isDragEnabled: m,
-    isDropHovered: E,
-    onDrop: I,
-    onEdit: x,
-    onRemove: h,
-    title: T,
-    children: [(0, a.jsx)(d.TermsFieldBody, {
-      className: n()(f.fieldBackground, {
-        [f.withFooter]: 0 !== _
+    isDropHovered: h,
+    onDrop: E,
+    onEdit: T,
+    onRemove: p,
+    title: C,
+    canRemove: _,
+    actionsLocation: g,
+    children: [(0, a.jsx)(c.TermsFieldBody, {
+      className: r()(f.fieldBackground, {
+        [f.withFooter]: 0 !== v
       }),
-      terms: F,
+      terms: I,
       channelId: t
-    }), 0 !== _ && (0, a.jsxs)(r.Clickable, {
-      className: n()(f.fieldFooterContainer, f.clickable),
-      onClick: x,
-      children: [(0, a.jsx)(r.FormText, {
+    }), 0 !== v && (0, a.jsxs)(l.Clickable, {
+      className: r()(f.fieldFooterContainer, f.clickable),
+      onClick: T,
+      children: [(0, a.jsx)(l.FormText, {
         className: f.clickable,
         children: u.default.Messages.MEMBER_VERIFICATION_OTHER_RULES.format({
-          count: _
+          count: v
         })
       }), (0, a.jsx)(o.default, {
         className: f.termsFieldCaretIcon,
@@ -52,7 +56,7 @@ t.default = function(e) {
         width: 14,
         color: s.default.unsafe_rawColors.WHITE_500.css
       })]
-    }), (0, a.jsx)(d.TermsFieldCheckbox, {
+    }), (0, a.jsx)(c.TermsFieldCheckbox, {
       disabled: !0,
       checked: !1
     })]

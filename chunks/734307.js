@@ -1,6 +1,6 @@
 "use strict";
 n.r(t), n("47120");
-var l, a, i, u, r = n("392711"),
+var l, i, a, u, r = n("392711"),
   d = n.n(r),
   E = n("442837"),
   o = n("570140"),
@@ -14,8 +14,8 @@ var l, a, i, u, r = n("392711"),
   I = n("680089"),
   f = n("592125"),
   L = n("58468"),
-  N = n("77498"),
-  D = n("496675"),
+  D = n("77498"),
+  N = n("496675"),
   h = n("306680"),
   U = n("944486"),
   R = n("9156"),
@@ -118,7 +118,7 @@ function K(e) {
 }
 class W extends(l = E.default.Store) {
   initialize() {
-    this.waitFor(C.default, A.default, I.default, f.default, L.default, s.default, N.default, _.default, c.default, S.default, D.default, h.default, U.default, R.default, T.default)
+    this.waitFor(C.default, A.default, I.default, f.default, L.default, s.default, D.default, _.default, c.default, S.default, N.default, h.default, U.default, R.default, T.default)
   }
   getGuild(e, t) {
     let n = H.getGuild(e, t);
@@ -140,12 +140,12 @@ class W extends(l = E.default.Store) {
     return t.getCategoryFromSection(t.recentsSectionNumber).getShownChannelIds().length
   }
 }
-u = "ChannelListStore", (i = "displayName") in(a = W) ? Object.defineProperty(a, i, {
+u = "ChannelListStore", (a = "displayName") in(i = W) ? Object.defineProperty(i, a, {
   value: u,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[i] = u, t.default = new W(o.default, {
+}) : i[a] = u, t.default = new W(o.default, {
   APPLICATION_FETCH_FAIL: Y,
   APPLICATION_FETCH_SUCCESS: Y,
   APPLICATION_FETCH: Y,
@@ -209,12 +209,18 @@ u = "ChannelListStore", (i = "displayName") in(a = W) ? Object.defineProperty(a,
   },
   DRAWER_CLOSE: F,
   DRAWER_OPEN: F,
-  EMBEDDED_ACTIVITY_INBOUND_UPDATE: function(e) {
+  EMBEDDED_ACTIVITY_UPDATE: function(e) {
     let {
       guildId: t,
       channelId: n
     } = e;
     return H.updateSubtitles(t, n)
+  },
+  EMBEDDED_ACTIVITY_UPDATE_V2: function(e) {
+    let {
+      location: t
+    } = e;
+    return H.updateSubtitles(t.guild_id, t.channel_id)
   },
   EMBEDDED_ACTIVITY_LAUNCH_START: function(e) {
     Y()
@@ -321,10 +327,10 @@ u = "ChannelListStore", (i = "displayName") in(a = W) ? Object.defineProperty(a,
     } = e;
     if (n.type !== O.UserSettingsTypes.PRELOADED_USER_SETTINGS) return !1;
     let l = null === (t = n.proto.guilds) || void 0 === t ? void 0 : t.guilds,
-      a = !1;
+      i = !1;
     return null != l && P.default.keys(l).forEach(e => {
-      null != l[e].guildRecentsDismissedAt && (a = H.updateRecentsCategory(e) || a)
-    }), a
+      null != l[e].guildRecentsDismissedAt && (i = H.updateRecentsCategory(e) || i)
+    }), i
   },
   VOICE_CATEGORY_COLLAPSE: k,
   VOICE_CATEGORY_EXPAND: k,
@@ -338,9 +344,9 @@ u = "ChannelListStore", (i = "displayName") in(a = W) ? Object.defineProperty(a,
     } = e, n = w(), l = new Set;
     for (let {
         channelId: e,
-        oldChannelId: a
+        oldChannelId: i
       }
-      of t) null != a && !l.has(a) && (H.nonPositionalChannelIdUpdate(a) && (n = !0), l.add(a)), null != e && !l.has(e) && (H.nonPositionalChannelIdUpdate(e) && (n = !0), l.add(e));
+      of t) null != i && !l.has(i) && (H.nonPositionalChannelIdUpdate(i) && (n = !0), l.add(i)), null != e && !l.has(e) && (H.nonPositionalChannelIdUpdate(e) && (n = !0), l.add(e));
     return n
   },
   WINDOW_FOCUS: F

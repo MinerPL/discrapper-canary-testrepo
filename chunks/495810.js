@@ -4,10 +4,10 @@ a.r(e), a.d(e, {
     return L7
   }
 }), a("47120"), a("757143"), a("653041");
-var t, C, s, l, i = a("735250"),
+var C, t, s, l, i = a("735250"),
   n = a("470079"),
-  r = a("803997"),
-  H = a.n(r),
+  H = a("120356"),
+  r = a.n(H),
   V = a("723592"),
   d = a("613828"),
   c = a("990547"),
@@ -15,8 +15,8 @@ var t, C, s, l, i = a("735250"),
   M = a("477690"),
   u = a("481060"),
   E = a("150063"),
-  _ = a("393238"),
-  I = a("110924"),
+  I = a("393238"),
+  _ = a("110924"),
   T = a("315263"),
   Z = a("607070"),
   f = a("100527"),
@@ -36,8 +36,8 @@ var t, C, s, l, i = a("735250"),
   B = a("502568"),
   O = a("602623"),
   w = a("810090"),
-  P = a("626135"),
-  k = a("823379"),
+  k = a("626135"),
+  P = a("823379"),
   y = a("5192"),
   W = a("624138"),
   F = a("792125"),
@@ -54,23 +54,23 @@ var t, C, s, l, i = a("735250"),
   LL = a("127255"),
   Le = a("361213"),
   La = a("542094"),
-  Lt = a("778569"),
-  LC = a("840000"),
+  LC = a("778569"),
+  Lt = a("840000"),
   Ls = a("537789"),
   Ll = a("841547"),
   Li = a("239298"),
   Ln = a("513202"),
-  Lr = a("701488"),
-  LH = a("981631"),
+  LH = a("701488"),
+  Lr = a("981631"),
   LV = a("689938"),
-  Ld = a("648005"),
+  Ld = a("315623"),
   Lc = a("131454"),
   Lo = a("372065"),
   LM = a("376226"),
   Lu = a("785930"),
   LE = a("143824"),
-  L_ = a("848366"),
-  LI = a("392381"),
+  LI = a("848366"),
+  L_ = a("392381"),
   LT = a("176890"),
   LZ = a("997074"),
   Lf = a("901924"),
@@ -83,7 +83,7 @@ var t, C, s, l, i = a("735250"),
   Lg = a("612852"),
   Lx = a("369827");
 let LS = "celebrate-with-us",
-  Lv = "".concat(LH.Routes.ACTIVITIES, "#").concat(LS),
+  Lv = "".concat(Lr.Routes.ACTIVITIES, "#").concat(LS),
   Lj = "https://support.discord.com/hc/en-us/articles/13771635451415-Share-Nitro-Trials-with-a-Friend-FAQ",
   LR = "https://discord.gg/discord-townhall",
   Lb = "https://discordmerch.com/dxcprod";
@@ -92,28 +92,28 @@ function LB() {
   var L, e;
   let {
     width: a,
-    ref: t
-  } = (0, _.default)(), C = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), s = (0, o.useStateFromStores)([U.default], () => U.default.isAcknowledged(Lr.WhatsNewSection.FREE)), [l, r] = n.useState(!1), [c, M] = n.useState(!1), [I, T] = n.useState(!1), h = (0, d.useHistory)(), D = (0, d.useLocation)(), N = (0, o.useStateFromStores)([p.default], () => p.default.getState().theme), [A] = n.useState((0, $.getActivitiesWhatsNewCount)(U.default) > 0), {
+    ref: C
+  } = (0, I.default)(), t = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), s = (0, o.useStateFromStores)([U.default], () => U.default.isAcknowledged(LH.WhatsNewSection.FREE)), [l, H] = n.useState(!1), [c, M] = n.useState(!1), [_, T] = n.useState(!1), h = (0, d.useHistory)(), D = (0, d.useLocation)(), N = (0, o.useStateFromStores)([p.default], () => p.default.getState().theme), [A] = n.useState((0, $.getActivitiesWhatsNewCount)(U.default) > 0), {
     analyticsLocations: g
   } = (0, m.default)([...null !== (e = null == D ? void 0 : null === (L = D.state) || void 0 === L ? void 0 : L.analyticsLocations) && void 0 !== e ? e : [], f.default.ACTIVITIES_PAGE]), x = n.useRef(new Date);
   return n.useEffect(() => {
     setTimeout(() => {
-      !s && G.markSectionAcknowledged(Lr.WhatsNewSection.FREE)
+      !s && G.markSectionAcknowledged(LH.WhatsNewSection.FREE)
     }, 500)
   }, [s]), n.useEffect(() => {
     !s && (setTimeout(() => {
-      r(!0)
+      H(!0)
     }, 1300), setTimeout(() => {
       M(!0)
     }, 1500), setTimeout(() => {
       T(!0)
     }, 1700))
-  }, [s]), n.useEffect(() => ((0, E.setHomeLink)(LH.Routes.ACTIVITIES), A && !g.includes(f.default.ACTIVITIES_PAGE_NOTIFICATION_DOT) && h.replace(LH.Routes.ACTIVITIES, {
+  }, [s]), n.useEffect(() => ((0, E.setHomeLink)(Lr.Routes.ACTIVITIES), A && !g.includes(f.default.ACTIVITIES_PAGE_NOTIFICATION_DOT) && h.replace(Lr.Routes.ACTIVITIES, {
     analyticsLocations: [...g, f.default.ACTIVITIES_PAGE_NOTIFICATION_DOT]
   }), () => {
     let L = x.current,
       e = Math.ceil((new Date().getTime() - L.getTime()) / 1e3);
-    P.default.track(LH.AnalyticEvents.ROUTE_UNMOUNT, {
+    k.default.track(Lr.AnalyticEvents.ROUTE_UNMOUNT, {
       route: "/activities",
       page_view_duration_s: e
     })
@@ -123,7 +123,7 @@ function LB() {
       className: Ld.outerContainer,
       children: [(0, i.jsxs)(B.default, {
         children: [(0, i.jsx)(j.default, {
-          className: H()(Ld.activitiesBirthdayIcon, {
+          className: r()(Ld.activitiesBirthdayIcon, {
             [Ld.activitiesBirthdayIconLight]: "light" === N
           })
         }), (0, i.jsx)(u.Heading, {
@@ -137,33 +137,33 @@ function LB() {
           children: [(0, i.jsxs)("div", {
             className: Ld.heroFlipper,
             children: [(0, i.jsxs)("div", {
-              className: H()(Ld.heroFlipperInner, {
-                [Ld.heroFlipped]: s || C
+              className: r()(Ld.heroFlipperInner, {
+                [Ld.heroFlipped]: s || t
               }),
               children: [(0, i.jsx)("img", {
                 src: "light" === N ? Lc : Lo,
-                className: H()(Ld.hero),
+                className: r()(Ld.hero),
                 alt: LV.default.Messages.EMBEDDED_ACTIVITIES_BIRTHDAY_ACTIVITIES_HERO_ALT
               }), (0, i.jsx)("div", {
-                className: H()(Ld.heroFlipperBack, {
+                className: r()(Ld.heroFlipperBack, {
                   [Ld.heroFlipperBackLightMode]: "light" === N
                 }),
                 children: (0, i.jsx)(LO, {
-                  containerRef: t,
+                  containerRef: C,
                   width: a
                 })
               })]
-            }), !C && l ? (0, i.jsx)("div", {
+            }), !t && l ? (0, i.jsx)("div", {
               className: Ld.heroConfetti01Wrapper,
               children: (0, i.jsx)(V.default, {
                 colors: LW
               })
-            }) : null, !C && c ? (0, i.jsx)("div", {
+            }) : null, !t && c ? (0, i.jsx)("div", {
               className: Ld.heroConfetti02Wrapper,
               children: (0, i.jsx)(V.default, {
                 colors: LW
               })
-            }) : null, !C && I ? (0, i.jsx)("div", {
+            }) : null, !t && _ ? (0, i.jsx)("div", {
               className: Ld.heroConfetti03Wrapper,
               children: (0, i.jsx)(V.default, {
                 colors: LW
@@ -175,7 +175,7 @@ function LB() {
             src: LM,
             loop: !0,
             className: Ld.freeForeverBreakpointVideo,
-            controls: C
+            controls: t
           }) : null, (0, i.jsx)(Lw, {}), (0, i.jsx)(LF, {}), (0, i.jsx)(Lz, {}), (0, i.jsx)(Lq, {}), (0, i.jsx)(L6, {}), (0, i.jsx)(L4, {})]
         })
       })]
@@ -187,7 +187,7 @@ function LO(L) {
   let {
     width: e,
     containerRef: a
-  } = L, t = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion);
+  } = L, C = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion);
   return (0, i.jsxs)("div", {
     className: Ld.freeForeverContainer,
     ref: a,
@@ -196,7 +196,7 @@ function LO(L) {
       children: (0, i.jsxs)("div", {
         className: Ld.freeForeverText,
         children: [(0, i.jsx)(R.default, {
-          className: H()(Ld.freeForeverLogo, {
+          className: r()(Ld.freeForeverLogo, {
             [Ld.freeForeverLogoMedium]: null != e && e < 1e3,
             [Ld.freeForeverLogoSmall]: null != e && e < 480
           })
@@ -217,7 +217,7 @@ function LO(L) {
         src: LM,
         poster: Lu,
         className: Ld.freeForeverVideo,
-        controls: t
+        controls: C
       })
     }) : null]
   })
@@ -228,8 +228,8 @@ function Lw() {
     className: Ld.birthdayExplanationWrapper,
     children: [(0, i.jsx)("div", {
       className: Ld.birthdayBalloonsContainer,
-      children: (0, i.jsx)(LC.Balloons, {
-        className: H()(Ld.birthdayExplanationBalloonsLeft, Ld.balloon)
+      children: (0, i.jsx)(Lt.Balloons, {
+        className: r()(Ld.birthdayExplanationBalloonsLeft, Ld.balloon)
       })
     }), (0, i.jsx)(u.Heading, {
       variant: "heading-md/semibold",
@@ -247,15 +247,15 @@ function Lw() {
       })
     }), (0, i.jsx)("div", {
       className: Ld.birthdayBalloonsContainer,
-      children: (0, i.jsx)(LC.Balloons, {
-        className: H()(Ld.birthdayExplanationBalloonsRight, Ld.balloon),
+      children: (0, i.jsx)(Lt.Balloons, {
+        className: r()(Ld.birthdayExplanationBalloonsRight, Ld.balloon),
         flipX: !0
       })
     })]
   })
 }
-let LP = "whats-new",
-  Lk = (0, W.cssValueToNumber)(M.default.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH),
+let Lk = "whats-new",
+  LP = (0, W.cssValueToNumber)(M.default.ACTIVITIES_HOME_WHATS_NEW_TILE_WIDTH),
   Ly = (0, W.cssValueToNumber)(M.default.ACTIVITIES_HOME_WHATS_NEW_HORIZONTAL_MARGIN),
   LW = [u.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_BLUE.css, u.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_GREEN.css, u.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PINK.css, u.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_PURPLE.css, u.tokens.unsafe_rawColors.DISCORD_8TH_BDAY_YELLOW.css];
 
@@ -273,13 +273,13 @@ function LF() {
   } = Q.ExperimentBirthdayActivitiesPuttPartyTile.useExperiment({
     location: "d72ecf_4"
   }), {
-    enabled: t
+    enabled: C
   } = z.ExperimentBirthdayActivitiesPokerTile.useExperiment({
     location: "d72ecf_5"
-  }), C = n.useMemo(() => {
-    let C = [];
-    return C.push({
-      id: Lr.WhatsNewSection.DISCORD_TURNS_8,
+  }), t = n.useMemo(() => {
+    let t = [];
+    return t.push({
+      id: LH.WhatsNewSection.DISCORD_TURNS_8,
       title: LV.default.Messages.EMBEDDED_ACTIVITIES_WEEKLY_DROPS_TILE_TITLE,
       content: (0, i.jsx)(u.Text, {
         variant: "text-sm/normal",
@@ -293,8 +293,8 @@ function LF() {
       cardImgUrl: LE,
       revealDate: new Date("May 15, 2023 17:00:00"),
       enabled: !0
-    }), C.push({
-      id: Lr.WhatsNewSection.GDM_ACTIVITIES,
+    }), t.push({
+      id: LH.WhatsNewSection.GDM_ACTIVITIES,
       title: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_GDM_TILE_TITLE,
       content: (0, i.jsx)(u.Text, {
         variant: "text-sm/normal",
@@ -305,11 +305,11 @@ function LF() {
       imgAlt: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_GDM_TILE_IMG_ALT,
       link: "https://support.discord.com/hc/en-us/articles/4422142836759-Activities-on-Discord#h_01GSX5FCYNMF5PCGKNNA6XFW29",
       isAppLink: !1,
-      cardImgUrl: L_,
+      cardImgUrl: LI,
       revealDate: new Date("May 15, 2023 17:00:00"),
       enabled: L
-    }), C.push({
-      id: Lr.WhatsNewSection.PUTT_PARTY,
+    }), t.push({
+      id: LH.WhatsNewSection.PUTT_PARTY,
       title: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_PUTT_PARTY_TILE_TITLE,
       content: (0, i.jsx)(u.Text, {
         variant: "text-sm/normal",
@@ -318,13 +318,13 @@ function LF() {
       }),
       imgUrl: Lx,
       imgAlt: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_PUTT_PARTY_TILE_IMG_ALT,
-      link: LH.Routes.ACTIVITY_DETAILS(Lr.PUTT_PARTY_APPLICATION_ID),
+      link: Lr.Routes.ACTIVITY_DETAILS(LH.PUTT_PARTY_APPLICATION_ID),
       isAppLink: !0,
-      cardImgUrl: LI,
+      cardImgUrl: L_,
       revealDate: new Date("May 22, 2023 17:00:00"),
       enabled: a
-    }), C.push({
-      id: Lr.WhatsNewSection.JAMSPACE,
+    }), t.push({
+      id: LH.WhatsNewSection.JAMSPACE,
       title: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_JAMSPACE_TILE_TITLE,
       content: (0, i.jsx)(u.Text, {
         variant: "text-sm/normal",
@@ -333,13 +333,13 @@ function LF() {
       }),
       imgUrl: Lp,
       imgAlt: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_JAMSPACE_TILE_IMG_ALT,
-      link: LH.Routes.ACTIVITY_DETAILS(Lr.JAM_SPACE_APPLICATION_ID),
+      link: Lr.Routes.ACTIVITY_DETAILS(LH.JAM_SPACE_APPLICATION_ID),
       isAppLink: !0,
       cardImgUrl: LT,
       revealDate: new Date("May 30, 2023 17:00:00"),
       enabled: e
-    }), C.push({
-      id: Lr.WhatsNewSection.POKER,
+    }), t.push({
+      id: LH.WhatsNewSection.POKER,
       title: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_POKER_TILE_TITLE,
       content: (0, i.jsx)(u.Text, {
         variant: "text-sm/normal",
@@ -348,26 +348,26 @@ function LF() {
       }),
       imgUrl: Lg,
       imgAlt: LV.default.Messages.EMBEDDED_ACTIVITIES_WHATS_NEW_POKER_TILE_IMG_ALT,
-      link: LH.Routes.ACTIVITY_DETAILS(Lr.POKER_NIGHT_APPLICATION_ID),
+      link: Lr.Routes.ACTIVITY_DETAILS(LH.POKER_NIGHT_APPLICATION_ID),
       isAppLink: !0,
       cardImgUrl: LZ,
       revealDate: new Date("June 5, 2023 17:00:00"),
-      enabled: t
-    }), C
-  }, [L, e, t, a]);
-  return C.length <= 0 ? null : (0, i.jsx)("div", {
+      enabled: C
+    }), t
+  }, [L, e, C, a]);
+  return t.length <= 0 ? null : (0, i.jsx)("div", {
     className: Ld.whatsNew,
     children: (0, i.jsx)(D.default, {
       tileMargin: Ly,
-      headerId: LP,
-      tileWidth: Lk,
+      headerId: Lk,
+      tileWidth: LP,
       header: LV.default.Messages.WHATS_NEW,
       headerContainerClassName: Ld.tileScrollerHeader,
       scrollContainerClassName: Ld.tileScrollerContainer,
       children: (0, i.jsx)("ul", {
-        "aria-labelledby": LP,
+        "aria-labelledby": Lk,
         className: Ld.whatsNewItemsContainer,
-        children: C.map(L => (0, i.jsx)(LG, {
+        children: t.map(L => (0, i.jsx)(LG, {
           ...L
         }, L.id))
       })
@@ -379,29 +379,29 @@ function LG(L) {
   let {
     imgUrl: e,
     imgAlt: a,
-    title: t,
-    content: C,
+    title: C,
+    content: t,
     link: s,
     isAppLink: l,
-    id: r,
+    id: H,
     cardImgUrl: d,
     revealDate: c,
     enabled: M
-  } = L, E = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), _ = (0, o.useStateFromStores)([A.default], () => A.default.locale), {
+  } = L, E = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), I = (0, o.useStateFromStores)([A.default], () => A.default.locale), {
     analyticsLocations: T
-  } = (0, m.default)(f.default.ACTIVITIES_PAGE_WHATS_NEW_TILE), [h, D] = n.useState(!1), N = (0, I.default)(h), p = (0, o.useStateFromStores)([U.default], () => {
+  } = (0, m.default)(f.default.ACTIVITIES_PAGE_WHATS_NEW_TILE), [h, D] = n.useState(!1), N = (0, _.default)(h), p = (0, o.useStateFromStores)([U.default], () => {
     if (!M) return 0;
-    let L = U.default.isOpened(r);
-    return r === Lr.WhatsNewSection.JAMSPACE ? L || U.default.isOpened(Lr.WhatsNewSection.JAMSPACE_OLD) ? 2 : 1 : L ? 2 : 1
-  }, [M, r]);
+    let L = U.default.isOpened(H);
+    return H === LH.WhatsNewSection.JAMSPACE ? L || U.default.isOpened(LH.WhatsNewSection.JAMSPACE_OLD) ? 2 : 1 : L ? 2 : 1
+  }, [M, H]);
   n.useEffect(() => {
-    M && G.markSectionAcknowledged(r)
-  }, [M, r]);
+    M && G.markSectionAcknowledged(H)
+  }, [M, H]);
   let g = (0, i.jsxs)(i.Fragment, {
     children: [(0, i.jsx)(u.Text, {
       variant: "text-sm/semibold",
       className: Ld.whatsNewDate,
-      children: new Intl.DateTimeFormat(_, {
+      children: new Intl.DateTimeFormat(I, {
         dateStyle: "long"
       }).format(c)
     }), (0, i.jsxs)("div", {
@@ -420,8 +420,8 @@ function LG(L) {
       children: [(0, i.jsx)(u.Heading, {
         variant: "heading-md/bold",
         className: Ld.whatsNewDetailsHeader,
-        children: t
-      }), C]
+        children: C
+      }), t]
     })]
   });
   return (0, i.jsx)(m.AnalyticsLocationProvider, {
@@ -438,19 +438,19 @@ function LG(L) {
         link: s,
         isAppLink: l,
         onOpen: () => {
-          D(!0), G.markSectionOpened(r), P.default.track(LH.AnalyticEvents.ACTIVITIES_WHATS_NEW_OPENED, {
-            section_id: r
+          D(!0), G.markSectionOpened(H), k.default.track(Lr.AnalyticEvents.ACTIVITIES_WHATS_NEW_OPENED, {
+            section_id: H
           }), setTimeout(() => {
             D(!1)
           }, 500)
         },
         onCardContentClick: () => {
-          P.default.track(LH.AnalyticEvents.ACTIVITIES_WHATS_NEW_CLICKED, {
-            section_id: r
+          k.default.track(Lr.AnalyticEvents.ACTIVITIES_WHATS_NEW_CLICKED, {
+            section_id: H
           })
         }
       }), (0, i.jsxs)("div", {
-        className: H()(Ld.flipCardInner, {
+        className: r()(Ld.flipCardInner, {
           [Ld.flipCardInnerFlipped]: 2 === p,
           [Ld.flipCardOpening]: h && !E,
           [Ld.flipCardInnerReducedMotion]: E
@@ -487,7 +487,7 @@ function LG(L) {
                   variant: "text-sm/semibold",
                   className: Ld.flipCardClosedText,
                   children: LV.default.Messages.EMBEDDED_ACTIVITIES_CLICK_TO_REVEAL_DATE.format({
-                    revealDate: new Intl.DateTimeFormat(_).format(c)
+                    revealDate: new Intl.DateTimeFormat(I).format(c)
                   })
                 });
               case 1:
@@ -495,7 +495,7 @@ function LG(L) {
                   variant: "text-sm/semibold",
                   className: Ld.flipCardText,
                   children: LV.default.Messages.EMBEDDED_ACTIVITIES_REVEAL_THIS_WEEKS_DROP.format({
-                    revealDate: new Intl.DateTimeFormat(_).format(c)
+                    revealDate: new Intl.DateTimeFormat(I).format(c)
                   })
                 });
               default:
@@ -512,8 +512,8 @@ function LU(L) {
   let {
     openState: e,
     link: a,
-    isAppLink: t,
-    onOpen: C,
+    isAppLink: C,
+    onOpen: t,
     onCardContentClick: s
   } = L, {
     analyticsLocations: l
@@ -521,26 +521,26 @@ function LU(L) {
   switch (e) {
     case 0:
       return (0, i.jsx)("div", {
-        className: H()(Ld.clickableContainer, Ld.noPointer, {
+        className: r()(Ld.clickableContainer, Ld.noPointer, {
           [Ld.clickableContainerReducedMotion]: n
         })
       });
     case 1:
       return (0, i.jsx)(u.Clickable, {
         "aria-label": LV.default.Messages.EMBEDDED_ACTIVITIES_OPEN_BIRTHDAY_SURPRISE,
-        className: H()(Ld.clickableContainer, {
+        className: r()(Ld.clickableContainer, {
           [Ld.clickableContainerReducedMotion]: n
         }),
-        onClick: C
+        onClick: t
       });
     case 2:
       if (null == a) return (0, i.jsx)("div", {
-        className: H()(Ld.clickableContainer, Ld.noPointer, {
+        className: r()(Ld.clickableContainer, Ld.noPointer, {
           [Ld.clickableContainerReducedMotion]: n
         })
       });
-      if (t) return (0, i.jsx)(Li.ClickableLink, {
-        className: H()(Ld.clickableContainer, {
+      if (C) return (0, i.jsx)(Li.ClickableLink, {
+        className: r()(Ld.clickableContainer, {
           [Ld.clickableContainerReducedMotion]: n
         }),
         onClick: s,
@@ -555,7 +555,7 @@ function LU(L) {
         tag: "a",
         href: a,
         target: "_blank",
-        className: H()(Ld.clickableContainer, {
+        className: r()(Ld.clickableContainer, {
           [Ld.clickableContainerReducedMotion]: n
         }),
         onClick: s
@@ -563,7 +563,7 @@ function LU(L) {
     default:
       return null
   }
-}(s = t || (t = {}))[s.LOCKED = 0] = "LOCKED", s[s.UNLOCKED = 1] = "UNLOCKED", s[s.OPENED = 2] = "OPENED";
+}(s = C || (C = {}))[s.LOCKED = 0] = "LOCKED", s[s.UNLOCKED = 1] = "UNLOCKED", s[s.OPENED = 2] = "OPENED";
 let LY = "happening-now",
   LK = (0, W.cssValueToNumber)(M.default.ACTIVITIES_HOME_HAPPENING_NOW_CARD_WIDTH),
   LX = (0, W.cssValueToNumber)(M.default.ACTIVITIES_HOME_HAPPENING_NOW_GAP);
@@ -583,17 +583,17 @@ function Lz() {
       e = v.default.getCurrentUser();
     if (null == e) return L;
     let a = K.default.getShelfActivities(null),
-      t = a.map(L => N.default.getApplication(L.application_id)).filter(k.isNotNullish);
-    return S.default.getFlattenedGuildIds().forEach(C => {
-      K.default.getEmbeddedActivitiesForGuild(C).forEach(C => {
-        let s = g.default.getChannel(C.channelId);
-        if (null == s || C.userIds.has(e.id)) return;
+      C = a.map(L => N.default.getApplication(L.application_id)).filter(P.isNotNullish);
+    return S.default.getFlattenedGuildIds().forEach(t => {
+      K.default.getEmbeddedActivitiesForGuild(t).forEach(t => {
+        let s = g.default.getChannel(t.channelId);
+        if (null == s || t.userIds.has(e.id)) return;
         let l = (0, q.default)({
             activityConfigs: a,
-            applicationId: C.applicationId,
-            applications: t
+            applicationId: t.applicationId,
+            applications: C
           }),
-          i = Array.from(C.userIds).map(L => v.default.getUser(L)).filter(k.isNotNullish);
+          i = Array.from(t.userIds).map(L => v.default.getUser(L)).filter(P.isNotNullish);
         null != l && L.push({
           activityItem: l,
           channel: s,
@@ -629,12 +629,12 @@ function Lz() {
             let {
               activityItem: e,
               channel: a,
-              users: t
+              users: C
             } = L;
             return (0, i.jsx)(LQ, {
               activityItem: e,
               channel: a,
-              users: t
+              users: C
             }, "".concat(a.id).concat(e.application.id))
           })
         })
@@ -647,8 +647,8 @@ function LQ(L) {
   let {
     activityItem: e,
     channel: a,
-    users: t
-  } = L, C = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), {
+    users: C
+  } = L, t = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), {
     imageBackground: s,
     onActivityItemSelected: l
   } = (0, La.default)({
@@ -658,16 +658,16 @@ function LQ(L) {
     locationObject: {},
     embeddedActivitiesManager: Ln.default,
     backgroundResolution: 512
-  }), n = y.default.getName(a.guild_id, a.id, null == t ? void 0 : t[0]);
+  }), n = y.default.getName(a.guild_id, a.id, null == C ? void 0 : C[0]);
   n = (0, W.truncateText)(n, 25);
-  let r = (0, o.useStateFromStores)([x.default], () => {
+  let H = (0, o.useStateFromStores)([x.default], () => {
     var L;
     return null === (L = x.default.getGuild(a.guild_id)) || void 0 === L ? void 0 : L.name
   });
   return (0, i.jsxs)(u.Clickable, {
     onClick: l,
-    className: H()((0, F.getThemeClass)(LH.ThemeTypes.DARK), Ld.happeningNowCard, {
-      [Ld.happeningNowCardReducedMotion]: C
+    className: r()((0, F.getThemeClass)(Lr.ThemeTypes.DARK), Ld.happeningNowCard, {
+      [Ld.happeningNowCardReducedMotion]: t
     }),
     children: [(0, i.jsx)("img", {
       src: s.url,
@@ -680,30 +680,30 @@ function LQ(L) {
         children: e.application.name
       }), (0, i.jsx)(O.default, {
         guildId: a.guild_id,
-        users: t,
+        users: C,
         max: 4,
         className: Ld.happeningNowAvatars
       }), (0, i.jsx)(u.Text, {
         className: Ld.happeningNowAvatarNames,
         variant: "text-xs/normal",
-        children: t.length > 1 ? LV.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
+        children: C.length > 1 ? LV.default.Messages.EMBEDDED_ACTIVITIES_USERNAME_AND_OTHERS.format({
           username: n,
-          count: t.length - 1
+          count: C.length - 1
         }) : LV.default.Messages.EMBEDDED_ACTIVITIES_IS_PLAYING.format({
           username: n
         })
       }), (0, i.jsx)(u.Text, {
         variant: "text-md/medium",
-        className: H()(Ld.happeningNowJoin, {
-          [Ld.happeningNowJoinReducedMotion]: C
+        className: r()(Ld.happeningNowJoin, {
+          [Ld.happeningNowJoinReducedMotion]: t
         }),
         children: LV.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY
-      }), null != r ? (0, i.jsx)(u.Text, {
+      }), null != H ? (0, i.jsx)(u.Text, {
         variant: "text-xs/medium",
         className: Ld.happeningNowChannelAndGuildName,
         children: LV.default.Messages.EMBEDDED_ACTIVITIES_INVITE_CHANNEL_IN_SERVER.format({
           channelName: (0, W.truncateText)(a.name, 25),
-          serverName: (0, W.truncateText)(r, 25)
+          serverName: (0, W.truncateText)(H, 25)
         })
       }) : null]
     })]
@@ -712,7 +712,8 @@ function LQ(L) {
 
 function Lq() {
   let L = (0, LL.default)({
-    guildId: null
+    guildId: null,
+    channel: void 0
   });
   return n.useEffect(() => {
     (0, Y.fetchShelf)({
@@ -745,54 +746,44 @@ function L$(L) {
   let {
     activityItem: a
   } = L, {
-    analyticsLocations: t
-  } = (0, m.default)(), C = (0, Lt.default)({
+    analyticsLocations: C
+  } = (0, m.default)(), t = (0, LC.default)({
     applicationId: a.application.id,
     size: 512
-  }), s = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), l = (null === (e = a.application.embeddedActivityConfig) || void 0 === e ? void 0 : e.activity_preview_video_asset_id) != null ? (0, Le.default)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null, r = (0, o.useStateFromStoresArray)([K.default, v.default], () => K.default.getUsersHavePlayedByApp(a.application.id).filter(L => {
-    var e;
-    return (null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) !== L
-  }).map(L => v.default.getUser(L)).filter(k.isNotNullish), [a.application.id]), V = null != r[0] ? (0, W.truncateText)(y.default.getName(null, null, r[0]), 25) : null, d = null;
-  null != V && r.length > 1 ? d = LV.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN_AND_MORE.format({
-    username1: V,
-    extras: r.length - 1
-  }) : null != V && (d = LV.default.Messages.EMBEDDED_ACTIVITIES_HAVE_PLAYED_ONE_KNOWN.format({
-    username1: V
-  }));
-  let [c, M] = n.useState(!1), [E, _] = n.useState(c);
+  }), s = (0, o.useStateFromStores)([Z.default], () => Z.default.useReducedMotion), l = (null === (e = a.application.embeddedActivityConfig) || void 0 === e ? void 0 : e.activity_preview_video_asset_id) != null ? (0, Le.default)(a.application.id, a.application.embeddedActivityConfig.activity_preview_video_asset_id) : null, [H, V] = n.useState(!1), [d, c] = n.useState(H);
   n.useEffect(() => {
-    c && _(!0)
-  }, [c]);
-  let I = () => M(!0),
-    T = () => M(!1),
-    f = null == a.application.maxParticipants || -1 === a.application.maxParticipants ? LV.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : LV.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
+    H && c(!0)
+  }, [H]);
+  let M = () => V(!0),
+    E = () => V(!1),
+    I = null == a.application.maxParticipants || -1 === a.application.maxParticipants ? LV.default.Messages.EMBEDDED_ACTIVITIES_UNLIMITED_PARTICIPANTS : LV.default.Messages.EMBEDDED_ACTIVITIES_ONE_TO_N_PARTICIPANTS.format({
       count: a.application.maxParticipants
     });
   return (0, i.jsxs)(Li.ClickableLink, {
     to: {
-      pathname: LH.Routes.ACTIVITY_DETAILS(a.application.id),
+      pathname: Lr.Routes.ACTIVITY_DETAILS(a.application.id),
       state: {
-        analyticsLocations: t
+        analyticsLocations: C
       }
     },
-    className: H()(Ld.activityCard, {
+    className: r()(Ld.activityCard, {
       [Ld.activityCardReducedMotion]: s
     }),
-    onMouseEnter: I,
-    onFocus: I,
-    onMouseLeave: T,
-    onBlur: T,
+    onMouseEnter: M,
+    onFocus: M,
+    onMouseLeave: E,
+    onBlur: E,
     children: [(0, i.jsxs)("div", {
       className: Ld.activityCardImageContainer,
       children: [(0, i.jsx)("img", {
-        src: C.url,
+        src: t.url,
         alt: a.application.name,
         className: Ld.activityCardImage
-      }), !s && null != l && E ? (0, i.jsx)("div", {
-        className: H()(Ld.video, {
-          [Ld.videoFadeOut]: !c
+      }), !s && null != l && d ? (0, i.jsx)("div", {
+        className: r()(Ld.video, {
+          [Ld.videoFadeOut]: !H
         }),
-        onAnimationEnd: () => c ? null : _(!1),
+        onAnimationEnd: () => H ? null : c(!1),
         children: (0, i.jsx)(w.default, {
           className: Ld.video,
           src: l,
@@ -810,35 +801,19 @@ function L$(L) {
         }), (0, i.jsx)(u.Text, {
           variant: "text-xs/semibold",
           className: Ld.activityCardParticipants,
-          children: f
+          children: I
         })]
-      }), r.length > 0 ? (0, i.jsx)("div", {
-        className: Ld.activityCardSocialProofContainer,
-        children: (0, i.jsxs)("div", {
-          className: Ld.activityCardUsersHavePlayedContainer,
-          children: [(0, i.jsx)(O.default, {
-            users: r,
-            guildId: void 0,
-            max: 4
-          }), null != d ? (0, i.jsx)(u.Text, {
-            variant: "text-sm/medium",
-            className: Ld.activityCardUsersHavePlayedText,
-            children: d
-          }) : null]
-        })
-      }) : (0, i.jsx)(i.Fragment, {
-        children: a.application.tags.length > 0 ? (0, i.jsx)("div", {
-          className: Ld.activityCardTagContainer,
-          children: a.application.tags.slice(0, 3).map(L => (0, i.jsx)("div", {
-            className: Ld.activityCardTag,
-            children: (0, i.jsx)(u.Text, {
-              variant: "text-xs/semibold",
-              children: L
-            })
-          }, L))
-        }) : null
-      }), (0, i.jsxs)("div", {
-        className: H()(Ld.activityCardHoverHint, {
+      }), a.application.tags.length > 0 ? (0, i.jsx)("div", {
+        className: Ld.activityCardTagContainer,
+        children: a.application.tags.slice(0, 3).map(L => (0, i.jsx)("div", {
+          className: Ld.activityCardTag,
+          children: (0, i.jsx)(u.Text, {
+            variant: "text-xs/semibold",
+            children: L
+          })
+        }, L))
+      }) : null, (0, i.jsxs)("div", {
+        className: r()(Ld.activityCardHoverHint, {
           [Ld.activityCardHoverHintReducedMotion]: s
         }),
         children: [(0, i.jsx)(u.Text, {
@@ -867,7 +842,7 @@ function L6() {
         href: Lj,
         target: "_blank",
         className: Ld.celebrateCardContainer,
-        onClick: () => P.default.track(LH.AnalyticEvents.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, {
+        onClick: () => k.default.track(Lr.AnalyticEvents.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, {
           section: "share_nitro"
         }),
         children: [(0, i.jsx)("img", {
@@ -897,7 +872,7 @@ function L6() {
         target: "_blank",
         className: Ld.celebrateCardContainer,
         onClick: () => {
-          P.default.track(LH.AnalyticEvents.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, {
+          k.default.track(Lr.AnalyticEvents.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, {
             section: "disxcore_merch"
           })
         },
@@ -925,7 +900,7 @@ function L6() {
         className: Ld.celebrateCardContainer,
         onClick: L => {
           var e;
-          P.default.track(LH.AnalyticEvents.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, {
+          k.default.track(Lr.AnalyticEvents.ACTIVITIES_PAGE_CELEBRATE_TILE_CLICKED, {
             section: "town_hall"
           }), null === (e = (0, T.default)(LR)) || void 0 === e || e(L)
         },
@@ -962,4 +937,4 @@ function L7() {
   return (0, i.jsx)(Ls.BirthdayActivitiesRouteGuard, {
     children: (0, i.jsx)(LB, {})
   })
-}(l = C || (C = {})).SHARE_NITRO = "share_nitro", l.DISXCORE_MERCH = "disxcore_merch", l.TOWN_HALL = "town_hall"
+}(l = t || (t = {})).SHARE_NITRO = "share_nitro", l.DISXCORE_MERCH = "disxcore_merch", l.TOWN_HALL = "town_hall"

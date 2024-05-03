@@ -1,76 +1,87 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), n("47120");
-var a = n("735250");
-n("470079");
-var l = n("399606"),
-  s = n("524437"),
-  i = n("239091"),
-  r = n("706140"),
-  o = n("242291"),
-  u = n("792165"),
-  d = n("603074"),
-  c = n("294629"),
-  f = n("390322"),
-  h = n("871499"),
-  m = n("131951"),
-  p = n("503705"),
-  E = n("304388"),
-  C = n("689938");
+var a = n("735250"),
+  l = n("470079"),
+  s = n("399606"),
+  i = n("524437"),
+  r = n("239091"),
+  o = n("706140"),
+  u = n("242291"),
+  d = n("792165"),
+  c = n("603074"),
+  f = n("294629"),
+  h = n("390322"),
+  m = n("871499"),
+  p = n("131951"),
+  E = n("503705"),
+  C = n("459273"),
+  g = n("304388"),
+  S = n("981631"),
+  _ = n("689938");
 
-function g(e) {
+function T(e) {
   let {
     channel: t,
-    themeable: g
-  } = e, S = t.getGuildId(), {
-    mute: _,
-    suppress: T
-  } = (0, c.default)(t), I = (0, l.useStateFromStores)([m.default], () => m.default.isDeaf()), A = _ || T || I, v = (0, o.useSoundBoardDismissContentTypes)({
-    isSoundboardButtonDisabled: A
-  }), [N, x] = (0, r.useGetDismissibleContent)(v);
+    themeable: T
+  } = e, I = t.getGuildId(), {
+    mute: A,
+    suppress: N
+  } = (0, f.default)(t), v = (0, s.useStateFromStores)([p.default], () => p.default.isDeaf()), x = A || N || v, M = (0, u.useSoundBoardDismissContentTypes)({
+    isSoundboardButtonDisabled: x
+  }), [R, L] = (0, o.useGetDismissibleContent)(M);
 
-  function M(e) {
-    null != S && (0, i.openContextMenuLazy)(e, async () => {
+  function y(e) {
+    null != I && (0, r.openContextMenuLazy)(e, async () => {
       let {
         default: e
       } = await n.e("56049").then(n.bind(n, "338991"));
       return t => (0, a.jsx)(e, {
-        guildId: S,
+        guildId: I,
         ...t
       })
     })
   }
-  return (0, a.jsx)(E.default, {
+  let O = l.useRef(null),
+    j = l.useCallback(() => {
+      var e;
+      null === (e = O.current) || void 0 === e || e.hidePopout()
+    }, []);
+  return (0, C.useComponentAction)({
+    event: S.ComponentActions.TOGGLE_SOUNDBOARD,
+    handler: j
+  }), (0, a.jsx)(g.default, {
+    ref: O,
     renderPopout: e => {
       let {
         closePopout: n
       } = e;
-      return (0, a.jsx)(f.default, {
-        children: (0, a.jsx)(d.default, {
-          guildId: S,
+      return (0, a.jsx)(h.default, {
+        children: (0, a.jsx)(c.default, {
+          guildId: I,
           channel: t,
           onClose: n,
-          gridNotice: N === s.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(u.CustomCallSoundUpsell, {
+          gridNotice: R === i.DismissibleContent.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && (0, a.jsx)(d.CustomCallSoundUpsell, {
             onClose: n,
-            markAsDismissed: x
+            markAsDismissed: L
           }),
           analyticsSource: "action bar button"
         })
       })
     },
-    children: e => (0, a.jsx)(h.default, {
-      themeable: g,
+    children: e => (0, a.jsx)(m.default, {
+      themeable: T,
       label: function() {
-        if (_) return C.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
-        if (T) return C.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
-        if (I) return C.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
+        if (A) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_GUILD_MUTE;
+        if (N) return _.default.Messages.SOUNDBOARD_OPEN_SOUNDBOARD_ERROR_SUPPRESSED;
+        if (v) return _.default.Messages.SOUNDBOARD_OPEN_SOUNBOARRD_ERROR_DEAFENED
       }(),
-      iconComponent: p.default,
-      disabled: A,
-      onContextMenu: M,
+      iconComponent: E.default,
+      disabled: x,
+      onContextMenu: y,
       ...e
     })
   })

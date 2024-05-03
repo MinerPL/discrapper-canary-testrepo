@@ -2,7 +2,7 @@
 s.r(t), s("627494"), s("757143");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("913527"),
   o = s.n(r),
@@ -21,7 +21,7 @@ var a = s("735250"),
   h = s("51144"),
   C = s("884737"),
   R = s("981631"),
-  x = s("701601");
+  x = s("655379");
 
 function L(e, t) {
   let s = C.NotRenderedChanges[e.targetType];
@@ -36,7 +36,7 @@ class O extends l.PureComponent {
       guildId: l
     } = this.props;
     return (0, a.jsx)(u.Popout, {
-      preload: () => (0, _.default)(e.id, e.getAvatarURL(l, 80), {
+      preload: () => (0, _.maybeFetchUserProfileForPopout)(e.id, e.getAvatarURL(l, 80), {
         guildId: l
       }),
       renderPopout: t => (0, a.jsx)(I.default, {
@@ -351,7 +351,7 @@ class A extends l.PureComponent {
           onClick: N,
           ...n,
           children: [(0, a.jsx)(u.Popout, {
-            preload: () => (0, _.default)(t.userId, o.getAvatarURL(r, 80), {
+            preload: () => (0, _.maybeFetchUserProfileForPopout)(t.userId, o.getAvatarURL(r, 80), {
               guildId: r
             }),
             renderPopout: e => (0, a.jsx)(I.default, {

@@ -32,7 +32,7 @@ function c(e) {
     let {
       minimumOwnerAgeInYears: t,
       minimumSize: a
-    } = e, r = !e.noRecentViolations, o = async () => (0, l.default)(await i.default.getSubmitRequestURLAuthenticated()), S = [{
+    } = e, r = !e.noRecentViolations, o = [{
       key: "no_violations_requirement",
       checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_VIOLATIONS_ELIGIBLE,
       uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_VIOLATIONS_NOT_ELIGIBLE,
@@ -41,9 +41,9 @@ function c(e) {
       }),
       checked: e.noRecentViolations,
       actionLabel: r ? u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_RECENT_VIOLATION_ELIGIBILITY_CTA : void 0,
-      actionHandler: r ? o : void 0
+      actionHandler: r ? () => (0, l.default)(i.default.getSubmitRequestURL()) : void 0
     }];
-    if (null != t && null != e.meetsOwnerAgeRequirement && S.push({
+    if (null != t && null != e.meetsOwnerAgeRequirement && o.push({
         key: "owner_age_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_OWNER_AGE_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_OWNER_AGE_NOT_ELIGIBLE,
@@ -51,7 +51,7 @@ function c(e) {
           minimumOwnerAgeInYears: t
         }),
         checked: e.meetsOwnerAgeRequirement
-      }), null != a && null != e.hasSufficientMembers && S.push({
+      }), null != a && null != e.hasSufficientMembers && o.push({
         key: "member_count_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_MEMBERS_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_MEMBERS_NOT_ELIGIBLE,
@@ -59,7 +59,7 @@ function c(e) {
           minimumSize: a
         }),
         checked: e.hasSufficientMembers
-      }), null != e.minimumAgeInDays && null != e.meetsServerAgeRequirement && S.push({
+      }), null != e.minimumAgeInDays && null != e.meetsServerAgeRequirement && o.push({
         key: "server_age_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_AGE_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_AGE_NOT_ELIGIBLE,
@@ -67,19 +67,19 @@ function c(e) {
           minimumAge: (0, n.default)(e.minimumAgeInDays)
         }),
         checked: e.meetsServerAgeRequirement
-      }), null != e.weeklyCommunicators && S.push({
+      }), null != e.weeklyCommunicators && o.push({
         key: "weekly_communicator_count_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_COMMUNICATORS_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_COMMUNICATORS_NOT_ELIGIBLE,
         description: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_COMMUNICATORS_DESCRIPTION,
         checked: e.weeklyCommunicators
-      }), null != e.hasMemberRetention && S.push({
+      }), null != e.hasMemberRetention && o.push({
         key: "member_retention_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_RETENTION_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_RETENTION_NOT_ELIGIBLE,
         description: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_RETENTION_DESCRIPTION,
         checked: e.hasMemberRetention
-      }), S.push({
+      }), o.push({
         key: "nsfw_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_NSFW_CONTENT_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_NSFW_CONTENT_NOT_ELIGIBLE,
@@ -89,7 +89,7 @@ function c(e) {
       let t = !e.hasEnabled2FA && !E && (null == s ? void 0 : s.onEnableMFAClick) != null,
         a = !e.hasEnabled2FA && !_ && (null == s ? void 0 : s.onRequireModeratorMFAClick) != null,
         l = t || a;
-      S.push({
+      o.push({
         key: "2fa_requirement",
         checkedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_2FA_ELIGIBLE,
         uncheckedLabel: u.default.Messages.GUILD_ROLE_SUBSCRIPTION_SETTINGS_ELIGIBILITY_REQUIREMENT_2FA_NOT_ELIGIBLE,
@@ -101,6 +101,6 @@ function c(e) {
         actionHandler: l ? I : void 0
       })
     }
-    return !0 === c && S.sort(e => e.checked ? 0 : -1), S
+    return !0 === c && o.sort(e => e.checked ? 0 : -1), o
   }, [e, c, E, s, _, T, I])
 }

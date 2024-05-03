@@ -5,71 +5,74 @@ a.r(t), a.d(t, {
   }
 });
 var l = a("735250"),
-  n = a("470079"),
-  s = a("481060"),
+  s = a("470079"),
+  n = a("481060"),
   i = a("332664"),
   c = a("142497"),
-  o = a("626135"),
-  d = a("672655"),
+  d = a("626135"),
+  o = a("672655"),
   u = a("768015"),
   r = a("701488"),
-  f = a("981631"),
-  T = a("190378"),
+  T = a("981631"),
+  f = a("190378"),
   _ = a("689938");
-let I = [r.ActivityFeedbackReasons.OTHER, r.ActivityFeedbackReasons.NOT_FUN];
+let I = [r.ActivityFeedbackReasons.OTHER, r.ActivityFeedbackReasons.ADS, r.ActivityFeedbackReasons.NOT_FUN];
 
 function A(e) {
+  var t;
   let {
-    channel: t,
-    activityApplication: A,
-    onClose: E,
-    transitionState: R,
-    analyticsData: m
+    channel: A,
+    activityApplication: E,
+    onClose: R,
+    transitionState: m,
+    analyticsData: C
   } = e;
-  return n.useEffect(() => {
-    o.default.track(f.AnalyticEvents.OPEN_MODAL, {
+  s.useEffect(() => {
+    d.default.track(T.AnalyticEvents.OPEN_MODAL, {
       type: "Activity Feedback Modal",
-      application_id: A.id,
-      application_name: A.name,
-      game_id: A.id,
+      application_id: E.id,
+      application_name: E.name,
+      game_id: E.id,
       source: "Activity End"
     })
-  }, [A]), (0, l.jsx)(i.default, {
+  }, [E]);
+  let N = (null === (t = E.embeddedActivityConfig) || void 0 === t ? void 0 : t.displays_advertisements) === !0;
+  return (0, l.jsx)(i.default, {
     header: _.default.Messages.ACTIVITY_REPORT_POST_ACTIVITY_HEADER.format({
-      applicationName: A.name
+      applicationName: E.name
     }),
     body: _.default.Messages.ACTIVITY_REPORT_ACTIVITY_BODY,
     problemTitle: _.default.Messages.ACTIVITY_REPORT_POST_ACTIVITY_PROBLEM_TITLE,
-    problems: (0, d.default)(!0),
+    problems: (0, o.default)(!0, N),
     feedbackProblems: I,
     onSubmit: function(e) {
       let {
-        rating: n,
-        problem: i,
-        dontShowAgain: d,
-        feedback: r
+        rating: t,
+        problem: s,
+        dontShowAgain: i,
+        feedback: o
       } = e;
-      if (d && ! function(e) {
+      if (i && ! function(e) {
           let {
             applicationId: t,
             rating: a
           } = e;
-          o.default.track(f.AnalyticEvents.ACTIVITY_REPORT_DONT_SHOW, {
+          d.default.track(T.AnalyticEvents.ACTIVITY_REPORT_DONT_SHOW, {
             application_id: t,
             rating: a
-          }), (0, c.hideHotspot)(T.HotspotLocations.POST_ACTIVITY_FEEDBACK)
+          }), (0, c.hideHotspot)(f.HotspotLocations.POST_ACTIVITY_FEEDBACK)
         }({
-          rating: n,
-          applicationId: A.id
-        }), null != n)(0, u.default)({
-        problem: i,
-        channel: t,
-        feedback: r,
-        activityApplication: A,
-        analyticsData: m,
+          rating: t,
+          applicationId: E.id
+        }), null != t)(0, u.default)({
+        problem: s,
+        channel: A,
+        feedback: o,
+        activityApplication: E,
+        analyticsData: C,
         location: "Activity End",
-        rating: n
-      }), null != i && (0, s.openModalLazy)(async () => {
+        rating: t
+      }), null != s && (0, n.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.all([a.e("99387"), a.e("14466")]).then(a.bind(a, "729328"));
@@ -79,8 +82,8 @@ function A(e) {
         })
       })
     },
-    onClose: E,
-    transitionState: R,
+    onClose: R,
+    transitionState: m,
     otherKey: r.ActivityFeedbackReasons.OTHER
   })
 }

@@ -14,6 +14,8 @@ let i = (e, t) => {
     surface_type: l.ContentInventorySurfaceTypes.GUILD_MEMBER_LIST,
     channel_id: t.channelId,
     guild_id: t.guildId,
-    interaction_type: e
+    interaction_type: e,
+    destination_channel_id: t.destinationChannelId,
+    destination_guild_id: t.destinationGuildId
   })
 }

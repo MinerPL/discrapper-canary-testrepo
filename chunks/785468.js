@@ -31,7 +31,7 @@ var a = l("735250"),
   p = l("765305"),
   M = l("981631"),
   D = l("689938"),
-  R = l("295429");
+  R = l("270484");
 let j = e => e === p.GuildScheduledEventEntityTypes.EXTERNAL,
   y = (e, t) => {
     let l = o.default.getChannel(e);
@@ -239,7 +239,7 @@ function P(e) {
         }), (0, d.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([l.e("49237"), l.e("99387"), l.e("90508"), l.e("7590"), l.e("45094"), l.e("63144")]).then(l.bind(l, "218613"));
+          } = await Promise.all([l.e("99387"), l.e("90508"), l.e("7590"), l.e("45094"), l.e("76688")]).then(l.bind(l, "218613"));
           return l => (0, a.jsx)(e, {
             ...l,
             channelType: M.ChannelTypes.GUILD_STAGE_VOICE,

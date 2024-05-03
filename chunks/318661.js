@@ -1,24 +1,37 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return l
+    return d
   },
   getDisplayProfile: function() {
-    return d
+    return E
+  },
+  useDisplayProfileWithFetchEffect: function() {
+    return _
   }
 }), n("47120");
-var i = n("442837"),
-  r = n("594174"),
+var i = n("470079"),
+  r = n("442837"),
+  a = n("594174"),
   s = n("251625"),
-  a = n("255564"),
-  o = n("621853");
-
-function l(e, t) {
-  return (0, i.useStateFromStores)([r.default, o.default], () => d(e, t, [r.default, o.default]))
-}
-let u = (0, s.cachedFunction)((e, t) => new a.default(e, t));
+  o = n("255564"),
+  l = n("621853"),
+  u = n("484459");
 
 function d(e, t) {
-  let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, o.default], s = n.getUser(e), a = i.getUserProfile(e), l = i.getGuildMemberProfile(e, t);
-  return null == s || null == a ? null : u(a, l)
+  return (0, r.useStateFromStores)([a.default, l.default], () => E(e, t, [a.default, l.default]))
+}
+
+function _(e, t) {
+  return i.useEffect(() => {
+    (0, u.default)(e, void 0, {
+      guildId: null != t ? t : void 0
+    })
+  }, [t, e]), d(e, t)
+}
+let c = (0, s.cachedFunction)((e, t) => new o.default(e, t));
+
+function E(e, t) {
+  let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.default, l.default], r = n.getUser(e), s = i.getUserProfile(e), o = i.getGuildMemberProfile(e, t);
+  return null == r || null == s ? null : c(s, o)
 }

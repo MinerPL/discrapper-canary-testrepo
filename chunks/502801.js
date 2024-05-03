@@ -5,9 +5,9 @@ n.r(t), n.d(t, {
   }
 }), n("653041"), n("47120");
 var l = n("735250"),
-  a = n("470079"),
-  i = n("803997"),
-  u = n.n(i),
+  i = n("470079"),
+  a = n("120356"),
+  u = n.n(a),
   r = n("442837"),
   d = n("952265"),
   E = n("481060"),
@@ -22,8 +22,8 @@ var l = n("735250"),
   I = n("210887"),
   f = n("131704"),
   L = n("699516"),
-  N = n("944486"),
-  D = n("914010"),
+  D = n("944486"),
+  N = n("914010"),
   h = n("800599"),
   U = n("594174"),
   R = n("186095"),
@@ -34,7 +34,7 @@ var l = n("735250"),
   G = n("407316"),
   p = n("937784"),
   H = n("689938"),
-  x = n("659125"),
+  x = n("57922"),
   M = n("138715"),
   v = n("979770");
 
@@ -42,13 +42,13 @@ function j(e) {
   let {
     channel: t,
     ChannelIcon: n,
-    selected: a,
-    onClick: i
+    selected: i,
+    onClick: a
   } = e, u = (0, C.default)(t);
   return (0, l.jsxs)(E.Clickable, {
     className: x.channelRow,
-    onClick: () => i(t.id),
-    children: [a ? (0, l.jsx)(m.default, {
+    onClick: () => a(t.id),
+    children: [i ? (0, l.jsx)(m.default, {
       className: x.radioIcon
     }) : (0, l.jsx)(P.default, {
       className: x.radioIcon
@@ -68,10 +68,10 @@ function y(e) {
   let {
     guildId: t,
     selectedChannelId: n,
-    onSelectChannelId: i
-  } = e, d = (0, r.useStateFromStores)([N.default], () => N.default.getChannelId()), {
+    onSelectChannelId: a
+  } = e, d = (0, r.useStateFromStores)([D.default], () => D.default.getChannelId()), {
     guildChannels: o
-  } = (0, r.useStateFromStoresObject)([T.default], () => T.default.getGuildWithoutChangingCommunityRows(t)), s = a.useMemo(() => {
+  } = (0, r.useStateFromStoresObject)([T.default], () => T.default.getGuildWithoutChangingCommunityRows(t)), s = i.useMemo(() => {
     let e = [];
     return o.forEachChannel(t => {
       !1 !== (0, G.canAttachClipsToChannel)(t.id) && ((0, f.isGuildSelectableChannelType)(t.type) || (0, f.isGuildVocalChannelType)(t.type)) && e.push(t)
@@ -91,16 +91,16 @@ function y(e) {
       renderRow: e => {
         let {
           section: t,
-          row: a
+          row: i
         } = e;
         if (t > 0) return null;
-        let u = s[a],
+        let u = s[i],
           r = (0, S.getChannelIconComponent)(u);
         return null == r ? null : (0, l.jsx)(j, {
           channel: u,
           ChannelIcon: r,
           selected: n === u.id,
-          onClick: i
+          onClick: a
         }, u.id)
       },
       rowHeight: (e, t) => e > 0 ? 0 : null != s[t] ? 56 : 0,
@@ -115,9 +115,9 @@ function F(e) {
   let {
     friends: t,
     searchQuery: n,
-    disabled: i,
+    disabled: a,
     onShareClip: d
-  } = e, o = a.useMemo(() => 0 === n.length ? t : t.filter(e => e.username.toLowerCase().includes(n.toLowerCase())), [t, n]), _ = (0, r.useStateFromStores)([I.default], () => I.default.theme);
+  } = e, o = i.useMemo(() => 0 === n.length ? t : t.filter(e => e.username.toLowerCase().includes(n.toLowerCase())), [t, n]), _ = (0, r.useStateFromStores)([I.default], () => I.default.theme);
   return 0 === o.length ? (0, l.jsxs)(R.default, {
     theme: _,
     className: x.emptyStateContainer,
@@ -138,19 +138,19 @@ function F(e) {
         row: n
       } = e;
       if (t > 0) return null;
-      let a = o[n],
+      let i = o[n],
         u = o[n].username;
       return (0, l.jsxs)("div", {
         className: x.userRow,
         children: [(0, l.jsx)(s.default, {
-          user: a
+          user: i
         }), (0, l.jsx)(E.Text, {
           className: x.username,
           variant: "text-md/normal",
           children: u
         }), (0, l.jsx)(E.Button, {
-          disabled: i,
-          onClick: () => d(a.id),
+          disabled: a,
+          onClick: () => d(i.id),
           className: x.__invalid_friendShareButton,
           look: E.ButtonLooks.OUTLINED,
           size: E.ButtonSizes.SMALL,
@@ -160,7 +160,7 @@ function F(e) {
             children: H.default.Messages.SHARE
           })
         })]
-      }, a.id)
+      }, i.id)
     },
     rowHeight: (e, t) => e > 0 ? 0 : null != o[t] ? 52 : 0,
     renderSection: () => null,
@@ -173,12 +173,12 @@ function B(e) {
   let {
     clip: t,
     editMetadata: n,
-    transitionState: i,
+    transitionState: a,
     onClose: s
-  } = e, [C, S] = a.useState(""), [T, I] = a.useState(!1), [f, N] = a.useState(null), R = (0, r.useStateFromStoresArray)([L.default], () => L.default.getFriendIDs()), P = (0, r.useStateFromStoresArray)([h.default, U.default], () => R.map(e => U.default.getUser(e)).filter(O.isNotNullish).sort((e, t) => {
-    var n, l, a, i;
-    return (null !== (a = null === (n = h.default.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== a ? a : 0) - (null !== (i = null === (l = h.default.getUserAffinity(e.id)) || void 0 === l ? void 0 : l.affinity) && void 0 !== i ? i : 0)
-  }), [R]), m = (0, r.useStateFromStores)([D.default], () => D.default.getGuildId()), {
+  } = e, [C, S] = i.useState(""), [T, I] = i.useState(!1), [f, D] = i.useState(null), R = (0, r.useStateFromStoresArray)([L.default], () => L.default.getFriendIDs()), P = (0, r.useStateFromStoresArray)([h.default, U.default], () => R.map(e => U.default.getUser(e)).filter(O.isNotNullish).sort((e, t) => {
+    var n, l, i, a;
+    return (null !== (i = null === (n = h.default.getUserAffinity(t.id)) || void 0 === n ? void 0 : n.affinity) && void 0 !== i ? i : 0) - (null !== (a = null === (l = h.default.getUserAffinity(e.id)) || void 0 === l ? void 0 : l.affinity) && void 0 !== a ? a : 0)
+  }), [R]), m = (0, r.useStateFromStores)([N.default], () => N.default.getGuildId()), {
     analyticsLocations: G
   } = (0, c.default)(_.default.CLIPS_SHARE_MODAL);
   async function M(e) {
@@ -202,7 +202,7 @@ function B(e) {
   }
   return (0, l.jsxs)(E.ModalRoot, {
     size: E.ModalSize.SMALL,
-    transitionState: i,
+    transitionState: a,
     children: [(0, l.jsx)(E.Heading, {
       className: u()(x.title, x.contentPadding),
       variant: "heading-lg/semibold",
@@ -232,7 +232,7 @@ function B(e) {
     }), null != m && (0, l.jsx)(y, {
       guildId: m,
       selectedChannelId: f,
-      onSelectChannelId: N
+      onSelectChannelId: D
     }), (0, l.jsxs)(E.ModalFooter, {
       children: [(0, l.jsx)(E.Button, {
         disabled: null == f,

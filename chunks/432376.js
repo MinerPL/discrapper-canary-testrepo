@@ -1,6 +1,6 @@
 "use strict";
-i.r(t);
-t.default = e => {
+
+function n(e) {
   let {
     channel: t,
     canChat: i,
@@ -9,11 +9,17 @@ t.default = e => {
     isLurking: s,
     isGuest: l,
     communicationDisabled: o,
-    isActiveChannelOrUnarchivableThread: r
-  } = e, u = t.isPrivate(), d = t.isSystemDM(), c = (i || u) && r;
+    isActiveChannelOrUnarchivableThread: r,
+    isAutomodQuarantined: u
+  } = e, d = t.isPrivate(), c = t.isSystemDM(), h = (i || d) && r;
   return {
     disableReactionReads: !n,
-    disableReactionCreates: s || l || !c || !((!0 === a || u) && !d && r),
-    disableReactionUpdates: s || l || !c || !0 === o
+    disableReactionCreates: s || l || !h || !((!0 === a || d) && !c && r),
+    disableReactionUpdates: s || l || !h || !0 === o || !0 === u
   }
 }
+i.r(t), i.d(t, {
+  default: function() {
+    return n
+  }
+})

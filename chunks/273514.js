@@ -1,39 +1,39 @@
 "use strict";
 n.r(t);
-var a = n("735250");
+var i = n("735250");
 n("470079");
-var l = n("481060"),
-  r = n("592125"),
+var r = n("481060"),
+  a = n("592125"),
   s = n("430824"),
-  i = n("346656"),
-  d = n("689938"),
-  o = n("61574");
+  o = n("346656"),
+  l = n("689938"),
+  u = n("939414");
 t.default = e => {
   let {
     entry: t
-  } = e, n = r.default.getChannel(t.channelId);
+  } = e, n = a.default.getChannel(t.channelId);
   if (null == n) return null;
-  let u = s.default.getGuild(n.guild_id);
-  return null == u ? null : (0, a.jsxs)("div", {
-    className: o.container,
-    children: [(0, a.jsx)(l.Heading, {
-      className: o.header,
+  let d = s.default.getGuild(n.guild_id);
+  return null == d ? null : (0, i.jsxs)("div", {
+    className: u.container,
+    children: [(0, i.jsx)(r.Heading, {
+      className: u.header,
       variant: "heading-sm/semibold",
-      children: d.default.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
-    }), (0, a.jsxs)("div", {
-      className: o.guildContainer,
-      children: [(0, a.jsxs)("div", {
-        className: o.hubInfo,
-        children: [(0, a.jsx)(i.default, {
-          guild: u,
-          size: i.default.Sizes.MINI,
-          className: o.hubIcon
-        }), (0, a.jsx)(l.Text, {
+      children: l.default.Messages.REPORT_MODAL_SERVER_PREVIEW_HEADER
+    }), (0, i.jsxs)("div", {
+      className: u.guildContainer,
+      children: [(0, i.jsxs)("div", {
+        className: u.hubInfo,
+        children: [(0, i.jsx)(o.default, {
+          guild: d,
+          size: o.default.Sizes.MINI,
+          className: u.hubIcon
+        }), (0, i.jsx)(r.Text, {
           color: "header-secondary",
           variant: "text-sm/normal",
-          children: u.name
+          children: d.name
         })]
-      }), (0, a.jsx)(l.Text, {
+      }), (0, i.jsx)(r.Text, {
         variant: "text-md/semibold",
         color: "header-primary",
         children: t.name

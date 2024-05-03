@@ -59,7 +59,7 @@ let E = {
   };
 
 function _(e) {
-  let t = "EMBEDDED_ACTIVITY_INBOUND_UPDATE",
+  let t = "EMBEDDED_ACTIVITY_UPDATE",
     n = () => {
       e(f())
     };

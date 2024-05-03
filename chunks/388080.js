@@ -1,79 +1,79 @@
 "use strict";
-a.r(t), a("47120");
-var n = a("735250"),
-  l = a("470079"),
-  s = a("803997"),
-  r = a.n(s),
-  o = a("913527"),
-  i = a.n(o),
-  c = a("481060"),
-  u = a("299379"),
-  d = a("454585"),
-  h = a("524444"),
-  p = a("529815"),
-  g = a("250496"),
-  f = a("285952"),
-  C = a("662435"),
-  m = a("464198"),
-  x = a("985806"),
-  _ = a("810090"),
-  v = a("55406"),
-  L = a("981631"),
-  k = a("689938"),
-  E = a("119970"),
-  R = a("609354");
+l.r(t), l("47120");
+var a = l("735250"),
+  n = l("470079"),
+  r = l("120356"),
+  s = l.n(r),
+  o = l("913527"),
+  i = l.n(o),
+  c = l("481060"),
+  d = l("299379"),
+  u = l("454585"),
+  h = l("524444"),
+  C = l("529815"),
+  g = l("250496"),
+  f = l("285952"),
+  m = l("662435"),
+  p = l("464198"),
+  x = l("985806"),
+  L = l("810090"),
+  v = l("55406"),
+  E = l("981631"),
+  N = l("689938"),
+  j = l("126798"),
+  S = l("452487");
 
-function S(e, t, a) {
+function A(e, t, l) {
   return t in e ? Object.defineProperty(e, t, {
-    value: a,
+    value: l,
     enumerable: !0,
     configurable: !0,
     writable: !0
-  }) : e[t] = a, e
+  }) : e[t] = l, e
 }
-let N = d.default.reactParserFor(v.default.getDefaultRules(E)),
-  A = {};
-class M extends l.PureComponent {
-  track(e, t, a) {
-    this.props.track(e, t, a)
+let _ = u.default.reactParserFor(v.default.getDefaultRules(j)),
+  w = {};
+class O extends n.PureComponent {
+  track(e, t, l) {
+    this.props.track(e, t, l)
   }
   renderFooter() {
-    return (0, n.jsxs)("div", {
-      className: E.footer,
-      children: [(0, n.jsx)(c.Anchor, {
-        "aria-label": k.default.Messages.TWITTER,
-        className: E.socialLink,
-        href: (0, u.default)(L.LocalizedLinks.TWITTER),
+    return (0, a.jsxs)("div", {
+      className: j.footer,
+      children: [(0, a.jsx)(c.Anchor, {
+        "aria-label": N.default.Messages.TWITTER,
+        className: j.socialLink,
+        href: (0, d.default)(E.LocalizedLinks.TWITTER),
         target: "blank",
-        children: (0, n.jsx)(x.default, {})
-      }), (0, n.jsx)(c.Anchor, {
-        "aria-label": k.default.Messages.FACEBOOK,
-        className: E.socialLink,
-        href: L.SOCIAL_LINKS.FACEBOOK_URL,
+        children: (0, a.jsx)(x.default, {})
+      }), (0, a.jsx)(c.Anchor, {
+        "aria-label": N.default.Messages.FACEBOOK,
+        className: j.socialLink,
+        href: E.SOCIAL_LINKS.FACEBOOK_URL,
         target: "blank",
-        children: (0, n.jsx)(C.default, {})
-      }), (0, n.jsx)(c.Anchor, {
-        "aria-label": k.default.Messages.INSTAGRAM,
-        className: E.socialLink,
-        href: L.SOCIAL_LINKS.INSTAGRAM_URL,
+        children: (0, a.jsx)(m.default, {})
+      }), (0, a.jsx)(c.Anchor, {
+        "aria-label": N.default.Messages.INSTAGRAM,
+        className: j.socialLink,
+        href: E.SOCIAL_LINKS.INSTAGRAM_URL,
         target: "blank",
-        children: (0, n.jsx)(m.default, {})
-      }), (0, n.jsx)(c.Text, {
+        children: (0, a.jsx)(p.default, {})
+      }), (0, a.jsx)(c.Text, {
         variant: "text-xs/normal",
-        children: k.default.Messages.FOLLOW_US_FOR_MORE_UPDATES
+        children: N.default.Messages.FOLLOW_US_FOR_MORE_UPDATES
       })]
     })
   }
   renderVideo() {
     let {
       changeLog: e
-    } = this.props, t = e.youtube_video_id, l = e.video, s = e.image;
-    if (null != t && "" !== t) return (0, n.jsx)(p.EmbedVideo, {
-      className: r()(E.video),
+    } = this.props, t = e.youtube_video_id, n = e.video, r = e.image;
+    if (null != t && "" !== t) return (0, a.jsx)(C.EmbedVideo, {
+      className: s()(j.video),
       allowFullScreen: !1,
       href: "https://youtu.be/".concat(t),
       thumbnail: {
-        url: "https://i.ytimg.com/vi/".concat(t, "/maxresdefault.jpg"),
+        url: "https://i.ytimg.com/vi/".concat(t, "/hqdefault.jpg"),
         width: 451,
         height: 254
       },
@@ -89,30 +89,30 @@ class M extends l.PureComponent {
       renderImageComponent: h.renderImageComponent,
       renderLinkComponent: h.renderMaskedLinkComponent,
       onPlay: () => {
-        this.track(L.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
+        this.track(E.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
       }
     });
-    if (null != l && "" !== l) {
-      let e = l.startsWith("https://") ? l : a("302731")("../../images/change-log/".concat(l).replace("../../images/change-log/", "./"));
-      return (0, n.jsx)(_.default, {
+    if (null != n && "" !== n) {
+      let e = n.startsWith("https://") ? n : l("866483")("../../images/change-log/".concat(n).replace("../../images/change-log/", "./"));
+      return (0, a.jsx)(L.default, {
         src: e,
-        poster: s,
+        poster: r,
         width: 451,
         height: 254,
         loop: !0,
         muted: !0,
         autoPlay: !0,
-        className: E.video,
+        className: j.video,
         onPlay: () => {
-          this.track(L.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
+          this.track(E.AnalyticEvents.CHANGE_LOG_VIDEO_INTERACTED, {}, !0)
         }
       })
     }
-    if (null == s || "" === s) return null;
+    if (null == r || "" === r) return null;
     else {
-      let e = s.startsWith("https://") ? s : a("302731")("../../images/change-log/".concat(s).replace("../../images/change-log/", "./"));
-      return (0, n.jsx)("img", {
-        className: E.image,
+      let e = r.startsWith("https://") ? r : l("866483")("../../images/change-log/".concat(r).replace("../../images/change-log/", "./"));
+      return (0, a.jsx)("img", {
+        className: j.image,
         alt: "",
         src: e,
         width: 451,
@@ -124,66 +124,66 @@ class M extends l.PureComponent {
     let {
       changeLog: e
     } = this.props;
-    return (0, n.jsxs)(c.ModalRoot, {
+    return (0, a.jsxs)(c.ModalRoot, {
       transitionState: c.ModalTransitionState.ENTERED,
-      className: R.modal,
-      children: [(0, n.jsxs)(c.ModalHeader, {
+      className: S.modal,
+      children: [(0, a.jsxs)(c.ModalHeader, {
         align: f.default.Justify.BETWEEN,
         separator: !1,
-        children: [this.renderHeader(), (0, n.jsx)(f.default.Child, {
+        children: [this.renderHeader(), (0, a.jsx)(f.default.Child, {
           grow: 0,
-          children: (0, n.jsx)(c.ModalCloseButton, {
+          children: (0, a.jsx)(c.ModalCloseButton, {
             onClick: this.props.onClose
           })
         })]
-      }), (0, n.jsx)(c.ModalContent, {
-        className: r()(R.content, E.container, {}),
+      }), (0, a.jsx)(c.ModalContent, {
+        className: s()(S.content, j.container, {}),
         scrollerRef: this.scrollerRef,
         onScroll: this.handleScroll,
-        children: (0, n.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
           tabIndex: 0,
           role: "region",
-          "aria-label": k.default.Messages.CHANGELOG_CONTENT_LABEL,
-          children: [this.renderVideo(), N(e.body, !1, {
+          "aria-label": N.default.Messages.CHANGELOG_CONTENT_LABEL,
+          children: [this.renderVideo(), _(e.body, !1, {
             changeLog: this,
-            interpolations: A,
+            interpolations: w,
             onLinkClick: this.trackLinkClick
           })]
         })
-      }), (0, n.jsx)(c.ModalFooter, {
+      }), (0, a.jsx)(c.ModalFooter, {
         direction: f.default.Direction.HORIZONTAL,
         children: this.renderFooter()
       })]
     })
   }
   constructor(...e) {
-    super(...e), S(this, "scrollerRef", l.createRef()), S(this, "handleScroll", () => {
+    super(...e), A(this, "scrollerRef", n.createRef()), A(this, "handleScroll", () => {
       let {
         current: e
       } = this.scrollerRef;
       if (null != e) {
-        var t, a;
-        null === (t = (a = this.props).onScroll) || void 0 === t || t.call(a, e)
+        var t, l;
+        null === (t = (l = this.props).onScroll) || void 0 === t || t.call(l, e)
       }
-    }), S(this, "trackLinkClick", e => {
-      this.props.track(L.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+    }), A(this, "trackLinkClick", e => {
+      this.props.track(E.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
         cta_type: "inline_link",
         target: e
       }, !1)
-    }), S(this, "renderHeader", () => {
+    }), A(this, "renderHeader", () => {
       let {
         changeLog: e
       } = this.props;
-      return (0, n.jsxs)(f.default.Child, {
+      return (0, a.jsxs)(f.default.Child, {
         grow: 1,
         shrink: 1,
-        children: [(0, n.jsx)(c.Heading, {
+        children: [(0, a.jsx)(c.Heading, {
           variant: "heading-lg/semibold",
-          children: k.default.Messages.WHATS_NEW
-        }), (0, n.jsx)(c.Text, {
+          children: N.default.Messages.WHATS_NEW
+        }), (0, a.jsx)(c.Text, {
           variant: "text-xs/normal",
-          className: E.date,
-          children: k.default.Messages.WHATS_NEW_DATE.format({
+          className: j.date,
+          children: N.default.Messages.WHATS_NEW_DATE.format({
             date: null != e.date && "" !== e.date ? i()(e.date).toDate() : new Date
           })
         })]
@@ -191,4 +191,4 @@ class M extends l.PureComponent {
     })
   }
 }
-t.default = M
+t.default = O

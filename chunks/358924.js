@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var a, s, l = n("735250"),
   i = n("470079"),
-  r = n("803997"),
+  r = n("120356"),
   o = n.n(r),
   u = n("442837"),
   d = n("692547"),
@@ -12,24 +12,24 @@ var a, s, l = n("735250"),
   h = n("726542"),
   _ = n("638880"),
   C = n("655922"),
-  m = n("122810"),
-  S = n("833664"),
-  I = n("503438"),
-  p = n("420660"),
+  S = n("122810"),
+  m = n("833664"),
+  p = n("503438"),
+  I = n("420660"),
   T = n("74433"),
   g = n("952561"),
   A = n("513202"),
   N = n("906732"),
   v = n("812206"),
-  O = n("933557"),
-  R = n("102172"),
-  L = n("871118"),
-  P = n("849171"),
-  M = n("314897"),
+  R = n("933557"),
+  L = n("102172"),
+  O = n("871118"),
+  M = n("849171"),
+  P = n("314897"),
   y = n("592125"),
-  D = n("594174"),
-  b = n("368874"),
-  x = n("366695"),
+  x = n("594174"),
+  D = n("368874"),
+  b = n("366695"),
   U = n("366966"),
   j = n("446753"),
   G = n("619271"),
@@ -43,7 +43,7 @@ var a, s, l = n("735250"),
   W = n("599706"),
   K = n("981631"),
   z = n("689938"),
-  q = n("83701");
+  q = n("834854");
 let Q = {
     SMALL: 64,
     LARGE: 160
@@ -91,7 +91,7 @@ class et extends i.Component {
     } = this.props, {
       timestamps: n
     } = t;
-    return null == n || !(0, S.default)(t) || (0, I.default)(t) ? null : J(e = (0, m.default)(t) ? (0, l.jsx)($, {
+    return null == n || !(0, m.default)(t) || (0, p.default)(t) ? null : J(e = (0, S.default)(t) ? (0, l.jsx)($, {
       timestamps: n
     }) : (0, l.jsx)(U.default, {
       start: n.start,
@@ -262,7 +262,7 @@ es.Header = ea, es.Body = e => {
     partySize: u,
     members: d,
     onChannelContextMenu: f
-  } = e, E = i.useRef(null), h = (0, O.default)(s, !0);
+  } = e, E = i.useRef(null), h = (0, R.default)(s, !0);
   return (0, l.jsx)(ee, {
     children: (0, l.jsxs)("div", {
       className: q.voiceSection,
@@ -400,9 +400,9 @@ es.Header = ea, es.Body = e => {
       assets: f,
       application_id: E
     } = a;
-  if (null != f && (0, p.default)(a)) {
+  if (null != f && (0, I.default)(a)) {
     var _;
-    t = (0, l.jsx)(b.default, {
+    t = (0, l.jsx)(D.default, {
       className: q.twitchSectionPreviewWrapper,
       aspectRatio: 16 / 9,
       children: (0, l.jsxs)(c.Clickable, {
@@ -449,17 +449,17 @@ es.Header = ea, es.Body = e => {
     applicationStream: i,
     onPreviewClick: r,
     guildId: o
-  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, R.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
+  } = e, d = (0, u.useStateFromStores)([y.default], () => y.default.getChannel(i.channelId)), [f, E] = (0, L.useCanWatchStream)(d), h = (0, l.jsxs)(c.Clickable, {
     onClick: f ? r : void 0,
     className: q.applicationStreamingPreviewWrapper,
-    children: [(0, l.jsx)(L.default, {
+    children: [(0, l.jsx)(O.default, {
       stream: i,
       className: q.applicationStreamingPreviewSize
     }), (0, l.jsx)("div", {
       className: q.applicationStreamingHoverWrapper,
       children: (0, l.jsx)("div", {
         className: q.applicationStreamingHoverText,
-        children: (0, R.getStreamCTAString)(E)
+        children: (0, L.getStreamCTAString)(E)
       })
     })]
   }), _ = null !== (n = null === (t = (0, T.default)(a, i)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.default.Messages.SHARING_SCREEN;
@@ -491,50 +491,50 @@ es.Header = ea, es.Body = e => {
       return d(t)
     })
   }, [f]);
-  let h = (0, u.useStateFromStoresArray)([D.default, M.default], () => Array.from(s).map(e => M.default.getId() === e ? null : D.default.getUser(e)).filter(V.isNotNullish)),
+  let h = (0, u.useStateFromStoresArray)([x.default, P.default], () => Array.from(s).map(e => P.default.getId() === e ? null : x.default.getUser(e)).filter(V.isNotNullish)),
     C = (0, E.useAnalyticsContext)(),
     {
-      analyticsLocations: m
+      analyticsLocations: S
     } = (0, N.default)();
   if (null == f) return null;
-  let S = v.default.getApplication(f);
-  if (null == S) return null;
-  let I = null != t.created_at && t.created_at > 0 ? {
+  let m = v.default.getApplication(f);
+  if (null == m) return null;
+  let p = null != t.created_at && t.created_at > 0 ? {
       start: t.created_at
     } : void 0,
-    p = (0, H.getAssetImage)(S.id, o, 300);
+    I = (0, H.getAssetImage)(m.id, o, 300);
   return (0, l.jsxs)(ee, {
     children: [(0, l.jsxs)("div", {
       className: q.embeddedActivityTopRow,
-      children: [(0, l.jsx)(x.default, {
-        game: S,
-        size: x.default.Sizes.XSMALL,
+      children: [(0, l.jsx)(b.default, {
+        game: m,
+        size: b.default.Sizes.XSMALL,
         className: q.embeddedActivityIcon
       }), (0, l.jsx)("div", {
         className: q.embeddedActivityName,
         children: (0, l.jsx)(c.Text, {
           variant: "text-sm/semibold",
-          children: S.name
+          children: m.name
         })
-      }), null != I ? (0, l.jsx)("div", {
+      }), null != p ? (0, l.jsx)("div", {
         className: q.embeddedActivityTimeElapsed,
         children: (0, l.jsx)(c.Text, {
           color: "text-muted",
           variant: "text-sm/normal",
           children: (0, l.jsx)($, {
-            timestamps: I
+            timestamps: p
           })
         })
       }) : null]
     }), (0, l.jsxs)("div", {
       className: q.embeddedActivityPlayerContainer,
-      children: [null != p ? (0, l.jsx)("img", {
-        src: p,
-        alt: S.name,
+      children: [null != I ? (0, l.jsx)("img", {
+        src: I,
+        alt: m.name,
         className: q.embeddedActivityImage
       }) : null, (0, l.jsxs)("div", {
         className: q.embeddedActivityImageOverlay,
-        children: [(0, l.jsx)(P.Avatars, {
+        children: [(0, l.jsx)(M.Avatars, {
           users: h,
           guildId: a,
           channelId: n.id
@@ -549,7 +549,7 @@ es.Header = ea, es.Body = e => {
                 activityChannelId: n.id,
                 locationObject: C.location,
                 embeddedActivitiesManager: A.default,
-                analyticsLocations: m
+                analyticsLocations: S
               })
             },
             children: z.default.Messages.JOIN

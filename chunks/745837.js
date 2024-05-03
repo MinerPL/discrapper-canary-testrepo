@@ -1,16 +1,16 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return A
+    return N
   }
 });
 var a = n("735250");
 n("470079");
-var s = n("803997"),
+var s = n("120356"),
   l = n.n(s),
   i = n("442837"),
   r = n("481060"),
-  o = n("230711"),
+  o = n("547972"),
   u = n("556296"),
   d = n("465670"),
   c = n("729017"),
@@ -19,22 +19,23 @@ var s = n("803997"),
   h = n("435064"),
   _ = n("39604"),
   C = n("356659"),
-  m = n("981631"),
-  S = n("689938"),
-  I = n("783348");
+  S = n("981631"),
+  m = n("332325"),
+  p = n("689938"),
+  I = n("352653");
 
-function p(e) {
-  o.default.open(m.UserSettingsSections.CLIPS), (0, _.dismissClipsUserEducation)(e)
+function T(e) {
+  (0, o.default)(m.GameSettingsTab.CLIPS), (0, _.dismissClipsUserEducation)(e)
 }
 
-function T() {
-  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(m.GlobalKeybindActions.SAVE_CLIP));
+function g() {
+  let e = (0, i.useStateFromStores)([u.default], () => u.default.getKeybindForAction(S.GlobalKeybindActions.SAVE_CLIP));
   if (null == e) return (0, a.jsx)(a.Fragment, {
-    children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
+    children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY_NO_KEYBIND
   });
   let t = E.toString(e.shortcut, !0);
   return (0, a.jsx)(a.Fragment, {
-    children: S.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
+    children: p.default.Messages.CLIPS_USER_EDUCATION_ENABLED_BODY.format({
       keybind: t,
       keybindHook: () => (0, a.jsx)("span", {
         className: I.keyCombo,
@@ -45,7 +46,7 @@ function T() {
     })
   })
 }
-let g = {
+let A = {
   [C.ClipsUserEducationType.Error]: {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
@@ -53,11 +54,11 @@ let g = {
     bodyCopy: () => (0, a.jsxs)(a.Fragment, {
       children: [(0, a.jsx)(c.default, {
         className: I.errorWarningIcon
-      }), S.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
+      }), p.default.Messages.CLIPS_USER_EDUCATION_ERROR_BODY]
     }),
-    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
+    buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_LEARN_MORE,
     ctaOnClick: () => {
-      window.open(f.default.getArticleURL(m.HelpdeskArticles.CLIPS), "_blank")
+      window.open(f.default.getArticleURL(S.HelpdeskArticles.CLIPS), "_blank")
     },
     containerClass: I.container
   },
@@ -65,23 +66,23 @@ let g = {
     textColor: "text-primary",
     buttonLook: r.Button.Looks.FILLED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
-    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => p(C.ClipsUserEducationType.Disabled),
+    bodyCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_DISABLED_BODY,
+    buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    ctaOnClick: () => T(C.ClipsUserEducationType.Disabled),
     containerClass: I.container
   },
   [C.ClipsUserEducationType.Enabled]: {
     textColor: "always-white",
     buttonLook: r.Button.Looks.INVERTED,
     buttonColor: r.Button.Colors.BRAND,
-    bodyCopy: () => (0, a.jsx)(T, {}),
-    buttonCopy: () => S.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
-    ctaOnClick: () => p(C.ClipsUserEducationType.Enabled),
+    bodyCopy: () => (0, a.jsx)(g, {}),
+    buttonCopy: () => p.default.Messages.CLIPS_USER_EDUCATION_MANAGE_CLIPS_SETTINGS,
+    ctaOnClick: () => T(C.ClipsUserEducationType.Enabled),
     containerClass: l()(I.container, I.containerEnabled)
   }
 };
 
-function A() {
+function N() {
   var e;
   let {
     decoupledClipsEnabled: t,
@@ -98,10 +99,10 @@ function A() {
       textColor: c,
       buttonColor: f,
       buttonLook: E,
-      containerClass: m
-    } = g[s];
+      containerClass: S
+    } = A[s];
   return (0, a.jsxs)("div", {
-    className: m,
+    className: S,
     children: [(0, a.jsx)(r.Text, {
       color: c,
       variant: "text-sm/medium",

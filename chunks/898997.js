@@ -5,27 +5,28 @@ s.r(t), s.d(t, {
   }
 });
 var a = s("470079"),
-  i = s("442837"),
-  r = s("594174"),
+  r = s("442837"),
+  i = s("594174"),
   n = s("74538"),
   l = s("140465"),
   o = s("775412"),
   u = s("276444"),
-  d = s("963198"),
+  d = s("520540"),
   c = s("474936");
-let _ = e => {
-  let t = (0, i.useStateFromStores)([r.default], () => r.default.getCurrentUser()),
-    s = (0, l.useHasDiscountApplied)(),
-    _ = (0, o.useHasActiveTrial)(),
+let _ = function(e) {
+  let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    s = (0, r.useStateFromStores)([i.default], () => i.default.getCurrentUser()),
+    _ = (0, l.useHasDiscountApplied)(),
+    E = (0, o.useHasActiveTrial)(),
     {
-      enabled: E
-    } = d.default.useExperiment({
+      enabled: T
+    } = d.ReferralProgramSender.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1
     }),
-    T = E && null != t && t.verified && (0, n.isPremiumExactly)(t, c.PremiumTypes.TIER_2) && !s && !_;
+    I = T && null != s && s.verified && (0, n.isPremiumExactly)(s, c.PremiumTypes.TIER_2) && !_ && !E;
   a.useEffect(() => {
-    T && u.default.checkAndFetchReferralsRemaining()
-  }, [T])
+    I && !t && u.default.checkAndFetchReferralsRemaining()
+  }, [I, t])
 }

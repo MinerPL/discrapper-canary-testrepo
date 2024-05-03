@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("512722"),
   r = n.n(i),
-  s = n("81825"),
-  a = n("491819"),
+  a = n("81825"),
+  s = n("491819"),
   o = n("358085"),
   l = n("146528"),
   u = n("981631"),
@@ -29,7 +29,7 @@ function c(e) {
     quantity: e.quantity
   }
 }
-class E extends s.default {
+class E extends a.default {
   static createFromServer(e) {
     return new E({
       id: e.id,
@@ -94,6 +94,12 @@ class E extends s.default {
   get hasPremiumNitroMonthly() {
     return null != this.items.find(e => e.planId === d.SubscriptionPlans.PREMIUM_MONTH_TIER_2)
   }
+  get isPausedOrPausePending() {
+    return u.SubscriptionStatusTypesSets.ALL_PAUSE.has(this.status)
+  }
+  get isPaused() {
+    return this.status === u.SubscriptionStatusTypes.PAUSED
+  }
   constructor(e) {
     super(), _(this, "id", void 0), _(this, "type", void 0), _(this, "items", void 0), _(this, "createdAt", void 0), _(this, "canceledAt", void 0), _(this, "currentPeriodStart", void 0), _(this, "currentPeriodEnd", void 0), _(this, "status", void 0), _(this, "paymentSourceId", void 0), _(this, "paymentGateway", void 0), _(this, "paymentGatewayPlanId", void 0), _(this, "paymentGatewaySubscriptionId", void 0), _(this, "trialId", void 0), _(this, "trialEndsAt", void 0), _(this, "renewalMutations", void 0), _(this, "streakStartedAt", void 0), _(this, "currency", void 0), _(this, "pauseEndsAt", void 0), _(this, "planId", void 0), _(this, "additionalPlans", void 0), _(this, "metadata", void 0), _(this, "latestInvoice", void 0), _(this, "useStorekitResubscribe", void 0), _(this, "price", void 0), _(this, "userId", void 0), this.id = e.id, this.type = e.type, this.items = e.items, this.createdAt = e.createdAt, this.canceledAt = e.canceledAt, this.currentPeriodStart = e.currentPeriodStart, this.currentPeriodEnd = e.currentPeriodEnd, this.status = e.status, this.paymentSourceId = e.paymentSourceId, this.paymentGateway = e.paymentGateway, this.paymentGatewayPlanId = e.paymentGatewayPlanId, this.paymentGatewaySubscriptionId = e.paymentGatewaySubscriptionId, this.trialId = e.trialId, this.trialEndsAt = e.trialEndsAt, this.renewalMutations = e.renewalMutations, this.currency = e.currency, this.pauseEndsAt = e.pauseEndsAt, this.metadata = e.metadata, this.latestInvoice = e.latestInvoice, this.useStorekitResubscribe = e.useStorekitResubscribe, this.price = e.price, this.userId = e.userId;
     let t = this.renewalMutations,
@@ -101,9 +107,9 @@ class E extends s.default {
       i = null;
     if (e.type === u.SubscriptionTypes.PREMIUM) {
       let r = d.SubscriptionPlanInfo[e.items[0].planId],
-        s = r.interval,
+        a = r.interval,
         o = r.intervalCount;
-      n = (0, a.getBasePlanIdForSubscriptionItems)(e.items, s, o), null != t && (i = (0, a.getBasePlanIdForSubscriptionItems)(t.items, s, o))
+      n = (0, s.getBasePlanIdForSubscriptionItems)(e.items, a, o), null != t && (i = (0, s.getBasePlanIdForSubscriptionItems)(t.items, a, o))
     } else null != t && t.items.length > 0 && (i = t.items[0].planId);
     this.planId = n, this.additionalPlans = e.items.filter(e => e.planId !== n), null != t && null != i && (t.planId = i, t.additionalPlans = t.items.filter(e => e.planId !== i))
   }

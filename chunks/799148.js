@@ -6,7 +6,7 @@ a.r(t), a.d(t, {
 });
 var l = a("735250");
 a("470079");
-var n = a("803997"),
+var n = a("120356"),
   s = a.n(n),
   i = a("442837"),
   d = a("481060"),
@@ -17,8 +17,8 @@ var n = a("803997"),
   f = a("981631"),
   m = a("921944"),
   h = a("689938"),
-  g = a("78137"),
-  E = a("186223");
+  E = a("112901"),
+  g = a("186223");
 
 function _(e) {
   let {
@@ -26,19 +26,19 @@ function _(e) {
     onClose: a
   } = e;
   return (0, l.jsxs)("div", {
-    className: g.container,
+    className: E.container,
     children: [(0, l.jsx)(d.Clickable, {
-      className: g.closeButton,
+      className: E.closeButton,
       onClick: a,
       children: (0, l.jsx)(u.default, {
-        className: g.__invalid_closeIcon
+        className: E.__invalid_closeIcon
       })
     }), (0, l.jsx)("div", {
-      className: g.textContainer,
+      className: E.textContainer,
       children: t
     }), (0, l.jsx)("img", {
-      className: g.image,
-      src: E,
+      className: E.image,
+      src: g,
       alt: ""
     })]
   })
@@ -58,17 +58,17 @@ function I(e) {
       color: "none",
       children: h.default.Messages.GUILD_FEED_NUX_MEMBER_TITLE
     }), (0, l.jsx)(d.Text, {
-      className: g.bodySection,
+      className: E.bodySection,
       variant: "text-sm/normal",
       color: "none",
       children: h.default.Messages.GUILD_FEED_NUX_MEMBER_BODY_1
     }), (0, l.jsx)(d.Text, {
-      className: g.bodySection,
+      className: E.bodySection,
       variant: "text-sm/normal",
       color: "none",
       children: h.default.Messages.GUILD_FEED_NUX_MEMBER_BODY_2
     }), (0, l.jsx)(d.Anchor, {
-      className: s()(g.cta, g.ctaLink, (0, d.getButtonStyle)({
+      className: s()(E.cta, E.ctaLink, (0, d.getButtonStyle)({
         look: d.Button.Looks.LINK,
         color: d.Button.Colors.WHITE
       })),
@@ -103,17 +103,17 @@ function S(e) {
       color: "none",
       children: h.default.Messages.GUILD_FEED_NUX_MODERATOR_TITLE
     }), (0, l.jsx)(d.Text, {
-      className: g.bodySection,
+      className: E.bodySection,
       variant: "text-sm/normal",
       color: "none",
       children: h.default.Messages.GUILD_FEED_NUX_MEMBER_BODY_1
     }), (0, l.jsx)(d.Text, {
-      className: g.bodySection,
+      className: E.bodySection,
       variant: "text-sm/normal",
       color: "none",
       children: h.default.Messages.GUILD_FEED_NUX_MEMBER_BODY_2
     }), (0, l.jsx)(d.Button, {
-      className: g.cta,
+      className: E.cta,
       look: d.Button.Looks.INVERTED,
       color: d.Button.Colors.BRAND,
       onClick: x,

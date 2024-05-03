@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("239091"),
   l = n("665692"),
   u = n("689938"),
-  d = n("91186");
+  d = n("348291");
 
 function _(e) {
   var t;
-  let s, _, c, {
+  let a, _, c, {
       className: E,
       activeCommand: I,
       activeOption: T,
@@ -41,14 +41,14 @@ function _(e) {
   if (null == I) return null;
   if (null != T) {
     let e = f[T.name].lastValidationResult;
-    s = T.displayName, _ = T.displayDescription, c = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
-  } else s = "".concat(l.COMMAND_SENTINEL).concat(I.displayName), _ = I.displayDescription, c = null;
+    a = T.displayName, _ = T.displayDescription, c = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error
+  } else a = "".concat(l.COMMAND_SENTINEL).concat(I.displayName), _ = I.displayDescription, c = null;
   return (0, i.jsxs)("div", {
-    className: a()(E, d.bar),
+    className: s()(E, d.bar),
     onContextMenu: S,
     children: [(0, i.jsx)("span", {
       className: d.name,
-      children: s
+      children: a
     }), null != c ? (0, i.jsx)("span", {
       className: d.error,
       children: c

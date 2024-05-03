@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   createPollServerDataFromCreateRequest: function() {
-    return v
+    return D
   },
   filterOutUUID: function() {
     return N
@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return M
   },
   hasNonVoteReactions: function() {
-    return O
+    return p
   },
   isAnswerFilled: function() {
     return L
   },
   isIncompleteAnswer: function() {
-    return D
+    return v
   },
   isPollCreationEmpty: function() {
     return g
@@ -31,7 +31,7 @@ n.r(t), n.d(t, {
     return C
   },
   useCanPostPollsInChannel: function() {
-    return p
+    return O
   },
   useCanShowPollsChatInputCoachmarkInGuild: function() {
     return R
@@ -39,8 +39,8 @@ n.r(t), n.d(t, {
 }), n("757143"), n("47120"), n("724458");
 var i = n("392711"),
   r = n.n(i),
-  s = n("153832"),
-  a = n("263568"),
+  a = n("153832"),
+  s = n("263568"),
   o = n("442837"),
   l = n("566006"),
   u = n("592125"),
@@ -60,7 +60,7 @@ function m() {
     text: void 0,
     image: void 0,
     localCreationAnswerId: function() {
-      return (0, s.v4)()
+      return (0, a.v4)()
     }()
   }
 }
@@ -69,15 +69,15 @@ function N(e) {
   return e.replace(/\b[a-f\d]{8}-(?:[a-f\d]{4}-){3}[a-f\d]{12}-\b/i, "")
 }
 
-function O(e) {
+function p(e) {
   for (let t of e.reactions)
     if (null == t.me_vote) return !0;
   return !1
 }
 
-function p(e) {
+function O(e) {
   let t = h.ChannelTypesSets.POLLS.has(null == e ? void 0 : e.type),
-    n = (0, o.useStateFromStores)([c.default], () => c.default.can(h.Permissions.SEND_MESSAGES, e)),
+    n = (0, o.useStateFromStores)([c.default], () => c.default.can(h.Permissions.SEND_MESSAGES, e) && c.default.can(h.Permissions.SEND_POLLS, e)),
     {
       enabled: i
     } = f.CreateGuildPollsExperiment.useExperiment({
@@ -89,11 +89,11 @@ function p(e) {
     }),
     {
       enabled: r
-    } = f.CreateGDMPollsExperiment.useExperiment({
+    } = f.CreatePollsUserExperiment.useExperiment({
       location: "useCanPostPollsInChannel"
     }, {
       autoTrackExposure: !0,
-      disable: !t || !(null == e ? void 0 : e.isPrivate())
+      disable: !t || !(null == e ? void 0 : e.isPrivate()) && !n
     });
   return i || r
 }
@@ -101,7 +101,7 @@ function p(e) {
 function R(e) {
   let {
     enabled: t
-  } = f.CreatePollsCoachmarkExperiment.useExperiment({
+  } = f.CreatePollsGuildCoachmarkExperiment.useExperiment({
     guildId: e,
     location: "useCanShowPollsChatInputCoachmarkInGuild"
   });
@@ -117,7 +117,7 @@ function g(e, t, n) {
 }
 
 function L(e, t) {
-  if (t === a.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
+  if (t === s.PollLayoutTypes.IMAGE_ONLY_ANSWERS) return null != e.image;
   {
     var n;
     let t = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
@@ -125,19 +125,19 @@ function L(e, t) {
   }
 }
 
-function D(e, t) {
+function v(e, t) {
   var n;
   let i = null === (n = e.text) || void 0 === n ? void 0 : n.trim();
-  return t === a.PollLayoutTypes.DEFAULT && null != e.image && (null == i || 0 === i.length)
+  return t === s.PollLayoutTypes.DEFAULT && null != e.image && (null == i || 0 === i.length)
 }
 
-function v(e) {
+function D(e) {
   var t, n;
   if (null == e) return;
   let i = null == e ? void 0 : null === (t = e.answers) || void 0 === t ? void 0 : t.map((e, t) => {
     var n, i;
     let r = null === (n = e.poll_media) || void 0 === n ? void 0 : n.emoji,
-      s = {
+      a = {
         ...e.poll_media,
         emoji: null != r ? {
           id: r.id,
@@ -147,7 +147,7 @@ function v(e) {
     return {
       ...e,
       answer_id: t + 1,
-      poll_media: s
+      poll_media: a
     }
   });
   let r = (null == e ? void 0 : e.duration) != null ? (n = e.duration, new Date(Date.now() + n * I.default.Millis.HOUR).toISOString()) : "0";
@@ -166,15 +166,15 @@ function M(e) {
 }
 
 function y(e, t, n) {
-  var i, s;
-  let a = _.default.getMessage(t, e);
-  if (null == a) return "";
-  let o = a.getReaction({
+  var i, a;
+  let s = _.default.getMessage(t, e);
+  if (null == s) return "";
+  let o = s.getReaction({
       id: n,
       name: "",
       animated: !1
     }),
-    c = null !== (s = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== s ? s : 0,
+    c = null !== (a = null == o ? void 0 : null === (i = o.count_details) || void 0 === i ? void 0 : i.vote) && void 0 !== a ? a : 0,
     I = function(e, t) {
       let n = e.getChannelId(),
         i = d.default.getReactions(n, e.id, {
@@ -182,32 +182,32 @@ function y(e, t, n) {
           name: "",
           animated: !1
         }, S.VOTES_TOOLTIP_MAX_USERS, l.ReactionTypes.VOTE),
-        s = u.default.getChannel(n),
-        a = null == s || s.isPrivate() ? null : s.getGuildId();
-      return r()(i).reject(e => E.default.isBlocked(e.id)).take(S.VOTES_TOOLTIP_MAX_USERS).map(e => T.default.getName(a, null == s ? void 0 : s.id, e)).value()
-    }(a, n);
+        a = u.default.getChannel(n),
+        s = null == a || a.isPrivate() ? null : a.getGuildId();
+      return r()(i).reject(e => E.default.isBlocked(e.id)).take(S.VOTES_TOOLTIP_MAX_USERS).map(e => T.default.getName(s, null == a ? void 0 : a.id, e)).value()
+    }(s, n);
   return 0 === I.length ? "" : function(e, t) {
     let n = Math.max(0, t - e.length);
     if (1 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_1_N.format({
       a: e[0],
-      n: n
+      n: n.toLocaleString()
     }) : e[0];
     if (2 === e.length) return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_2_N.format({
       a: e[0],
       b: e[1],
-      n: n
+      n: n.toLocaleString()
     }) : A.default.Messages.POLL_VOTES_TOOLTIP_2.format({
       a: e[0],
       b: e[1]
     });
     if (3 !== e.length) return A.default.Messages.POLL_VOTES_TOOLTIP_N.format({
-      n: n
+      n: n.toLocaleString()
     });
     else return n > 0 ? A.default.Messages.POLL_VOTES_TOOLTIP_3_N.format({
       a: e[0],
       b: e[1],
       c: e[2],
-      n: n
+      n: n.toLocaleString()
     }) : A.default.Messages.POLL_VOTES_TOOLTIP_3.format({
       a: e[0],
       b: e[1],

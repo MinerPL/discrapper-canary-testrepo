@@ -9,8 +9,8 @@ i("470079");
 var l = i("442837"),
   n = i("481060"),
   d = i("278323"),
-  s = i("224706"),
-  u = i("2052"),
+  u = i("224706"),
+  s = i("2052"),
   o = i("906732"),
   c = i("835473"),
   I = i("768419"),
@@ -86,7 +86,7 @@ function K(t, e) {
       VoiceStateStore: g.default,
       PermissionStore: N.default
     }) === x.EmbeddedActivityJoinability.CAN_JOIN
-  })], [Q, tt, te, B, W, e]), ta = (0, l.useStateFromStoresArray)([I.default, S.default], () => Q.map(t => t.type === k.ActivityTypes.LISTENING && null != e ? (0, f.default)(I.default, S.default, e, t) : void 0), [e, Q]), tl = (0, u.useAnalyticsContext)();
+  })], [Q, tt, te, B, W, e]), ta = (0, l.useStateFromStoresArray)([I.default, S.default], () => Q.map(t => t.type === k.ActivityTypes.LISTENING && null != e ? (0, f.default)(I.default, S.default, e, t) : void 0), [e, Q]), tl = (0, s.useAnalyticsContext)();
   if (!Z) return null;
   let tn = (i, a) => {
       null != t ? d.default.sendActivityInvite({
@@ -102,11 +102,11 @@ function K(t, e) {
       })
     },
     td = (l, d) => {
-      let s = T.default.getChannel(l),
-        u = null == s ? void 0 : v.default.getGuild(s.guild_id);
-      if (null != s && null != u) {
+      let u = T.default.getChannel(l),
+        s = null == u ? void 0 : v.default.getGuild(u.guild_id);
+      if (null != u && null != s) {
         if (null != e) return M.sendEmbeddedActivityInviteUser({
-          channelId: s.id,
+          channelId: u.id,
           applicationId: d,
           userId: e.id,
           location: k.InstantInviteSources.CONTEXT_MENU
@@ -117,8 +117,8 @@ function K(t, e) {
           } = await Promise.all([i.e("49237"), i.e("99387"), i.e("43643"), i.e("7654"), i.e("91007")]).then(i.bind(i, "560114"));
           return i => (0, a.jsx)(e, {
             ...i,
-            guild: u,
-            channel: s,
+            guild: s,
+            channel: u,
             applicationId: d,
             analyticsLocation: t.type === k.ChannelTypes.GUILD_VOICE ? k.AnalyticsPages.GUILD_CHANNEL : k.AnalyticsPages.DM_CHANNEL,
             source: k.InstantInviteSources.ACTIVITY_INVITE
@@ -127,16 +127,16 @@ function K(t, e) {
           modalKey: "use-activity-items-embedded-invite-modal"
         });
         if ((null == t ? void 0 : t.id) != null) return M.sendEmbeddedActivityInvite({
-          activityChannelId: s.id,
+          activityChannelId: u.id,
           invitedChannelId: t.id,
           applicationId: d,
           location: k.InstantInviteSources.CONTEXT_MENU
         })
       }
     },
-    ts = async t => {
+    tu = async t => {
       var i;
-      await s.default.join({
+      await u.default.join({
         userId: e.id,
         sessionId: t.session_id,
         applicationId: t.application_id,
@@ -152,7 +152,7 @@ function K(t, e) {
         locationObject: tl.location,
         analyticsLocations: K
       })
-    }, tu = async e => {
+    }, ts = async e => {
       await (0, V.default)({
         applicationId: e.applicationId,
         currentEmbeddedApplication: q,
@@ -165,11 +165,11 @@ function K(t, e) {
   return null == H || H.forEach(i => {
     let l = (null == e ? void 0 : e.id) != null && i.userIds.has(null == e ? void 0 : e.id),
       d = N.default.can(k.Permissions.CREATE_INSTANT_INVITE, t),
-      s = tt.find(t => (null == t ? void 0 : t.id) === i.applicationId);
-    null != i.instanceId && !l && d && null != s && to.push((0, a.jsx)(n.MenuItem, {
+      u = tt.find(t => (null == t ? void 0 : t.id) === i.applicationId);
+    null != i.launchId && !l && d && null != u && to.push((0, a.jsx)(n.MenuItem, {
       id: "invite-to-join-embedded",
       label: X.default.Messages.USER_ACTIVITY_ACTION_INVITE_TO_JOIN,
-      subtext: s.name,
+      subtext: u.name,
       action: () => {
         td(i.channelId, i.applicationId)
       }
@@ -198,7 +198,7 @@ function K(t, e) {
             type: n.Spinner.Type.PULSING_ELLIPSIS
           }) : null,
           subtext: i.name,
-          action: () => ts(i)
+          action: () => tu(i)
         }, l))
       } else to.push((0, a.jsx)(n.MenuItem, {
         id: "ask-to-join",
@@ -209,13 +209,13 @@ function K(t, e) {
     } else if (i.type === k.ActivityTypes.LISTENING && (0, G.default)(i, k.ActivityFlags.SYNC) && null != ta[l]) {
       let d = ta[l],
         {
-          notPlayable: s,
-          playingSameTrack: u,
+          notPlayable: u,
+          playingSameTrack: s,
           isCurrentUser: o,
           syncingWithUser: c,
           syncingWithParty: I
         } = d,
-        f = o || s || u,
+        f = o || u || s,
         S = o || c || I;
       to.push((0, a.jsx)(n.MenuItem, {
         id: "spotify-play-".concat(i.session_id),
@@ -235,19 +235,19 @@ function K(t, e) {
     var i;
     let l = t.userIds.has(null !== (i = null == B ? void 0 : B.id) && void 0 !== i ? i : k.EMPTY_STRING_SNOWFLAKE_ID),
       d = e + Q.length,
-      s = $[d] || l,
-      u = X.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY;
-    l ? u = X.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : $[d] && (u = X.default.Messages.USER_ACTIVITY_JOINING);
+      u = $[d] || l,
+      s = X.default.Messages.EMBEDDED_ACTIVITIES_JOIN_ACTIVITY;
+    l ? s = X.default.Messages.USER_ACTIVITY_CANNOT_JOIN_SELF : $[d] && (s = X.default.Messages.USER_ACTIVITY_JOINING);
     let o = tt.find(e => (null == e ? void 0 : e.id) === t.applicationId);
     ti[d] && null != o && to.push((0, a.jsx)(n.MenuItem, {
       id: "embedded-activity-join-".concat(t.applicationId),
-      label: u,
-      disabled: s,
+      label: s,
+      disabled: u,
       hint: $[d] ? (0, a.jsx)(n.Spinner, {
         type: n.Spinner.Type.PULSING_ELLIPSIS
       }) : null,
       subtext: o.name,
-      action: () => tu(t)
+      action: () => ts(t)
     }, "embedded-activity-".concat(t.applicationId)))
   }), to
 }

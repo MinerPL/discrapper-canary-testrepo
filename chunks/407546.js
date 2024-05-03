@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("149765"),
-  s = n("260034"),
-  a = n("993365"),
+  a = n("260034"),
+  s = n("993365"),
   o = n("481060"),
   l = n("981631"),
   u = n("689938"),
-  d = n("91779");
+  d = n("872272");
 
 function _(e) {
   let {
@@ -27,11 +27,11 @@ function _(e) {
   }));
   return (0, i.jsxs)("div", {
     className: d.selectorGroup,
-    children: [(0, i.jsx)(s.Heading, {
+    children: [(0, i.jsx)(a.Heading, {
       variant: "heading-deprecated-12/semibold",
       className: d.sectionLabel,
       children: u.default.Messages.OAUTH2_ADD_TO_GUILD
-    }), null != t && "" !== t ? (0, i.jsx)(a.Text, {
+    }), null != t && "" !== t ? (0, i.jsx)(s.Text, {
       variant: "text-xs/normal",
       color: "text-danger",
       children: t
@@ -44,7 +44,7 @@ function _(e) {
       isDisabled: E,
       isSelected: e => e === n,
       serialize: e => e
-    }), (0, i.jsx)(a.Text, {
+    }), (0, i.jsx)(s.Text, {
       variant: "text-xs/medium",
       color: "header-secondary",
       className: d.label,

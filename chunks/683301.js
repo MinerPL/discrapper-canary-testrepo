@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return m
   }
 }), n("47120"), n("653041");
-var i, r, s, a, o, l, u = n("512722"),
+var i, r, a, s, o, l, u = n("512722"),
   d = n.n(u),
   _ = n("392711"),
   c = n.n(_),
@@ -16,7 +16,7 @@ var I = n("570140"),
   S = n("230307"),
   h = n("981631"),
   A = n("731455");
-(s = i || (i = {})).UNSET = "unset", s.FETCHING = "fetching", s.FAILED = "failed", s.SUCCEEDED = "succeeded";
+(a = i || (i = {})).UNSET = "unset", a.FETCHING = "fetching", a.FAILED = "failed", a.SUCCEEDED = "succeeded";
 let m = {
     guilds: [],
     total: 0,
@@ -40,17 +40,18 @@ let m = {
       ...m
     }
   },
-  O = "",
-  p = !1,
+  p = "",
+  O = !1,
   R = "unset",
   C = null,
   g = A.DISCOVERY_ALL_CATEGORIES_ID,
   L = A.DISCOVERY_ALL_CATEGORIES_ID,
-  D = null,
-  v = [],
-  M = (0, T.makeAnalyticsID)();
+  v = null,
+  D = [],
+  M = (0, T.makeAnalyticsID)(),
+  y = !1;
 
-function y(e) {
+function P(e) {
   return {
     id: e.id,
     name: e.name,
@@ -69,12 +70,12 @@ function y(e) {
     keywords: e.keywords
   }
 }
-class P extends(r = E.default.Store) {
+class U extends(r = E.default.Store) {
   initialize() {
     this.waitFor(f.default)
   }
   isFetching() {
-    return p || null == C || null == S.default.lastFetched
+    return O || null == C || null == S.default.lastFetched
   }
   isFetchingSearch() {
     return "fetching" === R
@@ -92,39 +93,42 @@ class P extends(r = E.default.Store) {
     return L
   }
   getSearchIndex() {
-    return D
+    return v
   }
   getMostRecentQuery() {
-    return O
+    return p
   }
   getTopCategoryCounts(e) {
     var t;
     return null === (t = N[h.GuildDiscoverySections.SEARCH][e]) || void 0 === t ? void 0 : t.resultCounts
   }
   getSeenGuildIds() {
-    return v
+    return D
   }
   getLoadId() {
     return M
   }
+  getIsReady() {
+    return y
+  }
 }
-l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty(a, o, {
+l = "GuildDiscoveryStore", (o = "displayName") in(s = U) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : a[o] = l, t.default = new P(I.default, {
+}) : s[o] = l, t.default = new U(I.default, {
   GUILD_DISCOVERY_SEARCH_INIT: function(e) {
     let {
       index: t
     } = e;
-    D = t
+    v = t
   },
   GUILD_DISCOVERY_FETCH_START: function(e) {
     let {
       section: t
     } = e;
-    p = !0, N = {
+    O = !0, N = {
       ...N,
       [t]: {
         ...N[t],
@@ -138,16 +142,16 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       section: n,
       total: i,
       offset: r,
-      limit: s
+      limit: a
     } = e;
-    p = !1, C = Date.now(), M = (0, T.makeAnalyticsID)();
-    let a = c().map(t, y);
+    O = !1, C = Date.now(), M = (0, T.makeAnalyticsID)();
+    let s = c().map(t, P);
     N = {
       ...N,
       [n]: {
-        guilds: a,
+        guilds: s,
         offset: r,
-        limit: s,
+        limit: a,
         total: i,
         loading: !1,
         isFirstLoad: !1
@@ -158,7 +162,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
     let {
       section: t
     } = e;
-    p = !1, N = {
+    O = !1, N = {
       ...N,
       [t]: {
         ...m,
@@ -170,7 +174,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
     let {
       categoryId: t
     } = e;
-    p = !0, N = {
+    O = !0, N = {
       ...N,
       [t]: {
         ...m,
@@ -184,8 +188,8 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       categoryId: t,
       guilds: n
     } = e;
-    p = !1, C = Date.now();
-    let i = c().map(n, y);
+    O = !1, C = Date.now();
+    let i = c().map(n, P);
     N = {
       ...N,
       [t]: {
@@ -200,7 +204,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
     let {
       categoryId: t
     } = e;
-    p = !1, N = {
+    O = !1, N = {
       ...N,
       [t]: {
         ...m,
@@ -227,7 +231,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
           }
         }
       }
-    }, O = i
+    }, p = i
   },
   GUILD_DISCOVERY_SEARCH_FETCH_SUCCESS: function(e) {
     var t;
@@ -235,13 +239,13 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       section: n,
       guilds: i,
       total: r,
-      offset: s,
-      limit: a,
+      offset: a,
+      limit: s,
       query: o,
       categoryId: l
     } = e;
     d()("search" === n, "This action only supports search it seems");
-    let u = i.map(y);
+    let u = i.map(P);
     N = {
       ...N,
       [n]: {
@@ -252,13 +256,13 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
             ...null === (t = N[n][o]) || void 0 === t ? void 0 : t[l],
             guilds: u,
             total: r,
-            offset: s,
-            limit: a,
+            offset: a,
+            limit: s,
             loading: !1
           }
         }
       }
-    }, O = o, R = "succeeded"
+    }, p = o, R = "succeeded"
   },
   GUILD_DISCOVERY_SEARCH_FETCH_FAILURE: function(e) {
     var t;
@@ -289,7 +293,7 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
     g = t, n && (L = t)
   },
   GUILD_DISCOVERY_CLEAR_SEARCH: function() {
-    O = ""
+    p = ""
   },
   GUILD_DISCOVERY_SEARCH_UPDATE_COUNTS: function(e) {
     let {
@@ -298,8 +302,8 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
       query: i
     } = e, r = [];
     if (null != n) {
-      var s;
-      let e = null !== (s = n["categories.id"]) && void 0 !== s ? s : {};
+      var a;
+      let e = null !== (a = n["categories.id"]) && void 0 !== a ? a : {};
       delete e[A.DEFAULT_DISCOVERY_CATEGORY_ID], r = Object.entries(e).map(e => {
         let [t, n] = e;
         return [parseInt(t, 10), n]
@@ -337,9 +341,15 @@ l = "GuildDiscoveryStore", (o = "displayName") in(a = P) ? Object.defineProperty
     let {
       guildId: t
     } = e;
-    !v.includes(t) && v.push(t)
+    !D.includes(t) && D.push(t)
   },
   GUILD_DISCOVERY_CLEAR_SEEN_GUILDS: function() {
-    v = []
+    D = []
+  },
+  GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function(e) {
+    let {
+      forClanDiscovery: t
+    } = e;
+    t && (g = A.CategoryId.Clans, L = A.CategoryId.Clans, y = !0)
   }
 })

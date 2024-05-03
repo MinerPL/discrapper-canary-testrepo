@@ -22,7 +22,8 @@ function c(e) {
   }, [t.id]), f = (0, i.useChannelListUpsellLocationTrackerRef)(t.id, s.DismissibleContent.MEMBERS_LAUNCH_UPSELL);
   return (0, l.jsx)("div", {
     ref: f,
-    children: (0, l.jsx)(r.default, {
+    children: (0, l.jsx)(r.BasicChannelRow, {
+      id: "members-".concat(t.id),
       renderIcon: e => (0, l.jsx)(o.default, {
         className: e
       }),

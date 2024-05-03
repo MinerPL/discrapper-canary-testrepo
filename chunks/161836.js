@@ -1,26 +1,26 @@
 "use strict";
-t.r(s);
-var a = t("735250");
-t("470079");
-var l = t("481060"),
-  n = t("689938"),
-  i = t("68234");
-s.default = () => (0, a.jsxs)("div", {
+s.r(t);
+var a = s("735250");
+s("470079");
+var n = s("481060"),
+  l = s("689938"),
+  i = s("992842");
+t.default = () => (0, a.jsxs)("div", {
   className: i.container,
   children: [(0, a.jsx)("div", {
     className: i.iconContainer,
     children: (0, a.jsx)("div", {
       className: i.icon
     })
-  }), (0, a.jsx)(l.Text, {
+  }), (0, a.jsx)(n.Text, {
     color: "header-primary",
     variant: "text-lg/semibold",
     className: i.header,
-    children: n.default.Messages.HUB_EMAIL_CONNECTION_SIDEBAR_HEADER
-  }), (0, a.jsx)(l.Text, {
+    children: l.default.Messages.HUB_EMAIL_CONNECTION_SIDEBAR_HEADER
+  }), (0, a.jsx)(n.Text, {
     color: "header-secondary",
     variant: "text-sm/normal",
     className: i.description,
-    children: n.default.Messages.HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION.format()
+    children: l.default.Messages.HUB_EMAIL_CONNECTION_SIDEBAR_DESCRIPTION.format()
   })]
 })

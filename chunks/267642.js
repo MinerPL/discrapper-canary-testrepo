@@ -19,10 +19,10 @@ n.r(t), n.d(t, {
     return M
   },
   getAvailableSoundboardSoundCount: function() {
-    return B
+    return k
   },
   getAvailableStickerSlotCount: function() {
-    return k
+    return B
   },
   getGracePeriodEndingDate: function() {
     return w
@@ -46,10 +46,10 @@ n.r(t), n.d(t, {
     return R
   },
   getTierName: function() {
-    return p
+    return O
   },
   getTiers: function() {
-    return O
+    return p
   },
   getTotalSoundboardSoundCountForTier: function() {
     return m
@@ -58,23 +58,23 @@ n.r(t), n.d(t, {
     return h
   },
   isGuildBoostSlotCanceled: function() {
-    return F
+    return x
   },
   isGuildBoostedAtLeast: function() {
-    return D
+    return v
   },
   isInGracePeriod: function() {
     return P
   },
   isTierUnlocked: function() {
-    return v
+    return D
   },
   minimumRequiredTierForGuildFeature: function() {
     return C
   }
 }), n("411104"), n("47120"), n("724458");
-var i, r, s = n("392711"),
-  a = n.n(s);
+var i, r, a = n("392711"),
+  s = n.n(a);
 n("913527");
 var o = n("314884"),
   l = n("78839"),
@@ -109,7 +109,7 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
     let t = f[f.indexOf(e) - 1];
     return I.TotalSoundboardSoundCountsByTier[e] - I.TotalSoundboardSoundCountsByTier[t]
   },
-  O = e => [{
+  p = e => [{
     tier: E.BoostedGuildTiers.TIER_1,
     title: T.default.Messages.GUILD_SETTINGS_GUILD_PREMIUM_PERKS_TITLE_TIER_1,
     perks: [{
@@ -270,7 +270,7 @@ let f = [E.BoostedGuildTiers.NONE, E.BoostedGuildTiers.TIER_1, E.BoostedGuildTie
     } : null].filter(d.isNotNullish)
   }];
 
-function p(e) {
+function O(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
     {
       useLevels: n = !0
@@ -303,7 +303,7 @@ function R(e) {
       throw Error("Not a valid tier type")
   }
 }
-let C = a().memoize(e => (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_1].features.includes(e) ? E.BoostedGuildTiers.TIER_1 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_2].features.includes(e) ? E.BoostedGuildTiers.TIER_2 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_3].features.includes(e) ? E.BoostedGuildTiers.TIER_3 : null),
+let C = s().memoize(e => (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_1].features.includes(e) ? E.BoostedGuildTiers.TIER_1 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_2].features.includes(e) ? E.BoostedGuildTiers.TIER_2 : (0, I.BoostedGuildFeatures)[E.BoostedGuildTiers.TIER_3].features.includes(e) ? E.BoostedGuildTiers.TIER_3 : null),
   g = e => {
     if (e === E.BoostedGuildTiers.NONE) return E.AnalyticsObjectTypes.NONE;
     if (e === E.BoostedGuildTiers.TIER_1) return E.AnalyticsObjectTypes.TIER_1;
@@ -318,27 +318,28 @@ function L(e, t) {
   return E.BoostedGuildTiers.NONE
 }
 
-function D(e, t) {
+function v(e, t) {
   return null == t || null != e && e >= t
 }
 
-function v(e, t) {
-  return D(e.premiumTier, t)
+function D(e, t) {
+  return v(e.premiumTier, t)
 }
 
 function M(e) {
-  return a().values(e).filter(e => e.isAvailable())
+  return s().values(e).filter(e => e.isAvailable())
 }
 
 function y() {
-  let e = l.default.getPremiumTypeSubscription(),
-    {
-      numAvailableGuildBoostSlots: t,
-      numCanceledGuildBoostSlots: n
-    } = Object.values(o.default.boostSlots).reduce((e, t) => (F(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
-      numAvailableGuildBoostSlots: 0,
-      numCanceledGuildBoostSlots: 0
-    });
+  let e = l.default.getPremiumTypeSubscription();
+  if (null == e ? void 0 : e.isPausedOrPausePending) return T.default.Messages.GUILD_BOOSTING_DISABLED_FOR_PAUSED_SUBSCRIPTION;
+  let {
+    numAvailableGuildBoostSlots: t,
+    numCanceledGuildBoostSlots: n
+  } = Object.values(o.default.boostSlots).reduce((e, t) => (x(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e), {
+    numAvailableGuildBoostSlots: 0,
+    numCanceledGuildBoostSlots: 0
+  });
   if (null == e || t > 0) return null;
   if (e.status === E.SubscriptionStatusTypes.PAST_DUE) return T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_PAST_DUE;
   if (e.status === E.SubscriptionStatusTypes.ACCOUNT_HOLD) return T.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PURCHASE_BUTTON_DISABLED_SUBSCRIPTION_ACCOUNT_HOLD;
@@ -389,17 +390,17 @@ function w(e, t) {
   return null
 }
 
-function k(e, t) {
+function B(e, t) {
   let n = A(t),
     i = f.indexOf(t);
   if (-1 === i) return 0;
   let r = f[i - 1],
-    s = null != r ? h(r) : 0,
-    a = h(t);
-  return Math.max(0, n - e.slice(s, a).length)
+    a = null != r ? h(r) : 0,
+    s = h(t);
+  return Math.max(0, n - e.slice(a, s).length)
 }
 
-function B(e, t) {
+function k(e, t) {
   return -1 === f.indexOf(t) ? 0 : Math.max(0, m(t) - e.length)
 }
 
@@ -408,7 +409,7 @@ function V(e, t) {
   return Math.max(0, b(e.id)[t] - n)
 }
 
-function F(e) {
+function x(e) {
   var t;
   return (null === (t = e.subscription) || void 0 === t ? void 0 : t.status) === E.SubscriptionStatusTypes.CANCELED || e.canceled
 }

@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t), n("47120");
-var r, s, a, o, l = n("442837"),
+var r, a, s, o, l = n("442837"),
   u = n("902704"),
   d = n("570140"),
   _ = n("601964"),
@@ -16,20 +16,20 @@ let h = {},
   m = !1,
   N = [];
 
-function O(e) {
+function p(e) {
   for (let t of (A = {}, h = {}, i = 0, e)) i++, A[t.id] = c.fromSerializedGuildRecord(t), h[t.id] = t.roles
 }
 
-function p(e) {
+function O(e) {
   let {
     guildId: t,
     role: n
-  } = e, i = h[t], r = E.fromServerRole(n), s = null == i ? void 0 : i[r.id];
-  if (null != s && (0, u.default)(r, s)) return !1;
+  } = e, i = h[t], r = E.fromServerRole(n), a = null == i ? void 0 : i[r.id];
+  if (null != a && (0, u.default)(r, a)) return !1;
   i = {
     ...i,
     [n.id]: E.fromServerRole(n)
-  }, h[t] = i
+  }, i = E.sortClientRoles(t, Object.values(i)), h[t] = i
 }
 let R = Object.freeze({});
 class C extends(r = l.default.Store) {
@@ -63,12 +63,12 @@ class C extends(r = l.default.Store) {
     return null === (n = h[e]) || void 0 === n ? void 0 : n[t]
   }
 }
-o = "GuildStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
+o = "GuildStore", (s = "displayName") in(a = C) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new C(d.default, {
+}) : a[s] = o, t.default = new C(d.default, {
   BACKGROUND_SYNC: function(e) {
     for (let n of e.guilds) {
       var t;
@@ -100,11 +100,11 @@ o = "GuildStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
     }), h = e.allGuildsRoles
   },
   CACHE_LOADED: function(e) {
-    O(e.guilds)
+    p(e.guilds)
   },
   CACHE_LOADED_LAZY: function(e) {
     if (0 === e.guilds.length) return !1;
-    O(e.guilds)
+    p(e.guilds)
   },
   GUILD_CREATE: function(e) {
     let t = c.fromServer(e.guild, A[e.guild.id]);
@@ -133,8 +133,8 @@ o = "GuildStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
       ...A
     }, delete A[t.id], h[t.id] = void 0, i--
   },
-  GUILD_ROLE_CREATE: p,
-  GUILD_ROLE_UPDATE: p,
+  GUILD_ROLE_CREATE: O,
+  GUILD_ROLE_UPDATE: O,
   GUILD_ROLE_DELETE: function(e) {
     let {
       guildId: t,
@@ -150,13 +150,13 @@ o = "GuildStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
       guildId: t,
       joinedAt: n,
       user: i
-    } = e, r = T.default.getId(), s = A[t];
-    if (r !== i.id || null == s) return !1;
-    let a = "string" == typeof n ? new Date(n) : n;
-    if (a === s.joinedAt || null == a) return !1;
+    } = e, r = T.default.getId(), a = A[t];
+    if (r !== i.id || null == a) return !1;
+    let s = "string" == typeof n ? new Date(n) : n;
+    if (s === a.joinedAt || null == s) return !1;
     A = {
       ...A,
-      [t]: s.updateJoinedAt(a)
+      [t]: a.updateJoinedAt(s)
     }
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function() {

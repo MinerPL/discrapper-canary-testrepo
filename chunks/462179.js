@@ -46,7 +46,7 @@ function R(e) {
     guild_id: k
   } = y, {
     canManageGuildEvent: P
-  } = (0, o.useManageResourcePermissions)(null != R ? R : t), V = P(y), O = (0, I.default)(y), F = (0, N.useIsChannelPublic)(null == R ? void 0 : R.id, y.id), {
+  } = (0, o.useManageResourcePermissions)(null != R ? R : t), V = P(y), F = (0, I.default)(y), O = (0, N.useIsChannelPublic)(null == R ? void 0 : R.id, y.id), {
     withinStartWindow: w
   } = (0, x.getEventTimeData)(b), B = (0, i.useStateFromStores)([h.default], () => (null == R ? !void 0 : !R.isGuildVocal()) || h.default.can(j.Permissions.CONNECT, R), [R]), H = (0, d.useShowMemberVerificationGate)(k), z = (0, S.default)(A, G);
 
@@ -80,7 +80,7 @@ function R(e) {
       e.stopPropagation(), null != t && (0, r.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("54668"), n.e("79504"), n.e("92223"), n.e("58153"), n.e("2047"), n.e("25381"), n.e("97455")]).then(n.bind(n, "215269"));
+        } = await Promise.all([n.e("54668"), n.e("62364")]).then(n.bind(n, "215269"));
         return n => (0, l.jsx)(e, {
           guildEventId: G,
           recurrenceId: A,
@@ -101,7 +101,7 @@ function R(e) {
       e.stopPropagation(), (0, a.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("84722"), n.e("86248")]).then(n.bind(n, "296864"));
+        } = await Promise.all([n.e("99387"), n.e("84722"), n.e("11992")]).then(n.bind(n, "296864"));
         return t => (0, l.jsx)(e, {
           ...t,
           event: y,
@@ -111,7 +111,7 @@ function R(e) {
     } : void 0,
     onInviteClick: function(e) {
       if (e.stopPropagation(), null != t) {
-        if (!O || !F) {
+        if (!F || !O) {
           let e = (0, T.SHARE_EVENT_DETAILS_LINK)({
             guildId: k,
             guildEventId: G

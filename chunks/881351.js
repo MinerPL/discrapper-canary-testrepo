@@ -31,7 +31,13 @@ t.default = (0, s.default)((0, i.default)(function(e) {
     onSelect: s
   } = e, d = (0, I.default)(t.id), M = (0, g.default)(t.id), C = (0, T.default)(t), O = (0, E.default)({
     user: t
-  }), N = (0, _.default)(t), P = (0, v.default)(t.id), m = (0, A.default)(t.id), y = (0, h.default)(t.id, i), U = (0, p.default)(t), w = (0, r.default)(null, t), H = (0, f.default)(t), V = (0, S.default)(t), b = (0, o.default)({
+  }), N = (0, _.default)({
+    user: t
+  }), P = (0, v.default)(t.id), m = (0, A.default)(t.id), y = (0, h.default)(t.id, i), U = (0, p.default)({
+    user: t
+  }), w = (0, r.default)(null, t), H = (0, f.default)(t), V = (0, S.default)({
+    user: t
+  }), b = (0, o.default)({
     id: t.id,
     label: R.default.Messages.COPY_ID_USER
   }), G = (0, c.default)(t), k = t.isNonUserBot();

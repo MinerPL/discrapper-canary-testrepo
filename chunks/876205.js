@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var a = n("803997"),
+var a = n("120356"),
   l = n.n(a),
   s = n("442837"),
   o = n("331650"),
@@ -17,7 +17,7 @@ var a = n("803997"),
   f = n("255439"),
   h = n("13140"),
   p = n("981631"),
-  g = n("297188");
+  g = n("23073");
 let m = {
   [p.GlobalKeybindActions.TOGGLE_MUTE]: {
     legacy: {

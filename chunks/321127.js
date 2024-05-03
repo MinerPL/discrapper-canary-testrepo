@@ -6,9 +6,9 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("500813");
+var r = n("120356"),
+  a = n.n(r),
+  s = n("3500");
 
 function o(e) {
   let {
@@ -18,8 +18,8 @@ function o(e) {
     text: o
   } = e;
   if (r.commandName) {
-    let e = s()(a.commandName, {
-      [a.emptyText]: "" === o.text
+    let e = a()(s.commandName, {
+      [s.emptyText]: "" === o.text
     });
     return (0, i.jsx)("span", {
       ...t,

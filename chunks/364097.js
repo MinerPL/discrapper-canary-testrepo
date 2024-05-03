@@ -13,8 +13,8 @@ var a = n("442837"),
   o = n("409059"),
   u = n("58346"),
   d = n("689938"),
-  c = n("155724"),
-  f = n("558338");
+  c = n("70865"),
+  f = n("987142");
 
 function E(e) {
   var t;
@@ -40,7 +40,7 @@ function E(e) {
       })]
     })]
   });
-  let T = __OVERLAY__ ? (0, s.jsx)(i.default.Button, {
+  let m = __OVERLAY__ ? (0, s.jsx)(i.default.Button, {
     isDisabled: !0,
     color: i.default.Button.Colors.PRIMARY,
     children: d.default.Messages.GUILD_TEMPLATE_EMBED_VIEW_IN_APP
@@ -74,7 +74,7 @@ function E(e) {
             usageCount: String(null !== (t = _.usageCount) && void 0 !== t ? t : 0)
           })
         })]
-      }), T]
+      }), m]
     })]
   })
 }

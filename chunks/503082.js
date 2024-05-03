@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("512722"),
   r = n.n(i),
-  s = n("129508"),
-  a = n("921608"),
+  a = n("129508"),
+  s = n("921608"),
   o = n("693824");
 
 function l(e, t, n) {
@@ -18,12 +18,12 @@ function l(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class u extends s.default {
+class u extends a.default {
   getCanvasForExport() {
     return this.canvas
   }
   setContextProperties() {
-    null != this.context && (this.context.fillStyle = this.color, this.context.strokeStyle = this.color, this.context.font = "".concat(this.font.style, " ").concat(this.font.weight, " ").concat(this.font.size, "px ").concat(this.font.family))
+    null != this.context && (this.context.fillStyle = this.color, this.context.strokeStyle = this.color, this.context.font = "".concat(this.font.style, " ").concat(this.font.weight, " ").concat(this.font.size, "px ").concat(this.font.family.join(", ")))
   }
   setSize(e, t) {
     let {
@@ -49,10 +49,10 @@ class u extends s.default {
     let {
       x: i,
       y: r,
-      w: s,
-      h: a
+      w: a,
+      h: s
     } = e;
-    n && this.setContextProperties(), t ? this.context.fillRect(i, r, s, a) : this.context.strokeRect(i, r, s, a)
+    n && this.setContextProperties(), t ? this.context.fillRect(i, r, a, s) : this.context.strokeRect(i, r, a, s)
   }
   drawRoundedRect(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -61,14 +61,14 @@ class u extends s.default {
     if (null == this.context) return;
     let {
       x: r,
-      y: s,
-      w: a,
+      y: a,
+      w: s,
       h: o
     } = e;
-    i && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(r, s, a, o, t), n ? this.context.fill() : this.context.stroke()
+    i && this.setContextProperties(), this.context.beginPath(), this.context.roundRect(r, a, s, o, t), n ? this.context.fill() : this.context.stroke()
   }
   drawText(e, t, n) {
-    var i, s;
+    var i, a;
     if (null == this.context) return;
     this.setContextProperties();
     let l = null !== (i = t.w) && void 0 !== i ? i : this.canvas.width - t.x,
@@ -79,28 +79,28 @@ class u extends s.default {
         null != this.context && (n ? this.context.fillText(e, t.x, t.y) : this.context.strokeText(e, t.x, t.y))
       },
       E = e => {
-        if (null == this.context || u.width <= a.TEXT_TRUNCATION_PADDING_PX) return "";
+        if (null == this.context || u.width <= s.TEXT_TRUNCATION_PADDING_PX) return "";
         let t = "".concat(e);
-        for (; u.width + a.TEXT_TRUNCATION_PADDING_PX > l;) t = t.slice(0, -4), u = this.context.measureText(t), d = !0;
+        for (; u.width + s.TEXT_TRUNCATION_PADDING_PX > l;) t = t.slice(0, -4), u = this.context.measureText(t), d = !0;
         return d && (t += "..."), t
       };
     if (this.font.truncate === o.TextTruncationMethod.None && c(e, t), this.font.truncate === o.TextTruncationMethod.Truncate && c(e = E(e), t), this.font.truncate === o.TextTruncationMethod.Wrap) {
       let n = e.split(" "),
         i = 1 / 0,
-        a = "",
+        s = "",
         o = 0;
       for (null != t.h && (i = t.h / _, r()(i > 0, "DiscordCavas: boundingBox.h of ".concat(t.h, " results in 0 visible lines with font size of ").concat(_))); n.length > 0;)
-        if ((u = this.context.measureText(a + " " + n[0])).width > l) {
+        if ((u = this.context.measureText(s + " " + n[0])).width > l) {
           let e = !1;
-          if (o + 1 >= i && n.length > 0 && (e = !0), "" !== a ? (c(e ? E(a + "...") : a, {
+          if (o + 1 >= i && n.length > 0 && (e = !0), "" !== s ? (c(e ? E(s + "...") : s, {
               x: t.x,
               y: t.y + _ * o
-            }), a = "") : c(E(null !== (s = n.shift()) && void 0 !== s ? s : ""), {
+            }), s = "") : c(E(null !== (a = n.shift()) && void 0 !== a ? a : ""), {
               x: t.x,
               y: t.y + _ * o
             }), e) break;
           o += 1
-        } else a += " ".concat(n.shift()), 0 === n.length && c(a, {
+        } else s += " ".concat(n.shift()), 0 === n.length && c(s, {
           x: t.x,
           y: t.y + _ * o
         })
@@ -120,21 +120,21 @@ class u extends s.default {
         if ("strong" === e.type) this.setFont({
           weight: 700
         });
-        return Array.isArray(e.content) ? r = s(e.content, t, n) : r = this.drawText(e.content, t, n), this.setFont({
+        return Array.isArray(e.content) ? r = a(e.content, t, n) : r = this.drawText(e.content, t, n), this.setFont({
           weight: i
         }), r
       },
-      s = (e, t, n) => {
+      a = (e, t, n) => {
         let i = 0;
         return e.forEach(e => {
           let {
-            x: s,
-            y: a,
+            x: a,
+            y: s,
             w: o,
             h: l
           } = t, u = null != o ? o - i : void 0, d = r(e, {
-            x: s + i,
-            y: a,
+            x: a + i,
+            y: s,
             w: u,
             h: l
           }, n);
@@ -146,7 +146,7 @@ class u extends s.default {
           h: this.font.size
         }
       };
-    Array.isArray(e) ? s(e, t, n) : r(e, t, n)
+    Array.isArray(e) ? a(e, t, n) : r(e, t, n)
   }
   drawImage(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
@@ -154,21 +154,21 @@ class u extends s.default {
     };
     r()(null != this.assetMap, "DiscordCavas: `drawImage` requires an AssetMap to be initialized.");
     let {
-      fillMode: s
+      fillMode: a
     } = i;
     if (null == this.context) return o.DrawResultStatus.Failure;
-    let a = this.assetMap.get(e);
-    if (null == a) return o.DrawResultStatus.ImageNotLoaded;
+    let s = this.assetMap.get(e);
+    if (null == s) return o.DrawResultStatus.ImageNotLoaded;
     if (null != n) {
-      if (s === o.FillMode.Contain) {
+      if (a === o.FillMode.Contain) {
         let i;
         let r = {
-            w: a.width,
-            h: a.height
+            w: s.width,
+            h: s.height
           },
-          s = +(r.w / r.h).toFixed(1);
-        if (+(n.w / n.h).toFixed(1) > s) {
-          let e = n.h * s;
+          a = +(r.w / r.h).toFixed(1);
+        if (+(n.w / n.h).toFixed(1) > a) {
+          let e = n.h * a;
           i = {
             x: t.x + (n.w - e) / 2,
             y: t.y,
@@ -176,7 +176,7 @@ class u extends s.default {
             h: n.h
           }
         } else {
-          let e = n.w / s;
+          let e = n.w / a;
           i = {
             x: t.x,
             y: t.y + (n.h - e) / 2,
@@ -196,30 +196,30 @@ class u extends s.default {
           h: i.h
         }), o.DrawResultStatus.Success
       }
-      if (s === o.FillMode.Cover) {
+      if (a === o.FillMode.Cover) {
         var l, u, d, _;
         let r;
-        let s = {
-            w: a.width,
-            h: a.height
+        let a = {
+            w: s.width,
+            h: s.height
           },
-          c = +(s.w / s.h).toFixed(1),
+          c = +(a.w / a.h).toFixed(1),
           E = +(n.w / n.h).toFixed(1);
         if (E > c) {
-          let e = s.w / E;
+          let e = a.w / E;
           r = {
             x: 0,
-            y: (s.h - e) * (null !== (u = null == i ? void 0 : null === (l = i.focus) || void 0 === l ? void 0 : l.y) && void 0 !== u ? u : .5),
-            w: a.width,
+            y: (a.h - e) * (null !== (u = null == i ? void 0 : null === (l = i.focus) || void 0 === l ? void 0 : l.y) && void 0 !== u ? u : .5),
+            w: s.width,
             h: e
           }
         } else {
-          let e = s.h * E;
+          let e = a.h * E;
           r = {
-            x: (a.width - e) * (null !== (_ = null == i ? void 0 : null === (d = i.focus) || void 0 === d ? void 0 : d.x) && void 0 !== _ ? _ : .5),
+            x: (s.width - e) * (null !== (_ = null == i ? void 0 : null === (d = i.focus) || void 0 === d ? void 0 : d.x) && void 0 !== _ ? _ : .5),
             y: 0,
             w: e,
-            h: a.height
+            h: s.height
           }
         }
         return this.drawCroppedImage(e, r, {
@@ -229,22 +229,22 @@ class u extends s.default {
           h: n.h
         }), o.DrawResultStatus.Success
       }
-      this.context.drawImage(a, t.x, t.y, n.w, n.h)
-    } else this.context.drawImage(a, t.x, t.y);
+      this.context.drawImage(s, t.x, t.y, n.w, n.h)
+    } else this.context.drawImage(s, t.x, t.y);
     return o.DrawResultStatus.Success
   }
   drawRoundedImage(e, t, n, i, r) {
     if (null == this.context) return o.DrawResultStatus.Failure;
     let {
-      x: s,
-      y: a
+      x: a,
+      y: s
     } = t, {
       w: l,
       h: u
     } = n;
     this.context.save();
     let d = new Path2D;
-    d.roundRect(s, a, l, u, i), this.context.clip(d);
+    d.roundRect(a, s, l, u, i), this.context.clip(d);
     let _ = this.drawImage(e, t, n, r);
     return this.context.restore(), _
   }
@@ -254,8 +254,8 @@ class u extends s.default {
     let r = null === (i = this.assetMap) || void 0 === i ? void 0 : i.get(e);
     if (null == r) return o.DrawResultStatus.ImageNotLoaded;
     let {
-      x: s,
-      y: a,
+      x: a,
+      y: s,
       w: l,
       h: u
     } = t, {
@@ -264,7 +264,7 @@ class u extends s.default {
       w: c,
       h: E
     } = n;
-    return this.context.drawImage(r, s, a, l, u, d, _, c, E), o.DrawResultStatus.Success
+    return this.context.drawImage(r, a, s, l, u, d, _, c, E), o.DrawResultStatus.Success
   }
   drawPath(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],

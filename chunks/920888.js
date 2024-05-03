@@ -1,12 +1,8 @@
 "use strict";
-n.r(t), n.d(t, {
-  findReactionIndex: function() {
-    return p
-  }
-}), n("47120"), n("653041");
+n.r(t), n("47120"), n("653041");
 var s = n("735250"),
   a = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("215569"),
   o = n("481060"),
@@ -16,8 +12,8 @@ var s = n("735250"),
   f = n("434624"),
   E = n("287151"),
   _ = n("689938"),
-  T = n("903380"),
-  m = n("317363");
+  m = n("254192"),
+  T = n("316616");
 let I = (e, t) => null == e && null == t || e === t,
   p = (e, t) => e.findIndex(e => I(e.emoji.id, null == t ? void 0 : t.id) && I(e.emoji.name, null == t ? void 0 : t.name)),
   h = (e, t) => {
@@ -52,14 +48,14 @@ class N extends a.PureComponent {
       forceHideReactionCreates: g,
       remainingReactions: M,
       combinedReactions: R,
-      visibleReactionsCount: O
+      visibleReactionsCount: v
     } = this.props, {
-      disableTransitionAppear: v
-    } = this.state, L = A ? m : T, x = O > 0;
-    return x || S ? (0, s.jsxs)(r.TransitionGroup, {
+      disableTransitionAppear: O
+    } = this.state, x = A ? T : m, L = v > 0;
+    return L || S ? (0, s.jsxs)(r.TransitionGroup, {
       component: "div",
-      className: i()(L.reactions, N),
-      transitionAppear: !v,
+      className: i()(x.reactions, N),
+      transitionAppear: !O,
       role: "group",
       transitionLeave: !1,
       id: (0, c.getMessageReactionsId)(e),
@@ -83,10 +79,10 @@ class N extends a.PureComponent {
         onClick: t => {
           t.stopPropagation(), (0, E.showReactionsModal)(h, e)
         },
-        className: i()(L.reaction, C, L.remainingReactions),
+        className: i()(x.reaction, C, x.remainingReactions),
         "aria-label": _.default.Messages.ADD_REACTION,
         children: (0, s.jsxs)(o.Text, {
-          className: L.reactionInner,
+          className: x.reactionInner,
           variant: "text-sm/normal",
           children: ["+", M]
         })
@@ -97,8 +93,8 @@ class N extends a.PureComponent {
         useChatFontScaling: A,
         isHovered: this.state.isHovered,
         className: i()({
-          [L.forceShow]: S && !x,
-          [L.forceShowLook]: S
+          [x.forceShow]: S && !L,
+          [x.forceShowLook]: S
         })
       })]
     }) : null

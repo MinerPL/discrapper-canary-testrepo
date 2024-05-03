@@ -1,95 +1,101 @@
 "use strict";
 s.r(t), s.d(t, {
   getFilteredPerksDiscoverabilityCards: function() {
-    return f
+    return N
   },
   getRewardingTenureCtaDescription: function() {
-    return I
+    return S
   },
   getRewardingTenureDescription: function() {
-    return T
+    return f
   },
   getRewardingTenureSubtitle: function() {
-    return E
-  },
-  getRewardingTenureTitle: function() {
-    return _
-  },
-  getThemedImage: function() {
     return R
   },
-  usePerksDiscoverabilityStrings: function() {
+  getRewardingTenureTitle: function() {
+    return I
+  },
+  getThemedImage: function() {
     return m
+  },
+  useIsPremiumSubscriber: function() {
+    return g
+  },
+  usePerksDiscoverabilityStrings: function() {
+    return p
   }
-}), s("653041");
-var a = s("442837"),
+}), s("653041"), s("627341");
+var a = s("278074"),
+  r = s("442837"),
   i = s("780384"),
-  r = s("410154"),
-  n = s("78839"),
-  l = s("74538"),
-  o = s("391110"),
-  u = s("474936"),
-  d = s("735825"),
-  c = s("689938");
-let _ = e => {
+  n = s("410154"),
+  l = s("594174"),
+  o = s("78839"),
+  u = s("74538"),
+  d = s("915296"),
+  c = s("391110"),
+  _ = s("474936"),
+  E = s("735825"),
+  T = s("689938");
+let I = e => {
     switch (e) {
-      case d.NitroRewardStatus.PENDING:
-        return c.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
-      case d.NitroRewardStatus.REDEEMABLE:
-        return c.default.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
-      case d.NitroRewardStatus.REDEEMED:
-        return c.default.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+      case E.NitroRewardStatus.PENDING:
+        return T.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_TITLE;
+      case E.NitroRewardStatus.REDEEMABLE:
+        return T.default.Messages.NITRO_HOME_REWARDING_REDEEMABLE_STATE_TITLE;
+      case E.NitroRewardStatus.REDEEMED:
+        return T.default.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
       default:
         return ""
     }
   },
-  E = (e, t) => {
+  R = (e, t) => {
     switch (e) {
-      case d.NitroRewardStatus.PENDING:
-        return t === d.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
-      case d.NitroRewardStatus.REDEEMABLE:
-        return t === d.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT : c.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
-      case d.NitroRewardStatus.REDEEMED:
-        return c.default.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
+      case E.NitroRewardStatus.PENDING:
+        return t === E.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? T.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_1_MONTH_VARIANT : T.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_LOCKED_STATE_SUBTITLE_3_MONTHS_VARIANT;
+      case E.NitroRewardStatus.REDEEMABLE:
+        return t === E.TenureRewardSKUs.FREE_GUILD_BOOST_1_MONTH ? T.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_1_MONTH_VARIANT : T.default.Messages.NITRO_HOME_REWARDING_FREE_BOOST_REDEEMABLE_STATE_SUBTITLE_3_MONTHS_VARIANT;
+      case E.NitroRewardStatus.REDEEMED:
+        return T.default.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_SUBTITLE;
       default:
         return
     }
   },
-  T = e => {
+  f = e => {
     switch (e) {
-      case d.NitroRewardStatus.PENDING:
-        return c.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
-      case d.NitroRewardStatus.REDEEMABLE:
+      case E.NitroRewardStatus.PENDING:
+        return T.default.Messages.NITRO_HOME_REWARDING_LOCKED_STATE_DESCRIPTION;
+      case E.NitroRewardStatus.REDEEMABLE:
         return;
-      case d.NitroRewardStatus.REDEEMED:
-        return c.default.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
+      case E.NitroRewardStatus.REDEEMED:
+        return T.default.Messages.NITRO_HOME_REWARDING_REDEEMED_STATE_DESCRIPTION;
       default:
         return
     }
   };
 
-function I(e, t) {
+function S(e, t) {
   switch (e) {
-    case d.NitroRewardStatus.PENDING:
-      return null != t ? c.default.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
+    case E.NitroRewardStatus.PENDING:
+      return null != t ? T.default.Messages.NITRO_HOME_REWARDING_TENURE_BOOST_AVAILABLE_DATE.format({
         days: t
       }) : "";
-    case d.NitroRewardStatus.REDEEMABLE:
-      return c.default.Messages.REDEEM;
-    case d.NitroRewardStatus.REDEEMED:
-      return c.default.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
+    case E.NitroRewardStatus.REDEEMABLE:
+      return T.default.Messages.REDEEM;
+    case E.NitroRewardStatus.REDEEMED:
+      return T.default.Messages.NITRO_HOME_REWARDING_REDEEMED_LABEL;
     default:
       return ""
   }
 }
-let R = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
-  S = e => {
+let m = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
+  A = e => {
     let {
       cards: t,
       perksCards: s,
       isFullScreen: a,
-      showTenureNotification: i,
-      shopMarketingVariation: n
+      showTenureCard: r,
+      shopMarketingVariation: i
     } = e, l = a ? 3 : 2, o = e => {
       let {
         card: s
@@ -98,11 +104,11 @@ let R = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
     };
     return null != s.shyProject && o({
       card: s.shyProject
-    }), null != s.freeBoost && i && o({
+    }), null != s.freeBoost && !0 === r && o({
       card: s.freeBoost
     }), o({
       card: s.earlyAccess
-    }), o(n !== r.CollectiblesShopMarketingVariants.DEFAULT ? {
+    }), o(i !== n.CollectiblesShopMarketingVariants.DEFAULT ? {
       card: s.specialShopPerks
     } : {
       card: s.specialMemberPricing
@@ -110,45 +116,84 @@ let R = (e, t, s) => (0, i.isThemeDark)(e) ? t : s,
       card: s.unlimitedSuperReactions
     }), t
   },
-  f = (e, t, s, a, i) => {
-    let r = [];
-    switch (t) {
-      case o.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
-        r = [e.profiles, e.clientThemes, e.serverBoosts];
+  N = e => {
+    let {
+      perksCards: t,
+      variant: s,
+      shopMarketingVariation: r,
+      isFullScreen: i,
+      showTenureCard: n,
+      tileOrderVariant: l,
+      isPremiumSubscriber: o
+    } = e, u = [];
+    switch (s) {
+      case c.PerksDiscoverabilityCardSection.PERKS_DISCOVERABILITY:
+        u = (0, a.match)({
+          tileOrderVariant: l,
+          isPremiumSubscriber: o
+        }).with({
+          tileOrderVariant: d.TileOrderVariant.VARIANT_1,
+          isPremiumSubscriber: !1
+        }, () => [t.profiles, t.moreEmojiPower, t.largeUploads]).with({
+          tileOrderVariant: d.TileOrderVariant.VARIANT_2,
+          isPremiumSubscriber: !1
+        }, () => [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons]).otherwise(() => [t.profiles, t.clientThemes, t.serverBoosts]);
         break;
-      case o.PerksDiscoverabilityCardSection.WHATS_NEW:
-        r = S({
-          cards: r,
-          perksCards: e,
-          isFullScreen: a,
-          showTenureNotification: i,
-          shopMarketingVariation: s
+      case c.PerksDiscoverabilityCardSection.WHATS_NEW:
+        u = A({
+          cards: u,
+          perksCards: t,
+          isFullScreen: i,
+          showTenureCard: n,
+          shopMarketingVariation: r
         });
         break;
-      case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
-        r = [e.customAppIcons, e.moreEmojiPower, e.customSoundsEverywhere, e.specialStickerAccess];
+      case c.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW:
+        u = (0, a.match)({
+          tileOrderVariant: l,
+          isPremiumSubscriber: o
+        }).with({
+          tileOrderVariant: d.TileOrderVariant.VARIANT_1,
+          isPremiumSubscriber: !1
+        }, () => [t.hdVideo, t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]).with({
+          tileOrderVariant: d.TileOrderVariant.VARIANT_2,
+          isPremiumSubscriber: !1
+        }, () => [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks]).otherwise(() => [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess]);
         break;
-      case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
-        r = [e.earlyAccessSeeAllVariant, e.specialMemberPricingSeeAllVariant, e.largeUploads, e.hdVideo, e.superReactions];
+      case c.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW:
+        u = (0, a.match)({
+          tileOrderVariant: l,
+          isPremiumSubscriber: o
+        }).with({
+          tileOrderVariant: d.TileOrderVariant.VARIANT_1,
+          isPremiumSubscriber: !1
+        }, () => [t.clientThemes, t.customAppIcons, t.customSoundsEverywhere, t.specialStickerAccess]).with({
+          tileOrderVariant: d.TileOrderVariant.VARIANT_2,
+          isPremiumSubscriber: !1
+        }, () => [t.customSoundsEverywhere, t.specialStickerAccess]).otherwise(() => [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]);
         break;
-      case o.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
-        r = [e.entranceSoundsSeeAllVariation, e.badge]
+      case c.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW:
+        u = [t.entranceSoundsSeeAllVariation, t.badge]
     }
-    return !a && (r = r.filter(e => !e.hideOnNarrowScreen)), r
+    return !i && (u = u.filter(e => !e.hideOnNarrowScreen)), u
   },
-  m = e => {
-    let t = (0, a.useStateFromStores)([n.default], () => n.default.getPremiumTypeSubscription()),
-      s = null != t ? l.default.getPremiumPlanItem(t) : null,
-      i = (null != s ? l.default.getSkuIdForPlan(s.planId) : null) === u.PremiumSubscriptionSKUs.TIER_2;
-    if (e) return i ? {
-      title: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
-      subtitle: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
+  p = e => {
+    let t = (0, r.useStateFromStores)([o.default], () => o.default.getPremiumTypeSubscription()),
+      s = null != t ? u.default.getPremiumPlanItem(t) : null,
+      a = (null != s ? u.default.getSkuIdForPlan(s.planId) : null) === _.PremiumSubscriptionSKUs.TIER_2;
+    if (e) return a ? {
+      title: T.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_SUB,
+      subtitle: T.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_SUB
     } : {
-      title: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
-      subtitle: c.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
+      title: T.default.Messages.PREMIUM_MARKETING_WHATS_NEW_TITLE_NON_SUB,
+      subtitle: T.default.Messages.PREMIUM_MARKETING_WHATS_NEW_SUBTITLE_NON_SUB
     };
     return {
-      title: c.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
-      subtitle: c.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
+      title: T.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_TITLE,
+      subtitle: T.default.Messages.PREMIUM_MARKETING_PERKS_DISCOVERABILITY_SUBTITLE
     }
+  },
+  g = () => {
+    let e = (0, r.useStateFromStores)([l.default], () => l.default.getCurrentUser());
+    return (0, u.isPremium)(e)
   }

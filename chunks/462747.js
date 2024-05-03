@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var l = n("735250");
 n("470079");
-var i = n("803997"),
+var i = n("120356"),
   a = n.n(i),
   r = n("442837"),
   s = n("481060"),
@@ -23,7 +23,7 @@ var i = n("803997"),
   _ = n("315416"),
   I = n("765305"),
   S = n("689938"),
-  N = n("382839");
+  N = n("101705");
 
 function x(e) {
   let {
@@ -98,7 +98,7 @@ function j(e) {
     onContextMenu: i
   } = e, u = (0, r.useStateFromStores)([m.default], () => m.default.getUser(n.user_id)), o = null === (t = n.member) || void 0 === t ? void 0 : t.guildId, g = (0, r.useStateFromStores)([h.default, E.default, v.default], () => n.user_id === v.default.getId() ? h.default.getStatus() : E.default.getStatus(n.user_id, o), [n.user_id, o]);
   return null == u ? null : (0, l.jsx)(s.Popout, {
-    preload: () => (0, c.default)(u.id, u.getAvatarURL(o, 80), {
+    preload: () => (0, c.maybeFetchUserProfileForPopout)(u.id, u.getAvatarURL(o, 80), {
       guildId: o
     }),
     renderPopout: e => (0, l.jsx)(f.default, {
@@ -210,7 +210,7 @@ function M(e) {
         (0, u.openContextMenuLazy)(e, async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("69220")]).then(n.bind(n, "881351"));
+          } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("69220")]).then(n.bind(n, "881351"));
           return n => (0, l.jsx)(e, {
             ...n,
             user: t

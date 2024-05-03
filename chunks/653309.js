@@ -1,17 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
+  cssClasses: function() {
+    return d
+  },
   default: function() {
     return _
   }
 }), n("47120"), n("390547"), n("411104");
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("887490"),
-  o = n("97931"),
-  l = n("500813"),
-  u = n("681282");
+var r = n("120356"),
+  a = n.n(r),
+  s = n("887490"),
+  o = n("891414"),
+  l = n("3500"),
+  u = n("79910");
 let d = {
   strong: o.bold,
   em: o.italics,
@@ -21,13 +24,14 @@ let d = {
   link: o.fakeLink,
   url: o.fakeLink,
   autolink: o.fakeLink,
-  spoiler: s()(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, o.spoiler),
+  spoiler: a()(u.spoilerContent, u.spoilerMarkdownContent, u.obscuredTextContent, o.spoiler),
   staticRouteLink: o.fakeLink,
   syntaxBefore: o.syntaxBefore,
   syntaxAfter: o.syntaxAfter,
   codeBlockText: o.codeBlockText,
   codeBlockSyntax: o.codeBlockSyntax,
-  codeBlockLang: o.codeBlockLang
+  codeBlockLang: o.codeBlockLang,
+  subtext: o.subtext
 };
 
 function _(e, t) {
@@ -37,8 +41,8 @@ function _(e, t) {
     children: u,
     leaf: _,
     text: c
-  } = t, E = !1, [I] = a.EditorUtils.node(e, a.PathUtils.parent(a.EditorUtils.findPath(e, c)));
-  switch (a.EditorUtils.isEditor(I) ? "editor" : I.type) {
+  } = t, E = !1, [I] = s.EditorUtils.node(e, s.PathUtils.parent(s.EditorUtils.findPath(e, c)));
+  switch (s.EditorUtils.isEditor(I) ? "editor" : I.type) {
     case "line":
     case "blockQuote": {
       E = void 0;
@@ -54,12 +58,12 @@ function _(e, t) {
           throw Error("Slate: Unknown decoration attribute: ".concat(t))
         }
       }).filter(e => null != e).join(" ");
-      n = s()(e, {
+      n = a()(e, {
         [o.syntaxOverride]: "||" === _.text || "\\" === _.text
       })
     }
   }
-  return n = s()(n, {
+  return n = a()(n, {
     [l.emptyText]: "" === c.text
   }), (0, i.jsx)("span", {
     ...r,

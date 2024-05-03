@@ -1,43 +1,95 @@
 "use strict";
-e.exports = {
-  appSlide: "appSlide__73f6c",
-  buttons: "buttons__45bec",
-  carousel: "carousel_bea908",
-  commandList: "commandList__7be7e",
-  content: "content__57e57",
-  contentContainer: "contentContainer__08f2a",
-  contentDivider: "contentDivider_bff407",
-  description: "description__8b560",
-  descriptionClamp: "descriptionClamp__591d6",
-  descriptionClampSafari: "descriptionClampSafari_c4132b",
-  detailedDescription: "detailedDescription__9e4da",
-  divider: "divider_c275c7",
-  dividerContainer: "dividerContainer_bdbc1d",
-  emptyContainer: "emptyContainer_aae5b6",
-  emptyImage: "emptyImage__3ed27",
-  errorImage: "errorImage_bacf4b",
-  hasContent: "hasContent_bcb3ba",
-  header: "header_d99a8a",
-  headerBanner: "headerBanner__7b8a3",
-  headerContent: "headerContent_bc8f22",
-  headerIcon: "headerIcon_f11f09",
-  headerNameAndButtons: "headerNameAndButtons__9aaf4",
-  headerNameAndIcon: "headerNameAndIcon_be68ee",
-  headerSidebar: "headerSidebar_ede28f",
-  iconInteractive: "iconInteractive__29e48",
-  name: "name__9ec0b",
-  overflow: "overflow_e03466",
-  partnerBadge: "partnerBadge__677e1",
-  premiumIcon: "premiumIcon__2b16f",
-  premiumIconTooltip: "premiumIconTooltip__36a88",
-  relatedHeader: "relatedHeader_c1b99f",
-  section: "section__42e62",
-  sectionHeader: "sectionHeader__8c65a",
-  separator: "separator_d3580d",
-  showMoreButton: "showMoreButton__686d7",
-  showMoreButtonIcon: "showMoreButtonIcon__6411c",
-  showMoreButtonInner: "showMoreButtonInner_b216e3",
-  showMoreButtonText: "showMoreButtonText__4b7de",
-  sidebar: "sidebar__7b0d3",
-  spinner: "spinner_f2952d"
+n.r(t), n.d(t, {
+  default: function() {
+    return p
+  }
+}), n("47120");
+var u = n("735250"),
+  r = n("470079"),
+  a = n("348327"),
+  s = n.n(a),
+  l = n("658722"),
+  i = n.n(l),
+  o = n("442837"),
+  d = n("481060"),
+  c = n("492435"),
+  f = n("353926"),
+  S = n("828695"),
+  E = n("740727"),
+  M = n("499533"),
+  T = n("689938");
+
+function m(e) {
+  let {
+    id: t,
+    experiment: n,
+    currentBucket: r
+  } = e;
+  return (0, u.jsxs)(d.MenuItem, {
+    id: t,
+    label: n.title,
+    action: () => (0, c.overrideBucket)(t, null),
+    children: [n.buckets.map(e => (0, u.jsx)(d.MenuCheckboxItem, {
+      id: "".concat(e),
+      label: M.default.getExperimentBucketName(e),
+      checked: e === r,
+      action: () => (0, c.overrideBucket)(t, e)
+    }, "".concat(e))), (0, u.jsx)(d.MenuGroup, {
+      children: -1 !== r && (0, u.jsx)(d.MenuItem, {
+        id: "clear-override",
+        label: "Clear Override",
+        color: "danger",
+        icon: E.default,
+        action: () => (0, c.overrideBucket)(t, null)
+      })
+    })]
+  }, t)
+}
+
+function p() {
+  let e = (0, o.useStateFromStores)([f.default, S.default], () => {
+      let e = S.default.getRegisteredExperiments();
+      return Object.keys(e).map(t => {
+        let n = e[t],
+          u = f.default.getExperimentOverrideDescriptor(t);
+        return {
+          id: t,
+          experiment: n,
+          currentBucket: null != u ? u.bucket : -1
+        }
+      })
+    }, [], s()),
+    [t, n] = r.useState(""),
+    [a, l] = r.useState([]);
+  r.useEffect(() => {
+    if (0 === t.trim().length) {
+      l(e);
+      return
+    }
+    l(e.filter(e => i()(t, e.experiment.title.toLowerCase())))
+  }, [e, t]);
+  let c = r.useMemo(() => a.filter(e => {
+      let {
+        currentBucket: t
+      } = e;
+      return -1 !== t
+    }), [a]),
+    E = r.useMemo(() => a.filter(e => {
+      let {
+        currentBucket: t
+      } = e;
+      return -1 === t
+    }), [a]),
+    M = r.useMemo(() => c.map(m), [c]),
+    p = r.useMemo(() => E.map(m), [E]);
+  return [(0, u.jsx)(d.MenuControlItem, {
+    id: "experiments-search",
+    control: (e, r) => (0, u.jsx)(d.MenuSearchControl, {
+      ...e,
+      query: t,
+      onChange: n,
+      ref: r,
+      placeholder: T.default.Messages.SEARCH
+    })
+  }, "experiments-search"), (0, u.jsx)(d.MenuSeparator, {}, "separator"), ...M, M.length > 0 ? (0, u.jsx)(d.MenuSeparator, {}, "separator-2") : null, ...p]
 }

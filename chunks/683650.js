@@ -6,21 +6,19 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("803997"),
+var a = n("120356"),
   l = n.n(a),
   i = n("481060"),
   r = n("230711"),
-  o = n("37303"),
+  o = n("266843"),
   u = n("981631"),
   d = n("689938"),
-  c = n("780134"),
+  c = n("544681"),
   f = n("87181");
 
 function E() {
-  return (0, s.jsx)(i.TooltipContainer, {
-    text: d.default.Messages.GIFT_INVENTORY,
+  return (0, s.jsx)("div", {
     className: c.buttonContainer,
-    tooltipContentClassName: c.__invalid_giftInventoryButtonTooltipCopy,
     children: (0, s.jsx)(i.Button, {
       className: c.button,
       color: i.ButtonColors.BRAND_NEW,

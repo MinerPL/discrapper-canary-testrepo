@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return I
+    return N
   }
 }), s("47120");
 var a = s("735250");
@@ -17,10 +17,10 @@ var n = s("481060"),
   S = s("695346"),
   E = s("981631"),
   T = s("689938"),
-  _ = s("876045"),
-  f = s("794711");
+  f = s("296147"),
+  m = s("949086");
 
-function m() {
+function _() {
   let e = S.ShowCurrentGame.useSetting(),
     t = S.DefaultGuildsActivityRestricted.useSetting(),
     s = u.isPlatformEmbedded ? T.default.Messages.SHOW_CURRENT_ACTIVITY_DESC_EMBEDDED : T.default.Messages.SHOW_CURRENT_ACTIVITY_DESC,
@@ -44,10 +44,10 @@ function m() {
       }(e)
     };
   return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
+    className: m.marginBottom40,
     children: [(0, a.jsx)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
+      className: m.marginBottom8,
       children: T.default.Messages.ACTIVITY_STATUS
     }), (0, a.jsx)(n.FormSwitch, {
       value: e,
@@ -69,10 +69,10 @@ function g() {
   let e = S.AllowActivityPartyPrivacyFriends.useSetting(),
     t = S.AllowActivityPartyPrivacyVoiceChannel.useSetting();
   return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
+    className: m.marginBottom40,
     children: [(0, a.jsx)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
+      className: m.marginBottom8,
       children: T.default.Messages.ACTIVITY_PARTY_PRIVACY
     }), (0, a.jsx)(n.FormSwitch, {
       value: e,
@@ -90,16 +90,16 @@ function g() {
 
 function h() {
   return (0, a.jsxs)(n.FormSection, {
-    className: f.marginBottom40,
+    className: m.marginBottom40,
     children: [(0, a.jsxs)(n.FormTitle, {
       tag: n.FormTitleTags.H5,
-      className: f.marginBottom8,
+      className: m.marginBottom8,
       children: [T.default.Messages.BROADCASTING_SETTINGS, (0, a.jsx)(i.default, {
-        className: _.betaTag
+        className: f.betaTag
       })]
     }), (0, a.jsx)(n.FormText, {
       type: n.FormText.Types.DESCRIPTION,
-      className: f.marginBottom20,
+      className: m.marginBottom20,
       children: T.default.Messages.BROADCASTING_SETTINGS_DESCRIPTION
     }), (0, a.jsx)(n.FormItem, {
       children: (0, a.jsx)(n.Button, {
@@ -111,9 +111,9 @@ function h() {
   })
 }
 
-function N() {
+function I() {
   return (0, a.jsx)(n.FormSection, {
-    className: f.marginBottom40,
+    className: m.marginBottom40,
     children: (0, a.jsx)(n.FormNotice, {
       type: n.FormNotice.Types.PRIMARY,
       body: T.default.Messages.USER_SETTINGS_PRIVACY_TERMS.format({
@@ -124,17 +124,21 @@ function N() {
   })
 }
 
-function I() {
+function N(e) {
   let {
-    canBroadcast: e
+    className: t,
+    showHeader: s = !0
+  } = e, {
+    canBroadcast: i
   } = l.default.useExperiment({
     location: "user_settings_activity_privacy"
   }, {
     autoTrackExposure: !0
   });
   return (0, a.jsxs)(n.FormSection, {
+    className: t,
     tag: n.FormTitleTags.H1,
-    title: T.default.Messages.ACTIVITY_PRIVACY,
-    children: [(0, a.jsx)(m, {}), (0, a.jsx)(g, {}), e && (0, a.jsx)(h, {}), (0, a.jsx)(N, {})]
+    title: s ? T.default.Messages.ACTIVITY_PRIVACY : null,
+    children: [(0, a.jsx)(_, {}), (0, a.jsx)(g, {}), i && (0, a.jsx)(h, {}), (0, a.jsx)(I, {})]
   })
 }

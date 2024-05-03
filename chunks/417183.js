@@ -2,14 +2,14 @@
 n.r(t), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("748780"),
   o = n("924826"),
   u = n("481060"),
   d = n("239091"),
   c = n("617015"),
-  f = n("886795");
+  f = n("419690");
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -102,7 +102,7 @@ class h extends s.PureComponent {
       }), (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("64409")]).then(n.bind(n, "881351"));
+        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t

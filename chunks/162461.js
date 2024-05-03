@@ -1,39 +1,48 @@
 "use strict";
 n.r(t), n.d(t, {
   isEligibleForContentInventoryV1: function() {
-    return a
+    return s
+  },
+  isEligibleForListenedMediaInventory: function() {
+    return d
   }
 });
 var i = n("818083");
 let r = (0, i.createExperiment)({
     kind: "user",
-    id: "2024-02_v1_content_inventory_feed",
-    label: "V1 Feed of the content inventory",
+    id: "2024-03_content_inventory_memberlist_and_ranker",
+    label: "Enables the memberlist content feed",
     defaultConfig: {
       enabled: !1
     },
     treatments: [{
       id: 1,
-      label: "Show feed",
+      label: "Recency",
+      config: {
+        enabled: !0
+      }
+    }, {
+      id: 2,
+      label: "Heuristic",
       config: {
         enabled: !0
       }
     }]
   }),
-  s = (0, i.createExperiment)({
+  a = (0, i.createExperiment)({
     kind: "user",
-    id: "2024-03_content_inventory_surface_holdout",
-    label: "Content Inventory Surface Holdout",
+    id: "2024-03_content_inventory_ranker_client_dummy",
+    label: "Tracks exposure for which ranker bucket the user is in. This is here to test an exposure bug",
     defaultConfig: {},
-    treatments: []
+    treatments: [{
+      id: 1,
+      label: "Heuristic",
+      config: {}
+    }]
   });
 
-function a(e) {
-  s.getCurrentConfig({
-    location: e
-  }, {
-    autoTrackExposure: !0
-  }), l.getCurrentConfig({
+function s(e) {
+  l.getCurrentConfig({
     location: e
   }, {
     autoTrackExposure: !0
@@ -49,8 +58,18 @@ function a(e) {
   }, {
     autoTrackExposure: !0
   });
-  return t
-}
+  return t && a.getCurrentConfig({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  }), t
+}(0, i.createExperiment)({
+  kind: "user",
+  id: "2024-03_content_inventory_surface_holdout",
+  label: "Content Inventory Surface Holdout",
+  defaultConfig: {},
+  treatments: []
+});
 let o = (0, i.createExperiment)({
     kind: "user",
     id: "2024-03_holdout_bug_main_wrong_way",
@@ -72,4 +91,30 @@ let o = (0, i.createExperiment)({
       label: "Treament",
       config: {}
     }]
-  })
+  }),
+  u = (0, i.createExperiment)({
+    kind: "user",
+    id: "2024-04_content_inventory_listened_media",
+    label: "Content Inventory: LISTENED_MEDIA",
+    defaultConfig: {
+      enabled: !1
+    },
+    treatments: [{
+      id: 1,
+      label: "Enabled",
+      config: {
+        enabled: !0
+      }
+    }]
+  });
+
+function d(e) {
+  let {
+    enabled: t
+  } = u.getCurrentConfig({
+    location: e
+  }, {
+    autoTrackExposure: !0
+  });
+  return t
+}

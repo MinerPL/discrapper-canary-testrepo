@@ -4,7 +4,7 @@
       n = a("266067"),
       c = a("38618"),
       i = a("57132"),
-      o = a("528097"),
+      o = a("215355"),
       r = a("777639"),
       f = a("311163"),
       l = a("272423"),
@@ -35,8 +35,8 @@
         let {
           pathname: b
         } = e, h = (0, r.getRootNavigationRef)(), m = (0, i.isInMainTabsExperiment)(), {
-          showYouBar: _
-        } = (0, o.getNavYouBarExperiment)({
+          mergeTabs: _
+        } = (0, o.getMergedTabsExperiment)({
           location: "convertRouteToNavigation"
         });
         if (null == h || !h.isReady()) return;
@@ -74,7 +74,7 @@
               voiceChannelId: a,
               voiceMessageId: d
             } = t.params;
-            (0, u.isOldVoiceUIEnabled)() && (0, l.navigateToChannel)({
+            !(0, u.isVoicePanelEnabled)() && (0, l.navigateToChannel)({
               channelId: a,
               guildId: e,
               messageId: d,

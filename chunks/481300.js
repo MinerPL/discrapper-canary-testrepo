@@ -13,7 +13,7 @@ var i = n("481060"),
 
 function r(e, t) {
   return null != t && (0, l.isMediaObscured)({
-    type: l.ObscuredMediaTypes.Attachment,
+    type: l.ObscuredMediaTypes.GenericMedia,
     media: t
   }, (0, l.shouldRedactExplicitContent)(e)) ? (0, a.jsx)(i.MenuItem, {
     id: "report-image-false-positive",
@@ -26,7 +26,7 @@ function r(e, t) {
         return n => (0, a.jsx)(i, {
           channelId: e.channel_id,
           messageId: e.id,
-          attachmentId: t.id,
+          mediaItemUrl: t.url,
           ...n
         })
       })

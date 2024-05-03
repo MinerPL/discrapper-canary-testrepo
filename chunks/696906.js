@@ -2,14 +2,14 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("512722"),
-  a = n.n(s),
+  a = n("512722"),
+  s = n.n(a),
   o = n("442837"),
   l = n("570140"),
   u = n("821849"),
   d = n("906732"),
   _ = n("887706"),
-  c = n("59162"),
+  c = n("724870"),
   E = n("594174"),
   I = n("509545"),
   T = n("270144"),
@@ -21,22 +21,22 @@ var i = n("735250"),
 t.default = e => {
   var t;
   let n, {
-      listing: s,
+      listing: a,
       guildId: N,
-      groupListingId: O,
-      analyticsLocation: p,
+      groupListingId: p,
+      analyticsLocation: O,
       showBenefitsFirst: R,
       onComplete: C,
       forcesTransitionToGuild: g
     } = e,
-    L = null == s ? void 0 : s.subscription_plans[0],
-    D = null == s ? void 0 : s.application_id,
-    v = null == L ? void 0 : L.id,
-    M = (null == s ? void 0 : s.published) === !0,
+    L = null == a ? void 0 : a.subscription_plans[0],
+    v = null == a ? void 0 : a.application_id,
+    D = null == L ? void 0 : L.id,
+    M = (null == a ? void 0 : a.published) === !0,
     y = null == L ? void 0 : L.sku_id,
-    P = (0, o.useStateFromStores)([I.default], () => null != v ? I.default.get(v) : null),
-    U = (0, T.useApplication)(D),
-    b = (0, T.useSubscriptionListingsForGroup)(O, {
+    P = (0, o.useStateFromStores)([I.default], () => null != D ? I.default.get(D) : null),
+    U = (0, T.useApplication)(v),
+    b = (0, T.useSubscriptionListingsForGroup)(p, {
       includeSoftDeleted: !0
     }).map(e => e.subscription_plans[0].id),
     {
@@ -44,17 +44,17 @@ t.default = e => {
     } = (0, d.default)(),
     {
       activeSubscription: w,
-      activeEntitlement: k
-    } = (0, T.useActiveSubscriptionListingForApplication)(D, N),
-    B = (0, T.useEligibleApplicationSubscriptionGuilds)(D, N),
+      activeEntitlement: B
+    } = (0, T.useActiveSubscriptionListingForApplication)(v, N),
+    k = (0, T.useEligibleApplicationSubscriptionGuilds)(v, N),
     V = (0, _.default)(),
-    F = null != s && (0, f.isApplicationUserSubscription)(s.sku_flags),
-    x = null != k && k.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
-    H = null == k || x,
-    Y = null == k || b.length > 1,
-    j = null != N || B.length > 0,
-    W = F && x,
-    K = null != P && null != U && H && Y && (j || F) && !W;
+    x = null != a && (0, f.isApplicationUserSubscription)(a.sku_flags),
+    F = null != B && B.userId === (null === (t = E.default.getCurrentUser()) || void 0 === t ? void 0 : t.id),
+    H = null == B || F,
+    Y = null == B || b.length > 1,
+    j = null != N || k.length > 0,
+    W = x && F,
+    K = null != P && null != U && H && Y && (j || x) && !W;
   return H ? j ? W && null != P && (n = m.default.Messages.APPLICATION_USER_SUBSCRIPTION_ALREADY_SUBSCRIBED.format({
     tierName: P.name
   })) : n = m.default.Messages.APPLICATION_SUBSCRIPTION_NO_GUILD_AVAILABLE : n = m.default.Messages.APPLICATION_SUBSCRIPTIONS_CANNOT_MANAGE_SUBSCRIPTION, r.useEffect(() => {
@@ -63,13 +63,13 @@ t.default = e => {
     })
   }, [M, y, V]), {
     openModal: r.useCallback(() => {
-      a()(null != U, "No application"), a()(null != L, "No subscription plan"), a()(M, "Cannot purchase this unpublished plan");
+      s()(null != U, "No application"), s()(null != L, "No subscription plan"), s()(M, "Cannot purchase this unpublished plan");
       let e = () => {
         (0, c.openApplicationPaymentModal)({
           activeSubscription: w,
           analyticsSubscriptionType: A.SubscriptionTypes.APPLICATION,
           analyticsLocations: G,
-          analyticsLocation: p,
+          analyticsLocation: O,
           renderHeader: (e, t, n) => (0, i.jsx)(S.PurchaseHeader, {
             step: n,
             onClose: () => t(!1)
@@ -77,7 +77,7 @@ t.default = e => {
           initialPlanId: L.id,
           skuId: L.sku_id,
           guildId: N,
-          eligibleApplicationSubscriptionGuilds: B,
+          eligibleApplicationSubscriptionGuilds: k,
           planGroup: b,
           applicationId: U.id,
           showBenefitsFirst: R,
@@ -85,12 +85,12 @@ t.default = e => {
           forcesTransitionToGuild: g
         })
       };
-      !j && F ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
+      !j && x ? (0, h.confirmNoSharedServerSubscribeWarningModal)({
         applicationName: U.name,
         onConfirm: e,
         onCancel: () => {}
       }) : e()
-    }, [M, L, b, U, N, j, F, G, p, w, R, B, C, g]),
+    }, [M, L, b, U, N, j, x, G, O, w, R, k, C, g]),
     canOpenModal: K,
     cannotOpenReason: n
   }

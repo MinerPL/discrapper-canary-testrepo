@@ -9,8 +9,8 @@ n.r(t), n.d(t, {
 });
 var i = n("544891"),
   r = n("570140"),
-  s = n("626135"),
-  a = n("70956"),
+  a = n("626135"),
+  s = n("70956"),
   o = n("981631");
 async function l(e, t, n) {
   let l, u = 0;
@@ -22,7 +22,10 @@ async function l(e, t, n) {
       l = o.Endpoints.APPLICATION_COMMAND_INDEX_GUILD(e.guildId);
       break;
     case "user":
-      l = o.Endpoints.APPLICATION_COMMAND_INDEX_USER
+      l = o.Endpoints.APPLICATION_COMMAND_INDEX_USER;
+      break;
+    case "application":
+      l = o.Endpoints.APPLICATION_COMMAND_INDEX_APPLICATION(e.applicationId)
   }
   let d = async t => u >= 3 ? (c(!0), r.default.dispatch({
     type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
@@ -41,13 +44,13 @@ async function l(e, t, n) {
       c(!0);
       return
     }
-    return 429 === t.status ? d(t.body.retry_after * a.default.Millis.SECOND) : (c(!0), r.default.dispatch({
+    return 429 === t.status ? d(t.body.retry_after * s.default.Millis.SECOND) : (c(!0), r.default.dispatch({
       type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE",
       target: e
     }))
   }), c = e => {
     let i = performance.now() - t;
-    s.default.track(o.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
+    a.default.track(o.AnalyticEvents.APPLICATION_COMMAND_PERFORMANCE, {
       duration_ms: i,
       error: e,
       aborted: n.signal.aborted,
@@ -61,9 +64,11 @@ async function l(e, t, n) {
 }
 
 function u(e) {
+  let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
   r.default.dispatch({
     type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST",
     start: performance.now(),
-    target: e
+    target: e,
+    canFetch: t
   })
 }

@@ -1,16 +1,16 @@
 "use strict";
 r.r(t), r("47120");
-var a = r("979590"),
-  o = r.n(a),
-  n = r("399606"),
+var o = r("979590"),
+  n = r.n(o),
+  a = r("399606"),
   l = r("607070"),
   s = r("168631");
 let i = (e, t) => {
     let r = e.toRgb(),
-      a = t.toRgb(),
-      [n, l, i] = (0, s.getValueInColorGradientByPercentage)([r.r, r.g, r.b], [a.r, a.g, a.b], 50);
-    return o()({
-      r: n,
+      o = t.toRgb(),
+      [a, l, i] = (0, s.getValueInColorGradientByPercentage)([r.r, r.g, r.b], [o.r, o.g, o.b], 50);
+    return n()({
+      r: a,
       g: l,
       b: i
     })
@@ -42,39 +42,37 @@ let i = (e, t) => {
   d = (e, t) => {
     let {
       h: r,
-      s: a,
-      l: n
+      s: o,
+      l: a
     } = e.toHsl();
-    return o()({
+    return n()({
       h: r,
-      s: a * t,
-      l: n
+      s: o * t,
+      l: a
     })
   };
 t.default = e => t => {
-  let r = (0, n.useStateFromStores)([l.default], () => l.default.saturation);
+  let r = (0, a.useStateFromStores)([l.default], () => l.default.saturation);
   if (null == t) return {};
-  let a = {
+  let o = {
     backgroundColors: c(e, t.backgroundColors),
     buttonColors: u(e, t.buttonColors),
     confettiColors: t.confettiColors
   };
   return 1 === r ? {
-    ...a,
-    isDarkText: !!(null != a.backgroundColors && a.backgroundColors.secondary.isLight())
+    ...o
   } : {
-    backgroundColors: null != a.backgroundColors ? {
-      primary: d(a.backgroundColors.primary, r),
-      secondary: d(a.backgroundColors.secondary, r),
-      border: d(a.backgroundColors.border, r),
-      label: d(a.backgroundColors.label, r)
+    backgroundColors: null != o.backgroundColors ? {
+      primary: d(o.backgroundColors.primary, r),
+      secondary: d(o.backgroundColors.secondary, r),
+      border: d(o.backgroundColors.border, r),
+      label: d(o.backgroundColors.label, r)
     } : void 0,
-    buttonColors: null != a.buttonColors ? {
-      primary: d(a.buttonColors.primary, r),
-      secondary: d(a.buttonColors.secondary, r),
-      text: d(a.buttonColors.text, r)
+    buttonColors: null != o.buttonColors ? {
+      primary: d(o.buttonColors.primary, r),
+      secondary: d(o.buttonColors.secondary, r),
+      text: d(o.buttonColors.text, r)
     } : void 0,
-    confettiColors: a.confettiColors.map(e => d(e, r)),
-    isDarkText: !!(null != a.backgroundColors && a.backgroundColors.secondary.isLight())
+    confettiColors: o.confettiColors.map(e => d(e, r))
   }
 }

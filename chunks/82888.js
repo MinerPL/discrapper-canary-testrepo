@@ -31,7 +31,7 @@ function h(e) {
       connectedActivity: null != t && null !== (e = u.default.getSelfEmbeddedActivityForChannel(t)) && void 0 !== e ? e : void 0,
       activityPanelMode: u.default.getActivityPanelMode()
     }
-  }), E = (0, r.useIsActivitiesInTextEnabled)(h, "ActivityPanelUI"), C = (0, i.default)(h);
+  }), E = (0, r.useIsActivitiesInTextEnabled)(h, !1, "ActivityPanelUI"), C = (0, i.default)(h);
   if (l.useEffect(() => {
       null != h && null == C && (0, o.updateFocusedActivityLayout)(f.FocusedActivityLayouts.RESIZABLE)
     }, [h, C]), !E) return null;

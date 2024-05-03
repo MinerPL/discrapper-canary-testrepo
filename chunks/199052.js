@@ -6,14 +6,14 @@ n.r(t), n.d(t, {
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("695464"),
-  o = n("89405");
+  o = n("708673");
 let u = 16 / 9;
 
 function d(e, t) {
-  return Math.floor((t - e) / (8 + e)) + 1
+  return Math.max(1, Math.floor((t - e) / (8 + e)) + 1)
 }
 
 function c(e, t, n) {
@@ -43,8 +43,8 @@ function f(e) {
   } = p, S = null !== (t = null == s ? void 0 : s.length) && void 0 !== t ? t : 0, _ = C - 16, T = g - (h + m), {
     tileStyle: I,
     tileWidth: A,
-    rows: v,
-    columns: N
+    rows: N,
+    columns: v
   } = l.useMemo(() => (function(e, t, n) {
     let {
       rows: a,
@@ -84,25 +84,25 @@ function f(e) {
       rows: a,
       columns: l
     }
-  })(S, _, T), [S, _, T]), x = N + 1, M = x * A + (x - 1) * 8 <= C, R = Math.floor(A / u) + 8, L = Math.max(0, T - R * v) / 2;
+  })(S, _, T), [S, _, T]), x = v + 1, M = x * A + (x - 1) * 8 <= C, R = Math.floor(A / u) + 8, L = Math.max(0, T - R * N) / 2;
   return (0, a.jsx)(r.default, {
     fade: !0,
     className: n,
     listPadding: [h + L, 0, m + L - 8, 8],
     renderRow: function(e) {
       var t;
-      let n = e * N;
+      let n = e * v;
       return (0, a.jsx)("div", {
         className: o.row,
-        children: null == s ? void 0 : null === (t = s.slice(n, n + N)) || void 0 === t ? void 0 : t.map((e, t) => {
+        children: null == s ? void 0 : null === (t = s.slice(n, n + v)) || void 0 === t ? void 0 : t.map((e, t) => {
           var l;
           let s = n + t;
           return (0, a.jsx)("div", {
             style: I,
             className: i()(o.tile, {
               [o.padColumn]: M,
-              [o.noVerticalMargin]: s >= (v - 1) * N,
-              [o.noHorizontalMargin]: (s + 1) % N == 0 || s === S - 1
+              [o.noVerticalMargin]: s >= (N - 1) * v,
+              [o.noHorizontalMargin]: (s + 1) % v == 0 || s === S - 1
             }),
             children: (0, a.jsx)("div", {
               className: o.tileSizer,
@@ -112,8 +112,8 @@ function f(e) {
         })
       }, e)
     },
-    rowCount: v,
-    rowCountBySection: [v],
+    rowCount: N,
+    rowCountBySection: [N],
     rowHeight: R,
     onResize: E
   })

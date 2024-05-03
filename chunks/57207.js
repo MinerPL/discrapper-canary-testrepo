@@ -9,19 +9,20 @@ n.r(t), n.d(t, {
 });
 var i = n("399606"),
   r = n("524437"),
-  s = n("314897"),
-  a = n("70956"),
+  a = n("314897"),
+  s = n("70956"),
   o = n("709054");
 let l = {
     [r.DismissibleContent.MJ_NEW_USER_CHAT_BAR]: 0,
     [r.DismissibleContent.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
     [r.DismissibleContent.SEEN_LAUNCH_WELCOME]: 0,
-    [r.DismissibleContent.SEEN_OLD_DESIGN]: 0
+    [r.DismissibleContent.SEEN_OLD_DESIGN]: 0,
+    [r.DismissibleContent.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0
   },
-  u = a.default.Millis.DAY;
+  u = s.default.Millis.DAY;
 
 function d(e) {
-  let t = (0, i.useStateFromStores)([s.default], () => s.default.getId()),
+  let t = (0, i.useStateFromStores)([a.default], () => a.default.getId()),
     n = null != t ? o.default.age(t) : 0;
   return e.filter(e => {
     var t;
@@ -31,6 +32,6 @@ function d(e) {
 
 function _(e) {
   var t;
-  let n = null != s.default.getId() ? o.default.age(s.default.getId()) : 0;
+  let n = null != a.default.getId() ? o.default.age(a.default.getId()) : 0;
   return n < (null !== (t = l[e]) && void 0 !== t ? t : u)
 }

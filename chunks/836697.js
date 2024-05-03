@@ -1,59 +1,62 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 }), n("47120"), n("653041");
 var l = n("735250"),
   a = n("470079"),
   s = n("442837"),
-  i = n("693546"),
-  r = n("937111"),
-  o = n("914010"),
-  u = n("729565"),
-  d = n("289090"),
-  c = n("727258"),
-  f = n("234383"),
-  h = n("179809"),
-  C = n("588275"),
-  p = n("689938"),
-  m = n("303335");
+  i = n("110924"),
+  r = n("693546"),
+  o = n("937111"),
+  u = n("914010"),
+  d = n("729565"),
+  c = n("289090"),
+  f = n("727258"),
+  h = n("234383"),
+  p = n("179809"),
+  m = n("588275"),
+  C = n("689938"),
+  g = n("467691");
 
-function g() {
-  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([o.default], () => o.default.getGuildId()), g = (0, s.useStateFromStores)([r.default], () => r.default.hasFetchedRequestToJoinGuilds), E = (0, f.default)(), S = a.useMemo(() => {
-    let t = (0, c.createFolderNode)({
-      folderId: d.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
-      folderName: p.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
+function E() {
+  let [e, t] = a.useState(!1), n = (0, s.useStateFromStores)([u.default], () => u.default.getGuildId()), E = (0, s.useStateFromStores)([o.default], () => o.default.hasFetchedRequestToJoinGuilds), _ = (0, h.default)(), S = (0, i.default)(n), I = a.useMemo(() => {
+    let t = (0, f.createFolderNode)({
+      folderId: c.SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER,
+      folderName: C.default.Messages.MEMBER_VERIFICATION_FOLDER_NAME,
       expanded: e,
       guildIds: []
     });
-    for (let e of E) t.children.push((0, c.createGuildNode)(e, t.id));
+    for (let e of _) t.children.push((0, f.createGuildNode)(e, t.id));
     return t
-  }, [E, e]);
-  if (a.useEffect(() => {
-      e && !g && i.default.fetchRequestToJoinGuilds()
-    }, [e, g]), 0 === E.length) return null;
-  let _ = null != n && E.includes(n);
-  return (0, l.jsx)(h.default, {
-    folderNode: S,
+  }, [_, e]);
+  a.useEffect(() => {
+    e && !E && r.default.fetchRequestToJoinGuilds()
+  }, [e, E]);
+  let N = null != n && _.includes(n);
+  return (a.useEffect(() => {
+    !e && N && S !== n && t(!0)
+  }, [e, N, S, n]), 0 === _.length) ? null : (0, l.jsx)(p.default, {
+    folderNode: I,
     expanded: e,
-    useCircleMask: !e && !_,
-    selected: _,
+    useCircleMask: !e && !N,
+    selected: N,
     draggable: !1,
     sorting: !1,
     onExpandCollapse: () => t(!e),
     folderIconContent: (0, l.jsx)("div", {
-      className: m.__invalid_expandedFolderIconWrapper,
-      children: (0, l.jsx)(u.default, {
+      className: g.__invalid_expandedFolderIconWrapper,
+      children: (0, l.jsx)(d.default, {
         width: 24,
         height: 24,
-        className: m.pendingIcon
+        className: g.pendingIcon
       })
     }),
     renderChildNode: function(e) {
-      return e.type !== c.GuildsNodeType.GUILD ? null : (0, l.jsx)(C.default, {
+      return e.type !== f.GuildsNodeType.GUILD ? null : (0, l.jsx)(m.default, {
         guildNode: e
-      })
+      }, e.id)
     }
   })
 }

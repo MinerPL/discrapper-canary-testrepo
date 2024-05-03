@@ -21,8 +21,8 @@ var a = s("735250"),
   f = s("783454"),
   m = s("981631"),
   N = s("689938"),
-  g = s("606353"),
-  h = s("551082");
+  g = s("747716"),
+  h = s("30354");
 
 function C(e) {
   let {
@@ -34,8 +34,8 @@ function C(e) {
     return null === (e = E.default.getSubscriptionListing(s)) || void 0 === e ? void 0 : e.image_asset
   }), [R, x] = T.useName(s), [L, O] = T.usePriceTier(s), [A, p] = T.useDescription(s), [M, D] = T.useImage(s, 1024), {
     imageCTA: v,
-    imageAriaLabel: j,
-    setFilename: G
+    imageAriaLabel: G,
+    setFilename: j
   } = (0, S.default)(C), U = l.useMemo(() => {
     var e;
     return null !== (e = null == t ? void 0 : t.map(e => ({
@@ -45,7 +45,7 @@ function C(e) {
   }, [t]);
 
   function P(e, t) {
-    null != t && G(t.name), D(e)
+    null != t && j(t.name), D(e)
   }
   let b = (0, _.useRoleSubscriptionSettingsDisabled)(),
     B = (0, d.useUID)(),
@@ -122,7 +122,7 @@ function C(e) {
         }), (0, a.jsx)(u.default, {
           onChange: P,
           buttonCTA: v,
-          "aria-label": j,
+          "aria-label": G,
           disabled: b,
           look: i.Button.Looks.OUTLINED,
           color: i.Button.Colors.PRIMARY
@@ -136,7 +136,7 @@ function C(e) {
         className: h.iconUploader,
         imageClassName: h.tierSymbolUploaderInner,
         onChange: P,
-        "aria-label": j,
+        "aria-label": G,
         disabled: b
       })]
     })]

@@ -9,11 +9,11 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("479446"),
-  a = n("646476"),
+  a = n("479446"),
+  s = n("646476"),
   o = n("975104"),
   l = n("669079"),
-  u = n("598"),
+  u = n("563132"),
   d = n("474936"),
   _ = n("689938");
 let c = d.PremiumGiftStyles.STANDARD_BOX,
@@ -28,22 +28,22 @@ function S(e) {
     children: T
   } = e, {
     selectedSkuId: f
-  } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, O] = r.useState(!1), p = (0, l.shouldShowCustomGiftExperience)(S), R = (0, a.useIsSeasonalGiftingActive)(), {
+  } = (0, u.usePaymentContext)(), [S, h] = r.useState(n), [A, m] = r.useState(), [N, p] = r.useState(!1), O = (0, l.shouldShowCustomGiftExperience)(S), R = (0, s.useIsSeasonalGiftingActive)(), {
     enabled: C
-  } = a.default.useExperiment({
+  } = s.default.useExperiment({
     location: "PaymentContextProvider"
   }, {
-    autoTrackExposure: p && R
-  }), [g, L] = r.useState(p ? C && R ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : c : E), [D, v] = r.useState(t && (0, l.getGiftExperience)(S) === l.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? _.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [M, y] = r.useState(void 0), [P, U] = r.useState(void 0), b = (0, l.useGetGiftCode)(f, t), [G, w] = r.useState(!1), [k, B] = r.useState(!1), [V, F] = r.useState(), x = r.useCallback(e => {
+    autoTrackExposure: O && R
+  }), [g, L] = r.useState(O ? C && R ? d.PremiumGiftStyles.SEASONAL_STANDARD_BOX : c : E), [v, D] = r.useState(t && (0, l.getGiftExperience)(S) === l.GiftExperience.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD ? _.default.Messages.DEFAULT_CUSTOM_GIFT_MESSAGE : o), [M, y] = r.useState(void 0), [P, U] = r.useState(void 0), b = (0, l.useGetGiftCode)(f, t), [G, w] = r.useState(!1), [B, k] = r.useState(!1), [V, x] = r.useState(), F = r.useCallback(e => {
     let {
       onSubscriptionConfirmation: t
     } = e;
-    return B(!0), (0, s.sendGiftMessage)(S, b).then(() => {
-      B(!1), null == t || t(), w(!0)
+    return k(!0), (0, a.sendGiftMessage)(S, b).then(() => {
+      k(!1), null == t || t(), w(!0)
     }).catch(e => {
-      B(!1), F(e), w(!0)
+      k(!1), x(e), w(!0)
     })
-  }, [S, b, B, w, F]);
+  }, [S, b, k, w, x]);
   return (0, i.jsx)(I.Provider, {
     value: {
       isGift: t,
@@ -54,18 +54,18 @@ function S(e) {
       giftRecipientError: A,
       setGiftRecipientError: m,
       validatingGiftRecipient: N,
-      setValidatingGiftRecipient: O,
+      setValidatingGiftRecipient: p,
       soundEffect: M,
       setSoundEffect: y,
       emojiConfetti: P,
       setEmojiConfetti: U,
-      customGiftMessage: D,
-      setCustomGiftMessage: v,
+      customGiftMessage: v,
+      setCustomGiftMessage: D,
       selectedGiftStyle: g,
       setSelectedGiftStyle: L,
-      sendGiftMessage: x,
+      sendGiftMessage: F,
       hasSentMessage: G,
-      isSendingMessage: k,
+      isSendingMessage: B,
       giftMessageError: V
     },
     children: T

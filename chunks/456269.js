@@ -110,15 +110,15 @@ var n = u("470079"),
   O = u("709054"),
   R = u("883429"),
   P = u("238349"),
-  b = u("368844"),
-  U = u("660189"),
+  U = u("368844"),
+  b = u("660189"),
   y = u("581036"),
   D = u("208970"),
   L = u("882252"),
   w = u("710352"),
   G = u("981631"),
-  j = u("176505"),
-  k = u("124368");
+  k = u("176505"),
+  j = u("124368");
 let H = (0, f.default)({
   id: "2023-01_forums_non_community",
   label: "Forum non-community",
@@ -176,7 +176,7 @@ function W(e) {
   return (0, i.useStateFromStores)([S.default, _.default], () => {
     let t = r()(S.default.getThreadsForParent(e.guild_id, e.parent_id)).keys().filter(e => {
       var t;
-      return (null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(j.ChannelFlags.PINNED)) === !0
+      return (null === (t = _.default.getChannel(e)) || void 0 === t ? void 0 : t.hasFlag(k.ChannelFlags.PINNED)) === !0
     }).head();
     return _.default.getChannel(t)
   })
@@ -258,7 +258,7 @@ function Z(e) {
       if (null == u || !(u > 0)) return "1+";
       {
         let e = Math.min(u, t);
-        return e >= k.MAX_THREAD_UNREAD_MESSAGE_COUNT ? "".concat(k.MAX_THREAD_UNREAD_MESSAGE_COUNT, "+") : e
+        return e >= j.MAX_THREAD_UNREAD_MESSAGE_COUNT ? "".concat(j.MAX_THREAD_UNREAD_MESSAGE_COUNT, "+") : e
       }
     });
   return {
@@ -272,9 +272,9 @@ function Z(e) {
 function $(e) {
   var t;
   let u = (0, i.useStateFromStores)([I.default], () => I.default.getUser(e.ownerId)),
-    l = (0, i.useStateFromStores)([U.default], () => {
+    l = (0, i.useStateFromStores)([b.default], () => {
       var t;
-      return null === (t = U.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage
+      return null === (t = b.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage
     }),
     r = (0, m.useNullableUserAuthor)(null !== (t = null == l ? void 0 : l.author) && void 0 !== t ? t : u, e);
   return n.useEffect(() => {
@@ -288,7 +288,7 @@ function $(e) {
 function ee(e) {
   var t, u;
   let n = I.default.getUser(e.ownerId),
-    l = null === (t = U.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage,
+    l = null === (t = b.default.getMessage(e.id)) || void 0 === t ? void 0 : t.firstMessage,
     r = (0, m.getUserAuthor)(null !== (u = null == l ? void 0 : l.author) && void 0 !== u ? u : n, e);
   return {
     user: n,
@@ -319,7 +319,7 @@ function eu(e) {
   }) : {
     hasSpoilerEmbeds: !1,
     content: null
-  }, [t, u, l]), i = (0, b.useFindFirstMediaProperties)(t, r), o = (0, b.useFirstMediaIsEmbed)(t, r);
+  }, [t, u, l]), i = (0, U.useFindFirstMediaProperties)(t, r), o = (0, U.useFirstMediaIsEmbed)(t, r);
   return {
     hasSpoilerEmbeds: r,
     content: a,
@@ -420,17 +420,19 @@ function em(e, t) {
     let n = g.default.getActiveJoinedUnreadThreadsForParent(e, t),
       l = g.default.getActiveUnjoinedUnreadThreadsForParent(e, t),
       r = p.default.ackMessageId(t),
-      a = Object.values(n).filter(e => {
-        if (null == r) return !1;
-        let t = p.default.lastMessageId(e.channel.id);
-        return null != t && t > r
-      }),
-      i = Object.values(l).filter(e => {
-        if (null == r) return !1;
-        let t = p.default.lastMessageId(e.id);
-        return null != t && t > r
-      });
-    return a.length + i.length
+      a = 0;
+    if (null == r) return a;
+    for (let e in n) {
+      let t = n[e],
+        u = p.default.lastMessageId(t.channel.id);
+      null != u && u > r && a++
+    }
+    for (let e in l) {
+      let t = l[e],
+        u = p.default.lastMessageId(t.id);
+      null != u && u > r && a++
+    }
+    return a
   })
 }
 

@@ -10,20 +10,20 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("952265"),
-  s = n("723359"),
-  a = n("231338");
+  a = n("723359"),
+  s = n("231338");
 
 function o(e) {
   (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("20727"), n.e("71053")]).then(n.bind(n, "298237"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("20727")]).then(n.bind(n, "298237"));
     return t => (0, i.jsx)(e, {
       ...t
     })
   }, {
-    modalKey: s.NEW_USER_AGE_GATE_MODAL_KEY,
-    onCloseRequest: a.NOOP,
+    modalKey: a.NEW_USER_AGE_GATE_MODAL_KEY,
+    onCloseRequest: s.NOOP,
     onCloseCallback: e
   })
 }
@@ -40,7 +40,7 @@ function l() {
       ...n
     })
   }, {
-    onCloseRequest: e ? a.NOOP : null,
+    onCloseRequest: e ? s.NOOP : null,
     onCloseCallback: t
   })
 }

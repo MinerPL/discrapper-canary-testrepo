@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("481060"),
   o = n("239091"),
@@ -16,7 +16,7 @@ var a = n("735250"),
   f = n("103575"),
   h = n("409216"),
   m = n("768581"),
-  p = n("777906");
+  p = n("781930");
 
 function E(e) {
   let {
@@ -31,7 +31,7 @@ function E(e) {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
       return n => (0, a.jsx)(e, {
         ...n,
         user: s.user,
@@ -46,7 +46,7 @@ function E(e) {
     })
   };
   return (0, a.jsx)(r.Popout, {
-    preload: () => (0, c.default)(s.user.id, s.user.getAvatarURL(t.guild_id, 80), {
+    preload: () => (0, c.maybeFetchUserProfileForPopout)(s.user, {
       guildId: t.guild_id,
       channelId: t.id
     }),

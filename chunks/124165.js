@@ -13,8 +13,8 @@ n.r(t), n.d(t, {
     return I
   }
 });
-var i, r, s = n("314897"),
-  a = n("924301"),
+var i, r, a = n("314897"),
+  s = n("924301"),
   o = n("894017"),
   l = n("79874"),
   u = n("854698"),
@@ -22,8 +22,8 @@ var i, r, s = n("314897"),
   _ = n("689938");
 
 function c(e, t) {
-  let n = s.default.getId();
-  return a.default.getRsvp(e, t, n)
+  let n = a.default.getId();
+  return s.default.getRsvp(e, t, n)
 }
 
 function E() {
@@ -42,19 +42,17 @@ function I(e) {
     recurrenceId: n,
     guildId: i,
     updateRsvp: r,
-    openRsvpPicker: s,
-    onRsvp: _,
-    canRsvpToRecurrences: E = !0
-  } = e, I = a.default.getGuildScheduledEvent(t);
-  if (null == I) return;
-  let T = (0, o.getEventException)(n, t),
+    openRsvpPicker: a,
+    onRsvp: _
+  } = e, E = s.default.getGuildScheduledEvent(t);
+  if (null == E) return;
+  let I = (0, o.getEventException)(n, t),
     {
-      startTime: f
-    } = (0, l.getEventSchedule)(I, n),
-    S = (null == I ? void 0 : I.scheduled_start_time) != null ? (0, u.getRecurrenceStatus)(T, f, new Date(null == I ? void 0 : I.scheduled_start_time)) : null,
-    h = null != S && d.GuildScheduledEventStatusDone.has(S),
-    A = E && !h ? null != n ? n : (0, u.getNextRecurrenceIdInEvent)(I) : null,
-    m = c(I.id),
-    N = c(I.id, A);
-  null == A ? (r(t, null, i, null != m ? d.GuildScheduledEventUserResponses.UNINTERESTED : d.GuildScheduledEventUserResponses.INTERESTED), null == _ || _()) : null != N ? (r(t, A, i, null != m ? d.GuildScheduledEventUserResponses.INTERESTED : d.GuildScheduledEventUserResponses.UNINTERESTED), null == _ || _()) : s(I, A)
+      startTime: T
+    } = (0, l.getEventSchedule)(E, n),
+    f = (null == E ? void 0 : E.scheduled_start_time) != null ? (0, u.getRecurrenceStatus)(I, T, new Date(null == E ? void 0 : E.scheduled_start_time)) : null,
+    S = null != f && d.GuildScheduledEventStatusDone.has(f) ? null : null != n ? n : (0, u.getNextRecurrenceIdInEvent)(E),
+    h = c(E.id),
+    A = c(E.id, S);
+  null == S ? (r(t, null, i, null != h ? d.GuildScheduledEventUserResponses.UNINTERESTED : d.GuildScheduledEventUserResponses.INTERESTED), null == _ || _()) : null != A ? (r(t, S, i, null != h ? d.GuildScheduledEventUserResponses.INTERESTED : d.GuildScheduledEventUserResponses.UNINTERESTED), null == _ || _()) : a(E, S)
 }(i = r || (r = {}))[i.SERIES = 0] = "SERIES", i[i.RECURRENCE = 1] = "RECURRENCE"

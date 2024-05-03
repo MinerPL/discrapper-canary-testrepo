@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumSubscriptionPauseModalConfirm: function() {
-    return T
+    return C
   },
   PremiumSubscriptionPauseModalSelect: function() {
     return P
@@ -16,14 +16,14 @@ var a = s("735250"),
   o = s("481060"),
   d = s("355467"),
   c = s("410030"),
-  E = s("906732"),
-  f = s("285952"),
-  _ = s("296848"),
-  p = s("798769"),
-  m = s("981631"),
+  p = s("906732"),
+  m = s("285952"),
+  f = s("296848"),
+  E = s("798769"),
+  _ = s("981631"),
   I = s("689938"),
-  N = s("470510");
-async function S(e) {
+  S = s("34181");
+async function N(e) {
   let {
     premiumSubscription: t,
     pauseDuration: s,
@@ -55,129 +55,131 @@ function P(e) {
       value: t
     } = e;
     l(t)
-  }, [l]), E = d.status === m.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE;
-  return (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p.default, {
+  }, [l]), p = d.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_SELECT_EXTEND_DURATION_SUBTITLE : I.default.Messages.PREMIUM_PAUSE_SELECT_SUBTITLE, N = function(e) {
+    let t = e.status === _.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : I.default.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
+      {
+        durations: s,
+        currentDaysPaused: a
+      } = (0, f.getSubscriptionPauseDurations)(e),
+      n = [];
+    for (let e of s) {
+      let s = r.PauseDuration[e];
+      n.push({
+        name: t.format({
+          days: s - a
+        }),
+        value: s,
+        radioItemIconClassName: S.radioOption
+      })
+    }
+    return n.sort((e, t) => e.value - t.value), n.push({
+      name: I.default.Messages.PREMIUM_PAUSE_DURATION_CANCEL,
+      value: 0,
+      radioBarClassName: S.cancelText,
+      radioItemIconClassName: S.cancelText
+    }), n
+  }(d);
+  return n.useEffect(() => {
+    !(N.length < 1) && l(N[0].value)
+  }, []), (0, a.jsxs)(a.Fragment, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: t,
       onClose: s
     }), (0, a.jsx)(o.ModalHeader, {
       separator: !1,
       children: (0, a.jsxs)("div", {
-        className: N.__invalid_header,
+        className: S.__invalid_header,
         children: [(0, a.jsx)(o.Heading, {
           variant: "heading-xl/bold",
-          className: N.__invalid_modalHeader,
+          className: S.__invalid_modalHeader,
           children: I.default.Messages.PREMIUM_PAUSE_SELECT_TITLE
         }), (0, a.jsx)(o.Heading, {
           variant: "heading-sm/medium",
-          className: N.subtitle,
-          children: E
+          className: S.subtitle,
+          children: p
         })]
       })
     }), (0, a.jsx)(o.ModalContent, {
-      className: N.body,
+      className: S.body,
       children: (0, a.jsx)(o.RadioGroup, {
-        options: function(e) {
-          let t = e.status === m.SubscriptionStatusTypes.PAUSED ? I.default.Messages.PREMIUM_PAUSE_EXTEND_DURATION_MONTHS_CAPITALIZE : I.default.Messages.PREMIUM_PAUSE_DURATION_MONTHS_CAPITALIZE,
-            {
-              durations: s,
-              currentDaysPaused: a
-            } = (0, _.getSubscriptionPauseDurations)(e),
-            n = [];
-          for (let e of s) {
-            let s = r.PauseDuration[e];
-            n.push({
-              name: t.format({
-                days: s - a
-              }),
-              value: s,
-              radioItemIconClassName: N.radioOption
-            })
-          }
-          return n.sort((e, t) => e.value - t.value), n.push({
-            name: I.default.Messages.PREMIUM_PAUSE_DURATION_CANCEL,
-            value: 0,
-            radioBarClassName: N.cancelText,
-            radioItemIconClassName: N.cancelText
-          }), n
-        }(d),
+        options: N,
         onChange: c,
         value: i
       })
     }), (0, a.jsx)(o.ModalFooter, {
-      justify: f.default.Justify.START,
+      justify: m.default.Justify.START,
       children: u
     })]
   })
 }
 
-function T(e) {
+function C(e) {
   let {
     premiumSubscription: t,
     premiumType: s,
     onClose: i,
     pauseDuration: r,
     analyticsLocation: d
-  } = e, [_, P] = n.useState(!1), {
-    analyticsLocations: T
-  } = (0, E.default)(), [C, R] = n.useState(!1), A = (0, c.default)(), M = null, h = null, L = [m.SubscriptionStatusTypes.PAST_DUE, m.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, g = l()(L).add(r, "days").toDate();
+  } = e, [f, P] = n.useState(!1), {
+    analyticsLocations: C
+  } = (0, p.default)(), [h, T] = n.useState(!1), A = (0, c.default)(), R = null, y = null, M = [_.SubscriptionStatusTypes.PAST_DUE, _.SubscriptionStatusTypes.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd, L = l()(M).add(r, "days").toDate();
   switch (t.status) {
-    case m.SubscriptionStatusTypes.PAST_DUE:
-      h = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
+    case _.SubscriptionStatusTypes.PAST_DUE:
+      y = I.default.Messages.PREMIUM_PAUSE_PAST_DUE_CONFIRM_BODY.format({
         pauseDuration: r,
-        resumeDate: g
+        resumeDate: L
       });
       break;
-    case m.SubscriptionStatusTypes.PAUSED:
-      h = I.default.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({
-        resumeDate: g
+    case _.SubscriptionStatusTypes.PAUSED:
+      y = I.default.Messages.PREMIUM_PAUSE_EXTEND_CONFIRM_BODY.format({
+        resumeDate: L
       });
       break;
     default:
-      h = I.default.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
-        pauseDate: L,
-        resumeDate: g,
+      y = I.default.Messages.PREMIUM_PAUSE_CONFIRM_BODY.format({
+        pauseDate: M,
+        resumeDate: L,
         pauseDuration: r
       })
   }
-  return M = (0, a.jsx)("div", {
-    className: N.body,
-    children: h
+  return R = (0, a.jsx)("div", {
+    className: S.body,
+    children: y
   }), (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)(p.default, {
+    children: [(0, a.jsx)(E.default, {
       premiumType: s,
       onClose: i
     }), (0, a.jsx)(o.ModalHeader, {
       separator: !1,
       children: (0, a.jsx)("div", {
-        className: N.__invalid_header,
+        className: S.__invalid_header,
         children: (0, a.jsx)(o.Heading, {
           variant: "heading-xl/bold",
-          className: N.__invalid_modalHeader,
+          className: S.__invalid_modalHeader,
           children: I.default.Messages.PREMIUM_PAUSE_YOUR_SUBSCRIPTION_WILL_BE_PAUSED
         })
       })
     }), (0, a.jsxs)(o.ModalContent, {
-      className: N.body,
-      children: [_ ? (0, a.jsx)(o.FormErrorBlock, {
-        className: N.errorBlock,
+      className: S.body,
+      children: [f ? (0, a.jsx)(o.FormErrorBlock, {
+        className: S.errorBlock,
         children: I.default.Messages.BILLING_ERROR_GENERIC
-      }) : null, M]
+      }) : null, R]
     }), (0, a.jsx)(o.ModalFooter, {
-      justify: f.default.Justify.START,
+      justify: m.default.Justify.START,
       children: (0, a.jsxs)("div", {
-        className: N.whatYouLoseButtonContainer,
+        className: S.whatYouLoseButtonContainer,
         children: [(0, a.jsx)(o.Button, {
           color: o.Button.Colors.RED,
-          disabled: C || null == r,
+          disabled: h || null == r,
           onClick: async () => {
-            await S({
+            await N({
               premiumSubscription: t,
               pauseDuration: r,
-              setIsCancelling: R,
+              setIsCancelling: T,
               setHasError: P,
               onClose: i,
-              analyticsLocations: T,
+              analyticsLocations: C,
               analyticsLocation: d
             })
           },

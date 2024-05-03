@@ -17,7 +17,7 @@ var t = s("735250"),
   M = s("981631"),
   E = s("921944"),
   m = s("689938"),
-  T = s("891895");
+  T = s("460252");
 let S = () => [{
   id: 0,
   name: m.default.Messages.FORUM_UPSELL_DEMO_TAG_NAME_1
@@ -91,7 +91,7 @@ function g(e) {
             (0, l.openModalLazy)(async () => {
               let {
                 default: e
-              } = await Promise.all([s.e("49237"), s.e("99387"), s.e("90508"), s.e("7590"), s.e("45094"), s.e("63144")]).then(s.bind(s, "218613"));
+              } = await Promise.all([s.e("99387"), s.e("90508"), s.e("7590"), s.e("45094"), s.e("76688")]).then(s.bind(s, "218613"));
               return s => (0, t.jsx)(e, {
                 ...s,
                 channelType: M.ChannelTypes.GUILD_FORUM,

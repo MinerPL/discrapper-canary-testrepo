@@ -1,11 +1,11 @@
 "use strict";
 l.r(t);
-var a, s, n, i = l("735250"),
+var a, n, s, i = l("735250"),
   r = l("470079"),
-  u = l("803997"),
+  u = l("120356"),
   o = l.n(u),
   d = l("285952"),
-  c = l("107918");
+  c = l("81438");
 
 function f(e, t, l) {
   return t in e ? Object.defineProperty(e, t, {
@@ -14,8 +14,8 @@ function f(e, t, l) {
     configurable: !0,
     writable: !0
   }) : e[t] = l, e
-}(a = s || (s = {})).WRAP = "wrap", a.STACK = "stack";
-class m extends(n = r.PureComponent) {
+}(a = n || (n = {})).WRAP = "wrap", a.STACK = "stack";
+class m extends(s = r.PureComponent) {
   renderChildren() {
     let e;
     let {
@@ -48,7 +48,7 @@ class m extends(n = r.PureComponent) {
     })
   }
 }
-f(m, "Layout", s), f(m, "defaultProps", {
+f(m, "Layout", n), f(m, "defaultProps", {
   children: [],
   layout: "wrap",
   columns: 4

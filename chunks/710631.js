@@ -1,70 +1,74 @@
 "use strict";
-a.r(t), a.d(t, {
+l.r(t), l.d(t, {
   default: function() {
-    return T
+    return C
   }
-}), a("653041"), a("47120");
-var l = a("735250"),
-  n = a("470079"),
-  u = a("442837"),
-  d = a("481060"),
-  s = a("493683"),
-  i = a("447543"),
-  o = a("904245"),
-  r = a("159300"),
-  f = a("592125"),
-  c = a("984933"),
-  M = a("430824"),
-  m = a("496675"),
-  E = a("699516"),
-  g = a("771845"),
-  I = a("594174"),
-  C = a("981631"),
-  _ = a("689938");
+}), l("653041"), l("47120");
+var a = l("735250"),
+  u = l("470079"),
+  n = l("442837"),
+  d = l("481060"),
+  s = l("493683"),
+  r = l("447543"),
+  i = l("904245"),
+  o = l("159300"),
+  f = l("592125"),
+  c = l("984933"),
+  E = l("430824"),
+  m = l("496675"),
+  M = l("699516"),
+  S = l("771845"),
+  _ = l("594174"),
+  g = l("981631"),
+  I = l("689938");
 
-function S(e, t) {
+function R(e, t) {
   s.default.ensurePrivateChannel(e).then(e => {
-    null != f.default.getChannel(e) && o.default.sendInvite(e, t, "context_menu", null)
+    null != f.default.getChannel(e) && i.default.sendInvite(e, t, "context_menu", null)
   })
 }
 
-function T(e, t) {
-  let a = (0, u.useStateFromStores)([I.default], () => I.default.getCurrentUser(), []),
-    s = (0, u.useStateFromStoresArray)([g.default, M.default, m.default], () => {
-      let e = g.default.getFlattenedGuildIds(),
-        a = [];
-      return e.forEach(e => {
-        let l = M.default.getGuild(e);
-        null != l && (0, r.canViewInviteModal)(m.default, l) && l.id !== t && a.push(l)
-      }), a
-    }, [t]),
-    [o, f] = n.useState({});
-  return (null == a ? void 0 : a.id) === e.id || e.bot || 0 === s.length || E.default.isBlocked(e.id) ? null : (0, l.jsx)(d.MenuItem, {
+function C(e) {
+  let {
+    user: t,
+    guildId: l,
+    onAction: s
+  } = e, i = (0, n.useStateFromStores)([_.default], () => _.default.getCurrentUser(), []), f = (0, n.useStateFromStoresArray)([S.default, E.default, m.default], () => {
+    let e = S.default.getFlattenedGuildIds(),
+      t = [];
+    return e.forEach(e => {
+      let a = E.default.getGuild(e);
+      null != a && (0, o.canViewInviteModal)(m.default, a) && a.id !== l && t.push(a)
+    }), t
+  }, [l]), [C, A] = u.useState({});
+  return (null == i ? void 0 : i.id) === t.id || t.bot || 0 === f.length || M.default.isBlocked(t.id) ? null : (0, a.jsx)(d.MenuItem, {
     id: "invite-to-server",
-    label: _.default.Messages.INVITE_TO_SERVER,
-    children: s.map(t => o[t.id] ? (0, l.jsx)(d.MenuItem, {
-      id: t.id,
+    label: I.default.Messages.INVITE_TO_SERVER,
+    children: f.map(e => C[e.id] ? (0, a.jsx)(d.MenuItem, {
+      id: e.id,
       disabled: !0,
-      label: _.default.Messages.INVITE_SENT
-    }, t.id) : (0, l.jsx)(d.MenuItem, {
-      id: t.id,
-      label: t.name,
-      action: () => (function(e, t) {
-        let a = c.default.getDefaultChannel(e.id, !0, C.Permissions.CREATE_INSTANT_INVITE);
-        if (null != a) {
-          if (f({
-              ...o,
-              [e.id]: !0
-            }), !m.default.can(C.Permissions.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
-            S(t, e.vanityURLCode);
-            return
+      label: I.default.Messages.INVITE_SENT
+    }, e.id) : (0, a.jsx)(d.MenuItem, {
+      id: e.id,
+      label: e.name,
+      action: () => {
+        null == s || s(), ! function(e, t) {
+          let l = c.default.getDefaultChannel(e.id, !0, g.Permissions.CREATE_INSTANT_INVITE);
+          if (null != l) {
+            if (A({
+                ...C,
+                [e.id]: !0
+              }), !m.default.can(g.Permissions.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode) {
+              R(t, e.vanityURLCode);
+              return
+            }
+            r.default.createInvite(l.id, {
+              max_uses: 1,
+              unique: !0
+            }, "User Invite Context Menu").then(e => R(t, e.code))
           }
-          i.default.createInvite(a.id, {
-            max_uses: 1,
-            unique: !0
-          }, "User Invite Context Menu").then(e => S(t, e.code))
-        }
-      })(t, e.id)
-    }, t.id))
+        }(e, t.id)
+      }
+    }, e.id))
   })
 }

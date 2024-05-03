@@ -2,7 +2,7 @@
 n.r(t), n("47120");
 var s = n("735250"),
   a = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("442837"),
   o = n("481060"),
@@ -12,22 +12,22 @@ var s = n("735250"),
   f = n("914010"),
   E = n("824717"),
   _ = n("900849"),
-  T = n("41776"),
-  m = n("981631"),
+  m = n("41776"),
+  T = n("981631"),
   I = n("689938"),
-  p = n("906611"),
-  h = n("15499");
+  p = n("770322"),
+  h = n("497748");
 t.default = () => {
   let e = (0, r.useStateFromStores)([f.default], () => f.default.getGuildId(), []),
     t = (0, r.useStateFromStores)([c.default], () => c.default.getGuild(e), [e]),
-    n = (0, r.useStateFromStores)([T.default], () => T.default.getHistorySnapshot(), []),
+    n = (0, r.useStateFromStores)([m.default], () => m.default.getHistorySnapshot(), []),
     [l, N] = a.useState(!1);
   if (null == t) return null;
   let S = async () => {
     N(!0);
     try {
       _.trackGuildJoinClicked(t.id), await u.default.joinGuild(t.id, {
-        source: m.JoinGuildSources.NOTICE_BAR
+        source: T.JoinGuildSources.NOTICE_BAR
       })
     } catch {
       N(!1)

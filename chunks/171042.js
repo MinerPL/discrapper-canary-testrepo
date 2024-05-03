@@ -2,12 +2,12 @@
 s.r(t), s("47120");
 var a, l, n, i = s("735250"),
   r = s("470079"),
-  o = s("803997"),
+  o = s("120356"),
   d = s.n(o),
   u = s("392711"),
   c = s.n(u),
   E = s("82923"),
-  _ = s("616067");
+  _ = s("920082");
 
 function I(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -90,56 +90,58 @@ class f extends(l = r.Component) {
     return S(this.fireScale, e, t, () => c().random(s, a))
   }
   async hoverAnimate(e) {
+    var t;
     if (0 !== this.props.stage || this.isUnmounted) return;
-    let t = e > 1,
-      s = t ? T.HOVERING.FIRE_MIN_INTENSITY_FALLING : T.HOVERING.FIRE_MIN_INTENSITY_RISING,
-      a = t ? T.HOVERING.FIRE_MAX_INTENSITY_FALLING : T.HOVERING.FIRE_MAX_INTENSITY_RISING,
-      l = this.createFireAnimation(T.HOVERING.FIRE_COUNT, T.HOVERING.Y_DURATION, s, a),
-      n = E.default.timing(this.y, {
+    let s = e > 1,
+      a = s ? T.HOVERING.FIRE_MIN_INTENSITY_FALLING : T.HOVERING.FIRE_MIN_INTENSITY_RISING,
+      l = s ? T.HOVERING.FIRE_MAX_INTENSITY_FALLING : T.HOVERING.FIRE_MAX_INTENSITY_RISING,
+      n = this.createFireAnimation(T.HOVERING.FIRE_COUNT, T.HOVERING.Y_DURATION, a, l),
+      i = E.default.timing(this.y, {
         toValue: e,
         duration: T.HOVERING.Y_DURATION,
         easing: E.default.Easing.inOut(E.default.Easing.ease)
       });
-    this.currentAnimation = E.default.parallel([n, l]), await this.currentAnimation.start(), this.hoverAnimate(e * T.HOVERING.Y_VALUE_MODIFIER)
+    this.currentAnimation = E.default.parallel([i, n]), await (null === (t = this.currentAnimation) || void 0 === t ? void 0 : t.start()), this.hoverAnimate(e * T.HOVERING.Y_VALUE_MODIFIER)
   }
   createShakeAnimation(e, t, s) {
     return S(this.x, e, t, e => c().random(1, s) * (e % 2 == 0 ? 1 : -1))
   }
   async flyAnimate() {
-    let e = E.default.spring(this.y, {
+    var e;
+    let t = E.default.spring(this.y, {
         toValue: T.FALLING.Y_VALUE,
         overshootClamping: !0
       }),
-      t = E.default.spring(this.fireScale, {
+      s = E.default.spring(this.fireScale, {
         toValue: T.FALLING.FIRE_VALUE,
         overshootClamping: !0
       }),
-      s = E.default.parallel([e, t]),
-      a = E.default.timing(this.y, {
+      a = E.default.parallel([t, s]),
+      l = E.default.timing(this.y, {
         toValue: T.STAGING.Y_VALUE,
         duration: T.STAGING.DURATION
       }),
-      l = this.createShakeAnimation(T.STAGING.SHAKE_COUNT, T.STAGING.DURATION, T.STAGING.SHAKE_INTENSITY),
-      n = this.createFireAnimation(T.STAGING.FIRE_COUNT, T.STAGING.DURATION, T.STAGING.FIRE_MIN_INTENSITY, T.STAGING.FIRE_MAX_INTENSITY),
-      i = E.default.parallel([a, l, n]),
-      r = E.default.timing(this.y, {
+      n = this.createShakeAnimation(T.STAGING.SHAKE_COUNT, T.STAGING.DURATION, T.STAGING.SHAKE_INTENSITY),
+      i = this.createFireAnimation(T.STAGING.FIRE_COUNT, T.STAGING.DURATION, T.STAGING.FIRE_MIN_INTENSITY, T.STAGING.FIRE_MAX_INTENSITY),
+      r = E.default.parallel([l, n, i]),
+      o = E.default.timing(this.y, {
         toValue: T.FLYING.Y_VALUE,
         duration: T.FLYING.DURATION,
         easing: T.FLYING.Y_EASING
       }),
-      o = E.default.timing(this.x, {
+      d = E.default.timing(this.x, {
         toValue: T.FLYING.X_VALUE,
         duration: T.FLYING.DURATION,
         easing: T.FLYING.X_EASING
       }),
-      d = E.default.timing(this.opacity, {
+      u = E.default.timing(this.opacity, {
         toValue: T.FLYING.OPACITY_VALUE,
         duration: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND,
         delay: T.FLYING.DURATION / T.FLYING.OPACITY_DURATION_DIVIDEND
       }),
-      u = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY),
-      c = E.default.parallel([r, o, d, u]);
-    if (this.currentAnimation = E.default.sequence([s, i, c]), await this.currentAnimation.start(), !this.isUnmounted) {
+      c = this.createFireAnimation(T.FLYING.FIRE_COUNT, T.FLYING.DURATION, T.FLYING.FIRE_MIN_INTENSITY, T.FLYING.FIRE_MAX_INTENSITY),
+      _ = E.default.parallel([o, d, u, c]);
+    if (this.currentAnimation = E.default.sequence([a, r, _]), await (null === (e = this.currentAnimation) || void 0 === e ? void 0 : e.start()), !this.isUnmounted) {
       let {
         onFlyingComplete: e
       } = this.props;

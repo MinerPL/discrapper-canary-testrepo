@@ -6,7 +6,7 @@ var a = n("481060"),
   l = n("285952"),
   i = n("245315"),
   r = n("689938"),
-  o = n("64038");
+  o = n("773227");
 t.default = () => (0, s.jsxs)(l.default, {
   align: l.default.Align.CENTER,
   justify: l.default.Justify.CENTER,

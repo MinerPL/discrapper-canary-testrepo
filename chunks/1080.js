@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120"), s("653041");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("392711"),
   o = s.n(r),
@@ -33,9 +33,9 @@ var a = s("735250"),
   M = s("999382"),
   D = s("84613"),
   v = s("740903"),
-  j = s("981631"),
-  G = s("689938"),
-  U = s("31770");
+  G = s("981631"),
+  j = s("689938"),
+  U = s("676230");
 
 function P(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -62,7 +62,7 @@ function b(e) {
     if (null != n) {
       m(null), I(!0);
       try {
-        await E.default.unbanUser(n.id, i.id), d(), L.default.track(j.AnalyticEvents.GUILD_BAN_REMOVED, {
+        await E.default.unbanUser(n.id, i.id), d(), L.default.track(G.AnalyticEvents.GUILD_BAN_REMOVED, {
           ...(0, S.collectGuildAnalyticsMetadata)(n.id),
           target_user_id: i.id,
           reason: r.reason,
@@ -96,10 +96,10 @@ function b(e) {
       children: [(0, a.jsx)(u.Text, {
         className: U.reasonHeader,
         variant: "text-xs/normal",
-        children: G.default.Messages.BAN_REASON
+        children: j.default.Messages.BAN_REASON
       }), (0, a.jsx)(u.Text, {
         variant: "text-sm/normal",
-        children: null != r.reason && "" !== r.reason ? r.reason : G.default.Messages.NO_BAN_REASON
+        children: null != r.reason && "" !== r.reason ? r.reason : j.default.Messages.NO_BAN_REASON
       }), null != T ? (0, a.jsx)(u.Text, {
         className: U.error,
         color: "text-danger",
@@ -113,10 +113,10 @@ function b(e) {
         look: u.Button.Looks.LINK,
         color: u.Button.Colors.RED,
         submitting: c,
-        children: G.default.Messages.REVOKE_BAN
+        children: j.default.Messages.REVOKE_BAN
       }), (0, a.jsx)(u.Button, {
         onClick: d,
-        children: G.default.Messages.DONE
+        children: j.default.Messages.DONE
       })]
     })]
   })
@@ -221,7 +221,7 @@ function F(e) {
     guildId: t,
     storedSearchQuery: s
   } = e, [n, i] = l.useState(null != s ? s : ""), [r, o] = l.useState(!1), d = l.useCallback(() => {
-    p.default.setSection(j.GuildSettingsSections.SAFETY), (0, D.setSafetyPage)(v.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
+    p.default.setSection(G.GuildSettingsSections.SAFETY), (0, D.setSafetyPage)(v.GuildSettingsSafetyPage.DM_AND_SPAM_PROTECTION)
   }, []), c = l.useCallback(e => {
     i(e), 0 === e.trim().length && p.default.setSearchQuery(e)
   }, []), _ = l.useCallback(() => {
@@ -243,13 +243,13 @@ function F(e) {
   }, [I]);
   return (0, a.jsxs)(u.FormSection, {
     tag: u.FormTitleTags.H1,
-    title: G.default.Messages.BANS_HEADER_NEW,
+    title: j.default.Messages.BANS_HEADER_NEW,
     children: [(0, a.jsx)("div", {
       className: U.settingsHeader,
       children: (0, a.jsx)(u.FormText, {
         type: u.FormTextTypes.DESCRIPTION,
         className: U.description,
-        children: G.default.Messages.BANS_HINT.format({
+        children: j.default.Messages.BANS_HINT.format({
           onModerationClick: d
         })
       })
@@ -258,8 +258,8 @@ function F(e) {
       children: [(0, a.jsx)(C.default, {
         className: U.searchBar,
         query: null != n ? n : "",
-        placeholder: G.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
-        "aria-label": G.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
+        placeholder: j.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
+        "aria-label": j.default.Messages.BANS_SEARCH_PLACEHOLDER_NEW,
         onChange: c,
         onKeyDown: T,
         onClear: _,
@@ -272,7 +272,7 @@ function F(e) {
         disabled: r,
         submitting: r,
         className: U.searchButton,
-        children: G.default.Messages.SEARCH
+        children: j.default.Messages.SEARCH
       })]
     })]
   }, "bans-header")
@@ -283,7 +283,7 @@ function H() {
   let {
     guild: n,
     searchQuery: c
-  } = (0, d.useStateFromStores)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, I.default)(_), f = _ !== S, [N] = (0, d.useStateFromStores)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : j.EMPTY_STRING_SNOWFLAKE_ID, L = l.useRef(null), A = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
+  } = (0, d.useStateFromStores)([M.default], () => M.default.getProps(), [], r.isEqual), _ = null != c && c.trim().length > 0, S = (0, I.default)(_), f = _ !== S, [N] = (0, d.useStateFromStores)([M.default], () => M.default.getBans(), [], O.isVersionEqual), C = null !== (e = null == N ? void 0 : N.size) && void 0 !== e ? e : 0, R = (0, T.default)(), x = null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : G.EMPTY_STRING_SNOWFLAKE_ID, L = l.useRef(null), A = l.useCallback(e => null == e || 0 === e.length ? e => null != e : t => {
     if (null == t || 0 === e.trim().length) return !1;
     let [
       [s], a
@@ -347,11 +347,11 @@ function H() {
           width: 256,
           height: 212
         }), (0, a.jsx)(h.EmptyStateText, {
-          note: G.default.Messages.BANS_NO_USERS_BANNED,
+          note: j.default.Messages.BANS_NO_USERS_BANNED,
           style: {
             maxWidth: 300
           },
-          children: G.default.Messages.NO_BANS
+          children: j.default.Messages.NO_BANS
         })]
       })]
     }), (0, a.jsx)("div", {

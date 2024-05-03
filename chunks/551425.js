@@ -1,61 +1,61 @@
 "use strict";
-s.r(e);
-var l = s("735250");
+s.r(t);
+var a = s("735250");
 s("470079");
-var a = s("979554"),
-  i = s("442837"),
+var i = s("979554"),
+  l = s("442837"),
   n = s("481060"),
   r = s("1585"),
   o = s("125988"),
   d = s("876917"),
   u = s("594174"),
   c = s("597688"),
-  f = s("343350");
+  f = s("70354");
 let p = n.AvatarSizes.SIZE_152,
   h = (0, r.getDecorationSizeForAvatarSize)(p),
-  m = t => {
+  m = e => {
     let {
-      item: e
-    } = t, s = (0, i.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
-      avatarDecorationSrc: a,
+      item: t
+    } = e, s = (0, l.useStateFromStores)([u.default], () => u.default.getCurrentUser()), {
+      avatarDecorationSrc: i,
       avatarPlaceholderSrc: r,
       eventHandlers: d
     } = (0, o.default)({
       user: s,
-      avatarDecorationOverride: e,
+      avatarDecorationOverride: t,
       size: h
     });
-    return (0, l.jsx)("div", {
+    return (0, a.jsx)("div", {
       className: f.avatarDecorationPreview,
-      children: (0, l.jsx)(n.Avatar, {
+      children: (0, a.jsx)(n.Avatar, {
         ...d,
-        "aria-label": e.label,
+        "aria-label": t.label,
         src: r,
-        avatarDecoration: a,
+        avatarDecoration: i,
         size: p
       })
     })
   },
-  g = t => {
+  I = e => {
     let {
-      item: e
-    } = t;
-    return (0, l.jsx)("div", {
+      item: t
+    } = e;
+    return (0, a.jsx)("div", {
       className: f.profileEffectPreview,
-      children: (0, l.jsx)(d.default, {
+      children: (0, a.jsx)(d.default, {
         isHovering: !0,
-        profileEffectId: null == e ? void 0 : e.id
+        profileEffectId: null == t ? void 0 : t.id
       })
     })
   };
-e.default = t => {
+t.default = e => {
   let {
-    giftCode: e
-  } = t, s = (0, i.useStateFromStores)([c.default], () => c.default.getProduct(e.skuId)), n = null == s ? void 0 : s.items[0];
-  return (0, l.jsxs)(l.Fragment, {
-    children: [(null == n ? void 0 : n.type) === a.CollectiblesItemType.AVATAR_DECORATION && (0, l.jsx)(m, {
+    giftCode: t
+  } = e, s = (0, l.useStateFromStores)([c.default], () => c.default.getProduct(t.skuId)), n = null == s ? void 0 : s.items[0];
+  return (0, a.jsxs)(a.Fragment, {
+    children: [(null == n ? void 0 : n.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(m, {
       item: n
-    }), (null == n ? void 0 : n.type) === a.CollectiblesItemType.PROFILE_EFFECT && (0, l.jsx)(g, {
+    }), (null == n ? void 0 : n.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(I, {
       item: n
     })]
   })

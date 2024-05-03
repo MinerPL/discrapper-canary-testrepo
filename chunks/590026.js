@@ -10,7 +10,7 @@ var a = n("876215"),
   i = n("219634"),
   r = n("897674"),
   o = n("206583");
-let u = new Set([a.ContentInventoryEntryType.PLAYED_GAME, a.ContentInventoryEntryType.WATCHED_MEDIA]);
+let u = new Set([a.ContentInventoryEntryType.PLAYED_GAME, a.ContentInventoryEntryType.WATCHED_MEDIA, a.ContentInventoryEntryType.TOP_GAME]);
 
 function d(e) {
   let t = (0, r.default)(o.ContentInventoryFeedKey.GLOBAL_FEED);

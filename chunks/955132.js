@@ -1,50 +1,45 @@
 "use strict";
 n.r(t), n.d(t, {
-  localLobbyVoiceStates: function() {
-    return h
-  },
   localPresenceState: function() {
-    return f
+    return T
   },
   localVoiceState: function() {
-    return S
+    return f
   },
   socket: function() {
-    return T
+    return I
   }
 });
 var i = n("570140"),
   r = n("579806"),
-  s = n("710845"),
-  a = n("314897"),
+  a = n("710845"),
+  s = n("314897"),
   o = n("626135"),
   l = n("931619"),
   u = n("358085"),
   d = n("548570"),
-  _ = n("490528"),
-  c = n("616810"),
-  E = n("755278");
-let I = new s.default("ConnectionStore"),
-  T = new d.default,
-  f = new c.default(T),
-  S = new E.default(T),
-  h = new _.default(T);
-T.handleIdentify = () => {
-  let e = a.default.getToken();
-  return (I.verbose("handleIdentify called", {
+  _ = n("616810"),
+  c = n("755278");
+let E = new a.default("ConnectionStore"),
+  I = new d.default,
+  T = new _.default(I),
+  f = new c.default(I);
+I.handleIdentify = () => {
+  let e = s.default.getToken();
+  return (E.verbose("handleIdentify called", {
     hasToken: null != e
   }), null == e) ? null : {
     token: e,
     properties: o.default.getSuperProperties(),
-    presence: f.getState()
+    presence: T.getInitialState()
   }
 }, (0, u.isDesktop)() && r.default.remotePowerMonitor.on("resume", () => {
-  T.expeditedHeartbeat(5e3, "power monitor resumed")
+  I.expeditedHeartbeat(5e3, "power monitor resumed")
 }), l.default.addOfflineCallback(() => {
-  T.networkStateChange(15e3, "network detected offline.", !1)
+  I.networkStateChange(15e3, "network detected offline.", !1)
 }), l.default.addOnlineCallback(() => {
-  T.networkStateChange(5e3, "network detected online.")
-}), T.on("disconnect", e => {
+  I.networkStateChange(5e3, "network detected online.")
+}), I.on("disconnect", e => {
   let {
     code: t,
     reason: n
@@ -54,7 +49,7 @@ T.handleIdentify = () => {
     code: t,
     reason: n
   })
-}), T.on("close", e => {
+}), I.on("close", e => {
   let {
     code: t,
     reason: n

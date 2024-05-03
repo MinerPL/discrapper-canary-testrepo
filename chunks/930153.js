@@ -1,6 +1,9 @@
 "use strict";
 n.r(t), n.d(t, {
   formatPercent: function() {
+    return o
+  },
+  humanizeValue: function() {
     return a
   },
   parseInteger: function() {
@@ -22,6 +25,21 @@ function r(e) {
   })
 }
 
+function a(e, t) {
+  if (e < 1e3) return i.default.Messages.NUMBER_ABBREVIATION_FULL.format({
+    value: Math.floor(e)
+  });
+  if (e < 1e6) return i.default.Messages.NUMBER_ABBREVIATION_THOUSANDS.format({
+    value: Math.floor(e / 1e3)
+  });
+  let n = new Intl.NumberFormat(t, {
+    maximumFractionDigits: 1
+  }).format(Math.floor(10 * e / 1e6) / 10);
+  return i.default.Messages.NUMBER_ABBREVIATION_MILLIONS.format({
+    value: n
+  })
+}
+
 function s(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : NaN;
   if (null == e) return t;
@@ -29,7 +47,7 @@ function s(e) {
   return Number.isNaN(n) ? t : n
 }
 
-function a(e, t) {
+function o(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
   return Intl.NumberFormat(e, {
     style: "percent",

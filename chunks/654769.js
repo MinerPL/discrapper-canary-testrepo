@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120"), n("177593");
 var i, r = n("392711"),
-  s = n.n(r),
-  a = n("525654"),
-  o = n.n(a),
+  a = n.n(r),
+  s = n("525654"),
+  o = n.n(s),
   l = n("579806"),
   u = n("292959"),
   d = n("246946"),
@@ -29,15 +29,15 @@ if (S && !h) {
   A = parseInt(e) > 10 || parseInt(t) >= 15063
 }
 let m = S && A || "Chrome" === o().name && 47 > parseFloat(o().version) || "Firefox" === o().name && 52 > parseFloat(o().version),
-  N = s().throttle(E.playSound, 1e3, {
+  N = a().throttle(E.playSound, 1e3, {
     leading: !0
   });
 
-function O() {
+function p() {
   I.default.flashFrame(!1)
 }
-S && (window.addEventListener("focus", O), I.default.on("MAIN_WINDOW_FOCUS", O));
-let p = window.Notification;
+S && (window.addEventListener("focus", p), I.default.on("MAIN_WINDOW_FOCUS", p));
+let O = window.Notification;
 if (h) {
   let e = {};
   I.default.on("NOTIFICATION_CLICK", (t, n) => {
@@ -54,23 +54,24 @@ if (h) {
       body: n,
       icon: i
     }) {
-      f(this, "id", p._id++), f(this, "title", void 0), f(this, "body", void 0), f(this, "icon", void 0), f(this, "onshow", function() {}), f(this, "onclick", function() {}), f(this, "onclose", function() {}), this.title = t, this.body = n, this.icon = i, setImmediate(() => this.onshow()), e[this.id] = this, I.default.send("NOTIFICATION_SHOW", {
+      f(this, "id", O._id++), f(this, "title", void 0), f(this, "body", void 0), f(this, "icon", void 0), f(this, "onshow", function() {}), f(this, "onclick", function() {}), f(this, "onclose", function() {}), this.title = t, this.body = n, this.icon = i, setImmediate(() => this.onshow()), e[this.id] = this, I.default.send("NOTIFICATION_SHOW", {
         id: this.id,
         title: this.title,
         body: this.body,
         icon: this.icon
       })
     }
-  }, f(i, "permission", "granted"), f(i, "_id", 0), p = i
+  }, f(i, "permission", "granted"), f(i, "_id", 0), O = i
 }
 
 function R() {
-  return null != p && "granted" === p.permission
+  return null != O && "granted" === O.permission
 }
 
 function C(e) {
-  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-  e.includes("message") ? N(e, t) : (0, E.playSound)(e, t)
+  let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+    n = arguments.length > 2 ? arguments[2] : void 0;
+  e.includes("message") ? N(e, t, void 0, n) : (0, E.playSound)(e, t)
 }
 
 function g(e) {
@@ -79,20 +80,20 @@ function g(e) {
 t.default = {
   hasPermission: R,
   requestPermission: function(e) {
-    null != p && p.requestPermission(() => {
+    null != O && O.requestPermission(() => {
       null != e && e(R())
     })
   },
   showNotification: function(e, t, n, i, r) {
-    var a, o, l, d;
+    var s, o, l, d;
     let E;
     if (g(r)) {
-      null != r.sound && !1 !== r.playSoundIfDisabled && C(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1);
+      null != r.sound && !1 !== r.playSoundIfDisabled && C(r.sound, null !== (o = r.volume) && void 0 !== o ? o : 1, r.soundpack);
       return
     }
-    null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1);
+    null != r.sound && C(r.sound, null !== (l = r.volume) && void 0 !== l ? l : 1, r.soundpack);
     let f = null !== (d = null == r ? void 0 : r.tag) && void 0 !== d ? d : null;
-    (0, c.isLinux)() && (n = s().escape(n));
+    (0, c.isLinux)() && (n = a().escape(n));
     let h = {
       icon: e,
       body: n,
@@ -101,11 +102,11 @@ t.default = {
     };
     S && u.default.taskbarFlash && I.default.flashFrame(!0);
     try {
-      E = new p(t, h)
+      E = new O(t, h)
     } catch (e) {
       return null
     }
-    return (null === (a = r.onShown) || void 0 === a || a.call(r), !r.omitViewTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
+    return (null === (s = r.onShown) || void 0 === s || s.call(r), !r.omitViewTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_VIEWED, i), E.onclick = () => {
       var e;
       c.isPlatformEmbedded ? I.default.focus() : (window.focus(), E.close()), !r.omitClickTracking && _.default.track(T.AnalyticEvents.NOTIFICATION_CLICKED, i), null === (e = r.onClick) || void 0 === e || e.call(r)
     }, m && setTimeout(() => E.close(), 5e3), A) ? E : {

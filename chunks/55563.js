@@ -1,7 +1,7 @@
 "use strict";
 let i;
 n.r(t), n("47120");
-var r, s, a, o, l = n("442837"),
+var r, a, s, o, l = n("442837"),
   u = n("570140"),
   d = n("706454"),
   _ = n("659181"),
@@ -26,13 +26,6 @@ function m(e) {
 
 function N(e) {
   let {
-    storeListings: t
-  } = e;
-  for (let e of t) m(e)
-}
-
-function O(e) {
-  let {
     entitlements: t
   } = e;
   for (let e of t) null != e.sku && h(e.sku)
@@ -42,13 +35,13 @@ function p() {
   E = new Set, I = new Set, T = new Map, f = new Map, S = new Map
 }
 
-function R() {
+function O() {
   if (i === d.default.locale) return !1;
   i = d.default.locale, p()
 }
-class C extends(r = l.Store) {
+class R extends(r = l.Store) {
   initialize() {
-    this.waitFor(d.default, c.default), this.syncWith([d.default], R), i = d.default.locale
+    this.waitFor(d.default, c.default), this.syncWith([d.default], O), i = d.default.locale
   }
   get(e) {
     return T.get(e)
@@ -67,14 +60,18 @@ class C extends(r = l.Store) {
     return I.has(e)
   }
 }
-o = "SKUStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
+o = "SKUStore", (s = "displayName") in(a = R) ? Object.defineProperty(a, s, {
   value: o,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[a] = o, t.default = new C(u.default, {
-  STORE_LISTINGS_FETCH_SUCCESS: N,
-  APPLICATION_STORE_DIRECTORY_FETCH_SUCCESS: N,
+}) : a[s] = o, t.default = new R(u.default, {
+  STORE_LISTINGS_FETCH_SUCCESS: function(e) {
+    let {
+      storeListings: t
+    } = e;
+    for (let e of t) m(e)
+  },
   STORE_LISTING_FETCH_SUCCESS: function(e) {
     let {
       storeListing: t
@@ -114,8 +111,8 @@ o = "SKUStore", (a = "displayName") in(s = C) ? Object.defineProperty(s, a, {
     for (let e of n) A(e);
     null != t && S.set(t, new Set(n.map(e => e.id)))
   },
-  ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: O,
+  ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: N,
   APPLICATION_STORE_CLEAR_DATA: p,
-  APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: O,
-  ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: O
+  APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: N,
+  ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: N
 })

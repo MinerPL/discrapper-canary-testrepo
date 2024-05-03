@@ -7,8 +7,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("468436"),
-  a = n("378298"),
+  a = n("468436"),
+  s = n("378298"),
   o = n("473092"),
   l = n("237292");
 
@@ -24,7 +24,7 @@ function u(e) {
     }))(0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("79504"), n.e("92223"), n.e("58153"), n.e("2047"), n.e("25381"), n.e("49508"), n.e("98799")]).then(n.bind(n, "955708"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("49508"), n.e("51934")]).then(n.bind(n, "955708"));
     return n => (0, i.jsx)(e, {
       channelId: t,
       warningId: u,
@@ -33,9 +33,9 @@ function u(e) {
       modalProps: n
     })
   }, {
-    backdropStyle: s.BackdropStyles.BLUR,
+    backdropStyle: a.BackdropStyles.BLUR,
     onCloseCallback: () => {
-      (0, a.dismissChannelSafetyWarnings)(t, [u]), (0, o.trackCtaEvent)({
+      (0, s.dismissChannelSafetyWarnings)(t, [u]), (0, o.trackCtaEvent)({
         channelId: t,
         senderId: d,
         warningId: u,

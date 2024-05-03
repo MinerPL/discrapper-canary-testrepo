@@ -2,8 +2,8 @@
 n.r(t), n("757143");
 var i = n("911969"),
   r = n("10718"),
-  s = n("367790"),
-  a = n("895924"),
+  a = n("367790"),
+  s = n("895924"),
   o = n("826298"),
   l = n("695346"),
   u = n("594174"),
@@ -16,18 +16,13 @@ var i = n("911969"),
   f = n("689938");
 
 function S(e) {
-  let t = c.PREFIX_COMMAND_REGEX.exec(e);
-  if (null != t) return {
-    type: "prefix",
-    cleanedQuery: e.substring(t[0].length).trim()
-  };
-  let n = c.BOT_MENTION_COMMAND_REGEX.exec(e);
-  if (null != n) {
-    let t = n[1],
-      i = u.default.getUser(t);
+  let t = c.BOT_MENTION_COMMAND_REGEX.exec(e);
+  if (null != t) {
+    let n = t[1],
+      i = u.default.getUser(n);
     return null == i || !i.bot || i.isClyde() ? null : {
       type: "mention",
-      cleanedQuery: e.substring(n[0].length).trim(),
+      cleanedQuery: e.substring(t[0].length).trim(),
       user: i
     }
   }
@@ -39,10 +34,10 @@ let h = {
   focusMode: I.FocusMode.MANUAL,
   matches(e, t, n, i, r) {
     if (r.commands === I.CommandMode.DISABLED || r.commands === I.CommandMode.OLD_BUILT_INS || n.length < 2 || !l.ShowCommandSuggestions.getSetting()) return !1;
-    let s = S(n);
-    return null != s && s.cleanedQuery.length > 0
+    let a = S(n);
+    return null != a && a.cleanedQuery.length > 0
   },
-  queryResults(e, t, n, a, u) {
+  queryResults(e, t, n, s, u) {
     if (!l.ShowCommandSuggestions.getSetting()) return T.EMPTY_RESULTS;
     let d = S(n);
     if (null == d) return T.EMPTY_RESULTS;
@@ -56,7 +51,7 @@ let h = {
       }, {
         limit: I.MAX_COMMAND_AUTOCOMPLETE_RESULTS,
         placeholderCount: I.MAX_COMMAND_AUTOCOMPLETE_PLACEHOLDERS,
-        scoreMethod: s.ScoreMethod.COMMAND_OR_APPLICATION,
+        scoreMethod: a.ScoreMethod.COMMAND_OR_APPLICATION,
         allowFetch: u
       });
     if (null == c) return T.EMPTY_RESULTS;
@@ -83,20 +78,20 @@ let h = {
       selectedIndex: n,
       guild: i,
       channel: r,
-      query: s,
-      options: a,
+      query: a,
+      options: s,
       onHover: o,
       onClick: l
     } = e;
     return (0, E.renderAutocompleteGroup)({
-      query: s,
+      query: a,
       selectedIndex: n,
       autocompletes: t,
       onHover: o,
       onClick: l,
       titleWithQuery: f.default.Messages.COMMANDS_MATCHING,
       titleWithoutQuery: f.default.Messages.COMMANDS,
-      Component: a.commands === I.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
+      Component: s.commands === I.CommandMode.OLD_BUILT_INS ? d.default.Command : d.default.NewCommand,
       getProps: e => {
         let {
           command: t,
@@ -126,14 +121,14 @@ let h = {
       index: n,
       type: i,
       options: r,
-      channel: s
+      channel: a
     } = e, o = T.default.onSelect({
       results: t,
       index: n,
       type: i,
       options: r,
-      channel: s,
-      location: a.ApplicationCommandTriggerLocations.SUGGESTION
+      channel: a,
+      location: s.ApplicationCommandTriggerLocations.SUGGESTION
     });
     return null == o ? null : {
       ...o,

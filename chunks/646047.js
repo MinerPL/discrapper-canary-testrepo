@@ -15,5 +15,8 @@ let i = new class e {
   isEnabled() {
     return !1
   }
+  isSupported() {
+    return !1
+  }
 };
 t.default = i

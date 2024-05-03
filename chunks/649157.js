@@ -7,7 +7,7 @@ var a = s("735250"),
   r = s("153867"),
   o = s("706454"),
   d = s("689938"),
-  u = s("917446"),
+  u = s("66014"),
   c = s("444675");
 t.default = l.default.connectStores([o.default], () => ({
   currentLocale: o.default.locale
@@ -15,7 +15,7 @@ t.default = l.default.connectStores([o.default], () => ({
   let [t, l] = n.useState(e.currentLocale), [o] = n.useState(() => d.default.getAvailableLocales().map(e => {
     let t;
     try {
-      t = s("687332")("@discordapp/common/images/flags/".concat(e.value, ".png").replace("@discordapp/common/images/flags/", "./"))
+      t = s("333369")("@discordapp/common/images/flags/".concat(e.value, ".png").replace("@discordapp/common/images/flags/", "./"))
     } catch (e) {
       t = s("1474")
     }

@@ -1,70 +1,71 @@
 "use strict";
 n.r(t), n.d(t, {
   acceptWhitelist: function() {
-    return l
+    return o
   },
   authorize: function() {
-    return u
+    return l
   },
   fetchAuthorization: function() {
-    return d
+    return u
   },
   fetchChannels: function() {
-    return _
+    return d
   },
   finishUserCode: function() {
-    return I
+    return E
   },
   finishUserCodeTwoWayLinkError: function() {
-    return T
+    return I
   },
   logoutWithRedirect: function() {
-    return c
+    return _
   },
   verifyUserCode: function() {
-    return E
+    return c
   }
 });
-var i = n("373793"),
-  r = n("860911"),
-  s = n("544891"),
+var i = n("860911"),
+  r = n("544891"),
   a = n("893776"),
-  o = n("981631");
+  s = n("981631");
 
-function l(e) {
-  return s.HTTP.post({
-    url: o.Endpoints.OAUTH2_WHITELIST_ACCEPT,
+function o(e) {
+  return r.HTTP.post({
+    url: s.Endpoints.OAUTH2_WHITELIST_ACCEPT,
     query: {
       token: e
     },
     oldFormErrors: !0
   })
 }
-async function u(e) {
+async function l(e) {
   let {
     authorize: t,
     clientId: n,
     scopes: i,
-    responseType: r,
-    redirectUri: a,
+    responseType: a,
+    redirectUri: o,
     codeChallenge: l,
     codeChallengeMethod: u,
     state: d,
     permissions: _,
     guildId: c,
     channelId: E,
-    integrationType: I
+    integrationType: I,
+    nonce: T
   } = e;
-  return (await s.HTTP.post({
-    url: o.Endpoints.OAUTH2_AUTHORIZE,
+  return (await r.HTTP.post({
+    url: s.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: n,
-      response_type: r,
-      redirect_uri: a,
+      response_type: a,
+      redirect_uri: o,
       code_challenge: l,
       code_challenge_method: u,
       scope: i.join(" "),
-      state: d
+      state: d,
+      nonce: T
     },
     body: {
       guild_id: c,
@@ -77,38 +78,40 @@ async function u(e) {
     oldFormErrors: !0
   })).body
 }
-async function d(e) {
+async function u(e) {
   let {
     clientId: t,
     scopes: n,
-    responseType: r,
+    responseType: i,
     redirectUri: a,
-    codeChallenge: l,
-    codeChallengeMethod: u,
-    state: d,
-    userInstall: _
+    codeChallenge: o,
+    codeChallengeMethod: l,
+    state: u,
+    integrationType: d,
+    nonce: _
   } = e;
-  return (await s.HTTP.get({
-    url: o.Endpoints.OAUTH2_AUTHORIZE,
+  return (await r.HTTP.get({
+    url: s.Endpoints.OAUTH2_AUTHORIZE,
     query: {
       client_id: t,
-      response_type: r,
+      response_type: i,
       redirect_uri: a,
-      code_challenge: l,
-      code_challenge_method: u,
+      code_challenge: o,
+      code_challenge_method: l,
       scope: n.join(" "),
-      state: d,
-      integration_type: _ ? i.ApplicationIntegrationType.USER_INSTALL : i.ApplicationIntegrationType.GUILD_INSTALL
+      state: u,
+      integration_type: d,
+      nonce: _
     },
     retries: 3,
     oldFormErrors: !0
   })).body
 }
-async function _(e) {
+async function d(e) {
   let {
     body: t
-  } = await s.HTTP.get({
-    url: o.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
+  } = await r.HTTP.get({
+    url: s.Endpoints.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
     query: {
       guild_id: e
     },
@@ -117,29 +120,29 @@ async function _(e) {
   return t
 }
 
-function c(e) {
-  a.default.logout((0, r.getLoginPath)(e.pathname + e.search, !1))
+function _(e) {
+  a.default.logout((0, i.getLoginPath)(e.pathname + e.search, !1))
 }
-async function E(e) {
-  return await s.HTTP.post({
-    url: o.Endpoints.OAUTH2_DEVICE_VERIFY,
+async function c(e) {
+  return await r.HTTP.post({
+    url: s.Endpoints.OAUTH2_DEVICE_VERIFY,
     body: {
       user_code: e
     }
   })
 }
-async function I(e, t) {
-  return await s.HTTP.post({
-    url: o.Endpoints.OAUTH2_DEVICE_FINISH,
+async function E(e, t) {
+  return await r.HTTP.post({
+    url: s.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
       result: t
     }
   })
 }
-async function T(e, t, n) {
-  return await s.HTTP.post({
-    url: o.Endpoints.OAUTH2_DEVICE_FINISH,
+async function I(e, t, n) {
+  return await r.HTTP.post({
+    url: s.Endpoints.OAUTH2_DEVICE_FINISH,
     body: {
       user_code: e,
       result: "two_way_link_error",

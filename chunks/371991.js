@@ -2,28 +2,30 @@
 n.r(t), n("47120");
 var a = n("735250"),
   l = n("470079"),
-  s = n("846519"),
-  i = n("481060"),
-  r = n("506071"),
-  o = n("561308");
-let u = e => {
+  s = n("442837"),
+  i = n("846519"),
+  r = n("481060"),
+  o = n("706454"),
+  u = n("506071"),
+  d = n("561308");
+let c = e => {
   let {
     entry: t,
     textColor: n
-  } = e, [u, d] = l.useState(Date.now()), c = (0, r.useIsWindowFocused)(), f = l.useMemo(() => {
+  } = e, [s, o] = l.useState(Date.now()), c = (0, u.useIsWindowFocused)(), f = l.useMemo(() => {
     let {
       hours: e
-    } = (0, o.calculateActiveTimestampDurations)(t, u);
+    } = (0, d.calculateActiveTimestampDurations)(t, s);
     return e > 0 ? 3e5 : 1e3
-  }, [t, u]);
+  }, [t, s]);
   l.useEffect(() => {
-    let e = new s.Interval;
+    let e = new i.Interval;
     return e.start(f, () => {
-      d(Date.now())
+      o(Date.now())
     }), !c && e.stop(), () => e.stop()
   }, [f, c]);
-  let h = l.useMemo(() => (0, o.formatEntryTimestamp)(t, u), [t, u]);
-  return (0, a.jsx)(i.Text, {
+  let h = l.useMemo(() => (0, d.formatActiveTimestamp)(t, s), [t, s]);
+  return (0, a.jsx)(r.Text, {
     variant: "text-xs/normal",
     tabularNumbers: !0,
     color: n,
@@ -34,13 +36,14 @@ t.default = e => {
   let {
     entry: t,
     textColor: n
-  } = e;
-  return (0, o.isEntryActive)(t) ? (0, a.jsx)(u, {
+  } = e, l = (0, d.isEntryActive)(t), i = (0, s.useStateFromStores)([o.default], () => o.default.locale);
+  return l ? (0, a.jsx)(c, {
     entry: t,
     textColor: n
-  }) : (0, a.jsx)(i.Text, {
+  }) : (0, a.jsx)(r.Text, {
     variant: "text-xs/normal",
     color: n,
-    children: (0, o.formatEntryTimestamp)(t, Date.now())
+    lineClamp: 1,
+    children: (0, d.formatEndedTimestamp)(t, i)
   })
 }

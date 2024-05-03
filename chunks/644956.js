@@ -6,10 +6,10 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("392711"),
-  o = n.n(a),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("392711"),
+  o = n.n(s),
   l = n("866442"),
   u = n("442837"),
   d = n("481060"),
@@ -24,14 +24,14 @@ var r = n("803997"),
   A = n("103575"),
   m = n("592125"),
   N = n("271383"),
-  O = n("430824"),
-  p = n("594174"),
+  p = n("430824"),
+  O = n("594174"),
   R = n("285952"),
   C = n("797053"),
   g = n("151827"),
   L = n("689938"),
-  D = n("667595"),
-  v = n("931093");
+  v = n("958986"),
+  D = n("990291");
 let M = (0, f.createExperiment)({
   kind: "user",
   id: "2021-07_role_popout",
@@ -52,20 +52,20 @@ function y(e) {
   let {
     roleColor: t,
     roleId: r,
-    channelId: a,
+    channelId: s,
     roleName: f,
     guildId: y,
     children: P,
     inlinePreview: U = !1
   } = e, {
     analyticsLocations: b
-  } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, k = w && "dot" === G, B = e => (0, i.jsxs)(C.default, {
-    className: s()(v.roleMention),
+  } = (0, T.default)(I.default.ROLE_MENTION), G = (0, u.useStateFromStores)([E.default], () => E.default.roleStyle), w = null != t && 0 !== t && !U, B = w && "dot" === G, k = e => (0, i.jsxs)(C.default, {
+    className: a()(D.roleMention),
     color: "username" === G && w ? t : null,
     ...e,
-    children: [k && (0, i.jsx)(d.RoleDot, {
+    children: [B && (0, i.jsx)(d.RoleDot, {
       color: (0, l.int2hex)(t),
-      className: D.roleDot,
+      className: v.roleDot,
       background: !1,
       tooltip: !1
     }), P]
@@ -76,9 +76,9 @@ function y(e) {
   }, {
     autoTrackExposure: !1
   });
-  return !V || U || null == a || null == y || null == r && "@everyone" !== f ? (0, i.jsx)(T.AnalyticsLocationProvider, {
+  return !V || U || null == s || null == y || null == r && "@everyone" !== f ? (0, i.jsx)(T.AnalyticsLocationProvider, {
     value: b,
-    children: B()
+    children: k()
   }) : (0, i.jsx)(T.AnalyticsLocationProvider, {
     value: b,
     children: (0, i.jsx)(d.Popout, {
@@ -86,18 +86,18 @@ function y(e) {
         null != r && await (0, S.requestMembersForRole)(y, r)
       },
       renderPopout: e => {
-        let t = m.default.getChannel(a),
-          s = O.default.getGuild(y),
-          l = N.default.getMembers(s.id),
-          u = O.default.getRole(y, null != r ? r : s.getEveryoneRoleId()),
-          E = o()(l).filter(e => !!("@everyone" === f || e.roles.includes(r)) && null != p.default.getUser(e.userId)).sortBy(e => {
+        let t = m.default.getChannel(s),
+          a = p.default.getGuild(y),
+          l = N.default.getMembers(a.id),
+          u = p.default.getRole(y, null != r ? r : a.getEveryoneRoleId()),
+          E = o()(l).filter(e => !!("@everyone" === f || e.roles.includes(r)) && null != O.default.getUser(e.userId)).sortBy(e => {
             var t;
-            let n = p.default.getUser(e.userId);
+            let n = O.default.getUser(e.userId);
             return (null != n ? null !== (t = e.nick) && void 0 !== t ? t : n.username : "").toLocaleLowerCase()
           }).map(e => {
-            let r = p.default.getUser(e.userId);
+            let r = O.default.getUser(e.userId);
             return (0, i.jsx)(d.Popout, {
-              preload: () => (0, h.default)(r.id, r.getAvatarURL(t.guild_id, 80), {
+              preload: () => (0, h.maybeFetchUserProfileForPopout)(r.id, r.getAvatarURL(t.guild_id, 80), {
                 guildId: t.guild_id,
                 channelId: t.id
               }),
@@ -105,12 +105,12 @@ function y(e) {
                 ...n,
                 location: "RoleMention",
                 userId: e.userId,
-                guildId: s.id,
+                guildId: a.id,
                 channelId: t.id,
                 roleId: u.id
               }),
               spacing: 14,
-              children: (a, o) => {
+              children: (s, o) => {
                 let {
                   isShown: l
                 } = o;
@@ -119,37 +119,37 @@ function y(e) {
                   colorString: e.colorString,
                   colorRoleName: u.name,
                   user: r,
-                  isOwner: e.userId === s.ownerId,
+                  isOwner: e.userId === a.ownerId,
                   nick: e.nick,
                   premiumSince: null == e.premiumSince ? null : new Date(e.premiumSince),
                   channel: t,
-                  guildId: s.id,
+                  guildId: a.id,
                   onContextMenu: e => {
                     (0, _.openContextMenuLazy)(e, async () => {
                       let {
                         default: e
-                      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("85559"), n.e("70866"), n.e("12435"), n.e("64578")]).then(n.bind(n, "757387"));
+                      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("70866"), n.e("12435"), n.e("6696")]).then(n.bind(n, "757387"));
                       return n => (0, i.jsx)(e, {
                         ...n,
                         user: r,
-                        guildId: s.id,
+                        guildId: a.id,
                         channel: t,
                         showMediaItems: !0
                       })
                     })
                   },
-                  ...a
+                  ...s
                 }, e.userId)
               }
             }, r.id)
           }).value();
         return (0, i.jsx)(R.default, {
-          className: v.rolePopout,
+          className: D.rolePopout,
           ...e,
           children: (0, i.jsxs)(d.Scroller, {
-            className: v.roleScroller,
+            className: D.roleScroller,
             children: [(0, i.jsx)(g.default, {
-              className: v.roleHeader,
+              className: D.roleHeader,
               "aria-label": L.default.Messages.CHANNEL_MEMBERS_A11Y_LABEL.format({
                 title: u.name,
                 count: E.length
@@ -163,7 +163,7 @@ function y(e) {
         })
       },
       position: "right",
-      children: B
+      children: k
     })
   })
 }

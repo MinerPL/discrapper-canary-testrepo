@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("403182"),
-  a = n("261922"),
+  a = n("403182"),
+  s = n("261922"),
   o = n("715246"),
   l = n("981631"),
   u = n("689938");
@@ -30,21 +30,24 @@ class d extends r.Component {
       responsive: A,
       mediaLayoutType: m,
       mimeType: N,
-      renderOverlayContent: O,
-      renderLinkComponent: p,
+      renderOverlayContent: p,
+      renderLinkComponent: O,
       onClick: R,
       onPlay: C,
-      onEnded: g,
-      onVolumeChange: L,
-      onMute: D,
-      alt: v = u.default.Messages.VIDEO,
-      ...M
+      onPause: g,
+      onEnded: L,
+      onControlsShow: v,
+      onControlsHide: D,
+      onVolumeChange: M,
+      onMute: y,
+      alt: P = u.default.Messages.VIDEO,
+      ...U
     } = this.props;
-    return (0, i.jsx)(a.default, {
-      alt: v,
+    return (0, i.jsx)(s.default, {
+      alt: P,
       className: n,
       src: d,
-      ...M,
+      ...U,
       minWidth: o.default.minWidth,
       minHeight: o.default.minHeight,
       shouldLink: !1,
@@ -53,17 +56,17 @@ class d extends r.Component {
       responsive: A,
       children: n => {
         let {
-          src: a,
+          src: s,
           size: {
             width: u,
             height: d
           }
-        } = n, v = !(c <= l.MAX_VIDEO_WIDTH && E <= l.MAX_VIDEO_HEIGHT || c <= l.MAX_VIDEO_HEIGHT && E <= l.MAX_VIDEO_WIDTH);
+        } = n, P = !(c <= l.MAX_VIDEO_WIDTH && E <= l.MAX_VIDEO_HEIGHT || c <= l.MAX_VIDEO_HEIGHT && E <= l.MAX_VIDEO_WIDTH);
         return (0, i.jsx)(o.default, {
           className: r,
-          forceExternal: v,
+          forceExternal: P,
           src: e,
-          poster: a,
+          poster: s,
           width: u,
           height: d,
           responsive: A,
@@ -73,16 +76,19 @@ class d extends r.Component {
           type: o.default.Types.VIDEO,
           mediaLayoutType: m,
           fileName: _,
-          fileSize: null == t ? void 0 : (0, s.sizeString)(t),
+          fileSize: null == t ? void 0 : (0, a.sizeString)(t),
           fileSizeBytes: null == t ? void 0 : t,
           playable: I,
-          renderLinkComponent: p,
-          renderOverlayContent: O,
+          renderLinkComponent: O,
+          renderOverlayContent: p,
           onClick: R,
           onPlay: C,
-          onEnded: g,
-          onVolumeChange: L,
-          onMute: D,
+          onPause: g,
+          onEnded: L,
+          onVolumeChange: M,
+          onMute: y,
+          onControlsShow: v,
+          onControlsHide: D,
           mimeType: N,
           downloadable: T
         })

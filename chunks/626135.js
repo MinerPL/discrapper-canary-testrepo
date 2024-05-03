@@ -19,19 +19,19 @@ n.r(t), n.d(t, {
     return g
   },
   expandLocation: function() {
-    return O
+    return p
   },
   setUTMContext: function() {
     return C
   },
   trackNetworkAction: function() {
-    return v
+    return D
   }
 }), n("653041"), n("47120");
 var i = n("470079"),
   r = n("990547"),
-  s = n("570140"),
-  a = n("565384"),
+  a = n("570140"),
+  s = n("565384"),
   o = n("569611"),
   l = n("97145"),
   u = n("857192"),
@@ -166,14 +166,6 @@ let N = {
     throttlePeriod: 6e4,
     throttleKeys: e => [e.type]
   },
-  [E.AnalyticEvents.CHANNEL_HIGHLIGHTS_VIEWED]: {
-    throttlePeriod: 36e5,
-    throttleKeys: e => [e.guild_id, e.channel_id]
-  },
-  [E.AnalyticEvents.GUILD_CHANNEL_HIGHLIGHTS_LOADED]: {
-    throttlePeriod: 36e5,
-    throttleKeys: e => [e.guild_id]
-  },
   [E.AnalyticEvents.FORUM_CHANNEL_SEARCHED]: {
     throttlePeriod: 6e4,
     throttleKeys: e => [e.guild_id, e.channel_id]
@@ -231,7 +223,7 @@ let N = {
   }
 };
 
-function O(e) {
+function p(e) {
   return "string" == typeof e ? {
     location: e
   } : {
@@ -242,10 +234,10 @@ function O(e) {
     location_object_type: e.objectType
   }
 }
-let p = () => I.AccessibilityFeatureFlags.NONE,
+let O = () => I.AccessibilityFeatureFlags.NONE,
   R = (0, r.trackMaker)({
     analyticEventConfigs: N,
-    dispatcher: s.default,
+    dispatcher: a.default,
     TRACK_ACTION_NAME: "TRACK"
   });
 
@@ -254,74 +246,74 @@ function C(e) {
 }
 
 function g(e) {
-  var t, n, i, r, s;
-  let a = e;
-  if (!a && (a = {}), null != a.location) {
+  var t, n, i, r, a;
+  let s = e;
+  if (!s && (s = {}), null != s.location) {
     let {
       location: e,
       ...t
-    } = a;
-    a = {
+    } = s;
+    s = {
       ...t,
-      ...O(e)
+      ...p(e)
     }
   }
-  if (null != a.source) {
+  if (null != s.source) {
     ;
     let {
       source: e,
       ...t
-    } = a;
-    a = {
+    } = s;
+    s = {
       ...t,
-      ..."string" == typeof(s = e) ? {
-        source: s
+      ..."string" == typeof(a = e) ? {
+        source: a
       } : {
-        source_page: s.page,
-        source_section: s.section,
-        source_object: s.object,
-        source_object_type: s.objectType,
-        source_promotion_id: s.promotionId
+        source_page: a.page,
+        source_section: a.section,
+        source_object: a.object,
+        source_object_type: a.objectType,
+        source_promotion_id: a.promotionId
       }
     }
   }
-  a.client_performance_cpu = _.default.getCurrentCPUUsagePercent(), a.client_performance_memory = _.default.getCurrentMemoryUsageKB(), a.cpu_core_count = _.default.getCPUCoreCount(), a.accessibility_features = p(), a.rendered_locale = T.default.getLocale(), a.uptime_app = Math.floor((performance.now() - h) / 1e3);
+  s.client_performance_cpu = _.default.getCurrentCPUUsagePercent(), s.client_performance_memory = _.default.getCurrentMemoryUsageKB(), s.cpu_core_count = _.default.getCPUCoreCount(), s.accessibility_features = O(), s.rendered_locale = T.default.getLocale(), s.uptime_app = Math.floor((performance.now() - h) / 1e3);
   let o = _.default.getProcessUptime();
-  null != o && (a.uptime_process_renderer = Math.floor(o));
+  null != o && (s.uptime_process_renderer = Math.floor(o));
   let {
     utmSource: l,
     utmMedium: u,
     utmCampaign: d,
     utmContent: c
   } = S;
-  return a.utm_source = null !== (t = a.utm_source) && void 0 !== t ? t : l, a.utm_medium = null !== (n = a.utm_medium) && void 0 !== n ? n : u, a.utm_campaign = null !== (i = a.utm_campaign) && void 0 !== i ? i : d, a.utm_content = null !== (r = a.utm_content) && void 0 !== r ? r : c, A.forEach(e => e(a)), a
+  return s.utm_source = null !== (t = s.utm_source) && void 0 !== t ? t : l, s.utm_medium = null !== (n = s.utm_medium) && void 0 !== n ? n : u, s.utm_campaign = null !== (i = s.utm_campaign) && void 0 !== i ? i : d, s.utm_content = null !== (r = s.utm_content) && void 0 !== r ? r : c, A.forEach(e => e(s)), s
 }
 
 function L(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
   u.default.isLoggingAnalyticsEvents && console.info("AnalyticsUtils.track(...):", e, t), n ? o.report("Analytics", e, t) : o.report("Analytics", e)
 }
-let D = (0, r.trackMaker)({
+let v = (0, r.trackMaker)({
   analyticEventConfigs: N,
-  dispatcher: s.default,
+  dispatcher: a.default,
   TRACK_ACTION_NAME: "TRACK"
 });
 
-function v(e, t) {
+function D(e, t) {
   let n = g({
-    location: (0, a.getLocation)(),
+    location: (0, s.getLocation)(),
     ...t
   });
-  (0, a.setDebugTrackedData)(e, {
+  (0, s.setDebugTrackedData)(e, {
     type: "action",
     ...t
-  }), L(e, n), D(e, n)
+  }), L(e, n), v(e, n)
 }
 t.default = {
   ...r,
   getCampaignParams: r.getCampaignParams,
   setSystemAccessibilityFeatures: function(e) {
-    p = e
+    O = e
   },
   expandEventProperties: g,
   track: function(e, t) {

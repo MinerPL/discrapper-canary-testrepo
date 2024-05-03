@@ -3,8 +3,8 @@ n.r(t), n("47120"), n("789020");
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("147913"),
-  a = n("160404"),
+  a = n("147913"),
+  s = n("160404"),
   o = n("314897"),
   l = n("592125"),
   u = n("271383"),
@@ -26,7 +26,7 @@ function A(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class m extends s.default {
+class m extends a.default {
   constructor(...e) {
     super(...e), A(this, "onboardingCompleteGuilds", new Set), A(this, "actions", {
       POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
@@ -41,14 +41,14 @@ class m extends s.default {
     }), A(this, "handleGuildMemberUpdate", e => {
       let {
         flags: t,
-        user: s,
-        guildId: a
+        user: a,
+        guildId: s
       } = e;
-      if (s.id === o.default.getId()) {
-        if (!this.onboardingCompleteGuilds.has(a) && (0, _.hasFlag)(null != t ? t : 0, h.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
+      if (a.id === o.default.getId()) {
+        if (!this.onboardingCompleteGuilds.has(s) && (0, _.hasFlag)(null != t ? t : 0, h.GuildMemberFlags.COMPLETED_HOME_ACTIONS)) {
           var l, u;
-          this.onboardingCompleteGuilds.add(a);
-          let e = null !== (u = null === (l = E.default.getNewMemberActions(a)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
+          this.onboardingCompleteGuilds.add(s);
+          let e = null !== (u = null === (l = E.default.getNewMemberActions(s)) || void 0 === l ? void 0 : l.length) && void 0 !== u ? u : 0;
           if (0 === e) return;
           (0, r.openModalLazy)(async () => {
             let {
@@ -76,8 +76,8 @@ class m extends s.default {
       let {
         memberActions: i,
         completedActions: r
-      } = await this._getOrLoadOnboardingMemberActions(t), s = null == i ? void 0 : i.find(e => e.channelId === n);
-      (null == r ? void 0 : r[n]) !== !0 && null != s && s.actionType === I.NewMemberActionTypes.VIEW && (0, c.completeNewMemberAction)(t, n)
+      } = await this._getOrLoadOnboardingMemberActions(t), a = null == i ? void 0 : i.find(e => e.channelId === n);
+      (null == r ? void 0 : r[n]) !== !0 && null != a && a.actionType === I.NewMemberActionTypes.VIEW && (0, c.completeNewMemberAction)(t, n)
     }), A(this, "handleMessageSend", e => {
       var t;
       let {
@@ -86,8 +86,8 @@ class m extends s.default {
         message: r
       } = e;
       if (null == n || null == i || (null === (t = r.author) || void 0 === t ? void 0 : t.id) !== o.default.getId()) return;
-      let s = l.default.getChannel(i);
-      (null == s ? void 0 : s.isForumPost()) && (null == s ? void 0 : s.parent_id) != null && this._completeChatAction(n, s.parent_id), this._completeChatAction(n, i)
+      let a = l.default.getChannel(i);
+      (null == a ? void 0 : a.isForumPost()) && (null == a ? void 0 : a.parent_id) != null && this._completeChatAction(n, a.parent_id), this._completeChatAction(n, i)
     }), A(this, "handleThreadCreate", e => {
       var t;
       let {
@@ -102,20 +102,22 @@ class m extends s.default {
       } = await this._getOrLoadOnboardingMemberActions(e), r = null == n ? void 0 : n.find(e => e.channelId === t);
       (null == i ? void 0 : i[t]) !== !0 && null != r && r.actionType === I.NewMemberActionTypes.CHAT && (0, c.completeNewMemberAction)(e, t)
     }), A(this, "_getOrLoadOnboardingMemberActions", async e => {
-      let t = (0, f.canSeeOnboardingHome)(e),
-        n = a.default.isFullServerPreview(e);
-      if (!t && !n) return {};
-      let i = u.default.getSelfMember(e);
-      if (null == i || !(0, S.getIsNewMember)(i)) return {};
-      let [r, s] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, i), this._getOrLoadMemberActions(e, i)]);
+      var t, n;
+      let i = (0, f.canSeeOnboardingHome)(e),
+        r = s.default.isFullServerPreview(e);
+      if (!i && !r) return {};
+      let a = u.default.getSelfMember(e);
+      if (null == a || !(0, S.getIsNewMember)(null !== (t = a.joinedAt) && void 0 !== t ? t : void 0, null !== (n = a.flags) && void 0 !== n ? n : void 0)) return {};
+      let [o, l] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e, a), this._getOrLoadMemberActions(e, a)]);
       return {
-        memberActions: r,
-        completedActions: s
+        memberActions: o,
+        completedActions: l
       }
     }), A(this, "_getOrLoadOnboardingHomeSettings", async (e, t) => {
-      let n = E.default.getNewMemberActions(e),
-        i = E.default.getIsLoading(e);
-      if (!(null == n && !i && (0, S.getIsNewMember)(t))) return n;
+      var n, i;
+      let r = E.default.getNewMemberActions(e),
+        a = E.default.getIsLoading(e);
+      if (!(null == r && !a && (0, S.getIsNewMember)(null !== (n = t.joinedAt) && void 0 !== n ? n : void 0, null !== (i = t.flags) && void 0 !== i ? i : void 0))) return r;
       {
         let t = await (0, c.fetchGuildHomeSettings)(e);
         return null == t ? void 0 : t.newMemberActions

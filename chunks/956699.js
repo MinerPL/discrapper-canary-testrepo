@@ -2,7 +2,7 @@
 s.r(t), s("47120"), s("411104");
 var a = s("735250"),
   n = s("470079"),
-  l = s("803997"),
+  l = s("120356"),
   i = s.n(l),
   r = s("392711"),
   o = s.n(r),
@@ -12,13 +12,13 @@ var a = s("735250"),
   S = s("481060"),
   E = s("570140"),
   T = s("661111"),
-  _ = s("179658"),
-  f = s("491428"),
-  m = s("225433"),
+  f = s("179658"),
+  m = s("491428"),
+  _ = s("225433"),
   g = s("484614"),
   h = s("386506"),
-  N = s("865427"),
-  I = s("758182"),
+  I = s("865427"),
+  N = s("758182"),
   p = s("802098"),
   C = s("663993"),
   A = s("38618"),
@@ -35,12 +35,12 @@ var a = s("735250"),
   U = s("601948"),
   y = s("981631"),
   B = s("908442"),
-  F = s("65982"),
-  G = s("850169"),
-  k = s("794711"),
-  H = s("633353");
+  F = s("649976"),
+  G = s("199100"),
+  k = s("949086"),
+  w = s("819041");
 
-function w(e, t, s) {
+function H(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -57,10 +57,10 @@ let V = ["discord_web", "discord_marketing", "discord_developers", "discord_ios"
     label: "Build ID"
   }];
 
-function K(e) {
+function W(e) {
   return "discord_ios" in e || "discord_android" in e
 }
-class W extends n.Component {
+class K extends n.Component {
   render() {
     let {
       project: e,
@@ -72,7 +72,7 @@ class W extends n.Component {
     return (0, a.jsxs)(L.default, {
       direction: L.default.Direction.VERTICAL,
       className: i()(F.buildOverrideGroup, k.marginBottom20, G.card, F.row),
-      children: [(0, a.jsx)(m.default, {
+      children: [(0, a.jsx)(_.default, {
         className: i()(F.removeBuildOverride, {
           [F.removeBuildOverrideDisabled]: n
         }),
@@ -122,13 +122,13 @@ class W extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "handleRemoveBuildOverride", () => {
+    super(...e), H(this, "handleRemoveBuildOverride", () => {
       this.props.onBuildOverrideRemoved(this.props.project)
-    }), w(this, "handleOverrideIdChanged", e => {
+    }), H(this, "handleOverrideIdChanged", e => {
       this.props.onBuildOverrideUpdated(this.props.project, {
         id: e
       })
-    }), w(this, "handleOverrideTypeChanged", e => {
+    }), H(this, "handleOverrideTypeChanged", e => {
       this.props.onBuildOverrideUpdated(this.props.project, {
         type: e,
         id: ""
@@ -141,7 +141,7 @@ class z extends n.Component {
     this.setState({
       loading: !0
     });
-    let e = await (0, N.getBuildOverride)();
+    let e = await (0, I.getBuildOverride)();
     this.setState({
       loading: !1,
       buildOverrides: e,
@@ -187,7 +187,7 @@ class z extends n.Component {
       saving: t,
       errors: s
     } = this.state;
-    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(W, {
+    return null == e ? null : o().map(e, (e, n) => (0, a.jsx)(K, {
       project: n,
       overrideType: e.type,
       overrideId: e.id,
@@ -240,7 +240,7 @@ class z extends n.Component {
       children: [(0, a.jsx)(L.default.Child, {
         grow: 0,
         children: (0, a.jsx)(S.Button, {
-          disabled: K(null != t ? t : {}),
+          disabled: W(null != t ? t : {}),
           onClick: this.handleSaveChanges,
           submitting: e,
           color: S.Button.Colors.GREEN,
@@ -268,7 +268,7 @@ class z extends n.Component {
       className: k.marginTop20
     }) : null != n && 0 === Object.keys(n).length ? this.renderEmpty() : this.renderItems();
     let l = !s && !t && this.getAvailableProjects().length > 0,
-      i = K(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
+      i = W(null != n ? n : {}) && "stable" !== window.GLOBAL_ENV.RELEASE_CHANNEL ? (0, a.jsx)(S.Text, {
         color: "text-danger",
         variant: "text-md/normal",
         children: "Mobile build overrides must be generated using the desktop/web stable client for now!"
@@ -302,14 +302,14 @@ class z extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), H(this, "state", {
       loading: !0,
       buildOverrides: {},
       loadedBuildOverrides: {},
       errors: {},
       saving: !1,
       didSave: !1
-    }), w(this, "handleAddBuildOverride", async () => {
+    }), H(this, "handleAddBuildOverride", async () => {
       var e;
       let t = await (e = this.getAvailableProjects(), new Promise(t => {
         (0, S.openModal)(s => {
@@ -357,7 +357,7 @@ class z extends n.Component {
       this.setState({
         buildOverrides: s
       })
-    }), w(this, "handleBuildOverrideUpdated", (e, t) => {
+    }), H(this, "handleBuildOverrideUpdated", (e, t) => {
       let {
         buildOverrides: s
       } = this.state, a = {
@@ -370,20 +370,20 @@ class z extends n.Component {
       this.setState({
         buildOverrides: n
       })
-    }), w(this, "handleBuildOverrideRemoved", e => {
+    }), H(this, "handleBuildOverrideRemoved", e => {
       let t = {
         ...this.state.buildOverrides
       };
       delete t[e], this.setState({
         buildOverrides: t
       })
-    }), w(this, "handleDiscardChanges", () => {
+    }), H(this, "handleDiscardChanges", () => {
       this.setState({
         buildOverrides: o().cloneDeep(this.state.loadedBuildOverrides),
         errors: {},
         didSave: !1
       })
-    }), w(this, "handleSaveChanges", async () => {
+    }), H(this, "handleSaveChanges", async () => {
       let {
         buildOverrides: e
       } = this.state;
@@ -412,7 +412,7 @@ class z extends n.Component {
         saving: !1,
         didSave: !1
       })
-    }), w(this, "handleLinkGeneration", () => {
+    }), H(this, "handleLinkGeneration", () => {
       let {
         buildOverrides: e
       } = this.state;
@@ -426,7 +426,7 @@ class z extends n.Component {
 class Q extends n.Component {
   isMobile() {
     var e;
-    return K(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
+    return W(null !== (e = this.props.buildOverrides) && void 0 !== e ? e : {})
   }
   renderSettingsForm() {
     let {
@@ -555,7 +555,7 @@ class Q extends n.Component {
         render: s => {
           let n = s.highlight("json", e, !0);
           return null == n ? t() : (0, a.jsx)("code", {
-            className: "hljs scroller ".concat(n.language, " ").concat(H.scrollbarGhost, " ").concat(F.codebox),
+            className: "hljs scroller ".concat(n.language, " ").concat(w.scrollbarGhost, " ").concat(F.codebox),
             dangerouslySetInnerHTML: {
               __html: n.value
             }
@@ -624,7 +624,7 @@ class Q extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), w(this, "state", {
+    super(...e), H(this, "state", {
       ttlSeconds: 3600,
       releaseChannel: "all",
       userIds: new Set,
@@ -637,33 +637,33 @@ class Q extends n.Component {
       statusText: null,
       statusTextColor: P.default.Colors.STATUS_RED,
       allowLoggedOut: !1
-    }), w(this, "setUserEntryError", e => {
+    }), H(this, "setUserEntryError", e => {
       this.setState({
         userIdEntryError: e
       })
-    }), w(this, "setStatusMessage", (e, t) => {
+    }), H(this, "setStatusMessage", (e, t) => {
       this.setState({
         statusText: e,
         statusTextColor: null != t ? t : P.default.Colors.STATUS_RED
       })
-    }), w(this, "handleUserIDEntry", e => {
+    }), H(this, "handleUserIDEntry", e => {
       if (!/^[\d\s,]*$/.test(e)) return this.setUserEntryError("User IDs are numbers!");
       let t = new Set(e.split(/[,\s]+/).filter(Boolean));
       this.setState({
         userIdEntry: e,
         userIds: t
       })
-    }), w(this, "setAllowedVersionError", e => {
+    }), H(this, "setAllowedVersionError", e => {
       this.setState({
         allowedVersionEntryError: e
       })
-    }), w(this, "handleAllowedVersionEntry", e => {
+    }), H(this, "handleAllowedVersionEntry", e => {
       this.setState({
         allowedVersionEntry: e
       })
-    }), w(this, "handleAllowedVersionEnter", e => {
+    }), H(this, "handleAllowedVersionEnter", e => {
       e.charCode === y.KeyboardKeys.ENTER && this.handleAddAllowedVersion()
-    }), w(this, "handleAddAllowedVersion", () => {
+    }), H(this, "handleAddAllowedVersion", () => {
       let {
         allowedVersions: e,
         allowedVersionEntry: t
@@ -673,26 +673,26 @@ class Q extends n.Component {
         allowedVersionEntry: "",
         allowedVersionEntryError: ""
       })
-    }), w(this, "handleRemoveAllowedVersion", e => {
+    }), H(this, "handleRemoveAllowedVersion", e => {
       let {
         allowedVersions: t
       } = this.state;
       t = t.filter(t => t !== e), this.setState({
         allowedVersions: t
       })
-    }), w(this, "handleAllowLoggedOut", e => {
+    }), H(this, "handleAllowLoggedOut", e => {
       this.setState({
         allowLoggedOut: e
       })
-    }), w(this, "handleExpirationChange", e => {
+    }), H(this, "handleExpirationChange", e => {
       this.setState({
         ttlSeconds: e
       })
-    }), w(this, "handleReleaseChannelChange", e => {
+    }), H(this, "handleReleaseChannelChange", e => {
       this.setState({
         releaseChannel: e
       })
-    }), w(this, "handleExperiments", e => {
+    }), H(this, "handleExperiments", e => {
       if (0 === e.trim().length) {
         this.setState({
           experimentsError: void 0
@@ -725,7 +725,7 @@ class Q extends n.Component {
         experiments: e,
         experimentsError: void 0
       })
-    }), w(this, "generatePayload", () => ({
+    }), H(this, "generatePayload", () => ({
       overrides: this.props.buildOverrides,
       meta: {
         release_channel: "all" === this.state.releaseChannel ? null : this.state.releaseChannel,
@@ -735,7 +735,7 @@ class Q extends n.Component {
         allow_logged_out: this.state.allowLoggedOut,
         experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments)
       }
-    })), w(this, "handleGenerateLink", async () => {
+    })), H(this, "handleGenerateLink", async () => {
       if (this.isMobile() && 0 === this.state.allowedVersions.length) {
         this.setAllowedVersionError("You must add at least one allowed version for iOS");
         return
@@ -750,11 +750,11 @@ class Q extends n.Component {
   }
 }
 
-function X() {
+function q() {
   throw Error("Send help")
 }
 
-function q() {
+function Z() {
   let [e, t] = n.useState(!1), [s, l] = n.useState("");
   return (n.useEffect(() => {
     (async () => {
@@ -772,7 +772,7 @@ function q() {
           A.default.getSocket().close(), A.default.getSocket().connect()
         },
         children: "Reset Socket"
-      }), I.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
+      }), N.ENABLE_CACHE_STORE && (0, a.jsx)(S.Button, {
         onClick: () => {
           E.default.dispatch({
             type: "CLEAR_CACHES",
@@ -833,14 +833,14 @@ function q() {
           onClick: () => t(!0),
           children: "React Crash"
         }), (0, a.jsx)(S.Button, {
-          onClick: X,
+          onClick: q,
           children: "onClick Throw"
         })]
       })
     })]
   })
 }
-let Z = u.default.connectStores([x.default], () => ({
+let X = u.default.connectStores([x.default], () => ({
   isTracingRequests: x.default.isTracingRequests,
   isForcedCanary: x.default.isForcedCanary,
   isLoggingGatewayEvents: x.default.isLoggingGatewayEvents,
@@ -870,63 +870,63 @@ let Z = u.default.connectStores([x.default], () => ({
     children: [(0, a.jsx)(S.FormSwitch, {
       value: t,
       note: "Force trace all client requests with APM",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         trace: e
       }),
       children: "Enable Tracing Requests"
     }), (0, a.jsx)(S.FormSwitch, {
       value: s,
       note: "Force all API requests to canary instances",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         canary: e
       }),
       children: "Enable Forced Canary"
     }), (0, a.jsx)(S.FormSwitch, {
       value: n,
       note: "Logs all incoming and outgoing gateway events to the developer console, enable verbose logging in the developer console to see! This includes all message content.",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logGatewayEvents: e
       }),
       children: "Enable Logging of Gateway Events to Console"
     }), (0, a.jsx)(S.FormSwitch, {
       value: l,
       note: "Logs all overlay related RPC events. Super noisy if an overlay is connected",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logOverlayEvents: e
       }),
       children: "Enable Logging of Overlay RPC Events & Commands"
     }), (0, a.jsx)(S.FormSwitch, {
       value: i,
       note: "Logs all analytics events to the developer console",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         logAnalyticsEvents: e
       }),
       children: "Enable Logging of Analytics Events"
     }), (0, a.jsx)(S.FormSwitch, {
       value: o,
       note: "Only enable on devices you trust.",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         sourceMapsEnabled: e
       }),
       children: "Enable source maps to be loaded on this client"
     }), (0, a.jsx)(S.FormSwitch, {
       value: d,
       note: "Displays a floating debugger with viewed impressions",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         analyticsDebuggerEnabled: e
       }),
       children: "Enable standard analytics debugger view"
     }), (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: c,
       note: "Displays a floating idle status indicator",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         idleStatusIndicatorEnabled: e
       }),
       children: "Enable idle status indicator"
     }) : null, null, (null == T ? void 0 : T.isStaff()) ? (0, a.jsx)(S.FormSwitch, {
       value: E,
       note: "In App Directory, include inactive collections on the homepage. Use this to preview changes to collections before publishing them.",
-      onChange: e => (0, _.setDeveloperOptionSettings)({
+      onChange: e => (0, f.setDeveloperOptionSettings)({
         appDirectoryIncludesInactiveCollections: e
       }),
       children: "Preview Unpublished Collections on App Directory Homepage"
@@ -953,7 +953,7 @@ function J() {
     }), (0, a.jsxs)("form", {
       className: F.surveyOverride,
       onSubmit: e => {
-        e.preventDefault(), t.length > 0 ? f.overrideSurvey(t) : f.overrideSurvey(null)
+        e.preventDefault(), t.length > 0 ? m.overrideSurvey(t) : m.overrideSurvey(null)
       },
       children: [(0, a.jsx)(S.TextInput, {
         className: F.surveyOverrideInput,
@@ -996,7 +996,7 @@ function $() {
 class ee extends n.PureComponent {
   render() {
     return (0, a.jsxs)(n.Fragment, {
-      children: [(0, a.jsx)(Z, {}), (0, a.jsx)(q, {}), (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(z, {})]
+      children: [(0, a.jsx)(X, {}), (0, a.jsx)(Z, {}), (0, a.jsx)(J, {}), (0, a.jsx)($, {}), (0, a.jsx)(z, {})]
     })
   }
 }

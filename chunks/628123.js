@@ -2,8 +2,8 @@
 n.r(t), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("392711"),
-  a = n.n(s),
+  a = n("392711"),
+  s = n.n(a),
   o = n("818405"),
   l = n("587158"),
   u = n("286379"),
@@ -19,9 +19,9 @@ var i = n("735250"),
   A = n("626135"),
   m = n("960048"),
   N = n("998502"),
-  O = n("981631"),
-  p = n("689938"),
-  R = n("588483");
+  p = n("981631"),
+  O = n("689938"),
+  R = n("898816");
 
 function C(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -50,18 +50,18 @@ function g() {
     onClick: n,
     submitting: e,
     className: R.clearOverrideButton,
-    children: p.default.Messages.CLEAR_BUILD_OVERRIDE
+    children: O.default.Messages.CLEAR_BUILD_OVERRIDE
   })
 }
-let L = a().throttle(() => {
+let L = s().throttle(e => {
   f.default.increment({
     name: u.MetricEvents.APP_CRASHED,
-    tags: ["reason:".concat(o.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(l.ErrorLevels.FATAL)]
+    tags: ["reason:".concat(o.AppCrashedReasons.UNHANDLED_JS_ERROR), "level:".concat(l.ErrorLevels.FATAL), "modded_client:".concat(e)]
   }, !0)
 }, 100, {
   trailing: !1
 });
-class D extends r.PureComponent {
+class v extends r.PureComponent {
   componentDidCatch(e, t) {
     this.triggerSoftCrash(e, t)
   }
@@ -71,17 +71,18 @@ class D extends r.PureComponent {
       error: e,
       info: t
     });
-    let i = m.default.captureCrash(e, {
-      extra: t
-    });
-    A.default.track(O.AnalyticEvents.APP_CRASHED, {
+    let i = (0, T.usesClientMods)(),
+      r = m.default.captureCrash(e, {
+        extra: t
+      });
+    A.default.track(p.AnalyticEvents.APP_CRASHED, {
       path: n.pathname,
       extra: t,
       error_message: e.message,
       error_stack: e.stack,
-      sentry_issue_id: i,
-      uses_client_mods: (0, T.usesClientMods)()
-    }), L(), N.default.cleanupDisplaySleep()
+      sentry_issue_id: r,
+      uses_client_mods: i
+    }), L(i), N.default.cleanupDisplaySleep()
   }
   _handleSubmitReport() {
     location.reload(!0)
@@ -104,9 +105,9 @@ class D extends r.PureComponent {
     if (null !== this.state.error) {
       let e = (0, i.jsxs)("div", {
           children: [(0, i.jsx)("p", {
-            children: p.default.Messages.ERRORS_UNEXPECTED_CRASH
+            children: O.default.Messages.ERRORS_UNEXPECTED_CRASH
           }), (0, i.jsx)("p", {
-            children: p.default.Messages.ERRORS_ACTION_TO_TAKE
+            children: O.default.Messages.ERRORS_ACTION_TO_TAKE
           })]
         }),
         n = (0, i.jsxs)("div", {
@@ -114,11 +115,11 @@ class D extends r.PureComponent {
           children: [(0, i.jsx)(_.Button, {
             size: _.ButtonSizes.LARGE,
             onClick: this._handleSubmitReport,
-            children: p.default.Messages.ERRORS_RELOAD
+            children: O.default.Messages.ERRORS_RELOAD
           }), (0, i.jsx)(g, {})]
         });
       return (0, i.jsx)(h.default, {
-        title: p.default.Messages.UNSUPPORTED_BROWSER_TITLE,
+        title: O.default.Messages.UNSUPPORTED_BROWSER_TITLE,
         note: null != t ? t() : e,
         action: n,
         className: R.errorPage
@@ -133,4 +134,4 @@ class D extends r.PureComponent {
     }), C(this, "discordErrorsSet", !1)
   }
 }
-t.default = D
+t.default = v

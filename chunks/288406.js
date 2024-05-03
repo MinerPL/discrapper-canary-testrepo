@@ -2,8 +2,8 @@
 n.r(t);
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("481060"),
@@ -12,20 +12,20 @@ var i = n("735250"),
   c = n("242411"),
   E = n("768581"),
   I = n("185923"),
-  T = n("731153");
+  T = n("147981");
 let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ").concat(e * Math.ceil(d.default.numNonDiversitySprites / I.EmojiSprites.NonDiversityPerRow), "px")),
   S = l().memoize(e => "".concat(e * I.EmojiSprites.DiversityPerRow, "px ").concat(e * Math.ceil(d.default.numDiversitySprites / I.EmojiSprites.DiversityPerRow), "px")),
   h = (e, t, i) => {
-    let r, s, a;
+    let r, a, s;
     if (!e.useSpriteSheet) return;
     let o = null != e.index ? e.index : 0;
-    e.hasDiversity ? (r = n("973607")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), s = S(i), a = I.EmojiSprites.DiversityPerRow) : (r = n("273735")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), s = f(i), a = I.EmojiSprites.NonDiversityPerRow);
-    let l = -o % a * i,
-      u = -Math.floor(o / a) * i;
+    e.hasDiversity ? (r = n("36837")("./images/spritesheet-".concat(t, "-").concat(i, ".png").replace("./images/", "./")), a = S(i), s = I.EmojiSprites.DiversityPerRow) : (r = n("12302")("./images/spritesheet-emoji-".concat(i, ".png").replace("./images/", "./")), a = f(i), s = I.EmojiSprites.NonDiversityPerRow);
+    let l = -o % s * i,
+      u = -Math.floor(o / s) * i;
     return {
       backgroundImage: "url('".concat(r, "')"),
       backgroundPosition: "".concat(l, "px ").concat(u, "px"),
-      backgroundSize: s,
+      backgroundSize: a,
       height: i,
       width: i
     }
@@ -34,17 +34,17 @@ let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ")
     let {
       emoji: t,
       size: n,
-      surrogateCodePoint: s,
+      surrogateCodePoint: a,
       allowAnimatedEmoji: o,
       "aria-label": l,
       isLocked: d
-    } = e, I = (() => {
+    } = e, f = (() => {
       if (!t.useSpriteSheet) {
         var e;
         let r = null == t.id ? t.url : E.default.getEmojiURL({
           id: t.id,
           animated: o && t.animated,
-          size: 48
+          size: I.EMOJI_URL_BASE_SIZE
         });
         return null != r ? (0, i.jsx)(_.default, {
           className: T.lockedEmoji,
@@ -55,17 +55,17 @@ let f = l().memoize(e => "".concat(e * I.EmojiSprites.NonDiversityPerRow, "px ")
         }) : null
       }
       return (0, i.jsx)("div", {
-        className: a()(T.emojiSpriteImage, {
+        className: s()(T.emojiSpriteImage, {
           [T.lockedEmoji]: d
         }),
-        style: h(t, s, n),
+        style: h(t, a, n),
         children: (0, i.jsx)(u.HiddenVisually, {
           children: l
         })
       })
     })();
     return (0, i.jsxs)(r.Fragment, {
-      children: [I, d ? (0, i.jsx)("div", {
+      children: [f, d ? (0, i.jsx)("div", {
         className: T.emojiLockIconContainer,
         children: (0, i.jsx)(c.default, {
           width: 16,

@@ -12,12 +12,12 @@ n.r(t), n.d(t, {
 });
 var r = n("735250");
 n("470079");
-var s = n("803997"),
+var s = n("120356"),
   o = n.n(s),
   i = n("481060"),
   a = n("489813"),
   l = n("592286"),
-  u = n("819104");
+  u = n("619452");
 
 function d(e) {
   let {
@@ -25,7 +25,8 @@ function d(e) {
     placeholder: n,
     onChange: s,
     disabled: a,
-    className: d
+    className: d,
+    autofocus: c
   } = e;
   return (0, r.jsx)(i.TextArea, {
     className: o()(u.paragraphFieldBody, d),
@@ -34,6 +35,7 @@ function d(e) {
     placeholder: null != n ? n : "",
     onChange: s,
     disabled: a,
+    autoFocus: c,
     autosize: !0
   })
 }
@@ -55,14 +57,16 @@ function c(e) {
 function h(e) {
   let {
     formField: t,
-    onChange: n
+    autofocus: n,
+    onChange: s
   } = e;
   return (0, r.jsx)(a.QuestionRenderer, {
     title: t.label,
     children: (0, r.jsx)(d, {
       className: u.fieldBackground,
       value: t.response,
-      onChange: n
+      onChange: s,
+      autofocus: n
     })
   })
 }

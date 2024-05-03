@@ -2,7 +2,7 @@
 n.r(t);
 var a = n("735250"),
   l = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("399606"),
   o = n("481060"),
@@ -21,44 +21,44 @@ var a = n("735250"),
   T = n("625938"),
   I = n("981631"),
   A = n("689938"),
-  v = n("108199");
+  N = n("8474");
 t.default = e => {
   let {
     hangStatusActivity: t,
     userId: s,
-    channel: N,
+    channel: v,
     previewIsOpen: x
   } = e, {
     enableHangStatus: M
   } = g.HangStatusExperiment.useExperiment({
-    guildId: N.guild_id,
+    guildId: v.guild_id,
     location: "HangStatusPopout"
-  }), R = (0, r.useStateFromStores)([c.default], () => c.default.getId()), L = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), y = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === N.id), O = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, N)), j = (0, r.useStateFromStores)([f.default], () => null != N.guild_id && null != L ? f.default.getMember(N.guild_id, s) : null), P = l.useMemo(() => null != L ? (0, d.getPreviewAvatar)(void 0, j, L, {
+  }), R = (0, r.useStateFromStores)([c.default], () => c.default.getId()), L = (0, r.useStateFromStores)([p.default], () => p.default.getUser(s)), y = (0, r.useStateFromStores)([m.default], () => m.default.getChannelId() === v.id), O = (0, r.useStateFromStores)([h.default], () => h.default.can(I.Permissions.CONNECT, v)), j = (0, r.useStateFromStores)([f.default], () => null != v.guild_id && null != L ? f.default.getMember(v.guild_id, s) : null), P = l.useMemo(() => null != L ? (0, d.getPreviewAvatar)(void 0, j, L, {
     size: 40
   }) : void 0, [j, L]);
   return (l.useEffect(() => {
     M && null != t && x && null != L && R !== s && E.default.track(I.AnalyticEvents.VIEW_HANG_STATUS, {
       source: "HangStatusPopout",
-      guild_id: N.guild_id,
-      channel_id: N.id
+      guild_id: v.guild_id,
+      channel_id: v.id
     })
-  }, [M, t, x, L, R, s, N]), M && null != L) ? R === s ? (0, a.jsx)("div", {
-    className: i()(v.popoutWrapper, {
-      [v.mounted]: x
+  }, [M, t, x, L, R, s, v]), M && null != L) ? R === s ? (0, a.jsx)("div", {
+    className: i()(N.popoutWrapper, {
+      [N.mounted]: x
     }),
     children: (0, a.jsx)(T.HangStatusPopout, {
       currentStatus: t
     })
   }) : null == t ? null : (0, a.jsx)("div", {
-    className: i()(v.popoutWrapper, {
-      [v.mounted]: x
+    className: i()(N.popoutWrapper, {
+      [N.mounted]: x
     }),
     children: (0, a.jsxs)("div", {
-      className: v.popout,
+      className: N.popout,
       children: [(0, a.jsxs)("div", {
-        className: v.contentContainer,
+        className: N.contentContainer,
         children: [(0, a.jsxs)("div", {
-          className: v.statusGroup,
+          className: N.statusGroup,
           children: [(0, a.jsx)(o.Text, {
             variant: "text-xs/medium",
             color: "text-muted",
@@ -66,39 +66,39 @@ t.default = e => {
           }), (0, a.jsx)(o.Text, {
             variant: "text-sm/semibold",
             color: "text-normal",
-            className: v.statusText,
+            className: N.statusText,
             children: (0, S.getHangStatusText)(t)
           })]
         }), (0, a.jsxs)("div", {
-          className: v.iconGroup,
+          className: N.iconGroup,
           children: [(0, a.jsx)(_.default, {
-            className: v.statusIcon,
+            className: N.statusIcon,
             hangStatusActivity: t
           }), (0, a.jsxs)("div", {
-            className: v.avatarWrapper,
+            className: N.avatarWrapper,
             children: [(0, a.jsx)(o.Avatar, {
-              className: v.avatar,
+              className: N.avatar,
               size: o.AvatarSizes.SIZE_40,
               src: P,
               "aria-hidden": !0
             }), (0, a.jsx)("div", {
-              className: v.outline
+              className: N.outline
             })]
           })]
         })]
       }), !y && O ? (0, a.jsx)(o.Button, {
-        className: v.cta,
+        className: N.cta,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
-          !y && O && (u.default.selectVoiceChannel(N.id), E.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
+          !y && O && (u.default.selectVoiceChannel(v.id), E.default.track(I.AnalyticEvents.HANG_STATUS_CTA_CLICKED, {
             source: "HangStatusPopout",
-            guild_id: N.guild_id,
-            channel_id: N.id
+            guild_id: v.guild_id,
+            channel_id: v.id
           }))
         },
         children: A.default.Messages.CUSTOM_HANG_STATUS_CTA
       }) : null, y ? (0, a.jsx)(o.Button, {
-        className: v.cta,
+        className: N.cta,
         size: o.Button.Sizes.SMALL,
         onClick: () => {
           let e = t.state;
@@ -112,8 +112,8 @@ t.default = e => {
               startingEmoji: t.emoji
             })
           }) : (0, C.updateHangStatus)(e, !0), E.default.track(I.AnalyticEvents.SWIPE_HANG_STATUS, {
-            guild_id: N.guild_id,
-            channel_id: N.id,
+            guild_id: v.guild_id,
+            channel_id: v.id,
             media_session_id: m.default.getMediaSessionId()
           })
         },

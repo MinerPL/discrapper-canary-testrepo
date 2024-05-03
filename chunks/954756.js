@@ -15,7 +15,7 @@ var a = s("735250"),
   c = s("155433");
 
 function S() {
-  let e = (0, l.useStateFromStores)([u.default], () => u.default.getIsDisableSubmit()),
+  let e = (0, l.useStateFromStores)([u.default], () => u.default.getIsSubmitDisabled()),
     [t, s] = n.useState(!1),
     S = n.useCallback(async () => {
       var e, t, a;

@@ -9,7 +9,7 @@ s.r(t), s.d(t, {
 }), s("47120"), s("733860");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("512722"),
   o = s.n(r),
@@ -36,8 +36,8 @@ var a = s("735250"),
   M = s("859802"),
   D = s("744178"),
   v = s("35125"),
-  j = s("536442"),
-  G = s("142497"),
+  G = s("536442"),
+  j = s("142497"),
   U = s("884858"),
   P = s("516129"),
   b = s("813197"),
@@ -65,7 +65,7 @@ var a = s("735250"),
   el = s("486324"),
   en = s("200299"),
   ei = s("689938"),
-  er = s("342056"),
+  er = s("724239"),
   eo = s("935653"),
   ed = s("449874");
 
@@ -135,7 +135,8 @@ let eh = () => {
       systemChannelFlags: e.systemChannelFlags,
       publicUpdatesChannelId: e.publicUpdatesChannelId,
       premiumProgressBarEnabled: e.premiumProgressBarEnabled,
-      homeHeader: e.homeHeader
+      homeHeader: e.homeHeader,
+      clan: e.clan
     };
     !(0, J.areSetsEqual)(new Set(e.features), new Set(t.features)) && (s.features = e.features), $.default.saveGuild(e.id, s)
   }, [e, t]), o = l.useCallback(() => {
@@ -813,7 +814,7 @@ class eC extends l.PureComponent {
       (0, I.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([s.e("99387"), s.e("60618")]).then(s.bind(s, "850085"));
+        } = await Promise.all([s.e("99387"), s.e("75409")]).then(s.bind(s, "850085"));
         return s => (0, a.jsx)(l, {
           onCrop: this.handleIconChange,
           imgURI: e,
@@ -841,7 +842,7 @@ class eC extends l.PureComponent {
       }(0, I.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([s.e("99387"), s.e("60618")]).then(s.bind(s, "850085"));
+        } = await Promise.all([s.e("99387"), s.e("75409")]).then(s.bind(s, "850085"));
         return s => (0, a.jsx)(l, {
           imgURI: e,
           file: t,
@@ -954,7 +955,7 @@ function eR() {
     analyticsLocations: d
   } = (0, g.default)(m.default.OVERVIEW);
   l.useEffect(() => {
-    (0, G.hideHotspot)(j.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
+    (0, j.hideHotspot)(G.HotspotLocations.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL)
   }, []);
   let u = (0, c.useStateFromStores)([F.default], () => F.default.getCategories(null == t ? void 0 : t.id)),
     E = l.useMemo(() => (0, h.default)(u._categories, u), [u]),

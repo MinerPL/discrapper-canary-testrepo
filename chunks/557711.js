@@ -6,13 +6,13 @@ n.r(t), n.d(t, {
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("481060"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("481060"),
   o = n("432247"),
   l = n("5192"),
   u = n("829820"),
-  d = n("310178");
+  d = n("160004");
 
 function _(e) {
   let {
@@ -23,25 +23,26 @@ function _(e) {
     source: c,
     size: E,
     className: I,
-    ...T
+    onAction: T
   } = e, {
     tooltip: f,
     loading: S,
     disabled: h,
     onClick: A
-  } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n));
-  return (0, i.jsx)(a.Tooltip, {
+  } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n)), m = () => {
+    null == T || T(), A()
+  };
+  return (0, i.jsx)(s.Tooltip, {
     text: f,
     children: e => {
       let {
         onMouseEnter: n,
         onMouseLeave: r
       } = e;
-      return (0, i.jsx)(a.Button, {
-        ...T,
-        size: s()(E, d.iconButtonSize),
-        className: s()(I, d.iconButton),
-        onClick: A,
+      return (0, i.jsx)(s.Button, {
+        size: a()(E, d.iconButtonSize),
+        className: a()(I, d.iconButton),
+        onClick: m,
         onMouseEnter: n,
         onMouseLeave: r,
         disabled: h,

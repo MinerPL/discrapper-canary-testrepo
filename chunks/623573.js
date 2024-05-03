@@ -1,45 +1,45 @@
 "use strict";
 s.r(t), s.d(t, {
   AddPaymentModalOld: function() {
-    return V
+    return K
   },
   default: function() {
-    return K
+    return q
   }
 }), s("411104"), s("47120");
-var a, n, r = s("735250"),
+var a, n, i = s("735250"),
   l = s("470079"),
-  i = s("452079"),
-  o = s("803997"),
-  d = s.n(o),
-  u = s("442837"),
-  h = s("481060"),
+  r = s("452079"),
+  u = s("120356"),
+  o = s.n(u),
+  d = s("442837"),
+  c = s("481060"),
   p = s("570140"),
-  c = s("355467"),
-  y = s("873115"),
-  f = s("976255"),
-  m = s("598"),
-  S = s("409813"),
-  P = s("3409"),
-  C = s("351402"),
-  _ = s("975060"),
-  g = s("505649"),
-  A = s("66579"),
-  E = s("285952"),
-  T = s("358085"),
-  N = s("622999"),
-  B = s("462566"),
+  m = s("355467"),
+  f = s("873115"),
+  E = s("976255"),
+  _ = s("563132"),
+  I = s("409813"),
+  S = s("3409"),
+  N = s("351402"),
+  P = s("975060"),
+  C = s("505649"),
+  h = s("66579"),
+  T = s("285952"),
+  A = s("358085"),
+  R = s("622999"),
+  y = s("462566"),
   M = s("801937"),
-  x = s("282164"),
-  R = s("738342"),
-  b = s("228666"),
-  k = s("296214"),
-  I = s("981631"),
-  O = s("689938"),
-  D = s("255235"),
-  j = s("605094");
+  L = s("282164"),
+  g = s("738342"),
+  x = s("228666"),
+  D = s("296214"),
+  b = s("981631"),
+  U = s("689938"),
+  v = s("248181"),
+  B = s("26673");
 
-function Y(e, t, s) {
+function O(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -47,18 +47,18 @@ function Y(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }(n = a || (a = {})).PAYMENT_TYPE = "payment_type", n.CARD_INFO = "card_info", n.SOFORT_INFO = "sofort_info", n.ADDRESS = "billing_address", n.PAYMENT_REQUEST_INFO = "payment_request_info", n.PAYPAL = "paypal", n.PRZELEWY24_INFO = "przelewy24_info";
-let v = ["payment_type", "card_info", "billing_address"],
-  w = ["payment_type", "sofort_info", "billing_address"],
-  L = ["payment_type", "paypal", "billing_address"],
-  F = ["payment_type", "payment_request_info"],
-  G = ["payment_type", "billing_address"],
-  U = ["payment_type", "przelewy24_info", "billing_address"],
-  z = ["payment_type", "billing_address"];
+let j = ["payment_type", "card_info", "billing_address"],
+  G = ["payment_type", "sofort_info", "billing_address"],
+  k = ["payment_type", "paypal", "billing_address"],
+  w = ["payment_type", "payment_request_info"],
+  F = ["payment_type", "billing_address"],
+  Y = ["payment_type", "przelewy24_info", "billing_address"],
+  H = ["payment_type", "billing_address"];
 
-function q(e) {
+function W(e) {
   return e.hasCardError() ? "card_info" : e.hasAddressError() ? "billing_address" : null
 }
-class W extends l.PureComponent {
+class V extends l.PureComponent {
   static getDerivedStateFromProps(e, t) {
     let {
       error: s
@@ -68,21 +68,21 @@ class W extends l.PureComponent {
     if (null == s) return null == a ? null : {
       errorStep: null
     };
-    let n = q(s);
+    let n = W(s);
     return null != n && n !== t.errorStep ? {
       step: n,
       errorStep: n
     } : null
   }
   async componentDidMount() {
-    y.createClient();
-    let e = await (0, N.getStripe)();
+    f.createClient();
+    let e = await (0, R.getStripe)();
     this.setState({
       stripe: e
     })
   }
   componentWillUnmount() {
-    p.default.wait(() => y.teardownClients()), (0, f.clearCardInfo)()
+    p.default.wait(() => f.teardownClients()), (0, E.clearCardInfo)()
   }
   get stepData() {
     let {
@@ -93,25 +93,25 @@ class W extends l.PureComponent {
   }
   getSteps(e) {
     switch (null != e ? e : this.state.type) {
-      case I.PaymentSourceTypes.PAYMENT_REQUEST:
-        return F;
-      case I.PaymentSourceTypes.PAYPAL:
-        return L;
-      case I.PaymentSourceTypes.SOFORT:
+      case b.PaymentSourceTypes.PAYMENT_REQUEST:
         return w;
-      case I.PaymentSourceTypes.GIROPAY:
+      case b.PaymentSourceTypes.PAYPAL:
+        return k;
+      case b.PaymentSourceTypes.SOFORT:
         return G;
-      case I.PaymentSourceTypes.PRZELEWY24:
-        return U;
-      case I.PaymentSourceTypes.PAYSAFE_CARD:
-      case I.PaymentSourceTypes.GCASH:
-      case I.PaymentSourceTypes.GRABPAY_MY:
-      case I.PaymentSourceTypes.MOMO_WALLET:
-      case I.PaymentSourceTypes.KAKAOPAY:
-      case I.PaymentSourceTypes.GOPAY_WALLET:
-        return z;
+      case b.PaymentSourceTypes.GIROPAY:
+        return F;
+      case b.PaymentSourceTypes.PRZELEWY24:
+        return Y;
+      case b.PaymentSourceTypes.PAYSAFE_CARD:
+      case b.PaymentSourceTypes.GCASH:
+      case b.PaymentSourceTypes.GRABPAY_MY:
+      case b.PaymentSourceTypes.MOMO_WALLET:
+      case b.PaymentSourceTypes.KAKAOPAY:
+      case b.PaymentSourceTypes.GOPAY_WALLET:
+        return H;
       default:
-        return v
+        return j
     }
   }
   getNextStep() {
@@ -134,28 +134,28 @@ class W extends l.PureComponent {
     e.preventDefault()
   }
   handleReopenPaypal() {
-    y.reopenPayPalWindow()
+    f.reopenPayPalWindow()
   }
   renderGenericError() {
     let {
       error: e
     } = this.props;
-    return null == e || null != q(e) ? null : (0, r.jsx)(h.FormErrorBlock, {
-      className: D.errorBlock,
+    return null == e || null != W(e) ? null : (0, i.jsx)(c.FormErrorBlock, {
+      className: v.errorBlock,
       children: e.message
     })
   }
   renderFooter() {
     let e = this.stepData;
-    return null == e.renderNextButton ? null : (0, r.jsx)(h.ModalFooter, {
-      children: (0, r.jsxs)(E.default, {
-        justify: E.default.Justify.BETWEEN,
-        children: [(0, r.jsx)(h.Button, {
+    return null == e.renderNextButton ? null : (0, i.jsx)(c.ModalFooter, {
+      children: (0, i.jsxs)(T.default, {
+        justify: T.default.Justify.BETWEEN,
+        children: [(0, i.jsx)(c.Button, {
           onClick: this.handleBackClick,
-          color: h.Button.Colors.PRIMARY,
-          look: h.Button.Looks.LINK,
-          size: h.Button.Sizes.MIN,
-          children: O.default.Messages.BACK
+          color: c.Button.Colors.PRIMARY,
+          look: c.Button.Looks.LINK,
+          size: c.Button.Sizes.MIN,
+          children: U.default.Messages.BACK
         }), e.renderNextButton()]
       })
     })
@@ -171,60 +171,60 @@ class W extends l.PureComponent {
       label: function(e) {
         switch (e) {
           case "payment_type":
-            return O.default.Messages.PAYMENT_SOURCE_TYPE;
+            return U.default.Messages.PAYMENT_SOURCE_TYPE;
           case "payment_request_info":
-            return O.default.Messages.BILLING_STEP_PAYMENT_INFO;
+            return U.default.Messages.BILLING_STEP_PAYMENT_INFO;
           case "card_info":
-            return O.default.Messages.PAYMENT_SOURCE_INFORMATION;
+            return U.default.Messages.PAYMENT_SOURCE_INFORMATION;
           case "billing_address":
-            return O.default.Messages.BILLING_ADDRESS;
+            return U.default.Messages.BILLING_ADDRESS;
           case "paypal":
-            return O.default.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
+            return U.default.Messages.PAYMENT_SOURCE_PAYPAL_DETAILS;
           case "sofort_info":
-            return O.default.Messages.PAYMENT_SOURCE_SOFORT_INFO;
+            return U.default.Messages.PAYMENT_SOURCE_SOFORT_INFO;
           case "przelewy24_info":
-            return O.default.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO
+            return U.default.Messages.PAYMENT_SOURCE_PRZELEWY24_INFO
         }
       }(e)
     }));
-    return (0, r.jsx)(i.Elements, {
-      options: I.StripeElementsOptions,
+    return (0, i.jsx)(r.Elements, {
+      options: b.StripeElementsOptions,
       stripe: this.state.stripe,
-      children: (0, r.jsx)(h.ModalRoot, {
+      children: (0, i.jsx)(c.ModalRoot, {
         transitionState: s,
-        size: h.ModalSize.SMALL,
-        className: D.modal,
-        "aria-label": O.default.Messages.PAYMENT_SOURCES_ADD,
-        children: (0, r.jsxs)("form", {
-          className: D.form,
+        size: c.ModalSize.SMALL,
+        className: v.modal,
+        "aria-label": U.default.Messages.PAYMENT_SOURCES_ADD,
+        children: (0, i.jsxs)("form", {
+          className: v.form,
           onSubmit: this.preventDefault,
-          children: [(0, r.jsxs)(h.ModalHeader, {
-            direction: E.default.Direction.VERTICAL,
-            align: E.default.Align.STRETCH,
+          children: [(0, i.jsxs)(c.ModalHeader, {
+            direction: T.default.Direction.VERTICAL,
+            align: T.default.Align.STRETCH,
             separator: !1,
-            children: [(0, r.jsxs)(E.default, {
-              className: D.modalTitle,
-              justify: E.default.Justify.BETWEEN,
-              align: E.default.Align.CENTER,
-              children: [(0, r.jsx)(h.FormTitle, {
-                tag: h.FormTitleTags.H4,
-                children: O.default.Messages.PAYMENT_SOURCES_ADD
-              }), (0, r.jsx)(h.ModalCloseButton, {
+            children: [(0, i.jsxs)(T.default, {
+              className: v.modalTitle,
+              justify: T.default.Justify.BETWEEN,
+              align: T.default.Align.CENTER,
+              children: [(0, i.jsx)(c.FormTitle, {
+                tag: c.FormTitleTags.H4,
+                children: U.default.Messages.PAYMENT_SOURCES_ADD
+              }), (0, i.jsx)(c.ModalCloseButton, {
                 onClick: this.handleClose
               })]
-            }), this.renderGenericError(), (0, r.jsx)(A.default, {
+            }), this.renderGenericError(), (0, i.jsx)(h.default, {
               breadcrumbs: a,
               activeId: e
             })]
-          }), (0, r.jsx)("div", {
-            className: D.divider
-          }), (0, r.jsx)(h.Sequencer, {
+          }), (0, i.jsx)("div", {
+            className: v.divider
+          }), (0, i.jsx)(c.Sequencer, {
             fillParent: !0,
-            className: D.sequencer,
+            className: v.sequencer,
             step: e,
             steps: t,
-            children: (0, r.jsx)(h.ModalContent, {
-              className: D.content,
+            children: (0, i.jsx)(c.ModalContent, {
+              className: v.content,
               children: this.stepData.renderBody()
             })
           }), this.renderFooter()]
@@ -233,10 +233,10 @@ class W extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), Y(this, "state", {
-      type: I.PaymentSourceTypes.CARD,
+    super(...e), O(this, "state", {
+      type: b.PaymentSourceTypes.CARD,
       step: "payment_type",
-      steps: v,
+      steps: j,
       errorStep: null,
       stripeToken: null,
       stripe: null,
@@ -244,14 +244,14 @@ class W extends l.PureComponent {
       paymentDetails: {
         p24Bank: ""
       }
-    }), Y(this, "STEPS_DATA", {
+    }), O(this, "STEPS_DATA", {
       przelewy24_info: {
         renderBody: () => {
           let {
             error: e,
             billingAddressInfo: t
           } = this.props;
-          return (0, r.jsx)(R.P24DetailForm, {
+          return (0, i.jsx)(g.P24DetailForm, {
             billingAddressInfo: t,
             onDetailsChange: this.handlePaymentDetailsChange,
             onP24BankChange: this.handleP24BankChange,
@@ -264,11 +264,11 @@ class W extends l.PureComponent {
           let {
             billingAddressInfo: t
           } = this.props, s = null === (e = this.state.paymentDetails) || void 0 === e ? void 0 : e.p24Bank;
-          return (0, r.jsx)(h.Button, {
+          return (0, i.jsx)(c.Button, {
             type: "submit",
             disabled: "" === t.name || "" === t.email || "" === s,
             onClick: this.handleNextClick,
-            children: O.default.Messages.NEXT
+            children: U.default.Messages.NEXT
           })
         }
       },
@@ -278,7 +278,7 @@ class W extends l.PureComponent {
             error: e,
             billingAddressInfo: t
           } = this.props;
-          return (0, r.jsx)(R.default, {
+          return (0, i.jsx)(g.default, {
             billingAddressInfo: t,
             onChange: this.handlePaymentDetailsChange,
             error: e
@@ -288,17 +288,17 @@ class W extends l.PureComponent {
           let {
             billingAddressInfo: e
           } = this.props;
-          return (0, r.jsx)(h.Button, {
+          return (0, i.jsx)(c.Button, {
             type: "submit",
             disabled: "" === e.name || "" === e.email,
             onClick: this.handleNextClick,
-            children: O.default.Messages.NEXT
+            children: U.default.Messages.NEXT
           })
         }
       },
       payment_type: {
-        renderBody: () => (0, r.jsx)(M.default, {
-          allowStripeRequestPayments: !T.isPlatformEmbedded,
+        renderBody: () => (0, i.jsx)(M.default, {
+          allowStripeRequestPayments: !A.isPlatformEmbedded,
           onChooseType: this.handleChooseType,
           onStripePaymentMethodReceived: this.handleStripePaymentMethod
         })
@@ -309,7 +309,7 @@ class W extends l.PureComponent {
             stripePaymentMethod: e,
             submitting: t
           } = this.props;
-          return (0, r.jsx)(k.PaymentRequestStepBody, {
+          return (0, i.jsx)(D.PaymentRequestStepBody, {
             stripePaymentMethod: e,
             submitting: t
           })
@@ -318,9 +318,9 @@ class W extends l.PureComponent {
           let {
             submitting: e
           } = this.props;
-          return (0, r.jsx)(h.Button, {
+          return (0, i.jsx)(c.Button, {
             submitting: e,
-            look: h.Button.Looks.OUTLINED,
+            look: c.Button.Looks.OUTLINED,
             disabled: !0
           })
         }
@@ -329,12 +329,12 @@ class W extends l.PureComponent {
         renderBody: () => {
           let {
             error: e
-          } = this.props, t = null != e && (null == e.code || "card_info" === q(e));
-          return (0, r.jsxs)(r.Fragment, {
-            children: [t ? (0, r.jsx)(h.FormErrorBlock, {
-              className: D.errorBlock,
-              children: O.default.Messages.BILLING_ERROR_SECTION_CARD
-            }) : null, (0, r.jsx)(B.default, {
+          } = this.props, t = null != e && (null == e.code || "card_info" === W(e));
+          return (0, i.jsxs)(i.Fragment, {
+            children: [t ? (0, i.jsx)(c.FormErrorBlock, {
+              className: v.errorBlock,
+              children: U.default.Messages.BILLING_ERROR_SECTION_CARD
+            }) : null, (0, i.jsx)(y.default, {
               onCardInfoChange: this.handleCardInfoChange,
               error: t ? e : null
             })]
@@ -346,19 +346,19 @@ class W extends l.PureComponent {
           } = this.props, {
             tokenSubmitting: t
           } = this.state;
-          return (0, r.jsx)(i.ElementsConsumer, {
+          return (0, i.jsx)(r.ElementsConsumer, {
             children: s => {
               let {
                 elements: a
               } = s;
-              return (0, r.jsx)(h.Button, {
+              return (0, i.jsx)(c.Button, {
                 disabled: !e,
                 onClick: () => {
                   this.createToken(a)
                 },
                 type: "submit",
                 submitting: t,
-                children: O.default.Messages.NEXT
+                children: U.default.Messages.NEXT
               })
             }
           })
@@ -372,7 +372,7 @@ class W extends l.PureComponent {
           } = this.props, {
             type: s
           } = this.state;
-          return (0, r.jsx)(b.AddressStepBody, {
+          return (0, i.jsx)(x.AddressStepBody, {
             billingAddressInfo: e,
             billingError: t,
             onBillingAddressChange: this.handleBillingAddressChange,
@@ -385,32 +385,32 @@ class W extends l.PureComponent {
             isBillingAddressInfoValid: t,
             isAuthenticating: s
           } = this.props;
-          return (0, r.jsx)(h.Button, {
+          return (0, i.jsx)(c.Button, {
             type: "submit",
             submitting: e,
             disabled: !t || s,
             onClick: this.handleSave,
-            children: O.default.Messages.SAVE
+            children: U.default.Messages.SAVE
           })
         }
       },
       paypal: {
-        renderBody: () => (0, r.jsx)(x.default, {}),
+        renderBody: () => (0, i.jsx)(L.default, {}),
         renderNextButton: () => {
           let {
             submitting: e,
             braintreeNonce: t,
             braintreeEmail: s
           } = this.props, a = null != s && null != t;
-          return (0, r.jsx)(h.Button, {
+          return (0, i.jsx)(c.Button, {
             submitting: e,
-            color: a ? h.Button.Colors.BRAND : h.Button.Colors.PRIMARY,
+            color: a ? c.Button.Colors.BRAND : c.Button.Colors.PRIMARY,
             onClick: a ? this.handleNextClick : this.handleReopenPaypal,
-            children: a ? O.default.Messages.NEXT : O.default.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL
+            children: a ? U.default.Messages.NEXT : U.default.Messages.PAYMENT_SOURCE_CONNECT_TO_PAYPAL
           })
         }
       }
-    }), Y(this, "handleChooseType", e => {
+    }), O(this, "handleChooseType", e => {
       let t = this.getSteps(e),
         s = this.getNextStep(t);
       null != s && this.setState({
@@ -418,60 +418,60 @@ class W extends l.PureComponent {
         steps: t,
         step: s
       })
-    }), Y(this, "handleCardInfoChange", (e, t) => {
-      p.default.wait(() => (0, f.updateCardInfo)(e, t))
-    }), Y(this, "handlePaymentDetailsChange", e => {
+    }), O(this, "handleCardInfoChange", (e, t) => {
+      p.default.wait(() => (0, E.updateCardInfo)(e, t))
+    }), O(this, "handlePaymentDetailsChange", e => {
       let {
         billingAddressInfo: t
       } = this.props;
-      t.name = e.name, p.default.wait(() => (0, f.updateAddressInfo)({
+      t.name = e.name, p.default.wait(() => (0, E.updateAddressInfo)({
         ...t,
         ...e
       }, !1))
-    }), Y(this, "handleP24BankChange", e => {
+    }), O(this, "handleP24BankChange", e => {
       this.setState({
         paymentDetails: {
           p24Bank: e
         }
       })
-    }), Y(this, "handleBillingAddressChange", (e, t) => {
+    }), O(this, "handleBillingAddressChange", (e, t) => {
       let {
         billingAddressInfo: s
       } = this.props;
-      p.default.wait(() => (0, f.updateAddressInfo)({
+      p.default.wait(() => (0, E.updateAddressInfo)({
         ...s,
         ...e
       }, t))
-    }), Y(this, "handleBackClick", () => {
+    }), O(this, "handleBackClick", () => {
       let e = this.getPreviousStep();
       if (null != e) {
-        "payment_type" === e && (0, f.clearError)();
+        "payment_type" === e && (0, E.clearError)();
         this.setState({
           step: e
         })
       }
-    }), Y(this, "handleNextClick", () => {
+    }), O(this, "handleNextClick", () => {
       let e = this.getNextStep();
       null != e && this.setState({
         step: e
       })
-    }), Y(this, "handleClose", () => {
-      (0, f.clearError)(), this.props.onClose()
-    }), Y(this, "handleStripePaymentMethod", e => {
-      if ((0, f.updateStripePaymentRequest)(e), null == e) {
+    }), O(this, "handleClose", () => {
+      (0, E.clearError)(), this.props.onClose()
+    }), O(this, "handleStripePaymentMethod", e => {
+      if ((0, E.updateStripePaymentRequest)(e), null == e) {
         this.handleBackClick();
         return
       }
       this.handleStripePaymentRequestSave(e)
-    }), Y(this, "handleStripePaymentRequestSave", async e => {
+    }), O(this, "handleStripePaymentRequestSave", async e => {
       try {
-        let t = await c.createPaymentRequestPaymentSource(e, void 0, this.props.analyticsLocation),
+        let t = await m.createPaymentRequestPaymentSource(e, void 0, this.props.analyticsLocation),
           {
             onAddPaymentSource: s
           } = this.props;
         null == s || s(t), this.handleClose()
       } catch (e) {}
-    }), Y(this, "createToken", async e => {
+    }), O(this, "createToken", async e => {
       let {
         stripe: t
       } = this.state;
@@ -479,7 +479,7 @@ class W extends l.PureComponent {
         tokenSubmitting: !0
       });
       try {
-        let s = await c.createCardToken(t, e);
+        let s = await m.createCardToken(t, e);
         this.setState({
           stripeToken: s
         }), this.handleNextClick()
@@ -488,28 +488,28 @@ class W extends l.PureComponent {
           tokenSubmitting: !1
         })
       }
-    }), Y(this, "handleSave", () => {
+    }), O(this, "handleSave", () => {
       let {
         type: e
       } = this.state;
       switch (e) {
-        case I.PaymentSourceTypes.PAYPAL:
+        case b.PaymentSourceTypes.PAYPAL:
           return this.handlePaypalSave();
-        case I.PaymentSourceTypes.CARD:
+        case b.PaymentSourceTypes.CARD:
           return this.handleCardSave();
-        case I.PaymentSourceTypes.SOFORT:
+        case b.PaymentSourceTypes.SOFORT:
           return this.handleSofortSave();
-        case I.PaymentSourceTypes.GIROPAY:
+        case b.PaymentSourceTypes.GIROPAY:
           return this.handleGiropaySave();
-        case I.PaymentSourceTypes.PRZELEWY24:
+        case b.PaymentSourceTypes.PRZELEWY24:
           return this.handlePrzelewy24Save();
-        case I.PaymentSourceTypes.PAYSAFE_CARD:
-        case I.PaymentSourceTypes.GRABPAY_MY:
+        case b.PaymentSourceTypes.PAYSAFE_CARD:
+        case b.PaymentSourceTypes.GRABPAY_MY:
           return this.handleAdyenPrepaidPaymentMethodSave(e);
         default:
-          c.dispatchConfirmationError("user used a unsupported payment type: ".concat(e))
+          m.dispatchConfirmationError("user used a unsupported payment type: ".concat(e))
       }
-    }), Y(this, "handlePrzelewy24Save", async () => {
+    }), O(this, "handlePrzelewy24Save", async () => {
       let {
         billingAddressInfo: e,
         isBillingAddressInfoValid: t,
@@ -517,13 +517,13 @@ class W extends l.PureComponent {
         analyticsLocation: a
       } = this.props, {
         stripe: n,
-        paymentDetails: r
+        paymentDetails: i
       } = this.state;
       if (t) try {
-        let t = await c.confirmPrzelewy24(n, r, e, a);
+        let t = await m.confirmPrzelewy24(n, i, e, a);
         null == s || s(t), this.handleClose()
       } catch (e) {}
-    }), Y(this, "handleSofortSave", async () => {
+    }), O(this, "handleSofortSave", async () => {
       let {
         billingAddressInfo: e,
         isBillingAddressInfoValid: t,
@@ -533,10 +533,10 @@ class W extends l.PureComponent {
         stripe: n
       } = this.state;
       if (t) try {
-        let t = await c.confirmSofort(n, e, a);
+        let t = await m.confirmSofort(n, e, a);
         null == s || s(t), this.handleClose()
       } catch (e) {}
-    }), Y(this, "handleCardSave", async () => {
+    }), O(this, "handleCardSave", async () => {
       let {
         billingAddressInfo: e,
         isCreditCardInfoValid: t,
@@ -544,14 +544,14 @@ class W extends l.PureComponent {
         onAddPaymentSource: a,
         analyticsLocation: n
       } = this.props, {
-        stripe: r,
+        stripe: i,
         stripeToken: l
       } = this.state;
       if (t && s) try {
-        let t = await c.confirmCardPaymentSource(r, l, e, n);
+        let t = await m.confirmCardPaymentSource(i, l, e, n);
         null == a || a(t), this.handleClose()
       } catch (e) {}
-    }), Y(this, "handlePaypalSave", async () => {
+    }), O(this, "handlePaypalSave", async () => {
       let {
         braintreeEmail: e,
         braintreeNonce: t,
@@ -560,10 +560,10 @@ class W extends l.PureComponent {
         analyticsLocation: n
       } = this.props;
       if (null != e && null != t) try {
-        let e = await c.createBraintreePaymentSource(t, s, n);
+        let e = await m.createBraintreePaymentSource(t, s, n);
         null == a || a(e), this.handleClose()
       } catch (e) {}
-    }), Y(this, "handleAdyenPrepaidPaymentMethodSave", async e => {
+    }), O(this, "handleAdyenPrepaidPaymentMethodSave", async e => {
       let {
         billingAddressInfo: t,
         isBillingAddressInfoValid: s,
@@ -571,10 +571,10 @@ class W extends l.PureComponent {
         analyticsLocation: n
       } = this.props;
       if (s) try {
-        let s = await c.createAdyenPrepaidPaymentSource(t, e, n);
+        let s = await m.createAdyenPrepaidPaymentSource(t, e, n);
         null == a || a(s), this.handleClose()
       } catch (e) {}
-    }), Y(this, "handleGiropaySave", async () => {
+    }), O(this, "handleGiropaySave", async () => {
       let {
         billingAddressInfo: e,
         isBillingAddressInfoValid: t,
@@ -584,35 +584,35 @@ class W extends l.PureComponent {
         stripe: n
       } = this.state;
       if (t) try {
-        let t = await c.createStripePaymentSource(n, e, I.PaymentSourceTypes.GIROPAY, a);
+        let t = await m.createStripePaymentSource(n, e, b.PaymentSourceTypes.GIROPAY, a);
         null == s || s(t), this.handleClose()
       } catch (e) {}
     })
   }
 }
-let V = u.default.connectStores([_.default, C.default, g.default], () => ({
-  braintreeEmail: _.default.braintreeEmail,
-  braintreeNonce: _.default.braintreeNonce,
-  stripePaymentMethod: _.default.stripePaymentMethod,
-  creditCardInfo: _.default.getCreditCardInfo(),
-  isCreditCardInfoValid: _.default.isCardInfoValid,
-  billingAddressInfo: _.default.getBillingAddressInfo(),
-  isBillingAddressInfoValid: _.default.isBillingAddressInfoValid,
-  error: _.default.error,
-  popupCallbackCalled: _.default.popupCallbackCalled,
-  submitting: C.default.isBusy,
-  isAuthenticating: g.default.isAwaitingAuthentication
-}))(W);
+let K = d.default.connectStores([P.default, N.default, C.default], () => ({
+  braintreeEmail: P.default.braintreeEmail,
+  braintreeNonce: P.default.braintreeNonce,
+  stripePaymentMethod: P.default.stripePaymentMethod,
+  creditCardInfo: P.default.getCreditCardInfo(),
+  isCreditCardInfoValid: P.default.isCardInfoValid,
+  billingAddressInfo: P.default.getBillingAddressInfo(),
+  isBillingAddressInfoValid: P.default.isBillingAddressInfoValid,
+  error: P.default.error,
+  popupCallbackCalled: P.default.popupCallbackCalled,
+  submitting: N.default.isBusy,
+  isAuthenticating: C.default.isAwaitingAuthentication
+}))(V);
 
-function H(e) {
+function z(e) {
   let {
     transitionState: t,
     analyticsLocation: s,
     onClose: a,
     onAddPaymentSource: n
-  } = e, l = (0, P.useSharedPaymentModal)(), i = (0, P.AddPaymentFlow)({
+  } = e, l = (0, S.useSharedPaymentModal)(), r = (0, S.AddPaymentFlow)({
     paymentModalArgs: l,
-    initialStep: S.Step.PAYMENT_TYPE,
+    initialStep: I.Step.PAYMENT_TYPE,
     prependSteps: [],
     appendSteps: [],
     onReturn: () => {
@@ -622,39 +622,39 @@ function H(e) {
       null == n || n(t), a()
     },
     onStepChange: () => {},
-    header: (0, r.jsxs)("div", {
-      className: d()(D.modalTitle, j.flex, j.justifyBetween, j.alignCenter),
-      children: [(0, r.jsx)(h.FormTitle, {
-        tag: h.FormTitleTags.H4,
-        children: O.default.Messages.PAYMENT_SOURCES_ADD
-      }), (0, r.jsx)(h.ModalCloseButton, {
+    header: (0, i.jsxs)("div", {
+      className: o()(v.modalTitle, B.flex, B.justifyBetween, B.alignCenter),
+      children: [(0, i.jsx)(c.FormTitle, {
+        tag: c.FormTitleTags.H4,
+        children: U.default.Messages.PAYMENT_SOURCES_ADD
+      }), (0, i.jsx)(c.ModalCloseButton, {
         onClick: a
       })]
     }),
     analyticsLocation: s,
     hideBreadcrumbs: !0
   });
-  return (0, r.jsx)(h.ModalRoot, {
+  return (0, i.jsx)(c.ModalRoot, {
     transitionState: t,
-    size: h.ModalSize.SMALL,
-    className: D.modal,
-    "aria-label": O.default.Messages.PAYMENT_SOURCES_ADD,
-    children: (0, r.jsx)("form", {
-      className: D.form,
+    size: c.ModalSize.SMALL,
+    className: v.modal,
+    "aria-label": U.default.Messages.PAYMENT_SOURCES_ADD,
+    children: (0, i.jsx)("form", {
+      className: v.form,
       onSubmit: function(e) {
         e.preventDefault()
       },
-      children: i
+      children: r
     })
   })
 }
 
-function K(e) {
-  return (0, r.jsx)(m.PaymentContextProvider, {
+function q(e) {
+  return (0, i.jsx)(_.PaymentContextProvider, {
     activeSubscription: null,
     stepConfigs: [],
     skuIDs: [],
-    children: (0, r.jsx)(H, {
+    children: (0, i.jsx)(z, {
       ...e
     })
   })

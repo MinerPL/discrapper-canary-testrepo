@@ -25,8 +25,8 @@ let r = {
     nav_experiment_you_bar_grounded: "[NavI] Grounded you bar",
     nav_experiment_you_bar_large_buttons: "[NavI] Small buttons in you bar",
     nav_experiment_you_bar_large_messages: "[NavI] Large avatars in messages",
-    nav_experiment_you_bar_messages_new_header: "[NavI] Use updated header in messages panel",
-    force_channel_list_v2: "Force channel list V2"
+    force_channel_list_v2: "Force channel list V2",
+    shop_include_unpublished: "[Shop] show unpublished items in shop"
   },
   d = {};
 class o extends(i = s.default.DeviceSettingsStore) {
