@@ -31,7 +31,7 @@ var l = n("120356"),
   g = n("84658"),
   G = n("981631"),
   h = n("689938"),
-  L = n("856274");
+  L = n("4147");
 let R = () => [{
     emoji: "\uD83E\uDDD9",
     emojiDescription: h.default.Messages.GUILD_ONBOARDING_UPSELL_PREVIEW_CHANNELS_1_EMOJI,

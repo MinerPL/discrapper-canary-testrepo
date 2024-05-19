@@ -7,7 +7,7 @@ s.r(t), s.d(t, {
 var l = s("735250");
 s("470079");
 var a = s("481060"),
-  i = s("634516");
+  i = s("363175");
 
 function n(e) {
   let {
@@ -18,6 +18,7 @@ function n(e) {
     className: i.section,
     children: [(0, l.jsx)(a.Heading, {
       variant: "text-xs/semibold",
+      color: "header-secondary",
       children: t
     }), s]
   })

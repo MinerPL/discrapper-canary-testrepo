@@ -18,8 +18,8 @@ var i = n("735250"),
   _ = n("534761"),
   c = n("981631"),
   E = n("689938"),
-  I = n("990291"),
-  T = n("904335");
+  I = n("946278"),
+  T = n("822545");
 
 function f(e, t) {
   return e.type === c.MessageTypes.VOICE_HANGOUT_INVITE ? "" : e.hasFlag(c.MessageFlags.SOURCE_MESSAGE_DELETED) ? E.default.Messages.SOURCE_MESSAGE_DELETED : t
@@ -43,9 +43,9 @@ t.default = r.memo(function(e) {
     content: u,
     onUpdate: S,
     contentRef: h
-  } = e, A = a.isEdited(), m = a.state === c.MessageStates.SEND_FAILED, N = a.state === c.MessageStates.SENDING, p = a.isCommandType(), O = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), R = r.useRef(!1);
+  } = e, A = a.isEdited(), m = a.state === c.MessageStates.SEND_FAILED, N = a.state === c.MessageStates.SENDING, p = a.isCommandType(), O = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(), C = r.useRef(!1);
   return r.useLayoutEffect(() => {
-    R.current ? null != S && S() : R.current = !0
+    C.current ? null != S && S() : C.current = !0
   }, [S, a.content, u, O, o]), (0, i.jsxs)("div", {
     id: (0, d.getMessageContentId)(a),
     ref: h,
@@ -53,7 +53,8 @@ t.default = r.memo(function(e) {
       [T.messageContent]: !0,
       [T.isSending]: N && !p,
       [T.markupRtl]: "rtl" === l()(a.content),
-      [T.isFailed]: m
+      [T.isFailed]: m,
+      [T.isUnsupported]: a.isUnsupported
     }),
     children: [null != o ? o : f(a, u), A && null != a.editedTimestamp && (0, i.jsxs)(i.Fragment, {
       children: [" ", (0, i.jsx)(_.default, {

@@ -470,8 +470,8 @@ function A(e, t, n, i) {
       flag: T.Permissions.CREATE_EVENTS
     },
     [T.Permissions.SET_VOICE_CHANNEL_STATUS.toString()]: {
-      title: (null == i ? void 0 : i.inVoiceBgExperiment) ? f.default.Messages.VOICE_CHANNEL_CUSTOMIZE_PERMISSION_TITLE : f.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
-      description: (null == i ? void 0 : i.inVoiceBgExperiment) ? f.default.Messages.VOICE_CHANNEL_CUSTOMIZE_PERMISSION_DESCRIPTION : f.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
+      title: f.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_TITLE,
+      description: f.default.Messages.VOICE_CHANNEL_STATUS_PERMISSION_DESCRIPTION,
       flag: T.Permissions.SET_VOICE_CHANNEL_STATUS
     }
   }

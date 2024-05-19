@@ -1,152 +1,154 @@
 "use strict";
-n.r(t), n.d(t, {
+a.r(t), a.d(t, {
   addGuildCategory: function() {
-    return C
+    return _
   },
   deleteGuildCategory: function() {
     return g
   },
   fetchMetadataForGuild: function() {
-    return c
-  },
-  fetchSlugForGuild: function() {
     return d
   },
+  fetchSlugForGuild: function() {
+    return u
+  },
   maybeFetchGuildDiscoveryCategories: function() {
-    return o
+    return c
   },
   saveGuildMetadata: function() {
-    return _
+    return x
   },
   updateGuildDiscoveryMetadataAbout: function() {
     return E
   },
   updateGuildDiscoveryMetadataIsPublished: function() {
-    return h
+    return p
   },
   updateGuildDiscoveryMetadataReasonsToJoin: function() {
     return T
   },
   updateGuildDiscoveryMetadataSocialLinks: function() {
-    return p
+    return C
   },
   updateGuildEmojiDiscoverabilityEnabled: function() {
-    return m
+    return h
   },
   updateGuildKeywords: function() {
-    return f
+    return m
   },
   updateGuildPrimaryCategory: function() {
-    return u
+    return f
   }
 });
-var a = n("544891"),
-  i = n("570140"),
-  r = n("706454"),
-  s = n("150192"),
-  l = n("981631");
-async function o() {
+var n = a("544891"),
+  r = a("570140"),
+  s = a("706454"),
+  i = a("683301"),
+  l = a("150192"),
+  o = a("981631");
+async function c() {
   let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
     t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-    n = r.default.locale;
-  if (n === s.default.getFetchedLocale()) return;
-  let o = await a.HTTP.get({
-    url: l.Endpoints.GUILD_DISCOVERY_CATEGORIES,
+    a = s.default.locale,
+    c = t && !i.default.getIsReady();
+  if (a === l.default.getFetchedLocale() && !c) return;
+  let d = await n.HTTP.get({
+    url: o.Endpoints.GUILD_DISCOVERY_CATEGORIES,
     query: {
-      locale: n,
+      locale: a,
       primary_only: e
     },
     oldFormErrors: !0
   });
-  i.default.dispatch({
+  r.default.dispatch({
     type: "GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS",
-    categories: o.body,
-    locale: n,
+    categories: d.body,
+    locale: a,
     forClanDiscovery: t
   })
 }
-async function c(e) {
+async function d(e) {
   try {
     let {
       primary_category_id: t,
-      category_ids: n,
-      keywords: r,
-      emoji_discoverability_enabled: s,
-      partner_actioned_timestamp: o,
+      category_ids: a,
+      keywords: s,
+      emoji_discoverability_enabled: i,
+      partner_actioned_timestamp: l,
       partner_application_timestamp: c,
       is_published: d,
       reasons_to_join: u,
       social_links: f,
       about: m
-    } = (await a.HTTP.get({
-      url: l.Endpoints.GUILD_DISCOVERY_METADATA(e),
+    } = (await n.HTTP.get({
+      url: o.Endpoints.GUILD_DISCOVERY_METADATA(e),
       oldFormErrors: !0
     })).body, h = {
       primaryCategoryId: t,
-      secondaryCategoryIds: n,
-      keywords: r,
-      emojiDiscoverabilityEnabled: s,
-      partnerActionedTimestamp: o,
+      secondaryCategoryIds: a,
+      keywords: s,
+      emojiDiscoverabilityEnabled: i,
+      partnerActionedTimestamp: l,
       partnerApplicationTimestamp: c,
       isPublished: d,
       reasonsToJoin: u,
       socialLinks: f,
       about: m
     };
-    return i.default.dispatch({
+    return r.default.dispatch({
       type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER",
       guildId: e,
       metadata: h
     }), h
   } catch (e) {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_METADATA_FETCH_FAIL"
     })
   }
 }
-async function d(e) {
+async function u(e) {
   try {
-    let t = (await a.HTTP.get({
-      url: l.Endpoints.GUILD_DISCOVERY_SLUG(e)
+    let t = (await n.HTTP.get({
+      url: o.Endpoints.GUILD_DISCOVERY_SLUG(e)
     })).body.slug;
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_SLUG_FETCH_SUCCESS",
       slug: t
     })
   } catch {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_SLUG_FETCH_FAIL",
       guildId: e
     })
   }
 }
 
-function u(e, t) {
-  i.default.dispatch({
+function f(e, t) {
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     primaryCategoryId: t
   })
 }
 
-function f(e, t) {
-  i.default.dispatch({
+function m(e, t) {
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     keywords: t
   })
 }
 
-function m(e, t) {
-  i.default.dispatch({
+function h(e, t) {
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     emojiDiscoverabilityEnabled: t
   })
 }
 
-function h(e, t) {
-  i.default.dispatch({
+function p(e, t) {
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     isPublished: t
@@ -154,7 +156,7 @@ function h(e, t) {
 }
 
 function E(e, t) {
-  i.default.dispatch({
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     about: t
@@ -162,27 +164,27 @@ function E(e, t) {
 }
 
 function T(e, t) {
-  i.default.dispatch({
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     reasonsToJoin: t
   })
 }
 
-function p(e, t) {
-  i.default.dispatch({
+function C(e, t) {
+  r.default.dispatch({
     type: "GUILD_UPDATE_DISCOVERY_METADATA",
     guildId: e,
     socialLinks: t
   })
 }
-async function _(e) {
+async function x(e) {
   let {
     guildId: t,
-    primaryCategoryId: n,
-    keywords: r,
-    emojiDiscoverabilityEnabled: s,
-    partnerActionedTimestamp: o,
+    primaryCategoryId: a,
+    keywords: s,
+    emojiDiscoverabilityEnabled: i,
+    partnerActionedTimestamp: l,
     partnerApplicationTimestamp: c,
     isPublished: d,
     reasonsToJoin: u,
@@ -193,22 +195,22 @@ async function _(e) {
     let {
       primary_category_id: e,
       category_ids: h,
-      keywords: E,
-      emoji_discoverability_enabled: T,
-      partner_actioned_timestamp: p,
-      partner_application_timestamp: _,
-      is_published: C,
-      reasons_to_join: g,
-      social_links: x,
+      keywords: p,
+      emoji_discoverability_enabled: E,
+      partner_actioned_timestamp: T,
+      partner_application_timestamp: C,
+      is_published: x,
+      reasons_to_join: _,
+      social_links: g,
       about: I
-    } = (await a.HTTP.patch({
-      url: l.Endpoints.GUILD_DISCOVERY_METADATA(t),
+    } = (await n.HTTP.patch({
+      url: o.Endpoints.GUILD_DISCOVERY_METADATA(t),
       body: {
-        primary_category_id: n,
-        emoji_discoverability_enabled: s,
-        partner_actioned_timestamp: o,
+        primary_category_id: a,
+        emoji_discoverability_enabled: i,
+        partner_actioned_timestamp: l,
         partner_application_timestamp: c,
-        keywords: r,
+        keywords: s,
         is_published: d,
         reasons_to_join: u,
         social_links: f,
@@ -216,24 +218,24 @@ async function _(e) {
       },
       oldFormErrors: !0
     })).body;
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER",
       guildId: t,
       metadata: {
         primaryCategoryId: e,
         secondaryCategoryIds: h,
-        keywords: E,
-        emojiDiscoverabilityEnabled: T,
-        partnerActionedTimestamp: p,
-        partnerApplicationTimestamp: _,
-        isPublished: C,
-        reasonsToJoin: g,
-        socialLinks: x,
+        keywords: p,
+        emojiDiscoverabilityEnabled: E,
+        partnerActionedTimestamp: T,
+        partnerApplicationTimestamp: C,
+        isPublished: x,
+        reasonsToJoin: _,
+        socialLinks: g,
         about: I
       }
     })
   } catch (e) {
-    throw i.default.dispatch({
+    throw r.default.dispatch({
       type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL",
       guildId: t,
       errors: e.body
@@ -241,18 +243,18 @@ async function _(e) {
   }
 }
 
-function C(e, t) {
-  a.HTTP.put({
-    url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
+function _(e, t) {
+  n.HTTP.put({
+    url: o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
   }).then(() => {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_CATEGORY_ADD",
       guildId: e,
       categoryId: t
     })
   }).catch(t => {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL",
       guildId: e,
       errors: t.body
@@ -261,17 +263,17 @@ function C(e, t) {
 }
 
 function g(e, t) {
-  a.HTTP.del({
-    url: l.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
+  n.HTTP.del({
+    url: o.Endpoints.GUILD_DISCOVERY_UPDATE_CATEGORY(e, t),
     oldFormErrors: !0
   }).then(() => {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_CATEGORY_DELETE",
       guildId: e,
       categoryId: t
     })
   }).catch(t => {
-    i.default.dispatch({
+    r.default.dispatch({
       type: "GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL",
       guildId: e,
       errors: t.body

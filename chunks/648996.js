@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return p
+    return O
   }
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("512722"),
   l = n.n(o),
   u = n("442837"),
@@ -23,19 +23,19 @@ var i = n("735250"),
   A = n("838440"),
   m = n("981631"),
   N = n("689938"),
-  O = n("726286");
+  p = n("760");
 
-function p(e) {
+function O(e) {
   let {
     user: t,
     autoFocus: n = !1,
-    className: s,
+    className: a,
     inputClassName: o,
-    onSend: p
-  } = e, R = r.useRef(null), C = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), g = r.useCallback(e => {
+    onSend: O
+  } = e, C = r.useRef(null), R = (0, u.useStateFromStores)([S.default], () => S.default.isBlocked(t.id)), g = r.useCallback(e => {
     if ("Enter" === e.key) {
-      e.preventDefault(), l()(null != R.current, "Keypress on Input when not mounted");
-      let n = R.current.value.trim();
+      e.preventDefault(), l()(null != C.current, "Keypress on Input when not mounted");
+      let n = C.current.value.trim();
       return (0, A.applyChatRestrictions)({
         type: I.ChatInputTypes.NORMAL,
         content: n,
@@ -47,21 +47,21 @@ function p(e) {
         i && (_.default.openPrivateChannel(t.id, !1, !1, "Quick Message Input").then(e => {
           let t = f.default.getChannel(e);
           l()(null != t, "Newly created PrivateChannel is null"), E.default.sendMessage(t.id, T.default.parse(t, n)), (0, c.popLayer)()
-        }), null == p || p())
+        }), null == O || O())
       }), !0
     }
     e.which === m.KeyboardKeys.SPACE && e.stopPropagation()
-  }, [t, p]), L = C ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
+  }, [t, O]), L = R ? N.default.Messages.QUICK_DM_BLOCKED : N.default.Messages.QUICK_DM_USER.format({
     name: h.default.getName(t)
   });
   return (0, i.jsx)(d.TextInput, {
-    className: s,
-    inputClassName: a()(o, O.input),
-    inputRef: R,
+    className: a,
+    inputClassName: s()(o, p.input),
+    inputRef: C,
     autoFocus: n,
     placeholder: L,
     "aria-label": L,
     onKeyPress: g,
-    disabled: C
+    disabled: R
   })
 }

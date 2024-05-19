@@ -30,11 +30,11 @@ var a = n("735250"),
   x = n("233870"),
   M = n("51144"),
   R = n("998502"),
-  L = n("276264"),
-  y = n("981631"),
+  y = n("276264"),
+  L = n("981631"),
   O = n("689938"),
-  j = n("495929"),
-  P = n("354811");
+  j = n("895294"),
+  P = n("67431");
 let D = R.default.getEnableHardwareAcceleration();
 
 function b(e) {
@@ -51,7 +51,7 @@ function b(e) {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("60677")]).then(n.bind(n, "354589"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("60677")]).then(n.bind(n, "354589"));
       return n => (0, a.jsx)(e, {
         ...n,
         user: t,
@@ -60,7 +60,9 @@ function b(e) {
     })
   };
   return (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.maybeFetchUserProfileForPopout)(t),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(t, {
+      channelId: l.id
+    }),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -74,12 +76,12 @@ function b(e) {
           decoration: "never"
         })),
         n = "<@".concat(t.id, ">");
-      v.ComponentDispatch.dispatchToLastSubscribed(y.ComponentActions.INSERT_TEXT, {
+      v.ComponentDispatch.dispatchToLastSubscribed(L.ComponentActions.INSERT_TEXT, {
         plainText: e,
         rawText: n
       }), u.default.startTyping(l.id)
     },
-    children: e => (0, a.jsx)(L.default, {
+    children: e => (0, a.jsx)(y.default, {
       user: t,
       currentUser: S,
       isOwner: t.id === l.ownerId,
@@ -106,7 +108,7 @@ function U(e) {
     (0, o.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("30887").then(n.bind(n, "496281"));
+      } = await n.e("37969").then(n.bind(n, "496281"));
       return t => (0, a.jsx)(e, {
         ...t,
         channel: u,
@@ -120,7 +122,9 @@ function U(e) {
     botIconFirst: !0
   });
   return null != c ? (0, a.jsx)(r.Popout, {
-    preload: () => (0, h.maybeFetchUserProfileForPopout)(c.id, f),
+    preload: () => (0, h.maybeFetchUserProfileForPopout)(c.id, f, {
+      channelId: u.id
+    }),
     renderPopout: e => (0, a.jsx)(m.default, {
       ...e,
       location: "PrivateChannelRecipients",
@@ -177,10 +181,11 @@ function F(e) {
   l.useEffect(() => {
     if (o)
       for (let e of m)(0, h.maybeFetchUserProfileForPopout)(e, {
-        dispatchWait: !0
+        dispatchWait: !0,
+        channelId: t.id
       })
-  }, [o, m]), l.useEffect(() => {
-    A.default.track(y.AnalyticEvents.MEMBER_LIST_VIEWED, {
+  }, [o, m, t.id]), l.useEffect(() => {
+    A.default.track(L.AnalyticEvents.MEMBER_LIST_VIEWED, {
       channel_id: t.id,
       channel_type: t.type,
       guild_id: t.guild_id

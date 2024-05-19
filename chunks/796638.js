@@ -19,7 +19,7 @@ var a = n("735250"),
   u = n("823379"),
   d = n("27457"),
   c = n("354459"),
-  f = n("390441");
+  f = n("883335");
 let h = 112,
   m = 16 / 9 * h + 8,
   p = 10 * o.default.Millis.SECOND;
@@ -63,15 +63,15 @@ function C(e, t) {
               }(e.lastSpoke)).concat((0, i.default)(e.userNick, e.user))
           }
         })(e, n)),
-        [l, o] = (0, s.partition)(a, c.isStreamParticipant),
-        d = o.findIndex(E),
-        f = null; - 1 !== d && (f = o[d], o.splice(d, 1));
+        [l, o] = (0, s.partition)(a, c.isUserParticipant),
+        d = l.findIndex(E),
+        f = null; - 1 !== d && (f = l[d], l.splice(d, 1));
       let h = null != f ? e - m - 8 : e,
         C = Math.max(0, Math.min(Math.floor((h - 8) / 132), 12, t.length)),
         g = Math.min((h - 8) / C - 8, m),
-        S = Math.max(0, C - l.length),
-        _ = l.slice(0, C),
-        T = o.slice(0, S),
+        S = Math.max(0, C - o.length),
+        _ = o.slice(0, C),
+        T = l.slice(0, S),
         I = Array(S);
       if (S > 0) {
         let e = [];
@@ -87,11 +87,11 @@ function C(e, t) {
         }
       }
       let A = I.filter(u.isNotNullish),
-        v = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
-      r.current = v;
-      let N = [..._, ...A];
-      return null != f && N.push(f), {
-        visibleParticipants: N,
+        N = (0, s.keyBy)((0, s.range)(A.length), e => A[e].id);
+      r.current = N;
+      let v = [..._, ...A];
+      return null != f && v.push(f), {
+        visibleParticipants: v,
         participantTileWidth: g
       }
     }, [e, t, n]);

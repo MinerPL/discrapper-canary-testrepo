@@ -12,7 +12,7 @@ var r = n("120356"),
   o = n("432247"),
   l = n("5192"),
   u = n("829820"),
-  d = n("160004");
+  d = n("22387");
 
 function _(e) {
   let {
@@ -22,18 +22,20 @@ function _(e) {
     guildId: _,
     source: c,
     size: E,
-    className: I,
-    onAction: T
+    look: I,
+    color: T,
+    className: f,
+    onAction: S
   } = e, {
-    tooltip: f,
-    loading: S,
-    disabled: h,
-    onClick: A
-  } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n)), m = () => {
-    null == T || T(), A()
+    tooltip: h,
+    loading: A,
+    disabled: m,
+    onClick: N
+  } = (0, u.useSpotifySyncAction)(t, n, c, l.default.getNickname(_, r, n)), p = () => {
+    null == S || S(), N()
   };
   return (0, i.jsx)(s.Tooltip, {
-    text: f,
+    text: h,
     children: e => {
       let {
         onMouseEnter: n,
@@ -41,13 +43,15 @@ function _(e) {
       } = e;
       return (0, i.jsx)(s.Button, {
         size: a()(E, d.iconButtonSize),
-        className: a()(I, d.iconButton),
-        onClick: m,
+        className: a()(f, d.iconButton),
+        look: I,
+        color: T,
+        onClick: p,
         onMouseEnter: n,
         onMouseLeave: r,
-        disabled: h,
-        submitting: S,
-        "aria-label": null != f ? f : t.name,
+        disabled: m,
+        submitting: A,
+        "aria-label": null != h ? h : t.name,
         children: (0, i.jsx)(o.default, {
           className: d.listenAlongIcon
         })

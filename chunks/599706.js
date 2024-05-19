@@ -12,7 +12,7 @@ var a = n("392711"),
   c = n("463618"),
   f = n("823379"),
   E = n("981631"),
-  _ = n("624902");
+  _ = n("912625");
 let m = (0, r.default)(e => {
   let {
     member: t,
@@ -45,6 +45,7 @@ let m = (0, r.default)(e => {
         ...e,
         location: "PartyAvatars",
         userId: t.id,
+        guildId: l,
         analyticsParams: r,
         newAnalyticsLocations: [o.default.AVATAR]
       }),

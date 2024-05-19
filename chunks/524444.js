@@ -71,8 +71,8 @@ var i, r, a = n("735250"),
   N = n("479313"),
   p = n("765104"),
   O = n("505953"),
-  R = n("695346"),
-  C = n("201542"),
+  C = n("695346"),
+  R = n("201542"),
   g = n("306680"),
   L = n("594174"),
   v = n("130208"),
@@ -84,8 +84,8 @@ var i, r, a = n("735250"),
   b = n("259580"),
   G = n("386103"),
   w = n("465670"),
-  B = n("839523"),
-  k = n("626135"),
+  k = n("839523"),
+  B = n("626135"),
   V = n("823379"),
   x = n("589530"),
   F = n("709054"),
@@ -94,7 +94,7 @@ var i, r, a = n("735250"),
   j = n("814249"),
   W = n("768760"),
   K = n("689938"),
-  z = n("529695");
+  z = n("59369");
 let Z = {
     delay: 300,
     position: "top"
@@ -162,7 +162,7 @@ function $(e) {
     onMute: i,
     ...r
   } = e, s = X(t), o = Q(i);
-  return n = null == n ? x.getVolume : n, (0, a.jsx)(C.default, {
+  return n = null == n ? x.getVolume : n, (0, a.jsx)(R.default, {
     ...r,
     onVolumeChange: s,
     onMute: o,
@@ -180,7 +180,7 @@ function ee(e) {
     disableAltTextDisplay: u = !1,
     mediaLayoutType: d,
     imageContainerStyle: _
-  } = e, c = d === W.MediaLayoutType.MOSAIC, I = !u && R.ViewImageDescriptions.getSetting() && null != t && "" !== t && !0 !== n, T = e => {
+  } = e, c = d === W.MediaLayoutType.MOSAIC, I = !u && C.ViewImageDescriptions.getSetting() && null != t && "" !== t && !0 !== n, T = e => {
     let {
       altText: t
     } = e;
@@ -406,12 +406,12 @@ function eo(e) {
     scrollManager: u
   } = e, {
     disableInteractions: f
-  } = s.useContext(U.MessagesInteractionContext), [S, R] = s.useState(null), C = s.useRef(null), [v, D] = s.useState(null), M = s.useRef(null), y = (0, c.useStateFromStoresArray)([p.default], () => {
+  } = s.useContext(U.MessagesInteractionContext), [S, C] = s.useState(null), R = s.useRef(null), [v, D] = s.useState(null), M = s.useRef(null), y = (0, c.useStateFromStoresArray)([p.default], () => {
     var e;
     return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), P = (0, A.default)(y);
   s.useEffect(() => {
-    !d().isEqual(P, y) && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d().isEqual(P, y) && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: y.length,
       message_counts: y.map(e => e.count),
       start_message_ids: y.map(e => e.startId),
@@ -437,8 +437,8 @@ function eo(e) {
   null == W && null == S && (null == y ? void 0 : y.length) >= 1 && (W = null === (i = y[0]) || void 0 === i ? void 0 : i.topic);
   let Z = s.useMemo(() => d().debounce(e => {
       var t;
-      R(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
-    }, 64), [R]),
+      C(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : null)
+    }, 64), [C]),
     X = s.useMemo(() => d().throttle(() => {
       (0, N.setHighlightedSummary)(null)
     }, 1200, {
@@ -449,7 +449,7 @@ function eo(e) {
     }, [Z, X]),
     [q, J] = s.useState(!1),
     $ = s.useCallback(() => {
-      k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !q,
         num_summaries: y.length,
         message_counts: y.map(e => e.count),
@@ -471,7 +471,7 @@ function eo(e) {
           u.addAutomaticAnchorCallback(Q, !1)
         }, 100)
       };
-      u.removeAutomaticAnchorCallback(Q), u.addScrollCompleteCallback(i), k.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      u.removeAutomaticAnchorCallback(Q), u.addScrollCompleteCallback(i), B.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -502,7 +502,7 @@ function eo(e) {
   }, [v, q]);
   let en = s.useCallback(e => {
     var t;
-    !((0, _.isElement)(e.target) && (null === (t = C.current) || void 0 === t ? void 0 : t.contains(e.target))) && (q && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, _.isElement)(e.target) && (null === (t = R.current) || void 0 === t ? void 0 : t.contains(e.target))) && (q && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: y.length,
       message_counts: y.map(e => e.count),
@@ -547,7 +547,7 @@ function eo(e) {
     }, [r.id]),
     es = K.default.Messages.SUMMARIES_NO_SUMMARIES;
   return y.length > 0 && (es = "" === W || null == W ? K.default.Messages.SUMMARIES_VIEW_ALL : W), f ? null : (0, a.jsxs)("div", {
-    ref: C,
+    ref: R,
     className: l()(z.newTopicsBarContainer, z.containerMarginTop),
     children: [(0, a.jsx)("div", {
       className: l()(z.newTopicsBarTopicSection),
@@ -560,7 +560,7 @@ function eo(e) {
             [z.newTopicsBarTextUnselected]: !q,
             [z.newTopicsBarTextSelected]: q
           }),
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.newTopicsBarIcon,
             width: 16,
             height: 16
@@ -595,7 +595,7 @@ function eo(e) {
         className: z.topicsDropdownHeading,
         children: [(0, a.jsxs)("div", {
           className: z.topicsDropdownHeadingText,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.topicsPillHeadingIcon,
             width: 18,
             height: 20
@@ -637,12 +637,12 @@ function eu(e) {
     scrollManager: o
   } = e, {
     disableInteractions: u
-  } = s.useContext(U.MessagesInteractionContext), [T, f] = s.useState(null), S = s.useRef(null), [R, C] = s.useState(null), g = s.useRef(null), v = (0, c.useStateFromStoresArray)([p.default], () => {
+  } = s.useContext(U.MessagesInteractionContext), [T, f] = s.useState(null), S = s.useRef(null), [C, R] = s.useState(null), g = s.useRef(null), v = (0, c.useStateFromStoresArray)([p.default], () => {
     var e;
     return null !== (e = p.default.summaries(r.id)) && void 0 !== e ? e : []
   }, [r]), D = (0, A.default)(v);
   s.useEffect(() => {
-    !d().isEqual(D, v) && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
+    !d().isEqual(D, v) && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_VIEWED, {
       num_summaries: v.length,
       message_counts: v.map(e => e.count),
       start_message_ids: v.map(e => e.startId),
@@ -682,7 +682,7 @@ function eu(e) {
     }, [F, Y]),
     [Z, X] = s.useState(!1),
     Q = s.useCallback(() => {
-      k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+      B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
         topics_dropdown_open: !Z,
         num_summaries: v.length,
         message_counts: v.map(e => e.count),
@@ -704,7 +704,7 @@ function eu(e) {
           o.addAutomaticAnchorCallback(W, !1)
         }, 100)
       };
-      o.removeAutomaticAnchorCallback(W), o.addScrollCompleteCallback(i), k.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
+      o.removeAutomaticAnchorCallback(W), o.addScrollCompleteCallback(i), B.default.track(H.AnalyticEvents.SUMMARIES_TOPIC_CLICKED, {
         source: t,
         message_id: n.startId,
         guild_id: r.guild_id,
@@ -729,19 +729,19 @@ function eu(e) {
       var t;
       X(e);
       let n = null === (t = g.current) || void 0 === t ? void 0 : t.scrollTop;
-      null != n && C(n)
+      null != n && R(n)
     }, []);
   s.useEffect(() => {
-    if (null != R && Z) {
+    if (null != C && Z) {
       var e;
       null === (e = g.current) || void 0 === e || e.scrollTo({
-        top: R
+        top: C
       })
     }
-  }, [R, Z]);
+  }, [C, Z]);
   let et = s.useCallback(e => {
     var t;
-    !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && k.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
+    !((0, _.isElement)(e.target) && (null === (t = S.current) || void 0 === t ? void 0 : t.contains(e.target))) && (Z && B.default.track(H.AnalyticEvents.SUMMARIES_TOPICS_PILL_TOGGLED, {
       topics_dropdown_open: !1,
       num_summaries: v.length,
       message_counts: v.map(e => e.count),
@@ -783,7 +783,7 @@ function eu(e) {
             [z.topicsPillTextUnselected]: !Z,
             [z.topicsPillTextSelected]: Z
           }),
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.topicsPillSummaryIcon,
             width: 16,
             height: 16
@@ -830,7 +830,7 @@ function eu(e) {
         className: z.topicsDropdownHeading,
         children: [(0, a.jsxs)("div", {
           className: z.topicsDropdownHeadingText,
-          children: [(0, a.jsx)(B.default, {
+          children: [(0, a.jsx)(k.default, {
             className: z.topicsPillHeadingIcon,
             width: 18,
             height: 20

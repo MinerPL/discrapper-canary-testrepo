@@ -1,18 +1,19 @@
 "use strict";
 n.r(t);
-var a = n("735250");
-n("470079");
-var l = n("120356"),
-  s = n.n(l),
-  i = n("438784"),
-  r = n("481060"),
-  o = n("806519"),
-  u = n("525049"),
-  d = n("933379");
-let c = {},
-  f = 1 / 4;
+var a = n("735250"),
+  l = n("470079"),
+  s = n("120356"),
+  i = n.n(s),
+  r = n("974674"),
+  o = n("438784"),
+  u = n("481060"),
+  d = n("806519"),
+  c = n("525049"),
+  f = n("135775");
+let h = {},
+  m = 1 / 4;
 
-function h(e) {
+function p(e) {
   let {
     height: t,
     fillColor: n
@@ -25,146 +26,174 @@ function h(e) {
       borderRadius: t / 2,
       backgroundColor: n,
       height: t,
-      width: t * u.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO
+      width: t * c.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO
     },
-    children: (0, a.jsx)(i.Dots, {
-      className: d.dots,
-      dotRadius: t * f
+    children: (0, a.jsx)(o.Dots, {
+      className: f.dots,
+      dotRadius: t * m
     })
   })
 }
 
-function m(e) {
+function E(e) {
   let {
     isTyping: t,
-    statusHeightPx: n,
-    statusCenterOffset: l,
-    status: s
-  } = e, i = (0, r.useStatusFillColor)(r.StatusTypes.ONLINE);
-  if (t) {
-    let e = n * u.DIAGONAL_FACEPILE_TYPING_WIDTH_TO_HEIGHT_RATIO;
-    return (0, a.jsx)("div", {
-      style: {
-        position: "absolute",
-        top: l - n / 2,
-        left: l - e / 2
-      },
-      children: (0, a.jsx)(h, {
-        height: n,
-        fillColor: i
-      })
+    statusCoords: n,
+    status: l
+  } = e, s = (0, u.useStatusFillColor)(u.StatusTypes.ONLINE);
+  return t ? (0, a.jsx)("div", {
+    style: {
+      position: "absolute",
+      top: n.y,
+      left: n.x
+    },
+    children: (0, a.jsx)(p, {
+      height: n.height,
+      fillColor: s
     })
-  }
-  if (null != s) {
-    let e = l - n / 2;
-    return (0, a.jsx)(r.Status, {
-      size: n,
-      status: s,
-      style: {
-        position: "absolute",
-        top: e,
-        left: e
-      }
-    })
-  }
-  return null
+  }) : null != l ? (0, a.jsx)(u.Status, {
+    size: n.height,
+    status: l,
+    style: {
+      position: "absolute",
+      top: n.y,
+      left: n.x
+    }
+  }) : null
 }
 
-function p(e) {
+function C(e) {
   let {
     src: t,
-    size: n,
-    isTyping: l,
-    status: s
-  } = e, i = (0, a.jsx)("img", {
-    className: d.circularImage,
+    size: n
+  } = e;
+  return (0, a.jsx)("img", {
+    className: f.circularImage,
     src: t,
     alt: "",
     width: n,
     height: n
-  });
-  return l ? (0, a.jsx)(o.default, {
-    mask: o.MaskIDs.DIAGONAL_FACEPILE_TYPING_CUTOUT,
-    height: n,
-    width: n,
-    children: i
-  }) : null != s ? (0, a.jsx)(o.default, {
-    mask: o.MaskIDs.DIAGONAL_FACEPILE_STATUS_CUTOUT,
-    height: n,
-    width: n,
-    children: i
-  }) : i
+  })
 }
+let g = {
+  [u.AvatarSizes.SIZE_16]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_16,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_16,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_16
+  },
+  [u.AvatarSizes.SIZE_20]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_20,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_20,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_20
+  },
+  [u.AvatarSizes.SIZE_24]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_24,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_24,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_24
+  },
+  [u.AvatarSizes.SIZE_32]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_32,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_32,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_32
+  },
+  [u.AvatarSizes.SIZE_40]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_32,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_32,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_32
+  },
+  [u.AvatarSizes.SIZE_48]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_40,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_40,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_40
+  },
+  [u.AvatarSizes.SIZE_56]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_56,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_56,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_56
+  },
+  [u.AvatarSizes.SIZE_80]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_80,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_80,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_80
+  },
+  [u.AvatarSizes.SIZE_120]: {
+    default: d.MaskIDs.DIAGONAL_FACEPILE_120,
+    typing: d.MaskIDs.DIAGONAL_FACEPILE_TYPING_120,
+    status: d.MaskIDs.DIAGONAL_FACEPILE_STATUS_120
+  }
+};
 t.default = function(e) {
-  var t;
+  var t, n, s;
   let {
-    backSrc: n,
-    frontSrc: l,
-    size: i,
-    status: r,
-    isTyping: f,
-    style: h,
-    className: E,
-    ...C
+    backSrc: o,
+    frontSrc: m,
+    size: p,
+    isTyping: S,
+    status: _,
+    style: T,
+    className: I,
+    ...A
   } = e, {
-    statusCenter: g,
-    statusHeightPx: S,
-    frontAvatarOffsetPx: _,
-    frontAvatarSizePx: T,
-    backAvatarSizePx: I
-  } = null !== (t = c[i]) && void 0 !== t ? t : function(e) {
-    let t = e / (u.DIAGONAL_FACEPILE_AVATAR_PROPORTION + u.DIAGONAL_FACEPILE_MASK_OFFSET),
-      n = t * u.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
-      a = t * u.DIAGONAL_FACEPILE_MASK_OFFSET,
-      l = u.DIAGONAL_FACEPILE_STATUS_TO_AVATAR_RATIO * n,
-      s = a + n / 2,
-      i = {
-        statusCenter: s + n * u.DIAGONAL_FACEPILE_MASK_STATUS_OFFSET,
-        statusHeightPx: l,
-        frontAvatarSizePx: n,
-        backAvatarSizePx: t,
-        frontAvatarOffsetPx: a,
-        frontAvatarCenter: s
-      };
-    return c[e] = i, i
-  }(i);
+    size: N
+  } = u.AvatarSizeSpecs[p], {
+    statusCoords: v,
+    frontAvatarOffsetPx: x,
+    frontAvatarSizePx: M,
+    backAvatarSizePx: R
+  } = l.useMemo(() => {
+    var e;
+    let t = "".concat(N, "-").concat(S);
+    return null !== (e = h[t]) && void 0 !== e ? e : function(e, t, n) {
+      let a = u.AvatarSizeSpecs[e],
+        l = a.size / (c.DIAGONAL_FACEPILE_AVATAR_PROPORTION + c.DIAGONAL_FACEPILE_MASK_OFFSET),
+        s = l * c.DIAGONAL_FACEPILE_AVATAR_PROPORTION,
+        i = l * c.DIAGONAL_FACEPILE_MASK_OFFSET,
+        o = {
+          statusCoords: (0, r.getStatusCoords)(a, u.StatusTypes.ONLINE, !1, t),
+          frontAvatarSizePx: s,
+          backAvatarSizePx: l,
+          frontAvatarOffsetPx: i,
+          frontAvatarCenter: i + s / 2
+        };
+      return h[n] = o, o
+    }(p, S, t)
+  }, [N, S, p]);
+  let y = (t = null != _, n = S, s = p, n ? g[s].typing : t ? g[s].status : g[s].default);
   return (0, a.jsxs)("div", {
-    "aria-label": C["aria-label"],
-    "aria-hidden": C["aria-hidden"],
-    className: s()(d.container, E),
     style: {
-      width: i,
-      height: i,
-      ...h
+      width: N,
+      height: N,
+      ...T
     },
-    children: [(0, a.jsx)(o.default, {
-      height: I,
-      width: I,
-      mask: o.MaskIDs.DIAGONAL_FACEPILE_BACK_AVATAR_CUTOUT,
-      children: (0, a.jsx)("img", {
-        className: d.circularImage,
-        src: n,
+    "aria-label": A["aria-label"],
+    "aria-hidden": A["aria-hidden"],
+    className: i()(f.container, I),
+    children: [(0, a.jsxs)(d.default, {
+      mask: y,
+      height: N,
+      width: N,
+      children: [(0, a.jsx)("img", {
+        src: o,
         alt: "",
-        width: I,
-        height: I
-      })
-    }), (0, a.jsx)("div", {
-      style: {
-        position: "absolute",
-        top: _,
-        left: _
-      },
-      children: (0, a.jsx)(p, {
-        src: l,
-        size: T,
-        isTyping: f,
-        status: r
-      })
-    }), (0, a.jsx)(m, {
-      status: r,
-      isTyping: f,
-      statusHeightPx: S,
-      statusCenterOffset: g
+        width: R,
+        height: R
+      }), (0, a.jsx)("div", {
+        style: {
+          position: "absolute",
+          top: x,
+          left: x
+        },
+        children: (0, a.jsx)(C, {
+          src: m,
+          size: M,
+          isTyping: S,
+          status: _
+        })
+      })]
+    }), (0, a.jsx)(E, {
+      statusCoords: v,
+      status: _,
+      isTyping: S
     })]
   })
 }

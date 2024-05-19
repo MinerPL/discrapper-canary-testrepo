@@ -6,18 +6,18 @@ n.r(t), n.d(t, {
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("392711"),
   l = n.n(o),
   u = n("481060"),
-  d = n("583901"),
+  d = n("110577"),
   _ = n("997945"),
   c = n("630117"),
   E = n("441319"),
   I = n("981631"),
   T = n("689938"),
-  f = n("354585");
+  f = n("761064");
 let S = () => [T.default.Messages.APP_ICON_PIRATE, T.default.Messages.APP_ICON_PIRATE_1, T.default.Messages.APP_ICON_PIRATE_2, T.default.Messages.APP_ICON_PIRATE_3, T.default.Messages.APP_ICON_PIRATE_4],
   h = () => {
     var e;
@@ -28,27 +28,30 @@ function A(e) {
   let {
     id: t,
     className: n,
-    onSelect: s,
+    onSelect: a,
     isSelected: o = !1,
     tabIndex: l,
-    children: c
-  } = e, [T, S] = r.useState(E.ICONS_BY_ID[t].name), A = t === _.PremiumAppIconIds.PIRATE, m = (0, u.useRadioItem)({
-    label: T,
+    children: c,
+    isNew: T = !1
+  } = e, [S, A] = r.useState(E.ICONS_BY_ID[t].name), m = t === _.PremiumAppIconIds.PIRATE, N = (0, u.useRadioItem)({
+    label: S,
     isSelected: o
   });
   return (0, i.jsx)(u.Tooltip, {
-    text: T,
-    onTooltipShow: () => A && S(h()),
+    text: S,
+    onTooltipShow: () => m && A(h()),
     children: e => (0, i.jsxs)("div", {
       className: f.appIconSelectionContainer,
-      children: [(0, i.jsx)(u.Clickable, {
+      children: [!o && T && (0, i.jsx)("div", {
+        className: f.newBadgeCircle
+      }), (0, i.jsx)(u.Clickable, {
         ...e,
-        ...m,
-        tabIndex: null != l ? l : m.tabIndex,
-        className: a()(f.appIconSelection, {
+        ...N,
+        tabIndex: null != l ? l : N.tabIndex,
+        className: s()(f.appIconSelection, {
           [f.selected]: o
         }, n),
-        onClick: o ? I.NOOP : () => null == s ? void 0 : s(t),
+        onClick: o ? I.NOOP : () => null == a ? void 0 : a(t),
         children: c
       }), o && (0, i.jsx)(d.SelectionCircle, {})]
     })
@@ -60,15 +63,17 @@ function m(e) {
     icon: t,
     isSelected: n,
     disabled: r,
-    tabIndex: s,
-    onSelect: a
+    tabIndex: a,
+    onSelect: s,
+    isNew: o
   } = e;
   return (0, i.jsx)(A, {
-    onSelect: r ? void 0 : a,
+    onSelect: r ? void 0 : s,
     isSelected: n,
     id: t.id,
     className: r ? f.disabled : void 0,
-    tabIndex: s,
+    tabIndex: a,
+    isNew: o,
     children: (0, i.jsx)(c.default, {
       id: t.id,
       width: E.CUSTOM_BASE_SIZE

@@ -23,8 +23,8 @@ var i = n("735250"),
   v = n("655687"),
   y = n("823748"),
   O = n("25007"),
-  T = n("199649"),
-  C = n("1397"),
+  C = n("199649"),
+  T = n("1397"),
   N = n("541716"),
   I = n("752305"),
   _ = n("974251"),
@@ -55,7 +55,7 @@ var i = n("735250"),
   q = n("987650"),
   Q = n("981631"),
   $ = n("689938"),
-  ee = n("87701");
+  ee = n("940594");
 
 function et(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -123,10 +123,10 @@ class ei extends a.Component {
         focused: a
       })
     });
-    return e.isPrivate() ? (0, i.jsx)(T.default, {
+    return e.isPrivate() ? (0, i.jsx)(C.default, {
       channel: e,
       children: d
-    }, e.id) : (0, i.jsx)(C.default, {
+    }, e.id) : (0, i.jsx)(T.default, {
       channel: e,
       children: d
     }, e.id)
@@ -415,7 +415,7 @@ class ea extends a.PureComponent {
       null != t && null != a && (0, c.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("56826")]).then(n.bind(n, "131404"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
         return n => (0, i.jsx)(e, {
           ...n,
           user: a,

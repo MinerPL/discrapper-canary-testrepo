@@ -1,127 +1,127 @@
 "use strict";
-l.r(t), l.d(t, {
+a.r(t), a.d(t, {
   default: function() {
-    return x
+    return T
   }
-}), l("47120");
-var i = l("735250");
-l("470079");
-var a = l("209173"),
-  n = l("782568"),
-  s = l("626135"),
-  r = l("924489"),
-  c = l("132871"),
-  o = l("147890"),
-  d = l("491576"),
-  u = l("112884"),
-  p = l("639002"),
-  _ = l("781627"),
-  m = l("981631"),
-  f = l("689938"),
-  h = l("550304");
-let C = new Map([
+}), a("47120");
+var l = a("735250");
+a("470079");
+var n = a("209173"),
+  s = a("782568"),
+  i = a("626135"),
+  r = a("924489"),
+  c = a("132871"),
+  u = a("147890"),
+  o = a("491576"),
+  d = a("112884"),
+  m = a("639002"),
+  g = a("781627"),
+  p = a("981631"),
+  _ = a("689938"),
+  f = a("96809");
+let h = new Map([
     ["890343617762304070", {
-      imageSrc: l("336662")
+      imageSrc: a("336662")
     }]
   ]),
-  g = new Map,
-  I = new Map([
-    [m.PlatformTypes.SPOTIFY, {
-      imageSrc: l("655130")
+  C = new Map,
+  R = new Map([
+    [p.PlatformTypes.SPOTIFY, {
+      imageSrc: a("655130")
     }]
   ]);
 
-function A(e) {
-  var t, l;
+function I(e) {
+  var t, a;
   let {
-    result: a
-  } = e, n = a.data, s = (0, d.default)({
-    application: n
-  }), c = C.get(a.data.id);
+    result: n
+  } = e, s = n.data, i = (0, o.default)({
+    application: s
+  }), c = h.get(n.data.id);
   if (null == c) return null;
-  let u = s.length > 0 ? (0, i.jsx)(r.default, {
-      application: a.data,
+  let d = i.length > 0 ? (0, l.jsx)(r.default, {
+      application: n.data,
       textVariant: "text-sm/semibold",
-      mutualGuilds: s,
+      mutualGuilds: i,
       mutualGuildShownMax: 3,
       guildIconSize: r.GuildIconSize.SMALL,
       compact: !0
     }) : null,
-    p = null !== (l = null === (t = n.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0,
-    m = p > 0 ? f.default.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
-      guildCount: p
+    m = null !== (a = null === (t = s.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== a ? a : 0,
+    p = m > 0 ? _.default.Messages.APP_DIRECTORY_SHORT_GUILD_COUNT.format({
+      guildCount: m
     }) : void 0;
-  return (0, i.jsx)(_.default, {
+  return (0, l.jsx)(g.default, {
     imageSrc: c.imageSrc,
-    header: a.data.name,
-    description: a.data.description,
-    secondaryInfo: m,
-    ctaLabel: f.default.Messages.APPLICATION_ADD_BUTTON,
-    mutualGuildCount: u,
-    onCtaClick: () => (0, o.goToApplication)({
-      applicationId: n.id
+    header: n.data.name,
+    description: n.data.description,
+    secondaryInfo: p,
+    ctaLabel: _.default.Messages.APPLICATION_ADD_BUTTON,
+    mutualGuildCount: d,
+    onCtaClick: () => (0, u.goToApplication)({
+      applicationId: s.id
     })
-  })
-}
-
-function E(e) {
-  let {
-    result: t
-  } = e, l = g.get(t.data.id);
-  return null == l ? null : (0, i.jsx)(_.default, {
-    imageSrc: l.imageSrc,
-    header: t.data.name,
-    description: t.data.description,
-    secondaryInfo: f.default.Messages.APP_DIRECTORY_ACTIVITY_LABEL
-  })
-}
-
-function v(e) {
-  let t, l, a, {
-      result: r,
-      guildId: o
-    } = e,
-    d = I.get(r.data.name);
-  return null == d ? null : (r.data.name === m.PlatformTypes.SPOTIFY && (t = f.default.Messages.APP_DIRECTORY_SPOTIFY_TITLE, l = f.default.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), a = () => {
-    s.default.track(m.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
-      current_page: c.ApplicationDirectoryViews.SEARCH,
-      cta: "spotify",
-      guild_id: o
-    }), (0, n.default)("https://support.discord.com/hc/en-us/articles/360000167212-Discord-Spotify-Connection")
-  }), null == t || null == l || null == a) ? null : (0, i.jsx)(_.default, {
-    imageSrc: d.imageSrc,
-    header: t,
-    description: l,
-    ctaLabel: f.default.Messages.LEARN_MORE,
-    onCtaClick: a,
-    secondaryInfo: f.default.Messages.APP_DIRECTORY_CONNECTION_LABEL
   })
 }
 
 function x(e) {
   let {
+    result: t
+  } = e, a = C.get(t.data.id);
+  return null == a ? null : (0, l.jsx)(g.default, {
+    imageSrc: a.imageSrc,
+    header: t.data.name,
+    description: t.data.description,
+    secondaryInfo: _.default.Messages.APP_DIRECTORY_ACTIVITY_LABEL
+  })
+}
+
+function A(e) {
+  let t, a, n, {
+      result: r,
+      guildId: u
+    } = e,
+    o = R.get(r.data.name);
+  return null == o ? null : (r.data.name === p.PlatformTypes.SPOTIFY && (t = _.default.Messages.APP_DIRECTORY_SPOTIFY_TITLE, a = _.default.Messages.APP_DIRECTORY_SPOTIFY_DESCRIPTION.format(), n = () => {
+    i.default.track(p.AnalyticEvents.APP_DIRECTORY_CTA_CLICKED, {
+      current_page: c.ApplicationDirectoryViews.SEARCH,
+      cta: "spotify",
+      guild_id: u
+    }), (0, s.default)("https://support.discord.com/hc/en-us/articles/360000167212-Discord-Spotify-Connection")
+  }), null == t || null == a || null == n) ? null : (0, l.jsx)(g.default, {
+    imageSrc: o.imageSrc,
+    header: t,
+    description: a,
+    ctaLabel: _.default.Messages.LEARN_MORE,
+    onCtaClick: n,
+    secondaryInfo: _.default.Messages.APP_DIRECTORY_CONNECTION_LABEL
+  })
+}
+
+function T(e) {
+  let {
     results: t,
-    guildId: l
+    guildId: a
   } = e;
-  return (0, i.jsxs)("div", {
-    className: h.container,
-    children: [(0, i.jsx)(u.default, {}), (0, i.jsx)("div", {
-      className: h.list,
+  return (0, l.jsxs)("div", {
+    className: f.container,
+    children: [(0, l.jsx)(d.default, {}), (0, l.jsx)("div", {
+      className: f.list,
       children: t.map((e, t) => {
-        let n = "".concat(t).concat(e.type);
-        if (e.type === a.ApplicationDirectorySearchResultType.APPLICATION) return (0, i.jsx)(A, {
+        let s = "".concat(t).concat(e.type);
+        if (e.type === n.ApplicationDirectorySearchResultType.APPLICATION) return (0, l.jsx)(I, {
           result: e
-        }, n);
-        if (e.type === a.ApplicationDirectorySearchResultType.ACTIVITY_APPLICATION) return (0, i.jsx)(E, {
+        }, s);
+        if (e.type === n.ApplicationDirectorySearchResultType.ACTIVITY_APPLICATION) return (0, l.jsx)(x, {
           result: e
-        }, n);
-        if (e.type === a.ApplicationDirectorySearchResultType.CONNECTION) return (0, i.jsx)(v, {
-          guildId: l,
+        }, s);
+        if (e.type === n.ApplicationDirectorySearchResultType.CONNECTION) return (0, l.jsx)(A, {
+          guildId: a,
           result: e
-        }, n)
+        }, s)
       })
-    }), (0, i.jsx)(p.default, {
-      guildId: l
+    }), (0, l.jsx)(m.default, {
+      guildId: a
     })]
   })
 }

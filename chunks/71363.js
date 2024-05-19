@@ -21,7 +21,7 @@ var a = s("735250"),
   N = s("75077"),
   p = s("981631"),
   g = s("689938"),
-  C = s("3230"),
+  C = s("263763"),
   P = s("865215");
 t.default = e => {
   let t, s, {
@@ -43,12 +43,12 @@ t.default = e => {
     } = (0, _.default)(c.default.PREMIUM_SUBSCRIBER_NITRO_HOME),
     [D, U] = r.useState(!1),
     j = (0, E.default)("perks-discoverability"),
-    y = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion),
-    B = (0, N.useIsPremiumSubscriber)();
+    G = (0, l.useStateFromStores)([d.default], () => d.default.useReducedMotion),
+    y = (0, N.useIsPremiumSubscriber)();
   return v === R.TileOrderVariant.DEFAULT ? (t = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE, s = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD) : (t = g.default.Messages.NITRO_HOME_ENJOY_UPDATED_DISCORD, s = g.default.Messages.MARKETING_PAGE_CAROUSEL_TITLE), (0, a.jsx)(u.AdvancedScrollerAuto, {
     className: n()(C.allPerksScroller, {
       [C.open]: i,
-      [C.openCloseReduceMotion]: y
+      [C.openCloseReduceMotion]: G
     }),
     ref: L,
     children: (0, a.jsx)("div", {
@@ -78,7 +78,7 @@ t.default = e => {
               variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW,
               shopMarketingVariation: j,
               tileOrderVariant: v,
-              isPremiumSubscriber: B,
+              isPremiumSubscriber: y,
               isFullScreen: h
             }),
             cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_FIRST_ROW
@@ -94,7 +94,7 @@ t.default = e => {
               variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW,
               shopMarketingVariation: j,
               tileOrderVariant: v,
-              isPremiumSubscriber: B,
+              isPremiumSubscriber: y,
               isFullScreen: h
             }),
             cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_SECOND_ROW
@@ -110,7 +110,7 @@ t.default = e => {
               variant: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW,
               shopMarketingVariation: j,
               tileOrderVariant: v,
-              isPremiumSubscriber: B,
+              isPremiumSubscriber: y,
               isFullScreen: h
             }),
             cardType: A.PerksDiscoverabilityCardSection.CARD_CAROUSEL_THIRD_ROW

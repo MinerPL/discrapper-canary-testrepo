@@ -1,40 +1,41 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return c
   },
   useSelectedDismissibleContent: function() {
-    return d
+    return _
   }
 }), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  s = n("399606"),
-  a = n("237997"),
+  a = n("399606"),
+  s = n("237997"),
   o = n("261376"),
-  l = n("706140"),
-  u = n("921944");
+  l = n("68985"),
+  u = n("706140"),
+  d = n("921944");
 
-function d(e, t) {
+function _(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-    i = (0, s.useStateFromStores)([a.default], () => !!__OVERLAY__ && a.default.isInstanceUILocked()),
-    [d, _] = (0, l.useGetDismissibleContent)(e, t, i),
-    c = !n && null != d && !o.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(d);
+    i = (0, a.useStateFromStores)([s.default], () => !!__OVERLAY__ && s.default.isInstanceUILocked()),
+    [_, c] = (0, u.useGetDismissibleContent)(e, t, i),
+    E = !n && null != _ && !o.CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(_);
   return r.useEffect(() => () => {
-    c && _(u.ContentDismissActionType.AUTO_DISMISS)
-  }, [c, _]), [d, _]
+    E && l.default.lastDCDismissed !== _ && c(d.ContentDismissActionType.AUTO_DISMISS, !0)
+  }, [E, c, _]), [_, c]
 }
 
-function _(e) {
+function c(e) {
   let {
     contentTypes: t,
     children: n,
     groupName: r,
-    bypassAutoDismiss: s
-  } = e, [a, o] = d(t, r, s);
+    bypassAutoDismiss: a
+  } = e, [s, o] = _(t, r, a);
   return (0, i.jsx)(i.Fragment, {
     children: n({
-      visibleContent: a,
+      visibleContent: s,
       markAsDismissed: o
     })
   })

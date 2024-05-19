@@ -34,12 +34,12 @@ n.r(t), n.d(t, {
 var o = n("470079"),
   _ = n("462382"),
   u = n("189722"),
-  r = n("721355"),
-  a = n("999923"),
-  E = n("729917"),
+  a = n("721355"),
+  E = n("999923"),
+  r = n("729917"),
   i = n("932019"),
-  s = n("442837"),
-  A = n("592125"),
+  A = n("442837"),
+  s = n("592125"),
   d = n("496675"),
   T = n("313889"),
   l = n("177862"),
@@ -61,16 +61,16 @@ function c(e) {
 }
 
 function M(e, t) {
-  var n, o, _, u, r;
-  let [a] = null !== (n = e.embeds) && void 0 !== n ? n : [];
-  if (null != a) {
-    if (a.type === N.MessageEmbedTypes.AUTO_MODERATION_MESSAGE) return null == a ? void 0 : null === (_ = a.fields) || void 0 === _ ? void 0 : null === (o = _.find(e => {
+  var n, o, _, u, a;
+  let [E] = null !== (n = e.embeds) && void 0 !== n ? n : [];
+  if (null != E) {
+    if (E.type === N.MessageEmbedTypes.AUTO_MODERATION_MESSAGE) return null == E ? void 0 : null === (_ = E.fields) || void 0 === _ ? void 0 : null === (o = _.find(e => {
       let {
         rawName: n
       } = e;
       return n === t
     })) || void 0 === o ? void 0 : o.rawValue;
-    if (a.type === N.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION) return null == a ? void 0 : null === (r = a.fields) || void 0 === r ? void 0 : null === (u = r.find(e => {
+    if (E.type === N.MessageEmbedTypes.AUTO_MODERATION_NOTIFICATION) return null == E ? void 0 : null === (a = E.fields) || void 0 === a ? void 0 : null === (u = a.find(e => {
       let {
         rawName: n
       } = e;
@@ -81,8 +81,9 @@ function M(e, t) {
 
 function R(e, t) {
   var n, o;
-  let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.NOOP_NULL,
-    i = function(e) {
+  let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : N.NOOP_NULL,
+    i = arguments.length > 3 ? arguments[3] : void 0,
+    A = function(e) {
       let t = M(e, u.AutomodMessageEmbedKeys.BLOCK_PROFILE_UPDATE_TYPE);
       if (null != t) return t
     }(e),
@@ -90,17 +91,19 @@ function R(e, t) {
       let t = M(e, u.AutomodMessageEmbedKeys.QUARANTINE_USER_ACTION);
       if (null != t) return t
     }(e),
-    A = function(e) {
+    T = function(e) {
       let t = M(e, u.AutomodMessageEmbedKeys.QUARANTINE_EVENT);
       if (null != t) return t
-    }(e);
-  if (null != function(e) {
+    }(e),
+    l = function(e) {
       let t = M(e, u.AutomodMessageEmbedKeys.QUARANTINE_USER);
       if (null != t) return t
-    }(e)) {
+    }(e),
+    I = M(e, u.AutomodMessageEmbedKeys.APPLICATION_NAME);
+  if (null != l) {
     let e = function(e, t, n) {
       switch (t) {
-        case E.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE:
+        case r.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_PROFILE_UPDATE:
           return function(e) {
             switch (e) {
               case _.AutomodBlockProfileUpdateMessageEmbedKeys.NICKNAME_UPDATE:
@@ -111,46 +114,56 @@ function R(e, t) {
                 return
             }
           }(e);
-        case E.AutomodQuarantineUserActionMessageEmbedKeys.QUARANTINE_USER:
+        case r.AutomodQuarantineUserActionMessageEmbedKeys.QUARANTINE_USER:
           return function(e) {
             switch (e) {
-              case a.AutomodQuarantineEventMessageEmbedKeys.MESSAGE_SEND:
+              case E.AutomodQuarantineEventMessageEmbedKeys.MESSAGE_SEND:
                 return O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_QUARANTINE_USER_MESSAGE_SEND;
-              case a.AutomodQuarantineEventMessageEmbedKeys.GUILD_JOIN:
+              case E.AutomodQuarantineEventMessageEmbedKeys.GUILD_JOIN:
                 return O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_QUARANTINE_USER_ON_GUILD_JOIN;
-              case a.AutomodQuarantineEventMessageEmbedKeys.USERNAME_UPDATE:
+              case E.AutomodQuarantineEventMessageEmbedKeys.USERNAME_UPDATE:
                 return O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_QUARANTINE_USERNAME_UPDATE;
-              case a.AutomodQuarantineEventMessageEmbedKeys.CLAN_TAG_UPDATE:
+              case E.AutomodQuarantineEventMessageEmbedKeys.CLAN_TAG_UPDATE:
                 return O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_QUARANTINE_CLAN_TAG_UPDATE;
               default:
                 return
             }
           }(n);
-        case E.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_GUEST_JOIN:
+        case r.AutomodQuarantineUserActionMessageEmbedKeys.BLOCK_GUEST_JOIN:
           return function() {
             return O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_BLOCK_GUEST_ON_GUILD_JOIN
           }()
       }
-    }(i, s, A);
+    }(A, s, T);
     if (null != e) return e
   }
-  let T = M(e, u.AutomodMessageEmbedKeys.FLAGGED_MESSAGE_ID),
-    l = d.default.can(N.Permissions.VIEW_CHANNEL, t);
-  let I = (n = t, l ? null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : O.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER : O.default.Messages.NO_ACCESS),
-    c = null != t && l ? r : N.NOOP_NULL,
-    R = function(e, t, n) {
+  let c = M(e, u.AutomodMessageEmbedKeys.FLAGGED_MESSAGE_ID),
+    R = d.default.can(N.Permissions.VIEW_CHANNEL, t);
+  let D = (n = t, R ? null !== (o = null == n ? void 0 : n.name) && void 0 !== o ? o : O.default.Messages.UNKNOWN_CHANNEL_PLACEHOLDER : O.default.Messages.NO_ACCESS),
+    m = null != t && R ? a : N.NOOP_NULL,
+    S = function(e, t, n) {
       let o = M(e, u.AutomodMessageEmbedKeys.VOICE_CHANNEL_STATUS_OUTCOME);
       return null == o ? null : ("blocked" === o ? O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_BLOCKED_VOICE_CHANNEL_STATUS_HOOK : O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_VOICE_CHANNEL_STATUS_HOOK).format({
         channelName: t,
         channelHook: n
       })
-    }(e, I, r);
-  return null != R ? R : null != T ? O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_HOOK.format({
-    channelName: I,
-    channelHook: c
+    }(e, D, a);
+  return null != S ? S : null != I ? null != c ? O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_APP_FLAGGED_HOOK.format({
+    applicationName: I,
+    channelName: D,
+    channelHook: m,
+    userHook: i
+  }) : O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_APP_BLOCKED_HOOK.format({
+    applicationName: I,
+    channelName: D,
+    channelHook: m,
+    userHook: i
+  }) : null != c ? O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_FLAGGED_HOOK.format({
+    channelName: D,
+    channelHook: m
   }) : O.default.Messages.GUILD_AUTOMOD_POST_TO_CHANNEL_HEADER_ACTION_BLOCKED_HOOK.format({
-    channelName: I,
-    channelHook: c
+    channelName: D,
+    channelHook: m
   })
 }
 
@@ -171,23 +184,23 @@ function D(e) {
 
 function m(e) {
   var t, n;
-  let o = M(e, r.AutomodNotificationEmbedKeys.NOTIFICATION_TYPE),
-    _ = M(e, r.AutomodNotificationEmbedKeys.JOIN_ATTEMPTS),
-    u = M(e, r.AutomodNotificationEmbedKeys.RAID_DATETIME),
-    a = M(e, r.AutomodNotificationEmbedKeys.DMS_SENT),
-    E = M(e, r.AutomodNotificationEmbedKeys.RAID_TYPE),
-    i = M(e, r.AutomodNotificationEmbedKeys.RESOLVED_REASON),
-    s = M(e, r.AutomodNotificationEmbedKeys.DECISION_ID),
-    A = M(e, r.AutomodNotificationEmbedKeys.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
+  let o = M(e, a.AutomodNotificationEmbedKeys.NOTIFICATION_TYPE),
+    _ = M(e, a.AutomodNotificationEmbedKeys.JOIN_ATTEMPTS),
+    u = M(e, a.AutomodNotificationEmbedKeys.RAID_DATETIME),
+    E = M(e, a.AutomodNotificationEmbedKeys.DMS_SENT),
+    r = M(e, a.AutomodNotificationEmbedKeys.RAID_TYPE),
+    i = M(e, a.AutomodNotificationEmbedKeys.RESOLVED_REASON),
+    A = M(e, a.AutomodNotificationEmbedKeys.DECISION_ID),
+    s = M(e, a.AutomodNotificationEmbedKeys.SUSPICIOUS_MENTION_ACTIVITY_UNTIL);
   return {
     notificationType: null !== (t = null == (n = o) ? null : n) && void 0 !== t ? t : void 0,
     joinAttempts: null != _ ? parseInt(_) : void 0,
     raidDatetime: null != u ? new Date(u) : void 0,
-    dmsSent: null != a ? parseInt(a) : void 0,
-    raidType: null != E ? E : void 0,
+    dmsSent: null != E ? parseInt(E) : void 0,
+    raidType: null != r ? r : void 0,
     resolvedReason: null != i ? i : void 0,
-    decisionId: null != s ? s : void 0,
-    suspiciousMentionActivityUntil: null != A ? new Date(A) : void 0
+    decisionId: null != A ? A : void 0,
+    suspiciousMentionActivityUntil: null != s ? new Date(s) : void 0
   }
 }
 
@@ -210,7 +223,8 @@ function S(e) {
     quarantineType: M(e, u.AutomodMessageEmbedKeys.QUARANTINE_USER),
     quarantineAction: M(e, u.AutomodMessageEmbedKeys.QUARANTINE_USER_ACTION),
     decisionReason: M(e, u.AutomodMessageEmbedKeys.DECISION_REASON),
-    embedChannel: A.default.getChannel(t),
+    applicationName: M(e, u.AutomodMessageEmbedKeys.APPLICATION_NAME),
+    embedChannel: s.default.getChannel(t),
     embedChannelId: t,
     alertActionsExecution: null != o ? o : void 0
   }
@@ -218,7 +232,7 @@ function S(e) {
 
 function f(e) {
   let t = o.useMemo(() => S(e), [e]),
-    n = (0, s.useStateFromStores)([A.default], () => A.default.getChannel(t.embedChannelId), [t.embedChannelId]);
+    n = (0, A.useStateFromStores)([s.default], () => s.default.getChannel(t.embedChannelId), [t.embedChannelId]);
   return {
     ...t,
     embedChannel: n
@@ -248,6 +262,6 @@ function U(e) {
 }
 
 function C(e) {
-  return M(e, r.AutomodNotificationEmbedKeys.ACTION_BY_USER_ID)
+  return M(e, a.AutomodNotificationEmbedKeys.ACTION_BY_USER_ID)
 }
 let y = void 0

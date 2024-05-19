@@ -16,9 +16,9 @@ var a = s("735250"),
   S = s("669079"),
   E = s("981631"),
   T = s("689938"),
-  f = s("70327");
+  f = s("314664");
 
-function m(e, t, s) {
+function _(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
     value: s,
     enumerable: !0,
@@ -26,7 +26,7 @@ function m(e, t, s) {
     writable: !0
   }) : e[t] = s, e
 }
-class _ extends n.Component {
+class m extends n.Component {
   get analyticsLocation() {
     let {
       analyticsContext: {
@@ -80,17 +80,17 @@ class _ extends n.Component {
     })
   }
   constructor(...e) {
-    super(...e), m(this, "state", {
+    super(...e), _(this, "state", {
       codeInput: "",
       submitting: !1,
       hasError: !1,
       isPromoCode: !1
-    }), m(this, "handleChange", e => {
+    }), _(this, "handleChange", e => {
       this.setState({
         codeInput: e,
         hasError: !1
       })
-    }), m(this, "handleSubmit", async e => {
+    }), _(this, "handleSubmit", async e => {
       e.preventDefault();
       let {
         codeInput: t
@@ -138,7 +138,7 @@ class _ extends n.Component {
 function g() {
   let e = n.useContext(c.AnalyticsContext),
     t = (0, l.useStateFromStores)([d.default], () => d.default.enabled);
-  return (0, a.jsx)(_, {
+  return (0, a.jsx)(m, {
     analyticsContext: e,
     obscureInput: t
   })

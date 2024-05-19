@@ -1,12 +1,12 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return T
   }
 }), n("47120");
 var a = n("735250"),
   s = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
   r = n("481060"),
   o = n("570140"),
@@ -20,10 +20,10 @@ var a = n("735250"),
   C = n("665307"),
   m = n("530151"),
   S = n("981631"),
-  I = n("186901"),
-  p = n("872592");
+  p = n("186901"),
+  g = n("47789");
 
-function T(e, t, n) {
+function I(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -31,9 +31,9 @@ function T(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class g extends s.PureComponent {
+class T extends s.PureComponent {
   componentDidMount() {
-    u.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(I.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
+    u.setHomeLink(S.Routes.APPLICATION_LIBRARY), (0, E.deepLinkRouteIfLanded)(p.RPCDeepLinks.LIBRARY), o.default.wait(() => (0, d.fetchBranches)()), (0, c.fetchActivityStatistics)(), null != this._scrollToOnMount && null != this._scrollerRef.current && this.scrollToRow(this._scrollToOnMount, this._scrollToPadding)
   }
   renderToolbar() {
     return (0, a.jsx)(h.default, {})
@@ -54,7 +54,7 @@ class g extends s.PureComponent {
         currentRoute: S.Routes.APPLICATION_LIBRARY,
         renderToolbar: this.renderToolbar
       }), e ? null : t, (0, a.jsxs)(r.AdvancedScrollerAuto, {
-        className: i()(p.container, p.scroller),
+        className: i()(g.container, g.scroller),
         ref: this._scrollerRef,
         children: [e ? t : null, (0, a.jsx)(f.default, {
           section: S.AnalyticsSections.LIBRARY_APPLICATION_LIST,
@@ -67,13 +67,13 @@ class g extends s.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), T(this, "_scrollerRef", s.createRef()), T(this, "_scrollToOnMount", void 0), T(this, "_scrollToPadding", 0), T(this, "state", {
+    super(...e), I(this, "_scrollerRef", s.createRef()), I(this, "_scrollToOnMount", void 0), I(this, "_scrollToPadding", 0), I(this, "state", {
       includeUpdatesInScroller: !1
-    }), T(this, "handleHeightTallerThanHalfViewportChange", e => {
+    }), I(this, "handleHeightTallerThanHalfViewportChange", e => {
       this.setState({
         includeUpdatesInScroller: e
       })
-    }), T(this, "scrollToRow", (e, t) => {
+    }), I(this, "scrollToRow", (e, t) => {
       let n = this._scrollerRef.current;
       null != n ? (e.focus(), n.scrollIntoViewRect({
         start: t,

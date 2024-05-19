@@ -1,2 +1,10 @@
 "use strict";
-e.exports = t.p + "5158a52a43d560ae4550.png"
+n.r(t), n.d(t, {
+  default: function() {
+    return r
+  }
+});
+var r = {};
+r = {
+  Empty: `Pr\xe1zdn\xe9`
+}

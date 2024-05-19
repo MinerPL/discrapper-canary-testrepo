@@ -5,7 +5,7 @@ n("470079");
 var r = n("120356"),
   a = n.n(r),
   s = n("242411"),
-  o = n("952794");
+  o = n("12517");
 t.default = function(e) {
   let {
     glowOpacity: t,

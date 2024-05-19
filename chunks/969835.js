@@ -18,15 +18,15 @@ var i = n("735250"),
   I = n("785717"),
   T = n("318661"),
   f = n("502762"),
-  S = n("301984"),
-  h = n("94918"),
-  A = n("664794"),
-  m = n("980768"),
+  S = n("544989"),
+  h = n("301984"),
+  A = n("94918"),
+  m = n("664794"),
   N = n("171368"),
   p = n("958120"),
   O = n("215633"),
-  R = n("23293"),
-  C = n("228168"),
+  C = n("23293"),
+  R = n("228168"),
   g = n("689938");
 
 function L(e) {
@@ -53,7 +53,7 @@ function v(e) {
     channelId: v,
     messageId: D,
     roleId: M
-  }), B = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), k = (0, a.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, a.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
+  }), k = (0, a.useStateFromStores)([E.default], () => E.default.getCurrentUser()), B = (0, a.useStateFromStores)([c.default], () => null != n ? c.default.getGuild(n) : null), V = (0, a.useStateFromStores)([_.default], () => null != n ? _.default.getMember(n, t.id) : null), x = r.useRef(null), F = (0, T.default)(t.id, n), H = (0, o.default)(x);
   r.useEffect(() => {
     null == P || P(null == x ? void 0 : x.current)
   }, [x, P]);
@@ -65,10 +65,10 @@ function v(e) {
       channelId: v,
       messageId: D,
       roleId: M,
-      autoFocusNote: e
+      ...e
     })
   };
-  return null == B ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
+  return null == k ? null : (0, i.jsx)(u.AnalyticsLocationProvider, {
     value: G,
     children: (0, i.jsx)(I.UserProfileAnalyticsProvider, {
       layout: "BITE_SIZE_POPOUT",
@@ -78,27 +78,27 @@ function v(e) {
       messageId: D,
       roleId: M,
       shouldTrackViewOnMount: null == V || null != V.fullProfileLoadedTimestamp,
-      children: (0, i.jsx)(s.Dialog, {
+      children: (0, i.jsxs)(s.Dialog, {
         ref: x,
         "aria-label": t.username,
         onClick: L,
         onContextMenu: L,
-        children: (0, i.jsxs)(f.default, {
+        children: [(0, i.jsxs)(f.default, {
           user: t,
           displayProfile: F,
-          profileType: C.UserProfileTypes.BITE_SIZE,
-          children: [(0, i.jsxs)(m.default, {
-            profileType: C.UserProfileTypes.BITE_SIZE,
-            isFaded: (null == F ? void 0 : F.profileEffectId) != null && !H,
-            children: [(0, i.jsx)(h.default, {
+          profileType: R.UserProfileTypes.BITE_SIZE,
+          children: [(0, i.jsxs)(S.default, {
+            profileType: R.UserProfileTypes.BITE_SIZE,
+            children: [(0, i.jsx)(A.default, {
               user: t,
               guildId: n,
               channelId: v,
               onClose: y
-            }), (0, i.jsx)(S.default, {
+            }), (0, i.jsx)(h.default, {
               user: t
-            }), (0, i.jsx)(A.default, {
+            }), (0, i.jsx)(m.default, {
               user: t,
+              profileType: R.UserProfileTypes.BITE_SIZE,
               guildId: n,
               viewProfileItem: (0, i.jsx)(s.MenuItem, {
                 id: "view-profile",
@@ -111,18 +111,17 @@ function v(e) {
                 }
               })
             })]
-          }), (0, i.jsx)(R.default, {
+          }), (0, i.jsx)(C.default, {
             user: t,
             displayProfile: F,
             guildId: n,
             channelId: v,
-            onClose: y,
-            disableUserProfileLink: U
+            onOpenProfile: U ? void 0 : Y
           }), (0, i.jsx)(p.default, {
             user: t,
-            currentUser: B,
+            currentUser: k,
             displayProfile: F,
-            guild: k,
+            guild: B,
             isHovering: H,
             onOpenProfile: Y,
             channelId: v,
@@ -132,11 +131,11 @@ function v(e) {
             guildId: n,
             channelId: v,
             onClose: y
-          }), (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(d.default, {
-            profileEffectId: null == F ? void 0 : F.profileEffectId,
-            isHovering: H
           })]
-        })
+        }), (null == F ? void 0 : F.profileEffectId) != null && (0, i.jsx)(d.default, {
+          profileEffectId: null == F ? void 0 : F.profileEffectId,
+          isHovering: H
+        })]
       })
     })
   })

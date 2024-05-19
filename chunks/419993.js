@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   TextArea: function() {
-    return O
+    return p
   }
 }), n("653041");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("153832"),
   u = n("84735"),
   d = n("15127"),
@@ -15,9 +15,9 @@ var i, r = n("735250"),
   c = n("993365"),
   E = n("179240"),
   I = n("689938"),
-  T = n("989255"),
-  f = n("717897"),
-  S = n("633353");
+  T = n("709944"),
+  f = n("12349"),
+  S = n("842648");
 
 function h(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function h(e, t, n) {
 let A = (0, l.v4)(),
   m = (0, l.v4)(),
   N = (0, l.v4)();
-class O extends(i = s.Component) {
+class p extends(i = a.Component) {
   getPaddingRight() {
     let {
       maxLength: e,
@@ -116,34 +116,34 @@ class O extends(i = s.Component) {
     let {
       disabled: n,
       value: i,
-      placeholder: s,
-      autoFocus: a,
+      placeholder: a,
+      autoFocus: s,
       minLength: l,
       maxLength: d,
       allowOverflow: c,
       spellCheck: h,
       resizeable: A,
-      className: O,
-      id: p,
-      rows: R,
-      flex: C,
+      className: p,
+      id: O,
+      rows: C,
+      flex: R,
       autosize: g,
       required: L,
-      onInvalid: D,
-      inputRef: v
+      onInvalid: v,
+      inputRef: D
     } = this.props, M = g ? E.TextAreaAutosize : "textarea", y = this.hasError(), P = null !== (t = this.props["aria-labelledby"]) && void 0 !== t ? t : null === (e = this.context) || void 0 === e ? void 0 : e.titleId, U = this.getAriaDescribedBy();
     return (0, r.jsxs)("div", {
       className: o()(f.inputWrapper, {
-        [T.flex]: C
+        [T.flex]: R
       }),
       children: [(0, r.jsxs)("div", {
         className: o()(T.inputMaxLength, {
-          [T.flex]: C
+          [T.flex]: R
         }),
         children: [(0, r.jsx)(u.FocusRing, {
           children: (0, r.jsx)(M, {
             type: "text",
-            className: o()(f.inputDefault, T.textArea, S.scrollbarDefault, O, {
+            className: o()(f.inputDefault, T.textArea, S.scrollbarDefault, p, {
               [f.error]: y,
               [f.disabled]: n,
               [T.resizeable]: A
@@ -154,11 +154,11 @@ class O extends(i = s.Component) {
             style: {
               paddingRight: this.getPaddingRight()
             },
-            id: p,
+            id: O,
             disabled: n,
-            placeholder: s,
+            placeholder: a,
             value: i,
-            autoFocus: a,
+            autoFocus: s,
             minLength: l,
             maxLength: c ? void 0 : d,
             spellCheck: h,
@@ -167,9 +167,9 @@ class O extends(i = s.Component) {
             onBlur: this.onBlur,
             onFocus: this.onFocus,
             onKeyDown: this.onKeyDown,
-            onInvalid: D,
-            rows: R,
-            ref: v
+            onInvalid: v,
+            rows: C,
+            ref: D
           })
         }), null != l && (0, r.jsx)(_.HiddenVisually, {
           id: m,
@@ -193,8 +193,8 @@ class O extends(i = s.Component) {
         maxLength: t,
         minLength: n,
         error: i
-      } = this.props, r = [], s = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
-      return null != s && r.push(s), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
+      } = this.props, r = [], a = null === (e = this.context) || void 0 === e ? void 0 : e.errorId;
+      return null != a && r.push(a), null != i ? r.push(A) : (null != t && r.push(N), null != n && r.push(m)), r.length > 0 ? r.join(" ") : void 0
     }), h(this, "onChange", e => {
       let {
         onChange: t,
@@ -225,7 +225,7 @@ class O extends(i = s.Component) {
     }
   }
 }
-h(O, "contextType", d.FormContext), h(O, "defaultProps", {
+h(p, "contextType", d.FormContext), h(p, "defaultProps", {
   name: "",
   disabled: !1,
   placeholder: "",

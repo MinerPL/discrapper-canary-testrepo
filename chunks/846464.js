@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   PremiumPaymentSKUSelectStep: function() {
-    return h
+    return j
   }
 });
 var n = s("735250");
@@ -16,15 +16,15 @@ var i = s("120356"),
   d = s("973007"),
   c = s("74538"),
   p = s("987209"),
-  f = s("563132"),
+  f = s("598"),
   x = s("409813"),
   _ = s("614223"),
   m = s("48175"),
   L = s("474936"),
-  E = s("689938"),
-  S = s("534586");
+  h = s("689938"),
+  S = s("385231");
 
-function h(e) {
+function j(e) {
   let {
     handleStepChange: t,
     handleClose: s,
@@ -34,13 +34,13 @@ function h(e) {
     activeSubscription: l,
     startedPaymentFlowWithPaymentSourcesRef: u,
     setSelectedPlanId: d,
-    priceOptions: E
+    priceOptions: h
   } = (0, f.usePaymentContext)(), {
     isGift: S
-  } = (0, p.useGiftContext)(), h = (0, C.usePremiumTrialOffer)(i);
-  (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == h);
+  } = (0, p.useGiftContext)(), j = (0, C.usePremiumTrialOffer)(i);
+  (0, o.useAnnualDiscountExperiment)("PremiumPaymentSKUSelectStep", null == j);
   let P = (0, a.useIsInPremiumOfferExperience)();
-  return (0, n.jsx)(j, {
+  return (0, n.jsx)(E, {
     selectSku: e => (function(e) {
       let {
         activeSubscription: t,
@@ -78,18 +78,18 @@ function h(e) {
       setSelectedSkuId: r,
       handleStepChange: t,
       isGift: S,
-      userTrialOffer: h,
+      userTrialOffer: j,
       startedPaymentFlowWithPaymentSources: u.current,
       setSelectedPlanId: d
     }),
     onClose: s,
     isGift: S,
     inOfferExperience: P,
-    priceOptions: E
+    priceOptions: h
   })
 }
 
-function j(e) {
+function E(e) {
   let {
     selectSku: t,
     onClose: s,
@@ -103,7 +103,7 @@ function j(e) {
       separator: !1,
       children: [(0, n.jsx)(l.FormTitle, {
         tag: l.FormTitleTags.H4,
-        children: E.default.Messages.BILLING_STEP_SELECT_PLAN
+        children: h.default.Messages.BILLING_STEP_SELECT_PLAN
       }), (0, n.jsx)(l.ModalCloseButton, {
         onClick: s
       })]

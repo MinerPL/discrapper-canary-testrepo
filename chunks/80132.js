@@ -21,7 +21,7 @@ var r = n("120356"),
   f = n("228168"),
   S = n("981631"),
   h = n("689938"),
-  A = n("599194");
+  A = n("477040");
 
 function m(e) {
   let {
@@ -41,7 +41,7 @@ function m(e) {
     role: "group",
     children: t.map(e => (0, i.jsx)(s.TooltipContainer, {
       text: e.description,
-      color: s.TooltipColors.NESTED,
+      delay: f.USER_PROFILE_TOOLTIP_DELAY,
       children: (0, i.jsx)(s.Anchor, {
         onClick: t => {
           p({

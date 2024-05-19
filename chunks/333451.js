@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var l = n("735250"),
   a = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   u = n("442837"),
   r = n("780384"),
@@ -30,7 +30,7 @@ var l = n("735250"),
   L = n("981631"),
   C = n("474936"),
   U = n("689938"),
-  h = n("785193");
+  h = n("17726");
 
 function g(e) {
   let {
@@ -82,7 +82,7 @@ function O(e) {
     sourceAnalyticsLocations: N
   } = (0, d.default)(c.default.GUILD_BOOSTING_PREMIUM_UPSELL), {
     theme: O
-  } = (0, o.useThemeContext)(), b = (0, r.isThemeLight)(O) ? o.Button.Colors.PRIMARY : o.Button.Colors.WHITE, D = null == n || null == n.premiumSubscriptionType, x = y.default.getPrice(C.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, !1, T), B = (0, R.formatPrice)(x.amount, x.currency), k = (0, p.usePremiumTrialOffer)(), v = null == k ? void 0 : k.trial_id, G = (null == k ? void 0 : null === (t = k.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_2;
+  } = (0, o.useThemeContext)(), b = (0, r.isThemeLight)(O) ? o.Button.Colors.PRIMARY : o.Button.Colors.WHITE, D = null == n || null == n.premiumSubscriptionType, x = y.default.getPrice(C.SubscriptionPlans.PREMIUM_MONTH_TIER_2, !1, !1, T), B = (0, R.formatPrice)(x.amount, x.currency), G = (0, p.usePremiumTrialOffer)(), k = null == G ? void 0 : G.trial_id, v = (null == G ? void 0 : null === (t = G.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === C.PremiumSubscriptionSKUs.TIER_2;
   return a.useEffect(() => {
     A.default.track(L.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
       type: C.PremiumUpsellTypes.GUILD_PREMIUM_UPSELL_MODAL,
@@ -94,15 +94,15 @@ function O(e) {
       children: [(0, l.jsx)(o.ModalCloseButton, {
         onClick: s,
         className: h.closeButton
-      }), G && (0, l.jsx)(E.PremiumTrialGradientBadge, {
+      }), v && (0, l.jsx)(E.PremiumTrialGradientBadge, {
         className: h.premiumTrialBadge
       }), (0, l.jsx)("div", {
         className: i()(h.upsellImage, {
-          [h.upsellImageWithTrialOffer]: G
+          [h.upsellImageWithTrialOffer]: v
         })
       }), (0, l.jsx)("div", {
         className: h.bodyText,
-        children: null != v ? U.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT : U.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({
+        children: null != k ? U.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT_TRIAL_VARIANT : U.default.Messages.PREMIUM_UPSELL_FEATURE_PRETEXT.format({
           monthlyPrice: B
         })
       }), (0, l.jsx)(g, {
@@ -132,10 +132,10 @@ function O(e) {
               },
               analyticsSourceLocation: I,
               onSubscriptionConfirmation: P,
-              trialId: v
+              trialId: k
             })
           },
-          children: null != v ? U.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : U.default.Messages.PREMIUM_UPSELL_UPGRADE
+          children: null != k ? U.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : U.default.Messages.PREMIUM_UPSELL_UPGRADE
         })]
       }), (0, l.jsx)("div", {
         className: h.backStep,

@@ -34,7 +34,7 @@ function o() {
 }
 
 function l(e) {
-  e ? i.Storage.set("zstd_fast_connect", "true") : i.Storage.remove("zstd_fast_connect")
+  e ? i.Storage.set("zstd_fast_connect", "true") : i.Storage.set("zstd_fast_connect", "false")
 }
 
 function u() {

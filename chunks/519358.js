@@ -15,9 +15,9 @@ var l = n("735250"),
   c = n("31445"),
   f = n("22082"),
   h = n("703656"),
-  p = n("306680"),
-  m = n("648414"),
-  C = n("26290"),
+  m = n("306680"),
+  C = n("648414"),
+  p = n("26290"),
   g = n("709054"),
   E = n("540126"),
   _ = n("434479"),
@@ -25,15 +25,15 @@ var l = n("735250"),
   I = n("176505"),
   N = n("490897"),
   T = n("689938"),
-  A = n("91534");
+  A = n("658609");
 
 function L(e) {
   let {
     guild: t,
     selected: L
-  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), M = (0, s.useStateFromStores)([p.default], () => p.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), O = R.length > E.MAX_NEW_CHANNELS_TO_SHOW, y = (0, s.useStateFromStores)([d.default, p.default], () => {
+  } = e, v = (0, c.default)(t), x = (0, u.useIsDismissibleContentDismissed)(i.DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX), R = (0, s.useStateFromStoresArray)([f.default], () => Array.from(f.default.getNewChannelIds(t.id)).filter(e => f.default.shouldIndicateNewChannel(t.id, e))), M = (0, s.useStateFromStores)([m.default], () => m.default.hasUnread(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION)), y = R.length > E.MAX_NEW_CHANNELS_TO_SHOW, O = (0, s.useStateFromStores)([d.default, m.default], () => {
     let e = d.default.lastFetchedAt(t.id),
-      n = p.default.lastMessageId(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
+      n = m.default.lastMessageId(t.id, N.ReadStateTypes.GUILD_ONBOARDING_QUESTION);
     if (null == n) return !1;
     let l = g.default.extractTimestamp(n);
     return null != e && e > l
@@ -50,13 +50,13 @@ function L(e) {
       })
     })
   }, [t]), j = null;
-  return (!x || M || O) && !L && !y && (j = (0, l.jsx)(C.TextBadge, {
+  return (!x || M || y) && !L && !O && (j = (0, l.jsx)(p.TextBadge, {
     color: r.default.unsafe_rawColors.BRAND_260.css,
     text: T.default.Messages.NEW,
     className: A.newChannel
   })), (0, l.jsx)(_.BasicChannelRow, {
     id: "channels-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(m.default, {
+    renderIcon: e => (0, l.jsx)(C.default, {
       className: e
     }),
     text: v ? T.default.Messages.CHANNELS_AND_ROLES : T.default.Messages.CHANNEL_BROWSER_TITLE,

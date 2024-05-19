@@ -1,40 +1,40 @@
 "use strict";
 n.r(t), n.d(t, {
   showReportModalForDiscoverableGuild: function() {
-    return c
-  },
-  showReportModalForFirstDM: function() {
-    return S
-  },
-  showReportModalForGuildDirectoryEntry: function() {
     return E
   },
-  showReportModalForGuildScheduledEvent: function() {
-    return f
-  },
-  showReportModalForInappropriateConversationSafetyAlert: function() {
-    return O
-  },
-  showReportModalForMessage: function() {
-    return I
-  },
-  showReportModalForStageChannel: function() {
-    return T
-  },
-  showReportModalForUser: function() {
-    return A
-  },
-  showUnauthenticatedReportModalForMessage: function() {
-    return N
-  },
-  showUnauthenticatedReportModalForUser: function() {
-    return m
-  },
-  submitHamReportForFirstDM: function() {
+  showReportModalForFirstDM: function() {
     return h
   },
-  submitReportForInappropriateConversationSafetyAlert: function() {
+  showReportModalForGuildDirectoryEntry: function() {
+    return I
+  },
+  showReportModalForGuildScheduledEvent: function() {
+    return S
+  },
+  showReportModalForInappropriateConversationSafetyAlert: function() {
+    return C
+  },
+  showReportModalForMessage: function() {
+    return T
+  },
+  showReportModalForStageChannel: function() {
+    return f
+  },
+  showReportModalForUser: function() {
+    return m
+  },
+  showUnauthenticatedReportModalForMessage: function() {
     return p
+  },
+  showUnauthenticatedReportModalForUser: function() {
+    return N
+  },
+  submitHamReportForFirstDM: function() {
+    return A
+  },
+  submitReportForInappropriateConversationSafetyAlert: function() {
+    return O
   }
 });
 var i = n("367907"),
@@ -42,81 +42,84 @@ var i = n("367907"),
   a = n("23750"),
   s = n("598077"),
   o = n("91156"),
-  l = n("82554"),
-  u = n("185625"),
-  d = n("443599"),
-  _ = n("981631");
-
-function c(e, t) {
-  R(l.ReportNames.GUILD_DISCOVERY, {
-    guild_id: e.id
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.GUILD_DISCOVERY,
-    record: e
-  }, {}, t)
-}
+  l = n("545197"),
+  u = n("82554"),
+  d = n("185625"),
+  _ = n("443599"),
+  c = n("981631");
 
 function E(e, t) {
-  R(l.ReportNames.GUILD_DIRECTORY_ENTRY, {
-    channel_id: e.channelId,
-    guild_id: e.guildId
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.GUILD_DIRECTORY_ENTRY,
+  R(u.ReportNames.GUILD_DISCOVERY, {
+    guild_id: e.id
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.GUILD_DISCOVERY,
     record: e
   }, {}, t)
 }
 
-function I(e, t, n) {
-  R(l.ReportNames.MESSAGE, {
+function I(e, t) {
+  R(u.ReportNames.GUILD_DIRECTORY_ENTRY, {
+    channel_id: e.channelId,
+    guild_id: e.guildId
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.GUILD_DIRECTORY_ENTRY,
+    record: e
+  }, {}, t)
+}
+
+function T(e, t, n) {
+  let i;
+  R(u.ReportNames.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id
   });
-  let i = (0, o.isIarMessageDislikeEnabled)(t);
-  (0, d.showReportModal)({
-    name: l.ReportNames.MESSAGE,
+  let r = (0, o.isIarMessageDislikeEnabled)(t),
+    a = (0, l.isIarSpamReorderExperimentEnabled)(t);
+  a && r ? i = "6a_spam_reorder_with_dislikes_experiment" : a ? i = "6b_spam_reorder_experiment" : r && (i = "5_dislike_experiment"), (0, _.showReportModal)({
+    name: u.ReportNames.MESSAGE,
     record: e
   }, {
-    variant: i ? "5_dislike_experiment" : void 0
+    variant: i
   }, n)
 }
 
-function T(e, t) {
+function f(e, t) {
   let n = r.default.getStageInstanceByChannel(e.id);
-  null != n && (R(l.ReportNames.STAGE_CHANNEL, {
+  null != n && (R(u.ReportNames.STAGE_CHANNEL, {
     stage_instance_id: n.id,
     channel_id: n.channel_id,
     guild_id: n.guild_id
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.STAGE_CHANNEL,
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.STAGE_CHANNEL,
     record: n
   }, {}, t))
 }
 
-function f(e, t) {
+function S(e, t) {
   var n;
-  R(l.ReportNames.GUILD_SCHEDULED_EVENT, {
+  R(u.ReportNames.GUILD_SCHEDULED_EVENT, {
     guild_scheduled_event_id: e.id,
     guild_id: e.guild_id,
     channel_id: null !== (n = e.channel_id) && void 0 !== n ? n : void 0
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.GUILD_SCHEDULED_EVENT,
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.GUILD_SCHEDULED_EVENT,
     record: e
   }, {}, t)
 }
 
-function S(e, t) {
-  R(l.ReportNames.FIRST_DM, {
+function h(e, t) {
+  R(u.ReportNames.FIRST_DM, {
     message_id: e.id,
     channel_id: e.channel_id
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.FIRST_DM,
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.FIRST_DM,
     record: e
   }, {}, t, void 0, !1)
 }
-async function h(e, t) {
+async function A(e, t) {
   try {
-    await (0, u.submitHeadlessReport)({
-      name: l.ReportNames.FIRST_DM,
+    await (0, d.submitHeadlessReport)({
+      name: u.ReportNames.FIRST_DM,
       record: e
     }, {
       variant: "_first_dm_ham_v1"
@@ -124,40 +127,40 @@ async function h(e, t) {
   } catch {}
 }
 
-function A(e, t, n) {
-  R(l.ReportNames.USER, {
+function m(e, t, n) {
+  R(u.ReportNames.USER, {
     reported_user_id: e.id
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.USER,
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.USER,
     record: e,
     contextualGuildId: t
   }, {}, n, void 0, !1)
 }
 
-function m(e, t) {
+function N(e, t) {
   let n = new s.default({});
-  R(l.UnauthenticatedReportNames.USER, {
+  R(u.UnauthenticatedReportNames.USER, {
     reported_user_id: n.id
-  }), (0, d.showReportModal)({
-    name: l.UnauthenticatedReportNames.USER,
+  }), (0, _.showReportModal)({
+    name: u.UnauthenticatedReportNames.USER,
     record: n
   }, {}, t, void 0, !1, !1, e)
 }
 
-function N(e, t) {
+function p(e, t) {
   let n = new a.default({});
-  R(l.UnauthenticatedReportNames.MESSAGE, {
+  R(u.UnauthenticatedReportNames.MESSAGE, {
     message_id: void 0,
     channel_id: void 0
-  }), (0, d.showReportModal)({
-    name: l.UnauthenticatedReportNames.MESSAGE,
+  }), (0, _.showReportModal)({
+    name: u.UnauthenticatedReportNames.MESSAGE,
     record: n
   }, {}, t, void 0, !1, !1, e)
 }
-async function p(e, t, n) {
+async function O(e, t, n) {
   try {
-    await (0, u.submitHeadlessReport)({
-      name: l.ReportNames.MESSAGE,
+    await (0, d.submitHeadlessReport)({
+      name: u.ReportNames.MESSAGE,
       record: e
     }, {
       variant: "safety_alerts_headless_v1"
@@ -167,12 +170,12 @@ async function p(e, t, n) {
   }
 }
 
-function O(e, t) {
-  R(l.ReportNames.MESSAGE, {
+function C(e, t) {
+  R(u.ReportNames.MESSAGE, {
     message_id: e.id,
     channel_id: e.channel_id
-  }), (0, d.showReportModal)({
-    name: l.ReportNames.MESSAGE,
+  }), (0, _.showReportModal)({
+    name: u.ReportNames.MESSAGE,
     record: e
   }, {
     variant: "safety_alerts_v1"
@@ -180,7 +183,7 @@ function O(e, t) {
 }
 
 function R(e, t) {
-  i.default.trackWithMetadata(_.AnalyticEvents.IAR_MODAL_OPEN, {
+  i.default.trackWithMetadata(c.AnalyticEvents.IAR_MODAL_OPEN, {
     report_type: e,
     ...t
   })

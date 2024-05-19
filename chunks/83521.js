@@ -1,139 +1,107 @@
 "use strict";
-t.r(l), t.d(l, {
+l.r(a), l.d(a, {
   default: function() {
-    return S
+    return N
   }
-});
-var a = t("735250"),
-  s = t("470079"),
-  n = t("461920"),
-  o = t("481060"),
-  i = t("442837"),
-  d = t("700582"),
-  r = t("518738"),
-  c = t("271383"),
-  u = t("430824"),
-  h = t("594174"),
-  m = t("176278"),
-  x = t("5192"),
-  v = t("931240"),
-  A = t("353093"),
-  f = t("114487"),
-  C = t("979264"),
-  _ = t("921944"),
-  T = t("689938"),
-  g = t("107468");
+}), l("47120");
+var t = l("735250"),
+  s = l("470079"),
+  n = l("481060"),
+  o = l("442837"),
+  i = l("410030"),
+  d = l("430824"),
+  r = l("594174"),
+  u = l("931240"),
+  c = l("645896"),
+  m = l("603368"),
+  C = l("353093"),
+  _ = l("114487"),
+  g = l("380365"),
+  A = l("981631"),
+  S = l("921944"),
+  v = l("689938"),
+  x = l("230468");
 
-function S(e) {
-  var l, t, S, N, j;
+function N(e) {
+  var a, l;
   let {
-    guildId: L,
-    transitionState: M,
-    onClose: R
-  } = e, p = (0, i.useStateFromStores)([u.default], () => u.default.getGuild(L), [L]), I = (0, i.useStateFromStores)([h.default], () => h.default.getCurrentUser(), []), D = null == I ? void 0 : I.id, E = (0, i.useStateFromStores)([c.default], () => null == D ? null : c.default.getMember(L, D), [L, D]), k = null !== (S = null == E ? void 0 : E.colorString) && void 0 !== S ? S : void 0, O = x.default.getName(L, null, I), B = null !== (N = null == E ? void 0 : E.highestRoleId) && void 0 !== N ? N : void 0, U = (0, i.useStateFromStores)([u.default], () => null != B ? u.default.getRole(L, B) : void 0, [L, B]), y = (0, r.useRoleIcon)({
-    roleId: null !== (j = null == U ? void 0 : U.id) && void 0 !== j ? j : void 0,
-    size: 20,
-    guildId: L
-  }), w = s.useCallback(async () => {
-    await (0, v.adoptClanIdentity)(L, !0), R(_.ContentDismissActionType.PRIMARY)
-  }, [R, L]), P = s.useCallback(() => {
-    R(_.ContentDismissActionType.DISMISS)
-  }, [R]);
-  if (s.useEffect(() => ((null == p || null == I) && R(_.ContentDismissActionType.AUTO_DISMISS), () => {}), [I, p, L, R]), null == p || null == I) return null;
-  let b = (0, A.getClanBadgeUrl)(p.id, null === (l = p.clan) || void 0 === l ? void 0 : l.badge);
-  return (0, a.jsxs)(o.ModalRoot, {
-    transitionState: M,
-    size: o.ModalSize.SMALL,
-    children: [(0, a.jsx)(o.ModalContent, {
-      children: (0, a.jsxs)("div", {
-        className: g.mainContainer,
-        children: [(0, a.jsxs)("div", {
-          className: g.infoContainer,
-          children: [(0, a.jsx)(f.default, {
-            guild: p,
+    guildId: N,
+    transitionState: T,
+    onClose: f
+  } = e, h = (0, o.useStateFromStores)([d.default], () => d.default.getGuild(N), [N]), D = (0, c.useClanInfo)(null != N ? N : null), E = (0, o.useStateFromStores)([r.default], () => r.default.getCurrentUser(), []), [I, L] = s.useState(!0), M = (0, i.default)(), j = s.useCallback(async () => {
+    I && await (0, u.adoptClanIdentity)(N, !0, A.AnalyticsLocations.CLAN_ADOPT_IDENTITY_MODAL), f(S.ContentDismissActionType.PRIMARY)
+  }, [I, f, N]), p = s.useCallback(() => {
+    f(S.ContentDismissActionType.DISMISS)
+  }, [f]);
+  s.useEffect(() => ((null == h || null == E) && f(S.ContentDismissActionType.AUTO_DISMISS), () => {}), [E, h, N, f]);
+  let k = (0, m.useBrandColor)(null == D ? void 0 : null === (a = D.branding) || void 0 === a ? void 0 : a.primaryColor, [n.tokens.colors.BG_BRAND, .7]),
+    R = n.tokens.colors.BG_SURFACE_OVERLAY.resolve({
+      theme: M,
+      saturation: 1
+    }).hex(),
+    B = (0, m.getClanRadialBackgroundStyle)(k, R, "top center"),
+    O = (0, m.useBrandColor)(null == D ? void 0 : null === (l = D.branding) || void 0 === l ? void 0 : l.primaryColor, [n.tokens.colors.BG_BRAND, 1]),
+    U = (0, m.getAccessibleTextColor)(k).hex(),
+    y = (0, C.isGuildAdoptedUserClanIdentityChanged)(h, null == E ? void 0 : E.clan);
+  if (null == h || null == E) return null;
+  let G = y ? v.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_HEADING.format({
+      guildName: h.name
+    }) : v.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({
+      guildName: h.name
+    }),
+    P = y ? v.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_NEW_IDENTITY_DESCRIPTION.format({
+      guildName: h.name
+    }) : v.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({
+      guildName: h.name
+    }),
+    b = v.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA;
+  return (0, t.jsxs)(n.ModalRoot, {
+    transitionState: T,
+    size: n.ModalSize.SMALL,
+    className: x.modal,
+    children: [(0, t.jsx)(n.ModalContent, {
+      style: B,
+      children: (0, t.jsxs)("div", {
+        className: x.mainContainer,
+        children: [(0, t.jsxs)("div", {
+          className: x.infoContainer,
+          children: [(0, t.jsx)(_.default, {
+            guild: h,
             iconSize: 64
-          }), (0, a.jsxs)("div", {
-            className: g.headerTextContainer,
-            children: [(0, a.jsx)(o.Heading, {
-              variant: "heading-lg/semibold",
+          }), (0, t.jsxs)("div", {
+            className: x.headerTextContainer,
+            children: [(0, t.jsx)(n.Heading, {
+              variant: "heading-xl/normal",
               color: "header-primary",
-              children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_HEADING.format({
-                guildName: p.name
-              })
-            }), (0, a.jsx)(o.Text, {
+              children: G
+            }), (0, t.jsx)(n.Text, {
               variant: "text-sm/normal",
               color: "text-secondary",
-              children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_DESCRIPTION.format({
-                guildName: p.name
-              })
+              children: P
             })]
           })]
-        }), (0, a.jsxs)("div", {
-          className: g.skeletonChatContainer,
-          children: [(0, a.jsx)("div", {
-            children: (0, a.jsx)(d.default, {
-              user: I,
-              size: o.AvatarSizes.SIZE_40
-            })
-          }), (0, a.jsxs)("div", {
-            className: g.chat,
-            children: [(0, a.jsxs)("div", {
-              className: g.chatHeader,
-              children: [(0, a.jsx)(o.Text, {
-                tag: "span",
-                variant: "text-sm/semibold",
-                color: "header-primary",
-                children: (0, a.jsx)(o.NameWithRole, {
-                  name: O,
-                  color: k
-                })
-              }), (0, a.jsx)(C.BaseClanTagChiplet, {
-                clanBadge: b,
-                clanTag: null === (t = p.clan) || void 0 === t ? void 0 : t.tag,
-                className: g.chiplet
-              }), null != U && (0, a.jsx)("div", {
-                className: g.roleContainer,
-                children: (0, a.jsx)(m.default, {
-                  ...y,
-                  enableTooltip: !1,
-                  name: null == U ? void 0 : U.name
-                })
-              })]
-            }), (0, a.jsx)("div", {
-              className: g.skeletonChatBody
-            })]
-          })]
-        }), (0, a.jsxs)("div", {
-          className: g.footerTextContainer,
-          children: [(0, a.jsxs)("div", {
-            className: g.footerText,
-            children: [(0, a.jsx)(o.Text, {
-              variant: "text-md/medium",
-              color: "text-primary",
-              children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_FEATURE
-            }), (0, a.jsx)(n.CheckmarkBoldIcon, {
-              width: 16,
-              height: 16,
-              color: o.tokens.colors.STATUS_POSITIVE
-            })]
-          }), (0, a.jsx)(o.Text, {
-            variant: "text-xs/medium",
-            color: "text-muted",
-            children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_FEATURE_CALLOUT
-          })]
+        }), (0, t.jsx)(g.default, {
+          guildId: N,
+          isTagAdopted: I,
+          onChangeUseTag: L
         })]
       })
-    }), (0, a.jsxs)(o.ModalFooter, {
-      children: [(0, a.jsx)(o.Button, {
-        onClick: w,
-        color: o.Button.Colors.BRAND_NEW,
-        look: o.Button.Looks.FILLED,
-        children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CTA
-      }), (0, a.jsx)(o.Button, {
-        onClick: P,
-        color: o.Button.Colors.PRIMARY,
-        look: o.Button.Looks.LINK,
-        children: T.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL
+    }), (0, t.jsxs)(n.ModalFooter, {
+      className: x.modalFooter,
+      children: [(0, t.jsx)(n.Button, {
+        onClick: j,
+        color: n.Button.Colors.CUSTOM,
+        look: n.Button.Looks.FILLED,
+        style: {
+          backgroundColor: O,
+          color: U
+        },
+        children: b
+      }), (0, t.jsx)(n.Button, {
+        onClick: p,
+        color: n.Button.Colors.PRIMARY,
+        look: n.Button.Looks.LINK,
+        children: v.default.Messages.CLAN_USER_ADOPT_TAG_MODAL_CANCEL
       })]
     })]
   })

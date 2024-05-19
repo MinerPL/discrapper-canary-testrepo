@@ -26,7 +26,7 @@ var a = n("613828"),
   S = n("624138"),
   C = n("317381"),
   A = n("638880"),
-  g = n("266820"),
+  g = n("146936"),
   M = n("147865"),
   R = n("778569"),
   v = n("513202"),
@@ -34,7 +34,7 @@ var a = n("613828"),
   x = n("701488"),
   L = n("981631"),
   D = n("689938"),
-  P = n("50875");
+  P = n("818838");
 let y = (0, S.cssValueToNumber)(i.default.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH);
 
 function U(e) {
@@ -44,25 +44,26 @@ function U(e) {
     message: j
   } = e, {
     analyticsLocations: b
-  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), B = (0, u.useAnalyticsContext)(), G = j.channel_id, F = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(G), [G]), k = null == F ? void 0 : F.guild_id, w = null != F && (F.isGuildVoice() || F.isPrivate()), H = (0, l.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivityForChannel(G)), V = (null == H ? void 0 : H.applicationId) === U, [Y, K] = (0, f.default)([U, null !== (n = null == H ? void 0 : H.applicationId) && void 0 !== n ? n : ""]), W = (0, M.default)(null !== (i = null == Y ? void 0 : Y.maxParticipants) && void 0 !== i ? i : 0), [z] = (0, l.useStateFromStoresArray)([C.default], () => w ? C.default.getEmbeddedActivitiesForChannel(G).filter(e => e.applicationId === U) : [], [U, G, w]), Q = Array.from(null !== (S = null == z ? void 0 : z.userIds) && void 0 !== S ? S : []), q = (0, l.useStateFromStoresArray)([T.default], () => Q.map(e => T.default.getUser(e)).filter(N.isNotNullish), [Q]), X = (0, R.default)({
+  } = (0, c.default)(d.default.ACTIVITY_BOOKMARK), B = (0, u.useAnalyticsContext)(), F = j.channel_id, G = (0, l.useStateFromStores)([m.default], () => m.default.getChannel(F), [F]), k = null == G ? void 0 : G.guild_id, w = null != G && (G.isGuildVoice() || G.isPrivate()), H = (0, l.useStateFromStores)([C.default], () => C.default.getSelfEmbeddedActivityForChannel(F)), V = (null == H ? void 0 : H.applicationId) === U, [Y, K] = (0, f.default)([U, null !== (n = null == H ? void 0 : H.applicationId) && void 0 !== n ? n : ""]), W = (0, M.default)(null !== (i = null == Y ? void 0 : Y.maxParticipants) && void 0 !== i ? i : 0), [z] = (0, l.useStateFromStoresArray)([C.default], () => w ? C.default.getEmbeddedActivitiesForChannel(F).filter(e => e.applicationId === U) : [], [U, F, w]), Q = Array.from(null !== (S = null == z ? void 0 : z.userIds) && void 0 !== S ? S : []), q = (0, l.useStateFromStoresArray)([T.default], () => Q.map(e => T.default.getUser(e)).filter(N.isNotNullish), [Q]), X = (0, R.default)({
     applicationId: U,
-    size: y
+    size: y,
+    names: ["embedded_cover"]
   }), Z = E.default.getWindowOpen(L.PopoutWindowKeys.CHANNEL_CALL_POPOUT), J = q.length > 0 ? D.default.Messages.JOIN : D.default.Messages.START, $ = async () => {
     if (w) {
       if (null != z && q.length > 0) await (0, A.default)({
         applicationId: z.applicationId,
         currentEmbeddedApplication: K,
-        activityChannelId: G,
+        activityChannelId: F,
         embeddedActivitiesManager: v.default,
         locationObject: B.location,
         analyticsLocations: b
       });
       else {
-        let e = F.isPrivate() && !_.default.isCallActive(G),
+        let e = G.isPrivate() && !_.default.isCallActive(F),
           t = () => (0, g.default)({
             targetApplicationId: U,
             currentEmbeddedApplication: K,
-            channelId: G,
+            channelId: F,
             guildId: k,
             embeddedActivitiesManager: v.default,
             analyticsLocations: b

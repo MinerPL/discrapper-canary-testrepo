@@ -15,7 +15,7 @@ var i = n("735250"),
   T = n("78826"),
   f = n("981631"),
   S = n("689938"),
-  h = n("527002");
+  h = n("680273");
 t.default = function(e) {
   let {
     className: t,
@@ -27,14 +27,15 @@ t.default = function(e) {
     (0, E.trackQuestContentClicked)({
       questId: n.id,
       questContent: e.questContent,
+      questContentPosition: e.questContentPosition,
       questContentCTA: E.QuestContentCTA.REWARD_LEARN_MORE
     }), u.default.open(f.UserSettingsSections.INVENTORY), null === (i = e.onClick) || void 0 === i || i.call(e, t)
-  }, [n.id, e]), O = r.useRef(null), R = r.useRef(a);
+  }, [n.id, e]), O = r.useRef(null), C = r.useRef(a);
   r.useEffect(() => {
     var e, t;
-    N && !m && null != O.current && (a && !R.current ? null === (e = O.current) || void 0 === e || e.play() : !a && R.current && (null === (t = O.current) || void 0 === t || t.pause()), R.current = a)
+    N && !m && null != O.current && (a && !C.current ? null === (e = O.current) || void 0 === e || e.play() : !a && C.current && (null === (t = O.current) || void 0 === t || t.pause()), C.current = a)
   }, [a, N, m]);
-  let C = (0, I.getRewardAssetUrl)(n),
+  let R = (0, I.getRewardAssetUrl)(n),
     g = N ? (0, i.jsx)(T.QuestsAsset, {
       id: "QuestRewardTile_rewardTileAnimated",
       children: e => (0, i.jsx)(c.default, {
@@ -48,8 +49,8 @@ t.default = function(e) {
         className: h.questRewardTileAsset,
         controls: !1,
         children: (0, i.jsx)("source", {
-          src: C,
-          type: (0, I.getVideoAssetMimeType)(C)
+          src: R,
+          type: (0, I.getVideoAssetMimeType)(R)
         })
       })
     }) : (0, i.jsx)(T.QuestsAsset, {
@@ -58,7 +59,7 @@ t.default = function(e) {
         ref: e,
         alt: n.config.messages.rewardName,
         className: s()(h.questRewardTileAsset, h.questRewardTileAssetStatic),
-        src: C
+        src: R
       })
     });
   return null == A ? (0, i.jsx)("div", {

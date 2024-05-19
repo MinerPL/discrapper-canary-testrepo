@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   StickersPremiumUpsell: function() {
-    return R
+    return C
   }
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("481060"),
   l = n("100527"),
   u = n("906732"),
@@ -22,37 +22,37 @@ var i = n("735250"),
   h = n("981631"),
   A = n("474936"),
   m = n("689938"),
-  N = n("302458"),
-  O = n("867250");
-let p = () => (0, f.setShowPremiumUpsell)(!1),
-  R = e => {
-    var t, n, s;
+  N = n("60135"),
+  p = n("867250");
+let O = () => (0, f.setShowPremiumUpsell)(!1),
+  C = e => {
+    var t, n, a;
     let {
       onLearnMore: f
     } = e, {
-      analyticsLocations: R
+      analyticsLocations: C
     } = (0, u.default)(l.default.PREMIUM_UPSELL);
     r.useEffect(() => {
       I.default.track(h.AnalyticEvents.PREMIUM_UPSELL_VIEWED, {
         location_section: h.AnalyticsSections.STICKER_PICKER_UPSELL,
         type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-        location_stack: R
+        location_stack: C
       })
-    }, [R]);
-    let C = (0, _.usePremiumTrialOffer)(),
+    }, [C]);
+    let R = (0, _.usePremiumTrialOffer)(),
       g = (0, d.usePremiumDiscountOffer)(),
-      L = (null == C ? void 0 : null === (t = C.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
-      D = null != C || null != g;
+      L = (null == R ? void 0 : null === (t = R.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === A.PremiumSubscriptionSKUs.TIER_0,
+      v = null != R || null != g;
     return (0, i.jsxs)("div", {
-      className: a()(N.upsellWrapper, {
-        [N.unifyTrialUpsell]: D
+      className: s()(N.upsellWrapper, {
+        [N.unifyTrialUpsell]: v
       }),
-      children: [D ? (0, i.jsx)(c.default, {
-        trialOffer: C,
+      children: [v ? (0, i.jsx)(c.default, {
+        trialOffer: R,
         discountOffer: g,
-        onClose: p,
+        onClose: O,
         type: A.PremiumUpsellTypes.STICKER_PICKER_UPSELL,
-        subscriptionTier: null !== (s = null == C ? void 0 : null === (n = C.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== s ? s : A.PremiumSubscriptionSKUs.TIER_2,
+        subscriptionTier: null !== (a = null == R ? void 0 : null === (n = R.subscription_trial) || void 0 === n ? void 0 : n.sku_id) && void 0 !== a ? a : A.PremiumSubscriptionSKUs.TIER_2,
         children: L ? m.default.Messages.STICKER_PICKER_PREMIUM_TIER_UPSELL_DESCRIPTION.format({
           planName: (0, T.getTierDisplayName)(A.SubscriptionPlans.PREMIUM_MONTH_TIER_0),
           onClick: f
@@ -62,7 +62,7 @@ let p = () => (0, f.setShowPremiumUpsell)(!1),
       }) : (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("img", {
           className: N.upsellImage,
-          src: O,
+          src: p,
           alt: m.default.Messages.STICKER_PICKER_PREMIUM_UPSELL_ALT
         }), (0, i.jsx)(o.Text, {
           className: N.upsellTitle,
@@ -76,12 +76,12 @@ let p = () => (0, f.setShowPremiumUpsell)(!1),
             onClick: f
           })
         })]
-      }), !D && (0, i.jsx)(S.default, {
+      }), !v && (0, i.jsx)(S.default, {
         analyticsSection: h.AnalyticsSections.EXPRESSION_PICKER,
-        buttonText: D ? L ? m.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : m.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
+        buttonText: v ? L ? m.default.Messages.PREMIUM_TRIAL_TIER_0_CTA_BUTTON_VARIANT : m.default.Messages.PREMIUM_TRIAL_CTA_BUTTON_VARIANT : void 0
       }), (0, i.jsx)(o.Clickable, {
         className: N.upsellClose,
-        onClick: p,
+        onClick: O,
         children: (0, i.jsx)(E.default, {})
       })]
     })

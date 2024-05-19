@@ -1,135 +1,141 @@
 "use strict";
 n.r(t), n.d(t, {
   Card: function() {
-    return g
+    return C
   },
   CardInfoSection: function() {
-    return S
+    return g
   },
   CardParticipants: function() {
-    return T
+    return _
   },
   CardTitle: function() {
-    return I
+    return T
   }
-}), n("47120");
-var a = n("735250"),
-  l = n("470079"),
-  s = n("120356"),
-  i = n.n(s),
-  r = n("442837"),
-  o = n("481060"),
-  u = n("271383"),
-  d = n("430824"),
-  c = n("594174"),
-  f = n("351167"),
-  h = n("806519"),
-  m = n("823379"),
-  p = n("5192"),
-  E = n("687694"),
-  C = n("288564");
+});
+var a = n("735250");
+n("470079");
+var l = n("120356"),
+  s = n.n(l),
+  i = n("442837"),
+  r = n("481060"),
+  o = n("271383"),
+  u = n("430824"),
+  d = n("594174"),
+  c = n("351167"),
+  f = n("806519"),
+  h = n("5192"),
+  m = n("192918"),
+  p = n("687694"),
+  E = n("571425");
 
-function g(e) {
+function C(e) {
   let {
     children: t,
     selected: n
   } = e, {
-    showReplyIcon: l
-  } = (0, E.useMemberListHoverInteractions)({
+    showReplyIcon: l,
+    openOnHover: i
+  } = (0, p.useMemberListHoverInteractions)({
     location: "ContentCard"
   });
   return (0, a.jsxs)("div", {
-    className: i()(C.container, {
-      [C.selected]: n
+    className: s()(E.container, {
+      [E.selected]: n
+    }, {
+      [E.openOnHover]: i
     }),
     children: [t, l && (0, a.jsx)("div", {
-      className: C.reply,
-      children: (0, a.jsx)(f.default, {
-        className: C.icon
+      className: E.reply,
+      children: (0, a.jsx)(c.default, {
+        className: E.icon
       })
     })]
   })
 }
 
-function S(e) {
+function g(e) {
   let {
     children: t
   } = e;
   return (0, a.jsx)("div", {
-    className: C.infoSection,
+    className: E.infoSection,
     children: t
   })
 }
 
-function _(e) {
+function S(e) {
   let {
     users: t,
     guildId: n
   } = e;
   return (0, a.jsx)("div", {
-    className: C.facePile,
+    className: E.facePile,
     children: t.map((e, l) => {
-      let s = (0, a.jsx)(o.Avatar, {
+      let s = (0, a.jsx)(r.Avatar, {
         src: e.getAvatarURL(n, 80),
-        size: o.AvatarSizes.SIZE_16,
+        size: r.AvatarSizes.SIZE_16,
         "aria-label": "avatar"
       });
       return l === t.length - 1 ? (0, a.jsx)("div", {
-        className: C.facePileItem,
+        className: E.facePileItem,
         children: s
-      }, e.id) : (0, a.jsx)(h.default, {
+      }, e.id) : (0, a.jsx)(f.default, {
         width: 16,
         height: 16,
-        className: C.facePileItem,
-        mask: h.default.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+        className: E.facePileItem,
+        mask: f.default.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
         children: s
       }, e.id)
     })
   })
 }
 
-function T(e) {
+function _(e) {
   let {
     guildId: t,
     channelId: n,
-    entry: s,
-    maxAvatars: i = 3
-  } = e, f = s.author_id, h = (0, r.useStateFromStores)([c.default], () => c.default.getUser(f)), E = (0, r.useStateFromStoresArray)([c.default], () => s.participants.map(e => c.default.getUser(e)).filter(m.isNotNullish), [s.participants]), g = l.useMemo(() => null == h ? [] : [...E.filter(e => e.id !== h.id), h].slice(-i), [i, E, h]), S = E.length - 1, T = (0, r.useStateFromStores)([u.default], () => u.default.getMember(t, f)), I = (0, r.useStateFromStores)([d.default], () => {
+    entry: l,
+    maxAvatars: s = 3
+  } = e, c = l.author_id, f = (0, i.useStateFromStores)([d.default], () => d.default.getUser(c)), {
+    displayParticipants: p,
+    numOtherParticipants: C
+  } = (0, m.default)(l, s), g = (0, i.useStateFromStores)([o.default], () => o.default.getMember(t, c)), _ = (0, i.useStateFromStores)([u.default], () => {
     var e;
-    return (null == T ? void 0 : T.colorRoleId) != null ? null === (e = d.default.getRole(t, T.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-  }, [t, T]);
-  if (null == h) return null;
-  let A = null == T ? void 0 : T.colorString,
-    N = p.default.getName(t, n, h);
+    return (null == g ? void 0 : g.colorRoleId) != null ? null === (e = u.default.getRole(t, g.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
+  }, [t, g]);
+  if (null == f) return null;
+  let T = null == g ? void 0 : g.colorString,
+    I = h.default.getName(t, n, f);
   return (0, a.jsxs)("div", {
-    className: C.userSection,
-    children: [(0, a.jsx)(_, {
-      users: g,
+    className: E.userSection,
+    children: [(0, a.jsx)(S, {
+      users: p,
       guildId: t
-    }), (0, a.jsx)(o.NameWithRole, {
-      color: null != A ? A : void 0,
-      roleName: I,
-      name: N,
-      className: C.userName
-    }), S > 0 ? (0, a.jsx)("div", {
-      className: C.additionalParticipantBadge,
-      children: (0, a.jsxs)(o.Text, {
+    }), (0, a.jsx)(r.NameWithRole, {
+      color: null != T ? T : void 0,
+      roleName: _,
+      name: I,
+      className: E.userName
+    }), C > 0 ? (0, a.jsx)("div", {
+      className: E.additionalParticipantBadge,
+      children: (0, a.jsxs)(r.Text, {
         variant: "text-xxs/medium",
         color: "text-normal",
-        className: C.additionalParticipantBadgeText,
-        children: ["+", S]
+        className: E.additionalParticipantBadgeText,
+        children: ["+", C]
       })
     }) : null]
   })
 }
 
-function I(e) {
+function T(e) {
   let {
     children: t
   } = e;
-  return (0, a.jsx)(o.Heading, {
+  return (0, a.jsx)(r.Heading, {
     variant: "heading-sm/normal",
-    className: C.contentDescription,
+    className: E.contentDescription,
     lineClamp: 1,
     children: t
   })

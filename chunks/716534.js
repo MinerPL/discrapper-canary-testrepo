@@ -18,7 +18,7 @@ var i = n("735250"),
   p = n("672971"),
   _ = n("128069"),
   S = n("987209"),
-  I = n("563132"),
+  I = n("598"),
   P = n("45572"),
   E = n("919778"),
   T = n("614223"),
@@ -45,7 +45,7 @@ var i = n("735250"),
   k = n("981631"),
   H = n("231338"),
   W = n("689938"),
-  Y = n("634120");
+  Y = n("507448");
 
 function K(e) {
   var t, n, l;
@@ -263,10 +263,10 @@ function K(e) {
         checkboxLabelClassname: l
       }
     }(null != ec && ec, ej, K),
-    e7 = W.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
+    e9 = W.default.Messages.BILLING_SELECT_PLAN_GUILD_SUBSCRIPTION.format({
       planName: eg.name
     });
-  return eN && !eB ? e7 = W.default.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT : eN && eB ? e7 = "" : (0, C.isPremiumSubscriptionPlan)(eg.id) && (e7 = C.default.getBillingReviewSubheader(null, eg)), eZ ? null : (0, i.jsxs)("div", {
+  return eN && !eB ? e9 = W.default.Messages.PAYMENT_MODAL_SUBTITLE_PREMIUM_GIFT : eN && eB ? e9 = "" : (0, C.isPremiumSubscriptionPlan)(eg.id) && (e9 = C.default.getBillingReviewSubheader(null, eg)), eZ ? null : (0, i.jsxs)("div", {
     className: Y.stepBody,
     children: [null != el && (0, i.jsxs)("div", {
       className: Y.reviewWarningMessageContainer,
@@ -295,7 +295,7 @@ function K(e) {
       }), (0, i.jsx)(O.PremiumInvoiceTableDivider, {})]
     }), !ec && (0, i.jsx)(c.FormTitle, {
       tag: c.FormTitleTags.H5,
-      children: e7
+      children: e9
     }), eB && null != eh && (0, i.jsxs)(i.Fragment, {
       children: [(0, i.jsx)(G.default, {
         defaultAnimationState: g.AnimationState.LOOP,

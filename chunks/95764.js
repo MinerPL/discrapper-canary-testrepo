@@ -20,7 +20,7 @@ var l = n("442837"),
   p = n("389303"),
   E = n("554747"),
   C = n("689938"),
-  g = n("457074");
+  g = n("60614");
 
 function S(e) {
   let {
@@ -30,14 +30,14 @@ function S(e) {
     canManageGuildEvent: I
   } = (0, r.useManageResourcePermissions)(T), A = I(_);
   if (null == _) return null;
-  let v = () => {
+  let N = () => {
       if (null != T && (0, p.default)(T)) {
         (0, h.openEndEventModal)(T, S);
         return
       }
       n()
     },
-    N = () => {
+    v = () => {
       m.default.endEvent(_.id, _.guild_id)
     };
   return A ? (0, a.jsx)(s.Popout, {
@@ -54,7 +54,7 @@ function S(e) {
           children: (0, a.jsx)(s.MenuItem, {
             id: "end-voice-event",
             color: "danger",
-            action: N,
+            action: v,
             label: C.default.Messages.END_EVENT,
             icon: f.default
           })
@@ -72,7 +72,7 @@ function S(e) {
         label: C.default.Messages.DISCONNECT_SELF,
         color: "red",
         iconComponent: c.default,
-        onClick: v,
+        onClick: N,
         onPopoutClick: t,
         className: g.buttonSpacing
       })

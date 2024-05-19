@@ -1,61 +1,61 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return g
+    return x
   }
-}), l("47120"), l("610138"), l("216116"), l("78328"), l("815648");
-var i = l("735250"),
-  a = l("470079"),
-  n = l("120356"),
-  s = l.n(n),
-  r = l("399606"),
-  c = l("481060"),
-  o = l("626135"),
-  d = l("463571"),
-  u = l("894653"),
-  p = l("34674"),
-  _ = l("132871"),
-  m = l("147890"),
-  f = l("981631"),
-  h = l("689938"),
-  C = l("38581");
+}), i("47120"), i("610138"), i("216116"), i("78328"), i("815648");
+var n = i("735250"),
+  a = i("470079"),
+  l = i("120356"),
+  s = i.n(l),
+  r = i("399606"),
+  o = i("481060"),
+  c = i("626135"),
+  d = i("463571"),
+  u = i("894653"),
+  h = i("34674"),
+  p = i("132871"),
+  f = i("147890"),
+  m = i("981631"),
+  g = i("689938"),
+  C = i("125129");
 
-function g(e) {
+function x(e) {
   let {
     className: t
-  } = e, l = (0, _.useApplicationDirectoryHistory)(e => e.guildId), n = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), g = a.useMemo(() => [(0, p.getAllCategory)(), ...n], [n]), I = (0, _.getCurrentView)(), A = e => {
-    let t = g.find(t => t.id === e);
-    o.default.track(f.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
+  } = e, i = (0, p.useApplicationDirectoryHistory)(e => e.guildId), l = (0, r.useStateFromStores)([u.default], () => u.default.getCategories()), x = a.useMemo(() => [(0, h.getAllCategory)(), ...l], [l]), _ = (0, p.getCurrentView)(), I = e => {
+    let t = x.find(t => t.id === e);
+    c.default.track(m.AnalyticEvents.APP_DIRECTORY_CATEGORY_CLICKED, {
       category: t.name,
       category_id: t.id,
-      current_page: null == I ? void 0 : I.type,
-      guild_id: l
-    }), (0, m.goToCategory)({
+      current_page: null == _ ? void 0 : _.type,
+      guild_id: i
+    }), (0, f.goToCategory)({
       categoryId: t.id
     })
   };
-  return (0, i.jsx)("nav", {
+  return (0, n.jsx)("nav", {
     className: s()(C.container, t),
-    children: g.map(e => {
+    children: x.map(e => {
       let t = e.id,
-        l = e.name,
-        a = (0, p.getCategoryIcon)(e),
-        n = new URLSearchParams;
-      return n.set("category_id", t.toString()), (0, i.jsx)(d.default, {
-        href: "".concat(f.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(n),
-        children: (0, i.jsxs)(c.Clickable, {
+        i = e.name,
+        a = (0, h.getCategoryIcon)(e),
+        l = new URLSearchParams;
+      return l.set("category_id", t.toString()), (0, n.jsx)(d.default, {
+        href: "".concat(m.Routes.APPLICATION_DIRECTORY_SEARCH, "?").concat(l),
+        children: (0, n.jsxs)(o.Clickable, {
           className: C.category,
-          "aria-label": h.default.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
-            categoryName: l
+          "aria-label": g.default.Messages.APP_DIRECTORY_CATEGORY_BUTTON_A11Y_LABEL.format({
+            categoryName: i
           }),
-          onClick: () => A(t),
-          children: [(0, i.jsx)(a, {
+          onClick: () => I(t),
+          children: [(0, n.jsx)(a, {
             className: C.icon,
             width: "24",
             height: "24"
-          }), (0, i.jsx)(c.Text, {
+          }), (0, n.jsx)(o.Text, {
             variant: "text-md/normal",
-            children: l
+            children: i
           })]
         })
       }, t)

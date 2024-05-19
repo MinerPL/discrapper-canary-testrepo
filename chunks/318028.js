@@ -1,23 +1,18 @@
 "use strict";
 r.r(t), r.d(t, {
   useFetchCollectiblesProductCategory: function() {
-    return s
+    return l
   }
 }), r("47120");
-var o = r("470079"),
-  n = r("399606"),
-  a = r("335131"),
-  l = r("597688");
+var o = r("399606"),
+  n = r("597688"),
+  a = r("223143");
 
-function s(e) {
-  let [t, r, s, i] = (0, n.useStateFromStoresArray)([l.default], () => {
-    var t;
-    return [l.default.isFetchingCategories, l.default.error, null !== (t = l.default.lastFetched) && void 0 !== t ? t : 0, l.default.getCategoryForProduct(e)]
-  });
-  return (0, o.useEffect)(() => {
-    !(null != i || t || r || Date.now() - s < 6e5) && (0, a.fetchCollectiblesCategories)()
-  }, [i, t, s, r]), {
+function l(e) {
+  (0, a.useMaybeFetchCollectiblesCategories)();
+  let [t, r] = (0, o.useStateFromStoresArray)([n.default], () => [n.default.isFetchingCategories, n.default.getCategoryForProduct(e)]);
+  return {
     isFetching: t,
-    category: i
+    category: r
   }
 }

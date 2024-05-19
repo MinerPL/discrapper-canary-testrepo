@@ -9,7 +9,7 @@ var a = n("735250"),
   u = n("481060"),
   d = n("239091"),
   c = n("687683"),
-  f = n("47609");
+  f = n("725901");
 t.default = function(e) {
   let {
     index: t,
@@ -18,18 +18,18 @@ t.default = function(e) {
     channel: h,
     onClick: _,
     isFocused: C,
-    isActive: S,
-    onOtherHover: m,
+    isActive: m,
+    onOtherHover: S,
     className: p
-  } = e, [I, T] = s.useState(!1), [g, A] = s.useState(!1), N = () => {
-    T(!0), C && !S && !g && (null == m || m())
+  } = e, [g, I] = s.useState(!1), [T, A] = s.useState(!1), N = () => {
+    I(!0), C && !m && !T && (null == S || S())
   }, v = () => {
-    T(!1)
+    I(!1)
   }, R = (e, t) => {
     null != t && (A(!0), (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("69220")]).then(n.bind(n, "881351"));
       return n => (0, a.jsx)(e, {
         ...n,
         user: t
@@ -49,7 +49,7 @@ t.default = function(e) {
       },
       children: (0, a.jsx)(r.default.div, {
         className: i()(f.messageRequestItem, p, {
-          [f.active]: S || g,
+          [f.active]: m || T,
           [f.firstItem]: 0 === t
         }),
         onContextMenu: e => R(e, E),
@@ -61,7 +61,7 @@ t.default = function(e) {
           opacity: 1
         },
         ...e,
-        children: l(I || S || g)
+        children: l(g || m || T)
       })
     })
   })

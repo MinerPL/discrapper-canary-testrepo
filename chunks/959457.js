@@ -16,8 +16,8 @@ var a, s, o, l, u = n("512722"),
   N = n("358085"),
   p = n("199902"),
   O = n("314897"),
-  R = n("592125"),
-  C = n("131951"),
+  C = n("592125"),
+  R = n("131951"),
   g = n("158776"),
   L = n("19780"),
   v = n("981631"),
@@ -30,14 +30,16 @@ let M = {},
   G = {},
   w = [];
 
-function B() {
+function k() {
   c().forEach(G, (e, t) => {
     e.destroy(e.isOwner ? "sender-disconnect" : "receiver-disconnect"), delete G[t]
   })
 }
 
-function k(e) {
-  e.filter(e => {
+function B(e) {
+  c().forEach(G, (t, n) => {
+    t.updateStats(e)
+  }), e.filter(e => {
     let {
       connection: t
     } = e;
@@ -58,7 +60,7 @@ function V() {
 }
 class x extends(a = E.default.Store) {
   getActiveStreamKey() {
-    return (0, m.default)(C.default) ? r : null
+    return (0, m.default)(R.default) ? r : null
   }
   getAllActiveStreamKeys() {
     return Object.keys(G)
@@ -67,7 +69,7 @@ class x extends(a = E.default.Store) {
     return G[e]
   }
   getStatsHistory(e, t, n) {
-    if (!(0, m.default)(C.default) || null == t) return null;
+    if (!(0, m.default)(R.default) || null == t) return null;
     if (n) {
       let n = p.default.getActiveStreamForUser(t, e);
       if (null == n || 0 === p.default.getViewerIds(n).length) return null
@@ -98,7 +100,7 @@ class x extends(a = E.default.Store) {
     }(e.rtp.inbound[t]))
   }
   getQuality() {
-    if (!(0, m.default)(C.default)) return v.RTCConnectionQuality.UNKNOWN;
+    if (!(0, m.default)(R.default)) return v.RTCConnectionQuality.UNKNOWN;
     let e = this.getActiveStreamKey(),
       t = null != e ? G[e] : null;
     return null != t ? t.quality : v.RTCConnectionQuality.UNKNOWN
@@ -136,23 +138,18 @@ class x extends(a = E.default.Store) {
   getStreamSourceId(e) {
     return U[e]
   }
-  setFocusedGoLiveStream(e) {
-    c().forEach(G, (t, n) => {
-      t.setSelectedGoLiveStream(n === e ? n : null)
-    })
-  }
 }
 l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.defineProperty(s, o, {
   value: l,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : s[o] = l, t.default = new x(T.default, !C.default.isSupported() || __OVERLAY__ ? {} : {
+}) : s[o] = l, t.default = new x(T.default, !R.default.isSupported() || __OVERLAY__ ? {} : {
   CONNECTION_OPEN: function(e) {
-    i = e.sessionId, r = null, B()
+    i = e.sessionId, r = null, k()
   },
   CONNECTION_CLOSED: function() {
-    i = null, r = null, B()
+    i = null, r = null, k()
   },
   RTC_CONNECTION_STATE: V,
   RTC_CONNECTION_PING: V,
@@ -215,7 +212,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.definePro
       null == P[t] && (y[t] = null);
       let e = (0, h.decodeStreamKey)(t);
       null == y[t] && null == U[t] && (y[t] = (0, A.getStreamerApplication)(e, g.default));
-      let r = R.default.getChannel(e.channelId),
+      let r = C.default.getChannel(e.channelId),
         c = null != r && r.isBroadcastChannel(),
         E = new S.StreamRTCAnalyticsContext({
           streamRegion: a,
@@ -245,7 +242,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.definePro
         parentMediaSessionId: L.default.getMediaSessionId()
       }), G[t] = o
     }
-    w = [], C.default.getMediaEngine().on(I.MediaEngineEvent.ConnectionStats, k)
+    w = [], R.default.getMediaEngine().on(I.MediaEngineEvent.ConnectionStats, B)
   },
   STREAM_SERVER_UPDATE: function(e) {
     let t = G[e.streamKey];
@@ -266,7 +263,7 @@ l = "StreamRTCConnectionStore", (o = "displayName") in(s = x) ? Object.definePro
       streamKey: t
     } = e, n = G[t];
     if (null == n) return !1;
-    t === r && (r = null, C.default.getMediaEngine().off(I.MediaEngineEvent.ConnectionStats, k)), n.destroy("stream-end"), delete G[t]
+    t === r && (r = null, R.default.getMediaEngine().off(I.MediaEngineEvent.ConnectionStats, B)), n.destroy("stream-end"), delete G[t]
   },
   STREAM_STATS_UPDATE: function(e) {
     let {

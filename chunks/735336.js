@@ -25,8 +25,8 @@ var i = n("735250"),
   N = n("430824"),
   p = n("944486"),
   O = n("594174"),
-  R = n("451478"),
-  C = n("311715"),
+  C = n("451478"),
+  R = n("311715"),
   g = n("465670"),
   L = n("937482"),
   v = n("466111"),
@@ -38,14 +38,14 @@ var i = n("735250"),
   b = n("785717"),
   G = n("621853"),
   w = n("888778"),
-  B = n("943217"),
-  k = n("793397"),
+  k = n("943217"),
+  B = n("793397"),
   V = n("841040"),
   x = n("228168"),
   F = n("981631"),
   H = n("474936"),
   Y = n("689938"),
-  j = n("851641");
+  j = n("214572");
 let W = {
     [x.UserProfileTypes.POPOUT]: 18,
     [x.UserProfileTypes.MODAL]: 24,
@@ -85,7 +85,6 @@ function z(e) {
       location_stack: T
     }))
   }, [T, a, t]), (0, i.jsx)(d.Tooltip, {
-    color: d.TooltipColors.NESTED,
     tooltipContentClassName: j.premiumIconTooltipContent,
     text: u ? Y.default.Messages.PROFILE_CUSTOMIZATION_NITRO_ICON_TOOLTIP : Y.default.Messages.USER_SETTINGS_PROFILE_THEMES_USER_PROFILE_ICON_TOOLTIP_UPSELL,
     children: e => (0, i.jsx)(d.Clickable, {
@@ -147,7 +146,6 @@ function Z(e) {
     className: t ? j.pencilContainerDark : j.pencilContainer,
     children: (0, i.jsx)(d.Tooltip, {
       text: r,
-      color: d.TooltipColors.NESTED,
       children: e => (0, i.jsx)(l, {
         ...e,
         width: o,
@@ -174,13 +172,13 @@ function X(e) {
     hasProfileEffect: K = !1
   } = e, X = (0, l.useStateFromStores)([N.default], () => N.default.getGuild(L)), Q = (0, l.useStateFromStores)([A.default], () => A.default.getId()) === _.id && y, q = U.default.isPremiumAtLeast(null == c ? void 0 : c.premiumType, H.PremiumTypes.TIER_2), {
     trackUserProfileAction: J
-  } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([R.default], () => R.default.isFocused()), en = h.GifAutoPlay.getSetting(), {
+  } = (0, b.useUserProfileAnalyticsContext)(), [$, ee] = r.useState(!1), et = (0, l.useStateFromStores)([C.default], () => C.default.isFocused()), en = h.GifAutoPlay.getSetting(), {
     bannerSrc: ei,
     status: er
   } = (0, w.default)({
     displayProfile: c,
     overrideBannerSrc: E,
-    size: (0, k.getUserBannerSize)(v),
+    size: (0, B.getUserBannerSize)(v),
     canAnimate: M || !en ? $ : et
   }), ea = (0, d.useToken)(u.default.unsafe_rawColors.PRIMARY_800).hex(), es = (0, d.getAvatarSize)(d.AvatarSizes.SIZE_80), eo = (0, o.hex2int)((0, I.default)(_.getAvatarURL(L, es), ea, !1)), el = (0, T.default)(null !== (t = null == c ? void 0 : c.primaryColor) && void 0 !== t ? t : eo).hsl, eu = (0, l.useStateFromStores)([G.default], () => G.default.getUserProfile(_.id)), ed = m.default.getChannel(p.default.getChannelId()), {
     appsInGDMEnabled: e_,
@@ -193,14 +191,14 @@ function X(e) {
       section: F.AnalyticsSections.PROFILE_POPOUT
     }
   });
-  return (0, i.jsx)(B.default, {
+  return (0, i.jsx)(k.default, {
     isPremium: q,
     hasThemeColors: null !== (a = null == c ? void 0 : c.canEditThemes) && void 0 !== a && a,
     profileType: v,
     hasBanner: null != ei,
     hasProfileEffect: K,
     children: (0, i.jsxs)("div", {
-      className: s()(j.banner, (0, k.getUserBannerStyles)({
+      className: s()(j.banner, (0, B.getUserBannerStyles)({
         profileType: v,
         user: {
           hasBanner: null != ei,
@@ -260,14 +258,13 @@ function X(e) {
         className: j.pencilContainer,
         children: (0, i.jsx)(d.Tooltip, {
           text: Y.default.Messages.BACK,
-          color: d.TooltipColors.NESTED,
           children: e => (0, i.jsx)(g.default, {
             ...e,
             className: j.closeIcon,
             color: "white"
           })
         })
-      }) : null, !en && (0, P.isAnimatedImageURL)(ei) && (0, i.jsx)(C.default, {
+      }) : null, !en && (0, P.isAnimatedImageURL)(ei) && (0, i.jsx)(R.default, {
         className: j.gifTag
       })]
     })

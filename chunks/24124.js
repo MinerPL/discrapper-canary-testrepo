@@ -1,50 +1,6 @@
-"use strict";
-n.r(t), n.d(t, {
-  inviteChannel: function() {
-    return i
-  },
-  inviteUser: function() {
-    return r
-  },
-  openModal: function() {
-    return a
-  },
-  updateQuery: function() {
-    return s
-  }
-});
-var l = n("570140");
-
-function a(e, t) {
-  return new Promise(n => {
-    setTimeout(() => {
-      l.default.dispatch({
-        type: "ACTIVITY_INVITE_MODAL_OPEN",
-        activity: e,
-        isPrivate: t,
-        resolve: n
-      })
-    }, 0)
-  })
-}
-
-function s(e) {
-  l.default.dispatch({
-    type: "ACTIVITY_INVITE_MODAL_QUERY",
-    query: e
-  })
-}
-
-function i(e) {
-  l.default.dispatch({
-    type: "ACTIVITY_INVITE_MODAL_SEND",
-    channelId: e
-  })
-}
-
-function r(e) {
-  l.default.dispatch({
-    type: "ACTIVITY_INVITE_MODAL_SEND",
-    userId: e
-  })
-}
+var r = n("718043").default,
+  i = n("682595");
+e.exports = function(e) {
+  var t = i(e, "string");
+  return "symbol" == r(t) ? t : t + ""
+}, e.exports.__esModule = !0, e.exports.default = e.exports

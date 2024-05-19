@@ -13,116 +13,48 @@ var a = s("735250"),
   E = s("410154"),
   T = s("981631"),
   f = s("474936"),
-  m = s("689938"),
-  _ = s("71038"),
-  g = s("786792"),
-  h = s("329213");
-let I = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("353437"),
-        className: _.art,
-        alt: " "
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/extrabold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+  _ = s("689938"),
+  m = s("449221"),
+  g = s("786792");
+let I = e => {
+    let {
+      artSrc: t
+    } = e;
+    return (0, a.jsxs)(a.Fragment, {
+      children: [(0, a.jsx)("div", {
+        className: m.artContainer,
+        "aria-hidden": !0,
+        role: "presentation",
+        children: (0, a.jsx)("img", {
+          src: t,
+          className: m.art,
+          alt: " "
+        })
+      }), (0, a.jsxs)("div", {
+        className: m.mainColumn,
+        children: [(0, a.jsx)(o.Heading, {
+          variant: "heading-lg/extrabold",
+          color: "always-white",
+          className: m.title,
+          children: _.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
+        }), (0, a.jsx)(o.Text, {
+          className: m.__invalid_textBody,
+          variant: "text-sm/normal",
+          color: "always-white",
+          children: _.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
+        })]
       })]
-    })]
-  }),
-  N = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("162813"),
-        className: i()([_.art, _.artJan2024]),
-        alt: " ",
-        width: "143"
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/bold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_SFA_TITLE
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_SFA_BANNER_DESCRIPTION
-      })]
-    })]
-  }),
-  p = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("861636"),
-        className: _.art,
-        alt: " "
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/extrabold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_BANNER_TITLE_2024
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_BANNER_DESCRIPTION_2024
-      })]
-    })]
-  }),
-  C = () => (0, a.jsxs)(a.Fragment, {
-    children: [(0, a.jsx)("div", {
-      className: _.artContainer,
-      "aria-hidden": !0,
-      role: "presentation",
-      children: (0, a.jsx)("img", {
-        src: s("43563"),
-        className: _.art,
-        alt: " "
-      })
-    }), (0, a.jsxs)("div", {
-      className: _.mainColumn,
-      children: [(0, a.jsx)(o.Heading, {
-        variant: "heading-lg/extrabold",
-        color: "always-white",
-        className: _.title,
-        children: m.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_TITLE
-      }), (0, a.jsx)(o.Text, {
-        className: _.__invalid_textBody,
-        variant: "text-sm/normal",
-        color: "always-white",
-        children: m.default.Messages.COLLECTIBLES_SHY_PROFILE_UPSELL_BANNER_SUBTITLE
-      })]
-    })]
-  }),
-  A = e => {
+    })
+  },
+  h = e => {
     let {
       variation: t
     } = e;
-    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.MONSTER_DROP, () => (0, a.jsx)(N, {})).with(E.CollectiblesShopMarketingVariants.SPRINGTOONS, () => (0, a.jsx)(p, {})).with(E.CollectiblesShopMarketingVariants.SHY, () => (0, a.jsx)(C, {})).otherwise(() => (0, a.jsx)(I, {}))
+    return (0, r.match)(t).with(E.CollectiblesShopMarketingVariants.GALAXY, () => (0, a.jsx)(I, {
+      artSrc: s("161594")
+    })).otherwise(() => (0, a.jsx)(I, {
+      artSrc: s("353437")
+    }))
   };
 t.default = () => {
   let {
@@ -135,11 +67,11 @@ t.default = () => {
     })
   }, [e]), (0, a.jsxs)("div", {
     ref: t,
-    className: i()(_.container),
+    className: i()(m.container),
     style: {
-      backgroundImage: "url(".concat(s === E.CollectiblesShopMarketingVariants.SHY ? h : g, ")")
+      backgroundImage: "url(".concat(g, ")")
     },
-    children: [(0, a.jsx)(A, {
+    children: [(0, a.jsx)(h, {
       variation: s
     }), (0, a.jsx)(o.Button, {
       onClick: () => {
@@ -148,9 +80,9 @@ t.default = () => {
           analyticsSource: d.default.COLLECTIBLES_PROFILE_SETTINGS_UPSELL
         })
       },
-      className: _.ctaButton,
+      className: m.ctaButton,
       look: o.Button.Looks.INVERTED,
-      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => m.default.Messages.CHECK_IT_OUT).otherwise(() => m.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
+      children: (0, r.match)(s).with(E.CollectiblesShopMarketingVariants.WINTER_2023_DROP, () => _.default.Messages.CHECK_IT_OUT).otherwise(() => _.default.Messages.COLLECTIBLES_CTA_GO_TO_SHOP)
     })]
   })
 }

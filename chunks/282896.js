@@ -1,53 +1,53 @@
 "use strict";
 r.r(t);
-var s = r("735250"),
-  l = r("470079"),
-  n = r("803997"),
-  a = r.n(n),
-  i = r("481060"),
-  c = r("897353"),
-  o = r("378233"),
+var l = r("735250"),
+  n = r("470079"),
+  s = r("120356"),
+  i = r.n(s),
+  a = r("481060"),
+  o = r("897353"),
+  c = r("378233"),
   u = r("689938"),
-  d = r("785347");
-let S = e => {
+  d = r("48875");
+let m = e => {
   let {
     stickerPack: t
   } = e;
-  return (0, s.jsx)("div", {
+  return (0, l.jsx)("div", {
     className: d.features,
-    children: (0, o.isStickerPackAnimated)(t) ? (0, s.jsx)(i.Tooltip, {
+    children: (0, c.isStickerPackAnimated)(t) ? (0, l.jsx)(a.Tooltip, {
       tooltipClassName: d.featuresTooltip,
       position: "top",
       text: u.default.Messages.STICKER_PICKER_PACK_DETAILS_ANIMATED,
-      children: e => (0, s.jsx)(c.default, {
+      children: e => (0, l.jsx)(o.default, {
         ...e,
         className: d.featureIcon
       })
     }) : null
   })
 };
-t.default = l.memo(e => {
+t.default = n.memo(e => {
   let {
     className: t,
     stickerPack: r,
-    withDescription: l = !1
+    withDescription: n = !1
   } = e;
-  return (0, s.jsxs)("div", {
-    className: a()(d.header, t),
-    children: [(0, s.jsxs)("div", {
+  return (0, l.jsxs)("div", {
+    className: i()(d.header, t),
+    children: [(0, l.jsxs)("div", {
       className: d.title,
-      children: [(0, s.jsx)(i.Heading, {
+      children: [(0, l.jsx)(a.Heading, {
         className: d.heading,
         variant: "heading-sm/semibold",
         children: r.name
-      }), (0, s.jsx)(S, {
+      }), (0, l.jsx)(m, {
         stickerPack: r
       })]
-    }), l && null != r.description && (0, s.jsx)(i.Text, {
+    }), n && null != r.description && (0, l.jsx)(a.Text, {
       className: d.description,
       variant: "text-sm/normal",
       children: r.description
-    }), (0, s.jsx)("div", {
+    }), (0, l.jsx)("div", {
       className: d.count,
       children: u.default.Messages.STICKER_PACK_STICKER_COUNT.format({
         numStickers: r.stickers.length

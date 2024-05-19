@@ -32,13 +32,13 @@ var a, l = n("735250"),
   x = n("430824"),
   M = n("496675"),
   R = n("979651"),
-  L = n("242315"),
-  y = n("805009"),
+  y = n("242315"),
+  L = n("805009"),
   O = n("981631"),
   j = n("927923"),
   P = n("70722"),
   D = n("689938"),
-  b = n("855947");
+  b = n("502375");
 
 function U(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -76,7 +76,7 @@ function w(e) {
     }),
     children: [(0, l.jsx)("div", {
       className: b.audienceIconContainer,
-      children: (0, l.jsx)(L.default, {
+      children: (0, l.jsx)(y.default, {
         className: b.audienceIcon
       })
     }), (0, l.jsx)(u.Text, {
@@ -186,7 +186,7 @@ class k extends(a = s.PureComponent) {
       (0, c.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
         return n => (0, l.jsx)(e, {
           ...n,
           user: a,
@@ -262,7 +262,7 @@ class k extends(a = s.PureComponent) {
         hangStatusActivity: x,
         showHangStatus: M,
         isSelf: R,
-        application: L
+        application: y
       } = this.props, {
         userPopoutOpen: O,
         isHoveringHangStatus: P
@@ -298,7 +298,7 @@ class k extends(a = s.PureComponent) {
         hangStatusActivity: x,
         showHangStatus: M,
         isSelf: R,
-        application: L,
+        application: y,
         channelId: v.id
       };
       if (t) {
@@ -311,7 +311,7 @@ class k extends(a = s.PureComponent) {
               onContextMenu: n,
               ...a
             } = e;
-            return (0, l.jsx)(y.default, {
+            return (0, l.jsx)(L.default, {
               ...F,
               ...a
             })
@@ -324,7 +324,7 @@ class k extends(a = s.PureComponent) {
         shouldShow: s && !O,
         onRequestClose: this.handleHidePreview,
         spacing: 0,
-        children: () => (0, l.jsx)(y.default, {
+        children: () => (0, l.jsx)(L.default, {
           ...F,
           onMouseDown: e.onMouseDown,
           onKeyDown: e.onKeyDown,

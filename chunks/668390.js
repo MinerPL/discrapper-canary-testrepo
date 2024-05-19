@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120");
 var l = s("735250"),
   a = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("780384"),
   o = s("481060"),
@@ -15,7 +15,7 @@ var l = s("735250"),
   c = s("151888"),
   h = s("808268"),
   m = s("689938"),
-  E = s("802059");
+  E = s("699566");
 
 function f(e) {
   let {
@@ -68,7 +68,7 @@ function g(e) {
     (0, d.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await s.e("65889").then(s.bind(s, "731646"));
+      } = await s.e("5396").then(s.bind(s, "731646"));
       return t => (0, l.jsx)(e, {
         ...t,
         id: n,

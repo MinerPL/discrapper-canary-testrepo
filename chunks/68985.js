@@ -1,8 +1,8 @@
 "use strict";
 n.r(t), n("47120");
 var i, r = n("442837"),
-  s = n("570140"),
-  a = n("626135"),
+  a = n("570140"),
+  s = n("626135"),
   o = n("261376"),
   l = n("981631");
 
@@ -19,7 +19,8 @@ let d = {
   dailyCapPeriodStart: null,
   dismissibleContentSeenDuringSession: new Set,
   dailyCapOverridden: !1,
-  renderedAtTimestamps: new Map
+  renderedAtTimestamps: new Map,
+  lastDCDismissed: null
 };
 class _ extends(i = r.default.PersistedStore) {
   initialize(e) {
@@ -27,13 +28,16 @@ class _ extends(i = r.default.PersistedStore) {
       var t;
       d.numberOfDCsShownToday = null !== (t = e.numberOfDCsShownToday) && void 0 !== t ? t : 0, d.dailyCapPeriodStart = e.dailyCapPeriodStart, d.dailyCapOverridden = e.dailyCapOverridden
     }
-    d.dismissibleContentSeenDuringSession = new Set
+    d.dismissibleContentSeenDuringSession = new Set, d.lastDCDismissed = null
   }
   getState() {
     return d
   }
   get dailyCapOverridden() {
     return d.dailyCapOverridden
+  }
+  get lastDCDismissed() {
+    return d.lastDCDismissed
   }
   getRenderedAtTimestamp(e) {
     return d.renderedAtTimestamps.get(e)
@@ -46,7 +50,7 @@ class _ extends(i = r.default.PersistedStore) {
 }
 u(_, "displayName", "DismissibleContentFrameworkStore"), u(_, "persistKey", "DismissibleContentFrameworkStore"), u(_, "migrations", [e => ({
   ...e
-})]), t.default = new _(s.default, {
+})]), t.default = new _(a.default, {
   LOGOUT: function() {
     d = {
       ...d,
@@ -70,7 +74,7 @@ u(_, "displayName", "DismissibleContentFrameworkStore"), u(_, "persistKey", "Dis
           let e = new Date;
           e.setHours(0, 0, 0, 0), d.dailyCapPeriodStart = e.getTime()
         }
-        d.numberOfDCsShownToday += 1, d.numberOfDCsShownToday > 3 && a.default.track(l.AnalyticEvents.DCF_CAP_EXCEEDED, {
+        d.numberOfDCsShownToday += 1, d.numberOfDCsShownToday > 3 && s.default.track(l.AnalyticEvents.DCF_CAP_EXCEEDED, {
           cap_type: "daily_cap",
           dismissible_content: t,
           shown_dcs: d.numberOfDCsShownToday
@@ -82,9 +86,9 @@ u(_, "displayName", "DismissibleContentFrameworkStore"), u(_, "persistKey", "Dis
     let {
       dismissibleContent: t
     } = e;
-    d.renderedAtTimestamps.delete(t)
+    d.lastDCDismissed = t, d.renderedAtTimestamps.delete(t)
   },
   DCF_RESET: function() {
-    d.dailyCapPeriodStart = null, d.numberOfDCsShownToday = 0, d.dismissibleContentSeenDuringSession = new Set
+    d.dailyCapPeriodStart = null, d.numberOfDCsShownToday = 0, d.dismissibleContentSeenDuringSession = new Set, d.lastDCDismissed = null
   }
 })

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   tryLoadAsync: function() {
-    return s
+    return a
   },
   tryLoadOrResetCacheGateway: function() {
-    return a
+    return s
   },
   tryLoadOrResetCacheGatewayAsync: function() {
     return o
@@ -12,7 +12,7 @@ n.r(t), n.d(t, {
 });
 var i = n("570140");
 let r = new(n("710845")).default("TryLoad");
-async function s(e) {
+async function a(e) {
   try {
     return await e()
   } catch (e) {
@@ -20,7 +20,7 @@ async function s(e) {
   }
 }
 
-function a(e, t) {
+function s(e, t, n) {
   try {
     return t()
   } catch (t) {
@@ -29,12 +29,13 @@ function a(e, t) {
       args: {
         error: t,
         action: "tryLoadOrResetCacheGateway (".concat(e, ")"),
+        metricAction: "tryLoadOrResetCacheGateway (".concat(null != n ? n : e, ")"),
         clearCache: !0
       }
     }), null
   }
 }
-async function o(e, t) {
+async function o(e, t, n) {
   try {
     return await t()
   } catch (t) {
@@ -43,6 +44,7 @@ async function o(e, t) {
       args: {
         error: t,
         action: "tryLoadOrResetCacheGatewayAsync (".concat(e, ")"),
+        metricAction: "tryLoadOrResetCacheGatewayAsync (".concat(null != n ? n : e, ")"),
         clearCache: !0
       }
     }), null

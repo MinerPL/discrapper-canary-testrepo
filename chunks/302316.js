@@ -7,12 +7,12 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("481060"),
-  s = n("943209"),
-  a = n("556084"),
+  a = n("943209"),
+  s = n("556084"),
   o = n("659101"),
   l = n("689938"),
-  u = n("830254"),
-  d = n("989171");
+  u = n("39198"),
+  d = n("379916");
 
 function _(e) {
   let {
@@ -21,7 +21,7 @@ function _(e) {
   } = e, {
     installedIntegrations: _,
     fetched: c
-  } = (0, a.usePrivateChannelIntegrationState)({
+  } = (0, s.usePrivateChannelIntegrationState)({
     channelId: n
   });
   return c && void 0 !== _.find(e => e.application.id === t) ? (0, i.jsxs)(o.default, {
@@ -30,7 +30,7 @@ function _(e) {
       className: d.title,
       children: l.default.Messages.BOT_PROFILE_MANAGE_PRIVATE_CHANNEL_INTEGRATION
     }), (0, i.jsx)(r.Button, {
-      onClick: () => (0, s.deletePrivateChannelIntegration)(n, t),
+      onClick: () => (0, a.deletePrivateChannelIntegration)(n, t),
       size: r.Button.Sizes.ICON,
       color: r.Button.Colors.RED,
       look: r.Button.Looks.LINK,

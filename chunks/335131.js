@@ -64,7 +64,7 @@ let _ = e => {
       type: "COLLECTIBLES_CATEGORIES_FETCH"
     });
     let t = {};
-    null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), null != e.countryCode && (t.country_code = e.countryCode), null !== e.paymentGateway && (t.payment_gateway = e.paymentGateway));
+    null != e && (!0 === e.noCache && (t.no_cache = !0), !0 === e.includeUnpublished && (t.include_unpublished = !0), !0 === e.includeBundles && (t.include_bundles = !0), null != e.countryCode && (t.country_code = e.countryCode), null !== e.paymentGateway && (t.payment_gateway = e.paymentGateway));
     try {
       let e = await i.HTTP.get({
         url: d.Endpoints.COLLECTIBLES_CATEGORIES,

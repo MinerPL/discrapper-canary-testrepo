@@ -2,10 +2,10 @@
 s.r(t);
 var a = s("735250");
 s("470079");
-var i = s("803997"),
-  r = s.n(i),
+var r = s("120356"),
+  i = s.n(r),
   n = s("981631"),
-  l = s("535146");
+  l = s("55050");
 let o = {
     ESRB: {
       EVERYONE: "1",
@@ -44,9 +44,9 @@ t.default = e => {
   let {
     agency: t,
     rating: s,
-    className: i
+    className: r
   } = e, n = u[t][s];
   return null == n ? null : (0, a.jsx)("div", {
-    className: r()(l.contentRating, n, i)
+    className: i()(l.contentRating, n, r)
   })
 }

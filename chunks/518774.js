@@ -5,14 +5,14 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var i, r = n("735250"),
-  s = n("470079"),
-  a = n("803997"),
-  o = n.n(a),
+  a = n("470079"),
+  s = n("120356"),
+  o = n.n(s),
   l = n("699581"),
   u = n("358085"),
   d = n("144036"),
   _ = n("981631"),
-  c = n("58203");
+  c = n("731718");
 
 function E(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ let I = {
   bottom: 132,
   left: 80
 };
-class T extends(i = s.PureComponent) {
+class T extends(i = a.PureComponent) {
   componentDidMount() {
     this.setPosition(this.props.position)
   }
@@ -48,11 +48,11 @@ class T extends(i = s.PureComponent) {
       edgeOffsetTop: n,
       edgeOffsetLeft: i,
       edgeOffsetBottom: r,
-      edgeOffsetRight: s,
-      maxX: a,
+      edgeOffsetRight: a,
+      maxX: s,
       maxY: o,
       dockedRect: d
-    } = this.props, c = Math.round(n), E = Math.round(o - r - this._height), I = Math.round(i), T = Math.round(a - s - this._width), f = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
+    } = this.props, c = Math.round(n), E = Math.round(o - r - this._height), I = Math.round(i), T = Math.round(s - a - this._width), f = (0, u.getPlatform)() !== u.PlatformTypes.WEB && this.inPopout ? 22 : 0;
     if (null != d) {
       var S, h;
       return {
@@ -138,8 +138,8 @@ class T extends(i = s.PureComponent) {
       maxY: t,
       dockedRect: n,
       hidden: i,
-      roundCorners: s,
-      className: a
+      roundCorners: a,
+      className: s
     } = this.props, l = {};
     return null != n && (l = {
       transform: "translate3d(".concat(n.x, ", ").concat(n.y, ", 0)"),
@@ -148,9 +148,9 @@ class T extends(i = s.PureComponent) {
     }), (0, r.jsx)(d.default, {
       dragAnywhere: !0,
       ref: this.handleSetDraggableRef,
-      className: o()(c.pictureInPictureWindow, a, {
+      className: o()(c.pictureInPictureWindow, s, {
         [c.hidden]: i,
-        [c.borderRadius]: s
+        [c.borderRadius]: a
       }),
       maxX: e,
       maxY: t,
@@ -188,8 +188,8 @@ class T extends(i = s.PureComponent) {
       let {
         maxX: i,
         maxY: r
-      } = this.props, s = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), a = !0, o = !0;
-      if (s.x > i / 2 && (o = !1), s.y > r / 2 && (a = !1), n = a && o ? _.PictureInPicturePositions.TOP_LEFT : a && !o ? _.PictureInPicturePositions.TOP_RIGHT : !a && o ? _.PictureInPicturePositions.BOTTOM_LEFT : _.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
+      } = this.props, a = this.calculateDecayingPosition(e, t, this._velocityX, this._velocityY), s = !0, o = !0;
+      if (a.x > i / 2 && (o = !1), a.y > r / 2 && (s = !1), n = s && o ? _.PictureInPicturePositions.TOP_LEFT : s && !o ? _.PictureInPicturePositions.TOP_RIGHT : !s && o ? _.PictureInPicturePositions.BOTTOM_LEFT : _.PictureInPicturePositions.BOTTOM_RIGHT, this.animateToPosition(n, this.ensureIsInPosition), n !== this.props.position) {
         let {
           id: e,
           onMove: t
@@ -203,13 +203,13 @@ E(T, "defaultProps", {
   hidden: !1,
   roundCorners: !0
 });
-t.default = s.memo(e => {
+t.default = a.memo(e => {
   let {
     selectedPIPWindow: t,
     pipWindows: n,
     maxX: i,
-    maxY: s,
-    onWindowMove: a,
+    maxY: a,
+    onWindowMove: s,
     dockedRect: o,
     pictureInPictureComponents: l,
     appContext: u,
@@ -231,9 +231,9 @@ t.default = s.memo(e => {
         position: t.position,
         id: t.id,
         hidden: t.hidden,
-        onMove: a,
+        onMove: s,
         maxX: i,
-        maxY: s,
+        maxY: a,
         dockedRect: o,
         edgeOffsetTop: I.top,
         edgeOffsetBottom: I.bottom,

@@ -11,8 +11,8 @@ var i = n("735250"),
   o = n("696689"),
   l = n.n(o),
   u = n("692547"),
-  d = n("481517"),
-  _ = n("430600");
+  d = n("701717"),
+  _ = n("24073");
 let c = Object.fromEntries(Object.keys(u.default.colors).map(e => [l()(e), e])),
   E = r.forwardRef(function(e, t) {
     let n, {

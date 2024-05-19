@@ -1,56 +1,56 @@
 "use strict";
-n.r(t);
-var a = n("735250"),
-  i = n("470079"),
-  r = n("120356"),
-  s = n.n(r),
-  l = n("481060"),
-  o = n("441674"),
-  c = n("308083"),
-  d = n("418571");
+a.r(t);
+var n = a("735250"),
+  r = a("470079"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("481060"),
+  o = a("441674"),
+  c = a("308083"),
+  d = a("661926");
 t.default = e => {
   let {
     title: t,
-    description: n,
-    handleUpdate: r,
+    description: a,
+    handleUpdate: s,
     playstyle: u,
     error: f
-  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = i.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
-  return (0, a.jsxs)("div", {
+  } = e, m = (0, l.useToken)(l.tokens.colors.WHITE), h = r.useMemo(() => Object.values((0, c.getPlaystyleOptions)()), []);
+  return (0, n.jsxs)("div", {
     className: d.slideContent,
-    children: [(0, a.jsx)(l.Heading, {
+    children: [(0, n.jsx)(l.Heading, {
       variant: "heading-xxl/medium",
       className: d.title,
       children: t
-    }), (0, a.jsx)(l.Text, {
+    }), (0, n.jsx)(l.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
       className: d.subtitle,
-      children: n
-    }), null != f && (0, a.jsx)(l.Text, {
+      children: a
+    }), null != f && (0, n.jsx)(l.Text, {
       variant: "text-sm/normal",
       color: "status-danger",
       className: d.errorText,
       children: f
-    }), (0, a.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: d.playstyleSelect,
-      children: h.map(e => (0, a.jsxs)(l.Clickable, {
-        className: s()(d.playstyleOption, {
-          [d.selectedPlaystyle]: e.type === u
+      children: h.map(e => (0, n.jsxs)(l.Clickable, {
+        className: i()(d.playstyleOption, d.selectableOption, {
+          [d.selectedOption]: e.type === u
         }),
-        onClick: () => r(e.type),
-        children: [(0, a.jsx)(l.Heading, {
+        onClick: () => s(e.type),
+        children: [(0, n.jsx)(l.Heading, {
           variant: "heading-xxl/medium",
           children: e.emoji
-        }), (0, a.jsx)(l.Heading, {
+        }), (0, n.jsx)(l.Heading, {
           variant: "heading-md/medium",
           className: d.playstyleTitle,
           children: e.title
-        }), (0, a.jsx)(l.Text, {
+        }), (0, n.jsx)(l.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: e.subtitle
-        }), e.type === u && (0, a.jsx)(o.default, {
+        }), e.type === u && (0, n.jsx)(o.default, {
           backgroundColor: m.hex(),
           className: d.checkmark
         })]

@@ -30,8 +30,8 @@ function T(e) {
     analyticsLocation: N,
     analyticsSourceLocation: p,
     isGift: O = !1,
-    giftMessage: R,
-    subscriptionTier: C,
+    giftMessage: C,
+    subscriptionTier: R,
     trialId: g,
     postSuccessGuild: L,
     openInvoiceId: v,
@@ -41,11 +41,11 @@ function T(e) {
     returnRef: P,
     subscription: U,
     skipConfirm: b
-  } = null != e ? e : {}, G = !1, w = (0, r.v4)(), B = u.default.getCurrentUser(), k = (0, c.isPremiumExactly)(B, I.PremiumTypes.TIER_2);
+  } = null != e ? e : {}, G = !1, w = (0, r.v4)(), k = u.default.getCurrentUser(), B = (0, c.isPremiumExactly)(k, I.PremiumTypes.TIER_2);
   (0, a.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("62511"), n.e("58600"), n.e("8016"), n.e("32776"), n.e("57878"), n.e("95900"), n.e("17938"), n.e("84992"), n.e("19959"), n.e("40146")]).then(n.bind(n, "7305"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("29549"), n.e("15972"), n.e("440"), n.e("6416"), n.e("63438"), n.e("62511"), n.e("58600"), n.e("31605"), n.e("32776"), n.e("57878"), n.e("8016"), n.e("95900"), n.e("17938"), n.e("84992"), n.e("19959"), n.e("40146")]).then(n.bind(n, "7305"));
     return n => {
       let {
         onClose: r,
@@ -54,15 +54,15 @@ function T(e) {
       return (0, i.jsx)(e, {
         ...a,
         loadId: w,
-        subscriptionTier: C,
-        skuId: (0, c.castPremiumSubscriptionAsSkuId)(C),
+        subscriptionTier: R,
+        skuId: (0, c.castPremiumSubscriptionAsSkuId)(R),
         isGift: O,
-        giftMessage: R,
+        giftMessage: C,
         giftRecipient: y,
         initialPlanId: t,
         followupSKUInfo: T,
         onClose: (e, t) => {
-          r(), null == f || f(e), e && (null == h || h(), !O && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !k && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
+          r(), null == f || f(e), e && (null == h || h(), !O && null != t && t === I.PremiumSubscriptionSKUs.TIER_2 && !B && _.ComponentDispatch.dispatch(E.ComponentActions.PREMIUM_SUBSCRIPTION_CREATED))
         },
         onComplete: () => {
           G = !0, null == S || S(), !O && (0, l.setCanPlayWowMoment)(!0)

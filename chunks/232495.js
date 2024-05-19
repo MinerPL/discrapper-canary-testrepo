@@ -7,21 +7,21 @@ n.r(t), n.d(t, {
 var a = n("735250");
 n("470079");
 var l = n("442837"),
-  s = n("430824"),
-  i = n("914010"),
-  r = n("782089"),
+  s = n("115850"),
+  i = n("430824"),
+  r = n("914010"),
   o = n("689938"),
-  u = n("662469");
+  u = n("344484");
 let d = () => (0, a.jsx)(a.Fragment, {
     children: o.default.Messages.TIP_INSTANT_INVITE_BODY3.format({
       shareIcon: o.default.Messages.INSTANT_INVITE,
-      shareIconHook: () => (0, a.jsx)(r.default, {
+      shareIconHook: () => (0, a.jsx)(s.GroupPlusIcon, {
         className: u.icon
       }, "icon")
     })
   }),
   c = () => {
-    let e = (0, l.useStateFromStores)([s.default, i.default], () => s.default.getGuild(i.default.getGuildId()), []),
+    let e = (0, l.useStateFromStores)([i.default, r.default], () => i.default.getGuild(r.default.getGuildId()), []),
       t = null == e ? void 0 : e.name;
     return (0, a.jsx)(a.Fragment, {
       children: o.default.Messages.TIP_WRITING_MESSAGES_BODY3.format({

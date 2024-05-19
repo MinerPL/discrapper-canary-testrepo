@@ -10,7 +10,7 @@ var i = s("979554"),
   d = s("876917"),
   u = s("594174"),
   c = s("597688"),
-  f = s("70354");
+  f = s("485043");
 let p = n.AvatarSizes.SIZE_152,
   h = (0, r.getDecorationSizeForAvatarSize)(p),
   m = e => {
@@ -36,7 +36,7 @@ let p = n.AvatarSizes.SIZE_152,
       })
     })
   },
-  I = e => {
+  g = e => {
     let {
       item: t
     } = e;
@@ -55,7 +55,7 @@ t.default = e => {
   return (0, a.jsxs)(a.Fragment, {
     children: [(null == n ? void 0 : n.type) === i.CollectiblesItemType.AVATAR_DECORATION && (0, a.jsx)(m, {
       item: n
-    }), (null == n ? void 0 : n.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(I, {
+    }), (null == n ? void 0 : n.type) === i.CollectiblesItemType.PROFILE_EFFECT && (0, a.jsx)(g, {
       item: n
     })]
   })

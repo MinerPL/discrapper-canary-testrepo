@@ -1,24 +1,32 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return d
+    return f
   }
 }), n("47120");
-var a = n("876215"),
-  l = n("442837"),
-  s = n("146282"),
-  i = n("219634"),
-  r = n("897674"),
-  o = n("206583");
-let u = new Set([a.ContentInventoryEntryType.PLAYED_GAME, a.ContentInventoryEntryType.WATCHED_MEDIA, a.ContentInventoryEntryType.TOP_GAME]);
+var a = n("470079"),
+  l = n("876215"),
+  s = n("442837"),
+  i = n("146282"),
+  r = n("219634"),
+  o = n("520951"),
+  u = n("897674"),
+  d = n("206583");
+let c = new Set([l.ContentInventoryEntryType.PLAYED_GAME, l.ContentInventoryEntryType.WATCHED_MEDIA, l.ContentInventoryEntryType.TOP_GAME, l.ContentInventoryEntryType.TOP_ARTIST, l.ContentInventoryEntryType.LISTENED_SESSION]);
 
-function d(e) {
-  let t = (0, r.default)(o.ContentInventoryFeedKey.GLOBAL_FEED);
-  return t = null == (t = (0, i.default)({
+function f(e) {
+  let t = (0, u.default)(d.ContentInventoryFeedKey.GLOBAL_FEED);
+  t = (0, r.default)({
     entries: t,
     channelId: e
-  })) ? void 0 : t.filter(e => u.has(e.content_type)), {
-    requestId: (0, l.useStateFromStores)([s.default], () => s.default.getFeedRequestId(o.ContentInventoryFeedKey.GLOBAL_FEED)),
-    entries: t
+  }), t = a.useMemo(() => null == t ? void 0 : t.filter(e => c.has(e.content_type)), [t]);
+  let {
+    entries: n,
+    filteredIds: l
+  } = (0, o.default)(t);
+  return t = n, {
+    requestId: (0, s.useStateFromStores)([i.default], () => i.default.getFeedRequestId(d.ContentInventoryFeedKey.GLOBAL_FEED)),
+    entries: t,
+    impressionCappedEntryIds: l
   }
 }

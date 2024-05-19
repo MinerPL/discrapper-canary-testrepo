@@ -13,9 +13,9 @@ var l, a, s = n("735250"),
   c = n("392711"),
   f = n.n(c),
   h = n("748780"),
-  p = n("442837"),
-  m = n("215569"),
-  C = n("481060"),
+  m = n("442837"),
+  C = n("215569"),
+  p = n("481060"),
   g = n("612226"),
   E = n("951483"),
   _ = n("714338"),
@@ -25,7 +25,7 @@ var l, a, s = n("735250"),
   T = n("264549"),
   A = n("981631"),
   L = n("689938"),
-  v = n("22107");
+  v = n("672945");
 
 function x(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ let R = {
   },
   M = f()((0, g.getDefaultLayoutContent)()).groupBy(e => e.group).value();
 
-function O(e) {
+function y(e) {
   switch (e.keyCode) {
     case A.KeyboardKeys.ARROW_UP:
       return "UP";
@@ -57,7 +57,7 @@ function O(e) {
       return null
   }
 }
-let y = 1e3 / 60;
+let O = 1e3 / 60;
 
 function D() {
   let e = [g.KeybindGroup.MESSAGE, g.KeybindGroup.NAVIGATION, g.KeybindGroup.VOICE_AND_VIDEO, g.KeybindGroup.CHAT, g.KeybindGroup.MISCELLANEOUS];
@@ -74,10 +74,10 @@ function D() {
         }),
         children: [(0, s.jsxs)("div", {
           className: o()(v.keybindGroup),
-          children: [(0, s.jsx)(C.Heading, {
+          children: [(0, s.jsx)(p.Heading, {
             variant: "heading-md/semibold",
             children: i
-          }), null != r && (0, s.jsx)(C.Text, {
+          }), null != r && (0, s.jsx)(p.Text, {
             className: v.keybindGroupDescription,
             variant: "text-sm/normal",
             children: r
@@ -91,13 +91,13 @@ function D() {
               children: e.description
             }), (0, s.jsx)("div", {
               className: "keybind-shortcuts",
-              children: e.binds.map(e => (0, s.jsx)(C.KeyCombo, {
+              children: e.binds.map(e => (0, s.jsx)(p.KeyCombo, {
                 className: v.keybindKey,
                 shortcut: e
               }, e))
             })]
           }, t)
-        }), !l && (0, s.jsx)(C.FormDivider, {
+        }), !l && (0, s.jsx)(p.FormDivider, {
           className: v.keybindGroupDivider
         })]
       }, t)
@@ -129,12 +129,12 @@ class b extends i.PureComponent {
     return (0, s.jsxs)(h.default.div, {
       className: v.keyboardShortcutsModal,
       style: this.getStyles(),
-      children: [(0, s.jsxs)(C.H, {
+      children: [(0, s.jsxs)(p.H, {
         className: v.modalTitle,
         children: [(0, s.jsx)("div", {
           className: v.content,
           children: L.default.Messages.KEYBIND_DESCRIPTION_MODAL_TITLE
-        }), (0, s.jsx)(C.KeyCombo, {
+        }), (0, s.jsx)(p.KeyCombo, {
           shortcut: "mod+/"
         })]
       }), (0, s.jsx)("div", {
@@ -163,10 +163,10 @@ class b extends i.PureComponent {
           className: v.right,
           children: "right"
         })]
-      }), (0, s.jsx)(C.AdvancedScrollerAuto, {
+      }), (0, s.jsx)(p.AdvancedScrollerAuto, {
         ref: this.scrollerRef,
         fade: !0,
-        children: (0, s.jsx)(C.HeadingLevel, {
+        children: (0, s.jsx)(p.HeadingLevel, {
           children: (0, s.jsx)(D, {})
         })
       })]
@@ -211,53 +211,53 @@ class b extends i.PureComponent {
         animating: !0
       }), this.state.opacity.setValue(1), this.state.scaleX.setValue(.5), this.state.scaleY.setValue(1), h.default.sequence([h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         delay: 300,
         toValue: .7,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: .7,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.opacity, {
         toValue: 1,
-        duration: 2 * y
+        duration: 2 * O
       }), h.default.timing(this.state.scaleY, {
         delay: 100,
         toValue: .005,
-        duration: 8 * y,
+        duration: 8 * O,
         easing: h.default.Easing.in(h.default.Easing.ease)
       }), h.default.parallel([h.default.timing(this.state.scaleX, {
         toValue: 1,
-        duration: 10 * y,
+        duration: 10 * O,
         easing: h.default.Easing.out(h.default.Easing.ease)
       }), h.default.timing(this.state.opacity, {
         toValue: 0,
-        duration: 12 * y
+        duration: 12 * O
       })])]).start(e)
     }), x(this, "toggleOpacity", () => {
       1 === this.state.opacity._value ? this.state.opacity.setValue(0) : this.state.opacity.setValue(1)
@@ -279,13 +279,13 @@ class b extends i.PureComponent {
       }]
     })), x(this, "handleKeyDown", e => {
       if (this.lastInputedKeys.push(e.keyCode), this.lastInputedKeys = this.lastInputedKeys.slice(-5), this.lastInputedKeys[0] === A.KeyboardKeys.H && this.lastInputedKeys[1] === A.KeyboardKeys.H && this.lastInputedKeys[2] === A.KeyboardKeys.ARROW_RIGHT && this.lastInputedKeys[3] === A.KeyboardKeys.N && this.lastInputedKeys[4] === A.KeyboardKeys.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled) return;
-      let t = O(e);
+      let t = y(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({
         direction: t
       }))
     }), x(this, "handleKeyUp", e => {
       if (this.props.keyboardModeEnabled) return;
-      let t = O(e);
+      let t = y(e);
       null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({
         direction: t
       }))
@@ -311,7 +311,7 @@ function j(e) {
       let e = setTimeout(() => u(!1), 500);
       return () => clearTimeout(e)
     }
-  }, [r]), (0, s.jsx)(C.Clickable, {
+  }, [r]), (0, s.jsx)(p.Clickable, {
     onClick: d,
     className: o()(v.arrow, l, {
       [v.active]: t || r
@@ -324,15 +324,15 @@ function P(e) {
   let {
     transitionState: t,
     onClose: n
-  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, p.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
-  return (0, s.jsx)(C.ModalRoot, {
+  } = e, [l, a] = i.useState(!1), r = i.useMemo(() => __OVERLAY__ ? (0, E.getOverlayLayoutContent)() : (0, g.getDefaultLayoutContent)(), []), u = (0, m.useStateFromStores)([S.default], () => S.default.keyboardModeEnabled);
+  return (0, s.jsx)(p.ModalRoot, {
     className: o()(v.noBackground, {
       [v.noShadow]: l
     }),
-    size: C.ModalSize.DYNAMIC,
+    size: p.ModalSize.DYNAMIC,
     "aria-label": L.default.Messages.KEYBINDS,
     transitionState: t,
-    children: (0, s.jsx)(m.TransitionGroup, {
+    children: (0, s.jsx)(C.TransitionGroup, {
       component: "div",
       children: l ? (0, s.jsx)(T.default, {
         onClose: n

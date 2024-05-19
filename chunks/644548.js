@@ -43,7 +43,7 @@ t.default = e => {
     if (null != g && null != T && null != I && (0, c.isAllowedRange)(I)) return (0, u.generateGamingContentImage)({
       entry: n,
       applicationImageSrc: C,
-      avatarSrc: g.getAvatarURL(t.guild_id, 128),
+      avatarSrcs: [g.getAvatarURL(t.guild_id, 128)],
       description: p(n, t, g, I),
       timestamp: m.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_FOR_HOURS.format({
         hours: Math.round(T / i.default.Seconds.HOUR)

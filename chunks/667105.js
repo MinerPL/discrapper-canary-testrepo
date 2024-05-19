@@ -20,8 +20,9 @@ var i = n("470079"),
 function c(e) {
   let {
     quest: t,
-    location: n
-  } = e, a = (0, r.useStateFromStores)([s.default], () => {
+    location: n,
+    questContentPosition: a
+  } = e, c = (0, r.useStateFromStores)([s.default], () => {
     var e;
     return null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.verified
   });
@@ -29,12 +30,14 @@ function c(e) {
     null != t && ((0, o.trackQuestContentClicked)({
       questId: t.id,
       questContent: n,
-      questContentCTA: o.QuestContentCTA.CLAIM_REWARD
-    }), a ? (0, l.hasQuestCollectibleRewards)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
+      questContentCTA: o.QuestContentCTA.CLAIM_REWARD,
+      questContentPosition: a
+    }), c ? (0, l.hasQuestCollectibleRewards)(t.config) ? (0, u.openCollectibleRewardModal)(t, n) : (0, _.openQuestsRewardCodeModal)({
       questId: t.id,
-      location: n
+      location: n,
+      questContentPosition: a
     }) : (0, d.openRewardModalUnverified)())
-  }, [t, n, a])
+  }, [t, n, a, c])
 }
 
 function E(e) {

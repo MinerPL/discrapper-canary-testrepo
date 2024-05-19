@@ -27,7 +27,7 @@ var a = n("735250"),
   A = n("981631"),
   N = n("231338"),
   v = n("689938"),
-  x = n("40487");
+  x = n("513188");
 let M = e => {
     let {
       style: t,
@@ -48,7 +48,7 @@ let M = e => {
   R = e => {
     let {
       currentStatus: t
-    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, T.getHangStatusOptions)(), [L, y] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), j = () => {
+    } = e, s = l.useRef(_.default.getRecentCustomStatuses()), r = l.useRef((0, h.isDismissibleContentDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)).current, R = (0, T.getHangStatusOptions)(), [y, L] = l.useState(null != t ? t : null), O = (0, u.useStateFromStores)([m.default], () => m.default.getCurrentUser()), j = () => {
       !r && (0, h.markDismissibleContentAsDismissed)(d.DismissibleContent.HANG_STATUS_NEW_BADGE)
     }, P = (e, t) => {
       e.stopPropagation(), (0, S.updateHangStatus)(t, !0), j()
@@ -66,13 +66,13 @@ let M = e => {
         })
       }), j()
     }, F = l.useCallback(e => {
-      y({
+      L({
         type: A.ActivityTypes.HANG_STATUS,
         name: "Hang Status",
         state: e
       })
     }, []), w = l.useCallback(e => {
-      y({
+      L({
         type: A.ActivityTypes.HANG_STATUS,
         name: "Hang Status",
         state: N.HangStatusTypes.CUSTOM,
@@ -117,7 +117,7 @@ let M = e => {
               })]
             }), (0, a.jsx)(I.default, {
               className: x.statusIcon,
-              hangStatusActivity: L
+              hangStatusActivity: y
             })]
           })]
         })]
@@ -149,7 +149,7 @@ let M = e => {
           }), (0, a.jsx)(c.Clickable, {
             "aria-label": v.default.Messages.STATUS_POPOUT_CLEAR_STATUS,
             onClick: b,
-            onMouseEnter: () => y(null),
+            onMouseEnter: () => L(null),
             children: (0, a.jsx)(M, {
               className: x.optionButton,
               name: v.default.Messages.STATUS_POPOUT_CLEAR_STATUS,

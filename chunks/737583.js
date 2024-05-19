@@ -1,5 +1,8 @@
 "use strict";
 n.r(t), n.d(t, {
+  drawAvatars: function() {
+    return i
+  },
   drawBadges: function() {
     return s
   }
@@ -33,4 +36,30 @@ function s(e) {
       w: r
     }, !0)
   }
+}
+
+function i(e) {
+  let {
+    canvas: t,
+    avatarSrcs: n,
+    position: {
+      x: l,
+      y: s
+    },
+    avatarImageSize: i
+  } = e;
+  for (let e = 0; e < n.length; e++) e < n.length - 1 && t.clipRoundedRect({
+    x: l + (e + 1) * (i - 8) - 2,
+    y: s - 1,
+    w: i + 2,
+    h: i + 2
+  }, i / 2, !0), t.drawRoundedImage(n[e], {
+    x: l + e * (i - 8),
+    y: s
+  }, {
+    w: i,
+    h: i
+  }, 50, {
+    fillMode: a.FillMode.Cover
+  }), t.restoreContext()
 }

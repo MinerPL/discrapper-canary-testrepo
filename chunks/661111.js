@@ -52,7 +52,7 @@ t.default = {
     })
   },
   async fetchChangelog(e, t) {
-    if (null != a.default.getChangelog(e, t)) return null;
+    if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != a.default.getChangelog(e, t)) return null;
     let n = l.ChangelogPlatforms.DESKTOP;
     try {
       let a = await i.HTTP.get({

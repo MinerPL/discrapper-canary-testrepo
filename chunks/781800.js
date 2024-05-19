@@ -9,7 +9,7 @@ var r = s("465270"),
   o = s("391110"),
   u = s("981631"),
   d = s("689938"),
-  c = s("3230");
+  c = s("263763");
 t.default = e => {
   let {
     setIsAllPerksVisible: t,

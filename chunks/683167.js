@@ -31,6 +31,12 @@ let l = (0, a.createExperiment)({
       config: {
         coachtipEdition: s.ShopCoachtipEditions.GALAXY
       }
+    }, {
+      id: 4,
+      label: "Retro & Pirates",
+      config: {
+        coachtipEdition: s.ShopCoachtipEditions.RETRO_AND_PIRATES
+      }
     }]
   }),
   i = e => l.useExperiment({

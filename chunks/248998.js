@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 });
 var a = s("735250");
 s("470079");
-var n = s("803997"),
+var n = s("120356"),
   l = s.n(n),
   i = s("913527"),
   r = s.n(i),
@@ -14,7 +14,7 @@ var n = s("803997"),
   d = s("55935"),
   u = s("955204"),
   c = s("674680"),
-  S = s("795597");
+  S = s("83118");
 
 function E(e) {
   let {
@@ -26,19 +26,19 @@ function E(e) {
     {
       name: E,
       description: T,
-      hideDescriptionUntilUnlock: _,
-      onAction: f
+      hideDescriptionUntilUnlock: f,
+      onAction: _
     } = n,
-    m = _ && !i,
+    m = f && !i,
     g = i ? "header-primary" : "text-muted",
-    h = i ? "header-secondary" : "text-muted",
-    N = r()(s),
-    I = null != f && i,
-    p = I ? o.Clickable : "div";
+    I = i ? "header-secondary" : "text-muted",
+    h = r()(s),
+    N = null != _ && i,
+    p = N ? o.Clickable : "div";
   return (0, a.jsxs)(p, {
-    className: l()(S.container, I && S.actionable),
+    className: l()(S.container, N && S.actionable),
     onClick: () => {
-      I && f()
+      N && _()
     },
     children: [(0, a.jsx)("div", {
       className: S.iconContainer,
@@ -53,14 +53,14 @@ function E(e) {
         variant: "text-xxs/semibold",
         color: "text-muted",
         className: S.unlocked,
-        children: (0, d.calendarFormat)(N)
+        children: (0, d.calendarFormat)(h)
       }), (0, a.jsx)(o.Text, {
         variant: "text-md/medium",
         color: g,
         children: E()
       }), (0, a.jsx)(o.Text, {
         variant: "text-xs/normal",
-        color: h,
+        color: I,
         children: m ? "?????" : T()
       })]
     })]

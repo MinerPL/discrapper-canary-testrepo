@@ -1,18 +1,19 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return s
+    return r
   }
 });
-var i = n("442837"),
-  r = n("430824"),
-  a = n("963202");
+var i = n("963202");
 
-function s(e) {
-  let t = (0, i.useStateFromStoresArray)([r.default], () => Object.values(r.default.getGuilds())),
-    n = (0, a.useAnyClanPrepilotExperimentEnabled)(t, e),
-    {
-      clanDiscoveryEnabled: s
-    } = (0, a.useClanPilotExperiment)(e);
-  return n || s
+function r(e) {
+  let {
+    enableClanCreation: t
+  } = (0, i.useClanPrepilotExperimentForAllGuilds)({
+    location: e,
+    includeConverted: !1
+  }), {
+    clanDiscoveryEnabled: n
+  } = (0, i.useClanPilotExperiment)(e);
+  return t || n
 }

@@ -24,9 +24,9 @@ var i = n("735250"),
   m = n("354459"),
   N = n("981631"),
   p = n("689938"),
-  O = n("119013");
+  O = n("265054");
 
-function R(e, t) {
+function C(e, t) {
   switch (e) {
     case m.ParticipantTypes.ACTIVITY:
       return p.default.Messages.EMBEDDED_ACTIVITIES_NUM_PARTICIPANTS.format({
@@ -41,7 +41,7 @@ function R(e, t) {
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     users: t,
     disableInteraction: n,
@@ -49,7 +49,7 @@ function C(e) {
     participantType: a,
     channelId: o,
     handleUserContextMenu: l
-  } = e, u = R(a, t.length);
+  } = e, u = C(a, t.length);
   return (0, i.jsx)(_.Dialog, {
     "aria-label": u,
     className: O.popoutWrapper,
@@ -84,7 +84,7 @@ function g(e) {
     maxVisibleUsers: a = 3,
     className: o,
     participantType: l
-  } = e, u = R(l, t.length), d = t.length < a ? t.map(e => (0, i.jsx)("div", {
+  } = e, u = C(l, t.length), d = t.length < a ? t.map(e => (0, i.jsx)("div", {
     className: O.viewersTooltipItem,
     children: A.default.getName(n, r, e)
   }, e.id)) : u;
@@ -113,12 +113,12 @@ function v(e) {
     compact: S = !1,
     disableInteraction: A = !1,
     maxVisibleUsers: p = 3
-  } = e, [R, v] = r.useState(!1), D = r.useRef(new d.DelayedCall(150, () => v(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
+  } = e, [C, v] = r.useState(!1), D = r.useRef(new d.DelayedCall(150, () => v(!1))), M = (0, u.useStateFromStoresArray)([I.default, T.default], () => {
     if (o.type === m.ParticipantTypes.STREAM) {
       let e = I.default.getViewerIds(o.id);
       return e.length > 0 ? e.map(e => T.default.getUser(e)).filter(h.isNotNullish) : L
     }
-    return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.size > 0 ? Array.from(o.participants).map(e => T.default.getUser(e)).filter(h.isNotNullish) : L : L
+    return o.type === m.ParticipantTypes.ACTIVITY ? o.participants.length > 0 ? Array.from(o.participants).map(e => T.default.getUser(e.userId)).filter(h.isNotNullish) : L : L
   }, [o]), y = r.useCallback(() => {
     D.current.cancel(), v(!0)
   }, []), P = r.useCallback(() => {
@@ -127,7 +127,7 @@ function v(e) {
     y(), (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("15421")]).then(n.bind(n, "881351"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("15421")]).then(n.bind(n, "881351"));
       return n => (0, i.jsx)(e, {
         ...n,
         user: t
@@ -160,7 +160,7 @@ function v(e) {
       onMouseEnter: y,
       onMouseLeave: P,
       children: (0, i.jsx)(_.Popout, {
-        renderPopout: () => (0, i.jsx)(C, {
+        renderPopout: () => (0, i.jsx)(R, {
           participantType: o.type,
           handleUserContextMenu: U,
           guildId: a,
@@ -168,7 +168,7 @@ function v(e) {
           users: M,
           disableInteraction: A
         }),
-        shouldShow: R,
+        shouldShow: C,
         position: "top",
         children: () => (0, i.jsx)("div", {
           className: s()(O.viewers, f),

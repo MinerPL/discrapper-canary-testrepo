@@ -1,169 +1,169 @@
 "use strict";
 l.r(r), l.d(r, {
   default: function() {
-    return C
+    return j
   }
 });
 var t = l("735250"),
-  s = l("470079"),
-  n = l("481060"),
+  n = l("470079"),
+  s = l("481060"),
   a = l("100527"),
   i = l("906732"),
-  o = l("563132"),
+  o = l("598"),
   c = l("409813"),
   d = l("185139"),
   u = l("263954"),
   p = l("267642"),
   m = l("678558"),
-  E = l("981631"),
-  N = l("689938"),
-  f = l("655986"),
-  S = l("949086");
-let _ = "premium-guild-subscription-upsell-modal-header";
+  f = l("981631"),
+  E = l("689938"),
+  N = l("824348"),
+  S = l("611273");
+let x = "premium-guild-subscription-upsell-modal-header";
 
-function T(e) {
+function h(e) {
   let {
     title: r,
     subtitle: l,
-    image: s
+    image: n
   } = e;
   return (0, t.jsxs)("div", {
-    className: f.header,
-    children: [(0, t.jsx)(n.Heading, {
+    className: N.header,
+    children: [(0, t.jsx)(s.Heading, {
       variant: "heading-xl/semibold",
-      id: _,
+      id: x,
       color: "header-primary",
       className: S.marginBottom8,
       children: r
-    }), (0, t.jsx)(n.Text, {
+    }), (0, t.jsx)(s.Text, {
       variant: "text-md/normal",
-      className: f.subtitleText,
+      className: N.subtitleText,
       children: l
-    }), s]
+    }), n]
   })
 }
-let h = e => {
+let _ = e => {
     let {
       onClose: r,
       perks: l,
-      perkIntro: s = N.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER,
+      perkIntro: n = E.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER,
       headerProps: a
     } = e;
     return (0, t.jsxs)("div", {
-      className: f.wrapper,
-      children: [(0, t.jsx)(n.ModalCloseButton, {
-        className: f.closeButton,
+      className: N.wrapper,
+      children: [(0, t.jsx)(s.ModalCloseButton, {
+        className: N.closeButton,
         onClick: () => {
           r()
         }
-      }), (0, t.jsx)(x, {
+      }), (0, t.jsx)(C, {
         headerProps: a,
-        perkIntro: s
+        perkIntro: n
       }), (0, t.jsx)("div", {
-        className: f.perks,
+        className: N.perks,
         children: l.map((e, r) => {
           let {
             icon: l,
-            iconClassName: s,
-            description: n,
+            iconClassName: n,
+            description: s,
             color: a
           } = e;
           return (0, t.jsx)(u.default, {
             icon: l,
-            iconClassName: s,
-            description: n,
+            iconClassName: n,
+            description: s,
             color: a
           }, r)
         })
       })]
     })
   },
-  x = e => {
+  C = e => {
     let {
       headerProps: r,
       perkIntro: a
     } = e;
-    return (0, t.jsxs)(s.Fragment, {
-      children: [null != r ? (0, t.jsx)(T, {
+    return (0, t.jsxs)(n.Fragment, {
+      children: [null != r ? (0, t.jsx)(h, {
         ...r
       }) : (0, t.jsx)("img", {
-        className: f.heroImage,
+        className: N.heroImage,
         src: l("438471"),
-        alt: N.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER_IMG_ALT_TEXT
-      }), (0, t.jsx)(n.Text, {
+        alt: E.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_UPSELL_MODAL_HEADER_IMG_ALT_TEXT
+      }), (0, t.jsx)(s.Text, {
         variant: "text-md/normal",
-        className: f.heading,
+        className: N.heading,
         children: a
       })]
     })
   },
-  A = e => {
+  T = e => {
     let {
       guild: r,
       targetBoostedGuildTier: l,
-      onClose: s,
+      onClose: n,
       analyticsSourceLocation: a
     } = e, i = {
-      section: E.AnalyticsSections.PREMIUM_GUILD_UPSELL_MODAL,
-      object: E.AnalyticsObjects.BUTTON_CTA,
+      section: f.AnalyticsSections.PREMIUM_GUILD_UPSELL_MODAL,
+      object: f.AnalyticsObjects.BUTTON_CTA,
       objectType: null != l ? (0, p.boostedGuildTierToAnalyticsObjectType)(l) : null
     };
-    return (0, t.jsxs)(n.ModalFooter, {
-      className: f.footer,
-      children: [(0, t.jsx)(n.Button, {
-        size: n.Button.Sizes.SMALL,
-        color: n.Button.Colors.PRIMARY,
-        look: n.Button.Looks.LINK,
+    return (0, t.jsxs)(s.ModalFooter, {
+      className: N.footer,
+      children: [(0, t.jsx)(s.Button, {
+        size: s.Button.Sizes.SMALL,
+        color: s.Button.Colors.PRIMARY,
+        look: s.Button.Looks.LINK,
         onClick: () => {
-          s()
+          n()
         },
-        children: N.default.Messages.CLOSE
+        children: E.default.Messages.CLOSE
       }), (0, t.jsx)(m.default, {
         analyticsLocation: i,
         analyticsSourceLocation: a,
         guild: r,
         targetBoostedGuildTier: l,
         onClose: () => {
-          s()
+          n()
         }
       })]
     })
   };
 
-function C(e) {
+function j(e) {
   let {
     analyticsSourceLocation: r,
     guild: l,
-    targetBoostedGuildTier: s,
+    targetBoostedGuildTier: n,
     perks: u,
     perkIntro: p,
     headerProps: m,
-    onClose: E,
-    ...N
+    onClose: f,
+    ...E
   } = e, {
-    analyticsLocations: f
+    analyticsLocations: N
   } = (0, i.default)(a.default.ACTIVITY_DIRECTORY);
   return (0, t.jsx)(i.AnalyticsLocationProvider, {
-    value: f,
+    value: N,
     children: (0, t.jsx)(o.PaymentContextProvider, {
       activeSubscription: null,
       stepConfigs: [],
       skuIDs: [],
-      children: (0, t.jsx)(n.ModalRoot, {
-        ...N,
-        "aria-labelledby": _,
+      children: (0, t.jsx)(s.ModalRoot, {
+        ...E,
+        "aria-labelledby": x,
         children: (0, t.jsx)(d.default, {
           hideBreadcrumbs: !0,
-          body: (0, t.jsx)(h, {
-            onClose: E,
+          body: (0, t.jsx)(_, {
+            onClose: f,
             perks: u,
             perkIntro: p,
             headerProps: m
           }),
-          footer: (0, t.jsx)(A, {
+          footer: (0, t.jsx)(T, {
             guild: l,
-            targetBoostedGuildTier: s,
-            onClose: E,
+            targetBoostedGuildTier: n,
+            onClose: f,
             analyticsSourceLocation: r
           }),
           steps: [c.Step.PREMIUM_GUILD_UPSELL],

@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   HeroImage: function() {
-    return v
+    return O
   },
   default: function() {
-    return L
+    return x
   }
 }), n("47120");
 var s = n("735250"),
@@ -19,8 +19,8 @@ var s = n("735250"),
   f = n("695346"),
   E = n("271383"),
   _ = n("594174"),
-  T = n("346656"),
-  m = n("682864"),
+  m = n("346656"),
+  T = n("682864"),
   I = n("671533"),
   p = n("810090"),
   h = n("51144"),
@@ -30,9 +30,9 @@ var s = n("735250"),
   A = n("544978"),
   g = n("893182"),
   M = n("689938"),
-  R = n("871142");
+  R = n("22657");
 
-function O(e) {
+function v(e) {
   let {
     onClick: t
   } = e;
@@ -43,7 +43,7 @@ function O(e) {
       variant: "text-sm/medium",
       color: "header-primary",
       children: M.default.Messages.GUILD_STORE_HERO_SHOW_MORE_DESCRIPTION_LABEL
-    }), (0, s.jsx)(m.default, {
+    }), (0, s.jsx)(T.default, {
       size: 4,
       horizontal: !0
     }), (0, s.jsx)(I.default, {
@@ -53,7 +53,7 @@ function O(e) {
   })
 }
 
-function v(e) {
+function O(e) {
   let {
     coverImageAsset: t,
     isPreview: n = !1
@@ -80,7 +80,7 @@ function v(e) {
   })
 }
 
-function L(e) {
+function x(e) {
   var t, n, l;
   let {
     guild: c,
@@ -99,23 +99,23 @@ function L(e) {
       nickcolor: null !== (t = null == s ? void 0 : s.colorString) && void 0 !== t ? t : void 0
     }
   }, [l])), {
-    isTruncated: L,
-    ExpandableTextContainer: x
+    isTruncated: x,
+    ExpandableTextContainer: L
   } = (0, S.useExpandableTextContainer)(), D = (null !== (n = null == f ? void 0 : null === (t = f.description) || void 0 === t ? void 0 : t.trim().length) && void 0 !== n ? n : 0) > 0, [P, y] = a.useState(1), U = (0, u.default)("(max-width: ".concat(R.twoColumnWidth, ")")), {
-    selectedTab: b,
-    isPhantomPreview: j
-  } = (0, C.useGuildShopDisplayContext)(), G = b === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, B = D ? (0, s.jsxs)(s.Fragment, {
-    children: [(0, s.jsx)(x, {
+    selectedTab: j,
+    isPhantomPreview: b
+  } = (0, C.useGuildShopDisplayContext)(), B = j === A.GuildShopTab.GUILD_PRODUCTS_PREVIEW ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TAB_DESCRIPTION : M.default.Messages.GUILD_STORE_HERO_PREVIEW_PAGE_DESCRIPTION, F = D ? (0, s.jsxs)(s.Fragment, {
+    children: [(0, s.jsx)(L, {
       lineClamp: U || 2 === P ? 2 : 3,
       children: (0, s.jsx)(o.Text, {
         variant: "text-sm/normal",
         color: "text-normal",
         children: null == f ? void 0 : f.description
       })
-    }), L && (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(m.default, {
+    }), x && (0, s.jsxs)(s.Fragment, {
+      children: [(0, s.jsx)(T.default, {
         size: 4
-      }), (0, s.jsx)(O, {
+      }), (0, s.jsx)(v, {
         onClick: () => (0, g.default)({
           guildId: I
         })
@@ -124,19 +124,19 @@ function L(e) {
   }) : (0, s.jsx)(o.Text, {
     variant: "text-sm/normal",
     color: "text-normal",
-    children: j ? G : M.default.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
+    children: b ? B : M.default.Messages.GUILD_STORE_HERO_DEFAULT_DESCRIPTION
   });
   return (0, s.jsxs)("div", {
     className: R.container,
     children: [(0, s.jsxs)("div", {
       className: R.infoContainer,
       children: [(0, s.jsx)("div", {
-        children: (0, s.jsx)(T.default, {
+        children: (0, s.jsx)(m.default, {
           guild: c,
-          size: T.default.Sizes.LARGER,
-          iconSrc: null == c.icon || j ? (0, d.getAssetCDNUrl)("server_products/storefront/default-guild-icon.jpg") : void 0
+          size: m.default.Sizes.LARGER,
+          iconSrc: null == c.icon || b ? (0, d.getAssetCDNUrl)("server_products/storefront/default-guild-icon.jpg") : void 0
         })
-      }), (0, s.jsx)(m.default, {
+      }), (0, s.jsx)(T.default, {
         size: 16,
         horizontal: !0
       }), (0, s.jsxs)("div", {
@@ -148,12 +148,12 @@ function L(e) {
             variant: "heading-xl/semibold",
             color: "header-primary",
             lineClamp: 2,
-            children: j ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : M.default.Messages.GUILD_STORE_HERO_TITLE.format({
+            children: b ? M.default.Messages.GUILD_STORE_HERO_PREVIEW_TITLE : M.default.Messages.GUILD_STORE_HERO_TITLE.format({
               guildName: c.name
             })
           })
         }), (0, s.jsxs)(s.Fragment, {
-          children: [(0, s.jsx)(m.default, {
+          children: [(0, s.jsx)(T.default, {
             size: 8
           }), (0, s.jsx)(o.Text, {
             variant: "text-md/normal",
@@ -169,14 +169,14 @@ function L(e) {
                 }, t)
               }
             })
-          }), (0, s.jsx)(m.default, {
+          }), (0, s.jsx)(T.default, {
             size: 9
-          }), B]
+          }), F]
         })]
       })]
-    }), (0, s.jsx)(v, {
+    }), (0, s.jsx)(O, {
       coverImageAsset: null == f ? void 0 : f.cover_image_asset,
-      isPreview: j
+      isPreview: b
     })]
   })
 }

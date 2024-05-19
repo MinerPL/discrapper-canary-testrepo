@@ -1,19 +1,20 @@
 "use strict";
 n.r(t), n("47120");
-var a = n("120960"),
-  s = n("996106"),
-  l = n("452426"),
-  i = n("186901"),
-  r = n("981631"),
-  o = n("65154");
+var a = n("243814"),
+  s = n("120960"),
+  l = n("996106"),
+  i = n("452426"),
+  r = n("186901"),
+  o = n("981631"),
+  u = n("65154");
 t.default = {
-  [r.RPCCommands.SET_CERTIFIED_DEVICES]: {
+  [o.RPCCommands.SET_CERTIFIED_DEVICES]: {
     scope: {
-      [i.RPC_SCOPE_CONFIG.ANY]: [r.OAuth2Scopes.RPC, i.RPC_LOCAL_SCOPE]
+      [r.RPC_SCOPE_CONFIG.ANY]: [a.OAuth2Scopes.RPC, r.RPC_LOCAL_SCOPE]
     },
-    validation: e => (0, l.default)(e).required().keys({
-      devices: e.array().items((0, l.default)(e).keys({
-        type: e.string().required().valid([o.DeviceTypes.AUDIO_INPUT, o.DeviceTypes.AUDIO_OUTPUT, o.DeviceTypes.VIDEO_INPUT]),
+    validation: e => (0, i.default)(e).required().keys({
+      devices: e.array().items((0, i.default)(e).keys({
+        type: e.string().required().valid([u.DeviceTypes.AUDIO_INPUT, u.DeviceTypes.AUDIO_OUTPUT, u.DeviceTypes.VIDEO_INPUT]),
         id: e.string().required().min(1),
         vendor: e.object().required().keys({
           name: e.string().min(1),
@@ -37,10 +38,10 @@ t.default = {
           devices: n
         }
       } = e;
-      if (null == t.application.id) throw new s.default({
-        errorCode: r.RPCErrors.INVALID_COMMAND
+      if (null == t.application.id) throw new l.default({
+        errorCode: o.RPCErrors.INVALID_COMMAND
       }, "No application.");
-      (0, a.setCertifiedDevices)(t.application.id, n.map(e => ({
+      (0, s.setCertifiedDevices)(t.application.id, n.map(e => ({
         type: e.type,
         id: e.id,
         vendor: e.vendor,

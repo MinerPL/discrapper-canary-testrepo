@@ -16,16 +16,17 @@ var l = s("735250"),
   f = s("706454"),
   S = s("430824"),
   m = s("785717"),
-  I = s("648067"),
-  E = s("588822"),
+  E = s("648067"),
+  I = s("588822"),
   v = s("81334"),
   _ = s("652853"),
   T = s("335191"),
-  x = s("347949"),
-  N = s("192591"),
-  A = s("351707"),
-  U = s("689938"),
-  g = s("634516");
+  g = s("347949"),
+  A = s("192591"),
+  x = s("351707"),
+  U = s("228168"),
+  N = s("689938"),
+  p = s("363175");
 
 function C(e) {
   let {
@@ -35,58 +36,60 @@ function C(e) {
     autoFocusNote: C,
     className: h
   } = e, {
-    theme: p
+    theme: R
   } = (0, _.useUserProfileThemeContext)(), {
-    trackUserProfileAction: R
-  } = (0, m.useUserProfileAnalyticsContext)(), j = null == i ? void 0 : i.guildId, M = (0, r.useStateFromStores)([S.default], () => null != j ? S.default.getGuild(j) : null), {
-    recentGames: P,
+    trackUserProfileAction: P
+  } = (0, m.useUserProfileAnalyticsContext)(), M = null == i ? void 0 : i.guildId, j = (0, r.useStateFromStores)([S.default], () => null != M ? S.default.getGuild(M) : null), {
+    recentGames: L,
     isFetching: y,
     currentUserApplicationIds: O
-  } = (0, c.useUserRecentGames)(t.id), L = a.useMemo(() => {
+  } = (0, c.useUserRecentGames)(t.id), F = a.useMemo(() => {
     var e;
-    return null !== (e = null == P ? void 0 : P.slice(0, 6)) && void 0 !== e ? e : []
-  }, [P]), F = (0, d.useIsUserRecentGamesEnabled)({
+    return null !== (e = null == L ? void 0 : L.slice(0, 6)) && void 0 !== e ? e : []
+  }, [L]), D = (0, d.useIsUserRecentGamesEnabled)({
     location: "SimplifiedUserProfileModalInfo",
     userId: t.id
-  }), D = (0, r.useStateFromStores)([f.default], () => f.default.locale), b = (0, I.default)(t.id);
+  }), b = (0, r.useStateFromStores)([f.default], () => f.default.locale), B = (0, E.default)(t.id);
   return (0, l.jsxs)(o.ScrollerThin, {
     fade: !0,
-    className: n()(g.scroller, h),
-    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(E.default, {
+    className: n()(p.scroller, h),
+    children: [(null == i ? void 0 : i.bio) != null && (null == i ? void 0 : i.bio) !== "" && (0, l.jsx)(I.default, {
       userBio: i.bio,
       setLineClamp: !1
-    }), null != M && (0, l.jsx)(A.default, {
+    }), null != j && (0, l.jsx)(x.default, {
       user: t,
       currentUser: s,
-      guild: M
-    }), (0, l.jsx)(v.default, {
-      className: g.section,
-      userId: t.id,
-      guildId: null == i ? void 0 : i.guildId,
-      headingVariant: "text-xs/semibold"
-    }), F && !y && L.length > 0 && (0, l.jsx)(N.default, {
-      title: U.default.Messages.LAST_PLAYED_GAMES,
-      children: (0, l.jsx)(x.UserProfileRecentGames, {
+      guild: j
+    }), (0, l.jsx)(A.default, {
+      title: N.default.Messages.USER_PROFILE_MEMBER_SINCE,
+      children: (0, l.jsx)(v.default, {
         userId: t.id,
-        recentGames: L,
+        guildId: null == i ? void 0 : i.guildId,
+        tooltipDelay: U.USER_PROFILE_TOOLTIP_DELAY
+      })
+    }), D && !y && F.length > 0 && (0, l.jsx)(A.default, {
+      title: N.default.Messages.LAST_PLAYED_GAMES,
+      children: (0, l.jsx)(g.UserProfileRecentGames, {
+        userId: t.id,
+        recentGames: F,
         currentUserApplicationIds: O
       })
-    }), b.length > 0 && (0, l.jsx)(N.default, {
-      title: U.default.Messages.CONNECTIONS,
+    }), B.length > 0 && (0, l.jsx)(A.default, {
+      title: N.default.Messages.CONNECTIONS,
       children: (0, l.jsx)(T.ConnectedUserAccounts, {
-        connectedAccounts: b,
-        className: g.connections,
+        connectedAccounts: B,
+        className: p.connections,
         userId: t.id,
-        theme: p,
-        locale: D
+        theme: R,
+        locale: b
       })
-    }), (0, l.jsx)(N.default, {
-      title: U.default.Messages.NOTE,
+    }), (0, l.jsx)(A.default, {
+      title: N.default.Messages.NOTE,
       children: (0, l.jsx)(u.default, {
         userId: t.id,
-        className: g.note,
+        className: p.note,
         autoFocus: C,
-        onUpdate: () => R({
+        onUpdate: () => P({
           action: "SET_NOTE"
         })
       })

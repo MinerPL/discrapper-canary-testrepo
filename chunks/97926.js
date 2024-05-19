@@ -1,5 +1,5 @@
 "use strict";
-s.r(t), s("47120");
+s.r(t), s("47120"), s("724458");
 var a = s("735250"),
   n = s("470079"),
   l = s("844099"),
@@ -9,14 +9,13 @@ var a = s("735250"),
   d = s("113434"),
   u = s("497505"),
   c = s("918701"),
-  S = s("87894"),
-  E = s("37303"),
-  T = s("46140"),
-  f = s("981631"),
-  m = s("689938"),
-  _ = s("941725");
+  S = s("37303"),
+  E = s("46140"),
+  T = s("981631"),
+  f = s("689938"),
+  _ = s("201403");
 
-function g(e) {
+function m(e) {
   if (null == e) return !1;
   let {
     userStatus: t
@@ -30,15 +29,15 @@ t.default = () => {
     isFetchingCurrentQuests: t
   } = (0, d.useQuests)({
     fetchPolicy: "cache-and-network"
-  }), s = (0, d.useExpiredQuestsMap)(), h = (0, o.useIsEligibleForConcurrentQuests)({
-    location: T.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
+  }), s = (0, d.useExpiredQuestsMap)(), g = (0, o.useIsEligibleForConcurrentQuests)({
+    location: E.QuestsExperimentLocations.USER_SETTINGS_GIFT_INVENTORY
   }), I = n.useMemo(() => e.filter(e => {
     var t, a;
     let n = (null === (t = e.userStatus) || void 0 === t ? void 0 : t.completedAt) != null;
     return !(null !== (a = s.get(e.id)) && void 0 !== a && a) || n
-  }), [e, s]), N = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), p = n.useRef(!1), C = n.useRef([]), A = n.useMemo(() => {
+  }), [e, s]), h = n.useMemo(() => new Map(I.map(e => [e.id, e])), [I]), N = n.useRef(!1), p = n.useRef([]), C = n.useMemo(() => {
     if (0 === I.length) return [];
-    if (p.current) return C.current;
+    if (N.current) return p.current;
     let e = I.sort((e, t) => {
       var s, a, n, l, i, r;
       let o = (null === (s = e.userStatus) || void 0 === s ? void 0 : s.completedAt) != null,
@@ -56,92 +55,112 @@ t.default = () => {
       }
       if (T && !o) return -1;
       if (f && !S) return 1;
-      let m = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
-        _ = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
-      if (m && _) return 0;
-      if (m) return -1;
-      if (_) return 1;
+      let _ = (0, c.isTargetedForContent)(e, u.QuestContent.QUEST_BAR),
+        m = (0, c.isTargetedForContent)(t, u.QuestContent.QUEST_BAR);
+      if (_ && m) return 0;
+      if (_) return -1;
+      if (m) return 1;
       let g = (0, c.isTargetedForContent)(e, u.QuestContent.GIFT_INVENTORY_FOR_YOU),
-        h = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
-      if (g && !T && !o && h && !f && !S) return 0;
+        I = (0, c.isTargetedForContent)(t, u.QuestContent.GIFT_INVENTORY_FOR_YOU);
+      if (g && !T && !o && I && !f && !S) return 0;
       if (g && !T && !o) return -1;
-      if (h && !f && !S) return 1;
-      let I = o && d,
+      if (I && !f && !S) return 1;
+      let h = o && d,
         N = S && E;
-      return I && !N ? 1 : !I && N ? -1 : 0
+      return h && !N ? 1 : !h && N ? -1 : 0
     }).map(e => e.id);
-    return p.current = !0, C.current = e, e
-  }, [I]), O = n.useRef(null), x = n.useMemo(() => {
-    if (null != O.current) return O.current;
-    let e = h ? [{
-      section: S.QuestsInventorySection.FOR_YOU,
-      title: m.default.Messages.QUESTS_FOR_YOU,
-      questIds: A.filter(e => g(N.get(e)))
+    return N.current = !0, p.current = e, e
+  }, [I]), A = n.useRef(null), O = n.useMemo(() => {
+    if (null != A.current) return A.current;
+    let e = g ? [{
+      location: u.QuestContent.GIFT_INVENTORY_FOR_YOU,
+      title: f.default.Messages.QUESTS_FOR_YOU,
+      questIds: C.filter(e => m(h.get(e)))
     }, {
-      section: S.QuestsInventorySection.OTHER,
-      title: m.default.Messages.QUESTS_OTHER,
-      questIds: A.filter(e => !g(N.get(e)))
+      location: u.QuestContent.GIFT_INVENTORY_OTHER,
+      title: f.default.Messages.QUESTS_OTHER,
+      questIds: C.filter(e => !m(h.get(e)))
     }] : [];
-    return O.current = e, e
-  }, [h, A, N]), R = n.useCallback(e => {
+    return A.current = e, e
+  }, [g, C, h]), x = O.every(e => {
+    let {
+      questIds: t
+    } = e;
+    return t.length > 0
+  });
+  n.useEffect(() => {
+    t && (A.current = null, N.current = !1)
+  }, [t]);
+  let R = n.useCallback(e => {
     let {
       questIds: t,
-      section: s
+      location: s,
+      contentPositionOffset: n = 0
     } = e;
     return (0, a.jsx)(a.Fragment, {
-      children: t.map(e => {
-        let t = N.get(e);
-        return null == t ? null : (0, a.jsx)(E.QuestsCard, {
-          quest: t,
-          giftInventorySection: s,
-          location: u.QuestContent.QUEST_INVENTORY_CARD
-        }, t.id)
+      children: t.map((e, t) => {
+        let l = h.get(e);
+        return null == l ? null : (0, a.jsx)(S.QuestsCard, {
+          quest: l,
+          location: s,
+          initiallyExpanded: !x,
+          contentPosition: t + n
+        }, l.id)
       })
     })
-  }, [N]);
+  }, [x, h]);
   return t ? (0, a.jsx)(i.Spinner, {
     className: _.spinner
-  }) : 0 === A.length ? null : (0, a.jsx)(i.FormSection, {
+  }) : 0 === C.length ? null : (0, a.jsx)(i.FormSection, {
     className: _.questsContainer,
     children: (0, a.jsxs)(i.HeadingLevel, {
       component: (0, a.jsxs)("div", {
         className: _.questsHeading,
-        children: [h && (0, a.jsx)(l.QuestsIcon, {
+        children: [g && (0, a.jsx)(l.QuestsIcon, {
           className: _.questsIcon
         }), (0, a.jsx)(i.Heading, {
           variant: "heading-md/semibold",
           className: _.questsHeading,
-          children: m.default.Messages.QUESTS
+          children: f.default.Messages.QUESTS
         }), (0, a.jsx)(i.Text, {
           variant: "text-xs/normal",
           className: _.questsHeadingLearnMore,
-          children: m.default.Messages.QUESTS_LEARN_MORE_LINK.format({
-            questsLearnMoreLink: r.default.getArticleURL(f.HelpdeskArticles.QUESTS_LEARN_MORE)
+          children: f.default.Messages.QUESTS_LEARN_MORE_LINK.format({
+            questsLearnMoreLink: r.default.getArticleURL(T.HelpdeskArticles.QUESTS_LEARN_MORE)
           })
         })]
       }),
       children: [(0, a.jsx)(i.FormDivider, {
         className: _.divider
-      }), h ? x.map(e => {
+      }), g ? O.map((e, t, s) => {
         let {
-          section: t,
-          questIds: s,
-          title: n
+          location: n,
+          questIds: l,
+          title: r
         } = e;
-        return 0 === s.length ? null : (0, a.jsxs)("section", {
+        if (0 === l.length) return null;
+        let o = 0 === t ? 0 : s.slice(0, t).reduce((e, t) => {
+          let {
+            questIds: s
+          } = t;
+          return e + s.length
+        }, 0);
+        return (0, a.jsxs)("section", {
           className: _.questsListContainer,
-          children: [(0, a.jsx)(i.Text, {
+          children: [x && (0, a.jsx)(i.Text, {
             variant: "text-xs/semibold",
             color: "header-secondary",
             className: _.sectionHeader,
-            children: n
+            children: r
           }), (0, a.jsx)(R, {
-            questIds: s,
-            section: t
+            questIds: l,
+            location: n,
+            contentPositionOffset: o
           })]
-        }, t)
+        }, n)
       }) : (0, a.jsx)(R, {
-        questIds: A
+        questIds: C,
+        location: u.QuestContent.GIFT_INVENTORY_FOR_YOU
       })]
     })
   })

@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("868671"),
   M = n("623624"),
   R = n("518738"),
-  L = n("155409"),
-  y = n("484459"),
+  y = n("155409"),
+  L = n("484459"),
   O = n("103575"),
   j = n("439170"),
   P = n("430824"),
@@ -41,12 +41,12 @@ var a = n("735250"),
   F = n("151827"),
   w = n("176278"),
   k = n("585483"),
-  H = n("823379"),
-  B = n("51144"),
+  B = n("823379"),
+  H = n("51144"),
   G = n("998502"),
   V = n("981631"),
   W = n("689938"),
-  Y = n("354811");
+  Y = n("67431");
 
 function z(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -93,7 +93,10 @@ class X extends l.Component {
       ...g
     } = this.props, S = null != E ? new Date(E) : null;
     return (0, a.jsx)(h.Popout, {
-      preload: () => (0, y.maybeFetchUserProfileForPopout)(s),
+      preload: () => (0, L.maybeFetchUserProfileForPopout)(s, {
+        channelId: c.id,
+        guildId: f
+      }),
       renderPopout: this.renderUserPopout,
       position: d.isMobile ? "window_center" : "left",
       spacing: 16,
@@ -133,7 +136,7 @@ class X extends l.Component {
       (0, m.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
         return t => (0, a.jsx)(e, {
           ...t,
           user: this.props.user,
@@ -146,7 +149,7 @@ class X extends l.Component {
       let {
         user: e,
         channel: t
-      } = this.props, n = "@".concat(B.default.getUserTag(e, {
+      } = this.props, n = "@".concat(H.default.getUserTag(e, {
         decoration: "never"
       })), a = "<@".concat(e.id, ">");
       k.ComponentDispatch.dispatchToLastSubscribed(V.ComponentActions.INSERT_TEXT, {
@@ -351,7 +354,7 @@ class ee extends l.Component {
       return (0, A.isContentGroup)(i) ? (0, l.createElement)(A.default, {
         ...i,
         key: "section-".concat(t)
-      }) : 0 === t ? (0, a.jsx)(L.default, {
+      }) : 0 === t ? (0, a.jsx)(y.default, {
         tutorialId: "whos-online",
         position: "left",
         inlineSpecs: q,
@@ -481,7 +484,7 @@ class ee extends l.Component {
         } = this.getDimensions();
       if (void 0 === n || 0 === n || null == t) return;
       this.hasContentFeed() && (t = t.filter(e => e.section !== x.CONTENT_FEED_SECTION));
-      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(H.isNotNullish);
+      let a = t.map(e => this.getRowProps(e)).slice(0, n + 1).filter(B.isNotNullish);
       if (0 === a.length) return;
       let l = a.reduce((e, t) => t.type !== j.MemberListRowTypes.MEMBER ? e : (e.num_users_visible++, t.isMobileOnline && e.num_users_visible_with_mobile_indicator++, null != t.activities && t.activities.length > 0 && (e.num_users_visible_with_activity++, t.activities.some(e => e.type === V.ActivityTypes.PLAYING) && e.num_users_visible_with_game_activity++), null != t.user.avatarDecoration && e.num_users_visible_with_avatar_decoration++, e), {
         num_users_visible: 0,

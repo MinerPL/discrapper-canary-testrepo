@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return h
   },
   getKeyForSectionFooter: function() {
-    return p
+    return m
   }
 });
 var l = n("735250"),
@@ -15,7 +15,7 @@ var l = n("735250"),
   o = n("700026"),
   u = n("301342"),
   d = n("327530"),
-  c = n("75912");
+  c = n("333960");
 let f = a.memo(function(e) {
   let {
     guildChannels: t,
@@ -50,7 +50,7 @@ function h(e) {
   }) ? d.HEIGHT_CHANNEL + f : f
 }
 
-function p(e, t, n) {
+function m(e, t, n) {
   if (e === t.voiceChannelsSectionNumber) return "voice-channels-button";
   let {
     hasDivider: l,
@@ -65,18 +65,18 @@ t.default = a.memo(function(e) {
     guildChannelsVersion: u,
     voiceStates: d,
     guildId: h,
-    selectedChannelId: p,
-    selectedVoiceChannelId: m,
-    optInEnabled: C
+    selectedChannelId: m,
+    selectedVoiceChannelId: C,
+    optInEnabled: p
   } = e, {
     hasDivider: g,
     canHaveVoiceSummary: E
-  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, C, t), [n, C, t, u]), _ = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), S = a.useMemo(() => null != _ && _.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
+  } = a.useMemo(() => (0, o.getSectionFooterConfig)(n, p, t), [n, p, t, u]), _ = a.useMemo(() => t === r.SECTION_INDEX_COMMUNITY ? null : n.getCategoryFromSection(t), [n, t, u]), S = a.useMemo(() => null != _ && _.isCollapsed ? (0, i.computeSummarizedVoiceUsers)({
     channels: _.getChannelRecords(),
-    selectedChannelId: p,
-    selectedVoiceChannelId: m,
+    selectedChannelId: m,
+    selectedVoiceChannelId: C,
     voiceStates: d
-  }) : [], [_, p, m, d]);
+  }) : [], [_, m, C, d]);
   if (t === n.voiceChannelsSectionNumber) return (0, l.jsx)(f, {
     guildChannels: n,
     guildChannelsVersion: u

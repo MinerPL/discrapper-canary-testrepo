@@ -30,14 +30,14 @@ var a = s("735250"),
   x = s("132547"),
   v = s("474936"),
   b = s("981631"),
-  D = s("34511");
+  D = s("310774");
 t.default = function(e) {
   let {
     entrypoint: t = v.PremiumMarketingEntrypoints.UserSettings
   } = e, s = (0, R.useBlockedPaymentsConfig)(), {
     sourceAnalyticsLocations: i,
     analyticsLocations: U
-  } = (0, I.default)(T.default.PREMIUM_MARKETING), j = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), y = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), B = (0, h.usePremiumTrialOffer)(), G = (0, M.usePremiumDiscountOffer)(), k = (0, f.useSubscriptionPlansLoaded)(), [H, F] = r.useState(!0), w = r.useRef(0), K = (0, g.isPremiumExactly)(y, v.PremiumTypes.TIER_2), W = (0, O.useLocalizedPromoQuery)(), V = null == W ? void 0 : W.countryCode, Y = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
+  } = (0, I.default)(T.default.PREMIUM_MARKETING), j = (0, l.useStateFromStores)([N.default], () => N.default.hasFetchedSubscriptions()), G = (0, l.useStateFromStores)([A.default], () => A.default.getCurrentUser()), y = (0, h.usePremiumTrialOffer)(), B = (0, M.usePremiumDiscountOffer)(), k = (0, f.useSubscriptionPlansLoaded)(), [H, F] = r.useState(!0), w = r.useRef(0), W = (0, g.isPremiumExactly)(G, v.PremiumTypes.TIER_2), K = (0, O.useLocalizedPromoQuery)(), V = null == K ? void 0 : K.countryCode, Y = (0, l.useStateFromStores)([C.default], () => C.default.hasFetched);
   return (r.useEffect(() => {
     !Y && d.getNitroAffinity()
   }, [Y]), r.useEffect(() => {
@@ -46,13 +46,13 @@ t.default = function(e) {
       await Promise.all([d.fetchSubscriptions(), (0, c.fetchGuildBoostSlots)(), d.fetchPaymentSources(), (0, _.fetchPremiumSubscriptionPlans)(V, null, b.RevenueSurfaces.DISCOVERY)]), w.current = Date.now() - e, F(!1)
     })
   }, [V]), r.useEffect(() => {
-    s && (null != B || null != G) && (0, P.acknowledgeUserOffer)(B, G)
-  }, [s, B, G]), r.useEffect(() => {
+    s && (null != y || null != B) && (0, P.acknowledgeUserOffer)(y, B)
+  }, [s, y, B]), r.useEffect(() => {
     !H && p.default.track(b.AnalyticEvents.PREMIUM_MARKETING_PAGE_VIEWED, {
       location_stack: i,
       load_duration_ms: w.current
     })
-  }, [i, H]), (0, l.useStateFromStores)([m.default], () => m.default.enabled)) ? (0, a.jsx)(E.default, {}) : s ? (0, a.jsx)(S.BlockedPaymentsContentSettings, {}) : t === v.PremiumMarketingEntrypoints.ApplicationStoreHome && K ? (0, a.jsx)(I.AnalyticsLocationProvider, {
+  }, [i, H]), (0, l.useStateFromStores)([m.default], () => m.default.enabled)) ? (0, a.jsx)(E.default, {}) : s ? (0, a.jsx)(S.BlockedPaymentsContentSettings, {}) : t === v.PremiumMarketingEntrypoints.ApplicationStoreHome && W ? (0, a.jsx)(I.AnalyticsLocationProvider, {
     value: U,
     children: (0, a.jsx)(x.default, {})
   }) : j && k && !H ? (0, a.jsx)(I.AnalyticsLocationProvider, {

@@ -17,14 +17,14 @@ var a = s("735250"),
   E = s("484459"),
   T = s("216045"),
   f = s("25990"),
-  m = s("594174"),
-  _ = s("585483"),
+  _ = s("594174"),
+  m = s("585483"),
   g = s("16703"),
-  h = s("785145"),
-  I = s("981631"),
+  I = s("785145"),
+  h = s("981631"),
   N = s("526761"),
   p = s("689938"),
-  C = s("51950");
+  C = s("347620");
 
 function A() {
   d.default.useExperiment({
@@ -34,11 +34,11 @@ function A() {
     t = (0, g.default)(),
     s = (0, l.useStateFromStores)([c.default, f.default], () => c.default.showNotice() || f.default.showNotice()),
     A = null != e ? e : t,
-    O = (0, l.useStateFromStores)([m.default], () => m.default.getCurrentUser()),
+    O = (0, l.useStateFromStores)([_.default], () => _.default.getCurrentUser()),
     {
       subsection: x,
       setSubsection: R
-    } = (0, h.default)(),
+    } = (0, I.default)(),
     {
       analyticsLocations: M
     } = (0, o.default)();
@@ -61,10 +61,10 @@ function A() {
         onItemSelect: function(t) {
           if (x !== t) {
             if (s) {
-              _.ComponentDispatch.dispatch(I.ComponentActions.SHAKE_APP, {
+              m.ComponentDispatch.dispatch(h.ComponentActions.SHAKE_APP, {
                 duration: 300,
                 intensity: r.SHAKE_INTENSITY_DEFAULT
-              }), _.ComponentDispatch.dispatch(I.ComponentActions.EMPHASIZE_NOTICE);
+              }), m.ComponentDispatch.dispatch(h.ComponentActions.EMPHASIZE_NOTICE);
               return
             }
             t === N.ProfileCustomizationSubsection.GUILD && null == e && null != A && (0, u.initGuildIdentitySettings)(A, M), R(t)

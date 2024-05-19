@@ -24,7 +24,7 @@ var l, a = n("735250"),
   f = n("906732"),
   I = n("15640"),
   T = n("89057"),
-  M = n("563132"),
+  M = n("598"),
   A = n("409813"),
   N = n("45572"),
   y = n("98278"),
@@ -52,7 +52,7 @@ var l, a = n("735250"),
   K = n("474936"),
   z = n("231338"),
   q = n("689938"),
-  J = n("908689");
+  J = n("732998");
 (l || (l = {})).PREMIUM = "discord://app/settings/nitro";
 let X = K.SubscriptionPlans.NONE_MONTH,
   Q = [A.Step.PLAN_SELECT, A.Step.REVIEW, A.Step.CONFIRM],

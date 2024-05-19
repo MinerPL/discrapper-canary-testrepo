@@ -50,7 +50,7 @@ var n = a("735250"),
   q = a("981631"),
   J = a("647086"),
   Q = a("689938"),
-  $ = a("653938");
+  $ = a("41327");
 
 function ee(e) {
   (0, r.openModal)(t => (0, n.jsx)(M.GuildLeaveConfirmModalContents, {
@@ -209,7 +209,7 @@ let et = i.memo(function(e) {
         action: () => (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("88408")]).then(a.bind(a, "241420"));
+          } = await Promise.all([a.e("99387"), a.e("59500")]).then(a.bind(a, "241420"));
           return a => (0, n.jsx)(e, {
             ...a,
             guild: t
@@ -330,7 +330,7 @@ let et = i.memo(function(e) {
         action: () => (0, r.openModalLazy)(async () => {
           let {
             default: e
-          } = await Promise.all([a.e("99387"), a.e("88408")]).then(a.bind(a, "241420"));
+          } = await Promise.all([a.e("99387"), a.e("59500")]).then(a.bind(a, "241420"));
           return a => (0, n.jsx)(e, {
             ...a,
             guild: t

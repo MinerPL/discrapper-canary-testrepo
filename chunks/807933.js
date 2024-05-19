@@ -34,7 +34,8 @@ function f() {
     description: c.default.Messages.CLAN_DISCOVERY_TRAIT_SUBTITLE,
     handleUpdate: f,
     interests: r,
-    requiredGameId: t
+    requiredGameId: t,
+    hidePreview: !0
   })
 }
 
@@ -60,7 +61,7 @@ function h() {
     o = (0, u.useClanDiscoveryUIStore)(e => e.setSelectedGames, l.default),
     [f, E] = s.useState(null),
     h = s.useCallback(e => {
-      e.size > 3 ? E(c.default.Messages.CLAN_DISCOVERY_MAX_GAMES_SELECTED) : (E(null), o(Array.from(e)))
+      E(null), o(Array.from(e))
     }, [o]);
   return (0, a.jsx)(i.default, {
     title: c.default.Messages.CLAN_DISCOVERY_GAME_TITLE,

@@ -1,67 +1,67 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
     return u
   }
 });
-var i = l("735250"),
-  a = l("470079"),
-  n = l("481060"),
-  s = l("768581"),
-  r = l("924489"),
-  c = l("950854"),
-  o = l("491576"),
-  d = l("80086");
+var l = i("735250"),
+  a = i("470079"),
+  n = i("481060"),
+  s = i("768581"),
+  r = i("924489"),
+  o = i("950854"),
+  c = i("491576"),
+  d = i("719491");
 
 function u(e) {
-  var t, l, u, p, _;
+  var t, i, u, p, m;
   let {
-    application: m,
+    application: _,
     className: f,
     childrenClassName: h,
-    animatesOnHover: C,
+    animatesOnHover: I,
     onClick: g,
-    ...I
+    ...v
   } = e, A = s.default.getApplicationIconURL({
-    id: m.id,
-    icon: m.icon,
+    id: _.id,
+    icon: _.icon,
     size: 48
-  }), E = (0, o.default)({
-    application: m
-  }), v = null === (t = m.categories) || void 0 === t ? void 0 : t[0], x = (null !== (p = null === (l = m.directory_entry) || void 0 === l ? void 0 : l.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, R = a.useCallback(() => {
+  }), E = (0, c.default)({
+    application: _
+  }), C = null === (t = _.categories) || void 0 === t ? void 0 : t[0], R = (null !== (p = null === (i = _.directory_entry) || void 0 === i ? void 0 : i.guild_count) && void 0 !== p ? p : 0) > 0 || E.length > 0, N = a.useCallback(() => {
     g({
       mutualGuilds: E
     })
-  }, [g, E]), T = (0, i.jsx)(r.default, {
-    application: m,
+  }, [g, E]), T = (0, l.jsx)(r.default, {
+    application: _,
     textVariant: "text-xs/normal",
     mutualGuilds: E,
     mutualGuildShownMax: 3,
     guildIconSize: r.GuildIconSize.SMALL,
     compact: !0
   });
-  return (0, i.jsxs)(c.default, {
+  return (0, l.jsxs)(o.default, {
     className: f,
-    onClick: R,
+    onClick: N,
     iconSrc: A,
-    header: m.name,
-    subheader: null != v && (0, i.jsx)(n.Text, {
+    header: _.name,
+    subheader: null != C && (0, l.jsx)(n.Text, {
       tag: "span",
       color: "header-secondary",
       variant: "text-xs/normal",
-      children: v.name
+      children: C.name
     }),
-    animatesOnHover: C,
-    ...I,
-    children: [(null != m.description || null != h) && (0, i.jsx)("div", {
+    animatesOnHover: I,
+    ...v,
+    children: [(null != _.description || null != h) && (0, l.jsx)("div", {
       className: h,
-      children: (0, i.jsx)(n.Text, {
+      children: (0, l.jsx)(n.Text, {
         className: d.listingDescription,
         variant: "text-sm/normal",
         lineClamp: 2,
-        children: null !== (_ = null === (u = m.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== _ ? _ : m.description
+        children: null !== (m = null === (u = _.directory_entry) || void 0 === u ? void 0 : u.short_description) && void 0 !== m ? m : _.description
       })
-    }), x && (0, i.jsx)("div", {
+    }), R && (0, l.jsx)("div", {
       className: d.bottomGuildCountContainer,
       children: T
     })]

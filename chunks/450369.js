@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   SPEAKER_TILE_ASPECT_RATIO: function() {
-    return y
+    return L
   }
 });
 var a = n("735250"),
@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("248400"),
   M = n("981631"),
   R = n("354459"),
-  L = n("769238");
-let y = 16 / 9,
+  y = n("724434");
+let L = 16 / 9,
   O = e => {
     let {
       stageParticipant: t,
@@ -68,10 +68,10 @@ let y = 16 / 9,
         ...e,
         children: (0, a.jsx)(v.default, {
           participant: n,
-          aspectRatio: y,
+          aspectRatio: L,
           blocked: m,
           channel: s,
-          className: L.tile,
+          className: y.tile,
           inCall: !0,
           inPopout: f,
           paused: !1,
@@ -112,11 +112,11 @@ let y = 16 / 9,
     }, [j, s, P, D]);
     return (0, a.jsx)(v.default, {
       participant: n,
-      aspectRatio: y,
+      aspectRatio: L,
       fit: n.type === R.ParticipantTypes.USER ? A.VideoStreamFit.COVER : void 0,
       blocked: O,
       channel: s,
-      className: L.tile,
+      className: y.tile,
       inCall: !0,
       inPopout: C,
       onClick: b,
@@ -162,7 +162,7 @@ t.default = l.memo(function(e) {
           (0, d.openContextMenuLazy)(t, async () => {
             let {
               default: e
-            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+            } = await Promise.all([n.e("99387"), n.e("36441"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
             return t => (0, a.jsx)(e, {
               ...t,
               user: m,

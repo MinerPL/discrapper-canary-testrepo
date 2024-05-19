@@ -8,7 +8,7 @@ var i = n("735250"),
   r = n("470079"),
   a = n("120356"),
   s = n.n(a),
-  o = n("207470"),
+  o = n("519953"),
   l = n("442837"),
   u = n("911969"),
   d = n("998698"),
@@ -18,7 +18,7 @@ var i = n("735250"),
   I = n("436660"),
   T = n("887490"),
   f = n("689938"),
-  S = n("3500");
+  S = n("697692");
 
 function h(e, t, n) {
   let {
@@ -82,9 +82,9 @@ let A = e => {
         errored: (null === (i = d.default.getOptionState(n, a.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
       }
     }, [n, a.optionName]),
-    R = (0, l.useStateFromStores)([c.default], () => c.default.getUpload(n, a.optionName, _.DraftType.SlashCommand), [n, a.optionName]),
-    C = a.children[a.children.length - 1],
-    g = null != C && T.TextUtils.isText(C) && C.text.endsWith("\n"),
+    C = (0, l.useStateFromStores)([c.default], () => c.default.getUpload(n, a.optionName, _.DraftType.SlashCommand), [n, a.optionName]),
+    R = a.children[a.children.length - 1],
+    g = null != R && T.TextUtils.isText(R) && R.text.endsWith("\n"),
     L = s()(S.inlineElement, S.optionPill, {
       [S.selectedPill]: m && A,
       [S.erroredPill]: (!m || !A) && O
@@ -92,10 +92,10 @@ let A = e => {
     v = r.useCallback(() => {
       !T.EditorUtils.isVoid(N, a) && I.SlateTransforms.selectCommandOption(N, a.optionName, !0)
     }, [N, a]);
-  return t = p === u.ApplicationCommandOptionType.ATTACHMENT ? (null == R ? void 0 : R.filename) != null ? (0, i.jsxs)("span", {
+  return t = p === u.ApplicationCommandOptionType.ATTACHMENT ? (null == C ? void 0 : C.filename) != null ? (0, i.jsxs)("span", {
     className: s()(S.optionPillValue, S.attachmentFilename),
     contentEditable: !1,
-    children: [R.filename, h]
+    children: [C.filename, h]
   }) : (0, i.jsxs)("span", {
     className: s()(S.optionPillValue, S.readonlyPillValue),
     contentEditable: !1,

@@ -15,21 +15,21 @@ var l = n("735250"),
   c = n("703656"),
   f = n("594174"),
   h = n("366695"),
-  p = n("436088"),
-  m = n("51144"),
-  C = n("158631"),
+  m = n("436088"),
+  C = n("51144"),
+  p = n("158631"),
   g = n("143614"),
   E = n("787740"),
   _ = n("981631"),
   S = n("689938"),
-  I = n("6539");
+  I = n("637861");
 
 function N(e) {
   var t;
   let {
     userId: n,
     applicationId: a
-  } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = m.default.getGlobalName(i)) && void 0 !== t ? t : m.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
+  } = e, i = (0, s.useStateFromStores)([f.default], () => f.default.getUser(n)), o = null !== (t = C.default.getGlobalName(i)) && void 0 !== t ? t : C.default.getUserTag(i), u = (0, d.useGetOrFetchApplication)(a);
   return null == i ? null : (0, l.jsxs)("div", {
     className: I.broadcast,
     children: [(0, l.jsxs)("div", {
@@ -59,7 +59,7 @@ function N(e) {
 function T(e) {
   let {
     closePopout: t
-  } = e, n = (0, g.default)(), s = n.slice(0, 3), d = (0, C.default)(), f = n.length - s.length;
+  } = e, n = (0, g.default)(), s = n.slice(0, 3), d = (0, p.default)(), f = n.length - s.length;
   return a.useEffect(() => {
     u.default.trackWithMetadata(_.AnalyticEvents.BROADCAST_POPOUT_VIEWED, {
       num_broadcasts_shown: s.length,
@@ -72,7 +72,7 @@ function T(e) {
       className: I.header,
       children: [(0, l.jsxs)("div", {
         className: I.inline,
-        children: [(0, l.jsx)(p.default, {
+        children: [(0, l.jsx)(m.default, {
           color: i.default.colors.HEADER_PRIMARY.css,
           height: 16,
           width: 16

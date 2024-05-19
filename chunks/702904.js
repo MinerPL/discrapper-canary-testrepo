@@ -1,7 +1,7 @@
 "use strict";
 r.r(t), r.d(t, {
   default: function() {
-    return b
+    return y
   }
 }), r("47120");
 var a = r("735250"),
@@ -15,8 +15,8 @@ var a = r("735250"),
   u = r("244526"),
   h = r("853872"),
   m = r("246992"),
-  p = r("893048"),
-  g = r("403466");
+  p = r("277513"),
+  g = r("104837");
 let f = [{
   label: "VISA",
   value: "pm_card_us"
@@ -49,7 +49,7 @@ let f = [{
   value: "pm_card_pl"
 }];
 
-function b() {
+function y() {
   let [e, t] = i.useState("pm_card_us"), r = Object.values((0, o.useStateFromStores)([h.default], () => h.default.paymentSources)), l = async () => {
     let t = e;
     "" === t && (t = "pm_card_us"), await s.HTTP.post({
@@ -100,14 +100,14 @@ function b() {
         },
         variant: "text-md/normal",
         children: "Existing Payment Sources"
-      }), r.map(e => (0, a.jsx)(y, {
+      }), r.map(e => (0, a.jsx)(b, {
         paymentSource: e
       }, e.id))]
     })
   })
 }
 
-function y(e) {
+function b(e) {
   let {
     paymentSource: t
   } = e;
@@ -116,7 +116,7 @@ function y(e) {
     children: [(0, a.jsx)(u.default, {
       locale: "en-US",
       paymentSource: t,
-      showDefaultLabel: !0,
+      showLabels: !0,
       showPaymentSourceIcon: !0
     }, t.id), (0, a.jsx)("img", {
       alt: t.country,

@@ -6,19 +6,19 @@ l.r(r), l.d(r, {
 }), l("390547");
 var t = l("735250");
 l("470079");
-var s = l("120356"),
-  n = l.n(s),
+var n = l("120356"),
+  s = l.n(n),
   a = l("66579"),
-  i = l("563132"),
+  i = l("598"),
   o = l("409813"),
-  c = l("110858");
+  c = l("524158");
 
 function d(e) {
   let {
     className: r,
     isEligibleForTrial: l = !1
   } = e, {
-    step: s,
+    step: n,
     breadcrumbs: d,
     startedPaymentFlowWithPaymentSourcesRef: u
   } = (0, i.usePaymentContext)();
@@ -35,9 +35,9 @@ function d(e) {
       t = e.id === o.Step.ADD_PAYMENT_STEPS && !u.current;
     return !l || l && (r || t)
   }), (0, t.jsx)("div", {
-    className: n()("breadcrumb", c.wrapper, r),
+    className: s()("breadcrumb", c.wrapper, r),
     children: (0, t.jsx)(a.default, {
-      activeId: s,
+      activeId: n,
       breadcrumbs: p
     })
   }))

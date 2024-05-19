@@ -3,6 +3,9 @@ n.r(t), n.d(t, {
   formatCanvasDescription: function() {
     return o
   },
+  formatGroupCanvasDescription: function() {
+    return u
+  },
   getContentAltText: function() {
     return i
   }
@@ -25,5 +28,19 @@ let i = (e, t) => s.default.Messages.ACTIVITY_REACTION_IMAGE_ALT_TEXT_PLAYING.fo
     return l.plainFormat({
       gameName: i,
       userName: s
+    }).replaceAll("*", "")
+  },
+  u = e => {
+    let {
+      entry: t,
+      channel: n,
+      users: i,
+      countOthers: r
+    } = e;
+    return ((0, l.isEntryActive)(t) ? s.default.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYING : s.default.Messages.CONTENT_INVENTORY_REACTION_USER_PLAYED).plainFormat({
+      gameName: t.extra.game_name,
+      user1: a.default.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[0]),
+      user2: a.default.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, i[1]),
+      countOthers: r
     }).replaceAll("*", "")
   }

@@ -2,38 +2,37 @@
 n.r(t);
 var a = n("735250"),
   s = n("470079"),
-  l = n("143927"),
-  i = n("481060"),
-  r = n("207796"),
-  o = n("420212"),
-  u = n("689938"),
-  d = n("298269");
+  l = n("481060"),
+  i = n("207796"),
+  r = n("420212"),
+  o = n("689938"),
+  u = n("885107");
 t.default = function(e) {
   let {
     children: t
-  } = e, n = (0, r.useClanDiscoveryUIStore)(e => e.setMode, l.default), c = s.useCallback(() => {
-    n(r.ClanDiscoveryMode.DISCOVERY)
-  }, [n]);
+  } = e, n = s.useCallback(() => {
+    (0, i.setClanDiscoveryMode)(i.ClanDiscoveryMode.DISCOVERY)
+  }, []);
   return s.useEffect(() => {
     let e = e => {
-      e.key === o.KeyboardKeysUpdated.ESCAPE && n(r.ClanDiscoveryMode.DISCOVERY)
+      e.key === r.KeyboardKeysUpdated.ESCAPE && (0, i.setClanDiscoveryMode)(i.ClanDiscoveryMode.DISCOVERY)
     };
     return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e)
-  }, [n]), (0, a.jsxs)("div", {
-    className: d.container,
+  }, []), (0, a.jsxs)("div", {
+    className: u.container,
     children: [(0, a.jsx)("div", {
-      className: d.saveContainer,
-      children: (0, a.jsx)(i.Button, {
-        onClick: c,
-        look: i.ButtonLooks.OUTLINED,
-        color: i.ButtonColors.PRIMARY,
-        children: u.default.Messages.SAVE
+      className: u.saveContainer,
+      children: (0, a.jsx)(l.Button, {
+        onClick: n,
+        look: l.ButtonLooks.OUTLINED,
+        color: l.ButtonColors.PRIMARY,
+        children: o.default.Messages.SAVE
       })
     }), (0, a.jsx)("div", {
-      className: d.contentWrapper,
-      children: (0, a.jsx)(i.Scroller, {
+      className: u.contentWrapper,
+      children: (0, a.jsx)(l.Scroller, {
         fade: !0,
-        className: d.content,
+        className: u.content,
         children: t
       })
     })]

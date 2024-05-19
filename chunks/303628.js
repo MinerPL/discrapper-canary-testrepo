@@ -2,8 +2,8 @@
 n.r(t), n("47120"), n("653041");
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("924826"),
   l = n("536895"),
   u = n("442837"),
@@ -19,24 +19,24 @@ var i = n("735250"),
   A = n("459273"),
   m = n("444282"),
   N = n("898463"),
-  O = n("981631"),
-  p = n("683600"),
-  R = n("633353");
-let C = [];
+  p = n("981631"),
+  O = n("62469"),
+  C = n("842648");
+let R = [];
 
 function g(e) {
   let {
     channelId: t,
     type: n
-  } = e, s = (0, u.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), g = (0, I.default)("attachments", l.Orientations.HORIZONTAL), L = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
-    isApplicationCommand: D,
-    commandOptions: v,
+  } = e, a = (0, u.useStateFromStores)([E.default], () => E.default.keyboardModeEnabled), g = (0, I.default)("attachments", l.Orientations.HORIZONTAL), L = (0, u.useStateFromStores)([S.default], () => S.default.getUploads(t, n.drafts.type)), {
+    isApplicationCommand: v,
+    commandOptions: D,
     commandOptionStates: M
   } = (0, u.useStateFromStoresObject)([T.default], () => {
     let e = T.default.getActiveCommand(t);
     if (null == e) return {
       isApplicationCommand: !1,
-      commandOptions: C,
+      commandOptions: R,
       commandOptionStates: null
     };
     let n = T.default.getOptionStates(t);
@@ -47,11 +47,11 @@ function g(e) {
     }
   }), y = r.useMemo(() => {
     var e;
-    return null !== (e = null == v ? void 0 : v.filter(e => {
+    return null !== (e = null == D ? void 0 : D.filter(e => {
       var t;
       return e.type === c.ApplicationCommandOptionType.ATTACHMENT && (null == M ? void 0 : null === (t = M[e.name]) || void 0 === t ? void 0 : t.hasValue)
     })) && void 0 !== e ? e : []
-  }, [v, M]), [P, U] = r.useState([]);
+  }, [D, M]), [P, U] = r.useState([]);
   r.useEffect(() => {
     let e = () => {
       _.default.clearAll(t, n.drafts.type)
@@ -62,10 +62,10 @@ function g(e) {
     g.focusFirstVisibleItem()
   }, [g]);
   return ((0, A.useComponentAction)({
-    event: O.ComponentActions.FOCUS_ATTACHMENT_AREA,
+    event: p.ComponentActions.FOCUS_ATTACHMENT_AREA,
     handler: b
   }), r.useEffect(() => {
-    if (D) {
+    if (v) {
       let e = [];
       P.forEach(t => {
         !y.some(e => t.name === e.name) && e.push(t)
@@ -73,7 +73,7 @@ function g(e) {
         _.default.remove(t, e.name, n.drafts.type)
       }), U(y)
     }
-  }, [t, y.length, n]), !D && 0 === L.length || D && 0 === y.length) ? null : (0, i.jsxs)(r.Fragment, {
+  }, [t, y.length, n]), !v && 0 === L.length || v && 0 === y.length) ? null : (0, i.jsxs)(r.Fragment, {
     children: [(0, i.jsx)(o.ListNavigatorProvider, {
       navigator: g,
       children: (0, i.jsx)(o.ListNavigatorContainer, {
@@ -85,16 +85,16 @@ function g(e) {
           return (0, i.jsx)("ul", {
             ref: r,
             ...o,
-            className: a()(p.channelAttachmentArea, R.scrollbarGhost),
-            children: D ? y.map(e => (0, i.jsx)(m.default, {
+            className: s()(O.channelAttachmentArea, C.scrollbarGhost),
+            children: v ? y.map(e => (0, i.jsx)(m.default, {
               channelId: t,
-              keyboardModeEnabled: s,
+              keyboardModeEnabled: a,
               option: e
             }, e.name)) : L.map(e => (0, i.jsx)(N.default, {
               channelId: t,
               draftType: n.drafts.type,
               upload: e,
-              keyboardModeEnabled: s,
+              keyboardModeEnabled: a,
               clip: e.clip
             }, e.id))
           })

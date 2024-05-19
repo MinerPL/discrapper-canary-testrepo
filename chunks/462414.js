@@ -1,27 +1,28 @@
 "use strict";
 n.r(t), n("47120");
-var a = n("846027"),
-  s = n("131951"),
-  l = n("13140"),
-  i = n("996106"),
-  r = n("452426"),
-  o = n("186901"),
-  u = n("981631"),
-  d = n("65154");
+var a = n("243814"),
+  s = n("846027"),
+  l = n("131951"),
+  i = n("13140"),
+  r = n("996106"),
+  o = n("452426"),
+  u = n("186901"),
+  d = n("981631"),
+  c = n("65154");
 
-function c(e) {
+function f(e) {
   let t = e.application.id;
-  if (null == t) throw new i.default({
-    errorCode: u.RPCErrors.INVALID_COMMAND
+  if (null == t) throw new r.default({
+    errorCode: d.RPCErrors.INVALID_COMMAND
   }, "No application.");
   return t
 }
 t.default = {
-  [u.RPCCommands.SET_VOICE_SETTINGS_2]: {
-    scope: o.RPC_LOCAL_SCOPE,
-    validation: e => (0, r.default)(e).required().keys({
-      input_mode: (0, r.default)(e).keys({
-        type: e.string().valid(Object.keys(u.InputModes)),
+  [d.RPCCommands.SET_VOICE_SETTINGS_2]: {
+    scope: u.RPC_LOCAL_SCOPE,
+    validation: e => (0, o.default)(e).required().keys({
+      input_mode: (0, o.default)(e).keys({
+        type: e.string().valid(Object.keys(d.InputModes)),
         shortcut: e.string().required()
       }),
       self_mute: e.boolean(),
@@ -32,22 +33,22 @@ t.default = {
         socket: t,
         args: {
           input_mode: n,
-          self_mute: i,
+          self_mute: a,
           self_deaf: r
         }
-      } = e, o = c(t);
-      null != n && a.default.setMode(n.type, {
-        shortcut: (0, l.toCombo)(n.shortcut)
-      }, o), null != i && i !== s.default.isSelfMute(o) && a.default.toggleSelfMute({
+      } = e, o = f(t);
+      null != n && s.default.setMode(n.type, {
+        shortcut: (0, i.toCombo)(n.shortcut)
+      }, o), null != a && a !== l.default.isSelfMute(o) && s.default.toggleSelfMute({
         context: o
-      }), null != r && r !== s.default.isSelfDeaf(o) && a.default.toggleSelfDeaf({
+      }), null != r && r !== l.default.isSelfDeaf(o) && s.default.toggleSelfDeaf({
         context: o
       })
     }
   },
-  [u.RPCCommands.SET_USER_VOICE_SETTINGS_2]: {
-    scope: o.RPC_LOCAL_SCOPE,
-    validation: e => (0, r.default)(e).required().keys({
+  [d.RPCCommands.SET_USER_VOICE_SETTINGS_2]: {
+    scope: u.RPC_LOCAL_SCOPE,
+    validation: e => (0, o.default)(e).required().keys({
       user_id: e.string().required(),
       volume: e.number().min(0).max(200),
       mute: e.boolean()
@@ -57,18 +58,18 @@ t.default = {
         socket: t,
         args: {
           user_id: n,
-          mute: l,
+          mute: a,
           volume: i
         }
-      } = e, r = c(t);
-      null != l && l !== s.default.isLocalMute(n, r) && a.default.toggleLocalMute(n, r), null != i && a.default.setLocalVolume(n, i, r)
+      } = e, r = f(t);
+      null != a && a !== l.default.isLocalMute(n, r) && s.default.toggleLocalMute(n, r), null != i && s.default.setLocalVolume(n, i, r)
     }
   },
-  [u.RPCCommands.PUSH_TO_TALK]: {
+  [d.RPCCommands.PUSH_TO_TALK]: {
     scope: {
-      [o.RPC_SCOPE_CONFIG.ALL]: [u.OAuth2Scopes.RPC, u.OAuth2Scopes.RPC_VOICE_WRITE]
+      [u.RPC_SCOPE_CONFIG.ALL]: [a.OAuth2Scopes.RPC, a.OAuth2Scopes.RPC_VOICE_WRITE]
     },
-    validation: e => (0, r.default)(e).required().keys({
+    validation: e => (0, o.default)(e).required().keys({
       active: e.boolean()
     }),
     handler(e) {
@@ -77,7 +78,7 @@ t.default = {
           active: t
         }
       } = e;
-      s.default.getMode(d.MediaEngineContextTypes.DEFAULT) === u.InputModes.PUSH_TO_TALK && s.default.getMediaEngine().eachConnection(e => e.setForceAudioInput(t), d.MediaEngineContextTypes.DEFAULT)
+      l.default.getMode(c.MediaEngineContextTypes.DEFAULT) === d.InputModes.PUSH_TO_TALK && l.default.getMediaEngine().eachConnection(e => e.setForceAudioInput(t), c.MediaEngineContextTypes.DEFAULT)
     }
   }
 }

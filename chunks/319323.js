@@ -22,15 +22,15 @@ function E(e) {
     guildId: n
   } = e, E = (0, i.useApplication)(t), {
     listingsLoaded: _
-  } = (0, i.useFetchListingsForApplication)(t, null == E ? void 0 : E.primarySkuId), T = (0, a.useStateFromStores)([r.default], () => r.default.getSubscriptionGroupListingForApplication(t), [t]), m = null != T ? (0, o.getPayableSubscriptionListing)(T) : null, {
+  } = (0, i.useFetchListingsForApplication)(t, null == E ? void 0 : E.primarySkuId), m = (0, a.useStateFromStores)([r.default], () => r.default.getSubscriptionGroupListingForApplication(t), [t]), T = null != m ? (0, o.getPayableSubscriptionListing)(m) : null, {
     openModal: I,
     canOpenModal: p
   } = (0, d.default)({
-    listing: m,
     guildId: n,
-    groupListingId: null == T ? void 0 : T.id,
+    groupListingId: null == m ? void 0 : m.id,
     showBenefitsFirst: !0,
-    analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE
+    analyticsLocation: c.AnalyticsLocations.INTERACTION_RESPONSE,
+    skuId: null == T ? void 0 : T.id
   });
   return (0, s.jsx)(u.default, {
     size: l.Button.Sizes.MEDIUM,

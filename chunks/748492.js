@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   InteractivePIPHeader: function() {
-    return B
+    return k
   },
   PIPOverlay: function() {
     return b
@@ -35,15 +35,15 @@ var r = n("120356"),
   N = n("25827"),
   p = n("131951"),
   O = n("285952"),
-  R = n("605403"),
-  C = n("808268"),
+  C = n("605403"),
+  R = n("808268"),
   g = n("602623"),
   L = n("349619"),
   v = n("981631"),
   D = n("231338"),
   M = n("689938"),
-  y = n("55820"),
-  P = n("541702");
+  y = n("221343"),
+  P = n("376838");
 
 function U(e) {
   let {
@@ -55,7 +55,7 @@ function U(e) {
       [y.arrowIconExpanded]: n
     }),
     onClick: t,
-    iconComponent: R.default,
+    iconComponent: C.default,
     label: n ? M.default.Messages.PICTURE_IN_PICTURE_COLLAPSE : M.default.Messages.PICTURE_IN_PICTURE_EXPAND
   })
 }
@@ -68,10 +68,10 @@ function b(e) {
     onMouseDown: o,
     onMouseMove: S,
     onMouseLeave: m,
-    onJumpToChannel: R,
-    idle: C,
+    onJumpToChannel: C,
+    idle: R,
     selectedParticipant: g
-  } = e, M = (0, u.useAppContext)() === v.AppContext.POPOUT, U = (0, s.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, s.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([a])[0], B = (0, E.default)(r), k = e => {
+  } = e, M = (0, u.useAppContext)() === v.AppContext.POPOUT, U = (0, s.useStateFromStores)([p.default], () => p.default.isVideoEnabled()), b = (0, s.useStateFromStores)([p.default], () => Object.values(p.default.getVideoDevices())[0]), G = !1 === (null === (t = null == b ? void 0 : b.disabled) || void 0 === t || t), w = (0, d.default)([a])[0], k = (0, E.default)(r), B = e => {
     l.default.setVideoEnabled(e)
   };
   return (0, i.jsxs)("div", {
@@ -82,9 +82,9 @@ function b(e) {
     children: [(0, i.jsx)("div", {
       className: P.topControls,
       children: (0, i.jsx)(f.PictureInPictureHeader, {
-        idle: C,
+        idle: R,
         title: null !== (n = null == w ? void 0 : w.name) && void 0 !== n ? n : r.name,
-        onJumpToChannel: R,
+        onJumpToChannel: C,
         preventIdleComponent: T.default
       })
     }), (0, i.jsxs)("div", {
@@ -98,10 +98,10 @@ function b(e) {
           className: y.leftPipIcon,
           enabled: U,
           cameraUnavailable: !G,
-          hasPermission: B,
-          onChange: k,
+          hasPermission: k,
+          onChange: B,
           onCameraUnavailable: () => {
-            G ? k(!0) : (0, I.default)()
+            G ? B(!0) : (0, I.default)()
           }
         }), (0, i.jsx)(T.default, {
           children: (0, i.jsx)(_.default, {
@@ -192,7 +192,7 @@ function w(e) {
   }) : null
 }
 
-function B(e) {
+function k(e) {
   var t;
   let {
     onMouseDown: n,
@@ -215,7 +215,7 @@ function B(e) {
       className: a()(P.topControls, y.pipHeaderContent, {
         [y.pipHeaderContentOpen]: o
       }),
-      children: [!o && (0, i.jsx)(C.default, {
+      children: [!o && (0, i.jsx)(R.default, {
         className: y.menuIcon,
         width: 12,
         height: 12

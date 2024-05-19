@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120"), n("390547"), n("653041");
 var l = n("735250");
 n("470079");
-var a = n("803997"),
+var a = n("120356"),
   s = n.n(a),
   i = n("392711"),
   r = n.n(i),
@@ -16,13 +16,13 @@ var a = n("803997"),
   c = n("565799"),
   f = n("501655"),
   h = n("199902"),
-  C = n("592125"),
-  p = n("594174"),
-  m = n("938475"),
+  m = n("592125"),
+  C = n("594174"),
+  p = n("938475"),
   g = n("242315"),
   E = n("944581"),
-  S = n("632184"),
-  _ = n("170039"),
+  _ = n("632184"),
+  S = n("170039"),
   I = n("761374"),
   N = n("602623"),
   T = n("823379"),
@@ -30,10 +30,10 @@ var a = n("803997"),
   L = n("853856"),
   v = n("981631"),
   x = n("689938"),
-  R = n("499890"),
-  M = n("337341");
+  R = n("952972"),
+  M = n("81311");
 
-function O(e, t) {
+function y(e, t) {
   return 0 === t.length ? null : (0, l.jsxs)("div", {
     className: R.row,
     children: [(0, l.jsx)(e, {
@@ -46,13 +46,13 @@ function O(e, t) {
   })
 }
 
-function y() {
+function O() {
   var e, t;
-  let n = (0, o.useStateFromStoresArray)([L.default, C.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => C.default.getChannel(e)).filter(T.isNotNullish)),
+  let n = (0, o.useStateFromStoresArray)([L.default, m.default], () => A.default.keys(L.default.getFavoriteChannels()).map(e => m.default.getChannel(e)).filter(T.isNotNullish)),
     a = n.map(e => e.id),
     s = n.filter(e => e.type === v.ChannelTypes.GUILD_VOICE),
     i = n.filter(e => e.type === v.ChannelTypes.GUILD_STAGE_VOICE).map(e => e.id),
-    x = (0, o.useStateFromStoresArray)([m.default], () => r().flatMap(s, e => m.default.getVoiceStatesForChannel(e).map(e => {
+    x = (0, o.useStateFromStoresArray)([p.default], () => r().flatMap(s, e => p.default.getVoiceStatesForChannel(e).map(e => {
       let {
         user: t
       } = e;
@@ -64,7 +64,7 @@ function y() {
       } = e;
       return t
     }))),
-    y = (0, o.useStateFromStores)([c.default], () => {
+    O = (0, o.useStateFromStores)([c.default], () => {
       let e = 0;
       for (let t of i) e += c.default.getParticipantCount(t, f.StageChannelParticipantNamedIndex.AUDIENCE);
       return e
@@ -79,12 +79,12 @@ function y() {
       }
       return t
     }, [a]),
-    j = (0, o.useStateFromStoresArray)([p.default], () => b.map(e => p.default.getUser(e)), [b]),
-    G = (0, o.useStateFromStoresArray)([p.default], () => D.map(e => p.default.getUser(e)), [D]),
-    U = O(S.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
-  let P = (e = M, t = y, 0 === e.length ? null : (0, l.jsxs)("div", {
+    j = (0, o.useStateFromStoresArray)([C.default], () => b.map(e => C.default.getUser(e)), [b]),
+    P = (0, o.useStateFromStoresArray)([C.default], () => D.map(e => C.default.getUser(e)), [D]),
+    G = y(_.default, x.filter(e => !D.includes(e.id) && !b.includes(e.id)));
+  let U = (e = M, t = O, 0 === e.length ? null : (0, l.jsxs)("div", {
       className: R.row,
-      children: [(0, l.jsx)(_.default, {
+      children: [(0, l.jsx)(S.default, {
         className: R.activityIcon
       }), (0, l.jsx)(N.default, {
         guildId: void 0,
@@ -103,10 +103,10 @@ function y() {
         })]
       })]
     })),
-    w = O(I.default, G.filter(e => null != e && !b.includes(e.id))),
-    F = O(E.default, j);
+    w = y(I.default, P.filter(e => null != e && !b.includes(e.id))),
+    B = y(E.default, j);
   return (0, l.jsxs)(l.Fragment, {
-    children: [P, U, w, F]
+    children: [U, G, w, B]
   })
 }
 
@@ -118,7 +118,7 @@ function D() {
         className: s()(R.guildNameText, R.guildNameTextLimitedSize),
         children: x.default.Messages.FAVORITES_GUILD_NAME
       })
-    }), (0, l.jsx)(y, {})]
+    }), (0, l.jsx)(O, {})]
   })
 }
 

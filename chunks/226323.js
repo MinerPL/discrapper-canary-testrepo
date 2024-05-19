@@ -18,68 +18,68 @@ var a = n("735250"),
   h = n("586902"),
   _ = n("512384"),
   C = n("484459"),
-  S = n("103575"),
-  m = n("314897"),
+  m = n("103575"),
+  S = n("314897"),
   p = n("131951"),
-  I = n("836946"),
-  T = n("381238"),
-  g = n("255439"),
+  g = n("836946"),
+  I = n("381238"),
+  T = n("779863"),
   A = n("729285"),
   N = n("150954"),
   v = n("51144"),
   R = n("524484"),
-  L = n("689938"),
-  O = n("689835");
+  O = n("689938"),
+  L = n("164159");
 let M = {
     offset: 2
   },
-  P = {
+  y = {
     serverDeaf: {
-      icon: T.default,
+      icon: I.default,
       colorize: !0,
-      getStatus: () => L.default.Messages.SERVER_DEAFENED
+      getStatus: () => O.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
-      icon: g.default,
+      icon: T.default,
       colorize: !0,
-      getStatus: () => L.default.Messages.SERVER_MUTED
+      getStatus: () => O.default.Messages.SERVER_MUTED
     },
     deaf: {
-      icon: T.default,
+      icon: I.default,
       colorize: !1,
-      getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
+      getStatus: () => O.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
-      icon: g.default,
+      icon: T.default,
       colorize: !1,
-      getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
+      getStatus: () => O.default.Messages.VOICE_CHANNEL_MUTED
     }
   },
-  y = {
+  P = {
     serverDeaf: {
       icon: o.HeadphonesDenyIcon,
       colorize: !0,
-      getStatus: () => L.default.Messages.SERVER_DEAFENED
+      getStatus: () => O.default.Messages.SERVER_DEAFENED
     },
     serverMute: {
       icon: d.MicrophoneDenyIcon,
       colorize: !0,
-      getStatus: () => L.default.Messages.SERVER_MUTED
+      getStatus: () => O.default.Messages.SERVER_MUTED
     },
     deaf: {
       icon: u.HeadphonesSlashIcon,
       colorize: !1,
-      getStatus: () => L.default.Messages.VOICE_CHANNEL_DEAFENED
+      getStatus: () => O.default.Messages.VOICE_CHANNEL_DEAFENED
     },
     mute: {
       icon: c.MicrophoneSlashIcon,
       colorize: !1,
-      getStatus: () => L.default.Messages.VOICE_CHANNEL_MUTED
+      getStatus: () => O.default.Messages.VOICE_CHANNEL_MUTED
     },
     localMute: {
       icon: d.MicrophoneDenyIcon,
       colorize: !1,
-      getStatus: () => L.default.Messages.VOICE_CHANNEL_LOCAL_MUTED
+      getStatus: () => O.default.Messages.VOICE_CHANNEL_LOCAL_MUTED
     }
   };
 
@@ -91,9 +91,9 @@ function x(e) {
     nick: u,
     mute: d,
     deaf: c,
-    serverMute: m,
-    serverDeaf: I
-  } = e, T = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), g = (0, h.default)({
+    serverMute: S,
+    serverDeaf: g
+  } = e, I = (0, r.useStateFromStores)([p.default], () => p.default.isLocalMute(o.id)), T = (0, h.default)({
     userId: o.id,
     checkSoundSharing: !0
   }), A = null !== (t = l.getGuildId()) && void 0 !== t ? t : void 0, N = o.getAvatarURL(l.guild_id, 24), x = null != u ? u : v.default.getName(o), {
@@ -108,18 +108,18 @@ function x(e) {
       mute: s,
       localMute: l
     } = e, i = (0, f.useRedesignIconContext)().enabled;
-    if (t) return i ? y.serverDeaf : P.serverDeaf;
-    if (n) return i ? y.deaf : P.deaf;
-    if (a) return i ? y.serverMute : P.serverMute;
-    else if (l) return i ? y.localMute : P.mute;
-    else if (s) return i ? y.mute : P.mute
+    if (t) return i ? P.serverDeaf : y.serverDeaf;
+    if (n) return i ? P.deaf : y.deaf;
+    if (a) return i ? P.serverMute : y.serverMute;
+    else if (l) return i ? P.localMute : y.mute;
+    else if (s) return i ? P.mute : y.mute
   }({
-    serverDeaf: I,
+    serverDeaf: g,
     deaf: c,
-    serverMute: m,
+    serverMute: S,
     mute: d,
-    localMute: T
-  })) && void 0 !== s ? s : {}, j = null != U ? L.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
+    localMute: I
+  })) && void 0 !== s ? s : {}, j = null != U ? O.default.Messages.VOICE_PANEL_USER_TOOLTIP.format({
     userName: x,
     status: U()
   }) : x;
@@ -128,7 +128,7 @@ function x(e) {
     null != A ? (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("12435"), n.e("7717")]).then(n.bind(n, "757387"));
       return t => (0, a.jsx)(e, {
         ...t,
         user: o,
@@ -139,7 +139,7 @@ function x(e) {
     }) : (0, E.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
+      } = await Promise.all([n.e("99387"), n.e("36441"), n.e("69220")]).then(n.bind(n, "881351"));
       return t => (0, a.jsx)(e, {
         ...t,
         user: o,
@@ -153,7 +153,7 @@ function x(e) {
       channelId: l.id
     }),
     position: "top",
-    renderPopout: e => (0, a.jsx)(S.default, {
+    renderPopout: e => (0, a.jsx)(m.default, {
       location: "RTCConnectionVoiceUsers",
       userId: o.id,
       guildId: A,
@@ -165,27 +165,27 @@ function x(e) {
       children: t => (0, a.jsx)(f.Clickable, {
         ...t,
         ...e,
-        className: O.avatarContainer,
+        className: L.avatarContainer,
         onContextMenu: G,
         focusProps: M,
         children: (0, a.jsx)(_.default, {
           shakeLocation: R.ShakeLocation.VOICE_USER,
-          isShaking: g,
+          isShaking: T,
           children: (0, a.jsx)("div", {
-            className: i()(O.avatar, {
-              [O.speaking]: g
+            className: i()(L.avatar, {
+              [L.speaking]: T
             }),
             style: {
               backgroundImage: "url(".concat(N, ")")
             },
             children: null != D ? (0, a.jsx)(D, {
-              className: i()(O.avatarIconOverlay, {
-                [O.avatarIconRed]: b
+              className: i()(L.avatarIconOverlay, {
+                [L.avatarIconRed]: b
               }),
               color: "currentColor",
               width: 16,
               height: 16,
-              foreground: O.avatarIconRed
+              foreground: L.avatarIconRed
             }) : null
           })
         })
@@ -199,18 +199,18 @@ function D(e) {
     voiceStates: t,
     channel: n,
     className: l
-  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(I.default, {
-    className: O.expandButton,
+  } = e, [o, u] = s.useState(!1), d = o ? N.default : A.default, c = (0, a.jsx)(g.default, {
+    className: L.expandButton,
     onClick: () => u(!o),
-    color: I.CircleIconButtonColors.PRIMARY,
-    size: I.CircleIconButtonSizes.SIZE_24,
-    tooltip: o ? L.default.Messages.VOICE_PANEL_HIDE_EXTRAS : L.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
+    color: g.CircleIconButtonColors.PRIMARY,
+    size: g.CircleIconButtonSizes.SIZE_24,
+    tooltip: o ? O.default.Messages.VOICE_PANEL_HIDE_EXTRAS : O.default.Messages.VOICE_PANEL_SHOW_EXTRAS,
     icon: (0, a.jsx)(d, {
       width: 16,
       height: 16
     }),
     focusProps: M
-  }), E = (0, r.useStateFromStores)([m.default], () => m.default.getId(), []), [h, _] = function(e, t) {
+  }), E = (0, r.useStateFromStores)([S.default], () => S.default.getId(), []), [h, _] = function(e, t) {
     let n = [];
     for (let a of e) {
       if (a.user.id !== t) {
@@ -223,12 +223,12 @@ function D(e) {
     return [n, !1]
   }(t, E), C = _ && o ? t : h;
   return C.length <= 0 ? null : (0, a.jsx)(f.ScrollerThin, {
-    className: i()(O.scroller, l),
+    className: i()(L.scroller, l),
     fade: !0,
     children: (0, a.jsxs)("div", {
-      className: O.voiceUsers,
+      className: L.voiceUsers,
       role: "group",
-      "aria-label": L.default.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
+      "aria-label": O.default.Messages.VOICE_PANEL_USERS_A11Y_LABEL,
       children: [C.map(e => {
         let {
           user: t,

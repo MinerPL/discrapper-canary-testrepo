@@ -1,75 +1,81 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return p
   }
 }), n("411104"), n("47120");
 var i = n("735250"),
   r = n("470079"),
-  a = n("442837"),
-  s = n("493683"),
-  o = n("904245"),
-  l = n("906732"),
-  u = n("541716"),
-  d = n("752305"),
-  _ = n("893718"),
-  c = n("957730"),
+  a = n("493683"),
+  s = n("904245"),
+  o = n("906732"),
+  l = n("541716"),
+  u = n("752305"),
+  d = n("893718"),
+  _ = n("957730"),
+  c = n("131704"),
   E = n("592125"),
-  I = n("51144"),
+  I = n("5192"),
   T = n("838440"),
   f = n("785717"),
-  S = n("689938"),
-  h = n("772341");
-let A = async e => {
-  let {
-    userId: t,
-    content: n,
-    location: i
-  } = e, {
-    valid: r,
-    failureReason: a
-  } = await (0, T.applyChatRestrictions)({
-    type: u.ChatInputTypes.NORMAL,
-    content: n,
-    channel: null
-  });
-  if (!r) throw Error(a);
-  let l = await s.default.openPrivateChannel(t, !1, !1, i),
-    d = E.default.getChannel(l);
-  if (null == d) throw Error("Failed to open private channel");
-  let _ = c.default.parse(d, n);
-  return o.default.sendMessage(d.id, _)
-};
+  S = n("981631"),
+  h = n("689938"),
+  A = n("112147");
+let m = (0, c.createChannelRecord)({
+    id: "1",
+    type: S.ChannelTypes.DM
+  }),
+  N = async e => {
+    let {
+      userId: t,
+      content: n,
+      location: i
+    } = e, {
+      valid: r,
+      failureReason: o
+    } = await (0, T.applyChatRestrictions)({
+      type: l.ChatInputTypes.NORMAL,
+      content: n,
+      channel: null
+    });
+    if (!r) throw Error(o);
+    let u = await a.default.openPrivateChannel(t, !1, !1, i),
+      d = E.default.getChannel(u);
+    if (null == d) throw Error("Failed to open private channel");
+    let c = _.default.parse(d, n);
+    return s.default.sendMessage(d.id, c)
+  };
 
-function m(e) {
+function p(e) {
   let {
     user: t,
-    channelId: n,
+    guildId: n,
+    channelId: a,
     onClose: s
   } = e, {
-    newestAnalyticsLocation: o
-  } = (0, l.default)(), {
+    newestAnalyticsLocation: _
+  } = (0, o.default)(), {
     trackUserProfileAction: c
-  } = (0, f.useUserProfileAnalyticsContext)(), T = (0, a.useStateFromStores)([E.default], () => E.default.getChannel(n)), [m, N] = r.useState(""), [p, O] = r.useState((0, d.toRichValue)(m)), R = r.useRef(!1);
-  return null == T ? null : (0, i.jsx)(_.default, {
-    innerClassName: h.inner,
-    editorClassName: h.editor,
-    type: u.ChatInputTypes.USER_PROFILE,
-    placeholder: S.default.Messages.QUICK_DM_USER.format({
-      name: I.default.getName(t)
+  } = (0, f.useUserProfileAnalyticsContext)(), [E, T] = r.useState(""), [S, p] = r.useState((0, u.toRichValue)(E)), O = r.useRef(!1);
+  return (0, i.jsx)(d.default, {
+    innerClassName: A.inner,
+    editorClassName: A.editor,
+    type: l.ChatInputTypes.USER_PROFILE,
+    placeholder: h.default.Messages.QUICK_DM_USER.format({
+      name: I.default.getName(n, a, t)
     }),
-    channel: T,
-    textValue: m,
-    richValue: p,
+    channel: m,
+    textValue: E,
+    richValue: S,
     onChange: (e, t, n) => {
-      t !== m && (N(t), O(n))
+      t !== E && (T(t), p(n))
     },
-    focused: R.current,
+    focused: O.current,
     onFocus: () => {
-      R.current = !0
+      O.current = !0
     },
     onBlur: () => {
-      R.current = !1
+      O.current = !1
     },
     onSubmit: async e => {
       let {
@@ -78,10 +84,10 @@ function m(e) {
       try {
         return c({
           action: "SEND_DIRECT_MESSAGE"
-        }), await A({
+        }), await N({
           userId: t.id,
           content: n.trim(),
-          location: o
+          location: _
         }), null == s || s(), {
           shouldClear: !0,
           shouldRefocus: !1

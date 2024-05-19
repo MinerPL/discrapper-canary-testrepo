@@ -1,87 +1,94 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return A
   }
 });
 var i = n("735250");
 n("470079");
-var r = n("120356"),
-  a = n.n(r),
-  s = n("442837"),
-  o = n("246946"),
-  l = n("5192"),
-  u = n("447452"),
-  d = n("681837"),
-  _ = n("724593"),
-  c = n("530"),
-  E = n("894374"),
-  I = n("790711"),
-  T = n("580512"),
-  f = n("67152"),
-  S = n("579285"),
-  h = n("287612"),
-  A = n("108997");
+var r = n("442837"),
+  a = n("246946"),
+  s = n("5192"),
+  o = n("447452"),
+  l = n("681837"),
+  u = n("724593"),
+  d = n("530"),
+  _ = n("894374"),
+  c = n("790711"),
+  E = n("580512"),
+  I = n("67152"),
+  T = n("579285"),
+  f = n("287612"),
+  S = n("228168"),
+  h = n("153362");
 
-function m(e) {
+function A(e) {
   let {
     user: t,
     currentUser: n,
-    displayProfile: r,
+    displayProfile: A,
     guild: m,
     isHovering: N,
     onOpenProfile: p,
     channelId: O,
-    onClose: R
+    onClose: C
   } = e, {
-    moreUserDetailsEnabled: C
-  } = (0, u.useSimplifiedProfileExperiment)({
+    moreUserDetailsEnabled: R
+  } = (0, o.useSimplifiedProfileExperiment)({
     location: "BiteSizeProfileBody"
-  }), g = l.default.getName(null == m ? void 0 : m.id, O, t), L = (0, s.useStateFromStores)([o.default], () => o.default.hidePersonalInformation);
+  }), g = s.default.getName(null == m ? void 0 : m.id, O, t), L = (0, r.useStateFromStores)([a.default], () => a.default.hidePersonalInformation);
   return (0, i.jsxs)("div", {
-    className: A.body,
-    children: [(0, i.jsx)(c.default, {
+    className: h.body,
+    children: [(0, i.jsx)(d.default, {
       user: t,
-      onOpenProfile: () => p(!1),
+      profileType: S.UserProfileTypes.BITE_SIZE,
+      onOpenProfile: () => p({
+        autoFocusNote: !1
+      }),
       guildId: null == m ? void 0 : m.id,
-      usernameIcon: t.hasAvatarForGuild(null == m ? void 0 : m.id) && (0, i.jsx)(I.default, {
+      usernameIcon: t.hasAvatarForGuild(null == m ? void 0 : m.id) && (0, i.jsx)(c.default, {
         user: t,
         nickname: g
       }),
-      pronouns: null == r ? void 0 : r.pronouns,
-      tags: (0, i.jsx)(E.UserProfileBadgesTag, {
-        displayProfile: r,
-        onClose: R
+      pronouns: null == A ? void 0 : A.pronouns,
+      tags: (0, i.jsx)(_.UserProfileBadgesTag, {
+        displayProfile: A,
+        onClose: C
       }),
       nicknameIcons: (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(d.default, {
+        children: [(0, i.jsx)(l.default, {
           userId: t.id
-        }), C && !L && (0, i.jsx)(_.default, {
-          className: a()(A.noteIcon, {
-            [A.visible]: N
-          }),
+        }), R && !L && (0, i.jsx)(u.default, {
           user: t,
-          onOpenProfile: () => p(!0)
+          isHovering: N,
+          onOpenProfile: () => p({
+            autoFocusNote: !0
+          })
         })]
       })
-    }), (0, i.jsx)(h.default, {
+    }), t.id !== n.id && (0, i.jsx)(f.default, {
       user: t,
-      onClose: R
-    }), C && (0, i.jsx)(f.default, {
+      onOpenProfile: e => p({
+        section: e,
+        autoFocusNote: !1
+      })
+    }), R && (0, i.jsx)(I.default, {
       user: t,
-      bio: null == r ? void 0 : r.bio,
+      bio: null == A ? void 0 : A.bio,
       hidePersonalInformation: L,
-      onClose: R
-    }), (0, i.jsx)(T.default, {
+      onClose: C
+    }), (0, i.jsx)(E.default, {
       user: t,
       guild: m,
       channelId: O,
-      onClose: R
-    }), null != m && (0, i.jsx)(S.default, {
+      onClose: C
+    }), null != m && (0, i.jsx)(T.default, {
       user: t,
       currentUser: n,
       guild: m,
-      onOpenProfile: () => p(!1)
+      onOpenProfile: () => p({
+        autoFocusNote: !1
+      })
     })]
   })
 }

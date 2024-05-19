@@ -30,8 +30,8 @@ var a = n("735250"),
   x = n("430824"),
   M = n("158776"),
   R = n("885110"),
-  L = n("111583"),
-  y = n("594174"),
+  y = n("111583"),
+  L = n("594174"),
   O = n("499033"),
   j = n("630641"),
   P = n("158010"),
@@ -41,28 +41,28 @@ var a = n("735250"),
   F = n("585483"),
   w = n("700785"),
   k = n("51144"),
-  H = n("998502"),
-  B = n("276264"),
+  B = n("998502"),
+  H = n("276264"),
   G = n("981631"),
   V = n("689938"),
-  W = n("909864"),
-  Y = n("354811");
-let z = H.default.getEnableHardwareAcceleration(),
-  K = 44 + B.AVATAR_DECORATION_PADDING,
+  W = n("250421"),
+  Y = n("67431");
+let z = B.default.getEnableHardwareAcceleration(),
+  K = 44 + H.AVATAR_DECORATION_PADDING,
   Z = l.memo(function(e) {
     let {
       channel: t,
       sectionId: s,
       userId: i,
       guildOwnerId: r
-    } = e, o = (0, c.useStateFromStores)([L.default], () => L.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([x.default], () => {
+    } = e, o = (0, c.useStateFromStores)([y.default], () => y.default.isTyping(t.id, i)), p = (0, c.useStateFromStores)([v.default], () => v.default.getMember(t.guild_id, i)), E = (0, c.useStateFromStores)([x.default], () => {
       var e;
       return (null == p ? void 0 : p.colorRoleId) != null ? null === (e = x.default.getRole(t.guild_id, p.colorRoleId)) || void 0 === e ? void 0 : e.name : void 0
-    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([y.default], () => y.default.getUser(i)), S = (0, c.useStateFromStores)([y.default], () => y.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([N.default], () => N.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, H = l.useCallback(e => {
+    }, [t.guild_id, p]), C = (0, c.useStateFromStores)([L.default], () => L.default.getUser(i)), S = (0, c.useStateFromStores)([L.default], () => L.default.getCurrentUser()), _ = (null == C ? void 0 : C.id) === (null == S ? void 0 : S.id), O = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getStatus() : M.default.getStatus(i, t.guild_id)), j = (0, c.useStateFromStores)([M.default], () => M.default.isMobileOnline(i)), P = (0, c.useStateFromStores)([M.default, R.default], () => _ ? R.default.getActivities() : M.default.getActivities(i, t.guild_id)), D = (0, c.useStateFromStores)([N.default], () => N.default.getAnyStreamForUser(i)), b = (0, u.useListItem)(i), U = (0, c.useStateFromStores)([T.default], () => T.default.canUserViewChannel(t.id, s, i)), w = (null == C ? void 0 : C.id) != null && C.id === r, B = l.useCallback(e => {
       null != C && (0, h.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("70675")]).then(n.bind(n, "654663"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("70675")]).then(n.bind(n, "654663"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: C,
@@ -116,8 +116,8 @@ let z = H.default.getEnableHardwareAcceleration(),
         let {
           isShown: l
         } = n;
-        return (0, a.jsx)(B.default, {
-          onContextMenu: H,
+        return (0, a.jsx)(H.default, {
+          onContextMenu: B,
           shouldAnimateStatus: z,
           user: C,
           currentUser: S,

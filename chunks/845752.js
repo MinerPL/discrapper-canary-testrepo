@@ -1,19 +1,20 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return r
+    return o
   }
 });
 var a = n("392711"),
   s = n.n(a),
-  l = n("186901"),
-  i = n("981631");
+  l = n("243814"),
+  i = n("186901"),
+  r = n("981631");
 
-function r(e, t) {
+function o(e, t) {
   return {
-    [i.RPCEvents.VOICE_SETTINGS_UPDATE]: {
+    [r.RPCEvents.VOICE_SETTINGS_UPDATE]: {
       scope: {
-        [l.RPC_SCOPE_CONFIG.ANY]: [i.OAuth2Scopes.RPC, i.OAuth2Scopes.RPC_VOICE_READ]
+        [i.RPC_SCOPE_CONFIG.ANY]: [l.OAuth2Scopes.RPC, l.OAuth2Scopes.RPC_VOICE_READ]
       },
       handler: () => t => {
         let {
@@ -23,8 +24,8 @@ function r(e, t) {
         return !s().isEqual(l, n) && a(l), l
       }
     },
-    [i.RPCEvents.VOICE_SETTINGS_UPDATE_2]: {
-      scope: l.RPC_LOCAL_SCOPE,
+    [r.RPCEvents.VOICE_SETTINGS_UPDATE_2]: {
+      scope: i.RPC_LOCAL_SCOPE,
       handler(e) {
         let {
           socket: n

@@ -11,9 +11,9 @@ var a = n("120356"),
   i = n("924826"),
   r = n("589440"),
   o = n("481060"),
-  u = n("74153"),
-  d = n("809164"),
-  c = n("784545");
+  u = n("202956"),
+  d = n("513285"),
+  c = n("628462");
 
 function f(e) {
   var t;
@@ -22,12 +22,12 @@ function f(e) {
     className: a,
     innerClassName: f,
     renderIcon: h,
-    text: p,
-    selected: m,
-    trailing: C,
+    text: m,
+    selected: C,
+    trailing: p,
     showUnread: g = !1,
     ...E
-  } = e, _ = (0, i.useListItem)(n), S = null !== (t = (0, r.getNodeText)(p)) && void 0 !== t ? t : "";
+  } = e, _ = (0, i.useListItem)(n), S = null !== (t = (0, r.getNodeText)(m)) && void 0 !== t ? t : "";
   return (0, l.jsx)("li", {
     children: (0, l.jsxs)(o.ClickableContainer, {
       ...E,
@@ -49,7 +49,7 @@ function f(e) {
         e.stopPropagation()
       },
       className: s()(d.containerDefault, c.wrapper, {
-        [c.modeSelected]: m
+        [c.modeSelected]: C
       }, a),
       children: [g ? (0, l.jsx)("div", {
         className: s()(c.unread, c.unreadImportant)
@@ -63,8 +63,8 @@ function f(e) {
           }), (0, l.jsx)("div", {
             className: c.name,
             "aria-hidden": !0,
-            children: p
-          }), C]
+            children: m
+          }), p]
         })
       })]
     })

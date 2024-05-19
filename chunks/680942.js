@@ -10,8 +10,8 @@ var l = a("735250"),
   c = a("559629"),
   d = a("231338"),
   f = a("689938"),
-  m = a("306516");
-let C = {
+  C = a("46309");
+let m = {
   dark: [{
     box: "#FFF19E",
     ribbon: "#FF484B"
@@ -62,23 +62,23 @@ t.default = e => {
     product: t,
     returnRef: a,
     onSuccess: p,
-    tooltipDelay: h,
-    isGiftEasterEggEnabled: E,
+    tooltipDelay: E,
+    isGiftEasterEggEnabled: h,
     disableCustomColor: g = !1
   } = e, {
     analyticsLocations: x
-  } = (0, i.default)(), S = s.useRef(null), b = (0, n.default)(S), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
+  } = (0, i.default)(), v = s.useRef(null), b = (0, n.default)(v), T = g ? d.ThemeTypes.DARK : d.ThemeTypes.LIGHT;
   return (0, l.jsx)(r.Tooltip, {
     text: f.default.Messages.COLLECTIBLES_SHOP_GIFT_MODAL_SELECT_HEADER,
-    delay: h,
+    delay: E,
     children: e => (0, l.jsx)(r.Button, {
       ...e,
-      buttonRef: S,
-      className: m.giftButton,
+      buttonRef: v,
+      className: C.giftButton,
       color: g ? r.ButtonColors.BRAND : r.ButtonColors.CUSTOM,
       look: r.Button.Looks.FILLED,
       size: r.ButtonSizes.ICON,
-      innerClassName: m.giftButtonInner,
+      innerClassName: C.giftButtonInner,
       "aria-label": f.default.Messages.PREMIUM_GIFTING_BUTTON,
       onClick: e => {
         e.stopPropagation(), (0, u.default)({
@@ -91,11 +91,11 @@ t.default = e => {
           } : void 0
         })
       },
-      children: E ? (0, l.jsx)(o.SeasonalGiftIcon, {
+      children: h ? (0, l.jsx)(o.SeasonalGiftIcon, {
         hovered: b,
         isContentDismissed: !0,
         themeOverride: T,
-        boxColors: C
+        boxColors: m
       }) : (0, l.jsx)(c.default, {
         width: 24,
         height: 24

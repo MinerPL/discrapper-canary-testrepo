@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return u
   },
   NoticeButtonAnchor: function() {
-    return N
+    return A
   },
   NoticeCloseButton: function() {
     return T
@@ -13,7 +13,7 @@ n.r(t), n.d(t, {
     return _
   },
   PrimaryCTANoticeButton: function() {
-    return A
+    return N
   },
   default: function() {
     return L
@@ -26,10 +26,10 @@ var E = n("120356"),
   o = n("873546"),
   l = n("481060"),
   s = n("465670"),
-  c = n("626135"),
-  a = n("981631"),
-  I = n("689938"),
-  S = n("497748");
+  I = n("626135"),
+  c = n("981631"),
+  a = n("689938"),
+  S = n("14201");
 let _ = Object.freeze({
   DEFAULT: S.colorDefault,
   NEUTRAL: S.colorNeutral,
@@ -64,7 +64,7 @@ function u(e) {
   })
 }
 
-function A(e) {
+function N(e) {
   let {
     children: t,
     noticeType: n,
@@ -75,7 +75,7 @@ function A(e) {
     ...r,
     onClick: e => {
       var t, i;
-      null != r.onClick && r.onClick(e), t = n, i = E, null != t && c.default.track(a.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
+      null != r.onClick && r.onClick(e), t = n, i = E, null != t && I.default.track(c.AnalyticEvents.APP_NOTICE_PRIMARY_CTA_OPENED, {
         notice_type: t,
         ...i
       })
@@ -84,7 +84,7 @@ function A(e) {
   })
 }
 
-function N(e) {
+function A(e) {
   let {
     children: t,
     href: n,
@@ -110,11 +110,11 @@ function T(e) {
     className: S.closeButton,
     onClick: () => {
       var e;
-      t(), null != (e = n) && c.default.track(a.AnalyticEvents.APP_NOTICE_CLOSED, {
+      t(), null != (e = n) && I.default.track(c.AnalyticEvents.APP_NOTICE_CLOSED, {
         notice_type: e
       })
     },
-    "aria-label": I.default.Messages.DISMISS,
+    "aria-label": a.default.Messages.DISMISS,
     children: (0, i.jsx)(s.default, {
       className: S.closeIcon,
       width: 18,

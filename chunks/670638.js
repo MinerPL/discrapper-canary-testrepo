@@ -6,16 +6,16 @@ n.r(t), n.d(t, {
 });
 var s = n("735250"),
   a = n("470079"),
-  l = n("204097"),
-  i = n("80181"),
-  r = n("952265"),
+  l = n("442837"),
+  i = n("204097"),
+  r = n("80181"),
   o = n("481060"),
   u = n("239091"),
   d = n("230711"),
   c = n("390322"),
-  f = n("572004"),
-  E = n("617136"),
-  _ = n("272008"),
+  f = n("617136"),
+  E = n("272008"),
+  _ = n("569984"),
   m = n("918701"),
   T = n("341907"),
   I = n("981631"),
@@ -24,13 +24,21 @@ var s = n("735250"),
 
 function N(e) {
   var t;
-  let c = (0, m.isDismissible)(e.questContent),
+  let n = (0, l.useStateFromStores)([_.default], () => _.default.questDeliveryOverride, []),
+    c = (0, m.isDismissible)(e.questContent),
     N = a.useCallback(() => {
       (0, T.openGameLink)(e.quest, {
         content: e.questContent,
-        ctaContent: E.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
+        ctaContent: f.QuestContentCTA.CONTEXT_MENU_OPEN_GAME_LINK
       })
-    }, [e.quest, e.questContent]);
+    }, [e.quest, e.questContent]),
+    S = a.useCallback(() => {
+      (0, T.copyShareLink)(e.quest.id, {
+        content: e.questContent,
+        position: e.questContentPosition,
+        ctaContent: f.QuestContentCTA.CONTEXT_MENU_COPY_LINK
+      })
+    }, [e.quest, e.questContent, e.questContentPosition]);
   return (0, s.jsxs)(o.Menu, {
     variant: "fixed",
     onSelect: () => {
@@ -44,80 +52,74 @@ function N(e) {
         id: "play-game",
         label: h.default.Messages.QUESTS_PLAY_GAME,
         action: N,
-        icon: i.LinkExternalMediumIcon
+        icon: r.LinkExternalMediumIcon
       }), !0 === e.showShareLink && (0, s.jsx)(o.MenuItem, {
         id: "share-link",
         label: h.default.Messages.COPY_LINK,
-        action: () => {
-          (0, E.trackQuestContentClicked)({
-            questId: e.quest.id,
-            questContent: e.questContent,
-            questContentCTA: E.QuestContentCTA.CONTEXT_MENU_COPY_LINK
-          }), (0, f.copy)((0, m.getQuestUrl)(e.quest.id))
-        },
-        icon: l.CopyIcon
+        action: S,
+        icon: i.CopyIcon
       })]
     }, "major-actions"), (0, s.jsxs)(o.MenuGroup, {
       children: [!e.hideLearnMore && (0, s.jsx)(o.MenuItem, {
         id: "learn-more",
         label: h.default.Messages.QUESTS_LEARN_MORE_V2,
         action: () => {
-          (0, E.trackQuestContentClicked)({
+          (0, f.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
-            questContentCTA: E.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
+            questContentPosition: e.questContentPosition,
+            questContentCTA: f.QuestContentCTA.CONTEXT_MENU_LEARN_MORE
           }), d.default.open(I.UserSettingsSections.INVENTORY)
         }
       }), e.shouldShowDisclosure && (0, s.jsx)(o.MenuItem, {
         id: "display-disclosure",
         label: h.default.Messages.QUESTS_DISCLOSURE_LABEL,
         action: () => {
-          (0, E.trackQuestContentClicked)({
-            questId: e.quest.id,
-            questContent: e.questContent,
-            questContentCTA: E.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
-          }), (0, r.openModalLazy)(async () => {
-            let {
-              default: t
-            } = await Promise.all([n.e("99387"), n.e("4266")]).then(n.bind(n, "316210"));
-            return n => (0, s.jsx)(t, {
-              ...n,
-              questContent: e.questContent,
-              questConfig: e.quest.config
-            })
+          (0, T.openDisclosureModal)(e.quest, {
+            content: e.questContent,
+            position: e.questContentPosition,
+            ctaContent: f.QuestContentCTA.CONTEXT_MENU_OPEN_DISCLOSURE
           })
         }
       }), c && (0, s.jsx)(o.MenuItem, {
         id: "hide-entrypoint",
         label: h.default.Messages.QUESTS_HIDE_THIS,
         action: () => {
-          (0, E.trackQuestContentClicked)({
+          (0, f.trackQuestContentClicked)({
             questId: e.quest.id,
             questContent: e.questContent,
-            questContentCTA: E.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
-          }), (0, m.isDismissible)(e.questContent) && (0, _.dismissQuestContent)(e.quest.id, e.questContent)
+            questContentPosition: e.questContentPosition,
+            questContentCTA: f.QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT
+          }), (0, m.isDismissible)(e.questContent) && (0, E.dismissQuestContent)(e.quest.id, e.questContent)
         },
         subtext: h.default.Messages.QUESTS_FIND_QUEST
       })]
     }, "minor-actions"), e.quest.preview && (0, s.jsxs)(o.MenuGroup, {
       label: "Preview Controls",
-      children: [(0, s.jsx)(o.MenuItem, {
+      children: [(0, s.jsx)(o.MenuCheckboxItem, {
+        id: "delivery",
+        label: "Show in Quest Bar",
+        checked: (null == n ? void 0 : n.id) === e.quest.id,
+        action: () => {
+          (0, E.overrideQuestDelivery)(e.quest.id)
+        }
+      }), (0, s.jsx)(o.MenuItem, {
         id: "dismiss",
         label: "Reset Dismissibility",
         action: () => {
-          (0, _.resetQuestDismissibilityStatus)(e.quest.id)
+          (0, E.resetQuestDismissibilityStatus)(e.quest.id)
         }
       }), (0, s.jsx)(o.MenuItem, {
         id: "enrollment",
         label: "Reset Quest",
         action: () => {
-          (0, _.resetQuestPreviewStatus)(e.quest.id)
+          (0, E.resetQuestPreviewStatus)(e.quest.id)
         }
       }), (0, s.jsx)(o.MenuItem, {
         id: "complete",
         label: "Complete Quest",
         action: () => {
-          (0, _.completeQuestPreview)(e.quest.id)
+          (0, E.completeQuestPreview)(e.quest.id)
         }
       })]
     }, "preview-controls")]
@@ -132,16 +134,18 @@ function S(e) {
     preventIdle: i,
     quest: r,
     questContent: u,
-    ...d
-  } = e, f = a.useCallback(() => {
-    (0, E.trackQuestContentClicked)({
+    questContentPosition: d,
+    ...E
+  } = e, _ = a.useCallback(() => {
+    (0, f.trackQuestContentClicked)({
       questId: r.id,
       questContent: u,
-      questContentCTA: E.QuestContentCTA.OPEN_CONTEXT_MENU
+      questContentCTA: f.QuestContentCTA.OPEN_CONTEXT_MENU,
+      questContentPosition: d
     }), null != n && n()
-  }, [n, r, u]);
+  }, [n, r.id, u, d]);
   return (0, s.jsx)(o.Popout, {
-    onRequestOpen: f,
+    onRequestOpen: _,
     onRequestClose: l,
     renderPopout: e => {
       let {
@@ -149,15 +153,17 @@ function S(e) {
       } = e;
       return i ? (0, s.jsx)(c.default, {
         children: (0, s.jsx)(N, {
-          ...d,
+          ...E,
           quest: r,
           questContent: u,
+          questContentPosition: d,
           onClose: t
         })
       }) : (0, s.jsx)(N, {
-        ...d,
+        ...E,
         quest: r,
         questContent: u,
+        questContentPosition: d,
         onClose: t
       })
     },

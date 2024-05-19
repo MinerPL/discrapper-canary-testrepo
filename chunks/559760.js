@@ -671,5 +671,8 @@ let a = {
     },
     "thread-channel-spine": {
       name: "interactive-muted"
+    },
+    "stage-card-pill-bg": {
+      name: "card-secondary-bg"
     }
   }

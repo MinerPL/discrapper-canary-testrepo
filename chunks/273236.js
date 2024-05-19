@@ -10,8 +10,8 @@ var a = t("735250"),
   o = t("808602"),
   u = t("93879"),
   h = t("689938"),
-  x = t("520262"),
-  N = t("816805");
+  x = t("878163"),
+  N = t("351109");
 
 function I(e) {
   let {
@@ -134,7 +134,7 @@ s.default = l.forwardRef(function(e, s) {
           }), (0, a.jsx)("div", {
             className: "after" === i ? x.guild : x.unreadGuild,
             children: (0, a.jsx)("img", {
-              src: t("536411"),
+              src: t("17840"),
               width: 36,
               height: 36,
               alt: "Example Guild Icon"

@@ -1,22 +1,22 @@
 "use strict";
 n.r(t), n.d(t, {
   FavoriteAddedTooltip: function() {
-    return p
+    return C
   }
 });
 var l = n("735250"),
   a = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("481060"),
   o = n("593214"),
   u = n("981631"),
   d = n("689938"),
-  c = n("421690"),
-  f = n("499890"),
-  h = n("337341");
+  c = n("124613"),
+  f = n("952972"),
+  h = n("81311");
 
-function C() {
+function m() {
   return (0, l.jsx)("div", {
     className: i()(f.row, f.rowGuildName),
     children: (0, l.jsx)("span", {
@@ -25,7 +25,7 @@ function C() {
     })
   })
 }
-let p = a.memo(function(e) {
+let C = a.memo(function(e) {
   let {
     "aria-label": t = !1,
     children: n
@@ -52,7 +52,7 @@ let p = a.memo(function(e) {
     spacing: 20,
     position: "right",
     align: "center",
-    text: (0, l.jsx)(C, {}),
+    text: (0, l.jsx)(m, {}),
     "aria-label": t,
     tooltipClassName: h.listItemTooltip,
     children: e => (0, l.jsx)("div", {

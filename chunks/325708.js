@@ -17,7 +17,7 @@ var a, l, s = n("735250"),
   f = n("347469"),
   h = n("740492"),
   m = n("36645"),
-  p = n("518144");
+  p = n("78799");
 (l = a || (a = {}))[l.PostSidebar = 0] = "PostSidebar", l[l.ThreadSidebar = 1] = "ThreadSidebar", l[l.CallChatSidebar = 2] = "CallChatSidebar", l[l.MessageRequestSidebar = 3] = "MessageRequestSidebar", l[l.HomeSidebar = 4] = "HomeSidebar";
 
 function E(e) {

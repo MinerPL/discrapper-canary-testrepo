@@ -29,7 +29,7 @@ t.default = l.memo(function(e) {
     "aria-hidden": m["aria-hidden"],
     className: f,
     recipients: t.recipients,
-    size: null != l ? l : (0, s.getAvatarSize)(n),
+    size: null != l ? l : n,
     isTyping: d,
     status: c
   }) : (0, a.jsx)(s.Avatar, {

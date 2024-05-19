@@ -8,7 +8,7 @@ var a = n("735250"),
   l = n("470079"),
   s = n("120356"),
   i = n.n(s),
-  r = n("718017"),
+  r = n("920906"),
   o = n("110924"),
   u = n("157813"),
   d = n("314897"),
@@ -20,8 +20,8 @@ var a = n("735250"),
   E = n("796638"),
   C = n("981631"),
   g = n("354459"),
-  S = n("142181"),
-  _ = n("258236");
+  S = n("825532"),
+  _ = n("16869");
 let T = 16 / 9,
   I = 8 + E.PARTICIPANTS_HEIGHT;
 
@@ -35,8 +35,8 @@ function A(e) {
       popoutWindow: x,
       inCall: M,
       channel: R,
-      selectedParticipant: L,
-      showParticipants: y = !0,
+      selectedParticipant: y,
+      showParticipants: L = !0,
       className: O,
       paused: j,
       width: P,
@@ -47,15 +47,15 @@ function A(e) {
     } = e,
     w = null != x,
     k = c.default.getVideoComponent(),
-    H = d.default.getId(),
-    [B, G] = l.useState(null),
+    B = d.default.getId(),
+    [H, G] = l.useState(null),
     [V, W] = l.useState(!0),
     [Y, z] = l.useState(!1),
-    K = L.type === g.ParticipantTypes.ACTIVITY,
-    Z = !K && null != L.streamId,
-    q = Z && null != B && B.width > 0 && B.height > 0 ? B.width / B.height : T,
+    K = y.type === g.ParticipantTypes.ACTIVITY,
+    Z = !K && null != y.streamId,
+    q = Z && null != H && H.width > 0 && H.height > 0 ? H.width / H.height : T,
     X = D <= 2 * I + 144,
-    Q = y && !X,
+    Q = L && !X,
     J = (0, o.default)(Q),
     $ = 0;
   (K || Q) && ($ += 72), K && !Q && ($ += 48), Q && ($ += .5 * I + 8);
@@ -106,7 +106,7 @@ function A(e) {
         clamp: !0
       }
     }),
-    eo = (0, r.useTransition)(L, {
+    eo = (0, r.useTransition)(y, {
       keys: e => null == e ? void 0 : e.id,
       config: {
         ...r.config.stiff,
@@ -126,7 +126,7 @@ function A(e) {
     eu = l.useCallback(e => {
       G(e), W(!1)
     }, []),
-    ed = Q || j ? [] : (0, p.getPipParticipants)(N, L, H),
+    ed = Q || j ? [] : (0, p.getPipParticipants)(N, y, B),
     {
       visibleParticipants: ec,
       participantTileWidth: ef
@@ -188,7 +188,7 @@ function A(e) {
           },
           children: (0, a.jsx)(u.default, {
             channelId: R.id,
-            isParticipantsOpen: y,
+            isParticipantsOpen: L,
             isVertical: !0
           })
         }) : null]
@@ -206,9 +206,9 @@ function A(e) {
           onDoubleClick: A,
           participants: ec,
           participantTileWidth: ef,
-          selectedParticipantId: L.id,
+          selectedParticipantId: y.id,
           inCall: M,
-          paused: j || Y || !y,
+          paused: j || Y || !L,
           popoutWindow: x
         })
       })]

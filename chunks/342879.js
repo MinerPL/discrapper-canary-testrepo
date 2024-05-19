@@ -35,7 +35,10 @@ function A() {
   E = setTimeout(() => m(), null == t ? 0 : new Date(t).getTime() - Date.now())
 }
 async function m() {
-  if (S()) try {
+  let {
+    force: e = !1
+  } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+  if (S() || e) try {
     I = !0;
     let e = await (0, u.getMyContentInventory)();
     i.default.dispatch({
@@ -55,14 +58,20 @@ function N() {
   A()
 }
 
-function p(e) {
+function p() {
+  h(), m({
+    force: !0
+  })
+}
+
+function O(e) {
   let {
     connectionId: t,
     track: n
   } = e;
   if (null != t)(0, l.isEligibleForListenedMediaInventory)("ContentInventoryManager.handleSpotifyNewTrack") && (0, u.postTrackToContentInventory)(t, n)
 }
-class O extends r.default {
+class C extends r.default {
   constructor(...e) {
     var t, n, i;
     super(...e), t = this, n = "actions", i = {
@@ -71,7 +80,8 @@ class O extends r.default {
       WINDOW_FOCUS: N,
       IDLE: N,
       CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: N,
-      SPOTIFY_NEW_TRACK: p
+      CONTENT_INVENTORY_MANUAL_REFRESH: p,
+      SPOTIFY_NEW_TRACK: O
     }, n in t ? Object.defineProperty(t, n, {
       value: i,
       enumerable: !0,
@@ -80,4 +90,4 @@ class O extends r.default {
     }) : t[n] = i
   }
 }
-t.default = new O
+t.default = new C

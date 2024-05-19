@@ -16,100 +16,97 @@ var a = n("735250"),
   C = n("607070"),
   m = n("627845"),
   S = n("185666"),
-  I = n("503737"),
-  p = n("513202"),
-  T = n("318891"),
-  g = n("687751"),
+  p = n("503737"),
+  g = n("513202"),
+  I = n("318891"),
+  T = n("687751"),
   A = n("912471"),
   N = n("100527"),
-  v = n("74438"),
-  O = n("753450"),
-  R = n("675869"),
-  L = n("77987"),
-  P = n("679891"),
-  M = n("491575"),
-  y = n("561345"),
-  D = n("314533"),
-  b = n("935347"),
+  v = n("838134"),
+  R = n("77987"),
+  O = n("679891"),
+  L = n("491575"),
+  M = n("561345"),
+  y = n("314533"),
+  P = n("935347"),
   x = n("560067"),
-  U = n("823169"),
-  j = n("620360"),
-  G = n("96051"),
-  w = n("750995"),
-  k = n("696287"),
-  F = n("408026"),
-  B = n("763916"),
-  H = n("306721"),
-  V = n("531551"),
-  Y = n("38618"),
-  W = n("972830"),
-  K = n("981283"),
-  z = n("584233"),
-  q = n("15274"),
-  Q = n("434404"),
-  Z = n("543842"),
-  X = n("879064"),
-  J = n("315964"),
-  $ = n("495784"),
-  ee = n("975533"),
-  et = n("377400"),
-  en = n("285865"),
-  ea = n("659971"),
-  es = n("929809"),
-  el = n("122333"),
-  ei = n("960275"),
-  er = n("818765"),
-  eo = n("678492"),
-  eu = n("269089"),
-  ed = n("380570"),
-  ec = n("837689"),
-  ef = n("367207"),
-  eE = n("489977"),
-  eh = n("329557"),
-  e_ = n("304445"),
-  eC = n("893607"),
-  em = n("703656"),
-  eS = n("298969"),
-  eI = n("719256"),
-  ep = n("6025"),
-  eT = n("897473"),
+  D = n("823169"),
+  b = n("620360"),
+  U = n("96051"),
+  j = n("750995"),
+  G = n("696287"),
+  k = n("408026"),
+  w = n("763916"),
+  B = n("306721"),
+  F = n("531551"),
+  H = n("38618"),
+  V = n("972830"),
+  Y = n("981283"),
+  W = n("584233"),
+  K = n("15274"),
+  z = n("434404"),
+  q = n("543842"),
+  Q = n("879064"),
+  Z = n("315964"),
+  X = n("495784"),
+  J = n("975533"),
+  $ = n("377400"),
+  ee = n("285865"),
+  et = n("659971"),
+  en = n("929809"),
+  ea = n("122333"),
+  es = n("960275"),
+  el = n("818765"),
+  ei = n("678492"),
+  er = n("269089"),
+  eo = n("380570"),
+  eu = n("837689"),
+  ed = n("367207"),
+  ec = n("489977"),
+  ef = n("329557"),
+  eE = n("304445"),
+  eh = n("893607"),
+  e_ = n("703656"),
+  eC = n("298969"),
+  em = n("719256"),
+  eS = n("6025"),
+  ep = n("897473"),
   eg = n("377368"),
-  eA = n("262702"),
-  eN = n("639033"),
-  ev = n("479313"),
-  eO = n("911560"),
-  eR = n("703016"),
-  eL = n("171368"),
-  eP = n("429974"),
-  eM = n("332754"),
-  ey = n("507468"),
-  eD = n("357269"),
-  eb = n("282506"),
+  eI = n("262702"),
+  eT = n("639033"),
+  eA = n("479313"),
+  eN = n("911560"),
+  ev = n("703016"),
+  eR = n("171368"),
+  eO = n("429974"),
+  eL = n("332754"),
+  eM = n("507468"),
+  ey = n("357269"),
+  eP = n("282506"),
   ex = n("444961"),
-  eU = n("314897"),
-  ej = n("433355"),
-  eG = n("592125"),
-  ew = n("896797"),
-  ek = n("430824"),
-  eF = n("819640"),
-  eB = n("283595"),
-  eH = n("944486"),
-  eV = n("914010"),
-  eY = n("695103"),
-  eW = n("241890"),
-  eK = n("396296"),
-  ez = n("897607"),
-  eq = n("417363"),
-  eQ = n("900974"),
-  eZ = n("358085"),
-  eX = n("998502"),
-  eJ = n("346329"),
-  e$ = n("981631"),
-  e0 = n("272242"),
-  e1 = n("176505"),
-  e4 = n("701476");
+  eD = n("314897"),
+  eb = n("433355"),
+  eU = n("592125"),
+  ej = n("896797"),
+  eG = n("430824"),
+  ek = n("819640"),
+  ew = n("283595"),
+  eB = n("944486"),
+  eF = n("914010"),
+  eH = n("695103"),
+  eV = n("241890"),
+  eY = n("396296"),
+  eW = n("897607"),
+  eK = n("417363"),
+  ez = n("900974"),
+  eq = n("358085"),
+  eQ = n("998502"),
+  eZ = n("346329"),
+  eX = n("981631"),
+  eJ = n("176505"),
+  e$ = n("701476");
 
-function e2(e, t, n) {
+function e0(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -118,31 +115,31 @@ function e2(e, t, n) {
   }) : e[t] = n, e
 }
 n("117240"), n("801077"), n("967368"), n("272053"), n("974180"), n("574254"), n("551428"), n("55563"), n("455173"), n("882029"), n("959457"), n("653255"), n("663389"), n("25990"), n("778825"), n("999382"), n("388610"), n("533947"), n("277053"), n("371398"), n("141233"), n("471073"), n("628566");
-let e9 = !1;
-(0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eS.default.loadServer(), eZ.isPlatformEmbedded && (eX.default.on("USER_SETTINGS_OPEN", () => {
-  !eF.default.getLayers().includes(e$.Layers.USER_SETTINGS) && _.default.open(e$.UserSettingsSections.ACCOUNT)
-}), eX.default.on("LAUNCH_APPLICATION", (e, t) => {
-  let n = eB.default.getActiveLibraryApplication(t);
-  eJ.playApplication(t, n, {
+let e1 = !1;
+(0, A.initSessionHeartbeatScheduler)(), o.default.initialize(), eC.default.loadServer(), eq.isPlatformEmbedded && (eQ.default.on("USER_SETTINGS_OPEN", () => {
+  !ek.default.getLayers().includes(eX.Layers.USER_SETTINGS) && _.default.open(eX.UserSettingsSections.ACCOUNT)
+}), eQ.default.on("LAUNCH_APPLICATION", (e, t) => {
+  let n = ew.default.getActiveLibraryApplication(t);
+  eZ.playApplication(t, n, {
     analyticsParams: {
       location: {
-        page: e$.AnalyticsPages.DIRECT,
-        object: e$.AnalyticsObjects.WEB_URL
+        page: eX.AnalyticsPages.DIRECT,
+        object: eX.AnalyticsObjects.WEB_URL
       }
     }
   })
 }));
-let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
-    isConnected: Y.default.isConnected(),
-    defaultRoute: ew.default.defaultRoute,
-    defaultRouteFallback: ew.default.fallbackRoute,
-    token: eU.default.getToken()
+let e4 = o.default.connectStores([H.default, ej.default, eD.default], () => ({
+    isConnected: H.default.isConnected(),
+    defaultRoute: ej.default.defaultRoute,
+    defaultRouteFallback: ej.default.fallbackRoute,
+    token: eD.default.getToken()
   }))(class extends s.Component {
     componentDidMount() {
       let {
         match: e
       } = this.props;
-      null != e && null != e.params.inviteCode && (0, z.doGuildOnboardingForPostAuthInvite)({
+      null != e && null != e.params.inviteCode && (0, W.doGuildOnboardingForPostAuthInvite)({
         code: e.params.inviteCode
       })
     }
@@ -154,11 +151,11 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
         defaultRouteFallback: s
       } = this.props;
       if (null == n) return (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.DEFAULT_LOGGED_OUT
+        to: eX.Routes.DEFAULT_LOGGED_OUT
       });
       if (e) {
-        let e = ts(t);
-        return null == e || (e.params.guildId === e$.ME || null != ek.default.getGuild(e.params.guildId)) && null != eG.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
+        let e = e6(t);
+        return null == e || (e.params.guildId === eX.ME || null != eG.default.getGuild(e.params.guildId)) && null != eU.default.getChannel(e.params.channelId) ? (0, a.jsx)(r.Redirect, {
           to: t
         }) : (0, a.jsx)(r.Redirect, {
           to: s
@@ -167,30 +164,15 @@ let e7 = o.default.connectStores([Y.default, ew.default, eU.default], () => ({
       return null
     }
   }),
-  e3 = (0, L.makeAuthenticated)(M.default, null, {
+  e2 = (0, R.makeAuthenticated)(L.default, null, {
     passProps: !1
   }),
-  e5 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(v.default, {})
+  e3 = (0, R.makeAuthenticated)(v.default, null, {
+    passProps: !1
   }),
-  e8 = (0, L.makeAuthenticated)(function(e) {
-    let {
-      match: t
-    } = e, {
-      applicationId: n,
-      section: s
-    } = t.params, l = (0, Z.default)(e0.ApplicationDirectoryProfileSections, s);
-    return (0, a.jsx)(O.default, {
-      applicationId: n,
-      initialSection: l
-    })
-  }),
-  e6 = (0, L.makeAuthenticated)(function() {
-    return (0, a.jsx)(R.default, {})
-  }),
-  te = [e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(e1.StaticChannelRoutes).map(e => e$.Routes.CHANNEL(":guildId", e))];
+  e7 = [eX.Routes.GUILD_BOOSTING_MARKETING(":guildId"), ...Array.from(eJ.StaticChannelRoutes).map(e => eX.Routes.CHANNEL(":guildId", e))];
 
-function tt(e) {
+function e5(e) {
   let {
     guildId: t,
     channelId: n = null,
@@ -198,239 +180,230 @@ function tt(e) {
     threadId: s = null
   } = e.params;
   return {
-    guildId: null != t ? t : e$.ME,
+    guildId: null != t ? t : eX.ME,
     channelId: n,
     messageId: a,
     threadId: s
   }
 }
-let tn = [{
-    path: [e$.Routes.APPLICATION_DIRECTORY_SEARCH],
-    render: e6,
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?")],
-    render: e8,
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.APPLICATION_DIRECTORY],
-    render: e5,
-    isSessionRequired: !0
-  }],
-  ta = [{
-    path: [e$.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
-    render(e) {
-      let {
-        match: t
-      } = e;
-      return (0, a.jsx)(e7, {
-        match: t
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.APP],
-    render: () => (0, a.jsx)(e7, {}),
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.USERS(":id")],
-    render: function(e) {
-      let {
-        match: t,
-        location: n
-      } = e, {
-        friend_token: s
-      } = (0, l.parse)(n.search), {
-        id: i
-      } = t.params;
-      return (0, W.addPostConnectionCallback)(() => (0, eL.openUserProfileModal)({
-        userId: i,
-        guildId: e$.ME,
-        friendToken: s,
-        sourceAnalyticsLocations: [N.default.URI_SCHEME],
-        analyticsLocation: {
-          section: e$.AnalyticsSections.DIRECT_ROUTE_ACCESS
-        }
-      })), (0, a.jsx)(r.Redirect, {
-        to: ew.default.defaultRoute
-      })
-    }
-  }, {
-    path: [e$.Routes.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
-    render: function(e) {
-      let {
-        match: t
-      } = e, {
-        gameId: n,
-        action: s
-      } = t.params;
-      return eq.default.whenInitialized(() => {
-        eB.default.whenInitialized(() => {
-          switch (s) {
-            case "launch": {
-              let e = eB.default.getActiveLibraryApplication(n);
-              if (null == e) return;
-              eJ.playApplication(e.id, e, {
-                analyticsParams: {
-                  location: {
-                    page: e$.AnalyticsPages.DIRECT,
-                    object: e$.AnalyticsObjects.WEB_URL
-                  }
+let e9 = [{
+  path: [eX.Routes.APP_WITH_INVITE_AND_GUILD_ONBOARDING(":inviteCode")],
+  render(e) {
+    let {
+      match: t
+    } = e;
+    return (0, a.jsx)(e4, {
+      match: t
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.APP],
+  render: () => (0, a.jsx)(e4, {}),
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.USERS(":id")],
+  render: function(e) {
+    let {
+      match: t,
+      location: n
+    } = e, {
+      friend_token: s
+    } = (0, l.parse)(n.search), {
+      id: i
+    } = t.params;
+    return (0, V.addPostConnectionCallback)(() => (0, eR.openUserProfileModal)({
+      userId: i,
+      guildId: eX.ME,
+      friendToken: s,
+      sourceAnalyticsLocations: [N.default.URI_SCHEME],
+      analyticsLocation: {
+        section: eX.AnalyticsSections.DIRECT_ROUTE_ACCESS
+      }
+    })), (0, a.jsx)(r.Redirect, {
+      to: ej.default.defaultRoute
+    })
+  }
+}, {
+  path: [eX.Routes.APPLICATION_LIBRARY_ACTION(":gameId", ":action")],
+  render: function(e) {
+    let {
+      match: t
+    } = e, {
+      gameId: n,
+      action: s
+    } = t.params;
+    return eK.default.whenInitialized(() => {
+      ew.default.whenInitialized(() => {
+        switch (s) {
+          case "launch": {
+            let e = ew.default.getActiveLibraryApplication(n);
+            if (null == e) return;
+            eZ.playApplication(e.id, e, {
+              analyticsParams: {
+                location: {
+                  page: eX.AnalyticsPages.DIRECT,
+                  object: eX.AnalyticsObjects.WEB_URL
                 }
-              });
-              break
-            }
-            case "test-mode":
-              eY.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(n));
-              break;
-            case "uninstall": {
-              let e = eB.default.getActiveLibraryApplication(n);
-              if (null == e) return;
-              (0, c.uninstallBranchPrompt)(e.id, e.branchId, e$.AnalyticsLocations.URI_SCHEME)
-            }
+              }
+            });
+            break
           }
+          case "test-mode":
+            eH.default.whenInitialized(() => h.authorizeAndSetTestModeApplication(n));
+            break;
+          case "uninstall": {
+            let e = ew.default.getActiveLibraryApplication(n);
+            if (null == e) return;
+            (0, c.uninstallBranchPrompt)(e.id, e.branchId, eX.AnalyticsLocations.URI_SCHEME)
+          }
+        }
+      })
+    }), (0, a.jsx)(r.Redirect, {
+      to: eX.Routes.APPLICATION_LIBRARY
+    })
+  }
+}, {
+  path: [eX.Routes.GUILD_CREATE],
+  render: function() {
+    return (0, V.addPostConnectionCallback)(() => x.default.openCreateGuildModal({
+      location: "External link"
+    })), (0, a.jsx)(r.Redirect, {
+      to: ej.default.defaultRoute
+    })
+  }
+}, {
+  path: [eX.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
+  render: function(e) {
+    let {
+      match: t
+    } = e, {
+      section: n,
+      subsection: s
+    } = t.params, i = (0, l.parse)(location.search).feature;
+    return (0, V.addPostConnectionCallback)(() => Q.openGuildSettingsPickerModal({
+      section: (0, q.default)(eX.GuildSettingsSections, n),
+      subsection: (0, q.default)(eX.GuildSettingsSubsections, s),
+      feature: i
+    })), (0, a.jsx)(r.Redirect, {
+      to: ej.default.defaultRoute
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.SETTINGS(":section", ":subsection?")],
+  render: function(e) {
+    let {
+      location: t
+    } = e, n = (0, ey.default)(t.pathname);
+    return null != n && (0, V.addPostConnectionCallback)(() => _.default.open(n.section, n.subsection, {
+      openWithoutBackstack: !1,
+      impressionSource: n.source
+    })), (0, a.jsx)(r.Redirect, {
+      to: ej.default.defaultRoute
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.USER_GUILD_NOTIFICATION_SETTINGS(":guildId")],
+  render: function(e) {
+    let {
+      match: t
+    } = e, {
+      guildId: s
+    } = t.params;
+    return (0, V.addPostConnectionCallback)(() => {
+      (0, u.openModalLazy)(async () => {
+        let {
+          default: e
+        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("5863"), n.e("29041")]).then(n.bind(n, "751212"));
+        return t => (0, a.jsx)(e, {
+          ...t,
+          guildId: s
         })
-      }), (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.APPLICATION_LIBRARY
       })
-    }
-  }, {
-    path: [e$.Routes.GUILD_CREATE],
-    render: function() {
-      return (0, W.addPostConnectionCallback)(() => x.default.openCreateGuildModal({
-        location: "External link"
-      })), (0, a.jsx)(r.Redirect, {
-        to: ew.default.defaultRoute
+    }), (0, a.jsx)(r.Redirect, {
+      to: eX.Routes.CHANNEL(s)
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.APPLICATION_LIBRARY_INVENTORY],
+  render: function() {
+    return (0, V.addPostConnectionCallback)(() => _.default.open(eX.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
+      to: ej.default.defaultRoute
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.WELCOME(":guildId?", ":channelId?")],
+  render: function(e) {
+    let {
+      match: t
+    } = e, {
+      guildId: n,
+      channelId: s
+    } = t.params;
+    (0, en.setNewUser)(e$.NewUserTypes.MARKETING_UNCLAIMED);
+    let l = eX.Routes.CHANNEL(n, s);
+    return (0, a.jsx)(r.Redirect, {
+      to: l
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.GUILD_EVENT_DETAILS(":guildId?", ":guildEventId")],
+  render: function(e) {
+    let {
+      match: t
+    } = e, {
+      guildId: n,
+      guildEventId: s
+    } = t.params;
+    return (0, V.addPostConnectionCallback)(() => {
+      (0, K.openGuildEventDetails)({
+        eventId: s
       })
-    }
-  }, {
-    path: [e$.Routes.PICK_GUILD_SETTINGS(":section?", ":subsection?")],
-    render: function(e) {
-      let {
-        match: t
-      } = e, {
-        section: n,
-        subsection: s
-      } = t.params, i = (0, l.parse)(location.search).feature;
-      return (0, W.addPostConnectionCallback)(() => X.openGuildSettingsPickerModal({
-        section: (0, Z.default)(e$.GuildSettingsSections, n),
-        subsection: (0, Z.default)(e$.GuildSettingsSubsections, s),
-        feature: i
-      })), (0, a.jsx)(r.Redirect, {
-        to: ew.default.defaultRoute
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.SETTINGS(":section", ":subsection?")],
-    render: function(e) {
-      let {
-        location: t
-      } = e, n = (0, eD.default)(t.pathname);
-      return null != n && (0, W.addPostConnectionCallback)(() => _.default.open(n.section, n.subsection, {
-        openWithoutBackstack: !1,
-        impressionSource: n.source
-      })), (0, a.jsx)(r.Redirect, {
-        to: ew.default.defaultRoute
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.USER_GUILD_NOTIFICATION_SETTINGS(":guildId")],
-    render: function(e) {
-      let {
-        match: t
-      } = e, {
-        guildId: s
-      } = t.params;
-      return (0, W.addPostConnectionCallback)(() => {
-        (0, u.openModalLazy)(async () => {
-          let {
-            default: e
-          } = await Promise.all([n.e("49237"), n.e("99387"), n.e("5863"), n.e("60411")]).then(n.bind(n, "751212"));
-          return t => (0, a.jsx)(e, {
-            ...t,
-            guildId: s
-          })
-        })
-      }), (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.CHANNEL(s)
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.APPLICATION_LIBRARY_INVENTORY],
-    render: function() {
-      return (0, W.addPostConnectionCallback)(() => _.default.open(e$.UserSettingsSections.INVENTORY)), (0, a.jsx)(r.Redirect, {
-        to: ew.default.defaultRoute
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.WELCOME(":guildId?", ":channelId?")],
-    render: function(e) {
-      let {
-        match: t
-      } = e, {
-        guildId: n,
-        channelId: s
-      } = t.params;
-      (0, es.setNewUser)(e4.NewUserTypes.MARKETING_UNCLAIMED);
-      let l = e$.Routes.CHANNEL(n, s);
-      return (0, a.jsx)(r.Redirect, {
-        to: l
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.GUILD_EVENT_DETAILS(":guildId?", ":guildEventId")],
-    render: function(e) {
-      let {
-        match: t
-      } = e, {
-        guildId: n,
-        guildEventId: s
-      } = t.params;
-      return (0, W.addPostConnectionCallback)(() => {
-        (0, q.openGuildEventDetails)({
-          eventId: s
-        })
-      }), (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.CHANNEL(n)
-      })
-    },
-    isSessionRequired: !0
-  }, {
-    path: [e$.Routes.GUILD_SETTINGS(":guildId", ":section?", ":subsection?")],
-    render: function(e) {
-      let {
-        match: t
-      } = e, {
-        guildId: n,
-        section: s,
-        subsection: l
-      } = t.params;
-      return (0, W.addPostConnectionCallback)(() => {
-        Q.default.open(n, (0, Z.default)(e$.GuildSettingsSections, s), void 0, (0, Z.default)(e$.GuildSettingsSubsections, l))
-      }), (0, a.jsx)(r.Redirect, {
-        to: e$.Routes.CHANNEL(n)
-      })
-    },
-    isSessionRequired: !0,
-    isChatRoute: !0
-  }, {
-    path: [e$.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), e$.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), e$.Routes.ACTIVITY, e$.Routes.ACTIVITIES, e$.Routes.ACTIVITIES_HAPPENING_NOW, e$.Routes.ACTIVITY_DETAILS(":applicationId"), e$.Routes.APPLICATION_LIBRARY, e$.Routes.APPLICATION_STORE, e$.Routes.MESSAGE_REQUESTS, e$.Routes.COLLECTIBLES_SHOP, e$.Routes.COLLECTIBLES_SHOP_FULLSCREEN, e$.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), e$.Routes.GUILD_DISCOVERY, e$.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), e$.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), e$.Routes.GUILD_BOOSTING_MARKETING(":guildId"), e$.Routes.FEATURE(":feature"), e$.Routes.FAMILY_CENTER],
-    render: e3,
-    isSessionRequired: !0,
-    isChatRoute: !0
-  }, ...tn];
+    }), (0, a.jsx)(r.Redirect, {
+      to: eX.Routes.CHANNEL(n)
+    })
+  },
+  isSessionRequired: !0
+}, {
+  path: [eX.Routes.GUILD_SETTINGS(":guildId", ":section?", ":subsection?")],
+  render: function(e) {
+    let {
+      match: t
+    } = e, {
+      guildId: n,
+      section: s,
+      subsection: l
+    } = t.params;
+    return (0, V.addPostConnectionCallback)(() => {
+      z.default.open(n, (0, q.default)(eX.GuildSettingsSections, s), void 0, (0, q.default)(eX.GuildSettingsSubsections, l))
+    }), (0, a.jsx)(r.Redirect, {
+      to: eX.Routes.CHANNEL(n)
+    })
+  },
+  isSessionRequired: !0,
+  isChatRoute: !0
+}, {
+  path: [eX.Routes.CHANNEL_THREAD_VIEW(":guildId", ":channelId", ":threadId", ":messageId?"), eX.Routes.CHANNEL(":guildId", ":channelId?", ":messageId?"), eX.Routes.ACTIVITY, eX.Routes.ACTIVITIES, eX.Routes.ACTIVITIES_HAPPENING_NOW, eX.Routes.ACTIVITY_DETAILS(":applicationId"), eX.Routes.APPLICATION_LIBRARY, eX.Routes.APPLICATION_STORE, eX.Routes.MESSAGE_REQUESTS, eX.Routes.QUEST_HOME, eX.Routes.COLLECTIBLES_SHOP, eX.Routes.COLLECTIBLES_SHOP_FULLSCREEN, eX.Routes.COLLECTIBLES_SHOP_PRODUCT_DETAIL(":skuId"), eX.Routes.GUILD_DISCOVERY, eX.Routes.GUILD_MEMBER_VERIFICATION(":guildId", ":inviteCode?"), eX.Routes.GUILD_MEMBER_VERIFICATION_FOR_HUB(":guildId", ":inviteCode?"), eX.Routes.GUILD_BOOSTING_MARKETING(":guildId"), eX.Routes.FEATURE(":feature"), eX.Routes.FAMILY_CENTER],
+  render: e2,
+  isSessionRequired: !0,
+  isChatRoute: !0
+}, {
+  path: [eX.Routes.APPLICATION_DIRECTORY],
+  render: e3,
+  isSessionRequired: !0
+}];
 
-function ts(e) {
+function e6(e) {
   for (let {
       path: t,
       isChatRoute: n
     }
-    of ta) {
+    of e9) {
     if (!n) continue;
     let a = (0, i.matchPath)(e, {
       path: t
@@ -440,21 +413,21 @@ function ts(e) {
   return null
 }
 
-function tl(e) {
+function e8(e) {
   let {
     channelId: t,
     guildId: n,
     pathname: a
   } = e;
-  if (!Y.default.isConnected()) return;
+  if (!H.default.isConnected()) return;
   let {
     location: s
-  } = (0, em.getHistory)();
-  s.pathname === a && (null == eG.default.getChannel(t) ? (0, em.replaceWith)(e$.Routes.CHANNEL(n)) : (0, em.replaceWith)(a))
+  } = (0, e_.getHistory)();
+  s.pathname === a && (null == eU.default.getChannel(t) ? (0, e_.replaceWith)(eX.Routes.CHANNEL(n)) : (0, e_.replaceWith)(a))
 }
-class ti extends s.PureComponent {
+class te extends s.PureComponent {
   componentDidMount() {
-    y.default.initialize(), eX.default.setZoomFactor(C.default.zoom), eS.default.init(), P.default.initialize(), ed.default.initialize(), F.default.initialize(), ex.default.initialize(), B.default.initialize(), ef.default.initialize(), ee.default.initialize(), m.default.init(), V.default.init(), H.default.init(), el.default.initialize(), g.default.initialize(), w.default.initialize(), eE.default.initialize(), T.default.initialize(), eb.default.initialize(), eu.default.initialize(), p.default.initialize(), K.default.init(), J.default.init(), ez.default.init(), eQ.default.init(), I.default.initialize(), eR.default.init(), eK.default.init(), eW.default.init(), eM.default.init(), eA.default.initialize(), eN.default.initialize(), eP.default.initialize(), ey.default.init(), G.default.initialize(), S.default.initialize(), eI.default.initialize(), eg.default.initialize(), er.default.initialize(), ei.default.initialize(), eo.default.initialize(), D.default.initialize(), $.default.init({
+    M.default.initialize(), eQ.default.setZoomFactor(C.default.zoom), eC.default.init(), O.default.initialize(), eo.default.initialize(), k.default.initialize(), ex.default.initialize(), w.default.initialize(), ed.default.initialize(), J.default.initialize(), m.default.init(), F.default.init(), B.default.init(), ea.default.initialize(), T.default.initialize(), j.default.initialize(), ec.default.initialize(), I.default.initialize(), eP.default.initialize(), er.default.initialize(), g.default.initialize(), Y.default.init(), Z.default.init(), eW.default.init(), ez.default.init(), p.default.initialize(), ev.default.init(), eY.default.init(), eV.default.init(), eL.default.init(), eI.default.initialize(), eT.default.initialize(), eO.default.initialize(), eM.default.init(), U.default.initialize(), S.default.initialize(), em.default.initialize(), eg.default.initialize(), el.default.initialize(), es.default.initialize(), ei.default.initialize(), y.default.initialize(), X.default.init({
       hasModalOpen: u.hasAnyModalOpen,
       openModal: () => (0, u.openModalLazy)(async () => {
         let {
@@ -464,10 +437,10 @@ class ti extends s.PureComponent {
           ...t
         })
       })
-    }), j.default.init(), et.default.initialize(), eh.default.initialize(), ec.default.initialize(), U.default.initialize(), this.rewriterUnlisten = e_.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = e_.default.addRouteChangeListener(this.handleHistoryChange)
+    }), b.default.init(), $.default.initialize(), ef.default.initialize(), eu.default.initialize(), D.default.initialize(), this.rewriterUnlisten = eE.default.addRouteRewriter(this.ensureChannelMatchesGuild), this.historyUnlisten = eE.default.addRouteChangeListener(this.handleHistoryChange)
   }
   componentWillUnmount() {
-    y.default.terminate(), ex.default.terminate(), ef.default.terminate(), ed.default.terminate(), P.default.terminate(), T.default.terminate(), eb.default.terminate(), p.default.terminate(), eE.default.terminate(), eu.default.terminate(), eP.default.terminate(), I.default.terminate(), G.default.terminate(), et.default.terminate(), S.default.terminate(), eh.default.terminate(), eI.default.terminate(), eg.default.terminate(), er.default.terminate(), ei.default.terminate(), eo.default.terminate(), D.default.terminate(), ec.default.terminate(), U.default.terminate(), k.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
+    M.default.terminate(), ex.default.terminate(), ed.default.terminate(), eo.default.terminate(), O.default.terminate(), I.default.terminate(), eP.default.terminate(), g.default.terminate(), ec.default.terminate(), er.default.terminate(), eO.default.terminate(), p.default.terminate(), U.default.terminate(), $.default.terminate(), S.default.terminate(), ef.default.terminate(), em.default.terminate(), eg.default.terminate(), el.default.terminate(), es.default.terminate(), ei.default.terminate(), y.default.terminate(), eu.default.terminate(), D.default.terminate(), G.default.terminate(), this.historyUnlisten(), this.rewriterUnlisten()
   }
   handleHistoryChange(e) {
     let {
@@ -475,14 +448,14 @@ class ti extends s.PureComponent {
       search: n
     } = e;
     ! function(e) {
-      if (Y.default.isConnected() || Y.default.isTryingToConnect()) return;
-      let t = eU.default.getToken();
+      if (H.default.isConnected() || H.default.isTryingToConnect()) return;
+      let t = eD.default.getToken();
       if (null != t) null != function(e) {
         for (let {
             path: t,
             isSessionRequired: n
           }
-          of ta) {
+          of e9) {
           if (!n) continue;
           let a = (0, i.matchPath)(e, {
             path: t
@@ -492,19 +465,19 @@ class ti extends s.PureComponent {
         return null
       }(e) && d.default.startSession(t)
     }(t), ! function(e, t) {
-      let n = ts(e);
+      let n = e6(e);
       if (null == n) return;
       let {
         guildId: a,
         channelId: s,
         messageId: r,
         threadId: o
-      } = tt(n), u = (0, eC.isValidGuildId)(a), d = (0, eC.isValidChannelId)(s), c = (0, eC.isValidChannelId)(o), h = eV.default.getGuildId(), _ = h !== a;
+      } = e5(n), u = (0, eh.isValidGuildId)(a), d = (0, eh.isValidChannelId)(s), c = (0, eh.isValidChannelId)(o), h = eF.default.getGuildId(), _ = h !== a;
       if (u && _ && f.default.selectGuild(a), u && d) {
-        let n = eH.default.getChannelId(h),
+        let n = eB.default.getChannelId(h),
           i = n !== s;
-        if (!e9 || _ || i || null != r) {
-          e9 = !0, E.default.selectChannel({
+        if (!e1 || _ || i || null != r) {
+          e1 = !0, E.default.selectChannel({
             guildId: a,
             channelId: s,
             messageId: r
@@ -512,18 +485,18 @@ class ti extends s.PureComponent {
           let {
             summaryId: e
           } = (0, l.parse)(t);
-          null != e && ev.default.setSelectedSummary(s, e)
+          null != e && eA.default.setSelectedSummary(s, e)
         }
         if (null != o && c) {
-          let e = ej.default.getCurrentSidebarChannelId(n) !== o,
-            t = null != ej.default.getGuildSidebarState(a);
+          let e = eb.default.getCurrentSidebarChannelId(n) !== o,
+            t = null != eb.default.getGuildSidebarState(a);
           if (null != s && null != o && e) {
-            if (t)(0, em.replaceWith)(e$.Routes.CHANNEL(a, o, r));
+            if (t)(0, e_.replaceWith)(eX.Routes.CHANNEL(a, o, r));
             else {
               let e = {
-                type: eT.SidebarOpenDetailsType.THREAD
+                type: ep.SidebarOpenDetailsType.THREAD
               };
-              null != r && (e.initialMessageId = r), ep.default.openThreadAsSidebar({
+              null != r && (e.initialMessageId = r), eS.default.openThreadAsSidebar({
                 guildId: a,
                 baseChannelId: s,
                 channelId: o,
@@ -531,55 +504,55 @@ class ti extends s.PureComponent {
               })
             }
           }
-        } else null != s && !i && ep.default.closeChannelSidebar(s);
-        let u = ea.default.getIsOpen();
-        if (s === e1.StaticChannelRoute.ROLE_SUBSCRIPTIONS) en.default.closeSidebar();
+        } else null != s && !i && eS.default.closeChannelSidebar(s);
+        let u = et.default.getIsOpen();
+        if (s === eJ.StaticChannelRoute.ROLE_SUBSCRIPTIONS) ee.default.closeSidebar();
         else if (_ && u) {
-          let t = null == h && a === e$.ME,
-            n = e === e$.Routes.GUILD_DISCOVERY;
-          t || n ? en.default.closeSidebar() : en.default.openSidebar()
-        } else(i && u || !_ && !i) && en.default.closeSidebar()
+          let t = null == h && a === eX.ME,
+            n = e === eX.Routes.GUILD_DISCOVERY;
+          t || n ? ee.default.closeSidebar() : ee.default.openSidebar()
+        } else(i && u || !_ && !i) && ee.default.closeSidebar()
       } else {
         var C;
-        if (C = e, !te.some(e => {
+        if (C = e, !e7.some(e => {
             var t;
             return (null === (t = (0, i.matchPath)(C, e)) || void 0 === t ? void 0 : t.isExact) === !0
-          }))(0, em.replaceWith)(ew.default.fallbackRoute)
+          }))(0, e_.replaceWith)(ej.default.fallbackRoute)
       }
     }(t, n)
   }
   ensureChannelMatchesGuild(e) {
-    if (!Y.default.isConnected()) return null;
+    if (!H.default.isConnected()) return null;
     let {
       pathname: t
-    } = e, n = ts(t);
+    } = e, n = e6(t);
     if (null == n) return null;
     let {
       guildId: a,
       channelId: s,
       threadId: l
-    } = tt(n), i = (0, eC.isValidGuildId)(a) && a !== e$.ME && a !== e$.FAVORITES;
-    if (null != s && (0, eC.isValidChannelId)(s) && !(0, e1.isStaticChannelRoute)(s) && i) {
-      let n = eG.default.getChannel(s);
-      if (null == n) eO.default.loadThread(s).then(() => tl({
+    } = e5(n), i = (0, eh.isValidGuildId)(a) && a !== eX.ME && a !== eX.FAVORITES;
+    if (null != s && (0, eh.isValidChannelId)(s) && !(0, eJ.isStaticChannelRoute)(s) && i) {
+      let n = eU.default.getChannel(s);
+      if (null == n) eN.default.loadThread(s).then(() => e8({
         channelId: s,
         guildId: a,
         pathname: t
       }));
       else if (n.guild_id !== a) return {
-        path: e$.Routes.CHANNEL(a),
+        path: eX.Routes.CHANNEL(a),
         state: e.state
       };
       if (null != l) {
-        if (!((0, eC.isValidChannelId)(l) && !(0, e1.isStaticChannelRoute)(s))) return null;
-        let n = eG.default.getChannel(l);
-        if (null == n) eO.default.loadThread(l).then(() => tl({
+        if (!((0, eh.isValidChannelId)(l) && !(0, eJ.isStaticChannelRoute)(s))) return null;
+        let n = eU.default.getChannel(l);
+        if (null == n) eN.default.loadThread(l).then(() => e8({
           channelId: l,
           guildId: a,
           pathname: t
         }));
-        else if ((null == n ? void 0 : n.parent_id) !== s) return ep.default.closeChannelSidebar(s), {
-          path: e$.Routes.CHANNEL(a, s),
+        else if ((null == n ? void 0 : n.parent_id) !== s) return eS.default.closeChannelSidebar(s), {
+          path: eX.Routes.CHANNEL(a, s),
           state: e.state
         }
       }
@@ -593,7 +566,7 @@ class ti extends s.PureComponent {
           exact: !0,
           from: "/channels",
           to: "/"
-        }), ta.map(e => {
+        }), e9.map(e => {
           let {
             path: t,
             render: n
@@ -605,11 +578,11 @@ class ti extends s.PureComponent {
         }), (0, a.jsx)(r.Redirect, {
           to: "/"
         })]
-      }), (0, a.jsx)(b.default, {})]
+      }), (0, a.jsx)(P.default, {})]
     })
   }
   constructor(...e) {
-    super(...e), e2(this, "historyUnlisten", () => {}), e2(this, "rewriterUnlisten", () => {})
+    super(...e), e0(this, "historyUnlisten", () => {}), e0(this, "rewriterUnlisten", () => {})
   }
 }
-t.default = ti
+t.default = te

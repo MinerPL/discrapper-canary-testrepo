@@ -5,15 +5,15 @@ n.r(t), n.d(t, {
   }
 }), n("47120");
 var s, l = n("735250"),
-  a = n("470079"),
-  i = n("39383"),
-  r = n.n(i),
+  i = n("470079"),
+  a = n("39383"),
+  r = n.n(a),
   o = n("948789"),
   c = n("66037"),
   u = n("950132"),
   d = n("231338"),
-  p = n("36517"),
-  h = n("721474");
+  p = n("431138"),
+  h = n("140293");
 
 function N(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -24,15 +24,15 @@ function N(e, t, n) {
   }) : e[t] = n, e
 }
 let g = d.WebAnalyticsEvents.MAIN_NAVIGATION_MENU;
-class m extends(s = a.PureComponent) {
+class m extends(s = i.PureComponent) {
   render() {
     let {
       title: e,
       links: t,
       isOpen: n,
       isMobile: s,
-      TrackClick: a,
-      avoidRouter: i
+      TrackClick: i,
+      avoidRouter: a
     } = this.props, r = s && n ? (0, l.jsx)("ul", {
       className: h.mobileSubMenuOpen,
       id: this._dropdownId,
@@ -79,8 +79,8 @@ class m extends(s = a.PureComponent) {
         })]
       }, "more"), (0, l.jsx)(u.DropdownMenu, {
         id: this._dropdownId,
-        avoidRouter: i,
-        TrackClick: a,
+        avoidRouter: a,
+        TrackClick: i,
         isOpen: n,
         dropdownLinks: t,
         "aria-label": e

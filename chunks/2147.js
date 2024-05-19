@@ -62,8 +62,8 @@ var l = s("735250"),
   et = s("369701"),
   es = s("124368"),
   el = s("689938"),
-  ea = s("677846"),
-  en = s("949086");
+  ea = s("59467"),
+  en = s("611273");
 
 function ei(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {

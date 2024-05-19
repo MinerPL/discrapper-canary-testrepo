@@ -14,14 +14,14 @@ var i = a("735250"),
   u = a("703656"),
   o = a("292937"),
   v = a("729565"),
-  h = a("158010"),
-  m = a("944581"),
+  m = a("158010"),
+  h = a("944581"),
   x = a("943802"),
   g = a("502568"),
   p = a("810090"),
   I = a("630388"),
   j = a("566620"),
-  f = a("266820"),
+  f = a("146936"),
   _ = a("678173"),
   E = a("880308"),
   S = a("636508"),
@@ -35,7 +35,7 @@ var i = a("735250"),
   b = a("226799"),
   O = a("981631"),
   L = a("689938"),
-  k = a("200525");
+  k = a("765068");
 
 function B(e) {
   var l, a;
@@ -53,7 +53,8 @@ function B(e) {
   }, []);
   let M = (0, A.default)({
       applicationId: null != T ? T : "",
-      size: 2048
+      size: 2048,
+      names: ["embedded_cover"]
     }),
     y = (0, _.useActivityShelfItemData)(null, null != T && "" !== T ? T : null, void 0);
   if (null == T || null == y) return null;
@@ -70,7 +71,7 @@ function B(e) {
       children: [(0, i.jsxs)(g.default, {
         children: [(0, i.jsxs)("div", {
           className: k.titleContainer,
-          children: [(0, i.jsx)(m.default, {
+          children: [(0, i.jsx)(h.default, {
             className: k.rocketIcon
           }), (0, i.jsx)(d.Heading, {
             variant: "heading-md/semibold",
@@ -124,7 +125,7 @@ function B(e) {
                       className: k.detailsDetails,
                       children: [null != V ? (0, i.jsxs)("div", {
                         className: k.detailItem,
-                        children: [(0, i.jsx)(h.default, {
+                        children: [(0, i.jsx)(m.default, {
                           width: 16,
                           height: 16
                         }), (0, i.jsx)(d.Text, {
@@ -202,19 +203,19 @@ function R(e) {
     activityItem: n
   } = e, {
     analyticsLocations: c
-  } = (0, r.default)(), u = (0, T.default)(), [o, v] = t.useState(null !== (l = (0, S.getActivityGuildSuggestion)()) && void 0 !== l ? l : void 0), [h, m] = t.useState(null !== (s = (0, C.getActivityVoiceChannelSuggestion)({
+  } = (0, r.default)(), u = (0, T.default)(), [o, v] = t.useState(null !== (l = (0, S.getActivityGuildSuggestion)()) && void 0 !== l ? l : void 0), [m, h] = t.useState(null !== (s = (0, C.getActivityVoiceChannelSuggestion)({
     guildId: o
   })) && void 0 !== s ? s : void 0), x = (0, S.useSelectGuildOptions)(), g = (0, C.useSelectVoiceChannelOptions)(o), p = t.useCallback(() => {
     var e;
-    null != h && null != o && (0, f.default)({
+    null != m && null != o && (0, f.default)({
       targetApplicationId: null == n ? void 0 : null === (e = n.application) || void 0 === e ? void 0 : e.id,
       currentEmbeddedApplication: u,
-      channelId: h,
+      channelId: m,
       guildId: o,
       embeddedActivitiesManager: M.default,
       analyticsLocations: c
     })
-  }, [n, c, u, h, o]), I = t.useCallback(() => {
+  }, [n, c, u, m, o]), I = t.useCallback(() => {
     (0, d.openModalLazy)(async () => {
       let {
         default: e
@@ -252,7 +253,7 @@ function R(e) {
       isSelected: e => e === o,
       select: e => {
         var l;
-        v(e), m(null !== (l = (0, C.getActivityVoiceChannelSuggestion)({
+        v(e), h(null !== (l = (0, C.getActivityVoiceChannelSuggestion)({
           guildId: e
         })) && void 0 !== l ? l : void 0)
       },
@@ -265,13 +266,13 @@ function R(e) {
         let {
           channel: l
         } = e;
-        return l.id === h
+        return l.id === m
       },
       select: e => {
         let {
           channel: l
         } = e;
-        return m(l.id)
+        return h(l.id)
       },
       serialize: e => {
         let {
@@ -280,7 +281,7 @@ function R(e) {
         return l.id
       },
       renderOptionValue: () => {
-        let e = g.find(e => e.value.channel.id === h);
+        let e = g.find(e => e.value.channel.id === m);
         return null == e ? null : (0, i.jsx)(y.SelectChannelOption, {
           channel: e.value.channel,
           users: e.value.users
@@ -300,7 +301,7 @@ function R(e) {
       }
     }), (0, i.jsx)(d.Button, {
       fullWidth: !0,
-      disabled: null == o || null == h || !x.some(e => e.value === o) || !g.some(e => e.value.channel.id === h),
+      disabled: null == o || null == m || !x.some(e => e.value === o) || !g.some(e => e.value.channel.id === m),
       onClick: p,
       children: L.default.Messages.START
     }), (0, i.jsx)("div", {

@@ -4,7 +4,7 @@ var s = n("735250"),
   a = n("470079"),
   l = n("120356"),
   i = n.n(l),
-  r = n("718017"),
+  r = n("920906"),
   o = n("722770"),
   u = n("581051"),
   d = n("442837"),
@@ -25,41 +25,44 @@ var s = n("735250"),
   M = n("644646"),
   R = n("670638"),
   v = n("87894"),
-  O = n("689938"),
-  x = n("945648");
-let L = (0, r.animated)(u.ChevronSmallDownIcon),
-  D = (0, r.animated)(I.default),
-  P = e => {
+  O = n("46140"),
+  x = n("689938"),
+  L = n("257100");
+let D = (0, r.animated)(u.ChevronSmallDownIcon),
+  P = (0, r.animated)(I.default),
+  y = e => {
     let {
       quest: t,
       location: n,
-      ...l
-    } = e, [i, r] = a.useState(!1), o = a.useRef(new c.Timeout);
+      questContentPosition: l,
+      ...i
+    } = e, [r, o] = a.useState(!1), u = a.useRef(new c.Timeout);
     a.useEffect(() => {
-      let e = o.current;
+      let e = u.current;
       return function() {
         e.stop()
       }
     }, []);
-    let u = () => {
+    let d = () => {
       (0, h.trackQuestContentClicked)({
         questId: t.id,
         questContent: n,
-        questContentCTA: h.QuestContentCTA.COPY_QUEST_URL
-      }), (0, p.copy)((0, C.getQuestUrl)(t.id)), r(!0), o.current.start(1e3, () => r(!1))
+        questContentCTA: h.QuestContentCTA.COPY_QUEST_URL,
+        questContentPosition: l
+      }), (0, p.copy)((0, C.getQuestUrl)(t.id)), o(!0), u.current.start(1e3, () => o(!1))
     };
     return (0, s.jsx)(f.Tooltip, {
-      forceOpen: i,
-      shouldShow: i,
+      forceOpen: r,
+      shouldShow: r,
       color: f.Tooltip.Colors.GREEN,
-      text: O.default.Messages.COPY_SUCCESS_1,
+      text: x.default.Messages.COPY_SUCCESS_1,
       children: () => (0, s.jsx)(f.Button, {
-        ...l,
-        className: x.shareButton,
+        ...i,
+        className: L.shareButton,
         color: f.Button.Colors.PRIMARY,
         size: f.Button.Sizes.SMALL,
-        onClick: u,
-        children: O.default.Messages.QUESTS_SHARE_QUEST
+        onClick: d,
+        children: x.default.Messages.QUESTS_SHARE_QUEST
       })
     })
   };
@@ -70,48 +73,53 @@ t.default = e => {
     isQuestExpired: l,
     quest: u,
     location: c,
-    giftInventorySection: I,
-    size: p,
-    expansionSpring: h,
-    isAnimating: y,
-    isExpanded: U,
-    isInConcurrentQuestExperiment: j,
-    toggleExpanded: b
+    size: I,
+    expansionSpring: p,
+    isAnimating: U,
+    isExpanded: j,
+    isInConcurrentQuestExperiment: b,
+    contentPosition: B,
+    toggleExpanded: F
   } = e, {
-    ref: B,
-    height: G
+    ref: G,
+    height: k
   } = (0, E.default)(), {
-    ref: F,
-    width: k,
-    scrollWidth: w
-  } = (0, E.default)(), H = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), V = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), Y = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), K = a.useRef(null), W = c === S.QuestContent.QUEST_INVENTORY_CARD, z = c === S.QuestContent.QUESTS_EMBED, Q = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, q = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
+    ref: w,
+    width: H,
+    scrollWidth: V
+  } = (0, E.default)(), Y = (0, d.useStateFromStores)([m.default], () => m.default.getState().theme), K = (0, d.useStateFromStores)([_.default], () => _.default.useReducedMotion), W = a.useMemo(() => (0, C.isAssetAnimated)(u.config.assets.hero), [u]), z = a.useRef(null), Q = (0, v.isQuestCardInGiftInventory)(c), q = c === S.QuestContent.QUESTS_EMBED, X = (0, N.useQuestInstructionTitle)(u, O.QuestsExperimentLocations.QUESTS_CARD), Z = (null === (t = u.userStatus) || void 0 === t ? void 0 : t.completedAt) != null, J = (0, N.useQuestFormattedDate)(u.config.expiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), X = (0, N.useQuestFormattedDate)(u.config.rewardCodeExpiresAt, {
+  }), $ = (0, N.useQuestFormattedDate)(u.config.rewardCodeExpiresAt, {
     year: "numeric",
     month: "long",
     day: "numeric"
-  }), Z = e => {
-    e.stopPropagation(), b()
+  }), ee = e => {
+    e.stopPropagation(), e.currentTarget.blur(), F(), (0, h.trackQuestContentClicked)({
+      questId: u.id,
+      questContent: c,
+      questContentCTA: j ? h.QuestContentCTA.COLLAPSE : h.QuestContentCTA.EXPAND,
+      questContentPosition: B
+    })
   };
   a.useEffect(() => {
-    Y && null != K.current && (n ? K.current.play() : !n && (K.current.pause(), K.current.currentTime = 0))
-  }, [n, Y]);
-  let J = (0, C.getHeroAssetUrl)(u);
+    W && null != z.current && (n ? z.current.play() : !n && (z.current.pause(), z.current.currentTime = 0))
+  }, [n, W]);
+  let et = (0, C.getHeroAssetUrl)(u);
   return (0, s.jsxs)("div", {
-    className: i()(x.outerContainer, {
-      [x.outerContainerGiftInventory]: W,
-      [x.outerContainerEmbed]: z,
-      [x.outerContainerXs]: "xs" === p
+    className: i()(L.outerContainer, {
+      [L.outerContainerGiftInventory]: Q,
+      [L.outerContainerEmbed]: q,
+      [L.outerContainerXs]: "xs" === I
     }),
-    "aria-label": O.default.Messages.EXPAND,
+    "aria-label": x.default.Messages.EXPAND,
     style: {
-      height: W ? G : void 0
+      height: Q ? k : void 0
     },
-    children: [(0, s.jsx)(D, {
+    children: [(0, s.jsx)(P, {
       style: {
-        opacity: h.to({
+        opacity: p.to({
           range: [0, 1],
           output: [.25, 1]
         })
@@ -120,129 +128,129 @@ t.default = e => {
       loop: !1,
       muted: !0,
       playsInline: !0,
-      className: x.questSplash,
+      className: L.questSplash,
       controls: !1,
-      poster: J,
-      ref: K,
-      children: !V && Y && (0, s.jsx)("source", {
-        src: J,
-        type: (0, C.getVideoAssetMimeType)(J)
+      poster: et,
+      ref: z,
+      children: !K && W && (0, s.jsx)("source", {
+        src: et,
+        type: (0, C.getVideoAssetMimeType)(et)
       })
     }), (0, s.jsxs)("div", {
-      className: x.header,
-      "aria-expanded": U,
+      className: L.header,
+      "aria-expanded": j,
       children: [(0, s.jsxs)(r.animated.div, {
-        className: i()(x.headerContent, {
-          [x.headerContentEmbed]: z
+        className: i()(L.headerContent, {
+          [L.headerContentEmbed]: q
         }),
         style: {
-          y: W ? h.to({
+          y: Q ? p.to({
             range: [0, 1],
             output: [v.QUESTS_CARD_COLLAPSED_HEIGHT_PX, 0]
           }) : void 0
         },
-        children: [W && (0, s.jsx)(r.animated.div, {
-          className: x.headerCollapsedContent,
+        children: [Q && (0, s.jsx)(r.animated.div, {
+          className: L.headerCollapsedContent,
           style: {
-            opacity: h.to({
+            opacity: p.to({
               range: [0, 1],
               output: [1, 0]
             }),
-            visibility: y || !U ? "visible" : "hidden"
+            visibility: U || !j ? "visible" : "hidden"
           },
-          "aria-hidden": !y && U,
+          "aria-hidden": !U && j,
           children: (0, s.jsxs)(f.ClickableContainer, {
-            "aria-label": O.default.Messages.EXPAND,
-            onClick: Z,
-            className: x.headerCollapsedClickableContainer,
+            "aria-label": x.default.Messages.EXPAND,
+            onClick: ee,
+            className: L.headerCollapsedClickableContainer,
             children: [(0, s.jsx)("div", {
-              className: x.headerCollapsedContentRewardWrapper,
+              className: L.headerCollapsedContentRewardWrapper,
               children: (0, s.jsx)(M.default, {
                 quest: u,
-                questContent: S.QuestContent.QUEST_INVENTORY_CARD,
-                className: x.headerCollapsedRewardTile
+                questContent: c,
+                className: L.headerCollapsedRewardTile
               })
             }), (0, s.jsxs)("div", {
-              className: x.headerCollapsedContentCopyWrapper,
+              className: L.headerCollapsedContentCopyWrapper,
               children: [(0, s.jsxs)("div", {
-                className: x.headerCollapsedContentCopyLogos,
+                className: L.headerCollapsedContentCopyLogos,
                 children: [(0, s.jsx)(A.default, {
-                  className: x.partnerBranding,
+                  className: L.partnerBranding,
                   gameTileSize: A.GameTileSizes.MEDIUM,
                   quest: u,
-                  theme: H
+                  theme: Y
                 }), (0, s.jsx)(g.default, {
                   color: "always-white"
                 })]
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/medium",
-                children: O.default.Messages.QUESTS_STREAM_TASK.format({
-                  minutes: u.config.streamDurationRequirementMinutes,
-                  gameTitle: u.config.messages.gameTitle
-                })
+                children: X
               })]
             })]
           })
         }), (0, s.jsxs)(r.animated.div, {
           ref: e => {
-            B.current = e
+            G.current = e
           },
-          className: i()(x.headerExpandedContent, {
-            [x.outerContainerGiftInventory]: W,
-            [x.outerContainerEmbed]: z
+          className: i()(L.headerExpandedContent, {
+            [L.outerContainerGiftInventory]: Q,
+            [L.outerContainerEmbed]: q
           }),
           style: {
-            opacity: h.to({
+            opacity: p.to({
               range: [0, 1],
               output: [0, 1]
             }),
-            visibility: y || U ? "visible" : "hidden"
+            visibility: U || j ? "visible" : "hidden"
           },
-          "aria-hidden": !y && !U,
+          "aria-hidden": !U && !j,
           children: [(0, s.jsxs)("div", {
-            className: x.headerExpandedWrapper,
+            className: L.headerExpandedWrapper,
             children: [(0, s.jsxs)("div", {
-              className: x.iconLogotypeContainer,
+              className: L.iconLogotypeContainer,
               children: [(0, s.jsx)(A.default, {
-                className: x.partnerBranding,
+                className: L.partnerBranding,
                 gameTileSize: A.GameTileSizes.MEDIUM,
                 quest: u,
-                theme: H
+                theme: Y
               }), (0, s.jsx)(g.default, {
                 color: "always-white"
               })]
             }), (0, s.jsxs)("div", {
-              className: x.questInfo,
+              className: L.questInfo,
               children: [(0, s.jsx)(f.Tooltip, {
                 text: u.config.messages.questName,
-                shouldShow: null != k && null != w && k < w,
+                shouldShow: null != H && null != V && H < V,
                 children: e => (0, s.jsx)(f.Heading, {
-                  ref: F,
-                  variant: "lg" === p ? "heading-xxl/bold" : "sm" === p ? "heading-xl/bold" : "heading-lg/bold",
-                  className: x.heading,
+                  ref: w,
+                  variant: "lg" === I ? "heading-xxl/bold" : "sm" === I ? "heading-xl/bold" : "heading-lg/bold",
+                  className: L.heading,
                   ...e,
-                  children: u.config.messages.questName
+                  children: x.default.Messages.QUEST.format({
+                    questName: u.config.messages.questName
+                  })
                 })
               }), (0, s.jsx)(f.Text, {
                 variant: "text-xs/normal",
-                children: Q ? O.default.Messages.QUESTS_CLAIM_BY.format({
-                  expirationDate: X
-                }) : l ? O.default.Messages.QUESTS_EXPIRED_ON.format({
-                  expirationDate: q
-                }) : O.default.Messages.QUESTS_AVAILABLE_UNTIL.format({
-                  expirationDate: q
+                children: Z ? x.default.Messages.QUESTS_CLAIM_BY_DATE.format({
+                  expirationDate: $
+                }) : l ? x.default.Messages.QUESTS_EXPIRED_ON.format({
+                  expirationDate: J
+                }) : x.default.Messages.QUESTS_AVAILABLE_UNTIL_DATE.format({
+                  expirationDate: J
                 })
               })]
             })]
-          }), !l && W && (0, s.jsx)(P, {
+          }), !l && Q && (0, s.jsx)(y, {
             quest: u,
-            location: c
+            location: c,
+            questContentPosition: B
           })]
         })]
       }), (0, s.jsxs)(r.animated.div, {
-        className: x.iconsContainer,
+        className: L.iconsContainer,
         style: {
-          top: W ? h.to({
+          top: Q ? p.to({
             range: [0, 1],
             output: [v.QUESTS_CARD_COLLAPSED_HEIGHT_PX / 2 - v.QUESTS_CARD_ICON_SIZE_PX / 2, v.QUESTS_CARD_PADDING_Y_PX]
           }) : v.QUESTS_CARD_PADDING_Y_PX
@@ -250,34 +258,32 @@ t.default = e => {
         children: [(0, s.jsx)(R.QuestsEntryContextMenuPopout, {
           questContent: c,
           quest: u,
+          questContentPosition: B,
           shouldShowDisclosure: !0,
-          hideLearnMore: W,
-          showShareLink: !l && z,
+          hideLearnMore: Q,
+          showShareLink: !l && q,
           children: e => (0, s.jsx)(r.animated.div, {
             style: {
-              opacity: h,
-              visibility: y || U ? "visible" : "hidden"
+              opacity: p,
+              visibility: U || j ? "visible" : "hidden"
             },
-            "aria-hidden": !y && !U,
+            "aria-hidden": !U && !j,
             children: (0, s.jsx)(f.Clickable, {
               ...e,
-              className: x.iconWrapper,
-              "aria-label": O.default.Messages.ACTIONS,
+              className: L.iconWrapper,
+              "aria-label": x.default.Messages.ACTIONS,
               children: (0, s.jsx)(T.default, {
                 color: o.default.WHITE
               })
             })
           })
-        }), j && !(0, v.shouldQuestCardBeExpandedPermanently)({
-          location: c,
-          giftInventorySection: I
-        }) && (0, s.jsx)(f.Clickable, {
-          onClick: Z,
-          className: x.iconWrapper,
-          "aria-label": U ? O.default.Messages.COLLAPSE : O.default.Messages.EXPAND,
-          children: (0, s.jsx)(L, {
+        }), b && !(0, v.shouldQuestCardBeExpandedPermanently)(c) && (0, s.jsx)(f.Clickable, {
+          onClick: ee,
+          className: L.iconWrapper,
+          "aria-label": j ? x.default.Messages.COLLAPSE : x.default.Messages.EXPAND,
+          children: (0, s.jsx)(D, {
             style: {
-              rotate: h.to({
+              rotate: p.to({
                 range: [0, 1],
                 output: [0, 180]
               })

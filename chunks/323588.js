@@ -33,7 +33,7 @@ var r = n("120356"),
   d = n("275759"),
   _ = n("856651"),
   c = n("689938"),
-  E = n("98649");
+  E = n("605409");
 
 function I(e) {
   var t;
@@ -46,10 +46,10 @@ function I(e) {
     className: n,
     count: a,
     label: c.default.Messages.CONNECTIONS_PROFILE_REDDIT_KARMA
-  }, _.MetadataFields.REDDIT_TOTAL_KARMA)), s && r.push((0, i.jsx)(R, {
+  }, _.MetadataFields.REDDIT_TOTAL_KARMA)), s && r.push((0, i.jsx)(C, {
     className: n,
     label: c.default.Messages.CONNECTIONS_REDDIT_GOLD
-  }, _.MetadataFields.REDDIT_GOLD)), o && r.push((0, i.jsx)(R, {
+  }, _.MetadataFields.REDDIT_GOLD)), o && r.push((0, i.jsx)(C, {
     className: n,
     label: c.default.Messages.CONNECTIONS_REDDIT_MOD
   }, _.MetadataFields.REDDIT_MOD)), r
@@ -103,7 +103,7 @@ function f(e) {
 function S(e) {
   let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
     n = [];
-  return "1" === e[_.MetadataFields.PAYPAL_VERIFIED] && n.push((0, i.jsx)(R, {
+  return "1" === e[_.MetadataFields.PAYPAL_VERIFIED] && n.push((0, i.jsx)(C, {
     className: a()(t, E.paypalVerifiedTag),
     label: c.default.Messages.CONNECTIONS_PAYPAL_VERIFIED
   }, _.MetadataFields.PAYPAL_VERIFIED)), n
@@ -120,7 +120,7 @@ function h(e) {
     count: a,
     label: c.default.Messages.CONNECTIONS_PROFILE_EBAY_POSITIVE_FEEDBACK_PERCENTAGE,
     percent: !0
-  }, _.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && r.push((0, i.jsx)(R, {
+  }, _.MetadataFields.EBAY_POSITIVE_FEEDBACK_PERCENTAGE)), s && r.push((0, i.jsx)(C, {
     className: n,
     label: c.default.Messages.CONNECTIONS_EBAY_TOP_RATED_SELLER
   }, _.MetadataFields.EBAY_TOP_RATED_SELLER)), r
@@ -146,7 +146,7 @@ function A(e) {
     className: a,
     count: d,
     label: c.default.Messages.CONNECTIONS_PROFILE_TIKTOK_LIKES
-  }, _.MetadataFields.TIKTOK_LIKES_COUNT)), o && s.push((0, i.jsx)(R, {
+  }, _.MetadataFields.TIKTOK_LIKES_COUNT)), o && s.push((0, i.jsx)(C, {
     className: a,
     label: c.default.Messages.CONNECTIONS_TIKTOK_VERIFIED
   }, _.MetadataFields.TIKTOK_VERIFIED)), s
@@ -169,7 +169,7 @@ function m(e) {
       switch (a.type) {
         case _.MetadataItemTypes.BOOLEAN_EQUAL:
         case _.MetadataItemTypes.BOOLEAN_NOT_EQUAL:
-          (a.type === _.MetadataItemTypes.BOOLEAN_EQUAL && "1" === o || a.type === _.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== o) && r.push((0, i.jsx)(R, {
+          (a.type === _.MetadataItemTypes.BOOLEAN_EQUAL && "1" === o || a.type === _.MetadataItemTypes.BOOLEAN_NOT_EQUAL && "1" !== o) && r.push((0, i.jsx)(C, {
             className: t,
             label: a.name
           }, a.key));
@@ -262,7 +262,7 @@ function O(e) {
   })
 }
 
-function R(e) {
+function C(e) {
   let {
     label: t,
     className: n

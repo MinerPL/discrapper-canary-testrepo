@@ -1,5 +1,5 @@
 "use strict";
-n.r(t);
+n.r(t), n("47120");
 var i = n("512722"),
   r = n.n(i),
   a = n("921608"),
@@ -32,6 +32,13 @@ t.default = class e {
       return
     }
     return t
+  }
+  drawRoundedImageWithFallbacks(e, t, n, i, r) {
+    for (let a of e) {
+      let e = this.drawRoundedImage(a, t, n, i, r);
+      if (e !== s.DrawResultStatus.Failure) return e
+    }
+    return s.DrawResultStatus.Failure
   }
   constructor(e, t) {
     o(this, "color", "black"), o(this, "font", {

@@ -14,9 +14,9 @@ var a = n("735250"),
   h = n("594174"),
   _ = n("643126"),
   C = n("823379"),
-  S = n("689938");
+  m = n("689938");
 
-function m(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -47,23 +47,23 @@ class p extends s.PureComponent {
     }) : null
   }
   constructor(...e) {
-    super(...e), m(this, "handleUserContextMenu", (e, t) => {
+    super(...e), S(this, "handleUserContextMenu", (e, t) => {
       (0, o.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("64409")]).then(n.bind(n, "881351"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("69220")]).then(n.bind(n, "881351"));
         return n => (0, a.jsx)(e, {
           ...n,
           user: t
         })
       })
-    }), m(this, "renderOverflowPopout", () => {
+    }), S(this, "renderOverflowPopout", () => {
       let {
         party: e
       } = this.props;
       return (0, a.jsx)(u.default, {
         party: e,
-        header: S.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
+        header: m.default.Messages.SPOTIFY_LISTEN_ALONG_LISTENING_ALONG_COUNT.format({
           count: e.length
         })
       })

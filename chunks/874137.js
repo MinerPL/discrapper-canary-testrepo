@@ -26,9 +26,9 @@ function T(e, t, n) {
   }) : e[t] = n, e
 }
 class f {
-  constructor(e, t, n, i) {
-    var r = this;
-    T(this, "id", void 0), T(this, "quests", void 0), T(this, "questContent", void 0), T(this, "trackGuildAndChannelMetadata", void 0), T(this, "triggeredByStatusChange", void 0), T(this, "beatTimeout", void 0), T(this, "lastBeatTime", void 0), T(this, "minViewTimeReachedTimeout", void 0), T(this, "minViewTimeSecond", void 0), T(this, "minViewportPercentage", void 0), T(this, "onMinViewTimeReached", () => {
+  constructor(e, t, n, i, r) {
+    var o = this;
+    T(this, "id", void 0), T(this, "quests", void 0), T(this, "questContent", void 0), T(this, "questContentPosition", void 0), T(this, "trackGuildAndChannelMetadata", void 0), T(this, "triggeredByStatusChange", void 0), T(this, "beatTimeout", void 0), T(this, "lastBeatTime", void 0), T(this, "minViewTimeReachedTimeout", void 0), T(this, "minViewTimeSecond", void 0), T(this, "minViewportPercentage", void 0), T(this, "onMinViewTimeReached", () => {
       this.quests.forEach(e => {
         (0, c.trackQuestEvent)({
           questId: e.id,
@@ -44,23 +44,23 @@ class f {
       })
     }), T(this, "heartbeat", function() {
       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      r.quests.forEach(t => {
-        null != r.lastBeatTime && (0, c.trackQuestEvent)({
+      o.quests.forEach(t => {
+        null != o.lastBeatTime && (0, c.trackQuestEvent)({
           questId: t.id,
           event: I.AnalyticEvents.QUEST_CONTENT_VIEW_TIME,
           properties: {
             is_termination_beat: e,
-            viewed_time_ms: Date.now() - r.lastBeatTime,
-            triggered_by_status_change: r.triggeredByStatusChange,
-            ...r.commonProperties(t)
+            viewed_time_ms: Date.now() - o.lastBeatTime,
+            triggered_by_status_change: o.triggeredByStatusChange,
+            ...o.commonProperties(t)
           },
-          trackGuildAndChannelMetadata: r.trackGuildAndChannelMetadata
+          trackGuildAndChannelMetadata: o.trackGuildAndChannelMetadata
         })
-      }), r.lastBeatTime = Date.now()
+      }), o.lastBeatTime = Date.now()
     }), T(this, "commonProperties", e => ({
       impression_id: this.id,
       quest_status: (0, c.getQuestStatus)(e),
-      ...(0, c.getContentProperties)(this.questContent)
+      ...(0, c.getContentProperties)(this.questContent, this.questContentPosition)
     })), T(this, "start", () => {
       this.stop(!1), this.lastBeatTime = Date.now(), this.beatTimeout = setInterval(() => this.heartbeat(), 6e4), this.minViewTimeReachedTimeout = setTimeout(this.onMinViewTimeReached, 1e3 * this.minViewTimeSecond), this.quests.forEach(e => {
         (0, c.trackQuestEvent)({
@@ -78,8 +78,8 @@ class f {
       })
     }), T(this, "stop", function() {
       let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-      e && r.heartbeat(!0), r.lastBeatTime = void 0, clearInterval(r.beatTimeout), clearTimeout(r.minViewTimeReachedTimeout)
-    }), this.id = (0, a.v4)(), this.questContent = t, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.quests = Array.isArray(e) ? e : [e], this.trackGuildAndChannelMetadata = i, this.triggeredByStatusChange = n
+      e && o.heartbeat(!0), o.lastBeatTime = void 0, clearInterval(o.beatTimeout), clearTimeout(o.minViewTimeReachedTimeout)
+    }), this.id = (0, a.v4)(), this.questContent = t, this.questContentPosition = n, this.minViewTimeSecond = 1, this.minViewportPercentage = .5, this.quests = Array.isArray(e) ? e : [e], this.trackGuildAndChannelMetadata = r, this.triggeredByStatusChange = i
   }
 }
 
@@ -108,8 +108,8 @@ function h(e) {
     let t = n && E,
       i = (I || a || h) && t,
       r = (I || a) && !t || h;
-    (i || r) && null != A.current && A.current.stop(), i && (A.current = new f(e.questOrQuests, e.questContent, h, e.trackGuildAndChannelMetadata), A.current.start())
-  }, [n, E, A, a, I, e.questOrQuests, e.questContent, e.trackGuildAndChannelMetadata, h]), (0, i.jsx)(i.Fragment, {
+    (i || r) && null != A.current && A.current.stop(), i && (A.current = new f(e.questOrQuests, e.questContent, e.questContentPosition, h, e.trackGuildAndChannelMetadata), A.current.start())
+  }, [n, E, A, a, I, e.questOrQuests, e.questContent, e.questContentPosition, e.trackGuildAndChannelMetadata, h]), (0, i.jsx)(i.Fragment, {
     children: e.children(m)
   })
 }

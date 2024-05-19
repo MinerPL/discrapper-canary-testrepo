@@ -17,7 +17,7 @@ var i = n("735250"),
   E = n("859235"),
   I = n("898463"),
   T = n("981631"),
-  f = n("89749"),
+  f = n("790544"),
   S = n("451328");
 
 function h(e) {
@@ -27,9 +27,9 @@ function h(e) {
     keyboardModeEnabled: a
   } = e, h = r.useRef(null), [A, m] = r.useState(!1), N = c.default.getUpload(t, n.name, _.DraftType.SlashCommand), p = r.useRef(null), O = r.useCallback(() => {
     m(!0)
-  }, []), R = r.useCallback(() => {
+  }, []), C = r.useCallback(() => {
     m(!1)
-  }, []), C = r.useCallback(e => {
+  }, []), R = r.useCallback(e => {
     var i;
     m(!1);
     let r = {
@@ -46,10 +46,10 @@ function h(e) {
   }, [t, n]);
   return (r.useEffect(() => {
     let e = p.current;
-    return null == N && (null == e || e.addEventListener("dragover", O, !1), null == e || e.addEventListener("dragleave", R, !1), null == e || e.addEventListener("drop", C, !1)), () => {
-      null == e || e.removeEventListener("dragover", O, !1), null == e || e.removeEventListener("dragleave", R, !1), null == e || e.removeEventListener("drop", C, !1)
+    return null == N && (null == e || e.addEventListener("dragover", O, !1), null == e || e.addEventListener("dragleave", C, !1), null == e || e.addEventListener("drop", R, !1)), () => {
+      null == e || e.removeEventListener("dragover", O, !1), null == e || e.removeEventListener("dragleave", C, !1), null == e || e.removeEventListener("drop", R, !1)
     }
-  }, [N, O, R, C]), null != N) ? (0, i.jsx)(I.default, {
+  }, [N, O, C, R]), null != N) ? (0, i.jsx)(I.default, {
     channelId: t,
     upload: N,
     keyboardModeEnabled: a,

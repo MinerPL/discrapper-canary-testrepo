@@ -2,7 +2,7 @@
 n.r(t);
 var l = n("735250"),
   a = n("470079"),
-  s = n("803997"),
+  s = n("120356"),
   i = n.n(s),
   r = n("924826"),
   o = n("442837"),
@@ -11,21 +11,21 @@ var l = n("735250"),
   c = n("239091"),
   f = n("569471"),
   h = n("488131"),
-  C = n("592125"),
-  p = n("306680"),
-  m = n("979651"),
+  m = n("592125"),
+  C = n("306680"),
+  p = n("979651"),
   g = n("938475"),
   E = n("514342"),
-  S = n("714794"),
-  _ = n("135724"),
+  _ = n("714794"),
+  S = n("135724"),
   I = n("25601"),
   N = n("207055"),
   T = n("981631"),
   A = n("124368"),
   L = n("689938"),
-  v = n("294639"),
-  x = n("697908"),
-  R = n("651483");
+  v = n("513285"),
+  x = n("628462"),
+  R = n("52645");
 
 function M(e) {
   let {
@@ -53,49 +53,49 @@ t.default = a.memo(function(e) {
     thread: t,
     isSelectedChannel: s,
     isSelectedVoice: R,
-    isLast: O,
-    withGuildIcon: y
-  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([m.default], () => m.default.hasVideo(t.id)), {
+    isLast: y,
+    withGuildIcon: O
+  } = e, D = (0, o.useStateFromStores)([g.default], () => g.default.getVoiceStatesForChannel(t), [t]), b = (0, o.useStateFromStores)([p.default], () => p.default.hasVideo(t.id)), {
     unread: j,
-    mentionCount: G
-  } = (0, o.useStateFromStoresObject)([p.default], () => ({
-    unread: p.default.hasUnread(t.id),
-    mentionCount: p.default.getMentionCount(t.id)
-  })), U = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), P = a.useCallback(e => {
+    mentionCount: P
+  } = (0, o.useStateFromStoresObject)([C.default], () => ({
+    unread: C.default.hasUnread(t.id),
+    mentionCount: C.default.getMentionCount(t.id)
+  })), G = (0, o.useStateFromStores)([f.default], () => f.default.isMuted(t.id)), U = a.useCallback(e => {
     (0, h.openThreadSidebarForViewing)(t, !e.shiftKey, A.OpenThreadAnalyticsLocations.CHANNEL_LIST)
   }, [t]), w = a.useCallback(() => {
     d.default.preload(t.guild_id, t.id)
-  }, [t.guild_id, t.id]), F = a.useCallback(e => {
-    let a = C.default.getChannel(t.id);
+  }, [t.guild_id, t.id]), B = a.useCallback(e => {
+    let a = m.default.getChannel(t.id);
     null != a && (0, c.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await n.e("78650").then(n.bind(n, "422200"));
+      } = await n.e("40157").then(n.bind(n, "422200"));
       return t => (0, l.jsx)(e, {
         ...t,
         channel: a
       })
     })
-  }, [t.id]), B = null == D ? 0 : D.length, {
-    role: V,
-    ...H
-  } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = G > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
+  }, [t.id]), F = null == D ? 0 : D.length, {
+    role: H,
+    ...V
+  } = (0, r.useListItem)(t.id), k = a.useRef(null), Y = P > 0 ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_MENTIONS.format({
     channelName: t.name,
-    mentionCount: G
+    mentionCount: P
   }) : j ? L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL_WITH_UNREADS.format({
     channelName: t.name
   }) : L.default.Messages.GUILD_SIDEBAR_THREAD_A11Y_LABEL.format({
     channelName: t.name
   });
   return (0, l.jsxs)("li", {
-    role: V,
+    role: H,
     className: i()(v.containerDefault, {
       [v.selected]: s
     }),
     children: [(0, l.jsx)(M, {
-      withGuildIcon: y
-    }), O ? null : (0, l.jsx)(M, {
-      withGuildIcon: y,
+      withGuildIcon: O
+    }), y ? null : (0, l.jsx)(M, {
+      withGuildIcon: O,
       style: {
         transform: "rotateX(180deg) translateY(-9px)"
       }
@@ -110,19 +110,19 @@ t.default = a.memo(function(e) {
       children: (0, l.jsxs)("div", {
         className: i()(v.iconVisibility, x.wrapper, x.typeThread, {
           [x.modeSelected]: s,
-          [x.modeMuted]: !s && U,
-          [x.modeUnreadImportant]: !U && !s && j,
-          [x.withGuildIcon]: y
+          [x.modeMuted]: !s && G,
+          [x.modeUnreadImportant]: !G && !s && j,
+          [x.withGuildIcon]: O
         }),
         onMouseDown: w,
-        onContextMenu: F,
-        children: [!j || U || s ? null : (0, l.jsx)("div", {
+        onContextMenu: B,
+        children: [!j || G || s ? null : (0, l.jsx)("div", {
           className: i()(x.unread, x.unreadImportant)
         }), (0, l.jsx)(u.Clickable, {
-          ...H,
+          ...V,
           innerRef: k,
           className: x.link,
-          onClick: P,
+          onClick: U,
           "aria-label": Y,
           focusProps: {
             enabled: !1
@@ -135,12 +135,12 @@ t.default = a.memo(function(e) {
               children: t.name
             }), (0, l.jsxs)("div", {
               className: x.children,
-              children: [B > 0 && t.userLimit > 0 ? (0, l.jsx)(_.default, {
-                userCount: B,
+              children: [F > 0 && t.userLimit > 0 ? (0, l.jsx)(S.default, {
+                userCount: F,
                 video: b,
                 channel: t
-              }) : null, (0, S.default)(G) ? (0, l.jsx)(I.default, {
-                mentionsCount: G
+              }) : null, (0, _.default)(P) ? (0, l.jsx)(I.default, {
+                mentionsCount: P
               }) : null]
             })]
           })

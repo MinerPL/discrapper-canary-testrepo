@@ -400,5 +400,15 @@ let a = {
       color: "white.500",
       opacity: .25
     }
+  },
+  "stage-card-pill-bg": {
+    dark: {
+      color: "gradient.mid",
+      lightness: .16
+    },
+    light: {
+      color: "gradient.mid",
+      lightness: .98
+    }
   }
 }

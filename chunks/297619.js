@@ -1,41 +1,41 @@
 "use strict";
-i.r(t);
-var a = i("735250");
-i("470079");
-var l = i("803997"),
-  n = i.n(l),
-  s = i("481060"),
-  r = i("814550"),
-  o = i("246364"),
-  d = i("700833"),
-  c = i("689938"),
-  u = i("482249");
+a.r(t);
+var n = a("735250");
+a("470079");
+var r = a("120356"),
+  s = a.n(r),
+  i = a("481060"),
+  l = a("814550"),
+  o = a("246364"),
+  c = a("700833"),
+  d = a("689938"),
+  u = a("17359");
 t.default = function(e) {
   let {
     addFormField: t,
-    guild: i
+    guild: a
   } = e;
-  return (0, a.jsxs)("div", {
-    className: n()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
-    children: [(0, a.jsx)("div", {
+  return (0, n.jsxs)("div", {
+    className: s()(u.spacingContainer, u.leftRailIconContainer, u.backgroundContainer),
+    children: [(0, n.jsx)("div", {
       className: u.iconContainer,
-      children: (0, a.jsx)(r.default, {
+      children: (0, n.jsx)(l.default, {
         width: 18,
         height: 20,
         className: u.icon
       })
-    }), (0, a.jsxs)(s.FormSection, {
-      children: [(0, a.jsx)(s.FormTitle, {
+    }), (0, n.jsxs)(i.FormSection, {
+      children: [(0, n.jsx)(i.FormTitle, {
         tag: "h3",
         className: u.leftRailIconContainerTitle,
-        children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
-      }), (0, a.jsx)(s.FormText, {
+        children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_TITLE
+      }), (0, n.jsx)(i.FormText, {
         className: u.leftRailIconContainerDescription,
-        type: s.FormText.Types.DESCRIPTION,
-        children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
-      }), (0, a.jsx)(s.Button, {
-        onClick: () => (0, d.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, i),
-        children: c.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
+        type: i.FormText.Types.DESCRIPTION,
+        children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_DESCRIPTION
+      }), (0, n.jsx)(i.Button, {
+        onClick: () => (0, c.openEmptyFormFieldModal)(o.VerificationFormFieldTypes.TERMS, t, a),
+        children: d.default.Messages.MEMBER_VERIFICATION_GET_STARTED_BUTTON
       })]
     })]
   })

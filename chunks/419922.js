@@ -10,7 +10,7 @@ var i = n("735250"),
   s = n.n(a),
   o = n("512722"),
   l = n.n(o),
-  u = n("718017"),
+  u = n("920906"),
   d = n("442837"),
   _ = n("622535"),
   c = n("481060"),
@@ -23,13 +23,13 @@ var i = n("735250"),
   A = n("373228"),
   m = n("378233"),
   N = n("689938"),
-  p = n("70073");
+  p = n("680413");
 let O = e => e.preventDefault(),
-  R = {
+  C = {
     tension: 1100,
     friction: 40
   },
-  C = {
+  R = {
     tension: 1600,
     friction: 60
   };
@@ -92,7 +92,7 @@ let v = e => {
       positionRef: E,
       withLoadingIndicator: T,
       onError: f
-    } = e, S = r.useRef(null), h = r.useRef(null), [A, O] = r.useState(!0), [R, C] = r.useState(!1), D = r.useRef(!1);
+    } = e, S = r.useRef(null), h = r.useRef(null), [A, O] = r.useState(!0), [C, R] = r.useState(!1), D = r.useRef(!1);
     D.current = t && d;
     let M = null == o ? (0, m.getStickerAssetUrl)(s) : o;
     return (l()(null != M, "Unable to determine sticker asset URL. Sticker ID: ".concat(s.id)), r.useEffect(() => {
@@ -113,7 +113,7 @@ let v = e => {
             !t && O(!1)
           },
           onError: () => {
-            !t && (O(!1), C(!0), null == f || f())
+            !t && (O(!1), R(!0), null == f || f())
           }
         }), D.current && h.current.setState(!0))
       })(), () => {
@@ -127,10 +127,10 @@ let v = e => {
     }, [s, t, d]), null == M) ? null : (0, i.jsx)("div", {
       role: "img",
       className: _,
-      "aria-label": R ? N.default.Messages.ERROR_LOADING_STICKER : L(s),
+      "aria-label": C ? N.default.Messages.ERROR_LOADING_STICKER : L(s),
       ref: E,
       children: (0, i.jsx)(v, {
-        hasError: R,
+        hasError: C,
         isLoading: A,
         maskAsset: c,
         size: a,
@@ -153,7 +153,7 @@ let v = e => {
       positionRef: d,
       withLoadingIndicator: c,
       fileUri: E
-    } = e, [I, T] = r.useState(!1), [f, S] = r.useState(!0), [h, A] = r.useState(!1), N = r.useRef(null), R = r.useRef(null), C = null != E ? E : (0, m.getStickerAssetUrl)(n, {
+    } = e, [I, T] = r.useState(!1), [f, S] = r.useState(!0), [h, A] = r.useState(!1), N = r.useRef(null), C = r.useRef(null), R = null != E ? E : (0, m.getStickerAssetUrl)(n, {
       isPreview: !t || !I || !a,
       size: o
     }), D = r.useCallback(() => {
@@ -170,8 +170,8 @@ let v = e => {
       }
     }, []), r.useLayoutEffect(() => {
       var e;
-      (null === (e = R.current) || void 0 === e ? void 0 : e.complete) === !0 && S(!1)
-    }, []), null == C) ? null : (0, i.jsx)(_.VisibilitySensor, {
+      (null === (e = C.current) || void 0 === e ? void 0 : e.complete) === !0 && S(!1)
+    }, []), null == R) ? null : (0, i.jsx)(_.VisibilitySensor, {
       ref: N,
       onChange: T,
       threshold: .7,
@@ -187,12 +187,12 @@ let v = e => {
           children: g((0, i.jsx)("img", {
             className: p.pngImage,
             alt: L(n),
-            src: C,
+            src: R,
             draggable: !1,
             onError: M,
             onLoad: D,
             onContextMenu: O,
-            ref: R
+            ref: C
           }), n.id)
         })
       })
@@ -218,12 +218,12 @@ let v = e => {
         opacity: 1
       },
       leave: S,
-      config: R
+      config: C
     }), A = r.useRef(null), m = (0, u.useSpring)({
       ref: A,
       transform: s || I ? "translateY(0)" : "translateY(-25px)",
       opacity: s ? 1 : 0,
-      config: C
+      config: R
     });
     return (0, u.useChain)(s ? [T, A] : [A, T], s ? [0, .0625] : [0, 0]), h((e, r) => r && (0, i.jsx)(f.AppReferencePositionLayer, {
       className: p.positionedLayer,

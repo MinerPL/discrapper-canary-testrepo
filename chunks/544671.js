@@ -10,7 +10,7 @@ var r = n("557711"),
   a = n("620662"),
   s = n("503438"),
   o = n("981631"),
-  l = n("659485");
+  l = n("427782");
 
 function u(e) {
   let {
@@ -19,16 +19,20 @@ function u(e) {
     guildId: u,
     channelId: d,
     source: _,
-    onAction: c
+    look: c,
+    color: E,
+    onAction: I
   } = e;
   return null != t && (0, a.default)(t, o.ActivityFlags.SYNC) && (0, s.default)(t) ? (0, i.jsx)(r.default, {
     className: l.button,
     size: l.buttonSize,
+    look: c,
+    color: E,
     user: n,
     activity: t,
     guildId: null != u ? u : void 0,
     channelId: d,
     source: _,
-    onAction: c
+    onAction: I
   }, "sync") : null
 }

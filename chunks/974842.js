@@ -1,151 +1,154 @@
 "use strict";
-n.r(t), n("47120"), n("315314"), n("610138"), n("216116"), n("78328"), n("815648");
-var a = n("735250"),
-  i = n("470079"),
-  r = n("120356"),
-  s = n.n(r),
-  l = n("866442"),
-  o = n("19602"),
-  c = n("481060"),
-  d = n("550271"),
-  u = n("688298"),
-  f = n("116175"),
-  m = n("308083"),
-  h = n("689938"),
-  E = n("765731"),
-  T = n("418571");
-let p = "clan-badge-render",
-  _ = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.CROSSHAIRS, f.ClanBadgeKind.FLOWER, f.ClanBadgeKind.FORCE, f.ClanBadgeKind.GEM, f.ClanBadgeKind.LAVA, f.ClanBadgeKind.PSYCHIC, f.ClanBadgeKind.SMOKE, f.ClanBadgeKind.SNOW, f.ClanBadgeKind.SOUND, f.ClanBadgeKind.SUN, f.ClanBadgeKind.WIND],
-  C = f.CLAN_BADGE_PALETTE_PRESETS.length;
+a.r(t), a("47120"), a("315314"), a("610138"), a("216116"), a("78328"), a("815648");
+var n = a("735250"),
+  r = a("470079"),
+  s = a("120356"),
+  i = a.n(s),
+  l = a("866442"),
+  o = a("19602"),
+  c = a("481060"),
+  d = a("550271"),
+  u = a("688298"),
+  f = a("116175"),
+  m = a("308083"),
+  h = a("689938"),
+  p = a("410453"),
+  E = a("661926");
+let T = "clan-badge-render",
+  C = [f.ClanBadgeKind.SWORD, f.ClanBadgeKind.WATER_DROP, f.ClanBadgeKind.SKULL, f.ClanBadgeKind.TOADSTOOL, f.ClanBadgeKind.MOON, f.ClanBadgeKind.LIGHTNING, f.ClanBadgeKind.LEAF, f.ClanBadgeKind.HEART, f.ClanBadgeKind.FIRE, f.ClanBadgeKind.COMPASS, f.ClanBadgeKind.CROSSHAIRS, f.ClanBadgeKind.FLOWER, f.ClanBadgeKind.FORCE, f.ClanBadgeKind.GEM, f.ClanBadgeKind.LAVA, f.ClanBadgeKind.PSYCHIC, f.ClanBadgeKind.SMOKE, f.ClanBadgeKind.SNOW, f.ClanBadgeKind.SOUND, f.ClanBadgeKind.SUN, f.ClanBadgeKind.WIND],
+  x = f.CLAN_BADGE_PALETTE_PRESETS.length;
 t.default = e => {
   let {
     handleUpdate: t,
-    badge: n,
-    primaryColor: r,
-    secondaryColor: g,
-    tag: x,
+    badge: a,
+    primaryColor: s,
+    secondaryColor: _,
+    tag: g,
     error: I,
-    furthestStep: v
-  } = e, N = i.useRef(null), [S, A] = i.useState(n), [R, M] = i.useState({
-    primary: null != r ? r : f.CLAN_BADGE_PRIMARY_DEFAULT,
-    secondary: null != g ? g : f.CLAN_BADGE_SECONDARY_DEFAULT
-  }), [L, b] = i.useState(() => {
+    furthestStep: N
+  } = e, v = r.useRef(null), [A, S] = r.useState(a), [L, R] = r.useState(() => {
+    let e = (0, f.getRandomClanBadgePreset)();
+    return {
+      primary: null != s ? s : e.primary,
+      secondary: null != _ ? _ : e.secondary
+    }
+  }), [y, b] = r.useState(() => {
     for (let e = 0; e < f.CLAN_BADGE_PALETTE_PRESETS.length; e++)
-      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === r && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === g) return e;
-    return C
-  }), [y, j] = i.useState(!1), O = C === L ? R : f.CLAN_BADGE_PALETTE_PRESETS[L];
-  return i.useEffect(() => {
-    if (S === n && O.primary === r && O.secondary === g) return;
-    let e = document.querySelector("#".concat(p));
+      if (f.CLAN_BADGE_PALETTE_PRESETS[e].primary === L.primary && f.CLAN_BADGE_PALETTE_PRESETS[e].secondary === L.secondary) return e;
+    return x
+  }), [M, j] = r.useState(!1), O = x === y ? L : f.CLAN_BADGE_PALETTE_PRESETS[y];
+  return r.useEffect(() => {
+    if (A === a && O.primary === s && O.secondary === _) return;
+    let e = document.querySelector("#".concat(T));
     if (null != e) {
-      let n = new XMLSerializer().serializeToString(e),
-        a = new Blob([n], {
+      let a = new XMLSerializer().serializeToString(e),
+        n = new Blob([a], {
           type: "image/svg+xml;charset=utf-8"
         }),
-        i = URL.createObjectURL(a),
-        r = new Image;
-      r.width = e.width.baseVal.value, r.height = e.height.baseVal.value, r.onload = function() {
-        if (null == N.current) return;
-        N.current.width = r.width, N.current.height = r.height;
-        let e = N.current.getContext("2d");
-        if (null != e) e.drawImage(r, 0, 0), URL.revokeObjectURL(i), t({
-          badgeImage: N.current.toDataURL("image/png")
+        r = URL.createObjectURL(n),
+        s = new Image;
+      s.width = e.width.baseVal.value, s.height = e.height.baseVal.value, s.onload = function() {
+        if (null == v.current) return;
+        v.current.width = s.width, v.current.height = s.height;
+        let e = v.current.getContext("2d");
+        if (null != e) e.drawImage(s, 0, 0), URL.revokeObjectURL(r), t({
+          badgeImage: v.current.toDataURL("image/png")
         })
-      }, r.src = i
+      }, s.src = r
     }
-    let a = v === m.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
+    let n = N === m.ClanSetupSteps.CUSTOMIZE_TAG_BADGE ? {
       brandPrimaryColor: O.primary,
       brandSecondaryColor: O.secondary
     } : {};
     t({
-      badgeKind: S,
+      badgeKind: A,
       badgePrimaryColor: O.primary,
       badgeSecondaryColor: O.secondary,
-      ...a
+      ...n
     })
-  }, [t, S, O.primary, O.secondary, v, n, r, g]), (0, a.jsxs)("div", {
-    className: T.slideContent,
-    children: [(0, a.jsx)(c.Heading, {
+  }, [t, A, O.primary, O.secondary, N, a, s, _]), (0, n.jsxs)("div", {
+    className: E.slideContent,
+    children: [(0, n.jsx)(c.Heading, {
       variant: "heading-xxl/medium",
-      className: T.title,
+      className: E.title,
       children: h.default.Messages.CLAN_SETUP_CUSTOMIZE_TITLE
-    }), (0, a.jsx)(c.Text, {
+    }), (0, n.jsx)(c.Text, {
       variant: "text-md/normal",
       color: "header-secondary",
-      className: T.subtitle,
+      className: E.subtitle,
       children: h.default.Messages.CLAN_SETUP_CUSTOMIZE_SUBTITLE
-    }), (0, a.jsxs)("div", {
-      className: E.container,
-      children: [(0, a.jsxs)("div", {
-        className: E.badgesContainer,
-        children: [(0, a.jsxs)("div", {
-          className: E.pickerContainer,
-          children: [(0, a.jsx)(c.Text, {
+    }), (0, n.jsxs)("div", {
+      className: p.container,
+      children: [(0, n.jsxs)("div", {
+        className: p.badgesContainer,
+        children: [(0, n.jsxs)("div", {
+          className: p.pickerContainer,
+          children: [(0, n.jsx)(c.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: h.default.Messages.CLAN_BADGE
-          }), (0, a.jsx)("div", {
-            className: E.pickerGrid,
-            children: _.map(e => (0, a.jsx)(c.Clickable, {
-              onClick: () => A(e),
-              className: s()(E.badgeAssetContainer, {
-                [E.badgeAssetContainerSelected]: e === S
+          }), (0, n.jsx)("div", {
+            className: p.pickerGrid,
+            children: C.map(e => (0, n.jsx)(c.Clickable, {
+              onClick: () => S(e),
+              className: i()(p.badgeAssetContainer, {
+                [p.badgeAssetContainerSelected]: e === A
               }),
-              children: (0, a.jsx)(d.ClanBadge, {
+              children: (0, n.jsx)(d.ClanBadge, {
                 badge: e,
                 width: 32,
                 height: 32
               })
             }, "".concat(e)))
           })]
-        }), (0, a.jsxs)("div", {
-          className: E.pickerContainer,
-          children: [(0, a.jsx)(c.Text, {
+        }), (0, n.jsxs)("div", {
+          className: p.pickerContainer,
+          children: [(0, n.jsx)(c.Text, {
             variant: "text-xs/semibold",
             color: "text-muted",
             children: h.default.Messages.CLAN_BADGE_COLORS
-          }), (0, a.jsxs)("div", {
-            className: E.pickerGrid,
-            children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, a.jsx)(c.Clickable, {
+          }), (0, n.jsxs)("div", {
+            className: p.pickerGrid,
+            children: [f.CLAN_BADGE_PALETTE_PRESETS.map((e, t) => (0, n.jsx)(c.Clickable, {
               onClick: () => {
-                b(t), M(f.CLAN_BADGE_PALETTE_PRESETS[t])
+                b(t), R(f.CLAN_BADGE_PALETTE_PRESETS[t])
               },
-              className: s()(E.badgeAssetContainer, {
-                [E.badgeAssetContainerSelected]: t === L
+              className: i()(p.badgeAssetContainer, {
+                [p.badgeAssetContainerSelected]: t === y
               }),
-              children: (0, a.jsx)(d.ClanBadge, {
-                badge: S,
+              children: (0, n.jsx)(d.ClanBadge, {
+                badge: A,
                 width: 32,
                 height: 32,
                 primaryTintColor: e.primary,
                 secondaryTintColor: e.secondary
               })
-            }, "".concat(e.primary, ":").concat(e.secondary))), (0, a.jsx)(u.default, {
-              showSecondaryColor: f.CLAN_BADGE_NUM_CUSTOMIZABLE_COLORS[S] >= 2,
-              palette: R,
+            }, "".concat(e.primary, ":").concat(e.secondary))), (0, n.jsx)(u.default, {
+              showSecondaryColor: f.CLAN_BADGE_NUM_CUSTOMIZABLE_COLORS[A] >= 2,
+              palette: L,
               onPrimaryColorChange: e => {
-                M(t => ({
+                R(t => ({
                   ...t,
                   primary: (0, l.int2hex)(e)
                 }))
               },
               onSecondaryColorChange: e => {
-                M(t => ({
+                R(t => ({
                   ...t,
                   secondary: (0, l.int2hex)(e)
                 }))
               },
-              shouldShow: y,
+              shouldShow: M,
               onRequestClose: () => j(!1),
-              children: e => (0, a.jsx)(c.Clickable, {
+              children: e => (0, n.jsx)(c.Clickable, {
                 ...e,
                 onClick: () => {
-                  b(C), j(e => !e)
+                  b(x), j(e => !e)
                 },
-                className: s()(E.badgeAssetContainer, {
-                  [E.badgeAssetContainerSelected]: C === L
+                className: i()(p.badgeAssetContainer, {
+                  [p.badgeAssetContainerSelected]: x === y
                 }),
-                children: (0, a.jsx)(o.EyeDropperIcon, {
+                children: (0, n.jsx)(o.EyeDropperIcon, {
                   width: 20,
                   height: 20
                 })
@@ -153,47 +156,52 @@ t.default = e => {
             })]
           })]
         })]
-      }), (0, a.jsxs)("div", {
-        className: E.tagContainer,
-        children: [null != I && (0, a.jsx)(c.Text, {
+      }), (0, n.jsxs)("div", {
+        className: p.tagContainer,
+        children: [(0, n.jsx)(c.Text, {
+          variant: "text-xs/semibold",
+          color: "text-muted",
+          children: h.default.Messages.CLAN_OVERVIEW_LABEL_CLAN_TAG
+        }), null != I && (0, n.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "status-danger",
-          className: T.errorText,
+          className: E.errorText,
           children: I
-        }), (0, a.jsx)(c.TextInput, {
-          className: E.tagInputWrapper,
-          inputClassName: E.tagInput,
-          value: x,
+        }), (0, n.jsx)(c.TextInput, {
+          className: p.tagInputWrapper,
+          inputClassName: p.tagInput,
+          value: g,
           onChange: e => t({
             tag: e
           }),
           maxLength: m.MAX_TAG_LENGTH,
           placeholder: h.default.Messages.CLAN_SETUP_TAG_PLACEHOLDER,
           autoFocus: !0,
-          prefixElement: (0, a.jsx)(d.ClanBadge, {
-            badge: S,
+          prefixElement: (0, n.jsx)(d.ClanBadge, {
+            badge: A,
             width: 40,
             height: 40,
             primaryTintColor: O.primary,
             secondaryTintColor: O.secondary
           })
-        }), (0, a.jsx)(c.Text, {
+        }), (0, n.jsx)(c.Text, {
           variant: "text-xs/medium",
           color: "text-muted",
+          className: p.tagValidationText,
           children: h.default.Messages.CLAN_TAG_VALIDATION_RULES
-        }), (0, a.jsxs)("div", {
+        }), (0, n.jsxs)("div", {
           style: {
             visibility: "hidden"
           },
-          children: [(0, a.jsx)(d.ClanBadge, {
-            id: p,
-            badge: S,
+          children: [(0, n.jsx)(d.ClanBadge, {
+            id: T,
+            badge: A,
             width: 64,
             height: 64,
             primaryTintColor: O.primary,
             secondaryTintColor: O.secondary
-          }), (0, a.jsx)("canvas", {
-            ref: N,
+          }), (0, n.jsx)("canvas", {
+            ref: v,
             id: "png-render-canvas"
           })]
         })]

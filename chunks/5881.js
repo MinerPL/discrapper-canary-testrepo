@@ -46,7 +46,7 @@ function l(e) {
     location: n
   } = e, r = o({
     location: n
-  }), s = null == t ? void 0 : t.config.messages.questName, l = "QuestLogger ".concat(n).concat(null != s ? " (".concat(s, ")") : "", ")"), u = new i.Logger(l);
+  }), s = null == t ? void 0 : t.config.messages.questName, l = "QuestLogger ".concat(n).concat(null != s ? " (".concat(s, ")") : ""), u = new i.Logger(l);
   return {
     log: r ? u.log : a.NOOP,
     warn: r ? u.warn : a.NOOP,

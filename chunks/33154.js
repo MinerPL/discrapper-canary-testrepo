@@ -14,7 +14,7 @@ var n, a, s = i("735250"),
   h = i("41776"),
   f = i("981631"),
   m = i("689938"),
-  p = i("843809");
+  p = i("19685");
 (a = n || (n = {}))[a.CHAT = 0] = "CHAT", a[a.REACTIONS = 1] = "REACTIONS";
 t.default = e => {
   let {

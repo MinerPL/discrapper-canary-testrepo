@@ -1,54 +1,55 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return I
+    return A
   }
 }), n("47120");
 var a = n("735250"),
   l = n("470079"),
   s = n("729594"),
-  i = n("481060"),
-  r = n("367907"),
-  o = n("906732"),
-  u = n("240991"),
-  d = n("69580"),
-  c = n("484459"),
-  f = n("171368"),
-  h = n("768581"),
-  m = n("63063"),
-  p = n("591759"),
-  E = n("556084"),
-  C = n("981631"),
-  g = n("689938"),
-  S = n("367388"),
-  _ = n("367424");
-let T = new Set(["Spacebar", " ", "Enter"]);
+  i = n("243814"),
+  r = n("481060"),
+  o = n("367907"),
+  u = n("906732"),
+  d = n("240991"),
+  c = n("69580"),
+  f = n("484459"),
+  h = n("171368"),
+  m = n("768581"),
+  p = n("63063"),
+  E = n("591759"),
+  C = n("556084"),
+  g = n("981631"),
+  S = n("689938"),
+  _ = n("101135"),
+  T = n("367424");
+let I = new Set(["Spacebar", " ", "Enter"]);
 
-function I(e) {
+function A(e) {
   let {
     channelId: t,
     transitionState: n,
-    onClose: I
+    onClose: A
   } = e, {
-    analyticsLocations: A
-  } = (0, o.default)(), {
+    analyticsLocations: N
+  } = (0, u.default)(), {
     fetched: v,
-    applicationsShelf: N,
-    installedIntegrations: x
-  } = (0, E.usePrivateChannelIntegrationState)({
+    applicationsShelf: x,
+    installedIntegrations: M
+  } = (0, C.usePrivateChannelIntegrationState)({
     channelId: t
   });
   l.useEffect(() => {
-    (0, r.trackWithMetadata)(C.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
+    (0, o.trackWithMetadata)(g.AnalyticEvents.GDM_STARTER_APPS_VIEWED)
   }, []);
-  let M = e => {
+  let R = e => {
       var t;
-      (0, c.default)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", null == e ? void 0 : e.getAvatarURL(void 0, 80), {
+      (0, f.default)(null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : "", null == e ? void 0 : e.getAvatarURL(void 0, 80), {
         dispatchWait: !0
       })
     },
-    R = (e, t) => {
-      T.has(e.key) && M(t)
+    y = (e, t) => {
+      I.has(e.key) && R(t)
     },
     L = l.useCallback(e => {
       let {
@@ -60,122 +61,122 @@ function I(e) {
         host: a,
         path: l
       } = s.parse(n, !0);
-      return (!!p.default.isDiscordHostname(a) || window.location.host === a) && l === C.Routes.OAUTH2_AUTHORIZED && (null != t && I(), !0)
-    }, [I]);
-  return (0, a.jsxs)(i.ModalRoot, {
+      return (!!E.default.isDiscordHostname(a) || window.location.host === a) && l === g.Routes.OAUTH2_AUTHORIZED && (null != t && A(), !0)
+    }, [A]);
+  return (0, a.jsxs)(r.ModalRoot, {
     transitionState: n,
-    size: i.ModalSize.DYNAMIC,
-    className: S.modal,
-    children: [(0, a.jsx)(i.ModalContent, {
-      className: S.modalContent,
+    size: r.ModalSize.DYNAMIC,
+    className: _.modal,
+    children: [(0, a.jsx)(r.ModalContent, {
+      className: _.modalContent,
       children: (0, a.jsxs)(a.Fragment, {
         children: [(0, a.jsx)("img", {
-          src: _,
+          src: T,
           alt: "",
-          className: S.image
+          className: _.image
         }), (0, a.jsxs)("div", {
-          className: S.headingContainer,
-          children: [(0, a.jsx)(i.Heading, {
+          className: _.headingContainer,
+          children: [(0, a.jsx)(r.Heading, {
             variant: "heading-xl/bold",
-            className: S.modalHeader,
-            children: g.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
-          }), (0, a.jsx)(i.Text, {
+            className: _.modalHeader,
+            children: S.default.Messages.PRIVATE_CHANNEL_AVAILABLE_APPS
+          }), (0, a.jsx)(r.Text, {
             variant: "text-md/medium",
-            className: S.modalHeader,
-            children: g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
-              helpCenterLink: m.default.getArticleURL(C.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
+            className: _.modalHeader,
+            children: S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_MORE_APPS_INFO_LINKED.format({
+              helpCenterLink: p.default.getArticleURL(g.HelpdeskArticles.PRIVATE_CHANNEL_INTEGRATIONS)
             })
           })]
         }), (0, a.jsx)("div", {
-          className: S.applicationRowContainer,
-          children: v ? N.map(e => {
-            if (null != x.find(t => t.application.id === e.id)) return null;
-            let n = null != e.description ? (0, u.parseBioReact)(e.description) : null,
-              l = h.default.getApplicationIconURL({
+          className: _.applicationRowContainer,
+          children: v ? x.map(e => {
+            if (null != M.find(t => t.application.id === e.id)) return null;
+            let n = null != e.description ? (0, d.parseBioReact)(e.description) : null,
+              l = m.default.getApplicationIconURL({
                 id: e.id,
                 icon: e.icon,
                 size: 40
               }),
               s = (0, a.jsxs)(a.Fragment, {
                 children: [null != l && (0, a.jsx)("img", {
-                  className: S.applicationIcon,
+                  className: _.applicationIcon,
                   alt: "",
                   "aria-hidden": !0,
                   src: l,
                   width: 40,
                   height: 40
                 }), (0, a.jsxs)("div", {
-                  className: S.applicationRowContent,
+                  className: _.applicationRowContent,
                   children: [(0, a.jsxs)("div", {
-                    className: S.applicationText,
-                    children: [(0, a.jsx)(i.Heading, {
+                    className: _.applicationText,
+                    children: [(0, a.jsx)(r.Heading, {
                       variant: "heading-md/medium",
                       children: e.name
-                    }), null != e.description && (0, a.jsx)(i.Text, {
+                    }), null != e.description && (0, a.jsx)(r.Text, {
                       variant: "text-sm/normal",
                       color: "text-muted",
                       lineClamp: 1,
                       children: n
                     })]
-                  }), (0, a.jsx)(i.Button, {
+                  }), (0, a.jsx)(r.Button, {
                     type: "button",
-                    innerClassName: S.applicationButtonHack,
+                    innerClassName: _.applicationButtonHack,
                     onClick: n => {
-                      n.stopPropagation(), (0, d.openOAuth2Modal)({
+                      n.stopPropagation(), (0, c.openOAuth2Modal)({
                         clientId: e.id,
-                        scopes: [C.OAuth2Scopes.APPLICATIONS_COMMANDS],
+                        scopes: [i.OAuth2Scopes.APPLICATIONS_COMMANDS],
                         channelId: t,
                         disableGuildSelect: !0,
                         callback: L
                       })
                     },
-                    size: i.Button.Sizes.SMALL,
-                    color: i.Button.Colors.PRIMARY,
-                    children: g.default.Messages.ADD
+                    size: r.Button.Sizes.SMALL,
+                    color: r.Button.Colors.PRIMARY,
+                    children: S.default.Messages.ADD
                   })]
                 })]
               }),
               {
-                bot: r
+                bot: o
               } = e;
-            return null != r ? (0, a.jsx)(i.ClickableContainer, {
-              onMouseDown: () => M(r),
-              onKeyDown: e => R(e, r),
-              className: S.applicationRow,
+            return null != o ? (0, a.jsx)(r.ClickableContainer, {
+              onMouseDown: () => R(o),
+              onKeyDown: e => y(e, o),
+              className: _.applicationRow,
               onClick: () => {
-                (0, f.openUserProfileModal)({
+                (0, h.openUserProfileModal)({
                   channelId: t,
-                  userId: r.id,
-                  sourceAnalyticsLocations: A,
+                  userId: o.id,
+                  sourceAnalyticsLocations: N,
                   analyticsLocation: {
-                    section: C.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
+                    section: g.AnalyticsSections.ADD_PRIVATE_CHANNEL_INTEGRATION_MODAL
                   }
                 })
               },
-              "aria-label": g.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
+              "aria-label": S.default.Messages.PRIVATE_CHANNEL_INTEGRATION_ADD_MODAL_ROW_INFO.format({
                 appName: e.name
               }),
               children: s
             }, e.id) : (0, a.jsx)("div", {
-              className: S.applicationRow,
+              className: _.applicationRow,
               children: s
             }, e.id)
-          }) : (0, a.jsx)(i.Spinner, {
-            className: S.spinner,
-            type: i.Spinner.Type.SPINNING_CIRCLE
+          }) : (0, a.jsx)(r.Spinner, {
+            className: _.spinner,
+            type: r.Spinner.Type.SPINNING_CIRCLE
           })
         })]
       })
-    }), (0, a.jsxs)(i.ModalFooter, {
-      className: S.modalFooter,
-      children: [(0, a.jsx)(i.Button, {
-        onClick: I,
-        children: g.default.Messages.DONE
-      }), (0, a.jsx)(i.Button, {
-        look: i.Button.Looks.LINK,
-        onClick: I,
-        color: i.Button.Colors.PRIMARY,
-        children: g.default.Messages.CANCEL
+    }), (0, a.jsxs)(r.ModalFooter, {
+      className: _.modalFooter,
+      children: [(0, a.jsx)(r.Button, {
+        onClick: A,
+        children: S.default.Messages.DONE
+      }), (0, a.jsx)(r.Button, {
+        look: r.Button.Looks.LINK,
+        onClick: A,
+        color: r.Button.Colors.PRIMARY,
+        children: S.default.Messages.CANCEL
       })]
     })]
   })

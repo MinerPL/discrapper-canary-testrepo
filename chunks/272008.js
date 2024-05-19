@@ -27,6 +27,9 @@ n.r(t), n.d(t, {
   optimisticallyUpdateQuestProgress: function() {
     return N
   },
+  overrideQuestDelivery: function() {
+    return p
+  },
   resetQuestDismissibilityStatus: function() {
     return m
   },
@@ -101,7 +104,8 @@ async function c(e, t) {
   if (null != t.questContentCTA && (0, s.trackQuestContentClicked)({
       questId: e,
       questContent: t.questContent,
-      questContentCTA: t.questContentCTA
+      questContentCTA: t.questContentCTA,
+      questContentPosition: t.questContentPosition
     }), !o.default.isEnrolling(e)) {
     r.default.dispatch({
       type: "QUESTS_ENROLL_BEGIN",
@@ -304,5 +308,12 @@ function N(e) {
   r.default.dispatch({
     type: "QUESTS_OPTIMISTIC_PROGRESS_UPDATE",
     userStatus: e
+  })
+}
+
+function p(e) {
+  r.default.dispatch({
+    type: "QUESTS_DELIVERY_OVERRIDE",
+    questId: e
   })
 }

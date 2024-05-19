@@ -9,7 +9,7 @@ s.r(t), s.d(t, {
 }), s("653041"), s("47120");
 var a = s("735250"),
   n = s("470079"),
-  l = s("718017"),
+  l = s("920906"),
   i = s("399606"),
   r = s("481060"),
   o = s("607070"),
@@ -20,14 +20,14 @@ var a = s("735250"),
   E = s("430824"),
   T = s("621113"),
   f = s("267642"),
-  m = s("709054"),
-  _ = s("357956"),
+  _ = s("709054"),
+  m = s("357956"),
   g = s("275909"),
-  h = s("300037"),
-  I = s("981631"),
+  I = s("300037"),
+  h = s("981631"),
   N = s("474936"),
   p = s("689938"),
-  C = s("46251");
+  C = s("441083");
 
 function A(e) {
   let {
@@ -40,12 +40,12 @@ function A(e) {
     if (o) return p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_PENDING_CANCELATION.format({
       date: d.currentPeriodEnd
     });
-    let e = null != s.premiumGuildSubscription ? m.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
+    let e = null != s.premiumGuildSubscription ? _.default.extractTimestamp(s.premiumGuildSubscription.id) : 0;
     return p.default.Messages.PREMIUM_GUILD_SUBSCRIPTION_DURATION_SHORTENED.format({
       date: new Date(e)
     })
   }, [s, o, d]), c = n.useMemo(() => (function(e) {
-    if (null == e || e === I.BoostedGuildTiers.NONE) return "";
+    if (null == e || e === h.BoostedGuildTiers.NONE) return "";
     let t = [p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_EMOJI_SLOTS.format({
       numEmojiSlots: N.BoostedGuildFeatures[e].limits.emoji
     }), p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_STICKER_SLOTS.format({
@@ -62,7 +62,7 @@ function A(e) {
     }), p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VIDEO_STAGE_SEATS.format({
       numVideoStageSeats: N.BoostedGuildFeatures[e].limits.stageVideoUsers
     }), p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_ANIMATED_GUILD_ICON, p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_INVITE_BACKGROUND];
-    e >= I.BoostedGuildTiers.TIER_2 && (t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= I.BoostedGuildTiers.TIER_3 && t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
+    e >= h.BoostedGuildTiers.TIER_2 && (t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_GUILD_BANNER), t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_CUSTOM_ROLE_ICONS)), e >= h.BoostedGuildTiers.TIER_3 && t.push(p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_VANITY_URL);
     let s = t[Math.floor(Math.random() * t.length)];
     return p.default.Messages.GUILD_BOOSTING_USER_SETTINGS_PERK_TEMPLATE.format({
       perk: s
@@ -78,7 +78,7 @@ function A(e) {
       opacity: 0
     }
   });
-  return o || t === I.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
+  return o || t === h.BoostedGuildTiers.NONE ? (0, a.jsx)("div", {
     className: C.boostDescriptionInnerContainer,
     children: (0, a.jsx)(r.Text, {
       variant: "text-sm/medium",
@@ -104,25 +104,25 @@ function O(e) {
     hasCancelableGuildBoostSlot: d,
     showAltText: c,
     isLastGuildBoostSlot: S
-  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), m = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), h = n.useMemo(() => null != m && m > new Date, [m]), I = (0, f.isGuildBoostSlotCanceled)(s);
+  } = e, E = (0, i.useStateFromStores)([o.default], () => o.default.useReducedMotion), _ = n.useMemo(() => null != s.cooldownEndsAt ? new Date(s.cooldownEndsAt) : null, [s]), I = n.useMemo(() => null != _ && _ > new Date, [_]), h = (0, f.isGuildBoostSlotCanceled)(s);
   return (0, a.jsxs)("div", {
     className: C.boostContainer,
     children: [(0, a.jsxs)("div", {
       className: C.boostInnerContainer,
       children: [(0, a.jsx)(g.default, {
-        isCanceled: I,
-        hasCooldown: h,
+        isCanceled: h,
+        hasCooldown: I,
         useReducedMotion: E
       }), (0, a.jsx)("div", {
         className: C.boostDescriptionContainer,
-        children: null != m && h && !I ? (0, a.jsx)(_.default, {
+        children: null != _ && I && !h ? (0, a.jsx)(m.default, {
           className: C.boostDescriptionInnerContainer,
-          cooldown: m.getTime()
+          cooldown: _.getTime()
         }) : (0, a.jsx)(A, {
           guildTier: t,
           guildBoostSlot: s,
           showAltText: c,
-          isCanceled: I,
+          isCanceled: h,
           premiumSubscription: l
         })
       }), (0, a.jsx)(r.Popout, {
@@ -162,7 +162,7 @@ function x(e) {
   } = e, o = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]);
   return (0, a.jsxs)("div", {
     className: C.appliedBoostContainer,
-    children: [(0, a.jsx)(h.default, {
+    children: [(0, a.jsx)(I.default, {
       guildId: t,
       boostingVariant: !1
     }), s.map((e, t) => (0, a.jsx)(O, {
@@ -181,12 +181,12 @@ function R(e) {
     guildId: t,
     appliedGuildBoosts: s,
     premiumSubscription: n
-  } = e, l = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]), r = m.default.fromTimestamp(Date.now());
+  } = e, l = (0, i.useStateFromStores)([E.default], () => E.default.getGuild(t), [t]), r = _.default.fromTimestamp(Date.now());
   if (s.forEach(e => {
-      (null == r || 0 > m.default.compare(e.id, r)) && (r = e.id)
+      (null == r || 0 > _.default.compare(e.id, r)) && (r = e.id)
     }), null == r) return null;
   let o = S.default.createFromServer({
-    id: m.default.fromTimestamp(Date.now()),
+    id: _.default.fromTimestamp(Date.now()),
     subscription_id: n.id,
     canceled: !1,
     premium_guild_subscription: {
@@ -197,7 +197,7 @@ function R(e) {
   }, n);
   return (0, a.jsxs)("div", {
     className: C.appliedBoostContainer,
-    children: [(0, a.jsx)(h.default, {
+    children: [(0, a.jsx)(I.default, {
       guildId: t,
       boostingVariant: !1
     }), s.map((e, t) => (0, a.jsx)(O, {
@@ -226,7 +226,7 @@ function M(e) {
     className: C.wrapper,
     children: [(0, a.jsx)("div", {
       className: C.container,
-      children: m.default.keys(l).map(e => (0, a.jsx)(R, {
+      children: _.default.keys(l).map(e => (0, a.jsx)(R, {
         guildId: e,
         premiumSubscription: s,
         appliedGuildBoosts: l[e]
@@ -273,7 +273,7 @@ function v(e) {
     className: C.wrapper,
     children: [(0, a.jsx)("div", {
       className: C.container,
-      children: m.default.keys(o).map(e => (0, a.jsx)(x, {
+      children: _.default.keys(o).map(e => (0, a.jsx)(x, {
         guildId: e,
         guildBoostSlotRecords: o[e],
         premiumSubscription: s,

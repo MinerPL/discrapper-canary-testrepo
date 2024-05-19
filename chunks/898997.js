@@ -19,7 +19,7 @@ let _ = function(e) {
     _ = (0, l.useHasDiscountApplied)(),
     E = (0, o.useHasActiveTrial)(),
     {
-      enabled: T
+      eligibleToFetch: T
     } = d.ReferralProgramSender.useExperiment({
       location: e
     }, {

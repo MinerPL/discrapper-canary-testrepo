@@ -8,8 +8,8 @@ var s, a, l, i, r = n("392711"),
   f = n("496929"),
   E = n("16084"),
   _ = n("728345"),
-  T = n("812206"),
-  m = n("594190"),
+  m = n("812206"),
+  T = n("594190"),
   I = n("594174"),
   p = n("580130"),
   h = n("55563"),
@@ -27,14 +27,14 @@ function M() {
     }
     of o().values(A)) {
     if (g.includes(t)) continue;
-    let s = T.default.getApplication(n);
+    let s = m.default.getApplication(n);
     if (null == s) {
-      !T.default.isFetchingApplication(n) && !T.default.didFetchingApplicationFail(n) && _.default.fetchApplication(n);
+      !m.default.isFetchingApplication(n) && !m.default.didFetchingApplicationFail(n) && _.default.fetchApplication(n);
       continue
     }
     let a = h.default.get(t);
     if (null == a) {
-      !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && E.fetchSKU(s.id, t);
+      !h.default.isFetching(t) && !h.default.didFetchingSkuFail(t) && E.fetchPublishedSKU(s.id, t);
       continue
     }
     p.default.applicationIdsFetching.has(s.id) || p.default.isEntitledToSku(I.default.getCurrentUser(), t, s.id, s.id) || !a.available ? null != C[t] && (delete C[t], e = !0) : (C[t] = {
@@ -47,7 +47,7 @@ function M() {
 class R extends(s = u.default.Store) {
   initialize() {
     var e;
-    this.waitFor(m.default, h.default, p.default), g = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : g
+    this.waitFor(T.default, h.default, p.default), g = null !== (e = d.Storage.get(S)) && void 0 !== e ? e : g
   }
   getDetectedOffPlatformPremiumPerks() {
     return o().values(C)
@@ -79,7 +79,7 @@ i = "DetectedOffPlatformPremiumPerksStore", (l = "displayName") in(a = R) ? Obje
         id: t,
         distributor: n
       }
-      of m.default.getRunningGames())
+      of T.default.getRunningGames())
       if (null != t && n !== N.Distributors.DISCORD)
         for (let {
             skuId: n,

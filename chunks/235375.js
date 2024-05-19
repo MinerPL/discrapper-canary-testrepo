@@ -1,108 +1,110 @@
 "use strict";
-a.r(t), a.d(t, {
+n.r(t), n.d(t, {
   baseRules: function() {
-    return v
+    return m
   },
   customRules: function() {
-    return L
+    return N
   }
-}), a("47120");
-var n = a("735250"),
-  l = a("470079"),
-  s = a("803997"),
-  r = a.n(s),
-  o = a("302454"),
-  i = a.n(o),
-  c = a("481060"),
-  u = a("37234"),
-  d = a("230711"),
-  h = a("454585"),
-  p = a("703656"),
-  g = a("626135"),
-  f = a("981631"),
-  C = a("596401");
-let m = i().defaultRules.link,
-  x = {
-    section: f.AnalyticsSections.SETTINGS_CHANGELOG
+}), n("47120");
+var i = n("735250"),
+  r = n("470079"),
+  a = n("120356"),
+  s = n.n(a),
+  o = n("302454"),
+  l = n.n(o),
+  u = n("481060"),
+  d = n("37234"),
+  _ = n("230711"),
+  c = n("454585"),
+  E = n("703656"),
+  I = n("626135"),
+  T = n("981631"),
+  f = n("596401");
+let S = l().defaultRules.link,
+  h = {
+    section: T.AnalyticsSections.SETTINGS_CHANGELOG
   },
-  _ = e => {
-    var t, a;
+  A = e => {
+    var t, n;
     let {
-      level: n,
-      children: s,
+      level: i,
+      children: a,
       className: o = null,
-      styleSheet: i = {}
-    } = e, u = (0, c.usePrivateHeadingLevel)(), d = parseInt(n, 10), h = isNaN(d) ? 1 : d;
-    return l.createElement("h".concat(u + h - 1), {
-      className: r()(...(t = i, null == (a = o) ? [] : a.split(" ").map(e => t[e])))
-    }, s)
+      styleSheet: l = {}
+    } = e, d = (0, u.usePrivateHeadingLevel)(), _ = parseInt(i, 10), c = isNaN(_) ? 1 : _;
+    return r.createElement("h".concat(d + c - 1), {
+      className: s()(...(t = l, null == (n = o) ? [] : n.split(" ").map(e => t[e])))
+    }, a)
   },
-  v = h.default.defaultRules,
-  L = {
+  m = null != c.default ? c.default.defaultRules : null,
+  N = {
     link: {
-      parse(e, t, a) {
-        let n;
-        let l = e[2],
-          s = l.startsWith("https://discordapp.com/nitro") || l.startsWith("https://discord.com/nitro"),
-          r = l.startsWith("https://discordapp.com/hypesquad") || l.startsWith("https://discord.com/hypesquad"),
-          o = l.startsWith("/shop/fullscreen?source=1") || l.startsWith("/activities");
-        return n = s || r ? e => {
-          g.default.track(f.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-            location: x
-          }), s ? d.default.open(f.UserSettingsSections.PREMIUM) : r && d.default.open(f.UserSettingsSections.HYPESQUAD_ONLINE), a.changeLog.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+      parse(e, t, n) {
+        let i;
+        let r = e[2],
+          a = r.startsWith("https://discordapp.com/nitro") || r.startsWith("https://discord.com/nitro"),
+          s = r.startsWith("https://discordapp.com/hypesquad") || r.startsWith("https://discord.com/hypesquad"),
+          o = r.startsWith("/shop/fullscreen?source=1") || r.startsWith("/activities");
+        return i = a || s ? e => {
+          I.default.track(T.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+            location: h
+          }), a ? _.default.open(T.UserSettingsSections.PREMIUM) : s && _.default.open(T.UserSettingsSections.HYPESQUAD_ONLINE), n.changeLog.track(T.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
             cta_type: "nitro"
-          }), (0, c.closeModal)(C.CHANGELOG_MODAL_KEY), e.preventDefault()
+          }), (0, u.closeModal)(f.CHANGELOG_MODAL_KEY), e.preventDefault()
         } : o ? e => {
-          (0, p.transitionTo)(l), a.changeLog.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            ...g.default.getCampaignParams(l)
-          }), (0, u.popAllLayers)(), (0, c.closeModal)(C.CHANGELOG_MODAL_KEY), e.preventDefault()
+          (0, E.transitionTo)(r), n.changeLog.track(T.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+            ...I.default.getCampaignParams(r)
+          }), (0, d.popAllLayers)(), (0, u.closeModal)(f.CHANGELOG_MODAL_KEY), e.preventDefault()
         } : () => {
-          a && "function" == typeof a.onLinkClick && a.onLinkClick(l), a.changeLog.track(f.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
-            ...g.default.getCampaignParams(l)
+          n && "function" == typeof n.onLinkClick && n.onLinkClick(r), n.changeLog.track(T.AnalyticEvents.CHANGE_LOG_CTA_CLICKED, {
+            target: r,
+            cta_type: "inline_link",
+            ...I.default.getCampaignParams(r)
           })
         }, {
-          ...m.parse(e, t, a),
-          callToAction: n
+          ...S.parse(e, t, n),
+          callToAction: i
         }
       },
-      react: (e, t, a) => (0, n.jsx)(c.Anchor, {
-        href: i().sanitizeUrl(e.target),
+      react: (e, t, n) => (0, i.jsx)(u.Anchor, {
+        href: l().sanitizeUrl(e.target),
         title: e.title,
         onClick: e.callToAction,
         target: "_blank",
         className: e.callToAction ? "cta" : void 0,
-        children: t(e.content, a)
-      }, a.key)
+        children: t(e.content, n)
+      }, n.key)
     },
     lheading: e => ({
-      react: (t, a, l) => (0, n.jsx)(_, {
+      react: (t, n, r) => (0, i.jsx)(A, {
         level: t.level,
         className: t.className,
         styleSheet: e,
-        children: a(t.content, l)
-      }, l.key)
+        children: n(t.content, r)
+      }, r.key)
     }),
     heading: {
-      react: (e, t, a) => (0, n.jsx)(_, {
+      react: (e, t, n) => (0, i.jsx)(A, {
         level: e.level,
-        children: t(e.content, a)
-      }, a.key)
+        children: t(e.content, n)
+      }, n.key)
     },
     image: {
-      react(e, t, l) {
-        let s = a("302731")("../../images/change-log/".concat(e.target).replace("../../images/change-log/", "./"));
-        return (0, n.jsx)("img", {
+      react(e, t, r) {
+        let a = n("866483")("../../images/change-log/".concat(e.target).replace("../../images/change-log/", "./"));
+        return (0, i.jsx)("img", {
           alt: e.alt,
-          src: s
-        }, l.key)
+          src: a
+        }, r.key)
       }
     },
     blockQuote: {
-      react: v.blockQuote.react
+      react: null == m ? void 0 : m.blockQuote.react
     },
     paragraph: {
-      react: (e, t, a) => (0, n.jsx)("p", {
-        children: t(e.content, a)
-      }, a.key)
+      react: (e, t, n) => (0, i.jsx)("p", {
+        children: t(e.content, n)
+      }, n.key)
     }
   }

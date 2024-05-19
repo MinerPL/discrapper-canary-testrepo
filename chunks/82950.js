@@ -12,9 +12,9 @@ var a = n("735250"),
   f = n("428695"),
   E = n("981631"),
   h = n("689938"),
-  _ = n("85488");
+  _ = n("361114");
 let C = i().debounce(o.default.trackWithMetadata, 500),
-  S = e => {
+  m = e => {
     let {
       guild: t,
       title: n,
@@ -22,12 +22,12 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       image: i,
       type: c,
       imageMarginX: f,
-      imageMarginTop: S,
-      trackingSource: m,
+      imageMarginTop: m,
+      trackingSource: S,
       undismissable: p,
-      onDismissed: I,
-      onClick: T,
-      cta: g,
+      onDismissed: g,
+      onClick: I,
+      cta: T,
       ctaColor: A
     } = e;
     s.useEffect(() => {
@@ -37,19 +37,19 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       })
     }, [t.id, c]);
     let N = null;
-    "function" == typeof g ? N = g() : null != g && (N = (0, a.jsx)(r.Button, {
+    "function" == typeof T ? N = T() : null != T && (N = (0, a.jsx)(r.Button, {
       className: _.btn,
       size: r.Button.Sizes.SMALL,
       onClick: () => {
         null != c && d.default.track(E.AnalyticEvents.CHANNEL_NOTICE_CTA_CLICKED, {
-          source: m,
+          source: S,
           guild_id: t.id,
           notice_type: c
-        }), null == T || T()
+        }), null == I || I()
       },
       fullWidth: !0,
       color: A,
-      children: g
+      children: T
     }));
     let v = null != f ? "".concat(f, "px") : "16px";
     return (0, a.jsxs)("div", {
@@ -58,7 +58,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
         onClick: () => {
           o.default.trackWithMetadata(E.AnalyticEvents.CHANNEL_NOTICE_CLOSED, {
             notice_type: c
-          }), null == I || I()
+          }), null == g || g()
         },
         className: _.close,
         "aria-label": h.default.Messages.DISMISS,
@@ -68,7 +68,7 @@ let C = i().debounce(o.default.trackWithMetadata, 500),
       }), (0, a.jsx)("div", {
         className: _.imageContainer,
         style: {
-          marginTop: "".concat(S, "px"),
+          marginTop: "".concat(m, "px"),
           marginLeft: v,
           marginRight: v
         },
@@ -96,7 +96,7 @@ t.default = function(e) {
   } = (0, c.useChannelNoticeRedesignExperiment)(!0);
   return t ? (0, a.jsx)(f.default, {
     ...e
-  }) : (0, a.jsx)(S, {
+  }) : (0, a.jsx)(m, {
     ...e
   })
 }

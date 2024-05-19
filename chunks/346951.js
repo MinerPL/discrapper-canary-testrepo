@@ -6,7 +6,7 @@ var a = s("735250"),
   i = s("707558"),
   r = s("577720"),
   o = s("689938"),
-  d = s("675521");
+  d = s("96181");
 let u = () => [{
   icon: d.perkNewsletter,
   title: o.default.Messages.HYPESQUAD_PERK_TITLE_NEWSLETTER,

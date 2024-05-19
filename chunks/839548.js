@@ -54,6 +54,7 @@ class _ extends a.default {
   setCallExperience(e) {}
   setClipRecordUser(e, t, n) {}
   setViewerSideClip(e) {}
+  setRemoteAudioHistory(e) {}
   setClipsKeyFrameInterval(e) {}
   setQualityDecoupling(e) {}
   getStreamParameters() {
@@ -88,10 +89,10 @@ class _ extends a.default {
   applyVideoQualityMode(e) {
     if (this.context !== l.MediaEngineContextTypes.DEFAULT) return;
     let t = o.VIDEO_QUALITY_MODES_TO_OVERWRITES[e];
-    this.videoQualityManager.setQuality(t), this.updateVideoQuality()
+    this.videoQualityManager.setQualityOverwrite(t), this.updateVideoQuality()
   }
   overwriteQualityForTesting(e) {
-    this.videoQualityManager.setQuality(e), this.updateVideoQuality()
+    this.videoQualityManager.setQualityOverwrite(e), this.updateVideoQuality()
   }
   applyQualityConstraints() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

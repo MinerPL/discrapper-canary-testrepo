@@ -6,7 +6,7 @@ var s = a("120356"),
   r = a.n(s),
   n = a("481060"),
   i = a("937615"),
-  o = a("703000");
+  o = a("87951");
 t.default = e => {
   var t;
   let {
@@ -18,12 +18,12 @@ t.default = e => {
     icon: c,
     className: d,
     variant: f = "heading-md/semibold",
-    alwaysWhiteText: m = !0
-  } = e, C = (0, i.formatPrice)(a, s);
+    alwaysWhiteText: C = !0
+  } = e, m = (0, i.formatPrice)(a, s);
   return (0, l.jsxs)(n.Heading, {
     variant: f,
-    color: m ? "always-white" : "none",
+    color: C ? "always-white" : "none",
     className: r()(o.heading, d),
-    children: [c, null !== (t = null == u ? void 0 : u(C)) && void 0 !== t ? t : C]
+    children: [c, null !== (t = null == u ? void 0 : u(m)) && void 0 !== t ? t : m]
   })
 }

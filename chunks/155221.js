@@ -1,7 +1,7 @@
     "use strict";
     a.r(t), a.d(t, {
       Overlay: function() {
-        return W
+        return B
       }
     }), a("47120");
     var d = a("735250"),
@@ -69,14 +69,14 @@
         name: "ActivateDevice"
       }),
       j = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("24267"), a.e("23755"), a.e("30386"), a.e("61613"), a.e("36385"), a.e("63958"), a.e("11250"), a.e("81539"), a.e("57878"), a.e("95393"), a.e("67535"), a.e("90508"), a.e("39285"), a.e("14262"), a.e("7590"), a.e("56630"), a.e("70866"), a.e("6380"), a.e("87983"), a.e("8739"), a.e("43643"), a.e("58286"), a.e("90687"), a.e("41947"), a.e("71697"), a.e("3084"), a.e("37766"), a.e("53466"), a.e("6857"), a.e("22036"), a.e("38779"), a.e("25464"), a.e("30243"), a.e("23404"), a.e("78690"), a.e("67582"), a.e("74526"), a.e("18101"), a.e("37220"), a.e("33361"), a.e("61447"), a.e("91315"), a.e("80026"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("6085"), a.e("11256"), a.e("49508"), a.e("91632"), a.e("88396"), a.e("5257"), a.e("47849"), a.e("95468"), a.e("93829")]).then(a.bind(a, "457094")),
+        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("70716"), a.e("23755"), a.e("30386"), a.e("80301"), a.e("36385"), a.e("56215"), a.e("29549"), a.e("31605"), a.e("56630"), a.e("6380"), a.e("11250"), a.e("57878"), a.e("4970"), a.e("77172"), a.e("95393"), a.e("81539"), a.e("67535"), a.e("90508"), a.e("39285"), a.e("86977"), a.e("7590"), a.e("14262"), a.e("18101"), a.e("90687"), a.e("82882"), a.e("8739"), a.e("58286"), a.e("41947"), a.e("30243"), a.e("3084"), a.e("37766"), a.e("53466"), a.e("62809"), a.e("22036"), a.e("38779"), a.e("59743"), a.e("43643"), a.e("23404"), a.e("92714"), a.e("17220"), a.e("37220"), a.e("58360"), a.e("92557"), a.e("91315"), a.e("80026"), a.e("80954"), a.e("62856"), a.e("86557"), a.e("37839"), a.e("19874"), a.e("11256"), a.e("49508"), a.e("91632"), a.e("88396"), a.e("38651"), a.e("95468"), a.e("70299")]).then(a.bind(a, "457094")),
         webpackId: "457094",
         name: "ViewsWithMainInterface",
         memo: !0,
         id: "457094"
       }),
       V = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("66635"), a.e("73422"), a.e("75492"), a.e("11250"), a.e("57878"), a.e("95393"), a.e("67535"), a.e("19878"), a.e("90687"), a.e("10778"), a.e("52030"), a.e("85514"), a.e("76990"), a.e("40268")]).then(a.bind(a, "822699")),
+        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("96427"), a.e("49368"), a.e("75492"), a.e("11250"), a.e("57878"), a.e("95393"), a.e("67535"), a.e("90687"), a.e("19878"), a.e("10778"), a.e("52030"), a.e("85514"), a.e("76990"), a.e("50960")]).then(a.bind(a, "822699")),
         webpackId: "822699",
         name: "ViewsWithAuth"
       }),
@@ -86,39 +86,39 @@
         name: "ViewsWithOAuth2"
       }),
       H = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("81539"), a.e("56630"), a.e("6380"), a.e("71697"), a.e("18101"), a.e("11256"), a.e("47849"), a.e("40786")]).then(a.bind(a, "317281")),
-        webpackId: "317281",
-        name: "ViewsWithUnauthenticatedApplicationDirectory"
-      }),
-      F = (0, _.makeLazy)({
         createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("10508")]).then(a.bind(a, "549652")),
         webpackId: "549652",
         name: "BrowserHandoff"
       }),
-      B = (0, _.makeLazy)({
+      F = (0, _.makeLazy)({
         createPromise: () => a.e("76888").then(a.bind(a, "573276")),
         webpackId: "573276",
         name: "MobileWebHandoffFallback"
       }),
-      W = (0, _.makeLazy)({
-        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("30386"), a.e("61613"), a.e("36385"), a.e("11250"), a.e("81539"), a.e("57878"), a.e("95393"), a.e("67535"), a.e("90508"), a.e("39285"), a.e("14262"), a.e("7590"), a.e("56630"), a.e("70866"), a.e("6380"), a.e("87983"), a.e("8739"), a.e("43643"), a.e("58286"), a.e("90687"), a.e("41947"), a.e("71697"), a.e("3084"), a.e("37766"), a.e("53466"), a.e("6857"), a.e("22036"), a.e("38779"), a.e("25464"), a.e("30243"), a.e("23404"), a.e("78690"), a.e("74526"), a.e("18101"), a.e("37220"), a.e("33361"), a.e("61447"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("37839"), a.e("6085"), a.e("88396"), a.e("69240")]).then(a.bind(a, "290161")),
+      B = (0, _.makeLazy)({
+        createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("23755"), a.e("30386"), a.e("80301"), a.e("36385"), a.e("29549"), a.e("31605"), a.e("56630"), a.e("6380"), a.e("11250"), a.e("57878"), a.e("4970"), a.e("77172"), a.e("95393"), a.e("81539"), a.e("67535"), a.e("90508"), a.e("39285"), a.e("86977"), a.e("7590"), a.e("14262"), a.e("18101"), a.e("90687"), a.e("82882"), a.e("8739"), a.e("58286"), a.e("41947"), a.e("30243"), a.e("3084"), a.e("37766"), a.e("53466"), a.e("62809"), a.e("22036"), a.e("38779"), a.e("59743"), a.e("43643"), a.e("23404"), a.e("17220"), a.e("37220"), a.e("58360"), a.e("92557"), a.e("91315"), a.e("80954"), a.e("62856"), a.e("86557"), a.e("37839"), a.e("19874"), a.e("88396"), a.e("69240")]).then(a.bind(a, "290161")),
         webpackId: "290161",
         name: "Overlay"
       }),
-      K = (0, _.makeLazy)({
+      W = (0, _.makeLazy)({
         createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("18824"), a.e("75843")]).then(a.bind(a, "430075")),
         webpackId: "430075",
         name: "SuspendedUserSafetyHubPage"
       }),
-      z = (0, _.makeLazy)({
+      K = (0, _.makeLazy)({
         createPromise: () => Promise.all([a.e("49237"), a.e("99387"), a.e("19878"), a.e("28296")]).then(a.bind(a, "630107")),
         webpackId: "630107",
         name: "QuestsLandingPage"
       }),
-      Y = (0, _.makeLazy)({
+      z = (0, _.makeLazy)({
         createPromise: () => Promise.all([a.e("99387"), a.e("47228")]).then(a.bind(a, "531338")),
         webpackId: "531338",
         name: "ConnectionsAuthorizeContinue"
+      }),
+      Y = (0, _.makeLazy)({
+        createPromise: () => a.e("54918").then(a.bind(a, "838134")),
+        webpackId: "838134",
+        name: "ApplicationDirectoryRoutes"
       }),
       q = () => (0, d.jsx)(j, {}),
       X = new Set([N.Routes.LOGIN, N.Routes.LOGIN_HANDOFF, N.Routes.INVITE_LOGIN(":inviteCode"), N.Routes.GIFT_CODE_LOGIN(":giftCode"), N.Routes.GUILD_TEMPLATE_LOGIN(":guildTemplateCode")]);
@@ -189,7 +189,7 @@
             to: N.Routes.LOGIN
           }), (0, d.jsx)(m.default, {
             path: N.Routes.QUESTS(":questId"),
-            component: z,
+            component: K,
             impressionName: r.ImpressionNames.QUESTS_LANDING_PAGE,
             impressionProperties: e => {
               let {
@@ -201,10 +201,10 @@
             }
           }), (0, d.jsx)(m.default, {
             path: N.Routes.HANDOFF,
-            component: F
+            component: H
           }), (0, d.jsx)(m.default, {
             path: N.Routes.MOBILE_WEB_HANDOFF,
-            component: B
+            component: F
           }), (0, d.jsx)(m.default, {
             path: N.Routes.CONNECTION_LINK(":type"),
             component: k
@@ -216,7 +216,7 @@
             component: x
           }), (0, d.jsx)(m.default, {
             path: N.Routes.CONNECTIONS_AUTHORIZE_CONTINUE(":type"),
-            component: Y
+            component: z
           }), (0, d.jsx)(m.default, {
             path: N.Routes.CONNECTIONS(":type"),
             component: M
@@ -267,13 +267,13 @@
             component: G
           }), t ? null : (0, d.jsx)(o.Route, {
             path: [N.Routes.ACCOUNT_STANDING],
-            component: K
+            component: W
           }), t ? null : (0, d.jsx)(o.Route, {
             path: N.Routes.APPLICATION_STORE,
             component: p.default
           }), t ? null : (0, d.jsx)(o.Route, {
-            path: [N.Routes.APPLICATION_DIRECTORY_SEARCH, N.Routes.APPLICATION_DIRECTORY_PROFILE(":applicationId", ":section?"), N.Routes.APPLICATION_DIRECTORY],
-            component: H
+            path: N.Routes.APPLICATION_DIRECTORY,
+            component: Y
           }), (0, d.jsx)(o.Route, {
             render: q
           })]

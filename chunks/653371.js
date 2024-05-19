@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120"), n("653041");
 var s = n("735250"),
   l = n("470079"),
-  a = n("557533"),
-  i = n.n(a),
+  i = n("557533"),
+  a = n.n(i),
   r = n("771950"),
   o = n("860911"),
   c = n("66037"),
@@ -17,7 +17,7 @@ var s = n("735250"),
   h = n("231338"),
   N = n("436620"),
   g = n("431138"),
-  m = n("97026");
+  m = n("881574");
 
 function k(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -56,12 +56,12 @@ class x extends l.PureComponent {
       mainContentId: t,
       skipToContentLabel: n,
       NavigationMessages: l,
-      onChangeLocale: a,
+      onChangeLocale: i,
       TrackClick: r,
       avoidRouter: o
     } = this.props;
     return (0, s.jsxs)("header", {
-      className: i()(m.header, e),
+      className: a()(m.header, e),
       children: [(0, s.jsxs)("nav", {
         className: m.headerInner,
         children: [(0, s.jsxs)("div", {
@@ -94,7 +94,7 @@ class x extends l.PureComponent {
         }), (0, s.jsxs)("ul", {
           className: m.headerNavRight,
           children: [this.renderSocialMediaNav(), (0, s.jsx)(d.LocalePicker, {
-            onChange: a
+            onChange: i
           })]
         })]
       }), null != t && (0, s.jsx)("div", {
@@ -113,9 +113,9 @@ class x extends l.PureComponent {
         TrackClick: n,
         authRedirectTo: l
       } = this.props, {
-        isAppCompatible: a
-      } = this.state, i = (0, o.getLoginPath)(l), r = t.LOGIN;
-      return null != e && (i = h.AppRoutes.ME, r = t.OPEN), a ? (0, s.jsx)("li", {
+        isAppCompatible: i
+      } = this.state, a = (0, o.getLoginPath)(l), r = t.LOGIN;
+      return null != e && (a = h.AppRoutes.ME, r = t.OPEN), i ? (0, s.jsx)("li", {
         className: m.listItemInactive,
         children: (0, s.jsx)(n, {
           eventName: f,
@@ -124,7 +124,7 @@ class x extends l.PureComponent {
             linkClicked: e ? "open" : "login",
             googleAnalytics: !0
           },
-          href: i,
+          href: a,
           children: r
         })
       }, "app-button") : null
@@ -132,7 +132,7 @@ class x extends l.PureComponent {
       let {
         TrackClick: e
       } = this.props, t = C().map(t => (0, s.jsx)("li", {
-        className: i()(m.listItemInactive, m.listItemSocialMedia),
+        className: a()(m.listItemInactive, m.listItemSocialMedia),
         children: (0, s.jsx)(e, {
           eventName: f,
           className: m.rightNavLink,

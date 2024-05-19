@@ -3,6 +3,9 @@ n.r(t), n.d(t, {
   TrackUserProfileProperties: function() {
     return c
   },
+  USER_PROFILE_TOOLTIP_DELAY: function() {
+    return T
+  },
   UserProfileSections: function() {
     return l
   },
@@ -10,12 +13,13 @@ n.r(t), n.d(t, {
     return d
   },
   getBadgeAsset: function() {
-    return T
+    return f
   }
 });
 var i, r, a, s, o, l, u, d, _, c, E, I = n("981631");
+let T = 300;
 
-function T(e) {
+function f(e) {
   let {
     API_ENDPOINT: t,
     CDN_HOST: n

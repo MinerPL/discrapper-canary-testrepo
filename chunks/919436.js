@@ -2,7 +2,7 @@
 n.r(t), n("411104"), n("47120");
 var l, a = n("735250"),
   s = n("470079"),
-  i = n("718017"),
+  i = n("920906"),
   r = n("924826"),
   o = n("442837"),
   u = n("481060"),
@@ -10,9 +10,9 @@ var l, a = n("735250"),
   c = n("358221"),
   f = n("43267"),
   h = n("933557"),
-  p = n("93687"),
-  m = n("266076"),
-  C = n("199902"),
+  m = n("93687"),
+  C = n("266076"),
+  p = n("199902"),
   g = n("19780"),
   E = n("306680"),
   _ = n("944486"),
@@ -25,9 +25,9 @@ var l, a = n("735250"),
   v = n("662146"),
   x = n("674552"),
   R = n("981631"),
-  M = n("565710");
+  M = n("134751");
 
-function O(e, t, n) {
+function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -35,7 +35,7 @@ function O(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let y = {
+let O = {
   friction: 28,
   tension: 600
 };
@@ -45,11 +45,11 @@ function D(e) {
     case "height":
     case "opacity":
       return {
-        duration: 150, ...y
+        duration: 150, ...O
       };
     case "scale":
       return {
-        ...y
+        ...O
       };
     default:
       throw Error("DirectMessage: getSpringConfigs() - Invalid spring ".concat(String(e)))
@@ -132,22 +132,22 @@ class b extends(l = s.PureComponent) {
       unread: f,
       isGDMFacepileEnabled: h
     } = this.props, {
-      hovered: p,
-      animating: C
+      hovered: m,
+      animating: p
     } = this.state, g = e.isMultiUserDM() && null == e.icon && h;
     return (0, a.jsx)(i.animated.div, {
       style: this.getAnimatedStyle(),
       children: (0, a.jsxs)(L.ListItem, {
         children: [(0, a.jsx)(N.default, {
-          hovered: !C && p,
-          selected: !C && n,
-          unread: !C && f,
+          hovered: !p && m,
+          selected: !p && n,
+          unread: !p && f,
           className: M.pill
         }), (0, a.jsx)(v.default, {
           text: null != t ? t : "",
           selected: n,
           children: (0, a.jsx)(u.BlobMask, {
-            selected: n || p,
+            selected: n || m,
             lowerBadge: l > 0 ? (0, x.renderMentionBadge)(l) : null,
             upperBadge: (0, x.renderMediaBadge)({
               audio: s,
@@ -166,15 +166,15 @@ class b extends(l = s.PureComponent) {
                 onMouseLeave: () => this.setState({
                   hovered: !1
                 }),
-                selected: n || p,
+                selected: n || m,
                 ariaLabel: null != t ? t : "",
                 onContextMenu: this.handleContextMenu,
                 icon: g ? void 0 : this.getChannelIcon(),
                 backgroundStyle: g ? "on-hover" : "always",
-                children: g ? (0, a.jsx)(m.default, {
+                children: g ? (0, a.jsx)(C.default, {
                   channel: e,
                   size: u.AvatarSizes.SIZE_48,
-                  facepileSizeOverride: 36,
+                  facepileSizeOverride: u.AvatarSizes.SIZE_32,
                   experimentLocation: "unread_gdm",
                   "aria-hidden": !0
                 }) : void 0,
@@ -187,7 +187,7 @@ class b extends(l = s.PureComponent) {
     })
   }
   constructor(...e) {
-    super(...e), O(this, "state", {
+    super(...e), y(this, "state", {
       hovered: !1,
       animating: !0,
       controller: new i.Controller({
@@ -196,14 +196,14 @@ class b extends(l = s.PureComponent) {
         opacity: 0,
         config: D
       })
-    }), O(this, "handleContextMenu", e => {
+    }), y(this, "handleContextMenu", e => {
       let {
         channel: t
       } = this.props, l = t.type === R.ChannelTypes.DM ? S.default.getUser(t.getRecipientId()) : null;
       null != l ? (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("56826")]).then(n.bind(n, "131404"));
+        } = await Promise.all([n.e("99387"), n.e("36441"), n.e("56826")]).then(n.bind(n, "131404"));
         return n => (0, a.jsx)(e, {
           ...n,
           channel: t,
@@ -212,7 +212,7 @@ class b extends(l = s.PureComponent) {
       }) : (0, d.openContextMenuLazy)(e, async () => {
         let {
           default: e
-        } = await Promise.all([n.e("99387"), n.e("79695"), n.e("25421")]).then(n.bind(n, "354741"));
+        } = await Promise.all([n.e("99387"), n.e("25421")]).then(n.bind(n, "354741"));
         return n => (0, a.jsx)(e, {
           ...n,
           channel: t,
@@ -222,7 +222,7 @@ class b extends(l = s.PureComponent) {
     })
   }
 }
-O(b, "defaultProps", {
+y(b, "defaultProps", {
   badge: 0,
   audio: !1,
   video: !1,
@@ -232,20 +232,20 @@ O(b, "defaultProps", {
     l = (0, h.default)(e.channel),
     s = (0, o.useStateFromStores)([g.default], () => g.default.getChannelId(), []),
     i = (0, o.useStateFromStores)([c.default], () => null != s ? c.default.getMode(s) : R.ChannelModes.VOICE, [s]),
-    r = (0, o.useStateFromStores)([C.default], () => C.default.getAllApplicationStreamsForChannel(n).length > 0),
+    r = (0, o.useStateFromStores)([p.default], () => p.default.getAllApplicationStreamsForChannel(n).length > 0),
     u = (0, o.useStateFromStores)([_.default], () => _.default.getChannelId(), []),
     d = (0, o.useStateFromStores)([E.default], () => E.default.getMentionCount(n), [n]),
     {
       isFacepileEnabled: f
-    } = p.default.useExperiment({
+    } = m.default.useExperiment({
       location: "unread_direct_message"
     }, {
       autoTrackExposure: !1
     }),
-    m = s === n,
+    C = s === n,
     S = !1,
     I = !1;
-  return m && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
+  return C && (S = i === R.ChannelModes.VOICE, I = i === R.ChannelModes.VIDEO), (0, a.jsx)(b, {
     ...e,
     ref: t,
     channelName: l,
@@ -255,7 +255,7 @@ O(b, "defaultProps", {
     audio: S,
     video: I,
     stream: r,
-    isCurrentUserInThisDMCall: m,
+    isCurrentUserInThisDMCall: C,
     isGDMFacepileEnabled: f
   })
 })

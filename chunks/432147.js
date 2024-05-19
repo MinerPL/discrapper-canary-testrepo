@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 });
 var s = n("735250");
 n("470079");
-var a = n("803997"),
+var a = n("120356"),
   l = n.n(a),
   i = n("442837"),
   r = n("481060"),
@@ -17,11 +17,11 @@ var a = n("803997"),
   f = n("723774"),
   E = n("144140"),
   _ = n("91159"),
-  T = n("576799"),
-  m = n("488131"),
+  m = n("576799"),
+  T = n("488131"),
   I = n("981631"),
   p = n("689938"),
-  h = n("251113");
+  h = n("54771");
 
 function N(e) {
   let {
@@ -53,7 +53,7 @@ function S(e) {
         children: (0, _.getTimestampString)(l)
       })]
     }) : (0, s.jsxs)(s.Fragment, {
-      children: [(0, s.jsx)(T.default, {
+      children: [(0, s.jsx)(m.default, {
         message: n,
         channel: e
       }), (0, s.jsx)("span", {
@@ -70,19 +70,19 @@ function S(e) {
       })
     }), (0, s.jsx)(r.Clickable, {
       onClick: function(e) {
-        e.stopPropagation(), (0, m.openThreadSidebarForViewing)(t, e.shiftKey)
+        e.stopPropagation(), (0, T.openThreadSidebarForViewing)(t, e.shiftKey)
       },
       onKeyDown: function(e) {
         e.stopPropagation();
         let n = !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey,
           s = e.shiftKey && !(e.altKey || e.ctrlKey || e.metaKey);
-        (e.which === I.KeyboardKeys.SPACE || e.which === I.KeyboardKeys.ENTER) && (e.preventDefault(), (n || s) && (0, m.openThreadSidebarForViewing)(t, s))
+        (e.which === I.KeyboardKeys.SPACE || e.which === I.KeyboardKeys.ENTER) && (e.preventDefault(), (n || s) && (0, T.openThreadSidebarForViewing)(t, s))
       },
       onContextMenu: function(e) {
         (0, o.openContextMenuLazy)(e, async () => {
           let {
             default: e
-          } = await Promise.all([n.e("99387"), n.e("39285"), n.e("53466"), n.e("40157")]).then(n.bind(n, "422200"));
+          } = await Promise.all([n.e("99387"), n.e("39285"), n.e("53466"), n.e("78650")]).then(n.bind(n, "422200"));
           return n => (0, s.jsx)(e, {
             channel: t,
             ...n

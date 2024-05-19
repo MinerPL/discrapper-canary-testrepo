@@ -33,28 +33,28 @@ var a = s("735250"),
   D = s("55563"),
   U = s("551428"),
   j = s("695103"),
-  y = s("451478"),
-  B = s("378720"),
-  G = s("285952"),
+  G = s("451478"),
+  y = s("378720"),
+  B = s("285952"),
   k = s("760397"),
   H = s("757698"),
   F = s("466111"),
   w = s("548420"),
-  K = s("626135"),
-  W = s("572004"),
+  W = s("626135"),
+  K = s("572004"),
   V = s("630388"),
   Y = s("937615"),
   z = s("73346"),
   X = s("3570"),
   Q = s("689796"),
-  Z = s("15470"),
-  J = s("506648"),
+  J = s("15470"),
+  Z = s("506648"),
   q = s("449275"),
   $ = s("445986"),
   ee = s("119520"),
   et = s("450233"),
   es = s("726581"),
-  ea = s("954385"),
+  ea = s("74153"),
   er = s("125930"),
   ei = s("178071"),
   en = s("176055"),
@@ -62,7 +62,7 @@ var a = s("735250"),
   eo = s("981631"),
   eu = s("186901"),
   ed = s("689938"),
-  ec = s("276550");
+  ec = s("725945");
 
 function e_(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -122,7 +122,7 @@ class eE extends r.PureComponent {
         loadDate: t
       }
     } = this.props;
-    null != t && K.default.track(eo.AnalyticEvents.STORE_LISTING_EXITED, {
+    null != t && W.default.track(eo.AnalyticEvents.STORE_LISTING_EXITED, {
       load_id: e,
       duration_ms: Date.now() - t
     })
@@ -140,7 +140,7 @@ class eE extends r.PureComponent {
       images: 0,
       videos: 0
     });
-    K.default.track(eo.AnalyticEvents.STORE_LISTING_VIEWED, {
+    W.default.track(eo.AnalyticEvents.STORE_LISTING_VIEWED, {
       ...this._extraAnalyticsProperties,
       load_id: a.loadId,
       has_description: null != t.description && t.description.length > 0,
@@ -259,7 +259,7 @@ class eE extends r.PureComponent {
     })
   }
   renderFeatures(e) {
-    return (0, a.jsx)(J.default, {
+    return (0, a.jsx)(Z.default, {
       sku: e
     })
   }
@@ -276,12 +276,12 @@ class eE extends r.PureComponent {
     } = t;
     if (null == i) throw Error("Rendering ApplicationStoreListing without description");
     return (0, a.jsxs)(r.Fragment, {
-      children: [(0, a.jsx)(B.default, {
+      children: [(0, a.jsx)(y.default, {
         tag: "h1",
         children: ed.default.Messages.APPLICATION_STORE_ABOUT_HEADER.format({
           name: s.name
         })
-      }), (0, a.jsx)(f.default, {}), (0, a.jsx)(Z.default, {
+      }), (0, a.jsx)(f.default, {}), (0, a.jsx)(J.default, {
         applicationId: e.id,
         blurb: t.summary,
         description: i,
@@ -371,9 +371,9 @@ class eE extends r.PureComponent {
       isAuthenticated: n
     } = this.props;
     if (null == e || null == t || null == s || s.isSlimDirectoryVersion()) return (0, a.jsxs)(r.Fragment, {
-      children: [this.renderHeader(e, t), (0, a.jsx)(G.default, {
-        align: G.default.Align.CENTER,
-        justify: G.default.Justify.CENTER,
+      children: [this.renderHeader(e, t), (0, a.jsx)(B.default, {
+        align: B.default.Align.CENTER,
+        justify: B.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {
           className: ec.spinner
         })
@@ -417,7 +417,7 @@ class eE extends r.PureComponent {
       let {
         sku: a
       } = this.props;
-      null != a && K.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
+      null != a && W.default.track(eo.AnalyticEvents.STORE_LISTING_MEDIA_SCROLLED, {
         ...(0, g.default)(a),
         card_index: s,
         card_type: e.type === eo.CarouselMediaTypes.IMG ? "image" : "video"
@@ -427,7 +427,7 @@ class eE extends r.PureComponent {
       let {
         location: t
       } = this.props;
-      (0, W.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
+      (0, K.copy)((e = t.pathname, "".concat(location.protocol, "//").concat(location.host).concat(e))), this.setState({
         showLinkCopied: !0
       }, () => {
         this.showCopyLinkTextTimeout.start(1500, () => {
@@ -576,15 +576,15 @@ class eE extends r.PureComponent {
         sku: s,
         pageSize: r
       } = this.props;
-      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(G.default, {
-        align: G.default.Align.CENTER,
-        justify: G.default.Justify.CENTER,
+      return null == e || null == s || null == t || t.isSlimDirectoryVersion() ? (0, a.jsx)(B.default, {
+        align: B.default.Align.CENTER,
+        justify: B.default.Justify.CENTER,
         children: (0, a.jsx)(d.Spinner, {})
       }) : r === el.PageSizes.SMALL ? this.renderSmall(e, t, s) : this.renderLarge(e, t, s)
     })
   }
 }
-t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, O.default, y.default, U.default, D.default, j.default, A.default, N.default, x.default, h.default, b.default], e => {
+t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.default, O.default, G.default, U.default, D.default, j.default, A.default, N.default, x.default, h.default, b.default], e => {
   let t, s, a, {
     inputSkuId: r,
     applicationId: i,
@@ -607,7 +607,7 @@ t.default = (0, S.default)((0, m.default)(l.default.connectStores([v.default, M.
     didFetchEntitlements: null != i && b.default.applicationIdsFetched.has(i),
     shouldFetchStatistics: l && null != i && x.default.shouldFetchStatisticsForApplication(i),
     sku: s,
-    isFocused: y.default.isFocused(),
+    isFocused: G.default.isFocused(),
     storeListing: U.default.getStoreListing({
       storeListingId: n,
       skuId: t,

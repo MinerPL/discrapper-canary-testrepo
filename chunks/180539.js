@@ -20,7 +20,7 @@ var l = n("442837"),
 function m(e) {
   let {
     channel: t,
-    showCall: n
+    showCallOrActivityPanel: n
   } = e, m = (0, l.useStateFromStores)([u.default], () => u.default.getSection(t.id, null == t ? void 0 : t.isDM())), p = (0, i.default)(t.getRecipientId()), E = (0, o.default)(), C = m === f.ChannelSections.PROFILE && !E;
   return (0, a.jsx)(c.Icon, {
     disabled: E || n,

@@ -15,21 +15,32 @@ let n = (0, i.createExperiment)({
   label: "Referral Program Sender Experience",
   defaultConfig: {
     enabled: !1,
-    subscriberHomeVariant: null
+    subscriberHomeVariant: null,
+    eligibleToFetch: !1
   },
   treatments: [{
+    id: 0,
+    label: "Disabled",
+    config: {
+      enabled: !1,
+      subscriberHomeVariant: null,
+      eligibleToFetch: !0
+    }
+  }, {
     id: 1,
     label: "Enabled",
     config: {
       enabled: !0,
-      subscriberHomeVariant: 0
+      subscriberHomeVariant: 0,
+      eligibleToFetch: !0
     }
   }, {
     id: 2,
     label: "Enabled",
     config: {
       enabled: !0,
-      subscriberHomeVariant: 1
+      subscriberHomeVariant: 1,
+      eligibleToFetch: !0
     }
   }]
 })

@@ -7,7 +7,7 @@ a.r(t), a.d(t, {
     return I
   },
   GuildFeedFooter: function() {
-    return E
+    return g
   },
   GuildFeedPaginationError: function() {
     return x
@@ -15,7 +15,7 @@ a.r(t), a.d(t, {
 });
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("481060"),
   r = a("974029"),
@@ -24,16 +24,16 @@ var l = a("735250"),
   c = a("602744"),
   f = a("981631"),
   m = a("689938"),
-  h = a("233837");
+  h = a("35169");
 
-function g(e, t, n) {
+function E(e, t, n) {
   return (0, l.jsx)(d.Clickable, {
     className: h.mutedChannelsHook,
     onClick: function() {
       (0, d.openModalLazy)(async () => {
         let {
           default: e
-        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("60411")]).then(a.bind(a, "751212"));
+        } = await Promise.all([a.e("49237"), a.e("99387"), a.e("5863"), a.e("29041")]).then(a.bind(a, "751212"));
         return t => (0, l.jsx)(e, {
           ...t,
           guildId: n
@@ -43,7 +43,7 @@ function g(e, t, n) {
     children: e
   }, t)
 }
-let E = n.memo(function(e) {
+let g = n.memo(function(e) {
     let {
       guildId: t,
       onReloadClick: a
@@ -70,7 +70,7 @@ let E = n.memo(function(e) {
         variant: "text-sm/normal",
         children: n > 0 ? m.default.Messages.GUILD_FEED_MUTED_CHANNELS_SUBTITLE.format({
           numMutedChannels: n,
-          mutedChannelsHook: (e, a) => g(e, a, t)
+          mutedChannelsHook: (e, a) => E(e, a, t)
         }) : m.default.Messages.GUILD_FEED_FOOTER_SUBTITLE
       }), (0, l.jsx)(d.Button, {
         onClick: a,
@@ -104,7 +104,7 @@ let E = n.memo(function(e) {
         variant: "text-sm/normal",
         children: n > 0 ? m.default.Messages.GUILD_FEED_MUTED_CHANNELS_SUBTITLE.format({
           numMutedChannels: n,
-          mutedChannelsHook: (e, a) => g(e, a, t)
+          mutedChannelsHook: (e, a) => E(e, a, t)
         }) : m.default.Messages.GUILD_FEED_EMPTY_SUBTITLE
       }), (0, l.jsx)(d.Button, {
         onClick: a,

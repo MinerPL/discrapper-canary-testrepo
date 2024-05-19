@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120");
 var s = n("735250"),
   a = n("470079"),
-  l = n("718017"),
+  l = n("920906"),
   i = n("686777"),
   r = n("113434"),
   o = n("497505"),
@@ -16,70 +16,72 @@ var s = n("735250"),
   f = n("206044"),
   E = n("266843"),
   _ = n("46140"),
-  m = n("714153");
+  m = n("598762");
 let T = e => {
   let {
     quest: t,
     location: n,
-    giftInventorySection: T
-  } = e, [I, p] = a.useState(!1), h = a.useCallback(() => p(!0), []), N = a.useCallback(() => p(!1), []), S = (0, r.useIsQuestExpired)(t), {
-    containerRef: C,
-    size: A,
-    height: g
-  } = (0, E.useQuestCardSize)([t]), M = (0, i.useIsEligibleForConcurrentQuests)({
+    initiallyExpanded: T,
+    contentPosition: I
+  } = e, [p, h] = a.useState(!1), N = a.useCallback(() => h(!0), []), S = a.useCallback(() => h(!1), []), C = (0, r.useIsQuestExpired)(t), {
+    containerRef: A,
+    size: g,
+    height: M
+  } = (0, E.useQuestCardSize)([t]), R = (0, i.useIsEligibleForConcurrentQuests)({
     location: _.QuestsExperimentLocations.QUESTS_CARD
   }), {
-    expansionSpring: R,
-    isAnimating: v,
-    isExpanded: O,
-    toggleExpanded: x
+    expansionSpring: v,
+    isAnimating: O,
+    isExpanded: x,
+    toggleExpanded: L
   } = (0, E.useQuestCardAnimation)({
-    initiallyExpanded: !M || (0, d.shouldQuestBeInitiallyExpanded)({
-      giftInventorySection: T,
+    initiallyExpanded: !R || T || (0, d.shouldQuestBeInitiallyExpanded)({
       location: n,
       quest: t
     })
-  }), L = null != g ? g : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
+  }), D = null != M ? M : d.QUESTS_CARD_MAX_HEIGHT_FALLBACK_PX;
   return (0, s.jsx)(u.QuestContentImpressionTracker, {
     questOrQuests: t,
     questContent: n,
+    questContentPosition: I,
     trackGuildAndChannelMetadata: n === o.QuestContent.QUESTS_EMBED,
     children: e => (0, s.jsx)(s.Fragment, {
       children: (0, s.jsxs)(l.animated.div, {
         style: {
-          maxHeight: n === o.QuestContent.QUESTS_EMBED ? void 0 : R.to({
+          maxHeight: n === o.QuestContent.QUESTS_EMBED ? void 0 : v.to({
             range: [0, 1],
-            output: [d.QUESTS_CARD_COLLAPSED_HEIGHT_PX, L]
+            output: [d.QUESTS_CARD_COLLAPSED_HEIGHT_PX, D]
           })
         },
         ref: t => {
-          e.current = t, C.current = t
+          e.current = t, A.current = t
         },
         className: m.questsCard,
-        onFocus: h,
-        onMouseEnter: h,
-        onBlur: N,
-        onMouseLeave: N,
+        onFocus: N,
+        onMouseEnter: N,
+        onBlur: S,
+        onMouseLeave: S,
         children: [(0, s.jsx)(f.default, {
-          isFocused: I,
-          isQuestExpired: S,
+          isFocused: p,
+          isQuestExpired: C,
           location: n,
           quest: t,
-          size: A,
-          expansionSpring: R,
-          isAnimating: v,
-          isExpanded: O,
-          isInConcurrentQuestExperiment: M,
-          giftInventorySection: T,
-          toggleExpanded: x
+          size: g,
+          expansionSpring: v,
+          isAnimating: O,
+          isExpanded: x,
+          isInConcurrentQuestExperiment: R,
+          contentPosition: I,
+          toggleExpanded: L
         }), (0, s.jsx)(c.default, {
           quest: t,
-          isQuestExpired: S,
+          isQuestExpired: C,
           location: n,
-          size: A,
-          isFocused: I,
-          isExpanded: O,
-          isAnimating: v
+          size: g,
+          isFocused: p,
+          isExpanded: x,
+          isAnimating: O,
+          contentPosition: I
         })]
       })
     })

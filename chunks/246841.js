@@ -10,7 +10,7 @@ var r = n("481060"),
   a = n("285952"),
   s = n("395361"),
   o = n("829820"),
-  l = n("160004");
+  l = n("22387");
 
 function u(e) {
   let {
@@ -19,18 +19,21 @@ function u(e) {
     source: u,
     className: d,
     size: _,
-    onAction: c
+    look: c,
+    color: E,
+    fullWidth: I,
+    onAction: T
   } = e, {
-    label: E,
-    tooltip: I,
-    loading: T,
-    disabled: f,
-    onClick: S
-  } = (0, o.useSpotifyPlayAction)(t, n, u), h = () => {
-    null == c || c(), S()
+    label: f,
+    tooltip: S,
+    loading: h,
+    disabled: A,
+    onClick: m
+  } = (0, o.useSpotifyPlayAction)(t, n, u), N = () => {
+    null == T || T(), m()
   };
   return (0, i.jsx)(r.Tooltip, {
-    text: I,
+    text: S,
     children: e => {
       let {
         onMouseEnter: t,
@@ -39,16 +42,19 @@ function u(e) {
       return (0, i.jsx)(r.Button, {
         className: d,
         size: _,
-        onClick: h,
+        look: c,
+        color: E,
+        fullWidth: I,
+        onClick: N,
         onMouseEnter: t,
         onMouseLeave: n,
-        disabled: f,
-        submitting: T,
+        disabled: A,
+        submitting: h,
         children: (0, i.jsxs)(a.default, {
           align: a.default.Align.CENTER,
           children: [(0, i.jsx)(s.default, {
             className: l.spotifyButtonLogo
-          }), E]
+          }), f]
         })
       })
     }

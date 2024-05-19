@@ -1,31 +1,31 @@
 "use strict";
-s.r(t);
-var a = s("735250");
-s("470079");
-var l = s("481060"),
-  n = s("285952"),
-  i = s("797078");
-t.default = e => {
+n.r(e);
+var i = n("735250");
+n("470079");
+var l = n("481060"),
+  o = n("285952"),
+  u = n("36884");
+e.default = t => {
   let {
-    title: t,
-    subtitle: s,
-    icon: r
-  } = e;
-  return (0, a.jsxs)(n.default, {
-    className: i.wrapper,
-    align: n.default.Align.BASELINE,
-    children: [null != r && (0, a.jsx)(r, {
+    title: e,
+    subtitle: n,
+    icon: s
+  } = t;
+  return (0, i.jsxs)(o.default, {
+    className: u.wrapper,
+    align: o.default.Align.BASELINE,
+    children: [null != s && (0, i.jsx)(s, {
       width: 16,
       height: 16,
-      className: i.icon
-    }), (0, a.jsx)(l.Text, {
+      className: u.icon
+    }), (0, i.jsx)(l.Text, {
       variant: "text-md/normal",
-      className: i.title,
-      children: t
-    }), null != s && "" !== s ? (0, a.jsx)(l.Text, {
+      className: u.title,
+      children: e
+    }), null != n && "" !== n ? (0, i.jsx)(l.Text, {
       variant: "text-xs/semibold",
-      className: i.subtitle,
-      children: s
+      className: u.subtitle,
+      children: n
     }) : null]
   })
 }

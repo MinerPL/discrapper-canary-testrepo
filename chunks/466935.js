@@ -1,49 +1,54 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return g
+    return E
   }
 });
 var l = n("735250"),
   a = n("470079"),
   s = n("442837"),
-  i = n("693546"),
-  r = n("826581"),
-  o = n("246364"),
-  u = n("98493"),
-  d = n("703656"),
-  c = n("669405"),
-  f = n("26290"),
-  h = n("434479"),
-  p = n("981631"),
-  m = n("176505"),
-  C = n("689938");
+  i = n("970606"),
+  r = n("693546"),
+  o = n("826581"),
+  u = n("246364"),
+  d = n("98493"),
+  c = n("703656"),
+  f = n("669405"),
+  h = n("26290"),
+  m = n("434479"),
+  C = n("981631"),
+  p = n("176505"),
+  g = n("689938");
 
-function g(e) {
+function E(e) {
   let {
     guild: t,
     selected: n
-  } = e, g = (0, s.useStateFromStores)([r.default], () => r.default.getSubmittedGuildJoinRequestTotal(t.id)), E = null != g ? g : 0;
+  } = e, E = (0, s.useStateFromStores)([o.default], () => o.default.getSubmittedGuildJoinRequestTotal(t.id)), _ = null != E ? E : 0;
   return a.useEffect(() => {
-    null == g && i.default.fetchGuildJoinRequests({
+    r.default.fetchGuildJoinRequests({
       guildId: t.id,
-      status: o.GuildJoinRequestApplicationStatuses.SUBMITTED,
-      limit: u.MEMBER_APPLICATION_FETCH_LIMIT
+      status: u.GuildJoinRequestApplicationStatuses.SUBMITTED,
+      limit: d.MEMBER_APPLICATION_FETCH_LIMIT
     })
-  }, [t.id, g]), (0, l.jsx)(h.BasicChannelRow, {
+  }, [t.id]), (0, l.jsx)(m.BasicChannelRow, {
     id: "application-review-".concat(t.id),
-    renderIcon: e => (0, l.jsx)(c.default, {
+    renderIcon: e => (0, l.jsx)(f.default, {
       className: e,
       width: 24,
       height: 24
     }),
-    text: C.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
+    text: g.default.Messages.MEMBER_VERIFICATION_MEMBER_APPLICATIONS,
     selected: n,
     onClick: () => {
-      (0, d.transitionTo)(p.Routes.CHANNEL(t.id, m.StaticChannelRoute.MEMBER_APPLICATIONS))
+      (0, i.trackClanApplicationNavigation)({
+        guildId: t.id,
+        source: C.AnalyticsSections.CHANNEL_LIST,
+        tab: p.StaticChannelRoute.MEMBER_APPLICATIONS
+      }), (0, c.transitionTo)(C.Routes.CHANNEL(t.id, p.StaticChannelRoute.MEMBER_APPLICATIONS))
     },
-    trailing: E > 0 ? (0, l.jsx)(f.NumberBadge, {
-      count: E
+    trailing: _ > 0 ? (0, l.jsx)(h.NumberBadge, {
+      count: _
     }) : null
   })
 }

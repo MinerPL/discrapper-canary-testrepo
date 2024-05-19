@@ -19,8 +19,8 @@ var a = n("735250"),
   p = n("809017"),
   E = n("981631"),
   C = n("689938"),
-  g = n("970978"),
-  S = n("652985");
+  g = n("664059"),
+  S = n("67431");
 
 function _(e) {
   return (null == e ? void 0 : e.id) === p.MEMBER_LIST_CONTENT_GROUP_ID
@@ -33,7 +33,7 @@ t.default = l.memo(function(e) {
       expandedCount: I
     } = e,
     A = (0, s.useStateFromStores)([h.default], () => h.default.hidden),
-    v = l.useCallback(e => {
+    N = l.useCallback(e => {
       (0, d.openContextMenuLazy)(e, async () => {
         let {
           MemberListContentSettingsMenu: e
@@ -54,7 +54,7 @@ t.default = l.memo(function(e) {
       onClick: e => {
         if (e.currentTarget === e.target || e.currentTarget.contains(e.target)) return A ? (0, f.toggleMemberListContentFeedHidden)() : I > 3 ? _() : (0, E.NOOP)()
       },
-      onContextMenu: v,
+      onContextMenu: N,
       tag: "span",
       "aria-hidden": !0,
       className: g.headerContainer,

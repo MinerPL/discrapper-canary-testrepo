@@ -14,7 +14,7 @@ var i = n("735250"),
   d = n("239091"),
   _ = n("321148"),
   c = n("51144"),
-  E = n("832645");
+  E = n("901540");
 
 function I(e) {
   let {
@@ -41,7 +41,7 @@ function I(e) {
           onContextMenu: t => (0, d.openContextMenuLazy)(t, async () => {
             let {
               default: t
-            } = await Promise.all([n.e("99387"), n.e("79695"), n.e("1502"), n.e("15421")]).then(n.bind(n, "881351"));
+            } = await Promise.all([n.e("99387"), n.e("36441"), n.e("15421")]).then(n.bind(n, "881351"));
             return n => (0, i.jsx)(t, {
               ...n,
               user: e

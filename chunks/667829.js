@@ -25,13 +25,13 @@ var i = n("735250"),
   N = n("403182"),
   p = n("541716"),
   O = n("752305"),
-  R = n("30465"),
-  C = n("140963"),
+  C = n("30465"),
+  R = n("140963"),
   g = n("4484"),
   L = n("925994"),
   v = n("981631"),
   D = n("689938"),
-  M = n("414367");
+  M = n("838329");
 
 function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -180,7 +180,7 @@ class b extends r.Component {
       fontSize: h,
       useSlate: A,
       spellcheckEnabled: N,
-      useNewSlashCommands: R,
+      useNewSlashCommands: C,
       canOnlyUseTextCommands: L,
       className: D,
       id: y,
@@ -188,8 +188,8 @@ class b extends r.Component {
       maxCharacterCount: b,
       allowNewLines: G,
       "aria-describedby": w,
-      "aria-labelledby": B,
-      accessibilityLabel: k
+      "aria-labelledby": k,
+      accessibilityLabel: B
     } = this.props, {
       submitting: V,
       popup: x
@@ -202,7 +202,7 @@ class b extends r.Component {
       id: y,
       placeholder: this.getPlaceholder(),
       required: P,
-      accessibilityLabel: k,
+      accessibilityLabel: B,
       disabled: d || !1,
       submitting: V,
       isEdit: S === p.ChatInputTypes.EDIT,
@@ -222,10 +222,11 @@ class b extends r.Component {
       textAreaPaddingClassName: s()(U[h], {
         [M.textAreaWithoutAttachmentButton]: S !== p.ChatInputTypes.NORMAL && S !== p.ChatInputTypes.OVERLAY && S !== p.ChatInputTypes.THREAD_CREATION && S !== p.ChatInputTypes.SIDEBAR,
         [M.textAreaForPostCreation]: S === p.ChatInputTypes.CREATE_FORUM_POST,
-        [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT
+        [M.textAreaCustomGift]: S === p.ChatInputTypes.CUSTOM_GIFT,
+        [M.textAreaForUserProfile]: S === p.ChatInputTypes.USER_PROFILE
       }),
       spellcheckEnabled: N,
-      useNewSlashCommands: R,
+      useNewSlashCommands: C,
       disableAutoFocus: c.isMobile || null !== (n = S.disableAutoFocus) && void 0 !== n && n,
       disableEnterToSubmit: null !== (r = null === (e = S.submit) || void 0 === e ? void 0 : e.disableEnterToSubmit) && void 0 !== r && r,
       "aria-controls": null !== (a = x.id) && void 0 !== a ? a : void 0,
@@ -234,7 +235,7 @@ class b extends r.Component {
       "aria-activedescendant": null !== (o = x.activeDescendant) && void 0 !== o ? o : void 0,
       "aria-invalid": l.length > b,
       "aria-describedby": w,
-      "aria-labelledby": B,
+      "aria-labelledby": k,
       "aria-autocomplete": "list"
     }, H = A ? (0, i.jsx)(g.default, {
       ref: this.ref,
@@ -243,7 +244,7 @@ class b extends r.Component {
       value: d ? (0, O.toRichValue)("") : u,
       canUseCommands: null === (t = S.commands) || void 0 === t ? void 0 : t.enabled,
       canOnlyUseTextCommands: L
-    }) : (0, i.jsx)(C.default, {
+    }) : (0, i.jsx)(R.default, {
       ref: this.ref,
       ...F,
       value: d ? "" : l
@@ -431,7 +432,7 @@ class b extends r.Component {
           }
         })
       })(o), this.focus(), !0)
-    }), this._unsubscribe = R.channelEditorPopupStore.subscribe(e => {
+    }), this._unsubscribe = C.channelEditorPopupStore.subscribe(e => {
       requestAnimationFrame(() => {
         this.setState({
           popup: e
@@ -440,7 +441,7 @@ class b extends r.Component {
     }), this.state = {
       focused: !1,
       submitting: !1,
-      popup: R.channelEditorPopupStore.getState()
+      popup: C.channelEditorPopupStore.getState()
     }
   }
 }

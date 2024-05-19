@@ -55,7 +55,7 @@ function p(e, t, n) {
     configurable: !0,
     writable: !0
   }) : e[t] = n, e
-}(s = d || (d = {})).SETTINGS = "SETTINGS", s.ACCOUNT_STANDING = "ACCOUNT_STANDING";
+}(s = d || (d = {})).SETTINGS = "SETTINGS", s.ACCOUNT_STANDING = "ACCOUNT_STANDING", s.GUILD_SETTINGS = "GUILD_SETTINGS";
 class h {}
 p(h, "TOS_LINK", "https://discord.com/terms"), p(h, "COMMUNITY_GUIDELINES", "https://discord.com/guidelines"), p(h, "APPEALS_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), p(h, "WARNING_SYSTEM_HELPCENTER_LINK", "https://support.discord.com/hc/articles/18210965981847"), p(h, "AGE_VERIFICATION_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731"), p(h, "SPAM_LINK", "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__");
 class N {}

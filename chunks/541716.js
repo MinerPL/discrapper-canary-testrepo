@@ -9,7 +9,7 @@ n.r(t), n.d(t, {
 });
 var i, r, a = n("873546"),
   s = n("703558");
-(i = r || (r = {}))[i.TOOLTIP = 0] = "TOOLTIP", i[i.STATIC = 1] = "STATIC";
+(i = r || (r = {}))[i.TOOLTIP = 0] = "TOOLTIP", i[i.STATIC = 1] = "STATIC", i[i.NONE = 2] = "NONE";
 let o = {
     analyticsName: "normal",
     attachments: !0,
@@ -320,7 +320,8 @@ let o = {
     submit: {
       useDisabledStylesOnSubmit: !0,
       clearOnSubmit: !0
-    }
+    },
+    toolbarType: 2
   },
   S = {
     analyticsName: "profile_bio_input",

@@ -32,7 +32,7 @@ let p = new o.default("GuildSettingsActionCreators"),
     },
     async open(e, t, i, r) {
       var a;
-      await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("24267"), n.e("23755"), n.e("61613"), n.e("33053"), n.e("49146"), n.e("75475"), n.e("90508"), n.e("56630"), n.e("58227"), n.e("43643"), n.e("85093"), n.e("85552"), n.e("43502"), n.e("71697"), n.e("3084"), n.e("6857"), n.e("67582"), n.e("74526"), n.e("33361"), n.e("62856"), n.e("6085"), n.e("85107")]).then(n.bind(n, "994763")), (null === (a = T.default.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(A.GuildFeatures.COMMUNITY)) && (t === A.GuildSettingsSections.GUILD_AUTOMOD && (t = A.GuildSettingsSections.SAFETY, r = A.GuildSettingsSubsections.SAFETY_AUTOMOD), t === A.GuildSettingsSections.MEMBER_VERIFICATION && (t = A.GuildSettingsSections.SAFETY, r = A.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), O.init(e, t, i, r), (0, s.pushLayer)(A.Layers.GUILD_SETTINGS)
+      await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("70716"), n.e("23755"), n.e("80301"), n.e("29549"), n.e("31605"), n.e("33053"), n.e("56630"), n.e("49146"), n.e("4970"), n.e("90508"), n.e("75475"), n.e("85093"), n.e("85552"), n.e("58227"), n.e("43502"), n.e("3084"), n.e("62809"), n.e("43643"), n.e("92714"), n.e("17220"), n.e("92557"), n.e("62856"), n.e("19874"), n.e("85107")]).then(n.bind(n, "994763")), (null === (a = T.default.getGuild(e)) || void 0 === a ? void 0 : a.hasFeature(A.GuildFeatures.COMMUNITY)) && (t === A.GuildSettingsSections.GUILD_AUTOMOD && (t = A.GuildSettingsSections.SAFETY, r = A.GuildSettingsSubsections.SAFETY_AUTOMOD), t === A.GuildSettingsSections.MEMBER_VERIFICATION && (t = A.GuildSettingsSections.SAFETY, r = A.GuildSettingsSubsections.SAFETY_DM_AND_SPAM_PROTECTION)), O.init(e, t, i, r), (0, s.pushLayer)(A.Layers.GUILD_SETTINGS)
     },
     close() {
       a.default.dispatch({
@@ -169,8 +169,8 @@ let p = new o.default("GuildSettingsActionCreators"),
         systemChannelFlags: h,
         preferredLocale: N,
         rulesChannelId: O,
-        safetyAlertsChannelId: R,
-        discoverySplash: C,
+        safetyAlertsChannelId: C,
+        discoverySplash: R,
         publicUpdatesChannelId: g,
         premiumProgressBarEnabled: L,
         clan: v
@@ -191,9 +191,9 @@ let p = new o.default("GuildSettingsActionCreators"),
         explicit_content_filter: f,
         system_channel_flags: h,
         rules_channel_id: O,
-        discovery_splash: C,
+        discovery_splash: R,
         public_updates_channel_id: g,
-        safety_alerts_channel_id: R,
+        safety_alerts_channel_id: C,
         ...null != L ? {
           premium_progress_bar_enabled: L
         } : null,

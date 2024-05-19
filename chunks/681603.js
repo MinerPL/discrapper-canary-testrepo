@@ -18,7 +18,7 @@ var i = n("470079"),
   S = n("237997"),
   v = n("145597"),
   y = n("981631");
-class I extends i.Component {
+class O extends i.Component {
   componentDidUpdate(e) {
     if (this.props.locked) return null;
     let {
@@ -28,13 +28,15 @@ class I extends i.Component {
       hasPreviewEnabled: a,
       postableChannelCount: l
     } = this.props;
-    if ((t !== e.selectedGuild || i && !e.isMemberPending) && (0, d.trackWithOverlayMetadata)(y.AnalyticEvents.GUILD_VIEWED, {
+    if (null != t && (t !== e.selectedGuild || i && !e.isMemberPending) && ((0, d.trackWithOverlayMetadata)(y.AnalyticEvents.GUILD_VIEWED, {
         ...i ? {
           is_pending: i,
           preview_enabled: a
         } : {},
         postable_channels: l
-      }), null != n && n !== e.selectedChannel) {
+      }), (0, r.trackClickstream)(y.AnalyticEvents.GUILD_VIEWED_CLICKSTREAM, {
+        guildId: t
+      })), null != n && n !== e.selectedChannel) {
       let e = (0, o.collectThreadMetadata)(u.default.getChannel(n), !0);
       (0, d.trackWithOverlayMetadata)(y.AnalyticEvents.CHANNEL_OPENED, {
         ...e,
@@ -70,4 +72,4 @@ t.default = l.default.connectStores([m.default, g.default, h.default, E.default,
     isMemberPending: u,
     postableChannelCount: d
   }
-})(I)
+})(O)

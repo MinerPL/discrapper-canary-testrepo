@@ -1,5 +1,5 @@
 "use strict";
-var i, r, s, a, o, l;
+var i, r, a, s, o, l;
 
 function u(e) {
   return !((null == e ? void 0 : e.type) !== 0 && (null == e ? void 0 : e.type) !== 1)
@@ -8,12 +8,16 @@ function u(e) {
 function d(e) {
   return (null == e ? void 0 : e.type) === 2
 }
+
+function _(e) {
+  return (null == e ? void 0 : e.type) === 3
+}
 n.r(t), n.d(t, {
   EMOJI_PICKER_EMOJI_TO_SHOW_COUNT: function() {
-    return c
+    return E
   },
   PIP_WIDTH: function() {
-    return _
+    return c
   },
   ParticipantSelectionTypes: function() {
     return r
@@ -22,7 +26,10 @@ n.r(t), n.d(t, {
     return i
   },
   VoicePlatforms: function() {
-    return s
+    return a
+  },
+  isActivityParticipant: function() {
+    return _
   },
   isStreamParticipant: function() {
     return u
@@ -30,6 +37,6 @@ n.r(t), n.d(t, {
   isUserParticipant: function() {
     return d
   }
-}), (a = i || (i = {}))[a.STREAM = 0] = "STREAM", a[a.HIDDEN_STREAM = 1] = "HIDDEN_STREAM", a[a.USER = 2] = "USER", a[a.ACTIVITY = 3] = "ACTIVITY", (o = r || (r = {})).NONE = "NONE", o.AUTO = "AUTO", (l = s || (s = {}))[l.DESKTOP = 0] = "DESKTOP", l[l.MOBILE = 1] = "MOBILE", l[l.XBOX = 2] = "XBOX", l[l.PLAYSTATION = 3] = "PLAYSTATION";
-let _ = 320,
-  c = 8
+}), (s = i || (i = {}))[s.STREAM = 0] = "STREAM", s[s.HIDDEN_STREAM = 1] = "HIDDEN_STREAM", s[s.USER = 2] = "USER", s[s.ACTIVITY = 3] = "ACTIVITY", (o = r || (r = {})).NONE = "NONE", o.AUTO = "AUTO", (l = a || (a = {}))[l.DESKTOP = 0] = "DESKTOP", l[l.MOBILE = 1] = "MOBILE", l[l.XBOX = 2] = "XBOX", l[l.PLAYSTATION = 3] = "PLAYSTATION";
+let c = 320,
+  E = 8

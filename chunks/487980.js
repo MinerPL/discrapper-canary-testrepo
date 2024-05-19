@@ -20,13 +20,14 @@ let u = e => {
   },
   d = e => {
     let {
-      enabled: t
+      enabled: t,
+      eligibleToFetch: s
     } = l.ReferralProgramSender.useExperiment({
       location: e
     }, {
       autoTrackExposure: !1
     });
-    (0, o.useMaybeFetchReferralsRemaining)(e, !t);
-    let s = (0, a.useStateFromStores)([n.default], () => n.default.getIsEligibleToSendReferrals());
-    return t && s
+    (0, o.useMaybeFetchReferralsRemaining)(e, !s);
+    let r = (0, a.useStateFromStores)([n.default], () => n.default.getIsEligibleToSendReferrals());
+    return t && r
   }

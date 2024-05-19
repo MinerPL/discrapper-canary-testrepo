@@ -4,4 +4,4 @@ n.r(t), n.d(t, {
   EmojiTypes: function() {
     return i
   }
-}), (r = i || (i = {})).UNICODE = "UNICODE", r.GUILD = "GUILD_EMOJI"
+}), (r = i || (i = {}))[r.UNICODE = 0] = "UNICODE", r[r.GUILD = 1] = "GUILD"

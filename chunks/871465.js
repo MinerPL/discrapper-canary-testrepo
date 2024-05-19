@@ -34,8 +34,8 @@ function u() {
         requirePremium: !0
       }), a.Storage.get(o, !1) && t.push({
         value: "asmr",
-        label: "ASMR",
-        description: "*hey there*",
+        label: s.default.Messages.SOUNDPACK_ASMR_LABEL,
+        description: s.default.Messages.SOUNDPACK_ASMR_DESCRIPTION,
         requirePremium: !0
       }), t
     }(e);

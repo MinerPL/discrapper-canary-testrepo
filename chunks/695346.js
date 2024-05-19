@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return eL
   },
   ActivityRestrictedGuilds: function() {
-    return eC
+    return eR
   },
   AfkTimeout: function() {
     return z
@@ -52,7 +52,7 @@ n.r(t), n.d(t, {
     return ev
   },
   DefaultGuildsRestricted: function() {
-    return k
+    return B
   },
   DeveloperMode: function() {
     return eA
@@ -114,8 +114,11 @@ n.r(t), n.d(t, {
   InstallShortcutStartMenu: function() {
     return y
   },
-  LastReceivedChangelogId: function() {
+  KeywordFilterSettings: function() {
     return eU
+  },
+  LastReceivedChangelogId: function() {
+    return eb
   },
   LegacyUsernameDisabled: function() {
     return ey
@@ -136,7 +139,7 @@ n.r(t), n.d(t, {
     return K
   },
   NonSpamRetrainingOptIn: function() {
-    return B
+    return k
   },
   NotificationCenterAckedBeforeId: function() {
     return D
@@ -163,7 +166,7 @@ n.r(t), n.d(t, {
     return F
   },
   ShowCommandSuggestions: function() {
-    return C
+    return R
   },
   ShowCurrentGame: function() {
     return ee
@@ -196,7 +199,7 @@ n.r(t), n.d(t, {
     return S
   },
   ViewImageDescriptions: function() {
-    return R
+    return C
   },
   ViewNsfwCommands: function() {
     return X
@@ -267,13 +270,13 @@ let h = (0, o.defineProtoSetting)("notifications", "quietMode", e => {
   N = (0, o.defineProtoSetting)("textAndImages", "emojiPickerCollapsedSections", e => null != e ? e : m, e => e),
   p = (0, o.defineProtoSetting)("textAndImages", "stickerPickerCollapsedSections", e => null != e ? e : m, e => e),
   O = (0, o.defineProtoSetting)("textAndImages", "soundboardPickerCollapsedSections", e => null != e ? e : m, e => e),
-  R = (0, o.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
+  C = (0, o.defineProtoSetting)("textAndImages", "viewImageDescriptions", e => {
     var t;
     return null !== (t = null == e ? void 0 : e.value) && void 0 !== t && t
   }, e => a.BoolValue.create({
     value: e
   })),
-  C = (0, o.defineProtoSetting)("textAndImages", "showCommandSuggestions", e => {
+  R = (0, o.defineProtoSetting)("textAndImages", "showCommandSuggestions", e => {
     var t;
     return null === (t = null == e ? void 0 : e.value) || void 0 === t || t
   }, e => a.BoolValue.create({
@@ -328,7 +331,7 @@ let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
   }, e => a.BoolValue.create({
     value: e
   })),
-  B = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : a.BoolValue.create({
+  k = (0, o.defineProtoSetting)("privacy", "nonSpamRetrainingOptIn", e => null == e ? void 0 : e.value, e => null == e ? void 0 : a.BoolValue.create({
     value: e
   }));
 (0, o.defineProtoSetting)("privacy", "contactSyncEnabled", e => {
@@ -337,7 +340,7 @@ let M = (0, o.defineProtoSetting)("gameLibrary", "installShortcutDesktop", e => 
 }, e => a.BoolValue.create({
   value: e
 }));
-let k = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
+let B = (0, o.defineProtoSetting)("privacy", "defaultGuildsRestricted", e => null != e && e, e => e),
   V = (0, o.defineProtoSetting)("privacy", "restrictedGuildIds", e => null != e ? e : [], e => e);
 (0, o.defineProtoSetting)("privacy", "friendDiscoveryFlags", e => {
   var t;
@@ -558,8 +561,8 @@ let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appea
     var e;
     return null === (e = l.default.getOverride("animateStickers")) || void 0 === e ? void 0 : e.value
   })),
-  eR = [],
-  eC = (0, o.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eR, e => e),
+  eC = [],
+  eR = (0, o.defineProtoSetting)("privacy", "activityRestrictedGuildIds", e => null != e ? e : eC, e => e),
   eg = [],
   eL = (0, o.defineProtoSetting)("privacy", "activityJoiningRestrictedGuildIds", e => null != e ? e : eg, e => e),
   ev = (0, o.defineProtoSetting)("privacy", "defaultGuildsActivityRestricted", e => e === r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS, e => !0 === e ? r.GuildActivityStatusRestrictionDefault.ON_FOR_LARGE_GUILDS : r.GuildActivityStatusRestrictionDefault.OFF),
@@ -600,6 +603,35 @@ let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appea
       explicitContentFriendDm: null != n ? n : void 0,
       explicitContentNonFriendDm: null != i ? i : void 0
     }
+  }),
+  eU = (0, o.defineProtoSetting)("textAndImages", "keywordFilterSettings", e => {
+    let {
+      profanity: t,
+      sexualContent: n,
+      slurs: i
+    } = null != e ? e : {};
+    return {
+      profanity: null == t ? void 0 : t.value,
+      sexualContent: null == n ? void 0 : n.value,
+      slurs: null == i ? void 0 : i.value
+    }
+  }, e => {
+    let {
+      profanity: t,
+      sexualContent: n,
+      slurs: i
+    } = e;
+    return {
+      profanity: a.BoolValue.create({
+        value: t
+      }),
+      sexualContent: a.BoolValue.create({
+        value: n
+      }),
+      slurs: a.BoolValue.create({
+        value: i
+      })
+    }
   });
 (0, o.defineProtoSetting)("appearance", "searchResultExactCountEnabled", e => {
   var t;
@@ -607,4 +639,4 @@ let eA = (0, o.wrapSettingWithSelectiveSyncing)((0, o.defineProtoSetting)("appea
 }, e => a.BoolValue.create({
   value: e
 }));
-let eU = (0, o.defineProtoSetting)("userContent", "lastReceivedChangelogId", e => null != e ? e : "0", e => e)
+let eb = (0, o.defineProtoSetting)("userContent", "lastReceivedChangelogId", e => null != e ? e : "0", e => e)

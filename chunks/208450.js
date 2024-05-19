@@ -2,9 +2,9 @@
 n.r(t), n("757143");
 var s = n("735250"),
   a = n("470079"),
-  l = n("803997"),
+  l = n("120356"),
   i = n.n(l),
-  r = n("16464"),
+  r = n("371917"),
   o = n("299608"),
   u = n.n(o),
   d = n("442837"),
@@ -12,8 +12,8 @@ var s = n("735250"),
   f = n("603263"),
   E = n("461745"),
   _ = n("349033"),
-  T = n("999650"),
-  m = n("857595"),
+  m = n("999650"),
+  T = n("857595"),
   I = n("607070"),
   p = n("367907"),
   h = n("592125"),
@@ -24,12 +24,12 @@ var s = n("735250"),
   g = n("585483"),
   M = n("72006"),
   R = n("405656"),
-  O = n("181389"),
-  v = n("854709"),
-  L = n("778177"),
-  x = n("981631"),
+  v = n("181389"),
+  O = n("854709"),
+  x = n("778177"),
+  L = n("981631"),
   D = n("689938"),
-  P = n("979901");
+  P = n("120031");
 
 function y(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -39,13 +39,13 @@ function y(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-n("626504");
+n("436967");
 let U = (0, A.uid)(),
-  b = u()(f.search, 500);
-class j extends a.PureComponent {
+  j = u()(f.search, 500);
+class b extends a.PureComponent {
   componentDidMount() {
     var e, t;
-    g.ComponentDispatch.subscribe(x.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.subscribe(x.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.subscribe(x.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
+    g.ComponentDispatch.subscribe(L.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.subscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.subscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch), null === (t = this._editorRef) || void 0 === t || null === (e = t.editor) || void 0 === e || e.setAttribute("aria-haspopup", "listbox")
   }
   componentDidUpdate(e) {
     let {
@@ -54,16 +54,16 @@ class j extends a.PureComponent {
     } = this.props;
     if (t !== e.editorState) {
       let e = R.tokenizeQuery(M.getFirstTextBlock(t)),
-        s = O.getSelectionScope(e, t);
+        s = v.getSelectionScope(e, t);
       f.updateAutocompleteQuery(n, e, s), null != this._editorRef && M.scrollCursorIntoView(this._editorRef.editor)
     }
   }
   componentWillUnmount() {
-    g.ComponentDispatch.unsubscribe(x.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.unsubscribe(x.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.unsubscribe(x.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
+    g.ComponentDispatch.unsubscribe(L.ComponentActions.PERFORM_SEARCH, this.search), g.ComponentDispatch.unsubscribe(L.ComponentActions.SET_SEARCH_QUERY, this.handleSetSearchQuery), g.ComponentDispatch.unsubscribe(L.ComponentActions.FOCUS_SEARCH, this.handleFocusSearch)
   }
   tokenize(e) {
     let t = R.tokenizeQuery(M.getFirstTextBlock(e)).filter(e => e.type !== _.default.NON_TOKEN_TYPE);
-    return M.applyTokensAsEntities(t, e, T.default)
+    return M.applyTokensAsEntities(t, e, m.default)
   }
   clearSearch() {
     let {
@@ -178,7 +178,7 @@ class j extends a.PureComponent {
       null === (n = this._editorRef) || void 0 === n || null === (t = n.editor) || void 0 === t || t.setAttribute("aria-activedescendant", null != e ? "".concat(U, "-").concat(e) : void 0), this.setState({
         selectedIndex: e
       })
-    }), y(this, "renderPopout", () => (0, s.jsx)(L.default, {
+    }), y(this, "renderPopout", () => (0, s.jsx)(x.default, {
       ref: this._searchPopoutRef,
       navId: U,
       onSelectedIndexChanged: this.handleSelectedIndexChanged
@@ -201,7 +201,7 @@ class j extends a.PureComponent {
           n = R.getSearchQueryFromTokens(e);
         for (let t = 0; t < e.length; t++) !R.filterHasAnswer(e[t], e[t + 1]) && (s = s.substring(0, e[t].start) + s.substring(e[t].end));
         if (0 === e.length || 0 === Object.keys(n).length) return !1;
-        b(t, n, s, !!a), this.onBlur()
+        j(t, n, s, !!a), c.AccessibilityAnnouncer.announce(D.default.Messages.SEARCH_STARTED_A11Y_ANNOUNCE), this.onBlur()
       }
       return !0
     }), y(this, "handleClearSearch", e => {
@@ -232,7 +232,7 @@ class j extends a.PureComponent {
       let a = N.default.getTextChannelNameDisambiguations(s.getGuildId())[s.id],
         l = null != a ? a.name : s.name;
       this.handleSetSearchQuery({
-        query: T.default[x.SearchTokenTypes.FILTER_IN].key + "#".concat(l, " "),
+        query: m.default[L.SearchTokenTypes.FILTER_IN].key + "#".concat(l, " "),
         replace: !0
       })
     }), y(this, "focusEditor", () => {
@@ -249,7 +249,7 @@ class j extends a.PureComponent {
       let {
         searchType: e
       } = this.props;
-      p.default.trackWithMetadata(x.AnalyticEvents.SEARCH_OPENED, {
+      p.default.trackWithMetadata(L.AnalyticEvents.SEARCH_OPENED, {
         search_type: e
       }), this.setState({
         focused: !0
@@ -268,7 +268,7 @@ class j extends a.PureComponent {
       let {
         current: n
       } = this._searchPopoutRef;
-      return !(null != n && n.selectOption()) && ((0, v.isFavoriteSearchEnabled)() && t ? this.search({
+      return !(null != n && n.selectOption()) && ((0, O.isFavoriteSearchEnabled)() && t ? this.search({
         searchEverywhere: !0
       }) : this.search()), !0
     }), y(this, "handleBeforeInput", e => {
@@ -355,7 +355,7 @@ class j extends a.PureComponent {
       }
       if ("Tab" === t) {
         if (i) return;
-        return (0, m.enableKeyboardMode)(), !0
+        return (0, T.enableKeyboardMode)(), !0
       }
       if ("Home" === t || "ArrowLeft" === t && n) return e.preventDefault(), a = s ? M.setToStartSelection(a) : M.setCollapsedStartSelection(a), this.setEditorState(a), !0;
       if ("End" === t || "ArrowRight" === t && n) return e.preventDefault(), a = s ? M.setToEndSelection(a) : M.setCollapsedEndSelection(a), this.setEditorState(a), !0;
@@ -372,7 +372,7 @@ t.default = d.default.connectStores([I.default, S.default], () => {
   let t = S.default.getCurrentSearchId(),
     n = S.default.getSearchType(),
     s = null != t && S.default.isSearching(t),
-    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(O.generateDecorators(T.default)),
+    a = null != t && null !== (e = S.default.getEditorState(t)) && void 0 !== e ? e : M.createEmptyEditorState(v.generateDecorators(m.default)),
     l = I.default.keyboardModeEnabled;
   return {
     searchId: t,
@@ -382,4 +382,4 @@ t.default = d.default.connectStores([I.default, S.default], () => {
     hasResults: S.default.hasResults(t),
     keyboardModeEnabled: l
   }
-})(j)
+})(b)

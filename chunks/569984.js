@@ -1,19 +1,19 @@
 "use strict";
-let i, r, a, s, o, l, u, d, _, c, E;
+let i, r, a, s, o, l, u, d, _, c, E, I;
 n.r(t), n("47120");
-var I, T, f, S, h = n("887003"),
-  A = n("442837"),
-  m = n("570140"),
-  N = n("497505"),
-  p = n("918701"),
-  O = n("5881"),
+var T, f, S, h, A = n("887003"),
+  m = n("442837"),
+  N = n("570140"),
+  p = n("497505"),
+  O = n("918701"),
+  C = n("5881"),
   R = n("46140");
 
-function C() {
-  i = !1, r = new Map, a = 0, s = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map
+function g() {
+  i = !1, r = new Map, a = 0, s = new Set, o = new Set, l = new Set, u = new Set, d = new Set, _ = new Map, c = new Map, E = new Map, I = null
 }
 
-function g(e, t) {
+function L(e, t) {
   let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {
       updateProgress: !1
     },
@@ -32,38 +32,38 @@ function g(e, t) {
   }
 }
 
-function L(e, t) {
+function v(e, t) {
   let n = new Map(_);
   n.set(e, t), _ = n
 }
 
-function v(e, t) {
-  L(e, t);
+function D(e, t) {
+  v(e, t);
   let n = r.get(e),
     i = null == n ? void 0 : n.userStatus;
-  null != i && null == i.claimedAt && g(e, {
+  null != i && null == i.claimedAt && L(e, {
     userStatus: {
       ...i,
       claimedAt: t.claimedAt
     }
   })
 }
-C();
+g();
 
-function D(e) {
+function M(e) {
   null != E.get(e) && (E = new Map(E)).delete(e)
 }
 
-function M(e) {
+function y(e) {
   let t = new Set(s);
   t.delete(e), s = t
 }
 
-function y(e) {
+function P(e) {
   let t = new Set(d);
   t.delete(e), d = t
 }
-class P extends(I = A.default.Store) {
+class U extends(T = m.default.Store) {
   get quests() {
     return r
   }
@@ -72,6 +72,9 @@ class P extends(I = A.default.Store) {
   }
   get lastFetchedCurrentQuests() {
     return a
+  }
+  get questDeliveryOverride() {
+    return r.get(null != I ? I : "")
   }
   isEnrolling(e) {
     return s.has(e)
@@ -101,14 +104,14 @@ class P extends(I = A.default.Store) {
     return r.get(e)
   }
 }
-S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
-  value: S,
+h = "QuestsStore", (S = "displayName") in(f = U) ? Object.defineProperty(f, S, {
+  value: h,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : T[f] = S, t.default = new P(m.default, {
+}) : f[S] = h, t.default = new U(N.default, {
   LOGOUT: function() {
-    C()
+    g()
   },
   QUESTS_FETCH_CURRENT_QUESTS_BEGIN: function() {
     a = Date.now(), i = !0
@@ -117,7 +120,7 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
     let {
       quests: t
     } = e;
-    for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), e.targetedContent.includes(N.QuestContent.QUEST_BAR) && (0, O.getQuestLogger)({
+    for (let e of (i = !1, r = new Map, t)) r.set(e.id, e), e.targetedContent.includes(p.QuestContent.QUEST_BAR) && (0, C.getQuestLogger)({
       location: R.QuestsExperimentLocations.QUESTS_STORE
     }).log("Delivered ".concat(e.config.messages.questName, " (").concat(e.id, ")"))
   },
@@ -130,11 +133,11 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
       streamKey: n,
       userStatus: i
     } = e;
-    g(t, {
+    L(t, {
       userStatus: i
     }, {
       updateProgress: !0
-    }), D(n)
+    }), M(n)
   },
   QUESTS_SEND_HEARTBEAT_FAILURE: function(e) {
     let {
@@ -157,15 +160,15 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
     let {
       enrolledQuestUserStatus: t
     } = e;
-    g(t.questId, {
+    L(t.questId, {
       userStatus: t
-    }), M(t.questId)
+    }), y(t.questId)
   },
   QUESTS_ENROLL_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    M(t)
+    y(t)
   },
   QUESTS_FETCH_REWARD_CODE_BEGIN: function(e) {
     let {
@@ -178,7 +181,7 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
       questId: t,
       rewardCode: n
     } = e, i = new Set(u);
-    i.delete(t), u = i, v(t, n)
+    i.delete(t), u = i, D(t, n)
   },
   QUESTS_FETCH_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -197,7 +200,7 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
       questId: t,
       rewardCode: n
     } = e, i = new Set(o);
-    i.delete(t), o = i, v(t, n)
+    i.delete(t), o = i, D(t, n)
   },
   QUESTS_CLAIM_REWARD_CODE_FAILURE: function(e) {
     let {
@@ -229,16 +232,16 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
             quest: n,
             entitlements: i
           } = e;
-          if (!(0, p.isTieredRewardCodeQuest)({
+          if (!(0, O.isTieredRewardCodeQuest)({
               quest: n
             })) return null;
           let r = null === (t = i.items[0].tenantMetadata) || void 0 === t ? void 0 : t.questRewards.reward;
-          return (null == r ? void 0 : r.tag) !== h.QuestRewardTypes.REWARD_CODE ? null : r.rewardCode
+          return (null == r ? void 0 : r.tag) !== A.QuestRewardTypes.REWARD_CODE ? null : r.rewardCode
         }({
           quest: i,
           entitlements: t
         });
-        null != n && L(e, n), g(e, {
+        null != n && v(e, n), L(e, {
           userStatus: {
             ...a,
             claimedAt: t.claimedAt,
@@ -264,33 +267,33 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
     let {
       dismissedQuestUserStatus: t
     } = e;
-    g(t.questId, {
+    L(t.questId, {
       userStatus: t
-    }), y(t.questId)
+    }), P(t.questId)
   },
   QUESTS_DISMISS_CONTENT_FAILURE: function(e) {
     let {
       questId: t
     } = e;
-    y(t)
+    P(t)
   },
   STREAM_CLOSE: function(e) {
     let {
       streamKey: t
     } = e;
-    D(t)
+    M(t)
   },
   QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE: function(e) {
     let {
       streamKey: t
     } = e;
-    D(t)
+    M(t)
   },
   QUESTS_PREVIEW_UPDATE_SUCCESS: function(e) {
     let {
       previewQuestUserStatus: t
     } = e;
-    g(t.questId, {
+    L(t.questId, {
       userStatus: t
     }), null == t.claimedAt && (_ = new Map(_)).delete(t.questId)
   },
@@ -298,10 +301,16 @@ S = "QuestsStore", (f = "displayName") in(T = P) ? Object.defineProperty(T, f, {
     let {
       userStatus: t
     } = e;
-    g(t.questId, {
+    L(t.questId, {
       userStatus: t
     }, {
       updateProgress: !0
     })
+  },
+  QUESTS_DELIVERY_OVERRIDE: function(e) {
+    let {
+      questId: t
+    } = e;
+    I = I === t ? null : t
   }
 })

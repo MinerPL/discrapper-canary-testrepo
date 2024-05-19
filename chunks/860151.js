@@ -7,39 +7,33 @@ var l = n("120356"),
   i = n("481060"),
   r = n("918701"),
   o = n("644646"),
-  u = n("689938"),
-  d = n("16353");
+  u = n("456030");
 t.default = function(e) {
   let {
     className: t,
     autoplay: n,
     quest: l,
-    questContent: c
-  } = e;
+    questContent: d,
+    questExperimentLocation: c
+  } = e, f = (0, r.getQuestsInstructionsToWinReward)({
+    quest: l,
+    location: c
+  });
   return (0, a.jsxs)("div", {
-    className: s()(d.wrapper, t),
+    className: s()(u.wrapper, t),
     style: {
       color: l.config.colors.primary
     },
     children: [(0, a.jsx)(o.default, {
       autoplay: n,
-      className: d.rewardTile,
+      className: u.rewardTile,
       quest: l,
-      questContent: c
+      questContent: d
     }), (0, a.jsx)(i.Text, {
-      className: d.instructions,
+      className: u.instructions,
       variant: "text-sm/normal",
       color: "text-normal",
-      children: (0, r.isTieredRewardCodeQuest)({
-        quest: l
-      }) ? u.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD_TIERED.format({
-        gameTitle: l.config.messages.gameTitle,
-        streamingDurationRequirement: l.config.streamDurationRequirementMinutes
-      }) : u.default.Messages.QUESTS_ACCEPTED_INSTRUCTIONS_TO_WIN_REWARD.format({
-        gameTitle: l.config.messages.gameTitle,
-        questReward: l.config.messages.rewardNameWithArticle,
-        streamingDurationRequirement: l.config.streamDurationRequirementMinutes
-      })
+      children: f
     })]
   })
 }

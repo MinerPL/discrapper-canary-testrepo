@@ -30,9 +30,9 @@ var a = n("735250"),
   x = n("951211"),
   M = n("981631"),
   R = n("921944"),
-  L = n("489887"),
-  y = n("689938"),
-  O = n("34382");
+  y = n("489887"),
+  L = n("689938"),
+  O = n("525187");
 
 function j(e, t, l, s) {
   (0, o.openModalLazy)(async () => {
@@ -68,7 +68,7 @@ function D() {
         visibleContent: t
       } = e;
       return t === r.DismissibleContent.ACTIVITIES_CHAT_MENU_NEW_BADGE ? (0, a.jsx)(_.TextBadge, {
-        text: y.default.Messages.NEW,
+        text: L.default.Messages.NEW,
         color: s.default.BUTTON_DANGER_BACKGROUND
       }) : null
     }
@@ -103,11 +103,11 @@ function b(e) {
     (0, g.openThreadSidebarForCreating)(t, void 0, "Plus Button")
   }
 
-  function H() {
+  function B() {
     T.default.track(M.AnalyticEvents.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), U("/", (0, v.toRichValue)("/"))
   }
 
-  function B() {
+  function H() {
     F()
   }
 
@@ -123,7 +123,7 @@ function b(e) {
         channel: t
       })
     }, {
-      modalKey: L.POLL_CREATION_MODAL_KEY
+      modalKey: y.POLL_CREATION_MODAL_KEY
     })
   }
 
@@ -164,7 +164,7 @@ function b(e) {
     onSelect: p,
     navId: "channel-attach",
     onClose: m,
-    "aria-label": y.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
+    "aria-label": L.default.Messages.CHANNEL_ACTIONS_MENU_LABEL,
     className: O.menu,
     children: i.map(function(e) {
       var n;
@@ -199,7 +199,7 @@ function b(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "clips",
             label: l,
-            action: B
+            action: H
           }, "clips");
         case x.AttachmentTypes.POLL:
           return (0, a.jsx)(o.MenuItem, {
@@ -254,7 +254,7 @@ function b(e) {
           return (0, a.jsx)(o.MenuItem, {
             id: "SLASH_COMMAND",
             label: l,
-            action: H
+            action: B
           }, "SLASH_COMMAND");
         case x.AttachmentTypes.ACTIVITY:
           return (0, a.jsx)(o.MenuItem, {

@@ -77,7 +77,7 @@ function c(e) {
           return (0, l.openContextMenuLazy)(e, async () => {
             let {
               default: e
-            } = await s.e("65889").then(s.bind(s, "731646"));
+            } = await s.e("5396").then(s.bind(s, "731646"));
             return t => (0, a.jsx)(e, {
               ...t,
               id: c.targetId,

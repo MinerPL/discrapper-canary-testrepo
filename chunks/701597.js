@@ -54,16 +54,19 @@ class l {
 }
 class u {
   getQuality(e) {
-    var t, n, i;
-    let r = this.isStreamContext ? this.getDesktopQuality() : this.getVideoQuality(this.connection.getLocalWant(e));
-    return new o({
-      encode: l.extend(r.encode, this.qualityOverwrite.encode),
-      capture: l.extend(r.capture, this.qualityOverwrite.capture),
-      bitrateMin: null !== (t = this.qualityOverwrite.bitrateMin) && void 0 !== t ? t : r.bitrateMin,
-      bitrateMax: null !== (n = this.qualityOverwrite.bitrateMax) && void 0 !== n ? n : r.bitrateMax,
-      bitrateTarget: null !== (i = this.qualityOverwrite.bitrateTarget) && void 0 !== i ? i : r.bitrateTarget,
-      localWant: r.localWant
-    })
+    let t = this.isStreamContext ? this.getGoliveQuality(e) : this.getVideoQuality(this.connection.getLocalWant(e));
+    if (null != this.qualityOverwrite) {
+      var n, i, r;
+      return new o({
+        encode: l.extend(t.encode, this.qualityOverwrite.encode),
+        capture: l.extend(t.capture, this.qualityOverwrite.capture),
+        bitrateMin: null !== (n = this.qualityOverwrite.bitrateMin) && void 0 !== n ? n : t.bitrateMin,
+        bitrateMax: null !== (i = this.qualityOverwrite.bitrateMax) && void 0 !== i ? i : t.bitrateMax,
+        bitrateTarget: null !== (r = this.qualityOverwrite.bitrateTarget) && void 0 !== r ? r : t.bitrateTarget,
+        localWant: t.localWant
+      })
+    }
+    return t
   }
   applyQualityConstraints(e, t) {
     let n = this.getQuality(t);
@@ -72,8 +75,22 @@ class u {
       constraints: e
     }
   }
-  setQuality(e) {
-    this.qualityOverwrite.capture = e.capture, this.qualityOverwrite.encode = e.encode, this.qualityOverwrite.bitrateMin = e.bitrateMin, this.qualityOverwrite.bitrateMax = e.bitrateMax, this.qualityOverwrite.bitrateTarget = e.bitrateTarget
+  setQualityOverwrite(e) {
+    this.qualityOverwrite = e
+  }
+  setGoliveQuality(e) {
+    var t, n, i;
+    this.goliveMaxQuality = new o({
+      capture: l.extend(this.goliveMaxQuality.capture, e.capture),
+      encode: l.extend(this.goliveMaxQuality.encode, e.encode),
+      bitrateMin: null !== (t = e.bitrateMin) && void 0 !== t ? t : this.goliveMaxQuality.bitrateMin,
+      bitrateMax: null !== (n = e.bitrateMax) && void 0 !== n ? n : this.goliveMaxQuality.bitrateMax,
+      bitrateTarget: null !== (i = e.bitrateTarget) && void 0 !== i ? i : this.goliveMaxQuality.bitrateTarget,
+      localWant: this.goliveMaxQuality.localWant
+    })
+  }
+  setGoliveSimulcast(e) {
+    this.goliveSimulcastEnabled = e
   }
   getVideoQuality(e) {
     let t = this.ladder.getResolution(e),
@@ -95,7 +112,11 @@ class u {
       localWant: e
     })
   }
-  getDesktopQuality() {
+  getGoliveQuality(e) {
+    let t = this.connection.getLocalWant(e);
+    return this.goliveSimulcastEnabled ? this.getVideoQuality(t) : this.goliveMaxQuality
+  }
+  getDefaultGoliveQuality() {
     return new o({
       capture: {
         width: 1280,
@@ -108,6 +129,6 @@ class u {
     })
   }
   constructor(e, t, n = r.defaultVideoQualityOptions) {
-    a(this, "contextType", void 0), a(this, "connection", void 0), a(this, "options", void 0), a(this, "isMuted", void 0), a(this, "qualityOverwrite", void 0), a(this, "isStreamContext", void 0), a(this, "ladder", void 0), this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.qualityOverwrite = {}, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n)
+    a(this, "contextType", void 0), a(this, "connection", void 0), a(this, "options", void 0), a(this, "isMuted", void 0), a(this, "qualityOverwrite", void 0), a(this, "goliveMaxQuality", void 0), a(this, "goliveSimulcastEnabled", void 0), a(this, "isStreamContext", void 0), a(this, "ladder", void 0), this.contextType = e, this.connection = t, this.options = n, this.isMuted = !1, this.isStreamContext = this.contextType === r.MediaEngineContextTypes.STREAM, this.ladder = new i.MediaSinkWantsLadder(n), this.goliveMaxQuality = this.getDefaultGoliveQuality(), this.goliveSimulcastEnabled = !1
   }
 }

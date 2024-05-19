@@ -1,62 +1,72 @@
 "use strict";
-t.r(a), t.d(a, {
+o.r(a), o.d(a, {
   default: function() {
-    return u
+    return E
   }
 });
-var n = t("735250");
-t("470079");
-var i = t("174609"),
-  l = t("98278"),
-  s = t("193878"),
-  r = t("790527"),
-  o = t("626135"),
-  c = t("981631"),
-  _ = t("474936"),
-  d = t("689938");
-let A = t("279360");
+var t = o("735250");
+o("470079");
+var n = o("174609"),
+  l = o("98278"),
+  i = o("193878"),
+  s = o("223468"),
+  r = o("790527"),
+  c = o("703656"),
+  d = o("626135"),
+  u = o("981631"),
+  _ = o("474936"),
+  A = o("689938");
+let p = o("279360");
 
-function u(e) {
+function E(e) {
   let {
     onClose: a,
-    onCloseParent: t,
-    analyticsSource: u,
-    ...E
-  } = e;
-
-  function M() {
-    (0, i.default)(), a(), null == t || t(), o.default.track(c.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
-      location_section: c.AnalyticsSections.STREAM_UPSELL_MODAL,
-      location_object: c.AnalyticsObjects.NAVIGATION_LINK
-    }), (0, l.navigateToPremiumMarketingPage)()
-  }
-  let {
-    enabled: R,
-    variant: f
-  } = s.default.useExperiment({
+    onCloseParent: o,
+    analyticsSource: E,
+    ...R
+  } = e, {
+    enabled: w,
+    variant: M
+  } = i.default.useExperiment({
     location: "StreamUpsellModal"
   }, {
     autoTrackExposure: !1
-  }), T = R ? d.default.Messages.STREAM_PREMIUM_UPSELL_BODY_V2 : __OVERLAY__ ? d.default.Messages.STREAM_PREMIUM_UPSELL_BODY_NO_CTA : d.default.Messages.STREAM_PREMIUM_UPSELL_BODY.format({
-    onPressMore: M
-  }), S = R && s.GradientVariants.includes(f);
-  return (0, n.jsx)(r.default, {
-    title: R ? d.default.Messages.STREAM_PREMIUM_UPSELL_HEADER_V2 : d.default.Messages.STREAM_PREMIUM_UPSELL_HEADER,
-    glowUp: T,
-    body: T,
-    artURL: A,
+  }), {
+    showNewRoadblockCopy: b,
+    showNewRoadblockRoute: f
+  } = s.PremiumHDStreamingUpsellCopyExperiment.useExperiment({
+    location: "StreamUpsellModal"
+  }, {
+    autoTrackExposure: !0
+  });
+
+  function S() {
+    (0, n.default)(), a(), null == o || o(), d.default.track(u.AnalyticEvents.PREMIUM_PROMOTION_OPENED, {
+      location_section: u.AnalyticsSections.STREAM_UPSELL_MODAL,
+      location_object: u.AnalyticsObjects.NAVIGATION_LINK
+    }), f ? (0, c.transitionTo)(u.Routes.APPLICATION_STORE) : (0, l.navigateToPremiumMarketingPage)()
+  }
+  let N = w ? b ? A.default.Messages.STREAM_PREMIUM_UPSELL_BODY_V3 : A.default.Messages.STREAM_PREMIUM_UPSELL_BODY_V2 : __OVERLAY__ ? A.default.Messages.STREAM_PREMIUM_UPSELL_BODY_NO_CTA : A.default.Messages.STREAM_PREMIUM_UPSELL_BODY.format({
+      onPressMore: S
+    }),
+    T = w && i.GradientVariants.includes(M);
+  return (0, t.jsx)(r.default, {
+    title: w ? A.default.Messages.STREAM_PREMIUM_UPSELL_HEADER_V2 : A.default.Messages.STREAM_PREMIUM_UPSELL_HEADER,
+    glowUp: N,
+    body: N,
+    artURL: p,
     type: _.PremiumUpsellTypes.STREAM_QUALITY_UPSELL,
     analyticsLocation: {
-      section: c.AnalyticsSections.STREAM_UPSELL_MODAL,
-      object: c.AnalyticsObjects.BUTTON_CTA
+      section: u.AnalyticsSections.STREAM_UPSELL_MODAL,
+      object: u.AnalyticsObjects.BUTTON_CTA
     },
-    analyticsSource: u,
+    analyticsSource: E,
     onClose: a,
-    onSubscribeClick: i.default,
-    secondaryCTA: R ? d.default.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
-    onSecondaryClick: R ? M : void 0,
-    showEnhancedUpsell: S,
+    onSubscribeClick: n.default,
+    secondaryCTA: w ? A.default.Messages.STREAM_PREMIUM_UPSELL_SECONDARY_CTA : void 0,
+    onSecondaryClick: w ? S : void 0,
+    showEnhancedUpsell: T,
     enableArtBoxShadow: !1,
-    ...E
+    ...R
   })
 }

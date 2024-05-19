@@ -13,6 +13,12 @@ let i = (0, n("818083").createExperiment)({
     config: {
       canReceiveMessage: !0
     }
+  }, {
+    id: 2,
+    label: "Receive unpublished changelog updates as messages (server)",
+    config: {
+      canReceiveMessage: !0
+    }
   }]
 });
 t.default = i

@@ -9,7 +9,7 @@ l.r(t), l.d(t, {
 }), l("47120");
 var n = l("735250"),
   a = l("470079"),
-  s = l("803997"),
+  s = l("120356"),
   i = l.n(s),
   r = l("442837"),
   d = l("481060"),
@@ -28,8 +28,8 @@ var n = l("735250"),
   E = l("981631"),
   I = l("176505"),
   _ = l("689938"),
-  v = l("182461"),
-  T = l("121950");
+  T = l("763280"),
+  v = l("19340");
 
 function O(e) {
   let {
@@ -64,13 +64,13 @@ function A(e) {
   }, [t]);
   return null == u ? null : (0, n.jsx)(n.Fragment, {
     children: (0, n.jsx)("div", {
-      className: i()(T.chat, v.container),
+      className: i()(v.chat, T.container),
       children: (0, n.jsxs)("div", {
-        className: i()(v.pageBody),
+        className: i()(T.pageBody),
         children: [(0, n.jsxs)("div", {
-          className: v.header,
+          className: T.header,
           children: [(0, n.jsx)(N.default, {
-            className: v.search,
+            className: T.search,
             size: N.default.Sizes.MEDIUM,
             query: s,
             onChange: e => {
@@ -81,15 +81,15 @@ function A(e) {
             onClear: L,
             placeholder: _.default.Messages.CHANNEL_BROWSER_SEARCH_PLACEHOLDER
           }), j ? (0, n.jsxs)(d.Button, {
-            className: v.createButton,
-            innerClassName: v.createButtonInner,
+            className: T.createButton,
+            innerClassName: T.createButtonInner,
             onClick: M,
             children: [(0, n.jsx)(x.default, {
-              className: v.createIcon
+              className: T.createIcon
             }), _.default.Messages.CREATE]
           }) : null]
         }), (0, n.jsx)(S.default, {
-          className: v.browser,
+          className: T.browser,
           channels: O,
           categories: R,
           guild: u,

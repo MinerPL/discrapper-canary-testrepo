@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return S
+    return h
   }
 });
 var i = n("735250");
@@ -11,23 +11,25 @@ var r = n("120356"),
   s = n("442837"),
   o = n("693789"),
   l = n("235874"),
-  u = n("944613"),
-  d = n("607070"),
-  _ = n("605436"),
-  c = n("496675"),
-  E = n("729285"),
-  I = n("537387"),
-  T = n("689938"),
-  f = n("236219");
+  u = n("481060"),
+  d = n("944613"),
+  _ = n("607070"),
+  c = n("605436"),
+  E = n("496675"),
+  I = n("729285"),
+  T = n("993409"),
+  f = n("689938"),
+  S = n("129372");
 
-function S(e) {
+function h(e) {
   let {
     guild: t,
     guildMember: n,
     highestRole: r,
-    onAddRole: S,
-    className: h
-  } = e, A = (0, s.useStateFromStores)([d.default], () => d.default.roleStyle), m = e => (0, _.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && c.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
+    onAddRole: h,
+    compact: A = !0,
+    ...m
+  } = e, N = (0, s.useStateFromStores)([_.default], () => _.default.roleStyle), p = e => (0, c.isNotEveryoneRoleId)(t.id, e.id) && !e.managed && E.default.isRoleHigher(t, r, e) && -1 === n.roles.indexOf(e.id);
   return (0, i.jsx)(l.Popout, {
     position: "bottom",
     align: "center",
@@ -35,26 +37,28 @@ function S(e) {
       let {
         closePopout: n
       } = e;
-      return (0, i.jsx)(u.default, {
+      return (0, i.jsx)(d.default, {
         guild: t,
-        roleStyle: A,
-        roleFilter: m,
-        onSelect: S,
+        roleStyle: N,
+        roleFilter: p,
+        onSelect: h,
         onClose: n
       })
     },
-    children: e => (0, i.jsx)(I.default, {
-      ...e,
-      className: a()(f.button, h),
-      innerClassName: f.buttonInner,
-      text: T.default.Messages.USER_PROFILE_ADD_ROLE,
-      icon: e => (0, i.jsx)(E.default, {
-        ...e,
-        width: 20,
-        height: 20
+    children: e => (0, i.jsx)(T.default, {
+      className: a()(S.button),
+      text: (0, i.jsx)(u.Text, {
+        variant: "text-xs/medium",
+        children: f.default.Messages.USER_PROFILE_ADD_ROLE
       }),
-      color: f.color,
-      look: o.Button.Looks.BLANK
+      "aria-label": f.default.Messages.USER_PROFILE_ADD_ROLE,
+      icon: I.default,
+      color: o.Button.Colors.CUSTOM,
+      size: o.Button.Sizes.NONE,
+      compact: A,
+      grow: !1,
+      ...e,
+      ...m
     })
   })
 }

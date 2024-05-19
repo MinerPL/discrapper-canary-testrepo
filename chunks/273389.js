@@ -1,47 +1,47 @@
 "use strict";
 n.r(t);
-var a = n("735250"),
-  l = n("470079"),
-  r = n("481060"),
+var i = n("735250"),
+  r = n("470079"),
+  a = n("481060"),
   s = n("285952"),
-  i = n("689938"),
-  d = n("674484");
+  o = n("689938"),
+  l = n("88493");
 t.default = e => {
   let t, {
       button: n,
-      submitting: o,
-      disableNext: u,
-      onClick: c,
-      canNavigateBack: m,
-      onBackClicked: _
+      submitting: u,
+      disableNext: d,
+      onClick: _,
+      canNavigateBack: c,
+      onBackClicked: E
     } = e,
-    f = l.useRef(null),
-    E = null != n && "cancel" !== n.type,
-    h = m && (null == n ? void 0 : n.type) !== "done",
-    v = E || h;
-  if (l.useEffect(() => {
+    I = r.useRef(null),
+    T = null != n && "cancel" !== n.type,
+    f = c && (null == n ? void 0 : n.type) !== "done",
+    S = T || f;
+  if (r.useEffect(() => {
       if ((null == n ? void 0 : n.type) === "submit" || (null == n ? void 0 : n.type) === "done") {
         var e;
-        null === (e = f.current) || void 0 === e || e.focus()
+        null === (e = I.current) || void 0 === e || e.focus()
       }
-    }, [null == n ? void 0 : n.type]), !v) return null;
-  let R = i.default.Messages.DONE;
-  return (null == n ? void 0 : n.type) === "submit" ? (R = i.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = r.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? R = i.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (R = i.default.Messages.CANCEL, t = r.Button.Colors.TRANSPARENT), (0, a.jsxs)(r.ModalFooter, {
+    }, [null == n ? void 0 : n.type]), !S) return null;
+  let h = o.default.Messages.DONE;
+  return (null == n ? void 0 : n.type) === "submit" ? (h = o.default.Messages.MOBILE_REPORTS_SUBMIT_REPORT, t = a.Button.Colors.RED) : (null == n ? void 0 : n.type) === "next" ? h = o.default.Messages.NEXT : (null == n ? void 0 : n.type) === "cancel" && (h = o.default.Messages.CANCEL, t = a.Button.Colors.TRANSPARENT), (0, i.jsxs)(a.ModalFooter, {
     direction: s.default.Direction.HORIZONTAL,
-    children: [h && (0, a.jsx)(r.Button, {
-      onClick: _,
-      color: r.Button.Colors.TRANSPARENT,
-      disabled: o,
-      children: i.default.Messages.BACK
-    }), E && (0, a.jsx)(r.Button, {
+    children: [f && (0, i.jsx)(a.Button, {
+      onClick: E,
+      color: a.Button.Colors.TRANSPARENT,
+      disabled: u,
+      children: o.default.Messages.BACK
+    }), T && (0, i.jsx)(a.Button, {
       onClick: () => {
-        null != n && c(n)
+        null != n && _(n)
       },
       color: t,
-      className: d.actionButton,
-      disabled: o || u,
-      buttonRef: f,
-      children: R
+      className: l.actionButton,
+      disabled: u || d,
+      buttonRef: I,
+      children: h
     })]
   })
 }

@@ -1,97 +1,100 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return m
+    return N
   }
 });
 var i = n("735250");
 n("470079");
-var r = n("803997"),
-  s = n.n(r),
-  a = n("442837"),
+var r = n("120356"),
+  a = n.n(r),
+  s = n("442837"),
   o = n("481060"),
   l = n("2052"),
-  u = n("594174"),
-  d = n("346656"),
-  _ = n("466111"),
-  c = n("74538"),
-  E = n("588822"),
-  I = n("659101"),
-  T = n("981631"),
-  f = n("689938"),
-  S = n("181035"),
-  h = n("989171");
+  u = n("580552"),
+  d = n("594174"),
+  _ = n("346656"),
+  c = n("466111"),
+  E = n("74538"),
+  I = n("588822"),
+  T = n("659101"),
+  f = n("981631"),
+  S = n("689938"),
+  h = n("404737"),
+  A = n("379916");
 
-function A(e) {
+function m(e) {
   let {
     guildName: t
   } = e;
   return (0, i.jsxs)("div", {
-    className: S.guildMemberProfileTooltip,
-    children: [(0, i.jsx)(_.default, {
-      className: S.guildMemberProfileTooltipNitroWheel
-    }), f.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+    className: h.guildMemberProfileTooltip,
+    children: [(0, i.jsx)(c.default, {
+      className: h.guildMemberProfileTooltipNitroWheel
+    }), S.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
       guildName: t
     })]
   })
 }
 
-function m(e) {
+function N(e) {
   let {
     guild: t,
     bio: r,
-    hidePersonalInformation: _,
-    isUsingGuildBio: m,
-    lastSection: N = !1,
+    hidePersonalInformation: c,
+    isUsingGuildBio: N,
+    lastSection: p = !1,
     animateOnHover: O = !1,
-    isHovering: p = !1,
-    lineClamp: R
+    isHovering: C = !1,
+    lineClamp: R,
+    userId: g
   } = e, {
-    location: C
-  } = (0, l.useAnalyticsContext)(), g = (0, a.useStateFromStores)([u.default], () => u.default.getCurrentUser()), L = c.default.canUsePremiumGuildMemberProfile(g);
-  return _ || null == r || "" === r ? null : (0, i.jsxs)(I.default, {
-    lastSection: N,
+    location: L
+  } = (0, l.useAnalyticsContext)(), v = (0, s.useStateFromStores)([d.default], () => d.default.getCurrentUser()), D = E.default.canUsePremiumGuildMemberProfile(v), M = (0, u.default)(g);
+  return (c || null == r || "" === r) && !M ? null : (0, i.jsxs)(T.default, {
+    lastSection: p,
     children: [(0, i.jsxs)(o.Heading, {
       variant: "eyebrow",
-      className: h.title,
-      children: [f.default.Messages.USER_POPOUT_ABOUT_ME, null != t && m && (0, i.jsx)(o.Tooltip, {
-        color: o.Tooltip.Colors.CUSTOM,
-        tooltipClassName: S.aboutMeGuildIconTooltip,
-        "aria-label": f.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
+      className: A.title,
+      children: [S.default.Messages.USER_POPOUT_ABOUT_ME, null != t && N && (0, i.jsx)(o.Tooltip, {
+        color: o.Tooltip.Colors.NESTED,
+        tooltipClassName: h.aboutMeGuildIconTooltip,
+        "aria-label": S.default.Messages.GUILD_IDENTITY_BIO_TOAST.format({
           guildName: t.name
         }),
-        text: (0, i.jsx)(A, {
+        text: (0, i.jsx)(m, {
           guildName: t.name
         }),
-        children: e => (0, i.jsx)(d.default, {
+        children: e => (0, i.jsx)(_.default, {
           ...e,
           onClick: () => {
             var t;
-            null == (t = e.onClick) || t(), null != g && !L && (0, o.openModalLazy)(async () => {
+            null == (t = e.onClick) || t(), null != v && !D && (0, o.openModalLazy)(async () => {
               let {
                 default: e
               } = await n.e("84509").then(n.bind(n, "933696"));
               return t => (0, i.jsx)(e, {
                 ...t,
                 source: {
-                  ...C,
-                  object: T.AnalyticsObjects.GUILD_ICON
+                  ...L,
+                  object: f.AnalyticsObjects.GUILD_ICON
                 }
               })
             })
           },
           guild: t,
-          size: d.default.Sizes.SMOL,
-          className: s()(S.aboutMeGuildIcon, {
-            [S.nonPremiumHoverState]: !L
+          size: _.default.Sizes.SMOL,
+          className: a()(h.aboutMeGuildIcon, {
+            [h.nonPremiumHoverState]: !D
           })
         })
       })]
-    }), (0, i.jsx)(E.default, {
+    }), (0, i.jsx)(I.default, {
       userBio: r,
       animateOnHover: O,
-      isHovering: p,
-      lineClamp: R
+      isHovering: C,
+      lineClamp: R,
+      userId: g
     })]
   })
 }

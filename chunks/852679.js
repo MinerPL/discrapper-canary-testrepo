@@ -29,15 +29,15 @@ async function I(e) {
     onSubscriptionConfirmation: N,
     inPopout: p,
     applicationId: O
-  } = e, R = p ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, C = l.default.getPremiumTypeSubscription();
-  if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
+  } = e, C = p ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, R = l.default.getPremiumTypeSubscription();
+  if (null != R && R.isPurchasedExternally && null != R.paymentGateway) {
     null != S && S(), a.default.show({
       title: c.default.Messages.BILLING_MANAGED_BY_PAYMENT_GATEWAY.format({
-        paymentGatewayName: _.PaymentGatewayToFriendlyName[C.paymentGateway]
+        paymentGatewayName: _.PaymentGatewayToFriendlyName[R.paymentGateway]
       }),
       body: c.default.Messages.PREMIUM_GUILD_PERKS_MODAL_BUTTON_UPGRADE_TO_PREMIUM_EXTERNAL_ERROR.format({
-        paymentGatewayName: _.PaymentGatewayToFriendlyName[C.paymentGateway],
-        subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(C.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
+        paymentGatewayName: _.PaymentGatewayToFriendlyName[R.paymentGateway],
+        subscriptionManagementLink: (0, d.getExternalSubscriptionMethodUrl)(R.paymentGateway, "SUBSCRIPTION_MANAGEMENT")
       })
     });
     return
@@ -46,7 +46,7 @@ async function I(e) {
   await (0, r.openModalLazy)(async () => {
     let {
       default: e
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("66635"), n.e("40326"), n.e("23357"), n.e("15972"), n.e("440"), n.e("63438"), n.e("62511"), n.e("58600"), n.e("8016"), n.e("22646"), n.e("54999"), n.e("99873")]).then(n.bind(n, "343649"));
+    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("96427"), n.e("40326"), n.e("23357"), n.e("29549"), n.e("15972"), n.e("440"), n.e("63438"), n.e("62511"), n.e("58600"), n.e("8016"), n.e("22646"), n.e("54999"), n.e("58447")]).then(n.bind(n, "343649"));
     return n => {
       let {
         transitionState: r,
@@ -79,6 +79,6 @@ async function I(e) {
     onCloseRequest: () => {
       (0, r.closeModal)(E), null == h || h(!1)
     },
-    contextKey: R
+    contextKey: C
   })
 }

@@ -8,7 +8,7 @@ var s, a, l, i, r = n("735250"),
   o = n("470079"),
   u = n("120356"),
   d = n.n(u),
-  c = n("236471"),
+  c = n("887024"),
   f = n("153832"),
   E = n("468194"),
   _ = n("477690"),
@@ -25,7 +25,7 @@ var s, a, l, i, r = n("735250"),
   M = n("267642"),
   R = n("981631"),
   v = n("689938"),
-  O = n("31949");
+  O = n("603277");
 (l = s || (s = {})).ENTER = "enter", l.CONFETTI = "confetti", l.LEAF_PEEL = "leaf_peel", l.LEAF_FALL = "leaf_fall", l.EXIT = "exit";
 let x = {
   enter: {
@@ -117,9 +117,9 @@ let L = ["TOP_LEFT", "TOP_RIGHT"],
   j = ["#61D5B2"],
   b = n("303893"),
   B = n("808392"),
-  G = [b, B];
+  F = [b, B];
 
-function F() {
+function G() {
   return n.e("60005").then(n.t.bind(n, "931152", 19)).then(e => {
     let {
       default: t
@@ -255,7 +255,7 @@ function k(e) {
   }, [g, C, _, u]), (0, r.jsxs)(r.Fragment, {
     children: [(0, r.jsx)(c.SpriteCanvas, {
       ref: N,
-      sprites: G,
+      sprites: F,
       colors: j,
       spriteWidth: 45,
       spriteHeight: 45
@@ -276,7 +276,7 @@ function k(e) {
         sceneSegments: x,
         onScenePlay: R,
         onSceneComplete: v,
-        importData: F,
+        importData: G,
         pauseWhileUnfocused: !1
       })
     })]
@@ -355,7 +355,7 @@ function w(e) {
       (null == t ? void 0 : t.id.startsWith(U)) && b()
     }, [b]);
   o.useEffect(() => f(B));
-  let G = (0, r.jsx)(m.Clickable, {
+  let F = (0, r.jsx)(m.Clickable, {
     className: O.iconWrapper,
     innerRef: S,
     onClick: i,
@@ -365,7 +365,7 @@ function w(e) {
     })
   });
   return (0, r.jsxs)(g.default, {
-    iconNode: G,
+    iconNode: F,
     timestamp: n.timestamp,
     compact: s,
     children: [(0, r.jsx)("div", {

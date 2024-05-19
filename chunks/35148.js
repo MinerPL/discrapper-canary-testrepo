@@ -4,7 +4,7 @@ var a = n("735250");
 n("470079");
 var s = n("120356"),
   l = n.n(s),
-  i = n("718017"),
+  i = n("920906"),
   r = n("481060"),
   o = n("497505"),
   u = n("685613"),
@@ -12,22 +12,22 @@ var s = n("120356"),
   c = n("644646"),
   f = n("898170"),
   E = n("689938"),
-  h = n("10569");
+  h = n("743451");
 t.default = function(e) {
   var t, n, s;
   let {
     className: _,
     expansionSpring: C,
-    isExpanded: S,
-    isExpansionAnimationComplete: m,
+    isExpanded: m,
+    isExpansionAnimationComplete: S,
     quest: p,
-    useReducedMotion: I
-  } = e, T = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, g = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
+    useReducedMotion: g
+  } = e, I = (null === (t = p.userStatus) || void 0 === t ? void 0 : t.enrolledAt) != null, T = (null !== (s = null === (n = p.userStatus) || void 0 === n ? void 0 : n.streamProgressSeconds) && void 0 !== s ? s : 0) > 0;
   return (0, a.jsxs)(i.animated.div, {
-    "aria-hidden": S && m,
+    "aria-hidden": m && S,
     className: l()(_, h.contentCollapsed, {
-      [h.contentCollapsedExpanded]: S,
-      [h.contentCollapsedAccepted]: T
+      [h.contentCollapsedExpanded]: m,
+      [h.contentCollapsedAccepted]: I
     }),
     style: {
       opacity: C.to({
@@ -37,17 +37,17 @@ t.default = function(e) {
     },
     children: [(0, a.jsx)(f.QuestBarBackgroundAnimation, {
       quest: p,
-      useReducedMotion: I
+      useReducedMotion: g
     }), (0, a.jsx)("div", {
       className: h.contentCollapsedWrapper,
-      children: T ? (0, a.jsxs)("div", {
+      children: I ? (0, a.jsxs)("div", {
         className: h.questProgressWrapper,
         children: [(0, a.jsx)(c.default, {
           className: h.questProgressRewardTile,
           quest: p,
           questContent: o.QuestContent.QUEST_BAR,
           autoplay: !1
-        }), g ? (0, a.jsx)(d.default, {
+        }), T ? (0, a.jsx)(d.default, {
           className: h.questProgressBar,
           quest: p
         }) : (0, a.jsx)(r.Text, {

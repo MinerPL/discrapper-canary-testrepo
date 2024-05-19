@@ -21,5 +21,9 @@ function r(e) {
       }
       return e
     }, [n, r]);
-  return a.useMemo(() => null == e ? void 0 : e.filter(e => !o.has(e.author_id)), [e, o])
+  return a.useMemo(() => null == e ? void 0 : e.filter(e => {
+    for (let t of e.participants)
+      if (o.has(t)) return !1;
+    return !0
+  }), [e, o])
 }

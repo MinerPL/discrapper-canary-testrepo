@@ -10,7 +10,7 @@ var i, r = n("735250"),
   _ = n("465670"),
   c = n("664800"),
   E = n("689938"),
-  I = n("67205");
+  I = n("708647");
 
 function T(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -100,8 +100,8 @@ class h extends(i = a.PureComponent) {
       autoComplete: N,
       inputProps: p,
       hideSearchIcon: O,
-      "aria-label": R = E.default.Messages.SEARCH,
-      ...C
+      "aria-label": C = E.default.Messages.SEARCH,
+      ...R
     } = this.props;
     return (0, r.jsx)(u.FocusRing, {
       focusTarget: this.inputRef,
@@ -111,7 +111,7 @@ class h extends(i = a.PureComponent) {
           [I.disabled]: f
         }),
         ref: this.containerRef,
-        ...C,
+        ...R,
         children: (0, r.jsxs)("div", {
           className: I.inner,
           children: [(0, r.jsx)("input", {
@@ -128,7 +128,7 @@ class h extends(i = a.PureComponent) {
             disabled: f,
             autoFocus: t,
             autoComplete: N,
-            "aria-label": R,
+            "aria-label": C,
             ref: this.inputRef
           }), !O && (0, r.jsx)(S, {
             size: T,

@@ -1,34 +1,35 @@
 "use strict";
 n.r(t), n("653041"), n("47120");
-var a = n("100527"),
-  s = n("208049"),
-  l = n("763296"),
-  i = n("697426"),
-  r = n("242291"),
-  o = n("641015"),
-  u = n("594174"),
-  d = n("996106"),
-  c = n("452426"),
-  f = n("736045"),
-  E = n("186901"),
-  h = n("231338");
+var a = n("243814"),
+  s = n("100527"),
+  l = n("208049"),
+  i = n("763296"),
+  r = n("697426"),
+  o = n("242291"),
+  u = n("641015"),
+  d = n("594174"),
+  c = n("996106"),
+  f = n("452426"),
+  E = n("736045"),
+  h = n("186901"),
+  _ = n("231338");
 t.default = {
-  [h.RPCCommands.GET_SOUNDBOARD_SOUNDS]: {
+  [_.RPCCommands.GET_SOUNDBOARD_SOUNDS]: {
     scope: {
-      [E.RPC_SCOPE_CONFIG.ANY]: [h.OAuth2Scopes.RPC, E.RPC_LOCAL_SCOPE]
+      [h.RPC_SCOPE_CONFIG.ANY]: [a.OAuth2Scopes.RPC, h.RPC_LOCAL_SCOPE]
     },
     async handler() {
-      await (0, s.maybeFetchSoundboardSounds)();
-      let e = l.default.getSounds(),
+      await (0, l.maybeFetchSoundboardSounds)();
+      let e = i.default.getSounds(),
         t = [];
-      return e.forEach(e => e.forEach(e => t.push((0, i.soundboardSoundToAPI)(e)))), t
+      return e.forEach(e => e.forEach(e => t.push((0, r.soundboardSoundToAPI)(e)))), t
     }
   },
-  [h.RPCCommands.PLAY_SOUNDBOARD_SOUND]: {
+  [_.RPCCommands.PLAY_SOUNDBOARD_SOUND]: {
     scope: {
-      [E.RPC_SCOPE_CONFIG.ALL]: [h.OAuth2Scopes.RPC, h.OAuth2Scopes.RPC_VOICE_WRITE]
+      [h.RPC_SCOPE_CONFIG.ALL]: [a.OAuth2Scopes.RPC, a.OAuth2Scopes.RPC_VOICE_WRITE]
     },
-    validation: e => (0, c.default)(e).required().keys({
+    validation: e => (0, f.default)(e).required().keys({
       guild_id: e.string(),
       sound_id: e.string()
     }),
@@ -39,21 +40,21 @@ t.default = {
           sound_id: n
         }
       } = e;
-      await (0, s.maybeFetchSoundboardSounds)();
-      let i = u.default.getCurrentUser(),
-        c = l.default.getSound(t, n),
-        E = (0, f.default)(),
-        _ = null != c && null != i && (0, r.canUseSoundboardSound)(i, c, E);
-      if (null == E) throw new d.default({
-        errorCode: h.RPCErrors.INVALID_CHANNEL
+      await (0, l.maybeFetchSoundboardSounds)();
+      let a = d.default.getCurrentUser(),
+        r = i.default.getSound(t, n),
+        f = (0, E.default)(),
+        h = null != r && null != a && (0, o.canUseSoundboardSound)(a, r, f);
+      if (null == f) throw new c.default({
+        errorCode: _.RPCErrors.INVALID_CHANNEL
       }, "Invalid Channel.");
-      if (_) {
-        if ((0, o.default)(E)) null != c && (0, r.playSound)(c, E.id, [a.default.RPC]);
-        else throw new d.default({
-          errorCode: h.RPCErrors.INVALID_PERMISSIONS
+      if (h) {
+        if ((0, u.default)(f)) null != r && (0, o.playSound)(r, f.id, [s.default.RPC]);
+        else throw new c.default({
+          errorCode: _.RPCErrors.INVALID_PERMISSIONS
         }, "Invalid Permissions.")
-      } else throw new d.default({
-        errorCode: h.RPCErrors.INVALID_SOUND
+      } else throw new c.default({
+        errorCode: _.RPCErrors.INVALID_SOUND
       }, "Invalid Sound.")
     }
   }

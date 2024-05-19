@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("47120"), n("411104");
 var s, a = n("735250"),
   l = n("470079"),
-  i = n("803997"),
+  i = n("120356"),
   r = n.n(i),
   o = n("442837"),
   u = n("481060"),
@@ -15,14 +15,14 @@ var s, a = n("735250"),
   f = n("594190"),
   E = n("592745"),
   _ = n("757266"),
-  T = n("417363"),
-  m = n("976644"),
+  m = n("417363"),
+  T = n("976644"),
   I = n("86813"),
   p = n("358085"),
   h = n("346329"),
   N = n("981631"),
   S = n("689938"),
-  C = n("941417");
+  C = n("2050");
 
 function A(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -95,7 +95,7 @@ class g extends(s = l.PureComponent) {
     } = this.props;
     if (!l) return c ? null : this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_PLAY, p.isPlatformEmbedded ? S.default.Messages.GAME_ACTION_BUTTON_GAME_NOT_DETECTED : S.default.Messages.GAME_ACTION_BUTTON_PLAY_DISABLED_DESKTOP_APP);
     if (o) return this.renderDisabledButton(S.default.Messages.GAME_ACTION_BUTTON_NOW_PLAYING);
-    let f = d ? m.default : u.Button;
+    let f = d ? T.default : u.Button;
     return (0, a.jsxs)(f, {
       className: r()(C.playButton, e),
       innerClassName: C.playButtonContents,
@@ -154,7 +154,7 @@ function M(e) {
   let {
     applicationId: t,
     libraryApplication: n
-  } = e, s = (0, c.useAnalyticsContext)(), [l, i] = (0, o.useStateFromStoresArray)([_.default, E.default, T.default], () => [_.default.isConnected(t) || E.default.isLaunchable(t) || null != n && T.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), r = (0, o.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, o.useStateFromStores)([T.default], () => null != n ? T.default.getState(n.id, n.branchId) : null, [n]);
+  } = e, s = (0, c.useAnalyticsContext)(), [l, i] = (0, o.useStateFromStoresArray)([_.default, E.default, m.default], () => [_.default.isConnected(t) || E.default.isLaunchable(t) || null != n && m.default.isLaunchable(n.id, n.branchId), E.default.launchingGames.has(t)], [t, n]), r = (0, o.useStateFromStores)([f.default], () => new Set(f.default.getRunningVerifiedApplicationIds()).has(t), [t]), u = (0, o.useStateFromStores)([m.default], () => null != n ? m.default.getState(n.id, n.branchId) : null, [n]);
   return (0, a.jsx)(g, {
     ...e,
     analyticsContext: s,

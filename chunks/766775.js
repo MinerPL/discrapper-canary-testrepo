@@ -1,68 +1,68 @@
 "use strict";
-n.r(t), n.d(t, {
+s.r(t), s.d(t, {
   default: function() {
-    return m
+    return p
   }
 });
-var s = n("735250");
-n("470079");
-var a = n("120356"),
-  l = n.n(a),
-  i = n("481060"),
-  r = n("153124"),
-  o = n("819570"),
-  u = n("659900"),
-  c = n("473855"),
-  d = n("689938"),
-  f = n("62565");
+var a = s("735250");
+s("470079");
+var n = s("120356"),
+  l = s.n(n),
+  r = s("481060"),
+  i = s("153124"),
+  o = s("819570"),
+  c = s("659900"),
+  u = s("473855"),
+  d = s("689938"),
+  m = s("317280");
 
-function m(e) {
+function p(e) {
   let {
     transitionState: t,
-    onClose: n,
-    guildTemplate: a
+    onClose: s,
+    guildTemplate: n
   } = e, {
-    form: m,
-    preview: p,
-    handleSubmit: g
-  } = (0, u.default)(a, !1), x = (0, r.useUID)();
-  return (0, s.jsx)("div", {
-    children: (0, s.jsxs)(i.ModalRoot, {
-      size: i.ModalSize.DYNAMIC,
+    form: p,
+    preview: x,
+    handleSubmit: f
+  } = (0, c.default)(n, !1), h = (0, i.useUID)();
+  return (0, a.jsx)("div", {
+    children: (0, a.jsxs)(r.ModalRoot, {
+      size: r.ModalSize.DYNAMIC,
       transitionState: t,
-      className: l()(f.modalRoot),
-      "aria-labelledby": x,
-      children: [(0, s.jsxs)("div", {
-        className: f.modalContainer,
-        children: [(0, s.jsx)("div", {
-          className: l()(f.modalSection, f.ctaSection),
-          children: (0, s.jsx)("div", {
-            className: f.ctaContainer,
-            children: (0, s.jsx)(c.default, {
-              guildTemplate: a,
-              headerId: x
+      className: l()(m.modalRoot),
+      "aria-labelledby": h,
+      children: [(0, a.jsxs)("div", {
+        className: m.modalContainer,
+        children: [(0, a.jsx)("div", {
+          className: l()(m.modalSection, m.ctaSection),
+          children: (0, a.jsx)("div", {
+            className: m.ctaContainer,
+            children: (0, a.jsx)(u.default, {
+              guildTemplate: n,
+              headerId: h
             })
           })
-        }), (0, s.jsx)("div", {
-          className: l()(f.modalSection, f.formSection),
-          children: (0, s.jsxs)(i.Scroller, {
-            className: f.formContainer,
-            children: [(0, s.jsx)(o.Title, {
-              className: f.header,
+        }), (0, a.jsx)("div", {
+          className: l()(m.modalSection, m.formSection),
+          children: (0, a.jsxs)(r.Scroller, {
+            className: m.formContainer,
+            children: [(0, a.jsx)(o.Title, {
+              className: m.header,
               children: d.default.Messages.GUILD_TEMPLATE_SETUP_DISCORD
-            }), m, p]
+            }), p, x]
           })
         })]
-      }), (0, s.jsxs)(i.ModalFooter, {
-        className: f.modalFooter,
-        children: [(0, s.jsx)(i.Button, {
-          color: i.Button.Colors.PRIMARY,
-          onClick: n,
+      }), (0, a.jsxs)(r.ModalFooter, {
+        className: m.modalFooter,
+        children: [(0, a.jsx)(r.Button, {
+          color: r.Button.Colors.PRIMARY,
+          onClick: s,
           children: d.default.Messages.CLOSE
-        }), (0, s.jsx)(i.Button, {
-          color: i.Button.Colors.GREEN,
+        }), (0, a.jsx)(r.Button, {
+          color: r.Button.Colors.GREEN,
           onClick: async () => {
-            null != await g() && n()
+            null != await f() && s()
           },
           children: d.default.Messages.CREATE
         })]

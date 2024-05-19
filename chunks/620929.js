@@ -10,7 +10,7 @@ var a = n("735250"),
   i = n.n(s),
   r = n("913527"),
   o = n.n(r),
-  u = n("718017"),
+  u = n("920906"),
   d = n("442837"),
   c = n("481060"),
   f = n("430824"),
@@ -18,13 +18,13 @@ var a = n("735250"),
   m = n("650461"),
   p = n("353093"),
   E = n("105671"),
-  C = n("287679"),
-  g = n("979264"),
+  C = n("979264"),
+  g = n("570938"),
   S = n("550271"),
   _ = n("116175"),
   T = n("308083"),
   I = n("689938"),
-  A = n("156610");
+  A = n("695062");
 
 function N(e) {
   let {
@@ -33,11 +33,13 @@ function N(e) {
     primaryColor: l,
     secondaryColor: s
   } = e;
-  return null == t || 0 === t.length ? (0, a.jsx)(C.default, {
-    height: 41,
-    width: 41,
-    className: A.placeholderIcon
-  }) : (0, a.jsx)(g.BaseClanTagChiplet, {
+  return null == t || 0 === t.length ? (0, a.jsx)("div", {
+    className: A.placeholderIcon,
+    children: (0, a.jsx)(g.default, {
+      height: 42,
+      width: 42
+    })
+  }) : (0, a.jsx)(C.BaseClanTagChiplet, {
     className: A.charterClanTag,
     clanTag: t,
     textVariant: "heading-lg/semibold",
@@ -84,21 +86,21 @@ t.default = e => {
     setSigned: r,
     animatedTextStyle: E,
     signRef: C
-  } = e, g = (0, d.useStateFromStores)([f.default], () => {
+  } = e, g = (0, m.useDefaultClanProgress)(), S = (0, d.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n)) || void 0 === e ? void 0 : e.name) && void 0 !== t ? t : ""
   }), {
-    gameApplicationIds: S,
-    playstyle: x,
-    interests: M,
-    tag: R,
+    gameApplicationIds: x,
+    playstyle: M,
+    interests: R,
+    tag: y,
     badgeKind: L,
-    badgePrimaryColor: y,
-    badgeSecondaryColor: O
+    badgePrimaryColor: O,
+    badgeSecondaryColor: j
   } = (0, d.useStateFromStoresObject)([m.default], () => {
     var e;
-    return null !== (e = m.default.getStateForGuild(n).progress) && void 0 !== e ? e : m.DEFAULT_CLAN_PROGRESS
-  }), j = l.useMemo(() => (null == M ? void 0 : M.size) > 0 ? (0, p.formatSelectionList)(Array.from(M), T.MAX_TRAITS_TO_DISPLAY) : null, [M]);
+    return null !== (e = m.default.getStateForGuild(n).progress) && void 0 !== e ? e : g
+  }), P = l.useMemo(() => (null == R ? void 0 : R.size) > 0 ? (0, p.formatSelectionList)(Array.from(R), T.MAX_TRAITS_TO_DISPLAY) : null, [R]);
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.scrollBg,
@@ -114,10 +116,10 @@ t.default = e => {
         fade: !0,
         className: A.overviewSidebarContent,
         children: [(0, a.jsx)(N, {
-          tag: R,
+          tag: y,
           badge: L,
-          primaryColor: null != y ? y : _.CLAN_BADGE_PRIMARY_DEFAULT,
-          secondaryColor: null != O ? O : _.CLAN_BADGE_SECONDARY_DEFAULT
+          primaryColor: null != O ? O : _.CLAN_BADGE_PRIMARY_DEFAULT,
+          secondaryColor: null != j ? j : _.CLAN_BADGE_SECONDARY_DEFAULT
         }), (0, a.jsx)(c.Heading, {
           variant: "heading-xl/normal",
           color: "text-muted",
@@ -127,7 +129,7 @@ t.default = e => {
           variant: "heading-xl/bold",
           color: "interactive-active",
           className: A.overviewGuildName,
-          children: g
+          children: S
         }), (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
@@ -136,14 +138,14 @@ t.default = e => {
             date: o()().format("MMMM YYYY")
           })
         }), (0, a.jsx)(v, {
-          applicationIds: S,
-          playstyle: x
-        }), null != j ? (0, a.jsx)(c.Text, {
+          applicationIds: x,
+          playstyle: M
+        }), null != P ? (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
           color: "text-muted",
           className: A.overviewText,
           children: I.default.Messages.CLAN_SETUP_OVERVIEW_TEXT_TRAITS.format({
-            traits: j
+            traits: P
           })
         }) : null, (0, a.jsx)(c.Text, {
           variant: "text-sm/normal",
@@ -157,6 +159,7 @@ t.default = e => {
           className: i()(A.signatureBlock, {
             [A.clickable]: null != r
           }),
+          tabIndex: null == r ? -1 : void 0,
           children: [(0, a.jsx)("div", {
             ref: C
           }), (0, a.jsx)(c.Text, {

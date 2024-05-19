@@ -1,9 +1,5 @@
 "use strict";
-n.r(t), n.d(t, {
-  SmallMutualFriendsAndGuilds: function() {
-    return R
-  }
-}), n("47120");
+n.r(t), n("47120");
 var i, r, a = n("735250"),
   s = n("470079"),
   o = n("120356"),
@@ -23,9 +19,9 @@ var f = n("342656"),
   m = n("171368"),
   N = n("228168"),
   p = n("689938"),
-  O = n("946150");
+  O = n("498106");
 (r = i || (i = {}))[r.NOT_CHECKED = 0] = "NOT_CHECKED", r[r.NOT_OVERFLOWING = 1] = "NOT_OVERFLOWING", r[r.OVERFLOWING_LARGE_ONLY = 2] = "OVERFLOWING_LARGE_ONLY", r[r.OVERFLOWING_ALL = 3] = "OVERFLOWING_ALL";
-let R = s.memo(function(e) {
+let C = s.memo(function(e) {
   let {
     user: t,
     mutualFriends: n,
@@ -39,8 +35,8 @@ let R = s.memo(function(e) {
     analyticsLocations: h
   } = (0, _.default)(), {
     guildId: A,
-    channelId: R,
-    messageId: C,
+    channelId: C,
+    messageId: R,
     roleId: g
   } = (0, S.useUserProfileAnalyticsContext)(), L = s.useMemo(() => {
     var e;
@@ -67,29 +63,29 @@ let R = s.memo(function(e) {
       var e;
       G((null === (e = y.current) || void 0 === e ? void 0 : e.clientHeight) > 19), U(!0)
     }
-  }, []), B = s.useCallback(e => () => {
+  }, []), k = s.useCallback(e => () => {
     (0, m.openUserProfileModal)({
       userId: t.id,
       sourceAnalyticsLocations: h,
       guildId: A,
-      channelId: R,
-      messageId: C,
+      channelId: C,
+      messageId: R,
       roleId: g,
       section: e,
       analyticsLocation: o
     }), null == r || r()
-  }, [o, h, r, t.id, A, R, C, g]);
+  }, [o, h, r, t.id, A, C, R, g]);
   s.useEffect(() => {
     w()
   }, [w, D]);
-  let k = L.length > 0,
+  let B = L.length > 0,
     V = v.length > 0;
   return (0, a.jsxs)("div", {
     className: l()(O.compactItemContainer, !P && O.hideElement),
     ref: y,
-    children: [k && (() => {
+    children: [B && (() => {
       let e = (0, a.jsxs)(d.Clickable, {
-        onClick: B(N.UserProfileSections.MUTUAL_FRIENDS),
+        onClick: k(N.UserProfileSections.MUTUAL_FRIENDS),
         className: l()(O.avatarAndTextContainer, O.__invalid_friendsContainer),
         children: [(0, a.jsx)("div", {
           className: O.__invalid_avatars,
@@ -109,15 +105,14 @@ let R = s.memo(function(e) {
       });
       return f ? (0, a.jsx)(d.TooltipContainer, {
         text: p.default.Messages.USER_PROFILE_MUTUAL_FRIENDS_TOOLTIP,
-        color: d.TooltipColors.NESTED,
         children: e
       }) : e
-    })(), k && V && (0, a.jsx)("div", {
+    })(), B && V && (0, a.jsx)("div", {
       "aria-hidden": "true",
       className: O.dotSpacer
     }), V && (() => {
       let e = (0, a.jsxs)(d.Clickable, {
-        onClick: B(N.UserProfileSections.MUTUAL_GUILDS),
+        onClick: k(N.UserProfileSections.MUTUAL_GUILDS),
         className: l()(O.avatarAndTextContainer, O.serverContainer),
         children: [!b && (0, a.jsx)("div", {
           className: O.__invalid_avatars,
@@ -137,7 +132,6 @@ let R = s.memo(function(e) {
       });
       return f ? (0, a.jsx)(d.TooltipContainer, {
         text: p.default.Messages.USER_PROFILE_MUTUAL_GUILDS_TOOLTIP,
-        color: d.TooltipColors.NESTED,
         children: e
       }) : e
     })()]
@@ -158,17 +152,17 @@ t.default = s.memo(function(e) {
     autoTrackExposure: !1,
     location: E,
     disable: m
-  }), C = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
-  return !N || m || (null == g || 0 === g.length) && 0 === C.length ? null : (0, a.jsxs)("div", {
+  }), R = (0, A.useMutualGuilds)(i), g = (0, h.useMutualFriends)(i);
+  return !N || m || (null == g || 0 === g.length) && 0 === R.length ? null : (0, a.jsxs)("div", {
     className: l()(O.mainContainer, s),
     children: [(0, a.jsx)(d.Heading, {
       variant: "eyebrow",
       className: O.__invalid_title,
       children: p.default.Messages.USER_PROFILE_MUTUALS_TITLE
-    }), (0, a.jsx)(R, {
+    }), (0, a.jsx)(C, {
       user: i,
       mutualFriends: g,
-      mutualGuilds: C,
+      mutualGuilds: R,
       onClose: r
     })]
   })

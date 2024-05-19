@@ -1,187 +1,190 @@
 "use strict";
-s.r(t), s("653041"), s("47120");
-var E, _, a, n, T = s("442837"),
-  i = s("759174"),
-  u = s("570140"),
-  A = s("430824"),
-  l = s("594174"),
-  I = s("881952"),
-  r = s("246364"),
-  o = s("937111"),
-  L = s("981631");
-let d = {};
+n.r(t), n("47120"), n("653041");
+var i, r, a, s, o = n("913527"),
+  l = n.n(o),
+  u = n("442837"),
+  d = n("759174"),
+  _ = n("570140"),
+  c = n("430824"),
+  E = n("594174"),
+  I = n("70956"),
+  T = n("881952"),
+  f = n("246364"),
+  S = n("937111"),
+  h = n("981631");
+let A = new Map,
+  m = {};
 
-function S(e) {
-  return d[e]
+function N(e) {
+  return m[e]
 }
 
-function N(e, t) {
-  d[e] = t
+function p(e, t) {
+  m[e] = t, A.set(e, l()())
 }
 
-function g(e, t, s) {
-  if (t !== s && null != t) {
-    var E, _, a, n;
-    if (t === r.GuildJoinRequestApplicationStatuses.SUBMITTED) {
-      ;
-      let t = d[e];
-      E = e, _ = t + 1, d[E] = _
+function O(e, t, n) {
+  if (t !== n && null != t) {
+    if (t === f.GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      let t = m[e];
+      p(e, t + 1)
     }
-    if (s === r.GuildJoinRequestApplicationStatuses.SUBMITTED) {
-      ;
-      let t = d[e];
-      a = e, n = Math.max(0, t - 1), d[a] = n
+    if (n === f.GuildJoinRequestApplicationStatuses.SUBMITTED) {
+      let t = m[e];
+      p(e, Math.max(0, t - 1))
     }
   }
 }
-let D = !1,
-  c = {
+let C = !1,
+  R = {
     GUILD_JOIN_REQUESTS_BY_ID: e => "guild-join-request=".concat(e),
     GUILD_JOIN_REQUESTS_BY_STATUS: (e, t) => "guild-".concat(e, "-").concat(t)
   };
 
-function G(e) {
+function g(e) {
   let t = [];
-  return t.push(c.GUILD_JOIN_REQUESTS_BY_ID(e.joinRequestId)), t.push(c.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
+  return t.push(R.GUILD_JOIN_REQUESTS_BY_ID(e.joinRequestId)), t.push(R.GUILD_JOIN_REQUESTS_BY_STATUS(e.guildId, e.applicationStatus)), t
 }
-let O = new i.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
-  U = new i.SecondaryIndexMap(G, e => "".concat(e.joinRequestId)),
-  C = new i.SecondaryIndexMap(G, e => "".concat(e.actionedAt));
+let L = new d.SecondaryIndexMap(g, e => "".concat(e.joinRequestId)),
+  v = new d.SecondaryIndexMap(g, e => "".concat(e.joinRequestId)),
+  D = new d.SecondaryIndexMap(g, e => "".concat(e.actionedAt));
 
 function M(e) {
-  return O.get(e)
+  return L.get(e)
 }
 
-function R(e) {
-  P[e.joinRequestId] = e, O.set(e.joinRequestId, e), (0, I.isSubmittedApplicationStatus)(e.applicationStatus) && (C.delete(e.joinRequestId), U.set(e.joinRequestId, e)), (0, I.isActionedApplicationStatus)(e.applicationStatus) && (U.delete(e.joinRequestId), C.set(e.joinRequestId, e))
+function y(e) {
+  w[e.joinRequestId] = e, L.set(e.joinRequestId, e), (0, T.isSubmittedApplicationStatus)(e.applicationStatus) && (D.delete(e.joinRequestId), v.set(e.joinRequestId, e)), (0, T.isActionedApplicationStatus)(e.applicationStatus) && (v.delete(e.joinRequestId), D.set(e.joinRequestId, e))
 }
 
-function f(e) {
-  var t, s;
+function P(e) {
+  var t, n;
   let {
-    guildId: E,
-    request: _
-  } = e, a = (0, o.joinRequestFromServer)(_), n = l.default.getCurrentUser();
-  if (null == n || a.userId === n.id) return !1;
-  let T = null === (s = a.joinRequestId, t = O.get(s)) || void 0 === t ? void 0 : t.applicationStatus;
-  return g(E, a.applicationStatus, T), R(a), !0
+    guildId: i,
+    request: r
+  } = e, a = (0, S.joinRequestFromServer)(r), s = E.default.getCurrentUser();
+  if (null == s || a.userId === s.id) return !1;
+  let o = null === (n = a.joinRequestId, t = L.get(n)) || void 0 === t ? void 0 : t.applicationStatus;
+  return O(i, a.applicationStatus, o), y(a), !0
 }
-let h = {},
-  p = {},
-  y = {},
-  P = {};
-class m extends(E = T.default.Store) {
+let U = {},
+  b = {},
+  G = {},
+  w = {},
+  k = 10 * I.default.Seconds.MINUTE;
+class B extends(i = u.default.Store) {
   getRequest(e) {
-    return P[e]
+    return w[e]
   }
   getRequests(e, t) {
-    let s = c.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
-    return (0, I.isActionedApplicationStatus)(t) ? C.values(s) : (0, I.isSubmittedApplicationStatus)(t) ? U.values(s) : O.values(s)
+    let n = R.GUILD_JOIN_REQUESTS_BY_STATUS(e, t);
+    return (0, T.isActionedApplicationStatus)(t) ? D.values(n) : (0, T.isSubmittedApplicationStatus)(t) ? v.values(n) : L.values(n)
   }
   getSubmittedGuildJoinRequestTotal(e) {
-    return d[e]
+    return m[e]
   }
   isFetching() {
-    return D
+    return C
+  }
+  hasFetched(e) {
+    if (!A.has(e)) return !1;
+    let t = A.get(e);
+    return null != t && l()().diff(t, "seconds") < k
   }
   getSelectedApplicationTab(e) {
     var t;
-    let s = A.default.getGuild(e),
-      E = (null == s ? void 0 : s.hasFeature(L.GuildFeatures.CLAN)) ? "REVIEW_APPLICATION" : r.GuildJoinRequestApplicationStatuses.SUBMITTED;
-    return null !== (t = h[e]) && void 0 !== t ? t : E
+    let n = c.default.getGuild(e),
+      i = (null == n ? void 0 : n.hasFeature(h.GuildFeatures.CLAN)) ? "REVIEW_APPLICATION" : f.GuildJoinRequestApplicationStatuses.SUBMITTED;
+    return null !== (t = U[e]) && void 0 !== t ? t : i
   }
   getSelectedSortOrder(e) {
     var t;
-    return null !== (t = p[e]) && void 0 !== t ? t : r.GuildJoinRequestSortOrders.TIMESTAMP_DESC
+    return null !== (t = b[e]) && void 0 !== t ? t : f.GuildJoinRequestSortOrders.TIMESTAMP_DESC
   }
   getSelectedGuildJoinRequest(e) {
     var t;
-    let s = y[e];
-    return null != s ? (t = s.joinRequestId, O.get(t)) : null
+    let n = G[e];
+    return null != n ? (t = n.joinRequestId, L.get(t)) : null
   }
 }
-n = "GuildJoinRequestStoreV2", (a = "displayName") in(_ = m) ? Object.defineProperty(_, a, {
-  value: n,
+s = "GuildJoinRequestStoreV2", (a = "displayName") in(r = B) ? Object.defineProperty(r, a, {
+  value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : _[a] = n, t.default = new m(u.default, {
+}) : r[a] = s, t.default = new B(_.default, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function(e) {
     let {
       joinRequest: t
     } = e;
-    R(t)
+    y(t)
   },
   GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function(e) {
     let {
       status: t,
-      requests: s,
-      total: E,
-      guildId: _
+      requests: n,
+      total: i,
+      guildId: r
     } = e;
-    if (D = !1, t === r.GuildJoinRequestApplicationStatuses.SUBMITTED) {
-      var a, n;
-      a = _, n = E, d[a] = n
-    }
-    s.forEach(e => {
-      R(e)
+    C = !1, t === f.GuildJoinRequestApplicationStatuses.SUBMITTED && p(r, i), n.forEach(e => {
+      y(e)
     })
   },
   GUILD_JOIN_REQUESTS_FETCH_START: function() {
-    D = !0
+    C = !0
   },
   GUILD_JOIN_REQUESTS_FETCH_FAILURE: function() {
-    D = !1
+    C = !1
   },
   GUILD_JOIN_REQUESTS_BULK_ACTION: function(e) {
     let {
       guildId: t,
-      action: s
+      action: n
     } = e;
-    O.values(c.GUILD_JOIN_REQUESTS_BY_STATUS(t, r.GuildJoinRequestApplicationStatuses.SUBMITTED)).forEach(e => {
-      R({
+    L.values(R.GUILD_JOIN_REQUESTS_BY_STATUS(t, f.GuildJoinRequestApplicationStatuses.SUBMITTED)).forEach(e => {
+      y({
         ...e,
-        applicationStatus: s
+        applicationStatus: n
       })
-    }), d[t] = 0
+    }), p(t, 0)
   },
-  GUILD_JOIN_REQUEST_CREATE: f,
-  GUILD_JOIN_REQUEST_UPDATE: f,
+  GUILD_JOIN_REQUEST_CREATE: P,
+  GUILD_JOIN_REQUEST_UPDATE: P,
   GUILD_JOIN_REQUEST_DELETE: function(e) {
-    var t, s;
+    var t, n;
     let {
-      id: E,
-      guildId: _
+      id: i,
+      guildId: r
     } = e;
-    let a = (t = E, O.get(t));
+    let a = (t = i, L.get(t));
     if (null != a) {
       ;
-      g(_, null, a.applicationStatus), s = E, delete P[s], O.delete(s), U.delete(s), C.delete(s)
+      O(r, null, a.applicationStatus), n = i, delete w[n], L.delete(n), v.delete(n), D.delete(n)
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function(e) {
     let {
       guildId: t,
-      applicationTab: s
+      applicationTab: n
     } = e;
-    s !== h[t] && (h[t] = s)
+    n !== U[t] && (U[t] = n)
   },
   GUILD_JOIN_REQUESTS_SET_SORT_ORDER: function(e) {
     var t;
     let {
-      guildId: s,
-      sortOrder: E
+      guildId: n,
+      sortOrder: i
     } = e;
-    if (E === p[s]) return;
-    p[s] = E;
-    let _ = null !== (t = h[s]) && void 0 !== t ? t : r.GuildJoinRequestApplicationStatuses.SUBMITTED;
-    "REVIEW_APPLICATION" !== _ && ((0, I.isActionedApplicationStatus)(_) && C.clear(), (0, I.isSubmittedApplicationStatus)(_) && U.clear())
+    if (i === b[n]) return;
+    b[n] = i;
+    let r = null !== (t = U[n]) && void 0 !== t ? t : f.GuildJoinRequestApplicationStatuses.SUBMITTED;
+    "REVIEW_APPLICATION" !== r && ((0, T.isActionedApplicationStatus)(r) && D.clear(), (0, T.isSubmittedApplicationStatus)(r) && v.clear())
   },
   GUILD_JOIN_REQUESTS_SET_SELECTED: function(e) {
     let {
       guildId: t,
-      request: s
+      request: n
     } = e;
-    y[t] = s
+    G[t] = n
   }
 })

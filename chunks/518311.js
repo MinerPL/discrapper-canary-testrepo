@@ -6,7 +6,7 @@ n.r(t), n.d(t, {
 }), n("411104"), n("653041"), n("47120");
 var a, l = n("735250"),
   s = n("470079"),
-  i = n("803997"),
+  i = n("120356"),
   r = n.n(i),
   o = n("392711"),
   u = n.n(o),
@@ -14,50 +14,50 @@ var a, l = n("735250"),
   c = n.n(d),
   f = n("873546"),
   h = n("442837"),
-  m = n("481060"),
-  p = n("570140"),
-  E = n("26151"),
-  C = n("493683"),
-  g = n("758059"),
-  S = n("447543"),
-  _ = n("708690"),
-  T = n("194359"),
-  I = n("425493"),
-  A = n("461745"),
+  m = n("115850"),
+  p = n("481060"),
+  E = n("570140"),
+  C = n("26151"),
+  g = n("493683"),
+  S = n("758059"),
+  _ = n("447543"),
+  T = n("708690"),
+  I = n("194359"),
+  A = n("425493"),
+  N = n("461745"),
   v = n("40851"),
-  N = n("367907"),
-  x = n("762914"),
-  M = n("43267"),
-  R = n("933557"),
+  x = n("367907"),
+  M = n("762914"),
+  R = n("43267"),
+  y = n("933557"),
   L = n("366980"),
-  y = n("703656"),
-  O = n("131704"),
-  j = n("592125"),
-  P = n("341165"),
-  D = n("544610"),
-  b = n("19780"),
-  U = n("306680"),
-  F = n("699516"),
-  w = n("246946"),
-  k = n("594174"),
+  O = n("703656"),
+  j = n("131704"),
+  P = n("592125"),
+  D = n("341165"),
+  b = n("544610"),
+  U = n("19780"),
+  F = n("306680"),
+  w = n("699516"),
+  k = n("246946"),
+  B = n("594174"),
   H = n("285952"),
-  B = n("153124"),
-  G = n("917885"),
-  V = n("782089"),
+  G = n("153124"),
+  V = n("917885"),
   W = n("502568"),
   Y = n("626135"),
   z = n("572004"),
-  Z = n("585483"),
-  K = n("823379"),
-  X = n("709054"),
-  q = n("51144"),
+  K = n("585483"),
+  Z = n("823379"),
+  q = n("709054"),
+  X = n("51144"),
   Q = n("73752"),
   J = n("575464"),
   $ = n("981631"),
   ee = n("689938"),
-  et = n("109500"),
-  en = n("717897"),
-  ea = n("794711");
+  et = n("93923"),
+  en = n("12349"),
+  ea = n("611273");
 
 function el(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -67,8 +67,8 @@ function el(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let es = (0, B.uid)(),
-  ei = (0, B.uid)();
+let es = (0, G.uid)(),
+  ei = (0, G.uid)();
 
 function er(e) {
   let {
@@ -90,26 +90,26 @@ let eo = e => {
     let {
       channel: n,
       onClose: a
-    } = e, s = null !== (t = (0, R.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([U.default], () => {
+    } = e, s = null !== (t = (0, y.default)(n)) && void 0 !== t ? t : "", i = (0, h.useStateFromStores)([F.default], () => {
       var e;
-      return null !== (e = U.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
+      return null !== (e = F.default.lastMessageId(n.id)) && void 0 !== e ? e : n.id
     });
-    return (0, l.jsx)(m.Clickable, {
+    return (0, l.jsx)(p.Clickable, {
       onClick: () => {
-        (0, y.transitionToGuild)($.ME, n.id), a()
+        (0, O.transitionToGuild)($.ME, n.id), a()
       },
       children: (0, l.jsxs)("div", {
         className: et.confirmChannelItemContainer,
-        children: [(0, l.jsx)(m.Avatar, {
-          src: (0, M.getChannelIconURL)(n),
-          size: m.AvatarSizes.SIZE_24,
+        children: [(0, l.jsx)(p.Avatar, {
+          src: (0, R.getChannelIconURL)(n),
+          size: p.AvatarSizes.SIZE_24,
           "aria-label": s
         }), (0, l.jsx)("span", {
           className: et.confirmChannelName,
           children: s
         }), (0, l.jsx)("span", {
           className: et.lastActiveTimestamp,
-          children: c()(X.default.extractTimestamp(i)).fromNow()
+          children: c()(q.default.extractTimestamp(i)).fromNow()
         })]
       })
     })
@@ -119,27 +119,27 @@ let eo = e => {
       onConfirm: t,
       channelIds: n,
       ...a
-    } = e, s = (0, h.useStateFromStoresArray)([j.default], () => Array.from(n).map(j.default.getChannel), [n]);
-    return (0, l.jsxs)(m.ConfirmModal, {
+    } = e, s = (0, h.useStateFromStoresArray)([P.default], () => Array.from(n).map(P.default.getChannel), [n]);
+    return (0, l.jsxs)(p.ConfirmModal, {
       header: ee.default.Messages.GROUP_DM_INVITE_CONFIRM,
       confirmText: ee.default.Messages.GROUP_DM_INVITE_CONFIRM_BUTTON,
       cancelText: ee.default.Messages.CANCEL,
       onConfirm: t,
-      confirmButtonColor: m.Button.Colors.BRAND,
+      confirmButtonColor: p.Button.Colors.BRAND,
       ...a,
-      children: [(0, l.jsx)(m.Text, {
+      children: [(0, l.jsx)(p.Text, {
         variant: "text-md/normal",
         children: ee.default.Messages.GROUP_DM_INVITE_CONFIRM_DESCRIPTION
-      }), (0, l.jsx)(m.FormTitle, {
+      }), (0, l.jsx)(p.FormTitle, {
         className: et.selectExistingFormHeader,
         children: ee.default.Messages.GROUP_DM_INVITE_SELECT_EXISTING
-      }), (0, l.jsx)(m.Scroller, {
+      }), (0, l.jsx)(p.Scroller, {
         className: et.confirmInviteScroller,
-        children: s.filter(K.isNotNullish).sort((e, t) => {
+        children: s.filter(Z.isNotNullish).sort((e, t) => {
           var n, a;
           let l = null !== (n = e.lastMessageId) && void 0 !== n ? n : e.id,
             s = null !== (a = t.lastMessageId) && void 0 !== a ? a : t.id;
-          return X.default.compare(s, l)
+          return q.default.compare(s, l)
         }).map(e => (0, l.jsx)(eo, {
           onClose: a.onClose,
           channel: e
@@ -152,8 +152,8 @@ class ed extends(a = s.PureComponent) {
     let {
       channel: e
     } = this.props;
-    p.default.wait(() => _.default.open(null == e ? void 0 : e.id));
-    let t = (0, N.collectChannelAnalyticsMetadata)(e);
+    E.default.wait(() => T.default.open(null == e ? void 0 : e.id));
+    let t = (0, x.collectChannelAnalyticsMetadata)(e);
     null != e ? e.isDM() ? Y.default.track($.AnalyticEvents.OPEN_POPOUT, {
       ...t,
       type: "Add Friends to DM",
@@ -167,10 +167,10 @@ class ed extends(a = s.PureComponent) {
       ...t,
       type: "New Group DM",
       source: "Friends List"
-    }), Z.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), Z.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
+    }), K.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.subscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown)
   }
   componentWillUnmount() {
-    Z.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), Z.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), p.default.wait(() => _.default.close())
+    K.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_UP, this.scrollPageUp), K.ComponentDispatch.unsubscribe($.ComponentActions.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), E.default.wait(() => T.default.close())
   }
   isNotFriends() {
     let {
@@ -179,7 +179,7 @@ class ed extends(a = s.PureComponent) {
     if (null == e || !e.isDM()) return !1;
     let t = e.getRecipientId();
     if (null == t) throw Error("no recipient in DM");
-    return !F.default.isFriend(t)
+    return !w.default.isFriend(t)
   }
   createInvite() {
     let {
@@ -193,7 +193,7 @@ class ed extends(a = s.PureComponent) {
     }, {
       autoTrackExposure: !1
     });
-    S.default.createInvite(e.id, {
+    _.default.createInvite(e.id, {
       max_age: t
     }, $.InstantInviteSources.GROUP_DM)
   }
@@ -206,7 +206,7 @@ class ed extends(a = s.PureComponent) {
   getMaxParticipants() {
     let {
       channel: e
-    } = this.props, t = k.default.getCurrentUser();
+    } = this.props, t = B.default.getCurrentUser();
     return null != t && t.isStaff() ? $.MAX_GROUP_DM_STAFF_PARTICIPANTS : null != e && e.isBroadcastChannel() ? $.MAX_GROUP_DM_BROADCAST_PARTICIPANTS : null != e && e.userLimit > 0 ? e.userLimit : $.MAX_GROUP_DM_PARTICIPANTS
   }
   getRemaining() {
@@ -221,7 +221,7 @@ class ed extends(a = s.PureComponent) {
       channel: e,
       selectedUsers: t
     } = this.props, n = this.getRemaining(), a = null != e && 0 === t.size || n < 0, s = t.size > 1 ? ee.default.Messages.CREATE_GROUP_DM : ee.default.Messages.CREATE_DM;
-    return (0, l.jsx)(m.Button, {
+    return (0, l.jsx)(p.Button, {
       fullWidth: !0,
       disabled: a,
       onClick: this.handleInviteUsers,
@@ -238,8 +238,8 @@ class ed extends(a = s.PureComponent) {
       a = 0 === t.size || n < 0;
     return (0, l.jsx)("div", {
       className: et.addButton,
-      children: (0, l.jsx)(m.Button, {
-        size: m.Button.Sizes.SMALL,
+      children: (0, l.jsx)(p.Button, {
+        size: p.Button.Sizes.SMALL,
         disabled: a,
         onClick: this.handleInviteUsers,
         children: ee.default.Messages.ADD
@@ -254,7 +254,7 @@ class ed extends(a = s.PureComponent) {
       }) : ee.default.Messages.GROUP_DM_INVITE_REMAINING.format({
         number: e
       });
-    return (0, l.jsx)(m.Text, {
+    return (0, l.jsx)(p.Text, {
       variant: "text-xs/normal",
       className: r()(et.subtitle, {
         [et.subtitleWarning]: e < 0
@@ -274,17 +274,17 @@ class ed extends(a = s.PureComponent) {
     if (!n || this.isNotFriends()) return null;
     let o = [];
     return i.forEach(e => {
-      let t = k.default.getUser(e);
-      null != t && o.push(q.default.getName(t))
+      let t = B.default.getUser(e);
+      null != t && o.push(X.default.getName(t))
     }), (0, l.jsxs)(H.default, {
       className: r()(et.searchBar, ea.marginTop20),
-      children: [(0, l.jsx)(A.default, {
+      children: [(0, l.jsx)(N.default, {
         ref: this.searchBarRef,
         className: et.searchBarComponent,
         autoFocus: !0,
         placeholder: 0 === i.size ? ee.default.Messages.GROUP_DM_SEARCH_PLACEHOLDER : void 0,
         disabled: this.isPartyFull(),
-        size: A.default.Sizes.MEDIUM,
+        size: N.default.Sizes.MEDIUM,
         query: t,
         selectedRow: s,
         sections: [null !== (e = null == a ? void 0 : a.length) && void 0 !== e ? e : 0],
@@ -305,12 +305,12 @@ class ed extends(a = s.PureComponent) {
   renderHeader() {
     let e = null != this.scrollerRef.current && this.state.separator,
       t = this.isNotFriends() ? ee.default.Messages.GROUP_DM_ADD_FRIENDS : ee.default.Messages.GROUP_DM_HEADER;
-    return (0, l.jsxs)(m.ModalHeader, {
+    return (0, l.jsxs)(p.ModalHeader, {
       direction: H.default.Direction.VERTICAL,
       align: H.default.Align.STRETCH,
       className: et.__invalid_header,
       separator: e,
-      children: [f.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(m.Heading, {
+      children: [f.isMobile ? this.renderMobileCloseButton() : null, (0, l.jsx)(p.Heading, {
         id: es,
         variant: "heading-lg/semibold",
         children: t
@@ -326,18 +326,18 @@ class ed extends(a = s.PureComponent) {
     if (this.isNotFriends()) {
       let t = null != e ? e.getRecipientId() : null;
       if (null == t) throw Error("no recipient in DM");
-      let n = k.default.getUser(t),
+      let n = B.default.getUser(t),
         a = null != n ? n.username : "",
-        s = null != n && F.default.getRelationshipType(n.id) === $.RelationshipTypes.PENDING_OUTGOING;
+        s = null != n && w.default.getRelationshipType(n.id) === $.RelationshipTypes.PENDING_OUTGOING;
       return (0, l.jsxs)(er, {
         className: et.notFriends,
         children: [(0, l.jsx)("div", {
           children: ee.default.Messages.GROUP_DM_INVITE_NOT_FRIENDS.format({
             username: a
           })
-        }), (0, l.jsx)(m.Button, {
+        }), (0, l.jsx)(p.Button, {
           disabled: s,
-          size: m.Button.Sizes.SMALL,
+          size: p.Button.Sizes.SMALL,
           onClick: () => null != n ? this.handleAddFriend(n) : null,
           className: ea.marginTop20,
           children: s ? ee.default.Messages.ADD_FRIEND_BUTTON_AFTER : ee.default.Messages.ADD_FRIEND_BUTTON
@@ -358,7 +358,7 @@ class ed extends(a = s.PureComponent) {
       children: (0, l.jsx)("div", {
         children: ee.default.Messages.GROUP_DM_INVITE_EMPTY
       })
-    }) : (0, l.jsx)(m.List, {
+    }) : (0, l.jsx)(p.List, {
       ref: this.scrollerRef,
       sections: [n.length],
       className: et.scroller,
@@ -379,11 +379,11 @@ class ed extends(a = s.PureComponent) {
       className: et.noFriends,
       children: [(0, l.jsx)("div", {
         children: ee.default.Messages.GROUP_DM_INVITE_NO_FRIENDS
-      }), (0, l.jsx)(m.Button, {
+      }), (0, l.jsx)(p.Button, {
         autoFocus: !0,
-        color: m.Button.Colors.GREEN,
+        color: p.Button.Colors.GREEN,
         fullWidth: !0,
-        size: m.Button.Sizes.SMALL,
+        size: p.Button.Sizes.SMALL,
         onClick: this.handleAddFriendNavigation,
         className: ea.marginTop20,
         children: ee.default.Messages.ADD_FRIEND
@@ -404,7 +404,7 @@ class ed extends(a = s.PureComponent) {
     if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return null;
     let i = null != t ? (0, L.default)(t.code) : "";
     return (0, l.jsxs)(s.Fragment, {
-      children: [(0, l.jsx)(m.FormTitle, {
+      children: [(0, l.jsx)(p.FormTitle, {
         tag: "h5",
         className: ea.marginBottom8,
         children: ee.default.Messages.GROUP_DM_INVITE_LINK_TITLE
@@ -414,7 +414,7 @@ class ed extends(a = s.PureComponent) {
         }),
         justify: H.default.Justify.BETWEEN,
         align: H.default.Align.CENTER,
-        children: [i.length > 0 ? (0, l.jsx)(m.TextInput, {
+        children: [i.length > 0 ? (0, l.jsx)(p.TextInput, {
           className: et.copyInput,
           name: "invite",
           value: n ? ee.default.Messages.INSTANT_INVITE_HIDDEN : i,
@@ -422,7 +422,7 @@ class ed extends(a = s.PureComponent) {
           inputClassName: et.input,
           spellCheck: "false",
           onClick: e => e.currentTarget.select()
-        }) : (0, l.jsx)(m.TextInput, {
+        }) : (0, l.jsx)(p.TextInput, {
           className: et.copyInput,
           name: "invite",
           value: i,
@@ -431,20 +431,20 @@ class ed extends(a = s.PureComponent) {
           inputClassName: et.input,
           spellCheck: "false",
           onClick: () => this.createInvite()
-        }), z.SUPPORTS_COPY && i.length > 0 ? (0, l.jsx)(m.Button, {
-          size: m.Button.Sizes.SMALL,
-          color: a ? m.Button.Colors.GREEN : m.Button.Colors.BRAND,
+        }), z.SUPPORTS_COPY && i.length > 0 ? (0, l.jsx)(p.Button, {
+          size: p.Button.Sizes.SMALL,
+          color: a ? p.Button.Colors.GREEN : p.Button.Colors.BRAND,
           className: et.copyButton,
           onClick: () => this.handleCopyInvite(i),
           children: a ? ee.default.Messages.INVITE_COPIED : ee.default.Messages.COPY
-        }) : null, 0 === i.length ? (0, l.jsx)(m.Button, {
-          size: m.Button.Sizes.SMALL,
-          color: m.Button.Colors.BRAND,
+        }) : null, 0 === i.length ? (0, l.jsx)(p.Button, {
+          size: p.Button.Sizes.SMALL,
+          color: p.Button.Colors.BRAND,
           className: et.copyButton,
           onClick: () => this.createInvite(),
           children: ee.default.Messages.GROUP_DM_INVITE_LINK_CREATE
         }) : null]
-      }), i.length > 0 ? (0, l.jsx)(m.Text, {
+      }), i.length > 0 ? (0, l.jsx)(p.Text, {
         variant: "text-xs/normal",
         className: r()(ea.marginTop8, et.footerText),
         children: ee.default.Messages.INVITE_EXPIRES_HOURS.format({
@@ -474,15 +474,15 @@ class ed extends(a = s.PureComponent) {
     let {
       transitionState: e
     } = this.props;
-    return (0, l.jsxs)(m.ModalRoot, {
-      transitionState: null != e ? e : m.ModalTransitionState.ENTERED,
+    return (0, l.jsxs)(p.ModalRoot, {
+      transitionState: null != e ? e : p.ModalTransitionState.ENTERED,
       className: et.popout,
       children: [this.renderHeader(), this.renderBody(), this.renderFooter()]
     })
   }
   handleAddFriend(e) {
-    this.props.onClose(), T.default.sendRequest({
-      discordTag: q.default.getUserTag(e, {
+    this.props.onClose(), I.default.sendRequest({
+      discordTag: X.default.getUserTag(e, {
         identifiable: "always"
       }),
       context: {
@@ -507,10 +507,10 @@ class ed extends(a = s.PureComponent) {
     }), el(this, "renderMobileCloseButton", () => (0, l.jsx)("div", {
       className: r()(et.mobileToolsContainer),
       ref: this._mobileCloseRef,
-      children: (0, l.jsx)(m.FocusRingScope, {
+      children: (0, l.jsx)(p.FocusRingScope, {
         containerRef: this._mobileCloseRef,
         children: (0, l.jsx)("div", {
-          children: (0, l.jsx)(I.default, {
+          children: (0, l.jsx)(A.default, {
             className: et.mobileToolsCloseIcon,
             closeAction: this.props.onClose,
             keybind: "ESC"
@@ -556,15 +556,15 @@ class ed extends(a = s.PureComponent) {
       let e = this.searchBarRef.current;
       null == e || e.focus()
     }), el(this, "focusResult", e => {
-      _.default.select(e)
+      T.default.select(e)
     }), el(this, "handleSelect", (e, t) => {
       let {
         results: n,
         channel: a
       } = this.props;
-      null == t ? _.default.clear(null == a ? void 0 : a.id) : null != n && this.handleClick(n[t].user.id)
+      null == t ? T.default.clear(null == a ? void 0 : a.id) : null != n && this.handleClick(n[t].user.id)
     }), el(this, "handleSelectionChange", (e, t) => {
-      _.default.select(t);
+      T.default.select(t);
       let n = this.scrollerRef.current;
       null != n && n.scrollToIndex({
         section: e,
@@ -575,35 +575,35 @@ class ed extends(a = s.PureComponent) {
       let {
         channel: t
       } = this.props;
-      _.default.search(e, null == t ? void 0 : t.id)
+      T.default.search(e, null == t ? void 0 : t.id)
     }), el(this, "handleRemoveUser", e => {
       let t = Array.from(this.props.selectedUsers);
-      _.default.removeUser(t[e]), this.forceFocus()
+      T.default.removeUser(t[e]), this.forceFocus()
     }), el(this, "handleClick", e => {
       let {
         selectedUsers: t,
         query: n,
         channel: a
       } = this.props;
-      t.has(e) ? _.default.removeUser(e) : (_.default.addUser(e), n.length > 0 && _.default.clear(null == a ? void 0 : a.id)), this.forceFocus()
+      t.has(e) ? T.default.removeUser(e) : (T.default.addUser(e), n.length > 0 && T.default.clear(null == a ? void 0 : a.id)), this.forceFocus()
     }), el(this, "handleAddFriendNavigation", () => {
-      (0, y.transitionTo)($.Routes.FRIENDS), g.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
+      (0, O.transitionTo)($.Routes.FRIENDS), S.default.setSection($.FriendsSections.ADD_FRIEND), this.props.onClose()
     }), el(this, "handleScroll", () => {
       let e = this.scrollerRef.current;
       null != e && this.setState({
         separator: !e.isScrolledToTop()
       })
     }), el(this, "createNewDM", e => {
-      C.default.openPrivateChannel(e, !1, !1, "New Group DM")
+      g.default.openPrivateChannel(e, !1, !1, "New Group DM")
     }), el(this, "pushToExistingDM", (e, t) => {
-      let n = b.default.getChannelId() === e.id;
-      C.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
+      let n = U.default.getChannelId() === e.id;
+      g.default.addRecipients(e.id, t, $.AnalyticsLocations.ADD_FRIENDS_TO_DM).then(a => {
         if (n) {
           if (e.isDM() && a !== e.id) {
-            E.default.call(a, !1, !0);
+            C.default.call(a, !1, !0);
             return
           }
-          E.default.ring(a, t)
+          C.default.ring(a, t)
         }
       })
     }), el(this, "handleInviteUsers", () => {
@@ -614,18 +614,18 @@ class ed extends(a = s.PureComponent) {
       } = this.props, a = Array.from(t);
       if (null != e) {
         let t = eh(Array.from(new Set([...e.recipients, ...a])));
-        t.size > 0 ? (0, m.openModal)(n => (0, l.jsx)(eu, {
+        t.size > 0 ? (0, p.openModal)(n => (0, l.jsx)(eu, {
           ...n,
           onConfirm: () => this.pushToExistingDM(e, a),
           channelIds: t
-        }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, a)
+        }), {}, (0, p.modalContextFromAppContext)(this.context.appContext)) : this.pushToExistingDM(e, a)
       } else {
         let e = eh(a);
-        a.length > 1 && e.size > 0 ? (0, m.openModal)(t => (0, l.jsx)(eu, {
+        a.length > 1 && e.size > 0 ? (0, p.openModal)(t => (0, l.jsx)(eu, {
           ...t,
           onConfirm: () => this.createNewDM(a),
           channelIds: e
-        }), {}, (0, m.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(a)
+        }), {}, (0, p.modalContextFromAppContext)(this.context.appContext)) : this.createNewDM(a)
       }
       n()
     }), el(this, "handleCopyInvite", e => {
@@ -650,15 +650,15 @@ class ed extends(a = s.PureComponent) {
   }
 }
 el(ed, "contextType", v.default);
-let ec = h.default.connectStores([D.default, P.default, w.default], e => {
+let ec = h.default.connectStores([b.default, D.default, k.default], e => {
   let t, {
     channel: n
   } = e;
-  return null != n && null != (t = P.default.getInvite(n.id)) && t.isExpired() && (t = null), {
-    ...D.default.getState(),
+  return null != n && null != (t = D.default.getInvite(n.id)) && t.isExpired() && (t = null), {
+    ...b.default.getState(),
     invite: t,
-    hideDiscriminator: w.default.hidePersonalInformation,
-    hideInstantInvites: w.default.hideInstantInvites
+    hideDiscriminator: k.default.hidePersonalInformation,
+    hideInstantInvites: k.default.hideInstantInvites
   }
 })(ed);
 
@@ -672,10 +672,10 @@ function ef(e) {
     popoutPosition: o = "bottom",
     popoutAlign: u = "right",
     subscribeToGlobalHotkey: d = !1
-  } = e, [c, f] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, x.useIsBroadcastingGDM)(null == t ? void 0 : t.id), p = s.useCallback(() => f(e => !e), []);
-  return (s.useEffect(() => (d && Z.ComponentDispatch.subscribe($.ComponentActions.TOGGLE_DM_CREATE, p), () => {
-    Z.ComponentDispatch.unsubscribe($.ComponentActions.TOGGLE_DM_CREATE, p)
-  }), [d, p]), h) ? null : (0, l.jsx)(m.Popout, {
+  } = e, [c, f] = s.useState(null != t && t.isGroupDM() && 0 === t.recipients.length), h = (0, M.useIsBroadcastingGDM)(null == t ? void 0 : t.id), E = s.useCallback(() => f(e => !e), []);
+  return (s.useEffect(() => (d && K.ComponentDispatch.subscribe($.ComponentActions.TOGGLE_DM_CREATE, E), () => {
+    K.ComponentDispatch.unsubscribe($.ComponentActions.TOGGLE_DM_CREATE, E)
+  }), [d, E]), h) ? null : (0, l.jsx)(p.Popout, {
     renderPopout: e => (0, l.jsx)(ec, {
       ...e,
       onClose: e.closePopout,
@@ -685,11 +685,11 @@ function ef(e) {
     shouldShow: c,
     align: u,
     onRequestClose: () => f(!1),
-    animation: m.Popout.Animation.NONE,
+    animation: p.Popout.Animation.NONE,
     children: e => (0, l.jsx)(W.default.Icon, {
       ...e,
-      onClick: p,
-      icon: null != a ? a : null == t ? G.default : V.default,
+      onClick: E,
+      icon: null != a ? a : null == t ? V.default : m.GroupPlusIcon,
       className: n,
       iconClassName: n,
       tooltip: i,
@@ -700,7 +700,7 @@ function ef(e) {
 
 function eh(e) {
   let t = em(e);
-  return new Set(u()(j.default.getMutablePrivateChannels()).values().filter(e => (0, O.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
+  return new Set(u()(P.default.getMutablePrivateChannels()).values().filter(e => (0, j.isMultiUserDM)(e.type)).filter(e => em(e.recipients) === t).map(e => e.id).value())
 }
 
 function em(e) {

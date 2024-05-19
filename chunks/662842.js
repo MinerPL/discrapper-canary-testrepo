@@ -16,50 +16,50 @@ var a, s, l = n("735250"),
   h = n("471445"),
   _ = n("15274"),
   C = n("924301"),
-  S = n("504160"),
-  m = n("151864"),
+  m = n("504160"),
+  S = n("151864"),
   p = n("725436"),
-  I = n("497656"),
-  T = n("554747"),
-  g = n("230900"),
+  g = n("497656"),
+  I = n("554747"),
+  T = n("230900"),
   A = n("854698"),
   N = n("703656"),
   v = n("922482"),
   R = n("565799"),
-  L = n("501655"),
-  O = n("427679"),
+  O = n("501655"),
+  L = n("427679"),
   M = n("448206"),
-  P = n("484459"),
-  y = n("103575"),
+  y = n("484459"),
+  P = n("103575"),
   x = n("496675"),
   D = n("594174"),
   b = n("465670"),
   U = n("242315"),
   j = n("662868"),
   G = n("393112"),
-  w = n("170039"),
-  k = n("898140"),
-  F = n("981631"),
-  B = n("765305"),
+  k = n("170039"),
+  w = n("898140"),
+  B = n("981631"),
+  F = n("765305"),
   H = n("689938"),
-  V = n("613682");
+  V = n("53116");
 (s = a || (a = {}))[s.STAGE = 0] = "STAGE", s[s.EVENT_EXTERNAL = 1] = "EVENT_EXTERNAL", s[s.EVENT_VOICE = 2] = "EVENT_VOICE", s[s.STUDY_ROOM = 3] = "STUDY_ROOM";
 
 function Y(e) {
   let {
     guild: t,
     isStudyRoomNotice: n = !1
-  } = e, a = (0, I.useActiveEventOrStageInstanceChannel)(t.id), s = (0, T.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([O.default], () => O.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
+  } = e, a = (0, g.useActiveEventOrStageInstanceChannel)(t.id), s = (0, I.useGuildActiveEvent)(t.id), r = (0, u.useStateFromStores)([L.default], () => L.default.getStageInstanceByChannel(null == a ? void 0 : a.id), [a]), {
     isStageNoticeHidden: Y,
     isEventNoticeHidden: W
-  } = (0, u.useStateFromStoresObject)([m.default], () => ({
-    isStageNoticeHidden: m.default.isLiveChannelNoticeHidden({
+  } = (0, u.useStateFromStoresObject)([S.default], () => ({
+    isStageNoticeHidden: S.default.isLiveChannelNoticeHidden({
       stageId: null == r ? void 0 : r.id
     }),
-    isEventNoticeHidden: m.default.isLiveChannelNoticeHidden({
+    isEventNoticeHidden: S.default.isLiveChannelNoticeHidden({
       eventId: null == s ? void 0 : s.id
     })
-  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, L.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, L.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(F.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
+  }), [r, s]), K = null == a ? void 0 : a.id, z = (0, u.useStateFromStoresArray)([R.default], () => [...new Set(R.default.getMutableParticipants(K, O.StageChannelParticipantNamedIndex.SPEAKER).map(e => e.user))], [K]), q = (0, u.useStateFromStores)([R.default], () => null != K ? R.default.getParticipantCount(K, O.StageChannelParticipantNamedIndex.AUDIENCE) : 0, [K]), Q = (0, u.useStateFromStores)([x.default], () => x.default.can(B.Permissions.CONNECT, a)), Z = (0, M.default)(null == a ? void 0 : a.id), X = null == s ? void 0 : s.creator_id, J = (0, u.useStateFromStores)([D.default], () => D.default.getUser(X), [X]);
   i.useEffect(() => {
     null != X && (0, f.getUser)(X)
   }, [X]);
@@ -86,7 +86,7 @@ function Y(e) {
       isEventNoticeHidden: d,
       isStageNoticeHidden: f,
       isStudyRoomNotice: E
-    } = e, _ = null != n && null != a && !f, m = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
+    } = e, _ = null != n && null != a && !f, S = null != t ? (0, A.getNextRecurrenceIdInEvent)(t) : null;
     if (E && null != a) {
       let e = (0, h.getChannelIconComponent)(a);
       return {
@@ -111,14 +111,14 @@ function Y(e) {
           noticeType: 0,
           title: n.topic,
           location: a.name,
-          locationIcon: (0, l.jsx)(w.default, {
+          locationIcon: (0, l.jsx)(k.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
           }),
           canListenIn: s,
           buttonText: e,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -138,20 +138,20 @@ function Y(e) {
         }
       }
     } else {
-      if (t.entity_type === B.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _) {
+      if (t.entity_type === F.GuildScheduledEventEntityTypes.STAGE_INSTANCE && _) {
         let e = H.default.Messages.STAGE_CHANNEL_JOIN_BUTTON;
         return (null == i ? void 0 : i.speaker) ? e = H.default.Messages.STAGE_CHANNEL_JOINED_SPEAKER_BUTTON : null != i && (e = H.default.Messages.STAGE_CHANNEL_JOINED_AUDIENCE_BUTTON), {
           noticeType: 0,
           title: n.topic,
           location: a.name,
-          locationIcon: (0, l.jsx)(w.default, {
+          locationIcon: (0, l.jsx)(k.default, {
             width: 16,
             height: 16,
             className: V.locationIcon
           }),
           canListenIn: s,
           buttonText: e,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             stageId: null == n ? void 0 : n.id
           }),
           users: o.length > 5 ? o.slice(0, 5) : o,
@@ -170,12 +170,12 @@ function Y(e) {
           })
         }
       }
-      if (t.entity_type === B.GuildScheduledEventEntityTypes.EXTERNAL) {
-        let e = (0, g.getLocationFromEvent)(t);
+      if (t.entity_type === F.GuildScheduledEventEntityTypes.EXTERNAL) {
+        let e = (0, T.getLocationFromEvent)(t);
         if (null == e) return {
           noticeType: null
         };
-        let n = C.default.getUserCount(t.id, m);
+        let n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 1,
           title: t.name,
@@ -187,13 +187,13 @@ function Y(e) {
           }),
           canListenIn: !1,
           buttonText: H.default.Messages.GUILD_EVENT_DETAILS_INFO_TAB_TITLE,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
           overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
             className: V.pill,
-            children: [(0, l.jsx)(k.default, {
+            children: [(0, l.jsx)(w.default, {
               width: 12,
               height: 12,
               className: V.pillIcon
@@ -205,9 +205,9 @@ function Y(e) {
             })]
           })
         }
-      } else if (t.entity_type === B.GuildScheduledEventEntityTypes.VOICE && null != a) {
+      } else if (t.entity_type === F.GuildScheduledEventEntityTypes.VOICE && null != a) {
         let e = (0, h.getChannelIconComponent)(a),
-          n = C.default.getUserCount(t.id, m);
+          n = C.default.getUserCount(t.id, S);
         return {
           noticeType: 2,
           title: t.name,
@@ -219,13 +219,13 @@ function Y(e) {
           }) : null,
           canListenIn: s,
           buttonText: H.default.Messages.GUILD_EVENT_JOIN,
-          onClose: () => (0, S.hideLiveChannelNotice)({
+          onClose: () => (0, m.hideLiveChannelNotice)({
             eventId: null == t ? void 0 : t.id
           }),
           users: null == r ? [] : [r],
           overflowUsers: n < 1 ? null : (0, l.jsxs)("div", {
             className: V.pill,
-            children: [(0, l.jsx)(k.default, {
+            children: [(0, l.jsx)(w.default, {
               width: 12,
               height: 12,
               className: V.pillIcon
@@ -278,13 +278,14 @@ function Y(e) {
     }), (el.length > 0 || null != ei) && (0, l.jsxs)("div", {
       className: V.participants,
       children: [el.map(e => (0, l.jsx)(c.Popout, {
-        preload: () => (0, P.maybeFetchUserProfileForPopout)(e, {
+        preload: () => (0, y.maybeFetchUserProfileForPopout)(e, {
           guildId: t.id
         }),
-        renderPopout: t => (0, l.jsx)(y.default, {
-          ...t,
+        renderPopout: n => (0, l.jsx)(P.default, {
+          ...n,
           location: "LiveChannelNotice",
           userId: e.id,
+          guildId: t.id,
           newAnalyticsLocations: [E.default.AVATAR]
         }),
         position: "right",

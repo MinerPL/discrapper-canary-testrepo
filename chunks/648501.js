@@ -16,20 +16,20 @@ var a = n("442837"),
   c = n("601070"),
   f = n("430824"),
   h = n("496675"),
-  C = n("306680"),
-  p = n("979651"),
-  m = n("26290"),
+  m = n("306680"),
+  C = n("979651"),
+  p = n("26290"),
   g = n("968358"),
   E = n("790901"),
-  S = n("714794"),
-  _ = n("355363"),
+  _ = n("714794"),
+  S = n("355363"),
   I = n("687352"),
   N = n("135724"),
   T = n("25601"),
   A = n("981631"),
   L = n("490897"),
   v = n("689938"),
-  x = n("15545");
+  x = n("658609");
 
 function R(e) {
   var t;
@@ -37,56 +37,56 @@ function R(e) {
     channel: n,
     isChannelSelected: R,
     isChannelCollapsed: M,
-    voiceStates: O,
-    enableConnectedUserLimit: y,
+    voiceStates: y,
+    enableConnectedUserLimit: O,
     enableActivities: D,
     isSubscriptionGated: b,
     needSubscriptionToAccess: j,
-    isNewChannel: G,
-    muted: U,
-    resolvedUnreadSetting: P
-  } = e, w = (0, a.useStateFromStores)([C.default], () => C.default.getMentionCount(n.id)), F = (0, r.default)(n), B = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), V = (0, a.useStateFromStores)([p.default], () => p.default.hasVideo(n.id)), H = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, _.default)({
+    isNewChannel: P,
+    muted: G,
+    resolvedUnreadSetting: U
+  } = e, w = (0, a.useStateFromStores)([m.default], () => m.default.getMentionCount(n.id)), B = (0, r.default)(n), F = (0, a.useStateFromStores)([h.default], () => !h.default.can(A.Permissions.CONNECT, n)), H = (0, a.useStateFromStores)([C.default], () => C.default.hasVideo(n.id)), V = (0, d.useStageHasMedia)(n.id) && n.isGuildStageVoice(), k = (0, S.default)({
     channel: n,
-    locked: B,
-    video: V || H,
+    locked: F,
+    video: H || V,
     selected: R
-  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), K = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), W = (0, a.useStateFromStores)([f.default], () => {
+  }), Y = (0, a.useStateFromStores)([c.default], () => c.default.getNewThreadCount(n.guild_id, n.id)), W = (0, o.useUnreadThreadsCountForParent)(n.guild_id, n.id), K = (0, a.useStateFromStores)([f.default], () => {
     var e, t;
     return null !== (t = null === (e = f.default.getGuild(n.guild_id)) || void 0 === e ? void 0 : e.hasFeature(A.GuildFeatures.COMMUNITY)) && void 0 !== t && t
   });
-  if ((0, S.default)(w)) return (0, l.jsx)(T.default, {
+  if ((0, _.default)(w)) return (0, l.jsx)(T.default, {
     mentionsCount: w
   });
   if ((0, u.showPremiumChannelIconButton)(b)) return (0, l.jsx)(u.default, {
     locked: j
   });
-  if (G) return (0, l.jsx)(m.TextBadge, {
+  if (P) return (0, l.jsx)(p.TextBadge, {
     text: v.default.Messages.NEW,
     color: s.default.unsafe_rawColors.BRAND_260.css,
     className: x.newChannel
   });
-  if (!U && P === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
+  if (!G && U === L.UnreadSetting.ALL_MESSAGES && n.isForumLikeChannel() && null != Y && Y > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-brand",
     children: v.default.Messages.CHANNEL_NEW_POSTS_LABEL.format({
-      count: (0, m.getBadgeCountString)(Y)
+      count: (0, p.getBadgeCountString)(Y)
     })
   });
-  if (!U && n.isForumLikeChannel() && null != K && K > 0) return (0, l.jsx)(i.Text, {
+  if (!G && n.isForumLikeChannel() && null != W && W > 0) return (0, l.jsx)(i.Text, {
     variant: "text-xs/semibold",
     color: "text-muted",
-    children: (0, m.getBadgeCountString)(K)
+    children: (0, p.getBadgeCountString)(W)
   });
-  let Z = null !== (t = null == O ? void 0 : O.length) && void 0 !== t ? t : 0;
-  return null != y && y && k ? (0, l.jsx)(N.default, {
-    userCount: Z,
-    video: V || H,
+  let z = null !== (t = null == y ? void 0 : y.length) && void 0 !== t ? t : 0;
+  return null != O && O && k ? (0, l.jsx)(N.default, {
+    userCount: z,
+    video: H || V,
     channel: n
-  }) : M && (0, g.hasStream)(O) && W ? (0, l.jsx)(m.TextBadge, {
+  }) : M && (0, g.hasStream)(y) && K ? (0, l.jsx)(p.TextBadge, {
     text: v.default.Messages.LIVE,
     color: s.default.unsafe_rawColors.RED_400.css
-  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(F) ? (0, l.jsx)(I.default, {
-    embeddedApps: F,
-    muted: U
+  }) : null != D && D && (0, E.showChannelItemEmbeddedActivities)(B) ? (0, l.jsx)(I.default, {
+    embeddedApps: B,
+    muted: G
   }) : null
 }

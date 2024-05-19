@@ -15,7 +15,7 @@ n("470079");
 var i = n("120356"),
   l = n.n(i),
   s = n("481060"),
-  o = n("43584");
+  o = n("675109");
 let u = {
     TERTIARY: o.tertiary,
     SECONDARY: o.secondary,
@@ -44,10 +44,10 @@ function c(e) {
     children: e => {
       let {
         onClick: a,
-        ...g
+        ...p
       } = e;
       return (0, r.jsx)(s.Clickable, {
-        ...g,
+        ...p,
         "aria-label": n,
         "aria-disabled": f,
         className: l()(t, o.button, i, u, {

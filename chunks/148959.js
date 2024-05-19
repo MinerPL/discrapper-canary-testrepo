@@ -26,26 +26,26 @@ class u extends o.default {
   updateAudioAndVideoStreamInfo(e, t) {
     this.audioSSRC = e, this.videoStreams = t, this.update()
   }
-  setGoLiveStreamFocused(e) {
-    this.focused = e, this.update()
+  setGoLiveStreamDowngraded(e) {
+    this.downgraded = e, this.update()
   }
   update() {
     let e = {
-      any: 50
+      any: 100
     };
     if (null != this.userId) {
       let t = [];
-      if (this.focused) {
+      if (this.downgraded) {
+        let n = s().minBy(this.videoStreams, e => e.quality);
+        null != n && (t.push(n.ssrc), e[n.ssrc] = 60)
+      } else {
         let n = s().maxBy(this.videoStreams, e => e.quality);
         null != n && (t.push(n.ssrc), e[n.ssrc] = 100)
-      } else {
-        let n = s().minBy(this.videoStreams, e => e.quality);
-        null != n && (t.push(n.ssrc), e[n.ssrc] = 50)
       }
       this.emit("requested-ssrcs-update", this.userId, this.audioSSRC, t), this.emit("requested-streams-update", e)
     }
   }
   constructor(...e) {
-    super(...e), l(this, "userId", void 0), l(this, "videoStreams", []), l(this, "audioSSRC", 0), l(this, "focused", !1)
+    super(...e), l(this, "userId", void 0), l(this, "videoStreams", []), l(this, "audioSSRC", 0), l(this, "downgraded", !1)
   }
 }

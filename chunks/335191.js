@@ -4,7 +4,7 @@ n.r(t), n.d(t, {
     return g
   },
   ConnectedUserAccount: function() {
-    return C
+    return R
   },
   ConnectedUserAccounts: function() {
     return L
@@ -31,13 +31,13 @@ var i = n("735250"),
   N = n("981631"),
   p = n("856651"),
   O = n("689938"),
-  R = n("677592");
+  C = n("16367");
 
-function C(e) {
+function R(e) {
   var t, n;
   let r, a, d, {
     connectedAccount: S,
-    theme: C,
+    theme: R,
     locale: g,
     userId: L,
     className: v,
@@ -71,7 +71,7 @@ function C(e) {
   let G = _.default.get((0, E.useLegacyPlatformType)(S.type)),
     w = null == G ? void 0 : null === (t = G.getPlatformUserUrl) || void 0 === t ? void 0 : t.call(G, S);
   null != M && M ? d = (0, i.jsx)(A.default, {
-    className: s()(R.__invalid_connectedAccountOpenIconContainer, R.connectedAccountHideIcon),
+    className: s()(C.__invalid_connectedAccountOpenIconContainer, C.connectedAccountHideIcon),
     foregroundColor: "currentColor"
   }) : null != w && (d = (0, i.jsx)(u.Anchor, {
     href: w,
@@ -86,49 +86,47 @@ function C(e) {
       }, e)
     },
     children: (0, i.jsx)(h.default, {
-      className: R.connectedAccountOpenIcon,
+      className: C.connectedAccountOpenIcon,
       direction: h.default.Directions.RIGHT
     })
   }));
-  let B = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
-    k = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
+  let k = (0, u.useToken)(o.default.colors.INTERACTIVE_MUTED).hex(),
+    B = (0, u.useToken)(o.default.colors.INTERACTIVE_ACTIVE).hex(),
     V = S.verified ? (0, i.jsx)(f.default, {
-      className: R.connectedAccountVerifiedIcon,
-      color: null != a ? a : B,
-      forcedIconColor: k,
+      className: C.connectedAccountVerifiedIcon,
+      color: null != a ? a : k,
+      forcedIconColor: B,
       size: 16,
       tooltipText: b
     }) : null;
   return (0, i.jsxs)("div", {
-    className: s()(R.connectedAccountContainer, null != r && r.length > 0 || null != P ? R.connectedAccountContainerWithMetadata : null, v),
+    className: s()(C.connectedAccountContainer, null != r && r.length > 0 || null != P ? C.connectedAccountContainerWithMetadata : null, v),
     children: [(0, i.jsxs)("div", {
-      className: R.connectedAccount,
+      className: C.connectedAccount,
       children: [(0, i.jsx)(u.Tooltip, {
         text: null == G ? void 0 : G.name,
-        color: u.TooltipColors.NESTED,
         children: e => (0, i.jsx)("img", {
           ...e,
           alt: O.default.Messages.IMG_ALT_LOGO.format({
             name: null == G ? void 0 : G.name
           }),
-          className: R.connectedAccountIcon,
-          src: (0, l.isThemeDark)(C) ? null == G ? void 0 : G.icon.darkSVG : null == G ? void 0 : G.icon.lightSVG
+          className: C.connectedAccountIcon,
+          src: (0, l.isThemeDark)(R) ? null == G ? void 0 : G.icon.darkSVG : null == G ? void 0 : G.icon.lightSVG
         })
       }), (0, i.jsxs)("div", {
-        className: R.connectedAccountNameContainer,
+        className: C.connectedAccountNameContainer,
         children: [(0, i.jsxs)("div", {
-          className: R.connectedAccountName,
+          className: C.connectedAccountName,
           children: [(0, i.jsxs)("div", {
-            className: R.connectedAccountNameTextContainer,
+            className: C.connectedAccountNameTextContainer,
             children: [(0, i.jsx)(u.Tooltip, {
               overflowOnly: !0,
               text: S.name,
-              color: u.TooltipColors.NESTED,
               children: e => (0, i.jsx)(u.Text, {
                 ...e,
                 variant: "text-md/semibold",
                 color: "interactive-active",
-                className: R.connectedAccountNameText,
+                className: C.connectedAccountNameText,
                 children: S.name
               })
             }), V]
@@ -142,7 +140,7 @@ function C(e) {
         }) : null]
       })]
     }), null != r && r.length > 0 ? (0, i.jsx)("div", {
-      className: R.connectedAccountChildren,
+      className: C.connectedAccountChildren,
       children: r
     }) : null]
   })
@@ -155,40 +153,40 @@ function g(e) {
     locale: r
   } = e, a = (0, T.generateRoleConnectionMetadataItems)(t, void 0, r);
   return (0, i.jsxs)("div", {
-    className: s()(R.connectedAccountContainer, null != a && a.length > 0 ? R.connectedAccountContainerWithMetadata : null, n),
+    className: s()(C.connectedAccountContainer, null != a && a.length > 0 ? C.connectedAccountContainerWithMetadata : null, n),
     children: [(0, i.jsx)("div", {
-      className: R.connectedAccount,
+      className: C.connectedAccount,
       children: (0, i.jsxs)("div", {
-        className: R.connectedAccountNameContainer,
+        className: C.connectedAccountNameContainer,
         children: [null != t.platform_name ? (0, i.jsx)(u.Text, {
           variant: "eyebrow",
           color: "interactive-normal",
           children: t.platform_name
         }) : null, null != t.platform_username ? (0, i.jsx)("div", {
-          className: R.connectedAccountName,
+          className: C.connectedAccountName,
           children: (0, i.jsx)("div", {
-            className: R.connectedAccountNameTextContainer,
+            className: C.connectedAccountNameTextContainer,
             children: (0, i.jsx)(u.Text, {
               variant: "text-md/semibold",
               color: "interactive-active",
-              className: R.connectedAccountNameText,
+              className: C.connectedAccountNameText,
               children: t.platform_username
             })
           })
         }) : null]
       })
     }), null != a && a.length > 0 ? (0, i.jsx)("div", {
-      className: s()(R.connectedAccountChildren, R.connectedAccountChildrenNoIcon),
+      className: s()(C.connectedAccountChildren, C.connectedAccountChildrenNoIcon),
       children: a
     }) : null, (0, i.jsx)("div", {
       children: (0, i.jsx)("div", {
-        className: R.connectedAccountPoweredBy,
+        className: C.connectedAccountPoweredBy,
         children: (0, i.jsx)(u.Text, {
           variant: "text-xs/normal",
           color: "text-muted",
           children: O.default.Messages.CONNECTIONS_PROFILE_POWERED_BY.format({
             applicationHook: () => (0, i.jsxs)("div", {
-              className: R.connectedAccountPoweredByText,
+              className: C.connectedAccountPoweredByText,
               children: [null != t.application.bot ? (0, i.jsx)(d.default, {
                 user: new S.default(t.application.bot),
                 size: u.AvatarSizes.SIZE_16
@@ -213,7 +211,7 @@ let L = r.forwardRef(function(e, t) {
     userId: l
   } = e;
   if (null == n || 0 === n.length) return null;
-  let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(C, {
+  let u = n.filter(e => _.default.isSupported(e.type)).map(e => (0, i.jsx)(R, {
       connectedAccount: e,
       theme: r,
       locale: a,
@@ -227,12 +225,12 @@ let L = r.forwardRef(function(e, t) {
   }
   return (0, i.jsxs)("div", {
     ref: t,
-    className: s()(R.connectedAccounts, o),
+    className: s()(C.connectedAccounts, o),
     children: [(0, i.jsx)("div", {
-      className: R.connectedAccountsColumn,
+      className: C.connectedAccountsColumn,
       children: d
     }), (0, i.jsx)("div", {
-      className: R.connectedAccountsColumn,
+      className: C.connectedAccountsColumn,
       children: c
     })]
   })

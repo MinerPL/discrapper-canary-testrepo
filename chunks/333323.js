@@ -6,7 +6,7 @@ a.r(t), a.d(t, {
 }), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("399606"),
   r = a("481060"),
@@ -16,8 +16,8 @@ var l = a("735250"),
   f = a("644080"),
   m = a("984370"),
   h = a("6025"),
-  g = a("433355"),
-  E = a("308570"),
+  E = a("433355"),
+  g = a("308570"),
   _ = a("626135"),
   I = a("526120"),
   x = a("563534"),
@@ -32,8 +32,8 @@ var l = a("735250"),
   M = a("176505"),
   D = a("369701"),
   F = a("689938"),
-  L = a("964682"),
-  R = a("121950");
+  L = a("253533"),
+  R = a("19340");
 let b = C.MIN_GUILD_HOME_PAGE_WIDTH + 300 + 64,
   G = n.memo(function(e) {
     let {
@@ -45,7 +45,7 @@ let b = C.MIN_GUILD_HOME_PAGE_WIDTH + 300 + 64,
       className: i()(L.title, L.background),
       innerClassname: L.headerBarInner,
       children: [(0, l.jsx)(m.default.Icon, {
-        icon: E.default,
+        icon: g.default,
         "aria-hidden": !0
       }), (0, l.jsxs)(m.default.Title, {
         children: [(0, l.jsx)(r.HiddenVisually, {
@@ -60,7 +60,7 @@ function O(e) {
   let {
     guild: s,
     width: m
-  } = e, E = (0, d.useStateFromStores)([g.default], () => g.default.getSection(M.StaticChannelRoute.GUILD_HOME)), [F, O] = n.useState(!1), [y, H] = n.useState(j.DEFAULT_CHAT_SIDEBAR_WIDTH), k = E === j.ChannelSections.SIDEBAR_CHAT, U = (0, r.useFocusJumpSection)(), w = (0, d.useStateFromStores)([x.default], () => x.default.getSettings(s.id)), P = null == w ? void 0 : w.welcomeMessage, B = (0, v.default)(s.id), V = !B && (null !== (a = null == w ? void 0 : null === (t = w.resourceChannels) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0) === 0, W = (0, o.default)(D.COLLAPSED_SIZE_MEDIA_QUERY), K = m - j.CHANNEL_SIDEBAR_WIDTH - y, z = k && K < b || W || V;
+  } = e, g = (0, d.useStateFromStores)([E.default], () => E.default.getSection(M.StaticChannelRoute.GUILD_HOME)), [F, O] = n.useState(!1), [y, H] = n.useState(j.DEFAULT_CHAT_SIDEBAR_WIDTH), k = g === j.ChannelSections.SIDEBAR_CHAT, U = (0, r.useFocusJumpSection)(), w = (0, d.useStateFromStores)([x.default], () => x.default.getSettings(s.id)), P = null == w ? void 0 : w.welcomeMessage, B = (0, v.default)(s.id), V = !B && (null !== (a = null == w ? void 0 : null === (t = w.resourceChannels) || void 0 === t ? void 0 : t.length) && void 0 !== a ? a : 0) === 0, W = (0, o.default)(D.COLLAPSED_SIZE_MEDIA_QUERY), K = m - j.CHANNEL_SIDEBAR_WIDTH - y, z = k && K < b || W || V;
   return (n.useEffect(() => {
     if (w === x.NO_SETTINGS)(0, I.fetchGuildHomeSettings)(s.id);
     else if (null != w) {

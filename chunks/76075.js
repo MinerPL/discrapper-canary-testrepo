@@ -1,52 +1,58 @@
 "use strict";
 a.r(t);
-var s = a("735250");
+var l = a("735250");
 a("470079");
-var l = a("442837"),
+var s = a("442837"),
   n = a("481060"),
-  i = a("271383"),
-  o = a("430824"),
-  r = a("594174"),
-  u = a("153124"),
-  d = a("693546"),
-  c = a("305325"),
-  f = a("937111"),
-  E = a("702286"),
-  I = a("523924"),
-  R = a("981631"),
-  m = a("689938");
+  i = a("100527"),
+  o = a("970606"),
+  r = a("271383"),
+  u = a("430824"),
+  d = a("594174"),
+  c = a("153124"),
+  f = a("693546"),
+  E = a("305325"),
+  I = a("937111"),
+  R = a("702286"),
+  m = a("523924"),
+  C = a("981631"),
+  _ = a("689938");
 t.default = function(e) {
   let {
     guildId: t,
     transitionState: a,
-    ..._
-  } = e, C = (0, u.useUID)(), N = (0, l.useStateFromStores)([f.default], () => f.default.getRequest(t), [t]), M = (0, l.useStateFromStores)([o.default], () => o.default.getGuild(t), [t]), h = (0, l.useStateFromStores)([r.default], () => {
+    ...A
+  } = e, N = (0, c.useUID)(), h = (0, s.useStateFromStores)([I.default], () => I.default.getRequest(t), [t]), M = (0, s.useStateFromStores)([u.default], () => u.default.getGuild(t), [t]), T = (0, s.useStateFromStores)([d.default], () => {
     var e;
-    return null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
-  }), A = (0, l.useStateFromStores)([i.default], () => null != h ? i.default.getMember(t, h) : null, [h, t]), T = async () => {
-    if (null == M ? void 0 : M.hasFeature(R.GuildFeatures.PREVIEW_ENABLED)) {
+    return null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id
+  }), v = (0, s.useStateFromStores)([r.default], () => null != T ? r.default.getMember(t, T) : null, [T, t]), g = async () => {
+    var e;
+    if (null !== (e = null == M ? void 0 : M.hasFeature(C.GuildFeatures.CLAN)) && void 0 !== e && e && (0, o.trackClanApplyToJoinViewed)({
+        guildId: t,
+        source: i.default.CLAN_REAPPLY
+      }), null == M ? void 0 : M.hasFeature(C.GuildFeatures.PREVIEW_ENABLED)) {
       try {
-        await d.default.removeGuildJoinRequest(t)
+        await f.default.removeGuildJoinRequest(t)
       } catch (e) {
         throw e
       }
-      _.onClose(), (0, c.openMemberVerificationModal)(t)
-    } else d.default.resetGuildJoinRequest(t)
+      A.onClose(), (0, E.openMemberVerificationModal)(t)
+    } else f.default.resetGuildJoinRequest(t)
   };
-  return (0, s.jsx)(n.ModalRoot, {
+  return (0, l.jsx)(n.ModalRoot, {
     size: n.ModalSize.DYNAMIC,
     transitionState: a,
-    "aria-labelledby": C,
-    children: (0, s.jsx)(I.default, {
-      ..._,
-      headerId: C,
-      reapplyText: m.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
-      onReapply: T,
-      confirmText: m.default.Messages.OKAY,
+    "aria-labelledby": N,
+    children: (0, l.jsx)(m.default, {
+      ...A,
+      headerId: N,
+      reapplyText: _.default.Messages.MEMBER_VERIFICATION_APPLICATION_REAPPLY,
+      onReapply: g,
+      confirmText: _.default.Messages.OKAY,
       onWithdrawApplication: () => {
-        _.onClose(), null == A && (0, E.default)()
+        A.onClose(), null == v && (0, R.default)()
       },
-      rejectionReason: null == N ? void 0 : N.rejectionReason,
+      rejectionReason: null == h ? void 0 : h.rejectionReason,
       guild: M
     })
   })

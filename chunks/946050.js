@@ -13,7 +13,7 @@ var a = n("735250"),
   u = n("28391"),
   d = n("526761"),
   c = n("689938"),
-  f = n("102257");
+  f = n("81409");
 
 function h(e) {
   return l.useEffect(() => e.onChannelChange(), [e.channel.id]), (0, a.jsxs)("div", {

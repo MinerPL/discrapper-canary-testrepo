@@ -1,135 +1,126 @@
 "use strict";
-t.r(a), t("47120");
-var s = t("735250"),
-  l = t("470079"),
-  i = t("688619"),
-  d = t.n(i),
-  n = t("442837"),
-  r = t("481060"),
-  c = t("271383"),
-  o = t("430824"),
-  u = t("594174"),
-  S = t("153124"),
-  x = t("626135"),
-  C = t("931240"),
-  g = t("353093"),
-  m = t("728257"),
-  h = t("979264"),
-  v = t("308083"),
-  _ = t("981631"),
-  N = t("689938"),
-  T = t("912982");
+s.r(a), s("47120");
+var t = s("735250"),
+  l = s("470079"),
+  i = s("688619"),
+  d = s.n(i),
+  n = s("442837"),
+  r = s("481060"),
+  c = s("271383"),
+  o = s("430824"),
+  u = s("594174"),
+  S = s("153124"),
+  x = s("931240"),
+  m = s("970606"),
+  g = s("353093"),
+  C = s("979264"),
+  h = s("284019"),
+  v = s("308083"),
+  N = s("981631"),
+  T = s("689938"),
+  j = s("306366");
 a.default = e => {
-  var a, t, i;
+  var a, s, i;
   let {
-    guildId: E,
-    tag: j,
-    brandPrimaryColor: f,
-    transitionState: A,
-    onClose: p
-  } = e, L = (0, S.useUID)(), [M, U] = l.useState(!0), b = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(E)), k = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), B = (0, n.useStateFromStores)([c.default], () => null != k ? c.default.getMember(E, k.id) : null), I = (0, m.useColorIsLowContrastAgainstClientBackground)(f);
+    guildId: _,
+    tag: f,
+    brandPrimaryColor: E,
+    transitionState: p,
+    onClose: A
+  } = e, L = (0, S.useUID)(), [M, U] = l.useState(!0), k = (0, n.useStateFromStores)([o.default], () => o.default.getGuild(_)), b = (0, n.useStateFromStores)([u.default], () => u.default.getCurrentUser()), w = (0, n.useStateFromStores)([c.default], () => null != b ? c.default.getMember(_, b.id) : null);
   if (l.useEffect(() => {
-      x.default.track(_.AnalyticEvents.CLAN_CONVERT_SUCCESS_MODAL_VIEWED, {
-        guild_id: E
-      })
-    }, [E]), null == b || null == k || null == B) return null;
-  let w = null != f ? {
-      background: "radial-gradient(circle at top, ".concat(d()(f).alpha(.3).hex(), " 0%, transparent 50%)")
+      (0, m.trackConvertSuccessModalViewed)(_)
+    }, [_]), null == k || null == b || null == w) return null;
+  let z = null != E ? {
+      background: "radial-gradient(circle at top, ".concat(d()(E).alpha(.3).hex(), " 0%, transparent 50%)")
     } : void 0,
-    y = (0, g.getClanBadgeUrl)(b.id, null === (a = b.clan) || void 0 === a ? void 0 : a.badge, v.ClanTagBadgeSize.SIZE_36);
-  return (0, s.jsx)(r.ModalRoot, {
-    className: T.modal,
-    transitionState: A,
+    B = (0, g.getClanBadgeUrl)(k.id, null === (a = k.clan) || void 0 === a ? void 0 : a.badge, v.ClanTagBadgeSize.SIZE_36);
+  return (0, t.jsx)(r.ModalRoot, {
+    className: j.modal,
+    transitionState: p,
     "aria-labelledby": L,
     size: r.ModalSize.SMALL,
-    children: (0, s.jsxs)("div", {
-      className: T.content,
-      style: w,
-      children: [(0, s.jsx)(h.BaseClanTagChiplet, {
-        clanTag: j,
-        clanBadge: y,
-        className: T.tagPreview,
-        textClassName: T.tagText,
+    children: (0, t.jsxs)("div", {
+      className: j.content,
+      style: z,
+      children: [(0, t.jsx)(C.BaseClanTagChiplet, {
+        clanTag: f,
+        clanBadge: B,
+        className: j.tagPreview,
+        textClassName: j.tagText,
         textVariant: "heading-xxl/semibold",
         badgeSize: v.ClanTagBadgeSize.SIZE_36
-      }), (0, s.jsx)(r.Heading, {
-        variant: "heading-xxl/semibold",
-        children: b.name
-      }), (0, s.jsx)(r.Heading, {
+      }), (0, t.jsx)(r.Heading, {
         variant: "heading-xxl/medium",
-        children: N.default.Messages.CLAN_SUCCESS_TITLE
-      }), (0, s.jsx)(r.Text, {
-        className: T.subtitle,
+        children: T.default.Messages.CLAN_SUCCESS_TITLE.format({
+          name: k.name
+        })
+      }), (0, t.jsx)(r.Text, {
+        className: j.subtitle,
         variant: "text-md/normal",
-        children: N.default.Messages.CLAN_SUCCESS_SUBTITLE
-      }), (0, s.jsxs)("div", {
-        className: T.previewSection,
-        children: [(0, s.jsxs)("div", {
-          className: T.chatPreview,
-          children: [(0, s.jsx)(r.Avatar, {
-            src: k.getAvatarURL(E, 40),
+        children: T.default.Messages.CLAN_SUCCESS_SUBTITLE
+      }), (0, t.jsxs)("div", {
+        className: j.previewSection,
+        children: [(0, t.jsxs)("div", {
+          className: j.chatPreview,
+          children: [(0, t.jsx)(r.Avatar, {
+            src: b.getAvatarURL(_, 40),
             size: r.AvatarSizes.SIZE_40,
             "aria-hidden": !0
-          }), (0, s.jsxs)("div", {
-            className: T.previewText,
-            children: [(0, s.jsxs)("div", {
-              className: T.userName,
-              children: [(0, s.jsx)(r.NameWithRole, {
-                className: T.userName,
-                name: null !== (t = B.nick) && void 0 !== t ? t : k.username,
-                color: null !== (i = B.colorString) && void 0 !== i ? i : void 0
-              }), M && (0, s.jsx)(h.BaseClanTagChiplet, {
-                clanBadge: y,
-                clanTag: j,
+          }), (0, t.jsxs)("div", {
+            className: j.previewText,
+            children: [(0, t.jsxs)("div", {
+              className: j.userName,
+              children: [(0, t.jsx)(r.NameWithRole, {
+                className: j.userName,
+                name: null !== (s = w.nick) && void 0 !== s ? s : b.username,
+                color: null !== (i = w.colorString) && void 0 !== i ? i : void 0
+              }), M && (0, t.jsx)(C.BaseClanTagChiplet, {
+                clanBadge: B,
+                clanTag: f,
                 badgeSize: v.ClanTagBadgeSize.SIZE_12,
                 textVariant: "text-xs/normal"
               })]
-            }), (0, s.jsx)("div", {
-              className: T.fakeMessage,
+            }), (0, t.jsx)("div", {
+              className: j.fakeMessage,
               style: {
                 width: "80%"
               }
-            }), (0, s.jsx)("div", {
-              className: T.fakeMessage,
+            }), (0, t.jsx)("div", {
+              className: j.fakeMessage,
               style: {
                 width: "50%"
               }
             })]
           })]
-        }), (0, s.jsx)("div", {
-          className: T.divider
-        }), (0, s.jsxs)("div", {
-          className: T.settingSection,
-          children: [(0, s.jsxs)("div", {
-            children: [(0, s.jsx)(r.Text, {
+        }), (0, t.jsx)("div", {
+          className: j.divider
+        }), (0, t.jsxs)("div", {
+          className: j.settingSection,
+          children: [(0, t.jsxs)("div", {
+            children: [(0, t.jsx)(r.Text, {
               variant: "text-md/normal",
               color: "header-primary",
-              children: N.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
-            }), (0, s.jsx)(r.Text, {
+              children: T.default.Messages.CLAN_SUCCESS_USE_TAG_TEXT
+            }), (0, t.jsx)(r.Text, {
               variant: "text-xs/normal",
               color: "text-muted",
-              children: N.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
+              children: T.default.Messages.CLAN_SUCCESS_USE_TAG_HELP
             })]
-          }), (0, s.jsx)(r.Switch, {
+          }), (0, t.jsx)(r.Switch, {
             onChange: () => U(!M),
             checked: M
           })]
         })]
-      }), (0, s.jsx)(r.Button, {
+      }), (0, t.jsx)(h.default, {
+        themeColor: E,
         onClick: () => {
-          (0, C.adoptClanIdentity)(E, M), x.default.track(_.AnalyticEvents.CLAN_CONVERT_SUCCESS_MODAL_CONFIRM, {
-            guild_id: E,
-            enable_tag: M
-          }), p()
+          M && (0, x.adoptClanIdentity)(_, M, N.AnalyticsLocations.CLAN_SETUP_MODAL), (0, m.trackConvertSuccessModalConfirm)(_, M), A()
         },
-        color: I ? r.Button.Colors.BRAND : r.Button.Colors.CUSTOM,
-        style: I ? void 0 : {
-          backgroundColor: f
-        },
-        children: (0, s.jsx)(r.Text, {
+        children: (0, t.jsx)(r.Text, {
+          color: "none",
           variant: "text-md/medium",
-          className: I ? void 0 : T.ctaText,
-          children: N.default.Messages.CLAN_SUCCESS_CTA
+          children: T.default.Messages.CLAN_SUCCESS_CTA
         })
       })]
     })

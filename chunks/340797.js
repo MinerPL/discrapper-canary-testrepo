@@ -1,52 +1,52 @@
 "use strict";
-i.r(e), i.d(e, {
+n.r(t), n.d(t, {
   default: function() {
-    return c
+    return d
   }
 });
-var l = i("735250");
-i("470079");
-var r = i("481060"),
-  a = i("289447"),
-  n = i("946273"),
-  s = i("441110"),
-  o = i("689938"),
-  d = i("485170");
+var i = n("735250");
+n("470079");
+var r = n("481060"),
+  a = n("490504"),
+  s = n("946273"),
+  o = n("441110"),
+  l = n("689938"),
+  u = n("37433");
 
-function c(t) {
+function d(e) {
   let {
-    guild: e,
-    message: i
-  } = t;
-  return (0, n.useNewMemberBadge)(e.id, i.author.id) ? (0, l.jsx)(r.Popout, {
+    guild: t,
+    message: n
+  } = e;
+  return (0, s.useNewMemberBadge)(t.id, n.author.id) ? (0, i.jsx)(r.Popout, {
     animation: r.Popout.Animation.TRANSLATE,
     align: "center",
     autoInvert: !0,
     nudgeAlignIntoViewport: !0,
     position: "right",
-    renderPopout: t => {
+    renderPopout: e => {
       let {
         closePopout: r
-      } = t;
-      return (0, l.jsx)(s.default, {
-        guild: e,
-        message: i,
+      } = e;
+      return (0, i.jsx)(o.default, {
+        guild: t,
+        message: n,
         onClose: r
       })
     },
-    children: t => {
+    children: e => {
       let {
-        onClick: e
-      } = t;
-      return (0, l.jsx)(r.Clickable, {
-        onClick: e,
+        onClick: t
+      } = e;
+      return (0, i.jsx)(r.Clickable, {
+        onClick: t,
         tag: "span",
-        children: (0, l.jsx)(r.Tooltip, {
-          text: o.default.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
-          children: t => (0, l.jsx)("div", {
-            className: d.newMemberBadge,
-            ...t,
-            children: (0, l.jsx)(a.default, {
+        children: (0, i.jsx)(r.Tooltip, {
+          text: l.default.Messages.NEW_MEMBER_BADGE_TOOLTIP_TEXT,
+          children: e => (0, i.jsx)("div", {
+            className: u.newMemberBadge,
+            ...e,
+            children: (0, i.jsx)(a.default, {
               width: 20,
               height: 20
             })

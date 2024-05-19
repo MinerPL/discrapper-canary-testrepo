@@ -1,18 +1,21 @@
 "use strict";
 n.r(t), n.d(t, {
   BACKGROUND_GRADIENT_PRESETS: function() {
-    return _
+    return c
   },
   BACKGROUND_GRADIENT_PRESETS_MAP: function() {
-    return c
+    return E
+  },
+  CLIENT_THEME_DC_MAP: function() {
+    return I
   }
 }), n("47120");
-var i, r, s = n("392711"),
-  a = n("524437"),
+var i, r, a = n("392711"),
+  s = n("524437"),
   o = n("231338"),
   l = n("689938");
 let u = [{
-    id: a.BackgroundGradientPresetId.MINT_APPLE,
+    id: s.BackgroundGradientPresetId.MINT_APPLE,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_MINT_APPLE_1,
@@ -28,7 +31,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_MINT_APPLE,
     midpointPercentage: 27
   }, {
-    id: a.BackgroundGradientPresetId.CITRUS_SHERBERT,
+    id: s.BackgroundGradientPresetId.CITRUS_SHERBERT,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_CITRUS_SHERBERT_1,
@@ -41,7 +44,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_CITRUS_SHERBERT,
     midpointPercentage: 27
   }, {
-    id: a.BackgroundGradientPresetId.RETRO_RAINCLOUD,
+    id: s.BackgroundGradientPresetId.RETRO_RAINCLOUD,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_RETRO_RAINCLOUD_1,
@@ -60,7 +63,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_RETRO_RAINCLOUD,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.HANAMI,
+    id: s.BackgroundGradientPresetId.HANAMI,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_HANAMI_1,
@@ -76,7 +79,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_HANAMI,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.SUNRISE,
+    id: s.BackgroundGradientPresetId.SUNRISE,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_SUNRISE_1,
@@ -92,7 +95,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_SUNRISE,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.COTTON_CANDY,
+    id: s.BackgroundGradientPresetId.COTTON_CANDY,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_COTTON_CANDY_1,
@@ -105,7 +108,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_COTTON_CANDY,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.LOFI_VIBES,
+    id: s.BackgroundGradientPresetId.LOFI_VIBES,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_LOFI_VIBES_1,
@@ -124,7 +127,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_LOFI_VIBES,
     midpointPercentage: 27
   }, {
-    id: a.BackgroundGradientPresetId.DESERT_KHAKI,
+    id: s.BackgroundGradientPresetId.DESERT_KHAKI,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_DESERT_KHAKI_1,
@@ -141,7 +144,7 @@ let u = [{
     midpointPercentage: 50
   }],
   d = [{
-    id: a.BackgroundGradientPresetId.SUNSET,
+    id: s.BackgroundGradientPresetId.SUNSET,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_SUNSET_1,
@@ -154,7 +157,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_SUNSET,
     midpointPercentage: 35
   }, {
-    id: a.BackgroundGradientPresetId.CHROMA_GLOW,
+    id: s.BackgroundGradientPresetId.CHROMA_GLOW,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_CHROMA_GLOW_1,
@@ -176,7 +179,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_CHROMA_GLOW,
     midpointPercentage: 15
   }, {
-    id: a.BackgroundGradientPresetId.FOREST,
+    id: s.BackgroundGradientPresetId.FOREST,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_FOREST_1,
@@ -198,7 +201,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_FOREST,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.CRIMSON_MOON,
+    id: s.BackgroundGradientPresetId.CRIMSON_MOON,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_CRIMSON_MOON_1,
@@ -211,7 +214,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_CRIMSON_MOON,
     midpointPercentage: 30
   }, {
-    id: a.BackgroundGradientPresetId.MIDNIGHT_BLURPLE,
+    id: s.BackgroundGradientPresetId.MIDNIGHT_BLURPLE,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_MIDNIGHT_BLURPLE_1,
@@ -224,7 +227,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_MIDNIGHT_BLURPLE,
     midpointPercentage: 24
   }, {
-    id: a.BackgroundGradientPresetId.MARS,
+    id: s.BackgroundGradientPresetId.MARS,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_MARS_1,
@@ -237,7 +240,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_MARS,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.DUSK,
+    id: s.BackgroundGradientPresetId.DUSK,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_DUSK_1,
@@ -250,7 +253,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_DUSK,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.UNDER_THE_SEA,
+    id: s.BackgroundGradientPresetId.UNDER_THE_SEA,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_UNDER_THE_SEA_1,
@@ -266,7 +269,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_UNDER_THE_SEA,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.RETRO_STORM,
+    id: s.BackgroundGradientPresetId.RETRO_STORM,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_RETRO_STORM_1,
@@ -285,7 +288,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_RETRO_STORM,
     midpointPercentage: 61
   }, {
-    id: a.BackgroundGradientPresetId.NEON_NIGHTS,
+    id: s.BackgroundGradientPresetId.NEON_NIGHTS,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_NEON_NIGHTS_1,
@@ -301,7 +304,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_NEON_NIGHTS,
     midpointPercentage: 50
   }, {
-    id: a.BackgroundGradientPresetId.STRAWBERRY_LEMONADE,
+    id: s.BackgroundGradientPresetId.STRAWBERRY_LEMONADE,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_STRAWBERRY_LEMONADE_1,
@@ -317,7 +320,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_STRAWBERRY_LEMONADE,
     midpointPercentage: 32
   }, {
-    id: a.BackgroundGradientPresetId.AURORA,
+    id: s.BackgroundGradientPresetId.AURORA,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_AURORA_1,
@@ -339,7 +342,7 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_AURORA,
     midpointPercentage: 34
   }, {
-    id: a.BackgroundGradientPresetId.SEPIA,
+    id: s.BackgroundGradientPresetId.SEPIA,
     theme: o.ThemeTypes.DARK,
     colors: [{
       token: o.Color.BG_GRADIENT_SEPIA_1,
@@ -352,8 +355,22 @@ let u = [{
     getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_SEPIA,
     midpointPercentage: 50
   }],
-  _ = [...u, ...d, {
-    id: a.BackgroundGradientPresetId.EASTER_EGG,
+  _ = {
+    id: s.BackgroundGradientPresetId.BLURPLE_TWILIGHT,
+    theme: o.ThemeTypes.DARK,
+    colors: [{
+      token: o.Color.BG_GRADIENT_BLURPLE_TWILIGHT_1,
+      stop: 11.18
+    }, {
+      token: o.Color.BG_GRADIENT_BLURPLE_TWILIGHT_2,
+      stop: 64.54
+    }],
+    angle: 47.61,
+    getName: () => l.default.Messages.CLIENT_THEMES_GRADIENT_BLURPLE_TWILIGHT,
+    midpointPercentage: 50
+  },
+  c = [...u, ...d, _, {
+    id: s.BackgroundGradientPresetId.EASTER_EGG,
     theme: o.ThemeTypes.LIGHT,
     colors: [{
       token: o.Color.BG_GRADIENT_EASTER_EGG_1,
@@ -367,4 +384,7 @@ let u = [{
     midpointPercentage: 50
   }];
 [...d, ...u], (r = i || (i = {}))[r.DARK = 0] = "DARK", r[r.LIGHT = 1] = "LIGHT", r[r.SYSTEM = 2] = "SYSTEM", o.ThemeTypes.DARK, o.ThemeTypes.LIGHT, o.ThemeTypes.DARKER, o.ThemeTypes.LIGHT, o.ThemeTypes.MIDNIGHT, () => l.default.Messages.THEME_MIDNIGHT;
-let c = (0, s.keyBy)(_, "id")
+let E = (0, a.keyBy)(c, "id"),
+  I = new Map([
+    [s.BackgroundGradientPresetId.BLURPLE_TWILIGHT, s.DismissibleContent.BRAND_REFRESH_CLIENT_THEME_BADGE]
+  ])

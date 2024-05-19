@@ -70,13 +70,27 @@ function N() {
   return null == i && (i = (0, E.supportsZstd)() && (0, E.getFastConnectZstd)()), i
 }
 
-function p(e) {
+function p() {
+  if (h) {
+    S.info("Ignoring zstd experiment config because we fell back to zlib");
+    return
+  }
+  let e = T.getCurrentConfig({
+      location: "GatewayZstdStore"
+    }),
+    t = e.useZstd;
+  e.doVerification && (t = f.getCurrentConfig({
+    location: "GatewayZstdStore"
+  }).useZstd), O(t), A = 0
+}
+
+function O(e) {
   if (e && !(0, E.supportsZstd)()) {
     S.warn("Attempting to enable zstd but it is not supported");
     return
   }(0, E.setFastConnectZstd)(e), e !== i && S.info("Setting Zstd to ".concat(e)), i = e
 }
-class O extends(o = u.default.Store) {
+class C extends(o = u.default.Store) {
   initialize() {
     this.waitFor(c.default)
   }
@@ -90,29 +104,18 @@ class O extends(o = u.default.Store) {
     m = !1
   }
 }
-s = "GatewayZstdStore", (a = "displayName") in(r = O) ? Object.defineProperty(r, a, {
+s = "GatewayZstdStore", (a = "displayName") in(r = C) ? Object.defineProperty(r, a, {
   value: s,
   enumerable: !0,
   configurable: !0,
   writable: !0
-}) : r[a] = s, t.default = new O(d.default, {
-  CONNECTION_OPEN: function() {
-    if (h) {
-      S.info("Ignoring zstd experiment config because we fell back to zlib");
-      return
-    }
-    let e = T.getCurrentConfig({
-        location: "GatewayZstdStore"
-      }),
-      t = e.useZstd;
-    e.doVerification && (t = f.getCurrentConfig({
-      location: "GatewayZstdStore"
-    }).useZstd), p(t), A = 0
-  },
+}) : r[a] = s, t.default = new C(d.default, {
+  CONNECTION_OPEN: p,
   CONNECTION_INTERRUPTED: function(e) {
     let {
       code: t
     } = e;
-    N() && m && 1e3 !== t && (A += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), p(!1), h = !0)
-  }
+    N() && m && 1e3 !== t && (A += 1) > 3 && (S.error("Disabling zstd due to consecutive errors"), O(!1), h = !0)
+  },
+  CONNECTION_RESUMED: p
 })

@@ -1,103 +1,103 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return g
+    return x
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("803997"),
-  n = l.n(a),
-  s = l("912370"),
-  r = l("481060"),
-  c = l("626135"),
-  o = l("463571"),
-  d = l("34674"),
-  u = l("218864"),
-  p = l("950854"),
-  _ = l("132871"),
-  m = l("147890"),
-  f = l("57716"),
-  h = l("981631"),
-  C = l("408027");
+var n = i("735250");
+i("470079");
+var a = i("120356"),
+  l = i.n(a),
+  s = i("912370"),
+  r = i("481060"),
+  o = i("626135"),
+  c = i("463571"),
+  d = i("34674"),
+  u = i("218864"),
+  h = i("950854"),
+  p = i("132871"),
+  f = i("147890"),
+  m = i("57716"),
+  g = i("981631"),
+  C = i("95830");
 
-function g(e) {
+function x(e) {
   let {
     collection: t,
     collection: {
-      id: l,
+      id: i,
       title: a,
-      application_directory_collection_items: g
+      application_directory_collection_items: x
     }
-  } = e, I = (0, f.default)({
+  } = e, _ = (0, m.default)({
     collection: t
-  }), A = (0, _.useApplicationDirectoryHistory)(e => e.guildId);
-  return (0, i.jsxs)("div", {
-    ref: I,
-    children: [(0, i.jsx)(r.Heading, {
+  }), I = (0, p.useApplicationDirectoryHistory)(e => e.guildId);
+  return (0, n.jsxs)("div", {
+    ref: _,
+    children: [(0, n.jsx)(r.Heading, {
       variant: "heading-lg/semibold",
       className: C.header,
       children: a
-    }), (0, i.jsx)("div", {
+    }), (0, n.jsx)("div", {
       className: C.list,
-      children: g.map(e => {
+      children: x.map(e => {
         let {
           id: t,
           type: a,
-          application: _,
-          image_hash: f,
-          title: g,
-          description: I,
-          call_to_action_label: E,
-          call_to_action_url: v
+          application: p,
+          image_hash: m,
+          title: x,
+          description: _,
+          call_to_action_label: v,
+          call_to_action_url: A
         } = e;
-        if (null == f) return;
-        let x = (0, d.getCollectionItemAssetUrl)({
+        if (null == m) return;
+        let E = (0, d.getCollectionItemAssetUrl)({
           itemId: t,
-          hash: f
+          hash: m
         });
-        return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != _ ? (0, i.jsx)(o.default, {
-          href: h.Routes.APPLICATION_DIRECTORY_PROFILE(_.id),
+        return a === s.ApplicationDirectoryCollectionItemType.APPLICATION && null != p ? (0, n.jsx)(c.default, {
+          href: g.Routes.APPLICATION_DIRECTORY_PROFILE(p.id),
           className: C.item,
-          children: (0, i.jsx)(u.default, {
-            imageSrc: x,
-            application: _,
+          children: (0, n.jsx)(u.default, {
+            imageSrc: E,
+            application: p,
             onClick: e => {
               let {
                 mutualGuilds: t
               } = e;
-              c.default.track(h.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                collection_id: l,
-                application_id: _.id,
-                guild_id: A,
+              o.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                collection_id: i,
+                application_id: p.id,
+                guild_id: I,
                 shown_mutual_guilds_count: t.length
-              }), (0, m.goToApplication)({
-                applicationId: _.id
+              }), (0, f.goToApplication)({
+                applicationId: p.id
               })
             },
             animatesOnHover: !0
           })
-        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != g ? (0, i.jsxs)(p.default, {
-          className: n()(C.item, C.linkCard),
-          imageSrc: x,
-          header: g,
+        }, t) : a === s.ApplicationDirectoryCollectionItemType.LINK && null != x ? (0, n.jsxs)(h.default, {
+          className: l()(C.item, C.linkCard),
+          imageSrc: E,
+          header: x,
           headerClassName: C.cardHeader,
-          children: [(0, i.jsx)(r.Text, {
+          children: [(0, n.jsx)(r.Text, {
             variant: "text-sm/normal",
             className: C.linkDescription,
-            children: I
-          }), (0, i.jsx)(r.Anchor, {
+            children: _
+          }), (0, n.jsx)(r.Anchor, {
             onClick: () => {
-              c.default.track(h.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
-                collection_id: l,
-                link: v,
-                guild_id: A,
+              o.default.track(g.AnalyticEvents.APP_DIRECTORY_COLLECTION_ITEM_CLICKED, {
+                collection_id: i,
+                link: A,
+                guild_id: I,
                 shown_mutual_guilds_count: void 0
               })
             },
-            href: v,
-            className: n()((0, r.getButtonStyle)(), C.linkCta),
-            children: E
+            href: A,
+            className: l()((0, r.getButtonStyle)(), C.linkCta),
+            children: v
           })]
         }, t) : void 0
       })

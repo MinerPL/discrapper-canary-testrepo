@@ -29,10 +29,10 @@ async function f(e) {
     onSubscriptionConfirmation: N,
     guild: p,
     handleSubscribeModalClose: O,
-    disablePremiumUpsell: R,
-    inPopout: C,
+    disablePremiumUpsell: C,
+    inPopout: R,
     applicationId: g
-  } = e, L = C ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, v = l.default.getCurrentUser();
+  } = e, L = R ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT, v = l.default.getCurrentUser();
   if (null == v) return;
   if (!v.verified) {
     (0, r.openModalLazy)(async () => {
@@ -66,7 +66,7 @@ async function f(e) {
     1 === y ? e = M.slice(0, 1) : null != h && (e = M.slice(0, h)), await (0, r.openModalLazy)(async () => {
       let {
         default: t
-      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("15972"), n.e("63438"), n.e("62511"), n.e("8016"), n.e("22646"), n.e("68451"), n.e("25220")]).then(n.bind(n, "760558"));
+      } = await Promise.all([n.e("49237"), n.e("99387"), n.e("29549"), n.e("15972"), n.e("63438"), n.e("62511"), n.e("8016"), n.e("22646"), n.e("68451"), n.e("25220")]).then(n.bind(n, "760558"));
       return n => {
         let {
           onClose: r,
@@ -102,9 +102,9 @@ async function f(e) {
     },
     totalNumberOfSlotsToAssign: null != h ? h : 1,
     onCloseModal: P,
-    disablePremiumUpsell: R,
+    disablePremiumUpsell: C,
     onSubscriptionConfirmation: N,
-    inPopout: C,
+    inPopout: R,
     applicationId: g
   })
 }

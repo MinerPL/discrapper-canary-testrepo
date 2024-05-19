@@ -33,9 +33,9 @@ var s, a = n("735250"),
   U = n("814225"),
   j = n("981631"),
   b = n("689938"),
-  B = n("142863");
+  B = n("422340");
 
-function G(e, t, n) {
+function F(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -43,7 +43,7 @@ function G(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-class F extends(s = l.Component) {
+class G extends(s = l.Component) {
   get analyticsLocation() {
     let {
       storeListingAnalyticsProperties: e,
@@ -69,10 +69,10 @@ class F extends(s = l.Component) {
       applicationId: t,
       targetSkuId: n
     } = this.props;
-    null == e && null != n && E.fetchSKU(t, n).catch(() => {})
+    null == e && null != n && E.fetchPublishedSKU(t, n).catch(() => {})
   }
   componentDidUpdate(e) {
-    this.props.locale !== e.locale && null != this.props.targetSkuId && E.fetchSKU(this.props.applicationId, this.props.targetSkuId).catch(() => {})
+    this.props.locale !== e.locale && null != this.props.targetSkuId && E.fetchPublishedSKU(this.props.applicationId, this.props.targetSkuId).catch(() => {})
   }
   async purchaseOrGrantSKU(e) {
     let {
@@ -193,7 +193,7 @@ class F extends(s = l.Component) {
     })
   }
   constructor(...e) {
-    super(...e), G(this, "handleViewInStore", e => {
+    super(...e), F(this, "handleViewInStore", e => {
       let {
         sku: t,
         skuId: n,
@@ -208,7 +208,7 @@ class F extends(s = l.Component) {
         analyticsSource: this.analyticsLocation,
         slug: s.slug
       })
-    }), G(this, "handleClick", async e => {
+    }), F(this, "handleClick", async e => {
       let {
         isAuthenticated: t,
         applicationId: n,
@@ -266,7 +266,7 @@ class F extends(s = l.Component) {
     })
   }
 }
-G(F, "defaultProps", {
+F(G, "defaultProps", {
   tooltipPosition: "top",
   onStoreListing: !1,
   shouldRenderPrice: !1,
@@ -291,7 +291,7 @@ G(F, "defaultProps", {
     return [e, t, l, o, u, a]
   }), T = (0, u.useStateFromStores)([O.default], () => O.default.isFocused()), N = (0, u.useStateFromStores)([M.default], () => M.default.isPurchasingSKU), S = (0, u.useStateFromStores)([C.default], () => C.default.locale), x = (0, I.useAnalyticsContext)();
   if (null != n && null == l) throw Error("Unexpected entitlementBranchId without a channelId");
-  return (0, a.jsx)(F, {
+  return (0, a.jsx)(G, {
     ...r,
     applicationId: s,
     skuId: i,

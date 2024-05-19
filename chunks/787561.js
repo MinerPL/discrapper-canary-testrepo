@@ -6,7 +6,7 @@ s.r(t), s.d(t, {
 }), s("47120"), s("653041");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("442837"),
   o = s("544891"),
@@ -15,7 +15,7 @@ var a = s("735250"),
   c = s("852860"),
   E = s("933557"),
   _ = s("655006"),
-  I = s("920440"),
+  I = s("769654"),
   T = s("984933"),
   S = s("650774"),
   f = s("430824"),
@@ -29,7 +29,7 @@ var a = s("735250"),
   L = s("981631"),
   O = s("731455"),
   A = s("689938"),
-  p = s("346393"),
+  p = s("592218"),
   M = s("922905");
 let D = "dismissedCommunityFeaturesUpsell",
   v = () => {
@@ -63,7 +63,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       errorMessage: e
     })
   },
-  j = e => {
+  G = e => {
     let {
       discoveryEnabled: t,
       onboardingEnabled: s,
@@ -154,7 +154,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       })]
     })
   },
-  G = () => {
+  j = () => {
     var e;
     let t = (0, r.useStateFromStores)([R.default], () => R.default.getGuild()),
       {
@@ -192,7 +192,7 @@ let D = "dismissedCommunityFeaturesUpsell",
       x = () => {
         if (null == t) return;
         let e = new Set(t.features);
-        e.delete(L.GuildFeatures.COMMUNITY), e.delete(L.GuildFeatures.DISCOVERABLE), e.delete(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED), e.delete(L.GuildFeatures.PREVIEW_ENABLED), C.default.updateGuild({
+        e.delete(L.GuildFeatures.COMMUNITY), e.delete(L.GuildFeatures.DISCOVERABLE), !t.hasFeature(L.GuildFeatures.CLAN) && e.delete(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED), e.delete(L.GuildFeatures.PREVIEW_ENABLED), C.default.updateGuild({
           features: e,
           rulesChannelId: null,
           publicUpdatesChannelId: null
@@ -208,7 +208,7 @@ let D = "dismissedCommunityFeaturesUpsell",
           safetyAlertsChannelId: e
         })
       },
-      G = e => {
+      j = e => {
         C.default.updateGuild({
           publicUpdatesChannelId: e
         })
@@ -254,7 +254,7 @@ let D = "dismissedCommunityFeaturesUpsell",
             variant: "text-sm/normal",
             children: A.default.Messages.GUILD_SETTINGS_PARTNER_DISABLE_PUBLIC_CONFIRM_TEXT
           })
-        })) : t.features.has(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
+        })) : t.features.has(L.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED) && !t.features.has(L.GuildFeatures.CLAN) ? (0, u.openModal)(e => (0, a.jsx)(u.ConfirmModal, {
           ...e,
           header: A.default.Messages.GUILD_SETTINGS_COMMUNITY_DISABLE_PUBLIC_CONFIRM_DEFAULT_TITLE,
           confirmButtonColor: u.Button.Colors.BRAND,
@@ -270,7 +270,7 @@ let D = "dismissedCommunityFeaturesUpsell",
     return (0, a.jsxs)(u.FormSection, {
       title: A.default.Messages.GUILD_SETTINGS_COMMUNITY,
       tag: u.FormTitleTags.H1,
-      children: [I ? (0, a.jsx)(j, {
+      children: [I ? (0, a.jsx)(G, {
         discoveryEnabled: t.features.has(L.GuildFeatures.DISCOVERABLE),
         onboardingEnabled: t.features.has(L.GuildFeatures.GUILD_ONBOARDING),
         guild: t
@@ -314,7 +314,7 @@ let D = "dismissedCommunityFeaturesUpsell",
           children: (0, a.jsx)(u.SearchableSelect, {
             value: t.publicUpdatesChannelId,
             options: f,
-            onChange: G,
+            onChange: j,
             isDisabled: !s
           })
         })]
@@ -417,7 +417,7 @@ let D = "dismissedCommunityFeaturesUpsell",
   };
 t.default = () => {
   let e = (0, r.useStateFromStores)([R.default], () => R.default.getGuild());
-  return null == e ? null : e.features.has(L.GuildFeatures.COMMUNITY) ? (0, a.jsx)(G, {}) : (0, a.jsx)(x.default, {
+  return null == e ? null : e.features.has(L.GuildFeatures.COMMUNITY) ? (0, a.jsx)(j, {}) : (0, a.jsx)(x.default, {
     guild: e
   })
 }

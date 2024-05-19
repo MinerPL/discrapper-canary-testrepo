@@ -16,6 +16,9 @@ n.r(t), n.d(t, {
   ClanBadgeKind: function() {
     return i
   },
+  getRandomClanBadgeKind: function() {
+    return d
+  },
   getRandomClanBadgePreset: function() {
     return l
   }
@@ -88,4 +91,9 @@ let u = {
   18: 2,
   19: 2,
   20: 2
+};
+
+function d() {
+  let e = Object.keys(i).filter(e => isNaN(Number(e)));
+  return i[e[Math.round(Math.random() * e.length - 1)]]
 }

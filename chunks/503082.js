@@ -42,6 +42,9 @@ class u extends a.default {
     } = e;
     this.context.clearRect(t, n, i, r)
   }
+  restoreContext() {
+    null != this.context && this.context.restore()
+  }
   drawRect(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
       n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -246,7 +249,7 @@ class u extends a.default {
     let d = new Path2D;
     d.roundRect(a, s, l, u, i), this.context.clip(d);
     let _ = this.drawImage(e, t, n, r);
-    return this.context.restore(), _
+    return this.restoreContext(), _
   }
   drawCroppedImage(e, t, n) {
     var i;
@@ -272,7 +275,7 @@ class u extends a.default {
     if (null == this.context) return o.DrawResultStatus.Failure;
     this.setContextProperties(), this.context.save();
     let r = new Path2D(e);
-    return this.context.translate(t.x, t.y), this.context.scale(i, i), n ? this.context.fill(r, "evenodd") : this.context.stroke(r), this.context.restore(), o.DrawResultStatus.Success
+    return this.context.translate(t.x, t.y), this.context.scale(i, i), n ? this.context.fill(r, "evenodd") : this.context.stroke(r), this.restoreContext(), o.DrawResultStatus.Success
   }
   setGradientFillStyle(e, t, n) {
     if (null == this.context) return;
@@ -289,6 +292,51 @@ class u extends a.default {
   }
   drawRoundedGradientRect(e, t, n, i, r) {
     return null == this.context ? o.DrawResultStatus.Failure : (this.setGradientFillStyle(e, t, n), this.drawRoundedRect(i, r, !0, !1), o.DrawResultStatus.Success)
+  }
+  clip(e, t) {
+    if (null == this.context) return;
+    this.context.save();
+    let {
+      x: n,
+      y: i
+    } = e, r = new Path2D(t);
+    this.context.translate(n, i), this.context.clip(r)
+  }
+  clipRect(e, t) {
+    if (null == this.context) return;
+    this.context.save();
+    let {
+      x: n,
+      y: i,
+      w: r,
+      h: a
+    } = e;
+    if (t) {
+      let e = new Path2D;
+      e.moveTo(0, 0), e.lineTo(this.canvas.width, 0), e.lineTo(this.canvas.width, this.canvas.height), e.lineTo(0, this.canvas.height), e.lineTo(0, 0), e.closePath(), e.rect(n, i, r, a), this.context.clip(e, "evenodd")
+    } else {
+      let e = new Path2D;
+      e.rect(n, i, r, a), this.context.clip(e)
+    }
+  }
+  clipRoundedRect(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+      n = arguments.length > 2 ? arguments[2] : void 0;
+    if (null == this.context) return;
+    this.context.save();
+    let {
+      x: i,
+      y: r,
+      w: a,
+      h: s
+    } = e;
+    if (n) {
+      let e = new Path2D;
+      e.moveTo(0, 0), e.lineTo(this.canvas.width, 0), e.lineTo(this.canvas.width, this.canvas.height), e.lineTo(0, this.canvas.height), e.lineTo(0, 0), e.closePath(), e.roundRect(i, r, a, s, t), this.context.clip(e, "evenodd")
+    } else {
+      let e = new Path2D;
+      e.roundRect(i, r, a, s, t), this.context.clip(e)
+    }
   }
   constructor(e, t) {
     super(e, t), l(this, "canvas", void 0), l(this, "context", void 0), this.canvas = e, this.context = this.canvas.getContext("2d"), null != this.context && (this.context.imageSmoothingQuality = "high")

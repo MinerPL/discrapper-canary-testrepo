@@ -9,7 +9,7 @@ s.r(t), s.d(t, {
 }), s("47120");
 var a = s("735250"),
   l = s("470079"),
-  n = s("803997"),
+  n = s("120356"),
   i = s.n(n),
   r = s("399606"),
   o = s("780384"),
@@ -36,8 +36,8 @@ var a = s("735250"),
   M = s("93879"),
   D = s("263704"),
   v = s("465670"),
-  j = s("548343"),
-  G = s("586791"),
+  G = s("548343"),
+  j = s("586791"),
   U = s("709586"),
   P = s("151785"),
   b = s("931468"),
@@ -52,7 +52,7 @@ var a = s("735250"),
   W = s("486324"),
   z = s("200299"),
   K = s("689938"),
-  Z = s("866113"),
+  Z = s("94078"),
   X = s("91716"),
   Q = s("470264"),
   J = s("710043"),
@@ -96,7 +96,7 @@ function $(e) {
       children: e => (0, a.jsxs)("div", {
         ...e,
         className: i()(Z.actionItemEditButton, Z.editWelcomeButton),
-        children: [(0, a.jsx)(G.default, {
+        children: [(0, a.jsx)(j.default, {
           className: Z.__invalid_editIcon
         }), (0, a.jsx)(d.HiddenVisually, {
           children: K.default.Messages.EDIT
@@ -169,7 +169,7 @@ function ee(e) {
         className: Z.dragContainer,
         onMouseEnter: () => w(!0),
         onMouseLeave: () => w(!1),
-        children: (0, a.jsx)(j.default, {
+        children: (0, a.jsx)(G.default, {
           className: Z.dragIcon
         })
       }), null != P ? (0, a.jsx)("div", {
@@ -211,7 +211,7 @@ function ee(e) {
           innerClassName: Z.actionItemEditButtonInner,
           size: d.Button.Sizes.MIN,
           onClick: Y,
-          children: [(0, a.jsx)(G.default, {
+          children: [(0, a.jsx)(j.default, {
             className: Z.__invalid_editIcon
           }), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
@@ -376,7 +376,7 @@ function en(e) {
       }(0, d.openModalLazy)(async () => {
         let {
           default: l
-        } = await Promise.all([s.e("99387"), s.e("60618")]).then(s.bind(s, "850085"));
+        } = await Promise.all([s.e("99387"), s.e("75409")]).then(s.bind(s, "850085"));
         return s => (0, a.jsx)(l, {
           imgURI: e,
           file: t,
@@ -574,7 +574,7 @@ function ei(e) {
         className: Z.dragContainer,
         onMouseEnter: () => p(!0),
         onMouseLeave: () => p(!1),
-        children: (0, a.jsx)(j.default, {
+        children: (0, a.jsx)(G.default, {
           className: Z.dragIcon
         })
       }), null != C && (0, a.jsx)("div", {
@@ -609,7 +609,7 @@ function ei(e) {
           innerClassName: Z.resourceChannelEditButtonInner,
           size: d.Button.Sizes.MIN,
           onClick: v,
-          children: [(0, a.jsx)(G.default, {}), (0, a.jsx)(d.HiddenVisually, {
+          children: [(0, a.jsx)(j.default, {}), (0, a.jsx)(d.HiddenVisually, {
             children: K.default.Messages.EDIT
           })]
         })

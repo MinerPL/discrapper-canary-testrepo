@@ -10,9 +10,12 @@ n.r(t), n.d(t, {
     return o
   },
   buildSearchCriteriaFromUIState: function() {
-    return h
+    return _
   },
   resetClanDiscovery: function() {
+    return h
+  },
+  setClanDiscoveryMode: function() {
     return E
   },
   useClanDiscoveryUIStore: function() {
@@ -25,15 +28,13 @@ var a, s, l, i, r, o, u = n("652874"),
 (a = i || (i = {})).ADMIN_UPSELL = "admin_upsell", a.GET_STARTED = "get_started", a.DISCOVERY = "discovery", a.PLAYSTYLE = "playstyle", a.TRAITS = "traits", a.GAMES = "games", (s = r || (r = {})).VALORANT = "valorant", s.GENSHIN = "genshin", (l = o || (o = {})).USER_UPSELL = "user_upsell", l.USER_ONBOARDING = "user_onboarding";
 let f = (0, u.default)((0, d.persist)(e => ({
   mode: "admin_upsell",
+  previousMode: "admin_upsell",
   game: "valorant",
   started: !1,
   userUpsellScreen: "user_upsell",
   selectedGames: [],
   selectedPlaystyle: null,
   selectedTraits: [],
-  setMode: t => e({
-    mode: t
-  }),
   setGame: t => e({
     game: t
   }),
@@ -71,9 +72,19 @@ let f = (0, u.default)((0, d.persist)(e => ({
   })
 }));
 
-function E() {
+function E(e) {
+  let t = f.getState().mode;
   f.setState({
+    mode: e,
+    previousMode: t
+  })
+}
+
+function h() {
+  f.setState({
+    started: !1,
     mode: "admin_upsell",
+    previousMode: "admin_upsell",
     game: "valorant",
     userUpsellScreen: "user_upsell",
     selectedGames: [],
@@ -82,7 +93,7 @@ function E() {
   })
 }
 
-function h(e) {
+function _(e) {
   var t;
   let n = e.selectedGames,
     a = null !== (t = e.selectedPlaystyle) && void 0 !== t ? t : void 0;

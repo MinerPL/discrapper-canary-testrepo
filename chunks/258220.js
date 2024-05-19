@@ -17,7 +17,7 @@ var a = n("735250"),
   d = n("998502"),
   c = n("981631"),
   f = n("689938"),
-  E = n("67558");
+  E = n("132417");
 let h = "Activity Encourages Hardware Acceleration";
 
 function _(e) {
@@ -25,13 +25,13 @@ function _(e) {
   let {
     applicationId: n,
     ..._
-  } = e, [C, S] = s.useState(!1), [m] = (0, r.default)([n]), p = null !== (t = null == m ? void 0 : m.name) && void 0 !== t ? t : "This Activity";
+  } = e, [C, m] = s.useState(!1), [S] = (0, r.default)([n]), p = null !== (t = null == S ? void 0 : S.name) && void 0 !== t ? t : "This Activity";
   s.useEffect(() => {
     u.default.track(c.AnalyticEvents.OPEN_MODAL, {
       type: h
     })
   }, []);
-  let I = () => {
+  let g = () => {
     let e = "temporary";
     C && (e = "permanent", i.default.updatedUnsyncedSettings({
       disableActivityHardwareAccelerationPrompt: !0
@@ -51,7 +51,7 @@ function _(e) {
         variant: "text-lg/normal",
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_BETTER_TITLE
       }), (0, a.jsx)(l.ModalCloseButton, {
-        onClick: I,
+        onClick: g,
         className: E.closeButton
       })]
     }), (0, a.jsx)(l.ModalContent, {
@@ -70,14 +70,14 @@ function _(e) {
         type: l.Checkbox.Types.INVERTED,
         size: 18,
         value: C,
-        onChange: () => S(!C),
+        onChange: () => m(!C),
         children: (0, a.jsx)(l.Text, {
           variant: "text-sm/normal",
           children: f.default.Messages.DONT_SHOW_AGAIN
         })
       }), (0, a.jsx)(l.Button, {
         color: l.Button.Colors.PRIMARY,
-        onClick: I,
+        onClick: g,
         children: f.default.Messages.ACTIVITY_HARDWARE_ACCELERATION_NO_THANKS
       }), (0, a.jsx)(l.Button, {
         color: l.Button.Colors.BRAND,

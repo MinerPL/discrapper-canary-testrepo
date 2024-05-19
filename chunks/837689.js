@@ -2,26 +2,22 @@
 n.r(t), n("47120");
 var a = n("735250");
 n("470079");
-var s = n("524437"),
-  l = n("481060"),
-  i = n("570140"),
-  r = n("317770"),
-  o = n("605236"),
-  u = n("594174"),
-  d = n("295226"),
-  c = n("74538"),
-  f = n("374023"),
-  E = n("960048"),
-  h = n("913976"),
-  _ = n("328882"),
-  C = n("104494"),
-  S = n("29920"),
-  m = n("786397"),
-  p = n("248042"),
-  I = n("318199"),
-  T = n("474936");
+var s = n("481060"),
+  l = n("570140"),
+  i = n("317770"),
+  r = n("594174"),
+  o = n("295226"),
+  u = n("74538"),
+  d = n("374023"),
+  c = n("913976"),
+  f = n("104494"),
+  E = n("29920"),
+  h = n("786397"),
+  _ = n("248042"),
+  C = n("318199"),
+  m = n("474936");
 
-function g(e, t, n) {
+function S(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -29,86 +25,55 @@ function g(e, t, n) {
     writable: !0
   }) : e[t] = n, e
 }
-let A = "PremiumServerDriveAnnouncementModal";
-class N extends r.default {
+let p = "PremiumServerDriveAnnouncementModal";
+class g extends i.default {
   _initialize() {
-    i.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+    l.default.subscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.subscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   _terminate() {
-    i.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), i.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
+    l.default.unsubscribe("PREMIUM_MARKETING_DATA_READY", this.mayShowAnnouncementModal), l.default.unsubscribe("PREMIUM_MARKETING_PREVIEW", this.handlePreview)
   }
   constructor(...e) {
-    super(...e), g(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
-      let s = (0, I.extractAnnouncementModalContent)({
+    super(...e), S(this, "maybeOpenServerDriveAnnouncementModal", (e, t) => {
+      let l = (0, C.extractAnnouncementModalContent)({
         content: e,
         isPreview: t
       });
-      return null != s && ((0, l.closeModal)(A), (0, l.openModalLazy)(async () => {
+      return null != l && ((0, s.closeModal)(p), (0, s.openModalLazy)(async () => {
         let {
           default: e
         } = await Promise.resolve().then(n.bind(n, "318199"));
         return t => (0, a.jsx)(e, {
           renderModalProps: t,
-          properties: s
+          properties: l
         })
       }, {
-        modalKey: A
+        modalKey: p
       }), !0)
-    }), g(this, "handlePreview", e => {
+    }), S(this, "handlePreview", e => {
       let {
         properties: t
       } = e;
       this.maybeOpenServerDriveAnnouncementModal(t, !0)
-    }), g(this, "getOfferFromStore", () => {
-      let e = u.default.getCurrentUser();
-      if ((0, c.isPremium)(e)) return {};
-      let t = [(0, T.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID), (0, T.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID), (0, T.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID), (0, T.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID)].map(e => d.default.getUserDiscountOffer(e)).filter(e => null != e && !(0, C.hasUserDiscountExpired)(e)).shift();
+    }), S(this, "getOfferFromStore", () => {
+      let e = r.default.getCurrentUser();
+      if ((0, u.isPremium)(e)) return {};
+      let t = [(0, m.PREMIUM_TIER_2_LIKELIHOOD_DISCOUNT_ID), (0, m.PREMIUM_TIER_2_REACTIVATION_DISCOUNT_ID), (0, m.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_30_PERCENT_DISCOUNT_ID), (0, m.PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID)].map(e => o.default.getUserDiscountOffer(e)).filter(e => null != e && !(0, f.hasUserDiscountExpired)(e)).shift();
       if (null != t) return {
         userDiscountOffer: t
       };
-      let n = [(0, T.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, T.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, T.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, T.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, T.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => d.default.getUserTrialOffer(e)).filter(e => null != e && !(0, m.hasUserTrialOfferExpired)(e)).shift();
+      let n = [(0, m.PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID), (0, m.PREMIUM_TIER_2_REACTIVATION_TRIAL_ID), (0, m.PREMIUM_TIER_2_HFU_ONE_WEEK_TRIAL_ID), (0, m.PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID), (0, m.PREMIUM_TIER_2_HFU_ONE_MONTH_TRIAL_ID), (0, m.PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID), (0, m.PREMIUM_TIER_2_AUTH3_TRIAL_ID), (0, m.PREMIUM_TIER_2_NEW_USER_CPV_TRIAL_ID)].map(e => o.default.getUserTrialOffer(e)).filter(e => null != e && !(0, h.hasUserTrialOfferExpired)(e)).shift();
       return null != n ? {
         userTrialOffer: n
       } : {}
-    }), g(this, "mayShowAnnouncementModal", async () => {
-      if (await (0, p.maybeFetchActiveBogoPromotion)(), !f.ProcessArgs.isDisallowPopupsSet()) {
-        if (!(0, l.hasAnyModalOpen)() && h.default.getCurrentConfig({
+    }), S(this, "mayShowAnnouncementModal", async () => {
+      if (await (0, _.maybeFetchActiveBogoPromotion)(), !d.ProcessArgs.isDisallowPopupsSet()) {
+        if (!(0, s.hasAnyModalOpen)() && c.default.getCurrentConfig({
             location: "OfferAnnouncementManager"
           }).enabled) {
-          let e = u.default.getCurrentUser();
-          null != e && e.verified && !(0, c.isPremium)(e) && d.default.shouldFetchOffer() && E.default.captureMessage("Should not need to fetch premium User Offers again when opening announcement modal");
-          let t = await (0, S.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore());
-          if (null == t) {
-            _.default.getCurrentConfig({
-              location: "OfferAnnouncementManager"
-            }).enabled && !(0, o.isDismissibleContentDismissed)(s.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL) && (0, l.openModalLazy)(async () => {
-              let {
-                default: e
-              } = await Promise.all([n.e("99387"), n.e("54749")]).then(n.bind(n, "937733"));
-              return t => (0, a.jsx)(e, {
-                renderModalProps: t
-              })
-            });
-            return
-          }
-          for (let e of t)
+          for (let e of (await (0, E.fetchPremiumMarketingContentWithUserOffer)(this.getOfferFromStore())))
             if (this.maybeOpenServerDriveAnnouncementModal(e, !1)) break
-        }
-        if (!(0, l.hasAnyModalOpen)() && !h.default.getCurrentConfig({
-            location: "OfferAnnouncementManager"
-          }).enabled && _.default.getCurrentConfig({
-            location: "OfferAnnouncementManager"
-          }).enabled && !(0, o.isDismissibleContentDismissed)(s.DismissibleContent.PREMIUM_2024_APRIL_MARKETING_MODAL)) {
-          (0, l.openModalLazy)(async () => {
-            let {
-              default: e
-            } = await Promise.all([n.e("99387"), n.e("54749")]).then(n.bind(n, "937733"));
-            return t => (0, a.jsx)(e, {
-              renderModalProps: t
-            })
-          });
-          return
-        }!(0, l.hasAnyModalOpen)() && await (0, p.isEligibleForBOGOAnnouncementModal)() && (0, l.openModalLazy)(async () => {
+        }!(0, s.hasAnyModalOpen)() && await (0, _.isEligibleForBOGOAnnouncementModal)() && (0, s.openModalLazy)(async () => {
           let {
             default: e
           } = await Promise.all([n.e("99387"), n.e("28614")]).then(n.bind(n, "868508"));
@@ -120,4 +85,4 @@ class N extends r.default {
     })
   }
 }
-t.default = new N
+t.default = new g

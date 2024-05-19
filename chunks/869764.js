@@ -20,8 +20,8 @@ var a = n("735250"),
   _ = n("93879"),
   I = n("441674"),
   E = n("186523"),
-  f = n("931468"),
-  O = n("768581"),
+  O = n("931468"),
+  f = n("768581"),
   S = n("630388"),
   T = n("526120"),
   m = n("563534"),
@@ -30,7 +30,7 @@ var a = n("735250"),
   g = n("981631"),
   G = n("372897"),
   h = n("689938"),
-  L = n("830174");
+  L = n("48199");
 
 function R(e) {
   let {
@@ -41,7 +41,7 @@ function R(e) {
     completed: r,
     Icon: d,
     ...o
-  } = e, u = "channel" === o.variant ? o.channelId : null, N = "static" === o.variant ? o.subtitle : o.channelName, c = null != u ? O.default.getNewMemberActionIconURL({
+  } = e, u = "channel" === o.variant ? o.channelId : null, N = "static" === o.variant ? o.subtitle : o.channelName, c = null != u ? f.default.getNewMemberActionIconURL({
     channelId: u,
     icon: s
   }) : null;
@@ -97,9 +97,9 @@ function p(e) {
     channelId: N,
     title: I,
     emoji: E,
-    icon: f
+    icon: O
   } = n, {
-    id: O,
+    id: f,
     name: S
   } = null != E ? E : {}, m = (0, s.useStateFromStores)([o.default], () => o.default.getChannel(N)), D = (0, r.default)(m, !0), A = (0, s.useStateFromStores)([c.default], () => c.default.can(g.Permissions.VIEW_CHANNEL, m)), G = l.useCallback(() => {
     if (null == m) return null;
@@ -115,9 +115,9 @@ function p(e) {
       channelId: N,
       title: I,
       channelName: D,
-      emojiId: O,
+      emojiId: f,
       emojiName: S,
-      icon: f,
+      icon: O,
       completed: u,
       Icon: h
     })
@@ -150,7 +150,7 @@ function P(e) {
       onClick: c,
       children: [(0, a.jsx)("div", {
         className: L.rulesIconContainer,
-        children: (0, a.jsx)(f.default, {
+        children: (0, a.jsx)(O.default, {
           className: L.rulesIcon
         })
       }), (0, a.jsx)("div", {

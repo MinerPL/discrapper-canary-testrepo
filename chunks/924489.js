@@ -1,124 +1,124 @@
 "use strict";
 l.r(t), l.d(t, {
   GuildIconSize: function() {
-    return i
+    return n
   },
   default: function() {
-    return I
+    return E
   }
 }), l("653041");
-var i, a, n = l("735250"),
-  s = l("470079"),
-  r = l("120356"),
-  c = l.n(r),
-  o = l("477690"),
-  d = l("481060"),
-  u = l("104259"),
-  p = l("806519"),
-  _ = l("768581"),
-  m = l("624138"),
-  f = l("689938"),
-  h = l("87301");
-(a = i || (i = {}))[a.SMALL = (0, m.cssValueToNumber)(o.default.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", a[a.LARGE = (0, m.cssValueToNumber)(o.default.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
-let C = {
-    [i.SMALL]: h.moreGuildsSmall,
-    [i.LARGE]: h.moreGuildsLarge
+var n, i, r = l("735250"),
+  a = l("470079"),
+  s = l("120356"),
+  o = l.n(s),
+  u = l("477690"),
+  c = l("481060"),
+  d = l("104259"),
+  C = l("806519"),
+  f = l("768581"),
+  p = l("624138"),
+  h = l("689938"),
+  m = l("636721");
+(i = n || (n = {}))[i.SMALL = (0, p.cssValueToNumber)(u.default.GUILD_COUNT_SMALL_ICON_SIZE)] = "SMALL", i[i.LARGE = (0, p.cssValueToNumber)(u.default.GUILD_COUNT_LARGE_ICON_SIZE)] = "LARGE";
+let v = {
+    [n.SMALL]: m.moreGuildsSmall,
+    [n.LARGE]: m.moreGuildsLarge
   },
   g = {
-    [i.SMALL]: h.iconSmall,
-    [i.LARGE]: h.iconLarge
+    [n.SMALL]: m.iconSmall,
+    [n.LARGE]: m.iconLarge
   };
 
-function I(e) {
-  var t, l, a;
+function E(e) {
+  var t, l, i;
   let {
-    application: r,
-    mutualGuilds: o,
-    mutualGuildShownMax: m = 4,
-    className: I,
+    application: s,
+    mutualGuilds: u,
+    mutualGuildShownMax: p = 4,
+    className: E,
     textVariant: A = "text-sm/normal",
-    compact: E,
-    guildIconSize: v = i.LARGE
-  } = e, x = new Intl.ListFormat("en-US"), R = null !== (l = null === (t = r.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0, T = null !== (a = null == o ? void 0 : o.length) && void 0 !== a ? a : 0, {
-    shownMutualGuilds: N,
-    hiddenMutualGuilds: P
-  } = s.useMemo(() => {
+    compact: _,
+    guildIconSize: x = n.LARGE
+  } = e, M = new Intl.ListFormat("en-US"), N = null !== (l = null === (t = s.directory_entry) || void 0 === t ? void 0 : t.guild_count) && void 0 !== l ? l : 0, R = null !== (i = null == u ? void 0 : u.length) && void 0 !== i ? i : 0, {
+    shownMutualGuilds: L,
+    hiddenMutualGuilds: y
+  } = a.useMemo(() => {
     let e = [],
       t = [];
-    return null == o || o.forEach(l => {
-      e.length < m && null != l.icon ? e.push(l) : t.push(l)
-    }), e.length === m && t.length > 0 && (t.push(e[m - 1]), e = e.slice(0, m - 1)), {
+    return null == u || u.forEach(l => {
+      e.length < p && null != l.icon ? e.push(l) : t.push(l)
+    }), e.length === p && t.length > 0 && (t.push(e[p - 1]), e = e.slice(0, p - 1)), {
       shownMutualGuilds: e,
       hiddenMutualGuilds: t
     }
-  }, [o, m]), y = P.length, j = function(e, t, l, i) {
+  }, [u, p]), S = y.length, I = function(e, t, l, n) {
     if (0 === t && 0 === e) return null;
-    if (t > 0 && 0 === l) return f.default.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({
+    if (t > 0 && 0 === l) return h.default.Messages.APP_DIRECTORY_MUTUAL_GUILD_COUNT.format({
       mutualGuildCount: t
     });
-    let a = t > 0 ? f.default.Messages.APP_DIRECTORY_GUILD_COUNT_WITH_MUTUALS : f.default.Messages.APP_DIRECTORY_GUILD_COUNT,
-      n = new Intl.NumberFormat("en-US", {
-        notation: i ? "compact" : "standard",
+    let i = t > 0 ? h.default.Messages.APP_DIRECTORY_GUILD_COUNT_WITH_MUTUALS : h.default.Messages.APP_DIRECTORY_GUILD_COUNT,
+      r = new Intl.NumberFormat("en-US", {
+        notation: n ? "compact" : "standard",
         compactDisplay: "short"
       });
-    return a.format({
-      guildCount: n.format(e),
+    return i.format({
+      guildCount: r.format(e),
       mutualGuildCount: t,
-      nonMutualGuildCount: n.format(l)
+      nonMutualGuildCount: r.format(l)
     })
-  }(R, T, Math.max(0, R - T), E);
-  return 0 === N.length && null == j ? null : (0, n.jsxs)("div", {
-    className: c()(I, h.wrapper),
-    children: [(0, n.jsx)("div", {
-      className: h.icons,
-      children: N.length > 0 ? (0, n.jsxs)(n.Fragment, {
-        children: [N.map((e, t) => {
-          let l = t === N.length - 1 && 0 === y,
-            i = _.default.getGuildIconURL({
+  }(N, R, Math.max(0, N - R), _);
+  return 0 === L.length && null == I ? null : (0, r.jsxs)("div", {
+    className: o()(E, m.wrapper),
+    children: [(0, r.jsx)("div", {
+      className: m.icons,
+      children: L.length > 0 ? (0, r.jsxs)(r.Fragment, {
+        children: [L.map((e, t) => {
+          let l = t === L.length - 1 && 0 === S,
+            n = f.default.getGuildIconURL({
               id: e.id,
               icon: e.icon,
-              size: v,
+              size: x,
               canAnimate: !1
             }),
-            a = (0, n.jsx)(d.Tooltip, {
+            i = (0, r.jsx)(c.Tooltip, {
               text: e.name,
               position: "top",
-              children: e => (0, n.jsx)("img", {
+              children: e => (0, r.jsx)("img", {
                 ...e,
-                className: c()(h.icon, g[v]),
-                src: i,
+                className: o()(m.icon, g[x]),
+                src: n,
                 alt: ""
               })
             });
-          return l ? (0, n.jsx)(s.Fragment, {
-            children: a
-          }, e.id) : (0, n.jsx)(p.default, {
-            className: h.iconMask,
-            height: v,
-            width: v,
-            mask: p.default.Masks.VOICE_USER_SUMMARY_ITEM,
-            children: a
+          return l ? (0, r.jsx)(a.Fragment, {
+            children: i
+          }, e.id) : (0, r.jsx)(C.default, {
+            className: m.iconMask,
+            height: x,
+            width: x,
+            mask: C.default.Masks.VOICE_USER_SUMMARY_ITEM,
+            children: i
           }, e.id)
-        }), y > 0 ? (0, n.jsx)(d.Tooltip, {
-          text: f.default.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({
-            appNames: x.format(P.map(e => e.name))
+        }), S > 0 ? (0, r.jsx)(c.Tooltip, {
+          text: h.default.Messages.APP_DIRECTORY_GUILD_COUNT_PLUS_MUTUALS_TOOLTIP.format({
+            appNames: M.format(y.map(e => e.name))
           }),
           position: "top",
-          children: e => (0, n.jsxs)("div", {
+          children: e => (0, r.jsxs)("div", {
             ...e,
-            className: c()(h.moreGuilds, C[v]),
-            children: ["+", y]
+            className: o()(m.moreGuilds, v[x]),
+            children: ["+", S]
           })
         }) : null]
-      }) : (0, n.jsx)(u.default, {
-        width: v,
-        height: v,
-        className: h.defaultIcon
+      }) : (0, r.jsx)(d.default, {
+        width: x,
+        height: x,
+        className: m.defaultIcon
       })
-    }), null != j ? (0, n.jsx)(d.Text, {
+    }), null != I ? (0, r.jsx)(c.Text, {
       variant: A,
       color: "header-secondary",
-      children: j
+      children: I
     }) : null]
   })
 }

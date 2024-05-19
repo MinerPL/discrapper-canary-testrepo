@@ -56,7 +56,8 @@ function d(e) {
         t.length > u.MAX_QUESTION_LENGTH && (t = t.slice(0, u.MAX_QUESTION_LENGTH)), _(t)
       },
       placeholder: c.default.Messages.MEMBER_VERIFICATION_FIELD_QUESTION,
-      value: T
+      value: T,
+      onKeyDown: e => "Enter" === e.key && A()
     })
   })
 }

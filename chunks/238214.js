@@ -16,7 +16,13 @@ t.default = (0, s.createExperiment)({
     }
   }, {
     id: 1,
-    label: "Enabled",
+    label: "Early Release",
+    config: {
+      enabled: !0
+    }
+  }, {
+    id: 2,
+    label: "Treatment",
     config: {
       enabled: !0
     }

@@ -21,8 +21,8 @@ var i = n("735250"),
   N = n("315744"),
   p = n("603074"),
   O = n("453070"),
-  R = n("926491"),
-  C = n("457040"),
+  C = n("926491"),
+  R = n("457040"),
   g = n("740492"),
   L = n("153850"),
   v = n("585483"),
@@ -34,8 +34,8 @@ var i = n("735250"),
   b = n("185923"),
   G = n("611480"),
   w = n("689938"),
-  B = n("74382");
-let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
+  k = n("712337");
+let B = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
   V = r.memo(function(e) {
     let {
       isActive: t,
@@ -57,8 +57,8 @@ let k = y.MIN_EXPRESSION_PICKER_WIDTH + U.EmojiSize.MEDIUM,
         }), (0, M.setExpressionPickerView)(r)
       },
       "aria-current": t ? "page" : void 0,
-      className: s()(n, B.navButton, B.navItem, {
-        [B.navButtonActive]: t
+      className: s()(n, k.navButton, k.navItem, {
+        [k.navButtonActive]: t
       }),
       look: E.Button.Looks.BLANK,
       size: E.Button.Sizes.NONE
@@ -134,7 +134,7 @@ t.default = r.memo(function(e) {
   }), ei = (0, M.useExpressionPickerStore)(e => e.activeView), er = (0, O.useHasSendableSticker)(j), {
     renderWindow: ea,
     windowDispatch: es
-  } = r.useContext(S.default), eo = (0, _.useStateFromStores)([R.default], () => !R.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != Q, ed = (0, c.useIsModalAtTop)(null != Q ? Q : ""), e_ = r.useCallback(e => {
+  } = r.useContext(S.default), eo = (0, _.useStateFromStores)([C.default], () => !C.default.hasLoadedStickerPacks), el = (0, N.useSoundmojiExperiment)("expression_picker"), eu = null != Q, ed = (0, c.useIsModalAtTop)(null != Q ? Q : ""), e_ = r.useCallback(e => {
     var t;
     if (!eu && (0, c.hasAnyModalOpen)() || eu && !(ed && X)) return;
     let {
@@ -176,11 +176,11 @@ t.default = r.memo(function(e) {
     eI = (null === (n = W.stickers) || void 0 === n ? void 0 : n.allowSending) && null != H,
     eT = !(null === (a = W.expressionPicker) || void 0 === a ? void 0 : a.onlyEmojis) && (eE || eI),
     ef = "left" === z ? "right" : "left",
-    eS = null != Z ? Z : "left" === z ? B.positionLayerDefaultAlignLeft : B.positionLayerDefaultAlignRight;
+    eS = null != Z ? Z : "left" === z ? k.positionLayerDefaultAlignLeft : k.positionLayerDefaultAlignRight;
   return (0, i.jsx)(T.default, {
     section: P.AnalyticsSections.EXPRESSION_PICKER,
     children: (0, i.jsx)(L.AppReferencePositionLayer, {
-      className: s()(B.positionLayer, eS),
+      className: s()(k.positionLayer, eS),
       targetRef: o,
       position: K,
       align: z,
@@ -191,31 +191,31 @@ t.default = r.memo(function(e) {
           isPositioned: t
         } = e;
         return (0, i.jsx)("section", {
-          className: s()(B.positionContainer, {
-            [B.positionContainerOnlyEmoji]: !eT
+          className: s()(k.positionContainer, {
+            [k.positionContainerOnlyEmoji]: !eT
           }),
           ref: q,
           role: "dialog",
           "aria-label": w.default.Messages.EXPRESSION_PICKER,
           children: t ? (0, i.jsxs)("div", {
-            className: B.drawerSizingWrapper,
+            className: k.drawerSizingWrapper,
             style: {
               width: null == et ? void 0 : et,
               [z]: 0
             },
             ref: ee,
             children: [(0, i.jsx)("div", {
-              className: B.resizeHandle,
+              className: k.resizeHandle,
               onMouseDown: en,
               style: {
                 [ef]: -2
               }
             }), (0, i.jsxs)("div", {
-              className: B.contentWrapper,
+              className: k.contentWrapper,
               children: [eT ? (0, i.jsx)("nav", {
-                className: B.nav,
+                className: k.nav,
                 children: (0, i.jsxs)("div", {
-                  className: B.navList,
+                  className: k.navList,
                   role: "tablist",
                   "aria-label": w.default.Messages.EXPRESSION_PICKER_CATEGORIES_A11Y_LABEL,
                   children: [eE ? (0, i.jsx)(V, {
@@ -233,7 +233,7 @@ t.default = r.memo(function(e) {
                     autoFocus: !er,
                     viewType: y.ExpressionPickerViewType.STICKER,
                     children: (0, i.jsx)("div", {
-                      className: B.stickersNavItem,
+                      className: k.stickersNavItem,
                       children: w.default.Messages.EXPRESSION_PICKER_STICKER
                     })
                   }) : null, (0, i.jsx)(V, {
@@ -252,7 +252,7 @@ t.default = r.memo(function(e) {
                     children: "Sounds"
                   })]
                 })
-              }) : null, ei === y.ExpressionPickerViewType.STICKER && eI ? (0, i.jsx)(C.default, {
+              }) : null, ei === y.ExpressionPickerViewType.STICKER && eI ? (0, i.jsx)(R.default, {
                 isLoading: eo,
                 channel: j,
                 containerWidth: et,
@@ -271,7 +271,7 @@ t.default = r.memo(function(e) {
                 channel: j,
                 containerWidth: et,
                 includeCreateEmojiButton: I,
-                emojiSize: null != et && et < k ? U.EmojiSize.MEDIUM : U.EmojiSize.LARGE,
+                emojiSize: null != et && et < B ? U.EmojiSize.MEDIUM : U.EmojiSize.LARGE,
                 pickerIntention: b.EmojiIntention.CHAT,
                 closePopout: ec,
                 onSelectEmoji: F,
@@ -279,7 +279,7 @@ t.default = r.memo(function(e) {
                   $.current = e
                 }
               }) : null, ei === y.ExpressionPickerViewType.SOUNDBOARD ? (0, i.jsx)("div", {
-                className: B.soundboardContainer,
+                className: k.soundboardContainer,
                 children: (0, i.jsx)(p.default, {
                   guildId: j.guild_id,
                   channel: j,

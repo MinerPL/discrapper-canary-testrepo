@@ -16,13 +16,13 @@ n.r(t), n.d(t, {
     return L
   },
   useMultiSelectState: function() {
-    return R
+    return C
   },
   useSingleSelectState: function() {
     return O
   },
   useVariableSelect: function() {
-    return C
+    return R
   }
 }), n("47120");
 var i = n("735250"),
@@ -44,7 +44,7 @@ var i = n("735250"),
   A = n("465670"),
   m = n("748585"),
   N = n("689938"),
-  p = n("927286");
+  p = n("46257");
 
 function O(e) {
   let {
@@ -60,7 +60,7 @@ function O(e) {
   }
 }
 
-function R(e) {
+function C(e) {
   let {
     value: t,
     onChange: n,
@@ -80,7 +80,7 @@ function R(e) {
   }
 }
 
-function C(e) {
+function R(e) {
   let {
     value: t,
     onChange: n,
@@ -151,8 +151,8 @@ function y(e) {
     popoutWidth: T,
     clearable: h = !1,
     look: O = m.SelectLooks.FILLED,
-    onClose: R,
-    onOpen: C,
+    onClose: C,
+    onOpen: R,
     renderOptionLabel: g = D,
     renderOptionValue: L = M,
     popoutClassName: v,
@@ -161,8 +161,8 @@ function y(e) {
     optionClassName: b,
     closeOnSelect: G,
     select: w,
-    isSelected: B,
-    serialize: k,
+    isSelected: k,
+    serialize: B,
     clear: V,
     hideIcon: x = !1,
     "aria-label": F,
@@ -172,8 +172,8 @@ function y(e) {
     width: K,
     height: z
   } = (0, E.default)(), Z = r.useCallback(e => {
-    Y !== e && !o && (j(e), e ? null == C || C() : null == R || R())
-  }, [o, R, C, Y]), X = r.useCallback(e => {
+    Y !== e && !o && (j(e), e ? null == R || R() : null == C || C())
+  }, [o, C, R, Y]), X = r.useCallback(e => {
     Y && !e && Z(!1)
   }, [Z, Y]), Q = (0, I.useIsVisible)(X), q = r.useCallback(e => {
     if (w(e), G) {
@@ -182,7 +182,7 @@ function y(e) {
     }
   }, [w, G]), J = r.useCallback(e => {
     e.stopPropagation(), null == V || V()
-  }, [V]), $ = t.filter(e => B(e.value));
+  }, [V]), $ = t.filter(e => k(e.value));
   r.useLayoutEffect(() => {
     if (_) {
       var e;
@@ -211,12 +211,12 @@ function y(e) {
         closeOnSelect: G,
         maxVisibleItems: u,
         width: null != T ? T : K,
-        isSelected: B,
+        isSelected: k,
         closePopout: n,
         buttonHeight: null != z ? z : 0,
         onSelect: q,
         options: t,
-        serialize: k,
+        serialize: B,
         renderOptionLabel: g,
         optionClassName: b,
         updatePosition: a,
@@ -301,7 +301,7 @@ function P(e) {
     buttonHeight: A,
     updatePosition: m,
     popoutPosition: N
-  } = e, [O, R] = r.useState(0), C = r.useRef(null), g = r.useId(), L = (0, o.default)({
+  } = e, [O, C] = r.useState(0), R = r.useRef(null), g = r.useId(), L = (0, o.default)({
     id: g,
     async scrollToEnd() {},
     async scrollToStart() {},
@@ -315,8 +315,8 @@ function P(e) {
     A > 0 && m()
   }, [A, m]), (0, T.default)(m), r.useLayoutEffect(() => {
     var e, t;
-    let n = null === (t = C.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
-    null != n && R(n)
+    let n = null === (t = R.current) || void 0 === t ? void 0 : null === (e = t.getBoundingClientRect()) || void 0 === e ? void 0 : e.height;
+    null != n && C(n)
   }, [I]), r.useEffect(() => {
     m()
   }, [m, O]);
@@ -363,7 +363,7 @@ function P(e) {
             children: M
           }), (0, i.jsx)("div", {
             "aria-hidden": !0,
-            ref: C,
+            ref: R,
             className: p.measurement,
             children: M.slice(0, I)
           })]

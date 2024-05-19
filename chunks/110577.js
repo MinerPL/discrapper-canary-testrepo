@@ -1,0 +1,140 @@
+"use strict";
+n.r(t), n.d(t, {
+  DefaultThemeSelection: function() {
+    return N
+  },
+  GradientThemeSelection: function() {
+    return p
+  },
+  SelectionCircle: function() {
+    return A
+  }
+}), n("627341");
+var i = n("735250");
+n("470079");
+var r = n("120356"),
+  a = n.n(r),
+  s = n("278074"),
+  o = n("442837"),
+  l = n("692547"),
+  u = n("76162"),
+  d = n("780384"),
+  _ = n("481060"),
+  c = n("210887"),
+  E = n("441674"),
+  I = n("47760"),
+  T = n("798728"),
+  f = n("981631"),
+  S = n("689938"),
+  h = n("973844");
+
+function A() {
+  return (0, i.jsx)("div", {
+    className: h.selectionCircle,
+    children: (0, i.jsx)(E.default, {
+      className: h.checkmarkCircle,
+      foreground: h.checkmark,
+      backgroundColor: l.default.unsafe_rawColors.WHITE_500.css
+    })
+  })
+}
+
+function m(e) {
+  let {
+    name: t,
+    className: n,
+    style: r,
+    onSelect: s,
+    isSelected: o = !1,
+    tabIndex: l,
+    children: u,
+    showBadge: d
+  } = e, c = (0, _.useRadioItem)({
+    label: t,
+    isSelected: o
+  });
+  return (0, i.jsx)(_.Tooltip, {
+    text: t,
+    children: e => (0, i.jsxs)("div", {
+      className: h.themeSelectionContainer,
+      children: [(0, i.jsx)(_.Clickable, {
+        ...e,
+        ...c,
+        tabIndex: null != l ? l : c.tabIndex,
+        className: a()(h.themeSelection, {
+          [h.selected]: o
+        }, n),
+        style: r,
+        onClick: o ? f.NOOP : s,
+        children: u
+      }), o && (0, i.jsx)(A, {}), !o && d && (0, i.jsx)("div", {
+        className: h.redCircle
+      })]
+    })
+  })
+}
+
+function N(e) {
+  let {
+    theme: t,
+    isSelected: n,
+    onSelect: r
+  } = e, E = (0, o.useStateFromStores)([c.default], () => c.default.systemPrefersColorScheme), I = e => (0, d.isThemeLight)(e) ? l.default.unsafe_rawColors.PRIMARY_600.css : l.default.unsafe_rawColors.WHITE_500.css, A = (0, s.match)({
+    theme: t,
+    systemPrefersColorScheme: E
+  }).with({
+    theme: "system",
+    systemPrefersColorScheme: f.ThemeTypes.LIGHT
+  }, () => h.lightIcon).with({
+    theme: f.ThemeTypes.LIGHT
+  }, () => h.lightIcon).with({
+    theme: f.ThemeTypes.DARK
+  }, () => h.darkIcon).with({
+    theme: f.ThemeTypes.DARKER
+  }, () => h.darkerIcon).with({
+    theme: f.ThemeTypes.MIDNIGHT
+  }, () => h.midnightIcon).otherwise(() => h.darkIcon), N = (0, s.match)(t).with(f.ThemeTypes.LIGHT, () => S.default.Messages.THEME_LIGHT).with(f.ThemeTypes.DARK, () => S.default.Messages.THEME_DARK).with(f.ThemeTypes.DARKER, () => "Darker").with(f.ThemeTypes.MIDNIGHT, () => S.default.Messages.THEME_MIDNIGHT).with("system", () => S.default.Messages.THEME_SYSTEM).exhaustive(), p = (0, _.useRedesignIconContext)().enabled;
+  return (0, i.jsx)(m, {
+    onSelect: r,
+    isSelected: n,
+    name: N,
+    className: a()(h.defaultThemeSelection, A),
+    children: "system" === t && (0, i.jsx)("div", {
+      className: h.iconWrapper,
+      children: p ? (0, i.jsx)(u.RefreshIcon, {
+        color: I(E)
+      }) : (0, i.jsx)(T.default, {
+        fill: I(E)
+      })
+    })
+  })
+}
+
+function p(e) {
+  let {
+    preset: t,
+    isSelected: n,
+    disabled: r,
+    tabIndex: s,
+    onSelect: o,
+    showBadge: l
+  } = e, {
+    colors: u,
+    angle: _,
+    theme: c
+  } = t, E = (0, I.getLinearGradientForBackgroundGradient)({
+    colors: u,
+    angle: _
+  });
+  return (0, i.jsx)(m, {
+    onSelect: r ? void 0 : o,
+    isSelected: n,
+    name: t.getName(),
+    className: a()([r ? h.disabled : null, (0, d.isThemeDark)(c) ? h.darkOverlay : h.lightOverlay]),
+    style: {
+      background: "var(--bg-overlay), ".concat(E)
+    },
+    tabIndex: s,
+    showBadge: l
+  })
+}

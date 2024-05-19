@@ -1,10 +1,10 @@
 "use strict";
 n.r(t), n.d(t, {
   ClanDiscoveryAdminContainer: function() {
-    return R
+    return N
   },
   ClanDiscoveryUserContainer: function() {
-    return v
+    return A
   }
 });
 var a = n("735250"),
@@ -13,104 +13,119 @@ var a = n("735250"),
   i = n.n(l),
   r = n("143927"),
   o = n("597312"),
-  u = n("442837"),
-  d = n("780384"),
-  c = n("963202"),
-  f = n("430824"),
-  E = n("626135"),
-  h = n("792125"),
-  _ = n("769727"),
-  C = n("207796"),
-  S = n("497189"),
+  u = n("393238"),
+  d = n("410030"),
+  c = n("100527"),
+  f = n("970606"),
+  E = n("353093"),
+  h = n("769727"),
+  _ = n("207796"),
+  C = n("497189"),
   m = n("304231"),
-  p = n("526282"),
-  I = n("802001"),
-  T = n("981631"),
-  g = n("231338"),
-  A = n("495257");
+  S = n("526282"),
+  p = n("878241"),
+  g = n("981631"),
+  I = n("424023");
+let T = (e, t) => {
+  switch (e) {
+    case _.ClanDiscoveryGame.GENSHIN:
+      return t === g.ThemeTypes.DARK ? I.genshinUpsellBackgroundImageDark : I.genshinUpsellBackgroundImageLight;
+    case _.ClanDiscoveryGame.VALORANT:
+      return t === g.ThemeTypes.DARK ? I.valorantUpsellBackgroundImageDark : I.valorantUpsellBackgroundImageLight
+  }
+};
 
-function N(e) {
-  let {
-    children: t,
-    selectedGame: n,
-    className: l
-  } = e, r = s.useMemo(() => {
-    switch (n) {
-      case C.ClanDiscoveryGame.GENSHIN:
-        return A.genshinBackgroundImage;
-      case C.ClanDiscoveryGame.VALORANT:
-        return A.valorantBackgroundImage
-    }
-  }, [n]), o = (0, h.getThemeClass)(g.ThemeTypes.DARK);
-  return (0, a.jsx)(d.ThemeContextProvider, {
-    theme: g.ThemeTypes.DARK,
-    children: (0, a.jsx)("div", {
-      className: i()(r, l, o),
-      children: t
-    })
-  })
-}
-
-function v() {
-  let e = (0, C.useClanDiscoveryUIStore)(e => e.game, r.default),
-    t = (0, C.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
-    n = (0, C.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
+function A() {
+  let e = (0, _.useClanDiscoveryUIStore)(e => e.game, r.default),
+    t = (0, _.useClanDiscoveryUIStore)(e => e.userUpsellScreen, r.default),
+    n = (0, _.useClanDiscoveryUIStore)(e => e.setUserUpsellScreen, r.default),
     l = s.useCallback(() => {
-      E.default.track(T.AnalyticEvents.CLAN_DISCOVERY_USER_NUX_CLICKED), n(C.ClanDiscoveryUserScreens.USER_ONBOARDING)
-    }, [n]);
+      (0, f.trackClanUserInviteClicked)({
+        location: c.default.CLAN_DISCOVERY
+      }), n(_.ClanDiscoveryUserScreens.USER_ONBOARDING)
+    }, [n]),
+    u = (0, d.default)(),
+    E = s.useMemo(() => T(e, u), [e, u]),
+    h = s.useMemo(() => {
+      switch (e) {
+        case _.ClanDiscoveryGame.GENSHIN:
+          return u === g.ThemeTypes.DARK ? I.genshinOnboardingBackgroundImageDark : I.genshinOnboardingBackgroundImageLight;
+        case _.ClanDiscoveryGame.VALORANT:
+          return u === g.ThemeTypes.DARK ? I.valorantOnboardingBackgroundImageDark : I.valorantOnboardingBackgroundImageLight
+      }
+    }, [e, u]);
   switch (t) {
-    case C.ClanDiscoveryUserScreens.USER_UPSELL:
+    case _.ClanDiscoveryUserScreens.USER_UPSELL:
       return (0, a.jsx)("div", {
-        className: A.container,
+        className: I.container,
         children: (0, a.jsx)(o.ScrollerThin, {
-          className: A.upsellScroller,
+          className: I.upsellScroller,
           fade: !0,
-          children: (0, a.jsx)(N, {
-            selectedGame: e,
-            className: A.userUpsell,
-            children: (0, a.jsx)(p.default, {
-              selectedGame: e,
-              onClick: l
-            })
+          children: (0, a.jsxs)("div", {
+            className: i()(E, I.userUpsell),
+            children: [(0, a.jsx)("div", {
+              className: I.backgroundImageBlur
+            }), (0, a.jsxs)("div", {
+              className: I.backgroundImageContent,
+              children: [(0, a.jsx)(S.ClanDiscoveryUserUpsellBackgroundRings, {}), (0, a.jsx)(S.default, {
+                selectedGame: e,
+                onClick: l
+              })]
+            })]
           })
         })
       });
-    case C.ClanDiscoveryUserScreens.USER_ONBOARDING:
+    case _.ClanDiscoveryUserScreens.USER_ONBOARDING:
       return (0, a.jsx)("div", {
-        className: A.container,
-        children: (0, a.jsx)(N, {
-          selectedGame: e,
-          className: A.userOnboarding,
-          children: (0, a.jsx)(m.default, {
-            selectedGame: e,
-            setScreen: n
-          })
+        className: I.container,
+        children: (0, a.jsxs)("div", {
+          className: i()(h, I.userOnboarding),
+          children: [(0, a.jsx)("div", {
+            className: I.backgroundImageBlur
+          }), (0, a.jsx)("div", {
+            className: I.backgroundImageContent,
+            children: (0, a.jsx)(m.default, {
+              selectedGame: e,
+              setScreen: n
+            })
+          })]
         })
       })
   }
 }
 
-function R() {
-  let e = (0, C.useClanDiscoveryUIStore)(e => e.game, r.default),
-    t = (0, C.useClanDiscoveryUIStore)(e => e.setMode, r.default),
-    n = (0, u.useStateFromStoresArray)([f.default], () => Object.values(f.default.getGuilds())),
-    l = (0, c.useAnyClanPrepilotExperimentEnabled)(n, "clan_discovery_admin_upsell"),
-    i = (0, I.useGuildsEligibleForClanConversion)();
-  return (s.useEffect(() => {
-    (!l || 0 === i.length && l) && t(C.ClanDiscoveryMode.GET_STARTED)
-  }, [i.length, l, t]), 0 === i.length) ? null : (0, a.jsx)("div", {
-    className: A.container,
-    children: (0, a.jsxs)(o.ScrollerThin, {
-      className: A.upsellScroller,
+function N() {
+  let e = (0, _.useClanDiscoveryUIStore)(e => e.game, r.default),
+    t = (0, p.useGuildsEligibleForClan)({
+      location: "ClanDiscoveryAdminContainer"
+    }),
+    n = s.useMemo(() => t.filter(e => !(0, E.isGuildAClan)(e)), [t]),
+    {
+      ref: l,
+      width: c
+    } = (0, u.default)(),
+    f = (0, d.default)(),
+    m = s.useMemo(() => T(e, f), [e, f]);
+  return 0 === t.length ? null : (0, a.jsx)("div", {
+    className: I.container,
+    ref: l,
+    children: (0, a.jsxs)(o.ScrollerNone, {
+      className: I.upsellScroller,
       fade: !0,
-      children: [(0, a.jsx)(N, {
-        selectedGame: e,
-        className: A.adminUpsell,
-        children: (0, a.jsx)(S.default, {
-          selectedGame: e,
-          eligibleGuilds: i
-        })
-      }), (0, a.jsx)(_.ClanDiscoveryTopPicks, {
+      children: [(0, a.jsxs)("div", {
+        className: i()(m, I.adminUpsell),
+        children: [(0, a.jsx)("div", {
+          className: I.backgroundImageBlur
+        }), (0, a.jsx)("div", {
+          className: I.backgroundImageContent,
+          children: (0, a.jsx)(C.default, {
+            selectedGame: e,
+            eligibleGuilds: n,
+            eligibleGuildsIncludingConverted: t
+          })
+        })]
+      }), (0, a.jsx)(h.ClanDiscoveryTopPicks, {
+        width: null != c ? c : 1024,
         limit: 10
       })]
     })

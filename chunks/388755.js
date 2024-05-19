@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 }), n("47120");
 var s = n("735250"),
   l = n("470079"),
-  a = n("557533"),
-  i = n.n(a),
+  i = n("557533"),
+  a = n.n(i),
   r = n("39383"),
   o = n.n(r),
   c = n("608863"),
@@ -15,8 +15,8 @@ var s = n("735250"),
   d = n("643103"),
   p = n("34211"),
   h = n("231338"),
-  N = n("36517"),
-  g = n("498418");
+  N = n("431138"),
+  g = n("987016");
 
 function m(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
@@ -40,14 +40,14 @@ class f extends l.PureComponent {
       NavigationMessages: t,
       TrackClick: n,
       onChangeLocale: l,
-      avoidRouter: a,
+      avoidRouter: i,
       openNavAriaLabel: r,
       hideNavAriaLabel: o
     } = this.props, {
       menuOpen: m
     } = this.state;
     return (0, s.jsx)("header", {
-      className: i()(g.header, e),
+      className: a()(g.header, e),
       children: (0, s.jsxs)("nav", {
         className: g.headerInner,
         children: [(0, s.jsx)(n, {
@@ -58,7 +58,7 @@ class f extends l.PureComponent {
             linkClicked: "logo"
           },
           children: (0, s.jsx)(u.default, {
-            avoidRouter: a,
+            avoidRouter: i,
             className: g.logoWrapper,
             to: h.WebRoutes.INDEX,
             from: h.WebAnalyticsEvents.MAIN_NAVIGATION_MENU,
@@ -87,7 +87,7 @@ class f extends l.PureComponent {
         }), (0, s.jsxs)("ul", {
           className: m ? g.headerNavOpen : g.headerNav,
           children: [(0, s.jsx)(p.MainNavigation, {
-            avoidRouter: a,
+            avoidRouter: i,
             TrackClick: n,
             styles: g,
             isMobile: !0,

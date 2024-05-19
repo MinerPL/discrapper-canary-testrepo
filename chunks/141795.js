@@ -34,9 +34,9 @@ function p(e, t, n) {
   }) : e[t] = n, e
 }
 let O = new u.default("CloudUpload.tsx"),
-  R = n("224497").default;
+  C = n("224497").default;
 (r = i || (i = {})).NOT_STARTED = "NOT_STARTED", r.STARTED = "STARTED", r.UPLOADING = "UPLOADING", r.ERROR = "ERROR", r.COMPLETED = "COMPLETED", r.CANCELED = "CANCELED";
-class C {
+class R {
   constructor() {
     p(this, "numChunks", void 0), p(this, "totalRequestCount", void 0), p(this, "timing", {}), p(this, "compressAndExtractDisabled", void 0), p(this, "fileAlreadyPrepped", void 0), p(this, "imageCompressionQuality", void 0), p(this, "videoCompressionQuality", void 0), p(this, "convertedMimeType", void 0), p(this, "sourceMediaWidth", void 0), p(this, "sourceMediaHeight", void 0), p(this, "sourceMediaFormat", void 0), p(this, "sourceVideoBitrate", void 0)
   }
@@ -191,7 +191,7 @@ class g extends A.default {
       this.handleComplete(this.id);
       return
     }
-    let i = await R.getUploadPayload(this),
+    let i = await C.getUploadPayload(this),
       r = (0, m.getUploadTarget)(this.item.target);
     if (null == i.filename || "" === i.filename || 0 === this.currentSize) {
       O.error("File does not have a filename or size is 0.", JSON.stringify(i)), this.handleError(N.AbortCodes.INVALID_FILE_ASSET);
@@ -286,7 +286,7 @@ class g extends A.default {
     O.log("Cancelled called for ".concat(this.id)), this._abortController.abort(), this.trackUploadFinished("CANCELED"), "COMPLETED" === this.status && this.delete(), this.setStatus("CANCELED"), this.emit("complete"), this.removeAllListeners()
   }
   resetState() {
-    return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this.startTime = void 0, this.uploadAnalytics = new C, this._abortController = new AbortController, super.resetState()
+    return this.status = "NOT_STARTED", this.uploadedFilename = void 0, this.responseUrl = void 0, this.error = void 0, this.startTime = void 0, this.uploadAnalytics = new R, this._abortController = new AbortController, super.resetState()
   }
   async delete() {
     if (null == this.uploadedFilename) return;
@@ -315,6 +315,7 @@ class g extends A.default {
       video_upload_quality: c.default.videoUploadQuality,
       data_saving_mode: c.default.dataSavingMode,
       low_quality_image_mode: c.default.lowQualityImageMode,
+      channel_id: this.channelId,
       connection_type: E.default.getType(),
       effective_connection_speed: E.default.getEffectiveConnectionSpeed(),
       service_provider: E.default.getServiceProvider()
@@ -347,6 +348,7 @@ class g extends A.default {
       source_media_height: this.uploadAnalytics.sourceMediaHeight,
       source_media_format: this.uploadAnalytics.sourceMediaFormat,
       source_video_bitrate: this.uploadAnalytics.sourceVideoBitrate,
+      channel_id: this.channelId,
       connection_type: E.default.getType(),
       effective_connection_speed: E.default.getEffectiveConnectionSpeed(),
       service_provider: E.default.getServiceProvider()
@@ -354,6 +356,6 @@ class g extends A.default {
   }
   constructor(e, t, n, i) {
     var r, a, s, o;
-    super(e, n), p(this, "RESUME_INCOMPLETE_CODES", [308]), p(this, "status", "NOT_STARTED"), p(this, "channelId", void 0), p(this, "responseUrl", void 0), p(this, "currentSize", void 0), p(this, "preCompressionSize", void 0), p(this, "postCompressionSize", void 0), p(this, "loaded", 0), p(this, "reactNativeFileIndex", void 0), p(this, "error", void 0), p(this, "reactNativeFilePrepped", !1), p(this, "startTime", void 0), p(this, "uploadAnalytics", new C), p(this, "_abortController", void 0), p(this, "_xhr", void 0), p(this, "_aborted", !1), this.channelId = t, this.preCompressionSize = null !== (s = null === (r = e.file) || void 0 === r ? void 0 : r.size) && void 0 !== s ? s : 0, this.currentSize = null !== (o = null === (a = e.file) || void 0 === a ? void 0 : a.size) && void 0 !== o ? o : 0, this.reactNativeFileIndex = i, this._abortController = new AbortController
+    super(e, n), p(this, "RESUME_INCOMPLETE_CODES", [308]), p(this, "status", "NOT_STARTED"), p(this, "channelId", void 0), p(this, "responseUrl", void 0), p(this, "currentSize", void 0), p(this, "preCompressionSize", void 0), p(this, "postCompressionSize", void 0), p(this, "loaded", 0), p(this, "reactNativeFileIndex", void 0), p(this, "error", void 0), p(this, "reactNativeFilePrepped", !1), p(this, "startTime", void 0), p(this, "uploadAnalytics", new R), p(this, "_abortController", void 0), p(this, "_xhr", void 0), p(this, "_aborted", !1), this.channelId = t, this.preCompressionSize = null !== (s = null === (r = e.file) || void 0 === r ? void 0 : r.size) && void 0 !== s ? s : 0, this.currentSize = null !== (o = null === (a = e.file) || void 0 === a ? void 0 : a.size) && void 0 !== o ? o : 0, this.reactNativeFileIndex = i, this._abortController = new AbortController
   }
 }

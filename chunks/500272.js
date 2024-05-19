@@ -1,9 +1,9 @@
 "use strict";
 n.r(t), n("47120");
 var i = n("147913"),
-  r = n("314897"),
+  r = n("362721"),
+  a = n("314897"),
   s = n("592125"),
-  a = n("496675"),
   o = n("979651"),
   l = n("906605"),
   u = n("574176"),
@@ -30,7 +30,7 @@ class E extends i.default {
         guildId: n
       } = e, {
         enableHangStatus: i,
-        setDefaultStatus: r
+        setDefaultStatus: a
       } = u.HangStatusExperiment.getCurrentConfig({
         guildId: null != n ? n : _.EMPTY_STRING_SNOWFLAKE_ID,
         location: "HangStatusManager"
@@ -44,7 +44,7 @@ class E extends i.default {
       if (!i || t === this.previousVoiceChannelId) return;
       if (this.previousVoiceChannelId = t, null == n || null == t) return;
       let o = s.default.getChannel(t);
-      if (null == o || o.type !== _.ChannelTypes.GUILD_VOICE || !a.default.can(_.Permissions.SET_VOICE_CHANNEL_STATUS, o) || null != d.default.getCurrentHangStatus()) return;
+      if (null == o || o.type !== _.ChannelTypes.GUILD_VOICE || !(0, r.canSetVoiceChannelStatus)(o, !0) || null != d.default.getCurrentHangStatus()) return;
       let c = d.default.getCurrentDefaultStatus();
       if ((null == c ? void 0 : c.expiresAt) != null && (null == c ? void 0 : c.expiresAt) >= Date.now()) {
         if (c.status === _.HangStatusTypes.CUSTOM && null != c.customHangStatus) {
@@ -61,17 +61,17 @@ class E extends i.default {
           return
         }
       }
-      r && (0, l.updateHangStatus)(_.HangStatusTypes.CHILLING)
+      a && (0, l.updateHangStatus)(_.HangStatusTypes.CHILLING)
     }), c(this, "handleGuildMemberUpdate", e => {
       let {
         user: t,
         guildId: n
       } = e;
-      if (t.id !== r.default.getId()) return;
+      if (t.id !== a.default.getId()) return;
       let i = o.default.getCurrentClientVoiceChannelId(n);
       if (null == i || null == d.default.getCurrentHangStatus()) return;
       let u = s.default.getChannel(i);
-      !a.default.can(_.Permissions.SET_VOICE_CHANNEL_STATUS, u) && (0, l.clearHangStatus)()
+      !(0, r.canSetVoiceChannelStatus)(u, !0) && (0, l.clearHangStatus)()
     }), c(this, "handleDisconnectFromVoiceChannel", () => {
       (0, l.clearHangStatus)()
     }), c(this, "handleLogout", () => {

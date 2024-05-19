@@ -11,7 +11,7 @@ var n = s("735250"),
   a = s("355467"),
   o = s("591759"),
   C = s("987209"),
-  u = s("563132"),
+  u = s("598"),
   d = s("409813"),
   c = s("35248"),
   p = s("362755"),
@@ -26,14 +26,14 @@ function L(e) {
   } = e, {
     selectedPlan: s,
     browserCheckoutState: L,
-    browserCheckoutStateLoadId: E,
+    browserCheckoutStateLoadId: h,
     contextMetadata: S
   } = (0, u.usePaymentContext)(), {
-    isGift: h
-  } = (0, C.useGiftContext)(), [j, P] = i.useState(!1);
+    isGift: j
+  } = (0, C.useGiftContext)(), [E, P] = i.useState(!1);
   return i.useEffect(() => {
     var e;
-    !j && (P(!0), (0, a.startBrowserCheckout)(S.loadId), ! function(e, t, s, n) {
+    !E && (P(!0), (0, a.startBrowserCheckout)(S.loadId), ! function(e, t, s, n) {
       let i = _.Endpoints.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, s),
         a = new URL(o.default.makeUrl(_.Routes.BILLING_LOGIN_HANDOFF)),
         C = (0, r.v4)();
@@ -48,10 +48,10 @@ function L(e) {
       }, () => {
         n()
       })
-    }(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, h, S.loadId, () => t(d.Step.ADD_PAYMENT_STEPS)))
-  }, [s, h, j, P, S, t]), i.useEffect(() => {
-    E === S.loadId && L === p.BrowserCheckoutState.DONE && t(d.Step.CONFIRM)
-  }, [L, E, S, t]), (0, n.jsxs)(n.Fragment, {
+    }(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : m.SubscriptionPlans.PREMIUM_MONTH_TIER_2, j, S.loadId, () => t(d.Step.ADD_PAYMENT_STEPS)))
+  }, [s, j, E, P, S, t]), i.useEffect(() => {
+    h === S.loadId && L === p.BrowserCheckoutState.DONE && t(d.Step.CONFIRM)
+  }, [L, h, S, t]), (0, n.jsxs)(n.Fragment, {
     children: [(0, n.jsx)(f.default, {}), (0, n.jsx)(x.PaymentPortalBody, {
       children: (0, n.jsx)(c.AwaitingBrowserCheckoutStepBody, {})
     }), (0, n.jsx)(x.PaymentPortalFooter, {

@@ -1,152 +1,166 @@
 "use strict";
 n.r(t), n.d(t, {
   generateGamingContentImage: function() {
-    return m
+    return p
   }
 }), n("653041");
-var a = n("55000"),
-  l = n("693824"),
-  s = n("690725"),
-  i = n("70956"),
-  r = n("561308"),
-  o = n("737583"),
-  u = n("169040"),
-  d = n("689938");
-let c = (e, t) => ({
-    AvatarImage: e,
+var a = n("705512"),
+  l = n("55000"),
+  s = n("693824"),
+  i = n("690725"),
+  r = n("70956"),
+  o = n("561308"),
+  u = n("737583"),
+  d = n("169040"),
+  c = n("689938");
+let f = (e, t) => ({
+    AvatarImage1: e[0],
+    ...null != e[1] && {
+      AvatarImage2: e[1]
+    },
+    ...null != e[2] && {
+      AvatarImage3: e[2]
+    },
     ...null != t && {
       ApplicationImage: t
     }
   }),
-  f = (e, t) => {
+  h = (e, t) => {
     let n = [{
-      iconPath: u.GAME_CONTROLLER_ICON_PATH,
+      iconPath: d.GAME_CONTROLLER_ICON_PATH,
       text: t
     }];
-    (0, r.isEntryNew)(e) && n.push({
-      iconPath: u.NEW_GAME_ICON_PATH,
-      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
-    });
-    let a = (0, r.getStreakCount)(e);
-    null != a && a > 1 && n.push({
-      iconPath: u.FLASH_ICON_PATH,
-      text: d.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-        days: a
+    if ((0, o.isEntryNew)(e) && n.push({
+        iconPath: d.NEW_GAME_ICON_PATH,
+        text: c.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER
+      }), (0, o.isValidStreak)(e)) {
+      let t = (0, o.getStreakCount)(e);
+      n.push({
+        iconPath: d.FLASH_ICON_PATH,
+        text: c.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+          days: t
+        })
       })
-    });
-    let l = (0, r.getResurrectedEntryLastPlayTime)(e);
+    }
+    let l = (0, o.getResurrectedEntryLastPlayTime)(e);
     if (null != l && n.push({
-        iconPath: u.RESURRECTED_ICON_PATH,
-        text: (0, r.getFullResurrectedBadgeText)(l)
-      }), (0, r.isEntryMarathon)(e) && n.push({
-        iconPath: u.TIMER_ICON_PATH,
-        text: (0, r.isEntryActive)(e) ? (0, r.getMarathonName)(e) : (0, r.getFullMarathonDescription)(e)
-      }), (0, r.isEntryTopGame)(e)) {
-      let t = (0, r.getEntryDuration)(e);
+        iconPath: d.RESURRECTED_ICON_PATH,
+        text: (0, o.getFullResurrectedBadgeText)(l)
+      }), (0, o.isEntryMarathon)(e) && n.push({
+        iconPath: d.TIMER_ICON_PATH,
+        text: (0, o.isEntryActive)(e) ? (0, o.getMarathonName)(e) : (0, o.getFullMarathonDescription)(e)
+      }), (0, o.isEntryTopGame)(e)) {
+      let t = (0, o.getEntryDuration)(e);
       if (null != t) {
-        let e = d.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
-          hours: Math.round(t / i.default.Seconds.HOUR)
+        let e = c.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK.format({
+          hours: Math.round(t / r.default.Seconds.HOUR)
         });
         return [{
-          iconPath: u.TROPHY_ICON_PATH,
-          text: "".concat(d.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
+          iconPath: d.TROPHY_ICON_PATH,
+          text: "".concat(c.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, " — ").concat(e)
         }]
       }
     }
-    return n
+    return (0, o.getTrendingType)(e) === a.TrendingType.GLOBAL && n.push({
+      iconPath: d.TRENDING_ICON_PATH,
+      text: c.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+    }), n
   },
-  h = (e, t) => {
+  m = (e, t) => {
     let {
       timestamp: n,
-      colors: s,
+      colors: a,
       description: i,
-      entry: r
-    } = t, c = s.map((e, t) => ({
+      entry: r,
+      numAvatars: o
+    } = t, f = a.map((e, t) => ({
       color: e,
       stop: t
     }));
     e.setSize({
-      w: u.imageWidth,
-      h: u.imageHeight
-    }, 4), e.drawRoundedGradientRect(c, {
+      w: d.imageWidth,
+      h: d.imageHeight
+    }, 4), e.drawRoundedGradientRect(f, {
       x: 0,
-      y: u.imageHeight
+      y: d.imageHeight
     }, {
-      x: u.imageWidth,
+      x: d.imageWidth,
       y: 0
     }, {
       x: 0,
       y: 0,
-      h: u.imageHeight,
-      w: u.imageWidth
+      h: d.imageHeight,
+      w: d.imageWidth
     }, 8), e.setColor("rgba(108, 111, 124, 0.24)"), e.drawRoundedRect({
-      x: u.imageWidth - u.imagePadding - u.betaTagWidth,
-      y: u.imagePadding,
-      w: u.betaTagWidth,
-      h: u.betaTagHeight
+      x: d.imageWidth - d.imagePadding - d.betaTagWidth,
+      y: d.imagePadding,
+      w: d.betaTagWidth,
+      h: d.betaTagHeight
     }, 4, !0), e.setColor("rgba(255, 255, 255, 0.5)");
     e.setFont({
       size: 12,
       family: ["gg sans", "sans-serif"],
       weight: 500,
-      truncate: l.TextTruncationMethod.None
-    }), e.drawText(d.default.Messages.BETA, {
-      x: u.imageWidth - u.imagePadding - 29,
-      y: u.imagePadding + 12 + 2
+      truncate: s.TextTruncationMethod.None
+    }), e.drawText(c.default.Messages.BETA, {
+      x: d.imageWidth - d.imagePadding - 29,
+      y: d.imagePadding + 12 + 2
     }, !0), e.setColor("white"), e.drawRoundedImage("ApplicationImage", {
-      x: u.imagePadding,
-      y: u.imagePadding
+      x: d.imagePadding,
+      y: d.imagePadding
     }, {
-      w: u.applicationImageSize,
-      h: u.applicationImageSize
-    }, 8) === l.DrawResultStatus.Failure && e.drawPath(a.ACTIVITY_IMAGE_FALLBACK_PATH, {
-      x: u.imagePadding,
-      y: u.imagePadding
-    }, !0, 2 + 2 / 3), e.drawRoundedImage("AvatarImage", {
-      x: u.descriptionIndent,
-      y: u.imagePadding
-    }, {
-      w: u.avatarImageSize,
-      h: u.avatarImageSize
-    }, 50, {
-      fillMode: l.FillMode.Cover
+      w: d.applicationImageSize,
+      h: d.applicationImageSize
+    }, 8) === s.DrawResultStatus.Failure && e.drawPath(l.ACTIVITY_IMAGE_FALLBACK_PATH, {
+      x: d.imagePadding,
+      y: d.imagePadding
+    }, !0, 2 + 2 / 3);
+    (0, u.drawAvatars)({
+      canvas: e,
+      avatarSrcs: ["AvatarImage1", "AvatarImage2", "AvatarImage3"].slice(0, o),
+      position: {
+        x: d.descriptionIndent,
+        y: d.imagePadding
+      },
+      avatarImageSize: d.avatarImageSize
     }), e.setColor("white"), e.setFont({
       size: 16,
-      truncate: l.TextTruncationMethod.Wrap
+      truncate: s.TextTruncationMethod.Wrap
     }), e.drawText(i, {
-      x: u.descriptionIndent,
+      x: d.descriptionIndent,
       y: 64,
       h: 32,
-      w: u.descriptionMaxWidth
+      w: d.descriptionMaxWidth
     }, !0);
-    let h = f(r, n);
-    (0, o.drawBadges)({
+    let m = h(r, n);
+    (0, u.drawBadges)({
       canvas: e,
-      badges: h,
-      startPosition: u.descriptionIndent,
-      maxWidth: u.descriptionMaxWidth
+      badges: m,
+      startPosition: d.descriptionIndent,
+      maxWidth: d.descriptionMaxWidth
     })
   },
-  m = async e => {
+  p = async e => {
     let {
       applicationImageSrc: t,
       entry: n,
-      avatarSrc: a,
-      description: i,
+      avatarSrcs: a,
+      description: l,
       timestamp: r,
       colors: o,
       channelId: u
-    } = e, d = n.extra.game_name, f = c(a, t);
-    return await (0, s.generateImageFromCanvas)({
-      assetsToLoad: f,
-      drawImage: e => h(e, {
+    } = e, d = n.extra.game_name, c = f(a, t);
+    return await (0, i.generateImageFromCanvas)({
+      assetsToLoad: c,
+      drawImage: e => m(e, {
         timestamp: r,
         colors: o,
-        description: i,
-        entry: n
+        description: l,
+        entry: n,
+        numAvatars: a.length
       }),
       exportConfigs: {
-        format: l.DiscordCanvasExporterOutputFormats.CloudUpload,
+        format: s.DiscordCanvasExporterOutputFormats.CloudUpload,
         quality: 1,
         fileName: "user-reacting-to-".concat(d, ".png").toLowerCase(),
         fileType: "png",

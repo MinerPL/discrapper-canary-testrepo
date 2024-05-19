@@ -1,12 +1,13 @@
 "use strict";
 n.r(t);
-var a = n("706454"),
-  s = n("981631");
+var a = n("243814"),
+  s = n("706454"),
+  l = n("981631");
 t.default = {
-  [s.RPCCommands.USER_SETTINGS_GET_LOCALE]: {
-    scope: s.OAuth2Scopes.IDENTIFY,
+  [l.RPCCommands.USER_SETTINGS_GET_LOCALE]: {
+    scope: a.OAuth2Scopes.IDENTIFY,
     handler: () => ({
-      locale: a.default.locale
+      locale: s.default.locale
     })
   }
 }

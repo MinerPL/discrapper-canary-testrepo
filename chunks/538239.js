@@ -11,7 +11,7 @@ var a = n("735250"),
   r = n("442837"),
   o = n("481060"),
   u = n("904245"),
-  d = n("654030"),
+  d = n("851021"),
   c = n("744061"),
   f = n("367907"),
   h = n("728345"),
@@ -25,9 +25,9 @@ var a = n("735250"),
   T = n("838440"),
   I = n("981631"),
   A = n("689938"),
-  v = n("650714");
+  N = n("38208");
 
-function N(e, t, n) {
+function v(e, t, n) {
   return t in e ? Object.defineProperty(e, t, {
     value: n,
     enumerable: !0,
@@ -96,18 +96,18 @@ class M extends l.PureComponent {
         })
       }), (0, a.jsxs)(o.ModalContent, {
         children: [(0, a.jsx)("div", {
-          className: v.subHeader,
+          className: N.subHeader,
           children: A.default.Messages.MESSAGE_PREVIEW
         }), (0, a.jsx)(d.default, {
           activityActionType: f,
           activity: s,
-          className: v.preview,
+          className: N.preview,
           application: m,
           partyId: null != s.party ? s.party.id : null,
           isPreview: !0,
           analyticsLocations: r
         }), (0, a.jsx)("div", {
-          className: v.subHeader,
+          className: N.subHeader,
           children: A.default.Messages.ADD_A_COMMENT_OPTIONAL
         }), (0, a.jsx)(o.Popout, {
           position: "top",
@@ -128,7 +128,7 @@ class M extends l.PureComponent {
             })
           },
           children: () => (0, a.jsx)(C.default, {
-            className: v.textArea,
+            className: N.textArea,
             textValue: e,
             richValue: t,
             focused: n,
@@ -161,11 +161,11 @@ class M extends l.PureComponent {
     })
   }
   constructor(...e) {
-    super(...e), N(this, "state", {
+    super(...e), v(this, "state", {
       ...(0, E.createEmptyState)(),
       textFocused: !0,
       contentWarningProps: null
-    }), N(this, "trackInvite", e => {
+    }), v(this, "trackInvite", e => {
       if (null != e && e.ok) {
         let {
           activity: t,
@@ -191,12 +191,12 @@ class M extends l.PureComponent {
           message_id: null != e ? e.body.id : null
         }), Promise.resolve()
       }
-    }), N(this, "handleTextChange", (e, t, n) => {
+    }), v(this, "handleTextChange", (e, t, n) => {
       this.setState({
         textValue: t,
         richValue: n
       })
-    }), N(this, "handleShare", () => {
+    }), v(this, "handleShare", () => {
       let {
         channel: e,
         activity: t,

@@ -12,8 +12,8 @@ var a = n("735250"),
   o = n("518774"),
   u = n("27457"),
   d = n("981631"),
-  c = n("80095"),
-  f = n("976587");
+  c = n("151561"),
+  f = n("661781");
 let h = "CameraPreviewPosition";
 
 function m(e) {

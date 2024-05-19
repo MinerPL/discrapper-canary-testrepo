@@ -2,29 +2,29 @@
 let i, r;
 n.r(t), n.d(t, {
   encryptAndStoreTokens: function() {
-    return C
+    return R
   },
   getToken: function() {
     return m
   },
   hideToken: function() {
-    return O
+    return p
   },
   init: function() {
     return A
   },
   removeToken: function() {
-    return R
+    return C
   },
   setToken: function() {
     return N
   },
   showToken: function() {
-    return p
+    return O
   }
 }), n("47120"), n("724458");
-var s = n("433517"),
-  a = n("231338");
+var a = n("433517"),
+  s = n("231338");
 let o = "dQw4w9WgXcQ:";
 
 function l(e) {
@@ -44,10 +44,10 @@ let _ = !1,
 
 function f() {
   if (I) {
-    s.Storage.remove(a.TOKEN_KEY), s.Storage.remove(a.TOKENS_KEY);
+    a.Storage.remove(s.TOKEN_KEY), a.Storage.remove(s.TOKENS_KEY);
     return
   }
-  null != r ? s.Storage.set(a.TOKEN_KEY, r) : s.Storage.remove(a.TOKEN_KEY), s.Storage.set(a.TOKENS_KEY, E)
+  null != r ? a.Storage.set(s.TOKEN_KEY, r) : a.Storage.remove(s.TOKEN_KEY), a.Storage.set(s.TOKENS_KEY, E)
 }
 
 function S(e) {
@@ -69,7 +69,7 @@ function h(e) {
 
 function A() {
   if (T) return;
-  r = s.Storage.get(a.TOKEN_KEY), E = s.Storage.get(a.TOKENS_KEY) || {};
+  r = a.Storage.get(s.TOKEN_KEY), E = a.Storage.get(s.TOKENS_KEY) || {};
   let {
     decryptedToken: e,
     wasEncrypted: t
@@ -92,26 +92,26 @@ function m(e) {
 
 function N(e, t) {
   if (null == e) {
-    R(t);
+    C(t);
     return
   }
-  i = e, null != t && (c[t] = e), _ ? C() : (r = i, E = c, f())
-}
-
-function O() {
-  !I && (I = !0, f())
+  i = e, null != t && (c[t] = e), _ ? R() : (r = i, E = c, f())
 }
 
 function p() {
+  !I && (I = !0, f())
+}
+
+function O() {
   I && (I = !1, f())
 }
 
-function R(e) {
+function C(e) {
   let t = i;
-  null != e && (t = c[e], delete c[e], delete E[e]), t === i && (i = null, r = null), f()
+  return null != e && (t = c[e], delete c[e], delete E[e]), t === i && (i = null, r = null), f(), null != t
 }
 
-function C() {
+function R() {
   (null == u ? void 0 : u.isEncryptionAvailable()) ? (null != i && (r = h(i)), E = l(Object.entries(c).map(e => {
     let [t, n] = e;
     return [t, h(n)]

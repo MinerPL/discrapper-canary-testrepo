@@ -14,7 +14,7 @@ var a, l, T = s("735250"),
   E = s("858597"),
   u = s("486213"),
   d = s("689938"),
-  O = s("678932");
+  O = s("73439");
 (l = a || (a = {})).ACTIONS = "ACTIONS", l.SAFETY_TIPS = "SAFETY_TIPS", l.ABOUT_SAFETY_ALERTS = "ABOUT_SAFETY_ALERTS";
 t.default = e => {
   let {

@@ -1,27 +1,29 @@
 "use strict";
-a.r(t);
-var l = a("735250"),
-  s = a("470079"),
-  n = a("442837"),
-  o = a("37234"),
-  u = a("230711"),
-  i = a("410575"),
-  r = a("503089"),
-  d = a("110924"),
-  c = a("100527"),
-  f = a("367907"),
-  S = a("906732"),
-  g = a("254901"),
-  p = a("45493"),
-  E = a("332473"),
-  _ = a("113434"),
-  m = a("663389"),
-  b = a("210887"),
-  h = a("361695"),
-  k = a("981631"),
-  T = a("689938");
-let y = s.forwardRef(function() {
-  p.default.trackExposure({
+s.r(t);
+var a = s("735250"),
+  n = s("470079"),
+  i = s("442837"),
+  r = s("37234"),
+  u = s("230711"),
+  l = s("410575"),
+  o = s("503089"),
+  c = s("110924"),
+  d = s("100527"),
+  f = s("367907"),
+  S = s("906732"),
+  g = s("254901"),
+  h = s("45493"),
+  E = s("332473"),
+  _ = s("113434"),
+  p = s("663389"),
+  m = s("210887"),
+  b = s("394644"),
+  T = s("295545"),
+  k = s("839469"),
+  v = s("981631"),
+  P = s("689938");
+let y = n.forwardRef(function() {
+  h.default.trackExposure({
     location: "cd25e4_1"
   }), g.default.useExperiment({
     location: "user_setting_auto"
@@ -30,89 +32,99 @@ let y = s.forwardRef(function() {
   }), g.default.trackExposure({
     location: "user_setting_manual"
   });
-  let e = (0, n.useStateFromStores)([b.default], () => b.default.theme),
-    t = (0, n.useStateFromStores)([b.default], () => b.default.darkSidebar ? k.ThemeTypes.DARK : void 0),
+  let e = (0, i.useStateFromStores)([m.default], () => m.default.theme),
+    t = (0, i.useStateFromStores)([m.default], () => m.default.darkSidebar ? v.ThemeTypes.DARK : void 0),
     {
-      section: a,
+      section: s,
       subsection: y,
-      analyticsLocation: A,
-      analyticsLocations: P
-    } = (0, n.useStateFromStoresObject)([m.default], () => {
-      let e = m.default.getSection(),
-        t = m.default.getSubsection(),
+      analyticsLocation: I,
+      analyticsLocations: w
+    } = (0, i.useStateFromStoresObject)([p.default], () => {
+      let e = p.default.getSection(),
+        t = p.default.getSubsection(),
         {
-          analyticsLocation: a,
-          analyticsLocations: l
-        } = m.default.getProps();
+          analyticsLocation: s,
+          analyticsLocations: a
+        } = p.default.getProps();
       return {
         section: e,
         subsection: t,
-        analyticsLocation: a,
-        analyticsLocations: l
+        analyticsLocation: s,
+        analyticsLocations: a
       }
     }),
-    v = (0, d.default)(a),
-    x = (0, d.default)(y),
+    A = (0, c.default)(s),
+    L = (0, c.default)(y),
     {
-      analyticsLocations: F
-    } = (0, S.default)(c.default.USER_SETTINGS);
-  s.useEffect(() => {
-    null != a && (a !== v || y !== x) && ! function(e) {
+      analyticsLocations: x
+    } = (0, S.default)(d.default.USER_SETTINGS);
+  n.useEffect(() => {
+    null != s && (s !== A || y !== L) && ! function(e) {
       let {
         destinationPane: t,
-        originPane: a = null,
-        source: l = null,
-        subsection: s = null,
-        locationStack: n = null
+        originPane: s = null,
+        source: a = null,
+        subsection: n = null,
+        locationStack: i = null
       } = e;
-      f.default.trackWithMetadata(k.AnalyticEvents.SETTINGS_PANE_VIEWED, {
+      f.default.trackWithMetadata(v.AnalyticEvents.SETTINGS_PANE_VIEWED, {
         settings_type: "user",
-        origin_pane: a,
+        origin_pane: s,
         destination_pane: t,
-        location_stack: n,
-        source: l,
-        subsection: s
+        location_stack: i,
+        source: a,
+        subsection: n
       })
     }({
-      destinationPane: a,
-      originPane: null != v ? v : null,
-      source: A,
+      destinationPane: s,
+      originPane: null != A ? A : null,
+      source: I,
       subsection: y,
-      locationStack: P
+      locationStack: w
     })
-  }, [a, v, y, x, A, P]);
-  let I = (0, h.default)(),
-    j = (0, E.useIsEligibleForPomelo)(),
-    L = (0, _.useQuestsForSettingsBadge)(),
-    N = s.useCallback(e => {
+  }, [s, A, y, L, I, w]);
+  let F = (0, T.useIsEligibleForUserSettingsSearchDesktop)({
+      location: "user_settings"
+    }),
+    {
+      hasSearchResults: R,
+      searchResults: C
+    } = (0, k.useSettingSearchResults)(),
+    M = n.useMemo(() => F && R, [F, R]),
+    N = (0, b.useDefaultUserSettingsSections)(),
+    U = (0, b.useSearchUserSettingsSections)(C),
+    j = n.useMemo(() => M ? U : N, [M, U, N]),
+    G = (0, E.useIsEligibleForPomelo)(),
+    D = (0, _.useQuestsForSettingsBadge)(),
+    B = n.useCallback(e => {
       u.default.setSection(e)
     }, []);
-  return (0, l.jsx)(S.AnalyticsLocationProvider, {
-    value: F,
-    children: (0, l.jsx)(i.default, {
+  return (0, a.jsx)(S.AnalyticsLocationProvider, {
+    value: x,
+    children: (0, a.jsx)(l.default, {
       root: !0,
-      page: k.AnalyticsPages.USER_SETTINGS,
-      children: (0, l.jsx)(r.default, {
+      page: v.AnalyticsPages.USER_SETTINGS,
+      children: (0, a.jsx)(o.default, {
         theme: e,
-        title: T.default.Messages.USER_SETTINGS,
+        title: P.default.Messages.USER_SETTINGS,
         sidebarTheme: t,
-        section: a,
-        onSetSection: N,
-        onClose: o.popLayer,
-        sections: I,
-        isEligibleForPomelo: j,
-        questsForBadge: L
+        section: s,
+        onSetSection: B,
+        onClose: r.popLayer,
+        sections: j,
+        isEligibleForPomelo: G,
+        questsForBadge: D
       })
     })
   })
 });
-t.default = s.forwardRef(function() {
-  let e = (0, n.useStateFromStores)([m.default], () => m.default.getProps().analyticsLocations),
+t.default = n.forwardRef(function() {
+  let e = (0, i.useStateFromStores)([p.default], () => p.default.getProps().analyticsLocations),
     {
       analyticsLocations: t
     } = (0, S.default)(e);
-  return (0, l.jsx)(S.AnalyticsLocationProvider, {
+  return (0, a.jsx)(S.AnalyticsLocationProvider, {
     value: t,
-    children: (0, l.jsx)(y, {})
+    children: (0, a.jsx)(y, {})
   })
 })

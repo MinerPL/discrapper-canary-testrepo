@@ -9,7 +9,7 @@ n("470079");
 var r = n("120356"),
   a = n.n(r),
   s = n("481060"),
-  o = n("142354");
+  o = n("766321");
 
 function l(e) {
   let {
@@ -17,11 +17,14 @@ function l(e) {
     text: n,
     className: r,
     innerClassName: l,
-    ...u
+    tooltipDelay: u,
+    tooltipClassName: d,
+    ..._
   } = e;
   return (0, i.jsx)(s.TooltipContainer, {
+    tooltipClassName: d,
     text: n,
-    color: s.TooltipColors.NESTED,
+    delay: u,
     children: (0, i.jsx)(s.Button, {
       className: a()(o.button, r),
       innerClassName: a()(o.buttonInner, l),
@@ -30,7 +33,7 @@ function l(e) {
       size: s.Button.Sizes.NONE,
       grow: !1,
       "aria-label": n,
-      ...u,
+      ..._,
       children: (0, i.jsx)(t, {
         width: 16,
         height: 16,

@@ -4,83 +4,96 @@ var a = n("735250"),
   l = n("470079"),
   s = n("442837"),
   i = n("706454"),
-  r = n("22211"),
-  o = n("561308"),
-  u = n("919394"),
-  d = n("438226"),
-  c = n("206295"),
-  f = n("91140"),
-  h = n("297781"),
-  m = n("591853"),
-  p = n("689938");
+  r = n("192918"),
+  o = n("22211"),
+  u = n("561308"),
+  d = n("919394"),
+  c = n("438226"),
+  f = n("206295"),
+  h = n("91140"),
+  m = n("297781"),
+  p = n("591853"),
+  E = n("689938");
 t.default = e => {
   let {
     channel: t,
     entry: n,
-    requestId: E,
-    closePopout: C
+    requestId: C,
+    closePopout: g
   } = e, {
-    applicationImageSrc: g,
-    user: S
-  } = (0, f.useGamingContentData)(n), {
-    primaryColor: _,
-    secondaryColor: T
-  } = (0, c.default)(g), I = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
-    streamPreviewUrl: A,
-    channel: N
-  } = (0, r.default)(n), v = l.useCallback(e => {
-    if (null != g && null != t && null != S) return (0, u.generateGamingContentImage)({
+    applicationImageSrc: S,
+    user: _
+  } = (0, h.useGamingContentData)(n), {
+    primaryColor: T,
+    secondaryColor: I
+  } = (0, f.default)(S), A = (0, s.useStateFromStores)([i.default], () => i.default.locale), {
+    streamPreviewUrl: N,
+    channel: v
+  } = (0, o.default)(n), {
+    displayParticipants: x,
+    participant1: M,
+    participant2: R,
+    numOtherParticipants: y
+  } = (0, r.default)(n, 3), L = l.useCallback(e => {
+    if (null == S || null == t || null == _) return;
+    let a = y > 0 ? (0, c.formatGroupCanvasDescription)({
       entry: n,
-      applicationImageSrc: g,
-      avatarSrc: S.getAvatarURL(t.guild_id, 128),
-      description: (0, d.formatCanvasDescription)(n, t, S),
-      timestamp: (0, o.formatEntryTimestamp)(n, I),
-      colors: [_, T],
+      channel: t,
+      users: [M, R],
+      countOthers: y
+    }) : (0, c.formatCanvasDescription)(n, t, _);
+    return (0, d.generateGamingContentImage)({
+      entry: n,
+      applicationImageSrc: S,
+      avatarSrcs: x.map(e => e.getAvatarURL(t.guild_id, 128)),
+      description: a,
+      timestamp: (0, u.formatEntryTimestamp)(n, A),
+      colors: [T, I],
       channelId: e
     })
-  }, [g, t, n, I, _, T, S]);
-  if (null == S) return null;
-  let x = (0, a.jsx)(h.BadgesContainer, {
-      location: h.BadgeLocation.POPOUT,
-      children: f.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
+  }, [S, t, x, n, A, y, M, R, T, I, _]);
+  if (null == _) return null;
+  let O = (0, a.jsx)(m.BadgesContainer, {
+      location: m.BadgeLocation.POPOUT,
+      children: h.GAMING_BADGES.map((e, t) => (0, a.jsx)(e, {
         entry: n
       }, t))
     }),
-    M = null == A ? (0, a.jsx)(m.PopoutContent, {
-      thumbnailSrc: g,
+    j = null == N ? (0, a.jsx)(p.PopoutContent, {
+      thumbnailSrc: S,
       channel: t,
-      userDescription: (0, o.isEntryActive)(n) ? p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
+      userDescription: (0, u.isEntryActive)(n) ? E.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYING : E.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_PLAYED,
       title: n.extra.game_name,
-      badges: x,
+      badges: O,
       entry: n
-    }) : (0, a.jsx)(m.StreamingPopoutContent, {
+    }) : (0, a.jsx)(p.StreamingPopoutContent, {
       channel: t,
-      streamPreviewSrc: A,
+      streamPreviewSrc: N,
       title: n.extra.game_name,
-      badges: x,
-      userDescription: p.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
+      badges: O,
+      userDescription: E.default.Messages.MEMBER_LIST_CONTENT_POPOUT_USER_STREAMING,
       entry: n
     });
-  return (0, a.jsxs)(m.Popout, {
-    children: [M, (0, a.jsx)(m.PopoutInteractionsContainer, {
-      children: null != N ? (0, a.jsx)(m.VoiceChannelPopoutReactor, {
-        closePopout: C,
-        user: S,
+  return (0, a.jsxs)(p.Popout, {
+    children: [j, (0, a.jsx)(p.PopoutInteractionsContainer, {
+      children: null != v ? (0, a.jsx)(p.VoiceChannelPopoutReactor, {
+        closePopout: g,
+        user: _,
         channel: t,
-        generateReactionImage: v,
-        reactionImageAltText: (0, d.getContentAltText)(n, S),
+        generateReactionImage: L,
+        reactionImageAltText: (0, c.getContentAltText)(n, _),
         entry: n,
-        requestId: E,
-        voiceChannel: N,
-        isStreaming: null != A
-      }) : (0, a.jsx)(m.PopoutReactor, {
-        closePopout: C,
-        user: S,
+        requestId: C,
+        voiceChannel: v,
+        isStreaming: null != N
+      }) : (0, a.jsx)(p.PopoutReactor, {
+        closePopout: g,
+        user: _,
         channel: t,
-        generateReactionImage: v,
-        reactionImageAltText: (0, d.getContentAltText)(n, S),
+        generateReactionImage: L,
+        reactionImageAltText: (0, c.getContentAltText)(n, _),
         entry: n,
-        requestId: E
+        requestId: C
       })
     })]
   })

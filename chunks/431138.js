@@ -1,13 +1,14 @@
 "use strict";
-e.exports = {
-  activeButton: "activeButton__70b70",
-  endButton: "endButton__45c13 pageButton_bf9853",
-  endButtonInner: "endButtonInner_f206ea",
-  gap: "gap__94f25",
-  iconCaret: "iconCaret__2b7d1",
-  jumpToPageInlineInput: "jumpToPageInlineInput__47b00",
-  pageButton: "pageButton_bf9853",
-  pageControl: "pageControl__5e095",
-  pageControlContainer: "pageControlContainer__86479",
-  roundButton: "roundButton_a01f15 pageButton_bf9853"
+n.r(t), n.d(t, {
+  Images: function() {
+    return s
+  }
+});
+let s = {
+  ASSET_SOCIAL_TWITTER: n("647928"),
+  ASSET_SOCIAL_FACEBOOK: n("728372"),
+  ASSET_SOCIAL_INSTAGRAM: n("247479"),
+  ICON_TRANSLATE: n("765341"),
+  ICON_ARROW_DOWN: n("699828"),
+  ASSET_LOGO_DISCORD_SVG: n("219787")
 }

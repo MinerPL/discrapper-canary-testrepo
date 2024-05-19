@@ -1,2 +1,10 @@
 "use strict";
-e.exports = n.p + "326f2f70861e23942390.svg"
+n.r(t), n.d(t, {
+  default: function() {
+    return r
+  }
+});
+var r = {};
+r = {
+  Empty: `Vac\xedo`
+}

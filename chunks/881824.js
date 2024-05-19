@@ -28,8 +28,8 @@ n.r(t), n.d(t, {
 var i = n("735250");
 n("470079");
 var r = n("952265"),
-  s = n("359110"),
-  a = n("314897"),
+  a = n("359110"),
+  s = n("314897"),
   o = n("88751"),
   l = n("427679"),
   u = n("513449"),
@@ -41,7 +41,7 @@ function E(e, t) {
   (0, r.openModalLazy)(async () => {
     let {
       default: t
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("38779"), n.e("87178")]).then(n.bind(n, "581355"));
+    } = await Promise.all([n.e("99387"), n.e("38779"), n.e("24753")]).then(n.bind(n, "581355"));
     return n => (0, i.jsx)(t, {
       ...n,
       channel: e
@@ -71,7 +71,7 @@ function f(e, t) {
   (0, r.openModalLazy)(async () => {
     let {
       default: r
-    } = await Promise.all([n.e("49237"), n.e("99387"), n.e("1906")]).then(n.bind(n, "854510"));
+    } = await Promise.all([n.e("99387"), n.e("1906")]).then(n.bind(n, "854510"));
     return n => (0, i.jsx)(r, {
       ...n,
       channel: e,
@@ -95,7 +95,7 @@ function S(e, t) {
 }
 
 function h(e) {
-  let t = a.default.getId(),
+  let t = s.default.getId(),
     n = (0, d.getStageBlockedUsersCount)(e);
   return !o.default.isModerator(t, e) && n > 0
 }
@@ -103,15 +103,15 @@ function h(e) {
 function A(e, t) {
   var d;
   let _ = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-  t !== e.id && (0, u.setIsOnStartStageScreen)(!0), d = e, (0, s.transitionToChannel)(d.id), t !== e.id && _ && ! function(e) {
-    let t = a.default.getId(),
-      s = o.default.isModerator(t, e.id),
+  t !== e.id && (0, u.setIsOnStartStageScreen)(!0), d = e, (0, a.transitionToChannel)(d.id), t !== e.id && _ && ! function(e) {
+    let t = s.default.getId(),
+      a = o.default.isModerator(t, e.id),
       u = l.default.isLive(e.id);
-    s && !u ? E(e) : s && u && function(e) {
+    a && !u ? E(e) : a && u && function(e) {
       (0, r.openModalLazy)(async () => {
         let {
           default: t
-        } = await Promise.all([n.e("49237"), n.e("99387"), n.e("84686")]).then(n.bind(n, "665111"));
+        } = await Promise.all([n.e("99387"), n.e("84686")]).then(n.bind(n, "665111"));
         return n => (0, i.jsx)(t, {
           ...n,
           channel: e

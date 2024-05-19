@@ -6,8 +6,8 @@ n.r(t), n.d(t, {
 });
 var i = n("470079"),
   r = n("442837"),
-  s = n("581883"),
-  a = n("914010"),
+  a = n("581883"),
+  s = n("914010"),
   o = n("915486"),
   l = n("68985"),
   u = n("211644"),
@@ -16,14 +16,14 @@ var i = n("470079"),
   c = n("526761");
 
 function E(e, t, n) {
-  let E = (0, r.useStateFromStores)([s.default], () => {
+  let E = (0, r.useStateFromStores)([a.default], () => {
       var e;
-      return null === (e = s.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
+      return null === (e = a.default.settings.userContent) || void 0 === e ? void 0 : e.dismissedContents
     }),
-    I = (0, r.useStateFromStores)([a.default], () => a.default.getGuildId()),
+    I = (0, r.useStateFromStores)([s.default], () => s.default.getGuildId()),
     T = (0, _.useNewUserDismissibleContent)(e),
     f = null;
-  s.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? f = T.find(e => null == E || !(0, o.hasBit)(E, e)) : null != E && (f = T.find(e => !(0, o.hasBit)(E, e)));
+  a.default.hasLoaded(c.UserSettingsTypes.PRELOADED_USER_SETTINGS) ? f = T.find(e => null == E || !(0, o.hasBit)(E, e)) : null != E && (f = T.find(e => !(0, o.hasBit)(E, e)));
   let S = (0, u.default)(e => null != f && e.currentlyShown.has(f)),
     h = (0, r.useStateFromStores)([l.default], () => null != f && l.default.hasUserHitDCCap(f));
   i.useEffect(() => {
@@ -39,11 +39,12 @@ function E(e, t, n) {
       }, e)
     }
   }, [f, t, I, h, n]);
-  let A = i.useCallback(e => {
+  let A = i.useCallback((e, n) => {
     null != f && (0, d.markDismissibleContentAsDismissed)(f, {
       dismissAction: e,
       groupName: t,
-      guildId: I
+      guildId: I,
+      forceTrack: n
     })
   }, [f, t, I]);
   return [S && null != f ? f : null, A]

@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return _
+    return c
   }
 });
 var i = n("735250");
@@ -11,59 +11,65 @@ var r = n("120356"),
   s = n("481060"),
   o = n("129861"),
   l = n("5192"),
-  u = n("689938"),
-  d = n("173110");
+  u = n("228168"),
+  d = n("689938"),
+  _ = n("660120");
 
-function _(e) {
+function c(e) {
   let {
     user: t,
-    guildId: n,
-    channelId: r,
-    usernameIcon: _,
-    tags: c,
-    nicknameIcons: E,
-    pronouns: I,
-    className: T,
-    onOpenProfile: f,
-    nicknameVariant: S = "heading-lg/bold",
-    pronounsVariant: h = "text-sm/medium"
-  } = e, A = e => null == f ? e : (0, i.jsx)(s.Clickable, {
-    onClick: f,
-    className: d.clickableUsername,
+    profileType: n,
+    guildId: r,
+    channelId: c,
+    usernameIcon: E,
+    tags: I,
+    nicknameIcons: T,
+    pronouns: f,
+    className: S,
+    onOpenProfile: h,
+    nicknameVariant: A = "heading-lg/bold",
+    pronounsVariant: m = "text-sm/medium"
+  } = e, N = e => null == h ? e : (0, i.jsx)(s.Clickable, {
+    onClick: h,
+    className: _.clickableUsername,
     children: e
   });
   return (0, i.jsxs)("div", {
-    className: a()(d.container, T),
+    className: a()(_.container, S),
     children: [(0, i.jsxs)("div", {
-      className: d.usernameRow,
-      children: [A((0, i.jsx)(s.Heading, {
-        className: d.nickname,
-        variant: S,
-        children: l.default.getName(n, r, t)
-      })), E]
+      className: _.usernameRow,
+      children: [N((0, i.jsx)(s.Heading, {
+        className: a()(_.nickname, n === u.UserProfileTypes.FULL_SIZE && _.fullSizeNickname),
+        variant: A,
+        children: l.default.getName(r, c, t)
+      })), (0, i.jsx)("div", {
+        className: _.nicknameIcons,
+        children: T
+      })]
     }), (0, i.jsxs)("div", {
-      className: d.tags,
-      children: [A((0, i.jsx)(o.default, {
+      className: _.tags,
+      children: [N((0, i.jsx)(o.default, {
         user: t,
-        usernameIcon: _,
+        usernameIcon: E,
         forceUsername: !0,
-        className: d.userTag,
-        usernameClass: d.userTagUsername,
-        discriminatorClass: d.userTagDiscriminator
-      })), null != I && I.length > 0 && (0, i.jsxs)(i.Fragment, {
+        className: _.userTag,
+        usernameClass: _.userTagUsername,
+        discriminatorClass: _.userTagDiscriminator
+      })), null != f && f.length > 0 && (0, i.jsxs)(i.Fragment, {
         children: [(0, i.jsx)("div", {
           "aria-hidden": "true",
-          className: d.dotSpacer
+          className: _.dotSpacer
         }), (0, i.jsx)(s.TooltipContainer, {
-          text: u.default.Messages.USER_PROFILE_PRONOUNS,
-          color: s.TooltipColors.NESTED,
+          text: d.default.Messages.USER_PROFILE_PRONOUNS,
+          delay: u.USER_PROFILE_TOOLTIP_DELAY,
           children: (0, i.jsx)(s.Text, {
-            variant: h,
-            className: d.pronouns,
-            children: I
+            variant: m,
+            className: _.pronouns,
+            color: "header-primary",
+            children: f
           })
         })]
-      }), c]
+      }), I]
     })]
   })
 }

@@ -12,7 +12,7 @@ var l, n, a = i("911969"),
   u = i("358085"),
   o = i("317381"),
   r = i("638880"),
-  c = i("266820"),
+  c = i("146936"),
   s = i("619915"),
   f = i("761122"),
   p = i("361213"),
@@ -20,7 +20,7 @@ var l, n, a = i("911969"),
   E = i("952561"),
   A = i("778569"),
   m = i("701488");
-(n = l || (l = {})).START = "START", n.JOIN = "JOIN", n.LEAVE = "LEAVE";
+(n = l || (l = {}))[n.START = 0] = "START", n[n.JOIN = 1] = "JOIN", n[n.LEAVE = 2] = "LEAVE";
 
 function y(e) {
   let {
@@ -30,23 +30,23 @@ function y(e) {
     locationObject: n,
     onActivityItemSelected: y,
     embeddedActivitiesManager: S,
-    assetNames: I = ["embedded_cover"],
-    backgroundResolution: _ = 250
+    assetNames: _ = ["embedded_cover"],
+    backgroundResolution: b = 250
   } = e, {
-    analyticsLocations: b
+    analyticsLocations: g
   } = (0, d.default)(), {
-    application: g,
-    activity: h
-  } = t, T = h.client_platform_config[(0, f.default)((0, u.getOS)())], N = null != T.label_until && Date.now() < Date.parse(T.label_until), C = (0, A.default)({
-    applicationId: g.id,
-    size: _,
-    names: I
-  }), D = null != h.activity_preview_video_asset_id ? (0, p.default)(g.id, h.activity_preview_video_asset_id) : null, L = (0, v.default)(), w = (0, E.default)(), O = (0, s.default)(i).find(e => {
+    application: h,
+    activity: I
+  } = t, T = I.client_platform_config[(0, f.default)((0, u.getOS)())], N = null != T.label_until && Date.now() < Date.parse(T.label_until), C = (0, A.default)({
+    applicationId: h.id,
+    size: b,
+    names: _
+  }), D = null != I.activity_preview_video_asset_id ? (0, p.default)(h.id, I.activity_preview_video_asset_id) : null, L = (0, v.default)(), w = (0, E.default)(), O = (0, s.default)(i).find(e => {
     let {
       embeddedActivity: t
     } = e;
-    return g.id === t.applicationId
-  }), F = "START", M = () => {
+    return h.id === t.applicationId
+  }), F = 0, M = () => {
     (0, c.default)({
       targetApplicationId: t.application.id,
       currentEmbeddedApplication: w,
@@ -54,28 +54,28 @@ function y(e) {
       guildId: l,
       channelId: null == i ? void 0 : i.id,
       embeddedActivitiesManager: S,
-      analyticsLocations: b
+      analyticsLocations: g
     }).then(e => e && (null == y ? void 0 : y({
-      applicationId: g.id
+      applicationId: h.id
     })))
   };
-  null != i && (null == L ? void 0 : L.channelId) === i.id && (null == w ? void 0 : w.id) === g.id ? (F = "LEAVE", M = () => {
+  null != i && (null == L ? void 0 : L.channelId) === i.id && (null == w ? void 0 : w.id) === h.id ? (F = 2, M = () => {
     !o.default.isLaunchingActivity() && (S.leaveActivity({
       channelId: i.id,
-      applicationId: g.id
+      applicationId: h.id
     }), null == y || y({
-      applicationId: g.id
+      applicationId: h.id
     }))
-  }) : null != O && (F = "JOIN", M = () => {
+  }) : null != O && (F = 1, M = () => {
     !o.default.isLaunchingActivity() && (0, r.default)({
       applicationId: O.embeddedActivity.applicationId,
       currentEmbeddedApplication: w,
       activityChannelId: null == i ? void 0 : i.id,
       locationObject: n,
       embeddedActivitiesManager: S,
-      analyticsLocations: b
+      analyticsLocations: g
     }).then(e => e && (null == y ? void 0 : y({
-      applicationId: g.id
+      applicationId: h.id
     })))
   });
   let U = t.activity.client_platform_config[(0, f.default)((0, u.getOS)())].release_phase,

@@ -1,8 +1,8 @@
 "use strict";
 n.r(t);
 var i, r = n("442837"),
-  s = n("433517"),
-  a = n("780384"),
+  a = n("433517"),
+  s = n("780384"),
   o = n("570140"),
   l = n("695346"),
   u = n("581883"),
@@ -39,8 +39,7 @@ let I = {
     alwaysShowLinkDecorations: !1,
     roleStyle: "username",
     submitButtonEnabled: !1,
-    syncProfileThemeWithUserTheme: !1,
-    disableVoiceBackgrounds: !1
+    syncProfileThemeWithUserTheme: !1
   },
   T = I,
   f = {
@@ -163,9 +162,6 @@ class S extends(i = r.default.DeviceSettingsStore) {
   get roleStyle() {
     return T.roleStyle
   }
-  get disableVoiceBackgrounds() {
-    return T.disableVoiceBackgrounds
-  }
   getUserAgnosticState() {
     return T
   }
@@ -176,10 +172,10 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
       ZOOM: "a11yZoom",
       COLORBLIND_MODE: "a11yColorblindMode"
     },
-    t = s.Storage.get(e.FONT_SCALE) || 100,
-    n = s.Storage.get(e.ZOOM) || _.Accessibility.ZOOM_DEFAULT,
-    i = s.Storage.get(e.COLORBLIND_MODE) || !1;
-  return s.Storage.remove(e.FONT_SCALE), s.Storage.remove(e.ZOOM), s.Storage.remove(e.COLORBLIND_MODE), {
+    t = a.Storage.get(e.FONT_SCALE) || 100,
+    n = a.Storage.get(e.ZOOM) || _.Accessibility.ZOOM_DEFAULT,
+    i = a.Storage.get(e.COLORBLIND_MODE) || !1;
+  return a.Storage.remove(e.FONT_SCALE), a.Storage.remove(e.ZOOM), a.Storage.remove(e.COLORBLIND_MODE), {
     fontScale: t,
     zoom: n,
     colorblindMode: i,
@@ -225,11 +221,16 @@ E(S, "displayName", "AccessibilityStore"), E(S, "persistKey", "AccessibilityStor
   prefersReducedMotion: "auto"
 }), e => ({
   ...e,
-  alwaysShowLinkDecorations: e.saturation <= a.LOW_SATURATION_THRESHOLD
+  alwaysShowLinkDecorations: e.saturation <= s.LOW_SATURATION_THRESHOLD
 }), e => ({
   ...e,
   disableVoiceBackgrounds: !1
-})]);
+}), e => {
+  try {
+    delete e.disableVoiceBackgrounds
+  } catch (e) {}
+  return e
+}]);
 let h = new S(o.default, {
   ACCESSIBILITY_SET_FONT_SIZE: function(e) {
     var t;
@@ -368,11 +369,6 @@ let h = new S(o.default, {
       ...T,
       contrast: t
     }
-  },
-  ACCESSIBILITY_TOGGLE_DISABLE_VOICE_BACKGROUNDS: function() {
-    (T = {
-      ...T
-    }).disableVoiceBackgrounds = !T.disableVoiceBackgrounds
   }
 });
 t.default = h

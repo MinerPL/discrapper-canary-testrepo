@@ -139,6 +139,7 @@ function S(e) {
     colorRoleId: u.colorRoleId,
     iconRoleId: u.iconRoleId,
     guildMemberAvatar: u.avatar,
+    guildMemberAvatarDecoration: u.avatarDecoration,
     clan: null !== (r = a.clan) && void 0 !== r ? r : void 0
   }
 }

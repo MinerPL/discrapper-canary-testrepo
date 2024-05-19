@@ -57,7 +57,7 @@ var a, n, i, l = s("735250"),
   es = s("474936"),
   ea = s("231338"),
   en = s("689938"),
-  ei = s("59045");
+  ei = s("511700");
 
 function el(e, t, s) {
   return t in e ? Object.defineProperty(e, t, {
@@ -319,13 +319,13 @@ class e_ extends(n = r.PureComponent) {
         paymentSource: e.paymentSource,
         locale: t,
         descriptionClassName: ei.paymentText,
-        showDefaultLabel: !0,
+        showLabels: !0,
         showPaymentSourceIcon: !0
       }) : e.paymentGateway === ea.PaymentGateways.APPLE_PARTNER ? (0, l.jsx)(Q.default, {
         paymentSource: new b.AppleSourceRecord({}),
         locale: t,
         descriptionClassName: ei.paymentText,
-        showDefaultLabel: !0,
+        showLabels: !0,
         showPaymentSourceIcon: !0
       }) : null, (0, l.jsxs)("ul", {
         children: [this.renderPaymentIdField(), !a && n > 0 ? (0, l.jsxs)(r.Fragment, {

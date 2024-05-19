@@ -1,13 +1,13 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return O
+    return p
   }
 });
 var i = n("735250"),
   r = n("470079"),
-  s = n("803997"),
-  a = n.n(s),
+  a = n("120356"),
+  s = n.n(a),
   o = n("442837"),
   l = n("481060"),
   u = n("367907"),
@@ -21,18 +21,18 @@ var i = n("735250"),
   S = n("696202"),
   h = n("981631"),
   A = n("689938"),
-  m = n("970999");
+  m = n("98482");
 
 function N(e) {
   let {
     channel: t,
     message: n,
-    replyChainLength: s
+    replyChainLength: a
   } = e;
   return r.useEffect(() => {
     (0, u.trackWithMetadata)(h.AnalyticEvents.THREAD_NUDGE_SHOWN, {
       type: "Reply Chain (".concat(3, ")"),
-      reply_chain_length: s + 1,
+      reply_chain_length: a + 1,
       channel_id: t.id,
       guild_id: t.guild_id
     })
@@ -52,7 +52,7 @@ function N(e) {
       className: m.text,
       variant: "text-sm/normal",
       children: A.default.Messages.THREAD_REPLY_SUGGESTION.format({
-        count: Math.min(10, s + 1)
+        count: Math.min(10, a + 1)
       })
     }), (0, i.jsx)(l.Text, {
       color: "text-link",
@@ -63,20 +63,20 @@ function N(e) {
   })
 }
 
-function O(e) {
+function p(e) {
   let {
     reply: t,
     chatInputType: n
   } = e, {
     channel: r,
-    message: s,
+    message: a,
     shouldMention: u,
     showMentionToggle: I
   } = t, {
-    nick: O,
-    colorString: p,
-    colorRoleName: R
-  } = (0, d.default)(s), C = function(e, t) {
+    nick: p,
+    colorString: O,
+    colorRoleName: C
+  } = (0, d.default)(a), R = function(e, t) {
     let n = e.id,
       i = t.id;
     return (0, o.useStateFromStores)([T.default], () => {
@@ -88,9 +88,9 @@ function O(e) {
       }
       return 10
     }, [n, i])
-  }(r, s), g = (0, E.useCanStartPublicThread)(r, s), L = n.showThreadPromptOnReply && C >= 2 && g;
+  }(r, a), g = (0, E.useCanStartPublicThread)(r, a), L = n.showThreadPromptOnReply && R >= 2 && g;
 
-  function D(e) {
+  function v(e) {
     e.stopPropagation(), (0, _.setPendingReplyShouldMention)(r.id, !u)
   }
   return (0, i.jsx)("div", {
@@ -100,7 +100,7 @@ function O(e) {
       children: [(0, i.jsxs)("div", {
         className: m.replyBar,
         children: [(0, i.jsx)(l.Clickable, {
-          onClick: () => (0, c.transitionTo)(h.Routes.CHANNEL(r.getGuildId(), r.id, s.id)),
+          onClick: () => (0, c.transitionTo)(h.Routes.CHANNEL(r.getGuildId(), r.id, a.id)),
           focusProps: {
             offset: {
               top: -8,
@@ -111,14 +111,14 @@ function O(e) {
           },
           children: (0, i.jsx)(l.Text, {
             color: "header-secondary",
-            className: a()(m.text, m.replyLabel),
+            className: s()(m.text, m.replyLabel),
             variant: "text-sm/normal",
             children: A.default.Messages.REPLYING_TO.format({
               userHook: (e, t) => (0, i.jsx)(l.NameWithRole, {
                 className: m.name,
-                name: O,
-                color: p,
-                roleName: R
+                name: p,
+                color: O,
+                roleName: C
               }, t)
             })
           })
@@ -132,16 +132,16 @@ function O(e) {
                   onMouseEnter: t,
                   onMouseLeave: n,
                   onFocus: r,
-                  onBlur: s
+                  onBlur: a
                 } = e;
                 return (0, i.jsx)(l.Clickable, {
                   role: "switch",
                   "aria-checked": u,
-                  onClick: D,
+                  onClick: v,
                   onMouseEnter: t,
                   onMouseLeave: n,
                   onFocus: r,
-                  onBlur: s,
+                  onBlur: a,
                   children: (0, i.jsxs)(l.Text, {
                     variant: "text-sm/bold",
                     color: u ? "text-link" : "text-muted",
@@ -169,8 +169,8 @@ function O(e) {
         })]
       }), L && (0, i.jsx)(N, {
         channel: r,
-        message: s,
-        replyChainLength: C
+        message: a,
+        replyChainLength: R
       })]
     })
   })

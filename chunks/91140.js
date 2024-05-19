@@ -17,8 +17,8 @@ var a = n("735250"),
   d = n("443487"),
   c = n("43205"),
   f = n("689938"),
-  h = n("288564");
-let m = [u.GameTimestampBadge, u.VoiceChannelBadge, u.NewGameBadge, u.StreakBadge, u.ResurrectedBadge, u.MarathonBadge],
+  h = n("571425");
+let m = [u.GameTimestampBadge, u.VoiceChannelBadge, u.NewReleaseBadge, u.NewGameBadge, u.StreakBadge, u.TrendingBadge, u.ResurrectedBadge, u.MarathonBadge],
   p = e => {
     let t = (0, i.useGetOrFetchApplication)(e.extra.application_id),
       n = null == t ? void 0 : t.getIconURL(128);

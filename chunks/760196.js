@@ -11,7 +11,7 @@ var i = n("735250"),
   _ = n("920455"),
   c = n("931981"),
   E = n("407661"),
-  I = n("414367");
+  I = n("838329");
 t.default = r.memo(e => {
   let {
     channel: t,
@@ -24,7 +24,7 @@ t.default = r.memo(e => {
   } = (0, o.useStateFromStoresObject)([l.default], () => ({
     activeCommandOption: l.default.getActiveOption(t.id),
     activeCommandOptionStates: l.default.getOptionStates(t.id)
-  })), S = (0, c.useShouldShowPTONotice)(t), h = (0, u.useShouldShowUserAppBetaBar)(r, t, {
+  })), S = (0, c.useShouldShowPTONotice)(t), h = (0, u.useShouldShowUserAppBetaNoticeForCommand)(r, t, {
     location: "ChannelTextAreaBars"
   }), A = [];
   return (null != r && (h && A.push((0, i.jsx)(_.default, {

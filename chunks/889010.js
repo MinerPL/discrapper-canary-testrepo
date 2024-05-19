@@ -13,7 +13,7 @@ var s = n("40146"),
   f = n("360048"),
   E = n("823379"),
   h = n("731455"),
-  _ = n("318020");
+  _ = n("84051");
 let C = e => {
     switch (e) {
       case h.CategoryIcons.Activity:
@@ -39,7 +39,7 @@ let C = e => {
         (0, E.assertNever)(e)
     }
   },
-  S = e => {
+  m = e => {
     let {
       categories: t,
       currentCategoryId: n,
@@ -66,4 +66,4 @@ let C = e => {
       }, e.categoryId))
     })
   };
-S.Icons = h.CategoryIcons, t.default = S
+m.Icons = h.CategoryIcons, t.default = m

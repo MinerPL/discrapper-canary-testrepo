@@ -23,8 +23,8 @@ async function i(e) {
       }
     });
     if (e.ok) return e.body;
-    return s.default.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), null
+    return s.default.captureMessage("fetchPremiumMarketingContentWithUserOffer failed"), []
   } catch (e) {
-    return s.default.captureException(e), null
+    return s.default.captureException(e), []
   }
 }

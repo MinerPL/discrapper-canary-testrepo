@@ -59,7 +59,9 @@ i = "ClanSettingsStore", (n = "displayName") in(l = S) ? Object.defineProperty(l
     for (let e in _ = {
         ..._,
         ...t
-      }, t) delete T[e]
+      }, t) delete T[e], T = {
+      ...T
+    }
   },
   CLAN_SETTINGS_SUBMIT: function() {
     I = !0, T = {}

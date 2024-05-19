@@ -15,8 +15,8 @@ var a = n("735250"),
   c = n("626135"),
   f = n("981631"),
   h = n("689938"),
-  m = n("132644"),
-  p = n("931093");
+  m = n("68236"),
+  p = n("946278");
 
 function E(e) {
   let {
@@ -40,7 +40,7 @@ function E(e) {
     A = l.useCallback(() => {
       null == C || C(), t()
     }, [C, t]),
-    v = l.useRef(null);
+    N = l.useRef(null);
   return l.useEffect(() => {
     let e;
     let t = u.default.theme,
@@ -49,8 +49,8 @@ function E(e) {
       let [{
         default: l
       }, s] = await Promise.all([Promise.resolve().then(n.t.bind(n, "500923", 23)), (0, i.isThemeDark)(t) ? T.dark() : T.light()]);
-      !a && null != v.current && (e = l.loadAnimation({
-        container: v.current,
+      !a && null != N.current && (e = l.loadAnimation({
+        container: N.current,
         renderer: "svg",
         loop: !0,
         autoplay: !0,
@@ -68,7 +68,7 @@ function E(e) {
         className: m.body,
         children: [null != T && (0, a.jsx)("div", {
           className: m.animation,
-          ref: v
+          ref: N
         }), (0, a.jsxs)("div", {
           className: m.content,
           children: [(0, a.jsx)("div", {

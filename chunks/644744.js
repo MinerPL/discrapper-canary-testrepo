@@ -1,7 +1,7 @@
 "use strict";
 s.r(t), s.d(t, {
   default: function() {
-    return _
+    return m
   }
 }), s("47120");
 var a = s("735250"),
@@ -13,7 +13,7 @@ var a = s("735250"),
   d = s("490529"),
   u = s("981631"),
   c = s("689938"),
-  S = s("215744");
+  S = s("46488");
 let E = {
     [u.HypeSquadHouses.HOUSE_1]: S.membershipDialogHouse1,
     [u.HypeSquadHouses.HOUSE_2]: S.membershipDialogHouse2,
@@ -29,12 +29,12 @@ let E = {
     [u.HypeSquadHouses.HOUSE_2]: s("797148"),
     [u.HypeSquadHouses.HOUSE_3]: s("374347")
   },
-  m = e => ({
+  _ = e => ({
     [u.HypeSquadHouses.HOUSE_1]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_1,
     [u.HypeSquadHouses.HOUSE_2]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_2,
     [u.HypeSquadHouses.HOUSE_3]: c.default.Messages.HYPESQUAD_DESCRIPTION_HOUSE_3
   })[e];
-class _ extends n.Component {
+class m extends n.Component {
   render() {
     let {
       houseMembership: e,
@@ -65,7 +65,7 @@ class _ extends n.Component {
               }), (0, a.jsx)(r.Text, {
                 className: S.membershipDialogHouseDescription,
                 variant: "text-md/normal",
-                children: m(e)
+                children: _(e)
               })]
             }), (0, a.jsx)(o.default.Child, {
               className: S.houseLogoWrapper,

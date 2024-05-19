@@ -4,8 +4,8 @@ n.r(t), n.d(t, {
     return r
   }
 });
-var a = n("981631");
+var i = n("981631");
 
 function r(e) {
-  return e.type === a.MessageTypes.DEFAULT && null != e.messageReference
+  return e.type === i.MessageTypes.DEFAULT && null != e.messageReference && e.messageReference.type !== i.MessageReferenceTypes.FORWARD
 }

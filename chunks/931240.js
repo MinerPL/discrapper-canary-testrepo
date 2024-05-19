@@ -1,53 +1,58 @@
 "use strict";
 n.r(t), n.d(t, {
   adoptClanIdentity: function() {
-    return d
+    return c
   },
   convertGuildToClan: function() {
-    return l
+    return d
   },
   disableClan: function() {
-    return S
+    return A
   },
   fetchClanSettings: function() {
-    return T
+    return S
   },
   getClanInfo: function() {
-    return u
-  },
-  resetClanSetup: function() {
     return _
   },
-  saveClanSettings: function() {
-    return f
+  joinWumpusFeedbackSquad: function() {
+    return m
   },
-  updateClanSettings: function() {
+  resetClanSetup: function() {
     return E
   },
+  saveClanSettings: function() {
+    return h
+  },
+  updateClanSettings: function() {
+    return T
+  },
   updateClanSetup: function() {
-    return c
+    return I
   }
 }), n("47120");
 var i = n("544891"),
   r = n("570140"),
   a = n("479531"),
-  s = n("981631"),
-  o = n("976757");
-async function l(e, t) {
+  s = n("314897"),
+  o = n("970606"),
+  l = n("981631"),
+  u = n("976757");
+async function d(e, t) {
   r.default.dispatch({
     type: "CLAN_SETUP_SUBMIT",
     guildId: e
   });
   try {
-    var n, o, l, u;
+    var n, s, o, u;
     await i.HTTP.post({
-      url: s.Endpoints.GUILD_CONVERT_TO_CLAN(e),
+      url: l.Endpoints.GUILD_CONVERT_TO_CLAN(e),
       body: {
         tag: t.tag,
         description: t.description,
         play_style: t.playstyle,
-        search_terms: Array.from(null !== (o = t.interests) && void 0 !== o ? o : new Set),
-        game_application_ids: Array.from(null !== (l = t.gameApplicationIds) && void 0 !== l ? l : new Set),
+        search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set),
+        game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set),
         verification_form: {
           form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : []
         },
@@ -72,16 +77,21 @@ async function l(e, t) {
     }), t
   }
 }
-async function u(e) {
+async function _(e) {
   let t = await i.HTTP.get({
-    url: s.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
+    url: l.Endpoints.GUILD_CLAN_DISCOVERY_INFO(e)
   });
-  return (0, o.buildClanFromServer)(t.body)
+  return (0, u.buildClanFromServer)(t.body)
 }
-async function d(e, t) {
+async function c(e, t, n) {
   try {
-    let n = await i.HTTP.put({
-      url: s.Endpoints.USER_SET_CLAN_IDENTITY,
+    null != e && !0 === t && (0, o.trackClanAdoptIdentity)({
+      guildId: e,
+      userId: s.default.getId(),
+      source: n
+    });
+    let a = await i.HTTP.put({
+      url: l.Endpoints.USER_SET_CLAN_IDENTITY,
       body: {
         identity_guild_id: e,
         identity_enabled: t
@@ -89,20 +99,20 @@ async function d(e, t) {
     });
     r.default.dispatch({
       type: "CURRENT_USER_UPDATE",
-      user: n.body
+      user: a.body
     })
   } catch (e) {
     return
   }
 }
 
-function _() {
+function E() {
   r.default.dispatch({
     type: "CLAN_SETUP_RESET"
   })
 }
 
-function c(e, t) {
+function I(e, t) {
   r.default.dispatch({
     type: "CLAN_SETUP_UPDATE",
     guildId: e,
@@ -110,14 +120,14 @@ function c(e, t) {
   })
 }
 
-function E(e, t) {
+function T(e, t) {
   r.default.dispatch({
     type: "CLAN_SETTINGS_UPDATE",
     guildId: e,
     updates: t
   })
 }
-let I = e => {
+let f = e => {
   var t, n, i, r, a, s;
   return {
     tag: e.tag,
@@ -139,47 +149,70 @@ let I = e => {
     brandSecondaryColor: e.brand_color_secondary
   }
 };
-async function T(e) {
+async function S(e) {
   r.default.dispatch({
     type: "CLAN_SETTINGS_FETCH_START"
   });
   let t = await i.HTTP.get({
-    url: s.Endpoints.CLAN_SETTINGS(e)
+    url: l.Endpoints.CLAN_SETTINGS(e)
   });
   r.default.dispatch({
     type: "CLAN_SETTINGS_FETCH_SUCCESS",
     guildId: e,
-    settings: I(t.body)
+    settings: f(t.body)
   })
 }
-async function f(e, t) {
-  var n, r, a, o;
-  return await i.HTTP.patch({
-    url: s.Endpoints.CLAN_SETTINGS(e),
-    body: {
-      tag: t.tag,
-      description: t.description,
-      play_style: t.playstyle,
-      search_terms: Array.from(null !== (r = t.interests) && void 0 !== r ? r : new Set),
-      game_application_ids: Array.from(null !== (a = t.gameApplicationIds) && void 0 !== a ? a : new Set),
-      verification_form: {
-        form_fields: null !== (o = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== o ? o : []
-      },
-      badge: t.badgeKind,
-      badge_color_primary: t.badgePrimaryColor,
-      badge_color_secondary: t.badgeSecondaryColor,
-      banner: t.banner,
-      brand_color_primary: t.brandPrimaryColor,
-      brand_color_secondary: t.brandSecondaryColor,
-      wildcard_descriptors: t.wildcardDescriptors,
-      badge_image: t.badgeImage
-    }
-  })
+async function h(e, t) {
+  r.default.dispatch({
+    type: "CLAN_SETTINGS_SUBMIT",
+    guildId: e
+  });
+  try {
+    var n, s, o, u;
+    let a = await i.HTTP.patch({
+      url: l.Endpoints.CLAN_SETTINGS(e),
+      body: {
+        tag: t.tag,
+        description: t.description,
+        play_style: t.playstyle,
+        search_terms: Array.from(null !== (s = t.interests) && void 0 !== s ? s : new Set),
+        game_application_ids: Array.from(null !== (o = t.gameApplicationIds) && void 0 !== o ? o : new Set),
+        verification_form: {
+          form_fields: null !== (u = null === (n = t.verificationForm) || void 0 === n ? void 0 : n.formFields) && void 0 !== u ? u : []
+        },
+        badge: t.badgeKind,
+        badge_color_primary: t.badgePrimaryColor,
+        badge_color_secondary: t.badgeSecondaryColor,
+        banner: t.banner,
+        brand_color_primary: t.brandPrimaryColor,
+        brand_color_secondary: t.brandSecondaryColor,
+        wildcard_descriptors: t.wildcardDescriptors,
+        badge_image: t.badgeImage
+      }
+    });
+    return r.default.dispatch({
+      type: "CLAN_SETTINGS_SUBMIT_SUCCESS"
+    }), a.body
+  } catch (e) {
+    throw r.default.dispatch({
+      type: "CLAN_SETTINGS_SUBMIT_ERROR",
+      error: new a.default(e)
+    }), e
+  }
 }
-async function S(e) {
+async function A(e) {
   try {
     await i.HTTP.post({
-      url: s.Endpoints.DISABLE_CLAN(e)
+      url: l.Endpoints.DISABLE_CLAN(e)
+    })
+  } catch (e) {
+    throw e
+  }
+}
+async function m(e) {
+  try {
+    await i.HTTP.post({
+      url: l.Endpoints.JOIN_WUMPUS_FEEDBACK_SQUAD(e)
     })
   } catch (e) {
     throw e

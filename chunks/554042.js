@@ -17,11 +17,11 @@ var a = s("735250"),
   E = s("607070"),
   T = s("304761"),
   f = s("865427"),
-  m = s("358085"),
-  _ = s("210887"),
+  _ = s("358085"),
+  m = s("210887"),
   g = s("981631"),
-  h = s("689938"),
-  I = s("75429");
+  I = s("689938"),
+  h = s("307723");
 let N = [{
   label: "Latin alphabet",
   value: "aBcDeFgHiJkLmNoPqRsTuVwXyZ"
@@ -59,8 +59,8 @@ function C() {
   let [e, t] = n.useState(Math.round(window.outerWidth / window.innerWidth * 100)), {
     platformZoom: s,
     theme: l
-  } = (0, r.useStateFromStoresObject)([_.default, E.default], () => ({
-    theme: _.default.theme,
+  } = (0, r.useStateFromStoresObject)([m.default, E.default], () => ({
+    theme: m.default.theme,
     platformZoom: E.default.zoom
   })), [o, C] = n.useState("upright"), A = ["normal", "medium", "semibold", "bold", "extrabold"], O = new Map([
     ["normal", 400],
@@ -70,17 +70,17 @@ function C() {
     ["extrabold", 800]
   ]);
   n.useEffect(() => {
-    !m.isPlatformEmbedded && window.addEventListener("resize", () => {
+    !_.isPlatformEmbedded && window.addEventListener("resize", () => {
       t(Math.round(window.outerWidth / window.innerWidth * 100))
     })
   }, []);
-  let x = m.isPlatformEmbedded ? s : e,
+  let x = _.isPlatformEmbedded ? s : e,
     R = (0, r.useStateFromStores)([T.default], () => {
       var e, t;
       return (0, f.probablyHasBuildOverride)() ? null === (t = T.default.getCurrentBuildOverride()) || void 0 === t ? void 0 : null === (e = t.overrides) || void 0 === e ? void 0 : e.discord_web : null
     }),
     [M, v] = p("playground-overrideText", null),
-    [D, L] = p("playground-defaultText", N[0].value),
+    [L, D] = p("playground-defaultText", N[0].value),
     P = n.useCallback(e => {
       let t = N.find(t => {
         let {
@@ -88,10 +88,10 @@ function C() {
         } = t;
         return s === e
       });
-      "" === e || null == e ? (L(N[0].value), v(null)) : null != t ? L(t.value) : (L("custom"), v(e))
-    }, [v, L]);
+      "" === e || null == e ? (D(N[0].value), v(null)) : null != t ? D(t.value) : (D("custom"), v(e))
+    }, [v, D]);
   return (0, a.jsx)("div", {
-    className: I.fullscreen,
+    className: h.fullscreen,
     style: {
       "--playground-font-family": "mono" === o ? "gg mono" : "gg sans",
       "--playground-font-style": "italic" === o ? "italic" : "normal"
@@ -99,7 +99,7 @@ function C() {
     children: (0, a.jsxs)(d.FormSection, {
       tag: d.FormTitleTags.H1,
       children: [(0, a.jsxs)("div", {
-        className: I.toolbar,
+        className: h.toolbar,
         children: [(0, a.jsxs)("div", {
           children: [(0, a.jsxs)(d.Text, {
             tag: "div",
@@ -120,14 +120,14 @@ function C() {
           }) : null]
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.SingleSelect, {
-            className: I.select,
+            className: h.select,
             options: N,
             onChange: e => P(e),
-            value: D
+            value: L
           })
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)("div", {
-            className: I.input,
+            className: h.input,
             children: (0, a.jsx)(d.TextInput, {
               placeholder: "Enter custom input...",
               value: null != M ? M : "",
@@ -137,13 +137,13 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: I.theme,
+            className: h.theme,
             orientation: "horizontal",
             options: [{
-              name: h.default.Messages.THEME_DARK,
+              name: I.default.Messages.THEME_DARK,
               value: g.ThemeTypes.DARK
             }, {
-              name: h.default.Messages.THEME_LIGHT,
+              name: I.default.Messages.THEME_LIGHT,
               value: g.ThemeTypes.LIGHT
             }],
             onChange: e => {
@@ -156,7 +156,7 @@ function C() {
         }), (0, a.jsx)(d.FormItem, {
           children: (0, a.jsx)(d.RadioGroup, {
             withTransparentBackground: !0,
-            className: I.theme,
+            className: h.theme,
             orientation: "horizontal",
             options: [{
               name: "Upright",
@@ -178,16 +178,16 @@ function C() {
           keybind: "ESC"
         })]
       }), (0, a.jsxs)("div", {
-        className: I.textGrid,
+        className: h.textGrid,
         children: [(0, a.jsx)("div", {}), A.map(e => (0, a.jsx)("div", {
-          className: I.columnHeading,
+          className: h.columnHeading,
           children: (0, a.jsx)(d.Heading, {
             variant: "eyebrow",
             children: e
           })
         }, e)), [10, 12, 14, 15, 16, 18, 20, 24].map(e => (0, a.jsxs)(n.Fragment, {
           children: [(0, a.jsxs)("div", {
-            className: I.fontSize,
+            className: h.fontSize,
             children: [(0, a.jsxs)(d.Heading, {
               variant: "eyebrow",
               children: [e, "px"]
@@ -198,13 +198,13 @@ function C() {
             }) : null]
           }, e), A.map(t => {
             var s;
-            let n = null !== (s = "custom" === D ? M : D) && void 0 !== s ? s : "";
+            let n = null !== (s = "custom" === L ? M : L) && void 0 !== s ? s : "";
             return (0, a.jsx)("div", {
-              className: I.textSample,
+              className: h.textSample,
               children: (0, a.jsxs)("div", {
                 title: "".concat(e, "px at ").concat(t),
-                className: i()(I.text, {
-                  [I.breakAnywhere]: !n.includes(" ")
+                className: i()(h.text, {
+                  [h.breakAnywhere]: !n.includes(" ")
                 }),
                 style: {
                   fontSize: e,

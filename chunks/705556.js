@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, {
   default: function() {
-    return T
+    return I
   }
 });
 var i = n("735250");
@@ -15,25 +15,23 @@ var r = n("442837"),
   d = n("785717"),
   _ = n("841040"),
   c = n("993409"),
-  E = n("537387"),
-  I = n("689938");
+  E = n("689938");
 
-function T(e) {
+function I(e) {
   let {
-    type: t,
-    user: n,
-    guildId: T,
-    onClose: f
-  } = e, S = "action" === t ? c.default : E.default, h = (0, r.useStateFromStores)([o.default], () => o.default.getId() === n.id), A = (0, r.useStateFromStores)([l.default], () => null != T ? l.default.getGuild(T) : null), {
-    trackUserProfileAction: m
-  } = (0, d.useUserProfileAnalyticsContext)(), N = (0, s.default)();
-  return h ? null == A ? (0, i.jsx)(S, {
+    user: t,
+    guildId: n,
+    onClose: I
+  } = e, T = (0, r.useStateFromStores)([o.default], () => o.default.getId() === t.id), f = (0, r.useStateFromStores)([l.default], () => null != n ? l.default.getGuild(n) : null), {
+    trackUserProfileAction: S
+  } = (0, d.useUserProfileAnalyticsContext)(), h = (0, s.default)();
+  return T ? null == f ? (0, i.jsx)(c.default, {
     icon: u.default,
-    text: I.default.Messages.EDIT_PROFILE,
+    text: E.default.Messages.EDIT_PROFILE,
     onClick: () => {
-      m({
+      S({
         action: "EDIT_PROFILE"
-      }), N(), null == f || f()
+      }), null == I || I(), h()
     }
   }) : (0, i.jsx)(a.Popout, {
     renderPopout: e => {
@@ -41,15 +39,16 @@ function T(e) {
         closePopout: t
       } = e;
       return (0, i.jsx)(_.default, {
-        guild: A,
+        guild: f,
         onClose: () => {
-          t(), null == f || f()
+          t(), null == I || I()
         }
       })
     },
-    children: e => (0, i.jsx)(S, {
+    children: e => (0, i.jsx)(c.default, {
       icon: u.default,
-      text: I.default.Messages.EDIT_PROFILE,
+      text: E.default.Messages.EDIT_PROFILE,
+      autoFocus: !0,
       ...e
     })
   }) : null

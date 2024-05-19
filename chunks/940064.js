@@ -1,32 +1,32 @@
 "use strict";
-l.r(t), l.d(t, {
+i.r(t), i.d(t, {
   default: function() {
-    return o
+    return c
   }
 });
-var i = l("735250");
-l("470079");
-var a = l("803997"),
-  n = l.n(a),
-  s = l("481060"),
-  r = l("665692"),
-  c = l("416182");
+var l = i("735250");
+i("470079");
+var a = i("120356"),
+  n = i.n(a),
+  s = i("481060"),
+  r = i("665692"),
+  o = i("13646");
 
-function o(e) {
+function c(e) {
   let {
     commands: t,
-    className: l
+    className: i
   } = e;
-  return (0, i.jsx)("div", {
-    className: n()(c.list, l),
-    children: t.map(e => (0, i.jsxs)("div", {
-      className: c.row,
-      children: [(0, i.jsxs)(s.Text, {
-        className: c.commandName,
+  return (0, l.jsx)("div", {
+    className: n()(o.list, i),
+    children: t.map(e => (0, l.jsxs)("div", {
+      className: o.row,
+      children: [(0, l.jsxs)(s.Text, {
+        className: o.commandName,
         variant: "text-md/semibold",
         color: "header-primary",
         children: [r.COMMAND_SENTINEL, e.displayName]
-      }), (0, i.jsx)(s.Text, {
+      }), (0, l.jsx)(s.Text, {
         variant: "text-md/normal",
         children: e.displayDescription
       })]

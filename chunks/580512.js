@@ -14,7 +14,7 @@ var r = n("442837"),
   u = n("785717"),
   d = n("221292"),
   _ = n("981631"),
-  c = n("810480");
+  c = n("10268");
 
 function E(e) {
   let {
@@ -71,6 +71,7 @@ function E(e) {
       }), null == I || I()
     },
     actionColor: c.buttonColor,
-    hideHeader: !0
+    hideHeader: !0,
+    showChannelDetails: !0
   })
 }

@@ -39,7 +39,7 @@ function o(e) {
 }
 
 function l(e, t) {
-  var n, r, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, R, C, g, L, v;
+  var n, r, o, l, u, d, _, c, E, I, T, f, S, h, A, m, N, p, O, C, R, g, L, v;
   let D = e.substreams.find(e => !e.isRTX && !e.isFlexFEC);
   if (null == D) return;
   let M = e.substreams.reduce((e, t) => e + a(t.rtpStats), 0),
@@ -83,8 +83,8 @@ function l(e, t) {
     cpuLimitedResolution: e.cpuLimitedResolution,
     encoderQualityVmaf: null !== (p = null === (d = D.encoderQualityStats) || void 0 === d ? void 0 : d.imageQualityVmaf_v061) && void 0 !== p ? p : void 0,
     encoderQualityPsnr: null !== (O = null === (_ = D.encoderQualityStats) || void 0 === _ ? void 0 : _.imageQualityWebrtcPsnrDb) && void 0 !== O ? O : void 0,
-    qualityDecodeErrors: null !== (R = null === (c = D.encoderQualityStats) || void 0 === c ? void 0 : c.decodeErrors) && void 0 !== R ? R : void 0,
-    qualityDecoderReboots: null !== (C = null === (E = D.encoderQualityStats) || void 0 === E ? void 0 : E.decoderReboots) && void 0 !== C ? C : void 0,
+    qualityDecodeErrors: null !== (C = null === (c = D.encoderQualityStats) || void 0 === c ? void 0 : c.decodeErrors) && void 0 !== C ? C : void 0,
+    qualityDecoderReboots: null !== (R = null === (E = D.encoderQualityStats) || void 0 === E ? void 0 : E.decoderReboots) && void 0 !== R ? R : void 0,
     qualityScoreErrors: null !== (g = null === (I = D.encoderQualityStats) || void 0 === I ? void 0 : I.scoreErrors) && void 0 !== g ? g : void 0,
     qualityFrameDrops: null !== (L = null === (T = D.encoderQualityStats) || void 0 === T ? void 0 : T.frameDrops) && void 0 !== L ? L : void 0,
     qualitySizeMismatches: null !== (v = null === (f = D.encoderQualityStats) || void 0 === f ? void 0 : f.sizeMismatches) && void 0 !== v ? v : void 0,
@@ -242,6 +242,7 @@ function d(e, t, n, r) {
       decodingNormal: s.decodingNormal,
       decodingPLC: s.decodingPLC,
       decodingPLCCNG: s.decodingPLCCNG,
+      nackCount: s.nackCount,
       accelerateRate: 100 * s.accelerateRate,
       expandRate: 100 * s.expandRate,
       preemptiveExpandRate: 100 * s.preemptiveExpandRate,

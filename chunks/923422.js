@@ -11,7 +11,7 @@ var u = n("735250"),
   c = n("906732"),
   f = n("386506"),
   S = n("366953"),
-  E = n("361695"),
+  E = n("394644"),
   M = n("606669"),
   T = n("53432"),
   m = n("74869"),
@@ -55,7 +55,7 @@ t.default = (0, o.default)(function(e) {
           return null
       }
     },
-    G = (0, E.default)().filter(e => {
+    D = (0, E.useDefaultUserSettingsSections)().filter(e => {
       let {
         section: t
       } = e;
@@ -68,7 +68,7 @@ t.default = (0, o.default)(function(e) {
       onClose: s.closeContextMenu,
       "aria-label": C.default.Messages.USER_SETTINGS_ACTIONS_MENU_LABEL,
       onSelect: n,
-      children: [G.map(e => {
+      children: [D.map(e => {
         let {
           section: t,
           label: n,

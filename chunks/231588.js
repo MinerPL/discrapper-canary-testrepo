@@ -2,7 +2,7 @@
 a.r(t), a("653041"), a("47120");
 var l = a("735250"),
   n = a("470079"),
-  s = a("803997"),
+  s = a("120356"),
   i = a.n(s),
   d = a("91192"),
   r = a("442837"),
@@ -12,8 +12,8 @@ var l = a("735250"),
   f = a("393238"),
   m = a("131388"),
   h = a("724757"),
-  g = a("325708"),
-  E = a("923029"),
+  E = a("325708"),
+  g = a("923029"),
   _ = a("213557"),
   I = a("252618"),
   x = a("688465"),
@@ -45,8 +45,8 @@ var l = a("735250"),
   K = a("511642"),
   z = a("88476"),
   Y = a("325667"),
-  Z = a("147873"),
-  X = a("225478"),
+  X = a("147873"),
+  Z = a("225478"),
   J = a("867403"),
   q = a("217351"),
   Q = a("638848"),
@@ -56,8 +56,8 @@ var l = a("735250"),
   ea = a("176505"),
   el = a("369701"),
   en = a("689938"),
-  es = a("362656"),
-  ei = a("121950"),
+  es = a("768694"),
+  ei = a("19340"),
   ed = a("186223");
 let er = 936,
   eu = n.memo(function(e) {
@@ -137,7 +137,7 @@ let er = 936,
             guild: t
           }) : (0, l.jsx)(Q.default, {
             guild: t
-          }), (0, l.jsx)(X.default, {
+          }), (0, l.jsx)(Z.default, {
             guildId: t.id,
             isUsingCollapsedLayout: s
           }), (0, l.jsx)(q.default, {
@@ -164,8 +164,8 @@ function ec(e) {
     channelId: s.channelId,
     baseChannelId: ea.StaticChannelRoute.GUILD_HOME,
     channelViewSource: "Home View"
-  })), (0, l.jsx)(g.default, {
-    sidebarType: g.ChatSidebarType.HomeSidebar,
+  })), (0, l.jsx)(E.default, {
+    sidebarType: E.ChatSidebarType.HomeSidebar,
     maxWidth: i,
     onWidthChange: n,
     children: t
@@ -206,7 +206,7 @@ let eh = (0, c.default)(function(e) {
       guild: t,
       width: a,
       height: s
-    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), g = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [E, _] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
+    } = e, o = t.id, c = (0, r.useStateFromStores)([L.default], () => L.default.getSection(ea.StaticChannelRoute.GUILD_HOME)), E = (0, r.useStateFromStores)([O.default], () => O.default.getCurrentSearchId()), [g, _] = n.useState(!1), [x, S] = n.useState(et.DEFAULT_CHAT_SIDEBAR_WIDTH), C = c === et.ChannelSections.SEARCH, N = c === et.ChannelSections.SIDEBAR_CHAT, p = C || N, T = n.useRef(null), A = (0, h.default)("top-messages", T), {
       ref: D
     } = (0, f.default)(), [F, R] = n.useState(el.GuildFeedRenderMode.SEGMENTED_READ), b = (0, m.default)(el.COLLAPSED_SIZE_MEDIA_QUERY), G = n.useRef(!1), {
       hasNewHeader: y
@@ -222,7 +222,7 @@ let eh = (0, c.default)(function(e) {
       G.current = !1
     }, [o]), n.useEffect(() => {
       null == v.default.getLoadId(o) && M.default.closeChannelSidebar(ea.StaticChannelRoute.GUILD_HOME)
-    }, [o]), (0, Z.default)(o), n.useLayoutEffect(() => {
+    }, [o]), (0, X.default)(o), n.useLayoutEffect(() => {
       var e, t;
       let a = W.default.getSavedScrollPosition(o);
       return y && (0 === a || null == a) ? null === (e = T.current) || void 0 === e || e.scrollTo({
@@ -249,7 +249,7 @@ let eh = (0, c.default)(function(e) {
         guildName: t.name
       })
     });
-    let X = (0, u.useFocusJumpSection)(),
+    let Z = (0, u.useFocusJumpSection)(),
       {
         showDeprecationNotice: q
       } = B.GuildHomeDeprecationExperiment.useExperiment({
@@ -267,7 +267,7 @@ let eh = (0, c.default)(function(e) {
       children: [(0, l.jsxs)("div", {
         className: i()(ei.chat, es.background, {
           [ei.threadSidebarOpen]: p,
-          [ei.threadSidebarFloating]: p && E
+          [ei.threadSidebarFloating]: p && g
         }),
         children: [(0, l.jsx)(eu, {
           guild: t,
@@ -294,7 +294,7 @@ let eh = (0, c.default)(function(e) {
                     T.current = e, a.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null
                   },
                   ...n,
-                  ...X,
+                  ...Z,
                   children: [y && (0, l.jsx)($.default, {
                     guild: t
                   }), b ? Q : null, (0, l.jsxs)("div", {
@@ -342,8 +342,8 @@ let eh = (0, c.default)(function(e) {
                 })
               }
             })
-          }), C && null != g && (0, l.jsx)(j.default, {
-            searchId: g
+          }), C && null != E && (0, l.jsx)(j.default, {
+            searchId: E
           })]
         })]
       }), N ? (0, l.jsx)(ec, {
@@ -354,7 +354,7 @@ let eh = (0, c.default)(function(e) {
       }) : null]
     })
   }),
-  eg = (0, c.default)(N.default);
+  eE = (0, c.default)(N.default);
 t.default = function(e) {
   let {
     guildId: t
@@ -379,9 +379,9 @@ t.default = function(e) {
       o.default.escapeToDefaultChannel(t);
       return
     }(0, P.trackGuildHomeOpened)(t, e)
-  }, [t, s, i, d]), null == a) ? (0, l.jsx)(E.default, {
+  }, [t, s, i, d]), null == a) ? (0, l.jsx)(g.default, {
     channelId: void 0
-  }) : d ? (0, l.jsx)(eg, {
+  }) : d ? (0, l.jsx)(eE, {
     guild: a
   }) : (0, l.jsx)(eh, {
     guild: a

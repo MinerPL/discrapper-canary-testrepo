@@ -6,15 +6,15 @@ s.r(t), s.d(t, {
 });
 var a = s("735250");
 s("470079");
-var l = s("803997"),
+var l = s("120356"),
   i = s.n(l),
   n = s("481060"),
-  u = s("906732"),
-  r = s("171368"),
+  r = s("906732"),
+  u = s("171368"),
   o = s("768581"),
-  d = s("981631"),
-  c = s("689938"),
-  E = s("485035");
+  d = s("51144"),
+  c = s("981631"),
+  E = s("313602");
 
 function I(e) {
   let {
@@ -22,41 +22,36 @@ function I(e) {
     guildId: s,
     className: l
   } = e, {
-    discriminator: I,
-    username: f
+    username: I
   } = t, T = o.default.getUserAvatarURL(t), {
-    analyticsLocations: _
-  } = (0, u.default)();
+    analyticsLocations: f
+  } = (0, r.default)();
   return (0, a.jsxs)("div", {
     className: i()(E.container, l),
-    children: [(0, a.jsx)(n.Avatar, {
-      src: T,
-      size: n.AvatarSizes.SIZE_80,
-      "aria-label": f,
-      className: E.avatar
-    }), (0, a.jsxs)("div", {
-      className: E.username,
-      children: [(0, a.jsx)(n.Heading, {
-        variant: "heading-xl/semibold",
-        children: f
-      }), (0, a.jsxs)(n.Text, {
-        variant: "text-md/normal",
-        color: "header-secondary",
-        children: ["#", I]
-      })]
-    }), (0, a.jsx)(n.Anchor, {
+    children: [(0, a.jsx)(n.Anchor, {
       onClick: () => {
-        (0, r.openUserProfileModal)({
+        (0, u.openUserProfileModal)({
           userId: t.id,
           guildId: s,
-          sourceAnalyticsLocations: _,
+          sourceAnalyticsLocations: f,
           analyticsLocation: {
-            section: d.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
-            object: d.AnalyticsObjects.JOIN_REQUEST
+            section: c.AnalyticsSections.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
+            object: c.AnalyticsObjects.JOIN_REQUEST
           }
         })
       },
-      children: c.default.Messages.VIEW_PROFILE
+      children: (0, a.jsx)(n.Avatar, {
+        src: T,
+        size: n.AvatarSizes.SIZE_80,
+        "aria-label": I,
+        className: E.avatar
+      })
+    }), (0, a.jsx)("div", {
+      className: E.username,
+      children: (0, a.jsx)(n.Heading, {
+        variant: "heading-lg/semibold",
+        children: d.default.getFormattedName(t)
+      })
     })]
   })
 }

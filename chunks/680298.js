@@ -14,7 +14,7 @@ var n = l("735250"),
   u = l("507893"),
   c = l("399860"),
   f = l("689938"),
-  m = l("108658");
+  m = l("514719");
 
 function I(e) {
   let {
@@ -40,25 +40,25 @@ function I(e) {
         ...l
       })
     })
-  }, [t, I, T, N, E]), h = a.useCallback(e => {
+  }, [t, I, T, N, E]), p = a.useCallback(e => {
     (0, i.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await l.e("65889").then(l.bind(l, "731646"));
+      } = await l.e("5396").then(l.bind(l, "731646"));
       return t => (0, n.jsx)(e, {
         ...t,
         id: N.id,
         label: f.default.Messages.COPY_ID_COMMAND
       })
     })
-  }, [N]), p = N.type === r.ApplicationCommandType.CHAT ? o.default : d.default, _ = (0, c.commandName)(N.type, N.displayName);
+  }, [N]), h = N.type === r.ApplicationCommandType.CHAT ? o.default : d.default, _ = (0, c.commandName)(N.type, N.displayName);
   return (0, n.jsxs)(s.Clickable, {
     onClick: g,
     className: m.item,
-    onContextMenu: h,
+    onContextMenu: p,
     children: [(0, n.jsxs)("div", {
       className: m.identifier,
-      children: [(0, n.jsx)(p, {
+      children: [(0, n.jsx)(h, {
         className: m.icon,
         width: 24,
         height: 24

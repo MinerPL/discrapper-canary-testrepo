@@ -1,7 +1,7 @@
 "use strict";
 l.r(t), l.d(t, {
   default: function() {
-    return p
+    return h
   }
 }), l("653041"), l("47120");
 var n = l("735250"),
@@ -21,16 +21,16 @@ var n = l("735250"),
   E = l("823379"),
   S = l("700785"),
   g = l("689938"),
-  h = l("454164");
+  p = l("69674");
 
-function p(e) {
+function h(e) {
   var t;
   let {
     guild: l,
-    applicationIntegration: p
+    applicationIntegration: h
   } = e, _ = (0, i.useStateFromStores)([I.default], () => I.default.getRoles(l.id)), {
     application: O
-  } = p, A = null != O.bot ? new f.default(O.bot) : null, C = (0, i.useStateFromStores)([m.default], () => null != A ? m.default.getMember(l.id, A.id) : null, [A, l]), x = null == A ? void 0 : A.id;
+  } = h, A = null != O.bot ? new f.default(O.bot) : null, C = (0, i.useStateFromStores)([m.default], () => null != A ? m.default.getMember(l.id, A.id) : null, [A, l]), x = null == A ? void 0 : A.id;
   a.useEffect(() => {
     null != x && o.default.requestMembersById(l.id, x)
   }, [l.id, x]);
@@ -44,7 +44,7 @@ function p(e) {
   }, [l, _, C]);
   return null == A ? null : (0, n.jsx)(r.Card, {
     editable: !0,
-    className: h.card,
+    className: p.card,
     children: (0, n.jsxs)(N.default, {
       direction: N.default.Direction.VERTICAL,
       children: [(0, n.jsxs)(N.default, {
@@ -52,7 +52,7 @@ function p(e) {
         children: [(0, n.jsx)("img", {
           alt: "",
           src: A.getAvatarURL(l.id, 32),
-          className: h.iconWrapper
+          className: p.iconWrapper
         }), (0, n.jsx)(r.Text, {
           color: "header-primary",
           variant: "text-sm/normal",
@@ -60,7 +60,7 @@ function p(e) {
             user: A
           })
         }), (0, n.jsx)(T.default, {
-          className: h.tag,
+          className: p.tag,
           verified: A.isVerifiedBot()
         })]
       }), function(e, t, l, a) {
@@ -69,15 +69,15 @@ function p(e) {
         for (let e of c.OrderedPermissions) s.has(a, e) ? i.push(e) : o.push(e);
         return (0, n.jsxs)(n.Fragment, {
           children: [(0, n.jsx)(r.FormDivider, {
-            className: h.divider
+            className: p.divider
           }), l.length > 0 ? (0, n.jsxs)(n.Fragment, {
             children: [(0, n.jsx)(r.FormTitle, {
-              className: h.permissionHeader,
+              className: p.permissionHeader,
               children: g.default.Messages.ROLES_LIST.format({
                 numRoles: l.length
               })
             }), (0, n.jsx)(d.default, {
-              className: h.rolePills,
+              className: p.rolePills,
               user: e,
               guild: t,
               userRoles: l,
@@ -85,7 +85,7 @@ function p(e) {
               readOnly: !0
             })]
           }) : null, i.length > 0 || o.length > 0 ? (0, n.jsx)(u.default, {
-            className: h.permissionList,
+            className: p.permissionList,
             grantedPermissions: i,
             grantedPermissionsHeader: g.default.Messages.INTEGRATIONS_APPLICATION_GRANTED_PERMISSIONS,
             disabledPermissions: o,

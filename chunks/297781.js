@@ -4,64 +4,86 @@ n.r(t), n.d(t, {
     return l
   },
   BadgesContainer: function() {
-    return F
+    return Q
   },
   EpisodeBadge: function() {
-    return U
+    return X
   },
   GameTimestampBadge: function() {
-    return L
+    return k
+  },
+  ListenTimestampBadge: function() {
+    return B
   },
   MarathonBadge: function() {
-    return O
+    return G
   },
   NewGameBadge: function() {
-    return y
+    return H
+  },
+  NewReleaseBadge: function() {
+    return Z
   },
   ResurrectedBadge: function() {
-    return j
+    return V
   },
   StreakBadge: function() {
-    return P
+    return W
+  },
+  TopArtistBadge: function() {
+    return z
   },
   TopGameBadge: function() {
-    return D
+    return Y
+  },
+  TrendingBadge: function() {
+    return K
   },
   VoiceChannelBadge: function() {
-    return R
+    return w
   },
   WatchTimestampBadge: function() {
-    return b
+    return q
   }
 });
 var a, l, s = n("735250"),
   i = n("470079"),
   r = n("120356"),
   o = n.n(r),
-  u = n("213602"),
-  d = n("149020"),
-  c = n("434559"),
-  f = n("324992"),
-  h = n("137443"),
-  m = n("700287"),
-  p = n("71970"),
-  E = n("277758"),
-  C = n("690172"),
-  g = n("481060"),
-  S = n("70956"),
-  _ = n("22211"),
-  T = n("561308"),
-  I = n("371991"),
-  A = n("689938"),
-  N = n("509058");
+  u = n("913527"),
+  d = n.n(u),
+  c = n("884439"),
+  f = n("705512"),
+  h = n("729878"),
+  m = n("442837"),
+  p = n("213602"),
+  E = n("149020"),
+  C = n("781511"),
+  g = n("434559"),
+  S = n("533883"),
+  _ = n("324992"),
+  T = n("137443"),
+  I = n("700287"),
+  A = n("71970"),
+  N = n("277758"),
+  v = n("690172"),
+  x = n("481060"),
+  M = n("70956"),
+  R = n("709054"),
+  y = n("719247"),
+  L = n("22211"),
+  O = n("561308"),
+  j = n("371991"),
+  P = n("689938"),
+  D = n("106940");
 (a = l || (l = {}))[a.CARD = 0] = "CARD", a[a.POPOUT = 1] = "POPOUT";
-let v = i.createContext({});
+let b = i.createContext({});
 
-function x() {
-  return i.useContext(v)
+function U() {
+  return i.useContext(b)
 }
 
-function M(e) {
+function F(e) {
   let {
     Icon: t,
     text: n,
@@ -71,175 +93,247 @@ function M(e) {
   } = e, {
     defaultTextColor: r,
     defaultIconColor: o
-  } = x();
-  return (0, s.jsx)(g.Tooltip, {
+  } = U();
+  return (0, s.jsx)(x.Tooltip, {
     text: l,
     shouldShow: i,
     children: e => (0, s.jsxs)("div", {
-      className: N.badgeContainer,
+      className: D.badgeContainer,
       ...e,
       children: [(0, s.jsx)(t, {
         width: 12,
         height: 12,
         color: null != a ? a : o
-      }), (0, s.jsx)(g.Text, {
+      }), (0, s.jsx)(x.Text, {
         variant: "text-xs/normal",
         color: r,
-        className: N.badgeLabel,
+        className: D.badgeLabel,
         children: n
       })]
     })
   })
 }
 
-function R(e) {
+function w(e) {
   let {
     entry: t
   } = e, {
     channel: n
-  } = (0, _.default)(t), {
+  } = (0, L.default)(t), {
     location: a
-  } = x();
-  return null == n || 1 === a ? null : (0, s.jsx)(M, {
-    Icon: C.VoiceNormalIcon,
+  } = U();
+  return null == n || 1 === a ? null : (0, s.jsx)(F, {
+    Icon: v.VoiceNormalIcon,
     text: n.name
   })
 }
 
-function L(e) {
+function k(e) {
   let {
     entry: t
   } = e, {
     defaultTextColor: n,
     defaultIconColor: a,
     location: l
-  } = x(), i = (0, T.isEntryActive)(t), r = 0 === l && i ? g.tokens.colors.REDESIGN_BUTTON_PRIMARY_ON_BLURPLE_PRESSED_TEXT : a;
+  } = U(), i = 0 === l, r = (0, O.isEntryActive)(t), o = i && r ? x.tokens.colors.STATUS_POSITIVE : a, u = i && r ? "text-positive" : n;
   return (0, s.jsxs)("div", {
-    className: N.badgeContainer,
-    children: [(0, s.jsx)(d.GameControllerIcon, {
+    className: D.badgeContainer,
+    children: [(0, s.jsx)(E.GameControllerIcon, {
       width: 12,
       height: 12,
-      color: r
-    }), (0, s.jsx)(I.default, {
+      color: o
+    }), (0, s.jsx)(j.default, {
       entry: t,
-      textColor: n
+      textColor: u
     })]
   })
 }
 
-function y(e) {
+function B(e) {
+  var t;
+  let {
+    entry: n
+  } = e, {
+    defaultTextColor: a,
+    defaultIconColor: l,
+    location: i
+  } = U(), r = 0 === i, o = (0, m.useStateFromStores)([y.default], () => y.default.getMatchingActivity(n));
+  if ((null == o ? void 0 : o.timestamps) == null) return null;
+  let u = r ? x.tokens.colors.STATUS_POSITIVE : l,
+    d = null === (t = o.timestamps) || void 0 === t ? void 0 : t.start;
+  return (0, s.jsxs)("div", {
+    className: D.badgeContainer,
+    children: [(0, s.jsx)(S.RecordPlayerIcon, {
+      width: 12,
+      height: 12,
+      color: u
+    }), (0, s.jsx)(j.ActiveTimestamp, {
+      entry: null != d ? {
+        start: d
+      } : n,
+      textColor: r ? "text-positive" : a
+    })]
+  })
+}
+
+function H(e) {
   let {
     entry: t
   } = e, {
     location: n
-  } = x(), a = 0 === n ? g.tokens.colors.STATUS_POSITIVE : void 0;
-  return (0, T.isEntryNew)(t) ? (0, s.jsx)(M, {
-    Icon: c.NewUserLargeIcon,
-    text: A.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
+  } = U(), a = 0 === n ? x.tokens.colors.STATUS_POSITIVE : void 0;
+  return (0, O.isEntryNew)(t) ? (0, s.jsx)(F, {
+    Icon: g.NewUserLargeIcon,
+    text: P.default.Messages.MEMBER_LIST_CONTENT_FEED_NEW_PLAYER,
     iconColor: a
   }) : null
 }
 
-function O(e) {
+function G(e) {
   let {
     entry: t
   } = e, {
     location: n
-  } = x();
-  if (!(0, T.isEntryMarathon)(t)) return null;
-  let a = (0, T.isEntryActive)(t),
+  } = U();
+  if (!(0, O.isEntryMarathon)(t)) return null;
+  let a = (0, O.isEntryActive)(t),
     l = 0 === n,
-    i = l || a ? (0, T.getMarathonName)(t) : (0, T.getFullMarathonDescription)(t);
-  return (0, s.jsx)(M, {
-    Icon: h.TimerIcon,
+    i = l || a ? (0, O.getMarathonName)(t) : (0, O.getFullMarathonDescription)(t);
+  return (0, s.jsx)(F, {
+    Icon: T.TimerIcon,
     text: i,
-    tooltipText: (0, T.getMarathonDurationStr)(t),
+    tooltipText: (0, O.getMarathonDurationStr)(t),
     showTooltip: l && !a
   })
 }
 
-function j(e) {
+function V(e) {
   let {
     entry: t
   } = e, {
     location: n
-  } = x(), a = (0, T.getResurrectedEntryLastPlayTime)(t);
+  } = U(), a = (0, O.getResurrectedEntryLastPlayTime)(t);
   if (null == a) return null;
-  let l = (0, T.getFullResurrectedBadgeText)(a);
-  return (0, s.jsx)(M, {
-    Icon: f.RetryIcon,
+  let l = (0, O.getFullResurrectedBadgeText)(a);
+  return (0, s.jsx)(F, {
+    Icon: _.RetryIcon,
     showTooltip: 0 === n,
     tooltipText: l,
-    text: 1 === n ? l : A.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
+    text: 1 === n ? l : P.default.Messages.MEMBER_LIST_CONTENT_FEED_RESURRECTED
   })
 }
 
-function P(e) {
-  let {
-    entry: t
-  } = e, n = (0, T.getStreakCount)(t);
-  return null == n || n < 2 ? null : (0, s.jsx)(M, {
-    Icon: u.FlashIcon,
-    text: A.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
-      days: n
-    })
-  })
-}
-
-function D(e) {
+function W(e) {
   let {
     entry: t
   } = e, {
     location: n
-  } = x(), a = (0, T.getEntryDuration)(t);
+  } = U(), a = (0, O.getStreakCount)(t);
+  return (0, O.isValidStreak)(t) ? (0, s.jsx)(F, {
+    Icon: p.FlashIcon,
+    showTooltip: 0 === n,
+    text: P.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_DAYS.format({
+      days: a
+    }),
+    tooltipText: P.default.Messages.MEMBER_LIST_CONTENT_FEED_STREAK_TOOLTIP.format({
+      days: a
+    })
+  }) : null
+}
+
+function Y(e) {
+  let {
+    entry: t
+  } = e, {
+    location: n
+  } = U(), a = (0, O.getEntryDuration)(t);
   if (null == a) return null;
   let l = 1 === n,
-    i = l ? A.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : A.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
-  return (0, s.jsx)(M, {
-    Icon: p.TrophyIcon,
+    i = l ? P.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS_THIS_WEEK : P.default.Messages.MEMBER_LIST_CONTENT_FEED_TIMESTAMP_HOURS;
+  return (0, s.jsx)(F, {
+    Icon: A.TrophyIcon,
     text: (0, s.jsxs)(s.Fragment, {
-      children: [A.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
-        hours: Math.round(a / S.default.Seconds.HOUR)
+      children: [P.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_GAME, l ? " — " : ": ", i.format({
+        hours: Math.round(a / M.default.Seconds.HOUR)
       })]
     })
   })
 }
 
-function b(e) {
+function z(e) {
+  var t;
+  let {
+    entry: n
+  } = e, {
+    location: a
+  } = U(), l = null === (t = (0, O.getTrait)(n, c.ContentInventoryTraitType.AGGREGATE_COUNT)) || void 0 === t ? void 0 : t.count;
+  if (null == l) return null;
+  let i = 1 === a ? P.default.Messages.MEMBER_LIST_CONTENT_FEED_TOP_ARTIST_TRACKS_THIS_WEEK.format({
+    count: l
+  }) : P.default.Messages.MEMBER_LIST_CONTENT_FEED_TRACKS_THIS_WEEK.format({
+    count: l
+  });
+  return (0, s.jsx)(F, {
+    Icon: A.TrophyIcon,
+    text: i
+  })
+}
+
+function K(e) {
+  let {
+    entry: t
+  } = e, n = (0, O.getTrendingType)(t);
+  return null == n || n === f.TrendingType.TRENDING_TYPE_UNSPECIFIED ? null : (0, s.jsx)(F, {
+    Icon: C.GlobeEarthIcon,
+    text: P.default.Messages.MEMBER_LIST_CONTENT_FEED_TRENDING
+  })
+}
+
+function Z(e) {
+  let {
+    entry: t
+  } = e, n = R.default.extractTimestamp(t.extra.application_id);
+  return d()().diff(d()(n), "days") > 7 ? null : (0, s.jsx)(F, {
+    Icon: h.CircleExclamationPointIcon,
+    text: "New Release"
+  })
+}
+
+function q(e) {
   let {
     entry: t
   } = e, {
     defaultTextColor: n,
     defaultIconColor: a
-  } = x();
+  } = U();
   return (0, s.jsxs)("div", {
-    className: N.badgeContainer,
-    children: [(0, s.jsx)(E.TvIcon, {
+    className: D.badgeContainer,
+    children: [(0, s.jsx)(N.TvIcon, {
       width: 12,
       height: 12,
       color: a
-    }), (0, s.jsx)(I.default, {
+    }), (0, s.jsx)(j.default, {
       entry: t,
       textColor: n
     })]
   })
 }
 
-function U(e) {
+function X(e) {
   var t;
   let {
     entry: n
-  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? A.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
+  } = e, a = /\w+ (\d+), \w+ (\d+)/.exec(null !== (t = n.extra.media_assets_large_text) && void 0 !== t ? t : ""), l = null != a ? P.default.Messages.MEMBER_LIST_CONTENT_FEED_WATCH_SEASON_EPISODE.format({
     seasonNum: a[1],
     episodeNum: a[2]
   }) : null;
-  return (0, s.jsx)(M, {
-    Icon: m.TopicsIcon,
+  return (0, s.jsx)(F, {
+    Icon: I.TopicsIcon,
     text: l
   })
 }
 
-function F(e) {
+function Q(e) {
   let {
     location: t,
     children: n
@@ -247,17 +341,17 @@ function F(e) {
   return a = 0 === t ? {
     defaultTextColor: "text-secondary"
   } : {
-    defaultTextColor: "always-white",
-    defaultIconColor: g.tokens.colors.TEXT_PRIMARY
-  }, (0, s.jsx)(v.Provider, {
+    defaultTextColor: "content-inventory-overlay-text-secondary",
+    defaultIconColor: x.tokens.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY
+  }, (0, s.jsx)(b.Provider, {
     value: {
       location: t,
       ...a
     },
     children: (0, s.jsx)("div", {
-      className: o()(N.badgesContainer, {
-        [N.badgesContainerCard]: 0 === t,
-        [N.badgesContainerPopout]: 1 === t
+      className: o()(D.badgesContainer, {
+        [D.badgesContainerCard]: 0 === t,
+        [D.badgesContainerPopout]: 1 === t
       }),
       children: n
     })

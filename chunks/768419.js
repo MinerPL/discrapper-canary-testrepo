@@ -16,8 +16,8 @@ var s, o, l, u = n("392711"),
   N = n("314897"),
   p = n("553795"),
   O = n("517100"),
-  R = n("158776"),
-  C = n("606304"),
+  C = n("158776"),
+  R = n("606304"),
   g = n("979651"),
   L = n("626135"),
   v = n("81063"),
@@ -37,8 +37,8 @@ function b(e, t, n) {
 }
 let G = S.default.get(U.PlatformTypes.SPOTIFY),
   w = "hm://pusher/v1/connections/",
-  B = 30 * D.default.Millis.SECOND,
   k = 30 * D.default.Millis.SECOND,
+  B = 30 * D.default.Millis.SECOND,
   V = 5 * D.default.Millis.MINUTE,
   x = 5 * D.default.Millis.SECOND,
   F = 1.5 * D.default.Millis.SECOND,
@@ -91,7 +91,7 @@ function er(e) {
 }
 
 function ea(e) {
-  return R.default.findActivity(e, e => null != e.party && null != e.party.id && (0, P.isSpotifyParty)(e.party.id))
+  return C.default.findActivity(e, e => null != e.party && null != e.party.id && (0, P.isSpotifyParty)(e.party.id))
 }
 let es = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
 class eo {
@@ -119,7 +119,7 @@ class eo {
     })))
   }
   handleOpen() {
-    K.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(B, () => this.ping()), (0, y.getProfile)(this.accountId, this.accessToken), (0, y.getDevices)(this.accountId, this.accessToken)
+    K.info("WS Connected"), this.backoff.succeed(), this.pingInterval.start(k, () => this.ping()), (0, y.getProfile)(this.accountId, this.accessToken), (0, y.getDevices)(this.accountId, this.accessToken)
   }
   handleMessage(e) {
     let {
@@ -284,7 +284,7 @@ function eT(e) {
         checkSoundSharing: !0,
         checkSoundboardSounds: !1
       });
-    t && n && null != i ? (z.start(k, eI, !1), Z.stop()) : Z.start(100, () => z.stop(), !1)
+    t && n && null != i ? (z.start(B, eI, !1), Z.stop()) : Z.start(100, () => z.stop(), !1)
   }
   return !1
 }
@@ -296,35 +296,35 @@ function ef(e, t, n) {
     progress_ms: N,
     is_playing: p,
     repeat_state: O,
-    item: R,
-    context: C
+    item: C,
+    context: R
   } = n;
-  if (null != R && R.type === P.SpotifyResourceTypes.TRACK) {
-    let e = R.id;
-    null != R.linked_from && null != R.linked_from.id && (e = R.linked_from.id), h = {
+  if (null != C && C.type === P.SpotifyResourceTypes.TRACK) {
+    let e = C.id;
+    null != C.linked_from && null != C.linked_from.id && (e = C.linked_from.id), h = {
       id: e,
-      name: R.name,
-      duration: R.duration_ms,
+      name: C.name,
+      duration: C.duration_ms,
       type: P.SpotifyResourceTypes.TRACK,
       album: {
-        id: null !== (o = null === (i = R.album) || void 0 === i ? void 0 : i.id) && void 0 !== o ? o : "",
-        name: null !== (l = null === (r = R.album) || void 0 === r ? void 0 : r.name) && void 0 !== l ? l : "",
-        image: null === (a = R.album) || void 0 === a ? void 0 : a.images[0],
-        type: null !== (u = null === (s = R.album) || void 0 === s ? void 0 : s.type) && void 0 !== u ? u : P.SpotifyResourceTypes.ALBUM
+        id: null !== (o = null === (i = C.album) || void 0 === i ? void 0 : i.id) && void 0 !== o ? o : "",
+        name: null !== (l = null === (r = C.album) || void 0 === r ? void 0 : r.name) && void 0 !== l ? l : "",
+        image: null === (a = C.album) || void 0 === a ? void 0 : a.images[0],
+        type: null !== (u = null === (s = C.album) || void 0 === s ? void 0 : s.type) && void 0 !== u ? u : P.SpotifyResourceTypes.ALBUM
       },
-      artists: Array.isArray(R.artists) ? R.artists.filter(e => (0, M.isNotNullish)(e.id) && (0, M.isNotNullish)(e.name)) : [],
-      isLocal: R.is_local || !1
+      artists: Array.isArray(C.artists) ? C.artists.filter(e => (0, M.isNotNullish)(e.id) && (0, M.isNotNullish)(e.name)) : [],
+      isLocal: C.is_local || !1
     }
-  } else null != R && R.type === P.SpotifyResourceTypes.EPISODE && (h = {
-    id: R.id,
-    name: R.name,
-    duration: R.duration_ms,
+  } else null != C && C.type === P.SpotifyResourceTypes.EPISODE && (h = {
+    id: C.id,
+    name: C.name,
+    duration: C.duration_ms,
     type: P.SpotifyResourceTypes.EPISODE,
     album: {
-      id: null !== (I = null === (d = R.show) || void 0 === d ? void 0 : d.id) && void 0 !== I ? I : "",
-      name: null !== (f = null === (_ = R.show) || void 0 === _ ? void 0 : _.name) && void 0 !== f ? f : "",
-      image: null === (c = R.show) || void 0 === c ? void 0 : c.images[0],
-      type: null !== (S = null === (E = R.album) || void 0 === E ? void 0 : E.type) && void 0 !== S ? S : P.SpotifyResourceTypes.SHOW
+      id: null !== (I = null === (d = C.show) || void 0 === d ? void 0 : d.id) && void 0 !== I ? I : "",
+      name: null !== (f = null === (_ = C.show) || void 0 === _ ? void 0 : _.name) && void 0 !== f ? f : "",
+      image: null === (c = C.show) || void 0 === c ? void 0 : c.images[0],
+      type: null !== (S = null === (E = C.album) || void 0 === E ? void 0 : E.type) && void 0 !== S ? S : P.SpotifyResourceTypes.SHOW
     },
     artists: [],
     isLocal: !1
@@ -332,10 +332,10 @@ function ef(e, t, n) {
   if (null != m && !0 !== m.is_active && (m = {
       ...m,
       is_active: !0
-    }), null != C && [P.SpotifyResourceTypes.PLAYLIST, P.SpotifyResourceTypes.ALBUM].includes(C.type)) {
+    }), null != R && [P.SpotifyResourceTypes.PLAYLIST, P.SpotifyResourceTypes.ALBUM].includes(R.type)) {
     let n = eA.getPlayerState(e);
-    A = null != n && null != n.context && n.context.uri === C.uri ? Promise.resolve(n.context) : C.type === P.SpotifyResourceTypes.ALBUM ? Promise.resolve(C) : y.SpotifyAPI.get(e, t, {
-      url: C.href
+    A = null != n && null != n.context && n.context.uri === R.uri ? Promise.resolve(n.context) : R.type === P.SpotifyResourceTypes.ALBUM ? Promise.resolve(R) : y.SpotifyAPI.get(e, t, {
+      url: R.href
     }).then(e => {
       let {
         body: t
@@ -375,7 +375,7 @@ function eS(e, t) {
 }
 class eh extends(o = c.default.Store) {
   initialize() {
-    this.waitFor(p.default, C.default), this.syncWith([R.default], () => (function() {
+    this.waitFor(p.default, R.default), this.syncWith([C.default], () => (function() {
       if (null == r || null == ei()) return !1;
       let {
         userId: e
@@ -536,7 +536,7 @@ let eA = new eh(T.default, {
         null == e ? ($[t].push(l), _ = !0) : !(0, E.default)(e, l) && (Object.assign(e, l), _ = !0), ed(t, l.id)
       } else $[t] = [l], _ = !0
     }
-    n ? null == en || en.start(k, eI) : (s = null, null == en || en.stop());
+    n ? null == en || en.start(B, eI) : (s = null, null == en || en.stop());
     let c = p.default.getAccount(t, U.PlatformTypes.SPOTIFY);
     if (null == c) return _;
     let I = ee[t],
@@ -648,8 +648,8 @@ let eA = new eh(T.default, {
         sourceId: e,
         sound: n
       } = null == t ? void 0 : t.desktopSettings;
-      null != e && m.default.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Interval).start(k, eI) : en = null
-    }
+      null != e && m.default.getObservedAppNameForWindow(e) === G.name && n ? (en = new I.Interval).start(B, eI) : (null == en || en.stop(), en = null)
+    } else null == t && (null == en || en.stop(), en = null)
   }
 });
 t.default = eA

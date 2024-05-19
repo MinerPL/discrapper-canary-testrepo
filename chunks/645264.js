@@ -13,7 +13,7 @@ var r = n("735250"),
   f = n("200305"),
   m = n("592286"),
   E = n("689938"),
-  p = n("815431");
+  p = n("72226");
 let _ = () => (0, r.jsx)(l.default, {
   submitting: !1,
   message: E.default.Messages.MEMBER_VERIFICATION_PROGRESS_LOST_TITLE,

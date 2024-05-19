@@ -18,13 +18,13 @@ var a = n("735250"),
   h = n("806519"),
   _ = n("768581"),
   C = n("900849"),
-  S = n("556017"),
-  m = n("879484"),
+  m = n("556017"),
+  S = n("879484"),
   p = n("26580"),
-  I = n("206887"),
-  T = n("981631"),
-  g = n("689938"),
-  A = n("37807"),
+  g = n("206887"),
+  I = n("981631"),
+  T = n("689938"),
+  A = n("283434"),
   N = n("129512"),
   v = n("330065");
 let R = () => (0, a.jsx)("div", {
@@ -35,33 +35,33 @@ t.default = e => {
   let {
     guild: l,
     theme: R,
-    onView: L,
-    onTagClick: O
+    onView: O,
+    onTagClick: L
   } = e, {
     id: M,
-    discoverySplash: P,
-    icon: y,
+    discoverySplash: y,
+    icon: P,
     name: x,
     description: D,
     presenceCount: b,
     memberCount: U,
     keywords: j
-  } = l, [G, w] = s.useState(!1), [k, F] = s.useState(!1), {
-    analyticsLocations: B
+  } = l, [G, k] = s.useState(!1), [w, B] = s.useState(!1), {
+    analyticsLocations: F
   } = (0, u.default)(), H = _.default.getGuildDiscoverySplashURL({
     id: M,
-    splash: P,
+    splash: y,
     size: 240 * (0, d.getDevicePixelRatio)()
   }), V = null != H ? H : function(e) {
     switch (e) {
-      case T.ThemeTypes.DARK:
+      case I.ThemeTypes.DARK:
         return N;
-      case T.ThemeTypes.LIGHT:
+      case I.ThemeTypes.LIGHT:
         return v
     }
   }(R), Y = null !== (t = _.default.getGuildIconURL({
     id: M,
-    icon: y,
+    icon: P,
     size: 32
   })) && void 0 !== t ? t : void 0, W = async e => {
     let {
@@ -71,44 +71,44 @@ t.default = e => {
       if ((0, c.isAtGuildCapAndNonPremium)()) {
         (0, f.default)({
           analyticsSource: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY
+            page: I.AnalyticsPages.GUILD_DISCOVERY
           },
           analyticsLocation: {
-            page: T.AnalyticsPages.GUILD_DISCOVERY,
-            section: T.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
+            page: I.AnalyticsPages.GUILD_DISCOVERY,
+            section: I.AnalyticsSections.GUILD_CAP_UPSELL_MODAL
           },
-          analyticsLocations: B
+          analyticsLocations: F
         });
         return
       }
-      F(!0);
+      B(!0);
       try {
-        null != L && await L(l.id)
+        null != O && await O(l.id)
       } finally {
-        F(!1)
+        B(!1)
       }
     }
   };
-  s.useEffect(() => m.DiscoveryTagsExperiment.trackExposure({
+  s.useEffect(() => S.DiscoveryTagsExperiment.trackExposure({
     location: "4302e4_1"
   }));
   let {
     shouldDisplayTags: K
-  } = m.DiscoveryTagsExperiment.useExperiment({
+  } = S.DiscoveryTagsExperiment.useExperiment({
     location: "4302e4_2"
   }, {
     autoTrackExposure: !1
-  }), z = (0, S.useCanSeeDiscoveryContextMenu)();
+  }), z = (0, m.useCanSeeDiscoveryContextMenu)();
   return (0, a.jsxs)(a.Fragment, {
     children: [(0, a.jsxs)("div", {
       className: A.card,
-      children: [k ? (0, a.jsx)(r.Spinner, {
+      children: [w ? (0, a.jsx)(r.Spinner, {
         type: r.Spinner.Type.PULSING_ELLIPSIS,
         className: A.spinner
       }) : null, (0, a.jsxs)(r.Clickable, {
         className: i()(A.container, {
           [A.hover]: G,
-          [A.submitting]: k
+          [A.submitting]: w
         }),
         onClick: W,
         onContextMenu: e => {
@@ -122,8 +122,8 @@ t.default = e => {
             })
           })
         },
-        onMouseEnter: () => w(!0),
-        onMouseLeave: () => w(!1),
+        onMouseEnter: () => k(!0),
+        onMouseLeave: () => k(!1),
         children: [(0, a.jsx)("div", {
           className: i()(A.splashContainer, {
             [A.splashContainerWithTags]: K
@@ -167,10 +167,10 @@ t.default = e => {
             className: A.description,
             variant: "text-sm/normal",
             children: D
-          }), K && null != j && null != O && (0, a.jsx)(p.DiscoveryTags, {
+          }), K && null != j && null != L && (0, a.jsx)(p.DiscoveryTags, {
             guildId: l.id,
             discoveryTagStyle: p.DiscoveryTagStyle.ALT,
-            onTagClick: e => O(e, l.id),
+            onTagClick: e => L(e, l.id),
             tags: j,
             section: C.AnalyticsContexts.SEARCH
           }), (0, a.jsxs)("div", {
@@ -180,7 +180,7 @@ t.default = e => {
               children: (0, a.jsx)(r.Text, {
                 variant: "text-xs/normal",
                 color: "header-secondary",
-                children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
+                children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_ONLINE.format({
                   membersOnline: b
                 })
               })
@@ -192,7 +192,7 @@ t.default = e => {
                 children: (0, a.jsx)(r.Text, {
                   variant: "text-xs/normal",
                   color: "header-secondary",
-                  children: g.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
+                  children: T.default.Messages.INSTANT_INVITE_GUILD_MEMBERS_TOTAL.format({
                     count: U
                   })
                 })
@@ -201,7 +201,7 @@ t.default = e => {
           })]
         }), z ? (0, a.jsx)("div", {
           className: A.actionButtons,
-          children: (0, a.jsx)(I.default, {
+          children: (0, a.jsx)(g.default, {
             guild: l
           })
         }) : null]

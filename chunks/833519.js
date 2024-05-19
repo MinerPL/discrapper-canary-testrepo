@@ -33,8 +33,8 @@ var a = n("735250"),
   x = n("368666"),
   M = n("685203"),
   R = n("112560"),
-  L = n("442168"),
-  y = n("822296"),
+  y = n("442168"),
+  L = n("822296"),
   O = n("916771"),
   j = n("792517"),
   P = n("979425"),
@@ -44,8 +44,8 @@ var a = n("735250"),
   F = n("354459"),
   w = n("65154"),
   k = n("689938"),
-  H = n("636289");
-let B = new f.default("StreamTile");
+  B = n("61707");
+let H = new f.default("StreamTile");
 
 function G(e) {
   let {
@@ -61,7 +61,7 @@ function G(e) {
       participant: t
     }), l || null == u || u.state === U.ApplicationStreamStates.ENDED || u.state === U.ApplicationStreamStates.FAILED ? null : (0, a.jsx)(E.default, {
       size: x.default.Sizes.SMALL,
-      className: H.liveIndicator,
+      className: B.liveIndicator,
       participant: t,
       showQuality: !d && !s,
       isUpsellEnabled: !1,
@@ -88,14 +88,14 @@ function V(e) {
   if (l.useEffect(() => {
       !X && (null == Z ? void 0 : Z.isGuildStageVoice()) && !J && ((0, d.watchStream)(Y), u.default.updateStageStreamSize(Y.channelId, !1))
     }, []), l.useEffect(() => {
-      B.info("Stream Tile State - activeStream: ".concat(null != q, " | selected: ").concat(n, " | Video: ").concat(null != G, " | MediaEngine: ").concat(I.default.supports(w.Features.VIDEO)))
+      H.info("Stream Tile State - activeStream: ".concat(null != q, " | selected: ").concat(n, " | Video: ").concat(null != G, " | MediaEngine: ").concat(I.default.supports(w.Features.VIDEO)))
     }, [G, q, n]), W) return (0, a.jsx)(P.default, {
     stream: t.stream,
     isSmall: et,
     selected: n,
     isSelfStream: z.id === V
   });
-  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(y.default, {
+  if ((null == q ? void 0 : q.state) === U.ApplicationStreamStates.ENDED) return (0, a.jsx)(L.default, {
     selected: n,
     stream: q,
     width: D
@@ -120,8 +120,8 @@ function V(e) {
       stream: Y
     }) : null, (0, a.jsx)(N.default, {
       onResize: s,
-      wrapperClassName: H.videoWrapper,
-      className: H.content,
+      wrapperClassName: B.videoWrapper,
+      className: B.content,
       streamId: K,
       videoComponent: G,
       fit: E,
@@ -131,19 +131,19 @@ function V(e) {
     }, K), null != ee ? (0, a.jsx)(g.default, {
       size: (0, R.getSizeForWidth)(D),
       ...ee
-    }) : null, (0, a.jsx)(L.default, {
+    }) : null, (0, a.jsx)(y.default, {
       stream: Y,
       inPopout: x
     })]
   });
   else return (0, a.jsxs)("div", {
-    className: i()(H.content, H.streamPreview, {
-      [H.small]: et
+    className: i()(B.content, B.streamPreview, {
+      [B.small]: et
     }),
     children: [(0, a.jsx)(p.default, {
       noText: !0,
-      className: i()(H.absoluteFill, {
-        [H.streamPreviewOpacity]: null == q
+      className: i()(B.absoluteFill, {
+        [B.streamPreviewOpacity]: null == q
       }),
       stream: t.stream
     }), n ? null : (0, a.jsxs)(a.Fragment, {
@@ -155,7 +155,7 @@ function V(e) {
           children: D < 175 ? k.default.Messages.WATCH : k.default.Messages.WATCH_STREAM
         })
       }), X ? (0, a.jsx)(M.CallTileCTA, {
-        className: H.addCTA,
+        className: B.addCTA,
         tooltip: k.default.Messages.STREAM_WATCH_MULTIPLE_TOOLTIP,
         onClick: e => {
           e.stopPropagation(), (0, d.watchStream)(Y, {
@@ -164,7 +164,7 @@ function V(e) {
         },
         isSmall: et,
         children: (0, a.jsx)(v.default, {
-          className: H.addStreamIcon
+          className: B.addStreamIcon
         })
       }) : null]
     })]

@@ -6,7 +6,7 @@ l.r(t), l.d(t, {
 });
 var n = l("735250"),
   a = l("470079"),
-  s = l("803997"),
+  s = l("120356"),
   i = l.n(s),
   r = l("512722"),
   o = l.n(r),
@@ -21,8 +21,8 @@ var n = l("735250"),
   E = l("592125"),
   S = l("271383"),
   g = l("430824"),
-  h = l("246946"),
-  p = l("594174"),
+  p = l("246946"),
+  h = l("594174"),
   _ = l("93879"),
   O = l("630641"),
   A = l("241820"),
@@ -30,7 +30,7 @@ var n = l("735250"),
   x = l("51144"),
   R = l("981631"),
   M = l("689938"),
-  v = l("228735");
+  v = l("958117");
 
 function L(e) {
   let {
@@ -45,7 +45,7 @@ function L(e) {
     (0, f.openContextMenuLazy)(e, async () => {
       let {
         default: e
-      } = await l.e("65889").then(l.bind(l, "731646"));
+      } = await l.e("5396").then(l.bind(l, "731646"));
       return t => (0, n.jsx)(e, {
         ...t,
         id: s,
@@ -179,10 +179,10 @@ function b(e) {
     isLocked: a,
     lockTooltipText: s,
     openEntryContextMenu: i
-  } = e, r = (0, u.useStateFromStores)([p.default], () => p.default.getUser(l)), o = (0, u.useStateFromStores)([S.default], () => {
+  } = e, r = (0, u.useStateFromStores)([h.default], () => h.default.getUser(l)), o = (0, u.useStateFromStores)([S.default], () => {
     var e;
     return null === (e = S.default.getMember(t.id, l)) || void 0 === e ? void 0 : e.nick
-  }, [t.id, l]), d = (0, u.useStateFromStores)([h.default], () => h.default.hidePersonalInformation);
+  }, [t.id, l]), d = (0, u.useStateFromStores)([p.default], () => p.default.hidePersonalInformation);
   return null == r ? null : (0, n.jsxs)("div", {
     onContextMenu: i,
     className: v.identifier,
